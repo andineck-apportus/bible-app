@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Bible Knowledge generic record v0.1",
+  "type": "object",
+  "required": ["id", "type", "status", "tags"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[A-Z][A-Z0-9-]+$"},
+    "type": {"enum": ["work", "text_unit", "finding", "interpretation", "principle", "context", "application", "topic", "study", "tag", "relation", "variant"]},
+    "status": {"enum": ["draft", "reviewed", "deprecated"]},
+    "tags": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^TAG-"}},
+    "knowledge": {"type": "object", "properties": {"asserted_at": {"type": "string", "format": "date"}, "supersedes": {"type": ["string", "null"]}}}
+  },
+  "additionalProperties": true
+}
