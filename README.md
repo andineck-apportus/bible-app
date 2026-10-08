@@ -10,6 +10,7 @@ Dies ist der gesicherte Konzept- und Datenprototyp, noch keine lauffähige Benut
 
 | Datei | Inhalt |
 |---|---|
+| [CHANGELOG.md](CHANGELOG.md) | Änderungen und Entwicklung von v0.1 bis heute |
 | [docs/KONZEPT.md](docs/KONZEPT.md) | Ziel, Analyseebenen, Zoom-System und Kontextdimensionen |
 | [docs/DATENMODELL.md](docs/DATENMODELL.md) | Vorhandene Objekttypen, Beziehungen und geplante Erweiterungen |
 | [docs/METADATEN.md](docs/METADATEN.md) | Herkunft, Quellen, Editionen, Zeitachsen, Tags, Unsicherheit |
@@ -17,7 +18,7 @@ Dies ist der gesicherte Konzept- und Datenprototyp, noch keine lauffähige Benut
 | [docs/ENTSCHEIDUNGEN.md](docs/ENTSCHEIDUNGEN.md) | Festlegungen und noch offene Architekturfragen |
 | [docs/STATUS-UND-ROADMAP.md](docs/STATUS-UND-ROADMAP.md) | Tatsächlich vorhandener Stand, erkannte Lücken und nächste Schritte |
 | [docs/UEBERSETZUNGSMETHODEN.md](docs/UEBERSETZUNGSMETHODEN.md) | Gesprächsergebnisse zu NGÜ, Neues Leben, Hfa und Elberfelder |
-| [docs/MK3-22-30.md](docs/MK3-22-30.md) | Historischer Studienbericht v0.2; zusammen mit README-v0.5 lesen |
+| [docs/MK3-22-30.md](docs/MK3-22-30.md) | Historischer Studienbericht v0.2; aktuellen Status und Changelog beachten |
 | [docs/UEBERNAHME.md](docs/UEBERNAHME.md) | Umfang, Herkunft und Grenzen dieser Übernahme |
 | [AGENTS.md](AGENTS.md) | Arbeitsregeln für künftige KI-Unterstützung |
 

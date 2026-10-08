@@ -3,8 +3,8 @@
 Am 8. Oktober 2026 für das vom Nutzer angelegte Repository `https://github.com/andineck/bible-app.git` vorbereitet. Gewünschter lokaler Pfad des Nutzers: `/Users/andineck/dev/bible-app`. Diese Cloud-Sitzung hat keinen direkten Zugriff auf diesen Mac-Pfad.
 
 ## Grundlagen
-1. Fünf tatsächlich vorliegende ZIP-Pakete `bible-knowledge-v0.1.zip` bis `bible-knowledge-v0.5.zip`. Die Bytes sind unverändert unter `archive/packages/` archiviert; Prüfsummen und Herkunfts-IDs stehen in `provenance/packages.json`.
-2. Aktuelle Arbeitsdateien aus v0.5. Original-README zusätzlich unter `docs/README-original-v0.5.md`; die versionierten Zusatz-READMEs bleiben erhalten.
+1. Fünf tatsächlich vorliegende ZIP-Pakete `bible-knowledge-v0.1.zip` bis `bible-knowledge-v0.5.zip`. Die Bytes sind unverändert unter `archive/packages/` archiviert; Prüfsummen und Importangaben stehen in `provenance/packages.json`.
+2. Aktuelle Arbeitsdateien aus v0.5. Die Versionsnotizen wurden später in `CHANGELOG.md` zusammengeführt; `README.md` ist der zentrale Einstieg. Die ursprünglichen READMEs bleiben in den Originalpaketen und der Git-Historie erhalten.
 3. Wiedergefundene Anforderungen aus dem Projektgespräch „Bibel App“ (Beginn 30.08.2026, fortgeführt bis 08.10.2026): insbesondere Kontextachsen, Zoom-System, Zeitversionierung, Tags, Git und Quellenprozess. Die abgerufenen Erinnerungen sind Zusammenfassungen; ein vollständiges wörtliches Gesprächstranskript liegt dieser Übernahme nicht bei.
 4. Sichtbares Gespräch vom 25.09.2026 zu Übersetzungsmethoden.
 
