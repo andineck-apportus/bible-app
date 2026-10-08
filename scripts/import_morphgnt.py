@@ -1,25 +1,31 @@
 #!/usr/bin/env python3
-"""Import MorphGNT SBLGNT Mark 3:22–30 from a locally downloaded upstream file.
-Usage: python scripts/import_morphgnt.py path/to/62-Mk-morphgnt.txt
+"""Import MorphGNT Mark 3:22–30 from a locally supplied upstream file.
+Run: python scripts/import_morphgnt.py /path/to/62-Mk-morphgnt.txt
+No network access; never substitutes fabricated verses.
 """
-import collections, hashlib, json, pathlib, sys
-if len(sys.argv)!=2: sys.exit(__doc__)
-source=pathlib.Path(sys.argv[1]); lines=source.read_text(encoding="utf-8-sig").splitlines()
-root=pathlib.Path(__file__).resolve().parents[1]
-records=[]
-for line in lines:
- parts=line.split()
- if len(parts)!=7: continue
- ref,pos,morph,display,surface,normalized,lemma=parts
- if not (ref.startswith("6203") and ref[4:].isdigit() and 22<=int(ref[4:])<=30): continue
- verse=int(ref[4:]);idx=sum(r["verse"]==verse for r in records)+1
- records.append({"id":f"TOK-SBLGNT-MRK-003-{verse:03d}-{idx:03d}","edition":"SBLGNT","annotation":"MorphGNT 6.12", "reference":f"MRK.3.{verse}","verse":verse,"position":idx,"pos":pos,"morphology_code":morph,"display":display,"surface":surface,"normalized":normalized,"lemma":lemma,"tags":["TAG-MARK"]})
-if not records or len(set(r["verse"] for r in records))!=9: sys.exit("ERROR: missing verse(s) or unexpected input layout; no output written")
-out=root/'data'/'tokens'/'SBLGNT-MRK-003-022-030.json';out.parent.mkdir(exist_ok=True)
-payload={"id":"TOKSET-SBLGNT-MRK-003-022-030","source_sha256":hashlib.sha256(source.read_bytes()).hexdigest(),"tokens":records}
-out.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+import collections, hashlib, json, pathlib, re, sys
+if len(sys.argv) != 2: sys.exit(__doc__)
+source = pathlib.Path(sys.argv[1])
+if not source.is_file(): sys.exit("ERROR: input file missing")
+root = pathlib.Path(__file__).resolve().parents[1]
+records=[]; verse_counts=collections.Counter(); bad=[]
+for line_number,line in enumerate(source.read_text(encoding="utf-8-sig").splitlines(),1):
+    parts=line.split()
+    if not parts: continue
+    ref=parts[0]
+    if not re.fullmatch(r"6203(?:2[2-9]|30)",ref): continue
+    if len(parts)!=7:
+        bad.append(line_number);continue
+    ref,pos,morph,display,surface,normalized,lemma=parts
+    verse=int(ref[-2:]);verse_counts[verse]+=1;idx=verse_counts[verse]
+    records.append({"id":f"TOK-SBLGNT-MRK-003-{verse:03d}-{idx:03d}","edition":"ED-SBLGNT","annotation":"MorphGNT", "reference":f"MRK.3.{verse}","verse":verse,"position":idx,"pos":pos,"morphology_code":morph,"display":display,"surface":surface,"normalized":normalized,"lemma":lemma,"tags":["TAG-MARK"]})
+if bad:sys.exit(f"ERROR: malformed rows at lines {bad[:10]}; no output written")
+if set(verse_counts)!=set(range(22,31)):sys.exit(f"ERROR: missing verses {sorted(set(range(22,31))-set(verse_counts))}; no output written")
+sha=hashlib.sha256(source.read_bytes()).hexdigest()
+payload={"id":"TOKSET-SBLGNT-MRK-003-022-030","type":"token_set","status":"imported_unreviewed","tags":["TAG-MARK"],"edition":"ED-SBLGNT","annotation":"MorphGNT","source_sha256":sha,"tokens":records}
 counts=collections.Counter(r['lemma'] for r in records)
-report={"edition":"SBLGNT","annotation":"MorphGNT 6.12","verses":9,"tokens":len(records),"unique_lemmas":len(counts),"lemma_counts":dict(sorted(counts.items()))}
-(root/'data'/'counts').mkdir(exist_ok=True)
-(root/'data'/'counts'/'SBLGNT-MRK-003-022-030.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-print(f"Imported {len(records)} tokens, {len(counts)} lemmas across nine verses")
+report={"id":"COUNT-SBLGNT-MRK-003-022-030","type":"lemma_count","status":"imported_unreviewed","tags":["TAG-MARK"],"edition":"ED-SBLGNT","annotation":"MorphGNT","source_sha256":sha,"verse_count":9,"token_count":len(records),"unique_lemmas":len(counts),"lemma_counts":dict(sorted(counts.items()))}
+for folder,name,obj in [('tokens','SBLGNT-MRK-003-022-030.json',payload),('counts','SBLGNT-MRK-003-022-030.json',report)]:
+    target=root/'data'/folder/name;target.parent.mkdir(parents=True,exist_ok=True)
+    target.write_text(json.dumps(obj,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+print(f"PASS: imported {len(records)} tokens / {len(counts)} lemmas, sha256={sha}")
