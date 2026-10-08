@@ -17,3 +17,6 @@ Git-first, structured knowledge prototype. All study assertions are **provisiona
 2. Import a licensed tokenized Greek text and aligned translation, then compute reproducible word counts.
 3. Add argument/evidence records and compare competing interpretations.
 4. Generate SQLite as a read-only index, leaving Git as source of truth.
+
+## v0.2 pilot extension
+See `docs/MK3-22-30.md` for the first structured study report, `data/variants` for a **provisional** variant, `data/sources` for provenance pointers and `reports/working-text-counts.json` for explicitly unverified two-verse whitespace counts.
