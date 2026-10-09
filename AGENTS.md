@@ -18,5 +18,12 @@ README.md sowie docs/STATUS-UND-ROADMAP.md zuerst lesen. Git ist Source of Truth
 ## Technische Regeln
 Stabile IDs erhalten. Neue Schema-/Typänderungen explizit migrieren. Vorhandene Metadaten nicht stillschweigend normalisieren. `archive/packages/` und deren Prüfsummen nicht verändern. Bei Codeänderungen die relevanten bestehenden Prüfungen ausführen; deren Grenzen im Ergebnis benennen.
 
+## Git-Ablauf
+Der Nutzer arbeitet auch nur vom Smartphone über Claude, ohne eigenen Rechner. Deshalb führt die KI alle Git-Operationen selbständig aus, ohne Rückfrage und ohne manuellen Review-Schritt:
+- Vor jeder Arbeit `origin/main` holen und darauf aufsetzen.
+- Änderungen auf einem Feature-Branch committen (aussagekräftige Commit-Message), Prüfungen ausführen, Branch nach GitHub pushen.
+- Den Feature-Branch selbständig nach `main` mergen und `main` pushen; gemergte Branches danach löschen.
+- Bei Konflikten mit fremden Änderungen auf `main` diese nie verwerfen; zusammenführen oder nachfragen. Kein Force-Push auf `main`.
+
 ## Zusammenarbeit
 KI kann recherchieren, Entwürfe strukturieren, Quellen zuordnen, Inkonsistenzen zeigen und Prüfungen ausführen. Fachliche Bewertung und Review dürfen nicht als geschehen ausgegeben werden, wenn keine prüfende Person bzw. Prüfung dokumentiert ist. Neue technische Vorschläge klar von bereits vereinbarten Anforderungen trennen.
