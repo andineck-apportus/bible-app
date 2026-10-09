@@ -10,6 +10,8 @@ Dies ist der Konzept- und Datenprototyp, noch keine lauffähige Benutzer-App. Vo
 
 | Datei | Inhalt |
 |---|---|
+| [docs/VISION.md](docs/VISION.md) | Vision in vier Stufen: transparente Textbasis, Übertragung, Zoomstufen und Studienanleitung, Visualisierung und UX |
+| [LIZENZEN.md](LIZENZEN.md) | Projekt unter CC0; Lizenzen übernommener Fremddaten |
 | [CHANGELOG.md](CHANGELOG.md) | Änderungen und Entwicklung von v0.1 bis heute |
 | [docs/KONZEPT.md](docs/KONZEPT.md) | Ziel, Analyseebenen, Zoom-System und Kontextdimensionen |
 | [docs/QUELLEN.md](docs/QUELLEN.md) | Quellenlandschaft (Handschriften, Editionen, Datensätze, Lexika, Kontext) mit Rechte-Ampel |
@@ -59,4 +61,4 @@ Der Importer schreibt Quelle, Upstream-Commit, SHA-256, Lizenzangaben und Import
 - `archive/packages/`: fünf unveränderte Originalpakete v0.1–v0.5.
 - `provenance/`: Paketprüfsummen, Dateiinventar und Migrationsprotokolle (`provenance/migrations/`).
 
-Die fünf Archiv-Commits auf GitHub dokumentieren rekonstruierte Paketstände, keine ursprüngliche Entwicklungshistorie. Ihre Zuordnung steht in `provenance/github-imports.json`. Die ZIP-Dateien enthalten zusätzlich die unveränderten Originalbytes. Vor Veröffentlichung oder Weiterverbreitung fremder Texte bleiben die jeweils tatsächlichen Quellen- und Lizenzbedingungen massgeblich; es wurde keine pauschale Projektlizenz festgelegt.
+Die fünf Archiv-Commits auf GitHub dokumentieren rekonstruierte Paketstände, keine ursprüngliche Entwicklungshistorie. Ihre Zuordnung steht in `provenance/github-imports.json`. Die ZIP-Dateien enthalten zusätzlich die unveränderten Originalbytes. Eigene Inhalte stehen unter CC0 1.0 ([LICENSE](LICENSE)); übernommene Fremddaten behalten ihre Lizenz und sind in [LIZENZEN.md](LIZENZEN.md) aufgeführt.
