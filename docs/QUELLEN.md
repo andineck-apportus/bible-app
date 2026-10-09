@@ -8,7 +8,7 @@ Stand: 2026-10-09, recherchiert über die Websites der Anbieter. Mit [ungeprüft
 
 | Zeichen | Bedeutung für das Projekt |
 |---|---|
-| 🟢 offen | Gemeinfrei, CC BY oder CC BY-SA: Import mit Attribution möglich (bei SA Weitergabe unter gleicher Lizenz) |
+| 🟢 offen | Gemeinfrei, CC0 oder CC BY: Import mit Namensnennung möglich. CC BY-SA ebenfalls 🟢 markiert, verlangt aber Weitergabe unter gleicher Lizenz und wird nur ohne freiere Alternative übernommen ([LIZENZEN.md](../LIZENZEN.md)) |
 | 🟠 nicht kommerziell | CC BY-NC o. ä.: für Forschung und nicht kommerzielle Nutzung importierbar; für eine kommerzielle App Lizenz nötig |
 | 🟡 auf Anfrage | Lesen frei oder Lizenz verhandelbar; Import nur mit schriftlicher Erlaubnis |
 | 🔴 geschützt / Abo | Kauf oder Abonnement; nur bibliografischer Verweis mit Fundstelle |
@@ -183,19 +183,22 @@ Bewertung je Schicht: ● gut abgedeckt · ◐ teilweise · ○ fehlt weitgehend
 - **Lexikalische Tiefe** (BDAG, HALOT, Louw-Nida) ist nicht offen; offene Lexika sind älter oder knapper.
 - Die geschützten Apparate (ECM, NA28, BHQ) können wir **lesen und zitieren** (mit Fundstelle), nur nicht als Daten übernehmen. Für eine gründliche Studie einzelner Stellen reicht das; für eine flächendeckende Datenbank nicht.
 
-## 10. Offene Entscheidung
+## 10. Entscheidung: so frei wie möglich
 
-**Kommerziell oder nicht kommerziell?** Mehrere wichtige Datensätze sind nur nicht kommerziell nutzbar (BHSA, Qumran-Daten, ETCBC Peshitta, CATSS/LXX, Codex Sinaiticus). Wenn das Projekt dauerhaft nicht kommerziell bleibt, können sie importiert werden; sonst braucht es Lizenzen oder sie bleiben draussen. Bis zur Entscheidung werden nur 🟢-Quellen importiert, 🟠-Quellen nur als Verweis.
+Festgelegt am 2026-10-09: Das Projekt soll **so frei wie möglich** sein, **ohne einschränkende Lizenz** ([LIZENZEN.md](../LIZENZEN.md)). Folgen:
+- 🟠-Quellen (nicht kommerziell: BHSA, Qumran-Daten, ETCBC Peshitta, CATSS/LXX, Codex Sinaiticus) und 🟡/🔴-Quellen werden nicht übernommen, nur mit Fundstelle zitiert.
+- CC BY-SA-Quellen (z. B. MorphGNT, CNTR-Transkriptionen, OpenGNT, Coptic Scriptorium) nur, wo es keine CC0-/CC-BY-Alternative gibt. Für die griechische Morphologie bietet sich MACULA Greek (CC BY 4.0) als Ersatz für MorphGNT an.
+- Lücken (vor allem Septuaginta) eher durch eigene freie Daten schliessen, z. B. Swete (gemeinfrei) selbst erschliessen.
 
 ## 11. Empfohlene Reihenfolge
 
-1. **NT-Text:** SBLGNT + MorphGNT ✔ (Mk 3,22–30); ganze Bücher importieren; MACULA Greek für Syntax und Referenten.
+1. **NT-Text:** SBLGNT ✔ (Mk 3,22–30); Morphologie von MorphGNT (CC BY-SA) auf MACULA Greek (CC BY 4.0) umstellen; ganze Bücher importieren; Syntax und Referenten aus MACULA.
 2. **NT-Varianten auf Editionsebene:** SBLGNT-Apparat ✔ (Mk 3,22–30); TAGNT für die Editionszugehörigkeit jedes Worts.
-3. **NT-Handschriften:** NTVMR-API (CC BY 4.0) und CNTR für konkrete Zeugenbelege; ECM Markus online lesen und als Fundstelle zitieren.
+3. **NT-Handschriften:** NTVMR-API (CC BY 4.0) für konkrete Zeugenbelege, CNTR (CC BY-SA) ergänzend; ECM Markus online lesen und als Fundstelle zitieren.
 4. **Versifikation:** STEPBible TVTMS.
 5. **AT:** WLC/UXLC + OSHB + MACULA Hebrew + STEP.
 6. **Lexik:** STEP-Lexika, LSJ, Abbott-Smith, UBS-Wörterbuch, BDB; BDAG/HALOT als Verweis (Bibliothek).
-7. **LXX und alte Übersetzungen:** erst nach der Entscheidung zur kommerziellen Nutzung; vorerst Swete, Clementina, Coptic Scriptorium.
+7. **LXX und alte Übersetzungen:** Swete (gemeinfrei) selbst erschliessen; Clementina; Coptic Scriptorium nur mangels Alternative (CC BY-SA).
 8. **Kontext und Sekundärliteratur:** gezielt pro Studie, mit Fundstelle und Datierung.
 
 Datenmodell: Handschrift (Zeuge) ≠ Edition ≠ Annotation ≠ Übersetzung ≠ Kommentar. Jede Quelle erhält einen eigenen Datensatz mit Version, Locator, Lizenz und tatsächlicher Prüftiefe.

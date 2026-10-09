@@ -22,7 +22,7 @@
 1. Typspezifische Schemas fehlen; der Validator prüft nur die gemeinsamen Felder.
 2. Ob ein Vers existiert, wird nicht geprüft (keine Versifikationstabelle).
 3. Quellen-, Review- und Zeitmetadaten sind uneinheitlich und lückenhaft.
-4. Lizenzangaben: Das MorphGNT-README nennt für den SBLGNT-Text noch die SBLGNT EULA, Faithlife/SBLGNT nennt CC BY 4.0. Vor einer Veröffentlichung klären.
+4. Lizenzangaben: Das MorphGNT-README nennt für den SBLGNT-Text noch die SBLGNT EULA, Faithlife/SBLGNT nennt CC BY 4.0. Die MorphGNT-Annotation ist CC BY-SA und widerspricht dem Ziel «keine einschränkende Lizenz»; Ersatz geplant.
 
 ## Befunde aus dem Import
 - Die alte Arbeitstranskription von Mk 3,29–30 weicht nur in einem Wort von SBLGNT ab: `ἀλλ’` statt `ἀλλὰ` (3,29). Vergleich: `reports/compare-TEXT-MRK-003-029-030-WORKING-vs-SBLGNT.json`. Die Transkription bleibt als historischer Arbeitsstand erhalten.
@@ -40,7 +40,7 @@
 - Kritische Prüfung des abgeleiteten Prinzips: Es enthält stärkere Begriffe als die begrenzte Beobachtung zum Wissen der Schriftgelehrten. Diese Ableitung ist nicht allein durch den Pilotbestand abgesichert.
 
 ## Nächster Meilenstein v0.8 (Vorschlag)
-Entscheidung kommerziell/nicht kommerziell treffen (bestimmt, welche Datensätze importiert werden dürfen, siehe QUELLEN.md Abschnitt 10); den ganzen Markus-Text und TAGNT importieren; Handschriftenbelege für die Pilot-Variantenstellen aus offenen Transkriptionen (CNTR, NTVMR) erfassen; Versifikationsmodell auf Basis von STEPBible TVTMS; typspezifische Schemas für die wichtigsten Typen; Test für den Apparat-Importer.
+Morphologie von MorphGNT (CC BY-SA) auf MACULA Greek (CC BY 4.0) umstellen; den ganzen Markus-Text und TAGNT importieren; Gesichertheitsbewertung als Datentyp entwerfen (siehe VISION.md); Handschriftenbelege für die Pilot-Variantenstellen aus offenen Transkriptionen (CNTR, NTVMR) erfassen; Versifikationsmodell auf Basis von STEPBible TVTMS; typspezifische Schemas für die wichtigsten Typen; Test für den Apparat-Importer.
 
 ## Danach
 Primärbelege; standardisierte Revisions-/Reviewmetadaten; Versifikationsmodell; SQLite-Projektion; anschliessend eine Oberfläche auf der stabilisierten Datenbasis. Technische Produktentscheidungen bleiben offen.
