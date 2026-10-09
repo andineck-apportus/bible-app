@@ -201,6 +201,11 @@ def main():
         for i, rd in enumerate(r.get("readings") or []):
             for ed in rd.get("editions") or []:
                 check_id(rel, f"readings[{i}].editions", ed)
+        for i, alt in enumerate(r.get("alternatives") or []):
+            check_reading(rel, f"alternatives[{i}].reading", alt.get("reading"))
+            check_ref(rel, f"alternatives[{i}].reference", alt.get("reference")); ref_count += 1
+            if alt.get("de_from") and alt["de_from"] not in (r.get("text_by_reference") or {}).get(alt.get("reference"), ""):
+                errors.append(f"{rel}: alternatives[{i}].de_from kommt im Übersetzungstext nicht vor")
         for i, a in enumerate(r.get("alignments") or []):
             check_reading(rel, f"alignments[{i}].depends_on_reading", a.get("depends_on_reading"))
             check_tokens(rel, f"alignments[{i}].source_tokens", a.get("source_tokens"))
