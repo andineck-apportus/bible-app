@@ -1,14 +1,38 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Bible Knowledge generic record v0.1",
+  "title": "Bible Knowledge generic record v0.6",
+  "description": "Gemeinsame Pflichtfelder und kontrollierte Werte aller Datensätze. Typspezifische Schemas folgen später. scripts/validate.py wertet die hier verwendeten Schlüsselwörter selbst aus (Teilmenge von JSON Schema, keine externen Pakete).",
   "type": "object",
   "required": ["id", "type", "status", "tags"],
   "properties": {
     "id": {"type": "string", "pattern": "^[A-Z][A-Z0-9-]+$"},
-    "type": {"enum": ["work", "text_unit", "finding", "interpretation", "principle", "context", "application", "topic", "study", "tag", "relation", "variant"]},
-    "status": {"enum": ["draft", "reviewed", "deprecated"]},
+    "type": {"enum": [
+      "work", "text_unit", "study", "source", "dataset", "critical_edition",
+      "text_sample", "token_set", "lemma_count", "finding", "variant",
+      "editorial_decision", "translation", "alignment", "interpretation",
+      "principle", "context", "application", "topic", "relation",
+      "open_question", "tag"
+    ]},
+    "status": {"enum": [
+      "draft", "review_pending", "reference_only", "imported_unreviewed",
+      "reviewed", "deprecated"
+    ]},
     "tags": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^TAG-"}},
-    "knowledge": {"type": "object", "properties": {"asserted_at": {"type": "string", "format": "date"}, "supersedes": {"type": ["string", "null"]}}}
+    "reference": {"$ref": "#/$defs/bibleRef"},
+    "to_ref": {"$ref": "#/$defs/bibleRef"},
+    "range": {"$ref": "#/$defs/bibleRef"},
+    "evidence_refs": {"type": "array", "items": {"$ref": "#/$defs/bibleRef"}},
+    "knowledge": {"type": "object", "properties": {
+      "asserted_at": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+      "supersedes": {"type": ["string", "null"]}
+    }}
   },
-  "additionalProperties": true
+  "additionalProperties": true,
+  "$defs": {
+    "bibleRef": {
+      "description": "Kanonische Bibelstelle gemäss docs/BIBELSTELLEN.md, z. B. MRK.3.29 oder MRK.3.22-MRK.3.30. Buchcode, Bereichsreihenfolge und gleiche Genauigkeit prüft zusätzlich scripts/refs.py.",
+      "type": "string",
+      "pattern": "^[1-3]?[A-Z]{2,3}(\\.[1-9]\\d*){0,2}(-[1-3]?[A-Z]{2,3}(\\.[1-9]\\d*){0,2})?$"
+    }
+  }
 }

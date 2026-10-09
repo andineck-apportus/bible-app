@@ -1,0 +1,135 @@
+{
+  "migration": "v0.5 -> v0.6",
+  "date": "2026-10-09",
+  "script": "scripts/migrations/v0_6.py",
+  "note": "Inhaltliche Aussagen, Status, Konfidenz und IDs wurden nicht verändert. Die Prüfsummen in provenance/v0.5-files.json beschreiben weiterhin die v0.5-Originale.",
+  "changes": [
+    {
+      "file": "data/findings/FIND-MRK-0001.json",
+      "field": "evidence_refs",
+      "old": [
+        "Mk 3:29",
+        "Mk 3:30"
+      ],
+      "new": [
+        "MRK.3.29",
+        "MRK.3.30"
+      ],
+      "reason": "Bibelstellen-Konvention v0.6"
+    },
+    {
+      "file": "data/findings/FIND-MRK-0002.json",
+      "field": "evidence_refs",
+      "old": [
+        "Mk 3:22-30"
+      ],
+      "new": [
+        "MRK.3.22-MRK.3.30"
+      ],
+      "reason": "Bibelstellen-Konvention v0.6"
+    },
+    {
+      "file": "data/findings/FIND-MRK-0004.json",
+      "field": "evidence_refs",
+      "old": [
+        "Mk 3:22-30"
+      ],
+      "new": [
+        "MRK.3.22-MRK.3.30"
+      ],
+      "reason": "Bibelstellen-Konvention v0.6"
+    },
+    {
+      "file": "data/relations/REL-MRK-0001.json",
+      "field": "to_ref",
+      "old": "Mt 12:22-32",
+      "new": "MAT.12.22-MAT.12.32",
+      "reason": "Bibelstellen-Konvention v0.6"
+    },
+    {
+      "file": "data/relations/REL-MRK-0002.json",
+      "field": "to_ref",
+      "old": "Lk 11:14-23",
+      "new": "LUK.11.14-LUK.11.23",
+      "reason": "Bibelstellen-Konvention v0.6"
+    },
+    {
+      "file": "data/relations/REL-MRK-0003.json",
+      "field": "to_ref",
+      "old": "Lk 12:8-10",
+      "new": "LUK.12.8-LUK.12.10",
+      "reason": "Bibelstellen-Konvention v0.6"
+    },
+    {
+      "file": "data/studies/STUDY-MRK-0001.json",
+      "field": "type",
+      "old": "studie",
+      "new": "study",
+      "reason": "kanonischer Typname gemäss Schema"
+    },
+    {
+      "file": "data/studies/STUDY-MRK-0001.json",
+      "field": "outputs",
+      "old": [
+        "FIND-MRK-0001",
+        "FIND-MRK-0002",
+        "INT-MRK-0001",
+        "INT-MRK-0002",
+        "PRIN-MRK-0001",
+        "APP-MRK-0001"
+      ],
+      "new": [
+        "FIND-MRK-0001",
+        "FIND-MRK-0002",
+        "INT-MRK-0001",
+        "INT-MRK-0002",
+        "PRIN-MRK-0001",
+        "APP-MRK-0001",
+        "FIND-MRK-0003",
+        "FIND-MRK-0004",
+        "VAR-MRK-003-029-001",
+        "VAR-MRK-003-029-002",
+        "DEC-MRK-003-029-001",
+        "TRANS-MRK-003-029-DE-WORKING",
+        "ALIGN-MRK-003-029-001",
+        "TEXT-MRK-003-029-030-WORKING",
+        "REL-MRK-0001",
+        "REL-MRK-0002",
+        "REL-MRK-0003",
+        "QUESTION-MRK-0001"
+      ],
+      "reason": "später hinzugekommene Ergebnisse der Pilotstudie nachgetragen (Roadmap-Lücke 3)"
+    },
+    {
+      "file": "data/text-units/TU-MRK-003-022-030.json",
+      "field": "type",
+      "old": "text-unit",
+      "new": "text_unit",
+      "reason": "kanonischer Typname gemäss Schema"
+    },
+    {
+      "file": "data/text-units/TU-MRK-003-022-030.json",
+      "field": "range",
+      "old": {
+        "start": "3:22",
+        "end": "3:30"
+      },
+      "new": "MRK.3.22-MRK.3.30",
+      "reason": "Bibelstellen-Konvention v0.6; Bereich als eine kanonische Stelle"
+    },
+    {
+      "file": "data/variants/VAR-MRK-003-029-001.json",
+      "field": "reference",
+      "old": "Mark 3:29",
+      "new": "MRK.3.29",
+      "reason": "Bibelstellen-Konvention v0.6"
+    },
+    {
+      "file": "data/variants/VAR-MRK-003-029-001.json",
+      "field": "evidence_status",
+      "old": "secondary_transcription_checked_not_primary_facsímile",
+      "new": "secondary_transcription_checked_not_primary_facsimile",
+      "reason": "Tippfehler (í) im Statuswert"
+    }
+  ]
+}
