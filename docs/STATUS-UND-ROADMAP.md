@@ -1,11 +1,13 @@
-# Status und nächste Schritte · 2026-10-09 (v0.7)
+# Status und nächste Schritte · 2026-10-09 (v0.8)
 
 ## Gesichert und vorhanden
 - Alle Originalpakete v0.1–v0.5; rekonstruierte Git-Historie mit je einem Snapshot.
-- Pilot v0.7: 55 Datensätze, darin 6 Tags.
-- **10 Variantenstellen auf Editionsebene** (SBLGNT-Apparat: WH, Tregelles, NA28, Robinson-Pierpont) für Mk 3,25–29, an Token-IDs gebunden; klar getrennt von Handschriftenbelegen.
+- v0.8: 1025 Datensätze im freien Kern, darin 6 Tags; Studienschicht `data-nc/` angelegt (leer).
+- **Ganzes Markusevangelium**: SBLGNT-Text (11 286 Wörter, je Kapitel ein Token-Set) mit MACULA-Greek-Annotation (Lemma, Morphologie, Syntaxrolle, Referenten, Glossen; CC BY 4.0). SBLGNT und MACULA stimmen in allen Wortgrenzen überein; eine Akzentabweichung (7,27) protokolliert.
+- **929 Variantenstellen** auf Editionsebene für Markus; 1 Apparateintrag (7,21–22, versübergreifend) nicht sicher zuordenbar und daher nicht importiert (`reports/sblgntapp-MRK-nicht-zugeordnet.json`).
+- **Gesichertheitsbewertung** als Datentyp mit erster Methode «Übereinstimmung der Editionen» ([GESICHERTHEIT.md](GESICHERTHEIT.md)).
 - **Vollständige deutsche Arbeitsübersetzung Mk 3,22–30** mit Zuordnung aller 140 Tokens und Anmerkungen zu Grammatik und Alternativen (KI-Entwurf, von einem zweiten KI-Durchgang gegengelesen, fachlich ungeprüft).
-- **Griechischer Text Mk 3,22–30** aus MorphGNT SBLGNT 6.12 (Commit `a2afca0`): 140 Tokens mit Text, Wortform, Lemma, Wortart und Parsing; daraus 91 verschiedene normalisierte Wortformen und 64 Lemmata. Status `imported_unreviewed`.
+- MorphGNT-Annotation Mk 3,22–30 (Pilot, CC BY-SA) als eigene Schicht neben MACULA erhalten; die beiden Annotationen unterscheiden sich stellenweise (z. B. αἰωνίου in 3,29: MorphGNT Genitiv Neutrum; bei MACULA nennt der Morphologiecode `A-GSF` Femininum, das Feld «gender» aber Neutrum — auch innerhalb einer Quelle widersprüchlich) — ein Beispiel für nebeneinander gezeigte Unterschiede.
 - **Einheitliche Bibelstellen** nach [BIBELSTELLEN.md](BIBELSTELLEN.md), mit Werkzeug `scripts/refs.py`; alle bestehenden Daten migriert und protokolliert.
 - Variantenstellen Mk 3,29: Sünde/Gericht und ist/wird sein, als vorläufige Forschungsdaten.
 - Revidierbare textkritische Entscheidung; eigene deutsche Arbeitsübersetzung; teilweise Wort-/Phrasenalignments.
@@ -22,7 +24,10 @@
 1. Typspezifische Schemas fehlen; der Validator prüft nur die gemeinsamen Felder.
 2. Ob ein Vers existiert, wird nicht geprüft (keine Versifikationstabelle).
 3. Quellen-, Review- und Zeitmetadaten sind uneinheitlich und lückenhaft.
-4. Lizenzangaben: Das MorphGNT-README nennt für den SBLGNT-Text noch die SBLGNT EULA, Faithlife/SBLGNT nennt CC BY 4.0. Die MorphGNT-Annotation ist CC BY-SA und widerspricht dem Ziel «keine einschränkende Lizenz»; Ersatz geplant.
+4. Typspezifische Prüfungen für Annotationen (z. B. gültige Morphologiecodes) fehlen.
+5. Kein automatischer Test für die Importer `import_sblgnt_book.py` und `import_sblgnt_apparatus.py` (sie prüfen die Quellen beim Import selbst).
+6. Der kürzere Markusschluss steht in SBLGNT innerhalb von 16,8 (Tokens 16,8/21–52) und ist noch nicht als eigener Abschnitt ausgewiesen; ebenso der längere Schluss 16,9–20 ⟦ ⟧.
+7. Der Apparateintrag 7,21–22 liesse sich mit versübergreifenden `base_tokens` eindeutig zuordnen; noch nicht umgesetzt.
 
 ## Befunde aus dem Import
 - Die alte Arbeitstranskription von Mk 3,29–30 weicht nur in einem Wort von SBLGNT ab: `ἀλλ’` statt `ἀλλὰ` (3,29). Vergleich: `reports/compare-TEXT-MRK-003-029-030-WORKING-vs-SBLGNT.json`. Die Transkription bleibt als historischer Arbeitsstand erhalten.
@@ -39,8 +44,8 @@
 - Präzise wissenschaftliche Fundstellen, weitere Gegenargumente und eigenständige Kontextanwendungen.
 - Kritische Prüfung des abgeleiteten Prinzips: Es enthält stärkere Begriffe als die begrenzte Beobachtung zum Wissen der Schriftgelehrten. Diese Ableitung ist nicht allein durch den Pilotbestand abgesichert.
 
-## Nächster Meilenstein v0.8 (Vorschlag)
-Morphologie von MorphGNT (CC BY-SA) auf MACULA Greek (CC BY 4.0) umstellen; den ganzen Markus-Text und TAGNT importieren; Gesichertheitsbewertung als Datentyp entwerfen (siehe VISION.md); Handschriftenbelege für die Pilot-Variantenstellen aus offenen Transkriptionen (CNTR, NTVMR) erfassen; Versifikationsmodell auf Basis von STEPBible TVTMS; typspezifische Schemas für die wichtigsten Typen; Test für den Apparat-Importer.
+## Nächster Meilenstein v0.9 (Vorschlag)
+Erster klickbarer App-Prototyp für Mk 3,20–35 (Zoomstufen, Unterschiede mit Gesichertheit, Strukturdiagramm); Handschriftenbelege aus der NTVMR-API (CC BY 4.0) für die Pilot-Variantenstellen als zweite Bewertungsmethode; Zeugenangabe Ephraemi (C) in Mk 3,29 klären; Versifikationsmodell auf Basis von STEPBible TVTMS; typspezifische Schemas.
 
 ## Danach
 Primärbelege; standardisierte Revisions-/Reviewmetadaten; Versifikationsmodell; SQLite-Projektion; anschliessend eine Oberfläche auf der stabilisierten Datenbasis. Technische Produktentscheidungen bleiben offen.

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Technische Prüfung aller Datensätze in data/.
+"""Technische Prüfung aller Datensätze in data/ (freier Kern) und data-nc/ (Studienschicht).
 
 Prüft:
 1. Schema (schema/record.schema.json) – ausgewertet wird die Teilmenge
@@ -9,6 +9,9 @@ Prüft:
 4. Alle Bibelstellen sind kanonisch (docs/BIBELSTELLEN.md).
 5. Alignments mit coverage = "complete": jedes Token im Bereich genau einmal zugeordnet,
    jeder Zieltext kommt im Wortlaut der verknüpften Übersetzung vor.
+6. Annotationen verweisen nur auf Tokens des annotierten Token-Sets; Bewertungen auf
+   vorhandene Variantenstellen und Lesarten.
+7. Lizenzschichten: Datensätze in data/ verweisen nie auf Datensätze in data-nc/.
 
 Ein PASS ist keine fachliche Freigabe. Nur Standardbibliothek.
 """
@@ -17,17 +20,20 @@ import pathlib
 import re
 import sys
 
-ROOT = pathlib.Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "scripts"))
+ROOT = pathlib.Path(__import__("os").environ.get("BIBLE_APP_ROOT") or pathlib.Path(__file__).resolve().parents[1])
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import refs  # noqa: E402
 
-SCHEMA = json.loads((ROOT / "schema" / "record.schema.json").read_text(encoding="utf-8"))
+SCHEMA = json.loads((pathlib.Path(__file__).resolve().parents[1] / "schema" / "record.schema.json").read_text(encoding="utf-8"))
 
 # Felder, die auf andere Datensätze verweisen
 ID_FIELDS = ["work", "primary_unit", "subject", "principle", "context", "from", "edition",
              "base_edition", "apparatus", "same_variation_unit_as", "incorporates", "based_on_edition",
-             "based_on_tokens", "source_tokens_set", "target_translation", "bibliographic_source"]
-ID_LIST_FIELDS = ["based_on", "derived_from", "outputs", "evidence_objects", "related", "imported_records"]
+             "based_on_tokens", "source_tokens_set", "target_translation", "bibliographic_source",
+             "annotates", "method", "superseded_by", "annotation_moved_to", "based_on_annotation"]
+ID_LIST_FIELDS = ["based_on", "derived_from", "outputs", "evidence_objects", "related", "imported_records",
+                  "based_on_annotations"]
+LAYERS = {"data": "core", "data-nc": "nc"}
 READING_FIELDS = ["preferred_reading", "alternative", "based_on_variant"]
 READING_LIST_FIELDS = ["follows_readings"]
 # Felder mit Token-IDs (Tokens liegen innerhalb eines token_set)
@@ -72,7 +78,10 @@ def check_schema(value, schema, path, errors):
 def main():
     errors = []
     records = {}
-    for path in sorted((ROOT / "data").rglob("*.json")):
+    layer_of = {}
+    paths = [(p, layer) for d, layer in LAYERS.items() if (ROOT / d).exists()
+             for p in sorted((ROOT / d).rglob("*.json"))]
+    for path, layer in paths:
         rel = path.relative_to(ROOT)
         try:
             record = json.loads(path.read_text(encoding="utf-8"))
@@ -84,14 +93,19 @@ def main():
         if rid in records:
             errors.append(f"{rel}: doppelte ID {rid}")
         records[rid] = (rel, record)
+        layer_of[rid] = layer
 
     tags = {rid for rid, (_, r) in records.items() if r.get("type") == "tag"}
     readings = {f"{rid}:{rd['reading_id']}" for rid, (_, r) in records.items()
                 if r.get("type") == "variant" for rd in r.get("readings", [])}
 
+    current_layer = {"value": "core"}
+
     def check_id(rel, field, target):
         if target is not None and target not in records:
             errors.append(f"{rel}: {field} verweist auf unbekannte ID {target!r}")
+        elif target is not None and current_layer["value"] == "core" and layer_of.get(target) == "nc":
+            errors.append(f"{rel}: {field} verweist aus dem freien Kern auf NC-Datensatz {target!r}")
 
     def check_reading(rel, field, target):
         if target is not None and target not in readings:
@@ -141,7 +155,32 @@ def main():
                     errors.append(f"{rel}: alignments[{i}] Zieltext {part!r} nicht in Übersetzung {a.get('reference')}")
 
     ref_count = token_ref_count = 0
+    token_set_members = {sid: set(ids) for sid, ids in token_sets.items()}
+    annotation_count = assessment_count = 0
     for rid, (rel, r) in records.items():
+        current_layer["value"] = layer_of[rid]
+        if r.get("type") == "annotation_set":
+            members = token_set_members.get(r.get("annotates"), set())
+            for tid, entry in (r.get("entries") or {}).items():
+                annotation_count += 1
+                if tid not in members:
+                    errors.append(f"{rel}: Annotation für Token {tid!r}, das nicht in {r.get('annotates')} liegt")
+                for f in ("subject_ref", "referent"):
+                    for t in entry.get(f, []):
+                        if not t.startswith("TOK-"):
+                            errors.append(f"{rel}: entries[{tid}].{f} enthält keine Token-ID: {t!r}")
+                        else:
+                            check_tokens(rel, f"entries[{tid}].{f}", [t])
+        if r.get("type") == "assessment_set":
+            for i, a in enumerate(r.get("assessments") or []):
+                assessment_count += 1
+                check_id(rel, f"assessments[{i}].assesses", a.get("assesses"))
+                for res in a.get("results", []):
+                    check_reading(rel, f"assessments[{i}].results.reading", res.get("reading"))
+                    for ed in res.get("supporting_editions", []):
+                        check_id(rel, f"assessments[{i}].supporting_editions", ed)
+                for h in a.get("highest_support") or []:
+                    check_reading(rel, f"assessments[{i}].highest_support", h)
         for tag in r.get("tags", []):
             if tag not in tags:
                 errors.append(f"{rel}: unbekanntes Tag {tag}")
@@ -185,7 +224,9 @@ def main():
             print("FAIL:", e)
         sys.exit(f"{len(errors)} Fehler")
     print(f"PASS: {len(records)} records, {len(tags)} defined tags; schema, unique IDs, "
-          f"tag/ID/reading references, {token_ref_count} token references and {ref_count} bible references valid")
+          f"tag/ID/reading references, {token_ref_count} token references, {ref_count} bible references, "
+          f"{annotation_count} annotations, {assessment_count} assessments valid "
+          f"({sum(v == 'nc' for v in layer_of.values())} records in data-nc)")
 
 
 if __name__ == "__main__":

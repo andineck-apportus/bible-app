@@ -1,0 +1,30 @@
+{
+  "id": "METHOD-EDITION-AGREEMENT-V1",
+  "type": "assessment_method",
+  "status": "draft",
+  "tags": [
+    "TAG-TEXT-CRITICISM",
+    "TAG-UNCERTAINTY"
+  ],
+  "name_de": "Übereinstimmung der Editionen",
+  "version": "1",
+  "applies_to": "variant mit evidence_level = edition_apparatus",
+  "question_de": "Wie viele der verglichenen gedruckten Editionen haben eine Lesart in ihrem Text?",
+  "inputs_de": "Lesarten und Editionen einer Variantenstelle aus dem SBLGNT-Apparat. Berücksichtigt werden SBLGNT (ED-SBLGNT), Westcott-Hort (ED-WH), Tregelles (ED-TREG), NA28 (ED-NA28) und Robinson-Pierpont (ED-RP). Die SBLGNT-Lesart (R1) zählt für ED-SBLGNT.",
+  "procedure_de": "Pro Lesart werden die Editionen gezählt, die sie bezeugen. Ergebnis: Anzahl, Anteil und eine Stufe nach festen Schwellen.",
+  "scale": [
+    {"level": "breit", "rule_de": "mindestens 4 von 5 Editionen"},
+    {"level": "mehrheitlich", "rule_de": "3 von 5 Editionen"},
+    {"level": "geteilt", "rule_de": "2 von 5 Editionen"},
+    {"level": "vereinzelt", "rule_de": "1 von 5 Editionen"},
+    {"level": "keine", "rule_de": "keine der 5 Editionen (Lesart nur aus anderen Ausgaben bekannt)"}
+  ],
+  "assumptions_and_limits_de": [
+    "Misst den Konsens von Herausgebern, nicht die Bezeugung in Handschriften.",
+    "Die Editionen sind keine unabhängigen Zeugen: WH, Tregelles, NA28 und SBLGNT beruhen weitgehend auf denselben frühen Handschriften; RP steht für den byzantinischen Mehrheitstext. «4 gegen 1» bedeutet daher oft «kritische Editionen gegen Mehrheitstext».",
+    "Ältere Editionen (WH 1881, Tregelles 1857–1879) kannten viele heute bekannte Papyri nicht.",
+    "Die Angaben zu den Editionen stammen aus dem SBLGNT-Apparat und wurden nicht an den Editionen selbst geprüft.",
+    "Siglen ohne eigenen Editionsdatensatz (z. B. NIV, Greeven, Randlesarten WHmarg) werden nicht mitgezählt."
+  ],
+  "authorship_de": "Methode entworfen 2026-10-09 (KI-Entwurf, Claude); Ergebnisse werden maschinell berechnet."
+}

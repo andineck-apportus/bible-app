@@ -14,7 +14,7 @@ README.md sowie docs/STATUS-UND-ROADMAP.md zuerst lesen. Git ist Source of Truth
 - Inhaltliche Revisionen mit Vorgänger, Datum, Grund und Quellenstand festhalten. Frühere Positionen müssen rekonstruierbar bleiben.
 - `draft`, `review_pending`, `reference_only` und `imported_unreviewed` sind keine fachliche Freigabe. Konfidenz ist kein Prüfstatus.
 - Quellenbezogene Rechte und Attribution vor Textimport prüfen; keine modernen Bibeln oder Apparate pauschal kopieren.
-- Lizenzgrundsatz ([LIZENZEN.md](LIZENZEN.md)): eigene Inhalte CC0; nur gemeinfreie, CC0- oder CC-BY-Quellen übernehmen; CC BY-SA nur ohne freiere Alternative und in LIZENZEN.md aufführen; NC/geschützte Quellen nie übernehmen, nur zitieren.
+- Lizenzgrundsatz ([LIZENZEN.md](LIZENZEN.md)): eigene Inhalte CC0. Freier Kern `data/`: nur gemeinfreie, CC0-, CC-BY- und CC-BY-SA-Quellen (bei gleichwertiger Wahl die freiere). Nicht kommerzielle Quellen nur in `data-nc/`, nie mit Kerndaten vermischen; Kerndaten verweisen nicht auf `data-nc/`. Geschützte Quellen und «used with permission»-Daten nie übernehmen, nur zitieren. Jede Fremddatei in LIZENZEN.md aufführen.
 - Keine Lektoratsentscheidung über richtig/falsch: Unterschiede ausgeben und nach Gesichertheit bewerten, Bewertungsmethode offenlegen ([docs/VISION.md](docs/VISION.md)).
 
 ## Technische Regeln

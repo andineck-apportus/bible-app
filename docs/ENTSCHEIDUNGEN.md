@@ -10,7 +10,7 @@
 - Wortzahlen für Ausgangstext und Übersetzung sind editions-/fassungsgebunden und reproduzierbar.
 - Pilot: Markus 3,22–30; Zoom von Wortebene bis Themenbogen und damaliger/heutiger Welt.
 - Bibelstellen werden einheitlich kanonisch gespeichert (USFM-Buchcodes, `MRK.3.29`, `MRK.3.22-MRK.3.30`); deutsche Schreibweise nur als Anzeige ([BIBELSTELLEN.md](BIBELSTELLEN.md), festgelegt 2026-10-09).
-- **Lizenz:** so frei wie möglich, keine einschränkende Lizenz. Eigene Inhalte CC0 1.0; im Kern nur gemeinfreie, CC0- und CC-BY-Quellen; CC BY-SA nur ohne freiere Alternative und gekennzeichnet; NC/geschützt nur als Verweis ([LIZENZEN.md](../LIZENZEN.md), festgelegt 2026-10-09).
+- **Lizenz:** so frei wie möglich. Eigene Inhalte CC0 1.0. Zwei Schichten: freier Kern (`data/`: gemeinfrei, CC0, CC BY, CC BY-SA) und Studienschicht für nicht kommerzielle Quellen (`data-nc/`), strikt getrennt; geschützte Quellen nur als Verweis ([LIZENZEN.md](../LIZENZEN.md), festgelegt 2026-10-09).
 - **Vision** in vier Stufen festgehalten ([VISION.md](VISION.md), 2026-10-09): keine Lektoratsentscheidung über richtig/falsch, sondern Bewertung nach Gesichertheit mit ausgewiesenen Unterschieden.
 - **Betreiber:** Die App wird von einem gemeinnützigen Verein betrieben, nicht von einer Firma (festgelegt 2026-10-09).
 - Typnamen in `snake_case` (`study`, `text_unit`), festgelegt 2026-10-09.

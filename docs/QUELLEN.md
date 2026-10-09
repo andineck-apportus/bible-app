@@ -183,12 +183,12 @@ Bewertung je Schicht: ● gut abgedeckt · ◐ teilweise · ○ fehlt weitgehend
 - **Lexikalische Tiefe** (BDAG, HALOT, Louw-Nida) ist nicht offen; offene Lexika sind älter oder knapper.
 - Die geschützten Apparate (ECM, NA28, BHQ) können wir **lesen und zitieren** (mit Fundstelle), nur nicht als Daten übernehmen. Für eine gründliche Studie einzelner Stellen reicht das; für eine flächendeckende Datenbank nicht.
 
-## 10. Entscheidung: so frei wie möglich
+## 10. Entscheidung: freier Kern und Studienschicht
 
-Festgelegt am 2026-10-09: Das Projekt soll **so frei wie möglich** sein, **ohne einschränkende Lizenz** ([LIZENZEN.md](../LIZENZEN.md)). Folgen:
-- 🟠-Quellen (nicht kommerziell: BHSA, Qumran-Daten, ETCBC Peshitta, CATSS/LXX, Codex Sinaiticus) und 🟡/🔴-Quellen werden nicht übernommen, nur mit Fundstelle zitiert.
-- CC BY-SA-Quellen (z. B. MorphGNT, CNTR-Transkriptionen, OpenGNT, Coptic Scriptorium) nur, wo es keine CC0-/CC-BY-Alternative gibt. Für die griechische Morphologie bietet sich MACULA Greek (CC BY 4.0) als Ersatz für MorphGNT an.
-- Lücken (vor allem Septuaginta) eher durch eigene freie Daten schliessen, z. B. Swete (gemeinfrei) selbst erschliessen.
+Festgelegt am 2026-10-09 ([LIZENZEN.md](../LIZENZEN.md)): Die App betreibt ein gemeinnütziger Verein. Das Projekt soll so frei wie möglich sein und darf dafür mehrere Quellen nutzen.
+- **Freier Kern** (`data/`): 🟢-Quellen, also gemeinfrei, CC0, CC BY und CC BY-SA. Bei gleichwertiger Wahl die freiere (z. B. MACULA Greek CC BY statt MorphGNT CC BY-SA).
+- **Studienschicht** (`data-nc/`): 🟠-Quellen (BHSA, Qumran-Daten, CATSS/Septuaginta, Codex Sinaiticus u. a.) für den gemeinnützigen Betrieb, strikt getrennt vom Kern und mit Lizenz gekennzeichnet.
+- 🟡/🔴-Quellen nur mit Fundstelle zitiert, ausser mit schriftlicher Lizenz.
 
 ## 11. Empfohlene Reihenfolge
 
@@ -198,7 +198,7 @@ Festgelegt am 2026-10-09: Das Projekt soll **so frei wie möglich** sein, **ohne
 4. **Versifikation:** STEPBible TVTMS.
 5. **AT:** WLC/UXLC + OSHB + MACULA Hebrew + STEP.
 6. **Lexik:** STEP-Lexika, LSJ, Abbott-Smith, UBS-Wörterbuch, BDB; BDAG/HALOT als Verweis (Bibliothek).
-7. **LXX und alte Übersetzungen:** Swete (gemeinfrei) selbst erschliessen; Clementina; Coptic Scriptorium nur mangels Alternative (CC BY-SA).
+7. **LXX und alte Übersetzungen:** CATSS/Rahlfs in der Studienschicht; Swete (gemeinfrei) langfristig selbst erschliessen; Clementina; Coptic Scriptorium.
 8. **Kontext und Sekundärliteratur:** gezielt pro Studie, mit Fundstelle und Datierung.
 
 Datenmodell: Handschrift (Zeuge) ≠ Edition ≠ Annotation ≠ Übersetzung ≠ Kommentar. Jede Quelle erhält einen eigenen Datensatz mit Version, Locator, Lizenz und tatsächlicher Prüftiefe.

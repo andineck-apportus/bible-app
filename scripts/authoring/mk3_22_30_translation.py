@@ -1,7 +1,8 @@
 """Autorenwerkzeug: erzeugt Arbeitsübersetzung TRANS-MRK-003-022-030-DE-WORKING und Wortzuordnung ALIGN-MRK-003-022-030-001 (inkl. Abdeckungsprüfung). Aufruf: python3 scripts/authoring/mk3_22_30_translation.py . """
 import json, pathlib, sys
 ROOT = pathlib.Path(sys.argv[1])
-toks = json.loads((ROOT / "data/tokens/SBLGNT-MRK-003-022-030.json").read_text())["tokens"]
+toks = [t for t in json.loads((ROOT / "data/tokens/SBLGNT-MRK-003.json").read_text())["tokens"]
+        if 22 <= int(t["reference"].split(".")[-1]) <= 30]
 TEXT = {
  22: "Und die Schriftgelehrten, die von Jerusalem herabgekommen waren, sagten: «Er hat Beelzebul», und: «Durch den Herrscher der Dämonen treibt er die Dämonen aus.»",
  23: "Und er rief sie herbei und sagte in Gleichnissen zu ihnen: «Wie kann Satan Satan austreiben?",
@@ -95,14 +96,15 @@ missing = [t["id"] for t in toks if t["id"] not in seen]
 assert not missing, missing
 print("Abdeckung vollständig:", len(seen), "Tokens,", len(entries), "Zuordnungen")
 
-sblgnt_units = sorted(p.stem for p in (ROOT / "data/variants").glob("VAR-SBLGNTAPP-*.json"))
+sblgnt_units = sorted(p.stem for p in (ROOT / "data/variants/sblgntapp-mrk").glob("VAR-SBLGNTAPP-MRK-003-*.json")
+                      if 22 <= int(p.stem.split("-")[-2]) <= 30)
 trans = {
  "id": "TRANS-MRK-003-022-030-DE-WORKING", "type": "translation", "status": "draft",
  "tags": ["TAG-MARK", "TAG-HOLY-SPIRIT", "TAG-BLASPHEMY"],
  "reference": "MRK.3.22-MRK.3.30", "language": "de-CH",
  "translation_kind": "literal_original_working",
  "method_de": "Wörtlich orientierte Arbeitsübersetzung: Wortarten und Satzbau des Griechischen möglichst sichtbar, verständliches Deutsch; Partizipien teils als finite Verben aufgelöst. Schweizer Rechtschreibung.",
- "based_on_edition": "ED-SBLGNT", "based_on_tokens": "TOKSET-SBLGNT-MRK-003-022-030",
+ "based_on_edition": "ED-SBLGNT", "based_on_tokens": "TOKSET-SBLGNT-MRK-003",
  "follows_readings": [f"{u}:R1" for u in sblgnt_units] + ["VAR-MRK-003-029-001:R1", "VAR-MRK-003-029-002:R1"],
  "text_by_reference": {f"MRK.3.{v}": t for v, t in TEXT.items()},
  "incorporates": "TRANS-MRK-003-029-DE-WORKING",
@@ -120,7 +122,7 @@ align = {
  "id": "ALIGN-MRK-003-022-030-001", "type": "alignment", "status": "draft",
  "tags": ["TAG-MARK"], "reference": "MRK.3.22-MRK.3.30",
  "source_language": "grc", "target_language": "de-CH",
- "source_basis": "ED-SBLGNT", "source_tokens_set": "TOKSET-SBLGNT-MRK-003-022-030",
+ "source_basis": "ED-SBLGNT", "source_tokens_set": "TOKSET-SBLGNT-MRK-003",
  "target_translation": "TRANS-MRK-003-022-030-DE-WORKING",
  "coverage": "complete", "coverage_de": "Jedes der 140 SBLGNT-Tokens ist genau einer Zuordnung zugewiesen; «untranslated» bedeutet: nicht als eigenes Wort wiedergegeben.",
  "target_convention_de": "« … » trennt nicht zusammenhängende Teile des deutschen Wortlauts.",
