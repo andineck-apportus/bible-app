@@ -5,8 +5,10 @@ Prüft:
 1. Schema (schema/record.schema.json) – ausgewertet wird die Teilmenge
    type, enum, pattern, required, properties, items, uniqueItems und lokale $ref.
 2. Eindeutige IDs und definierte Tags.
-3. Verweise auf andere Datensätze (inkl. Lesarten «VAR-…:R1») lösen auf.
+3. Verweise auf andere Datensätze (inkl. Lesarten «VAR-…:R1» und Token-IDs) lösen auf.
 4. Alle Bibelstellen sind kanonisch (docs/BIBELSTELLEN.md).
+5. Alignments mit coverage = "complete": jedes Token im Bereich genau einmal zugeordnet,
+   jeder Zieltext kommt im Wortlaut der verknüpften Übersetzung vor.
 
 Ein PASS ist keine fachliche Freigabe. Nur Standardbibliothek.
 """
@@ -22,9 +24,14 @@ import refs  # noqa: E402
 SCHEMA = json.loads((ROOT / "schema" / "record.schema.json").read_text(encoding="utf-8"))
 
 # Felder, die auf andere Datensätze verweisen
-ID_FIELDS = ["work", "primary_unit", "subject", "principle", "context", "from", "edition"]
+ID_FIELDS = ["work", "primary_unit", "subject", "principle", "context", "from", "edition",
+             "base_edition", "apparatus", "same_variation_unit_as", "incorporates", "based_on_edition",
+             "based_on_tokens", "source_tokens_set", "target_translation", "bibliographic_source"]
 ID_LIST_FIELDS = ["based_on", "derived_from", "outputs", "evidence_objects", "related", "imported_records"]
 READING_FIELDS = ["preferred_reading", "alternative", "based_on_variant"]
+READING_LIST_FIELDS = ["follows_readings"]
+# Felder mit Token-IDs (Tokens liegen innerhalb eines token_set)
+TOKEN_LIST_FIELDS = ["base_tokens"]
 # Felder mit Bibelstellen (siehe docs/BIBELSTELLEN.md)
 REF_FIELDS = ["reference", "to_ref", "range"]
 REF_LIST_FIELDS = ["evidence_refs", "imported_scope"]
@@ -96,7 +103,44 @@ def main():
         except refs.RefError as exc:
             errors.append(f"{rel}: {field}: {exc}")
 
-    ref_count = 0
+    token_sets = {rid: [t["id"] for t in r.get("tokens", [])]
+                  for rid, (_, r) in records.items() if r.get("type") == "token_set"}
+    token_ids = {}
+    for set_id, ids in token_sets.items():
+        for tid in ids:
+            if tid in token_ids or tid in records:
+                errors.append(f"Token-ID {tid} nicht eindeutig")
+            token_ids[tid] = set_id
+
+    def check_tokens(rel, field, ids):
+        for tid in ids or []:
+            if tid not in token_ids:
+                errors.append(f"{rel}: {field} verweist auf unbekanntes Token {tid!r}")
+
+    def check_alignment_coverage(rel, r):
+        """coverage = complete: jedes Token des token_set im Bereich genau einmal; Zieltexte im Übersetzungstext."""
+        start, end = refs.parse(r["reference"])
+        in_scope = [t for t in token_sets.get(r.get("source_tokens_set"), [])
+                    if (start[1], start[2]) <= tuple(int(x) for x in t.rsplit("-", 3)[1:3]) <= (end[1], end[2])]
+        used = [t for a in r.get("alignments", []) for t in a.get("source_tokens", [])]
+        dupes = sorted({t for t in used if used.count(t) > 1})
+        missing = [t for t in in_scope if t not in used]
+        if dupes:
+            errors.append(f"{rel}: Tokens mehrfach zugeordnet: {dupes[:5]}")
+        if missing:
+            errors.append(f"{rel}: Tokens ohne Zuordnung: {missing[:5]}")
+        trans = records.get(r.get("target_translation"), (None, {}))[1].get("text_by_reference", {})
+        for i, a in enumerate(r.get("alignments", [])):
+            if a.get("target") is None:
+                if a.get("kind") != "untranslated":
+                    errors.append(f"{rel}: alignments[{i}] ohne target, aber nicht als untranslated markiert")
+                continue
+            text = trans.get(a.get("reference"), "")
+            for part in a["target"].split(" … "):
+                if part not in text:
+                    errors.append(f"{rel}: alignments[{i}] Zieltext {part!r} nicht in Übersetzung {a.get('reference')}")
+
+    ref_count = token_ref_count = 0
     for rid, (rel, r) in records.items():
         for tag in r.get("tags", []):
             if tag not in tags:
@@ -110,8 +154,20 @@ def main():
             check_id(rel, "supersedes", sup)
         for f in READING_FIELDS:
             check_reading(rel, f, r.get(f))
+        for f in READING_LIST_FIELDS:
+            for target in r.get(f) or []:
+                check_reading(rel, f, target)
+        for f in TOKEN_LIST_FIELDS:
+            check_tokens(rel, f, r.get(f)); token_ref_count += len(r.get(f) or [])
+        for i, rd in enumerate(r.get("readings") or []):
+            for ed in rd.get("editions") or []:
+                check_id(rel, f"readings[{i}].editions", ed)
         for i, a in enumerate(r.get("alignments") or []):
             check_reading(rel, f"alignments[{i}].depends_on_reading", a.get("depends_on_reading"))
+            check_tokens(rel, f"alignments[{i}].source_tokens", a.get("source_tokens"))
+            token_ref_count += len(a.get("source_tokens") or [])
+        if r.get("type") == "alignment" and r.get("coverage") == "complete":
+            check_alignment_coverage(rel, r)
         for f in REF_FIELDS:
             if f in r:
                 check_ref(rel, f, r[f]); ref_count += 1
@@ -129,7 +185,7 @@ def main():
             print("FAIL:", e)
         sys.exit(f"{len(errors)} Fehler")
     print(f"PASS: {len(records)} records, {len(tags)} defined tags; schema, unique IDs, "
-          f"tag/ID/reading references and {ref_count} bible references valid")
+          f"tag/ID/reading references, {token_ref_count} token references and {ref_count} bible references valid")
 
 
 if __name__ == "__main__":

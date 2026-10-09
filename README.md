@@ -2,9 +2,9 @@
 
 Git-versionierter Bibel-Wissensfundus: Quellen, Textbefunde, konkurrierende Interpretationen, Prinzipien und kontextabhängige Anwendungen nachvollziehbar miteinander verbinden.
 
-**Stand: 9. Oktober 2026 · Datenstand v0.6 · Pilot Markus 3,22–30.**
+**Stand: 9. Oktober 2026 · Datenstand v0.7 · Pilot Markus 3,22–30.**
 
-Dies ist der Konzept- und Datenprototyp, noch keine lauffähige Benutzer-App. Vorhanden sind 38 strukturierte Datensätze einschliesslich 6 Tags, der importierte griechische Text Mk 3,22–30 aus MorphGNT SBLGNT 6.12 (140 Tokens mit Lemma und Morphologie, Status `imported_unreviewed`), eine einheitliche Bibelstellen-Konvention, ein generisches Schema und ein Validator. SQLite ist als abgeleitete Projektion vorgesehen, aber noch nicht implementiert. Vollständige Wortzuordnungen und eigene Handschriftenprüfungen fehlen noch.
+Dies ist der Konzept- und Datenprototyp, noch keine lauffähige Benutzer-App. Vorhanden sind 55 strukturierte Datensätze einschliesslich 6 Tags: der importierte griechische Text Mk 3,22–30 aus MorphGNT SBLGNT 6.12 (140 Tokens mit Lemma und Morphologie), 10 Variantenstellen auf Editionsebene aus dem SBLGNT-Apparat, eine vollständige deutsche Arbeitsübersetzung mit Wortzuordnung aller 140 Tokens (KI-Entwurf, ungeprüft), eine einheitliche Bibelstellen-Konvention, ein generisches Schema und ein Validator. SQLite ist als abgeleitete Projektion vorgesehen, aber noch nicht implementiert. Vollständige Wortzuordnungen und eigene Handschriftenprüfungen fehlen noch.
 
 ## Einstieg
 
@@ -12,6 +12,7 @@ Dies ist der Konzept- und Datenprototyp, noch keine lauffähige Benutzer-App. Vo
 |---|---|
 | [CHANGELOG.md](CHANGELOG.md) | Änderungen und Entwicklung von v0.1 bis heute |
 | [docs/KONZEPT.md](docs/KONZEPT.md) | Ziel, Analyseebenen, Zoom-System und Kontextdimensionen |
+| [docs/QUELLEN.md](docs/QUELLEN.md) | Quellenlandschaft (Handschriften, Editionen, Datensätze, Lexika, Kontext) mit Rechte-Ampel |
 | [docs/BIBELSTELLEN.md](docs/BIBELSTELLEN.md) | Kanonische Schreibweise aller Bibelstellen (`MRK.3.29`, `MRK.3.22-MRK.3.30`) |
 | [docs/DATENMODELL.md](docs/DATENMODELL.md) | Vorhandene Objekttypen, Beziehungen und geplante Erweiterungen |
 | [docs/METADATEN.md](docs/METADATEN.md) | Herkunft, Quellen, Editionen, Zeitachsen, Tags, Unsicherheit |
@@ -42,6 +43,9 @@ curl -LO https://raw.githubusercontent.com/morphgnt/sblgnt/6.12/62-Mk-morphgnt.t
 python3 scripts/import_morphgnt.py 62-Mk-morphgnt.txt \
   --upstream-commit a2afca0e96e367fb2ca113395bae978115942dfb --upstream-ref 6.12
 python3 scripts/compare_working_text.py   # Abgleich mit der alten Arbeitstranskription
+git clone https://github.com/Faithlife/SBLGNT && \
+python3 scripts/import_sblgnt_apparatus.py SBLGNT/data/sblgntapp/text/Mark.txt \
+  --upstream-commit c4d241a9c1c479a55b989ba35a4976c1d0b8052c
 ```
 
 Der Importer schreibt Quelle, Upstream-Commit, SHA-256, Lizenzangaben und Importdatum in die erzeugten Datensätze und bricht ohne Upstream-Commit oder bei unvollständigen Versen ab. Die Importtests verwenden ausschliesslich synthetische Daten im echten MorphGNT-Zeilenformat.

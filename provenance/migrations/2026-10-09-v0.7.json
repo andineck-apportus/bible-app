@@ -1,0 +1,59 @@
+{
+  "migration": "v0.6 -> v0.7",
+  "date": "2026-10-09",
+  "script": "scripts/migrations/v0_7.py",
+  "note": "Rein additiv; keine bestehenden Werte verändert.",
+  "changes": [
+    {
+      "file": "data/variants/VAR-MRK-003-029-001.json",
+      "field": "base_edition, base_tokens",
+      "old": null,
+      "new": [
+        "TOK-SBLGNT-MRK-003-029-019",
+        "TOK-SBLGNT-MRK-003-029-020"
+      ],
+      "reason": "Variantenstelle an SBLGNT-Tokens gebunden; R1 entspricht dem SBLGNT-Text"
+    },
+    {
+      "file": "data/variants/VAR-MRK-003-029-002.json",
+      "field": "base_edition, base_tokens",
+      "old": null,
+      "new": [
+        "TOK-SBLGNT-MRK-003-029-018"
+      ],
+      "reason": "Variantenstelle an SBLGNT-Tokens gebunden; R1 entspricht dem SBLGNT-Text"
+    },
+    {
+      "file": "data/alignments/ALIGN-MRK-003-029-001.json",
+      "field": "alignments[].source_tokens, source_token_basis",
+      "old": null,
+      "new": {
+        "βλασφημήσῃ": [
+          "TOK-SBLGNT-MRK-003-029-004"
+        ],
+        "εἰς τὸ πνεῦμα τὸ ἅγιον": [
+          "TOK-SBLGNT-MRK-003-029-005",
+          "TOK-SBLGNT-MRK-003-029-006",
+          "TOK-SBLGNT-MRK-003-029-007",
+          "TOK-SBLGNT-MRK-003-029-008",
+          "TOK-SBLGNT-MRK-003-029-009"
+        ],
+        "οὐκ ἔχει ἄφεσιν": [
+          "TOK-SBLGNT-MRK-003-029-010",
+          "TOK-SBLGNT-MRK-003-029-011",
+          "TOK-SBLGNT-MRK-003-029-012"
+        ],
+        "εἰς τὸν αἰῶνα": [
+          "TOK-SBLGNT-MRK-003-029-013",
+          "TOK-SBLGNT-MRK-003-029-014",
+          "TOK-SBLGNT-MRK-003-029-015"
+        ],
+        "αἰωνίου ἁμαρτήματος": [
+          "TOK-SBLGNT-MRK-003-029-019",
+          "TOK-SBLGNT-MRK-003-029-020"
+        ]
+      },
+      "reason": "Zuordnungen an SBLGNT-Tokens gebunden; die zugeordneten Wörter sind in Arbeitstranskription und SBLGNT identisch"
+    }
+  ]
+}
