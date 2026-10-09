@@ -10,8 +10,11 @@ Der Prototyp zeigt nur, was in den Daten steht; er erzeugt keine Inhalte.
 import collections
 import json
 import pathlib
+import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+import refs  # noqa: E402
 D = ROOT / "data"
 OUT = ROOT / "app/prototype"
 VERSES = range(20, 36)
@@ -84,6 +87,17 @@ for tid in ["TRANS-MRK-003-020-021-DE-WORKING", "TRANS-MRK-003-022-030-DE-WORKIN
     for ref, text in tr[tid]["text_by_reference"].items():
         de[int(ref.split(".")[2])] = text
         sources[int(ref.split(".")[2])] = tid
+alternatives = []
+for tid in ["TRANS-MRK-003-020-021-DE-WORKING", "TRANS-MRK-003-022-030-DE-WORKING", "TRANS-MRK-003-031-035-DE-WORKING"]:
+    for alt in tr[tid].get("alternatives", []):
+        vid, rid = alt["reading"].split(":")
+        res = next((x for x in assess.get(vid, {}).get("results", []) if x["reading"].endswith(":" + rid)), None)
+        base = next((x for x in assess.get(vid, {}).get("results", []) if x["reading"].endswith(":R1")), None)
+        alternatives.append({"verse": int(alt["reference"].split(".")[2]), "from": alt["de_from"], "to": alt["de_to"],
+                             "effect": alt["effect"], "note": alt.get("note_de"), "variant": vid,
+                             "support": res["support"] if res else None, "base_support": base["support"] if base else None,
+                             "of": res["of"] if res else None,
+                             "basis": "editions" if res else "manuscripts_reported"})
 align = load("alignments/ALIGN-MRK-003-022-030-001.json")
 tok_de = {}
 for a in align["alignments"]:
@@ -94,7 +108,7 @@ for a in align["alignments"]:
 # Gliederung, Befunde, Deutungen, Prinzip, Anwendung, Parallelen
 tu = by_id("text-units")
 section = tu["TU-MRK-003-020-035"]
-parts = [{"id": p, "range": tu[p]["range"], "title": tu[p]["title"]} for p in section["parts"]]
+parts = [{"id": p, "range": tu[p]["range"], "title": tu[p]["title"], "summary": tu[p].get("summary_de")} for p in section["parts"]]
 findings = by_id("findings")
 ints = by_id("interpretations")
 prin = by_id("principles")
@@ -109,7 +123,8 @@ chain_unit = "TU-MRK-003-022-030"
 data = {
     "built_from": "bible-app data/ (freier Kern)",
     "book": book, "book_tokens": counts["token_count"], "book_lemmas": counts["unique_lemmas"],
-    "section": {"id": section["id"], "range": section["range"], "title": section["title"], "parts": parts},
+    "section": {"id": section["id"], "range": section["range"], "title": section["title"], "summary": section.get("summary_de"), "parts": parts},
+    "alternatives": alternatives,
     "words": words, "variants": units, "de": de, "de_source": sources, "tok_de": tok_de,
     "findings": [{"id": k, "claim": v["claim_de"], "kind": v.get("kind"), "confidence": v.get("confidence"),
                   "subject": v.get("subject"), "caveat": v.get("confidence_rationale_de")} for k, v in sorted(findings.items())],
@@ -121,7 +136,8 @@ data = {
     "applications": [{"id": k, "text": v["statement_de"], "limits": v.get("limitations_de"), "principle": v.get("principle"),
                       "context": ctx.get(v.get("context"), {}).get("audience"),
                       "confidence": v.get("confidence")} for k, v in apps.items()],
-    "relations": [{"to": v["to_ref"], "kind": v["relation"], "confidence": v.get("confidence")} for v in rels.values()],
+    "relations": [{"to": v["to_ref"], "to_de": refs.display_de(v["to_ref"]), "kind": v["relation"],
+                   "confidence": v.get("confidence")} for v in rels.values()],
     "questions": [{"q": v["question_de"], "finding": v.get("finding_de")} for v in qs.values()],
     "method": {"name": method["name_de"], "question": method["question_de"], "limits": method["assumptions_and_limits_de"]},
     "editions": editions,

@@ -2,6 +2,13 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.10 — 2026-10-09 — Prototyp für allgemeine Leser
+
+- Prototyp nach Rückmeldung neu gestaltet: einfacher und allgemeiner, schlicht, hell/dunkel, mit gezeichnetem Überblicksbild. Drei Wege (Überblick, Lesen, Vertiefen) über eine untere Leiste; Studienpfad; Einstellungen für Lesarten, Urtext-Modus, Schriftgrösse und Farben.
+- Abweichende Lesarten: nur Stellen, die die deutsche Übersetzung verändern (6 in Mk 3,20–35), auf Wunsch eingeblendet; Erklärung in einfacher Sprache mit Bezeugung («Steht in 4 von 5 wichtigen Textausgaben»), ohne Entscheidung über richtig/falsch.
+- Urtext, Wort für Wort, Grammatik und alle 28 Apparatstellen nur im Modus «Urtext und Details».
+- Neue Daten (KI-Entwurf): `alternatives` in den Übersetzungen (deutsche Wiedergabe abweichender Lesarten mit Wirkung «bedeutsam»/«gering»), `summary_de` für die Texteinheiten 3,20–35. Validator prüft, dass jede Alternative auf eine vorhandene Lesart zeigt und ihr Ausgangstext in der Übersetzung vorkommt.
+
 ## v0.9 — 2026-10-09 — Studienprototyp Mk 3,20–35
 
 - Klickbarer Prototyp `app/prototype/mk3-20-35.html`, erzeugt mit `scripts/build_prototype.py` aus den Daten des freien Kerns (keine eigenen Inhalte im Prototyp): Zoomstufen Buch → Abschnitt → Einheit → Vers → Wort; Textschichten Deutsch, Griechisch, Wort für Wort; Variantenstellen mit Editionen und Gesichertheitsstufe samt Grenzen der Methode; Wortdetails (Grundform, Häufigkeit in Markus, Form, Satzrolle, Bezug, deutsche Entsprechung, Glossen, Vergleich MACULA/MorphGNT); Kette Befund → Deutung → Prinzip → Anwendung; Studienpfad in sechs Schritten; hell und dunkel, für Smartphones ausgelegt.

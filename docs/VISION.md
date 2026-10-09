@@ -70,7 +70,12 @@ Festgehalten am 2026-10-09. Abschnitt **«Vorgabe»** gibt die Vision des Projek
 - Auf jeder Zoomstufe soll die Bedeutung mit Grafiken untermalt werden.
 - Unterschiedliche Personen, Institutionen und Künstler können ihre Grafiken und Bilder hinzufügen.
 
+**Vorgabe (2026-10-09, nach dem ersten Prototyp):** Die App soll einfacher und allgemeiner sein, super anwenderfreundlich in Bedienung und Inhalt. Wenn Quelltexte zu unterschiedlichen Übersetzungen führen können, sollen weniger wahrscheinliche Lesarten bei Bedarf einblendbar sein. Urtexte nicht direkt so prominent, sondern in einem Modus für Fortgeschrittene. Design: schlicht, dunkel/hell, etwas künstlerisch angehaucht, aufgeräumt, guter Umgang mit Platz.
+
 **Ableitung:**
+- **Standard ist das Lesen:** deutscher Text, ruhige Typografie, drei Wege (Überblick, Lesen, Vertiefen). Fachbegriffe vermeiden («Was steht da?», «Wie kann man es verstehen?», «Was kann es heute bedeuten?»).
+- **Abweichende Lesarten** nur dort, wo sie die Übersetzung verändern, auf Wunsch eingeblendet und in einfacher Sprache erklärt («Steht in 4 von 5 wichtigen Textausgaben»).
+- **Modus für Fortgeschrittene:** griechischer Text, Wort für Wort, Grammatik, alle Unterschiede der Textausgaben.
 - **Arten von Visualisierungen:**
   - Struktur- und Argumentationsdiagramme (z. B. Aufbau von Mk 3,22–30, Verschachtelung in 3,20–35),
   - Karten und Zeitleisten,

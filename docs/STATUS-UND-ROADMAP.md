@@ -1,8 +1,8 @@
-# Status und nächste Schritte · 2026-10-09 (v0.9)
+# Status und nächste Schritte · 2026-10-09 (v0.10)
 
 ## Gesichert und vorhanden
 - Alle Originalpakete v0.1–v0.5; rekonstruierte Git-Historie mit je einem Snapshot.
-- **Studienprototyp Mk 3,20–35** (`app/prototype/`): Zoomstufen Buch → Abschnitt → Einheit → Vers → Wort, Textschichten Deutsch/Griechisch/Wort für Wort, Variantenstellen mit Gesichertheit, Wortdetails mit zwei Annotationen, Kette Befund → Deutung → Prinzip → Anwendung, Studienpfad in sechs Schritten. Erzeugt mit `scripts/build_prototype.py` nur aus Daten des freien Kerns.
+- **Studienprototyp Mk 3,20–35** (`app/prototype/`), seit v0.10 für allgemeine Leser: Überblick (gezeichnete Verschachtelung der drei Szenen), Lesen (deutscher Text; abweichende Lesarten auf Wunsch, in einfacher Sprache mit Bezeugung), Vertiefen (Was steht da? Wie kann man es verstehen? Was kann es heute bedeuten?), Studienpfad, Einstellungen (Lesarten, Urtext-Modus, Schriftgrösse, Hell/Dunkel). Griechisch, Wort für Wort, Grammatik und alle Apparatstellen nur im Modus «Urtext und Details». Erzeugt mit `scripts/build_prototype.py` nur aus Daten des freien Kerns.
 - v0.9: 1032 Datensätze; neu Gliederung Mk 3,20–35 (Texteinheiten, Befund, Deutung mit Gegenargument) und deutsche Arbeitsübersetzung 3,20–21 und 3,31–35 (ohne Wortzuordnung).
 - v0.8: 1025 Datensätze im freien Kern, darin 6 Tags; Studienschicht `data-nc/` angelegt (leer).
 - **Ganzes Markusevangelium**: SBLGNT-Text (11 286 Wörter, je Kapitel ein Token-Set) mit MACULA-Greek-Annotation (Lemma, Morphologie, Syntaxrolle, Referenten, Glossen; CC BY 4.0). SBLGNT und MACULA stimmen in allen Wortgrenzen überein; eine Akzentabweichung (7,27) protokolliert.
@@ -47,7 +47,7 @@
 - Kritische Prüfung des abgeleiteten Prinzips: Es enthält stärkere Begriffe als die begrenzte Beobachtung zum Wissen der Schriftgelehrten. Diese Ableitung ist nicht allein durch den Pilotbestand abgesichert.
 
 ## Nächster Meilenstein v0.10 (Vorschlag)
-Rückmeldungen zum Prototyp einarbeiten; Wortzuordnung für 3,20–21 und 3,31–35; Handschriftenbelege aus der NTVMR-API (CC BY 4.0) als zweite Bewertungsmethode; Zeugenangabe Ephraemi (C) in Mk 3,29 klären; Versifikationsmodell auf Basis von STEPBible TVTMS; typspezifische Schemas.
+Weitere Rückmeldungen zum Prototyp; kommunikative (leicht verständliche) Übersetzungsschicht als Alternative zur wörtlichen; Wortzuordnung für 3,20–21 und 3,31–35; Handschriftenbelege aus der NTVMR-API (CC BY 4.0) als zweite Bewertungsmethode; Zeugenangabe Ephraemi (C) in Mk 3,29 klären; Versifikationsmodell auf Basis von STEPBible TVTMS; typspezifische Schemas.
 
 ## Danach
 Primärbelege; standardisierte Revisions-/Reviewmetadaten; Versifikationsmodell; SQLite-Projektion; anschliessend eine Oberfläche auf der stabilisierten Datenbasis. Technische Produktentscheidungen bleiben offen.
