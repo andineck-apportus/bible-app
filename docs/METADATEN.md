@@ -8,7 +8,7 @@ Diese Dokumentation fasst die vereinbarten Anforderungen zusammen. Sie ist kein 
 | Tags | Mehrere kontrollierte `tags`; `labels.de` | Mehrsprachige Labels; optionale freie Tags |
 | Herkunft | Quellen-URLs, bibliografische Hinweise, teils Prüfnotizen | Genaues Werk/Edition/Version, Autor/Herausgeber, Locator, Abruf-/Prüfdatum, Prüfmethode |
 | Edition / Zeuge | Eine Edition; Zeugen als Textlisten | Getrennte stabile Editions- und Zeugen-IDs, Datierung, Schreib-/Korrekturschichten |
-| Textposition | Kanonische Bibelstellen (v0.6, [BIBELSTELLEN.md](BIBELSTELLEN.md)); Token-IDs und -Positionen für SBLGNT Mk 3,22–30 | Phrasenpositionen, Verknüpfung von Alignments/Varianten mit Token-IDs, Versifikation |
+| Textposition | Kanonische Bibelstellen (v0.6, [BIBELSTELLEN.md](BIBELSTELLEN.md)); Token-IDs und -Positionen für SBLGNT Mk 3,22–30 | Versifikation; weitere Editionen tokenisieren |
 | Import | Upstream-URL, Tag, Commit, Datei, SHA-256, Lizenzangaben, Toolversion, Importdatum (v0.6) | Lizenzangaben vor Veröffentlichung erneut prüfen |
 | Sicherheit | `confidence`, teils Begründung | Einheitliche Skala, konkrete Unsicherheiten und Gegenbelege |
 | Review | Mehrere Statuswerte und Verifikationsnotizen | Prüfer, Datum, Prüfgegenstand, Ergebnis und Freigabekriterien |
