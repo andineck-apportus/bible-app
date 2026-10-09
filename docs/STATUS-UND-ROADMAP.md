@@ -40,7 +40,7 @@
 - Kritische Prüfung des abgeleiteten Prinzips: Es enthält stärkere Begriffe als die begrenzte Beobachtung zum Wissen der Schriftgelehrten. Diese Ableitung ist nicht allein durch den Pilotbestand abgesichert.
 
 ## Nächster Meilenstein v0.8 (Vorschlag)
-Entscheidung kommerziell/nicht kommerziell treffen (bestimmt, welche Datensätze importiert werden dürfen, siehe QUELLEN.md Abschnitt 10); ganze Markus-Text und TAGNT importieren; Handschriftenbelege für die Pilot-Variantenstellen aus offenen Transkriptionen (CNTR, NTVMR) erfassen; Versifikationsmodell auf Basis von STEPBible TVTMS; typspezifische Schemas für die wichtigsten Typen; Test für den Apparat-Importer.
+Entscheidung kommerziell/nicht kommerziell treffen (bestimmt, welche Datensätze importiert werden dürfen, siehe QUELLEN.md Abschnitt 10); den ganzen Markus-Text und TAGNT importieren; Handschriftenbelege für die Pilot-Variantenstellen aus offenen Transkriptionen (CNTR, NTVMR) erfassen; Versifikationsmodell auf Basis von STEPBible TVTMS; typspezifische Schemas für die wichtigsten Typen; Test für den Apparat-Importer.
 
 ## Danach
 Primärbelege; standardisierte Revisions-/Reviewmetadaten; Versifikationsmodell; SQLite-Projektion; anschliessend eine Oberfläche auf der stabilisierten Datenbasis. Technische Produktentscheidungen bleiben offen.
