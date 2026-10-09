@@ -1,469 +1,441 @@
-<title>Markus 3,20–35 · Studienprototyp</title>
+<title>Markus 3,20–35</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600&family=Gentium+Book+Plus:wght@400;700&display=swap">
 <style>
-/* Layout: eine Spalte wie eine Editionsseite — oben die Zoomleiter, darunter Text, darunter «Apparat»; Details als Blatt von unten. */
+/* Layout: ein ruhiges Lesebuch. Oben nur der Titel, unten drei Wege (Überblick, Lesen, Vertiefen); viel Rand, eine Spalte, Details als Blatt von unten. */
 :root {
-  --paper: #f4f5f7;
-  --sheet: #ffffff;
-  --ink: #1b2233;
-  --ink-soft: #4d566b;
-  --rule: #d9dde5;
-  --lapis: #2b4fb8;
-  --lapis-soft: #e3e9f8;
-  --lvl-breit: #1f7a5a;
-  --lvl-mehr: #6c8a1f;
-  --lvl-geteilt: #b7791f;
-  --lvl-vereinzelt: #b4435a;
-  --lvl-keine: #8a8f9c;
-  --shadow: 0 -8px 30px rgba(20, 28, 48, .18);
-  --f-text: "Gentium Book Plus", "Gentium Plus", "Noto Serif", Georgia, serif;
-  --f-ui: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --f-data: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --bg: #f2f3f0;
+  --surface: #fbfbf9;
+  --ink: #1e2124;
+  --muted: #6a6f74;
+  --rule: #d8dad5;
+  --accent: #2f4a73;
+  --accent-soft: #e2e7ef;
+  --ochre: #9c6a22;
+  --ochre-soft: #f1e6d3;
+  --scrim: rgba(18, 20, 22, .32);
+  --f-read: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --f-ui: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-greek: "Gentium Book Plus", "Gentium Plus", "Noto Serif", Georgia, serif;
+  --scale: 1;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper: #12151d; --sheet: #1a1f2a; --ink: #e6e9f0; --ink-soft: #a3abbd; --rule: #2f3646;
-    --lapis: #8fa9f0; --lapis-soft: #243259;
-    --lvl-breit: #4cc296; --lvl-mehr: #a9c64a; --lvl-geteilt: #e2a64b; --lvl-vereinzelt: #ec7f95; --lvl-keine: #8d93a3;
-    --shadow: 0 -8px 30px rgba(0, 0, 0, .5); color-scheme: dark;
+    --bg: #121416; --surface: #1a1d20; --ink: #e8e6e1; --muted: #9ca1a6; --rule: #2d3135;
+    --accent: #a7bcdc; --accent-soft: #24303f; --ochre: #d9a85c; --ochre-soft: #3a2f1f; --scrim: rgba(0, 0, 0, .55);
+    color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --paper: #12151d; --sheet: #1a1f2a; --ink: #e6e9f0; --ink-soft: #a3abbd; --rule: #2f3646;
-  --lapis: #8fa9f0; --lapis-soft: #243259;
-  --lvl-breit: #4cc296; --lvl-mehr: #a9c64a; --lvl-geteilt: #e2a64b; --lvl-vereinzelt: #ec7f95; --lvl-keine: #8d93a3;
-  --shadow: 0 -8px 30px rgba(0, 0, 0, .5); color-scheme: dark;
+  --bg: #121416; --surface: #1a1d20; --ink: #e8e6e1; --muted: #9ca1a6; --rule: #2d3135;
+  --accent: #a7bcdc; --accent-soft: #24303f; --ochre: #d9a85c; --ochre-soft: #3a2f1f; --scrim: rgba(0, 0, 0, .55);
+  color-scheme: dark;
 }
 * { box-sizing: border-box; }
-body { background: var(--paper); color: var(--ink); font-family: var(--f-ui); font-size: 15px; line-height: 1.5; }
-button { font: inherit; color: inherit; }
-a { color: var(--lapis); }
-.wrap { max-width: 760px; margin: 0 auto; padding-inline: 16px; padding-block: 0 96px; }
+html, body { height: 100%; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-ui); font-size: 15px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 
-/* Zoomleiter */
-.ladder { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--paper); border-bottom: 1px solid var(--rule); }
-.ladder-inner { max-width: 760px; margin: 0 auto; padding: 10px 16px 8px; display: flex; flex-direction: column; gap: 8px; }
-.brand { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
-.brand b { font-family: var(--f-text); font-size: 19px; font-weight: 700; letter-spacing: .01em; }
-.brand small { font-family: var(--f-data); font-size: 11px; color: var(--ink-soft); }
-.steps { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
-.steps::-webkit-scrollbar { display: none; }
-.step { flex: 0 0 auto; border: 1px solid var(--rule); background: var(--sheet); border-radius: 999px; padding: 4px 11px; font-size: 13px; cursor: pointer; white-space: nowrap; }
-.step[aria-current="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-.step[disabled] { opacity: .45; cursor: default; }
-.step:not([aria-current="true"]) .lvl { display: none; }
-.step .lvl { font-family: var(--f-data); font-size: 10px; text-transform: uppercase; letter-spacing: .08em; opacity: .7; margin-right: 6px; }
+.top { max-width: 640px; margin: 0 auto; padding: 18px 20px 0; display: flex; justify-content: space-between; align-items: center; }
+.top .where { font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.icon-btn { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; color: var(--muted); }
+.icon-btn:hover { background: var(--accent-soft); color: var(--ink); }
+.icon-btn svg { width: 20px; height: 20px; }
 
-h1 { font-family: var(--f-text); font-weight: 700; font-size: 28px; line-height: 1.15; margin: 22px 0 4px; text-wrap: balance; }
-h2 { font-family: var(--f-ui); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .09em; color: var(--ink-soft); margin: 28px 0 10px; }
-.lead { color: var(--ink-soft); margin: 0 0 6px; max-width: 62ch; }
-.mono { font-family: var(--f-data); }
+main { max-width: 640px; margin: 0 auto; padding-inline: 20px; padding-block: 8px 120px; }
+h1 { font-family: var(--f-read); font-weight: 400; font-size: calc(34px * var(--scale)); line-height: 1.12; letter-spacing: -.01em; margin: 18px 0 12px; text-wrap: balance; }
+.intro { font-family: var(--f-read); font-size: calc(19px * var(--scale)); line-height: 1.55; color: var(--muted); margin: 0 0 8px; max-width: 34em; }
+.label { font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
 
-/* Buch */
-.chapters { display: grid; grid-template-columns: repeat(16, minmax(0, 1fr)); gap: 4px; align-items: end; height: 150px; margin-top: 8px; }
-.ch { display: flex; flex-direction: column; justify-content: flex-end; gap: 2px; height: 100%; cursor: pointer; border: 0; background: none; padding: 0; }
-.ch .bar { border-radius: 3px 3px 0 0; background: var(--rule); width: 100%; display: flex; flex-direction: column-reverse; overflow: hidden; }
-.ch .seg { width: 100%; }
-.ch .lab { font-family: var(--f-data); font-size: 10px; color: var(--ink-soft); text-align: center; }
-.ch.cur .lab { color: var(--lapis); font-weight: 600; }
-.ch.cur .bar { outline: 2px solid var(--lapis); outline-offset: 1px; }
-.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12px; color: var(--ink-soft); margin-top: 10px; }
-.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
-.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-top: 14px; }
-.stat { background: var(--sheet); border: 1px solid var(--rule); border-radius: 8px; padding: 10px 12px; }
-.stat b { display: block; font-family: var(--f-data); font-size: 20px; font-variant-numeric: tabular-nums; }
-.stat span { font-size: 12px; color: var(--ink-soft); }
+/* Überblick: Bild der Verschachtelung */
+.figure { margin: 28px 0 8px; color: var(--ink); }
+.figure svg { width: 100%; height: auto; display: block; }
+.scenes { display: flex; flex-direction: column; gap: 2px; margin-top: 18px; }
+.scene { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 4px 12px; text-align: left; padding: 16px 4px; border-top: 1px solid var(--rule); }
+.scene:last-child { border-bottom: 1px solid var(--rule); }
+.scene .n { font-family: var(--f-read); font-size: 30px; line-height: 1; color: var(--accent); }
+.scene .t { font-family: var(--f-read); font-size: calc(20px * var(--scale)); line-height: 1.25; }
+.scene .s { grid-column: 2; color: var(--muted); font-size: calc(15px * var(--scale)); }
+.scene .r { grid-column: 2; font-size: 12px; color: var(--muted); letter-spacing: .04em; }
+.scene:hover .t { color: var(--accent); }
+.cta { display: inline-flex; align-items: center; gap: 10px; margin-top: 26px; padding: 12px 18px; border: 1px solid var(--ink); border-radius: 999px; font-weight: 500; }
+.cta:hover { background: var(--ink); color: var(--bg); }
 
-/* Abschnitt: Verschachtelung */
-.nest { display: flex; flex-direction: column; gap: 0; margin-top: 6px; }
-.frame { border: 2px solid var(--ink); border-radius: 12px; padding: 0; overflow: hidden; }
-.block { display: block; width: 100%; text-align: left; border: 0; background: var(--sheet); padding: 12px 14px; cursor: pointer; }
-.block + .block { border-top: 1px solid var(--rule); }
-.block:hover, .block:focus-visible { background: var(--lapis-soft); }
-.block .r { font-family: var(--f-data); font-size: 12px; color: var(--lapis); }
-.block .t { font-family: var(--f-text); font-size: 17px; display: block; }
-.block.inner { background: var(--paper); padding-left: 28px; border-left: 6px solid var(--lapis); }
-.block .tag { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-soft); }
+/* Lesen */
+.reading { font-family: var(--f-read); font-size: calc(20px * var(--scale)); line-height: 1.75; }
+.reading h2 { font-family: var(--f-ui); font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 40px 0 6px; }
+.reading h2:first-child { margin-top: 18px; }
+.reading .scene-title { font-family: var(--f-read); font-style: italic; font-size: calc(17px * var(--scale)); color: var(--muted); margin: 0 0 12px; line-height: 1.4; }
+.reading p { margin: 0 0 4px; }
+.vn { font-family: var(--f-ui); font-size: .55em; color: var(--muted); vertical-align: .55em; margin-right: 3px; font-variant-numeric: tabular-nums; }
+.mark { text-decoration: underline; text-decoration-color: var(--ochre); text-decoration-thickness: 1.5px; text-underline-offset: 4px; cursor: pointer; }
+.mark.gering { text-decoration-style: dotted; }
+.alt { display: block; font-size: .82em; line-height: 1.5; color: var(--ochre); margin: 2px 0 10px 1.2em; font-style: italic; cursor: pointer; text-align: left; }
+.alt span { font-style: normal; font-family: var(--f-ui); font-size: .78em; letter-spacing: .03em; color: var(--muted); margin-left: 6px; }
+.flourish { display: block; margin: 34px auto 0; width: 120px; height: 14px; color: var(--rule); }
+.hint { margin-top: 36px; padding: 16px 18px; border-radius: 14px; background: var(--surface); border: 1px solid var(--rule); display: flex; flex-direction: column; gap: 10px; }
+.hint p { margin: 0; color: var(--muted); }
+.textbtn { align-self: flex-start; color: var(--accent); font-weight: 600; }
+.note-small { font-size: 12.5px; color: var(--muted); margin-top: 28px; }
 
-.card { background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px; padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; }
-.cards { display: flex; flex-direction: column; gap: 10px; }
-.kind { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .09em; }
-.kind.befund { color: var(--lvl-breit); }
-.kind.deutung { color: var(--lapis); }
-.kind.prinzip { color: var(--lvl-geteilt); }
-.kind.anwendung { color: var(--lvl-vereinzelt); }
-.card p { margin: 0; max-width: 64ch; }
-.caveat { font-size: 13px; color: var(--ink-soft); border-top: 1px dashed var(--rule); padding-top: 6px; }
-.chip { display: inline-block; font-family: var(--f-data); font-size: 11px; border: 1px solid var(--rule); border-radius: 999px; padding: 1px 8px; color: var(--ink-soft); margin-right: 4px; }
-.arrow { text-align: center; color: var(--ink-soft); font-size: 13px; }
+/* Vertiefen */
+.q { margin-top: 34px; }
+.q h2 { font-family: var(--f-read); font-weight: 400; font-size: calc(24px * var(--scale)); margin: 0 0 12px; }
+.point { font-family: var(--f-read); font-size: calc(18px * var(--scale)); line-height: 1.6; padding: 0 0 0 16px; border-left: 2px solid var(--rule); margin: 0 0 18px; }
+.point p { margin: 0; }
+.point .aside { font-family: var(--f-ui); font-size: 14px; color: var(--muted); margin-top: 8px; line-height: 1.5; }
+.point .aside b { color: var(--ink); font-weight: 600; }
+.point.view { border-left-color: var(--accent); }
+.point.today { border-left-color: var(--ochre); }
+.chip { display: inline-block; font-family: var(--f-ui); font-size: 11.5px; letter-spacing: .03em; color: var(--muted); border: 1px solid var(--rule); border-radius: 999px; padding: 1px 9px; margin-bottom: 6px; }
+.refs { display: flex; flex-wrap: wrap; gap: 8px; }
+.ref { font-family: var(--f-read); font-size: 17px; border: 1px solid var(--rule); border-radius: 999px; padding: 4px 14px; background: var(--surface); }
+.scope { display: flex; gap: 6px; flex-wrap: wrap; margin: 6px 0 4px; }
+.scope button { padding: 6px 13px; border-radius: 999px; border: 1px solid var(--rule); font-size: 13.5px; }
+.scope button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 
-/* Text */
-.layers { display: inline-flex; border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; margin: 6px 0 4px; }
-.layers button { border: 0; background: var(--sheet); padding: 6px 12px; font-size: 13px; cursor: pointer; }
-.layers button + button { border-left: 1px solid var(--rule); }
-.layers button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
-.text { font-family: var(--f-text); font-size: 20px; line-height: 1.75; background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px; padding: 14px 16px; }
-.text.de { font-size: 18px; }
-.vn { font-family: var(--f-data); font-size: 11px; color: var(--lapis); vertical-align: super; margin: 0 3px 0 6px; cursor: pointer; border: 0; background: none; padding: 0; }
-.w { cursor: pointer; border-radius: 3px; padding: 0 1px; }
-.w:hover, .w:focus-visible { background: var(--lapis-soft); outline: none; }
-.w.var { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 5px; text-decoration-style: dotted; }
-.w.sel { background: var(--lapis-soft); }
-.il { display: flex; flex-wrap: wrap; gap: 10px 6px; }
-.il .cell { display: flex; flex-direction: column; align-items: flex-start; padding: 4px 6px; border-radius: 6px; cursor: pointer; border: 1px solid transparent; min-width: 0; }
-.il .cell:hover, .il .cell:focus-visible { border-color: var(--rule); background: var(--paper); outline: none; }
-.il .g { font-family: var(--f-text); font-size: 19px; }
-.il .d { font-size: 13px; color: var(--ink); }
-.il .e { font-size: 11px; color: var(--ink-soft); }
-.il .m { font-family: var(--f-data); font-size: 10px; color: var(--ink-soft); }
-.il .vno { flex-basis: 100%; font-family: var(--f-data); font-size: 11px; color: var(--lapis); margin-top: 6px; }
-
-/* Varianten */
-.var-list { display: flex; flex-direction: column; gap: 10px; }
-.vu { background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px; padding: 10px 12px; }
-.vu header { display: flex; justify-content: space-between; gap: 8px; font-size: 12px; color: var(--ink-soft); }
-.rd { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 10px; align-items: center; padding: 6px 0; border-top: 1px dashed var(--rule); }
-.rd:first-of-type { border-top: 0; }
-.rd .gk { font-family: var(--f-text); font-size: 17px; min-width: 0; overflow-wrap: anywhere; }
-.rd .eds { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 4px; }
-.ed { font-family: var(--f-data); font-size: 10.5px; border-radius: 4px; padding: 1px 6px; border: 1px solid var(--rule); color: var(--ink-soft); }
-.ed.on { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-.meter { display: inline-flex; gap: 2px; }
-.meter i { width: 9px; height: 9px; border-radius: 2px; background: var(--rule); }
-.lvl-name { font-size: 12px; font-weight: 600; margin-left: 6px; }
-.limits { font-size: 12.5px; color: var(--ink-soft); }
-.limits summary { cursor: pointer; color: var(--lapis); }
-.limits ul { margin: 6px 0 0; padding-left: 18px; }
+/* Untere Leiste */
+.tabs { position: fixed; left: 0; right: 0; bottom: 0; z-index: 5; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-top: 1px solid var(--rule); padding: 8px 12px calc(8px + env(safe-area-inset-bottom, 0px)); }
+.tabs-inner { max-width: 640px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.tab { padding: 8px 4px 6px; border-radius: 12px; display: flex; flex-direction: column; align-items: center; gap: 2px; color: var(--muted); font-size: 12.5px; font-weight: 500; }
+.tab svg { width: 22px; height: 22px; }
+.tab[aria-current="page"] { color: var(--ink); background: var(--accent-soft); }
 
 /* Blatt */
-.scrim { position: fixed; inset: 0; background: rgba(10, 14, 24, .35); z-index: 9; }
-.sheet { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; background: var(--sheet); border-radius: 16px 16px 0 0; box-shadow: var(--shadow); max-height: 82%; overflow-y: auto; padding: 8px 16px calc(20px + env(safe-area-inset-bottom, 0px)); }
-.sheet-inner { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
-.grab { width: 40px; height: 4px; border-radius: 2px; background: var(--rule); margin: 4px auto 6px; }
-.sheet h3 { font-family: var(--f-text); font-size: 30px; font-weight: 400; margin: 0; }
-.sheet .sub { color: var(--ink-soft); font-size: 13px; }
-.kv { display: grid; grid-template-columns: 9.5em minmax(0, 1fr); gap: 4px 12px; font-size: 14px; }
-.kv dt { color: var(--ink-soft); }
+.scrim { position: fixed; inset: 0; background: var(--scrim); z-index: 9; }
+.sheet { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; background: var(--surface); border-radius: 22px 22px 0 0; max-height: 86%; overflow-y: auto; padding: 10px 20px calc(24px + env(safe-area-inset-bottom, 0px)); box-shadow: 0 -10px 40px rgba(0, 0, 0, .18); }
+.sheet-inner { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
+.grab { width: 38px; height: 4px; border-radius: 2px; background: var(--rule); margin: 2px auto 4px; }
+.sheet h3 { font-family: var(--f-read); font-weight: 400; font-size: 26px; margin: 0; line-height: 1.2; }
+.sheet .lede { font-family: var(--f-read); font-size: 18px; line-height: 1.55; margin: 0; }
+.sheet .muted { color: var(--muted); font-size: 14px; margin: 0; }
+.close { align-self: flex-end; color: var(--muted); font-size: 14px; padding: 6px 10px; border-radius: 999px; }
+.close:hover { background: var(--accent-soft); color: var(--ink); }
+.compare { display: grid; gap: 10px; }
+.reading-opt { border: 1px solid var(--rule); border-radius: 14px; padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; }
+.reading-opt.main { border-color: var(--accent); }
+.reading-opt .q1 { font-family: var(--f-read); font-size: 18px; }
+.dots { display: inline-flex; gap: 4px; vertical-align: middle; margin-right: 8px; }
+.dots i { width: 8px; height: 8px; border-radius: 50%; background: var(--rule); }
+.dots i.on { background: var(--accent); }
+.reading-opt.other .dots i.on { background: var(--ochre); }
+.support { font-size: 13.5px; color: var(--muted); }
+
+.row { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px 0; border-top: 1px solid var(--rule); }
+.row:first-of-type { border-top: 0; }
+.row .txt b { display: block; font-weight: 600; }
+.row .txt span { font-size: 13.5px; color: var(--muted); }
+.switch { width: 46px; height: 28px; border-radius: 999px; background: var(--rule); position: relative; flex: 0 0 auto; transition: background .15s; }
+.switch::after { content: ""; position: absolute; top: 3px; left: 3px; width: 22px; height: 22px; border-radius: 50%; background: var(--surface); box-shadow: 0 1px 3px rgba(0, 0, 0, .25); transition: transform .15s; }
+.switch[aria-checked="true"] { background: var(--accent); }
+.switch[aria-checked="true"]::after { transform: translateX(18px); }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 999px; overflow: hidden; }
+.seg button { padding: 6px 12px; font-size: 13.5px; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+
+.guide { display: flex; flex-direction: column; }
+.gstep { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 12px; text-align: left; padding: 14px 0; border-top: 1px solid var(--rule); }
+.gstep .n { font-family: var(--f-read); font-size: 24px; color: var(--accent); line-height: 1; }
+.gstep b { display: block; font-weight: 600; }
+.gstep span { font-size: 14px; color: var(--muted); }
+
+/* Fortgeschritten */
+.adv-bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 14px 0 0; }
+.greek { font-family: var(--f-greek); font-size: calc(21px * var(--scale)); line-height: 1.8; }
+.w { cursor: pointer; border-radius: 3px; }
+.w:hover { background: var(--accent-soft); }
+.w.v { text-decoration: underline dotted var(--ochre); text-decoration-thickness: 1.5px; text-underline-offset: 5px; }
+.il { display: flex; flex-wrap: wrap; gap: 12px 8px; font-family: var(--f-ui); margin: 6px 0 14px; }
+.cell { display: flex; flex-direction: column; text-align: left; padding: 2px 4px; border-radius: 6px; }
+.cell:hover { background: var(--accent-soft); }
+.cell .g { font-family: var(--f-greek); font-size: 19px; }
+.cell .d { font-size: 13px; }
+.cell .m { font-size: 10.5px; color: var(--muted); letter-spacing: .03em; }
+details.all { margin-top: 18px; font-family: var(--f-ui); font-size: 14px; }
+details.all summary { cursor: pointer; color: var(--accent); font-weight: 500; }
+.vu { border-top: 1px solid var(--rule); padding: 10px 0; }
+.vu .rd { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+.vu .gk { font-family: var(--f-greek); font-size: 17px; }
+.eds { font-size: 11.5px; color: var(--muted); letter-spacing: .03em; }
+.kv { display: grid; grid-template-columns: 8.5em minmax(0, 1fr); gap: 6px 12px; font-size: 14.5px; margin: 0; }
+.kv dt { color: var(--muted); }
 .kv dd { margin: 0; min-width: 0; }
-.close { align-self: flex-end; border: 1px solid var(--rule); background: var(--paper); border-radius: 999px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
-.diff { background: var(--paper); border-radius: 8px; padding: 8px 10px; font-size: 13px; }
+.chart { display: grid; grid-template-columns: repeat(16, minmax(0, 1fr)); gap: 4px; align-items: end; height: 110px; margin-top: 10px; }
+.chart .b { background: var(--rule); border-radius: 3px 3px 0 0; }
+.chart .b.cur { background: var(--accent); }
+.chart-l { display: grid; grid-template-columns: repeat(16, minmax(0, 1fr)); gap: 4px; font-size: 10.5px; color: var(--muted); text-align: center; margin-top: 4px; }
 
-/* Studienpfad */
-.guide { display: flex; flex-direction: column; gap: 8px; counter-reset: s; }
-.gstep { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 10px; background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px; padding: 10px 12px; text-align: left; cursor: pointer; }
-.gstep::before { counter-increment: s; content: counter(s); font-family: var(--f-data); font-weight: 500; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; background: var(--lapis-soft); color: var(--lapis); }
-.gstep b { display: block; }
-.gstep span { font-size: 13px; color: var(--ink-soft); }
-.fab { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 6; background: var(--lapis); color: #fff; border: 0; border-radius: 999px; padding: 11px 18px; font-weight: 600; box-shadow: 0 6px 18px rgba(30, 50, 120, .3); cursor: pointer; }
-:root[data-theme="dark"] .fab { color: #10162a; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .fab { color: #10162a; } }
-
-footer { margin-top: 40px; font-size: 12px; color: var(--ink-soft); border-top: 1px solid var(--rule); padding-top: 12px; display: flex; flex-direction: column; gap: 6px; }
-:focus-visible { outline: 2px solid var(--lapis); outline-offset: 2px; }
+footer { margin-top: 48px; font-size: 12px; color: var(--muted); line-height: 1.55; display: flex; flex-direction: column; gap: 6px; }
 @media (prefers-reduced-motion: no-preference) {
-  .sheet { animation: up .22s ease-out; }
-  @keyframes up { from { transform: translateY(24px); opacity: .6; } to { transform: none; opacity: 1; } }
+  .sheet { animation: up .24s cubic-bezier(.2, .8, .2, 1); }
+  @keyframes up { from { transform: translateY(30px); opacity: .5; } to { transform: none; opacity: 1; } }
 }
-@media (max-width: 420px) { .text { font-size: 19px; padding: 12px; } h1 { font-size: 25px; } .chapters { gap: 2px; } }
+@media (max-width: 400px) { h1 { font-size: calc(30px * var(--scale)); } main, .top { padding-inline: 16px; } }
 </style>
 
-<nav class="ladder" aria-label="Zoomstufen">
-  <div class="ladder-inner">
-    <div class="brand"><b>Markus 3,20–35</b><small id="buildinfo">Prototyp · Datenstand v0.9</small></div>
-    <div class="steps" id="steps"></div>
+<header class="top">
+  <span class="where" id="where">Markus 3,20–35</span>
+  <button class="icon-btn" id="settingsBtn" type="button" aria-label="Einstellungen">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg>
+  </button>
+</header>
+<main id="main"></main>
+<nav class="tabs" aria-label="Ansicht">
+  <div class="tabs-inner">
+    <button class="tab" type="button" data-view="ueberblick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="4" width="17" height="16" rx="3"/><rect x="7.5" y="8.5" width="9" height="7" rx="1.5"/></svg>Überblick</button>
+    <button class="tab" type="button" data-view="lesen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 6.5C10 5 7 4.5 3.5 5v13c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5C17 4.5 14 5 12 6.5z"/><path d="M12 6.5v13"/></svg>Lesen</button>
+    <button class="tab" type="button" data-view="vertiefen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5"/></svg>Vertiefen</button>
   </div>
 </nav>
-<main class="wrap" id="main"></main>
-<button class="fab" id="fab" type="button">Studieren</button>
 <div id="sheetHost"></div>
 
 <script>
 const DATA = /*__DATA__*/null;
-const LV = { breit: "var(--lvl-breit)", mehrheitlich: "var(--lvl-mehr)", geteilt: "var(--lvl-geteilt)", vereinzelt: "var(--lvl-vereinzelt)", keine: "var(--lvl-keine)" };
-const LV_ORDER = ["breit", "mehrheitlich", "geteilt", "vereinzelt"];
-const ED_SHORT = { "ED-SBLGNT": "SBLGNT", "ED-WH": "WH", "ED-TREG": "Treg", "ED-NA28": "NA28", "ED-RP": "RP" };
-const ED_ALL = Object.keys(ED_SHORT);
-const DE = {
-  pos: { noun: "Substantiv", verb: "Verb", adj: "Adjektiv", det: "Artikel", pron: "Pronomen", conj: "Konjunktion", prep: "Präposition", adv: "Adverb", ptcl: "Partikel", num: "Zahlwort" },
-  person: { first: "1. Person", second: "2. Person", third: "3. Person" },
-  number: { singular: "Singular", plural: "Plural" },
-  gender: { masculine: "maskulin", feminine: "feminin", neuter: "neutrum" },
-  case: { nominative: "Nominativ", genitive: "Genitiv", dative: "Dativ", accusative: "Akkusativ", vocative: "Vokativ" },
-  tense: { present: "Präsens", imperfect: "Imperfekt", future: "Futur", aorist: "Aorist", perfect: "Perfekt", pluperfect: "Plusquamperfekt" },
-  voice: { active: "Aktiv", middle: "Medium", passive: "Passiv" },
-  mood: { indicative: "Indikativ", subjunctive: "Konjunktiv", imperative: "Imperativ", infinitive: "Infinitiv", participle: "Partizip", optative: "Optativ" },
-  degree: { comparative: "Komparativ", superlative: "Superlativ" },
-  role: { s: "Subjekt", v: "Prädikat", o: "Objekt", o2: "zweites Objekt", io: "indirektes Objekt", adv: "Adverbiale", p: "Prädikativ", vc: "Kopula", aux: "Hilfsverb" },
-  subtype: { personal: "Personal-", common: "", demonstrative: "Demonstrativ-", substantive: "", relative: "Relativ-", interrogative: "Interrogativ-", indefinite: "Indefinit-", proper: "Eigenname", possessive: "Possessiv-" },
-  conf: { high: "hoch", probable: "wahrscheinlich", possible: "möglich" }
-};
+const PARTS = DATA.section.parts;
 const wordsById = Object.fromEntries(DATA.words.map(w => [w.id, w]));
 const varByTok = {};
 DATA.variants.forEach(u => u.tokens.forEach(t => (varByTok[t] = varByTok[t] || []).push(u)));
-const shown = t => t.replace(/[\u2E00-\u2E05]/g, "");  /* Apparatzeichen ⸀–⸅ nur in den Daten, nicht im Lesetext */
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-const vrange = r => { const m = r.match(/MRK\.3\.(\d+)(?:-MRK\.3\.(\d+))?/); return [ +m[1], +(m[2] || m[1]) ]; };
-const deRef = r => { const [a, b] = vrange(r); return a === b ? `3,${a}` : `3,${a}–${b}`; };
+const shown = t => t.replace(/[⸀-⸅]/g, "");
+const vr = r => { const m = r.match(/MRK\.3\.(\d+)(?:-MRK\.3\.(\d+))?/); return [+m[1], +(m[2] || m[1])]; };
+const deRef = r => { const [a, b] = vr(r); return a === b ? `3,${a}` : `3,${a}–${b}`; };
+const SCENE_SHORT = ["Die Familie bricht auf", "Der Streit mit den Gelehrten", "Die Familie kommt an"];
 
-let state = { level: "abschnitt", part: "TU-MRK-003-022-030", verse: 29, layer: "de" };
-try { const s = JSON.parse(localStorage.getItem("mk3proto") || "null"); if (s && s.level) state = { ...state, ...s }; } catch (e) {}
-const save = () => { try { localStorage.setItem("mk3proto", JSON.stringify(state)); } catch (e) {} };
-
-function unitLevel(u) {
-  if (!u.assessment) return null;
-  const r1 = u.assessment.find(a => a.reading === "R1");
-  return r1 ? r1.level : null;
-}
-function worstLevelForToken(id) {
-  const us = varByTok[id]; if (!us) return null;
-  let worst = null;
-  us.forEach(u => { const l = unitLevel(u); if (l && (worst === null || LV_ORDER.indexOf(l) > LV_ORDER.indexOf(worst))) worst = l; if (!l && !worst) worst = "keine"; });
-  return worst;
+let S = { view: "ueberblick", variants: false, advanced: false, layer: "de", scale: 1, theme: "system", focus: "TU-MRK-003-020-035" };
+try { const s = JSON.parse(localStorage.getItem("mk3-lesebuch") || "null"); if (s) S = { ...S, ...s }; } catch (e) {}
+const save = () => { try { localStorage.setItem("mk3-lesebuch", JSON.stringify(S)); } catch (e) {} };
+function applyPrefs() {
+  document.documentElement.style.setProperty("--scale", S.scale);
+  if (S.theme === "system") document.documentElement.removeAttribute("data-theme");
+  else document.documentElement.setAttribute("data-theme", S.theme);
 }
 
-/* ---------- Zoomleiter ---------- */
-function renderSteps() {
-  const part = DATA.section.parts.find(p => p.id === state.part);
-  const items = [
-    ["buch", "Buch", "Markus"],
-    ["abschnitt", "Abschnitt", "3,20–35"],
-    ["einheit", "Einheit", part ? deRef(part.range) : "–"],
-    ["vers", "Vers", `3,${state.verse}`],
-  ];
-  document.getElementById("steps").innerHTML = items.map(([k, l, t]) =>
-    `<button class="step" type="button" data-go="${k}" aria-current="${state.level === k}"><span class="lvl">${l}</span>${esc(t)}</button>`).join("");
+/* ---------- Hilfen ---------- */
+function supportText(n, of) {
+  if (n == null) return "Einige alte Handschriften lesen so. Diese Angabe ist noch nicht geprüft.";
+  return `Steht in ${n} von ${of} wichtigen Textausgaben.`;
 }
-document.getElementById("steps").addEventListener("click", e => { const b = e.target.closest("[data-go]"); if (b) go(b.dataset.go); });
+function dots(n, of) { if (n == null) return ""; let s = ""; for (let i = 0; i < of; i++) s += `<i class="${i < n ? "on" : ""}"></i>`; return `<span class="dots" aria-hidden="true">${s}</span>`; }
+/* Im einfachen Modus griechische Einschübe in Klammern weglassen */
+const plain = t => S.advanced ? t : String(t ?? "").replace(/\s*\([^()]*[\u0370-\u03FF\u1F00-\u1FFF][^()]*\)/g, "");
+const altsFor = v => DATA.alternatives.filter(a => a.verse === v);
 
-function go(level, opts = {}) {
-  Object.assign(state, opts, { level });
-  save(); render(); window.scrollTo({ top: 0 });
+/* Wackelige, «gezeichnete» Rahmen für das Überblicksbild */
+function sketchRect(x, y, w, h, r, seed) {
+  let s = seed; const rnd = () => { s = (s * 9301 + 49297) % 233280; return (s / 233280 - .5) * 2.2; };
+  const p = [[x + r, y], [x + w - r, y], [x + w, y + r], [x + w, y + h - r], [x + w - r, y + h], [x + r, y + h], [x, y + h - r], [x, y + r]].map(([a, b]) => [a + rnd(), b + rnd()]);
+  return `M${p[0]} L${p[1]} Q${x + w},${y} ${p[2]} L${p[3]} Q${x + w},${y + h} ${p[4]} L${p[5]} Q${x},${y + h} ${p[6]} L${p[7]} Q${x},${y} ${p[0]}`;
 }
 
-/* ---------- Buch ---------- */
-function viewBook() {
-  const max = Math.max(...DATA.book.map(c => c.variants));
-  const bars = DATA.book.map(c => {
-    const h = Math.round(c.variants / max * 100);
-    const total = c.variants || 1;
-    const segs = LV_ORDER.map(l => `<span class="seg" style="height:${(c.levels[l] || 0) / total * 100}%;background:${LV[l]}"></span>`).join("");
-    return `<button type="button" class="ch ${c.chapter === 3 ? "cur" : ""}" data-ch="${c.chapter}" aria-label="Kapitel ${c.chapter}: ${c.tokens} Wörter, ${c.variants} Variantenstellen">
-      <span class="bar" style="height:${h}%">${segs}</span><span class="lab">${c.chapter}</span></button>`;
-  }).join("");
-  const sum = DATA.book.reduce((a, c) => { LV_ORDER.forEach(l => a[l] = (a[l] || 0) + (c.levels[l] || 0)); return a; }, {});
-  const nv = DATA.book.reduce((a, c) => a + c.variants, 0);
-  return `<h1>Das Markusevangelium</h1>
-  <p class="lead">Variantenstellen je Kapitel im griechischen Text der SBLGNT. Die Farbe zeigt, wie viele der fünf verglichenen Editionen den Lesetext stützen.</p>
-  <div class="chapters" id="chapters">${bars}</div>
-  <div class="legend">${LV_ORDER.map(l => `<span><i style="background:${LV[l]}"></i>${l}</span>`).join("")}</div>
-  <div class="stats">
-    <div class="stat"><b>${DATA.book_tokens.toLocaleString("de-CH")}</b><span>Wörter (SBLGNT)</span></div>
-    <div class="stat"><b>${DATA.book_lemmas.toLocaleString("de-CH")}</b><span>verschiedene Grundformen</span></div>
-    <div class="stat"><b>${nv}</b><span>Variantenstellen</span></div>
-    <div class="stat"><b>${sum.breit}</b><span>davon Lesetext breit gestützt</span></div>
-  </div>
-  <h2>Im Prototyp erschlossen</h2>
-  <div class="cards"><button type="button" class="block" data-go="abschnitt" style="border:1px solid var(--rule);border-radius:10px">
-    <span class="r">3,20–35</span><span class="t">${esc(DATA.section.title)}</span></button></div>`;
-}
-
-/* ---------- Abschnitt ---------- */
-function card(kind, label, text, extra = "") {
-  return `<div class="card"><span class="kind ${kind}">${label}</span><p>${esc(text)}</p>${extra}</div>`;
-}
-function viewSection() {
-  const [a, b, c] = DATA.section.parts;
-  const f = DATA.findings.find(x => x.id === "FIND-MRK-0005");
-  const i = DATA.interpretations.find(x => x.id === "INT-MRK-0003");
+/* ---------- Überblick ---------- */
+function viewOverview() {
+  const svg = `<svg viewBox="0 0 340 250" role="img" aria-label="Drei Szenen: Die Geschichte der Familie umschliesst den Streit mit den Gelehrten">
+    <path d="${sketchRect(6, 6, 328, 238, 26, 7)}" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    <path d="${sketchRect(10, 9, 321, 232, 24, 3)}" fill="none" stroke="currentColor" stroke-width=".6" opacity=".45"/>
+    <path d="${sketchRect(44, 70, 252, 110, 18, 11)}" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.4"/>
+    <text x="170" y="38" text-anchor="middle" font-family="Newsreader, Georgia, serif" font-size="16" fill="currentColor">${SCENE_SHORT[0]}</text>
+    <text x="170" y="56" text-anchor="middle" font-family="Hanken Grotesk, sans-serif" font-size="10.5" fill="var(--muted)" letter-spacing=".08em">3,20–21</text>
+    <text x="170" y="122" text-anchor="middle" font-family="Newsreader, Georgia, serif" font-size="17" fill="var(--accent)">${SCENE_SHORT[1]}</text>
+    <text x="170" y="142" text-anchor="middle" font-family="Hanken Grotesk, sans-serif" font-size="10.5" fill="var(--muted)" letter-spacing=".08em">3,22–30</text>
+    <text x="170" y="212" text-anchor="middle" font-family="Newsreader, Georgia, serif" font-size="16" fill="currentColor">${SCENE_SHORT[2]}</text>
+    <text x="170" y="230" text-anchor="middle" font-family="Hanken Grotesk, sans-serif" font-size="10.5" fill="var(--muted)" letter-spacing=".08em">3,31–35</text>
+  </svg>`;
+  const adv = S.advanced ? advancedBook() : "";
   return `<h1>${esc(DATA.section.title)}</h1>
-  <p class="lead">Markus 3,20–35 besteht aus drei Szenen. Die äussere Szene ist um die mittlere herumgelegt.</p>
-  <div class="nest"><div class="frame">
-    <button type="button" class="block" data-part="${a.id}"><span class="tag">Rahmen · Angehörige</span><span class="t">${esc(a.title)}</span><span class="r">${deRef(a.range)}</span></button>
-    <button type="button" class="block inner" data-part="${b.id}"><span class="tag">Mitte · Schriftgelehrte</span><span class="t">${esc(b.title)}</span><span class="r">${deRef(b.range)}</span></button>
-    <button type="button" class="block" data-part="${c.id}"><span class="tag">Rahmen · Mutter und Brüder</span><span class="t">${esc(c.title)}</span><span class="r">${deRef(c.range)}</span></button>
-  </div></div>
-  <h2>Was der Text sagt und was man daraus liest</h2>
-  <div class="cards">
-    ${card("befund", "Befund", f.claim, f.caveat ? `<div class="caveat">${esc(f.caveat)}</div>` : "")}
-    <div class="arrow">wird gedeutet als</div>
-    ${card("deutung", `Deutung · ${DE.conf[i.confidence] || i.confidence}`, i.claim,
-      `<div class="caveat"><b>Unsicher:</b> ${esc(i.caveat)}</div>${i.counter.map(x => `<div class="caveat"><b>Gegenargument:</b> ${esc(x)}</div>`).join("")}`)}
-  </div>`;
+  <p class="intro">${esc(DATA.section.summary)}</p>
+  <div class="figure">${svg}</div>
+  <div class="scenes">${PARTS.map((p, i) => `<button class="scene" type="button" data-read="${p.id}">
+      <span class="n">${i + 1}</span><span class="t">${esc(p.title)}</span><span class="s">${esc(p.summary)}</span><span class="r">Markus ${deRef(p.range)}</span></button>`).join("")}</div>
+  <button class="cta" type="button" data-guide>Schritt für Schritt studieren <span aria-hidden="true">→</span></button>
+  ${adv}`;
+}
+function advancedBook() {
+  const max = Math.max(...DATA.book.map(c => c.variants));
+  return `<div style="margin-top:44px"><span class="label">Für Fortgeschrittene</span>
+    <p class="intro" style="font-size:16px;margin-top:6px">Stellen im ganzen Markusevangelium, an denen sich die fünf verglichenen griechischen Textausgaben unterscheiden: ${DATA.book.reduce((a, c) => a + c.variants, 0)} insgesamt.</p>
+    <div class="chart">${DATA.book.map(c => `<div class="b ${c.chapter === 3 ? "cur" : ""}" style="height:${c.variants / max * 100}%" title="Kapitel ${c.chapter}: ${c.variants}"></div>`).join("")}</div>
+    <div class="chart-l">${DATA.book.map(c => `<span>${c.chapter}</span>`).join("")}</div></div>`;
 }
 
-/* ---------- Einheit ---------- */
-function verseWords(v) { return DATA.words.filter(w => w.v === v); }
-function greekText(v) {
-  return verseWords(v).map(w => {
-    const l = worstLevelForToken(w.id);
-    const style = l ? ` style="text-decoration-color:${LV[l]}"` : "";
-    return `<span class="w ${l ? "var" : ""}" tabindex="0" role="button" data-w="${w.id}"${style}>${esc(shown(w.text))}</span>`;
-  }).join(" ");
+/* ---------- Lesen ---------- */
+function markVerse(v, text) {
+  const alts = altsFor(v);
+  if (!S.variants || !alts.length) return esc(text);
+  // längste Stelle zuerst markieren; überlappende Stellen teilen sich eine Markierung
+  const spans = [];
+  alts.slice().sort((a, b) => b.from.length - a.from.length).forEach(a => {
+    const i = text.indexOf(a.from); if (i < 0) return;
+    const hit = spans.find(s => i < s.end && i + a.from.length > s.start);
+    if (hit) { hit.alts.push(a); hit.start = Math.min(hit.start, i); hit.end = Math.max(hit.end, i + a.from.length); }
+    else spans.push({ start: i, end: i + a.from.length, alts: [a] });
+  });
+  spans.sort((a, b) => a.start - b.start);
+  let out = "", pos = 0;
+  spans.forEach(s => {
+    const strong = s.alts.some(a => a.effect === "bedeutsam");
+    out += esc(text.slice(pos, s.start)) + `<span class="mark ${strong ? "" : "gering"}" role="button" tabindex="0" data-alt="${v}">${esc(text.slice(s.start, s.end))}</span>`;
+    pos = s.end;
+  });
+  return out + esc(text.slice(pos));
 }
-function layerButtons() {
-  return `<div class="layers" role="group" aria-label="Textschicht">${[["de", "Deutsch"], ["gr", "Griechisch"], ["il", "Wort für Wort"]]
-    .map(([k, l]) => `<button type="button" data-layer="${k}" aria-pressed="${state.layer === k}">${l}</button>`).join("")}</div>`;
+function altLines(v) {
+  if (!S.variants) return "";
+  return altsFor(v).map(a => `<button class="alt" type="button" data-alt="${v}">oder: «${esc(a.to)}»<span>${a.effect === "bedeutsam" ? "andere Lesart" : "kleine Abweichung"}</span></button>`).join("");
 }
-function interlinear(vs) {
-  return `<div class="il">${vs.map(v => `<span class="vno">Vers 3,${v}</span>` + verseWords(v).map(w => {
-    const d = DATA.tok_de[w.id];
-    const de = d ? (d.target === null ? "·" : (d.first ? d.target : "″")) : "—";
-    const l = worstLevelForToken(w.id);
-    return `<span class="cell" tabindex="0" role="button" data-w="${w.id}">
-      <span class="g" ${l ? `style="text-decoration:underline dotted ${LV[l]};text-decoration-thickness:2px;text-underline-offset:5px"` : ""}>${esc(shown(w.text))}</span>
-      <span class="d">${esc(de)}</span><span class="e">${esc(w.mac.gloss_berean || "")}</span><span class="m">${esc(w.mac.morph || "")}</span></span>`;
-  }).join("")).join("")}</div>`;
-}
-function viewUnit() {
-  const part = DATA.section.parts.find(p => p.id === state.part);
-  const [a, b] = vrange(part.range);
-  const vs = []; for (let v = a; v <= b; v++) vs.push(v);
-  let body;
-  if (state.layer === "de") body = `<div class="text de">${vs.map(v => `<button type="button" class="vn" data-verse="${v}">${v}</button>${esc(DATA.de[v] || "")}`).join(" ")}</div>`;
-  else if (state.layer === "gr") body = `<div class="text">${vs.map(v => `<button type="button" class="vn" data-verse="${v}">${v}</button>${greekText(v)}`).join(" ")}</div>`;
-  else body = `<div class="text">${interlinear(vs)}</div>`;
-  const units = DATA.variants.filter(u => { const [x] = vrange(u.ref); return x >= a && x <= b; });
-  const isCore = part.id === "TU-MRK-003-022-030";
-  const src = [...new Set(vs.map(v => DATA.de_source[v]))];
-  return `<h1>${esc(part.title)}</h1>
-  <p class="lead">Markus ${deRef(part.range)}. Gepunktet unterstrichene Wörter haben Varianten; die Farbe zeigt, wie breit der Lesetext gestützt ist. Ein Wort antippen für Details.</p>
-  ${layerButtons()}
+function viewRead() {
+  const total = DATA.alternatives.length, strong = DATA.alternatives.filter(a => a.effect === "bedeutsam").length;
+  let body = "";
+  if (S.advanced && S.layer !== "de") body = advancedText();
+  else body = `<div class="reading">${PARTS.map((p, i) => {
+    const [a, b] = vr(p.range); const vs = []; for (let v = a; v <= b; v++) vs.push(v);
+    return `<h2>${i + 1} · Markus ${deRef(p.range)}</h2><p class="scene-title">${esc(p.title)}</p>` +
+      vs.map(v => `<p><span class="vn">${v}</span>${markVerse(v, DATA.de[v] || "")}</p>${altLines(v)}`).join("") +
+      (i < PARTS.length - 1 ? `<svg class="flourish" viewBox="0 0 120 14" aria-hidden="true"><path d="M2 7c18-7 30 7 58 0s40 7 58 0" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>` : "");
+  }).join("")}</div>`;
+  const hint = S.variants
+    ? `<div class="hint"><p>Unterstrichene Stellen lauten in einigen alten Handschriften anders. Antippen zeigt, wie gut jede Lesart bezeugt ist.</p><button class="textbtn" type="button" data-toggle="variants">Abweichungen ausblenden</button></div>`
+    : `<div class="hint"><p>An ${total} Stellen dieses Abschnitts lauten alte Handschriften anders, ${strong} davon verändern den Sinn spürbar.</p><button class="textbtn" type="button" data-toggle="variants">Abweichungen anzeigen</button></div>`;
+  return `<h1>Lesen</h1>
+  ${S.advanced ? `<div class="adv-bar"><div class="seg" role="group" aria-label="Textschicht">${[["de", "Deutsch"], ["gr", "Griechisch"], ["il", "Wort für Wort"]].map(([k, l]) => `<button type="button" data-layer="${k}" aria-pressed="${S.layer === k}">${l}</button>`).join("")}</div></div>` : ""}
   ${body}
-  <p class="lead" style="font-size:12px;margin-top:8px">Deutsch: eigene Arbeitsübersetzung (KI-Entwurf, ungeprüft${src.some(s => s && s.includes("022-030")) ? "; Wortzuordnung vorhanden" : "; Wortzuordnung folgt"}). Englische Kurzglossen im Wort-für-Wort-Modus aus der Berean Interlinear Bible.</p>
-  <h2>Unterschiede in den Editionen · ${units.length}</h2>
-  <div class="var-list">${units.map(variantCard).join("") || "<p class='lead'>Keine Variantenstellen.</p>"}</div>
-  ${isCore ? chain() : ""}`;
-}
-function chain() {
-  const fs = DATA.findings.filter(f => f.subject === "TU-MRK-003-022-030");
-  const is = DATA.interpretations.filter(i => i.subject === "TU-MRK-003-022-030");
-  return `<h2>Vom Text zur Anwendung</h2>
-  <div class="cards">
-    ${fs.map(f => card("befund", `Befund · ${DE.conf[f.confidence] || f.confidence}`, f.claim, f.caveat ? `<div class="caveat">${esc(f.caveat)}</div>` : "")).join("")}
-    <div class="arrow">daraus zwei Deutungen</div>
-    ${is.map(i => card("deutung", `Deutung · ${DE.conf[i.confidence] || i.confidence}`, i.claim, i.caveat ? `<div class="caveat"><b>Vorbehalt:</b> ${esc(i.caveat)}</div>` : "")).join("")}
-    <div class="arrow">daraus abgeleitet</div>
-    ${DATA.principles.map(p => card("prinzip", `Prinzip · ${DE.conf[p.confidence] || p.confidence}`, p.text, `<div class="caveat">Offen: Das Prinzip ist stärker formuliert als die Deutung, aus der es abgeleitet ist.</div>`)).join("")}
-    <div class="arrow">übertragen auf heute</div>
-    ${DATA.applications.map(x => card("anwendung", `Anwendung · ${esc(x.context || "")}`, x.text, `<div class="caveat"><b>Grenze:</b> ${esc(x.limits)}</div>`)).join("")}
-  </div>
-  <h2>Offene Frage</h2>
-  <div class="cards">${DATA.questions.map(q => `<div class="card"><p><b>${esc(q.q)}</b></p><div class="caveat">${esc(q.finding)}</div></div>`).join("")}</div>
-  <h2>Parallelstellen</h2>
-  <div class="cards">${DATA.relations.map(r => `<div class="card"><p class="mono">${esc(r.to)}</p><span class="sub" style="font-size:13px;color:var(--ink-soft)">${{ parallel_passage: "Parallele Erzählung", parallel_argument: "Paralleles Argument", parallel_saying: "Paralleles Wort" }[r.kind] || r.kind}</span></div>`).join("")}</div>`;
+  ${S.layer === "de" || !S.advanced ? hint : ""}
+  <p class="note-small">Die deutsche Übersetzung ist ein eigener Entwurf nach dem griechischen Text. Sie wurde noch nicht fachlich geprüft.</p>`;
 }
 
-/* ---------- Varianten ---------- */
-function meter(n, of, lvl) { let s = ""; for (let i = 0; i < of; i++) s += `<i style="${i < n ? `background:${LV[lvl]}` : ""}"></i>`; return `<span class="meter" aria-label="${n} von ${of}">${s}</span>`; }
-function variantCard(u) {
-  const words = u.tokens.map(t => wordsById[t]?.word).filter(Boolean).join(" ");
-  const isEd = u.level === "edition_apparatus";
-  const rows = u.readings.map(r => {
-    const a = (u.assessment || []).find(x => x.reading === r.id);
-    const eds = isEd ? `<div class="eds">${ED_ALL.map(e => `<span class="ed ${(a ? a.editions : r.editions).includes(e) ? "on" : ""}">${ED_SHORT[e]}</span>`).join("")}</div>`
-      : `<div class="eds">${r.witnesses.map(x => `<span class="ed on">${esc(x)}</span>`).join("")}</div>`;
-    const right = a ? `${meter(a.support, a.of, a.level)}<span class="lvl-name" style="color:${LV[a.level]}">${a.level}</span>` : `<span class="chip">Handschriften (Arbeitsnotiz)</span>`;
-    return `<div class="rd"><span class="gk">${esc(r.text)}${r.gloss ? ` <span style="font-family:var(--f-ui);font-size:13px;color:var(--ink-soft)">«${esc(r.gloss)}»</span>` : ""}${r.sblgnt ? ` <span class="chip">Lesetext</span>` : ""}</span><span>${right}</span>${eds}</div>`;
-  }).join("");
-  return `<div class="vu"><header><span class="mono">${deRef(u.ref)} · ${esc(words)}</span><span>${isEd ? "Editionen" : "Handschriften"}</span></header>${rows}
-  ${isEd ? `<details class="limits"><summary>Was diese Bewertung misst</summary><p style="margin:6px 0 0">${esc(DATA.method.question)}</p><ul>${DATA.method.limits.map(l => `<li>${esc(l)}</li>`).join("")}</ul></details>` : `<p class="limits" style="margin:6px 0 0">${esc(u.note || "")}</p>`}</div>`;
-}
-
-/* ---------- Vers ---------- */
-function viewVerse() {
-  const v = state.verse;
-  const units = DATA.variants.filter(u => vrange(u.ref)[0] === v);
-  const part = DATA.section.parts.find(p => { const [a, b] = vrange(p.range); return v >= a && v <= b; });
-  return `<h1>Vers 3,${v}</h1>
-  <p class="lead">${esc(part ? part.title : "")}</p>
-  <div class="text de">${esc(DATA.de[v] || "")}</div>
-  <h2>Wort für Wort</h2>
-  <div class="text">${interlinear([v])}</div>
-  <div style="display:flex;gap:8px;margin-top:10px">
-    ${v > 20 ? `<button type="button" class="step" data-verse="${v - 1}">← 3,${v - 1}</button>` : ""}
-    ${v < 35 ? `<button type="button" class="step" data-verse="${v + 1}">3,${v + 1} →</button>` : ""}
-  </div>
-  <h2>Unterschiede in den Editionen · ${units.length}</h2>
-  <div class="var-list">${units.map(variantCard).join("") || "<p class='lead'>In diesem Vers verzeichnet der Apparat keine Unterschiede.</p>"}</div>`;
-}
-
-/* ---------- Wort (Blatt) ---------- */
-function openWord(id) {
-  const w = wordsById[id]; if (!w) return;
-  const m = w.mac;
-  const morph = ["person", "tense", "voice", "mood", "case", "number", "gender", "degree"].map(k => m[k] && DE[k][m[k]]).filter(Boolean).join(", ");
-  const posDe = m.pos === "pron" && m.subtype ? (DE.subtype[m.subtype] + "pronomen") : (m.subtype === "proper" ? "Eigenname" : DE.pos[m.pos] || m.pos);
-  const d = DATA.tok_de[id];
-  const refs = (m.referent || m.subject_ref || []).map(t => wordsById[t] ? `<span class="w" role="button" tabindex="0" data-w="${t}" style="font-family:var(--f-text);font-size:17px">${esc(wordsById[t].text)}</span> <span class="mono" style="font-size:11px;color:var(--ink-soft)">(3,${wordsById[t].v})</span>` : `<span class="mono">${esc(t)}</span>`).join(", ");
-  let diff = "";
-  if (w.mgnt) {
-    const same = w.mgnt.lemma === m.lemma;
-    diff = `<div class="diff"><b>Zweite Annotation (MorphGNT):</b> ${esc(w.mgnt.lemma)} · <span class="mono">${esc(w.mgnt.pos)} ${esc(w.mgnt.parsing)}</span>${same ? "" : " · <b>Grundform weicht ab</b>"}
-      ${id === "TOK-SBLGNT-MRK-003-029-019" ? `<div style="margin-top:4px">MorphGNT bestimmt das Wort als Neutrum; bei MACULA nennt der Code <span class="mono">A-GSF</span> Femininum, das Geschlechtsfeld aber Neutrum. Beide Angaben bleiben sichtbar.</div>` : ""}</div>`;
+/* ---------- Vertiefen ---------- */
+function viewDeep() {
+  const focus = S.focus;
+  const scope = `<div class="scope" role="group" aria-label="Bereich">${[["TU-MRK-003-020-035", "Ganzer Abschnitt"], ["TU-MRK-003-022-030", "Der Streit mit den Gelehrten"]].map(([k, l]) => `<button type="button" data-focus="${k}" aria-pressed="${focus === k}">${l}</button>`).join("")}</div>`;
+  const conf = c => ({ high: "gut begründet", probable: "wahrscheinlich", possible: "möglich" }[c] || "");
+  const fs = DATA.findings.filter(f => f.subject === (focus === "TU-MRK-003-020-035" ? "TU-MRK-003-020-035" : "TU-MRK-003-022-030"));
+  const is = DATA.interpretations.filter(i => i.subject === focus);
+  let html = `<h1>Vertiefen</h1><p class="intro">Was steht im Text, wie kann man ihn verstehen, und was kann er heute bedeuten? Diese drei Fragen halten wir auseinander.</p>${scope}`;
+  html += `<section class="q"><h2>Was steht da?</h2>${fs.map(f => `<div class="point"><p>${esc(plain(f.claim))}</p>${S.advanced && f.caveat ? `<div class="aside">${esc(f.caveat)}</div>` : ""}</div>`).join("")}</section>`;
+  html += `<section class="q"><h2>Wie kann man es verstehen?</h2>${is.length > 1 ? `<p class="intro" style="font-size:16px">Hier gibt es mehr als eine Sichtweise.</p>` : ""}
+    ${is.map(i => `<div class="point view"><span class="chip">${conf(i.confidence)}</span><p>${esc(plain(i.claim))}</p>${i.caveat ? `<div class="aside"><b>Nicht sicher:</b> ${esc(plain(i.caveat))}</div>` : ""}${(i.counter || []).map(c => `<div class="aside"><b>Man kann auch anders lesen:</b> ${esc(plain(c))}</div>`).join("")}</div>`).join("")}</section>`;
+  if (focus === "TU-MRK-003-022-030") {
+    html += `<section class="q"><h2>Was kann es heute bedeuten?</h2>
+      ${DATA.applications.map(a => `<div class="point today"><p>${esc(a.text)}</p><div class="aside"><b>Grenze:</b> ${esc(a.limits)}</div></div>`).join("")}
+      ${DATA.principles.map(p => `<div class="point today"><span class="chip">abgeleiteter Grundsatz · ${conf(p.confidence)}</span><p>${esc(p.text)}</p><div class="aside">Dieser Grundsatz geht weiter als der Text selbst sagt. Er ist eine Folgerung, kein Befund.</div></div>`).join("")}
+    </section>
+    <section class="q"><h2>Eine offene Frage</h2>${DATA.questions.map(q => `<div class="point"><p>${esc(q.q)}</p><div class="aside">${esc(q.finding)}</div></div>`).join("")}</section>
+    <section class="q"><h2>Ähnliche Stellen</h2><div class="refs">${DATA.relations.map(r => `<span class="ref">${esc(r.to_de)}</span>`).join("")}</div></section>`;
   }
-  const us = varByTok[id] || [];
-  showSheet(`<button type="button" class="close" data-close>Schliessen</button>
-    <div><h3>${esc(shown(w.text))}</h3><div class="sub">Markus 3,${w.v}, Wort ${w.n}</div></div>
-    <dl class="kv">
-      <dt>Grundform</dt><dd><span style="font-family:var(--f-text);font-size:18px">${esc(m.lemma || "")}</span> <span class="chip">${w.freq}× in Markus</span></dd>
-      <dt>Wortart</dt><dd>${esc(posDe || "")}</dd>
-      ${morph ? `<dt>Form</dt><dd>${esc(morph)} <span class="mono" style="font-size:11px;color:var(--ink-soft)">${esc(m.morph || "")}</span></dd>` : ""}
-      ${m.role ? `<dt>Satzrolle</dt><dd>${esc(DE.role[m.role] || m.role)}</dd>` : ""}
-      ${refs ? `<dt>Bezieht sich auf</dt><dd>${refs}</dd>` : ""}
-      <dt>Deutsch</dt><dd>${d ? (d.target === null ? "<i>nicht eigens übersetzt</i>" : `«${esc(d.target)}»`) : "<i>Wortzuordnung folgt</i>"}${d && d.note ? `<div class="caveat" style="border:0;padding:0">${esc(d.note)}</div>` : ""}</dd>
-      <dt>Glosse (engl.)</dt><dd>${esc(m.gloss_berean || "–")}${m.gloss_cherith_en && m.gloss_cherith_en !== m.gloss_berean ? ` · ${esc(m.gloss_cherith_en)}` : ""}</dd>
-    </dl>
-    ${diff}
-    ${us.length ? `<div><h2 style="margin:6px 0 8px">Unterschiede an dieser Stelle</h2><div class="var-list">${us.map(variantCard).join("")}</div></div>` : ""}
-    <p class="sub">Annotation: MACULA Greek (CC BY 4.0). Glossen: Berean Interlinear (gemeinfrei), Cherith Glosses von Andi Wu (CC BY 4.0).</p>`);
+  html += `<p class="note-small">Alle Beobachtungen und Deutungen sind Entwürfe und noch nicht fachlich geprüft.</p>`;
+  return html;
 }
+
+/* ---------- Fortgeschritten: Urtext ---------- */
+function verseWords(v) { return DATA.words.filter(w => w.v === v); }
+function advancedText() {
+  return PARTS.map((p, i) => {
+    const [a, b] = vr(p.range); const vs = []; for (let v = a; v <= b; v++) vs.push(v);
+    const units = DATA.variants.filter(u => { const x = vr(u.ref)[0]; return x >= a && x <= b; });
+    const text = S.layer === "gr"
+      ? `<div class="greek">${vs.map(v => `<span class="vn">${v}</span>` + verseWords(v).map(w => `<span class="w ${varByTok[w.id] ? "v" : ""}" role="button" tabindex="0" data-w="${w.id}">${esc(shown(w.text))}</span>`).join(" ")).join(" ")}</div>`
+      : vs.map(v => `<div class="label" style="margin-top:12px">Vers 3,${v}</div><div class="il">${verseWords(v).map(w => { const d = DATA.tok_de[w.id]; const de = d ? (d.target === null ? "·" : (d.first ? d.target : "″")) : (w.mac.gloss_berean || ""); return `<button type="button" class="cell" data-w="${w.id}"><span class="g">${esc(shown(w.text))}</span><span class="d">${esc(de)}</span><span class="m">${esc(w.mac.morph || "")}</span></button>`; }).join("")}</div>`).join("");
+    return `<h2 class="label" style="margin:30px 0 8px">${i + 1} · Markus ${deRef(p.range)}</h2>${text}
+      <details class="all"><summary>Alle ${units.length} Unterschiede der Textausgaben</summary>${units.map(unitHtml).join("")}</details>`;
+  }).join("") + `<p class="note-small">Wort für Wort: deutsche Entsprechung aus der Wortzuordnung (3,22–30), sonst englische Kurzglosse (Berean Interlinear). Griechischer Text: SBLGNT.</p>`;
+}
+function unitHtml(u) {
+  const ed = { "ED-SBLGNT": "SBLGNT", "ED-WH": "WH", "ED-TREG": "Treg", "ED-NA28": "NA28", "ED-RP": "RP" };
+  return `<div class="vu"><div class="label" style="font-size:11px">${deRef(u.ref)}</div>${u.readings.map(r => {
+    const a = (u.assessment || []).find(x => x.reading === r.id);
+    return `<div class="rd"><span class="gk">${esc(r.text)}</span><span class="eds">${a ? a.editions.map(e => ed[e]).join(" · ") + ` (${a.support}/${a.of})` : esc(r.witnesses.join(", "))}</span></div>`;
+  }).join("")}</div>`;
+}
+function openWord(id) {
+  const w = wordsById[id]; if (!w) return; const m = w.mac;
+  const DE = { person: { first: "1. Person", second: "2. Person", third: "3. Person" }, number: { singular: "Singular", plural: "Plural" }, gender: { masculine: "maskulin", feminine: "feminin", neuter: "neutrum" }, case: { nominative: "Nominativ", genitive: "Genitiv", dative: "Dativ", accusative: "Akkusativ", vocative: "Vokativ" }, tense: { present: "Präsens", imperfect: "Imperfekt", future: "Futur", aorist: "Aorist", perfect: "Perfekt", pluperfect: "Plusquamperfekt" }, voice: { active: "Aktiv", middle: "Medium", passive: "Passiv" }, mood: { indicative: "Indikativ", subjunctive: "Konjunktiv", imperative: "Imperativ", infinitive: "Infinitiv", participle: "Partizip", optative: "Optativ" } };
+  const POS = { noun: "Substantiv", verb: "Verb", adj: "Adjektiv", det: "Artikel", pron: "Pronomen", conj: "Konjunktion", prep: "Präposition", adv: "Adverb", ptcl: "Partikel", num: "Zahlwort" };
+  const ROLE = { s: "Subjekt", v: "Prädikat", o: "Objekt", o2: "zweites Objekt", io: "indirektes Objekt", adv: "Adverbiale", p: "Prädikativ", vc: "Kopula", aux: "Hilfsverb" };
+  const form = ["person", "tense", "voice", "mood", "case", "number", "gender"].map(k => m[k] && DE[k][m[k]]).filter(Boolean).join(", ");
+  const d = DATA.tok_de[id];
+  const refs = (m.referent || m.subject_ref || []).filter(t => wordsById[t]).map(t => `<button type="button" class="w" data-w="${t}" style="font-family:var(--f-greek);font-size:17px">${esc(shown(wordsById[t].text))}</button> (3,${wordsById[t].v})`).join(", ");
+  showSheet(`<button class="close" type="button" data-close>Schliessen</button>
+    <h3 style="font-family:var(--f-greek)">${esc(shown(w.text))}</h3><p class="muted">Markus 3,${w.v} · Wort ${w.n}</p>
+    <dl class="kv"><dt>Grundform</dt><dd style="font-family:var(--f-greek);font-size:17px">${esc(m.lemma || "")} <span class="muted" style="font-family:var(--f-ui)">· ${w.freq}× in Markus</span></dd>
+    <dt>Wortart</dt><dd>${esc(POS[m.pos] || m.pos || "")}</dd>${form ? `<dt>Form</dt><dd>${esc(form)}</dd>` : ""}
+    ${m.role ? `<dt>Satzrolle</dt><dd>${esc(ROLE[m.role] || m.role)}</dd>` : ""}${refs ? `<dt>Bezieht sich auf</dt><dd>${refs}</dd>` : ""}
+    <dt>Deutsch</dt><dd>${d ? (d.target === null ? "nicht eigens übersetzt" : "«" + esc(d.target) + "»") : "–"}${d && d.note ? `<br><span class="muted">${esc(d.note)}</span>` : ""}</dd>
+    <dt>Englisch</dt><dd>${esc(m.gloss_berean || "–")}</dd>
+    ${w.mgnt ? `<dt>MorphGNT</dt><dd>${esc(w.mgnt.lemma)} · ${esc(w.mgnt.parsing)}</dd>` : ""}</dl>
+    ${(varByTok[id] || []).map(unitHtml).join("")}
+    <p class="muted" style="font-size:12px">Annotation: MACULA Greek (CC BY 4.0); Glossen: Berean Interlinear (gemeinfrei).</p>`);
+}
+
+/* ---------- Blätter ---------- */
 function showSheet(html) {
   document.getElementById("sheetHost").innerHTML = `<div class="scrim" data-close></div><div class="sheet" role="dialog" aria-modal="true"><div class="grab"></div><div class="sheet-inner">${html}</div></div>`;
   document.querySelector(".sheet .close")?.focus();
 }
-function closeSheet() { document.getElementById("sheetHost").innerHTML = ""; }
-
-/* ---------- Studienpfad ---------- */
+const closeSheet = () => (document.getElementById("sheetHost").innerHTML = "");
+function openAlt(v) {
+  const alts = altsFor(v);
+  showSheet(`<button class="close" type="button" data-close>Schliessen</button>
+    <h3>Vers 3,${v}: andere Lesarten</h3>
+    <p class="muted">Die alten Handschriften dieses Verses stimmen nicht ganz überein. Hier stehen die Möglichkeiten nebeneinander. Niemand entscheidet für dich, welche «richtig» ist.</p>
+    ${alts.map(a => `<div class="compare">
+      <div class="reading-opt main"><span class="label">Im Lesetext</span><span class="q1">«${esc(a.from)}»</span><span class="support">${dots(a.base_support, a.of)}${a.base_support != null ? supportText(a.base_support, a.of) : "So steht es in den verglichenen Textausgaben."}</span></div>
+      <div class="reading-opt other"><span class="label">Andere Lesart</span><span class="q1">«${esc(a.to)}»</span><span class="support">${dots(a.support, a.of)}${supportText(a.support, a.of)}</span></div>
+      <p class="muted">${esc(a.note || "")}</p></div>`).join("")}
+    <p class="muted" style="font-size:12.5px">Gezählt werden fünf wichtige gedruckte Ausgaben des griechischen Textes. Das zeigt, wie Fachleute die Stelle beurteilen, nicht wie viele Handschriften es gibt.</p>`);
+}
+function openSettings() {
+  const sw = (k, t, s) => `<div class="row"><div class="txt"><b>${t}</b><span>${s}</span></div><button type="button" class="switch" role="switch" aria-checked="${S[k]}" data-toggle="${k}" aria-label="${t}"></button></div>`;
+  showSheet(`<button class="close" type="button" data-close>Fertig</button><h3>Darstellung</h3>
+    <div>${sw("variants", "Abweichende Lesarten", "Zeigt, wo alte Handschriften anders lauten.")}
+    ${sw("advanced", "Urtext und Details", "Für Fortgeschrittene: griechischer Text, Wort für Wort, Grammatik.")}
+    <div class="row"><div class="txt"><b>Schriftgrösse</b></div><div class="seg" role="group" aria-label="Schriftgrösse">${[[.92, "A−"], [1, "A"], [1.12, "A+"]].map(([v, l]) => `<button type="button" data-scale="${v}" aria-pressed="${S.scale === v}">${l}</button>`).join("")}</div></div>
+    <div class="row"><div class="txt"><b>Farben</b></div><div class="seg" role="group" aria-label="Farben">${[["system", "Auto"], ["light", "Hell"], ["dark", "Dunkel"]].map(([v, l]) => `<button type="button" data-theme-set="${v}" aria-pressed="${S.theme === v}">${l}</button>`).join("")}</div></div></div>`);
+}
 function openGuide() {
   const steps = [
-    ["Überblick gewinnen", "Den Abschnitt 3,20–35 als Ganzes ansehen: drei Szenen, ineinander gelegt.", () => go("abschnitt")],
-    ["Den Text lesen", "Die Mitte 3,22–30 auf Deutsch lesen, dann auf Griechisch.", () => go("einheit", { part: "TU-MRK-003-022-030", layer: "de" })],
-    ["Unterschiede prüfen", "Wo weichen die Editionen voneinander ab, und wie breit ist der Lesetext gestützt?", () => go("einheit", { part: "TU-MRK-003-022-030", layer: "gr" })],
-    ["Ein Schlüsselwort klären", "βλασφημήσῃ in 3,29: Grundform, Form, Satzrolle, worauf es sich bezieht.", () => { go("vers", { verse: 29 }); setTimeout(() => openWord("TOK-SBLGNT-MRK-003-029-004"), 50); }],
-    ["Deutungen vergleichen", "Befunde von Deutungen trennen, Vorbehalte und Gegenargumente lesen.", () => { go("einheit", { part: "TU-MRK-003-022-030", layer: "de" }); setTimeout(() => document.querySelector("h2:nth-of-type(2)")?.scrollIntoView(), 50); }],
-    ["Übertragen", "Was folgt daraus heute in der Schweiz, und wo liegen die Grenzen?", () => { go("einheit", { part: "TU-MRK-003-022-030", layer: "de" }); setTimeout(() => [...document.querySelectorAll(".kind.anwendung")].pop()?.scrollIntoView({ block: "center" }), 50); }],
+    ["Überblick", "Drei Szenen, ineinander erzählt. Worum geht es in jeder?", () => go("ueberblick")],
+    ["Ganz lesen", "Den Abschnitt in Ruhe von Anfang bis Ende lesen.", () => go("lesen")],
+    ["Genau hinsehen", "Wo lauten alte Handschriften anders, und ändert das etwas?", () => { S.variants = true; go("lesen"); }],
+    ["Verstehen", "Was steht da, und wie kann man es verstehen?", () => go("vertiefen", { focus: "TU-MRK-003-020-035" })],
+    ["Die schwierige Mitte", "Die Warnung in 3,28–29: Was ist gemeint, was bleibt offen?", () => go("vertiefen", { focus: "TU-MRK-003-022-030" })],
+    ["Für heute", "Was kann der Text heute bedeuten, und wo sind die Grenzen?", () => { go("vertiefen", { focus: "TU-MRK-003-022-030" }); setTimeout(() => document.querySelector(".point.today")?.scrollIntoView({ block: "center" }), 60); }],
   ];
-  window.__guide = steps;
-  showSheet(`<button type="button" class="close" data-close>Schliessen</button>
-    <div><h3 style="font-size:24px">Studienpfad</h3><div class="sub">Sechs Schritte durch Markus 3,20–35. Jeder Schritt öffnet die passende Ansicht.</div></div>
-    <div class="guide">${steps.map((s, i) => `<button type="button" class="gstep" data-gstep="${i}"><div><b>${esc(s[0])}</b><span>${esc(s[1])}</span></div></button>`).join("")}</div>`);
+  window.__steps = steps;
+  showSheet(`<button class="close" type="button" data-close>Schliessen</button><h3>Schritt für Schritt</h3>
+    <p class="muted">Sechs kurze Schritte durch Markus 3,20–35.</p>
+    <div class="guide">${steps.map((s, i) => `<button class="gstep" type="button" data-step="${i}"><span class="n">${i + 1}</span><span><b>${esc(s[0])}</b><span>${esc(s[1])}</span></span></button>`).join("")}</div>`);
 }
 
-/* ---------- Rendern und Ereignisse ---------- */
+/* ---------- Ablauf ---------- */
+function go(view, opts = {}) { Object.assign(S, opts, { view }); save(); render(); window.scrollTo({ top: 0 }); }
 function render() {
-  renderSteps();
-  const v = { buch: viewBook, abschnitt: viewSection, einheit: viewUnit, vers: viewVerse }[state.level] || viewSection;
+  applyPrefs();
+  document.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-current", t.dataset.view === S.view ? "page" : "false"));
+  const v = { ueberblick: viewOverview, lesen: viewRead, vertiefen: viewDeep }[S.view] || viewOverview;
   document.getElementById("main").innerHTML = v() + `<footer>
-    <span>Studienprototyp aus den Daten des Projekts bible-app. Kein abgeschlossenes Ergebnis: Übersetzung, Befunde und Deutungen sind KI-Entwürfe ohne fachliche Prüfung.</span>
-    <span>Griechischer Text und Apparat: SBL Greek New Testament, © 2010 Society of Biblical Literature und Logos Bible Software, CC BY 4.0. Sprachliche Annotation: MACULA Greek Linguistic Datasets, available at https://github.com/Clear-Bible/macula-greek/ (CC BY 4.0). Zweite Annotation 3,22–30: MorphGNT (J. K. Tauber, CC BY-SA 3.0). Eigene Inhalte: CC0.</span></footer>`;
+    <span>Ein Studienprototyp. Text, Lesarten und Erklärungen stammen aus den offenen Daten des Projekts; Übersetzung und Erklärungen sind Entwürfe.</span>
+    <span>Griechischer Text und Lesarten: SBL Greek New Testament, © 2010 Society of Biblical Literature und Logos Bible Software, CC BY 4.0. Sprachdaten: MACULA Greek Linguistic Datasets, available at https://github.com/Clear-Bible/macula-greek/ (CC BY 4.0). Eigene Inhalte: CC0.</span></footer>`;
 }
 document.addEventListener("click", e => {
   const t = e.target;
   if (t.closest("[data-close]")) return closeSheet();
-  const g = t.closest("[data-gstep]"); if (g) { const s = window.__guide[+g.dataset.gstep]; closeSheet(); return s[2](); }
+  const tab = t.closest("[data-view]"); if (tab) return go(tab.dataset.view);
+  const st = t.closest("[data-step]"); if (st) { const f = window.__steps[+st.dataset.step]; closeSheet(); return f[2](); }
+  if (t.closest("[data-guide]")) return openGuide();
+  const tg = t.closest("[data-toggle]"); if (tg) { const k = tg.dataset.toggle; S[k] = !S[k]; if (k === "advanced" && !S.advanced) S.layer = "de"; save(); render(); if (tg.classList.contains("switch")) openSettings(); return; }
+  const sc = t.closest("[data-scale]"); if (sc) { S.scale = +sc.dataset.scale; save(); render(); return openSettings(); }
+  const th = t.closest("[data-theme-set]"); if (th) { S.theme = th.dataset.themeSet; save(); render(); return openSettings(); }
+  const rd = t.closest("[data-read]"); if (rd) { go("lesen"); return; }
+  const al = t.closest("[data-alt]"); if (al) return openAlt(+al.dataset.alt);
+  const fo = t.closest("[data-focus]"); if (fo) return go("vertiefen", { focus: fo.dataset.focus });
+  const ly = t.closest("[data-layer]"); if (ly) { S.layer = ly.dataset.layer; save(); return render(); }
   const w = t.closest("[data-w]"); if (w) return openWord(w.dataset.w);
-  const p = t.closest("[data-part]"); if (p) return go("einheit", { part: p.dataset.part });
-  const vv = t.closest("[data-verse]"); if (vv) { closeSheet(); return go("vers", { verse: +vv.dataset.verse }); }
-  const l = t.closest("[data-layer]"); if (l) { state.layer = l.dataset.layer; save(); return render(); }
-  const c = t.closest("[data-ch]"); if (c) { if (+c.dataset.ch === 3) go("abschnitt"); return; }
-  const gg = t.closest("#main [data-go]"); if (gg) return go(gg.dataset.go);
 });
 document.addEventListener("keydown", e => {
   if (e.key === "Escape") closeSheet();
-  if ((e.key === "Enter" || e.key === " ") && e.target.matches("[data-w]")) { e.preventDefault(); openWord(e.target.dataset.w); }
+  if ((e.key === "Enter" || e.key === " ") && e.target.matches("[data-alt],[data-w]")) { e.preventDefault(); e.target.click(); }
 });
-document.getElementById("fab").addEventListener("click", openGuide);
+document.getElementById("settingsBtn").addEventListener("click", openSettings);
 render();
 </script>
