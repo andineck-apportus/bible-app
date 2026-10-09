@@ -4,9 +4,9 @@ Festgehalten am 2026-10-09. Abschnitt **«Vorgabe»** gibt die Vision des Projek
 
 ## Grundhaltung
 
-**Vorgabe:** Das Ganze ist so frei wie nur möglich, ohne einschränkende Lizenz (siehe [LIZENZEN.md](../LIZENZEN.md)). Viele Übersetzungen sind mit Lizenzen belastet; das Projekt schafft eine freie Grundlage.
+**Vorgabe:** Das Ganze ist so frei wie nur möglich (siehe [LIZENZEN.md](../LIZENZEN.md)). Viele Übersetzungen sind mit Lizenzen belastet; das Projekt schafft eine freie Grundlage. Betrieben wird die App von einem gemeinnützigen Verein; Ziel ist kein Geld, sondern neues Wissen, ansprechend und zugänglich verbreitet. Dafür dürfen mehrere Quellen genutzt werden.
 
-**Ableitung:** Eigene Inhalte unter CC0; im Kern nur gemeinfreie, CC0- oder CC-BY-Quellen. Das schliesst einzelne gute Datensätze aus (z. B. BHSA, CATSS-Septuaginta, Qumran-Daten). Wo die Lücke schmerzt, eher eigene freie Daten erzeugen als eingeschränkte übernehmen.
+**Ableitung (vereinbart 2026-10-09):** Eigene Inhalte unter CC0. Freier Kern mit gemeinfreien, CC0-, CC-BY- und CC-BY-SA-Quellen; nicht kommerzielle Quellen (z. B. BHSA, CATSS-Septuaginta, Qumran-Daten) in einer getrennten Studienschicht. Langfristig Lücken im Kern durch eigene freie Daten schliessen.
 
 ---
 
