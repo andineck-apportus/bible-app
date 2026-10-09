@@ -1,0 +1,236 @@
+{
+  "migration": "v0.7 -> v0.8",
+  "date": "2026-10-09",
+  "script": "scripts/migrations/v0_8.py",
+  "note": "Token-IDs unverändert; MorphGNT-Werte unverändert in eigene Annotationsschicht verschoben. Einträge mit regenerated=true: Änderungen durch Neuerzeugung mit den Importern bzw. dem Autorenwerkzeug, nachträglich protokolliert.",
+  "changes": [
+    {
+      "file": "data/annotations/MORPHGNT-SBLGNT-MRK-003-022-030.json",
+      "field": "(neu)",
+      "old": null,
+      "new": "ANN-MORPHGNT-SBLGNT-MRK-003-022-030",
+      "reason": "MorphGNT-Annotation aus dem Pilot-Token-Set als eigene Schicht ausgelagert"
+    },
+    {
+      "file": "data/tokens/SBLGNT-MRK-003-022-030.json",
+      "field": "status, tokens",
+      "old": {
+        "status": "imported_unreviewed",
+        "tokens": "140 Tokens"
+      },
+      "new": {
+        "status": "deprecated",
+        "tokens": null,
+        "superseded_by": "TOKSET-SBLGNT-MRK-003",
+        "annotation_moved_to": "ANN-MORPHGNT-SBLGNT-MRK-003-022-030"
+      },
+      "reason": "Text und Annotation getrennt; Tokens mit identischen IDs jetzt in TOKSET-SBLGNT-MRK-003 (aus der Edition), Annotation in ANN-MORPHGNT-…"
+    },
+    {
+      "file": "data/translations/TRANS-MRK-003-022-030-DE-WORKING.json",
+      "field": "based_on_tokens",
+      "old": "TOKSET-SBLGNT-MRK-003-022-030",
+      "new": "TOKSET-SBLGNT-MRK-003",
+      "reason": "Token-Set abgelöst (gleiche Token-IDs)"
+    },
+    {
+      "file": "data/alignments/ALIGN-MRK-003-022-030-001.json",
+      "field": "source_tokens_set",
+      "old": "TOKSET-SBLGNT-MRK-003-022-030",
+      "new": "TOKSET-SBLGNT-MRK-003",
+      "reason": "Token-Set abgelöst (gleiche Token-IDs)"
+    },
+    {
+      "file": "data/editions/ED-SBLGNT.json",
+      "field": "imported_scope, imported_records",
+      "old": {
+        "imported_scope": [
+          "MRK.3.22-MRK.3.30"
+        ],
+        "imported_records": [
+          "TOKSET-SBLGNT-MRK-003-022-030",
+          "COUNT-SBLGNT-MRK-003-022-030"
+        ]
+      },
+      "new": {
+        "imported_scope": [
+          "MRK.1-MRK.16"
+        ],
+        "imported_records": [
+          "TOKSET-SBLGNT-MRK-001",
+          "TOKSET-SBLGNT-MRK-002",
+          "TOKSET-SBLGNT-MRK-003",
+          "TOKSET-SBLGNT-MRK-004",
+          "TOKSET-SBLGNT-MRK-005",
+          "TOKSET-SBLGNT-MRK-006",
+          "TOKSET-SBLGNT-MRK-007",
+          "TOKSET-SBLGNT-MRK-008",
+          "TOKSET-SBLGNT-MRK-009",
+          "TOKSET-SBLGNT-MRK-010",
+          "TOKSET-SBLGNT-MRK-011",
+          "TOKSET-SBLGNT-MRK-012",
+          "TOKSET-SBLGNT-MRK-013",
+          "TOKSET-SBLGNT-MRK-014",
+          "TOKSET-SBLGNT-MRK-015",
+          "TOKSET-SBLGNT-MRK-016",
+          "COUNT-SBLGNT-MRK"
+        ]
+      },
+      "reason": "ganzes Markusevangelium importiert"
+    },
+    {
+      "file": "data/counts/SBLGNT-MRK-003-022-030.json",
+      "field": "based_on_annotation",
+      "old": null,
+      "new": "ANN-MORPHGNT-SBLGNT-MRK-003-022-030",
+      "reason": "Zählung beruht auf MorphGNT-Lemmata; Herkunft explizit gemacht"
+    },
+    {
+      "file": "data/studies/STUDY-MRK-0001.json",
+      "field": "outputs",
+      "old": null,
+      "new": [
+        "TOKSET-SBLGNT-MRK-003",
+        "ANN-MORPHGNT-SBLGNT-MRK-003-022-030",
+        "ANN-MACULA-SBLGNT-MRK-003"
+      ],
+      "reason": "neue Token- und Annotationsschichten der Pilotperikope"
+    },
+    {
+      "file": "data/variants/sblgntapp-mrk/VAR-SBLGNTAPP-MRK-003-025-01.json",
+      "field": "(Pfad)",
+      "old": "data/variants/VAR-SBLGNTAPP-MRK-003-025-01.json",
+      "new": "data/variants/sblgntapp-mrk/VAR-SBLGNTAPP-MRK-003-025-01.json",
+      "reason": "Variantenstellen eines Buchs in Unterordner verschoben",
+      "regenerated": true
+    },
+    {
+      "file": "data/variants/sblgntapp-mrk/VAR-SBLGNTAPP-MRK-003-025-02.json",
+      "field": "(Pfad)",
+      "old": "data/variants/VAR-SBLGNTAPP-MRK-003-025-02.json",
+      "new": "data/variants/sblgntapp-mrk/VAR-SBLGNTAPP-MRK-003-025-02.json",
+      "reason": "Variantenstellen eines Buchs in Unterordner verschoben",
+      "regenerated": true
+    },
+    {
+      "file": "data/variants/sblgntapp-mrk/VAR-SBLGNTAPP-MRK-003-026-01.json",
+      "field": "(Pfad)",
+      "old": "data/variants/VAR-SBLGNTAPP-MRK-003-026-01.json",
+      "new": "data/variants/sblgntapp-mrk/VAR-SBLGNTAPP-MRK-003-026-01.json",
+      "reason": "Variantenstellen eines Buchs in Unterordner verschoben",
+      "regenerated": true
+    },
+    {
+      "file": "data/variants/sblgntapp-mrk/VAR-SBLGNTAPP-MRK-003-026-02.json",
+      "field": "(Pfad)",
+      "old": "data/variants/VAR-SBLGNTAPP-MRK-003-026-02.json",
+      "new": "data/variants/sblgntapp-mrk/VAR-SBLGNTAPP-MRK-003-026-02.json",
+      "reason": "Variantenstellen eines Buchs in Unterordner verschoben",
+      "regenerated": true
+    },
+    {
+      "file": "data/variants/sblgntapp-mrk/VAR-SBLGNTAPP-MRK-003-027-01.json",
+      "field": "(Pfad)",
+      "old": "data/variants/VAR-SBLGNTAPP-MRK-003-027-01.json",
+      "new": "data/variants/sblgntapp-mrk/VAR-SBLGNTAPP-MRK-003-027-01.json",
+      "reason": "Variantenstellen eines Buchs in Unterordner verschoben",
+      "regenerated": true
+    },
+    {
+      "file": "data/variants/sblgntapp-mrk/VAR-SBLGNTAPP-MRK-003-027-01.json",
+      "field": "readings[0].text",
+      "old": "ἀλλ’ οὐδεὶς δύναται",
+      "new": "ἀλλʼ οὐδεὶς δύναται",
+      "reason": "Lesarttext mit dem Elisionszeichen der Edition (ʼ) statt ’ bzw. neues Kennzeichen; durch Neuerzeugung mit scripts/import_sblgnt_apparatus.py",
+      "regenerated": true
+    },
+    {
+      "file": "data/variants/sblgntapp-mrk/VAR-SBLGNTAPP-MRK-003-027-01.json",
+      "field": "readings[1].text",
+      "old": "ἀλλ’ οὐ δύναται οὐδεὶς",
+      "new": "ἀλλʼ οὐ δύναται οὐδεὶς",
+      "reason": "Lesarttext mit dem Elisionszeichen der Edition (ʼ) statt ’ bzw. neues Kennzeichen; durch Neuerzeugung mit scripts/import_sblgnt_apparatus.py",
+      "regenerated": true
+    },
+    {
+      "file": "data/variants/sblgntapp-mrk/VAR-SBLGNTAPP-MRK-003-027-02.json",
+      "field": "(Pfad)",
+      "old": "data/variants/VAR-SBLGNTAPP-MRK-003-027-02.json",
+      "new": "data/variants/sblgntapp-mrk/VAR-SBLGNTAPP-MRK-003-027-02.json",
+      "reason": "Variantenstellen eines Buchs in Unterordner verschoben",
+      "regenerated": true
+    },
+    {
+      "file": "data/variants/sblgntapp-mrk/VAR-SBLGNTAPP-MRK-003-027-03.json",
+      "field": "(Pfad)",
+      "old": "data/variants/VAR-SBLGNTAPP-MRK-003-027-03.json",
+      "new": "data/variants/sblgntapp-mrk/VAR-SBLGNTAPP-MRK-003-027-03.json",
+      "reason": "Variantenstellen eines Buchs in Unterordner verschoben",
+      "regenerated": true
+    },
+    {
+      "file": "data/variants/sblgntapp-mrk/VAR-SBLGNTAPP-MRK-003-028-01.json",
+      "field": "(Pfad)",
+      "old": "data/variants/VAR-SBLGNTAPP-MRK-003-028-01.json",
+      "new": "data/variants/sblgntapp-mrk/VAR-SBLGNTAPP-MRK-003-028-01.json",
+      "reason": "Variantenstellen eines Buchs in Unterordner verschoben",
+      "regenerated": true
+    },
+    {
+      "file": "data/variants/sblgntapp-mrk/VAR-SBLGNTAPP-MRK-003-028-02.json",
+      "field": "(Pfad)",
+      "old": "data/variants/VAR-SBLGNTAPP-MRK-003-028-02.json",
+      "new": "data/variants/sblgntapp-mrk/VAR-SBLGNTAPP-MRK-003-028-02.json",
+      "reason": "Variantenstellen eines Buchs in Unterordner verschoben",
+      "regenerated": true
+    },
+    {
+      "file": "data/variants/sblgntapp-mrk/VAR-SBLGNTAPP-MRK-003-029-01.json",
+      "field": "(Pfad)",
+      "old": "data/variants/VAR-SBLGNTAPP-MRK-003-029-01.json",
+      "new": "data/variants/sblgntapp-mrk/VAR-SBLGNTAPP-MRK-003-029-01.json",
+      "reason": "Variantenstellen eines Buchs in Unterordner verschoben",
+      "regenerated": true
+    },
+    {
+      "file": "data/alignments/ALIGN-MRK-003-022-030-001.json",
+      "field": "alignments[27].source",
+      "old": "ἐφ’ ἑαυτὴν",
+      "new": "ἐφʼ ἑαυτὴν",
+      "reason": "Griechische Angabe aus dem Token-Feld «word» der Edition (ʼ statt ’); durch Neuerzeugung mit scripts/authoring/mk3_22_30_translation.py",
+      "regenerated": true
+    },
+    {
+      "file": "data/alignments/ALIGN-MRK-003-022-030-001.json",
+      "field": "alignments[36].source",
+      "old": "ἐφ’ ἑαυτὴν",
+      "new": "ἐφʼ ἑαυτὴν",
+      "reason": "Griechische Angabe aus dem Token-Feld «word» der Edition (ʼ statt ’); durch Neuerzeugung mit scripts/authoring/mk3_22_30_translation.py",
+      "regenerated": true
+    },
+    {
+      "file": "data/alignments/ALIGN-MRK-003-022-030-001.json",
+      "field": "alignments[46].source",
+      "old": "ἐφ’ ἑαυτὸν",
+      "new": "ἐφʼ ἑαυτὸν",
+      "reason": "Griechische Angabe aus dem Token-Feld «word» der Edition (ʼ statt ’); durch Neuerzeugung mit scripts/authoring/mk3_22_30_translation.py",
+      "regenerated": true
+    },
+    {
+      "file": "data/alignments/ALIGN-MRK-003-022-030-001.json",
+      "field": "alignments[55].source",
+      "old": "ἀλλ’",
+      "new": "ἀλλʼ",
+      "reason": "Griechische Angabe aus dem Token-Feld «word» der Edition (ʼ statt ’); durch Neuerzeugung mit scripts/authoring/mk3_22_30_translation.py",
+      "regenerated": true
+    },
+    {
+      "file": "data/alignments/ALIGN-MRK-003-022-030-001.json",
+      "field": "alignments[86].source",
+      "old": "δ’",
+      "new": "δʼ",
+      "reason": "Griechische Angabe aus dem Token-Feld «word» der Edition (ʼ statt ’); durch Neuerzeugung mit scripts/authoring/mk3_22_30_translation.py",
+      "regenerated": true
+    }
+  ]
+}

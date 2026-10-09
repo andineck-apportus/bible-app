@@ -14,7 +14,7 @@ Festgehalten am 2026-10-09. Abschnitt **«Vorgabe»** gibt die Vision des Projek
 
 **Vorgabe:** Um irgendetwas mit der Bibel zu tun, braucht es eine solide Basis. Diese Basis ist **nicht ein von Personen entschiedenes Richtig/Falsch oder Drinnen/Draussen** (Lektorat), sondern: die unterschiedlichen Quellen werden betrachtet und **nach Gesichertheit bewertet**; **Unterschiede werden ausgegeben**.
 
-**Was schon da ist:** Varianten auf Editionsebene (SBLGNT-Apparat) und erste Handschriftenangaben für Mk 3,25–29, an Wörter gebunden; Trennung von Handschrift, Edition und Übersetzung.
+**Was schon da ist:** Ganzes Markusevangelium mit 929 Variantenstellen auf Editionsebene, an Wörter gebunden; erste Gesichertheitsbewertung «Übereinstimmung der Editionen» mit offengelegten Grenzen ([GESICHERTHEIT.md](GESICHERTHEIT.md)); erste Handschriftenangaben für Mk 3,29; Trennung von Handschrift, Edition und Übersetzung.
 
 **Ableitung:**
 - Keine «Haupttext gegen Fussnote»-Logik. Jede Variantenstelle zeigt alle Lesarten mit ihrer Bezeugung.

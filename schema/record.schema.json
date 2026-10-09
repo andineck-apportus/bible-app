@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Bible Knowledge generic record v0.6",
+  "title": "Bible Knowledge generic record v0.8",
   "description": "Gemeinsame Pflichtfelder und kontrollierte Werte aller Datensätze. Typspezifische Schemas folgen später. scripts/validate.py wertet die hier verwendeten Schlüsselwörter selbst aus (Teilmenge von JSON Schema, keine externen Pakete).",
   "type": "object",
   "required": ["id", "type", "status", "tags"],
@@ -11,7 +11,7 @@
       "text_sample", "token_set", "lemma_count", "finding", "variant",
       "editorial_decision", "translation", "alignment", "interpretation",
       "principle", "context", "application", "topic", "relation",
-      "open_question", "tag"
+      "open_question", "tag", "annotation_set", "assessment_set", "assessment_method"
     ]},
     "status": {"enum": [
       "draft", "review_pending", "reference_only", "imported_unreviewed",

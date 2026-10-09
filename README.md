@@ -2,16 +2,23 @@
 
 Git-versionierter Bibel-Wissensfundus: Quellen, Textbefunde, konkurrierende Interpretationen, Prinzipien und kontextabhängige Anwendungen nachvollziehbar miteinander verbinden.
 
-**Stand: 9. Oktober 2026 · Datenstand v0.7 · Pilot Markus 3,22–30.**
+**Stand: 9. Oktober 2026 · Datenstand v0.8 · Markusevangelium; Pilotstudie Markus 3,22–30.**
 
-Dies ist der Konzept- und Datenprototyp, noch keine lauffähige Benutzer-App. Vorhanden sind 55 strukturierte Datensätze einschliesslich 6 Tags: der importierte griechische Text Mk 3,22–30 aus MorphGNT SBLGNT 6.12 (140 Tokens mit Lemma und Morphologie), 10 Variantenstellen auf Editionsebene aus dem SBLGNT-Apparat, eine vollständige deutsche Arbeitsübersetzung mit Wortzuordnung aller 140 Tokens (KI-Entwurf, ungeprüft), eine einheitliche Bibelstellen-Konvention, ein generisches Schema und ein Validator. SQLite ist als abgeleitete Projektion vorgesehen, aber noch nicht implementiert. Vollständige Wortzuordnungen und eigene Handschriftenprüfungen fehlen noch.
+Dies ist der Konzept- und Datenprototyp, noch keine lauffähige Benutzer-App. Vorhanden sind 1025 strukturierte Datensätze:
+- der **ganze griechische Text des Markusevangeliums** (SBLGNT, 11 286 Wörter mit stabilen IDs) mit Lemma, Morphologie, Syntaxrollen, Referenten und Glossen aus MACULA Greek als eigener Annotationsschicht,
+- **929 Variantenstellen** auf Editionsebene aus dem SBLGNT-Apparat, an die Wörter gebunden, jede mit einer maschinell berechneten **Gesichertheitsbewertung** (Übereinstimmung der Editionen, Methode offengelegt),
+- die Pilotstudie Mk 3,22–30 mit Befunden, Deutungen, Prinzip, Anwendung und einer vollständigen deutschen Arbeitsübersetzung mit Wortzuordnung (KI-Entwurf, ungeprüft),
+- eine einheitliche Bibelstellen-Konvention, ein generisches Schema und ein Validator.
+
+SQLite-Projektion, App und Handschriftenbelege fehlen noch.
 
 ## Einstieg
 
 | Datei | Inhalt |
 |---|---|
 | [docs/VISION.md](docs/VISION.md) | Vision in vier Stufen: transparente Textbasis, Übertragung, Zoomstufen und Studienanleitung, Visualisierung und UX |
-| [LIZENZEN.md](LIZENZEN.md) | Projekt unter CC0; Lizenzen übernommener Fremddaten |
+| [LIZENZEN.md](LIZENZEN.md) | Eigene Inhalte CC0; freier Kern und Studienschicht; Lizenzen übernommener Fremddaten |
+| [docs/GESICHERTHEIT.md](docs/GESICHERTHEIT.md) | Wie Unterschiede ausgegeben und nach Gesichertheit bewertet werden |
 | [CHANGELOG.md](CHANGELOG.md) | Änderungen und Entwicklung von v0.1 bis heute |
 | [docs/KONZEPT.md](docs/KONZEPT.md) | Ziel, Analyseebenen, Zoom-System und Kontextdimensionen |
 | [docs/QUELLEN.md](docs/QUELLEN.md) | Quellenlandschaft (Handschriften, Editionen, Datensätze, Lexika, Kontext) mit Rechte-Ampel |
@@ -32,30 +39,37 @@ Python 3, keine externen Pakete für die vorhandenen Skripte:
 
 ```sh
 python3 scripts/validate.py
+python3 scripts/test_validate.py
 python3 scripts/test_import.py
 python3 scripts/refs.py "Mk 3,22–30"   # Stelle in kanonische Form umwandeln
 ```
 
-Der Validator prüft das Schema (`schema/record.schema.json`, ausgewertete Teilmenge von JSON Schema), eindeutige IDs, Tags, Verweise zwischen Datensätzen einschliesslich Lesarten (`VAR-…:R1`) und alle Bibelstellen gegen die Konvention. Ein PASS ist keine wissenschaftliche Freigabe; typspezifische Pflichtfelder werden noch nicht geprüft.
+Der Validator prüft das Schema (`schema/record.schema.json`, ausgewertete Teilmenge von JSON Schema), eindeutige IDs, Tags, Verweise zwischen Datensätzen einschliesslich Lesarten (`VAR-…:R1`) und Token-IDs, Annotationen, Bewertungen, alle Bibelstellen und die Trennung von freiem Kern (`data/`) und Studienschicht (`data-nc/`). Ein PASS ist keine wissenschaftliche Freigabe; typspezifische Pflichtfelder werden noch nicht geprüft.
 
-Import des griechischen Texts (bereits ausgeführt; Ergebnis in `data/tokens/` und `data/counts/`):
+Import (bereits ausgeführt; Quellen per Commit fixiert):
 
 ```sh
-curl -LO https://raw.githubusercontent.com/morphgnt/sblgnt/6.12/62-Mk-morphgnt.txt
-python3 scripts/import_morphgnt.py 62-Mk-morphgnt.txt \
-  --upstream-commit a2afca0e96e367fb2ca113395bae978115942dfb --upstream-ref 6.12
+git clone https://github.com/Faithlife/SBLGNT
+git clone https://github.com/Clear-Bible/macula-greek
+# Text + MACULA-Annotation, ein Token-Set und eine Annotationsschicht je Kapitel
+python3 scripts/import_sblgnt_book.py MRK --tag TAG-MARK \
+  --sblgnt SBLGNT --sblgnt-commit c4d241a9c1c479a55b989ba35a4976c1d0b8052c \
+  --macula macula-greek --macula-commit 8423afe47b9e8f24b7772e808af45c7159a6fe7e
+# Apparat: Variantenstellen auf Editionsebene, an Tokens gebunden
+python3 scripts/import_sblgnt_apparatus.py MRK SBLGNT \
+  --upstream-commit c4d241a9c1c479a55b989ba35a4976c1d0b8052c --tag TAG-MARK
+# Gesichertheitsbewertung «Übereinstimmung der Editionen»
+python3 scripts/assess_edition_agreement.py MRK
 python3 scripts/compare_working_text.py   # Abgleich mit der alten Arbeitstranskription
-git clone https://github.com/Faithlife/SBLGNT && \
-python3 scripts/import_sblgnt_apparatus.py SBLGNT/data/sblgntapp/text/Mark.txt \
-  --upstream-commit c4d241a9c1c479a55b989ba35a4976c1d0b8052c
 ```
 
-Der Importer schreibt Quelle, Upstream-Commit, SHA-256, Lizenzangaben und Importdatum in die erzeugten Datensätze und bricht ohne Upstream-Commit oder bei unvollständigen Versen ab. Die Importtests verwenden ausschliesslich synthetische Daten im echten MorphGNT-Zeilenformat.
+Die Importer schreiben Quelle, Upstream-Commit, SHA-256, Lizenz und Importdatum in die Datensätze und brechen bei unsicherer Zuordnung ab bzw. führen nicht zuordenbare Einträge in `reports/` auf, statt sie zu raten. `scripts/import_morphgnt.py` ist der frühere Pilot-Importer (v0.6) und wird nur noch durch `scripts/test_import.py` geprüft.
 
 ## Ablage und Historie
 
-- `data/`: kanonische strukturierte Arbeitsdaten; Git ist die massgebliche Quelle.
-- `schema/`: vorhandenes generisches Schema, noch nicht an alle v0.5-Typen angepasst.
+- `data/`: freier Kern, kanonische strukturierte Daten; Git ist die massgebliche Quelle.
+- `data-nc/`: Studienschicht für nicht kommerziell lizenzierte Quellen (noch leer), siehe [LIZENZEN.md](LIZENZEN.md).
+- `schema/`: generisches Schema mit allen Typen und Statuswerten; typspezifische Schemas folgen.
 - `scripts/`: Prüfung, Import, Bibelstellen-Werkzeug; `scripts/migrations/` dokumentierte Datenmigrationen.
 - `reports/`: Auswertungen; `working-text-counts.json` ist eine ältere Demonstration ohne Aussagekraft für die Perikope.
 - `archive/packages/`: fünf unveränderte Originalpakete v0.1–v0.5.

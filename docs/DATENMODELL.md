@@ -1,20 +1,23 @@
 # Datenmodell: Ist-Stand und Ziel
 
-## Vorhandene Objekte in v0.7
+## Vorhandene Objekte in v0.8
 
-| Ordner | Tatsächliches `type` | Anzahl | Aufgabe |
+| Ordner | `type` | Anzahl | Aufgabe |
 |---|---|---:|---|
 | works | work | 1 | Biblisches Werk |
 | text-units | text_unit | 1 | Natürliche Texteinheit und Versbereich |
 | studies | study | 1 | Pilotstudie mit Ergebnissen und offenen Fragen |
-| sources | source / dataset | 5 | Quellenhinweise und externer Datensatz |
-| editions | critical_edition | 5 | Editionsidentität (SBLGNT, WH, Tregelles, NA28, Robinson-Pierpont) |
-| text-samples | text_sample | 1 | Nicht verifizierte Arbeitstranskription |
-| tokens | token_set | 1 | Importierte SBLGNT-Tokens Mk 3,22–30 mit Lemma und Morphologie (140 Tokens) |
-| counts | lemma_count | 1 | Daraus abgeleitete Token-, Wortform- und Lemmazählung |
+| sources | source / dataset | 5 | Quellenhinweise und externe Datensätze |
+| editions | critical_edition | 5 | Editionen (SBLGNT, WH, Tregelles, NA28, Robinson-Pierpont) |
+| text-samples | text_sample | 1 | Nicht verifizierte Arbeitstranskription (historisch) |
+| tokens | token_set | 17 | SBLGNT-Wörter Markus, ein Set je Kapitel (11 286 Tokens); dazu das abgelöste Pilot-Set Mk 3,22–30 (`deprecated`) |
+| annotations | annotation_set | 17 | Sprachliche Annotation je Token: MACULA Greek je Kapitel; MorphGNT für Mk 3,22–30 (Pilot) |
+| counts | lemma_count | 2 | Zählungen: ganzes Markusevangelium (MACULA), Pilot (MorphGNT) |
+| variants | variant | 931 | 929 Stellen auf Editionsebene aus dem SBLGNT-Apparat (`variants/sblgntapp-mrk/`); 2 Stellen mit berichteten Handschriften (Arbeitsnotizen) |
+| assessments | assessment_set | 16 | Gesichertheitsbewertungen je Kapitel nach einer offengelegten Methode |
+| methods | assessment_method | 1 | Beschreibung einer Bewertungsmethode mit Annahmen und Grenzen |
 | findings | finding | 4 | Textliche/literarische/textkritische Befunde |
-| variants | variant | 12 | 2 Stellen mit berichteten Handschriften (Arbeitsnotizen), 10 Stellen auf Editionsebene aus dem SBLGNT-Apparat (`evidence_level: edition_apparatus`) |
-| decisions | editorial_decision | 1 | Begründete, revidierbare Lesartpräferenz |
+| decisions | editorial_decision | 1 | Frühere Lesartpräferenz (historisch; künftig als Bewertung) |
 | translations | translation | 2 | Eigene deutsche Arbeitsübersetzung: Mk 3,29 (v0.5) und Mk 3,22–30 (v0.7) |
 | alignments | alignment | 2 | Wort-/Phrasenzuordnungen; Mk 3,22–30 vollständig über Token-IDs (`coverage: complete`) |
 | interpretations | interpretation | 2 | Alternative Verständnisse |
@@ -26,10 +29,17 @@
 | questions | open_question | 1 | Offene Forschungsfrage |
 | tags | tag | 6 | Kontrollierte Tags |
 
-Gesamt: 55 Datensätze, einschliesslich der 6 Tags. Die Tokens sind Teil des `token_set` und keine eigenen Datensatzdateien; sie haben dennoch stabile IDs (`TOK-SBLGNT-MRK-003-029-004`).
+Gesamt: 1025 Datensätze im freien Kern (`data/`), 0 in der Studienschicht (`data-nc/`).
+
+## Schichten des Texts
+1. **Token** (`token_set`): die Wörter einer Edition in ihrer Reihenfolge, mit stabiler ID `TOK-<EDITION>-<BUCH>-<KKK>-<VVV>-<NNN>`. «text» unverändert aus der Edition (inkl. Interpunktion und Apparatzeichen), «word» ohne diese Zeichen. Keine Deutung.
+2. **Annotation** (`annotation_set`): sprachliche Angaben je Token-ID aus einer bestimmten Quelle (MACULA, MorphGNT …). Mehrere Annotationen desselben Tokens können nebeneinander bestehen und sich unterscheiden.
+3. **Variante** (`variant`): Lesarten einer Stelle, an Tokens gebunden (`base_tokens`), mit Bezeugung durch Editionen oder Handschriften (`evidence_level`).
+4. **Bewertung** (`assessment_set` + `assessment_method`): Gesichertheit der Lesarten nach einer offengelegten Methode; mehrere Methoden nebeneinander, keine Entscheidung über richtig/falsch. Siehe [GESICHERTHEIT.md](GESICHERTHEIT.md).
+5. **Übersetzung und Zuordnung** (`translation`, `alignment`): bis auf das Token rückverfolgbar.
 
 ## Bestehende Referenzen
-`work`, `primary_unit`, `subject`, `based_on`, `derived_from`, `principle`, `context`, `outputs`, `evidence_objects`, `related`, `from`, `edition`, `imported_records`, `supersedes` und `tags` verknüpfen Datensätze. `VAR-…:R1` referenziert eine Lesart innerhalb eines Variantenobjekts. Bibelstellen (`reference`, `to_ref`, `range`, `evidence_refs`, `imported_scope`) folgen seit v0.6 einheitlich [BIBELSTELLEN.md](BIBELSTELLEN.md). Varianten (`base_tokens`) und Alignments (`source_tokens`) verweisen seit v0.7 auf SBLGNT-Token-IDs. Der Validator prüft alle diese Verweise und bei `coverage: complete` die lückenlose Zuordnung.
+`work`, `primary_unit`, `subject`, `based_on`, `derived_from`, `principle`, `context`, `outputs`, `evidence_objects`, `related`, `from`, `edition`, `imported_records`, `supersedes` und `tags` verknüpfen Datensätze. `VAR-…:R1` referenziert eine Lesart innerhalb eines Variantenobjekts. Bibelstellen (`reference`, `to_ref`, `range`, `evidence_refs`, `imported_scope`) folgen seit v0.6 einheitlich [BIBELSTELLEN.md](BIBELSTELLEN.md). Varianten (`base_tokens`) und Alignments (`source_tokens`) verweisen seit v0.7 auf SBLGNT-Token-IDs; Annotationen (`annotates`, Einträge je Token-ID) und Bewertungen (`assesses`, `results[].reading`) seit v0.8. Der Validator prüft alle diese Verweise und bei `coverage: complete` die lückenlose Zuordnung.
 
 Beispielkette: `FIND-MRK-0001` → `INT-MRK-0001` → `PRIN-MRK-0001` → `APP-MRK-0001`; die Anwendung verweist auf `CTX-CH-DE-2026`. Die textkritische Entscheidung und die Arbeitsübersetzung referenzieren eine bestimmte Lesart.
 
