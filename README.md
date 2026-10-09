@@ -10,7 +10,7 @@ Dies ist der Konzept- und Datenprototyp, noch keine lauffähige Benutzer-App. Vo
 - die Pilotstudie Mk 3,22–30 mit Befunden, Deutungen, Prinzip, Anwendung und einer vollständigen deutschen Arbeitsübersetzung mit Wortzuordnung (KI-Entwurf, ungeprüft),
 - eine einheitliche Bibelstellen-Konvention, ein generisches Schema und ein Validator.
 
-SQLite-Projektion, App und Handschriftenbelege fehlen noch.
+Dazu kommt ein erster klickbarer **Studienprototyp für Mk 3,20–35** (`app/prototype/mk3-20-35.html`), der direkt aus diesen Daten erzeugt wird. SQLite-Projektion, eigentliche App und Handschriftenbelege fehlen noch.
 
 ## Einstieg
 
@@ -42,6 +42,7 @@ python3 scripts/validate.py
 python3 scripts/test_validate.py
 python3 scripts/test_import.py
 python3 scripts/refs.py "Mk 3,22–30"   # Stelle in kanonische Form umwandeln
+python3 scripts/build_prototype.py    # Studienprototyp Mk 3,20–35 aus den Daten erzeugen
 ```
 
 Der Validator prüft das Schema (`schema/record.schema.json`, ausgewertete Teilmenge von JSON Schema), eindeutige IDs, Tags, Verweise zwischen Datensätzen einschliesslich Lesarten (`VAR-…:R1`) und Token-IDs, Annotationen, Bewertungen, alle Bibelstellen und die Trennung von freiem Kern (`data/`) und Studienschicht (`data-nc/`). Ein PASS ist keine wissenschaftliche Freigabe; typspezifische Pflichtfelder werden noch nicht geprüft.
@@ -71,6 +72,7 @@ Die Importer schreiben Quelle, Upstream-Commit, SHA-256, Lizenz und Importdatum 
 - `data-nc/`: Studienschicht für nicht kommerziell lizenzierte Quellen (noch leer), siehe [LIZENZEN.md](LIZENZEN.md).
 - `schema/`: generisches Schema mit allen Typen und Statuswerten; typspezifische Schemas folgen.
 - `scripts/`: Prüfung, Import, Bibelstellen-Werkzeug; `scripts/migrations/` dokumentierte Datenmigrationen.
+- `app/prototype/`: Studienprototyp; `template.html` ist die Vorlage, `mk3-20-35.html` die erzeugte eigenständige Seite (nicht von Hand bearbeiten).
 - `reports/`: Auswertungen; `working-text-counts.json` ist eine ältere Demonstration ohne Aussagekraft für die Perikope.
 - `archive/packages/`: fünf unveränderte Originalpakete v0.1–v0.5.
 - `provenance/`: Paketprüfsummen, Dateiinventar und Migrationsprotokolle (`provenance/migrations/`).

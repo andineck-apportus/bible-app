@@ -1,7 +1,9 @@
-# Status und nächste Schritte · 2026-10-09 (v0.8)
+# Status und nächste Schritte · 2026-10-09 (v0.9)
 
 ## Gesichert und vorhanden
 - Alle Originalpakete v0.1–v0.5; rekonstruierte Git-Historie mit je einem Snapshot.
+- **Studienprototyp Mk 3,20–35** (`app/prototype/`): Zoomstufen Buch → Abschnitt → Einheit → Vers → Wort, Textschichten Deutsch/Griechisch/Wort für Wort, Variantenstellen mit Gesichertheit, Wortdetails mit zwei Annotationen, Kette Befund → Deutung → Prinzip → Anwendung, Studienpfad in sechs Schritten. Erzeugt mit `scripts/build_prototype.py` nur aus Daten des freien Kerns.
+- v0.9: 1032 Datensätze; neu Gliederung Mk 3,20–35 (Texteinheiten, Befund, Deutung mit Gegenargument) und deutsche Arbeitsübersetzung 3,20–21 und 3,31–35 (ohne Wortzuordnung).
 - v0.8: 1025 Datensätze im freien Kern, darin 6 Tags; Studienschicht `data-nc/` angelegt (leer).
 - **Ganzes Markusevangelium**: SBLGNT-Text (11 286 Wörter, je Kapitel ein Token-Set) mit MACULA-Greek-Annotation (Lemma, Morphologie, Syntaxrolle, Referenten, Glossen; CC BY 4.0). SBLGNT und MACULA stimmen in allen Wortgrenzen überein; eine Akzentabweichung (7,27) protokolliert.
 - **929 Variantenstellen** auf Editionsebene für Markus; 1 Apparateintrag (7,21–22, versübergreifend) nicht sicher zuordenbar und daher nicht importiert (`reports/sblgntapp-MRK-nicht-zugeordnet.json`).
@@ -44,8 +46,8 @@
 - Präzise wissenschaftliche Fundstellen, weitere Gegenargumente und eigenständige Kontextanwendungen.
 - Kritische Prüfung des abgeleiteten Prinzips: Es enthält stärkere Begriffe als die begrenzte Beobachtung zum Wissen der Schriftgelehrten. Diese Ableitung ist nicht allein durch den Pilotbestand abgesichert.
 
-## Nächster Meilenstein v0.9 (Vorschlag)
-Erster klickbarer App-Prototyp für Mk 3,20–35 (Zoomstufen, Unterschiede mit Gesichertheit, Strukturdiagramm); Handschriftenbelege aus der NTVMR-API (CC BY 4.0) für die Pilot-Variantenstellen als zweite Bewertungsmethode; Zeugenangabe Ephraemi (C) in Mk 3,29 klären; Versifikationsmodell auf Basis von STEPBible TVTMS; typspezifische Schemas.
+## Nächster Meilenstein v0.10 (Vorschlag)
+Rückmeldungen zum Prototyp einarbeiten; Wortzuordnung für 3,20–21 und 3,31–35; Handschriftenbelege aus der NTVMR-API (CC BY 4.0) als zweite Bewertungsmethode; Zeugenangabe Ephraemi (C) in Mk 3,29 klären; Versifikationsmodell auf Basis von STEPBible TVTMS; typspezifische Schemas.
 
 ## Danach
 Primärbelege; standardisierte Revisions-/Reviewmetadaten; Versifikationsmodell; SQLite-Projektion; anschliessend eine Oberfläche auf der stabilisierten Datenbasis. Technische Produktentscheidungen bleiben offen.
