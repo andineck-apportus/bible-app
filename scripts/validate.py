@@ -31,7 +31,7 @@ ID_FIELDS = ["work", "primary_unit", "subject", "principle", "context", "from", 
              "base_edition", "apparatus", "same_variation_unit_as", "incorporates", "based_on_edition",
              "based_on_tokens", "source_tokens_set", "target_translation", "bibliographic_source",
              "annotates", "method", "superseded_by", "annotation_moved_to", "based_on_annotation"]
-ID_LIST_FIELDS = ["based_on", "derived_from", "outputs", "evidence_objects", "related", "imported_records",
+ID_LIST_FIELDS = ["based_on", "derived_from", "outputs", "evidence_objects", "related", "imported_records", "parts",
                   "based_on_annotations"]
 LAYERS = {"data": "core", "data-nc": "nc"}
 READING_FIELDS = ["preferred_reading", "alternative", "based_on_variant"]
