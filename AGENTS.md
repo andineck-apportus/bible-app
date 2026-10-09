@@ -22,7 +22,7 @@ Stabile IDs erhalten. Neue Schema-/Typänderungen explizit migrieren. Vorhandene
 Der Nutzer arbeitet auch nur vom Smartphone über Claude, ohne eigenen Rechner. Deshalb führt die KI alle Git-Operationen selbständig aus, ohne Rückfrage und ohne manuellen Review-Schritt:
 - Vor jeder Arbeit `origin/main` holen und darauf aufsetzen.
 - Änderungen auf einem Feature-Branch committen (aussagekräftige Commit-Message), Prüfungen ausführen, Branch nach GitHub pushen.
-- Den Feature-Branch selbständig nach `main` mergen und `main` pushen; gemergte Branches danach löschen.
+- Den Feature-Branch selbständig nach `main` mergen und `main` pushen; gemergte Branches danach löschen, soweit die Umgebung das zulässt (in Claude-Cloud-Sitzungen blockiert der Git-Proxy das Löschen entfernter Branches; dann stehen lassen).
 - Bei Konflikten mit fremden Änderungen auf `main` diese nie verwerfen; zusammenführen oder nachfragen. Kein Force-Push auf `main`.
 
 ## Zusammenarbeit
