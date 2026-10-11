@@ -2,7 +2,7 @@
 
 Git-versionierter Bibel-Wissensfundus: Quellen, Textbefunde, konkurrierende Interpretationen, Prinzipien und kontextabhängige Anwendungen nachvollziehbar miteinander verbinden.
 
-**Stand: 11. Oktober 2026 · UI-Prototyp v0.11 · Datenstand v0.8 · Markusevangelium; Pilotstudie Markus 3,22–30.**
+**Stand: 11. Oktober 2026 · UI-Prototyp v0.12 · Datenstand v0.8 · Markusevangelium; Pilotstudie Markus 3,22–30.**
 
 Dies ist der Konzept- und Datenprototyp, noch keine lauffähige Benutzer-App. Vorhanden sind 1025 strukturierte Datensätze:
 - der **ganze griechische Text des Markusevangeliums** (SBLGNT, 11 286 Wörter mit stabilen IDs) mit Lemma, Morphologie, Syntaxrollen, Referenten und Glossen aus MACULA Greek als eigener Annotationsschicht,
@@ -12,7 +12,7 @@ Dies ist der Konzept- und Datenprototyp, noch keine lauffähige Benutzer-App. Vo
 
 Dazu kommt ein erster klickbarer **Studienprototyp für Mk 3,20–35** (`app/prototype/mk3-20-35.html`), der direkt aus diesen Daten erzeugt wird. SQLite-Projektion, eigentliche App und Handschriftenbelege fehlen noch.
 
-Neu: **[Lesetiefe-Prototyp für die ganze Bibel](app/reading-stream/index.html)** – eigenständige HTML-Datei zum Öffnen im Browser. Fortlaufend auf jeder Ebene lesen, gezielt vertiefen, Mobile/Tablet, Menü und neutrales Hell/Dunkel. Enthält das vollständige Mengengerüst und 66 ungeprüfte Buchzusammenfassungen; Kapitel-/Abschnittsinhalte überwiegend Platzhalter. [Bedienidee, Herkunft und Grenzen](docs/LESETIEFE-PROTOTYP.md).
+Neu: **[Lesetiefe-Prototyp für die ganze Bibel](app/reading-stream/index.html)** – eigenständige HTML-Datei zum Öffnen im Browser. Fortlaufend auf jeder Ebene lesen, gezielt vertiefen, Mobile/Tablet, Menü und neutrales Hell/Dunkel. Enthält das vollständige Mengengerüst und 66 ungeprüfte Buchzusammenfassungen; Kapitel-/Abschnittsinhalte überwiegend Platzhalter. Markus 3,20–35 ist mit Arbeitsübersetzung, sechs Alternativen, Wortdetails und Studieninhalten integriert (Menü → Pilotstudie). [Bedienidee, Herkunft und Grenzen](docs/LESETIEFE-PROTOTYP.md).
 
 ## Einstieg
 
@@ -44,6 +44,7 @@ python3 scripts/validate.py
 python3 scripts/test_validate.py
 python3 scripts/test_import.py
 python3 scripts/refs.py "Mk 3,22–30"   # Stelle in kanonische Form umwandeln
+python3 scripts/build_reading_stream.py # Lesestrom mit kanonischen Markus-Daten bauen
 python3 scripts/build_prototype.py    # Studienprototyp Mk 3,20–35 aus den Daten erzeugen
 ```
 
