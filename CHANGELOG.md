@@ -2,6 +2,14 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.11 — 2026-10-11 — Fortlaufender Lesetiefe-Prototyp
+
+- Separater, eigenständig lauffähiger Entwurf `app/reading-stream/index.html`: auf jeder Ebene scrollend lesen, an interessanten Einträgen vertiefen und zur Leseposition zurückkehren.
+- Vollständiges 66-Bücher-Mengengerüst mit 1’189 Kapiteln, 6’704 ausdrücklich technischen Testblöcken und 31’102 Verspositionen; 66 deutsche KI-Buchzusammenfassungen als ungeprüfter Entwurf.
+- Mobile-/Tablet-Ansichten, neutrales Hell/Dunkel, Stellensuche, DE/EN-Oberfläche, Textgrösse und eigene Auswahlfelder. Kompaktes SVG-Logo mit gedrehtem B und zwei Quadraten.
+- Datenquelle und Grenzen dokumentiert; numerische Kapitel-/Versstruktur unabhängig aus eBible-USFM nachgezählt. Keine neuen kanonischen Text- oder Studiendaten, bestehender Markus-Prototyp unverändert.
+- Strukturprüfung mit Node.js ohne Zusatzpakete; DOM-Prüfungen im Arbeitslauf. Visuelle Prüfung auf echten Geräten steht aus.
+
 ## v0.10 — 2026-10-09 — Prototyp für allgemeine Leser
 
 - Prototyp nach Rückmeldung neu gestaltet: einfacher und allgemeiner, schlicht, hell/dunkel, mit gezeichnetem Überblicksbild. Drei Wege (Überblick, Lesen, Vertiefen) über eine untere Leiste; Studienpfad; Einstellungen für Lesarten, Urtext-Modus, Schriftgrösse und Farben.
