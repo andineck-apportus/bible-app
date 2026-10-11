@@ -39,6 +39,12 @@ Grafiken und Bilder von Personen, Institutionen und Künstlern werden unter CC0,
 
 Alle übrigen Dateien in `data/`, `docs/`, `scripts/` usw. sind eigene Beiträge unter CC0 1.0.
 
+## Numerische Testdaten des Lesetiefe-Prototyps
+
+`app/reading-stream/index.html` enthält ausschliesslich nachgezählte Kapitel-/Versanzahlen aus der von eBible.org / CrossWire als **Public Domain** ausgewiesenen KJV-Ausgabe: https://ebible.org/Scriptures/eng-kjv_usfm.zip (Quelldateien 2026-09-26). Kein Bibeltext und kein fremder Programmcode wurden übernommen. Die Quelle weist auf besondere Druckrechte für den Übersetzungstext im Vereinigten Königreich hin. Prüfsumme und Ableitung sind in `app/reading-stream/provenance.json` dokumentiert. Eine ursprünglich im Chat benutzte, nicht lizenzierte JSON-Zählliste wurde nicht als Fremddatei ins Repository übernommen; alle Zahlen wurden für diesen Import unabhängig aus dem genannten USFM-Bestand gewonnen und abgeglichen.
+
+Logo, Linienicons, Code und redaktionelle Entwürfe dieses Prototyps sind eigene Beiträge unter CC0. Keine Assets oder Schriftdateien der Fondation Beyeler übernommen.
+
 ## Fremddaten in der Studienschicht (`data-nc/`)
 
 Noch keine.

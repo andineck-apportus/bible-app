@@ -2,7 +2,7 @@
 
 Git-versionierter Bibel-Wissensfundus: Quellen, Textbefunde, konkurrierende Interpretationen, Prinzipien und kontextabhängige Anwendungen nachvollziehbar miteinander verbinden.
 
-**Stand: 9. Oktober 2026 · Datenstand v0.8 · Markusevangelium; Pilotstudie Markus 3,22–30.**
+**Stand: 11. Oktober 2026 · UI-Prototyp v0.11 · Datenstand v0.8 · Markusevangelium; Pilotstudie Markus 3,22–30.**
 
 Dies ist der Konzept- und Datenprototyp, noch keine lauffähige Benutzer-App. Vorhanden sind 1025 strukturierte Datensätze:
 - der **ganze griechische Text des Markusevangeliums** (SBLGNT, 11 286 Wörter mit stabilen IDs) mit Lemma, Morphologie, Syntaxrollen, Referenten und Glossen aus MACULA Greek als eigener Annotationsschicht,
@@ -11,6 +11,8 @@ Dies ist der Konzept- und Datenprototyp, noch keine lauffähige Benutzer-App. Vo
 - eine einheitliche Bibelstellen-Konvention, ein generisches Schema und ein Validator.
 
 Dazu kommt ein erster klickbarer **Studienprototyp für Mk 3,20–35** (`app/prototype/mk3-20-35.html`), der direkt aus diesen Daten erzeugt wird. SQLite-Projektion, eigentliche App und Handschriftenbelege fehlen noch.
+
+Neu: **[Lesetiefe-Prototyp für die ganze Bibel](app/reading-stream/index.html)** – eigenständige HTML-Datei zum Öffnen im Browser. Fortlaufend auf jeder Ebene lesen, gezielt vertiefen, Mobile/Tablet, Menü und neutrales Hell/Dunkel. Enthält das vollständige Mengengerüst und 66 ungeprüfte Buchzusammenfassungen; Kapitel-/Abschnittsinhalte überwiegend Platzhalter. [Bedienidee, Herkunft und Grenzen](docs/LESETIEFE-PROTOTYP.md).
 
 ## Einstieg
 
@@ -65,6 +67,8 @@ python3 scripts/compare_working_text.py   # Abgleich mit der alten Arbeitstransk
 ```
 
 Die Importer schreiben Quelle, Upstream-Commit, SHA-256, Lizenz und Importdatum in die Datensätze und brechen bei unsicherer Zuordnung ab bzw. führen nicht zuordenbare Einträge in `reports/` auf, statt sie zu raten. `scripts/import_morphgnt.py` ist der frühere Pilot-Importer (v0.6) und wird nur noch durch `scripts/test_import.py` geprüft.
+
+Zusätzliche Strukturprüfung für den neuen Lesetiefe-Prototyp (Node.js ≥ 18): `node scripts/test_reading_stream.cjs`.
 
 ## Ablage und Historie
 
