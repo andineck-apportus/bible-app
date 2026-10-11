@@ -41,7 +41,7 @@ Alle übrigen Dateien in `data/`, `docs/`, `scripts/` usw. sind eigene Beiträge
 
 ## Numerische Testdaten des Lesetiefe-Prototyps
 
-`app/reading-stream/index.html` enthält ausschliesslich nachgezählte Kapitel-/Versanzahlen aus der von eBible.org / CrossWire als **Public Domain** ausgewiesenen KJV-Ausgabe: https://ebible.org/Scriptures/eng-kjv_usfm.zip (Quelldateien 2026-09-26). Kein Bibeltext und kein fremder Programmcode wurden übernommen. Die Quelle weist auf besondere Druckrechte für den Übersetzungstext im Vereinigten Königreich hin. Prüfsumme und Ableitung sind in `app/reading-stream/provenance.json` dokumentiert. Eine ursprünglich im Chat benutzte, nicht lizenzierte JSON-Zählliste wurde nicht als Fremddatei ins Repository übernommen; alle Zahlen wurden für diesen Import unabhängig aus dem genannten USFM-Bestand gewonnen und abgeglichen.
+`app/reading-stream/index.html` enthält als numerisches Mengengerüst nachgezählte Kapitel-/Versanzahlen aus der von eBible.org / CrossWire als **Public Domain** ausgewiesenen KJV-Ausgabe: https://ebible.org/Scriptures/eng-kjv_usfm.zip (Quelldateien 2026-09-26). Aus dieser KJV-Quelle wurden kein Bibeltext und kein fremder Programmcode übernommen. Die Quelle weist auf besondere Druckrechte für den Übersetzungstext im Vereinigten Königreich hin. Prüfsumme und Ableitung sind in `app/reading-stream/provenance.json` dokumentiert. Eine ursprünglich im Chat benutzte, nicht lizenzierte JSON-Zählliste wurde nicht als Fremddatei ins Repository übernommen; alle Zahlen wurden für diesen Import unabhängig aus dem genannten USFM-Bestand gewonnen und abgeglichen.
 
 Logo, Linienicons, Code und redaktionelle Entwürfe dieses Prototyps sind eigene Beiträge unter CC0. Keine Assets oder Schriftdateien der Fondation Beyeler übernommen.
 
@@ -50,3 +50,7 @@ Logo, Linienicons, Code und redaktionelle Entwürfe dieses Prototyps sind eigene
 Noch keine.
 
 Hinweis: Diese Übersicht ist keine Rechtsberatung. Lizenzangaben vor jedem Import erneut prüfen und im Quellendatensatz festhalten.
+
+## Eingebettete Markus-Daten im Lesestrom
+
+`app/reading-stream/index.html` enthält seit v0.12 zusätzlich die unveränderte Studienprojektion aus `data/`: SBLGNT-Text/Apparat (CC BY 4.0), MACULA samt genannten Glossen (CC BY 4.0 bzw. gemeinfrei), MorphGNT-Pilotannotation (CC BY-SA 3.0). Urheber und Quellen entsprechen den obigen Einträgen; Attribution und Lizenzlinks sind auch in der eigenständigen Seite eingebettet. Die MorphGNT-Annotationen behalten CC BY-SA 3.0; eigener UI-Code und eigene Studieninhalte bleiben CC0. Die Darstellung formatiert und kürzt die Datenfelder, ohne fachliche Neubewertung.

@@ -25,7 +25,7 @@ def load(rel):
 
 
 def by_id(folder):
-    return {r["id"]: r for r in (json.loads(p.read_text(encoding="utf-8")) for p in (D / folder).rglob("*.json"))}
+    return {r["id"]: r for r in (json.loads(p.read_text(encoding="utf-8")) for p in sorted((D / folder).rglob("*.json")))}
 
 
 in_scope = lambda ref: ref.startswith("MRK.3.") and int(ref.split(".")[2].split("-")[0]) in VERSES

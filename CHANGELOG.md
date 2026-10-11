@@ -2,6 +2,12 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.12 — 2026-10-11 — Markus im Lesestrom
+
+- Pilotstudie Mk 3,20–35 im neuen Lesestrom: drei kanonische Abschnitte, 16 Arbeitsübersetzungen, sechs Alternativen, 249 Wörter und 28 Variantenstellen.
+- Aufklappbare Wortdetails, Quellenvergleich und getrennte Studienebenen mit Gegenargumenten, Prüfstatus, Bewertungsgrenzen und Attribution. Direkteinstieg im Menü und bei Markus.
+- Reproduzierbarer Build aus bestehender Datenprojektion; kanonische Daten unverändert. Struktur-, Daten- und DOM-Interaktionstests erfolgreich; visuelle Geräteprüfung ausstehend.
+
 ## v0.11 — 2026-10-11 — Fortlaufender Lesetiefe-Prototyp
 
 - Separater, eigenständig lauffähiger Entwurf `app/reading-stream/index.html`: auf jeder Ebene scrollend lesen, an interessanten Einträgen vertiefen und zur Leseposition zurückkehren.
