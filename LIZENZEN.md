@@ -35,6 +35,8 @@ Grafiken und Bilder von Personen, Institutionen und Künstlern werden unter CC0,
 | `data/variants/sblgntapp-*/VAR-SBLGNTAPP-*.json` | Variantenstellen aus dem SBLGNT-Apparat | Faithlife/SBLGNT | CC BY 4.0, wie oben | Namensnennung |
 | `data/annotations/MACULA-SBLGNT-MRK-*.json`, `data/counts/SBLGNT-MRK.json` | Lemma, Morphologie, Syntaxrolle, Referenten, Glossen | MACULA Greek (Clear Bible / Biblica); Glossen: Berean Interlinear (gemeinfrei), Cherith Glosses for the Greek New Testament (Andi Wu, © 2023 Cherith Analytics, CC BY 4.0) | CC BY 4.0 | «MACULA Greek Linguistic Datasets, available at https://github.com/Clear-Bible/macula-greek/»; Cherith Glosses mit Autor nennen |
 | `data/annotations/MORPHGNT-SBLGNT-MRK-003-022-030.json`, `data/counts/SBLGNT-MRK-003-022-030.json` | Lemma und Morphologie Mk 3,22–30 (Pilot) | MorphGNT 6.12 (J. K. Tauber) | **CC BY-SA 3.0** | Namensnennung; Bearbeitungen dieser Dateien unter CC BY-SA |
+| `data/witness-texts/CNTR-*-MRK.json` | Transkriptionen der Handschriften 01 (א), 02 (A), 03 (B), 04 (C), 05 (D), 032 (W) sowie der Ausgabentexte WH, RP, Stephanus, KJTR und SR für Markus | Center for New Testament Restoration, Electronic Transcriptions (Alan Bunning), Commit `4e743a41a4b2` | **CC BY-SA 4.0** | «Alan Bunning, Center for New Testament Restoration»; Bearbeitungen unter CC BY-SA |
+| `data/witness-readings/WREAD-CNTR-*.json` | Maschinelle Zuordnung der Handschriften zu den Lesarten, mit Textausschnitten aus den CNTR-Transkriptionen | abgeleitet aus den CNTR-Transkriptionen | **CC BY-SA 4.0** | wie oben |
 | `archive/packages/` | Unveränderte frühere Projektpakete v0.1–v0.5 | Projekt | CC0 1.0, soweit eigene Inhalte | — |
 
 Alle übrigen Dateien in `data/`, `docs/`, `scripts/` usw. sind eigene Beiträge unter CC0 1.0.
@@ -52,5 +54,7 @@ Noch keine.
 Hinweis: Diese Übersicht ist keine Rechtsberatung. Lizenzangaben vor jedem Import erneut prüfen und im Quellendatensatz festhalten.
 
 ## Eingebettete Markus-Daten im Lesestrom
+
+Seit v0.15 enthält `app/reading-stream/index.html` zusätzlich Textausschnitte der CNTR-Transkriptionen und die daraus abgeleiteten Zuordnungen (CC BY-SA 4.0, Alan Bunning, Center for New Testament Restoration); die Attribution steht in der Seite beim jeweiligen Blatt.
 
 `app/reading-stream/index.html` enthält seit v0.12 zusätzlich die unveränderte Studienprojektion aus `data/`: SBLGNT-Text/Apparat (CC BY 4.0), MACULA samt genannten Glossen (CC BY 4.0 bzw. gemeinfrei), MorphGNT-Pilotannotation (CC BY-SA 3.0). Urheber und Quellen entsprechen den obigen Einträgen; Attribution und Lizenzlinks sind auch in der eigenständigen Seite eingebettet. Die MorphGNT-Annotationen behalten CC BY-SA 3.0; eigener UI-Code und eigene Studieninhalte bleiben CC0. Die Darstellung formatiert und kürzt die Datenfelder, ohne fachliche Neubewertung.
