@@ -2,6 +2,13 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.14 — 2026-10-12 — Hintergrund damals
+
+- Rückmeldung: Auf Versebene passt der Lesestrom, es fehlt der Hintergrund damals.
+- Neuer Datentyp `background_note` (`data/background/`): 13 Notizen zu Mk 3,20–35 über Zeit, Ort, Kultur und Religion, je mit Kontext, Sicherheitsgrad, Unsicherheiten, Vergleichsstellen und ausserbiblischen Fundstellen (nur zitiert). Neuer Kontext `CTX-MARK-READERS-0070` (erste Leserschaft des Markus), neuer Tag `TAG-HISTORICAL-BACKGROUND`. KI-Entwürfe, fachlich ungeprüft.
+- Lesestrom: «Damals» im Versblatt, «Hintergrund damals» je Abschnitt, optional kurze Hinweise im Text (Menü).
+- Validator prüft Pflichtfelder und Kontextverweis der Hintergrundnotizen; zwei neue Negativtests; DOM-Test erweitert. 1131 Datensätze.
+
 ## v0.13 — 2026-10-12 — Lesestrom als Hauptrichtung, zugänglicher und ungestörter
 
 - Vorgabe: Bibelstudium zugänglich für Personen ohne Griechisch und Hebräisch; ungestört lesen und «abtauchen in die Tiefe»; Hintergrund nur auf Wunsch ([VISION.md](docs/VISION.md)).

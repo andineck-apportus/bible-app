@@ -57,6 +57,8 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .more svg{width:15px;height:15px;flex-basis:15px}
 #bible-stream .alt-line{display:block;font:italic 400 calc(var(--read) * .82)/1.5 var(--serif);color:var(--muted);margin:2px 0 8px 1.4em}
 #bible-stream .part-end{margin:4px 0 18px}
+#bible-stream .bg-line{display:block;margin:2px 0 6px 1.6em;padding:2px 0;font-size:14px;color:var(--muted);text-align:left;border-bottom:1px dotted var(--rule)!important}
+#bible-stream .bg-topic{font:500 16px/1.35 var(--ui);margin:0}
 
 #bible-stream .load{display:block;margin:24px auto 0;font-size:13px;color:var(--muted)}
 #bible-stream .end{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:center;margin:40px 0 0}
@@ -126,6 +128,7 @@ const root=document.getElementById('bible-stream');
 const MARKUS=/*__MARKUS__*/null;
 const NAV=/*__NAV__*/null;
 const SUMS=/*__SUMMARIES__*/null;
+const BG=/*__BACKGROUND__*/null;
 const DATA=NAV.books.map(b=>({de:b.de,en:b.en,abbr:b.abbr,alias:b.alias,counts:b.verses_per_chapter,code:b.code}));
 const GROUPS=NAV.groups.map(g=>[g.de,g.en,DATA.findIndex(b=>b.code===g.books[0]),DATA.findIndex(b=>b.code===g.books[g.books.length-1])]);
 const BOOK_SUMMARIES=DATA.map(b=>(SUMS['SUM-BOOK-'+b.code]||{}).text||'');
@@ -135,19 +138,19 @@ const ui={
   deeper:['Zu den Testamenten','Zu den Buchgruppen','Zu den Büchern','Zu den Kapiteln','Zu den Abschnitten','Text lesen'],
   noSummary:'Zu diesem Kapitel gibt es noch keine Zusammenfassung.',noPart:'Für diesen Abschnitt gibt es noch keine Zusammenfassung.',placeholder:'Text noch nicht eingebunden',
   verses:'Verse',loadNext:'Weiterlesen',loadPrev:'Früheres anzeigen',end:'Ende',empty:'Kein passendes Buch und keine gültige Bibelstelle.',
-  example:'Ausgearbeitetes Beispiel: Markus 3,20–35',understand:'Diesen Abschnitt verstehen',more:'Mehr zu Vers',
+  example:'Ausgearbeitetes Beispiel: Markus 3,20–35',understand:'Diesen Abschnitt verstehen',background:'Hintergrund damals',then:'Damals',more:'Mehr zu Vers',
   colors:'Farben',auto:'Auto',light:'Hell',dark:'Dunkel',size:'Textgrösse',language:'Sprache der Bedienung',
   advanced:'Urtext und Details',advancedSub:'Für Fortgeschrittene: Griechisch Wort für Wort, Grammatik, Vergleich der Textausgaben, Quellen.',
-  inline:'Andere Lesarten im Text zeigen',inlineSub:'Zeigt unter einem Vers, wo alte Handschriften anders lauten.',about:'Über diese Fassung'},
+  inline:'Andere Lesarten im Text zeigen',inlineSub:'Zeigt unter einem Vers, wo alte Handschriften anders lauten.',bgInline:'Hintergrund im Text zeigen',bgInlineSub:'Zeigt unter einem Vers kurze Hinweise auf Zeit, Ort und Kultur damals.',about:'Über diese Fassung'},
  en:{bible:'The Bible',menu:'Menu',close:'Close',done:'Done',search:'Find a book or reference',hint:'e.g. Mark 3:24 or Ps 23',home:'Whole Bible',up:'Context',down:'Explore',contents:'Contents',levelsTitle:'Choose reading depth',
   levels:['Bible','Testament','Book group','Book','Chapter','Passage','Verse'],
   deeper:['Testaments','Book groups','Books','Chapters','Passages','Read the text'],
   noSummary:'No summary for this chapter yet.',noPart:'No summary for this passage yet.',placeholder:'Text not yet available',
   verses:'verses',loadNext:'Continue reading',loadPrev:'Show earlier',end:'End',empty:'No matching book or valid reference.',
-  example:'Worked example: Mark 3:20–35',understand:'Understand this passage',more:'More on verse',
+  example:'Worked example: Mark 3:20–35',understand:'Understand this passage',background:'Background then',then:'Back then',more:'More on verse',
   colors:'Colours',auto:'Auto',light:'Light',dark:'Dark',size:'Text size',language:'Interface language',
   advanced:'Original text and details',advancedSub:'For advanced readers: Greek word by word, grammar, edition comparison, sources.',
-  inline:'Show other readings in the text',inlineSub:'Shows below a verse where old manuscripts differ.',about:'About this version'}};
+  inline:'Show other readings in the text',inlineSub:'Shows below a verse where old manuscripts differ.',bgInline:'Show background in the text',bgInlineSub:'Shows short notes on time, place and culture below a verse.',about:'About this version'}};
 
 /* ---------- Gerüst ---------- */
 const nodes=new Map(),verses=[];
@@ -177,7 +180,7 @@ const CONF={high:'gut begründet',probable:'wahrscheinlich',possible:'möglich'}
 
 root.querySelectorAll('.app').forEach((app,appIndex)=>{
 let current='all',lang='de',sheet=null,query='';
-let S={theme:'auto',read:19,advanced:false,inline:false};
+let S={theme:'auto',read:19,advanced:false,inline:false,bgInline:false};
 try{const s=JSON.parse(localStorage.getItem('lesestrom')||'null');if(s)S={...S,...s};}catch(e){}
 const save=()=>{try{localStorage.setItem('lesestrom',JSON.stringify(S));}catch(e){}};
 const mq=globalThis.matchMedia?globalThis.matchMedia('(prefers-color-scheme: dark)'):null;
@@ -204,6 +207,13 @@ function summary(n){
 function eyebrow(n){if(n.level===0)return '';const p=nodes.get(n.parent);if(n.level===5)return n.part?refDe(n.part.range):title(p);return title(p);}
 const isPilotVerse=n=>n.level===6&&n.b===MRK&&n.c===3&&MARKUS.de[n.v];
 const altsFor=v=>MARKUS.alternatives.filter(a=>a.verse===v);
+const bgFor=v=>BG.filter(b=>!b.wide&&b.from<=v&&v<=b.to);
+const bgForPart=id=>BG.filter(b=>b.wide||b.subject===id);
+function bgNote(b,withRef){const L=lang==='de';
+  return `<div class="point bg-note" data-bg-note="${esc(b.id)}"><span class="tag">${withRef?esc(b.ref_de)+' · ':''}${esc(CONF[b.confidence]||'')}${b.readers?(L?' · Zeit des Markus':' · time of Mark'):''}</span><p class="bg-topic">${esc(b.topic)}</p><p class="body">${esc(b.text)}</p>${b.uncertain?`<p class="note"><b>${L?'Nicht sicher:':'Uncertain:'}</b> ${esc(b.uncertain)}</p>`:''}${b.evidence.length||b.sources.length?`<p class="note">${L?'Vergleiche':'Compare'}: ${esc([...b.evidence,...b.sources].join(' · '))}</p>`:''}${S.advanced?`<p class="ref-id">${esc(b.id)}</p>`:''}</div>`;}
+const bgDisclaimer=()=>`<p class="note">${lang==='de'?'Hintergrund beschreibt Zeit, Ort und Kultur damals. Er erklärt den Text nicht allein, und ein Teil davon ist unsicher. Alle Hinweise sind Entwürfe und noch nicht fachlich geprüft.':'Background describes time, place and culture then. Drafts, not yet reviewed.'}</p>`;
+function bgSheet(partId){const part=nodes.get(partId).part;openSheet('background',head(T().background)+`<p class="note">${esc(part.title)} · ${esc(refDe(part.range))}</p>`+bgForPart(partId).map(b=>bgNote(b,true)).join('')+bgDisclaimer());}
+function bgOne(id){const b=BG.find(x=>x.id===id);openSheet('background',head(b.topic)+bgNote(b,true).replace(`<p class="bg-topic">${esc(b.topic)}</p>`,'')+bgDisclaimer());}
 const greekRun=/[\u0370-\u03ff\u1f00-\u1fff][\u0370-\u03ff\u1f00-\u1fff\s\u02bc\u2019]*[\u0370-\u03ff\u1f00-\u1fff]/g;
 const plain=t=>S.advanced?String(t??''):String(t??'').replace(greekParen,'').replace(greekRun,()=>lang==='de'?'der griechische Ausdruck':'the Greek phrase');
 
@@ -213,7 +223,7 @@ function entry(id){
   if(n.level===6)return verseEntry(n);
   const text=summary(n);
   const deep=n.children.length?`<button type="button" class="link" data-deep="${id}">${t.deeper[n.level]}${icon('arrow-down')}</button>`:'';
-  const study=n.part?`<button type="button" class="link soft" data-study="${id}">${t.understand}</button>`:'';
+  const study=n.part?`<button type="button" class="link soft" data-study="${id}">${t.understand}</button><button type="button" class="link soft" data-background="${id}">${t.background}</button>`:'';
   const example=(n.id==='b'+MRK||n.id===`c${MRK}-3`)?`<button type="button" class="example" data-go="${MARKUS.section.parts[0].id}"><span>${t.example}</span>${icon('chevron-right')}</button>`:'';
   const heading=n.level===5&&n.part?n.part.title:(n.level===5?(lang==='de'?'Verse ':'Verses ')+n.v+'–'+n.last:title(n));
   const copy=text?`<p class="stream-copy">${esc(text)}</p>`:`<p class="stream-copy quiet">${n.level===5?t.noPart:t.noSummary}</p>`;
@@ -225,10 +235,12 @@ function verseEntry(n){
   const p=nodes.get(n.parent);if(p.part&&p.v===n.v)lead+=`<h3 class="part-head">${esc(p.part.title)}</h3>`;
   if(!text)return `<article class="stream-entry verse placeholder" data-stream="${n.id}">${lead}<p class="verse-line"><span class="vno">${n.v}</span><span class="stream-copy">${t.placeholder}</span></p></article>`;
   const alts=altsFor(n.v);
-  const more=(alts.length||S.advanced)?`<button type="button" class="more" data-more="${n.id}" aria-label="${t.more} ${n.v}">${icon('plus')}</button>`:'';
+  const bgs=bgFor(n.v);
+  const more=(alts.length||bgs.length||S.advanced)?`<button type="button" class="more" data-more="${n.id}" aria-label="${t.more} ${n.v}">${icon('plus')}</button>`:'';
   const inline=S.inline?alts.map(a=>`<span class="alt-line" data-alternative="${esc(a.variant)}">${lang==='de'?'oder':'or'}: «${esc(a.to)}»</span>`).join(''):'';
-  const end=p.part&&p.last===n.v?`<div class="part-end"><button type="button" class="link soft" data-study="${p.id}">${t.understand}</button></div>`:'';
-  return `<article class="stream-entry verse" data-stream="${n.id}">${lead}<p class="verse-line"><span class="vno">${n.v}</span><span class="stream-copy">${esc(text)}</span>${more}</p>${inline}${end}</article>`;
+  const bgLine=S.bgInline?bgs.filter(b=>b.from===n.v).map(b=>`<button type="button" class="bg-line" data-bg="${esc(b.id)}">${t.then}: ${esc(b.topic)}</button>`).join(''):'';
+  const end=p.part&&p.last===n.v?`<div class="part-end actions"><button type="button" class="link soft" data-study="${p.id}">${t.understand}</button><button type="button" class="link soft" data-background="${p.id}">${t.background}</button></div>`:'';
+  return `<article class="stream-entry verse" data-stream="${n.id}">${lead}<p class="verse-line"><span class="vno">${n.v}</span><span class="stream-copy">${esc(text)}</span>${more}</p>${inline}${bgLine}${end}</article>`;
 }
 function streamMarkup(){const ids=streams[nodes.get(current).level];const t=T();return `<div class="column">${readerStart?`<button type="button" class="load load-before" data-action="load-prev">${t.loadPrev}</button>`:''}${ids.slice(readerStart,readerEnd).map(entry).join('')}${readerEnd<ids.length?`<button type="button" class="load load-after" data-action="load-next">${t.loadNext}</button>`:`<p class="end">${t.end}</p>`}</div>`;}
 function loadMore(before=false){
@@ -266,6 +278,8 @@ const support=(n,of)=>n==null?(lang==='de'?'Einige alte Handschriften lesen so; 
 function verseSheet(id){
   const n=nodes.get(id),t=T(),alts=altsFor(n.v);
   let h=head(title(n))+`<p class="body">${esc(MARKUS.de[n.v])}</p>`;
+  const bgs=bgFor(n.v);
+  if(bgs.length)h+=`<h4>${t.then}</h4>`+bgs.map(b=>bgNote(b,false)).join('');
   if(alts.length){
     h+=`<h4>${lang==='de'?'Andere Lesarten':'Other readings'}</h4><p class="note">${lang==='de'?'Die alten Handschriften stimmen hier nicht ganz überein. Die Möglichkeiten stehen nebeneinander; niemand entscheidet für dich, welche «richtig» ist.':'Old manuscripts differ here. The options stand side by side.'}</p>`;
     h+=alts.map(a=>`<div class="pair" data-alternative="${esc(a.variant)}"><div class="reading-card main"><span class="tag">${lang==='de'?'Im Lesetext':'In the text'}</span><span class="body">«${esc(a.from)}»</span><span class="note">${dots(a.base_support,a.of)}${a.base_support!=null?support(a.base_support,a.of):(lang==='de'?'So steht es in den verglichenen Textausgaben.':'As in the compared editions.')}</span></div><div class="reading-card"><span class="tag">${lang==='de'?'Andere Lesart':'Other reading'}</span><span class="body">«${esc(a.to)}»</span><span class="note">${dots(a.support,a.of)}${support(a.support,a.of)}</span></div><p class="note">${esc(a.note||'')}</p></div>`).join('');
@@ -279,7 +293,7 @@ function verseSheet(id){
   }else{
     h+=`<p class="note">${lang==='de'?'Griechischer Text, Grammatik und Quellen: im Menü «Urtext und Details» einschalten.':'Greek text, grammar and sources: turn on “Original text and details” in the menu.'}</p>`;
   }
-  const p=nodes.get(n.parent);if(p.part)h+=`<button type="button" class="link soft" data-study="${p.id}">${t.understand}</button>`;
+  const p=nodes.get(n.parent);if(p.part)h+=`<div class="actions"><button type="button" class="link soft" data-study="${p.id}">${t.understand}</button><button type="button" class="link soft" data-background="${p.id}">${t.background}</button></div>`;
   openSheet('verse',h);
 }
 function sourcesBlock(){return `<h4>${lang==='de'?'Quellen':'Sources'}</h4><p class="note">Griechischer Text und Apparat: SBL Greek New Testament, © 2010 Society of Biblical Literature und Logos Bible Software, CC BY 4.0. Sprachdaten: MACULA Greek Linguistic Datasets, available at https://github.com/Clear-Bible/macula-greek/ (CC BY 4.0); Glossen: Berean Interlinear (gemeinfrei), Cherith Glosses von Andi Wu, © 2023 Cherith Analytics (CC BY 4.0). Zweite Annotation 3,22–30: MorphGNT 6.12, J. K. Tauber (CC BY-SA 3.0). Übersetzung und Erklärungen: eigene Entwürfe (CC0), fachlich ungeprüft.</p><p class="note">${esc(MARKUS.method.name)}: ${esc(MARKUS.method.limits.join(' '))}</p>`;}
@@ -294,7 +308,7 @@ function studySheet(partId){
     h+=`<h4>${L?'Eine offene Frage':'An open question'}</h4>`+MARKUS.questions.map(q=>`<div class="point"><p class="body">${esc(q.q)}</p><p class="note">${esc(q.finding)}</p></div>`).join('');
     h+=`<h4>${L?'Ähnliche Stellen':'Related passages'}</h4><p class="body">${MARKUS.relations.map(r=>esc(r.to_de)).join(' · ')}</p>`;
   }
-  h+=`<p class="note">${L?'Alle Beobachtungen und Deutungen sind Entwürfe und noch nicht fachlich geprüft.':'All notes are drafts, not yet reviewed.'}</p>`;
+  h+=`<p class="note">${L?'Alle Beobachtungen und Deutungen sind Entwürfe und noch nicht fachlich geprüft.':'All notes are drafts, not yet reviewed.'}</p><div class="actions"><button type="button" class="link soft" data-background="${partId}">${T().background}</button></div>`;
   openSheet('study',h);
 }
 function menuSheet(){
@@ -306,7 +320,7 @@ function menuSheet(){
   <div class="set"><span>${t.colors}</span>${seg('theme',[['auto',t.auto],['light',t.light],['dark',t.dark]],S.theme)}</div>
   <div class="set"><span>${t.size}</span>${seg('read',[[17,'A−'],[19,'A'],[22,'A+']],S.read)}</div>
   <div class="set"><span>${t.language}</span>${seg('lang',[['de','Deutsch'],['en','English']],lang)}</div>
-  ${sw('inline',t.inline,t.inlineSub)}${sw('advanced',t.advanced,t.advancedSub)}
+  ${sw('inline',t.inline,t.inlineSub)}${sw('bgInline',t.bgInline,t.bgInlineSub)}${sw('advanced',t.advanced,t.advancedSub)}
   <details class="about"><summary>${t.about}</summary><div>
    <p>${lang==='de'?'Ein Prototyp. Zusammenfassungen, Übersetzung und Erklärungen sind KI-Entwürfe und noch nicht fachlich geprüft. Ausgearbeitet ist bisher Markus 3,20–35; an anderen Stellen fehlt der Bibeltext noch.':'A prototype. Summaries, translation and notes are AI drafts, not yet reviewed. Only Mark 3:20–35 is worked out so far.'}</p>
    <p>${lang==='de'?'Bücher, Kapitel und Verszählung folgen vorläufig dem protestantischen Kanon mit 66 Büchern und der Zählung der King-James-Bibel (Testkonfiguration). Abschnitte ausserhalb von Markus 3 umfassen der Einfachheit halber je bis zu fünf Verse.':'Books and verse numbering follow the 66-book Protestant canon with KJV numbering for now.'}</p>
@@ -328,6 +342,8 @@ app.addEventListener('click',e=>{
   if(b.dataset.level!==undefined){go(resolveLevel(Number(b.dataset.level)));return;}
   if(b.dataset.more){verseSheet(b.dataset.more);return;}
   if(b.dataset.study){studySheet(b.dataset.study);return;}
+  if(b.dataset.background){bgSheet(b.dataset.background);return;}
+  if(b.dataset.bg){bgOne(b.dataset.bg);return;}
   if(b.dataset.set){const k=b.dataset.set,v=b.dataset.value;if(k==='lang')lang=v;else S[k]=k==='read'?Number(v):v;save();const pos=reader.scrollTop;render();reader.scrollTop=pos;menuSheet();return;}
   if(b.dataset.toggle){S[b.dataset.toggle]=!S[b.dataset.toggle];save();const pos=reader.scrollTop;render();reader.scrollTop=pos;menuSheet();return;}
   const a=b.dataset.action,n=nodes.get(current);
@@ -347,7 +363,7 @@ reader.addEventListener('scroll',()=>{if(busy)return;busy=true;
   busy=false;},{passive:true});
 render();
 });
-if(globalThis.__BIBLE_TEST__)globalThis.__BIBLE_TEST__({nodes,verses,stats,search,sibling,ancestors,streams,BOOK_SUMMARIES,MARKUS});
+if(globalThis.__BIBLE_TEST__)globalThis.__BIBLE_TEST__({nodes,verses,stats,search,sibling,ancestors,streams,BOOK_SUMMARIES,MARKUS,BG});
 })();
 </script>
 </body></html>

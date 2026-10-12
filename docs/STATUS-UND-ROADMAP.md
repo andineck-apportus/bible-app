@@ -1,8 +1,9 @@
-# Status und nächste Schritte · 2026-10-12 (UI v0.13)
+# Status und nächste Schritte · 2026-10-12 (UI v0.14)
 
 ## Gesichert und vorhanden
 - **Lesestrom als Hauptrichtung** (`app/reading-stream/`, v0.13): die ganze Bibel auf sieben Ebenen fortlaufend lesen und vertiefen; ungestörtes Vollbild mit ausblendenden Leisten; Lesarten, Erklärungen und Quellen als Blätter auf Wunsch; Urtext nur im Modus «Urtext und Details»; deutsche Stellenangaben; Farben nach System. Navigationsgerüst und 83 Zusammenfassungen liegen jetzt in `data/navigation/` und `data/summaries/` (Entwürfe, ungeprüft). Ausgearbeitet ist Markus 3,20–35; sonst fehlt der Bibeltext. Details und Grenzen: [LESETIEFE-PROTOTYP.md](LESETIEFE-PROTOTYP.md).
-- v0.13: 1116 Datensätze im freien Kern.
+- **Hintergrund damals** (v0.14): 13 Notizen zu Mk 3,20–35 in `data/background/`, im Lesestrom pro Vers, pro Abschnitt und optional im Text. Ungeprüfte Entwürfe; die zitierten ausserbiblischen Fundstellen sind noch nicht am Originaltext nachgeprüft.
+- v0.14: 1131 Datensätze im freien Kern.
 - Alle Originalpakete v0.1–v0.5; rekonstruierte Git-Historie mit je einem Snapshot.
 - **Abgelöst:** Studienprototyp Mk 3,20–35 (`app/prototype/`), bleibt als Zwischenstand; seine Inhalte sind im Lesestrom aufgegangen. Stand v0.10, für allgemeine Leser: Überblick (gezeichnete Verschachtelung der drei Szenen), Lesen (deutscher Text; abweichende Lesarten auf Wunsch, in einfacher Sprache mit Bezeugung), Vertiefen (Was steht da? Wie kann man es verstehen? Was kann es heute bedeuten?), Studienpfad, Einstellungen (Lesarten, Urtext-Modus, Schriftgrösse, Hell/Dunkel). Griechisch, Wort für Wort, Grammatik und alle Apparatstellen nur im Modus «Urtext und Details». Erzeugt mit `scripts/build_prototype.py` nur aus Daten des freien Kerns.
 - v0.9: 1032 Datensätze; neu Gliederung Mk 3,20–35 (Texteinheiten, Befund, Deutung mit Gegenargument) und deutsche Arbeitsübersetzung 3,20–21 und 3,31–35 (ohne Wortzuordnung).
