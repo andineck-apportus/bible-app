@@ -8747,6 +8747,54 @@
  },
  "findings": [
   {
+   "id": "FIND-LP-0001",
+   "claim": "Nach der Anrede folgen bei Matthäus drei Bitten mit «dein» (Name, Reich, Wille) und danach vier Bitten mit «uns» bzw. «unser» (Brot, Schulden, Versuchung, Rettung).",
+   "kind": "literary_structure",
+   "confidence": "high",
+   "subject": "TU-MAT-006-009-013",
+   "caveat": "Beobachtung am Wortlaut; die Zählung der Bitten (sechs oder sieben) wird in der Tradition unterschiedlich gehandhabt."
+  },
+  {
+   "id": "FIND-LP-0002",
+   "claim": "Lukas hat eine kürzere Fassung: Anrede nur «Vater», ohne die Bitte um Gottes Willen und ohne die Bitte um Rettung vor dem Bösen. Statt «Schulden» sagt er «Sünden», behält aber im zweiten Satzteil das Bild des Schuldners bei.",
+   "kind": "synoptic_comparison",
+   "confidence": "high",
+   "subject": "TU-LUK-011-001-004",
+   "caveat": "Vergleich der SBLGNT-Texte; in vielen späteren Handschriften ist die Lukasfassung an Matthäus angeglichen (siehe Lesarten)."
+  },
+  {
+   "id": "FIND-LP-0003",
+   "claim": "Das griechische Wort, das meist mit «täglich» übersetzt wird (ἐπιούσιος), kommt im Neuen Testament nur im Vaterunser vor (Mt 6,11; Lk 11,3). Origenes bemerkte im 3. Jahrhundert, es sei bei den Griechen sonst nicht gebräuchlich.",
+   "kind": "lexical",
+   "confidence": "high",
+   "subject": "TU-MAT-006-009-013",
+   "caveat": "Origenes, Über das Gebet 27,7; spätere Funde einzelner Belege sind umstritten. Darum ist die Bedeutung unsicher."
+  },
+  {
+   "id": "FIND-LP-0004",
+   "claim": "Von allen Bitten des Vaterunsers greift Matthäus nur die Bitte um Vergebung im Anschluss noch einmal auf (6,14–15).",
+   "kind": "literary_structure",
+   "confidence": "high",
+   "subject": "TU-MAT-006-005-015",
+   "caveat": "Beobachtung am Wortlaut."
+  },
+  {
+   "id": "FIND-LP-0005",
+   "claim": "Der Lobpreis «Denn dein ist das Reich…» fehlt bei Matthäus in den ältesten erhaltenen Handschriften (Sinaiticus, Vaticanus, Bezae) und steht im Washingtonianus (4./5. Jh.) sowie in der Mehrheit der späteren Handschriften.",
+   "kind": "textual",
+   "confidence": "high",
+   "subject": "TU-MAT-006-009-013",
+   "caveat": "Nach den importierten CNTR-Transkriptionen und der maschinellen Zuordnung (WREAD-CNTR-MAT-006-005-015); nicht am Faksimile geprüft."
+  },
+  {
+   "id": "FIND-LP-0006",
+   "claim": "Die kurze Lukasfassung (Anrede «Vater», ohne Willensbitte und ohne «sondern rette uns») steht in 𝔓75 und im Vaticanus; der Sinaiticus hat die kurze Anrede, aber die Willensbitte. Alexandrinus, Ephraemi, Bezae und Washingtonianus haben die längeren, an Matthäus angeglichenen Formen.",
+   "kind": "textual",
+   "confidence": "high",
+   "subject": "TU-LUK-011-001-004",
+   "caveat": "Nach den CNTR-Transkriptionen (WREAD-CNTR-LUK-011-001-004); maschinelle Zuordnung, nicht am Faksimile geprüft."
+  },
+  {
    "id": "FIND-MRK-0001",
    "claim": "Mk 3,30 begründet Jesu Warnung damit, dass die Schriftgelehrten sagten, er habe einen unreinen Geist.",
    "kind": "textual_observation",
@@ -8789,6 +8837,101 @@
  ],
  "interpretations": [
   {
+   "id": "INT-LP-0001",
+   "claim": "«Brot für den kommenden Tag»: Das Wort (ἐπιούσιος) wird vom griechischen Ausdruck für «der folgende Tag» (ἡ ἐπιοῦσα ἡμέρα) abgeleitet. Man bittet heute um das Brot für morgen, damit man nicht in Sorge leben muss. Hieronymus berichtet, im Hebräerevangelium stehe hier «mahar» (für morgen).",
+   "confidence": "possible",
+   "caveat": "Steht in Spannung zu Mt 6,34 («Sorgt nicht für morgen»), wenn man es als Vorsorge versteht.",
+   "counter": [
+    "Die Bitte «gib uns heute das Brot für morgen» kann gerade das Vertrauen ausdrücken, das 6,34 verlangt: Man legt den nächsten Tag in Gottes Hand.",
+    "Die Notiz des Hieronymus bezieht sich auf ein nicht erhaltenes Evangelium und kann eine spätere Rückübersetzung sein."
+   ],
+   "based_on": [
+    "FIND-LP-0003"
+   ],
+   "subject": "TU-MAT-006-009-013"
+  },
+  {
+   "id": "INT-LP-0002",
+   "claim": "«Das zum Leben nötige Brot»: Das Wort (ἐπιούσιος) wird von «für» (ἐπί) und «Dasein, Lebensunterhalt» (οὐσία) abgeleitet. Man bittet um das, was man zum Leben braucht, nicht um Überfluss (vgl. Spr 30,8).",
+   "confidence": "possible",
+   "caveat": "Sprachlich ist diese Wortbildung ungewöhnlich; man würde eine etwas andere Form erwarten (ἐπούσιος).",
+   "counter": [
+    "Die Tradition «täglich» (lateinisch cotidianum) und das lukanische «Tag für Tag» passen gut zu dieser Bedeutung."
+   ],
+   "based_on": [
+    "FIND-LP-0003"
+   ],
+   "subject": "TU-MAT-006-009-013"
+  },
+  {
+   "id": "INT-LP-0003",
+   "claim": "«Das Brot der kommenden Welt»: Manche Kirchenväter verstanden das Wort geistlich, als Brot des Gottesreiches oder als Abendmahl; Hieronymus übersetzte in Matthäus mit supersubstantialem («überwesentlich»).",
+   "confidence": "possible",
+   "caveat": "Diese Deutung liegt weiter vom Alltagsbrot entfernt, an das die Zuhörer Jesu zuerst gedacht haben dürften.",
+   "counter": [
+    "Die Bitte um das Reich (6,10) und Jesu Mahlgemeinschaften verbinden Alltagsbrot und erwartetes Festmahl; beides muss sich nicht ausschliessen."
+   ],
+   "based_on": [
+    "FIND-LP-0003"
+   ],
+   "subject": "TU-MAT-006-009-013"
+  },
+  {
+   "id": "INT-LP-0004",
+   "claim": "«Führe uns nicht in Versuchung» bittet darum, nicht in eine Prüfung zu geraten, in der man den Glauben verliert. Viele denken dabei an die grosse Bedrängnis der Endzeit, andere an alltägliche Versuchungen.",
+   "confidence": "probable",
+   "caveat": "Ob Gott selbst als der gedacht ist, der in Versuchung führt, ist umstritten; Jak 1,13 sagt, Gott versuche niemanden.",
+   "counter": [
+    "Das Griechische ist eine Bitte an Gott und setzt voraus, dass auch Prüfungen in seiner Hand liegen (vgl. Gen 22,1). Die Bitte widerspricht Jak 1,13 nicht, wenn man «Prüfung» und «Verführung zum Bösen» unterscheidet.",
+    "Einige Kirchen haben die Formulierung in jüngerer Zeit geändert (z. B. Frankreich 2017: «lass uns nicht in Versuchung eintreten»; Italien 2020: «überlass uns nicht der Versuchung»), andere, etwa die deutschsprachigen katholischen Bistümer 2018, haben sie beibehalten."
+   ],
+   "based_on": [
+    "FIND-LP-0001"
+   ],
+   "subject": "TU-MAT-006-009-013"
+  },
+  {
+   "id": "INT-LP-0005",
+   "claim": "Die Bitte um Vergebung ist bei Matthäus mit der eigenen Bereitschaft zu vergeben verknüpft: Wer selbst nicht vergibt, verschliesst sich der Vergebung Gottes (6,14–15; vgl. Mt 18,23–35).",
+   "confidence": "probable",
+   "caveat": "Ob die eigene Vergebung Bedingung oder Folge der empfangenen Vergebung ist, wird unterschiedlich gesehen.",
+   "counter": [
+    "Im Gleichnis Mt 18,23–35 geht die Vergebung des Herrn voraus; die eigene Vergebung ist Antwort darauf, nicht Leistung.",
+    "Die Vergangenheitsform «wie wir vergeben haben» (6,12) kann als Ausdruck der Bereitschaft verstanden werden, nicht als Vorleistung."
+   ],
+   "based_on": [
+    "FIND-LP-0004"
+   ],
+   "subject": "TU-MAT-006-005-015"
+  },
+  {
+   "id": "INT-LP-0006",
+   "claim": "«Vor dem Bösen» meint den Bösen als Person (den Teufel), wie in Mt 13,19.38.",
+   "confidence": "possible",
+   "caveat": "Das Griechische lässt «das Böse» (Neutrum) und «der Böse» (Maskulinum) zu; die Kirchen des Ostens beten meist «vor dem Bösen» im persönlichen Sinn, viele westliche Übersetzungen neutral.",
+   "counter": [
+    "«Das Böse» im allgemeinen Sinn (Unheil, Bosheit) passt ebenso zum Zusammenhang und zu jüdischen Gebeten um Bewahrung vor Bösem."
+   ],
+   "based_on": [
+    "FIND-LP-0001"
+   ],
+   "subject": "TU-MAT-006-009-013"
+  },
+  {
+   "id": "INT-LP-0007",
+   "claim": "Lukas überliefert eine ältere, kürzere Form, die Matthäus für den Gebrauch in seiner Gemeinde erweitert hat.",
+   "confidence": "possible",
+   "caveat": "Welche Fassung näher bei Jesus liegt, ist nicht sicher zu entscheiden; vielleicht hat Jesus das Gebet in verschiedenen Formen gelehrt.",
+   "counter": [
+    "Matthäus könnte die ursprünglichere Wortwahl bewahrt haben (z. B. «Schulden» statt «Sünden»), während Lukas für nichtjüdische Leser vereinfacht.",
+    "Beide Fassungen können auf unterschiedliche Gemeindetraditionen zurückgehen, ohne dass eine von der anderen abhängt."
+   ],
+   "based_on": [
+    "FIND-LP-0002"
+   ],
+   "subject": "TU-LUK-011-001-004"
+  },
+  {
    "id": "INT-MRK-0001",
    "claim": "Die Warnung bezieht sich im Erzählkontext auf die Zuschreibung von Jesu befreiendem Wirken an eine unreine Macht.",
    "confidence": "probable",
@@ -8827,6 +8970,15 @@
  ],
  "principles": [
   {
+   "id": "PRIN-LP-0001",
+   "text": "Beten nach Jesu Anleitung beginnt mit vertrauensvoller Anrede Gottes und mit Gottes Sache und bringt dann die eigenen Grundbedürfnisse vor: Brot, Vergebung und Bewahrung. Empfangene und gewährte Vergebung gehören zusammen.",
+   "confidence": "probable",
+   "derived_from": [
+    "FIND-LP-0001",
+    "INT-LP-0005"
+   ]
+  },
+  {
    "id": "PRIN-MRK-0001",
    "text": "Behauptungen über Gottes Wirken sind verantwortungsvoll zu beurteilen; die bewusste Verkehrung von Gut und Böse ist nicht mit gewöhnlichem Zweifel gleichzusetzen.",
    "confidence": "possible",
@@ -8837,6 +8989,14 @@
  ],
  "applications": [
   {
+   "id": "APP-LP-0001",
+   "text": "Wer das Vaterunser heute betet, kann es langsam beten und bei einzelnen Bitten innehalten: Wo brauche ich wirklich «Brot für heute»? Wem muss ich noch vergeben? In einem Land mit Überfluss kann die Brotbitte auch an die erinnern, denen das Nötige fehlt, denn sie heisst «unser» Brot, nicht «mein» Brot.",
+   "limits": "Das ist eine heutige Übertragung, kein Befund am Text. Das Vaterunser wurde in seiner Zeit von Menschen gebetet, für die das tägliche Brot oft unsicher war; das lässt sich nicht einfach auf heutige Lebensverhältnisse übertragen.",
+   "principle": "PRIN-LP-0001",
+   "context": "Deutschsprachige heutige Bibellesende",
+   "confidence": "possible"
+  },
+  {
    "id": "APP-MRK-0001",
    "text": "Eine behauptete Geisteswirkung darf kritisch geprüft werden; das ist nicht automatisch Lästerung des Heiligen Geistes.",
    "limits": "Heutige religiöse Behauptungen sind nicht ohne Weiteres mit Jesu Wirken in Markus gleichzusetzen.",
@@ -8846,6 +9006,48 @@
   }
  ],
  "relations": [
+  {
+   "to": "LUK.11.2-LUK.11.4",
+   "to_de": "Lk 11,2–4",
+   "kind": "parallel_passage",
+   "confidence": "high"
+  },
+  {
+   "to": "MRK.11.25",
+   "to_de": "Mk 11,25",
+   "kind": "parallel_saying",
+   "confidence": "high"
+  },
+  {
+   "to": "MRK.14.36",
+   "to_de": "Mk 14,36",
+   "kind": "related_prayer",
+   "confidence": "probable"
+  },
+  {
+   "to": "MAT.26.41",
+   "to_de": "Mt 26,41",
+   "kind": "related_saying",
+   "confidence": "probable"
+  },
+  {
+   "to": "MAT.18.21-MAT.18.35",
+   "to_de": "Mt 18,21–35",
+   "kind": "thematic",
+   "confidence": "probable"
+  },
+  {
+   "to": "1CH.29.11",
+   "to_de": "1 Chr 29,11",
+   "kind": "background",
+   "confidence": "possible"
+  },
+  {
+   "to": "EXO.16.4",
+   "to_de": "Ex 16,4",
+   "kind": "background",
+   "confidence": "possible"
+  },
   {
    "to": "MAT.12.22-MAT.12.32",
    "to_de": "Mt 12,22–32",
@@ -8866,6 +9068,14 @@
   }
  ],
  "questions": [
+  {
+   "q": "Was bedeutet ἐπιούσιος genau: «täglich», «für den kommenden Tag», «zum Leben nötig» oder etwas anderes?",
+   "finding": "Das Wort ist ausserhalb des Vaterunsers praktisch nicht belegt; die Deutungen stützen sich auf Wortbildung, alte Übersetzungen und frühe Ausleger."
+  },
+  {
+   "q": "Welche Fassung des Vaterunsers steht Jesus näher, und wurde es ursprünglich auf Aramäisch gebetet?",
+   "finding": "Beide Fassungen sind nur griechisch überliefert. Rückübersetzungen ins Aramäische sind Rekonstruktionen."
+  },
   {
    "q": "Setzt der Vorwurf der Schriftgelehrten voraus, dass sie die Wirkung des Heiligen Geistes bewusst als solche erkannt hatten?",
    "finding": "Mk 3,22–30 belegt die Zuschreibung an Beelzebul, nicht ausdrücklich das innere Wissen der Sprecher."

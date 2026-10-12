@@ -60,14 +60,14 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .grc{font-family:var(--serif);font-size:1.05em;letter-spacing:.01em}
 #bible-stream .grc.small{font-size:15px;color:var(--muted);margin:6px 0 0;line-height:1.5}
 #bible-stream .word-table{display:flex;flex-direction:column;gap:10px}
-#bible-stream .word-row{display:grid;grid-template-columns:minmax(7em,auto) 1fr;gap:2px 14px;border-left:2px solid var(--rule);padding-left:12px}
-#bible-stream .word-row .note{grid-column:1/-1}
+#bible-stream .word-row{display:flex;flex-direction:column;gap:2px;border-left:2px solid var(--rule);padding-left:12px}
 #bible-stream .wit-group{border:1px solid var(--rule);padding:12px 14px;display:flex;flex-direction:column;gap:6px}
 #bible-stream .wit-group.main{border-color:var(--ink)}
 #bible-stream .wit-group p{margin:0}
 #bible-stream .wit summary{display:flex;gap:12px;align-items:baseline;cursor:pointer;list-style:none;padding:6px 0;border-top:1px solid var(--soft)}
 #bible-stream .wit summary::-webkit-details-marker{display:none}
 #bible-stream .wit .sig{min-width:2.2em;font:500 17px/1 var(--serif);text-align:center}
+#bible-stream .wit .sig.long{font:500 11px/1.2 var(--ui);color:var(--muted);max-width:3.4em}
 #bible-stream .wit[open] summary{border-bottom:0}
 #bible-stream .wit>p{margin:4px 0 4px 3.3em}
 #bible-stream .sheet a{color:inherit;text-decoration:underline;text-decoration-color:var(--rule)}
@@ -139,7 +139,7 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 <script>
 (()=>{
 const root=document.getElementById('bible-stream');
-const MARKUS=/*__MARKUS__*/null;
+const STUDY=/*__STUDY__*/null;
 const NAV=/*__NAV__*/null;
 const SUMS=/*__SUMMARIES__*/null;
 const BG=/*__BACKGROUND__*/null;
@@ -153,7 +153,7 @@ const ui={
   deeper:['Zu den Testamenten','Zu den Buchgruppen','Zu den Büchern','Zu den Kapiteln','Zu den Abschnitten','Text lesen'],
   noSummary:'Zu diesem Kapitel gibt es noch keine Zusammenfassung.',noPart:'Für diesen Abschnitt gibt es noch keine Zusammenfassung.',placeholder:'Text noch nicht eingebunden',
   verses:'Verse',loadNext:'Weiterlesen',loadPrev:'Früheres anzeigen',end:'Ende',empty:'Kein passendes Buch und keine gültige Bibelstelle.',
-  example:'Ausgearbeitetes Beispiel: Markus 3,20–35',understand:'Diesen Abschnitt verstehen',background:'Hintergrund damals',toSource:'Bis zur Quelle',then:'Damals',more:'Mehr zu Vers',
+  example:'Ausgearbeitet',examples:'Ausgearbeitete Stellen',understand:'Diesen Abschnitt verstehen',background:'Hintergrund damals',toSource:'Bis zur Quelle',then:'Damals',more:'Mehr zu Vers',
   colors:'Farben',auto:'Auto',light:'Hell',dark:'Dunkel',size:'Textgrösse',language:'Sprache der Bedienung',
   advanced:'Urtext und Details',advancedSub:'Für Fortgeschrittene: Griechisch Wort für Wort, Grammatik, Vergleich der Textausgaben, Quellen.',
   inline:'Andere Lesarten im Text zeigen',inlineSub:'Zeigt unter einem Vers, wo alte Handschriften anders lauten.',bgInline:'Hintergrund im Text zeigen',bgInlineSub:'Zeigt unter einem Vers kurze Hinweise auf Zeit, Ort und Kultur damals.',about:'Über diese Fassung'},
@@ -162,7 +162,7 @@ const ui={
   deeper:['Testaments','Book groups','Books','Chapters','Passages','Read the text'],
   noSummary:'No summary for this chapter yet.',noPart:'No summary for this passage yet.',placeholder:'Text not yet available',
   verses:'verses',loadNext:'Continue reading',loadPrev:'Show earlier',end:'End',empty:'No matching book or valid reference.',
-  example:'Worked example: Mark 3:20–35',understand:'Understand this passage',background:'Background then',toSource:'Trace to the source',then:'Back then',more:'More on verse',
+  example:'Worked out',examples:'Worked passages',understand:'Understand this passage',background:'Background then',toSource:'Trace to the source',then:'Back then',more:'More on verse',
   colors:'Colours',auto:'Auto',light:'Light',dark:'Dark',size:'Text size',language:'Interface language',
   advanced:'Original text and details',advancedSub:'For advanced readers: Greek word by word, grammar, edition comparison, sources.',
   inline:'Show other readings in the text',inlineSub:'Shows below a verse where old manuscripts differ.',bgInline:'Show background in the text',bgInlineSub:'Shows short notes on time, place and culture below a verse.',about:'About this version'}};
@@ -171,9 +171,12 @@ const ui={
 const nodes=new Map(),verses=[];
 function add(id,parent,level,de,en,extra={}){const n={id,parent,level,de,en,children:[],...extra};if(extra.b!==undefined)n.canonicalRef=DATA[extra.b].code+(extra.c?'.'+extra.c:'')+(extra.v?'.'+extra.v:'');nodes.set(id,n);if(parent)nodes.get(parent).children.push(id);return n;}
 add('all',null,0,'Die Bibel','The Bible');add('ot','all',1,'Altes Testament','Old Testament');add('nt','all',1,'Neues Testament','New Testament');
-const MRK=DATA.findIndex(b=>b.code==='MRK');
-const partStart=v=>MARKUS.section.parts.find(p=>Number(p.range.split('-')[0].split('.')[2])===v);
-GROUPS.forEach((g,gi)=>{const group=add('g'+gi,gi<5?'ot':'nt',2,g[0],g[1],{gi});for(let b=g[2];b<=g[3];b++){const book=add('b'+b,group.id,3,DATA[b].de,DATA[b].en,{b});DATA[b].counts.forEach((count,c0)=>{const c=c0+1,chapter=add(`c${b}-${c}`,book.id,4,''+c,''+c,{b,c,count});for(let v=1;v<=count;){const part=b===MRK&&c===3?partStart(v):null;const last=part?Number(part.range.split('-')[1].split('.')[2]):Math.min(v+4,b===MRK&&c===3&&v<20?19:count),block=add(part?.id||`s${b}-${c}-${v}`,chapter.id,5,`${v}–${last}`,`${v}–${last}`,{b,c,v,last,part});for(let k=v;k<=last;k++){const n=add(`v${b}-${c}-${k}`,block.id,6,''+k,''+k,{b,c,v:k,vi:verses.length});verses.push(n.id);}v=last+1;}});}});
+const vOf=r=>Number(r.split('.')[2]);
+const rangeOf=r=>{const [a,z]=r.split('-');return {code:a.split('.')[0],c:Number(a.split('.')[1]),from:vOf(a),to:z?vOf(z):vOf(a)};};
+const PARTS={};// 'CODE.c' -> [{part, from, to, section}]
+for(const sec of STUDY.sections)for(const part of sec.parts){const g=rangeOf(part.range);(PARTS[g.code+'.'+g.c]=PARTS[g.code+'.'+g.c]||[]).push({part,from:g.from,to:g.to,section:sec});}
+const SECTION_OF={};for(const sec of STUDY.sections){SECTION_OF[sec.id]=sec;for(const p of sec.parts)SECTION_OF[p.id]=sec;}
+GROUPS.forEach((g,gi)=>{const group=add('g'+gi,gi<5?'ot':'nt',2,g[0],g[1],{gi});for(let b=g[2];b<=g[3];b++){const book=add('b'+b,group.id,3,DATA[b].de,DATA[b].en,{b});DATA[b].counts.forEach((count,c0)=>{const c=c0+1,chapter=add(`c${b}-${c}`,book.id,4,''+c,''+c,{b,c,count});const pilots=PARTS[DATA[b].code+'.'+c]||[];for(let v=1;v<=count;){const hit=pilots.find(x=>x.from===v),part=hit?hit.part:null;const next=Math.min(...pilots.filter(x=>x.from>v).map(x=>x.from),count+1);const last=hit?hit.to:Math.min(v+4,next-1,count),block=add(part?.id||`s${b}-${c}-${v}`,chapter.id,5,`${v}–${last}`,`${v}–${last}`,{b,c,v,last,part});for(let k=v;k<=last;k++){const n=add(`v${b}-${c}-${k}`,block.id,6,''+k,''+k,{b,c,v:k,vi:verses.length});verses.push(n.id);}v=last+1;}});}});
 const streams=Array.from({length:7},()=>[]);for(const n of nodes.values()){n.si=streams[n.level].length;streams[n.level].push(n.id);}
 const stats={books:DATA.length,chapters:DATA.reduce((a,b)=>a+b.counts.length,0),verses:verses.length,blocks:streams[5].length};
 const norm=s=>s.toLowerCase().normalize('NFD').replace(/[̀-ͯ.\s]/g,'');
@@ -209,10 +212,10 @@ const T=()=>ui[lang];
 const bookName=n=>DATA[n.b][lang];
 const sep=()=>lang==='de'?',':':';
 function title(n){if(n.level<3)return n[lang];if(n.level===3)return bookName(n);if(n.level===4)return bookName(n)+' '+n.c;if(n.level===5)return bookName(n)+' '+n.c+sep()+n.v+'–'+n.last;return bookName(n)+' '+n.c+sep()+n.v;}
-const refDe=r=>{const m=r.match(/^MRK\.3\.(\d+)(?:-MRK\.3\.(\d+))?$/);return m?(lang==='de'?'Markus 3,':'Mark 3:')+m[1]+(m[2]?'–'+m[2]:''):r;};
+const refDe=r=>{const g=rangeOf(r),bk=DATA.find(b=>b.code===g.code);if(!bk)return r;return (lang==='de'?bk.de+' '+g.c+',':bk.en+' '+g.c+':')+g.from+(g.to>g.from?'–'+g.to:'');};
 function summary(n){
   if(n.part)return n.part.summary;
-  if(n.level===6)return n.b===MRK&&n.c===3&&MARKUS.de[n.v]?MARKUS.de[n.v]:null;
+  if(n.level===6)return STUDY.de[n.canonicalRef]||null;
   if(n.level===0)return SUMS['SUM-BIBLE']?.text;
   if(n.level===1)return SUMS[n.id==='ot'?'SUM-OT':'SUM-NT']?.text;
   if(n.level===2)return SUMS['SUM-GROUP-'+String(n.gi+1).padStart(2,'0')]?.text;
@@ -221,10 +224,10 @@ function summary(n){
   return null;
 }
 function eyebrow(n){if(n.level===0)return '';const p=nodes.get(n.parent);if(n.level===5)return n.part?refDe(n.part.range):title(p);return title(p);}
-const isPilotVerse=n=>n.level===6&&n.b===MRK&&n.c===3&&MARKUS.de[n.v];
-const altsFor=v=>MARKUS.alternatives.filter(a=>a.verse===v);
-const bgFor=v=>BG.filter(b=>!b.wide&&b.from<=v&&v<=b.to);
-const bgForPart=id=>BG.filter(b=>b.wide||b.subject===id);
+const isPilotVerse=n=>n.level===6&&!!STUDY.de[n.canonicalRef];
+const altsFor=n=>STUDY.alternatives.filter(a=>a.ref===n.canonicalRef);
+const bgFor=n=>BG.filter(b=>!b.wide&&b.chapter===DATA[n.b].code+'.'+n.c&&b.from<=n.v&&n.v<=b.to);
+const bgForPart=id=>BG.filter(b=>b.subject===id||(b.wide&&SECTION_OF[id]&&b.section===SECTION_OF[id].id));
 function bgNote(b,withRef){const L=lang==='de';
   return `<div class="point bg-note" data-bg-note="${esc(b.id)}"><span class="tag">${withRef?esc(b.ref_de)+' · ':''}${esc(CONF[b.confidence]||'')}${b.readers?(L?' · Zeit des Markus':' · time of Mark'):''}</span><p class="bg-topic">${esc(b.topic)}</p><p class="body">${esc(b.text)}</p>${b.uncertain?`<p class="note"><b>${L?'Nicht sicher:':'Uncertain:'}</b> ${esc(b.uncertain)}</p>`:''}${b.evidence.length||b.sources.length?`<p class="note">${L?'Vergleiche':'Compare'}: ${esc([...b.evidence,...b.sources].join(' · '))}</p>`:''}${S.advanced?`<p class="ref-id">${esc(b.id)}</p>`:''}</div>`;}
 const bgDisclaimer=()=>`<p class="note">${lang==='de'?'Hintergrund beschreibt Zeit, Ort und Kultur damals. Er erklärt den Text nicht allein, und ein Teil davon ist unsicher. Alle Hinweise sind Entwürfe und noch nicht fachlich geprüft.':'Background describes time, place and culture then. Drafts, not yet reviewed.'}</p>`;
@@ -240,7 +243,8 @@ function entry(id){
   const text=summary(n);
   const deep=n.children.length?`<button type="button" class="link" data-deep="${id}">${t.deeper[n.level]}${icon('arrow-down')}</button>`:'';
   const study=n.part?`<button type="button" class="link soft" data-study="${id}">${t.understand}</button><button type="button" class="link soft" data-background="${id}">${t.background}</button>`:'';
-  const example=(n.id==='b'+MRK||n.id===`c${MRK}-3`)?`<button type="button" class="example" data-go="${MARKUS.section.parts[0].id}"><span>${t.example}</span>${icon('chevron-right')}</button>`:'';
+  const ex=(n.level===3||n.level===4)?STUDY.sections.filter(sec=>{const g=rangeOf(sec.range);return DATA[n.b].code===g.code&&(n.level===3||n.c===g.c);}):[];
+  const example=ex.map(sec=>`<button type="button" class="example" data-go="${sec.parts[0].id}"><span>${t.example}: ${esc(refDe(sec.range))} · ${esc(sec.title)}</span>${icon('chevron-right')}</button>`).join('');
   const heading=n.level===5&&n.part?n.part.title:(n.level===5?(lang==='de'?'Verse ':'Verses ')+n.v+'–'+n.last:title(n));
   const copy=text?`<p class="stream-copy">${esc(text)}</p>`:`<p class="stream-copy quiet">${n.level===5?t.noPart:t.noSummary}</p>`;
   return `<article class="stream-entry" data-stream="${id}">${eyebrow(n)?`<p class="eyebrow">${esc(eyebrow(n))}</p>`:''}<h2>${esc(heading)}</h2>${copy}${example}<div class="actions">${deep}${study}</div></article>`;
@@ -250,8 +254,8 @@ function verseEntry(n){
   if(n.v===1)lead+=`<h2 class="chapter-head">${esc(bookName(n)+' '+n.c)}</h2>`;
   const p=nodes.get(n.parent);if(p.part&&p.v===n.v)lead+=`<h3 class="part-head">${esc(p.part.title)}</h3>`;
   if(!text)return `<article class="stream-entry verse placeholder" data-stream="${n.id}">${lead}<p class="verse-line"><span class="vno">${n.v}</span><span class="stream-copy">${t.placeholder}</span></p></article>`;
-  const alts=altsFor(n.v);
-  const bgs=bgFor(n.v);
+  const alts=altsFor(n);
+  const bgs=bgFor(n);
   const more=(alts.length||bgs.length||S.advanced)?`<button type="button" class="more" data-more="${n.id}" aria-label="${t.more} ${n.v}">${icon('plus')}</button>`:'';
   const inline=S.inline?alts.map(a=>`<span class="alt-line" data-alternative="${esc(a.variant)}">${lang==='de'?'oder':'or'}: «${esc(a.to)}»</span>`).join(''):'';
   const bgLine=S.bgInline?bgs.filter(b=>b.from===n.v).map(b=>`<button type="button" class="bg-line" data-bg="${esc(b.id)}">${t.then}: ${esc(b.topic)}</button>`).join(''):'';
@@ -292,20 +296,20 @@ const dots=(n,of)=>n==null?'':`<span class="dots" aria-hidden="true">${Array.fro
 const support=(n,of)=>n==null?(lang==='de'?'Einige alte Handschriften lesen so; diese Angabe ist noch nicht geprüft.':'Reported in some old manuscripts; not yet verified.'):(lang==='de'?`Steht in ${n} von ${of} wichtigen Textausgaben.`:`Found in ${n} of ${of} major editions.`);
 
 function verseSheet(id){
-  const n=nodes.get(id),t=T(),alts=altsFor(n.v);
-  let h=head(title(n))+`<p class="body">${esc(MARKUS.de[n.v])}</p>`;
-  const bgs=bgFor(n.v);
+  const n=nodes.get(id),t=T(),alts=altsFor(n);
+  let h=head(title(n))+`<p class="body">${esc(STUDY.de[n.canonicalRef])}</p>`;
+  const bgs=bgFor(n);
   if(bgs.length)h+=`<h4>${t.then}</h4>`+bgs.map(b=>bgNote(b,false)).join('');
   if(alts.length){
     h+=`<h4>${lang==='de'?'Andere Lesarten':'Other readings'}</h4><p class="note">${lang==='de'?'Die alten Handschriften stimmen hier nicht ganz überein. Die Möglichkeiten stehen nebeneinander; niemand entscheidet für dich, welche «richtig» ist.':'Old manuscripts differ here. The options stand side by side.'}</p>`;
     h+=alts.map(a=>`<div class="pair" data-alternative="${esc(a.variant)}"><div class="reading-card main"><span class="tag">${lang==='de'?'Im Lesetext':'In the text'}</span><span class="body">«${esc(a.from)}»</span><span class="note">${dots(a.base_support,a.of)}${a.base_support!=null?support(a.base_support,a.of):(lang==='de'?'So steht es in den verglichenen Textausgaben.':'As in the compared editions.')}</span></div><div class="reading-card"><span class="tag">${lang==='de'?'Andere Lesart':'Other reading'}</span><span class="body">«${esc(a.to)}»</span><span class="note">${dots(a.support,a.of)}${support(a.support,a.of)}</span></div><p class="note">${esc(a.note||'')}</p><button type="button" class="link" data-source="${esc(a.variant)}" data-verse="${n.id}">${t.toSource}${icon('arrow-down')}</button></div>`).join('');
   }
   if(S.advanced){
-    const words=MARKUS.words.filter(w=>w.v===n.v),vars=MARKUS.variants.filter(v=>v.ref===n.canonicalRef);
-    h+=`<h4>${lang==='de'?'Griechisch Wort für Wort':'Greek word by word'}</h4><div class="il">${words.map(w=>{const m=w.mac,d=MARKUS.tok_de[w.id];const de=d?(d.target===null?'·':(d.first?d.target:'″')):(m.gloss_berean||'');const form=['person','tense','voice','mood','case','number','gender'].map(k=>m[k]&&GR[k][m[k]]).filter(Boolean).join(', ');
-      return `<details><summary><span class="g">${esc(w.text.replace(/[⸀-⸅]/g,''))}</span><span class="d">${esc(de)}</span><span class="e">${esc(m.gloss_berean||'')}</span></summary><dl class="kv"><dt>Grundform</dt><dd>${esc(m.lemma||'')} · ${w.freq}× in Markus</dd><dt>Wortart</dt><dd>${esc(POS[m.pos]||m.pos||'')}</dd>${form?`<dt>Form</dt><dd>${esc(form)}</dd>`:''}${m.role?`<dt>Satzrolle</dt><dd>${esc(ROLE[m.role]||m.role)}</dd>`:''}${d&&d.note?`<dt>Hinweis</dt><dd>${esc(d.note)}</dd>`:''}${w.mgnt?`<dt>MorphGNT</dt><dd>${esc(w.mgnt.lemma)} · ${esc(w.mgnt.parsing)}</dd>`:''}</dl><p class="ref-id">${esc(w.id)}</p></details>`;}).join('')}</div>`;
+    const words=STUDY.words.filter(w=>w.ref===n.canonicalRef),vars=STUDY.variants.filter(v=>v.ref===n.canonicalRef);
+    h+=`<h4>${lang==='de'?'Griechisch Wort für Wort':'Greek word by word'}</h4><div class="il">${words.map(w=>{const m=w.mac,d=STUDY.tok_de[w.id];const de=d?(d.target===null?'·':(d.first?d.target:'″')):(m.gloss_berean||'');const form=['person','tense','voice','mood','case','number','gender'].map(k=>m[k]&&GR[k][m[k]]).filter(Boolean).join(', ');
+      return `<details><summary><span class="g">${esc(w.text.replace(/[⸀-⸅]/g,''))}</span><span class="d">${esc(de)}</span><span class="e">${esc(m.gloss_berean||'')}</span></summary><dl class="kv"><dt>Grundform</dt><dd>${esc(m.lemma||'')} · ${w.freq}× in ${esc(DATA[n.b].de)}</dd><dt>Wortart</dt><dd>${esc(POS[m.pos]||m.pos||'')}</dd>${form?`<dt>Form</dt><dd>${esc(form)}</dd>`:''}${m.role?`<dt>Satzrolle</dt><dd>${esc(ROLE[m.role]||m.role)}</dd>`:''}${d&&d.note?`<dt>Hinweis</dt><dd>${esc(d.note)}</dd>`:''}${w.mgnt?`<dt>MorphGNT</dt><dd>${esc(w.mgnt.lemma)} · ${esc(w.mgnt.parsing)}</dd>`:''}</dl><p class="ref-id">${esc(w.id)}</p></details>`;}).join('')}</div>`;
     if(vars.length)h+=`<h4>${lang==='de'?'Vergleich der Textausgaben':'Edition comparison'}</h4><p class="note">${lang==='de'?'Vergleich gedruckter Textausgaben laut SBLGNT-Apparat. Keine Handschriftenzählung.':'Comparison of printed editions (SBLGNT apparatus). Not a manuscript count.'}</p>`+vars.map(v=>`<div class="point">${v.readings.map(r=>{const a=(v.assessment||[]).find(x=>x.reading===r.id);return `<p><span class="body">${esc(r.text)}</span> <span class="note">${a?esc(a.editions.map(e=>ED[e]).join(', '))+` (${a.support}/${a.of})`:esc((r.witnesses||[]).join(', ')+(lang==='de'?' · berichtet, ungeprüft':' · reported, unverified'))}</span></p>`;}).join('')}<p class="ref-id">${esc(v.id)}</p></div>`).join('');
-    h+=sourcesBlock()+`<p class="ref-id">${esc(MARKUS.de_source[n.v])}</p>`;
+    h+=sourcesBlock()+`<p class="ref-id">${esc(STUDY.de_source[n.canonicalRef])}</p>`;
   }else{
     h+=`<p class="note">${lang==='de'?'Griechischer Text, Grammatik und Quellen: im Menü «Urtext und Details» einschalten.':'Greek text, grammar and sources: turn on “Original text and details” in the menu.'}</p>`;
   }
@@ -314,7 +318,7 @@ function verseSheet(id){
 }
 const gnorm=x=>String(x||'').normalize('NFD').replace(/[\u0300-\u036f\u02bc\u2019']/g,'').toLowerCase().replace(/ς/g,'σ');
 function sourceSheet(vid,verseId){
-  const L=lang==='de',n=nodes.get(verseId),a=altsFor(n.v).find(x=>x.variant===vid),ex=SRC.alts[vid]||{words:{},origin:[],related:[]};
+  const L=lang==='de',n=nodes.get(verseId),a=altsFor(n).find(x=>x.variant===vid),ex=SRC.alts[vid]||{words:{},origin:[],related:[]};
   const mv=(ex.related&&ex.related[0])||vid,mvar=SRC.variants[mv]||SRC.variants[vid],evar=SRC.variants[vid];
   const allWords=Object.entries(ex.words||{});
   const wordFor=text=>{const t=gnorm(text);const hit=allWords.find(([k,ws])=>ws.some(w=>w.grc!=='—'&&t.includes(gnorm(w.grc))));return hit?hit[1]:null;};
@@ -327,11 +331,11 @@ function sourceSheet(vid,verseId){
   // Handschriften
   const rows=(SRC.readings[mv]||[]).filter(e=>SRC.witnesses[e.source]);
   if(rows.length){
-    h+=`<h4>${L?'Was die alten Handschriften lesen':'What the old manuscripts read'}</h4><p class="note">${L?'Die ältesten erhaltenen Bibelhandschriften, die hier ausgewertet sind (4. und 5. Jahrhundert). Darunter jeweils ihr Wortlaut in griechischen Kleinbuchstaben, ohne Akzente, wie in der Transkription.':'The oldest manuscripts evaluated here (4th–5th century).'}</p>`;
-    const groups=[...mvar.readings.map(r=>({key:r.id,title:labelFor(r),grc:r.text,main:isMain(r)})),{key:'other',title:L?'liest anders':'reads differently'},{key:'unclear',title:L?'nicht eindeutig zuzuordnen':'unclear'},{key:'lacuna',title:L?'Stelle nicht erhalten':'not preserved'}];
+    h+=`<h4>${L?'Was die alten Handschriften lesen':'What the old manuscripts read'}</h4><p class="note">${L?'Die alten Textzeugen, die hier ausgewertet sind: grosse Bibelhandschriften und, wo vorhanden, Papyri und Amulette. Aufklappen zeigt ihren Wortlaut in griechischen Kleinbuchstaben ohne Akzente, wie in der Transkription.':'The old witnesses evaluated here: major manuscripts and, where available, papyri and amulets.'}</p>`;
+    const groups=[...mvar.readings.map(r=>({key:r.id,title:labelFor(r),grc:r.text,main:isMain(r)})),{key:'other',title:(L?'liest anders':'reads differently')+((ex.words&&ex.words.other)?(L?', z. B. ':', e.g. ')+ex.words.other.map(w=>w.grc+' «'+w.de+'»').join(', '):'')},{key:'unclear',title:L?'nicht eindeutig zuzuordnen':'unclear'},{key:'lacuna',title:L?'Stelle nicht erhalten':'not preserved'}];
     for(const g of groups){const es=rows.filter(e=>e.result===g.key);if(!es.length)continue;
-      h+=`<div class="wit-group ${g.main?'main':''}"><span class="tag">${g.main?(L?'Wie im Lesetext':'As in the text'):(g.key.startsWith('R')?(L?'Andere Lesart':'Other reading'):'')}</span>${g.grc?`<p><span class="grc">${esc(g.grc)}</span> <span class="body">${esc(g.title)}</span></p>`:`<p class="body">${esc(g.title)}</p>`}<p class="note">${es.length} ${L?(es.length===1?'Handschrift':'Handschriften'):'manuscripts'}</p>`+es.map(e=>{const w=SRC.witnesses[e.source];const hand=e.hand==='corr'?(L?' · korrigierte Fassung':' · corrected'):(rows.some(x=>x.source===e.source&&x.hand==='corr')?(L?' · ursprüngliche Fassung':' · original hand'):'');
-        return `<details class="wit"><summary><span class="sig">${esc(w.symbol)}</span><span><b>${esc(w.name_de)}</b><span class="note"> · ${esc(w.date_de)}${hand}</span></span></summary>${e.witness_text?`<p class="grc small">${esc(e.witness_text.replace(/[~+=%^]/g,''))}</p>`:''}${e.damaged?`<p class="note">${L?'Die Stelle ist beschädigt; einzelne Buchstaben fehlen.':'Damaged.'}</p>`:''}${e.supplied?`<p class="note">${L?'Teile des Wortlauts sind unsicher oder ergänzt.':'Partly supplied.'}</p>`:''}${e.note_de?`<p class="note">${esc(e.note_de)}</p>`:''}<p class="note">${esc(w.about_de||'')} ${esc(w.material_de||'')}. ${esc(w.location_de||'')}.</p><p class="note">${(w.facsimile||[]).map(u=>`<a href="${esc(u)}" target="_blank" rel="noopener">${L?'Digitale Abbildung':'Images'}</a>`).join(' · ')}${w.catalog_url?`${(w.facsimile||[]).length?' · ':''}<a href="${esc(w.catalog_url)}" target="_blank" rel="noopener">${L?'Katalog (NTVMR)':'Catalogue (NTVMR)'}</a>`:''}</p>${S.advanced?`<p class="ref-id">GA ${esc(w.gregory_aland)} · ${esc(e.source)}</p>`:''}</details>`;}).join('')+`</div>`;}
+      h+=`<div class="wit-group ${g.main?'main':''}"><span class="tag">${g.main?(L?'Wie im Lesetext':'As in the text'):(g.key.startsWith('R')?(L?'Andere Lesart':'Other reading'):'')}</span>${g.grc?`<p><span class="grc">${esc(g.grc)}</span> <span class="body">${esc(g.title)}</span></p>`:`<p class="body">${esc(g.title)}</p>`}<p class="note">${es.length} ${L?(es.length===1?'Textzeuge':'Textzeugen'):'witnesses'}</p>`+es.map(e=>{const w=SRC.witnesses[e.source];const hand=e.hand==='corr'?(L?' · korrigierte Fassung':' · corrected'):(rows.some(x=>x.source===e.source&&x.hand==='corr')?(L?' · ursprüngliche Fassung':' · original hand'):'');
+        return `<details class="wit"><summary><span class="sig${String(w.symbol).length>3?' long':''}">${esc(w.symbol)}</span><span><b>${esc(w.name_de)}</b><span class="note"> · ${esc(w.date_de)}${hand}</span></span></summary>${e.witness_text?`<p class="grc small">${esc(e.witness_text.replace(/[~+=%^]/g,''))}</p>`:''}${e.damaged?`<p class="note">${L?'Die Stelle ist beschädigt; einzelne Buchstaben fehlen.':'Damaged.'}</p>`:''}${e.supplied?`<p class="note">${L?'Teile des Wortlauts sind unsicher oder ergänzt.':'Partly supplied.'}</p>`:''}${e.note_de?`<p class="note">${esc(e.note_de)}</p>`:''}<p class="note">${esc(w.about_de||'')} ${esc(w.material_de||'')}. ${esc(w.location_de||'')}.</p><p class="note">${(w.facsimile||[]).map(u=>`<a href="${esc(u)}" target="_blank" rel="noopener">${L?'Digitale Abbildung':'Images'}</a>`).join(' · ')}${w.catalog_url?`${(w.facsimile||[]).length?' · ':''}<a href="${esc(w.catalog_url)}" target="_blank" rel="noopener">${L?'Katalog (NTVMR)':'Catalogue (NTVMR)'}</a>`:''}</p>${S.advanced?`<p class="ref-id">GA ${esc(w.gregory_aland)} · ${esc(e.source)}</p>`:''}</details>`;}).join('')+`</div>`;}
     const rep=mvar.readings.filter(r=>r.reported&&r.reported.length);
     if(rep.length){const sym=x=>(x.match(/\(([^)]+)\)/)||[])[1];const diff=[];
       for(const r of rep)for(const w of r.reported){const sy=sym(w);const hit=rows.find(e=>e.hand==='first'&&SRC.witnesses[e.source].symbol===sy);if(hit&&hit.result!==r.id)diff.push(w);}
@@ -350,22 +354,21 @@ function sourceSheet(vid,verseId){
   if(ex.origin&&ex.origin.length)h+=`<h4>${L?'Wie kann der Unterschied entstanden sein?':'How might the difference have arisen?'}</h4><p class="note">${L?'Mögliche Erklärungen aus der Textforschung. Sie stehen nebeneinander; keine ist entschieden.':'Possible explanations; none decided.'}</p>`+ex.origin.map(o=>`<div class="point"><p class="body">${esc(o)}</p></div>`).join('');
   // Sicherheit
   if(rows.length){const main=rows.filter(e=>e.hand==='first'&&mvar.readings.some(r=>r.id===e.result&&isMain(r))).length,tot=new Set(rows.filter(e=>e.result!=='lacuna').map(e=>e.source)).size;
-    h+=`<h4>${L?'Wie sicher ist das?':'How certain?'}</h4><div class="point"><p class="body">${a.base_support!=null?(L?'Lesetext: ':'Text: ')+esc(support(a.base_support,a.of))+' ':''}${L?`Von ${tot} alten Handschriften, in denen die Stelle erhalten ist, haben ${main} den Wortlaut des Lesetexts (Erstschrift).`:`${main} of ${tot} old manuscripts have the wording of the text.`}</p><p class="note">${L?'Beide Zahlen zählen nur, sie gewichten nicht. Die Auswahl ist klein; spätere Handschriften, alte Übersetzungen (lateinisch, syrisch, koptisch) und Zitate der Kirchenväter fehlen noch. Die Zuordnung der Handschriften ist maschinell und nicht am Original geprüft.':'Counts only; small selection; machine collation.'}</p></div>`;}
+    h+=`<h4>${L?'Wie sicher ist das?':'How certain?'}</h4><div class="point"><p class="body">${a.base_support!=null?(L?'Lesetext: ':'Text: ')+esc(support(a.base_support,a.of))+' ':''}${L?`Von ${tot} alten Textzeugen, in denen die Stelle erhalten ist, haben ${main} den Wortlaut des Lesetexts (Erstschrift).`:`${main} of ${tot} old witnesses have the wording of the text.`}</p><p class="note">${L?'Beide Zahlen zählen nur, sie gewichten nicht. Die Auswahl ist klein; Amulette geben das Gebet oft frei und nach Gehör wieder; spätere Handschriften, alte Übersetzungen (lateinisch, syrisch, koptisch) und Zitate der Kirchenväter fehlen noch. Die Zuordnung der Handschriften ist maschinell und nicht am Original geprüft.':'Counts only; small selection; machine collation.'}</p></div>`;}
   h+=`<p class="note">${esc(SRC.attribution)}</p><button type="button" class="link soft" data-more="${n.id}">${L?'Zurück zum Vers':'Back to the verse'}</button>`;
   openSheet('source',h);
 }
-function sourcesBlock(){return `<h4>${lang==='de'?'Quellen':'Sources'}</h4><p class="note">Griechischer Text und Apparat: SBL Greek New Testament, © 2010 Society of Biblical Literature und Logos Bible Software, CC BY 4.0. Sprachdaten: MACULA Greek Linguistic Datasets, available at https://github.com/Clear-Bible/macula-greek/ (CC BY 4.0); Glossen: Berean Interlinear (gemeinfrei), Cherith Glosses von Andi Wu, © 2023 Cherith Analytics (CC BY 4.0). Zweite Annotation 3,22–30: MorphGNT 6.12, J. K. Tauber (CC BY-SA 3.0). Übersetzung und Erklärungen: eigene Entwürfe (CC0), fachlich ungeprüft.</p><p class="note">${esc(MARKUS.method.name)}: ${esc(MARKUS.method.limits.join(' '))}</p>`;}
+function sourcesBlock(){return `<h4>${lang==='de'?'Quellen':'Sources'}</h4><p class="note">Griechischer Text und Apparat: SBL Greek New Testament, © 2010 Society of Biblical Literature und Logos Bible Software, CC BY 4.0. Sprachdaten: MACULA Greek Linguistic Datasets, available at https://github.com/Clear-Bible/macula-greek/ (CC BY 4.0); Glossen: Berean Interlinear (gemeinfrei), Cherith Glosses von Andi Wu, © 2023 Cherith Analytics (CC BY 4.0). Zweite Annotation 3,22–30: MorphGNT 6.12, J. K. Tauber (CC BY-SA 3.0). Übersetzung und Erklärungen: eigene Entwürfe (CC0), fachlich ungeprüft.</p><p class="note">${esc(STUDY.method.name)}: ${esc(STUDY.method.limits.join(' '))}</p>`;}
 function studySheet(partId){
-  const part=nodes.get(partId).part,subjects=[part.id,MARKUS.section.id],L=lang==='de';
-  const fs=MARKUS.findings.filter(x=>subjects.includes(x.subject)),is=MARKUS.interpretations.filter(x=>subjects.includes(x.subject));
+  const part=nodes.get(partId).part,sec=SECTION_OF[partId],subjects=[part.id,sec.id],L=lang==='de';
+  const fs=STUDY.findings.filter(x=>subjects.includes(x.subject)),is=STUDY.interpretations.filter(x=>subjects.includes(x.subject));
   let h=head(part.title)+`<p class="note">${esc(refDe(part.range))}</p>`;
   h+=`<h4>${L?'Was steht da?':'What does it say?'}</h4>`+fs.map(f=>`<div class="point"><p class="body">${esc(plain(f.claim))}</p>${S.advanced&&f.caveat?`<p class="note">${esc(f.caveat)}</p>`:''}${S.advanced?`<p class="ref-id">${esc(f.id)}</p>`:''}</div>`).join('');
   h+=`<h4>${L?'Wie kann man es verstehen?':'How can it be understood?'}</h4>`+(is.length>1?`<p class="note">${L?'Hier gibt es mehr als eine Sichtweise.':'There is more than one view.'}</p>`:'')+is.map(i=>`<div class="point"><span class="tag">${CONF[i.confidence]||''}</span><p class="body">${esc(plain(i.claim))}</p>${i.caveat?`<p class="note"><b>${L?'Nicht sicher:':'Uncertain:'}</b> ${esc(plain(i.caveat))}</p>`:''}${(i.counter||[]).map(c=>`<p class="note"><b>${L?'Man kann auch anders lesen:':'Another reading:'}</b> ${esc(plain(c))}</p>`).join('')}${S.advanced?`<p class="ref-id">${esc(i.id)}</p>`:''}</div>`).join('');
-  if(part.id==='TU-MRK-003-022-030'){
-    h+=`<h4>${L?'Was kann es heute bedeuten?':'What might it mean today?'}</h4>`+MARKUS.applications.map(a=>`<div class="point"><p class="body">${esc(a.text)}</p><p class="note"><b>${L?'Grenze:':'Limit:'}</b> ${esc(a.limits)}</p></div>`).join('')+MARKUS.principles.map(p=>`<div class="point"><span class="tag">${L?'abgeleiteter Grundsatz':'derived principle'} · ${CONF[p.confidence]||''}</span><p class="body">${esc(p.text)}</p><p class="note">${L?'Dieser Grundsatz geht weiter, als der Text selbst sagt. Er ist eine Folgerung, kein Befund.':'This principle goes beyond what the text itself says.'}</p></div>`).join('');
-    h+=`<h4>${L?'Eine offene Frage':'An open question'}</h4>`+MARKUS.questions.map(q=>`<div class="point"><p class="body">${esc(q.q)}</p><p class="note">${esc(q.finding)}</p></div>`).join('');
-    h+=`<h4>${L?'Ähnliche Stellen':'Related passages'}</h4><p class="body">${MARKUS.relations.map(r=>esc(r.to_de)).join(' · ')}</p>`;
-  }
+  const aps=STUDY.applications.filter(a=>subjects.includes(a.subject)),prs=STUDY.principles.filter(p=>subjects.includes(p.subject)),qs=STUDY.questions.filter(q=>subjects.includes(q.subject)),rls=STUDY.relations.filter(r=>subjects.includes(r.from));
+  if(aps.length||prs.length)h+=`<h4>${L?'Was kann es heute bedeuten?':'What might it mean today?'}</h4>`+aps.map(a=>`<div class="point"><p class="body">${esc(a.text)}</p><p class="note"><b>${L?'Grenze:':'Limit:'}</b> ${esc(a.limits)}</p></div>`).join('')+prs.map(p=>`<div class="point"><span class="tag">${L?'abgeleiteter Grundsatz':'derived principle'} · ${CONF[p.confidence]||''}</span><p class="body">${esc(p.text)}</p><p class="note">${L?'Dieser Grundsatz geht weiter, als der Text selbst sagt. Er ist eine Folgerung, kein Befund.':'This principle goes beyond what the text itself says.'}</p></div>`).join('');
+  if(qs.length)h+=`<h4>${L?(qs.length>1?'Offene Fragen':'Eine offene Frage'):'Open questions'}</h4>`+qs.map(q=>`<div class="point"><p class="body">${esc(q.q)}</p><p class="note">${esc(q.finding)}</p></div>`).join('');
+  if(rls.length)h+=`<h4>${L?'Ähnliche Stellen':'Related passages'}</h4><p class="body">${[...new Set(rls.map(r=>r.to_de))].map(esc).join(' · ')}</p>`;
   h+=`<p class="note">${L?'Alle Beobachtungen und Deutungen sind Entwürfe und noch nicht fachlich geprüft.':'All notes are drafts, not yet reviewed.'}</p><div class="actions"><button type="button" class="link soft" data-background="${partId}">${T().background}</button></div>`;
   openSheet('study',h);
 }
@@ -373,15 +376,15 @@ function menuSheet(){
   const t=T(),seg=(key,opts,val)=>`<div class="seg" role="group">${opts.map(([v,l])=>`<button type="button" data-set="${key}" data-value="${v}" aria-pressed="${String(val)===String(v)}">${l}</button>`).join('')}</div>`;
   const sw=(key,label,sub)=>`<div class="set"><span>${label}<span class="sub">${sub}</span></span><button type="button" class="switch" role="switch" aria-checked="${S[key]}" data-toggle="${key}" aria-label="${label}"></button></div>`;
   openSheet('menu',head(t.menu,t.done)+`<label for="find-${appIndex}" class="note">${t.search}</label><input id="find-${appIndex}" type="search" placeholder="${t.hint}" value="${esc(query)}" autocomplete="off"><div class="results"></div>
-  <button type="button" class="row" data-go="${MARKUS.section.parts[0].id}"><span>${t.example}</span>${icon('chevron-right')}</button>
+  <p class="note">${t.examples}</p>${STUDY.sections.map(sec=>`<button type="button" class="row" data-go="${sec.parts[0].id}"><span>${esc(refDe(sec.range))} · ${esc(sec.title)}</span>${icon('chevron-right')}</button>`).join('')}
   <button type="button" class="row" data-go="all"><span>${t.home}</span>${icon('chevron-right')}</button>
   <div class="set"><span>${t.colors}</span>${seg('theme',[['auto',t.auto],['light',t.light],['dark',t.dark]],S.theme)}</div>
   <div class="set"><span>${t.size}</span>${seg('read',[[17,'A−'],[19,'A'],[22,'A+']],S.read)}</div>
   <div class="set"><span>${t.language}</span>${seg('lang',[['de','Deutsch'],['en','English']],lang)}</div>
   ${sw('inline',t.inline,t.inlineSub)}${sw('bgInline',t.bgInline,t.bgInlineSub)}${sw('advanced',t.advanced,t.advancedSub)}
   <details class="about"><summary>${t.about}</summary><div>
-   <p>${lang==='de'?'Ein Prototyp. Zusammenfassungen, Übersetzung und Erklärungen sind KI-Entwürfe und noch nicht fachlich geprüft. Ausgearbeitet ist bisher Markus 3,20–35; an anderen Stellen fehlt der Bibeltext noch.':'A prototype. Summaries, translation and notes are AI drafts, not yet reviewed. Only Mark 3:20–35 is worked out so far.'}</p>
-   <p>${lang==='de'?'Bücher, Kapitel und Verszählung folgen vorläufig dem protestantischen Kanon mit 66 Büchern und der Zählung der King-James-Bibel (Testkonfiguration). Abschnitte ausserhalb von Markus 3 umfassen der Einfachheit halber je bis zu fünf Verse.':'Books and verse numbering follow the 66-book Protestant canon with KJV numbering for now.'}</p>
+   <p>${lang==='de'?'Ein Prototyp. Zusammenfassungen, Übersetzung und Erklärungen sind KI-Entwürfe und noch nicht fachlich geprüft. Ausgearbeitet sind bisher '+STUDY.sections.map(x=>refDe(x.range)).join(', ')+'; an anderen Stellen fehlt der Bibeltext noch.':'A prototype. Summaries, translation and notes are AI drafts, not yet reviewed. Worked out so far: '+STUDY.sections.map(x=>refDe(x.range)).join(', ')+'.'}</p>
+   <p>${lang==='de'?'Bücher, Kapitel und Verszählung folgen vorläufig dem protestantischen Kanon mit 66 Büchern und der Zählung der King-James-Bibel (Testkonfiguration). Abschnitte ausserhalb der ausgearbeiteten Stellen umfassen der Einfachheit halber je bis zu fünf Verse.':'Books and verse numbering follow the 66-book Protestant canon with KJV numbering for now.'}</p>
    <p>${stats.books} ${lang==='de'?'Bücher':'books'} · ${stats.chapters.toLocaleString(lang)} ${lang==='de'?'Kapitel':'chapters'} · ${stats.verses.toLocaleString(lang)} ${t.verses}</p>
    ${sourcesBlock()}</div></details>`);
   renderResults();
@@ -422,7 +425,7 @@ reader.addEventListener('scroll',()=>{if(busy)return;busy=true;
   busy=false;},{passive:true});
 render();
 });
-if(globalThis.__BIBLE_TEST__)globalThis.__BIBLE_TEST__({nodes,verses,stats,search,sibling,ancestors,streams,BOOK_SUMMARIES,MARKUS,BG});
+if(globalThis.__BIBLE_TEST__)globalThis.__BIBLE_TEST__({nodes,verses,stats,search,sibling,ancestors,streams,BOOK_SUMMARIES,STUDY,BG});
 })();
 </script>
 </body></html>

@@ -2,15 +2,15 @@
 
 Git-versionierter Bibel-Wissensfundus: Quellen, Textbefunde, konkurrierende Interpretationen, Prinzipien und kontextabhängige Anwendungen nachvollziehbar miteinander verbinden.
 
-**Stand: 12. Oktober 2026 · UI v0.15 (Lesestrom) · Markusevangelium; Pilotstudie Markus 3,20–35.**
+**Stand: 12. Oktober 2026 · UI v0.16 (Lesestrom) · Matthäus, Markus, Lukas; ausgearbeitet: Markus 3,20–35 und das Vaterunser (Mt 6,5–15; Lk 11,1–4).**
 
-Dies ist der Konzept- und Datenprototyp, noch keine fertige Benutzer-App. Vorhanden sind 1154 strukturierte Datensätze, darunter:
+Dies ist der Konzept- und Datenprototyp, noch keine fertige Benutzer-App. Vorhanden sind 3367 strukturierte Datensätze, darunter:
 - der **ganze griechische Text des Markusevangeliums** (SBLGNT, 11 286 Wörter mit stabilen IDs) mit Lemma, Morphologie, Syntaxrollen, Referenten und Glossen aus MACULA Greek als eigener Annotationsschicht,
 - **929 Variantenstellen** auf Editionsebene aus dem SBLGNT-Apparat, an die Wörter gebunden, jede mit einer maschinell berechneten **Gesichertheitsbewertung** (Übereinstimmung der Editionen, Methode offengelegt),
 - die Pilotstudie Mk 3,22–30 mit Befunden, Deutungen, Prinzip, Anwendung und einer vollständigen deutschen Arbeitsübersetzung mit Wortzuordnung (KI-Entwurf, ungeprüft),
 - eine einheitliche Bibelstellen-Konvention, ein generisches Schema und ein Validator.
 
-**Hauptrichtung: der [Lesestrom](app/reading-stream/index.html)** – eine eigenständige HTML-Datei zum Öffnen im Browser. Man liest die Bibel auf jeder Ebene fortlaufend (ganze Bibel, Testamente, Buchgruppen, Bücher, Kapitel, Abschnitte, Verse) und taucht an jeder Stelle eine Stufe tiefer. Der Lesestrom ist für Leserinnen und Leser ohne Griechisch und Hebräisch gemacht: Lesarten (auf Wunsch bis zu den alten Handschriften), Hintergrund zur Zeit damals, Erklärungen und Quellen öffnen sich nur auf Wunsch; Urtext und Grammatik gibt es im Modus «Urtext und Details». Ausgearbeitet ist bisher Markus 3,20–35; sonst gibt es vorerst das Gerüst und ungeprüfte Zusammenfassungen. [Bedienung, Daten und Grenzen](docs/LESETIEFE-PROTOTYP.md).
+**Hauptrichtung: der [Lesestrom](app/reading-stream/index.html)** – eine eigenständige HTML-Datei zum Öffnen im Browser. Man liest die Bibel auf jeder Ebene fortlaufend (ganze Bibel, Testamente, Buchgruppen, Bücher, Kapitel, Abschnitte, Verse) und taucht an jeder Stelle eine Stufe tiefer. Der Lesestrom ist für Leserinnen und Leser ohne Griechisch und Hebräisch gemacht: Lesarten (auf Wunsch bis zu den alten Handschriften), Hintergrund zur Zeit damals, Erklärungen und Quellen öffnen sich nur auf Wunsch; Urtext und Grammatik gibt es im Modus «Urtext und Details». Ausgearbeitet sind bisher Markus 3,20–35 und das Vaterunser (Mt 6,5–15; Lk 11,1–4); sonst gibt es vorerst das Gerüst und ungeprüfte Zusammenfassungen. [Bedienung, Daten und Grenzen](docs/LESETIEFE-PROTOTYP.md).
 
 Der frühere Studienprototyp `app/prototype/mk3-20-35.html` (v0.9/v0.10) ist abgelöst und bleibt nur als Zwischenstand erhalten. SQLite-Projektion und Handschriftenbelege fehlen noch.
 
@@ -69,6 +69,9 @@ git clone https://github.com/Center-for-New-Testament-Restoration/transcriptions
 python3 scripts/import_cntr_transcriptions.py MRK transcriptions \
   --upstream-commit 4e743a41a4b2ca010ece53229cd272aa59b1efe6
 python3 scripts/collate_witnesses.py "Mk 3,20–35"
+python3 scripts/collate_witnesses.py "Mt 6,5–15"; python3 scripts/collate_witnesses.py "Lk 11,1–4"
+# Studieninhalte Vaterunser (Ersterstellung, KI-Entwurf)
+python3 scripts/authoring/vaterunser.py
 ```
 
 Die Importer schreiben Quelle, Upstream-Commit, SHA-256, Lizenz und Importdatum in die Datensätze und brechen bei unsicherer Zuordnung ab bzw. führen nicht zuordenbare Einträge in `reports/` auf, statt sie zu raten. `scripts/import_morphgnt.py` ist der frühere Pilot-Importer (v0.6) und wird nur noch durch `scripts/test_import.py` geprüft.
