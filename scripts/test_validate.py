@@ -60,10 +60,20 @@ def bad_ref(root):
     write(p, d)
 
 
+def bad_background(root):
+    p = root / "data/background/BG-MRK-0001.json"
+    d = json.loads(p.read_text())
+    d["context"] = "TU-MRK-003-020-035"
+    del d["text_de"]
+    write(p, d)
+
+
 baseline = run(ROOT)
 assert baseline.returncode == 0, baseline.stdout + baseline.stderr
 case("Kern verweist auf NC", core_refs_nc, "verweist aus dem freien Kern auf NC-Datensatz")
 case("Annotation fremdes Token", bad_annotation, "das nicht in TOKSET-SBLGNT-MRK-001 liegt")
 case("Bewertung unbekannte Lesart", bad_assessment, "unbekannte Lesart")
 case("Bibelstelle nicht kanonisch", bad_ref, "to_ref")
-print("PASS: validator negative tests (NC-Trennung, Annotation, Bewertung, Bibelstelle)")
+case("Hintergrundnotiz ohne Text", bad_background, "background_note ohne text_de")
+case("Hintergrundnotiz ohne Kontext", bad_background, "ist kein context-Datensatz")
+print("PASS: validator negative tests (NC-Trennung, Annotation, Bewertung, Bibelstelle, Hintergrund)")

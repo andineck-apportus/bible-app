@@ -1,6 +1,6 @@
 # Datenmodell: Ist-Stand und Ziel
 
-## Vorhandene Objekte in v0.13
+## Vorhandene Objekte in v0.14
 
 | Ordner | `type` | Anzahl | Aufgabe |
 |---|---|---:|---|
@@ -22,16 +22,17 @@
 | alignments | alignment | 2 | Wort-/Phrasenzuordnungen; Mk 3,22–30 vollständig über Token-IDs (`coverage: complete`) |
 | interpretations | interpretation | 3 | Alternative Verständnisse |
 | principles | principle | 1 | Abgeleitetes Prinzip |
-| contexts | context | 2 | Historischer und heutiger Kontext |
+| contexts | context | 3 | Historischer Kontext (Galiläa um 30; erste Leserschaft des Markus um 70) und heutiger Kontext |
 | applications | application | 1 | Kontextabhängige Anwendung |
 | topics | topic | 2 | Inhaltliche Themen |
 | relations | relation | 3 | Beziehungen zu Parallelstellen |
 | questions | open_question | 1 | Offene Forschungsfrage |
-| tags | tag | 6 | Kontrollierte Tags |
+| tags | tag | 7 | Kontrollierte Tags |
 | navigation | navigation_structure | 1 | Kanon- und Zählgerüst für die Navigation: Testamente, Buchgruppen, Bücher mit Versen je Kapitel (protestantischer Kanon, KJV-Zählung als Testkonfiguration) |
+| background | background_note | 13 | Hintergrund damals zu Mk 3,20–35: Zeit, Ort, Kultur, Religion; je mit `context`, `subject`, `reference`, `topic_de`, `text_de`, `confidence`, optional `uncertain_de`, `evidence_refs` (Bibelstellen) und `sources_de` (ausserbiblische Fundstellen, nur zitiert) |
 | summaries | summary | 83 | Zusammenfassungen je Ebene (Bibel, Testament, Gruppe, Buch, Kapitel); `scope`, `reference`, `group`, `text_de`; alle `draft` |
 
-Gesamt: 1116 Datensätze im freien Kern (`data/`), 0 in der Studienschicht (`data-nc/`).
+Gesamt: 1131 Datensätze im freien Kern (`data/`), 0 in der Studienschicht (`data-nc/`).
 
 ## Schichten des Texts
 1. **Token** (`token_set`): die Wörter einer Edition in ihrer Reihenfolge, mit stabiler ID `TOK-<EDITION>-<BUCH>-<KKK>-<VVV>-<NNN>`. «text» unverändert aus der Edition (inkl. Interpunktion und Apparatzeichen), «word» ohne diese Zeichen. Keine Deutung.
