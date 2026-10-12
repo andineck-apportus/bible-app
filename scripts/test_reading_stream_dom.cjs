@@ -45,6 +45,7 @@ click('[data-more="v40-3-29"]');
 assert(sheetHost.querySelector('[data-alternative]'),'Lesarten im Versblatt');
 assert(!sheetHost.textContent.includes('MorphGNT'),'Ohne Urtext-Modus keine Wortanalyse');
 click('[data-close]');
+
 click('[data-action=menu]');click('[data-toggle=advanced]');click('[data-close]');
 click('[data-more="v40-3-29"]');
 const details=sheetHost.querySelector('details');details.querySelector('summary').click();assert(details.open);
@@ -61,5 +62,19 @@ click('[data-action=load-next]');
 for(let v=20;v<=35;v++)assert.equal(reader.querySelector(`[data-stream="v40-3-${v}"] .stream-copy`).textContent,M().de[v]);
 assert(reader.querySelector('[data-stream="v40-4-1"]'));
 assert.equal(reader.querySelectorAll('.alt-line[data-alternative]').length,M().alternatives.length);
-console.log(`PASS: Pilotzugang, Studienblatt ohne Griechisch, Lesarten auf Wunsch (${M().alternatives.length}), Hintergrund damals (${model.BG.length}), Urtext-Modus, Rückkehrposition, Suche, Kapitelgrenze.`);
+// Bis zur Quelle: jede Alternative führt zu Handschriften, Ausgaben, Wortbedeutungen und Erklärungen
+for(const a of M().alternatives){
+ const vid=`v40-3-${a.verse}`;
+ click(`[data-more="${vid}"]`);
+ const btn=sheetHost.querySelector(`[data-source="${a.variant}"]`);assert(btn,'Bis zur Quelle '+a.variant);btn.click();
+ const txt=sheetHost.textContent;
+ assert(txt.includes('Was die alten Handschriften lesen'),'Handschriften '+a.variant);
+ assert(sheetHost.querySelectorAll('details.wit').length>=6,'Handschriften und Ausgaben '+a.variant);
+ assert(txt.includes('Wie kann der Unterschied entstanden sein?'),'Erklärungen '+a.variant);
+ assert(txt.includes('CC BY-SA 4.0'),'Attribution CNTR');
+ if(a.variant==='VAR-SBLGNTAPP-MRK-003-029-01'){assert(txt.includes('Codex Alexandrinus')&&txt.includes('eines Gerichts'));assert(/Abweichung:.*Ephraemi/.test(txt),'Arbeitsnotiz-Abweichung Ephraemi');}
+ click('[data-close]');
+}
+let tested=M().alternatives.length;
+console.log(`PASS: Pilotzugang, Studienblatt ohne Griechisch, Lesarten auf Wunsch (${M().alternatives.length}), Hintergrund damals (${model.BG.length}), Bis zur Quelle (${tested}), Urtext-Modus, Rückkehrposition, Suche, Kapitelgrenze.`);
 dom.window.close();

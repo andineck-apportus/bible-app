@@ -1,21 +1,21 @@
 # Datenmodell: Ist-Stand und Ziel
 
-## Vorhandene Objekte in v0.14
+## Vorhandene Objekte in v0.15
 
 | Ordner | `type` | Anzahl | Aufgabe |
 |---|---|---:|---|
 | works | work | 1 | Biblisches Werk |
 | text-units | text_unit | 4 | Natürliche Texteinheiten Mk 3,20–35 (Abschnitt und drei Teile) |
 | studies | study | 1 | Pilotstudie mit Ergebnissen und offenen Fragen |
-| sources | source / dataset | 5 | Quellenhinweise und externe Datensätze |
-| editions | critical_edition | 5 | Editionen (SBLGNT, WH, Tregelles, NA28, Robinson-Pierpont) |
+| sources | source / dataset | 6 | Quellenhinweise und externe Datensätze |
+| editions | critical_edition | 8 | Editionen (SBLGNT, WH, Tregelles, NA28, Robinson-Pierpont) |
 | text-samples | text_sample | 1 | Nicht verifizierte Arbeitstranskription (historisch) |
 | tokens | token_set | 17 | SBLGNT-Wörter Markus, ein Set je Kapitel (11 286 Tokens); dazu das abgelöste Pilot-Set Mk 3,22–30 (`deprecated`) |
 | annotations | annotation_set | 17 | Sprachliche Annotation je Token: MACULA Greek je Kapitel; MorphGNT für Mk 3,22–30 (Pilot) |
 | counts | lemma_count | 2 | Zählungen: ganzes Markusevangelium (MACULA), Pilot (MorphGNT) |
 | variants | variant | 931 | 929 Stellen auf Editionsebene aus dem SBLGNT-Apparat (`variants/sblgntapp-mrk/`); 2 Stellen mit berichteten Handschriften (Arbeitsnotizen) |
 | assessments | assessment_set | 16 | Gesichertheitsbewertungen je Kapitel nach einer offengelegten Methode |
-| methods | assessment_method | 1 | Beschreibung einer Bewertungsmethode mit Annahmen und Grenzen |
+| methods | assessment_method | 2 | Beschreibung einer Bewertungsmethode mit Annahmen und Grenzen |
 | findings | finding | 5 | Textliche/literarische/textkritische Befunde |
 | decisions | editorial_decision | 1 | Frühere Lesartpräferenz (historisch; künftig als Bewertung) |
 | translations | translation | 4 | Eigene deutsche Arbeitsübersetzung: Mk 3,29 (v0.5), 3,22–30 (v0.7), 3,20–21 und 3,31–35 (v0.9), mit `alternatives` |
@@ -29,10 +29,13 @@
 | questions | open_question | 1 | Offene Forschungsfrage |
 | tags | tag | 7 | Kontrollierte Tags |
 | navigation | navigation_structure | 1 | Kanon- und Zählgerüst für die Navigation: Testamente, Buchgruppen, Bücher mit Versen je Kapitel (protestantischer Kanon, KJV-Zählung als Testkonfiguration) |
+| witnesses | witness | 6 | Handschriften mit Gregory-Aland-Nummer, Sigle, Datierung, Material, Aufbewahrungsort, kurzer Beschreibung und Links zu Abbildungen/Katalog |
+| witness-texts | witness_transcription | 11 | Transkriptionen je Handschrift (`witness`) oder Ausgabe (`edition`) für Markus, Format MES, Herkunft mit Commit und SHA-256 (CNTR, CC BY-SA 4.0) |
+| witness-readings | witness_reading_set | 1 | Maschinelle Zuordnung «welche Handschrift/Ausgabe hat welche Lesart» für Mk 3,20–35, getrennt nach Erstschrift und Korrektur, mit Textausschnitt (`METHOD-AUTO-COLLATION-V1`) |
 | background | background_note | 13 | Hintergrund damals zu Mk 3,20–35: Zeit, Ort, Kultur, Religion; je mit `context`, `subject`, `reference`, `topic_de`, `text_de`, `confidence`, optional `uncertain_de`, `evidence_refs` (Bibelstellen) und `sources_de` (ausserbiblische Fundstellen, nur zitiert) |
 | summaries | summary | 83 | Zusammenfassungen je Ebene (Bibel, Testament, Gruppe, Buch, Kapitel); `scope`, `reference`, `group`, `text_de`; alle `draft` |
 
-Gesamt: 1131 Datensätze im freien Kern (`data/`), 0 in der Studienschicht (`data-nc/`).
+Gesamt: 1154 Datensätze im freien Kern (`data/`), 0 in der Studienschicht (`data-nc/`).
 
 ## Schichten des Texts
 1. **Token** (`token_set`): die Wörter einer Edition in ihrer Reihenfolge, mit stabiler ID `TOK-<EDITION>-<BUCH>-<KKK>-<VVV>-<NNN>`. «text» unverändert aus der Edition (inkl. Interpunktion und Apparatzeichen), «word» ohne diese Zeichen. Keine Deutung.
