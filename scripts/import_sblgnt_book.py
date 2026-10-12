@@ -15,7 +15,7 @@ Quellen:
   nur «used with permission»).
 
 Die Wortgrenzen beider Quellen müssen übereinstimmen (Vergleich ohne Interpunktion und
-Apparatzeichen und Elisionszeichen, Unicode NFC). Abweichungen in Akzenten werden protokolliert, eine
+Apparatzeichen und Elisionszeichen, Unicode NFC). Abweichungen in Akzenten und Gross/Klein werden protokolliert, eine
 abweichende Wortzahl führt zum Abbruch. Ausgabe je Kapitel:
     data/tokens/SBLGNT-<BUCH>-<KKK>.json        (TOKSET-SBLGNT-<BUCH>-<KKK>)
     data/annotations/MACULA-SBLGNT-<BUCH>-<KKK>.json (ANN-MACULA-SBLGNT-<BUCH>-<KKK>)
@@ -126,7 +126,7 @@ for (ch, v) in sorted(verses):
             continue
         a, b = comparable(w), comparable(r[col["text"]])
         if a != b:
-            if strip_accents(a) == strip_accents(b):
+            if strip_accents(a).casefold() == strip_accents(b).casefold():  # Akzent- oder Gross/Klein-Abweichung
                 accent_diffs.append({"token": tid, "sblgnt": bare(w), "macula": r[col["text"]]})
             else:
                 problems.append(f"{tid}: SBLGNT {w!r} ≠ MACULA {r[col['text']]!r}")
@@ -210,4 +210,4 @@ counts = {"id": f"COUNT-SBLGNT-{code}", "type": "lemma_count", "status": "import
 p = ROOT / f"data/counts/SBLGNT-{code}.json"
 p.write_text(json.dumps(counts, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 print(f"PASS: {code}: {counts['token_count']} Tokens in {len(by_chapter)} Kapiteln, {counts['unique_lemmas']} Lemmata, "
-      f"{len(accent_diffs)} Akzentabweichung(en) SBLGNT/MACULA protokolliert")
+      f"{len(accent_diffs)} Akzent-/Schreibabweichung(en) SBLGNT/MACULA protokolliert")
