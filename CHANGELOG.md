@@ -2,6 +2,15 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.16 — 2026-10-12 — Das Vaterunser
+
+- Wunsch: das Vaterunser komplett bearbeiten.
+- Text: Matthäus und Lukas vollständig importiert (SBLGNT mit MACULA-Annotation; Apparat Mt 820/827, Lk 1133/1142 Stellen zugeordnet, Rest protokolliert; Gesichertheitsbewertung). Importer: Gross/Klein-Abweichung SBLGNT/MACULA wird wie eine Akzentabweichung protokolliert; Apparatüberschrift «Matthew» erkannt.
+- Textzeugen: CNTR-Transkriptionen für Matthäus und Lukas, dazu 𝔓45, 𝔓75 und sieben Amulette bzw. Einzeltexte mit dem Vaterunser (3.–6. Jh.; Metadaten nach papyri.info/DCLP). Zuordnung zu den Lesarten für Mt 6,5–15 und Lk 11,1–4 (Abgleich mit dem SBLGNT-Apparat jeweils 18/18 bzw. 6/6).
+- Studie Vaterunser (`STUDY-LP-0001`, KI-Entwürfe, ungeprüft): Texteinheiten Mt 6,5–15 (drei Teile) und Lk 11,1–4; deutsche Arbeitsübersetzung mit neun Alternativen (u. a. Lobpreis am Schluss, «vergeben haben/vergeben», kurze und lange Lukasfassung), je mit Wortbedeutungen und Entstehungserklärungen; vollständige Wortzuordnung Mt 6,9–13 und Lk 11,2–4; 6 Befunde, 7 Deutungen mit Gegenargumenten (u. a. drei Deutungen von ἐπιούσιος, Versuchung, «der Böse/das Böse», Vergebung), Grundsatz, Anwendung, 2 offene Fragen, 7 Beziehungen, 12 Hintergrundnotizen, 2 Kapitelzusammenfassungen. Autorenwerkzeug `scripts/authoring/vaterunser.py`.
+- Lesestrom: trägt jetzt mehrere ausgearbeitete Stellen (neue Projektion `scripts/project_study.py`, Schlüssel nach Bibelstelle); Menü listet die ausgearbeiteten Stellen; Studienblatt zeigt Anwendung, Fragen und Beziehungen je Abschnitt; Textzeugen-Blatt mit Papyri und Amuletten.
+- Tests erweitert (Vaterunser in Struktur- und Bedienungstest). Abschnittsebene hat jetzt 6705 statt 6704 Einträge, weil Mt 6 nach echten Einheiten gegliedert ist.
+
 ## v0.15 — 2026-10-12 — Lesarten bis zur Quelle
 
 - Rückmeldung: Bei anderen Lesarten bis zur Quelle eintauchen können, auch übersetzt.

@@ -4,7 +4,7 @@
 Eingebettet werden:
 - Navigationsgerüst (data/navigation/NAV-PROT66-KJV.json)
 - Zusammenfassungen (data/summaries/*.json)
-- Studienprojektion Markus 3,20–35 aus scripts/build_prototype.py
+- Studienprojektion der ausgearbeiteten Abschnitte (scripts/project_study.py)
 - Hintergrundnotizen (data/background/*.json), Stellen für die Anzeige aufbereitet
 - Quellen zu den Lesarten: Handschriften (data/witnesses), Zuordnungen (data/witness-readings),
   Ausgaben (data/editions) sowie Wortbedeutungen und Erklärungen aus den Übersetzungs-Alternativen
@@ -14,33 +14,44 @@ Erzeugte Datei nicht von Hand ändern.
 """
 import json
 import pathlib
-import runpy
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import refs  # noqa: E402
-study = runpy.run_path(str(ROOT / "scripts/build_prototype.py"))["data"]
+from project_study import project  # noqa: E402
+
+# Ausgearbeitete Abschnitte (Texteinheiten), in Lesereihenfolge der Bibel
+SECTIONS = ["TU-MAT-006-005-015", "TU-MRK-003-020-035", "TU-LUK-011-001-004"]
+study = project(SECTIONS)
 nav = json.loads((ROOT / "data/navigation/NAV-PROT66-KJV.json").read_text(encoding="utf-8"))
 summaries = {}
 for p in sorted((ROOT / "data/summaries").glob("*.json")):
     s = json.loads(p.read_text(encoding="utf-8"))
     summaries[s["id"]] = {"text": s["text_de"], "status": s["status"]}
 
-section_id = study["section"]["id"]
-contexts = {p.stem: json.loads(p.read_text(encoding="utf-8")) for p in (ROOT / "data/contexts").glob("*.json")}
+section_of = {}
+for sec in study["sections"]:
+    section_of[sec["id"]] = sec["id"]
+    for part in sec["parts"]:
+        section_of[part["id"]] = sec["id"]
 background = []
 for p in sorted((ROOT / "data/background").glob("*.json")):
     b = json.loads(p.read_text(encoding="utf-8"))
+    if b["subject"] not in section_of:
+        continue  # Notiz zu einem Abschnitt, der im Lesestrom noch nicht ausgearbeitet ist
     ref = b["reference"]
-    assert ref.startswith("MRK.3."), ref  # Anzeige bisher nur für die Pilotstelle
     a, _, z = ref.partition("-")
+    book, ch, v0 = a.split(".")
     background.append({"id": b["id"], "topic": b["topic_de"], "text": b["text_de"], "uncertain": b.get("uncertain_de"),
-                       "confidence": b.get("confidence"), "subject": b["subject"], "wide": b["subject"] == section_id,
-                       "from": int(a.split(".")[2]), "to": int((z or a).split(".")[2]), "ref_de": refs.display_de(ref),
-                       "readers": "READERS" in b["context"],
+                       "confidence": b.get("confidence"), "subject": b["subject"], "section": section_of[b["subject"]],
+                       "wide": b["subject"] == section_of[b["subject"]] and any(
+                           len(sec["parts"]) > 1 for sec in study["sections"] if sec["id"] == b["subject"]),
+                       "chapter": f"{book}.{ch}", "from": int(v0), "to": int((z or a).split(".")[2]),
+                       "ref_de": refs.display_de(ref), "readers": "READERS" in b["context"],
                        "evidence": [refs.display_de(r) for r in b.get("evidence_refs", [])],
                        "sources": b.get("sources_de", []), "status": b["status"]})
+
 
 def folder(name):
     return [json.loads(p.read_text(encoding="utf-8")) for p in sorted((ROOT / "data" / name).rglob("*.json"))]
@@ -76,9 +87,9 @@ sources_payload = {"witnesses": wit_meta, "editions": editions, "readings": wit_
 
 template = (ROOT / "app/reading-stream/template.html").read_text(encoding="utf-8")
 dump = lambda o: json.dumps(o, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
-for marker, payload in (("/*__MARKUS__*/null", study), ("/*__NAV__*/null", nav), ("/*__SUMMARIES__*/null", summaries),
+for marker, payload in (("/*__STUDY__*/null", study), ("/*__NAV__*/null", nav), ("/*__SUMMARIES__*/null", summaries),
                         ("/*__BACKGROUND__*/null", background), ("/*__SOURCES__*/null", sources_payload)):
     assert template.count(marker) == 1, marker
     template = template.replace(marker, dump(payload))
 (ROOT / "app/reading-stream/index.html").write_text(template, encoding="utf-8")
-print(f"PASS: Lesestrom gebaut: {len(nav['books'])} Bücher, {len(summaries)} Zusammenfassungen, {len(background)} Hintergrundnotizen, Markus 3,20–35 eingebunden.")
+print(f"PASS: Lesestrom gebaut: {len(nav['books'])} Bücher, {len(summaries)} Zusammenfassungen, {len(background)} Hintergrundnotizen, ausgearbeitet: {', '.join(refs.display_de(x['range']) for x in study['sections'])}.")

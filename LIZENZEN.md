@@ -31,13 +31,15 @@ Grafiken und Bilder von Personen, Institutionen und Künstlern werden unter CC0,
 
 | Pfad | Inhalt | Quelle | Lizenz | Pflicht |
 |---|---|---|---|---|
-| `data/tokens/SBLGNT-MRK-*.json` | Griechischer Text des Markusevangeliums, in Wörter zerlegt | SBLGNT (Faithlife/SBLGNT) | CC BY 4.0, © 2010 Society of Biblical Literature und Logos Bible Software | Namensnennung |
+| `data/tokens/SBLGNT-{MAT,MRK,LUK}-*.json` | Griechischer Text von Matthäus, Markus und Lukas, in Wörter zerlegt | SBLGNT (Faithlife/SBLGNT) | CC BY 4.0, © 2010 Society of Biblical Literature und Logos Bible Software | Namensnennung |
 | `data/variants/sblgntapp-*/VAR-SBLGNTAPP-*.json` | Variantenstellen aus dem SBLGNT-Apparat | Faithlife/SBLGNT | CC BY 4.0, wie oben | Namensnennung |
-| `data/annotations/MACULA-SBLGNT-MRK-*.json`, `data/counts/SBLGNT-MRK.json` | Lemma, Morphologie, Syntaxrolle, Referenten, Glossen | MACULA Greek (Clear Bible / Biblica); Glossen: Berean Interlinear (gemeinfrei), Cherith Glosses for the Greek New Testament (Andi Wu, © 2023 Cherith Analytics, CC BY 4.0) | CC BY 4.0 | «MACULA Greek Linguistic Datasets, available at https://github.com/Clear-Bible/macula-greek/»; Cherith Glosses mit Autor nennen |
+| `data/annotations/MACULA-SBLGNT-{MAT,MRK,LUK}-*.json`, `data/counts/SBLGNT-{MAT,MRK,LUK}.json` | Lemma, Morphologie, Syntaxrolle, Referenten, Glossen | MACULA Greek (Clear Bible / Biblica); Glossen: Berean Interlinear (gemeinfrei), Cherith Glosses for the Greek New Testament (Andi Wu, © 2023 Cherith Analytics, CC BY 4.0) | CC BY 4.0 | «MACULA Greek Linguistic Datasets, available at https://github.com/Clear-Bible/macula-greek/»; Cherith Glosses mit Autor nennen |
 | `data/annotations/MORPHGNT-SBLGNT-MRK-003-022-030.json`, `data/counts/SBLGNT-MRK-003-022-030.json` | Lemma und Morphologie Mk 3,22–30 (Pilot) | MorphGNT 6.12 (J. K. Tauber) | **CC BY-SA 3.0** | Namensnennung; Bearbeitungen dieser Dateien unter CC BY-SA |
-| `data/witness-texts/CNTR-*-MRK.json` | Transkriptionen der Handschriften 01 (א), 02 (A), 03 (B), 04 (C), 05 (D), 032 (W) sowie der Ausgabentexte WH, RP, Stephanus, KJTR und SR für Markus | Center for New Testament Restoration, Electronic Transcriptions (Alan Bunning), Commit `4e743a41a4b2` | **CC BY-SA 4.0** | «Alan Bunning, Center for New Testament Restoration»; Bearbeitungen unter CC BY-SA |
+| `data/witness-texts/CNTR-*.json` | Transkriptionen der Handschriften 01 (א), 02 (A), 03 (B), 04 (C), 05 (D), 032 (W), der Papyri 𝔓45 und 𝔓75, von sieben Amuletten bzw. Einzeltexten mit dem Vaterunser sowie der Ausgabentexte WH, RP, Stephanus, KJTR und SR für Matthäus, Markus und Lukas | Center for New Testament Restoration, Electronic Transcriptions (Alan Bunning), Commit `4e743a41a4b2` | **CC BY-SA 4.0** | «Alan Bunning, Center for New Testament Restoration»; Bearbeitungen unter CC BY-SA |
 | `data/witness-readings/WREAD-CNTR-*.json` | Maschinelle Zuordnung der Handschriften zu den Lesarten, mit Textausschnitten aus den CNTR-Transkriptionen | abgeleitet aus den CNTR-Transkriptionen | **CC BY-SA 4.0** | wie oben |
 | `archive/packages/` | Unveränderte frühere Projektpakete v0.1–v0.5 | Projekt | CC0 1.0, soweit eigene Inhalte | — |
+
+Angaben zu Datierung, Fundort und Sammlung der Amulette (`data/witnesses/WIT-TM-*.json`) stammen aus den Metadaten von papyri.info/DCLP und HGV (github.com/papyri/idp.data); es sind Sachangaben, eigene Formulierung, kein übernommener Text.
 
 Alle übrigen Dateien in `data/`, `docs/`, `scripts/` usw. sind eigene Beiträge unter CC0 1.0.
 

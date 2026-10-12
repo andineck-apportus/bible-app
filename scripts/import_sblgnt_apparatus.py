@@ -50,6 +50,7 @@ if not re.fullmatch(r"[0-9a-f]{40}", args.upstream_commit):
     sys.exit("ERROR: --upstream-commit muss ein vollständiger 40-stelliger Git-SHA sein")
 code = args.book
 name = BOOKS[code][0]
+HEADING = {"MAT": "Matthew"}  # Versüberschrift im Apparat, falls abweichend vom Dateinamen
 source = args.sblgnt / "data/sblgntapp/text" / f"{name}.txt"
 
 
@@ -82,7 +83,7 @@ def parse_entry(text):
 entries, key = {}, None
 for line in source.read_text(encoding="utf-8").splitlines():
     line = re.sub(r"\s+", " ", line.replace("\xa0", " ")).strip()
-    m = re.fullmatch(rf"{re.escape(name)} (\d+):(\d+)", line)
+    m = re.fullmatch(rf"(?:{re.escape(name)}|{re.escape(HEADING.get(code, name))}) (\d+):(\d+)", line)
     if m:
         key = (int(m.group(1)), int(m.group(2)))
         continue
