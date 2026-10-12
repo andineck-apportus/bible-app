@@ -175,18 +175,23 @@ def main():
             else:
                 ls = layers(mes)
             if not ls:
+                same_ch = any(k.startswith(f"{book}.{ch}.") and t["verses"][k].strip() != "-" for k in t["verses"])
+                if not same_ch or src.startswith("WIT-TM-"):
+                    continue  # Zeuge enthält dieses Kapitel gar nicht bzw. Amulett mit Auszug
                 entries.append({"variant": v["id"], "source": src, "hand": "first", "result": "lacuna",
                                 "note_de": "Vers in dieser Handschrift nicht erhalten."})
                 continue
             for layer, wit in ls.items():
                 # 1. Fundstelle: jede Lesart sucht ihr bestes Fenster; verglichen wird dann mit der
                 #    Vereinigung aller Fenster, damit eine Auslassung nicht in einem kürzeren Fenster «passt».
-                wins = [best_window(c, wit) for c in cands.values()]
+                # Die Wörter der Lesart selbst müssen im Vers vorkommen (wichtig bei Umstellungen in der Nähe
+                # und bei langen Zusätzen, die in der Handschrift fehlen).
+                core_ok = {rid: (not cores[rid]) or best_window(cores[rid], wit)[0] >= CORE for rid in cands}
+                wins = [best_window(c, wit) for rid, c in cands.items() if core_ok[rid]] or \
+                       [best_window(c, wit) for c in cands.values()]
                 s, e = min(w[1] for w in wins), max(w[2] for w in wins)
                 span = wit[s:e]
                 scores = {rid: (ratio(c, span, phon), ratio(c, span, lambda x: x)) for rid, c in cands.items()}
-                # 2. Die Wörter der Lesart selbst müssen im Vers vorkommen (wichtig bei Umstellungen in der Nähe).
-                core_ok = {rid: (not cores[rid]) or best_window(cores[rid], wit)[0] >= CORE for rid in cands}
                 order = sorted(scores.items(), key=lambda kv: (not core_ok[kv[0]], -kv[1][0], -kv[1][1]))
                 if order and not core_ok[order[0][0]]:
                     scores = {rid: (0.0, 0.0) for rid in scores}
