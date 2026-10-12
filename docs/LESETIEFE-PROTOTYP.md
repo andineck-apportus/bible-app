@@ -1,4 +1,4 @@
-# Lesestrom · Stand 2026-10-12 (v0.13)
+# Lesestrom · Stand 2026-10-12 (v0.14)
 
 Der Lesestrom ist seit v0.13 die **Hauptrichtung der App**. Einstieg: [app/reading-stream/index.html](../app/reading-stream/index.html). Die Datei direkt im Browser öffnen; Server und Internetzugriff sind nicht nötig. Das Design stammt aus dem Gespräch zwischen Andi Neck und einem Kollegen (v0.11). Der frühere Studienprototyp `app/prototype/` ist abgelöst (siehe unten).
 
@@ -13,6 +13,14 @@ Umsetzung in v0.13:
 - **Ohne Griechisch und Hebräisch:** Standardmässig gibt es keinen Urtext. Griechische Einschübe in Erklärungen werden ausgeblendet bzw. als «der griechische Ausdruck» umschrieben. Lesarten erscheinen als deutsche Wiedergaben mit einfacher Angabe der Bezeugung («Steht in 4 von 5 wichtigen Textausgaben»). Es gibt keine Entscheidung über richtig oder falsch.
 - **Für Fortgeschrittene:** Im Menü der Schalter «Urtext und Details»: Griechisch Wort für Wort mit Grundform, Form und Satzrolle; Vergleich der Textausgaben; Quellen und IDs. Ein zweiter Schalter «Andere Lesarten im Text zeigen» zeigt die Alternativen direkt unter dem Vers.
 - Deutsche Stellenangaben (Markus 3,20), Farben folgen dem System (oder fest hell/dunkel), Einstellungen werden lokal im Browser gespeichert.
+
+## Hintergrund damals (v0.14)
+
+Rückmeldung vom 2026-10-12: Auf Versebene passt der Lesestrom; es fehlt der Hintergrund damals. Seit v0.14 gibt es 13 Hintergrundnotizen zu Markus 3,20–35 (`data/background/`), alle als ungeprüfte KI-Entwürfe:
+- **Im Versblatt** («+»): unter «Damals» die Notizen zu diesem Vers, z. B. zu Schriftgelehrten aus Jerusalem, Beelzebul, Geisteraustreibung, dem Bild vom Binden des Starken, «Amen», Lästerung, den Brüdern Jesu, dem Sitzen um einen Lehrer, Familie und Ehre. Das «+» erscheint jetzt auch an Versen, zu denen es Hintergrund gibt.
+- **Pro Abschnitt:** «Hintergrund damals» am Abschnittsende, auf der Abschnittsebene und im Verstehen-Blatt. Dort stehen auch Zeit und Ort sowie die erste Leserschaft des Markus.
+- **Optional im Text:** Der Menüschalter «Hintergrund im Text zeigen» setzt kurze Hinweise («Damals: Beelzebul») unter den Vers, an dem eine Notiz beginnt.
+- Jede Notiz zeigt, wie sicher sie ist, was umstritten ist und womit man vergleichen kann (Bibelstellen sowie Fundstellen wie Josephus oder die Mischna, nur zitiert). Hintergrund ist bewusst von Befunden, Deutungen und heutiger Anwendung getrennt.
 
 ## Bedienidee (seit v0.11)
 
@@ -43,5 +51,5 @@ Der Studienprototyp Mk 3,20–35 (v0.9/v0.10) wird nicht weiterentwickelt. Er bl
 ## Prüfungen
 
 - `node scripts/test_reading_stream.cjs` (ohne Zusatzpakete): vollständige Ebenen, Zählungen, Zusammenfassungen, Elternverweise, kanonische Stellen, Suche, Grenzen, Markus-Projektion.
-- `node scripts/test_reading_stream_dom.cjs` (braucht `jsdom`): Piloteinstieg, Studienblatt ohne Griechisch, Lesarten im Versblatt, Urtext-Modus, Rückkehrposition, Suche, Lesen über die Kapitelgrenze, Lesarten im Text.
+- `node scripts/test_reading_stream_dom.cjs` (braucht `jsdom`): Piloteinstieg, Studienblatt ohne Griechisch, Lesarten und Hintergrund im Versblatt, Hintergrund-Blatt je Abschnitt, Hinweise im Text, Urtext-Modus, Rückkehrposition, Suche, Lesen über die Kapitelgrenze, Lesarten im Text.
 - Am 2026-10-12 wurde der Lesestrom in Chromium in Handybreite (390 px) hell und dunkel angesehen. Eine Prüfung auf echten Geräten und mit Bildschirmleser steht aus. Keine dieser Prüfungen ist eine fachliche Inhaltsprüfung.

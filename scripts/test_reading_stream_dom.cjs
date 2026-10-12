@@ -23,7 +23,22 @@ reader.scrollTop=137;click('[data-deep="TU-MRK-003-022-030"]');
 const verse=reader.querySelector('[data-stream="v40-3-29"]');
 assert.equal(verse.querySelector('.stream-copy').textContent,M().de[29]);
 assert(!verse.querySelector('[data-alternative]'),'Lesarten standardmässig nicht im Lesestrom');
-assert(!reader.querySelector('[data-more="v40-3-23"]')||M().alternatives.some(a=>a.verse===23),'«+» nur bei Versen mit Lesarten');
+for(let v=22;v<=30;v++){const want=M().alternatives.some(a=>a.verse===v)||model.BG.some(b=>!b.wide&&b.from<=v&&v<=b.to);
+ assert.equal(!!reader.querySelector(`[data-more="v40-3-${v}"]`),want,`«+» nur bei Lesarten oder Hintergrund (3,${v})`);}
+
+// Hintergrund damals: Vers, Abschnitt, Hinweise im Text
+click('[data-more="v40-3-22"]');
+assert(sheetHost.querySelector('[data-bg-note="BG-MRK-0006"]'),'Beelzebul im Versblatt 3,22');
+assert(!sheetHost.querySelector('[data-bg-note="BG-MRK-0001"]'),'Abschnittsweiter Hintergrund nicht im Versblatt');
+click('[data-close]');
+click('[data-background="TU-MRK-003-022-030"]');
+for(const b of model.BG.filter(x=>x.wide||x.subject==='TU-MRK-003-022-030'))assert(sheetHost.querySelector(`[data-bg-note="${b.id}"]`),b.id);
+assert(sheetHost.textContent.includes('Josephus'),'Quellenangabe sichtbar');
+click('[data-close]');
+assert(!reader.querySelector('.bg-line'),'Hintergrund standardmässig nicht im Lesestrom');
+click('[data-action=menu]');click('[data-toggle=bgInline]');click('[data-close]');
+click('.bg-line[data-bg="BG-MRK-0008"]');assert(sheetHost.textContent.includes('Jes 49,24–25'));click('[data-close]');
+click('[data-action=menu]');click('[data-toggle=bgInline]');click('[data-close]');
 
 // Versblatt ohne und mit Urtext-Modus
 click('[data-more="v40-3-29"]');
@@ -46,5 +61,5 @@ click('[data-action=load-next]');
 for(let v=20;v<=35;v++)assert.equal(reader.querySelector(`[data-stream="v40-3-${v}"] .stream-copy`).textContent,M().de[v]);
 assert(reader.querySelector('[data-stream="v40-4-1"]'));
 assert.equal(reader.querySelectorAll('.alt-line[data-alternative]').length,M().alternatives.length);
-console.log(`PASS: Pilotzugang, Studienblatt ohne Griechisch, Lesarten auf Wunsch (${M().alternatives.length}), Urtext-Modus, Rückkehrposition, Suche, Kapitelgrenze.`);
+console.log(`PASS: Pilotzugang, Studienblatt ohne Griechisch, Lesarten auf Wunsch (${M().alternatives.length}), Hintergrund damals (${model.BG.length}), Urtext-Modus, Rückkehrposition, Suche, Kapitelgrenze.`);
 dom.window.close();

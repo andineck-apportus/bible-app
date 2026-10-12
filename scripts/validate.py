@@ -11,7 +11,9 @@ Prüft:
    jeder Zieltext kommt im Wortlaut der verknüpften Übersetzung vor.
 6. Annotationen verweisen nur auf Tokens des annotierten Token-Sets; Bewertungen auf
    vorhandene Variantenstellen und Lesarten.
-7. Lizenzschichten: Datensätze in data/ verweisen nie auf Datensätze in data-nc/.
+7. Hintergrundnotizen (background_note) haben Thema, Text, Stelle, Herkunft und einen
+   historischen Kontext.
+8. Lizenzschichten: Datensätze in data/ verweisen nie auf Datensätze in data-nc/.
 
 Ein PASS ist keine fachliche Freigabe. Nur Standardbibliothek.
 """
@@ -163,6 +165,13 @@ def main():
             nav_groups = {g["id"] for _, nr in records.values() if nr.get("type") == "navigation_structure" for g in nr.get("groups", [])}
             if r["group"] not in nav_groups:
                 errors.append(f"{rel}: group {r['group']!r} in keiner Navigationsstruktur")
+        if r.get("type") == "background_note":
+            for f in ("topic_de", "text_de", "reference", "context", "authorship_de"):
+                if not r.get(f):
+                    errors.append(f"{rel}: background_note ohne {f}")
+            ctx = records.get(r.get("context"), (None, {}))[1]
+            if ctx and ctx.get("type") != "context":
+                errors.append(f"{rel}: context {r.get('context')!r} ist kein context-Datensatz")
         if r.get("type") == "navigation_structure":
             for b in r.get("books", []):
                 check_ref(rel, f"books[{b.get('code')}].code", b.get("code")); ref_count += 1
