@@ -1,9 +1,10 @@
-# Status und nächste Schritte · 2026-10-11 (UI v0.12)
+# Status und nächste Schritte · 2026-10-12 (UI v0.13)
 
 ## Gesichert und vorhanden
-- **Separater Lesetiefe-Prototyp für die ganze Bibel** (`app/reading-stream/`): fortlaufende Zusammenfassungen auf höheren Ebenen, lokale Lesepositionen, Vertiefen/Kontext, vollständiges Testmengengerüst bis Vers, Mobile/Tablet, Menü und SVG-Logo. 66 Buchzusammenfassungen sind KI-Entwürfe; die meisten tieferen Texte fehlen. Markus 3,20–35 ist jetzt aus derselben kanonischen Datenprojektion eingebunden: Arbeitsübersetzung, Alternativen, griechische Wörter, Varianten, Befunde, Deutungen, Prinzip und Anwendung. Fachlich weiterhin ungeprüft. Details und Grenzen: [LESETIEFE-PROTOTYP.md](LESETIEFE-PROTOTYP.md).
+- **Lesestrom als Hauptrichtung** (`app/reading-stream/`, v0.13): die ganze Bibel auf sieben Ebenen fortlaufend lesen und vertiefen; ungestörtes Vollbild mit ausblendenden Leisten; Lesarten, Erklärungen und Quellen als Blätter auf Wunsch; Urtext nur im Modus «Urtext und Details»; deutsche Stellenangaben; Farben nach System. Navigationsgerüst und 83 Zusammenfassungen liegen jetzt in `data/navigation/` und `data/summaries/` (Entwürfe, ungeprüft). Ausgearbeitet ist Markus 3,20–35; sonst fehlt der Bibeltext. Details und Grenzen: [LESETIEFE-PROTOTYP.md](LESETIEFE-PROTOTYP.md).
+- v0.13: 1116 Datensätze im freien Kern.
 - Alle Originalpakete v0.1–v0.5; rekonstruierte Git-Historie mit je einem Snapshot.
-- **Studienprototyp Mk 3,20–35** (`app/prototype/`), seit v0.10 für allgemeine Leser: Überblick (gezeichnete Verschachtelung der drei Szenen), Lesen (deutscher Text; abweichende Lesarten auf Wunsch, in einfacher Sprache mit Bezeugung), Vertiefen (Was steht da? Wie kann man es verstehen? Was kann es heute bedeuten?), Studienpfad, Einstellungen (Lesarten, Urtext-Modus, Schriftgrösse, Hell/Dunkel). Griechisch, Wort für Wort, Grammatik und alle Apparatstellen nur im Modus «Urtext und Details». Erzeugt mit `scripts/build_prototype.py` nur aus Daten des freien Kerns.
+- **Abgelöst:** Studienprototyp Mk 3,20–35 (`app/prototype/`), bleibt als Zwischenstand; seine Inhalte sind im Lesestrom aufgegangen. Stand v0.10, für allgemeine Leser: Überblick (gezeichnete Verschachtelung der drei Szenen), Lesen (deutscher Text; abweichende Lesarten auf Wunsch, in einfacher Sprache mit Bezeugung), Vertiefen (Was steht da? Wie kann man es verstehen? Was kann es heute bedeuten?), Studienpfad, Einstellungen (Lesarten, Urtext-Modus, Schriftgrösse, Hell/Dunkel). Griechisch, Wort für Wort, Grammatik und alle Apparatstellen nur im Modus «Urtext und Details». Erzeugt mit `scripts/build_prototype.py` nur aus Daten des freien Kerns.
 - v0.9: 1032 Datensätze; neu Gliederung Mk 3,20–35 (Texteinheiten, Befund, Deutung mit Gegenargument) und deutsche Arbeitsübersetzung 3,20–21 und 3,31–35 (ohne Wortzuordnung).
 - v0.8: 1025 Datensätze im freien Kern, darin 6 Tags; Studienschicht `data-nc/` angelegt (leer).
 - **Ganzes Markusevangelium**: SBLGNT-Text (11 286 Wörter, je Kapitel ein Token-Set) mit MACULA-Greek-Annotation (Lemma, Morphologie, Syntaxrolle, Referenten, Glossen; CC BY 4.0). SBLGNT und MACULA stimmen in allen Wortgrenzen überein; eine Akzentabweichung (7,27) protokolliert.
@@ -47,8 +48,8 @@
 - Präzise wissenschaftliche Fundstellen, weitere Gegenargumente und eigenständige Kontextanwendungen.
 - Kritische Prüfung des abgeleiteten Prinzips: Es enthält stärkere Begriffe als die begrenzte Beobachtung zum Wissen der Schriftgelehrten. Diese Ableitung ist nicht allein durch den Pilotbestand abgesichert.
 
-## Nächster Meilenstein v0.10 (Vorschlag)
-Weitere Rückmeldungen zum Prototyp; kommunikative (leicht verständliche) Übersetzungsschicht als Alternative zur wörtlichen; Wortzuordnung für 3,20–21 und 3,31–35; Handschriftenbelege aus der NTVMR-API (CC BY 4.0) als zweite Bewertungsmethode; Zeugenangabe Ephraemi (C) in Mk 3,29 klären; Versifikationsmodell auf Basis von STEPBible TVTMS; typspezifische Schemas.
+## Nächster Meilenstein (Vorschlag)
+Rückmeldungen zum Lesestrom auf echten Geräten; natürliche Gliederung (Abschnitte nach Gedankengängen) statt technischer Fünf-Vers-Blöcke; Abgleich der KJV-Testzählung mit einem Versifikationsmodell (STEPBible TVTMS); freier deutscher Lesetext über Markus 3 hinaus; kommunikative (leicht verständliche) Übersetzungsschicht als Alternative zur wörtlichen; Wortzuordnung für 3,20–21 und 3,31–35; Handschriftenbelege aus der NTVMR-API (CC BY 4.0) als zweite Bewertungsmethode; Zeugenangabe Ephraemi (C) in Mk 3,29 klären; Versifikationsmodell auf Basis von STEPBible TVTMS; typspezifische Schemas.
 
 ## Danach
 Primärbelege; standardisierte Revisions-/Reviewmetadaten; Versifikationsmodell; SQLite-Projektion; anschliessend eine Oberfläche auf der stabilisierten Datenbasis. Technische Produktentscheidungen bleiben offen.

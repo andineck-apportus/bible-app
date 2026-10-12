@@ -1,11 +1,11 @@
 # Datenmodell: Ist-Stand und Ziel
 
-## Vorhandene Objekte in v0.8
+## Vorhandene Objekte in v0.13
 
 | Ordner | `type` | Anzahl | Aufgabe |
 |---|---|---:|---|
 | works | work | 1 | Biblisches Werk |
-| text-units | text_unit | 1 | Natürliche Texteinheit und Versbereich |
+| text-units | text_unit | 4 | Natürliche Texteinheiten Mk 3,20–35 (Abschnitt und drei Teile) |
 | studies | study | 1 | Pilotstudie mit Ergebnissen und offenen Fragen |
 | sources | source / dataset | 5 | Quellenhinweise und externe Datensätze |
 | editions | critical_edition | 5 | Editionen (SBLGNT, WH, Tregelles, NA28, Robinson-Pierpont) |
@@ -16,11 +16,11 @@
 | variants | variant | 931 | 929 Stellen auf Editionsebene aus dem SBLGNT-Apparat (`variants/sblgntapp-mrk/`); 2 Stellen mit berichteten Handschriften (Arbeitsnotizen) |
 | assessments | assessment_set | 16 | Gesichertheitsbewertungen je Kapitel nach einer offengelegten Methode |
 | methods | assessment_method | 1 | Beschreibung einer Bewertungsmethode mit Annahmen und Grenzen |
-| findings | finding | 4 | Textliche/literarische/textkritische Befunde |
+| findings | finding | 5 | Textliche/literarische/textkritische Befunde |
 | decisions | editorial_decision | 1 | Frühere Lesartpräferenz (historisch; künftig als Bewertung) |
-| translations | translation | 2 | Eigene deutsche Arbeitsübersetzung: Mk 3,29 (v0.5) und Mk 3,22–30 (v0.7) |
+| translations | translation | 4 | Eigene deutsche Arbeitsübersetzung: Mk 3,29 (v0.5), 3,22–30 (v0.7), 3,20–21 und 3,31–35 (v0.9), mit `alternatives` |
 | alignments | alignment | 2 | Wort-/Phrasenzuordnungen; Mk 3,22–30 vollständig über Token-IDs (`coverage: complete`) |
-| interpretations | interpretation | 2 | Alternative Verständnisse |
+| interpretations | interpretation | 3 | Alternative Verständnisse |
 | principles | principle | 1 | Abgeleitetes Prinzip |
 | contexts | context | 2 | Historischer und heutiger Kontext |
 | applications | application | 1 | Kontextabhängige Anwendung |
@@ -28,8 +28,10 @@
 | relations | relation | 3 | Beziehungen zu Parallelstellen |
 | questions | open_question | 1 | Offene Forschungsfrage |
 | tags | tag | 6 | Kontrollierte Tags |
+| navigation | navigation_structure | 1 | Kanon- und Zählgerüst für die Navigation: Testamente, Buchgruppen, Bücher mit Versen je Kapitel (protestantischer Kanon, KJV-Zählung als Testkonfiguration) |
+| summaries | summary | 83 | Zusammenfassungen je Ebene (Bibel, Testament, Gruppe, Buch, Kapitel); `scope`, `reference`, `group`, `text_de`; alle `draft` |
 
-Gesamt: 1025 Datensätze im freien Kern (`data/`), 0 in der Studienschicht (`data-nc/`).
+Gesamt: 1116 Datensätze im freien Kern (`data/`), 0 in der Studienschicht (`data-nc/`).
 
 ## Schichten des Texts
 1. **Token** (`token_set`): die Wörter einer Edition in ihrer Reihenfolge, mit stabiler ID `TOK-<EDITION>-<BUCH>-<KKK>-<VVV>-<NNN>`. «text» unverändert aus der Edition (inkl. Interpunktion und Apparatzeichen), «word» ohne diese Zeichen. Keine Deutung.

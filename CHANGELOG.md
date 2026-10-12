@@ -2,6 +2,16 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.13 — 2026-10-12 — Lesestrom als Hauptrichtung, zugänglicher und ungestörter
+
+- Vorgabe: Bibelstudium zugänglich für Personen ohne Griechisch und Hebräisch; ungestört lesen und «abtauchen in die Tiefe»; Hintergrund nur auf Wunsch ([VISION.md](docs/VISION.md)).
+- Lesestrom neu aufgebaut (`app/reading-stream/template.html`): Vollbild ohne Geräterahmen, Leisten blenden beim Lesen aus, Verse fliessen als Text, keine technischen Zähler, ein Vertiefen-Link je Eintrag, deutsche Stellenangaben (3,20), Farben nach System, Einstellungen lokal gespeichert.
+- Lesarten, Studieninhalte und Quellen als Blätter über dem Text; «+» nur an Versen mit abweichenden Lesarten. Urtext, Wort für Wort, Editionenvergleich und IDs nur im Modus «Urtext und Details»; optional «Andere Lesarten im Text zeigen». Griechische Einschübe in Erklärungen werden ohne diesen Modus ausgeblendet oder umschrieben (nur Darstellung).
+- Neue Datentypen im freien Kern: `navigation_structure` (`data/navigation/NAV-PROT66-KJV.json`, Testkonfiguration) und `summary` (`data/summaries/`, 83 Entwürfe). Bisher lagen sie in der Vorlage; die Inhalte sind unverändert übernommen. Schema und Validator ergänzt (1116 Datensätze, PASS).
+- `scripts/build_reading_stream.py` bettet Navigation, Zusammenfassungen und Markus-Projektion ein; DOM-Test an die neue Bedienung angepasst.
+- Studienprototyp `app/prototype/` als abgelöst gekennzeichnet; `build_prototype.py` bleibt als Datenprojektion.
+- Prüfungen: Validator, Validator-Negativtests, Struktur- und DOM-Test; Ansicht in Chromium in Handybreite, hell und dunkel. Keine Prüfung auf echten Geräten, keine fachliche Prüfung.
+
 ## v0.12 — 2026-10-11 — Markus im Lesestrom
 
 - Pilotstudie Mk 3,20–35 im neuen Lesestrom: drei kanonische Abschnitte, 16 Arbeitsübersetzungen, sechs Alternativen, 249 Wörter und 28 Variantenstellen.

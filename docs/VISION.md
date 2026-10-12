@@ -1,6 +1,6 @@
 # Vision
 
-Festgehalten am 2026-10-09. Abschnitt **«Vorgabe»** gibt die Vision des Projektinhabers wieder. Abschnitte **«Ableitung»** sind Vorschläge zur Umsetzung; sie sind noch nicht vereinbart.
+Festgehalten am 2026-10-09, ergänzt am 2026-10-12. Abschnitt **«Vorgabe»** gibt die Vision des Projektinhabers wieder. Abschnitte **«Ableitung»** sind Vorschläge zur Umsetzung; sie sind noch nicht vereinbart.
 
 ## Grundhaltung
 
@@ -84,6 +84,7 @@ Festgehalten am 2026-10-09. Abschnitt **«Vorgabe»** gibt die Vision des Projek
   - **Raumrekonstruktionen** aus Textbeschreibungen: Arche (Gen 6), Stiftshütte (Ex 25–40), Salomos Tempel (1 Kön 6–7), Tempelvision (Ez 40–48), Neues Jerusalem (Offb 21).
 - **Raumobjekte als Daten:** Masse, Materialien und Anordnungen werden aus dem Text als strukturierte Angaben mit Wortbezug erfasst, inklusive Unsicherheiten (z. B. Länge der Elle, unklare Begriffe, Varianten). Darstellungen werden daraus erzeugt; abweichende Rekonstruktionen stehen nebeneinander, jede Annahme ist sichtbar.
 - **Beiträge Dritter:** eigenes Objekt für Bilder/Grafiken mit Urheber, Lizenz (CC0 oder CC BY), Bezug (Stelle, Wort, Objekt, Zoomstufe), Art (Rekonstruktion nach Textangaben, Diagramm, künstlerische Deutung) und Prüfstatus. Beiträge ergänzen die Basis, verändern sie aber nicht. Künstlerische Deutungen werden als solche gekennzeichnet.
+- **Vorgabe (2026-10-12):** Der Lesestrom ist die Hauptrichtung. Das Bibelstudium muss zugänglicher werden für Personen ohne Griechisch- oder Hebräischkenntnisse. Der Lesestrom muss ungestörter stattfinden können («abtauchen in die Tiefe»), Hintergrundoptionen sollen optionaler sein. Umsetzung: [LESETIEFE-PROTOTYP.md](LESETIEFE-PROTOTYP.md).
 - **UX-Grundsätze:** schrittweise Vertiefung (zuerst lesbar, auf Wunsch bis zur Handschrift); Unterschiede und Gesichertheit immer erreichbar, aber nicht erschlagend; Zoomen als zentrale Bewegung; für Smartphone tauglich.
 
 ---

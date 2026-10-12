@@ -39,11 +39,11 @@ Grafiken und Bilder von Personen, Institutionen und Künstlern werden unter CC0,
 
 Alle übrigen Dateien in `data/`, `docs/`, `scripts/` usw. sind eigene Beiträge unter CC0 1.0.
 
-## Numerische Testdaten des Lesetiefe-Prototyps
+## Numerische Testdaten des Lesestroms
 
-`app/reading-stream/index.html` enthält als numerisches Mengengerüst nachgezählte Kapitel-/Versanzahlen aus der von eBible.org / CrossWire als **Public Domain** ausgewiesenen KJV-Ausgabe: https://ebible.org/Scriptures/eng-kjv_usfm.zip (Quelldateien 2026-09-26). Aus dieser KJV-Quelle wurden kein Bibeltext und kein fremder Programmcode übernommen. Die Quelle weist auf besondere Druckrechte für den Übersetzungstext im Vereinigten Königreich hin. Prüfsumme und Ableitung sind in `app/reading-stream/provenance.json` dokumentiert. Eine ursprünglich im Chat benutzte, nicht lizenzierte JSON-Zählliste wurde nicht als Fremddatei ins Repository übernommen; alle Zahlen wurden für diesen Import unabhängig aus dem genannten USFM-Bestand gewonnen und abgeglichen.
+Seit v0.13 liegt das Mengengerüst als `data/navigation/NAV-PROT66-KJV.json` im freien Kern und wird in `app/reading-stream/index.html` eingebettet. Es enthält nachgezählte Kapitel-/Versanzahlen aus der von eBible.org / CrossWire als **Public Domain** ausgewiesenen KJV-Ausgabe: https://ebible.org/Scriptures/eng-kjv_usfm.zip (Quelldateien 2026-09-26). Aus dieser KJV-Quelle wurden kein Bibeltext und kein fremder Programmcode übernommen. Die Quelle weist auf besondere Druckrechte für den Übersetzungstext im Vereinigten Königreich hin. Prüfsumme und Ableitung sind in `app/reading-stream/provenance.json` dokumentiert. Eine ursprünglich im Chat benutzte, nicht lizenzierte JSON-Zählliste wurde nicht als Fremddatei ins Repository übernommen; alle Zahlen wurden für diesen Import unabhängig aus dem genannten USFM-Bestand gewonnen und abgeglichen.
 
-Logo, Linienicons, Code und redaktionelle Entwürfe dieses Prototyps sind eigene Beiträge unter CC0. Keine Assets oder Schriftdateien der Fondation Beyeler übernommen.
+Logo, Linienicons, Code und redaktionelle Entwürfe dieses Prototyps sind eigene Beiträge unter CC0, ebenso die 83 Zusammenfassungen in `data/summaries/` (KI-Entwürfe aus dem Designgespräch, keine Fremdtexte). Deutsche und englische Buchnamen und Abkürzungen sind allgemeine Bezeichnungen, keine übernommenen Werkteile. Keine Assets oder Schriftdateien der Fondation Beyeler übernommen.
 
 ## Fremddaten in der Studienschicht (`data-nc/`)
 
