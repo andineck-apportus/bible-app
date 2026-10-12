@@ -57,6 +57,20 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .more svg{width:15px;height:15px;flex-basis:15px}
 #bible-stream .alt-line{display:block;font:italic 400 calc(var(--read) * .82)/1.5 var(--serif);color:var(--muted);margin:2px 0 8px 1.4em}
 #bible-stream .part-end{margin:4px 0 18px}
+#bible-stream .grc{font-family:var(--serif);font-size:1.05em;letter-spacing:.01em}
+#bible-stream .grc.small{font-size:15px;color:var(--muted);margin:6px 0 0;line-height:1.5}
+#bible-stream .word-table{display:flex;flex-direction:column;gap:10px}
+#bible-stream .word-row{display:grid;grid-template-columns:minmax(7em,auto) 1fr;gap:2px 14px;border-left:2px solid var(--rule);padding-left:12px}
+#bible-stream .word-row .note{grid-column:1/-1}
+#bible-stream .wit-group{border:1px solid var(--rule);padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+#bible-stream .wit-group.main{border-color:var(--ink)}
+#bible-stream .wit-group p{margin:0}
+#bible-stream .wit summary{display:flex;gap:12px;align-items:baseline;cursor:pointer;list-style:none;padding:6px 0;border-top:1px solid var(--soft)}
+#bible-stream .wit summary::-webkit-details-marker{display:none}
+#bible-stream .wit .sig{min-width:2.2em;font:500 17px/1 var(--serif);text-align:center}
+#bible-stream .wit[open] summary{border-bottom:0}
+#bible-stream .wit>p{margin:4px 0 4px 3.3em}
+#bible-stream .sheet a{color:inherit;text-decoration:underline;text-decoration-color:var(--rule)}
 #bible-stream .bg-line{display:block;margin:2px 0 6px 1.6em;padding:2px 0;font-size:14px;color:var(--muted);text-align:left;border-bottom:1px dotted var(--rule)!important}
 #bible-stream .bg-topic{font:500 16px/1.35 var(--ui);margin:0}
 
@@ -129,6 +143,7 @@ const MARKUS=/*__MARKUS__*/null;
 const NAV=/*__NAV__*/null;
 const SUMS=/*__SUMMARIES__*/null;
 const BG=/*__BACKGROUND__*/null;
+const SRC=/*__SOURCES__*/null;
 const DATA=NAV.books.map(b=>({de:b.de,en:b.en,abbr:b.abbr,alias:b.alias,counts:b.verses_per_chapter,code:b.code}));
 const GROUPS=NAV.groups.map(g=>[g.de,g.en,DATA.findIndex(b=>b.code===g.books[0]),DATA.findIndex(b=>b.code===g.books[g.books.length-1])]);
 const BOOK_SUMMARIES=DATA.map(b=>(SUMS['SUM-BOOK-'+b.code]||{}).text||'');
@@ -138,7 +153,7 @@ const ui={
   deeper:['Zu den Testamenten','Zu den Buchgruppen','Zu den Büchern','Zu den Kapiteln','Zu den Abschnitten','Text lesen'],
   noSummary:'Zu diesem Kapitel gibt es noch keine Zusammenfassung.',noPart:'Für diesen Abschnitt gibt es noch keine Zusammenfassung.',placeholder:'Text noch nicht eingebunden',
   verses:'Verse',loadNext:'Weiterlesen',loadPrev:'Früheres anzeigen',end:'Ende',empty:'Kein passendes Buch und keine gültige Bibelstelle.',
-  example:'Ausgearbeitetes Beispiel: Markus 3,20–35',understand:'Diesen Abschnitt verstehen',background:'Hintergrund damals',then:'Damals',more:'Mehr zu Vers',
+  example:'Ausgearbeitetes Beispiel: Markus 3,20–35',understand:'Diesen Abschnitt verstehen',background:'Hintergrund damals',toSource:'Bis zur Quelle',then:'Damals',more:'Mehr zu Vers',
   colors:'Farben',auto:'Auto',light:'Hell',dark:'Dunkel',size:'Textgrösse',language:'Sprache der Bedienung',
   advanced:'Urtext und Details',advancedSub:'Für Fortgeschrittene: Griechisch Wort für Wort, Grammatik, Vergleich der Textausgaben, Quellen.',
   inline:'Andere Lesarten im Text zeigen',inlineSub:'Zeigt unter einem Vers, wo alte Handschriften anders lauten.',bgInline:'Hintergrund im Text zeigen',bgInlineSub:'Zeigt unter einem Vers kurze Hinweise auf Zeit, Ort und Kultur damals.',about:'Über diese Fassung'},
@@ -147,7 +162,7 @@ const ui={
   deeper:['Testaments','Book groups','Books','Chapters','Passages','Read the text'],
   noSummary:'No summary for this chapter yet.',noPart:'No summary for this passage yet.',placeholder:'Text not yet available',
   verses:'verses',loadNext:'Continue reading',loadPrev:'Show earlier',end:'End',empty:'No matching book or valid reference.',
-  example:'Worked example: Mark 3:20–35',understand:'Understand this passage',background:'Background then',then:'Back then',more:'More on verse',
+  example:'Worked example: Mark 3:20–35',understand:'Understand this passage',background:'Background then',toSource:'Trace to the source',then:'Back then',more:'More on verse',
   colors:'Colours',auto:'Auto',light:'Light',dark:'Dark',size:'Text size',language:'Interface language',
   advanced:'Original text and details',advancedSub:'For advanced readers: Greek word by word, grammar, edition comparison, sources.',
   inline:'Show other readings in the text',inlineSub:'Shows below a verse where old manuscripts differ.',bgInline:'Show background in the text',bgInlineSub:'Shows short notes on time, place and culture below a verse.',about:'About this version'}};
@@ -172,6 +187,7 @@ const ICONS={'arrow-up':'M12 19V5m-6 6 6-6 6 6','arrow-down':'M12 5v14m-6-6 6 6 
 const icon=name=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${ICONS[name]}"/></svg>`;
 const logo='<svg class="logo" viewBox="0 0 80 84" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="8"><path d="M4 44V22a18 18 0 0 1 36 0a18 18 0 0 1 36 0v22H4Zm36-22v22"/><path d="M4 44v36h72V44M40 44v36"/></g></svg>';
 const greekParen=/\s*\([^()]*[Ͱ-Ͽἀ-῿][^()]*\)/g;
+const EDS={'ED-SBLGNT':'SBL','ED-WH':'WH','ED-TREG':'Tr','ED-NA28':'NA','ED-RP':'RP','ED-ST':'TR','ED-KJTR':'KJV','ED-SR':'SR'};
 const ED={'ED-SBLGNT':'SBLGNT','ED-WH':'Westcott-Hort','ED-TREG':'Tregelles','ED-NA28':'NA28','ED-RP':'Robinson-Pierpont'};
 const GR={person:{first:'1. Person',second:'2. Person',third:'3. Person'},number:{singular:'Singular',plural:'Plural'},gender:{masculine:'maskulin',feminine:'feminin',neuter:'neutrum'},case:{nominative:'Nominativ',genitive:'Genitiv',dative:'Dativ',accusative:'Akkusativ',vocative:'Vokativ'},tense:{present:'Präsens',imperfect:'Imperfekt',future:'Futur',aorist:'Aorist',perfect:'Perfekt',pluperfect:'Plusquamperfekt'},voice:{active:'Aktiv',middle:'Medium',passive:'Passiv'},mood:{indicative:'Indikativ',subjunctive:'Konjunktiv',imperative:'Imperativ',infinitive:'Infinitiv',participle:'Partizip',optative:'Optativ'}};
 const POS={noun:'Substantiv',verb:'Verb',adj:'Adjektiv',det:'Artikel',pron:'Pronomen',conj:'Konjunktion',prep:'Präposition',adv:'Adverb',ptcl:'Partikel',num:'Zahlwort'};
@@ -282,7 +298,7 @@ function verseSheet(id){
   if(bgs.length)h+=`<h4>${t.then}</h4>`+bgs.map(b=>bgNote(b,false)).join('');
   if(alts.length){
     h+=`<h4>${lang==='de'?'Andere Lesarten':'Other readings'}</h4><p class="note">${lang==='de'?'Die alten Handschriften stimmen hier nicht ganz überein. Die Möglichkeiten stehen nebeneinander; niemand entscheidet für dich, welche «richtig» ist.':'Old manuscripts differ here. The options stand side by side.'}</p>`;
-    h+=alts.map(a=>`<div class="pair" data-alternative="${esc(a.variant)}"><div class="reading-card main"><span class="tag">${lang==='de'?'Im Lesetext':'In the text'}</span><span class="body">«${esc(a.from)}»</span><span class="note">${dots(a.base_support,a.of)}${a.base_support!=null?support(a.base_support,a.of):(lang==='de'?'So steht es in den verglichenen Textausgaben.':'As in the compared editions.')}</span></div><div class="reading-card"><span class="tag">${lang==='de'?'Andere Lesart':'Other reading'}</span><span class="body">«${esc(a.to)}»</span><span class="note">${dots(a.support,a.of)}${support(a.support,a.of)}</span></div><p class="note">${esc(a.note||'')}</p></div>`).join('');
+    h+=alts.map(a=>`<div class="pair" data-alternative="${esc(a.variant)}"><div class="reading-card main"><span class="tag">${lang==='de'?'Im Lesetext':'In the text'}</span><span class="body">«${esc(a.from)}»</span><span class="note">${dots(a.base_support,a.of)}${a.base_support!=null?support(a.base_support,a.of):(lang==='de'?'So steht es in den verglichenen Textausgaben.':'As in the compared editions.')}</span></div><div class="reading-card"><span class="tag">${lang==='de'?'Andere Lesart':'Other reading'}</span><span class="body">«${esc(a.to)}»</span><span class="note">${dots(a.support,a.of)}${support(a.support,a.of)}</span></div><p class="note">${esc(a.note||'')}</p><button type="button" class="link" data-source="${esc(a.variant)}" data-verse="${n.id}">${t.toSource}${icon('arrow-down')}</button></div>`).join('');
   }
   if(S.advanced){
     const words=MARKUS.words.filter(w=>w.v===n.v),vars=MARKUS.variants.filter(v=>v.ref===n.canonicalRef);
@@ -295,6 +311,48 @@ function verseSheet(id){
   }
   const p=nodes.get(n.parent);if(p.part)h+=`<div class="actions"><button type="button" class="link soft" data-study="${p.id}">${t.understand}</button><button type="button" class="link soft" data-background="${p.id}">${t.background}</button></div>`;
   openSheet('verse',h);
+}
+const gnorm=x=>String(x||'').normalize('NFD').replace(/[\u0300-\u036f\u02bc\u2019']/g,'').toLowerCase().replace(/ς/g,'σ');
+function sourceSheet(vid,verseId){
+  const L=lang==='de',n=nodes.get(verseId),a=altsFor(n.v).find(x=>x.variant===vid),ex=SRC.alts[vid]||{words:{},origin:[],related:[]};
+  const mv=(ex.related&&ex.related[0])||vid,mvar=SRC.variants[mv]||SRC.variants[vid],evar=SRC.variants[vid];
+  const allWords=Object.entries(ex.words||{});
+  const wordFor=text=>{const t=gnorm(text);const hit=allWords.find(([k,ws])=>ws.some(w=>w.grc!=='—'&&t.includes(gnorm(w.grc))));return hit?hit[1]:null;};
+  const labelFor=r=>{const ws=(mv===vid&&ex.words[r.id])||wordFor(r.text);if(r.text.trim()==='–'||r.text.trim()==='-')return L?'ohne diese Wörter':'without these words';return ws?ws.map(w=>`«${w.de}»`).join(' '):'';};
+  const isMain=r=>r.id==='R1'&&mv===vid?true:(mv!==vid?gnorm(r.text).includes(gnorm(evar.readings[0].text)):r.id==='R1');
+  let h=head(title(n)+' · '+(L?'bis zur Quelle':'to the source'));
+  h+=`<p class="note">${L?'Hier siehst du, welche alten Handschriften und welche gedruckten Ausgaben welchen Wortlaut haben, was die Wörter bedeuten und wie der Unterschied entstanden sein könnte. Es wird nichts als richtig entschieden.':'Which manuscripts and editions read what, what the words mean, and how the difference may have arisen.'}</p>`;
+  h+=`<h4>${L?'Was ist anders?':'What differs?'}</h4><div class="pair"><div class="reading-card main"><span class="tag">${L?'Im Lesetext':'In the text'}</span><span class="body">«${esc(a.from)}»</span></div><div class="reading-card"><span class="tag">${L?'Andere Lesart':'Other reading'}</span><span class="body">«${esc(a.to)}»</span></div></div><p class="note">${esc(a.note||'')}</p>`;
+  if(allWords.length){h+=`<h4>${L?'Die Wörter im Griechischen':'The Greek words'}</h4><p class="note">${L?'Wörtlich übersetzt; so lässt sich der Unterschied ohne Griechischkenntnisse nachvollziehen.':'Literal translation.'}</p><div class="word-table">`+allWords.map(([k,ws])=>ws.map(w=>`<div class="word-row"><span class="grc">${esc(w.grc)}</span><span class="body">${esc(w.de)}</span><span class="note">${esc(w.note_de||'')}</span></div>`).join('')).join('')+`</div>`;}
+  // Handschriften
+  const rows=(SRC.readings[mv]||[]).filter(e=>SRC.witnesses[e.source]);
+  if(rows.length){
+    h+=`<h4>${L?'Was die alten Handschriften lesen':'What the old manuscripts read'}</h4><p class="note">${L?'Die ältesten erhaltenen Bibelhandschriften, die hier ausgewertet sind (4. und 5. Jahrhundert). Darunter jeweils ihr Wortlaut in griechischen Kleinbuchstaben, ohne Akzente, wie in der Transkription.':'The oldest manuscripts evaluated here (4th–5th century).'}</p>`;
+    const groups=[...mvar.readings.map(r=>({key:r.id,title:labelFor(r),grc:r.text,main:isMain(r)})),{key:'other',title:L?'liest anders':'reads differently'},{key:'unclear',title:L?'nicht eindeutig zuzuordnen':'unclear'},{key:'lacuna',title:L?'Stelle nicht erhalten':'not preserved'}];
+    for(const g of groups){const es=rows.filter(e=>e.result===g.key);if(!es.length)continue;
+      h+=`<div class="wit-group ${g.main?'main':''}"><span class="tag">${g.main?(L?'Wie im Lesetext':'As in the text'):(g.key.startsWith('R')?(L?'Andere Lesart':'Other reading'):'')}</span>${g.grc?`<p><span class="grc">${esc(g.grc)}</span> <span class="body">${esc(g.title)}</span></p>`:`<p class="body">${esc(g.title)}</p>`}<p class="note">${es.length} ${L?(es.length===1?'Handschrift':'Handschriften'):'manuscripts'}</p>`+es.map(e=>{const w=SRC.witnesses[e.source];const hand=e.hand==='corr'?(L?' · korrigierte Fassung':' · corrected'):(rows.some(x=>x.source===e.source&&x.hand==='corr')?(L?' · ursprüngliche Fassung':' · original hand'):'');
+        return `<details class="wit"><summary><span class="sig">${esc(w.symbol)}</span><span><b>${esc(w.name_de)}</b><span class="note"> · ${esc(w.date_de)}${hand}</span></span></summary>${e.witness_text?`<p class="grc small">${esc(e.witness_text.replace(/[~+=%^]/g,''))}</p>`:''}${e.damaged?`<p class="note">${L?'Die Stelle ist beschädigt; einzelne Buchstaben fehlen.':'Damaged.'}</p>`:''}${e.supplied?`<p class="note">${L?'Teile des Wortlauts sind unsicher oder ergänzt.':'Partly supplied.'}</p>`:''}${e.note_de?`<p class="note">${esc(e.note_de)}</p>`:''}<p class="note">${esc(w.about_de||'')} ${esc(w.material_de||'')}. ${esc(w.location_de||'')}.</p><p class="note">${(w.facsimile||[]).map(u=>`<a href="${esc(u)}" target="_blank" rel="noopener">${L?'Digitale Abbildung':'Images'}</a>`).join(' · ')}${w.catalog_url?`${(w.facsimile||[]).length?' · ':''}<a href="${esc(w.catalog_url)}" target="_blank" rel="noopener">${L?'Katalog (NTVMR)':'Catalogue (NTVMR)'}</a>`:''}</p>${S.advanced?`<p class="ref-id">GA ${esc(w.gregory_aland)} · ${esc(e.source)}</p>`:''}</details>`;}).join('')+`</div>`;}
+    const rep=mvar.readings.filter(r=>r.reported&&r.reported.length);
+    if(rep.length){const sym=x=>(x.match(/\(([^)]+)\)/)||[])[1];const diff=[];
+      for(const r of rep)for(const w of r.reported){const sy=sym(w);const hit=rows.find(e=>e.hand==='first'&&SRC.witnesses[e.source].symbol===sy);if(hit&&hit.result!==r.id)diff.push(w);}
+      h+=`<p class="note">${L?'Frühere Arbeitsnotiz in diesem Projekt (berichtet, ungeprüft):':'Earlier working note (reported, unverified):'} ${esc(rep.map(r=>r.text+': '+r.reported.join(', ')).join(' · '))}.</p>`+(diff.length?`<p class="note"><b>${L?'Abweichung:':'Discrepancy:'}</b> ${L?`Bei ${esc(diff.join(', '))} stimmt die Arbeitsnotiz nicht mit der Transkription überein. Offener Prüfpunkt am Faksimile.`:esc(diff.join(', '))}</p>`:'');}
+  }
+  // Ausgaben
+  if(evar){
+    const edRows=(SRC.readings[vid]||[]).filter(e=>SRC.editions[e.source]);
+    h+=`<h4>${L?'Was die gedruckten Ausgaben haben':'What printed editions read'}</h4><p class="note">${L?'Gedruckte Ausgaben sind Rekonstruktionen von Fachleuten aus vielen Handschriften. Sie sind keine unabhängigen Zeugen.':'Printed editions are scholarly reconstructions, not independent witnesses.'}</p>`;
+    h+=evar.readings.map(r=>{const eds=[...(r.id==='R1'?['ED-SBLGNT']:[]),...r.editions];const extra=edRows.filter(e=>e.result===r.id&&!eds.includes(e.source)&&['ED-ST','ED-KJTR','ED-SR'].includes(e.source)).map(e=>e.source);
+      return `<div class="wit-group ${r.id==='R1'?'main':''}"><p><span class="grc">${esc(r.text)}</span> <span class="body">${esc(labelFor(r))}</span></p>`+[...eds,...extra].map(id=>{const e=SRC.editions[id]||{title:id};return `<details class="wit"><summary><span class="sig">${esc(EDS[id]||id.replace('ED-',''))}</span><span><b>${esc(e.title)}</b>${e.year?`<span class="note"> · ${esc(e.year)}</span>`:''}</span></summary><p class="note">${esc(e.about||'')}</p></details>`;}).join('')+`</div>`;}).join('');
+    const rp=edRows.find(e=>e.source==='ED-RP');const rpApp=evar.readings.find(r=>r.editions.includes('ED-RP'));
+    if(rp&&rpApp&&rp.result.startsWith('R')&&rp.result!==rpApp.id)h+=`<p class="note"><b>${L?'Unterschied zwischen den Quellen:':'Sources differ:'}</b> ${L?`Laut SBLGNT-Apparat liest Robinson-Pierpont «${esc(rpApp.text)}», die elektronische Fassung beim CNTR aber «${esc(rp.witness_text)}». Möglicherweise sind verschiedene Auflagen gemeint; nicht geklärt.`:'The SBLGNT apparatus and the CNTR text of RP differ here.'}</p>`;
+  }
+  // Entstehung
+  if(ex.origin&&ex.origin.length)h+=`<h4>${L?'Wie kann der Unterschied entstanden sein?':'How might the difference have arisen?'}</h4><p class="note">${L?'Mögliche Erklärungen aus der Textforschung. Sie stehen nebeneinander; keine ist entschieden.':'Possible explanations; none decided.'}</p>`+ex.origin.map(o=>`<div class="point"><p class="body">${esc(o)}</p></div>`).join('');
+  // Sicherheit
+  if(rows.length){const main=rows.filter(e=>e.hand==='first'&&mvar.readings.some(r=>r.id===e.result&&isMain(r))).length,tot=new Set(rows.filter(e=>e.result!=='lacuna').map(e=>e.source)).size;
+    h+=`<h4>${L?'Wie sicher ist das?':'How certain?'}</h4><div class="point"><p class="body">${a.base_support!=null?(L?'Lesetext: ':'Text: ')+esc(support(a.base_support,a.of))+' ':''}${L?`Von ${tot} alten Handschriften, in denen die Stelle erhalten ist, haben ${main} den Wortlaut des Lesetexts (Erstschrift).`:`${main} of ${tot} old manuscripts have the wording of the text.`}</p><p class="note">${L?'Beide Zahlen zählen nur, sie gewichten nicht. Die Auswahl ist klein; spätere Handschriften, alte Übersetzungen (lateinisch, syrisch, koptisch) und Zitate der Kirchenväter fehlen noch. Die Zuordnung der Handschriften ist maschinell und nicht am Original geprüft.':'Counts only; small selection; machine collation.'}</p></div>`;}
+  h+=`<p class="note">${esc(SRC.attribution)}</p><button type="button" class="link soft" data-more="${n.id}">${L?'Zurück zum Vers':'Back to the verse'}</button>`;
+  openSheet('source',h);
 }
 function sourcesBlock(){return `<h4>${lang==='de'?'Quellen':'Sources'}</h4><p class="note">Griechischer Text und Apparat: SBL Greek New Testament, © 2010 Society of Biblical Literature und Logos Bible Software, CC BY 4.0. Sprachdaten: MACULA Greek Linguistic Datasets, available at https://github.com/Clear-Bible/macula-greek/ (CC BY 4.0); Glossen: Berean Interlinear (gemeinfrei), Cherith Glosses von Andi Wu, © 2023 Cherith Analytics (CC BY 4.0). Zweite Annotation 3,22–30: MorphGNT 6.12, J. K. Tauber (CC BY-SA 3.0). Übersetzung und Erklärungen: eigene Entwürfe (CC0), fachlich ungeprüft.</p><p class="note">${esc(MARKUS.method.name)}: ${esc(MARKUS.method.limits.join(' '))}</p>`;}
 function studySheet(partId){
@@ -340,6 +398,7 @@ app.addEventListener('click',e=>{
   if(b.dataset.deep){const n=nodes.get(b.dataset.deep);current=b.dataset.deep;go(remembered.get(current)||n.children[0]);return;}
   if(b.dataset.go){go(b.dataset.go);return;}
   if(b.dataset.level!==undefined){go(resolveLevel(Number(b.dataset.level)));return;}
+  if(b.dataset.source){sourceSheet(b.dataset.source,b.dataset.verse);const sh=host.querySelector('.sheet');if(sh&&sh.scrollTo)sh.scrollTo(0,0);return;}
   if(b.dataset.more){verseSheet(b.dataset.more);return;}
   if(b.dataset.study){studySheet(b.dataset.study);return;}
   if(b.dataset.background){bgSheet(b.dataset.background);return;}

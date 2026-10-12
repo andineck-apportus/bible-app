@@ -2,6 +2,15 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.15 — 2026-10-12 — Lesarten bis zur Quelle
+
+- Rückmeldung: Bei anderen Lesarten bis zur Quelle eintauchen können, auch übersetzt.
+- Handschriften: Transkriptionen der sechs ältesten Handschriften des Markusevangeliums (01 א, 02 A, 03 B, 04 C, 05 D, 032 W) und fünf Ausgabentexte (WH, RP, Stephanus, KJTR, SR) aus dem Center for New Testament Restoration importiert (CC BY-SA 4.0, Commit fixiert, SHA-256). Neue Typen `witness`, `witness_transcription`, `witness_reading_set`; neue Ausgaben ED-ST, ED-KJTR, ED-SR; Kurzbeschreibungen (`about_de`) für alle Ausgaben.
+- Maschinelle Zuordnung Handschrift → Lesart für die 28 Variantenstellen in Mk 3,20–35 (`scripts/collate_witnesses.py`, `METHOD-AUTO-COLLATION-V1`), Erstschrift und Korrektur getrennt. Selbstprüfung gegen den SBLGNT-Apparat: 50/52.
+- Befund: Ephraemi (C) liest in 3,29 laut CNTR ἁμαρτίας, nicht κρίσεως wie in der Arbeitsnotiz `VAR-MRK-003-029-001`; die Arbeitsnotiz bleibt erhalten, die Abweichung wird angezeigt. In 3,20 widersprechen sich SBLGNT-Apparat und CNTR-Text bei Robinson-Pierpont.
+- Übersetzungs-Alternativen um Wortbedeutungen der Lesarten und mögliche Entstehungserklärungen ergänzt (Revision protokolliert).
+- Lesestrom: Blatt «Bis zur Quelle» je Lesart. Validator prüft die neuen Typen; DOM-Test erweitert.
+
 ## v0.14 — 2026-10-12 — Hintergrund damals
 
 - Rückmeldung: Auf Versebene passt der Lesestrom, es fehlt der Hintergrund damals.

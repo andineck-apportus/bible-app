@@ -1,9 +1,10 @@
-# Status und nächste Schritte · 2026-10-12 (UI v0.14)
+# Status und nächste Schritte · 2026-10-12 (UI v0.15)
 
 ## Gesichert und vorhanden
 - **Lesestrom als Hauptrichtung** (`app/reading-stream/`, v0.13): die ganze Bibel auf sieben Ebenen fortlaufend lesen und vertiefen; ungestörtes Vollbild mit ausblendenden Leisten; Lesarten, Erklärungen und Quellen als Blätter auf Wunsch; Urtext nur im Modus «Urtext und Details»; deutsche Stellenangaben; Farben nach System. Navigationsgerüst und 83 Zusammenfassungen liegen jetzt in `data/navigation/` und `data/summaries/` (Entwürfe, ungeprüft). Ausgearbeitet ist Markus 3,20–35; sonst fehlt der Bibeltext. Details und Grenzen: [LESETIEFE-PROTOTYP.md](LESETIEFE-PROTOTYP.md).
 - **Hintergrund damals** (v0.14): 13 Notizen zu Mk 3,20–35 in `data/background/`, im Lesestrom pro Vers, pro Abschnitt und optional im Text. Ungeprüfte Entwürfe; die zitierten ausserbiblischen Fundstellen sind noch nicht am Originaltext nachgeprüft.
-- v0.14: 1131 Datensätze im freien Kern.
+- **Lesarten bis zur Quelle** (v0.15): Transkriptionen der sechs ältesten Handschriften für Markus (א, A, B, C, D, W; CNTR, CC BY-SA 4.0) und fünf Ausgabentexte importiert; maschinelle Zuordnung zu den 28 Variantenstellen in Mk 3,20–35 (Abgleich mit dem SBLGNT-Apparat: 50 von 52 Ausgaben-Zuordnungen stimmen; 3,20 RP ist ein echter Unterschied zwischen SBLGNT-Apparat und CNTR-Text). Im Lesestrom pro Lesart ein Blatt «Bis zur Quelle» mit Wortbedeutungen, Handschriften, Ausgaben, Entstehungserklärungen und Sicherheit.
+- v0.15: 1154 Datensätze im freien Kern.
 - Alle Originalpakete v0.1–v0.5; rekonstruierte Git-Historie mit je einem Snapshot.
 - **Abgelöst:** Studienprototyp Mk 3,20–35 (`app/prototype/`), bleibt als Zwischenstand; seine Inhalte sind im Lesestrom aufgegangen. Stand v0.10, für allgemeine Leser: Überblick (gezeichnete Verschachtelung der drei Szenen), Lesen (deutscher Text; abweichende Lesarten auf Wunsch, in einfacher Sprache mit Bezeugung), Vertiefen (Was steht da? Wie kann man es verstehen? Was kann es heute bedeuten?), Studienpfad, Einstellungen (Lesarten, Urtext-Modus, Schriftgrösse, Hell/Dunkel). Griechisch, Wort für Wort, Grammatik und alle Apparatstellen nur im Modus «Urtext und Details». Erzeugt mit `scripts/build_prototype.py` nur aus Daten des freien Kerns.
 - v0.9: 1032 Datensätze; neu Gliederung Mk 3,20–35 (Texteinheiten, Befund, Deutung mit Gegenargument) und deutsche Arbeitsübersetzung 3,20–21 und 3,31–35 (ohne Wortzuordnung).
@@ -37,7 +38,7 @@
 ## Befunde aus dem Import
 - Die alte Arbeitstranskription von Mk 3,29–30 weicht nur in einem Wort von SBLGNT ab: `ἀλλ’` statt `ἀλλὰ` (3,29). Vergleich: `reports/compare-TEXT-MRK-003-029-030-WORKING-vs-SBLGNT.json`. Die Transkription bleibt als historischer Arbeitsstand erhalten.
 - SBLGNT markiert in 3,29 `ἁμαρτήματος` als Variantenstelle; das stimmt mit `VAR-MRK-003-029-001` überein. Die weiteren SBLGNT-Variantenstellen in 3,25–28 sind seit v0.7 auf Editionsebene erfasst (`VAR-SBLGNTAPP-*`).
-- Zeugenangabe zu prüfen: `VAR-MRK-003-029-001` führt Ephraemi (C) bei κρίσεως. Nach dem Gegenlesen besteht der Verdacht, dass C* ἁμαρτίας und erst ein Korrektor (C²) κρίσεως liest. Am kritischen Apparat bzw. NTVMR prüfen und ggf. Korrekturschichten trennen.
+- Zeugenangabe zu prüfen: `VAR-MRK-003-029-001` führt Ephraemi (C) bei κρίσεως. **Neu (v0.15):** Die CNTR-Transkription von C liest ἁμαρτίας, als unsicher markiert (Wort «by vid» ergänzt); die Arbeitsnotiz bleibt unverändert erhalten, der Lesestrom zeigt die Abweichung an. Nach dem Gegenlesen besteht der Verdacht, dass C* ἁμαρτίας und erst ein Korrektor (C²) κρίσεως liest. Am kritischen Apparat bzw. NTVMR prüfen und ggf. Korrekturschichten trennen.
 - `VAR-SBLGNTAPP-MRK-003-029-01` (nur ἁμαρτήματος) und `VAR-MRK-003-029-001` (αἰωνίου ἁμαρτήματος) betreffen dieselbe Stelle mit unterschiedlicher Abgrenzung.
 - Die Art der Abweichung (Umstellung, Auslassung, Ersetzung) ist bei Apparatlesarten noch nicht klassifiziert (`unclassified`).
 - Die Glossen von R1 (`ἁμαρτήματος`) und R3 (`ἁμαρτίας`) in `VAR-MRK-003-029-001` lauten beide «ewiger Sünde»; der Unterschied ist sprachlich noch zu beschreiben.

@@ -1,0 +1,23 @@
+{
+  "id": "METHOD-AUTO-COLLATION-V1",
+  "type": "assessment_method",
+  "status": "draft",
+  "tags": [
+    "TAG-TEXT-CRITICISM",
+    "TAG-UNCERTAINTY"
+  ],
+  "kind": "automatic_collation",
+  "name_de": "Automatische Zuordnung von Handschriften zu Lesarten",
+  "version": "1",
+  "applies_to": "variant mit base_tokens; witness_transcription im Format MES",
+  "question_de": "Welche der erfassten Lesarten steht in einer bestimmten Handschrift oder Ausgabe?",
+  "procedure_de": "Siehe scripts/collate_witnesses.py: Lesart in den SBLGNT-Vers einsetzen, mit der Transkription vereinfacht vergleichen (ohne Akzente; gleich klingende Laute vereinheitlicht), Fenster mit drei Wörtern Kontext, Lesartwörter müssen vorkommen, Korrekturschichten getrennt. Ergebnis Lesart, «andere Form», «unklar» oder «nicht erhalten».",
+  "assumptions_and_limits_de": [
+    "Grundlage sind Sekundärtranskriptionen des CNTR, keine eigene Lesung am Faksimile.",
+    "Die Zuordnung ist maschinell; bei Umstellungen, Auslassungen in der Nähe und abweichender Schreibung kann sie danebenliegen. Der Rohtext der Handschrift wird deshalb immer mit angezeigt.",
+    "Schreibvarianten (z. B. ει statt ι) werden bewusst nicht als eigene Lesart gewertet.",
+    "Nur die importierten Handschriften (sechs alte Majuskeln) werden berücksichtigt; späte Handschriften, alte Übersetzungen und Kirchenväter fehlen.",
+    "Abgleich mit dem SBLGNT-Apparat für Mk 3,20–35: 50 von 52 Zuordnungen der Ausgaben WH und RP stimmen; eine Abweichung (3,20 RP) ist ein echter Unterschied zwischen den Quellen, eine (3,27 RP) bleibt «andere Form»."
+  ],
+  "authorship_de": "Methode entworfen 2026-10-12 (KI-Entwurf, Claude); Ergebnisse maschinell berechnet."
+}

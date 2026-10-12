@@ -1,4 +1,4 @@
-# Lesestrom · Stand 2026-10-12 (v0.14)
+# Lesestrom · Stand 2026-10-12 (v0.15)
 
 Der Lesestrom ist seit v0.13 die **Hauptrichtung der App**. Einstieg: [app/reading-stream/index.html](../app/reading-stream/index.html). Die Datei direkt im Browser öffnen; Server und Internetzugriff sind nicht nötig. Das Design stammt aus dem Gespräch zwischen Andi Neck und einem Kollegen (v0.11). Der frühere Studienprototyp `app/prototype/` ist abgelöst (siehe unten).
 
@@ -13,6 +13,18 @@ Umsetzung in v0.13:
 - **Ohne Griechisch und Hebräisch:** Standardmässig gibt es keinen Urtext. Griechische Einschübe in Erklärungen werden ausgeblendet bzw. als «der griechische Ausdruck» umschrieben. Lesarten erscheinen als deutsche Wiedergaben mit einfacher Angabe der Bezeugung («Steht in 4 von 5 wichtigen Textausgaben»). Es gibt keine Entscheidung über richtig oder falsch.
 - **Für Fortgeschrittene:** Im Menü der Schalter «Urtext und Details»: Griechisch Wort für Wort mit Grundform, Form und Satzrolle; Vergleich der Textausgaben; Quellen und IDs. Ein zweiter Schalter «Andere Lesarten im Text zeigen» zeigt die Alternativen direkt unter dem Vers.
 - Deutsche Stellenangaben (Markus 3,20), Farben folgen dem System (oder fest hell/dunkel), Einstellungen werden lokal im Browser gespeichert.
+
+## Lesarten bis zur Quelle (v0.15)
+
+Rückmeldung vom 2026-10-12: Bei den anderen Lesarten weiter eintauchen können, die Unterschiede bis zur Quelle verstehen, auch übersetzt, so dass klar wird, welche Urtexte was sagen. Umsetzung: Im Versblatt hat jede Lesart den Link «Bis zur Quelle». Er öffnet ein Blatt mit:
+- **Was ist anders?** Beide deutschen Wiedergaben.
+- **Die Wörter im Griechischen**, wörtlich übersetzt und kurz erklärt (z. B. ἁμαρτήματος «einer Verfehlung», κρίσεως «eines Gerichts», ἁμαρτίας «einer Sünde»).
+- **Was die alten Handschriften lesen:** Codex Sinaiticus, Vaticanus, Alexandrinus, Ephraemi, Bezae und Washingtonianus (4./5. Jh.), gruppiert nach Lesart. Aufklappbar: Wortlaut der Handschrift, Erstschrift und Korrektur getrennt, Hinweise auf beschädigte oder ergänzte Stellen, kurze Beschreibung, Aufbewahrungsort, Links zu Abbildungen und Katalog. Weicht eine frühere Arbeitsnotiz von der Transkription ab, steht das dabei.
+- **Was die gedruckten Ausgaben haben:** SBLGNT, Westcott-Hort, Tregelles, NA28, Robinson-Pierpont sowie Textus Receptus (Stephanus), der griechische Text hinter der King-James-Bibel und die Statistical Restoration, jeweils mit kurzer Erklärung. Widersprechen sich die Quellen (3,20 RP), wird das angezeigt.
+- **Wie kann der Unterschied entstanden sein?** Mehrere mögliche Erklärungen nebeneinander (z. B. Augensprung bei 3,32), ohne Entscheidung.
+- **Wie sicher ist das?** Zählung der Ausgaben und der alten Handschriften, mit Grenzen.
+
+Daten: `data/witnesses/`, `data/witness-texts/` (CNTR, CC BY-SA 4.0), `data/witness-readings/`, Wortbedeutungen und Erklärungen in den Übersetzungs-Alternativen (`readings_de`, `origin_de`). Werkzeuge: `scripts/import_cntr_transcriptions.py`, `scripts/collate_witnesses.py`. Noch nicht enthalten: spätere Handschriften, alte Übersetzungen (lateinisch, syrisch, koptisch), Kirchenväter, Bilder der Handschriftenstellen.
 
 ## Hintergrund damals (v0.14)
 
@@ -51,5 +63,5 @@ Der Studienprototyp Mk 3,20–35 (v0.9/v0.10) wird nicht weiterentwickelt. Er bl
 ## Prüfungen
 
 - `node scripts/test_reading_stream.cjs` (ohne Zusatzpakete): vollständige Ebenen, Zählungen, Zusammenfassungen, Elternverweise, kanonische Stellen, Suche, Grenzen, Markus-Projektion.
-- `node scripts/test_reading_stream_dom.cjs` (braucht `jsdom`): Piloteinstieg, Studienblatt ohne Griechisch, Lesarten und Hintergrund im Versblatt, Hintergrund-Blatt je Abschnitt, Hinweise im Text, Urtext-Modus, Rückkehrposition, Suche, Lesen über die Kapitelgrenze, Lesarten im Text.
+- `node scripts/test_reading_stream_dom.cjs` (braucht `jsdom`): Piloteinstieg, Studienblatt ohne Griechisch, Lesarten und Hintergrund im Versblatt, Hintergrund-Blatt je Abschnitt, Hinweise im Text, «Bis zur Quelle» für alle sechs Alternativen, Urtext-Modus, Rückkehrposition, Suche, Lesen über die Kapitelgrenze, Lesarten im Text.
 - Am 2026-10-12 wurde der Lesestrom in Chromium in Handybreite (390 px) hell und dunkel angesehen. Eine Prüfung auf echten Geräten und mit Bildschirmleser steht aus. Keine dieser Prüfungen ist eine fachliche Inhaltsprüfung.

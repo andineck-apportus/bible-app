@@ -29,7 +29,7 @@ import refs  # noqa: E402
 SCHEMA = json.loads((pathlib.Path(__file__).resolve().parents[1] / "schema" / "record.schema.json").read_text(encoding="utf-8"))
 
 # Felder, die auf andere Datensätze verweisen
-ID_FIELDS = ["work", "primary_unit", "subject", "principle", "context", "from", "edition",
+ID_FIELDS = ["witness", "work", "primary_unit", "subject", "principle", "context", "from", "edition",
              "base_edition", "apparatus", "same_variation_unit_as", "incorporates", "based_on_edition",
              "based_on_tokens", "source_tokens_set", "target_translation", "bibliographic_source",
              "annotates", "method", "superseded_by", "annotation_moved_to", "based_on_annotation"]
@@ -165,6 +165,20 @@ def main():
             nav_groups = {g["id"] for _, nr in records.values() if nr.get("type") == "navigation_structure" for g in nr.get("groups", [])}
             if r["group"] not in nav_groups:
                 errors.append(f"{rel}: group {r['group']!r} in keiner Navigationsstruktur")
+        if r.get("type") == "witness_reading_set":
+            for i, e in enumerate(r.get("entries", [])):
+                var = records.get(e.get("variant"), (None, {}))[1]
+                if not var:
+                    errors.append(f"{rel}: entries[{i}] unbekannte Variantenstelle {e.get('variant')!r}")
+                elif e.get("result", "").startswith("R") and e["result"] not in {x["reading_id"] for x in var.get("readings", [])}:
+                    errors.append(f"{rel}: entries[{i}] unbekannte Lesart {e['result']!r}")
+                if e.get("source") not in records:
+                    errors.append(f"{rel}: entries[{i}] unbekannte Quelle {e.get('source')!r}")
+        if r.get("type") == "witness_transcription":
+            if bool(r.get("witness")) == bool(r.get("edition")):
+                errors.append(f"{rel}: witness_transcription braucht genau eines von witness/edition")
+            for k in (r.get("verses") or {}):
+                check_ref(rel, f"verses[{k}]", k); ref_count += 1
         if r.get("type") == "background_note":
             for f in ("topic_de", "text_de", "reference", "context", "authorship_de"):
                 if not r.get(f):
