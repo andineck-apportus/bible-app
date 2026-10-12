@@ -159,6 +159,13 @@ def main():
     annotation_count = assessment_count = 0
     for rid, (rel, r) in records.items():
         current_layer["value"] = layer_of[rid]
+        if r.get("type") == "summary" and r.get("group"):
+            nav_groups = {g["id"] for _, nr in records.values() if nr.get("type") == "navigation_structure" for g in nr.get("groups", [])}
+            if r["group"] not in nav_groups:
+                errors.append(f"{rel}: group {r['group']!r} in keiner Navigationsstruktur")
+        if r.get("type") == "navigation_structure":
+            for b in r.get("books", []):
+                check_ref(rel, f"books[{b.get('code')}].code", b.get("code")); ref_count += 1
         if r.get("type") == "annotation_set":
             members = token_set_members.get(r.get("annotates"), set())
             for tid, entry in (r.get("entries") or {}).items():
