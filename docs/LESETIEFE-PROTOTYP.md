@@ -1,44 +1,47 @@
-# Lesetiefe-Prototyp · 2026-10-11
+# Lesestrom · Stand 2026-10-12 (v0.13)
 
-Eigenständiger UX-Entwurf aus dem Designgespräch mit Andi Neck. Einstieg: [app/reading-stream/index.html](../app/reading-stream/index.html). Die Datei direkt im Browser öffnen; kein Build, Server oder Internetzugriff erforderlich. Mobile und Tablet/Desktop lassen sich oben umschalten. Der bestehende datenbasierte Markus-Prototyp bleibt separat erhalten.
+Der Lesestrom ist seit v0.13 die **Hauptrichtung der App**. Einstieg: [app/reading-stream/index.html](../app/reading-stream/index.html). Die Datei direkt im Browser öffnen; Server und Internetzugriff sind nicht nötig. Das Design stammt aus dem Gespräch zwischen Andi Neck und einem Kollegen (v0.11). Der frühere Studienprototyp `app/prototype/` ist abgelöst (siehe unten).
 
-## Vereinbarte Bedienidee
+## Vorgabe vom 2026-10-12
 
-Jede Zoomstufe ist eine fortlaufende Lesefassung. Scrollen führt zum nächsten Inhalt derselben Ebene; Vertiefen öffnet die darunterliegende Fassung am aktuellen Eintrag. Kontext führt zur übergeordneten Zusammenfassung zurück. Lesepositionen werden während der Sitzung erhalten. Das Inhaltsverzeichnis und die Stellensuche sind zusätzliche Sprungmöglichkeiten.
+«Das Bibelstudium muss noch zugänglicher werden, für Personen, die kein Griechisch oder Hebräisch können. Der Lesestrom muss ungestörter stattfinden können, abtauchen in die Tiefe, und Hintergrundoptionen optionaler.» (Andi Neck)
 
-- Start bei der ganzen Bibel; Ebenenwähler für den direkten Wechsel der Lesetiefe.
-- Ruhige, typografische Gestaltung, inspiriert vom Auftritt der Fondation Beyeler; keine übernommenen Markenassets, Bilder oder Schriften.
-- Mobile-first mit wenig ungenutztem Raum; auf breiteren Ansichten zusätzliche Navigation links.
-- Neutraler Hell-/Dunkelmodus ohne Grünstich, Oberflächensprachen Deutsch und Englisch, Textgrösse.
-- Einheitliche Auswahlfelder statt betriebssystemabhängiger Dropdown-Popups.
-- Logo: geometrisches B um 90 Grad gegen den Uhrzeigersinn gedreht, darunter zwei Quadrate nebeneinander mit gemeinsamen Kanten; reine SVG-Pfade.
+Umsetzung in v0.13:
+- **Ungestört lesen:** Vollbild ohne Geräterahmen. Kopf- und Fussleiste blenden beim Weiterlesen aus und erscheinen beim Zurückscrollen oder durch Tippen auf den Text wieder. Keine technischen Zähler im Lesetext. Verse fliessen als Text, Kapitel- und Abschnittstitel sind leise Zwischenüberschriften.
+- **Abtauchen:** Auf jeder Ebene führt ein einziger Link eine Stufe tiefer, mit Text je nach Ebene: «Zu den Testamenten» … «Text lesen». Am Ende jedes ausgearbeiteten Abschnitts steht «Diesen Abschnitt verstehen».
+- **Hintergrund nur auf Wunsch:** Lesarten, Erklärungen und Quellen öffnen sich als Blatt über dem Text und schliessen wieder, ohne die Leseposition zu verlieren. Ein unauffälliges «+» erscheint nur an Versen, an denen sich die alten Handschriften unterscheiden.
+- **Ohne Griechisch und Hebräisch:** Standardmässig gibt es keinen Urtext. Griechische Einschübe in Erklärungen werden ausgeblendet bzw. als «der griechische Ausdruck» umschrieben. Lesarten erscheinen als deutsche Wiedergaben mit einfacher Angabe der Bezeugung («Steht in 4 von 5 wichtigen Textausgaben»). Es gibt keine Entscheidung über richtig oder falsch.
+- **Für Fortgeschrittene:** Im Menü der Schalter «Urtext und Details»: Griechisch Wort für Wort mit Grundform, Form und Satzrolle; Vergleich der Textausgaben; Quellen und IDs. Ein zweiter Schalter «Andere Lesarten im Text zeigen» zeigt die Alternativen direkt unter dem Vers.
+- Deutsche Stellenangaben (Markus 3,20), Farben folgen dem System (oder fest hell/dunkel), Einstellungen werden lokal im Browser gespeichert.
 
-## Umfang und Grenzen
+## Bedienidee (seit v0.11)
 
-Testhierarchie: Bibel → Testament → Buchgruppe → Buch → Kapitel → technischer Testblock → Vers. 66 Bücher, 1’189 Kapitel, 6’701 Testblöcke und drei kanonische Pilotabschnitte und 31’102 Verspositionen. Protestantischer Kanon und KJV-Zählung sind eine deklarierte Testkonfiguration, keine endgültige Festlegung des Kanons oder Versifikationsmodells.
+Jede Zoomstufe ist eine fortlaufende Lesefassung: Bibel → Testament → Buchgruppe → Buch → Kapitel → Abschnitt → Vers. Scrollen führt zum nächsten Eintrag derselben Ebene, «Vertiefen» öffnet die darunterliegende Fassung am aktuellen Eintrag, «Kontext» führt zur übergeordneten zurück. Lesepositionen bleiben pro Ebene erhalten. Inhaltsverzeichnis (Tippen auf den Ort oben), Ebenenwahl (Mitte unten) und Stellensuche (Menü) sind zusätzliche Sprungmöglichkeiten. Die Gestaltung ist ruhig und typografisch, inspiriert vom Auftritt der Fondation Beyeler; es wurden keine Markenassets übernommen. Logo: geometrisches B, gedreht, mit zwei Quadraten; reine SVG-Pfade.
 
-Alle 66 Bücher haben kurze deutsche KI-Zusammenfassungen (`draft`, fachlich ungeprüft). Hinzu kommen Zusammenfassungen für die obersten Ebenen und vier Beispielkapitel. Die restlichen Kapitel und Verse ausserhalb der Markus-Pilotstelle zeigen ausdrücklich Platzhalter. Oberflächensprache und Inhaltssprache sind getrennt: Englisch übersetzt die Bedienelemente, nicht die deutschen Inhaltsentwürfe.
+## Daten
 
-Ausnahme Markus 3,20–35: drei echte Texteinheiten aus `data/text-units/`, mit unveränderten IDs. Die übrigen Testblöcke umfassen bis zu fünf Verse und sind **keine natürlichen Texteinheiten**. Buchgruppen und Kapitel sind Navigationshilfen. Die vereinbarte semantische Gliederung nach Gedankengängen, auch über Kapitelgrenzen hinweg, ist noch anzubinden. Eine eigene Satz-/Wort-Zoomstufe fehlt weiterhin. In der Pilotstelle sind Wortdetails und heutige Anwendung aufklappbar.
+Seit v0.13 liegen die Inhalte im freien Kern, nicht mehr in der Vorlage:
+- `data/navigation/NAV-PROT66-KJV.json`: Testamente, zehn Buchgruppen, 66 Bücher mit Namen, Kürzeln und Versen pro Kapitel. Protestantischer Kanon und KJV-Zählung sind eine **deklarierte Testkonfiguration**, keine Festlegung. Herkunft der Zahlen: [provenance.json](../app/reading-stream/provenance.json).
+- `data/summaries/`: 83 Zusammenfassungen (Bibel, Testamente, Gruppen, 66 Bücher, vier Beispielkapitel), alle `draft`. Es sind KI-Entwürfe aus dem Designgespräch vom 2026-10-11 (`authorship_de`, `migrated_from`), fachlich ungeprüft.
+- Markus 3,20–35: Studienprojektion aus `scripts/build_prototype.py` (Arbeitsübersetzung, sechs Alternativen, 249 Wörter, 28 Variantenstellen, Befunde, Deutungen mit Gegenargumenten, Prinzip, Anwendung, offene Frage).
 
-Dieser Entwurf importiert seine Inhalte nicht in `data/` und ersetzt keine vorhandenen Studien oder Schema-IDs. Lokale Navigations-IDs sind nur UI-Zustand; Buch-, Kapitel- und Versknoten führen zusätzlich `canonicalRef` nach USFM-Buchcode. Testblock-IDs sind keine redaktionell freigegebenen Abschnitts-IDs. Die Kapitel-/Verszahlen wurden für den Repository-Import aus der als gemeinfrei bezeichneten eBible-KJV-Ausgabe unabhängig nachgezählt; kein Bibeltext wurde daraus kopiert. Herkunft und Prüfsumme: [provenance.json](../app/reading-stream/provenance.json).
+Build: `template.html` bearbeiten, danach `python3 scripts/build_reading_stream.py`. Das Skript bettet die drei Datenquellen in `index.html` ein. Die erzeugte Datei nicht von Hand ändern.
 
-## Technische Grenzen und nächste Schritte
+## Grenzen
 
-- Eigenständige HTML/CSS/JavaScript-Datei ohne externe Abhängigkeiten. Geräteumschaltung und Icons benötigen keine ChatGPT-Laufzeit.
-- Geräteansichten halten ihren Zustand separat. Einstellungen und Lesepositionen werden noch nicht dauerhaft gespeichert.
-- Alle Ebenen haben vollständige Datenströme; jeweils zehn weitere Einträge werden bei Bedarf angehängt. Bereits geladene Einträge werden noch nicht virtualisiert. Sehr lange Lesesitzungen können daher den DOM vergrössern.
-- Suche nach Buch/Bibelstelle, noch keine Volltextsuche.
-- Nächster Schritt: weitere kanonische Daten und echte Zusammenfassungen/Gliederungen anbinden; Rückkehrposition, Touch-Bedienung und Tastaturzugang in echten Browsern und auf Geräten prüfen.
+- Abschnitte ausserhalb von Markus 3 sind technische Blöcke von bis zu fünf Versen, **keine natürlichen Texteinheiten**. Eine Gliederung nach Gedankengängen fehlt noch.
+- Ausserhalb von Markus 3,20–35 fehlt der Bibeltext; die App zeigt dort ruhig «Text noch nicht eingebunden». Die meisten Kapitelzusammenfassungen fehlen ebenfalls.
+- Die Umschreibung griechischer Einschübe ist eine reine Darstellung. Sie ist grammatisch nicht immer glatt und ändert die Daten nicht.
+- Englisch übersetzt nur die Bedienelemente, nicht die Inhalte.
+- Geladene Einträge werden nicht virtualisiert. Volltextsuche fehlt (nur Buch und Stelle).
+- Die Versifikation ist noch nicht mit einem Versifikationsmodell (z. B. STEPBible TVTMS) abgeglichen.
+
+## Abgelöst: `app/prototype/`
+
+Der Studienprototyp Mk 3,20–35 (v0.9/v0.10) wird nicht weiterentwickelt. Er bleibt als Zwischenstand erhalten. `scripts/build_prototype.py` bleibt in Gebrauch, weil es die Datenprojektion für den Lesestrom liefert, und erzeugt die alte Seite weiterhin mit.
 
 ## Prüfungen
 
-`node scripts/test_reading_stream.cjs` prüft vollständige Ebenen, Zählungen, Referenzsuche und Grenzen der Lesereihenfolge ohne Zusatzpakete. Im Arbeitslauf wurden zusätzlich DOM-Interaktionen mit jsdom geprüft: Vertiefen, Rückkehr zur gespeicherten Position, Inhaltsverzeichnis, Menü, Sprache, Textgrösse und Themes. Das ersetzt keine visuelle Prüfung auf realen Geräten und keine fachliche Inhaltsprüfung.
-
-## Integrierte Markus-Pilotstudie (v0.12)
-
-Menü → Pilotstudie Markus 3,20–35 oder Stellensuche. Auf Abschnittsebene fortlaufende Zusammenfassungen und getrennte Befunde, Deutungen samt Gegenargumenten, Prinzip, Anwendung und offene Frage. Vertiefen öffnet die Verse: 16 unveränderte Arbeitsübersetzungen, sechs alternative Wiedergaben/Lesarten, 249 griechische Wörter und 28 Variantenstellen. Wortzuordnung nur dort, wo vorhanden (3,22–30). Editionenkonsens ist keine Handschriftenzählung; berichtete Handschriften bleiben ungeprüfte Arbeitsnotizen. Quellen, Lizenzen und Bewertungsgrenzen sind in der Oberfläche sichtbar. Keine modernen Parallelübersetzungen hinzugefügt.
-
-`template.html` bearbeiten, danach `python3 scripts/build_reading_stream.py`: verwendet die vorhandene Projektion aus `build_prototype.py` und bettet die Daten in `index.html` ein. Erzeugte Dateien nicht von Hand ändern. Keine kanonischen Daten geändert.
-
-Zusätzlicher optionaler DOM-Test: `npm install --no-save jsdom`, dann `node scripts/test_reading_stream_dom.cjs`. Prüft beide Geräteansichten, Piloteinstieg, Details, Rückkehrposition und Durchlesen über Kapitelgrenzen. Keine visuelle Browser-/Geräteprüfung.
+- `node scripts/test_reading_stream.cjs` (ohne Zusatzpakete): vollständige Ebenen, Zählungen, Zusammenfassungen, Elternverweise, kanonische Stellen, Suche, Grenzen, Markus-Projektion.
+- `node scripts/test_reading_stream_dom.cjs` (braucht `jsdom`): Piloteinstieg, Studienblatt ohne Griechisch, Lesarten im Versblatt, Urtext-Modus, Rückkehrposition, Suche, Lesen über die Kapitelgrenze, Lesarten im Text.
+- Am 2026-10-12 wurde der Lesestrom in Chromium in Handybreite (390 px) hell und dunkel angesehen. Eine Prüfung auf echten Geräten und mit Bildschirmleser steht aus. Keine dieser Prüfungen ist eine fachliche Inhaltsprüfung.
