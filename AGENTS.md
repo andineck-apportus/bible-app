@@ -16,6 +16,7 @@ README.md sowie docs/STATUS-UND-ROADMAP.md zuerst lesen. Git ist Source of Truth
 - Quellenbezogene Rechte und Attribution vor Textimport prüfen; keine modernen Bibeln oder Apparate pauschal kopieren.
 - Lizenzgrundsatz ([LIZENZEN.md](LIZENZEN.md)): eigene Inhalte CC0. Freier Kern `data/`: nur gemeinfreie, CC0-, CC-BY- und CC-BY-SA-Quellen (bei gleichwertiger Wahl die freiere). Nicht kommerzielle Quellen nur in `data-nc/`, nie mit Kerndaten vermischen; Kerndaten verweisen nicht auf `data-nc/`. Geschützte Quellen und «used with permission»-Daten nie übernehmen, nur zitieren. Jede Fremddatei in LIZENZEN.md aufführen.
 - Erwähnt ein Erklärtext ein Wort der Ursprache («das griechische Wort für …»), das Wort als `terms` erfassen (Sprache, Originalschrift, Umschrift bei Nicht-Griechisch, Bedeutung), damit die App es mit Umschrift und Anhören-Knopf zeigt.
+- Jede weitere Sprach- oder Mundartfassung ist eine eigene Übersetzungsschicht aus dem Urtext (`language` nach BCP-47, `target_context`, `orthography_de`, `register_de`, `decisions`, Wortzuordnung), nie aus dem Hochdeutschen abgeleitet; die hochdeutsche Fassung dient nur als Kontrolle (`control_translation`). Prüfung durch muttersprachliche Personen eintragen, nicht behaupten.
 - Keine Lektoratsentscheidung über richtig/falsch: Unterschiede ausgeben und nach Gesichertheit bewerten, Bewertungsmethode offenlegen ([docs/VISION.md](docs/VISION.md)).
 
 ## Technische Regeln
