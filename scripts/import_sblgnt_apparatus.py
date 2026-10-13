@@ -50,7 +50,7 @@ if not re.fullmatch(r"[0-9a-f]{40}", args.upstream_commit):
     sys.exit("ERROR: --upstream-commit muss ein vollständiger 40-stelliger Git-SHA sein")
 code = args.book
 name = BOOKS[code][0]
-HEADING = {"MAT": "Matthew"}  # Versüberschrift im Apparat, falls abweichend vom Dateinamen
+HEADING = {"MAT": "Matthew", "PHP": "Philippians"}  # Versüberschrift im Apparat, falls abweichend vom Dateinamen
 source = args.sblgnt / "data/sblgntapp/text" / f"{name}.txt"
 
 

@@ -2,6 +2,14 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.35 — 2026-10-13 — Rut und Philipper aus dem Urtext
+
+- **Grundsatz** (Entscheid Andi Neck): Der Lesetext geht immer vom Urtext aus; Luther 1912 und Elberfelder 1905 dienen nur dem Vergleich.
+- **Rut** (85 Verse, Hebräisch): WLC mit MACULA-Hebrew-Annotation (2026 Morpheme); Arbeitsübersetzungen Hochdeutsch und Züridüütsch aus dem Hebräischen mit Wortzuordnung je Morphem, 66 Übersetzungsentscheidungen (u. a. חֶסֶד, גֹּאֵל, כָּנָף, «Füsse aufdecken», Ketiv/Qere in 4,5), Studieninhalte (14 Befunde, 8 Deutungen mit Gegenargumenten, 9 Hintergrundnotizen, Grundsätze, Anwendungen, Fragen, Beziehungen, Kapitelzusammenfassungen). Freie textkritische Daten (Qumran, LXX) fehlen weiterhin.
+- **Philipper** (104 Verse, Griechisch): SBLGNT mit MACULA-Annotation (1626 Wörter), 45 Variantenstellen mit Gesichertheitsbewertung (2 versübergreifende Apparateinträge zu 1,16–17 nicht sicher zuordenbar, siehe `reports/`), Handschriften 01, 02, 03, 04, 𝔓46 und 𝔓15/16 sowie fünf Ausgabentexte (CNTR) mit maschineller Zuordnung. Übersetzungen Hochdeutsch und Züridüütsch mit Wortzuordnung, 52 Entscheidungen (u. a. Christushymnus 2,6–11, πίστις Χριστοῦ 3,9), 11 Lesarten-Alternativen, Studieninhalte.
+- Beide Bücher von einem getrennten KI-Durchgang gegengelesen (Übersetzung Vers für Vers, Zählungen per Skript, Quellenangaben); Korrekturen eingearbeitet, z. B. «Moabiter, nicht Moabiterin» als Talmud (Jevamot 76b) statt Mischna, Wochenfest als Fest der Erstlinge, Mundart-Formen vereinheitlicht. Keine fachliche oder muttersprachliche Prüfung.
+- Importer: MACULA-Hebrew-Import für alle Bücher des Alten Testaments vorbereitet; bricht ab, wenn die hebräische Verszählung von der Navigationszählung abweicht (Umrechnung noch offen). SBLGNT-Apparat für Philipper, CNTR mit 𝔓46 und 𝔓15/16, Vergleichsbibeln für Rut und Philipper.
+
 ## v0.34 — 2026-10-13 — Hintergrund damals für alle 66 Bücher
 
 - 84 neue Hintergrundnotizen auf Buchebene (`scope: book`) für die 64 bisher fehlenden Bücher, für 20 Bücher mit einer zweiten Notiz (z. B. Genesis und altorientalische Fluterzählungen, Jesaja und die grosse Jesajarolle, Daniel und die Datierungsfrage, Markusschlüsse, Datierung der Offenbarung, Nord- oder Südgalatien). Je Notiz Entstehung, Zeit, Ort, Adressaten, die vertretenen Positionen (traditionell und historisch-kritisch, ohne Entscheid), «Nicht sicher», Belegstellen als Marken, ausserbiblische Quellen und Ursprachwörter; alle in Züridüütsch.

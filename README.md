@@ -2,15 +2,15 @@
 
 Git-versionierter Bibel-Wissensfundus: Quellen, Textbefunde, konkurrierende Interpretationen, Prinzipien und kontextabhängige Anwendungen nachvollziehbar miteinander verbinden.
 
-**Stand: 13. Oktober 2026 · UI v0.34 (Lesestrom) · Urtext: Matthäus, Markus, Lukas, Titus (Griechisch), Obadja (Hebräisch); ausgearbeitet: Markus 3,20–35, das Vaterunser (Mt 6,5–15; Lk 11,1–4), der ganze Titusbrief und Obadja.**
+**Stand: 13. Oktober 2026 · UI v0.35 (Lesestrom) · Urtext: Matthäus, Markus, Lukas, Philipper, Titus (Griechisch), Rut, Obadja (Hebräisch); ausgearbeitet: Markus 3,20–35, das Vaterunser (Mt 6,5–15; Lk 11,1–4) sowie Rut, Obadja, Philipper und Titus ganz. Der Lesetext geht immer vom Urtext aus.**
 
-Dies ist der Konzept- und Datenprototyp, noch keine fertige Benutzer-App. Vorhanden sind 3932 strukturierte Datensätze, darunter:
+Dies ist der Konzept- und Datenprototyp, noch keine fertige Benutzer-App. Vorhanden sind 4509 strukturierte Datensätze, darunter:
 - der **ganze griechische Text des Markusevangeliums** (SBLGNT, 11 286 Wörter mit stabilen IDs) mit Lemma, Morphologie, Syntaxrollen, Referenten und Glossen aus MACULA Greek als eigener Annotationsschicht,
 - **929 Variantenstellen** auf Editionsebene aus dem SBLGNT-Apparat, an die Wörter gebunden, jede mit einer maschinell berechneten **Gesichertheitsbewertung** (Übereinstimmung der Editionen, Methode offengelegt),
 - die Pilotstudie Mk 3,22–30 mit Befunden, Deutungen, Prinzip, Anwendung und einer vollständigen deutschen Arbeitsübersetzung mit Wortzuordnung (KI-Entwurf, ungeprüft),
 - eine einheitliche Bibelstellen-Konvention, ein generisches Schema und ein Validator.
 
-**Hauptrichtung: der [Lesestrom](app/reading-stream/index.html)** – eine eigenständige HTML-Datei zum Öffnen im Browser. Man liest die Bibel auf jeder Ebene fortlaufend (ganze Bibel, Testamente, Buchgruppen, Bücher, Kapitel, Abschnitte, Verse) und taucht an jeder Stelle eine Stufe tiefer. Der Lesestrom ist für Leserinnen und Leser ohne Griechisch und Hebräisch gemacht: Lesarten (auf Wunsch bis zu den alten Handschriften), Hintergrund zur Zeit damals, Erklärungen und Quellen öffnen sich nur auf Wunsch; Urtext und Grammatik gibt es im Modus «Urtext und Details». Ausgearbeitet sind bisher Markus 3,20–35, das Vaterunser (Mt 6,5–15; Lk 11,1–4) sowie als Muster für ganze Bücher der Titusbrief (Griechisch) und Obadja (Hebräisch); sonst gibt es vorerst das Gerüst und ungeprüfte Zusammenfassungen. [Bedienung, Daten und Grenzen](docs/LESETIEFE-PROTOTYP.md).
+**Hauptrichtung: der [Lesestrom](app/reading-stream/index.html)** – eine eigenständige HTML-Datei zum Öffnen im Browser. Man liest die Bibel auf jeder Ebene fortlaufend (ganze Bibel, Testamente, Buchgruppen, Bücher, Kapitel, Abschnitte, Verse) und taucht an jeder Stelle eine Stufe tiefer. Der Lesestrom ist für Leserinnen und Leser ohne Griechisch und Hebräisch gemacht: Lesarten (auf Wunsch bis zu den alten Handschriften), Hintergrund zur Zeit damals, Erklärungen und Quellen öffnen sich nur auf Wunsch; Urtext und Grammatik gibt es im Modus «Urtext und Details». Ausgearbeitet sind bisher Markus 3,20–35, das Vaterunser (Mt 6,5–15; Lk 11,1–4) sowie ganze Bücher: Philipper und Titus (Griechisch), Rut und Obadja (Hebräisch); sonst gibt es vorerst das Gerüst und ungeprüfte Zusammenfassungen. [Bedienung, Daten und Grenzen](docs/LESETIEFE-PROTOTYP.md).
 
 Der frühere Studienprototyp `app/prototype/mk3-20-35.html` (v0.9/v0.10) ist abgelöst und bleibt nur als Zwischenstand erhalten. SQLite-Projektion und Handschriftenbelege fehlen noch.
 
@@ -85,6 +85,9 @@ python3 scripts/import_macula_hebrew_book.py OBA --macula macula-hebrew --macula
 python3 scripts/import_comparison_bibles.py TIT --open-bibles open-bibles --bible-databases bible_databases   # ebenso OBA
 python3 scripts/authoring/titus_text.py; python3 scripts/authoring/titus_study.py
 python3 scripts/authoring/obadja_text.py; python3 scripts/authoring/obadja_study.py
+# Rut und Philipper (v0.35): gleiche Importer (RUT über MACULA Hebrew, PHP über SBLGNT/MACULA/CNTR), dann
+python3 scripts/authoring/ruth_text.py; python3 scripts/authoring/ruth_study.py
+python3 scripts/authoring/philipper_text.py; python3 scripts/authoring/philipper_study.py
 # Querverweise (OpenBible.info, CC BY) über die Kopie in scrollmapper/bible_databases
 python3 scripts/import_openbible_crossrefs.py bible_databases/sources/extras/cross_references.txt \
   --source-url https://github.com/scrollmapper/bible_databases --upstream-commit e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c

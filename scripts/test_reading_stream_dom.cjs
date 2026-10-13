@@ -187,7 +187,7 @@ click('[data-more="v39-6-11"]');sheetHost.querySelector('.sheet-tools [data-back
 assert(/\b(isch|händ|de|vo)\b/.test(sheetHost.querySelector('.bg-note .body').textContent),'Hintergrund in Mundart');click('[data-close]');
 click('[data-action=menu]');click('[data-set="text"][data-value="de"]');click('[data-close]');
 assert.equal(reader.querySelector('[data-stream="v39-6-11"] .stream-copy').textContent,M().de['MAT.6.11'],'zurück zu Hochdeutsch');
-assert.equal(Object.keys(M().layers.gsw.text).length,98,'Mundart für alle 98 Verse');
+assert.equal(Object.keys(M().layers.gsw.text).length,287,'Mundart für alle 287 Verse');
 // Obadja (Hebräisch) und Titus: Muster ganzer Bücher
 click('[data-action=menu]');click('[data-set="text"][data-value="de"]');if(sheetHost.querySelector('[data-toggle=advanced][aria-checked=false]'))click('[data-toggle=advanced]');click('[data-close]');
 click('[data-action=menu]');sheetHost.querySelector('[data-go^="TU-OBA"]').click();click('[data-action=down]');
