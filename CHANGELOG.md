@@ -4,7 +4,7 @@
 
 ## v0.26 — 2026-10-13 — Titel in der Kopfzeile
 
-- Der Titel-Knopf in der Kopfzeile hatte innen keinen Abstand (die allgemeine Knopf-Regel setzte ihn auf null); die Hover-Fläche umschliesst jetzt den Text mit Abstand und hugt ihn, statt sich bis zum Menü zu strecken.
+- Der Titel-Knopf in der Kopfzeile hatte innen keinen Abstand (die allgemeine Knopf-Regel setzte ihn auf null); der Titel hat jetzt innen Abstand und bleibt über die volle Breite antippbar.
 
 ## v0.25 — 2026-10-13 — Seitenleiste auf breiten Bildschirmen
 
