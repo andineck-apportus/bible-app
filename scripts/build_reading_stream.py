@@ -85,10 +85,22 @@ sources_payload = {"witnesses": wit_meta, "editions": editions, "readings": wit_
                    "variants": variants_extra,
                    "attribution": "Handschriftentexte: Alan Bunning, Center for New Testament Restoration, Electronic Transcriptions (CC BY-SA 4.0), github.com/Center-for-New-Testament-Restoration/transcriptions. Zuordnung zu den Lesarten maschinell (METHOD-AUTO-COLLATION-V1), nicht am Faksimile geprüft."}
 
+# Querverweise (OpenBible.info, CC BY) für alle Verse der ausgearbeiteten Kapitel, je Vers die bestbewerteten
+xref_chapters = {".".join(sec["range"].split("-")[0].split(".")[:2]) for sec in study["sections"]}
+crossrefs = {}
+for ch in sorted(xref_chapters):
+    book = ch.split(".")[0]
+    rec = json.loads((ROOT / f"data/crossrefs/XREF-OPENBIBLE-{book}.json").read_text(encoding="utf-8"))
+    for frm, items in rec["entries"].items():
+        if frm.startswith(ch + "."):
+            crossrefs[frm] = [[t, v] for t, v, *_ in items if v > 0][:10]
+refbooks = [[code, de, more] for code, de, more in refs.BOOKS]
+
 template = (ROOT / "app/reading-stream/template.html").read_text(encoding="utf-8")
 dump = lambda o: json.dumps(o, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 for marker, payload in (("/*__STUDY__*/null", study), ("/*__NAV__*/null", nav), ("/*__SUMMARIES__*/null", summaries),
-                        ("/*__BACKGROUND__*/null", background), ("/*__SOURCES__*/null", sources_payload)):
+                        ("/*__BACKGROUND__*/null", background), ("/*__SOURCES__*/null", sources_payload), ("/*__XREF__*/null", {"verses": crossrefs, "books": refbooks,
+                         "attribution": "Querverweise: OpenBible.info (CC BY), nach Stimmen der Nutzer sortiert; keine fachliche Prüfung."})):
     assert template.count(marker) == 1, marker
     template = template.replace(marker, dump(payload))
 (ROOT / "app/reading-stream/index.html").write_text(template, encoding="utf-8")

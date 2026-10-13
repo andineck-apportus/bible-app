@@ -2,6 +2,14 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.23 — 2026-10-13 — Navigator, Querverweise, verlinkte Stellen
+
+- Neuer Navigator (Tippen auf die Titelzeile): «Du bist hier» als antippbarer Pfad, dann Altes/Neues Testament → Buchgruppe → Buch → Kapitel → Vers als Raster; ausgearbeitete Bücher, Kapitel und Verse sind mit einem Punkt markiert, ausgearbeitete Abschnitte des Kapitels direkt wählbar; «öffnen» führt auf Buch- oder Kapitelebene. Ersetzt die alte Inhaltsliste.
+- Querverweise: 344 799 Verweise von OpenBible.info (CC BY) importiert (`data/crossrefs/`, Typ `crossref_set`). Im Versblatt erscheinen die zehn bestbewerteten als antippbare Stellen.
+- Bibelstellen in Erklärtexten, Vergleichslisten und «Ähnliche Stellen» sind antippbar (auch Listen wie «Jes 63,16; 64,7» und Kapitelbezüge wie «(6,14–15)»). Nach einem Sprung erscheint «Zurück zu …».
+- «Verse fortlaufend» ist jetzt Standard (gespeicherte Einstellung wird einmalig umgestellt). Verse ohne Text erscheinen im Fliesstext nur als Nummer mit «…» und einem Hinweis am Anfang.
+- Bekannte Grenze: Sprungziele ausserhalb der ausgearbeiteten Stellen zeigen noch keinen Text. Vorschlag: eine gemeinfreie deutsche Übersetzung (z. B. Luther 1912) als Lesetext-Ersatz einbetten, bis eigene Übersetzungen vorliegen.
+
 ## v0.22 — 2026-10-13 — Schliessen-Knopf, Verse fortlaufend
 
 - «Schliessen» (bzw. «Fertig» im Menü) mit Symbol, runder Fläche und Hover-Effekt; beim Öffnen eines Blatts erscheint kein Fokusrahmen mehr um den Knopf (der Fokus liegt auf dem Blatt).

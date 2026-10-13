@@ -1,10 +1,11 @@
-# Status und nächste Schritte · 2026-10-12 (UI v0.22)
+# Status und nächste Schritte · 2026-10-12 (UI v0.23)
 
 ## Gesichert und vorhanden
 - **Lesestrom als Hauptrichtung** (`app/reading-stream/`, v0.13): die ganze Bibel auf sieben Ebenen fortlaufend lesen und vertiefen; ungestörtes Vollbild mit ausblendenden Leisten; Lesarten, Erklärungen und Quellen als Blätter auf Wunsch; Urtext nur im Modus «Urtext und Details»; deutsche Stellenangaben; Farben nach System. Navigationsgerüst und 83 Zusammenfassungen liegen jetzt in `data/navigation/` und `data/summaries/` (Entwürfe, ungeprüft). Ausgearbeitet ist Markus 3,20–35; sonst fehlt der Bibeltext. Details und Grenzen: [LESETIEFE-PROTOTYP.md](LESETIEFE-PROTOTYP.md).
 - **Hintergrund damals** (v0.14): 13 Notizen zu Mk 3,20–35 in `data/background/`, im Lesestrom pro Vers, pro Abschnitt und optional im Text. Ungeprüfte Entwürfe; die zitierten ausserbiblischen Fundstellen sind noch nicht am Originaltext nachgeprüft.
 - **Lesarten bis zur Quelle** (v0.15): Transkriptionen der sechs ältesten Handschriften für Markus (א, A, B, C, D, W; CNTR, CC BY-SA 4.0) und fünf Ausgabentexte importiert; maschinelle Zuordnung zu den 28 Variantenstellen in Mk 3,20–35 (Abgleich mit dem SBLGNT-Apparat: 50 von 52 Ausgaben-Zuordnungen stimmen; 3,20 RP ist ein echter Unterschied zwischen SBLGNT-Apparat und CNTR-Text). Im Lesestrom pro Lesart ein Blatt «Bis zur Quelle» mit Wortbedeutungen, Handschriften, Ausgaben, Entstehungserklärungen und Sicherheit.
 - **Vaterunser** (v0.16): Mt 6,5–15 und Lk 11,1–4 ausgearbeitet wie Mk 3,20–35 (Übersetzung, Lesarten bis zu Handschriften, Papyri und Amuletten, Wortzuordnung, Befunde, Deutungen, Hintergrund, Anwendung). Matthäus und Lukas vollständig als griechischer Text mit Annotation und Apparat vorhanden. Alles fachlich ungeprüft.
+- **Navigator und Querverweise** (v0.23): hierarchische Navigation, 344 799 Querverweise (OpenBible.info), verlinkte Stellen mit Rücksprung. Offen: Lesetext für Sprungziele ausserhalb der ausgearbeiteten Stellen (Vorschlag: gemeinfreie Luther 1912 als Ersatz).
 - **Übersetzungsentscheidungen** (v0.18): für die Vaterunser-Verse gekennzeichnet (wörtlich, angepasst, Deutung, Tradition) und mit Luther 1912 und Elberfelder 1905 verglichen. Für Mk 3,20–35 noch nicht nachgetragen.
 - **Umschrift und Anhören** (v0.17): griechische Wörter in lateinischer Umschrift und per Gerätestimme anhörbar; Hebräisch vorbereitet.
 - v0.16: 3367 Datensätze im freien Kern.

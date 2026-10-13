@@ -1,4 +1,4 @@
-# Lesestrom · Stand 2026-10-13 (v0.22)
+# Lesestrom · Stand 2026-10-13 (v0.23)
 
 Der Lesestrom ist seit v0.13 die **Hauptrichtung der App**. Einstieg: [app/reading-stream/index.html](../app/reading-stream/index.html). Die Datei direkt im Browser öffnen; Server und Internetzugriff sind nicht nötig. Das Design stammt aus dem Gespräch zwischen Andi Neck und einem Kollegen (v0.11). Der frühere Studienprototyp `app/prototype/` ist abgelöst (siehe unten).
 
@@ -13,6 +13,10 @@ Umsetzung in v0.13:
 - **Ohne Griechisch und Hebräisch:** Standardmässig gibt es keinen Urtext. Griechische Einschübe in Erklärungen werden ausgeblendet bzw. als «der griechische Ausdruck» umschrieben. Lesarten erscheinen als deutsche Wiedergaben mit einfacher Angabe der Bezeugung («Steht in 4 von 5 wichtigen Textausgaben»). Es gibt keine Entscheidung über richtig oder falsch.
 - **Für Fortgeschrittene:** Im Menü der Schalter «Urtext und Details»: Griechisch Wort für Wort mit Grundform, Form und Satzrolle; Vergleich der Textausgaben; Quellen und IDs. Ein zweiter Schalter «Andere Lesarten im Text zeigen» zeigt die Alternativen direkt unter dem Vers.
 - Deutsche Stellenangaben (Markus 3,20), Farben folgen dem System (oder fest hell/dunkel), Einstellungen werden lokal im Browser gespeichert.
+
+## Navigator und Querverweise (v0.23)
+
+Die Titelzeile öffnet den Navigator: Pfad der aktuellen Position, Suche, dann Testament → Buchgruppe → Buch → Kapitel → Vers als Raster mit Punkt für ausgearbeitete Teile. Im Versblatt stehen Querverweise (OpenBible.info, CC BY, nach Stimmen); Bibelstellen in Erklärtexten sind antippbar; nach einem Sprung führt «Zurück zu …» an die Ausgangsstelle. Verse fortlaufend ist Standard.
 
 ## Lesefluss und Wort-Info (v0.20)
 

@@ -169,7 +169,7 @@ def project(section_ids):
                           "subject": subject_of_principle(prs[v["principle"]]),
                           "context": ctx.get(v.get("context"), {}).get("audience"), "confidence": v.get("confidence")}
                          for k, v in sorted(aps.items())],
-        "relations": [{"from": v["from"], "to": v["to_ref"], "to_de": refs.display_de(v["to_ref"]), "kind": v["relation"],
+        "relations": [{"from": v["from"], "from_ref": tu.get(v["from"], {}).get("range"), "to": v["to_ref"], "to_de": refs.display_de(v["to_ref"]), "kind": v["relation"],
                        "confidence": v.get("confidence")} for v in sorted(rels.values(), key=lambda r: r["id"])
                       if v.get("from") in subjects],
         "questions": [{"q": v["question_de"], "finding": v.get("finding_de"), "subject": v.get("subject")}

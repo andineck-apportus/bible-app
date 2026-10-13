@@ -135,6 +135,37 @@ click('[data-action=menu]');const inp=sheetHost.querySelector('input[type=search
 assert.equal(reader.querySelector('[data-stream="v41-11-2"] .stream-copy').textContent,M().de['LUK.11.2']);
 click('[data-more="v41-11-2"]');click('.sheet [data-source="VAR-SBLGNTAPP-LUK-011-002-01"]');
 txt=sheetHost.textContent;assert(txt.includes('Papyrus 75')&&txt.includes('Codex Vaticanus'),'P75 zu Lk 11,2');tested++;click('[data-close]');
-click('[data-action=menu]');click('[data-toggle=flow]');assert(app.classList.contains('flow'),'Verse fortlaufend');click('[data-toggle=flow]');assert(!app.classList.contains('flow'));click('[data-close]');
-console.log(`PASS: Pilotzugang, Studienblatt ohne Griechisch, Lesarten auf Wunsch (${M().alternatives.length}), Hintergrund damals (${model.BG.length}), Bis zur Quelle (${tested}), Urtext-Modus, Rückkehrposition, Suche, Kapitelgrenze, Vaterunser Mt/Lk, Übersetzungsentscheidungen und Vergleich, Wort-Blatt, Umschrift und Anhören, Verse fortlaufend.`);
+assert(app.classList.contains('flow'),'Verse fortlaufend ist Standard');
+click('[data-action=menu]');click('[data-toggle=flow]');assert(!app.classList.contains('flow'),'Verse fortlaufend abschaltbar');click('[data-toggle=flow]');assert(app.classList.contains('flow'));click('[data-close]');
+
+// Navigator: Pfad, Hierarchie AT/NT → Gruppe → Buch → Kapitel → Vers
+click('[data-action=index]');
+assert(sheetHost.querySelector('.crumbs [aria-current=true]'),'Pfad zeigt die aktuelle Position');
+assert(sheetHost.textContent.includes('Du bist hier'));
+click('[data-nav="t:ot"]');click('[data-nav="g:0"]');
+assert(sheetHost.querySelector('.grid.books [data-nav="b:0"]'),'Bücher der Gruppe');
+click('[data-nav="b:0"]');assert(sheetHost.querySelector('.grid.nums [data-nav="c:50"]'),'50 Kapitel Genesis');
+click('[data-nav="c:1"]');assert(sheetHost.querySelector('.grid.nums [data-go="v0-1-31"]'),'31 Verse Genesis 1');
+assert(sheetHost.querySelector('.open[data-go="c0-1"]'),'Kapitel öffnen');
+click('[data-go="v0-1-3"]');assert.equal(model.nodes.get('v0-1-3').id,'v0-1-3');assert(reader.querySelector('[data-stream="v0-1-3"]'),'Sprung zu Genesis 1,3');
+click('[data-action=index]');assert(sheetHost.querySelector('.grid.books [data-nav="b:0"].cur')&&sheetHost.querySelector('[data-nav="c:1"].cur'),'Navigator startet an der aktuellen Position');
+assert(!sheetHost.querySelector('.grid.books .study'),'in der Gruppe Gesetz ist nichts ausgearbeitet');
+click('[data-nav="t:nt"]');assert(sheetHost.querySelector('[data-nav="g:5"]'),'Gruppen des NT');click('[data-nav="g:5"]');assert(sheetHost.querySelector('.grid.books [data-nav="b:39"].study'),'Matthäus als ausgearbeitet markiert');
+click('[data-close]');
+
+// Querverweise und Stellen im Text sind verlinkt; Rücksprung
+click('[data-action=menu]');const inp2=sheetHost.querySelector('input[type=search]');inp2.value='Mt 6,11';inp2.dispatchEvent(new dom.window.Event('input',{bubbles:true}));sheetHost.querySelector('.results [data-go]').click();
+click('[data-more="v39-6-11"]');
+assert(sheetHost.querySelector('.xrefs [data-ref-go="PRO.30.8"]'),'Querverweis Spr 30,8');
+assert(sheetHost.textContent.includes('Spr 30,8')&&sheetHost.textContent.includes('Lk 11,3'),'Kurzform der Stellen');
+sheetHost.querySelector('.xrefs [data-ref-go="PRO.30.8"]').click();
+assert(reader.querySelector('[data-stream="v19-30-8"]'),'Sprung zu Sprüche 30,8');
+const back=app.querySelector('.jump-back');assert(back&&back.textContent.includes('Matthäus 6,11'),'Rücksprung angeboten');back.click();
+assert(reader.querySelector('[data-stream="v39-6-11"]')&&!app.querySelector('.jump-back'),'zurück bei Matthäus 6,11');
+click('[data-more="v39-6-11"]');sheetHost.querySelector('.sheet-tools [data-background="TU-MAT-006-009-013"]').click();
+assert(sheetHost.querySelector('[data-ref-go="MRK.14.36"]'),'Vergleichsstelle verlinkt');
+assert(sheetHost.querySelector('[data-ref-go="ISA.64.7"]'),'Stelle im Fliesstext verlinkt (Jes 63,16; 64,7)');
+assert(!sheetHost.textContent.includes('data-ref-go="SIR'),'Sirach nicht verlinkt');
+click('[data-close]');
+console.log(`PASS: Pilotzugang, Studienblatt ohne Griechisch, Lesarten auf Wunsch (${M().alternatives.length}), Hintergrund damals (${model.BG.length}), Bis zur Quelle (${tested}), Urtext-Modus, Rückkehrposition, Suche, Kapitelgrenze, Vaterunser Mt/Lk, Übersetzungsentscheidungen und Vergleich, Wort-Blatt, Umschrift und Anhören, Verse fortlaufend, Navigator, Querverweise und Rücksprung.`);
 dom.window.close();
