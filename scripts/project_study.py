@@ -53,8 +53,11 @@ def project(section_ids):
     for sid in section_ids:
         s = tu[sid]
         parts = [tu[p] for p in s.get("parts", [])] or [s]
-        sections.append({"id": s["id"], "range": s["range"], "title": s["title"], "summary": s.get("summary_de"),
-                         "parts": [{"id": p["id"], "range": p["range"], "title": p["title"], "summary": p.get("summary_de")}
+        def names(u):
+            return {"titles": {"de": u["title"], **{k.split("-")[0]: v for k, v in (u.get("title_by_language") or {}).items()}},
+                    "summaries": {"de": u.get("summary_de"), **{k.split("-")[0]: v for k, v in (u.get("summary_by_language") or {}).items()}}}
+        sections.append({"id": s["id"], "range": s["range"], "title": s["title"], "summary": s.get("summary_de"), **names(s),
+                         "parts": [{"id": p["id"], "range": p["range"], "title": p["title"], "summary": p.get("summary_de"), **names(p)}
                                    for p in parts]})
         b, c, v0, v1 = _span(s["range"])
         scope.setdefault((b, c), set()).update(range(v0, v1 + 1))
