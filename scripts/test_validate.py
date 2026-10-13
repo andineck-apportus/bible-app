@@ -73,6 +73,7 @@ def bad_decision(root):
     d = json.loads(p.read_text())
     d["decisions"][0]["target"] = "steht nicht im Text"
     d["decisions"][1]["kind"] = "frei"
+    d["decisions"][2]["grc"] = "οὐρανοῖς ἀγάπη"
     write(p, d)
 
 
@@ -86,4 +87,5 @@ case("Hintergrundnotiz ohne Text", bad_background, "background_note ohne text_de
 case("Hintergrundnotiz ohne Kontext", bad_background, "ist kein context-Datensatz")
 case("Entscheidung ohne Zieltext", bad_decision, "Zieltext nicht in der Übersetzung")
 case("Entscheidung unbekannte Art", bad_decision, "unbekannte Art")
+case("Entscheidung falsches Griechisch", bad_decision, "nicht im Vers")
 print("PASS: validator negative tests (NC-Trennung, Annotation, Bewertung, Bibelstelle, Hintergrund, Übersetzungsentscheidung)")

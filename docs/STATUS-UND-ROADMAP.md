@@ -1,4 +1,4 @@
-# Status und nächste Schritte · 2026-10-12 (UI v0.19)
+# Status und nächste Schritte · 2026-10-12 (UI v0.20)
 
 ## Gesichert und vorhanden
 - **Lesestrom als Hauptrichtung** (`app/reading-stream/`, v0.13): die ganze Bibel auf sieben Ebenen fortlaufend lesen und vertiefen; ungestörtes Vollbild mit ausblendenden Leisten; Lesarten, Erklärungen und Quellen als Blätter auf Wunsch; Urtext nur im Modus «Urtext und Details»; deutsche Stellenangaben; Farben nach System. Navigationsgerüst und 83 Zusammenfassungen liegen jetzt in `data/navigation/` und `data/summaries/` (Entwürfe, ungeprüft). Ausgearbeitet ist Markus 3,20–35; sonst fehlt der Bibeltext. Details und Grenzen: [LESETIEFE-PROTOTYP.md](LESETIEFE-PROTOTYP.md).

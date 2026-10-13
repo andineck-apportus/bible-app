@@ -87,7 +87,7 @@ def project(section_ids):
                 de_source[r] = tid
         for dc in t.get("decisions", []):
             if in_scope(dc["reference"]):
-                decisions.setdefault(dc["reference"], []).append({k: dc.get(k) for k in ("target", "kind", "more_literal_de", "other_options_de", "note_de") if dc.get(k)})
+                decisions.setdefault(dc["reference"], []).append({k: dc.get(k) for k in ("target", "kind", "grc", "more_literal_de", "other_options_de", "note_de") if dc.get(k)})
         for alt in t.get("alternatives", []):
             vid, rid = alt["reading"].split(":")
             res = next((x for x in assess.get(vid, {}).get("results", []) if x["reading"].endswith(":" + rid)), None)

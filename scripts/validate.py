@@ -77,6 +77,13 @@ def check_schema(value, schema, path, errors):
                 check_schema(item, schema["items"], f"{path}[{i}]", errors)
 
 
+def strip_marks(word):
+    """Vergleichsform eines griechischen Worts: NFC, ohne Apparatzeichen, Interpunktion und Elisionsvarianten."""
+    import unicodedata
+    w = unicodedata.normalize("NFC", word).replace("’", "ʼ").replace("'", "ʼ")
+    return re.sub(r"[⸀-⸅,.·;:!?()—⟦⟧\[\]]", "", w)
+
+
 def main():
     errors = []
     records = {}
@@ -119,6 +126,7 @@ def main():
         except refs.RefError as exc:
             errors.append(f"{rel}: {field}: {exc}")
 
+    tokens_by_set = {rid: r.get("tokens", []) for rid, (_, r) in records.items() if r.get("type") == "token_set"}
     token_sets = {rid: [t["id"] for t in r.get("tokens", [])]
                   for rid, (_, r) in records.items() if r.get("type") == "token_set"}
     token_ids = {}
@@ -169,6 +177,11 @@ def main():
             for i, dcs in enumerate(r.get("decisions", [])):
                 if dcs.get("kind") not in ("literal", "adapted", "interpretive", "traditional"):
                     errors.append(f"{rel}: decisions[{i}] unbekannte Art {dcs.get('kind')!r}")
+                if dcs.get("grc") and r.get("based_on_tokens") in token_sets:
+                    vw = {strip_marks(t["word"]) for t in tokens_by_set.get(r["based_on_tokens"], []) if t["reference"] == dcs.get("reference")}
+                    missing = [x for x in dcs["grc"].split() if strip_marks(x) not in vw]
+                    if missing:
+                        errors.append(f"{rel}: decisions[{i}] griechische Wörter {missing} nicht im Vers {dcs.get('reference')}")
                 if dcs.get("target", "\0") not in (r.get("text_by_reference") or {}).get(dcs.get("reference"), ""):
                     errors.append(f"{rel}: decisions[{i}] Zieltext nicht in der Übersetzung von {dcs.get('reference')}")
         for i, tm in enumerate(r.get("terms", []) if isinstance(r.get("terms"), list) else []):

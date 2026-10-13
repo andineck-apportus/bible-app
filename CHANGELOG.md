@@ -2,6 +2,14 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.20 — 2026-10-13 — Ruhigerer Lesefluss, Wort-Info
+
+- Unterstrichene Stellen (Tradition, Deutung) sind antippbar und öffnen ein Wort-Blatt: griechischer Wortlaut mit Umschrift und Anhören, Grundform, zugehörige Deutungen, wörtlichere Fassung, weitere Möglichkeiten, Begründung und die Wiedergabe in Luther 1912 und Elberfelder 1905. Dafür führen die Übersetzungsentscheidungen jetzt den griechischen Wortlaut (`grc`, vom Validator gegen den Vers geprüft); fünf Deutungen haben Fachwörter (`terms`) erhalten.
+- Das «+» am Versende entfällt: Hat ein Vers Details, ist seine Versnummer umrandet und antippbar.
+- «Diesen Abschnitt verstehen» und «Hintergrund damals» stehen nicht mehr unter dem Abschnitt, sondern als Symbole «Verstehen» und «Geschichte» beim Abschnittstitel.
+- Hinweise «Damals» im Text sind kompakter (ein Symbol, Themen nebeneinander).
+- Aramäisch wird zuverlässig über die Umschrift mit einer deutschen Stimme vorgelesen; Hebräisch ohne Vokalzeichen an die hebräische Stimme, sonst ebenfalls über die Umschrift.
+
 ## v0.19 — 2026-10-13 — Ursprungswörter zum Anhören
 
 - Wunsch: Wo eine Erklärung sich auf ein griechisches, hebräisches oder aramäisches Wort bezieht, das Wort klein mit Aussprache und Anhören-Knopf zeigen.
