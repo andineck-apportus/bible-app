@@ -2,6 +2,10 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.26 — 2026-10-13 — Titel in der Kopfzeile
+
+- Der Titel-Knopf in der Kopfzeile hatte innen keinen Abstand (die allgemeine Knopf-Regel setzte ihn auf null); die Hover-Fläche umschliesst jetzt den Text mit Abstand und hugt ihn, statt sich bis zum Menü zu strecken.
+
 ## v0.25 — 2026-10-13 — Seitenleiste auf breiten Bildschirmen
 
 - Die Seitenleiste (ab 900 px Breite) hatte keinen Innenabstand und eine eigene Formensprache. Jetzt: Überschrift der Ebene, Einträge mit Abstand, Hover-Fläche, aktuelle Position gefüllt, Punkt für ausgearbeitete Einträge; der aktuelle Eintrag wird beim Öffnen in Sicht gerollt.
