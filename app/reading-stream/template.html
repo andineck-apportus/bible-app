@@ -58,6 +58,10 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .alt-line{display:block;font:italic 400 calc(var(--read) * .82)/1.5 var(--serif);color:var(--muted);margin:2px 0 8px 1.4em}
 #bible-stream .part-end{margin:4px 0 18px}
 #bible-stream .grc{font-family:var(--serif);font-size:1.05em;letter-spacing:.01em}
+#bible-stream .dec{text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:.22em;text-decoration-color:var(--muted)}
+#bible-stream .dec.traditional{text-decoration-style:dotted}
+#bible-stream .dec.interpretive{text-decoration-style:dashed}
+#bible-stream .dec-tag.traditional,#bible-stream .dec-tag.interpretive{color:var(--ink)}
 #bible-stream .grc-line{display:inline-flex;align-items:center;flex-wrap:wrap;gap:2px}
 #bible-stream .play{display:inline-flex!important;align-items:center;justify-content:center;width:32px;height:32px;margin-left:4px;vertical-align:middle;color:var(--muted);border-radius:50%;flex:none}
 #bible-stream .play svg{width:18px;height:18px}
@@ -276,6 +280,20 @@ function summary(n){
 }
 function eyebrow(n){if(n.level===0)return '';const p=nodes.get(n.parent);if(n.level===5)return n.part?refDe(n.part.range):title(p);return title(p);}
 const isPilotVerse=n=>n.level===6&&!!STUDY.de[n.canonicalRef];
+const DEC={literal:['wörtlich','literal'],adapted:['sprachlich angepasst','adapted'],interpretive:['Deutungsentscheidung','interpretive choice'],traditional:['folgt der vertrauten Wiedergabe','follows traditional wording']};
+function decorate(text,decs){
+  // Markiert Stellen, an denen die Übersetzung einer Tradition folgt oder eine Deutung wählt (nur im Urtext-Modus)
+  const marks=(decs||[]).filter(d=>d.kind==='traditional'||d.kind==='interpretive');let html='',pos=0;const hits=[];
+  for(const d of marks){const i=text.indexOf(d.target);if(i>=0&&!hits.some(h=>i<h.e&&i+d.target.length>h.s))hits.push({s:i,e:i+d.target.length,k:d.kind});}
+  hits.sort((a,b)=>a.s-b.s);for(const h of hits){html+=esc(text.slice(pos,h.s))+`<span class="dec ${h.k}">${esc(text.slice(h.s,h.e))}</span>`;pos=h.e;}
+  return html+esc(text.slice(pos));
+}
+function decisionsBlock(n){
+  const L=lang==='de',ds=STUDY.decisions[n.canonicalRef]||[],cmp=(STUDY.compare[n.canonicalRef]||[]).slice().sort((a,b)=>b.id.localeCompare(a.id));let h='';
+  if(ds.length){h+=`<h4>${L?'Wie ist übersetzt?':'How is it translated?'}</h4><p class="note">${L?'Wo diese Übersetzung wörtlich ist, wo sie sprachlich glättet, wo sie deutet und wo sie einer vertrauten Wiedergabe folgt. Im Urtext-Modus sind die beiden letzten Arten im Text unterstrichen.':'Where this translation is literal, smoothed, interpretive or traditional.'}</p>`+ds.map(d=>`<div class="point dec-point"><span class="tag dec-tag ${d.kind}">${DEC[d.kind][L?0:1]}</span><p class="body">«${esc(d.target)}»</p>${d.more_literal_de?`<p class="note"><b>${L?'Wörtlicher:':'More literal:'}</b> «${esc(d.more_literal_de)}»</p>`:''}${d.other_options_de?`<p class="note"><b>${L?'Auch möglich:':'Also possible:'}</b> ${d.other_options_de.map(x=>'«'+esc(x)+'»').join(', ')}</p>`:''}<p class="note">${esc(d.note_de||'')}</p></div>`).join('');}
+  if(cmp.length){h+=`<h4>${L?'Ältere deutsche Übersetzungen':'Older German translations'}</h4><p class="note">${L?'Zum Vergleich, gemeinfrei. Sie beruhen teils auf anderen griechischen Textausgaben und sind nicht die Grundlage der Übersetzung hier.':'For comparison (public domain); not the basis of this translation.'}</p>`+cmp.map(c=>`<div class="point"><span class="tag">${esc(c.title)}</span><p class="body">${esc(c.text)}</p>${(c.notes||[]).map(x=>`<p class="note">${esc(x)}</p>`).join('')}</div>`).join('');}
+  return h;
+}
 const altsFor=n=>STUDY.alternatives.filter(a=>a.ref===n.canonicalRef);
 const bgFor=n=>BG.filter(b=>!b.wide&&b.chapter===DATA[n.b].code+'.'+n.c&&b.from<=n.v&&n.v<=b.to);
 const bgForPart=id=>BG.filter(b=>b.subject===id||(b.wide&&SECTION_OF[id]&&b.section===SECTION_OF[id].id));
@@ -307,11 +325,11 @@ function verseEntry(n){
   if(!text)return `<article class="stream-entry verse placeholder" data-stream="${n.id}">${lead}<p class="verse-line"><span class="vno">${n.v}</span><span class="stream-copy">${t.placeholder}</span></p></article>`;
   const alts=altsFor(n);
   const bgs=bgFor(n);
-  const more=(alts.length||bgs.length||S.advanced)?`<button type="button" class="more" data-more="${n.id}" aria-label="${t.more} ${n.v}">${icon('plus')}</button>`:'';
+  const more=(alts.length||bgs.length||S.advanced||STUDY.decisions[n.canonicalRef]||STUDY.compare[n.canonicalRef])?`<button type="button" class="more" data-more="${n.id}" aria-label="${t.more} ${n.v}">${icon('plus')}</button>`:'';
   const inline=S.inline?alts.map(a=>`<span class="alt-line" data-alternative="${esc(a.variant)}">${lang==='de'?'oder':'or'}: «${esc(a.to)}»</span>`).join(''):'';
   const bgLine=S.bgInline?bgs.filter(b=>b.from===n.v).map(b=>`<button type="button" class="bg-line" data-bg="${esc(b.id)}">${t.then}: ${esc(b.topic)}</button>`).join(''):'';
   const end=p.part&&p.last===n.v?`<div class="part-end actions"><button type="button" class="link soft" data-study="${p.id}">${t.understand}</button><button type="button" class="link soft" data-background="${p.id}">${t.background}</button></div>`:'';
-  return `<article class="stream-entry verse" data-stream="${n.id}">${lead}<p class="verse-line"><span class="vno">${n.v}</span><span class="stream-copy">${esc(text)}</span>${more}</p>${inline}${bgLine}${end}</article>`;
+  return `<article class="stream-entry verse" data-stream="${n.id}">${lead}<p class="verse-line"><span class="vno">${n.v}</span><span class="stream-copy">${S.advanced?decorate(text,STUDY.decisions[n.canonicalRef]):esc(text)}</span>${more}</p>${inline}${bgLine}${end}</article>`;
 }
 function streamMarkup(){const ids=streams[nodes.get(current).level];const t=T();return `<div class="column">${readerStart?`<button type="button" class="load load-before" data-action="load-prev">${t.loadPrev}</button>`:''}${ids.slice(readerStart,readerEnd).map(entry).join('')}${readerEnd<ids.length?`<button type="button" class="load load-after" data-action="load-next">${t.loadNext}</button>`:`<p class="end">${t.end}</p>`}</div>`;}
 function loadMore(before=false){
@@ -358,6 +376,7 @@ const support=(n,of)=>n==null?(lang==='de'?'Einige alte Handschriften lesen so; 
 function verseSheet(id){
   const n=nodes.get(id),t=T(),alts=altsFor(n);
   let h=head(title(n))+`<p class="body">${esc(STUDY.de[n.canonicalRef])}</p>`;
+  h+=decisionsBlock(n);
   const bgs=bgFor(n);
   if(bgs.length)h+=`<h4>${t.then}</h4>`+bgs.map(b=>bgNote(b,false)).join('');
   if(alts.length){
