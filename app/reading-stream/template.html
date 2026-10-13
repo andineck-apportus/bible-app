@@ -240,7 +240,7 @@ const ui={
   noSummary:'Zu diesem Kapitel gibt es noch keine Zusammenfassung.',noPart:'Für diesen Abschnitt gibt es noch keine Zusammenfassung.',placeholder:'Text noch nicht eingebunden',
   verses:'Verse',loadNext:'Weiterlesen',loadPrev:'Früheres anzeigen',end:'Ende',empty:'Kein passendes Buch und keine gültige Bibelstelle.',
   example:'Ausgearbeitet',examples:'Ausgearbeitete Stellen',understand:'Diesen Abschnitt verstehen',toolUnderstand:'Verstehen',toolHistory:'Geschichte',background:'Hintergrund damals',toSource:'Bis zur Quelle',then:'Damals',more:'Mehr zu Vers',
-  colors:'Farben',auto:'Auto',light:'Hell',dark:'Dunkel',size:'Textgrösse',language:'Sprache der Bedienung',
+  readText:'Lesetext',readTextSub:'Übersetzungen aus dem Urtext; die Mundart-Fassung ist ein Entwurf, der noch von einer muttersprachlichen Person geprüft wird.',colors:'Farben',auto:'Auto',light:'Hell',dark:'Dunkel',size:'Textgrösse',language:'Sprache der Bedienung',
   advanced:'Urtext und Details',advancedSub:'Für Fortgeschrittene: Griechisch Wort für Wort, Grammatik, Vergleich der Textausgaben, Quellen.',
   inline:'Andere Lesarten im Text zeigen',inlineSub:'Zeigt unter einem Vers, wo alte Handschriften anders lauten.',bgInline:'Hintergrund im Text zeigen',flow:'Verse fortlaufend',flowSub:'Verse als Fliesstext hintereinander statt je auf einer eigenen Zeile.',translit:'Umschrift zeigen',translitSub:'Griechische Wörter zusätzlich in unserer Schrift, z. B. ponēroú.',pron:'Aussprache',pronSub:'Neugriechisch: Stimme des Geräts. Schulaussprache: wie im Theologiestudium üblich, gelesen von einer deutschen Stimme. Beides nähert die Aussprache zur Zeit Jesu nur an.',pronModern:'Neugriechisch',pronSchool:'Schulaussprache',voice:'Stimme',voiceAuto:'Automatisch',noVoice:'Auf diesem Gerät ist keine passende Stimme installiert. In den Systemeinstellungen lassen sich Stimmen nachladen (z. B. Griechisch).',rate:'Tempo',slow:'Langsam',normal:'Normal',sample:'Probe anhören',bgInlineSub:'Zeigt unter einem Vers kurze Hinweise auf Zeit, Ort und Kultur damals.',about:'Über diese Fassung'},
  en:{bible:'The Bible',menu:'Menu',close:'Close',done:'Done',search:'Find a book or reference',hint:'e.g. Mark 3:24 or Ps 23',home:'Whole Bible',up:'Context',down:'Explore',contents:'Navigate',here:'You are here',open:'open',xrefs:'Cross references',xrefsSub:'Sorted by OpenBible.info user votes (CC BY); not reviewed.',back:'Back to',levelsTitle:'Choose reading depth',
@@ -249,7 +249,7 @@ const ui={
   noSummary:'No summary for this chapter yet.',noPart:'No summary for this passage yet.',placeholder:'Text not yet available',
   verses:'verses',loadNext:'Continue reading',loadPrev:'Show earlier',end:'End',empty:'No matching book or valid reference.',
   example:'Worked out',examples:'Worked passages',understand:'Understand this passage',toolUnderstand:'Understand',toolHistory:'History',background:'Background then',toSource:'Trace to the source',then:'Back then',more:'More on verse',
-  colors:'Colours',auto:'Auto',light:'Light',dark:'Dark',size:'Text size',language:'Interface language',
+  readText:'Reading text',readTextSub:'Translations from the original text; the dialect version is a draft awaiting native-speaker review.',colors:'Colours',auto:'Auto',light:'Light',dark:'Dark',size:'Text size',language:'Interface language',
   advanced:'Original text and details',advancedSub:'For advanced readers: Greek word by word, grammar, edition comparison, sources.',
   inline:'Show other readings in the text',inlineSub:'Shows below a verse where old manuscripts differ.',bgInline:'Show background in the text',flow:'Continuous verses',flowSub:'Verses run on as one paragraph instead of one per line.',translit:'Show transliteration',translitSub:'Greek words also in Latin letters, e.g. ponēroú.',pron:'Pronunciation',pronSub:'Modern Greek: device voice. Academic: as commonly taught, read by a German voice. Both only approximate first-century pronunciation.',pronModern:'Modern Greek',pronSchool:'Academic',voice:'Voice',voiceAuto:'Automatic',noVoice:'No matching voice installed on this device.',rate:'Speed',slow:'Slow',normal:'Normal',sample:'Play sample',bgInlineSub:'Shows short notes on time, place and culture below a verse.',about:'About this version'}};
 
@@ -327,7 +327,7 @@ const CONF={high:'gut begründet',probable:'wahrscheinlich',possible:'möglich'}
 
 root.querySelectorAll('.app').forEach((app,appIndex)=>{
 let current='all',lang='de',sheet=null,query='';
-let S={v:3,flow:true,theme:'auto',read:19,advanced:true,inline:true,bgInline:true,translit:true,pron:'modern',rate:0.85,voice:{}};
+let S={v:3,text:'de',flow:true,theme:'auto',read:19,advanced:true,inline:true,bgInline:true,translit:true,pron:'modern',rate:0.85,voice:{}};
 try{const s=JSON.parse(localStorage.getItem('lesestrom')||'null');if(s){const keep={...s};if(!(s.v>=2)){delete keep.advanced;delete keep.inline;delete keep.bgInline;}if(!(s.v>=3))delete keep.flow;S={...S,...keep,v:3};}}catch(e){}
 const save=()=>{try{localStorage.setItem('lesestrom',JSON.stringify(S));}catch(e){}};
 const mq=globalThis.matchMedia?globalThis.matchMedia('(prefers-color-scheme: dark)'):null;
@@ -379,7 +379,7 @@ function title(n){if(n.level<3)return n[lang];if(n.level===3)return bookName(n);
 const refDe=r=>{const g=rangeOf(r),bk=DATA.find(b=>b.code===g.code);if(!bk)return r;return (lang==='de'?bk.de+' '+g.c+',':bk.en+' '+g.c+':')+g.from+(g.to>g.from?'–'+g.to:'');};
 function summary(n){
   if(n.part)return n.part.summary;
-  if(n.level===6)return STUDY.de[n.canonicalRef]||null;
+  if(n.level===6)return TXT(n.canonicalRef);
   if(n.level===0)return SUMS['SUM-BIBLE']?.text;
   if(n.level===1)return SUMS[n.id==='ot'?'SUM-OT':'SUM-NT']?.text;
   if(n.level===2)return SUMS['SUM-GROUP-'+String(n.gi+1).padStart(2,'0')]?.text;
@@ -388,7 +388,9 @@ function summary(n){
   return null;
 }
 function eyebrow(n){if(n.level===0)return '';const p=nodes.get(n.parent);if(n.level===5)return n.part?refDe(n.part.range):title(p);return title(p);}
-const isPilotVerse=n=>n.level===6&&!!STUDY.de[n.canonicalRef];
+const LAYER=()=>STUDY.layers[S.text]||STUDY.layers.de;
+const TXT=ref=>LAYER().text[ref]||STUDY.layers.de.text[ref]||null;
+const isPilotVerse=n=>n.level===6&&!!TXT(n.canonicalRef);
 const DEC={literal:['wörtlich','literal'],adapted:['sprachlich angepasst','adapted'],interpretive:['Deutungsentscheidung','interpretive choice'],traditional:['folgt der vertrauten Wiedergabe','follows traditional wording']};
 function decorate(text,decs){
   // Markiert Stellen, an denen die Übersetzung einer Tradition folgt oder eine Deutung wählt (nur im Urtext-Modus)
@@ -399,7 +401,7 @@ function decorate(text,decs){
 }
 function verseNodeOf(ref){const [code,c,v]=ref.split('.');const b=DATA.findIndex(x=>x.code===code);return nodes.get(`v${b}-${c}-${v}`);}
 function decisionSheet(ref,i){
-  const L=lang==='de',d=(STUDY.decisions[ref]||[])[i],n=verseNodeOf(ref);if(!d||!n)return;refCtx=DATA[n.b].code;sheetAnchor=n.id;
+  const L=lang==='de',d=(LAYER().decisions[ref]||[])[i],n=verseNodeOf(ref);if(!d||!n)return;refCtx=DATA[n.b].code;sheetAnchor=n.id;
   let h=head(`«${d.target}»`)+`<p class="note">${esc(title(n))}</p><span class="tag dec-tag ${d.kind}">${DEC[d.kind][L?0:1]}</span>`;
   if(d.grc){const ws=STUDY.words.filter(w=>w.ref===ref&&d.grc.split(/\s+/).includes(w.word));const lem=[...new Set(ws.filter(w=>w.mac.pos!=='det').map(w=>w.mac.lemma).filter(Boolean))];
     h+=`<h4>${L?'Im Griechischen':'In Greek'}</h4><div class="word-row">${grcLine(d.grc)}${lem.length?`<span class="note">${L?'Grundform':'Lemma'}: ${lem.map(x=>`<span class="grc">${esc(x)}</span> <i class="tr-inline">${esc(translit(x))}</i>`).join(', ')}</span>`:''}</div>`;
@@ -412,12 +414,12 @@ function decisionSheet(ref,i){
   openSheet('decision',h);
 }
 function decisionsBlock(n){
-  const L=lang==='de',ds=STUDY.decisions[n.canonicalRef]||[],cmp=(STUDY.compare[n.canonicalRef]||[]).slice().sort((a,b)=>b.id.localeCompare(a.id));let h='';
+  const L=lang==='de',ds=LAYER().decisions[n.canonicalRef]||[],cmp=(STUDY.compare[n.canonicalRef]||[]).slice().sort((a,b)=>b.id.localeCompare(a.id));let h='';
   if(ds.length){h+=`<h4>${L?'Wie ist übersetzt?':'How is it translated?'}</h4><p class="note">${L?'Wo diese Übersetzung wörtlich ist, wo sie sprachlich glättet, wo sie deutet und wo sie einer vertrauten Wiedergabe folgt. Im Urtext-Modus sind die beiden letzten Arten im Text unterstrichen.':'Where this translation is literal, smoothed, interpretive or traditional.'}</p>`+ds.map(d=>`<div class="point dec-point"><span class="tag dec-tag ${d.kind}">${DEC[d.kind][L?0:1]}</span><p class="body">«${esc(d.target)}»</p>${d.grc?`<div>${grcLine(d.grc)}</div>`:''}${d.more_literal_de?`<p class="note"><b>${L?'Wörtlicher:':'More literal:'}</b> «${esc(d.more_literal_de)}»</p>`:''}${d.other_options_de?`<p class="note"><b>${L?'Auch möglich:':'Also possible:'}</b> ${d.other_options_de.map(x=>'«'+esc(x)+'»').join(', ')}</p>`:''}<p class="note">${rich(d.note_de||'')}</p></div>`).join('');}
   if(cmp.length){h+=`<h4>${L?'Ältere deutsche Übersetzungen':'Older German translations'}</h4><p class="note">${L?'Zum Vergleich, gemeinfrei. Sie beruhen teils auf anderen griechischen Textausgaben und sind nicht die Grundlage der Übersetzung hier.':'For comparison (public domain); not the basis of this translation.'}</p>`+cmp.map(c=>`<div class="point"><span class="tag">${esc(c.title)}</span><p class="body">${esc(c.text)}</p>${(c.notes||[]).map(x=>`<p class="note">${esc(x)}</p>`).join('')}</div>`).join('');}
   return h;
 }
-const altsFor=n=>STUDY.alternatives.filter(a=>a.ref===n.canonicalRef);
+const altsFor=n=>LAYER().alternatives.filter(a=>a.ref===n.canonicalRef);
 const bgFor=n=>BG.filter(b=>!b.wide&&b.chapter===DATA[n.b].code+'.'+n.c&&b.from<=n.v&&n.v<=b.to);
 const bgForPart=id=>BG.filter(b=>b.subject===id||(b.wide&&SECTION_OF[id]&&b.section===SECTION_OF[id].id));
 function bgNote(b,withRef){const L=lang==='de';refCtx=b.chapter.split('.')[0];
@@ -448,12 +450,12 @@ function verseEntry(n){
   if(!text)return `<article class="stream-entry verse placeholder" data-stream="${n.id}">${lead}<p class="verse-line"><span class="vno">${n.v}</span><span class="stream-copy">${S.flow?'…':t.placeholder}</span></p></article>`;
   const alts=altsFor(n);
   const bgs=bgFor(n);
-  const has=alts.length||bgs.length||S.advanced||STUDY.decisions[n.canonicalRef]||STUDY.compare[n.canonicalRef];
+  const has=alts.length||bgs.length||S.advanced||LAYER().decisions[n.canonicalRef]||STUDY.compare[n.canonicalRef];
   const vno=has?`<button type="button" class="vno more" data-more="${n.id}" aria-label="${t.more} ${n.v}">${n.v}</button>`:`<span class="vno">${n.v}</span>`;
   const inline=S.inline?alts.map(a=>`<span class="alt-line" data-alternative="${esc(a.variant)}">${lang==='de'?'oder':'or'}: «${esc(a.to)}»</span>`).join(''):'';
   const bgList=S.bgInline?bgs.filter(b=>b.from===n.v):[];
   const bgLine=bgList.length?`<div class="bg-lines"><span class="bg-label">${icon('history')}</span>${bgList.map(b=>`<button type="button" class="bg-line" data-bg="${esc(b.id)}">${esc(b.topic)}</button>`).join('')}</div>`:'';
-  return `<article class="stream-entry verse" data-stream="${n.id}">${lead}<p class="verse-line">${vno}<span class="stream-copy" data-ref="${n.canonicalRef}">${S.advanced?decorate(text,STUDY.decisions[n.canonicalRef]):esc(text)}</span></p>${inline}${bgLine}</article>`;
+  return `<article class="stream-entry verse" data-stream="${n.id}">${lead}<p class="verse-line">${vno}<span class="stream-copy" data-ref="${n.canonicalRef}">${S.advanced?decorate(text,LAYER().decisions[n.canonicalRef]):esc(text)}</span></p>${inline}${bgLine}</article>`;
 }
 function streamMarkup(){const ids=streams[nodes.get(current).level];const t=T();const first=nodes.get(ids[readerStart]);const gap=S.flow&&first&&first.level===6&&!summary(first)?`<p class="note gap">${t.placeholder}</p>`:'';return `<div class="column">${readerStart?`<button type="button" class="load load-before" data-action="load-prev">${t.loadPrev}</button>`:''}${gap}${ids.slice(readerStart,readerEnd).map(entry).join('')}${readerEnd<ids.length?`<button type="button" class="load load-after" data-action="load-next">${t.loadNext}</button>`:`<p class="end">${t.end}</p>`}</div>`;}
 function loadMore(before=false){
@@ -507,7 +509,8 @@ const support=(n,of)=>n==null?(lang==='de'?'Einige alte Handschriften lesen so; 
 
 function verseSheet(id){
   const n=nodes.get(id),t=T(),alts=altsFor(n);refCtx=DATA[n.b].code;sheetAnchor=id;
-  let h=head(title(n))+`<p class="body">${esc(STUDY.de[n.canonicalRef])}</p>`;
+  let h=head(title(n))+`<p class="body">${esc(TXT(n.canonicalRef))}</p>`;
+  if(S.text!=='de'&&!LAYER().text[n.canonicalRef])h+=`<p class="note">${lang==='de'?`${esc(LAYER().label)}: für diesen Vers noch nicht übersetzt; Hochdeutsch angezeigt.`:'Not yet translated in this layer; showing German.'}</p>`;
   h+=decisionsBlock(n);
   const xr=XREF.verses[n.canonicalRef]||[];
   if(xr.length)h+=`<h4>${t.xrefs}</h4><p class="note">${t.xrefsSub}</p><div class="xrefs">${xr.map(([tg])=>`<button type="button" class="ref chip" data-ref-go="${tg}">${esc(refShort(tg))}</button>`).join('')}</div>`;
@@ -519,10 +522,10 @@ function verseSheet(id){
   }
   if(S.advanced){
     const words=STUDY.words.filter(w=>w.ref===n.canonicalRef),vars=STUDY.variants.filter(v=>v.ref===n.canonicalRef);
-    h+=`<h4>${lang==='de'?'Griechisch Wort für Wort':'Greek word by word'}</h4><p class="note">${lang==='de'?'Ganzer Vers':'Whole verse'} ${play(words.map(w=>w.text.replace(/[⸀-⸅]/g,'')).join(' '))}</p><div class="il">${words.map(w=>{const m=w.mac,d=STUDY.tok_de[w.id];const de=d?(d.target===null?'·':(d.first?d.target:'″')):(m.gloss_berean||'');const form=['person','tense','voice','mood','case','number','gender'].map(k=>m[k]&&GR[k][m[k]]).filter(Boolean).join(', ');
+    h+=`<h4>${lang==='de'?'Griechisch Wort für Wort':'Greek word by word'}</h4><p class="note">${lang==='de'?'Ganzer Vers':'Whole verse'} ${play(words.map(w=>w.text.replace(/[⸀-⸅]/g,'')).join(' '))}</p><div class="il">${words.map(w=>{const m=w.mac,d=LAYER().align[w.id];const de=d?(d.target===null?'·':(d.first?d.target:'″')):(m.gloss_berean||'');const form=['person','tense','voice','mood','case','number','gender'].map(k=>m[k]&&GR[k][m[k]]).filter(Boolean).join(', ');
       const gw=w.text.replace(/[⸀-⸅]/g,'');return `<details><summary><span class="g">${esc(gw)}${play(gw)}</span>${tr(gw)}<span class="d">${esc(de)}</span><span class="e">${esc(m.gloss_berean||'')}</span></summary><dl class="kv"><dt>Grundform</dt><dd>${esc(m.lemma||'')} · ${w.freq}× in ${esc(DATA[n.b].de)}</dd><dt>Wortart</dt><dd>${esc(POS[m.pos]||m.pos||'')}</dd>${form?`<dt>Form</dt><dd>${esc(form)}</dd>`:''}${m.role?`<dt>Satzrolle</dt><dd>${esc(ROLE[m.role]||m.role)}</dd>`:''}${d&&d.note?`<dt>Hinweis</dt><dd>${esc(d.note)}</dd>`:''}${w.mgnt?`<dt>MorphGNT</dt><dd>${esc(w.mgnt.lemma)} · ${esc(w.mgnt.parsing)}</dd>`:''}</dl><p class="ref-id">${esc(w.id)}</p></details>`;}).join('')}</div>`;
     if(vars.length)h+=`<h4>${lang==='de'?'Vergleich der Textausgaben':'Edition comparison'}</h4><p class="note">${lang==='de'?'Vergleich gedruckter Textausgaben laut SBLGNT-Apparat. Keine Handschriftenzählung.':'Comparison of printed editions (SBLGNT apparatus). Not a manuscript count.'}</p>`+vars.map(v=>`<div class="point">${v.readings.map(r=>{const a=(v.assessment||[]).find(x=>x.reading===r.id);return `<p><span class="body">${esc(r.text)}</span> <span class="note">${a?esc(a.editions.map(e=>ED[e]).join(', '))+` (${a.support}/${a.of})`:esc((r.witnesses||[]).join(', ')+(lang==='de'?' · berichtet, ungeprüft':' · reported, unverified'))}</span></p>`;}).join('')}<p class="ref-id">${esc(v.id)}</p></div>`).join('');
-    h+=sourcesBlock()+`<p class="ref-id">${esc(STUDY.de_source[n.canonicalRef])}</p>`;
+    h+=sourcesBlock()+`<p class="ref-id">${esc(LAYER().source[n.canonicalRef]||STUDY.layers.de.source[n.canonicalRef]||'')}</p>`;
   }else{
     h+=`<p class="note">${lang==='de'?'Griechischer Text, Grammatik und Quellen: im Menü «Urtext und Details» einschalten.':'Greek text, grammar and sources: turn on “Original text and details” in the menu.'}</p>`;
   }
@@ -592,6 +595,7 @@ function menuSheet(){
   openSheet('menu',head(t.menu,t.done)+`<label for="find-${appIndex}" class="note">${t.search}</label><input id="find-${appIndex}" type="search" placeholder="${t.hint}" value="${esc(query)}" autocomplete="off"><div class="results"></div>
   <p class="note">${t.examples}</p>${STUDY.sections.map(sec=>`<button type="button" class="row" data-go="${sec.parts[0].id}"><span>${esc(refDe(sec.range))} · ${esc(sec.title)}</span>${icon('chevron-right')}</button>`).join('')}
   <button type="button" class="row" data-go="all"><span>${t.home}</span>${icon('chevron-right')}</button>
+  ${STUDY.layer_order.length>1?`<div class="set"><span>${t.readText}<span class="sub">${t.readTextSub}</span></span>${seg('text',STUDY.layer_order.map(k=>[k,STUDY.layers[k].label]),S.text)}</div>`:''}
   <div class="set"><span>${t.colors}</span>${seg('theme',[['auto',t.auto],['light',t.light],['dark',t.dark]],S.theme)}</div>
   <div class="set"><span>${t.size}</span>${seg('read',[[17,'A−'],[19,'A'],[22,'A+']],S.read)}</div>
   <div class="set"><span>${t.language}</span>${seg('lang',[['de','Deutsch'],['en','English']],lang)}</div>

@@ -167,5 +167,15 @@ assert(sheetHost.querySelector('[data-ref-go="MRK.14.36"]'),'Vergleichsstelle ve
 assert(sheetHost.querySelector('[data-ref-go="ISA.64.7"]'),'Stelle im Fliesstext verlinkt (Jes 63,16; 64,7)');
 assert(!sheetHost.textContent.includes('data-ref-go="SIR'),'Sirach nicht verlinkt');
 click('[data-close]');
-console.log(`PASS: Pilotzugang, Studienblatt ohne Griechisch, Lesarten auf Wunsch (${M().alternatives.length}), Hintergrund damals (${model.BG.length}), Bis zur Quelle (${tested}), Urtext-Modus, Rückkehrposition, Suche, Kapitelgrenze, Vaterunser Mt/Lk, Übersetzungsentscheidungen und Vergleich, Wort-Blatt, Umschrift und Anhören, Verse fortlaufend, Navigator, Querverweise und Rücksprung.`);
+// Zweite Übersetzungsschicht: Züridüütsch aus dem Griechischen, umschaltbar
+click('[data-action=menu]');assert(sheetHost.querySelector('[data-set="text"][data-value="gsw"]'),'Lesetext-Auswahl');click('[data-set="text"][data-value="gsw"]');click('[data-close]');
+assert.equal(reader.querySelector('[data-stream="v39-6-11"] .stream-copy').textContent,'Öises täglich Broot gib üs hüt.','Mundart im Lesestrom');
+assert(reader.querySelector('[data-stream="v39-6-11"] button.dec.traditional'),'Entscheidung «täglich» auch in der Mundart markiert');
+assert(reader.querySelector('.alt-line[data-alternative="VAR-SBLGNTAPP-MAT-006-012-01"]').textContent.includes('vergänd'),'Mundart-Lesart im Text');
+click('[data-more="v39-6-11"]');assert(sheetHost.textContent.includes('Öises täglich Broot')&&sheetHost.textContent.includes('für de nööchscht Taag'),'Mundart-Entscheidung im Versblatt');
+sheetHost.querySelector('.sheet [data-source="VAR-SBLGNTAPP-MAT-006-013-01"]')||click('[data-close]');
+click('[data-action=menu]');click('[data-set="text"][data-value="de"]');click('[data-close]');
+assert.equal(reader.querySelector('[data-stream="v39-6-11"] .stream-copy').textContent,M().de['MAT.6.11'],'zurück zu Hochdeutsch');
+assert.equal(Object.keys(M().layers.gsw.text).length,31,'Mundart für alle 31 Verse');
+console.log(`PASS: Pilotzugang, Studienblatt ohne Griechisch, Lesarten auf Wunsch (${M().alternatives.length}), Hintergrund damals (${model.BG.length}), Bis zur Quelle (${tested}), Urtext-Modus, Rückkehrposition, Suche, Kapitelgrenze, Vaterunser Mt/Lk, Übersetzungsentscheidungen und Vergleich, Wort-Blatt, Umschrift und Anhören, Verse fortlaufend, Navigator, Querverweise und Rücksprung, Lesetext Hochdeutsch/Züridüütsch.`);
 dom.window.close();

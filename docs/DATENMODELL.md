@@ -1,6 +1,6 @@
 # Datenmodell: Ist-Stand und Ziel
 
-## Vorhandene Objekte in v0.23
+## Vorhandene Objekte in v0.27
 
 | Ordner | `type` | Anzahl | Aufgabe |
 |---|---|---:|---|
@@ -36,7 +36,7 @@
 | crossrefs | crossref_set | 66 | Querverweise je Ausgangsbuch (OpenBible.info, CC BY): je Vers die Ziele mit Stimmen, nach Stimmen sortiert; Zielbereiche über Buchgrenzen geteilt und markiert. Der Validator prüft alle Stellen. |
 | summaries | summary | 85 | Zusammenfassungen je Ebene (Bibel, Testament, Gruppe, Buch, Kapitel); `scope`, `reference`, `group`, `text_de`; alle `draft` |
 
-Gesamt: 3435 Datensätze im freien Kern (`data/`), 0 in der Studienschicht (`data-nc/`).
+Gesamt: 3441 Datensätze im freien Kern (`data/`), 0 in der Studienschicht (`data-nc/`).
 
 ## Schichten des Texts
 1. **Token** (`token_set`): die Wörter einer Edition in ihrer Reihenfolge, mit stabiler ID `TOK-<EDITION>-<BUCH>-<KKK>-<VVV>-<NNN>`. «text» unverändert aus der Edition (inkl. Interpunktion und Apparatzeichen), «word» ohne diese Zeichen. Keine Deutung.
@@ -52,6 +52,9 @@ Beispielkette: `FIND-MRK-0001` → `INT-MRK-0001` → `PRIN-MRK-0001` → `APP-M
 
 ## Noch nicht implementiert
 Eigene Handschriften-/Zeugenobjekte mit Korrekturschichten; eigenständige Lemma-/Lexikonobjekte; Argumente/Gegenargumente als eigene Objekte; einheitliche Quellenbelege mit genauen Fundstellen; durchgängige Zeit- und Revisionsmetadaten; typspezifische Schemas; Versifikationstabelle; SQLite-Projektion; Benutzeroberfläche.
+
+## Übersetzungsschichten (mehrere Sprachen und Kulturen)
+Ziel: aus den Urtexten und den erarbeiteten Artefakten (Wortzuordnung, Entscheidungen, Lesarten, Befunde, Hintergrund) in beliebige Sprachen und kulturelle Kontexte übersetzen. Jede Fassung ist ein eigener `translation`-Datensatz mit `language` (BCP-47, z. B. `de-CH`, `gsw-u-sd-chzh` für Zürichdeutsch), `language_label_de`, `target_context` (ein `context`-Datensatz: Ort, Sprache, Zielgruppe, Zeit), `orthography_de`, `register_de`, `method_de`, `decisions`, `alternatives` und einer eigenen Wortzuordnung (`alignment` mit `target_language`). Sie wird aus dem Urtext übersetzt; `control_translation` nennt die hochdeutsche Kontrollfassung. `review_de` hält fest, ob und von wem die Sprache geprüft wurde. Die Studienprojektion liefert die Schichten unter `layers` (Standard `de`); der Lesestrom bietet sie als «Lesetext» an. Vorhanden: Hochdeutsch (wörtlich) und Züridüütsch (Dieth-Schreibung) für Mt 6,5–15, Lk 11,1–4 und Mk 3,20–35. Die Felder `de_from`/`de_to` der Alternativen tragen den Text der jeweiligen Zielsprache (Feldname historisch).
 
 ## Übersetzungsentscheidungen und Vergleichsübersetzungen
 Eigene Arbeitsübersetzungen (`translation_kind: literal_original_working`) können `decisions` führen: je Stelle der deutsche Zieltext (`target`, muss im Übersetzungstext vorkommen), die Art (`literal` wörtlich, `adapted` sprachlich angepasst, `interpretive` Deutungsentscheidung, `traditional` folgt der vertrauten Wiedergabe), optional eine wörtlichere Fassung (`more_literal_de`), weitere Möglichkeiten (`other_options_de`) und eine Begründung. Der Validator prüft Art und Zieltext. Ältere gemeinfreie deutsche Übersetzungen liegen als `translation_kind: historical_comparison` nur für die ausgearbeiteten Verse vor und dienen ausschliesslich dem Vergleich.
