@@ -2,7 +2,7 @@
 
 Git-versionierter Bibel-Wissensfundus: Quellen, Textbefunde, konkurrierende Interpretationen, Prinzipien und kontextabhängige Anwendungen nachvollziehbar miteinander verbinden.
 
-**Stand: 12. Oktober 2026 · UI v0.25 (Lesestrom) · Matthäus, Markus, Lukas; ausgearbeitet: Markus 3,20–35 und das Vaterunser (Mt 6,5–15; Lk 11,1–4).**
+**Stand: 12. Oktober 2026 · UI v0.26 (Lesestrom) · Matthäus, Markus, Lukas; ausgearbeitet: Markus 3,20–35 und das Vaterunser (Mt 6,5–15; Lk 11,1–4).**
 
 Dies ist der Konzept- und Datenprototyp, noch keine fertige Benutzer-App. Vorhanden sind 3435 strukturierte Datensätze, darunter:
 - der **ganze griechische Text des Markusevangeliums** (SBLGNT, 11 286 Wörter mit stabilen IDs) mit Lemma, Morphologie, Syntaxrollen, Referenten und Glossen aus MACULA Greek als eigener Annotationsschicht,
