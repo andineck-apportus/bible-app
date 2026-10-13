@@ -24,8 +24,8 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
-BOOKNUM = {"MAT": 40, "MRK": 41, "LUK": 42, "TIT": 56}
-BOOKTAG = {"MAT": "TAG-MATTHEW", "MRK": "TAG-MARK", "LUK": "TAG-LUKE", "TIT": "TAG-TITUS"}
+BOOKNUM = {"MAT": 40, "MRK": 41, "LUK": 42, "PHP": 50, "TIT": 56}
+BOOKTAG = {"MAT": "TAG-MATTHEW", "MRK": "TAG-MARK", "LUK": "TAG-LUKE", "PHP": "TAG-PHILIPPIANS", "TIT": "TAG-TITUS"}
 SOURCE = "SRC-CNTR-TRANSCRIPTIONS"
 UPSTREAM = "https://github.com/Center-for-New-Testament-Restoration/transcriptions"
 
@@ -78,6 +78,17 @@ PAPYRI = {
             "location_de": "John Rylands Library, Manchester",
             "about_de": "Ältester erhaltener Textzeuge des Titusbriefs: ein Blatt mit Teilen von Tit 1,11–15 und 2,3–8.",
             "facsimile": [], "catalog_docid": 10032},
+    "P46": {"symbol": "𝔓46", "name_de": "Papyrus 46 (Chester Beatty II)", "century": "II/III",
+            "date_de": "um 200 nach gängiger Einordnung (Vorschläge reichen von etwa 175 bis ins 3. Jahrhundert)",
+            "material_de": "Papyrus", "languages": ["grc"],
+            "location_de": "Chester Beatty Library, Dublin, und University of Michigan, Ann Arbor",
+            "about_de": "Ältester erhaltener Codex mit Paulusbriefen; Philipper ist bis auf kleine Lücken erhalten.",
+            "facsimile": [], "catalog_docid": 10046},
+    "P15": {"symbol": "𝔓15/16", "name_de": "Papyrus 15 und 16 (P. Oxyrhynchus 1008 und 1009)", "century": "III/IV",
+            "date_de": "3./4. Jahrhundert nach gängiger Einordnung", "material_de": "Papyrus", "languages": ["grc"],
+            "location_de": "Ägyptisches Museum Kairo; gefunden in Oxyrhynchos",
+            "about_de": "Die CNTR-Transkription führt unter «P15» auch das Blatt mit Phil 3,10–17 und 4,2–8, das in der Gregory-Aland-Liste als 𝔓16 (P. Oxy. 1009) gezählt wird; beide Blätter gelten als Teile desselben Codex.",
+            "facsimile": [], "catalog_docid": 10015},
 }
 AMULETS = {
     "64206": {"name_de": "P. Antinoopolis 2.54", "century": "III/IV", "date_de": "um 275–325",

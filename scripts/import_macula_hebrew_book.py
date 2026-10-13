@@ -38,7 +38,16 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import refs  # noqa: E402
 
-FILES = {"OBA": "31-Oba"}
+# Dateipräfixe von MACULA Hebrew (WLC/lowfat/<NN>-<Buch>-<KKK>-lowfat.xml) je Buchcode
+FILES = {code: f"{i:02d}-{name}" for i, (code, name) in enumerate([
+    ("GEN", "Gen"), ("EXO", "Exo"), ("LEV", "Lev"), ("NUM", "Num"), ("DEU", "Deu"), ("JOS", "Jos"), ("JDG", "Jdg"),
+    ("RUT", "Rut"), ("1SA", "1Sa"), ("2SA", "2Sa"), ("1KI", "1Ki"), ("2KI", "2Ki"), ("1CH", "1Ch"), ("2CH", "2Ch"),
+    ("EZR", "Ezr"), ("NEH", "Neh"), ("EST", "Est"), ("JOB", "Job"), ("PSA", "Psa"), ("PRO", "Pro"), ("ECC", "Ecc"),
+    ("SNG", "Sng"), ("ISA", "Isa"), ("JER", "Jer"), ("LAM", "Lam"), ("EZK", "Ezk"), ("DAN", "Dan"), ("HOS", "HOS"),
+    ("JOL", "Jol"), ("AMO", "Amo"), ("OBA", "Oba"), ("JON", "Jon"), ("MIC", "Mic"), ("NAM", "Nam"), ("HAB", "Hab"),
+    ("ZEP", "Zep"), ("HAG", "Hag"), ("ZEC", "Zec"), ("MAL", "Mal")], start=1)}
+# Bücher, deren hebräische Verszählung von der Navigationszählung (KJV) abweicht, brauchen vor dem Import eine
+# Umrechnung (data/versification); bis dahin nur Bücher ohne Abweichung importieren.
 XID = "{http://www.w3.org/XML/1998/namespace}id"
 KEEP = ["lemma", "stronglemma", "morph", "pos", "class", "type", "person", "gender", "number", "state", "stem", "role",
         "gloss", "english", "transliteration", "greek", "greekstrong", "strongnumberx", "frame", "subjref", "participantref"]
@@ -61,6 +70,15 @@ D = ROOT / "data"
 files = sorted((args.macula / "WLC" / "lowfat").glob(f"{FILES[args.book]}-*-lowfat.xml"))
 if not files:
     sys.exit("ERROR: keine lowfat-Dateien gefunden")
+
+nav = json.loads((ROOT / "data/navigation/NAV-PROT66-KJV.json").read_text(encoding="utf-8"))
+kjv = next(b["verses_per_chapter"] for b in nav["books"] if b["code"] == args.book)
+heb = {}
+for f in files:
+    for m in re.finditer(r'<milestone unit="verse" id="[1-3]?[A-Z]{2,3} (\d+):(\d+)"', f.read_text(encoding="utf-8")):
+        heb[int(m.group(1))] = max(heb.get(int(m.group(1)), 0), int(m.group(2)))
+if [heb.get(c, 0) for c in range(1, len(kjv) + 1)] != kjv or len(heb) != len(kjv):
+    sys.exit(f"ERROR: {args.book}: hebräische Verszählung weicht von der Navigationszählung (KJV) ab; erst Umrechnung umsetzen")
 
 totals, lemmas_all, by_chapter, ann_ids = 0, {}, {}, []
 for f in files:
