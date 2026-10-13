@@ -9,6 +9,12 @@ Schreibweise: Dieth-Schreibung (lautnah). Register: nah am Urtext, aber wie man 
 in `decisions` markiert. KI-Entwurf (Claude) vom 2026-10-13; Prüfung der Mundart durch eine muttersprachliche
 Person ist vorgesehen und noch nicht erfolgt.
 """
+# Seit Migration v0.31 (2026-10-13) sind die erzeugten Daten weiterbearbeitet (sprachneutrale Feldnamen, Stellen-Marken
+# [[…]], Titel als Lokalisierungen). Dieses Skript ist der dokumentierte Entstehungsweg, keine laufende Quelle: ein
+# erneuter Lauf würde den migrierten Stand überschreiben. Änderungen direkt in data/ vornehmen (mit revision_log).
+import sys as _sys
+if "--force-historisch" not in _sys.argv:
+    _sys.exit("Historisches Autorenwerkzeug (vor Migration v0.31); nicht erneut ausführen. Siehe Kommentar im Skript.")
 import json
 import pathlib
 import sys

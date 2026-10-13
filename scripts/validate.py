@@ -15,7 +15,10 @@ Prüft:
    historischen Kontext.
 8. Lokalisierungen (localization): Felder existieren im Original (gleicher Typ, gleiche Listenlänge);
    veraltete Felder (Original seit der Übersetzung geändert) werden als WARN gemeldet, nicht als Fehler.
-9. Lizenzschichten: Datensätze in data/ verweisen nie auf Datensätze in data-nc/.
+9. Bibelstellen im Fliesstext: jede Marke [[…]] ist kanonisch; unmarkierte Stellen in deutscher Schreibweise
+   werden als WARN gemeldet (scripts/prose_refs.py).
+10. Arbeitsübersetzungen derselben Sprache überschneiden sich nicht (sonst wäre der Vorrang unklar).
+11. Lizenzschichten: Datensätze in data/ verweisen nie auf Datensätze in data-nc/.
 
 Ein PASS ist keine fachliche Freigabe. Nur Standardbibliothek.
 """
@@ -28,6 +31,7 @@ ROOT = pathlib.Path(__import__("os").environ.get("BIBLE_APP_ROOT") or pathlib.Pa
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import refs  # noqa: E402
 import localizations  # noqa: E402
+import prose_refs  # noqa: E402
 
 SCHEMA = json.loads((pathlib.Path(__file__).resolve().parents[1] / "schema" / "record.schema.json").read_text(encoding="utf-8"))
 
@@ -282,8 +286,8 @@ def main():
         for i, alt in enumerate(r.get("alternatives") or []):
             check_reading(rel, f"alternatives[{i}].reading", alt.get("reading"))
             check_ref(rel, f"alternatives[{i}].reference", alt.get("reference")); ref_count += 1
-            if alt.get("de_from") and alt["de_from"] not in (r.get("text_by_reference") or {}).get(alt.get("reference"), ""):
-                errors.append(f"{rel}: alternatives[{i}].de_from kommt im Übersetzungstext nicht vor")
+            if alt.get("from_text") and alt["from_text"] not in (r.get("text_by_reference") or {}).get(alt.get("reference"), ""):
+                errors.append(f"{rel}: alternatives[{i}].from_text kommt im Übersetzungstext nicht vor")
         for i, a in enumerate(r.get("alignments") or []):
             check_reading(rel, f"alignments[{i}].depends_on_reading", a.get("depends_on_reading"))
             check_tokens(rel, f"alignments[{i}].source_tokens", a.get("source_tokens"))
@@ -302,6 +306,43 @@ def main():
             check_ref(rel, f"tokens[{i}].reference", tok.get("reference")); ref_count += 1
             check_id(rel, f"tokens[{i}].edition", tok.get("edition"))
 
+    # Marken im Fliesstext und Überschneidungen von Arbeitsübersetzungen
+    mark_count = 0
+    skip_keys = {"text_by_reference", "revision_log", "tokens", "knowledge", "source_fingerprint", "from_text", "to_text",
+                 "more_literal", "other_options", "target", "grc", "title", "notes_by_reference", "readings", "entries",
+                 "sources_de", "authorship_de", "method_de", "translation_notes"}
+
+    def walk(v, path, rel):
+        nonlocal mark_count
+        if isinstance(v, str):
+            for m in prose_refs.marks(v):
+                mark_count += 1
+                if not refs.is_canonical(m):
+                    errors.append(f"{rel}: {path} Marke [[{m}]] ist keine kanonische Stelle")
+            for u in prose_refs.unmarked(v):
+                warnings.append(f"{rel}: {path} Stelle «{u}» nicht als [[…]] markiert")
+        elif isinstance(v, list):
+            for i, x in enumerate(v):
+                walk(x, f"{path}[{i}]", rel)
+        elif isinstance(v, dict):
+            for k, x in v.items():
+                if k not in skip_keys:
+                    walk(x, f"{path}.{k}" if path else k, rel)
+
+    prose_types = {"finding", "interpretation", "principle", "application", "open_question", "background_note", "summary",
+                   "text_unit", "localization", "alignment"}
+    covered = {}
+    for rid, (rel, r) in records.items():
+        if r.get("type") in prose_types or (r.get("type") == "translation" and r.get("translation_kind") == "literal_original_working"):
+            walk(r, "", rel)
+        if r.get("type") == "translation" and r.get("translation_kind") == "literal_original_working" and r.get("status") != "deprecated":
+            lg = (r.get("language") or "de").split("-")[0]
+            for ref in r.get("text_by_reference") or {}:
+                other = covered.setdefault((lg, ref), rid)
+                if other != rid:
+                    errors.append(f"{rel}: {ref} ist schon in {other} ({lg}) übersetzt; Überschneidung gleicher Sprache "
+                                  "(einen Datensatz auf deprecated setzen oder Bereich teilen)")
+
     for w in warnings:
         print("WARN:", w)
     if errors:
@@ -312,7 +353,7 @@ def main():
           f"tag/ID/reading references, {token_ref_count} token references, {ref_count} bible references, "
           f"{annotation_count} annotations, {assessment_count} assessments valid "
           f"({sum(v == 'nc' for v in layer_of.values())} records in data-nc; "
-          f"{sum(r.get('type') == 'localization' for _, r in records.values())} localizations, {len(warnings)} veraltete Felder)")
+          f"{sum(r.get('type') == 'localization' for _, r in records.values())} localizations, {mark_count} Stellen-Marken, {len(warnings)} Warnungen)")
 
 
 if __name__ == "__main__":

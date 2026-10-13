@@ -92,6 +92,20 @@ def stale_localization(root):
     write(p, d)
 
 
+def bad_mark(root):
+    p = root / "data/findings/FIND-LP-0004.json"
+    d = json.loads(p.read_text())
+    d["claim_de"] += " Vgl. [[MAT.6.99-MAT.6.3]]."
+    write(p, d)
+
+
+def overlap(root):
+    p = root / "data/translations/TRANS-MRK-003-031-035-DE-WORKING.json"
+    d = json.loads(p.read_text())
+    d["text_by_reference"]["MRK.3.30"] = "doppelt"
+    write(p, d)
+
+
 baseline = run(ROOT)
 assert baseline.returncode == 0, baseline.stdout + baseline.stderr
 case("Kern verweist auf NC", core_refs_nc, "verweist aus dem freien Kern auf NC-Datensatz")
@@ -103,6 +117,8 @@ case("Hintergrundnotiz ohne Kontext", bad_background, "ist kein context-Datensat
 case("Entscheidung ohne Zieltext", bad_decision, "Zieltext nicht in der Übersetzung")
 case("Entscheidung unbekannte Art", bad_decision, "unbekannte Art")
 case("Entscheidung falsches Griechisch", bad_decision, "nicht im Vers")
+case("Stellen-Marke nicht kanonisch", bad_mark, "keine kanonische Stelle")
+case("Überschneidung gleicher Sprache", overlap, "Überschneidung gleicher Sprache")
 case("Lokalisierung Listenlänge", bad_localization, "passt nicht zum Original")
 case("Lokalisierung unbekanntes Feld", bad_localization, "fehlt im Original")
 with tempfile.TemporaryDirectory() as tmp:
@@ -114,4 +130,4 @@ with tempfile.TemporaryDirectory() as tmp:
     sys.path.insert(0, str(ROOT / "scripts"))
     import localizations
     assert "claim_de" not in localizations.load_all(root).get("FIND-LP-0001", {}).get("gsw", {}), "veraltetes Feld ausgeliefert"
-print("PASS: validator negative tests (NC-Trennung, Annotation, Bewertung, Bibelstelle, Hintergrund, Übersetzungsentscheidung, Lokalisierung inkl. veraltet)")
+print("PASS: validator negative tests (NC-Trennung, Annotation, Bewertung, Bibelstelle, Hintergrund, Übersetzungsentscheidung, Lokalisierung inkl. veraltet, Stellen-Marken, Überschneidung)")

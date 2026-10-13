@@ -15,6 +15,7 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import refs  # noqa: E402
+import prose_refs  # noqa: E402
 D = ROOT / "data"
 OUT = ROOT / "app/prototype"
 VERSES = range(20, 36)
@@ -93,8 +94,8 @@ for tid in ["TRANS-MRK-003-020-021-DE-WORKING", "TRANS-MRK-003-022-030-DE-WORKIN
         vid, rid = alt["reading"].split(":")
         res = next((x for x in assess.get(vid, {}).get("results", []) if x["reading"].endswith(":" + rid)), None)
         base = next((x for x in assess.get(vid, {}).get("results", []) if x["reading"].endswith(":R1")), None)
-        alternatives.append({"verse": int(alt["reference"].split(".")[2]), "from": alt["de_from"], "to": alt["de_to"],
-                             "effect": alt["effect"], "note": alt.get("note_de"), "variant": vid,
+        alternatives.append({"verse": int(alt["reference"].split(".")[2]), "from": alt["from_text"], "to": alt["to_text"],
+                             "effect": alt["effect"], "note": alt.get("note"), "variant": vid,
                              "support": res["support"] if res else None, "base_support": base["support"] if base else None,
                              "of": res["of"] if res else None,
                              "basis": "editions" if res else "manuscripts_reported"})
@@ -102,7 +103,7 @@ align = load("alignments/ALIGN-MRK-003-022-030-001.json")
 tok_de = {}
 for a in align["alignments"]:
     for i, t in enumerate(a["source_tokens"]):
-        tok_de[t] = {"target": a["target"], "kind": a["kind"], "note": a.get("note_de"), "first": i == 0,
+        tok_de[t] = {"target": a["target"], "kind": a["kind"], "note": a.get("note"), "first": i == 0,
                      "group": a["source_tokens"]}
 
 # Gliederung, Befunde, Deutungen, Prinzip, Anwendung, Parallelen
@@ -143,6 +144,20 @@ data = {
     "editions": editions,
 }
 OUT.mkdir(parents=True, exist_ok=True)
+
+
+def _plain(v):
+    """Der ältere Prototyp kennt keine Marken: Bibelstellen als Text (de) anzeigen."""
+    if isinstance(v, str):
+        return prose_refs.render(v, "de") if "[[" in v else v
+    if isinstance(v, list):
+        return [_plain(x) for x in v]
+    if isinstance(v, dict):
+        return {k: _plain(x) for k, x in v.items()}
+    return v
+
+
+data = _plain(data)
 (OUT / "data.json").write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 html = (OUT / "template.html").read_text(encoding="utf-8").replace(
     "/*__DATA__*/null", json.dumps(data, ensure_ascii=False).replace("</", "<\\/"))

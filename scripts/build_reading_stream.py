@@ -22,9 +22,8 @@ import refs  # noqa: E402
 from project_study import project  # noqa: E402
 import localizations  # noqa: E402
 
-# Ausgearbeitete Abschnitte (Texteinheiten), in Lesereihenfolge der Bibel
-SECTIONS = ["TU-MAT-006-005-015", "TU-MRK-003-020-035", "TU-LUK-011-001-004"]
-study = project(SECTIONS)
+# Ausgearbeitete Abschnitte ergeben sich aus den Daten (Texteinheiten mit Arbeitsübersetzung), in Bibelreihenfolge
+study = project()
 nav = json.loads((ROOT / "data/navigation/NAV-PROT66-KJV.json").read_text(encoding="utf-8"))
 sum_recs = {r["id"]: r for r in (json.loads(p.read_text(encoding="utf-8")) for p in sorted((ROOT / "data/summaries").glob("*.json")))}
 bg_recs = {r["id"]: r for r in (json.loads(p.read_text(encoding="utf-8")) for p in sorted((ROOT / "data/background").glob("*.json")))}
@@ -81,8 +80,8 @@ for t in folder("translations"):
     lang = (t.get("language") or "de").split("-")[0]
     for a in t.get("alternatives", []):
         vid = a["reading"].split(":")[0]
-        if "readings_de" in a:
-            alt_extra.setdefault(lang, {})[vid] = {"words": a["readings_de"], "origin": a.get("origin_de", []), "related": a.get("related_variants", [])}
+        if "readings" in a:
+            alt_extra.setdefault(lang, {})[vid] = {"words": a["readings"], "origin": a.get("origin", []), "related": a.get("related_variants", [])}
         wanted.add(vid)
         wanted.update(a.get("related_variants", []))
 wit_readings = {}

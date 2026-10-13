@@ -164,6 +164,7 @@ const back=app.querySelector('.jump-back');assert(back&&back.textContent.include
 assert(reader.querySelector('[data-stream="v39-6-11"]')&&!app.querySelector('.jump-back'),'zurück bei Matthäus 6,11');
 click('[data-more="v39-6-11"]');sheetHost.querySelector('.sheet-tools [data-background="TU-MAT-006-009-013"]').click();
 assert(sheetHost.querySelector('[data-ref-go="MRK.14.36"]'),'Vergleichsstelle verlinkt');
+assert(!sheetHost.textContent.includes('[['),'Stellen-Marken als Anzeige, nicht roh');
 assert(sheetHost.querySelector('[data-ref-go="ISA.64.7"]'),'Stelle im Fliesstext verlinkt (Jes 63,16; 64,7)');
 assert(!sheetHost.textContent.includes('data-ref-go="SIR'),'Sirach nicht verlinkt');
 click('[data-close]');

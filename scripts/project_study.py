@@ -37,7 +37,28 @@ def _span(rng):
     return b, int(c), int(v), int(z.split(".")[2]) if z else int(v)
 
 
-def project(section_ids):
+def worked_sections(root=ROOT):
+    """Ausgearbeitete Abschnitte: Texteinheiten oberster Ebene (nicht Teil einer anderen), deren Bereich eine
+    Arbeitsübersetzung aus dem Urtext hat; sortiert nach Bibelreihenfolge."""
+    tu = _all("text-units")
+    inner = {p for u in tu.values() for p in u.get("parts", [])}
+    covered = set()
+    for t in _all("translations").values():
+        if t.get("translation_kind") == "literal_original_working" and t.get("status") != "deprecated":
+            covered.update(t.get("text_by_reference", {}))
+    order = {code: i for i, (code, _, _) in enumerate(refs.BOOKS)}
+    out = []
+    for k, u in tu.items():
+        if k in inner or u.get("status") == "deprecated":
+            continue
+        b, c, v0, v1 = _span(u["range"])
+        if any(f"{b}.{c}.{v}" in covered for v in range(v0, v1 + 1)):
+            out.append((order.get(b, 999), c, v0, k))
+    return [k for *_, k in sorted(out)]
+
+
+def project(section_ids=None):
+    section_ids = section_ids or worked_sections()
     tu = _all("text-units")
     variants = _all("variants")
     translations = _all("translations")
@@ -50,13 +71,16 @@ def project(section_ids):
     method = json.loads((D / "methods/METHOD-EDITION-AGREEMENT-V1.json").read_text(encoding="utf-8"))
     editions = {k: {"title": v["title"], "year": v.get("year")} for k, v in _all("editions").items()}
 
+    L10N = localizations.load({**tu, **findings, **ints, **prin, **apps, **qs})
     sections, scope, subjects = [], {}, set()
     for sid in section_ids:
         s = tu[sid]
         parts = [tu[p] for p in s.get("parts", [])] or [s]
+
         def names(u):
-            return {"titles": {"de": u["title"], **{k.split("-")[0]: v for k, v in (u.get("title_by_language") or {}).items()}},
-                    "summaries": {"de": u.get("summary_de"), **{k.split("-")[0]: v for k, v in (u.get("summary_by_language") or {}).items()}}}
+            loc = L10N.get(u["id"], {})
+            return {"titles": {"de": u["title"], **{lg: f["title"] for lg, f in loc.items() if "title" in f}},
+                    "summaries": {"de": u.get("summary_de"), **{lg: f["summary_de"] for lg, f in loc.items() if "summary_de" in f}}}
         sections.append({"id": s["id"], "range": s["range"], "title": s["title"], "summary": s.get("summary_de"), **names(s),
                          "parts": [{"id": p["id"], "range": p["range"], "title": p["title"], "summary": p.get("summary_de"), **names(p)}
                                    for p in parts]})
@@ -105,19 +129,18 @@ def project(section_ids):
         lang = (t.get("language") or "de").split("-")[0]
         L = layer(lang, t)
         de, de_source, decisions, alternatives = L["text"], L["source"], L["decisions"], L["alternatives"]
-        for r in refs_in:
-            if r not in de or len(t.get("text_by_reference", {})) > 1:  # Abschnittsübersetzung vor Einzelvers
-                de[r] = t["text_by_reference"][r]
-                de_source[r] = tid
+        for r in refs_in:  # Überschneidungen gleicher Sprache verbietet der Validator
+            de[r] = t["text_by_reference"][r]
+            de_source[r] = tid
         for dc in t.get("decisions", []):
             if in_scope(dc["reference"]):
-                decisions.setdefault(dc["reference"], []).append({k: dc.get(k) for k in ("target", "kind", "grc", "more_literal_de", "other_options_de", "note_de") if dc.get(k)})
+                decisions.setdefault(dc["reference"], []).append({k: dc.get(k) for k in ("target", "kind", "grc", "more_literal", "other_options", "note") if dc.get(k)})
         for alt in t.get("alternatives", []):
             vid, rid = alt["reading"].split(":")
             res = next((x for x in assess.get(vid, {}).get("results", []) if x["reading"].endswith(":" + rid)), None)
             base = next((x for x in assess.get(vid, {}).get("results", []) if x["reading"].endswith(":R1")), None)
-            alternatives.append({"ref": alt["reference"], "from": alt["de_from"], "to": alt["de_to"],
-                                 "effect": alt["effect"], "note": alt.get("note_de"), "variant": vid,
+            alternatives.append({"ref": alt["reference"], "from": alt["from_text"], "to": alt["to_text"],
+                                 "effect": alt["effect"], "note": alt.get("note"), "variant": vid,
                                  "support": res["support"] if res else None,
                                  "base_support": base["support"] if base else None,
                                  "of": res["of"] if res else None,
@@ -149,7 +172,7 @@ def project(section_ids):
             if not in_scope(a["reference"]):
                 continue
             for i, t in enumerate(a["source_tokens"]):
-                tok_de[t] = {"target": a["target"], "kind": a["kind"], "note": a.get("note_de"), "first": i == 0}
+                tok_de[t] = {"target": a["target"], "kind": a["kind"], "note": a.get("note"), "first": i == 0}
     base = layer("de")
 
     units = []
@@ -164,8 +187,6 @@ def project(section_ids):
             u["assessment"] = [{"reading": r["reading"].split(":")[1], "support": r["support"], "of": r["of"],
                                 "level": r["level"], "editions": r["supporting_editions"]} for r in assess[vid]["results"]]
         units.append(u)
-
-    L10N = localizations.load({**findings, **ints, **prin, **apps, **qs})
 
     def i18n(rid, mapping):
         """Lokalisierte Felder je Sprache unter den Schlüsseln der Projektion (nur aktuelle Felder)."""
