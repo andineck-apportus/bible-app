@@ -245,7 +245,9 @@ function mergeBundle(d){
   if(d.book){for(const k of ['words','variants','findings','interpretations','principles','applications','relations','questions'])STUDY[k].push(...(d[k]||[]));
     BG.push(...(d.bg||[]));Object.assign(XREF.verses,d.xref||{});Object.assign(SRC.readings,d.readings||{});Object.assign(SRC.variants,d.src_variants||{});}
 }
-async function fetchBundle(name){const r=await fetch(name+'.json.gz');if(!r.ok)throw new Error(name+': '+r.status);const buf=new Uint8Array(await r.arrayBuffer());
+async function fetchBundle(name){const ext=(MANIFEST&&MANIFEST.ext)||'.json.gz';const r=await fetch(name+ext);if(!r.ok)throw new Error(name+': '+r.status);let buf=new Uint8Array(await r.arrayBuffer());
+  // Hosts ohne Binärdateien: gzip als Base64-Text (.gz.txt)
+  if(ext.endsWith('.txt')){const b=atob(new TextDecoder().decode(buf).trim());buf=Uint8Array.from(b,c=>c.charCodeAt(0));}
   // Manche Server liefern .gz schon entpackt aus; dann direkt lesen
   const txt=(buf[0]===0x1f&&buf[1]===0x8b)?await new Response(new Blob([buf]).stream().pipeThrough(new DecompressionStream('gzip'))).text():new TextDecoder().decode(buf);
   return JSON.parse(txt);}
