@@ -165,6 +165,12 @@ def main():
             nav_groups = {g["id"] for _, nr in records.values() if nr.get("type") == "navigation_structure" for g in nr.get("groups", [])}
             if r["group"] not in nav_groups:
                 errors.append(f"{rel}: group {r['group']!r} in keiner Navigationsstruktur")
+        if r.get("type") == "translation":
+            for i, dcs in enumerate(r.get("decisions", [])):
+                if dcs.get("kind") not in ("literal", "adapted", "interpretive", "traditional"):
+                    errors.append(f"{rel}: decisions[{i}] unbekannte Art {dcs.get('kind')!r}")
+                if dcs.get("target", "\0") not in (r.get("text_by_reference") or {}).get(dcs.get("reference"), ""):
+                    errors.append(f"{rel}: decisions[{i}] Zieltext nicht in der Übersetzung von {dcs.get('reference')}")
         if r.get("type") == "witness_reading_set":
             for i, e in enumerate(r.get("entries", [])):
                 var = records.get(e.get("variant"), (None, {}))[1]

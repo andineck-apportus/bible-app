@@ -86,6 +86,7 @@ for(const a of mkAlts()){
 }
 let tested=mkAlts().length;
 
+
 // Vaterunser: Matthäus und Lukas
 click('[data-action=menu]');
 assert.equal(sheetHost.querySelectorAll('[data-go^="TU-"]').length,M().sections.length,'Ausgearbeitete Stellen im Menü');
@@ -96,6 +97,13 @@ for(let v=9;v<=13;v++)assert.equal(mtv(v).textContent,M().de['MAT.6.'+v]);
 click('[data-study="TU-MAT-006-009-013"]');
 assert(sheetHost.textContent.includes('Brot für den kommenden Tag'),'Deutungen zu epiousios');
 assert(sheetHost.textContent.includes('Was kann es heute bedeuten?'),'Anwendung Vaterunser');
+click('[data-close]');
+click('[data-more="v39-6-13"]');
+let dtx=sheetHost.textContent;
+assert(dtx.includes('Wie ist übersetzt?')&&dtx.includes('folgt der vertrauten Wiedergabe'),'Übersetzungsentscheidungen');
+assert(dtx.includes('«durch» wäre διά'),'Hinweis zu «führe uns durch»');
+assert(dtx.includes('Lutherbibel, revidierte Fassung 1912')&&dtx.includes('erlöse uns von dem Übel'),'Vergleich Luther 1912');
+assert(dtx.includes('errette uns von dem Bösen'),'Vergleich Elberfelder 1905');
 click('[data-close]');
 click('[data-more="v39-6-13"]');click('.sheet [data-source="VAR-SBLGNTAPP-MAT-006-013-01"]');
 let txt=sheetHost.textContent;
@@ -114,5 +122,5 @@ click('[data-action=menu]');const inp=sheetHost.querySelector('input[type=search
 assert.equal(reader.querySelector('[data-stream="v41-11-2"] .stream-copy').textContent,M().de['LUK.11.2']);
 click('[data-more="v41-11-2"]');click('.sheet [data-source="VAR-SBLGNTAPP-LUK-011-002-01"]');
 txt=sheetHost.textContent;assert(txt.includes('Papyrus 75')&&txt.includes('Codex Vaticanus'),'P75 zu Lk 11,2');tested++;click('[data-close]');
-console.log(`PASS: Pilotzugang, Studienblatt ohne Griechisch, Lesarten auf Wunsch (${M().alternatives.length}), Hintergrund damals (${model.BG.length}), Bis zur Quelle (${tested}), Urtext-Modus, Rückkehrposition, Suche, Kapitelgrenze, Vaterunser Mt/Lk, Umschrift und Anhören.`);
+console.log(`PASS: Pilotzugang, Studienblatt ohne Griechisch, Lesarten auf Wunsch (${M().alternatives.length}), Hintergrund damals (${model.BG.length}), Bis zur Quelle (${tested}), Urtext-Modus, Rückkehrposition, Suche, Kapitelgrenze, Vaterunser Mt/Lk, Übersetzungsentscheidungen und Vergleich, Umschrift und Anhören.`);
 dom.window.close();

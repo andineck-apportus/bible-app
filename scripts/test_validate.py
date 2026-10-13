@@ -68,6 +68,14 @@ def bad_background(root):
     write(p, d)
 
 
+def bad_decision(root):
+    p = root / "data/translations/TRANS-MAT-006-005-015-DE-WORKING.json"
+    d = json.loads(p.read_text())
+    d["decisions"][0]["target"] = "steht nicht im Text"
+    d["decisions"][1]["kind"] = "frei"
+    write(p, d)
+
+
 baseline = run(ROOT)
 assert baseline.returncode == 0, baseline.stdout + baseline.stderr
 case("Kern verweist auf NC", core_refs_nc, "verweist aus dem freien Kern auf NC-Datensatz")
@@ -76,4 +84,6 @@ case("Bewertung unbekannte Lesart", bad_assessment, "unbekannte Lesart")
 case("Bibelstelle nicht kanonisch", bad_ref, "to_ref")
 case("Hintergrundnotiz ohne Text", bad_background, "background_note ohne text_de")
 case("Hintergrundnotiz ohne Kontext", bad_background, "ist kein context-Datensatz")
-print("PASS: validator negative tests (NC-Trennung, Annotation, Bewertung, Bibelstelle, Hintergrund)")
+case("Entscheidung ohne Zieltext", bad_decision, "Zieltext nicht in der Übersetzung")
+case("Entscheidung unbekannte Art", bad_decision, "unbekannte Art")
+print("PASS: validator negative tests (NC-Trennung, Annotation, Bewertung, Bibelstelle, Hintergrund, Übersetzungsentscheidung)")

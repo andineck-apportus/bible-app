@@ -2,6 +2,13 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.18 — 2026-10-13 — Übersetzungsentscheidungen sichtbar
+
+- Frage: Wie stark beeinflussen bestehende Übersetzungen unsere Übersetzung? Antwort im Datenmodell: Übersetzungsentscheidungen (`decisions`) für Mt 6,9–13 und Lk 11,2–4, je als wörtlich, sprachlich angepasst, Deutungsentscheidung oder der vertrauten Wiedergabe folgend, mit wörtlicherer Fassung, weiteren Möglichkeiten und Begründung. Ausdrücklich vermerkt: «führe uns durch die Versuchung» gibt den Wortlaut nicht wieder (εἰς «hinein», μή verneint).
+- Vergleich mit gemeinfreien älteren Übersetzungen: Lutherbibel 1912 und Elberfelder 1905, nur für die Vaterunser-Verse.
+- Lesestrom: Versblatt mit «Wie ist übersetzt?» und «Ältere deutsche Übersetzungen»; im Urtext-Modus sind Stellen, die einer Tradition folgen (gepunktet) oder eine Deutung wählen (gestrichelt), im Text unterstrichen.
+- Validator prüft Art und Zieltext der Entscheidungen; neuer Negativtest.
+
 ## v0.17 — 2026-10-13 — Umschrift, Anhören, neue Voreinstellungen
 
 - Griechische Wörter zusätzlich in lateinischer Umschrift (nach dem Muster des SBL-Handbuchs, betonte Silbe markiert, z. B. πονηροῦ → ponēroú), abschaltbar im Menü.

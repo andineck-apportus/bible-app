@@ -67,7 +67,14 @@ def project(section_ids):
             return False
         return v in scope.get((b, c), set())
 
-    de, de_source, alternatives = {}, {}, []
+    de, de_source, alternatives, decisions, compare = {}, {}, [], {}, {}
+    for tid, t in sorted(translations.items()):
+        if t.get("translation_kind") == "historical_comparison":
+            for r, txt in t.get("text_by_reference", {}).items():
+                if in_scope(r):
+                    compare.setdefault(r, []).append({"id": tid, "title": t.get("title", tid), "text": txt,
+                                                      "notes": t.get("notes_by_reference", {}).get(r, []),
+                                                      "license": t.get("source", {}).get("license")})
     for tid, t in sorted(translations.items()):
         if t.get("status") == "deprecated" or t.get("translation_kind") != "literal_original_working":
             continue
@@ -78,6 +85,9 @@ def project(section_ids):
             if r not in de or len(t.get("text_by_reference", {})) > 1:  # Abschnittsübersetzung vor Einzelvers
                 de[r] = t["text_by_reference"][r]
                 de_source[r] = tid
+        for dc in t.get("decisions", []):
+            if in_scope(dc["reference"]):
+                decisions.setdefault(dc["reference"], []).append({k: dc.get(k) for k in ("target", "kind", "more_literal_de", "other_options_de", "note_de") if dc.get(k)})
         for alt in t.get("alternatives", []):
             vid, rid = alt["reading"].split(":")
             res = next((x for x in assess.get(vid, {}).get("results", []) if x["reading"].endswith(":" + rid)), None)
@@ -146,7 +156,7 @@ def project(section_ids):
     return {
         "built_from": "bible-app data/ (freier Kern)",
         "sections": sections,
-        "de": de, "de_source": de_source, "alternatives": alternatives,
+        "de": de, "de_source": de_source, "alternatives": alternatives, "decisions": decisions, "compare": compare,
         "words": words, "tok_de": tok_de, "variants": units,
         "findings": [{"id": k, "claim": v["claim_de"], "kind": v.get("kind"), "confidence": v.get("confidence"),
                       "subject": v.get("subject"), "caveat": v.get("confidence_rationale_de")} for k, v in sorted(fs.items())],
