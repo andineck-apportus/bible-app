@@ -77,6 +77,7 @@ def project(section_ids):
             for r, txt in t.get("text_by_reference", {}).items():
                 if in_scope(r):
                     compare.setdefault(r, []).append({"id": tid, "title": t.get("title", tid), "text": txt,
+                                                      "lang": (t.get("language") or "de").split("-")[0],
                                                       "notes": t.get("notes_by_reference", {}).get(r, []),
                                                       "license": t.get("source", {}).get("license")})
     # Übersetzungsschichten je Sprache (BCP-47-Grundtag): de, gsw, …; jede mit Text, Quelle, Entscheidungen,
@@ -89,7 +90,10 @@ def project(section_ids):
             layers[lang] = {"lang": lang, "label": (t or {}).get("language_label_de") or LABELS.get(lang, lang),
                             "text": {}, "source": {}, "decisions": {}, "alternatives": [], "align": {},
                             "orthography": (t or {}).get("orthography_de"), "register": (t or {}).get("register_de"),
-                            "review": (t or {}).get("review_de")}
+                            "review": (t or {}).get("review_de"),
+                            # Vergleichsübersetzungen sind sprachgebunden: welche Sprachen der Zielkontext zum Vergleich
+                            # heranzieht, steht im context-Datensatz (comparison_languages), sonst nur die eigene Sprache
+                            "compare_languages": ctx.get((t or {}).get("target_context"), {}).get("comparison_languages") or [lang]}
         return layers[lang]
 
     for tid, t in sorted(translations.items()):

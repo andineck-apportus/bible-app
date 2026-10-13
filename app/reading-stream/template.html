@@ -389,6 +389,10 @@ function summary(n){
 }
 function eyebrow(n){if(n.level===0)return '';const p=nodes.get(n.parent);if(n.level===5)return n.part?refDe(n.part.range):title(p);return title(p);}
 const LAYER=()=>STUDY.layers[S.text]||STUDY.layers.de;
+// Vergleichsübersetzungen der Sprachen, die der Zielkontext der gewählten Schicht vorsieht, gruppiert und in dieser Reihenfolge
+const LANGLABEL={de:['Hochdeutsch','German'],gsw:['Züridüütsch','Zurich German'],en:['Englisch','English']};
+const CMP=ref=>(LAYER().compare_languages||[S.text]).map(lg=>({lang:lg,items:(STUDY.compare[ref]||[]).filter(c=>c.lang===lg).sort((a,b)=>b.id.localeCompare(a.id))}));
+const cmpLabel=lg=>(LANGLABEL[lg]||[lg,lg])[lang==='de'?0:1];
 // Lokalisierte Felder (data/localizations) der gewählten Sprachschicht über das Original legen; fehlt eine Übersetzung, bleibt das Original
 const LOC=o=>{const t=o&&o.i18n&&o.i18n[S.text];if(!t)return o;const r={...o,...t};if(t.terms)r.terms=(o.terms||[]).map((x,i)=>({...x,de:t.terms[i]??x.de}));return r;};
 const SUMT=id=>SUMS[id]?LOC(SUMS[id]).text:null;
@@ -413,15 +417,16 @@ function decisionSheet(ref,i){
     const lz=new Set(lem.map(gnorm));const ints=STUDY.interpretations.filter(x=>(x.terms||[]).some(tm=>lz.has(gnorm(tm.word)))).map(LOC);
     if(ints.length)h+=`<h4>${L?'Deutungen':'Interpretations'}</h4>`+ints.map(x=>`<div class="point"><span class="tag">${CONF[x.confidence]||''}</span><p class="body">${rich(x.claim)}</p>${x.caveat?`<p class="note"><b>${L?'Nicht sicher:':'Uncertain:'}</b> ${rich(x.caveat)}</p>`:''}</div>`).join('');}
   h+=`<h4>${L?'Zur Übersetzung':'About the translation'}</h4><div class="point">${d.more_literal_de?`<p class="note"><b>${L?'Wörtlicher:':'More literal:'}</b> «${esc(d.more_literal_de)}»</p>`:''}${d.other_options_de?`<p class="note"><b>${L?'Auch möglich:':'Also possible:'}</b> ${d.other_options_de.map(x=>'«'+esc(x)+'»').join(', ')}</p>`:''}<p class="note">${rich(d.note_de||'')}</p></div>`;
-  const cmp=(STUDY.compare[ref]||[]).slice().sort((a,b)=>b.id.localeCompare(a.id));
-  if(cmp.length)h+=`<h4>${L?'In älteren Übersetzungen':'In older translations'}</h4>`+cmp.map(c=>`<div class="point"><span class="tag">${esc(c.title)}</span><p class="body">${esc(c.text)}</p></div>`).join('');
+  for(const g of CMP(ref))if(g.items.length)h+=`<h4>${L?'In älteren Übersetzungen':'In older translations'} · ${esc(cmpLabel(g.lang))}</h4>`+g.items.map(c=>`<div class="point"><span class="tag">${esc(c.title)}</span><p class="body">${esc(c.text)}</p></div>`).join('');
   h+=`<div class="actions"><button type="button" class="link soft" data-more="${n.id}">${L?'Alles zu diesem Vers':'Everything on this verse'}</button></div>`;
   openSheet('decision',h);
 }
 function decisionsBlock(n){
-  const L=lang==='de',ds=LAYER().decisions[n.canonicalRef]||[],cmp=(STUDY.compare[n.canonicalRef]||[]).slice().sort((a,b)=>b.id.localeCompare(a.id));let h='';
+  const L=lang==='de',ds=LAYER().decisions[n.canonicalRef]||[],groups=CMP(n.canonicalRef);let h='';
   if(ds.length){h+=`<h4>${L?'Wie ist übersetzt?':'How is it translated?'}</h4><p class="note">${L?'Wo diese Übersetzung wörtlich ist, wo sie sprachlich glättet, wo sie deutet und wo sie einer vertrauten Wiedergabe folgt. Im Urtext-Modus sind die beiden letzten Arten im Text unterstrichen.':'Where this translation is literal, smoothed, interpretive or traditional.'}</p>`+ds.map(d=>`<div class="point dec-point"><span class="tag dec-tag ${d.kind}">${DEC[d.kind][L?0:1]}</span><p class="body">«${esc(d.target)}»</p>${d.grc?`<div>${grcLine(d.grc)}</div>`:''}${d.more_literal_de?`<p class="note"><b>${L?'Wörtlicher:':'More literal:'}</b> «${esc(d.more_literal_de)}»</p>`:''}${d.other_options_de?`<p class="note"><b>${L?'Auch möglich:':'Also possible:'}</b> ${d.other_options_de.map(x=>'«'+esc(x)+'»').join(', ')}</p>`:''}<p class="note">${rich(d.note_de||'')}</p></div>`).join('');}
-  if(cmp.length){h+=`<h4>${L?'Ältere deutsche Übersetzungen':'Older German translations'}</h4><p class="note">${L?'Zum Vergleich, gemeinfrei. Sie beruhen teils auf anderen griechischen Textausgaben und sind nicht die Grundlage der Übersetzung hier.':'For comparison (public domain); not the basis of this translation.'}</p>`+cmp.map(c=>`<div class="point"><span class="tag">${esc(c.title)}</span><p class="body">${esc(c.text)}</p>${(c.notes||[]).map(x=>`<p class="note">${esc(x)}</p>`).join('')}</div>`).join('');}
+  if(groups.some(g=>g.items.length))for(const g of groups){const cmp=g.items;
+    if(!cmp.length){h+=`<h4>${L?'Ältere Übersetzungen':'Older translations'} · ${esc(cmpLabel(g.lang))}</h4><p class="note">${L?'Für diese Sprache ist noch keine Vergleichsübersetzung erfasst.':'No comparison translation recorded for this language yet.'}</p>`;continue;}
+    h+=`<h4>${L?'Ältere Übersetzungen':'Older translations'} · ${esc(cmpLabel(g.lang))}</h4><p class="note">${L?'Zum Vergleich, gemeinfrei. Sie beruhen teils auf anderen griechischen Textausgaben und sind nicht die Grundlage der Übersetzung hier.':'For comparison (public domain); not the basis of this translation.'}</p>`+cmp.map(c=>`<div class="point"><span class="tag">${esc(c.title)}</span><p class="body">${esc(c.text)}</p>${(c.notes||[]).map(x=>`<p class="note">${esc(x)}</p>`).join('')}</div>`).join('');}
   return h;
 }
 const altsFor=n=>LAYER().alternatives.filter(a=>a.ref===n.canonicalRef);
@@ -455,7 +460,7 @@ function verseEntry(n){
   if(!text)return `<article class="stream-entry verse placeholder" data-stream="${n.id}">${lead}<p class="verse-line"><span class="vno">${n.v}</span><span class="stream-copy">${S.flow?'…':t.placeholder}</span></p></article>`;
   const alts=altsFor(n);
   const bgs=bgFor(n);
-  const has=alts.length||bgs.length||S.advanced||LAYER().decisions[n.canonicalRef]||STUDY.compare[n.canonicalRef];
+  const has=alts.length||bgs.length||S.advanced||LAYER().decisions[n.canonicalRef]||CMP(n.canonicalRef).some(g=>g.items.length);
   const vno=has?`<button type="button" class="vno more" data-more="${n.id}" aria-label="${t.more} ${n.v}">${n.v}</button>`:`<span class="vno">${n.v}</span>`;
   const inline=S.inline?alts.map(a=>`<span class="alt-line" data-alternative="${esc(a.variant)}">${lang==='de'?'oder':'or'}: «${esc(a.to)}»</span>`).join(''):'';
   const bgList=S.bgInline?bgs.filter(b=>b.from===n.v):[];
