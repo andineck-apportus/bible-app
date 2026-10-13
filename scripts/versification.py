@@ -97,6 +97,25 @@ def _ref(raw, book):
 
 
 def heb_to_kjv(book, verses):
+    return to_kjv(book, verses, "Hebrew")
+
+
+def greek_verse_map(book, refs_present):
+    """Griechische Zählung (SBLGNT, CNTR) -> Navigation, ganze Verse: {quellvers: zielvers} nur für abweichende Verse.
+    Teilverse kommen im NT nur als Anhängen an den Vorvers vor (z. B. 3 Joh 1,15 -> 1,14)."""
+    verses = {r: ["w"] for r in refs_present}
+    plan, _ = to_kjv(book, verses, "Greek")
+    out = {}
+    for src, parts in plan.items():
+        if len(parts) != 1:
+            raise SystemExit(f"{src}: Teilung eines griechischen Verses nicht unterstützt")
+        dst = parts[0][0]
+        if dst != src:
+            out[src] = dst
+    return out
+
+
+def to_kjv(book, verses, tradition):
     """-> {quellvers: [(zielvers, ab_wort, bis_wort, art)]}, art: same|renumber|title|join|split; fehlende Zielverse."""
     last = {}
     for r in verses:
@@ -104,7 +123,7 @@ def heb_to_kjv(book, verses):
         last[int(c)] = max(last.get(int(c), 0), int(v))
     chosen = {}
     for row in _rows(book):
-        if "Hebrew" not in row["source_type"].split("+"):
+        if tradition not in row["source_type"].split("+"):
             continue
         if not all(_test(t, book, verses, last) for t in (row.get("tests") or "").split("&")):
             continue

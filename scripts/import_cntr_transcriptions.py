@@ -24,8 +24,9 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
-BOOKNUM = {"MAT": 40, "MRK": 41, "LUK": 42, "PHP": 50, "TIT": 56}
-BOOKTAG = {"MAT": "TAG-MATTHEW", "MRK": "TAG-MARK", "LUK": "TAG-LUKE", "PHP": "TAG-PHILIPPIANS", "TIT": "TAG-TITUS"}
+import versification  # noqa: E402
+BOOKNUM = {"MAT": 40, "MRK": 41, "LUK": 42, "PHP": 50, "TIT": 56, "1JN": 62, "2JN": 63, "3JN": 64}
+BOOKTAG = {"MAT": "TAG-MATTHEW", "MRK": "TAG-MARK", "LUK": "TAG-LUKE", "PHP": "TAG-PHILIPPIANS", "TIT": "TAG-TITUS", "1JN": "TAG-JOHANNINE", "2JN": "TAG-JOHANNINE", "3JN": "TAG-JOHANNINE"}
 SOURCE = "SRC-CNTR-TRANSCRIPTIONS"
 UPSTREAM = "https://github.com/Center-for-New-Testament-Restoration/transcriptions"
 
@@ -59,6 +60,21 @@ WITNESSES = {
             "location_de": "Smithsonian, National Museum of Asian Art (Freer), Washington",
             "about_de": "Evangelienhandschrift mit wechselndem Texttyp; in Markus teilweise eigenständig.",
             "facsimile": ["https://manuscripts.csntm.org/Manuscript/Group/GA_032"]},
+    "059": {"symbol": "059", "name_de": "Majuskel 059", "century": "IV/V", "date_de": "4./5. Jahrhundert",
+            "material_de": "Pergament", "languages": ["grc"], "location_de": "Österreichische Nationalbibliothek, Wien",
+            "about_de": "Einzelblätter mit Teilen von Markus 15.", "facsimile": []},
+    "0188": {"symbol": "0188", "name_de": "Majuskel 0188", "century": "IV", "date_de": "4. Jahrhundert",
+             "material_de": "Pergament", "languages": ["grc"], "location_de": "Staatliche Museen zu Berlin",
+             "about_de": "Ein Blatt mit Markus 11.", "facsimile": []},
+    "0214": {"symbol": "0214", "name_de": "Majuskel 0214", "century": "IV/V", "date_de": "4./5. Jahrhundert",
+             "material_de": "Pergament", "languages": ["grc"], "location_de": "Österreichische Nationalbibliothek, Wien",
+             "about_de": "Fragment mit Markus 8.", "facsimile": []},
+    "0315": {"symbol": "0315", "name_de": "Majuskel 0315", "century": "IV/V", "date_de": "4./5. Jahrhundert",
+             "material_de": "Pergament", "languages": ["grc"], "location_de": "Laut INTF-Katalog",
+             "about_de": "Kleines Fragment mit Markus 2.", "facsimile": []},
+    "0232": {"symbol": "0232", "name_de": "Majuskel 0232 (P. Antinoopolis 12)", "century": "V/VI", "date_de": "5./6. Jahrhundert",
+             "material_de": "Pergament", "languages": ["grc"], "location_de": "Oxford, Sackler Library",
+             "about_de": "Blatt aus einem kleinen Codex mit Teilen des 2. Johannesbriefs.", "facsimile": []},
 }
 # Weitere Zeugen: Papyri (Gregory-Aland) und Texte auf Amuletten u. ä. (Trismegistos-Nummer, CNTR «class 2»).
 # Angaben zu Datierung, Ort und Sammlung nach DCLP/papyri.info (TM-Datensätze), Stand 2026-10-12.
@@ -89,6 +105,18 @@ PAPYRI = {
             "location_de": "Ägyptisches Museum Kairo; gefunden in Oxyrhynchos",
             "about_de": "Die CNTR-Transkription führt unter «P15» auch das Blatt mit Phil 3,10–17 und 4,2–8, das in der Gregory-Aland-Liste als 𝔓16 (P. Oxy. 1009) gezählt wird; beide Blätter gelten als Teile desselben Codex.",
             "facsimile": [], "catalog_docid": 10015},
+    "P9": {"symbol": "𝔓9", "name_de": "Papyrus 9 (P. Oxyrhynchus 402)", "century": "III", "date_de": "3. Jahrhundert nach gängiger Einordnung",
+           "material_de": "Papyrus", "languages": ["grc"], "location_de": "Harvard University, Houghton Library; gefunden in Oxyrhynchos",
+           "about_de": "Kleines Blatt mit Teilen von 1 Joh 4; ältester Textzeuge des Briefs, in nachlässiger Schrift.",
+           "facsimile": [], "catalog_docid": 10009},
+    "P88": {"symbol": "𝔓88", "name_de": "Papyrus 88", "century": "IV", "date_de": "4. Jahrhundert nach gängiger Einordnung",
+            "material_de": "Papyrus", "languages": ["grc"], "location_de": "Mailand, Università Cattolica",
+            "about_de": "Doppelblatt mit Markus 2.", "facsimile": [], "catalog_docid": 10088},
+    "P137": {"symbol": "𝔓137", "name_de": "Papyrus 137 (P. Oxyrhynchus 5345)", "century": "II/III",
+             "date_de": "Ende 2. oder Anfang 3. Jahrhundert laut Erstedition (2018)", "material_de": "Papyrus", "languages": ["grc"],
+             "location_de": "Oxford, Sackler Library (Egypt Exploration Society); gefunden in Oxyrhynchos",
+             "about_de": "Kleines Fragment mit Markus 1; derzeit der älteste bekannte Textzeuge des Markusevangeliums.",
+             "facsimile": [], "catalog_docid": 10137},
 }
 AMULETS = {
     "64206": {"name_de": "P. Antinoopolis 2.54", "century": "III/IV", "date_de": "um 275–325",
@@ -141,6 +169,10 @@ def read(path):
             if ref in verses:
                 sys.exit(f"ERROR: {path.name}: Vers {ref} doppelt")
             verses[ref] = text
+    # Griechische Zählung -> Navigation (KJV): abweichende Verse an den Zielvers anhängen (z. B. 3 Joh 1,15 -> 1,14)
+    for src, dst in versification.greek_verse_map(args.book, list(verses)).items():
+        if src in verses:
+            verses[dst] = (verses.get(dst, "") + " " + verses.pop(src)).strip()
     return raw, verses
 
 

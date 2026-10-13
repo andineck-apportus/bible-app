@@ -106,6 +106,10 @@ def layers(mes):
     return out
 
 
+BOOKTAG = {"MAT": "TAG-MATTHEW", "MRK": "TAG-MARK", "LUK": "TAG-LUKE", "PHP": "TAG-PHILIPPIANS", "TIT": "TAG-TITUS",
+           "1JN": "TAG-JOHANNINE", "2JN": "TAG-JOHANNINE", "3JN": "TAG-JOHANNINE"}
+
+
 def reading_words(text, base_words):
     text = text.strip()
     if text in ("–", "-", "om.", ""):
@@ -116,6 +120,8 @@ def reading_words(text, base_words):
     if "…" in toks:
         i = toks.index("…")
         a, b = strip(toks[i - 1]), strip(toks[i + 1])
+        if a not in base_words or b not in base_words:
+            return None  # Auslassung lässt sich nicht im Grundtext verankern -> Stelle nicht zuordnen
         ia, ib = base_words.index(a), base_words.index(b)
         filled = [strip(t) for t in toks[:i]] + base_words[ia + 1:ib] + [strip(t) for t in toks[i + 1:]]
         return [w for w in filled if w]
@@ -153,6 +159,7 @@ def main():
                 and v0 <= int(v["reference"].split(".")[2].split("-")[0]) <= v1]
     texts = [t for t in load_all("witness-texts").values() if t["type"] == "witness_transcription"]
     entries, checks = [], []
+    unanchored = []
     for v in sorted(variants, key=lambda x: x["id"]):
         ref = v["reference"]
         vt = by_verse[ref]
@@ -161,8 +168,12 @@ def main():
         i0, i1 = min(idx), max(idx)
         base = words[i0:i1 + 1]
         cands, cores = {}, {}
+        rws = {r["reading_id"]: reading_words(r["text"], base) for r in v["readings"]}
+        if any(x is None for x in rws.values()):
+            unanchored.append(v["id"])
+            continue
         for r in v["readings"]:
-            rw = reading_words(r["text"], base)
+            rw = rws[r["reading_id"]]
             full = words[:i0] + rw + words[i1 + 1:]
             cands[r["reading_id"]] = full[max(0, i0 - K): i0 + len(rw) + K]
             cores[r["reading_id"]] = rw
@@ -227,12 +238,15 @@ def main():
     today = datetime.date.today().isoformat()
     sid = f"WREAD-CNTR-{book}-{ch:03d}-{v0:03d}-{v1:03d}"
     rec = {"id": sid, "type": "witness_reading_set", "status": "imported_unreviewed",
-           "tags": ["TAG-TEXT-CRITICISM", "TAG-MARK"], "reference": scope, "method": "METHOD-AUTO-COLLATION-V1",
+           "tags": ["TAG-TEXT-CRITICISM", BOOKTAG[book]], "reference": scope, "method": "METHOD-AUTO-COLLATION-V1",
            "based_on": sorted({t["id"] for t in texts}), "created_at": today,
            "hands_de": {"first": "Erstschrift bzw. Ausgabentext", "corr": "korrigierter Text (Korrektur des Schreibers oder späterer Hände)"},
            "results_de": {"R…": "Lesart der Variantenstelle", "other": "liest anders als alle erfassten Lesarten",
                           "unclear": "keine eindeutige Zuordnung möglich", "lacuna": "Stelle nicht erhalten"},
            "entries": entries}
+    if unanchored:
+        rec["not_collated"] = {"variants": unanchored,
+                               "reason_de": "Lesart mit Auslassung «…» lässt sich im Grundtext nicht verankern"}
     out = D / "witness-readings" / f"{sid}.json"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(rec, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
