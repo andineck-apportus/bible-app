@@ -1,6 +1,6 @@
 # Datenmodell: Ist-Stand und Ziel
 
-## Vorhandene Objekte in v0.16
+## Vorhandene Objekte in v0.18
 
 | Ordner | `type` | Anzahl | Aufgabe |
 |---|---|---:|---|
@@ -51,6 +51,9 @@ Beispielkette: `FIND-MRK-0001` → `INT-MRK-0001` → `PRIN-MRK-0001` → `APP-M
 
 ## Noch nicht implementiert
 Eigene Handschriften-/Zeugenobjekte mit Korrekturschichten; eigenständige Lemma-/Lexikonobjekte; Argumente/Gegenargumente als eigene Objekte; einheitliche Quellenbelege mit genauen Fundstellen; durchgängige Zeit- und Revisionsmetadaten; typspezifische Schemas; Versifikationstabelle; SQLite-Projektion; Benutzeroberfläche.
+
+## Übersetzungsentscheidungen und Vergleichsübersetzungen
+Eigene Arbeitsübersetzungen (`translation_kind: literal_original_working`) können `decisions` führen: je Stelle der deutsche Zieltext (`target`, muss im Übersetzungstext vorkommen), die Art (`literal` wörtlich, `adapted` sprachlich angepasst, `interpretive` Deutungsentscheidung, `traditional` folgt der vertrauten Wiedergabe), optional eine wörtlichere Fassung (`more_literal_de`), weitere Möglichkeiten (`other_options_de`) und eine Begründung. Der Validator prüft Art und Zieltext. Ältere gemeinfreie deutsche Übersetzungen liegen als `translation_kind: historical_comparison` nur für die ausgearbeiteten Verse vor und dienen ausschliesslich dem Vergleich.
 
 ## Studienprojektion
 Der Lesestrom erhält die ausgearbeiteten Abschnitte über `scripts/project_study.py` (alle Schlüssel kanonische Bibelstellen). Neue Abschnitte werden in `scripts/build_reading_stream.py` (Liste `SECTIONS`) eingetragen; die Daten selbst bleiben in `data/`.
