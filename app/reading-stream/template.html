@@ -378,7 +378,7 @@ const sep=()=>lang==='de'?',':':';
 function title(n){if(n.level<3)return n[lang];if(n.level===3)return bookName(n);if(n.level===4)return bookName(n)+' '+n.c;if(n.level===5)return bookName(n)+' '+n.c+sep()+n.v+'–'+n.last;return bookName(n)+' '+n.c+sep()+n.v;}
 const refDe=r=>{const g=rangeOf(r),bk=DATA.find(b=>b.code===g.code);if(!bk)return r;return (lang==='de'?bk.de+' '+g.c+',':bk.en+' '+g.c+':')+g.from+(g.to>g.from?'–'+g.to:'');};
 function summary(n){
-  if(n.part)return n.part.summary;
+  if(n.part)return pSummary(n.part);
   if(n.level===6)return TXT(n.canonicalRef);
   if(n.level===0)return SUMS['SUM-BIBLE']?.text;
   if(n.level===1)return SUMS[n.id==='ot'?'SUM-OT':'SUM-NT']?.text;
@@ -390,6 +390,8 @@ function summary(n){
 function eyebrow(n){if(n.level===0)return '';const p=nodes.get(n.parent);if(n.level===5)return n.part?refDe(n.part.range):title(p);return title(p);}
 const LAYER=()=>STUDY.layers[S.text]||STUDY.layers.de;
 const TXT=ref=>LAYER().text[ref]||STUDY.layers.de.text[ref]||null;
+const pTitle=p=>(p.titles&&(p.titles[S.text]||p.titles.de))||p.title;
+const pSummary=p=>(p.summaries&&(p.summaries[S.text]||p.summaries.de))||p.summary;
 const isPilotVerse=n=>n.level===6&&!!TXT(n.canonicalRef);
 const DEC={literal:['wörtlich','literal'],adapted:['sprachlich angepasst','adapted'],interpretive:['Deutungsentscheidung','interpretive choice'],traditional:['folgt der vertrauten Wiedergabe','follows traditional wording']};
 function decorate(text,decs){
@@ -425,7 +427,7 @@ const bgForPart=id=>BG.filter(b=>b.subject===id||(b.wide&&SECTION_OF[id]&&b.sect
 function bgNote(b,withRef){const L=lang==='de';refCtx=b.chapter.split('.')[0];
   return `<div class="point bg-note" data-bg-note="${esc(b.id)}"><span class="tag">${withRef?esc(b.ref_de)+' · ':''}${esc(CONF[b.confidence]||'')}${b.readers?(L?' · Zeit des Markus':' · time of Mark'):''}</span><p class="bg-topic">${esc(b.topic)}</p><p class="body">${rich(b.text)}</p>${termsLine(b.terms)}${b.uncertain?`<p class="note"><b>${L?'Nicht sicher:':'Uncertain:'}</b> ${rich(b.uncertain)}</p>`:''}${b.evidence.length||b.sources.length?`<p class="note">${L?'Vergleiche':'Compare'}: ${linkRefs(esc([...b.evidence,...b.sources].join(' · ')))}</p>`:''}${S.advanced?`<p class="ref-id">${esc(b.id)}</p>`:''}</div>`;}
 const bgDisclaimer=()=>`<p class="note">${lang==='de'?'Hintergrund beschreibt Zeit, Ort und Kultur damals. Er erklärt den Text nicht allein, und ein Teil davon ist unsicher. Alle Hinweise sind Entwürfe und noch nicht fachlich geprüft.':'Background describes time, place and culture then. Drafts, not yet reviewed.'}</p>`;
-function bgSheet(partId){const part=nodes.get(partId).part;refCtx=rangeOf(part.range).code;openSheet('background',head(T().background)+`<p class="note">${esc(part.title)} · ${esc(refDe(part.range))}</p>`+bgForPart(partId).map(b=>bgNote(b,true)).join('')+bgDisclaimer()+sheetTools(partId,'u'));}
+function bgSheet(partId){const part=nodes.get(partId).part;refCtx=rangeOf(part.range).code;openSheet('background',head(T().background)+`<p class="note">${esc(pTitle(part))} · ${esc(refDe(part.range))}</p>`+bgForPart(partId).map(b=>bgNote(b,true)).join('')+bgDisclaimer()+sheetTools(partId,'u'));}
 function bgOne(id){const b=BG.find(x=>x.id===id);openSheet('background',head(b.topic)+bgNote(b,true).replace(`<p class="bg-topic">${esc(b.topic)}</p>`,'')+bgDisclaimer());}
 
 /* ---------- Einträge ---------- */
@@ -436,17 +438,17 @@ function entry(id){
   const deep=n.children.length?`<button type="button" class="link" data-deep="${id}">${t.deeper[n.level]}${icon('arrow-down')}</button>`:'';
 
   const ex=(n.level===3||n.level===4)?STUDY.sections.filter(sec=>{const g=rangeOf(sec.range);return DATA[n.b].code===g.code&&(n.level===3||n.c===g.c);}):[];
-  const example=ex.map(sec=>`<button type="button" class="example" data-go="${sec.parts[0].id}"><span>${t.example}: ${esc(refDe(sec.range))} · ${esc(sec.title)}</span>${icon('chevron-right')}</button>`).join('');
-  const heading=n.level===5&&n.part?n.part.title:(n.level===5?(lang==='de'?'Verse ':'Verses ')+n.v+'–'+n.last:title(n));
+  const example=ex.map(sec=>`<button type="button" class="example" data-go="${sec.parts[0].id}"><span>${t.example}: ${esc(refDe(sec.range))} · ${esc(pTitle(sec))}</span>${icon('chevron-right')}</button>`).join('');
+  const heading=n.level===5&&n.part?pTitle(n.part):(n.level===5?(lang==='de'?'Verse ':'Verses ')+n.v+'–'+n.last:title(n));
   const copy=text?`<p class="stream-copy">${esc(text)}</p>`:`<p class="stream-copy quiet">${n.level===5?t.noPart:t.noSummary}</p>`;
   return `<article class="stream-entry" data-stream="${id}">${eyebrow(n)?`<p class="eyebrow">${esc(eyebrow(n))}</p>`:''}<h2>${esc(heading)}</h2>${n.part?tools(id):''}${copy}${example}<div class="actions">${deep}</div></article>`;
 }
 function tools(id,which='uh'){const t=T();return `<span class="part-tools">${which.includes('u')?`<button type="button" class="tool" data-study="${id}" aria-label="${t.understand}">${icon('understand')}<span>${t.toolUnderstand}</span></button>`:''}${which.includes('h')?`<button type="button" class="tool" data-background="${id}" aria-label="${t.background}">${icon('history')}<span>${t.toolHistory}</span></button>`:''}</span>`;}
-const sheetTools=(id,which)=>`<div class="sheet-tools"><span class="note">${lang==='de'?'Abschnitt':'Passage'}: ${esc(nodes.get(id).part?nodes.get(id).part.title:'')}</span>${tools(id,which)}</div>`;
+const sheetTools=(id,which)=>`<div class="sheet-tools"><span class="note">${lang==='de'?'Abschnitt':'Passage'}: ${esc(nodes.get(id).part?pTitle(nodes.get(id).part):'')}</span>${tools(id,which)}</div>`;
 function verseEntry(n){
   const t=T(),text=summary(n);let lead='';
   if(n.v===1)lead+=`<h2 class="chapter-head">${esc(bookName(n)+' '+n.c)}</h2>`;
-  const p=nodes.get(n.parent);if(p.part&&p.v===n.v)lead+=`<div class="part-head"><h3>${esc(p.part.title)}</h3>${tools(p.id)}</div>`;
+  const p=nodes.get(n.parent);if(p.part&&p.v===n.v)lead+=`<div class="part-head"><h3>${esc(pTitle(p.part))}</h3>${tools(p.id)}</div>`;
   if(!text)return `<article class="stream-entry verse placeholder" data-stream="${n.id}">${lead}<p class="verse-line"><span class="vno">${n.v}</span><span class="stream-copy">${S.flow?'…':t.placeholder}</span></p></article>`;
   const alts=altsFor(n);
   const bgs=bgFor(n);
@@ -483,7 +485,7 @@ function goRef(ref){const [a]=ref.split('-');const [code,c,v]=a.split('.');const
 function sidebar(){const n=nodes.get(current),ids=n.level<=3?streams[n.level||1]:nodes.get(n.parent).children;
   const worked=x=>x.level===3?STUDY.sections.some(sec=>rangeOf(sec.range).code===DATA[x.b].code):x.level===4?STUDY.sections.some(sec=>{const g=rangeOf(sec.range);return g.code===DATA[x.b].code&&g.c===x.c;}):x.level===5?!!x.part:x.level===6?isPilotVerse(x):false;
   const head=n.level<=1?T().bible:n.level<=3?T().levels[n.level]:title(nodes.get(n.parent));
-  aside.innerHTML=`<p class="eyebrow">${esc(head)}</p>`+ids.slice(0,200).map(id=>{const x=nodes.get(id);return `<button type="button" data-go="${id}" aria-current="${id===current}"><span>${esc(x.level===5&&x.part?x.part.title:title(x))}</span>${worked(x)?'<span class="dot"></span>':''}</button>`;}).join('');
+  aside.innerHTML=`<p class="eyebrow">${esc(head)}</p>`+ids.slice(0,200).map(id=>{const x=nodes.get(id);return `<button type="button" data-go="${id}" aria-current="${id===current}"><span>${esc(x.level===5&&x.part?pTitle(x.part):title(x))}</span>${worked(x)?'<span class="dot"></span>':''}</button>`;}).join('');
   const cur=aside.querySelector('[aria-current=true]');if(cur&&cur.scrollIntoView&&aside.clientHeight)try{cur.scrollIntoView({block:'center'});}catch(e){}}
 function render(){applyPrefs();chrome();sidebar();const n=nodes.get(current);const r=savedStreams.get(n.level);if(r&&r.id===current){readerStart=r.start;readerEnd=r.end;}else{readerStart=n.si;readerEnd=Math.min(n.si+10,streams[n.level].length);}reader.innerHTML=streamMarkup();}
 function rerenderKeep(){
@@ -579,7 +581,7 @@ function sourcesBlock(){return `<h4>${lang==='de'?'Quellen':'Sources'}</h4><p cl
 function studySheet(partId){
   const part=nodes.get(partId).part,sec=SECTION_OF[partId],subjects=[part.id,sec.id],L=lang==='de';refCtx=rangeOf(part.range).code;
   const fs=STUDY.findings.filter(x=>subjects.includes(x.subject)),is=STUDY.interpretations.filter(x=>subjects.includes(x.subject));
-  let h=head(part.title)+`<p class="note">${esc(refDe(part.range))}</p>`;
+  let h=head(pTitle(part))+`<p class="note">${esc(refDe(part.range))}</p>`;
   h+=`<h4>${L?'Was steht da?':'What does it say?'}</h4>`+fs.map(f=>`<div class="point"><p class="body">${rich((f.claim))}</p>${S.advanced&&f.caveat?`<p class="note">${esc(f.caveat)}</p>`:''}${S.advanced?`<p class="ref-id">${esc(f.id)}</p>`:''}</div>`).join('');
   h+=`<h4>${L?'Wie kann man es verstehen?':'How can it be understood?'}</h4>`+(is.length>1?`<p class="note">${L?'Hier gibt es mehr als eine Sichtweise.':'There is more than one view.'}</p>`:'')+is.map(i=>`<div class="point"><span class="tag">${CONF[i.confidence]||''}</span><p class="body">${rich((i.claim))}</p>${termsLine(i.terms)}${i.caveat?`<p class="note"><b>${L?'Nicht sicher:':'Uncertain:'}</b> ${rich((i.caveat))}</p>`:''}${(i.counter||[]).map(c=>`<p class="note"><b>${L?'Man kann auch anders lesen:':'Another reading:'}</b> ${rich((c))}</p>`).join('')}${S.advanced?`<p class="ref-id">${esc(i.id)}</p>`:''}</div>`).join('');
   const aps=STUDY.applications.filter(a=>subjects.includes(a.subject)),prs=STUDY.principles.filter(p=>subjects.includes(p.subject)),qs=STUDY.questions.filter(q=>subjects.includes(q.subject)),rls=STUDY.relations.filter(r=>subjects.includes(r.from));
@@ -593,7 +595,7 @@ function menuSheet(){
   const t=T(),seg=(key,opts,val)=>`<div class="seg" role="group">${opts.map(([v,l])=>`<button type="button" data-set="${key}" data-value="${v}" aria-pressed="${String(val)===String(v)}">${l}</button>`).join('')}</div>`;
   const sw=(key,label,sub)=>`<div class="set"><span>${label}<span class="sub">${sub}</span></span><button type="button" class="switch" role="switch" aria-checked="${S[key]}" data-toggle="${key}" aria-label="${label}"></button></div>`;
   openSheet('menu',head(t.menu,t.done)+`<label for="find-${appIndex}" class="note">${t.search}</label><input id="find-${appIndex}" type="search" placeholder="${t.hint}" value="${esc(query)}" autocomplete="off"><div class="results"></div>
-  <p class="note">${t.examples}</p>${STUDY.sections.map(sec=>`<button type="button" class="row" data-go="${sec.parts[0].id}"><span>${esc(refDe(sec.range))} · ${esc(sec.title)}</span>${icon('chevron-right')}</button>`).join('')}
+  <p class="note">${t.examples}</p>${STUDY.sections.map(sec=>`<button type="button" class="row" data-go="${sec.parts[0].id}"><span>${esc(refDe(sec.range))} · ${esc(pTitle(sec))}</span>${icon('chevron-right')}</button>`).join('')}
   <button type="button" class="row" data-go="all"><span>${t.home}</span>${icon('chevron-right')}</button>
   ${STUDY.layer_order.length>1?`<div class="set"><span>${t.readText}<span class="sub">${t.readTextSub}</span></span>${seg('text',STUDY.layer_order.map(k=>[k,STUDY.layers[k].label]),S.text)}</div>`:''}
   <div class="set"><span>${t.colors}</span>${seg('theme',[['auto',t.auto],['light',t.light],['dark',t.dark]],S.theme)}</div>
@@ -616,7 +618,7 @@ let nav=null;
 function navFrom(id){const st={t:'nt',g:null,b:null,c:null};for(const x of ancestors(id)){const n=nodes.get(x);if(n.level===1)st.t=n.id;if(n.level===2)st.g=n.gi;if(n.level===3)st.b=n.b;if(n.level===4)st.c=n.c;}return st;}
 function navSheet(reset){
   if(reset||!nav)nav=navFrom(current);const t=T(),L=lang==='de';
-  const name=n=>n.level===0?t.bible:n.level===5&&n.part?n.part.title:n.level===4?(L?'Kapitel ':'Chapter ')+n.c:n.level===6?(L?'Vers ':'Verse ')+n.v:n.level===5?(L?'Verse ':'Verses ')+n.v+'–'+n.last:(L?n.de:n.en);
+  const name=n=>n.level===0?t.bible:n.level===5&&n.part?pTitle(n.part):n.level===4?(L?'Kapitel ':'Chapter ')+n.c:n.level===6?(L?'Vers ':'Verse ')+n.v:n.level===5?(L?'Verse ':'Verses ')+n.v+'–'+n.last:(L?n.de:n.en);
   const crumbs=ancestors(current).map(id=>`<button type="button" data-go="${id}" ${id===current?'aria-current="true"':''}>${esc(name(nodes.get(id)))}</button>`).join('<span class="sep">›</span>');
   const workedBook=code=>STUDY.sections.some(sec=>rangeOf(sec.range).code===code),workedCh=(code,c)=>STUDY.sections.some(sec=>{const g=rangeOf(sec.range);return g.code===code&&g.c===c;});
   let h=head(t.contents)+`<p class="note">${t.here}</p><div class="crumbs">${crumbs}</div>`;
@@ -628,7 +630,7 @@ function navSheet(reset){
   if(nav.b!=null){const bn=nodes.get('b'+nav.b),code=DATA[nav.b].code;
     h+=`<div class="nav-block"><h4><span>${L?'Kapitel':'Chapter'}</span>${nav.c?`<button type="button" class="open" data-go="c${nav.b}-${nav.c}">${esc(L?DATA[nav.b].de:DATA[nav.b].en)} ${nav.c} ${t.open}${icon('chevron-right')}</button>`:''}</h4><div class="grid nums">${bn.children.map(cid=>{const cn=nodes.get(cid);return `<button type="button" class="${nav.c===cn.c?'cur':''}${workedCh(code,cn.c)?' study':''}" data-nav="c:${cn.c}">${cn.c}</button>`;}).join('')}</div></div>`;}
   if(nav.b!=null&&nav.c){const cn=nodes.get(`c${nav.b}-${nav.c}`),parts=cn.children.map(id=>nodes.get(id)).filter(x=>x.part),vs=cn.children.flatMap(sid=>nodes.get(sid).children);
-    h+=`<div class="nav-block"><h4><span>${L?'Vers':'Verse'}</span></h4>${parts.map(x=>`<button type="button" class="row" data-go="${x.id}"><span>${esc(x.part.title)} <span class="note">${x.v}–${x.last}</span></span>${icon('chevron-right')}</button>`).join('')}<div class="grid nums">${vs.map(vid=>{const v=nodes.get(vid);return `<button type="button" class="${current===vid?'cur':''}${isPilotVerse(v)?' study':''}" data-go="${vid}">${v.v}</button>`;}).join('')}</div></div>`;}
+    h+=`<div class="nav-block"><h4><span>${L?'Vers':'Verse'}</span></h4>${parts.map(x=>`<button type="button" class="row" data-go="${x.id}"><span>${esc(pTitle(x.part))} <span class="note">${x.v}–${x.last}</span></span>${icon('chevron-right')}</button>`).join('')}<div class="grid nums">${vs.map(vid=>{const v=nodes.get(vid);return `<button type="button" class="${current===vid?'cur':''}${isPilotVerse(v)?' study':''}" data-go="${vid}">${v.v}</button>`;}).join('')}</div></div>`;}
   h+=`<p class="note nav-legend"><span class="dot"></span> ${L?'ausgearbeitet':'worked out'}</p>`;
   openSheet('nav',h);renderResults();
 }

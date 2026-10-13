@@ -264,4 +264,27 @@ def alignment(id_, book, ch, rng, spec, text, trans_id, v0, v1):
 
 alignment("ALIGN-MAT-006-009-013-GSW-001", "MAT", 6, "Mt 6,9–13", ALIGN_MT, MT, "TRANS-MAT-006-005-015-GSW-ZH-WORKING", 9, 13)
 alignment("ALIGN-LUK-011-002-004-GSW-001", "LUK", 11, "Lk 11,2–4", ALIGN_LK, LK, "TRANS-LUK-011-001-004-GSW-ZH-WORKING", 2, 4)
+# ---------------------------------------------------------------- Titel und Zusammenfassungen der Texteinheiten
+TU_GSW = {
+    "TU-MAT-006-005-015": ("Vom Bätte", "De Jesus warnt dervor, zum Schiin oder mit vil Wort z bätte. Er git sine Jünger s Vatterunser und betont nachhär, dass Vergäbig übercho und Vergäbig schänke zämeghööred."),
+    "TU-MAT-006-005-008": ("Nöd zum Schiin und nöd mit vil Wort", "Bätte söll nöd dezue diene, dass me vor andere guet daastaat. Gott kännt d Bedürfnis scho, bevor me bittet."),
+    "TU-MAT-006-009-013": ("S Vatterunser", "Es Gebät mit sibe Bitte: drüü gönd um Gottes Name, Riich und Wile, vier um das, wo d Mänsche bruuched: Broot, Vergäbig, Bewaarig und Rettig."),
+    "TU-MAT-006-014-015": ("Vergää und Vergäbig übercho", "De Jesus nimmt d Bitt um Vergäbig uf: Wär andere vergit, däm vergit au Gott."),
+    "TU-LUK-011-001-004": ("Herr, leer üs bätte", "En Jünger bittet de Jesus, si bätte z leere. De Jesus antwortet mit ere churze Fassig vom Vatterunser mit föif Bitte."),
+    "TU-MRK-003-020-035": ("Aaghörigi und Schriftgleerti urteiled über de Jesus", "Zwei Gruppe urteiled über de Jesus: sini eigeni Familie und Gleerti us Jerusalem. De Markus verzellt beidi Gschichte inenand."),
+    "TU-MRK-003-020-021": ("D Aaghörige vom Jesus mached sich uf, zum en hole", "De Jesus isch vo so vil Lüüt umringt, dass er nöd emal zum Ässe chunnt. Sini Aaghörige wänd en zrugghole, wil si meined, er seig nüme bi Troscht."),
+    "TU-MRK-003-022-030": ("De Striit um de Beelzebul", "Gleerti us Jerusalem behaupted, de Jesus triibi d Dämone mit Hilf vom Tüüfel us. De Jesus zeigt mit Bilder, warum das nöd ufgaat, und warnt ärnschthaft dervor, s Wirke vo Gott em Bööse zuezschriibe."),
+    "TU-MRK-003-031-035": ("D Mueter und d Brüeder vom Jesus; wär zu siner Familie ghört", "D Mueter und d Brüeder vom Jesus stönd dusse und lönd en rüefe. De Jesus seit: Wär tuet, was Gott will, ghört zu minere Familie."),
+}
+for tid, (title, summary) in TU_GSW.items():
+    p = D / "text-units" / f"{tid}.json"
+    rec = json.loads(p.read_text(encoding="utf-8"))
+    rec.setdefault("title_by_language", {})[LANG] = title
+    rec.setdefault("summary_by_language", {})[LANG] = summary
+    rec["by_language_authorship_de"] = AUTH
+    log = rec.setdefault("revision_log", [])
+    if not any(x.get("change_de", "").startswith("Züridüütsch") for x in log):
+        log.append({"date": DATE, "change_de": "Züridüütsch-Titel und -Zusammenfassung ergänzt (title_by_language, summary_by_language); hochdeutsche Felder unverändert", "reason_de": "Mundart-Schicht im Lesestrom"})
+    p.write_text(json.dumps(rec, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    written.append(tid + " (Titel/Zusammenfassung)")
 print(f"PASS: {len(written)} Datensätze geschrieben (Züridüütsch)")

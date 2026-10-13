@@ -2,6 +2,12 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.28 — 2026-10-13 — Abschnittstitel und -zusammenfassungen in Mundart
+
+- Texteinheiten tragen Titel und Zusammenfassung je Sprache (`title_by_language`, `summary_by_language`, Schlüssel BCP-47); hochdeutsche Felder bleiben Standard. Für die neun ausgearbeiteten Einheiten liegt Züridüütsch vor («S Vatterunser», «Nöd zum Schiin und nöd mit vil Wort», «De Striit um de Beelzebul» …).
+- Lesestrom zeigt Titel und Zusammenfassungen der gewählten Lesetext-Schicht: im Strom, am Abschnittskopf, in Blättern, Navigator, Pfad und Seitenleiste.
+- Noch Hochdeutsch: Zusammenfassungen der oberen Ebenen (Bibel, Testamente, Gruppen, Bücher, Kapitel), Hintergrund, Deutungen und die Bedienung.
+
 ## v0.27 — 2026-10-13 — Züridüütsch als zweite Übersetzungsschicht
 
 - Vorgabe: aus den Urtexten und den erarbeiteten Artefakten in beliebige Sprachen und Kulturen übersetzen; zuerst Züridüütsch neben Hochdeutsch.
