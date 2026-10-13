@@ -16,6 +16,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import refs  # noqa: E402
 import localizations  # noqa: E402
+import hebrew_translit  # noqa: E402
 
 D = ROOT / "data"
 KEEP = ["lemma", "pos", "subtype", "person", "number", "gender", "case", "tense", "voice", "mood", "degree",
@@ -134,7 +135,8 @@ def project(section_ids=None):
             de_source[r] = tid
         for dc in t.get("decisions", []):
             if in_scope(dc["reference"]):
-                decisions.setdefault(dc["reference"], []).append({k: dc.get(k) for k in ("target", "kind", "grc", "more_literal", "other_options", "note") if dc.get(k)})
+                decisions.setdefault(dc["reference"], []).append({**{k: dc.get(k) for k in ("target", "kind", "grc", "heb", "more_literal", "other_options", "note") if dc.get(k)},
+                                                                  **({"heb_tr": hebrew_translit.translit(dc["heb"])} if dc.get("heb") else {})})
         for alt in t.get("alternatives", []):
             vid, rid = alt["reading"].split(":")
             res = next((x for x in assess.get(vid, {}).get("results", []) if x["reading"].endswith(":" + rid)), None)
@@ -147,7 +149,28 @@ def project(section_ids=None):
                                  "basis": "editions" if res else "manuscripts_reported"})
 
     words = []
+    HEB_KEEP = {"lemma": "lemma", "pos": "pos", "person": "person", "number": "number", "gender": "gender", "state": "state",
+                "stem": "stem", "type": "subtype", "role": "role", "morph": "morph", "english": "gloss_cherith_en", "gloss": "gloss",
+                "transliteration": "translit_academic", "greek": "lxx", "stronglemma": "stronglemma"}
     for (b, c), vs in sorted(scope.items()):
+        if not (D / f"tokens/SBLGNT-{b}-{c:03d}.json").exists():
+            # Hebräisch (WLC + MACULA Hebrew): ein Token je Morphem; Wortgruppe über word_no
+            toks = json.loads((D / f"tokens/WLC-{b}-{c:03d}.json").read_text(encoding="utf-8"))["tokens"]
+            mac = json.loads((D / f"annotations/MACULA-WLC-{b}-{c:03d}.json").read_text(encoding="utf-8"))["entries"]
+            counts = json.loads((D / f"counts/WLC-{b}.json").read_text(encoding="utf-8"))["lemma_counts"]
+            whole = {}
+            for t in toks:
+                whole.setdefault((t["reference"], t["word_no"]), []).append(t)
+            for t in toks:
+                if int(t["reference"].split(".")[2]) not in vs:
+                    continue
+                a = mac.get(t["id"], {})
+                parts = whole[(t["reference"], t["word_no"])]
+                full = "".join(p["text"] for p in parts)
+                words.append({"id": t["id"], "ref": t["reference"], "n": t["position"], "text": t["text"], "word": t["word"],
+                              "lang": "he", "word_no": t["word_no"], "wfull": full, "wtr": hebrew_translit.translit(full),
+                              "mac": {dst: a[src] for src, dst in HEB_KEEP.items() if a.get(src)}, "freq": counts.get(a.get("lemma"), 0)})
+            continue
         toks = json.loads((D / f"tokens/SBLGNT-{b}-{c:03d}.json").read_text(encoding="utf-8"))["tokens"]
         mac = json.loads((D / f"annotations/MACULA-SBLGNT-{b}-{c:03d}.json").read_text(encoding="utf-8"))["entries"]
         counts = json.loads((D / f"counts/SBLGNT-{b}.json").read_text(encoding="utf-8"))["lemma_counts"]

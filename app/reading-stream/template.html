@@ -61,6 +61,7 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .tool:hover,#bible-stream .tool:active{color:var(--ink);background:var(--soft)}
 #bible-stream button.vno.more{display:inline-grid!important;place-items:center;min-width:1.9em;height:1.9em;padding:0 3px!important;margin:0 5px 0 -2px;border:1px solid var(--rule)!important;border-radius:var(--r)!important;vertical-align:.25em;color:var(--ink);font:500 11px/1 var(--ui)}
 #bible-stream button.vno.more:hover,#bible-stream button.vno.more:active{background:var(--soft)}
+#bible-stream .dec[role=button]{cursor:pointer}
 #bible-stream button.dec{display:inline!important;padding:0!important;font:inherit;color:inherit;background:none;border:0!important;cursor:pointer;text-align:inherit}
 #bible-stream .bg-lines{display:flex;flex-wrap:wrap;align-items:center;gap:2px 10px;margin:0 0 8px 1.6em;color:var(--muted)}
 #bible-stream .bg-label svg{width:14px;height:14px;vertical-align:-2px}
@@ -116,6 +117,11 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .nav-block .row{margin-bottom:6px}
 #bible-stream .gap{margin:0 0 10px;font:400 14px/1.45 var(--ui);color:var(--muted)}
 #bible-stream .grc{font-family:var(--serif);font-size:1.05em;letter-spacing:.01em}
+#bible-stream .heb{font-family:"SBL Hebrew","Ezra SIL","Noto Serif Hebrew","Taamey Frank CLM","Times New Roman",var(--serif);font-size:1.2em;direction:rtl;unicode-bidi:isolate;line-height:1.6}
+#bible-stream .il.he{direction:rtl}
+#bible-stream .il.he summary{align-items:flex-end;direction:ltr;text-align:right}
+#bible-stream .il.he details>dl,#bible-stream .il.he details>.ref-id{direction:ltr;text-align:left}
+#bible-stream .il .m{display:block;font-size:12px;color:var(--muted)}
 #bible-stream .dec{text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:.22em;text-decoration-color:var(--muted)}
 #bible-stream .dec.traditional{text-decoration-style:dotted}
 #bible-stream .dec.interpretive{text-decoration-style:dashed}
@@ -398,8 +404,41 @@ const tr=text=>{if(!S.translit)return '';const x=translit(String(text).replace(/
 const grcLine=(text,kind='el')=>`<span class="grc-line"><span class="grc">${esc(text)}</span>${play(text,kind)}</span>${tr(text)}`;
 const LANGNAME={grc:['griech.','Greek'],heb:['hebr.','Hebrew'],arc:['aram.','Aramaic'],lat:['lat.','Latin']};
 // Erklärtext: griechische Einschübe mit Umschrift und Anhören-Knopf; ohne Urtext-Modus nur Umschrift
+/* ---------- Hebräisch: Lesehilfe-Umschrift (gleiche Regeln wie scripts/hebrew_translit.py) ---------- */
+const HE_V={'\u05B1':'e','\u05B2':'a','\u05B3':'o','\u05B4':'i','\u05B5':'e','\u05B6':'e','\u05B7':'a','\u05B8':'a','\u05B9':'o','\u05BA':'o','\u05BB':'u','\u05C7':'o'};
+const HE_C={'א':'ʾ','ב':'b','ג':'g','ד':'d','ה':'h','ו':'w','ז':'s','ח':'ch','ט':'t','י':'j','כ':'k','ך':'k','ל':'l','מ':'m','ם':'m','נ':'n','ן':'n','ס':'s','ע':'ʿ','פ':'p','ף':'p','צ':'z','ץ':'z','ק':'k','ר':'r','ש':'sch','ת':'t'};
+const HE_SOFT={'ב':'w','כ':'ch','ך':'ch','פ':'f','ף':'f'};
+function heWord(w){const cons=w.replace(/[^\u05D0-\u05EA]/g,'');
+  if(cons==='יהוה')return 'JHWH';
+  if(cons.endsWith('יהוה')){let k=-1;for(let i=w.length-1;i>=0;i--)if(w[i]==='י'&&w.slice(i).replace(/[^\u05D0-\u05EA]/g,'')==='יהוה'){k=i;break;}return heWord(w.slice(0,k))+'-JHWH';}
+  if(cons==='כל'&&w.includes('\u05B8'))return (w.includes('\u05BC')?'k':'ch')+'ol';
+  const L=[];for(const ch of w){if(ch>='\u05D0'&&ch<='\u05EA')L.push([ch,new Set()]);else if(L.length&&ch>='\u05B0'&&ch<='\u05C7')L[L.length-1][1].add(ch);}
+  const res=[];let pv=false,pss=false;
+  for(let i=0;i<L.length;i++){const [c,m]=L[i],last=i===L.length-1,nx=L[i+1];
+    let vowel=null;for(const x of ['\u05B1','\u05B2','\u05B3','\u05B4','\u05B5','\u05B6','\u05B7','\u05B8','\u05B9','\u05BA','\u05BB','\u05C7'])if(m.has(x)){vowel=HE_V[x];break;}
+    const sh=m.has('\u05B0'),dg=m.has('\u05BC');const top=res.length?res[res.length-1]:'';
+    if(c==='ו'&&dg&&vowel===null&&!sh){res.push('u');pv=true;pss=false;continue;}
+    if(c==='ו'&&m.has('\u05B9')&&i>0&&m.size===1){res.push('o');pv=true;pss=false;continue;}
+    const vav=nx&&nx[0]==='ו'&&(nx[1].has('\u05B9')||(nx[1].has('\u05BC')&&nx[1].size===1));
+    if(c==='י'&&vowel===null&&!sh&&!dg&&i>0&&(top==='i'||top==='e')&&!last&&!vav)continue;
+    if(c==='י'&&vowel===null&&!sh&&nx&&nx[0]==='ו'&&i+1===L.length-1&&!nx[1].size&&top==='a')continue;
+    if(c==='י'&&vowel===null&&!sh&&last&&(top==='i'||top==='e'))continue;
+    if(c==='ה'&&last&&!dg&&vowel===null&&!sh)continue;
+    if(c==='א'&&vowel===null&&!sh)continue;
+    let cons2=c==='ש'?(m.has('\u05C2')?'s':'sch'):((HE_SOFT[c]&&!dg)?HE_SOFT[c]:HE_C[c]);
+    if((c==='א'||c==='ע')&&i===0)cons2='';
+    const forte=dg&&i>0&&pv&&!'אהחער'.includes(c)&&!(c==='ה'&&last);if(forte&&cons2.length===1)cons2+=cons2;
+    if(last&&'חעה'.includes(c)&&m.has('\u05B7')&&!sh&&!top.endsWith('a')){res.push('a'+cons2);pv=true;continue;}
+    res.push(cons2);
+    if(m.has('\u05B7')&&m.has('\u05B4')){res.push('aji');pv=true;pss=false;continue;}
+    if(vowel){res.push(vowel);pv=true;pss=false;}else if(sh){if(i===0||forte||pss){res.push('e');pv=true;pss=false;}else{pv=false;pss=true;}}else{pv=false;pss=false;}}
+  return res.join('');}
+const heTr=t=>String(t||'').normalize('NFD').replace(/[\u0591-\u05AF\u05BD\u05BF\u05C0\u05C3-\u05C6]/g,'').normalize('NFC').split(/(\s+|\u05BE)/).map(p=>p==='\u05BE'?'-':(/^\s+$/.test(p)?p:heWord(p))).join('').replace(/׃/g,'').trim();
+const HEB=/[\u05D0-\u05EA][\u0591-\u05C7\u05D0-\u05EA\u05BE\s]*[\u05D0-\u05EA\u0591-\u05C7]|[\u05D0-\u05EA]/g;
+const playHe=(text,trl)=>`<button type="button" class="play" data-speak="${esc(text)}" data-speak-lang="he" data-speak-tr="${esc(trl||heTr(text))}" aria-label="${lang==='de'?'Anhören':'Listen'}">${icon('speak')}</button>`;
+const hebLine=(text,trl)=>{const t=trl||heTr(text);return `<span class="grc-line"><span class="heb" lang="he" dir="rtl">${esc(text)}</span>${playHe(text,t)}</span>${S.translit?`<span class="tr">${esc(t)}</span>`:''}`;};
 const GRUN=/[\u0370-\u03ff\u1f00-\u1fff][\u0370-\u03ff\u1f00-\u1fff\s\u02bc\u2019]*[\u0370-\u03ff\u1f00-\u1fff]|[\u0370-\u03ff\u1f00-\u1fff]/g;
-const rich=text=>linkRefs(esc(String(text??'')),refCtx).replace(GRUN,g=>S.advanced?`<span class="grc">${g}</span>${S.translit?` <i class="tr-inline">${esc(translit(g))}</i>`:''}${play(g)}`:`<i class="tr-inline">${esc(translit(g))}</i>${play(g)}`);
+const rich=text=>linkRefs(esc(String(text??'')),refCtx).replace(HEB,h=>`<span class="heb" lang="he" dir="rtl">${h}</span>${S.translit?` <i class="tr-inline">${esc(heTr(h))}</i>`:''}${playHe(h)}`).replace(GRUN,g=>S.advanced?`<span class="grc">${g}</span>${S.translit?` <i class="tr-inline">${esc(translit(g))}</i>`:''}${play(g)}`:`<i class="tr-inline">${esc(translit(g))}</i>${play(g)}`);
 const termsLine=terms=>(terms&&terms.length)?`<p class="terms">${terms.map(tm=>{const tl=tm.translit||translit(tm.word),kind=tm.lang==='grc'?'el':(tm.lang==='arc'?'arc':'he');return `<span class="term"><span class="lang">${LANGNAME[tm.lang]?LANGNAME[tm.lang][lang==='de'?0:1]:tm.lang}</span> ${S.advanced?`<span class="${tm.lang==='grc'?'grc':'heb'}" lang="${tm.lang==='grc'?'grc':'he'}">${esc(tm.word)}</span> `:''}${!S.advanced||S.translit||tm.lang!=='grc'?`<i class="tr-inline">${esc(tl)}</i>`:''}<button type="button" class="play" data-speak="${esc(tm.word)}" data-speak-lang="${kind}" data-speak-tr="${esc(tl)}" aria-label="${lang==='de'?'Anhören':'Listen'}">${icon('speak')}</button> «${esc(tm.de)}»</span>`;}).join('')}</p>`:'';
 if(synth&&synth.addEventListener)synth.addEventListener('voiceschanged',()=>{if(sheet==='menu')menuSheet();});
 function applyPrefs(){app.classList.toggle('flow',!!S.flow);app.dataset.theme=S.theme==='auto'?(mq&&mq.matches?'dark':'light'):S.theme;app.style.setProperty('--read',S.read+'px');}
@@ -446,7 +485,7 @@ function decorate(text,decs){
   // Markiert Stellen, an denen die Übersetzung einer Tradition folgt oder eine Deutung wählt (nur im Urtext-Modus)
   const marks=(decs||[]).filter(d=>d.kind==='traditional'||d.kind==='interpretive');let html='',pos=0;const hits=[];
   for(const d of marks){const i=text.indexOf(d.target);if(i>=0&&!hits.some(h=>i<h.e&&i+d.target.length>h.s))hits.push({s:i,e:i+d.target.length,k:d.kind,di:decs.indexOf(d)});}
-  hits.sort((a,b)=>a.s-b.s);for(const h of hits){html+=esc(text.slice(pos,h.s))+`<button type="button" class="dec ${h.k}" data-dec="${h.di}">${esc(text.slice(h.s,h.e))}</button>`;pos=h.e;}
+  hits.sort((a,b)=>a.s-b.s);for(const h of hits){html+=esc(text.slice(pos,h.s))+`<span role="button" tabindex="0" class="dec ${h.k}" data-dec="${h.di}">${esc(text.slice(h.s,h.e))}</span>`;pos=h.e;}
   return html+esc(text.slice(pos));
 }
 function verseNodeOf(ref){const [code,c,v]=ref.split('.');const b=DATA.findIndex(x=>x.code===code);return nodes.get(`v${b}-${c}-${v}`);}
@@ -457,6 +496,9 @@ function decisionSheet(ref,i){
     h+=`<h4>${L?'Im Griechischen':'In Greek'}</h4><div class="word-row">${grcLine(d.grc)}${lem.length?`<span class="note">${L?'Grundform':'Lemma'}: ${lem.map(x=>`<span class="grc">${esc(x)}</span> <i class="tr-inline">${esc(translit(x))}</i>`).join(', ')}</span>`:''}</div>`;
     const lz=new Set(lem.map(gnorm));const ints=STUDY.interpretations.filter(x=>(x.terms||[]).some(tm=>lz.has(gnorm(tm.word)))).map(LOC);
     if(ints.length)h+=`<h4>${L?'Deutungen':'Interpretations'}</h4>`+ints.map(x=>`<div class="point"><span class="tag">${CONF[x.confidence]||''}</span><p class="body">${rich(x.claim)}</p>${x.caveat?`<p class="note"><b>${L?'Nicht sicher:':'Uncertain:'}</b> ${rich(x.caveat)}</p>`:''}</div>`).join('');}
+  if(d.heb){const hc=x=>String(x||'').replace(/[^\u05D0-\u05EA]/g,''),want=new Set(d.heb.split(/\s+/).map(hc));
+    const ws=STUDY.words.filter(w=>w.ref===ref&&(want.has(hc(w.word))||want.has(hc(w.wfull))));const lem=[...new Set(ws.filter(w=>w.mac.pos!=='suffix'&&w.mac.pos!=='article').map(w=>w.mac.lemma).filter(Boolean))];
+    h+=`<h4>${L?'Im Hebräischen':'In Hebrew'}</h4><div class="word-row">${hebLine(d.heb,d.heb_tr)}${lem.length?`<span class="note">${L?'Grundform':'Lemma'}: ${lem.map(x=>`<span class="heb" lang="he" dir="rtl">${esc(x)}</span> <i class="tr-inline">${esc(heTr(x))}</i>`).join(', ')}</span>`:''}</div>`;}
   h+=`<h4>${L?'Zur Übersetzung':'About the translation'}</h4><div class="point">${d.more_literal?`<p class="note"><b>${L?'Wörtlicher:':'More literal:'}</b> «${esc(d.more_literal)}»</p>`:''}${d.other_options?`<p class="note"><b>${L?'Auch möglich:':'Also possible:'}</b> ${d.other_options.map(x=>'«'+esc(x)+'»').join(', ')}</p>`:''}<p class="note">${rich(d.note||'')}</p></div>`;
   for(const g of CMP(ref))if(g.items.length)h+=`<h4>${L?'In älteren Übersetzungen':'In older translations'} · ${esc(cmpLabel(g.lang))}</h4>`+g.items.map(c=>`<div class="point"><span class="tag">${esc(c.title)}</span><p class="body">${esc(c.text)}</p></div>`).join('');
   h+=`<div class="actions"><button type="button" class="link soft" data-more="${n.id}">${L?'Alles zu diesem Vers':'Everything on this verse'}</button></div>`;
@@ -464,7 +506,7 @@ function decisionSheet(ref,i){
 }
 function decisionsBlock(n){
   const L=lang==='de',ds=LAYER().decisions[n.canonicalRef]||[],groups=CMP(n.canonicalRef);let h='';
-  if(ds.length){h+=`<h4>${L?'Wie ist übersetzt?':'How is it translated?'}</h4><p class="note">${L?'Wo diese Übersetzung wörtlich ist, wo sie sprachlich glättet, wo sie deutet und wo sie einer vertrauten Wiedergabe folgt. Im Urtext-Modus sind die beiden letzten Arten im Text unterstrichen.':'Where this translation is literal, smoothed, interpretive or traditional.'}</p>`+ds.map(d=>`<div class="point dec-point"><span class="tag dec-tag ${d.kind}">${DEC[d.kind][L?0:1]}</span><p class="body">«${esc(d.target)}»</p>${d.grc?`<div>${grcLine(d.grc)}</div>`:''}${d.more_literal?`<p class="note"><b>${L?'Wörtlicher:':'More literal:'}</b> «${esc(d.more_literal)}»</p>`:''}${d.other_options?`<p class="note"><b>${L?'Auch möglich:':'Also possible:'}</b> ${d.other_options.map(x=>'«'+esc(x)+'»').join(', ')}</p>`:''}<p class="note">${rich(d.note||'')}</p></div>`).join('');}
+  if(ds.length){h+=`<h4>${L?'Wie ist übersetzt?':'How is it translated?'}</h4><p class="note">${L?'Wo diese Übersetzung wörtlich ist, wo sie sprachlich glättet, wo sie deutet und wo sie einer vertrauten Wiedergabe folgt. Im Urtext-Modus sind die beiden letzten Arten im Text unterstrichen.':'Where this translation is literal, smoothed, interpretive or traditional.'}</p>`+ds.map(d=>`<div class="point dec-point"><span class="tag dec-tag ${d.kind}">${DEC[d.kind][L?0:1]}</span><p class="body">«${esc(d.target)}»</p>${d.grc?`<div>${grcLine(d.grc)}</div>`:''}${d.heb?`<div>${hebLine(d.heb,d.heb_tr)}</div>`:''}${d.more_literal?`<p class="note"><b>${L?'Wörtlicher:':'More literal:'}</b> «${esc(d.more_literal)}»</p>`:''}${d.other_options?`<p class="note"><b>${L?'Auch möglich:':'Also possible:'}</b> ${d.other_options.map(x=>'«'+esc(x)+'»').join(', ')}</p>`:''}<p class="note">${rich(d.note||'')}</p></div>`).join('');}
   if(groups.some(g=>g.items.length))for(const g of groups){const cmp=g.items;
     if(!cmp.length){h+=`<h4>${L?'Ältere Übersetzungen':'Older translations'} · ${esc(cmpLabel(g.lang))}</h4><p class="note">${L?'Für diese Sprache ist noch keine Vergleichsübersetzung erfasst.':'No comparison translation recorded for this language yet.'}</p>`;continue;}
     h+=`<h4>${L?'Ältere Übersetzungen':'Older translations'} · ${esc(cmpLabel(g.lang))}</h4><p class="note">${L?'Zum Vergleich, gemeinfrei. Sie beruhen teils auf anderen griechischen Textausgaben und sind nicht die Grundlage der Übersetzung hier.':'For comparison (public domain); not the basis of this translation.'}</p>`+cmp.map(c=>`<div class="point"><span class="tag">${esc(c.title)}</span><p class="body">${esc(c.text)}</p>${(c.notes||[]).map(x=>`<p class="note">${esc(x)}</p>`).join('')}</div>`).join('');}
@@ -583,12 +625,13 @@ function verseSheet(id){
   }
   if(S.advanced){
     const words=STUDY.words.filter(w=>w.ref===n.canonicalRef),vars=STUDY.variants.filter(v=>v.ref===n.canonicalRef);
+    if(words.length&&words[0].lang==='he'){h+=hebrewWords(words,n);}else
     h+=`<h4>${lang==='de'?'Griechisch Wort für Wort':'Greek word by word'}</h4><p class="note">${lang==='de'?'Ganzer Vers':'Whole verse'} ${play(words.map(w=>w.text.replace(/[⸀-⸅]/g,'')).join(' '))}</p><div class="il">${words.map(w=>{const m=w.mac,d=LAYER().align[w.id];const de=d?(d.target===null?'·':(d.first?d.target:'″')):(m.gloss_berean||'');const form=['person','tense','voice','mood','case','number','gender'].map(k=>m[k]&&GR[k][m[k]]).filter(Boolean).join(', ');
       const gw=w.text.replace(/[⸀-⸅]/g,'');return `<details><summary><span class="g">${esc(gw)}${play(gw)}</span>${tr(gw)}<span class="d">${esc(de)}</span><span class="e">${esc(m.gloss_berean||'')}</span></summary><dl class="kv"><dt>Grundform</dt><dd>${esc(m.lemma||'')} · ${w.freq}× in ${esc(DATA[n.b].de)}</dd><dt>Wortart</dt><dd>${esc(POS[m.pos]||m.pos||'')}</dd>${form?`<dt>Form</dt><dd>${esc(form)}</dd>`:''}${m.role?`<dt>Satzrolle</dt><dd>${esc(ROLE[m.role]||m.role)}</dd>`:''}${d&&d.note?`<dt>Hinweis</dt><dd>${esc(d.note)}</dd>`:''}${w.mgnt?`<dt>MorphGNT</dt><dd>${esc(w.mgnt.lemma)} · ${esc(w.mgnt.parsing)}</dd>`:''}</dl><p class="ref-id">${esc(w.id)}</p></details>`;}).join('')}</div>`;
     if(vars.length)h+=`<h4>${lang==='de'?'Vergleich der Textausgaben':'Edition comparison'}</h4><p class="note">${lang==='de'?'Vergleich gedruckter Textausgaben laut SBLGNT-Apparat. Keine Handschriftenzählung.':'Comparison of printed editions (SBLGNT apparatus). Not a manuscript count.'}</p>`+vars.map(v=>`<div class="point">${v.readings.map(r=>{const a=(v.assessment||[]).find(x=>x.reading===r.id);return `<p><span class="body">${esc(r.text)}</span> <span class="note">${a?esc(a.editions.map(e=>ED[e]).join(', '))+` (${a.support}/${a.of})`:esc((r.witnesses||[]).join(', ')+(lang==='de'?' · berichtet, ungeprüft':' · reported, unverified'))}</span></p>`;}).join('')}<p class="ref-id">${esc(v.id)}</p></div>`).join('');
-    h+=sourcesBlock()+`<p class="ref-id">${esc(LAYER().source[n.canonicalRef]||STUDY.layers.de.source[n.canonicalRef]||'')}</p>`;
+    h+=sourcesBlock(n)+`<p class="ref-id">${esc(LAYER().source[n.canonicalRef]||STUDY.layers.de.source[n.canonicalRef]||'')}</p>`;
   }else{
-    h+=`<p class="note">${lang==='de'?'Griechischer Text, Grammatik und Quellen: im Menü «Urtext und Details» einschalten.':'Greek text, grammar and sources: turn on “Original text and details” in the menu.'}</p>`;
+    h+=`<p class="note">${lang==='de'?'Urtext, Grammatik und Quellen: im Menü «Urtext und Details» einschalten.':'Original text, grammar and sources: turn on “Original text and details” in the menu.'}</p>`;
   }
   const p=nodes.get(n.parent);if(p.part)h+=sheetTools(p.id,'uh');
   openSheet('verse',h);
@@ -636,12 +679,23 @@ function sourceSheet(vid,verseId){
   h+=`<p class="note">${esc(SRC.attribution)}</p><button type="button" class="link soft" data-more="${n.id}">${L?'Zurück zum Vers':'Back to the verse'}</button>`;
   openSheet('source',h);
 }
-function sourcesBlock(){return `<h4>${lang==='de'?'Quellen':'Sources'}</h4><p class="note">Griechischer Text und Apparat: SBL Greek New Testament, © 2010 Society of Biblical Literature und Logos Bible Software, CC BY 4.0. Sprachdaten: MACULA Greek Linguistic Datasets, available at https://github.com/Clear-Bible/macula-greek/ (CC BY 4.0); Glossen: Berean Interlinear (gemeinfrei), Cherith Glosses von Andi Wu, © 2023 Cherith Analytics (CC BY 4.0). Zweite Annotation Mk 3,22–30: MorphGNT 6.12, J. K. Tauber (CC BY-SA 3.0). Übersetzung und Erklärungen: eigene Entwürfe (CC0), fachlich ungeprüft.</p><p class="note">${esc(STUDY.method.name)}: ${esc(STUDY.method.limits.join(' '))}</p>`;}
+/* Hebräisch Wort für Wort: Morpheme (MACULA Hebrew) zu Wörtern gruppiert, rechts nach links */
+const HGR={person:{first:'1. Person',second:'2. Person',third:'3. Person'},number:{singular:'Singular',plural:'Plural',dual:'Dual'},gender:{masculine:'maskulin',feminine:'feminin',both:'beides',common:'beides'},state:{absolute:'absolut',construct:'Constructus (verbunden)',determined:'bestimmt'}};
+const HPOS={noun:'Substantiv',verb:'Verb',adjective:'Adjektiv',adverb:'Adverb',preposition:'Präposition',conjunction:'Konjunktion',particle:'Partikel',pronoun:'Pronomen',suffix:'Suffix (angehängtes Pronomen)',article:'Artikel'};
+function hebrewWords(words,n){const L=lang==='de',groups=[];for(const w of words){const g=groups.find(x=>x.no===w.word_no);if(g)g.ms.push(w);else groups.push({no:w.word_no,ms:[w]});}
+  const whole=groups.map(g=>g.ms.map(m=>m.text).join('')).join(' ');
+  return `<h4>${L?'Hebräisch Wort für Wort':'Hebrew word by word'}</h4><p class="note">${L?'Ganzer Vers':'Whole verse'} ${playHe(whole,groups.map(g=>g.ms[0].wtr).join(' '))}</p><p class="note">${L?'Von rechts nach links gelesen. Ein Wort kann aus mehreren Teilen bestehen, z. B. «und» + «Bote».':'Read right to left. A word can consist of several parts.'}</p><div class="il he">${groups.map(g=>{
+    const full=g.ms.map(m=>m.text).join(''),tr=g.ms[0].wtr;
+    const vt=LAYER().text[n.canonicalRef]||'';const de=g.ms.map(m=>{const d=LAYER().align[m.id];return d?(d.target===null?'':(d.first?d.target:'')):'';}).filter(Boolean).sort((a,b)=>vt.indexOf(a.split(' … ')[0])-vt.indexOf(b.split(' … ')[0])).join(' · ')||g.ms.map(m=>m.mac.gloss_cherith_en||'').join(' ');
+    return `<details><summary><span class="g"><span class="heb" lang="he" dir="rtl">${esc(full)}</span>${playHe(full,tr)}</span>${S.translit?`<span class="tr">${esc(tr)}</span>`:''}<span class="d">${esc(de)}</span><span class="e">${esc(g.ms.map(m=>m.mac.gloss_cherith_en||'').filter(Boolean).join(' '))}</span></summary>${g.ms.map(m=>{const x=m.mac,d=LAYER().align[m.id];const form=['stem','person','gender','number','state'].map(k=>x[k]&&((HGR[k]||{})[x[k]]||x[k])).filter(Boolean).join(', ');
+      return `<dl class="kv"><dt>${L?'Teil':'Part'}</dt><dd><span class="heb" lang="he" dir="rtl">${esc(m.word)}</span>${x.translit_academic?` <i class="tr-inline">${esc(x.translit_academic)}</i>`:''}</dd><dt>${L?'Grundform':'Lemma'}</dt><dd><span class="heb" lang="he" dir="rtl">${esc(x.lemma||'')}</span> · ${m.freq}× in ${esc(DATA[n.b].de)}</dd><dt>${L?'Wortart':'Part of speech'}</dt><dd>${esc(HPOS[x.pos]||x.pos||'')}</dd>${form?`<dt>Form</dt><dd>${esc(form)}</dd>`:''}${x.lxx?`<dt>${L?'Septuaginta':'Septuagint'}</dt><dd><span class="grc">${esc(x.lxx)}</span></dd>`:''}${d&&d.note?`<dt>${L?'Hinweis':'Note'}</dt><dd>${esc(d.note)}</dd>`:''}</dl><p class="ref-id">${esc(m.id)}</p>`;}).join('')}</details>`;}).join('')}</div>`;}
+function sourcesBlock(n){if(n&&n.b!==undefined&&STUDY.words.some(w=>w.lang==='he'&&w.ref.startsWith(DATA[n.b].code+'.')))return `<h4>${lang==='de'?'Quellen':'Sources'}</h4><p class="note">Hebräischer Text: Westminster Leningrad Codex (gemeinfrei, tanach.us). Sprachdaten, Umschrift (wissenschaftlich) und Septuaginta-Entsprechungen: MACULA Hebrew Linguistic Datasets, available at https://github.com/Clear-Bible/macula-hebrew/ (CC BY 4.0), mit Morphologie der OpenScriptures Hebrew Bible (CC BY 4.0) und Glossen von Cherith Analytics (CC BY 4.0). Lesehilfe-Umschrift: eigene Regeln (scripts/hebrew_translit.py). Übersetzung und Erklärungen: eigene Entwürfe (CC0), fachlich ungeprüft.</p>`;
+  return `<h4>${lang==='de'?'Quellen':'Sources'}</h4><p class="note">Griechischer Text und Apparat: SBL Greek New Testament, © 2010 Society of Biblical Literature und Logos Bible Software, CC BY 4.0. Sprachdaten: MACULA Greek Linguistic Datasets, available at https://github.com/Clear-Bible/macula-greek/ (CC BY 4.0); Glossen: Berean Interlinear (gemeinfrei), Cherith Glosses von Andi Wu, © 2023 Cherith Analytics (CC BY 4.0). Zweite Annotation Mk 3,22–30: MorphGNT 6.12, J. K. Tauber (CC BY-SA 3.0). Übersetzung und Erklärungen: eigene Entwürfe (CC0), fachlich ungeprüft.</p><p class="note">${esc(STUDY.method.name)}: ${esc(STUDY.method.limits.join(' '))}</p>`;}
 function studySheet(partId){
   const part=nodes.get(partId).part,sec=SECTION_OF[partId],subjects=[part.id,sec.id],L=lang==='de';refCtx=rangeOf(part.range).code;
   const fs=STUDY.findings.filter(x=>subjects.includes(x.subject)).map(LOC),is=STUDY.interpretations.filter(x=>subjects.includes(x.subject)).map(LOC);
   let h=head(pTitle(part))+`<p class="note">${esc(refDe(part.range))}</p>`;
-  h+=`<h4>${L?'Was steht da?':'What does it say?'}</h4>`+fs.map(f=>`<div class="point"><p class="body">${rich((f.claim))}</p>${S.advanced&&f.caveat?`<p class="note">${esc(f.caveat)}</p>`:''}${S.advanced?`<p class="ref-id">${esc(f.id)}</p>`:''}</div>`).join('');
+  h+=`<h4>${L?'Was steht da?':'What does it say?'}</h4>`+fs.map(f=>`<div class="point"><p class="body">${rich((f.claim))}</p>${S.advanced&&f.caveat?`<p class="note">${rich(f.caveat)}</p>`:''}${S.advanced?`<p class="ref-id">${esc(f.id)}</p>`:''}</div>`).join('');
   h+=`<h4>${L?'Wie kann man es verstehen?':'How can it be understood?'}</h4>`+(is.length>1?`<p class="note">${L?'Hier gibt es mehr als eine Sichtweise.':'There is more than one view.'}</p>`:'')+is.map(i=>`<div class="point"><span class="tag">${CONF[i.confidence]||''}</span><p class="body">${rich((i.claim))}</p>${termsLine(i.terms)}${i.caveat?`<p class="note"><b>${L?'Nicht sicher:':'Uncertain:'}</b> ${rich((i.caveat))}</p>`:''}${(i.counter||[]).map(c=>`<p class="note"><b>${L?'Man kann auch anders lesen:':'Another reading:'}</b> ${rich((c))}</p>`).join('')}${S.advanced?`<p class="ref-id">${esc(i.id)}</p>`:''}</div>`).join('');
   const aps=STUDY.applications.filter(a=>subjects.includes(a.subject)).map(LOC),prs=STUDY.principles.filter(p=>subjects.includes(p.subject)).map(LOC),qs=STUDY.questions.filter(q=>subjects.includes(q.subject)).map(LOC),rls=STUDY.relations.filter(r=>subjects.includes(r.from));
   if(aps.length||prs.length)h+=`<h4>${L?'Was kann es heute bedeuten?':'What might it mean today?'}</h4>`+aps.map(a=>`<div class="point"><p class="body">${esc(a.text)}</p><p class="note"><b>${L?'Grenze:':'Limit:'}</b> ${esc(a.limits)}</p></div>`).join('')+prs.map(p=>`<div class="point"><span class="tag">${L?'abgeleiteter Grundsatz':'derived principle'} · ${CONF[p.confidence]||''}</span><p class="body">${esc(p.text)}</p><p class="note">${L?'Dieser Grundsatz geht weiter, als der Text selbst sagt. Er ist eine Folgerung, kein Befund.':'This principle goes beyond what the text itself says.'}</p></div>`).join('');
@@ -697,7 +751,7 @@ function levelsSheet(){const n=nodes.get(current);openSheet('levels',head(T().le
 
 /* ---------- Ereignisse ---------- */
 app.addEventListener('click',e=>{
-  const b=e.target.closest('button,[data-close]');
+  const b=e.target.closest('button,[data-close],[role=button]');
   if(!b){if(e.target.closest('.reader'))app.classList.toggle('immersed');return;}
   if(b.dataset.dec!==undefined){const c=b.closest('[data-ref]');if(c){decisionSheet(c.dataset.ref,Number(b.dataset.dec));return;}}
   if(b.dataset.speak!==undefined){e.preventDefault();e.stopPropagation();speak(b.dataset.speak,b.dataset.speakLang,b.dataset.speakTr);return;}
@@ -723,7 +777,9 @@ app.addEventListener('click',e=>{
   else if(a==='load-next')loadMore();else if(a==='load-prev')loadMore(true);
 });
 app.addEventListener('input',e=>{if(e.target.type==='search'){query=e.target.value;renderResults();}});
-app.addEventListener('keydown',e=>{if(e.key==='Escape'&&sheet){closeSheet();reader.focus({preventScroll:true});}});
+app.addEventListener('keydown',e=>{if(e.key==='Escape'&&sheet){closeSheet();reader.focus({preventScroll:true});}
+  // Markierte Übersetzungsentscheidungen sind Textstellen (span), damit lange Markierungen normal umbrechen; per Tastatur bedienbar
+  if((e.key==='Enter'||e.key===' ')&&e.target.matches&&e.target.matches('[role=button].dec')){e.preventDefault();e.target.click();}});
 let busy=false,lastTop=0;
 reader.addEventListener('scroll',()=>{if(busy)return;busy=true;
   const y=reader.scrollTop;if(y>80&&y-lastTop>6)app.classList.add('immersed');else if(lastTop-y>6||y<40)app.classList.remove('immersed');lastTop=y;

@@ -24,7 +24,8 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
-BOOKNUM = {"MAT": 40, "MRK": 41, "LUK": 42}
+BOOKNUM = {"MAT": 40, "MRK": 41, "LUK": 42, "TIT": 56}
+BOOKTAG = {"MAT": "TAG-MATTHEW", "MRK": "TAG-MARK", "LUK": "TAG-LUKE", "TIT": "TAG-TITUS"}
 SOURCE = "SRC-CNTR-TRANSCRIPTIONS"
 UPSTREAM = "https://github.com/Center-for-New-Testament-Restoration/transcriptions"
 
@@ -72,6 +73,11 @@ PAPYRI = {
             "location_de": "Chester Beatty Library, Dublin; ein Blatt in Wien",
             "about_de": "Früher Papyruscodex mit Teilen der vier Evangelien und der Apostelgeschichte; stark beschädigt.",
             "facsimile": [], "catalog_docid": 10045},
+    "P32": {"symbol": "𝔓32", "name_de": "Papyrus 32 (P. Rylands 5)", "century": "II/III",
+            "date_de": "um 200 nach gängiger Einordnung", "material_de": "Papyrus", "languages": ["grc"],
+            "location_de": "John Rylands Library, Manchester",
+            "about_de": "Ältester erhaltener Textzeuge des Titusbriefs: ein Blatt mit Teilen von Tit 1,11–15 und 2,3–8.",
+            "facsimile": [], "catalog_docid": 10032},
 }
 AMULETS = {
     "64206": {"name_de": "P. Antinoopolis 2.54", "century": "III/IV", "date_de": "um 275–325",
@@ -159,7 +165,10 @@ for folder, key, wid, meta in todo:
     raw, verses = read(path)
     if not verses:
         continue
-    write(f"witnesses/{wid}.json", {
+    if (ROOT / "data" / f"witnesses/{wid}.json").exists():
+        pass  # vorhandene Metadaten nicht überschreiben (nur neue Zeugen anlegen)
+    else:
+      write(f"witnesses/{wid}.json", {
         "id": wid, "type": "witness", "status": "draft", "tags": ["TAG-TEXT-CRITICISM"], **meta,
         "authorship_de": f"Metadaten zusammengestellt {today} (KI-Entwurf, Claude); ungeprüft.",
     })
@@ -167,7 +176,7 @@ for folder, key, wid, meta in todo:
     tid = f"CNTR-{'GA' if folder == 'class 1' else 'TM'}{key}-{args.book}"
     write(f"witness-texts/{tid}.json", {
         "id": tid, "type": "witness_transcription", "status": "imported_unreviewed",
-        "tags": ["TAG-TEXT-CRITICISM", "TAG-MARK"], "witness": wid, "bibliographic_source": SOURCE,
+        "tags": ["TAG-TEXT-CRITICISM", BOOKTAG[args.book]], "witness": wid, "bibliographic_source": SOURCE,
         "encoding": "MES (Manuscript Encoding Specification, CNTR)",
         "imported_scope": [scope(verses)],
         "verse_count": len(verses),
@@ -185,7 +194,7 @@ for short, edid in EDITIONS.items():
     tid = f"CNTR-{short}-{args.book}"
     write(f"witness-texts/{tid}.json", {
         "id": tid, "type": "witness_transcription", "status": "imported_unreviewed",
-        "tags": ["TAG-TEXT-CRITICISM", "TAG-MARK"], "edition": edid, "bibliographic_source": SOURCE,
+        "tags": ["TAG-TEXT-CRITICISM", BOOKTAG[args.book]], "edition": edid, "bibliographic_source": SOURCE,
         "encoding": "Ausgabentext mit Akzenten (CNTR)", "verse_count": len(verses),
         "source": {"url": UPSTREAM, "path": f"critical texts/{short}.txt", "upstream_commit": args.upstream_commit,
                    "sha256": hashlib.sha256(raw).hexdigest(), "license": "CC BY-SA 4.0",

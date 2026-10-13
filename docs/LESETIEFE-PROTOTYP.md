@@ -1,4 +1,4 @@
-# Lesestrom · Stand 2026-10-13 (v0.32)
+# Lesestrom · Stand 2026-10-13 (v0.33)
 
 Der Lesestrom ist seit v0.13 die **Hauptrichtung der App**. Einstieg: [app/reading-stream/index.html](../app/reading-stream/index.html). Die Datei direkt im Browser öffnen; Server und Internetzugriff sind nicht nötig. Das Design stammt aus dem Gespräch zwischen Andi Neck und einem Kollegen (v0.11). Der frühere Studienprototyp `app/prototype/` ist abgelöst (siehe unten).
 
@@ -47,7 +47,7 @@ Griechisch erscheint zusätzlich in lateinischer Umschrift (z. B. ponēroú) und
 
 ## Vaterunser (v0.16)
 
-Ausgearbeitet sind jetzt drei Stellen: Mk 3,20–35, Mt 6,5–15 (Vom Beten, mit dem Vaterunser) und Lk 11,1–4. Das Menü listet sie unter «Ausgearbeitete Stellen»; auf Buch- und Kapitelebene führt ein Knopf direkt dorthin. Beim Vaterunser zeigt «Bis zur Quelle» neben den grossen Handschriften auch 𝔓75 (Lukas) und Amulette des 3. bis 6. Jahrhunderts, die das Gebet überliefern. Neue Stellen erscheinen automatisch, sobald eine Texteinheit eine Arbeitsübersetzung hat (`worked_sections()` in `scripts/project_study.py`). Veröffentlicht wird die aufgeteilte Fassung aus `build/reading-stream/` (Kern + Pakete je Buch und Sprache).
+Ausgearbeitet sind drei Stellen: Mk 3,20–35, Mt 6,5–15 (Vom Beten, mit dem Vaterunser) und Lk 11,1–4; seit v0.33 zudem als Muster für ganze Bücher der Titusbrief (Griechisch, mit 𝔓32) und Obadja (erster hebräischer Text: rechts nach links, Wort für Wort auf Morphem-Ebene mit Umschrift und LXX-Entsprechung). Das Menü listet sie unter «Ausgearbeitete Stellen»; auf Buch- und Kapitelebene führt ein Knopf direkt dorthin. Beim Vaterunser zeigt «Bis zur Quelle» neben den grossen Handschriften auch 𝔓75 (Lukas) und Amulette des 3. bis 6. Jahrhunderts, die das Gebet überliefern. Neue Stellen erscheinen automatisch, sobald eine Texteinheit eine Arbeitsübersetzung hat (`worked_sections()` in `scripts/project_study.py`). Veröffentlicht wird die aufgeteilte Fassung aus `build/reading-stream/` (Kern + Pakete je Buch und Sprache).
 
 ## Lesarten bis zur Quelle (v0.15)
 

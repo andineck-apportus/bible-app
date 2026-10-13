@@ -91,6 +91,11 @@ def strip_marks(word):
     return re.sub(r"[⸀-⸅,.·;:!?()—⟦⟧\[\]]", "", w)
 
 
+def heb_cons(word):
+    """Vergleichsform eines hebräischen Worts: nur Konsonanten (ohne Vokale, Akzente, Maqqef, Sof Pasuq)."""
+    return re.sub(r"[^\u05D0-\u05EA]", "", word or "")
+
+
 def main():
     errors = []
     warnings = []
@@ -208,6 +213,16 @@ def main():
                     missing = [x for x in dcs["grc"].split() if strip_marks(x) not in vw]
                     if missing:
                         errors.append(f"{rel}: decisions[{i}] griechische Wörter {missing} nicht im Vers {dcs.get('reference')}")
+                if dcs.get("heb") and r.get("based_on_tokens") in token_sets:
+                    vt = [t for t in tokens_by_set.get(r["based_on_tokens"], []) if t["reference"] == dcs.get("reference")]
+                    forms = {heb_cons(t["word"]) for t in vt}
+                    words = {}
+                    for t in vt:
+                        words[t.get("word_no")] = words.get(t.get("word_no"), "") + heb_cons(t["word"])
+                    forms |= set(words.values())
+                    missing = [x for x in dcs["heb"].split() if heb_cons(x) not in forms]
+                    if missing:
+                        errors.append(f"{rel}: decisions[{i}] hebräische Wörter {missing} nicht im Vers {dcs.get('reference')}")
                 if dcs.get("target", "\0") not in (r.get("text_by_reference") or {}).get(dcs.get("reference"), ""):
                     errors.append(f"{rel}: decisions[{i}] Zieltext nicht in der Übersetzung von {dcs.get('reference')}")
         for i, tm in enumerate(r.get("terms", []) if isinstance(r.get("terms"), list) else []):
