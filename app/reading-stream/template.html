@@ -230,6 +230,30 @@ const SUMS=/*__SUMMARIES__*/null;
 const BG=/*__BACKGROUND__*/null;
 const SRC=/*__SOURCES__*/null;
 const XREF=/*__XREF__*/null;
+/* ---------- Pakete: Kern hier, Bücher und Sprachen nachladbar (scripts/build_reading_stream.py) ----------
+   b/<BUCH>: Griechisch, Varianten, Befunde/Deutungen, Hintergrund, Querverweise; l/<Sprache>/<BUCH>: Übersetzungsschicht,
+   Vergleichsübersetzungen, Lokalisierungen; l/<Sprache>/common: lokalisierte Titel und Zusammenfassungen.
+   INLINE (Einzeldatei) enthält alle Pakete; sonst werden sie als .json.gz geholt und im Browser entpackt. */
+const MANIFEST=/*__MANIFEST__*/null;
+const INLINE=/*__INLINE__*/null;
+const I18N={};const loadedBundles=new Set(),pendingBundles=new Map();let dataError=false;
+STUDY.de=STUDY.layers.de.text;STUDY.de_source=STUDY.layers.de.source;STUDY.alternatives=STUDY.layers.de.alternatives;STUDY.decisions=STUDY.layers.de.decisions;STUDY.tok_de=STUDY.layers.de.align;
+function mergeBundle(d){
+  if(d.lang){const L=STUDY.layers[d.lang];const y=d.layer||{};if(L){Object.assign(L.text,y.text||{});Object.assign(L.source,y.source||{});Object.assign(L.decisions,y.decisions||{});L.alternatives.push(...(y.alternatives||[]));Object.assign(L.align,y.align||{});}
+    for(const [r,arr] of Object.entries(d.compare||{}))(STUDY.compare[r]=STUDY.compare[r]||[]).push(...arr);
+    SRC.alts[d.lang]=Object.assign(SRC.alts[d.lang]||{},d.alts||{});I18N[d.lang]=Object.assign(I18N[d.lang]||{},d.i18n||{});}
+  if(d.book){for(const k of ['words','variants','findings','interpretations','principles','applications','relations','questions'])STUDY[k].push(...(d[k]||[]));
+    BG.push(...(d.bg||[]));Object.assign(XREF.verses,d.xref||{});Object.assign(SRC.readings,d.readings||{});Object.assign(SRC.variants,d.src_variants||{});}
+}
+async function fetchBundle(name){const r=await fetch(name+'.json.gz');if(!r.ok)throw new Error(name+': '+r.status);const buf=new Uint8Array(await r.arrayBuffer());
+  // Manche Server liefern .gz schon entpackt aus; dann direkt lesen
+  const txt=(buf[0]===0x1f&&buf[1]===0x8b)?await new Response(new Blob([buf]).stream().pipeThrough(new DecompressionStream('gzip'))).text():new TextDecoder().decode(buf);
+  return JSON.parse(txt);}
+function loadBundle(name){if(loadedBundles.has(name))return null;
+  if(INLINE&&INLINE[name]){mergeBundle(INLINE[name]);loadedBundles.add(name);return null;}
+  if(!pendingBundles.has(name))pendingBundles.set(name,fetchBundle(name).then(d=>{mergeBundle(d);loadedBundles.add(name);},e=>{dataError=true;loadedBundles.add(name);console.warn('Paket nicht geladen',name,e);}).finally(()=>pendingBundles.delete(name)));
+  return pendingBundles.get(name);}
+if(INLINE)for(const name of Object.keys(INLINE))loadBundle(name);
 const DATA=NAV.books.map(b=>({de:b.de,en:b.en,abbr:b.abbr,alias:b.alias,counts:b.verses_per_chapter,code:b.code}));
 const GROUPS=NAV.groups.map(g=>[g.de,g.en,DATA.findIndex(b=>b.code===g.books[0]),DATA.findIndex(b=>b.code===g.books[g.books.length-1])]);
 const BOOK_SUMMARIES=DATA.map(b=>(SUMS['SUM-BOOK-'+b.code]||{}).text||'');
@@ -398,16 +422,22 @@ function summary(n){
 }
 function eyebrow(n){if(n.level===0)return '';const p=nodes.get(n.parent);if(n.level===5)return n.part?refDe(n.part.range):title(p);return title(p);}
 const LAYER=()=>STUDY.layers[S.text]||STUDY.layers.de;
+// Benötigte Pakete: Sprachen = Lesetext, deren Vergleichssprachen und Hochdeutsch (Rückfall); Bücher der gezeigten Einträge
+const langsNeeded=()=>[...new Set([S.text,...((STUDY.layers[S.text]||{}).compare_languages||[]),'de'])];
+const codesOf=ids=>[...new Set(ids.map(id=>nodes.get(id)).filter(n=>n&&n.level>=4).map(n=>DATA[n.b].code))];
+function needData(codes){const ps=[];for(const lg of langsNeeded()){const av=MANIFEST.lang[lg]||[];if(av.includes('common'))ps.push(loadBundle(`l/${lg}/common`));for(const c of codes)if(av.includes(c))ps.push(loadBundle(`l/${lg}/${c}`));}
+  for(const c of codes)if(MANIFEST.books.includes(c))ps.push(loadBundle(`b/${c}`));const w=ps.filter(Boolean);return w.length?Promise.all(w):null;}
+function withData(codes,fn){const p=needData(codes);if(!p){fn();return;}reader.setAttribute('aria-busy','true');p.then(()=>{reader.removeAttribute('aria-busy');fn();});}
 // Vergleichsübersetzungen der Sprachen, die der Zielkontext der gewählten Schicht vorsieht, gruppiert und in dieser Reihenfolge
 const LANGLABEL={de:['Hochdeutsch','German'],gsw:['Züridüütsch','Zurich German'],en:['Englisch','English']};
 const CMP=ref=>(LAYER().compare_languages||[S.text]).map(lg=>({lang:lg,items:(STUDY.compare[ref]||[]).filter(c=>c.lang===lg).sort((a,b)=>b.id.localeCompare(a.id))}));
 const cmpLabel=lg=>(LANGLABEL[lg]||[lg,lg])[lang==='de'?0:1];
 // Lokalisierte Felder (data/localizations) der gewählten Sprachschicht über das Original legen; fehlt eine Übersetzung, bleibt das Original
-const LOC=o=>{const t=o&&o.i18n&&o.i18n[S.text];if(!t)return o;const r={...o,...t};if(t.terms)r.terms=(o.terms||[]).map((x,i)=>({...x,de:t.terms[i]??x.de}));return r;};
-const SUMT=id=>SUMS[id]?LOC(SUMS[id]).text:null;
+const LOC=o=>{const t=o&&(((I18N[S.text]||{})[o.id])||(o.i18n&&o.i18n[S.text]));if(!t)return o;const r={...o,...t};if(t.terms)r.terms=(o.terms||[]).map((x,i)=>({...x,de:t.terms[i]??x.de}));return r;};
+const SUMT=id=>SUMS[id]?LOC({...SUMS[id],id}).text:null;
 const TXT=ref=>LAYER().text[ref]||STUDY.layers.de.text[ref]||null;
-const pTitle=p=>(p.titles&&(p.titles[S.text]||p.titles.de))||p.title;
-const pSummary=p=>(p.summaries&&(p.summaries[S.text]||p.summaries.de))||p.summary;
+const pTitle=p=>((I18N[S.text]||{})[p.id]||{}).title||(p.titles&&(p.titles[S.text]||p.titles.de))||p.title;
+const pSummary=p=>((I18N[S.text]||{})[p.id]||{}).summary||(p.summaries&&(p.summaries[S.text]||p.summaries.de))||p.summary;
 const isPilotVerse=n=>n.level===6&&!!TXT(n.canonicalRef);
 const DEC={literal:['wörtlich','literal'],adapted:['sprachlich angepasst','adapted'],interpretive:['Deutungsentscheidung','interpretive choice'],traditional:['folgt der vertrauten Wiedergabe','follows traditional wording']};
 function decorate(text,decs){
@@ -442,7 +472,7 @@ const altsFor=n=>LAYER().alternatives.filter(a=>a.ref===n.canonicalRef);
 const bgFor=n=>BG.filter(b=>!b.wide&&b.chapter===DATA[n.b].code+'.'+n.c&&b.from<=n.v&&n.v<=b.to).map(LOC);
 const bgForPart=id=>BG.filter(b=>b.subject===id||(b.wide&&SECTION_OF[id]&&b.section===SECTION_OF[id].id)).map(LOC);
 function bgNote(b,withRef){const L=lang==='de';refCtx=b.chapter.split('.')[0];
-  return `<div class="point bg-note" data-bg-note="${esc(b.id)}"><span class="tag">${withRef?esc(b.ref_de)+' · ':''}${esc(CONF[b.confidence]||'')}${b.readers?(L?' · Zeit des Markus':' · time of Mark'):''}</span><p class="bg-topic">${esc(b.topic)}</p><p class="body">${rich(b.text)}</p>${termsLine(b.terms)}${b.uncertain?`<p class="note"><b>${L?'Nicht sicher:':'Uncertain:'}</b> ${rich(b.uncertain)}</p>`:''}${b.evidence.length||b.sources.length?`<p class="note">${L?'Vergleiche':'Compare'}: ${linkRefs(esc([...b.evidence,...b.sources].join(' · ')))}</p>`:''}${S.advanced?`<p class="ref-id">${esc(b.id)}</p>`:''}</div>`;}
+  return `<div class="point bg-note" data-bg-note="${esc(b.id)}"><span class="tag">${withRef?esc(b.ref_de)+' · ':''}${esc(CONF[b.confidence]||'')}${b.readers?(()=>{const bk=DATA[CODE_IDX[b.chapter.split('.')[0]]];return L?' · Zeit des '+bk.de:' · time of '+bk.en;})():''}</span><p class="bg-topic">${esc(b.topic)}</p><p class="body">${rich(b.text)}</p>${termsLine(b.terms)}${b.uncertain?`<p class="note"><b>${L?'Nicht sicher:':'Uncertain:'}</b> ${rich(b.uncertain)}</p>`:''}${b.evidence.length||b.sources.length?`<p class="note">${L?'Vergleiche':'Compare'}: ${linkRefs(esc([...b.evidence,...b.sources].join(' · ')))}</p>`:''}${S.advanced?`<p class="ref-id">${esc(b.id)}</p>`:''}</div>`;}
 const bgDisclaimer=()=>`<p class="note">${lang==='de'?'Hintergrund beschreibt Zeit, Ort und Kultur damals. Er erklärt den Text nicht allein, und ein Teil davon ist unsicher. Alle Hinweise sind Entwürfe und noch nicht fachlich geprüft.':'Background describes time, place and culture then. Drafts, not yet reviewed.'}</p>`;
 function bgSheet(partId){const part=nodes.get(partId).part;refCtx=rangeOf(part.range).code;openSheet('background',head(T().background)+`<p class="note">${esc(pTitle(part))} · ${esc(refDe(part.range))}</p>`+bgForPart(partId).map(b=>bgNote(b,true)).join('')+bgDisclaimer()+sheetTools(partId,'u'));}
 function bgOne(id){const b=LOC(BG.find(x=>x.id===id));openSheet('background',head(b.topic)+bgNote(b,true).replace(`<p class="bg-topic">${esc(b.topic)}</p>`,'')+bgDisclaimer());}
@@ -477,9 +507,12 @@ function verseEntry(n){
   const bgLine=bgList.length?`<div class="bg-lines"><span class="bg-label">${icon('history')}</span>${bgList.map(b=>`<button type="button" class="bg-line" data-bg="${esc(b.id)}">${esc(b.topic)}</button>`).join('')}</div>`:'';
   return `<article class="stream-entry verse" data-stream="${n.id}">${lead}<p class="verse-line">${vno}<span class="stream-copy" data-ref="${n.canonicalRef}">${S.advanced?decorate(text,LAYER().decisions[n.canonicalRef]):esc(text)}</span></p>${inline}${bgLine}</article>`;
 }
-function streamMarkup(){const ids=streams[nodes.get(current).level];const t=T();const first=nodes.get(ids[readerStart]);const gap=S.flow&&first&&first.level===6&&!summary(first)?`<p class="note gap">${t.placeholder}</p>`:'';return `<div class="column">${readerStart?`<button type="button" class="load load-before" data-action="load-prev">${t.loadPrev}</button>`:''}${gap}${ids.slice(readerStart,readerEnd).map(entryM).join('')}${readerEnd<ids.length?`<button type="button" class="load load-after" data-action="load-next">${t.loadNext}</button>`:`<p class="end">${t.end}</p>`}</div>`;}
+function streamMarkup(){const ids=streams[nodes.get(current).level];const t=T();const warn=dataError?`<p class="note gap">${lang==='de'?'Ein Teil der Daten konnte nicht geladen werden. Wird die Seite direkt als Datei geöffnet, die Einzeldatei verwenden.':'Some data could not be loaded. When opening the page as a local file, use the single-file version.'}</p>`:'';const first=nodes.get(ids[readerStart]);const gap=S.flow&&first&&first.level===6&&!summary(first)?`<p class="note gap">${t.placeholder}</p>`:'';return `<div class="column">${warn}${readerStart?`<button type="button" class="load load-before" data-action="load-prev">${t.loadPrev}</button>`:''}${gap}${ids.slice(readerStart,readerEnd).map(entryM).join('')}${readerEnd<ids.length?`<button type="button" class="load load-after" data-action="load-next">${t.loadNext}</button>`:`<p class="end">${t.end}</p>`}</div>`;}
+let moreBusy=false;
 function loadMore(before=false){
-  const ids=streams[nodes.get(current).level],col=reader.querySelector('.column'),t=T();if(!col)return;
+  const ids=streams[nodes.get(current).level],col=reader.querySelector('.column'),t=T();if(!col||moreBusy)return;
+  const p=needData(codesOf(before?ids.slice(Math.max(0,readerStart-10),readerStart):ids.slice(readerEnd,readerEnd+10)));
+  if(p){moreBusy=true;p.then(()=>{moreBusy=false;loadMore(before);});return;}
   if(before&&readerStart>0){const old=reader.scrollHeight,start=Math.max(0,readerStart-10);col.querySelector('.load-before')?.remove();col.insertAdjacentHTML('afterbegin',(start>0?`<button type="button" class="load load-before" data-action="load-prev">${t.loadPrev}</button>`:'')+ids.slice(start,readerStart).map(entryM).join(''));readerStart=start;reader.scrollTop+=reader.scrollHeight-old;}
   else if(!before&&readerEnd<ids.length){col.querySelector('.load-after')?.remove();const end=Math.min(readerEnd+10,ids.length);col.insertAdjacentHTML('beforeend',ids.slice(readerEnd,end).map(entryM).join('')+(end<ids.length?`<button type="button" class="load load-after" data-action="load-next">${t.loadNext}</button>`:`<p class="end">${t.end}</p>`));readerEnd=end;if(typeof watchEnd==='function')watchEnd();}
 }
@@ -505,8 +538,10 @@ function sidebar(){const n=nodes.get(current),ids=n.level<=3?streams[n.level||1]
   const head=n.level<=1?T().bible:n.level<=3?T().levels[n.level]:title(nodes.get(n.parent));
   aside.innerHTML=`<p class="eyebrow">${esc(head)}</p>`+ids.slice(0,200).map(id=>{const x=nodes.get(id);return `<button type="button" data-go="${id}" aria-current="${id===current}"><span>${esc(x.level===5&&x.part?pTitle(x.part):title(x))}</span>${worked(x)?'<span class="dot"></span>':''}</button>`;}).join('');
   const cur=aside.querySelector('[aria-current=true]');if(cur&&cur.scrollIntoView&&aside.clientHeight)try{cur.scrollIntoView({block:'center'});}catch(e){}}
-function render(){applyPrefs();chrome();sidebar();const n=nodes.get(current);const r=savedStreams.get(n.level);if(r&&r.id===current){readerStart=r.start;readerEnd=r.end;}else{readerStart=n.si;readerEnd=Math.min(n.si+10,streams[n.level].length);}reader.innerHTML=streamMarkup();}
-function rerenderKeep(){
+function render(after){const n=nodes.get(current);const r=savedStreams.get(n.level);const [s0,e0]=(r&&r.id===current)?[r.start,r.end]:[n.si,Math.min(n.si+10,streams[n.level].length)];
+  withData(codesOf(streams[n.level].slice(s0,e0)),()=>{if(nodes.get(current)!==n)return;applyPrefs();chrome();sidebar();readerStart=s0;readerEnd=e0;reader.innerHTML=streamMarkup();if(after)after();});}
+function rerenderKeep(){withData(codesOf(streams[nodes.get(current).level].slice(readerStart,readerEnd)),rerenderNow);}
+function rerenderNow(){
   // Gleiche geladene Einträge neu zeichnen und den obersten sichtbaren Eintrag an derselben Stelle halten
   const top=reader.getBoundingClientRect().top;const els=[...reader.querySelectorAll('[data-stream]')];
   const anchor=els.find(el=>el.getBoundingClientRect().top>=top-1)||els.find(el=>el.getBoundingClientRect().bottom>top+1);const id=anchor&&anchor.dataset.stream,off=anchor?anchor.getBoundingClientRect().top-top:0,pos=reader.scrollTop;
@@ -516,7 +551,7 @@ function rerenderKeep(){
 }
 function reopenMenu(){const old=host.querySelector('.sheet'),y=old?old.scrollTop:0;menuSheet();const nw=host.querySelector('.sheet');if(nw)nw.scrollTop=y;}
 function saveStream(){savedStreams.set(nodes.get(current).level,{id:current,start:readerStart,end:readerEnd,offset:reader.scrollTop});}
-function go(id,keepJump){if(!id||!nodes.has(id))return;if(!keepJump)jumpFrom=null;saveStream();for(const child of ancestors(id).slice(1))remembered.set(nodes.get(child).parent,child);current=id;closeSheet();const r=savedStreams.get(nodes.get(id).level);render();reader.scrollTop=r&&r.id===id?r.offset:0;app.classList.remove('immersed');app.querySelector('.live').textContent=title(nodes.get(id));}
+function go(id,keepJump){if(!id||!nodes.has(id))return;if(!keepJump)jumpFrom=null;saveStream();for(const child of ancestors(id).slice(1))remembered.set(nodes.get(child).parent,child);current=id;closeSheet();const r=savedStreams.get(nodes.get(id).level);render(()=>{reader.scrollTop=r&&r.id===id?r.offset:0;});app.classList.remove('immersed');app.querySelector('.live').textContent=title(nodes.get(id));}
 function resolveLevel(level){let n=nodes.get(current);while(n.level>level)n=nodes.get(n.parent);while(n.level<level)n=nodes.get(remembered.get(n.id)||n.children[0]);return n.id;}
 
 /* ---------- Blätter ---------- */
