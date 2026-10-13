@@ -11,6 +11,12 @@ const mk=v=>M().de['MRK.3.'+v];
 const vOf=r=>Number(r.split('.')[2]);
 const mkAlts=()=>M().alternatives.filter(a=>a.ref.startsWith('MRK.3.'));
 
+// Voreinstellung: Lesarten, Hintergrund und Urtext sind eingeschaltet; für die folgenden Prüfungen zuerst aus
+click('[data-action=menu]');
+for(const k of ['inline','bgInline','advanced'])assert.equal(sheetHost.querySelector(`[data-toggle=${k}]`).getAttribute('aria-checked'),'true',k+' standardmässig an');
+for(const k of ['inline','bgInline','advanced'])click(`[data-toggle=${k}]`);
+click('[data-close]');
+
 // Einstieg über das Menü in den Pilotabschnitt; Studienblatt mit Deutung und Gegenargument
 click('[data-action=menu]');click('[data-go="TU-MRK-003-020-021"]');
 assert.equal(sheetHost.textContent,'','Menü schliesst nach Navigation');
@@ -95,11 +101,18 @@ click('[data-more="v39-6-13"]');click('.sheet [data-source="VAR-SBLGNTAPP-MAT-00
 let txt=sheetHost.textContent;
 assert(txt.includes('Codex Sinaiticus')&&txt.includes('Codex Washingtonianus')&&txt.includes('P. Oxyrhynchus 60.4010'),'Zeugen zur Doxologie');
 assert(txt.includes('Didache'),'Erklärung Doxologie');
+assert(sheetHost.querySelector('.word-row .play[data-speak]'),'Anhören-Knopf bei den Wörtern');
+assert(txt.includes('ponēroú'),'Umschrift sichtbar');
+const det=sheetHost.querySelector('details.wit');const pb=det.querySelector('.play');if(pb){pb.click();assert(!det.open,'Anhören klappt nicht auf');}
+sheetHost.querySelector('.word-row .play').click();assert(app.querySelector('.live').textContent.length>0,'Rückmeldung ohne Sprachausgabe');
 tested++;click('[data-close]');
+click('[data-action=menu]');assert(sheetHost.textContent.includes('Aussprache'),'Aussprache-Einstellung');click('[data-toggle=translit]');click('[data-close]');
+click('[data-more="v39-6-13"]');click('.sheet [data-source="VAR-SBLGNTAPP-MAT-006-013-01"]');assert(!sheetHost.querySelector('.tr'),'Umschrift abschaltbar');click('[data-close]');
+click('[data-action=menu]');click('[data-toggle=translit]');click('[data-close]');
 for(const a of M().alternatives.filter(a=>a.ref.startsWith('MAT.6.'))){const v=vOf(a.ref);if(!reader.querySelector(`[data-more="v39-6-${v}"]`)){continue;}click(`[data-more="v39-6-${v}"]`);sheetHost.querySelector(`[data-source="${a.variant}"]`).click();assert(sheetHost.textContent.includes('Was die gedruckten Ausgaben haben'),a.variant);click('[data-close]');tested++;}
 click('[data-action=menu]');const inp=sheetHost.querySelector('input[type=search]');inp.value='Lk 11,2';inp.dispatchEvent(new dom.window.Event('input',{bubbles:true}));sheetHost.querySelector('.results [data-go]').click();
 assert.equal(reader.querySelector('[data-stream="v41-11-2"] .stream-copy').textContent,M().de['LUK.11.2']);
 click('[data-more="v41-11-2"]');click('.sheet [data-source="VAR-SBLGNTAPP-LUK-011-002-01"]');
 txt=sheetHost.textContent;assert(txt.includes('Papyrus 75')&&txt.includes('Codex Vaticanus'),'P75 zu Lk 11,2');tested++;click('[data-close]');
-console.log(`PASS: Pilotzugang, Studienblatt ohne Griechisch, Lesarten auf Wunsch (${M().alternatives.length}), Hintergrund damals (${model.BG.length}), Bis zur Quelle (${tested}), Urtext-Modus, Rückkehrposition, Suche, Kapitelgrenze, Vaterunser Mt/Lk.`);
+console.log(`PASS: Pilotzugang, Studienblatt ohne Griechisch, Lesarten auf Wunsch (${M().alternatives.length}), Hintergrund damals (${model.BG.length}), Bis zur Quelle (${tested}), Urtext-Modus, Rückkehrposition, Suche, Kapitelgrenze, Vaterunser Mt/Lk, Umschrift und Anhören.`);
 dom.window.close();

@@ -50,4 +50,6 @@ assert.equal(model.nodes.get('v41-11-3').parent, 'TU-LUK-011-001-004');
 assert.equal(model.sibling('v40-3-35',1), 'v40-4-1');
 assert.equal(model.sibling('TU-MRK-003-020-021',1), 'TU-MRK-003-022-030');
 assert.equal(model.sibling('TU-MAT-006-009-013',1), 'TU-MAT-006-014-015');
-console.log(`PASS: study projection (${S.sections.length} worked passages, ${Object.keys(S.de).length} translated verses, ${S.alternatives.length} alternatives, ${S.words.length} words, ${S.variants.length} variants), real sections, continuous coverage.`);
+for (const [g, l] of [['πονηροῦ', 'ponēroú'], ['Πάτερ ἡμῶν ὁ ἐν τοῖς οὐρανοῖς', 'Páter hēmṓn ho en toís ouranoís'], ['ῥῦσαι', 'rhýsai'], ['ἀγγέλους', 'angélous'], ['υἱοῖς', 'huioís'], ['Ἰησοῦς', 'Iēsoús']]) assert.equal(model.translit(g), l, g);
+assert.equal(model.translit('Vater'), '');
+console.log(`PASS: study projection (${S.sections.length} worked passages, ${Object.keys(S.de).length} translated verses, ${S.alternatives.length} alternatives, ${S.words.length} words, ${S.variants.length} variants), real sections, continuous coverage, transliteration.`);

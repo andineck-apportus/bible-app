@@ -2,6 +2,14 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.17 — 2026-10-13 — Umschrift, Anhören, neue Voreinstellungen
+
+- Griechische Wörter zusätzlich in lateinischer Umschrift (nach dem Muster des SBL-Handbuchs, betonte Silbe markiert, z. B. πονηροῦ → ponēroú), abschaltbar im Menü.
+- Anhören-Knopf bei griechischen Wörtern, Lesarten, Handschriftentexten und ganzen Versen (Stimmen des Geräts über die Web-Speech-Schnittstelle). Einstellungen: Aussprache Neugriechisch oder Schulaussprache (Umschrift, gelesen von einer deutschen Stimme), Stimmenauswahl, Tempo, Probe. Beides nähert die Aussprache des 1. Jahrhunderts nur an; ohne installierte Stimme erscheint ein Hinweis.
+- Hebräisch: Sprachausgabe ist vorbereitet (he-IL); Umschrift folgt mit den ersten hebräischen Texten.
+- Voreinstellung: «Andere Lesarten im Text», «Hintergrund im Text» und «Urtext und Details» sind jetzt eingeschaltet (gespeicherte ältere Einstellungen werden einmalig darauf umgestellt).
+- Umschalten im Menü lässt die Leseposition stehen (der oberste sichtbare Eintrag bleibt an seiner Stelle; das Menü behält seine Scrollposition).
+
 ## v0.16 — 2026-10-12 — Das Vaterunser
 
 - Wunsch: das Vaterunser komplett bearbeiten.
