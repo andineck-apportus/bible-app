@@ -171,6 +171,11 @@ def main():
                     errors.append(f"{rel}: decisions[{i}] unbekannte Art {dcs.get('kind')!r}")
                 if dcs.get("target", "\0") not in (r.get("text_by_reference") or {}).get(dcs.get("reference"), ""):
                     errors.append(f"{rel}: decisions[{i}] Zieltext nicht in der Übersetzung von {dcs.get('reference')}")
+        for i, tm in enumerate(r.get("terms", []) if isinstance(r.get("terms"), list) else []):
+            if tm.get("lang") not in ("grc", "heb", "arc", "lat") or not tm.get("word") or not tm.get("de"):
+                errors.append(f"{rel}: terms[{i}] braucht lang (grc/heb/arc/lat), word und de")
+            elif tm["lang"] != "grc" and not tm.get("translit"):
+                errors.append(f"{rel}: terms[{i}] ohne translit (nur Griechisch wird automatisch umgeschrieben)")
         if r.get("type") == "witness_reading_set":
             for i, e in enumerate(r.get("entries", [])):
                 var = records.get(e.get("variant"), (None, {}))[1]
