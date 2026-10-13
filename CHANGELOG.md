@@ -2,6 +2,10 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.25 — 2026-10-13 — Seitenleiste auf breiten Bildschirmen
+
+- Die Seitenleiste (ab 900 px Breite) hatte keinen Innenabstand und eine eigene Formensprache. Jetzt: Überschrift der Ebene, Einträge mit Abstand, Hover-Fläche, aktuelle Position gefüllt, Punkt für ausgearbeitete Einträge; der aktuelle Eintrag wird beim Öffnen in Sicht gerollt.
+
 ## v0.24 — 2026-10-13 — Einheitliche Formensprache
 
 - Eine Rundung für alles Antippbare und alle Kästen (`--r: 6px`): Segmentleisten, Chips, Raster im Navigator, Pfad, Schliessen, Symbolknöpfe, Versnummern, Lesarten-Karten, Zeugen-Kästen, Suchfeld, «Zurück zu …». Keine Pillen und Kreise mehr; einzige Ausnahme ist der Ein/Aus-Schalter, der als Toggle seine gewohnte Form behält.

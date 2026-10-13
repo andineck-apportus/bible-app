@@ -1,4 +1,4 @@
-# Lesestrom · Stand 2026-10-13 (v0.24)
+# Lesestrom · Stand 2026-10-13 (v0.25)
 
 Der Lesestrom ist seit v0.13 die **Hauptrichtung der App**. Einstieg: [app/reading-stream/index.html](../app/reading-stream/index.html). Die Datei direkt im Browser öffnen; Server und Internetzugriff sind nicht nötig. Das Design stammt aus dem Gespräch zwischen Andi Neck und einem Kollegen (v0.11). Der frühere Studienprototyp `app/prototype/` ist abgelöst (siehe unten).
 
