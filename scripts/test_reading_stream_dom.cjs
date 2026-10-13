@@ -107,6 +107,10 @@ assert(ptx.includes('Brot für den kommenden Tag')&&ptx.includes('Das zum Leben 
 assert(ptx.includes('Unser täglich Brot gib uns heute')&&ptx.includes('Unser nötiges Brot gib uns heute'),'ältere Übersetzungen im Wort-Blatt');
 assert(sheetHost.querySelector('.play[data-speak="τὸν ἐπιούσιον"]'),'Griechisch anhörbar');
 click('[data-close]');
+click('[data-more="v39-6-11"]');
+assert(sheetHost.querySelector('.sheet-tools [data-study="TU-MAT-006-009-013"] svg')&&sheetHost.querySelector('.sheet-tools [data-background="TU-MAT-006-009-013"] svg'),'Symbole Verstehen/Geschichte im Versblatt');
+assert(!sheetHost.textContent.includes('Diesen Abschnitt verstehen'),'keine alten Links im Versblatt');
+click('[data-close]');
 click('[data-more="v39-6-13"]');
 let dtx=sheetHost.textContent;
 assert(dtx.includes('Wie ist übersetzt?')&&dtx.includes('folgt der vertrauten Wiedergabe'),'Übersetzungsentscheidungen');

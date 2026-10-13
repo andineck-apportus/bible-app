@@ -52,6 +52,7 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .part-head h3{font:italic 400 calc(var(--read) * .95)/1.4 var(--serif);color:var(--muted);margin:0}
 #bible-stream .part-tools{display:inline-flex;gap:4px;margin:0}
 #bible-stream h2+.part-tools{margin:-4px 0 10px}
+#bible-stream .sheet-tools{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px 10px;border-top:1px solid var(--rule);padding-top:12px;margin-top:8px}
 #bible-stream .tool{display:inline-flex!important;align-items:center;gap:5px;padding:5px 8px!important;font:500 12px/1 var(--ui);color:var(--muted);border-radius:999px!important}
 #bible-stream .tool svg{width:16px;height:16px}
 #bible-stream .tool:hover,#bible-stream .tool:active{color:var(--ink);background:var(--soft)}
@@ -348,7 +349,7 @@ const bgForPart=id=>BG.filter(b=>b.subject===id||(b.wide&&SECTION_OF[id]&&b.sect
 function bgNote(b,withRef){const L=lang==='de';
   return `<div class="point bg-note" data-bg-note="${esc(b.id)}"><span class="tag">${withRef?esc(b.ref_de)+' · ':''}${esc(CONF[b.confidence]||'')}${b.readers?(L?' · Zeit des Markus':' · time of Mark'):''}</span><p class="bg-topic">${esc(b.topic)}</p><p class="body">${rich(b.text)}</p>${termsLine(b.terms)}${b.uncertain?`<p class="note"><b>${L?'Nicht sicher:':'Uncertain:'}</b> ${rich(b.uncertain)}</p>`:''}${b.evidence.length||b.sources.length?`<p class="note">${L?'Vergleiche':'Compare'}: ${esc([...b.evidence,...b.sources].join(' · '))}</p>`:''}${S.advanced?`<p class="ref-id">${esc(b.id)}</p>`:''}</div>`;}
 const bgDisclaimer=()=>`<p class="note">${lang==='de'?'Hintergrund beschreibt Zeit, Ort und Kultur damals. Er erklärt den Text nicht allein, und ein Teil davon ist unsicher. Alle Hinweise sind Entwürfe und noch nicht fachlich geprüft.':'Background describes time, place and culture then. Drafts, not yet reviewed.'}</p>`;
-function bgSheet(partId){const part=nodes.get(partId).part;openSheet('background',head(T().background)+`<p class="note">${esc(part.title)} · ${esc(refDe(part.range))}</p>`+bgForPart(partId).map(b=>bgNote(b,true)).join('')+bgDisclaimer());}
+function bgSheet(partId){const part=nodes.get(partId).part;openSheet('background',head(T().background)+`<p class="note">${esc(part.title)} · ${esc(refDe(part.range))}</p>`+bgForPart(partId).map(b=>bgNote(b,true)).join('')+bgDisclaimer()+sheetTools(partId,'u'));}
 function bgOne(id){const b=BG.find(x=>x.id===id);openSheet('background',head(b.topic)+bgNote(b,true).replace(`<p class="bg-topic">${esc(b.topic)}</p>`,'')+bgDisclaimer());}
 
 /* ---------- Einträge ---------- */
@@ -364,7 +365,8 @@ function entry(id){
   const copy=text?`<p class="stream-copy">${esc(text)}</p>`:`<p class="stream-copy quiet">${n.level===5?t.noPart:t.noSummary}</p>`;
   return `<article class="stream-entry" data-stream="${id}">${eyebrow(n)?`<p class="eyebrow">${esc(eyebrow(n))}</p>`:''}<h2>${esc(heading)}</h2>${n.part?tools(id):''}${copy}${example}<div class="actions">${deep}</div></article>`;
 }
-function tools(id){const t=T();return `<span class="part-tools"><button type="button" class="tool" data-study="${id}" aria-label="${t.understand}">${icon('understand')}<span>${t.toolUnderstand}</span></button><button type="button" class="tool" data-background="${id}" aria-label="${t.background}">${icon('history')}<span>${t.toolHistory}</span></button></span>`;}
+function tools(id,which='uh'){const t=T();return `<span class="part-tools">${which.includes('u')?`<button type="button" class="tool" data-study="${id}" aria-label="${t.understand}">${icon('understand')}<span>${t.toolUnderstand}</span></button>`:''}${which.includes('h')?`<button type="button" class="tool" data-background="${id}" aria-label="${t.background}">${icon('history')}<span>${t.toolHistory}</span></button>`:''}</span>`;}
+const sheetTools=(id,which)=>`<div class="sheet-tools"><span class="note">${lang==='de'?'Abschnitt':'Passage'}: ${esc(nodes.get(id).part?nodes.get(id).part.title:'')}</span>${tools(id,which)}</div>`;
 function verseEntry(n){
   const t=T(),text=summary(n);let lead='';
   if(n.v===1)lead+=`<h2 class="chapter-head">${esc(bookName(n)+' '+n.c)}</h2>`;
@@ -440,7 +442,7 @@ function verseSheet(id){
   }else{
     h+=`<p class="note">${lang==='de'?'Griechischer Text, Grammatik und Quellen: im Menü «Urtext und Details» einschalten.':'Greek text, grammar and sources: turn on “Original text and details” in the menu.'}</p>`;
   }
-  const p=nodes.get(n.parent);if(p.part)h+=`<div class="actions"><button type="button" class="link soft" data-study="${p.id}">${t.understand}</button><button type="button" class="link soft" data-background="${p.id}">${t.background}</button></div>`;
+  const p=nodes.get(n.parent);if(p.part)h+=sheetTools(p.id,'uh');
   openSheet('verse',h);
 }
 const gnorm=x=>String(x||'').normalize('NFD').replace(/[\u0300-\u036f\u02bc\u2019']/g,'').toLowerCase().replace(/ς/g,'σ');
@@ -485,7 +487,7 @@ function sourceSheet(vid,verseId){
   h+=`<p class="note">${esc(SRC.attribution)}</p><button type="button" class="link soft" data-more="${n.id}">${L?'Zurück zum Vers':'Back to the verse'}</button>`;
   openSheet('source',h);
 }
-function sourcesBlock(){return `<h4>${lang==='de'?'Quellen':'Sources'}</h4><p class="note">Griechischer Text und Apparat: SBL Greek New Testament, © 2010 Society of Biblical Literature und Logos Bible Software, CC BY 4.0. Sprachdaten: MACULA Greek Linguistic Datasets, available at https://github.com/Clear-Bible/macula-greek/ (CC BY 4.0); Glossen: Berean Interlinear (gemeinfrei), Cherith Glosses von Andi Wu, © 2023 Cherith Analytics (CC BY 4.0). Zweite Annotation 3,22–30: MorphGNT 6.12, J. K. Tauber (CC BY-SA 3.0). Übersetzung und Erklärungen: eigene Entwürfe (CC0), fachlich ungeprüft.</p><p class="note">${esc(STUDY.method.name)}: ${esc(STUDY.method.limits.join(' '))}</p>`;}
+function sourcesBlock(){return `<h4>${lang==='de'?'Quellen':'Sources'}</h4><p class="note">Griechischer Text und Apparat: SBL Greek New Testament, © 2010 Society of Biblical Literature und Logos Bible Software, CC BY 4.0. Sprachdaten: MACULA Greek Linguistic Datasets, available at https://github.com/Clear-Bible/macula-greek/ (CC BY 4.0); Glossen: Berean Interlinear (gemeinfrei), Cherith Glosses von Andi Wu, © 2023 Cherith Analytics (CC BY 4.0). Zweite Annotation Mk 3,22–30: MorphGNT 6.12, J. K. Tauber (CC BY-SA 3.0). Übersetzung und Erklärungen: eigene Entwürfe (CC0), fachlich ungeprüft.</p><p class="note">${esc(STUDY.method.name)}: ${esc(STUDY.method.limits.join(' '))}</p>`;}
 function studySheet(partId){
   const part=nodes.get(partId).part,sec=SECTION_OF[partId],subjects=[part.id,sec.id],L=lang==='de';
   const fs=STUDY.findings.filter(x=>subjects.includes(x.subject)),is=STUDY.interpretations.filter(x=>subjects.includes(x.subject));
@@ -496,7 +498,7 @@ function studySheet(partId){
   if(aps.length||prs.length)h+=`<h4>${L?'Was kann es heute bedeuten?':'What might it mean today?'}</h4>`+aps.map(a=>`<div class="point"><p class="body">${esc(a.text)}</p><p class="note"><b>${L?'Grenze:':'Limit:'}</b> ${esc(a.limits)}</p></div>`).join('')+prs.map(p=>`<div class="point"><span class="tag">${L?'abgeleiteter Grundsatz':'derived principle'} · ${CONF[p.confidence]||''}</span><p class="body">${esc(p.text)}</p><p class="note">${L?'Dieser Grundsatz geht weiter, als der Text selbst sagt. Er ist eine Folgerung, kein Befund.':'This principle goes beyond what the text itself says.'}</p></div>`).join('');
   if(qs.length)h+=`<h4>${L?(qs.length>1?'Offene Fragen':'Eine offene Frage'):'Open questions'}</h4>`+qs.map(q=>`<div class="point"><p class="body">${esc(q.q)}</p><p class="note">${esc(q.finding)}</p></div>`).join('');
   if(rls.length)h+=`<h4>${L?'Ähnliche Stellen':'Related passages'}</h4><p class="body">${[...new Set(rls.map(r=>r.to_de))].map(esc).join(' · ')}</p>`;
-  h+=`<p class="note">${L?'Alle Beobachtungen und Deutungen sind Entwürfe und noch nicht fachlich geprüft.':'All notes are drafts, not yet reviewed.'}</p><div class="actions"><button type="button" class="link soft" data-background="${partId}">${T().background}</button></div>`;
+  h+=`<p class="note">${L?'Alle Beobachtungen und Deutungen sind Entwürfe und noch nicht fachlich geprüft.':'All notes are drafts, not yet reviewed.'}</p>`+sheetTools(partId,'h');
   openSheet('study',h);
 }
 function menuSheet(){
