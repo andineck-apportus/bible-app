@@ -18,6 +18,7 @@ README.md sowie docs/STATUS-UND-ROADMAP.md zuerst lesen. Git ist Source of Truth
 - Erwähnt ein Erklärtext ein Wort der Ursprache («das griechische Wort für …»), das Wort als `terms` erfassen (Sprache, Originalschrift, Umschrift bei Nicht-Griechisch, Bedeutung), damit die App es mit Umschrift und Anhören-Knopf zeigt.
 - Jede weitere Sprach- oder Mundartfassung ist eine eigene Übersetzungsschicht aus dem Urtext (`language` nach BCP-47, `target_context`, `orthography_de`, `register_de`, `decisions`, Wortzuordnung), nie aus dem Hochdeutschen abgeleitet; die hochdeutsche Fassung dient nur als Kontrolle (`control_translation`). Prüfung durch muttersprachliche Personen eintragen, nicht behaupten.
 - Übersetzungen erklärender Inhalte (Befunde, Deutungen, Hintergrund, Zusammenfassungen …) als eigene `localization`-Datensätze mit `source_fingerprint` ablegen, nie in den Originaldatensatz schreiben ([docs/DATENMODELL.md](docs/DATENMODELL.md)).
+- Bibelstellen in Erklärtexten als Marke `[[MAT.6.34]]` schreiben, nicht als «Mt 6,34» ([docs/BIBELSTELLEN.md](docs/BIBELSTELLEN.md)). Felder mit Inhalt in der Sprache einer Übersetzungsschicht sprachneutral benennen; `_de` nur für hochdeutsche Originale und Dokumentation.
 - Keine Lektoratsentscheidung über richtig/falsch: Unterschiede ausgeben und nach Gesichertheit bewerten, Bewertungsmethode offenlegen ([docs/VISION.md](docs/VISION.md)).
 
 ## Technische Regeln

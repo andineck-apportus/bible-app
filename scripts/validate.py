@@ -128,11 +128,28 @@ def main():
         if target is not None and target not in readings:
             errors.append(f"{rel}: {field} verweist auf unbekannte Lesart {target!r}")
 
+    # Verszahlen der Navigationszählung (KJV, data/navigation): Stellen ausserhalb gelten als andere Versifikation
+    nav = next((r for _, r in records.values() if r.get("type") == "navigation_structure"), None)
+    verse_counts = {b["code"]: b["verses_per_chapter"] for b in (nav or {}).get("books", [])}
+    current_record = {}
+
+    def outside_nav(ref):
+        for (b, c, v) in refs.parse(ref):
+            if b in verse_counts and c and (c > len(verse_counts[b]) or (v and v > verse_counts[b][c - 1])):
+                return True
+        return False
+
     def check_ref(rel, field, value):
         try:
             refs.parse(value)
         except refs.RefError as exc:
             errors.append(f"{rel}: {field}: {exc}")
+            return
+        r = current_record.get("r") or {}
+        declared = r.get("versification") or "KJV"
+        if verse_counts and declared.startswith("KJV") and r.get("type") != "versification_map" and outside_nav(value):
+            warnings.append(f"{rel}: {field} {value} gibt es in der Navigationszählung (KJV) nicht; andere Versifikation? "
+                            "(Feld versification setzen oder Stelle umrechnen, siehe docs/BIBELSTELLEN.md)")
 
     tokens_by_set = {rid: r.get("tokens", []) for rid, (_, r) in records.items() if r.get("type") == "token_set"}
     token_sets = {rid: [t["id"] for t in r.get("tokens", [])]
@@ -177,6 +194,7 @@ def main():
     annotation_count = assessment_count = 0
     for rid, (rel, r) in records.items():
         current_layer["value"] = layer_of[rid]
+        current_record["r"] = r
         if r.get("type") == "summary" and r.get("group"):
             nav_groups = {g["id"] for _, nr in records.values() if nr.get("type") == "navigation_structure" for g in nr.get("groups", [])}
             if r["group"] not in nav_groups:
@@ -197,6 +215,11 @@ def main():
                 errors.append(f"{rel}: terms[{i}] braucht lang (grc/heb/arc/lat), word und de")
             elif tm["lang"] != "grc" and not tm.get("translit"):
                 errors.append(f"{rel}: terms[{i}] ohne translit (nur Griechisch wird automatisch umgeschrieben)")
+        if r.get("type") == "versification_map":
+            for i, e in enumerate(r.get("entries") or []):
+                for f in ("source_ref", "standard_ref"):
+                    if f in e:
+                        check_ref(rel, f"entries[{i}].{f}", e[f]); ref_count += 1
         if r.get("type") == "crossref_set":
             parsed = set()
             for frm, items in (r.get("entries") or {}).items():
@@ -333,6 +356,7 @@ def main():
                    "text_unit", "localization", "alignment"}
     covered = {}
     for rid, (rel, r) in records.items():
+        current_record["r"] = r
         if r.get("type") in prose_types or (r.get("type") == "translation" and r.get("translation_kind") == "literal_original_working"):
             walk(r, "", rel)
         if r.get("type") == "translation" and r.get("translation_kind") == "literal_original_working" and r.get("status") != "deprecated":

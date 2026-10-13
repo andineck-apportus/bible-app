@@ -2,6 +2,18 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.31 — 2026-10-13 — Für die ganze Bibel und viele Sprachen aufgeräumt
+
+- **Pakete:** Der Lesestrom besteht aus einem Kern und nachladbaren, gzip-komprimierten Paketen je Buch (`b/<BUCH>`: Griechisch, Varianten, Deutungen, Hintergrund, Querverweise) und je Sprache und Buch (`l/<Sprache>/<BUCH>`, `l/<Sprache>/common`). Die App lädt sie erst bei Bedarf (Navigation, Weiterlesen, Sprachwechsel). Veröffentlicht wird `build/reading-stream/` (Kern 145 KB, Pakete zusammen 82 KB); `app/reading-stream/index.html` bleibt als Einzeldatei mit allen Paketen (offline, Tests).
+- **Bibelstellen im Fliesstext** als sprachneutrale Marken `[[MAT.6.34]]` statt «Mt 6,34» (186 Marken); die App zeigt sie je Sprache an und verlinkt sie. Werkzeug `scripts/prose_refs.py`; der Validator prüft Marken und meldet unmarkierte Stellen.
+- **Titel und Zusammenfassungen** der Texteinheiten in weiteren Sprachen sind Lokalisierungen (wie alle anderen Übersetzungen von Erklärtexten).
+- **Neutrale Feldnamen** in Übersetzungsschichten (`from_text`, `to_text`, `note`, `readings`, `origin`, `more_literal`, `other_options`); `_de` nur noch für hochdeutsche Originale und Dokumentation.
+- **Vorrang** ohne Heuristik: Arbeitsübersetzungen derselben Sprache dürfen sich nicht überschneiden (Validator); ausgearbeitete Abschnitte werden aus den Daten ermittelt statt von Hand gelistet.
+- **Versifikation:** Zuordnungsdaten zwischen hebräischer, lateinischer, griechischer und englischer Zählung aus TVTMS (STEPBible, CC BY 4.0, 22 874 Zeilen, `data/versification/`). Der Validator prüft alle Stellen gegen die Verszahlen der Navigation (KJV) und meldet Abweichungen als WARN (derzeit 5 Querverweise auf 3 Joh 1,15). Die Umrechnung selbst folgt mit dem ersten Text in anderer Zählung.
+- Migration `scripts/migrations/v0_31.py`, Protokoll `provenance/migrations/2026-10-13-v0.31.json` (531 Änderungen); Lokalisierungen mit nachgeführtem Fingerabdruck. Historische Autorenwerkzeuge in `scripts/authoring/` sind gegen erneutes Ausführen gesperrt.
+- «Zeit des …» im Hintergrund nennt den Evangelisten des jeweiligen Buchs (vorher immer Markus).
+- Prüfungen: Validator-Negativtests für Marken und Überschneidungen; Browserprüfung der aufgeteilten Fassung (`scripts/test_reading_stream_split.cjs`).
+
 ## v0.30 — 2026-10-13 — Vergleichsübersetzungen je Sprache
 
 - Vergleichsübersetzungen (`historical_comparison`) sind sprachgebunden. Welche Sprachen eine Übersetzungsschicht zum Vergleich zeigt, legt ihr Zielkontext fest (`comparison_languages` im `context`-Datensatz, Reihenfolge = Anzeige); ohne Angabe nur die eigene Sprache.
