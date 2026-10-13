@@ -2,6 +2,13 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.19 — 2026-10-13 — Ursprungswörter zum Anhören
+
+- Wunsch: Wo eine Erklärung sich auf ein griechisches, hebräisches oder aramäisches Wort bezieht, das Wort klein mit Aussprache und Anhören-Knopf zeigen.
+- Neues Feld `terms` (Sprache, Originalschrift, Umschrift, Bedeutung) für 15 Hintergrundnotizen und eine Deutung, z. B. ὑποκριτής «Schauspieler, Heuchler», aram. אַבָּא abba, hebr. מָחָר machar. Validator prüft die Felder; Regel in AGENTS.md ergänzt.
+- Griechische Einschübe in Erklärtexten erhalten automatisch Umschrift und Anhören-Knopf; ohne Urtext-Modus erscheint nur die Umschrift (statt wie bisher ausgeblendet zu werden).
+- Hebräisch/Aramäisch wird mit einer hebräischen Gerätestimme gesprochen; fehlt sie, liest eine deutsche Stimme die Umschrift.
+
 ## v0.18 — 2026-10-13 — Übersetzungsentscheidungen sichtbar
 
 - Frage: Wie stark beeinflussen bestehende Übersetzungen unsere Übersetzung? Antwort im Datenmodell: Übersetzungsentscheidungen (`decisions`) für Mt 6,9–13 und Lk 11,2–4, je als wörtlich, sprachlich angepasst, Deutungsentscheidung oder der vertrauten Wiedergabe folgend, mit wörtlicherer Fassung, weiteren Möglichkeiten und Begründung. Ausdrücklich vermerkt: «führe uns durch die Versuchung» gibt den Wortlaut nicht wieder (εἰς «hinein», μή verneint).

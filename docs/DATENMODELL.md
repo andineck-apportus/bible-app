@@ -1,6 +1,6 @@
 # Datenmodell: Ist-Stand und Ziel
 
-## Vorhandene Objekte in v0.18
+## Vorhandene Objekte in v0.19
 
 | Ordner | `type` | Anzahl | Aufgabe |
 |---|---|---:|---|
@@ -54,6 +54,9 @@ Eigene Handschriften-/Zeugenobjekte mit Korrekturschichten; eigenständige Lemma
 
 ## Übersetzungsentscheidungen und Vergleichsübersetzungen
 Eigene Arbeitsübersetzungen (`translation_kind: literal_original_working`) können `decisions` führen: je Stelle der deutsche Zieltext (`target`, muss im Übersetzungstext vorkommen), die Art (`literal` wörtlich, `adapted` sprachlich angepasst, `interpretive` Deutungsentscheidung, `traditional` folgt der vertrauten Wiedergabe), optional eine wörtlichere Fassung (`more_literal_de`), weitere Möglichkeiten (`other_options_de`) und eine Begründung. Der Validator prüft Art und Zieltext. Ältere gemeinfreie deutsche Übersetzungen liegen als `translation_kind: historical_comparison` nur für die ausgearbeiteten Verse vor und dienen ausschliesslich dem Vergleich.
+
+## Fachwörter (`terms`)
+Hintergrundnotizen und Deutungen können `terms` führen: Wörter der Ursprache, auf die der Text sich bezieht, mit `lang` (grc, heb, arc, lat), `word` (Originalschrift), `translit` (Pflicht ausser bei Griechisch, das automatisch umgeschrieben wird) und `de` (Bedeutung). Der Lesestrom zeigt sie mit Umschrift und Anhören-Knopf; griechische Einschübe im Fliesstext erhalten dasselbe automatisch.
 
 ## Studienprojektion
 Der Lesestrom erhält die ausgearbeiteten Abschnitte über `scripts/project_study.py` (alle Schlüssel kanonische Bibelstellen). Neue Abschnitte werden in `scripts/build_reading_stream.py` (Liste `SECTIONS`) eingetragen; die Daten selbst bleiben in `data/`.

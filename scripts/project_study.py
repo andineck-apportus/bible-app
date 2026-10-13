@@ -161,7 +161,7 @@ def project(section_ids):
         "findings": [{"id": k, "claim": v["claim_de"], "kind": v.get("kind"), "confidence": v.get("confidence"),
                       "subject": v.get("subject"), "caveat": v.get("confidence_rationale_de")} for k, v in sorted(fs.items())],
         "interpretations": [{"id": k, "claim": v["claim_de"], "confidence": v.get("confidence"), "caveat": v.get("caveat_de"),
-                             "counter": v.get("counterarguments_de", []), "subject": v.get("subject")}
+                             "counter": v.get("counterarguments_de", []), "subject": v.get("subject"), "terms": v.get("terms", [])}
                             for k, v in sorted(ins.items())],
         "principles": [{"id": k, "text": v["statement_de"], "confidence": v.get("confidence"),
                         "subject": subject_of_principle(v)} for k, v in sorted(prs.items())],

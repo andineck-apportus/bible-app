@@ -50,7 +50,7 @@ for p in sorted((ROOT / "data/background").glob("*.json")):
                        "chapter": f"{book}.{ch}", "from": int(v0), "to": int((z or a).split(".")[2]),
                        "ref_de": refs.display_de(ref), "readers": "READERS" in b["context"],
                        "evidence": [refs.display_de(r) for r in b.get("evidence_refs", [])],
-                       "sources": b.get("sources_de", []), "status": b["status"]})
+                       "sources": b.get("sources_de", []), "status": b["status"], "terms": b.get("terms", [])})
 
 
 def folder(name):
