@@ -77,6 +77,21 @@ def bad_decision(root):
     write(p, d)
 
 
+def bad_localization(root):
+    p = root / "data/localizations/gsw-u-sd-chzh/INT-LP-0001.json"
+    d = json.loads(p.read_text())
+    d["fields"]["counterarguments_de"] = d["fields"]["counterarguments_de"][:1]
+    d["fields"]["gibts_nicht_de"] = "x"
+    write(p, d)
+
+
+def stale_localization(root):
+    p = root / "data/findings/FIND-LP-0001.json"
+    d = json.loads(p.read_text())
+    d["claim_de"] += " (geändert)"
+    write(p, d)
+
+
 baseline = run(ROOT)
 assert baseline.returncode == 0, baseline.stdout + baseline.stderr
 case("Kern verweist auf NC", core_refs_nc, "verweist aus dem freien Kern auf NC-Datensatz")
@@ -88,4 +103,15 @@ case("Hintergrundnotiz ohne Kontext", bad_background, "ist kein context-Datensat
 case("Entscheidung ohne Zieltext", bad_decision, "Zieltext nicht in der Übersetzung")
 case("Entscheidung unbekannte Art", bad_decision, "unbekannte Art")
 case("Entscheidung falsches Griechisch", bad_decision, "nicht im Vers")
-print("PASS: validator negative tests (NC-Trennung, Annotation, Bewertung, Bibelstelle, Hintergrund, Übersetzungsentscheidung)")
+case("Lokalisierung Listenlänge", bad_localization, "passt nicht zum Original")
+case("Lokalisierung unbekanntes Feld", bad_localization, "fehlt im Original")
+with tempfile.TemporaryDirectory() as tmp:
+    root = pathlib.Path(tmp)
+    shutil.copytree(ROOT / "data", root / "data")
+    stale_localization(root)
+    res = run(root)
+    assert res.returncode == 0 and "FIND-LP-0001.json: Feld claim_de veraltet" in res.stdout, res.stdout[-500:]
+    sys.path.insert(0, str(ROOT / "scripts"))
+    import localizations
+    assert "claim_de" not in localizations.load_all(root).get("FIND-LP-0001", {}).get("gsw", {}), "veraltetes Feld ausgeliefert"
+print("PASS: validator negative tests (NC-Trennung, Annotation, Bewertung, Bibelstelle, Hintergrund, Übersetzungsentscheidung, Lokalisierung inkl. veraltet)")

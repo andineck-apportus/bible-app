@@ -176,6 +176,13 @@ click('[data-action=up]');assert(reader.textContent.includes('Es Gebät mit sibe
 assert(reader.querySelector('.alt-line[data-alternative="VAR-SBLGNTAPP-MAT-006-012-01"]').textContent.includes('vergänd'),'Mundart-Lesart im Text');
 click('[data-more="v39-6-11"]');assert(sheetHost.textContent.includes('Öises täglich Broot')&&sheetHost.textContent.includes('für de nööchscht Taag'),'Mundart-Entscheidung im Versblatt');
 sheetHost.querySelector('.sheet [data-source="VAR-SBLGNTAPP-MAT-006-013-01"]')||click('[data-close]');
+// Inhalte in Mundart (data/localizations): Deutungen, Befunde, Hintergrund, Zusammenfassungen, Lesarten-Erklärungen
+if(sheetHost.querySelector('.sheet'))click('[data-close]');
+click('[data-more="v39-6-11"]');sheetHost.querySelector('.sheet-tools [data-study="TU-MAT-006-009-013"]').click();
+assert(sheetHost.textContent.includes('Broot für de nööchscht Taag')&&sheetHost.textContent.includes('de folgendi Tag'),'Deutung und Wortbedeutung in Mundart');
+assert(!sheetHost.textContent.includes('Brot für den kommenden Tag'),'keine hochdeutsche Deutung im Mundart-Blatt');click('[data-close]');
+click('[data-more="v39-6-11"]');sheetHost.querySelector('.sheet-tools [data-background="TU-MAT-006-009-013"]').click();
+assert(/\b(isch|händ|de|vo)\b/.test(sheetHost.querySelector('.bg-note .body').textContent),'Hintergrund in Mundart');click('[data-close]');
 click('[data-action=menu]');click('[data-set="text"][data-value="de"]');click('[data-close]');
 assert.equal(reader.querySelector('[data-stream="v39-6-11"] .stream-copy').textContent,M().de['MAT.6.11'],'zurück zu Hochdeutsch');
 assert.equal(Object.keys(M().layers.gsw.text).length,31,'Mundart für alle 31 Verse');
