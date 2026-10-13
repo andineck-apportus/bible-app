@@ -2,6 +2,13 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.34 — 2026-10-13 — Hintergrund damals für alle 66 Bücher
+
+- 84 neue Hintergrundnotizen auf Buchebene (`scope: book`) für die 64 bisher fehlenden Bücher, für 20 Bücher mit einer zweiten Notiz (z. B. Genesis und altorientalische Fluterzählungen, Jesaja und die grosse Jesajarolle, Daniel und die Datierungsfrage, Markusschlüsse, Datierung der Offenbarung, Nord- oder Südgalatien). Je Notiz Entstehung, Zeit, Ort, Adressaten, die vertretenen Positionen (traditionell und historisch-kritisch, ohne Entscheid), «Nicht sicher», Belegstellen als Marken, ausserbiblische Quellen und Ursprachwörter; alle in Züridüütsch.
+- Autorenwerkzeug `scripts/authoring/hintergrund_buecher.py` mit Datenmodulen je Buchgruppe in `scripts/authoring/buecher/`; prüft Pflichtfelder, Kontexte, Marken, unmarkierte Stellen und Umschriften.
+- Entstehung: KI-Entwürfe (Claude), danach von einem getrennten KI-Durchgang auf Daten, Quellenangaben und Ausgewogenheit gegengelesen (11 Korrekturen, z. B. Esther/Nehemia in Qumran, Talmud zur Chronik, Sirach zu Jesaja, Luthers Jakobus-Vorrede, 𝔓52-Datierung). Die Gegenlesung konnte Webseiten teils nicht abrufen und stützt sich dann auf Kenntnis der Primärtexte. Keine fachliche Prüfung durch eine Person; Mundart nicht muttersprachlich geprüft.
+- Browserprüfung: Hintergrund auf Buchebene in Mundart.
+
 ## v0.33 — 2026-10-13 — Titus und Obadja als Muster (Griechisch und Hebräisch)
 
 - **Titus** (ganzer Brief, 46 Verse): SBLGNT-Text mit MACULA-Annotation (659 Wörter), 24 Variantenstellen mit Gesichertheitsbewertung, Handschriften 01, 02, 04 und 𝔓32 sowie fünf Ausgabentexte (CNTR) mit maschineller Zuordnung zu den Lesarten. Arbeitsübersetzungen Hochdeutsch und Züridüütsch aus dem Griechischen mit vollständiger Wortzuordnung, Übersetzungsentscheidungen und sieben Lesarten-Alternativen; Vergleich mit Luther 1912 und Elberfelder 1905.

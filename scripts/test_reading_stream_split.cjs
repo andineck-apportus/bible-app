@@ -30,6 +30,10 @@ server.listen(0,async()=>{const url=`http://localhost:${server.address().port}/i
     await ev(()=>document.querySelector('[data-action=down]').click());await wait();await ev(()=>document.querySelector('[data-action=down]').click());await wait();
     await ev(()=>document.querySelector('[data-overview="g5"]').click());await wait();
     assert((await ev(()=>document.querySelector('.sheet').innerText)).includes('Vier Verzellige vom Jesus'),'Hintergrund der Buchgruppe in Mundart');
+    await ev(()=>document.querySelector('[data-close]').click());await ev(()=>document.querySelector('[data-action=down]').click());await wait();
+    await ev(()=>document.querySelector('[data-overview="b39"]').click());await wait();
+    const gen=await ev(()=>document.querySelector('.sheet').innerText);
+    assert(gen.includes('Matthäus: Verfasser, Ziit und Gmeind')&&!gen.includes('[['),'Hintergrund auf Buchebene (Matthäus) in Mundart');
     assert.deepEqual(errs,[],'keine Skriptfehler');
     console.log(`PASS: aufgeteilte Fassung lädt nach Bedarf (${process.argv[2]||'reading-stream'}, ${reqs.length} Pakete: ${reqs.join(', ')}).`);
   }finally{await b.close();server.close();}});
