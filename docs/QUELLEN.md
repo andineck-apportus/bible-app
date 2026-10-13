@@ -4,6 +4,8 @@
 
 Stand: 2026-10-09, recherchiert über die Websites der Anbieter. Mit [ungeprüft] markierte Angaben konnten nicht an einer Primärquelle bestätigt werden. Lizenzen ändern sich: vor jedem Import die aktuelle Lizenz der konkreten Fassung prüfen und im Quellendatensatz festhalten (AGENTS.md).
 
+Die laufend gepflegte Übersicht steht im Quellenkatalog (`data/sources/`) und als [Quellenkarte](../app/quellenkarte/index.html); Anfragen an Rechteinhaber in [ANFRAGEN.md](ANFRAGEN.md). Dieses Dokument bleibt die ausführliche Recherche.
+
 ## Rechte-Ampel
 
 | Zeichen | Bedeutung für das Projekt |

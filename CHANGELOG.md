@@ -2,6 +2,13 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.37 — 2026-10-13 — Quellenkatalog, Quellenkarte, Anfragen
+
+- **Quellenkatalog:** 66 Quellen als `source`-Datensätze mit `catalog` (Bereich, Schicht, Nutzungsrecht frei/BY-SA/nicht kommerziell/auf Anfrage/geschützt, Verwendung verwendet/zitiert/vorgesehen/nicht verwendet, Begründung). Die sechs bestehenden Quelldatensätze sind ergänzt, nicht ersetzt. Werkzeug `scripts/authoring/quellen_katalog.py`.
+- **Immer aktuell:** Der Validator verlangt, dass jede Herkunftsadresse in Datensätzen im Katalog steht, verwendete Quellen auf vorhandene Dateien zeigen und keine nicht kommerzielle oder geschützte Quelle im freien Kern als verwendet gilt (mit Negativtests).
+- **Quellenkarte** `app/quellenkarte/index.html`, erzeugt aus dem Katalog (`scripts/build_source_map.py`); im Lesestrom als Blatt «Quellen und Rechte» im Menü, mit Filtern und Begründung je Quelle.
+- **Anfragen** [docs/ANFRAGEN.md](docs/ANFRAGEN.md): Rechteinhaber nach Nutzen geordnet, mit Kontakt, Prüfdatum und Entwürfen (DBG, INTF, CATSS, UBS, Crossway, Bildrechte); Abschnitt zur Rolle eines gemeinnützigen Vereins. «Erlaubnis» und «Anfrage» sind zu einer Klasse zusammengefasst.
+
 ## v0.36 — 2026-10-13 — Verszählung des Alten Testaments umgerechnet
 
 - Umrechnung der hebräischen Verszählung (WLC) in die Navigationszählung (KJV) nach TVTMS (`scripts/versification.py`), eingebaut in den MACULA-Hebrew-Import. Für alle 39 Bücher geprüft (`scripts/check_versification_ot.py`): nach der Umrechnung stimmen alle Kapitel mit der Navigation überein; Neh 7,68 fehlt im hebräischen Text und bleibt leer. Damit kann jedes Buch des Alten Testaments importiert und übersetzt werden.

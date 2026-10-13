@@ -1,0 +1,167 @@
+<title>Quellenkarte bible-app</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,650&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: Schichten (Zeugen → Editionen → Sprachdaten …) als Zeilen, Bereiche (AT, LXX, NT, Versionen) als Spalten; Farbe = Nutzungsrecht, Punkt = Verwendung */
+:root{
+  --bg:#f6f5f1; --panel:#ffffff; --fg:#1f2321; --muted:#5d6560; --line:#dcdcd4;
+  --free:#2e7a4b; --free-bg:#e3f1e7;
+  --sa:#2b7d7a; --sa-bg:#ddf0ee;
+  --nc:#2f5fa8; --nc-bg:#e2eaf7;
+  --ask:#9a6a00; --ask-bg:#f8edcf;
+  --prot:#b03a2e; --prot-bg:#f6e0dc;
+  --display:"Literata",Georgia,serif; --body:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141716; --panel:#1c201e; --fg:#e7ebe8; --muted:#9aa49e; --line:#2f3532;
+  --free:#6cc58f; --free-bg:#1d3326; --sa:#62c4bf; --sa-bg:#18322f; --nc:#8cb0ef; --nc-bg:#1c2639;
+  --ask:#e2b552; --ask-bg:#352b14; --prot:#ef8a7e; --prot-bg:#3a1f1b; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141716; --panel:#1c201e; --fg:#e7ebe8; --muted:#9aa49e; --line:#2f3532;
+  --free:#6cc58f; --free-bg:#1d3326; --sa:#62c4bf; --sa-bg:#18322f; --nc:#8cb0ef; --nc-bg:#1c2639;
+  --ask:#e2b552; --ask-bg:#352b14; --prot:#ef8a7e; --prot-bg:#3a1f1b; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:15px/1.5 var(--body)}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:16px;padding-block:28px 48px;display:grid;gap:28px}
+h1{font:650 clamp(26px,4vw,38px)/1.15 var(--display);margin:0;text-wrap:balance}
+h2{font:650 20px/1.25 var(--display);margin:0;text-wrap:balance}
+.lede{color:var(--muted);max-width:68ch;margin:6px 0 0}
+.legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}
+.key{display:flex;gap:10px;align-items:flex-start;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+.sw{flex:none;width:14px;height:14px;border-radius:3px;margin-top:4px}
+.key b{display:block;font-weight:600}
+.key span{color:var(--muted);font-size:13px}
+.free{--c:var(--free);--cb:var(--free-bg)} .sa{--c:var(--sa);--cb:var(--sa-bg)} .nc{--c:var(--nc);--cb:var(--nc-bg)}
+.ask{--c:var(--ask);--cb:var(--ask-bg)} .prot{--c:var(--prot);--cb:var(--prot-bg)}
+.sw{background:var(--c)}
+.use{display:flex;flex-wrap:wrap;gap:8px 20px;color:var(--muted);font-size:13px;align-items:center}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;vertical-align:-1px;margin-right:6px}
+.dot.used{background:var(--fg)} .dot.cited{background:linear-gradient(90deg,var(--fg) 50%,transparent 50%);border:1px solid var(--fg);box-sizing:border-box} .dot.nc{border:2px solid var(--fg);width:10px;height:10px;box-sizing:border-box} .dot.none{border:1px dashed var(--muted);box-sizing:border-box}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.filters button{font:500 13px var(--body);color:var(--fg);background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:6px 12px;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.filters button:focus-visible{outline:2px solid var(--nc);outline-offset:2px}
+.map{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;min-width:880px}
+th,td{vertical-align:top;border-bottom:1px solid var(--line);padding:10px}
+thead th{font:600 12px var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:left;position:sticky;top:0;background:var(--panel)}
+tbody th{text-align:left;width:150px;font:600 14px/1.3 var(--display)}
+tbody th small{display:block;font:400 12px/1.35 var(--body);color:var(--muted);margin-top:4px}
+td + td, th + th{border-left:1px solid var(--line)}
+.cell{display:flex;flex-direction:column;gap:6px}
+.src{background:var(--cb);border-left:3px solid var(--c);border-radius:4px;font-size:13px;line-height:1.35}
+.src .u{grid-row:span 2;margin-top:3px}
+.src .n{font-weight:600}
+.src .l{font:500 11px var(--mono);color:var(--c);letter-spacing:.02em}
+.src.dim{opacity:.18}
+details.src{display:block;padding:0}
+details.src summary{list-style:none;display:grid;grid-template-columns:auto 1fr;gap:2px 8px;align-items:start;padding:6px 8px;cursor:pointer}
+details.src summary::-webkit-details-marker{display:none}
+details.src summary:focus-visible{outline:2px solid var(--c);outline-offset:1px}
+details.src .why{padding:0 8px 8px 26px;color:var(--fg);display:grid;gap:4px}
+details.src .why a{color:var(--c)}
+details.src .why small{color:var(--muted)}
+.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.note{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;display:grid;gap:8px}
+.note p{margin:0}
+.note ul{margin:0;padding-left:18px;display:grid;gap:4px}
+.qa{border-color:var(--nc)}
+.foot{color:var(--muted);font-size:12.5px;max-width:90ch}
+.counts{font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:no-preference){.src{transition:opacity .15s}}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Quellenkarte: Was es gibt, was wir dürfen, was wir nutzen</h1>
+    <p class="lede">Alle bekannten Quellen zum Urtext der Bibel, nach Schicht und Bereich. Die Farbe zeigt die Nutzungsbedingungen, der Punkt zeigt, ob die Quelle im Projekt verwendet wird. Antippen zeigt, wofür wir eine Quelle nutzen oder weshalb (noch) nicht. Erzeugt aus dem Quellenkatalog (<code>data/sources/</code>), Stand __DATE__.</p>
+  </header>
+
+  <section class="legend" aria-label="Legende Nutzungsrecht">
+    <div class="key free"><i class="sw"></i><div><b>Grün · frei</b><span>Gemeinfrei (PD), CC0, CC BY. Übernahme mit Namensnennung.</span></div></div>
+    <div class="key sa"><i class="sw"></i><div><b>Türkis · frei, gleiche Lizenz</b><span>CC BY-SA. Frei, Bearbeitungen aber unter derselben Lizenz.</span></div></div>
+    <div class="key nc"><i class="sw"></i><div><b>Blau · nicht kommerziell</b><span>CC BY-NC (-SA). Erlaubt für den Verein, nur in <code>data-nc/</code>.</span></div></div>
+    <div class="key ask"><i class="sw"></i><div><b>Gelb · auf Anfrage</b><span>Lesen frei oder Lizenz verhandelbar. Übernahme nur mit schriftlicher Erlaubnis.</span></div></div>
+    <div class="key prot"><i class="sw"></i><div><b>Rot · geschützt</b><span>Kauf oder Abo. Nur zitieren mit Fundstelle.</span></div></div>
+  </section>
+
+  <div class="use" aria-label="Legende Verwendung">
+    <span><i class="dot used"></i>im Projekt verwendet</span>
+    <span><i class="dot cited"></i>nur zitiert</span><span><i class="dot nc"></i>vorgesehen für <code>data-nc/</code>, noch nicht importiert</span>
+    <span><i class="dot none"></i>nicht verwendet</span>
+    <span class="counts" id="counts"></span>
+  </div>
+
+  <div class="filters" role="group" aria-label="Filter">
+    <button type="button" id="f-all" data-f="all" aria-pressed="true">Alle</button>
+    <button type="button" id="f-used" data-f="used" aria-pressed="false">Nur verwendete</button>
+    <button type="button" id="f-free" data-f="free" aria-pressed="false">Nur frei (grün, türkis)</button>
+    <button type="button" id="f-nc" data-f="nc" aria-pressed="false">Nur nicht kommerziell</button>
+    <button type="button" id="f-closed" data-f="closed" aria-pressed="false">Nur Anfrage oder geschützt</button>
+  </div>
+
+  <div class="map"><table id="map"><thead></thead><tbody></tbody></table></div>
+
+  <section class="notes">
+    <div class="note qa">
+      <h2>Sind Qumran und die Septuaginta nicht kommerziell nutzbar?</h2>
+      <p><b>Ja.</b> Beide gibt es als maschinenlesbare Daten unter einer nicht kommerziellen Lizenz. Für unseren gemeinnützigen Verein sind sie erlaubt, gehören aber nach unserem Lizenzgrundsatz in <code>data-nc/</code>, getrennt vom freien Kern.</p>
+      <ul>
+        <li><b>Qumran:</b> ETCBC «dss», biblische und nichtbiblische Rollen nach Martin Abeggs Transkription, mit Morphologie. CC BY-NC 4.0.</li>
+        <li><b>Septuaginta:</b> Rahlfs 1935 mit Morphologie aus CATSS (Eliran Wong, CC BY-NC-SA 4.0). Verlangt zusätzlich die unterschriebene CATSS-Nutzungserklärung. Diese muss die verantwortliche Person des Vereins einreichen.</li>
+        <li>Die <b>Bilder</b> der Qumranrollen (Leon Levy Library) sind dagegen nur auf Anfrage nutzbar.</li>
+      </ul>
+      <p>Beides ist noch nicht importiert; das ist der nächste Schritt für die Textkritik des Alten Testaments.</p>
+    </div>
+    <div class="note">
+      <h2>Was das Bild zeigt</h2>
+      <ul>
+        <li>Für <b>Text, Grammatik und Satzbau</b> von hebräischem AT und griechischem NT sind wir mit freien Quellen sehr gut ausgestattet.</li>
+        <li>Die grosse Lücke ist der <b>kuratierte textkritische Apparat</b>: NA28, ECM, BHS/BHQ und Göttinger Septuaginta sind geschützt. Wir dürfen sie lesen und zitieren, aber nicht als Daten übernehmen.</li>
+        <li>Die <b>Septuaginta</b> ist nur nicht kommerziell als Daten zu haben. Swete ist gemeinfrei, aber nicht frei digital erschlossen.</li>
+        <li>Die grossen <b>Lexika</b> (BDAG, HALOT) sind geschützt; frei sind ältere oder knappere Werke.</li>
+      </ul>
+    </div>
+    <div class="note">
+      <h2>Weshalb werden manche freie Quellen noch nicht genutzt?</h2>
+      <ul>
+        <li><b>Doppelt vorhanden:</b> Mehrere Quellen beruhen auf derselben Grundlage. Wir nehmen die freiere (MACULA statt OpenGNT oder TAHOT, WLC statt UXLC).</li>
+        <li><b>Die App zeigt diese Schicht noch nicht:</b> Lexika, alte Übersetzungen (Vulgata, koptisch) und Kirchenväter brauchen eigene Ansichten.</li>
+        <li><b>Erst bei bestimmten Büchern nötig:</b> IGNTP für Johannes, der Samaritanus für die fünf Bücher Mose.</li>
+        <li><b>Aufwand:</b> Die NTVMR-Schnittstelle erschliesst viel mehr Handschriften als CNTR, muss aber erst angebunden werden.</li>
+      </ul>
+      <p>Die Begründung je Quelle steht beim Antippen.</p>
+    </div>
+  </section>
+
+  <p class="foot">Lizenzangaben nach den Websites der Anbieter (Recherche 9. und 13. Oktober 2026, siehe <code>docs/QUELLEN.md</code>); Angaben, die in QUELLEN.md als [ungeprüft] markiert sind, gelten auch hier als ungeprüft. Vor jedem Import wird die Lizenz der konkreten Fassung erneut geprüft. Keine Rechtsberatung.</p>
+</div>
+
+<script>
+const CAT=/*CATALOG*/;
+const AREAS=[["at","AT hebräisch"],["lxx","Septuaginta"],["nt","NT griechisch"],["versions","Alte Übersetzungen, Väter"],["all","Übergreifend"]];
+const LAYERS=[["manuscripts","Handschriften","Die Zeugen selbst: Bilder und Transkriptionen"],["editions","Kritische Editionen","Rekonstruierter Text mit Apparat"],["language_data","Sprachdaten","Morphologie, Lemma, Syntax, Glossen"],["lexica","Lexika","Wortbedeutung"],["context","Kontext","Zeitgenössische Literatur, Inschriften"],["translations","Übersetzungen","Vergleich, nie Beleg für eine Lesart"],["aux","Hilfsdaten","Verszählung, Querverweise"]];
+const thead=document.querySelector('#map thead'),tbody=document.querySelector('#map tbody');
+thead.innerHTML='<tr><th>Schicht</th>'+AREAS.map(a=>`<th>${a[1]}</th>`).join('')+'</tr>';
+const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const USE={used:'im Projekt verwendet',cited:'nur zitiert',nc_planned:'vorgesehen für data-nc',not_used:'nicht verwendet'};
+const DOT={used:'used',cited:'cited',nc_planned:'nc',not_used:'none'};
+tbody.innerHTML=LAYERS.map(([lk,ln,ld])=>{
+  const cells=AREAS.map(([ak])=>{
+    const items=CAT.filter(s=>s.area===ak&&s.layer===lk);
+    return '<td><div class="cell">'+items.map(s=>`<details class="src ${s.rights}" data-c="${s.rights}" data-u="${s.use}"><summary><i class="dot ${DOT[s.use]} u" aria-label="${USE[s.use]}"></i><span class="n">${esc(s.title)}</span><span class="l">${esc(s.license)} · ${USE[s.use]}</span></summary><div class="why"><span>${esc(s.why)}</span>${s.url?`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.url.replace(/^https?:\/\//,''))}</a>`:''}<small>${esc(s.id)}</small></div></details>`).join('')+'</div></td>';
+  }).join('');
+  return `<tr><th>${ln}<small>${ld}</small></th>${cells}</tr>`;
+}).join('');
+const n=k=>CAT.filter(s=>s.use===k).length;
+document.getElementById('counts').textContent=`${CAT.length} Quellen · ${n('used')} verwendet · ${n('cited')} zitiert · ${n('nc_planned')} für data-nc vorgesehen`;
+const btns=[...document.querySelectorAll('.filters button')];
+btns.forEach(b=>b.addEventListener('click',()=>{
+  btns.forEach(x=>x.setAttribute('aria-pressed',x===b));
+  const f=b.dataset.f;
+  document.querySelectorAll('.src').forEach(el=>{
+    const c=el.dataset.c,u=el.dataset.u;
+    const show=f==='all'||(f==='used'&&u==='used')||(f==='free'&&(c==='free'||c==='sa'))||(f==='nc'&&c==='nc')||(f==='closed'&&(c==='ask'||c==='prot'));
+    el.classList.toggle('dim',!show);
+  });
+}));
+</script>

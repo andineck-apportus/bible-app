@@ -2,7 +2,7 @@
 
 Git-versionierter Bibel-Wissensfundus: Quellen, Textbefunde, konkurrierende Interpretationen, Prinzipien und kontextabhängige Anwendungen nachvollziehbar miteinander verbinden.
 
-**Stand: 13. Oktober 2026 · UI v0.35 (Lesestrom) · Urtext: Matthäus, Markus, Lukas, Philipper, Titus (Griechisch), Rut, Obadja (Hebräisch); ausgearbeitet: Markus 3,20–35, das Vaterunser (Mt 6,5–15; Lk 11,1–4) sowie Rut, Obadja, Philipper und Titus ganz. Der Lesetext geht immer vom Urtext aus.**
+**Stand: 13. Oktober 2026 · UI v0.37 (Lesestrom) · Urtext: Matthäus, Markus, Lukas, Philipper, Titus (Griechisch), Rut, Obadja (Hebräisch); ausgearbeitet: Markus 3,20–35, das Vaterunser (Mt 6,5–15; Lk 11,1–4) sowie Rut, Obadja, Philipper und Titus ganz. Der Lesetext geht immer vom Urtext aus.**
 
 Dies ist der Konzept- und Datenprototyp, noch keine fertige Benutzer-App. Vorhanden sind 4509 strukturierte Datensätze, darunter:
 - der **ganze griechische Text des Markusevangeliums** (SBLGNT, 11 286 Wörter mit stabilen IDs) mit Lemma, Morphologie, Syntaxrollen, Referenten und Glossen aus MACULA Greek als eigener Annotationsschicht,
@@ -20,6 +20,7 @@ Der frühere Studienprototyp `app/prototype/mk3-20-35.html` (v0.9/v0.10) ist abg
 |---|---|
 | [docs/VISION.md](docs/VISION.md) | Vision in vier Stufen: transparente Textbasis, Übertragung, Zoomstufen und Studienanleitung, Visualisierung und UX |
 | [LIZENZEN.md](LIZENZEN.md) | Eigene Inhalte CC0; freier Kern und Studienschicht; Lizenzen übernommener Fremddaten |
+| [Quellenkarte](app/quellenkarte/index.html) | Alle bekannten Quellen nach Schicht, Nutzungsrecht und Verwendung (aus `data/sources/`); Anfragen an Rechteinhaber: [docs/ANFRAGEN.md](docs/ANFRAGEN.md) |
 | [docs/GESICHERTHEIT.md](docs/GESICHERTHEIT.md) | Wie Unterschiede ausgegeben und nach Gesichertheit bewertet werden |
 | [CHANGELOG.md](CHANGELOG.md) | Änderungen und Entwicklung von v0.1 bis heute |
 | [docs/KONZEPT.md](docs/KONZEPT.md) | Ziel, Analyseebenen, Zoom-System und Kontextdimensionen |

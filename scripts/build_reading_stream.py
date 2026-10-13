@@ -230,6 +230,9 @@ core_xref = {**xref_payload, "verses": {}}
 manifest = {"books": sorted({n.split("/")[1] for n in bundles if n.startswith("b/")}),
             "lang": {lg: sorted(n.split("/")[2] for n in bundles if n.startswith(f"l/{lg}/")) for lg in langs}}
 
+sys.path.insert(0, str(ROOT / "scripts"))
+from build_source_map import catalog as _catalog  # noqa: E402
+catalog = [{k: v for k, v in s.items() if k != "checked"} for s in _catalog()]
 template = (ROOT / "app/reading-stream/template.html").read_text(encoding="utf-8")
 dump = lambda o: json.dumps(o, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 
@@ -238,7 +241,7 @@ def page(inline):
     t = template
     for marker, payload in (("/*__STUDY__*/null", core_study), ("/*__NAV__*/null", nav), ("/*__SUMMARIES__*/null", core_sums),
                             ("/*__BACKGROUND__*/null", []), ("/*__SOURCES__*/null", core_src), ("/*__XREF__*/null", core_xref),
-                            ("/*__MANIFEST__*/null", manifest), ("/*__INLINE__*/null", inline)):
+                            ("/*__MANIFEST__*/null", manifest), ("/*__INLINE__*/null", inline), ("/*__CATALOG__*/null", catalog)):
         assert t.count(marker) == 1, marker
         t = t.replace(marker, dump(payload))
     return t

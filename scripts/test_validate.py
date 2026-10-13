@@ -130,4 +130,29 @@ with tempfile.TemporaryDirectory() as tmp:
     sys.path.insert(0, str(ROOT / "scripts"))
     import localizations
     assert "claim_de" not in localizations.load_all(root).get("FIND-LP-0001", {}).get("gsw", {}), "veraltetes Feld ausgeliefert"
-print("PASS: validator negative tests (NC-Trennung, Annotation, Bewertung, Bibelstelle, Hintergrund, Übersetzungsentscheidung, Lokalisierung inkl. veraltet, Stellen-Marken, Überschneidung)")
+def uncatalogued(root):
+    p = root / "data/sources/SRC-LUTHER-1912.json"
+    d = json.loads(p.read_text())
+    d["catalog"]["urls"] = []
+    write(p, d)
+
+
+def used_without_files(root):
+    p = root / "data/sources/SRC-STEP-TVTMS.json"
+    d = json.loads(p.read_text())
+    d["catalog"]["used_in"] = ["data/versification/NICHTS-*.json"]
+    write(p, d)
+
+
+def nc_in_core(root):
+    p = root / "data/sources/SRC-ETCBC-DSS.json"
+    d = json.loads(p.read_text())
+    d["catalog"].update({"use": "used", "used_in": ["data/versification/VRS-TVTMS-*.json"]})
+    write(p, d)
+
+
+case("Herkunft nicht im Quellenkatalog", uncatalogued, "fehlt im Quellenkatalog")
+case("Verwendete Quelle ohne Dateien", used_without_files, "passt auf keine Datei")
+case("NC-Quelle im freien Kern", nc_in_core, "nicht kommerzielle Quelle im freien Kern")
+
+print("PASS: validator negative tests (NC-Trennung, Annotation, Bewertung, Bibelstelle, Hintergrund, Übersetzungsentscheidung, Lokalisierung inkl. veraltet, Stellen-Marken, Überschneidung, Quellenkatalog)")
