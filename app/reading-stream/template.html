@@ -48,7 +48,18 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 /* Verse: fliessender Text */
 #bible-stream .stream-entry.verse{border:0;padding:0 0 .55em}
 #bible-stream .chapter-head{font:400 30px/1.15 var(--ui);letter-spacing:-.4px;margin:30px 0 4px}
-#bible-stream .part-head{font:italic 400 calc(var(--read) * .95)/1.4 var(--serif);color:var(--muted);margin:22px 0 10px}
+#bible-stream .part-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:22px 0 10px}
+#bible-stream .part-head h3{font:italic 400 calc(var(--read) * .95)/1.4 var(--serif);color:var(--muted);margin:0}
+#bible-stream .part-tools{display:inline-flex;gap:4px;margin:0}
+#bible-stream h2+.part-tools{margin:-4px 0 10px}
+#bible-stream .tool{display:inline-flex!important;align-items:center;gap:5px;padding:5px 8px!important;font:500 12px/1 var(--ui);color:var(--muted);border-radius:999px!important}
+#bible-stream .tool svg{width:16px;height:16px}
+#bible-stream .tool:hover,#bible-stream .tool:active{color:var(--ink);background:var(--soft)}
+#bible-stream button.vno.more{display:inline-grid!important;place-items:center;min-width:1.9em;height:1.9em;padding:0 3px!important;margin:0 5px 0 -2px;border:1px solid var(--rule)!important;border-radius:999px!important;vertical-align:.25em;color:var(--ink);font:500 11px/1 var(--ui)}
+#bible-stream button.vno.more:hover,#bible-stream button.vno.more:active{background:var(--soft)}
+#bible-stream button.dec{display:inline!important;padding:0!important;font:inherit;color:inherit;background:none;border:0!important;cursor:pointer;text-align:inherit}
+#bible-stream .bg-lines{display:flex;flex-wrap:wrap;align-items:center;gap:2px 10px;margin:0 0 8px 1.6em;color:var(--muted)}
+#bible-stream .bg-label svg{width:14px;height:14px;vertical-align:-2px}
 #bible-stream .verse-line{font:400 var(--read)/1.75 var(--serif);margin:0}
 #bible-stream .vno{font:500 11px/1 var(--ui);color:var(--muted);vertical-align:.6em;margin-right:4px;font-variant-numeric:tabular-nums}
 #bible-stream .placeholder .stream-copy{color:var(--muted);font-size:calc(var(--read) * .8)}
@@ -91,7 +102,7 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .wit[open] summary{border-bottom:0}
 #bible-stream .wit>p{margin:4px 0 4px 3.3em}
 #bible-stream .sheet a{color:inherit;text-decoration:underline;text-decoration-color:var(--rule)}
-#bible-stream .bg-line{display:block;margin:2px 0 6px 1.6em;padding:2px 0;font-size:14px;color:var(--muted);text-align:left;border-bottom:1px dotted var(--rule)!important}
+#bible-stream .bg-line{display:inline;padding:2px 0;font-size:13px;color:var(--muted);text-align:left;border-bottom:1px dotted var(--rule)!important}
 #bible-stream .bg-topic{font:500 16px/1.35 var(--ui);margin:0}
 
 #bible-stream .load{display:block;margin:24px auto 0;font-size:13px;color:var(--muted)}
@@ -173,7 +184,7 @@ const ui={
   deeper:['Zu den Testamenten','Zu den Buchgruppen','Zu den Büchern','Zu den Kapiteln','Zu den Abschnitten','Text lesen'],
   noSummary:'Zu diesem Kapitel gibt es noch keine Zusammenfassung.',noPart:'Für diesen Abschnitt gibt es noch keine Zusammenfassung.',placeholder:'Text noch nicht eingebunden',
   verses:'Verse',loadNext:'Weiterlesen',loadPrev:'Früheres anzeigen',end:'Ende',empty:'Kein passendes Buch und keine gültige Bibelstelle.',
-  example:'Ausgearbeitet',examples:'Ausgearbeitete Stellen',understand:'Diesen Abschnitt verstehen',background:'Hintergrund damals',toSource:'Bis zur Quelle',then:'Damals',more:'Mehr zu Vers',
+  example:'Ausgearbeitet',examples:'Ausgearbeitete Stellen',understand:'Diesen Abschnitt verstehen',toolUnderstand:'Verstehen',toolHistory:'Geschichte',background:'Hintergrund damals',toSource:'Bis zur Quelle',then:'Damals',more:'Mehr zu Vers',
   colors:'Farben',auto:'Auto',light:'Hell',dark:'Dunkel',size:'Textgrösse',language:'Sprache der Bedienung',
   advanced:'Urtext und Details',advancedSub:'Für Fortgeschrittene: Griechisch Wort für Wort, Grammatik, Vergleich der Textausgaben, Quellen.',
   inline:'Andere Lesarten im Text zeigen',inlineSub:'Zeigt unter einem Vers, wo alte Handschriften anders lauten.',bgInline:'Hintergrund im Text zeigen',translit:'Umschrift zeigen',translitSub:'Griechische Wörter zusätzlich in unserer Schrift, z. B. ponēroú.',pron:'Aussprache',pronSub:'Neugriechisch: Stimme des Geräts. Schulaussprache: wie im Theologiestudium üblich, gelesen von einer deutschen Stimme. Beides nähert die Aussprache zur Zeit Jesu nur an.',pronModern:'Neugriechisch',pronSchool:'Schulaussprache',voice:'Stimme',voiceAuto:'Automatisch',noVoice:'Auf diesem Gerät ist keine passende Stimme installiert. In den Systemeinstellungen lassen sich Stimmen nachladen (z. B. Griechisch).',rate:'Tempo',slow:'Langsam',normal:'Normal',sample:'Probe anhören',bgInlineSub:'Zeigt unter einem Vers kurze Hinweise auf Zeit, Ort und Kultur damals.',about:'Über diese Fassung'},
@@ -182,7 +193,7 @@ const ui={
   deeper:['Testaments','Book groups','Books','Chapters','Passages','Read the text'],
   noSummary:'No summary for this chapter yet.',noPart:'No summary for this passage yet.',placeholder:'Text not yet available',
   verses:'verses',loadNext:'Continue reading',loadPrev:'Show earlier',end:'End',empty:'No matching book or valid reference.',
-  example:'Worked out',examples:'Worked passages',understand:'Understand this passage',background:'Background then',toSource:'Trace to the source',then:'Back then',more:'More on verse',
+  example:'Worked out',examples:'Worked passages',understand:'Understand this passage',toolUnderstand:'Understand',toolHistory:'History',background:'Background then',toSource:'Trace to the source',then:'Back then',more:'More on verse',
   colors:'Colours',auto:'Auto',light:'Light',dark:'Dark',size:'Text size',language:'Interface language',
   advanced:'Original text and details',advancedSub:'For advanced readers: Greek word by word, grammar, edition comparison, sources.',
   inline:'Show other readings in the text',inlineSub:'Shows below a verse where old manuscripts differ.',bgInline:'Show background in the text',translit:'Show transliteration',translitSub:'Greek words also in Latin letters, e.g. ponēroú.',pron:'Pronunciation',pronSub:'Modern Greek: device voice. Academic: as commonly taught, read by a German voice. Both only approximate first-century pronunciation.',pronModern:'Modern Greek',pronSchool:'Academic',voice:'Voice',voiceAuto:'Automatic',noVoice:'No matching voice installed on this device.',rate:'Speed',slow:'Slow',normal:'Normal',sample:'Play sample',bgInlineSub:'Shows short notes on time, place and culture below a verse.',about:'About this version'}};
@@ -206,7 +217,7 @@ function search(q){q=q.trim();if(!q)return[];const match=q.match(/^(.+?)\s*(\d+)
 
 /* ---------- Hilfen ---------- */
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const ICONS={'arrow-up':'M12 19V5m-6 6 6-6 6 6','arrow-down':'M12 5v14m-6-6 6 6 6-6','chevron-right':'m9 6 6 6-6 6','menu':'M4 7h16M4 12h16M4 17h16','list':'M9 6h11M9 12h11M9 18h11M4 6h1M4 12h1M4 18h1','plus':'M12 6v12M6 12h12','x':'m6 6 12 12M6 18 18 6','speak':'M11 5 6 9H3v6h3l5 4zM15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13'};
+const ICONS={'arrow-up':'M12 19V5m-6 6 6-6 6 6','arrow-down':'M12 5v14m-6-6 6 6 6-6','chevron-right':'m9 6 6 6-6 6','menu':'M4 7h16M4 12h16M4 17h16','list':'M9 6h11M9 12h11M9 18h11M4 6h1M4 12h1M4 18h1','plus':'M12 6v12M6 12h12','x':'m6 6 12 12M6 18 18 6','speak':'M11 5 6 9H3v6h3l5 4zM15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13','understand':'M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1 2V16h5.2v-.2c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z','history':'M3 12a9 9 0 1 0 3-6.7M3 4v4h4M12 7v5l3 2'};
 /* ---------- Umschrift (Griechisch → lateinische Schrift) ----------
    Wissenschaftliche Umschrift nach dem Muster des SBL-Handbuchs: η = ē, ω = ō, θ = th, φ = ph, χ = ch, ψ = ps,
    υ = y (in Diphthongen u), γγ/γκ/γξ/γχ = ng/nk/nx/nch, Spiritus asper = h, betonte Silbe (Akut/Zirkumflex, nur die erste je Wort) als Akut. */
@@ -251,15 +262,26 @@ const voicesFor=prefix=>{try{return synth?synth.getVoices().filter(v=>v.lang.toL
 const pronLang=kind=>S.pron==='school'&&kind==='el'?'de':kind;
 const monotonic=t=>t.normalize('NFD').replace(/[\u0313\u0314\u0345]/g,'').replace(/[\u0300\u0342]/g,'\u0301').normalize('NFC').replace(/[⸀-⸅=~+%^&*\/\\|]/g,'');
 const schoolText=t=>translit(t).replace(/ē/g,'ä').replace(/ō/g,'o').replace(/ou/g,'u').replace(/y/g,'ü').replace(/ph/g,'f').replace(/th/g,'t').normalize('NFD').replace(/[\u0301]/g,'').normalize('NFC');
+// Umschrift so vereinfachen, dass eine deutsche Stimme sie lesen kann (ḥ → ch, š → sch, Längen und Hauchzeichen weg)
+const sayable=t=>String(t||'').replace(/ḥ/g,'ch').replace(/š/g,'sch').replace(/ṣ/g,'z').replace(/ṭ/g,'t').replace(/[ʿʾ’']/g,'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').normalize('NFC');
+function utter(text,lg){const vs=voicesFor(lg),v=vs.find(x=>x.name===(S.voice||{})[lg])||vs[0];const u=new SpeechSynthesisUtterance(text);if(v)u.voice=v;u.lang=v?v.lang:({el:'el-GR',he:'he-IL',de:'de-DE'})[lg];u.rate=S.rate;return {u,found:vs.length>0};}
 function speak(text,kind,fallback){
   const live=app.querySelector('.live'),L=lang==='de';
   if(!synth||!globalThis.SpeechSynthesisUtterance){live.textContent=L?'Dieser Browser kann nicht vorlesen.':'This browser cannot read aloud.';return;}
-  let lg=pronLang(kind||'el'),vs=voicesFor(lg);if(!vs.length&&kind==='he'&&fallback){lg='de';vs=voicesFor('de');text=fallback;}
-  const v=vs.find(x=>x.name===(S.voice||{})[lg])||vs[0];
-  const u=new SpeechSynthesisUtterance(lg==='de'?(kind==='he'?text:schoolText(text)):(kind==='he'?text:monotonic(text)));
-  if(v)u.voice=v;u.lang=v?v.lang:({el:'el-GR',he:'he-IL',de:'de-DE'})[lg];u.rate=S.rate;
-  synth.cancel();synth.speak(u);
-  if(!vs.length)live.textContent=L?'Auf diesem Gerät ist keine passende Stimme installiert; der Browser versucht es mit einer Ersatzstimme.':'No matching voice installed.';
+  synth.cancel();
+  const viaGerman=()=>{const {u}=utter(sayable(fallback||translit(text)||text),'de');synth.speak(u);};
+  kind=kind||'el';
+  // Aramäisch: keine eigene Stimme verfügbar; eine deutsche Stimme liest die Umschrift
+  if(kind==='arc'){viaGerman();live.textContent=L?'Aramäisch wird über die Umschrift vorgelesen.':'Aramaic is read from the transliteration.';return;}
+  let lg=pronLang(kind),said;
+  if(kind==='he'){said=text.replace(/[\u0591-\u05c7]/g,'');}else said=lg==='de'?schoolText(text):monotonic(text);
+  const {u,found}=utter(said,lg);
+  if(kind==='he'&&!found&&fallback){viaGerman();live.textContent=L?'Keine hebräische Stimme installiert; die Umschrift wird vorgelesen.':'No Hebrew voice; reading the transliteration.';return;}
+  let started=false;u.onstart=()=>{started=true;};
+  u.onerror=()=>{if(!started&&kind==='he'&&fallback)viaGerman();};
+  setTimeout(()=>{if(synth&&!started&&!synth.speaking&&kind==='he'&&fallback)viaGerman();},1500);
+  synth.speak(u);
+  if(!found)live.textContent=L?'Auf diesem Gerät ist keine passende Stimme installiert; der Browser versucht es mit einer Ersatzstimme.':'No matching voice installed.';
 }
 const play=(text,kind='el')=>`<button type="button" class="play" data-speak="${esc(String(text).replace(/^\+\s*/,''))}" data-speak-lang="${kind}" aria-label="${lang==='de'?'Anhören':'Listen'}">${icon('speak')}</button>`;
 const tr=text=>{if(!S.translit)return '';const x=translit(String(text).replace(/^\+\s*/,'+ '));return x?`<span class="tr">${esc(x)}</span>`:'';};
@@ -268,7 +290,7 @@ const LANGNAME={grc:['griech.','Greek'],heb:['hebr.','Hebrew'],arc:['aram.','Ara
 // Erklärtext: griechische Einschübe mit Umschrift und Anhören-Knopf; ohne Urtext-Modus nur Umschrift
 const GRUN=/[\u0370-\u03ff\u1f00-\u1fff][\u0370-\u03ff\u1f00-\u1fff\s\u02bc\u2019]*[\u0370-\u03ff\u1f00-\u1fff]|[\u0370-\u03ff\u1f00-\u1fff]/g;
 const rich=text=>esc(String(text??'')).replace(GRUN,g=>S.advanced?`<span class="grc">${g}</span>${S.translit?` <i class="tr-inline">${esc(translit(g))}</i>`:''}${play(g)}`:`<i class="tr-inline">${esc(translit(g))}</i>${play(g)}`);
-const termsLine=terms=>(terms&&terms.length)?`<p class="terms">${terms.map(tm=>{const tl=tm.translit||translit(tm.word),kind=tm.lang==='grc'?'el':'he';return `<span class="term"><span class="lang">${LANGNAME[tm.lang]?LANGNAME[tm.lang][lang==='de'?0:1]:tm.lang}</span> ${S.advanced?`<span class="${tm.lang==='grc'?'grc':'heb'}" lang="${tm.lang==='grc'?'grc':'he'}">${esc(tm.word)}</span> `:''}${!S.advanced||S.translit||tm.lang!=='grc'?`<i class="tr-inline">${esc(tl)}</i>`:''}<button type="button" class="play" data-speak="${esc(tm.word)}" data-speak-lang="${kind}" data-speak-tr="${esc(tl)}" aria-label="${lang==='de'?'Anhören':'Listen'}">${icon('speak')}</button> «${esc(tm.de)}»</span>`;}).join('')}</p>`:'';
+const termsLine=terms=>(terms&&terms.length)?`<p class="terms">${terms.map(tm=>{const tl=tm.translit||translit(tm.word),kind=tm.lang==='grc'?'el':(tm.lang==='arc'?'arc':'he');return `<span class="term"><span class="lang">${LANGNAME[tm.lang]?LANGNAME[tm.lang][lang==='de'?0:1]:tm.lang}</span> ${S.advanced?`<span class="${tm.lang==='grc'?'grc':'heb'}" lang="${tm.lang==='grc'?'grc':'he'}">${esc(tm.word)}</span> `:''}${!S.advanced||S.translit||tm.lang!=='grc'?`<i class="tr-inline">${esc(tl)}</i>`:''}<button type="button" class="play" data-speak="${esc(tm.word)}" data-speak-lang="${kind}" data-speak-tr="${esc(tl)}" aria-label="${lang==='de'?'Anhören':'Listen'}">${icon('speak')}</button> «${esc(tm.de)}»</span>`;}).join('')}</p>`:'';
 if(synth&&synth.addEventListener)synth.addEventListener('voiceschanged',()=>{if(sheet==='menu')menuSheet();});
 function applyPrefs(){app.dataset.theme=S.theme==='auto'?(mq&&mq.matches?'dark':'light'):S.theme;app.style.setProperty('--read',S.read+'px');}
 mq&&mq.addEventListener&&mq.addEventListener('change',applyPrefs);
@@ -296,13 +318,27 @@ const DEC={literal:['wörtlich','literal'],adapted:['sprachlich angepasst','adap
 function decorate(text,decs){
   // Markiert Stellen, an denen die Übersetzung einer Tradition folgt oder eine Deutung wählt (nur im Urtext-Modus)
   const marks=(decs||[]).filter(d=>d.kind==='traditional'||d.kind==='interpretive');let html='',pos=0;const hits=[];
-  for(const d of marks){const i=text.indexOf(d.target);if(i>=0&&!hits.some(h=>i<h.e&&i+d.target.length>h.s))hits.push({s:i,e:i+d.target.length,k:d.kind});}
-  hits.sort((a,b)=>a.s-b.s);for(const h of hits){html+=esc(text.slice(pos,h.s))+`<span class="dec ${h.k}">${esc(text.slice(h.s,h.e))}</span>`;pos=h.e;}
+  for(const d of marks){const i=text.indexOf(d.target);if(i>=0&&!hits.some(h=>i<h.e&&i+d.target.length>h.s))hits.push({s:i,e:i+d.target.length,k:d.kind,di:decs.indexOf(d)});}
+  hits.sort((a,b)=>a.s-b.s);for(const h of hits){html+=esc(text.slice(pos,h.s))+`<button type="button" class="dec ${h.k}" data-dec="${h.di}">${esc(text.slice(h.s,h.e))}</button>`;pos=h.e;}
   return html+esc(text.slice(pos));
+}
+function verseNodeOf(ref){const [code,c,v]=ref.split('.');const b=DATA.findIndex(x=>x.code===code);return nodes.get(`v${b}-${c}-${v}`);}
+function decisionSheet(ref,i){
+  const L=lang==='de',d=(STUDY.decisions[ref]||[])[i],n=verseNodeOf(ref);if(!d||!n)return;
+  let h=head(`«${d.target}»`)+`<p class="note">${esc(title(n))}</p><span class="tag dec-tag ${d.kind}">${DEC[d.kind][L?0:1]}</span>`;
+  if(d.grc){const ws=STUDY.words.filter(w=>w.ref===ref&&d.grc.split(/\s+/).includes(w.word));const lem=[...new Set(ws.filter(w=>w.mac.pos!=='det').map(w=>w.mac.lemma).filter(Boolean))];
+    h+=`<h4>${L?'Im Griechischen':'In Greek'}</h4><div class="word-row">${grcLine(d.grc)}${lem.length?`<span class="note">${L?'Grundform':'Lemma'}: ${lem.map(x=>`<span class="grc">${esc(x)}</span> <i class="tr-inline">${esc(translit(x))}</i>`).join(', ')}</span>`:''}</div>`;
+    const lz=new Set(lem.map(gnorm));const ints=STUDY.interpretations.filter(x=>(x.terms||[]).some(tm=>lz.has(gnorm(tm.word))));
+    if(ints.length)h+=`<h4>${L?'Deutungen':'Interpretations'}</h4>`+ints.map(x=>`<div class="point"><span class="tag">${CONF[x.confidence]||''}</span><p class="body">${rich(x.claim)}</p>${x.caveat?`<p class="note"><b>${L?'Nicht sicher:':'Uncertain:'}</b> ${rich(x.caveat)}</p>`:''}</div>`).join('');}
+  h+=`<h4>${L?'Zur Übersetzung':'About the translation'}</h4><div class="point">${d.more_literal_de?`<p class="note"><b>${L?'Wörtlicher:':'More literal:'}</b> «${esc(d.more_literal_de)}»</p>`:''}${d.other_options_de?`<p class="note"><b>${L?'Auch möglich:':'Also possible:'}</b> ${d.other_options_de.map(x=>'«'+esc(x)+'»').join(', ')}</p>`:''}<p class="note">${rich(d.note_de||'')}</p></div>`;
+  const cmp=(STUDY.compare[ref]||[]).slice().sort((a,b)=>b.id.localeCompare(a.id));
+  if(cmp.length)h+=`<h4>${L?'In älteren Übersetzungen':'In older translations'}</h4>`+cmp.map(c=>`<div class="point"><span class="tag">${esc(c.title)}</span><p class="body">${esc(c.text)}</p></div>`).join('');
+  h+=`<div class="actions"><button type="button" class="link soft" data-more="${n.id}">${L?'Alles zu diesem Vers':'Everything on this verse'}</button></div>`;
+  openSheet('decision',h);
 }
 function decisionsBlock(n){
   const L=lang==='de',ds=STUDY.decisions[n.canonicalRef]||[],cmp=(STUDY.compare[n.canonicalRef]||[]).slice().sort((a,b)=>b.id.localeCompare(a.id));let h='';
-  if(ds.length){h+=`<h4>${L?'Wie ist übersetzt?':'How is it translated?'}</h4><p class="note">${L?'Wo diese Übersetzung wörtlich ist, wo sie sprachlich glättet, wo sie deutet und wo sie einer vertrauten Wiedergabe folgt. Im Urtext-Modus sind die beiden letzten Arten im Text unterstrichen.':'Where this translation is literal, smoothed, interpretive or traditional.'}</p>`+ds.map(d=>`<div class="point dec-point"><span class="tag dec-tag ${d.kind}">${DEC[d.kind][L?0:1]}</span><p class="body">«${esc(d.target)}»</p>${d.more_literal_de?`<p class="note"><b>${L?'Wörtlicher:':'More literal:'}</b> «${esc(d.more_literal_de)}»</p>`:''}${d.other_options_de?`<p class="note"><b>${L?'Auch möglich:':'Also possible:'}</b> ${d.other_options_de.map(x=>'«'+esc(x)+'»').join(', ')}</p>`:''}<p class="note">${rich(d.note_de||'')}</p></div>`).join('');}
+  if(ds.length){h+=`<h4>${L?'Wie ist übersetzt?':'How is it translated?'}</h4><p class="note">${L?'Wo diese Übersetzung wörtlich ist, wo sie sprachlich glättet, wo sie deutet und wo sie einer vertrauten Wiedergabe folgt. Im Urtext-Modus sind die beiden letzten Arten im Text unterstrichen.':'Where this translation is literal, smoothed, interpretive or traditional.'}</p>`+ds.map(d=>`<div class="point dec-point"><span class="tag dec-tag ${d.kind}">${DEC[d.kind][L?0:1]}</span><p class="body">«${esc(d.target)}»</p>${d.grc?`<div>${grcLine(d.grc)}</div>`:''}${d.more_literal_de?`<p class="note"><b>${L?'Wörtlicher:':'More literal:'}</b> «${esc(d.more_literal_de)}»</p>`:''}${d.other_options_de?`<p class="note"><b>${L?'Auch möglich:':'Also possible:'}</b> ${d.other_options_de.map(x=>'«'+esc(x)+'»').join(', ')}</p>`:''}<p class="note">${rich(d.note_de||'')}</p></div>`).join('');}
   if(cmp.length){h+=`<h4>${L?'Ältere deutsche Übersetzungen':'Older German translations'}</h4><p class="note">${L?'Zum Vergleich, gemeinfrei. Sie beruhen teils auf anderen griechischen Textausgaben und sind nicht die Grundlage der Übersetzung hier.':'For comparison (public domain); not the basis of this translation.'}</p>`+cmp.map(c=>`<div class="point"><span class="tag">${esc(c.title)}</span><p class="body">${esc(c.text)}</p>${(c.notes||[]).map(x=>`<p class="note">${esc(x)}</p>`).join('')}</div>`).join('');}
   return h;
 }
@@ -321,25 +357,27 @@ function entry(id){
   if(n.level===6)return verseEntry(n);
   const text=summary(n);
   const deep=n.children.length?`<button type="button" class="link" data-deep="${id}">${t.deeper[n.level]}${icon('arrow-down')}</button>`:'';
-  const study=n.part?`<button type="button" class="link soft" data-study="${id}">${t.understand}</button><button type="button" class="link soft" data-background="${id}">${t.background}</button>`:'';
+
   const ex=(n.level===3||n.level===4)?STUDY.sections.filter(sec=>{const g=rangeOf(sec.range);return DATA[n.b].code===g.code&&(n.level===3||n.c===g.c);}):[];
   const example=ex.map(sec=>`<button type="button" class="example" data-go="${sec.parts[0].id}"><span>${t.example}: ${esc(refDe(sec.range))} · ${esc(sec.title)}</span>${icon('chevron-right')}</button>`).join('');
   const heading=n.level===5&&n.part?n.part.title:(n.level===5?(lang==='de'?'Verse ':'Verses ')+n.v+'–'+n.last:title(n));
   const copy=text?`<p class="stream-copy">${esc(text)}</p>`:`<p class="stream-copy quiet">${n.level===5?t.noPart:t.noSummary}</p>`;
-  return `<article class="stream-entry" data-stream="${id}">${eyebrow(n)?`<p class="eyebrow">${esc(eyebrow(n))}</p>`:''}<h2>${esc(heading)}</h2>${copy}${example}<div class="actions">${deep}${study}</div></article>`;
+  return `<article class="stream-entry" data-stream="${id}">${eyebrow(n)?`<p class="eyebrow">${esc(eyebrow(n))}</p>`:''}<h2>${esc(heading)}</h2>${n.part?tools(id):''}${copy}${example}<div class="actions">${deep}</div></article>`;
 }
+function tools(id){const t=T();return `<span class="part-tools"><button type="button" class="tool" data-study="${id}" aria-label="${t.understand}">${icon('understand')}<span>${t.toolUnderstand}</span></button><button type="button" class="tool" data-background="${id}" aria-label="${t.background}">${icon('history')}<span>${t.toolHistory}</span></button></span>`;}
 function verseEntry(n){
   const t=T(),text=summary(n);let lead='';
   if(n.v===1)lead+=`<h2 class="chapter-head">${esc(bookName(n)+' '+n.c)}</h2>`;
-  const p=nodes.get(n.parent);if(p.part&&p.v===n.v)lead+=`<h3 class="part-head">${esc(p.part.title)}</h3>`;
+  const p=nodes.get(n.parent);if(p.part&&p.v===n.v)lead+=`<div class="part-head"><h3>${esc(p.part.title)}</h3>${tools(p.id)}</div>`;
   if(!text)return `<article class="stream-entry verse placeholder" data-stream="${n.id}">${lead}<p class="verse-line"><span class="vno">${n.v}</span><span class="stream-copy">${t.placeholder}</span></p></article>`;
   const alts=altsFor(n);
   const bgs=bgFor(n);
-  const more=(alts.length||bgs.length||S.advanced||STUDY.decisions[n.canonicalRef]||STUDY.compare[n.canonicalRef])?`<button type="button" class="more" data-more="${n.id}" aria-label="${t.more} ${n.v}">${icon('plus')}</button>`:'';
+  const has=alts.length||bgs.length||S.advanced||STUDY.decisions[n.canonicalRef]||STUDY.compare[n.canonicalRef];
+  const vno=has?`<button type="button" class="vno more" data-more="${n.id}" aria-label="${t.more} ${n.v}">${n.v}</button>`:`<span class="vno">${n.v}</span>`;
   const inline=S.inline?alts.map(a=>`<span class="alt-line" data-alternative="${esc(a.variant)}">${lang==='de'?'oder':'or'}: «${esc(a.to)}»</span>`).join(''):'';
-  const bgLine=S.bgInline?bgs.filter(b=>b.from===n.v).map(b=>`<button type="button" class="bg-line" data-bg="${esc(b.id)}">${t.then}: ${esc(b.topic)}</button>`).join(''):'';
-  const end=p.part&&p.last===n.v?`<div class="part-end actions"><button type="button" class="link soft" data-study="${p.id}">${t.understand}</button><button type="button" class="link soft" data-background="${p.id}">${t.background}</button></div>`:'';
-  return `<article class="stream-entry verse" data-stream="${n.id}">${lead}<p class="verse-line"><span class="vno">${n.v}</span><span class="stream-copy">${S.advanced?decorate(text,STUDY.decisions[n.canonicalRef]):esc(text)}</span>${more}</p>${inline}${bgLine}${end}</article>`;
+  const bgList=S.bgInline?bgs.filter(b=>b.from===n.v):[];
+  const bgLine=bgList.length?`<div class="bg-lines"><span class="bg-label">${icon('history')}</span>${bgList.map(b=>`<button type="button" class="bg-line" data-bg="${esc(b.id)}">${esc(b.topic)}</button>`).join('')}</div>`:'';
+  return `<article class="stream-entry verse" data-stream="${n.id}">${lead}<p class="verse-line">${vno}<span class="stream-copy" data-ref="${n.canonicalRef}">${S.advanced?decorate(text,STUDY.decisions[n.canonicalRef]):esc(text)}</span></p>${inline}${bgLine}</article>`;
 }
 function streamMarkup(){const ids=streams[nodes.get(current).level];const t=T();return `<div class="column">${readerStart?`<button type="button" class="load load-before" data-action="load-prev">${t.loadPrev}</button>`:''}${ids.slice(readerStart,readerEnd).map(entry).join('')}${readerEnd<ids.length?`<button type="button" class="load load-after" data-action="load-next">${t.loadNext}</button>`:`<p class="end">${t.end}</p>`}</div>`;}
 function loadMore(before=false){
@@ -490,6 +528,7 @@ function levelsSheet(){const n=nodes.get(current);openSheet('levels',head(T().le
 app.addEventListener('click',e=>{
   const b=e.target.closest('button,[data-close]');
   if(!b){if(e.target.closest('.reader'))app.classList.toggle('immersed');return;}
+  if(b.dataset.dec!==undefined){const c=b.closest('[data-ref]');if(c){decisionSheet(c.dataset.ref,Number(b.dataset.dec));return;}}
   if(b.dataset.speak!==undefined){e.preventDefault();e.stopPropagation();speak(b.dataset.speak,b.dataset.speakLang,b.dataset.speakTr);return;}
   if(b.hasAttribute('data-close')){closeSheet();return;}
   if(b.dataset.deep){const n=nodes.get(b.dataset.deep);current=b.dataset.deep;go(remembered.get(current)||n.children[0]);return;}
