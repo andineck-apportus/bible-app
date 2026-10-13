@@ -1,6 +1,6 @@
 # Datenmodell: Ist-Stand und Ziel
 
-## Vorhandene Objekte in v0.19
+## Vorhandene Objekte in v0.23
 
 | Ordner | `type` | Anzahl | Aufgabe |
 |---|---|---:|---|
@@ -33,9 +33,10 @@
 | witness-texts | witness_transcription | 46 | Transkriptionen je Textzeuge (`witness`) oder Ausgabe (`edition`) für Matthäus, Markus und Lukas, Format MES, Herkunft mit Commit und SHA-256 (CNTR, CC BY-SA 4.0) |
 | witness-readings | witness_reading_set | 3 | Maschinelle Zuordnung «welche Handschrift/Ausgabe hat welche Lesart» für Mk 3,20–35, Mt 6,5–15 und Lk 11,1–4, getrennt nach Erstschrift und Korrektur, mit Textausschnitt (`METHOD-AUTO-COLLATION-V1`) |
 | background | background_note | 25 | Hintergrund damals zu Mk 3,20–35 und zum Vaterunser: Zeit, Ort, Kultur, Religion; je mit `context`, `subject`, `reference`, `topic_de`, `text_de`, `confidence`, optional `uncertain_de`, `evidence_refs` (Bibelstellen) und `sources_de` (ausserbiblische Fundstellen, nur zitiert) |
+| crossrefs | crossref_set | 66 | Querverweise je Ausgangsbuch (OpenBible.info, CC BY): je Vers die Ziele mit Stimmen, nach Stimmen sortiert; Zielbereiche über Buchgrenzen geteilt und markiert. Der Validator prüft alle Stellen. |
 | summaries | summary | 85 | Zusammenfassungen je Ebene (Bibel, Testament, Gruppe, Buch, Kapitel); `scope`, `reference`, `group`, `text_de`; alle `draft` |
 
-Gesamt: 3367 Datensätze im freien Kern (`data/`), 0 in der Studienschicht (`data-nc/`).
+Gesamt: 3435 Datensätze im freien Kern (`data/`), 0 in der Studienschicht (`data-nc/`).
 
 ## Schichten des Texts
 1. **Token** (`token_set`): die Wörter einer Edition in ihrer Reihenfolge, mit stabiler ID `TOK-<EDITION>-<BUCH>-<KKK>-<VVV>-<NNN>`. «text» unverändert aus der Edition (inkl. Interpunktion und Apparatzeichen), «word» ohne diese Zeichen. Keine Deutung.
@@ -57,6 +58,9 @@ Eigene Arbeitsübersetzungen (`translation_kind: literal_original_working`) kön
 
 ## Fachwörter (`terms`)
 Hintergrundnotizen und Deutungen können `terms` führen: Wörter der Ursprache, auf die der Text sich bezieht, mit `lang` (grc, heb, arc, lat), `word` (Originalschrift), `translit` (Pflicht ausser bei Griechisch, das automatisch umgeschrieben wird) und `de` (Bedeutung). Der Lesestrom zeigt sie mit Umschrift und Anhören-Knopf; griechische Einschübe im Fliesstext erhalten dasselbe automatisch.
+
+## Querverweise und verlinkte Stellen
+Querverweise liegen als `crossref_set` vor; der Lesestrom bettet für die ausgearbeiteten Kapitel je Vers die zehn bestbewerteten ein und zeigt sie im Versblatt. Bibelstellen in deutschen Erklärtexten (z. B. «Mk 14,36», «Jes 63,16; 64,7», «Ex 16,4.19–20», relativ «(6,14–15)») erkennt die App beim Anzeigen und macht sie antippbar; Ziele ausserhalb der 66 Bücher (z. B. Sirach) bleiben Text. Ein Sprung bietet den Rückweg zur Ausgangsstelle an.
 
 ## Studienprojektion
 Der Lesestrom erhält die ausgearbeiteten Abschnitte über `scripts/project_study.py` (alle Schlüssel kanonische Bibelstellen). Neue Abschnitte werden in `scripts/build_reading_stream.py` (Liste `SECTIONS`) eingetragen; die Daten selbst bleiben in `data/`.
