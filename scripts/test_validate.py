@@ -19,7 +19,7 @@ def case(name, mutate, expect):
     with tempfile.TemporaryDirectory() as tmp:
         root = pathlib.Path(tmp)
         shutil.copytree(ROOT / "data", root / "data")
-        (root / "data-nc").mkdir()
+        shutil.copytree(ROOT / "data-nc", root / "data-nc")
         mutate(root)
         res = run(root)
         out = res.stdout + res.stderr
@@ -124,6 +124,7 @@ case("Lokalisierung unbekanntes Feld", bad_localization, "fehlt im Original")
 with tempfile.TemporaryDirectory() as tmp:
     root = pathlib.Path(tmp)
     shutil.copytree(ROOT / "data", root / "data")
+    shutil.copytree(ROOT / "data-nc", root / "data-nc")
     stale_localization(root)
     res = run(root)
     assert res.returncode == 0 and "FIND-LP-0001.json: Feld claim_de veraltet" in res.stdout, res.stdout[-500:]
