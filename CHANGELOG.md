@@ -2,6 +2,14 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.38 — 2026-10-13 — Texte vom Toten Meer (nicht kommerzielle Schicht)
+
+- Erste Daten in `data-nc/`: biblische Rollen vom Toten Meer aus ETCBC dss (Abegg u. a., CC BY-NC 4.0) für Rut (2QRuth a/b, 4QRuth a/b) und Obadja (4QXII g, MurXII), je Vers mit Fragment und Zeile. Von den Herausgebern ergänzte Buchstaben stehen in eckigen Klammern; ganz ergänzte Wörter gelten nicht als Bezeugung.
+- Maschineller Vergleich mit dem Westminster Leningrad Codex je Wort: gleich, nur Schreibweise (Lesehilfen ו/י, lange Endungen), teilweise erhalten, abweichend, zusätzlich. Gefunden u. a. 4QRuth a 1,1–2 «בשדה» statt «בשדי» und 1,2 «וישבו» statt «ויהיו». Nicht am Faksimile geprüft.
+- Importer `scripts/import_dss.py` (alle AT-Bücher möglich; Verszählung über die WLC-Umrechnung). Lesestrom: im Versblatt («Urtext und Details») Block «Texte vom Toten Meer»; Daten in eigenen Paketen `n/<BUCH>`, abschaltbar mit `BIBLE_APP_NO_NC=1`.
+- Quellenkatalog: ETCBC dss als verwendet (nur `data-nc/`); Validator-Tests prüfen jetzt auch mit `data-nc/`.
+- Septuaginta (CATSS) wartet auf die unterschriebene Nutzungserklärung; die NTVMR-Schnittstelle ist aus dieser Umgebung gesperrt und braucht die Antwort des INTF (docs/ANFRAGEN.md).
+
 ## v0.37 — 2026-10-13 — Quellenkatalog, Quellenkarte, Anfragen
 
 - **Quellenkatalog:** 66 Quellen als `source`-Datensätze mit `catalog` (Bereich, Schicht, Nutzungsrecht frei/BY-SA/nicht kommerziell/auf Anfrage/geschützt, Verwendung verwendet/zitiert/vorgesehen/nicht verwendet, Begründung). Die sechs bestehenden Quelldatensätze sind ergänzt, nicht ersetzt. Werkzeug `scripts/authoring/quellen_katalog.py`.

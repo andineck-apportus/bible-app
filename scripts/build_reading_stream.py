@@ -227,7 +227,25 @@ core_study = {"built_from": study["built_from"], "sections": core_sections, "lay
 core_src = {k: v for k, v in sources_payload.items() if k not in ("readings", "alts", "variants")}
 core_src.update({"readings": {}, "alts": {lg: {} for lg in langs}, "variants": {}})
 core_xref = {**xref_payload, "verses": {}}
+# Nicht kommerzielle Studienschicht (data-nc/): eigene Pakete n/<BUCH>, nie mit Kernpaketen vermischt.
+# BIBLE_APP_NO_NC=1 baut ohne diese Schicht (z. B. für eine Nutzung ausserhalb des gemeinnützigen Betriebs).
+import os  # noqa: E402
+if not os.environ.get("BIBLE_APP_NO_NC"):
+    nc_wit = {}
+    for p in sorted((ROOT / "data-nc/witnesses").glob("WIT-DSS-*.json")):
+        w = json.loads(p.read_text(encoding="utf-8"))
+        nc_wit[w["id"]] = {"name": w.get("name_de"), "place": w.get("location_de"), "date": w.get("date_de")}
+    for p in sorted((ROOT / "data-nc/witness-texts").glob("DSS-*.json")):
+        d = json.loads(p.read_text(encoding="utf-8"))
+        w = nc_wit.get(d["witness"], {})
+        for ref, v in d["verses"].items():
+            b = bundle(f"n/{ref_book(ref)}")
+            b.setdefault("nc", {"license": d["source"]["license"], "attribution": d["source"]["attribution"],
+                                "method": d["comparison_method_de"]})
+            b.setdefault("dss", {}).setdefault(ref, []).append({"id": d["id"], "name": w.get("name"), "place": w.get("place"),
+                                                               "loc": v["loc"], "words": v["words"]})
 manifest = {"books": sorted({n.split("/")[1] for n in bundles if n.startswith("b/")}),
+            "nc": sorted({n.split("/")[1] for n in bundles if n.startswith("n/")}),
             "lang": {lg: sorted(n.split("/")[2] for n in bundles if n.startswith(f"l/{lg}/")) for lg in langs}}
 
 sys.path.insert(0, str(ROOT / "scripts"))

@@ -59,7 +59,11 @@ Logo, Linienicons, Code und redaktionelle Entwürfe dieses Prototyps sind eigene
 
 ## Fremddaten in der Studienschicht (`data-nc/`)
 
-Noch keine.
+| Pfad | Inhalt | Quelle | Lizenz | Pflicht |
+|---|---|---|---|---|
+| `data-nc/witness-texts/DSS-*.json`, `data-nc/witnesses/WIT-DSS-*.json` | Biblische Texte vom Toten Meer (Qumran, Murabbaʿat) je Vers mit Fundort, für Rut (2QRuth a/b, 4QRuth a/b) und Obadja (4QXII g, MurXII); maschineller Vergleich mit dem WLC | ETCBC dss, Text-Fabric 2.0.1, Commit `ac91a978`; Daten von Martin G. Abegg Jr., James E. Bowley, Edward M. Cook | **CC BY-NC 4.0** | Namensnennung (Abegg/Bowley/Cook, ETCBC/CACCHT); nur nicht kommerziell |
+
+Im Lesestrom liegen diese Daten in eigenen Paketen `n/<BUCH>`; mit `BIBLE_APP_NO_NC=1` baut `scripts/build_reading_stream.py` ohne sie. Die Einzeldatei `app/reading-stream/index.html` und die veröffentlichte Fassung enthalten sie (gemeinnütziger Betrieb).
 
 Hinweis: Diese Übersicht ist keine Rechtsberatung. Lizenzangaben vor jedem Import erneut prüfen und im Quellendatensatz festhalten.
 

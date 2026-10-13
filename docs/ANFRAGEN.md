@@ -140,4 +140,4 @@ Platzhalter: `[Absender]`, `[Adresse]`, `[Link]` (Lesestrom oder GitHub `andinec
 
 | Datum | Stelle | Gesendet von | Antwort | Folge im Katalog |
 |---|---|---|---|---|
-| – | – | – | – | – |
+| 2026-10-13 | NTVMR-Schnittstelle (INTF) | – | – | Aus der Claude-Umgebung gesperrt (Netzwerkregel; robots.txt untersagt automatische Abrufe über WebFetch). Anbindung erst nach Zusage des INTF (Entwurf 2), dann z. B. als GitHub-Action. |
