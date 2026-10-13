@@ -29,7 +29,7 @@ import refs  # noqa: E402
 SCHEMA = json.loads((pathlib.Path(__file__).resolve().parents[1] / "schema" / "record.schema.json").read_text(encoding="utf-8"))
 
 # Felder, die auf andere Datensätze verweisen
-ID_FIELDS = ["witness", "work", "primary_unit", "subject", "principle", "context", "from", "edition",
+ID_FIELDS = ["witness", "target_context", "control_translation", "work", "primary_unit", "subject", "principle", "context", "from", "edition",
              "base_edition", "apparatus", "same_variation_unit_as", "incorporates", "based_on_edition",
              "based_on_tokens", "source_tokens_set", "target_translation", "bibliographic_source",
              "annotates", "method", "superseded_by", "annotation_moved_to", "based_on_annotation"]

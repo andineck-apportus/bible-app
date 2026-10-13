@@ -48,6 +48,10 @@ Festgehalten am 2026-10-09, ergänzt am 2026-10-12. Abschnitt **«Vorgabe»** gi
 
 ---
 
+**Vorgabe (2026-10-13):** Aus den Urtexten und den geschaffenen Artefakten soll in beliebige Sprachen und kulturelle Hintergründe übersetzt werden können; als zweite Fassung neben Hochdeutsch entsteht Züridüütsch. Umsetzung: Übersetzungsschichten im Datenmodell ([DATENMODELL.md](DATENMODELL.md)).
+
+---
+
 ## Stufe 3 — Verständnis über Zoomstufen und Anleitung zum Bibelstudium
 
 **Vorgabe:** Von den kleinsten Einheiten bis zum grossen Ganzen mit unterschiedlichen Zoomstufen ein besseres Verständnis schaffen und Anleitung zum Bibelstudium geben.

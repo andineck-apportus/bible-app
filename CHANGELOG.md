@@ -2,6 +2,14 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.27 — 2026-10-13 — Züridüütsch als zweite Übersetzungsschicht
+
+- Vorgabe: aus den Urtexten und den erarbeiteten Artefakten in beliebige Sprachen und Kulturen übersetzen; zuerst Züridüütsch neben Hochdeutsch.
+- Datenmodell: Übersetzungsschichten je Sprache (`language` BCP-47, `target_context`, `orthography_de`, `register_de`, `control_translation`, `review_de`), Wortzuordnung mit `target_language`. Neuer Kontext `CTX-CH-ZH-GSW-2026`.
+- Züridüütsch (Dieth-Schreibung, aus dem SBLGNT) für Mt 6,5–15, Lk 11,1–4 und Mk 3,20–35: 31 Verse, 15 Lesarten-Alternativen, 36 markierte Übersetzungsentscheidungen, vollständige Wortzuordnung für Mt 6,9–13 und Lk 11,2–4. Autorenwerkzeug `scripts/authoring/zueridueuetsch.py`. KI-Entwurf; Prüfung der Mundart durch eine muttersprachliche Person vorgesehen (Andi Neck), noch nicht erfolgt.
+- Lesestrom: Menü «Lesetext» (Hochdeutsch | Züridüütsch); Lesarten im Text, Entscheidungs-Markierungen und Versblatt folgen der gewählten Schicht; fehlt ein Vers in einer Schicht, erscheint Hochdeutsch mit Hinweis.
+- Datenbestand: 3441 Datensätze.
+
 ## v0.26 — 2026-10-13 — Titel in der Kopfzeile
 
 - Der Titel-Knopf in der Kopfzeile hatte innen keinen Abstand (die allgemeine Knopf-Regel setzte ihn auf null); der Titel hat jetzt innen Abstand und bleibt über die volle Breite antippbar.

@@ -67,7 +67,7 @@ def project(section_ids):
             return False
         return v in scope.get((b, c), set())
 
-    de, de_source, alternatives, decisions, compare = {}, {}, [], {}, {}
+    compare = {}
     for tid, t in sorted(translations.items()):
         if t.get("translation_kind") == "historical_comparison":
             for r, txt in t.get("text_by_reference", {}).items():
@@ -75,12 +75,28 @@ def project(section_ids):
                     compare.setdefault(r, []).append({"id": tid, "title": t.get("title", tid), "text": txt,
                                                       "notes": t.get("notes_by_reference", {}).get(r, []),
                                                       "license": t.get("source", {}).get("license")})
+    # Übersetzungsschichten je Sprache (BCP-47-Grundtag): de, gsw, …; jede mit Text, Quelle, Entscheidungen,
+    # Alternativen und Wortzuordnung. «de» ist die Kontroll- und Standardschicht.
+    LABELS = {"de": "Hochdeutsch", "gsw": "Züridüütsch"}
+    layers = {}
+
+    def layer(lang, t=None):
+        if lang not in layers:
+            layers[lang] = {"lang": lang, "label": (t or {}).get("language_label_de") or LABELS.get(lang, lang),
+                            "text": {}, "source": {}, "decisions": {}, "alternatives": [], "align": {},
+                            "orthography": (t or {}).get("orthography_de"), "register": (t or {}).get("register_de"),
+                            "review": (t or {}).get("review_de")}
+        return layers[lang]
+
     for tid, t in sorted(translations.items()):
         if t.get("status") == "deprecated" or t.get("translation_kind") != "literal_original_working":
             continue
         refs_in = [r for r in t.get("text_by_reference", {}) if in_scope(r)]
         if not refs_in:
             continue
+        lang = (t.get("language") or "de").split("-")[0]
+        L = layer(lang, t)
+        de, de_source, decisions, alternatives = L["text"], L["source"], L["decisions"], L["alternatives"]
         for r in refs_in:
             if r not in de or len(t.get("text_by_reference", {})) > 1:  # Abschnittsübersetzung vor Einzelvers
                 de[r] = t["text_by_reference"][r]
@@ -99,7 +115,7 @@ def project(section_ids):
                                  "of": res["of"] if res else None,
                                  "basis": "editions" if res else "manuscripts_reported"})
 
-    words, tok_de = [], {}
+    words = []
     for (b, c), vs in sorted(scope.items()):
         toks = json.loads((D / f"tokens/SBLGNT-{b}-{c:03d}.json").read_text(encoding="utf-8"))["tokens"]
         mac = json.loads((D / f"annotations/MACULA-SBLGNT-{b}-{c:03d}.json").read_text(encoding="utf-8"))["entries"]
@@ -120,11 +136,13 @@ def project(section_ids):
     for al in _all("alignments").values():
         if al.get("coverage") != "complete" or al.get("status") == "deprecated":
             continue
+        tok_de = layer((al.get("target_language") or "de").split("-")[0])["align"]
         for a in al["alignments"]:
             if not in_scope(a["reference"]):
                 continue
             for i, t in enumerate(a["source_tokens"]):
                 tok_de[t] = {"target": a["target"], "kind": a["kind"], "note": a.get("note_de"), "first": i == 0}
+    base = layer("de")
 
     units = []
     for vid, v in sorted(variants.items()):
@@ -156,8 +174,10 @@ def project(section_ids):
     return {
         "built_from": "bible-app data/ (freier Kern)",
         "sections": sections,
-        "de": de, "de_source": de_source, "alternatives": alternatives, "decisions": decisions, "compare": compare,
-        "words": words, "tok_de": tok_de, "variants": units,
+        "layers": layers, "layer_order": ["de"] + sorted(k for k in layers if k != "de"),
+        # Kurzformen der Standardschicht (Hochdeutsch), auch für die Tests
+        "de": base["text"], "de_source": base["source"], "alternatives": base["alternatives"], "decisions": base["decisions"],
+        "compare": compare, "words": words, "tok_de": base["align"], "variants": units,
         "findings": [{"id": k, "claim": v["claim_de"], "kind": v.get("kind"), "confidence": v.get("confidence"),
                       "subject": v.get("subject"), "caveat": v.get("confidence_rationale_de")} for k, v in sorted(fs.items())],
         "interpretations": [{"id": k, "claim": v["claim_de"], "confidence": v.get("confidence"), "caveat": v.get("caveat_de"),
