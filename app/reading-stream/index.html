@@ -209,9 +209,12 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .live{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 
 @media (min-width:900px){
-  #bible-stream aside{display:block;position:absolute;left:0;top:57px;bottom:57px;width:230px;overflow:auto;padding:16px 8px;border-right:1px solid var(--rule)}
-  #bible-stream aside button{display:block;width:100%;padding:7px 10px;font-size:13px;color:var(--muted)}
-  #bible-stream aside button[aria-current=true]{color:var(--ink);box-shadow:inset 2px 0 var(--ink)}
+  #bible-stream aside{display:block;position:absolute;left:0;top:57px;bottom:57px;width:250px;overflow:auto;padding:18px 14px 24px;border-right:1px solid var(--rule)}
+  #bible-stream aside .eyebrow{margin:0 10px 8px}
+  #bible-stream .app aside button{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;padding:8px 10px!important;margin-bottom:2px;font:400 13.5px/1.35 var(--ui);color:var(--muted);border-radius:var(--r)!important}
+  #bible-stream .app aside button:hover{background:var(--soft);color:var(--ink)}
+  #bible-stream .app aside button[aria-current=true]{background:var(--ink);color:var(--bg)}
+  #bible-stream aside button .dot{width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.55;flex:none}
   #bible-stream .reader{left:230px}
   #bible-stream .immersed aside{opacity:.25}
 }
@@ -475,7 +478,11 @@ function chrome(){
 }
 let jumpFrom=null;
 function goRef(ref){const [a]=ref.split('-');const [code,c,v]=a.split('.');const bi=CODE_IDX[code];if(bi===undefined)return;const id=v?`v${bi}-${c}-${v}`:(c?`c${bi}-${c}`:`b${bi}`);if(!nodes.has(id))return;const from=sheetAnchor||current;go(id,true);jumpFrom=from;chrome();}
-function sidebar(){const n=nodes.get(current),ids=n.level<=3?streams[n.level||1]:nodes.get(n.parent).children;aside.innerHTML=ids.slice(0,200).map(id=>`<button type="button" data-go="${id}" aria-current="${id===current}">${esc(nodes.get(id).level===5&&nodes.get(id).part?nodes.get(id).part.title:title(nodes.get(id)))}</button>`).join('');}
+function sidebar(){const n=nodes.get(current),ids=n.level<=3?streams[n.level||1]:nodes.get(n.parent).children;
+  const worked=x=>x.level===3?STUDY.sections.some(sec=>rangeOf(sec.range).code===DATA[x.b].code):x.level===4?STUDY.sections.some(sec=>{const g=rangeOf(sec.range);return g.code===DATA[x.b].code&&g.c===x.c;}):x.level===5?!!x.part:x.level===6?isPilotVerse(x):false;
+  const head=n.level<=1?T().bible:n.level<=3?T().levels[n.level]:title(nodes.get(n.parent));
+  aside.innerHTML=`<p class="eyebrow">${esc(head)}</p>`+ids.slice(0,200).map(id=>{const x=nodes.get(id);return `<button type="button" data-go="${id}" aria-current="${id===current}"><span>${esc(x.level===5&&x.part?x.part.title:title(x))}</span>${worked(x)?'<span class="dot"></span>':''}</button>`;}).join('');
+  const cur=aside.querySelector('[aria-current=true]');if(cur&&cur.scrollIntoView&&aside.clientHeight)try{cur.scrollIntoView({block:'center'});}catch(e){}}
 function render(){applyPrefs();chrome();sidebar();const n=nodes.get(current);const r=savedStreams.get(n.level);if(r&&r.id===current){readerStart=r.start;readerEnd=r.end;}else{readerStart=n.si;readerEnd=Math.min(n.si+10,streams[n.level].length);}reader.innerHTML=streamMarkup();}
 function rerenderKeep(){
   // Gleiche geladene Einträge neu zeichnen und den obersten sichtbaren Eintrag an derselben Stelle halten
