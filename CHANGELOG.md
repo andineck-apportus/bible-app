@@ -2,6 +2,12 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.22 — 2026-10-13 — Schliessen-Knopf, Verse fortlaufend
+
+- «Schliessen» (bzw. «Fertig» im Menü) mit Symbol, runder Fläche und Hover-Effekt; beim Öffnen eines Blatts erscheint kein Fokusrahmen mehr um den Knopf (der Fokus liegt auf dem Blatt).
+- Neue Option «Verse fortlaufend»: Verse als Fliesstext hintereinander statt je auf einer eigenen Zeile; Lesarten- und Hintergrund-Hinweise fliessen mit. Standard aus.
+- Schriften der Symbolknöpfe und Hinweise unabhängig von der Umgebung festgelegt.
+
 ## v0.21 — 2026-10-13 — Einheitliche Symbole in den Blättern
 
 - Versblatt, Verstehen-Blatt und Hintergrund-Blatt enden jetzt mit «Abschnitt: …» und denselben Symbolen «Verstehen» und «Geschichte» wie beim Abschnittstitel, statt der alten Textlinks.
