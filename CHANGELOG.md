@@ -2,6 +2,12 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.24 — 2026-10-13 — Einheitliche Formensprache
+
+- Eine Rundung für alles Antippbare und alle Kästen (`--r: 6px`): Segmentleisten, Chips, Raster im Navigator, Pfad, Schliessen, Symbolknöpfe, Versnummern, Lesarten-Karten, Zeugen-Kästen, Suchfeld, «Zurück zu …». Keine Pillen und Kreise mehr; einzige Ausnahme ist der Ein/Aus-Schalter, der als Toggle seine gewohnte Form behält.
+- Einstellungen: Beschriftung links, Auswahl rechts; bricht die Auswahl um, steht sie rechtsbündig unter der Beschriftung («Aussprache», «Tempo»). Stimmen werden als einzelne Chips statt als umbrechende Segmentleiste gezeigt.
+- Leichter Hover-Hintergrund auf Kopf- und Fussleisten-Knöpfen.
+
 ## v0.23 — 2026-10-13 — Navigator, Querverweise, verlinkte Stellen
 
 - Neuer Navigator (Tippen auf die Titelzeile): «Du bist hier» als antippbarer Pfad, dann Altes/Neues Testament → Buchgruppe → Buch → Kapitel → Vers als Raster; ausgearbeitete Bücher, Kapitel und Verse sind mit einem Punkt markiert, ausgearbeitete Abschnitte des Kapitels direkt wählbar; «öffnen» führt auf Buch- oder Kapitelebene. Ersetzt die alte Inhaltsliste.

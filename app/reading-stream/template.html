@@ -7,7 +7,7 @@ html,body{margin:0;height:100%;background:#f7f7f6}
 #bible-stream{height:100%}
 #bible-stream .app{
   --bg:#f7f7f6;--ink:#1f1f1f;--muted:#6b6b6b;--rule:#dcdcda;--soft:#ececea;--sheet:#ffffff;--scrim:rgba(20,20,20,.28);
-  --read:19px;--ui:"Helvetica Neue",Arial,sans-serif;--serif:Georgia,"Iowan Old Style","Times New Roman",serif;
+  --r:6px;--read:19px;--ui:"Helvetica Neue",Arial,sans-serif;--serif:Georgia,"Iowan Old Style","Times New Roman",serif;
   position:relative;height:100%;overflow:hidden;background:var(--bg);color:var(--ink);font:15px/1.45 var(--ui);color-scheme:light}
 #bible-stream .app[data-theme=dark]{--bg:#171717;--ink:#ececec;--muted:#a3a3a3;--rule:#343434;--soft:#262626;--sheet:#1f1f1f;--scrim:rgba(0,0,0,.55);color-scheme:dark}
 html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:#171717}
@@ -24,7 +24,10 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .dock{bottom:0;padding:6px 8px calc(6px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--rule);display:grid;grid-template-columns:1fr auto 1fr}
 #bible-stream .immersed .top{transform:translateY(-105%);opacity:0}
 #bible-stream .immersed .dock{transform:translateY(105%);opacity:0}
-#bible-stream .icon-btn{width:44px;height:44px;display:grid!important;place-items:center}
+#bible-stream .icon-btn{width:44px;height:44px;display:grid!important;place-items:center;border-radius:var(--r)!important}
+#bible-stream .icon-btn:hover,#bible-stream .location:hover,#bible-stream .dock button:hover:not(:disabled){background:var(--soft)}
+#bible-stream .location{border-radius:var(--r)!important;padding:0 6px}
+#bible-stream .dock button{border-radius:var(--r)!important}
 #bible-stream .location{flex:1;min-width:0;height:44px;display:flex;align-items:center;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #bible-stream .dock button{height:44px;display:flex;align-items:center;gap:8px;font-size:14px;padding:0 10px}
 #bible-stream .dock [data-action=down]{justify-content:flex-end}
@@ -53,10 +56,10 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .part-tools{display:inline-flex;gap:4px;margin:0}
 #bible-stream h2+.part-tools{margin:-4px 0 10px}
 #bible-stream .sheet-tools{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px 10px;border-top:1px solid var(--rule);padding-top:12px;margin-top:8px}
-#bible-stream .app .tool{display:inline-flex!important;align-items:center;gap:5px;padding:5px 8px!important;font:500 12px/1 var(--ui);color:var(--muted);border-radius:999px!important}
+#bible-stream .app .tool{display:inline-flex!important;align-items:center;gap:5px;padding:5px 8px!important;font:500 12px/1 var(--ui);color:var(--muted);border-radius:var(--r)!important}
 #bible-stream .tool svg{width:16px;height:16px}
 #bible-stream .tool:hover,#bible-stream .tool:active{color:var(--ink);background:var(--soft)}
-#bible-stream button.vno.more{display:inline-grid!important;place-items:center;min-width:1.9em;height:1.9em;padding:0 3px!important;margin:0 5px 0 -2px;border:1px solid var(--rule)!important;border-radius:999px!important;vertical-align:.25em;color:var(--ink);font:500 11px/1 var(--ui)}
+#bible-stream button.vno.more{display:inline-grid!important;place-items:center;min-width:1.9em;height:1.9em;padding:0 3px!important;margin:0 5px 0 -2px;border:1px solid var(--rule)!important;border-radius:var(--r)!important;vertical-align:.25em;color:var(--ink);font:500 11px/1 var(--ui)}
 #bible-stream button.vno.more:hover,#bible-stream button.vno.more:active{background:var(--soft)}
 #bible-stream button.dec{display:inline!important;padding:0!important;font:inherit;color:inherit;background:none;border:0!important;cursor:pointer;text-align:inherit}
 #bible-stream .bg-lines{display:flex;flex-wrap:wrap;align-items:center;gap:2px 10px;margin:0 0 8px 1.6em;color:var(--muted)}
@@ -72,7 +75,7 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .app.flow .part-head{margin:22px 0 6px}
 #bible-stream .vno{font:500 11px/1 var(--ui);color:var(--muted);vertical-align:.6em;margin-right:4px;font-variant-numeric:tabular-nums}
 #bible-stream .placeholder .stream-copy{color:var(--muted);font-size:calc(var(--read) * .8)}
-#bible-stream .more{display:inline-grid!important;place-items:center;width:28px;height:28px;margin-left:4px;vertical-align:-6px;border-radius:50%!important;color:var(--muted)}
+#bible-stream .more{display:inline-grid!important;place-items:center;width:28px;height:28px;margin-left:4px;vertical-align:-6px;border-radius:var(--r)!important;color:var(--muted)}
 #bible-stream .more:hover{background:var(--soft);color:var(--ink)}
 #bible-stream .more svg{width:15px;height:15px;flex-basis:15px}
 #bible-stream .alt-line{display:block;font:italic 400 calc(var(--read) * .82)/1.5 var(--serif);color:var(--muted);margin:2px 0 8px 1.4em}
@@ -80,30 +83,30 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .app button.ref{display:inline!important;padding:0!important;font:inherit;color:inherit;text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:.2em}
 #bible-stream .app button.ref:hover{text-decoration-color:var(--ink)}
 #bible-stream .xrefs{display:flex;flex-wrap:wrap;gap:6px}
-#bible-stream .app button.ref.chip{display:inline-flex!important;align-items:center;padding:7px 11px!important;border:1px solid var(--rule)!important;border-radius:999px!important;font:500 13px/1 var(--ui);text-decoration:none}
+#bible-stream .app button.ref.chip{display:inline-flex!important;align-items:center;padding:7px 11px!important;border:1px solid var(--rule)!important;border-radius:var(--r)!important;font:500 13px/1 var(--ui);text-decoration:none}
 #bible-stream .app button.ref.chip:hover{background:var(--soft)}
 #bible-stream .jump{position:absolute;left:0;right:0;top:calc(58px + env(safe-area-inset-top,0px));z-index:4;display:flex;justify-content:center;pointer-events:none}
-#bible-stream .app .jump-back{pointer-events:auto;display:inline-flex!important;align-items:center;gap:6px;padding:7px 12px 7px 9px!important;border-radius:999px!important;background:var(--ink);color:var(--bg);font:500 13px/1 var(--ui);box-shadow:0 2px 10px rgba(0,0,0,.18)}
+#bible-stream .app .jump-back{pointer-events:auto;display:inline-flex!important;align-items:center;gap:6px;padding:7px 12px 7px 9px!important;border-radius:var(--r)!important;background:var(--ink);color:var(--bg);font:500 13px/1 var(--ui);box-shadow:0 2px 10px rgba(0,0,0,.18)}
 #bible-stream .app .jump-back svg{width:15px;height:15px;transform:rotate(-90deg)}
 #bible-stream .immersed .jump{opacity:0;pointer-events:none;transition:opacity .2s}
 #bible-stream .crumbs{display:flex;flex-wrap:wrap;align-items:center;gap:2px;margin:2px 0 14px;font:500 14px/1.3 var(--ui)}
-#bible-stream .app .crumbs button{padding:5px 7px!important;border-radius:6px!important}
+#bible-stream .app .crumbs button{padding:5px 7px!important;border-radius:var(--r)!important}
 #bible-stream .app .crumbs button:hover{background:var(--soft)}
 #bible-stream .app .crumbs button[aria-current=true]{background:var(--ink);color:var(--bg)}
 #bible-stream .crumbs .sep{color:var(--muted);padding:0 2px}
 #bible-stream .nav-block{margin-top:18px}
 #bible-stream .sheet .nav-block h4{font:500 12px/1.4 var(--ui);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 8px;display:flex;justify-content:space-between;align-items:center;gap:8px}
-#bible-stream .app .nav-block .open{text-transform:none;letter-spacing:0;font:500 13px/1 var(--ui);color:var(--ink);display:inline-flex!important;align-items:center;gap:2px;padding:6px 4px 6px 8px!important;border-radius:999px!important}
+#bible-stream .app .nav-block .open{text-transform:none;letter-spacing:0;font:500 13px/1 var(--ui);color:var(--ink);display:inline-flex!important;align-items:center;gap:2px;padding:6px 4px 6px 8px!important;border-radius:var(--r)!important}
 #bible-stream .app .nav-block .open:hover{background:var(--soft)}
 #bible-stream .nav-block .open svg{width:15px;height:15px}
 #bible-stream .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
-#bible-stream .app .chip{padding:8px 12px!important;border:1px solid var(--rule)!important;border-radius:999px!important;font:500 13px/1 var(--ui)}
+#bible-stream .app .chip{padding:8px 12px!important;border:1px solid var(--rule)!important;border-radius:var(--r)!important;font:500 13px/1 var(--ui)}
 #bible-stream .app .chip:hover{background:var(--soft)}
 #bible-stream .app .chip.cur,#bible-stream .app .grid button.cur{background:var(--ink);color:var(--bg);border-color:var(--ink)!important}
 #bible-stream .grid{display:grid;gap:6px}
 #bible-stream .grid.nums{grid-template-columns:repeat(auto-fill,minmax(42px,1fr))}
 #bible-stream .grid.books{grid-template-columns:repeat(auto-fill,minmax(86px,1fr))}
-#bible-stream .app .grid button{position:relative;min-height:42px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:4px!important;border:1px solid var(--rule)!important;border-radius:8px!important;font:500 14px/1.1 var(--ui);text-align:center;font-variant-numeric:tabular-nums}
+#bible-stream .app .grid button{position:relative;min-height:42px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:4px!important;border:1px solid var(--rule)!important;border-radius:var(--r)!important;font:500 14px/1.1 var(--ui);text-align:center;font-variant-numeric:tabular-nums}
 #bible-stream .app .grid button:not(.cur):hover{background:var(--soft)}
 #bible-stream .grid.books small{font:400 10.5px/1.15 var(--ui);color:var(--muted);max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 #bible-stream .grid button.cur small{color:inherit;opacity:.8}
@@ -118,7 +121,7 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .dec.interpretive{text-decoration-style:dashed}
 #bible-stream .dec-tag.traditional,#bible-stream .dec-tag.interpretive{color:var(--ink)}
 #bible-stream .grc-line{display:inline-flex;align-items:center;flex-wrap:wrap;gap:2px}
-#bible-stream .play{display:inline-flex!important;align-items:center;justify-content:center;width:32px;height:32px;margin-left:4px;vertical-align:middle;color:var(--muted);border-radius:50%;flex:none}
+#bible-stream .play{display:inline-flex!important;align-items:center;justify-content:center;width:32px;height:32px;margin-left:4px;vertical-align:middle;color:var(--muted);border-radius:var(--r);flex:none}
 #bible-stream .play svg{width:18px;height:18px}
 #bible-stream .play:hover,#bible-stream .play:active{color:var(--ink);background:var(--soft)}
 #bible-stream .tr-inline{font-family:var(--serif);color:var(--muted)}
@@ -131,12 +134,11 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .tr{display:block;font:italic 14px/1.45 var(--serif);color:var(--muted);margin:0}
 #bible-stream .il .tr{font-size:12.5px}
 #bible-stream .il .g{display:inline-flex;align-items:center}
-#bible-stream .set.stack{flex-direction:column;align-items:stretch;gap:8px}
-#bible-stream .seg.wrap{flex-wrap:wrap}
+#bible-stream .set .chips{margin-top:0;justify-content:flex-end;max-width:100%}
 #bible-stream .grc.small{font-size:15px;color:var(--muted);margin:6px 0 0;line-height:1.5}
 #bible-stream .word-table{display:flex;flex-direction:column;gap:10px}
 #bible-stream .word-row{display:flex;flex-direction:column;gap:2px;border-left:2px solid var(--rule);padding-left:12px}
-#bible-stream .wit-group{border:1px solid var(--rule);padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+#bible-stream .wit-group{border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;display:flex;flex-direction:column;gap:6px}
 #bible-stream .wit-group.main{border-color:var(--ink)}
 #bible-stream .wit-group p{margin:0}
 #bible-stream .wit summary{display:flex;gap:12px;align-items:baseline;cursor:pointer;list-style:none;padding:6px 0;border-top:1px solid var(--soft)}
@@ -159,7 +161,7 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .grab{width:36px;height:4px;background:var(--rule);margin:6px auto 4px}
 #bible-stream .sheet-head{display:flex;justify-content:space-between;align-items:center;gap:12px}
 #bible-stream .sheet-head h3{font:400 24px/1.2 var(--ui);margin:0}
-#bible-stream .app .close{display:inline-flex!important;align-items:center;gap:6px;flex:none;min-height:38px;padding:0 12px 0 9px!important;color:var(--muted);font:500 14px/1 var(--ui);border-radius:999px!important;transition:background .15s,color .15s}
+#bible-stream .app .close{display:inline-flex!important;align-items:center;gap:6px;flex:none;min-height:38px;padding:0 12px 0 9px!important;color:var(--muted);font:500 14px/1 var(--ui);border-radius:var(--r)!important;transition:background .15s,color .15s}
 #bible-stream .close svg{width:18px;height:18px}
 #bible-stream .close:hover,#bible-stream .close:active{background:var(--soft);color:var(--ink)}
 #bible-stream .app .sheet:focus,#bible-stream .app .sheet:focus-visible{outline:none}
@@ -169,7 +171,7 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .sheet .note{font-size:14px;color:var(--muted)}
 #bible-stream .point{border-left:2px solid var(--rule);padding-left:14px;display:flex;flex-direction:column;gap:6px}
 #bible-stream .pair{display:grid;gap:8px}
-#bible-stream .reading-card{border:1px solid var(--rule);padding:12px 14px;display:flex;flex-direction:column;gap:5px}
+#bible-stream .reading-card{border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;display:flex;flex-direction:column;gap:5px}
 #bible-stream .reading-card.main{border-color:var(--ink)}
 #bible-stream .tag{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 #bible-stream .dots{display:inline-flex;gap:4px;margin-right:8px;vertical-align:middle}
@@ -190,16 +192,18 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .row{display:flex!important;justify-content:space-between;align-items:center;width:100%;min-height:50px;border-top:1px solid var(--rule)!important;gap:10px}
 #bible-stream .row .sub{display:block;font-size:12.5px;color:var(--muted)}
 #bible-stream .row.current{font-weight:600}
-#bible-stream .set{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:12px 0;border-top:1px solid var(--rule)}
+#bible-stream .set{display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:10px 14px;padding:12px 0;border-top:1px solid var(--rule)}
+#bible-stream .set>span:first-child{flex:1 1 200px;min-width:0}
+#bible-stream .set .seg,#bible-stream .set .switch,#bible-stream .set .chips{margin-left:auto}
 #bible-stream .set .sub{display:block;font-size:13px;color:var(--muted)}
-#bible-stream .seg{display:inline-flex;border:1px solid var(--rule)}
+#bible-stream .seg{display:inline-flex;border:1px solid var(--rule);border-radius:var(--r);overflow:hidden}
 #bible-stream .seg button{padding:8px 12px!important;font-size:14px;min-height:38px}
 #bible-stream .seg button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
 #bible-stream .switch{width:46px;height:28px;background:var(--rule)!important;position:relative;flex:0 0 auto;border-radius:14px!important}
 #bible-stream .switch::after{content:"";position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:var(--sheet);transition:transform .15s}
 #bible-stream .switch[aria-checked=true]{background:var(--ink)!important}
 #bible-stream .switch[aria-checked=true]::after{transform:translateX(18px)}
-#bible-stream input[type=search]{width:100%;font:16px var(--ui);padding:12px;border:1px solid var(--rule);background:var(--bg);color:var(--ink);border-radius:0}
+#bible-stream input[type=search]{width:100%;font:16px var(--ui);padding:12px;border:1px solid var(--rule);background:var(--bg);color:var(--ink);border-radius:var(--r)}
 #bible-stream details.about summary{cursor:pointer;padding:12px 0;border-top:1px solid var(--rule)}
 #bible-stream details.about div{display:flex;flex-direction:column;gap:8px;font-size:13.5px;color:var(--muted);padding-bottom:10px}
 #bible-stream .live{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
@@ -585,8 +589,8 @@ function menuSheet(){
   <div class="set"><span>${t.size}</span>${seg('read',[[17,'A−'],[19,'A'],[22,'A+']],S.read)}</div>
   <div class="set"><span>${t.language}</span>${seg('lang',[['de','Deutsch'],['en','English']],lang)}</div>
   ${sw('flow',t.flow,t.flowSub)}${sw('inline',t.inline,t.inlineSub)}${sw('bgInline',t.bgInline,t.bgInlineSub)}${sw('advanced',t.advanced,t.advancedSub)}${sw('translit',t.translit,t.translitSub)}
-  <div class="set stack"><span>${t.pron}<span class="sub">${t.pronSub}</span></span>${seg('pron',[['modern',t.pronModern],['school',t.pronSchool]],S.pron)}</div>
-  ${(()=>{const lg=pronLang('el'),vs=voicesFor(lg),cur=(S.voice||{})[lg]||'';return `<div class="set stack"><span>${t.voice}</span>${vs.length?`<div class="seg wrap" role="group">${[['',t.voiceAuto],...vs.map(v=>[v.name,v.name.replace(/\s*\(.*\)$/,'')])].map(([v,l])=>`<button type="button" data-set="voice" data-value="${esc(v)}" aria-pressed="${cur===v}">${esc(l)}</button>`).join('')}</div>`:`<span class="sub">${t.noVoice}</span>`}</div>`;})()}
+  <div class="set"><span>${t.pron}<span class="sub">${t.pronSub}</span></span>${seg('pron',[['modern',t.pronModern],['school',t.pronSchool]],S.pron)}</div>
+  ${(()=>{const lg=pronLang('el'),vs=voicesFor(lg),cur=(S.voice||{})[lg]||'';return `<div class="set"><span>${t.voice}${vs.length?'':`<span class="sub">${t.noVoice}</span>`}</span>${vs.length?`<div class="chips" role="group">${[['',t.voiceAuto],...vs.map(v=>[v.name,v.name.replace(/\s*\(.*\)$/,'')])].map(([v,l])=>`<button type="button" class="chip${cur===v?' cur':''}" data-set="voice" data-value="${esc(v)}" aria-pressed="${cur===v}">${esc(l)}</button>`).join('')}</div>`:''}</div>`;})()}
   <div class="set"><span>${t.rate}</span>${seg('rate',[[0.7,t.slow],[0.85,t.normal]],S.rate)}</div>
   <div class="set"><span>${t.sample}</span><span class="grc-line"><span class="grc">Πάτερ ἡμῶν</span>${play('Πάτερ ἡμῶν ὁ ἐν τοῖς οὐρανοῖς')}</span></div>
   <details class="about"><summary>${t.about}</summary><div>
