@@ -174,6 +174,7 @@ assert(reader.querySelector('[data-stream="v39-6-11"] button.dec.traditional'),'
 click('[data-action=index]');assert(sheetHost.textContent.includes('S Vatterunser')&&sheetHost.textContent.includes('Nöd zum Schiin'),'Navigator-Titel in Mundart');click('[data-close]');
 click('[data-action=up]');assert(reader.textContent.includes('Es Gebät mit sibe Bitte')&&reader.querySelector('[data-stream="TU-MAT-006-009-013"] h2').textContent==='S Vatterunser','Abschnittstitel und -zusammenfassung in Mundart');click('[data-action=down]');
 assert(reader.querySelector('.alt-line[data-alternative="VAR-SBLGNTAPP-MAT-006-012-01"]').textContent.includes('vergänd'),'Mundart-Lesart im Text');
+click('[data-more="v39-6-11"]');assert(sheetHost.textContent.includes('Ältere Übersetzungen · Züridüütsch')&&sheetHost.textContent.includes('noch keine Vergleichsübersetzung')&&sheetHost.textContent.includes('Ältere Übersetzungen · Hochdeutsch')&&sheetHost.textContent.includes('Lutherbibel'),'Vergleichsübersetzungen nach Sprache des Zielkontexts');click('[data-close]');
 click('[data-more="v39-6-11"]');assert(sheetHost.textContent.includes('Öises täglich Broot')&&sheetHost.textContent.includes('für de nööchscht Taag'),'Mundart-Entscheidung im Versblatt');
 sheetHost.querySelector('.sheet [data-source="VAR-SBLGNTAPP-MAT-006-013-01"]')||click('[data-close]');
 // Inhalte in Mundart (data/localizations): Deutungen, Befunde, Hintergrund, Zusammenfassungen, Lesarten-Erklärungen

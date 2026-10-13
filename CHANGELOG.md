@@ -2,6 +2,13 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.30 — 2026-10-13 — Vergleichsübersetzungen je Sprache
+
+- Vergleichsübersetzungen (`historical_comparison`) sind sprachgebunden. Welche Sprachen eine Übersetzungsschicht zum Vergleich zeigt, legt ihr Zielkontext fest (`comparison_languages` im `context`-Datensatz, Reihenfolge = Anzeige); ohne Angabe nur die eigene Sprache.
+- `CTX-CH-ZH-GSW-2026`: `["gsw", "de"]` (redaktionelle Annahme: Mundart-Lesende kennen die Bibel meist auf Hochdeutsch). Für Züridüütsch ist noch keine Vergleichsfassung erfasst; das Versblatt sagt das ausdrücklich und zeigt danach Luther 1912 und Elberfelder 1905 unter «Hochdeutsch».
+- Projektion: Vergleichseinträge tragen `lang`, Schichten `compare_languages`.
+- `node_modules/` in `.gitignore`.
+
 ## v0.29 — 2026-10-13 — Alle Inhalte in Mundart, Lokalisierungen, Weiterlesen beim Scrollen
 
 - Neuer Datensatztyp `localization` (`data/localizations/<BCP-47>/<ID>.json`): übersetzt einzelne Felder eines Originaldatensatzes (`localizes`, `fields` mit den Feldnamen des Originals, bei `terms` die Bedeutungen in Reihenfolge). `source_fingerprint` hält je Feld fest, von welchem Stand des Originals übersetzt wurde. Originale tragen keine Übersetzungen; neue Sprachen und neue Deutungen ändern einander nicht.
