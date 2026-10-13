@@ -33,40 +33,52 @@
     {
       "reading": "VAR-SBLGNTAPP-MRK-003-032-03:R2",
       "reference": "MRK.3.32",
-      "de_from": "deine Mutter und deine Brüder sind draussen",
-      "de_to": "deine Mutter und deine Brüder und deine Schwestern sind draussen",
+      "from_text": "deine Mutter und deine Brüder sind draussen",
+      "to_text": "deine Mutter und deine Brüder und deine Schwestern sind draussen",
       "effect": "bedeutsam",
-      "note_de": "Einige Ausgaben nennen hier auch Jesu Schwestern.",
-      "readings_de": {
+      "note": "Einige Ausgaben nennen hier auch Jesu Schwestern.",
+      "readings": {
         "R1": [
           {
             "grc": "σου",
-            "de": "ohne Zusatz",
-            "note_de": "Der Satz endet mit «deine Brüder»."
+            "text": "ohne Zusatz",
+            "note": "Der Satz endet mit «deine Brüder»."
           }
         ],
         "R2": [
           {
             "grc": "καὶ αἱ ἀδελφαί σου",
-            "de": "und deine Schwestern",
-            "note_de": "Zusatz"
+            "text": "und deine Schwestern",
+            "note": "Zusatz"
           }
         ]
       },
-      "origin_de": [
-        "Ein Schreiber kann die Schwestern aus 3,35 («Bruder, Schwester und Mutter») hier ergänzt haben.",
+      "origin": [
+        "Ein Schreiber kann die Schwestern aus [[MRK.3.35]] («Bruder, Schwester und Mutter») hier ergänzt haben.",
         "Umgekehrt können sie versehentlich ausgefallen sein: Beide Wortgruppen enden auf «σου» (deine). Springt das Auge vom ersten zum zweiten «σου», fällt «und deine Schwestern» weg; das kommt beim Abschreiben häufig vor.",
-        "Auch eine bewusste Angleichung an 3,31 und 3,34 sowie an Matthäus und Lukas, die hier keine Schwestern nennen, ist denkbar."
+        "Auch eine bewusste Angleichung an [[MRK.3.31]] und [[MRK.3.34]] sowie an Matthäus und Lukas, die hier keine Schwestern nennen, ist denkbar."
       ]
     }
   ],
   "alternatives_note_de": "Deutsche Wiedergabe abweichender Lesarten, soweit sie die Übersetzung verändern. Umstellungen und gleichbedeutende Wörter sind nicht aufgeführt. KI-Entwurf (Claude) vom 2026-10-09; keine fachliche Prüfung erfolgt.",
-  "alternatives_origin_note_de": "Mögliche Erklärungen, wie die Unterschiede entstanden sein könnten. Sie stehen nebeneinander; keine ist als richtig entschieden. KI-Entwurf (Claude) vom 2026-10-12, fachlich ungeprüft.",
   "revision_log": [
     {
       "date": "2026-10-12",
       "change_de": "alternatives um Wortbedeutungen der Lesarten (readings_de) und mögliche Entstehungserklärungen (origin_de) ergänzt; bestehende Felder unverändert",
       "reason_de": "Rückmeldung: Lesarten bis zur Quelle verstehen, auch ohne Griechisch"
+    },
+    {
+      "date": "2026-10-13",
+      "change_de": "Feldnamen der Inhalte in der Zielsprache sprachneutral (from_text, to_text, note, readings, origin, more_literal, other_options); Werte unverändert",
+      "reason_de": "Migration v0.31: Daten für viele Sprachen und die ganze Bibel",
+      "migration": "scripts/migrations/v0_31.py"
+    },
+    {
+      "date": "2026-10-13",
+      "change_de": "Bibelstellen im Fliesstext als sprachneutrale Marken [[…]]; Inhalt unverändert",
+      "reason_de": "Migration v0.31: Daten für viele Sprachen und die ganze Bibel",
+      "migration": "scripts/migrations/v0_31.py"
     }
-  ]
+  ],
+  "alternatives_origin_note": "Mögliche Erklärungen, wie die Unterschiede entstanden sein könnten. Sie stehen nebeneinander; keine ist als richtig entschieden. KI-Entwurf (Claude) vom 2026-10-12, fachlich ungeprüft."
 }

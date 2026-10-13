@@ -26,12 +26,17 @@ Regeln:
 - **Edition/Übersetzung:** steht in eigenen Feldern; die Stelle selbst ist editionsneutral.
 
 ## Versifikation
-Eine Stelle bezieht sich vorerst auf die übliche Versifikation der verwendeten Ausgangsedition (für das NT: SBLGNT/NA28). Abweichende Zählungen (z. B. Psalmüberschriften, Joel 3/4, Maleachi 3/4, deutsche gegenüber hebräischer Zählung) sind bekannt, aber noch nicht modelliert. Wenn ein Datensatz mit abweichender Zählung arbeitet, muss ein künftiges Feld `versification` sie angeben; eine Zuordnungstabelle ist offen.
+- **Bezugszählung** ist die der Navigation (`data/navigation/NAV-PROT66-KJV.json`, KJV, 31 102 Verse). Laut TVTMS weicht die KJV im NT an wenigen Stellen von deren Standardzählung (NRSV) ab, u. a. 2 Kor 13,12–14, 3 Joh 14–15 und Offb 12,17–18. Für Matthäus, Markus und Lukas kommen im SBLGNT keine Versnummern vor, die es in der KJV nicht gibt (Prüfung des Validators); einzelne Versgrenzen liegen laut TVTMS leicht anders (z. B. Mk 3,20, «StartDifferent»), und Verse wie Mk 9,44 fehlen im SBLGNT.
+- Ein Datensatz mit anderer Zählung gibt sie im Feld `versification` an. Der Validator meldet Stellen, die es in der Bezugszählung nicht gibt, als WARN, wenn der Datensatz KJV angibt oder nichts angibt (Stand v0.31: 5 Querverweise von OpenBible.info auf 3 Joh 1,15, obwohl der Datensatz KJV angibt).
+- Zuordnungsdaten zwischen den Traditionen (Hebräisch, Latein, Griechisch/LXX, Englisch …) liegen als `versification_map` vor (TVTMS, STEPBible, CC BY 4.0). Die Umrechnung ist noch nicht umgesetzt; sie wird mit dem ersten Text in anderer Zählung (z. B. hebräischer Grundtext) gebaut, weil sie dessen Verszahlen braucht.
+
+## Stellen im Fliesstext
+In Erklärtexten stehen Bibelstellen als Marke `[[MAT.6.34]]` (Bereich `[[MRK.3.28-MRK.3.29]]`), nicht als «Mt 6,34». Die Anzeige erzeugt die App je Sprache (im Kontextbuch ohne Buchname, Folgestellen im selben Buch «; 64,7» bzw. Kapitel «.12» verkürzt). `scripts/prose_refs.py` wandelt deutsche Schreibweisen um (`mark`), listet Marken (`marks`) und noch unmarkierte Stellen (`unmarked`) und erzeugt die Anzeige (`render`). Angaben zu ausserbiblischen Werken («Didache 8,2», «Henochbuch 10,4») sind keine Bibelstellen und bleiben Text.
 
 ## Werkzeuge
 - `scripts/refs.py` prüft kanonische Stellen (`parse`), wandelt lockere Eingaben um (`canonical("Mk 3,22–30")` → `MRK.3.22-MRK.3.30`) und erzeugt die Anzeige (`display_de`).
 - `scripts/validate.py` prüft alle Stellenfelder der Daten gegen diese Konvention.
-- Ob ein Vers in einem Kapitel tatsächlich existiert, wird noch nicht geprüft; dafür fehlt eine Versifikationstabelle.
+- Ob ein Vers in der Bezugszählung existiert, prüft der Validator gegen die Verszahlen der Navigation (WARN, siehe oben).
 
 ## Felder mit Bibelstellen
 `reference`, `to_ref`, `range` (Bereich der Texteinheit), die Listen `evidence_refs` und `imported_scope`, die Schlüssel von `text_by_reference` sowie `tokens[].reference`. Neue Felder mit Stellen müssen in `scripts/validate.py` (`REF_FIELDS` bzw. `REF_LIST_FIELDS`) eingetragen werden.

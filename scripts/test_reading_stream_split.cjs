@@ -1,0 +1,27 @@
+// Prüfung der aufgeteilten Fassung (build/reading-stream): Kern lädt Buch- und Sprachpakete erst bei Bedarf nach.
+// Voraussetzung: python3 scripts/build_reading_stream.py; Playwright (PLAYWRIGHT_MODULE=Pfad oder require('playwright')).
+// Fehlt Playwright, wird die Prüfung übersprungen (Exit 0 mit Hinweis).
+const http=require('node:http'),fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'));}catch{console.log('SKIP: Playwright nicht verfügbar');process.exit(0);}
+const root=path.join(__dirname,'../build/reading-stream');
+const server=http.createServer((q,r)=>{const f=path.join(root,decodeURIComponent(q.url.split('?')[0]));if(!f.startsWith(root)||!fs.existsSync(f)||fs.statSync(f).isDirectory()){r.writeHead(404);r.end();return;}
+  r.writeHead(200,{'Content-Type':f.endsWith('.html')?'text/html; charset=utf-8':f.endsWith('.gz')?'application/gzip':'application/json'});fs.createReadStream(f).pipe(r);});
+server.listen(0,async()=>{const url=`http://localhost:${server.address().port}/index.html`;const b=await chromium.launch();
+  try{const p=await b.newPage({viewport:{width:390,height:800}});const reqs=[],errs=[];
+    p.on('request',r=>{if(r.url().endsWith('.json.gz'))reqs.push(r.url().split('/').slice(-3).join('/').replace(/^.*?\/(b|l)\//,'$1/'));});p.on('pageerror',e=>errs.push(e.message));
+    const ev=f=>p.evaluate(f);const wait=()=>p.waitForTimeout(400);
+    await p.goto(url);await wait();
+    assert.equal(reqs.length,0,'auf Bibelebene keine Pakete nötig');
+    await ev(()=>document.querySelector('[data-action=menu]').click());await ev(()=>document.querySelector('.sheet [data-go^="TU-MAT-006"]').click());await wait();
+    assert(reqs.includes('b/MAT.json.gz')&&reqs.includes('l/de/MAT.json.gz')&&!reqs.some(x=>x.includes('gsw')),'nur Matthäus und Hochdeutsch geladen');
+    await ev(()=>document.querySelector('[data-action=down]').click());await wait();
+    assert.equal(await ev(()=>document.querySelector('[data-stream="v39-6-11"] .stream-copy').textContent),'Unser tägliches Brot gib uns heute.');
+    await ev(()=>document.querySelector('[data-action=menu]').click());await ev(()=>document.querySelector('[data-set="text"][data-value="gsw"]').click());await wait();await ev(()=>document.querySelector('[data-close]').click());
+    assert(reqs.includes('l/gsw/MAT.json.gz')&&reqs.includes('l/gsw/common.json.gz'),'Mundart-Pakete nachgeladen');
+    assert.equal(await ev(()=>document.querySelector('[data-stream="v39-6-11"] .stream-copy').textContent),'Öises täglich Broot gib üs hüt.');
+    await ev(()=>document.querySelector('[data-more="v39-6-11"]').click());await ev(()=>document.querySelector('.sheet-tools [data-background="TU-MAT-006-009-013"]').click());await wait();
+    const sheet=await ev(()=>document.querySelector('.sheet').innerText);
+    assert(!sheet.includes('[[')&&sheet.includes('Vatterunser'),'Hintergrund in Mundart, Stellen als Anzeige');
+    assert.deepEqual(errs,[],'keine Skriptfehler');
+    console.log(`PASS: aufgeteilte Fassung lädt nach Bedarf (${reqs.length} Pakete: ${reqs.join(', ')}).`);
+  }finally{await b.close();server.close();}});
