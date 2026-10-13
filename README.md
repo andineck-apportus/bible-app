@@ -2,7 +2,7 @@
 
 Git-versionierter Bibel-Wissensfundus: Quellen, Textbefunde, konkurrierende Interpretationen, Prinzipien und kontextabhängige Anwendungen nachvollziehbar miteinander verbinden.
 
-**Stand: 13. Oktober 2026 · UI v0.33 (Lesestrom) · Urtext: Matthäus, Markus, Lukas, Titus (Griechisch), Obadja (Hebräisch); ausgearbeitet: Markus 3,20–35, das Vaterunser (Mt 6,5–15; Lk 11,1–4), der ganze Titusbrief und Obadja.**
+**Stand: 13. Oktober 2026 · UI v0.34 (Lesestrom) · Urtext: Matthäus, Markus, Lukas, Titus (Griechisch), Obadja (Hebräisch); ausgearbeitet: Markus 3,20–35, das Vaterunser (Mt 6,5–15; Lk 11,1–4), der ganze Titusbrief und Obadja.**
 
 Dies ist der Konzept- und Datenprototyp, noch keine fertige Benutzer-App. Vorhanden sind 3932 strukturierte Datensätze, darunter:
 - der **ganze griechische Text des Markusevangeliums** (SBLGNT, 11 286 Wörter mit stabilen IDs) mit Lemma, Morphologie, Syntaxrollen, Referenten und Glossen aus MACULA Greek als eigener Annotationsschicht,
