@@ -2,6 +2,12 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.36 — 2026-10-13 — Verszählung des Alten Testaments umgerechnet
+
+- Umrechnung der hebräischen Verszählung (WLC) in die Navigationszählung (KJV) nach TVTMS (`scripts/versification.py`), eingebaut in den MACULA-Hebrew-Import. Für alle 39 Bücher geprüft (`scripts/check_versification_ot.py`): nach der Umrechnung stimmen alle Kapitel mit der Navigation überein; Neh 7,68 fehlt im hebräischen Text und bleibt leer. Damit kann jedes Buch des Alten Testaments importiert und übersetzt werden.
+- Psalmüberschriften, die im Hebräischen eigene Verse sind, stehen vor Vers 1 und sind als Überschrift markiert; geteilte Verse (z. B. Jes 63,19/64,1) folgen TVTMS. Jeder umgerechnete Token behält die hebräische Stelle.
+- Rut und Obadja bleiben unverändert (gleiche Zählung). Tests: `scripts/test_versification.py`.
+
 ## v0.35 — 2026-10-13 — Rut und Philipper aus dem Urtext
 
 - **Grundsatz** (Entscheid Andi Neck): Der Lesetext geht immer vom Urtext aus; Luther 1912 und Elberfelder 1905 dienen nur dem Vergleich.
