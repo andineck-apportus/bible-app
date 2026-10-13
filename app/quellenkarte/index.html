@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>body{margin:0}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>Quellenkarte bible-app</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,650&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: Schichten (Zeugen → Editionen → Sprachdaten …) als Zeilen, Bereiche (AT, LXX, NT, Versionen) als Spalten; Farbe = Nutzungsrecht, Punkt = Verwendung */
+:root{
+  --bg:#f6f5f1; --panel:#ffffff; --fg:#1f2321; --muted:#5d6560; --line:#dcdcd4;
+  --free:#2e7a4b; --free-bg:#e3f1e7;
+  --sa:#2b7d7a; --sa-bg:#ddf0ee;
+  --nc:#2f5fa8; --nc-bg:#e2eaf7;
+  --ask:#9a6a00; --ask-bg:#f8edcf;
+  --prot:#b03a2e; --prot-bg:#f6e0dc;
+  --display:"Literata",Georgia,serif; --body:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141716; --panel:#1c201e; --fg:#e7ebe8; --muted:#9aa49e; --line:#2f3532;
+  --free:#6cc58f; --free-bg:#1d3326; --sa:#62c4bf; --sa-bg:#18322f; --nc:#8cb0ef; --nc-bg:#1c2639;
+  --ask:#e2b552; --ask-bg:#352b14; --prot:#ef8a7e; --prot-bg:#3a1f1b; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141716; --panel:#1c201e; --fg:#e7ebe8; --muted:#9aa49e; --line:#2f3532;
+  --free:#6cc58f; --free-bg:#1d3326; --sa:#62c4bf; --sa-bg:#18322f; --nc:#8cb0ef; --nc-bg:#1c2639;
+  --ask:#e2b552; --ask-bg:#352b14; --prot:#ef8a7e; --prot-bg:#3a1f1b; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:15px/1.5 var(--body)}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:16px;padding-block:28px 48px;display:grid;gap:28px}
+h1{font:650 clamp(26px,4vw,38px)/1.15 var(--display);margin:0;text-wrap:balance}
+h2{font:650 20px/1.25 var(--display);margin:0;text-wrap:balance}
+.lede{color:var(--muted);max-width:68ch;margin:6px 0 0}
+.legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}
+.key{display:flex;gap:10px;align-items:flex-start;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+.sw{flex:none;width:14px;height:14px;border-radius:3px;margin-top:4px}
+.key b{display:block;font-weight:600}
+.key span{color:var(--muted);font-size:13px}
+.free{--c:var(--free);--cb:var(--free-bg)} .sa{--c:var(--sa);--cb:var(--sa-bg)} .nc{--c:var(--nc);--cb:var(--nc-bg)}
+.ask{--c:var(--ask);--cb:var(--ask-bg)} .prot{--c:var(--prot);--cb:var(--prot-bg)}
+.sw{background:var(--c)}
+.use{display:flex;flex-wrap:wrap;gap:8px 20px;color:var(--muted);font-size:13px;align-items:center}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;vertical-align:-1px;margin-right:6px}
+.dot.used{background:var(--fg)} .dot.cited{background:linear-gradient(90deg,var(--fg) 50%,transparent 50%);border:1px solid var(--fg);box-sizing:border-box} .dot.nc{border:2px solid var(--fg);width:10px;height:10px;box-sizing:border-box} .dot.none{border:1px dashed var(--muted);box-sizing:border-box}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.filters button{font:500 13px var(--body);color:var(--fg);background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:6px 12px;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.filters button:focus-visible{outline:2px solid var(--nc);outline-offset:2px}
+.map{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;min-width:880px}
+th,td{vertical-align:top;border-bottom:1px solid var(--line);padding:10px}
+thead th{font:600 12px var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:left;position:sticky;top:0;background:var(--panel)}
+tbody th{text-align:left;width:150px;font:600 14px/1.3 var(--display)}
+tbody th small{display:block;font:400 12px/1.35 var(--body);color:var(--muted);margin-top:4px}
+td + td, th + th{border-left:1px solid var(--line)}
+.cell{display:flex;flex-direction:column;gap:6px}
+.src{background:var(--cb);border-left:3px solid var(--c);border-radius:4px;font-size:13px;line-height:1.35}
+.src .u{grid-row:span 2;margin-top:3px}
+.src .n{font-weight:600}
+.src .l{font:500 11px var(--mono);color:var(--c);letter-spacing:.02em}
+.src.dim{opacity:.18}
+details.src{display:block;padding:0}
+details.src summary{list-style:none;display:grid;grid-template-columns:auto 1fr;gap:2px 8px;align-items:start;padding:6px 8px;cursor:pointer}
+details.src summary::-webkit-details-marker{display:none}
+details.src summary:focus-visible{outline:2px solid var(--c);outline-offset:1px}
+details.src .why{padding:0 8px 8px 26px;color:var(--fg);display:grid;gap:4px}
+details.src .why a{color:var(--c)}
+details.src .why small{color:var(--muted)}
+.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.note{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;display:grid;gap:8px}
+.note p{margin:0}
+.note ul{margin:0;padding-left:18px;display:grid;gap:4px}
+.qa{border-color:var(--nc)}
+.foot{color:var(--muted);font-size:12.5px;max-width:90ch}
+.counts{font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:no-preference){.src{transition:opacity .15s}}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Quellenkarte: Was es gibt, was wir dürfen, was wir nutzen</h1>
+    <p class="lede">Alle bekannten Quellen zum Urtext der Bibel, nach Schicht und Bereich. Die Farbe zeigt die Nutzungsbedingungen, der Punkt zeigt, ob die Quelle im Projekt verwendet wird. Antippen zeigt, wofür wir eine Quelle nutzen oder weshalb (noch) nicht. Erzeugt aus dem Quellenkatalog (<code>data/sources/</code>), Stand 13.10.2026.</p>
+  </header>
+
+  <section class="legend" aria-label="Legende Nutzungsrecht">
+    <div class="key free"><i class="sw"></i><div><b>Grün · frei</b><span>Gemeinfrei (PD), CC0, CC BY. Übernahme mit Namensnennung.</span></div></div>
+    <div class="key sa"><i class="sw"></i><div><b>Türkis · frei, gleiche Lizenz</b><span>CC BY-SA. Frei, Bearbeitungen aber unter derselben Lizenz.</span></div></div>
+    <div class="key nc"><i class="sw"></i><div><b>Blau · nicht kommerziell</b><span>CC BY-NC (-SA). Erlaubt für den Verein, nur in <code>data-nc/</code>.</span></div></div>
+    <div class="key ask"><i class="sw"></i><div><b>Gelb · auf Anfrage</b><span>Lesen frei oder Lizenz verhandelbar. Übernahme nur mit schriftlicher Erlaubnis.</span></div></div>
+    <div class="key prot"><i class="sw"></i><div><b>Rot · geschützt</b><span>Kauf oder Abo. Nur zitieren mit Fundstelle.</span></div></div>
+  </section>
+
+  <div class="use" aria-label="Legende Verwendung">
+    <span><i class="dot used"></i>im Projekt verwendet</span>
+    <span><i class="dot cited"></i>nur zitiert</span><span><i class="dot nc"></i>vorgesehen für <code>data-nc/</code>, noch nicht importiert</span>
+    <span><i class="dot none"></i>nicht verwendet</span>
+    <span class="counts" id="counts"></span>
+  </div>
+
+  <div class="filters" role="group" aria-label="Filter">
+    <button type="button" id="f-all" data-f="all" aria-pressed="true">Alle</button>
+    <button type="button" id="f-used" data-f="used" aria-pressed="false">Nur verwendete</button>
+    <button type="button" id="f-free" data-f="free" aria-pressed="false">Nur frei (grün, türkis)</button>
+    <button type="button" id="f-nc" data-f="nc" aria-pressed="false">Nur nicht kommerziell</button>
+    <button type="button" id="f-closed" data-f="closed" aria-pressed="false">Nur Anfrage oder geschützt</button>
+  </div>
+
+  <div class="map"><table id="map"><thead></thead><tbody></tbody></table></div>
+
+  <section class="notes">
+    <div class="note qa">
+      <h2>Sind Qumran und die Septuaginta nicht kommerziell nutzbar?</h2>
+      <p><b>Ja.</b> Beide gibt es als maschinenlesbare Daten unter einer nicht kommerziellen Lizenz. Für unseren gemeinnützigen Verein sind sie erlaubt, gehören aber nach unserem Lizenzgrundsatz in <code>data-nc/</code>, getrennt vom freien Kern.</p>
+      <ul>
+        <li><b>Qumran:</b> ETCBC «dss», biblische und nichtbiblische Rollen nach Martin Abeggs Transkription, mit Morphologie. CC BY-NC 4.0.</li>
+        <li><b>Septuaginta:</b> Rahlfs 1935 mit Morphologie aus CATSS (Eliran Wong, CC BY-NC-SA 4.0). Verlangt zusätzlich die unterschriebene CATSS-Nutzungserklärung. Diese muss die verantwortliche Person des Vereins einreichen.</li>
+        <li>Die <b>Bilder</b> der Qumranrollen (Leon Levy Library) sind dagegen nur auf Anfrage nutzbar.</li>
+      </ul>
+      <p>Beides ist noch nicht importiert; das ist der nächste Schritt für die Textkritik des Alten Testaments.</p>
+    </div>
+    <div class="note">
+      <h2>Was das Bild zeigt</h2>
+      <ul>
+        <li>Für <b>Text, Grammatik und Satzbau</b> von hebräischem AT und griechischem NT sind wir mit freien Quellen sehr gut ausgestattet.</li>
+        <li>Die grosse Lücke ist der <b>kuratierte textkritische Apparat</b>: NA28, ECM, BHS/BHQ und Göttinger Septuaginta sind geschützt. Wir dürfen sie lesen und zitieren, aber nicht als Daten übernehmen.</li>
+        <li>Die <b>Septuaginta</b> ist nur nicht kommerziell als Daten zu haben. Swete ist gemeinfrei, aber nicht frei digital erschlossen.</li>
+        <li>Die grossen <b>Lexika</b> (BDAG, HALOT) sind geschützt; frei sind ältere oder knappere Werke.</li>
+      </ul>
+    </div>
+    <div class="note">
+      <h2>Weshalb werden manche freie Quellen noch nicht genutzt?</h2>
+      <ul>
+        <li><b>Doppelt vorhanden:</b> Mehrere Quellen beruhen auf derselben Grundlage. Wir nehmen die freiere (MACULA statt OpenGNT oder TAHOT, WLC statt UXLC).</li>
+        <li><b>Die App zeigt diese Schicht noch nicht:</b> Lexika, alte Übersetzungen (Vulgata, koptisch) und Kirchenväter brauchen eigene Ansichten.</li>
+        <li><b>Erst bei bestimmten Büchern nötig:</b> IGNTP für Johannes, der Samaritanus für die fünf Bücher Mose.</li>
+        <li><b>Aufwand:</b> Die NTVMR-Schnittstelle erschliesst viel mehr Handschriften als CNTR, muss aber erst angebunden werden.</li>
+      </ul>
+      <p>Die Begründung je Quelle steht beim Antippen.</p>
+    </div>
+  </section>
+
+  <p class="foot">Lizenzangaben nach den Websites der Anbieter (Recherche 9. und 13. Oktober 2026, siehe <code>docs/QUELLEN.md</code>); Angaben, die in QUELLEN.md als [ungeprüft] markiert sind, gelten auch hier als ungeprüft. Vor jedem Import wird die Lizenz der konkreten Fassung erneut geprüft. Keine Rechtsberatung.</p>
+</div>
+
+<script>
+const CAT=[{"id": "SRC-BEREAN", "title": "Berean Interlinear und Standard Bible", "url": "https://berean.bible", "area": "all", "layer": "translations", "rights": "free", "license": "PD", "use": "used", "why": "Englische Glossen über MACULA Greek.", "checked": "2026-10-13"}, {"id": "SRC-ELBERFELDER-1905", "title": "Elberfelder 1905", "url": "https://github.com/scrollmapper/bible_databases", "area": "all", "layer": "translations", "rights": "free", "license": "PD", "use": "used", "why": "Nur Vergleich.", "checked": "2026-10-13"}, {"id": "SRC-KJV-EBIBLE", "title": "King James Version (eBible.org)", "url": "https://ebible.org", "area": "all", "layer": "aux", "rights": "free", "license": "PD", "use": "used", "why": "Nur Verszahlen je Kapitel für die Navigation.", "checked": "2026-10-13"}, {"id": "SRC-LUTHER-1912", "title": "Lutherbibel 1912", "url": "https://github.com/seven1m/open-bibles", "area": "all", "layer": "translations", "rights": "free", "license": "PD", "use": "used", "why": "Nur Vergleich, nie Lesetext (Entscheid 2026-10-13).", "checked": "2026-10-13"}, {"id": "SRC-MACULA-GREEK", "title": "MACULA Greek", "url": "https://github.com/Clear-Bible/macula-greek", "area": "nt", "layer": "language_data", "rights": "free", "license": "BY", "use": "used", "why": "Lemma, Morphologie, Syntax, Referenten, Glossen (Berean, Cherith).", "checked": "2026-10-13"}, {"id": "SRC-MACULA-HEBREW", "title": "MACULA Hebrew (mit Cherith-Glossen)", "url": "https://github.com/Clear-Bible/macula-hebrew", "area": "at", "layer": "language_data", "rights": "free", "license": "BY", "use": "used", "why": "Morphologie, Syntax, Glossen, Septuaginta-Entsprechungen. Die SDBH-Felder sind ausgeschlossen.", "checked": "2026-10-13"}, {"id": "SRC-OPENBIBLE-XREF", "title": "OpenBible.info Querverweise", "url": "https://www.openbible.info/labs/cross-references/", "area": "all", "layer": "aux", "rights": "free", "license": "BY", "use": "used", "why": "344 799 Querverweise (Kopie über scrollmapper/bible_databases).", "checked": "2026-10-13"}, {"id": "SRC-OSHB", "title": "OpenScriptures Hebrew Bible (OSHB)", "url": "https://github.com/openscriptures/morphhb", "area": "at", "layer": "language_data", "rights": "free", "license": "BY", "use": "used", "why": "Morphologie, über MACULA Hebrew übernommen.", "checked": "2026-10-13"}, {"id": "SRC-HISTORIC-EDITIONS", "title": "Robinson-Pierpont, Westcott-Hort, Stephanus, KJTR, Scrivener", "url": "", "area": "nt", "layer": "editions", "rights": "free", "license": "PD", "use": "used", "why": "Als Vergleichstexte über CNTR und den SBLGNT-Apparat.", "checked": "2026-10-13"}, {"id": "SRC-SBLGNT-2010", "title": "SBL Greek New Testament", "url": "https://sblgnt.com/", "area": "nt", "layer": "editions", "rights": "free", "license": "BY", "use": "used", "why": "Grundtext des Neuen Testaments.", "checked": "2026-10-13"}, {"id": "SRC-SBLGNT-APPARATUS", "title": "SBLGNT-Apparat (elektronisch)", "url": "https://github.com/Faithlife/SBLGNT/tree/master/data/sblgntapp", "area": "nt", "layer": "editions", "rights": "free", "license": "BY", "use": "used", "why": "Variantenstellen auf Editionsebene (WH, Tregelles, NA28, RP) und Gesichertheitsbewertung.", "checked": "2026-10-13"}, {"id": "SRC-STEP-TVTMS", "title": "STEPBible TVTMS (Versifikation)", "url": "https://github.com/STEPBible/STEPBible-Data", "area": "all", "layer": "aux", "rights": "free", "license": "BY", "use": "used", "why": "Umrechnung der Verszählungen.", "checked": "2026-10-13"}, {"id": "SRC-WLC", "title": "Westminster Leningrad Codex (WLC)", "url": "https://tanach.us", "area": "at", "layer": "editions", "rights": "free", "license": "PD", "use": "used", "why": "Grundtext des Alten Testaments (über MACULA Hebrew). Umgerechnet in die Navigationszählung.", "checked": "2026-10-13"}, {"id": "SRC-PAPYRI-INFO", "title": "papyri.info / DCLP / HGV (Metadaten)", "url": "https://papyri.info", "area": "nt", "layer": "manuscripts", "rights": "free", "license": "BY?", "use": "used", "why": "Sachangaben zu Amuletten und Papyri, eigene Formulierung.", "checked": "2026-10-13"}, {"id": "SRC-BDB", "title": "Brown-Driver-Briggs (OpenScriptures)", "url": "https://github.com/openscriptures/HebrewLexicon", "area": "at", "layer": "lexica", "rights": "free", "license": "BY", "use": "not_used", "why": "Die App hat noch keine Lexikon-Ansicht; Wortbedeutungen kommen bisher aus den MACULA-Glossen.", "checked": "2026-10-13"}, {"id": "SRC-LENINGRAD-PHOTOS", "title": "Codex Leningradensis, Farbfotos", "url": "https://archive.org/details/Leningrad_Codex_Color_Images", "area": "at", "layer": "manuscripts", "rights": "free", "license": "PD?", "use": "not_used", "why": "Für einen Abgleich am Faksimile; Haltung des Fotografen ungeprüft, deshalb noch nicht eingebunden.", "checked": "2026-10-13"}, {"id": "SRC-IGNTP", "title": "IGNTP-Transkriptionen", "url": "https://www.birmingham.ac.uk/news/2017/igntp-releases-open-data", "area": "nt", "layer": "manuscripts", "rights": "free", "license": "BY", "use": "not_used", "why": "Vor allem Johannes; wird gebraucht, sobald Johannes ausgearbeitet wird.", "checked": "2026-10-13"}, {"id": "SRC-GREEK-LEXICA-FREE", "title": "LSJ, Abbott-Smith, STEPBible TBESG", "url": "", "area": "nt", "layer": "lexica", "rights": "free", "license": "PD/BY", "use": "not_used", "why": "Die App hat noch keine Lexikon-Ansicht; vorgesehen.", "checked": "2026-10-13"}, {"id": "SRC-NTVMR", "title": "New Testament Virtual Manuscript Room", "url": "https://ntvmr.uni-muenster.de/", "area": "nt", "layer": "manuscripts", "rights": "free", "license": "BY", "use": "cited", "why": "Katalog und Verweise (Handschriftennummern). Die Daten-API ist noch nicht angebunden; sie würde viel mehr Handschriften erschliessen als CNTR.", "checked": "2026-10-13"}, {"id": "SRC-STEP-TAGNT", "title": "STEPBible TAGNT", "url": "https://github.com/STEPBible/STEPBible-Data", "area": "nt", "layer": "language_data", "rights": "free", "license": "BY", "use": "not_used", "why": "Geplant: zeigt für jedes Wort, welche Editionen es haben (z. B. NA28/TR). Der SBLGNT-Apparat deckt die Hauptfälle schon ab.", "checked": "2026-10-13"}, {"id": "SRC-STEP-TAHOT", "title": "STEPBible TAHOT", "url": "https://github.com/STEPBible/STEPBible-Data", "area": "at", "layer": "language_data", "rights": "free", "license": "BY", "use": "not_used", "why": "Deckt sich weitgehend mit OSHB und MACULA. Nützlich als nächster Schritt für die geschriebenen Ketiv-Formen, die MACULA nicht enthält.", "checked": "2026-10-13"}, {"id": "SRC-STEP-TBESH", "title": "STEPBible TBESH (Kurzlexikon Hebräisch)", "url": "https://github.com/STEPBible/STEPBible-Data", "area": "at", "layer": "lexica", "rights": "free", "license": "BY", "use": "not_used", "why": "Wie BDB: vorgesehen für die Lexikon-Ansicht.", "checked": "2026-10-13"}, {"id": "SRC-SAMARITAN", "title": "Samaritanischer Pentateuch, Transkription", "url": "https://zenodo.org/records/10694758", "area": "at", "layer": "manuscripts", "rights": "free", "license": "BY", "use": "not_used", "why": "Erst für die Textkritik der fünf Bücher Mose nötig; davon ist noch nichts ausgearbeitet.", "checked": "2026-10-13"}, {"id": "SRC-SWETE", "title": "Swete, The Old Testament in Greek (1887–94)", "url": "", "area": "lxx", "layer": "editions", "rights": "free", "license": "PD", "use": "not_used", "why": "Gemeinfrei, aber kein frei erschlossener Digitaltext gefunden; selbst erschliessen wäre ein grösseres Projekt.", "checked": "2026-10-13"}, {"id": "SRC-UXLC", "title": "UXLC (Unicode/XML Leningrad Codex)", "url": "https://tanach.us", "area": "at", "layer": "editions", "rights": "free", "license": "PD", "use": "not_used", "why": "Laufend gepflegte Fassung desselben Codex wie der WLC. MACULA beruht auf dem WLC; ein Wechsel lohnt sich erst, wenn Korrekturen ins Gewicht fallen.", "checked": "2026-10-13"}, {"id": "SRC-VULGATA-CLEMENTINA", "title": "Vulgata Clementina", "url": "", "area": "versions", "layer": "editions", "rights": "free", "license": "PD", "use": "not_used", "why": "Die App zeigt alte Übersetzungen noch nicht; vorgesehen für den Vergleich der Lesarten.", "checked": "2026-10-13"}, {"id": "SRC-CNTR-TRANSCRIPTIONS", "title": "Center for New Testament Restoration: Electronic Transcriptions", "url": "https://github.com/Center-for-New-Testament-Restoration/transcriptions", "area": "nt", "layer": "manuscripts", "rights": "sa", "license": "BY-SA", "use": "used", "why": "Handschriften bis 400 n. Chr. und Ausgabentexte; maschinelle Zuordnung zu den Lesarten.", "checked": "2026-10-13"}, {"id": "SRC-MORPHGNT-612", "title": "MorphGNT SBLGNT Edition 6.12", "url": "https://github.com/morphgnt/sblgnt", "area": "nt", "layer": "language_data", "rights": "sa", "license": "BY-SA", "use": "used", "why": "Nur der Pilot Mk 3,22–30; sonst MACULA Greek, weil freier (CC BY).", "checked": "2026-10-13"}, {"id": "SRC-ALEPPO-MIQRA", "title": "Aleppo-Codex (Miqra al pi ha-Masora)", "url": "https://github.com/Sefaria/Sefaria-Export", "area": "at", "layer": "manuscripts", "rights": "sa", "license": "BY-SA", "use": "not_used", "why": "Älterer Mustercodex, aber ohne den grössten Teil der Tora. Als Vergleich zum WLC vorgesehen, sobald eine Lesarten-Ansicht für das AT steht.", "checked": "2026-10-13"}, {"id": "SRC-COPTIC-SCRIPTORIUM", "title": "Coptic Scriptorium", "url": "https://copticscriptorium.org", "area": "versions", "layer": "language_data", "rights": "sa", "license": "BY-SA", "use": "not_used", "why": "Wie die Vulgata: vorgesehen, sobald alte Übersetzungen gezeigt werden.", "checked": "2026-10-13"}, {"id": "SRC-FIRST1KGREEK", "title": "First1KGreek (Kirchenväter u. a.)", "url": "https://opengreekandlatin.github.io/First1KGreek/", "area": "versions", "layer": "context", "rights": "sa", "license": "BY-SA", "use": "not_used", "why": "Kirchenväter werden bisher nur mit Fundstelle zitiert; für Zitate im Original vorgesehen.", "checked": "2026-10-13"}, {"id": "SRC-OFFENE-BIBEL", "title": "Offene Bibel", "url": "https://offene-bibel.de", "area": "all", "layer": "translations", "rights": "sa", "license": "BY-SA?", "use": "not_used", "why": "Lizenz ungeprüft. Wir übersetzen selbst aus dem Urtext; höchstens als weitere Vergleichsübersetzung.", "checked": "2026-10-13"}, {"id": "SRC-OPENGNT", "title": "OpenGNT", "url": "https://github.com/eliranwong/OpenGNT", "area": "nt", "layer": "language_data", "rights": "sa", "license": "BY-SA", "use": "not_used", "why": "Überschneidet sich mit MACULA Greek, das freier lizenziert ist (CC BY).", "checked": "2026-10-13"}, {"id": "SRC-PERSEUS", "title": "Perseus, Scaife Viewer", "url": "https://scaife.perseus.org", "area": "nt", "layer": "context", "rights": "sa", "license": "BY-SA/PD", "use": "not_used", "why": "Antike Literatur für den Hintergrund; bisher nur als Fundstelle zitiert.", "checked": "2026-10-13"}, {"id": "SRC-SEFARIA", "title": "Sefaria (Targumim, Mischna, Talmud)", "url": "https://github.com/Sefaria/Sefaria-Export", "area": "versions", "layer": "context", "rights": "sa", "license": "gemischt", "use": "cited", "why": "Rabbinische Stellen werden im Hintergrund zitiert; Texte nicht übernommen (Lizenz je Fassung prüfen).", "checked": "2026-10-13"}, {"id": "SRC-UBS-DGNT", "title": "UBS Dictionary of the Greek NT", "url": "https://translation.bible/open-access-resources/", "area": "nt", "layer": "lexica", "rights": "sa", "license": "BY-SA", "use": "not_used", "why": "Bester freier Kandidat für die Lexikon-Ansicht (Wortbedeutungen nach Bedeutungsfeldern).", "checked": "2026-10-13"}, {"id": "SRC-BHSA", "title": "BHSA (ETCBC)", "url": "https://github.com/ETCBC/bhsa", "area": "at", "layer": "language_data", "rights": "nc", "license": "BY-NC", "use": "nc_planned", "why": "Sehr detaillierte Linguistik. MACULA Hebrew deckt den Bedarf frei ab; BHSA nur ergänzend in data-nc.", "checked": "2026-10-13"}, {"id": "SRC-CATSS", "title": "CATSS (Rahlfs 1935 mit Morphologie)", "url": "https://ccat.sas.upenn.edu/gopher/text/religion/biblical/", "area": "lxx", "layer": "language_data", "rights": "nc", "license": "Erklärung", "use": "nc_planned", "why": "Nur nach unterschriebener Nutzungserklärung (Andi Neck als Verantwortlicher); dann in data-nc.", "checked": "2026-10-13"}, {"id": "SRC-SINAITICUS-PROJECT", "title": "Codex Sinaiticus Project", "url": "https://www.codexsinaiticus.org/", "area": "nt", "layer": "manuscripts", "rights": "nc", "license": "BY-NC-SA", "use": "nc_planned", "why": "Transkription mit Korrekturschichten; ergänzend zu CNTR in data-nc.", "checked": "2026-10-13"}, {"id": "SRC-ETCBC-PESHITTA", "title": "ETCBC Peshitta (AT)", "url": "https://github.com/ETCBC/peshitta", "area": "versions", "layer": "language_data", "rights": "nc", "license": "BY-NC", "use": "not_used", "why": "Ohne Apparat; erst sinnvoll, wenn alte Übersetzungen in der App gezeigt werden.", "checked": "2026-10-13"}, {"id": "SRC-LXX-RAHLFS-WONG", "title": "LXX-Rahlfs-1935 (Eliran Wong)", "url": "https://github.com/eliranwong/LXX-Rahlfs-1935", "area": "lxx", "layer": "language_data", "rights": "nc", "license": "BY-NC-SA", "use": "nc_planned", "why": "CATSS-Daten mit Lemmata; setzt die CATSS-Erklärung voraus. Für data-nc vorgesehen.", "checked": "2026-10-13"}, {"id": "SRC-ETCBC-DSS", "title": "Qumran-Texte ETCBC dss (Abegg)", "url": "https://github.com/ETCBC/dss", "area": "at", "layer": "manuscripts", "rights": "nc", "license": "BY-NC", "use": "nc_planned", "why": "Biblische und nichtbiblische Rollen mit Morphologie. Für data-nc vorgesehen (Textkritik AT).", "checked": "2026-10-13"}, {"id": "SRC-BHS", "title": "Biblia Hebraica Stuttgartensia", "url": "https://www.die-bibel.de/biblia-hebraica-stuttgartensia", "area": "at", "layer": "editions", "rights": "ask", "license": "Anfrage", "use": "not_used", "why": "Apparat nur mit Lizenz der Deutschen Bibelgesellschaft.", "checked": "2026-10-13"}, {"id": "SRC-BIBLINDEX", "title": "Biblindex", "url": "https://www.biblindex.org", "area": "versions", "layer": "context", "rights": "ask", "license": "nur lesen", "use": "not_used", "why": "Durchsuchbar; Export ungeprüft.", "checked": "2026-10-13"}, {"id": "SRC-CSNTM", "title": "CSNTM, DigiVatLib (Bilder)", "url": "https://www.csntm.org/terms-of-use-copyright/", "area": "nt", "layer": "manuscripts", "rights": "ask", "license": "Anfrage", "use": "cited", "why": "Als Faksimile-Verweise genannt, Bilder nicht übernommen.", "checked": "2026-10-13"}, {"id": "SRC-LXX-UNCIALS", "title": "Codex Vaticanus, Sinaiticus, Alexandrinus (Bilder)", "url": "", "area": "lxx", "layer": "manuscripts", "rights": "ask", "license": "Anfrage", "use": "not_used", "why": "Bilder je Bibliothek, Weiterverwendung auf Anfrage.", "checked": "2026-10-13"}, {"id": "SRC-ECM", "title": "Editio Critica Maior (digital)", "url": "https://ntvmr.uni-muenster.de", "area": "nt", "layer": "editions", "rights": "ask", "license": "nur lesen", "use": "not_used", "why": "Markus und Apostelgeschichte frei lesbar, aber ohne Datenlizenz; nur zitieren.", "checked": "2026-10-13"}, {"id": "SRC-GREEKLAB", "title": "Greeklab Interlinear", "url": "https://www.greeklab.org", "area": "nt", "layer": "language_data", "rights": "ask", "license": "unklar", "use": "cited", "why": "Einmal als Nachschlagehilfe zu Mk 3,29 genannt; keine Daten übernommen.", "checked": "2026-10-13"}, {"id": "SRC-GENIZA", "title": "Kairoer Geniza (Cambridge)", "url": "https://cudl.lib.cam.ac.uk/", "area": "at", "layer": "manuscripts", "rights": "ask", "license": "Anfrage", "use": "not_used", "why": "Bilder nur zur Ansicht.", "checked": "2026-10-13"}, {"id": "SRC-MARBLE", "title": "MARBLE / Louw-Nida-Bedeutungen (in MACULA Greek)", "url": "", "area": "nt", "layer": "language_data", "rights": "ask", "license": "Anfrage", "use": "not_used", "why": "Nur mit Erlaubnis; nach Lizenzgrundsatz ausgeschlossen.", "checked": "2026-10-13"}, {"id": "SRC-PHI-INSCRIPTIONS", "title": "PHI Greek Inscriptions", "url": "https://inscriptions.packhum.org", "area": "nt", "layer": "context", "rights": "ask", "license": "nur lesen", "use": "not_used", "why": "Durchsuchbar, keine Weiterverwendung.", "checked": "2026-10-13"}, {"id": "SRC-QUMRAN-IMAGES", "title": "Qumran-Rollen, Bilder (Leon Levy Library)", "url": "https://www.deadseascrolls.org.il/terms", "area": "at", "layer": "manuscripts", "rights": "ask", "license": "Anfrage", "use": "not_used", "why": "Bilder nur mit schriftlicher Erlaubnis der Israel Antiquities Authority.", "checked": "2026-10-13"}, {"id": "SRC-RAHLFS-HANHART", "title": "Rahlfs-Hanhart 2006", "url": "https://die-bibel.de/en/rights", "area": "lxx", "layer": "editions", "rights": "ask", "license": "Anfrage", "use": "not_used", "why": "Daten nur mit Lizenz der Deutschen Bibelgesellschaft.", "checked": "2026-10-13"}, {"id": "SRC-SDBH", "title": "SDBH-Wortbedeutungen (in MACULA Hebrew)", "url": "https://semanticdictionary.org", "area": "at", "layer": "language_data", "rights": "ask", "license": "Anfrage", "use": "not_used", "why": "Nur «used with permission»; nach Lizenzgrundsatz ausgeschlossen.", "checked": "2026-10-13"}, {"id": "SRC-STUTTGART-VULGATE", "title": "Stuttgarter Vulgata", "url": "", "area": "versions", "layer": "editions", "rights": "ask", "license": "Anfrage", "use": "not_used", "why": "Lizenz der Deutschen Bibelgesellschaft.", "checked": "2026-10-13"}, {"id": "SRC-THGNT", "title": "Tyndale House GNT", "url": "", "area": "nt", "layer": "editions", "rights": "ask", "license": "Anfrage", "use": "not_used", "why": "«All rights reserved».", "checked": "2026-10-13"}, {"id": "SRC-ANE-TEXTS", "title": "Altorientalische Texte, Inschriften (COS, ANET)", "url": "", "area": "at", "layer": "context", "rights": "prot", "license": "©", "use": "cited", "why": "Im Hintergrund nur als Fundstelle genannt (z. B. Mescha-Stele).", "checked": "2026-10-13"}, {"id": "SRC-BDAG", "title": "BDAG, Bauer-Aland, Louw-Nida (Vollausgabe)", "url": "", "area": "nt", "layer": "lexica", "rights": "prot", "license": "©", "use": "not_used", "why": "Geschützt; nur zitieren.", "checked": "2026-10-13"}, {"id": "SRC-BHQ-HUB", "title": "BHQ, Hebrew University Bible, HBCE", "url": "https://die-bibel.de/en/biblia-hebraica-quinta-bhq", "area": "at", "layer": "editions", "rights": "prot", "license": "©", "use": "not_used", "why": "Geschützt; nur zitieren.", "checked": "2026-10-13"}, {"id": "SRC-GOETTINGEN-LXX", "title": "Göttinger Septuaginta", "url": "", "area": "lxx", "layer": "editions", "rights": "prot", "license": "©", "use": "not_used", "why": "Geschützt; nur zitieren.", "checked": "2026-10-13"}, {"id": "SRC-HALOT", "title": "HALOT, Gesenius 18. Aufl., DCH", "url": "", "area": "at", "layer": "lexica", "rights": "prot", "license": "©", "use": "not_used", "why": "Geschützt; nur zitieren.", "checked": "2026-10-13"}, {"id": "SRC-PESHITTA-LEIDEN", "title": "Leidener Peshitta", "url": "", "area": "versions", "layer": "editions", "rights": "prot", "license": "Abo", "use": "not_used", "why": "Abo (Brill).", "checked": "2026-10-13"}, {"id": "SRC-MODERN-GERMAN", "title": "Luther 2017, Zürcher, Einheitsübersetzung, Elberfelder neu", "url": "", "area": "all", "layer": "translations", "rights": "prot", "license": "©", "use": "not_used", "why": "Geschützt; nur zitieren.", "checked": "2026-10-13"}, {"id": "SRC-NA28", "title": "Novum Testamentum Graece, 28th edition", "url": "", "area": "nt", "layer": "editions", "rights": "prot", "license": "©", "use": "cited", "why": "Nur zitiert (Fundstelle).", "checked": "2026-10-13"}, {"id": "SRC-TLG-LLT", "title": "TLG, Library of Latin Texts", "url": "", "area": "versions", "layer": "context", "rights": "prot", "license": "Abo", "use": "not_used", "why": "Abo; nur zitieren.", "checked": "2026-10-13"}, {"id": "SRC-VETUS-LATINA", "title": "Vetus Latina Database", "url": "", "area": "versions", "layer": "editions", "rights": "prot", "license": "Abo", "use": "not_used", "why": "Abo (Brepols).", "checked": "2026-10-13"}];
+const AREAS=[["at","AT hebräisch"],["lxx","Septuaginta"],["nt","NT griechisch"],["versions","Alte Übersetzungen, Väter"],["all","Übergreifend"]];
+const LAYERS=[["manuscripts","Handschriften","Die Zeugen selbst: Bilder und Transkriptionen"],["editions","Kritische Editionen","Rekonstruierter Text mit Apparat"],["language_data","Sprachdaten","Morphologie, Lemma, Syntax, Glossen"],["lexica","Lexika","Wortbedeutung"],["context","Kontext","Zeitgenössische Literatur, Inschriften"],["translations","Übersetzungen","Vergleich, nie Beleg für eine Lesart"],["aux","Hilfsdaten","Verszählung, Querverweise"]];
+const thead=document.querySelector('#map thead'),tbody=document.querySelector('#map tbody');
+thead.innerHTML='<tr><th>Schicht</th>'+AREAS.map(a=>`<th>${a[1]}</th>`).join('')+'</tr>';
+const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const USE={used:'im Projekt verwendet',cited:'nur zitiert',nc_planned:'vorgesehen für data-nc',not_used:'nicht verwendet'};
+const DOT={used:'used',cited:'cited',nc_planned:'nc',not_used:'none'};
+tbody.innerHTML=LAYERS.map(([lk,ln,ld])=>{
+  const cells=AREAS.map(([ak])=>{
+    const items=CAT.filter(s=>s.area===ak&&s.layer===lk);
+    return '<td><div class="cell">'+items.map(s=>`<details class="src ${s.rights}" data-c="${s.rights}" data-u="${s.use}"><summary><i class="dot ${DOT[s.use]} u" aria-label="${USE[s.use]}"></i><span class="n">${esc(s.title)}</span><span class="l">${esc(s.license)} · ${USE[s.use]}</span></summary><div class="why"><span>${esc(s.why)}</span>${s.url?`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.url.replace(/^https?:\/\//,''))}</a>`:''}<small>${esc(s.id)}</small></div></details>`).join('')+'</div></td>';
+  }).join('');
+  return `<tr><th>${ln}<small>${ld}</small></th>${cells}</tr>`;
+}).join('');
+const n=k=>CAT.filter(s=>s.use===k).length;
+document.getElementById('counts').textContent=`${CAT.length} Quellen · ${n('used')} verwendet · ${n('cited')} zitiert · ${n('nc_planned')} für data-nc vorgesehen`;
+const btns=[...document.querySelectorAll('.filters button')];
+btns.forEach(b=>b.addEventListener('click',()=>{
+  btns.forEach(x=>x.setAttribute('aria-pressed',x===b));
+  const f=b.dataset.f;
+  document.querySelectorAll('.src').forEach(el=>{
+    const c=el.dataset.c,u=el.dataset.u;
+    const show=f==='all'||(f==='used'&&u==='used')||(f==='free'&&(c==='free'||c==='sa'))||(f==='nc'&&c==='nc')||(f==='closed'&&(c==='ask'||c==='prot'));
+    el.classList.toggle('dim',!show);
+  });
+}));
+</script>
+
+</body>
+</html>

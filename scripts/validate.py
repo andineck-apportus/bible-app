@@ -393,6 +393,54 @@ def main():
                     errors.append(f"{rel}: {ref} ist schon in {other} ({lg}) übersetzt; Überschneidung gleicher Sprache "
                                   "(einen Datensatz auf deprecated setzen oder Bereich teilen)")
 
+    # Quellenkatalog (source.catalog): Nutzungsrecht und Verwendung; jede Herkunftsadresse in Datensätzen muss im
+    # Katalog stehen, verwendete Quellen müssen auf vorhandene Dateien zeigen (docs/QUELLEN.md, AGENTS.md).
+    CAT_ENUM = {"area": {"at", "lxx", "nt", "versions", "all"},
+                "layer": {"manuscripts", "editions", "language_data", "lexica", "context", "translations", "aux"},
+                "rights": {"free", "sa", "nc", "ask", "prot"}, "use": {"used", "cited", "nc_planned", "not_used"}}
+    catalog_urls, catalog_count = set(), 0
+    for rid, (rel, r) in records.items():
+        cat = r.get("catalog") if r.get("type") in ("source", "dataset") else None
+        if not cat:
+            continue
+        catalog_count += 1
+        for k, allowed in CAT_ENUM.items():
+            if cat.get(k) not in allowed:
+                errors.append(f"{rel}: catalog.{k} {cat.get(k)!r} nicht erlaubt")
+        if not cat.get("why_de"):
+            errors.append(f"{rel}: catalog.why_de fehlt (wofür verwendet bzw. weshalb nicht)")
+        if cat.get("use") == "used":
+            if not cat.get("used_in"):
+                errors.append(f"{rel}: catalog.used_in fehlt bei verwendeter Quelle")
+            for pat in cat.get("used_in", []):
+                if not list(ROOT.glob(pat)):
+                    errors.append(f"{rel}: catalog.used_in {pat!r} passt auf keine Datei")
+        if cat.get("rights") == "nc" and cat.get("use") == "used" and any(not p.startswith("data-nc/") for p in cat.get("used_in", [])):
+            errors.append(f"{rel}: nicht kommerzielle Quelle im freien Kern verwendet")
+        if cat.get("rights") in ("ask", "prot") and cat.get("use") == "used":
+            errors.append(f"{rel}: Quelle auf Anfrage/geschützt als verwendet markiert")
+        catalog_urls.update(u.rstrip("/") for u in cat.get("urls", []))
+
+    def provenance_urls(value, key=None):
+        if isinstance(value, dict):
+            for k, v in value.items():
+                yield from provenance_urls(v, k)
+        elif isinstance(value, list):
+            for v in value:
+                yield from provenance_urls(v, key)
+        elif isinstance(value, str) and key in ("url", "repository", "source_url") and value.startswith("http"):
+            yield value
+    if catalog_count:
+        missing_src = {}
+        for rid, (rel, r) in records.items():
+            if r.get("type") in ("source", "dataset"):
+                continue
+            for u in provenance_urls({k: v for k, v in r.items() if k not in ("catalog",)}):
+                if u.rstrip("/") not in catalog_urls:
+                    missing_src.setdefault(u, rel)
+        for u, rel in sorted(missing_src.items()):
+            errors.append(f"{rel}: Herkunft {u} fehlt im Quellenkatalog (data/sources/, catalog.urls)")
+
     for w in warnings:
         print("WARN:", w)
     if errors:
@@ -403,7 +451,7 @@ def main():
           f"tag/ID/reading references, {token_ref_count} token references, {ref_count} bible references, "
           f"{annotation_count} annotations, {assessment_count} assessments valid "
           f"({sum(v == 'nc' for v in layer_of.values())} records in data-nc; "
-          f"{sum(r.get('type') == 'localization' for _, r in records.values())} localizations, {mark_count} Stellen-Marken, {len(warnings)} Warnungen)")
+          f"{sum(r.get('type') == 'localization' for _, r in records.values())} localizations, {mark_count} Stellen-Marken, {catalog_count} Quellen im Katalog, {len(warnings)} Warnungen)")
 
 
 if __name__ == "__main__":

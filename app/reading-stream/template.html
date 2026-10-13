@@ -198,6 +198,24 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .row{display:flex!important;justify-content:space-between;align-items:center;width:100%;min-height:50px;border-top:1px solid var(--rule)!important;gap:10px}
 #bible-stream .row .sub{display:block;font-size:12.5px;color:var(--muted)}
 #bible-stream .row.current{font-weight:600}
+#bible-stream .app{--r-free:#2e7a4b;--r-sa:#2b7d7a;--r-nc:#2f5fa8;--r-ask:#9a6a00;--r-prot:#b03a2e}
+#bible-stream .app[data-theme=dark]{--r-free:#6cc58f;--r-sa:#62c4bf;--r-nc:#8cb0ef;--r-ask:#e2b552;--r-prot:#ef8a7e}
+#bible-stream .src-legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px 16px;margin:0 0 12px}
+#bible-stream .src-key{display:flex;gap:10px;align-items:flex-start;font:500 14px/1.35 var(--ui)}
+#bible-stream .src-key .sub{display:block;font-weight:400;font-size:12.5px;color:var(--muted)}
+#bible-stream .rights-sw{flex:none;width:12px;height:12px;border-radius:3px;margin-top:3px}
+#bible-stream .r-free{--rc:var(--r-free)} #bible-stream .r-sa{--rc:var(--r-sa)} #bible-stream .r-nc{--rc:var(--r-nc)} #bible-stream .r-ask{--rc:var(--r-ask)} #bible-stream .r-prot{--rc:var(--r-prot)}
+#bible-stream .rights-sw{background:var(--rc)}
+#bible-stream .src-uses{display:flex;flex-wrap:wrap;gap:6px 16px;font:400 12.5px/1.4 var(--ui);color:var(--muted);margin:0 0 12px}
+#bible-stream .src-use{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:0;box-sizing:border-box;flex:none}
+#bible-stream .src-use.u-used{background:var(--ink)} #bible-stream .src-use.u-cited{border:1px solid var(--ink);background:linear-gradient(90deg,var(--ink) 50%,transparent 50%)}
+#bible-stream .src-use.u-nc_planned{border:2px solid var(--ink)} #bible-stream .src-use.u-not_used{border:1px dashed var(--muted)}
+#bible-stream .src-item{border-left:3px solid var(--rc);padding:0 0 0 10px;margin:0 0 8px}
+#bible-stream .src-item summary{display:flex;gap:8px;align-items:baseline;cursor:pointer;list-style:none;font:500 14.5px/1.35 var(--ui);padding:4px 0}
+#bible-stream .src-item summary::-webkit-details-marker{display:none}
+#bible-stream .src-item .src-name .sub{display:block;font-weight:400;font-size:12.5px;color:var(--muted)}
+#bible-stream .src-item p{margin:2px 0 8px;font:400 14px/1.5 var(--ui)}
+
 #bible-stream .set{display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:10px 14px;padding:12px 0;border-top:1px solid var(--rule)}
 #bible-stream .set>span:first-child{flex:1 1 200px;min-width:0}
 #bible-stream .set .seg,#bible-stream .set .switch,#bible-stream .set .chips{margin-left:auto}
@@ -235,6 +253,7 @@ const NAV=/*__NAV__*/null;
 const SUMS=/*__SUMMARIES__*/null;
 const BG=/*__BACKGROUND__*/null;
 const SRC=/*__SOURCES__*/null;
+const CATALOG=/*__CATALOG__*/null;
 const XREF=/*__XREF__*/null;
 /* ---------- Pakete: Kern hier, Bücher und Sprachen nachladbar (scripts/build_reading_stream.py) ----------
    b/<BUCH>: Griechisch, Varianten, Befunde/Deutungen, Hintergrund, Querverweise; l/<Sprache>/<BUCH>: Übersetzungsschicht,
@@ -274,7 +293,7 @@ const ui={
   example:'Ausgearbeitet',examples:'Ausgearbeitete Stellen',understand:'Diesen Abschnitt verstehen',toolUnderstand:'Verstehen',toolHistory:'Geschichte',background:'Hintergrund damals',toSource:'Bis zur Quelle',then:'Damals',more:'Mehr zu Vers',
   readText:'Lesetext',readTextSub:'Übersetzungen aus dem Urtext; die Mundart-Fassung ist ein Entwurf, der noch von einer muttersprachlichen Person geprüft wird.',colors:'Farben',auto:'Auto',light:'Hell',dark:'Dunkel',size:'Textgrösse',language:'Sprache der Bedienung',
   advanced:'Urtext und Details',advancedSub:'Für Fortgeschrittene: Griechisch Wort für Wort, Grammatik, Vergleich der Textausgaben, Quellen.',
-  inline:'Andere Lesarten im Text zeigen',inlineSub:'Zeigt unter einem Vers, wo alte Handschriften anders lauten.',bgInline:'Hintergrund im Text zeigen',flow:'Verse fortlaufend',flowSub:'Verse als Fliesstext hintereinander statt je auf einer eigenen Zeile.',translit:'Umschrift zeigen',translitSub:'Griechische Wörter zusätzlich in unserer Schrift, z. B. ponēroú.',pron:'Aussprache',pronSub:'Neugriechisch: Stimme des Geräts. Schulaussprache: wie im Theologiestudium üblich, gelesen von einer deutschen Stimme. Beides nähert die Aussprache zur Zeit Jesu nur an.',pronModern:'Neugriechisch',pronSchool:'Schulaussprache',voice:'Stimme',voiceAuto:'Automatisch',noVoice:'Auf diesem Gerät ist keine passende Stimme installiert. In den Systemeinstellungen lassen sich Stimmen nachladen (z. B. Griechisch).',rate:'Tempo',slow:'Langsam',normal:'Normal',sample:'Probe anhören',bgInlineSub:'Zeigt unter einem Vers kurze Hinweise auf Zeit, Ort und Kultur damals.',about:'Über diese Fassung'},
+  inline:'Andere Lesarten im Text zeigen',inlineSub:'Zeigt unter einem Vers, wo alte Handschriften anders lauten.',bgInline:'Hintergrund im Text zeigen',flow:'Verse fortlaufend',flowSub:'Verse als Fliesstext hintereinander statt je auf einer eigenen Zeile.',translit:'Umschrift zeigen',translitSub:'Griechische Wörter zusätzlich in unserer Schrift, z. B. ponēroú.',pron:'Aussprache',pronSub:'Neugriechisch: Stimme des Geräts. Schulaussprache: wie im Theologiestudium üblich, gelesen von einer deutschen Stimme. Beides nähert die Aussprache zur Zeit Jesu nur an.',pronModern:'Neugriechisch',pronSchool:'Schulaussprache',voice:'Stimme',voiceAuto:'Automatisch',noVoice:'Auf diesem Gerät ist keine passende Stimme installiert. In den Systemeinstellungen lassen sich Stimmen nachladen (z. B. Griechisch).',rate:'Tempo',slow:'Langsam',normal:'Normal',sample:'Probe anhören',bgInlineSub:'Zeigt unter einem Vers kurze Hinweise auf Zeit, Ort und Kultur damals.',about:'Über diese Fassung',sourcesMap:'Quellen und Rechte',sourcesMapSub:'Welche Quellen es gibt, was wir dürfen, was wir nutzen'},
  en:{bible:'The Bible',menu:'Menu',close:'Close',done:'Done',search:'Find a book or reference',hint:'e.g. Mark 3:24 or Ps 23',home:'Whole Bible',up:'Context',down:'Explore',contents:'Navigate',here:'You are here',open:'open',xrefs:'Cross references',xrefsSub:'Sorted by OpenBible.info user votes (CC BY); not reviewed.',back:'Back to',levelsTitle:'Choose reading depth',
   levels:['Bible','Testament','Book group','Book','Chapter','Passage','Verse'],
   deeper:['Testaments','Book groups','Books','Chapters','Passages','Read the text'],
@@ -283,7 +302,7 @@ const ui={
   example:'Worked out',examples:'Worked passages',understand:'Understand this passage',toolUnderstand:'Understand',toolHistory:'History',background:'Background then',toSource:'Trace to the source',then:'Back then',more:'More on verse',
   readText:'Reading text',readTextSub:'Translations from the original text; the dialect version is a draft awaiting native-speaker review.',colors:'Colours',auto:'Auto',light:'Light',dark:'Dark',size:'Text size',language:'Interface language',
   advanced:'Original text and details',advancedSub:'For advanced readers: Greek word by word, grammar, edition comparison, sources.',
-  inline:'Show other readings in the text',inlineSub:'Shows below a verse where old manuscripts differ.',bgInline:'Show background in the text',flow:'Continuous verses',flowSub:'Verses run on as one paragraph instead of one per line.',translit:'Show transliteration',translitSub:'Greek words also in Latin letters, e.g. ponēroú.',pron:'Pronunciation',pronSub:'Modern Greek: device voice. Academic: as commonly taught, read by a German voice. Both only approximate first-century pronunciation.',pronModern:'Modern Greek',pronSchool:'Academic',voice:'Voice',voiceAuto:'Automatic',noVoice:'No matching voice installed on this device.',rate:'Speed',slow:'Slow',normal:'Normal',sample:'Play sample',bgInlineSub:'Shows short notes on time, place and culture below a verse.',about:'About this version'}};
+  inline:'Show other readings in the text',inlineSub:'Shows below a verse where old manuscripts differ.',bgInline:'Show background in the text',flow:'Continuous verses',flowSub:'Verses run on as one paragraph instead of one per line.',translit:'Show transliteration',translitSub:'Greek words also in Latin letters, e.g. ponēroú.',pron:'Pronunciation',pronSub:'Modern Greek: device voice. Academic: as commonly taught, read by a German voice. Both only approximate first-century pronunciation.',pronModern:'Modern Greek',pronSchool:'Academic',voice:'Voice',voiceAuto:'Automatic',noVoice:'No matching voice installed on this device.',rate:'Speed',slow:'Slow',normal:'Normal',sample:'Play sample',bgInlineSub:'Shows short notes on time, place and culture below a verse.',about:'About this version',sourcesMap:'Sources and rights',sourcesMapSub:'Which sources exist, what we may use, what we use'}};
 
 /* ---------- Gerüst ---------- */
 const nodes=new Map(),verses=[];
@@ -704,6 +723,25 @@ function studySheet(partId){
   h+=`<p class="note">${L?'Alle Beobachtungen und Deutungen sind Entwürfe und noch nicht fachlich geprüft.':'All notes are drafts, not yet reviewed.'}</p>`+sheetTools(partId,'h');
   openSheet('study',h);
 }
+const RIGHTS={free:['Frei','Gemeinfrei, CC0, CC BY'],sa:['Frei, gleiche Lizenz','CC BY-SA'],nc:['Nicht kommerziell','Nur im gemeinnützigen Betrieb, getrennt gespeichert'],ask:['Auf Anfrage','Nur mit schriftlicher Erlaubnis'],prot:['Geschützt','Nur zitieren']};
+const USES={used:'verwendet',cited:'zitiert',nc_planned:'vorgesehen',not_used:'nicht verwendet'};
+const AREAS_DE={at:'Altes Testament (hebräisch)',lxx:'Septuaginta',nt:'Neues Testament (griechisch)',versions:'Alte Übersetzungen, Kirchenväter',all:'Übergreifend'};
+const LAYERS_DE={manuscripts:'Handschriften',editions:'Editionen',language_data:'Sprachdaten',lexica:'Lexika',context:'Kontext',translations:'Übersetzungen',aux:'Hilfsdaten'};
+function sourcesMapSheet(){
+  const t=T(),f=S.srcFilter||'all',cat=CATALOG||[];
+  const keep=s=>f==='all'||(f==='used'&&s.use==='used')||(f==='free'&&(s.rights==='free'||s.rights==='sa'))||(f==='nc'&&s.rights==='nc')||(f==='closed'&&(s.rights==='ask'||s.rights==='prot'));
+  const n=k=>cat.filter(s=>s.use===k).length;
+  const chip=(k,l)=>`<button type="button" class="chip${f===k?' cur':''}" data-src-filter="${k}" aria-pressed="${f===k}">${l}</button>`;
+  const legend=Object.entries(RIGHTS).map(([k,[l,d]])=>`<div class="src-key"><i class="rights-sw r-${k}"></i><span>${l}<span class="sub">${d}</span></span></div>`).join('');
+  const groups=Object.entries(AREAS_DE).map(([ak,al])=>{const items=cat.filter(s=>s.area===ak&&keep(s));if(!items.length)return'';
+    return `<h4>${al}</h4>`+items.map(s=>`<details class="src-item r-${s.rights}"><summary><span class="src-use u-${s.use}" aria-hidden="true"></span><span class="src-name">${esc(s.title)}<span class="sub">${esc(LAYERS_DE[s.layer]||'')} · ${esc(s.license)} · ${USES[s.use]}</span></span></summary><p>${esc(s.why)}</p>${s.url?`<p class="note"><a class="link" href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.url.replace(/^https?:\/\//,''))}</a></p>`:''}</details>`).join('');}).join('');
+  openSheet('sources-map',head(t.sourcesMap)+`<p class="note">${cat.length} Quellen · ${n('used')} verwendet · ${n('cited')} zitiert · ${n('nc_planned')} für die nicht kommerzielle Schicht vorgesehen. Der Lesetext ist immer eine eigene Übersetzung aus dem Urtext.</p>
+  <div class="src-legend">${legend}</div>
+  <div class="src-uses"><span><span class="src-use u-used"></span>verwendet</span><span><span class="src-use u-cited"></span>nur zitiert</span><span><span class="src-use u-nc_planned"></span>vorgesehen</span><span><span class="src-use u-not_used"></span>nicht verwendet</span></div>
+  <div class="chips" role="group">${chip('all','Alle')}${chip('used','Verwendet')}${chip('free','Frei')}${chip('nc','Nicht kommerziell')}${chip('closed','Anfrage, geschützt')}</div>
+  ${groups||`<p class="note">${t.empty}</p>`}
+  <p class="note">Antippen zeigt, wofür wir eine Quelle nutzen oder weshalb (noch) nicht. Lizenzangaben nach den Anbietern, vor jedem Import neu geprüft; keine Rechtsberatung.</p>`);
+}
 function menuSheet(){
   const t=T(),seg=(key,opts,val)=>`<div class="seg" role="group">${opts.map(([v,l])=>`<button type="button" data-set="${key}" data-value="${v}" aria-pressed="${String(val)===String(v)}">${l}</button>`).join('')}</div>`;
   const sw=(key,label,sub)=>`<div class="set"><span>${label}<span class="sub">${sub}</span></span><button type="button" class="switch" role="switch" aria-checked="${S[key]}" data-toggle="${key}" aria-label="${label}"></button></div>`;
@@ -719,6 +757,7 @@ function menuSheet(){
   ${(()=>{const lg=pronLang('el'),vs=voicesFor(lg),cur=(S.voice||{})[lg]||'';return `<div class="set"><span>${t.voice}${vs.length?'':`<span class="sub">${t.noVoice}</span>`}</span>${vs.length?`<div class="chips" role="group">${[['',t.voiceAuto],...vs.map(v=>[v.name,v.name.replace(/\s*\(.*\)$/,'')])].map(([v,l])=>`<button type="button" class="chip${cur===v?' cur':''}" data-set="voice" data-value="${esc(v)}" aria-pressed="${cur===v}">${esc(l)}</button>`).join('')}</div>`:''}</div>`;})()}
   <div class="set"><span>${t.rate}</span>${seg('rate',[[0.7,t.slow],[0.85,t.normal]],S.rate)}</div>
   <div class="set"><span>${t.sample}</span><span class="grc-line"><span class="grc">Πάτερ ἡμῶν</span>${play('Πάτερ ἡμῶν ὁ ἐν τοῖς οὐρανοῖς')}</span></div>
+  <button type="button" class="row" data-sources-map><span>${t.sourcesMap}<span class="sub">${t.sourcesMapSub}</span></span>${icon('chevron-right')}</button>
   <details class="about"><summary>${t.about}</summary><div>
    <p>${lang==='de'?'Ein Prototyp. Zusammenfassungen, Übersetzung und Erklärungen sind KI-Entwürfe und noch nicht fachlich geprüft. Ausgearbeitet sind bisher '+STUDY.sections.map(x=>refDe(x.range)).join(', ')+'; an anderen Stellen fehlt der Bibeltext noch.':'A prototype. Summaries, translation and notes are AI drafts, not yet reviewed. Worked out so far: '+STUDY.sections.map(x=>refDe(x.range)).join(', ')+'.'}</p>
    <p>${lang==='de'?'Bücher, Kapitel und Verszählung folgen vorläufig dem protestantischen Kanon mit 66 Büchern und der Zählung der King-James-Bibel (Testkonfiguration). Abschnitte ausserhalb der ausgearbeiteten Stellen umfassen der Einfachheit halber je bis zu fünf Verse.':'Books and verse numbering follow the 66-book Protestant canon with KJV numbering for now.'}</p>
@@ -767,6 +806,8 @@ app.addEventListener('click',e=>{
   if(b.dataset.study){studySheet(b.dataset.study);return;}
   if(b.dataset.background){bgSheet(b.dataset.background);return;}
   if(b.dataset.overview){overviewSheet(b.dataset.overview);return;}
+  if(b.hasAttribute('data-sources-map')){sourcesMapSheet();return;}
+  if(b.dataset.srcFilter){S.srcFilter=b.dataset.srcFilter;sourcesMapSheet();return;}
   if(b.dataset.bg){bgOne(b.dataset.bg);return;}
   if(b.dataset.set){const k=b.dataset.set,v=b.dataset.value;if(k==='lang')lang=v;else if(k==='voice')S.voice={...(S.voice||{}),[pronLang('el')]:v};else S[k]=(k==='read'||k==='rate')?Number(v):v;save();rerenderKeep();reopenMenu();return;}
   if(b.dataset.toggle){S[b.dataset.toggle]=!S[b.dataset.toggle];save();rerenderKeep();reopenMenu();return;}
