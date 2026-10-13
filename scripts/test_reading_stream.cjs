@@ -11,7 +11,7 @@ const sandbox = {
 };
 for (const match of html.matchAll(/<script>([\s\S]*?)<\/script>/g)) vm.runInNewContext(match[1], sandbox);
 assert(model);
-assert.deepEqual(Array.from(model.streams, entries => entries.length), [1, 2, 10, 66, 1189, 6705, 31102]);
+assert.deepEqual(Array.from(model.streams, entries => entries.length), [1, 2, 10, 66, 1189, 6703, 31102]);
 assert.equal(model.BOOK_SUMMARIES.length, 66);
 for (const n of model.nodes.values()) {
   if (n.level < 6) assert(n.children.length > 0, n.id);
@@ -30,11 +30,14 @@ assert(!/src=["']https?:/.test(html));
 console.log('PASS: complete streams, summaries, parent links, canonical refs, search, boundaries, standalone dependencies.');
 
 const S = model.STUDY;
-assert.equal(S.sections.map(x => x.id).join(), 'TU-MAT-006-005-015,TU-MRK-003-020-035,TU-LUK-011-001-004');
+assert.equal(S.sections.map(x => x.id).join(), 'TU-OBA-001-001-021,TU-MAT-006-005-015,TU-MRK-003-020-035,TU-LUK-011-001-004,TU-TIT-001-001-016,TU-TIT-002-001-015,TU-TIT-003-001-015');
+assert.equal(S.words.filter(w => w.ref.startsWith('OBA.') && w.lang === 'he').length, 435, 'Obadja: Morphem-Tokens');
+assert.equal(S.words.filter(w => w.ref.startsWith('TIT.')).length, 659, 'Titus: Wörter');
+assert.equal(Object.keys(S.de).filter(r => r.startsWith('TIT.') || r.startsWith('OBA.')).length, 67, 'Titus und Obadja übersetzt');
 assert.equal(S.alternatives.filter(a => a.ref.startsWith('MRK.3.')).length, 6);
 assert.equal(S.words.filter(w => w.ref.startsWith('MRK.3.')).length, 249);
 assert.equal(S.variants.filter(v => v.ref.startsWith('MRK.3.')).length, 28);
-for (const [code, b, c, n] of [['MRK', 40, 3, 35], ['MAT', 39, 6, 34], ['LUK', 41, 11, 54]]) {
+for (const [code, b, c, n] of [['MRK', 40, 3, 35], ['MAT', 39, 6, 34], ['LUK', 41, 11, 54], ['TIT', 55, 1, 16], ['TIT', 55, 2, 15], ['TIT', 55, 3, 15], ['OBA', 30, 1, 21]]) {
   const chapter = model.nodes.get(`c${b}-${c}`);
   assert.deepEqual(Array.from(chapter.children).flatMap(id => Array.from(model.nodes.get(id).children)), Array.from({length:n}, (_,i)=>`v${b}-${c}-${i+1}`), code);
 }

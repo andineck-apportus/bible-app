@@ -10,7 +10,7 @@ server.listen(0,async()=>{const url=`http://localhost:${server.address().port}/i
   try{const p=await b.newPage({viewport:{width:390,height:800}});const reqs=[],errs=[];
     p.on('request',r=>{if(/\.(json\.gz|gz\.txt)$/.test(r.url()))reqs.push(r.url().split('/').slice(-3).join('/').replace(/^.*?\/(b|l)\//,'$1/').replace(/\.(json\.gz|gz\.txt)$/,''));});p.on('pageerror',e=>errs.push(e.message));
     const ev=f=>p.evaluate(f);const wait=()=>p.waitForTimeout(400);
-    await p.goto(url);await wait();
+    await p.goto(url);await p.waitForRequest(r=>/_overview/.test(r.url()),{timeout:5000}).catch(()=>{});await wait();
     assert.deepEqual(reqs,['b/_overview'],'auf Bibelebene nur der Hintergrund der oberen Ebenen');
     await ev(()=>document.querySelector('[data-overview="all"]').click());await wait();
     const ov=await ev(()=>document.querySelector('.sheet').innerText);

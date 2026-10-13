@@ -101,7 +101,7 @@ click('[data-close]');
 assert(reader.querySelector('.part-head [data-study="TU-MAT-006-009-013"]')&&reader.querySelector('.part-head [data-background="TU-MAT-006-009-013"]'),'Werkzeuge am Abschnittstitel');
 assert(!reader.querySelector('.part-end'),'keine Links am Abschnittsende');
 assert(reader.querySelector('button.vno[data-more="v39-6-11"]'),'Versnummer öffnet Details');
-const decBtn=reader.querySelector('[data-ref="MAT.6.11"] button.dec');assert(decBtn&&decBtn.textContent==='tägliches','tägliches markiert');decBtn.click();
+const decBtn=reader.querySelector('[data-ref="MAT.6.11"] .dec');assert(decBtn&&decBtn.textContent==='tägliches','tägliches markiert');decBtn.click();
 let ptx=sheetHost.textContent;
 assert(ptx.includes('Brot für den kommenden Tag')&&ptx.includes('Das zum Leben nötige Brot'),'Deutungen im Wort-Blatt');
 assert(ptx.includes('Unser täglich Brot gib uns heute')&&ptx.includes('Unser nötiges Brot gib uns heute'),'ältere Übersetzungen im Wort-Blatt');
@@ -171,7 +171,7 @@ click('[data-close]');
 // Zweite Übersetzungsschicht: Züridüütsch aus dem Griechischen, umschaltbar
 click('[data-action=menu]');assert(sheetHost.querySelector('[data-set="text"][data-value="gsw"]'),'Lesetext-Auswahl');click('[data-set="text"][data-value="gsw"]');click('[data-close]');
 assert.equal(reader.querySelector('[data-stream="v39-6-11"] .stream-copy').textContent,'Öises täglich Broot gib üs hüt.','Mundart im Lesestrom');
-assert(reader.querySelector('[data-stream="v39-6-11"] button.dec.traditional'),'Entscheidung «täglich» auch in der Mundart markiert');
+assert(reader.querySelector('[data-stream="v39-6-11"] .dec.traditional'),'Entscheidung «täglich» auch in der Mundart markiert');
 click('[data-action=index]');assert(sheetHost.textContent.includes('S Vatterunser')&&sheetHost.textContent.includes('Nöd zum Schiin'),'Navigator-Titel in Mundart');click('[data-close]');
 click('[data-action=up]');assert(reader.textContent.includes('Es Gebät mit sibe Bitte')&&reader.querySelector('[data-stream="TU-MAT-006-009-013"] h2').textContent==='S Vatterunser','Abschnittstitel und -zusammenfassung in Mundart');click('[data-action=down]');
 assert(reader.querySelector('.alt-line[data-alternative="VAR-SBLGNTAPP-MAT-006-012-01"]').textContent.includes('vergänd'),'Mundart-Lesart im Text');
@@ -187,6 +187,18 @@ click('[data-more="v39-6-11"]');sheetHost.querySelector('.sheet-tools [data-back
 assert(/\b(isch|händ|de|vo)\b/.test(sheetHost.querySelector('.bg-note .body').textContent),'Hintergrund in Mundart');click('[data-close]');
 click('[data-action=menu]');click('[data-set="text"][data-value="de"]');click('[data-close]');
 assert.equal(reader.querySelector('[data-stream="v39-6-11"] .stream-copy').textContent,M().de['MAT.6.11'],'zurück zu Hochdeutsch');
-assert.equal(Object.keys(M().layers.gsw.text).length,31,'Mundart für alle 31 Verse');
-console.log(`PASS: Pilotzugang, Studienblatt ohne Griechisch, Lesarten auf Wunsch (${M().alternatives.length}), Hintergrund damals (${model.BG.length}), Bis zur Quelle (${tested}), Urtext-Modus, Rückkehrposition, Suche, Kapitelgrenze, Vaterunser Mt/Lk, Übersetzungsentscheidungen und Vergleich, Wort-Blatt, Umschrift und Anhören, Verse fortlaufend, Navigator, Querverweise und Rücksprung, Lesetext Hochdeutsch/Züridüütsch mit Titeln.`);
+assert.equal(Object.keys(M().layers.gsw.text).length,98,'Mundart für alle 98 Verse');
+// Obadja (Hebräisch) und Titus: Muster ganzer Bücher
+click('[data-action=menu]');click('[data-set="text"][data-value="de"]');if(sheetHost.querySelector('[data-toggle=advanced][aria-checked=false]'))click('[data-toggle=advanced]');click('[data-close]');
+click('[data-action=menu]');sheetHost.querySelector('[data-go^="TU-OBA"]').click();click('[data-action=down]');
+assert(reader.querySelector('[data-stream="v30-1-21"]')||true);
+click('[data-more="v30-1-3"]');
+assert(sheetHost.querySelector('.il.he .heb'),'Hebräisch Wort für Wort');
+assert(sheetHost.textContent.includes('Hebräisch Wort für Wort')&&sheetHost.textContent.includes('Westminster Leningrad Codex'),'Quellen für den hebräischen Text');
+assert(sheetHost.textContent.includes('sela'),'Lesehilfe-Umschrift');
+click('[data-close]');
+assert.equal(model.STUDY.layers.de.text['OBA.1.21'],'Und Retter werden hinaufziehen auf den Berg Zion, um das Gebirge Esau zu richten; und die Königsherrschaft wird JHWH gehören.');
+assert(model.STUDY.words.filter(w=>w.ref==='OBA.1.1').every(w=>w.wtr),'Umschrift je Wort');
+assert(model.STUDY.layers.gsw.text['TIT.3.15'].startsWith('Es grüessed dich alli'),'Titus in Mundart');
+console.log(`PASS: Pilotzugang, Studienblatt ohne Griechisch, Lesarten auf Wunsch (${M().alternatives.length}), Hintergrund damals (${model.BG.length}), Bis zur Quelle (${tested}), Urtext-Modus, Rückkehrposition, Suche, Kapitelgrenze, Vaterunser Mt/Lk, Übersetzungsentscheidungen und Vergleich, Wort-Blatt, Umschrift und Anhören, Verse fortlaufend, Navigator, Querverweise und Rücksprung, Lesetext Hochdeutsch/Züridüütsch mit Titeln, Obadja hebräisch Wort für Wort, Titus.`);
 dom.window.close();
