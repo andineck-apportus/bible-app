@@ -12,6 +12,7 @@ Eingebettet werden:
 Die Vorlage app/reading-stream/template.html bearbeiten, danach dieses Skript ausführen.
 Erzeugte Datei nicht von Hand ändern.
 """
+import base64
 import gzip
 import json
 import pathlib
@@ -230,19 +231,26 @@ def page(inline):
 
 # Einzeldatei (offline, Tests): alle Pakete eingebettet
 (ROOT / "app/reading-stream/index.html").write_text(page(bundles), encoding="utf-8")
-# Aufgeteilte Fassung zum Veröffentlichen: build/reading-stream/ (index.html + Pakete .json.gz, deterministisch)
-out = ROOT / "build/reading-stream"
-out.mkdir(parents=True, exist_ok=True)
-(out / "index.html").write_text(page(None), encoding="utf-8")
+# Aufgeteilte Fassungen zum Veröffentlichen (deterministisches gzip):
+#   build/reading-stream/        Pakete als .json.gz (übliche Webserver)
+#   build/reading-stream-txt/    Pakete als gzip in Base64 (.gz.txt) für Hosts, die keine Binärdateien ausliefern
 sizes = {}
-for name, d in bundles.items():
-    raw = json.dumps(d, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
-    f = out / f"{name}.json.gz"
-    f.parent.mkdir(parents=True, exist_ok=True)
-    f.write_bytes(gzip.compress(raw, compresslevel=9, mtime=0))
-    sizes[name] = (len(raw), f.stat().st_size)
-(out / "manifest.json").write_text(json.dumps({"bundles": {k: {"bytes": a, "gzip": b} for k, (a, b) in sorted(sizes.items())}},
-                                              ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+for folder, ext in (("reading-stream", ".json.gz"), ("reading-stream-txt", ".gz.txt")):
+    out = ROOT / "build" / folder
+    out.mkdir(parents=True, exist_ok=True)
+    manifest["ext"] = ext
+    (out / "index.html").write_text(page(None), encoding="utf-8")
+    for name, d in bundles.items():
+        raw = json.dumps(d, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+        gz = gzip.compress(raw, compresslevel=9, mtime=0)
+        f = out / f"{name}{ext}"
+        f.parent.mkdir(parents=True, exist_ok=True)
+        f.write_bytes(gz if ext.endswith(".gz") else base64.b64encode(gz) + b"\n")
+        sizes[name] = (len(raw), len(gz))
+    (out / "manifest.json").write_text(json.dumps({"ext": ext, "bundles": {k: {"bytes": a, "gzip": b} for k, (a, b) in sorted(sizes.items())}},
+                                                  ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+manifest.pop("ext")
+out = ROOT / "build/reading-stream"
 print(f"PASS: Lesestrom gebaut: {len(nav['books'])} Bücher, {len(summaries)} Zusammenfassungen, {len(background)} Hintergrundnotizen, "
       f"ausgearbeitet: {', '.join(refs.display_de(x['range']) for x in study['sections'])}; "
       f"{len(bundles)} Pakete ({sum(b for _, b in sizes.values()) // 1024} KB gzip, Kern {len((out / 'index.html').read_bytes()) // 1024} KB).")
