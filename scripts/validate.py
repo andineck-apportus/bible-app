@@ -189,6 +189,15 @@ def main():
                 errors.append(f"{rel}: terms[{i}] braucht lang (grc/heb/arc/lat), word und de")
             elif tm["lang"] != "grc" and not tm.get("translit"):
                 errors.append(f"{rel}: terms[{i}] ohne translit (nur Griechisch wird automatisch umgeschrieben)")
+        if r.get("type") == "crossref_set":
+            parsed = set()
+            for frm, items in (r.get("entries") or {}).items():
+                if frm not in parsed:
+                    check_ref(rel, f"entries[{frm}]", frm); parsed.add(frm)
+                for it in items:
+                    if it[0] not in parsed:
+                        check_ref(rel, f"entries[{frm}]", it[0]); parsed.add(it[0])
+                    ref_count += 1
         if r.get("type") == "witness_reading_set":
             for i, e in enumerate(r.get("entries", [])):
                 var = records.get(e.get("variant"), (None, {}))[1]
