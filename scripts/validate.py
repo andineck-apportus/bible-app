@@ -13,7 +13,9 @@ Prüft:
    vorhandene Variantenstellen und Lesarten.
 7. Hintergrundnotizen (background_note) haben Thema, Text, Stelle, Herkunft und einen
    historischen Kontext.
-8. Lizenzschichten: Datensätze in data/ verweisen nie auf Datensätze in data-nc/.
+8. Lokalisierungen (localization): Felder existieren im Original (gleicher Typ, gleiche Listenlänge);
+   veraltete Felder (Original seit der Übersetzung geändert) werden als WARN gemeldet, nicht als Fehler.
+9. Lizenzschichten: Datensätze in data/ verweisen nie auf Datensätze in data-nc/.
 
 Ein PASS ist keine fachliche Freigabe. Nur Standardbibliothek.
 """
@@ -25,6 +27,7 @@ import sys
 ROOT = pathlib.Path(__import__("os").environ.get("BIBLE_APP_ROOT") or pathlib.Path(__file__).resolve().parents[1])
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import refs  # noqa: E402
+import localizations  # noqa: E402
 
 SCHEMA = json.loads((pathlib.Path(__file__).resolve().parents[1] / "schema" / "record.schema.json").read_text(encoding="utf-8"))
 
@@ -32,7 +35,7 @@ SCHEMA = json.loads((pathlib.Path(__file__).resolve().parents[1] / "schema" / "r
 ID_FIELDS = ["witness", "target_context", "control_translation", "work", "primary_unit", "subject", "principle", "context", "from", "edition",
              "base_edition", "apparatus", "same_variation_unit_as", "incorporates", "based_on_edition",
              "based_on_tokens", "source_tokens_set", "target_translation", "bibliographic_source",
-             "annotates", "method", "superseded_by", "annotation_moved_to", "based_on_annotation"]
+             "annotates", "localizes", "method", "superseded_by", "annotation_moved_to", "based_on_annotation"]
 ID_LIST_FIELDS = ["based_on", "derived_from", "outputs", "evidence_objects", "related", "imported_records", "parts",
                   "based_on_annotations"]
 LAYERS = {"data": "core", "data-nc": "nc"}
@@ -86,6 +89,7 @@ def strip_marks(word):
 
 def main():
     errors = []
+    warnings = []
     records = {}
     layer_of = {}
     paths = [(p, layer) for d, layer in LAYERS.items() if (ROOT / d).exists()
@@ -212,6 +216,17 @@ def main():
                 errors.append(f"{rel}: witness_transcription braucht genau eines von witness/edition")
             for k in (r.get("verses") or {}):
                 check_ref(rel, f"verses[{k}]", k); ref_count += 1
+        if r.get("type") == "localization":
+            orig = records.get(r.get("localizes"), (None, None))[1]
+            if orig is not None:
+                for k, val in (r.get("fields") or {}).items():
+                    ov = [t.get("de") for t in orig.get("terms", [])] if k == "terms" else orig.get(k)
+                    if ov is None:
+                        errors.append(f"{rel}: Feld {k} fehlt im Original {r['localizes']}")
+                    elif type(ov) is not type(val) or (isinstance(val, list) and len(val) != len(ov)):
+                        errors.append(f"{rel}: Feld {k} passt nicht zum Original (Typ/Länge)")
+                for k in localizations.stale_fields(r, orig):
+                    warnings.append(f"{rel}: Feld {k} veraltet (Original seit der Übersetzung geändert)")
         if r.get("type") == "background_note":
             for f in ("topic_de", "text_de", "reference", "context", "authorship_de"):
                 if not r.get(f):
@@ -287,6 +302,8 @@ def main():
             check_ref(rel, f"tokens[{i}].reference", tok.get("reference")); ref_count += 1
             check_id(rel, f"tokens[{i}].edition", tok.get("edition"))
 
+    for w in warnings:
+        print("WARN:", w)
     if errors:
         for e in errors:
             print("FAIL:", e)
@@ -294,7 +311,8 @@ def main():
     print(f"PASS: {len(records)} records, {len(tags)} defined tags; schema, unique IDs, "
           f"tag/ID/reading references, {token_ref_count} token references, {ref_count} bible references, "
           f"{annotation_count} annotations, {assessment_count} assessments valid "
-          f"({sum(v == 'nc' for v in layer_of.values())} records in data-nc)")
+          f"({sum(v == 'nc' for v in layer_of.values())} records in data-nc; "
+          f"{sum(r.get('type') == 'localization' for _, r in records.values())} localizations, {len(warnings)} veraltete Felder)")
 
 
 if __name__ == "__main__":

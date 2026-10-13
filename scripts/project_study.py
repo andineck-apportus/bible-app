@@ -15,6 +15,7 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import refs  # noqa: E402
+import localizations  # noqa: E402
 
 D = ROOT / "data"
 KEEP = ["lemma", "pos", "subtype", "person", "number", "gender", "case", "tense", "voice", "mood", "degree",
@@ -160,6 +161,17 @@ def project(section_ids):
                                 "level": r["level"], "editions": r["supporting_editions"]} for r in assess[vid]["results"]]
         units.append(u)
 
+    L10N = localizations.load({**findings, **ints, **prin, **apps, **qs})
+
+    def i18n(rid, mapping):
+        """Lokalisierte Felder je Sprache unter den Schlüsseln der Projektion (nur aktuelle Felder)."""
+        out = {}
+        for lang, f in L10N.get(rid, {}).items():
+            m = {dst: f[src] for src, dst in mapping.items() if src in f}
+            if m:
+                out[lang] = m
+        return out
+
     fs = {k: v for k, v in findings.items() if v.get("subject") in subjects}
     ins = {k: v for k, v in ints.items() if v.get("subject") in subjects}
     known = set(fs) | set(ins)
@@ -182,20 +194,24 @@ def project(section_ids):
         "de": base["text"], "de_source": base["source"], "alternatives": base["alternatives"], "decisions": base["decisions"],
         "compare": compare, "words": words, "tok_de": base["align"], "variants": units,
         "findings": [{"id": k, "claim": v["claim_de"], "kind": v.get("kind"), "confidence": v.get("confidence"),
-                      "subject": v.get("subject"), "caveat": v.get("confidence_rationale_de")} for k, v in sorted(fs.items())],
+                      "subject": v.get("subject"), "caveat": v.get("confidence_rationale_de"),
+                      "i18n": i18n(k, {"claim_de": "claim", "confidence_rationale_de": "caveat"})} for k, v in sorted(fs.items())],
         "interpretations": [{"id": k, "claim": v["claim_de"], "confidence": v.get("confidence"), "caveat": v.get("caveat_de"),
-                             "counter": v.get("counterarguments_de", []), "subject": v.get("subject"), "terms": v.get("terms", [])}
+                             "counter": v.get("counterarguments_de", []), "subject": v.get("subject"), "terms": v.get("terms", []),
+                             "i18n": i18n(k, {"claim_de": "claim", "caveat_de": "caveat", "counterarguments_de": "counter", "terms": "terms"})}
                             for k, v in sorted(ins.items())],
         "principles": [{"id": k, "text": v["statement_de"], "confidence": v.get("confidence"),
-                        "subject": subject_of_principle(v)} for k, v in sorted(prs.items())],
+                        "subject": subject_of_principle(v), "i18n": i18n(k, {"statement_de": "text"})} for k, v in sorted(prs.items())],
         "applications": [{"id": k, "text": v["statement_de"], "limits": v.get("limitations_de"),
                           "subject": subject_of_principle(prs[v["principle"]]),
-                          "context": ctx.get(v.get("context"), {}).get("audience"), "confidence": v.get("confidence")}
+                          "context": ctx.get(v.get("context"), {}).get("audience"), "confidence": v.get("confidence"),
+                          "i18n": i18n(k, {"statement_de": "text", "limitations_de": "limits"})}
                          for k, v in sorted(aps.items())],
         "relations": [{"from": v["from"], "from_ref": tu.get(v["from"], {}).get("range"), "to": v["to_ref"], "to_de": refs.display_de(v["to_ref"]), "kind": v["relation"],
                        "confidence": v.get("confidence")} for v in sorted(rels.values(), key=lambda r: r["id"])
                       if v.get("from") in subjects],
-        "questions": [{"q": v["question_de"], "finding": v.get("finding_de"), "subject": v.get("subject")}
+        "questions": [{"id": v["id"], "q": v["question_de"], "finding": v.get("finding_de"), "subject": v.get("subject"),
+                       "i18n": i18n(v["id"], {"question_de": "q", "finding_de": "finding"})}
                       for v in sorted(qs.values(), key=lambda r: r["id"]) if v.get("subject") in subjects],
         "method": {"name": method["name_de"], "question": method["question_de"], "limits": method["assumptions_and_limits_de"]},
         "editions": editions,

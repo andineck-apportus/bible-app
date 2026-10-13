@@ -2,6 +2,15 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.29 — 2026-10-13 — Alle Inhalte in Mundart, Lokalisierungen, Weiterlesen beim Scrollen
+
+- Neuer Datensatztyp `localization` (`data/localizations/<BCP-47>/<ID>.json`): übersetzt einzelne Felder eines Originaldatensatzes (`localizes`, `fields` mit den Feldnamen des Originals, bei `terms` die Bedeutungen in Reihenfolge). `source_fingerprint` hält je Feld fest, von welchem Stand des Originals übersetzt wurde. Originale tragen keine Übersetzungen; neue Sprachen und neue Deutungen ändern einander nicht.
+- Veraltete Felder (Original seit der Übersetzung geändert) meldet `scripts/validate.py` als WARN; die Projektion liefert sie nicht aus, die App zeigt dann das Original. Gemeinsamer Lader `scripts/localizations.py`.
+- Züridüütsch für alle Studieninhalte der drei ausgearbeiteten Abschnitte: 11 Befunde, 10 Deutungen (inkl. Gegenargumente und Wortbedeutungen), 2 Grundsätze, 2 Anwendungen, 3 offene Fragen, 25 Hintergrundnotizen, 85 Zusammenfassungen (Bibel, Testamente, 10 Gruppen, 66 Bücher, 6 Kapitel) – 138 Lokalisierungen. Wortbedeutungen und mögliche Entstehung der Lesarten in den gsw-Übersetzungsschichten. Autorenwerkzeug `scripts/authoring/zueridueuetsch_inhalte.py`. KI-Entwurf, muttersprachlich noch nicht geprüft.
+- Lesestrom: Studienblatt, Hintergrund, Wort-Blatt, Quellen-Blatt und Zusammenfassungen aller Ebenen folgen dem gewählten Lesetext. Noch Hochdeutsch: Bedienung, Buch- und Gruppennamen, Handschriften- und Ausgabenbeschreibungen.
+- Weiterlesen ohne Knopf: nachgeladen wird, sobald «Weiterlesen» in die Nähe des sichtbaren Bereichs kommt (auch wenn der Inhalt kürzer als der Bildschirm ist) sowie beim Ziehen über Anfang oder Ende hinaus (Mausrad, Wischen). Der Knopf bleibt für Tastatur und Vorlesehilfen.
+- Prüfungen: Validator-Negativtests für Lokalisierungen (falsches Feld, falsche Listenlänge, veraltet); Bedienungsprüfung für Mundart-Inhalte.
+
 ## v0.28 — 2026-10-13 — Abschnittstitel und -zusammenfassungen in Mundart
 
 - Texteinheiten tragen Titel und Zusammenfassung je Sprache (`title_by_language`, `summary_by_language`, Schlüssel BCP-47); hochdeutsche Felder bleiben Standard. Für die neun ausgearbeiteten Einheiten liegt Züridüütsch vor («S Vatterunser», «Nöd zum Schiin und nöd mit vil Wort», «De Striit um de Beelzebul» …).

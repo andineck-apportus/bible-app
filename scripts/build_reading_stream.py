@@ -20,15 +20,29 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import refs  # noqa: E402
 from project_study import project  # noqa: E402
+import localizations  # noqa: E402
 
 # Ausgearbeitete Abschnitte (Texteinheiten), in Lesereihenfolge der Bibel
 SECTIONS = ["TU-MAT-006-005-015", "TU-MRK-003-020-035", "TU-LUK-011-001-004"]
 study = project(SECTIONS)
 nav = json.loads((ROOT / "data/navigation/NAV-PROT66-KJV.json").read_text(encoding="utf-8"))
+sum_recs = {r["id"]: r for r in (json.loads(p.read_text(encoding="utf-8")) for p in sorted((ROOT / "data/summaries").glob("*.json")))}
+bg_recs = {r["id"]: r for r in (json.loads(p.read_text(encoding="utf-8")) for p in sorted((ROOT / "data/background").glob("*.json")))}
+L10N = localizations.load({**sum_recs, **bg_recs})
+
+
+def i18n(rid, mapping):
+    out = {}
+    for lang, f in L10N.get(rid, {}).items():
+        m = {dst: f[src] for src, dst in mapping.items() if src in f}
+        if m:
+            out[lang] = m
+    return out
+
+
 summaries = {}
-for p in sorted((ROOT / "data/summaries").glob("*.json")):
-    s = json.loads(p.read_text(encoding="utf-8"))
-    summaries[s["id"]] = {"text": s["text_de"], "status": s["status"]}
+for s in sum_recs.values():
+    summaries[s["id"]] = {"text": s["text_de"], "status": s["status"], "i18n": i18n(s["id"], {"text_de": "text"})}
 
 section_of = {}
 for sec in study["sections"]:
@@ -36,8 +50,7 @@ for sec in study["sections"]:
     for part in sec["parts"]:
         section_of[part["id"]] = sec["id"]
 background = []
-for p in sorted((ROOT / "data/background").glob("*.json")):
-    b = json.loads(p.read_text(encoding="utf-8"))
+for b in bg_recs.values():
     if b["subject"] not in section_of:
         continue  # Notiz zu einem Abschnitt, der im Lesestrom noch nicht ausgearbeitet ist
     ref = b["reference"]
@@ -50,7 +63,8 @@ for p in sorted((ROOT / "data/background").glob("*.json")):
                        "chapter": f"{book}.{ch}", "from": int(v0), "to": int((z or a).split(".")[2]),
                        "ref_de": refs.display_de(ref), "readers": "READERS" in b["context"],
                        "evidence": [refs.display_de(r) for r in b.get("evidence_refs", [])],
-                       "sources": b.get("sources_de", []), "status": b["status"], "terms": b.get("terms", [])})
+                       "sources": b.get("sources_de", []), "status": b["status"], "terms": b.get("terms", []),
+                       "i18n": i18n(b["id"], {"topic_de": "topic", "text_de": "text", "uncertain_de": "uncertain", "terms": "terms"})})
 
 
 def folder(name):
@@ -62,12 +76,13 @@ wit_meta = {w["id"]: {k: w.get(k) for k in ("gregory_aland", "symbol", "name_de"
             for w in folder("witnesses")}
 editions = {e["id"]: {"title": e["title"], "year": e.get("year"), "about": e.get("about_de")} for e in folder("editions")}
 wanted = set()
-alt_extra = {}
+alt_extra = {}  # je Sprachschicht: {"de": {Variante: …}, "gsw": {…}}
 for t in folder("translations"):
+    lang = (t.get("language") or "de").split("-")[0]
     for a in t.get("alternatives", []):
         vid = a["reading"].split(":")[0]
         if "readings_de" in a:
-            alt_extra[vid] = {"words": a["readings_de"], "origin": a.get("origin_de", []), "related": a.get("related_variants", [])}
+            alt_extra.setdefault(lang, {})[vid] = {"words": a["readings_de"], "origin": a.get("origin_de", []), "related": a.get("related_variants", [])}
         wanted.add(vid)
         wanted.update(a.get("related_variants", []))
 wit_readings = {}
