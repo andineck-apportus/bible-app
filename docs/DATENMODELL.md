@@ -84,6 +84,9 @@ Der Lesestrom erhält die ausgearbeiteten Abschnitte über `scripts/project_stud
 
 Ausgaben: `build/reading-stream/` (Kern + Pakete als `.json.gz`, deterministisch; zum Veröffentlichen), `build/reading-stream-txt/` (dieselben Pakete als gzip in Base64, `.gz.txt`, für Hosts ohne Binärdateien) und `app/reading-stream/index.html` (Einzeldatei mit allen Paketen eingebettet; offline und für die Tests). Die App lädt Pakete erst, wenn ein Eintrag eines Buchs gezeigt oder die Sprache gewechselt wird (Lesetext, dessen Vergleichssprachen und Hochdeutsch als Rückfall), und entpackt sie im Browser. Eine neue Sprache oder ein neues Buch fügt nur Pakete hinzu; der Kern wächst mit der Zahl der ausgearbeiteten Abschnitte, nicht mit deren Inhalt.
 
+## Hintergrund der oberen Ebenen
+`background_note` mit `scope`: `bible`, `testament` (+ `testament`: OT/NT), `book_group` (+ `group`: ID aus der Navigation) oder `book` (+ `reference` = Buchcode); ohne `scope` gehört eine Notiz zu einem Abschnitt (`subject`, `reference`). Kontexte für grosse Zeiträume: `CTX-HIST-BIBLE-FORMATION`, `CTX-HIST-ISRAEL-IRON-PERSIAN`, `CTX-HIST-SECOND-TEMPLE`, `CTX-HIST-EARLY-CHRISTIANITY`. Im Lesestrom: Paket `b/_overview`, Knopf «Geschichte» an den Einträgen der oberen Ebenen.
+
 ## Versifikation (`versification_map`)
 `data/versification/VRS-TVTMS-<BUCH>.json` enthält die Zuordnungen zwischen den Zähltraditionen (Hebräisch, Latein, Griechisch, Englisch KJV/NRSV und weitere) aus TVTMS (STEPBible, CC BY 4.0), wörtlich mit Handlung (`action`) und den Bedingungen (`tests`), unter denen eine Zeile gilt; wo eindeutig zusätzlich kanonisch (`source_ref`, `standard_ref`, Teilvers `source_sub`/`standard_sub`). Die Umrechnung selbst ist noch nicht umgesetzt: Sie braucht die Verszahlen bzw. den Text der jeweiligen Ausgabe, um die Bedingungen auszuwerten. Siehe [BIBELSTELLEN.md](BIBELSTELLEN.md).
 

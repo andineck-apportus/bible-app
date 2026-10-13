@@ -1,4 +1,4 @@
-# Status und nächste Schritte · 2026-10-12 (UI v0.31)
+# Status und nächste Schritte · 2026-10-12 (UI v0.32)
 
 ## Gesichert und vorhanden
 - **Lesestrom als Hauptrichtung** (`app/reading-stream/`, v0.13): die ganze Bibel auf sieben Ebenen fortlaufend lesen und vertiefen; ungestörtes Vollbild mit ausblendenden Leisten; Lesarten, Erklärungen und Quellen als Blätter auf Wunsch; Urtext nur im Modus «Urtext und Details»; deutsche Stellenangaben; Farben nach System. Navigationsgerüst und 83 Zusammenfassungen liegen jetzt in `data/navigation/` und `data/summaries/` (Entwürfe, ungeprüft). Ausgearbeitet ist Markus 3,20–35; sonst fehlt der Bibeltext. Details und Grenzen: [LESETIEFE-PROTOTYP.md](LESETIEFE-PROTOTYP.md).
@@ -7,6 +7,7 @@
 - **Vaterunser** (v0.16): Mt 6,5–15 und Lk 11,1–4 ausgearbeitet wie Mk 3,20–35 (Übersetzung, Lesarten bis zu Handschriften, Papyri und Amuletten, Wortzuordnung, Befunde, Deutungen, Hintergrund, Anwendung). Matthäus und Lukas vollständig als griechischer Text mit Annotation und Apparat vorhanden. Alles fachlich ungeprüft.
 - **Züridüütsch** (v0.27): zweite Übersetzungsschicht aus dem Urtext für alle ausgearbeiteten Stellen, im Lesestrom umschaltbar; Mundart noch nicht muttersprachlich geprüft. Wortzuordnung für Mk 3 in Mundart noch offen.
 - **Lokalisierungen** (v0.29): alle erklärenden Inhalte der ausgearbeiteten Abschnitte und alle Zusammenfassungen in Züridüütsch als eigene `localization`-Datensätze mit Quellen-Fingerabdruck; veraltete Übersetzungen werden gemeldet und nicht ausgeliefert. Offen: Bedienung, Buch- und Gruppennamen übersetzen.
+- **Hintergrund der oberen Ebenen** (v0.32): Bibel, Testamente und alle zehn Buchgruppen, Hochdeutsch und Züridüütsch. Offen: Hintergrund je Buch (66).
 - **Skalierung** (v0.31): Lesestrom in Kern und nachladbare Pakete je Buch und Sprache; Stellen im Fliesstext als sprachneutrale Marken; neutrale Feldnamen; Versifikationsdaten (TVTMS). Offen: Umrechnung zwischen Versifikationen (mit dem ersten hebräischen bzw. LXX-Text), Buchnamen je Sprache, SQLite-Projektion für Suche über alle Daten.
 - **Navigator und Querverweise** (v0.23): hierarchische Navigation, 344 799 Querverweise (OpenBible.info), verlinkte Stellen mit Rücksprung. Offen: Lesetext für Sprungziele ausserhalb der ausgearbeiteten Stellen (Vorschlag: gemeinfreie Luther 1912 als Ersatz).
 - **Übersetzungsentscheidungen** (v0.18): für die Vaterunser-Verse gekennzeichnet (wörtlich, angepasst, Deutung, Tradition) und mit Luther 1912 und Elberfelder 1905 verglichen. Für Mk 3,20–35 noch nicht nachgetragen.
