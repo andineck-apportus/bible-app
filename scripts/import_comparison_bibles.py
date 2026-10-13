@@ -24,14 +24,17 @@ import xml.etree.ElementTree as ET
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import refs  # noqa: E402
+import versification  # noqa: E402
+NAV = json.loads((ROOT / "data/navigation/NAV-PROT66-KJV.json").read_text(encoding="utf-8"))
+NT = {b for g in NAV["groups"] if g["testament"] == "NT" for b in g["books"]}
 
 LUT = {"file": "deu-luther1912.osis.xml", "commit": "f257a3559025c3f873b48a75019f53a9354ed7de",
        "sha256": "5df33f4bf3e086b6490b467cf8ddbf4cf95126b2826efaddf17b223ddd07f92b"}
 ELB = {"file": "formats/json/GerElb1905.json", "commit": "e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c",
        "sha256": "c3bc2115750db82fb7c9ab650fcd05e22251d29fbb1c7870db6e81c6a1b54557"}
-OSIS = {"TIT": "Titus", "OBA": "Obad", "RUT": "Ruth", "PHP": "Phil"}
-NAMES = {"TIT": "Titus", "OBA": "Obadiah", "RUT": "Ruth", "PHP": "Philippians"}
-TAGS = {"TIT": "TAG-TITUS", "OBA": "TAG-OBADIAH", "RUT": "TAG-RUTH", "PHP": "TAG-PHILIPPIANS"}
+OSIS = {"TIT": "Titus", "OBA": "Obad", "RUT": "Ruth", "PHP": "Phil", "JON": "Jonah", "1JN": "1John", "2JN": "2John", "3JN": "3John", "MRK": "Mark"}
+NAMES = {"TIT": "Titus", "OBA": "Obadiah", "RUT": "Ruth", "PHP": "Philippians", "JON": "Jonah", "1JN": "I John", "2JN": "II John", "3JN": "III John", "MRK": "Mark"}
+TAGS = {"TIT": "TAG-TITUS", "OBA": "TAG-OBADIAH", "RUT": "TAG-RUTH", "PHP": "TAG-PHILIPPIANS", "JON": "TAG-JONAH", "1JN": "TAG-JOHANNINE", "2JN": "TAG-JOHANNINE", "3JN": "TAG-JOHANNINE", "MRK": "TAG-MARK"}
 NOTES = {
     "LUT": "Die Fassung 1912 übersetzt im Neuen Testament nach dem Textus Receptus, im Alten nach dem hebräischen Text der Rabbinerbibeln; Sprache und Wortwahl gehen auf Luther zurück.",
     "ELB": "Sehr wörtliche Übersetzung; im Neuen Testament berücksichtigt sie schon kritische Textausgaben des 19. Jahrhunderts.",
@@ -75,6 +78,24 @@ for key, title, texts, src, url in (
         ("ELB1905", "Elberfelder Bibel, unrevidierte Fassung 1905", elb, ELB, "https://github.com/scrollmapper/bible_databases")):
     if not texts:
         sys.exit(f"ERROR: {key}: keine Verse für {args.book}")
+    # Verszählung an die Navigation (KJV) angleichen: nur wenn die Verszahlen abweichen, nach TVTMS (ganze Verse)
+    kjv = next(b["verses_per_chapter"] for b in NAV["books"] if b["code"] == args.book)
+    want = {f"{args.book}.{c + 1}.{v}" for c, n in enumerate(kjv) for v in range(1, n + 1)}
+    if set(texts) != want:
+        nt = args.book in NT
+        if nt:
+            vmap = versification.greek_verse_map(args.book, list(texts))
+            plan = {r: [(vmap.get(r, r), 0, None, "x")] for r in texts}
+        else:
+            plan, _ = versification.heb_to_kjv(args.book, {r: t.split() for r, t in texts.items()})
+        moved = {}
+        for r in sorted(texts, key=lambda r: tuple(int(x) for x in r.split(".")[1:])):
+            dst = plan[r][0][0]
+            moved[dst] = (moved[dst] + " " + texts[r]) if dst in moved else texts[r]
+        if set(moved) - want:
+            sys.exit(f"ERROR: {key}: Verszählung nicht angleichbar: {sorted(set(moved) - want)[:5]}")
+        print(f"{key}: Verszählung angeglichen ({sum(1 for r in texts if plan[r][0][0] != r)} Verse)")
+        texts = moved
     for r in texts:
         refs.parse(r)
     chapters = sorted({int(r.split(".")[1]) for r in texts})

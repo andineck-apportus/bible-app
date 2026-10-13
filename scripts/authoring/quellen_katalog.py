@@ -24,6 +24,9 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from _lib import D, write  # noqa: E402
 
 DATE = "2026-10-13"
+# Einträge, deren Angaben später geprüft bzw. geändert wurden (Prüfdatum je Eintrag; die übrigen behalten DATE)
+CHECKED = {k: "2026-10-14" for k in ("SRC-SDBH", "SRC-STEP-TAHOT", "SRC-BDB", "SRC-STEP-TBESH", "SRC-UBS-DBH", "SRC-STEP-TAGNT",
+                                     "SRC-MARBLE", "SRC-GREEK-LEXICA-FREE", "SRC-STEP-TBESG", "SRC-UBS-DGNT")}
 AUTH = "Katalogangaben KI-Entwurf (Claude) vom 2026-10-13 nach docs/QUELLEN.md; Lizenzen vor jedem Import erneut prüfen."
 
 # (ID, Titel, Bereich, Schicht, Recht, Kürzel, Verwendung, used_in, urls, Adresse, warum)
@@ -40,11 +43,14 @@ C = [
   ["data/annotations/MACULA-WLC-*.json"], ["https://github.com/openscriptures/morphhb"], "https://github.com/openscriptures/morphhb",
   "Morphologie, über MACULA Hebrew übernommen."),
  ("SRC-SDBH", "SDBH-Wortbedeutungen (in MACULA Hebrew)", "at", "language_data", "ask", "Anfrage", "not_used", [], [], "https://semanticdictionary.org",
-  "Nur «used with permission»; nach Lizenzgrundsatz ausgeschlossen."),
+  "Die SDBH-Felder in MACULA sind nur «used with permission»; nach Lizenzgrundsatz ausgeschlossen. Die von UBS unter CC BY-SA 4.0 "
+  "veröffentlichte Ausgabe (UBS Dictionary of Biblical Hebrew) ist davon getrennt und wird verwendet (SRC-UBS-DBH)."),
  ("SRC-UXLC", "UXLC (Unicode/XML Leningrad Codex)", "at", "editions", "free", "PD", "not_used", [], [], "https://tanach.us",
   "Laufend gepflegte Fassung desselben Codex wie der WLC. MACULA beruht auf dem WLC; ein Wechsel lohnt sich erst, wenn Korrekturen ins Gewicht fallen."),
- ("SRC-STEP-TAHOT", "STEPBible TAHOT", "at", "language_data", "free", "BY", "not_used", [], [], "https://github.com/STEPBible/STEPBible-Data",
-  "Deckt sich weitgehend mit OSHB und MACULA. Nützlich als nächster Schritt für die geschriebenen Ketiv-Formen, die MACULA nicht enthält."),
+ ("SRC-STEP-TAHOT", "STEPBible TAHOT", "at", "language_data", "free", "BY", "used", ["data/tagged-alignments/TALIGN-TAHOT-*.json"],
+  ["https://github.com/STEPBible/STEPBible-Data"], "https://github.com/STEPBible/STEPBible-Data",
+  "Geschriebene Ketiv-Formen, die MACULA nicht enthält (MACULA hat nur das Qere), und disambiguierte Strong-Nummern für den "
+  "Wörterbuch-Eintrag; den WLC-Wörtern maschinell zugeordnet."),
  ("SRC-LENINGRAD-PHOTOS", "Codex Leningradensis, Farbfotos", "at", "manuscripts", "free", "PD?", "not_used", [], [],
   "https://archive.org/details/Leningrad_Codex_Color_Images",
   "Für einen Abgleich am Faksimile; Haltung des Fotografen ungeprüft, deshalb noch nicht eingebunden."),
@@ -68,9 +74,16 @@ C = [
  ("SRC-BHQ-HUB", "BHQ, Hebrew University Bible, HBCE", "at", "editions", "prot", "©", "not_used", [], [], "https://die-bibel.de/en/biblia-hebraica-quinta-bhq",
   "Geschützt; nur zitieren."),
  ("SRC-BDB", "Brown-Driver-Briggs (OpenScriptures)", "at", "lexica", "free", "BY", "not_used", [], [], "https://github.com/openscriptures/HebrewLexicon",
-  "Die App hat noch keine Lexikon-Ansicht; Wortbedeutungen kommen bisher aus den MACULA-Glossen."),
- ("SRC-STEP-TBESH", "STEPBible TBESH (Kurzlexikon Hebräisch)", "at", "lexica", "free", "BY", "not_used", [], [], "https://github.com/STEPBible/STEPBible-Data",
-  "Wie BDB: vorgesehen für die Lexikon-Ansicht."),
+  "Ausführliches älteres Lexikon (1906). Die Lexikon-Ansicht nutzt zuerst das UBS-Wörterbuch (Bedeutungen nach Bedeutungsfeldern); "
+  "BDB wäre eine Ergänzung für Wörter, die dort fehlen."),
+ ("SRC-STEP-TBESH", "STEPBible TBESH (Kurzlexikon Hebräisch)", "at", "lexica", "free", "BY", "used", ["data/lexica/LEX-STEP-TBESH-HEB.json"],
+  ["https://github.com/STEPBible/STEPBible-Data"], "https://github.com/STEPBible/STEPBible-Data",
+  "Kurzglossen je Strong-Nummer als Rückfall, wo das UBS-Wörterbuch keinen Eintrag hat (v. a. Partikeln, Präpositionen). "
+  "Die Bedeutungsspalte (Abridged BDB von Online Bible, nur mit Erlaubnis) ist nicht übernommen."),
+ ("SRC-UBS-DBH", "UBS Dictionary of Biblical Hebrew", "at", "lexica", "sa", "BY-SA", "used", ["data/lexica/LEX-UBS-DBH-HEB.json"],
+  ["https://github.com/ubsicap/ubs-open-license"], "https://github.com/ubsicap/ubs-open-license",
+  "Wörterbuch-Eintrag im hebräischen Wortblatt: Bedeutungen mit Kurzdefinition, Glossen und Bedeutungsfeldern (Auszug aus SDBH, "
+  "von UBS unter CC BY-SA 4.0 veröffentlicht; rund 90 % der Wörter). Nur Einträge für Wörter der importierten Bücher."),
  ("SRC-HALOT", "HALOT, Gesenius 18. Aufl., DCH", "at", "lexica", "prot", "©", "not_used", [], [], "", "Geschützt; nur zitieren."),
  ("SRC-ANE-TEXTS", "Altorientalische Texte, Inschriften (COS, ANET)", "at", "context", "prot", "©", "cited", [], [], "",
   "Im Hintergrund nur als Fundstelle genannt (z. B. Mescha-Stele)."),
@@ -119,16 +132,26 @@ C = [
   "Lemma, Morphologie, Syntax, Referenten, Glossen (Berean, Cherith)."),
  ("SRC-MORPHGNT-612", None, "nt", "language_data", "sa", "BY-SA", "used", ["data/annotations/MORPHGNT-*.json"],
   ["https://github.com/morphgnt/sblgnt"], None, "Nur der Pilot Mk 3,22–30; sonst MACULA Greek, weil freier (CC BY)."),
- ("SRC-STEP-TAGNT", "STEPBible TAGNT", "nt", "language_data", "free", "BY", "not_used", [], [], "https://github.com/STEPBible/STEPBible-Data",
-  "Geplant: zeigt für jedes Wort, welche Editionen es haben (z. B. NA28/TR). Der SBLGNT-Apparat deckt die Hauptfälle schon ab."),
+ ("SRC-STEP-TAGNT", "STEPBible TAGNT", "nt", "language_data", "free", "BY", "used", ["data/tagged-alignments/TALIGN-TAGNT-*.json"],
+  ["https://github.com/STEPBible/STEPBible-Data"], "https://github.com/STEPBible/STEPBible-Data",
+  "Zeigt für jedes Wort, welche gedruckten Ausgaben es haben (NA27/28, Tyndale House, SBL, WH, Tregelles, TR, Byz); den "
+  "SBLGNT-Wörtern maschinell zugeordnet. Ausgabenbefund, kein Handschriftenbefund."),
  ("SRC-OPENGNT", "OpenGNT", "nt", "language_data", "sa", "BY-SA", "not_used", [], [], "https://github.com/eliranwong/OpenGNT",
   "Überschneidet sich mit MACULA Greek, das freier lizenziert ist (CC BY)."),
  ("SRC-MARBLE", "MARBLE / Louw-Nida-Bedeutungen (in MACULA Greek)", "nt", "language_data", "ask", "Anfrage", "not_used", [], [], "",
-  "Nur mit Erlaubnis; nach Lizenzgrundsatz ausgeschlossen."),
- ("SRC-GREEK-LEXICA-FREE", "LSJ, Abbott-Smith, STEPBible TBESG", "nt", "lexica", "free", "PD/BY", "not_used", [], [], "",
-  "Die App hat noch keine Lexikon-Ansicht; vorgesehen."),
- ("SRC-UBS-DGNT", "UBS Dictionary of the Greek NT", "nt", "lexica", "sa", "BY-SA", "not_used", [], [], "https://translation.bible/open-access-resources/",
-  "Bester freier Kandidat für die Lexikon-Ansicht (Wortbedeutungen nach Bedeutungsfeldern)."),
+  "Die Felder in MACULA (domain, ln) nur mit Erlaubnis; nach Lizenzgrundsatz ausgeschlossen. Die UBS-Ausgabe unter CC BY-SA 4.0 "
+  "wird getrennt davon verwendet (SRC-UBS-DGNT)."),
+ ("SRC-GREEK-LEXICA-FREE", "LSJ, Abbott-Smith", "nt", "lexica", "free", "PD/BY", "not_used", [], [], "",
+  "Ältere vollständige Lexika (gemeinfrei bzw. frei erschlossen); für ausführliche Einträge vorgesehen. Die Kurzansicht nutzt das "
+  "UBS-Wörterbuch und STEPBible TBESG."),
+ ("SRC-STEP-TBESG", "STEPBible TBESG (Kurzlexikon Griechisch)", "nt", "lexica", "free", "BY", "used", ["data/lexica/LEX-STEP-TBESG-GRC.json"],
+  ["https://github.com/STEPBible/STEPBible-Data"], "https://github.com/STEPBible/STEPBible-Data",
+  "Kurzglossen je (disambiguierter) Strong-Nummer als Rückfall, wo das UBS-Wörterbuch kein Lemma hat. Die Definitionsspalte "
+  "(Abbott-Smith bzw. Middle Liddell, Herkunft je Eintrag nicht sicher) ist nicht übernommen."),
+ ("SRC-UBS-DGNT", "UBS Dictionary of the Greek NT", "nt", "lexica", "sa", "BY-SA", "used", ["data/lexica/LEX-UBS-DGNT-GRC.json"],
+  ["https://github.com/ubsicap/ubs-open-license"], "https://translation.bible/open-access-resources/",
+  "Wörterbuch-Eintrag im griechischen Wortblatt: Bedeutungen nach Bedeutungsfeldern (überarbeitetes Louw-Nida, von UBS unter "
+  "CC BY-SA 4.0 veröffentlicht), Kurzdefinition und Glossen; nur Einträge für Wörter der importierten Bücher."),
  ("SRC-BDAG", "BDAG, Bauer-Aland, Louw-Nida (Vollausgabe)", "nt", "lexica", "prot", "©", "not_used", [], [], "", "Geschützt; nur zitieren."),
  ("SRC-GREEKLAB", "Greeklab Interlinear", "nt", "language_data", "ask", "unklar", "cited", [], ["https://www.greeklab.org/interlinear.php?book=Mark&cap=3&verse=29"], "https://www.greeklab.org",
   "Einmal als Nachschlagehilfe zu Mk 3,29 genannt; keine Daten übernommen."),
@@ -177,18 +200,23 @@ def run():
     for (rid, title, area, layer, rights, lic, use, used_in, urls, url, why) in C:
         path = D / "sources" / f"{rid}.json"
         cat = {"area": area, "layer": layer, "rights": rights, "license": lic, "use": use, "why_de": why,
-               "checked": DATE}
+               "checked": CHECKED.get(rid, DATE)}
         if used_in:
             cat["used_in"] = used_in
         if urls:
             cat["urls"] = urls
         if path.exists():
             rec = json.loads(path.read_text(encoding="utf-8"))
-            if rec.get("catalog") == cat:
+            new_title = title if title and rec.get("kind") == "catalog_entry" else rec.get("title")
+            if rec.get("catalog") == cat and rec.get("title") == new_title:
                 continue
-            rec["revision_log"] = rec.get("revision_log", []) + [{"date": DATE, "change_de": "Katalogangaben (Nutzungsrecht, Verwendung) ergänzt bzw. geändert",
-                                                                 "previous": {"catalog": rec.get("catalog")}}]
+            prev = {"catalog": rec.get("catalog")}
+            if rec.get("title") != new_title:
+                prev["title"] = rec.get("title")
+            rec["revision_log"] = rec.get("revision_log", []) + [{"date": CHECKED.get(rid, DATE), "change_de": "Katalogangaben (Nutzungsrecht, Verwendung) ergänzt bzw. geändert",
+                                                                 "previous": prev}]
             rec["catalog"] = cat
+            rec["title"] = new_title
             path.write_text(json.dumps(rec, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             n += 1
         else:

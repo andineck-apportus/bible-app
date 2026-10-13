@@ -42,7 +42,7 @@ DSS_BOOK = {"GEN": "Gen", "EXO": "Ex", "LEV": "Lev", "NUM": "Num", "DEU": "Deut"
             "JON": "Jonah", "MIC": "Mic", "NAM": "Nah", "HAB": "Hab", "ZEP": "Zeph", "HAG": "Hag", "ZEC": "Zech",
             "MAL": "Mal"}
 # Übliche Bezeichnungen (Sigla) der Rollen; ohne Eintrag bleibt die Inventarnummer.
-NAMES = {"2Q16": "2QRuth a", "2Q17": "2QRuth b", "4Q104": "4QRuth a", "4Q105": "4QRuth b", "4Q82": "4QXII g",
+NAMES = {"2Q16": "2QRuth a", "2Q17": "2QRuth b", "4Q104": "4QRuth a", "4Q105": "4QRuth b", "4Q82": "4QXII g", "4Q76": "4QXII a", "4Q81": "4QXII f",
          "Mur88": "MurXII (Mur 88)"}
 PLACES = {"Mur": "Wadi Murabbaʿat", "Hev": "Naḥal Ḥever", "Mas": "Masada"}
 FINAL = str.maketrans("ךםןףץ", "כמנפצ")

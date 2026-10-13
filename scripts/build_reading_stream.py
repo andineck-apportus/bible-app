@@ -8,6 +8,8 @@ Eingebettet werden:
 - Hintergrundnotizen (data/background/*.json), Stellen für die Anzeige aufbereitet
 - Quellen zu den Lesarten: Handschriften (data/witnesses), Zuordnungen (data/witness-readings),
   Ausgaben (data/editions) sowie Wortbedeutungen und Erklärungen aus den Übersetzungs-Alternativen
+- Wörterbuch-Einträge (data/lexica: UBS, STEPBible TBESG/TBESH), Ausgaben je Wort (STEPBible TAGNT) und
+  Ketiv/Qere (STEPBible TAHOT) aus data/tagged-alignments, je Buch in den Paketen b/<BUCH>
 
 Die Vorlage app/reading-stream/template.html bearbeiten, danach dieses Skript ausführen.
 Erzeugte Datei nicht von Hand ändern.
@@ -129,7 +131,8 @@ xref_payload = {"verses": crossrefs, "books": refbooks,
 # Kern (immer in index.html): Gerüst, Navigation, Abschnitte (hochdeutsche Titel), Sprachschichten ohne Inhalt,
 # hochdeutsche Zusammenfassungen, Quellenbeschreibungen. Pakete (nachladbar, gzip):
 #   b/<BUCH>        sprachunabhängig: griechische Wörter, Varianten, Befunde/Deutungen/… (Original), Hintergrund,
-#                   Querverweise, Handschriften-Zuordnungen
+#                   Querverweise, Handschriften-Zuordnungen, Wörterbuch-Einträge (lex), Ketiv/Qere (ketiv, kq_only),
+#                   Wörter anderer Ausgaben (ed_extra)
 #   l/<Sprache>/<BUCH>   Übersetzungsschicht des Buchs, Vergleichsübersetzungen dieser Sprache, Lesarten-Erklärungen,
 #                   Lokalisierungen der Objekte des Buchs
 #   l/<Sprache>/common   Lokalisierte Titel/Zusammenfassungen der Abschnitte und aller Zusammenfassungen
@@ -170,6 +173,17 @@ for lg, alts in sources_payload["alts"].items():
 for key in ("words", "variants"):
     for x in study[key]:
         bundle(f"b/{ref_book(x['ref'])}").setdefault(key, []).append(x)
+# Wörterbuch-Einträge, Ketiv/Qere und Ausgabenbefund (STEPBible, UBS) nur im Paket des Buchs, dessen Wörter sie brauchen
+for w in study["words"]:
+    b = bundle(f"b/{ref_book(w['ref'])}")
+    for k in (w.get("lx") or {}).values():
+        if isinstance(k, str):
+            b.setdefault("lex", {})[k] = study["lexicon"][k]
+    if w.get("kq"):
+        b.setdefault("ketiv", {})[w["kq"]] = study["ketiv"][w["kq"]]
+for key, dst in (("ed_extra", "ed_extra"), ("ketiv_only", "kq_only")):
+    for r, v in study[key].items():
+        bundle(f"b/{ref_book(r)}").setdefault(dst, {})[r] = v
 for key in ("findings", "interpretations", "principles", "applications", "questions"):
     for x in study[key]:
         b = book_of_id[x["subject"]]
@@ -223,7 +237,8 @@ for name, d in bundles.items():
 
 core_study = {"built_from": study["built_from"], "sections": core_sections, "layers": core_layers, "layer_order": langs,
               "compare": {}, "words": [], "variants": [], "findings": [], "interpretations": [], "principles": [],
-              "applications": [], "relations": [], "questions": [], "method": study["method"], "editions": study["editions"]}
+              "applications": [], "relations": [], "questions": [], "method": study["method"], "editions": study["editions"],
+              "lexicon": {}, "ketiv": {}, "ketiv_only": {}, "ed_extra": {}}
 core_src = {k: v for k, v in sources_payload.items() if k not in ("readings", "alts", "variants")}
 core_src.update({"readings": {}, "alts": {lg: {} for lg in langs}, "variants": {}})
 core_xref = {**xref_payload, "verses": {}}

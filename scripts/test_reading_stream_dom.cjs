@@ -9,7 +9,7 @@ const click=s=>{const el=app.querySelector(s);assert(el,s);el.click();};
 const M=()=>model.STUDY;
 const mk=v=>M().de['MRK.3.'+v];
 const vOf=r=>Number(r.split('.')[2]);
-const mkAlts=()=>M().alternatives.filter(a=>a.ref.startsWith('MRK.3.'));
+const mkAlts=()=>M().alternatives.filter(a=>a.ref.startsWith('MRK.3.')&&vOf(a.ref)>=20); // Pilotabschnitt Mk 3,20–35
 
 // Voreinstellung: Lesarten, Hintergrund und Urtext sind eingeschaltet; für die folgenden Prüfungen zuerst aus
 click('[data-action=menu]');
@@ -32,7 +32,7 @@ reader.scrollTop=137;click('[data-deep="TU-MRK-003-022-030"]');
 const verse=reader.querySelector('[data-stream="v40-3-29"]');
 assert.equal(verse.querySelector('.stream-copy').textContent,mk(29));
 assert(!verse.querySelector('[data-alternative]'),'Lesarten standardmässig nicht im Lesestrom');
-for(let v=22;v<=30;v++){const want=mkAlts().some(a=>vOf(a.ref)===v)||model.BG.some(b=>!b.wide&&b.chapter==='MRK.3'&&b.from<=v&&v<=b.to);
+for(let v=22;v<=30;v++){const want=mkAlts().some(a=>vOf(a.ref)===v)||model.BG.some(b=>!b.wide&&b.chapter==='MRK.3'&&b.from<=v&&v<=b.to)||!!M().decisions['MRK.3.'+v]||(M().compare['MRK.3.'+v]||[]).some(c=>c.lang==='de');
  assert.equal(!!reader.querySelector(`[data-more="v40-3-${v}"]`),want,`«+» nur bei Lesarten oder Hintergrund (3,${v})`);}
 
 // Hintergrund damals: Vers, Abschnitt, Hinweise im Text
@@ -187,7 +187,7 @@ click('[data-more="v39-6-11"]');sheetHost.querySelector('.sheet-tools [data-back
 assert(/\b(isch|händ|de|vo)\b/.test(sheetHost.querySelector('.bg-note .body').textContent),'Hintergrund in Mundart');click('[data-close]');
 click('[data-action=menu]');click('[data-set="text"][data-value="de"]');click('[data-close]');
 assert.equal(reader.querySelector('[data-stream="v39-6-11"] .stream-copy').textContent,M().de['MAT.6.11'],'zurück zu Hochdeutsch');
-assert.equal(Object.keys(M().layers.gsw.text).length,287,'Mundart für alle 287 Verse');
+assert.equal(Object.keys(M().layers.gsw.text).length,1124,'Mundart für alle 1124 Verse');
 // Obadja (Hebräisch) und Titus: Muster ganzer Bücher
 click('[data-action=menu]');click('[data-set="text"][data-value="de"]');if(sheetHost.querySelector('[data-toggle=advanced][aria-checked=false]'))click('[data-toggle=advanced]');click('[data-close]');
 click('[data-action=menu]');sheetHost.querySelector('[data-go^="TU-OBA"]').click();click('[data-action=down]');
@@ -202,10 +202,34 @@ assert.equal(model.STUDY.layers.de.text['OBA.1.21'],'Und Retter werden hinaufzie
 assert(model.STUDY.words.filter(w=>w.ref==='OBA.1.1').every(w=>w.wtr),'Umschrift je Wort');
 assert(model.STUDY.layers.gsw.text['TIT.3.15'].startsWith('Es grüessed dich alli'),'Titus in Mundart');
 assert(model.STUDY&&dom.window.document.querySelector('#bible-stream'));
+// Wörterbuch (UBS/STEPBible), Ketiv/Qere (TAHOT), Ausgaben je Wort (TAGNT); Urtext-Modus ist an
+const goto=q=>{click('[data-action=menu]');const i=sheetHost.querySelector('input[type=search]');i.value=q;i.dispatchEvent(new dom.window.Event('input',{bubbles:true}));sheetHost.querySelector('.results [data-go]').click();};
+goto('Obadja 1,11');click('[data-more="v30-1-11"]');
+let ltx=sheetHost.textContent;
+const hc=x=>x.replace(/[^\u05D0-\u05EA ]/g,'');
+assert(ltx.includes('Geschrieben (Ketiv)')&&ltx.includes('Gelesen (Qere)')&&/שערו(?!י)/.test(hc(sheetHost.querySelector('.kq').textContent)),'Ketiv/Qere in Obd 1,11');
+assert(sheetHost.querySelector('.il.he .kqmark'),'Ketiv/Qere am Wort markiert');
+assert(ltx.includes('Wörterbuch')&&ltx.includes('UBS-Wörterbuch (englisch, CC BY-SA 4.0)'),'Wörterbuch im hebräischen Wortblatt');
+assert(ltx.includes('STEPBible TAHOT')&&ltx.includes('UBS Dictionary of Biblical Hebrew'),'Attribution Hebräisch');
+click('[data-close]');
+goto('Rut 3,12');click('[data-more="v7-3-12"]');
+assert(sheetHost.textContent.includes('Geschrieben, aber nicht gelesen (Ketiv ohne Qere)')&&hc(sheetHost.textContent).includes('אם'),'Ketiv ohne Qere in Rut 3,12');
+click('[data-close]');
+goto('Mk 1,2');click('[data-more="v40-1-2"]');
+ltx=sheetHost.textContent;
+assert(ltx.includes('Wörter in den Textausgaben')&&ltx.includes('fehlt in TR, Byz')&&ltx.includes('Ὡς'),'Ausgaben je Wort in Mk 1,2');
+assert(ltx.includes('nicht über Handschriften'),'Ausgabenbefund, nicht Handschriften');
+const gd=sheetHost.querySelector('.il details');gd.querySelector('summary').click();
+assert(gd.textContent.includes('Wörterbuch')&&gd.querySelector('ul.lex li'),'Wörterbuch-Eintrag im griechischen Wortblatt');
+assert(ltx.includes('UBS Dictionary of the Greek New Testament')&&ltx.includes('Ausgaben je Wort (TAGNT)')&&ltx.includes('CC BY-SA 4.0'),'Attribution Griechisch');
+click('[data-close]');
+goto('Mk 1,1');click('[data-more="v40-1-1"]');
+assert(/\+ υἱοῦ/.test(sheetHost.textContent)&&sheetHost.textContent.includes('nicht in SBL'),'Wörter anderer Ausgaben (Mk 1,1)');
+click('[data-close]');
 click('[data-action=menu]');click('[data-sources-map]');
 assert(sheetHost.textContent.includes('Quellen und Rechte')&&sheetHost.querySelectorAll('.src-item').length>=60,'Quellen und Rechte: ganzer Katalog');
 click('[data-src-filter="used"]');
 assert(sheetHost.querySelectorAll('.src-item').length===sheetHost.querySelectorAll('.src-item .u-used').length&&sheetHost.textContent.includes('MACULA Hebrew'),'Filter verwendet');
 click('[data-close]');
-console.log(`PASS: Pilotzugang, Studienblatt ohne Griechisch, Lesarten auf Wunsch (${M().alternatives.length}), Hintergrund damals (${model.BG.length}), Bis zur Quelle (${tested}), Urtext-Modus, Rückkehrposition, Suche, Kapitelgrenze, Vaterunser Mt/Lk, Übersetzungsentscheidungen und Vergleich, Wort-Blatt, Umschrift und Anhören, Verse fortlaufend, Navigator, Querverweise und Rücksprung, Lesetext Hochdeutsch/Züridüütsch mit Titeln, Obadja hebräisch Wort für Wort, Titus, Quellen und Rechte, Texte vom Toten Meer.`);
+console.log(`PASS: Pilotzugang, Studienblatt ohne Griechisch, Lesarten auf Wunsch (${M().alternatives.length}), Hintergrund damals (${model.BG.length}), Bis zur Quelle (${tested}), Urtext-Modus, Rückkehrposition, Suche, Kapitelgrenze, Vaterunser Mt/Lk, Übersetzungsentscheidungen und Vergleich, Wort-Blatt, Umschrift und Anhören, Verse fortlaufend, Navigator, Querverweise und Rücksprung, Lesetext Hochdeutsch/Züridüütsch mit Titeln, Obadja hebräisch Wort für Wort, Titus, Quellen und Rechte, Texte vom Toten Meer, Wörterbuch, Ketiv/Qere, Ausgaben je Wort.`);
 dom.window.close();

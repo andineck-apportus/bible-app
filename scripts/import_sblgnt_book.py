@@ -152,6 +152,39 @@ for (ch, v) in sorted(verses):
 if problems:
     sys.exit("ERROR: " + "; ".join(problems[:10]) + f" ({len(problems)} Probleme); no output written")
 
+# Verszählung: SBLGNT folgt der griechischen Zählung; abweichende Verse (z. B. 3 Joh 1,15) werden nach TVTMS an den
+# Zielvers der Navigation (KJV) angehängt. Token-IDs folgen der Zielstelle; die Quellstelle bleibt in source_reference.
+sys.path.insert(0, str(ROOT / "scripts"))
+import versification  # noqa: E402
+vmap = versification.greek_verse_map(code, [f"{code}.{c}.{v}" for (c, v) in verses])
+idmap = {}
+if vmap:
+    for ch in chapters:
+        last = {}
+        for tok in chapters[ch]["tokens"]:
+            if tok["reference"] not in vmap:
+                last[tok["reference"]] = max(last.get(tok["reference"], 0), tok["position"])
+        for tok in chapters[ch]["tokens"]:
+            src = tok["reference"]
+            if src in vmap:
+                dst = vmap[src]
+                _, dc, dv = dst.split(".")
+                last[dst] = last.get(dst, 0) + 1
+                new = tok_id(int(dc), int(dv), last[dst])
+                idmap[tok["id"]] = new
+                tok.update({"id": new, "reference": dst, "position": last[dst], "source_reference": src})
+        fix = lambda x: idmap.get(x, x)
+        ann = {}
+        for tid, e in chapters[ch]["ann"].items():
+            for k, v in list(e.items()):
+                if isinstance(v, list):
+                    e[k] = [fix(x) for x in v]
+                elif k == "frame":
+                    e[k] = re.sub(r"TOK-SBLGNT-[0-9A-Z]+-\d{3}-\d{3}-\d{3}", lambda m: fix(m.group(0)), v)
+            ann[fix(tid)] = e
+        chapters[ch]["ann"] = ann
+        chapters[ch]["tokens"].sort(key=lambda t: (int(t["reference"].split(".")[2]), t["position"]))
+
 today = datetime.date.today().isoformat()
 src_text = {"url": "https://github.com/Faithlife/SBLGNT", "upstream_commit": args.sblgnt_commit,
             "file": f"data/sblgnt/text/{name}.txt", "sha256": sha(text_file),
@@ -188,6 +221,10 @@ for ch, d in sorted(chapters.items()):
               "tags": args.tag, "edition": "ED-SBLGNT", "reference": f"{code}.{ch}",
               "token_policy": "Ein Token pro SBLGNT-Wort (Leerzeichentrennung). «text» unverändert aus der Edition inkl. Interpunktion und Apparatzeichen; «word» ohne diese Zeichen.",
               "source": src_text, "import": imp, "tokens": d["tokens"]}
+    if any("source_reference" in x for x in d["tokens"]):
+        tokset["versification"] = "KJV"
+        tokset["versification_policy"] = ("SBLGNT folgt der griechischen Zählung; abweichende Verse sind nach TVTMS an den "
+                                          "Zielvers der Navigation (KJV) angehängt, Quellstelle in «source_reference».")
     ann = {"id": f"ANN-MACULA-SBLGNT-{code}-{ch:03d}", "type": "annotation_set", "status": "imported_unreviewed",
            "tags": args.tag, "annotates": tokset["id"], "reference": f"{code}.{ch}",
            "layers": ["morphology", "lemma", "syntax_role", "referents", "semantic_frame", "gloss"],

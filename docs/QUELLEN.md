@@ -195,11 +195,11 @@ Festgelegt am 2026-10-09 ([LIZENZEN.md](../LIZENZEN.md)): Die App betreibt ein g
 ## 11. Empfohlene Reihenfolge
 
 1. **NT-Text:** SBLGNT ✔ (Mk 3,22–30); Morphologie von MorphGNT (CC BY-SA) auf MACULA Greek (CC BY 4.0) umstellen; ganze Bücher importieren; Syntax und Referenten aus MACULA.
-2. **NT-Varianten auf Editionsebene:** SBLGNT-Apparat ✔ (Mk 3,22–30); TAGNT für die Editionszugehörigkeit jedes Worts.
+2. **NT-Varianten auf Editionsebene:** SBLGNT-Apparat ✔ (Mk 3,22–30); TAGNT für die Editionszugehörigkeit jedes Worts ✔ (v0.39, alle importierten NT-Bücher).
 3. **NT-Handschriften:** NTVMR-API (CC BY 4.0) für konkrete Zeugenbelege, CNTR (CC BY-SA) ergänzend; ECM Markus online lesen und als Fundstelle zitieren.
 4. **Versifikation:** STEPBible TVTMS.
-5. **AT:** WLC/UXLC + OSHB + MACULA Hebrew + STEP.
-6. **Lexik:** STEP-Lexika, LSJ, Abbott-Smith, UBS-Wörterbuch, BDB; BDAG/HALOT als Verweis (Bibliothek).
+5. **AT:** WLC/UXLC + OSHB + MACULA Hebrew + STEP (TAHOT für Ketiv ✔ v0.39).
+6. **Lexik:** UBS-Wörterbücher Griechisch und Hebräisch (CC BY-SA 4.0, github.com/ubsicap/ubs-open-license) und STEP-Kurzglossen TBESG/TBESH ✔ (v0.39; TBESH-Bedeutungen sind Abridged BDB von Online Bible und nicht frei); LSJ, Abbott-Smith, BDB; BDAG/HALOT als Verweis (Bibliothek).
 7. **LXX und alte Übersetzungen:** CATSS/Rahlfs in der Studienschicht; Swete (gemeinfrei) langfristig selbst erschliessen; Clementina; Coptic Scriptorium.
 8. **Kontext und Sekundärliteratur:** gezielt pro Studie, mit Fundstelle und Datierung.
 
