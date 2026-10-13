@@ -2,6 +2,12 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.32 — 2026-10-13 — Hintergrund damals für Bibel, Testamente und Buchgruppen
+
+- 17 neue Hintergrundnotizen für die oberen Ebenen: Bibel (Entstehung über rund tausend Jahre; wie der Kanon entstand), Altes Testament (Israel zwischen Grossmächten; Tanach und christliche Ordnung), Neues Testament (unter römischer Herrschaft; zuerst Briefe, dann Evangelien) und alle zehn Buchgruppen (u. a. Tora und Exodus mit ausserbiblischen Spuren, Geschichtsbücher, Psalmen und Weisheit, Propheten, Evangelien, Apostelgeschichte, Briefe, Offenbarung). Jede Notiz mit Einschätzung, «Nicht sicher», Belegstellen, ausserbiblischen Quellen und Ursprachwörtern; alle in Züridüütsch. KI-Entwurf, fachlich ungeprüft.
+- Datenmodell: `background_note` mit `scope` (`bible`, `testament`, `book_group`, `book`) und `testament`/`group`; vier historische Kontexte (`CTX-HIST-*`). Autorenwerkzeug `scripts/authoring/hintergrund_uebersicht.py`.
+- Lesestrom: Knopf «Geschichte» bei Bibel, Testament und Buchgruppe öffnet den Hintergrund; geladen als eigenes Paket `b/_overview` (Mundart in `l/gsw/common`).
+
 ## v0.31 — 2026-10-13 — Für die ganze Bibel und viele Sprachen aufgeräumt
 
 - **Pakete:** Der Lesestrom besteht aus einem Kern und nachladbaren, gzip-komprimierten Paketen je Buch (`b/<BUCH>`: Griechisch, Varianten, Deutungen, Hintergrund, Querverweise) und je Sprache und Buch (`l/<Sprache>/<BUCH>`, `l/<Sprache>/common`). Die App lädt sie erst bei Bedarf (Navigation, Weiterlesen, Sprachwechsel). Veröffentlicht wird `build/reading-stream/` (Kern 145 KB, Pakete zusammen 82 KB); `app/reading-stream/index.html` bleibt als Einzeldatei mit allen Paketen (offline, Tests). Für Hosts, die keine Binärdateien ausliefern (z. B. das Claude-Artefakt), gibt es dieselben Pakete als gzip in Base64 (`build/reading-stream-txt/`, `.gz.txt`).

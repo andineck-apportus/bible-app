@@ -11,7 +11,11 @@ server.listen(0,async()=>{const url=`http://localhost:${server.address().port}/i
     p.on('request',r=>{if(/\.(json\.gz|gz\.txt)$/.test(r.url()))reqs.push(r.url().split('/').slice(-3).join('/').replace(/^.*?\/(b|l)\//,'$1/').replace(/\.(json\.gz|gz\.txt)$/,''));});p.on('pageerror',e=>errs.push(e.message));
     const ev=f=>p.evaluate(f);const wait=()=>p.waitForTimeout(400);
     await p.goto(url);await wait();
-    assert.equal(reqs.length,0,'auf Bibelebene keine Pakete nötig');
+    assert.deepEqual(reqs,['b/_overview'],'auf Bibelebene nur der Hintergrund der oberen Ebenen');
+    await ev(()=>document.querySelector('[data-overview="all"]').click());await wait();
+    const ov=await ev(()=>document.querySelector('.sheet').innerText);
+    assert(ov.includes('Eine Bibliothek aus rund tausend Jahren')&&!ov.includes('[['),'Hintergrund der Bibel');
+    await ev(()=>document.querySelector('[data-close]').click());
     await ev(()=>document.querySelector('[data-action=menu]').click());await ev(()=>document.querySelector('.sheet [data-go^="TU-MAT-006"]').click());await wait();
     assert(reqs.includes('b/MAT')&&reqs.includes('l/de/MAT')&&!reqs.some(x=>x.includes('gsw')),'nur Matthäus und Hochdeutsch geladen');
     await ev(()=>document.querySelector('[data-action=down]').click());await wait();
@@ -22,6 +26,10 @@ server.listen(0,async()=>{const url=`http://localhost:${server.address().port}/i
     await ev(()=>document.querySelector('[data-more="v39-6-11"]').click());await ev(()=>document.querySelector('.sheet-tools [data-background="TU-MAT-006-009-013"]').click());await wait();
     const sheet=await ev(()=>document.querySelector('.sheet').innerText);
     assert(!sheet.includes('[[')&&sheet.includes('Vatterunser'),'Hintergrund in Mundart, Stellen als Anzeige');
+    await ev(()=>document.querySelector('[data-close]').click());await ev(()=>document.querySelector('[data-action=home]')?.click());await wait();
+    await ev(()=>document.querySelector('[data-action=down]').click());await wait();await ev(()=>document.querySelector('[data-action=down]').click());await wait();
+    await ev(()=>document.querySelector('[data-overview="g5"]').click());await wait();
+    assert((await ev(()=>document.querySelector('.sheet').innerText)).includes('Vier Verzellige vom Jesus'),'Hintergrund der Buchgruppe in Mundart');
     assert.deepEqual(errs,[],'keine Skriptfehler');
     console.log(`PASS: aufgeteilte Fassung lädt nach Bedarf (${process.argv[2]||'reading-stream'}, ${reqs.length} Pakete: ${reqs.join(', ')}).`);
   }finally{await b.close();server.close();}});

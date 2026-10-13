@@ -28,7 +28,7 @@ import localizations  # noqa: E402
 study = project()
 nav = json.loads((ROOT / "data/navigation/NAV-PROT66-KJV.json").read_text(encoding="utf-8"))
 sum_recs = {r["id"]: r for r in (json.loads(p.read_text(encoding="utf-8")) for p in sorted((ROOT / "data/summaries").glob("*.json")))}
-bg_recs = {r["id"]: r for r in (json.loads(p.read_text(encoding="utf-8")) for p in sorted((ROOT / "data/background").glob("*.json")))}
+bg_recs = {r["id"]: r for r in (json.loads(p.read_text(encoding="utf-8")) for p in sorted((ROOT / "data/background").rglob("*.json")))}
 L10N = localizations.load({**sum_recs, **bg_recs})
 
 
@@ -51,7 +51,17 @@ for sec in study["sections"]:
     for part in sec["parts"]:
         section_of[part["id"]] = sec["id"]
 background = []
+overview = []  # Hintergrund der oberen Ebenen (Bibel, Testament, Buchgruppe, Buch)
 for b in bg_recs.values():
+    if b.get("scope") in ("bible", "testament", "book_group", "book"):
+        overview.append({"id": b["id"], "scope": b["scope"], "testament": b.get("testament"), "group": b.get("group"),
+                         "book": b.get("reference") if b["scope"] == "book" else None,
+                         "topic": b["topic_de"], "text": b["text_de"], "uncertain": b.get("uncertain_de"),
+                         "confidence": b.get("confidence"), "chapter": "", "ref_de": "", "readers": False,
+                         "evidence": [refs.display_de(r) for r in b.get("evidence_refs", [])],
+                         "sources": b.get("sources_de", []), "status": b["status"], "terms": b.get("terms", []),
+                         "i18n": i18n(b["id"], {"topic_de": "topic", "text_de": "text", "uncertain_de": "uncertain", "terms": "terms"})})
+        continue
     if b["subject"] not in section_of:
         continue  # Notiz zu einem Abschnitt, der im Lesestrom noch nicht ausgearbeitet ist
     ref = b["reference"]
@@ -175,6 +185,11 @@ for x in background:
     for lg, f in (x.pop("i18n", None) or {}).items():
         bundle(f"l/{lg}/{b}").setdefault("i18n", {})[x["id"]] = f
     bundle(f"b/{b}").setdefault("bg", []).append(x)
+for x in overview:
+    x = dict(x)
+    for lg, f in (x.pop("i18n", None) or {}).items():
+        bundle(f"l/{lg}/common").setdefault("i18n", {})[x["id"]] = f
+    bundle("b/_overview").setdefault("bg", []).append(x)
 for r, v in crossrefs.items():
     bundle(f"b/{ref_book(r)}").setdefault("xref", {})[r] = v
 for vid, rows in wit_readings.items():
@@ -251,6 +266,6 @@ for folder, ext in (("reading-stream", ".json.gz"), ("reading-stream-txt", ".gz.
                                                   ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 manifest.pop("ext")
 out = ROOT / "build/reading-stream"
-print(f"PASS: Lesestrom gebaut: {len(nav['books'])} Bücher, {len(summaries)} Zusammenfassungen, {len(background)} Hintergrundnotizen, "
+print(f"PASS: Lesestrom gebaut: {len(nav['books'])} Bücher, {len(summaries)} Zusammenfassungen, {len(background)} Hintergrundnotizen zu Abschnitten, {len(overview)} zu oberen Ebenen, "
       f"ausgearbeitet: {', '.join(refs.display_de(x['range']) for x in study['sections'])}; "
       f"{len(bundles)} Pakete ({sum(b for _, b in sizes.values()) // 1024} KB gzip, Kern {len((out / 'index.html').read_bytes()) // 1024} KB).")

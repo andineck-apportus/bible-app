@@ -255,9 +255,20 @@ def main():
                 for k in localizations.stale_fields(r, orig):
                     warnings.append(f"{rel}: Feld {k} veraltet (Original seit der Übersetzung geändert)")
         if r.get("type") == "background_note":
-            for f in ("topic_de", "text_de", "reference", "context", "authorship_de"):
+            # Übersichtsnotizen (scope bible/testament/book_group) haben keine einzelne Stelle
+            scope = r.get("scope")
+            need = ("topic_de", "text_de", "context", "authorship_de") + (() if scope in ("bible", "testament", "book_group") else ("reference",))
+            for f in need:
                 if not r.get(f):
                     errors.append(f"{rel}: background_note ohne {f}")
+            if scope not in (None, "bible", "testament", "book_group", "book"):
+                errors.append(f"{rel}: unbekannter scope {scope!r}")
+            if scope == "testament" and r.get("testament") not in ("OT", "NT"):
+                errors.append(f"{rel}: testament muss OT oder NT sein")
+            if scope == "book_group" and r.get("group") not in {g["id"] for g in (nav or {}).get("groups", [])}:
+                errors.append(f"{rel}: group {r.get('group')!r} in keiner Navigationsstruktur")
+            if scope == "book" and not (r.get("reference") and "." not in r["reference"]):
+                errors.append(f"{rel}: scope book braucht reference = Buchcode")
             ctx = records.get(r.get("context"), (None, {}))[1]
             if ctx and ctx.get("type") != "context":
                 errors.append(f"{rel}: context {r.get('context')!r} ist kein context-Datensatz")
