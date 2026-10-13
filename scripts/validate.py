@@ -235,6 +235,18 @@ def main():
                 for f in ("source_ref", "standard_ref"):
                     if f in e:
                         check_ref(rel, f"entries[{i}].{f}", e[f]); ref_count += 1
+        if r.get("type") == "tagged_text_alignment":
+            # Zuordnung fremder getaggter Texte (STEPBible TAGNT/TAHOT) zu unseren Tokens: alle Token-IDs müssen existieren
+            for tid, e in (r.get("entries") or {}).items():
+                check_tokens(rel, "entries", [tid] + list(e.get("tokens") or []))
+                token_ref_count += 1 + len(e.get("tokens") or [])
+            check_tokens(rel, "dstrong", list(r.get("dstrong") or {}))
+            for i, x in enumerate((r.get("extra_words") or []) + (r.get("ketiv_without_qere") or [])):
+                if x.get("after"):
+                    check_tokens(rel, f"extra_words/ketiv_without_qere[{i}].after", [x["after"]])
+                check_ref(rel, f"extra_words/ketiv_without_qere[{i}].ref", x.get("ref")); ref_count += 1
+        if r.get("type") == "lexicon" and not isinstance(r.get("entries"), dict):
+            errors.append(f"{rel}: lexicon braucht entries als Objekt (Schlüssel → Eintrag)")
         if r.get("type") == "crossref_set":
             parsed = set()
             for frm, items in (r.get("entries") or {}).items():

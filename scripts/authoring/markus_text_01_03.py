@@ -114,7 +114,7 @@ DE = {
  "MRK.3.5": "Und{1} [er blickte]{2} [sie]{3} [ringsum an]{2} [mit]{4} [Zorn]{5}, [betrübt]{6} [über]{7} [die Verhärtung]{8,9} [ihres]{12} [Herzens]{10,11}, [und sagt]{13} [zu dem Menschen]{14,15}: «[Streck]{16} [die Hand]{17,18} [aus]{16}!» Und{19} [er streckte sie aus]{20}, und{21} [seine]{25} [Hand]{23,24} [wurde wiederhergestellt]{22}.",
  "MRK.3.6": "Und{1} [die Pharisäer]{3,4} [gingen hinaus]{2} [und hielten]{10} sogleich{5} [mit]{6} [den Herodianern]{7,8} [Rat]{9} [gegen]{11} [ihn]{12}, [wie]{13} [sie]{15} [ihn]{14} [umbringen könnten]{15}.",
  "MRK.3.7": "Und{1} Jesus{2,3} [zog sich]{8} [mit]{4} [seinen]{7} [Jüngern]{5,6} [an]{9} [den See]{10,11} [zurück]{8}, und{12} [eine grosse]{13} [Schar]{14} [aus]{15} Galiläa{16,17} [folgte]{18}. Auch{19} [aus]{20} Judäa{21,22}",
- "MRK.3.8": "und{1} [aus]{2} Jerusalem{3} und{4} [aus]{5} Idumäa{6,7} und{8} [von jenseits]{9} [des Jordan]{10,11} und{12} [aus der Gegend um]{13} Tyrus{14} und{15} Sidon{16} [kam]{22} [eine grosse]{18} [Schar]{17} [zu]{23} [ihm]{24}, [weil sie hörten]{19}, [was er alles]{20} [tat]{21}.",
+ "MRK.3.8": "und{1} [aus]{2} Jerusalem{3} und{4} [aus]{5} Idumäa{6,7} und{8} [von jenseits]{9} [des Jordan]{10,11} und{12} [aus der Gegend um]{13} Tyros{14} und{15} Sidon{16} [kam]{22} [eine grosse]{18} [Schar]{17} [zu]{23} [ihm]{24}, [weil sie hörten]{19}, [was er alles]{20} [tat]{21}.",
  "MRK.3.9": "Und{1} [er sagte]{2} [seinen]{5} [Jüngern]{3,4}, dass{6} [ein Boot]{7} [für ihn]{9} [bereitliegen solle]{8} [wegen]{10} [der Menge]{11,12}, damit{13} [sie]{15} [ihn]{16} nicht{14} [erdrückten]{15}.",
  "MRK.3.10": "Denn{2} [er hatte]{3} viele{1} [geheilt]{3}, sodass{4} [alle, die]{10} [Plagen]{12} [hatten]{11}, [sich auf]{5} [ihn]{6} [stürzten]{5}, [um]{7} [ihn]{8} [zu berühren]{9}.",
  "MRK.3.11": "Und{1} [wenn]{6} [die unreinen Geister]{2-5} [ihn]{7} [sahen]{8}, [fielen sie]{9} [vor ihm]{10} [nieder]{9} und{11} [schrien]{12}: «Du{15} bist{16} [der Sohn]{17,18} [Gottes]{19,20}!» ~13(«sagend»; im Doppelpunkt aufgegangen) ~14(leitet die direkte Rede ein)",
@@ -212,7 +212,7 @@ GSW = {
  "MRK.3.5": "Und{1} [er hät]{2} [si]{3} [mit]{4} [Zorn]{5} [ringsum aagluegt]{2}, [truurig]{6} [über]{7} [d Verhärtig]{8,9} [vo irem]{12} [Härz]{10,11}, [und seit]{13} [zum Mänsch]{14,15}: «[Streck]{16} [d Hand]{17,18} [us]{16}!» Und{19} [er hät si usgstreckt]{20}, und{21} [sini]{25} [Hand]{23,24} [isch wider gsund worde]{22}.",
  "MRK.3.6": "Und{1} [d Pharisäer]{3,4} [sind usegange]{2} [und händ]{10} grad{5} [mit]{6} [de Herodianer]{7,8} [Root]{9} [ghalte]{10} [gäge]{11} [ihn]{12}, [wie]{13} [si]{15} [en]{14} [chönted umbringe]{15}.",
  "MRK.3.7": "Und{1} [de Jesus]{2,3} [hät sich]{8} [mit]{4} [sine]{7} [Jünger]{5,6} [an]{9} [See]{10,11} [zruggzoge]{8}, und{12} [e grossi]{13} [Schar]{14} [us]{15} Galiläa{16,17} [isch nachecho]{18}. Au{19} [us]{20} Judäa{21,22}",
- "MRK.3.8": "und{1} [us]{2} Jerusalem{3} und{4} [us]{5} Idumäa{6,7} und{8} [vo änet]{9} [em Jordan]{10,11} und{12} [us de Gäged um]{13} Tyrus{14} und{15} Sidon{16} [isch]{22} [e grossi]{18} [Schar]{17} [zu]{23} [ihm]{24} [choo]{22}, [wil si ghört händ]{19}, [was er alles]{20} [gmacht hät]{21}.",
+ "MRK.3.8": "und{1} [us]{2} Jerusalem{3} und{4} [us]{5} Idumäa{6,7} und{8} [vo änet]{9} [em Jordan]{10,11} und{12} [us de Gäged um]{13} Tyros{14} und{15} Sidon{16} [isch]{22} [e grossi]{18} [Schar]{17} [zu]{23} [ihm]{24} [choo]{22}, [wil si ghört händ]{19}, [was er alles]{20} [gmacht hät]{21}.",
  "MRK.3.9": "Und{1} [er hät]{2} [sine]{5} [Jünger]{3,4} [gseit]{2}, dass{6} [es Böötli]{7} [für ihn]{9} [parat sii söll]{8} [wäge]{10} [de Mängi]{11,12}, demit{13} [si]{15} [en]{16} nöd{14} [verdrucked]{15}.",
  "MRK.3.10": "Dänn{2} [er hät]{3} vil{1} [gheilt]{3}, so dass{4} [alli, wo]{10} [Plage]{12} [gha händ]{11}, [sich uf]{5} [en]{6} [gstürzt händ]{5}, [zum]{7} [en]{8} [aazrüere]{9}.",
  "MRK.3.11": "Und{1} [wänn]{6} [di unreine Geischter]{2-5} [en]{7} [gseh händ]{8}, [sind si]{9} [vor ihm]{10} [nidergfalle]{9} und{11} [händ gschroue]{12}: «Du{15} bisch{16} [de Sohn]{17,18} [vo Gott]{19,20}!» ~13(«sägend»; im Doppelpunkt ufgange) ~14(leitet di direkt Red ii)",
@@ -319,7 +319,7 @@ DEC_DE = [
 ]
 
 DEC_GSW = [
- ("MRK.1.1", "De Aafang", "literal", "Ἀρχὴ", None, ["De Begin", "De Ursprung"], "De Vers hät kei Verb. Me cha en als Überschrift vom ganze Buech läse oder als Iileitig zu [[MRK.1.2-MRK.1.8]]: Dänn isch s Uftrete vom Täufer de «Aafang» vom Evangelium."),
+ ("MRK.1.1", "De Aafang", "literal", "Ἀρχὴ", None, ["De Beginn", "De Ursprung"], "De Vers hät kei Verb. Me cha en als Überschrift vom ganze Buech läse oder als Iileitig zu [[MRK.1.2-MRK.1.8]]: Dänn isch s Uftrete vom Täufer de «Aafang» vom Evangelium."),
  ("MRK.1.1", "Evangelium", "traditional", "εὐαγγελίου", "vo de guete Nachricht", ["vo de Fröidebotschaft"], "εὐαγγέλιον isch di guet Nachricht; bim Markus no kei Buechgattig, sondern d Botschaft, wo verchündet wird (vgl. [[MRK.1.14-MRK.1.15]])."),
  ("MRK.1.1", "vo Jesus", "interpretive", "Ἰησοῦ", None, ["über de Jesus"], "Es cha d Nachricht über de Jesus gmeint sii oder d Nachricht, wo de Jesus sälber verchündet (vgl. [[MRK.1.14]]). «vo» laat beides offe."),
  ("MRK.1.1", "Christus", "traditional", "χριστοῦ", "vom Gsalbte", ["Messias"], "χριστός git s hebräisch Wort für «Gsalbte» (Messias) wider. Zur Läsart «Sohn vo Gott» lueg d Alternative."),
@@ -328,11 +328,11 @@ DEC_GSW = [
  ("MRK.1.3", "vom Herr", "literal", "κυρίου", None, ["vo JHWH"], "I [[ISA.40.3]] staat im hebräische Text de Gottesname, i de griechische Bible κύριος. De Markus bezieht de «Wäg vom Herr» uf de Jesus."),
  ("MRK.1.4", "Umkehr", "interpretive", "μετανοίας", "Umdänke", ["Buess"], "μετάνοια isch wörtlich es Umdänke; mitgmeint isch d Rückkehr zu Gott. «Buess» tönt nach Straf. Gliich i [[MRK.1.15]]."),
  ("MRK.1.8", "mit heilige Geischt", "literal", "ἐν πνεύματι ἁγίῳ", None, ["mit em Heilige Geischt"], "Ohni Artikel, im Gägesatz zu «mit Wasser». I [[MRK.3.29]] mit Artikel."),
- ("MRK.1.10", "ufriisse", "literal", "σχιζομένους", None, ["sich ufftue"], "σχίζω heisst spalte, verriisse; es gwaltsams Bild. S gliich Verb staat i [[MRK.15.38]] für de Vorhang im Tempel. Villicht Aaklang a [[ISA.64.1]]."),
+ ("MRK.1.10", "ufriisse", "literal", "σχιζομένους", None, ["sich uftue"], "σχίζω heisst spalte, verriisse; es gwaltsams Bild. S gliich Verb staat i [[MRK.15.38]] für de Vorhang im Tempel. Villicht Aaklang a [[ISA.64.1]]."),
  ("MRK.1.11", "a dir han ich Gfalle gfunde", "interpretive", "ἐν σοὶ εὐδόκησα", None, ["a dir han ich Fröid"], "D Stimm us em Himmel nimmt wahrschiinli [[PSA.2.7]] und [[ISA.42.1]] uf."),
  ("MRK.1.12", "tribt", "literal", "ἐκβάλλει", None, ["füert"], "S gliich Verb wie bim Dämone-Ustriibe ([[MRK.1.34]])."),
  ("MRK.1.14", "usgliferet worde isch", "literal", "παραδοθῆναι", None, ["verhaftet worde isch"], "παραδίδωμι («usliefere») bruucht de Markus au für de Jesus ([[MRK.3.19]], [[MRK.9.31]])."),
- ("MRK.1.15", "D Ziit isch erfüllt", "literal", "Πεπλήρωται ὁ καιρὸς", None, ["D Ziit isch choo"], "καιρός isch de bestimmt, entscheidend Zytpunkt; dä isch jetzt da."),
+ ("MRK.1.15", "D Ziit isch erfüllt", "literal", "Πεπλήρωται ὁ καιρὸς", None, ["D Ziit isch choo"], "καιρός isch de bestimmt, entscheidend Ziitpunkt; dä isch jetzt da."),
  ("MRK.1.15", "isch nöch choo", "literal", "ἤγγικεν", None, ["isch da"], "Öb s Riich scho aagfange hät oder grad bevorstaat, isch umstritte; «nöch choo» laat beides offe."),
  ("MRK.1.15", "s Riich", "traditional", "ἡ βασιλεία", "d Chönigsherrschaft", ["d Herrschaft"], "βασιλεία meint zersch d Herrschaft vo Gott als Gscheh, nöd es Gebiet. Gliich wie i [[MRK.3.24]] («Riich»)."),
  ("MRK.1.15", "Chehred um", "interpretive", "μετανοεῖτε", "Dänked um", ["Tüend Buess"], "Vgl. [[MRK.1.4]]."),
@@ -344,7 +344,7 @@ DEC_GSW = [
  ("MRK.1.40", "Ussätzige", "traditional", "λεπρὸς", None, ["Hautchranke"], "λέπρα sind verschideni Hautchranket, nöd nu di hütig Lepra; si händ nach [[LEV.13.45-LEV.13.46]] unrein gmacht und us de Gmeinschaft uusgschlosse."),
  ("MRK.1.41", "voll Zorn", "literal", "ὀργισθεὶς", "zornig worde", ["empört"], "De SBLGNT list ὀργισθείς, di andere erfasste Usgabe σπλαγχνισθείς («voll Erbarme», lueg d Alternative). Über was de Jesus zornig isch, seit de Text nöd. Vgl. [[MRK.3.5]] und [[MRK.1.43]]."),
  ("MRK.1.41", "aagrüert", "adapted", "ἥψατο", None, None, "S Objekt «en» isch ergänzt; αὐτοῦ ghört nach de MACULA-Analyse zu «Hand»."),
- ("MRK.1.43", "hert aagschnauzt", "interpretive", "ἐμβριμησάμενος", "aagschnaubt", ["sträng ermahnt"], "ἐμβριμάομαι isch heftigi Erregig, urspünglich s Schnaube."),
+ ("MRK.1.43", "hert aagschnauzt", "interpretive", "ἐμβριμησάμενος", "aagschnaubt", ["sträng ermahnt"], "ἐμβριμάομαι isch heftigi Erregig, ursprünglich s Schnaube."),
  ("MRK.1.45", "Dä", "interpretive", "ὁ", None, ["de Jesus"], "Meischt uf de Gheilt bezoge; es paar Usleger beziehnd s uf de Jesus."),
  ("MRK.2.4", "Matte", "interpretive", "κράβαττον", None, ["Bahre", "Liegi"], "κράβαττος isch di eifach Liegi vo arme Lüüt."),
  ("MRK.2.5", "Chind", "literal", "Τέκνον", None, ["min Sohn"], "Fründlichi Aared; über s Alter seit si nüüt."),
@@ -512,7 +512,7 @@ UNITS = [
  ("TU-MRK-003-001-006", "MRK.3.1-MRK.3.6", "narrative", "Die verdorrte Hand", None,
   "In der Synagoge fragt Jesus, ob man am Sabbat Leben retten oder töten dürfe. Zornig und betrübt über die Verhärtung der Herzen heilt er die Hand. Die Pharisäer beschliessen mit den Herodianern, ihn umzubringen."),
  ("TU-MRK-003-007-012", "MRK.3.7-MRK.3.12", "narrative", "Andrang am See", None,
-  "Menschen aus Galiläa, Judäa, Jerusalem, Idumäa, Transjordanien und der Gegend von Tyrus und Sidon kommen zu Jesus. Kranke drängen sich, ihn zu berühren; die unreinen Geister rufen ihn als Sohn Gottes aus, und er verbietet es ihnen."),
+  "Menschen aus Galiläa, Judäa, Jerusalem, Idumäa, Transjordanien und der Gegend von Tyros und Sidon kommen zu Jesus. Kranke drängen sich, ihn zu berühren; die unreinen Geister rufen ihn als Sohn Gottes aus, und er verbietet es ihnen."),
  ("TU-MRK-003-013-019", "MRK.3.13-MRK.3.19", "narrative", "Die Einsetzung der Zwölf", None,
   "Auf dem Berg ruft Jesus, die er will, und setzt zwölf ein: Sie sollen bei ihm sein, verkündigen und Dämonen austreiben. Die Liste nennt ihre Namen und Beinamen, zuletzt Judas Iskariot, der ihn auslieferte."),
 ]
@@ -534,7 +534,7 @@ UNITS_GSW = {
  "TU-MRK-002-023-028": ("Ähre am Sabbat", "D Jünger rupfed am Sabbat Ähre ab. De Jesus verwiist uf de David, wo d Schaubrot ggässe hät, und seit: De Sabbat isch für de Mänsch gschaffe worde, nöd de Mänsch für de Sabbat; de Mänschesohn isch au Herr über de Sabbat."),
  "TU-MRK-003-001-019": ("Heilig am Sabbat, Aadrang und di Zwölf", "De Jesus heilt am Sabbat e verdorreti Hand; drufabe beroted Pharisäer und Herodianer, wie si en chönted umbringe. E grossi Mängi us allne Gägede chunnt zu ihm. Uf em Bärg setzt er di Zwölf ii."),
  "TU-MRK-003-001-006": ("Di verdorret Hand", "I de Synagoge fröget de Jesus, öb me am Sabbat Läbe rette oder töte törf. Zornig und truurig über di verhärtete Härz heilt er d Hand. D Pharisäer beschliessed mit de Herodianer, en umzbringe."),
- "TU-MRK-003-007-012": ("Aadrang am See", "Lüüt us Galiläa, Judäa, Jerusalem, Idumäa, vo änet em Jordan und us de Gäged vo Tyrus und Sidon chömed zum Jesus. Chranki drängled sich, zum en aazrüere; di unreine Geischter rüefed en als Sohn vo Gott us, und er verbüütet ene das."),
+ "TU-MRK-003-007-012": ("Aadrang am See", "Lüüt us Galiläa, Judäa, Jerusalem, Idumäa, vo änet em Jordan und us de Gäged vo Tyros und Sidon chömed zum Jesus. Chranki drängled sich, zum en aazrüere; di unreine Geischter rüefed en als Sohn vo Gott us, und er verbüütet ene das."),
  "TU-MRK-003-013-019": ("D Iisetzig vo de Zwölf", "Uf em Bärg rüeft de Jesus die, wo-n-er wott, und setzt zwölf ii: Si söled bi ihm sii, verchünde und Dämone ustriibe. D Liischte nännt iri Näme und Bii-Näme, zletscht de Judas Iskariot, wo-n-en usgliferet hät."),
 }
 

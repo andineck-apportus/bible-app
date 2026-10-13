@@ -92,7 +92,7 @@ GSW = {
  "JON.1.4": "Aber{1} [JHWH]{2} [hät]{3} [en grosse]{5} [Wind]{4} [uf]{6} [s]{7} [Meer]{8} [gschleuderet]{3}, und{9} [es hät]{10} [en grosse]{12} [Sturm]{11} [uf em]{13} [Meer]{14} [ggää]{10}, und{15} [s]{16} [Schiff]{17} [isch nooch draa gsii]{18}, [z]{19} [verbräche]{20}.",
  "JON.1.5": "Da{1} [händ sich]{2} [d]{3} [Seelüüt]{4} [gfürchtet]{2}, und{5} [jede]{7} [hät]{6} [zu]{8} [sim]{10} [Gott]{9} [gschroue]{6}, und{11} [si händ]{12} [d]{14} [Ladig]{15}, [wo]{16} [im]{17} [Schiff]{18} gsii isch, [is]{19,20} [Meer]{21} [grüert]{12}, [zum]{22} es [für sich]{24,25,26} [liechter z mache]{23}. [De Jona]{28} aber{27} [isch]{29} [is]{30} [Innerscht]{31} [vom]{32} [Schiff]{33} [abegstige]{29} und{34} [hät sich higleit]{35} und{36} [isch tüüf iigschlaafe]{37}. ~13(" + OBJ_G + ")",
  "JON.1.6": "Da{1} [isch]{2} [de Kapitään]{5,6,7} [zu]{3} [im]{4} [häre cho]{2} und{8} [hät]{9} [zu]{10} [im]{11} [gseit]{9}: «[Was]{12} [isch mit]{13} [dir]{14}, [dass d schlaafsch]{15}? [Stand uf]{16}, [rüef]{17} [zu]{18} [dim]{20} [Gott]{19}! [Vilicht]{21} [dänkt]{22} [de]{23} [Gott]{24} [a]{22} [öis]{25,26}, und{27} [mir gönd]{29} [nöd]{28} [zgrund]{29}.»",
- "JON.1.7": "Und{1} [si händ]{2}, [eine]{3} [zum]{4} [andere]{5,6}, [gseit]{2}: «[Chömed]{7}, und{8} [mir wänd]{9} [Lös]{10} [werfe]{9}, [demit]{11} [mir erfaared]{12}, [wäge wäm]{13-16} [das]{17,19,20} [Unheil]{18} [über öis]{21,22} cho isch!» Und{23} [si händ]{24} [Lös]{25} [gworfe]{24}, und{26} [s]{28} [Los]{29} [isch]{27} [uf]{30} [de Jona]{31} [gfalle]{27}.",
+ "JON.1.7": "Und{1} [si händ]{2}, [eine]{3} [zum]{4} [andere]{5,6}, [gseit]{2}: «[Chömed]{7}, und{8} [mir wänd]{9} [Lös]{10} [wärfe]{9}, [demit]{11} [mir erfaared]{12}, [wäge wäm]{13-16} [das]{17,19,20} [Unheil]{18} [über öis]{21,22} cho isch!» Und{23} [si händ]{24} [Lös]{25} [gworfe]{24}, und{26} [s]{28} [Los]{29} [isch]{27} [uf]{30} [de Jona]{31} [gfalle]{27}.",
  "JON.1.8": "Da{1} [händ si]{2} [zu]{3} [im]{4} [gseit]{2}: «[Säg]{5,6} [öis]{8,9} [doch]{7}, [wäge wäm]{10-13} [das]{14,16,17} [Unheil]{15} [über öis]{18,19} cho isch! [Was]{20} isch [dis]{22} [Gwärb]{21}, und{23} [vo wo]{24,25} [chunnsch]{26}? [Was]{27} isch [dis]{29} [Land]{28}, und{30} [us wellem]{31,32,33} [Volk]{34} [bisch du]{35}?»",
  "JON.1.9": "Und{1} [er hät]{2} [zu]{3} [ine]{4} [gseit]{2}: «[En Hebräer]{5} [bin ich]{6}, und{7} [JHWH]{9}, [de Gott]{10} [vom]{11} [Himmel]{12}, [wo]{13} [s]{16} [Meer]{17} und{18} [s]{20} [troche Land]{21} [gmacht hät]{14}, [fürcht]{23} [ich]{22}.» ~8(" + OBJ_G + ") ~15(" + OBJ_G + ") ~19(" + OBJ_G + ")",
  "JON.1.10": "Da{1} [händ sich]{2} [d]{3} [Mane]{4} [mit ere grosse]{6} [Furcht]{5} [gfürchtet]{2} und{7} [händ]{8} [zu]{9} [im]{10} [gseit]{8}: «[Was]{11} [häsch du]{13} [da]{12} [gmacht]{13}!» [Dänn]{14} [d]{16} [Mane]{17} [händ gwüsst]{15}, [dass]{18} [er]{23} [vor em Aagsicht]{19,20,21} [vo JHWH]{22} [am Flüchte gsii isch]{24}; [dänn]{25} [er hät]{26} s [ine]{27,28} [verzellt]{26}.",
@@ -127,7 +127,7 @@ GSW = {
  "JON.3.10": "Und{1} [Gott]{3,4} [hät]{2} [ires]{7} [Tue]{6} [gsee]{2}, [dass]{8} [si umgcheert sind]{9} [vo]{10} [irem]{12} [böse]{13,14} [Wäg]{11}. Da{15} [hät s]{16} [Gott]{17,18} [greut]{16} [wäge em]{19,20} [Unheil]{21}, [wo]{22} [er aagchündt hät]{23}, [ine]{26,27} [aaztue]{24,25}, und{28} [er hät s]{30} [nöd]{29} [gmacht]{30}. ~5(" + OBJ_G + ")",
  # ------------------------------------------------------------ Kapitel 4
  "JON.4.1": "Das aber{1} [isch]{2} [em Jona]{3,4} [bös]{2} [vorcho]{2}, [en grosse]{6} [Ärger]{5}, und{7} [er isch toub worde]{8-10:idiom}.",
- "JON.4.2": "Und{1} [er hät]{2} [zu]{3} [JHWH]{4} [bättet]{2} und{5} [gseit]{6}: «[Ach]{7}, [JHWH]{8}, isch [das]{11} [nöd]{10} [mis]{13} [Wort]{12} gsii, [solang]{14} [ich]{16} [i]{17} [mim]{19} [Land]{18} [gsii bin]{15}? [Drum]{20,21} [bin ich]{22} [zerscht]{22} [uf]{26} [Tarschisch]{25} [gflüchtet]{23,24}; [dänn]{27} [ich han gwüsst]{28}, [dass]{29} [du]{30} [en gnädige]{32} und{33} [barmhärzige]{34} [Gott]{31} bisch, [langsam]{35} [zum Zorn]{36} und{37} [riich]{38} [a Tröii]{39}, und{40} [dich]{41} [s]{42,43} [Unheil]{44} [reut]{41}. ~9(" + Q_G + ")",
+ "JON.4.2": "Und{1} [er hät]{2} [zu]{3} [JHWH]{4} [bättet]{2} und{5} [gseit]{6}: «[Ach]{7}, [JHWH]{8}, isch [das]{11} [nöd]{10} [mis]{13} [Wort]{12} gsii, [solang]{14} [ich]{16} [i]{17} [mim]{19} [Land]{18} [gsii bin]{15}? [Drum]{20,21} [bin ich]{22} [zersch]{22} [uf]{26} [Tarschisch]{25} [gflüchtet]{23,24}; [dänn]{27} [ich han gwüsst]{28}, [dass]{29} [du]{30} [en gnädige]{32} und{33} [barmhärzige]{34} [Gott]{31} bisch, [langsam]{35} [zum Zorn]{36} und{37} [riich]{38} [a Tröii]{39}, und{40} [dich]{41} [s]{42,43} [Unheil]{44} [reut]{41}. ~9(" + Q_G + ")",
  "JON.4.3": "[Und jetzt]{1,2}, [JHWH]{3}, [nimm]{4} [doch]{5} [mis]{8} [Läbe]{7} [vo]{9} [mir]{10}; [dänn]{11} [besser]{12} isch [min]{14} [Tod]{13} [als]{15} [mis]{17} [Läbe]{16}.» ~6(" + OBJ_G + ")",
  "JON.4.4": "Und{1} [JHWH]{3} [hät gseit]{2}: «[Isch es rächt]{4,5}, dass [du]{7,8} [toub bisch]{6}?»",
  "JON.4.5": "Und{1} [de Jona]{3} [isch]{2} [us]{4} [de]{5} [Stadt]{6} [use gange]{2} und{7} [hät sich]{8} [östlich]{9,10} [vo de Stadt]{11,12} [anegsetzt]{8}. Und{13} [er hät]{14} [sich]{15,16} [dört]{17} [e Hütte]{18} [gmacht]{14}, und{19} [isch]{20} [drunder]{21,22} [im]{23} [Schatte]{24} [gsässe]{20}, [bis]{25,26} [er gseet]{27}, [was]{28} [i]{30} [de Stadt]{31} [passiert]{29}.",
@@ -174,7 +174,7 @@ DEC_DE = [
  ("JON.1.1", "JHWHs", "interpretive", "יְהוָה", None, ["des HERRN", "des Ewigen", "Jahwes"], JHWH_DE),
  ("JON.1.2", "grossen", "literal", "הָעִיר הַגְּדוֹלָה", None, None,
   "«Die grosse Stadt» ist eine Leitformel des Buches ([[JON.1.2]], [[JON.3.2]], [[JON.3.3]], [[JON.4.11]]). Das Wort גָּדוֹל «gross» steht in "
-  "Jona 14-mal (nach den Lemmata von MACULA): Stadt, Wind, Sturm, Furcht, Fisch, die Grossen Ninives, Missfallen, Freude. Darum steht im "
+  "Jona 14-mal (nach den Lemmata von MACULA): Stadt, Wind, Sturm, Furcht, Fisch, «vom Grössten bis zum Kleinsten», die Grossen Ninives, Missfallen, Freude. Darum steht im "
   "Deutschen möglichst immer «gross»."),
  ("JON.1.2", "Bosheit", "interpretive", "רָעָתָם", "ihr Böses", ["ihre Schlechtigkeit"], RAA_DE),
  ("JON.1.2", "gegen", "literal", "עָלֶיהָ", None, ["über sie"],
@@ -350,8 +350,8 @@ DEC_DE = [
   "«Gott» und «der Gott»; ob der Wechsel eine Bedeutung trägt, wird verschieden beurteilt."),
  ("JON.4.6", "einen Rizinus", "interpretive", "קִיקָיוֹן", None, ["einen Kürbis", "einen Flaschenkürbis", "einen Efeu", "einen Wunderbaum"],
   "Die Pflanze ist nicht sicher bestimmbar; das Wort kommt nur in Jona 4 vor (fünfmal nach MACULA). Oft wird an den schnell wachsenden "
-  "Rizinus (Wunderbaum) gedacht. Die Septuaginta sagt «Kürbis», Hieronymus übersetzte in der Vulgata «Efeu», was zu einem bekannten Streit "
-  "mit Augustinus führte (nach allgemeinem Wissen, nicht an Daten geprüft). Für die Aussage ist der Name der Pflanze nebensächlich."),
+  "Rizinus (Wunderbaum) gedacht. Die Septuaginta sagt «Kürbis», Hieronymus übersetzte in der Vulgata «Efeu»; Augustinus schrieb ihm deswegen "
+  "(Brief 71), weil die neue Wiedergabe in einer Gemeinde Unruhe ausgelöst hatte. Für die Aussage ist der Name der Pflanze nebensächlich."),
  ("JON.4.6", "Unmut", "interpretive", "מֵרָעָתוֹ", "seinem Bösen", ["seinem Unglück", "seinem Elend"],
   "Wieder das Leitwort רָעָה ([[JON.1.2]]); gemeint ist wohl Jonas Missmut ([[JON.4.1]]), vielleicht auch das Leiden unter der Hitze."),
  ("JON.4.6", "zu retten", "literal", "לְהַצִּיל", None, ["zu befreien"], "הִצִּיל ist ein gewöhnliches Wort für Rettung."),
@@ -388,7 +388,7 @@ DEC_GSW = [
  ("JON.1.1", "vo JHWH", "interpretive", "יְהוָה", None, ["vom HERR", "vom Ewige", "vo Jahwe"], JHWH_GSW),
  ("JON.1.2", "gross", "literal", "הָעִיר הַגְּדוֹלָה", None, None,
   "«Di gross Stadt» isch e Leitformle vom Buech ([[JON.1.2]], [[JON.3.2]], [[JON.3.3]], [[JON.4.11]]). S Wort גָּדוֹל «gross» staat im Jona "
-  "14-mal (nach de Lemmata vo MACULA): Stadt, Wind, Sturm, Furcht, Fisch, di Grosse vo Ninive, Ärger, Fröid."),
+  "14-mal (nach de Lemmata vo MACULA): Stadt, Wind, Sturm, Furcht, Fisch, «vom Gröschte bis zum Chliinschte», di Grosse vo Ninive, Ärger, Fröid."),
  ("JON.1.2", "Bosheit", "interpretive", "רָעָתָם", "ires Böse", ["iri Schlächtigkeit"], RAA_GSW),
  ("JON.1.2", "gäge", "literal", "עָלֶיהָ", None, ["über si"],
   "קָרָא עַל «usrüefe gäge». I [[JON.3.2]] staat dergäge קְרָא אֵלֶיהָ «rüef ire zue»; öb de Wächsel öppis bedüütet, isch umstritte."),
@@ -499,7 +499,7 @@ DEC_GSW = [
   "Es paar halted 4,5 für e Ruggbländ (de Jona wär scho während de vierzg Täg usegange); anderi läsed s der Reie nach."),
  ("JON.4.6", "en Rizinus", "interpretive", "קִיקָיוֹן", None, ["en Chürbis", "en Efeu", "en Wunderbaum"],
   "D Pflanze cha me nöd sicher bestimme; s Wort chunnt nu i Jona 4 vor (füüfmal nach MACULA). D Septuaginta seit «Chürbis», de Hieronymus "
-  "hät i de Vulgata «Efeu» übersetzt, was zu me bekannte Striit mit em Augustinus gfüert hät (allgemeis Wüsse, nöd a Date prüeft)."),
+  "hät i de Vulgata «Efeu» übersetzt; de Augustinus hät im deswäge gschribe (Brief 71), wil di nöi Widergaab i ere Gmeind Unrue usglöst hät."),
  ("JON.4.6", "Unmuet", "interpretive", "מֵרָעָתוֹ", "sim Böse", ["sim Unglück"],
   "Wider s Leitwort רָעָה ([[JON.1.2]]); gmeint isch wohl de Ärger vom Jona ([[JON.4.1]]), vilicht au d Hitz."),
  ("JON.4.8", "heisse", "interpretive", "חֲרִישִׁית", None, ["schwüele"], "S Wort isch suscht nöd belegt; d Bedüütig «heiss, sängig» isch erschlosse."),

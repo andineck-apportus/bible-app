@@ -169,7 +169,8 @@ def project(section_ids=None):
                 full = "".join(p["text"] for p in parts)
                 words.append({"id": t["id"], "ref": t["reference"], "n": t["position"], "text": t["text"], "word": t["word"],
                               "lang": "he", "word_no": t["word_no"], "wfull": full, "wtr": hebrew_translit.translit(full),
-                              "mac": {dst: a[src] for src, dst in HEB_KEEP.items() if a.get(src)}, "freq": counts.get(a.get("lemma"), 0)})
+                              "mac": {dst: a[src] for src, dst in HEB_KEEP.items() if a.get(src)}, "freq": counts.get(a.get("lemma"), 0),
+                              "_strong": a.get("strongnumberx"), "_sref": t.get("source_reference")})
             continue
         toks = json.loads((D / f"tokens/SBLGNT-{b}-{c:03d}.json").read_text(encoding="utf-8"))["tokens"]
         mac = json.loads((D / f"annotations/MACULA-SBLGNT-{b}-{c:03d}.json").read_text(encoding="utf-8"))["entries"]
@@ -182,11 +183,12 @@ def project(section_ids=None):
                 continue
             a = mac.get(t["id"], {})
             wd = {"id": t["id"], "ref": t["reference"], "n": t["position"], "text": t["text"], "word": t["word"],
-                  "mac": {k: a[k] for k in KEEP if k in a}, "freq": counts.get(a.get("lemma"), 0)}
+                  "mac": {k: a[k] for k in KEEP if k in a}, "freq": counts.get(a.get("lemma"), 0), "_strong": a.get("strong")}
             if t["id"] in mg:
                 m = mg[t["id"]]
                 wd["mgnt"] = {"lemma": m["lemma"], "pos": m["pos"], "parsing": m["parsing"]}
             words.append(wd)
+    lexicon, ketiv, ketiv_only, ed_extra = _enrich_words(words, in_scope)
     for al in _all("alignments").values():
         if al.get("coverage") != "complete" or al.get("status") == "deprecated":
             continue
@@ -263,4 +265,190 @@ def project(section_ids=None):
                       for v in sorted(qs.values(), key=lambda r: r["id"]) if v.get("subject") in subjects],
         "method": {"name": method["name_de"], "question": method["question_de"], "limits": method["assumptions_and_limits_de"]},
         "editions": editions,
+        # Wörterbuch-Einträge (Schlüssel aus words[].lx), Ketiv/Qere (words[].kq), Ausgaben je Wort (words[].ed) und
+        # Wörter anderer Ausgaben bzw. Ketiv ohne Qere je Vers
+        "lexicon": lexicon, "ketiv": ketiv, "ketiv_only": ketiv_only, "ed_extra": ed_extra,
     }
+
+
+def _norm(s):
+    import unicodedata
+    return unicodedata.normalize("NFC", s or "")
+
+
+def _load_lexica():
+    """Wörterbücher aus data/lexica: UBS (nach Lemma und Strong-Nummer) und STEPBible TBESG/TBESH (nach dStrong)."""
+    out = {}
+    for p in sorted((D / "lexica").glob("LEX-*.json")):
+        r = json.loads(p.read_text(encoding="utf-8"))
+        lang = "grc" if r["language"] == "grc" else "heb"
+        kind = "ubs" if r["id"].startswith("LEX-UBS-") else "step"
+        x = out.setdefault((kind, lang), {"entries": r["entries"], "by_lemma": {}, "by_strong": {}, "by_estrong": {}})
+        for k, e in r["entries"].items():
+            if kind == "ubs":
+                x["by_lemma"].setdefault(_norm(e["lemma"]), k)
+                for s in e.get("strong", []):
+                    x["by_strong"].setdefault(s, []).append(k)
+                    base = s.rstrip("abcdefghijklmnopqrstuvwxyz")
+                    if base != s:
+                        x["by_strong"].setdefault(base, []).append(k)
+            else:
+                x["by_estrong"].setdefault(e["estrong"].lower(), []).append(k)
+    return out
+
+
+def _enrich_words(words, in_scope):
+    """Ergänzt die Wörter um Wörterbuch-Schlüssel (lx), Ausgabenbefund (ed, TAGNT) und Ketiv (kq, TAHOT).
+    Nur Zuordnung vorhandener Daten; keine eigene Bewertung."""
+    import re
+    lex = _load_lexica()
+    tal = {}
+    for p in sorted((D / "tagged-alignments").glob("TALIGN-*.json")):
+        r = json.loads(p.read_text(encoding="utf-8"))
+        tal[(r["kind"], r["book"])] = r
+    lexicon, ketiv, ketiv_only, ed_extra = {}, {}, {}, {}
+    main8 = None
+
+    def ubs_key(lang, lemma, strong_keys):
+        x = lex.get(("ubs", lang))
+        if not x:
+            return None
+        cands = list(dict.fromkeys(k for s in strong_keys for k in x["by_strong"].get(s, [])))
+        by_l = x["by_lemma"].get(_norm(lemma))
+        if lang == "heb":
+            cands = [k for k in cands + ([by_l] if by_l else []) if _cons(x["entries"][k]["lemma"]) == _cons(lemma)]
+            return cands[0] if cands else None
+        if lang == "grc" and by_l:
+            return by_l
+        if by_l and by_l in cands:
+            return by_l
+        if cands:
+            return cands[0] if len(set(cands)) == 1 else (by_l if by_l in cands else cands[0])
+        return by_l
+
+    def step_key(lang, estrong, dstrong, lemma=None):
+        """Kandidaten: dStrong aus TAGNT/TAHOT, dann alle Zeilen der erweiterten Strong-Nummer (auch a/b/…);
+        beim Hebräischen gilt nur ein Eintrag mit denselben Konsonanten wie das MACULA-Lemma."""
+        x = lex.get(("step", lang))
+        if not x:
+            return None
+        cands = [dstrong] if dstrong and dstrong in x["entries"] else []
+        e = (estrong or "").lower()
+        rows = x["by_estrong"].get(e, []) or [k for es, ks in x["by_estrong"].items() if e and re.sub(r"[a-z]$", "", es) == e for k in ks]
+        cands += [k for k in rows if not x["entries"][k].get("relation")] + [k for k in rows if x["entries"][k].get("relation")]
+        if lang == "heb":
+            cands = [k for k in cands if _cons(x["entries"][k].get("lemma")) == _cons(lemma)]
+        return cands[0] if cands else None
+
+    def put(key, lang, kind):
+        if key is None:
+            return None
+        # kurze, eindeutige Schlüssel für die Pakete (UBS-IDs sind nur je Wörterbuch eindeutig: Sprache im Schlüssel)
+        k = ("U" + lang[0] + key.rstrip("0") if kind == "ubs" else "T" + key)
+        if k not in lexicon:
+            e = lex[(kind, lang)]["entries"][key]
+            if kind == "ubs":
+                lexicon[k] = {"src": f"ubs-{lang}", "l": e["lemma"], "p": ", ".join(e.get("pos", [])),
+                              "s": [{"d": s.get("definition", ""), "g": s.get("glosses", []),
+                                     "f": " › ".join(x for x in (s.get("domains", [""])[:1] + s.get("subdomains", [])[:1]) if x),
+                                     **({"ai": True} if s.get("ai_generated") else {})} for s in e["senses"]]}
+            else:
+                lexicon[k] = {"src": f"step-{lang}", "l": e.get("lemma", ""), "tr": e.get("translit", ""), "g": e.get("gloss", "")}
+        return k
+
+    for w in words:
+        b = w["ref"].split(".")[0]
+        m = w.get("mac", {})
+        if w.get("lang") == "he":
+            a = tal.get(("ketiv_qere", b), {})
+            sx = re.match(r"^(\d+)([a-z]?)$", w.pop("_strong", None) or "")
+            est = "H%04d%s" % (int(sx[1]), sx[2]) if sx else None
+            ds = a.get("dstrong", {}).get(w["id"])
+            keys = [k for k in (est, "H%04d" % int(sx[1]) if sx else None, re.sub(r"[A-Z]$", "", ds or "") or None) if k]
+            u = ubs_key("heb", m.get("lemma"), keys)
+            t = step_key("heb", "H%04d" % int(sx[1]) if sx else None, ds, m.get("lemma"))
+            # Schutz: Strong-Nummern von MACULA (z. B. für Vorsilben und Endungen), UBS und STEPBible decken sich nicht
+            # immer; ein Eintrag gilt nur, wenn seine Grundform dieselben Konsonanten hat wie das MACULA-Lemma (in
+            # ubs_key/step_key geprüft).
+
+            lx = {}
+            uk, tk = put(u, "heb", "ubs"), put(t, "heb", "step")
+            if uk:
+                lx["u"] = uk
+                senses = lex[("ubs", "heb")]["entries"][u]["senses"]
+                ref = w.get("_sref") or w["ref"]
+                here = [i for i, s in enumerate(senses) if ref in s.get("occurrences", [])]
+                if here and len(senses) > 1:
+                    lx["h"] = here
+            if tk:
+                lx["t"] = tk
+            if lx:
+                w["lx"] = lx
+            for key, e in a.get("entries", {}).items():
+                if w["id"] in e.get("tokens", []):
+                    w["kq"] = key
+                    ketiv.setdefault(key, {"type": e["type"], "ketiv": e["ketiv"].get("text", ""),
+                                           "ketiv_tr": e["ketiv"].get("translit", ""), "gloss": e["ketiv"].get("gloss_en", ""),
+                                           "qere": e["qere"], "src": e["src"], "words": e["qere"].count("/ /") + 1})
+            w.pop("_sref", None)
+            continue
+        a = tal.get(("edition_presence", b), {})
+        main8 = main8 or a.get("main_editions")
+        e = a.get("entries", {}).get(w["id"], {})
+        strong = [p for p in (w.pop("_strong", None) or "").split("+") if p.isdigit()]
+        est = "G%04d" % int(strong[0]) if strong else None
+        u = ubs_key("grc", m.get("lemma"), ["G%04d" % int(p) for p in strong])
+        t = step_key("grc", est, e.get("dstrong"))
+        lx = {}
+        uk, tk = put(u, "grc", "ubs"), put(t, "grc", "step")
+        if uk:
+            lx["u"] = uk
+            senses = lex[("ubs", "grc")]["entries"][u]["senses"]
+            here = [i for i, s in enumerate(senses) if w["ref"] in s.get("occurrences", [])]
+            if here and len(senses) > 1:
+                lx["h"] = here
+        if tk:
+            lx["t"] = tk
+        if lx:
+            w["lx"] = lx
+        if a and w["id"] in a.get("unmatched", {}).get("tokens", []):
+            w["ed"] = {"unmatched": True}
+        elif e.get("editions") is not None:
+            eds = e["editions"]
+            if not set(a["main_editions"]) <= set(eds) or e.get("alt") or e.get("moved"):
+                w["ed"] = {k: v for k, v in (("type", e.get("type")), ("eds", eds), ("moved", e.get("moved")),
+                                             ("alt", [{"grc": x["grc"], "eds": x["editions"]} for x in e.get("alt", [])]),
+                                             ("sbl_not_listed", e.get("sbl_not_listed")), ("via_variant", e.get("via_variant")))
+                           if v}
+    for (kind, b), a in tal.items():
+        if kind == "edition_presence":
+            for x in a.get("extra_words", []):
+                if in_scope(x["ref"]):
+                    lst = ed_extra.setdefault(x["ref"], [])
+                    # aufeinanderfolgende Wörter mit gleicher Ausgabenliste zu einer Wendung zusammenfassen
+                    if lst and lst[-1]["after"] == x["after"] and lst[-1]["eds"] == x["editions"] and lst[-1]["last"] == _prev_src(x["src"]):
+                        lst[-1]["grc"] += " " + x["grc"]
+                        lst[-1]["last"] = x["src"]
+                    else:
+                        lst.append({"after": x["after"], "grc": x["grc"], "eds": x["editions"], "type": x["type"], "last": x["src"]})
+        else:
+            for x in a.get("ketiv_without_qere", []):
+                if in_scope(x["ref"]):
+                    ketiv_only.setdefault(x["ref"], []).append({"after": x["after"], "ketiv": x["ketiv"].get("text", ""),
+                                                                "ketiv_tr": x["ketiv"].get("translit", ""),
+                                                                "gloss": x["ketiv"].get("gloss_en", ""), "src": x["src"]})
+    for lst in ed_extra.values():
+        for x in lst:
+            x.pop("last", None)
+    return lexicon, ketiv, ketiv_only, ed_extra
+
+
+def _cons(s):
+    return "".join(ch for ch in (s or "") if "\u05d0" <= ch <= "\u05ea")
+
+
+def _prev_src(src):
+    """«Mrk.1.1#07» -> «Mrk.1.1#06» (vorangehendes TAGNT-Wort im selben Vers)."""
+    head, _, n = src.rpartition("#")
+    return f"{head}#{int(n) - 1:02d}" if n.isdigit() else None
+
