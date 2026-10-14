@@ -2,6 +2,13 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.44 — 2026-10-14 — Johannesevangelium aus dem Urtext
+
+- **Import Johannes:** SBLGNT mit MACULA-Annotation (15 625 Wörter; Schreibvarianten wie Μωσῆς/Μωϋσῆς im Importer ausdrücklich gelistet, ᾿ als Elisionszeichen), SBLGNT-Apparat (770 von 773 Einträgen zugeordnet), Bewertung «Übereinstimmung der Editionen», CNTR-Transkriptionen von 30 Handschriften und 5 Ausgaben, neu u. a. 𝔓66, 𝔓52, 𝔓90, 𝔓5, 𝔓6, 𝔓22, 𝔓28, 𝔓39, 𝔓95, 𝔓106–𝔓109, 𝔓119–𝔓122, 𝔓134, 029, 0162, 0258, 0323 (Metadaten nach gängiger Einordnung, nicht eigens geprüft); maschinelle Kollation aller 21 Kapitel; STEPBible TAGNT (Ausgaben je Wort); Luther 1912 und Elberfelder 1905 zum Vergleich.
+- **Übersetzung** Hochdeutsch und Züridüütsch mit vollständiger Wortzuordnung für alle 879 Verse (5,4 ohne SBLGNT-Text, Wortlaut als Lesart bei 5,3), Entscheidungen mit einheitlichen Grundentscheiden (λόγος, ἐγώ εἰμι, δόξα, σημεῖον, μένω, «die Juden» als gekennzeichnete Deutungsentscheidung, παράκλητος, ἀγαπάω/φιλέω), Lesarten-Alternativen. 7,53–8,11 (Ehebrecherin) in ⟦ ⟧ übersetzt; die Einordnung als spätere Einfügung steht als verbreitetes Urteil mit dem Handschriftenbefund der erfassten Transkriptionen.
+- **Studieninhalte** Kapitel 1–21: Befunde, Deutungen mit Gegenargumenten, Grundsätze, Anwendungen, Fragen, Beziehungen (auch zu Markus 14–16), Hintergrund zu Abschnitten, Kapitelzusammenfassungen, drei Studien; Kontext CTX-JHN-READERS-0095. Buchzusammenfassung neu gegen den Text gefasst.
+- KI-Entwurf mit getrennter KI-Gegenlesung (Übersetzung Vers für Vers, Handschriftenangaben und Zählungen per Skript); keine fachliche oder muttersprachliche Prüfung. Ausserbiblische Quellen- und Literaturangaben der Studien sind nicht nachgeschlagen und als offene Prüfpunkte in STUDY-JHN-0001…0003 vermerkt.
+
 ## v0.43 — 2026-10-14 — Menü ohne «Zur ganzen Bibel»
 
 - Menüeintrag «Zur ganzen Bibel» entfernt; dasselbe leistet ein Tippen auf das Logo oben links.

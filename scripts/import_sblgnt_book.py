@@ -73,7 +73,12 @@ def bare(w):
 
 def comparable(w):
     """Vergleichsform: MACULA führt das Elisionszeichen nicht im Wort, sondern in «after»."""
-    return bare(w).replace("ʼ", "").replace("’", "")
+    return bare(w).replace("ʼ", "").replace("’", "").replace("᾿", "")
+
+
+# Bekannte Schreibvarianten desselben Wortes (SBLGNT, MACULA): werden wie Akzentabweichungen protokolliert, der
+# SBLGNT-Wortlaut bleibt massgeblich. Nur ausdrücklich gelistete Paare, sonst Abbruch.
+ORTHOGRAPHIC = {("Μωσῆς", "Μωϋσῆς")}
 
 
 def strip_accents(w):
@@ -126,7 +131,7 @@ for (ch, v) in sorted(verses):
             continue
         a, b = comparable(w), comparable(r[col["text"]])
         if a != b:
-            if strip_accents(a).casefold() == strip_accents(b).casefold():  # Akzent- oder Gross/Klein-Abweichung
+            if strip_accents(a).casefold() == strip_accents(b).casefold() or (a, b) in ORTHOGRAPHIC:  # Akzent, Gross/Klein, Schreibvariante
                 accent_diffs.append({"token": tid, "sblgnt": bare(w), "macula": r[col["text"]]})
             else:
                 problems.append(f"{tid}: SBLGNT {w!r} ≠ MACULA {r[col['text']]!r}")
