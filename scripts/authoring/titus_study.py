@@ -215,7 +215,7 @@ BACKGROUND = [
 
 SUMMARIES = [
  ("SUM-CH-TIT-001", "Paulus beauftragt Titus, auf Kreta Älteste einzusetzen, die glaubwürdig leben und an der gesunden Lehre festhalten, und Lehrer zurechtzuweisen, die aus Gewinnsucht Familien verwirren.",
-  "De Paulus git em Titus de Uftrag, uf Kreta Ältischti iizsetze, wo glaubwürdig läbed und a de gsunde Lehr fescht haltet, und Lehrer zrächtzwiise, wo us Gwünnsucht Familie durenand bringed."),
+  "De Paulus git em Titus de Uftrag, uf Kreta Ältischti iizsetze, wo glaubwürdig läbed und a de gsunde Lehr feschthalted, und Lehrer zrächtzwiise, wo us Gwünnsucht Familie durenand bringed."),
  ("SUM-CH-TIT-002", "Was der gesunden Lehre entspricht, zeigt sich im Alltag von Alten und Jungen, Frauen, Männern und Sklaven. Grund dafür ist die erschienene Gnade Gottes, die zu einem besonnenen Leben erzieht.",
   "Was de gsunde Lehr entspricht, zeigt sich im Alltag vo Alte und Junge, Fraue, Mane und Sklave. De Grund defür isch d Gnad vo Gott, wo erschine isch und zu me bsunnene Läbe erziet."),
  ("SUM-CH-TIT-003", "Die Gemeinde soll allen Menschen freundlich begegnen, weil Gott sie nicht wegen ihrer Werke, sondern aus Erbarmen gerettet hat. Unnütze Streitfragen soll Titus meiden. Reisepläne und Grüsse schliessen den Brief.",

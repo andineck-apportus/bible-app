@@ -2,6 +2,12 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.52 — 2026-10-14 — Sprachprüfung aller Übersetzungen und Zusammenfassungen
+
+- **Neue Regel** (AGENTS.md): Nach der inhaltlichen Prüfung folgt bei jeder Arbeit eine sprachliche Prüfung in allen Sprachen und Übersetzungsschichten; Bibeltext nur so weit geglättet, wie Treue zum Urtext, Zeitform, Satzart und Wortzuordnung erhalten bleiben. Autorenwerkzeuge übernehmen Datum und Grund einer Überarbeitung aus `BIBLE_REVISION_DATE`/`BIBLE_REVISION_REASON`.
+- **Erster Durchgang** (KI, getrennt nach Büchern) über Bibeltext, Titel und Zusammenfassungen aller Zoomstufen in Hochdeutsch und Züridüütsch: Johannes, Markus, Rut, Obadja, Jona, Philipper, Titus, 1–3 Johannes, Vaterunser sowie Bibel, Testamente, Buchgruppen und alle Buchzusammenfassungen. Korrigiert u. a. altertümliche Wendungen («heisst ihn … tun», «allezeit»), Nominal- und Partizipialstil, Wortstellung, Kongruenz, Fälle, Zeichensetzung, unklare Bezüge, hochdeutsche Muster und Genitive in der Mundart, Mundart-Schreibung; vereinzelt Wiedergabe genauer gefasst (z. B. Ankündigung statt Bericht). Mehrere Hundert Stellen; frühere Fassungen im revision_log.
+- Offen: Mundart-Schreibung zwischen Büchern und zwischen Text- und Studienwerkzeugen weiter uneinheitlich (z. B. sig/seg, det/dört, Erzäller/Erzäler) – Festlegung durch eine muttersprachliche Person nötig; Vorschläge für die gesperrten Vaterunser- und Mk-3-Datensätze stehen im Bericht der Sprachprüfung.
+
 ## v0.51 — 2026-10-14 — Johannes: Zusammenfassungen sprachlich korrigiert
 
 - Kana (Kapitel 2 und Abschnitt 2,1–12): wie in 2,3–5 wiedergegeben («Sie haben keinen Wein mehr» – «seine Stunde sei noch nicht gekommen» – die Mutter sagt den Dienern, sie sollen tun, was er ihnen sagt), statt «heisst die Diener tun» und ohne deutendes «doch». Ebenso 4,16 und 5,8 ohne «heissen + Grundform». Mundart angeglichen; frühere Fassungen im revision_log.

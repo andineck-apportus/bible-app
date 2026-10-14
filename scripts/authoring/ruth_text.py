@@ -162,7 +162,7 @@ GSW = {
  "RUT.2.13": "Und{1} [si hät gseit]{2}: «[Möcht ich]{3} [Gnad]{4} [finde]{3} [i]{5} [dine Auge]{6,7}, [min Herr]{8,9}! Dänn{10} [du häsch]{11} [mich]{12} [tröschtet]{11} und{13,14} [häsch]{15} [dinere Magd]{18,19} [is Herz]{16,17} [gredt]{15}, [obwohl]{20} [ich]{21} [nöd]{22} [bi]{23} [wie]{24} [eini]{25} [vo dine Mägd]{26,27}.»",
  "RUT.2.14": "Und{1} [zur]{6} [Ässeziit]{7,8,9} [hät]{2} [de Boas]{5} [zu ire]{3,4} [gseit]{2}: «[Chumm]{10} [häre]{11} und{12} [iss]{13} [vom]{14,15} [Broot]{16} und{17} [tunk]{18} [dis Stück]{19,20} [in]{21} [Essig]{22}!» Und{23} [si isch]{24} [näbe]{25,26} [d Schnitter]{27,28} [anegsässe]{24}, und{29} [er hät]{30} [ire]{31,32} [grööschtets Chorn]{33} [gää]{30}, und{34} [si hät gässe]{35} und{36} [isch satt worde]{37} und{38} [hät no übrig gha]{39}.",
  "RUT.2.15": "Wo{1} [si ufgstande isch]{2}, [zum ufläse]{3,4}, [hät]{6} [de Boas]{7} [sine Chnächt]{9,10} [befole]{6} [und gseit]{11,12}: «[Au]{13} [zwüsche]{14} [de Garbe]{15,16} [dörf si ufläse]{17}, und{18} [beschämed]{20} [si]{21} [nöd]{19}! ~5(" + VAV_G + ") ~8(" + OBJ_G + ")",
- "RUT.2.16": "Und{1} [zieht]{4} [ire]{5,6} [sogar]{2} [extra]{3} [öppis us]{7} [de Bündel]{8,9} [use]{4} und{10} [lönd s ligge]{11}, [demit si]{12} [s ufläse cha]{13}, und{14} [schimpfed]{16} [nöd]{15} [mit ere]{17,18}!»",
+ "RUT.2.16": "Und{1} [ziend]{4} [ire]{5,6} [sogar]{2} [extra]{3} [öppis us]{7} [de Bündel]{8,9} [use]{4} und{10} [lönd s ligge]{11}, [demit si]{12} [s ufläse cha]{13}, und{14} [schimpfed]{16} [nöd]{15} [mit ere]{17,18}!»",
  "RUT.2.17": "So{1} [hät si]{2} [uf em Fäld]{3,4} [ufgläse]{2} [bis]{5} [am Aabig]{6,7}. Und{8} [si hät usgchlopft]{9}, [was]{11} [si ufgläse gha hät]{12}, und{13} [es isch]{14} [öppe]{15} [es Efa]{16} [Gerschte]{17} [gsii]{14}. ~10(" + OBJ_G + ")",
  "RUT.2.18": "Und{1} [si hät s ufglade]{2} und{3} [isch]{4} [i d Stadt]{5,6} [cho]{4}, und{7} [iri Schwigermueter]{9,10} [hät gseh]{8}, [was]{12} [si ufgläse gha hät]{13}. Und{14} [si hät füregnoo]{15} und{16} hät [ire]{18,19} [gää]{17}, [was]{21} [si übrig gloo hät]{22}, [nachdem si]{23} [satt gsii isch]{24,25}. ~11(" + OBJ_G + ") ~20(" + OBJ_G + ")",
  "RUT.2.19": "Da{1} [hät]{2} [iri Schwigermueter]{5,6} [zu ire]{3,4} [gseit]{2}: «[Wo]{7} [häsch du]{8} [hüt]{9,10} [ufgläse]{8}, und{11} [wo]{12} [häsch gschaffet]{13}? [Gsägnet]{17} [sig]{14} [dä, wo dich beachtet hät]{15,16}!» Und{18} [si hät]{19} [irer Schwigermueter]{20,21,22} [verzellt]{19}, [bi wem]{24,26,27} [si gschaffet hät]{25}, und{28} [hät gseit]{29}: «[De Maa]{31,32}, [bi dem]{33,35,36} [ich]{34} [hüt]{37,38} [gschaffet han]{34}, [heisst]{30} [Boas]{39}.» ~23(" + OBJ_G + ")",
@@ -561,7 +561,7 @@ UNITS = [
  ("TU-RUT-001-006-018", "RUT.1.6-RUT.1.18", "narrative", "Wohin du gehst", None,
   "Noomi will ihre Schwiegertöchter nach Hause schicken. Orpa kehrt um, Rut aber bindet sich mit einem Schwur an Noomi, ihr Volk und ihren Gott."),
  ("TU-RUT-001-019-022", "RUT.1.19-RUT.1.22", "narrative", "Nennt mich Mara", None,
-  "In Betlehem klagt Noomi, JHWH habe sie leer zurückgebracht. Die Ankunft fällt in den Beginn der Gerstenernte."),
+  "In Betlehem klagt Noomi, JHWH habe sie leer zurückgebracht. Sie kommen zu Beginn der Gerstenernte an."),
  ("TU-RUT-002-001-023", "RUT.2.1-RUT.2.23", "narrative", "Auf dem Feld des Boas",
   ["TU-RUT-002-001-003", "TU-RUT-002-004-017", "TU-RUT-002-018-023"],
   "Rut liest Ähren auf und kommt auf das Feld des Boas, eines Verwandten Elimelechs. Boas behandelt die Fremde mit auffallender "
@@ -569,8 +569,8 @@ UNITS = [
  ("TU-RUT-002-001-003", "RUT.2.1-RUT.2.3", "narrative", "Rut geht Ähren lesen", None,
   "Der Erzähler stellt Boas vor. Rut bittet, Ähren auflesen zu dürfen, und kommt «zufällig» auf sein Feldstück."),
  ("TU-RUT-002-004-017", "RUT.2.4-RUT.2.17", "dialogue", "Unter den Flügeln JHWHs", None,
-  "Boas erkundigt sich nach Rut, gewährt ihr Schutz, Wasser und Brot und wünscht ihr Lohn für das, was sie an Noomi getan hat – von JHWH, "
-  "dem Gott Israels, unter dessen Flügeln sie Zuflucht sucht. Am Abend hat sie ein Efa Gerste."),
+  "Boas erkundigt sich nach Rut und gewährt ihr Schutz, Wasser und Brot. Er wünscht ihr, dass JHWH, der Gott Israels, unter dessen Flügeln "
+  "sie Zuflucht sucht, ihr vergelte, was sie an Noomi getan hat. Am Abend hat sie etwa ein Efa Gerste beisammen."),
  ("TU-RUT-002-018-023", "RUT.2.18-RUT.2.23", "narrative", "Einer unserer Löser", None,
   "Noomi hört den Namen Boas, wünscht ihm den Segen JHWHs und sagt, er sei einer ihrer Löser. Rut bleibt bis zum Ende der Ernte bei den Arbeiterinnen des Boas."),
  ("TU-RUT-003-001-018", "RUT.3.1-RUT.3.18", "narrative", "Nachts auf der Tenne",
@@ -597,13 +597,13 @@ UNITS = [
   "Ein Stammbaum in zehn Gliedern verbindet Perez, den Sohn Judas und Tamars, über Boas und Obed mit David."),
 ]
 UNITS_GSW = {
- "TU-RUT-001-001-022": ("Läär zrugg us Moab", "I nere Hungersnot zieht e Familie vo Betlehem uf Moab. D Noomi verliert Maa und Söön und chunnt zrugg. Iri moabitisch Schwigertochter Rut laat sich nöd abwiise und gaat mit ere; z Betlehem bittet d Noomi d Fraue, ere nüme Noomi, sondern «Mara», di Bitter, z säge."),
- "TU-RUT-001-001-005": ("Hungersnot und Tod z Moab", "Wäg ere Hungersnot zieht de Elimelech mit de Noomi und de Söön uf Moab. De Elimelech stirbt; d Söön hürated Moabiterinne und sterbed öppe zää Jahr spöter au. D Noomi bliibt ohni Maa und Chind zrugg."),
+ "TU-RUT-001-001-022": ("Läär zrugg us Moab", "I nere Hungersnot zieht e Familie vo Betlehem uf Moab. D Noomi verliert Maa und Söön und chunnt zrugg. Iri moabitischi Schwigertochter Rut laat sich nöd abwiise und gaat mit ere; z Betlehem bittet d Noomi d Fraue, ere nüme Noomi, sondern «Mara», di Bitter, z säge."),
+ "TU-RUT-001-001-005": ("Hungersnot und Tod z Moab", "Wäg ere Hungersnot zieht de Elimelech mit de Noomi und de Söön uf Moab. De Elimelech stirbt; d Söön hürated Moabiterinne und sterbed öppe zää Jaar spöter au. D Noomi bliibt ohni Maa und Chind zrugg."),
  "TU-RUT-001-006-018": ("Wo du anegaasch", "D Noomi wott iri Schwigertöchtere heischicke. D Orpa cheert um, d Rut aber bindet sich mit eme Schwuer a d Noomi, ires Volk und ire Gott."),
  "TU-RUT-001-019-022": ("Säged mir Mara", "Z Betlehem chlagt d Noomi, JHWH heig si läär zruggbracht. Si chömed am Aafang vo de Gerschteernt aa."),
  "TU-RUT-002-001-023": ("Uf em Fäld vom Boas", "D Rut list Ääre uf und chunnt uf s Fäld vom Boas, eme Verwandte vom Elimelech. De Boas behandlet di Frömd uffallend grosszügig; d Noomi erchännt in im en Löser vo de Familie."),
  "TU-RUT-002-001-003": ("D Rut gaat go Ääre läse", "De Erzähler stellt de Boas vor. D Rut fragt, öb si dörf Ääre ufläse, und chunnt «zuefällig» uf sis Fäldstück."),
- "TU-RUT-002-004-017": ("Under de Flügel vo JHWH", "De Boas fragt nach de Rut, git ire Schutz, Wasser und Broot und wünscht ere Lohn für das, wo si a de Noomi gmacht hät – vo JHWH, em Gott vo Israel, under dem sine Flügel si Schutz suecht. Am Aabig hät si es Efa Gerschte."),
+ "TU-RUT-002-004-017": ("Under de Flügel vo JHWH", "De Boas fragt nach de Rut und git ire Schutz, Wasser und Broot. Er wünscht ere, dass JHWH, de Gott vo Israel, under dem sine Flügel si Schutz suecht, ire vergälti, was si a de Noomi gmacht hät. Am Aabig hät si öppe es Efa Gerschte binenand."),
  "TU-RUT-002-018-023": ("Eine vo öisne Löser", "D Noomi ghört de Name Boas, wünscht im de Säge vo JHWH und seit, er sig eine vo irne Löser. D Rut bliibt bis am Änd vo de Ernt bi de Arbeiterinne vom Boas."),
  "TU-RUT-003-001-018": ("Znacht uf de Tänn", "D Noomi schickt d Rut znacht zum Boas uf d Tänn. D Rut bittet en, als Löser de Zipfel vo sim Gwand über si z spreite. De Boas seit zue, verwiist aber uf en nööchere Löser."),
  "TU-RUT-003-001-005": ("De Plan vo de Noomi", "D Noomi wott für d Rut es Daheim sueche und git ire gnaui Aawiisige für d Nacht uf de Tänn."),
@@ -611,7 +611,7 @@ UNITS_GSW = {
  "TU-RUT-003-016-018": ("Wart ab, mini Tochter", "D Rut verzellt s de Noomi. Die isch sicher, dass de Boas d Sach no am gliiche Taag erlediget."),
  "TU-RUT-004-001-022": ("En Löser für d Noomi", "Im Tor verzichtet de nööcher Löser uf Fäld und Hochzig. De Boas erwirbt beides vor Züüge und hüratet d Rut. D Rut überchunnt de Obed, und d Fraue nänned en de Löser vo de Noomi; en Stammbaum füert bis zum David."),
  "TU-RUT-004-001-012": ("Verhandlig im Tor", "Vor zää Ältischte bietet de Boas em nööchere Löser s Fäld vo de Noomi aa. Wo d Ee mit de Rut dezue ghört, tritt dä zrugg. De Boas erwirbt alles vor Züüge; s Volk sägnet in und d Rut."),
- "TU-RUT-004-013-017": ("De Noomi isch en Sohn gebore", "JHWH laat d Rut schwanger wärde, und si überchunnt en Sohn. D Fraue lobed JHWH, wo de Noomi en Löser gschänkt hät; d Noomi nimmt s Chind uf de Schoss, und d Nachberinne nänned s Obed, de Grossvatter vom David."),
+ "TU-RUT-004-013-017": ("De Noomi isch en Sohn gebore", "JHWH laat d Rut schwanger wärde, und si überchunnt en Sohn. D Fraue lobed JHWH, wo de Noomi en Löser gschänkt hät; d Noomi nimmt s Chind uf de Schoss, und d Nachbarinne nänned s Obed, de Grossvatter vom David."),
  "TU-RUT-004-018-022": ("Vom Perez bis zum David", "En Stammbaum mit zää Glider verbindet de Perez, de Sohn vom Juda und de Tamar, über de Boas und de Obed mit em David."),
 }
 
