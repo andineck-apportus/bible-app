@@ -2,6 +2,10 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.54 — 2026-10-14 — Gottesname beim Vorlesen
+
+- Beim Vorlesen wird JHWH als «Jahwe» gesprochen (Einstellung im Menü: «Jahwe» oder «Adonai»); der geschriebene Text bleibt JHWH. Hinweis im Menü zur jüdischen Tradition, den Namen nicht auszusprechen.
+
 ## v0.53 — 2026-10-14 — Anhören: anhalten, Aussprache auch für Hebräisch
 
 - Alle Anhören-Knöpfe (Wörter, Proben) zeigen während der Wiedergabe das Pausenzeichen; ein erneuter Klick hält an. Läuft gerade das Vorlesen, wird es dabei angehalten. «Vorlesen probehören» als runder Knopf wie die übrigen (kein Zeilenumbruch mehr).

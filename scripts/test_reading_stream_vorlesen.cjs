@@ -29,6 +29,9 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     assert(!(await p.$eval('.player',e=>e.hidden)),'Start auf Abschnittsebene');
     await p.click('[data-ra=close]');await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));await p.waitForTimeout(300);await p.click('[data-action=menu]');await p.fill('input[type=search]','1 Joh 2,1');await p.waitForTimeout(300);await p.click('.results button');await p.waitForTimeout(800);
     await p.evaluate(()=>{window.__said=[];});await p.click('[data-stream="v61-2-1"] .chapter-head [data-read]');await p.waitForTimeout(1500);assert.equal((await said())[0],'Erster Johannes 2','Buchnummer als Ordnungszahl');
+    await p.click('[data-ra=close]');await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));await p.waitForTimeout(300);await p.click('[data-action=menu]');await p.fill('input[type=search]','Rut 1,1');await p.waitForTimeout(300);await p.click('.results button');await p.waitForTimeout(800);
+    await p.evaluate(()=>{window.__said=[];});await p.click('[data-stream="v7-1-1"] .chapter-head [data-read]');await p.waitForTimeout(5000);
+    {const t=(await said()).join(' ');assert(t.includes('Jahwe')&&!t.includes('JHWH'),'Gottesname JHWH wird als «Jahwe» vorgelesen');}
     assert.deepEqual(errs,[],'keine Skriptfehler');
     console.log('PASS: Vorlesen ab Titel, fortlaufend, Pause, vor/zurück, Markierung, Schliessen (nachgebildete Sprachausgabe).');
   }finally{await b.close();}})().catch(e=>{console.error(e);process.exit(1);});
