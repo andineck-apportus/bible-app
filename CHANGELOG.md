@@ -2,6 +2,12 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.49 — 2026-10-14 — Vorlesen: Titel, Pausen, Startknopf als Pause
+
+- Titel werden als eigener, etwas leiser und langsamer gesprochener Satz gelesen, mit kurzer Pause davor und danach; ohne Schlusspunkt, damit «Johannes 2» nicht als «Johannes zweiter» gelesen wird.
+- Buchnummern als Ordnungszahl: «1. Johannes 3» → «Erster Johannes drei», «2. Mose» → «Zweites Buch Mose» (englisch «First John»); auch in Bibelstellen der Zusammenfassungen.
+- Der Startknopf des gerade gelesenen Titels zeigt wie der Player das Pausenzeichen; ein Klick darauf hält an bzw. liest weiter.
+
 ## v0.48 — 2026-10-14 — Vorlesen
 
 - **Vorlesemodus:** Neben jedem Titel (Einträge aller Zoomstufen, Kapitel- und Abschnittstitel im Bibeltext) startet ein kleiner Knopf das Vorlesen ab dieser Stelle. Gelesen wird ohne Unterbruch weiter durch dieselbe Ebene: Überschrift und Zusammenfassung bzw. Verse mit Kapitel- und Abschnittstiteln; Einträge ohne Text werden übersprungen, Bibelstellen-Marken als Buch, Kapitel und Vers gesprochen.
