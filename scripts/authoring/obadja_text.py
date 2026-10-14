@@ -132,7 +132,7 @@ UNITS = [
  ("TU-OBA-001-010-014", "OBA.1.10-OBA.1.14", "section", "Am Tag der Not deines Bruders", None,
   "Der Grund des Gerichts: Edom hat zugesehen, sich gefreut, geplündert und Flüchtlinge ausgeliefert, als Fremde Jerusalem eroberten."),
  ("TU-OBA-001-015-018", "OBA.1.15-OBA.1.18", "section", "Der Tag JHWHs", None,
-  "Der Tag JHWHs kommt über alle Völker; was Edom getan hat, fällt auf es zurück. Auf dem Zion aber gibt es Rettung, und das Haus Jakob wird zum Feuer, das Esau verzehrt."),
+  "Der Tag JHWHs kommt über alle Völker; was Edom getan hat, fällt auf es zurück. Auf dem Zion wird es Entronnene geben, und er wird heilig sein; das Haus Jakob nimmt seinen Besitz wieder ein. Jakob wird zum Feuer und Josef zur Flamme, die das Haus Esau wie Stroh verzehren, bis Esau keiner entrinnt."),
  ("TU-OBA-001-019-021", "OBA.1.19-OBA.1.21", "section", "Das Königtum wird JHWH gehören", None,
   "Die Heimkehrenden nehmen das Land in alle Richtungen wieder in Besitz. Vom Zion aus wird Esau gerichtet, und die Königsherrschaft gehört JHWH."),
 ]
@@ -141,7 +141,7 @@ UNITS_GSW = {
  "TU-OBA-001-001-004": ("De Hochmuet vo Edom", "Edom füült sich i sine Felse unaagriifbar. Gott chündet aa, es vo dört abezstürze."),
  "TU-OBA-001-005-009": ("Usplünderet und verrate", "Diebe und Wiibuure lönd öppis übrig, Edom aber wird gründlich dursuecht. Sini Verbündete tüüsched s, sini Wiisheit und sini Chrieger versaged."),
  "TU-OBA-001-010-014": ("Am Taag vo de Not vo dim Brueder", "De Grund vom Gricht: Edom hät zuegluegt, sich gfröit, plünderet und Flüchtling usgliferet, wo Frömdi Jerusalem eroberet händ."),
- "TU-OBA-001-015-018": ("De Taag vo JHWH", "De Taag vo JHWH chunnt über alli Völker; was Edom gmacht hät, fallt uf s zrugg. Uf em Zion aber gits Rettig, und s Huus Jakob wird zum Füür, wo de Esau verzeert."),
+ "TU-OBA-001-015-018": ("De Taag vo JHWH", "De Taag vo JHWH chunnt über alli Völker; was Edom gmacht hät, fallt uf s zrugg. Uf em Zion wird s Entrunneni gää, und er wird heilig sii; s Huus Jakob nimmt sin Bsitz wider ii. De Jakob wird zum Füür und de Josef zur Flamme, wo s Huus Esau wie Strau verzeered, bis em Esau keine entrinnt."),
  "TU-OBA-001-019-021": ("D Königsherrschaft wird em JHWH ghöre", "Die, wo heichömed, nämed s Land i alli Richtige wider in Bsitz. Vom Zion us wird de Esau grichtet, und d Königsherrschaft ghört em JHWH."),
 }
 
