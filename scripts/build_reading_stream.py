@@ -212,7 +212,7 @@ for vid, v in variants_extra.items():
     bundle(f"b/{ref_book(v['ref'])}").setdefault("src_variants", {})[vid] = v
 # Bildsprache (docs/BILDSPRACHE.md): Bildlexikon (Namen, Merkmale) und Stile (Darstellungen, Bausteinbibliothek) im Kern;
 # Bilder samt Bildauftrag (Felder, Deutungshinweis) im Paket ihres Buchs (Buchebene in b/_overview).
-# Schlüssel im Lesestrom: Buch «JHN», Kapitel «JHN.2», Abschnitt = ID der Texteinheit.
+# Schlüssel im Lesestrom: Bibel, Testamente, Buchgruppen = ID der Zusammenfassung; Buch «JHN», Kapitel «JHN.2», Abschnitt = ID der Texteinheit.
 import localizations as _l10n  # noqa: E402
 ill_recs = {}
 for p in sorted((ROOT / "data/illustrations").rglob("*.json")):
@@ -231,8 +231,8 @@ for rid, r in ill_recs.items():
     if r["type"] != "illustration":
         continue
     st, br = ill_recs[r["style"]], ill_recs[r["brief"]]
-    key = r["target"] if r["level"] == "section" else r["reference"]
-    item = {"id": rid, "brief": br["id"], "style": st["key"], "level": r["level"], "ref": r["reference"], "depicts": r.get("depicts", []),
+    key = r["target"] if r["level"] in ("section", "bible", "testament", "group") else r["reference"]
+    item = {"id": rid, "brief": br["id"], "style": st["key"], "level": r["level"], "ref": r.get("reference"), "depicts": r.get("depicts", []),
             "alt": r["alt_de"], "note": br.get("interpretation_note_de"), "check": (r.get("check") or {}).get("result_de"),
             "panels": [{"n": p_["n"], "ref": p_["reference"], "action": p_["action_de"]} for p_ in br["panels"]],
             "svg": (ROOT / r["file"]).read_text(encoding="utf-8").strip()}

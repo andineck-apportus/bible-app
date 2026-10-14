@@ -71,13 +71,16 @@ def E(fid, kind, de, en, ident, gsw, traits, pal, rules, era=None, find=None, di
 E("FIG-GOTT", "divine", "Gott", "God",
   "Der Gott Israels, im Alten Testament mit dem Eigennamen JHWH genannt ([[JON.1.1]]), von Jesus als «Vater» angeredet ([[MAT.6.9]]).",
   "De Gott vo Israel, im Alte Teschtamänt mit em Eigename JHWH gnännt ([[JON.1.1]]), vom Jesus als «Vater» aagredt ([[MAT.6.9]]).",
-  [T("Kreuznimbus bzw. göttliches Goldzeichen (Lichtschein) ohne menschliche Gestalt", "design",
-     note="Symbolwahl steht noch aus. Möglichkeiten: Hand aus der Wolke (alte Bildtradition), Lichtschein mit Strahlen, "
-          "Gottesname in hebräischer Schrift. Bis zum Entscheid nur als frei stehendes Goldzeichen ohne Figur.")],
+  [T("Goldener Strahlenkranz (Glorie) um eine helle Scheibe mit dem Gottesnamen יהוה in hebräischen Buchstaben", "tradition",
+     note="Entscheid Andi Neck 2026-10-14. Der Gottesname im Strahlenkranz ist seit der Reformation in reformierten und lutherischen Kirchen verbreitet; "
+          "er zeigt Gott, ohne ihn abzubilden. Ersetzt den Entwurf «segnende Hand aus der Wolke», der zu wenig verständlich war."),
+   T("Kann sprechen und handeln: Sprechblasen und Handlungszeichen gehen vom Strahlenkranz aus", "design")],
   ("#D9A441", "#FFFDF6"),
   ["Gott nie als Mensch, nie mit Gesicht oder Körper darstellen",
-   "Kreuznimbus über einer menschlichen Figur bleibt Jesus vorbehalten; Gottes Zeichen steht frei, ohne Figur",
-   "Nicht mit dem Zeichen-Stern (FIG-ZEICHEN-STERN) oder dem Segnen-Zeichen verwechselbar"],
+   "Kreuznimbus über einer menschlichen Figur bleibt Jesus vorbehalten",
+   "Nicht mit dem Zeichen «Licht» (FIG-ZEICHEN-LICHT, gefüllte Scheibe ohne Schrift) oder dem Zeichen-Stern verwechselbar",
+   "Die Buchstaben werden nicht ausgesprochen dargestellt (keine Umschrift im Bild); Vorlesen nach der Einstellung «Jahwe» bzw. «Adonai»"],
+  terms=[{"lang": "heb", "word": "יהוה", "translit": "JHWH", "de": "Gottesname (Tetragramm), im hebräischen Text ohne Vokale geschrieben"}],
   find=[(r"\bGott(es)?\b|JHWH", None)], distinct=["FIG-JESUS", "FIG-HEILIGER-GEIST", "FIG-ZEICHEN-STERN"])
 
 E("FIG-HEILIGER-GEIST", "divine", "Heiliger Geist", "Holy Spirit",
@@ -469,7 +472,7 @@ E("FIG-GERASENER", "person", "Der Mann mit dem Namen Legion", "The man called Le
 E("FIG-MOSE", "person", "Mose", "Moses",
   "Der Prophet, durch den das Gesetz gegeben wurde; erscheint mit Elija bei der Verklärung Jesu ([[JHN.1.17]], [[MRK.9.4]]).",
   "De Prophet, dur de s Gsetz ggee worde isch; er erschiint mit em Elija bi de Verklärig vom Jesus ([[JHN.1.17]], [[MRK.9.4]]).",
-  [T("Zwei Gesetzestafeln", "tradition", note="Nach [[EXO.34.29]]; Exodus noch nicht übersetzt."), T("Hirtenstab", "tradition")],
+  [T("Zwei Gesetzestafeln, erst ab dem Sinai (als eigenes Objekt FIG-OBJ-GESETZESTAFELN)", "tradition", note="Nach [[EXO.34.29]]; Exodus noch nicht übersetzt. Blindtest 2026-10-14: Tafeln beim Meerdurchzug waren zeitlich falsch."), T("Weisser Bart, Hirtenstab", "tradition")],
   ("#7A5A34", "#E7DCC4"),
   [FACE, "Keine Hörner (Übersetzungstradition der Vulgata zu [[EXO.34.29]]), weil sie missverständlich und antijüdisch gebraucht wurden",
    "Lichtstrahlen um den Kopf statt Hörner nur, wenn ein Nimbus-Konflikt mit Jesus ausgeschlossen ist"],
@@ -1354,6 +1357,74 @@ E("FIG-ZEICHEN-LICHT", "sign", "Licht / Herrlichkeit", "Light / glory",
   "Bedüütig: Liecht, Herrlichkeit, Offebarig (z. B. «s Liecht vo de Mänsche», [[JHN.1.4]]; «er hät sini Herrlichkeit offebaret», [[JHN.2.11]]).",
   [T("Goldene Scheibe mit Strahlen", "design")],
   ("#F2C76E", "#D9A441"), ["Nicht mit dem Kreuznimbus verwechseln (der gehört zu Personen)"], distinct=["FIG-ZEICHEN-STERN"])
+
+# --- Obere Ebenen (Bibel, Testamente, Buchgruppen), 2026-10-14 ---
+E("FIG-OBJ-GESETZESTAFELN", "object", "Gesetzestafeln", "Tablets of the law",
+  "Die zwei steinernen Tafeln der Weisung am Sinai ([[EXO.31.18]], [[EXO.34.1]]); Zeichen für Bund und Tora.",
+  "Di zwei steinige Tafle vo de Wiisig am Sinai ([[EXO.31.18]], [[EXO.34.1]]); Zeiche für de Bund und d Tora.",
+  [T("Zwei steinerne Tafeln mit runden oberen Ecken", "tradition"), T("Zeilenstriche statt Schrift, keine Ziffern", "design")],
+  ("#C9BFAA", "#8C8070"), ["Keine römischen Ziffern (spätere Bildtradition)"], distinct=["FIG-OBJ-SCHRIFTROLLE"])
+E("FIG-ORT-MEER", "place", "Meer (geteilt beim Auszug)", "Sea (parted at the Exodus)",
+  "Das Meer, durch das Israel beim Auszug aus Ägypten auf trockenem Boden zieht ([[EXO.14.21-EXO.14.22]]).",
+  "S Meer, wo Israel bim Uszug us Ägypte uf tröchnem Bode dureziet ([[EXO.14.21-EXO.14.22]]).",
+  [T("Zwei blaue Wasserwände mit Wellen, dazwischen ein heller Weg", "text", ref="EXO.14.22")],
+  ("#4C9BD6", "#D8CBB0"), ["Nicht mit dem See (Galiläa) verwechseln"], distinct=["FIG-ORT-SEE"])
+E("FIG-ZEICHEN-SCHOEPFUNG", "sign", "Schöpfung", "Creation",
+  "Bedeutung: Gott erschafft Himmel und Erde ([[GEN.1.1]]): Erde mit Pflanzen, Sonne, Mond und Sterne.",
+  "Bedüütig: Gott erschafft Himmel und Erde ([[GEN.1.1]]): Erde mit Pflanze, Sunne, Mond und Stärn.",
+  [T("Grüner Erdhügel mit Pflanze, darüber Sonne, Mondsichel und kleine Sterne", "design")],
+  ("#6E8B3D", "#F2C76E"), ["Sterne hier als Punkte, nicht als vierzackiger Zeichen-Stern"], distinct=["FIG-ZEICHEN-STERN", "FIG-ZEICHEN-NEUE-SCHOEPFUNG"])
+E("FIG-ROLLE-PROPHET", "role", "Prophet / Prophetin", "Prophet",
+  "Eine Person, die im Namen Gottes spricht, Unrecht anklagt und Hoffnung ankündigt (z. B. [[ISA.6.8]], [[AMO.5.24]]).",
+  "E Person, wo im Name vo Gott redt, Unrächt aaklagt und Hoffnig aachündet (z. B. [[ISA.6.8]], [[AMO.5.24]]).",
+  [T("Dunkler, rauer Mantel", "tradition", note="nach [[ZEC.13.4]] und [[2KI.1.8]]"), T("Schriftrolle in der Hand, die andere Hand erhoben", "design")],
+  ("#5B4E3C", "#E7DCC4"), ["Ohne Nimbus", "Benannte Propheten (Elija, Jona, Obadja) mit eigenem Eintrag"], era="any", distinct=["FIG-MOSE", "FIG-ELIJA"])
+E("FIG-OBJ-LEIER", "object", "Leier (Harfe)", "Lyre (harp)",
+  "Saiteninstrument für Lieder und Gebete, das Instrument Davids ([[1SA.16.23]], [[PSA.33.2]]); Zeichen für Psalmen und Dichtung. Hebräisch כִּנּוֹר (kinnor).",
+  "Saiteinstrumänt für Lieder und Gebät, s Instrumänt vom David ([[1SA.16.23]], [[PSA.33.2]]); Zeiche für Psalme und Dichtig. Hebräisch כִּנּוֹר (kinnor).",
+  [T("Leier mit zwei Armen und Querholz, vier bis fünf Saiten", "design")],
+  ("#B07A3E", "#F4F1EA"), [],
+  terms=[{"lang": "heb", "word": "כִּנּוֹר", "translit": "kinnor", "de": "Leier, Harfe"}])
+E("FIG-ZEICHEN-HOFFNUNG", "sign", "Hoffnung / Neubeginn", "Hope / new beginning",
+  "Bedeutung: Aus dem Abgehauenen wächst Neues (nach [[ISA.11.1]]: ein Spross aus dem Stumpf Isais).",
+  "Bedüütig: Us em Abghauene wachst Nöis (nach [[ISA.11.1]]: en Schoss us em Stumpe vom Isai).",
+  [T("Baumstumpf mit grünem Spross", "text", ref="ISA.11.1")],
+  ("#8A6A3A", "#6E8B3D"), [])
+E("FIG-ZEICHEN-UMKEHR", "action", "umkehren", "turn back / repent",
+  "Bedeutung: Menschen kehren um, wenden sich (wieder) Gott zu (z. B. [[JON.3.10]], [[HOS.14.2]]).",
+  "Bedüütig: Mänsche chered um, wänded sich (wider) Gott zue (z. B. [[JON.3.10]], [[HOS.14.2]]).",
+  [T("Pfeil, der im Bogen umkehrt", "design")],
+  ("#3B3226", "#6E8B3D"), [], distinct=["FIG-ZEICHEN-BRINGEN"])
+E("FIG-ZEICHEN-GERICHT", "sign", "Gericht / Gerechtigkeit", "Judgement / justice",
+  "Bedeutung: Gott richtet und schafft Recht (z. B. [[AMO.5.24]], [[REV.20.12]]); gewogen werden ([[DAN.5.27]]).",
+  "Bedüütig: Gott richtet und schafft Rächt (z. B. [[AMO.5.24]], [[REV.20.12]]); gwoge wärde ([[DAN.5.27]]).",
+  [T("Waage mit zwei Schalen", "tradition")],
+  ("#8C8070", "#D9A441"), ["Keine Darstellung von Strafen oder Gewalt"])
+E("FIG-ZEICHEN-NEUE-SCHOEPFUNG", "sign", "Neue Schöpfung / neues Jerusalem", "New creation / new Jerusalem",
+  "Bedeutung: Hoffnung auf einen neuen Himmel und eine neue Erde, die Stadt im Licht mit Strom und Baum des Lebens ([[REV.21.1-REV.21.2]], [[REV.22.1-REV.22.2]]).",
+  "Bedüütig: Hoffnig uf en nöie Himmel und e nöii Erde, d Stadt im Liecht mit Strom und Baum vom Läbe ([[REV.21.1-REV.21.2]], [[REV.22.1-REV.22.2]]).",
+  [T("Helle Stadt mit Toren im goldenen Licht", "text", ref="REV.21.23"), T("Blauer Strom und grüner Baum davor", "text", ref="REV.22.2")],
+  ("#F7DB9A", "#4C9BD6"), [], distinct=["FIG-ORT-JERUSALEM", "FIG-ZEICHEN-SCHOEPFUNG"])
+E("FIG-ZEICHEN-EXIL", "sign", "Wegführung und Rückkehr", "Exile and return",
+  "Bedeutung: Das Volk wird aus dem Land weggeführt und kehrt später zurück ([[2KI.25.11]], [[EZR.1.3]]).",
+  "Bedüütig: S Volk wird us em Land wäggfüert und chunnt spöter zrugg ([[2KI.25.11]], [[EZR.1.3]]).",
+  [T("Weg mit zwei Pfeilen: dunkel weg vom Ort, gestrichelt zurück", "design")],
+  ("#8C8070", "#3B3226"), [], distinct=["FIG-ZEICHEN-UMKEHR"])
+E("FIG-ZEICHEN-AUSBREITEN", "action", "sich ausbreiten / hinausgehen", "spread out / go out",
+  "Bedeutung: Die Botschaft geht von einem Ort aus in viele Richtungen ([[ACT.1.8]]).",
+  "Bedüütig: D Botschaft gaat vo eim Ort uus i vili Richtige ([[ACT.1.8]]).",
+  [T("Mehrere Pfeile, die von einem Punkt fächerförmig ausgehen", "design")],
+  ("#3B3226", "#D9A441"), [], distinct=["FIG-ZEICHEN-BRINGEN"])
+E("FIG-OBJ-BRIEF", "object", "Brief", "Letter",
+  "Ein Brief an eine Gemeinde oder eine Person (z. B. [[PHP.1.1]], [[3JN.1.1]]).",
+  "En Brief a e Gmeind oder e Person (z. B. [[PHP.1.1]], [[3JN.1.1]]).",
+  [T("Gefaltetes Blatt mit Schriftzeilen und rotem Siegel", "design")],
+  ("#F4F1EA", "#A33A2E"), ["Für Bücher und Schriftrollen FIG-OBJ-SCHRIFTROLLE"], distinct=["FIG-OBJ-SCHRIFTROLLE"])
+E("FIG-GRUPPE-GEMEINDE", "group", "Gemeinde", "Congregation / church",
+  "Menschen, die sich im Namen Jesu versammeln, oft in einem Haus ([[ROM.16.5]], [[PHM.1.2]]).",
+  "Mänsche, wo sich im Name vo Jesus versammled, mängisch imene Huus ([[ROM.16.5]], [[PHM.1.2]]).",
+  [T("Gruppe vor einem Haus, Männer und Frauen", "text", ref="ROM.16.5")],
+  ("#8E9AAF", "#E2CDA8"), ["Kein Kirchengebäude (Hausgemeinden zur Zeit der Briefe)"], distinct=["FIG-GRUPPE-MENGE"])
 
 def run():
     texts = load_texts()

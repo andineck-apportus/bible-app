@@ -12,18 +12,23 @@ Bilder fassen auf den Zoomstufen (Buch, Kapitel, Abschnitt) bildlich, was die Zu
 
 - **Handlungen:** mehrere Schritte als nummerierte Bildfelder; Gesagtes als Sprechblase mit Zeichen statt Wörtern, die Spitze zeigt auf die sprechende Figur, die Geste (Arm) auf die angesprochene. Beispiel Kana: «Der Wein ist ausgegangen» = leerer Krug mit Traubenzeichen + leerer Becher + «fehlt»; «Hört auf ihn» = Jesus → Ohr.
 - **Zeichen** (Stern = Zeichen/σημεῖον, Herz mit Lichtstrahl = glauben, Sanduhr = Stunde/Zeit, Sonnen = Anzahl Tage, Tempel mit Riss = niederreissen, gestrichelte Linie = Abstand …) kommen nur aus dem Lexikon und behalten überall dieselbe Bedeutung.
-- **Gott** nie als Mensch, ohne Gesicht oder Körper; der Kreuznimbus über einer menschlichen Figur bleibt Jesus vorbehalten. Das Gottessymbol soll einprägsam sein und Gott als Gegenüber (handelnd, sprechend) zeigen, nicht als Naturerscheinung. *Offen:* Die bisherige «segnende Hand aus der Wolke» war nicht verständlich genug; ein neues Zeichen ist noch zu wählen.
-- **Heiliger Geist:** weisse Taube mit Lichtschein, von oben kommend; die Taube als Tier (Opfertier) nie mit Schein, sitzend oder im Käfig.
+- **Gott** nie als Mensch, ohne Gesicht oder Körper. Zeichen (Entscheid Andi Neck, 2026-10-14): **goldener Strahlenkranz mit dem Gottesnamen יהוה** in hebräischen Buchstaben, wie seit der Reformation in reformierten und lutherischen Kirchen. Gott soll als Gegenüber erscheinen: Wo möglich spricht er (Sprechblase mit Spitze zum Strahlenkranz) oder ist Adressat einer Rede. Ohne Sprechblase über einer Szene wird der Strahlenkranz leicht als Sonne gelesen (Blindtest); deshalb keine Sonne oder Lichtscheibe in derselben Szene. Der Kreuznimbus über einer menschlichen Figur bleibt Jesus vorbehalten.
+- **Heiliger Geist:** weisse Taube mit goldenem Schein im Sturzflug (Kopf unten, Schwanzfächer oben); die Taube als Tier (Opfertier) nie mit Schein, sitzend oder im Käfig.
 - **Personen** ohne ausgeführtes Gesicht, erkennbar an Farbe, Kleidung und Zeichen. Keine Karikatur, keine «typisierten» Merkmale einer Volksgruppe; «die Juden» im Johannesevangelium als neutrale Menge, nie eingefärbt oder vereinheitlicht.
 - Was der Text offenlässt (z. B. ob die Geissel Menschen traf, [[JHN.2.15]]), bleibt im Bild offen oder wird im Auftrag (`interpretation_note_de`) als Deutung benannt. Nicht erzählte Vorgänge (der Wechsel von Wasser zu Wein) werden nicht als Vorgang gezeigt.
 - Symbole, die an nationale, politische oder kirchliche Sonderzeichen erinnern, vermeiden (z. B. Adler nicht mit weissem Kopf und Schwanz).
+
+## Ebenen
+
+Bilder gibt es auf allen Ebenen über den Versen: Bibel, Testamente, Buchgruppen, Buch, Kapitel, Abschnitt. Bildaufträge der oberen Ebenen (Bibel, Testament, Buchgruppe) haben keine Bibelstelle als Ganzes; ihr Ziel ist die Zusammenfassung (`SUM-BIBLE`, `SUM-OT`, `SUM-NT`, `SUM-GROUP-xx`), und jedes Bildfeld nennt eine typische Stelle (z. B. [[EXO.14]] für die Befreiung). Gleiche Szenen sehen auf allen Ebenen gleich aus (z. B. Sinai in Bibel, Altem Testament und Tora). Stand 2026-10-14: Bibel, beide Testamente, alle zehn Buchgruppen; Buch nur Johannes; Kapitel und Abschnitte nur Johannes 2.
 
 ## Prüfung auf Verständlichkeit (Blindtest)
 
 1. Bild rendern (PNG).
 2. Eine getrennte KI-Instanz beschreibt es **ohne** Bildauftrag, nur mit der Legende, wie sie die App zeigt: wer, wer zu wem, was gesagt/getan, Sicherheit; dazu alles Unklare.
 3. Beschreibung mit dem Auftrag vergleichen. Weicht sie bei Handelnden, Wer-zu-wem, Handlung oder Reihenfolge ab, Symbol oder Anordnung nachbessern und erneut prüfen.
-4. Ergebnis in `check` des Bild-Datensatzes (`date`, `method_de`, `result_de`, `open_de`, `limits_de`). Der Blindtest ist die Beschreibung einer einzelnen KI-Instanz und ersetzt keine Prüfung mit Leserinnen und Lesern und keine fachliche Prüfung.
+4. Die Testseite für das Rendern braucht `<meta charset="utf-8">`, sonst erscheint der Gottesname als Zeichensalat (Fehler der Testseite, nicht der App).
+5. Ergebnis in `check` des Bild-Datensatzes (`date`, `method_de`, `result_de`, `open_de`, `limits_de`). Der Blindtest ist die Beschreibung einer einzelnen KI-Instanz und ersetzt keine Prüfung mit Leserinnen und Lesern und keine fachliche Prüfung.
 
 ## Synchron mit dem Text
 

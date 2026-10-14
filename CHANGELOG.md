@@ -2,6 +2,14 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.57 — 2026-10-14 — Bildsprache auf allen Ebenen, Gottessymbol
+
+- **Bilder auf allen Ebenen über den Versen:** neu für die ganze Bibel, Altes und Neues Testament und alle zehn Buchgruppen (je ein bis vier Bildfelder nach der Zusammenfassung, mit einer typischen Bibelstelle je Feld). Gleiche Szenen sehen überall gleich aus (Schöpfung, Meerdurchzug, Sinai, Exil und Hoffnung, Verkündigung Jesu, Kreuz und leeres Grab, Pfingsten, Briefe, neue Schöpfung).
+- **Gottessymbol:** goldener Strahlenkranz mit dem Gottesnamen יהוה (Entscheid Andi Neck), möglichst als Sprechender gezeigt (z. B. «Es werde Licht», die Weisung am Sinai). Die Hand aus der Wolke entfällt.
+- **13 neue Lexikon-Einträge** (u. a. Gesetzestafeln, Meer, Schöpfung, Prophet, Leier, Hoffnung, Umkehr, Gericht, neue Schöpfung, Exil und Rückkehr, Ausbreitung, Brief, Gemeinde) und Darstellungen für Gott, Heiligen Geist, Mose, Paulus, König, Soldat, Kreuz, Grab, Jerusalem, Berg, Haus, Weg, Boot, Beten und Trauer. Mose trägt die Tafeln erst ab dem Sinai.
+- **Blindtest** (zwei Runden) für alle neuen Bilder; nach den Befunden u. a. Taube im Sturzflug statt «Lilie», keine Sonne mehr beim leeren Grab, Tränen neben den Köpfen, Gott spricht am Sinai, Prophet den Menschen zugewandt. Ergebnisse und offene Punkte in den Bild-Datensätzen.
+- Legende: Stellenangaben auch für ganze Kapitel und Bereiche über Kapitel («2. Mose 19–34»).
+
 ## v0.56 — 2026-10-14 — Bildlexikon, Bildaufträge, Blindtest
 
 - **Bildlexikon** (142 Einträge, stilunabhängig): Personen, Rollen, Gruppen, Gegenstände, Orte, Handlungs- und Bedeutungszeichen mit Pflichtmerkmalen (Grundlage Text, Tradition oder Gestaltung), Verwechslungsregeln und Mundart. Dieselbe Figur sieht in jedem Bild und später in jedem Stil gleich aus.
