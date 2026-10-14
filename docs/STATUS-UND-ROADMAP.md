@@ -1,4 +1,4 @@
-# Status und nächste Schritte · 2026-10-14 (UI v0.43)
+# Status und nächste Schritte · 2026-10-14 (UI v0.44)
 
 ## Gesichert und vorhanden
 - **Lesestrom als Hauptrichtung** (`app/reading-stream/`, v0.13): die ganze Bibel auf sieben Ebenen fortlaufend lesen und vertiefen; ungestörtes Vollbild mit ausblendenden Leisten; Lesarten, Erklärungen und Quellen als Blätter auf Wunsch; Urtext nur im Modus «Urtext und Details»; deutsche Stellenangaben; Farben nach System. Navigationsgerüst und 83 Zusammenfassungen liegen jetzt in `data/navigation/` und `data/summaries/` (Entwürfe, ungeprüft). Ausgearbeitet ist Markus 3,20–35; sonst fehlt der Bibeltext. Details und Grenzen: [LESETIEFE-PROTOTYP.md](LESETIEFE-PROTOTYP.md).
@@ -7,6 +7,7 @@
 - **Vaterunser** (v0.16): Mt 6,5–15 und Lk 11,1–4 ausgearbeitet wie Mk 3,20–35 (Übersetzung, Lesarten bis zu Handschriften, Papyri und Amuletten, Wortzuordnung, Befunde, Deutungen, Hintergrund, Anwendung). Matthäus und Lukas vollständig als griechischer Text mit Annotation und Apparat vorhanden. Alles fachlich ungeprüft.
 - **Züridüütsch** (v0.27): zweite Übersetzungsschicht aus dem Urtext für alle ausgearbeiteten Stellen, im Lesestrom umschaltbar; Mundart noch nicht muttersprachlich geprüft. Wortzuordnung für Mk 3 in Mundart noch offen.
 - **Lokalisierungen** (v0.29): alle erklärenden Inhalte der ausgearbeiteten Abschnitte und alle Zusammenfassungen in Züridüütsch als eigene `localization`-Datensätze mit Quellen-Fingerabdruck; veraltete Übersetzungen werden gemeldet und nicht ausgeliefert. Offen: Bedienung, Buch- und Gruppennamen übersetzen.
+- **Johannesevangelium ganz** (v0.44): Übersetzung, Wortzuordnung, Handschriften inkl. 𝔓66/𝔓75/𝔓52, Studieninhalte; ungeprüfter KI-Entwurf mit KI-Gegenlesung, Literaturangaben der Studien noch nicht nachgeschlagen, Mundart nicht muttersprachlich geprüft.
 - **Jona, 1–3 Johannes, Markus ganz** (v0.40) und **Wörterbuch, Ausgaben je Wort, Ketiv/Qere** (v0.39): ungeprüfte KI-Entwürfe mit KI-Gegenlesung; Mundart nicht muttersprachlich geprüft.
 - **Texte vom Toten Meer** (v0.38, nicht kommerzielle Schicht): Rut und Obadja mit maschinellem Vergleich zum WLC. Offen: weitere Bücher bei Bedarf; Septuaginta nach CATSS-Erklärung; NTVMR nach Antwort des INTF.
 - **Rut und Philipper** (v0.35): ganz aus dem Urtext übersetzt (Hochdeutsch, Züridüütsch, Wortzuordnung, Entscheidungen, Studieninhalte); Philipper mit 𝔓46. Ungeprüfte KI-Entwürfe (nur KI-Gegenlesung). Offen wie bei Obadja: freie textkritische Daten zum Alten Testament. Umrechnung der Verszählung seit v0.36 umgesetzt, alle AT-Bücher importierbar.

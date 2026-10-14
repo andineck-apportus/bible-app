@@ -2,7 +2,7 @@
 
 Git-versionierter Bibel-Wissensfundus: Quellen, Textbefunde, konkurrierende Interpretationen, Prinzipien und kontextabhängige Anwendungen nachvollziehbar miteinander verbinden.
 
-**Stand: 14. Oktober 2026 · UI v0.43 (Lesestrom) · Urtext: Matthäus, Markus, Lukas, Philipper, Titus, 1–3 Johannes (Griechisch), Rut, Obadja, Jona (Hebräisch); ausgearbeitet: das Vaterunser (Mt 6,5–15; Lk 11,1–4) sowie Markus, Rut, Obadja, Jona, Philipper, Titus und 1–3 Johannes ganz; Wörterbuch (UBS, CC BY-SA) im Wortblatt. Der Lesetext geht immer vom Urtext aus.**
+**Stand: 14. Oktober 2026 · UI v0.44 (Lesestrom) · Urtext: Matthäus, Markus, Lukas, Johannes, Philipper, Titus, 1–3 Johannes (Griechisch), Rut, Obadja, Jona (Hebräisch); ausgearbeitet: das Vaterunser (Mt 6,5–15; Lk 11,1–4) sowie Markus, Johannes, Rut, Obadja, Jona, Philipper, Titus und 1–3 Johannes ganz; Wörterbuch (UBS, CC BY-SA) im Wortblatt. Der Lesetext geht immer vom Urtext aus.**
 
 Dies ist der Konzept- und Datenprototyp, noch keine fertige Benutzer-App. Vorhanden sind 4509 strukturierte Datensätze, darunter:
 - der **ganze griechische Text des Markusevangeliums** (SBLGNT, 11 286 Wörter mit stabilen IDs) mit Lemma, Morphologie, Syntaxrollen, Referenten und Glossen aus MACULA Greek als eigener Annotationsschicht,
@@ -89,6 +89,16 @@ python3 scripts/authoring/obadja_text.py; python3 scripts/authoring/obadja_study
 # Rut und Philipper (v0.35): gleiche Importer (RUT über MACULA Hebrew, PHP über SBLGNT/MACULA/CNTR), dann
 python3 scripts/authoring/ruth_text.py; python3 scripts/authoring/ruth_study.py
 python3 scripts/authoring/philipper_text.py; python3 scripts/authoring/philipper_study.py
+# Johannes (v0.44): gleiche Importer, zusätzlich STEPBible TAGNT
+python3 scripts/import_sblgnt_book.py JHN --tag TAG-JOHN --sblgnt SBLGNT --sblgnt-commit c4d241a9c1c479a55b989ba35a4976c1d0b8052c \
+  --macula macula-greek --macula-commit 8423afe47b9e8f24b7772e808af45c7159a6fe7e
+python3 scripts/import_sblgnt_apparatus.py JHN SBLGNT --upstream-commit c4d241a9c1c479a55b989ba35a4976c1d0b8052c --tag TAG-JOHN
+python3 scripts/assess_edition_agreement.py JHN
+python3 scripts/import_cntr_transcriptions.py JHN transcriptions --upstream-commit 4e743a41a4b2ca010ece53229cd272aa59b1efe6
+python3 scripts/collate_witnesses.py JHN.1.1-JHN.1.51   # ebenso je Kapitel 2–21
+python3 scripts/import_comparison_bibles.py JHN --open-bibles open-bibles --bible-databases bible_databases
+python3 scripts/import_stepbible_tagged.py --step STEPBible-Data --step-commit 93ec3621485afd10fd45fcf43630d42de28d8eb8 JHN
+for f in scripts/authoring/johannes_text_*.py scripts/authoring/johannes_study_?.py; do python3 $f; done
 # Querverweise (OpenBible.info, CC BY) über die Kopie in scrollmapper/bible_databases
 python3 scripts/import_openbible_crossrefs.py bible_databases/sources/extras/cross_references.txt \
   --source-url https://github.com/scrollmapper/bible_databases --upstream-commit e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c
