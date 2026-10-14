@@ -89,8 +89,8 @@ let tested=mkAlts().length;
 
 // Vaterunser: Matthäus und Lukas
 click('[data-action=menu]');
-assert.equal(sheetHost.querySelectorAll('details.worked [data-go^="TU-"]').length,M().sections.length,'Ausgearbeitete Stellen im Menü (eingeklappt)');
-assert(sheetHost.textContent.includes('Zuletzt gelesen')&&sheetHost.querySelectorAll('[data-clear-recent]').length===1,'Zuletzt gelesen nach dem Lesen');
+assert.equal(sheetHost.querySelectorAll('details.worked:not(.recent) [data-go^="TU-"]').length,M().sections.length,'Ausgearbeitete Stellen im Menü (eingeklappt)');
+assert(sheetHost.textContent.includes('Zuletzt gelesen')&&sheetHost.querySelectorAll('[data-clear-recent]').length===1,'Zuletzt gelesen nach dem Lesen');assert(sheetHost.querySelector('details.recent .recent-row'),'Zuletzt gelesen eingeklappt');
 {const rr=[...sheetHost.querySelectorAll('.recent-row')];assert(rr.length>0&&rr.every(r=>[4,5].includes(model.nodes.get(r.dataset.go).level)),'Verlauf auf Abschnitt- bzw. Kapitelebene');}
 click('[data-clear-recent]');
 assert(!sheetHost.textContent.includes('Zuletzt gelesen'),'Verlauf löschen');

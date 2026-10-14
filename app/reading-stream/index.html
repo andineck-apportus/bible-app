@@ -17,6 +17,11 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .app :is(button,input,[tabindex]):focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 #bible-stream .app svg{display:block;width:18px;height:18px;flex:0 0 18px}
 #bible-stream .logo{width:24px!important;height:25px!important;flex-basis:24px!important}
+#bible-stream .logo-wrap{position:relative;display:block;width:24px;height:25px}
+#bible-stream .logo-wrap .logo{position:absolute;inset:0;transition:opacity .25s ease}
+#bible-stream .logo-heart{opacity:0}
+#bible-stream [data-action=home]:is(:hover,:focus-visible,:active) .logo-heart{opacity:1}
+#bible-stream [data-action=home]:is(:hover,:focus-visible,:active) .logo-base{opacity:0}
 
 /* Leisten */
 #bible-stream .bar{position:absolute;left:0;right:0;z-index:4;display:flex;align-items:center;gap:6px;background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:transform .25s ease,opacity .25s ease}
@@ -260,7 +265,7 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
   #bible-stream .reader{left:230px}
   #bible-stream .immersed aside{opacity:.25}
 }
-@media (prefers-reduced-motion:reduce){#bible-stream .bar{transition:none}}
+@media (prefers-reduced-motion:reduce){#bible-stream .bar,#bible-stream .logo-wrap .logo{transition:none}}
 </style></head><body>
 <div id="bible-stream"><div class="app"></div></div>
 <script>
@@ -398,7 +403,7 @@ function trWord(w){
 }
 function translit(text){const src=String(text||'');if(!/[\u0370-\u03ff\u1f00-\u1fff]/.test(src))return '';return src.split(/(\s+)/).map(w=>/\s/.test(w)?w:trWord(w)).join('').replace(/\s+/g,' ').trim();}
 const icon=name=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${ICONS[name]}"/></svg>`;
-const logo='<svg class="logo" viewBox="0 0 80 84" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="8"><path d="M4 44V22a18 18 0 0 1 36 0a18 18 0 0 1 36 0v22H4Zm36-22v22"/><path d="M4 44v36h72V44M40 44v36"/></g></svg>';
+const logo='<span class="logo-wrap"><svg class="logo logo-base" viewBox="0 0 80 84" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="8"><path d="M4 44V22a18 18 0 0 1 36 0a18 18 0 0 1 36 0v22H4Zm36-22v22"/><path d="M4 44v36h72V44M40 44v36"/></g></svg><svg class="logo logo-heart" viewBox="0 0 80 84" fill="none" aria-hidden="true"><defs><clipPath id="logo-heart-clip"><path d="M40 80C26 62 4 48 4 22A18 18 0 0 1 40 22A18 18 0 0 1 76 22C76 48 54 62 40 80Z"/></clipPath></defs><g clip-path="url(#logo-heart-clip)" stroke="currentColor" stroke-width="8" opacity=".5"><path d="M0 44H80M40 0V84"/></g><path d="M40 80C26 62 4 48 4 22A18 18 0 0 1 40 22A18 18 0 0 1 76 22C76 48 54 62 40 80Z" stroke="currentColor" stroke-width="8" stroke-linejoin="round"/></svg></span>';
 const EDS={'ED-SBLGNT':'SBL','ED-WH':'WH','ED-TREG':'Tr','ED-NA28':'NA','ED-RP':'RP','ED-ST':'TR','ED-KJTR':'KJV','ED-SR':'SR'};
 const ED={'ED-SBLGNT':'SBLGNT','ED-WH':'Westcott-Hort','ED-TREG':'Tregelles','ED-NA28':'NA28','ED-RP':'Robinson-Pierpont'};
 const GR={person:{first:'1. Person',second:'2. Person',third:'3. Person'},number:{singular:'Singular',plural:'Plural'},gender:{masculine:'maskulin',feminine:'feminin',neuter:'neutrum'},case:{nominative:'Nominativ',genitive:'Genitiv',dative:'Dativ',accusative:'Akkusativ',vocative:'Vokativ'},tense:{present:'Präsens',imperfect:'Imperfekt',future:'Futur',aorist:'Aorist',perfect:'Perfekt',pluperfect:'Plusquamperfekt'},voice:{active:'Aktiv',middle:'Medium',passive:'Passiv'},mood:{indicative:'Indikativ',subjunctive:'Konjunktiv',imperative:'Imperativ',infinitive:'Infinitiv',participle:'Partizip',optative:'Optativ'}};
@@ -811,7 +816,7 @@ function menuSheet(){
   const t=T(),seg=(key,opts,val)=>`<div class="seg" role="group">${opts.map(([v,l])=>`<button type="button" data-set="${key}" data-value="${v}" aria-pressed="${String(val)===String(v)}">${l}</button>`).join('')}</div>`;
   const sw=(key,label,sub)=>`<div class="set"><span>${label}<span class="sub">${sub}</span></span><button type="button" class="switch" role="switch" aria-checked="${S[key]}" data-toggle="${key}" aria-label="${label}"></button></div>`;
   openSheet('menu',head(t.menu,t.done)+`<label for="find-${appIndex}" class="note">${t.search}</label><input id="find-${appIndex}" type="search" placeholder="${t.hint}" value="${esc(query)}" autocomplete="off"><div class="results"></div>
-  ${recent.length?`<p class="note">${t.recent}</p>${recent.map(x=>`<button type="button" class="row recent-row" data-go="${x.id}"><span>${esc(recentLabel(x.id))}</span>${icon('chevron-right')}</button>`).join('')}<button type="button" class="link soft clear-recent" data-clear-recent>${t.recentClear}</button>`:''}
+  ${recent.length?`<details class="worked recent"><summary>${t.recent} (${recent.length})</summary>${recent.map(x=>`<button type="button" class="row recent-row" data-go="${x.id}"><span>${esc(recentLabel(x.id))}</span>${icon('chevron-right')}</button>`).join('')}<button type="button" class="link soft clear-recent" data-clear-recent>${t.recentClear}</button></details>`:''}
   <details class="worked"><summary>${t.examples} (${STUDY.sections.length})</summary>${STUDY.sections.map(sec=>`<button type="button" class="row" data-go="${sec.parts[0].id}"><span>${esc(refDe(sec.range))} · ${esc(pTitle(sec))}</span>${icon('chevron-right')}</button>`).join('')}</details>
   ${STUDY.layer_order.length>1?`<div class="set"><span>${t.readText}<span class="sub">${t.readTextSub}</span></span>${seg('text',STUDY.layer_order.map(k=>[k,STUDY.layers[k].label]),S.text)}</div>`:''}
   <div class="set"><span>${t.colors}</span>${seg('theme',[['auto',t.auto],['light',t.light],['dark',t.dark]],S.theme)}</div>
