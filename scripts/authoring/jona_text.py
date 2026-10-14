@@ -537,14 +537,14 @@ UNITS = [
   "Aus dem Bauch des Fisches betet Jona ein Danklied: Er war in der Tiefe dem Tod nahe und hat erfahren, dass JHWH ihn heraufholt. Auf JHWHs "
   "Wort speit der Fisch Jona an Land."),
  ("TU-JON-002-001-009", "JON.2.1-JON.2.9", "prayer", "Jonas Danklied", None,
-  "Jona beschreibt in der Sprache der Psalmen, wie er in die Tiefe des Meeres sank und JHWH sein Rufen hörte; er gelobt Opfer und bekennt: "
-  "Die Rettung gehört JHWH."),
+  "Jona beschreibt in der Sprache der Psalmen, wie JHWH ihn in die Tiefe des Meeres warf, sein Rufen hörte und ihn heraufholte; er will opfern, "
+  "seine Gelübde erfüllen und bekennt: Die Rettung gehört JHWH."),
  ("TU-JON-002-010-010", "JON.2.10", "narrative", "Ans Land gespien", None,
   "JHWH spricht zum Fisch, und dieser speit Jona aufs trockene Land."),
  ("TU-JON-003-001-010", "JON.3.1-JON.3.10", "narrative", "Ninive kehrt um",
   ["TU-JON-003-001-004", "TU-JON-003-005-010"],
   "Beim zweiten Auftrag gehorcht Jona und kündigt Ninive den Untergang in vierzig Tagen an. Vom König bis zum Vieh tut die Stadt Busse; Gott "
-  "sieht ihre Umkehr, und es reut ihn das angekündigte Unheil."),
+  "sieht ihre Umkehr, es reut ihn das angekündigte Unheil, und er führt es nicht aus."),
  ("TU-JON-003-001-004", "JON.3.1-JON.3.4", "narrative", "Die Botschaft an Ninive", None,
   "Das Wort JHWHs ergeht ein zweites Mal an Jona. Er geht in die grosse Stadt und ruft: «Noch vierzig Tage, und Ninive wird umgestürzt.»"),
  ("TU-JON-003-005-010", "JON.3.5-JON.3.10", "narrative", "Die Umkehr der Stadt", None,
@@ -557,7 +557,7 @@ UNITS = [
  ("TU-JON-004-001-004", "JON.4.1-JON.4.4", "dialogue", "Ich wusste, dass du gnädig bist", None,
   "Jona klagt, er habe gewusst, dass Gott gnädig und barmherzig ist; deshalb sei er geflohen. Er bittet um den Tod. JHWH fragt, ob sein Zorn recht ist."),
  ("TU-JON-004-005-011", "JON.4.5-JON.4.11", "narrative", "Der Rizinus und die grosse Stadt", None,
-  "Jona wartet östlich der Stadt. Gott lässt einen Rizinus wachsen und wieder verdorren; Jona will sterben. Gott hält ihm vor: Er hat Mitleid "
+  "Jona wartet östlich der Stadt. Gott lässt einen Rizinus wachsen und wieder verdorren und schickt einen sengenden Ostwind; Jona will sterben. Gott hält ihm vor: Er hat Mitleid "
   "mit einer Pflanze – soll Gott nicht Mitleid haben mit Ninive, seinen Menschen und seinem Vieh?"),
 ]
 UNITS_GSW = {
@@ -566,14 +566,14 @@ UNITS_GSW = {
  "TU-JON-001-004-016": ("Sturm uf em Meer", "Im Sturm schreied d Seelüüt zu irne Götter, und de Jona schlaaft. S Los fallt uf in; er bekännt sich zu JHWH und laat sich is Meer rüere. S Meer wird still, und d Seelüüt opfered JHWH."),
  "TU-JON-001-017-017": ("De grosse Fisch", "JHWH bstellt en grosse Fisch, wo de Jona verschluckt; drei Täg und drei Nächt isch de Jona i sim Buuch. I de hebräische Zellig isch das de Vers 2,1."),
  "TU-JON-002-001-010": ("Gebätt us de Tüüfi", "Us em Buuch vom Fisch bättet de Jona es Dankliid: Er isch i de Tüüfi em Tod nooch gsii und hät erfaare, dass JHWH in ufehollt. Uf s Wort vo JHWH chotzt de Fisch de Jona as Land."),
- "TU-JON-002-001-009": ("S Dankliid vom Jona", "De Jona beschriibt i de Spraach vo de Psalme, wie n er i d Tüüfi vom Meer abegsunke isch und JHWH sis Rüefe ghört hät; er verspricht Opfer und bekännt: D Rettig ghört JHWH."),
+ "TU-JON-002-001-009": ("S Dankliid vom Jona", "De Jona beschriibt i de Spraach vo de Psalme, wie JHWH in i d Tüüfi vom Meer gworfe, sis Rüefe ghört und in ufegholt hät; er wott opfere, sini Glübd erfüle und bekännt: D Rettig ghört JHWH."),
  "TU-JON-002-010-010": ("As Land gspeut", "JHWH redt zum Fisch, und dä chotzt de Jona uf s troche Land."),
- "TU-JON-003-001-010": ("Ninive cheert um", "Bim zweite Uftrag folget de Jona und chündet Ninive de Undergang i vierzg Täg aa. Vom König bis zum Vee tuet d Stadt Buess; Gott gseet, dass si umchered, und s aagchündt Unheil reut en."),
+ "TU-JON-003-001-010": ("Ninive cheert um", "Bim zweite Uftrag folget de Jona und chündet Ninive de Undergang i vierzg Täg aa. Vom König bis zum Vee tuet d Stadt Buess; Gott gseet, dass si umchered, s aagchündt Unheil reut en, und er macht s nöd."),
  "TU-JON-003-001-004": ("D Botschaft a Ninive", "S Wort vo JHWH chunnt es zweits Mal zum Jona. Er gaat i di gross Stadt und rüeft: «No vierzg Täg, und Ninive wird umgstürzt.»"),
  "TU-JON-003-005-010": ("D Umchehr vo de Stadt", "D Niniviter glaubed Gott und faschted. De König befiehlt Buess für Mänsche und Tier, i de Hoffnig, dass Gott umcheert. Gott gseet ires Tue und macht s Unheil nöd."),
  "TU-JON-004-001-011": ("De Zorn vom Jona und s Mitleid vo Gott", "De Jona isch toub, wil Gott gnädig isch, und wünscht sich de Tod. Mit eme Rizinus, eme Wurm und eme heisse Oschtwind stellt Gott im e Fraag: Söll er kei Mitleid ha mit Ninive, de grosse Stadt? S Buech hört offe uf."),
  "TU-JON-004-001-004": ("Ich han gwüsst, dass du gnädig bisch", "De Jona chlagt, er heig gwüsst, dass Gott gnädig und barmhärzig isch; drum sig er gflüchtet. Er bittet um de Tod. JHWH fragt, öb sin Zorn rächt isch."),
- "TU-JON-004-005-011": ("De Rizinus und di gross Stadt", "De Jona wartet östlich vo de Stadt. Gott laat en Rizinus wachse und wider verdorre; de Jona wott sterbe. Gott hebt im vor: Er hät Mitleid mit ere Pflanze – söll Gott kei Mitleid ha mit Ninive, sine Mänsche und sim Vee?"),
+ "TU-JON-004-005-011": ("De Rizinus und di gross Stadt", "De Jona wartet östlich vo de Stadt. Gott laat en Rizinus wachse und wider verdorre und schickt en heisse Oschtwind; de Jona wott sterbe. Gott hebt im vor: Er hät Mitleid mit ere Pflanze – söll Gott kei Mitleid ha mit Ninive, sine Mänsche und sim Vee?"),
 }
 
 CHAPTERS = ((1, 17), (2, 10), (3, 10), (4, 11))

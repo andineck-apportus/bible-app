@@ -218,8 +218,8 @@ SUMMARIES = [
   "De Paulus git em Titus de Uftrag, uf Kreta Ältischti iizsetze, wo glaubwürdig läbed und a de gsunde Lehr fescht haltet, und Lehrer zrächtzwiise, wo us Gwünnsucht Familie durenand bringed."),
  ("SUM-CH-TIT-002", "Was der gesunden Lehre entspricht, zeigt sich im Alltag von Alten und Jungen, Frauen, Männern und Sklaven. Grund dafür ist die erschienene Gnade Gottes, die zu einem besonnenen Leben erzieht.",
   "Was de gsunde Lehr entspricht, zeigt sich im Alltag vo Alte und Junge, Fraue, Mane und Sklave. De Grund defür isch d Gnad vo Gott, wo erschine isch und zu me bsunnene Läbe erziet."),
- ("SUM-CH-TIT-003", "Die Gemeinde soll allen Menschen freundlich begegnen, weil Gott sie nicht wegen ihrer Werke, sondern aus Erbarmen gerettet hat. Unnütze Streitfragen soll sie meiden. Reisepläne und Grüsse schliessen den Brief.",
-  "D Gmeind söll allne Mänsche fründlich begägne, wil Gott si nöd wäge irne Wärch, sondern us Erbarme grettet hät. Unnützi Striitfrage söll si meide. Reiseplän und Grüess schlüüssed de Brief ab."),
+ ("SUM-CH-TIT-003", "Die Gemeinde soll allen Menschen freundlich begegnen, weil Gott sie nicht wegen ihrer Werke, sondern aus Erbarmen gerettet hat. Unnütze Streitfragen soll Titus meiden. Reisepläne und Grüsse schliessen den Brief.",
+  "D Gmeind söll allne Mänsche fründlich begägne, wil Gott si nöd wäge irne Wärch, sondern us Erbarme grettet hät. Unnützi Striitfrage söll de Titus meide. Reiseplän und Grüess schlüüssed de Brief ab."),
 ]
 
 
