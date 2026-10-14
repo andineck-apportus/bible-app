@@ -555,7 +555,7 @@ UNITS = [
  ("TU-RUT-001-001-022", "RUT.1.1-RUT.1.22", "narrative", "Leer zurück aus Moab",
   ["TU-RUT-001-001-005", "TU-RUT-001-006-018", "TU-RUT-001-019-022"],
   "In einer Hungersnot zieht eine Familie aus Betlehem nach Moab. Noomi verliert Mann und Söhne und kehrt zurück. Ihre moabitische "
-  "Schwiegertochter Rut lässt sich nicht abweisen und geht mit ihr; in Betlehem nennt sich Noomi «Mara», die Bittere."),
+  "Schwiegertochter Rut lässt sich nicht abweisen und geht mit ihr; in Betlehem bittet Noomi die Frauen, sie nicht mehr Noomi, sondern «Mara», die Bittere, zu nennen."),
  ("TU-RUT-001-001-005", "RUT.1.1-RUT.1.5", "narrative", "Hungersnot und Tod in Moab", None,
   "Wegen einer Hungersnot zieht Elimelech mit Noomi und den Söhnen nach Moab. Elimelech stirbt; die Söhne heiraten Moabiterinnen und sterben nach etwa zehn Jahren ebenfalls. Noomi bleibt ohne Mann und Kinder zurück."),
  ("TU-RUT-001-006-018", "RUT.1.6-RUT.1.18", "narrative", "Wohin du gehst", None,
@@ -597,7 +597,7 @@ UNITS = [
   "Ein Stammbaum in zehn Gliedern verbindet Perez, den Sohn Judas und Tamars, über Boas und Obed mit David."),
 ]
 UNITS_GSW = {
- "TU-RUT-001-001-022": ("Läär zrugg us Moab", "I nere Hungersnot zieht e Familie vo Betlehem uf Moab. D Noomi verliert Maa und Söön und chunnt zrugg. Iri moabitisch Schwigertochter Rut laat sich nöd abwiise und gaat mit ere; z Betlehem nännt sich d Noomi «Mara», di Bitter."),
+ "TU-RUT-001-001-022": ("Läär zrugg us Moab", "I nere Hungersnot zieht e Familie vo Betlehem uf Moab. D Noomi verliert Maa und Söön und chunnt zrugg. Iri moabitisch Schwigertochter Rut laat sich nöd abwiise und gaat mit ere; z Betlehem bittet d Noomi d Fraue, ere nüme Noomi, sondern «Mara», di Bitter, z säge."),
  "TU-RUT-001-001-005": ("Hungersnot und Tod z Moab", "Wäg ere Hungersnot zieht de Elimelech mit de Noomi und de Söön uf Moab. De Elimelech stirbt; d Söön hürated Moabiterinne und sterbed öppe zää Jahr spöter au. D Noomi bliibt ohni Maa und Chind zrugg."),
  "TU-RUT-001-006-018": ("Wo du anegaasch", "D Noomi wott iri Schwigertöchtere heischicke. D Orpa cheert um, d Rut aber bindet sich mit eme Schwuer a d Noomi, ires Volk und ire Gott."),
  "TU-RUT-001-019-022": ("Säged mir Mara", "Z Betlehem chlagt d Noomi, JHWH heig si läär zruggbracht. Si chömed am Aafang vo de Gerschteernt aa."),

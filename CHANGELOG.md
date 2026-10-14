@@ -2,6 +2,12 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.42 — 2026-10-14 — Zwei Urteile in Zusammenfassungen korrigiert
+
+- **Markus 16:** Dass der kürzere und der längere Markusschluss spätere Ergänzungen sind, steht nicht mehr als Tatsache da, sondern als verbreitetes textkritisches Urteil, mit den Belegen (SBLGNT-Doppelklammern ⟦ ⟧; Sinaiticus 01 und Vaticanus 03 enden nach den CNTR-Transkriptionen mit Markus 16,8) und beim längeren Schluss mit der Gegenposition (Minderheit: ursprünglich; kirchlich weithin als kanonisch anerkannt). Betroffen: TU-MRK-016-001-020 (auch Titel), TU-MRK-016-001-008, TU-MRK-016-009-020 (Titel ohne «spätere Ergänzung»), SUM-CH-MRK-016.
+- **Rut 1:** Noomi nennt sich nicht selbst «Mara», sondern bittet die Frauen, sie so zu nennen (Rut 1,20); TU-RUT-001-001-022.
+- Hochdeutsch und Züridüütsch; frühere Fassungen im revision_log.
+
 ## v0.41 — 2026-10-14 — Zusammenfassungen geprüft, «Zuletzt gelesen»
 
 - **Zusammenfassungen aller Zoomstufen** gegen die eigenen Übersetzungen bzw. den Bibeltext geprüft (KI-Durchgang): rund 150 Korrekturen in Abschnitten, Kapiteln, Büchern, Buchgruppen und Testamenten, z. B. Obadja 15–18 (Entronnene, Josef als Flamme), Rut 1,1–5 (Reihenfolge: Elimelech stirbt vor den Heiraten), Jona 3 (Gott führt das Unheil nicht aus), Markus 3,6 (sie beraten, statt beschliessen), Matthäus 6,14–15 (Bedingung der Vergebung). Die Mundart-Fassungen der Buch- und Gruppenzusammenfassungen waren eigenständige Texte und sind jetzt Übertragungen des Hochdeutschen. Frühere Fassungen im revision_log.
