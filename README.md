@@ -2,7 +2,7 @@
 
 Git-versionierter Bibel-Wissensfundus: Quellen, Textbefunde, konkurrierende Interpretationen, Prinzipien und kontextabhängige Anwendungen nachvollziehbar miteinander verbinden.
 
-**Stand: 14. Oktober 2026 · UI v0.47 (Lesestrom) · Urtext: Matthäus, Markus, Lukas, Johannes, Philipper, Titus, 1–3 Johannes (Griechisch), Rut, Obadja, Jona (Hebräisch); ausgearbeitet: das Vaterunser (Mt 6,5–15; Lk 11,1–4) sowie Markus, Johannes, Rut, Obadja, Jona, Philipper, Titus und 1–3 Johannes ganz; Wörterbuch (UBS, CC BY-SA) im Wortblatt. Der Lesetext geht immer vom Urtext aus.**
+**Stand: 14. Oktober 2026 · UI v0.48 (Lesestrom) · Urtext: Matthäus, Markus, Lukas, Johannes, Philipper, Titus, 1–3 Johannes (Griechisch), Rut, Obadja, Jona (Hebräisch); ausgearbeitet: das Vaterunser (Mt 6,5–15; Lk 11,1–4) sowie Markus, Johannes, Rut, Obadja, Jona, Philipper, Titus und 1–3 Johannes ganz; Wörterbuch (UBS, CC BY-SA) im Wortblatt. Der Lesetext geht immer vom Urtext aus.**
 
 Dies ist der Konzept- und Datenprototyp, noch keine fertige Benutzer-App. Vorhanden sind 4509 strukturierte Datensätze, darunter:
 - der **ganze griechische Text des Markusevangeliums** (SBLGNT, 11 286 Wörter mit stabilen IDs) mit Lemma, Morphologie, Syntaxrollen, Referenten und Glossen aus MACULA Greek als eigener Annotationsschicht,
@@ -106,7 +106,7 @@ python3 scripts/import_openbible_crossrefs.py bible_databases/sources/extras/cro
 
 Die Importer schreiben Quelle, Upstream-Commit, SHA-256, Lizenz und Importdatum in die Datensätze und brechen bei unsicherer Zuordnung ab bzw. führen nicht zuordenbare Einträge in `reports/` auf, statt sie zu raten. `scripts/import_morphgnt.py` ist der frühere Pilot-Importer (v0.6) und wird nur noch durch `scripts/test_import.py` geprüft.
 
-Prüfungen für den Lesestrom (Node.js ≥ 18): `node scripts/test_reading_stream.cjs`; Bedienung zusätzlich mit `npm install --no-save jsdom` und `node scripts/test_reading_stream_dom.cjs`.
+Prüfungen für den Lesestrom (Node.js ≥ 18): `node scripts/test_reading_stream.cjs`; Bedienung zusätzlich mit `npm install --no-save jsdom` und `node scripts/test_reading_stream_dom.cjs`; Vorlesen mit Playwright: `node scripts/test_reading_stream_vorlesen.cjs`.
 
 ## Ablage und Historie
 

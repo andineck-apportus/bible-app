@@ -265,6 +265,16 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
   #bible-stream .reader{left:230px}
   #bible-stream .immersed aside{opacity:.25}
 }
+#bible-stream .player{position:absolute;left:50%;transform:translateX(-50%);bottom:calc(64px + env(safe-area-inset-bottom,0px));z-index:5;width:min(560px,calc(100% - 16px));display:flex;align-items:center;gap:2px;padding:3px 3px 3px 16px;border:1px solid var(--rule);border-radius:999px;background:color-mix(in srgb,var(--bg) 94%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:bottom .25s ease}
+#bible-stream .player[hidden]{display:none}
+#bible-stream .immersed .player{bottom:calc(10px + env(safe-area-inset-bottom,0px))}
+#bible-stream .player-label{flex:1;min-width:0;font-size:13px;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--muted)}
+#bible-stream .player .icon-btn{width:40px;height:40px;border-radius:50%!important}
+#bible-stream .stream-entry.reading:not(.verse){background:var(--soft);border-radius:8px;box-shadow:0 0 0 8px var(--soft)}
+#bible-stream .stream-entry.verse.reading .stream-copy{background:var(--soft);border-radius:4px;box-shadow:0 0 0 3px var(--soft);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+#bible-stream .app .read-start{display:inline-grid;place-items:center;width:30px;height:30px;vertical-align:middle;margin:-4px 0 0 6px;color:var(--muted);border-radius:50%}
+#bible-stream .app .read-start:hover{background:var(--soft);color:var(--ink)}
+#bible-stream .app .read-start svg{width:15px;height:15px;flex-basis:15px}
 @media (prefers-reduced-motion:reduce){#bible-stream .bar,#bible-stream .logo-wrap .logo{transition:none}}
 </style></head><body>
 <div id="bible-stream"><div class="app"></div></div>
@@ -316,7 +326,7 @@ const ui={
   deeper:['Zu den Testamenten','Zu den Buchgruppen','Zu den Büchern','Zu den Kapiteln','Zu den Abschnitten','Text lesen'],
   noSummary:'Zu diesem Kapitel gibt es noch keine Zusammenfassung.',noPart:'Für diesen Abschnitt gibt es noch keine Zusammenfassung.',placeholder:'Text noch nicht eingebunden',
   verses:'Verse',loadNext:'Weiterlesen',loadPrev:'Früheres anzeigen',end:'Ende',empty:'Kein passendes Buch und keine gültige Bibelstelle.',
-  example:'Ausgearbeitet',examples:'Ausgearbeitete Stellen',recent:'Zuletzt gelesen',recentClear:'Verlauf löschen (nur auf diesem Gerät gespeichert)',understand:'Diesen Abschnitt verstehen',toolUnderstand:'Verstehen',toolHistory:'Geschichte',background:'Hintergrund damals',toSource:'Bis zur Quelle',then:'Damals',more:'Mehr zu Vers',
+  example:'Ausgearbeitet',examples:'Ausgearbeitete Stellen',recent:'Zuletzt gelesen',readAloud:'Ab hier vorlesen',raPrev:'Zurück',raNext:'Weiter',raPlay:'Weiterlesen',raPause:'Anhalten',raClose:'Vorlesen beenden',raEnd:'Ende – kein weiterer Text',raNone:'Dieser Browser kann nicht vorlesen.',recentClear:'Verlauf löschen (nur auf diesem Gerät gespeichert)',understand:'Diesen Abschnitt verstehen',toolUnderstand:'Verstehen',toolHistory:'Geschichte',background:'Hintergrund damals',toSource:'Bis zur Quelle',then:'Damals',more:'Mehr zu Vers',
   readText:'Lesetext',readTextSub:'Übersetzungen aus dem Urtext; die Mundart-Fassung ist ein Entwurf, der noch von einer muttersprachlichen Person geprüft wird.',colors:'Farben',auto:'Auto',light:'Hell',dark:'Dunkel',size:'Textgrösse',language:'Sprache der Bedienung',
   advanced:'Urtext und Details',advancedSub:'Für Fortgeschrittene: Griechisch Wort für Wort, Grammatik, Vergleich der Textausgaben, Quellen.',
   inline:'Andere Lesarten im Text zeigen',inlineSub:'Zeigt unter einem Vers, wo alte Handschriften anders lauten.',bgInline:'Hintergrund im Text zeigen',flow:'Verse fortlaufend',flowSub:'Verse als Fliesstext hintereinander statt je auf einer eigenen Zeile.',translit:'Umschrift zeigen',translitSub:'Griechische Wörter zusätzlich in unserer Schrift, z. B. ponēroú.',pron:'Aussprache',pronSub:'Neugriechisch: Stimme des Geräts. Schulaussprache: wie im Theologiestudium üblich, gelesen von einer deutschen Stimme. Beides nähert die Aussprache zur Zeit Jesu nur an.',pronModern:'Neugriechisch',pronSchool:'Schulaussprache',voice:'Stimme',voiceAuto:'Automatisch',noVoice:'Auf diesem Gerät ist keine passende Stimme installiert. In den Systemeinstellungen lassen sich Stimmen nachladen (z. B. Griechisch).',rate:'Tempo',slow:'Langsam',normal:'Normal',sample:'Probe anhören',bgInlineSub:'Zeigt unter einem Vers kurze Hinweise auf Zeit, Ort und Kultur damals.',about:'Über diese Fassung',sourcesMap:'Quellen und Rechte',sourcesMapSub:'Welche Quellen es gibt, was wir dürfen, was wir nutzen'},
@@ -325,7 +335,7 @@ const ui={
   deeper:['Testaments','Book groups','Books','Chapters','Passages','Read the text'],
   noSummary:'No summary for this chapter yet.',noPart:'No summary for this passage yet.',placeholder:'Text not yet available',
   verses:'verses',loadNext:'Continue reading',loadPrev:'Show earlier',end:'End',empty:'No matching book or valid reference.',
-  example:'Worked out',examples:'Worked passages',recent:'Recently read',recentClear:'Clear history (stored on this device only)',understand:'Understand this passage',toolUnderstand:'Understand',toolHistory:'History',background:'Background then',toSource:'Trace to the source',then:'Back then',more:'More on verse',
+  example:'Worked out',examples:'Worked passages',recent:'Recently read',readAloud:'Read aloud from here',raPrev:'Back',raNext:'Next',raPlay:'Play',raPause:'Pause',raClose:'Stop reading',raEnd:'End – no more text',raNone:'This browser cannot read aloud.',recentClear:'Clear history (stored on this device only)',understand:'Understand this passage',toolUnderstand:'Understand',toolHistory:'History',background:'Background then',toSource:'Trace to the source',then:'Back then',more:'More on verse',
   readText:'Reading text',readTextSub:'Translations from the original text; the dialect version is a draft awaiting native-speaker review.',colors:'Colours',auto:'Auto',light:'Light',dark:'Dark',size:'Text size',language:'Interface language',
   advanced:'Original text and details',advancedSub:'For advanced readers: Greek word by word, grammar, edition comparison, sources.',
   inline:'Show other readings in the text',inlineSub:'Shows below a verse where old manuscripts differ.',bgInline:'Show background in the text',flow:'Continuous verses',flowSub:'Verses run on as one paragraph instead of one per line.',translit:'Show transliteration',translitSub:'Greek words also in Latin letters, e.g. ponēroú.',pron:'Pronunciation',pronSub:'Modern Greek: device voice. Academic: as commonly taught, read by a German voice. Both only approximate first-century pronunciation.',pronModern:'Modern Greek',pronSchool:'Academic',voice:'Voice',voiceAuto:'Automatic',noVoice:'No matching voice installed on this device.',rate:'Speed',slow:'Slow',normal:'Normal',sample:'Play sample',bgInlineSub:'Shows short notes on time, place and culture below a verse.',about:'About this version',sourcesMap:'Sources and rights',sourcesMapSub:'Which sources exist, what we may use, what we use'}};
@@ -378,7 +388,7 @@ function search(q){q=q.trim();if(!q)return[];const match=q.match(/^(.+?)\s*(\d+)
 
 /* ---------- Hilfen ---------- */
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const ICONS={'arrow-up':'M12 19V5m-6 6 6-6 6 6','arrow-down':'M12 5v14m-6-6 6 6 6-6','chevron-right':'m9 6 6 6-6 6','menu':'M4 7h16M4 12h16M4 17h16','list':'M9 6h11M9 12h11M9 18h11M4 6h1M4 12h1M4 18h1','plus':'M12 6v12M6 12h12','x':'m6 6 12 12M6 18 18 6','check':'M5 12.5l4.5 4.5L19 7.5','speak':'M11 5 6 9H3v6h3l5 4zM15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13','understand':'M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1 2V16h5.2v-.2c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z','history':'M3 12a9 9 0 1 0 3-6.7M3 4v4h4M12 7v5l3 2'};
+const ICONS={'arrow-up':'M12 19V5m-6 6 6-6 6 6','arrow-down':'M12 5v14m-6-6 6 6 6-6','chevron-right':'m9 6 6 6-6 6','menu':'M4 7h16M4 12h16M4 17h16','list':'M9 6h11M9 12h11M9 18h11M4 6h1M4 12h1M4 18h1','plus':'M12 6v12M6 12h12','x':'m6 6 12 12M6 18 18 6','check':'M5 12.5l4.5 4.5L19 7.5','play':'M8 5.5v13l10.5-6.5z','pause':'M8.5 5.5v13M15.5 5.5v13','prev':'M18 6.5 10 12l8 5.5zM6.5 6v12','next':'M6 6.5 14 12l-8 5.5zM17.5 6v12','speak':'M11 5 6 9H3v6h3l5 4zM15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13','understand':'M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1 2V16h5.2v-.2c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z','history':'M3 12a9 9 0 1 0 3-6.7M3 4v4h4M12 7v5l3 2'};
 /* ---------- Umschrift (Griechisch → lateinische Schrift) ----------
    Wissenschaftliche Umschrift nach dem Muster des SBL-Handbuchs: η = ē, ω = ō, θ = th, φ = ph, χ = ch, ψ = ps,
    υ = y (in Diphthongen u), γγ/γκ/γξ/γχ = ng/nk/nx/nch, Spiritus asper = h, betonte Silbe (Akut/Zirkumflex, nur die erste je Wort) als Akut. */
@@ -581,14 +591,14 @@ function entry(id){
   const heading=n.level===5&&n.part?pTitle(n.part):(n.level===5?(lang==='de'?'Verse ':'Verses ')+n.v+'–'+n.last:title(n));
   const copy=text?`<p class="stream-copy">${esc(text)}</p>`:`<p class="stream-copy quiet">${n.level===5?t.noPart:t.noSummary}</p>`;
   const ov=n.level<=3&&overviewFor(n).length?`<span class="part-tools"><button type="button" class="tool" data-overview="${id}" aria-label="${t.background}">${icon('history')}<span>${t.toolHistory}</span></button></span>`:'';
-  return `<article class="stream-entry" data-stream="${id}">${eyebrow(n)?`<p class="eyebrow">${esc(eyebrow(n))}</p>`:''}<h2>${esc(heading)}</h2>${n.part?tools(id):ov}${copy}<div class="actions">${deep}</div></article>`;
+  return `<article class="stream-entry" data-stream="${id}">${eyebrow(n)?`<p class="eyebrow">${esc(eyebrow(n))}</p>`:''}<h2>${esc(heading)}${readBtn(id)}</h2>${n.part?tools(id):ov}${copy}<div class="actions">${deep}</div></article>`;
 }
 function tools(id,which='uh'){const t=T();return `<span class="part-tools">${which.includes('u')?`<button type="button" class="tool" data-study="${id}" aria-label="${t.understand}">${icon('understand')}<span>${t.toolUnderstand}</span></button>`:''}${which.includes('h')?`<button type="button" class="tool" data-background="${id}" aria-label="${t.background}">${icon('history')}<span>${t.toolHistory}</span></button>`:''}</span>`;}
 const sheetTools=(id,which)=>`<div class="sheet-tools"><span class="note">${lang==='de'?'Abschnitt':'Passage'}: ${esc(nodes.get(id).part?pTitle(nodes.get(id).part):'')}</span>${tools(id,which)}</div>`;
 function verseEntry(n){
   const t=T(),text=summary(n);let lead='';
-  if(n.v===1)lead+=`<h2 class="chapter-head">${esc(bookName(n)+' '+n.c)}</h2>`;
-  const p=nodes.get(n.parent);if(p.part&&p.v===n.v)lead+=`<div class="part-head"><h3>${esc(pTitle(p.part))}</h3>${tools(p.id)}</div>`;
+  if(n.v===1)lead+=`<h2 class="chapter-head">${esc(bookName(n)+' '+n.c)}${readBtn(n.id)}</h2>`;
+  const p=nodes.get(n.parent);if(p.part&&p.v===n.v)lead+=`<div class="part-head"><h3>${esc(pTitle(p.part))}${readBtn(n.id)}</h3>${tools(p.id)}</div>`;
   if(!text)return `<article class="stream-entry verse placeholder" data-stream="${n.id}">${lead}<p class="verse-line"><span class="vno">${n.v}</span><span class="stream-copy">${S.flow?'…':t.placeholder}</span></p></article>`;
   const alts=altsFor(n);
   const bgs=bgFor(n);
@@ -859,10 +869,59 @@ function navSheet(reset){
 function levelsSheet(){const n=nodes.get(current);openSheet('levels',head(T().levelsTitle)+T().levels.map((name,i)=>`<button type="button" class="row ${i===n.level?'current':''}" data-level="${i}"><span>${name}</span>${icon('chevron-right')}</button>`).join(''));}
 
 /* ---------- Ereignisse ---------- */
+/* ---------- Vorlesen (fortlaufend, Web Speech API) ----------
+   Liest ab einem Titel alle folgenden Einträge derselben Ebene ohne Unterbruch vor (Überschrift und Zusammenfassung bzw.
+   Verse mit Kapitel- und Abschnittstitel). Einträge ohne Text werden übersprungen. Pause bricht die Ausgabe ab und setzt
+   am Satzanfang wieder ein (pause/resume ist auf mehreren Geräten unzuverlässig). Lange Texte in Sätze geteilt. */
+const readBtn=id=>`<button type="button" class="read-start" data-read="${id}" aria-label="${T().readAloud}">${icon('play')}</button>`;
+const RA={on:false,playing:false,level:0,idx:0,dir:1,chunks:[],ci:0,tok:0,skips:0};
+const spokenRefs=t=>String(t||'').replace(MARK_RE,(m,r)=>{const [a,z]=r.split('-');const [b,c1,v1]=a.split('.');const bk=DATA[CODE_IDX[b]];let out=(bk?bk[lang]:b)+(c1?' '+c1:'')+(v1?', '+v1:'');
+  if(z){const [b2,c2,v2]=z.split('.');out+=(lang==='de'?' bis ':' to ')+(b2!==b?((DATA[CODE_IDX[b2]]||{})[lang]||b2)+' ':'')+(c2&&c2!==c1?c2+(v2?', '+v2:''):(v2||c2||''));}return out;})
+  .replace(/[⟦⟧~*]/g,'').replace(/\s+/g,' ').trim();
+function readText(n){const s=summary(n);if(!s)return '';
+  if(n.level===6){let pre='';const p=nodes.get(n.parent);if(n.v===1)pre+=title(nodes.get(p.parent))+'. ';if(p.part&&p.v===n.v)pre+=pTitle(p.part)+'. ';return pre+s;}
+  return (n.level===5&&n.part?pTitle(n.part):title(n))+'. '+s;}
+function chunksOf(text){const parts=text.match(/[^.!?;:]+[.!?;:]*[»"”]?\s*/g)||[text];const out=[];let cur='';
+  for(const p of parts){if(cur&&(cur+p).length>220){out.push(cur.trim());cur='';}cur+=p;}if(cur.trim())out.push(cur.trim());return out;}
+function raLabel(n){return n.level===6?title(n):n.level===5&&n.part?pTitle(n.part)+' · '+refDe(n.part.range):title(n);}
+const playerEl=()=>app.querySelector('.player');
+function raButtons(){const pl=playerEl(),t=T();if(!pl)return;const b=pl.querySelector('[data-ra=toggle]');b.innerHTML=icon(RA.playing?'pause':'play');b.setAttribute('aria-label',RA.playing?t.raPause:t.raPlay);
+  pl.querySelector('[data-ra=prev]').setAttribute('aria-label',t.raPrev);pl.querySelector('[data-ra=next]').setAttribute('aria-label',t.raNext);pl.querySelector('[data-ra=close]').setAttribute('aria-label',t.raClose);pl.setAttribute('aria-label',t.readAloud);}
+function raMark(id){reader.querySelectorAll('.stream-entry.reading').forEach(el=>el.classList.remove('reading'));if(!RA.on||!id)return;
+  let el=reader.querySelector(`[data-stream="${id}"]`);const n=nodes.get(id);
+  if(!el&&nodes.get(current).level===RA.level){if(n.si>=readerEnd&&n.si<readerEnd+10){loadMore();el=reader.querySelector(`[data-stream="${id}"]`);if(!el){setTimeout(()=>{if(RA.on&&streams[RA.level][RA.idx]===id)raMark(id);},400);return;}}else{go(id,true);setTimeout(()=>{if(RA.on&&streams[RA.level][RA.idx]===id)raMark(id);},400);return;}}
+  if(!el)return;el.classList.add('reading');const r=el.getBoundingClientRect(),v=reader.getBoundingClientRect();
+  if((r.top<v.top+60||r.bottom>v.bottom-120)&&el.scrollIntoView)try{el.scrollIntoView({block:'center',behavior:'smooth'});}catch(e){el.scrollIntoView();}}
+function raSpeak(){if(!RA.on||!RA.playing)return;const tok=++RA.tok;
+  if(RA.ci>=RA.chunks.length){RA.idx++;RA.dir=1;raLoad();return;}
+  const {u}=utter(RA.chunks[RA.ci],'de');const done=()=>{if(tok!==RA.tok)return;RA.ci++;raSpeak();};u.onend=done;u.onerror=done;synth.speak(u);}
+function raLoad(){const ids=streams[RA.level];
+  if(RA.idx<0){RA.idx=0;RA.dir=1;}
+  if(RA.idx>=ids.length){raEnd();return;}
+  const id=ids[RA.idx],tok=++RA.tok;
+  const cont=()=>{if(!RA.on||tok!==RA.tok)return;const n=nodes.get(id),txt=spokenRefs(readText(n));
+    if(!txt){if(++RA.skips>500){raEnd();return;}RA.idx+=RA.dir;if(RA.idx<0){RA.dir=1;RA.idx=0;}raLoad();return;}
+    RA.skips=0;RA.dir=1;RA.chunks=chunksOf(txt);RA.ci=0;playerEl().querySelector('.player-label').textContent=raLabel(n);raMark(id);raSpeak();};
+  const p=needData(codesOf([id]));if(p)p.then(cont);else cont();}
+function raEnd(){RA.playing=false;RA.tok++;try{synth.cancel();}catch(e){}raButtons();playerEl().querySelector('.player-label').textContent=T().raEnd;}
+function readStart(id){const n=nodes.get(id);if(!n)return;
+  if(!synth||!globalThis.SpeechSynthesisUtterance){app.querySelector('.live').textContent=T().raNone;return;}
+  try{synth.cancel();synth.speak(new SpeechSynthesisUtterance(''));}catch(e){}// in der Geste starten (iOS)
+  Object.assign(RA,{on:true,playing:true,level:n.level,idx:n.si,dir:1,ci:0,chunks:[],skips:0});
+  playerEl().hidden=false;raButtons();raLoad();}
+function raControl(a){if(!RA.on)return;
+  if(a==='close'){RA.on=false;RA.playing=false;RA.tok++;try{synth.cancel();}catch(e){}playerEl().hidden=true;raMark(null);return;}
+  if(a==='toggle'){if(RA.playing){RA.playing=false;RA.tok++;try{synth.cancel();}catch(e){}}else{RA.playing=true;try{synth.cancel();}catch(e){}if(RA.idx>=streams[RA.level].length){RA.idx=0;}if(RA.chunks.length&&RA.ci<RA.chunks.length)raSpeak();else raLoad();}raButtons();return;}
+  RA.tok++;try{synth.cancel();}catch(e){}
+  if(a==='next'){RA.dir=1;RA.idx++;raLoad();}
+  else if(a==='prev'){if(RA.ci>1){RA.ci=0;raSpeak();return;}RA.dir=-1;RA.idx--;raLoad();}}
+app.insertAdjacentHTML('beforeend',`<div class="player" role="region" hidden><span class="player-label" aria-live="polite"></span><button type="button" class="icon-btn" data-ra="prev">${icon('prev')}</button><button type="button" class="icon-btn" data-ra="toggle">${icon('pause')}</button><button type="button" class="icon-btn" data-ra="next">${icon('next')}</button><button type="button" class="icon-btn" data-ra="close">${icon('x')}</button></div>`);
 app.addEventListener('click',e=>{
   const b=e.target.closest('button,[data-close],[role=button]');
   if(!b){if(e.target.closest('.reader'))app.classList.toggle('immersed');return;}
   if(b.dataset.dec!==undefined){const c=b.closest('[data-ref]');if(c){decisionSheet(c.dataset.ref,Number(b.dataset.dec));return;}}
+  if(b.dataset.read){e.stopPropagation();readStart(b.dataset.read);return;}
+  if(b.dataset.ra){raControl(b.dataset.ra);return;}
   if(b.dataset.speak!==undefined){e.preventDefault();e.stopPropagation();speak(b.dataset.speak,b.dataset.speakLang,b.dataset.speakTr);return;}
   if(b.hasAttribute('data-close')){closeSheet();return;}
   if(b.dataset.deep){const n=nodes.get(b.dataset.deep);current=b.dataset.deep;go(remembered.get(current)||n.children[0]);return;}
