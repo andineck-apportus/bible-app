@@ -573,12 +573,10 @@ function entry(id){
   const text=summary(n);
   const deep=n.children.length?`<button type="button" class="link" data-deep="${id}">${t.deeper[n.level]}${icon('arrow-down')}</button>`:'';
 
-  const ex=(n.level===3||n.level===4)?STUDY.sections.filter(sec=>{const g=rangeOf(sec.range);return DATA[n.b].code===g.code&&(n.level===3||n.c===g.c);}):[];
-  const example=ex.map(sec=>`<button type="button" class="example" data-go="${sec.parts[0].id}"><span>${t.example}: ${esc(refDe(sec.range))} · ${esc(pTitle(sec))}</span>${icon('chevron-right')}</button>`).join('');
   const heading=n.level===5&&n.part?pTitle(n.part):(n.level===5?(lang==='de'?'Verse ':'Verses ')+n.v+'–'+n.last:title(n));
   const copy=text?`<p class="stream-copy">${esc(text)}</p>`:`<p class="stream-copy quiet">${n.level===5?t.noPart:t.noSummary}</p>`;
   const ov=n.level<=3&&overviewFor(n).length?`<span class="part-tools"><button type="button" class="tool" data-overview="${id}" aria-label="${t.background}">${icon('history')}<span>${t.toolHistory}</span></button></span>`:'';
-  return `<article class="stream-entry" data-stream="${id}">${eyebrow(n)?`<p class="eyebrow">${esc(eyebrow(n))}</p>`:''}<h2>${esc(heading)}</h2>${n.part?tools(id):ov}${copy}${example}<div class="actions">${deep}</div></article>`;
+  return `<article class="stream-entry" data-stream="${id}">${eyebrow(n)?`<p class="eyebrow">${esc(eyebrow(n))}</p>`:''}<h2>${esc(heading)}</h2>${n.part?tools(id):ov}${copy}<div class="actions">${deep}</div></article>`;
 }
 function tools(id,which='uh'){const t=T();return `<span class="part-tools">${which.includes('u')?`<button type="button" class="tool" data-study="${id}" aria-label="${t.understand}">${icon('understand')}<span>${t.toolUnderstand}</span></button>`:''}${which.includes('h')?`<button type="button" class="tool" data-background="${id}" aria-label="${t.background}">${icon('history')}<span>${t.toolHistory}</span></button>`:''}</span>`;}
 const sheetTools=(id,which)=>`<div class="sheet-tools"><span class="note">${lang==='de'?'Abschnitt':'Passage'}: ${esc(nodes.get(id).part?pTitle(nodes.get(id).part):'')}</span>${tools(id,which)}</div>`;
