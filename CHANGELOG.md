@@ -2,6 +2,12 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.53 — 2026-10-14 — Anhören: anhalten, Aussprache auch für Hebräisch
+
+- Alle Anhören-Knöpfe (Wörter, Proben) zeigen während der Wiedergabe das Pausenzeichen; ein erneuter Klick hält an. Läuft gerade das Vorlesen, wird es dabei angehalten. «Vorlesen probehören» als runder Knopf wie die übrigen (kein Zeilenumbruch mehr).
+- Aussprache-Einstellung gilt jetzt für Griechisch und Hebräisch: «Heutig» (Gerätestimme Neugriechisch bzw. Neuhebräisch) oder «Schulaussprache» (Umschrift, deutsche Stimme); Aramäisch immer über die Umschrift. Stimmenwahl je Sprache (Griechisch, Hebräisch bzw. Stimme für die Umschrift); Proben für Griechisch, Hebräisch und Aramäisch.
+- Hinweis zu besseren Stimmen um Mac und Chrome ergänzt.
+
 ## v0.52 — 2026-10-14 — Sprachprüfung aller Übersetzungen und Zusammenfassungen
 
 - **Neue Regel** (AGENTS.md): Nach der inhaltlichen Prüfung folgt bei jeder Arbeit eine sprachliche Prüfung in allen Sprachen und Übersetzungsschichten; Bibeltext nur so weit geglättet, wie Treue zum Urtext, Zeitform, Satzart und Wortzuordnung erhalten bleiben. Autorenwerkzeuge übernehmen Datum und Grund einer Überarbeitung aus `BIBLE_REVISION_DATE`/`BIBLE_REVISION_REASON`.
