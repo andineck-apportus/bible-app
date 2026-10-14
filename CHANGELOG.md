@@ -2,6 +2,10 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.51 — 2026-10-14 — Johannes: Zusammenfassungen sprachlich korrigiert
+
+- Kana (Kapitel 2 und Abschnitt 2,1–12): wie in 2,3–5 wiedergegeben («Sie haben keinen Wein mehr» – «seine Stunde sei noch nicht gekommen» – die Mutter sagt den Dienern, sie sollen tun, was er ihnen sagt), statt «heisst die Diener tun» und ohne deutendes «doch». Ebenso 4,16 und 5,8 ohne «heissen + Grundform». Mundart angeglichen; frühere Fassungen im revision_log.
+
 ## v0.50 — 2026-10-14 — Vorlesen natürlicher
 
 - **Zusammenhängend lesen:** Verse bis zum nächsten Titel werden als ein Text übergeben und nur an echten Satzenden geteilt (nicht nach Abkürzungen, Zahlen, «:» oder «;»), damit die Satzmelodie über Versgrenzen läuft; überlange Sätze werden an «;», «:» bzw. Kommas geteilt. Anzeige und Markierung folgen dem Vers, in dem der gesprochene Abschnitt beginnt, und, wo die Stimme es meldet, Wort für Wort.
