@@ -27,6 +27,7 @@ assert.equal(model.sibling('v65-22-21', 1), null);
 assert.equal(model.sibling('v0-1-1', -1), null);
 assert(!html.includes('globalThis.lucide'));
 assert(!/src=["']https?:/.test(html));
+assert(html.includes('ill-s-kana')&&html.includes('ILL-SYM-JHN-002-001-012'),'Bildsprache: Bibliothek und Bilder eingebettet');
 console.log('PASS: complete streams, summaries, parent links, canonical refs, search, boundaries, standalone dependencies.');
 
 const S = model.STUDY;
