@@ -210,6 +210,31 @@ for vid, rows in wit_readings.items():
     bundle(f"b/{ref_book(variants_extra[vid]['ref'])}").setdefault("readings", {})[vid] = rows
 for vid, v in variants_extra.items():
     bundle(f"b/{ref_book(v['ref'])}").setdefault("src_variants", {})[vid] = v
+# Bildsprache: Stile (Legende, Bausteinbibliothek) im Kern; Bilder im Paket ihres Buchs (Buchebene in b/_overview).
+# Schlüssel im Lesestrom: Buch «JHN», Kapitel «JHN.2», Abschnitt = ID der Texteinheit.
+import localizations as _l10n  # noqa: E402
+ill_styles, ill_recs = {}, {}
+for p in sorted((ROOT / "data/illustrations").rglob("*.json")):
+    r = json.loads(p.read_text(encoding="utf-8"))
+    if r.get("status") == "deprecated":
+        continue
+    (ill_styles if r["type"] == "illustration_style" else ill_recs)[r["id"]] = r
+ill_core = {"styles": {}, "items": {}}
+for sid, st in ill_styles.items():
+    ill_core["styles"][st["key"]] = {"id": sid, "label": st["labels"], "description": st.get("description_de"),
+                                     "figures": st.get("figures", []), "library": (ROOT / st["library"]).read_text(encoding="utf-8")}
+ill_l10n = _l10n.load(ill_recs)
+for rid, r in ill_recs.items():
+    st = ill_styles[r["style"]]
+    key = r["target"] if r["level"] == "section" else r["reference"]
+    item = {"id": rid, "style": st["key"], "level": r["level"], "ref": r["reference"], "depicts": r.get("depicts", []),
+            "alt": r["alt_de"], "note": r.get("note_de"), "svg": (ROOT / r["file"]).read_text(encoding="utf-8").strip()}
+    bname = "b/_overview" if r["level"] in ("bible", "testament", "group", "book") else f"b/{ref_book(r['reference'])}"
+    bundle(bname).setdefault("ill", {}).setdefault(key, {})[st["key"]] = item
+    for lg, f in ill_l10n.get(rid, {}).items():
+        m = {k2: f[k1] for k1, k2 in (("alt_de", "alt"), ("note_de", "note")) if k1 in f}
+        if m:
+            bundle(f"l/{lg}/common").setdefault("i18n", {})[rid] = m
 core_sums = {}
 for sid, x in summaries.items():
     for lg, f in (x.get("i18n") or {}).items():
@@ -274,7 +299,7 @@ def page(inline):
     t = template
     for marker, payload in (("/*__STUDY__*/null", core_study), ("/*__NAV__*/null", nav), ("/*__SUMMARIES__*/null", core_sums),
                             ("/*__BACKGROUND__*/null", []), ("/*__SOURCES__*/null", core_src), ("/*__XREF__*/null", core_xref),
-                            ("/*__MANIFEST__*/null", manifest), ("/*__INLINE__*/null", inline), ("/*__CATALOG__*/null", catalog)):
+                            ("/*__MANIFEST__*/null", manifest), ("/*__INLINE__*/null", inline), ("/*__CATALOG__*/null", catalog), ("/*__ILL__*/null", ill_core)):
         assert t.count(marker) == 1, marker
         t = t.replace(marker, dump(payload))
     return t

@@ -245,6 +245,24 @@ def main():
                 if x.get("after"):
                     check_tokens(rel, f"extra_words/ketiv_without_qere[{i}].after", [x["after"]])
                 check_ref(rel, f"extra_words/ketiv_without_qere[{i}].ref", x.get("ref")); ref_count += 1
+        if r.get("type") == "illustration":
+            # Bild: Zeichnung vorhanden, Stil vorhanden, gezeigte Figuren in der Legende des Stils, Ziel vorhanden
+            if not (ROOT / str(r.get("file", ""))).is_file():
+                errors.append(f"{rel}: Bilddatei {r.get('file')} fehlt")
+            st = records.get(r.get("style"), (None, {}))[1]
+            if st.get("type") != "illustration_style":
+                errors.append(f"{rel}: Stil {r.get('style')} fehlt")
+            else:
+                known = {f.get("symbol") for f in st.get("figures") or []}
+                for d in r.get("depicts") or []:
+                    if d not in known:
+                        errors.append(f"{rel}: Figur {d} fehlt in der Legende von {r.get('style')}")
+            if r.get("target") and r["target"] not in records:
+                errors.append(f"{rel}: Ziel {r['target']} unbekannt")
+            if r.get("level") not in ("bible", "testament", "group", "book", "chapter", "section"):
+                errors.append(f"{rel}: level {r.get('level')!r} ungültig")
+        if r.get("type") == "illustration_style" and r.get("library") and not (ROOT / r["library"]).is_file():
+            errors.append(f"{rel}: Bibliothek {r['library']} fehlt")
         if r.get("type") == "lexicon" and not isinstance(r.get("entries"), dict):
             errors.append(f"{rel}: lexicon braucht entries als Objekt (Schlüssel → Eintrag)")
         if r.get("type") == "crossref_set":

@@ -2,6 +2,12 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.55 — 2026-10-14 — Bildsprache (Stil «Symbol»)
+
+- **Bilder auf den Zoomstufen:** Zu Buch, Kapitel und Abschnitt kann es Bilder geben; auf breiten Bildschirmen (ab 760 px) stehen Text und Bild nebeneinander, auf dem Handy schaltet «Text | Bild» für alle Einträge um. «Legende und Hinweise» öffnet ein Blatt mit Bildbeschreibung, den gezeigten Figuren und dem Hinweis, was das Bild deutet. Im Menü: «Bilder» – Aus oder ein Stil; weitere Stile (z. B. Skizze, Anime) sind vorgesehen.
+- **Stil «Symbol»** mit festen Figuren (Jesus mit Kreuznimbus, Maria in Blau, Jünger, Braut, Bräutigam, Gäste, Diener, Speisemeister, Händler, Zeichen) und wiederverwendeten Szenen; erste Bilder: Johannesevangelium (Adler, Licht, Buch), Kapitel 2 (drei Felder) und die Abschnitte 2,1–12, 2,13–22, 2,23–25. Eigene Zeichnungen (CC0), KI-Entwurf, nicht geprüft.
+- **Schema v0.10:** neue Typen `illustration_style` und `illustration` (ohne Migration), Validator-Prüfungen, Werkzeug `scripts/authoring/bilder_symbol.py`.
+
 ## v0.54 — 2026-10-14 — Gottesname beim Vorlesen
 
 - Beim Vorlesen wird JHWH als «Jahwe» gesprochen (Einstellung im Menü: «Jahwe» oder «Adonai»); der geschriebene Text bleibt JHWH. Hinweis im Menü zur jüdischen Tradition, den Namen nicht auszusprechen.

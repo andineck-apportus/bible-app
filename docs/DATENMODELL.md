@@ -109,3 +109,12 @@ Hebräische `token_set` (`TOKSET-WLC-<BUCH>-<KAP>`, Ausgabe `ED-WLC`) zerlegen n
 
 ## Typnamen und Schema
 Seit v0.6 sind die Typnamen kanonisch in `snake_case` (`study`, `text_unit`); das Schema listet alle verwendeten Typen und Statuswerte. Die Umstellung der v0.5-Daten (`studie`, `text-unit`) erfolgte per `scripts/migrations/v0_6.py` und ist in `provenance/migrations/2026-10-09-v0.6.json` protokolliert. Das Schema ist weiterhin generisch; typspezifische Pflichtfelder folgen.
+
+## Bildsprache (seit v0.55)
+**Schemaänderung:** zwei neue Typen in `schema/record.schema.json` (Titel jetzt «v0.10»): `illustration_style` und `illustration`. Bestehende Datensätze sind nicht betroffen; es gibt nichts zu migrieren.
+
+- **`illustration_style`** (`data/illustrations/styles/ILLSTYLE-<STIL>.json`): `key` (z. B. `symbol`), `labels` (de/en), `description_de`, `library` (SVG-Bibliothek mit wiederverwendeten Figuren, Gegenständen und Szenen), `figures` (Legende: `symbol`, `label_de`, `label_en`, `sign_de` = woran die Figur erkennbar ist), `license`, `authorship_de`.
+- **`illustration`** (`data/illustrations/<stil>/ILL-<STIL>-<STELLE>.json` mit Zeichnung `<ID>.svg` daneben): `style`, `level` (`book`, `chapter`, `section` …), `reference`, `target` (Zusammenfassung bzw. Texteinheit), `file`, `depicts` (gezeigte Figuren, müssen in der Legende des Stils stehen), `alt_de` (Bildbeschreibung), `note_de` (was das Bild deutet bzw. festlegt, das der Text offenlässt), `license`, `authorship_de`; Mundart als `localization`.
+- Bilder sind **bildliche Deutung**, nicht Text: Sie werden als solche angezeigt (Legende mit Hinweis) und ersetzen die Zusammenfassung nicht. Mehrere Stile je Stelle sind vorgesehen (z. B. `symbol`, später `sketch`, `anime`); der Lesestrom zeigt den gewählten Stil.
+- Der Validator prüft Datei, Stil, Legende der gezeigten Figuren und Ziel. Der Lesestrom bettet die Bibliotheken in den Kern ein; Bilder liegen im Paket ihres Buchs (Buchebene in `b/_overview`).
+
