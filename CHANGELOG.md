@@ -2,6 +2,10 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.43 — 2026-10-14 — Menü ohne «Zur ganzen Bibel»
+
+- Menüeintrag «Zur ganzen Bibel» entfernt; dasselbe leistet ein Tippen auf das Logo oben links.
+
 ## v0.42 — 2026-10-14 — Zwei Urteile in Zusammenfassungen korrigiert
 
 - **Markus 16:** Dass der kürzere und der längere Markusschluss spätere Ergänzungen sind, steht nicht mehr als Tatsache da, sondern als verbreitetes textkritisches Urteil, mit den Belegen (SBLGNT-Doppelklammern ⟦ ⟧; Sinaiticus 01 und Vaticanus 03 enden nach den CNTR-Transkriptionen mit Markus 16,8) und beim längeren Schluss mit der Gegenposition (Minderheit: ursprünglich; kirchlich weithin als kanonisch anerkannt). Betroffen: TU-MRK-016-001-020 (auch Titel), TU-MRK-016-001-008, TU-MRK-016-009-020 (Titel ohne «spätere Ergänzung»), SUM-CH-MRK-016.
