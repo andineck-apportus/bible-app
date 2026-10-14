@@ -105,8 +105,12 @@ def write(path, rec, change_de="Inhalt überarbeitet"):
         if cmp(old) == cmp(rec):
             return False
         prev = {k: v for k, v in cmp(old).items() if cmp(rec).get(k) != v}
-        rec["revision_log"] = old.get("revision_log", []) + [{"date": rec.get("knowledge", {}).get("asserted_at", ""),
-                                                               "change_de": change_de, "previous": prev}]
+        # Datum und Grund einer Überarbeitung lassen sich für einen Lauf setzen (z. B. Sprachprüfung):
+        # BIBLE_REVISION_DATE=2026-10-14 BIBLE_REVISION_REASON="Sprachprüfung: …" python3 scripts/authoring/<werkzeug>.py
+        import os
+        rec["revision_log"] = old.get("revision_log", []) + [{
+            "date": os.environ.get("BIBLE_REVISION_DATE") or rec.get("knowledge", {}).get("asserted_at", ""),
+            "change_de": os.environ.get("BIBLE_REVISION_REASON") or change_de, "previous": prev}]
         rec["knowledge"] = old.get("knowledge", rec.get("knowledge"))
     path.write_text(json.dumps(rec, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return True
