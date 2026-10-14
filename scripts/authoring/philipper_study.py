@@ -394,8 +394,8 @@ SUMMARIES = [
   "De Paulus bittet um Einigkeit und Demuet und stellt Christus vor Auge, wo sich erniedriget hät bis zum Tod am Chrüüz und wo Gott erhöcht hät. D Gmeind söll ires Heil mit Furcht und Zittere würke und wie Liechter i de Wält lüüchte. De Paulus kündet de Timotheus aa und schickt de Epaphroditus zrugg."),
  ("SUM-CH-PHP-003", "Nach einem Aufruf zur Freude warnt Paulus scharf vor Leuten, die auf Beschneidung pochen. Seine eigenen Vorzüge hält er für Verlust gegenüber der Erkenntnis Christi und der Gerechtigkeit aus Gott. Er jagt dem Ziel nach und erinnert daran, dass das Bürgerrecht der Glaubenden im Himmel ist.",
   "Nach eme Ufruef zur Fröid warnt de Paulus schaarf vor Lüüt, wo uf d Beschniidig pochet. Sini eigete Vorzüg haltet er für Verluscht gägenüber de Erchänntnis vo Christus und de Grächtigkeit us Gott. Er jagt em Ziil naa und erinneret dra, dass s Bürgerrächt vo de Gläubige im Himmel isch."),
- ("SUM-CH-PHP-004", "Paulus mahnt Euodia und Syntyche zur Einigkeit, ruft zu Freude, Güte und sorglosem Gebet auf und nennt, was zu bedenken ist. Er dankt für die Gabe der Gemeinde, betont, dass er mit wenig und viel auskommt, und schliesst mit Grüssen, auch aus dem Haus des Kaisers.",
-  "De Paulus mahnt d Euodia und d Syntyche zur Einigkeit, rüeft zu Fröid, Güeti und Gebätt ohni Sorge uf und nännt, was me söll bedänke. Er dankt für d Gaab vo de Gmeind, betont, dass er mit wenig und mit vil uuschunnt, und schlüüsst mit Grüess, au us em Huus vom Kaiser."),
+ ("SUM-CH-PHP-004", "Paulus mahnt Euodia und Syntyche zur Einigkeit, ruft zu Freude, Güte und Gebet statt Sorgen auf und nennt, was zu bedenken ist. Er dankt für die Gabe der Gemeinde, betont, dass er mit wenig und viel auskommt, und schliesst mit Grüssen, auch aus dem Haus des Kaisers.",
+  "De Paulus mahnt d Euodia und d Syntyche zur Einigkeit, rüeft zu Fröid, Güeti und Gebätt statt Sorge uf und nännt, was me söll bedänke. Er dankt für d Gaab vo de Gmeind, betont, dass er mit wenig und mit vil uuschunnt, und schlüüsst mit Grüess, au us em Huus vom Kaiser."),
 ]
 
 

@@ -2,6 +2,12 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.41 — 2026-10-14 — Zusammenfassungen geprüft, «Zuletzt gelesen»
+
+- **Zusammenfassungen aller Zoomstufen** gegen die eigenen Übersetzungen bzw. den Bibeltext geprüft (KI-Durchgang): rund 150 Korrekturen in Abschnitten, Kapiteln, Büchern, Buchgruppen und Testamenten, z. B. Obadja 15–18 (Entronnene, Josef als Flamme), Rut 1,1–5 (Reihenfolge: Elimelech stirbt vor den Heiraten), Jona 3 (Gott führt das Unheil nicht aus), Markus 3,6 (sie beraten, statt beschliessen), Matthäus 6,14–15 (Bedingung der Vergebung). Die Mundart-Fassungen der Buch- und Gruppenzusammenfassungen waren eigenständige Texte und sind jetzt Übertragungen des Hochdeutschen. Frühere Fassungen im revision_log.
+- **Regel** (AGENTS.md): Am Schluss jeder Arbeit alle Zusammenfassungen gegen den Text prüfen; Werkzeug `scripts/authoring/revise_summary.py` für Datensätze ohne laufendes Autorenwerkzeug.
+- **Menü:** «Zuletzt gelesen» (Abschnitt- bzw. Kapitelebene, bis 12 Einträge, nur auf diesem Gerät im Browser-Speicher, mit «Verlauf löschen»); die Liste der ausgearbeiteten Stellen ist eingeklappt.
+
 ## v0.40 — 2026-10-14 — Jona, 1–3 Johannes und das ganze Markusevangelium aus dem Urtext
 
 - **Jona** (48 Verse, Hebräisch): WLC mit Umrechnung der Verszählung (hebräisch 2,1–11 = KJV 1,17–2,10), Texte vom Toten Meer (MurXII, 4QXII a/f/g; nicht kommerzielle Schicht), Übersetzungen Hochdeutsch und Züridüütsch mit Wortzuordnung, Entscheidungen, Studieninhalte.

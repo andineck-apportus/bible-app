@@ -579,8 +579,8 @@ BACKGROUND_2JN = [
   ["Papyrusblatt", "Tinte (wörtlich «s Schwarz»)", "Schilfrohr, Schriibrohr"]),
 ]
 SUMMARIES_2JN = [
- ("SUM-CH-2JN-001", "Der Älteste schreibt der «auserwählten Herrin» und ihren Kindern, die er in Wahrheit liebt. Er freut sich, dass einige in der Wahrheit wandeln, und erinnert an das Gebot von Anfang an, einander zu lieben. Er warnt vor Verführern, die nicht bekennen, dass Jesus Christus im Fleisch kommt, und rät, solche Lehrer nicht aufzunehmen. Mehr will er bei einem Besuch mündlich sagen.",
-  "De Ältischt schriibt de «uuserwäälte Herrin» und irne Chind, won er i de Wahrheit liebt. Er fröit sich, dass es paar i de Wahrheit laufed, und erinneret as Gebot vo Aafang aa, enand z liebe. Er warnt vor Verfüerer, wo nöd bekänned, dass de Jesus Christus im Fleisch chunnt, und root, settigi Lehrer nöd ufznää. Meh wott er bi me Bsuech mündlich säge."),
+ ("SUM-CH-2JN-001", "Der Älteste schreibt der «auserwählten Herrin» und ihren Kindern, die er in Wahrheit liebt. Er freut sich, dass einige in der Wahrheit wandeln, und erinnert an das Gebot von Anfang an, einander zu lieben. Er warnt vor Verführern, die nicht bekennen, dass Jesus Christus im Fleisch kommt, und weist an, solche Lehrer nicht aufzunehmen. Mehr will er bei einem Besuch mündlich sagen.",
+  "De Ältischt schriibt de «uuserwäälte Herrin» und irne Chind, won er i de Wahrheit liebt. Er fröit sich, dass es paar i de Wahrheit laufed, und erinneret as Gebot vo Aafang aa, enand z liebe. Er warnt vor Verfüerer, wo nöd bekänned, dass de Jesus Christus im Fleisch chunnt, und seit, me söll settigi Lehrer nöd ufnää. Meh wott er bi me Bsuech mündlich säge."),
 ]
 
 # =================================================================================================================

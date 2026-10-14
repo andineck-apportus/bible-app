@@ -122,27 +122,27 @@ DEC_GSW = [
 ]
 
 UNITS = [
- ("TU-OBA-001-001-021", "OBA.1.1-OBA.1.21", "book", "Das Gesicht Obadjas: gegen Edom",
+ ("TU-OBA-001-001-021", "OBA.1.1-OBA.1.21", "book", "Die Schauung Obadjas: gegen Edom",
   ["TU-OBA-001-001-004", "TU-OBA-001-005-009", "TU-OBA-001-010-014", "TU-OBA-001-015-018", "TU-OBA-001-019-021"],
   "Das kürzeste Buch des Alten Testaments kündigt dem Nachbarvolk Edom das Gericht an, weil es sich am Tag der Eroberung Jerusalems gegen seinen «Bruder» Jakob gestellt hat, und schliesst mit der Hoffnung, dass das Königtum JHWH gehören wird."),
  ("TU-OBA-001-001-004", "OBA.1.1-OBA.1.4", "section", "Edoms Hochmut", None,
-  "Edom fühlt sich in seinen Felsen unangreifbar. Gott kündigt an, es von dort herabzustürzen."),
+  "Ein Bote ruft die Völker zum Kampf gegen Edom. Edom fühlt sich in seinen Felsen unangreifbar; JHWH kündigt an, es von dort herabzustürzen."),
  ("TU-OBA-001-005-009", "OBA.1.5-OBA.1.9", "section", "Ausgeplündert und verraten", None,
-  "Diebe und Winzer lassen etwas übrig, Edom aber wird gründlich durchsucht. Seine Verbündeten täuschen es, seine Weisheit und seine Krieger versagen."),
+  "Diebe und Winzer würden etwas übrig lassen, Edom aber wird gründlich durchsucht; seine Verbündeten täuschen es. An jenem Tag wird JHWH Edoms Weise vernichten, seine Helden erschrecken, und vom Gebirge Esaus wird jeder ausgerottet."),
  ("TU-OBA-001-010-014", "OBA.1.10-OBA.1.14", "section", "Am Tag der Not deines Bruders", None,
-  "Der Grund des Gerichts: Edom hat zugesehen, sich gefreut, geplündert und Flüchtlinge ausgeliefert, als Fremde Jerusalem eroberten."),
+  "Wegen der Gewalttat an seinem Bruder Jakob wird Edom mit Schande bedeckt und ausgerottet: Als Fremde Jerusalem einnahmen, stand es abseits und war wie einer von ihnen. Es folgen Verbote: nicht schadenfroh herabschauen, nicht plündern, Flüchtlinge nicht niedermachen oder ausliefern."),
  ("TU-OBA-001-015-018", "OBA.1.15-OBA.1.18", "section", "Der Tag JHWHs", None,
-  "Der Tag JHWHs kommt über alle Völker; was Edom getan hat, fällt auf es zurück. Auf dem Zion aber gibt es Rettung, und das Haus Jakob wird zum Feuer, das Esau verzehrt."),
+  "Der Tag JHWHs kommt über alle Völker; was Edom getan hat, fällt auf es zurück. Auf dem Zion wird es Rettung geben – wörtlich «Entronnene» –, und er wird heilig sein; das Haus Jakob wird seinen Besitz in Besitz nehmen. Jakob wird zum Feuer und Josef zur Flamme, die das Haus Esau wie Stroh verzehren; dem Haus Esau wird keiner entrinnen."),
  ("TU-OBA-001-019-021", "OBA.1.19-OBA.1.21", "section", "Das Königtum wird JHWH gehören", None,
-  "Die Heimkehrenden nehmen das Land in alle Richtungen wieder in Besitz. Vom Zion aus wird Esau gerichtet, und die Königsherrschaft gehört JHWH."),
+  "Die im Negev und in der Schefela, Benjamin und die Verbannten Israels und Jerusalems werden Land in alle Richtungen in Besitz nehmen, auch das Gebirge Esau. Retter werden auf den Zion hinaufziehen, um Esau zu richten, und die Königsherrschaft wird JHWH gehören."),
 ]
 UNITS_GSW = {
  "TU-OBA-001-001-021": ("D Schauig vom Obadja: gäge Edom", "S chürzischt Buech vom Alte Teschtamänt chündet em Nochbervolk Edom s Gricht aa, wil es sich am Taag vo de Eroberig vo Jerusalem gäge sin «Brueder» Jakob gstellt hät, und hört mit de Hoffnig uf, dass d Königsherrschaft em JHWH wird ghöre."),
- "TU-OBA-001-001-004": ("De Hochmuet vo Edom", "Edom füült sich i sine Felse unaagriifbar. Gott chündet aa, es vo dört abezstürze."),
- "TU-OBA-001-005-009": ("Usplünderet und verrate", "Diebe und Wiibuure lönd öppis übrig, Edom aber wird gründlich dursuecht. Sini Verbündete tüüsched s, sini Wiisheit und sini Chrieger versaged."),
- "TU-OBA-001-010-014": ("Am Taag vo de Not vo dim Brueder", "De Grund vom Gricht: Edom hät zuegluegt, sich gfröit, plünderet und Flüchtling usgliferet, wo Frömdi Jerusalem eroberet händ."),
- "TU-OBA-001-015-018": ("De Taag vo JHWH", "De Taag vo JHWH chunnt über alli Völker; was Edom gmacht hät, fallt uf s zrugg. Uf em Zion aber gits Rettig, und s Huus Jakob wird zum Füür, wo de Esau verzeert."),
- "TU-OBA-001-019-021": ("D Königsherrschaft wird em JHWH ghöre", "Die, wo heichömed, nämed s Land i alli Richtige wider in Bsitz. Vom Zion us wird de Esau grichtet, und d Königsherrschaft ghört em JHWH."),
+ "TU-OBA-001-001-004": ("De Hochmuet vo Edom", "En Bote rüeft d Völker zum Chrieg gäge Edom. Edom füült sich i sine Felse unaagriifbar; JHWH chündet aa, es vo dört abezstürze."),
+ "TU-OBA-001-005-009": ("Usplünderet und verrate", "Diebe und Wiibuure würded öppis übrig laa, Edom aber wird gründlich dursuecht; sini Verbündete tüüsched s. A dem Taag wird JHWH d Wiise vo Edom vernichte, sini Helde verschräcked, und vom Gebirg Esau wird jede usgrottet."),
+ "TU-OBA-001-010-014": ("Am Taag vo de Not vo dim Brueder", "Wäg de Gwalttat a sim Brueder Jakob wird Edom mit Schand bedeckt und usgrottet: Wo Frömdi Jerusalem iignaa händ, isch es danebe gstande und isch gsii wie eine vo ine. Dänn chömed Verbot: nöd schadefroh abeluege, nöd plündere, Flüchtling nöd umbringe oder usliefere."),
+ "TU-OBA-001-015-018": ("De Taag vo JHWH", "De Taag vo JHWH chunnt über alli Völker; was Edom gmacht hät, fallt uf s zrugg. Uf em Zion wird s Rettig gää – wörtlich «Entrunneni» –, und er wird heilig sii; s Huus Jakob wird sin Bsitz in Bsitz nää. De Jakob wird zum Füür und de Josef zur Flamme, wo s Huus Esau wie Strau verzeered; em Huus Esau wird keine entrinne."),
+ "TU-OBA-001-019-021": ("D Königsherrschaft wird em JHWH ghöre", "Die im Negev und i de Schefela, de Benjamin und di Verbannte vo Israel und Jerusalem wärded Land i alli Richtige in Bsitz nää, au s Gebirg Esau. Retter wärded uf de Zion ufeziehe, zum de Esau richte, und d Königsherrschaft wird em JHWH ghöre."),
 }
 
 

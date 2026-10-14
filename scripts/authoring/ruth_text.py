@@ -557,7 +557,7 @@ UNITS = [
   "In einer Hungersnot zieht eine Familie aus Betlehem nach Moab. Noomi verliert Mann und Söhne und kehrt zurück. Ihre moabitische "
   "Schwiegertochter Rut lässt sich nicht abweisen und geht mit ihr; in Betlehem nennt sich Noomi «Mara», die Bittere."),
  ("TU-RUT-001-001-005", "RUT.1.1-RUT.1.5", "narrative", "Hungersnot und Tod in Moab", None,
-  "Elimelech zieht mit Noomi und den Söhnen nach Moab. Die Söhne heiraten Moabiterinnen; Elimelech, Machlon und Kiljon sterben, Noomi bleibt allein zurück."),
+  "Wegen einer Hungersnot zieht Elimelech mit Noomi und den Söhnen nach Moab. Elimelech stirbt; die Söhne heiraten Moabiterinnen und sterben nach etwa zehn Jahren ebenfalls. Noomi bleibt ohne Mann und Kinder zurück."),
  ("TU-RUT-001-006-018", "RUT.1.6-RUT.1.18", "narrative", "Wohin du gehst", None,
   "Noomi will ihre Schwiegertöchter nach Hause schicken. Orpa kehrt um, Rut aber bindet sich mit einem Schwur an Noomi, ihr Volk und ihren Gott."),
  ("TU-RUT-001-019-022", "RUT.1.19-RUT.1.22", "narrative", "Nennt mich Mara", None,
@@ -569,10 +569,10 @@ UNITS = [
  ("TU-RUT-002-001-003", "RUT.2.1-RUT.2.3", "narrative", "Rut geht Ähren lesen", None,
   "Der Erzähler stellt Boas vor. Rut bittet, Ähren auflesen zu dürfen, und kommt «zufällig» auf sein Feldstück."),
  ("TU-RUT-002-004-017", "RUT.2.4-RUT.2.17", "dialogue", "Unter den Flügeln JHWHs", None,
-  "Boas erkundigt sich nach Rut, gewährt ihr Schutz, Wasser und Brot und segnet sie, weil sie unter den Flügeln des Gottes Israels "
-  "Zuflucht gesucht hat. Am Abend hat sie ein Efa Gerste."),
+  "Boas erkundigt sich nach Rut, gewährt ihr Schutz, Wasser und Brot und wünscht ihr Lohn für das, was sie an Noomi getan hat – von JHWH, "
+  "dem Gott Israels, unter dessen Flügeln sie Zuflucht sucht. Am Abend hat sie ein Efa Gerste."),
  ("TU-RUT-002-018-023", "RUT.2.18-RUT.2.23", "narrative", "Einer unserer Löser", None,
-  "Noomi hört den Namen Boas und preist JHWH für seine Treue. Rut bleibt bis zum Ende der Ernte bei den Arbeiterinnen des Boas."),
+  "Noomi hört den Namen Boas, wünscht ihm den Segen JHWHs und sagt, er sei einer ihrer Löser. Rut bleibt bis zum Ende der Ernte bei den Arbeiterinnen des Boas."),
  ("TU-RUT-003-001-018", "RUT.3.1-RUT.3.18", "narrative", "Nachts auf der Tenne",
   ["TU-RUT-003-001-005", "TU-RUT-003-006-015", "TU-RUT-003-016-018"],
   "Noomi schickt Rut nachts zu Boas auf die Tenne. Rut bittet ihn, als Löser seinen Gewandzipfel über sie zu breiten. Boas sagt zu, "
@@ -580,38 +580,38 @@ UNITS = [
  ("TU-RUT-003-001-005", "RUT.3.1-RUT.3.5", "dialogue", "Noomis Plan", None,
   "Noomi will für Rut einen Ort der Ruhe suchen und gibt ihr genaue Anweisungen für die Nacht auf der Tenne."),
  ("TU-RUT-003-006-015", "RUT.3.6-RUT.3.15", "narrative", "Breite deinen Gewandzipfel über mich", None,
-  "Rut legt sich zu Boas' Füssen und bittet ihn, sie als Löser zu heiraten. Boas lobt ihre Treue, sagt die Lösung unter Vorbehalt zu und "
+  "Rut legt sich zu Boas' Füssen und bittet ihn, als Löser den Zipfel seines Gewandes über sie zu breiten. Boas lobt ihre Treue, sagt die Lösung unter Vorbehalt zu und "
   "schickt sie vor Tagesanbruch mit Gerste zurück."),
  ("TU-RUT-003-016-018", "RUT.3.16-RUT.3.18", "dialogue", "Warte ab, meine Tochter", None,
   "Rut berichtet Noomi. Diese ist sicher, dass Boas die Sache noch am selben Tag zu Ende bringt."),
  ("TU-RUT-004-001-022", "RUT.4.1-RUT.4.22", "narrative", "Ein Löser für Noomi",
   ["TU-RUT-004-001-012", "TU-RUT-004-013-017", "TU-RUT-004-018-022"],
-  "Im Tor verzichtet der nähere Löser auf Feld und Heirat. Boas erwirbt beides vor Zeugen und heiratet Rut. Ihr Sohn Obed wird Noomis "
-  "Löser; ein Stammbaum führt bis zu David."),
+  "Im Tor verzichtet der nähere Löser auf Feld und Heirat. Boas erwirbt beides vor Zeugen und heiratet Rut. Rut gebiert Obed, den die Frauen "
+  "Noomis Löser nennen; ein Stammbaum führt bis zu David."),
  ("TU-RUT-004-001-012", "RUT.4.1-RUT.4.12", "narrative", "Verhandlung im Tor", None,
   "Vor zehn Ältesten bietet Boas dem näheren Löser Noomis Feld an. Als dazu die Ehe mit Rut gehört, tritt dieser zurück. Boas erwirbt "
   "alles vor Zeugen; das Volk segnet ihn und Rut."),
  ("TU-RUT-004-013-017", "RUT.4.13-RUT.4.17", "narrative", "Noomi ist ein Sohn geboren", None,
-  "Rut bringt einen Sohn zur Welt. Die Frauen preisen JHWH, der Noomi einen Löser geschenkt hat, und nennen das Kind Obed, den Grossvater Davids."),
+  "JHWH lässt Rut schwanger werden, und sie gebiert einen Sohn. Die Frauen preisen JHWH, der Noomi einen Löser geschenkt hat; Noomi nimmt das Kind auf den Schoss, und die Nachbarinnen nennen es Obed, den Grossvater Davids."),
  ("TU-RUT-004-018-022", "RUT.4.18-RUT.4.22", "genealogy", "Von Perez bis David", None,
   "Ein Stammbaum in zehn Gliedern verbindet Perez, den Sohn Judas und Tamars, über Boas und Obed mit David."),
 ]
 UNITS_GSW = {
  "TU-RUT-001-001-022": ("Läär zrugg us Moab", "I nere Hungersnot zieht e Familie vo Betlehem uf Moab. D Noomi verliert Maa und Söön und chunnt zrugg. Iri moabitisch Schwigertochter Rut laat sich nöd abwiise und gaat mit ere; z Betlehem nännt sich d Noomi «Mara», di Bitter."),
- "TU-RUT-001-001-005": ("Hungersnot und Tod z Moab", "De Elimelech zieht mit de Noomi und de Söön uf Moab. D Söön hürated Moabiterinne; de Elimelech, de Machlon und de Kiljon sterbed, d Noomi bliibt elei zrugg."),
+ "TU-RUT-001-001-005": ("Hungersnot und Tod z Moab", "Wäg ere Hungersnot zieht de Elimelech mit de Noomi und de Söön uf Moab. De Elimelech stirbt; d Söön hürated Moabiterinne und sterbed öppe zää Jahr spöter au. D Noomi bliibt ohni Maa und Chind zrugg."),
  "TU-RUT-001-006-018": ("Wo du anegaasch", "D Noomi wott iri Schwigertöchtere heischicke. D Orpa cheert um, d Rut aber bindet sich mit eme Schwuer a d Noomi, ires Volk und ire Gott."),
  "TU-RUT-001-019-022": ("Säged mir Mara", "Z Betlehem chlagt d Noomi, JHWH heig si läär zruggbracht. Si chömed am Aafang vo de Gerschteernt aa."),
  "TU-RUT-002-001-023": ("Uf em Fäld vom Boas", "D Rut list Ääre uf und chunnt uf s Fäld vom Boas, eme Verwandte vom Elimelech. De Boas behandlet di Frömd uffallend grosszügig; d Noomi erchännt in im en Löser vo de Familie."),
  "TU-RUT-002-001-003": ("D Rut gaat go Ääre läse", "De Erzähler stellt de Boas vor. D Rut fragt, öb si dörf Ääre ufläse, und chunnt «zuefällig» uf sis Fäldstück."),
- "TU-RUT-002-004-017": ("Under de Flügel vo JHWH", "De Boas fragt nach de Rut, git ire Schutz, Wasser und Broot und sägnet si, wil si under de Flügel vom Gott vo Israel Schutz gsuecht hät. Am Aabig hät si es Efa Gerschte."),
- "TU-RUT-002-018-023": ("Eine vo öisne Löser", "D Noomi ghört de Name Boas und lobt JHWH für sini Tröii. D Rut bliibt bis am Änd vo de Ernt bi de Arbeiterinne vom Boas."),
+ "TU-RUT-002-004-017": ("Under de Flügel vo JHWH", "De Boas fragt nach de Rut, git ire Schutz, Wasser und Broot und wünscht ere Lohn für das, wo si a de Noomi gmacht hät – vo JHWH, em Gott vo Israel, under dem sine Flügel si Schutz suecht. Am Aabig hät si es Efa Gerschte."),
+ "TU-RUT-002-018-023": ("Eine vo öisne Löser", "D Noomi ghört de Name Boas, wünscht im de Säge vo JHWH und seit, er sig eine vo irne Löser. D Rut bliibt bis am Änd vo de Ernt bi de Arbeiterinne vom Boas."),
  "TU-RUT-003-001-018": ("Znacht uf de Tänn", "D Noomi schickt d Rut znacht zum Boas uf d Tänn. D Rut bittet en, als Löser de Zipfel vo sim Gwand über si z spreite. De Boas seit zue, verwiist aber uf en nööchere Löser."),
  "TU-RUT-003-001-005": ("De Plan vo de Noomi", "D Noomi wott für d Rut es Daheim sueche und git ire gnaui Aawiisige für d Nacht uf de Tänn."),
- "TU-RUT-003-006-015": ("Spreit de Zipfel vo dim Gwand über mich", "D Rut leit sich zu de Füess vom Boas und bittet en, si als Löser z hürate. De Boas lobt iri Tröii, seit d Lösig under Vorbehalt zue und schickt si vor em Taag mit Gerschte zrugg."),
+ "TU-RUT-003-006-015": ("Spreit de Zipfel vo dim Gwand über mich", "D Rut leit sich zu de Füess vom Boas und bittet en, als Löser de Zipfel vo sim Gwand über si z spreite. De Boas lobt iri Tröii, seit d Lösig under Vorbehalt zue und schickt si vor em Taag mit Gerschte zrugg."),
  "TU-RUT-003-016-018": ("Wart ab, mini Tochter", "D Rut verzellt s de Noomi. Die isch sicher, dass de Boas d Sach no am gliiche Taag erlediget."),
- "TU-RUT-004-001-022": ("En Löser für d Noomi", "Im Tor verzichtet de nööcher Löser uf Fäld und Hochzig. De Boas erwirbt beides vor Züüge und hüratet d Rut. Ire Sohn Obed wird de Löser vo de Noomi; en Stammbaum füert bis zum David."),
+ "TU-RUT-004-001-022": ("En Löser für d Noomi", "Im Tor verzichtet de nööcher Löser uf Fäld und Hochzig. De Boas erwirbt beides vor Züüge und hüratet d Rut. D Rut überchunnt de Obed, und d Fraue nänned en de Löser vo de Noomi; en Stammbaum füert bis zum David."),
  "TU-RUT-004-001-012": ("Verhandlig im Tor", "Vor zää Ältischte bietet de Boas em nööchere Löser s Fäld vo de Noomi aa. Wo d Ee mit de Rut dezue ghört, tritt dä zrugg. De Boas erwirbt alles vor Züüge; s Volk sägnet in und d Rut."),
- "TU-RUT-004-013-017": ("De Noomi isch en Sohn gebore", "D Rut überchunnt en Sohn. D Fraue lobed JHWH, wo de Noomi en Löser gschänkt hät, und nänned s Chind Obed, de Grossvatter vom David."),
+ "TU-RUT-004-013-017": ("De Noomi isch en Sohn gebore", "JHWH laat d Rut schwanger wärde, und si überchunnt en Sohn. D Fraue lobed JHWH, wo de Noomi en Löser gschänkt hät; d Noomi nimmt s Chind uf de Schoss, und d Nachberinne nänned s Obed, de Grossvatter vom David."),
  "TU-RUT-004-018-022": ("Vom Perez bis zum David", "En Stammbaum mit zää Glider verbindet de Perez, de Sohn vom Juda und de Tamar, über de Boas und de Obed mit em David."),
 }
 
