@@ -2,6 +2,10 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.46 — 2026-10-14 — Lesestrom ohne «Ausgearbeitet»-Hinweise
+
+- Buch- und Kapiteleinträge zeigen keine Verweise «Ausgearbeitet: …» mehr; ausgearbeitete Abschnitte erscheinen ohnehin beim Vertiefen, die Liste bleibt im Menü.
+
 ## v0.45 — 2026-10-14 — Mundart: «Ältischti»
 
 - Züridüütsch einheitlich «Ältischti» (Gemeindeälteste) und «ältischt…» (älteste), statt «Elteschti» bzw. «eltischt…», in Übersetzungen, Wortzuordnungen, Lokalisierungen und Autorenwerkzeugen (31 Datensätze, 15 Skripte); frühere Schreibung im revision_log vermerkt.
