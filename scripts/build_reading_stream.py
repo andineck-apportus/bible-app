@@ -210,31 +210,45 @@ for vid, rows in wit_readings.items():
     bundle(f"b/{ref_book(variants_extra[vid]['ref'])}").setdefault("readings", {})[vid] = rows
 for vid, v in variants_extra.items():
     bundle(f"b/{ref_book(v['ref'])}").setdefault("src_variants", {})[vid] = v
-# Bildsprache: Stile (Legende, Bausteinbibliothek) im Kern; Bilder im Paket ihres Buchs (Buchebene in b/_overview).
+# Bildsprache (docs/BILDSPRACHE.md): Bildlexikon (Namen, Merkmale) und Stile (Darstellungen, Bausteinbibliothek) im Kern;
+# Bilder samt Bildauftrag (Felder, Deutungshinweis) im Paket ihres Buchs (Buchebene in b/_overview).
 # Schlüssel im Lesestrom: Buch «JHN», Kapitel «JHN.2», Abschnitt = ID der Texteinheit.
 import localizations as _l10n  # noqa: E402
-ill_styles, ill_recs = {}, {}
+ill_recs = {}
 for p in sorted((ROOT / "data/illustrations").rglob("*.json")):
     r = json.loads(p.read_text(encoding="utf-8"))
-    if r.get("status") == "deprecated":
-        continue
-    (ill_styles if r["type"] == "illustration_style" else ill_recs)[r["id"]] = r
-ill_core = {"styles": {}, "items": {}}
-for sid, st in ill_styles.items():
-    ill_core["styles"][st["key"]] = {"id": sid, "label": st["labels"], "description": st.get("description_de"),
-                                     "figures": st.get("figures", []), "library": (ROOT / st["library"]).read_text(encoding="utf-8")}
+    if r.get("status") != "deprecated":
+        ill_recs[r["id"]] = r
+ill_core = {"styles": {}, "items": {}, "lexicon": {}}
+for rid, r in ill_recs.items():
+    if r["type"] == "figure":
+        ill_core["lexicon"][rid] = {"kind": r["kind"], "name": r["names"], "traits": [t["trait_de"] for t in r.get("traits", [])]}
+    elif r["type"] == "illustration_style":
+        ill_core["styles"][r["key"]] = {"id": rid, "label": r["labels"], "description": r.get("description_de"),
+                                        "renderings": r.get("renderings", {}), "library": (ROOT / r["library"]).read_text(encoding="utf-8")}
 ill_l10n = _l10n.load(ill_recs)
 for rid, r in ill_recs.items():
-    st = ill_styles[r["style"]]
+    if r["type"] != "illustration":
+        continue
+    st, br = ill_recs[r["style"]], ill_recs[r["brief"]]
     key = r["target"] if r["level"] == "section" else r["reference"]
-    item = {"id": rid, "style": st["key"], "level": r["level"], "ref": r["reference"], "depicts": r.get("depicts", []),
-            "alt": r["alt_de"], "note": r.get("note_de"), "svg": (ROOT / r["file"]).read_text(encoding="utf-8").strip()}
+    item = {"id": rid, "brief": br["id"], "style": st["key"], "level": r["level"], "ref": r["reference"], "depicts": r.get("depicts", []),
+            "alt": r["alt_de"], "note": br.get("interpretation_note_de"), "check": (r.get("check") or {}).get("result_de"),
+            "panels": [{"n": p_["n"], "ref": p_["reference"], "action": p_["action_de"]} for p_ in br["panels"]],
+            "svg": (ROOT / r["file"]).read_text(encoding="utf-8").strip()}
     bname = "b/_overview" if r["level"] in ("bible", "testament", "group", "book") else f"b/{ref_book(r['reference'])}"
     bundle(bname).setdefault("ill", {}).setdefault(key, {})[st["key"]] = item
     for lg, f in ill_l10n.get(rid, {}).items():
-        m = {k2: f[k1] for k1, k2 in (("alt_de", "alt"), ("note_de", "note")) if k1 in f}
+        if "alt_de" in f:
+            bundle(f"l/{lg}/common").setdefault("i18n", {}).setdefault(rid, {})["alt"] = f["alt_de"]
+    for lg, f in ill_l10n.get(br["id"], {}).items():
+        m = {}
+        if "interpretation_note_de" in f:
+            m["note"] = f["interpretation_note_de"]
+        if "actions_de" in f:
+            m["actions"] = f["actions_de"]
         if m:
-            bundle(f"l/{lg}/common").setdefault("i18n", {})[rid] = m
+            bundle(f"l/{lg}/common").setdefault("i18n", {}).setdefault(rid, {}).update(m)
 core_sums = {}
 for sid, x in summaries.items():
     for lg, f in (x.get("i18n") or {}).items():

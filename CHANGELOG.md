@@ -2,6 +2,18 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.56 — 2026-10-14 — Bildlexikon, Bildaufträge, Blindtest
+
+- **Bildlexikon** (142 Einträge, stilunabhängig): Personen, Rollen, Gruppen, Gegenstände, Orte, Handlungs- und Bedeutungszeichen mit Pflichtmerkmalen (Grundlage Text, Tradition oder Gestaltung), Verwechslungsregeln und Mundart. Dieselbe Figur sieht in jedem Bild und später in jedem Stil gleich aus.
+- **Bildaufträge** je Stelle (stilunabhängig): Bildfelder, wer zu wem spricht (Sprechblasen mit Zeichen), Handlung je Feld; geprüft gegen den Text wie eine Zusammenfassung. Korrigiert: In Kana spricht Maria zu den **Dienern** ([[JHN.2.5]]).
+- **Synchron mit dem Text:** Fingerabdrücke der Verse und Zusammenfassungen im Auftrag; der Validator meldet «Bildauftrag veraltet», wenn sich der Text ändert. Bestätigung nur nach erneuter Prüfung (`BIBLE_BRIEF_CONFIRM=1`).
+- **Bilder neu gezeichnet** (Johannes, Johannes 2, 2,1–12, 2,13–22, 2,23–25): u. a. leerer Weinkrug mit Traubenzeichen und leerer Becher für «kein Wein mehr», Ohr für «hört auf ihn», Diener giessen Wasser ein, Speisemeister spricht zum Bräutigam, Stern über Jesus und glaubende Jünger; Tempel mit Riss → drei Sonnen → Tempel für «in drei Tagen»; Tauben im Käfig, Becher ohne Fuss, Kranz statt Krone, brauner Adler.
+- **Blindtest auf Verständlichkeit** in zwei Runden (getrennte KI-Instanz, nur Bild und Legende); Ergebnis und offene Punkte im Bild-Datensatz und im Legendenblatt. Kein Test mit Menschen.
+- **Legende** nach Lexikon: Figuren und Zeichen nach Art sortiert, Bildfelder mit Handlung, Prüfergebnis.
+- **Umschalter Text/Bild** auf dem Handy als kleine Symbolknöpfe neben «Verstehen»/«Geschichte».
+- **Schema v0.11:** neue Typen `figure` und `illustration_brief` (ohne Migration); Stil mit `renderings` statt eigener Figurenliste. Regeln in AGENTS.md (Lexikon, Bildauftrag, Blindtest, Synchronität) und [docs/BILDSPRACHE.md](docs/BILDSPRACHE.md).
+- Offen: ein verständlicheres Gottessymbol (die Hand aus der Wolke wird ersetzt).
+
 ## v0.55 — 2026-10-14 — Bildsprache (Stil «Symbol»)
 
 - **Bilder auf den Zoomstufen:** Zu Buch, Kapitel und Abschnitt kann es Bilder geben; auf breiten Bildschirmen (ab 760 px) stehen Text und Bild nebeneinander, auf dem Handy schaltet «Text | Bild» für alle Einträge um. «Legende und Hinweise» öffnet ein Blatt mit Bildbeschreibung, den gezeigten Figuren und dem Hinweis, was das Bild deutet. Im Menü: «Bilder» – Aus oder ein Stil; weitere Stile (z. B. Skizze, Anime) sind vorgesehen.

@@ -246,23 +246,50 @@ def main():
                     check_tokens(rel, f"extra_words/ketiv_without_qere[{i}].after", [x["after"]])
                 check_ref(rel, f"extra_words/ketiv_without_qere[{i}].ref", x.get("ref")); ref_count += 1
         if r.get("type") == "illustration":
-            # Bild: Zeichnung vorhanden, Stil vorhanden, gezeigte Figuren in der Legende des Stils, Ziel vorhanden
+            # Bild: Zeichnung, Stil, Bildauftrag; gezeigte Lexikon-Einträge haben im Stil eine Darstellung
             if not (ROOT / str(r.get("file", ""))).is_file():
                 errors.append(f"{rel}: Bilddatei {r.get('file')} fehlt")
             st = records.get(r.get("style"), (None, {}))[1]
             if st.get("type") != "illustration_style":
                 errors.append(f"{rel}: Stil {r.get('style')} fehlt")
             else:
-                known = {f.get("symbol") for f in st.get("figures") or []}
                 for d in r.get("depicts") or []:
-                    if d not in known:
-                        errors.append(f"{rel}: Figur {d} fehlt in der Legende von {r.get('style')}")
-            if r.get("target") and r["target"] not in records:
-                errors.append(f"{rel}: Ziel {r['target']} unbekannt")
+                    if d not in (st.get("renderings") or {}):
+                        errors.append(f"{rel}: {d} hat im Stil {r.get('style')} keine Darstellung")
+            if records.get(r.get("brief"), (None, {}))[1].get("type") != "illustration_brief":
+                errors.append(f"{rel}: Bildauftrag {r.get('brief')} fehlt")
             if r.get("level") not in ("bible", "testament", "group", "book", "chapter", "section"):
                 errors.append(f"{rel}: level {r.get('level')!r} ungültig")
-        if r.get("type") == "illustration_style" and r.get("library") and not (ROOT / r["library"]).is_file():
-            errors.append(f"{rel}: Bibliothek {r['library']} fehlt")
+        if r.get("type") == "illustration_style":
+            if r.get("library") and not (ROOT / r["library"]).is_file():
+                errors.append(f"{rel}: Bibliothek {r['library']} fehlt")
+            for fid in r.get("renderings") or {}:
+                if records.get(fid, (None, {}))[1].get("type") != "figure":
+                    errors.append(f"{rel}: Darstellung für {fid}, der nicht im Bildlexikon steht")
+        if r.get("type") == "illustration_brief":
+            # Nur Lexikon-Einträge; Gleichlauf mit dem Text über Fingerabdrücke (veraltet = Fehler, bis erneut geprüft)
+            for p_ in r.get("panels") or []:
+                ids_ = [*p_.get("figures", []), *p_.get("objects", []), *p_.get("signs", [])]
+                for sp in p_.get("speech") or []:
+                    ids_ += [sp.get("from"), sp.get("to"), *sp.get("icons", [])]
+                for x in ids_:
+                    if records.get(x, (None, {}))[1].get("type") != "figure":
+                        errors.append(f"{rel}: {x} nicht im Bildlexikon")
+                check_ref(rel, f"panels[{p_.get('n')}].reference", p_.get("reference")); ref_count += 1
+            if r.get("target") not in records:
+                errors.append(f"{rel}: Ziel {r.get('target')} unbekannt")
+            for b_ in r.get("basis") or []:
+                src = records.get(b_.get("record"), (None, {}))[1]
+                if b_.get("field") == "summary":
+                    cur = src.get("summary_de") or src.get("text_de")
+                else:
+                    a_, _, z_ = str(b_.get("reference", "")).partition("-")
+                    bk_, c_, v1_ = (a_.split(".") + ["", "", ""])[:3]
+                    v2_ = z_.split(".")[2] if z_ else v1_
+                    tbr = src.get("text_by_reference") or {}
+                    cur = " ".join(tbr[f"{bk_}.{c_}.{v}"] for v in range(int(v1_ or 0), int(v2_ or 0) + 1) if f"{bk_}.{c_}.{v}" in tbr)
+                if localizations.fingerprint(cur) != b_.get("fingerprint"):
+                    errors.append(f"{rel}: Bildauftrag veraltet – Text {b_.get('record')} {b_.get('reference', '')} hat sich geändert; Auftrag und Bilder prüfen, dann mit BIBLE_BRIEF_CONFIRM=1 bestätigen")
         if r.get("type") == "lexicon" and not isinstance(r.get("entries"), dict):
             errors.append(f"{rel}: lexicon braucht entries als Objekt (Schlüssel → Eintrag)")
         if r.get("type") == "crossref_set":
