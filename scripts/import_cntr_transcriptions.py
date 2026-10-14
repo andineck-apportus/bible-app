@@ -25,8 +25,8 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import versification  # noqa: E402
-BOOKNUM = {"MAT": 40, "MRK": 41, "LUK": 42, "PHP": 50, "TIT": 56, "1JN": 62, "2JN": 63, "3JN": 64}
-BOOKTAG = {"MAT": "TAG-MATTHEW", "MRK": "TAG-MARK", "LUK": "TAG-LUKE", "PHP": "TAG-PHILIPPIANS", "TIT": "TAG-TITUS", "1JN": "TAG-JOHANNINE", "2JN": "TAG-JOHANNINE", "3JN": "TAG-JOHANNINE"}
+BOOKNUM = {"MAT": 40, "MRK": 41, "LUK": 42, "JHN": 43, "PHP": 50, "TIT": 56, "1JN": 62, "2JN": 63, "3JN": 64}
+BOOKTAG = {"MAT": "TAG-MATTHEW", "MRK": "TAG-MARK", "LUK": "TAG-LUKE", "JHN": "TAG-JOHN", "PHP": "TAG-PHILIPPIANS", "TIT": "TAG-TITUS", "1JN": "TAG-JOHANNINE", "2JN": "TAG-JOHANNINE", "3JN": "TAG-JOHANNINE"}
 SOURCE = "SRC-CNTR-TRANSCRIPTIONS"
 UPSTREAM = "https://github.com/Center-for-New-Testament-Restoration/transcriptions"
 
@@ -75,6 +75,20 @@ WITNESSES = {
     "0232": {"symbol": "0232", "name_de": "Majuskel 0232 (P. Antinoopolis 12)", "century": "V/VI", "date_de": "5./6. Jahrhundert",
              "material_de": "Pergament", "languages": ["grc"], "location_de": "Oxford, Sackler Library",
              "about_de": "Blatt aus einem kleinen Codex mit Teilen des 2. Johannesbriefs.", "facsimile": []},
+    "029": {"symbol": "T", "name_de": "Codex Borgianus (029)", "century": "V", "date_de": "5. Jahrhundert nach gängiger Einordnung",
+            "material_de": "Pergament", "languages": ["grc", "cop"],
+            "location_de": "Grösstenteils Biblioteca Apostolica Vaticana (Borg. copt. 109); weitere Blätter in anderen Sammlungen",
+            "about_de": "Zweisprachige griechisch-koptische (sahidische) Evangelienhandschrift; erhalten sind Teile von Lukas und Johannes.",
+            "facsimile": []},
+    "0162": {"symbol": "0162", "name_de": "Majuskel 0162 (P. Oxyrhynchus 847)", "century": "III/IV", "date_de": "3./4. Jahrhundert nach gängiger Einordnung",
+             "material_de": "Pergament", "languages": ["grc"], "location_de": "Metropolitan Museum of Art, New York; gefunden in Oxyrhynchos",
+             "about_de": "Ein Blatt mit Johannes 2.", "facsimile": []},
+    "0258": {"symbol": "0258", "name_de": "Majuskel 0258", "century": "IV", "date_de": "4. Jahrhundert nach gängiger Einordnung",
+             "material_de": "Pergament", "languages": ["grc"], "location_de": "Laut INTF-Katalog",
+             "about_de": "Kleines Fragment mit Johannes 10.", "facsimile": []},
+    "0323": {"symbol": "0323", "name_de": "Majuskel 0323", "date_de": "Datierung siehe INTF-Katalog (nicht eigens geprüft)",
+             "material_de": "Pergament", "languages": ["grc"], "location_de": "Laut INTF-Katalog",
+             "about_de": "Fragment mit Teilen des Johannesevangeliums (nach der CNTR-Transkription).", "facsimile": []},
 }
 # Weitere Zeugen: Papyri (Gregory-Aland) und Texte auf Amuletten u. ä. (Trismegistos-Nummer, CNTR «class 2»).
 # Angaben zu Datierung, Ort und Sammlung nach DCLP/papyri.info (TM-Datensätze), Stand 2026-10-12.
@@ -117,6 +131,60 @@ PAPYRI = {
              "location_de": "Oxford, Sackler Library (Egypt Exploration Society); gefunden in Oxyrhynchos",
              "about_de": "Kleines Fragment mit Markus 1; derzeit der älteste bekannte Textzeuge des Markusevangeliums.",
              "facsimile": [], "catalog_docid": 10137},
+    "P66": {"symbol": "𝔓66", "name_de": "Papyrus 66 (Bodmer II)", "century": "II/III", "date_de": "um 200 nach gängiger Einordnung; vorgeschlagen wurden auch spätere Datierungen bis ins 4. Jahrhundert",
+            "material_de": "Papyrus", "languages": ["grc"], "location_de": "Fondation Martin Bodmer, Cologny (Genf); kleine Teile in der Chester Beatty Library, Dublin",
+            "about_de": "Papyruscodex mit grossen Teilen des Johannesevangeliums (vor allem Kapitel 1–14); mit zahlreichen Korrekturen des Schreibers.", "facsimile": [], "catalog_docid": 10066},
+    "P5": {"symbol": "𝔓5", "name_de": "Papyrus 5 (P. Oxyrhynchus 208 und 1781)", "century": "III", "date_de": "3. Jahrhundert nach gängiger Einordnung",
+            "material_de": "Papyrus", "languages": ["grc"], "location_de": "British Library, London; gefunden in Oxyrhynchos",
+            "about_de": "Reste eines Codex mit Teilen von Johannes 1, 16 und 20.", "facsimile": [], "catalog_docid": 10005},
+    "P6": {"symbol": "𝔓6", "name_de": "Papyrus 6", "century": "IV", "date_de": "4. Jahrhundert nach gängiger Einordnung",
+            "material_de": "Papyrus", "languages": ["grc"], "location_de": "Bibliothèque nationale et universitaire, Strassburg",
+            "about_de": "Griechische Reste von Johannes 10–11 aus einer griechisch-koptischen Handschrift.", "facsimile": [], "catalog_docid": 10006},
+    "P22": {"symbol": "𝔓22", "name_de": "Papyrus 22 (P. Oxyrhynchus 1228)", "century": "III", "date_de": "3. Jahrhundert nach gängiger Einordnung",
+            "material_de": "Papyrus", "languages": ["grc"], "location_de": "University of Glasgow Library; gefunden in Oxyrhynchos",
+            "about_de": "Reste einer Rolle mit Johannes 15–16.", "facsimile": [], "catalog_docid": 10022},
+    "P28": {"symbol": "𝔓28", "name_de": "Papyrus 28 (P. Oxyrhynchus 1596)", "century": "III", "date_de": "3. Jahrhundert nach gängiger Einordnung",
+            "material_de": "Papyrus", "languages": ["grc"], "location_de": "Laut INTF-Katalog; gefunden in Oxyrhynchos",
+            "about_de": "Fragment mit Johannes 6.", "facsimile": [], "catalog_docid": 10028},
+    "P39": {"symbol": "𝔓39", "name_de": "Papyrus 39 (P. Oxyrhynchus 1780)", "century": "III", "date_de": "3. Jahrhundert nach gängiger Einordnung",
+            "material_de": "Papyrus", "languages": ["grc"], "location_de": "Laut INTF-Katalog; gefunden in Oxyrhynchos",
+            "about_de": "Fragment mit Johannes 8.", "facsimile": [], "catalog_docid": 10039},
+    "P52": {"symbol": "𝔓52", "name_de": "Papyrus 52 (P. Rylands 457)", "century": "II", "date_de": "2. Jahrhundert nach gängiger Einordnung; der genaue Zeitraum ist umstritten",
+            "material_de": "Papyrus", "languages": ["grc"], "location_de": "John Rylands Library, Manchester",
+            "about_de": "Kleines Fragment mit Johannes 18,31–33.37–38; oft als ältester bekannter Textzeuge des Neuen Testaments genannt.", "facsimile": [], "catalog_docid": 10052},
+    "P90": {"symbol": "𝔓90", "name_de": "Papyrus 90 (P. Oxyrhynchus 3523)", "century": "II", "date_de": "2. Jahrhundert nach gängiger Einordnung",
+            "material_de": "Papyrus", "languages": ["grc"], "location_de": "Oxford, Sackler Library (Egypt Exploration Society); gefunden in Oxyrhynchos",
+            "about_de": "Fragment mit Johannes 18–19.", "facsimile": [], "catalog_docid": 10090},
+    "P95": {"symbol": "𝔓95", "name_de": "Papyrus 95", "century": "III", "date_de": "3. Jahrhundert nach gängiger Einordnung",
+            "material_de": "Papyrus", "languages": ["grc"], "location_de": "Biblioteca Medicea Laurenziana, Florenz",
+            "about_de": "Fragment mit Johannes 5.", "facsimile": [], "catalog_docid": 10095},
+    "P106": {"symbol": "𝔓106", "name_de": "Papyrus 106 (P. Oxyrhynchus 4445)", "century": "III", "date_de": "3. Jahrhundert nach gängiger Einordnung",
+            "material_de": "Papyrus", "languages": ["grc"], "location_de": "Oxford, Sackler Library (Egypt Exploration Society); gefunden in Oxyrhynchos",
+            "about_de": "Fragment mit Johannes 1.", "facsimile": [], "catalog_docid": 10106},
+    "P107": {"symbol": "𝔓107", "name_de": "Papyrus 107 (P. Oxyrhynchus 4446)", "century": "III", "date_de": "3. Jahrhundert nach gängiger Einordnung",
+            "material_de": "Papyrus", "languages": ["grc"], "location_de": "Oxford, Sackler Library (Egypt Exploration Society); gefunden in Oxyrhynchos",
+            "about_de": "Fragment mit Johannes 17.", "facsimile": [], "catalog_docid": 10107},
+    "P108": {"symbol": "𝔓108", "name_de": "Papyrus 108 (P. Oxyrhynchus 4447)", "century": "III", "date_de": "3. Jahrhundert nach gängiger Einordnung",
+            "material_de": "Papyrus", "languages": ["grc"], "location_de": "Oxford, Sackler Library (Egypt Exploration Society); gefunden in Oxyrhynchos",
+            "about_de": "Fragment mit Johannes 17–18.", "facsimile": [], "catalog_docid": 10108},
+    "P109": {"symbol": "𝔓109", "name_de": "Papyrus 109 (P. Oxyrhynchus 4448)", "century": "III", "date_de": "3. Jahrhundert nach gängiger Einordnung",
+            "material_de": "Papyrus", "languages": ["grc"], "location_de": "Oxford, Sackler Library (Egypt Exploration Society); gefunden in Oxyrhynchos",
+            "about_de": "Fragment mit Johannes 21.", "facsimile": [], "catalog_docid": 10109},
+    "P119": {"symbol": "𝔓119", "name_de": "Papyrus 119 (P. Oxyrhynchus 4803)", "century": "III", "date_de": "3. Jahrhundert nach gängiger Einordnung",
+            "material_de": "Papyrus", "languages": ["grc"], "location_de": "Oxford, Sackler Library (Egypt Exploration Society); gefunden in Oxyrhynchos",
+            "about_de": "Fragment mit Johannes 1.", "facsimile": [], "catalog_docid": 10119},
+    "P120": {"symbol": "𝔓120", "name_de": "Papyrus 120 (P. Oxyrhynchus 4804)", "century": "IV", "date_de": "4. Jahrhundert nach gängiger Einordnung",
+            "material_de": "Papyrus", "languages": ["grc"], "location_de": "Oxford, Sackler Library (Egypt Exploration Society); gefunden in Oxyrhynchos",
+            "about_de": "Fragment mit Johannes 1.", "facsimile": [], "catalog_docid": 10120},
+    "P121": {"symbol": "𝔓121", "name_de": "Papyrus 121 (P. Oxyrhynchus 4805)", "century": "III", "date_de": "3. Jahrhundert nach gängiger Einordnung",
+            "material_de": "Papyrus", "languages": ["grc"], "location_de": "Oxford, Sackler Library (Egypt Exploration Society); gefunden in Oxyrhynchos",
+            "about_de": "Fragment mit Johannes 19.", "facsimile": [], "catalog_docid": 10121},
+    "P122": {"symbol": "𝔓122", "name_de": "Papyrus 122 (P. Oxyrhynchus 4806)", "century": "IV/V", "date_de": "4./5. Jahrhundert nach gängiger Einordnung",
+            "material_de": "Papyrus", "languages": ["grc"], "location_de": "Oxford, Sackler Library (Egypt Exploration Society); gefunden in Oxyrhynchos",
+            "about_de": "Fragment mit Johannes 21.", "facsimile": [], "catalog_docid": 10122},
+    "P134": {"symbol": "𝔓134", "name_de": "Papyrus 134", "century": "III/IV", "date_de": "3./4. Jahrhundert nach gängiger Einordnung",
+            "material_de": "Papyrus", "languages": ["grc"], "location_de": "Laut INTF-Katalog",
+            "about_de": "Fragment mit Johannes 1.", "facsimile": [], "catalog_docid": 10134},
 }
 AMULETS = {
     "64206": {"name_de": "P. Antinoopolis 2.54", "century": "III/IV", "date_de": "um 275–325",

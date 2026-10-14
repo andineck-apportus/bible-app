@@ -32,9 +32,9 @@ LUT = {"file": "deu-luther1912.osis.xml", "commit": "f257a3559025c3f873b48a75019
        "sha256": "5df33f4bf3e086b6490b467cf8ddbf4cf95126b2826efaddf17b223ddd07f92b"}
 ELB = {"file": "formats/json/GerElb1905.json", "commit": "e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c",
        "sha256": "c3bc2115750db82fb7c9ab650fcd05e22251d29fbb1c7870db6e81c6a1b54557"}
-OSIS = {"TIT": "Titus", "OBA": "Obad", "RUT": "Ruth", "PHP": "Phil", "JON": "Jonah", "1JN": "1John", "2JN": "2John", "3JN": "3John", "MRK": "Mark"}
-NAMES = {"TIT": "Titus", "OBA": "Obadiah", "RUT": "Ruth", "PHP": "Philippians", "JON": "Jonah", "1JN": "I John", "2JN": "II John", "3JN": "III John", "MRK": "Mark"}
-TAGS = {"TIT": "TAG-TITUS", "OBA": "TAG-OBADIAH", "RUT": "TAG-RUTH", "PHP": "TAG-PHILIPPIANS", "JON": "TAG-JONAH", "1JN": "TAG-JOHANNINE", "2JN": "TAG-JOHANNINE", "3JN": "TAG-JOHANNINE", "MRK": "TAG-MARK"}
+OSIS = {"TIT": "Titus", "OBA": "Obad", "RUT": "Ruth", "PHP": "Phil", "JON": "Jonah", "1JN": "1John", "2JN": "2John", "3JN": "3John", "MRK": "Mark", "JHN": "John"}
+NAMES = {"TIT": "Titus", "OBA": "Obadiah", "RUT": "Ruth", "PHP": "Philippians", "JON": "Jonah", "1JN": "I John", "2JN": "II John", "3JN": "III John", "MRK": "Mark", "JHN": "John"}
+TAGS = {"TIT": "TAG-TITUS", "OBA": "TAG-OBADIAH", "RUT": "TAG-RUTH", "PHP": "TAG-PHILIPPIANS", "JON": "TAG-JONAH", "1JN": "TAG-JOHANNINE", "2JN": "TAG-JOHANNINE", "3JN": "TAG-JOHANNINE", "MRK": "TAG-MARK", "JHN": "TAG-JOHN"}
 NOTES = {
     "LUT": "Die Fassung 1912 übersetzt im Neuen Testament nach dem Textus Receptus, im Alten nach dem hebräischen Text der Rabbinerbibeln; Sprache und Wortwahl gehen auf Luther zurück.",
     "ELB": "Sehr wörtliche Übersetzung; im Neuen Testament berücksichtigt sie schon kritische Textausgaben des 19. Jahrhunderts.",

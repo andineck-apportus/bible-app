@@ -107,7 +107,7 @@ def layers(mes):
 
 
 BOOKTAG = {"MAT": "TAG-MATTHEW", "MRK": "TAG-MARK", "LUK": "TAG-LUKE", "PHP": "TAG-PHILIPPIANS", "TIT": "TAG-TITUS",
-           "1JN": "TAG-JOHANNINE", "2JN": "TAG-JOHANNINE", "3JN": "TAG-JOHANNINE"}
+           "1JN": "TAG-JOHANNINE", "2JN": "TAG-JOHANNINE", "3JN": "TAG-JOHANNINE", "JHN": "TAG-JOHN"}
 
 
 def reading_words(text, base_words):
