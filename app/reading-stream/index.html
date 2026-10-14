@@ -873,19 +873,34 @@ function levelsSheet(){const n=nodes.get(current);openSheet('levels',head(T().le
    Liest ab einem Titel alle folgenden Einträge derselben Ebene ohne Unterbruch vor (Überschrift und Zusammenfassung bzw.
    Verse mit Kapitel- und Abschnittstitel). Einträge ohne Text werden übersprungen. Pause bricht die Ausgabe ab und setzt
    am Satzanfang wieder ein (pause/resume ist auf mehreren Geräten unzuverlässig). Lange Texte in Sätze geteilt. */
-const readBtn=id=>`<button type="button" class="read-start" data-read="${id}" aria-label="${T().readAloud}">${icon('play')}</button>`;
-const RA={on:false,playing:false,level:0,idx:0,dir:1,chunks:[],ci:0,tok:0,skips:0};
-const spokenRefs=t=>String(t||'').replace(MARK_RE,(m,r)=>{const [a,z]=r.split('-');const [b,c1,v1]=a.split('.');const bk=DATA[CODE_IDX[b]];let out=(bk?bk[lang]:b)+(c1?' '+c1:'')+(v1?', '+v1:'');
-  if(z){const [b2,c2,v2]=z.split('.');out+=(lang==='de'?' bis ':' to ')+(b2!==b?((DATA[CODE_IDX[b2]]||{})[lang]||b2)+' ':'')+(c2&&c2!==c1?c2+(v2?', '+v2:''):(v2||c2||''));}return out;})
+const raActive=id=>RA.on&&RA.playing&&RA.activeBtn===id;
+const readBtn=id=>`<button type="button" class="read-start" data-read="${id}" aria-label="${raActive(id)?T().raPause:T().readAloud}">${icon(raActive(id)?'pause':'play')}</button>`;
+// Startknopf beim Titel zeigt den Zustand wie der Player (Play/Pause)
+function raSync(){app.querySelectorAll('[data-read]').forEach(b=>{const on=raActive(b.dataset.read),want=on?'pause':'play';if(b.dataset.icon!==want){b.dataset.icon=want;b.innerHTML=icon(want);b.setAttribute('aria-label',on?T().raPause:T().readAloud);}});}
+const RA={activeBtn:null,on:false,playing:false,level:0,idx:0,dir:1,chunks:[],ci:0,tok:0,skips:0};
+// Gesprochene Buchnamen: «1. Johannes» → «Erster Johannes», «2. Mose» → «Zweites Buch Mose», «1 John» → «First John»
+const ORD_DE=['Erster','Zweiter','Dritter'],ORD_MOSE=['Erstes','Zweites','Drittes','Viertes','Fünftes'],ORD_EN=['First','Second','Third'];
+function spokenName(name){let m=String(name).match(/^([1-5])\.\s*(.+)$/);if(m){const d=Number(m[1]);return m[2]==='Mose'?ORD_MOSE[d-1]+' Buch Mose':(ORD_DE[d-1]||m[1]+'.')+' '+m[2];}
+  m=String(name).match(/^([1-3])\s+(.+)$/);return m?ORD_EN[Number(m[1])-1]+' '+m[2]:name;}
+const raTo=()=>lang==='de'?' bis ':' to ';
+const spokenRefs=t=>String(t||'').replace(MARK_RE,(m,r)=>{const [a,z]=r.split('-');const [b,c1,v1]=a.split('.');const bk=DATA[CODE_IDX[b]];let out=spokenName(bk?bk[lang]:b)+(c1?' '+c1:'')+(v1?', '+v1:'');
+  if(z){const [b2,c2,v2]=z.split('.');out+=raTo()+(b2!==b?spokenName((DATA[CODE_IDX[b2]]||{})[lang]||b2)+' ':'')+(c2&&c2!==c1?c2+(v2?', '+v2:''):(v2||c2||''));}return out;})
   .replace(/[⟦⟧~*]/g,'').replace(/\s+/g,' ').trim();
-function readText(n){const s=summary(n);if(!s)return '';
-  if(n.level===6){let pre='';const p=nodes.get(n.parent);if(n.v===1)pre+=title(nodes.get(p.parent))+'. ';if(p.part&&p.v===n.v)pre+=pTitle(p.part)+'. ';return pre+s;}
-  return (n.level===5&&n.part?pTitle(n.part):title(n))+'. '+s;}
+// Titel ohne Schlusspunkt (sonst liest die Stimme «Johannes 2.» als «Johannes zweiter»)
+function spokenTitle(n){const name=n.level>=3?spokenName(bookName(n)):'';
+  if(n.level<3)return title(n);if(n.level===3)return name;if(n.level===4)return name+' '+n.c;
+  if(n.level===5)return n.part?spokenRefs(pTitle(n.part)):name+' '+n.c+', '+n.v+raTo()+n.last;return name+' '+n.c+', '+n.v;}
+// Ablauf eines Eintrags: Pausen (ms), leiser gesprochene Titel, dann der Text in Sätzen
+const P=ms=>({pause:ms}),TT=t=>({t,title:true});
+function readParts(n){const s=summary(n);if(!s)return [];const out=[];
+  if(n.level===6){const p=nodes.get(n.parent);if(n.v===1)out.push(P(450),TT(spokenTitle(nodes.get(p.parent))),P(600));if(p.part&&p.v===n.v)out.push(P(n.v===1?150:450),TT(spokenRefs(pTitle(p.part))),P(600));}
+  else out.push(P(450),TT(spokenTitle(n)),P(600));
+  return out.concat(chunksOf(spokenRefs(s)).map(t=>({t})));}
 function chunksOf(text){const parts=text.match(/[^.!?;:]+[.!?;:]*[»"”]?\s*/g)||[text];const out=[];let cur='';
   for(const p of parts){if(cur&&(cur+p).length>220){out.push(cur.trim());cur='';}cur+=p;}if(cur.trim())out.push(cur.trim());return out;}
 function raLabel(n){return n.level===6?title(n):n.level===5&&n.part?pTitle(n.part)+' · '+refDe(n.part.range):title(n);}
 const playerEl=()=>app.querySelector('.player');
-function raButtons(){const pl=playerEl(),t=T();if(!pl)return;const b=pl.querySelector('[data-ra=toggle]');b.innerHTML=icon(RA.playing?'pause':'play');b.setAttribute('aria-label',RA.playing?t.raPause:t.raPlay);
+function raButtons(){raSync();const pl=playerEl(),t=T();if(!pl)return;const b=pl.querySelector('[data-ra=toggle]');b.innerHTML=icon(RA.playing?'pause':'play');b.setAttribute('aria-label',RA.playing?t.raPause:t.raPlay);
   pl.querySelector('[data-ra=prev]').setAttribute('aria-label',t.raPrev);pl.querySelector('[data-ra=next]').setAttribute('aria-label',t.raNext);pl.querySelector('[data-ra=close]').setAttribute('aria-label',t.raClose);pl.setAttribute('aria-label',t.readAloud);}
 function raMark(id){reader.querySelectorAll('.stream-entry.reading').forEach(el=>el.classList.remove('reading'));if(!RA.on||!id)return;
   let el=reader.querySelector(`[data-stream="${id}"]`);const n=nodes.get(id);
@@ -894,33 +909,35 @@ function raMark(id){reader.querySelectorAll('.stream-entry.reading').forEach(el=
   if((r.top<v.top+60||r.bottom>v.bottom-120)&&el.scrollIntoView)try{el.scrollIntoView({block:'center',behavior:'smooth'});}catch(e){el.scrollIntoView();}}
 function raSpeak(){if(!RA.on||!RA.playing)return;const tok=++RA.tok;
   if(RA.ci>=RA.chunks.length){RA.idx++;RA.dir=1;raLoad();return;}
-  const {u}=utter(RA.chunks[RA.ci],'de');const done=()=>{if(tok!==RA.tok)return;RA.ci++;raSpeak();};u.onend=done;u.onerror=done;synth.speak(u);}
+  const c=RA.chunks[RA.ci],done=()=>{if(tok!==RA.tok)return;RA.ci++;raSpeak();};
+  if(c.pause){if(RA.first&&RA.ci===0){done();return;}setTimeout(done,c.pause);return;}
+  RA.first=false;const {u}=utter(c.t,'de');if(c.title){u.pitch=0.9;u.volume=0.7;u.rate=S.rate*0.92;}u.onend=done;u.onerror=done;synth.speak(u);}
 function raLoad(){const ids=streams[RA.level];
   if(RA.idx<0){RA.idx=0;RA.dir=1;}
   if(RA.idx>=ids.length){raEnd();return;}
   const id=ids[RA.idx],tok=++RA.tok;
-  const cont=()=>{if(!RA.on||tok!==RA.tok)return;const n=nodes.get(id),txt=spokenRefs(readText(n));
-    if(!txt){if(++RA.skips>500){raEnd();return;}RA.idx+=RA.dir;if(RA.idx<0){RA.dir=1;RA.idx=0;}raLoad();return;}
-    RA.skips=0;RA.dir=1;RA.chunks=chunksOf(txt);RA.ci=0;playerEl().querySelector('.player-label').textContent=raLabel(n);raMark(id);raSpeak();};
+  const cont=()=>{if(!RA.on||tok!==RA.tok)return;const n=nodes.get(id),parts=readParts(n);
+    if(!parts.length){if(++RA.skips>500){raEnd();return;}RA.idx+=RA.dir;if(RA.idx<0){RA.dir=1;RA.idx=0;}raLoad();return;}
+    RA.skips=0;RA.dir=1;RA.chunks=parts;RA.ci=0;if(n.level<6||parts.some(c=>c.title))RA.activeBtn=id;playerEl().querySelector('.player-label').textContent=raLabel(n);raMark(id);raButtons();raSpeak();};
   const p=needData(codesOf([id]));if(p)p.then(cont);else cont();}
 function raEnd(){RA.playing=false;RA.tok++;try{synth.cancel();}catch(e){}raButtons();playerEl().querySelector('.player-label').textContent=T().raEnd;}
 function readStart(id){const n=nodes.get(id);if(!n)return;
   if(!synth||!globalThis.SpeechSynthesisUtterance){app.querySelector('.live').textContent=T().raNone;return;}
   try{synth.cancel();synth.speak(new SpeechSynthesisUtterance(''));}catch(e){}// in der Geste starten (iOS)
-  Object.assign(RA,{on:true,playing:true,level:n.level,idx:n.si,dir:1,ci:0,chunks:[],skips:0});
+  Object.assign(RA,{on:true,playing:true,first:true,activeBtn:id,level:n.level,idx:n.si,dir:1,ci:0,chunks:[],skips:0});
   playerEl().hidden=false;raButtons();raLoad();}
 function raControl(a){if(!RA.on)return;
-  if(a==='close'){RA.on=false;RA.playing=false;RA.tok++;try{synth.cancel();}catch(e){}playerEl().hidden=true;raMark(null);return;}
+  if(a==='close'){RA.on=false;RA.playing=false;RA.activeBtn=null;raSync();RA.tok++;try{synth.cancel();}catch(e){}playerEl().hidden=true;raMark(null);return;}
   if(a==='toggle'){if(RA.playing){RA.playing=false;RA.tok++;try{synth.cancel();}catch(e){}}else{RA.playing=true;try{synth.cancel();}catch(e){}if(RA.idx>=streams[RA.level].length){RA.idx=0;}if(RA.chunks.length&&RA.ci<RA.chunks.length)raSpeak();else raLoad();}raButtons();return;}
   RA.tok++;try{synth.cancel();}catch(e){}
   if(a==='next'){RA.dir=1;RA.idx++;raLoad();}
-  else if(a==='prev'){if(RA.ci>1){RA.ci=0;raSpeak();return;}RA.dir=-1;RA.idx--;raLoad();}}
+  else if(a==='prev'){if(RA.ci>4){RA.ci=0;raSpeak();return;}RA.dir=-1;RA.idx--;raLoad();}}
 app.insertAdjacentHTML('beforeend',`<div class="player" role="region" hidden><span class="player-label" aria-live="polite"></span><button type="button" class="icon-btn" data-ra="prev">${icon('prev')}</button><button type="button" class="icon-btn" data-ra="toggle">${icon('pause')}</button><button type="button" class="icon-btn" data-ra="next">${icon('next')}</button><button type="button" class="icon-btn" data-ra="close">${icon('x')}</button></div>`);
 app.addEventListener('click',e=>{
   const b=e.target.closest('button,[data-close],[role=button]');
   if(!b){if(e.target.closest('.reader'))app.classList.toggle('immersed');return;}
   if(b.dataset.dec!==undefined){const c=b.closest('[data-ref]');if(c){decisionSheet(c.dataset.ref,Number(b.dataset.dec));return;}}
-  if(b.dataset.read){e.stopPropagation();readStart(b.dataset.read);return;}
+  if(b.dataset.read){e.stopPropagation();if(RA.on&&RA.activeBtn===b.dataset.read)raControl('toggle');else readStart(b.dataset.read);return;}
   if(b.dataset.ra){raControl(b.dataset.ra);return;}
   if(b.dataset.speak!==undefined){e.preventDefault();e.stopPropagation();speak(b.dataset.speak,b.dataset.speakLang,b.dataset.speakTr);return;}
   if(b.hasAttribute('data-close')){closeSheet();return;}
