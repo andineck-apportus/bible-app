@@ -2,6 +2,12 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.48 — 2026-10-14 — Vorlesen
+
+- **Vorlesemodus:** Neben jedem Titel (Einträge aller Zoomstufen, Kapitel- und Abschnittstitel im Bibeltext) startet ein kleiner Knopf das Vorlesen ab dieser Stelle. Gelesen wird ohne Unterbruch weiter durch dieselbe Ebene: Überschrift und Zusammenfassung bzw. Verse mit Kapitel- und Abschnittstiteln; Einträge ohne Text werden übersprungen, Bibelstellen-Marken als Buch, Kapitel und Vers gesprochen.
+- **Player** unten, minimal: Anzeige des vorgelesenen Teils, zurück, Pause/weiter, vor, schliessen. Der vorgelesene Teil ist im Text hinterlegt und bleibt im Blick. Stimme des Geräts (Web Speech API, Sprechtempo aus den Einstellungen); Züridüütsch wird mit einer deutschen Stimme gelesen. Pause setzt am Satzanfang wieder ein, weil Anhalten/Fortsetzen nicht auf allen Geräten zuverlässig ist.
+- Neue Prüfung `scripts/test_reading_stream_vorlesen.cjs` (Playwright, nachgebildete Sprachausgabe).
+
 ## v0.47 — 2026-10-14 — Logo mit Herz, «Zuletzt gelesen» eingeklappt
 
 - Logo: Beim Darüberfahren, Fokussieren oder Antippen wechselt es zu einem Herz mit denselben oberen Bögen, demselben unteren Mittelpunkt und gleichem Aussenmass; das innere Kreuz bleibt mit 50 % Deckkraft auf denselben Achsen.
