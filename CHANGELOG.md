@@ -2,6 +2,12 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.50 — 2026-10-14 — Vorlesen natürlicher
+
+- **Zusammenhängend lesen:** Verse bis zum nächsten Titel werden als ein Text übergeben und nur an echten Satzenden geteilt (nicht nach Abkürzungen, Zahlen, «:» oder «;»), damit die Satzmelodie über Versgrenzen läuft; überlange Sätze werden an «;», «:» bzw. Kommas geteilt. Anzeige und Markierung folgen dem Vers, in dem der gesprochene Abschnitt beginnt, und, wo die Stimme es meldet, Wort für Wort.
+- **Vorlesestimme:** «Auto» wählt die vermutlich natürlichste deutsche Stimme des Geräts (Premium, Natural, Erweitert, Google vor Kompakt- und Effektstimmen); im Menü eigene Auswahl, Vorlesetempo (Ruhig, Normal, Zügig, getrennt vom Tempo für Ursprachwörter), Probehören und Hinweis, wo sich bessere Stimmen installieren lassen.
+- Vorgemerkt: Vertonung mit neuronalen Cloud-Stimmen (siehe Status und Roadmap).
+
 ## v0.49 — 2026-10-14 — Vorlesen: Titel, Pausen, Startknopf als Pause
 
 - Titel werden als eigener, etwas leiser und langsamer gesprochener Satz gelesen, mit kurzer Pause davor und danach; ohne Schlusspunkt, damit «Johannes 2» nicht als «Johannes zweiter» gelesen wird.
