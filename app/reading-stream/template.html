@@ -207,6 +207,9 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .row{display:flex!important;justify-content:space-between;align-items:center;width:100%;min-height:50px;border-top:1px solid var(--rule)!important;gap:10px}
 #bible-stream .row .sub{display:block;font-size:12.5px;color:var(--muted)}
 #bible-stream .row.current{font-weight:600}
+#bible-stream details.worked{margin:8px 0 4px;border-top:1px solid var(--rule)}
+#bible-stream details.worked>summary{cursor:pointer;padding:12px 0;font:500 14px/1.3 var(--ui);color:var(--muted)}
+#bible-stream .clear-recent{display:inline-block;margin:6px 0 10px;font:400 12.5px/1.4 var(--ui)}
 #bible-stream .dss{margin:0 0 12px;padding:0 0 0 10px;border-left:2px solid var(--rule)}
 #bible-stream .dss-name{margin:0 0 4px;font:500 14px/1.35 var(--ui)} #bible-stream .dss-name .sub{display:block;font-weight:400;font-size:12.5px;color:var(--muted)}
 #bible-stream .dss-text{margin:0 0 6px;font-size:calc(var(--read) * 1.05);line-height:1.9}
@@ -308,7 +311,7 @@ const ui={
   deeper:['Zu den Testamenten','Zu den Buchgruppen','Zu den Büchern','Zu den Kapiteln','Zu den Abschnitten','Text lesen'],
   noSummary:'Zu diesem Kapitel gibt es noch keine Zusammenfassung.',noPart:'Für diesen Abschnitt gibt es noch keine Zusammenfassung.',placeholder:'Text noch nicht eingebunden',
   verses:'Verse',loadNext:'Weiterlesen',loadPrev:'Früheres anzeigen',end:'Ende',empty:'Kein passendes Buch und keine gültige Bibelstelle.',
-  example:'Ausgearbeitet',examples:'Ausgearbeitete Stellen',understand:'Diesen Abschnitt verstehen',toolUnderstand:'Verstehen',toolHistory:'Geschichte',background:'Hintergrund damals',toSource:'Bis zur Quelle',then:'Damals',more:'Mehr zu Vers',
+  example:'Ausgearbeitet',examples:'Ausgearbeitete Stellen',recent:'Zuletzt gelesen',recentClear:'Verlauf löschen (nur auf diesem Gerät gespeichert)',understand:'Diesen Abschnitt verstehen',toolUnderstand:'Verstehen',toolHistory:'Geschichte',background:'Hintergrund damals',toSource:'Bis zur Quelle',then:'Damals',more:'Mehr zu Vers',
   readText:'Lesetext',readTextSub:'Übersetzungen aus dem Urtext; die Mundart-Fassung ist ein Entwurf, der noch von einer muttersprachlichen Person geprüft wird.',colors:'Farben',auto:'Auto',light:'Hell',dark:'Dunkel',size:'Textgrösse',language:'Sprache der Bedienung',
   advanced:'Urtext und Details',advancedSub:'Für Fortgeschrittene: Griechisch Wort für Wort, Grammatik, Vergleich der Textausgaben, Quellen.',
   inline:'Andere Lesarten im Text zeigen',inlineSub:'Zeigt unter einem Vers, wo alte Handschriften anders lauten.',bgInline:'Hintergrund im Text zeigen',flow:'Verse fortlaufend',flowSub:'Verse als Fliesstext hintereinander statt je auf einer eigenen Zeile.',translit:'Umschrift zeigen',translitSub:'Griechische Wörter zusätzlich in unserer Schrift, z. B. ponēroú.',pron:'Aussprache',pronSub:'Neugriechisch: Stimme des Geräts. Schulaussprache: wie im Theologiestudium üblich, gelesen von einer deutschen Stimme. Beides nähert die Aussprache zur Zeit Jesu nur an.',pronModern:'Neugriechisch',pronSchool:'Schulaussprache',voice:'Stimme',voiceAuto:'Automatisch',noVoice:'Auf diesem Gerät ist keine passende Stimme installiert. In den Systemeinstellungen lassen sich Stimmen nachladen (z. B. Griechisch).',rate:'Tempo',slow:'Langsam',normal:'Normal',sample:'Probe anhören',bgInlineSub:'Zeigt unter einem Vers kurze Hinweise auf Zeit, Ort und Kultur damals.',about:'Über diese Fassung',sourcesMap:'Quellen und Rechte',sourcesMapSub:'Welche Quellen es gibt, was wir dürfen, was wir nutzen'},
@@ -317,7 +320,7 @@ const ui={
   deeper:['Testaments','Book groups','Books','Chapters','Passages','Read the text'],
   noSummary:'No summary for this chapter yet.',noPart:'No summary for this passage yet.',placeholder:'Text not yet available',
   verses:'verses',loadNext:'Continue reading',loadPrev:'Show earlier',end:'End',empty:'No matching book or valid reference.',
-  example:'Worked out',examples:'Worked passages',understand:'Understand this passage',toolUnderstand:'Understand',toolHistory:'History',background:'Background then',toSource:'Trace to the source',then:'Back then',more:'More on verse',
+  example:'Worked out',examples:'Worked passages',recent:'Recently read',recentClear:'Clear history (stored on this device only)',understand:'Understand this passage',toolUnderstand:'Understand',toolHistory:'History',background:'Background then',toSource:'Trace to the source',then:'Back then',more:'More on verse',
   readText:'Reading text',readTextSub:'Translations from the original text; the dialect version is a draft awaiting native-speaker review.',colors:'Colours',auto:'Auto',light:'Light',dark:'Dark',size:'Text size',language:'Interface language',
   advanced:'Original text and details',advancedSub:'For advanced readers: Greek word by word, grammar, edition comparison, sources.',
   inline:'Show other readings in the text',inlineSub:'Shows below a verse where old manuscripts differ.',bgInline:'Show background in the text',flow:'Continuous verses',flowSub:'Verses run on as one paragraph instead of one per line.',translit:'Show transliteration',translitSub:'Greek words also in Latin letters, e.g. ponēroú.',pron:'Pronunciation',pronSub:'Modern Greek: device voice. Academic: as commonly taught, read by a German voice. Both only approximate first-century pronunciation.',pronModern:'Modern Greek',pronSchool:'Academic',voice:'Voice',voiceAuto:'Automatic',noVoice:'No matching voice installed on this device.',rate:'Speed',slow:'Slow',normal:'Normal',sample:'Play sample',bgInlineSub:'Shows short notes on time, place and culture below a verse.',about:'About this version',sourcesMap:'Sources and rights',sourcesMapSub:'Which sources exist, what we may use, what we use'}};
@@ -604,8 +607,15 @@ function loadMore(before=false){
 }
 
 /* ---------- Leisten ---------- */
+// Zuletzt gelesen: nur auf diesem Gerät (localStorage, Schlüssel «lesestrom-zuletzt»); Abschnitt- bzw. Kapitelebene.
+const RECENT_KEY='lesestrom-zuletzt',RECENT_MAX=12;
+let recent=[];try{recent=JSON.parse(localStorage.getItem(RECENT_KEY)||'[]').filter(x=>x&&nodes.has(x.id));}catch(e){recent=[];}
+function recentTarget(id){let n=nodes.get(id);if(!n||n.level<4)return null;if(n.level===6)n=nodes.get(n.parent);return n.id;}
+function recordRecent(){const id=recentTarget(current);if(!id||(recent[0]&&recent[0].id===id))return;recent=[{id,ts:Date.now()},...recent.filter(x=>x.id!==id)].slice(0,RECENT_MAX);try{localStorage.setItem(RECENT_KEY,JSON.stringify(recent));}catch(e){}}
+function clearRecent(){recent=[];try{localStorage.removeItem(RECENT_KEY);}catch(e){}}
+function recentLabel(id){const n=nodes.get(id),b=DATA[n.b];const name=lang==='de'?b.de:b.en;if(n.level===4)return `${name} ${n.c}`;return `${name} ${n.c},${n.v}${n.last>n.v?'–'+n.last:''}`+(n.part?' · '+pTitle(n.part):'');}
 function chrome(){
-  const n=nodes.get(current),t=T();app.lang=lang;
+  const n=nodes.get(current),t=T();app.lang=lang;recordRecent();
   app.querySelector('.location').textContent=title(n);
   app.querySelector('.location').setAttribute('aria-label',t.contents+': '+title(n));
   app.querySelector('[data-action=home]').setAttribute('aria-label',t.home);
@@ -803,8 +813,9 @@ function menuSheet(){
   const t=T(),seg=(key,opts,val)=>`<div class="seg" role="group">${opts.map(([v,l])=>`<button type="button" data-set="${key}" data-value="${v}" aria-pressed="${String(val)===String(v)}">${l}</button>`).join('')}</div>`;
   const sw=(key,label,sub)=>`<div class="set"><span>${label}<span class="sub">${sub}</span></span><button type="button" class="switch" role="switch" aria-checked="${S[key]}" data-toggle="${key}" aria-label="${label}"></button></div>`;
   openSheet('menu',head(t.menu,t.done)+`<label for="find-${appIndex}" class="note">${t.search}</label><input id="find-${appIndex}" type="search" placeholder="${t.hint}" value="${esc(query)}" autocomplete="off"><div class="results"></div>
-  <p class="note">${t.examples}</p>${STUDY.sections.map(sec=>`<button type="button" class="row" data-go="${sec.parts[0].id}"><span>${esc(refDe(sec.range))} · ${esc(pTitle(sec))}</span>${icon('chevron-right')}</button>`).join('')}
+  ${recent.length?`<p class="note">${t.recent}</p>${recent.map(x=>`<button type="button" class="row recent-row" data-go="${x.id}"><span>${esc(recentLabel(x.id))}</span>${icon('chevron-right')}</button>`).join('')}<button type="button" class="link soft clear-recent" data-clear-recent>${t.recentClear}</button>`:''}
   <button type="button" class="row" data-go="all"><span>${t.home}</span>${icon('chevron-right')}</button>
+  <details class="worked"><summary>${t.examples} (${STUDY.sections.length})</summary>${STUDY.sections.map(sec=>`<button type="button" class="row" data-go="${sec.parts[0].id}"><span>${esc(refDe(sec.range))} · ${esc(pTitle(sec))}</span>${icon('chevron-right')}</button>`).join('')}</details>
   ${STUDY.layer_order.length>1?`<div class="set"><span>${t.readText}<span class="sub">${t.readTextSub}</span></span>${seg('text',STUDY.layer_order.map(k=>[k,STUDY.layers[k].label]),S.text)}</div>`:''}
   <div class="set"><span>${t.colors}</span>${seg('theme',[['auto',t.auto],['light',t.light],['dark',t.dark]],S.theme)}</div>
   <div class="set"><span>${t.size}</span>${seg('read',[[17,'A−'],[19,'A'],[22,'A+']],S.read)}</div>
@@ -856,6 +867,7 @@ app.addEventListener('click',e=>{
   if(b.dataset.refGo){goRef(b.dataset.refGo);return;}
   if(b.dataset.nav){const [k,v]=b.dataset.nav.split(':');if(k==='t'){nav={t:v,g:null,b:null,c:null};}else if(k==='g'){nav.g=Number(v);nav.b=null;nav.c=null;}else if(k==='b'){nav.b=Number(v);nav.c=null;}else if(k==='c'){nav.c=Number(v);}
     const old=host.querySelector('.sheet'),y=old?old.scrollTop:0;navSheet();const sh=host.querySelector('.sheet');if(sh&&sh.scrollTo)sh.scrollTo(0,y);const last=host.querySelector('.nav-block:last-of-type');if(last&&last.scrollIntoView)last.scrollIntoView({block:'nearest'});return;}
+  if(b.hasAttribute('data-clear-recent')){clearRecent();menuSheet();return;}
   if(b.dataset.go){go(b.dataset.go);return;}
   if(b.dataset.level!==undefined){go(resolveLevel(Number(b.dataset.level)));return;}
   if(b.dataset.source){sourceSheet(b.dataset.source,b.dataset.verse);const sh=host.querySelector('.sheet');if(sh&&sh.scrollTo)sh.scrollTo(0,0);return;}

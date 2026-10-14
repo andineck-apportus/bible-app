@@ -89,7 +89,11 @@ let tested=mkAlts().length;
 
 // Vaterunser: Matthäus und Lukas
 click('[data-action=menu]');
-assert.equal(sheetHost.querySelectorAll('[data-go^="TU-"]').length,M().sections.length,'Ausgearbeitete Stellen im Menü');
+assert.equal(sheetHost.querySelectorAll('details.worked [data-go^="TU-"]').length,M().sections.length,'Ausgearbeitete Stellen im Menü (eingeklappt)');
+assert(sheetHost.textContent.includes('Zuletzt gelesen')&&sheetHost.querySelectorAll('[data-clear-recent]').length===1,'Zuletzt gelesen nach dem Lesen');
+{const rr=[...sheetHost.querySelectorAll('.recent-row')];assert(rr.length>0&&rr.every(r=>[4,5].includes(model.nodes.get(r.dataset.go).level)),'Verlauf auf Abschnitt- bzw. Kapitelebene');}
+click('[data-clear-recent]');
+assert(!sheetHost.textContent.includes('Zuletzt gelesen'),'Verlauf löschen');
 click('.sheet [data-go="TU-MAT-006-005-008"]');
 click('[data-deep="TU-MAT-006-009-013"]');
 const mtv=v=>reader.querySelector(`[data-stream="v39-6-${v}"] .stream-copy`);
@@ -173,7 +177,7 @@ click('[data-action=menu]');assert(sheetHost.querySelector('[data-set="text"][da
 assert.equal(reader.querySelector('[data-stream="v39-6-11"] .stream-copy').textContent,'Öises täglich Broot gib üs hüt.','Mundart im Lesestrom');
 assert(reader.querySelector('[data-stream="v39-6-11"] .dec.traditional'),'Entscheidung «täglich» auch in der Mundart markiert');
 click('[data-action=index]');assert(sheetHost.textContent.includes('S Vatterunser')&&sheetHost.textContent.includes('Nöd zum Schiin'),'Navigator-Titel in Mundart');click('[data-close]');
-click('[data-action=up]');assert(reader.textContent.includes('Es Gebät mit sibe Bitte')&&reader.querySelector('[data-stream="TU-MAT-006-009-013"] h2').textContent==='S Vatterunser','Abschnittstitel und -zusammenfassung in Mundart');click('[data-action=down]');
+click('[data-action=up]');assert(reader.textContent.includes('mit sibe Bitte')&&reader.querySelector('[data-stream="TU-MAT-006-009-013"] h2').textContent==='S Vatterunser','Abschnittstitel und -zusammenfassung in Mundart');click('[data-action=down]');
 assert(reader.querySelector('.alt-line[data-alternative="VAR-SBLGNTAPP-MAT-006-012-01"]').textContent.includes('vergänd'),'Mundart-Lesart im Text');
 click('[data-more="v39-6-11"]');assert(sheetHost.textContent.includes('Ältere Übersetzungen · Züridüütsch')&&sheetHost.textContent.includes('noch keine Vergleichsübersetzung')&&sheetHost.textContent.includes('Ältere Übersetzungen · Hochdeutsch')&&sheetHost.textContent.includes('Lutherbibel'),'Vergleichsübersetzungen nach Sprache des Zielkontexts');click('[data-close]');
 click('[data-more="v39-6-11"]');assert(sheetHost.textContent.includes('Öises täglich Broot')&&sheetHost.textContent.includes('für de nööchscht Taag'),'Mundart-Entscheidung im Versblatt');
