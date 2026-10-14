@@ -58,7 +58,7 @@ FINDINGS = [
  ("FIND-TIT-0007", "TU-TIT-001-001-016", "text_history",
   "Der Codex Vaticanus (4. Jh.) enthält den Titusbrief nicht; seine Paulusbriefe brechen im Hebräerbrief ab. Ältester erhaltener Zeuge ist der Papyrus 𝔓32 (um 200) mit Teilen von [[TIT.1.11-TIT.1.15]] und [[TIT.2.3-TIT.2.8]]. In den hier erfassten Lesarten geht 𝔓32 laut automatischer Zuordnung mit den grossen Handschriften des 4. und 5. Jahrhunderts.",
   ["TIT.1.11-TIT.1.15", "TIT.2.3-TIT.2.8"], "probable", "Umfang nach den CNTR-Transkriptionen; Zuordnung maschinell (METHOD-AUTO-COLLATION-V1), nicht am Faksimile geprüft.",
-  "De Codex Vaticanus (4. Jh.) enthaltet de Titusbrief nöd; sini Paulusbrief bräched im Hebräerbrief ab. Eltischte erhaltene Züüge isch de Papyrus 𝔓32 (um 200) mit Teil vo [[TIT.1.11-TIT.1.15]] und [[TIT.2.3-TIT.2.8]]. I de da erfasste Läsarte gaat 𝔓32 nach de automatische Zueornig mit de groosse Handschrifte vom 4. und 5. Jaarhundert.",
+  "De Codex Vaticanus (4. Jh.) enthaltet de Titusbrief nöd; sini Paulusbrief bräched im Hebräerbrief ab. Ältischte erhaltene Züüge isch de Papyrus 𝔓32 (um 200) mit Teil vo [[TIT.1.11-TIT.1.15]] und [[TIT.2.3-TIT.2.8]]. I de da erfasste Läsarte gaat 𝔓32 nach de automatische Zueornig mit de groosse Handschrifte vom 4. und 5. Jaarhundert.",
   "Umfang nach de CNTR-Transkriptione; Zueornig maschinell, nöd am Faksimile prüeft."),
 ]
 

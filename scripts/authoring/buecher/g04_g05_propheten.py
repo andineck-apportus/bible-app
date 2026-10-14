@@ -399,7 +399,7 @@ NOTES = [
                      "Jaarhundert in Verbindig, und no [[ZEC.14.5]] erinneret dra. Es isch e Ziit vo Wohlstand und "
                      "wachsender Ungliichheit gsii: De Amos kritisiert «Elfebeihüüser» und Prunkbett "
                      "([[AMO.3.15]]; [[AMO.6.4]]) – z Samaria hät me gschnitzti Elfebeiplatte gfunde – und d "
-                     "Rächtsbüügig a de Arme ([[AMO.5.11-AMO.5.12]]). De Amos gilt für vili als eltischte Prophet, "
+                     "Rächtsbüügig a de Arme ([[AMO.5.11-AMO.5.12]]). De Amos gilt für vili als ältischte Prophet, "
                      "wo sini Wort als Buech überliferet sind.",
              "uncertain": "Weli Teil spööter dezuechoo sind, isch umstritte: Vili Forscher halted öppe de Spruch "
                           "gäge Juda ([[AMO.2.4-AMO.2.5]]), d Lobpriisstuck ([[AMO.4.13]]; [[AMO.5.8-AMO.5.9]]; "

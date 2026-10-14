@@ -16,7 +16,7 @@ NOTES = [
   "evidence_refs": ["JOS.4.9", "JOS.6.25", "JOS.11.23", "JOS.13.1", "JOS.15.63"], "sources": [TALMUD], "terms": [],
   "gsw": {"topic": "Josua: Wänn und für wän isch d Landnaam verzellt worde?",
           "text": "S Buech Josua verzellt, wie Israel under de Füerig vom Josua s Land Kanaan iinimmt und under d Stämm verteilt. Je nachdem, wie me di biblische Zaale düütet, spilt das im 15. oder im 13. Jaarhundert v. Chr. D jüdisch Überlieferig im Talmud nännt de Josua sälber als Verfasser. Vili Forscher gsend s Buech dergäge als Teil vom deuteronomistische Gschichtswärch, wo i de spoote Königsziit (7. Jh. v. Chr., under em König Josia) und im Exil gformt worde isch; dänn hät s Mänsche aagredt, wo um iris Land Angscht gha oder s verlore händ. D Wändig «bis uf dä Taag» ([[JOS.4.9]]) zeigt Abstand zu de Ereigniss. Uffällig isch d Spannig zwüsche de vollständige Eroberig ([[JOS.11.23]]) und Gebiet, wo nöd iignoo worde sind ([[JOS.13.1]]; [[JOS.15.63]]).",
-          "uncertain": "Wänn di eltischte Überlieferige entstande sind und wie vil Bearbeitige s gää hät, isch offe. Öb «bis uf dä Taag» en spoote Verfasser, spööteri Ergänzige oder – wie traditionelli Usleger zu [[JOS.6.25]] meined – Ziitgenosse vo de Ereigniss voruussetzt, wird verschide beurteilt.",
+          "uncertain": "Wänn di ältischte Überlieferige entstande sind und wie vil Bearbeitige s gää hät, isch offe. Öb «bis uf dä Taag» en spoote Verfasser, spööteri Ergänzige oder – wie traditionelli Usleger zu [[JOS.6.25]] meined – Ziitgenosse vo de Ereigniss voruussetzt, wird verschide beurteilt.",
           "terms": []}},
 
  {"id": "BG-JOS-BOOK-0002", "book": "JOS", "context": "CTX-HIST-ISRAEL-IRON-PERSIAN", "confidence": "probable",

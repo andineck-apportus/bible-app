@@ -2,6 +2,10 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.45 — 2026-10-14 — Mundart: «Ältischti»
+
+- Züridüütsch einheitlich «Ältischti» (Gemeindeälteste) und «ältischt…» (älteste), statt «Elteschti» bzw. «eltischt…», in Übersetzungen, Wortzuordnungen, Lokalisierungen und Autorenwerkzeugen (31 Datensätze, 15 Skripte); frühere Schreibung im revision_log vermerkt.
+
 ## v0.44 — 2026-10-14 — Johannesevangelium aus dem Urtext
 
 - **Import Johannes:** SBLGNT mit MACULA-Annotation (15 625 Wörter; Schreibvarianten wie Μωσῆς/Μωϋσῆς im Importer ausdrücklich gelistet, ᾿ als Elisionszeichen), SBLGNT-Apparat (770 von 773 Einträgen zugeordnet), Bewertung «Übereinstimmung der Editionen», CNTR-Transkriptionen von 30 Handschriften und 5 Ausgaben, neu u. a. 𝔓66, 𝔓52, 𝔓90, 𝔓5, 𝔓6, 𝔓22, 𝔓28, 𝔓39, 𝔓95, 𝔓106–𝔓109, 𝔓119–𝔓122, 𝔓134, 029, 0162, 0258, 0323 (Metadaten nach gängiger Einordnung, nicht eigens geprüft); maschinelle Kollation aller 21 Kapitel; STEPBible TAGNT (Ausgaben je Wort); Luther 1912 und Elberfelder 1905 zum Vergleich.

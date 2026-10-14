@@ -267,7 +267,7 @@ NOTES = [
   "evidence_refs": ["EPH.1.1", "EPH.1.15", "EPH.3.1-EPH.3.2", "EPH.6.20-EPH.6.22", "COL.4.7-COL.4.8", "COL.4.16"],
   "sources": [], "terms": [],
   "gsw": {"topic": "A wän und vo wäm?",
-          "text": "D Wort «z Ephesus» ([[EPH.1.1]]) fääled i es paar vo de eltischte Handschrifte. Zuedem tönt de Brief "
+          "text": "D Wort «z Ephesus» ([[EPH.1.1]]) fääled i es paar vo de ältischte Handschrifte. Zuedem tönt de Brief "
                   "uffällig unpersönlich für e Gmeind, wo de Paulus lang gwürkt gha hät ([[EPH.1.15]]; [[EPH.3.2]]); vili "
                   "dänked drum a es Rundschriibe a meereri Gmeinde z Chliiasie. Als Verfasser nännt sich de Paulus im "
                   "Gfängnis ([[EPH.3.1]]; [[EPH.6.20]]). Wär im de Brief zueschriibt, datiert en meischtens i di römisch "
@@ -392,7 +392,7 @@ NOTES = [
   "evidence_refs": ["ACT.17.1-ACT.17.10", "ACT.17.6", "1TH.1.9", "1TH.3.1-1TH.3.6", "ACT.18.5"],
   "sources": [],
   "terms": [T("grc", "πολιτάρχης", "Politarch: oberster Beamter einer Stadt")],
-  "gsw": {"topic": "Thessalonich: de wahrschiinli eltischt erhalte Paulusbrief",
+  "gsw": {"topic": "Thessalonich: de wahrschiinli ältischt erhalte Paulusbrief",
           "text": "Thessalonich isch um 316 v. Chr. vom König Kassander gründet und nach sinere Frau benännt worde. D "
                   "Hafestadt a de Via Egnatia isch d Hauptstadt vo de römische Provinz Makedonie gsii und sit 42 v. Chr. e "
                   "freii Stadt mit eigener Verwaltig. Iri oberschte Beamte händ Politarche gheisse ([[ACT.17.6]]); de "
@@ -400,7 +400,7 @@ NOTES = [
                   "bald müese flüüche ([[ACT.17.1-ACT.17.10]]). Vili Mitglider händ sich vo de Götterbilder abgwändt gha "
                   "([[1TH.1.9]]). Bsorgt hät de Paulus de Timotheus vo Athen us zrugg gschickt; nach sim guete Bricht hät "
                   "er de Brief gschribe, wahrschiinli um 50/51 n. Chr. vo Korinth us ([[1TH.3.1-1TH.3.6]]). De Brief isch "
-                  "unbestritte vom Paulus und gilt meischtens als di eltischt erhalte Schrift vom Nöie Teschtamänt.",
+                  "unbestritte vom Paulus und gilt meischtens als di ältischt erhalte Schrift vom Nöie Teschtamänt.",
           "uncertain": "Wie lang de Paulus det gsii isch, isch umstritte: D Apostelgschicht nännt drüü Sabbat "
                        "([[ACT.17.2]]), d Understützig us Philippi, wo mee als eimal cho isch ([[PHP.4.16]]), laat eender a "
                        "es paar Mönet dänke. Öb de 1. Thessalonicherbrief oder de Galaterbrief elter isch, hangt devo ab, "

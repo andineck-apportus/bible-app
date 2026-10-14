@@ -151,7 +151,7 @@ GSW = {
  "JHN.8.6": "[Das]{1} [händ si]{3} [aber]{2} [gseit]{3}, [zum]{4} [en]{5} [uf d Prob z stele]{4}, [demit]{6} [si]{7} [en]{9} [chönted]{7} [aachlage]{8}. [De Jesus]{10,12} [aber]{11} [hät sich abebückt]{13,14} [und hät]{17} [mit em]{15} [Finger]{16} [uf]{18} [de]{19} [Bode]{20} [gschribe]{17}, [ohni uf si iizgaa]{21,22}.",
  "JHN.8.7": "[Wo]{1} [si]{3} [en]{5} [aber]{2} [immer wiiter]{3} [gfröget händ]{4}, [hät er sich ufgrichtet]{6} [und hät]{7} [zu]{8} [ine]{9} [gseit]{7}: «[Wer]{10} [vo eu]{12} [ohni Sünd isch]{11}, [söll]{18} [als Erschte]{13} [de]{16} [Stei]{17} [uf]{14} [si]{15} [rüere]{18}.»",
  "JHN.8.8": "Und{1} [wider]{2} [hät er sich abebückt]{3,4} [und hät]{5} [uf]{6} [de]{7} [Bode]{8} [gschribe]{5}.",
- "JHN.8.9": "[Si]{1} [aber]{2} [händ das ghört]{3}, und{4} [vom]{5,6} [Gwüsse]{7} [überfüert]{8} [sind si]{9} [eine]{10} [nach]{11} [em andere]{12} [usegange]{9}, [aagfange]{13} [bi]{14} [de]{15} [Eltischte]{16}; und{17} [de Jesus]{20,21} [isch]{18} [elei]{19} [zruggblibe]{18}, und{22} [d]{23} [Frau]{24}, [wo]{27} [i]{25} [de Mitti]{26} [gstande isch]{27}.",
+ "JHN.8.9": "[Si]{1} [aber]{2} [händ das ghört]{3}, und{4} [vom]{5,6} [Gwüsse]{7} [überfüert]{8} [sind si]{9} [eine]{10} [nach]{11} [em andere]{12} [usegange]{9}, [aagfange]{13} [bi]{14} [de]{15} [Ältischte]{16}; und{17} [de Jesus]{20,21} [isch]{18} [elei]{19} [zruggblibe]{18}, und{22} [d]{23} [Frau]{24}, [wo]{27} [i]{25} [de Mitti]{26} [gstande isch]{27}.",
  "JHN.8.10": "[De Jesus]{3,4} [aber]{2} [hät sich ufgrichtet]{1}, und{5} [won er]{7} [niemer]{6} [gseh hät]{7} [usser]{8} [de]{9} [Frau]{10}, [hät er]{11} [zu ere]{12} [gseit]{11}: «[Wo]{13} [sind]{14} [di säbe]{15}, [dini]{18} [Aachläger]{16,17}? [Hät]{21} [di]{20} [niemer]{19} [verurteilt]{21}?»",
  "JHN.8.11": "[Si]{1} [aber]{2} [hät gseit]{3}: «[Niemer]{4}, [Herr]{5}.» [De Jesus]{8,9} [aber]{7} [hät gseit]{6}: «[Au]{10} [ich]{11} [verurteile]{13} [di]{12} [nöd]{10}. [Gang]{14}, und{15} [sündig]{17} [nüme]{16}!»⟧",
  "JHN.8.12": "[Wider]{1} [hät]{4} [de Jesus]{5,6} [dänn]{2} [zu ine]{3} [gredt]{4} [und gseit]{7}: «[Ich]{8} [bi]{9} [s Liecht]{10,11} [vo de Wält]{12,13}. [Wer]{14} [mir]{16} [nachegaat]{15}, [wird]{19} [sicher nöd]{17,18} [i]{20} [de Fiischteri]{21,22} [laufe]{19}, [sondern]{23} [wird]{24} [s Liecht]{25,26} [vom Läbe]{27,28} [ha]{24}.»",
@@ -615,7 +615,7 @@ UNITS_GSW = {
  "TU-JHN-008-001-011": ("De Jesus und d Frau, wo bim Ehebruch verwütscht worde isch",
   "De Jesus gaat uf de Ölberg und lehrt am Morge früe im Tämpel. D Schriftgleerte und d Pharisäer bringed e Frau, wo bim Ehebruch verwütscht worde isch, stelled si i d Mitti "
   "und fröged en, zum en uf d Prob z stele, was er zum Gebot vom Mose säg, settigi z steinige. De Jesus bückt sich und schriibt uf de Bode; dänn seit er, wer vo ine ohni Sünd "
-  "sig, söll als Erschte en Stei uf si rüere. Eine nach em andere gaat use, aagfange bi de Eltischte. De Jesus fröget d Frau, öb si niemer verurteilt heig, seit, au er verurteili "
+  "sig, söll als Erschte en Stei uf si rüere. Eine nach em andere gaat use, aagfange bi de Ältischte. De Jesus fröget d Frau, öb si niemer verurteilt heig, seit, au er verurteili "
   "si nöd, und schickt si furt: Si söll nüme sündige. De SBLGNT setzt de Abschnitt ([[JHN.7.53]]–[[JHN.8.11]]) i Doppelklammere ⟦ ⟧; i de Textforschig wird er wiitume als "
   "spööteri Iifüegig is Johannesevangelium beurteilt. " + PA_GSW + " Nach Aagabe vo de Forschig staat er i es paar spöötere Handschrifte a anderer Stell. Vili Chile läsed en "
   "als Teil vo de Heilige Schrift."),
