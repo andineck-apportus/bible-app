@@ -256,19 +256,19 @@ def kana():
     b1 = bubble(14, 20, 100, 40, 62, 80, use("an-jar-leer", 22, 22, 26, 36) + use("an-becher-leer", 54, 30, 18, 21) + use("an-z-fehlt", 80, 30, 22, 22))
     b2 = bubble(126, 18, 44, 42, 140, 76, use("an-z-stunde", 136, 22, 24, 33))
     s1 = (bg1 + person("maria", 62, 104, 2.1, "worried", .7, arm=(-15, 14)) + sweat(91, 86, 1.1)
-          + person("jesus", 150, 104, 2.1, "calm", -1.4) + b1 + b2)
+          + person("jesus", 150, 104, 2.1, "calm", -1.9) + b1 + b2)
     # 2: Maria (entschlossen) zeigt den Dienern auf Jesus; Diener staunen
     b3 = bubble(26, 178, 120, 40, 54, 228, use("an-jesus-kopf", 34, 180, 36, 36) + use("an-z-pfeil", 76, 192, 22, 11) + use("an-z-hoeren", 104, 182, 34, 30))
     s2 = (person("maria", 52, 250, 1.9, "calm", 1.2, arm=(-14, 18)) + person("diener", 126, 252, 1.45, "surprised", -1.1)
           + person("diener2", 162, 258, 1.35, "surprised", -1.2) + shock(126, 230, .8) + b3)
     # 3: Jesus (ruhig) weist auf die Krüge; ein Diener giesst Wasser ein (Bewegungslinien); Sprechblase Krug → Speisemeister
     jars = "".join(use("an-jar", 244 + i * 16, 248, 15, 30) for i in range(6))
-    pour = (f'<g transform="rotate(-62 350 214)">{use("an-jar", 340, 196, 16, 30)}</g>'
-            '<path d="M335 222q-6 8-4 22" fill="none" stroke="#4C9BD6" stroke-width="3" stroke-linecap="round"/>'
+    pour = (f'<g transform="rotate(-70 344 236)">{use("an-jar", 336, 222, 15, 28)}</g>'
+            '<path d="M330 238q-4 4-3 10" fill="none" stroke="#4C9BD6" stroke-width="3" stroke-linecap="round"/>'
             + "".join(f'<circle cx="{x}" cy="{y}" r="1.4" fill="#8FC8EE"/>' for x, y in ((326, 246), (338, 248), (331, 252))))
     b4 = bubble(212, 168, 108, 40, 230, 222, use("an-jar", 222, 172, 18, 32) + use("an-z-pfeil", 246, 183, 24, 12) + use("an-p-meister-kopf", 276, 170, 34, 34))
     s3 = ('<path d="M184 280h192v16H184z" fill="#E7D3B0"/>' + person("jesus", 222, 252, 1.6, "calm", 1.3, arm=(10, 14))
-          + jars + person("diener", 360, 240, 1.4, "determined", -1.2) + pour + sweat(368, 222, .8) + lines_motion(306, 214, 10, 3, -30) + b4)
+          + jars + person("diener", 360, 240, 1.4, "determined", -1.2) + pour + sweat(374, 222, .8) + b4)
     # 4: Speisemeister kostet (Freude, Funkeln), spricht zum Bräutigam (staunt); Stern über Jesus; Jünger glauben (Herzen)
     b5 = bubble(46, 310, 54, 44, 90, 362, use("an-becher", 59, 314, 28, 33))
     s4 = ('<path d="M4 420h372v22H4z" fill="#E7D3B0"/>'
@@ -296,16 +296,16 @@ def tempel():
     b1 = bubble(196, 14, 104, 40, 214, 76, use("an-tempel", 204, 18, 40, 30) + use("an-muenzen", 248, 26, 22, 13) + use("an-z-fehlt", 274, 22, 22, 22))
     s1 = (bg + table + coins + lines_motion(16, 132, 22, 3, 8)
           + person("haendler", 46, 112, 1.55, "surprised", -1.2, flip=True) + shock(46, 82, .8)
-          + use("an-schaf", 150, 124, 48, 32) + lines_motion(200, 132, 14, 3, 0)
+          + '<g transform="translate(198 124) scale(-1 1)">' + use("an-schaf", 0, 0, 48, 32) + '</g>' + lines_motion(200, 132, 14, 3, 0)
           + use("an-taube-kaefig", 316, 96, 46, 46)
-          + person("jesus", 228, 116, 1.9, "earnest", -.8, arm=(-82, 15)) + use("an-peitsche", 250, 74, 30, 36) + b1)
+          + person("jesus", 228, 116, 1.9, "earnest", -1.2, arm=(-125, 18)) + '<g transform="translate(190 95) scale(-1 1)">' + use("an-peitsche", 0, 0, 30, 36) + '</g>' + b1)
     b2 = bubble(36, 192, 70, 40, 66, 252, use("an-zeichen", 44, 196, 30, 30) + use("an-z-frage", 80, 196, 16, 28))
     suns = "".join(use("an-sonne", 252 + i * 15, 214, 13, 13) for i in range(3))
     b3 = bubble(158, 190, 214, 46, 314, 250, use("an-tempel-riss", 166, 194, 46, 36) + use("an-z-pfeil", 218, 213, 26, 13) + suns
                 + use("an-z-pfeil", 302, 213, 26, 13) + use("an-tempel", 332, 198, 34, 26))
     s2 = ('<path d="M4 290h372v22H4z" fill="#E7D3B0"/>'
           + person("menge2", 30, 282, 1.45, "determined", .8) + person("menge", 66, 274, 1.6, "determined", 1.0)
-          + person("menge3", 104, 286, 1.4, "calm", 1.0) + person("jesus", 314, 278, 1.8, "calm", -1.2, arm=(196, 14)) + b2 + b3)
+          + person("menge3", 104, 286, 1.4, "calm", 1.0) + person("jesus", 314, 278, 1.8, "earnest", -1.2, arm=(196, 14)) + b2 + b3)
     return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}"><rect width="{W}" height="{H}" fill="#FFFDF6"/>'
             + frame(1, p1, s1) + frame(2, p2, s2) + "</svg>")
 
@@ -367,10 +367,10 @@ def library():
 ILL = {
     "ILL-ANI-JHN-002-013-022": ("BRIEF-JHN-002-013-022", tempel,
                                 "Comic in zwei Bildern ohne Text: 1 Vor dem Tempel hält Jesus ernst die Geissel erhoben; ein Tisch kippt, Münzen fliegen, ein Händler weicht erschrocken zurück, "
-                                "ein Schaf läuft davon, Tauben im Käfig; Sprechblase: Tempel, Münzen, durchgestrichen. 2 Menschen aus der Menge fragen nach einem Zeichen (Stern, Fragezeichen); "
+                                "über dem davonlaufenden Schaf die erhobene Geissel, Tauben im Käfig; Sprechblase: Tempel, Münzen, durchgestrichen. 2 Menschen aus der Menge fragen nach einem Zeichen (Stern, Fragezeichen); "
                                 "Jesus antwortet: Tempel mit Riss, drei Sonnen, Tempel.",
                                 "Comic i zwei Bilder ohni Text: 1 Vor em Tämpel hebt de Jesus ernscht d Geissle uf; en Tisch kippt, Münz flüüged, en Händler wiicht verschrocke zrugg, "
-                                "es Schaf rennt dervo, Tube im Chäfig; Sprächblase: Tämpel, Münz, durgstriche. 2 Mänsche us de Mängi fröged nach eme Zeiche (Stern, Fragezeiche); "
+                                "über em Schaf, wo dervo rennt, di ufghabeni Geissle, Tube im Chäfig; Sprächblase: Tämpel, Münz, durgstriche. 2 Mänsche us de Mängi fröged nach eme Zeiche (Stern, Fragezeiche); "
                                 "de Jesus antwortet: Tämpel mit Riss, drüü Sunne, Tämpel."),
     "ILL-ANI-JHN-002-023-025": ("BRIEF-JHN-002-023-025", glaube,
                                 "Menschen in Jerusalem mit leuchtenden Augen unter goldenen Sternen (Zeichen), über ihnen Herzen (sie glauben); eine gestrichelte Linie trennt sie von Jesus, "

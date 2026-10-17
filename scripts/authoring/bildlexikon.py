@@ -995,7 +995,7 @@ E("FIG-OBJ-MUENZEN", "object", "Münzen", "Coins",
 E("FIG-OBJ-PEITSCHE", "object", "Geissel aus Stricken", "Whip of cords",
   "Die Geissel aus Stricken, mit der Jesus die Händler aus dem Tempel treibt ([[JHN.2.15]]).",
   "D Geissle us Strick, wo de Jesus d Händler mit us em Tämpel triibt ([[JHN.2.15]]).",
-  [T("Aus Stricken geflochten", "text", "JHN.2.15")],
+  [T("Aus Stricken geflochten", "text", "JHN.2.15"), T("Kurzer Holzgriff, drei geflochtene Stricke mit Knoten am Ende", "design")],
   ("#B07A3E", "#7A5A34"),
   ["Erhoben, nie im Schlag auf Menschen; ob sie Menschen oder nur Tiere traf, lässt der Text offen"], find=[(r"Geissel", None)])
 

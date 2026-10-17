@@ -2,6 +2,13 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.63 — 2026-10-17 — Stil-Umschalter beim Bild, Bildlexikon je Stil
+
+- **Stil-Umschalter direkt beim Bild** («Symbol | Anime» neben «Legende und Hinweise») und in der Legende, nur wo es das Bild in mehreren Stilen gibt; die Einstellung im Menü bleibt.
+- **Bildlexikon** im Menü: alle Figuren, Gegenstände und Zeichen, die ein Stil zeichnet, nach Art geordnet (Gott/Jesus/Geist, Personen, Rollen, Gruppen, Gegenstände, Orte, Handlungen, Zeichen), mit Umschalter zwischen den Stilen. Die Legende eines Bildes zeigt die Darstellungen seines Stils.
+- **Anime nach zweiter Prüfrunde:** Geissel aus geflochtenen Stricken, erhoben über dem davonlaufenden Schaf statt über dem Händler (nach Johannes 2,15), Jesus in der Antwort ernst statt lächelnd, Diener giesst ein statt «zu werfen», Jesus blickt zu Maria. Geissel auch im Symbolstil neu.
+- Neuer Test `scripts/test_reading_stream_bilder.cjs`.
+
 ## v0.62 — 2026-10-17 — Anime: ganzes Kapitel 2 der Abschnitte; nahtlose Sprechblasen
 
 - **Anime** jetzt für alle drei Abschnitte von Johannes 2: Tempelreinigung (Jesus mit erhobener Geissel, umgestossener Tisch, Münzen, erschrockener Händler, Schaf, Tauben im Käfig; Frage nach einem Zeichen und Antwort Tempel mit Riss → drei Sonnen → Tempel) und Johannes 2,23–25 (Menschen mit leuchtenden Augen unter Sternen und Herzen, Abstand zu Jesus). Neue Figuren Händler und Menge.
