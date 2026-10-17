@@ -270,10 +270,11 @@ def symbol_person(fid):
 
 
 def symbol_group(fid):
-    """Gruppe: drei gestaffelte Figuren desselben Aussehens."""
+    """Gruppe: drei gestaffelte Figuren desselben Aussehens, dahinter zwei blassere (Menge statt Dreiergruppe, Blindtest 2026-10-17)."""
     one = "ill-p-" + slug(fid) + "-1"
     return (symbol_person(fid).replace(f'id="ill-p-{slug(fid)}"', f'id="{one}"')
-            + f'<symbol id="ill-p-{slug(fid)}" viewBox="0 0 30 64"><use href="#{one}" x="-4" y="17" width="22" height="47" opacity=".8"/>'
+            + f'<symbol id="ill-p-{slug(fid)}" viewBox="0 0 30 64"><use href="#{one}" x="0" y="11" width="16" height="35" opacity=".5"/>'
+              f'<use href="#{one}" x="14" y="11" width="16" height="35" opacity=".5"/><use href="#{one}" x="-4" y="17" width="22" height="47" opacity=".8"/>'
               f'<use href="#{one}" x="12" y="17" width="22" height="47" opacity=".8"/><use href="#{one}" x="3" y="10" width="25" height="54"/></symbol>')
 
 

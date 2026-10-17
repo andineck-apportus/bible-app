@@ -40,8 +40,8 @@ FACE = "M-10 -1Q-10 9 0 12.6Q10 9 10 -1A10 10.6 0 0 0 -10 -1z"
 def eyes(expr, look):
     out = []
     for side in (-1, 1):
-        ex, ey = side * 4.2 + look * 1.4, 2.4
-        if expr in ("smile",):
+        ex, ey = side * 4.2 + max(-1.6, min(1.6, look * 1.4)), 2.4
+        if expr in ("smile", "delight"):  # Freude mit lachenden Augen (Sternaugen wirkten befremdlich)
             out.append(f'<path d="M{ex - 2:.1f} {ey + .4:.1f}Q{ex:.1f} {ey - 2:.1f} {ex + 2:.1f} {ey + .4:.1f}" fill="none" stroke="{INK}" stroke-width="1.1" stroke-linecap="round"/>')
             continue
         if expr == "sleep":
@@ -68,22 +68,19 @@ def eyes(expr, look):
 
 
 def brows(expr, look, color):
+    """Brauen deutlich über dem Lid und nur leicht gebogen: im Blindtest wirkten tiefe, schräge Brauen grimmig (2026-10-17)."""
     d = []
     for side in (-1, 1):
-        ex = side * 4.2 + look * 1.4
+        ex = side * 4.2 + max(-1.6, min(1.6, look * 1.4))
         if expr == "worried":
-            a, b = (-3.0, -4.3) if side < 0 else (-4.3, -3.0)
-        elif expr == "determined":
-            a, b = (-4.0, -2.9) if side < 0 else (-2.9, -4.0)
+            a, b = (-4.8, -6.0) if side < 0 else (-6.0, -4.8)
+        elif expr == "determined":  # entschlossen: gerade Brauen, nicht nach innen gesenkt (wirkte zornig)
+            a, b = (-5.4, -5.4)
         elif expr == "surprised":
-            a, b = (-4.6, -4.6)
-        elif expr == "pensive":
-            a, b = (-3.2, -3.2)
-        elif expr == "earnest":
-            a, b = (-3.3, -3.3)
+            a, b = (-6.4, -6.4)
         else:
-            a, b = (-3.4, -3.4)
-        mid = min(a, b) - (1.0 if expr in ("calm", "smile", "delight", "surprised", "pensive") else .5)
+            a, b = (-5.3, -5.3)
+        mid = min(a, b) - (1.1 if expr in ("calm", "smile", "delight", "surprised", "pensive", "worried") else .7)
         d.append(f"M{ex - 2.2:.1f} {a:.1f}Q{ex:.1f} {mid:.1f} {ex + 2.2:.1f} {b:.1f}")
     return f'<path d="{"".join(d)}" fill="none" stroke="{color}" stroke-width=".9" stroke-linecap="round"/>'
 
@@ -101,7 +98,7 @@ def mouth(expr, look):
     if expr in ("smile",):
         return f'<path d="M{x - 2.2:.1f} 7.6Q{x:.1f} 9.8 {x + 2.2:.1f} 7.6" fill="none" stroke="{INK}" stroke-width=".9" stroke-linecap="round"/>'
     if expr == "delight":
-        return f'<path d="M{x - 2.6:.1f} 7.3Q{x:.1f} 11.2 {x + 2.6:.1f} 7.3z" fill="#7A2E2E"/>'
+        return f'<path d="M{x - 2.4:.1f} 7.4Q{x:.1f} 10.6 {x + 2.4:.1f} 7.4z" fill="#5A2A22" stroke="{INK}" stroke-width=".5"/>'
     return f'<path d="M{x - 1.5:.1f} 8.1Q{x:.1f} 8.9 {x + 1.5:.1f} 8.1" fill="none" stroke="{INK}" stroke-width=".8" stroke-linecap="round"/>'
 
 
@@ -175,7 +172,7 @@ def head_inner(key, expr="calm", look=0.0, tears=False):
     o.append(mouth(expr, look))
     if tears:
         for side in (-1, 1):
-            ex = side * 4.2 + look * 1.4
+            ex = side * 4.2 + max(-1.6, min(1.6, look * 1.4))
             o.append(f'<path d="M{ex:.1f} 4.4q-.6 2.6-.2 5.4" fill="none" stroke="#6FA8D8" stroke-width="1.3" stroke-linecap="round"/>'
                      f'<path d="M{ex - .2:.1f} 9.2q1.4 1.8 0 2.8-1.4-1 0-2.8z" fill="#8FC8EE" stroke="#2E6E9E" stroke-width=".4"/>')
     if c.get("curls"):
@@ -251,7 +248,8 @@ def body_inner(key, arm=None):
         sleeve = c.get("mantle") or c["robe"]
         o.append(f'<path d="M{x0} {y0}L{x1:.1f} {y1:.1f}" stroke="{INK}" stroke-width="5.4" stroke-linecap="round"/>'
                  f'<path d="M{x0} {y0}L{x1:.1f} {y1:.1f}" stroke="{sleeve}" stroke-width="4" stroke-linecap="round"/>'
-                 f'<circle cx="{x1:.1f}" cy="{y1:.1f}" r="2.3" fill="{SKIN}" stroke="{INK}" stroke-width=".6"/>')
+                 f'<g transform="translate({x1:.1f} {y1:.1f}) rotate({ang + 90:.0f})"><path d="M-2.4 1.2Q-2.8-2.6-1.6-4.2h3.2Q2.8-2.6 2.4 1.2z" fill="{SKIN}" stroke="{INK}" stroke-width=".6"/>'
+                 f'<path d="M3 -.6l1.6-1.8" stroke="{INK}" stroke-width="1.6" stroke-linecap="round"/><path d="M3 -.6l1.6-1.8" stroke="{SKIN}" stroke-width=".8" stroke-linecap="round"/></g>')
     return "".join(o)
 
 
@@ -709,7 +707,7 @@ for _k, _v in _SYMS.items():
     if _v["sym"] not in COPY:
         COPY.append(_v["sym"])
 EXTRA_META = {k: (v["place"], tuple(v["size"])) for k, v in _SYMS.items()}
-GROUP_KEYS = {"FIG-GRUPPE-MENGE": ("menge2", "menge3", "menge"), "FIG-GRUPPE-ZWOELF": ("juenger2", "juenger", "petrus")}
+GROUP_KEYS = {"FIG-GRUPPE-MENGE": ("menge2", "menge3", "menge"), "FIG-GRUPPE-ZWOELF": ("juenger2", "juenger", "andreas")}
 POSE_SHIFT = {"sit": 7, "kneel": 13}
 
 
@@ -765,8 +763,8 @@ class AniComposer(_auto.Composer):
 
     def _draw(self, fid, x, y, s, expr, look, arm, tears, hold, pose, out, joy=False, p_stage=None):
         key = KEY[fid]
-        ang = {1: 6, -1: 174}.get(arm) if arm is not None else None
-        a = (ang, 9) if ang is not None else None
+        ang = {1: -24, -1: 204}.get(arm) if arm is not None else None
+        a = (ang, 10) if ang is not None else None
         if hold == "PRAY":
             hold = "an-z-beten"
         wear = ((p_stage or {}).get("wear") or {}).get(fid)
@@ -787,7 +785,8 @@ class AniComposer(_auto.Composer):
             if wear:
                 keys = tuple(self._sackkey(k, wear) for k in keys)
             sp = 13 * s
-            g = (person(keys[0], x - sp, y + 3 * s, s * .82, expr, look, None, flip, tears)
+            bk = f'<g opacity=".75">{person(keys[1], x - 6 * s, y - 5 * s, s * .66, expr, look, None, flip, tears)}{person(keys[0], x + 7 * s, y - 6 * s, s * .64, expr, look, None, flip, tears)}</g>'
+            g = (bk + person(keys[0], x - sp, y + 3 * s, s * .82, expr, look, None, flip, tears)
                  + person(keys[1], x + sp, y + 4 * s, s * .8, expr, look, None, flip, tears)
                  + person(keys[2], x, y, s, expr, look, a, flip, tears, hold))
         else:
@@ -829,6 +828,10 @@ class AniComposer(_auto.Composer):
             sc *= .92
         self._hr = 12 * sc
         y = 140 - 34 * sc + 4 + POSE_SHIFT.get(pose, 0) * sc
+        half = (17 + (19 if (fid in GROUP_KEYS or fid.startswith("FIG-GRUPPE-")) else 0)) * sc + 3
+        if pose not in ("lie", "sleep", "fall"):
+            x = max(half, min(_auto.W - half, x))
+            s["x"] = x
         expr, tears, joy = self._feel(fid, p, False)
         self._draw(fid, x, y, sc, expr, look * 1.6, arm, tears, hold, pose, out, joy, st)
         if pose in ("lie", "sleep"):

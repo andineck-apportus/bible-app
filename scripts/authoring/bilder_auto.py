@@ -150,6 +150,17 @@ def plan(p, lex, extra):
         for i, h in enumerate(row):
             x = (st.get("x") or {}).get(h, x0 + span * (i + .5))
             slots.append({"fid": h, "x": x, "span": span, "group": h in GROUPS or lex[h]["kind"] == "group"})
+    # Leserichtung: wer zuerst spricht, steht links vom zweiten Sprecher (Blindtest: Antwort links vor Frage wurde falsch gelesen)
+    names = [sl["fid"] for sl in slots]
+    spk = []
+    for sp in p["speech"]:
+        if sp["from"] in names and sp["from"] not in spk:
+            spk.append(sp["from"])
+    cap = p.get("caption_de", "")
+    if (len(spk) >= 2 and not st.get("x") and "split" not in st and "links" not in cap and "rechts" not in cap):
+        a, b = slots[names.index(spk[0])], slots[names.index(spk[1])]
+        if a["x"] > b["x"]:
+            a["x"], b["x"] = b["x"], a["x"]
     side = st.get("floor_side", "right")
     return {"st": st, "row": slots, "floor_zone": (x1 + 2, W - 6) if side == "right" else (6, x0 - 2), "reserve": reserve,
             "divine": divine, "big": big, "big_w": big_w, "back": back, "band": band, "floor": floor,
@@ -389,12 +400,34 @@ class Composer:
                 rx = hx + self.head_r() + 4 if hx < W - 44 else hx - self.head_r() - w - 4
                 out.append(self.r_sym(t, rx, hy - h / 2, w, h))
         # 9. Handlungslinien
+        people = {sl["fid"] for sl in slots}
+        r = self.head_r()
+
+        def anchor(f, ox, oy, both):
+            """Ansatzpunkt einer Handlungslinie an einer Person: über dem Kopf oder auf Schulterhöhe, nie durchs Gesicht."""
+            hx, hy = heads[f]
+            dx = 1 if ox > hx else -1
+            if both or oy < hy - r:
+                return hx + dx * r * .9, hy - r * 1.5
+            return hx + dx * r * 1.7, hy + r * 1.1
+
         for a in st.get("arrows", []):
             f, t, kind = a[0], a[1], (a[2] if len(a) > 2 else "act")
             if f in pos and t in pos:
                 (x1, y1), (x2, y2) = pos[f], pos[t]
+                both = f in people and t in people
+                if t in L["back"] and t in pos:  # Ort mit Menschen (Gemeinde, Stadt): Pfeil endet oben am Ort, nicht im Gesicht
+                    bx_, by_ = pos[t]
+                    y2 = by_ - self.m(t)[1][1] * .3
+                lo, hi = sorted((x1, x2))
+                between = any(lo + 2 < heads[o][0] < hi - 2 for o in people if o not in (f, t))
+                if f in people:
+                    x1, y1 = anchor(f, x2, y2, both or between)
+                if t in people:
+                    x2, y2 = anchor(t, x1, y1, both or between)
                 d = math.hypot(x2 - x1, y2 - y1) or 1
-                sh1, sh2 = (16 if f in sky else 12), (14 if t in bigpos or t in pos else 10)
+                sh1 = 0 if f in people else (16 if f in sky else 12)
+                sh2 = 0 if t in people else (14 if t in bigpos or t in pos else 10)
                 out.append(arrow_svg(x1 + (x2 - x1) * sh1 / d, y1 + (y2 - y1) * sh1 / d, x2 - (x2 - x1) * sh2 / d, y2 - (y2 - y1) * sh2 / d, kind, f in sky))
         # 10. Sprechblasen
         bubbles = []
@@ -408,7 +441,7 @@ class Composer:
             else:
                 continue
             bubbles.append((sp, tx, ty))
-        placed = []
+        placed, drawn = [], []
         for k, (sp, tx, ty) in enumerate(bubbles):
             ih = self.icon_h()
             ws = [icon_w(self.vb(i), ih) for i in sp["icons"]]
@@ -452,20 +485,45 @@ class Composer:
                     bw = sum(ws) + 5 * (len(ws) - 1) + 12
                     bh = ih + 12
                     bx = 28 if gx - 32 >= W - (gx + gw) - 10 else gx + gw + 6
-            same = [b for b, (sp0, _, _) in zip(placed, bubbles) if sp0["from"] == sp["from"]]
+            same = [j for j, (sp0, _, _) in enumerate(bubbles[:len(placed)]) if sp0["from"] == sp["from"]]
+            link = None
             if same:
-                # zweite Blase derselben Figur: unter die erste, gleiche Spalte
-                px, pw, pbot, ph = same[0]
-                by = pbot + 5
-                bx = max(28 if by < 24 else 4, min(W - 4 - bw, px))
+                # zweite Blase derselben Figur: neben die erste, sonst darunter und mit ihr verbunden (keine Spitze durch die Blase)
+                px, pw, pbot, ph = placed[same[0]]
+                ptop = pbot - ph
+                besides = [c for c in (px + pw + 5, px - bw - 5) if 4 <= c <= W - 4 - bw]
+                besides = [c for c in besides if not any(c < gx + gw + 4 and c + bw > gx - 4 and ptop < gy + gh + 2 and ptop + bh > gy - 2
+                                                         for gx, gy, gw, gh in [b for k2, b in sky.items() if k2 != sp["from"]])]
+                if not besides:  # zu breit: Zeichen etwas verkleinern, damit die Blase neben die erste passt (statt den Kopf zu verdecken)
+                    room = max(W - 4 - (px + pw + 5), px - 9)
+                    if room >= bw * .55:
+                        sc = (room - 12 - 5 * (len(ws) - 1)) / sum(ws)
+                        ws = [w * sc for w in ws]
+                        ih *= sc
+                        bw = sum(ws) + 5 * (len(ws) - 1) + 12
+                        bh = ih + 12
+                        besides = [px + pw + 5 if W - 4 - (px + pw + 5) >= bw else px - bw - 5]
+                if besides:
+                    bx, by = besides[0], ptop + (ph - bh) / 2
+                    # verbundene Blase: kurze Spitze zur ersten Blase statt zweiter Spitze quer zum Sprecher
+                    tx, ty = (px + pw - 3, ptop + ph / 2) if bx > px else (px + 3, ptop + ph / 2)
+                else:
+                    by = pbot + 5
+                    bx = max(28 if by < 24 else 4, min(W - 4 - bw, px))
+                    link = same[0]
             if not god and not same and ty - (by + bh) < 6:
                 by = max(2, ty - bh - 8)
             inner, x = [], bx + 6
             for i, w in zip(sp["icons"], ws):
                 inner.append(self.r_icon(i, x, by + 6, w, ih))
                 x += w + 5
-            out.append(self.r_bubble(bx, by, bw, bh, tx, ty, "".join(inner)))
+            if link is not None:  # obere Blase zeigt auf die untere (verbundene Blasen)
+                lb = drawn[link]
+                drawn[link] = (lb[0], lb[1], lb[2], lb[3], bx + bw / 2, by + 3, lb[6])
+            drawn.append((bx, by, bw, bh, tx, ty, "".join(inner)))
             placed.append((bx, bw, by + bh, bh))
+        for d_ in drawn:
+            out.append(self.r_bubble(*d_))
         # 11. freie Zeichen oben (unter den Blasen)
         top = max([b[2] for b in placed] + [6]) + 4
         free = list(L["air"])
