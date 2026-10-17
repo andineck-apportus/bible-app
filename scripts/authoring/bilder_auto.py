@@ -411,8 +411,11 @@ class Composer:
                 return hx + dx * r * .9, hy - r * 1.5
             return hx + dx * r * 1.7, hy + r * 1.1
 
-        for a in st.get("arrows", []):
+        def arrows(only_air):
+          for a in st.get("arrows", []):
             f, t, kind = a[0], a[1], (a[2] if len(a) > 2 else "act")
+            if ((f in L["air"] or t in L["air"]) != only_air):
+                continue
             if f in pos and t in pos:
                 (x1, y1), (x2, y2) = pos[f], pos[t]
                 both = f in people and t in people
@@ -425,10 +428,15 @@ class Composer:
                     x1, y1 = anchor(f, x2, y2, both or between)
                 if t in people:
                     x2, y2 = anchor(t, x1, y1, both or between)
+                if f == "FIG-OBJ-GROSSER-FISCH" and f in bigpos:  # Speien/Werfen beginnt am Maul
+                    bx_, by_, bw_, bh_ = bigpos[f]
+                    x1 = bx_ + bw_ * (.94 if f in st.get("flip", []) else .06)
+                    y1 = by_ + bh_ * .45
                 d = math.hypot(x2 - x1, y2 - y1) or 1
-                sh1 = 0 if f in people else (16 if f in sky else 12)
+                sh1 = 0 if (f in people or f == "FIG-OBJ-GROSSER-FISCH") else (16 if f in sky else 12)
                 sh2 = 0 if t in people else (14 if t in bigpos or t in pos else 10)
                 out.append(arrow_svg(x1 + (x2 - x1) * sh1 / d, y1 + (y2 - y1) * sh1 / d, x2 - (x2 - x1) * sh2 / d, y2 - (y2 - y1) * sh2 / d, kind, f in sky or t in sky))
+        arrows(False)
         # 10. Sprechblasen
         bubbles = []
         for sp in L["speech"][:2]:
@@ -493,7 +501,7 @@ class Composer:
                 ptop = pbot - ph
                 besides = [c for c in (px + pw + 5, px - bw - 5) if 4 <= c <= W - 4 - bw]
                 besides = [c for c in besides if not any(c < gx + gw + 4 and c + bw > gx - 4 and ptop < gy + gh + 2 and ptop + bh > gy - 2
-                                                         for gx, gy, gw, gh in [b for k2, b in sky.items() if k2 != sp["from"]])]
+                                                         for gx, gy, gw, gh in list(sky.values()))]
                 if not besides:  # zu breit: Zeichen etwas verkleinern, damit die Blase neben die erste passt (statt den Kopf zu verdecken)
                     room = max(W - 4 - (px + pw + 5), px - 9)
                     if room >= bw * .55:
@@ -502,7 +510,9 @@ class Composer:
                         ih *= sc
                         bw = sum(ws) + 5 * (len(ws) - 1) + 12
                         bh = ih + 12
-                        besides = [px + pw + 5 if W - 4 - (px + pw + 5) >= bw else px - bw - 5]
+                        cand = px + pw + 5 if W - 4 - (px + pw + 5) >= bw else px - bw - 5
+                        if not any(cand < gx + gw + 4 and cand + bw > gx - 4 and ptop < gy + gh + 2 and ptop + bh > gy - 2 for gx, gy, gw, gh in sky.values()):
+                            besides = [cand]
                 if besides:
                     bx, by = besides[0], ptop + (ph - bh) / 2
                     # verbundene Blase: kurze Spitze zur ersten Blase statt zweiter Spitze quer zum Sprecher
@@ -540,6 +550,7 @@ class Composer:
                     out.append(self.r_sym(t, x, y, w, h))
                     x += w + 3 * k
                 x += 6 * k
+        arrows(True)  # Handlungslinien zu freien Zeichen erst, wenn deren Lage feststeht
         return "".join(out)
 
 

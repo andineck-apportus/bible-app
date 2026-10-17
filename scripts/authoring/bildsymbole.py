@@ -66,7 +66,7 @@ SYMBOLS = {
                        '<path d="M0 40q15-6 31 0t31 0 31 0 31 0 31 0 31 0" fill="none" stroke="#A9D2F0" stroke-width="1.6"/>'
                        + "".join(f'<path d="M{x} 140q-6-14 0-28t0-28" fill="none" stroke="#5E8B4A" stroke-width="2.4"/>' for x in (14, 30, 160, 172)), "band", (186, 140)),
     "FIG-ORT-HUETTE": S("ill-huette", "0 0 50 40", f'<g stroke="{INK}" stroke-width="1.1"><path d="M4 40V14M46 40V14" stroke="#7A5A34" stroke-width="2.2"/><path d="M0 16l25-12 25 12z" fill="#9A8A50"/></g>'
-                        '<path d="M4 16l6-3M16 10l6-3M30 7l6 3M40 12l6 3" stroke="#6E8B3D" stroke-width="1.4"/>', "back", (54, 43)),
+                        '<path d="M4 16l6-3M16 10l6-3M30 7l6 3M40 12l6 3" stroke="#6E8B3D" stroke-width="1.4"/>', "back", (72, 58)),
     "FIG-OBJ-ALTAR": S("ill-altar", "0 0 30 34", f'<path d="M5 18h20v16H5z" fill="#C9BFAA" stroke="{INK}" stroke-width="1"/><path d="M5 22h20M5 28h20M15 18v4M10 22v6M20 22v6" stroke="#8C8070" stroke-width=".8"/>'
                        '<path d="M10 18q-2-6 3-8 0 4 2 4 1-6 5-8-1 6 2 8 2 2 0 4z" fill="#E8843A"/><path d="M14 8q-3-4 1-8M19 6q3-3 0-6" fill="none" stroke="#A79A80" stroke-width="1.4"/>', "floor", (22, 25)),
     # ---- Zeichen

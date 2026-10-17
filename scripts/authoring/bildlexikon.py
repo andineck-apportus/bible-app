@@ -1187,7 +1187,7 @@ E("FIG-ZEICHEN-HEILEN", "action", "heilen", "heal",
 E("FIG-ZEICHEN-VERKUENDIGEN", "action", "verkündigen", "proclaim",
   "Bedeutung: Eine Botschaft wird öffentlich vielen gesagt (z. B. [[MRK.1.14]], [[JON.3.4]]).",
   "Bedüütig: E Botschaft wird öffentlich vilne gseit (z. B. [[MRK.1.14]], [[JON.3.4]]).",
-  [T("Sprechblase mit Strahlen", "design"), T("Mehrere Empfängerfiguren", "design")],
+  [T("Goldener Rufer (Lautsprecher) mit Schallwellen", "design")],
   ("#FFFFFF", "#D9A441"),
   ["Nicht verwechseln mit «sprechen» (einfache Blase zu einer Person)"],
   distinct=["FIG-ZEICHEN-SPRECHEN"])
