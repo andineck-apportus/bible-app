@@ -1356,8 +1356,8 @@ E("FIG-SYMBOL-ADLER", "sign", "Adler (Symbol des Evangelisten Johannes)", "Eagle
 E("FIG-ZEICHEN-LICHT", "sign", "Licht / Herrlichkeit", "Light / glory",
   "Bedeutung: Licht, Herrlichkeit, Offenbarung (z. B. «das Licht der Menschen», [[JHN.1.4]]; «er offenbarte seine Herrlichkeit», [[JHN.2.11]]).",
   "Bedüütig: Liecht, Herrlichkeit, Offebarig (z. B. «s Liecht vo de Mänsche», [[JHN.1.4]]; «er hät sini Herrlichkeit offebaret», [[JHN.2.11]]).",
-  [T("Goldene Scheibe mit Strahlen", "design")],
-  ("#F2C76E", "#D9A441"), ["Nicht mit dem Kreuznimbus verwechseln (der gehört zu Personen)"], distinct=["FIG-ZEICHEN-STERN"])
+  [T("Heller goldener Schein mit funkelndem Kern", "design", note="Statt Scheibe mit Strahlen: diese wurde im Blindtest (2026-10-17) als Sonne gelesen")],
+  ("#F2C76E", "#D9A441"), ["Nicht mit dem Kreuznimbus verwechseln (der gehört zu Personen)", "Keine Sonnenscheibe (Verwechslung mit Sonne und Gottessymbol)"], distinct=["FIG-ZEICHEN-STERN", "FIG-ZEICHEN-TAGE"])
 
 # --- Obere Ebenen (Bibel, Testamente, Buchgruppen), 2026-10-14 ---
 E("FIG-OBJ-GESETZESTAFELN", "object", "Gesetzestafeln", "Tablets of the law",

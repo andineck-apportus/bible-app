@@ -765,8 +765,8 @@ class AniComposer(_auto.Composer):
 
     def _draw(self, fid, x, y, s, expr, look, arm, tears, hold, pose, out, joy=False, p_stage=None):
         key = KEY[fid]
-        ang = {1: 24, -1: 156}.get(arm) if arm is not None else None
-        a = (ang, 12) if ang is not None else None
+        ang = {1: 6, -1: 174}.get(arm) if arm is not None else None
+        a = (ang, 9) if ang is not None else None
         if hold == "PRAY":
             hold = "an-z-beten"
         wear = ((p_stage or {}).get("wear") or {}).get(fid)
