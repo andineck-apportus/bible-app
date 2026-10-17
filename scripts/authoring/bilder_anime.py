@@ -57,8 +57,9 @@ def eyes(expr, look):
                        f'<circle cx="{ex + look * .5:.1f}" cy="{ey + .2:.1f}" r=".95" fill="{INK}"/>')
             continue
         iris = "#3A2416"
+        # Oberlid als feine Linie über der Pupille: ein dickes Lid auf der Pupille las sich im Blindtest als finsterer Blick (2026-10-17)
         out.append(f'<ellipse cx="{ex:.1f}" cy="{ey:.1f}" rx="1.75" ry="2.35" fill="{iris}"/>'
-                   f'<path d="M{ex - 2.4:.1f} {ey - 1.6:.1f}Q{ex:.1f} {ey - 3.3:.1f} {ex + 2.4:.1f} {ey - 1.6:.1f}" fill="none" stroke="{INK}" stroke-width="1" stroke-linecap="round"/>')
+                   f'<path d="M{ex - 2.2:.1f} {ey - 2.2:.1f}Q{ex:.1f} {ey - 3.9:.1f} {ex + 2.2:.1f} {ey - 2.2:.1f}" fill="none" stroke="{INK}" stroke-width=".6" stroke-linecap="round"/>')
         if expr == "delight":
             sx, sy = ex + .2, ey - .4
             out.append(f'<path d="M{sx:.1f} {sy - 1.3:.1f}l.35 .95.95 .35-.95 .35-.35 .95-.35-.95-.95-.35.95-.35z" fill="#FFF"/>')
