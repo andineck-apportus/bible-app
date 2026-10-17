@@ -199,7 +199,7 @@ def head_inner(key, expr="calm", look=0.0, tears=False):
                  '<circle cx="0" cy="-9.6" r=".9" fill="#A33A2E"/>')
     if c.get("helmet"):
         o.append(f'<path d="M-11 1Q-12-12 0-12.6Q12-12 11 1L8.6 1Q8-7 0-7.6Q-8-7-8.6 1z" fill="#8C8070" stroke="{INK}" stroke-width=".7"/>'
-                 f'<path d="M-6-12.6Q0-19 6-12.6" fill="none" stroke="#8E1F2F" stroke-width="3"/>')
+                 f'<path d="M-1.8-12.4Q-2.6-19 0-21Q2.6-19 1.8-12.4z" fill="#8E1F2F" stroke="{INK}" stroke-width=".5"/>')  # Helmbusch längs (von vorn schmal); quer = Hauptmann
     if c.get("wreath"):
         leaves = []
         for a in range(200, 345, 18):
