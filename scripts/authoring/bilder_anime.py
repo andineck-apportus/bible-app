@@ -261,6 +261,9 @@ def person(key, x, y, s, expr="calm", look=0.0, arm=None, flip=False, tears=Fals
     if CHAR[key].get("baby"):
         return (f'<g transform="translate({x} {y}) scale({s})"><ellipse cx="0" cy="22" rx="14" ry="9" fill="{CHAR[key]["robe"]}" stroke="{INK}" stroke-width=".8"/>'
                 f'<g transform="translate(-6 16) scale(.55)">{head_inner(key, "sleep", 0)}</g></g>')
+    if CHAR[key].get("child"):
+        s *= .74
+        y += 9 * s
     held = use(hold, -4, 18, 16, 12) if hold else ""
     return f'<g transform="translate({x} {y}) scale({s}){fl}">{body_inner(key, arm)}{head_inner(key, expr, -look if flip else look, tears)}{held}</g>'
 

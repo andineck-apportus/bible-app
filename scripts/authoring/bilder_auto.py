@@ -214,6 +214,9 @@ class Composer:
             out.append(self.r_floor())
         for t in L["band"]:
             pos[t] = (W * .78, 112)
+        WATER = {"FIG-ORT-SEE", "FIG-ORT-MEER-OFFEN", "_MEER-STILL", "FIG-ORT-UFER"}
+        if L["row"] and any(b in WATER for b in L["band"]) and not st.get("in_water") and "FIG-ORT-UFER" not in L["band"]:
+            out.append(self.r_sym("_STRAND", 0, 106, 186, 34))  # Personen stehen am Ufer, nicht im Wasser
         for i, t in enumerate(L["back"]):
             w, h = self.m(t)[1]
             side = st.get("back_side", "right")
@@ -346,6 +349,8 @@ class Composer:
                     w, h = self.m(t)[1]
                     if t == "FIG-ZEICHEN-TRAUER":
                         out.append(self.r_sym(t, hx + 7, hy - 2, w, h))
+                    elif f in spk:  # nicht auf die Spitze der Sprechblase
+                        out.append(self.r_sym(t, hx + self.head_r() + 3 if hx < W - 40 else hx - self.head_r() - w - 3, hy - self.head_r() - h * .5, w, h))
                     else:
                         out.append(self.r_sym(t, hx - w / 2, hy - self.head_r() - h - 3, w, h))
         # 8. Zeichen bei bestimmten Figuren: über dem Kopf
@@ -460,6 +465,7 @@ class Composer:
             for t in free:
                 w, h = self.m(t)[1]
                 w, h = w * k, h * k
+                pos[t] = (x + w / 2, y + h / 2)
                 for q in range(min(int(cnt.get(t, 1)), 6)):
                     out.append(self.r_sym(t, x, y, w, h))
                     x += w + 3 * k

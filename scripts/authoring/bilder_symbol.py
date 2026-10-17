@@ -456,7 +456,7 @@ class SymComposer(_auto.Composer):
     def r_sym(self, t, x, y, w, h, flip=False):
         if flip:
             return f'<g transform="translate({x + w:.1f} {y:.1f}) scale(-1 1)">{use(RENDER[t], 0, 0, w, h)}</g>'
-        return use(RENDER[t], round(x, 1), round(y, 1), w, h)
+        return use(RENDER.get(t) or RENDER_X[t], round(x, 1), round(y, 1), w, h)
 
     def r_icon(self, t, x, y, w, h):
         if t == "FIG-GRUPPE-MENGE":  # Mehrzahl: drei Figuren

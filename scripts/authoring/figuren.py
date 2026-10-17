@@ -263,7 +263,10 @@ def symbol_person(fid):
         o.append('<path d="M12 8.6h6v1.6h-6z" fill="#E0B24E"/>')
     if p.get("attr"):
         o.append(f'<svg x="-1" y="34" width="13" height="13" viewBox="{ATTR_VB}">{ATTR[p["attr"]]}</svg>')
-    return f'<symbol id="{sid}" viewBox="0 0 30 64">{"".join(o)}</symbol>'
+    inner = "".join(o)
+    if p["age"] == "child":  # Kind: kleiner, auf dem Boden stehend
+        inner = f'<g transform="translate(4.5 19.2) scale(.7)">{inner}</g>'
+    return f'<symbol id="{sid}" viewBox="0 0 30 64">{inner}</symbol>'
 
 
 def symbol_group(fid):
@@ -335,6 +338,8 @@ def anime_char(fid):
             c[k] = p[k]
     if p["age"] in ("young", "child"):
         c["young"] = True
+    if p["age"] == "child":
+        c["child"] = True
     if p["age"] == "old":
         c["old"] = True
     if p["age"] == "baby":

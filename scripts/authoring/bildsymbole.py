@@ -105,6 +105,7 @@ SYMBOLS = {
                   '<path d="M96 52q6-3 12 0t12 0M140 60q6-3 12 0t12 0" fill="none" stroke="#A9D2F0" stroke-width="1.4"/><path d="M76 40h12v30H76z" fill="#A07A44" stroke="#3B3226" stroke-width=".8"/>', "band", (186, 70)),
     "_HAFEN-L": S("ill-hafen-l", "0 0 186 70", '<path d="M0 30h186v40H0z" fill="#E8C98E"/><path d="M0 40h102v30H0z" fill="#5DA7DB"/><path d="M0 40h102" stroke="#2E5478" stroke-width="1"/>'
                   '<path d="M20 52q6-3 12 0t12 0M64 60q6-3 12 0t12 0" fill="none" stroke="#A9D2F0" stroke-width="1.4"/><path d="M98 40h12v30H98z" fill="#A07A44" stroke="#3B3226" stroke-width=".8"/>', "band", (186, 70)),
+    "_STRAND": S("ill-strand", "0 0 186 34", '<path d="M0 8q40-8 93-4t93 2V34H0z" fill="#E8C98E" stroke="#B49A5A" stroke-width="1"/>', "band", (186, 34)),
     "_MEER-STILL": S("ill-meer-still", "0 0 186 70", '<path d="M0 30q31-3 62 0t62 0 62 0V70H0z" fill="#5DA7DB" stroke="#2E5478" stroke-width="1"/><path d="M0 50h186V70H0z" fill="#4C8FC4"/>'
                      '<path d="M20 42h20M90 46h24M140 40h18" stroke="#A9D2F0" stroke-width="1.4" stroke-linecap="round"/>', "band", (186, 70)),
     "FIG-SATAN": S("ill-satan", "0 0 40 50", '<path d="M20 2q14 4 16 20 4 14-6 26-10-6-10-2-2-4-10 2Q0 36 4 22 6 6 20 2z" fill="#3B3226" opacity=".85"/><path d="M20 8q8 4 10 14M14 10q-6 6-6 14" fill="none" stroke="#6A4A6A" stroke-width="1.6"/>', "back", (34, 42)),
