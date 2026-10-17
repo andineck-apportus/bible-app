@@ -28,7 +28,7 @@ assert.equal(model.sibling('v0-1-1', -1), null);
 assert(!html.includes('globalThis.lucide'));
 assert(!/src=["']https?:/.test(html));
 assert(html.includes('ill-p-jesus')&&html.includes('ILL-SYM-JHN-002-001-012'),'Bildsprache: Bibliothek und Bilder eingebettet');
-assert(['ILL-SYM-BIBLE','ILL-SYM-OT','ILL-SYM-NT','ILL-SYM-GROUP-01','ILL-SYM-GROUP-10','ILL-SYM-JHN'].every(id=>html.includes(id))&&html.includes('ill-gott')&&html.includes('ILL-ANI-JHN-002-001-012')&&html.includes('an-p-jesus'),'Bildsprache auf allen Ebenen (inkl. Anime-Pilot) über den Versen (Bibel, Testamente, Buchgruppen, Buch)');
+assert(['ILL-SYM-BIBLE','ILL-SYM-OT','ILL-SYM-NT','ILL-SYM-GROUP-01','ILL-SYM-GROUP-10','ILL-SYM-JHN'].every(id=>html.includes(id))&&html.includes('ill-gott')&&html.includes('ILL-ANI-JHN-002-001-012')&&html.includes('ILL-ANI-JHN-002-013-022')&&html.includes('ILL-ANI-JHN-002-023-025')&&html.includes('an-p-jesus'),'Bildsprache auf allen Ebenen (inkl. Anime-Pilot) über den Versen (Bibel, Testamente, Buchgruppen, Buch)');
 console.log('PASS: complete streams, summaries, parent links, canonical refs, search, boundaries, standalone dependencies.');
 
 const S = model.STUDY;

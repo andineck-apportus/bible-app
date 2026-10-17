@@ -18,6 +18,7 @@ import pathlib
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from _bubble import bubble_path  # noqa: E402
 from _lib import D, localize, write  # noqa: E402
 
 DATE = "2026-10-14"
@@ -78,25 +79,8 @@ def gesture(x1, y1, x2, y2):
 
 
 def bubble(x, y, w, h, tx, ty, inner):
-    """Sprechblase; die Spitze zeigt auf die sprechende Figur (tx, ty).
-
-    Die Spitze geht von der Seite der Blase aus, die der Figur zugewandt ist (unten, oben, links oder rechts),
-    und sitzt auf dieser Seite möglichst nahe bei der Figur; so bleibt sie kurz und gerade statt schräg verzogen.
-    """
-    r, half = 8, 4.5
-    dx = tx - min(max(tx, x), x + w)  # Abstand ausserhalb der Blase (0, wenn innerhalb der Spanne)
-    dy = ty - min(max(ty, y), y + h)
-    if abs(dy) >= abs(dx):  # oben oder unten
-        ey = y + h if dy > 0 else y
-        bx = min(max(tx, x + r + half), x + w - r - half)
-        b1, b2, cover = (bx - half, ey), (bx + half, ey), f"M{bx - half + .8:.1f} {ey}H{bx + half - .8:.1f}"
-    else:  # links oder rechts
-        ex = x + w if dx > 0 else x
-        by = min(max(ty, y + r + half), y + h - r - half)
-        b1, b2, cover = (ex, by - half), (ex, by + half), f"M{ex} {by - half + .8:.1f}V{by + half - .8:.1f}"
-    return (f'<g><rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{r}" fill="{BUBBLE}" stroke="{INK}" stroke-width="1.2"/>'
-            f'<path d="M{b1[0]:.1f} {b1[1]:.1f}L{tx} {ty}L{b2[0]:.1f} {b2[1]:.1f}" fill="{BUBBLE}" stroke="{INK}" stroke-width="1.2" stroke-linejoin="round"/>'
-            f'<path d="{cover}" stroke="{BUBBLE}" stroke-width="2.6"/>{inner}</g>')
+    """Sprechblase als eine Form mit eingebauter Spitze zur sprechenden Figur (tx, ty), siehe _bubble.py."""
+    return f'<g><path d="{bubble_path(x, y, w, h, tx, ty, 8, 4.5)}" fill="{BUBBLE}" stroke="{INK}" stroke-width="1.2" stroke-linejoin="round"/>{inner}</g>'
 
 
 def panel(n, px, py, body, w=186, h=140):

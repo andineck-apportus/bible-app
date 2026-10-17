@@ -2,6 +2,11 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.62 — 2026-10-17 — Anime: ganzes Kapitel 2 der Abschnitte; nahtlose Sprechblasen
+
+- **Anime** jetzt für alle drei Abschnitte von Johannes 2: Tempelreinigung (Jesus mit erhobener Geissel, umgestossener Tisch, Münzen, erschrockener Händler, Schaf, Tauben im Käfig; Frage nach einem Zeichen und Antwort Tempel mit Riss → drei Sonnen → Tempel) und Johannes 2,23–25 (Menschen mit leuchtenden Augen unter Sternen und Herzen, Abstand zu Jesus). Neue Figuren Händler und Menge.
+- **Sprechblasen** in beiden Stilen als eine einzige Form mit eingebauter Spitze; kein weisses Abdeckrechteck mehr am Übergang (`scripts/authoring/_bubble.py`).
+
 ## v0.61 — 2026-10-17 — Bildstil «Anime» (Pilot)
 
 - **Neuer Stil «Anime»** (Einstellungen → Bilder): comicartig ohne Text, damit für alle Sprachen lesbar. Personen mit Gesicht und Ausdruck (Sorge, Ruhe, Entschlossenheit, Staunen, Freude), Manga-Panels mit schrägen Rändern, Bewegungs- und Emotionszeichen; Sprechblasen nur mit Zeichen. Pilot: Hochzeit in Kana (Johannes 2,1–12), gezeichnet nach demselben Bildauftrag wie das Symbolbild. Wo es noch kein Anime-Bild gibt, erscheint das Symbolbild.

@@ -20,6 +20,7 @@ import re
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from _bubble import bubble_path  # noqa: E402
 from _lib import D, localize, write  # noqa: E402
 
 DATE = "2026-10-17"
@@ -68,6 +69,8 @@ def brows(expr, look, color):
             a, b = (-4.0, -2.9) if side < 0 else (-2.9, -4.0)
         elif expr == "surprised":
             a, b = (-4.6, -4.6)
+        elif expr == "earnest":
+            a, b = (-3.1, -3.1)
         else:
             a, b = (-3.4, -3.4)
         mid = min(a, b) - (.8 if expr in ("calm", "smile", "delight", "surprised") else .2)
@@ -81,8 +84,8 @@ def mouth(expr, look):
         return f'<path d="M{x - 1.8:.1f} 8.3q.9-.8 1.8 0t1.8 0" fill="none" stroke="{INK}" stroke-width=".8" stroke-linecap="round"/>'
     if expr == "surprised":
         return f'<ellipse cx="{x:.1f}" cy="8.4" rx="1.1" ry="1.4" fill="#6B2A2A"/>'
-    if expr == "determined":
-        return f'<path d="M{x - 1.8:.1f} 8.2h3.6" stroke="{INK}" stroke-width=".9" stroke-linecap="round"/>'
+    if expr in ("determined", "earnest"):
+        return f'<path d="M{x - 1.5:.1f} 8.2h3" stroke="{INK}" stroke-width=".85" stroke-linecap="round"/>'
     if expr in ("smile",):
         return f'<path d="M{x - 2.2:.1f} 7.6Q{x:.1f} 9.8 {x + 2.2:.1f} 7.6" fill="none" stroke="{INK}" stroke-width=".9" stroke-linecap="round"/>'
     if expr == "delight":
@@ -113,6 +116,12 @@ CHAR = {
     "juenger": dict(hair="#2E2017", curls=True, beard="M-8 6.4Q-7 12 0 13Q7 12 8 6.4Q6 9.8 0 10.4Q-6 9.8-8 6.4z", robe="#9C7A4C", belt="#5B4630"),
     "juenger2": dict(hair="#4A3020", front="M-10.6 0Q-11.4-10.8 0-11.8Q11.4-10.8 10.6 0Q6-8.2-1-7Q-7-6.4-10.6 0z", robe="#8A6A40", belt="#5B4630"),
     "gast": dict(hair="#2E2017", front="M-10.6-.4Q-11-11.6 0-12Q11-11.6 10.6-.4Q8-6 0-6.6Q-8-6-10.6-.4z", robe="#B4A98F"),
+    "haendler": dict(hair="#2E2017", veil="#E9D8B4", front="M-7.6-3.6Q0-8.4 7.6-3.6Q4-5.2 0-5Q-4-5.2-7.6-3.6z",
+                     beard="M-8 6.4Q-7 12.4 0 13.4Q7 12.4 8 6.4Q6 10 0 10.6Q-6 10-8 6.4z", robe="#C2884A", belt="#8A6A3A"),
+    "menge": dict(hair="#2E2017", front="M-10.6-.4Q-11-11.6 0-12Q11-11.6 10.6-.4Q8-6 0-6.6Q-8-6-10.6-.4z",
+                  beard="M-8 6.4Q-7 12.4 0 13.4Q7 12.4 8 6.4Q6 10 0 10.6Q-6 10-8 6.4z", robe="#8E9AAF", sash="#6F7B8F"),
+    "menge2": dict(hair="#3A2618", veil="#B9A88C", front="M-7.6-3.6Q0-8.4 7.6-3.6Q4-5.2 0-5Q-4-5.2-7.6-3.6z", robe="#9AA6B8", sash="#7A8698"),
+    "menge3": dict(hair="#24180F", front="M-10.6 0Q-11.4-10.8 0-11.8Q11.4-10.8 10.6 0Q6-8.2-1-7Q-7-6.4-10.6 0z", robe="#8592A6", sash="#6F7B8F"),
     "gast2": dict(hair="#3A2618", veil="#C7B9D6", front="M-7.6-3.6Q0-8.4 7.6-3.6Q4-5.2 0-5Q-4-5.2-7.6-3.6z", robe="#8FA3A0"),
 }
 
@@ -168,6 +177,8 @@ def body_inner(key, arm=None):
         o.append(f'<path d="M-13 18Q-17 24-17 34h-.4V20zM13 18Q17 24 17 34V20z" fill="{c["veil"]}"/>')
     if c.get("apron"):
         o.append(f'<path d="M-6 22h12v12h-12z" fill="#FFFDF6" stroke="{INK}" stroke-width=".6"/><path d="M-7 22h14" stroke="#8A7A5A" stroke-width="1"/>')
+    if c.get("sash"):
+        o.append(f'<path d="M-8 16.6L10 34h-5L-11 18.4z" fill="{c["sash"]}"/>')
     if c.get("belt"):
         o.append(f'<path d="M-15.4 28h30.8v2.6h-30.8z" fill="{c["belt"]}"/>')
     if c.get("trim"):
@@ -212,21 +223,8 @@ def use(sym, x, y, w, h, extra=""):
 
 
 def bubble(x, y, w, h, tx, ty, inner):
-    """Sprechblase wie im Symbolstil: Spitze von der zugewandten Seite, kurz und gerade; runder, dicker Comic-Rand."""
-    r, half = 12, 5
-    dx = tx - min(max(tx, x), x + w)
-    dy = ty - min(max(ty, y), y + h)
-    if abs(dy) >= abs(dx):
-        ey = y + h if dy > 0 else y
-        bx = min(max(tx, x + r + half), x + w - r - half)
-        b1, b2, cover = (bx - half, ey), (bx + half, ey), f"M{bx - half + 1:.1f} {ey}H{bx + half - 1:.1f}"
-    else:
-        ex = x + w if dx > 0 else x
-        by = min(max(ty, y + r + half), y + h - r - half)
-        b1, b2, cover = (ex, by - half), (ex, by + half), f"M{ex} {by - half + 1:.1f}V{by + half - 1:.1f}"
-    return (f'<g><rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{r}" fill="{BUBBLE}" stroke="{INK}" stroke-width="1.6"/>'
-            f'<path d="M{b1[0]:.1f} {b1[1]:.1f}L{tx} {ty}L{b2[0]:.1f} {b2[1]:.1f}" fill="{BUBBLE}" stroke="{INK}" stroke-width="1.6" stroke-linejoin="round"/>'
-            f'<path d="{cover}" stroke="{BUBBLE}" stroke-width="3.2"/>{inner}</g>')
+    """Sprechblase als eine Form mit eingebauter Spitze zur sprechenden Figur (tx, ty), siehe _bubble.py."""
+    return f'<g><path d="{bubble_path(x, y, w, h, tx, ty, 12, 5)}" fill="{BUBBLE}" stroke="{INK}" stroke-width="1.6" stroke-linejoin="round"/>{inner}</g>'
 
 
 def frame(n, pts, body, bg="#F6EAD7", num=None):
@@ -285,16 +283,61 @@ def kana():
             + frame(1, p1, s1) + frame(2, p2, s2) + frame(3, p3, s3, num=(218, 174)) + frame(4, p4, s4) + "</svg>")
 
 
+
+# ---------------------------------------------------------------- Johannes 2,13–22 (Tempel), zwei Panels
+def tempel():
+    W, H = 380, 316
+    p1 = [(4, 4), (376, 4), (376, 168), (4, 176)]
+    p2 = [(4, 184), (376, 176), (376, 312), (4, 312)]
+    bg = ('<path d="M4 132h372v44H4z" fill="#E7D3B0"/>' + use("an-tempel", 150, 8, 200, 150, ' opacity=".5"'))
+    table = (f'<g transform="rotate(-24 116 156)"><rect x="84" y="148" width="64" height="8" fill="#B07A3E" stroke="{INK}"/>'
+             f'<path d="M92 156v13M140 156v13" stroke="{INK}" stroke-width="3"/></g>')
+    coins = "".join(use("an-muenzen", x, y, 20, 12) for x, y in ((86, 118), (124, 104), (104, 90), (150, 160)))
+    b1 = bubble(196, 14, 104, 40, 214, 76, use("an-tempel", 204, 18, 40, 30) + use("an-muenzen", 248, 26, 22, 13) + use("an-z-fehlt", 274, 22, 22, 22))
+    s1 = (bg + table + coins + lines_motion(16, 132, 22, 3, 8)
+          + person("haendler", 46, 112, 1.55, "surprised", -1.2, flip=True) + shock(46, 82, .8)
+          + use("an-schaf", 150, 124, 48, 32) + lines_motion(200, 132, 14, 3, 0)
+          + use("an-taube-kaefig", 316, 96, 46, 46)
+          + person("jesus", 228, 116, 1.9, "earnest", -.8, arm=(-82, 15)) + use("an-peitsche", 250, 74, 30, 36) + b1)
+    b2 = bubble(36, 192, 70, 40, 66, 252, use("an-zeichen", 44, 196, 30, 30) + use("an-z-frage", 80, 196, 16, 28))
+    suns = "".join(use("an-sonne", 252 + i * 15, 214, 13, 13) for i in range(3))
+    b3 = bubble(158, 190, 214, 46, 314, 250, use("an-tempel-riss", 166, 194, 46, 36) + use("an-z-pfeil", 218, 213, 26, 13) + suns
+                + use("an-z-pfeil", 302, 213, 26, 13) + use("an-tempel", 332, 198, 34, 26))
+    s2 = ('<path d="M4 290h372v22H4z" fill="#E7D3B0"/>'
+          + person("menge2", 30, 282, 1.45, "determined", .8) + person("menge", 66, 274, 1.6, "determined", 1.0)
+          + person("menge3", 104, 286, 1.4, "calm", 1.0) + person("jesus", 314, 278, 1.8, "calm", -1.2, arm=(196, 14)) + b2 + b3)
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}"><rect width="{W}" height="{H}" fill="#FFFDF6"/>'
+            + frame(1, p1, s1) + frame(2, p2, s2) + "</svg>")
+
+
+# ---------------------------------------------------------------- Johannes 2,23–25, ein Panel
+def glaube():
+    W, H = 380, 210
+    p1 = [(4, 4), (376, 4), (376, 206), (4, 206)]
+    crowd = (person("menge2", 34, 150, 1.5, "delight", .9) + person("menge", 76, 140, 1.7, "delight", 1.0)
+             + person("menge3", 120, 152, 1.5, "delight", .9) + person("menge2", 162, 160, 1.3, "delight", .8))
+    stars = use("an-zeichen", 40, 24, 26, 26) + use("an-zeichen", 96, 12, 20, 20) + use("an-zeichen", 146, 28, 24, 24)
+    hearts = "".join(use("an-z-glauben", x, y, 20, 22) for x, y in ((24, 92), (66, 80), (110, 94), (152, 106)))
+    s1 = ('<path d="M4 184h372v22H4z" fill="#E7D3B0"/>' + use("an-tempel", 226, 14, 150, 112, ' opacity=".45"')
+          + stars + hearts + crowd + use("an-z-abstand", 210, 78, 12, 120)
+          + person("jesus", 296, 148, 1.9, "earnest", 1.6, flip=True))
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}"><rect width="{W}" height="{H}" fill="#FFFDF6"/>' + frame(1, p1, s1) + "</svg>")
+
+
 # ---------------------------------------------------------------- Bibliothek
 COPY = ["ill-jar", "ill-jar-leer", "ill-jar-wein", "ill-traube", "ill-becher", "ill-becher-leer", "ill-z-fehlt", "ill-z-stunde", "ill-z-hoeren",
-        "ill-z-pfeil", "ill-zeichen", "ill-z-glauben", "ill-z-freude", "ill-z-hochzeit"]
+        "ill-z-pfeil", "ill-zeichen", "ill-z-glauben", "ill-z-freude", "ill-z-hochzeit", "ill-tempel", "ill-tempel-riss", "ill-sonne",
+        "ill-peitsche", "ill-schaf", "ill-taube-tier", "ill-taube-kaefig", "ill-muenzen", "ill-z-frage", "ill-z-abstand"]
 PORTRAITS = {"FIG-JESUS": ("jesus", "calm"), "FIG-MARIA-MUTTER-JESU": ("maria", "calm"), "FIG-ROLLE-DIENER": ("diener", "calm"),
              "FIG-ROLLE-SPEISEMEISTER": ("meister", "calm"), "FIG-ROLLE-BRAEUTIGAM": ("braeutigam", "calm"), "FIG-ROLLE-BRAUT": ("braut", "calm"),
-             "FIG-ROLLE-GAST": ("gast", "calm"), "FIG-ROLLE-JUENGER": ("juenger", "calm")}
+             "FIG-ROLLE-GAST": ("gast", "calm"), "FIG-ROLLE-JUENGER": ("juenger", "calm"), "FIG-ROLLE-HAENDLER": ("haendler", "calm"),
+             "FIG-GRUPPE-MENGE": ("menge", "calm")}
 OBJ = {"FIG-OBJ-KRUG-WASSER": "an-jar", "FIG-OBJ-KRUG-WEIN-LEER": "an-jar-leer", "FIG-OBJ-KRUG-WEIN": "an-jar-wein", "FIG-OBJ-BECHER-VOLL": "an-becher",
        "FIG-OBJ-BECHER-LEER": "an-becher-leer", "FIG-ZEICHEN-FEHLT": "an-z-fehlt", "FIG-ZEICHEN-STUNDE": "an-z-stunde", "FIG-ZEICHEN-HOEREN": "an-z-hoeren",
        "FIG-ZEICHEN-BRINGEN": "an-z-pfeil", "FIG-ZEICHEN-STERN": "an-zeichen", "FIG-ZEICHEN-GLAUBEN": "an-z-glauben", "FIG-ZEICHEN-FREUDE": "an-z-freude",
-       "FIG-ZEICHEN-HOCHZEIT": "an-z-hochzeit"}
+       "FIG-ZEICHEN-HOCHZEIT": "an-z-hochzeit", "FIG-ORT-TEMPEL": "an-tempel", "FIG-ZEICHEN-NIEDERREISSEN": "an-tempel-riss", "FIG-ZEICHEN-TAGE": "an-sonne",
+       "FIG-OBJ-PEITSCHE": "an-peitsche", "FIG-OBJ-SCHAF": "an-schaf", "FIG-OBJ-TAUBE": "an-taube-kaefig", "FIG-OBJ-MUENZEN": "an-muenzen",
+       "FIG-ZEICHEN-FRAGEN": "an-z-frage", "FIG-ZEICHEN-ABSTAND": "an-z-abstand"}
 
 
 def library():
@@ -322,6 +365,18 @@ def library():
 
 
 ILL = {
+    "ILL-ANI-JHN-002-013-022": ("BRIEF-JHN-002-013-022", tempel,
+                                "Comic in zwei Bildern ohne Text: 1 Vor dem Tempel hält Jesus ernst die Geissel erhoben; ein Tisch kippt, Münzen fliegen, ein Händler weicht erschrocken zurück, "
+                                "ein Schaf läuft davon, Tauben im Käfig; Sprechblase: Tempel, Münzen, durchgestrichen. 2 Menschen aus der Menge fragen nach einem Zeichen (Stern, Fragezeichen); "
+                                "Jesus antwortet: Tempel mit Riss, drei Sonnen, Tempel.",
+                                "Comic i zwei Bilder ohni Text: 1 Vor em Tämpel hebt de Jesus ernscht d Geissle uf; en Tisch kippt, Münz flüüged, en Händler wiicht verschrocke zrugg, "
+                                "es Schaf rennt dervo, Tube im Chäfig; Sprächblase: Tämpel, Münz, durgstriche. 2 Mänsche us de Mängi fröged nach eme Zeiche (Stern, Fragezeiche); "
+                                "de Jesus antwortet: Tämpel mit Riss, drüü Sunne, Tämpel."),
+    "ILL-ANI-JHN-002-023-025": ("BRIEF-JHN-002-023-025", glaube,
+                                "Menschen in Jerusalem mit leuchtenden Augen unter goldenen Sternen (Zeichen), über ihnen Herzen (sie glauben); eine gestrichelte Linie trennt sie von Jesus, "
+                                "der sich ernst zur Seite abwendet; im Hintergrund der Tempel.",
+                                "Mänsche z Jerusalem mit lüüchtende Auge under goldige Stärn (Zeiche), über ine Härz (si glaubed); e gstrichleti Linie trännt si vom Jesus, "
+                                "wo sich ernscht uf d Siite abwändet; im Hindergrund de Tämpel."),
     "ILL-ANI-JHN-002-001-012": ("BRIEF-JHN-002-001-012", kana,
                                 "Comic in vier Bildern ohne Text: 1 Beim Hochzeitsfest zeigt Maria besorgt auf den leeren Weinkrug und den leeren Becher; Jesus antwortet ruhig mit der Sanduhr. "
                                 "2 Maria zeigt den Dienern: Jesus und das Ohr (hört auf ihn); die Diener staunen. 3 Jesus weist auf die sechs Krüge, ein Diener giesst Wasser ein; Sprechblase: Krug, Pfeil, Speisemeister. "
