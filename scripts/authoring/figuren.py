@@ -101,7 +101,7 @@ FIGS = {
     "FIG-TOCHTER-HERODIAS": F("#D4537E", None, BLACK, "long", sex="f", age="young"),
     "FIG-EUODIA": F("#A8687A", None, DARK, "short", sex="f", head=("veil", "#F2E6CC")),
     "FIG-SYNTYCHE": F("#6A8AA8", None, BROWN, "short", sex="f", head=("veil", "#F2E6CC")),
-    "FIG-AUSERWAEHLTE-HERRIN": F("#6A4A7A", None, DARK, "short", sex="f", head=("veil", "#F2E6CC"), attr="kind"),
+    "FIG-AUSERWAEHLTE-HERRIN": F("#6A4A7A", None, DARK, "short", sex="f", head=("veil", "#F2E6CC")),
     # Rut
     "FIG-RUT": F("#7A8B4A", None, BROWN, "short", sex="f", head=("veil", "#E8B84A"), attr="garbe"),
     "FIG-NOOMI": F("#C9BFAA", None, GREY, "short", sex="f", age="old", head=("veil", "#4A4A5A")),
@@ -136,7 +136,7 @@ FIGS = {
     "FIG-TIMOTHEUS": F("#5A7A9A", None, BROWN, "short", None, age="young", attr="brief"),
     "FIG-TITUS": F("#5A6A3A", None, DARK, "short", "short", attr="brief"),
     "FIG-EPAPHRODITUS": F("#7A8A5A", "#E2CDA8", BROWN, "short", "short", attr="beutel"),
-    "FIG-DER-AELTESTE": F("#6A6A6A", "#E7DCC4", WHITE, "short", "long", age="old", attr="feder"),
+    "FIG-DER-AELTESTE": F("#6A6A6A", "#E7DCC4", WHITE, "short", "long", age="old", attr="tinte"),
     "FIG-GAIUS": F("#8A6A4A", "#F6EBD9", DARK, "short", "short", attr="tuer-offen"),
     "FIG-DIOTREPHES": F("#6A5A5A", "#C9BFAA", DARK, "short", "short", attr="tuer"),
     "FIG-DEMETRIUS": F("#4A7A6A", "#E7DCC4", BROWN, "short", "short", attr="brief"),

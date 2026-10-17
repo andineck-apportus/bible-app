@@ -82,7 +82,7 @@ def brows(expr, look, color):
             a, b = (-5.3, -5.3)
         mid = min(a, b) - (1.1 if expr in ("calm", "smile", "delight", "surprised", "pensive", "worried") else .7)
         d.append(f"M{ex - 2.2:.1f} {a:.1f}Q{ex:.1f} {mid:.1f} {ex + 2.2:.1f} {b:.1f}")
-    return f'<path d="{"".join(d)}" fill="none" stroke="{color}" stroke-width=".9" stroke-linecap="round"/>'
+    return f'<path d="{"".join(d)}" fill="none" stroke="{color}" stroke-width=".75" stroke-linecap="round"/>'
 
 
 def mouth(expr, look):
@@ -262,8 +262,14 @@ def person(key, x, y, s, expr="calm", look=0.0, arm=None, flip=False, tears=Fals
     if CHAR[key].get("child"):
         s *= .74
         y += 9 * s
-    held = use(hold, -4, 18, 16, 12) if hold else ""
-    return f'<g transform="translate({x} {y}) scale({s}){fl}">{body_inner(key, arm)}{head_inner(key, expr, -look if flip else look, tears)}{held}</g>'
+    held = use(hold, -4, 13, 16, 12) if hold else ""  # vor der Brust, nicht am unteren Rand
+    head = head_inner(key, expr, -look if flip else look, tears)
+    if flip:  # abgewandt: Hinterkopf statt Gesicht (Spiegeln allein war im Blindtest nicht sichtbar)
+        c = CHAR[key]
+        cover = c.get("veil") or c.get("turban") or c["hair"]
+        head += (f'<path d="M-10.8 0Q-11.4-12 0-12.4Q11.4-12 10.8 0Q10.6 9 4 12.4H-4Q-10.6 9-10.8 0z" fill="{cover}" stroke="{INK}" stroke-width=".7"/>'
+                 f'<path d="M-4 12.4Q0 14 4 12.4" fill="none" stroke="{SKIN_D}" stroke-width="1.2"/>')
+    return f'<g transform="translate({x} {y}) scale({s}){fl}">{body_inner(key, arm)}{head}{held}</g>'
 
 
 # ---------------------------------------------------------------- Zeichen

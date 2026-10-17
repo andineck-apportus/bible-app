@@ -428,7 +428,7 @@ class Composer:
                 d = math.hypot(x2 - x1, y2 - y1) or 1
                 sh1 = 0 if f in people else (16 if f in sky else 12)
                 sh2 = 0 if t in people else (14 if t in bigpos or t in pos else 10)
-                out.append(arrow_svg(x1 + (x2 - x1) * sh1 / d, y1 + (y2 - y1) * sh1 / d, x2 - (x2 - x1) * sh2 / d, y2 - (y2 - y1) * sh2 / d, kind, f in sky))
+                out.append(arrow_svg(x1 + (x2 - x1) * sh1 / d, y1 + (y2 - y1) * sh1 / d, x2 - (x2 - x1) * sh2 / d, y2 - (y2 - y1) * sh2 / d, kind, f in sky or t in sky))
         # 10. Sprechblasen
         bubbles = []
         for sp in L["speech"][:2]:

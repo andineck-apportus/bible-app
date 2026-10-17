@@ -520,14 +520,18 @@ class SymComposer(_auto.Composer):
         else:
             out.append(use(sym, round(x - w / 2, 1), round(y, 1), round(w, 1), h))
             hy = y + h * 14 / 64
+            if pose == "away" and not s["group"]:  # abgewandt: Hinterkopf (Haar über dem ganzen Kopf)
+                hp = _fg.FIGS.get(fid) or {}
+                out.append(f'<circle cx="{x:.1f}" cy="{hy:.1f}" r="{6.6 * h / 64:.1f}" fill="{hp.get("hair", "#3B2A1E")}" stroke="#3B3226" stroke-width="1"/>')
         wear = (st.get("wear") or {}).get(fid)
         if wear:
             out.append(self._sack(x, y, w, h, wear))
         if arm is not None:
             sx, sy = x + arm * w * .32, y + h * .42
             out.append(gesture(round(sx, 1), round(sy, 1), round(sx + arm * 11, 1), round(sy + 5, 1)))
-        if hold == "PRAY":
-            out.append(use("ill-z-beten", round(x - 6, 1), round(y + h * .34, 1), 12, 13))
+        if hold == "PRAY":  # bei Gruppen sitzt die vordere Figur tiefer: Hände auf Brusthöhe, nicht vor dem Gesicht
+            grp = s["group"] or fid.startswith("FIG-GRUPPE-")
+            out.append(use("ill-z-beten", round(x - 6, 1), round(y + h * (.56 if grp else .34), 1), 12, 13))
             hold = None
         if hold == "FIG-OBJ-BRIEF" and (fid == "FIG-PAULUS" or (_fg.FIGS.get(fid) or {}).get("attr") == "brief"):
             hold = None  # trägt den Brief schon als Merkmal
