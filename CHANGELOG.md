@@ -2,6 +2,11 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.58 — 2026-10-17 — Sprechblasen, Seitenleiste
+
+- Die Spitze einer Sprechblase geht jetzt von der Seite aus, die der sprechenden Figur zugewandt ist (unten, oben, links oder rechts), statt immer von unten; spricht Gott (Strahlenkranz), kommt sie seitlich. Blasen, die neben der Figur standen, stehen jetzt über ihr (Kana Feld 1, Tempelreinigung, Propheten, Gebet, Paulus). Keine langen, schräg verzogenen Spitzen mehr.
+- **Seitenleiste** (breite Ansicht): Ab Kapitelebene steht oben der Schritt zum vorherigen und unten zum nächsten Elternteil (z. B. «↑ Lukas 24» … «↓ Apostelgeschichte 1»), so kommt man über Buch-, Kapitel- und Abschnittsgrenzen hinweg; der Titel oben (z. B. «Johannes») führt eine Ebene hinauf. Beim Weiterscrollen in ein anderes Buch passt sich die Leiste an. Neuer Test `scripts/test_reading_stream_sidebar.cjs`.
+
 ## v0.57 — 2026-10-14 — Bildsprache auf allen Ebenen, Gottessymbol
 
 - **Bilder auf allen Ebenen über den Versen:** neu für die ganze Bibel, Altes und Neues Testament und alle zehn Buchgruppen (je ein bis vier Bildfelder nach der Zusammenfassung, mit einer typischen Bibelstelle je Feld). Gleiche Szenen sehen überall gleich aus (Schöpfung, Meerdurchzug, Sinai, Exil und Hoffnung, Verkündigung Jesu, Kreuz und leeres Grab, Pfingsten, Briefe, neue Schöpfung).

@@ -264,6 +264,12 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
   #bible-stream .app aside button{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;padding:8px 10px!important;margin-bottom:2px;font:400 13.5px/1.35 var(--ui);color:var(--muted);border-radius:var(--r)!important}
   #bible-stream .app aside button:hover{background:var(--soft);color:var(--ink)}
   #bible-stream .app aside button[aria-current=true]{background:var(--ink);color:var(--bg)}
+  #bible-stream .app aside .side-head{display:block;width:auto;margin:0 0 8px;padding:2px 10px!important;font:500 12px/1.3 var(--ui);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  #bible-stream .app aside .side-head:hover{color:var(--ink);background:none}
+  #bible-stream .app aside .side-step{justify-content:flex-start;color:var(--muted);font-style:italic}
+  #bible-stream .app aside .side-step svg{width:14px;height:14px;flex:none}
+  #bible-stream .app aside .side-step[data-step=prev]{margin-bottom:8px;border-bottom:1px solid var(--rule);border-radius:var(--r) var(--r) 0 0!important}
+  #bible-stream .app aside .side-step[data-step=next]{margin-top:8px;border-top:1px solid var(--rule);border-radius:0 0 var(--r) var(--r)!important}
   #bible-stream aside button .dot{width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.55;flex:none}
   #bible-stream .reader{left:230px}
   #bible-stream .immersed aside{opacity:.25}
@@ -705,7 +711,13 @@ function goRef(ref){const [a]=ref.split('-');const [code,c,v]=a.split('.');const
 function sidebar(){const n=nodes.get(current),ids=n.level<=3?streams[n.level||1]:nodes.get(n.parent).children;
   const worked=x=>x.level===3?STUDY.sections.some(sec=>rangeOf(sec.range).code===DATA[x.b].code):x.level===4?STUDY.sections.some(sec=>{const g=rangeOf(sec.range);return g.code===DATA[x.b].code&&g.c===x.c;}):x.level===5?!!x.part:x.level===6?isPilotVerse(x):false;
   const head=n.level<=1?T().bible:n.level<=3?T().levels[n.level]:title(nodes.get(n.parent));
-  aside.innerHTML=`<p class="eyebrow">${esc(head)}</p>`+ids.slice(0,200).map(id=>{const x=nodes.get(id);return `<button type="button" data-go="${id}" aria-current="${id===current}"><span>${esc(x.level===5&&x.part?pTitle(x.part):title(x))}</span>${worked(x)?'<span class="dot"></span>':''}</button>`;}).join('');
+  // Ab Kapitelebene: Liste der Geschwister plus Schritt zum vorherigen und nächsten Elternteil (z. B. Lukas 24 ↑ … Apostelgeschichte 1 ↓)
+  const P=n.level>=4?nodes.get(n.parent):null,ps=P?streams[P.level]:null,lab=x=>x.level===5&&x.part?pTitle(x.part):title(x);
+  const prevP=P&&P.si>0?nodes.get(ps[P.si-1]):null,nextP=P&&P.si<ps.length-1?nodes.get(ps[P.si+1]):null;
+  const prevT=prevP&&prevP.children.length?nodes.get(prevP.children[prevP.children.length-1]):null,nextT=nextP&&nextP.children.length?nodes.get(nextP.children[0]):null;
+  const step=(x,dir)=>x?`<button type="button" class="side-step" data-go="${x.id}" data-step="${dir}">${icon(dir==='prev'?'arrow-up':'arrow-down')}<span>${esc(lab(x))}</span></button>`:'';
+  aside.dataset.parent=P?P.id:'';
+  aside.innerHTML=(P?`<button type="button" class="side-head eyebrow" data-go="${P.id}" title="${esc(head)}">${esc(head)}</button>`:`<p class="eyebrow">${esc(head)}</p>`)+step(prevT,'prev')+ids.slice(0,200).map(id=>{const x=nodes.get(id);return `<button type="button" data-go="${id}" aria-current="${id===current}"><span>${esc(lab(x))}</span>${worked(x)?'<span class="dot"></span>':''}</button>`;}).join('')+step(nextT,'next');
   const cur=aside.querySelector('[aria-current=true]');if(cur&&cur.scrollIntoView&&aside.clientHeight)try{cur.scrollIntoView({block:'center'});}catch(e){}}
 function render(after){const n=nodes.get(current);const r=savedStreams.get(n.level);const [s0,e0]=(r&&r.id===current)?[r.start,r.end]:[n.si,Math.min(n.si+10,streams[n.level].length)];
   withData(codesOf(streams[n.level].slice(s0,e0)),()=>{if(nodes.get(current)!==n)return;applyPrefs();chrome();sidebar();readerStart=s0;readerEnd=e0;reader.innerHTML=streamMarkup();if(after)after();});}
@@ -1073,7 +1085,7 @@ let busy=false,lastTop=0;
 reader.addEventListener('scroll',()=>{if(busy)return;busy=true;
   const y=reader.scrollTop;if(y>80&&y-lastTop>6)app.classList.add('immersed');else if(lastTop-y>6||y<40)app.classList.remove('immersed');lastTop=y;
   const top=reader.getBoundingClientRect().top+70;const active=[...reader.querySelectorAll('[data-stream]')].find(el=>el.getBoundingClientRect().bottom>top);
-  if(active&&active.dataset.stream!==current){current=active.dataset.stream;for(const child of ancestors(current).slice(1))remembered.set(nodes.get(child).parent,child);chrome();aside.querySelectorAll('[data-go]').forEach(x=>x.setAttribute('aria-current',String(x.dataset.go===current)));}
+  if(active&&active.dataset.stream!==current){current=active.dataset.stream;for(const child of ancestors(current).slice(1))remembered.set(nodes.get(child).parent,child);chrome();const cn=nodes.get(current);if(cn.level>=4&&aside.dataset.parent!==cn.parent)sidebar();else aside.querySelectorAll('[data-go]:not(.side-step):not(.side-head)').forEach(x=>x.setAttribute('aria-current',String(x.dataset.go===current)));}
   if(reader.scrollTop+reader.clientHeight>reader.scrollHeight-300)loadMore();else if(reader.scrollTop<30&&readerStart>0)loadMore(true);
   busy=false;},{passive:true});
 // Weiterlesen ohne Knopf: Sobald «Weiterlesen» in die Nähe des sichtbaren Bereichs kommt, wird nachgeladen – auch wenn

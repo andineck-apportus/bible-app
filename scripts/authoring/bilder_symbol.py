@@ -78,11 +78,25 @@ def gesture(x1, y1, x2, y2):
 
 
 def bubble(x, y, w, h, tx, ty, inner):
-    """Sprechblase; die Spitze zeigt auf die sprechende Figur (tx, ty)."""
-    bx = min(max(tx, x + 10), x + w - 10)
-    return (f'<g><rect x="{x}" y="{y}" width="{w}" height="{h}" rx="8" fill="{BUBBLE}" stroke="{INK}" stroke-width="1.2"/>'
-            f'<path d="M{bx - 5} {y + h}L{tx} {ty}L{bx + 5} {y + h}" fill="{BUBBLE}" stroke="{INK}" stroke-width="1.2" stroke-linejoin="round"/>'
-            f'<path d="M{bx - 4} {y + h}h8" stroke="{BUBBLE}" stroke-width="2.4"/>{inner}</g>')
+    """Sprechblase; die Spitze zeigt auf die sprechende Figur (tx, ty).
+
+    Die Spitze geht von der Seite der Blase aus, die der Figur zugewandt ist (unten, oben, links oder rechts),
+    und sitzt auf dieser Seite möglichst nahe bei der Figur; so bleibt sie kurz und gerade statt schräg verzogen.
+    """
+    r, half = 8, 4.5
+    dx = tx - min(max(tx, x), x + w)  # Abstand ausserhalb der Blase (0, wenn innerhalb der Spanne)
+    dy = ty - min(max(ty, y), y + h)
+    if abs(dy) >= abs(dx):  # oben oder unten
+        ey = y + h if dy > 0 else y
+        bx = min(max(tx, x + r + half), x + w - r - half)
+        b1, b2, cover = (bx - half, ey), (bx + half, ey), f"M{bx - half + .8:.1f} {ey}H{bx + half - .8:.1f}"
+    else:  # links oder rechts
+        ex = x + w if dx > 0 else x
+        by = min(max(ty, y + r + half), y + h - r - half)
+        b1, b2, cover = (ex, by - half), (ex, by + half), f"M{ex} {by - half + .8:.1f}V{by + half - .8:.1f}"
+    return (f'<g><rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{r}" fill="{BUBBLE}" stroke="{INK}" stroke-width="1.2"/>'
+            f'<path d="M{b1[0]:.1f} {b1[1]:.1f}L{tx} {ty}L{b2[0]:.1f} {b2[1]:.1f}" fill="{BUBBLE}" stroke="{INK}" stroke-width="1.2" stroke-linejoin="round"/>'
+            f'<path d="{cover}" stroke="{BUBBLE}" stroke-width="2.6"/>{inner}</g>')
 
 
 def panel(n, px, py, body, w=186, h=140):
@@ -101,13 +115,13 @@ def hochzeit_tafel():
 
 
 def kana_1():
-    b1 = bubble(24, 12, 64, 32, 40, 64, use("ill-jar-leer", 28, 14, 20, 28) + use("ill-becher-leer", 50, 21, 14, 17) + use("ill-z-fehlt", 66, 20, 16, 16))
-    b2 = bubble(98, 88, 30, 28, 90, 76, use("ill-z-stunde", 106, 91, 15, 21))
+    b1 = bubble(8, 26, 62, 32, 40, 64, use("ill-jar-leer", 12, 28, 20, 28) + use("ill-becher-leer", 34, 35, 14, 17) + use("ill-z-fehlt", 50, 34, 16, 16))
+    b2 = bubble(74, 20, 30, 28, 79, 58, use("ill-z-stunde", 82, 23, 15, 21))
     return hochzeit_tafel() + fig("FIG-MARIA-MUTTER-JESU", 26, 58) + gesture(48, 88, 58, 84) + fig("FIG-JESUS", 62, 56, 30, 64) + b1 + b2
 
 
 def kana_2():
-    b = bubble(14, 12, 100, 34, 46, 62, use("ill-jesus-kopf", 22, 17, 24, 24) + use("ill-z-pfeil", 50, 24, 20, 10) + use("ill-z-hoeren", 76, 17, 30, 25))
+    b = bubble(14, 24, 100, 32, 46, 64, use("ill-jesus-kopf", 22, 28, 24, 24) + use("ill-z-pfeil", 50, 35, 20, 10) + use("ill-z-hoeren", 76, 27, 30, 25))
     return (fig("FIG-MARIA-MUTTER-JESU", 34, 58) + gesture(58, 88, 84, 84) + fig("FIG-ROLLE-DIENER", 108, 58)
             + fig("FIG-ROLLE-DIENER", 138, 62, 26, 56, ' opacity=".85"') + b)
 
@@ -116,15 +130,15 @@ def kana_3():
     jars = "".join(use("ill-jar", 50 + i * 16, 90, 15, 28) for i in range(6))
     pour = (f'<g transform="rotate(-75 150 76)">{use("ill-jar", 141, 62, 13, 24)}</g>'
             '<path d="M135 82q-4 3-4 10" fill="none" stroke="#4C9BD6" stroke-width="2.4" stroke-linecap="round"/>')
-    b = bubble(10, 10, 86, 34, 26, 58, use("ill-jar", 18, 13, 15, 28) + use("ill-z-pfeil", 38, 22, 20, 10) + use("ill-p-meister", 64, 12, 15, 31))
+    b = bubble(12, 22, 86, 30, 25, 59, use("ill-jar", 20, 24, 14, 26) + use("ill-z-pfeil", 40, 32, 20, 10) + use("ill-p-meister", 66, 23, 13, 28))
     return fig("FIG-JESUS", 10, 56, 30, 64) + gesture(36, 88, 48, 96) + jars + fig("FIG-ROLLE-DIENER", 150, 58) + pour + b
 
 
 def kana_4():
-    b = bubble(26, 6, 40, 32, 40, 60, use("ill-becher", 36, 10, 20, 23))
+    b = bubble(34, 10, 40, 32, 54, 64, use("ill-becher", 44, 14, 20, 23))
     hearts = use("ill-z-glauben", 147, 46, 16, 18) + use("ill-z-glauben", 167, 46, 16, 18)
     return (fig("FIG-ROLLE-DIENER", 2, 66, 22, 50) + use("ill-jar-wein", 22, 98, 11, 20) + fig("FIG-ROLLE-SPEISEMEISTER", 40, 58)
-            + use("ill-becher", 62, 80, 11, 13) + gesture(66, 90, 78, 86) + use("ill-z-freude", 43, 46, 28, 17) + b
+            + use("ill-becher", 62, 80, 11, 13) + gesture(66, 90, 78, 86) + use("ill-z-freude", 28, 60, 18, 11) + use("ill-z-freude", 64, 60, 18, 11) + b
             + fig("FIG-ROLLE-BRAEUTIGAM", 80, 58) + use("ill-zeichen", 118, 26, 16, 16) + fig("FIG-JESUS", 112, 56, 28, 62)
             + fig("FIG-ROLLE-JUENGER", 144, 68, 22, 50) + fig("FIG-ROLLE-JUENGER", 164, 68, 22, 50) + hearts)
 
@@ -140,8 +154,8 @@ def kana_kapitel():
 def tempel_1():
     table = f'<g transform="rotate(-18 40 110)"><rect x="12" y="104" width="56" height="6" fill="#B07A3E" stroke="{INK}"/><path d="M18 104v-12M62 104v-12" stroke="{INK}" stroke-width="2.4"/></g>'
     coins = use("ill-muenzen", 10, 120, 22, 13) + use("ill-muenzen", 40, 124, 20, 12)
-    b = bubble(116, 6, 66, 30, 96, 58, use("ill-tempel", 121, 10, 26, 20) + use("ill-muenzen", 148, 15, 16, 10) + use("ill-z-fehlt", 165, 13, 14, 14))
-    return (use("ill-tempel", 26, 10, 86, 64) + table + coins + fig("FIG-ROLLE-HAENDLER", 2, 56, 26, 58) + fig("FIG-JESUS", 76, 56, 30, 64)
+    b = bubble(84, 6, 66, 30, 92, 58, use("ill-tempel", 89, 10, 26, 20) + use("ill-muenzen", 116, 15, 16, 10) + use("ill-z-fehlt", 133, 13, 14, 14))
+    return (use("ill-tempel", 0, 14, 80, 60) + table + coins + fig("FIG-ROLLE-HAENDLER", 2, 56, 26, 58) + fig("FIG-JESUS", 76, 56, 30, 64)
             + gesture(100, 86, 106, 72) + use("ill-peitsche", 104, 50, 18, 22) + use("ill-schaf", 130, 96, 36, 23)
             + use("ill-taube-kaefig", 152, 52, 28, 28) + b)
 
@@ -149,7 +163,7 @@ def tempel_1():
 def tempel_2():
     crowd = (fig("FIG-GRUPPE-MENGE", 44, 70, 20, 44, ' opacity=".6"') + fig("FIG-GRUPPE-MENGE", 6, 58) + fig("FIG-GRUPPE-MENGE", 30, 64, 24, 52)
              + fig("FIG-GRUPPE-MENGE", 54, 62, 25, 54, ' opacity=".85"'))
-    b1 = bubble(4, 8, 52, 32, 22, 58, use("ill-zeichen", 11, 14, 20, 20) + use("ill-z-frage", 36, 13, 12, 22))
+    b1 = bubble(6, 24, 52, 30, 20, 64, use("ill-zeichen", 13, 29, 20, 20) + use("ill-z-frage", 38, 28, 12, 22))
     suns = "".join(use("ill-sonne", 120 + i * 10, 20, 9, 9) for i in range(3))
     b2 = bubble(62, 8, 120, 34, 150, 58, use("ill-tempel-riss", 67, 13, 30, 23) + use("ill-z-pfeil", 99, 21, 14, 8) + suns
                 + use("ill-z-pfeil", 152, 21, 12, 8) + use("ill-tempel", 165, 15, 15, 12))
@@ -226,7 +240,7 @@ def crack(x, y, sc=1.0):
 
 
 def f_exil():
-    b = bubble(28, 6, 40, 32, 24, 58, use("ill-z-hoffnung", 36, 9, 24, 24))
+    b = bubble(10, 26, 40, 30, 23, 62, use("ill-z-hoffnung", 18, 29, 24, 24))
     return (use("ill-jerusalem", 104, 14, 80, 56) + crack(150, 40) + crack(126, 48, .8) + fig_m("FIG-ROLLE-PROPHET", 8, 56, 30, 64) + b
             + menge(((80, 66, 22, 50), (100, 68, 20, 46))) + use("ill-z-trauer", 98, 72, 6, 9) + use("ill-z-trauer", 116, 74, 6, 9)
             + use("ill-z-exil", 44, 100, 110, 44))
@@ -276,7 +290,7 @@ def f_zerstoert():
 
 
 def f_gebet():
-    b = bubble(72, 30, 50, 30, 48, 64, use("ill-z-trauer", 80, 35, 11, 19) + use("ill-z-freude", 96, 38, 22, 15))
+    b = bubble(28, 26, 50, 30, 44, 64, use("ill-z-trauer", 36, 31, 11, 19) + use("ill-z-freude", 52, 34, 22, 15))
     return (use("ill-gott", 130, 4, 44, 44) + fig("FIG-GRUPPE-MENGE", 30, 58, 28, 60) + use("ill-leier", 58, 76, 18, 23)
             + b)
 
@@ -293,8 +307,8 @@ def f_weisheit():
 
 def f_prophet(zwoelf=False):
     rolls = "".join(use("ill-schriftrolle", 120 + (i % 6) * 11, 6 + (i // 6) * 10, 10, 7) for i in range(12)) if zwoelf else ""
-    b = bubble(30, 8, 72, 34, 22, 58, use("ill-z-gericht", 38, 12, 30, 26) + use("ill-z-umkehr", 74, 16, 24, 18))
-    return rolls + fig("FIG-ROLLE-PROPHET", 8, 56, 30, 64) + menge(((110, 62, 24, 54), (134, 60, 26, 56), (160, 64, 24, 52))) + b
+    b = bubble(10, 24, 72, 34, 23, 62, use("ill-z-gericht", 18, 28, 30, 26) + use("ill-z-umkehr", 54, 32, 24, 18))
+    return rolls + fig_m("FIG-ROLLE-PROPHET", 8, 56, 30, 64) + menge(((110, 62, 24, 54), (134, 60, 26, 56), (160, 64, 24, 52))) + b
 
 
 def f_aufbau():
@@ -317,7 +331,7 @@ def path_dots(d):
 
 
 def f_paulus():
-    b = bubble(26, 6, 62, 32, 24, 58, use("ill-kreuz", 34, 9, 18, 26) + use("ill-z-glauben", 60, 11, 20, 22))
+    b = bubble(10, 24, 62, 32, 23, 62, use("ill-kreuz", 18, 27, 18, 26) + use("ill-z-glauben", 44, 29, 20, 22))
     return (fig("FIG-PAULUS", 8, 56, 30, 64) + path_dots("M40 84Q60 60 76 66") + use("ill-brief", 66, 54, 28, 21)
             + path_dots("M96 66Q106 70 112 76") + use("ill-gemeinde", 100, 52, 84, 62) + b)
 
