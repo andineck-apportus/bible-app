@@ -802,7 +802,10 @@ class AniComposer(_auto.Composer):
         else:
             g = person(key, x, y, s, expr, look, a, flip, tears, hold)
         if pose in ("lie", "sleep"):
-            g = f'<g transform="rotate(-80 {x:.1f} {y + 20 * s:.1f})">{g}</g>'
+            mat = (f'<path d="M{x - 34 * s:.1f} {y + 29 * s:.1f}h{56 * s:.1f}v{5 * s:.1f}h{-56 * s:.1f}z" fill="#C9B48E" stroke="{INK}" stroke-width="{.8 * s:.1f}"/>')
+            g = mat + f'<g transform="rotate(-80 {x:.1f} {y + 20 * s:.1f})">{g}</g>'
+        elif pose == "kneel":  # Brustbild vorgeneigt zur angesprochenen bzw. gegenüberstehenden Seite
+            g = f'<g transform="rotate({18 if (look or 0) >= 0 else -18} {x:.1f} {y + 30 * s:.1f})">{g}</g>'
         elif pose == "fall":
             g = f'<g transform="rotate(32 {x:.1f} {y + 18 * s:.1f})">{g}</g>'
         out.append(g)

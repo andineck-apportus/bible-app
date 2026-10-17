@@ -67,6 +67,9 @@ nicht zeigen). «Die Juden», Pharisäer, Hohepriester als neutrale Figuren, nie
 | `wear: {FIG: sack \| binden \| #RRGGBB}` | Kleidung: Sacktuch, Leinenbinden oder andere Mantelfarbe |
 | `in_water: true`, `sea: "calm"` | Personen stehen im Wasser (kein Uferstreifen); See ruhig statt bewegt |
 | `at_top: true` | Zeichen bei einer Figur im Gegenstand oben statt seitlich |
+| `on: {FIG: ORT}` | Figur steht auf einem Ort im Hintergrund (z. B. Jesus auf dem Berg) |
+| `night: true` | dunkler Himmel mit Sternen (automatisch, wenn das Zeichen Nacht im Feld steht) |
+| Sprechblase `"think": true` | Denkblase (Wolke mit kleinen Kreisen) statt Sprechblase: «sagt sich im Herzen», überlegt |
 
 Automatisch (seit dem Blindtest vom 2026-10-17): Wer zuerst spricht, steht links vom zweiten Sprecher (ausser `x`, `split` oder
 «links/rechts» in der Legende); eine zweite Sprechblase derselben Figur steht neben der ersten und ist mit ihr verbunden;

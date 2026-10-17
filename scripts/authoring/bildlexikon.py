@@ -740,7 +740,7 @@ E("FIG-ROLLE-JUENGER", "role", "Jünger", "Disciple",
 E("FIG-GRUPPE-ZWOELF", "group", "Die Zwölf", "The Twelve",
   "Der engere Kreis von zwölf Jüngern, den Jesus einsetzt ([[MRK.3.14-MRK.3.19]], [[JHN.6.67]]).",
   "De ängeri Chreis vo zwölf Jünger, wo de Jesus iisetzt ([[MRK.3.14-MRK.3.19]], [[JHN.6.67]]).",
-  [T("Zwölf Jüngerfiguren im Halbkreis oder Zahl 12 auf einem Band", "design")],
+  [T("Gruppe von Jüngern: drei vorn, weitere dahinter; steht für alle zwölf (keine Zahl im Bild)", "design")],
   ("#9C7A4C", "#5B4630"),
   [FACE, "Wenn einzeln erkennbar, nur mit den Zeichen der benannten Jünger"],
   era="nt", find=[(r"\b(die|den|der|von den) Zwölf\b", None)], distinct=["FIG-ROLLE-JUENGER"])

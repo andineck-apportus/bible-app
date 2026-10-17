@@ -198,6 +198,21 @@ def arrow_svg(x1, y1, x2, y2, kind="act", divine=True):
             f'<path d="M{hx1:.1f} {hy1:.1f}L{x2:.1f} {y2:.1f}L{hx2:.1f} {hy2:.1f}" fill="none" stroke="{col}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>')
 
 
+def think_bubble(x, y, w, h, tx, ty, inner):
+    """Denkblase: Wolke mit kleinen Kreisen zur denkenden Figur (stilunabhängig)."""
+    ox, oy = x + w / 2, y + h
+    pts = [(ox + (tx - ox) * f, oy + (ty - oy) * f) for f in (.3, .55, .78)]
+    dots = "".join(f'<circle cx="{px:.1f}" cy="{py:.1f}" r="{r}" fill="#FFFFFF" stroke="#3B3226" stroke-width="1.2"/>'
+                   for (px, py), r in zip(pts, (3.2, 2.3, 1.5)))
+    bumps = "".join(f'<circle cx="{x + 6 + i * (w - 12) / max(1, int(w // 14)):.1f}" cy="{y + 1:.1f}" r="5" fill="#FFFFFF" stroke="#3B3226" stroke-width="1.2"/>'
+                    for i in range(int(w // 14) + 1))
+    bumps += "".join(f'<circle cx="{x + 6 + i * (w - 12) / max(1, int(w // 14)):.1f}" cy="{y + h - 1:.1f}" r="5" fill="#FFFFFF" stroke="#3B3226" stroke-width="1.2"/>'
+                     for i in range(int(w // 14) + 1))
+    body = f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h:.1f}" rx="{min(h / 2, 12):.1f}" fill="#FFFFFF" stroke="#3B3226" stroke-width="1.2"/>'
+    cover = f'<rect x="{x + 1:.1f}" y="{y + 1:.1f}" width="{w - 2:.1f}" height="{h - 2:.1f}" rx="{min(h / 2, 11):.1f}" fill="#FFFFFF"/>'
+    return f'<g>{dots}{bumps}{body}{cover}{inner}</g>'
+
+
 # ------------------------------------------------------------------ gemeinsame Zeichner-Logik
 class Composer:
     """Stilunabhängige Zeichenlogik; der Stil liefert die Bauteile (Methoden mit Präfix r_)."""
@@ -241,7 +256,12 @@ class Composer:
         st = L["st"]
         out = []
         pos = {}  # Mittelpunkte für Handlungslinien
-        # 1. Hintergrund
+        # 1. Hintergrund (bei Nacht dunkler Himmel mit Sternen)
+        night = st.get("night") or "FIG-ZEICHEN-NACHT" in p["signs"]
+        if night:
+            out.append(f'<rect x="0" y="0" width="{W}" height="{FLOOR_Y}" fill="#24304E"/>'
+                       + "".join(f'<circle cx="{x}" cy="{y}" r="{r}" fill="#F2E6CC" opacity=".85"/>'
+                                 for x, y, r in ((22, 30, 1), (58, 14, .8), (96, 26, 1.1), (132, 12, .8), (164, 34, 1), (148, 58, .7), (40, 60, .7), (110, 52, .8))))
         for t in L["band"]:
             out.append(self.r_band(t))
         if not L["band"]:
@@ -321,8 +341,20 @@ class Composer:
         behind = set(st.get("behind", []))
         if behind:
             self._draw_floor(L, st, [t for t in L["floor"] if t in behind], out, pos)
-        # 4. Personen
+        # 4. Personen (stage.on: Figur steht auf einem Ort, z. B. auf dem Berg)
         slots = L["row"]
+        self._lift = {}
+        onmap = st.get("on") or {}
+        for i_, s_ in enumerate(slots):
+            o_ = onmap.get(s_["fid"])
+            if o_ and o_ in pos:
+                ox, oy = pos[o_]
+                oh = self.m(o_)[1][1]
+                peers = [f for f, oo in onmap.items() if oo == o_]
+                k_ = peers.index(s_["fid"])
+                if not (st.get("x") or {}).get(s_["fid"]):
+                    s_["x"] = ox + (k_ - (len(peers) - 1) / 2) * 22
+                self._lift[s_["fid"]] = max(0, FLOOR_Y - (oy - oh * .02))
         sp_idx = ad_idx = None
         names = [s["fid"] for s in slots]
         for s in L["speech"]:
@@ -344,7 +376,12 @@ class Composer:
             hold = st.get("hold", {}).get(s["fid"])
             if to_god and hold is None:
                 hold = "PRAY"
+            n0 = len(out)
             heads[s["fid"]] = self.r_person(s, len(slots), look, arm, hold, p, out)
+            lift = self._lift.get(s["fid"], 0)
+            if lift:
+                out[n0:] = [f'<g transform="translate(0 {-lift:.1f})">{"".join(out[n0:])}</g>']
+                heads[s["fid"]] = (heads[s["fid"]][0], heads[s["fid"]][1] - lift)
             pos[s["fid"]] = (heads[s["fid"]][0], heads[s["fid"]][1] + self.head_r() * 1.9)  # Körper, nicht Gesicht
         # 5. Gegenstände am Boden: eigener Platz am Rand
         cnt = st.get("count", {})
@@ -544,11 +581,14 @@ class Composer:
                 x += w + 5
             if link is not None:  # obere Blase zeigt auf die untere (verbundene Blasen)
                 lb = drawn[link]
-                drawn[link] = (lb[0], lb[1], lb[2], lb[3], bx + bw / 2, by + 3, lb[6])
-            drawn.append((bx, by, bw, bh, tx, ty, "".join(inner)))
+                drawn[link] = (lb[0], lb[1], lb[2], lb[3], bx + bw / 2, by + 3, lb[6], lb[7])
+            drawn.append((bx, by, bw, bh, tx, ty, "".join(inner), bool(sp.get("think"))))
             placed.append((bx, bw, by + bh, bh))
         for d_ in drawn:
-            out.append(self.r_bubble(*d_))
+            if d_[7]:
+                out.append(think_bubble(*d_[:7]))
+            else:
+                out.append(self.r_bubble(*d_[:7]))
         # 11. freie Zeichen oben (unter den Blasen)
         top = max([b[2] for b in placed] + [6]) + 4
         free = list(L["air"])
