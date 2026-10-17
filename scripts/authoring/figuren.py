@@ -333,6 +333,8 @@ def anime_char(fid):
         c["turban"] = hd[1]
     if hd and hd[0] == "band":
         c["band"] = hd[1]
+    if hd and hd[0] == "wreath":
+        c["wreath"] = True
     for k in ("belt", "sash", "trim", "wings", "chains", "bound", "fur", "breast", "plate", "toga", "tassels"):
         if p.get(k):
             c[k] = p[k]

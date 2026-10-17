@@ -1,0 +1,952 @@
+[
+ {
+  "id": "FIG-ROLLE-REICHER",
+  "kind": "role",
+  "de": "Reicher",
+  "en": "Rich man",
+  "ident": "Ein Mensch mit viel Besitz, z. B. der Mann, der nach dem ewigen Leben fragt ([[MRK.10.17-MRK.10.22]]), oder die Reichen am Opferkasten ([[MRK.12.41]]).",
+  "gsw": "En Mänsch mit vill Bsitz, z. B. de Maa, wo nach em ewige Läbe fröget ([[MRK.10.17-MRK.10.22]]), oder di Riiche bim Opferchaschte ([[MRK.12.41]]).",
+  "traits": [
+   {
+    "trait_de": "Er hat viele Güter",
+    "basis": "text",
+    "ref": "MRK.10.22"
+   },
+   {
+    "trait_de": "Edles Gewand mit Goldsaum, Geldbeutel",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#2F6F5F",
+   "#B8862A"
+  ],
+  "rules": [],
+  "era": "nt",
+  "find": [
+   [
+    "[Rr]eich(e|en|er)?\\b",
+    [
+     "MRK.10.17-MRK.10.25",
+     "MRK.12.41"
+    ]
+   ]
+  ]
+ },
+ {
+  "id": "FIG-ROLLE-MENSCH",
+  "kind": "role",
+  "de": "Mensch (jemand)",
+  "en": "Someone",
+  "ident": "Ein einzelner Mensch ohne nähere Angabe, z. B. «jemand», der im Namen Jesu Dämonen austreibt ([[MRK.9.38]]), oder «der Nächste» ([[MRK.12.31]]).",
+  "gsw": "En einzelne Mänsch ohni nöcheri Aagab, z. B. «öpper», wo im Name vo Jesus Dämone uustriibt ([[MRK.9.38]]), oder «de Nächscht» ([[MRK.12.31]]).",
+  "traits": [
+   {
+    "trait_de": "Schlichtes sandfarbenes Gewand, kurzer Bart",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#B4A48A",
+   "#8A7A60"
+  ],
+  "rules": [
+   "Für eine Menge FIG-GRUPPE-MENGE"
+  ],
+  "era": "any",
+  "distinct": [
+   "FIG-GRUPPE-MENGE"
+  ]
+ },
+ {
+  "id": "FIG-ROLLE-GUTSHERR",
+  "kind": "role",
+  "de": "Gutsherr (in Gleichnissen)",
+  "en": "Landowner (in parables)",
+  "ident": "Der Besitzer, der in Gleichnissen seinen Besitz anderen anvertraut, z. B. der Herr des Weinbergs ([[MRK.12.1-MRK.12.9]]).",
+  "gsw": "De Bsitzer, wo i Gliichnis sin Bsitz andere aavertrout, z. B. de Herr vom Wiibärg ([[MRK.12.1-MRK.12.9]]).",
+  "traits": [
+   {
+    "trait_de": "Er pflanzt einen Weinberg und reist ausser Landes",
+    "basis": "text",
+    "ref": "MRK.12.1"
+   },
+   {
+    "trait_de": "Helles Gewand, dunkelroter Mantel und Kopfband",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#E2CDA8",
+   "#7A2E2E"
+  ],
+  "rules": [
+   "Kein Strahlenkranz: Gleichnisfigur, nicht Gott selbst"
+  ],
+  "era": "nt",
+  "distinct": [
+   "FIG-GOTT"
+  ]
+ },
+ {
+  "id": "FIG-ROLLE-SOHN",
+  "kind": "role",
+  "de": "Sohn (in Gleichnissen)",
+  "en": "Son (in parables)",
+  "ident": "Der Sohn in einem Gleichnis, z. B. der «geliebte Sohn» des Weinbergbesitzers ([[MRK.12.6-MRK.12.8]]).",
+  "gsw": "De Sohn imene Gliichnis, z. B. de «gliebti Sohn» vom Wiibärg-Bsitzer ([[MRK.12.6-MRK.12.8]]).",
+  "traits": [
+   {
+    "trait_de": "Jung, ohne Bart; Schärpe in der Farbe des Vaters (Gutsherr)",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#D8C08A",
+   "#7A2E2E"
+  ],
+  "rules": [
+   "Ohne Kreuznimbus: Gleichnisfigur; die Deutung auf Jesus steht in der Bildbeschreibung, nicht im Bild"
+  ],
+  "era": "nt",
+  "distinct": [
+   "FIG-JESUS"
+  ]
+ },
+ {
+  "id": "FIG-GRUPPE-WEINBAUERN",
+  "kind": "group",
+  "de": "Weinbauern (Pächter)",
+  "en": "Tenant farmers",
+  "ident": "Die Pächter des Weinbergs im Gleichnis ([[MRK.12.1-MRK.12.9]]).",
+  "gsw": "D Pächter vom Wiibärg im Gliichnis ([[MRK.12.1-MRK.12.9]]).",
+  "traits": [
+   {
+    "trait_de": "Arbeitskleidung in Erdfarben mit grüner Schärpe",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#8A7A50",
+   "#6E8B3D"
+  ],
+  "rules": [
+   "Keine Gewalt ausmalen"
+  ],
+  "era": "nt",
+  "find": [
+   [
+    "Weinbauern",
+    [
+     "MRK.12"
+    ]
+   ]
+  ]
+ },
+ {
+  "id": "FIG-GRUPPE-SADDUZAEER",
+  "kind": "group",
+  "de": "Sadduzäer",
+  "en": "Sadducees",
+  "ident": "Eine Gruppe, die sagt, es gebe keine Auferstehung, und Jesus danach befragt ([[MRK.12.18]]).",
+  "gsw": "E Gruppe, wo seit, es gäb kei Uferstehig, und de Jesus dänach befröget ([[MRK.12.18]]).",
+  "traits": [
+   {
+    "trait_de": "Helles Gewand, petrolgrauer Mantel, Kopfbund (Nähe zur Priesterschaft)",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#E7DCC4",
+   "#3E5A5A"
+  ],
+  "rules": [
+   "Neutral darstellen"
+  ],
+  "era": "nt",
+  "find": [
+   [
+    "Sadduzäer",
+    null
+   ]
+  ],
+  "distinct": [
+   "FIG-GRUPPE-PHARISAEER",
+   "FIG-ROLLE-PRIESTER"
+  ]
+ },
+ {
+  "id": "FIG-ROLLE-KAISER",
+  "kind": "role",
+  "de": "Kaiser (römisch)",
+  "en": "Emperor (Roman)",
+  "ident": "Der römische Kaiser, dessen Bild auf dem Denar steht ([[MRK.12.14-MRK.12.17]]).",
+  "gsw": "De römisch Kaiser, wo sis Bild uf em Denar isch ([[MRK.12.14-MRK.12.17]]).",
+  "traits": [
+   {
+    "trait_de": "Toga mit Purpursaum, Lorbeerkranz",
+    "basis": "tradition"
+   }
+  ],
+  "pal": [
+   "#F2E6CC",
+   "#6A2E5E"
+  ],
+  "rules": [
+   "Nicht mit Pilatus verwechseln: Kranz statt Richterstuhl"
+  ],
+  "era": "nt",
+  "find": [
+   [
+    "Kaiser",
+    [
+     "MRK.12"
+    ]
+   ]
+  ],
+  "distinct": [
+   "FIG-PILATUS"
+  ]
+ },
+ {
+  "id": "FIG-OBJ-FEIGENBAUM-VERDORRT",
+  "kind": "object",
+  "de": "Verdorrter Feigenbaum",
+  "en": "Withered fig tree",
+  "ident": "Der Feigenbaum, der von den Wurzeln her verdorrt ist ([[MRK.11.20-MRK.11.21]]).",
+  "gsw": "De Feigebaum, wo vo de Wurzle här verdoret isch ([[MRK.11.20-MRK.11.21]]).",
+  "traits": [
+   {
+    "trait_de": "Kahle graubraune Äste, verdorrte Wurzeln, abgefallene braune Blätter",
+    "basis": "text",
+    "ref": "MRK.11.20"
+   }
+  ],
+  "pal": [
+   "#8A7A5A",
+   "#B49A5A"
+  ],
+  "rules": [],
+  "distinct": [
+   "FIG-OBJ-FEIGENBAUM"
+  ]
+ },
+ {
+  "id": "FIG-OBJ-FEIGE",
+  "kind": "object",
+  "de": "Feige (Frucht)",
+  "en": "Fig (fruit)",
+  "ident": "Die Frucht des Feigenbaums ([[MRK.11.13-MRK.11.14]]).",
+  "gsw": "D Frucht vom Feigebaum ([[MRK.11.13-MRK.11.14]]).",
+  "traits": [
+   {
+    "trait_de": "Violette, birnenförmige Frucht mit kleinem Stiel",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#6A3E6A",
+   "#5E8B3D"
+  ],
+  "rules": []
+ },
+ {
+  "id": "FIG-ORT-WEINBERG",
+  "kind": "place",
+  "de": "Weinberg",
+  "en": "Vineyard",
+  "ident": "Ein Weinberg mit Zaun, Kelter und Turm, z. B. im Gleichnis von den Weinbauern ([[MRK.12.1]]).",
+  "gsw": "En Wiibärg mit Haag, Trotte und Turm, z. B. im Gliichnis vo de Wiibuure ([[MRK.12.1]]).",
+  "traits": [
+   {
+    "trait_de": "Zaun, Keltergrube und Turm",
+    "basis": "text",
+    "ref": "MRK.12.1"
+   },
+   {
+    "trait_de": "Reihen von Reben mit Trauben",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#6E8B3D",
+   "#8E3B5E"
+  ],
+  "rules": [],
+  "find": [
+   [
+    "Weinberg",
+    null
+   ]
+  ]
+ },
+ {
+  "id": "FIG-OBJ-DENAR",
+  "kind": "object",
+  "de": "Denar (Münze)",
+  "en": "Denarius",
+  "ident": "Eine römische Silbermünze mit Bild und Aufschrift des Kaisers ([[MRK.12.15-MRK.12.16]]).",
+  "gsw": "E römischi Silbermünz mit Bild und Ufschrift vom Kaiser ([[MRK.12.15-MRK.12.16]]).",
+  "traits": [
+   {
+    "trait_de": "Silberne Münze mit Kopf im Profil",
+    "basis": "text",
+    "ref": "MRK.12.16",
+    "note_de": "Die Aufschrift wird nicht als Schrift gezeichnet, nur als Punktreihe"
+   }
+  ],
+  "pal": [
+   "#C9C2B4",
+   "#8C8070"
+  ],
+  "rules": [
+   "Keine lesbare Schrift"
+  ],
+  "find": [
+   [
+    "Denar",
+    null
+   ]
+  ],
+  "distinct": [
+   "FIG-OBJ-MUENZEN"
+  ]
+ },
+ {
+  "id": "FIG-OBJ-OPFERKASTEN",
+  "kind": "object",
+  "de": "Opferkasten",
+  "en": "Offering box",
+  "ident": "Der Opferkasten im Tempel, in den die Menge Geld wirft ([[MRK.12.41-MRK.12.44]]).",
+  "gsw": "De Opferchaschte im Tämpel, wo d Mängi Gält drii wirft ([[MRK.12.41-MRK.12.44]]).",
+  "traits": [
+   {
+    "trait_de": "Holzkasten mit trichterförmiger Öffnung aus Bronze",
+    "basis": "tradition",
+    "note_de": "Nach der Mischna standen im Tempel trompetenförmige Opferstöcke (Scheqalim 6,5); Gestalt nicht gesichert"
+   }
+  ],
+  "pal": [
+   "#8A6A3A",
+   "#C08A2A"
+  ],
+  "rules": [],
+  "find": [
+   [
+    "Opferkasten",
+    null
+   ]
+  ]
+ },
+ {
+  "id": "FIG-OBJ-MUEHLSTEIN",
+  "kind": "object",
+  "de": "Mühlstein",
+  "en": "Millstone",
+  "ident": "Ein grosser Mühlstein, wie er von einem Esel gedreht wird ([[MRK.9.42]]).",
+  "gsw": "En grosse Mühlistei, wie ne en Esel dreiht ([[MRK.9.42]]).",
+  "traits": [
+   {
+    "trait_de": "Runder grauer Stein mit Loch in der Mitte",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#9A948C",
+   "#6A6A6A"
+  ],
+  "rules": [],
+  "find": [
+   [
+    "Mühlstein",
+    null
+   ]
+  ]
+ },
+ {
+  "id": "FIG-OBJ-SALZ",
+  "kind": "object",
+  "de": "Salz",
+  "en": "Salt",
+  "ident": "Salz zum Würzen; Bildwort für das, was Jünger ausmacht ([[MRK.9.49-MRK.9.50]]).",
+  "gsw": "Salz zum Würze; Bildwort für das, wo Jünger uusmacht ([[MRK.9.49-MRK.9.50]]).",
+  "traits": [
+   {
+    "trait_de": "Kleine Schale mit weissen Kristallen",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#F4F1EA",
+   "#B07A3E"
+  ],
+  "rules": [],
+  "find": [
+   [
+    "Salz",
+    null
+   ]
+  ]
+ },
+ {
+  "id": "FIG-OBJ-BECHER-WASSER",
+  "kind": "object",
+  "de": "Becher mit Wasser",
+  "en": "Cup of water",
+  "ident": "Ein Becher Wasser, der einem Jünger zu trinken gegeben wird ([[MRK.9.41]]).",
+  "gsw": "En Becher Wasser, wo me eme Jünger z trinke git ([[MRK.9.41]]).",
+  "traits": [
+   {
+    "trait_de": "Becher mit blauem Wasser und Tropfen",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#B07A3E",
+   "#5DA7DB"
+  ],
+  "rules": [],
+  "distinct": [
+   "FIG-OBJ-BECHER-VOLL",
+   "FIG-OBJ-KRUG-WASSER"
+  ]
+ },
+ {
+  "id": "FIG-OBJ-ZWEIG",
+  "kind": "object",
+  "de": "Zweige",
+  "en": "Branches",
+  "ident": "Grüne Zweige, die beim Einzug auf den Weg gelegt werden ([[MRK.11.8]]).",
+  "gsw": "Grüeni Zwiig, wo bim Iizug uf de Wäg gleit werded ([[MRK.11.8]]).",
+  "traits": [
+   {
+    "trait_de": "Belaubter grüner Zweig",
+    "basis": "design",
+    "note_de": "Markus sagt «Zweige von den Feldern», nicht Palmzweige ([[JHN.12.13]])"
+   }
+  ],
+  "pal": [
+   "#5E8B3D",
+   "#7A5A34"
+  ],
+  "rules": [],
+  "find": [
+   [
+    "Zweige",
+    [
+     "MRK.11"
+    ]
+   ]
+  ]
+ },
+ {
+  "id": "FIG-OBJ-KAMEL",
+  "kind": "object",
+  "de": "Kamel",
+  "en": "Camel",
+  "ident": "Ein Kamel, z. B. im Bildwort vom Nadelöhr ([[MRK.10.25]]).",
+  "gsw": "Es Kamel, z. B. im Bildwort vom Nadelöhr ([[MRK.10.25]]).",
+  "traits": [
+   {
+    "trait_de": "Sandfarbenes Kamel mit Höcker",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#C9A26A",
+   "#8A6A3A"
+  ],
+  "rules": [],
+  "find": [
+   [
+    "Kamel",
+    null
+   ]
+  ]
+ },
+ {
+  "id": "FIG-OBJ-NADEL",
+  "kind": "object",
+  "de": "Nadel (Nadelöhr)",
+  "en": "Needle (eye of the needle)",
+  "ident": "Eine Nähnadel mit Öhr, im Bildwort vom Kamel ([[MRK.10.25]]).",
+  "gsw": "E Nadle mit Öhr, im Bildwort vom Kamel ([[MRK.10.25]]).",
+  "traits": [
+   {
+    "trait_de": "Senkrechte Nadel mit deutlichem Öhr",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#9A9AA0",
+   "#3B3226"
+  ],
+  "rules": [],
+  "find": [
+   [
+    "Nadel",
+    null
+   ]
+  ]
+ },
+ {
+  "id": "FIG-OBJ-TISCH-UMGESTOSSEN",
+  "kind": "object",
+  "de": "Umgestossener Tisch",
+  "en": "Overturned table",
+  "ident": "Ein umgestossener Tisch, z. B. der Wechslertisch im Tempel ([[MRK.11.15]], [[JHN.2.15]]).",
+  "gsw": "En umgheite Tisch, z. B. de Wächsler-Tisch im Tämpel ([[MRK.11.15]], [[JHN.2.15]]).",
+  "traits": [
+   {
+    "trait_de": "Tisch auf der Seite, Beine schräg nach oben",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#8A6A3A",
+   "#5B4630"
+  ],
+  "rules": []
+ },
+ {
+  "id": "FIG-OBJ-MANTEL",
+  "kind": "object",
+  "de": "Mantel (abgeworfen)",
+  "en": "Cloak (thrown off)",
+  "ident": "Ein Mantel, der abgelegt oder abgeworfen wird, z. B. von Bartimäus ([[MRK.10.50]]).",
+  "gsw": "En Mantel, wo abgleit oder abgworfe wird, z. B. vom Bartimäus ([[MRK.10.50]]).",
+  "traits": [
+   {
+    "trait_de": "Zusammengefallener Stoff am Boden",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#8A7A60",
+   "#5B4630"
+  ],
+  "rules": []
+ },
+ {
+  "id": "FIG-OBJ-DORNBUSCH",
+  "kind": "object",
+  "de": "Brennender Dornbusch",
+  "en": "Burning bush",
+  "ident": "Der Dornbusch, aus dem Gott zu Mose spricht ([[EXO.3.2-EXO.3.6]], [[MRK.12.26]]).",
+  "gsw": "De Dornbusch, wo Gott drus zum Mose redt ([[EXO.3.2-EXO.3.6]], [[MRK.12.26]]).",
+  "traits": [
+   {
+    "trait_de": "Grüner Busch mit Flammen, der nicht verbrennt",
+    "basis": "text",
+    "ref": "EXO.3.2"
+   }
+  ],
+  "pal": [
+   "#5E7F3A",
+   "#E8843A"
+  ],
+  "rules": [],
+  "find": [
+   [
+    "Dornbusch",
+    null
+   ]
+  ]
+ },
+ {
+  "id": "FIG-ORT-RAEUBERHOEHLE",
+  "kind": "place",
+  "de": "Räuberhöhle",
+  "en": "Den of robbers",
+  "ident": "Bildwort für einen Ort, an dem Räuber ihre Beute verstecken ([[MRK.11.17]], nach [[JER.7.11]]).",
+  "gsw": "Bildwort für en Ort, wo Röuber iri Büüti verstecked ([[MRK.11.17]], nach [[JER.7.11]]).",
+  "traits": [
+   {
+    "trait_de": "Dunkle Felsöffnung mit Beutesack und Münzen",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#5B4A3A",
+   "#D9A441"
+  ],
+  "rules": []
+ },
+ {
+  "id": "FIG-ZEICHEN-KIND",
+  "kind": "sign",
+  "de": "Kind / Kinder",
+  "en": "Child / children",
+  "ident": "Bedeutung: ein Kind; mehrere Kinder als Reihe (z. B. [[MRK.9.36]], [[MRK.10.13-MRK.10.16]]). Klein gezeichnet, damit es neben Erwachsenen als Kind gelesen wird.",
+  "gsw": "Bedüütig: es Chind; mehreri Chind als Reihe (z. B. [[MRK.9.36]], [[MRK.10.13-MRK.10.16]]). Chlii zeichnet, dass mes näbe Erwachsne als Chind list.",
+  "traits": [
+   {
+    "trait_de": "Kleine Figur in hellgelbem Kittel, halb so gross wie ein Erwachsener",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#E8C07A",
+   "#C89B72"
+  ],
+  "rules": []
+ },
+ {
+  "id": "FIG-ZEICHEN-VIELE",
+  "kind": "sign",
+  "de": "viele / Menschen / ihr",
+  "en": "Many / people / you (plural)",
+  "ident": "Bedeutung: mehrere Menschen, «viele», «ihr» oder «die Leute» in einer Sprechblase (z. B. [[MRK.9.1]], [[MRK.10.45]], [[MRK.11.17]]).",
+  "gsw": "Bedüütig: mehreri Mänsche, «vili», «ihr» oder «d Lüüt» imene Sprächblase (z. B. [[MRK.9.1]], [[MRK.10.45]], [[MRK.11.17]]).",
+  "traits": [
+   {
+    "trait_de": "Drei kleine gestaffelte Figuren in gedeckten Farben",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#8E9AAF",
+   "#B4A48A"
+  ],
+  "rules": [],
+  "distinct": [
+   "FIG-GRUPPE-MENGE"
+  ]
+ },
+ {
+  "id": "FIG-ZEICHEN-STRAHLEN",
+  "kind": "sign",
+  "de": "strahlen / verwandelt",
+  "en": "Shining / transfigured",
+  "ident": "Bedeutung: eine Person strahlt hell auf, z. B. Jesus bei der Verwandlung ([[MRK.9.2-MRK.9.3]]).",
+  "gsw": "Bedüütig: e Person strahlt hell uf, z. B. de Jesus bi de Verwandlig ([[MRK.9.2-MRK.9.3]]).",
+  "traits": [
+   {
+    "trait_de": "Weisse und goldene Strahlen im Bogen über dem Kopf, ohne Scheibe",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#FFFDF6",
+   "#F2C76E"
+  ],
+  "rules": [
+   "Keine Scheibe: soll nicht als Sonne gelesen werden"
+  ],
+  "distinct": [
+   "FIG-ZEICHEN-LICHT"
+  ]
+ },
+ {
+  "id": "FIG-ZEICHEN-UNREINER-GEIST",
+  "kind": "sign",
+  "de": "unreiner Geist / Dämon",
+  "en": "Unclean spirit / demon",
+  "ident": "Bedeutung: ein unreiner Geist oder Dämon, der einen Menschen quält (z. B. [[MRK.9.17-MRK.9.26]]).",
+  "gsw": "Bedüütig: en unsuubere Geischt oder Dämon, wo en Mänsch plaget (z. B. [[MRK.9.17-MRK.9.26]]).",
+  "traits": [
+   {
+    "trait_de": "Dunkler, wirbelnder Schatten ohne Gesicht",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#3B3246",
+   "#6A5A7A"
+  ],
+  "rules": [
+   "Keine Fratze, keine Hörner; nur Schatten"
+  ],
+  "distinct": [
+   "FIG-SATAN"
+  ]
+ },
+ {
+  "id": "FIG-ZEICHEN-UNGLAUBE",
+  "kind": "sign",
+  "de": "Unglaube / Zweifel",
+  "en": "Unbelief / doubt",
+  "ident": "Bedeutung: Unglaube oder Zweifel (z. B. [[MRK.9.24]]).",
+  "gsw": "Bedüütig: Unglaube oder Zwiifel (z. B. [[MRK.9.24]]).",
+  "traits": [
+   {
+    "trait_de": "Graues Herz mit Riss",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#9A948C",
+   "#6A6A6A"
+  ],
+  "rules": [],
+  "distinct": [
+   "FIG-ZEICHEN-GLAUBEN"
+  ]
+ },
+ {
+  "id": "FIG-ZEICHEN-WOLKE",
+  "kind": "sign",
+  "de": "Wolke (Gegenwart Gottes)",
+  "en": "Cloud",
+  "ident": "Bedeutung: die Wolke, die überschattet und aus der Gott spricht (z. B. [[MRK.9.7]]).",
+  "gsw": "Bedüütig: d Wulche, wo überschattet und us dere Gott redt (z. B. [[MRK.9.7]]).",
+  "traits": [
+   {
+    "trait_de": "Helle, weisse Wolke mit goldenem Rand",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#F4F1EA",
+   "#D9A441"
+  ],
+  "rules": [],
+  "distinct": [
+   "FIG-ZEICHEN-STURM"
+  ]
+ },
+ {
+  "id": "FIG-ZEICHEN-AUFERSTEHEN",
+  "kind": "action",
+  "de": "auferstehen / Auferstehung",
+  "en": "Rise / resurrection",
+  "ident": "Bedeutung: von den Toten auferstehen (z. B. [[MRK.9.9]], [[MRK.9.31]], [[MRK.12.18-MRK.12.27]]).",
+  "gsw": "Bedüütig: vo de Tote uferstah (z. B. [[MRK.9.9]], [[MRK.9.31]], [[MRK.12.18-MRK.12.27]]).",
+  "traits": [
+   {
+    "trait_de": "Felsengrab offen, Stein zur Seite gerollt, Licht aus der Öffnung",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#A79A80",
+   "#F2C76E"
+  ],
+  "rules": [],
+  "distinct": [
+   "FIG-ZEICHEN-TOD",
+   "FIG-ORT-GRAB"
+  ]
+ },
+ {
+  "id": "FIG-ZEICHEN-RANG",
+  "kind": "sign",
+  "de": "Rang / Ehrenplatz",
+  "en": "Rank / place of honour",
+  "ident": "Bedeutung: wer der Grösste oder Erste ist, Ehrenplätze (z. B. [[MRK.9.34]], [[MRK.10.37]], [[MRK.12.39]]).",
+  "gsw": "Bedüütig: wer de Gröscht oder Erscht isch, Ehreplätz (z. B. [[MRK.9.34]], [[MRK.10.37]], [[MRK.12.39]]).",
+  "traits": [
+   {
+    "trait_de": "Drei Stufen ohne Zahlen, oben ein goldener Sitz",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#C9BFAA",
+   "#D9A441"
+  ],
+  "rules": []
+ },
+ {
+  "id": "FIG-ZEICHEN-FEUER",
+  "kind": "sign",
+  "de": "Feuer",
+  "en": "Fire",
+  "ident": "Bedeutung: Feuer, auch das Feuer des Gerichts (z. B. [[MRK.9.43]], [[MRK.9.49]]).",
+  "gsw": "Bedüütig: Füür, au s Füür vom Gricht (z. B. [[MRK.9.43]], [[MRK.9.49]]).",
+  "traits": [
+   {
+    "trait_de": "Orange-rote Flammen",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#E8843A",
+   "#C8323C"
+  ],
+  "rules": [],
+  "distinct": [
+   "FIG-ZEICHEN-OPFER"
+  ]
+ },
+ {
+  "id": "FIG-ZEICHEN-FRIEDEN",
+  "kind": "sign",
+  "de": "Frieden / zusammengehören",
+  "en": "Peace / belonging together",
+  "ident": "Bedeutung: Frieden halten, zusammengehören (z. B. [[MRK.9.40]], [[MRK.9.50]]).",
+  "gsw": "Bedüütig: Fride ha, zämeghöre (z. B. [[MRK.9.40]], [[MRK.9.50]]).",
+  "traits": [
+   {
+    "trait_de": "Zwei Hände, die sich fassen",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#C89B72",
+   "#A07A54"
+  ],
+  "rules": []
+ },
+ {
+  "id": "FIG-ZEICHEN-STOLPERN",
+  "kind": "action",
+  "de": "zu Fall bringen / Anstoss",
+  "en": "Cause to stumble",
+  "ident": "Bedeutung: jemanden zu Fall bringen, vom Glauben abbringen (z. B. [[MRK.9.42-MRK.9.47]]).",
+  "gsw": "Bedüütig: öpper z Fall bringe, vom Glaube abbringe (z. B. [[MRK.9.42-MRK.9.47]]).",
+  "traits": [
+   {
+    "trait_de": "Stein im Weg, kleine Figur kippt darüber",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#9A948C",
+   "#3B3226"
+  ],
+  "rules": []
+ },
+ {
+  "id": "FIG-ZEICHEN-SCHATZ",
+  "kind": "sign",
+  "de": "Schatz / Lohn",
+  "en": "Treasure / reward",
+  "ident": "Bedeutung: ein Schatz bei Gott, Lohn (z. B. [[MRK.9.41]], [[MRK.10.21]]).",
+  "gsw": "Bedüütig: en Schatz bi Gott, Lohn (z. B. [[MRK.9.41]], [[MRK.10.21]]).",
+  "traits": [
+   {
+    "trait_de": "Offene Truhe mit Goldmünzen, darüber ein Lichtfunke",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#8A6A3A",
+   "#D9A441"
+  ],
+  "rules": [],
+  "distinct": [
+   "FIG-OBJ-MUENZEN"
+  ]
+ },
+ {
+  "id": "FIG-ZEICHEN-NICHT",
+  "kind": "sign",
+  "de": "nicht / verboten",
+  "en": "Not / forbidden",
+  "ident": "Bedeutung: verneint das Zeichen davor: «nicht», «soll nicht» (z. B. [[MRK.10.9]], [[MRK.11.14]]).",
+  "gsw": "Bedüütig: verneint s Zeiche vorane: «nöd», «söll nöd» (z. B. [[MRK.10.9]], [[MRK.11.14]]).",
+  "traits": [
+   {
+    "trait_de": "Roter Kreis mit Schrägbalken",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#C8323C",
+   "#FFFDF6"
+  ],
+  "rules": [],
+  "distinct": [
+   "FIG-ZEICHEN-FEHLT"
+  ]
+ },
+ {
+  "id": "FIG-ZEICHEN-TRENNEN",
+  "kind": "action",
+  "de": "trennen / scheiden",
+  "en": "Separate / divorce",
+  "ident": "Bedeutung: trennen, eine Ehe scheiden (z. B. [[MRK.10.2-MRK.10.12]]).",
+  "gsw": "Bedüütig: tränne, en Ehe scheide (z. B. [[MRK.10.2-MRK.10.12]]).",
+  "traits": [
+   {
+    "trait_de": "Gezackter Bruch mit zwei Pfeilen nach aussen",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#3B3226",
+   "#A33A2E"
+  ],
+  "rules": []
+ },
+ {
+  "id": "FIG-ZEICHEN-EHE",
+  "kind": "sign",
+  "de": "Ehe / Ehepaar",
+  "en": "Marriage",
+  "ident": "Bedeutung: Mann und Frau als Ehepaar, «ein Fleisch» (z. B. [[MRK.10.6-MRK.10.9]], [[MRK.12.19-MRK.12.25]]).",
+  "gsw": "Bedüütig: Maa und Frau als Ehepaar, «ei Fleisch» (z. B. [[MRK.10.6-MRK.10.9]], [[MRK.12.19-MRK.12.25]]).",
+  "traits": [
+   {
+    "trait_de": "Mann und Frau Hand in Hand, von einem Band umschlossen",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#4F6D8A",
+   "#B0607A"
+  ],
+  "rules": [],
+  "distinct": [
+   "FIG-ZEICHEN-HOCHZEIT"
+  ]
+ },
+ {
+  "id": "FIG-ZEICHEN-LOESEN",
+  "kind": "action",
+  "de": "loskaufen / befreien",
+  "en": "Ransom / set free",
+  "ident": "Bedeutung: loskaufen, befreien; Lösegeld (z. B. [[MRK.10.45]]).",
+  "gsw": "Bedüütig: loschaufe, befreie; Lösegält (z. B. [[MRK.10.45]]).",
+  "traits": [
+   {
+    "trait_de": "Gesprengte Kette",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#6A6A6A",
+   "#F2C76E"
+  ],
+  "rules": []
+ },
+ {
+  "id": "FIG-ZEICHEN-VOLLMACHT",
+  "kind": "sign",
+  "de": "Vollmacht",
+  "en": "Authority",
+  "ident": "Bedeutung: Vollmacht, Recht zu handeln (z. B. [[MRK.1.22]], [[MRK.11.28-MRK.11.33]]).",
+  "gsw": "Bedüütig: Vollmacht, s Rächt z handle (z. B. [[MRK.1.22]], [[MRK.11.28-MRK.11.33]]).",
+  "traits": [
+   {
+    "trait_de": "Goldenes Zepter mit Strahlen an der Spitze",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#D9A441",
+   "#9C6F1C"
+  ],
+  "rules": []
+ },
+ {
+  "id": "FIG-ZEICHEN-ECKSTEIN",
+  "kind": "sign",
+  "de": "Eckstein",
+  "en": "Cornerstone",
+  "ident": "Bedeutung: der verworfene Stein, der zum Eckstein wird ([[MRK.12.10]], nach [[PSA.118.22]]).",
+  "gsw": "Bedüütig: de verworfe Stei, wo zum Eckstei wird ([[MRK.12.10]], nach [[PSA.118.22]]).",
+  "traits": [
+   {
+    "trait_de": "Mauerecke, ein Stein golden umrandet",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#C9BFAA",
+   "#D9A441"
+  ],
+  "rules": []
+ }
+]
