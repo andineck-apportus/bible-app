@@ -337,7 +337,7 @@ def kana():
     s3 = ('<path d="M184 280h192v16H184z" fill="#E7D3B0"/>' + person("jesus", 222, 252, 1.6, "calm", 1.3, arm=(10, 14))
           + jars + person("diener", 360, 240, 1.4, "determined", -1.2) + pour + sweat(374, 222, .8) + b4)
     # 4: Speisemeister kostet (Freude, Funkeln), spricht zum Bräutigam (staunt); Stern über Jesus; Jünger glauben (Herzen)
-    b5 = bubble(46, 310, 54, 44, 90, 362, use("an-becher", 59, 314, 28, 33))
+    b5 = bubble(30, 310, 92, 44, 90, 362, use("an-becher", 40, 314, 28, 33) + use("an-z-freude", 74, 322, 36, 24))
     s4 = ('<path d="M4 420h372v22H4z" fill="#E7D3B0"/>'
           + person("diener2", 40, 410, 1.25, "smile", .5) + use("an-jar-wein", 18, 404, 16, 30)
           + person("meister", 98, 386, 2.0, "delight", 1.4, arm=(-40, 14)) + use("an-becher", 136, 388, 15, 18)
@@ -433,12 +433,17 @@ def a_berg(meer=False):
             + person("menge", 124, 98, 1.25, "surprised", -1.0) + person("menge2", 156, 102, 1.15, "delight", -1.0))
 
 
+def god_to(x, y, tx, ty, s=26):
+    from bilder_auto import arrow_svg
+    return use("an-gott", x, y, s, s) + arrow_svg(x + s * .55, y + s, tx, ty, "act")
+
+
 def a_exil():
-    b = bubble(8, 18, 46, 34, 30, 68, use("an-z-hoffnung", 17, 22, 26, 26))
+    b = bubble(44, 18, 40, 34, 34, 68, use("an-z-hoffnung", 51, 22, 26, 26))
     return (use("an-jerusalem", 104, 12, 80, 56) + crack(150, 38) + crack(126, 46, .8) + FLOOR
             + '<g transform="translate(184 92) scale(-1 1)">' + use("an-z-exil", 0, 0, 64, 26) + "</g>"
             + person("menge2", 80, 100, 1.15, "worried", .6, tears=True) + person("menge3", 106, 106, 1.0, "worried", .6, tears=True)
-            + person("prophet", 30, 88, 1.45, "calm", 1.4, arm=(-55, 13)) + use("an-schriftrolle", 40, 116, 22, 15) + b)
+            + person("prophet", 30, 88, 1.45, "calm", 1.4, arm=(-55, 13)) + use("an-schriftrolle", 40, 116, 22, 15) + god_to(26, 2, 26, 64) + b)
 
 
 def a_kreuz(jesus):
@@ -506,9 +511,9 @@ def a_weisheit():
 
 def a_prophet(zwoelf=False):
     rolls = "".join(use("an-schriftrolle", 112 + (i % 6) * 12, 6 + (i // 6) * 10, 11, 8) for i in range(12)) if zwoelf else ""
-    b = bubble(8, 16, 104, 34, 30, 66, use("an-gott", 14, 18, 30, 30) + use("an-z-gericht", 48, 20, 30, 26) + use("an-z-umkehr", 84, 24, 24, 18))
+    b = bubble(40, 14, 72, 34, 34, 66, use("an-z-gericht", 46, 18, 30, 26) + use("an-z-umkehr", 82, 22, 24, 18))
     return (FLOOR + rolls + person("menge", 124, 98, 1.25, "worried", -.9) + person("menge2", 152, 102, 1.15, "worried", -.9)
-            + person("menge3", 174, 106, 1.0, "surprised", -.9) + person("prophet", 30, 86, 1.5, "calm", 1.4) + use("an-schriftrolle", 42, 112, 24, 16) + b)
+            + person("menge3", 174, 106, 1.0, "surprised", -.9) + person("prophet", 30, 86, 1.5, "calm", 1.4) + use("an-schriftrolle", 42, 112, 24, 16) + god_to(26, 2, 26, 62) + b)
 
 
 def a_aufbau():
@@ -523,8 +528,8 @@ def a_pfingsten():
 
 
 def a_rom():
-    return (use("an-jerusalem", 2, 18, 48, 34) + use("an-z-ausbreiten", 50, 18, 40, 30) + use("an-gemeinde", 94, 2, 64, 48) + FLOOR
-            + use("an-boot", 22, 80, 56, 45) + person("paulus", 128, 92, 1.3, "calm", -.6, hold="an-brief") + person("soldat", 164, 94, 1.3, "earnest", -.9))
+    return (use("an-jerusalem", 2, 30, 50, 35) + use("an-z-ausbreiten", 50, 22, 40, 30) + use("an-rom", 92, 14, 92, 64, ' opacity=".8"') + FLOOR
+            + person("paulus", 116, 94, 1.3, "calm", .6, hold="an-brief") + person("soldat", 160, 96, 1.25, "calm", -.6))
 
 
 def a_paulus():
@@ -606,15 +611,15 @@ UPPER = {
     "BIBLE": [a_berg, lambda: a_kreuz(True), a_neu, a_stimmen],
     "OT": [a_schoepfung, a_meer, a_berg, a_exil],
     "NT": [a_verkuendet, lambda: a_kreuz(False), a_nt_geist, a_nt_ende],
-    "GROUP-01": [a_schoepfung, lambda: a_berg(meer=True)],
-    "GROUP-02": [a_koenig, a_zerstoert],
+    "GROUP-01": [a_schoepfung, lambda: upper_auto("GROUP-01", 2), lambda: a_berg(meer=True)],
+    "GROUP-02": [lambda: upper_auto("GROUP-02", 1), a_koenig, a_zerstoert, lambda: upper_auto("GROUP-02", 4)],
     "GROUP-03": [a_gebet, a_liebe, a_weisheit],
     "GROUP-04": [a_prophet, a_exil],
     "GROUP-05": [lambda: a_prophet(zwoelf=True), a_aufbau],
     "GROUP-06": [lambda: a_verkuendet(vier=True), lambda: a_kreuz(False)],
     "GROUP-07": [a_pfingsten, a_rom],
     "GROUP-08": [a_paulus],
-    "GROUP-09": [a_briefe],
+    "GROUP-09": [lambda: upper_auto("GROUP-09", 1)],
     "GROUP-10": [a_herrschaft, lambda: a_neu(freude=True)],
     "JHN-002": [a_kana_kap, a_tempel_kap, a_glaube_kap],
 }
@@ -717,7 +722,7 @@ class AniComposer(_auto.Composer):
         return use(OBJ[t], 0, 140 - h, w, h)
 
     def r_back(self, t, x, y, w, h):
-        return use(OBJ[t], round(x, 1), round(y, 1), w, h, ' opacity=".6"')
+        return use(OBJ[t], round(x, 1), round(y, 1), w, h, '' if t == "FIG-GRUPPE-GEMEINDE" else ' opacity=".6"')
 
     def r_sym(self, t, x, y, w, h, flip=False):
         sym = OBJ.get(t) or self.vbmap[t][0]
@@ -826,6 +831,14 @@ class AniComposer(_auto.Composer):
         return (cx, y)
 
 
+def upper_auto(key, n):
+    brief = json.loads((D / "illustrations/briefs" / f"BRIEF-{key}.json").read_text(encoding="utf-8"))
+    c = AniComposer(_auto.gather_lex(), EXTRA_META)
+    c.vbmap = _VB
+    c.uid = "a" + key.lower()
+    return c.panel(brief["panels"][n - 1])
+
+
 def auto_svg(suffix, vb):
     lex = _auto.gather_lex()
     brief = json.loads((D / "illustrations/briefs" / f"BRIEF-{suffix}.json").read_text(encoding="utf-8"))
@@ -836,6 +849,11 @@ def auto_svg(suffix, vb):
 
 
 ILL_UPPER_ALT = {'BIBLE': ('Comic in vier Bildern ohne Text: 1 Am Berg spricht Gott (Strahlenkranz mit dem Gottesnamen) und gibt die Tafeln; Mose hält sie, das Volk staunt. 2 Jesus, das Kreuz und das leere Grab. 3 Die leuchtende Stadt mit Strom und Baum, darüber der Strahlenkranz. 4 Schriftrolle, Leier, ein Prophet und ein Brief.', 'Comic i vier Bilder ohni Text: 1 Am Bärg redt Gott (Strahlechranz mit em Gottesname) und git d Tafle; de Mose hebt si, s Volk stuunt. 2 De Jesus, s Chrüz und s lääre Grab. 3 Di lüüchtend Stadt mit Strom und Baum, drüber de Strahlechranz. 4 Schriftrolle, Leier, en Prophet und en Brief.'), 'OT': ('Comic in vier Bildern ohne Text: 1 Gott spricht «Licht»; Sonne, Mond, Sterne und Pflanze entstehen. 2 Mose hebt den Stab, das Volk geht froh durch das geteilte Meer. 3 Am Berg spricht Gott und gibt die Tafeln; Mose hält sie, das Volk staunt. 4 Jerusalem mit Rissen, Menschen in Tränen auf dem Weg weg und zurück; ein Prophet spricht von Hoffnung (Spross).', 'Comic i vier Bilder ohni Text: 1 Gott redt «Liecht»; Sunne, Mond, Stärn und Pflanze entstönd. 2 De Mose hebt de Stab, s Volk gaat froh dur s teilte Meer. 3 Am Bärg redt Gott und git d Tafle; de Mose hebt si, s Volk stuunt. 4 Jerusalem mit Riss, Mänsche i Träne uf em Wäg ewäg und zrugg; en Prophet redt vo Hoffnig (Schoss).'), 'NT': ('Comic in vier Bildern ohne Text: 1 Jesus spricht zur aufmerksamen Menge (Gottesname, Umkehr-Pfeil, Herz). 2 Kreuz und leeres Grab. 3 Die Geist-Taube über zwei Jüngern mit Flammen und leuchtenden Augen; Pfeile zu einer Gemeinde, ein Brief. 4 Strahlenkranz, Waage und die leuchtende Stadt.', 'Comic i vier Bilder ohni Text: 1 De Jesus redt zur ufmerksame Mängi (Gottesname, Umchehr-Pfiil, Härz). 2 Chrüz und lääres Grab. 3 D Geischt-Tube über zwei Jünger mit Flamme und lüüchtende Auge; Pfiil zu ere Gmeind, en Brief. 4 Strahlechranz, Waag und di lüüchtend Stadt.'), 'GROUP-01': ('Comic in zwei Bildern ohne Text: 1 Gott spricht «Licht»; Sonne, Mond, Sterne und Pflanze entstehen. 2 Hinter dem Volk das geteilte Meer; am Berg spricht Gott und gibt die Tafeln, Mose hält sie, das Volk staunt.', 'Comic i zwei Bilder ohni Text: 1 Gott redt «Liecht»; Sunne, Mond, Stärn und Pflanze entstönd. 2 Hinder em Volk s teilte Meer; am Bärg redt Gott und git d Tafle, de Mose hebt si, s Volk stuunt.'), 'GROUP-02': ('Comic in zwei Bildern ohne Text: 1 Ein König mit Krone vor Jerusalem, zufriedene Menschen. 2 Jerusalem mit Rissen; Menschen in Tränen, Weg weg und gestrichelt zurück.', 'Comic i zwei Bilder ohni Text: 1 En Chünig mit Chrone vor Jerusalem, zfrideni Mänsche. 2 Jerusalem mit Riss; Mänsche i Träne, Wäg ewäg und gstrichlet zrugg.'), 'GROUP-03': ('Comic in drei Bildern ohne Text: 1 Ein Mensch mit Leier spricht mit geschlossenen Augen zu Gott (Träne und Freude). 2 Braut und Bräutigam lächeln unter der Girlande. 3 Ein Mensch mit Schriftrolle denkt nach; Sanduhr und Waage.', 'Comic i drüü Bilder ohni Text: 1 En Mänsch mit Leier redt mit zuene Auge zu Gott (Träne und Fröid). 2 Brut und Brüütigam lächled under de Girlande. 3 En Mänsch mit Schriftrolle dänkt nache; Sanduhr und Waag.'), 'GROUP-04': ('Comic in zwei Bildern ohne Text: 1 Ein Prophet spricht zur besorgten Menge (Gottesname, Waage, Umkehr-Pfeil). 2 Jerusalem mit Rissen, Menschen in Tränen weggeführt; der Prophet spricht von Hoffnung (Spross).', 'Comic i zwei Bilder ohni Text: 1 En Prophet redt zur bsorgte Mängi (Gottesname, Waag, Umchehr-Pfiil). 2 Jerusalem mit Riss, Mänsche i Träne wäggfüert; de Prophet redt vo Hoffnig (Schoss).'), 'GROUP-05': ('Comic in zwei Bildern ohne Text: 1 Zwölf kleine Schriftrollen; ein Prophet spricht zur besorgten Menge (Gottesname, Waage, Umkehr-Pfeil). 2 Strahlenkranz über dem heilen Jerusalem, ein Spross, Menschen freuen sich.', 'Comic i zwei Bilder ohni Text: 1 Zwölf chlini Schriftrolle; en Prophet redt zur bsorgte Mängi (Gottesname, Waag, Umchehr-Pfiil). 2 Strahlechranz über em ganze Jerusalem, en Schoss, Mänsche fröied sich.'), 'GROUP-06': ('Comic in zwei Bildern ohne Text: 1 Vier kleine Schriftrollen; Jesus spricht zur aufmerksamen Menge (Gottesname, Umkehr-Pfeil, Herz). 2 Kreuz und leeres Grab.', 'Comic i zwei Bilder ohni Text: 1 Vier chlini Schriftrolle; de Jesus redt zur ufmerksame Mängi (Gottesname, Umchehr-Pfiil, Härz). 2 Chrüz und lääres Grab.'), 'GROUP-07': ('Comic in zwei Bildern ohne Text: 1 Die Geist-Taube kommt herab, über drei strahlenden Jüngern Flammen, dahinter Jerusalem. 2 Von Jerusalem gehen Pfeile zu einer Gemeinde; ein Schiff; Paulus mit einem Soldaten.', 'Comic i zwei Bilder ohni Text: 1 D Geischt-Tube chunnt abe, über drüü strahlende Jünger Flamme, dehinder Jerusalem. 2 Vo Jerusalem gönd Pfiil zu ere Gmeind; es Schiff; de Paulus mit eme Soldat.'), 'GROUP-08': ('Paulus spricht (Sprechblase: Kreuz und Herz); ein Brief fliegt zu einer Gemeinde vor einem Haus.', 'De Paulus redt (Sprächblase: Chrüz und Härz); en Brief flügt zu ere Gmeind vor eme Huus.'), 'GROUP-09': ('Drei Briefe gehen zu einer Gemeinde vor einem Haus; über der Gemeinde Herzen.', 'Drüü Brief gönd zu ere Gmeind vor eme Huus; über de Gmeind Härz.'), 'GROUP-10': ('Comic in zwei Bildern ohne Text: 1 Oben gross der Strahlenkranz; darunter schauen ein König und ein Soldat erstaunt hinauf, daneben Menschen in Tränen. 2 Die leuchtende Stadt mit Strom und Baum, darüber der Strahlenkranz; Menschen freuen sich.', 'Comic i zwei Bilder ohni Text: 1 Obe gross de Strahlechranz; drunder lueged en Chünig und en Soldat erstuunt ufe, dernäbe Mänsche i Träne. 2 Di lüüchtend Stadt mit Strom und Baum, drüber de Strahlechranz; Mänsche fröied sich.'), 'JHN-002': ('Comic in drei Bildern ohne Text: 1 Hochzeit: Jesus, Wasserkrüge, Pfeil zum Weinkrug, ein Stern; Braut und Bräutigam lächeln. 2 Jesus hebt die Geissel über dem davonlaufenden Schaf, ein Händler weicht zurück. 3 Menschen mit leuchtenden Augen und Herzen; eine gestrichelte Linie, Jesus wendet sich ernst ab.', 'Comic i drüü Bilder ohni Text: 1 Hochziit: de Jesus, Wasserchrüeg, Pfiil zum Wiichrueg, en Stern; Brut und Brüütigam lächled. 2 De Jesus hebt d Geissle über em Schaf, wo dervo rennt, en Händler wiicht zrugg. 3 Mänsche mit lüüchtende Auge und Härz; e gstrichleti Linie, de Jesus wändet sich ernscht ab.'), 'JHN': ('Ein brauner Adler mit ausgebreiteten Flügeln unter einem Licht mit Strahlen und funkelnden Sternchen, darunter eine Schriftrolle, auf nachtblauem Grund.', 'En brune Adler mit uusbreitete Flügel under eme Liecht mit Strahle und funkelnde Stärnli, drunder e Schriftrolle, uf nachtblauem Grund.')}
+
+
+# Überarbeitung der oberen Ebenen (2026-10-17)
+ILL_UPPER_ALT.update({'GROUP-01': ('Comic in drei Bildern ohne Text: 1 Der Strahlenkranz spricht (Licht); Erde mit Pflanze, Sonne, Mond und Sternen. 2 Gott spricht zu Abraham (Sprechblase: Sternenhimmel über grünem Land). 3 Hinter dem Volk das geteilte Meer; am Berg spricht der Strahlenkranz (Tafeln); Mose mit den Tafeln, das Volk.', 'Comic i drüü Bilder ohni Text: 1 De Strahlechranz redt (Liecht); Erde mit Pflanze, Sunne, Mond und Stärn. 2 Gott redt zum Abraham (Sprächblase: Stärnehimmel über grüenem Land). 3 Hinder em Volk s teilte Meer; am Bärg redt de Strahlechranz (Tafle); de Mose mit de Tafle, s Volk.'), 'GROUP-02': ('Comic in vier Bildern ohne Text: 1 Menschen ziehen in ein grünes Land mit Fluss. 2 Ein König vor Jerusalem, daneben Menschen. 3 Jerusalem mit Rissen; Menschen mit Tränen; ein Weg mit Pfeil weg und gestrichelt zurück. 4 Menschen freuen sich vor Jerusalem; Steine werden aufeinandergesetzt (Pfeil nach oben).', 'Comic i vier Bilder ohni Text: 1 Mänsche zieh i es grüens Land mit eme Fluss. 2 En Chünig vor Jerusalem, dernäbe Mänsche. 3 Jerusalem mit Riss; Mänsche mit Träne; en Wäg mit Pfiil ewäg und gstrichlet zrugg. 4 Mänsche fröied sich vor Jerusalem; Stei wärdet ufenand gsetzt (Pfiil ufe).'), 'GROUP-04': ('Comic in zwei Bildern ohne Text: 1 Oben der Strahlenkranz, eine goldene Linie führt zum Propheten; er spricht zur Menge (Waage, Umkehr-Pfeil). 2 Strahlenkranz mit Linie zum Propheten; Jerusalem mit Rissen, Menschen mit Tränen auf dem Weg weg und zurück; der Prophet spricht von Hoffnung (Spross).', 'Comic i zwei Bilder ohni Text: 1 Obe de Strahlechranz, e goldigi Linie füert zum Prophet; er redt zur Mängi (Waag, Umchehr-Pfiil). 2 Strahlechranz mit Linie zum Prophet; Jerusalem mit Riss, Mänsche mit Träne uf em Wäg ewäg und zrugg; de Prophet redt vo Hoffnig (Schoss).'), 'GROUP-05': ('Comic in zwei Bildern ohne Text: 1 Zwölf kleine Schriftrollen; der Strahlenkranz mit goldener Linie zum Propheten, der zur Menge spricht (Waage, Umkehr-Pfeil). 2 Strahlenkranz über dem heilen Jerusalem, ein Spross, Menschen freuen sich.', 'Comic i zwei Bilder ohni Text: 1 Zwölf chlini Schriftrolle; de Strahlechranz mit goldiger Linie zum Prophet, wo zur Mängi redt (Waag, Umchehr-Pfiil). 2 Strahlechranz über em ganze Jerusalem, en Schoss, Mänsche fröied sich.'), 'GROUP-07': ('Comic in zwei Bildern ohne Text: 1 Die Geist-Taube über drei Jüngern mit Flammen über den Köpfen, dahinter Jerusalem. 2 Von Jerusalem gehen Pfeile aus nach Rom (Säulenhalle mit rotem Dach); davor Paulus mit Brief und ein Soldat.', 'Comic i zwei Bilder ohni Text: 1 D Geischt-Tube über drüü Jünger mit Flamme über de Chöpf, dehinder Jerusalem. 2 Vo Jerusalem gönd Pfiil uus uf Rom (Süülehalle mit rotem Dach); devor de Paulus mit Brief und en Soldat.'), 'GROUP-09': ('Ein Bote mit Brief spricht zu einer Gemeinde vor einem Haus (Sprechblase: Herz mit Strahlen, Anker, zwei Herzen, zwei Schriftrollen mit Haken und Kreuz).', 'En Bott mit Brief redt zu ere Gmeind vor eme Huus (Sprächblase: Härz mit Strahle, Anker, zwei Härz, zwei Schriftrolle mit Hake und Chrüz).')})
+ILL_UPPER_ALT['OT'] = (ILL_UPPER_ALT['OT'][0] + ' Oben der Strahlenkranz mit Linie zum Propheten.', ILL_UPPER_ALT['OT'][1] + ' Obe de Strahlechranz mit Linie zum Prophet.')
 
 
 ILL = {
@@ -854,10 +872,10 @@ ILL = {
     "ILL-ANI-JHN-002-001-012": ("BRIEF-JHN-002-001-012", kana,
                                 "Comic in vier Bildern ohne Text: 1 Beim Hochzeitsfest zeigt Maria besorgt auf den leeren Weinkrug und den leeren Becher; Jesus antwortet ruhig mit der Sanduhr. "
                                 "2 Maria zeigt den Dienern: Jesus und das Ohr (hört auf ihn); die Diener staunen. 3 Jesus weist auf die sechs Krüge, ein Diener giesst Wasser ein; Sprechblase: Krug, Pfeil, Speisemeister. "
-                                "4 Der Speisemeister kostet strahlend und zeigt den Becher dem staunenden Bräutigam; über Jesus ein Stern, die Jünger mit leuchtenden Augen und Herzen.",
+                                "4 Der Speisemeister kostet strahlend und zeigt den Becher dem staunenden Bräutigam (Sprechblase: Becher und Funken – ausgezeichnet); über Jesus ein Stern, die Jünger mit leuchtenden Augen und Herzen.",
                                 "Comic i vier Bilder ohni Text: 1 Am Hochziitsfäscht zeigt d Maria bsorget uf de läär Wiichrueg und de läär Becher; de Jesus antwortet ruhig mit de Sanduhr. "
                                 "2 D Maria zeigt de Diener: de Jesus und s Ohr (losed uf ihn); d Diener stuuned. 3 De Jesus zeigt uf di sächs Chrüeg, en Diener schüttet Wasser ii; Sprächblase: Chrueg, Pfiil, Spiismeischter. "
-                                "4 De Spiismeischter probiert strahlend und zeigt de Becher em stuunende Brüütigam; über em Jesus en Stern, d Jünger mit lüüchtende Auge und Härz."),
+                                "4 De Spiismeischter probiert strahlend und zeigt de Becher em stuunende Brüütigam (Sprächblase: Becher und Funke – usgezeichnet); über em Jesus en Stern, d Jünger mit lüüchtende Auge und Härz."),
 }
 
 

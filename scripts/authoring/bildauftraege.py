@@ -30,9 +30,12 @@ AUTH = "KI-Entwurf (Claude) vom 2026-10-14 auf Wunsch von Andi Neck; keine fachl
 AUTH_GSW = "KI-Entwurf (Claude) vom 2026-10-14; Mundart noch nicht muttersprachlich geprüft."
 
 
-def P(n, ref, figures, action, speech=(), objects=(), signs=()):
-    return {"n": n, "reference": ref, "figures": list(figures), "objects": list(objects), "signs": list(signs),
-            "speech": [{"from": a, "to": b, "icons": list(i)} for a, b, i in speech], "action_de": action}
+def P(n, ref, figures, action, speech=(), objects=(), signs=(), stage=None):
+    d = {"n": n, "reference": ref, "figures": list(figures), "objects": list(objects), "signs": list(signs),
+         "speech": [{"from": a, "to": b, "icons": list(i)} for a, b, i in speech], "action_de": action}
+    if stage:
+        d["stage"] = stage
+    return d
 
 
 J, M, DI, SM, BR, BG, GA, JU = ("FIG-JESUS", "FIG-MARIA-MUTTER-JESU", "FIG-ROLLE-DIENER", "FIG-ROLLE-SPEISEMEISTER",
@@ -48,7 +51,7 @@ BRIEFS = [
          P(3, "JHN.2.6-JHN.2.8", [J, DI], "Jesus lässt die sechs steinernen Krüge mit Wasser füllen und schickt die Diener zum Speisemeister.",
            speech=[(J, DI, ["FIG-OBJ-KRUG-WASSER", "FIG-ZEICHEN-BRINGEN", "FIG-ROLLE-SPEISEMEISTER"])], objects=["FIG-OBJ-KRUG-WASSER"]),
          P(4, "JHN.2.9-JHN.2.11", [DI, SM, BG, J, JU], "Der Speisemeister kostet den Wein und spricht zum Bräutigam vom guten Wein; es ist der Anfang der Zeichen, die Jünger glauben an Jesus.",
-           speech=[(SM, BG, ["FIG-OBJ-BECHER-VOLL"])], objects=["FIG-OBJ-BECHER-VOLL", "FIG-OBJ-KRUG-WEIN"],
+           speech=[(SM, BG, ["FIG-OBJ-BECHER-VOLL", "FIG-ZEICHEN-FREUDE"])], objects=["FIG-OBJ-BECHER-VOLL", "FIG-OBJ-KRUG-WEIN"],
            signs=["FIG-ZEICHEN-FREUDE", "FIG-ZEICHEN-STERN", "FIG-ZEICHEN-GLAUBEN"]),
      ],
      "note": "Braut und Gäste sind im Text nicht genannt bzw. handeln nicht; sie zeigen nur den Ort «Hochzeit». "
@@ -115,7 +118,7 @@ F_BERG = lambda n, meer=False: P(n, "EXO.19-EXO.34", [G, MOSE, ME],  # noqa: E73
                                  ("Nach dem Weg durch das Meer gibt Gott am Berg die Weisung; Mose bringt die Tafeln zum Volk." if meer else
                                   "Gott und Israel: Am Berg gibt Gott die Weisung; Mose bringt die Tafeln zum Volk."),
                                  speech=[(G, MOSE, [TAF])], objects=[BERG, TAF] + ([MEER] if meer else []))
-F_EXIL = lambda n, ref, act: P(n, ref, [PR, ME], act, speech=[(PR, ME, [Z("HOFFNUNG")])], objects=[JER],  # noqa: E731
+F_EXIL = lambda n, ref, act: P(n, ref, [G, PR, ME], act, speech=[(PR, ME, [Z("HOFFNUNG")])], objects=[JER],  # noqa: E731
                                signs=[Z("NIEDERREISSEN"), Z("EXIL"), Z("TRAUER"), Z("HOFFNUNG")])
 F_KREUZ = lambda n, jesus: P(n, "MRK.15-MRK.16", [J] if jesus else [],  # noqa: E731
                              "Jesus: sein Leben, sein Tod am Kreuz und das leere Grab (Auferstehung)." if jesus else
@@ -128,10 +131,10 @@ F_NEU = lambda n, menge=False: P(n, "REV.21.1-REV.21.4", [G] + ([ME] if menge el
                                  ("Am Ende: Gott wohnt bei den Menschen in der erneuerten Schöpfung; Trauer ist vorbei." if menge else
                                   "Hoffnung auf eine erneuerte Schöpfung: die Stadt im Licht, in der Gott bei den Menschen wohnt."),
                                  signs=[Z("NEUE-SCHOEPFUNG")] + ([Z("FREUDE")] if menge else []))
-F_PROPHET = lambda n, ref, zwoelf=False: P(n, ref, [PR, ME],  # noqa: E731
+F_PROPHET = lambda n, ref, zwoelf=False: P(n, ref, [G, PR, ME],  # noqa: E731
                                            ("Zwölf Prophetenbücher: Ein Prophet klagt Unrecht an und ruft zu Recht und Umkehr." if zwoelf else
                                             "Ein Prophet klagt Unrecht an und ruft zur Umkehr."),
-                                           speech=[(PR, ME, [G, Z("GERICHT"), Z("UMKEHR")])], objects=[ROLLE] if zwoelf else [])
+                                           speech=[(PR, ME, [Z("GERICHT"), Z("UMKEHR")])], objects=[ROLLE] if zwoelf else [])
 
 UPPER = [
     ("BIBLE", "bible", "SUM-BIBLE", [
@@ -157,15 +160,23 @@ UPPER = [
      "der auferstandene Jesus selbst ist nicht gezeichnet.",
      "S lääre Grab staat für d Uferstehig; "
      "de uferstandni Jesus sälber isch nöd zeichnet."),
-    ("GROUP-01", "group", "SUM-GROUP-01", [F_SCHOEPFUNG(1), F_BERG(2, meer=True)],
-     "Die Verheissungen an die Erzeltern und das Ende vor dem Einzug ins Land zeigt das Bild noch nicht.",
-     "D Verheissige a d Erzeltere und s Änd vor em Iizug is Land zeigt s Bild no nöd."),
+    ("GROUP-01", "group", "SUM-GROUP-01", [
+        F_SCHOEPFUNG(1),
+        P(2, "GEN.15.5", [G, "FIG-ABRAHAM"], "Verheissung: Gott verheisst Abraham Nachkommen, so zahlreich wie die Sterne, und ein Land.",
+          speech=[(G, "FIG-ABRAHAM", [Z("VERHEISSUNG")])], stage={"god_side": "left", "mood": {"FIG-ABRAHAM": "surprised"}, "x": {"FIG-ABRAHAM": 130}}),
+        F_BERG(3, meer=True)],
+     "Abraham steht für die Erzeltern, denen Gott Nachkommen und Land verheisst ([[GEN.12.1-GEN.12.3]], [[GEN.15.5]]). Dass die Tora vor dem Einzug ins Land endet, zeigt das Bild nicht.",
+     "De Abraham staat für d Erzeltere, wo Gott Nachkomme und Land verheisst ([[GEN.12.1-GEN.12.3]], [[GEN.15.5]]). Dass d Tora vor em Iizug is Land ufhört, zeigt s Bild nöd."),
     ("GROUP-02", "group", "SUM-GROUP-02", [
-        P(1, "2SA.5.1-2SA.5.10", [KO, ME], "Israel lebt im Land; ein König herrscht in Jerusalem.", objects=[JER]),
-        P(2, "2KI.25.8-2KI.25.11", [ME], "Jerusalem wird zerstört und das Volk weggeführt; später kehren Menschen zurück.", objects=[JER],
-          signs=[Z("NIEDERREISSEN"), Z("EXIL"), Z("TRAUER")])],
-     "Die Landnahme ist nicht gezeichnet; die gestrichelte Rückkehr nimmt Esra und Nehemia auf.",
-     "D Landnahm isch nöd zeichnet; di gstrichlet Rückchehr nimmt Esra und Nehemia uf."),
+        P(1, "JOS.3.14-JOS.3.17", [ME], "Landnahme: Israel zieht über den Jordan in das Land.", objects=["FIG-ORT-LAND"],
+          stage={"x": {ME: 40}, "mood": {ME: "smile"}, "arrows": [[ME, "FIG-ORT-LAND", "go"]]}),
+        P(2, "2SA.5.1-2SA.5.10", [KO, ME], "Israel lebt im Land; ein König herrscht in Jerusalem.", objects=[JER]),
+        P(3, "2KI.25.8-2KI.25.11", [ME], "Jerusalem wird zerstört und das Volk weggeführt.", objects=[JER],
+          signs=[Z("NIEDERREISSEN"), Z("EXIL"), Z("TRAUER")]),
+        P(4, "NEH.2.17-NEH.2.18", [ME], "Rückkehr: Menschen kehren zurück und bauen Jerusalem wieder auf.", objects=[JER],
+          signs=[Z("AUFBAUEN"), Z("FREUDE")], stage={"mood": {ME: "delight"}, "back_side": "right", "at": {Z("AUFBAUEN"): JER}})],
+     "Vier Stationen nach der Zusammenfassung: Landnahme, Königszeit, Zusammenbruch, Rückkehr (Esra, Nehemia).",
+     "Vier Statione nach de Zämefassig: Landnahm, Chünigsziit, Zämebruch, Rückchehr (Esra, Nehemia)."),
     ("GROUP-03", "group", "SUM-GROUP-03", [
         P(1, "PSA.13", [ME, G], "Gebete: Klage und Lob vor Gott.", speech=[(ME, G, [Z("TRAUER"), Z("FREUDE")])],
           objects=[LEIER]),
@@ -188,9 +199,10 @@ UPPER = [
      "",
      ""),
     ("GROUP-07", "group", "SUM-GROUP-07", [
-        P(1, "ACT.2.1-ACT.2.4", [HG, "FIG-ROLLE-JUENGER"], "In Jerusalem kommt der Geist auf die Jünger.", objects=[JER]),
-        P(2, "ACT.28.14-ACT.28.16", [PAU, SO, GEM], "Die Botschaft geht hinaus, bis nach Rom; Paulus reist und wird bewacht.",
-          objects=[JER, BOOT], signs=[Z("AUSBREITEN")])],
+        P(1, "ACT.2.1-ACT.2.4", [HG, "FIG-ROLLE-JUENGER"], "In Jerusalem kommt der Geist auf die Jünger; Zungen wie von Feuer erscheinen auf ihnen.", objects=[JER],
+          signs=[Z("FEUERZUNGEN")]),
+        P(2, "ACT.28.14-ACT.28.16", [PAU, SO], "Die Botschaft geht von Jerusalem hinaus, bis nach Rom; dort wird Paulus bewacht.",
+          objects=[JER, "FIG-ORT-ROM"], signs=[Z("AUSBREITEN")])],
      "Der Soldat steht für die Bewachung des Paulus in Rom ([[ACT.28.16]]).",
      "De Soldat staat für d Bewachig vom Paulus z Rom ([[ACT.28.16]])."),
     ("GROUP-08", "group", "SUM-GROUP-08", [
@@ -199,10 +211,11 @@ UPPER = [
      "Das Kreuz steht für die Botschaft von Christus. Ob alle Briefe von Paulus selbst stammen, ist in der Forschung umstritten («unter dem Namen des Paulus überliefert»).",
      "S Chrüz staat für d Botschaft vo Christus. Öb alli Brief vom Paulus sälber stammed, isch i de Forschig umstritte («under em Name vom Paulus überliferet»)."),
     ("GROUP-09", "group", "SUM-GROUP-09", [
-        P(1, "HEB.10.23-HEB.10.25", [GEM], "Weitere Briefe ermutigen Gemeinden: am Glauben festhalten, ausharren und einander lieben.",
-          objects=[BRIEF], signs=[Z("GLAUBEN")])],
-     "Die Herausforderungen sind nicht einzeln gezeichnet.",
-     "D Herusforderige sind nöd einzeln zeichnet."),
+        P(1, "HEB.10.23-HEB.10.25", ["FIG-ROLLE-BOTE", GEM], "Weitere Briefe ermutigen Gemeinden: am Glauben festhalten, ausharren, einander lieben und Lehren prüfen.",
+          speech=[("FIG-ROLLE-BOTE", GEM, [Z("GLAUBEN"), Z("AUSDAUER"), Z("LIEBE"), Z("PRUEFEN")])],
+          stage={"x": {"FIG-ROLLE-BOTE": 40}})],
+     "Ein Bote liest einer Hausgemeinde einen Brief vor; die Zeichen nennen die wiederkehrenden Themen. Wer die Briefe schrieb, lässt das Bild offen (Hebräerbrief ohne Verfasserangabe).",
+     "En Bott list ere Huusgmeind en Brief vor; d Zeiche nänned di wiederkehrende Theme. Wer d Brief gschribe hät, laat s Bild offe (Hebräerbrief ohni Verfasser)."),
     ("GROUP-10", "group", "SUM-GROUP-10", [
         P(1, "REV.4.1-REV.4.11", [G, KO, SO, ME], "Visionen: Über Bedrängnis und Weltmacht steht Gottes Herrschaft.", signs=[Z("TRAUER")]),
         F_NEU(2, menge=True)],
@@ -223,7 +236,7 @@ ACTIONS_GSW.update({'Gott und Israel: Am Berg gibt Gott die Weisung; Mose bringt
 
 
 # Bildhilfe je Feld für die Legende: Kurztitel, was man sieht, wofür die Zeichen stehen (kompakt; ergänzt action_de, die Handlung nach dem Text)
-CAPTIONS = {'BIBLE': [('Sinai: Gott (Strahlenkranz) spricht und gibt die Tafeln; Mose bringt sie dem Volk.', 'Sinai: Gott (Strahlechranz) redt und git d Tafle; de Mose bringt si em Volk.'), ('Jesus: sein Leben, sein Tod am Kreuz und das leere Grab (Auferstehung).', 'Jesus: sis Läbe, sin Tod am Chrüz und s lääre Grab (Uferstehig).'), ('Neue Schöpfung: die leuchtende Stadt mit Strom und Baum; Gott wohnt bei den Menschen.', 'Nöii Schöpfig: di lüüchtend Stadt mit Strom und Baum; Gott wohnt bi de Mänsche.'), ('Viele Stimmen: Erzählung und Weisheit (Rolle), Gebet und Lied (Leier), Prophetie (Prophet), Briefe.', 'Vili Stimme: Verzällig und Wiisheit (Rolle), Gebät und Lied (Leier), Prophetie (Prophet), Brief.')], 'OT': [('Schöpfung: Gott spricht «Licht» (Sprechblase); Erde, Pflanzen, Sonne, Mond und Sterne entstehen.', 'Schöpfig: Gott redt «Liecht» (Sprächblase); Erde, Pflanze, Sunne, Mond und Stärn entstönd.'), ('Befreiung: Mose führt das Volk durch das geteilte Meer.', 'Befreiig: De Mose füert s Volk dur s teilte Meer.'), ('Sinai: Gott (Strahlenkranz) spricht und gibt die Tafeln; Mose bringt sie dem Volk.', 'Sinai: Gott (Strahlechranz) redt und git d Tafle; de Mose bringt si em Volk.'), ('Exil und Hoffnung: Jerusalem zerstört (Risse), das Volk in Tränen weggeführt (Pfeil), später zurück (gestrichelt); ein Prophet kündigt Hoffnung an (Spross).', 'Exil und Hoffnig: Jerusalem zerstört (Riss), s Volk i Träne wäggfüert (Pfiil), spöter zrugg (gstrichlet); en Prophet chündet Hoffnig aa (Schoss).')], 'NT': [('Verkündigung: Jesus ruft: Gottes Reich ist nahe (Gottesname), kehrt um (Pfeil), glaubt (Herz).', 'Verchündigung: De Jesus rüeft: Gottes Riich isch nöch (Gottesname), chered um (Pfiil), glaubed (Härz).'), ('Kreuz und Auferstehung: das Kreuz und das leere Grab.', 'Chrüz und Uferstehig: s Chrüz und s lääre Grab.'), ('Kirche: Der Geist (Taube) kommt auf die Jünger; die Botschaft breitet sich aus (Pfeile), Gemeinden erhalten Briefe.', 'Chile: De Geischt (Tube) chunnt uf d Jünger; d Botschaft breitet sich uus (Pfiil), Gmeinde überchömed Brief.'), ('Offenbarung: Gericht (Waage) und neue Schöpfung (leuchtende Stadt) unter Gott.', 'Offebarig: Gricht (Waag) und nöii Schöpfig (lüüchtend Stadt) under Gott.')], 'GROUP-01': [('Schöpfung: Gott spricht «Licht» (Sprechblase); Erde, Pflanzen, Sonne, Mond und Sterne entstehen.', 'Schöpfig: Gott redt «Liecht» (Sprächblase); Erde, Pflanze, Sunne, Mond und Stärn entstönd.'), ('Befreiung und Weisung: nach dem Meer (links) gibt Gott am Sinai die Tafeln; Mose bringt sie dem Volk.', 'Befreiig und Wiisig: nach em Meer (links) git Gott am Sinai d Tafle; de Mose bringt si em Volk.')], 'GROUP-02': [('Königszeit: ein König in Jerusalem, das Volk im Land.', 'Chünigsziit: en Chünig z Jerusalem, s Volk im Land.'), ('Zerstörung und Rückkehr: Jerusalem mit Rissen, Menschen in Tränen weggeführt (Pfeil), später zurück (gestrichelt).', 'Zerstörig und Rückchehr: Jerusalem mit Riss, Mänsche i Träne wäggfüert (Pfiil), spöter zrugg (gstrichlet).')], 'GROUP-03': [('Psalmen: Ein Mensch mit Leier betet zu Gott, Klage (Träne) und Lob (Funken).', 'Psalme: En Mänsch mit Leier bätet zu Gott, Klag (Träne) und Lob (Funke).'), ('Hoheslied: Liebesdichtung von Braut und Bräutigam.', 'Hoheliid: Liebesdichtig vo Brut und Brüütigam.'), ('Weisheit: Nachdenken über Vergänglichkeit (Sanduhr) und Gerechtigkeit (Waage).', 'Wiisheit: Nachedänke über Vergänglichkeit (Sanduhr) und Gerächtigkeit (Waag).')], 'GROUP-04': [('Anklage: Ein Prophet ruft im Namen Gottes (Strahlenkranz) zu Recht (Waage) und Umkehr (Pfeil).', 'Aaklag: En Prophet rüeft im Name vo Gott (Strahlechranz) zu Rächt (Waag) und Umchehr (Pfiil).'), ('Trost im Exil: Jerusalem zerstört, Menschen weggeführt; der Prophet kündigt Hoffnung an (Spross).', 'Troscht im Exil: Jerusalem zerstört, Mänsche wäggfüert; de Prophet chündet Hoffnig aa (Schoss).')], 'GROUP-05': [('Zwölf Bücher (zwölf Rollen): Ein Prophet ruft im Namen Gottes zu Recht (Waage) und Umkehr (Pfeil).', 'Zwölf Büecher (zwölf Rolle): En Prophet rüeft im Name vo Gott zu Rächt (Waag) und Umchehr (Pfiil).'), ('Wiederherstellung: Gott bleibt treu; Jerusalem steht wieder, Neues wächst (Spross), Freude.', 'Widerherstellig: Gott bliibt treu; Jerusalem staat wider, Nöis wachst (Schoss), Fröid.')], 'GROUP-06': [('Vier Evangelien (vier Rollen): Jesus ruft: Gottes Reich ist nahe, kehrt um, glaubt.', 'Vier Evangelie (vier Rolle): De Jesus rüeft: Gottes Riich isch nöch, chered um, glaubed.'), ('Kreuz und Auferstehung: das Kreuz und das leere Grab.', 'Chrüz und Uferstehig: s Chrüz und s lääre Grab.')], 'GROUP-07': [('Pfingsten: In Jerusalem kommt der Geist (Taube) auf die Jünger.', 'Pfingschte: Z Jerusalem chunnt de Geischt (Tube) uf d Jünger.'), ('Bis nach Rom: Die Botschaft breitet sich aus (Pfeile, Gemeinde, Schiff); Paulus wird bewacht (Soldat).', 'Bis uf Rom: D Botschaft breitet sich uus (Pfiil, Gmeind, Schiff); de Paulus wird bewacht (Soldat).')], 'GROUP-08': [('Briefe an Gemeinden: Paulus spricht von Christus (Kreuz) und Glauben (Herz); sein Brief geht an eine Hausgemeinde.', 'Brief a Gmeinde: De Paulus redt vo Christus (Chrüz) und Glaube (Härz); sin Brief gaat a e Huusgmeind.')], 'GROUP-09': [('Ermutigung: Briefe an Gemeinden – am Glauben festhalten (Herzen), ausharren, einander lieben.', 'Ermuetigung: Brief a Gmeinde – am Glaube feschthebe (Härz), uushalte, enand gern ha.')], 'GROUP-10': [('Gottes Herrschaft: Über Weltmacht (König, Soldat) und Bedrängnis (Tränen) steht Gott.', 'Gottes Herrschaft: Über Wältmacht (Chünig, Soldat) und Bedrängnis (Träne) staat Gott.'), ('Neue Schöpfung: Gott wohnt bei den Menschen in der leuchtenden Stadt; Freude statt Trauer.', 'Nöii Schöpfig: Gott wohnt bi de Mänsche i de lüüchtende Stadt; Fröid statt Truur.')], 'JHN-002-001-012': [('Kein Wein mehr: Maria zeigt Jesus den leeren Krug und Becher; Jesus antwortet, seine Stunde sei noch nicht gekommen (Sanduhr).', 'Kei Wii me: D Maria zeigt em Jesus de läär Chrueg und Becher; de Jesus antwortet, sini Stund seg no nöd choo (Sanduhr).'), ('Hört auf ihn: Maria sagt den Dienern, sie sollen tun, was Jesus sagt (Jesus → Ohr).', 'Losed uf ihn: D Maria seit de Diener, si söled mache, was de Jesus seit (Jesus → Ohr).'), ('Krüge füllen: Jesus lässt die sechs Krüge mit Wasser füllen und zum Speisemeister bringen (Krug → Speisemeister).', 'Chrüeg fülle: De Jesus laat di sächs Chrüeg mit Wasser fülle und zum Spiismeischter bringe (Chrueg → Spiismeischter).'), ('Der gute Wein: Der Speisemeister kostet, freut sich und spricht zum Bräutigam; Anfang der Zeichen (Stern), die Jünger glauben (Herzen).', 'De guet Wii: De Spiismeischter probiert, freut sich und redt mit em Brüütigam; Aafang vo de Zeiche (Stern), d Jünger glaubed (Härz).')], 'JHN-002-013-022': [('Tempelreinigung: Jesus mit erhobener Geissel, Tisch umgestossen, Münzen und Tiere; Sprechblase: kein Handel im Tempel.', 'Tämpelreinigung: De Jesus mit ufghabener Geissle, Tisch umgheit, Münz und Tier; Sprächblase: kei Handel im Tämpel.'), ('Zeichenforderung: Die Menge fragt nach einem Zeichen (Stern, ?); Jesus: Ihr reisst den Tempel nieder (Menge, Riss), in drei Tagen (Sonnen) richte ich ihn auf (Jesus, Tempel).', 'Zeicheforderig: D Mängi fröget nach eme Zeiche (Stern, ?); de Jesus: Ihr riissed de Tämpel ab (Mängi, Riss), i drüü Täg (Sunne) stell ich en uf (Jesus, Tämpel).')], 'JHN-002-023-025': [('Glaube und Abstand: Viele glauben wegen der Zeichen (Sterne, Herzen); Jesus vertraut sich ihnen nicht an (gestrichelte Linie).', 'Glaube und Abstand: Vili glaubed wäge de Zeiche (Stärn, Härz); de Jesus vertrout sich ine nöd aa (gstrichleti Linie).')], 'JHN-002': [('Kana: Das Wasser ist zu Wein geworden (Krüge → Weinkrug), der Anfang der Zeichen (Stern).', 'Kana: S Wasser isch zu Wii worde (Chrüeg → Wiichrueg), de Aafang vo de Zeiche (Stern).'), ('Tempel: Jesus treibt die Händler hinaus.', 'Tämpel: De Jesus tribt d Händler use.'), ('Glaube und Abstand: Viele glauben wegen der Zeichen; Jesus vertraut sich ihnen nicht an.', 'Glaube und Abstand: Vili glaubed wäge de Zeiche; de Jesus vertrout sich ine nöd aa.')], 'JHN': [('Johannes: Adler (Symbol des Evangelisten), Licht und Schriftrolle für den Anfang: das Wort und das Licht der Menschen.', 'Johannes: Adler (Symbol vom Evangelischt), Liecht und Schriftrolle für de Aafang: s Wort und s Liecht vo de Mänsche.')]}
+CAPTIONS = {'BIBLE': [('Sinai: Gott (Strahlenkranz) spricht und gibt die Tafeln; Mose bringt sie dem Volk.', 'Sinai: Gott (Strahlechranz) redt und git d Tafle; de Mose bringt si em Volk.'), ('Jesus: sein Leben, sein Tod am Kreuz und das leere Grab (Auferstehung).', 'Jesus: sis Läbe, sin Tod am Chrüz und s lääre Grab (Uferstehig).'), ('Neue Schöpfung: die leuchtende Stadt mit Strom und Baum; Gott wohnt bei den Menschen.', 'Nöii Schöpfig: di lüüchtend Stadt mit Strom und Baum; Gott wohnt bi de Mänsche.'), ('Viele Stimmen: Erzählung und Weisheit (Rolle), Gebet und Lied (Leier), Prophetie (Prophet), Briefe.', 'Vili Stimme: Verzällig und Wiisheit (Rolle), Gebät und Lied (Leier), Prophetie (Prophet), Brief.')], 'OT': [('Schöpfung: Gott spricht «Licht» (Sprechblase); Erde, Pflanzen, Sonne, Mond und Sterne entstehen.', 'Schöpfig: Gott redt «Liecht» (Sprächblase); Erde, Pflanze, Sunne, Mond und Stärn entstönd.'), ('Befreiung: Mose führt das Volk durch das geteilte Meer.', 'Befreiig: De Mose füert s Volk dur s teilte Meer.'), ('Sinai: Gott (Strahlenkranz) spricht und gibt die Tafeln; Mose bringt sie dem Volk.', 'Sinai: Gott (Strahlechranz) redt und git d Tafle; de Mose bringt si em Volk.'), ('Exil und Hoffnung: Jerusalem zerstört (Risse), das Volk in Tränen weggeführt (Pfeil), später zurück (gestrichelt); ein Prophet kündigt Hoffnung an (Spross).', 'Exil und Hoffnig: Jerusalem zerstört (Riss), s Volk i Träne wäggfüert (Pfiil), spöter zrugg (gstrichlet); en Prophet chündet Hoffnig aa (Schoss).')], 'NT': [('Verkündigung: Jesus ruft: Gottes Reich ist nahe (Gottesname), kehrt um (Pfeil), glaubt (Herz).', 'Verchündigung: De Jesus rüeft: Gottes Riich isch nöch (Gottesname), chered um (Pfiil), glaubed (Härz).'), ('Kreuz und Auferstehung: das Kreuz und das leere Grab.', 'Chrüz und Uferstehig: s Chrüz und s lääre Grab.'), ('Kirche: Der Geist (Taube) kommt auf die Jünger; die Botschaft breitet sich aus (Pfeile), Gemeinden erhalten Briefe.', 'Chile: De Geischt (Tube) chunnt uf d Jünger; d Botschaft breitet sich uus (Pfiil), Gmeinde überchömed Brief.'), ('Offenbarung: Gericht (Waage) und neue Schöpfung (leuchtende Stadt) unter Gott.', 'Offebarig: Gricht (Waag) und nöii Schöpfig (lüüchtend Stadt) under Gott.')], 'GROUP-01': [('Schöpfung: Gott spricht «Licht» (Sprechblase); Erde, Pflanzen, Sonne, Mond und Sterne entstehen.', 'Schöpfig: Gott redt «Liecht» (Sprächblase); Erde, Pflanze, Sunne, Mond und Stärn entstönd.'), ('Befreiung und Weisung: nach dem Meer (links) gibt Gott am Sinai die Tafeln; Mose bringt sie dem Volk.', 'Befreiig und Wiisig: nach em Meer (links) git Gott am Sinai d Tafle; de Mose bringt si em Volk.')], 'GROUP-02': [('Königszeit: ein König in Jerusalem, das Volk im Land.', 'Chünigsziit: en Chünig z Jerusalem, s Volk im Land.'), ('Zerstörung und Rückkehr: Jerusalem mit Rissen, Menschen in Tränen weggeführt (Pfeil), später zurück (gestrichelt).', 'Zerstörig und Rückchehr: Jerusalem mit Riss, Mänsche i Träne wäggfüert (Pfiil), spöter zrugg (gstrichlet).')], 'GROUP-03': [('Psalmen: Ein Mensch mit Leier betet zu Gott, Klage (Träne) und Lob (Funken).', 'Psalme: En Mänsch mit Leier bätet zu Gott, Klag (Träne) und Lob (Funke).'), ('Hoheslied: Liebesdichtung von Braut und Bräutigam.', 'Hoheliid: Liebesdichtig vo Brut und Brüütigam.'), ('Weisheit: Nachdenken über Vergänglichkeit (Sanduhr) und Gerechtigkeit (Waage).', 'Wiisheit: Nachedänke über Vergänglichkeit (Sanduhr) und Gerächtigkeit (Waag).')], 'GROUP-04': [('Anklage: Ein Prophet ruft im Namen Gottes (Strahlenkranz) zu Recht (Waage) und Umkehr (Pfeil).', 'Aaklag: En Prophet rüeft im Name vo Gott (Strahlechranz) zu Rächt (Waag) und Umchehr (Pfiil).'), ('Trost im Exil: Jerusalem zerstört, Menschen weggeführt; der Prophet kündigt Hoffnung an (Spross).', 'Troscht im Exil: Jerusalem zerstört, Mänsche wäggfüert; de Prophet chündet Hoffnig aa (Schoss).')], 'GROUP-05': [('Zwölf Bücher (zwölf Rollen): Ein Prophet ruft im Namen Gottes zu Recht (Waage) und Umkehr (Pfeil).', 'Zwölf Büecher (zwölf Rolle): En Prophet rüeft im Name vo Gott zu Rächt (Waag) und Umchehr (Pfiil).'), ('Wiederherstellung: Gott bleibt treu; Jerusalem steht wieder, Neues wächst (Spross), Freude.', 'Widerherstellig: Gott bliibt treu; Jerusalem staat wider, Nöis wachst (Schoss), Fröid.')], 'GROUP-06': [('Vier Evangelien (vier Rollen): Jesus ruft: Gottes Reich ist nahe, kehrt um, glaubt.', 'Vier Evangelie (vier Rolle): De Jesus rüeft: Gottes Riich isch nöch, chered um, glaubed.'), ('Kreuz und Auferstehung: das Kreuz und das leere Grab.', 'Chrüz und Uferstehig: s Chrüz und s lääre Grab.')], 'GROUP-07': [('Pfingsten: In Jerusalem kommt der Geist (Taube) auf die Jünger.', 'Pfingschte: Z Jerusalem chunnt de Geischt (Tube) uf d Jünger.'), ('Bis nach Rom: Die Botschaft breitet sich aus (Pfeile, Gemeinde, Schiff); Paulus wird bewacht (Soldat).', 'Bis uf Rom: D Botschaft breitet sich uus (Pfiil, Gmeind, Schiff); de Paulus wird bewacht (Soldat).')], 'GROUP-08': [('Briefe an Gemeinden: Paulus spricht von Christus (Kreuz) und Glauben (Herz); sein Brief geht an eine Hausgemeinde.', 'Brief a Gmeinde: De Paulus redt vo Christus (Chrüz) und Glaube (Härz); sin Brief gaat a e Huusgmeind.')], 'GROUP-09': [('Ermutigung: Briefe an Gemeinden – am Glauben festhalten (Herzen), ausharren, einander lieben.', 'Ermuetigung: Brief a Gmeinde – am Glaube feschthebe (Härz), uushalte, enand gern ha.')], 'GROUP-10': [('Gottes Herrschaft: Über Weltmacht (König, Soldat) und Bedrängnis (Tränen) steht Gott.', 'Gottes Herrschaft: Über Wältmacht (Chünig, Soldat) und Bedrängnis (Träne) staat Gott.'), ('Neue Schöpfung: Gott wohnt bei den Menschen in der leuchtenden Stadt; Freude statt Trauer.', 'Nöii Schöpfig: Gott wohnt bi de Mänsche i de lüüchtende Stadt; Fröid statt Truur.')], 'JHN-002-001-012': [('Kein Wein mehr: Maria zeigt Jesus den leeren Krug und Becher; Jesus antwortet, seine Stunde sei noch nicht gekommen (Sanduhr).', 'Kei Wii me: D Maria zeigt em Jesus de läär Chrueg und Becher; de Jesus antwortet, sini Stund seg no nöd choo (Sanduhr).'), ('Hört auf ihn: Maria sagt den Dienern, sie sollen tun, was Jesus sagt (Jesus → Ohr).', 'Losed uf ihn: D Maria seit de Diener, si söled mache, was de Jesus seit (Jesus → Ohr).'), ('Krüge füllen: Jesus lässt die sechs Krüge mit Wasser füllen und zum Speisemeister bringen (Krug → Speisemeister).', 'Chrüeg fülle: De Jesus laat di sächs Chrüeg mit Wasser fülle und zum Spiismeischter bringe (Chrueg → Spiismeischter).'), ('Der gute Wein: Der Speisemeister kostet und sagt zum Bräutigam: Dieser Wein ist ausgezeichnet (Becher, Funken) – den guten hast du bis jetzt aufbewahrt; Anfang der Zeichen (Stern), die Jünger glauben (Herzen).', 'De guet Wii: De Spiismeischter probiert und seit zum Brüütigam: Dä Wii isch usgezeichnet (Becher, Funke) – de guet häsch bis jetzt ufbewahrt; Aafang vo de Zeiche (Stern), d Jünger glaubed (Härz).')], 'JHN-002-013-022': [('Tempelreinigung: Jesus mit erhobener Geissel, Tisch umgestossen, Münzen und Tiere; Sprechblase: kein Handel im Tempel.', 'Tämpelreinigung: De Jesus mit ufghabener Geissle, Tisch umgheit, Münz und Tier; Sprächblase: kei Handel im Tämpel.'), ('Zeichenforderung: Die Menge fragt nach einem Zeichen (Stern, ?); Jesus: Ihr reisst den Tempel nieder (Menge, Riss), in drei Tagen (Sonnen) richte ich ihn auf (Jesus, Tempel).', 'Zeicheforderig: D Mängi fröget nach eme Zeiche (Stern, ?); de Jesus: Ihr riissed de Tämpel ab (Mängi, Riss), i drüü Täg (Sunne) stell ich en uf (Jesus, Tämpel).')], 'JHN-002-023-025': [('Glaube und Abstand: Viele glauben wegen der Zeichen (Sterne, Herzen); Jesus vertraut sich ihnen nicht an (gestrichelte Linie).', 'Glaube und Abstand: Vili glaubed wäge de Zeiche (Stärn, Härz); de Jesus vertrout sich ine nöd aa (gstrichleti Linie).')], 'JHN-002': [('Kana: Das Wasser ist zu Wein geworden (Krüge → Weinkrug), der Anfang der Zeichen (Stern).', 'Kana: S Wasser isch zu Wii worde (Chrüeg → Wiichrueg), de Aafang vo de Zeiche (Stern).'), ('Tempel: Jesus treibt die Händler hinaus.', 'Tämpel: De Jesus tribt d Händler use.'), ('Glaube und Abstand: Viele glauben wegen der Zeichen; Jesus vertraut sich ihnen nicht an.', 'Glaube und Abstand: Vili glaubed wäge de Zeiche; de Jesus vertrout sich ine nöd aa.')], 'JHN': [('Johannes: Adler (Symbol des Evangelisten), Licht und Schriftrolle für den Anfang: das Wort und das Licht der Menschen.', 'Johannes: Adler (Symbol vom Evangelischt), Liecht und Schriftrolle für de Aafang: s Wort und s Liecht vo de Mänsche.')]}
 
 
 # Bildaufträge aus bildauftraege_daten/*.json (alle übersetzten Bücher, ab 2026-10-17; Aufbau siehe bilder_auto.py)
@@ -243,6 +256,37 @@ for _b in _load_json():
     BRIEFS.append({"suffix": _b["suffix"], "level": _b["level"], "reference": _b["reference"], "target": _b["target"],
                    "translation": _b.get("translation"), "panels": _panels, "note": _b["note_de"], "note_gsw": _b["note_gsw"],
                    "tags": _b.get("tags", []), "date": _b.get("date", "2026-10-17")})
+
+
+# Überarbeitung der oberen Ebenen (2026-10-17): Erzeltern, Landnahme und Rückkehr, Feuerzungen und Rom, weitere Briefe, Propheten im Auftrag Gottes
+ACTIONS_GSW.update({
+    "Verheissung: Gott verheisst Abraham Nachkommen, so zahlreich wie die Sterne, und ein Land.": "Verheissig: Gott verheisst em Abraham Nachkomme, so vil wie d Stärn, und es Land.",
+    "Landnahme: Israel zieht über den Jordan in das Land.": "Landnahm: Israel ziet über de Jordan is Land.",
+    "Jerusalem wird zerstört und das Volk weggeführt.": "Jerusalem wird zerstört und s Volk wäggfüert.",
+    "Rückkehr: Menschen kehren zurück und bauen Jerusalem wieder auf.": "Rückchehr: Mänsche chömed zrugg und baued Jerusalem wider uf.",
+    "In Jerusalem kommt der Geist auf die Jünger; Zungen wie von Feuer erscheinen auf ihnen.": "Z Jerusalem chunnt de Geischt uf d Jünger; Zunge wie us Füür erschiined uf ine.",
+    "Die Botschaft geht von Jerusalem hinaus, bis nach Rom; dort wird Paulus bewacht.": "D Botschaft gaat vo Jerusalem use, bis uf Rom; det wird de Paulus bewacht.",
+    "Weitere Briefe ermutigen Gemeinden: am Glauben festhalten, ausharren, einander lieben und Lehren prüfen.": "Wiiteri Brief mached Gmeinde Muet: am Glaube feschthebe, uushalte, enand gern ha und Lehre prüefe.",
+})
+CAPTIONS["GROUP-01"] = [CAPTIONS["GROUP-01"][0],
+                        ("Verheissung: Gott (Strahlenkranz) verheisst Abraham Nachkommen wie die Sterne und ein Land (Sternenhimmel über grünem Land).",
+                         "Verheissig: Gott (Strahlechranz) verheisst em Abraham Nachkomme wie d Stärn und es Land (Stärnehimmel über grüenem Land)."),
+                        CAPTIONS["GROUP-01"][1]]
+CAPTIONS["GROUP-02"] = [("Landnahme: Das Volk zieht über den Fluss in das Land (Weg).", "Landnahm: S Volk ziet über de Fluss is Land (Wäg)."),
+                        CAPTIONS["GROUP-02"][0],
+                        ("Zerstörung: Jerusalem mit Rissen, Menschen in Tränen weggeführt (Pfeil), später zurück (gestrichelt).",
+                         "Zerstörig: Jerusalem mit Riss, Mänsche i Träne wäggfüert (Pfiil), spöter zrugg (gstrichlet)."),
+                        ("Rückkehr: Menschen kehren zurück und bauen Jerusalem wieder auf (Steine, Pfeil nach oben), Freude.",
+                         "Rückchehr: Mänsche chömed zrugg und baued Jerusalem wider uf (Stei, Pfiil ufe), Fröid.")]
+CAPTIONS["GROUP-07"] = [("Pfingsten: In Jerusalem kommt der Geist (Taube) auf die Jünger, Feuerzungen über ihnen.",
+                         "Pfingschte: Z Jerusalem chunnt de Geischt (Tube) uf d Jünger, Füürzunge über ine."),
+                        ("Bis nach Rom: Die Botschaft geht von Jerusalem hinaus (Pfeile) bis nach Rom; dort wird Paulus bewacht (Soldat).",
+                         "Bis uf Rom: D Botschaft gaat vo Jerusalem use (Pfiil) bis uf Rom; det wird de Paulus bewacht (Soldat).")]
+CAPTIONS["GROUP-09"] = [("Ermutigung: Ein Bote liest einer Gemeinde einen Brief vor: am Glauben festhalten (Herz), ausharren (Anker), einander lieben (zwei Herzen), Lehren prüfen (Rollen mit Haken und Kreuz).",
+                         "Ermuetigung: En Bott list ere Gmeind en Brief vor: am Glaube feschthebe (Härz), uushalte (Anker), enand gern ha (zwei Härz), Lehre prüefe (Rolle mit Hake und Chrüz).")]
+for _k in ("GROUP-04", "GROUP-05"):
+    CAPTIONS[_k][0] = (CAPTIONS[_k][0][0].replace("ruft im Namen Gottes (Strahlenkranz) zu Recht", "ruft im Auftrag Gottes (Strahlenkranz, Linie zum Propheten) zu Recht").replace("ruft im Namen Gottes zu Recht", "ruft im Auftrag Gottes (Strahlenkranz, Linie zum Propheten) zu Recht"),
+                       CAPTIONS[_k][0][1].replace("rüeft im Name vo Gott (Strahlechranz) zu Rächt", "rüeft im Uftrag vo Gott (Strahlechranz, Linie zum Prophet) zu Rächt").replace("rüeft im Name vo Gott zu Rächt", "rüeft im Uftrag vo Gott (Strahlechranz, Linie zum Prophet) zu Rächt"))
 
 
 def text_of(trans_id, ref):

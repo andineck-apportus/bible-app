@@ -119,7 +119,7 @@ def kana_3():
 
 
 def kana_4():
-    b = bubble(34, 10, 40, 32, 54, 64, use("ill-becher", 44, 14, 20, 23))
+    b = bubble(24, 10, 64, 32, 54, 64, use("ill-becher", 31, 14, 20, 23) + use("ill-z-freude", 56, 20, 26, 17))
     hearts = use("ill-z-glauben", 147, 46, 16, 18) + use("ill-z-glauben", 167, 46, 16, 18)
     return (fig("FIG-ROLLE-DIENER", 2, 66, 22, 50) + use("ill-jar-wein", 22, 98, 11, 20) + fig("FIG-ROLLE-SPEISEMEISTER", 40, 58)
             + use("ill-becher", 62, 80, 11, 13) + gesture(66, 90, 78, 86) + use("ill-z-freude", 28, 60, 18, 11) + use("ill-z-freude", 64, 60, 18, 11) + b
@@ -223,9 +223,15 @@ def crack(x, y, sc=1.0):
             f'<path d="{d}" fill="none" stroke="{INK}" stroke-width="2" stroke-linejoin="round"/></g>')
 
 
+def god_to(x, y, tx, ty, s=28):
+    """Gott (Strahlenkranz) mit Handlungslinie zu einer Figur: spricht durch sie / sendet sie."""
+    from bilder_auto import arrow_svg
+    return use("ill-gott", x, y, s, s) + arrow_svg(x + s * .55, y + s, tx, ty, "act")
+
+
 def f_exil():
-    b = bubble(10, 26, 40, 30, 23, 62, use("ill-z-hoffnung", 18, 29, 24, 24))
-    return (use("ill-jerusalem", 104, 14, 80, 56) + crack(150, 40) + crack(126, 48, .8) + fig_m("FIG-ROLLE-PROPHET", 8, 56, 30, 64) + b
+    b = bubble(44, 30, 34, 28, 30, 62, use("ill-z-hoffnung", 49, 32, 24, 24))
+    return (use("ill-jerusalem", 104, 14, 80, 56) + crack(150, 40) + crack(126, 48, .8) + fig_m("FIG-ROLLE-PROPHET", 8, 56, 30, 64) + god_to(26, 2, 22, 56) + b
             + menge(((80, 66, 22, 50), (100, 68, 20, 46))) + use("ill-z-trauer", 98, 72, 6, 9) + use("ill-z-trauer", 116, 74, 6, 9)
             + '<g transform="translate(184 76) scale(-1 1)">' + use("ill-z-exil", 0, 0, 60, 24) + "</g>")
 
@@ -291,8 +297,8 @@ def f_weisheit():
 
 def f_prophet(zwoelf=False):
     rolls = "".join(use("ill-schriftrolle", 120 + (i % 6) * 11, 6 + (i // 6) * 10, 10, 7) for i in range(12)) if zwoelf else ""
-    b = bubble(10, 24, 98, 34, 23, 62, use("ill-gott", 15, 27, 28, 28) + use("ill-z-gericht", 46, 28, 30, 26) + use("ill-z-umkehr", 80, 32, 24, 18))
-    return rolls + fig_m("FIG-ROLLE-PROPHET", 8, 56, 30, 64) + menge(((110, 62, 24, 54), (134, 60, 26, 56), (160, 64, 24, 52))) + b
+    b = bubble(42, 26, 68, 34, 30, 62, use("ill-z-gericht", 48, 30, 30, 26) + use("ill-z-umkehr", 82, 34, 24, 18))
+    return rolls + fig_m("FIG-ROLLE-PROPHET", 8, 56, 30, 64) + menge(((110, 62, 24, 54), (134, 60, 26, 56), (160, 64, 24, 52))) + god_to(26, 2, 22, 56) + b
 
 
 def f_aufbau():
@@ -302,12 +308,13 @@ def f_aufbau():
 
 def f_pfingsten():
     return (use("ill-jerusalem", 96, 40, 88, 62) + use("ill-geist", 40, 2, 52, 52)
-            + "".join(fig("FIG-ROLLE-JUENGER", x, y, w, h) for x, y, w, h in ((8, 62, 24, 52), (30, 58, 26, 58), (56, 62, 24, 52))))
+            + "".join(fig("FIG-ROLLE-JUENGER", x, y, w, h) for x, y, w, h in ((8, 62, 24, 52), (30, 58, 26, 58), (56, 62, 24, 52)))
+            + "".join(use("ill-z-feuerzungen", x, y, 8, 11) for x, y in ((16, 50), (39, 45), (64, 50))))
 
 
 def f_rom():
-    return (use("ill-jerusalem", 2, 22, 48, 34) + use("ill-z-ausbreiten", 50, 22, 40, 30) + use("ill-gemeinde", 94, 6, 60, 44)
-            + use("ill-boot", 30, 82, 56, 45) + fig("FIG-PAULUS", 116, 56, 30, 64) + fig("FIG-ROLLE-SOLDAT", 150, 56, 30, 64))
+    return (use("ill-jerusalem", 2, 50, 48, 34) + use("ill-z-ausbreiten", 46, 40, 40, 30) + use("ill-rom", 92, 30, 90, 63)
+            + fig("FIG-PAULUS", 98, 56, 30, 64) + fig("FIG-ROLLE-SOLDAT", 140, 56, 30, 64))
 
 
 def path_dots(d):
@@ -350,15 +357,15 @@ UPPER_SVG = {
     "BIBLE": lambda: layout([f_berg(), f_kreuz(True), f_neu(), f_stimmen()]),
     "OT": lambda: layout([f_schoepfung(), f_meer(), f_berg(), f_exil()]),
     "NT": lambda: layout([f_verkuendet(), f_kreuz(False), f_nt_geist(), f_nt_ende()]),
-    "GROUP-01": lambda: layout([f_schoepfung(), f_berg(meer=True)]),
-    "GROUP-02": lambda: layout([f_koenig(), f_zerstoert()]),
+    "GROUP-01": lambda: layout([f_schoepfung(), upper_auto("GROUP-01", 2), f_berg(meer=True)]),
+    "GROUP-02": lambda: layout([upper_auto("GROUP-02", 1), f_koenig(), f_zerstoert(), upper_auto("GROUP-02", 4)]),
     "GROUP-03": lambda: layout([f_gebet(), f_liebe(), f_weisheit()]),
     "GROUP-04": lambda: layout([f_prophet(), f_exil()]),
     "GROUP-05": lambda: layout([f_prophet(zwoelf=True), f_aufbau()]),
     "GROUP-06": lambda: layout([f_verkuendet(vier=True), f_kreuz(False)]),
     "GROUP-07": lambda: layout([f_pfingsten(), f_rom()]),
     "GROUP-08": lambda: layout([f_paulus()]),
-    "GROUP-09": lambda: layout([f_briefe()]),
+    "GROUP-09": lambda: layout([upper_auto("GROUP-09", 1)]),
     "GROUP-10": lambda: layout([f_herrschaft(), f_neu(freude=True)]),
 }
 
@@ -377,10 +384,10 @@ ILL = {
                         "2 De Jesus tribt d Händler us em Tämpel. 3 D Mängi glaubt wäge de Zeiche, e gstrichleti Linie trännt si vom Jesus."),
     "ILL-SYM-JHN-002-001-012": ("BRIEF-JHN-002-001-012",
                                 "Vier Felder: 1 Bei der Hochzeit zeigt Maria Jesus den leeren Weinkrug und den leeren Becher, Jesus antwortet mit der Sanduhr (noch nicht). 2 Maria sagt den Dienern: hört auf Jesus. "
-                                "3 Jesus weist auf die sechs Krüge, ein Diener giesst Wasser ein; Sprechblase: Wasserkrug, Pfeil, Speisemeister. 4 Der Speisemeister freut sich, hält den Becher und spricht zum Bräutigam; "
+                                "3 Jesus weist auf die sechs Krüge, ein Diener giesst Wasser ein; Sprechblase: Wasserkrug, Pfeil, Speisemeister. 4 Der Speisemeister freut sich, hält den Becher und spricht zum Bräutigam (Sprechblase: Becher und Funken – ausgezeichnet); "
                                 "über Jesus ein Stern (Zeichen), über den Jüngern Herzen (sie glauben).",
                                 "Vier Fälder: 1 A de Hochziit zeigt d Maria em Jesus de läär Wiichrueg und de läär Becher, de Jesus antwortet mit de Sanduhr (no nöd). 2 D Maria seit de Diener: losed uf de Jesus. "
-                                "3 De Jesus zeigt uf di sächs Chrüeg, en Diener schüttet Wasser ii; Sprächblase: Wasserchrueg, Pfiil, Spiismeischter. 4 De Spiismeischter freut sich, hebt de Becher und redt mit em Brüütigam; "
+                                "3 De Jesus zeigt uf di sächs Chrüeg, en Diener schüttet Wasser ii; Sprächblase: Wasserchrueg, Pfiil, Spiismeischter. 4 De Spiismeischter freut sich, hebt de Becher und redt mit em Brüütigam (Sprächblase: Becher und Funke – usgezeichnet); "
                                 "über em Jesus en Stern (Zeiche), über de Jünger Härz (si glaubed)."),
     "ILL-SYM-JHN-002-013-022": ("BRIEF-JHN-002-013-022",
                                 "Zwei Felder: 1 Jesus mit erhobener Geissel vor dem Tempel; umgestossener Tisch, Münzen, ein Händler weicht, ein Schaf, Tauben im Käfig; Sprechblase: Tempel, Münzen, durchgestrichen. "
@@ -442,7 +449,7 @@ class SymComposer(_auto.Composer):
         return use(RENDER.get(t) or RENDER_X[t], 0, 140 - h, w, h)
 
     def r_back(self, t, x, y, w, h):
-        return use(RENDER[t], x, y, w, h, ' opacity=".8"')
+        return use(RENDER[t], x, y, w, h, '' if t == "FIG-GRUPPE-GEMEINDE" else ' opacity=".8"')
 
     def r_sym(self, t, x, y, w, h, flip=False):
         if flip:
@@ -533,6 +540,14 @@ class SymComposer(_auto.Composer):
 AUTO = [b["suffix"] for b in _auto.load_briefs()]
 
 
+def upper_auto(key, n):
+    """Ein Feld eines Auftrags der oberen Ebenen mit dem Zeichner setzen (neben handgezeichneten Feldern)."""
+    brief = json.loads((D / "illustrations/briefs" / f"BRIEF-{key}.json").read_text(encoding="utf-8"))
+    c = SymComposer(_auto.gather_lex(), EXTRA_META)
+    c.uid = "s" + key.lower()
+    return c.panel(brief["panels"][n - 1])
+
+
 def auto_svg(suffix):
     lex = _auto.gather_lex()
     brief = json.loads((D / "illustrations/briefs" / f"BRIEF-{suffix}.json").read_text(encoding="utf-8"))
@@ -544,6 +559,13 @@ def auto_svg(suffix):
 for _b in _auto.load_briefs():
     GENERATED[f"ILL-SYM-{_b['suffix']}"] = (lambda s=_b["suffix"]: auto_svg(s))
     ILL[f"ILL-SYM-{_b['suffix']}"] = (f"BRIEF-{_b['suffix']}", _auto.alt_text(_b, "de"), _auto.alt_text(_b, "gsw"))
+
+
+# Bildbeschreibungen nach der Überarbeitung der oberen Ebenen (2026-10-17)
+_ALT2 = {'GROUP-01': ('Drei Felder: 1 Der Strahlenkranz spricht (Licht); Erde mit Pflanze, Sonne, Mond und Sternen. 2 Gott spricht zu Abraham (Sprechblase: Sternenhimmel über grünem Land). 3 Hinter dem Volk das geteilte Meer; am Berg spricht der Strahlenkranz (Tafeln); Mose mit den Tafeln, das Volk.', 'Drüü Fälder: 1 De Strahlechranz redt (Liecht); Erde mit Pflanze, Sunne, Mond und Stärn. 2 Gott redt zum Abraham (Sprächblase: Stärnehimmel über grüenem Land). 3 Hinder em Volk s teilte Meer; am Bärg redt de Strahlechranz (Tafle); de Mose mit de Tafle, s Volk.'), 'GROUP-02': ('Vier Felder: 1 Menschen ziehen in ein grünes Land mit Fluss. 2 Ein König vor Jerusalem, daneben Menschen. 3 Jerusalem mit Rissen; Menschen mit Tränen; ein Weg mit Pfeil weg und gestrichelt zurück. 4 Menschen freuen sich vor Jerusalem; Steine werden aufeinandergesetzt (Pfeil nach oben).', 'Vier Fälder: 1 Mänsche zieh i es grüens Land mit eme Fluss. 2 En Chünig vor Jerusalem, dernäbe Mänsche. 3 Jerusalem mit Riss; Mänsche mit Träne; en Wäg mit Pfiil ewäg und gstrichlet zrugg. 4 Mänsche fröied sich vor Jerusalem; Stei wärdet ufenand gsetzt (Pfiil ufe).'), 'GROUP-04': ('Zwei Felder: 1 Oben der Strahlenkranz, eine goldene Linie führt zum Propheten; er spricht zur Menge (Waage, Umkehr-Pfeil). 2 Strahlenkranz mit Linie zum Propheten; Jerusalem mit Rissen, Menschen mit Tränen auf dem Weg weg und zurück; der Prophet spricht von Hoffnung (Spross).', 'Zwei Fälder: 1 Obe de Strahlechranz, e goldigi Linie füert zum Prophet; er redt zur Mängi (Waag, Umchehr-Pfiil). 2 Strahlechranz mit Linie zum Prophet; Jerusalem mit Riss, Mänsche mit Träne uf em Wäg ewäg und zrugg; de Prophet redt vo Hoffnig (Schoss).'), 'GROUP-05': ('Zwei Felder: 1 Zwölf kleine Schriftrollen; der Strahlenkranz mit goldener Linie zum Propheten, der zur Menge spricht (Waage, Umkehr-Pfeil). 2 Strahlenkranz über dem heilen Jerusalem, ein Spross, Menschen freuen sich.', 'Zwei Fälder: 1 Zwölf chlini Schriftrolle; de Strahlechranz mit goldiger Linie zum Prophet, wo zur Mängi redt (Waag, Umchehr-Pfiil). 2 Strahlechranz über em ganze Jerusalem, en Schoss, Mänsche fröied sich.'), 'GROUP-07': ('Zwei Felder: 1 Die Geist-Taube über drei Jüngern mit Flammen über den Köpfen, dahinter Jerusalem. 2 Von Jerusalem gehen Pfeile aus nach Rom (Säulenhalle mit rotem Dach); davor Paulus mit Brief und ein Soldat.', 'Zwei Fälder: 1 D Geischt-Tube über drüü Jünger mit Flamme über de Chöpf, dehinder Jerusalem. 2 Vo Jerusalem gönd Pfiil uus uf Rom (Süülehalle mit rotem Dach); devor de Paulus mit Brief und en Soldat.'), 'GROUP-09': ('Ein Bote mit Brief spricht zu einer Gemeinde vor einem Haus (Sprechblase: Herz mit Strahlen, Anker, zwei Herzen, zwei Schriftrollen mit Haken und Kreuz).', 'En Bott mit Brief redt zu ere Gmeind vor eme Huus (Sprächblase: Härz mit Strahle, Anker, zwei Härz, zwei Schriftrolle mit Hake und Chrüz).')}
+for _k, (_a, _g) in _ALT2.items():
+    ILL[f"ILL-SYM-{_k}"] = (f"BRIEF-{_k}", _a, _g)
+ILL["ILL-SYM-OT"] = ("BRIEF-OT", ILL["ILL-SYM-OT"][1] + ' Oben der Strahlenkranz mit Linie zum Propheten.', ILL["ILL-SYM-OT"][2] + ' Obe de Strahlechranz mit Linie zum Prophet.')
 
 
 def run():

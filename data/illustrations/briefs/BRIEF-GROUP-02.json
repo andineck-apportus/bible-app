@@ -8,6 +8,34 @@
   "panels": [
     {
       "n": 1,
+      "reference": "JOS.3.14-JOS.3.17",
+      "figures": [
+        "FIG-GRUPPE-MENGE"
+      ],
+      "objects": [
+        "FIG-ORT-LAND"
+      ],
+      "signs": [],
+      "speech": [],
+      "action_de": "Landnahme: Israel zieht über den Jordan in das Land.",
+      "stage": {
+        "x": {
+          "FIG-GRUPPE-MENGE": 40
+        },
+        "mood": {
+          "FIG-GRUPPE-MENGE": "smile"
+        },
+        "arrows": [
+          [
+            "FIG-GRUPPE-MENGE",
+            "FIG-ORT-LAND",
+            "go"
+          ]
+        ]
+      }
+    },
+    {
+      "n": 2,
       "reference": "2SA.5.1-2SA.5.10",
       "figures": [
         "FIG-ROLLE-KOENIG",
@@ -21,7 +49,7 @@
       "action_de": "Israel lebt im Land; ein König herrscht in Jerusalem."
     },
     {
-      "n": 2,
+      "n": 3,
       "reference": "2KI.25.8-2KI.25.11",
       "figures": [
         "FIG-GRUPPE-MENGE"
@@ -35,18 +63,47 @@
         "FIG-ZEICHEN-TRAUER"
       ],
       "speech": [],
-      "action_de": "Jerusalem wird zerstört und das Volk weggeführt; später kehren Menschen zurück."
+      "action_de": "Jerusalem wird zerstört und das Volk weggeführt."
+    },
+    {
+      "n": 4,
+      "reference": "NEH.2.17-NEH.2.18",
+      "figures": [
+        "FIG-GRUPPE-MENGE"
+      ],
+      "objects": [
+        "FIG-ORT-JERUSALEM"
+      ],
+      "signs": [
+        "FIG-ZEICHEN-AUFBAUEN",
+        "FIG-ZEICHEN-FREUDE"
+      ],
+      "speech": [],
+      "action_de": "Rückkehr: Menschen kehren zurück und bauen Jerusalem wieder auf.",
+      "stage": {
+        "mood": {
+          "FIG-GRUPPE-MENGE": "delight"
+        },
+        "back_side": "right",
+        "at": {
+          "FIG-ZEICHEN-AUFBAUEN": "FIG-ORT-JERUSALEM"
+        }
+      }
     }
   ],
   "actions_de": [
+    "Landnahme: Israel zieht über den Jordan in das Land.",
     "Israel lebt im Land; ein König herrscht in Jerusalem.",
-    "Jerusalem wird zerstört und das Volk weggeführt; später kehren Menschen zurück."
+    "Jerusalem wird zerstört und das Volk weggeführt.",
+    "Rückkehr: Menschen kehren zurück und bauen Jerusalem wieder auf."
   ],
   "captions_de": [
+    "Landnahme: Das Volk zieht über den Fluss in das Land (Weg).",
     "Königszeit: ein König in Jerusalem, das Volk im Land.",
-    "Zerstörung und Rückkehr: Jerusalem mit Rissen, Menschen in Tränen weggeführt (Pfeil), später zurück (gestrichelt)."
+    "Zerstörung: Jerusalem mit Rissen, Menschen in Tränen weggeführt (Pfeil), später zurück (gestrichelt).",
+    "Rückkehr: Menschen kehren zurück und bauen Jerusalem wieder auf (Steine, Pfeil nach oben), Freude."
   ],
-  "interpretation_note_de": "Die Landnahme ist nicht gezeichnet; die gestrichelte Rückkehr nimmt Esra und Nehemia auf.",
+  "interpretation_note_de": "Vier Stationen nach der Zusammenfassung: Landnahme, Königszeit, Zusammenbruch, Rückkehr (Esra, Nehemia).",
   "basis": [
     {
       "record": "SUM-GROUP-02",
@@ -66,6 +123,54 @@
       "change_de": "Legende: Bildhilfe je Feld; Aufzählung der Felder aus dem Hinweis entfernt",
       "previous": {
         "interpretation_note_de": "Zwei Felder: Königszeit; Zusammenbruch und Rückkehr. Die Landnahme ist nicht gezeichnet; die gestrichelte Rückkehr nimmt Esra und Nehemia auf."
+      }
+    },
+    {
+      "date": "2026-10-14",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "2SA.5.1-2SA.5.10",
+            "figures": [
+              "FIG-ROLLE-KOENIG",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-JERUSALEM"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Israel lebt im Land; ein König herrscht in Jerusalem."
+          },
+          {
+            "n": 2,
+            "reference": "2KI.25.8-2KI.25.11",
+            "figures": [
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-JERUSALEM"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NIEDERREISSEN",
+              "FIG-ZEICHEN-EXIL",
+              "FIG-ZEICHEN-TRAUER"
+            ],
+            "speech": [],
+            "action_de": "Jerusalem wird zerstört und das Volk weggeführt; später kehren Menschen zurück."
+          }
+        ],
+        "actions_de": [
+          "Israel lebt im Land; ein König herrscht in Jerusalem.",
+          "Jerusalem wird zerstört und das Volk weggeführt; später kehren Menschen zurück."
+        ],
+        "captions_de": [
+          "Königszeit: ein König in Jerusalem, das Volk im Land.",
+          "Zerstörung und Rückkehr: Jerusalem mit Rissen, Menschen in Tränen weggeführt (Pfeil), später zurück (gestrichelt)."
+        ],
+        "interpretation_note_de": "Die Landnahme ist nicht gezeichnet; die gestrichelte Rückkehr nimmt Esra und Nehemia auf."
       }
     }
   ]

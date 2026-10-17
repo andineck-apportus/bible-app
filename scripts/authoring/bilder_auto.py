@@ -94,9 +94,10 @@ WATER_TOP = 96  # Wellenkamm der Bänder Meer/See
 def plan(p, lex, extra):
     """Ordnet die Bestandteile eines Felds an; Ergebnis in Feldeinheiten, von beiden Stilen gezeichnet."""
     st = p.get("stage") or {}
-    humans = [f for f in p["figures"] if lex[f]["kind"] in HUMAN_KINDS or f == "FIG-JESUS"]
+    as_place = [f for f in p["figures"] if f in META and META[f][0] == "back"]  # z. B. Gemeinde (Haus mit Menschen)
+    humans = [f for f in p["figures"] if (lex[f]["kind"] in HUMAN_KINDS or f == "FIG-JESUS") and f not in as_place]
     divine = [f for f in p["figures"] if f in ("FIG-GOTT", "FIG-HEILIGER-GEIST")]
-    things = list(p["objects"]) + list(p["signs"])
+    things = as_place + list(p["objects"]) + list(p["signs"])
     inside = st.get("in", {})
     row = [h for h in humans if h not in inside]
     place = lambda t: meta(t, lex, extra)[0]  # noqa: E731
@@ -210,6 +211,8 @@ class Composer:
             out.append(self.r_band(t))
         if not L["band"]:
             out.append(self.r_floor())
+        for t in L["band"]:
+            pos[t] = (W * .78, 112)
         for i, t in enumerate(L["back"]):
             w, h = self.m(t)[1]
             side = st.get("back_side", "right")
