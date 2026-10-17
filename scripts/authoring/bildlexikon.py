@@ -1203,7 +1203,7 @@ E("FIG-ZEICHEN-ABLEHNEN", "action", "verwerfen / ablehnen", "reject / refuse",
 E("FIG-ZEICHEN-NICHT-VERSTEHEN", "sign", "nicht verstehen", "not understand",
   "Bedeutung: Jemand versteht das Gesagte nicht oder missversteht es (z. B. [[JHN.3.4]], [[MRK.9.32]]).",
   "Bedüütig: Öpper verstaat s Gseit nöd oder verstaat s falsch (z. B. [[JHN.3.4]], [[MRK.9.32]]).",
-  [T("Grauer Nebelwirbel über dem Kopf mit grauem Fragezeichen", "design")],
+  [T("Graue Nebelwolke mit Fragezeichen", "design")],
   ("#8FA3A0", "#3B3226"),
   ["Ohne Sprechblase; nicht verwechseln mit «fragen»"], distinct=["FIG-ZEICHEN-FRAGEN"])
 
