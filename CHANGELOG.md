@@ -2,6 +2,13 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.61 — 2026-10-17 — Bildstil «Anime» (Pilot)
+
+- **Neuer Stil «Anime»** (Einstellungen → Bilder): comicartig ohne Text, damit für alle Sprachen lesbar. Personen mit Gesicht und Ausdruck (Sorge, Ruhe, Entschlossenheit, Staunen, Freude), Manga-Panels mit schrägen Rändern, Bewegungs- und Emotionszeichen; Sprechblasen nur mit Zeichen. Pilot: Hochzeit in Kana (Johannes 2,1–12), gezeichnet nach demselben Bildauftrag wie das Symbolbild. Wo es noch kein Anime-Bild gibt, erscheint das Symbolbild.
+- **Lexikon:** Die Regel «ohne ausgeführtes Gesicht» gilt jetzt nur für den Symbolstil; in Stilen mit Gesichtern Züge und Hautton von Menschen der Levante im 1. Jahrhundert, keine Karikatur.
+- Vorgemerkt in docs/BILDSPRACHE.md: Bildsprachen je Kultur und Sprache als eigene Stil-Schicht mit Zielkontext.
+- Eigene Zeichnungen (CC0), KI-Entwurf, nicht fachlich geprüft; KI-Blindtest im Bild-Datensatz.
+
 ## v0.60 — 2026-10-17 — Menü geordnet, Bildlegende kompakt
 
 - **Menü:** Das Hauptmenü enthält nur noch Suche, «Zuletzt gelesen», «Ausgearbeitete Stellen», «⚙ Einstellungen», «Quellen und Rechte» und «Über diese Fassung». Alle Einstellungen stehen in einem eigenen Blatt, gegliedert in **Darstellung** (Farben, Textgrösse, Sprache, Bilder, Verse fortlaufend), **Bibeltext** (Lesetext, Lesarten, Hintergrund, Urtext, Umschrift), **Urtext anhören** (Aussprache, Stimmen, Tempo, Proben) und **Vorlesen** (Stimme, Tempo, Gottesname, Probe); «Zurück zum Menü» oben.

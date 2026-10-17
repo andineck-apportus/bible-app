@@ -44,7 +44,8 @@ APPEARS_NOTE = ("Per Suche in den hochdeutschen Arbeitsübersetzungen ermittelt 
 APPEARS_NONE = "Allgemeines Bildzeichen, nicht an bestimmte Stellen gebunden."
 
 # Grundregeln, die für alle Personen gelten
-FACE = "Personen ohne ausgeführtes Gesicht; erkennbar an Farbe, Kleidung und Zeichen"
+FACE = ("Erkennbar an Farbe, Kleidung und Zeichen, nicht am Gesicht; im Stil Symbol ohne ausgeführtes Gesicht, in Stilen mit Gesichtern (Anime u. a.) "
+        "Züge und Hautton von Menschen der Levante im 1. Jahrhundert")
 NO_CARICATURE = "Keine Karikatur, keine verzerrten oder «typisierten» Gesichts- und Körpermerkmale"
 
 
