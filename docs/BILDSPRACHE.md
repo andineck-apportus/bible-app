@@ -19,6 +19,7 @@ Bilder ohne Text taugen vorerst für alle Sprachen. Später soll es Bildsprachen
 
 - **Handlungen:** mehrere Schritte als nummerierte Bildfelder; Gesagtes als Sprechblase mit Zeichen statt Wörtern, die Spitze zeigt auf die sprechende Figur, die Geste (Arm) auf die angesprochene. Die Blase steht möglichst direkt über der sprechenden Figur; steht sie daneben (z. B. beim Strahlenkranz), geht die Spitze von der zugewandten Seite aus (links, rechts, oben oder unten). Die Spitze ist kurz und gerade; eine lange, schräg verzogene Spitze ist ein Gestaltungsfehler. Das Werkzeug wählt die Seite selbst (`bubble()` in `bilder_symbol.py`). Beispiel Kana: «Der Wein ist ausgegangen» = leerer Krug mit Traubenzeichen + leerer Becher + «fehlt»; «Hört auf ihn» = Jesus → Ohr.
 - **Mehrzahl** («ihr», «die Leute») in Sprechblasen als Gruppe von drei Figuren, nie als einzelne Figur (Blindtest: eine Figur wird als «dieser eine» gelesen).
+- **Gott als Absender:** Spricht ein Prophet in Gottes Auftrag, steht der Strahlenkranz über ihm mit einer goldenen Linie zum Propheten; der Gottesname gehört dann nicht in die Sprechblase (Blindtest: dort wird er als Inhalt gelesen).
 - **Zeichen** (Stern = Zeichen/σημεῖον, Herz mit Lichtstrahl = glauben, Sanduhr = Stunde/Zeit, Sonnen = Anzahl Tage, Tempel mit Riss = niederreissen, gestrichelte Linie = Abstand …) kommen nur aus dem Lexikon und behalten überall dieselbe Bedeutung.
 - **Gott** nie als Mensch, ohne Gesicht oder Körper. Zeichen (Entscheid Andi Neck, 2026-10-14): **goldener Strahlenkranz mit dem Gottesnamen יהוה** in hebräischen Buchstaben, wie seit der Reformation in reformierten und lutherischen Kirchen. Gott soll als Gegenüber erscheinen: Wo möglich spricht er (Sprechblase mit Spitze zum Strahlenkranz) oder ist Adressat einer Rede. Ohne Sprechblase über einer Szene wird der Strahlenkranz leicht als Sonne gelesen (Blindtest); deshalb keine Sonne oder Lichtscheibe in derselben Szene. Der Kreuznimbus über einer menschlichen Figur bleibt Jesus vorbehalten.
 - **Heiliger Geist:** weisse Taube mit goldenem Schein im Sturzflug (Kopf unten, Schwanzfächer oben); die Taube als Tier (Opfertier) nie mit Schein, sitzend oder im Käfig.
@@ -26,9 +27,19 @@ Bilder ohne Text taugen vorerst für alle Sprachen. Später soll es Bildsprachen
 - Was der Text offenlässt (z. B. ob die Geissel Menschen traf, [[JHN.2.15]]), bleibt im Bild offen oder wird im Auftrag (`interpretation_note_de`) als Deutung benannt. Nicht erzählte Vorgänge (der Wechsel von Wasser zu Wein) werden nicht als Vorgang gezeigt.
 - Symbole, die an nationale, politische oder kirchliche Sonderzeichen erinnern, vermeiden (z. B. Adler nicht mit weissem Kopf und Schwanz).
 
+## Zeichner für alle Stellen (seit v0.65)
+
+Für die Bücher, Kapitel und Abschnitte aller übersetzten Bücher setzt der Zeichner `scripts/authoring/bilder_auto.py` die Bilder in beiden Stilen direkt aus dem Bildauftrag zusammen; nur Johannes 2 und die oberen Ebenen (Bibel, Testamente, Buchgruppen) sind von Hand gezeichnet. Bausteine:
+- **Figurenbaukasten** `scripts/authoring/figuren.py` (plus `figuren_daten/`): Aussehen jeder Person, Rolle und Gruppe aus dem Lexikon (Farben, Haar, Bart, Kopfbedeckung, Alter, Attribut) – im Stil «Symbol» als Ganzfigur, im Stil «Anime» als Brustbild mit denselben Farben.
+- **Bauteile** `scripts/authoring/bildsymbole.py` (plus `bildsymbole_daten/`): Zeichnungen für Orte, Gegenstände und Zeichen; der Stil «Anime» übernimmt sie.
+- **Handlungslinien** (goldener Bogen: Gott sendet, sieht, bestimmt; gepunkteter Bogen: werfen, speien; gestrichelter Weg: gehen) machen sichtbar, was geschieht; Kleidung kann wechseln (Sacktuch bei der Busse).
+- Wer zu Gott spricht, betet mit gefalteten Händen (kein erhobener Arm, der drohend wirkt); wer zu Menschen spricht, öffnet die Hand nach vorn.
+- Ein Schiff steht immer im Wasser; wer in einem Fisch oder Grab ist, erscheint in einem Fenster.
+Wie man Aufträge dafür schreibt: [BILDAUFTRAEGE-ANLEITUNG.md](BILDAUFTRAEGE-ANLEITUNG.md).
+
 ## Ebenen
 
-Bilder gibt es auf allen Ebenen über den Versen: Bibel, Testamente, Buchgruppen, Buch, Kapitel, Abschnitt. Bildaufträge der oberen Ebenen (Bibel, Testament, Buchgruppe) haben keine Bibelstelle als Ganzes; ihr Ziel ist die Zusammenfassung (`SUM-BIBLE`, `SUM-OT`, `SUM-NT`, `SUM-GROUP-xx`), und jedes Bildfeld nennt eine typische Stelle (z. B. [[EXO.14]] für die Befreiung). Gleiche Szenen sehen auf allen Ebenen gleich aus (z. B. Sinai in Bibel, Altem Testament und Tora). Stand 2026-10-17, in beiden Stilen: Bibel, beide Testamente, alle zehn Buchgruppen; Buch nur Johannes; Kapitel und Abschnitte nur Johannes 2.
+Bilder gibt es auf allen Ebenen über den Versen: Bibel, Testamente, Buchgruppen, Buch, Kapitel, Abschnitt. Bildaufträge der oberen Ebenen (Bibel, Testament, Buchgruppe) haben keine Bibelstelle als Ganzes; ihr Ziel ist die Zusammenfassung (`SUM-BIBLE`, `SUM-OT`, `SUM-NT`, `SUM-GROUP-xx`), und jedes Bildfeld nennt eine typische Stelle (z. B. [[EXO.14]] für die Befreiung). Gleiche Szenen sehen auf allen Ebenen gleich aus (z. B. Sinai in Bibel, Altem Testament und Tora). Stand 2026-10-17, in beiden Stilen: Bibel, beide Testamente, alle zehn Buchgruppen sowie Buch, Kapitel und Abschnitte aller übersetzten Bücher.
 
 ## Prüfung auf Verständlichkeit (Blindtest)
 
