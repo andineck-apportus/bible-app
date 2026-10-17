@@ -59,6 +59,19 @@ nicht zeigen). «Die Juden», Pharisäer, Hohepriester als neutrale Figuren, nie
 | `god_side`, `back_side`, `big_side`, `floor_side` | left/right (Gott: auch center) |
 | `flip: [OBJ]` | grosser Gegenstand gespiegelt (z. B. Fisch schaut nach rechts) |
 | `floor_x: {OBJ: x}`, `air_x`, `air_y`, `big_y`, `bubble_y` | Feinlage in Feldeinheiten (Feld 186 × 140, Boden bei 118) – sparsam |
+| `x: {FIG: x}` | Lage einer Person (Mitte, Feldeinheiten); schaltet die automatische Leserichtung ab |
+| `arrows: [[von, zu, art]]` | Handlungslinie: `act` (senden, sehen, heilen; von Gott golden), `throw` (werfen, speien), `go` (gehen, gestrichelt). Von und zu Personen setzt der Zeichner die Linie über die Köpfe bzw. auf Schulterhöhe |
+| `beside: {ZEICHEN: FIG}` | Zeichen neben dem Kopf statt darüber (z. B. heilende Hand, Fragezeichen) |
+| `behind: [OBJ]` | Gegenstand am Boden hinter den Personen |
+| `before: true` | Personen stehen vor dem Gebäude im Hintergrund (Gebäude nicht ausweichen) |
+| `wear: {FIG: sack \| binden \| #RRGGBB}` | Kleidung: Sacktuch, Leinenbinden oder andere Mantelfarbe |
+| `in_water: true`, `sea: "calm"` | Personen stehen im Wasser (kein Uferstreifen); See ruhig statt bewegt |
+| `at_top: true` | Zeichen bei einer Figur im Gegenstand oben statt seitlich |
+
+Automatisch (seit dem Blindtest vom 2026-10-17): Wer zuerst spricht, steht links vom zweiten Sprecher (ausser `x`, `split` oder
+«links/rechts» in der Legende); eine zweite Sprechblase derselben Figur steht neben der ersten und ist mit ihr verbunden;
+Gruppen erscheinen als Menge (drei Figuren vorn, zwei dahinter). Die Legende (`caption_de`) muss beschreiben, was das Zeichen im
+Bild tatsächlich zeigt (gleiche Wörter wie das Merkmal im Bildlexikon), sonst sucht man vergeblich.
 
 Platzierung je Eintrag (in `bildsymbole_daten`: `place`): `band` (Hintergrund über die ganze Breite: Meer, See, Feld),
 `back` (Gebäude im Hintergrund), `big` (gross in der Mitte: Schiff, Fisch, Grab), `floor` (am Boden), `hand` (klein, in der Hand),
