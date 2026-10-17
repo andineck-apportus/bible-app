@@ -484,6 +484,9 @@ class Composer:
             elif sp["from"] in sky:
                 x, y, w0, h0 = sky[sp["from"]]
                 tx, ty = (x + w0, y + h0 / 2) if x < W / 2 else (x, y + h0 / 2)
+            elif sp["from"] in pos:  # sprechendes Bauteil (z. B. Satan als Schatten): Spitze an den oberen Rand
+                tx, ty = pos[sp["from"]]
+                ty -= self.m(sp["from"])[1][1] * .4
             else:
                 continue
             bubbles.append((sp, tx, ty))
