@@ -37,7 +37,7 @@ TAGS = ["TAG-MATTHEW"]
 CHAPTERS = ((5, 48),)
 
 DE = {
- "MAT.5.1": "[Als er]{1} [aber]{2} [die Menge]{3,4} [sah]{1}, [stieg er]{5} [auf]{6} [den Berg]{7,8}; und{9} [als]{10} [er]{11} [sich gesetzt hatte]{10}, [traten]{12} [seine]{16} [Jünger]{14,15} [zu ihm]{13} [heran]{12}.",
+ "MAT.5.1": "[Als er]{1} [aber]{2} [die Menschenmengen]{3,4} [sah]{1}, [stieg er]{5} [auf]{6} [den Berg]{7,8}; und{9} [als]{10} [er]{11} [sich gesetzt hatte]{10}, [traten]{12} [seine]{16} [Jünger]{14,15} [zu ihm]{13} [heran]{12}.",
  "MAT.5.2": "Und{1} [er öffnete]{2} [seinen]{5} [Mund]{3,4}, [lehrte]{6} [sie]{7} und [sagte]{8}:",
  "MAT.5.3": "[Selig]{1} sind [die]{2} [Armen]{3} [im]{4} [Geist]{5}, [denn]{6} [ihnen]{7} [gehört]{8} [das Reich]{9,10} [der Himmel]{11,12}.",
  "MAT.5.4": "[Selig]{1} sind [die]{2} [Trauernden]{3}, [denn]{4} [sie]{5} [werden getröstet werden]{6}.",
@@ -54,7 +54,7 @@ DE = {
  "MAT.5.15": "[Man zündet]{2} [auch keine]{1} [Lampe]{3} [an]{2} und{4} [stellt]{5} [sie]{6} [unter]{7} [den Scheffel]{8,9}, [sondern]{10} [auf]{11} [den Leuchter]{12,13}; und{14} [sie leuchtet]{15} [allen]{16}, [die]{17} [im]{18,19} [Haus]{20} sind.",
  "MAT.5.16": "[So]{1} [soll]{2} [euer]{5} [Licht]{3,4} [vor]{6} [den Menschen]{7,8} [leuchten]{2}, [damit]{9} [sie]{10} [eure]{11} [guten]{12,13} [Werke]{14} [sehen]{10} und{15} [euren]{19} [Vater]{17,18} [in]{20,21} [den Himmeln]{22,23} [preisen]{16}.",
  "MAT.5.17": "[Meint]{2} [nicht]{1}, [dass]{3} [ich gekommen sei]{4}, [das Gesetz]{6,7} [oder]{8} [die Propheten]{9,10} [aufzuheben]{5}. [Ich bin]{12} [nicht]{11} [gekommen]{12}, [um aufzuheben]{13}, [sondern]{14} [um zu erfüllen]{15}.",
- "MAT.5.18": "[Denn]{2} [amen]{1}, [ich sage]{3} [euch]{4}: [Bis]{5} [der Himmel]{8,9} und{10} [die Erde]{11,12} [vergehen]{7}, [wird]{20} [gewiss nicht]{18,19} [ein einziges]{14} [Jota]{13} [oder]{15} [ein einziges]{16} [Häkchen]{17} [vom]{21,22} [Gesetz]{23} [vergehen]{20}, [bis]{24} [alles]{26} [geschieht]{27}. ~6(ἄν macht den Nebensatz unbestimmt; nicht eigens wiedergegeben) ~25(ἄν macht den Nebensatz unbestimmt; nicht eigens wiedergegeben)",
+ "MAT.5.18": "[Amen]{1}, [ich sage]{3} [euch]{4} [nämlich]{2}: [Bis]{5} [der Himmel]{8,9} und{10} [die Erde]{11,12} [vergehen]{7}, [wird]{20} [gewiss nicht]{18,19} [ein einziges]{14} [Jota]{13} [oder]{15} [ein einziges]{16} [Häkchen]{17} [vom]{21,22} [Gesetz]{23} [vergehen]{20}, [bis]{24} [alles]{26} [geschieht]{27}. ~6(ἄν macht den Nebensatz unbestimmt; nicht eigens wiedergegeben) ~25(ἄν macht den Nebensatz unbestimmt; nicht eigens wiedergegeben)",
  "MAT.5.19": "[Wer]{1,2} [also]{3} [eines]{5} [dieser]{8} [kleinsten]{9,10} [Gebote]{6,7} [auflöst]{4} und{11} [die Menschen]{14,15} [so]{13} [lehrt]{12}, [wird]{17} [im]{18,19} [Reich]{20} [der Himmel]{21,22} [der Kleinste]{16} [genannt werden]{17}; [wer]{23,25} sie [aber]{24} [tut]{26} und{27} [lehrt]{28}, [der]{29} [wird]{31} [im]{32,33} [Reich]{34} [der Himmel]{35,36} [gross]{30} [genannt werden]{31}.",
  "MAT.5.20": "[Denn]{2} [ich sage]{1} [euch]{3}: [Wenn]{5} [eure]{8} [Gerechtigkeit]{9,10} [nicht]{6} [weit über]{11} [die der Schriftgelehrten]{12,13} und{14} [Pharisäer]{15} [hinausgeht]{7}, [werdet ihr]{18} [gewiss nicht]{16,17} [in]{19} [das Reich]{20,21} [der Himmel]{22,23} [hineinkommen]{18}. ~4(ὅτι leitet die Aussage ein; durch den Doppelpunkt wiedergegeben)",
  "MAT.5.21": "[Ihr habt gehört]{1}, [dass]{2} [zu den Alten]{4,5} [gesagt worden ist]{3}: «[Du sollst]{7} [nicht]{6} [töten]{7}; [wer]{8,10} [aber]{9} [tötet]{11}, [wird]{13} [dem Gericht]{14,15} [verfallen]{12}.»",
@@ -88,14 +88,14 @@ DE = {
 }
 
 GSW = {
- "MAT.5.1": "[Wo er]{1} [aber]{2} [d Mängi]{3,4} [gsee hät]{1}, [isch er]{5} [uf]{6} [de Bärg]{7,8} [ufegstige]{5}; und{9} [wo]{10} [er]{11} [abgsässe isch]{10}, [sind]{12} [sini]{16} [Jünger]{14,15} [zu ihm]{13} [choo]{12}.",
+ "MAT.5.1": "[Wo er]{1} [aber]{2} [d Lüüt]{3,4} [gseh hät]{1}, [isch er]{5} [uf]{6} [de Bärg]{7,8} [ufegstige]{5}; und{9} [wo]{10} [er]{11} [abgsässe isch]{10}, [sind]{12} [sini]{16} [Jünger]{14,15} [zu ihm]{13} [härechoo]{12}.",
  "MAT.5.2": "Und{1} [er hät]{2} [sin]{5} [Mund]{3,4} [uftaa]{2}, [hät]{6} [si]{7} [gleert]{6} und [gseit]{8}:",
  "MAT.5.3": "[Sälig]{1} sind [di]{2} [Arme]{3} [im]{4} [Geischt]{5}, [dänn]{6} [ine]{7} [ghört]{8} [s Riich]{9,10} [vo de Himel]{11,12}.",
  "MAT.5.4": "[Sälig]{1} sind [die]{2}, [wo truured]{3}, [dänn]{4} [si]{5} [wärded tröschtet]{6}.",
  "MAT.5.5": "[Sälig]{1} sind [di]{2} [Sanftmüetige]{3}, [dänn]{4} [si]{5} [wärded]{6} [d Ärde]{7,8} [erbe]{6}.",
  "MAT.5.6": "[Sälig]{1} sind [die, wo]{2} [nach de Grächtigkeit]{6,7} [hungered]{3} und{4} [dürschted]{5}, [dänn]{8} [si]{9} [wärded satt]{10}.",
  "MAT.5.7": "[Sälig]{1} sind [di]{2} [Barmhärzige]{3}, [dänn]{4} [si]{5} [wärded Barmhärzigkeit erfaare]{6}.",
- "MAT.5.8": "[Sälig]{1} sind [die, wo]{2} [es reins]{3} [Härz]{4,5} händ, [dänn]{6} [si]{7} [wärded]{10} [Gott]{8,9} [gsee]{10}.",
+ "MAT.5.8": "[Sälig]{1} sind [die, wo]{2} [es reins]{3} [Härz]{4,5} händ, [dänn]{6} [si]{7} [wärded]{10} [Gott]{8,9} [gseh]{10}.",
  "MAT.5.9": "[Sälig]{1} sind [die, wo]{2} [Fride stifted]{3}, [dänn]{4} [si]{5} [wärded]{8} [Söhn]{6} [vo Gott]{7} [gnännt]{8}.",
  "MAT.5.10": "[Sälig]{1} sind [die, wo]{2} [wäge]{4} [de Grächtigkeit]{5} [verfolgt worde sind]{3}, [dänn]{6} [ine]{7} [ghört]{8} [s Riich]{9,10} [vo de Himel]{11,12}.",
  "MAT.5.11": "[Sälig]{1} [sind ir]{2}, [wänn]{3} [si]{4} [eu]{5} [beschimpfed]{4} und{6} [verfolged]{7} und{8} [wäge mir]{15,16} [alles]{10} [Bööse]{11} [gäge]{12} [eu]{13} [säged]{9} [und debii lüüged]{14}.",
@@ -103,21 +103,21 @@ GSW = {
  "MAT.5.13": "[Ir]{1} [sind]{2} [s Salz]{3,4} [vo de Ärde]{5,6}. [Wänn]{7} [aber]{8} [s Salz]{9,10} [fad wird]{11}, [mit was]{12,13} [söll s wider salzig wärde]{14}? [Es isch]{17} [für]{15} [nüüt]{16} [mee]{18} [guet]{17}, [als dass es]{19,20} [usegworfe]{21,22} und [vo]{24} [de Lüüt]{25,26} [vertrampet wird]{23}.",
  "MAT.5.14": "[Ir]{1} [sind]{2} [s Liecht]{3,4} [vo de Wält]{5,6}. [E Stadt]{9}, [wo]{13} [uf]{11} [eme Bärg]{12} [liit]{13}, [cha]{8} [nöd]{7} [versteckt bliibe]{10}.",
  "MAT.5.15": "[Me zündt]{2} [au kei]{1} [Lampe]{3} [aa]{2} und{4} [stellt]{5} [si]{6} [under]{7} [de Schäffel]{8,9}, [sondern]{10} [uf]{11} [de Lüüchter]{12,13}; und{14} [si lüüchtet]{15} [allne]{16}, [wo]{17} [im]{18,19} [Huus]{20} sind.",
- "MAT.5.16": "[Eso]{1} [söll]{2} [eues]{5} [Liecht]{3,4} [vor]{6} [de Lüüt]{7,8} [lüüchte]{2}, [demit]{9} [si]{10} [eui]{11} [guete]{12,13} [Wärch]{14} [gseend]{10} und{15} [eue]{19} [Vatter]{17,18} [i]{20,21} [de Himel]{22,23} [priised]{16}.",
+ "MAT.5.16": "[Eso]{1} [söll]{2} [eues]{5} [Liecht]{3,4} [vor]{6} [de Lüüt]{7,8} [lüüchte]{2}, [damit]{9} [si]{10} [eui]{11} [guete]{12,13} [Wärch]{14} [gsehnd]{10} und{15} [eue]{19} [Vatter]{17,18} [i]{20,21} [de Himel]{22,23} [priised]{16}.",
  "MAT.5.17": "[Meined]{2} [nöd]{1}, [dass]{3} [ich choo bi]{4}, [für]{5} [s Gsetz]{6,7} [oder]{8} [d Prophete]{9,10} [ufzhebe]{5}. [Ich bi]{12} [nöd]{11} [choo]{12} [zum Ufhebe]{13}, [sondern]{14} [zum Erfülle]{15}.",
- "MAT.5.18": "[Dänn]{2} [amen]{1}, [ich säg]{3} [eu]{4}: [Bis]{5} [de Himel]{8,9} und{10} [d Ärde]{11,12} [vergönd]{7}, [vergaat]{20} [vom]{21,22} [Gsetz]{23} [sicher nöd]{18,19} [es einzigs]{14} [Jota]{13} [oder]{15} [es einzigs]{16} [Hääggli]{17}, [bis]{24} [alles]{26} [gschee isch]{27}. ~6(ἄν macht de Nebesatz unbestimmt; nöd eigens widergää) ~25(ἄν macht de Nebesatz unbestimmt; nöd eigens widergää)",
+ "MAT.5.18": "[Amen]{1}, [ich säg]{3} [eu]{4} [nämli]{2}: [Bis]{5} [de Himel]{8,9} und{10} [d Ärde]{11,12} [vergönd]{7}, [vergaat]{20} [vom]{21,22} [Gsetz]{23} [sicher nöd]{18,19} [es einzigs]{14} [Jota]{13} [oder]{15} [es einzigs]{16} [Hääggli]{17}, [bis]{24} [alles]{26} [gscheh isch]{27}. ~6(ἄν macht de Nebesatz unbestimmt; nöd eigens widergää) ~25(ἄν macht de Nebesatz unbestimmt; nöd eigens widergää)",
  "MAT.5.19": "[Wer]{1,2} [also]{3} [eis]{5} [vo dene]{8} [chliinschte]{9,10} [Gebot]{6,7} [uflööst]{4} und{11} [d Lüüt]{14,15} [eso]{13} [leert]{12}, [wird]{17} [im]{18,19} [Riich]{20} [vo de Himel]{21,22} [de Chliinscht]{16} [gnännt]{17}; [wer]{23,25} si [aber]{24} [tuet]{26} und{27} [leert]{28}, [dä]{29} [wird]{31} [im]{32,33} [Riich]{34} [vo de Himel]{35,36} [gross]{30} [gnännt]{31}.",
- "MAT.5.20": "[Ich säg]{1} [eu]{3} [nämli]{2}: [Wänn]{5} [eui]{8} [Grächtigkeit]{9,10} [nöd]{6} [wiit über]{11} [die vo de Schriftgelehrti]{12,13} und{14} [Pharisäer]{15} [usegaat]{7}, [chömed ir]{18} [sicher nöd]{16,17} [i]{19} [s Riich]{20,21} [vo de Himel]{22,23} [ine]{18}. ~4(ὅτι leitet d Ussag ii; mit em Doppelpunkt widergää)",
+ "MAT.5.20": "[Ich säg]{1} [eu]{3} [nämli]{2}: [Wänn]{5} [eui]{8} [Grächtigkeit]{9,10} [nöd]{6} [wiit über]{11} [die vo de Schriftgelehrte]{12,13} und{14} [Pharisäer]{15} [usegaat]{7}, [chömed ir]{18} [sicher nöd]{16,17} [i]{19} [s Riich]{20,21} [vo de Himel]{22,23} [ine]{18}. ~4(ὅτι leitet d Ussag ii; mit em Doppelpunkt widergää)",
  "MAT.5.21": "[Ir händ ghört]{1}, [dass]{2} [zu de Alte]{4,5} [gseit worde isch]{3}: «[Du söllsch]{7} [nöd]{6} [töte]{7}; [wer]{8,10} [aber]{9} [tötet]{11}, [wird]{13} [em Gricht]{14,15} [verfalle]{12} [sii]{13}.»",
- "MAT.5.22": "[Ich]{1} [aber]{2} [säg]{3} [eu]{4}: [Jede, wo]{6,7} [uf sin]{11} [Brüeder]{9,10} [wüetig isch]{8}, [wird]{13} [em Gricht]{14,15} [verfalle]{12} [sii]{13}; [wer]{16,18} [aber]{17} zu [sim]{22} [Brüeder]{20,21} [seit]{19}: «[Raka]{23}!», [wird]{25} [em Hoche Raat]{26,27} [verfalle]{24} [sii]{25}; [wer]{28,30} [aber]{29} [seit]{31}: «[Du Tubel]{32}!», [wird]{34} [em Füür]{38,39} [vo de Höll]{35-37} [verfalle]{33} [sii]{34}. ~5(ὅτι leitet d Ussag ii; mit em Doppelpunkt widergää)",
- "MAT.5.23": "[Wänn]{1} [du]{3} [also]{2} [dis]{6} [Gschänk]{4,5} [zum]{7,8} [Altar]{9} [bringsch]{3} [und]{10} [dich]{11} [dört]{10} [erinnerisch]{11}, [dass]{12} [din]{15} [Brüeder]{13,14} [öppis]{17} [gäge]{18} [dich]{19} [hät]{16},",
- "MAT.5.24": "dänn [la]{1} [dis]{5} [Gschänk]{3,4} [dört]{2} [vor]{6} [em Altar]{7,8} staa und{9} [gang]{10}; [versöön di]{12} [zerscht]{11} [mit]{13} [dim]{15} [Brüeder]{14}, und{16} [dänn]{17} [chumm]{18} und [bring]{19} [dis]{22} [Gschänk]{20,21} [dar]{19}.",
- "MAT.5.25": "[Einig di]{1,2} [schnäll]{6} [mit]{3} [dim]{5} [Gägner]{4}, [solang]{7,8} [du]{9} [mit]{10} [ihm]{11} [underwägs]{12-14} [bisch]{9}, [demit]{15} [di]{16} [de Gägner]{18,19} [nöd]{15} [em Richter]{20,21} [übergit]{17} und{22} [de Richter]{23,24} [em Gerichtsdiener]{25,26} und{27} [du]{30} [is]{28} [Gfängnis]{29} [gworfe wirsch]{30}.",
+ "MAT.5.22": "[Ich]{1} [aber]{2} [säg]{3} [eu]{4}: [Jede, wo]{6,7} [uf sin]{11} [Brueder]{9,10} [wüetig isch]{8}, [wird]{13} [em Gricht]{14,15} [verfalle]{12} [sii]{13}; [wer]{16,18} [aber]{17} zu [sim]{22} [Brueder]{20,21} [seit]{19}: «[Raka]{23}!», [wird]{25} [em Hoche Raat]{26,27} [verfalle]{24} [sii]{25}; [wer]{28,30} [aber]{29} [seit]{31}: «[Du Tubel]{32}!», [wird]{34} [em Füür]{38,39} [vo de Höll]{35-37} [verfalle]{33} [sii]{34}. ~5(ὅτι leitet d Ussag ii; mit em Doppelpunkt widergää)",
+ "MAT.5.23": "[Wänn]{1} [du]{3} [also]{2} [dis]{6} [Gschänk]{4,5} [zum]{7,8} [Altar]{9} [bringsch]{3} [und]{10} [dich]{11} [dört]{10} [erinnerisch]{11}, [dass]{12} [din]{15} [Brueder]{13,14} [öppis]{17} [gäge]{18} [dich]{19} [hät]{16},",
+ "MAT.5.24": "dänn [la]{1} [dis]{5} [Gschänk]{3,4} [dört]{2} [vor]{6} [em Altar]{7,8} staa und{9} [gang]{10}; [versöön di]{12} [zerscht]{11} [mit]{13} [dim]{15} [Brueder]{14}, und{16} [dänn]{17} [chumm]{18} und [bring]{19} [dis]{22} [Gschänk]{20,21} [dar]{19}.",
+ "MAT.5.25": "[Einig di]{1,2} [schnäll]{6} [mit]{3} [dim]{5} [Gägner]{4}, [solang]{7,8} [du]{9} [mit]{10} [ihm]{11} [underwägs]{12-14} [bisch]{9}, [damit]{15} [di]{16} [de Gägner]{18,19} [nöd]{15} [em Richter]{20,21} [übergit]{17} und{22} [de Richter]{23,24} [em Gerichtsdiener]{25,26} und{27} [du]{30} [is]{28} [Gfängnis]{29} [gworfe wirsch]{30}.",
  "MAT.5.26": "[Amen]{1}, [ich säg]{2} [dir]{3}: [Du chunnsch]{6} [sicher nöd]{4,5} [vo dört]{7} [use]{6}, [bis]{8} [du]{10} [de letscht]{11,12} [Rappe]{13} [zaalt häsch]{10}. ~9(ἄν macht de Nebesatz unbestimmt; nöd eigens widergää)",
  "MAT.5.27": "[Ir händ ghört]{1}, [dass]{2} [gseit worde isch]{3}: «[Du söllsch]{5} [nöd]{4} [d Ee breche]{5}.»",
  "MAT.5.28": "[Ich]{1} [aber]{2} [säg]{3} [eu]{4}: [Jede, wo]{6,7} [e Frau]{9} [aaluegt]{8}, [für]{10,11} [si]{13} [z begääre]{12}, [hät]{15} [i]{17} [sim]{20} [Härz]{18,19} [scho]{14} [mit ire]{16} [d Ee broche]{15}. ~5(ὅτι leitet d Ussag ii; mit em Doppelpunkt widergää)",
- "MAT.5.29": "[Wänn]{1} [aber]{2} [dis]{5} [rächt]{6,7} [Aug]{3,4} [dich]{9} [zu Fall bringt]{8}, [riiss]{10} [s]{11} [use]{10} und{12} [wirf]{13} s [vo]{14} [dir]{15} [wäg]{13}! [Es isch]{16} [nämli]{17} [besser]{16} [für dich]{18}, [dass]{19} [eis]{21} [vo dine]{24} [Glider]{22,23} [verlore gaat]{20} und{25} [nöd]{26} [din]{30} [ganz]{27} [Liib]{28,29} [i]{32} [d Höll]{33} [gworfe wird]{31}.",
- "MAT.5.30": "Und{1} [wänn]{2} [dini]{5} [rächt]{3,4} [Hand]{6} [dich]{8} [zu Fall bringt]{7}, [hau]{9} [si]{10} [ab]{9} und{11} [wirf]{12} si [vo]{13} [dir]{14} [wäg]{12}! [Es isch]{15} [nämli]{16} [besser]{15} [für dich]{17}, [dass]{18} [eis]{20} [vo dine]{23} [Glider]{21,22} [verlore gaat]{19} und{24} [nöd]{25} [din]{29} [ganz]{26} [Liib]{27,28} [i]{30} [d Höll]{31} [chunnt]{32}.",
+ "MAT.5.29": "[Wänn]{1} [aber]{2} [dis]{5} [rächt]{6,7} [Aug]{3,4} [dich]{9} [z Fall bringt]{8}, [riiss]{10} [s]{11} [use]{10} und{12} [wirf]{13} s [vo]{14} [dir]{15} [wäg]{13}! [Es isch]{16} [nämli]{17} [besser]{16} [für dich]{18}, [dass]{19} [eis]{21} [vo dine]{24} [Glider]{22,23} [verlore gaat]{20} und{25} [nöd]{26} [din]{30} [ganz]{27} [Liib]{28,29} [i]{32} [d Höll]{33} [gworfe wird]{31}.",
+ "MAT.5.30": "Und{1} [wänn]{2} [dini]{5} [rächt]{3,4} [Hand]{6} [dich]{8} [z Fall bringt]{7}, [hau]{9} [si]{10} [ab]{9} und{11} [wirf]{12} si [vo]{13} [dir]{14} [wäg]{12}! [Es isch]{15} [nämli]{16} [besser]{15} [für dich]{17}, [dass]{18} [eis]{20} [vo dine]{23} [Glider]{21,22} [verlore gaat]{19} und{24} [nöd]{25} [din]{29} [ganz]{26} [Liib]{27,28} [i]{30} [d Höll]{31} [chunnt]{32}.",
  "MAT.5.31": "[Es isch]{1} [aber]{2} [gseit worde]{1}: «[Wer]{3,4} [sini]{8} [Frau]{6,7} [entlaat]{5}, [söll]{9} [ire]{10} [en Scheidigsbrief]{11} [gää]{9}.»",
  "MAT.5.32": "[Ich]{1} [aber]{2} [säg]{3} [eu]{4}: [Jede, wo]{6,7} [sini]{11} [Frau]{9,10} [entlaat]{8} – [ussert]{12} [wäge]{13} [Unzucht]{14} –, [macht]{15}, [dass]{15} [mit ire]{16} [d Ee broche wird]{17}; und{18} [wer]{19,20} [e Entlasseni]{21} [hüratet]{22}, [bricht d Ee]{23}. ~5(ὅτι leitet d Ussag ii; mit em Doppelpunkt widergää)",
  "MAT.5.33": "[Ir händ]{2} [wiiter]{1} [ghört]{2}, [dass]{3} [zu de Alte]{5,6} [gseit worde isch]{4}: «[Du söllsch]{8} [kei]{7} [Meineid schwöre]{8}; [du söllsch]{9} [aber]{10} [em Herr]{11,12} [dini]{15} [Eid]{13,14} [halte]{9}.»",
@@ -132,7 +132,7 @@ GSW = {
  "MAT.5.42": "[Gib]{4} [däm, wo]{1} [dich]{3} [bittet]{2}, und{5} [cheer di]{12} [nöd]{11} [ab]{12} [vo däm, wo]{6} [vo]{8} [dir]{9} [öppis entlehne]{10} [will]{7}.",
  "MAT.5.43": "[Ir händ ghört]{1}, [dass]{2} [gseit worde isch]{3}: «[Du söllsch]{4} [din]{7} [Nächschte]{5,6} [liebe]{4} und{8} [din]{12} [Find]{10,11} [hasse]{9}.»",
  "MAT.5.44": "[Ich]{1} [aber]{2} [säg]{3} [eu]{4}: [Liebed]{5} [eui]{8} [Find]{6,7} und{9} [bätted]{10} [für]{11} [die, wo]{12} [eu]{14} [verfolged]{13},",
- "MAT.5.45": "[demit]{1} [ir]{2} [Söhn]{3} [vo eurem]{4,6} [Vatter]{5} [i]{7,8} [de Himel]{9} [wärded]{2}; [dänn]{10} [er laat]{14} [sini]{13} [Sunne]{11,12} [ufgaa]{14} [über]{15} [Bööse]{16} und{17} [Gueti]{18} und{19} [laat s rägne]{20} [über]{21} [Grächti]{22} und{23} [Ungrächti]{24}.",
+ "MAT.5.45": "[damit]{1} [ir]{2} [Söhn]{3} [vo eurem]{4,6} [Vatter]{5} [i]{7,8} [de Himel]{9} [wärded]{2}; [dänn]{10} [er laat]{14} [sini]{13} [Sunne]{11,12} [ufgaa]{14} [über]{15} [Bööse]{16} und{17} [Gueti]{18} und{19} [laat s rägne]{20} [über]{21} [Grächti]{22} und{23} [Ungrächti]{24}.",
  "MAT.5.46": "[Dänn]{2} [wänn]{1} [ir]{3} [die]{4} [liebed]{3}, [wo]{4} [eu]{6} [liebed]{5}, [was für en]{7} [Loon]{8} [händ ir]{9}? [Mached]{16} [nöd]{10} [au]{11} [d Zöllner]{12,13} [s Gliiche]{14,15}?",
  "MAT.5.47": "Und{1} [wänn]{2} [ir]{3} [nu]{7} [eui]{6} [Brüeder]{4,5} [grüessed]{3}, [was]{8} [mached ir]{10} [Bsunders]{9}? [Mached]{17} [nöd]{11} [au]{12} [d Heide]{13,14} [s Gliiche]{15,16}?",
  "MAT.5.48": "[Ir]{3} [söled]{1} [also]{2} [vollkomme]{4} [sii]{1}, [wie]{5} [eue]{8} [himmlisch]{9,10} [Vatter]{6,7} [vollkomme]{11} [isch]{12}.",
@@ -140,8 +140,8 @@ GSW = {
 
 # (Stelle, Zieltext, Art, griechisch, wörtlicher, andere Möglichkeiten, Hinweis)
 DEC_DE = [
- ("MAT.5.1", "die Menge", "adapted", "τοὺς ὄχλους", "die Mengen", ["die Volksmengen", "die Scharen"],
-  "Matthäus setzt ὄχλος oft in den Plural (nach MACULA-Lemma 49-mal im Buch). Im Deutschen steht die Einzahl; gemeint sind die Menschenmengen aus [[MAT.4.25]]. Dass sie mithören, setzt [[MAT.7.28]] voraus. Mundart «d Mängi»."),
+ ("MAT.5.1", "die Menschenmengen", "literal", "τοὺς ὄχλους", "die Mengen", ["die Menge", "die Volksmengen", "die Scharen"],
+  "Einheitlich für Matthäus festgelegt: ὄχλος «die Menge», οἱ ὄχλοι «die Menschenmengen» (Mundart «d Mängi», «d Lüüt»). Matthäus setzt ὄχλος oft in den Plural (nach MACULA-Lemma 49-mal im Buch). Gemeint sind die Menschenmengen aus [[MAT.4.25]]; dass sie mithören, setzt [[MAT.7.28]] voraus. προσέρχομαι ist einheitlich «herantreten»."),
  ("MAT.5.1", "auf den Berg", "literal", "εἰς τὸ ὄρος", None, ["auf einen Berg", "ins Bergland"],
   "Mit Artikel, aber ohne Namen. Daher der übliche Name «Bergpredigt». Viele sehen einen Anklang an Mose, der auf den Berg Sinai steigt ([[EXO.19.3]], [[EXO.24.12]]–[[EXO.24.18]]); [[LUK.6.17]] verlegt die verwandte Rede auf einen ebenen Platz."),
  ("MAT.5.1", "als er sich gesetzt hatte", "literal", "καθίσαντος αὐτοῦ", None, None,
@@ -202,8 +202,8 @@ DEC_DE = [
   "πληρόω ist bei Matthäus das Verb der Erfüllungszitate ([[MAT.1.22]], [[MAT.2.15]] u. ö.; nach MACULA-Lemma 16-mal im Buch). Ob Jesus das Gesetz durch sein Tun erfüllt, es in seiner Lehre zu seinem eigentlichen Sinn führt oder ob gemeint ist, dass sich Gesetz und Propheten in ihm erfüllen, ist umstritten. «Erfüllen» lässt das offen."),
  ("MAT.5.17", "das Gesetz oder die Propheten", "literal", "τὸν νόμον ἢ τοὺς προφήτας", None, ["die Tora oder die Propheten"],
   "Bezeichnung der heiligen Schriften Israels (vgl. [[MAT.7.12]], [[MAT.22.40]]). νόμος ist «Gesetz» wie bei Markus und Johannes; die hebräische tôrā meint mehr: «Weisung»."),
- ("MAT.5.18", "amen", "literal", "ἀμὴν λέγω ὑμῖν", None, ["wahrlich", "ganz gewiss"],
-  "Grundentscheid für Matthäus: ἀμὴν λέγω ὑμῖν / σοι «Amen, ich sage euch / dir». Das hebräische Bekräftigungswort steht vor der eigenen Aussage. Diese Redeweise ist in den Evangelien auf Jesus beschränkt. Hier steht γάρ dazwischen («Denn amen …»)."),
+ ("MAT.5.18", "Amen", "literal", "ἀμὴν λέγω ὑμῖν", None, ["Wahrlich", "Ganz gewiss"],
+  "Grundentscheid für Matthäus: ἀμὴν λέγω ὑμῖν / σοι «Amen, ich sage euch / dir». Das hebräische Bekräftigungswort steht vor der eigenen Aussage. Diese Redeweise ist in den Evangelien auf Jesus beschränkt. Hier steht γάρ dazwischen; es ist mit «nämlich» wiedergegeben, damit die Formel am Satzanfang bleibt (wie [[MAT.17.20]])."),
  ("MAT.5.18", "Jota", "literal", "ἰῶτα", None, ["Buchstabe"],
   "Der kleinste griechische Buchstabe; er steht wohl für das hebräische Jod, den kleinsten Buchstaben des hebräischen Alphabets."),
  ("MAT.5.18", "Häkchen", "interpretive", "κεραία", "Hörnchen", ["Strichlein", "Tüpfelchen", "Pünktchen"],
@@ -252,7 +252,7 @@ DEC_DE = [
  ("MAT.5.28", "um sie zu begehren", "interpretive", "πρὸς τὸ ἐπιθυμῆσαι αὐτὴν", None, ["und sie begehrt", "so dass er sie begehrt"],
   "πρὸς τό mit Infinitiv bezeichnet meist den Zweck: ein absichtliches, begehrliches Ansehen, nicht das blosse Sehen. ἐπιθυμέω ist das Verb von [[EXO.20.17]] in der griechischen Bibel (οὐκ ἐπιθυμήσεις)."),
  ("MAT.5.29", "zu Fall bringt", "adapted", "σκανδαλίζει", "zum Anstoss wird", ["zur Sünde verführt", "ärgert", "zum Stolperstein wird"],
-  "Grundentscheid für Matthäus: σκανδαλίζω «zu Fall bringen» (nach MACULA-Lemma 14-mal im Buch), wie in [[MRK.9.43]]–[[MRK.9.47]]; wo es um innere Abwendung geht (z. B. [[MAT.11.6]], [[MAT.26.31]]), mit eigener Entscheidung. σκάνδαλον ist ursprünglich das Stellholz einer Falle, dann ein Stolperstein. «Ärgern» (Luther) ist heute missverständlich."),
+  "Einheitlich für Matthäus festgelegt: σκανδαλίζω (nach MACULA-Lemma 14-mal im Buch) aktiv «zu Fall bringen», wie in [[MRK.9.43]]–[[MRK.9.47]]; passiv gegenüber einer Person «Anstoss nehmen an» (z. B. [[MAT.11.6]]), sonst «zu Fall kommen» (z. B. [[MAT.26.31]]). σκάνδαλον, ursprünglich das Stellholz einer Falle, ist «Fallstrick». «Ärgern» (Luther) ist heute missverständlich. Ebenso [[MAT.5.30]]."),
  ("MAT.5.29", "reiss es heraus", "literal", "ἔξελε αὐτὸν", None, None,
   "Die harte Bildrede ist wörtlich wiedergegeben. Meist wird sie als bewusste Übertreibung verstanden, die zur radikalen Abkehr vom Bösen ruft, nicht als Anweisung zur Selbstverstümmelung."),
  ("MAT.5.29", "Leib", "literal", "σῶμά", None, ["Körper"], None),
@@ -308,13 +308,13 @@ DEC_DE = [
 ]
 
 DEC_GSW = [
- ("MAT.5.1", "d Mängi", "adapted", "τοὺς ὄχλους", "d Mängine", None, "Griechisch Plural; i de Mundart Einzahl."),
+ ("MAT.5.1", "d Lüüt", "adapted", "τοὺς ὄχλους", "d Mängine", ["d Mängi"], "Einheitlich im Matthäus: ὄχλος «d Mängi», οἱ ὄχλοι «d Lüüt»."),
  ("MAT.5.1", "abgsässe", "literal", "καθίσαντος", None, None, "En jüdische Lehrer hät im Sitze gleert."),
  ("MAT.5.3", "Sälig", "traditional", "Μακάριοι", None, ["Glücklich", "Wohl dene"],
   "Grundentscheid für Matthäus: μακάριος immer «sälig» (wie bi de Johannes-Übersetzig). D Säligpriisig wünscht Glück und spricht s zue; si isch kei Uftrag. «sind» isch ergänzt."),
  ("MAT.5.3", "di Arme im Geischt", "interpretive", "οἱ πτωχοὶ τῷ πνεύματι", None, ["die, wo vor Gott arm sind", "di Arme"],
   "Gmeint sind Mänsche, wo sich vor Gott arm und bedürftig wüssed, oder di Arme und Plaagete, wo uf Gott hoffed ([[ISA.61.1]]); [[LUK.6.20]] seit nu «di Arme»."),
- ("MAT.5.3", "s Riich vo de Himel", "literal", "ἡ βασιλεία τῶν οὐρανῶν", None, ["s Himmelriich", "s Riich vo Gott"],
+ ("MAT.5.3", "s Riich vo de Himel", "literal", "ἡ βασιλεία τῶν οὐρανῶν", None, ["s Himelriich", "s Riich vo Gott"],
   "Grundentscheid für Matthäus: «s Riich vo de Himel»; ἡ βασιλεία τοῦ θεοῦ «s Riich vo Gott». «Himel» umschriibt ehrfürchtig Gott."),
  ("MAT.5.4", "wo truured", "literal", "οἱ πενθοῦντες", None, None, "Aaklang a [[ISA.61.2]]."),
  ("MAT.5.5", "d Ärde", "interpretive", "τὴν γῆν", None, ["s Land"], "I [[PSA.37.11]] isch s verheisse Land gmeint; bi Matthäus wird s meist wiiter verstande."),
@@ -334,7 +334,7 @@ DEC_GSW = [
   "Öb de Jesus s Gsetz mit sim Tue erfüllt, es i sinere Lehr zu sim eigetliche Sinn füert oder öb sich Gsetz und Prophete in ihm erfülled, isch umstritte."),
  ("MAT.5.18", "Hääggli", "interpretive", "κεραία", "Hörnli", ["Strichli", "Tüpfli"], "En chliine Strich, wo hebräischi Buechstabe vonenand underscheidet. S Jota isch de chliinscht griechisch Buechstabe."),
  ("MAT.5.18", "sicher nöd", "literal", "οὐ μὴ", "nöd nöd", None, "Doppleti Verneinig als Verstärchig; wie [[MRK.10.15]]."),
- ("MAT.5.20", "die vo de Schriftgelehrti und Pharisäer", "literal", "τῶν γραμματέων καὶ Φαρισαίων", None, None,
+ ("MAT.5.20", "die vo de Schriftgelehrte und Pharisäer", "literal", "τῶν γραμματέων καὶ Φαρισαίων", None, None,
   "Neutral widergää; Matthäus redt us ere innerjüdische Uusenandersetzig vo sinere Ziit."),
  ("MAT.5.21", "em Gricht verfalle sii", "adapted", "ἔνοχος ἔσται τῇ κρίσει", "schuldig sii em Gricht", None, "ἔνοχος isch en Rächtsbegriff: «haftbar, verfalle»."),
  ("MAT.5.22", "Raka", "literal", "Ῥακά", None, ["Hohlchopf"], "Aramäischs Schimpfwort (wahrschiinli «Läärchopf»), im Griechische umschribe."),
@@ -346,8 +346,8 @@ DEC_GSW = [
  ("MAT.5.23", "Gschänk", "literal", "τὸ δῶρόν", None, ["Opfergab"], "Es Opfer im Tämpel."),
  ("MAT.5.25", "Einig di", "adapted", "ἴσθι εὐνοῶν", "sig guet gsinnt", None, None),
  ("MAT.5.26", "Rappe", "adapted", "κοδράντην", "Quadrans", None, "Di chliinscht römisch Münz; «Rappe» seit, was gmeint isch: bis ufs Letscht."),
- ("MAT.5.29", "zu Fall bringt", "adapted", "σκανδαλίζει", "zum Aastoss wird", None,
-  "Grundentscheid für Matthäus: σκανδαλίζω «zu Fall bringe», wie [[MRK.9.43]]–[[MRK.9.47]]."),
+ ("MAT.5.29", "z Fall bringt", "adapted", "σκανδαλίζει", "zum Aastoss wird", None,
+  "Einheitlich im Matthäus: σκανδαλίζω aktiv «z Fall bringe», wie [[MRK.9.43]]–[[MRK.9.47]]; passiv gägenüber ere Person «Aastoss nää», susch «z Fall choo»; σκάνδαλον «Fallstrick». Ebeso [[MAT.5.30]]."),
  ("MAT.5.32", "ussert wäge Unzucht", "interpretive", "παρεκτὸς λόγου πορνείας", None, ["ussert bi Ebruch", "ussert bi sexueller Untreui"],
   "D Usnaam staat nu bi Matthäus (vgl. [[MAT.19.9]]); πορνεία isch wiiter als «Ebruch» und meint uverlaubti sexuelli Beziehige allgemein."),
  ("MAT.5.32", "macht, dass mit ire d Ee broche wird", "literal", "ποιεῖ αὐτὴν μοιχευθῆναι", None, ["macht si zur Ebrächerin"],
@@ -380,15 +380,15 @@ ALTS = [
   ["De Zuesatz cha verdüütliche, dass es um Wort gaat; gliich guet cha ῥῆμα bim Abschriibe usgfalle sii.",
    AUTO_G + " läsed 01 und 03 ohni Zuesatz, 04 und 032 mit ῥῆμα; 05 hät si keinere Läsart zueteilt."]),
  ("VAR-SBLGNTAPP-MAT-005-022-01:R2", "MAT.5.22", "Jeder, der seinem Bruder zürnt", "Jeder, der seinem Bruder ohne Grund zürnt",
-  "Jede, wo uf sin Brüeder wüetig isch", "Jede, wo ohni Grund uf sin Brüeder wüetig isch", "bedeutsam",
+  "Jede, wo uf sin Brueder wüetig isch", "Jede, wo ohni Grund uf sin Brueder wüetig isch", "bedeutsam",
   "Mit εἰκῇ («ohne Grund») ist nicht jeder Zorn verurteilt, sondern nur grundloser Zorn.",
   "Mit εἰκῇ («ohni Grund») isch nöd jede Zorn verurteilt, sondern nu de grundlos.",
   {"R1": [("αὐτοῦ", "seinem Bruder (ohne Zusatz)", "SBLGNT, WH, NA28")], "R2": [("αὐτοῦ εἰκῇ", "seinem Bruder ohne Grund", "Treg, RP")]},
-  {"R1": [("αὐτοῦ", "sim Brüeder (ohni Zuesatz)", "SBLGNT, WH, NA28")], "R2": [("αὐτοῦ εἰκῇ", "sim Brüeder ohni Grund", "Treg, RP")]},
+  {"R1": [("αὐτοῦ", "sim Brueder (ohni Zuesatz)", "SBLGNT, WH, NA28")], "R2": [("αὐτοῦ εἰκῇ", "sim Brueder ohni Grund", "Treg, RP")]},
   ["Der Zusatz kann die harte Forderung abgemildert haben, damit sie zu berechtigtem Zorn passt (vgl. Jesu Zorn in [[MRK.3.5]], [[EPH.4.26]]).",
    "Umgekehrt könnte das Wort gestrichen worden sein, um die Forderung zu verschärfen oder weil es überflüssig schien.",
    AUTO + " lesen 01 und 03 ohne Zusatz, 05 und 032 mit εἰκῇ. 04 ist an dieser Stelle nicht erhalten."],
-  ["De Zuesatz cha di hert Forderig abgschwächt ha, demit si zu berächtigtem Zorn passt (vgl. [[MRK.3.5]], [[EPH.4.26]]).",
+  ["De Zuesatz cha di hert Forderig abgschwächt ha, damit si zu berächtigtem Zorn passt (vgl. [[MRK.3.5]], [[EPH.4.26]]).",
    "Umgekeert chönnt s Wort gstriche worde sii, zum d Forderig verschärfe.",
    AUTO_G + " läsed 01 und 03 ohni Zuesatz, 05 und 032 mit εἰκῇ. 04 isch a dere Stell nöd erhalte."]),
  ("VAR-SBLGNTAPP-MAT-005-025-02:R2", "MAT.5.25", "und der Richter dem Gerichtsdiener", "und der Richter dich dem Gerichtsdiener übergibt",
@@ -511,9 +511,9 @@ UNITS = [
  ("TU-MAT-005-001-048", "MAT.5.1-MAT.5.48", "section", "Die Bergpredigt beginnt: Seligpreisungen, Salz und Licht, Gesetz und «Ich aber sage euch»",
   ["TU-MAT-005-001-012", "TU-MAT-005-013-016", "TU-MAT-005-017-020", "TU-MAT-005-021-026", "TU-MAT-005-027-032",
    "TU-MAT-005-033-037", "TU-MAT-005-038-042", "TU-MAT-005-043-048"],
-  "Als Jesus die Menge sieht, steigt er auf den Berg, setzt sich und lehrt seine Jünger. Er preist Arme im Geist, Trauernde, Sanftmütige, nach Gerechtigkeit Hungernde, Barmherzige, Menschen mit reinem Herzen, Friedensstifter und Verfolgte selig, auch seine Hörer, wenn man sie seinetwegen schmäht. Er nennt sie das Salz der Erde und das Licht der Welt. Er sei nicht gekommen, das Gesetz oder die Propheten aufzuheben, sondern zu erfüllen; ihre Gerechtigkeit müsse weit über die der Schriftgelehrten und Pharisäer hinausgehen. Sechsmal stellt er dem, was gesagt worden ist, sein «Ich aber sage euch» gegenüber: zum Töten, zum Ehebruch, zur Scheidung, zum Schwören, zur Vergeltung und zur Liebe zum Nächsten und zum Feind. Er schliesst: Liebt eure Feinde; ihr sollt vollkommen sein, wie euer himmlischer Vater vollkommen ist. Die Rede geht in Kapitel 6 und 7 weiter.", SEG),
+  "Als Jesus die Menschenmengen sieht, steigt er auf den Berg, setzt sich und lehrt seine Jünger. Er preist Arme im Geist, Trauernde, Sanftmütige, nach Gerechtigkeit Hungernde, Barmherzige, Menschen mit reinem Herzen, Friedensstifter und Verfolgte selig, auch seine Hörer, wenn man sie seinetwegen schmäht. Er nennt sie das Salz der Erde und das Licht der Welt. Er sei nicht gekommen, das Gesetz oder die Propheten aufzuheben, sondern zu erfüllen; ihre Gerechtigkeit müsse weit über die der Schriftgelehrten und Pharisäer hinausgehen. Sechsmal stellt er dem, was gesagt worden ist, sein «Ich aber sage euch» gegenüber: zum Töten, zum Ehebruch, zur Scheidung, zum Schwören, zur Vergeltung und zur Liebe zum Nächsten und zum Feind. Er schliesst: Liebt eure Feinde; ihr sollt vollkommen sein, wie euer himmlischer Vater vollkommen ist. Die Rede geht in Kapitel 6 und 7 weiter.", SEG),
  ("TU-MAT-005-001-012", "MAT.5.1-MAT.5.12", "discourse", "Die Seligpreisungen", None,
-  "Als Jesus die Menge sieht, steigt er auf den Berg und setzt sich; seine Jünger treten zu ihm, und er lehrt sie. Er nennt selig die Armen im Geist, die Trauernden, die Sanftmütigen, die nach der Gerechtigkeit hungern und dürsten, die Barmherzigen, die ein reines Herz haben, die Frieden stiften und die wegen der Gerechtigkeit verfolgt worden sind. Den Armen im Geist und den Verfolgten gehöre das Reich der Himmel; die anderen würden getröstet, die Erde erben, satt werden, Barmherzigkeit erfahren, Gott sehen und Söhne Gottes genannt werden. Selig nennt er auch seine Hörer, wenn man sie seinetwegen beschimpft, verfolgt und verleumdet: Sie sollen sich freuen, denn ihr Lohn in den Himmeln ist gross; so hat man schon die Propheten vor ihnen verfolgt.", None),
+  "Als Jesus die Menschenmengen sieht, steigt er auf den Berg und setzt sich; seine Jünger treten zu ihm heran, und er lehrt sie. Er nennt selig die Armen im Geist, die Trauernden, die Sanftmütigen, die nach der Gerechtigkeit hungern und dürsten, die Barmherzigen, die ein reines Herz haben, die Frieden stiften und die wegen der Gerechtigkeit verfolgt worden sind. Den Armen im Geist und den Verfolgten gehöre das Reich der Himmel; die anderen würden getröstet, die Erde erben, satt werden, Barmherzigkeit erfahren, Gott sehen und Söhne Gottes genannt werden. Selig nennt er auch seine Hörer, wenn man sie seinetwegen beschimpft, verfolgt und verleumdet: Sie sollen sich freuen, denn ihr Lohn in den Himmeln ist gross; so hat man schon die Propheten vor ihnen verfolgt.", None),
  ("TU-MAT-005-013-016", "MAT.5.13-MAT.5.16", "discourse", "Salz der Erde und Licht der Welt", None,
   "Jesus sagt seinen Hörern: Ihr seid das Salz der Erde; fad gewordenes Salz taugt zu nichts mehr, als hinausgeworfen und zertreten zu werden. Ihr seid das Licht der Welt; eine Stadt auf einem Berg kann nicht verborgen bleiben, und eine Lampe stellt man nicht unter den Scheffel, sondern auf den Leuchter. So soll ihr Licht vor den Menschen leuchten, damit diese ihre guten Werke sehen und ihren Vater in den Himmeln preisen.", None),
  ("TU-MAT-005-017-020", "MAT.5.17-MAT.5.20", "discourse", "Gesetz und Propheten erfüllen", None,
@@ -531,23 +531,23 @@ UNITS = [
 ]
 UNITS_GSW = {
  "TU-MAT-005-001-048": ("D Bärgpredig faat aa: Säligpriisige, Salz und Liecht, s Gsetz und «Ich aber säg eu»",
-  "Wo de Jesus d Mängi gseet, staat er uf de Bärg ufe, sitzt ab und leert sini Jünger. Er priist di Arme im Geischt, die, wo truured, di Sanftmüetige, die, wo nach Grächtigkeit hungered, di Barmhärzige, die mit eme reine Härz, die, wo Fride stifted, und di Verfolgte sälig, au sini Zuehörer, wänn me si wäge ihm schlächt macht. Er nännt si s Salz vo de Ärde und s Liecht vo de Wält. Er sig nöd choo, zum s Gsetz oder d Prophete ufhebe, sondern zum erfülle; iri Grächtigkeit müess wiit über die vo de Schriftgelehrti und Pharisäer usegaa. Sächs Mal stellt er däm, was gseit worde isch, sis «Ich aber säg eu» gägenüber: zum Töte, zum Ebruch, zur Scheidig, zum Schwöre, zur Vergältig und zur Liebi zum Nächschte und zum Find. Er schlüüsst: Liebed eui Find; ir söled vollkomme sii, wie eue himmlisch Vatter vollkomme isch. D Red gaat im Kapitel 6 und 7 wiiter."),
+  "Wo de Jesus d Lüüt gseht, staat er uf de Bärg ufe, sitzt ab und leert sini Jünger. Er priist di Arme im Geischt, die, wo truured, di Sanftmüetige, die, wo nach Grächtigkeit hungered, di Barmhärzige, die mit eme reine Härz, die, wo Fride stifted, und di Verfolgte sälig, au sini Zuehörer, wänn me si wäge ihm schlächt macht. Er nännt si s Salz vo de Ärde und s Liecht vo de Wält. Er sig nöd choo, zum s Gsetz oder d Prophete ufhebe, sondern zum erfülle; iri Grächtigkeit müess wiit über die vo de Schriftgelehrte und Pharisäer usegaa. Sächs Mal stellt er däm, was gseit worde isch, sis «Ich aber säg eu» gägenüber: zum Töte, zum Ebruch, zur Scheidig, zum Schwöre, zur Vergältig und zur Liebi zum Nächschte und zum Find. Er schlüüsst: Liebed eui Find; ir söled vollkomme sii, wie eue himmlisch Vatter vollkomme isch. D Red gaat im Kapitel 6 und 7 wiiter."),
  "TU-MAT-005-001-012": ("D Säligpriisige",
-  "Wo de Jesus d Mängi gseet, staat er uf de Bärg ufe und sitzt ab; sini Jünger chömed zu ihm, und er leert si. Er nännt sälig di Arme im Geischt, die, wo truured, di Sanftmüetige, die, wo nach de Grächtigkeit hungered und dürschted, di Barmhärzige, die, wo es reins Härz händ, die, wo Fride stifted, und die, wo wäge de Grächtigkeit verfolgt worde sind. De Arme im Geischt und de Verfolgte ghöri s Riich vo de Himel; di andere wärdid tröschtet, wärdid d Ärde erbe, satt wärde, Barmhärzigkeit erfaare, Gott gsee und Söhn vo Gott gnännt. Sälig nännt er au sini Zuehörer, wänn me si wäge ihm beschimpft, verfolgt und Lüüge über si verzellt: Si söled sich fröie, dänn ire Loon i de Himel isch gross; so hät me scho d Prophete vor ine verfolgt."),
+  "Wo de Jesus d Lüüt gseht, staat er uf de Bärg ufe und sitzt ab; sini Jünger chömed zu ihm häre, und er leert si. Er nännt sälig di Arme im Geischt, die, wo truured, di Sanftmüetige, die, wo nach de Grächtigkeit hungered und dürschted, di Barmhärzige, die, wo es reins Härz händ, die, wo Fride stifted, und die, wo wäge de Grächtigkeit verfolgt worde sind. De Arme im Geischt und de Verfolgte ghöri s Riich vo de Himel; di andere wärdid tröschtet, wärdid d Ärde erbe, satt wärde, Barmhärzigkeit erfaare, Gott gseh und Söhn vo Gott gnännt. Sälig nännt er au sini Zuehörer, wänn me si wäge ihm beschimpft, verfolgt und Lüüge über si verzellt: Si söled sich fröie, dänn ire Loon i de Himel isch gross; so hät me scho d Prophete vor ine verfolgt."),
  "TU-MAT-005-013-016": ("S Salz vo de Ärde und s Liecht vo de Wält",
-  "De Jesus seit sine Zuehörer: Ir sind s Salz vo de Ärde; Salz, wo fad worde isch, isch für nüüt mee guet, als dass me s usewirft und vertrampet. Ir sind s Liecht vo de Wält; e Stadt uf eme Bärg cha nöd versteckt bliibe, und e Lampe stellt me nöd under de Schäffel, sondern uf de Lüüchter. Eso söll ires Liecht vor de Lüüt lüüchte, demit die iri guete Wärch gseend und ire Vatter i de Himel priised."),
+  "De Jesus seit sine Zuehörer: Ir sind s Salz vo de Ärde; Salz, wo fad worde isch, isch für nüüt mee guet, als dass me s usewirft und vertrampet. Ir sind s Liecht vo de Wält; e Stadt uf eme Bärg cha nöd versteckt bliibe, und e Lampe stellt me nöd under de Schäffel, sondern uf de Lüüchter. Eso söll ires Liecht vor de Lüüt lüüchte, damit die iri guete Wärch gsehnd und ire Vatter i de Himel priised."),
  "TU-MAT-005-017-020": ("S Gsetz und d Prophete erfülle",
-  "De Jesus seit, er sig nöd choo, zum s Gsetz oder d Prophete ufhebe, sondern zum erfülle. Bis de Himel und d Ärde vergönd, vergöng vom Gsetz nöd es einzigs Jota oder es einzigs Hääggli, bis alles gschee isch. Wer eis vo de chliinschte Gebot uflööst und eso leert, wärdi de Chliinscht im Riich vo de Himel gnännt, wer si tuet und leert, gross. Wänn d Grächtigkeit vo sine Zuehörer nöd wiit über die vo de Schriftgelehrti und Pharisäer usegaat, chömed si sicher nöd is Riich vo de Himel ine."),
+  "De Jesus seit, er sig nöd choo, zum s Gsetz oder d Prophete ufhebe, sondern zum erfülle. Bis de Himel und d Ärde vergönd, vergöng vom Gsetz nöd es einzigs Jota oder es einzigs Hääggli, bis alles gscheh isch. Wer eis vo de chliinschte Gebot uflööst und eso leert, wärdi de Chliinscht im Riich vo de Himel gnännt, wer si tuet und leert, gross. Wänn d Grächtigkeit vo sine Zuehörer nöd wiit über die vo de Schriftgelehrte und Pharisäer usegaat, chömed si sicher nöd is Riich vo de Himel ine."),
  "TU-MAT-005-021-026": ("Vom Töte und vom Zorn",
-  "Zum Gebot «Du söllsch nöd töte» seit de Jesus: Scho wer uf sin Brüeder wüetig isch, isch em Gricht verfalle; wer zu ihm «Raka» seit, em Hoche Raat, wer «Du Tubel» seit, em Füür vo de Höll. Wer sis Gschänk zum Altar bringt und sich dört erinneret, dass sin Brüeder öppis gäge ihn hät, söll s Gschänk la staa, sich zerscht mit em Brüeder versööne und s dänn darbringe. Mit em Gägner söll me sich underwägs schnäll einige, demit er eim nöd em Richter übergit und me is Gfängnis gworfe wird, wo me erscht wider usechunnt, wänn me de letscht Rappe zaalt hät."),
+  "Zum Gebot «Du söllsch nöd töte» seit de Jesus: Scho wer uf sin Brueder wüetig isch, isch em Gricht verfalle; wer zu ihm «Raka» seit, em Hoche Raat, wer «Du Tubel» seit, em Füür vo de Höll. Wer sis Gschänk zum Altar bringt und sich dört erinneret, dass sin Brueder öppis gäge ihn hät, söll s Gschänk la staa, sich zerscht mit em Brueder versööne und s dänn darbringe. Mit em Gägner söll me sich underwägs schnäll einige, damit er eim nöd em Richter übergit und me is Gfängnis gworfe wird, wo me erscht wider usechunnt, wänn me de letscht Rappe zaalt hät."),
  "TU-MAT-005-027-032": ("Vom Ebruch und vo de Scheidig",
-  "Zum Gebot «Du söllsch nöd d Ee breche» seit de Jesus: Wer e Frau aaluegt, zum si begääre, hät i sim Härz scho mit ire d Ee broche. Wänn s rächt Aug oder di rächt Hand eim zu Fall bringt, söll me s Aug usriisse und d Hand abhaue; s isch besser, es Glid z verliere, als dass de ganz Liib i d Höll chunnt. Zur Wiisig, wer sini Frau entlaat, söll ire en Scheidigsbrief gää, seit er: Wer sini Frau entlaat, ussert wäge Unzucht, macht, dass mit ire d Ee broche wird, und wer e Entlasseni hüratet, bricht d Ee."),
+  "Zum Gebot «Du söllsch nöd d Ee breche» seit de Jesus: Wer e Frau aaluegt, zum si begääre, hät i sim Härz scho mit ire d Ee broche. Wänn s rächt Aug oder di rächt Hand eim z Fall bringt, söll me s Aug usriisse und d Hand abhaue; s isch besser, es Glid z verliere, als dass de ganz Liib i d Höll chunnt. Zur Wiisig, wer sini Frau entlaat, söll ire en Scheidigsbrief gää, seit er: Wer sini Frau entlaat, ussert wäge Unzucht, macht, dass mit ire d Ee broche wird, und wer e Entlasseni hüratet, bricht d Ee."),
  "TU-MAT-005-033-037": ("Vom Schwöre",
   "Zu de Alte isch gseit worde, si söled kei Meineid schwöre und em Herr iri Eid halte. De Jesus seit, me söll überhaupt nöd schwöre: nöd bim Himel, em Troon vo Gott, nöd bi de Ärde, em Schämel für sini Füess, nöd bi Jerusalem, de Stadt vom grosse König, und nöd bim eigete Chopf, dänn me chan kei einzigs Haar wiiss oder schwarz mache. D Red söll «Ja, ja» und «nei, nei» sii; was mee isch, isch vom Bööse."),
  "TU-MAT-005-038-042": ("Vo de Vergältig",
   "Em Satz «Aug um Aug und Zaa um Zaa» stellt de Jesus gägenüber: Me söll em Bööse nöd widerstaa. Wer eim uf de rächt Bagge schlaat, däm söll me au de ander anehebe; wer vor Gricht s Hemd will nää, däm au de Mantel laa; wer eim zwingt, ei Meile mitzgaa, mit däm söll me zwei gaa. Wer bittet, däm söll me gää, und vo däm, wo öppis entlehne will, söll me sich nöd abcheere."),
  "TU-MAT-005-043-048": ("Vo de Findesliebi",
-  "Zum Wort «Du söllsch din Nächschte liebe und din Find hasse» seit de Jesus: Liebed eui Find und bätted für die, wo eu verfolged, demit ir Söhn vo eurem Vatter i de Himel wärded; dänn er laat sini Sunne über Bööse und Gueti ufgaa und laat s rägne über Grächti und Ungrächti. Wer nu die liebt, wo ihn liebed, und nu sini Brüeder grüesst, macht nüüt Bsunders; das mached au d Zöllner und d Heide. Ir söled also vollkomme sii, wie eue himmlisch Vatter vollkomme isch."),
+  "Zum Wort «Du söllsch din Nächschte liebe und din Find hasse» seit de Jesus: Liebed eui Find und bätted für die, wo eu verfolged, damit ir Söhn vo eurem Vatter i de Himel wärded; dänn er laat sini Sunne über Bööse und Gueti ufgaa und laat s rägne über Grächti und Ungrächti. Wer nu die liebt, wo ihn liebed, und nu sini Brüeder grüesst, macht nüüt Bsunders; das mached au d Zöllner und d Heide. Ir söled also vollkomme sii, wie eue himmlisch Vatter vollkomme isch."),
 }
 
 NOTES_DE = [
@@ -562,9 +562,11 @@ NOTES_DE = [
   "«vom Bösen» und «die Menschen» sind darauf abgestimmt. Gleiche griechische Wendungen wie bei Markus sind möglichst gleich "
   "übersetzt (z. B. «Scheffel», «Scheidebrief», «entlassen», «zu Fall bringen», «Hölle», «Du sollst nicht töten»)."),
  ("Einheitliche Matthäus-Begriffe (für alle Kapitel abgestimmt): «das Reich der Himmel» / «das Reich Gottes»; «Amen, ich sage "
-  "euch / dir»; «Vater in den Himmeln», «himmlischer Vater»; «Schriftgelehrte», «Pharisäer»; «Gesetz». Hier neu festgelegt "
-  "und in decisions begründet: μακάριος «selig» (13-mal im Buch); δικαιοσύνη «Gerechtigkeit» (7-mal); σκανδαλίζω «zu Fall "
-  "bringen» (14-mal, wie Markus); γέεννα «Hölle» (7-mal); μισθός «Lohn» (10-mal); οὐ μή «gewiss nicht»; ὄχλοι «die Menge»; "
+  "euch / dir»; «Vater in den Himmeln», «himmlischer Vater»; «Schriftgelehrte», «Pharisäer»; «Gesetz»; ὄχλος «die Menge», οἱ "
+  "ὄχλοι «die Menschenmengen»; προσέρχομαι «herantreten»; σκανδαλίζω passiv «Anstoss nehmen an» bzw. «zu Fall kommen», "
+  "σκάνδαλον «Fallstrick»; δοξάζω (τὸν θεόν) «preisen». Hier neu festgelegt "
+  "und in decisions begründet: μακάριος «selig» (13-mal im Buch); δικαιοσύνη «Gerechtigkeit» (7-mal); σκανδαλίζω aktiv «zu "
+  "Fall bringen» (14-mal, wie Markus); γέεννα «Hölle» (7-mal); μισθός «Lohn» (10-mal); οὐ μή «gewiss nicht»; "
   "ἄνθρωποι «die Menschen» (Mundart «d Lüüt»); ἐθνικοί «Heiden»; τελῶναι «Zöllner»; τέλειος «vollkommen»; δοξάζω (von Menschen "
   "gegenüber Gott) «preisen»; ἀδελφός «Bruder»."),
  ("Die Rede ([[MAT.5.3]]–[[MAT.7.27]]) steht ohne Anführungszeichen, wie in TRANS-MAT-006-005-015; Zitate in der Rede stehen in «». "
@@ -588,7 +590,8 @@ NOTES_GSW = [
   "Vatter», «Loon», «Heide», «vom Bööse» und «d Lüüt» sind druf abgstimmt."),
  ("Grundentscheid für Matthäus (usfüerlich i de hochdütsche translation_notes): «s Riich vo de Himel», «s Riich vo Gott»; «Amen, "
   "ich säg eu»; «Vatter i de Himel», «himmlisch»; «Schriftgelehrti», «Pharisäer»; μακάριος «sälig»; δικαιοσύνη «Grächtigkeit»; "
-  "σκανδαλίζω «zu Fall bringe»; γέεννα «Höll»; μισθός «Loon»; οὐ μή «sicher nöd»; ἄνθρωποι «d Lüüt»."),
+  "σκανδαλίζω «z Fall bringe»; γέεννα «Höll»; μισθός «Loon»; οὐ μή «sicher nöd»; ἄνθρωποι «d Lüüt»; ὄχλος «d Mängi», "
+  "οἱ ὄχλοι «d Lüüt»; προσέρχομαι «härechoo»; δοξάζω «priise»."),
  ("Mundart: Näme mit Artikel; Perfekt statt Präteritum; «wo» als Relativwort; kei Genitiv («s Riich vo de Himel»). D Red staat "
   "ohni Aafüerigszeiche wie im Vaterunser; Zitat i de Red stönd i «»."),
  "Eigeti Formulierig; nöd us ere veröffentlichte Mundart-Bible übernoo.",

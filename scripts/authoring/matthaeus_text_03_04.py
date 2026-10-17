@@ -43,7 +43,7 @@ DE = {
  "MAT.3.4": "Johannes{3,4} [selbst]{1} [aber]{2} [hatte]{5} [sein]{8} [Gewand]{6,7} [aus]{9} [Kamelhaar]{10,11} und{12} [einen ledernen]{14} [Gurt]{13} [um]{15} [seine]{18} [Hüften]{16,17}; [seine]{23} [Nahrung]{19,21} [aber]{20} [waren]{22} [Heuschrecken]{24} und{25} [wilder]{27} [Honig]{26}.",
  "MAT.3.5": "[Da]{1} [zog]{2} Jerusalem{5} und{6} [ganz]{7} [Judäa]{8,9} und{10} [die ganze]{11,12} [Umgebung]{13} [des Jordan]{14,15} [zu]{3} [ihm]{4} [hinaus]{2},",
  "MAT.3.6": "und{1} [sie liessen sich]{2} [im]{3,4} [Fluss]{6} Jordan{5} [von]{7} [ihm]{8} [taufen]{2} [und bekannten]{9} [ihre]{12} [Sünden]{10,11}.",
- "MAT.3.7": "[Als er]{1} [aber]{2} [viele]{3} [von den]{4} [Pharisäern]{5} und{6} [Sadduzäern]{7} [zu]{9} [seiner]{12} [Taufe]{10,11} [kommen]{8} [sah]{1}, [sagte er]{13} [zu ihnen]{14}: «[Ihr Schlangenbrut]{15,16}! [Wer]{17} [hat]{18} [euch]{19} [darauf gebracht]{18}, [vor]{21} [dem kommenden]{22,23} [Zorn]{24} [zu fliehen]{20}?",
+ "MAT.3.7": "[Als er]{1} [aber]{2} [viele]{3} [von den]{4} [Pharisäern]{5} und{6} [Sadduzäern]{7} [zu]{9} [seiner]{12} [Taufe]{10,11} [kommen]{8} [sah]{1}, [sagte er]{13} [zu ihnen]{14}: «[Ihr Vipernbrut]{15,16}! [Wer]{17} [hat]{18} [euch]{19} [darauf gebracht]{18}, [vor]{21} [dem kommenden]{22,23} [Zorn]{24} [zu fliehen]{20}?",
  "MAT.3.8": "[Bringt]{1} [also]{2} [Frucht]{3}, die [der Umkehr]{5,6} [würdig ist]{4}!",
  "MAT.3.9": "Und{1} [meint]{3} [nicht]{2}, ihr könntet [bei euch selbst]{5,6} [sagen]{4}: ‹[Wir haben]{8} [Abraham]{9,10} [zum Vater]{7}.› [Denn]{12} [ich sage]{11} [euch]{13}: [Gott]{16,17} [kann]{15} [aus]{18} [diesen]{21} [Steinen]{19,20} [dem Abraham]{24,25} [Kinder]{23} [erwecken]{22}. ~14(ὅτι leitet die Rede ein)",
  "MAT.3.10": "[Die Axt]{3,4} [liegt]{10} [aber]{2} [schon]{1} [an]{5} [der Wurzel]{6,7} [der Bäume]{8,9}. [Jeder]{11} [Baum]{13} [also]{12}, der [keine]{14} [gute]{17} [Frucht]{16} [bringt]{15}, [wird umgehauen]{18} und{19} [ins]{20} [Feuer]{21} [geworfen]{22}.",
@@ -90,32 +90,32 @@ GSW = {
  "MAT.3.4": "[De Johannes]{3,4} [sälber]{1} [aber]{2} [hät]{5} [sis]{8} [Gwand]{6,7} [us]{9} [Kamelhaar]{10,11} und{12} [en lädrige]{14} [Gurt]{13} [um]{15} [sini]{18} [Hüfte]{16,17} [ghaa]{5}; [sis]{23} [Ässe]{19,21} [aber]{20} [sind]{22} [Heuschrecke]{24} und{25} [wilde]{27} [Hung]{26} [gsii]{22}.",
  "MAT.3.5": "[Dänn]{1} [isch]{2} Jerusalem{5} und{6} [ganz]{7} [Judäa]{8,9} und{10} [di ganz]{11,12} [Gäged]{13} [um de Jordan]{14,15} [zu]{3} [ihm]{4} [usegange]{2},",
  "MAT.3.6": "und{1} [si händ sich]{2} [im]{3,4} [Fluss]{6} Jordan{5} [vo]{7} [ihm]{8} [la taufe]{2} [und händ]{9} [iri]{12} [Sünde]{10,11} [bekännt]{9}.",
- "MAT.3.7": "[Wo er]{1} [aber]{2} [vili]{3} [vo de]{4} [Pharisäer]{5} und{6} [Sadduzäer]{7} [zu]{9} [sinere]{12} [Taufi]{10,11} [hät gseh]{1} [choo]{8}, [hät er]{13} [zu ine]{14} [gseit]{13}: «[Ir Schlangebruet]{15,16}! [Wer]{17} [hät]{18} [eu]{19} [druf bracht]{18}, [vor]{21} [em]{22} [Zorn]{24}, [wo chunnt]{23}, [z flüchte]{20}?",
+ "MAT.3.7": "[Wo er]{1} [aber]{2} [vili]{3} [vo de]{4} [Pharisäer]{5} und{6} [Sadduzäer]{7} [zu]{9} [sinere]{12} [Taufi]{10,11} [hät gseh]{1} [choo]{8}, [hät er]{13} [zu ine]{14} [gseit]{13}: «[Ir Viperebruet]{15,16}! [Wer]{17} [hät]{18} [eu]{19} [druf bracht]{18}, [vor]{21} [em]{22} [Zorn]{24}, [wo chunnt]{23}, [z flüchte]{20}?",
  "MAT.3.8": "[Bringed]{1} [also]{2} [Frucht]{3}, wo [zur Umkehr]{5,6} [passt]{4}!",
  "MAT.3.9": "Und{1} [meined]{3} [nöd]{2}, ir chönnted [bi eu sälber]{5,6} [säge]{4}: ‹[Mir händ]{8} [de Abraham]{9,10} [zum Vatter]{7}.› [Dänn]{12} [ich säg]{11} [eu]{13}: [Gott]{16,17} [cha]{15} [us]{18} [dene]{21} [Stei]{19,20} [em Abraham]{24,25} [Chind]{23} [erwecke]{22}. ~14(ὅτι leitet d Red ii)",
  "MAT.3.10": "[D Axt]{3,4} [liit]{10} [aber]{2} [scho]{1} [a]{5} [de Wurzle]{6,7} [vo de Bäum]{8,9}. [Jede]{11} [Baum]{13} [also]{12}, wo [kei]{14} [gueti]{17} [Frucht]{16} [bringt]{15}, [wird umghaue]{18} und{19} [is]{20} [Füür]{21} [gworfe]{22}.",
  "MAT.3.11": "[Ich]{1} [tauf]{4} [eu]{3} [zwar]{2} [mit]{5} [Wasser]{6} [zur]{7} [Umkehr]{8}; [dä]{9} [aber]{10}, wo [nach]{11} [mir]{12} [chunnt]{13}, [isch]{16} [stärcher]{14} [als ich]{15}; [ich bi]{19} [nöd]{18} [wärt]{20}, [sini]{17} [Sandale]{21,22} [z träge]{23}. [Er]{24} [wird]{26} [eu]{25} [mit]{27} [heilige]{29} [Geischt]{28} und{30} [Füür]{31} [taufe]{26}.",
  "MAT.3.12": "[Er]{1} hät [d Worfschufle]{2,3} [i]{4} [de]{5} [Hand]{6}, und{8} [er wird]{9} [sis]{12} [Tenn]{10,11} [ganz suuber mache]{9} und{13} [sin]{17} [Weize]{15,16} [i]{18} [d Schüür]{19,20} [sammle]{14}; [d Sprüür]{21,23} [aber]{22} [wird er]{24} [mit Füür]{25}, [wo nie uusgaat]{26}, [verbrenne]{24}.» ~7(αὐτοῦ «sinere» isch dur «er hät … i de Hand» usdruckt)",
  "MAT.3.13": "[Dänn]{1} [chunnt]{2} [de Jesus]{3,4} [vo]{5} [Galiläa]{6,7} [a]{8} [de Jordan]{9,10} [zum]{11} [Johannes]{12,13}, [zum]{14} sich [vo]{16} [ihm]{17} [la taufe]{15}.",
- "MAT.3.14": "[De Johannes]{1,3} [aber]{2} [hät]{4} [en]{5} [welle devo abhalte]{4} [und gseit]{6}: «[Ich]{7} [han s nötig]{8,9}, [vo]{10} [dir]{11} [tauft z wärde]{12}, und{13} [du]{14} [chunnsch]{15} [zu]{16} [mir]{17}?»",
+ "MAT.3.14": "[De Johannes]{1,3} [aber]{2} [hät]{4} [en]{5} [wele devo abhalte]{4} [und gseit]{6}: «[Ich]{7} [han s nötig]{8,9}, [vo]{10} [dir]{11} [tauft z wärde]{12}, und{13} [du]{14} [chunnsch]{15} [zu]{16} [mir]{17}?»",
  "MAT.3.15": "[De Jesus]{3,4} [aber]{2} [hät gantwortet]{1} und [zu]{6} [ihm]{7} [gseit]{5}: «[Lass es]{8} [jetzt]{9} [zue]{8}! [Dänn]{11} [so]{10} [ghört es sich]{12,13} [für üs]{14}, [alli]{16} [Grächtigkeit]{17} [z erfülle]{15}.» [Dänn]{18} [laat er]{19} [en]{20} [mache]{19}.",
  "MAT.3.16": "[Wo]{1} [de Jesus]{3,4} [aber]{2} [tauft worde isch]{1}, [isch er]{6} [grad]{5} [us]{7} [em Wasser]{8,9} [ufecho]{6}; und{10} [lueg]{11}, [d Himel]{13,14} [sind ufgange]{12}, und{15} [er hät]{16} [de Geischt]{17} [vo Gott]{18} [wie]{20} [e Tuube]{21} [gseh]{16} [abecho]{19} und [uf]{23} [ihn]{24} [choo]{22}.",
  "MAT.3.17": "Und{1} [lueg]{2}, [e Stimm]{3} [us]{4} [de Himel]{5,6} [hät gseit]{7}: «[Dä]{8} [isch]{9} [min]{12} [liebe]{13,14} [Sohn]{10,11}, [a däm]{15,16} [han ich Gfalle gfunde]{17}.»",
  # ------------------------------------------------------------ Kapitel 4
  "MAT.4.1": "[Dänn]{1} [isch]{4} [de Jesus]{2,3} [vom]{8,9} [Geischt]{10} [i]{5} [d Wüeschti]{6,7} [ufegfüert worde]{4}, für [vom]{12,13} [Tüüfel]{14} [versuecht z wärde]{11}.",
  "MAT.4.2": "Und{1} [nachdem er]{2} [vierzg]{4} [Täg]{3} und{5} [vierzg]{7} [Nächt]{6} [gfaschtet hät]{2}, [hät er]{9} [am Schluss]{8} [Hunger übercho]{9}.",
- "MAT.4.3": "Und{1} [de Versuecher]{3,4} [isch anecho]{2} und [hät]{5} [zu ihm]{6} [gseit]{5}: «[Wänn]{7} du [de Sohn]{8} [vo Gott]{10,11} [bisch]{9}, dänn [säg]{12}, [dass]{13} [die]{16} [Stei]{14,15} [zu Broot]{17} [wärded]{18}!»",
+ "MAT.4.3": "Und{1} [de Versuecher]{3,4} [isch härechoo]{2} und [hät]{5} [zu ihm]{6} [gseit]{5}: «[Wänn]{7} du [de Sohn]{8} [vo Gott]{10,11} [bisch]{9}, dänn [säg]{12}, [dass]{13} [die]{16} [Stei]{14,15} [zu Broot]{17} [wärded]{18}!»",
  "MAT.4.4": "[Er]{1} [aber]{2} [hät gantwortet]{3} und [gseit]{4}: «[Es staat gschribe]{5}: ‹[De Mänsch]{11,12} [läbt]{10} [nöd]{6} [vom]{7} [Broot]{8} [ellei]{9}, [sondern]{13} [vo]{14} [jedem]{15} [Wort]{16}, wo [us]{18} [em Mund]{19} [vo Gott]{20} [chunnt]{17}.›»",
  "MAT.4.5": "[Dänn]{1} [nimmt]{2} [en]{3} [de Tüüfel]{4,5} [mit]{2} [i]{6} [di heilig]{7,8} [Stadt]{9}, und{10} [er hät]{11} [en]{12} [uf]{13} [d Zinne]{14,15} [vom Tämpel]{16,17} [gstellt]{11}",
- "MAT.4.6": "und{1} [seit]{2} [zu ihm]{3}: «[Wänn]{4} du [de Sohn]{5} [vo Gott]{7,8} [bisch]{6}, dänn [rüer]{9} [dich]{10} [abe]{11}! [Es staat]{12} [nämli]{13} [gschribe]{12}: ‹[Sine]{17} [Ängel]{15,16} [wird er]{18} [dinetwäge]{19,20} [Befehl gää]{18}, und{21} [si wärded]{24} [dich]{25} [uf]{22} [de Händ]{23} [träge]{24}, [demit]{26} du [din]{32} [Fuess]{30,31} [nöd]{26} [a]{28} [en Stei]{29} [stoosch]{27}.›» ~14(ὅτι leitet s Zitat ii)",
+ "MAT.4.6": "und{1} [seit]{2} [zu ihm]{3}: «[Wänn]{4} du [de Sohn]{5} [vo Gott]{7,8} [bisch]{6}, dänn [rüer]{9} [dich]{10} [abe]{11}! [Es staat]{12} [nämli]{13} [gschribe]{12}: ‹[Sine]{17} [Ängel]{15,16} [wird er]{18} [dinetwäge]{19,20} [Befehl gää]{18}, und{21} [si wärded]{24} [dich]{25} [uf]{22} [de Händ]{23} [träge]{24}, [damit]{26} du [din]{32} [Fuess]{30,31} [nöd]{26} [a]{28} [en Stei]{29} [stoosch]{27}.›» ~14(ὅτι leitet s Zitat ii)",
  "MAT.4.7": "[De Jesus]{3,4} [hät]{1} [zu ihm]{2} [gseit]{1}: «[Es staat]{6} [au]{5} [gschribe]{6}: ‹[Du söllsch]{8} [de Herr]{9}, [din]{12} [Gott]{10,11}, [nöd]{7} [uf d Prob stelle]{8}.›»",
  "MAT.4.8": "[Wider]{1} [nimmt]{2} [en]{3} [de Tüüfel]{4,5} [mit]{2} [uf]{6} [en ganz]{9} [hööche]{8} [Bärg]{7} und{10} [zeigt]{11} [ihm]{12} [alli]{13} [Riich]{14,15} [vo de Wält]{16,17} und{18} [iri]{21} [Herrlichkeit]{19,20}",
  "MAT.4.9": "und{1} [hät]{2} [zu ihm]{3} [gseit]{2}: «[Das]{4} [alles]{6} [gib ich]{7} [dir]{5}, [wänn]{8} du [di uf de Bode wirfsch]{9} und [mich]{11} [aabättisch]{10}.»",
  "MAT.4.10": "[Dänn]{1} [seit]{2} [de Jesus]{4,5} [zu ihm]{3}: «[Gang wäg]{6}, [Satan]{7}! [Es staat]{8} [nämli]{9} [gschribe]{8}: ‹[De Herr]{10}, [din]{13} [Gott]{11,12}, [söllsch du aabätte]{14} und{15} [ihm]{16} [ellei]{17} [diene]{18}.›»",
- "MAT.4.11": "[Dänn]{1} [laat]{2} [de Tüüfel]{4,5} [vo ihm]{3} [ab]{2}, und{6} [lueg]{7}, [Ängel]{8} [sind anecho]{9} und{10} [händ]{11} [ihm]{12} [dienet]{11}.",
+ "MAT.4.11": "[Dänn]{1} [laat]{2} [de Tüüfel]{4,5} [vo ihm]{3} [ab]{2}, und{6} [lueg]{7}, [Ängel]{8} [sind härechoo]{9} und{10} [händ]{11} [ihm]{12} [dienet]{11}.",
  "MAT.4.12": "[Wo er]{1} [aber]{2} [ghört hät]{1}, [dass]{3} [de Johannes]{4} [usgliferet worde isch]{5}, [hät er sich]{6} [uf]{7} [Galiläa]{8,9} [zruggzoge]{6}.",
  "MAT.4.13": "Und{1} [er hät]{2} [Nazaret]{3,4} [verlaa]{2}, [isch]{5,6} [uf]{7} [Kafarnaum]{8} [cho wohne]{5,6}, [wo]{9} [am See]{10} liit, [im]{11} [Gebiet]{12} [vo Sebulon]{13} und{14} [Naftali]{15},",
- "MAT.4.14": "[demit]{1} [erfüllt wird]{2}, [was]{3} [dur]{5} [de Jesaja]{6}, [de Prophet]{7,8}, [gseit worden isch]{4}: ~9(λέγοντος «sagend» leitet s Zitat ii; dur de Doppelpunkt widergää)",
+ "MAT.4.14": "[damit]{1} [erfüllt wird]{2}, [was]{3} [dur]{5} [de Jesaja]{6}, [de Prophet]{7,8}, [gseit worden isch]{4}: ~9(λέγοντος «sagend» leitet s Zitat ii; dur de Doppelpunkt widergää)",
  "MAT.4.15": "«[S Land]{1} [Sebulon]{2} und{3} [s Land]{4} [Naftali]{5}, [de Wäg]{6} [am Meer]{7}, [änet]{8} [em Jordan]{9,10}, [Galiläa]{11} [vo de Völker]{12,13}:",
  "MAT.4.16": "[s Volk]{1,2}, [wo]{3} [i]{5} [de Fiischteri]{6} [gsässe isch]{4}, [hät]{8} [es grosses]{9} [Liecht]{7} [gseh]{8}, und{10} [dene]{11}, wo [im]{13} [Land]{14} und{15} [Schatte]{16} [vom Tod]{17} [gsässe sind]{12}, [isch]{19} [es Liecht]{18} [ufgange]{19}.» ~20(αὐτοῖς «ine» nimmt «dene» uf; nöd extra widergää)",
  "MAT.4.17": "[Vo dänn aa]{1,2} [hät]{3} [de Jesus]{4,5} [aagfange]{3} [z verchünde]{6} und{7} [z säge]{8}: «[Chehred um]{9}, [dänn]{11} [s Riich]{12,13} [vo de Himel]{14,15} [isch nöch choo]{10}!»",
@@ -126,7 +126,7 @@ GSW = {
  "MAT.4.22": "[Si]{1} [aber]{2} [händ]{4} [grad]{3} [s Boot]{5,6} und{7} [ire]{10} [Vatter]{8,9} [zrugglaa]{4} [und sind]{11} [ihm]{12} [nachegange]{11}.",
  "MAT.4.23": "Und{1} [er isch]{2} [i]{3} [ganz]{4} [Galiläa]{5,6} [umezoge]{2}, [hät]{7} [i]{8} [irne]{11} [Synagoge]{9,10} [glehrt]{7} und{12} [s Evangelium]{14,15} [vom Riich]{16,17} [verchündet]{13} und{18} [jedi]{20} [Chranket]{21} und{22} [jedes]{23} [Liide]{24} [im]{25,26} [Volk]{27} [gheilt]{19}.",
  "MAT.4.24": "Und{1} [de Ruef]{3,4} [vo ihm]{5} [isch]{2} [i]{6} [ganz]{7} [Syrie]{8,9} [usegange]{2}. Und{10} [mer hät]{11} [ihm]{12} [alli]{13} [Chranke]{14,15,16} [bracht]{11}, wo [vo allerlei]{17} [Chrankete]{18} und{19} [Quale]{20} [plaget gsii sind]{21}: [Bsässni]{22} und{23} [Mondsüchtigi]{24} und{25} [Glähmti]{26}; und{27} [er hät]{28} [si]{29} [gheilt]{28}.",
- "MAT.4.25": "Und{1} [vili]{5} [Schaare vo Lüüt]{4} [sind]{2} [ihm]{3} [nachegange]{2} [us]{6} [Galiläa]{7,8} und{9} [de Dekapolis]{10} und{11} [Jerusalem]{12} und{13} [Judäa]{14} und{15} [vo änet]{16} [em Jordan]{17,18}.",
+ "MAT.4.25": "Und{1} [vili]{5} [Lüüt]{4} [sind]{2} [ihm]{3} [nachegange]{2} [us]{6} [Galiläa]{7,8} und{9} [de Dekapolis]{10} und{11} [Jerusalem]{12} und{13} [Judäa]{14} und{15} [vo änet]{16} [em Jordan]{17,18}.",
 }
 
 # (Stelle, Zieltext, Art, griechisch, wörtlicher, weitere Möglichkeiten, Begründung)
@@ -155,8 +155,8 @@ DEC_DE = [
   "Die Ortsnamen stehen für ihre Bewohner; das Verb steht im Singular («zog»). Die Übersetzung behält das Bild bei; in [[MAT.3.6]] folgt «sie liessen sich taufen»."),
  ("MAT.3.7", "Pharisäern", "literal", "Φαρισαίων", None, None,
   "Pharisäer und Sadduzäer waren jüdische Gruppen mit unterschiedlichen Lehren (die Sadduzäer bestritten z. B. die Auferstehung, [[MAT.22.23]]); Matthäus nennt sie mehrmals zusammen ([[MAT.16.1]]). Grundsatz: Gruppennamen neutral wiedergeben; der scharfe Ton liegt im Wort des Johannes, nicht in der Bezeichnung."),
- ("MAT.3.7", "Ihr Schlangenbrut", "adapted", "Γεννήματα ἐχιδνῶν", "Brut von Vipern", ["Ihr Natterngezücht", "Ihr Otternbrut"],
-  "ἔχιδνα ist eine Giftschlange. Das Scheltwort steht bei Matthäus noch in [[MAT.12.34]] und [[MAT.23.33]] (dort im Mund Jesu) und ist einheitlich «Schlangenbrut» übersetzt. Bei Matthäus richtet Johannes es an Pharisäer und Sadduzäer, bei Lukas an die Menge ([[LUK.3.7]])."),
+ ("MAT.3.7", "Ihr Vipernbrut", "literal", "Γεννήματα ἐχιδνῶν", "Brut von Vipern", ["Ihr Schlangenbrut", "Ihr Natterngezücht", "Ihr Otternbrut"],
+  "ἔχιδνα ist eine Giftschlange, die Viper. Das Scheltwort steht bei Matthäus noch in [[MAT.12.34]] und [[MAT.23.33]] (dort im Mund Jesu) und ist einheitlich «Vipernbrut» übersetzt (Mundart «Viperebruet»). Bei Matthäus richtet Johannes es an Pharisäer und Sadduzäer, bei Lukas an die Menge ([[LUK.3.7]])."),
  ("MAT.3.7", "darauf gebracht", "adapted", "ὑπέδειξεν", "gezeigt", ["gewarnt", "gelehrt"],
   "ὑποδείκνυμι heisst «zeigen, vor Augen führen, anweisen». Viele verstehen die Frage als ironisch."),
  ("MAT.3.7", "dem kommenden Zorn", "literal", "τῆς μελλούσης ὀργῆς", None, ["dem bevorstehenden Gericht"],
@@ -210,7 +210,7 @@ DEC_DE = [
  ("MAT.4.3", "der Versucher", "literal", "ὁ πειράζων", "der Versuchende", None,
   "Partizip mit Artikel als Bezeichnung, vom selben Verb wie «versucht» in [[MAT.4.1]]."),
  ("MAT.4.3", "trat heran", "literal", "προσελθὼν", "herangetreten", ["kam zu ihm"],
-  "Vorschlag für Matthäus: προσέρχομαι, ein häufiges Wort des Evangeliums (51-mal), einheitlich «herantreten» (Mundart «anechoo»); ebenso [[MAT.4.11]]."),
+  "Einheitlich für Matthäus festgelegt: προσέρχομαι, ein häufiges Wort des Evangeliums (51-mal), «herantreten» (Mundart «härechoo»); ebenso [[MAT.4.11]]."),
  ("MAT.4.3", "Wenn du Gottes Sohn bist", "interpretive", "Εἰ υἱὸς εἶ τοῦ θεοῦ", None, ["Da du Gottes Sohn bist", "Wenn du wirklich Gottes Sohn bist"],
   "Die Bedingung knüpft an die Himmelsstimme an ([[MAT.3.17]]). Viele verstehen sie als Voraussetzung, die der Versucher für seine Zwecke nutzen will; andere hören einen Zweifel heraus. «Gottes Sohn» ohne Artikel wie im Griechischen; ebenso [[MAT.4.6]]."),
  ("MAT.4.4", "Es steht geschrieben", "literal", "Γέγραπται", "Es ist geschrieben", None,
@@ -233,7 +233,7 @@ DEC_DE = [
  ("MAT.4.8", "alle Reiche der Welt", "literal", "πάσας τὰς βασιλείας τοῦ κόσμου", None, ["alle Königreiche der Welt"],
   "Hier meint βασιλεία irdische Herrschaftsbereiche; es ist dasselbe Wort wie im «Reich der Himmel» ([[MAT.4.17]])."),
  ("MAT.4.9", "anbetest", "interpretive", "προσκυνήσῃς", "dich vor mir niederwirfst", ["mir huldigst"],
-  "προσκυνέω bezeichnet die Gebärde des Niederwerfens, mit der man einem Herrscher huldigt oder Gott anbetet (bei Matthäus 13-mal). Vorschlag für Matthäus: «anbeten», wo die Verehrung Gottes oder der Anspruch darauf im Blick ist (hier und [[MAT.4.10]]); wo die Gebärde vor einem Menschen im Vordergrund steht, «sich niederwerfen vor», jeweils mit eigener Entscheidung."),
+  "προσκυνέω bezeichnet die Gebärde des Niederwerfens, mit der man einem Herrscher huldigt oder Gott anbetet (bei Matthäus 13-mal). Einheitlich für Matthäus festgelegt: vor Menschen und vor Jesus «sich (vor ihm) niederwerfen», mit Gott als Empfänger «anbeten». Der Teufel ist weder das eine noch das andere; er beansprucht hier die Verehrung, die nach [[MAT.4.10]] Gott allein zukommt. Weil Jesus mit demselben Verb antwortet («Den Herrn, deinen Gott, sollst du anbeten»), steht auch hier «anbeten»; die Gebärde ist mit «niederfällst» (πεσών) ausgedrückt."),
  ("MAT.4.10", "Geh weg, Satan", "literal", "Ὕπαγε, Σατανᾶ", None, ["Weg mit dir, Satan"],
   "ὑπάγω «weggehen». Zur Lesart «Geh hinter mich» (wie [[MAT.16.23]]) siehe die Alternative. Σατανᾶς bleibt als Name stehen."),
  ("MAT.4.10", "dienen", "literal", "λατρεύσεις", None, ["verehren"],
@@ -278,7 +278,7 @@ DEC_DE = [
  ("MAT.4.24", "Mondsüchtige", "interpretive", "σεληνιαζομένους", "vom Mond Getroffene", ["Epileptiker", "Fallsüchtige"],
   "Das Wort verbindet Anfälle mit dem Mond, wie es antiker Vorstellung entsprach. Die Beschreibung in [[MAT.17.15]] erinnert an Epilepsie; «Epileptiker» würde aber eine heutige Diagnose in den Text tragen."),
  ("MAT.4.25", "Menschenmengen", "literal", "ὄχλοι", None, ["Volksmengen", "Scharen"],
-  "Vorschlag für Matthäus: ὄχλος «Menge», im Plural «Menschenmengen» (Mundart «Mängi», im Plural «Schaare vo Lüüt»), wie bei Markus."),
+  "Einheitlich für Matthäus festgelegt: ὄχλος «die Menge», οἱ ὄχλοι «die Menschenmengen» (Mundart «d Mängi», im Plural «d Lüüt»)."),
  ("MAT.4.25", "Dekapolis", "literal", "Δεκαπόλεως", "Zehnstadt", None,
   "Ein Bund griechisch geprägter Städte, die meisten östlich des Jordan."),
 ]
@@ -295,12 +295,12 @@ DEC_GSW = [
  ("MAT.3.2", "isch nöch choo", "literal", "ἤγγικεν", None, ["isch da"],
   "Öb s Riich scho aagfange hät oder grad bevorstaat, isch umstritte; «nöch choo» laat beides offe."),
  ("MAT.3.3", "gseit worden isch", "literal", "ῥηθεὶς", None, None,
-  "Feschti Formle vom Matthäus für Schriftwort, im ganze Evangelium gliich widergää (vgl. [[MAT.4.14]]); da ohni «demit erfüllt wird»."),
+  "Feschti Formle vom Matthäus für Schriftwort, im ganze Evangelium gliich widergää (vgl. [[MAT.4.14]]); da ohni «damit erfüllt wird»."),
  ("MAT.3.3", "vom Herr", "literal", "κυρίου", None, ["vo JHWH"],
   "I [[ISA.40.3]] staat im hebräische Text de Gottesname, i de griechische Bible κύριος. De Matthäus bezieht de «Wäg vom Herr» uf de Jesus."),
  ("MAT.3.4", "Hung", "literal", "μέλι", None, ["Honig"], None),
- ("MAT.3.7", "Ir Schlangebruet", "adapted", "Γεννήματα ἐχιδνῶν", "Bruet vo Vipere", ["Ir Natterebruet"],
-  "S gliich Schimpfwort staat i [[MAT.12.34]] und [[MAT.23.33]]; überall «Schlangebruet». D Gruppenäme Pharisäer und Sadduzäer sind neutral widergää; de scharf Ton liit im Wort vom Johannes."),
+ ("MAT.3.7", "Ir Viperebruet", "literal", "Γεννήματα ἐχιδνῶν", "Bruet vo Vipere", ["Ir Schlangebruet", "Ir Natterebruet"],
+  "S gliich Schimpfwort staat i [[MAT.12.34]] und [[MAT.23.33]]; überall «Viperebruet». D Gruppenäme Pharisäer und Sadduzäer sind neutral widergää; de scharf Ton liit im Wort vom Johannes."),
  ("MAT.3.7", "druf bracht", "adapted", "ὑπέδειξεν", "zeigt", ["gwarnt"],
   "ὑποδείκνυμι heisst «zeige, aawiise». Vili verstönd d Frag als ironisch."),
  ("MAT.3.8", "passt", "adapted", "ἄξιον", "wärt", ["entspricht"],
@@ -313,7 +313,7 @@ DEC_GSW = [
   "Ohni Artikel, im Gägesatz zu «mit Wasser». «Füür» cha Lüüterig oder Gricht meine ([[MAT.3.10]], [[MAT.3.12]]). πνεῦμα ἅγιον überall «heilige Geischt»."),
  ("MAT.3.12", "Worfschufle", "literal", "πτύον", None, None,
   "Mit de Worfschufle hät mer s tröschet Choorn i de Wind gworfe; d Sprüür isch wäggfloge, d Chörner sind ufs Tenn gfalle. Es Bild fürs Gricht, wo scheidet."),
- ("MAT.3.14", "hät en welle devo abhalte", "interpretive", "διεκώλυεν αὐτὸν", "hät en abghalte", ["hät probiert, en abzhalte"],
+ ("MAT.3.14", "hät en wele devo abhalte", "interpretive", "διεκώλυεν αὐτὸν", "hät en abghalte", ["hät probiert, en abzhalte"],
   "Imperfekt vom Versuech: De Johannes wott, aber er machts nöd. S Gspröch [[MAT.3.14]]–[[MAT.3.15]] hät nu de Matthäus."),
  ("MAT.3.15", "alli Grächtigkeit z erfülle", "interpretive", "πληρῶσαι πᾶσαν δικαιοσύνην", None, ["alles z tue, was Gott wott"],
   "Grundentscheid fürs Matthäusevangelium: δικαιοσύνη überall «Grächtigkeit» (7-mal). Gmeint isch meischtens s rächt Tue nach em Wille vo Gott. Was es da heisst, wird verschide erklärt (Ghorsam, Verbundeheit mit em Volk, Erfüllig vo de Schrift). «Üs» cha de Jesus und de Johannes meine oder de Jesus ellei."),
@@ -331,8 +331,8 @@ DEC_GSW = [
   "διάβολος heisst wörtli «Verleumder»; überall «Tüüfel». I [[MAT.4.3]] heisst er «de Versuecher», i [[MAT.4.10]] «Satan»."),
  ("MAT.4.1", "versuecht z wärde", "literal", "πειρασθῆναι", None, ["uf d Prob gstellt z wärde"],
   "πειράζω heisst prüefe, uf d Prob stelle, au zur Sünd verleite. Vorschlag: «versueche», wo de Tüüfel handlet; wo Mänsche de Jesus prüefed, «uf d Prob stelle»."),
- ("MAT.4.3", "isch anecho", "literal", "προσελθὼν", None, ["isch zue n ihm choo"],
-  "Vorschlag fürs Matthäusevangelium: προσέρχομαι (51-mal) überall «anechoo»."),
+ ("MAT.4.3", "isch härechoo", "literal", "προσελθὼν", None, ["isch zue n ihm choo", "isch anechoo"],
+  "Einheitlich fürs Matthäusevangelium: προσέρχομαι (51-mal) überall «härechoo»; ebeso [[MAT.4.11]]."),
  ("MAT.4.3", "Wänn du de Sohn vo Gott bisch", "interpretive", "Εἰ υἱὸς εἶ τοῦ θεοῦ", None, ["Wänn du würkli de Sohn vo Gott bisch"],
   "D Bedingig knüpft a d Stimm us em Himel aa ([[MAT.3.17]]). Vili verstönd si als Voruussetzig, wo de Versuecher bruuche wott; anderi ghöred en Zwiifel."),
  ("MAT.4.4", "läbt", "adapted", "ζήσεται", "wird läbe", None,
@@ -342,7 +342,7 @@ DEC_GSW = [
  ("MAT.4.7", "uf d Prob stelle", "literal", "ἐκπειράσεις", None, ["versueche", "usefordere"],
   "Zitat us [[DEU.6.16]]; ἐκπειράζω heisst gägenüber Gott, ihn usefordere. S Futur isch als Verbot widergää («du söllsch nöd»)."),
  ("MAT.4.9", "aabättisch", "interpretive", "προσκυνήσῃς", "di vor mir uf de Bode wirfsch", ["mir huldigsch"],
-  "προσκυνέω isch d Gebärde vom Nidergheie vor eme Herrscher oder vor Gott. Vorschlag: «aabätte», wo d Verehrig vo Gott im Blick isch (da und [[MAT.4.10]]); susch «sich vor öpperem uf de Bode wärfe»."),
+  "προσκυνέω isch d Gebärde vom Nidergheie vor eme Herrscher oder vor Gott. Einheitlich im Matthäus: vor Mänsche und vor em Jesus «sich (vor em) niderwärfe», mit Gott als Empfänger «aabätte». De Tüüfel verlangt da d Verehrig, wo nach [[MAT.4.10]] nu Gott zuechunnt; wil de Jesus mit em gliiche Verb antwortet, staat au da «aabätte». D Gebärde isch mit «di uf de Bode wirfsch» (πεσών) usdruckt."),
  ("MAT.4.10", "Gang wäg, Satan", "literal", "Ὕπαγε, Σατανᾶ", None, ["Verschwind, Satan"],
   "Zur Läsart «Gang hinder mich» (wie [[MAT.16.23]]) lueg d Alternative."),
  ("MAT.4.11", "laat de Tüüfel vo ihm ab", "adapted", "ἀφίησιν αὐτὸν ὁ διάβολος", "verlaat en de Tüüfel", None, None),
@@ -350,7 +350,7 @@ DEC_GSW = [
   "Vorschlag: ἀναχωρέω überall «sich zruggzie»; s Wort staat oft, wänn öpper ere Gfaar uswiicht (vgl. [[MAT.2.14]], [[MAT.12.15]])."),
  ("MAT.4.13", "am See", "adapted", "παραθαλασσίαν", "am Meer", None,
   "θάλασσα isch im Erzelltext de See Gennesaret («See»); im Zitat [[MAT.4.15]] staat «Meer» wie bim Jesaja."),
- ("MAT.4.14", "demit erfüllt wird", "literal", "ἵνα πληρωθῇ", None, None,
+ ("MAT.4.14", "damit erfüllt wird", "literal", "ἵνα πληρωθῇ", None, None,
   "Feschti Erfüllungsformle vom Matthäus, im ganze Evangelium gliich widergää."),
  ("MAT.4.15", "Galiläa vo de Völker", "interpretive", "Γαλιλαία τῶν ἐθνῶν", None, ["Galiläa vo de Heide"],
   "Vorschlag: τὰ ἔθνη «d Völker»; wo de Gägesatz zu Israel im Vordergrund staat, cha «Heide» nöcher ligge. S Zitat folgt frei [[ISA.9.1]]–[[ISA.9.2]]."),
@@ -365,8 +365,8 @@ DEC_GSW = [
   "Einheitlich im Matthäus: δαιμονίζομαι «bsässe sii» (Eizahl «en Bsässne», Mehrzahl «Bsässni»), δαιμόνιον «Dämon»."),
  ("MAT.4.24", "Mondsüchtigi", "interpretive", "σεληνιαζομένους", None, ["Epileptiker"],
   "S Wort verbindet Aafäll mit em Mond, wie mer s i de Antike gmeint hät; «Epileptiker» wär e hüttigi Diagnose."),
- ("MAT.4.25", "Schaare vo Lüüt", "adapted", "ὄχλοι", "Mängene", ["Mängine"],
-  "ὄχλος isch wie bim Markus «Mängi»; d Mehrzahl isch mit «Schaare vo Lüüt» widergää."),
+ ("MAT.4.25", "Lüüt", "adapted", "ὄχλοι", "Mängene", ["Schaare vo Lüüt", "Mängine"],
+  "Einheitlich im Matthäus: ὄχλος «d Mängi», d Mehrzahl οἱ ὄχλοι «d Lüüt»."),
 ]
 
 # (Lesart, Stelle, von de, zu de, von gsw, zu gsw, Wirkung, Hinweis de, Hinweis gsw, Wortlaute de, Wortlaute gsw,
@@ -453,7 +453,7 @@ ALTS = [
   {"R1": [("ἠνεῴχθησαν", "sind ufgange", "WH, NIV")], "R2": [("ἠνεῴχθησαν αὐτῷ", "sind ihm ufgange", "Treg, RP, NA28")]},
   ["αὐτῷ kann ergänzt sein, um zu sagen, wem sich die Himmel öffnen; ebenso kann es weggefallen sein, etwa unter dem Einfluss von [[LUK.3.21]].",
    "Laut der automatischen Zuordnung liest 03 ohne αὐτῷ, 04 und 032 mit; die Erstschrift von 01 ohne, eine Korrektur mit. Für 05 liefert die Zuordnung keinen verwertbaren Befund."],
-  ["αὐτῷ cha ergänzt sii, zum säge, für wär sich d Himel uftüend; oder es isch wäggfalle, öppe under em Iifluss vo [[LUK.3.21]].",
+  ["αὐτῷ cha ergänzt sii, zum säge, für wer sich d Himel uftüend; oder es isch wäggfalle, öppe under em Iifluss vo [[LUK.3.21]].",
    "Nach de automatische Zueornig list 03 ohni αὐτῷ, 04 und 032 mit; d Erschtschrift vo 01 ohni, e Korrektur mit. Für 05 git d Zueornig kein bruuchbare Befund."]),
  ("VAR-SBLGNTAPP-MAT-004-005-01:R2", "MAT.4.5", "er stellte ihn", "er stellt ihn",
   "er hät en uf d Zinne vom Tämpel gstellt", "er stellt en uf d Zinne vom Tämpel", "gering",
@@ -518,10 +518,10 @@ UNITS = [
  # (id, Bereich, Art, Titel, Teile, Zusammenfassung, Gliederungshinweis)
  ("TU-MAT-003-001-017", "MAT.3.1-MAT.3.17", "section", "Johannes der Täufer und die Taufe Jesu",
   ["TU-MAT-003-001-012", "TU-MAT-003-013-017"],
-  "Johannes der Täufer tritt in der Wüste Judäas auf und verkündigt: «Kehrt um, denn das Reich der Himmel ist nahe gekommen!»; der Erzähler bezieht das Wort aus [[ISA.40.3]] auf ihn. Die Leute aus Jerusalem, ganz Judäa und der Umgebung des Jordan lassen sich von ihm taufen und bekennen ihre Sünden. Die Pharisäer und Sadduzäer, die zu seiner Taufe kommen, nennt er Schlangenbrut, fordert Frucht, die der Umkehr würdig ist, und sagt, die Axt liege schon an der Wurzel der Bäume; er kündigt einen Stärkeren an, der mit heiligem Geist und Feuer taufen wird. Jesus kommt aus Galiläa, um sich taufen zu lassen. Johannes will ihn hindern, lässt ihn aber gewähren, als Jesus sagt, so gehöre es sich, alle Gerechtigkeit zu erfüllen. Nach der Taufe öffnen sich die Himmel, Jesus sieht den Geist Gottes wie eine Taube auf sich kommen, und eine Stimme sagt: «Dieser ist mein geliebter Sohn.»",
+  "Johannes der Täufer tritt in der Wüste Judäas auf und verkündigt: «Kehrt um, denn das Reich der Himmel ist nahe gekommen!»; der Erzähler bezieht das Wort aus [[ISA.40.3]] auf ihn. Die Leute aus Jerusalem, ganz Judäa und der Umgebung des Jordan lassen sich von ihm taufen und bekennen ihre Sünden. Die Pharisäer und Sadduzäer, die zu seiner Taufe kommen, nennt er Vipernbrut, fordert Frucht, die der Umkehr würdig ist, und sagt, die Axt liege schon an der Wurzel der Bäume; er kündigt einen Stärkeren an, der mit heiligem Geist und Feuer taufen wird. Jesus kommt aus Galiläa, um sich taufen zu lassen. Johannes will ihn hindern, lässt ihn aber gewähren, als Jesus sagt, so gehöre es sich, alle Gerechtigkeit zu erfüllen. Nach der Taufe öffnen sich die Himmel, Jesus sieht den Geist Gottes wie eine Taube auf sich kommen, und eine Stimme sagt: «Dieser ist mein geliebter Sohn.»",
   SEG),
  ("TU-MAT-003-001-012", "MAT.3.1-MAT.3.12", "narrative_with_saying", "Johannes der Täufer", None,
-  "In jenen Tagen tritt Johannes der Täufer in der Wüste Judäas auf und verkündigt: «Kehrt um, denn das Reich der Himmel ist nahe gekommen!» Der Erzähler sagt, von ihm spreche Jesaja: die Stimme eines Rufenden in der Wüste ([[ISA.40.3]]). Johannes trägt ein Gewand aus Kamelhaar und einen ledernen Gurt und isst Heuschrecken und wilden Honig. Jerusalem, ganz Judäa und die Umgebung des Jordan ziehen zu ihm hinaus; die Leute lassen sich im Jordan von ihm taufen und bekennen ihre Sünden. Als er viele Pharisäer und Sadduzäer zu seiner Taufe kommen sieht, nennt er sie Schlangenbrut und fordert Frucht, die der Umkehr würdig ist. Sie sollen sich nicht darauf berufen, Abraham zum Vater zu haben, denn Gott könne aus Steinen Abraham Kinder erwecken; schon liege die Axt an der Wurzel der Bäume. Er tauft mit Wasser zur Umkehr; der nach ihm kommt, ist stärker als er, wird mit heiligem Geist und Feuer taufen, seinen Weizen in die Scheune sammeln und die Spreu mit unauslöschlichem Feuer verbrennen.",
+  "In jenen Tagen tritt Johannes der Täufer in der Wüste Judäas auf und verkündigt: «Kehrt um, denn das Reich der Himmel ist nahe gekommen!» Der Erzähler sagt, von ihm spreche Jesaja: die Stimme eines Rufenden in der Wüste ([[ISA.40.3]]). Johannes trägt ein Gewand aus Kamelhaar und einen ledernen Gurt und isst Heuschrecken und wilden Honig. Jerusalem, ganz Judäa und die Umgebung des Jordan ziehen zu ihm hinaus; die Leute lassen sich im Jordan von ihm taufen und bekennen ihre Sünden. Als er viele Pharisäer und Sadduzäer zu seiner Taufe kommen sieht, nennt er sie Vipernbrut und fordert Frucht, die der Umkehr würdig ist. Sie sollen sich nicht darauf berufen, Abraham zum Vater zu haben, denn Gott könne aus Steinen Abraham Kinder erwecken; schon liege die Axt an der Wurzel der Bäume. Er tauft mit Wasser zur Umkehr; der nach ihm kommt, ist stärker als er, wird mit heiligem Geist und Feuer taufen, seinen Weizen in die Scheune sammeln und die Spreu mit unauslöschlichem Feuer verbrennen.",
   None),
  ("TU-MAT-003-013-017", "MAT.3.13-MAT.3.17", "narrative", "Die Taufe Jesu", None,
   "Jesus kommt aus Galiläa an den Jordan zu Johannes, um sich von ihm taufen zu lassen. Johannes will ihn daran hindern, denn er habe es nötig, von Jesus getauft zu werden. Jesus antwortet: «Lass es jetzt zu! Denn so gehört es sich für uns, alle Gerechtigkeit zu erfüllen.» Da lässt Johannes ihn gewähren. Als Jesus nach der Taufe aus dem Wasser heraufsteigt, öffnen sich die Himmel; er sieht den Geist Gottes wie eine Taube herabkommen und auf sich kommen, und eine Stimme aus den Himmeln sagt: «Dieser ist mein geliebter Sohn, an dem ich Gefallen gefunden habe.»",
@@ -545,21 +545,21 @@ UNITS = [
 ]
 UNITS_GSW = {
  "TU-MAT-003-001-017": ("De Johannes de Täufer und d Taufi vom Jesus",
-  "De Johannes de Täufer tritt i de Wüeschti vo Judäa uf und verchündet: «Chehred um, dänn s Riich vo de Himel isch nöch choo!»; de Erzeller bezieht s Wort us [[ISA.40.3]] uf ihn. D Lüüt us Jerusalem, ganz Judäa und de Gäged um de Jordan lönd sich vo ihm taufe und bekännd iri Sünde. De Pharisäer und Sadduzäer, wo zu sinere Taufi chömed, seit er Schlangebruet, verlangt Frucht, wo zur Umkehr passt, und seit, d Axt liggi scho a de Wurzle vo de Bäum; er chündet en Stärchere aa, wo mit heilige Geischt und Füür wird taufe. De Jesus chunnt vo Galiläa, zum sich la taufe. De Johannes wott en abhalte, laat en aber mache, wo de Jesus seit, eso ghöri es sich, alli Grächtigkeit z erfülle. Nach de Taufi gönd d Himel uf, de Jesus gseht de Geischt vo Gott wie e Tuube uf sich choo, und e Stimm seit: «Dä isch min liebe Sohn.»"),
+  "De Johannes de Täufer tritt i de Wüeschti vo Judäa uf und verchündet: «Chehred um, dänn s Riich vo de Himel isch nöch choo!»; de Erzeller bezieht s Wort us [[ISA.40.3]] uf ihn. D Lüüt us Jerusalem, ganz Judäa und de Gäged um de Jordan lönd sich vo ihm taufe und bekännd iri Sünde. De Pharisäer und Sadduzäer, wo zu sinere Taufi chömed, seit er Viperebruet, verlangt Frucht, wo zur Umkehr passt, und seit, d Axt liggi scho a de Wurzle vo de Bäum; er chündet en Stärchere aa, wo mit heilige Geischt und Füür wird taufe. De Jesus chunnt vo Galiläa, zum sich la taufe. De Johannes wott en abhalte, laat en aber mache, wo de Jesus seit, eso ghöri es sich, alli Grächtigkeit z erfülle. Nach de Taufi gönd d Himel uf, de Jesus gseht de Geischt vo Gott wie e Tuube uf sich choo, und e Stimm seit: «Dä isch min liebe Sohn.»"),
  "TU-MAT-003-001-012": ("De Johannes de Täufer",
-  "I dene Täg tritt de Johannes de Täufer i de Wüeschti vo Judäa uf und verchündet: «Chehred um, dänn s Riich vo de Himel isch nöch choo!» De Erzeller seit, vo ihm redi de Jesaja: d Stimm vo eim, wo i de Wüeschti rüeft ([[ISA.40.3]]). De Johannes hät es Gwand us Kamelhaar und en lädrige Gurt aa und isst Heuschrecke und wilde Hung. Jerusalem, ganz Judäa und d Gäged um de Jordan gönd zu ihm use; d Lüüt lönd sich im Jordan vo ihm taufe und bekännd iri Sünde. Wo er vili Pharisäer und Sadduzäer zu sinere Taufi gseht choo, seit er ine Schlangebruet und verlangt Frucht, wo zur Umkehr passt. Si söled sich nöd druf berüefe, dass de Abraham ire Vatter isch, dänn Gott chönn us Stei em Abraham Chind erwecke; d Axt liggi scho a de Wurzle vo de Bäum. Er tauft mit Wasser zur Umkehr; dä, wo nach ihm chunnt, isch stärcher als er, wird mit heilige Geischt und Füür taufe, sin Weize i d Schüür sammle und d Sprüür mit Füür verbrenne, wo nie uusgaat."),
+  "I dene Täg tritt de Johannes de Täufer i de Wüeschti vo Judäa uf und verchündet: «Chehred um, dänn s Riich vo de Himel isch nöch choo!» De Erzeller seit, vo ihm redi de Jesaja: d Stimm vo eim, wo i de Wüeschti rüeft ([[ISA.40.3]]). De Johannes hät es Gwand us Kamelhaar und en lädrige Gurt aa und isst Heuschrecke und wilde Hung. Jerusalem, ganz Judäa und d Gäged um de Jordan gönd zu ihm use; d Lüüt lönd sich im Jordan vo ihm taufe und bekännd iri Sünde. Wo er vili Pharisäer und Sadduzäer zu sinere Taufi gseht choo, seit er ine Viperebruet und verlangt Frucht, wo zur Umkehr passt. Si söled sich nöd druf berüefe, dass de Abraham ire Vatter isch, dänn Gott chönn us Stei em Abraham Chind erwecke; d Axt liggi scho a de Wurzle vo de Bäum. Er tauft mit Wasser zur Umkehr; dä, wo nach ihm chunnt, isch stärcher als er, wird mit heilige Geischt und Füür taufe, sin Weize i d Schüür sammle und d Sprüür mit Füür verbrenne, wo nie uusgaat."),
  "TU-MAT-003-013-017": ("D Taufi vom Jesus",
   "De Jesus chunnt vo Galiläa a de Jordan zum Johannes, zum sich vo ihm la taufe. De Johannes wott en abhalte, dänn er heig s nötig, vom Jesus tauft z wärde. De Jesus antwortet: «Lass es jetzt zue! Dänn so ghört es sich für üs, alli Grächtigkeit z erfülle.» Dänn laat de Johannes en mache. Wo de Jesus nach de Taufi us em Wasser ufechunnt, gönd d Himel uf; er gseht de Geischt vo Gott wie e Tuube abechoo und uf sich choo, und e Stimm us de Himel seit: «Dä isch min liebe Sohn, a däm han ich Gfalle gfunde.»"),
  "TU-MAT-004-001-025": ("D Versuechig und de Aafang z Galiläa",
-  "De Geischt füert de Jesus i d Wüeschti, won er nach vierzg Täg Faschte vom Tüüfel versuecht wird; drümal antwortet de Jesus mit eme Schriftwort, bis de Tüüfel vo ihm ablaat und Ängel ihm diened. Wo de Jesus ghört, dass de Johannes usgliferet worde isch, zieht er sich uf Galiläa zrugg und wohnt z Kafarnaum; nach em Erzeller erfüllt sich demit s Wort vom Jesaja vom Liecht für Galiläa vo de Völker. Vo dänn aa verchündet de Jesus: «Chehred um, dänn s Riich vo de Himel isch nöch choo!» Am See vo Galiläa rüeft er d Brüeder Simon Petrus und Andreas, dänn de Jakobus, de Sohn vom Zebedäus, und sin Brueder Johannes; di einte lönd grad iri Netz ligge, di andere s Boot und ire Vatter, und si gönd ihm nache. De Jesus zieht dur ganz Galiläa, lehrt i de Synagoge, verchündet s Evangelium vom Riich und heilt Chranki vo allerlei Art; de Ruef vo ihm gaat dur ganz Syrie, und vili Schaare vo Lüüt gönd ihm nache."),
+  "De Geischt füert de Jesus i d Wüeschti, won er nach vierzg Täg Faschte vom Tüüfel versuecht wird; drümal antwortet de Jesus mit eme Schriftwort, bis de Tüüfel vo ihm ablaat und Ängel ihm diened. Wo de Jesus ghört, dass de Johannes usgliferet worde isch, zieht er sich uf Galiläa zrugg und wohnt z Kafarnaum; nach em Erzeller erfüllt sich damit s Wort vom Jesaja vom Liecht für Galiläa vo de Völker. Vo dänn aa verchündet de Jesus: «Chehred um, dänn s Riich vo de Himel isch nöch choo!» Am See vo Galiläa rüeft er d Brüeder Simon Petrus und Andreas, dänn de Jakobus, de Sohn vom Zebedäus, und sin Brueder Johannes; di einte lönd grad iri Netz ligge, di andere s Boot und ire Vatter, und si gönd ihm nache. De Jesus zieht dur ganz Galiläa, lehrt i de Synagoge, verchündet s Evangelium vom Riich und heilt Chranki vo allerlei Art; de Ruef vo ihm gaat dur ganz Syrie, und vili Lüüt gönd ihm nache."),
  "TU-MAT-004-001-011": ("D Versuechig vom Jesus",
-  "De Geischt füert de Jesus i d Wüeschti ufe, demit er vom Tüüfel versuecht wird. Nach vierzg Täg und Nächt Faschte hät er Hunger. De Versuecher seit, wänn er de Sohn vo Gott sig, söll er säge, dass d Stei zu Broot wärded; de Jesus antwortet mit [[DEU.8.3]]: De Mänsch läbt nöd vom Broot ellei, sondern vo jedem Wort us em Mund vo Gott. De Tüüfel stellt en uf d Zinne vom Tämpel i de heilige Stadt und forderet en mit [[PSA.91.11]]–[[PSA.91.12]] uf, sich abezrüere; de Jesus antwortet mit [[DEU.6.16]]: «Du söllsch de Herr, din Gott, nöd uf d Prob stelle.» Uf eme ganz hööche Bärg zeigt ihm de Tüüfel alli Riich vo de Wält und verspricht si ihm, wänn er sich uf de Bode wärfi und en aabätti. De Jesus seit: «Gang wäg, Satan!» und antwortet mit [[DEU.6.13]]: De Herr, din Gott, söllsch du aabätte und ihm ellei diene. Dänn laat de Tüüfel vo ihm ab, und Ängel chömed ane und diened ihm."),
+  "De Geischt füert de Jesus i d Wüeschti ufe, damit er vom Tüüfel versuecht wird. Nach vierzg Täg und Nächt Faschte hät er Hunger. De Versuecher seit, wänn er de Sohn vo Gott sig, söll er säge, dass d Stei zu Broot wärded; de Jesus antwortet mit [[DEU.8.3]]: De Mänsch läbt nöd vom Broot ellei, sondern vo jedem Wort us em Mund vo Gott. De Tüüfel stellt en uf d Zinne vom Tämpel i de heilige Stadt und forderet en mit [[PSA.91.11]]–[[PSA.91.12]] uf, sich abezrüere; de Jesus antwortet mit [[DEU.6.16]]: «Du söllsch de Herr, din Gott, nöd uf d Prob stelle.» Uf eme ganz hööche Bärg zeigt ihm de Tüüfel alli Riich vo de Wält und verspricht si ihm, wänn er sich uf de Bode wärfi und en aabätti. De Jesus seit: «Gang wäg, Satan!» und antwortet mit [[DEU.6.13]]: De Herr, din Gott, söllsch du aabätte und ihm ellei diene. Dänn laat de Tüüfel vo ihm ab, und Ängel chömed häre und diened ihm."),
  "TU-MAT-004-012-017": ("De Jesus zieht uf Galiläa",
-  "Wo de Jesus ghört, dass de Johannes usgliferet worde isch, zieht er sich uf Galiläa zrugg. Er verlaat Nazaret und chunnt uf Kafarnaum am See cho wohne, is Gebiet vo Sebulon und Naftali. Nach em Erzeller passiert das, demit sich erfüllt, was dur de Jesaja gseit worden isch ([[ISA.9.1]]–[[ISA.9.2]]): S Volk, wo i de Fiischteri gsässe isch, hät es grosses Liecht gseh. Vo dänn aa faat de Jesus aa verchünde: «Chehred um, dänn s Riich vo de Himel isch nöch choo!»"),
+  "Wo de Jesus ghört, dass de Johannes usgliferet worde isch, zieht er sich uf Galiläa zrugg. Er verlaat Nazaret und chunnt uf Kafarnaum am See cho wohne, is Gebiet vo Sebulon und Naftali. Nach em Erzeller passiert das, damit sich erfüllt, was dur de Jesaja gseit worden isch ([[ISA.9.1]]–[[ISA.9.2]]): S Volk, wo i de Fiischteri gsässe isch, hät es grosses Liecht gseh. Vo dänn aa faat de Jesus aa verchünde: «Chehred um, dänn s Riich vo de Himel isch nöch choo!»"),
  "TU-MAT-004-018-022": ("Di erschte Jünger",
   "Am See vo Galiläa gseht de Jesus d Brüeder Simon, wo mer Petrus seit, und Andreas, Fischer, wo es Wurfnetz uswärfed. Er seit zu ine: «Chömed mir nache, und ich mache eu zu Mänschefischer!» Grad lönd si d Netz ligge und gönd ihm nache. Wiiter gseht er de Jakobus, de Sohn vom Zebedäus, und sin Brueder Johannes, wo mit irem Vatter im Boot iri Netz parat mached, und rüeft si; grad lönd si s Boot und ire Vatter zrugg und gönd ihm nache."),
  "TU-MAT-004-023-025": ("De Jesus lehrt, verchündet und heilt",
-  "De Jesus zieht dur ganz Galiläa, lehrt i irne Synagoge, verchündet s Evangelium vom Riich und heilt jedi Chranket und jedes Liide im Volk. De Ruef vo ihm gaat dur ganz Syrie; mer bringt ihm alli Chranke, wo vo allerlei Chrankete und Quale plaget sind: Bsässni, Mondsüchtigi und Glähmti; und er heilt si. Vili Schaare vo Lüüt us Galiläa, de Dekapolis, Jerusalem, Judäa und vo änet em Jordan gönd ihm nache."),
+  "De Jesus zieht dur ganz Galiläa, lehrt i irne Synagoge, verchündet s Evangelium vom Riich und heilt jedi Chranket und jedes Liide im Volk. De Ruef vo ihm gaat dur ganz Syrie; mer bringt ihm alli Chranke, wo vo allerlei Chrankete und Quale plaget sind: Bsässni, Mondsüchtigi und Glähmti; und er heilt si. Vili Lüüt us Galiläa, de Dekapolis, Jerusalem, Judäa und vo änet em Jordan gönd ihm nache."),
 }
 
 NOTES_DE = [
@@ -577,9 +577,10 @@ NOTES_DE = [
   "Propheten gesagt ist». Pharisäer, Sadduzäer und andere Gruppen werden neutral bezeichnet."),
  ("In Kapitel 3–4 neu festgelegt und für die übrigen Kapitel vorgeschlagen (Begründung in decisions): δικαιοσύνη «Gerechtigkeit»; "
   "πειράζω «versuchen» (beim Teufel; wo Menschen prüfen, «auf die Probe stellen»), ἐκπειράζω «auf die Probe stellen»; διάβολος "
-  "«Teufel», ὁ πειράζων «der Versucher», Σατανᾶς «Satan»; προσέρχομαι «herantreten»; προσκυνέω «anbeten» (Gott) bzw. «sich "
-  "niederwerfen vor» nach Zusammenhang; ἀναχωρέω «sich zurückziehen»; τὰ ἔθνη «die Völker»; ὄχλος «Menge», Plural "
-  "«Menschenmengen»; θάλασσα im Erzähltext «See», im Zitat «Meer»; γεννήματα ἐχιδνῶν «Schlangenbrut»; καρπός «Frucht»; "
+  "«Teufel», ὁ πειράζων «der Versucher», Σατανᾶς «Satan»; προσέρχομαι «herantreten»; προσκυνέω «anbeten» (Gott; auch [[MAT.4.9]], "
+  "siehe decisions), vor Menschen und vor Jesus «sich niederwerfen»; ἀναχωρέω «sich zurückziehen»; τὰ ἔθνη «die Völker»; "
+  "ὄχλος «die Menge», οἱ ὄχλοι «die Menschenmengen»; θάλασσα im Erzähltext «See», im Zitat «Meer»; γεννήματα ἐχιδνῶν "
+  "«Vipernbrut»; καρπός «Frucht»; "
   "τὸ εὐαγγέλιον τῆς βασιλείας «das Evangelium vom Reich»; γέγραπται «es steht geschrieben»; σεληνιαζόμενος «mondsüchtig»."),
  ("Erzählweise: Das erzählende Präsens des Matthäus ist beibehalten, auch wo es mit Vergangenheitsformen wechselt ([[MAT.4.5]]). "
   "ὅτι und λέγων bzw. λέγοντος vor direkter Rede oder einem Zitat sind nicht eigens übersetzt. Anführungszeichen sind eine "
@@ -602,11 +603,11 @@ NOTES_GSW = [
   "Wortlut vo de CNTR-Transkriptione, nöd uf eigeter Prüefig vo de Handschrifte."),
  ("Einheitlichi Begriff im Matthäus: «s Riich vo de Himel», «s Riich vo Gott», «de Mänschesohn», «Amen, ich säg eu», «Vatter i "
   "de Himel», ἰδού «lueg», εὐθέως/εὐθύς «grad», τότε «dänn», «Chehred um», «Umkehr», «Dämon», «Bsässne», «heilige Geischt», "
-  "«Christus», d Erfüllungsformle «demit erfüllt wird, was … dur de Prophet gseit worden isch»."),
+  "«Christus», d Erfüllungsformle «damit erfüllt wird, was … dur de Prophet gseit worden isch»."),
  ("I Kapitel 3–4 neu feschtgleit (Vorschlag für di andere Kapitel): δικαιοσύνη «Grächtigkeit»; πειράζω «versueche» (bim "
-  "Tüüfel), ἐκπειράζω «uf d Prob stelle»; διάβολος «Tüüfel», ὁ πειράζων «de Versuecher»; προσέρχομαι «anechoo»; προσκυνέω "
-  "«aabätte» (vor Gott); ἀναχωρέω «sich zruggzie»; τὰ ἔθνη «d Völker»; ὄχλοι «Schaare vo Lüüt»; θάλασσα «See» (im Zitat «Meer»); "
-  "«Schlangebruet»; «s Evangelium vom Riich»; δαιμονιζόμενοι «Bsässni»; «Mondsüchtigi»."),
+  "Tüüfel), ἐκπειράζω «uf d Prob stelle»; διάβολος «Tüüfel», ὁ πειράζων «de Versuecher»; προσέρχομαι «härechoo»; προσκυνέω "
+  "«aabätte» (vor Gott), vor Mänsche und vor em Jesus «sich niderwärfe»; ἀναχωρέω «sich zruggzie»; τὰ ἔθνη «d Völker»; "
+  "ὄχλος «d Mängi», ὄχλοι «d Lüüt»; θάλασσα «See» (im Zitat «Meer»); «Viperebruet»; «s Evangelium vom Riich»; δαιμονιζόμενοι «Bsässni»; «Mondsüchtigi»."),
  ("Mundart: Näme mit Artikel («de Jesus», «de Johannes»); Perfekt statt Präteritum, nu s erzellend Präsens bliibt; «wo» als "
   "Relativwort; kei Genitiv («s Riich vo de Himel»)."),
 ]

@@ -68,7 +68,7 @@ DE = {
  "MAT.12.21": "Und{1} [auf seinen]{2,4} [Namen]{3} [werden]{6} [Völker]{5} [hoffen]{6}.»",
  # ------------------------------------------------------------ Beelzebul
  "MAT.12.22": "[Da]{1} [wurde]{2} [ein Besessener]{4} [zu ihm]{3} [gebracht]{2}, [der blind]{5} und{6} [stumm war]{7}; und{8} [er heilte]{9} [ihn]{10}, [sodass]{11} [der Stumme]{12,13} [redete]{14} und{15} [sah]{16}.",
- "MAT.12.23": "Und{1} [alle]{3} [Leute]{4,5} [gerieten ausser sich]{2} und{6} [sagten]{7}: «[Ist]{10} [das]{9} [vielleicht]{8} [der Sohn]{11,12} [Davids]{13}?»",
+ "MAT.12.23": "Und{1} [alle]{3} [Menschenmengen]{4,5} [gerieten ausser sich]{2} und{6} [sagten]{7}: «[Ist]{10} [das]{9} [vielleicht]{8} [der Sohn]{11,12} [Davids]{13}?»",
  "MAT.12.24": "[Als]{4} [aber]{2} [die Pharisäer]{1,3} [das hörten]{4}, [sagten sie]{5}: «[Der]{6} [treibt]{8} [die Dämonen]{9,10} [nicht]{7} [aus]{8}, [ausser]{11,12} [durch]{13} [Beelzebul]{14,15}, [den Herrscher]{16} [der Dämonen]{17,18}.»",
  "MAT.12.25": "[Er kannte]{1} [aber]{2} [ihre]{5} [Gedanken]{3,4} und [sagte]{6} [zu ihnen]{7}: «[Jedes]{8} [Reich]{9}, [das]{10} [gegen sich selbst]{11,12} [gespalten ist]{10}, [wird verwüstet]{13}, und{14} [jede]{15} [Stadt]{16} [oder]{17} [jedes Haus]{18}, [das]{19} [gegen sich selbst]{20,21} [gespalten ist]{19}, [wird]{23} [nicht]{22} [bestehen]{23}.",
  "MAT.12.26": "Und{1} [wenn]{2} [der Satan]{3,4} [den Satan]{5,6} [austreibt]{7}, [ist er]{10} [gegen sich selbst]{8,9} [gespalten]{10}. [Wie]{11} [wird]{13} [dann]{12} [sein]{16} [Reich]{14,15} [bestehen]{13}?",
@@ -94,7 +94,7 @@ DE = {
  "MAT.12.44": "[Dann]{1} [sagt er]{2}: ‹[Ich werde]{7} [in]{3} [mein]{6} [Haus]{4,5} [zurückkehren]{7}, [aus dem]{8} [ich]{9} [weggegangen bin]{9}.› Und{10} [wenn er kommt]{11}, [findet er]{12} es [leer]{13}, [gefegt]{14} und{15} [geschmückt]{16}.",
  "MAT.12.45": "[Dann]{1} [geht er hin]{2} und{3} [nimmt]{4} [sieben]{7} [andere]{8} [Geister]{9} [mit sich]{5,6}, [die böser sind]{10} [als er selbst]{11}; und{12} [sie gehen hinein]{13} [und wohnen]{14} [dort]{15}, und{16} [am Ende]{18,19} [steht es]{17} [um jenen]{20,22} [Menschen]{21} [schlimmer]{23} [als am Anfang]{24,25}. [So]{26} [wird es]{27} [auch]{28} [diesem]{31} [bösen]{32,33} [Geschlecht]{29,30} [ergehen]{27}.»",
  # ------------------------------------------------------------ Die Verwandten Jesu
- "MAT.12.46": "[Während]{1} [er]{3} [aber]{2} [noch]{1} [zu den Leuten]{5,6} [redete]{4}, [siehe]{7}, [da standen]{14} [seine]{13} [Mutter]{8,9} und{10} seine [Brüder]{11,12} [draussen]{15} [und suchten]{16} [ihn]{17} [zu sprechen]{18}.",
+ "MAT.12.46": "[Während]{1} [er]{3} [aber]{2} [noch]{1} [zu den Menschenmengen]{5,6} [redete]{4}, [siehe]{7}, [da standen]{14} [seine]{13} [Mutter]{8,9} und{10} seine [Brüder]{11,12} [draussen]{15} [und suchten]{16} [ihn]{17} [zu sprechen]{18}.",
  "MAT.12.47": "[Jemand]{3} [aber]{2} [sagte]{1} [zu ihm]{4}: «[Siehe]{5}, [deine]{8} [Mutter]{6,7} und{9} [deine]{12} [Brüder]{10,11} [stehen]{14} [draussen]{13} [und suchen]{15} [dich]{16} [zu sprechen]{17}.»",
  "MAT.12.48": "[Er]{1} [aber]{2} [antwortete]{3} und [sagte]{4} [zu dem]{5}, [der]{6} es [ihm]{7} [sagte]{6}: «[Wer]{8} [ist]{9} [meine]{12} [Mutter]{10,11}, und{13} [wer]{14} [sind]{15} [meine]{18} [Brüder]{16,17}?»",
  "MAT.12.49": "Und{1} [er streckte]{2} [seine]{5} [Hand]{3,4} [über]{6} [seine]{9} [Jünger]{7,8} [aus]{2} und [sagte]{10}: «[Siehe]{11}, [meine]{14} [Mutter]{12,13} und{15} [meine]{18} [Brüder]{16,17}!",
@@ -106,7 +106,7 @@ GSW = {
  "MAT.12.1": "[I]{1} [dere]{2} [Ziit]{3,4} [isch]{5} [de Jesus]{6,7} [am Sabbat]{8,9} [dur]{10} [d Chornfälder]{11,12} [gange]{5}. [Sini]{16} [Jünger]{13,15} [aber]{14} [händ Hunger gha]{17} und{18} [händ aagfange]{19}, [Ähre]{21} [abzrupfe]{20} und{22} [z ässe]{23}.",
  "MAT.12.2": "[D Pharisäer]{1,3} [aber]{2} [händ das gseh]{4} und [händ]{5} [zu ihm]{6} [gseit]{5}: «[Lueg]{7}, [dini]{10} [Jünger]{8,9} [mached]{11}, [was]{12} [am Sabbat]{16,17} [z mache]{15} [nöd]{13} [erlaubt isch]{14}.»",
  "MAT.12.3": "[Er]{1} [aber]{2} [hät]{3} [zu ine]{4} [gseit]{3}: «[Händ er]{6} [nöd]{5} [gläse]{6}, [was]{7} [de David]{9} [gmacht hät]{8}, [wo]{10} [er]{11} und{12} [sini Begleiter]{13-15} [Hunger gha händ]{11},",
- "MAT.12.4": "[wie]{1} [er]{2} [is]{3,4} [Huus]{5} [vo Gott]{6,7} [ine gange isch]{2} und{8} [si]{13} [d Schaubrot]{9-12} [gässe händ]{13}, [was]{14} [ihm]{18} [nöd]{15} [erlaubt]{16} [gsii isch]{17} [z ässe]{19}, [au nöd]{20} [dene, wo]{21} [bi]{22} [ihm]{23} gsii sind, [sondern]{24,25} [nu]{28} [de Prieschter]{26,27}?",
+ "MAT.12.4": "[wie]{1} [er]{2} [is]{3,4} [Huus]{5} [vo Gott]{6,7} [inegange isch]{2} und{8} [si]{13} [d Schaubrot]{9-12} [gässe händ]{13}, [was]{14} [ihm]{18} [nöd]{15} [erlaubt]{16} [gsii isch]{17} [z ässe]{19}, [au nöd]{20} [dene, wo]{21} [bi]{22} [ihm]{23} gsii sind, [sondern]{24,25} [nu]{28} [de Prieschter]{26,27}?",
  "MAT.12.5": "[Oder]{1} [händ er]{3} [nöd]{2} [im]{4,5} [Gsetz]{6} [gläse]{3}, [dass]{7} [d Prieschter]{10,11} [am Sabbat]{8,9} [im]{12,13} [Tämpel]{14} [de Sabbat]{15,16} [entheiliged]{17} und{18} [ohni Schuld]{19} [sind]{20}?",
  "MAT.12.6": "[Ich säg]{1} [eu]{3} [aber]{2}: [Da]{9} [isch]{8} [öppis Grössers]{7} [als de]{5} [Tämpel]{6}. ~4(ὅτι leitet d Ussag ii; mit em Doppelpunkt widergää)",
  "MAT.12.7": "[Wänn]{1} [ir]{3} [aber]{2} [begriffe hetted]{3}, [was]{4} [das heisst]{5}: ‹[Barmhärzigkeit]{6} [wott ich]{7} und{8} [nöd]{9} [Opfer]{10}›, [dänn hetted ir]{13} [di Schuldlose]{14,15} [nöd]{11} [verurteilt]{13}. ~12(ἄν zeigt, dass d Folg nöd iitroffe isch; im «hetted» enthalte)",
@@ -117,17 +117,17 @@ GSW = {
  "MAT.12.11": "[Er]{1} [aber]{2} [hät]{3} [zu ine]{4} [gseit]{3}: «[Wer]{5} [under]{7} [eu]{8} [isch]{6} [en Mänsch]{9}, [wo]{10} [es einzigs]{13} [Schaf]{12} [hät]{11} und{14} [s]{24} [nöd]{22} [würd packe]{23} und{25} [usezie]{26}, [wänn]{15} [es]{17} [am Sabbat]{18,19} [in]{20} [e Gruebe]{21} [gheit]{16}?",
  "MAT.12.12": "[Wie vil]{1} [isch]{3} [en Mänsch]{4} [also]{2} [meh wärt]{3} [als es Schaf]{5}! [Drum]{6} [isch es]{7} [am Sabbat]{8,9} [erlaubt]{7}, [Guets]{10} [z tue]{11}.»",
  "MAT.12.13": "[Dänn]{1} [seit er]{2} [zum Mänsch]{3,4}: «[Streck]{5} [dini]{6} [Hand]{7,8} [us]{5}!» Und{9} [er hät si usgstreckt]{10}, und{11} [si isch wider]{12} [gsund]{13} [worde]{12} [wie]{14} [di]{15} [ander]{16}.",
- "MAT.12.14": "[D Pharisäer]{3,4} [aber]{2} [sind usegange]{1} [und händ]{6} [gäge]{7} [ihn]{8} [Root]{5} [ghalte]{6}, [wie]{9} [si]{11} [en]{10} [chönted umbringe]{11}.",
+ "MAT.12.14": "[D Pharisäer]{3,4} [aber]{2} [sind usegange]{1} [und händ]{6} [gäge]{7} [ihn]{8} [Raat]{5} [ghalte]{6}, [wie]{9} [si]{11} [en]{10} [chönted umbringe]{11}.",
  # ------------------------------------------------------------ Der erwählte Knecht
  "MAT.12.15": "[De Jesus]{1,3} [aber]{2} [hät das gmerkt]{4} und [hät sich]{5} [vo dört]{6} [zruggzoge]{5}. Und{7} [vili]{10} [sind]{8} [ihm]{9} [nachegange]{8}, und{11} [er hät]{12} [si]{13} [alli]{14} [gheilt]{12}.",
- "MAT.12.16": "Und{1} [er hät]{2} [ine]{3} [streng befohle]{2}, [dass]{4} [si]{8} [en]{7} [nöd]{5} [bekannt]{6} [mache söled]{8},",
+ "MAT.12.16": "Und{1} [er hät]{2} [ine]{3} [streng befole]{2}, [dass]{4} [si]{8} [en]{7} [nöd]{5} [bekannt]{6} [mache söled]{8},",
  "MAT.12.17": "[damit]{1} [erfüllt wird]{2}, [was]{3} [dur]{5} [de Jesaja]{6}, [de Prophet]{7,8}, [gseit worden isch]{4}: ~9(λέγοντος «wo seit» leitet s Zitat ii; mit em Doppelpunkt widergää)",
  "MAT.12.18": "«[Lueg]{1}, [min]{4} [Chnächt]{2,3}, [wo]{5} [ich userwählt han]{6}, [min]{9} [Gliebte]{7,8}, [a]{10} [däm]{11} [mini]{15} [Seel]{13,14} [Gfalle gfunde hät]{12}. [Ich wird]{16} [min]{19} [Geischt]{17,18} [uf]{20} [ihn]{21} [lege]{16}, und{22} [er wird]{26} [de Völker]{24,25} [s Rächt]{23} [verchünde]{26}.",
  "MAT.12.19": "[Er wird]{2} [nöd]{1} [strite]{2} [und nöd]{3} [schreie]{4}, [und niemer]{5,7} [wird]{6} [uf]{8} [de Straasse]{9,10} [sini]{13} [Stimm]{11,12} [ghöre]{6}.",
  "MAT.12.20": "[Es gchnickts]{2} [Rohr]{1} [wird er]{4} [nöd]{3} [verbreche]{4}, und{5} [en glimmende]{7} [Docht]{6} [wird er]{9} [nöd]{8} [uslösche]{9}, [bis]{10} [er]{12} [s Rächt]{15,16} [zum]{13} [Sieg]{14} [gfüert hät]{12}. ~11(ἄν laat de Ziitpunkt offe; nöd eigens widergää)",
  "MAT.12.21": "Und{1} [uf sin]{2,4} [Name]{3} [wärded]{6} [Völker]{5} [hoffe]{6}.»",
  # ------------------------------------------------------------ Beelzebul
- "MAT.12.22": "[Dänn]{1} [isch]{2} [en Bsässne]{4} [zu ihm]{3} [brocht worde]{2}, [wo blind]{5} und{6} [stumm gsii isch]{7}; und{8} [er hät]{9} [en]{10} [gheilt]{9}, [so dass]{11} [de Stumm]{12,13} [gredt]{14} und{15} [gseh hät]{16}.",
+ "MAT.12.22": "[Dänn]{1} [isch]{2} [en Bsässne]{4} [zu ihm]{3} [bracht worde]{2}, [wo blind]{5} und{6} [stumm gsii isch]{7}; und{8} [er hät]{9} [en]{10} [gheilt]{9}, [so dass]{11} [de Stumm]{12,13} [gredt]{14} und{15} [gseh hät]{16}.",
  "MAT.12.23": "Und{1} [alli]{3} [Lüüt]{4,5} [sind usser sich gsii]{2} und{6} [händ gseit]{7}: «[Isch]{10} [dä]{9} [ächt]{8} [de Sohn]{11,12} [vom David]{13}?»",
  "MAT.12.24": "[Wo]{4} [aber]{2} [d Pharisäer]{1,3} [das ghört händ]{4}, [händ si gseit]{5}: «[Dä]{6} [tribt]{8} [d Dämone]{9,10} [nu]{7,11,12} [dur]{13} [de Beelzebul]{14,15} [us]{8}, [de Herrscher]{16} [vo de Dämone]{17,18}.»",
  "MAT.12.25": "[Er hät]{1} [aber]{2} [iri]{5} [Gedanke]{3,4} [kännt]{1} und [hät]{6} [zu ine]{7} [gseit]{6}: «[Jedes]{8} [Riich]{9}, [wo]{10} [gäge sich sälber]{11,12} [gspalte isch]{10}, [wird verwüeschtet]{13}, und{14} [jedi]{15} [Stadt]{16} [oder]{17} [jedes Huus]{18}, [wo]{19} [gäge sich sälber]{20,21} [gspalte isch]{19}, [wird]{23} [nöd]{22} [bestaa]{23}.",
@@ -150,7 +150,7 @@ GSW = {
  "MAT.12.40": "[Dänn]{2} [wie]{1} [de Jona]{4} [drüü]{10} [Täg]{11} und{12} [drüü]{13} [Nächt]{14} [im]{5,6} [Buuch]{7} [vom grosse Fisch]{8,9} [gsii isch]{3}, [eso]{15} [wird]{16} [de Mänschesohn]{17-20} [drüü]{26} [Täg]{27} und{28} [drüü]{29} [Nächt]{30} [im]{21,22} [Härz]{23} [vo de Ärde]{24,25} [sii]{16}.",
  "MAT.12.41": "[D Manne]{1} [vo Ninive]{2} [wärded]{3} [im]{4,5} [Gricht]{6} [mit]{7} [dere]{10} [Generation]{8,9} [ufstaa]{3} und{11} [si]{13} [verurteile]{12}; [dänn]{14} [si sind]{15} [uf]{16} [d Verchündigung]{17,18} [vom Jona]{19} [hii]{16} [umgchehrt]{15}, und{20} [lueg]{21}, [da]{24} isch [meh]{22} [als de Jona]{23}.",
  "MAT.12.42": "[D Königin]{1} [vom Süde]{2} [wird sich]{3} [im]{4,5} [Gricht]{6} [mit]{7} [dere]{10} [Generation]{8,9} [erhebe]{3} und{11} [si]{13} [verurteile]{12}; [dänn]{14} [si isch]{15} [vo]{16} [de Änd]{17,18} [vo de Ärde]{19,20} [choo]{15}, [zum]{21} [d Wiisheit]{22,23} [vom Salomo]{24} [ghöre]{21}, und{25} [lueg]{26}, [da]{29} isch [meh]{27} [als de Salomo]{28}.",
- "MAT.12.43": "[Wänn]{1} [aber]{2} [de unrein]{3,4} [Geischt]{5} [vom]{7,8} [Mänsch]{9} [usegange isch]{6}, [zieht er]{10} [dur]{11} [wasserlosi]{12} [Gägede]{13} [und suecht]{14} [Rueh]{15} und{16} [findt]{18} [kei]{17}.",
+ "MAT.12.43": "[Wänn]{1} [aber]{2} [de unrein]{3,4} [Geischt]{5} [vom]{7,8} [Mänsch]{9} [usegange isch]{6}, [zieht er]{10} [dur]{11} [wasserlosi]{12} [Gägede]{13} [und suecht]{14} [Rue]{15} und{16} [findt]{18} [kei]{17}.",
  "MAT.12.44": "[Dänn]{1} [seit er]{2}: ‹[Ich gang]{7} [i]{3} [mis]{6} [Huus]{4,5} [zrugg]{7}, [vo wo]{8} [ich]{9} [usegange bin]{9}.› Und{10} [wänn er chunnt]{11}, [findt er]{12} s [leer]{13}, [gwüscht]{14} und{15} [gschmückt]{16}.",
  "MAT.12.45": "[Dänn]{1} [gaat er]{2} und{3} [nimmt]{4} [sibe]{7} [anderi]{8} [Geischter]{9} [mit sich]{5,6}, [wo böser sind]{10} [als er sälber]{11}; und{12} [si gönd ine]{13} [und wohned]{14} [dört]{15}, und{16} [am Schluss]{18,19} [isch es]{17} [mit däm]{20,22} [Mänsch]{21} [schlimmer]{23} [als am Aafang]{24,25}. [Eso]{26} [wirds]{27} [au]{28} [dere]{31} [böse]{32,33} [Generation]{29,30} [gaa]{27}.»",
  # ------------------------------------------------------------ Die Verwandten Jesu
@@ -213,8 +213,8 @@ DEC_DE = [
   "Einheitliche Wiedergabe für alle Matthäus-Bereiche: δαιμονιζόμενος «Besessener», δαιμόνιον «Dämon»."),
  ("MAT.12.22", "stumm", "interpretive", "κωφός", None, ["taub", "taubstumm"],
   "κωφός heisst «stumpf» und meint stumm oder taub; hier zeigt «redete», dass Stummheit gemeint ist (vgl. [[MAT.9.32-MAT.9.33]])."),
- ("MAT.12.23", "Leute", "adapted", "ὄχλοι", "Volksmengen", ["Scharen", "Menge"],
-  "Matthäus braucht oft den Plural ὄχλοι. «Leute» gibt ihn natürlicher wieder als «Volksmengen»; ebenso [[MAT.12.46]]."),
+ ("MAT.12.23", "alle Menschenmengen", "literal", "πάντες οἱ ὄχλοι", None, ["alle Leute", "die ganze Menge"],
+  "Gemeinsame Matthäus-Wiedergabe: ὄχλος «die Menge», οἱ ὄχλοι «die Menschenmengen». Matthäus braucht den Plural oft; die Übersetzung hält ihn sichtbar. Ebenso [[MAT.12.46]]."),
  ("MAT.12.23", "gerieten ausser sich", "literal", "ἐξίσταντο", None, ["staunten", "waren fassungslos"], None),
  ("MAT.12.23", "Ist das vielleicht der Sohn Davids", "interpretive", "Μήτι οὗτός ἐστιν ὁ υἱὸς Δαυίδ", None, ["Ist das etwa der Sohn Davids?", "Ist das nicht der Sohn Davids?"],
   "μήτι leitet eine Frage ein, die eher eine verneinende Antwort erwartet, oft aber auch zögernde Vermutung ausdrückt. «Vielleicht» gibt das Zögern wieder; «etwa» betonte den Zweifel, «nicht» machte daraus eine Behauptung. «Sohn Davids» ist bei Matthäus ein Messiastitel ([[MAT.1.1]], [[MAT.9.27]])."),
@@ -313,9 +313,9 @@ DEC_GSW = [
   "D Frag erwartet d Antwort «niemer». S Futur isch im Züritüütsch mit em Präsens widergää."),
  ("MAT.12.11", "gheit", "adapted", "ἐμπέσῃ", "inegheit", ["fallt"],
   "«Gheie» isch s gwöönlich Mundartwort für «falle»."),
- ("MAT.12.14", "Root", "literal", "συμβούλιον", "en Beschluss", None,
-  "Wie i [[MRK.3.6]]: «Root ghalte»."),
- ("MAT.12.16", "streng befohle", "interpretive", "ἐπετίμησεν", "aagfahre", ["iigschärft"],
+ ("MAT.12.14", "Raat", "literal", "συμβούλιον", "en Beschluss", None,
+  "Wie i [[MRK.3.6]]: «Raat ghalte»."),
+ ("MAT.12.16", "streng befole", "interpretive", "ἐπετίμησεν", "aagfahre", ["iigschärft"],
   "ἐπιτιμάω heisst «zrächtwiise, aafahre», au «nachdrücklich befele». Bim Matthäus richtet sich s Verb a d Gheilte."),
  ("MAT.12.17", "damit erfüllt wird, was dur de Jesaja, de Prophet, gseit worden isch", "traditional", "ἵνα πληρωθῇ τὸ ῥηθὲν διὰ Ἠσαΐου τοῦ προφήτου", None, None,
   "Iiheitlichi Widergaab vo de Erfüllungsformle für alli Matthäus-Teil."),
@@ -328,8 +328,8 @@ DEC_GSW = [
  ("MAT.12.20", "s Rächt zum Sieg gfüert hät", "interpretive", "ἐκβάλῃ εἰς νῖκος τὴν κρίσιν", "s Rächt usegfüert hät zum Sieg", ["em Rächt zum Sieg verholfe hät"], None),
  ("MAT.12.22", "en Bsässne", "literal", "δαιμονιζόμενος", None, None,
   "Iiheitlichi Widergaab für alli Matthäus-Teil: δαιμονιζόμενος «Bsässne», δαιμόνιον «Dämon». κωφός heisst stumm oder taub; da zeigt «gredt», dass stumm gmeint isch."),
- ("MAT.12.23", "Lüüt", "adapted", "ὄχλοι", "Volksmängene", ["d Mängi"],
-  "De Matthäus bruucht oft de Plural ὄχλοι; «Lüüt» isch natürlicher. Gliich [[MAT.12.46]]."),
+ ("MAT.12.23", "Lüüt", "adapted", "ὄχλοι", "Mängene", ["d Mängi"],
+  "Gmeinsami Matthäus-Wiedergab: ὄχλος «d Mängi», οἱ ὄχλοι «d Lüüt», wil «Mängene» i de Mundart ungwohnt isch. Gliich [[MAT.12.46]]."),
  ("MAT.12.23", "ächt", "interpretive", "Μήτι", None, ["öppe", "nöd"],
   "μήτι leitet e Frag ii, wo eher e verneinendi Antwort erwartet, aber au zögerlichi Vermuetig usdrückt. S Mundartwort «ächt» trifft das Zögere. «Sohn vom David» isch bim Matthäus en Messiastitel ([[MAT.1.1]])."),
  ("MAT.12.24", "de Beelzebul", "literal", "Βεελζεβοὺλ", None, ["de Beelzebub"],
@@ -397,22 +397,22 @@ ALTS = [
    "Laut der automatischen Zuordnung liest 03 ohne Zusatz; 05 hat ἦν ἐκεῖ τὴν («war dort, die …») und wird R2 zugeordnet. 01, 04 und 032 führt die Zuordnung als «anders»; nach dem dort erfassten Wortlaut steht ἄνθρωπος als Kürzel ohne Zusatz, also wie im SBLGNT-Text."],
   ["De Zuesatz macht de Satz ohni Verb glatter, vilicht nach [[MRK.3.1]]; oder ἦν isch bim Abschriibe usgfalle.",
    "Nach de automatische Zueornig liist 03 ohni Zuesatz; 05 hät ἦν ἐκεῖ τὴν. 01, 04 und 032 füert d Zueornig als «andersch»; nach em erfasste Wortlut staat ἄνθρωπος als Chürzel ohni Zuesatz."]),
- ("VAR-SBLGNTAPP-MAT-012-015-01:R2", "MAT.12.15", "Und viele folgten ihm", "Und viele Leute folgten ihm",
+ ("VAR-SBLGNTAPP-MAT-012-015-01:R2", "MAT.12.15", "Und viele folgten ihm", "Und grosse Menschenmengen folgten ihm",
   "Und vili sind ihm nachegange", "Und vili Lüüt sind ihm nachegange", "gering",
-  "«Viele» wird zu «viele Leute» (wörtlich «viele Volksmengen»); der Sinn bleibt nahezu gleich. Der SBLGNT folgt hier WH gegen Treg, RP und NA28.",
+  "«Viele» wird zu «grosse Menschenmengen» (ὄχλοι πολλοί, wie [[MAT.8.1]]); der Sinn bleibt nahezu gleich. Der SBLGNT folgt hier WH gegen Treg, RP und NA28.",
   "«Vili» wird zu «vili Lüüt»; de Sinn bliibt fascht gliich. De SBLGNT folgt da WH gäge Treg, RP und NA28.",
-  {"R1": [("αὐτῷ πολλοί", "viele folgten ihm", "WH, NIV")], "R2": [("αὐτῷ ὄχλοι πολλοί", "viele Leute folgten ihm", "Treg, RP, NA28")]},
+  {"R1": [("αὐτῷ πολλοί", "viele folgten ihm", "WH, NIV")], "R2": [("αὐτῷ ὄχλοι πολλοί", "grosse Menschenmengen folgten ihm", "Treg, RP, NA28")]},
   {"R1": [("αὐτῷ πολλοί", "vili sind ihm nachegange", "WH, NIV")], "R2": [("αὐτῷ ὄχλοι πολλοί", "vili Lüüt sind ihm nachegange", "Treg, RP, NA28")]},
   ["ὄχλοι kann nach der Wendung ὄχλοι πολλοί ergänzt sein, die Matthäus öfter braucht ([[MAT.4.25]], [[MAT.8.1]]); ebenso kann das Wort wegen der ähnlichen Endung (ΟΧΛΟΙ ΠΟΛΛΟΙ) beim Abschreiben ausgefallen sein.",
    "Laut der automatischen Zuordnung lesen 01 und 03 ohne ὄχλοι, 04, 05 und 032 mit ihm."],
   ["ὄχλοι cha nach de Wändig ὄχλοι πολλοί ergänzt sii, wo de Matthäus öfter bruucht ([[MAT.4.25]], [[MAT.8.1]]); oder s Wort isch wäge de ähnliche Ändig usgfalle.",
    "Nach de automatische Zueornig läsed 01 und 03 ohni ὄχλοι, 04, 05 und 032 mit."]),
  ("VAR-SBLGNTAPP-MAT-012-022-01:R2", "MAT.12.22", "Da wurde ein Besessener zu ihm gebracht", "Da brachte man einen Besessenen zu ihm",
-  "Dänn isch en Bsässne zu ihm brocht worde", "Dänn händ si en Bsässne zu ihm brocht", "gering",
+  "Dänn isch en Bsässne zu ihm bracht worde", "Dänn händ si en Bsässne zu ihm bracht", "gering",
   "Aktiv statt Passiv; der Sinn bleibt gleich.", "Aktiv statt Passiv; de Sinn bliibt gliich.",
   {"R1": [("προσηνέχθη αὐτῷ δαιμονιζόμενος τυφλὸς καὶ κωφός", "wurde ein Besessener zu ihm gebracht, blind und stumm", "Treg, RP, NA28")],
    "R2": [("προσήνεγκαν αὐτῷ δαιμονιζόμενον τυφλὸν καὶ κωφόν", "brachte man einen Besessenen zu ihm, blind und stumm", "WH, NIV")]},
-  {"R1": [("προσηνέχθη …", "isch en Bsässne zu ihm brocht worde", "Treg, RP, NA28")], "R2": [("προσήνεγκαν …", "händ si en Bsässne zu ihm brocht", "WH, NIV")]},
+  {"R1": [("προσηνέχθη …", "isch en Bsässne zu ihm bracht worde", "Treg, RP, NA28")], "R2": [("προσήνεγκαν …", "händ si en Bsässne zu ihm bracht", "WH, NIV")]},
   ["Das Aktiv entspricht [[MAT.9.32]] (προσήνεγκαν αὐτῷ … δαιμονιζόμενον) und kann daran angeglichen sein; ebenso kann das Passiv eine stilistische Änderung sein.",
    "Laut der automatischen Zuordnung liest 03 das Aktiv, 01, 04, 05 und 032 das Passiv. 04 hat nach dem erfassten Wortlaut nur κωφός, ohne τυφλὸς καί."],
   ["S Aktiv entspricht [[MAT.9.32]] und cha dra aagliche sii; oder s Passiv isch e stilistischi Änderig.",
@@ -516,21 +516,21 @@ UNITS = [
  ("TU-MAT-012-015-021", "MAT.12.15-MAT.12.21", "narrative", "Der erwählte Knecht", None,
   "Jesus merkt es und zieht sich zurück; viele folgen ihm, und er heilt sie alle, gebietet ihnen aber streng, ihn nicht bekannt zu machen. Der Evangelist sieht darin erfüllt, was Jesaja gesagt hat ([[ISA.42.1-ISA.42.4]]): Im Zitat heisst der Knecht erwählt und geliebt; der Sprecher wird seinen Geist auf ihn legen, und er wird den Völkern das Recht verkünden. Er wird nicht streiten noch schreien, das geknickte Rohr nicht zerbrechen und den glimmenden Docht nicht auslöschen, bis er das Recht zum Sieg geführt hat, und auf seinen Namen werden Völker hoffen.", None),
  ("TU-MAT-012-022-032", "MAT.12.22-MAT.12.32", "dialogue", "Beelzebul und die Lästerung gegen den Geist", None,
-  "Jesus heilt einen Besessenen, der blind und stumm ist, sodass er redet und sieht. Die Leute geraten ausser sich und fragen, ob das vielleicht der Sohn Davids sei. Die Pharisäer sagen, er treibe die Dämonen nur durch Beelzebul, den Herrscher der Dämonen, aus. Jesus kennt ihre Gedanken: Ein gegen sich selbst gespaltenes Reich wird verwüstet; treibt der Satan den Satan aus, kann sein Reich nicht bestehen; und durch wen treiben ihre Söhne aus? Treibt er die Dämonen durch den Geist Gottes aus, ist das Reich Gottes zu ihnen gekommen; niemand kann das Haus des Starken plündern, ohne ihn zuerst zu binden. Wer nicht mit ihm ist, ist gegen ihn. Jede Sünde und Lästerung, auch ein Wort gegen den Menschensohn, wird vergeben werden, die Lästerung gegen den heiligen Geist aber nicht, weder in dieser Weltzeit noch in der kommenden.", None),
+  "Jesus heilt einen Besessenen, der blind und stumm ist, sodass er redet und sieht. Die Menschenmengen geraten ausser sich und fragen, ob das vielleicht der Sohn Davids sei. Die Pharisäer sagen, er treibe die Dämonen nur durch Beelzebul, den Herrscher der Dämonen, aus. Jesus kennt ihre Gedanken: Ein gegen sich selbst gespaltenes Reich wird verwüstet; treibt der Satan den Satan aus, kann sein Reich nicht bestehen; und durch wen treiben ihre Söhne aus? Treibt er die Dämonen durch den Geist Gottes aus, ist das Reich Gottes zu ihnen gekommen; niemand kann das Haus des Starken plündern, ohne ihn zuerst zu binden. Wer nicht mit ihm ist, ist gegen ihn. Jede Sünde und Lästerung, auch ein Wort gegen den Menschensohn, wird vergeben werden, die Lästerung gegen den heiligen Geist aber nicht, weder in dieser Weltzeit noch in der kommenden.", None),
  ("TU-MAT-012-033-037", "MAT.12.33-MAT.12.37", "discourse", "Baum und Frucht, Herz und Wort", None,
   "Jesus fährt fort, man solle Baum und Frucht entweder beide gut oder beide faul machen, denn an der Frucht wird der Baum erkannt. Er nennt die Angesprochenen eine Vipernbrut und fragt, wie sie Gutes reden könnten, da sie böse seien; denn aus dem Überfluss des Herzens redet der Mund, und der gute Mensch bringt aus dem guten Schatz Gutes hervor, der böse Böses. Über jedes unnütze Wort werden die Menschen am Tag des Gerichts Rechenschaft ablegen; aufgrund seiner Worte wird man gerecht gesprochen oder verurteilt werden.", None),
  ("TU-MAT-012-038-045", "MAT.12.38-MAT.12.45", "dialogue", "Das Zeichen des Jona", None,
   "Einige Schriftgelehrte und Pharisäer wollen von Jesus ein Zeichen sehen. Er antwortet, diesem bösen und ehebrecherischen Geschlecht werde kein Zeichen gegeben werden ausser dem Zeichen des Propheten Jona: Wie Jona drei Tage und drei Nächte im Bauch des grossen Fisches war, so werde der Menschensohn drei Tage und drei Nächte im Herzen der Erde sein. Die Männer von Ninive, die auf die Verkündigung des Jona hin umkehrten, und die Königin des Südens, die kam, um die Weisheit Salomos zu hören, werden beim Gericht dieses Geschlecht verurteilen; hier ist mehr als Jona und mehr als Salomo. Dann spricht er von einem unreinen Geist, der von einem Menschen ausgeht, keine Ruhe findet, sein früheres Haus leer, gefegt und geschmückt antrifft und mit sieben noch böseren Geistern dort wohnt, sodass es um den Menschen am Ende schlimmer steht als am Anfang; so werde es auch diesem bösen Geschlecht ergehen.", None),
  ("TU-MAT-012-046-050", "MAT.12.46-MAT.12.50", "narrative", "Mutter und Brüder Jesu", None,
-  "Während Jesus noch zu den Leuten redet, stehen seine Mutter und seine Brüder draussen und suchen ihn zu sprechen; jemand sagt es ihm. Jesus fragt, wer seine Mutter und wer seine Brüder seien, streckt die Hand über seine Jünger aus und sagt: «Siehe, meine Mutter und meine Brüder!» Denn wer den Willen seines Vaters in den Himmeln tut, ist sein Bruder, seine Schwester und seine Mutter.", None),
+  "Während Jesus noch zu den Menschenmengen redet, stehen seine Mutter und seine Brüder draussen und suchen ihn zu sprechen; jemand sagt es ihm. Jesus fragt, wer seine Mutter und wer seine Brüder seien, streckt die Hand über seine Jünger aus und sagt: «Siehe, meine Mutter und meine Brüder!» Denn wer den Willen seines Vaters in den Himmeln tut, ist sein Bruder, seine Schwester und seine Mutter.", None),
 ]
 UNITS_GSW = {
  "TU-MAT-012-001-050": ("Striit um de Sabbat, de Beelzebul und s Zeiche vom Jona",
-  "Wo sini Jünger am Sabbat Ähre abrupfed, säged d Pharisäer zum Jesus, si machid, was am Sabbat nöd erlaubt sig; de Jesus verwiist uf de David und d Prieschter, seit, da sig öppis Grössers als de Tämpel, und nännt de Mänschesohn Herr über de Sabbat. I de Synagoge heilt er am Sabbat e verdorreti Hand, und d Pharisäer haltet Root, wie si en chönted umbringe. De Jesus zieht sich zrugg, heilt alli, wo ihm nachegönd, und befiehlt ine streng, en nöd bekannt z mache; de Evangelischt gseht drin s Wort vom Jesaja vom userwählte Chnächt erfüllt. Wo de Jesus en blinde und stumme Bsässne heilt, säged d Pharisäer, er tribi d Dämone dur de Beelzebul us; de Jesus antwortet, es gspaltes Riich chönn nöd bestaa, wänn er dur de Geischt vo Gott ustribi, sig s Riich vo Gott zu ine choo, und d Läschterig gäge de Geischt wärdi nöd vergää. A de Frucht erchänn me de Baum; us em Überfluss vom Härz redi de Mund, und uf Grund vo sine Wort wärdi me grächt gsproche oder verurteilt. De Schriftgelehrte und Pharisäer, wo es Zeiche verlanged, seit er, dere Generation wärdi kei Zeiche gää usser s Zeiche vom Jona, und wändet s Bildwort vom unreine Geischt, wo zruggchunnt, uf die Generation aa. Wo sini Mueter und sini Brüeder mit ihm wänd rede, nännt er jede, wo de Wile vo sim Vatter i de Himel tuet, sin Brueder, sini Schwöschter und sini Mueter."),
+  "Wo sini Jünger am Sabbat Ähre abrupfed, säged d Pharisäer zum Jesus, si machid, was am Sabbat nöd erlaubt sig; de Jesus verwiist uf de David und d Prieschter, seit, da sig öppis Grössers als de Tämpel, und nännt de Mänschesohn Herr über de Sabbat. I de Synagoge heilt er am Sabbat e verdorreti Hand, und d Pharisäer haltet Raat, wie si en chönted umbringe. De Jesus zieht sich zrugg, heilt alli, wo ihm nachegönd, und befiehlt ine streng, en nöd bekannt z mache; de Evangelischt gseht drin s Wort vom Jesaja vom userwählte Chnächt erfüllt. Wo de Jesus en blinde und stumme Bsässne heilt, säged d Pharisäer, er tribi d Dämone dur de Beelzebul us; de Jesus antwortet, es gspaltes Riich chönn nöd bestaa, wänn er dur de Geischt vo Gott ustribi, sig s Riich vo Gott zu ine choo, und d Läschterig gäge de Geischt wärdi nöd vergää. A de Frucht erchänn me de Baum; us em Überfluss vom Härz redi de Mund, und uf Grund vo sine Wort wärdi me grächt gsproche oder verurteilt. De Schriftgelehrte und Pharisäer, wo es Zeiche verlanged, seit er, dere Generation wärdi kei Zeiche gää usser s Zeiche vom Jona, und wändet s Bildwort vom unreine Geischt, wo zruggchunnt, uf die Generation aa. Wo sini Mueter und sini Brüeder mit ihm wänd rede, nännt er jede, wo de Wile vo sim Vatter i de Himel tuet, sin Brueder, sini Schwöschter und sini Mueter."),
  "TU-MAT-012-001-008": ("Ährerupfe am Sabbat",
   "I dere Ziit gaat de Jesus am Sabbat dur d Chornfälder; sini Jünger händ Hunger, rupfed Ähre ab und ässed. D Pharisäer säged zum Jesus, sini Jünger machid, was am Sabbat nöd erlaubt sig. De Jesus erinneret a de David, wo mit sine Begleiter im Huus vo Gott d Schaubrot gässe hät, wo nu de Prieschter erlaubt gsii sind, und a d Prieschter, wo am Sabbat im Tämpel de Sabbat entheiliged und glich ohni Schuld sind. Da sig öppis Grössers als de Tämpel; wänn si begriffe hetted, was «Barmhärzigkeit wott ich und nöd Opfer» ([[HOS.6.6]]) heisst, hetted si di Schuldlose nöd verurteilt. Dänn de Mänschesohn isch Herr über de Sabbat."),
  "TU-MAT-012-009-014": ("D Heilig vo de verdorrete Hand",
-  "I irer Synagoge isch en Mänsch mit ere verdorrete Hand. De Jesus wird gfröget, öb s erlaubt sig, am Sabbat z heile, damit me en chönn aachlage. Er fröget zrugg, wer vo ine es Schaf, wo am Sabbat in e Gruebe gheit, nöd würd usezie; en Mänsch sig vil meh wärt als es Schaf, also sig s erlaubt, am Sabbat Guets z tue. Er seit zum Mänsch, er söll d Hand usstrecke; dä streckt si us, und si wird gsund wie di ander. D Pharisäer gönd use und haltet Root, wie si en chönted umbringe."),
+  "I irer Synagoge isch en Mänsch mit ere verdorrete Hand. De Jesus wird gfröget, öb s erlaubt sig, am Sabbat z heile, damit me en chönn aachlage. Er fröget zrugg, wer vo ine es Schaf, wo am Sabbat in e Gruebe gheit, nöd würd usezie; en Mänsch sig vil meh wärt als es Schaf, also sig s erlaubt, am Sabbat Guets z tue. Er seit zum Mänsch, er söll d Hand usstrecke; dä streckt si us, und si wird gsund wie di ander. D Pharisäer gönd use und haltet Raat, wie si en chönted umbringe."),
  "TU-MAT-012-015-021": ("De userwählt Chnächt",
   "De Jesus merkt s und zieht sich zrugg; vili gönd ihm nache, und er heilt si alli, befiehlt ine aber streng, en nöd bekannt z mache. De Evangelischt gseht drin erfüllt, was de Jesaja gseit hät ([[ISA.42.1-ISA.42.4]]): Im Zitat heisst de Chnächt userwählt und gliebt; dä, wo redt, wird sin Geischt uf ihn lege, und er wird de Völker s Rächt verchünde. Er wird nöd strite und nöd schreie, s gchnickt Rohr nöd verbreche und de glimmend Docht nöd uslösche, bis er s Rächt zum Sieg gfüert hät, und uf sin Name wärded Völker hoffe."),
  "TU-MAT-012-022-032": ("De Beelzebul und d Läschterig gäge de Geischt",
@@ -538,7 +538,7 @@ UNITS_GSW = {
  "TU-MAT-012-033-037": ("Baum und Frucht, Härz und Wort",
   "De Jesus redt wiiter, me söll Baum und Frucht entwäder beid guet oder beid fuul mache, dänn a de Frucht erchännt me de Baum. Er nännt die, wo zueloosed, e Viperebruet und fröget, wie si Guets chönted rede, wo si doch bös sigid; dänn us em Überfluss vom Härz redt de Mund, und de guet Mänsch holt us em guete Schatz Guets füre, de bös Bös. Über jedes unnütze Wort wärded d Mänsche am Tag vom Gricht Rächeschaft ablege; uf Grund vo sine Wort wird me grächt gsproche oder verurteilt."),
  "TU-MAT-012-038-045": ("S Zeiche vom Jona",
-  "Es paar Schriftgelehrti und Pharisäer wänd vom Jesus es Zeiche gseh. Er antwortet, dere böse und ehebrecherische Generation wärdi kei Zeiche gää usser s Zeiche vom Prophet Jona: Wie de Jona drüü Täg und drüü Nächt im Buuch vom grosse Fisch gsii isch, eso wärdi de Mänschesohn drüü Täg und drüü Nächt im Härz vo de Ärde sii. D Manne vo Ninive, wo uf d Verchündigung vom Jona hii umgchehrt sind, und d Königin vom Süde, wo choo isch, zum d Wiisheit vom Salomo ghöre, wärded im Gricht die Generation verurteile; da isch meh als de Jona und meh als de Salomo. Dänn redt er vo eme unreine Geischt, wo vo eme Mänsch usegaat, kei Rueh findt, sis früener Huus leer, gwüscht und gschmückt aatrifft und mit sibe no bösere Geischter dört wohnt, so dass es am Schluss mit däm Mänsch schlimmer isch als am Aafang; eso wärds au dere böse Generation gaa."),
+  "Es paar Schriftgelehrti und Pharisäer wänd vom Jesus es Zeiche gseh. Er antwortet, dere böse und ehebrecherische Generation wärdi kei Zeiche gää usser s Zeiche vom Prophet Jona: Wie de Jona drüü Täg und drüü Nächt im Buuch vom grosse Fisch gsii isch, eso wärdi de Mänschesohn drüü Täg und drüü Nächt im Härz vo de Ärde sii. D Manne vo Ninive, wo uf d Verchündigung vom Jona hii umgchehrt sind, und d Königin vom Süde, wo choo isch, zum d Wiisheit vom Salomo ghöre, wärded im Gricht die Generation verurteile; da isch meh als de Jona und meh als de Salomo. Dänn redt er vo eme unreine Geischt, wo vo eme Mänsch usegaat, kei Rue findt, sis früener Huus leer, gwüscht und gschmückt aatrifft und mit sibe no bösere Geischter dört wohnt, so dass es am Schluss mit däm Mänsch schlimmer isch als am Aafang; eso wärds au dere böse Generation gaa."),
  "TU-MAT-012-046-050": ("D Mueter und d Brüeder vom Jesus",
   "Wo de Jesus no zu de Lüüt redt, stönd sini Mueter und sini Brüeder dusse und wänd mit ihm rede; öpper seit s ihm. De Jesus fröget, wer sini Mueter und wer sini Brüeder sigid, streckt d Hand gäge sini Jünger us und seit: «Lueg, mini Mueter und mini Brüeder!» Dänn wer de Wile vo sim Vatter i de Himel tuet, isch sin Brueder, sini Schwöschter und sini Mueter."),
 }
@@ -555,8 +555,8 @@ NOTES_DE = [
   "Himmel»); ὁ πατήρ μου ὁ ἐν οὐρανοῖς «mein Vater in den Himmeln»; Erfüllungsformel «damit erfüllt würde, was … gesagt "
   "ist»; γραμματεῖς «Schriftgelehrte»; Φαρισαῖοι «Pharisäer»; δαιμόνιον «Dämon», δαιμονιζόμενος «Besessener»; πνεῦμα "
   "ἅγιον «heiliger Geist»; μετανοέω «umkehren»."),
- ("Weitere Wiedergaben, in Kapitel 12 festgelegt: γενεά «Geschlecht» (wie in der Markus-Übersetzung; Mundart «Generation»); "
-  "ὄχλοι (Plural) «Leute»; σημεῖον «Zeichen»; κρίσις «Gericht», im Jesajazitat [[MAT.12.18]] und [[MAT.12.20]] «Recht»; "
+ ("Weitere Wiedergaben in Kapitel 12: γενεά «Geschlecht» (wie in der Markus-Übersetzung; Mundart «Generation»); "
+  "ὄχλος «die Menge», ὄχλοι (Plural) «die Menschenmengen»; σημεῖον «Zeichen»; κρίσις «Gericht», im Jesajazitat [[MAT.12.18]] und [[MAT.12.20]] «Recht»; "
   "ἔθνη «Völker»; παῖς (Gottesknecht) «Knecht»; βλασφημία «Lästerung»; αἰών «Weltzeit»; γεννήματα ἐχιδνῶν «Vipernbrut» "
   "(auch [[MAT.3.7]], [[MAT.23.33]]); σαπρός «faul»; δικαιόω «gerecht sprechen»; ἀδελφοί «Brüder»."),
  ("Parallelen: [[MRK.2.23-MRK.3.12]], [[MRK.3.22-MRK.3.35]], [[MRK.8.11-MRK.8.12]]. Wo Matthäus dieselbe griechische "
@@ -584,7 +584,7 @@ NOTES_GSW = [
  ("Iiheitlichi Begriff für alli Matthäus-Teil: ἰδού «lueg»; τότε «dänn»; «de Mänschesohn»; «s Riich vo Gott» (da, susch "
   "meischtens «s Riich vo de Himel»); «min Vatter i de Himel»; Erfüllungsformle «damit erfüllt wird, was … gseit worden "
   "isch»; «Schriftgelehrti», «Pharisäer»; «Dämon», «Bsässne»; «heilige Geischt»; μετανοέω «umchehre»."),
- ("Wiiteri Widergaabe i Kapitel 12: γενεά «Generation» (wie bim Markus); ὄχλοι «Lüüt»; σημεῖον «Zeiche»; κρίσις «Gricht», "
+ ("Wiiteri Widergaabe i Kapitel 12: γενεά «Generation» (wie bim Markus); ὄχλος «d Mängi», ὄχλοι «d Lüüt»; σημεῖον «Zeiche»; κρίσις «Gricht», "
   "im Jesajazitat «Rächt»; ἔθνη «Völker»; παῖς «Chnächt»; βλασφημία «Läschterig»; αἰών «Wältziit»; γεννήματα ἐχιδνῶν "
   "«Viperebruet»; σαπρός «fuul»; δικαιόω «grächt spräche»."),
  ("Mundart: Näme mit Artikel («de Jesus», «de David»); Perfekt statt Präteritum; «wo» als Relativwort; kei Genitiv "
