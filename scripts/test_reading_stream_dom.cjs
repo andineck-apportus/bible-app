@@ -12,7 +12,8 @@ const vOf=r=>Number(r.split('.')[2]);
 const mkAlts=()=>M().alternatives.filter(a=>a.ref.startsWith('MRK.3.')&&vOf(a.ref)>=20); // Pilotabschnitt Mk 3,20–35
 
 // Voreinstellung: Lesarten, Hintergrund und Urtext sind eingeschaltet; für die folgenden Prüfungen zuerst aus
-click('[data-action=menu]');
+click('[data-action=menu]');assert(sheetHost.querySelector('[data-settings]')&&!sheetHost.querySelector('[data-toggle]'),'Hauptmenü ohne Einstellungen, mit Eintrag «Einstellungen»');click('[data-settings]');assert.equal(sheetHost.querySelectorAll('h4.set-group').length,4,'Einstellungen in vier Gruppen');click('[data-close]');
+click('[data-action=menu]');click('[data-settings]');
 for(const k of ['inline','bgInline','advanced'])assert.equal(sheetHost.querySelector(`[data-toggle=${k}]`).getAttribute('aria-checked'),'true',k+' standardmässig an');
 for(const k of ['inline','bgInline','advanced'])click(`[data-toggle=${k}]`);
 click('[data-close]');
@@ -45,9 +46,9 @@ for(const b of model.BG.filter(x=>(x.wide&&x.section==='TU-MRK-003-020-035')||x.
 assert(sheetHost.textContent.includes('Josephus'),'Quellenangabe sichtbar');
 click('[data-close]');
 assert(!reader.querySelector('.bg-line'),'Hintergrund standardmässig nicht im Lesestrom');
-click('[data-action=menu]');click('[data-toggle=bgInline]');click('[data-close]');
+click('[data-action=menu]');click('[data-settings]');click('[data-toggle=bgInline]');click('[data-close]');
 click('.bg-line[data-bg="BG-MRK-0008"]');assert(sheetHost.textContent.includes('Jes 49,24–25'));click('[data-close]');
-click('[data-action=menu]');click('[data-toggle=bgInline]');click('[data-close]');
+click('[data-action=menu]');click('[data-settings]');click('[data-toggle=bgInline]');click('[data-close]');
 
 // Versblatt ohne und mit Urtext-Modus
 click('[data-more="v40-3-29"]');
@@ -55,7 +56,7 @@ assert(sheetHost.querySelector('[data-alternative]'),'Lesarten im Versblatt');
 assert(!sheetHost.textContent.includes('MorphGNT'),'Ohne Urtext-Modus keine Wortanalyse');
 click('[data-close]');
 
-click('[data-action=menu]');click('[data-toggle=advanced]');click('[data-close]');
+click('[data-action=menu]');click('[data-settings]');click('[data-toggle=advanced]');click('[data-close]');
 click('[data-more="v40-3-29"]');
 const details=sheetHost.querySelector('details');details.querySelector('summary').click();assert(details.open);
 assert(sheetHost.textContent.includes('Keine Handschriftenzählung'));
@@ -64,7 +65,7 @@ click('[data-close]');
 click('[data-action=up]');assert.equal(reader.scrollTop,137,'Rückkehrposition');
 
 // Suche, fortlaufendes Lesen über die Kapitelgrenze, Lesarten im Fliesstext
-click('[data-action=menu]');click('[data-toggle=inline]');
+click('[data-action=menu]');click('[data-settings]');click('[data-toggle=inline]');click('[data-action=menu]');
 const input=sheetHost.querySelector('input[type=search]');input.value='Mk 3,20';input.dispatchEvent(new dom.window.Event('input',{bubbles:true}));
 sheetHost.querySelector('.results [data-go]').click();
 click('[data-action=load-next]');
@@ -131,16 +132,16 @@ assert(txt.includes('ponēroú'),'Umschrift sichtbar');
 const det=sheetHost.querySelector('details.wit');const pb=det.querySelector('.play');if(pb){pb.click();assert(!det.open,'Anhören klappt nicht auf');}
 sheetHost.querySelector('.word-row .play').click();assert(app.querySelector('.live').textContent.length>0,'Rückmeldung ohne Sprachausgabe');
 tested++;click('[data-close]');
-click('[data-action=menu]');assert(sheetHost.textContent.includes('Aussprache'),'Aussprache-Einstellung');click('[data-toggle=translit]');click('[data-close]');
+click('[data-action=menu]');click('[data-settings]');assert(sheetHost.textContent.includes('Aussprache'),'Aussprache-Einstellung');click('[data-toggle=translit]');click('[data-close]');
 click('[data-more="v39-6-13"]');click('.sheet [data-source="VAR-SBLGNTAPP-MAT-006-013-01"]');assert(!sheetHost.querySelector('.tr'),'Umschrift abschaltbar');click('[data-close]');
-click('[data-action=menu]');click('[data-toggle=translit]');click('[data-close]');
+click('[data-action=menu]');click('[data-settings]');click('[data-toggle=translit]');click('[data-close]');
 for(const a of M().alternatives.filter(a=>a.ref.startsWith('MAT.6.'))){const v=vOf(a.ref);if(!reader.querySelector(`[data-more="v39-6-${v}"]`)){continue;}click(`[data-more="v39-6-${v}"]`);sheetHost.querySelector(`[data-source="${a.variant}"]`).click();assert(sheetHost.textContent.includes('Was die gedruckten Ausgaben haben'),a.variant);click('[data-close]');tested++;}
 click('[data-action=menu]');const inp=sheetHost.querySelector('input[type=search]');inp.value='Lk 11,2';inp.dispatchEvent(new dom.window.Event('input',{bubbles:true}));sheetHost.querySelector('.results [data-go]').click();
 assert.equal(reader.querySelector('[data-stream="v41-11-2"] .stream-copy').textContent,M().de['LUK.11.2']);
 click('[data-more="v41-11-2"]');click('.sheet [data-source="VAR-SBLGNTAPP-LUK-011-002-01"]');
 txt=sheetHost.textContent;assert(txt.includes('Papyrus 75')&&txt.includes('Codex Vaticanus'),'P75 zu Lk 11,2');tested++;click('[data-close]');
 assert(app.classList.contains('flow'),'Verse fortlaufend ist Standard');
-click('[data-action=menu]');click('[data-toggle=flow]');assert(!app.classList.contains('flow'),'Verse fortlaufend abschaltbar');click('[data-toggle=flow]');assert(app.classList.contains('flow'));click('[data-close]');
+click('[data-action=menu]');click('[data-settings]');click('[data-toggle=flow]');assert(!app.classList.contains('flow'),'Verse fortlaufend abschaltbar');click('[data-toggle=flow]');assert(app.classList.contains('flow'));click('[data-close]');
 
 // Navigator: Pfad, Hierarchie AT/NT → Gruppe → Buch → Kapitel → Vers
 click('[data-action=index]');
@@ -173,7 +174,7 @@ assert(sheetHost.querySelector('[data-ref-go="ISA.64.7"]'),'Stelle im Fliesstext
 assert(!sheetHost.textContent.includes('data-ref-go="SIR'),'Sirach nicht verlinkt');
 click('[data-close]');
 // Zweite Übersetzungsschicht: Züridüütsch aus dem Griechischen, umschaltbar
-click('[data-action=menu]');assert(sheetHost.querySelector('[data-set="text"][data-value="gsw"]'),'Lesetext-Auswahl');click('[data-set="text"][data-value="gsw"]');click('[data-close]');
+click('[data-action=menu]');click('[data-settings]');assert(sheetHost.querySelector('[data-set="text"][data-value="gsw"]'),'Lesetext-Auswahl');click('[data-set="text"][data-value="gsw"]');click('[data-close]');
 assert.equal(reader.querySelector('[data-stream="v39-6-11"] .stream-copy').textContent,'Öises täglich Broot gib üs hüt.','Mundart im Lesestrom');
 assert(reader.querySelector('[data-stream="v39-6-11"] .dec.traditional'),'Entscheidung «täglich» auch in der Mundart markiert');
 click('[data-action=index]');assert(sheetHost.textContent.includes('S Vatterunser')&&sheetHost.textContent.includes('Nöd zum Schiin'),'Navigator-Titel in Mundart');click('[data-close]');
@@ -189,11 +190,11 @@ assert(sheetHost.textContent.includes('Broot für de nööchscht Taag')&&sheetHo
 assert(!sheetHost.textContent.includes('Brot für den kommenden Tag'),'keine hochdeutsche Deutung im Mundart-Blatt');click('[data-close]');
 click('[data-more="v39-6-11"]');sheetHost.querySelector('.sheet-tools [data-background="TU-MAT-006-009-013"]').click();
 assert(/\b(isch|händ|de|vo)\b/.test(sheetHost.querySelector('.bg-note .body').textContent),'Hintergrund in Mundart');click('[data-close]');
-click('[data-action=menu]');click('[data-set="text"][data-value="de"]');click('[data-close]');
+click('[data-action=menu]');click('[data-settings]');click('[data-set="text"][data-value="de"]');click('[data-close]');
 assert.equal(reader.querySelector('[data-stream="v39-6-11"] .stream-copy').textContent,M().de['MAT.6.11'],'zurück zu Hochdeutsch');
 assert.equal(Object.keys(M().layers.gsw.text).length,2002,'Mundart für alle 2002 Verse');
 // Obadja (Hebräisch) und Titus: Muster ganzer Bücher
-click('[data-action=menu]');click('[data-set="text"][data-value="de"]');if(sheetHost.querySelector('[data-toggle=advanced][aria-checked=false]'))click('[data-toggle=advanced]');click('[data-close]');
+click('[data-action=menu]');click('[data-settings]');click('[data-set="text"][data-value="de"]');if(sheetHost.querySelector('[data-toggle=advanced][aria-checked=false]'))click('[data-toggle=advanced]');click('[data-close]');
 click('[data-action=menu]');sheetHost.querySelector('[data-go^="TU-OBA"]').click();click('[data-action=down]');
 assert(reader.querySelector('[data-stream="v30-1-21"]')||true);
 click('[data-more="v30-1-3"]');

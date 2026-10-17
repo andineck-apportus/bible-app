@@ -2,6 +2,12 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.60 — 2026-10-17 — Menü geordnet, Bildlegende kompakt
+
+- **Menü:** Das Hauptmenü enthält nur noch Suche, «Zuletzt gelesen», «Ausgearbeitete Stellen», «⚙ Einstellungen», «Quellen und Rechte» und «Über diese Fassung». Alle Einstellungen stehen in einem eigenen Blatt, gegliedert in **Darstellung** (Farben, Textgrösse, Sprache, Bilder, Verse fortlaufend), **Bibeltext** (Lesetext, Lesarten, Hintergrund, Urtext, Umschrift), **Urtext anhören** (Aussprache, Stimmen, Tempo, Proben) und **Vorlesen** (Stimme, Tempo, Gottesname, Probe); «Zurück zum Menü» oben.
+- **Bildlegende:** Statt der doppelten Beschreibung («Vier Felder: …» und Liste) steht je Bildfeld eine kurze Bildhilfe mit Nummer wie im Bild, fettem Kurztitel, was man sieht und wofür die Zeichen stehen, die Stelle klein dahinter (neues Feld `captions_de` im Bildauftrag, Mundart als Lokalisierung). Die Hinweise beginnen nicht mehr mit einer Aufzählung der Felder. Bildbeschreibung (`alt_de`) bleibt für Screenreader.
+- Mose: Merkmal ohne interne Kennung.
+
 ## v0.59 — 2026-10-17 — Logo auf dem Handy
 
 - Das Herz im Logo erscheint auf Touch-Geräten beim Antippen nur kurz (900 ms) und kehrt dann zur Ursprungsform zurück; vorher blieb es nach dem ersten Tippen stehen. Am Desktop weiterhin beim Darüberfahren.

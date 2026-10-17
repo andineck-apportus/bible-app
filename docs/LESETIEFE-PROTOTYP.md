@@ -11,7 +11,7 @@ Umsetzung in v0.13:
 - **Abtauchen:** Auf jeder Ebene führt ein einziger Link eine Stufe tiefer, mit Text je nach Ebene: «Zu den Testamenten» … «Text lesen». Am Ende jedes ausgearbeiteten Abschnitts steht «Diesen Abschnitt verstehen».
 - **Hintergrund nur auf Wunsch:** Lesarten, Erklärungen und Quellen öffnen sich als Blatt über dem Text und schliessen wieder, ohne die Leseposition zu verlieren. Ein unauffälliges «+» erscheint nur an Versen, an denen sich die alten Handschriften unterscheiden.
 - **Ohne Griechisch und Hebräisch:** Standardmässig gibt es keinen Urtext. Griechische Einschübe in Erklärungen werden ausgeblendet bzw. als «der griechische Ausdruck» umschrieben. Lesarten erscheinen als deutsche Wiedergaben mit einfacher Angabe der Bezeugung («Steht in 4 von 5 wichtigen Textausgaben»). Es gibt keine Entscheidung über richtig oder falsch.
-- **Für Fortgeschrittene:** Im Menü der Schalter «Urtext und Details»: Griechisch Wort für Wort mit Grundform, Form und Satzrolle; Vergleich der Textausgaben; Quellen und IDs. Ein zweiter Schalter «Andere Lesarten im Text zeigen» zeigt die Alternativen direkt unter dem Vers.
+- **Für Fortgeschrittene:** Im Menü unter «Einstellungen» der Schalter «Urtext und Details»: Griechisch Wort für Wort mit Grundform, Form und Satzrolle; Vergleich der Textausgaben; Quellen und IDs. Ein zweiter Schalter «Andere Lesarten im Text zeigen» zeigt die Alternativen direkt unter dem Vers.
 - Deutsche Stellenangaben (Markus 3,20), Farben folgen dem System (oder fest hell/dunkel), Einstellungen werden lokal im Browser gespeichert.
 
 ## Lesetext in mehreren Sprachen (v0.27)

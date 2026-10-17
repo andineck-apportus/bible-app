@@ -234,7 +234,7 @@ for rid, r in ill_recs.items():
     key = r["target"] if r["level"] in ("section", "bible", "testament", "group") else r["reference"]
     item = {"id": rid, "brief": br["id"], "style": st["key"], "level": r["level"], "ref": r.get("reference"), "depicts": r.get("depicts", []),
             "alt": r["alt_de"], "note": br.get("interpretation_note_de"), "check": (r.get("check") or {}).get("result_de"),
-            "panels": [{"n": p_["n"], "ref": p_["reference"], "action": p_["action_de"]} for p_ in br["panels"]],
+            "panels": [{"n": p_["n"], "ref": p_["reference"], "action": p_["action_de"]} for p_ in br["panels"]], "captions": br.get("captions_de"),
             "svg": (ROOT / r["file"]).read_text(encoding="utf-8").strip()}
     bname = "b/_overview" if r["level"] in ("bible", "testament", "group", "book") else f"b/{ref_book(r['reference'])}"
     bundle(bname).setdefault("ill", {}).setdefault(key, {})[st["key"]] = item
@@ -247,6 +247,8 @@ for rid, r in ill_recs.items():
             m["note"] = f["interpretation_note_de"]
         if "actions_de" in f:
             m["actions"] = f["actions_de"]
+        if "captions_de" in f:
+            m["captions"] = f["captions_de"]
         if m:
             bundle(f"l/{lg}/common").setdefault("i18n", {}).setdefault(rid, {}).update(m)
 core_sums = {}

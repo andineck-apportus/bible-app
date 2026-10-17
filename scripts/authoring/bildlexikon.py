@@ -472,7 +472,7 @@ E("FIG-GERASENER", "person", "Der Mann mit dem Namen Legion", "The man called Le
 E("FIG-MOSE", "person", "Mose", "Moses",
   "Der Prophet, durch den das Gesetz gegeben wurde; erscheint mit Elija bei der Verklärung Jesu ([[JHN.1.17]], [[MRK.9.4]]).",
   "De Prophet, dur de s Gsetz ggee worde isch; er erschiint mit em Elija bi de Verklärig vom Jesus ([[JHN.1.17]], [[MRK.9.4]]).",
-  [T("Zwei Gesetzestafeln, erst ab dem Sinai (als eigenes Objekt FIG-OBJ-GESETZESTAFELN)", "tradition", note="Nach [[EXO.34.29]]; Exodus noch nicht übersetzt. Blindtest 2026-10-14: Tafeln beim Meerdurchzug waren zeitlich falsch."), T("Weisser Bart, Hirtenstab", "tradition")],
+  [T("Zwei Gesetzestafeln (erst ab dem Sinai)", "tradition", note="Nach [[EXO.34.29]]; Exodus noch nicht übersetzt. Blindtest 2026-10-14: Tafeln beim Meerdurchzug waren zeitlich falsch."), T("Weisser Bart, Hirtenstab", "tradition")],
   ("#7A5A34", "#E7DCC4"),
   [FACE, "Keine Hörner (Übersetzungstradition der Vulgata zu [[EXO.34.29]]), weil sie missverständlich und antijüdisch gebraucht wurden",
    "Lichtstrahlen um den Kopf statt Hörner nur, wenn ein Nimbus-Konflikt mit Jesus ausgeschlossen ist"],
