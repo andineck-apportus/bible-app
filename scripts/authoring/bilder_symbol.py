@@ -487,11 +487,18 @@ class SymComposer(_auto.Composer):
             h *= .8
             w = h * 30 / 64
             y = _auto.FLOOR_Y - h
-        if fid == "FIG-GRUPPE-MENGE" and pose is None:
+        if fid == "FIG-GRUPPE-MENGE" and pose in (None, "sit", "away", "kneel"):
+            if pose in ("sit", "kneel"):
+                h *= .78 if pose == "sit" else .62
+                w = h * 30 / 64
+                y = _auto.FLOOR_Y - h
             sp = min(s["span"] * .3, w * .7)
             out.append(use("ill-p-gast2", round(x - sp - w * .4, 1), round(y + 4, 1), round(w * .85, 1), round(h * .92, 1))
                        + use("ill-p-gast", round(x + sp - w * .4, 1), round(y + 4, 1), round(w * .85, 1), round(h * .92, 1))
                        + use(sym, round(x - w / 2, 1), round(y, 1), round(w, 1), round(h, 1)))
+            if hold and hold != "PRAY":
+                ww, hh2 = self.m(hold)[1]
+                out.append(use(RENDER[hold], round(x + (arm or 1) * w * .45 - ww / 2, 1), round(y + h * .45, 1), ww, hh2))
             if (st.get("wear") or {}).get(fid) == "sack":
                 out.append(self._sack(x - sp * .9, y + 4, w * .85, h * .92) + self._sack(x + sp * .9, y + 4, w * .85, h * .92) + self._sack(x, y, w, h))
             if arm is not None:

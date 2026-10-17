@@ -631,7 +631,7 @@ COPY = ["ill-jar", "ill-jar-leer", "ill-jar-wein", "ill-traube", "ill-becher", "
         "ill-peitsche", "ill-schaf", "ill-taube-tier", "ill-taube-kaefig", "ill-muenzen", "ill-z-frage", "ill-z-abstand",
         "ill-gott", "ill-geist", "ill-kreuz", "ill-grab", "ill-jerusalem", "ill-berg", "ill-haus", "ill-boot", "ill-tafeln", "ill-meer",
         "ill-schoepfung", "ill-leier", "ill-z-hoffnung", "ill-z-umkehr", "ill-z-gericht", "ill-neue-schoepfung", "ill-z-exil",
-        "ill-z-ausbreiten", "ill-brief", "ill-z-beten", "ill-z-trauer", "ill-licht", "ill-adler", "ill-schriftrolle"]
+        "ill-z-ausbreiten", "ill-brief", "ill-z-beten", "ill-z-trauer", "ill-licht", "ill-adler", "ill-schriftrolle", "ill-weg"]
 PORTRAITS = {"FIG-JESUS": ("jesus", "calm"), "FIG-MARIA-MUTTER-JESU": ("maria", "calm"), "FIG-ROLLE-DIENER": ("diener", "calm"),
              "FIG-ROLLE-SPEISEMEISTER": ("meister", "calm"), "FIG-ROLLE-BRAEUTIGAM": ("braeutigam", "calm"), "FIG-ROLLE-BRAUT": ("braut", "calm"),
              "FIG-ROLLE-GAST": ("gast", "calm"), "FIG-ROLLE-JUENGER": ("juenger", "calm"), "FIG-ROLLE-HAENDLER": ("haendler", "calm"),
@@ -644,7 +644,7 @@ OBJ = {"FIG-OBJ-KRUG-WASSER": "an-jar", "FIG-OBJ-KRUG-WEIN-LEER": "an-jar-leer",
        "FIG-OBJ-PEITSCHE": "an-peitsche", "FIG-OBJ-SCHAF": "an-schaf", "FIG-OBJ-TAUBE": "an-taube-kaefig", "FIG-OBJ-MUENZEN": "an-muenzen",
        "FIG-ZEICHEN-FRAGEN": "an-z-frage", "FIG-ZEICHEN-ABSTAND": "an-z-abstand",
        "FIG-GOTT": "an-gott", "FIG-HEILIGER-GEIST": "an-geist", "FIG-OBJ-KREUZ": "an-kreuz", "FIG-ORT-GRAB": "an-grab", "FIG-ORT-JERUSALEM": "an-jerusalem",
-       "FIG-ORT-BERG": "an-berg", "FIG-ORT-HAUS": "an-haus", "FIG-OBJ-BOOT": "an-boot", "FIG-OBJ-GESETZESTAFELN": "an-tafeln", "FIG-ORT-MEER": "an-meer",
+       "FIG-ORT-BERG": "an-berg", "FIG-ORT-HAUS": "an-haus", "FIG-ORT-WEG": "an-weg", "FIG-OBJ-BOOT": "an-boot", "FIG-OBJ-GESETZESTAFELN": "an-tafeln", "FIG-ORT-MEER": "an-meer",
        "FIG-ZEICHEN-SCHOEPFUNG": "an-schoepfung", "FIG-OBJ-LEIER": "an-leier", "FIG-ZEICHEN-HOFFNUNG": "an-z-hoffnung", "FIG-ZEICHEN-UMKEHR": "an-z-umkehr",
        "FIG-ZEICHEN-GERICHT": "an-z-gericht", "FIG-ZEICHEN-NEUE-SCHOEPFUNG": "an-neue-schoepfung", "FIG-ZEICHEN-EXIL": "an-z-exil",
        "FIG-ZEICHEN-AUSBREITEN": "an-z-ausbreiten", "FIG-OBJ-BRIEF": "an-brief", "FIG-GRUPPE-GEMEINDE": "an-gemeinde", "FIG-ZEICHEN-BETEN": "an-z-beten",
