@@ -34,7 +34,7 @@
       "stage": {
         "back_side": "right",
         "mood": {
-          "FIG-TITUS": "determined"
+          "FIG-TITUS": "calm"
         }
       }
     },
@@ -65,8 +65,17 @@
       "action_de": "Ein Ältester soll untadelig sein, treu in Ehe und Familie, gastfreundlich, besonnen und gerecht, kein Trinker und nicht auf schändlichen Gewinn aus.",
       "stage": {
         "back_side": "right",
-        "at": {
-          "FIG-ZEICHEN-LIEBE": "FIG-ROLLE-AELTESTER"
+        "pose": {
+          "FIG-ROLLE-AELTESTER": "sit"
+        },
+        "signs_who": {
+          "FIG-ZEICHEN-LIEBE": [
+            "FIG-ROLLE-AELTESTER"
+          ]
+        },
+        "mood": {
+          "FIG-ROLLE-AELTESTER": "smile",
+          "FIG-TITUS": "calm"
         }
       }
     },
@@ -98,6 +107,9 @@
         },
         "mood": {
           "FIG-GRUPPE-GLAUBENDE": "pensive"
+        },
+        "pose": {
+          "FIG-ROLLE-AELTESTER": "sit"
         }
       }
     }
@@ -109,8 +121,8 @@
   ],
   "captions_de": [
     "Auftrag: Paulus beauftragt Titus: In jeder Stadt (Stadt) Älteste einsetzen (Ältester).",
-    "Wer leiten soll: Der Älteste lebt liebevoll mit seinem Haus (Haus, Herz); Titus sagt: nicht (rotes X) für Wein (Becher) und Geld (Münzen).",
-    "Am Wort festhalten: Der Älteste (mit Schriftrolle) ermahnt die Gemeinde mit der Lehre (Schriftrolle, Zeigefinger)."
+    "Wer leiten soll: Der Älteste (sitzend, mit Stab) lebt liebevoll mit den Seinen (zwei Herzen über ihm, Haus); Titus sagt: nicht (roter Verbotskreis) für Wein (Becher) und Geld (Münzen).",
+    "Am Wort festhalten: Der Älteste (sitzend, mit Schriftrolle) ermahnt die Gemeinde mit der Lehre (Schriftrolle, Zeigefinger)."
   ],
   "interpretation_note_de": "Die Eigenschaften der Ältesten ([[TIT.1.6-TIT.1.8]]) sind nur in Auswahl gezeigt; Haus und Herz stehen für Familie und Gastfreundschaft. Der Text nennt denselben Leiter auch «Aufseher» ([[TIT.1.7]]).",
   "basis": [
@@ -143,5 +155,112 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "TIT.1.5",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TITUS"
+            ],
+            "objects": [
+              "FIG-ORT-STADT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-ORT-STADT",
+                  "FIG-ROLLE-AELTESTER"
+                ]
+              }
+            ],
+            "action_de": "Paulus hat Titus auf Kreta zurückgelassen, damit er ordnet, was fehlt, und in jeder Stadt Älteste einsetzt.",
+            "stage": {
+              "back_side": "right",
+              "mood": {
+                "FIG-TITUS": "determined"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "TIT.1.6-TIT.1.8",
+            "figures": [
+              "FIG-TITUS",
+              "FIG-ROLLE-AELTESTER"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-LIEBE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-TITUS",
+                "to": "FIG-ROLLE-AELTESTER",
+                "icons": [
+                  "FIG-ZEICHEN-NICHT",
+                  "FIG-OBJ-BECHER-VOLL",
+                  "FIG-OBJ-MUENZEN"
+                ]
+              }
+            ],
+            "action_de": "Ein Ältester soll untadelig sein, treu in Ehe und Familie, gastfreundlich, besonnen und gerecht, kein Trinker und nicht auf schändlichen Gewinn aus.",
+            "stage": {
+              "back_side": "right",
+              "at": {
+                "FIG-ZEICHEN-LIEBE": "FIG-ROLLE-AELTESTER"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "TIT.1.9",
+            "figures": [
+              "FIG-ROLLE-AELTESTER",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHRIFTROLLE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-AELTESTER",
+                "to": "FIG-GRUPPE-GLAUBENDE",
+                "icons": [
+                  "FIG-OBJ-SCHRIFTROLLE",
+                  "FIG-ZEICHEN-WARNEN"
+                ]
+              }
+            ],
+            "action_de": "Der Älteste hält sich an das zuverlässige Wort, damit er mit der gesunden Lehre ermahnen und die Widersprechenden zurechtweisen kann.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-AELTESTER": "FIG-OBJ-SCHRIFTROLLE"
+              },
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "pensive"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Auftrag: Paulus beauftragt Titus: In jeder Stadt (Stadt) Älteste einsetzen (Ältester).",
+          "Wer leiten soll: Der Älteste lebt liebevoll mit seinem Haus (Haus, Herz); Titus sagt: nicht (rotes X) für Wein (Becher) und Geld (Münzen).",
+          "Am Wort festhalten: Der Älteste (mit Schriftrolle) ermahnt die Gemeinde mit der Lehre (Schriftrolle, Zeigefinger)."
+        ]
+      }
+    }
+  ]
 }

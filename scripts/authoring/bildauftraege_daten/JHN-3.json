@@ -26,7 +26,7 @@
       "from": "FIG-GRUPPE-ZWOELF",
       "to": "FIG-JESUS",
       "icons": [
-       "FIG-ROLLE-BLINDER",
+       "FIG-ZEICHEN-BLIND",
        "FIG-ZEICHEN-SUENDE",
        "FIG-ZEICHEN-FRAGEN"
       ]
@@ -42,8 +42,8 @@
     ],
     "action_de": "Jesus sieht einen Menschen, der von Geburt an blind ist. Die Jünger fragen, wer gesündigt habe, er oder seine Eltern; Jesus sagt: keiner von beiden, an ihm sollen die Werke Gottes offenbar werden, und: Ich bin das Licht der Welt.",
     "action_gsw": "De Jesus gseht en Mänsch, wo vo Geburt aa blind isch. D Jünger fröged, wer gsündiget heig, er oder sini Eltere; de Jesus seit: kein vo beidne, a ihm söled d Wärch vo Gott offebar werde, und: Ich bi s Liecht vo de Wält.",
-    "caption_de": "Die Frage der Jünger: Hat der Blinde (durchgestrichenes Auge) gesündigt (dunkler Fleck)? Jesus antwortet: Ich bin das Licht.",
-    "caption_gsw": "D Frag vo de Jünger: Hät de Blind (durgstriches Aug) gsündiget (dunkle Fläck)? De Jesus antwortet: Ich bi s Liecht.",
+    "caption_de": "Die Frage der Jünger: Blind (durchgestrichenes Auge) – wegen Sünde (dunkler Fleck)? Jesus antwortet: Ich bin das Licht.",
+    "caption_gsw": "D Frag vo de Jünger: Blind (durgstriches Aug) – wäg de Sünd (dunkle Fläck)? De Jesus antwortet: Ich bi s Liecht.",
     "stage": {
      "mood": {
       "FIG-ROLLE-BLINDER": "sleep",
@@ -65,7 +65,7 @@
      "FIG-ROLLE-BLINDER"
     ],
     "objects": [
-     "FIG-ORT-TEICH"
+     "FIG-ORT-SILOAM"
     ],
     "signs": [
      "FIG-ZEICHEN-HEILEN"
@@ -75,27 +75,24 @@
       "from": "FIG-JESUS",
       "to": "FIG-ROLLE-BLINDER",
       "icons": [
-       "FIG-ORT-TEICH"
+       "FIG-ORT-SILOAM"
       ]
      }
     ],
     "action_de": "Jesus streicht dem Blinden einen Brei aus Speichel auf die Augen und schickt ihn: Geh, wasch dich im Teich Siloam. Er geht hin, wäscht sich und kommt sehend zurück.",
     "action_gsw": "De Jesus striicht em Blinde en Brei us Spöiz uf d Auge und schickt en: Gang, wäsch di im Teich Siloam. Er gaat hii, wäscht sich und chunnt sehend zrugg.",
-    "caption_de": "Heilung: Jesus berührt die Augen des Blinden (Hand, Lichtpunkte) und schickt ihn zum Teich Siloam (Becken, Pfeil).",
-    "caption_gsw": "Heilig: De Jesus berüert d Auge vom Blinde (Hand, Liechtpünkt) und schickt en zum Teich Siloam (Becki, Pfiil).",
+    "caption_de": "Heilung: Jesus berührt die Augen des Blinden (Hand mit Lichtstrahlen) und schickt ihn zum Teich Siloam (Becken mit Stufen, Pfeil).",
+    "caption_gsw": "Heilig: De Jesus berüert d Auge vom Blinde (Hand mit Liechtstrahle) und schickt en zum Teich Siloam (Becki mit Stäge, Pfiil).",
     "stage": {
      "mood": {
       "FIG-ROLLE-BLINDER": "sleep"
-     },
-     "at": {
-      "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-BLINDER"
      },
      "x": {
       "FIG-JESUS": 40,
       "FIG-ROLLE-BLINDER": 92
      },
      "floor_x": {
-      "FIG-ORT-TEICH": 126
+      "FIG-ORT-SILOAM": 126
      },
      "arrows": [
       [
@@ -105,10 +102,13 @@
       ],
       [
        "FIG-ROLLE-BLINDER",
-       "FIG-ORT-TEICH",
+       "FIG-ORT-SILOAM",
        "go"
       ]
-     ]
+     ],
+     "beside": {
+      "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-BLINDER"
+     }
     }
    },
    {
@@ -135,15 +135,15 @@
       "to": "FIG-GRUPPE-MENGE",
       "icons": [
        "FIG-JESUS",
-       "FIG-ORT-TEICH",
+       "FIG-ORT-SILOAM",
        "FIG-ZEICHEN-SEHEN"
       ]
      }
     ],
     "action_de": "Die Nachbarn fragen, ob das der Bettler sei; er sagt: Ich bin es. Er erzählt, wie Jesus ihm den Brei auf die Augen strich und ihn zum Siloam schickte und er sehend wurde.",
     "action_gsw": "D Nachbere fröged, öb das de Bettler seig; er seit: Ich bis. Er verzellt, wie de Jesus em de Brei uf d Auge gstriche und en zum Siloam gschickt hät und er sehend worde isch.",
-    "caption_de": "Er sieht: Die Nachbarn staunen und fragen; der Geheilte erzählt: Jesus, der Teich, und ich sehe (offenes Auge).",
-    "caption_gsw": "Er gseht: D Nachbere stuuned und fröged; de Gheilt verzellt: de Jesus, de Teich, und ich gseh (offes Aug).",
+    "caption_de": "Er sieht: Die Nachbarn staunen und fragen; der Geheilte erzählt: Jesus, der Teich (Becken), und ich sehe (offenes Auge).",
+    "caption_gsw": "Er gseht: D Nachbere stuuned und fröged; de Gheilt verzellt: de Jesus, de Teich (Becki), und ich gseh (offes Aug).",
     "stage": {
      "mood": {
       "FIG-ROLLE-BLINDER": "delight",
@@ -179,7 +179,6 @@
     "objects": [],
     "signs": [
      "FIG-ZEICHEN-SEHEN",
-     "FIG-ZEICHEN-SABBAT",
      "FIG-ZEICHEN-ABSTAND"
     ],
     "speech": [
@@ -204,8 +203,8 @@
     ],
     "action_de": "Man bringt den Geheilten zu den Pharisäern; es war Sabbat, als Jesus ihn heilte. Einige sagen, Jesus sei nicht von Gott, weil er den Sabbat nicht hält; andere fragen, wie ein Sünder solche Zeichen tun könne. Sie sind gespalten.",
     "action_gsw": "Mer bringt de Gheilt zu de Pharisäer; es isch Sabbat gsii, won en de Jesus gheilt hät. Es paar säged, de Jesus seig nöd vo Gott, wil er de Sabbat nöd haltet; anderi fröged, wie en Sünder settigi Zeiche chön mache. Si sind gspalte.",
-    "caption_de": "Spaltung: Am Sabbat (zwei Lampen) geheilt; die einen sagen: Jesus bricht den Sabbat, ein Sünder (dunkler Fleck); die andern fragen: Kann ein Sünder Zeichen (Stern) tun? (gestrichelte Linie)",
-    "caption_gsw": "Spaltig: Am Sabbat (zwei Lampe) gheilt; di eine säged: De Jesus bricht de Sabbat, en Sünder (dunkle Fläck); di andere fröged: Cha-n-en Sünder Zeiche (Stärn) mache? (gstrichleti Linie)",
+    "caption_de": "Spaltung: Die einen sagen: Jesus hält den Sabbat nicht (Kreise, der siebte golden), er ist ein Sünder (dunkler Fleck); die andern fragen: Kann ein Sünder Zeichen (Stern) tun? (gestrichelte Linie: Abstand)",
+    "caption_gsw": "Spaltig: Di eine säged: De Jesus haltet de Sabbat nöd (Chreis, de sibet guldig), er isch en Sünder (dunkle Fläck); di andere fröged: Chan en Sünder Zeiche (Stärn) tue? (gstrichleti Linie: Abstand)",
     "stage": {
      "mood": {
       "FIG-ROLLE-PHARISAEER": "earnest",
@@ -215,9 +214,7 @@
      "at": {
       "FIG-ZEICHEN-SEHEN": "FIG-ROLLE-BLINDER"
      },
-     "split": 2,
-     "air_x": 6,
-     "air_y": 34
+     "split": 2
     }
    },
    {
@@ -245,14 +242,15 @@
       "to": "FIG-GRUPPE-PHARISAEER",
       "icons": [
        "FIG-JESUS",
-       "FIG-ROLLE-PROPHET"
+       "FIG-ROLLE-PROPHET",
+       "FIG-OBJ-SCHRIFTROLLE"
       ]
      }
     ],
     "action_de": "Sie fragen den Geheilten, was er über Jesus sage; er antwortet: Er ist ein Prophet.",
     "action_gsw": "Si fröged de Gheilt, was er über de Jesus säg; er antwortet: Er isch en Prophet.",
-    "caption_de": "Er ist ein Prophet: Die Pharisäer fragen nach Jesus; der Geheilte antwortet: Jesus ist ein Prophet.",
-    "caption_gsw": "Er isch en Prophet: D Pharisäer fröged nach em Jesus; de Gheilt antwortet: De Jesus isch en Prophet.",
+    "caption_de": "Er ist ein Prophet: Die Pharisäer fragen nach Jesus; der Geheilte antwortet: Jesus ist ein Prophet (Figur, Schriftrolle).",
+    "caption_gsw": "Er isch en Prophet: D Pharisäer fröged nach em Jesus; de Gheilt antwortet: De Jesus isch en Prophet (Figur, Schriftrolle).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-PHARISAEER": "earnest",
@@ -289,15 +287,15 @@
       "from": "FIG-ROLLE-VATER",
       "to": "FIG-GRUPPE-PHARISAEER",
       "icons": [
-       "FIG-ROLLE-BLINDER",
-       "FIG-ZEICHEN-FRAGEN"
+       "FIG-ZEICHEN-ZEIGEN",
+       "FIG-ROLLE-BLINDER"
       ]
      }
     ],
     "action_de": "Die Juden rufen die Eltern und fragen: Ist das euer Sohn, der blind geboren ist? Wie sieht er jetzt? Die Eltern bestätigen es, sagen aber aus Furcht vor dem Ausschluss aus der Synagoge: Fragt ihn selbst!",
     "action_gsw": "D Jude rüefed d Eltere und fröged: Isch das eue Sohn, wo blind gebore isch? Wie gseht er jetzt? D Eltere bestätiged s, säged aber us Angscht vor em Uusschluss us de Synagoge: Fröged en sälber!",
-    "caption_de": "Die Eltern: Gefragt, wie ihr blind geborener Sohn jetzt sieht, verweisen sie auf ihn selbst; sie fürchten den Ausschluss aus der Synagoge (Haus mit Pfeil hinaus).",
-    "caption_gsw": "D Eltere: Gfröget, wie ire blind gebore Sohn jetzt gseht, verwiised si uf ihn sälber; si händ Angscht vor em Uusschluss us de Synagoge (Huus mit Pfiil use).",
+    "caption_de": "Die Eltern: Gefragt, wie ihr blind geborener Sohn jetzt sieht, verweisen sie auf ihn selbst (zeigende Hand, Sohn); sie fürchten den Ausschluss aus der Synagoge (Haus mit Pfeil hinaus).",
+    "caption_gsw": "D Eltere: Gfragt, wie ihre blind gebore Sohn jetzt gseht, verwiised si uf ihn sälber (zeigendi Hand, Sohn); si händ Angscht vor em Usschluss us de Synagoge (Huus mit Pfiil use).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-PHARISAEER": "earnest",
@@ -391,14 +389,15 @@
       "to": "FIG-ROLLE-BLINDER",
       "icons": [
        "FIG-ZEICHEN-NACHFOLGEN",
-       "FIG-MOSE"
+       "FIG-MOSE",
+       "FIG-OBJ-GESETZESTAFELN"
       ]
      }
     ],
     "action_de": "Er fragt zurück: Wollt etwa auch ihr seine Jünger werden? Sie beschimpfen ihn: Du bist sein Jünger, wir aber sind Jünger des Mose; von diesem wissen wir nicht, woher er ist.",
     "action_gsw": "Er fröget zrugg: Wänd öppe au ihr sini Jünger werde? Si schimpfed en: Du bisch sin Jünger, mir aber sind Jünger vom Mose; vo dem wüssed mir nöd, wohär er isch.",
-    "caption_de": "Jünger wessen? Der Geheilte fragt, ob sie Jesus folgen wollen (Fussspuren); sie antworten: Wir folgen Mose.",
-    "caption_gsw": "Jünger vo wem? De Gheilt fröget, öb si em Jesus wänd folge (Fuessspure); si antworted: Mir folged em Mose.",
+    "caption_de": "Jünger wessen? Der Geheilte fragt, ob sie Jesus folgen wollen (Fussspuren); sie antworten: Wir folgen Mose (Gesetzestafeln).",
+    "caption_gsw": "Jünger vo wem? De Gheilt fröget, öb si em Jesus nachefolge wänd (Fuessspure); si antworted: Mir folged em Mose (Gsetzestafele).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-PHARISAEER": "earnest",
@@ -463,8 +462,8 @@
     ],
     "action_de": "Sie antworten: Du bist ganz in Sünden geboren und belehrst uns? Und sie werfen ihn hinaus.",
     "action_gsw": "Si antworted: Du bisch ganz i Sünde gebore und wotsch eus belehre? Und si gheied en use.",
-    "caption_de": "Hinausgeworfen: «Du bist in Sünde geboren» (dunkler Fleck); sie werfen ihn hinaus (Haus mit Pfeil hinaus).",
-    "caption_gsw": "Usegheit: «Du bisch i Sünd gebore» (dunkle Fläck); si gheied en use (Huus mit Pfiil use).",
+    "caption_de": "Hinausgeworfen: «Du bist in Sünde geboren» (dunkler Fleck); sie werfen ihn aus der Synagoge hinaus (Bogen aus dem Haus, Haus mit Pfeil hinaus).",
+    "caption_gsw": "Usegheit: «Du bisch i de Sünd gebore» (dunkle Fläck); si rüered en us de Synagoge use (Boge us em Huus, Huus mit Pfiil use).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-PHARISAEER": "earnest",
@@ -475,19 +474,20 @@
       "FIG-ROLLE-BLINDER": "away"
      },
      "x": {
-      "FIG-GRUPPE-PHARISAEER": 70,
-      "FIG-ROLLE-BLINDER": 140
+      "FIG-GRUPPE-PHARISAEER": 104,
+      "FIG-ROLLE-BLINDER": 164
      },
      "at": {
       "FIG-ZEICHEN-AUSSCHLUSS": "FIG-ROLLE-BLINDER"
      },
      "arrows": [
       [
-       "FIG-GRUPPE-PHARISAEER",
+       "FIG-ORT-SYNAGOGE",
        "FIG-ROLLE-BLINDER",
        "throw"
       ]
-     ]
+     ],
+     "before": true
     }
    }
   ],
@@ -587,7 +587,7 @@
       "from": "FIG-JESUS",
       "to": "FIG-ROLLE-BLINDER",
       "icons": [
-       "FIG-ZEICHEN-BLIND",
+       "FIG-ROLLE-BLINDER",
        "FIG-ZEICHEN-SEHEN"
       ]
      },
@@ -595,15 +595,15 @@
       "from": "FIG-JESUS",
       "to": "FIG-GRUPPE-PHARISAEER",
       "icons": [
-       "FIG-ZEICHEN-SEHEN",
+       "FIG-GRUPPE-PHARISAEER",
        "FIG-ZEICHEN-BLIND"
       ]
      }
     ],
     "action_de": "Jesus sagt: Zum Gericht bin ich in diese Welt gekommen, damit die nicht Sehenden sehen und die Sehenden blind werden.",
     "action_gsw": "De Jesus seit: Zum Gricht bin ich i die Wält cho, dass die, wo nöd gsehnd, gsehnd und die, wo gsehnd, blind werded.",
-    "caption_de": "Sehen und Blindsein: Die nicht sehen, werden sehend (zum Geheilten); die meinen zu sehen, werden blind (zu den Pharisäern).",
-    "caption_gsw": "Gseh und Blindsii: Die, wo nöd gsehnd, werded sehend (zum Gheilte); die, wo meined, si gsehnd, werded blind (zu de Pharisäer).",
+    "caption_de": "Sehen und Blindsein: Jesus sagt: Die nicht sehen, werden sehend (der Geheilte, offenes Auge); die meinen zu sehen, werden blind (die Pharisäer, durchgestrichenes Auge).",
+    "caption_gsw": "Gseh und blind sii: De Jesus seit: Die, wo nöd gsehnd, werded gsehnd (de Gheilt, offes Aug); die, wo meined, si gsäched, werded blind (d Pharisäer, durgstriches Aug).",
     "stage": {
      "mood": {
       "FIG-ROLLE-BLINDER": "calm",
@@ -612,6 +612,11 @@
      },
      "pose": {
       "FIG-ROLLE-BLINDER": "kneel"
+     },
+     "x": {
+      "FIG-ROLLE-BLINDER": 22,
+      "FIG-JESUS": 62,
+      "FIG-GRUPPE-PHARISAEER": 150
      }
     }
    },
@@ -676,7 +681,7 @@
      "FIG-ROLLE-BLINDER"
     ],
     "objects": [
-     "FIG-ORT-TEICH"
+     "FIG-ORT-SILOAM"
     ],
     "signs": [
      "FIG-ZEICHEN-HEILEN"
@@ -686,27 +691,24 @@
       "from": "FIG-JESUS",
       "to": "FIG-ROLLE-BLINDER",
       "icons": [
-       "FIG-ORT-TEICH"
+       "FIG-ORT-SILOAM"
       ]
      }
     ],
     "action_de": "Jesus heilt einen blind geborenen Menschen: Er streicht ihm einen Brei auf die Augen und schickt ihn zum Teich Siloam; er wäscht sich und kommt sehend zurück.",
     "action_gsw": "De Jesus heilt en blind gebore Mänsch: Er striicht em en Brei uf d Auge und schickt en zum Teich Siloam; er wäscht sich und chunnt sehend zrugg.",
-    "caption_de": "Heilung: Jesus berührt die Augen des Blinden (Hand, Lichtpunkte) und schickt ihn zum Teich Siloam (Becken, Pfeil).",
-    "caption_gsw": "Heilig: De Jesus berüert d Auge vom Blinde (Hand, Liechtpünkt) und schickt en zum Teich Siloam (Becki, Pfiil).",
+    "caption_de": "Heilung: Jesus berührt die Augen des Blinden (Hand mit Lichtstrahlen) und schickt ihn zum Teich Siloam (Becken mit Stufen, Pfeil).",
+    "caption_gsw": "Heilig: De Jesus berüert d Auge vom Blinde (Hand mit Liechtstrahle) und schickt en zum Teich Siloam (Becki mit Stäge, Pfiil).",
     "stage": {
      "mood": {
       "FIG-ROLLE-BLINDER": "sleep"
-     },
-     "at": {
-      "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-BLINDER"
      },
      "x": {
       "FIG-JESUS": 40,
       "FIG-ROLLE-BLINDER": 92
      },
      "floor_x": {
-      "FIG-ORT-TEICH": 126
+      "FIG-ORT-SILOAM": 126
      },
      "arrows": [
       [
@@ -716,10 +718,13 @@
       ],
       [
        "FIG-ROLLE-BLINDER",
-       "FIG-ORT-TEICH",
+       "FIG-ORT-SILOAM",
        "go"
       ]
-     ]
+     ],
+     "beside": {
+      "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-BLINDER"
+     }
     }
    },
    {
@@ -731,8 +736,7 @@
     ],
     "objects": [],
     "signs": [
-     "FIG-ZEICHEN-SEHEN",
-     "FIG-ZEICHEN-SABBAT"
+     "FIG-ZEICHEN-SEHEN"
     ],
     "speech": [
      {
@@ -740,6 +744,7 @@
       "to": "FIG-ROLLE-BLINDER",
       "icons": [
        "FIG-JESUS",
+       "FIG-ZEICHEN-SABBAT",
        "FIG-ZEICHEN-FRAGEN"
       ]
      },
@@ -748,14 +753,15 @@
       "to": "FIG-GRUPPE-PHARISAEER",
       "icons": [
        "FIG-JESUS",
-       "FIG-ROLLE-PROPHET"
+       "FIG-ROLLE-PROPHET",
+       "FIG-OBJ-SCHRIFTROLLE"
       ]
      }
     ],
     "action_de": "Weil Jesus am Sabbat geheilt hat, befragen die Pharisäer den Geheilten (und seine Eltern); er nennt Jesus einen Propheten.",
     "action_gsw": "Wil de Jesus am Sabbat gheilt hät, befröged d Pharisäer de Gheilt (und sini Eltere); er nännt de Jesus en Prophet.",
-    "caption_de": "Verhör: Am Sabbat (zwei Lampen) geheilt; die Pharisäer fragen, der Geheilte sagt: Jesus ist ein Prophet.",
-    "caption_gsw": "Verhör: Am Sabbat (zwei Lampe) gheilt; d Pharisäer fröged, de Gheilt seit: De Jesus isch en Prophet.",
+    "caption_de": "Verhör: Die Pharisäer fragen nach Jesus und dem Sabbat (Kreise, der siebte golden); der Geheilte sagt: Jesus ist ein Prophet (Figur, Schriftrolle).",
+    "caption_gsw": "Verhör: D Pharisäer fröged nach em Jesus und em Sabbat (Chreis, de sibet guldig); de Gheilt seit: De Jesus isch en Prophet (Figur, Schriftrolle).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-PHARISAEER": "earnest",
@@ -763,9 +769,7 @@
      },
      "at": {
       "FIG-ZEICHEN-SEHEN": "FIG-ROLLE-BLINDER"
-     },
-     "air_x": 70,
-     "air_y": 58
+     }
     }
    },
    {
@@ -793,8 +797,8 @@
     ],
     "action_de": "Beim zweiten Verhör bleibt er dabei: Ich war blind und sehe jetzt; da werfen sie ihn hinaus.",
     "action_gsw": "Bim zweite Verhör bliibt er derbii: Ich bi blind gsii und gseh jetzt; da gheied si en use.",
-    "caption_de": "Hinausgeworfen: «Ich war blind und sehe» (Augen); sie werfen ihn hinaus (Haus mit Pfeil).",
-    "caption_gsw": "Usegheit: «Ich bi blind gsii und gseh» (Auge); si gheied en use (Huus mit Pfiil).",
+    "caption_de": "Hinausgeworfen: «Ich war blind und sehe» (Augen); sie werfen ihn aus der Synagoge hinaus (Bogen aus dem Haus, Haus mit Pfeil hinaus).",
+    "caption_gsw": "Usegheit: «Ich bi blind gsi und gseh» (Auge); si rüered en us de Synagoge use (Boge us em Huus, Huus mit Pfiil use).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-PHARISAEER": "earnest",
@@ -802,19 +806,23 @@
      },
      "back_side": "left",
      "x": {
-      "FIG-GRUPPE-PHARISAEER": 70,
-      "FIG-ROLLE-BLINDER": 140
+      "FIG-GRUPPE-PHARISAEER": 104,
+      "FIG-ROLLE-BLINDER": 164
      },
      "at": {
       "FIG-ZEICHEN-AUSSCHLUSS": "FIG-ROLLE-BLINDER"
      },
      "arrows": [
       [
-       "FIG-GRUPPE-PHARISAEER",
+       "FIG-ORT-SYNAGOGE",
        "FIG-ROLLE-BLINDER",
        "throw"
       ]
-     ]
+     ],
+     "before": true,
+     "pose": {
+      "FIG-ROLLE-BLINDER": "away"
+     }
     }
    },
    {
@@ -886,13 +894,13 @@
     "speech": [],
     "action_de": "Wer nicht durch die Tür in den Hof der Schafe hineingeht, sondern anderswo hinübersteigt, ist ein Dieb und Räuber; wer durch die Tür hineingeht, ist der Hirte, dem der Türhüter öffnet.",
     "action_gsw": "Wer nöd dur d Tür in Hof vo de Schaf ine gaat, sondern anderswo übere stiigt, isch en Dieb und Röiber; wer dur d Tür ine gaat, isch de Hirt, wo-n-em de Türhüeter uftuet.",
-    "caption_de": "Tür und Mauer: Der Hirte (Stab) geht durch die Tür zu den Schafen; der Dieb (Kapuze) steigt über die Mauer.",
-    "caption_gsw": "Tür und Muur: De Hirt (Stab) gaat dur d Tür zu de Schaf; de Dieb (Kapuze) stiigt über d Muur.",
+    "caption_de": "Tür und Mauer: Der Hirte (Stab) geht durch die Tür (gestrichelter Pfeil zur Tür); der Dieb (Kapuze) steigt über die Mauer (Bogen über die Mauer).",
+    "caption_gsw": "Tür und Muur: De Hirt (Stab) gaat dur d Tür (gstrichlete Pfiil zur Tür); de Dieb (Kapuze) stiigt über d Muur (Boge über d Muur).",
     "stage": {
      "back_side": "right",
      "x": {
-      "FIG-ROLLE-DIEB": 18,
-      "FIG-ROLLE-HIRTE": 62
+      "FIG-ROLLE-DIEB": 26,
+      "FIG-ROLLE-HIRTE": 66
      },
      "count": {
       "FIG-OBJ-SCHAF": 2
@@ -911,7 +919,7 @@
       ],
       [
        "FIG-ROLLE-DIEB",
-       "FIG-ORT-SCHAFSTALL",
+       "FIG-OBJ-SCHAF",
        "throw"
       ]
      ]
@@ -926,9 +934,7 @@
     "objects": [
      "FIG-OBJ-SCHAF"
     ],
-    "signs": [
-     "FIG-ZEICHEN-NACHFOLGEN"
-    ],
+    "signs": [],
     "speech": [
      {
       "from": "FIG-ROLLE-HIRTE",
@@ -941,11 +947,11 @@
     ],
     "action_de": "Der Hirte ruft seine Schafe mit Namen und führt sie hinaus; er geht vor ihnen her, und sie folgen ihm, weil sie seine Stimme kennen. Einem Fremden folgen sie nicht.",
     "action_gsw": "De Hirt rüeft sini Schaf mit Name und füert si use; er gaat vor ene här, und si folged em, wil si sini Stimm känned. Eme Fremde folged si nöd.",
-    "caption_de": "Sie folgen ihm: Der Hirte ruft seine Schafe (Schaf, Stimme), sie folgen ihm (Fussspuren).",
-    "caption_gsw": "Si folged em: De Hirt rüeft sini Schaf (Schaf, Stimm), si folged em (Fuessspure).",
+    "caption_de": "Sie folgen ihm: Der Hirte ruft seine Schafe (Schaf, Stimme), sie folgen ihm (Pfeil).",
+    "caption_gsw": "Si folged em: De Hirt rüeft sini Schaf (Schaf, Stimm), si folged em (Pfiil).",
     "stage": {
      "x": {
-      "FIG-ROLLE-HIRTE": 130
+      "FIG-ROLLE-HIRTE": 124
      },
      "count": {
       "FIG-OBJ-SCHAF": 3
@@ -953,8 +959,6 @@
      "floor_x": {
       "FIG-OBJ-SCHAF": 14
      },
-     "air_x": 24,
-     "air_y": 66,
      "arrows": [
       [
        "FIG-OBJ-SCHAF",
@@ -1089,7 +1093,7 @@
     "stage": {
      "x": {
       "FIG-JESUS": 66,
-      "FIG-ROLLE-LOHNARBEITER": 164
+      "FIG-ROLLE-LOHNARBEITER": 136
      },
      "pose": {
       "FIG-ROLLE-LOHNARBEITER": "away"
@@ -1105,7 +1109,7 @@
       "FIG-OBJ-SCHAF": 4,
       "FIG-OBJ-WOLF": 98
      },
-     "at": {
+     "beside": {
       "FIG-ZEICHEN-FLIEHEN": "FIG-ROLLE-LOHNARBEITER"
      }
     }
@@ -1138,13 +1142,13 @@
     "stage": {
      "back_side": "left",
      "x": {
-      "FIG-JESUS": 106
+      "FIG-JESUS": 92
      },
      "count": {
       "FIG-OBJ-SCHAF": 2
      },
      "floor_x": {
-      "FIG-OBJ-SCHAF": 140
+      "FIG-OBJ-SCHAF": 128
      },
      "air_x": 60,
      "air_y": 50,
@@ -1180,8 +1184,8 @@
     ],
     "action_de": "Der Vater liebt mich, weil ich mein Leben hingebe, um es wieder zu nehmen. Niemand nimmt es mir; ich gebe es von mir aus hin und habe Vollmacht, es wieder zu nehmen. Diesen Auftrag habe ich vom Vater.",
     "action_gsw": "De Vater liebt mich, wil ich mis Läbe hii gib, zum s wider neh. Niemer nimmt mer s; ich gib s vo mir uus hii und ha Vollmacht, s wider z neh. De Uftrag han ich vom Vater.",
-    "caption_de": "Hingeben und wieder nehmen: Jesus spricht zum Vater (Strahlenkranz) von Tod und Auferstehung (Grab, Grab mit Pfeil nach oben); der Vater liebt ihn (Herzen).",
-    "caption_gsw": "Hiigää und wider neh: De Jesus redt zum Vater (Strahlechranz) vo Tod und Uferstehig (Grab, Grab mit Pfiil ufe); de Vater liebt en (Härz).",
+    "caption_de": "Hingeben und wieder nehmen: Jesus betet zum Vater (Strahlenkranz, gefaltete Hände) von Tod und Auferstehung (Grab, Grab mit Pfeil nach oben); der Vater liebt ihn (Herzen).",
+    "caption_gsw": "Härgee und wider neh: De Jesus bätet zum Vater (Strahlechranz, gfalteti Händ) vom Tod und vo de Uferstehig (Grab, Grab mit Pfiil uf); de Vater hät en gärn (Härz).",
     "stage": {
      "god_side": "left",
      "x": {
@@ -1189,14 +1193,7 @@
      },
      "at": {
       "FIG-ZEICHEN-LIEBE": "FIG-GOTT"
-     },
-     "arrows": [
-      [
-       "FIG-GOTT",
-       "FIG-JESUS",
-       "act"
-      ]
-     ]
+     }
     }
    }
   ],
@@ -1234,8 +1231,8 @@
     ],
     "action_de": "Wegen dieser Worte entsteht wieder eine Spaltung unter den Juden. Viele sagen: Er hat einen Dämon und ist von Sinnen. Warum hört ihr auf ihn?",
     "action_gsw": "Wäge dene Wort git s wider e Spaltig under de Jude. Vill säged: Er hät en Dämon und isch nöd bi Sinne. Werum losed ihr uf en?",
-    "caption_de": "Die einen: Viele sagen, Jesus habe einen Dämon (dunkler Schatten).",
-    "caption_gsw": "Di eine: Vill säged, de Jesus heig en Dämon (dunkle Schatte).",
+    "caption_de": "Die einen: Viele (Menge) sagen, Jesus habe einen Dämon (dunkler Wirbel).",
+    "caption_gsw": "Di eine: Vill (Mängi) säged, de Jesus heig en Dämon (dunkle Wirbel).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-MENGE": "earnest",
@@ -1251,15 +1248,15 @@
     "n": 2,
     "reference": "JHN.10.21",
     "figures": [
-     "FIG-GRUPPE-MENGE",
+     "FIG-GRUPPE-VOLK",
      "FIG-JESUS"
     ],
     "objects": [],
     "signs": [],
     "speech": [
      {
-      "from": "FIG-GRUPPE-MENGE",
-      "to": "FIG-GRUPPE-MENGE",
+      "from": "FIG-GRUPPE-VOLK",
+      "to": "FIG-GRUPPE-VOLK",
       "icons": [
        "FIG-ZEICHEN-DAEMON",
        "FIG-ZEICHEN-BLIND",
@@ -1270,15 +1267,15 @@
     ],
     "action_de": "Andere sagen: Das sind nicht die Worte eines Besessenen. Kann etwa ein Dämon Blinden die Augen öffnen?",
     "action_gsw": "Anderi säged: Das sind nöd d Wort vo eme Bsässne. Cha öppe en Dämon Blinde d Auge uftue?",
-    "caption_de": "Die andern: Kann ein Dämon (Schatten) Blinde sehend machen (Augen)?",
-    "caption_gsw": "Di andere: Cha-n-en Dämon (Schatte) Blindi sehend mache (Auge)?",
+    "caption_de": "Die andern (zweite Gruppe in Braun und Blaugrau): Kann ein Dämon (dunkler Wirbel) Blinde sehend machen (Augen)?",
+    "caption_gsw": "Di andere (zweiti Gruppe i Bruun und Blaugrau): Chan en Dämon (dunkle Wirbel) Blindi gsehnd mache (Auge)?",
     "stage": {
      "mood": {
-      "FIG-GRUPPE-MENGE": "pensive",
+      "FIG-GRUPPE-VOLK": "pensive",
       "FIG-JESUS": "calm"
      },
      "x": {
-      "FIG-GRUPPE-MENGE": 60,
+      "FIG-GRUPPE-VOLK": 60,
       "FIG-JESUS": 140
      }
     }
@@ -1400,6 +1397,9 @@
      "mood": {
       "FIG-GRUPPE-MENGE": "earnest",
       "FIG-JESUS": "calm"
+     },
+     "hold": {
+      "FIG-GRUPPE-MENGE": "FIG-OBJ-STEINE"
      }
     }
    },
@@ -1417,8 +1417,8 @@
     "speech": [],
     "action_de": "Sie suchen ihn wieder festzunehmen, aber er entkommt aus ihrer Hand.",
     "action_gsw": "Si probiered en wider z verhafte, aber er entchunnt us irne Händ.",
-    "caption_de": "Entkommen: Jesus geht weg, aus ihrer Hand (Pfeil).",
-    "caption_gsw": "Entcho: De Jesus gaat ewäg, us irne Händ (Pfiil).",
+    "caption_de": "Entkommen: Sie wollen ihn ergreifen, doch Jesus geht weg (Pfeil).",
+    "caption_gsw": "Entwütscht: Si wänd en packe, aber de Jesus gaat devo (Pfiil).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-MENGE": "surprised",
@@ -1429,9 +1429,9 @@
      },
      "x": {
       "FIG-GRUPPE-MENGE": 50,
-      "FIG-JESUS": 130
+      "FIG-JESUS": 140
      },
-     "at": {
+     "beside": {
       "FIG-ZEICHEN-FLIEHEN": "FIG-JESUS"
      }
     }
@@ -1460,19 +1460,26 @@
      "FIG-ORT-JORDAN"
     ],
     "signs": [
-     "FIG-ZEICHEN-NACHFOLGEN"
+     "FIG-ZEICHEN-TAUFE"
     ],
     "speech": [],
     "action_de": "Jesus geht wieder weg, auf die andere Seite des Jordan, an den Ort, wo Johannes zuerst getauft hatte, und bleibt dort.",
     "action_gsw": "De Jesus gaat wider ewäg, uf di ander Siite vom Jordan, a de Ort, wo de Johannes zerscht tauft hät, und bliibt dört.",
-    "caption_de": "Jenseits des Jordan: Jesus geht an den Fluss, wo Johannes getauft hatte (Fussspuren).",
-    "caption_gsw": "Änet em Jordan: De Jesus gaat an Fluss, wo de Johannes tauft hät (Fuessspure).",
+    "caption_de": "Jenseits des Jordan: Jesus geht (Pfeil) an den Fluss, wo Johannes getauft hatte (Muschel mit Wasser).",
+    "caption_gsw": "Änet em Jordan: De Jesus gaat (Pfiil) a de Fluss, wo de Johannes tauft gha hät (Muschle mit Wasser).",
     "stage": {
      "x": {
-      "FIG-JESUS": 120
+      "FIG-JESUS": 44
      },
-     "air_x": 40,
-     "air_y": 30
+     "air_x": 132,
+     "air_y": 62,
+     "arrows": [
+      [
+       "FIG-JESUS",
+       "FIG-ORT-JORDAN",
+       "go"
+      ]
+     ]
     }
    },
    {
@@ -1492,14 +1499,15 @@
       "to": "FIG-JESUS",
       "icons": [
        "FIG-JOHANNES-TAEUFER",
-       "FIG-JESUS"
+       "FIG-JESUS",
+       "FIG-ZEICHEN-WAHRHEIT"
       ]
      }
     ],
     "action_de": "Jesus geht an den Jordan, wo Johannes zuerst getauft hatte. Viele kommen und sagen: Johannes hat kein Zeichen getan, aber was er über diesen sagte, war wahr. Viele glauben dort an ihn.",
     "action_gsw": "De Jesus gaat an Jordan, wo de Johannes zerscht tauft hät. Vill chömed und säged: De Johannes hät kei Zeiche gmacht, aber was er über dä gseit hät, isch wahr gsii. Vill glaubed dört a ihn.",
-    "caption_de": "Am Jordan: Die Leute sagen: Was Johannes über Jesus sagte, ist wahr; viele glauben (Herzen).",
-    "caption_gsw": "Am Jordan: D Lüüt säged: Was de Johannes über de Jesus gseit hät, isch wahr; vill glaubed (Härz).",
+    "caption_de": "Am Jordan: Die Leute sagen: Was Johannes über Jesus sagte, ist wahr (Häkchen); viele glauben (Herz über der Menge).",
+    "caption_gsw": "Am Jordan: D Lüt säged: Was de Johannes über de Jesus gseit hät, isch wahr (Häkli); vill glaubed (Härz über de Mängi).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-MENGE": "smile"
@@ -1538,13 +1546,13 @@
     "speech": [],
     "action_de": "Wer nicht durch die Tür in den Hof der Schafe hineingeht, sondern anderswo hinübersteigt, ist ein Dieb und Räuber; wer durch die Tür hineingeht, ist der Hirte, dem der Türhüter öffnet.",
     "action_gsw": "Wer nöd dur d Tür in Hof vo de Schaf ine gaat, sondern anderswo übere stiigt, isch en Dieb und Röiber; wer dur d Tür ine gaat, isch de Hirt, wo-n-em de Türhüeter uftuet.",
-    "caption_de": "Tür und Mauer: Der Hirte (Stab) geht durch die Tür zu den Schafen; der Dieb (Kapuze) steigt über die Mauer.",
-    "caption_gsw": "Tür und Muur: De Hirt (Stab) gaat dur d Tür zu de Schaf; de Dieb (Kapuze) stiigt über d Muur.",
+    "caption_de": "Tür und Mauer: Der Hirte (Stab) geht durch die Tür (gestrichelter Pfeil zur Tür); der Dieb (Kapuze) steigt über die Mauer (Bogen über die Mauer).",
+    "caption_gsw": "Tür und Muur: De Hirt (Stab) gaat dur d Tür (gstrichlete Pfiil zur Tür); de Dieb (Kapuze) stiigt über d Muur (Boge über d Muur).",
     "stage": {
      "back_side": "right",
      "x": {
-      "FIG-ROLLE-DIEB": 18,
-      "FIG-ROLLE-HIRTE": 62
+      "FIG-ROLLE-DIEB": 26,
+      "FIG-ROLLE-HIRTE": 66
      },
      "count": {
       "FIG-OBJ-SCHAF": 2
@@ -1563,7 +1571,7 @@
       ],
       [
        "FIG-ROLLE-DIEB",
-       "FIG-ORT-SCHAFSTALL",
+       "FIG-OBJ-SCHAF",
        "throw"
       ]
      ]
@@ -1600,7 +1608,7 @@
     "stage": {
      "x": {
       "FIG-JESUS": 66,
-      "FIG-ROLLE-LOHNARBEITER": 164
+      "FIG-ROLLE-LOHNARBEITER": 136
      },
      "pose": {
       "FIG-ROLLE-LOHNARBEITER": "away"
@@ -1616,7 +1624,7 @@
       "FIG-OBJ-SCHAF": 4,
       "FIG-OBJ-WOLF": 98
      },
-     "at": {
+     "beside": {
       "FIG-ZEICHEN-FLIEHEN": "FIG-ROLLE-LOHNARBEITER"
      }
     }
@@ -1671,14 +1679,15 @@
       "to": "FIG-JESUS",
       "icons": [
        "FIG-JOHANNES-TAEUFER",
-       "FIG-JESUS"
+       "FIG-JESUS",
+       "FIG-ZEICHEN-WAHRHEIT"
       ]
      }
     ],
     "action_de": "Jesus geht an den Jordan, wo Johannes zuerst getauft hatte. Viele kommen und sagen: Johannes hat kein Zeichen getan, aber was er über diesen sagte, war wahr. Viele glauben dort an ihn.",
     "action_gsw": "De Jesus gaat an Jordan, wo de Johannes zerscht tauft hät. Vill chömed und säged: De Johannes hät kei Zeiche gmacht, aber was er über dä gseit hät, isch wahr gsii. Vill glaubed dört a ihn.",
-    "caption_de": "Am Jordan: Die Leute sagen: Was Johannes über Jesus sagte, ist wahr; viele glauben (Herzen).",
-    "caption_gsw": "Am Jordan: D Lüüt säged: Was de Johannes über de Jesus gseit hät, isch wahr; vill glaubed (Härz).",
+    "caption_de": "Am Jordan: Die Leute sagen: Was Johannes über Jesus sagte, ist wahr (Häkchen); viele glauben (Herz über der Menge).",
+    "caption_gsw": "Am Jordan: D Lüt säged: Was de Johannes über de Jesus gseit hät, isch wahr (Häkli); vill glaubed (Härz über de Mängi).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-MENGE": "smile"
@@ -1731,8 +1740,8 @@
     ],
     "action_de": "Lazarus aus Betanien ist krank. Seine Schwestern Marta und Maria lassen Jesus sagen: Der, den du lieb hast, ist krank. Jesus sagt: Diese Krankheit führt nicht zum Tod, sondern dient der Herrlichkeit Gottes.",
     "action_gsw": "De Lazarus vo Betanie isch chrank. Sini Schwöschtere Marta und Maria lönd em Jesus säge: Dä, wo du gärn häsch, isch chrank. De Jesus seit: Die Chrankheit füert nöd zum Tod, sondern dient de Herrlichkeit vo Gott.",
-    "caption_de": "Die Nachricht: Ein Bote meldet: Lazarus ist krank (Liegender); Jesus antwortet: Die Krankheit dient der Herrlichkeit Gottes (Licht).",
-    "caption_gsw": "D Nachricht: En Bot meldet: De Lazarus isch chrank (Liegende); de Jesus antwortet: D Chrankheit dient de Herrlichkeit vo Gott (Liecht).",
+    "caption_de": "Die Nachricht: Ein Bote (Brief in der Hand) meldet: Lazarus ist krank (Liegender); Jesus antwortet: Die Krankheit dient der Herrlichkeit Gottes (Licht).",
+    "caption_gsw": "D Nachricht: En Bote (Brief i de Hand) meldet: De Lazarus isch chrank (Liggende); de Jesus antwortet: D Chrankheit dient de Herrlichkeit vo Gott (Liecht).",
     "stage": {
      "mood": {
       "FIG-ROLLE-BOTE": "worried"
@@ -1752,26 +1761,26 @@
     ],
     "speech": [
      {
+      "from": "FIG-JESUS",
+      "to": "FIG-GRUPPE-ZWOELF",
+      "icons": [
+       "FIG-ZEICHEN-NACHFOLGEN",
+       "FIG-ZEICHEN-LICHT"
+      ]
+     },
+     {
       "from": "FIG-GRUPPE-ZWOELF",
       "to": "FIG-JESUS",
       "icons": [
        "FIG-OBJ-STEINE",
        "FIG-ZEICHEN-FRAGEN"
       ]
-     },
-     {
-      "from": "FIG-JESUS",
-      "to": "FIG-GRUPPE-ZWOELF",
-      "icons": [
-       "FIG-ZEICHEN-LICHT",
-       "FIG-ZEICHEN-NACHFOLGEN"
-      ]
      }
     ],
     "action_de": "Jesus liebt Marta, Maria und Lazarus, bleibt aber noch zwei Tage. Dann sagt er: Lasst uns wieder nach Judäa gehen! Die Jünger: Eben noch wollten sie dich dort steinigen. Jesus: Wer am Tag umhergeht, stösst nicht an.",
     "action_gsw": "De Jesus het d Marta, d Maria und de Lazarus gärn, bliibt aber no zwei Täg. Dänn seit er: Chömed, mir gönd wider uf Judäa! D Jünger: Grad no händ s di dört welle steinige. De Jesus: Wer am Tag umelauft, stosst nöd aa.",
-    "caption_de": "Zurück nach Judäa? Nach zwei Tagen (Sonnen) will Jesus gehen; die Jünger fragen: Und die Steine? Jesus: Wer im Licht geht, stösst nicht an (Fussspuren).",
-    "caption_gsw": "Zrugg uf Judäa? Nach zwei Täg (Sunne) will de Jesus gaa; d Jünger fröged: Und d Stei? De Jesus: Wer im Liecht gaat, stosst nöd aa (Fuessspure).",
+    "caption_de": "Zurück nach Judäa? Nach zwei Tagen (Sonnen) sagt Jesus: Lasst uns gehen – wer im Licht geht, stösst nicht an (Fussspuren, Licht); die Jünger fragen: Und die Steine?",
+    "caption_gsw": "Zrugg uf Judäa? Nach zwei Täg (Sunne) seit de Jesus: Chömed, mir gönd – wer im Liecht gaat, stosst nöd aa (Fuessspure, Liecht); d Jünger fröged: Und d Stei?",
     "stage": {
      "count": {
       "FIG-ZEICHEN-TAGE": 2
@@ -1780,7 +1789,7 @@
       "FIG-GRUPPE-ZWOELF": "worried"
      },
      "air_x": 74,
-     "air_y": 58
+     "air_y": 84
     }
    },
    {
@@ -1800,15 +1809,22 @@
       "to": "FIG-GRUPPE-ZWOELF",
       "icons": [
        "FIG-LAZARUS",
-       "FIG-ZEICHEN-SCHLAFEN",
+       "FIG-ZEICHEN-SCHLAFEN"
+      ]
+     },
+     {
+      "from": "FIG-JESUS",
+      "to": "FIG-GRUPPE-ZWOELF",
+      "icons": [
+       "FIG-LAZARUS",
        "FIG-ZEICHEN-TOD"
       ]
      }
     ],
     "action_de": "Jesus sagt: Lazarus ist eingeschlafen; ich gehe, ihn aufzuwecken. Die Jünger verstehen es als Schlaf. Da sagt er offen: Lazarus ist gestorben.",
     "action_gsw": "De Jesus seit: De Lazarus isch iigschlafe; ich gang, zum en uufwecke. D Jünger verstönd s als Schlaf. Da seit er offe: De Lazarus isch gstorbe.",
-    "caption_de": "Eingeschlafen: Jesus sagt: Lazarus schläft (Mond); die Jünger verstehen nicht (Nebel); dann offen: Lazarus ist tot (verschlossenes Grab).",
-    "caption_gsw": "Iigschlafe: De Jesus seit: De Lazarus schlaft (Mond); d Jünger verstönd s nöd (Näbel); dänn offe: De Lazarus isch tot (zues Grab).",
+    "caption_de": "Eingeschlafen: Jesus sagt: Lazarus schläft (Mond); die Jünger verstehen nicht (Nebel mit Fragezeichen); dann offen (zweite Blase): Lazarus ist tot (verschlossenes Grab).",
+    "caption_gsw": "Iigschlafe: De Jesus seit: De Lazarus schlaft (Mond); d Jünger verstönd nöd (Näbel mit Fragezeiche); denn offe (zweiti Blase): De Lazarus isch tot (verschlossnigs Grab).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-ZWOELF": "pensive",
@@ -1924,8 +1940,8 @@
     ],
     "action_de": "Marta geht Jesus entgegen und sagt: Herr, wenn du hier gewesen wärst, wäre mein Bruder nicht gestorben. Aber auch jetzt weiss ich: Gott wird dir geben, worum du ihn bittest.",
     "action_gsw": "D Marta gaat em Jesus etgäge und seit: Herr, wänn du da gsii wärsch, wär min Brüeder nöd gstorbe. Aber au jetzt weiss ich: Gott wird der gää, um was du en bittisch.",
-    "caption_de": "Marta: Wärst du da gewesen (fehlt), wäre Lazarus nicht gestorben (Grab).",
-    "caption_gsw": "D Marta: Wärsch du da gsii (fehlt), wär de Lazarus nöd gstorbe (Grab).",
+    "caption_de": "Marta geht Jesus entgegen (Pfeil): Wärst du da gewesen (fehlt), wäre Lazarus nicht gestorben (Grab).",
+    "caption_gsw": "D Marta gaat em Jesus entgäge (Pfiil): Wärsch du da gsi (fehlt), wär de Lazarus nöd gstorbe (Grab).",
     "stage": {
      "mood": {
       "FIG-MARTA": "worried"
@@ -1957,6 +1973,7 @@
       "from": "FIG-JESUS",
       "to": "FIG-MARTA",
       "icons": [
+       "FIG-JESUS",
        "FIG-ZEICHEN-AUFERSTEHUNG",
        "FIG-ZEICHEN-LEBEN",
        "FIG-ZEICHEN-GLAUBEN",
@@ -1966,8 +1983,8 @@
     ],
     "action_de": "Jesus sagt zu Marta: Dein Bruder wird auferstehen. Ich bin die Auferstehung und das Leben; wer an mich glaubt, wird leben, auch wenn er stirbt. Glaubst du das?",
     "action_gsw": "De Jesus seit zur Marta: Din Brüeder wird uferstaa. Ich bi d Uferstehig und s Läbe; wer a mich glaubt, wird läbe, au wänn er stirbt. Glaubsch du das?",
-    "caption_de": "Ich bin die Auferstehung und das Leben (Grab mit Pfeil nach oben, Spross im Ring). Glaubst du das? (Herz, Fragezeichen)",
-    "caption_gsw": "Ich bi d Uferstehig und s Läbe (Grab mit Pfiil ufe, Schoss im Ring). Glaubsch du das? (Härz, Fragezeiche)",
+    "caption_de": "Ich (Jesus) bin die Auferstehung und das Leben (Grab mit Pfeil nach oben, Spross im Ring). Glaubst du das? (Herz, Fragezeichen)",
+    "caption_gsw": "Ich (de Jesus) bi d Uferstehig und s Läbe (Grab mit Pfiil uf, Schoss im Ring). Glaubsch du das? (Härz, Fragezeiche)",
     "stage": {
      "mood": {
       "FIG-MARTA": "pensive"
@@ -2023,12 +2040,11 @@
     "reference": "JHN.11.28-JHN.11.31",
     "figures": [
      "FIG-MARTA",
+     "FIG-GRUPPE-MENGE",
      "FIG-MARIA-BETANIEN",
-     "FIG-GRUPPE-MENGE"
+     "FIG-JESUS"
     ],
-    "objects": [
-     "FIG-ORT-HAUS"
-    ],
+    "objects": [],
     "signs": [],
     "speech": [
      {
@@ -2042,14 +2058,14 @@
     ],
     "action_de": "Marta ruft heimlich Maria: Der Lehrer ist da und ruft dich. Maria steht schnell auf und geht zu ihm; die Juden, die bei ihr waren, folgen ihr, weil sie meinen, sie gehe zum Grab, um zu weinen.",
     "action_gsw": "D Marta rüeft d Maria heimlich: De Lehrer isch da und rüeft di. D Maria staat schnäll uf und gaat zu-n-em; d Jude, wo bin ere gsii sind, folged ere, wil si meined, si gang zum Grab go brüele.",
-    "caption_de": "Der Lehrer ruft dich: Marta sagt es Maria leise (Jesus, Rufen); Maria eilt hinaus, die Leute folgen ihr (Pfeil).",
-    "caption_gsw": "De Lehrer rüeft di: D Marta seit s de Maria liislig (Jesus, Rüefe); d Maria pressiert use, d Lüüt folged ere (Pfiil).",
+    "caption_de": "Der Lehrer ruft dich: Marta sagt es Maria (Jesus, Rufen); Maria eilt zu Jesus (Pfeil), die Leute folgen ihr (Pfeil).",
+    "caption_gsw": "De Lehrer rüeft di: D Marta seit s de Maria (Jesus, Rüefe); d Maria gaat schnäll zum Jesus (Pfiil), d Lüt folged ere (Pfiil).",
     "stage": {
-     "back_side": "left",
      "x": {
-      "FIG-MARTA": 66,
-      "FIG-MARIA-BETANIEN": 112,
-      "FIG-GRUPPE-MENGE": 160
+      "FIG-MARTA": 22,
+      "FIG-GRUPPE-MENGE": 68,
+      "FIG-MARIA-BETANIEN": 118,
+      "FIG-JESUS": 164
      },
      "mood": {
       "FIG-MARIA-BETANIEN": "surprised",
@@ -2057,11 +2073,19 @@
      },
      "arrows": [
       [
+       "FIG-MARIA-BETANIEN",
+       "FIG-JESUS",
+       "go"
+      ],
+      [
        "FIG-GRUPPE-MENGE",
        "FIG-MARIA-BETANIEN",
        "go"
       ]
-     ]
+     ],
+     "pose": {
+      "FIG-MARIA-BETANIEN": "away"
+     }
     }
    },
    {
@@ -2102,6 +2126,10 @@
      },
      "mood": {
       "FIG-MARIA-BETANIEN": "worried"
+     },
+     "x": {
+      "FIG-MARIA-BETANIEN": 104,
+      "FIG-JESUS": 146
      }
     }
    },
@@ -2158,6 +2186,7 @@
     "reference": "JHN.11.36-JHN.11.37",
     "figures": [
      "FIG-GRUPPE-MENGE",
+     "FIG-GRUPPE-VOLK",
      "FIG-JESUS"
     ],
     "objects": [],
@@ -2173,7 +2202,7 @@
       ]
      },
      {
-      "from": "FIG-GRUPPE-MENGE",
+      "from": "FIG-GRUPPE-VOLK",
       "to": "FIG-JESUS",
       "icons": [
        "FIG-ZEICHEN-SEHEN",
@@ -2184,16 +2213,18 @@
     ],
     "action_de": "Die Juden sagen: Seht, wie lieb er ihn hatte! Einige aber sagen: Konnte dieser, der dem Blinden die Augen geöffnet hat, nicht bewirken, dass auch dieser nicht starb?",
     "action_gsw": "D Jude säged: Lueged, wie gärn er en gha hät! Es paar aber säged: Hät dä, wo em Blinde d Auge uftaa hät, nöd chöne mache, dass au dä nöd stirbt?",
-    "caption_de": "Zwei Stimmen: Wie lieb er ihn hatte (Herzen)! – Der Blinde sehend machte, konnte er den Tod nicht verhindern? (Auge, Grab, Fragezeichen)",
-    "caption_gsw": "Zwei Stimme: Wie gärn er en gha hät (Härz)! – Wo de Blind sehend gmacht hät, hät er de Tod nöd chöne verhindere? (Aug, Grab, Fragezeiche)",
+    "caption_de": "Zwei Stimmen: Die einen: Wie lieb er ihn hatte (Herzen)! Andere (zweite Gruppe): Er öffnete Blinden die Augen (Auge) – konnte er den Tod nicht verhindern (Grab, Fragezeichen)?",
+    "caption_gsw": "Zwei Stimme: Di eine: Wie gärn er en gha hät (Härz)! Anderi (zweiti Gruppe): Er hät Blinde d Auge ufgmacht (Aug) – hät er de Tod nöd chöne verhindere (Grab, Fragezeiche)?",
     "stage": {
      "mood": {
       "FIG-GRUPPE-MENGE": "pensive",
+      "FIG-GRUPPE-VOLK": "pensive",
       "FIG-JESUS": "worried"
      },
      "x": {
-      "FIG-GRUPPE-MENGE": 64,
-      "FIG-JESUS": 140
+      "FIG-GRUPPE-MENGE": 30,
+      "FIG-GRUPPE-VOLK": 100,
+      "FIG-JESUS": 160
      }
     }
    }
@@ -2215,44 +2246,46 @@
     "n": 1,
     "reference": "JHN.11.38-JHN.11.40",
     "figures": [
-     "FIG-MARTA",
-     "FIG-JESUS"
+     "FIG-JESUS",
+     "FIG-MARTA"
     ],
     "objects": [
      "FIG-ORT-GRAB-VERSCHLOSSEN"
     ],
-    "signs": [
-     "FIG-ZEICHEN-TAGE"
-    ],
+    "signs": [],
     "speech": [
      {
       "from": "FIG-JESUS",
       "to": "FIG-MARTA",
       "icons": [
-       "FIG-ORT-GRAB-VERSCHLOSSEN",
        "FIG-ORT-GRAB"
+      ]
+     },
+     {
+      "from": "FIG-MARTA",
+      "to": "FIG-JESUS",
+      "icons": [
+       "FIG-ZEICHEN-TAGE",
+       "FIG-ZEICHEN-TAGE",
+       "FIG-ZEICHEN-TAGE",
+       "FIG-ZEICHEN-TAGE"
       ]
      }
     ],
     "action_de": "Jesus kommt zum Grab, einer Höhle mit einem Stein davor, und sagt: Nehmt den Stein weg! Marta sagt: Herr, er riecht schon, es ist der vierte Tag. Jesus: Wenn du glaubst, wirst du die Herrlichkeit Gottes sehen.",
     "action_gsw": "De Jesus chunnt zum Grab, ere Höhli mit eme Stei dervor, und seit: Nämed de Stei ewäg! D Marta seit: Herr, er schmöckt scho, es isch de viert Tag. De Jesus: Wänn du glaubsch, wirsch d Herrlichkeit vo Gott gseh.",
-    "caption_de": "Nehmt den Stein weg: Jesus will das verschlossene Grab öffnen (Grab zu, Grab offen); Marta wendet ein: Schon vier Tage tot (Sonnen).",
-    "caption_gsw": "Nämed de Stei ewäg: De Jesus will s zue Grab uftue (Grab zue, Grab offe); d Marta wändet ii: Scho vier Täg tot (Sunne).",
+    "caption_de": "Nehmt den Stein weg: Jesus will das Grab öffnen (offenes Grab); Marta wendet ein: Schon vier Tage (Sonnen)!",
+    "caption_gsw": "Nämed de Stei weg: De Jesus wott s Grab ufmache (offes Grab); d Marta wändet ii: Scho vier Täg (Sunne)!",
     "stage": {
      "back_side": "right",
      "x": {
-      "FIG-MARTA": 30,
-      "FIG-JESUS": 76
-     },
-     "count": {
-      "FIG-ZEICHEN-TAGE": 4
+      "FIG-JESUS": 24,
+      "FIG-MARTA": 96
      },
      "mood": {
       "FIG-MARTA": "worried",
       "FIG-JESUS": "earnest"
-     },
-     "air_x": 8,
-     "air_y": 40
+     }
     }
    },
    {
@@ -2278,8 +2311,8 @@
     ],
     "action_de": "Sie nehmen den Stein weg. Jesus hebt die Augen empor: Vater, ich danke dir, dass du mich erhört hast; ich sage es wegen der Menge, damit sie glauben, dass du mich gesandt hast.",
     "action_gsw": "Si nämed de Stei ewäg. De Jesus lueget ufe: Vater, ich danke der, dass du mich erhört häsch; ich säg s wäge de Lüüt, dass si glaubed, dass du mich gschickt häsch.",
-    "caption_de": "Das Gebet: Das Grab ist offen; Jesus dankt dem Vater (Strahlenkranz), dass er ihn erhört (Ohr); die Menge hört zu.",
-    "caption_gsw": "S Gebät: S Grab isch offe; de Jesus dankt em Vater (Strahlechranz), dass er en erhört (Ohr); d Mängi lost zue.",
+    "caption_de": "Das Gebet: Das Grab ist offen; Jesus betet zum Vater (Strahlenkranz, gefaltete Hände) und dankt, dass er ihn erhört (Ohr); die Menge hört zu.",
+    "caption_gsw": "S Gebät: S Grab isch offe; de Jesus bätet zum Vater (Strahlechranz, gfalteti Händ) und dankt, dass er en ghört hät (Ohr); d Mängi lost zue.",
     "stage": {
      "god_side": "right",
      "back_side": "right",
@@ -2296,9 +2329,9 @@
     "n": 3,
     "reference": "JHN.11.43-JHN.11.44",
     "figures": [
+     "FIG-GRUPPE-MENGE",
      "FIG-JESUS",
-     "FIG-LAZARUS-BINDEN",
-     "FIG-GRUPPE-MENGE"
+     "FIG-LAZARUS-BINDEN"
     ],
     "objects": [
      "FIG-ORT-GRAB"
@@ -2321,9 +2354,9 @@
     "stage": {
      "back_side": "right",
      "x": {
-      "FIG-JESUS": 30,
-      "FIG-LAZARUS-BINDEN": 128,
-      "FIG-GRUPPE-MENGE": 74
+      "FIG-GRUPPE-MENGE": 26,
+      "FIG-JESUS": 80,
+      "FIG-LAZARUS-BINDEN": 150
      },
      "mood": {
       "FIG-GRUPPE-MENGE": "surprised",
@@ -2336,7 +2369,10 @@
        "FIG-LAZARUS-BINDEN",
        "act"
       ]
-     ]
+     ],
+     "wear": {
+      "FIG-LAZARUS-BINDEN": "binden"
+     }
     }
    }
   ],
@@ -2362,21 +2398,19 @@
     ],
     "objects": [],
     "signs": [
-     "FIG-ZEICHEN-GLAUBEN",
-     "FIG-ZEICHEN-ABSTAND"
+     "FIG-ZEICHEN-GLAUBEN"
     ],
     "speech": [],
     "action_de": "Viele Juden, die gesehen haben, was Jesus tat, glauben an ihn; einige aber gehen zu den Pharisäern und erzählen, was Jesus getan hat.",
     "action_gsw": "Vill Jude, wo gseh händ, was de Jesus gmacht hät, glaubed a ihn; es paar aber gönd zu de Pharisäer und verzelled, was de Jesus gmacht hät.",
-    "caption_de": "Glauben und Melden: Viele glauben (Herzen); einige gehen zu den Pharisäern (Pfeil).",
-    "caption_gsw": "Glaube und Mälde: Vill glaubed (Härz); es paar gönd zu de Pharisäer (Pfiil).",
+    "caption_de": "Glauben und Melden: Viele glauben (Herz über der Menge); einige gehen zu den Pharisäern (Pfeil).",
+    "caption_gsw": "Glaube und Mälde: Vill glaubed (Härz über de Mängi); es paar gönd zu de Pharisäer (Pfiil).",
     "stage": {
      "signs_who": {
       "FIG-ZEICHEN-GLAUBEN": [
        "FIG-GRUPPE-MENGE"
       ]
      },
-     "split": 1,
      "mood": {
       "FIG-GRUPPE-MENGE": "smile",
       "FIG-GRUPPE-PHARISAEER": "earnest"
@@ -2446,14 +2480,15 @@
       "icons": [
        "FIG-JESUS",
        "FIG-ZEICHEN-TOD",
+       "FIG-ZEICHEN-RETTUNG",
        "FIG-GRUPPE-MENGE"
       ]
      }
     ],
     "action_de": "Kajafas, Hohepriester jenes Jahres, sagt: Es ist besser, dass ein Mensch für das Volk stirbt. Der Erzähler deutet das als Weissagung, dass Jesus für die Nation und die zerstreuten Kinder Gottes sterben wird. Von da an planen sie, ihn zu töten.",
     "action_gsw": "De Kajafas, Hohepriester vo dem Jahr, seit: Es isch besser, dass ein Mänsch fürs Volk stirbt. De Erzähler düütet das als Wiissagig, dass de Jesus für d Nation und di versprängte Chind vo Gott stärbe wird. Vo da aa planed si, en z töde.",
-    "caption_de": "Kajafas: Einer soll für das Volk sterben (Jesus, Grab, Menge).",
-    "caption_gsw": "De Kajafas: Eine söll fürs Volk stärbe (Jesus, Grab, Mängi).",
+    "caption_de": "Kajafas: Einer soll sterben (Jesus, Grab), damit das Volk gerettet wird (Pfeil aus den Wellen, Menge).",
+    "caption_gsw": "Kajafas: Eine söll sterbe (Jesus, Grab), demit s Volk grettet wird (Pfiil us de Wälle, Mängi).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-HOHEPRIESTER": "earnest",
@@ -2504,8 +2539,8 @@
     "n": 2,
     "reference": "JHN.11.55-JHN.11.57",
     "figures": [
-     "FIG-GRUPPE-HOHEPRIESTER",
-     "FIG-GRUPPE-MENGE"
+     "FIG-GRUPPE-MENGE",
+     "FIG-GRUPPE-HOHEPRIESTER"
     ],
     "objects": [
      "FIG-ORT-TEMPEL"
@@ -2524,24 +2559,24 @@
       "from": "FIG-GRUPPE-HOHEPRIESTER",
       "to": "FIG-GRUPPE-MENGE",
       "icons": [
-       "FIG-JESUS",
+       "FIG-ZEICHEN-SEHEN",
        "FIG-ZEICHEN-ZEIGEN"
       ]
      }
     ],
     "action_de": "Vor dem Passa ziehen viele nach Jerusalem hinauf; im Tempel suchen sie Jesus und fragen einander: Kommt er wohl nicht zum Fest? Die Hohepriester und Pharisäer haben angeordnet: Wer weiss, wo er ist, soll es melden.",
     "action_gsw": "Vor em Passa zieh vill uf Jerusalem ufe; im Tämpel sueched si de Jesus und fröged enand: Chunnt er ächt nöd as Fäscht? D Hohepriester und d Pharisäer händ aagordnet: Wer weiss, won er isch, söll s mälde.",
-    "caption_de": "Vor dem Passa: Im Tempel fragen die Leute: Kommt Jesus? Die Hohepriester verlangen: Wer ihn sieht, soll ihn melden (zeigende Hand).",
-    "caption_gsw": "Vor em Passa: Im Tämpel fröged d Lüüt: Chunnt de Jesus? D Hohepriester verlanged: Wer en gseht, söll en mälde (zeigendi Hand).",
+    "caption_de": "Vor dem Passa: Im Tempel fragen die Leute: Kommt Jesus? Die Hohepriester verlangen: Wer ihn sieht (Auge), soll ihn melden (zeigende Hand).",
+    "caption_gsw": "Vor em Passa: Im Tämpel fröged d Lüt: Chunnt de Jesus? D Hohepriester verlanged: Wer en gseht (Aug), söll en mälde (zeigendi Hand).",
     "stage": {
-     "back_side": "right",
-     "x": {
-      "FIG-GRUPPE-HOHEPRIESTER": 26,
-      "FIG-GRUPPE-MENGE": 112
-     },
+     "back_side": "left",
      "mood": {
       "FIG-GRUPPE-HOHEPRIESTER": "earnest",
       "FIG-GRUPPE-MENGE": "pensive"
+     },
+     "x": {
+      "FIG-GRUPPE-MENGE": 46,
+      "FIG-GRUPPE-HOHEPRIESTER": 150
      }
     }
    }
@@ -2588,8 +2623,8 @@
     ],
     "action_de": "Lazarus aus Betanien ist krank. Seine Schwestern Marta und Maria lassen Jesus sagen: Der, den du lieb hast, ist krank. Jesus sagt: Diese Krankheit führt nicht zum Tod, sondern dient der Herrlichkeit Gottes.",
     "action_gsw": "De Lazarus vo Betanie isch chrank. Sini Schwöschtere Marta und Maria lönd em Jesus säge: Dä, wo du gärn häsch, isch chrank. De Jesus seit: Die Chrankheit füert nöd zum Tod, sondern dient de Herrlichkeit vo Gott.",
-    "caption_de": "Die Nachricht: Ein Bote meldet: Lazarus ist krank (Liegender); Jesus antwortet: Die Krankheit dient der Herrlichkeit Gottes (Licht).",
-    "caption_gsw": "D Nachricht: En Bot meldet: De Lazarus isch chrank (Liegende); de Jesus antwortet: D Chrankheit dient de Herrlichkeit vo Gott (Liecht).",
+    "caption_de": "Die Nachricht: Ein Bote (Brief in der Hand) meldet: Lazarus ist krank (Liegender); Jesus antwortet: Die Krankheit dient der Herrlichkeit Gottes (Licht).",
+    "caption_gsw": "D Nachricht: En Bote (Brief i de Hand) meldet: De Lazarus isch chrank (Liggende); de Jesus antwortet: D Chrankheit dient de Herrlichkeit vo Gott (Liecht).",
     "stage": {
      "mood": {
       "FIG-ROLLE-BOTE": "worried"
@@ -2610,6 +2645,7 @@
       "from": "FIG-JESUS",
       "to": "FIG-MARTA",
       "icons": [
+       "FIG-JESUS",
        "FIG-ZEICHEN-AUFERSTEHUNG",
        "FIG-ZEICHEN-LEBEN",
        "FIG-ZEICHEN-GLAUBEN",
@@ -2619,8 +2655,8 @@
     ],
     "action_de": "Jesus sagt zu Marta: Dein Bruder wird auferstehen. Ich bin die Auferstehung und das Leben; wer an mich glaubt, wird leben, auch wenn er stirbt. Glaubst du das?",
     "action_gsw": "De Jesus seit zur Marta: Din Brüeder wird uferstaa. Ich bi d Uferstehig und s Läbe; wer a mich glaubt, wird läbe, au wänn er stirbt. Glaubsch du das?",
-    "caption_de": "Ich bin die Auferstehung und das Leben (Grab mit Pfeil nach oben, Spross im Ring). Glaubst du das? (Herz, Fragezeichen)",
-    "caption_gsw": "Ich bi d Uferstehig und s Läbe (Grab mit Pfiil ufe, Schoss im Ring). Glaubsch du das? (Härz, Fragezeiche)",
+    "caption_de": "Ich (Jesus) bin die Auferstehung und das Leben (Grab mit Pfeil nach oben, Spross im Ring). Glaubst du das? (Herz, Fragezeichen)",
+    "caption_gsw": "Ich (de Jesus) bi d Uferstehig und s Läbe (Grab mit Pfiil uf, Schoss im Ring). Glaubsch du das? (Härz, Fragezeiche)",
     "stage": {
      "mood": {
       "FIG-MARTA": "pensive"
@@ -2631,9 +2667,9 @@
     "n": 3,
     "reference": "JHN.11.38-JHN.11.44",
     "figures": [
+     "FIG-GRUPPE-MENGE",
      "FIG-JESUS",
-     "FIG-LAZARUS-BINDEN",
-     "FIG-GRUPPE-MENGE"
+     "FIG-LAZARUS-BINDEN"
     ],
     "objects": [
      "FIG-ORT-GRAB"
@@ -2656,9 +2692,9 @@
     "stage": {
      "back_side": "right",
      "x": {
-      "FIG-JESUS": 30,
-      "FIG-LAZARUS-BINDEN": 128,
-      "FIG-GRUPPE-MENGE": 74
+      "FIG-GRUPPE-MENGE": 26,
+      "FIG-JESUS": 80,
+      "FIG-LAZARUS-BINDEN": 150
      },
      "mood": {
       "FIG-GRUPPE-MENGE": "surprised",
@@ -2671,7 +2707,10 @@
        "FIG-LAZARUS-BINDEN",
        "act"
       ]
-     ]
+     ],
+     "wear": {
+      "FIG-LAZARUS-BINDEN": "binden"
+     }
     }
    },
    {
@@ -2699,19 +2738,25 @@
       "icons": [
        "FIG-JESUS",
        "FIG-ZEICHEN-TOD",
+       "FIG-ZEICHEN-RETTUNG",
        "FIG-GRUPPE-MENGE"
       ]
      }
     ],
     "action_de": "Die Hohepriester und Pharisäer beraten im Hohen Rat: Dieser Mensch tut viele Zeichen. Kajafas sagt, es sei besser, dass ein Mensch für das Volk sterbe; von da an planen sie, ihn zu töten.",
     "action_gsw": "D Hohepriester und d Pharisäer beratschlaged im Hohe Rat: De Mänsch macht vill Zeiche. De Kajafas seit, es seig besser, dass ein Mänsch fürs Volk stirbt; vo da aa planed si, en z töde.",
-    "caption_de": "Der Hohe Rat: «Er tut viele Zeichen» (Stern); Kajafas sagt: Einer soll für das Volk sterben (Jesus, Grab, Menge).",
-    "caption_gsw": "De Hoch Rat: «Er macht vill Zeiche» (Stärn); de Kajafas seit: Eine söll fürs Volk stärbe (Jesus, Grab, Mängi).",
+    "caption_de": "Der Hohe Rat: «Er tut viele Zeichen» (Stern); Kajafas sagt: Einer soll sterben (Jesus, Grab), damit das Volk gerettet wird (Pfeil aus den Wellen, Menge).",
+    "caption_gsw": "De Hohi Root: «Er tuet vill Zeiche» (Stärn); de Kajafas seit: Eine söll sterbe (Jesus, Grab), demit s Volk grettet wird (Pfiil us de Wälle, Mängi).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-HOHEPRIESTER": "earnest",
       "FIG-KAJAFAS": "earnest",
       "FIG-GRUPPE-PHARISAEER": "pensive"
+     },
+     "x": {
+      "FIG-GRUPPE-HOHEPRIESTER": 24,
+      "FIG-KAJAFAS": 106,
+      "FIG-GRUPPE-PHARISAEER": 164
      }
     }
    }
@@ -2741,12 +2786,14 @@
     "objects": [
      "FIG-OBJ-SALBOEL"
     ],
-    "signs": [],
+    "signs": [
+     "FIG-ZEICHEN-SALBUNG"
+    ],
     "speech": [],
     "action_de": "Sechs Tage vor dem Passa ist Jesus in Betanien zu Gast; Marta bedient, Lazarus liegt mit zu Tisch. Maria salbt Jesu Füsse mit kostbarem Nardenöl und trocknet sie mit ihren Haaren; das Haus wird vom Duft erfüllt.",
     "action_gsw": "Sächs Täg vor em Passa isch de Jesus z Betanie z Gascht; d Marta bedient, de Lazarus liit mit am Tisch. D Maria salbt em Jesus d Füess mit choschtbarem Nardeöl und tröchnet si mit irne Haar; s Huus isch voll vom Duft.",
-    "caption_de": "Die Salbung: Beim Mahl in Betanien kniet Maria vor Jesus und salbt seine Füsse (Ölgefäss); Marta bedient (Kelle), Lazarus ist dabei.",
-    "caption_gsw": "D Salbig: Bim Ässe z Betanie chnüüet d Maria vor em Jesus und salbt sini Füess (Ölgfäss); d Marta bedient (Chelle), de Lazarus isch derbii.",
+    "caption_de": "Die Salbung: In Betanien kniet Maria vor Jesus und salbt seine Füsse (Ölgefäss; Ölhorn mit Tropfen: Salbung); Marta bedient (Kelle), Lazarus ist dabei.",
+    "caption_gsw": "D Salbig: In Betanie chnüüet d Maria vor em Jesus und salbet sini Füess (Ölgfäss; Ölhorn mit Tropfe: Salbig); d Marta bedient (Chelle), de Lazarus isch debii.",
     "stage": {
      "pose": {
       "FIG-MARIA-BETANIEN": "kneel"
@@ -2759,18 +2806,14 @@
       "FIG-LAZARUS": "smile"
      },
      "x": {
-      "FIG-MARTA": 18,
-      "FIG-LAZARUS": 54,
+      "FIG-MARTA": 20,
+      "FIG-LAZARUS": 58,
       "FIG-JESUS": 104,
-      "FIG-MARIA-BETANIEN": 146
+      "FIG-MARIA-BETANIEN": 134
      },
-     "arrows": [
-      [
-       "FIG-MARIA-BETANIEN",
-       "FIG-JESUS",
-       "act"
-      ]
-     ]
+     "beside": {
+      "FIG-ZEICHEN-SALBUNG": "FIG-MARIA-BETANIEN"
+     }
     }
    },
    {
@@ -2799,15 +2842,15 @@
       "from": "FIG-JESUS",
       "to": "FIG-JUDAS-ISKARIOT",
       "icons": [
-       "FIG-OBJ-SALBOEL",
+       "FIG-MARIA-BETANIEN",
        "FIG-ZEICHEN-TOD"
       ]
      }
     ],
     "action_de": "Judas Iskariot fragt: Warum wurde das Salböl nicht für dreihundert Denare verkauft und den Armen gegeben? Jesus sagt: Lass sie, damit sie es für den Tag meines Begräbnisses bewahre.",
     "action_gsw": "De Judas Iskariot fröget: Werum isch das Salböl nöd für drüühundert Denar verchauft und de Arme gää worde? De Jesus seit: La si, dass si s für de Tag vo minere Beärdigung ufbewahrt.",
-    "caption_de": "Judas und Jesus: Judas: Das Öl verkaufen (Münzen) für die Armen! Jesus: Lass sie – für mein Begräbnis (Grab).",
-    "caption_gsw": "De Judas und de Jesus: De Judas: S Öl verchaufe (Münz) für d Arme! De Jesus: La si – für mini Beärdigung (Grab).",
+    "caption_de": "Judas und Jesus: Judas: Das Öl (Gefäss) verkaufen (Münzen) für die Armen! Jesus: Lass sie (Maria) – für mein Begräbnis (Grab).",
+    "caption_gsw": "Judas und Jesus: De Judas: S Öl (Gfäss) verchaufe (Münze) für d Arme! De Jesus: Lass si (Maria) – für mini Beärdigung (Grab).",
     "stage": {
      "pose": {
       "FIG-MARIA-BETANIEN": "kneel"
@@ -2818,6 +2861,11 @@
      "mood": {
       "FIG-JUDAS-ISKARIOT": "earnest",
       "FIG-JESUS": "calm"
+     },
+     "x": {
+      "FIG-JUDAS-ISKARIOT": 24,
+      "FIG-JESUS": 110,
+      "FIG-MARIA-BETANIEN": 152
      }
     }
    },
@@ -2831,7 +2879,7 @@
     ],
     "objects": [],
     "signs": [
-     "FIG-ZEICHEN-ABSTAND"
+     "FIG-ZEICHEN-SEHEN"
     ],
     "speech": [
      {
@@ -2845,15 +2893,24 @@
     ],
     "action_de": "Eine grosse Menge kommt, um Jesus und auch Lazarus zu sehen. Die Hohepriester beschliessen, auch Lazarus zu töten, weil seinetwegen viele an Jesus glauben.",
     "action_gsw": "E grossi Mängi chunnt, zum de Jesus und au de Lazarus gseh. D Hohepriester beschliessed, au de Lazarus z töde, wil wäge-n-em vill a de Jesus glaubed.",
-    "caption_de": "Wegen Lazarus: Die Menge kommt, Lazarus zu sehen; die Hohepriester beschliessen, auch ihn zu töten (Lazarus, Grab).",
-    "caption_gsw": "Wäge em Lazarus: D Mängi chunnt, zum de Lazarus gseh; d Hohepriester beschliessed, au ihn z töde (Lazarus, Grab).",
+    "caption_de": "Wegen Lazarus: Die Menge kommt (Pfeil), Lazarus zu sehen (Auge); die Hohepriester beschliessen, auch ihn zu töten (Lazarus, Grab).",
+    "caption_gsw": "Wäg em Lazarus: D Mängi chunnt (Pfiil), zum de Lazarus gseh (Aug); d Hohepriester beschliessed, au ihn z töde (Lazarus, Grab).",
     "stage": {
-     "split": 2,
      "mood": {
       "FIG-GRUPPE-MENGE": "surprised",
       "FIG-LAZARUS": "smile",
       "FIG-GRUPPE-HOHEPRIESTER": "earnest"
-     }
+     },
+     "at": {
+      "FIG-ZEICHEN-SEHEN": "FIG-GRUPPE-MENGE"
+     },
+     "arrows": [
+      [
+       "FIG-GRUPPE-MENGE",
+       "FIG-LAZARUS",
+       "go"
+      ]
+     ]
     }
    }
   ],
@@ -2917,7 +2974,13 @@
       "FIG-ZEICHEN-FREUDE": [
        "FIG-GRUPPE-MENGE"
       ]
-     }
+     },
+     "hold": {
+      "FIG-GRUPPE-MENGE": "FIG-OBJ-PALMZWEIG"
+     },
+     "flip": [
+      "FIG-OBJ-ESEL"
+     ]
     }
    },
    {
@@ -2996,13 +3059,18 @@
     ],
     "action_de": "Einige Griechen, die zum Fest gekommen sind, bitten Philippus: Wir möchten Jesus sehen. Philippus sagt es Andreas; Andreas und Philippus sagen es Jesus.",
     "action_gsw": "Es paar Grieche, wo as Fäscht cho sind, bitted de Philippus: Mir wetted de Jesus gseh. De Philippus seit s em Andreas; de Andreas und de Philippus säged s em Jesus.",
-    "caption_de": "Die Griechen: Sie bitten Philippus: Wir möchten Jesus sehen (Auge); Philippus und Andreas bringen es Jesus (Pfeil).",
-    "caption_gsw": "D Grieche: Si bitted de Philippus: Mir wetted de Jesus gseh (Aug); de Philippus und de Andreas bringed s em Jesus (Pfiil).",
+    "caption_de": "Die Griechen: Sie bitten Philippus: Wir möchten Jesus sehen (Auge); Philippus sagt es Andreas, und beide bringen es Jesus (Pfeile).",
+    "caption_gsw": "D Grieche: Si bitted de Philippus: Mir möchted de Jesus gseh (Aug); de Philippus seit s em Andreas, und beid bringed s em Jesus (Pfiil).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-GRIECHEN": "smile"
      },
      "arrows": [
+      [
+       "FIG-PHILIPPUS",
+       "FIG-ANDREAS",
+       "go"
+      ],
       [
        "FIG-ANDREAS",
        "FIG-JESUS",
@@ -3035,8 +3103,8 @@
     ],
     "action_de": "Jesus antwortet: Gekommen ist die Stunde, dass der Menschensohn verherrlicht wird. Wenn das Weizenkorn nicht in die Erde fällt und stirbt, bleibt es allein; wenn es aber stirbt, bringt es viel Frucht.",
     "action_gsw": "De Jesus antwortet: D Stund isch cho, dass de Mänschesohn verherrlicht wird. Wänn s Weizechorn nöd i d Ärde gheit und stirbt, bliibt s elei; wänn s aber stirbt, bringt s vill Frucht.",
-    "caption_de": "Das Weizenkorn: Die Stunde ist da (Sanduhr); das Korn fällt in die Erde (Pfeil nach unten) und bringt viel Frucht (Ähren).",
-    "caption_gsw": "S Weizechorn: D Stund isch da (Sanduhr); s Chorn gheit i d Ärde (Pfiil abe) und bringt vill Frucht (Ähri).",
+    "caption_de": "Das Weizenkorn: Die Stunde ist da (Sanduhr); das Korn fällt hinab (Pfeil nach unten) und bringt viel Frucht (Ähren).",
+    "caption_gsw": "S Weizechorn: D Stund isch da (Sanduhr); s Chorn fallt abe (Pfiil abe) und bringt vill Frucht (Ähre).",
     "stage": {
      "mood": {
       "FIG-PHILIPPUS": "pensive",
@@ -3107,8 +3175,15 @@
       "from": "FIG-JESUS",
       "to": "FIG-GRUPPE-MENGE",
       "icons": [
-       "FIG-OBJ-KREUZ",
+       "FIG-ZEICHEN-ERHOEHEN",
        "FIG-GRUPPE-MENGE",
+       "FIG-ZEICHEN-NACHFOLGEN"
+      ]
+     },
+     {
+      "from": "FIG-JESUS",
+      "to": "FIG-GRUPPE-MENGE",
+      "icons": [
        "FIG-ZEICHEN-LICHT",
        "FIG-ZEICHEN-GLAUBEN"
       ]
@@ -3116,8 +3191,8 @@
     ],
     "action_de": "Jesus sagt: Wenn ich von der Erde erhöht bin, werde ich alle zu mir ziehen – damit zeigt er, welchen Tod er sterben wird. Die Menge fragt, wer dieser Menschensohn sei. Jesus: Glaubt an das Licht, solange ihr es habt. Dann verbirgt er sich.",
     "action_gsw": "De Jesus seit: Wänn ich vo de Ärde ufe ghebt bi, wird ich alli zu mir zieh – dermit zeigt er, wele Tod er wird stärbe. D Mängi fröget, wer dä Mänschesohn seig. De Jesus: Glaubed as Liecht, solang ihr s händ. Dänn versteckt er sich.",
-    "caption_de": "Erhöht: Jesus sagt: Erhöht (Kreuz) ziehe ich alle zu mir (Menge); glaubt an das Licht (Licht, Herz).",
-    "caption_gsw": "Ufeghebt: De Jesus seit: Ufeghebt (Chrüz) zieh ich alli zu mir (Mängi); glaubed as Liecht (Liecht, Härz).",
+    "caption_de": "Erhöht: Jesus sagt: Wenn ich erhöht werde (goldener Pfeil nach oben), ziehe ich alle zu mir (Menge, Fussspuren); glaubt an das Licht (Licht, Herz).",
+    "caption_gsw": "Erhöht: De Jesus seit: Wänn ich erhöht wirde (guldige Pfiil uf), zieh ich alli zu mir (Mängi, Fuessspure); glaubed as Liecht (Liecht, Härz).",
     "stage": {
      "mood": {
       "FIG-JESUS": "earnest",
@@ -3146,7 +3221,9 @@
      "FIG-ROLLE-PROPHET",
      "FIG-GRUPPE-MENGE"
     ],
-    "objects": [],
+    "objects": [
+     "FIG-OBJ-SCHRIFTROLLE"
+    ],
     "signs": [
      "FIG-ZEICHEN-STERN",
      "FIG-ZEICHEN-BLIND"
@@ -3163,8 +3240,8 @@
     ],
     "action_de": "Obwohl Jesus so viele Zeichen vor ihnen getan hat, glauben sie nicht an ihn; der Erzähler deutet das mit Worten Jesajas: Er hat ihre Augen geblendet und ihr Herz verhärtet. Jesaja sah seine Herrlichkeit.",
     "action_gsw": "Obwohl de Jesus so vill Zeiche vor ene gmacht hät, glaubed si nöd a ihn; de Erzähler düütet das mit Wort vom Jesaja: Er hät ire Auge blendet und ires Härz verhärtet. De Jesaja hät sini Herrlichkeit gseh.",
-    "caption_de": "Trotz der Zeichen: Viele Zeichen (Sterne), doch die Menge sieht nicht (durchgestrichenes Auge); der Prophet Jesaja hatte es gesagt.",
-    "caption_gsw": "Trotz de Zeiche: Vill Zeiche (Stärn), aber d Mängi gseht nöd (durgstriches Aug); de Prophet Jesaja hät s gseit.",
+    "caption_de": "Trotz der Zeichen: Viele Zeichen (Sterne), doch die Menge sieht nicht (durchgestrichenes Auge); der Prophet Jesaja (Schriftrolle) hatte gesagt: Sie sehen nicht und verstehen nicht (Auge, Nebel mit Fragezeichen).",
+    "caption_gsw": "Trotz de Zeiche: Vill Zeiche (Stärn), aber d Mängi gseht nöd (durgstriches Aug); de Prophet Jesaja (Schriftrolle) hät gseit: Si gsehnd nöd und verstönd nöd (Aug, Näbel mit Fragezeiche).",
     "stage": {
      "count": {
       "FIG-ZEICHEN-STERN": 3
@@ -3176,7 +3253,10 @@
       "FIG-GRUPPE-MENGE": "pensive"
      },
      "air_x": 60,
-     "air_y": 50
+     "air_y": 50,
+     "hold": {
+      "FIG-ROLLE-PROPHET": "FIG-OBJ-SCHRIFTROLLE"
+     }
     }
    },
    {
@@ -3189,29 +3269,35 @@
     "objects": [],
     "signs": [
      "FIG-ZEICHEN-GLAUBEN",
-     "FIG-ZEICHEN-AUSSCHLUSS",
-     "FIG-ZEICHEN-ABSTAND"
+     "FIG-ZEICHEN-SCHWEIGEN",
+     "FIG-ZEICHEN-AUSSCHLUSS"
     ],
     "speech": [],
     "action_de": "Dennoch glauben auch viele der Oberen an Jesus, bekennen es aber wegen der Pharisäer nicht, um nicht aus der Synagoge ausgeschlossen zu werden; sie lieben die Ehre bei Menschen mehr als die Ehre bei Gott.",
     "action_gsw": "Glich glaubed au vill vo de Obere a de Jesus, bekänned s aber wäge de Pharisäer nöd, zum nöd us de Synagoge uusgschlosse werde; si händ d Ehr bi de Mänsche lieber als d Ehr bi Gott.",
-    "caption_de": "Heimlicher Glaube: Viele der Oberen glauben (Herz), schweigen aber aus Angst vor dem Ausschluss (Haus mit Pfeil) durch die Pharisäer.",
-    "caption_gsw": "Heimliche Glaube: Vill vo de Obere glaubed (Härz), schwiiged aber us Angscht vor em Uusschluss (Huus mit Pfiil) dur d Pharisäer.",
+    "caption_de": "Heimlicher Glaube: Viele der Oberen glauben (Herz), schweigen aber (durchgestrichene Sprechblase) aus Angst vor dem Ausschluss (Haus mit Pfeil hinaus) durch die Pharisäer.",
+    "caption_gsw": "Heimliche Glaube: Vill vo de Obere glaubed (Härz), schwiiged aber (durgstricheni Sprächblase) us Angscht vor em Usschluss (Huus mit Pfiil use) dur d Pharisäer.",
     "stage": {
      "signs_who": {
       "FIG-ZEICHEN-GLAUBEN": [
        "FIG-GRUPPE-OBERE"
       ]
      },
-     "split": 1,
-     "air_x": 80,
-     "air_y": 10,
+     "air_x": 44,
+     "air_y": 14,
      "mood": {
       "FIG-GRUPPE-OBERE": "worried",
       "FIG-GRUPPE-PHARISAEER": "earnest"
      },
      "pose": {
       "FIG-GRUPPE-OBERE": "away"
+     },
+     "x": {
+      "FIG-GRUPPE-OBERE": 56,
+      "FIG-GRUPPE-PHARISAEER": 146
+     },
+     "beside": {
+      "FIG-ZEICHEN-SCHWEIGEN": "FIG-GRUPPE-OBERE"
      }
     }
    }
@@ -3272,31 +3358,32 @@
     "signs": [],
     "speech": [
      {
+      "from": "FIG-GOTT",
+      "to": "FIG-JESUS",
+      "icons": [
+       "FIG-ZEICHEN-GEBOT"
+      ]
+     },
+     {
       "from": "FIG-JESUS",
       "to": "FIG-GRUPPE-MENGE",
       "icons": [
        "FIG-GOTT",
+       "FIG-ZEICHEN-GEBOT",
        "FIG-ZEICHEN-LEBEN"
       ]
      }
     ],
     "action_de": "Wer seine Worte nicht annimmt, den richtet das Wort am letzten Tag. Jesus redet nicht aus sich selbst; der Vater, der ihn gesandt hat, hat ihm geboten, was er sagen soll, und sein Gebot ist ewiges Leben.",
     "action_gsw": "Wer sini Wort nöd aanimmt, dä richtet s Wort am letschte Tag. De Jesus redt nöd us sich sälber; de Vater, wo-n-en gschickt hät, hät em botte, was er söll säge, und sis Gebot isch ewigs Läbe.",
-    "caption_de": "Das Gebot des Vaters: Der Vater (Strahlenkranz) gibt Jesus, was er sagen soll; sein Gebot ist ewiges Leben (Spross im Ring).",
-    "caption_gsw": "S Gebot vom Vater: De Vater (Strahlechranz) git em Jesus, was er söll säge; sis Gebot isch ewigs Läbe (Schoss im Ring).",
+    "caption_de": "Das Gebot des Vaters: Der Vater (Strahlenkranz) gibt Jesus sein Gebot (Tafel), was er sagen soll; Jesus sagt: Sein Gebot ist ewiges Leben (Spross im Ring).",
+    "caption_gsw": "S Gebot vom Vater: De Vater (Strahlechranz) git em Jesus sis Gebot (Tafele), was er säge söll; de Jesus seit: Sis Gebot isch ewigs Läbe (Schoss im Ring).",
     "stage": {
      "god_side": "right",
      "x": {
       "FIG-JESUS": 50,
       "FIG-GRUPPE-MENGE": 130
      },
-     "arrows": [
-      [
-       "FIG-GOTT",
-       "FIG-JESUS",
-       "act"
-      ]
-     ],
      "mood": {
       "FIG-GRUPPE-MENGE": "calm"
      }
@@ -3328,12 +3415,14 @@
     "objects": [
      "FIG-OBJ-SALBOEL"
     ],
-    "signs": [],
+    "signs": [
+     "FIG-ZEICHEN-SALBUNG"
+    ],
     "speech": [],
     "action_de": "Sechs Tage vor dem Passa ist Jesus in Betanien zu Gast; Marta bedient, Lazarus liegt mit zu Tisch. Maria salbt Jesu Füsse mit kostbarem Nardenöl und trocknet sie mit ihren Haaren; das Haus wird vom Duft erfüllt.",
     "action_gsw": "Sächs Täg vor em Passa isch de Jesus z Betanie z Gascht; d Marta bedient, de Lazarus liit mit am Tisch. D Maria salbt em Jesus d Füess mit choschtbarem Nardeöl und tröchnet si mit irne Haar; s Huus isch voll vom Duft.",
-    "caption_de": "Die Salbung: Beim Mahl in Betanien kniet Maria vor Jesus und salbt seine Füsse (Ölgefäss); Marta bedient (Kelle), Lazarus ist dabei.",
-    "caption_gsw": "D Salbig: Bim Ässe z Betanie chnüüet d Maria vor em Jesus und salbt sini Füess (Ölgfäss); d Marta bedient (Chelle), de Lazarus isch derbii.",
+    "caption_de": "Die Salbung: In Betanien kniet Maria vor Jesus und salbt seine Füsse (Ölgefäss; Ölhorn mit Tropfen: Salbung); Marta bedient (Kelle), Lazarus ist dabei.",
+    "caption_gsw": "D Salbig: In Betanie chnüüet d Maria vor em Jesus und salbet sini Füess (Ölgfäss; Ölhorn mit Tropfe: Salbig); d Marta bedient (Chelle), de Lazarus isch debii.",
     "stage": {
      "pose": {
       "FIG-MARIA-BETANIEN": "kneel"
@@ -3346,18 +3435,14 @@
       "FIG-LAZARUS": "smile"
      },
      "x": {
-      "FIG-MARTA": 18,
-      "FIG-LAZARUS": 54,
+      "FIG-MARTA": 20,
+      "FIG-LAZARUS": 58,
       "FIG-JESUS": 104,
-      "FIG-MARIA-BETANIEN": 146
+      "FIG-MARIA-BETANIEN": 134
      },
-     "arrows": [
-      [
-       "FIG-MARIA-BETANIEN",
-       "FIG-JESUS",
-       "act"
-      ]
-     ]
+     "beside": {
+      "FIG-ZEICHEN-SALBUNG": "FIG-MARIA-BETANIEN"
+     }
     }
    },
    {
@@ -3407,7 +3492,13 @@
       "FIG-ZEICHEN-FREUDE": [
        "FIG-GRUPPE-MENGE"
       ]
-     }
+     },
+     "hold": {
+      "FIG-GRUPPE-MENGE": "FIG-OBJ-PALMZWEIG"
+     },
+     "flip": [
+      "FIG-OBJ-ESEL"
+     ]
     }
    },
    {
@@ -3434,8 +3525,8 @@
     ],
     "action_de": "Jesus antwortet: Gekommen ist die Stunde, dass der Menschensohn verherrlicht wird. Wenn das Weizenkorn nicht in die Erde fällt und stirbt, bleibt es allein; wenn es aber stirbt, bringt es viel Frucht.",
     "action_gsw": "De Jesus antwortet: D Stund isch cho, dass de Mänschesohn verherrlicht wird. Wänn s Weizechorn nöd i d Ärde gheit und stirbt, bliibt s elei; wänn s aber stirbt, bringt s vill Frucht.",
-    "caption_de": "Das Weizenkorn: Die Stunde ist da (Sanduhr); das Korn fällt in die Erde (Pfeil nach unten) und bringt viel Frucht (Ähren).",
-    "caption_gsw": "S Weizechorn: D Stund isch da (Sanduhr); s Chorn gheit i d Ärde (Pfiil abe) und bringt vill Frucht (Ähri).",
+    "caption_de": "Das Weizenkorn: Die Stunde ist da (Sanduhr); das Korn fällt hinab (Pfeil nach unten) und bringt viel Frucht (Ähren).",
+    "caption_gsw": "S Weizechorn: D Stund isch da (Sanduhr); s Chorn fallt abe (Pfiil abe) und bringt vill Frucht (Ähre).",
     "stage": {
      "mood": {
       "FIG-PHILIPPUS": "pensive",

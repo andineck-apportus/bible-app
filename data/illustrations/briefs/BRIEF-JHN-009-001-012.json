@@ -26,7 +26,7 @@
           "from": "FIG-GRUPPE-ZWOELF",
           "to": "FIG-JESUS",
           "icons": [
-            "FIG-ROLLE-BLINDER",
+            "FIG-ZEICHEN-BLIND",
             "FIG-ZEICHEN-SUENDE",
             "FIG-ZEICHEN-FRAGEN"
           ]
@@ -62,7 +62,7 @@
         "FIG-ROLLE-BLINDER"
       ],
       "objects": [
-        "FIG-ORT-TEICH"
+        "FIG-ORT-SILOAM"
       ],
       "signs": [
         "FIG-ZEICHEN-HEILEN"
@@ -72,7 +72,7 @@
           "from": "FIG-JESUS",
           "to": "FIG-ROLLE-BLINDER",
           "icons": [
-            "FIG-ORT-TEICH"
+            "FIG-ORT-SILOAM"
           ]
         }
       ],
@@ -81,15 +81,12 @@
         "mood": {
           "FIG-ROLLE-BLINDER": "sleep"
         },
-        "at": {
-          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-BLINDER"
-        },
         "x": {
           "FIG-JESUS": 40,
           "FIG-ROLLE-BLINDER": 92
         },
         "floor_x": {
-          "FIG-ORT-TEICH": 126
+          "FIG-ORT-SILOAM": 126
         },
         "arrows": [
           [
@@ -99,10 +96,13 @@
           ],
           [
             "FIG-ROLLE-BLINDER",
-            "FIG-ORT-TEICH",
+            "FIG-ORT-SILOAM",
             "go"
           ]
-        ]
+        ],
+        "beside": {
+          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-BLINDER"
+        }
       }
     },
     {
@@ -129,7 +129,7 @@
           "to": "FIG-GRUPPE-MENGE",
           "icons": [
             "FIG-JESUS",
-            "FIG-ORT-TEICH",
+            "FIG-ORT-SILOAM",
             "FIG-ZEICHEN-SEHEN"
           ]
         }
@@ -152,9 +152,9 @@
     "Die Nachbarn fragen, ob das der Bettler sei; er sagt: Ich bin es. Er erzählt, wie Jesus ihm den Brei auf die Augen strich und ihn zum Siloam schickte und er sehend wurde."
   ],
   "captions_de": [
-    "Die Frage der Jünger: Hat der Blinde (durchgestrichenes Auge) gesündigt (dunkler Fleck)? Jesus antwortet: Ich bin das Licht.",
-    "Heilung: Jesus berührt die Augen des Blinden (Hand, Lichtpunkte) und schickt ihn zum Teich Siloam (Becken, Pfeil).",
-    "Er sieht: Die Nachbarn staunen und fragen; der Geheilte erzählt: Jesus, der Teich, und ich sehe (offenes Auge)."
+    "Die Frage der Jünger: Blind (durchgestrichenes Auge) – wegen Sünde (dunkler Fleck)? Jesus antwortet: Ich bin das Licht.",
+    "Heilung: Jesus berührt die Augen des Blinden (Hand mit Lichtstrahlen) und schickt ihn zum Teich Siloam (Becken mit Stufen, Pfeil).",
+    "Er sieht: Die Nachbarn staunen und fragen; der Geheilte erzählt: Jesus, der Teich (Becken), und ich sehe (offenes Auge)."
   ],
   "interpretation_note_de": "«Die Jünger» als Gruppe (nicht nur die Zwölf). Ob der Mann vorher bettelnd sass, sagt erst [[JHN.9.8]]; im ersten Feld sitzt er deshalb am Weg. Dass Jesus die Augen «berührt», ist die Deutung von «er strich ihm den Brei auf die Augen» ([[JHN.9.6]]).",
   "basis": [
@@ -187,5 +187,156 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.9.1-JHN.9.5",
+            "figures": [
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-JESUS",
+              "FIG-ROLLE-BLINDER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-BLIND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-ZWOELF",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ROLLE-BLINDER",
+                  "FIG-ZEICHEN-SUENDE",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-LICHT"
+                ]
+              }
+            ],
+            "action_de": "Jesus sieht einen Menschen, der von Geburt an blind ist. Die Jünger fragen, wer gesündigt habe, er oder seine Eltern; Jesus sagt: keiner von beiden, an ihm sollen die Werke Gottes offenbar werden, und: Ich bin das Licht der Welt.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-BLINDER": "sleep",
+                "FIG-GRUPPE-ZWOELF": "pensive"
+              },
+              "pose": {
+                "FIG-ROLLE-BLINDER": "sit"
+              },
+              "at": {
+                "FIG-ZEICHEN-BLIND": "FIG-ROLLE-BLINDER"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.9.6-JHN.9.7",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-BLINDER"
+            ],
+            "objects": [
+              "FIG-ORT-TEICH"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-BLINDER",
+                "icons": [
+                  "FIG-ORT-TEICH"
+                ]
+              }
+            ],
+            "action_de": "Jesus streicht dem Blinden einen Brei aus Speichel auf die Augen und schickt ihn: Geh, wasch dich im Teich Siloam. Er geht hin, wäscht sich und kommt sehend zurück.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-BLINDER": "sleep"
+              },
+              "at": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-BLINDER"
+              },
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-ROLLE-BLINDER": 92
+              },
+              "floor_x": {
+                "FIG-ORT-TEICH": 126
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-BLINDER",
+                  "act"
+                ],
+                [
+                  "FIG-ROLLE-BLINDER",
+                  "FIG-ORT-TEICH",
+                  "go"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.9.8-JHN.9.12",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-ROLLE-BLINDER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-SEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-ROLLE-BLINDER",
+                "icons": [
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-ROLLE-BLINDER",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ORT-TEICH",
+                  "FIG-ZEICHEN-SEHEN"
+                ]
+              }
+            ],
+            "action_de": "Die Nachbarn fragen, ob das der Bettler sei; er sagt: Ich bin es. Er erzählt, wie Jesus ihm den Brei auf die Augen strich und ihn zum Siloam schickte und er sehend wurde.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-BLINDER": "delight",
+                "FIG-GRUPPE-MENGE": "surprised"
+              },
+              "at": {
+                "FIG-ZEICHEN-SEHEN": "FIG-ROLLE-BLINDER"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Die Frage der Jünger: Hat der Blinde (durchgestrichenes Auge) gesündigt (dunkler Fleck)? Jesus antwortet: Ich bin das Licht.",
+          "Heilung: Jesus berührt die Augen des Blinden (Hand, Lichtpunkte) und schickt ihn zum Teich Siloam (Becken, Pfeil).",
+          "Er sieht: Die Nachbarn staunen und fragen; der Geheilte erzählt: Jesus, der Teich, und ich sehe (offenes Auge)."
+        ]
+      }
+    }
+  ]
 }

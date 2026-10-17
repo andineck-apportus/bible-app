@@ -13,32 +13,34 @@
       "n": 1,
       "reference": "MRK.10.13-MRK.10.16",
       "figures": [
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-GRUPPE-KINDER"
       ],
-      "objects": [
-        "FIG-ZEICHEN-KIND"
-      ],
+      "objects": [],
       "signs": [
         "FIG-ZEICHEN-SEGNEN"
       ],
       "speech": [],
       "action_de": "Jesus nimmt die Kinder in die Arme und segnet sie: Ihnen gehört das Reich Gottes.",
       "stage": {
-        "count": {
-          "FIG-ZEICHEN-KIND": 3
-        },
-        "at": {
-          "FIG-ZEICHEN-SEGNEN": "FIG-ZEICHEN-KIND"
-        },
         "mood": {
-          "FIG-JESUS": "smile"
+          "FIG-JESUS": "smile",
+          "FIG-GRUPPE-KINDER": "delight"
         },
         "x": {
-          "FIG-JESUS": 70
+          "FIG-JESUS": 70,
+          "FIG-GRUPPE-KINDER": 122
         },
-        "floor_x": {
-          "FIG-ZEICHEN-KIND": 92
-        }
+        "at": {
+          "FIG-ZEICHEN-SEGNEN": "FIG-GRUPPE-KINDER"
+        },
+        "arrows": [
+          [
+            "FIG-JESUS",
+            "FIG-GRUPPE-KINDER",
+            "act"
+          ]
+        ]
       }
     },
     {
@@ -57,6 +59,7 @@
           "icons": [
             "FIG-OBJ-MUENZEN",
             "FIG-ZEICHEN-GEBEN",
+            "FIG-ZEICHEN-VIELE",
             "FIG-ZEICHEN-SCHATZ",
             "FIG-ZEICHEN-NACHFOLGEN"
           ]
@@ -64,9 +67,6 @@
       ],
       "action_de": "Ein reicher Mann fragt nach dem ewigen Leben; Jesus lädt ihn ein, alles zu verkaufen, den Armen zu geben und ihm zu folgen. Er geht traurig weg.",
       "stage": {
-        "pose": {
-          "FIG-ROLLE-REICHER": "kneel"
-        },
         "mood": {
           "FIG-ROLLE-REICHER": "surprised"
         }
@@ -86,6 +86,7 @@
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-ZWOELF",
           "icons": [
+            "FIG-JESUS",
             "FIG-ROLLE-DIENER",
             "FIG-ZEICHEN-TOD",
             "FIG-ZEICHEN-LOESEN",
@@ -146,9 +147,9 @@
     "In Jericho heilt Jesus den blinden Bartimäus: Dein Glaube hat dich gerettet. Er sieht und folgt Jesus auf dem Weg."
   ],
   "captions_de": [
-    "Kinder: Jesus segnet die Kinder (segnende Hand).",
-    "Der Reiche: Verkaufe, gib (Münzen, Hand), dann hast du einen Schatz im Himmel (Truhe); folge mir (Fussspuren).",
-    "Dienen: Jesus ist gekommen, um zu dienen und sein Leben als Lösegeld für viele zu geben (Diener, Grab, gesprengte Kette, Menschen).",
+    "Kinder: Jesus segnet die Kinder (Bogen von Jesus zu den Kindern, segnende Hand über ihnen).",
+    "Der Reiche (edles Gewand, Geldbeutel): Verkaufe, gib den Armen (Münzen, Hand, Menschen), dann hast du einen Schatz im Himmel (Truhe); folge mir (Fussspuren).",
+    "Dienen: Jesus ist gekommen, um zu dienen und sein Leben als Lösegeld für viele zu geben (Jesus, Diener, Grab, gesprengte Kette, Menschen).",
     "Bartimäus: Dein Glaube hat dich gerettet (Herz mit Licht, Pfeil nach oben); er sieht und folgt Jesus (Freude, Fussspuren)."
   ],
   "interpretation_note_de": "Je ein Feld zu Kindersegnung, dem reichen Mann, dem Weg nach Jerusalem mit Leidensankündigung und Rangstreit sowie Bartimäus; das Gespräch über Ehe und Scheidung ([[MRK.10.1-MRK.10.12]]) ist nur im Abschnittsbild gezeichnet.",
@@ -164,5 +165,150 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.10.13-MRK.10.16",
+            "figures": [
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ZEICHEN-KIND"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SEGNEN"
+            ],
+            "speech": [],
+            "action_de": "Jesus nimmt die Kinder in die Arme und segnet sie: Ihnen gehört das Reich Gottes.",
+            "stage": {
+              "count": {
+                "FIG-ZEICHEN-KIND": 3
+              },
+              "at": {
+                "FIG-ZEICHEN-SEGNEN": "FIG-ZEICHEN-KIND"
+              },
+              "mood": {
+                "FIG-JESUS": "smile"
+              },
+              "x": {
+                "FIG-JESUS": 70
+              },
+              "floor_x": {
+                "FIG-ZEICHEN-KIND": 92
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.10.17-MRK.10.22",
+            "figures": [
+              "FIG-ROLLE-REICHER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-REICHER",
+                "icons": [
+                  "FIG-OBJ-MUENZEN",
+                  "FIG-ZEICHEN-GEBEN",
+                  "FIG-ZEICHEN-SCHATZ",
+                  "FIG-ZEICHEN-NACHFOLGEN"
+                ]
+              }
+            ],
+            "action_de": "Ein reicher Mann fragt nach dem ewigen Leben; Jesus lädt ihn ein, alles zu verkaufen, den Armen zu geben und ihm zu folgen. Er geht traurig weg.",
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-REICHER": "kneel"
+              },
+              "mood": {
+                "FIG-ROLLE-REICHER": "surprised"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.10.32-MRK.10.45",
+            "figures": [
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ROLLE-DIENER",
+                  "FIG-ZEICHEN-TOD",
+                  "FIG-ZEICHEN-LOESEN",
+                  "FIG-ZEICHEN-VIELE"
+                ]
+              }
+            ],
+            "action_de": "Auf dem Weg nach Jerusalem kündigt Jesus sein Leiden an. Den Jüngern, die um Ehrenplätze streiten, sagt er: Wer gross sein will, soll dienen; der Menschensohn gibt sein Leben als Lösegeld für viele.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "pensive"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.10.46-MRK.10.52",
+            "figures": [
+              "FIG-BARTIMAEUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE",
+              "FIG-ZEICHEN-NACHFOLGEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-BARTIMAEUS",
+                "icons": [
+                  "FIG-ZEICHEN-GLAUBEN",
+                  "FIG-ZEICHEN-RETTUNG"
+                ]
+              }
+            ],
+            "action_de": "In Jericho heilt Jesus den blinden Bartimäus: Dein Glaube hat dich gerettet. Er sieht und folgt Jesus auf dem Weg.",
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-BARTIMAEUS"
+                ]
+              },
+              "at": {
+                "FIG-ZEICHEN-NACHFOLGEN": "FIG-BARTIMAEUS"
+              },
+              "mood": {
+                "FIG-BARTIMAEUS": "delight",
+                "FIG-JESUS": "smile"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Kinder: Jesus segnet die Kinder (segnende Hand).",
+          "Der Reiche: Verkaufe, gib (Münzen, Hand), dann hast du einen Schatz im Himmel (Truhe); folge mir (Fussspuren).",
+          "Dienen: Jesus ist gekommen, um zu dienen und sein Leben als Lösegeld für viele zu geben (Diener, Grab, gesprengte Kette, Menschen).",
+          "Bartimäus: Dein Glaube hat dich gerettet (Herz mit Licht, Pfeil nach oben); er sieht und folgt Jesus (Freude, Fussspuren)."
+        ]
+      }
+    }
+  ]
 }

@@ -19,16 +19,23 @@
         "FIG-ORT-JORDAN"
       ],
       "signs": [
-        "FIG-ZEICHEN-NACHFOLGEN"
+        "FIG-ZEICHEN-TAUFE"
       ],
       "speech": [],
       "action_de": "Jesus geht wieder weg, auf die andere Seite des Jordan, an den Ort, wo Johannes zuerst getauft hatte, und bleibt dort.",
       "stage": {
         "x": {
-          "FIG-JESUS": 120
+          "FIG-JESUS": 44
         },
-        "air_x": 40,
-        "air_y": 30
+        "air_x": 132,
+        "air_y": 62,
+        "arrows": [
+          [
+            "FIG-JESUS",
+            "FIG-ORT-JORDAN",
+            "go"
+          ]
+        ]
       }
     },
     {
@@ -48,7 +55,8 @@
           "to": "FIG-JESUS",
           "icons": [
             "FIG-JOHANNES-TAEUFER",
-            "FIG-JESUS"
+            "FIG-JESUS",
+            "FIG-ZEICHEN-WAHRHEIT"
           ]
         }
       ],
@@ -68,8 +76,8 @@
     "Jesus geht an den Jordan, wo Johannes zuerst getauft hatte. Viele kommen und sagen: Johannes hat kein Zeichen getan, aber was er über diesen sagte, war wahr. Viele glauben dort an ihn."
   ],
   "captions_de": [
-    "Jenseits des Jordan: Jesus geht an den Fluss, wo Johannes getauft hatte (Fussspuren).",
-    "Am Jordan: Die Leute sagen: Was Johannes über Jesus sagte, ist wahr; viele glauben (Herzen)."
+    "Jenseits des Jordan: Jesus geht (Pfeil) an den Fluss, wo Johannes getauft hatte (Muschel mit Wasser).",
+    "Am Jordan: Die Leute sagen: Was Johannes über Jesus sagte, ist wahr (Häkchen); viele glauben (Herz über der Menge)."
   ],
   "interpretation_note_de": "Johannes der Täufer ist nicht mehr dort; er erscheint nur in der Sprechblase der Leute ([[JHN.10.41]]).",
   "basis": [
@@ -96,5 +104,72 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.10.40",
+            "figures": [
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-JORDAN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NACHFOLGEN"
+            ],
+            "speech": [],
+            "action_de": "Jesus geht wieder weg, auf die andere Seite des Jordan, an den Ort, wo Johannes zuerst getauft hatte, und bleibt dort.",
+            "stage": {
+              "x": {
+                "FIG-JESUS": 120
+              },
+              "air_x": 40,
+              "air_y": 30
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.10.40-JHN.10.42",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-JORDAN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JOHANNES-TAEUFER",
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Jesus geht an den Jordan, wo Johannes zuerst getauft hatte. Viele kommen und sagen: Johannes hat kein Zeichen getan, aber was er über diesen sagte, war wahr. Viele glauben dort an ihn.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "smile"
+              },
+              "at": {
+                "FIG-ZEICHEN-GLAUBEN": "FIG-GRUPPE-MENGE"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Jenseits des Jordan: Jesus geht an den Fluss, wo Johannes getauft hatte (Fussspuren).",
+          "Am Jordan: Die Leute sagen: Was Johannes über Jesus sagte, ist wahr; viele glauben (Herzen)."
+        ]
+      }
+    }
+  ]
 }

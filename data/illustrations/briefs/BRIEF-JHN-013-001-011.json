@@ -29,18 +29,28 @@
           "FIG-JESUS": "kneel"
         },
         "x": {
-          "FIG-JESUS": 50,
-          "FIG-GRUPPE-ZWOELF": 150
+          "FIG-JESUS": 78,
+          "FIG-GRUPPE-ZWOELF": 148
         },
         "floor_x": {
-          "FIG-OBJ-WASCHSCHUESSEL": 86
+          "FIG-OBJ-WASCHSCHUESSEL": 110
         },
         "mood": {
-          "FIG-GRUPPE-ZWOELF": "surprised"
+          "FIG-GRUPPE-ZWOELF": "surprised",
+          "FIG-JESUS": "calm"
         },
-        "at": {
-          "FIG-ZEICHEN-LIEBE": "FIG-JESUS"
-        }
+        "signs_who": {
+          "FIG-ZEICHEN-LIEBE": [
+            "FIG-JESUS"
+          ]
+        },
+        "arrows": [
+          [
+            "FIG-JESUS",
+            "FIG-GRUPPE-ZWOELF",
+            "act"
+          ]
+        ]
       }
     },
     {
@@ -68,6 +78,7 @@
           "to": "FIG-PETRUS",
           "icons": [
             "FIG-OBJ-WASCHSCHUESSEL",
+            "FIG-PETRUS",
             "FIG-ZEICHEN-FEHLT",
             "FIG-JESUS"
           ]
@@ -76,7 +87,8 @@
       "action_de": "Petrus wehrt ab: Nie sollst du mir die Füsse waschen! Jesus antwortet: Wenn ich dich nicht wasche, hast du keinen Anteil an mir.",
       "stage": {
         "pose": {
-          "FIG-JESUS": "kneel"
+          "FIG-JESUS": "kneel",
+          "FIG-PETRUS": "away"
         },
         "mood": {
           "FIG-PETRUS": "surprised",
@@ -86,8 +98,8 @@
           "FIG-OBJ-WASCHSCHUESSEL": 92
         },
         "x": {
-          "FIG-PETRUS": 52,
-          "FIG-JESUS": 128
+          "FIG-PETRUS": 40,
+          "FIG-JESUS": 146
         }
       }
     }
@@ -97,8 +109,8 @@
     "Petrus wehrt ab: Nie sollst du mir die Füsse waschen! Jesus antwortet: Wenn ich dich nicht wasche, hast du keinen Anteil an mir."
   ],
   "captions_de": [
-    "Fusswaschung: Jesus kniet beim Waschbecken vor den Jüngern und wäscht ihnen die Füsse; er liebt sie (zwei Herzen).",
-    "Petrus wehrt ab: Petrus will sich nicht waschen lassen (Becken, abwehrende Hand); Jesus: Ohne Waschen kein Anteil an mir (Becken, leerer Kreis, Jesus)."
+    "Fusswaschung: Jesus kniet mit dem Waschbecken vor den Jüngern und wäscht ihnen die Füsse; er liebt sie (zwei Herzen bei Jesus, Linie zu den Jüngern).",
+    "Petrus wehrt ab: Petrus wendet sich ab und will sich nicht waschen lassen (Becken, abwehrende Hand); Jesus: Ohne Waschen hast du keinen Anteil an mir (Becken, Petrus, durchgestrichener Kreis, Jesus)."
   ],
   "interpretation_note_de": "Dass Jesus das Obergewand ablegt und sich das Leinentuch umbindet ([[JHN.13.4]]), zeigt das Bild nur mit dem Tuch am Becken. Petrus' Bitte um Hände und Kopf und das Wort «nicht alle seid ihr rein» ([[JHN.13.9-JHN.13.11]]) zeigt das Bild nicht.",
   "basis": [
@@ -125,5 +137,101 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.13.1-JHN.13.5",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-OBJ-WASCHSCHUESSEL"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-LIEBE"
+            ],
+            "speech": [],
+            "action_de": "Beim Mahl steht Jesus auf, bindet sich ein Leinentuch um, giesst Wasser in das Becken und wäscht den Jüngern die Füsse; er liebt die Seinen bis zur Vollendung.",
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "kneel"
+              },
+              "x": {
+                "FIG-JESUS": 50,
+                "FIG-GRUPPE-ZWOELF": 150
+              },
+              "floor_x": {
+                "FIG-OBJ-WASCHSCHUESSEL": 86
+              },
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "surprised"
+              },
+              "at": {
+                "FIG-ZEICHEN-LIEBE": "FIG-JESUS"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.13.6-JHN.13.10",
+            "figures": [
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-WASCHSCHUESSEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-OBJ-WASCHSCHUESSEL",
+                  "FIG-ZEICHEN-ABLEHNEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-OBJ-WASCHSCHUESSEL",
+                  "FIG-ZEICHEN-FEHLT",
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Petrus wehrt ab: Nie sollst du mir die Füsse waschen! Jesus antwortet: Wenn ich dich nicht wasche, hast du keinen Anteil an mir.",
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "kneel"
+              },
+              "mood": {
+                "FIG-PETRUS": "surprised",
+                "FIG-JESUS": "calm"
+              },
+              "floor_x": {
+                "FIG-OBJ-WASCHSCHUESSEL": 92
+              },
+              "x": {
+                "FIG-PETRUS": 52,
+                "FIG-JESUS": 128
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Fusswaschung: Jesus kniet beim Waschbecken vor den Jüngern und wäscht ihnen die Füsse; er liebt sie (zwei Herzen).",
+          "Petrus wehrt ab: Petrus will sich nicht waschen lassen (Becken, abwehrende Hand); Jesus: Ohne Waschen kein Anteil an mir (Becken, leerer Kreis, Jesus)."
+        ]
+      }
+    }
+  ]
 }

@@ -17,7 +17,8 @@
      "FIG-GERASENER"
     ],
     "objects": [
-     "FIG-ORT-GRAB"
+     "FIG-ORT-GRAB",
+     "FIG-OBJ-KETTE"
     ],
     "signs": [
      "FIG-ZEICHEN-DAEMON"
@@ -25,8 +26,8 @@
     "speech": [],
     "action_de": "Am anderen Ufer kommt Jesus aus den Grabstätten ein Mann mit einem unreinen Geist entgegen, den niemand bändigen kann; er läuft zu Jesus und wirft sich vor ihm nieder.",
     "action_gsw": "Am andere Ufer chunnt em Jesus us de Grabstätte en Maa mit eme unreine Geischt entgäge, wo niemer cha bändige; er rennt zum Jesus und wirft sich vor em nider.",
-    "caption_de": "Bei den Gräbern: Ein Mann mit zerrissenen Ketten und einem unreinen Geist (dunkler Schatten) wirft sich vor Jesus nieder.",
-    "caption_gsw": "Bi de Gräber: En Maa mit verrissne Chettene und eme unreine Geischt (dunkle Schatte) wirft sich vor em Jesus nider.",
+    "caption_de": "Bei den Gräbern: Ein Mann mit einem unreinen Geist (dunkler Schatten), der seine Ketten zerrissen hat (Kette mit offenem Ring), wirft sich vor Jesus nieder.",
+    "caption_gsw": "Bi de Gräber: En Maa mit eme unreine Geischt (dunkle Schatte), wo sini Chettene verrisse hät (Chette mit offnigem Ring), wirft sich vor em Jesus nider.",
     "stage": {
      "pose": {
       "FIG-GERASENER": "kneel"
@@ -36,6 +37,13 @@
      },
      "at": {
       "FIG-ZEICHEN-DAEMON": "FIG-GERASENER"
+     },
+     "hold": {
+      "FIG-GERASENER": "FIG-OBJ-KETTE"
+     },
+     "x": {
+      "FIG-JESUS": 34,
+      "FIG-GERASENER": 74
      }
     }
    },
@@ -129,9 +137,9 @@
     "n": 4,
     "reference": "MRK.5.18-MRK.5.20",
     "figures": [
-     "FIG-GRUPPE-MENGE",
      "FIG-GERASENER",
-     "FIG-JESUS"
+     "FIG-JESUS",
+     "FIG-GRUPPE-MENGE"
     ],
     "objects": [
      "FIG-OBJ-BOOT"
@@ -139,32 +147,35 @@
     "signs": [],
     "speech": [
      {
-      "from": "FIG-GERASENER",
-      "to": "FIG-GRUPPE-MENGE",
-      "icons": [
-       "FIG-JESUS",
-       "FIG-ZEICHEN-ERBARMEN"
-      ]
-     },
-     {
       "from": "FIG-JESUS",
       "to": "FIG-GERASENER",
       "icons": [
        "FIG-ORT-HAUS",
        "FIG-ZEICHEN-VERKUENDIGEN"
       ]
+     },
+     {
+      "from": "FIG-GERASENER",
+      "to": "FIG-GRUPPE-MENGE",
+      "icons": [
+       "FIG-JESUS",
+       "FIG-ZEICHEN-ERBARMEN"
+      ]
      }
     ],
     "action_de": "Der Geheilte will bei Jesus bleiben; Jesus schickt ihn nach Hause, er soll erzählen, wie viel der Herr an ihm getan hat. Er verkündet in der Dekapolis, was Jesus an ihm getan hat, und alle staunen.",
     "action_gsw": "De Gheilt wett bim Jesus bliibe; de Jesus schickt en hei, er söll verzelle, wie vil de Herr a im gmacht hät. Er verchündet i de Dekapolis, was de Jesus a im gmacht hät, und alli stuuned.",
-    "caption_de": "Gesandt: Jesus schickt den Geheilten heim (Haus, verkünden); er erzählt den staunenden Leuten von Jesus und seinem Erbarmen (Herz mit Händen).",
-    "caption_gsw": "Gschickt: De Jesus schickt de Gheilt hei (Huus, verchünde); er verzellt de stuunende Lüüt vom Jesus und sim Erbarme (Härz mit Händ).",
+    "caption_de": "Gesandt: Zuerst schickt Jesus den Geheilten (jetzt im neuen Mantel) heim (Haus, Lautsprecher: verkünden); dann erzählt er den staunenden Leuten von Jesus und seinem Erbarmen (Herz mit Händen).",
+    "caption_gsw": "Gschickt: Zerscht schickt de Jesus de Gheilt (jetzt im neue Mantel) hei (Huus, Lutsprächer: verchünde); denn verzellt er de stuunende Lüüt vom Jesus und sim Erbarme (Härz mit Händ).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-MENGE": "surprised",
       "FIG-GERASENER": "smile"
      },
-     "big_side": "right"
+     "big_side": "left",
+     "wear": {
+      "FIG-GERASENER": "#C9A86A"
+     }
     }
    }
   ],
@@ -197,15 +208,15 @@
       "to": "FIG-JESUS",
       "icons": [
        "FIG-TOCHTER-JAIRUS",
-       "FIG-ZEICHEN-TOD",
+       "FIG-ZEICHEN-KRANK",
        "FIG-ZEICHEN-HEILEN"
       ]
      }
     ],
     "action_de": "Am See kommt der Synagogenvorsteher Jairus, fällt Jesus zu Füssen und bittet ihn: Meine Tochter liegt im Sterben; komm und lege ihr die Hände auf, damit sie lebt.",
     "action_gsw": "Am See chunnt de Synagogevorsteher Jairus, fallt em Jesus zu de Füess und bittet en: Mis Töchterli liit im Stärbe; chumm und leg ere d Händ uf, dass si läbt.",
-    "caption_de": "Bitte: Jairus kniet vor Jesus: Meine Tochter stirbt – komm und heile sie (Mädchen, Grab, heilende Hand).",
-    "caption_gsw": "Bitt: De Jairus chniet vor em Jesus: Mini Tochter stirbt – chumm und heil si (Meitli, Grab, heilendi Hand).",
+    "caption_de": "Bitte: Jairus kniet vor Jesus: Meine Tochter liegt im Sterben – komm und heile sie (Mädchen, liegende Figur auf Matte, heilende Hand).",
+    "caption_gsw": "Bitt: De Jairus chniet vor em Jesus: Mini Tochter liit im Stärbe – chumm und heil si (Meitli, liggendi Figur uf ere Matte, heilendi Hand).",
     "stage": {
      "pose": {
       "FIG-JAIRUS": "kneel"
@@ -273,13 +284,14 @@
     ],
     "objects": [],
     "signs": [
+     "FIG-ZEICHEN-BERUEHREN",
      "FIG-ZEICHEN-HEILEN"
     ],
     "speech": [],
     "action_de": "Eine Frau, die seit zwölf Jahren an Blutfluss leidet und bei den Ärzten keine Hilfe fand, kommt in der Menge von hinten und berührt seinen Mantel; sogleich merkt sie, dass sie geheilt ist.",
     "action_gsw": "E Frau, wo sit zwölf Jahr a Bluetfluss liidet und bi de Ärzt kei Hilf gfunde hät, chunnt i de Mängi vo hine und langt sin Mantel aa; sofort merkt si, dass si gheilt isch.",
-    "caption_de": "Berührung: Von hinten berührt die Frau Jesu Mantel (Pfeil) und wird geheilt (Hand mit Licht).",
-    "caption_gsw": "Aalange: Vo hine langt d Frau am Jesus sin Mantel aa (Pfiil) und wird gheilt (Hand mit Liecht).",
+    "caption_de": "Berührung: Die Frau berührt Jesu Mantel (Pfeil, Hand am roten Saum) und wird geheilt (Hand mit Licht).",
+    "caption_gsw": "Aalange: D Frau langt am Jesus sin Mantel aa (Pfiil, Hand am rote Saum) und wird gheilt (Hand mit Liecht).",
     "stage": {
      "arrows": [
       [
@@ -293,6 +305,9 @@
      },
      "mood": {
       "FIG-ROLLE-FRAU-BLUTFLUSS": "pensive"
+     },
+     "beside": {
+      "FIG-ZEICHEN-BERUEHREN": "FIG-ROLLE-FRAU-BLUTFLUSS"
      }
     }
    },
@@ -473,12 +488,12 @@
     ],
     "action_de": "Mit den Eltern und den drei Jüngern geht Jesus zum Kind, fasst seine Hand und sagt: Talita kum – Mädchen, steh auf! Sogleich steht das zwölfjährige Mädchen auf und geht umher; alle geraten ausser sich vor Staunen.",
     "action_gsw": "Mit de Eltere und de drüü Jünger gaat de Jesus zum Chind, nimmt sini Hand und seit: Talita kum – Meitli, stand uf! Sofort staat s zwölfjährig Meitli uf und lauft ume; alli stuuned über alli Mass.",
-    "caption_de": "Talita kum: Jesus nimmt das Mädchen bei der Hand und sagt: Steh auf (Figur mit Pfeil nach oben); es steht auf, der Vater staunt.",
-    "caption_gsw": "Talita kum: De Jesus nimmt s Meitli bi de Hand und seit: Stand uf (Figur mit Pfiil nach obe); es staat uf, de Vatter stuunt.",
+    "caption_de": "Talita kum: Jesus wendet sich dem Mädchen zu (Pfeil), nimmt es bei der Hand und sagt: Steh auf (Figur über Matte mit Pfeil nach oben); es steht auf, der Vater staunt.",
+    "caption_gsw": "Talita kum: De Jesus wändet sich em Meitli zue (Pfiil), nimmt s bi de Hand und seit: Stand uf (Figur über ere Matte mit Pfiil nach obe); es staat uf, de Vatter stuunt.",
     "stage": {
      "mood": {
       "FIG-JAIRUS": "surprised",
-      "FIG-TOCHTER-JAIRUS": "smile"
+      "FIG-TOCHTER-JAIRUS": "calm"
      },
      "arrows": [
       [
@@ -570,15 +585,15 @@
       "to": "FIG-JESUS",
       "icons": [
        "FIG-TOCHTER-JAIRUS",
-       "FIG-ZEICHEN-TOD",
+       "FIG-ZEICHEN-KRANK",
        "FIG-ZEICHEN-HEILEN"
       ]
      }
     ],
     "action_de": "Jairus fällt Jesus zu Füssen und bittet für seine sterbende Tochter.",
     "action_gsw": "De Jairus fallt em Jesus zu de Füess und bittet für sini Tochter, wo im Stärbe liit.",
-    "caption_de": "Jairus bittet: Meine Tochter stirbt – komm und heile sie (Mädchen, Grab, heilende Hand).",
-    "caption_gsw": "De Jairus bittet: Mini Tochter stirbt – chumm und heil si (Meitli, Grab, heilendi Hand).",
+    "caption_de": "Jairus bittet kniend: Meine Tochter liegt im Sterben – komm und heile sie (Mädchen, liegende Figur auf Matte, heilende Hand).",
+    "caption_gsw": "De Jairus bittet chnüülend: Mini Tochter liit im Stärbe – chumm und heil si (Meitli, liggendi Figur uf ere Matte, heilendi Hand).",
     "stage": {
      "pose": {
       "FIG-JAIRUS": "kneel"
@@ -598,13 +613,14 @@
     ],
     "objects": [],
     "signs": [
+     "FIG-ZEICHEN-BERUEHREN",
      "FIG-ZEICHEN-HEILEN"
     ],
     "speech": [],
     "action_de": "Unterwegs berührt eine Frau, die seit zwölf Jahren an Blutfluss leidet, Jesu Mantel und wird geheilt.",
     "action_gsw": "Underwägs langt e Frau, wo sit zwölf Jahr a Bluetfluss liidet, am Jesus sin Mantel aa und wird gheilt.",
-    "caption_de": "Die Frau berührt von hinten Jesu Mantel (Pfeil) und wird geheilt (Hand mit Licht).",
-    "caption_gsw": "D Frau langt vo hine am Jesus sin Mantel aa (Pfiil) und wird gheilt (Hand mit Liecht).",
+    "caption_de": "Die Frau berührt Jesu Mantel (Pfeil, Hand am roten Saum) und wird geheilt (Hand mit Licht).",
+    "caption_gsw": "D Frau langt am Jesus sin Mantel aa (Pfiil, Hand am rote Saum) und wird gheilt (Hand mit Liecht).",
     "stage": {
      "arrows": [
       [
@@ -618,6 +634,9 @@
      },
      "mood": {
       "FIG-ROLLE-FRAU-BLUTFLUSS": "pensive"
+     },
+     "beside": {
+      "FIG-ZEICHEN-BERUEHREN": "FIG-ROLLE-FRAU-BLUTFLUSS"
      }
     }
    },
@@ -642,12 +661,12 @@
     ],
     "action_de": "Jesus nimmt die tote Tochter des Jairus bei der Hand und sagt: Talita kum! Das Mädchen steht auf.",
     "action_gsw": "De Jesus nimmt di tot Tochter vom Jairus bi de Hand und seit: Talita kum! S Meitli staat uf.",
-    "caption_de": "Talita kum: Jesus sagt dem Mädchen: Steh auf (Figur mit Pfeil nach oben); der Vater staunt.",
-    "caption_gsw": "Talita kum: De Jesus seit em Meitli: Stand uf (Figur mit Pfiil nach obe); de Vatter stuunt.",
+    "caption_de": "Talita kum: Jesus wendet sich dem Mädchen zu (Pfeil) und sagt: Steh auf (Figur über Matte mit Pfeil nach oben); der Vater staunt.",
+    "caption_gsw": "Talita kum: De Jesus wändet sich em Meitli zue (Pfiil) und seit: Stand uf (Figur über ere Matte mit Pfiil nach obe); de Vatter stuunt.",
     "stage": {
      "mood": {
       "FIG-JAIRUS": "surprised",
-      "FIG-TOCHTER-JAIRUS": "smile"
+      "FIG-TOCHTER-JAIRUS": "calm"
      },
      "arrows": [
       [
@@ -689,14 +708,15 @@
       "to": "FIG-JESUS",
       "icons": [
        "FIG-MARIA-MUTTER-JESU",
+       "FIG-JESUS",
        "FIG-ZEICHEN-FRAGEN"
       ]
      }
     ],
     "action_de": "Am Sabbat lehrt Jesus in der Synagoge seiner Heimat. Die Zuhörer staunen, nehmen aber Anstoss: Ist das nicht der Zimmermann, der Sohn der Maria?",
     "action_gsw": "Am Sabbat lehrt de Jesus i de Synagoge vo sinere Heimet. D Zuehörer stuuned, nämed aber Aastoss: Isch das nöd de Zimmerma, de Sohn vo de Maria?",
-    "caption_de": "In der Synagoge: Die Leute staunen und fragen: Ist das nicht der Sohn der Maria (Maria, Fragezeichen)?",
-    "caption_gsw": "I de Synagoge: D Lüüt stuuned und fröged: Isch das nöd de Sohn vo de Maria (Maria, Fragezeiche)?",
+    "caption_de": "In der Synagoge: Die Leute staunen und fragen: Ist das nicht der Sohn der Maria (Maria, Jesus, Fragezeichen)?",
+    "caption_gsw": "I de Synagoge: D Lüüt stuuned und fröged: Isch das nöd de Sohn vo de Maria (Maria, Jesus, Fragezeiche)?",
     "stage": {
      "mood": {
       "FIG-GRUPPE-MENGE": "surprised"
@@ -734,19 +754,18 @@
      "pose": {
       "FIG-ROLLE-KRANKER": "sit"
      },
-     "at": {
-      "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
-     },
-     "arrows": [
-      [
-       "FIG-JESUS",
-       "FIG-ROLLE-KRANKER",
-       "act"
-      ]
-     ],
+     "arrows": [],
      "mood": {
       "FIG-GRUPPE-MENGE": "earnest",
       "FIG-JESUS": "pensive"
+     },
+     "beside": {
+      "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
+     },
+     "x": {
+      "FIG-JESUS": 28,
+      "FIG-ROLLE-KRANKER": 76,
+      "FIG-GRUPPE-MENGE": 150
      }
     }
    }
@@ -778,6 +797,7 @@
       "from": "FIG-JESUS",
       "to": "FIG-GRUPPE-ZWOELF",
       "icons": [
+       "FIG-ZEICHEN-VOLLMACHT",
        "FIG-ZEICHEN-DAEMON",
        "FIG-ZEICHEN-FLIEHEN"
       ]
@@ -785,12 +805,19 @@
     ],
     "action_de": "Jesus ruft die Zwölf, sendet sie zu zweit aus und gibt ihnen Vollmacht über die unreinen Geister.",
     "action_gsw": "De Jesus rüeft d Zwölf, schickt si zu zweit uus und git ene Vollmacht über di unreine Geischter.",
-    "caption_de": "Vollmacht: Jesus sendet die Zwölf aus und gibt ihnen Vollmacht über die Geister (Schatten, Pfeil weg).",
-    "caption_gsw": "Vollmacht: De Jesus schickt d Zwölf uus und git ene Vollmacht über d Geischter (Schatte, Pfiil ewäg).",
+    "caption_de": "Vollmacht: Jesus sendet die Zwölf aus (Pfeil) und gibt ihnen Vollmacht über die Geister (Zepter, Schatten, Pfeil weg).",
+    "caption_gsw": "Vollmacht: De Jesus schickt d Zwölf uus (Pfiil) und git ene Vollmacht über d Geischter (Zepter, Schatte, Pfiil ewäg).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-ZWOELF": "earnest"
-     }
+     },
+     "arrows": [
+      [
+       "FIG-JESUS",
+       "FIG-GRUPPE-ZWOELF",
+       "act"
+      ]
+     ]
     }
    },
    {
@@ -815,8 +842,8 @@
     ],
     "action_de": "Ausser einem Stab sollen sie nichts mitnehmen: kein Brot, keinen Beutel, kein Geld; wo man sie nicht aufnimmt, sollen sie weiterziehen und den Staub von den Füssen schütteln.",
     "action_gsw": "Ussert eme Stab söled si nüüt mitneh: kei Brot, kei Täsche, kei Gäld; wo me si nöd ufnimmt, söled si wiiterzie und de Staub vo de Füess abschüttle.",
-    "caption_de": "Ohne Vorrat: Jesus sagt: kein Brot, kein Geld (Brot, Münzen, fehlt).",
-    "caption_gsw": "Ohni Vorrat: De Jesus seit: kei Brot, kei Gäld (Brot, Münz, fehlt).",
+    "caption_de": "Ohne Vorrat: Jesus sagt: Nehmt kein Brot und kein Geld mit (Brot, Münzen, leerer Kreis mit Schrägstrich).",
+    "caption_gsw": "Ohni Vorrat: De Jesus seit: Nämed kei Brot und kei Gäld mit (Brot, Münz, lääre Kreis mit Schrägstrich).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-ZWOELF": "pensive"
@@ -846,24 +873,18 @@
     ],
     "action_de": "Die Jünger ziehen aus und verkünden, man solle umkehren; sie treiben viele Dämonen aus, salben viele Kranke mit Öl und heilen sie.",
     "action_gsw": "D Jünger zühnd uus und verchünded, me söll umchere; si tribed vil Dämone uus, salbed vil Chranki mit Öl und heiled si.",
-    "caption_de": "Unterwegs: Ein Jünger ruft zur Umkehr (Pfeil im Bogen) und heilt einen Kranken (Hand mit Licht).",
-    "caption_gsw": "Underwägs: En Jünger rüeft zur Umchehr (Pfiil im Boge) und heilt en Chranke (Hand mit Liecht).",
+    "caption_de": "Unterwegs: Ein Jünger ruft die Leute zur Umkehr (Pfeil im Bogen) und heilt einen Kranken (berührende Hand mit Licht).",
+    "caption_gsw": "Underwägs: En Jünger rüeft d Lüüt zur Umchehr (Pfiil im Boge) und heilt en Chranke (aalangendi Hand mit Liecht).",
     "stage": {
      "pose": {
       "FIG-ROLLE-KRANKER": "sit"
      },
-     "at": {
-      "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
-     },
-     "arrows": [
-      [
-       "FIG-ROLLE-JUENGER",
-       "FIG-ROLLE-KRANKER",
-       "act"
-      ]
-     ],
+     "arrows": [],
      "mood": {
       "FIG-GRUPPE-MENGE": "pensive"
+     },
+     "beside": {
+      "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
      }
     }
    }
@@ -943,14 +964,26 @@
     ],
     "action_de": "Rückblick: Johannes hatte Herodes gesagt, es sei ihm nicht erlaubt, die Frau seines Bruders zu haben; darum liess Herodes ihn gefangen setzen. Herodias wollte ihn töten, doch Herodes fürchtete und schützte ihn.",
     "action_gsw": "Rückblick: De Johannes hät em Herodes gseit, er dörf d Frau vo sim Brüeder nöd ha; drum hät de Herodes en la gfange neh. D Herodias hät en welle umbringe, aber de Herodes hät Respäkt vor im gha und en gschützt.",
-    "caption_de": "Rückblick: Johannes sagt Herodes, Herodias zu haben sei nicht erlaubt (abwehrende Hand); dafür kommt er ins Gefängnis.",
-    "caption_gsw": "Rückblick: De Johannes seit em Herodes, d Herodias z ha seig nöd erlaubt (abwehrendi Hand); defür chunnt er is Gfängnis.",
+    "caption_de": "Rückblick: Johannes sagt Herodes, Herodias zu haben sei nicht erlaubt (Herodias, abwehrende Hand); dafür kommt er ins Gefängnis (Pfeil).",
+    "caption_gsw": "Rückblick: De Johannes seit em Herodes, d Herodias z ha seig nöd erlaubt (Herodias, abwehrendi Hand); defür chunnt er is Gfängnis (Pfiil).",
     "stage": {
      "back_side": "left",
      "mood": {
       "FIG-HERODES-ANTIPAS": "pensive",
       "FIG-HERODIAS": "earnest",
       "FIG-JOHANNES-TAEUFER": "earnest"
+     },
+     "arrows": [
+      [
+       "FIG-JOHANNES-TAEUFER",
+       "FIG-ORT-GEFAENGNIS",
+       "go"
+      ]
+     ],
+     "x": {
+      "FIG-JOHANNES-TAEUFER": 96,
+      "FIG-HERODES-ANTIPAS": 134,
+      "FIG-HERODIAS": 166
      }
     }
    },
@@ -983,8 +1016,8 @@
     ],
     "action_de": "Beim Geburtstagsmahl tanzt die Tochter der Herodias; Herodes schwört, ihr zu geben, was sie will. Auf Rat ihrer Mutter verlangt sie den Kopf Johannes des Täufers.",
     "action_gsw": "Am Geburtstagsässe tanzt d Tochter vo de Herodias; de Herodes schwört, er geb ere, was si well. Uf de Rat vo irer Mueter verlangt si de Chopf vom Johannes em Täufer.",
-    "caption_de": "Das Fest: Herodes verspricht der Tänzerin, was sie will (gebende Hand); Herodias rät ihr, den Tod des Johannes zu verlangen (Johannes, Grab).",
-    "caption_gsw": "S Fäscht: De Herodes verspricht de Tänzerin, was si will (gäbendi Hand); d Herodias rätet ere, de Tod vom Johannes z verlange (Johannes, Grab).",
+    "caption_de": "Das Fest: Nach ihrem Tanz verspricht Herodes der Tochter der Herodias (rosa Gewand), was sie will (gebende Hand); Herodias rät ihr, den Tod des Johannes zu verlangen (Johannes, Grab).",
+    "caption_gsw": "S Fäscht: Nach irem Tanz verspricht de Herodes de Tochter vo de Herodias (rosa Gwand), was si will (gäbendi Hand); d Herodias rätet ere, de Tod vom Johannes z verlange (Johannes, Grab).",
     "stage": {
      "mood": {
       "FIG-HERODES-ANTIPAS": "smile",
@@ -998,7 +1031,7 @@
     "reference": "MRK.6.26-MRK.6.29",
     "figures": [
      "FIG-HERODES-ANTIPAS",
-     "FIG-ROLLE-JUENGER"
+     "FIG-GRUPPE-JUENGER"
     ],
     "objects": [
      "FIG-ORT-GRAB"
@@ -1009,12 +1042,12 @@
     "speech": [],
     "action_de": "Der König wird sehr betrübt, lässt Johannes aber wegen seiner Eide im Gefängnis enthaupten. Die Jünger des Johannes holen seinen Leichnam und legen ihn in ein Grab.",
     "action_gsw": "De Chünig wird sehr truurig, laat aber de Johannes wäge sine Eid im Gfängnis köpfe. D Jünger vom Johannes holed sin Liichnam und leged en in es Grab.",
-    "caption_de": "Begraben: Herodes ist betrübt; die Jünger des Johannes legen ihn trauernd ins Grab (Tränen).",
-    "caption_gsw": "Begrabe: De Herodes isch truurig; d Jünger vom Johannes leged en truurig is Grab (Träne).",
+    "caption_de": "Begraben: Herodes ist betrübt; die Jünger des Johannes holen ihn und begraben ihn (Grab) unter Tränen.",
+    "caption_gsw": "Begrabe: De Herodes isch truurig; d Jünger vom Johannes holed en und begrabed en (Grab) mit Träne.",
     "stage": {
      "signs_who": {
       "FIG-ZEICHEN-TRAUER": [
-       "FIG-ROLLE-JUENGER"
+       "FIG-GRUPPE-JUENGER"
       ]
      },
      "mood": {
@@ -1106,7 +1139,9 @@
      "FIG-GRUPPE-ZWOELF",
      "FIG-GRUPPE-MENGE"
     ],
-    "objects": [],
+    "objects": [
+     "FIG-OBJ-BROT"
+    ],
     "signs": [
      "FIG-ZEICHEN-SATT"
     ],
@@ -1115,14 +1150,15 @@
       "from": "FIG-JESUS",
       "to": "FIG-GOTT",
       "icons": [
+       "FIG-ZEICHEN-BETEN",
        "FIG-OBJ-BROT"
       ]
      }
     ],
     "action_de": "Die Menge lagert sich in Gruppen auf dem grünen Gras. Jesus blickt zum Himmel auf, spricht den Segen, bricht die Brote und gibt sie den Jüngern zum Austeilen; alle essen und werden satt.",
     "action_gsw": "D Mängi sitzt i Gruppe ufs grüen Gras. De Jesus luegt zum Himmel ufe, spricht de Säge, bricht d Brot und gits de Jünger zum Verteile; alli ässed und wärded satt.",
-    "caption_de": "Gesegnet und geteilt: Jesus dankt Gott für das Brot (Strahlenkranz); die Jünger teilen aus (Pfeile), die Menge wird satt (volle Schale).",
-    "caption_gsw": "Gsägnet und teilt: De Jesus dankt Gott für s Brot (Strahlechranz); d Jünger teiled uus (Pfiil), d Mängi wird satt (volli Schale).",
+    "caption_de": "Gesegnet und geteilt: Jesus hält das Brot und dankt Gott dafür (Strahlenkranz; Blase: betende Hände, Brot); die Jünger teilen aus (Pfeile), die Menge wird satt (volle Schale).",
+    "caption_gsw": "Gsägnet und teilt: De Jesus hebt s Brot und dankt Gott defür (Strahlechranz; Blase: bättendi Händ, Brot); d Jünger teiled uus (Pfiil), d Mängi wird satt (volli Schale).",
     "stage": {
      "god_side": "right",
      "at": {
@@ -1142,6 +1178,9 @@
      ],
      "mood": {
       "FIG-GRUPPE-MENGE": "smile"
+     },
+     "hold": {
+      "FIG-JESUS": "FIG-OBJ-BROT"
      }
     }
    },
@@ -1273,7 +1312,8 @@
      "mood": {
       "FIG-GRUPPE-ZWOELF": "surprised",
       "FIG-JESUS": "smile"
-     }
+     },
+     "in_water": true
     }
    },
    {
@@ -1339,28 +1379,31 @@
     "reference": "MRK.6.53-MRK.6.55",
     "figures": [
      "FIG-GRUPPE-MENGE",
-     "FIG-ROLLE-KRANKER",
      "FIG-JESUS"
     ],
     "objects": [],
     "signs": [
-     "FIG-ZEICHEN-BRINGEN"
+     "FIG-ZEICHEN-KRANK"
     ],
     "speech": [],
     "action_de": "In Gennesaret legen sie an; man erkennt Jesus sogleich, läuft in der ganzen Gegend umher und trägt die Kranken auf Tragbahren dorthin, wo er ist.",
     "action_gsw": "Z Gennesaret leged si aa; me kännt de Jesus sofort, rennt i de ganze Gäged ume und treit d Chranke uf Tragbahre det here, won er isch.",
-    "caption_de": "Gennesaret: Leute bringen Kranke zu Jesus (Pfeil über den Leuten); ein Kranker liegt vor ihm.",
-    "caption_gsw": "Gennesaret: Lüüt bringed Chranki zum Jesus (Pfiil über de Lüüt); en Chranke liit vor im.",
+    "caption_de": "Gennesaret: Leute tragen Kranke auf Matten zu Jesus (liegende Figur auf Matte über den Leuten, Pfeil).",
+    "caption_gsw": "Gennesaret: Lüüt träged Chranki uf Matte zum Jesus (liggendi Figur uf ere Matte über de Lüüt, Pfiil).",
     "stage": {
-     "pose": {
-      "FIG-ROLLE-KRANKER": "lie"
-     },
      "at": {
-      "FIG-ZEICHEN-BRINGEN": "FIG-GRUPPE-MENGE"
+      "FIG-ZEICHEN-KRANK": "FIG-GRUPPE-MENGE"
      },
      "mood": {
       "FIG-GRUPPE-MENGE": "earnest"
-     }
+     },
+     "arrows": [
+      [
+       "FIG-GRUPPE-MENGE",
+       "FIG-JESUS",
+       "go"
+      ]
+     ]
     }
    },
    {
@@ -1393,11 +1436,13 @@
       ]
      ],
      "at": {
-      "FIG-ZEICHEN-BERUEHREN": "FIG-ROLLE-KRANKER",
       "FIG-ZEICHEN-HEILEN": "FIG-GRUPPE-MENGE"
      },
      "mood": {
       "FIG-GRUPPE-MENGE": "smile"
+     },
+     "beside": {
+      "FIG-ZEICHEN-BERUEHREN": "FIG-ROLLE-KRANKER"
      }
     }
    }
@@ -1432,14 +1477,15 @@
       "to": "FIG-JESUS",
       "icons": [
        "FIG-MARIA-MUTTER-JESU",
+       "FIG-JESUS",
        "FIG-ZEICHEN-FRAGEN"
       ]
      }
     ],
     "action_de": "In seiner Heimat staunen die Leute über Jesus, nehmen aber Anstoss an ihm; er wundert sich über ihren Unglauben.",
     "action_gsw": "I sinere Heimet stuuned d Lüüt über de Jesus, nämed aber Aastoss a im; er wunderet sich über iren Unglaube.",
-    "caption_de": "Heimat: In der Synagoge fragen die Leute: Ist das nicht der Sohn der Maria (Maria, Fragezeichen)?",
-    "caption_gsw": "Heimet: I de Synagoge fröged d Lüüt: Isch das nöd de Sohn vo de Maria (Maria, Fragezeiche)?",
+    "caption_de": "Heimat: In der Synagoge fragen die Leute: Ist das nicht der Sohn der Maria (Maria, Jesus, Fragezeichen)?",
+    "caption_gsw": "Heimet: I de Synagoge fröged d Lüüt: Isch das nöd de Sohn vo de Maria (Maria, Jesus, Fragezeiche)?",
     "stage": {
      "mood": {
       "FIG-GRUPPE-MENGE": "earnest"
@@ -1460,6 +1506,7 @@
       "from": "FIG-JESUS",
       "to": "FIG-GRUPPE-ZWOELF",
       "icons": [
+       "FIG-ZEICHEN-VOLLMACHT",
        "FIG-ZEICHEN-DAEMON",
        "FIG-ZEICHEN-FLIEHEN"
       ]
@@ -1467,12 +1514,19 @@
     ],
     "action_de": "Jesus sendet die Zwölf aus und gibt ihnen Vollmacht über die unreinen Geister.",
     "action_gsw": "De Jesus schickt d Zwölf uus und git ene Vollmacht über di unreine Geischter.",
-    "caption_de": "Aussendung: Jesus gibt den Zwölf Vollmacht über die Geister (Schatten, Pfeil weg).",
-    "caption_gsw": "Uussändig: De Jesus git de Zwölf Vollmacht über d Geischter (Schatte, Pfiil ewäg).",
+    "caption_de": "Aussendung: Jesus sendet die Zwölf aus (Pfeil) und gibt ihnen Vollmacht über die Geister (Zepter, Schatten, Pfeil weg).",
+    "caption_gsw": "Uussändig: De Jesus schickt d Zwölf uus (Pfiil) und git ene Vollmacht über d Geischter (Zepter, Schatte, Pfiil ewäg).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-ZWOELF": "earnest"
-     }
+     },
+     "arrows": [
+      [
+       "FIG-JESUS",
+       "FIG-GRUPPE-ZWOELF",
+       "act"
+      ]
+     ]
     }
    },
    {
@@ -1550,7 +1604,8 @@
      "mood": {
       "FIG-GRUPPE-ZWOELF": "surprised",
       "FIG-JESUS": "smile"
-     }
+     },
+     "in_water": true
     }
    }
   ],
@@ -1593,12 +1648,9 @@
     ],
     "action_de": "Pharisäer und Schriftgelehrte aus Jerusalem sehen, dass einige Jünger mit ungewaschenen Händen Brot essen, und fragen Jesus: Warum leben deine Jünger nicht nach der Überlieferung der Ältesten?",
     "action_gsw": "Pharisäer und Schriftgelehrti us Jerusalem gsehnd, dass es paar Jünger mit ungwäschne Händ Brot ässed, und fröged de Jesus: Werum läbed dini Jünger nöd nach de Überliferig vo de Ältischte?",
-    "caption_de": "Die Frage: Ein Jünger isst Brot; die Pharisäer fragen Jesus: Warum ohne Händewaschen (Wasser auf Händen, fehlt, Brot, Fragezeichen)?",
-    "caption_gsw": "D Frag: En Jünger isst Brot; d Pharisäer fröged de Jesus: Werum ohni Händwäsche (Wasser uf de Händ, fehlt, Brot, Fragezeiche)?",
+    "caption_de": "Die Frage: Ein Jünger isst Brot (Brot in der Hand); die Pharisäer fragen Jesus: Warum ohne Händewaschen (Wasser auf Händen, leerer Kreis mit Schrägstrich, Brot, Fragezeichen)?",
+    "caption_gsw": "D Frag: En Jünger isst Brot (Brot i de Hand); d Pharisäer fröged de Jesus: Werum ohni Händwäsche (Wasser uf de Händ, lääre Kreis mit Schrägstrich, Brot, Fragezeiche)?",
     "stage": {
-     "pose": {
-      "FIG-ROLLE-JUENGER": "sit"
-     },
      "hold": {
       "FIG-ROLLE-JUENGER": "FIG-OBJ-BROT"
      },
@@ -1775,7 +1827,7 @@
     "stage": {
      "mood": {
       "FIG-JESUS": "smile",
-      "FIG-SYROPHOENIZIERIN": "determined"
+      "FIG-SYROPHOENIZIERIN": "calm"
      }
     }
    },
@@ -1796,8 +1848,8 @@
     "speech": [],
     "action_de": "Sie geht nach Hause und findet das Kind auf dem Bett liegen; der Dämon ist ausgefahren, wie Jesus gesagt hat.",
     "action_gsw": "Si gaat hei und findet s Chind uf em Bett ligge; de Dämon isch uusgfahre, wie s de Jesus gseit hät.",
-    "caption_de": "Daheim: Die Mutter findet ihre Tochter ruhig auf dem Bett; der Dämon ist fort (Schatten, Pfeil weg).",
-    "caption_gsw": "Dihei: D Mueter findet iri Tochter ruhig uf em Bett; de Dämon isch furt (Schatte, Pfiil ewäg).",
+    "caption_de": "Daheim: Die Mutter findet ihre Tochter ruhig liegend; der Dämon ist fort (Schatten, Pfeil weg).",
+    "caption_gsw": "Dihei: D Mueter findet iri Tochter ruhig am Ligge; de Dämon isch furt (Schatte, Pfiil ewäg).",
     "stage": {
      "pose": {
       "FIG-ROLLE-KIND": "lie"
@@ -1831,7 +1883,9 @@
      "FIG-ROLLE-TAUBER"
     ],
     "objects": [],
-    "signs": [],
+    "signs": [
+     "FIG-ZEICHEN-HEILEN"
+    ],
     "speech": [
      {
       "from": "FIG-JESUS",
@@ -1844,8 +1898,8 @@
     ],
     "action_de": "In der Dekapolis bringt man einen Tauben, der kaum sprechen kann. Jesus nimmt ihn allein beiseite, legt ihm die Finger in die Ohren, berührt seine Zunge, blickt zum Himmel auf und sagt: Effata – öffne dich!",
     "action_gsw": "I de Dekapolis bringt me en Taube, wo chuum cha rede. De Jesus nimmt en ellei uf d Siite, leit em d Finger i d Ohre, langt sini Zunge aa, luegt zum Himmel ufe und seit: Effata – gang uf!",
-    "caption_de": "Effata: Jesus berührt den Tauben (Pfeil) und sagt: Öffne dich (Ohr, Sprechlinien).",
-    "caption_gsw": "Effata: De Jesus langt de Taub aa (Pfiil) und seit: Gang uf (Ohr, Redlinie).",
+    "caption_de": "Effata: Jesus berührt den Tauben (Pfeil, berührende Hand mit Licht) und sagt: Öffne dich (Ohr, Schallwellen).",
+    "caption_gsw": "Effata: De Jesus langt de Taub aa (Pfiil, aalangendi Hand mit Liecht) und seit: Gang uf (Ohr, Schallwälle).",
     "stage": {
      "arrows": [
       [
@@ -1856,6 +1910,13 @@
      ],
      "mood": {
       "FIG-ROLLE-TAUBER": "pensive"
+     },
+     "beside": {
+      "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-TAUBER"
+     },
+     "x": {
+      "FIG-JESUS": 40,
+      "FIG-ROLLE-TAUBER": 150
      }
     }
    },
@@ -1888,8 +1949,8 @@
     ],
     "action_de": "Seine Ohren öffnen sich, und er redet richtig. Jesus gebietet, niemandem davon zu sagen; doch sie verkünden es umso mehr und sagen staunend: Er macht die Tauben hören und die Stummen reden.",
     "action_gsw": "Sini Ohre gönd uf, und er redt richtig. De Jesus befiehlt, niemertem devo z säge; aber si verchünded s umso meh und säged voll Stuune: Er macht, dass d Taube ghöred und d Stumme reded.",
-    "caption_de": "Er hört und redet: Jesus gebietet Schweigen (Finger vor den Lippen); die Leute erzählen staunend: Er macht hören und reden (Ohr, Sprechlinien).",
-    "caption_gsw": "Er ghört und redt: De Jesus befiehlt z schwiige (Finger vor de Lippe); d Lüüt verzelled voll Stuune: Er macht ghöre und rede (Ohr, Redlinie).",
+    "caption_de": "Er hört und redet: Jesus gebietet zu schweigen (durchgestrichene Sprechblase); die Leute erzählen staunend: Er macht hören und reden (Ohr, Schallwellen).",
+    "caption_gsw": "Er ghört und redt: De Jesus befiehlt z schwiige (durgstricheni Sprächblase); d Lüüt verzelled voll Stuune: Er macht ghöre und rede (Ohr, Schallwälle).",
     "stage": {
      "mood": {
       "FIG-ROLLE-TAUBER": "delight",
@@ -1983,7 +2044,9 @@
      "FIG-ROLLE-TAUBER"
     ],
     "objects": [],
-    "signs": [],
+    "signs": [
+     "FIG-ZEICHEN-HEILEN"
+    ],
     "speech": [
      {
       "from": "FIG-JESUS",
@@ -1996,8 +2059,8 @@
     ],
     "action_de": "In der Dekapolis heilt Jesus einen Tauben mit dem Wort «Effata».",
     "action_gsw": "I de Dekapolis heilt de Jesus en Taube mit em Wort «Effata».",
-    "caption_de": "Effata: Jesus berührt den Tauben (Pfeil) und sagt: Öffne dich (Ohr, Sprechlinien).",
-    "caption_gsw": "Effata: De Jesus langt de Taub aa (Pfiil) und seit: Gang uf (Ohr, Redlinie).",
+    "caption_de": "Effata: Jesus berührt den Tauben (Pfeil, berührende Hand mit Licht) und sagt: Öffne dich (Ohr, Schallwellen).",
+    "caption_gsw": "Effata: De Jesus langt de Taub aa (Pfiil, aalangendi Hand mit Liecht) und seit: Gang uf (Ohr, Schallwälle).",
     "stage": {
      "arrows": [
       [
@@ -2008,6 +2071,13 @@
      ],
      "mood": {
       "FIG-ROLLE-TAUBER": "pensive"
+     },
+     "beside": {
+      "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-TAUBER"
+     },
+     "x": {
+      "FIG-JESUS": 40,
+      "FIG-ROLLE-TAUBER": 150
      }
     }
    }
@@ -2030,8 +2100,7 @@
     "reference": "MRK.8.1-MRK.8.5",
     "figures": [
      "FIG-GRUPPE-ZWOELF",
-     "FIG-JESUS",
-     "FIG-GRUPPE-MENGE"
+     "FIG-JESUS"
     ],
     "objects": [
      "FIG-ORT-WUESTE",
@@ -2054,8 +2123,8 @@
     ],
     "action_de": "Wieder ist eine grosse Menge seit drei Tagen bei Jesus und hat nichts zu essen. Er hat Mitleid und sagt es den Jüngern; sie fragen: Woher Brot hier in der Einöde? Sie haben sieben Brote.",
     "action_gsw": "Wider isch e grossi Mängi sit drüü Täg bim Jesus und hät nüüt z ässe. Er hät Mitleid und seit s de Jünger; si fröged: Wohär Brot da i de Einödi? Si händ sibe Brot.",
-    "caption_de": "Mitleid: Jesus sagt den Jüngern, die Menge sei seit drei Tagen da (Menge, drei Sonnen; Herz mit Händen). Am Boden sieben Brote.",
-    "caption_gsw": "Mitleid: De Jesus seit de Jünger, d Mängi seig sit drüü Täg da (Mängi, drüü Sunne; Härz mit Händ). Am Bode sibe Brot.",
+    "caption_de": "Mitleid: Jesus hat Erbarmen (Herz mit Händen) und sagt den Jüngern, die Menge sei seit drei Tagen da (Menge, drei Sonnen). Am Boden sieben Brote.",
+    "caption_gsw": "Mitleid: De Jesus hät Erbarme (Härz mit Händ) und seit de Jünger, d Mängi seig sit drüü Täg da (Mängi, drüü Sunne). Am Bode sibe Brot.",
     "stage": {
      "count": {
       "FIG-OBJ-BROT": 7
@@ -2066,7 +2135,14 @@
      "mood": {
       "FIG-GRUPPE-ZWOELF": "worried"
      },
-     "floor_side": "left"
+     "floor_side": "right",
+     "x": {
+      "FIG-GRUPPE-ZWOELF": 30,
+      "FIG-JESUS": 72
+     },
+     "floor_x": {
+      "FIG-OBJ-BROT": 96
+     }
     }
    },
    {
@@ -2079,6 +2155,7 @@
      "FIG-GRUPPE-MENGE"
     ],
     "objects": [
+     "FIG-OBJ-BROT",
      "FIG-OBJ-KORB"
     ],
     "signs": [
@@ -2089,14 +2166,15 @@
       "from": "FIG-JESUS",
       "to": "FIG-GOTT",
       "icons": [
+       "FIG-ZEICHEN-BETEN",
        "FIG-OBJ-BROT"
       ]
      }
     ],
     "action_de": "Die Menge lagert sich; Jesus nimmt die sieben Brote, spricht das Dankgebet, bricht sie und lässt sie durch die Jünger austeilen, ebenso einige Fische. Alle werden satt; sieben Körbe mit Brocken bleiben übrig.",
     "action_gsw": "D Mängi sitzt ab; de Jesus nimmt di sibe Brot, spricht s Dankgebät, bricht si und laat si dur d Jünger verteile, und au es paar Fisch. Alli wärded satt; sibe Chörb mit Brocke bliibed übrig.",
-    "caption_de": "Satt: Jesus dankt Gott für das Brot (Strahlenkranz); die Jünger teilen aus (Pfeile), alle werden satt (volle Schale); sieben Körbe bleiben übrig.",
-    "caption_gsw": "Satt: De Jesus dankt Gott für s Brot (Strahlechranz); d Jünger teiled uus (Pfiil), alli wärded satt (volli Schale); sibe Chörb bliibed übrig.",
+    "caption_de": "Satt: Jesus hält das Brot und dankt Gott dafür (Strahlenkranz; Blase: betende Hände, Brot); die Jünger teilen das Brot aus (Brot in der Hand), alle werden satt (volle Schale); sieben Körbe bleiben übrig.",
+    "caption_gsw": "Satt: De Jesus hebt s Brot und dankt Gott defür (Strahlechranz; Blase: bättendi Händ, Brot); d Jünger teiled s Brot uus (Brot i de Hand), alli wärded satt (volli Schale); sibe Chörb bliibed übrig.",
     "stage": {
      "god_side": "right",
      "floor_side": "left",
@@ -2106,21 +2184,19 @@
      "at": {
       "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
      },
-     "arrows": [
-      [
-       "FIG-JESUS",
-       "FIG-GRUPPE-ZWOELF",
-       "act"
-      ],
-      [
-       "FIG-GRUPPE-ZWOELF",
-       "FIG-GRUPPE-MENGE",
-       "act"
-      ]
-     ],
      "mood": {
       "FIG-GRUPPE-MENGE": "smile"
-     }
+     },
+     "hold": {
+      "FIG-JESUS": "FIG-OBJ-BROT",
+      "FIG-GRUPPE-ZWOELF": "FIG-OBJ-BROT"
+     },
+     "floor_x": {
+      "FIG-OBJ-KORB": 4
+     },
+     "behind": [
+      "FIG-OBJ-KORB"
+     ]
     }
    }
   ],
@@ -2189,8 +2265,8 @@
     ],
     "action_de": "Jesus seufzt tief und sagt: Diesem Geschlecht wird kein Zeichen gegeben werden. Er lässt sie stehen, steigt ins Boot und fährt ans andere Ufer.",
     "action_gsw": "De Jesus süüfzget tüüf und seit: Dere Generation wird kei Zeiche ggä. Er laat si stah, stiigt is Schiffli und fahrt as ander Ufer.",
-    "caption_de": "Kein Zeichen: Jesus sagt: Kein Zeichen (Stern, fehlt), und geht zum Boot (Pfeil).",
-    "caption_gsw": "Kei Zeiche: De Jesus seit: Kei Zeiche (Stern, fehlt), und gaat zum Schiffli (Pfiil).",
+    "caption_de": "Kein Zeichen: Jesus sagt: Kein Zeichen (Stern, leerer Kreis mit Schrägstrich), wendet sich ab und geht zum Boot (Pfeil).",
+    "caption_gsw": "Kei Zeiche: De Jesus seit: Kei Zeiche (Stern, lääre Kreis mit Schrägstrich), chehrt sich ab und gaat zum Schiffli (Pfiil).",
     "stage": {
      "big_side": "right",
      "arrows": [
@@ -2203,6 +2279,9 @@
      "mood": {
       "FIG-JESUS": "earnest",
       "FIG-GRUPPE-PHARISAEER": "earnest"
+     },
+     "pose": {
+      "FIG-JESUS": "away"
      }
     }
    }
@@ -2237,6 +2316,7 @@
       "from": "FIG-JESUS",
       "to": "FIG-GRUPPE-ZWOELF",
       "icons": [
+       "FIG-ZEICHEN-WARNEN",
        "FIG-OBJ-SAUERTEIG",
        "FIG-ROLLE-PHARISAEER",
        "FIG-HERODES-ANTIPAS"
@@ -2245,8 +2325,8 @@
     ],
     "action_de": "Im Boot haben die Jünger nur ein Brot dabei. Jesus warnt: Hütet euch vor dem Sauerteig der Pharisäer und dem Sauerteig des Herodes!",
     "action_gsw": "Im Schiffli händ d Jünger nu eis Brot debii. De Jesus warnt: Passed uf vor em Suurteig vo de Pharisäer und vor em Suurteig vom Herodes!",
-    "caption_de": "Sauerteig: Jesus warnt vor dem Sauerteig der Pharisäer und des Herodes (Teigtrog, Pharisäer, Herodes).",
-    "caption_gsw": "Suurteig: De Jesus warnt vor em Suurteig vo de Pharisäer und vom Herodes (Teigtrog, Pharisäer, Herodes).",
+    "caption_de": "Sauerteig: Jesus warnt (erhobener Zeigefinger) vor dem Sauerteig der Pharisäer und des Herodes (Teigtrog, Pharisäer, Herodes).",
+    "caption_gsw": "Suurteig: De Jesus warnt (ufghebte Zeigfinger) vor em Suurteig vo de Pharisäer und vom Herodes (Teigtrog, Pharisäer, Herodes).",
     "stage": {
      "in": {
       "FIG-JESUS": "FIG-OBJ-BOOT",
@@ -2254,11 +2334,11 @@
      },
      "in_pos": {
       "FIG-JESUS": [
-       0.72,
+       0.8,
        0.45
       ],
       "FIG-GRUPPE-ZWOELF": [
-       0.3,
+       0.26,
        0.45
       ]
      },
@@ -2292,8 +2372,8 @@
     ],
     "action_de": "Die Jünger aber überlegen miteinander, dass sie keine Brote haben.",
     "action_gsw": "D Jünger aber überleged mitenand, dass si kei Brot händ.",
-    "caption_de": "Missverstanden: Die Jünger denken an fehlendes Brot (Brot, fehlt).",
-    "caption_gsw": "Falsch verstande: D Jünger dänked a s fehlend Brot (Brot, fehlt).",
+    "caption_de": "Missverstanden: Die Jünger denken an fehlendes Brot (Brot, leerer Kreis mit Schrägstrich).",
+    "caption_gsw": "Falsch verstande: D Jünger dänked a s fehlend Brot (Brot, lääre Kreis mit Schrägstrich).",
     "stage": {
      "in": {
       "FIG-JESUS": "FIG-OBJ-BOOT",
@@ -2301,11 +2381,11 @@
      },
      "in_pos": {
       "FIG-JESUS": [
-       0.72,
+       0.8,
        0.45
       ],
       "FIG-GRUPPE-ZWOELF": [
-       0.3,
+       0.26,
        0.45
       ]
      },
@@ -2341,8 +2421,8 @@
     ],
     "action_de": "Jesus fragt: Versteht ihr noch nicht? Erinnert ihr euch nicht, wie viele Körbe voll Brocken ihr bei den Fünftausend und bei den Viertausend aufgehoben habt? Sie antworten: Zwölf – sieben.",
     "action_gsw": "De Jesus fröget: Verstönd ihr no nöd? Wüssed ihr nüme, wie vil Chörb voll Brocke ihr bi de Föiftuusig und bi de Viertuusig ufgläse händ? Si antworted: Zwölf – sibe.",
-    "caption_de": "Versteht ihr nicht? Jesus erinnert an die Brote und Körbe (Brot, Korb, Fragezeichen); die Jünger verstehen nicht (Nebel).",
-    "caption_gsw": "Verstönd ihr nöd? De Jesus erinneret a d Brot und d Chörb (Brot, Chorb, Fragezeiche); d Jünger verstönd nöd (Näbel).",
+    "caption_de": "Versteht ihr nicht? Jesus erinnert an die Brote und Körbe (Brot, Korb, Fragezeichen); die Jünger verstehen nicht (grauer Nebel mit Fragezeichen über ihnen).",
+    "caption_gsw": "Verstönd ihr nöd? De Jesus erinneret a d Brot und d Chörb (Brot, Chorb, Fragezeiche); d Jünger verstönd nöd (graue Näbel mit Fragezeiche über ene).",
     "stage": {
      "in": {
       "FIG-JESUS": "FIG-OBJ-BOOT",
@@ -2350,11 +2430,11 @@
      },
      "in_pos": {
       "FIG-JESUS": [
-       0.72,
+       0.8,
        0.45
       ],
       "FIG-GRUPPE-ZWOELF": [
-       0.3,
+       0.26,
        0.45
       ]
      },
@@ -2364,7 +2444,8 @@
      "mood": {
       "FIG-GRUPPE-ZWOELF": "pensive",
       "FIG-JESUS": "earnest"
-     }
+     },
+     "at_top": true
     }
    }
   ],
@@ -2389,7 +2470,9 @@
      "FIG-ROLLE-BLINDER"
     ],
     "objects": [],
-    "signs": [],
+    "signs": [
+     "FIG-ZEICHEN-BLIND"
+    ],
     "speech": [
      {
       "from": "FIG-JESUS",
@@ -2402,8 +2485,8 @@
     ],
     "action_de": "In Betsaida bringt man Jesus einen Blinden. Er führt ihn an der Hand aus dem Dorf, spuckt ihm in die Augen, legt ihm die Hände auf und fragt: Siehst du etwas?",
     "action_gsw": "Z Betsaida bringt me em Jesus en Blinde. Er füert en a de Hand us em Dorf use, spöit em i d Auge, leit em d Händ uf und fröget: Gsehsch öppis?",
-    "caption_de": "Siehst du? Jesus legt dem Blinden die Hände auf (Pfeil) und fragt: Siehst du etwas (Auge, Fragezeichen)?",
-    "caption_gsw": "Gsehsch? De Jesus leit em Blinde d Händ uf (Pfiil) und fröget: Gsehsch öppis (Aug, Fragezeiche)?",
+    "caption_de": "Siehst du? Jesus legt dem Blinden (durchgestrichenes Auge) die Hände auf (Pfeil) und fragt: Siehst du etwas (Auge, Fragezeichen)?",
+    "caption_gsw": "Gsehsch? De Jesus leit em Blinde (durgstrichnigs Aug) d Händ uf (Pfiil) und fröget: Gsehsch öppis (Aug, Fragezeiche)?",
     "stage": {
      "arrows": [
       [
@@ -2414,6 +2497,9 @@
      ],
      "mood": {
       "FIG-ROLLE-BLINDER": "pensive"
+     },
+     "beside": {
+      "FIG-ZEICHEN-BLIND": "FIG-ROLLE-BLINDER"
      }
     }
    },
@@ -2568,8 +2654,8 @@
     ],
     "action_de": "Jesus fragt: Ihr aber, für wen haltet ihr mich? Petrus antwortet: Du bist der Christus! Jesus schärft ihnen ein, niemandem von ihm zu erzählen.",
     "action_gsw": "De Jesus fröget: Und ihr, für wer halted ihr mich? De Petrus antwortet: Du bisch de Chrischtus! De Jesus schärft ene ii, niemertem vo im z verzelle.",
-    "caption_de": "Bekenntnis: Petrus sagt: Du bist der Christus (Jesus, Ölhorn über Krone); Jesus gebietet zu schweigen (Finger vor den Lippen).",
-    "caption_gsw": "Bekänntnis: De Petrus seit: Du bisch de Chrischtus (Jesus, Ölhorn über Chrone); de Jesus befiehlt z schwiige (Finger vor de Lippe).",
+    "caption_de": "Bekenntnis: Petrus sagt: Du bist der Christus (Jesus, Ölhorn über Krone); Jesus gebietet zu schweigen (durchgestrichene Sprechblase).",
+    "caption_gsw": "Bekänntnis: De Petrus seit: Du bisch de Chrischtus (Jesus, Ölhorn über Chrone); de Jesus befiehlt z schwiige (durgstricheni Sprächblase).",
     "stage": {
      "mood": {
       "FIG-PETRUS": "determined",
@@ -2608,14 +2694,16 @@
        "FIG-ZEICHEN-ABLEHNEN",
        "FIG-ZEICHEN-TOD",
        "FIG-ZEICHEN-TAGE",
+       "FIG-ZEICHEN-TAGE",
+       "FIG-ZEICHEN-TAGE",
        "FIG-ZEICHEN-AUFERSTEHUNG"
       ]
      }
     ],
     "action_de": "Jesus beginnt offen zu lehren: Der Menschensohn muss viel leiden, von den Ältesten, Hohepriestern und Schriftgelehrten verworfen und getötet werden und nach drei Tagen auferstehen.",
     "action_gsw": "De Jesus fangt aa offe lehre: De Mänschesohn mues vil liide, vo de Ältischte, Hohepriester und Schriftgelehrte verworfe und tötet wärde und nach drüü Täg uferstah.",
-    "caption_de": "Ankündigung: Jesus sagt, er werde verworfen und getötet (abwehrende Hand, Grab) und nach Tagen auferstehen (Sonne, offenes Grab).",
-    "caption_gsw": "Aachündigung: De Jesus seit, er werdi verworfe und tötet (abwehrendi Hand, Grab) und nach Täg uferstah (Sunne, offes Grab).",
+    "caption_de": "Ankündigung: Jesus sagt, er werde verworfen und getötet (abwehrende Hand, Grab) und nach drei Tagen auferstehen (drei Sonnen, offenes Grab).",
+    "caption_gsw": "Aachündigung: De Jesus seit, er werdi verworfe und tötet (abwehrendi Hand, Grab) und nach drüü Täg uferstah (drüü Sunne, offes Grab).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-ZWOELF": "worried",
@@ -2662,9 +2750,9 @@
       "FIG-GRUPPE-ZWOELF": "surprised"
      },
      "x": {
-      "FIG-PETRUS": 30,
-      "FIG-JESUS": 122,
-      "FIG-GRUPPE-ZWOELF": 168
+      "FIG-PETRUS": 26,
+      "FIG-JESUS": 84,
+      "FIG-GRUPPE-ZWOELF": 150
      }
     }
    },
@@ -2724,6 +2812,7 @@
      "FIG-GRUPPE-MENGE"
     ],
     "objects": [
+     "FIG-OBJ-BROT",
      "FIG-OBJ-KORB"
     ],
     "signs": [
@@ -2732,8 +2821,8 @@
     "speech": [],
     "action_de": "Jesus speist viertausend Menschen mit sieben Broten; alle werden satt, sieben Körbe bleiben übrig.",
     "action_gsw": "De Jesus git viertuusig Mänsche mit sibe Brot z ässe; alli wärded satt, sibe Chörb bliibed übrig.",
-    "caption_de": "Speisung: Die Jünger teilen das Brot aus (Pfeile), alle werden satt (volle Schale); sieben Körbe bleiben übrig.",
-    "caption_gsw": "Spiisig: D Jünger teiled s Brot uus (Pfiil), alli wärded satt (volli Schale); sibe Chörb bliibed übrig.",
+    "caption_de": "Speisung: Die Jünger teilen das Brot aus (Brot in der Hand), alle werden satt (volle Schale); sieben Körbe bleiben übrig.",
+    "caption_gsw": "Spiisig: D Jünger teiled s Brot uus (Brot i de Hand), alli wärded satt (volli Schale); sibe Chörb bliibed übrig.",
     "stage": {
      "count": {
       "FIG-OBJ-KORB": 7
@@ -2741,21 +2830,19 @@
      "at": {
       "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
      },
-     "arrows": [
-      [
-       "FIG-JESUS",
-       "FIG-GRUPPE-ZWOELF",
-       "act"
-      ],
-      [
-       "FIG-GRUPPE-ZWOELF",
-       "FIG-GRUPPE-MENGE",
-       "act"
-      ]
-     ],
      "mood": {
       "FIG-GRUPPE-MENGE": "smile"
-     }
+     },
+     "floor_side": "left",
+     "floor_x": {
+      "FIG-OBJ-KORB": 4
+     },
+     "hold": {
+      "FIG-GRUPPE-ZWOELF": "FIG-OBJ-BROT"
+     },
+     "behind": [
+      "FIG-OBJ-KORB"
+     ]
     }
    },
    {

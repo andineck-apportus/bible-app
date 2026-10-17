@@ -34,15 +34,15 @@
       ],
       "action_de": "Am Abend sind die Jünger aus Furcht hinter verschlossenen Türen. Jesus tritt in ihre Mitte und sagt: «Friede euch!» Er zeigt ihnen Hände und Seite; da freuen sich die Jünger.",
       "stage": {
-        "hold": {
-          "FIG-JESUS": "FIG-ZEICHEN-WUNDMALE"
-        },
         "mood": {
           "FIG-GRUPPE-JUENGER": "delight",
           "FIG-JESUS": "smile"
         },
         "air_x": 8,
-        "air_y": 40
+        "air_y": 40,
+        "beside": {
+          "FIG-ZEICHEN-WUNDMALE": "FIG-JESUS"
+        }
       }
     },
     {
@@ -151,5 +151,115 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.20.19-JHN.20.20",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-VERSCHLOSSEN",
+              "FIG-ZEICHEN-WUNDMALE",
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-FRIEDE"
+                ]
+              }
+            ],
+            "action_de": "Am Abend sind die Jünger aus Furcht hinter verschlossenen Türen. Jesus tritt in ihre Mitte und sagt: «Friede euch!» Er zeigt ihnen Hände und Seite; da freuen sich die Jünger.",
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-ZEICHEN-WUNDMALE"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "delight",
+                "FIG-JESUS": "smile"
+              },
+              "air_x": 8,
+              "air_y": 40
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.20.21",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-GOTT",
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-ZEICHEN-AUSBREITEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt wieder: «Friede euch! Wie der Vater mich gesandt hat, so sende auch ich euch.»",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "calm",
+                "FIG-JESUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.20.22-JHN.20.23",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-WIND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-HEILIGER-GEIST",
+                  "FIG-ZEICHEN-SUENDE",
+                  "FIG-ZEICHEN-VERGEBUNG"
+                ]
+              }
+            ],
+            "action_de": "Er haucht sie an und sagt: «Empfangt heiligen Geist! Wem ihr die Sünden vergebt, dem sind sie vergeben; wem ihr sie behaltet, dem sind sie behalten.»",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-WIND": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "calm",
+                "FIG-JESUS": "calm"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

@@ -33,7 +33,9 @@
           "icons": [
             "FIG-ZEICHEN-NEIN",
             "FIG-ZEICHEN-MESSIAS",
+            "FIG-ZEICHEN-NEIN",
             "FIG-ELIJA",
+            "FIG-ZEICHEN-NEIN",
             "FIG-ROLLE-PROPHET"
           ]
         }
@@ -65,7 +67,7 @@
           "to": "FIG-GRUPPE-PRIESTER",
           "icons": [
             "FIG-JOHANNES-TAEUFER",
-            "FIG-ZEICHEN-VERKUENDIGEN",
+            "FIG-ZEICHEN-SPRECHEN",
             "FIG-ORT-WUESTE"
           ]
         }
@@ -86,11 +88,10 @@
         "FIG-JOHANNES-TAEUFER"
       ],
       "objects": [
-        "FIG-ORT-JORDAN"
+        "FIG-ORT-JORDAN",
+        "FIG-OBJ-TAUFMUSCHEL"
       ],
-      "signs": [
-        "FIG-ZEICHEN-TAUFE"
-      ],
+      "signs": [],
       "speech": [
         {
           "from": "FIG-JOHANNES-TAEUFER",
@@ -98,6 +99,7 @@
           "icons": [
             "FIG-JESUS",
             "FIG-OBJ-SANDALE",
+            "FIG-JOHANNES-TAEUFER",
             "FIG-ZEICHEN-NEIN"
           ]
         }
@@ -108,12 +110,12 @@
           "FIG-GRUPPE-PRIESTER": "earnest",
           "FIG-JOHANNES-TAEUFER": "calm"
         },
-        "at": {
-          "FIG-ZEICHEN-TAUFE": "FIG-JOHANNES-TAEUFER"
-        },
         "x": {
           "FIG-GRUPPE-PRIESTER": 40,
           "FIG-JOHANNES-TAEUFER": 140
+        },
+        "hold": {
+          "FIG-JOHANNES-TAEUFER": "FIG-OBJ-TAUFMUSCHEL"
         }
       }
     }
@@ -124,9 +126,9 @@
     "Sie fragen, warum er taufe. Johannes antwortet: Ich taufe mit Wasser; mitten unter euch steht einer, der nach mir kommt; ich bin nicht würdig, ihm den Riemen seiner Sandale zu lösen. Das geschieht in Betanien jenseits des Jordan."
   ],
   "captions_de": [
-    "Wer bist du? Die Abgesandten aus Jerusalem fragen Johannes (Johannes, ?); er sagt: nicht (rotes X) der Messias (Salbhorn, Krone), nicht Elija, nicht der Prophet.",
-    "Die Stimme: Johannes sagt: Ich (Johannes) bin die Stimme, die in der Wüste ruft (Rufer, Wüste).",
-    "Taufe mit Wasser: Johannes tauft am Jordan mit Wasser (Muschel) und sagt: Nach mir kommt einer (Jesus), dessen Sandale zu lösen ich nicht würdig bin (Sandale, rotes X)."
+    "Wer bist du? Die Abgesandten aus Jerusalem fragen Johannes (Johannes, ?); er sagt: nicht der Messias (rotes X, Salbhorn, Krone), nicht Elija (rotes X, Elija), nicht der Prophet (rotes X, Prophet).",
+    "Die Stimme: Johannes sagt: Ich (Johannes) bin die Stimme (Schallwellen), die in der Wüste ruft (Wüste).",
+    "Taufe mit Wasser: Johannes tauft am Jordan mit Wasser (Muschel in der Hand) und sagt: Nach mir kommt einer (Jesus); seine Sandale zu lösen, bin ich (Johannes) nicht würdig (Sandale, rotes X)."
   ],
   "interpretation_note_de": "Die Abgesandten erscheinen als Gruppe von Priestern ([[JHN.1.19]]: Priester und Leviten); dass sie von den Pharisäern gesandt sind ([[JHN.1.24]]), zeigt das Bild nicht. Für «nicht» steht das rote X, für den Messias (Christus, «Gesalbter») Salbhorn und Krone. In der Sprechblase von Feld 3 steht Jesus für den, «der nach mir kommt»; Johannes nennt ihn hier noch nicht beim Namen ([[JHN.1.26-JHN.1.27]]).",
   "basis": [
@@ -159,5 +161,128 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.1.19-JHN.1.21",
+            "figures": [
+              "FIG-GRUPPE-PRIESTER",
+              "FIG-JOHANNES-TAEUFER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-PRIESTER",
+                "to": "FIG-JOHANNES-TAEUFER",
+                "icons": [
+                  "FIG-JOHANNES-TAEUFER",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-JOHANNES-TAEUFER",
+                "to": "FIG-GRUPPE-PRIESTER",
+                "icons": [
+                  "FIG-ZEICHEN-NEIN",
+                  "FIG-ZEICHEN-MESSIAS",
+                  "FIG-ELIJA",
+                  "FIG-ROLLE-PROPHET"
+                ]
+              }
+            ],
+            "action_de": "Priester und Leviten aus Jerusalem fragen Johannes: Wer bist du? Er bekennt: Ich bin nicht der Christus, nicht Elija und nicht der Prophet.",
+            "stage": {
+              "x": {
+                "FIG-GRUPPE-PRIESTER": 40,
+                "FIG-JOHANNES-TAEUFER": 140
+              },
+              "mood": {
+                "FIG-GRUPPE-PRIESTER": "earnest",
+                "FIG-JOHANNES-TAEUFER": "earnest"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.1.22-JHN.1.23",
+            "figures": [
+              "FIG-GRUPPE-PRIESTER",
+              "FIG-JOHANNES-TAEUFER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JOHANNES-TAEUFER",
+                "to": "FIG-GRUPPE-PRIESTER",
+                "icons": [
+                  "FIG-JOHANNES-TAEUFER",
+                  "FIG-ZEICHEN-VERKUENDIGEN",
+                  "FIG-ORT-WUESTE"
+                ]
+              }
+            ],
+            "action_de": "Auf die Frage, was er über sich sage, antwortet Johannes: Ich bin die Stimme eines Rufenden in der Wüste: Macht den Weg des Herrn gerade!",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-PRIESTER": "surprised",
+                "FIG-JOHANNES-TAEUFER": "earnest"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.1.25-JHN.1.28",
+            "figures": [
+              "FIG-GRUPPE-PRIESTER",
+              "FIG-JOHANNES-TAEUFER"
+            ],
+            "objects": [
+              "FIG-ORT-JORDAN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TAUFE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JOHANNES-TAEUFER",
+                "to": "FIG-GRUPPE-PRIESTER",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-OBJ-SANDALE",
+                  "FIG-ZEICHEN-NEIN"
+                ]
+              }
+            ],
+            "action_de": "Sie fragen, warum er taufe. Johannes antwortet: Ich taufe mit Wasser; mitten unter euch steht einer, der nach mir kommt; ich bin nicht würdig, ihm den Riemen seiner Sandale zu lösen. Das geschieht in Betanien jenseits des Jordan.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-PRIESTER": "earnest",
+                "FIG-JOHANNES-TAEUFER": "calm"
+              },
+              "at": {
+                "FIG-ZEICHEN-TAUFE": "FIG-JOHANNES-TAEUFER"
+              },
+              "x": {
+                "FIG-GRUPPE-PRIESTER": 40,
+                "FIG-JOHANNES-TAEUFER": 140
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Wer bist du? Die Abgesandten aus Jerusalem fragen Johannes (Johannes, ?); er sagt: nicht (rotes X) der Messias (Salbhorn, Krone), nicht Elija, nicht der Prophet.",
+          "Die Stimme: Johannes sagt: Ich (Johannes) bin die Stimme, die in der Wüste ruft (Rufer, Wüste).",
+          "Taufe mit Wasser: Johannes tauft am Jordan mit Wasser (Muschel) und sagt: Nach mir kommt einer (Jesus), dessen Sandale zu lösen ich nicht würdig bin (Sandale, rotes X)."
+        ]
+      }
+    }
+  ]
 }

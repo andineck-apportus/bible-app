@@ -42,11 +42,11 @@
         "in_pos": {
           "FIG-PETRUS": [
             0.3,
-            0.42
+            0.52
           ],
           "FIG-GRUPPE-JUENGER": [
             0.68,
-            0.42
+            0.52
           ]
         },
         "mood": {
@@ -93,7 +93,7 @@
         "in_pos": {
           "FIG-GRUPPE-JUENGER": [
             0.45,
-            0.42
+            0.52
           ]
         },
         "big_side": "left",
@@ -101,7 +101,7 @@
           "FIG-JESUS": 156
         },
         "floor_x": {
-          "FIG-OBJ-NETZ": 64
+          "FIG-OBJ-NETZ": 40
         },
         "mood": {
           "FIG-GRUPPE-JUENGER": "surprised",
@@ -139,7 +139,7 @@
         "in_pos": {
           "FIG-LIEBLINGSJUENGER": [
             0.45,
-            0.42
+            0.52
           ]
         },
         "big_side": "left",
@@ -147,12 +147,12 @@
           "FIG-PETRUS": "fall"
         },
         "x": {
-          "FIG-PETRUS": 104,
+          "FIG-PETRUS": 86,
           "FIG-JESUS": 160
         },
         "mood": {
           "FIG-LIEBLINGSJUENGER": "delight",
-          "FIG-PETRUS": "determined"
+          "FIG-PETRUS": "delight"
         },
         "arrows": [
           [
@@ -191,18 +191,17 @@
       "action_de": "An Land finden sie ein Kohlenfeuer mit Fisch und Brot. Petrus zieht das Netz mit 153 grossen Fischen an Land, und es zerreisst nicht. Jesus sagt: «Kommt, esst!», nimmt das Brot und den Fisch und gibt es ihnen. Es ist das dritte Mal, dass er sich den Jüngern nach seiner Auferweckung zeigt.",
       "stage": {
         "hold": {
-          "FIG-JESUS": "FIG-OBJ-BROT"
+          "FIG-PETRUS": "FIG-OBJ-NETZ"
         },
         "x": {
-          "FIG-PETRUS": 26,
+          "FIG-PETRUS": 20,
           "FIG-JESUS": 100,
-          "FIG-GRUPPE-JUENGER": 160
+          "FIG-GRUPPE-JUENGER": 166
         },
         "floor_x": {
-          "FIG-OBJ-NETZ": 50,
           "FIG-OBJ-KOHLENFEUER": 116,
-          "FIG-OBJ-FISCH": 120,
-          "FIG-OBJ-BROT": 132
+          "FIG-OBJ-FISCH": 122,
+          "FIG-OBJ-BROT": 142
         },
         "mood": {
           "FIG-GRUPPE-JUENGER": "delight",
@@ -220,7 +219,7 @@
   ],
   "captions_de": [
     "Nichts gefangen: Petrus und die Jünger im Boot bei Nacht (Mond); kein Fisch (leer).",
-    "Das volle Netz: Jesus am Ufer ruft: Werft das Netz aus (Netz, Fisch); die Jünger erkennen ihn nicht (grauer Nebel); das Netz wird voll.",
+    "Das volle Netz: Jesus am Ufer ruft: Werft das Netz aus (Netz, Fisch); die Jünger erkennen ihn nicht (Wirbel mit Fragezeichen); das Netz wird voll.",
     "«Es ist der Herr!»: Der Jünger, den Jesus liebte, erkennt Jesus (Jesus); Petrus springt in den See und eilt zu Jesus (Pfeil).",
     "Das Mahl am Feuer: Petrus bringt das volle Netz; am Kohlenfeuer mit Fisch und Brot lädt Jesus die Jünger zum Essen ein (Brot, Fisch)."
   ],
@@ -261,5 +260,223 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.21.1-JHN.21.3",
+            "figures": [
+              "FIG-PETRUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NACHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-FISCH",
+                  "FIG-ZEICHEN-FEHLT"
+                ]
+              }
+            ],
+            "action_de": "Am See von Tiberias sind Simon Petrus, Thomas, Natanaël, die Söhne des Zebedäus und zwei andere Jünger beisammen. Petrus sagt: «Ich gehe fischen»; sie fahren mit, aber in jener Nacht fangen sie nichts.",
+            "stage": {
+              "in": {
+                "FIG-PETRUS": "FIG-OBJ-BOOT",
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-PETRUS": [
+                  0.3,
+                  0.42
+                ],
+                "FIG-GRUPPE-JUENGER": [
+                  0.68,
+                  0.42
+                ]
+              },
+              "mood": {
+                "FIG-PETRUS": "worried",
+                "FIG-GRUPPE-JUENGER": "worried"
+              },
+              "air_x": 150,
+              "air_y": 8
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.21.4-JHN.21.6",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-UFER",
+              "FIG-OBJ-NETZ"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NICHT-VERSTEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-NETZ",
+                  "FIG-OBJ-FISCH"
+                ]
+              }
+            ],
+            "action_de": "Am Morgen steht Jesus am Ufer; die Jünger erkennen ihn nicht. Er sagt: «Werft das Netz auf der rechten Seite des Bootes aus, und ihr werdet etwas finden.» Nun können sie das Netz wegen der Menge der Fische nicht mehr einziehen.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-GRUPPE-JUENGER"
+              },
+              "in": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-JUENGER": [
+                  0.45,
+                  0.42
+                ]
+              },
+              "big_side": "left",
+              "x": {
+                "FIG-JESUS": 156
+              },
+              "floor_x": {
+                "FIG-OBJ-NETZ": 64
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "surprised",
+                "FIG-JESUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.21.7-JHN.21.8",
+            "figures": [
+              "FIG-LIEBLINGSJUENGER",
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-UFER"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-LIEBLINGSJUENGER",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Der Jünger, den Jesus liebte, sagt zu Petrus: «Es ist der Herr!» Petrus gürtet sein Obergewand um und wirft sich in den See; die anderen Jünger kommen mit dem Boot und schleppen das Netz nach.",
+            "stage": {
+              "in": {
+                "FIG-LIEBLINGSJUENGER": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-LIEBLINGSJUENGER": [
+                  0.45,
+                  0.42
+                ]
+              },
+              "big_side": "left",
+              "pose": {
+                "FIG-PETRUS": "fall"
+              },
+              "x": {
+                "FIG-PETRUS": 104,
+                "FIG-JESUS": 160
+              },
+              "mood": {
+                "FIG-LIEBLINGSJUENGER": "delight",
+                "FIG-PETRUS": "determined"
+              },
+              "arrows": [
+                [
+                  "FIG-PETRUS",
+                  "FIG-JESUS",
+                  "go"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.21.9-JHN.21.14",
+            "figures": [
+              "FIG-PETRUS",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-NETZ",
+              "FIG-OBJ-KOHLENFEUER",
+              "FIG-OBJ-FISCH",
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-BROT",
+                  "FIG-OBJ-FISCH"
+                ]
+              }
+            ],
+            "action_de": "An Land finden sie ein Kohlenfeuer mit Fisch und Brot. Petrus zieht das Netz mit 153 grossen Fischen an Land, und es zerreisst nicht. Jesus sagt: «Kommt, esst!», nimmt das Brot und den Fisch und gibt es ihnen. Es ist das dritte Mal, dass er sich den Jüngern nach seiner Auferweckung zeigt.",
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROT"
+              },
+              "x": {
+                "FIG-PETRUS": 26,
+                "FIG-JESUS": 100,
+                "FIG-GRUPPE-JUENGER": 160
+              },
+              "floor_x": {
+                "FIG-OBJ-NETZ": 50,
+                "FIG-OBJ-KOHLENFEUER": 116,
+                "FIG-OBJ-FISCH": 120,
+                "FIG-OBJ-BROT": 132
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "delight",
+                "FIG-PETRUS": "delight",
+                "FIG-JESUS": "smile"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Nichts gefangen: Petrus und die Jünger im Boot bei Nacht (Mond); kein Fisch (leer).",
+          "Das volle Netz: Jesus am Ufer ruft: Werft das Netz aus (Netz, Fisch); die Jünger erkennen ihn nicht (grauer Nebel); das Netz wird voll.",
+          "«Es ist der Herr!»: Der Jünger, den Jesus liebte, erkennt Jesus (Jesus); Petrus springt in den See und eilt zu Jesus (Pfeil).",
+          "Das Mahl am Feuer: Petrus bringt das volle Netz; am Kohlenfeuer mit Fisch und Brot lädt Jesus die Jünger zum Essen ein (Brot, Fisch)."
+        ]
+      }
+    }
+  ]
 }

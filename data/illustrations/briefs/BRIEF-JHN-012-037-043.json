@@ -16,7 +16,9 @@
         "FIG-ROLLE-PROPHET",
         "FIG-GRUPPE-MENGE"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-OBJ-SCHRIFTROLLE"
+      ],
       "signs": [
         "FIG-ZEICHEN-STERN",
         "FIG-ZEICHEN-BLIND"
@@ -43,7 +45,10 @@
           "FIG-GRUPPE-MENGE": "pensive"
         },
         "air_x": 60,
-        "air_y": 50
+        "air_y": 50,
+        "hold": {
+          "FIG-ROLLE-PROPHET": "FIG-OBJ-SCHRIFTROLLE"
+        }
       }
     },
     {
@@ -56,8 +61,8 @@
       "objects": [],
       "signs": [
         "FIG-ZEICHEN-GLAUBEN",
-        "FIG-ZEICHEN-AUSSCHLUSS",
-        "FIG-ZEICHEN-ABSTAND"
+        "FIG-ZEICHEN-SCHWEIGEN",
+        "FIG-ZEICHEN-AUSSCHLUSS"
       ],
       "speech": [],
       "action_de": "Dennoch glauben auch viele der Oberen an Jesus, bekennen es aber wegen der Pharisäer nicht, um nicht aus der Synagoge ausgeschlossen zu werden; sie lieben die Ehre bei Menschen mehr als die Ehre bei Gott.",
@@ -67,15 +72,21 @@
             "FIG-GRUPPE-OBERE"
           ]
         },
-        "split": 1,
-        "air_x": 80,
-        "air_y": 10,
+        "air_x": 44,
+        "air_y": 14,
         "mood": {
           "FIG-GRUPPE-OBERE": "worried",
           "FIG-GRUPPE-PHARISAEER": "earnest"
         },
         "pose": {
           "FIG-GRUPPE-OBERE": "away"
+        },
+        "x": {
+          "FIG-GRUPPE-OBERE": 56,
+          "FIG-GRUPPE-PHARISAEER": 146
+        },
+        "beside": {
+          "FIG-ZEICHEN-SCHWEIGEN": "FIG-GRUPPE-OBERE"
         }
       }
     }
@@ -85,8 +96,8 @@
     "Dennoch glauben auch viele der Oberen an Jesus, bekennen es aber wegen der Pharisäer nicht, um nicht aus der Synagoge ausgeschlossen zu werden; sie lieben die Ehre bei Menschen mehr als die Ehre bei Gott."
   ],
   "captions_de": [
-    "Trotz der Zeichen: Viele Zeichen (Sterne), doch die Menge sieht nicht (durchgestrichenes Auge); der Prophet Jesaja hatte es gesagt.",
-    "Heimlicher Glaube: Viele der Oberen glauben (Herz), schweigen aber aus Angst vor dem Ausschluss (Haus mit Pfeil) durch die Pharisäer."
+    "Trotz der Zeichen: Viele Zeichen (Sterne), doch die Menge sieht nicht (durchgestrichenes Auge); der Prophet Jesaja (Schriftrolle) hatte gesagt: Sie sehen nicht und verstehen nicht (Auge, Nebel mit Fragezeichen).",
+    "Heimlicher Glaube: Viele der Oberen glauben (Herz), schweigen aber (durchgestrichene Sprechblase) aus Angst vor dem Ausschluss (Haus mit Pfeil hinaus) durch die Pharisäer."
   ],
   "interpretation_note_de": "Der Prophet ist Jesaja; seine Worte ([[ISA.53.1]], [[ISA.6.10]]) zitiert der Erzähler, das Bild zeigt sie nur als Zeichen «blind» und «nicht verstehen». Dass Gott «geblendet» habe ([[JHN.12.40]]), zeigt das Bild nicht.",
   "basis": [
@@ -113,5 +124,89 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.12.37-JHN.12.41",
+            "figures": [
+              "FIG-ROLLE-PROPHET",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-STERN",
+              "FIG-ZEICHEN-BLIND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-PROPHET",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-BLIND",
+                  "FIG-ZEICHEN-NICHT-VERSTEHEN"
+                ]
+              }
+            ],
+            "action_de": "Obwohl Jesus so viele Zeichen vor ihnen getan hat, glauben sie nicht an ihn; der Erzähler deutet das mit Worten Jesajas: Er hat ihre Augen geblendet und ihr Herz verhärtet. Jesaja sah seine Herrlichkeit.",
+            "stage": {
+              "count": {
+                "FIG-ZEICHEN-STERN": 3
+              },
+              "at": {
+                "FIG-ZEICHEN-BLIND": "FIG-GRUPPE-MENGE"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "pensive"
+              },
+              "air_x": 60,
+              "air_y": 50
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.12.42-JHN.12.43",
+            "figures": [
+              "FIG-GRUPPE-OBERE",
+              "FIG-GRUPPE-PHARISAEER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-GLAUBEN",
+              "FIG-ZEICHEN-AUSSCHLUSS",
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [],
+            "action_de": "Dennoch glauben auch viele der Oberen an Jesus, bekennen es aber wegen der Pharisäer nicht, um nicht aus der Synagoge ausgeschlossen zu werden; sie lieben die Ehre bei Menschen mehr als die Ehre bei Gott.",
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-GLAUBEN": [
+                  "FIG-GRUPPE-OBERE"
+                ]
+              },
+              "split": 1,
+              "air_x": 80,
+              "air_y": 10,
+              "mood": {
+                "FIG-GRUPPE-OBERE": "worried",
+                "FIG-GRUPPE-PHARISAEER": "earnest"
+              },
+              "pose": {
+                "FIG-GRUPPE-OBERE": "away"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Trotz der Zeichen: Viele Zeichen (Sterne), doch die Menge sieht nicht (durchgestrichenes Auge); der Prophet Jesaja hatte es gesagt.",
+          "Heimlicher Glaube: Viele der Oberen glauben (Herz), schweigen aber aus Angst vor dem Ausschluss (Haus mit Pfeil) durch die Pharisäer."
+        ]
+      }
+    }
+  ]
 }

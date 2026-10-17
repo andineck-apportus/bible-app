@@ -38,11 +38,11 @@
         "hold": {
           "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
         },
-        "at": {
-          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
-        },
         "mood": {
           "FIG-ROLLE-KRANKER": "delight"
+        },
+        "beside": {
+          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
         }
       }
     },
@@ -121,6 +121,9 @@
         "x": {
           "FIG-GRUPPE-MENGE": 50,
           "FIG-JESUS": 140
+        },
+        "signs_who": {
+          "FIG-ZEICHEN-LIEBE": []
         }
       }
     },
@@ -162,7 +165,7 @@
   "captions_de": [
     "Am Teich: Jesus heilt den Kranken (Hand mit Licht); er nimmt die Matte und geht (Matte, Pfeil).",
     "Sabbat: Die Leute sagen: Am Sabbat keine Matte tragen (Sabbat, Matte, rotes X).",
-    "Vater und Sohn: Gott (Strahlenkranz, Herzen) zeigt dem Sohn alles (Pfeil); wer hört und glaubt (Ohr, Herz), lebt (Keimling).",
+    "Vater und Sohn: Gott (Strahlenkranz, Herzen) zeigt dem Sohn alles (Pfeil); wer hört und glaubt (Ohr, Herz), lebt (Baum im Ring).",
     "Zeugen: Johannes und die Werke (Johannes, Stern), Mose und die Schrift (Mose, Rolle) bezeugen Jesus."
   ],
   "interpretation_note_de": "Je ein Feld aus den vier Abschnitten des Kapitels; Einzelheiten dort. «Die Juden» erscheinen als neutrale Menge.",
@@ -178,5 +181,164 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.5.1-JHN.5.9",
+            "figures": [
+              "FIG-ROLLE-KRANKER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-TEICH",
+              "FIG-OBJ-MATTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-KRANKER",
+                "icons": [
+                  "FIG-OBJ-MATTE",
+                  "FIG-ZEICHEN-BRINGEN"
+                ]
+              }
+            ],
+            "action_de": "Am Teich Betesda heilt Jesus einen Mann, der achtunddreissig Jahre krank war: Steh auf, nimm deine Matte und geh umher!",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
+              },
+              "at": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
+              },
+              "mood": {
+                "FIG-ROLLE-KRANKER": "delight"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.5.10-JHN.5.18",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-ROLLE-KRANKER"
+            ],
+            "objects": [
+              "FIG-OBJ-MATTE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-ROLLE-KRANKER",
+                "icons": [
+                  "FIG-ZEICHEN-SABBAT",
+                  "FIG-OBJ-MATTE",
+                  "FIG-ZEICHEN-NEIN"
+                ]
+              }
+            ],
+            "action_de": "Weil Sabbat ist, werfen die Juden dem Geheilten vor, dass er die Matte trägt, und verfolgen Jesus.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-ROLLE-KRANKER": "worried"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.5.19-JHN.5.30",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-LIEBE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-HOEREN",
+                  "FIG-ZEICHEN-GLAUBEN",
+                  "FIG-ZEICHEN-LEBEN"
+                ]
+              }
+            ],
+            "action_de": "Der Sohn tut, was er den Vater tun sieht; der Vater liebt ihn. Wer sein Wort hört und glaubt, hat ewiges Leben.",
+            "stage": {
+              "god_side": "left",
+              "at": {
+                "FIG-ZEICHEN-LIEBE": "FIG-GOTT"
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-MENGE": "pensive"
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 50,
+                "FIG-JESUS": 140
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.5.31-JHN.5.47",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-JOHANNES-TAEUFER",
+                  "FIG-ZEICHEN-STERN",
+                  "FIG-MOSE",
+                  "FIG-OBJ-SCHRIFTROLLE"
+                ]
+              }
+            ],
+            "action_de": "Für Jesus zeugen Johannes, die Werke, der Vater und die Schriften; Mose hat über ihn geschrieben.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "pensive"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Am Teich: Jesus heilt den Kranken (Hand mit Licht); er nimmt die Matte und geht (Matte, Pfeil).",
+          "Sabbat: Die Leute sagen: Am Sabbat keine Matte tragen (Sabbat, Matte, rotes X).",
+          "Vater und Sohn: Gott (Strahlenkranz, Herzen) zeigt dem Sohn alles (Pfeil); wer hört und glaubt (Ohr, Herz), lebt (Keimling).",
+          "Zeugen: Johannes und die Werke (Johannes, Stern), Mose und die Schrift (Mose, Rolle) bezeugen Jesus."
+        ]
+      }
+    }
+  ]
 }

@@ -25,20 +25,21 @@
           "to": "FIG-ROLLE-TEMPELWACHE",
           "icons": [
             "FIG-JESUS",
-            "FIG-ZEICHEN-BRINGEN"
+            "FIG-ZEICHEN-BRINGEN",
+            "FIG-ROLLE-HOHEPRIESTER"
           ]
         }
       ],
       "action_de": "Als die Pharisäer das Gemurmel der Menge hören, senden sie und die Hohepriester Diener aus, um Jesus festzunehmen.",
       "stage": {
         "mood": {
-          "FIG-ROLLE-HOHEPRIESTER": "earnest",
-          "FIG-GRUPPE-PHARISAEER": "earnest",
+          "FIG-ROLLE-HOHEPRIESTER": "calm",
+          "FIG-GRUPPE-PHARISAEER": "calm",
           "FIG-ROLLE-TEMPELWACHE": "calm"
         },
         "arrows": [
           [
-            "FIG-ROLLE-HOHEPRIESTER",
+            "FIG-GRUPPE-PHARISAEER",
             "FIG-ROLLE-TEMPELWACHE",
             "act"
           ]
@@ -62,8 +63,10 @@
           "to": "FIG-GRUPPE-MENGE",
           "icons": [
             "FIG-ZEICHEN-STUNDE",
+            "FIG-ZEICHEN-FLIEHEN",
             "FIG-GOTT",
             "FIG-ZEICHEN-FRAGEN",
+            "FIG-JESUS",
             "FIG-ZEICHEN-FEHLT"
           ]
         }
@@ -72,7 +75,7 @@
       "stage": {
         "mood": {
           "FIG-JESUS": "calm",
-          "FIG-GRUPPE-MENGE": "pensive"
+          "FIG-GRUPPE-MENGE": "surprised"
         },
         "at": {
           "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-GRUPPE-MENGE"
@@ -85,8 +88,8 @@
     "Jesus sagt: Noch eine kleine Zeit bin ich bei euch, dann gehe ich zu dem, der mich gesandt hat. Ihr werdet mich suchen und nicht finden. Die Juden fragen sich, wohin er gehen will."
   ],
   "captions_de": [
-    "Diener ausgesandt: Hohepriester und Pharisäer schicken die Tempeldiener, um Jesus zu holen (Jesus, Pfeil).",
-    "Noch eine kleine Zeit: Jesus geht bald zu Gott (Sanduhr, Strahlenkranz); sie werden ihn suchen und nicht finden (Fragezeichen, leer); sie verstehen es nicht."
+    "Diener ausgesandt: Der Hohepriester und die Pharisäer (Pfeil) schicken den Tempeldiener, um Jesus zu ihnen zu holen (Jesus, Pfeil, Hohepriester).",
+    "Noch eine kleine Zeit: Jesus geht bald zu Gott (Sanduhr, Pfeil, Strahlenkranz); sie werden ihn suchen und nicht finden (Fragezeichen, Jesus, leer); sie verstehen es nicht (graues Fragezeichen über den Köpfen)."
   ],
   "interpretation_note_de": "Die Diener (ὑπηρέται, [[JHN.7.32]]) sind als Tempeldiener gezeichnet, der Hohepriester steht für «die Hohepriester». Die Frage nach der Diaspora und den Griechen ([[JHN.7.35]]) ist mit dem Zeichen «nicht verstehen» zusammengefasst.",
   "basis": [
@@ -113,5 +116,89 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.7.32",
+            "figures": [
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-ROLLE-HOHEPRIESTER",
+              "FIG-ROLLE-TEMPELWACHE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-HOHEPRIESTER",
+                "to": "FIG-ROLLE-TEMPELWACHE",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-BRINGEN"
+                ]
+              }
+            ],
+            "action_de": "Als die Pharisäer das Gemurmel der Menge hören, senden sie und die Hohepriester Diener aus, um Jesus festzunehmen.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-HOHEPRIESTER": "earnest",
+                "FIG-GRUPPE-PHARISAEER": "earnest",
+                "FIG-ROLLE-TEMPELWACHE": "calm"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-HOHEPRIESTER",
+                  "FIG-ROLLE-TEMPELWACHE",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.7.33-JHN.7.36",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-NICHT-VERSTEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-STUNDE",
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-FRAGEN",
+                  "FIG-ZEICHEN-FEHLT"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: Noch eine kleine Zeit bin ich bei euch, dann gehe ich zu dem, der mich gesandt hat. Ihr werdet mich suchen und nicht finden. Die Juden fragen sich, wohin er gehen will.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-MENGE": "pensive"
+              },
+              "at": {
+                "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-GRUPPE-MENGE"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Diener ausgesandt: Hohepriester und Pharisäer schicken die Tempeldiener, um Jesus zu holen (Jesus, Pfeil).",
+          "Noch eine kleine Zeit: Jesus geht bald zu Gott (Sanduhr, Strahlenkranz); sie werden ihn suchen und nicht finden (Fragezeichen, leer); sie verstehen es nicht."
+        ]
+      }
+    }
+  ]
 }

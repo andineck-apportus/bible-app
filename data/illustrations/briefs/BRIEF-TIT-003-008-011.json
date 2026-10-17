@@ -41,6 +41,9 @@
         "mood": {
           "FIG-GRUPPE-GLAUBENDE": "smile",
           "FIG-GRUPPE-MENGE": "smile"
+        },
+        "wear": {
+          "FIG-GRUPPE-MENGE": "#8A7A6A"
         }
       }
     },
@@ -98,8 +101,8 @@
       "stage": {
         "split": 1,
         "mood": {
-          "FIG-TITUS": "earnest",
-          "FIG-ROLLE-SPALTER": "earnest"
+          "FIG-TITUS": "calm",
+          "FIG-ROLLE-SPALTER": "pensive"
         }
       }
     }
@@ -145,5 +148,109 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "TIT.3.8",
+            "figures": [
+              "FIG-GRUPPE-GLAUBENDE",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-GUTE-WERKE"
+            ],
+            "speech": [],
+            "action_de": "Die zum Glauben gekommen sind, sollen sich für gute Werke einsetzen; das ist gut und nützlich für die Menschen.",
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-GLAUBENDE": "FIG-OBJ-BROT"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-GLAUBENDE",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-GUTE-WERKE": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "smile",
+                "FIG-GRUPPE-MENGE": "smile"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "TIT.3.9",
+            "figures": [
+              "FIG-TITUS",
+              "FIG-GRUPPE-IRRLEHRER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-GEREDE",
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [],
+            "action_de": "Törichte Streitfragen, Geschlechtsregister und Streit um das Gesetz soll Titus meiden, denn sie sind nutzlos und leer.",
+            "stage": {
+              "pose": {
+                "FIG-TITUS": "away"
+              },
+              "at": {
+                "FIG-ZEICHEN-GEREDE": "FIG-GRUPPE-IRRLEHRER"
+              },
+              "split": 1,
+              "mood": {
+                "FIG-TITUS": "pensive",
+                "FIG-GRUPPE-IRRLEHRER": "earnest"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "TIT.3.10-TIT.3.11",
+            "figures": [
+              "FIG-TITUS",
+              "FIG-ROLLE-SPALTER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-TITUS",
+                "to": "FIG-ROLLE-SPALTER",
+                "icons": [
+                  "FIG-ZEICHEN-WARNEN",
+                  "FIG-ZEICHEN-WARNEN",
+                  "FIG-ZEICHEN-ABLEHNEN"
+                ]
+              }
+            ],
+            "action_de": "Einen Menschen, der Spaltungen verursacht, soll Titus nach einer ersten und zweiten Ermahnung abweisen.",
+            "stage": {
+              "split": 1,
+              "mood": {
+                "FIG-TITUS": "earnest",
+                "FIG-ROLLE-SPALTER": "earnest"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

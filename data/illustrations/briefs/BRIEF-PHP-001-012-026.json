@@ -42,8 +42,9 @@
           "FIG-ZEICHEN-VERKUENDIGEN": "FIG-GRUPPE-GLAUBENDE"
         },
         "mood": {
-          "FIG-ROLLE-SOLDAT": "earnest",
-          "FIG-GRUPPE-GLAUBENDE": "determined"
+          "FIG-ROLLE-SOLDAT": "calm",
+          "FIG-GRUPPE-GLAUBENDE": "smile",
+          "FIG-PAULUS": "smile"
         }
       }
     },
@@ -90,7 +91,7 @@
           ]
         },
         "mood": {
-          "FIG-GRUPPE-GEGNER": "earnest",
+          "FIG-GRUPPE-GEGNER": "calm",
           "FIG-GRUPPE-GLAUBENDE": "smile",
           "FIG-PAULUS": "smile"
         }
@@ -126,7 +127,7 @@
           "FIG-PAULUS": 93
         },
         "mood": {
-          "FIG-PAULUS": "pensive"
+          "FIG-PAULUS": "smile"
         }
       }
     },
@@ -148,6 +149,7 @@
           "from": "FIG-PAULUS",
           "to": "FIG-GRUPPE-GEMEINDE",
           "icons": [
+            "FIG-PAULUS",
             "FIG-GRUPPE-GEMEINDE",
             "FIG-ZEICHEN-FREUDE"
           ]
@@ -179,10 +181,10 @@
     "Das Bleiben ist um der Gemeinde willen nötiger; Paulus rechnet damit zu bleiben, zu ihrem Fortschritt und zu ihrer Freude im Glauben."
   ],
   "captions_de": [
-    "Gefangen für Christus: Paulus (Kette) erklärt dem Wachsoldaten, dass er um Christi willen (Kreuznimbus) gefesselt ist; die Geschwister verkündigen mutig (Rufer).",
+    "Gefangen für Christus: Paulus (Kette) erklärt dem Wachsoldaten, dass er um Christi willen (Kreuznimbus) gefesselt ist; die Geschwister verkündigen mutig (Rufhorn über ihnen).",
     "Hauptsache Christus: Die einen verkündigen Christus (Kreuznimbus) aus Liebe (Herz), die anderen aus Streitsucht (dunkle Wolke); Paulus (Kette) in der Mitte freut sich (Funken).",
-    "Sterben ist Gewinn: Paulus (Kette) denkt nach: sterben (Grab) und bei Christus sein (Kreuznimbus) wäre Gewinn (Münzen, Pfeil hoch).",
-    "Bleiben für euch: Paulus (Kette) sagt der Gemeinde (Haus mit Menschen): Ich bleibe, für eure Freude (Funken)."
+    "Sterben ist Gewinn: Paulus (Kette) sagt: sterben (Grab) und bei Christus sein (Kreuznimbus) wäre Gewinn (Münzen, Pfeil hoch).",
+    "Bleiben für euch: Paulus (Kette) sagt der Gemeinde (Haus mit Menschen): Ich (Paulus) bleibe bei euch (Haus mit Menschen), für eure Freude (goldene Funken)."
   ],
   "interpretation_note_de": "Paulus schreibt den Brief als Gefangener «in Fesseln» ([[PHP.1.7]], [[PHP.1.13]]); deshalb liegt bei ihm eine Kette. Ein Soldat steht für die Wache im Prätorium ([[PHP.1.13]]). Wer aus Neid verkündigt ([[PHP.1.15]]), nennt der Text nicht; die graue Gruppe steht dafür, ohne sie als böse zu zeigen. «Sterben» ist mit dem Grabzeichen angedeutet ([[PHP.1.21]]); die Münzen stehen für «Gewinn».",
   "basis": [
@@ -221,5 +223,183 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "PHP.1.12-PHP.1.14",
+            "figures": [
+              "FIG-ROLLE-SOLDAT",
+              "FIG-PAULUS",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-VERKUENDIGEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-ROLLE-SOLDAT",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-OBJ-KETTE"
+                ]
+              }
+            ],
+            "action_de": "Die Fesseln des Paulus sind im ganzen Prätorium als Fesseln um Christi willen bekannt geworden, und die meisten Geschwister sagen das Wort nun umso furchtloser.",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KETTE": 76
+              },
+              "at": {
+                "FIG-ZEICHEN-VERKUENDIGEN": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "mood": {
+                "FIG-ROLLE-SOLDAT": "earnest",
+                "FIG-GRUPPE-GLAUBENDE": "determined"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "PHP.1.15-PHP.1.18",
+            "figures": [
+              "FIG-GRUPPE-GLAUBENDE",
+              "FIG-PAULUS",
+              "FIG-GRUPPE-GEGNER"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-GLAUBENDE",
+                "to": "FIG-PAULUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-LIEBE"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-GEGNER",
+                "to": "FIG-PAULUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-ZORN"
+                ]
+              }
+            ],
+            "action_de": "Manche verkündigen Christus aus Liebe, andere aus Neid und Streitsucht; Paulus freut sich, dass Christus auf jede Weise verkündigt wird.",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KETTE": 76
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-PAULUS"
+                ]
+              },
+              "mood": {
+                "FIG-GRUPPE-GEGNER": "earnest",
+                "FIG-GRUPPE-GLAUBENDE": "smile",
+                "FIG-PAULUS": "smile"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "PHP.1.19-PHP.1.23",
+            "figures": [
+              "FIG-PAULUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-GRUPPE-GLAUBENDE",
+                "icons": [
+                  "FIG-ZEICHEN-TOD",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-GEWINN"
+                ]
+              }
+            ],
+            "action_de": "Für Paulus ist das Leben Christus und das Sterben Gewinn; er hat das Verlangen, aufzubrechen und bei Christus zu sein.",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KETTE": 60
+              },
+              "x": {
+                "FIG-PAULUS": 93
+              },
+              "mood": {
+                "FIG-PAULUS": "pensive"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "PHP.1.24-PHP.1.26",
+            "figures": [
+              "FIG-PAULUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE",
+              "FIG-GRUPPE-GEMEINDE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-GRUPPE-GEMEINDE",
+                "icons": [
+                  "FIG-GRUPPE-GEMEINDE",
+                  "FIG-ZEICHEN-FREUDE"
+                ]
+              }
+            ],
+            "action_de": "Das Bleiben ist um der Gemeinde willen nötiger; Paulus rechnet damit zu bleiben, zu ihrem Fortschritt und zu ihrer Freude im Glauben.",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KETTE": 30
+              },
+              "x": {
+                "FIG-PAULUS": 50
+              },
+              "mood": {
+                "FIG-PAULUS": "smile"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-PAULUS"
+                ]
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Gefangen für Christus: Paulus (Kette) erklärt dem Wachsoldaten, dass er um Christi willen (Kreuznimbus) gefesselt ist; die Geschwister verkündigen mutig (Rufer).",
+          "Hauptsache Christus: Die einen verkündigen Christus (Kreuznimbus) aus Liebe (Herz), die anderen aus Streitsucht (dunkle Wolke); Paulus (Kette) in der Mitte freut sich (Funken).",
+          "Sterben ist Gewinn: Paulus (Kette) denkt nach: sterben (Grab) und bei Christus sein (Kreuznimbus) wäre Gewinn (Münzen, Pfeil hoch).",
+          "Bleiben für euch: Paulus (Kette) sagt der Gemeinde (Haus mit Menschen): Ich bleibe, für eure Freude (Funken)."
+        ]
+      }
+    }
+  ]
 }

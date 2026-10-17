@@ -25,6 +25,7 @@
       "from": "FIG-DER-AELTESTE",
       "to": "FIG-GAIUS",
       "icons": [
+       "FIG-GAIUS",
        "FIG-ZEICHEN-LIEBE",
        "FIG-ZEICHEN-WAHRHEIT"
       ]
@@ -32,13 +33,14 @@
     ],
     "action_de": "Der Älteste schreibt an den geliebten Gaius, den er in Wahrheit liebt, und wünscht ihm, dass es ihm in allem gut geht und er gesund ist.",
     "action_gsw": "De Älteschti schriibt am gliebte Gaius, won er i de Wohret gärn hät, und wünscht em, dass es em i allem guet gaat und er gsund isch.",
-    "caption_de": "Gruss an Gaius: Der Älteste (mit Brief) liebt ihn (Herzen) in Wahrheit (Häkchen).",
-    "caption_gsw": "Gruess am Gaius: De Älteschti (mit Brief) hät en gärn (Härz) i de Wohret (Hääggli).",
+    "caption_de": "Gruss an Gaius: Der Älteste (mit Brief) liebt Gaius (Gaius und Herzen in der Blase) in Wahrheit (Häkchen).",
+    "caption_gsw": "Gruess am Gaius: De Älteschti (mit Brief) hät de Gaius gärn (Gaius und Härz i de Blase) i de Wohret (Hääggli).",
     "stage": {
      "hold": {
       "FIG-DER-AELTESTE": "FIG-OBJ-BRIEF"
      },
      "mood": {
+      "FIG-DER-AELTESTE": "smile",
       "FIG-GAIUS": "smile"
      }
     }
@@ -50,7 +52,9 @@
      "FIG-GRUPPE-GESCHWISTER",
      "FIG-DER-AELTESTE"
     ],
-    "objects": [],
+    "objects": [
+     "FIG-OBJ-BRIEF"
+    ],
     "signs": [
      "FIG-ZEICHEN-FREUDE"
     ],
@@ -66,8 +70,8 @@
     ],
     "action_de": "Geschwister kamen und bezeugten, dass Gaius in der Wahrheit lebt; darüber hat sich der Älteste sehr gefreut.",
     "action_gsw": "Gschwüschterti sind cho und händ bezüügt, dass de Gaius i de Wohret läbt; drüber hät sich de Älteschti mega gfreut.",
-    "caption_de": "Gute Nachricht: Geschwister erzählen, dass Gaius in der Wahrheit lebt (Häkchen); der Älteste freut sich (Funken).",
-    "caption_gsw": "Gueti Nachricht: Gschwüschterti verzelled, dass de Gaius i de Wohret läbt (Hääggli); de Älteschti fröit sich (Funke).",
+    "caption_de": "Gute Nachricht: Geschwister erzählen, dass Gaius in der Wahrheit lebt (Häkchen); der Älteste (mit Brief) freut sich (Funken).",
+    "caption_gsw": "Gueti Nachricht: Gschwüschterti verzelled, dass de Gaius i de Wohret läbt (Hääggli); de Älteschti (mit Brief) fröit sich (Funke).",
     "stage": {
      "signs_who": {
       "FIG-ZEICHEN-FREUDE": [
@@ -77,12 +81,15 @@
      "mood": {
       "FIG-DER-AELTESTE": "delight",
       "FIG-GRUPPE-GESCHWISTER": "smile"
+     },
+     "hold": {
+      "FIG-DER-AELTESTE": "FIG-OBJ-BRIEF"
      }
     }
    }
   ],
-  "note_de": "Gaius ist an seiner Farbe und der offenen Tür (Gastfreundschaft) zu erkennen, Diotrephes an der geschlossenen Tür.",
-  "note_gsw": "De Gaius kännt me a sinere Farb und a de offne Tür (Gaschtfründschaft), de Diotrephes a de zuene Tür."
+  "note_de": "Gaius ist an seiner Farbe und der offenen Tür am Gewand zu erkennen, Diotrephes an der geschlossenen Tür am Gewand.",
+  "note_gsw": "De Gaius kännt me a sinere Farb und a de offne Tür am Gwand, de Diotrephes a de zuene Tür am Gwand."
  },
  {
   "suffix": "3JN-001-005-008",
@@ -102,17 +109,15 @@
      "FIG-GRUPPE-REISENDE"
     ],
     "objects": [
-     "FIG-ORT-HAUS",
+     "FIG-ORT-HAUS-OFFEN",
      "FIG-OBJ-BROT"
     ],
-    "signs": [
-     "FIG-ZEICHEN-GASTFREUNDSCHAFT"
-    ],
+    "signs": [],
     "speech": [],
     "action_de": "Gaius handelt treu an den Geschwistern, auch an Fremden: Er nimmt sie auf und rüstet sie für die Weiterreise aus, wie es Gottes würdig ist.",
     "action_gsw": "De Gaius handlet treu a de Gschwüschterti, au a Frömde: Er nimmt si uf und rüschtet si für d Wiiterreis uus, wies Gottes würdig isch.",
-    "caption_de": "Gastfreundschaft: Gaius nimmt reisende Geschwister auf (offene Tür) und gibt ihnen Brot für den Weg.",
-    "caption_gsw": "Gaschtfründschaft: De Gaius nimmt reisendi Gschwüschterti uf (offni Tür) und git ene Brot für de Wäg.",
+    "caption_de": "Gastfreundschaft: Gaius nimmt reisende Geschwister in sein Haus auf (offene, helle Tür) und gibt ihnen Brot (Pfeil von Gaius zu den Reisenden).",
+    "caption_gsw": "Gaschtfründschaft: De Gaius nimmt reisendi Gschwüschterti i sis Huus uf (offni, hälli Tür) und git ene Brot (Pfiil vom Gaius zu de Reisende).",
     "stage": {
      "hold": {
       "FIG-GAIUS": "FIG-OBJ-BROT"
@@ -120,21 +125,18 @@
      "back_side": "left",
      "arrows": [
       [
-       "FIG-GRUPPE-REISENDE",
        "FIG-GAIUS",
-       "go"
+       "FIG-GRUPPE-REISENDE",
+       "act"
       ]
      ],
-     "at": {
-      "FIG-ZEICHEN-GASTFREUNDSCHAFT": "FIG-GAIUS"
-     },
      "mood": {
       "FIG-GAIUS": "smile",
       "FIG-GRUPPE-REISENDE": "smile"
      },
      "x": {
-      "FIG-GAIUS": 74,
-      "FIG-GRUPPE-REISENDE": 138
+      "FIG-GAIUS": 78,
+      "FIG-GRUPPE-REISENDE": 140
      }
     }
    },
@@ -159,12 +161,18 @@
     ],
     "action_de": "Sie sind für den Namen ausgezogen und nehmen nichts von den Heiden an; darum sind wir verpflichtet, solche aufzunehmen und so Mitarbeiter für die Wahrheit zu werden.",
     "action_gsw": "Si sind für de Name uuszoge und nämed nüüt vo de Heide aa; drum sind mir verpflichtet, settigi ufzneh und so Mitschaffer für d Wohret z wärde.",
-    "caption_de": "Mitarbeiter für die Wahrheit: Reisende aufnehmen (offene Tür) heisst, der Wahrheit (Häkchen) zu helfen.",
-    "caption_gsw": "Mitschaffer für d Wohret: Reisendi ufneh (offni Tür) heisst, de Wohret (Hääggli) z hälfe."
+    "caption_de": "Mitarbeiter für die Wahrheit: Reisende aufnehmen (offene Tür mit Brot) heisst, der Wahrheit (Häkchen) zu helfen.",
+    "caption_gsw": "Mitschaffer für d Wohret: Reisendi ufneh (offni Tür mit Brot) heisst, de Wohret (Hääggli) z hälfe.",
+    "stage": {
+     "mood": {
+      "FIG-DER-AELTESTE": "smile",
+      "FIG-GAIUS": "smile"
+     }
+    }
    }
   ],
-  "note_de": "Wie Gaius die Reisenden ausrüstet ([[3JN.1.6]]), sagt der Text nicht; das Brot steht dafür (Deutung). Gaius ist an seiner Farbe und der offenen Tür (Gastfreundschaft) zu erkennen, Diotrephes an der geschlossenen Tür.",
-  "note_gsw": "Wie de Gaius d Reisende uusrüschtet ([[3JN.1.6]]), seit de Text nöd; s Brot staat defür (Düütig). De Gaius kännt me a sinere Farb und a de offne Tür (Gaschtfründschaft), de Diotrephes a de zuene Tür."
+  "note_de": "Wie Gaius die Reisenden ausrüstet ([[3JN.1.6]]), sagt der Text nicht; das Brot steht dafür (Deutung). Gaius ist an seiner Farbe und der offenen Tür am Gewand zu erkennen, Diotrephes an der geschlossenen Tür am Gewand.",
+  "note_gsw": "Wie de Gaius d Reisende uusrüschtet ([[3JN.1.6]]), seit de Text nöd; s Brot staat defür (Düütig). De Gaius kännt me a sinere Farb und a de offne Tür am Gwand, de Diotrephes a de zuene Tür am Gwand."
  },
  {
   "suffix": "3JN-001-009-010",
@@ -187,24 +195,30 @@
      "FIG-OBJ-BRIEF"
     ],
     "signs": [
-     "FIG-ZEICHEN-ABLEHNEN",
-     "FIG-ZEICHEN-ABSTAND"
+     "FIG-ZEICHEN-ABLEHNEN"
     ],
     "speech": [],
     "action_de": "Der Älteste hat der Gemeinde geschrieben, aber Diotrephes, der der Erste sein will, nimmt ihn nicht an.",
     "action_gsw": "De Älteschti hät de Gmeind gschribe, aber de Diotrephes, wo de Erscht sii will, nimmt en nöd aa.",
-    "caption_de": "Abgewiesen: Diotrephes (geschlossene Tür) weist den Brief des Ältesten ab (abwehrende Hand).",
-    "caption_gsw": "Abgwise: De Diotrephes (zueni Tür) wiist de Brief vom Älteschte ab (abwehrendi Hand).",
+    "caption_de": "Abgewiesen: Der Älteste schickt der Gemeinde einen Brief (Pfeil); Diotrephes (Tür am Gewand) weist ihn ab (abwehrende Hand).",
+    "caption_gsw": "Abgwise: De Älteschti schickt de Gmeind en Brief (Pfiil); de Diotrephes (Tür am Gwand) wiist en ab (abwehrendi Hand).",
     "stage": {
      "hold": {
       "FIG-DER-AELTESTE": "FIG-OBJ-BRIEF"
      },
-     "split": 1,
-     "at": {
-      "FIG-ZEICHEN-ABLEHNEN": "FIG-DIOTREPHES"
+     "x": {
+      "FIG-DER-AELTESTE": 44,
+      "FIG-DIOTREPHES": 148
      },
-     "pose": {
-      "FIG-DIOTREPHES": "away"
+     "arrows": [
+      [
+       "FIG-DER-AELTESTE",
+       "FIG-DIOTREPHES",
+       "act"
+      ]
+     ],
+     "beside": {
+      "FIG-ZEICHEN-ABLEHNEN": "FIG-DIOTREPHES"
      },
      "mood": {
       "FIG-DER-AELTESTE": "pensive",
@@ -223,16 +237,18 @@
      "FIG-GRUPPE-GEMEINDE"
     ],
     "signs": [
-     "FIG-ZEICHEN-ABLEHNEN"
+     "FIG-ZEICHEN-ABLEHNEN",
+     "FIG-ZEICHEN-ABSTAND"
     ],
     "speech": [],
     "action_de": "Diotrephes redet schlecht über den Ältesten, nimmt die Geschwister nicht auf, hindert die, die es wollen, und stösst sie aus der Gemeinde. Der Älteste will das bei seinem Kommen zur Sprache bringen.",
     "action_gsw": "De Diotrephes redt schlächt über de Älteschte, nimmt d Gschwüschterti nöd uf, hindered die, wos wänd, und stosst si us de Gmeind. De Älteschti wills bi sim Cho zur Sprach bringe.",
-    "caption_de": "Ausgeschlossen: Diotrephes weist die reisenden Geschwister ab (abwehrende Hand) und hält sie von der Gemeinde fern.",
-    "caption_gsw": "Uusgschlosse: De Diotrephes wiist di reisende Gschwüschterti ab (abwehrendi Hand) und haltet si vo de Gmeind fern.",
+    "caption_de": "Ausgeschlossen: Diotrephes steht vor der Gemeinde (Haus mit Leuten) und weist die reisenden Geschwister ab (abwehrende Hand, Trennlinie); sie müssen gehen.",
+    "caption_gsw": "Uusgschlosse: De Diotrephes staat vor de Gmeind (Huus mit Lüüt) und wiist di reisende Gschwüschterti ab (abwehrendi Hand, Trennlinie); si müend gaa.",
     "stage": {
      "back_side": "left",
-     "at": {
+     "split": 1,
+     "beside": {
       "FIG-ZEICHEN-ABLEHNEN": "FIG-DIOTREPHES"
      },
      "pose": {
@@ -241,12 +257,16 @@
      "mood": {
       "FIG-DIOTREPHES": "earnest",
       "FIG-GRUPPE-REISENDE": "worried"
+     },
+     "x": {
+      "FIG-DIOTREPHES": 76,
+      "FIG-GRUPPE-REISENDE": 140
      }
     }
    }
   ],
-  "note_de": "Diotrephes ist neutral gezeichnet, ohne böse Miene. Das angekündigte Kommen des Ältesten ([[3JN.1.10]]) ist nicht gezeichnet. Gaius ist an seiner Farbe und der offenen Tür (Gastfreundschaft) zu erkennen, Diotrephes an der geschlossenen Tür.",
-  "note_gsw": "De Diotrephes isch neutral zeichnet, ohni bösi Miene. S aakündte Cho vom Älteschte ([[3JN.1.10]]) isch nöd zeichnet. De Gaius kännt me a sinere Farb und a de offne Tür (Gaschtfründschaft), de Diotrephes a de zuene Tür."
+  "note_de": "Diotrephes ist neutral gezeichnet, ohne böse Miene. Das angekündigte Kommen des Ältesten ([[3JN.1.10]]) ist nicht gezeichnet. Gaius ist an seiner Farbe und der offenen Tür am Gewand zu erkennen, Diotrephes an der geschlossenen Tür am Gewand.",
+  "note_gsw": "De Diotrephes isch neutral zeichnet, ohni bösi Miene. S aakündte Cho vom Älteschte ([[3JN.1.10]]) isch nöd zeichnet. De Gaius kännt me a sinere Farb und a de offne Tür am Gwand, de Diotrephes a de zuene Tür am Gwand."
  },
  {
   "suffix": "3JN-001-011-012",
@@ -273,16 +293,29 @@
       "to": "FIG-GAIUS",
       "icons": [
        "FIG-ZEICHEN-SUENDE",
-       "FIG-ZEICHEN-ABLEHNEN",
-       "FIG-ZEICHEN-GEBEN",
-       "FIG-GOTT"
+       "FIG-ZEICHEN-NICHT"
+      ]
+     },
+     {
+      "from": "FIG-DER-AELTESTE",
+      "to": "FIG-GAIUS",
+      "icons": [
+       "FIG-GOTT",
+       "FIG-ZEICHEN-STAMMT-AUS",
+       "FIG-ZEICHEN-GUTE-WERKE"
       ]
      }
     ],
     "action_de": "Gaius soll nicht das Böse nachahmen, sondern das Gute; wer Gutes tut, ist aus Gott.",
     "action_gsw": "De Gaius söll nöd s Böse nachemache, sondern s Gueti; wer Guets tuet, isch us Gott.",
-    "caption_de": "Das Gute nachahmen: Nicht das Böse (dunkler Fleck, abwehrende Hand); wer Gutes tut (gebende Hand), ist aus Gott (Strahlenkranz).",
-    "caption_gsw": "S Gueti nachemache: Nöd s Böse (dunkle Fläck, abwehrendi Hand); wer Guets tuet (gäbendi Hand), isch us Gott (Strahlechranz)."
+    "caption_de": "Das Gute nachahmen: Nicht das Böse (dunkler Fleck, roter Kreis mit Schrägbalken); Gutes tun (Hand reicht Brot, Herz) kommt aus Gott (Strahlenkranz, Pfeil).",
+    "caption_gsw": "S Gueti nachemache: Nöd s Böse (dunkle Fläck, rote Kreis mit Schrägstrich); Guets tue (Hand git Brot, Härz) chunnt us Gott (Strahlechranz, Pfiil).",
+    "stage": {
+     "mood": {
+      "FIG-DER-AELTESTE": "smile",
+      "FIG-GAIUS": "smile"
+     }
+    }
    },
    {
     "n": 2,
@@ -306,18 +339,26 @@
     ],
     "action_de": "Dem Demetrius stellen alle und die Wahrheit selbst ein gutes Zeugnis aus; auch der Älteste bezeugt es.",
     "action_gsw": "Em Demetrius stelled alli und d Wohret sälber es guets Zügnis uus; au de Älteschti bezüügts.",
-    "caption_de": "Gutes Zeugnis: Der Älteste empfiehlt Gaius den Demetrius (mit Brief); sein Zeugnis ist wahr (Häkchen).",
-    "caption_gsw": "Guets Zügnis: De Älteschti empfiehlt em Gaius de Demetrius (mit Brief); sis Zügnis isch wohr (Hääggli).",
+    "caption_de": "Gutes Zeugnis: Der Älteste empfiehlt Gaius den Demetrius (mit Brief; Pfeil zu Gaius); sein Zeugnis ist wahr (Häkchen).",
+    "caption_gsw": "Guets Zügnis: De Älteschti empfiehlt em Gaius de Demetrius (mit Brief; Pfiil zum Gaius); sis Zügnis isch wohr (Hääggli).",
     "stage": {
+     "arrows": [
+      [
+       "FIG-DEMETRIUS",
+       "FIG-GAIUS",
+       "act"
+      ]
+     ],
      "mood": {
+      "FIG-DER-AELTESTE": "smile",
       "FIG-DEMETRIUS": "smile",
-      "FIG-GAIUS": "calm"
+      "FIG-GAIUS": "smile"
      }
     }
    }
   ],
-  "note_de": "Die gebende Hand steht für «Gutes tun» ([[3JN.1.11]]); was genau gemeint ist, sagt der Text nicht. Dass Demetrius den Brief überbringt, ist eine verbreitete Vermutung, im Text nicht gesagt. Gaius ist an seiner Farbe und der offenen Tür (Gastfreundschaft) zu erkennen, Diotrephes an der geschlossenen Tür.",
-  "note_gsw": "D gäbend Hand staat für «Guets tue» ([[3JN.1.11]]); was gnau gmeint isch, seit de Text nöd. Dass de Demetrius de Brief überbringt, isch e verbreiteti Vermuetig, im Text nöd gseit. De Gaius kännt me a sinere Farb und a de offne Tür (Gaschtfründschaft), de Diotrephes a de zuene Tür."
+  "note_de": "Die Hand mit Brot und Herz steht für «Gutes tun» ([[3JN.1.11]]); was genau gemeint ist, sagt der Text nicht. Dass Demetrius den Brief überbringt, ist eine verbreitete Vermutung, im Text nicht gesagt. Gaius ist an seiner Farbe und der offenen Tür am Gewand zu erkennen, Diotrephes an der geschlossenen Tür am Gewand.",
+  "note_gsw": "D Hand mit Brot und Härz staat für «Guets tue» ([[3JN.1.11]]); was gnau gmeint isch, seit de Text nöd. Dass de Demetrius de Brief überbringt, isch e verbreiteti Vermuetig, im Text nöd gseit. De Gaius kännt me a sinere Farb und a de offne Tür am Gwand, de Diotrephes a de zuene Tür am Gwand."
  },
  {
   "suffix": "3JN-001-013-014",
@@ -344,6 +385,13 @@
       "to": "FIG-GAIUS",
       "icons": [
        "FIG-OBJ-BRIEF",
+       "FIG-ZEICHEN-NICHT"
+      ]
+     },
+     {
+      "from": "FIG-DER-AELTESTE",
+      "to": "FIG-GAIUS",
+      "icons": [
        "FIG-ZEICHEN-BESUCH",
        "FIG-ZEICHEN-FRIEDE"
       ]
@@ -351,10 +399,11 @@
     ],
     "action_de": "Er will nicht mit Tinte und Feder schreiben, sondern hofft, Gaius bald zu sehen und von Mund zu Mund zu reden. Friede sei mit dir!",
     "action_gsw": "Er will nöd mit Tinte und Fädere schriibe, sondern hofft, de Gaius bald z gseh und vo Muul zu Muul z rede. Fride sig mit dir!",
-    "caption_de": "Bald persönlich: Statt Brief von Mund zu Mund reden (zwei Köpfe); Friede (Olivenzweig).",
-    "caption_gsw": "Bald persönlich: Statt Brief vo Muul zu Muul rede (zwei Chöpf); Fride (Olivezweig).",
+    "caption_de": "Bald persönlich: Kein Brief mehr (roter Kreis mit Schrägbalken), sondern von Mund zu Mund reden (zwei Köpfe); Friede (Olivenzweig).",
+    "caption_gsw": "Bald persönlich: Kein Brief me (rote Kreis mit Schrägstrich), sondern vo Muul zu Muul rede (zwei Chöpf); Fride (Olivezweig).",
     "stage": {
      "mood": {
+      "FIG-DER-AELTESTE": "smile",
       "FIG-GAIUS": "smile"
      }
     }
@@ -389,8 +438,8 @@
     }
    }
   ],
-  "note_de": "Die Freunde ([[3JN.1.14]]) sind als Gruppe von Geschwistern gezeichnet. Gaius ist an seiner Farbe und der offenen Tür (Gastfreundschaft) zu erkennen, Diotrephes an der geschlossenen Tür.",
-  "note_gsw": "D Fründe ([[3JN.1.14]]) sind als Gruppe vo Gschwüschterti zeichnet. De Gaius kännt me a sinere Farb und a de offne Tür (Gaschtfründschaft), de Diotrephes a de zuene Tür."
+  "note_de": "Die Freunde ([[3JN.1.14]]) sind als Gruppe von Geschwistern gezeichnet. Gaius ist an seiner Farbe und der offenen Tür am Gewand zu erkennen, Diotrephes an der geschlossenen Tür am Gewand.",
+  "note_gsw": "D Fründe ([[3JN.1.14]]) sind als Gruppe vo Gschwüschterti zeichnet. De Gaius kännt me a sinere Farb und a de offne Tür am Gwand, de Diotrephes a de zuene Tür am Gwand."
  },
  {
   "suffix": "3JN-001",
@@ -418,6 +467,7 @@
       "from": "FIG-DER-AELTESTE",
       "to": "FIG-GAIUS",
       "icons": [
+       "FIG-GAIUS",
        "FIG-ZEICHEN-LIEBE",
        "FIG-ZEICHEN-WAHRHEIT"
       ]
@@ -425,13 +475,14 @@
     ],
     "action_de": "Der Älteste lobt Gaius, weil er in der Wahrheit lebt.",
     "action_gsw": "De Älteschti lobt de Gaius, will er i de Wohret läbt.",
-    "caption_de": "Gruss an Gaius: Der Älteste (mit Brief) liebt ihn (Herzen) in Wahrheit (Häkchen).",
-    "caption_gsw": "Gruess am Gaius: De Älteschti (mit Brief) hät en gärn (Härz) i de Wohret (Hääggli).",
+    "caption_de": "Gruss an Gaius: Der Älteste (mit Brief) liebt Gaius (Gaius und Herzen in der Blase) in Wahrheit (Häkchen).",
+    "caption_gsw": "Gruess am Gaius: De Älteschti (mit Brief) hät de Gaius gärn (Gaius und Härz i de Blase) i de Wohret (Hääggli).",
     "stage": {
      "hold": {
       "FIG-DER-AELTESTE": "FIG-OBJ-BRIEF"
      },
      "mood": {
+      "FIG-DER-AELTESTE": "smile",
       "FIG-GAIUS": "smile"
      }
     }
@@ -444,17 +495,15 @@
      "FIG-GRUPPE-REISENDE"
     ],
     "objects": [
-     "FIG-ORT-HAUS",
+     "FIG-ORT-HAUS-OFFEN",
      "FIG-OBJ-BROT"
     ],
-    "signs": [
-     "FIG-ZEICHEN-GASTFREUNDSCHAFT"
-    ],
+    "signs": [],
     "speech": [],
     "action_de": "Gaius nimmt reisende Brüder treu auf und rüstet sie für die Weiterreise aus.",
     "action_gsw": "De Gaius nimmt reisendi Brüeder treu uf und rüschtet si für d Wiiterreis uus.",
-    "caption_de": "Gastfreundschaft: Gaius nimmt Reisende auf (offene Tür) und gibt ihnen Brot.",
-    "caption_gsw": "Gaschtfründschaft: De Gaius nimmt Reisendi uf (offni Tür) und git ene Brot.",
+    "caption_de": "Gastfreundschaft: Gaius nimmt reisende Geschwister in sein Haus auf (offene, helle Tür) und gibt ihnen Brot (Pfeil von Gaius zu den Reisenden).",
+    "caption_gsw": "Gaschtfründschaft: De Gaius nimmt reisendi Gschwüschterti i sis Huus uf (offni, hälli Tür) und git ene Brot (Pfiil vom Gaius zu de Reisende).",
     "stage": {
      "hold": {
       "FIG-GAIUS": "FIG-OBJ-BROT"
@@ -462,21 +511,18 @@
      "back_side": "left",
      "arrows": [
       [
-       "FIG-GRUPPE-REISENDE",
        "FIG-GAIUS",
-       "go"
+       "FIG-GRUPPE-REISENDE",
+       "act"
       ]
      ],
-     "at": {
-      "FIG-ZEICHEN-GASTFREUNDSCHAFT": "FIG-GAIUS"
-     },
      "mood": {
       "FIG-GAIUS": "smile",
       "FIG-GRUPPE-REISENDE": "smile"
      },
      "x": {
-      "FIG-GAIUS": 74,
-      "FIG-GRUPPE-REISENDE": 138
+      "FIG-GAIUS": 78,
+      "FIG-GRUPPE-REISENDE": 140
      }
     }
    },
@@ -491,16 +537,18 @@
      "FIG-GRUPPE-GEMEINDE"
     ],
     "signs": [
-     "FIG-ZEICHEN-ABLEHNEN"
+     "FIG-ZEICHEN-ABLEHNEN",
+     "FIG-ZEICHEN-ABSTAND"
     ],
     "speech": [],
     "action_de": "Diotrephes will der Erste sein, weist den Ältesten und die Brüder ab und stösst Gastgeber aus der Gemeinde aus.",
     "action_gsw": "De Diotrephes will de Erscht sii, wiist de Älteschte und d Brüeder ab und stosst Gaschtgäber us de Gmeind uus.",
-    "caption_de": "Abgewiesen: Diotrephes (geschlossene Tür) weist die Reisenden ab (abwehrende Hand).",
-    "caption_gsw": "Abgwise: De Diotrephes (zueni Tür) wiist d Reisende ab (abwehrendi Hand).",
+    "caption_de": "Abgewiesen: Diotrephes (Tür am Gewand) steht vor der Gemeinde und weist die Reisenden ab (abwehrende Hand, Trennlinie).",
+    "caption_gsw": "Abgwise: De Diotrephes (Tür am Gwand) staat vor de Gmeind und wiist d Reisende ab (abwehrendi Hand, Trennlinie).",
     "stage": {
      "back_side": "left",
-     "at": {
+     "split": 1,
+     "beside": {
       "FIG-ZEICHEN-ABLEHNEN": "FIG-DIOTREPHES"
      },
      "pose": {
@@ -509,6 +557,10 @@
      "mood": {
       "FIG-DIOTREPHES": "earnest",
       "FIG-GRUPPE-REISENDE": "worried"
+     },
+     "x": {
+      "FIG-DIOTREPHES": 76,
+      "FIG-GRUPPE-REISENDE": 140
      }
     }
    },
@@ -534,17 +586,26 @@
     ],
     "action_de": "Für Demetrius legt der Älteste ein gutes Zeugnis ab; er hofft, Gaius bald zu sehen.",
     "action_gsw": "Für de Demetrius leit de Älteschti es guets Zügnis ab; er hofft, de Gaius bald z gseh.",
-    "caption_de": "Gutes Zeugnis: Der Älteste empfiehlt Demetrius (mit Brief); sein Zeugnis ist wahr (Häkchen).",
-    "caption_gsw": "Guets Zügnis: De Älteschti empfiehlt de Demetrius (mit Brief); sis Zügnis isch wohr (Hääggli).",
+    "caption_de": "Gutes Zeugnis: Der Älteste empfiehlt Gaius den Demetrius (mit Brief; Pfeil zu Gaius); sein Zeugnis ist wahr (Häkchen).",
+    "caption_gsw": "Guets Zügnis: De Älteschti empfiehlt em Gaius de Demetrius (mit Brief; Pfiil zum Gaius); sis Zügnis isch wohr (Hääggli).",
     "stage": {
+     "arrows": [
+      [
+       "FIG-DEMETRIUS",
+       "FIG-GAIUS",
+       "act"
+      ]
+     ],
      "mood": {
-      "FIG-DEMETRIUS": "smile"
+      "FIG-DER-AELTESTE": "smile",
+      "FIG-DEMETRIUS": "smile",
+      "FIG-GAIUS": "smile"
      }
     }
    }
   ],
-  "note_de": "Fünf Abschnitte in vier Feldern; Schluss und Grüsse ([[3JN.1.13-3JN.1.14]]) sind im letzten Feld nur erwähnt. Gaius ist an seiner Farbe und der offenen Tür (Gastfreundschaft) zu erkennen, Diotrephes an der geschlossenen Tür.",
-  "note_gsw": "Füf Abschnitt i vier Fälder; Schluss und Grüess ([[3JN.1.13-3JN.1.14]]) sind im letschte Fäld nu erwähnt. De Gaius kännt me a sinere Farb und a de offne Tür (Gaschtfründschaft), de Diotrephes a de zuene Tür."
+  "note_de": "Fünf Abschnitte in vier Feldern; Schluss und Grüsse ([[3JN.1.13-3JN.1.14]]) sind im letzten Feld nur erwähnt. Gaius ist an seiner Farbe und der offenen Tür am Gewand zu erkennen, Diotrephes an der geschlossenen Tür am Gewand.",
+  "note_gsw": "Füf Abschnitt i vier Fälder; Schluss und Grüess ([[3JN.1.13-3JN.1.14]]) sind im letschte Fäld nu erwähnt. De Gaius kännt me a sinere Farb und a de offne Tür am Gwand, de Diotrephes a de zuene Tür am Gwand."
  },
  {
   "suffix": "3JN",
@@ -564,17 +625,15 @@
      "FIG-GRUPPE-REISENDE"
     ],
     "objects": [
-     "FIG-ORT-HAUS",
+     "FIG-ORT-HAUS-OFFEN",
      "FIG-OBJ-BROT"
     ],
-    "signs": [
-     "FIG-ZEICHEN-GASTFREUNDSCHAFT"
-    ],
+    "signs": [],
     "speech": [],
     "action_de": "Gaius wird gelobt, weil er reisende Glaubensgeschwister aufnimmt und unterstützt.",
     "action_gsw": "De Gaius wird globt, will er reisendi Glaubensgschwüschterti ufnimmt und understützt.",
-    "caption_de": "Gastfreundschaft: Gaius nimmt Reisende auf (offene Tür) und gibt ihnen Brot.",
-    "caption_gsw": "Gaschtfründschaft: De Gaius nimmt Reisendi uf (offni Tür) und git ene Brot.",
+    "caption_de": "Gastfreundschaft: Gaius nimmt reisende Geschwister in sein Haus auf (offene, helle Tür) und gibt ihnen Brot (Pfeil von Gaius zu den Reisenden).",
+    "caption_gsw": "Gaschtfründschaft: De Gaius nimmt reisendi Gschwüschterti i sis Huus uf (offni, hälli Tür) und git ene Brot (Pfiil vom Gaius zu de Reisende).",
     "stage": {
      "hold": {
       "FIG-GAIUS": "FIG-OBJ-BROT"
@@ -582,21 +641,18 @@
      "back_side": "left",
      "arrows": [
       [
-       "FIG-GRUPPE-REISENDE",
        "FIG-GAIUS",
-       "go"
+       "FIG-GRUPPE-REISENDE",
+       "act"
       ]
      ],
-     "at": {
-      "FIG-ZEICHEN-GASTFREUNDSCHAFT": "FIG-GAIUS"
-     },
      "mood": {
       "FIG-GAIUS": "smile",
       "FIG-GRUPPE-REISENDE": "smile"
      },
      "x": {
-      "FIG-GAIUS": 74,
-      "FIG-GRUPPE-REISENDE": 138
+      "FIG-GAIUS": 78,
+      "FIG-GRUPPE-REISENDE": 140
      }
     }
    },
@@ -611,16 +667,18 @@
      "FIG-GRUPPE-GEMEINDE"
     ],
     "signs": [
-     "FIG-ZEICHEN-ABLEHNEN"
+     "FIG-ZEICHEN-ABLEHNEN",
+     "FIG-ZEICHEN-ABSTAND"
     ],
     "speech": [],
     "action_de": "Diotrephes weist die Reisenden ab: ein Konflikt um Leitung und Anerkennung.",
     "action_gsw": "De Diotrephes wiist d Reisende ab: en Konflikt um Leitig und Aaerchännig.",
-    "caption_de": "Abgewiesen: Diotrephes (geschlossene Tür) weist die Reisenden ab (abwehrende Hand).",
-    "caption_gsw": "Abgwise: De Diotrephes (zueni Tür) wiist d Reisende ab (abwehrendi Hand).",
+    "caption_de": "Abgewiesen: Diotrephes (Tür am Gewand) steht vor der Gemeinde und weist die Reisenden ab (abwehrende Hand, Trennlinie).",
+    "caption_gsw": "Abgwise: De Diotrephes (Tür am Gwand) staat vor de Gmeind und wiist d Reisende ab (abwehrendi Hand, Trennlinie).",
     "stage": {
      "back_side": "left",
-     "at": {
+     "split": 1,
+     "beside": {
       "FIG-ZEICHEN-ABLEHNEN": "FIG-DIOTREPHES"
      },
      "pose": {
@@ -629,11 +687,15 @@
      "mood": {
       "FIG-DIOTREPHES": "earnest",
       "FIG-GRUPPE-REISENDE": "worried"
+     },
+     "x": {
+      "FIG-DIOTREPHES": 76,
+      "FIG-GRUPPE-REISENDE": 140
      }
     }
    }
   ],
-  "note_de": "Zwei Felder: Gastfreundschaft des Gaius und Ablehnung durch Diotrephes. Gaius ist an seiner Farbe und der offenen Tür (Gastfreundschaft) zu erkennen, Diotrephes an der geschlossenen Tür.",
-  "note_gsw": "Zwei Fälder: Gaschtfründschaft vom Gaius und Ablehnig dur de Diotrephes. De Gaius kännt me a sinere Farb und a de offne Tür (Gaschtfründschaft), de Diotrephes a de zuene Tür."
+  "note_de": "Zwei Felder: Gastfreundschaft des Gaius und Ablehnung durch Diotrephes. Gaius ist an seiner Farbe und der offenen Tür am Gewand zu erkennen, Diotrephes an der geschlossenen Tür am Gewand.",
+  "note_gsw": "Zwei Fälder: Gaschtfründschaft vom Gaius und Ablehnig dur de Diotrephes. De Gaius kännt me a sinere Farb und a de offne Tür am Gwand, de Diotrephes a de zuene Tür am Gwand."
  }
 ]

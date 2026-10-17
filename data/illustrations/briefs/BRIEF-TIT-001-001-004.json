@@ -14,7 +14,8 @@
       "reference": "TIT.1.1-TIT.1.3",
       "figures": [
         "FIG-GOTT",
-        "FIG-PAULUS"
+        "FIG-PAULUS",
+        "FIG-GRUPPE-GLAUBENDE"
       ],
       "objects": [],
       "signs": [
@@ -23,7 +24,7 @@
       "speech": [
         {
           "from": "FIG-PAULUS",
-          "to": "FIG-TITUS",
+          "to": "FIG-GRUPPE-GLAUBENDE",
           "icons": [
             "FIG-ZEICHEN-GLAUBEN",
             "FIG-ZEICHEN-HOFFNUNG"
@@ -42,9 +43,13 @@
         "at": {
           "FIG-ZEICHEN-VERKUENDIGEN": "FIG-PAULUS"
         },
-        "god_side": "left",
+        "god_side": "right",
+        "mood": {
+          "FIG-GRUPPE-GLAUBENDE": "smile"
+        },
         "x": {
-          "FIG-PAULUS": 120
+          "FIG-PAULUS": 60,
+          "FIG-GRUPPE-GLAUBENDE": 140
         }
       }
     },
@@ -55,7 +60,9 @@
         "FIG-PAULUS",
         "FIG-TITUS"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-OBJ-BRIEF"
+      ],
       "signs": [],
       "speech": [
         {
@@ -81,6 +88,9 @@
         "mood": {
           "FIG-TITUS": "smile",
           "FIG-PAULUS": "smile"
+        },
+        "hold": {
+          "FIG-PAULUS": "FIG-OBJ-BRIEF"
         }
       }
     }
@@ -90,8 +100,8 @@
     "Paulus schreibt an Titus, sein echtes Kind im gemeinsamen Glauben, und wünscht ihm Gnade und Frieden von Gott, dem Vater, und von Christus Jesus."
   ],
   "captions_de": [
-    "Apostel im Auftrag: Gott (Strahlenkranz) beauftragt Paulus (Pfeil) mit der Verkündigung (Rufer); sie dient dem Glauben (Herz mit Licht) und der Hoffnung auf Leben (Spross).",
-    "Brief an Titus: Paulus schreibt Titus (Pfeil, Brief) und wünscht ihm Gnade (Hände mit Licht) und Frieden (Ölzweig) von Gott (Strahlenkranz) und Jesus (Kreuznimbus)."
+    "Apostel im Auftrag: Gott (Strahlenkranz) beauftragt Paulus (goldener Pfeil) mit der Verkündigung (Schalltrichter); er spricht zu den Glaubenden von Glauben (Herz mit Licht) und Hoffnung auf Leben (Spross).",
+    "Brief an Titus: Paulus (mit Brief) schreibt Titus (Pfeil) und wünscht ihm Gnade (Hände mit Licht) und Frieden (Ölzweig) von Gott (Strahlenkranz) und Jesus (Kreuznimbus)."
   ],
   "interpretation_note_de": "Paulus spricht hier zu Titus als Empfänger des Briefs. Die Hoffnung auf ewiges Leben ([[TIT.1.2]]) ist mit dem Spross angedeutet.",
   "basis": [
@@ -118,5 +128,94 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "TIT.1.1-TIT.1.3",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-PAULUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-VERKUENDIGEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-ZEICHEN-GLAUBEN",
+                  "FIG-ZEICHEN-HOFFNUNG"
+                ]
+              }
+            ],
+            "action_de": "Paulus, Knecht Gottes und Apostel Jesu Christi, dient dem Glauben und der Hoffnung auf ewiges Leben; die Verkündigung ist ihm nach Gottes Auftrag anvertraut.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-PAULUS",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-VERKUENDIGEN": "FIG-PAULUS"
+              },
+              "god_side": "left",
+              "x": {
+                "FIG-PAULUS": 120
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "TIT.1.4",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TITUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-ZEICHEN-GNADE",
+                  "FIG-ZEICHEN-FRIEDE",
+                  "FIG-GOTT",
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Paulus schreibt an Titus, sein echtes Kind im gemeinsamen Glauben, und wünscht ihm Gnade und Frieden von Gott, dem Vater, und von Christus Jesus.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-PAULUS",
+                  "FIG-TITUS",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-TITUS": "smile",
+                "FIG-PAULUS": "smile"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Apostel im Auftrag: Gott (Strahlenkranz) beauftragt Paulus (Pfeil) mit der Verkündigung (Rufer); sie dient dem Glauben (Herz mit Licht) und der Hoffnung auf Leben (Spross).",
+          "Brief an Titus: Paulus schreibt Titus (Pfeil, Brief) und wünscht ihm Gnade (Hände mit Licht) und Frieden (Ölzweig) von Gott (Strahlenkranz) und Jesus (Kreuznimbus)."
+        ]
+      }
+    }
+  ]
 }

@@ -23,6 +23,7 @@
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-ZWOELF",
           "icons": [
+            "FIG-ZEICHEN-VOLLMACHT",
             "FIG-ZEICHEN-DAEMON",
             "FIG-ZEICHEN-FLIEHEN"
           ]
@@ -32,7 +33,14 @@
       "stage": {
         "mood": {
           "FIG-GRUPPE-ZWOELF": "earnest"
-        }
+        },
+        "arrows": [
+          [
+            "FIG-JESUS",
+            "FIG-GRUPPE-ZWOELF",
+            "act"
+          ]
+        ]
       }
     },
     {
@@ -88,18 +96,12 @@
         "pose": {
           "FIG-ROLLE-KRANKER": "sit"
         },
-        "at": {
-          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
-        },
-        "arrows": [
-          [
-            "FIG-ROLLE-JUENGER",
-            "FIG-ROLLE-KRANKER",
-            "act"
-          ]
-        ],
+        "arrows": [],
         "mood": {
           "FIG-GRUPPE-MENGE": "pensive"
+        },
+        "beside": {
+          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
         }
       }
     }
@@ -110,9 +112,9 @@
     "Die Jünger ziehen aus und verkünden, man solle umkehren; sie treiben viele Dämonen aus, salben viele Kranke mit Öl und heilen sie."
   ],
   "captions_de": [
-    "Vollmacht: Jesus sendet die Zwölf aus und gibt ihnen Vollmacht über die Geister (Schatten, Pfeil weg).",
-    "Ohne Vorrat: Jesus sagt: kein Brot, kein Geld (Brot, Münzen, fehlt).",
-    "Unterwegs: Ein Jünger ruft zur Umkehr (Pfeil im Bogen) und heilt einen Kranken (Hand mit Licht)."
+    "Vollmacht: Jesus sendet die Zwölf aus (Pfeil) und gibt ihnen Vollmacht über die Geister (Zepter, Schatten, Pfeil weg).",
+    "Ohne Vorrat: Jesus sagt: Nehmt kein Brot und kein Geld mit (Brot, Münzen, leerer Kreis mit Schrägstrich).",
+    "Unterwegs: Ein Jünger ruft die Leute zur Umkehr (Pfeil im Bogen) und heilt einen Kranken (berührende Hand mit Licht)."
   ],
   "interpretation_note_de": "Im zweiten Feld steht ein Jünger für die Paare, die ausgesandt werden ([[MRK.6.7]]). Die Ausrüstung (Stab, Sandalen, [[MRK.6.8-MRK.6.9]]), das Abschütteln des Staubs ([[MRK.6.11]]) und die Salbung mit Öl ([[MRK.6.13]]) haben kein eigenes Zeichen.",
   "basis": [
@@ -145,5 +147,114 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.6.7",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-DAEMON",
+                  "FIG-ZEICHEN-FLIEHEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus ruft die Zwölf, sendet sie zu zweit aus und gibt ihnen Vollmacht über die unreinen Geister.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "earnest"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.6.8-MRK.6.11",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-OBJ-BROT",
+                  "FIG-OBJ-MUENZEN",
+                  "FIG-ZEICHEN-FEHLT"
+                ]
+              }
+            ],
+            "action_de": "Ausser einem Stab sollen sie nichts mitnehmen: kein Brot, keinen Beutel, kein Geld; wo man sie nicht aufnimmt, sollen sie weiterziehen und den Staub von den Füssen schütteln.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "pensive"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.6.12-MRK.6.13",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-ROLLE-JUENGER",
+              "FIG-ROLLE-KRANKER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-JUENGER",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-UMKEHR"
+                ]
+              }
+            ],
+            "action_de": "Die Jünger ziehen aus und verkünden, man solle umkehren; sie treiben viele Dämonen aus, salben viele Kranke mit Öl und heilen sie.",
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-KRANKER": "sit"
+              },
+              "at": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-JUENGER",
+                  "FIG-ROLLE-KRANKER",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-MENGE": "pensive"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Vollmacht: Jesus sendet die Zwölf aus und gibt ihnen Vollmacht über die Geister (Schatten, Pfeil weg).",
+          "Ohne Vorrat: Jesus sagt: kein Brot, kein Geld (Brot, Münzen, fehlt).",
+          "Unterwegs: Ein Jünger ruft zur Umkehr (Pfeil im Bogen) und heilt einen Kranken (Hand mit Licht)."
+        ]
+      }
+    }
+  ]
 }

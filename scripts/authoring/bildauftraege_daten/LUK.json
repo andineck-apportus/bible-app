@@ -26,6 +26,7 @@
       "from": "FIG-ROLLE-JUENGER",
       "to": "FIG-JESUS",
       "icons": [
+       "FIG-JESUS",
        "FIG-GRUPPE-JUENGER",
        "FIG-ZEICHEN-BETEN",
        "FIG-ZEICHEN-FRAGEN"
@@ -34,16 +35,13 @@
     ],
     "action_de": "Als Jesus an einem Ort gebetet hat, bittet ihn einer seiner Jünger: Herr, lehre uns beten, wie auch Johannes seine Jünger gelehrt hat.",
     "action_gsw": "Wo de Jesus amne Ort bätet hät, bittet en eine vo sine Jünger: Herr, leer eus bäte, wie au de Johannes sini Jünger gleert hät.",
-    "caption_de": "Lehre uns beten: Jesus betet zum Vater (Strahlenkranz); danach bittet ihn ein Jünger: Lehre uns beten (Jünger, Gebetszeichen, Frage).",
-    "caption_gsw": "Leer eus bäte: De Jesus bätet zum Vatter (Strahlechranz); nachher bittet en en Jünger: Leer eus bäte (Jünger, Gebätszeiche, Frag).",
+    "caption_de": "Lehre uns beten: Jesus hat zum Vater gebetet (Strahlenkranz, Gebetszeichen); als er aufhört, bittet ihn ein Jünger: Lehre uns beten (Jesus, Jünger, Gebetszeichen, Frage).",
+    "caption_gsw": "Leer eus bäte: De Jesus hät zum Vatter bätet (Strahlechranz, Gebätszeiche); wo n er ufhört, bittet en en Jünger: Leer eus bäte (Jesus, Jünger, Gebätszeiche, Frag).",
     "stage": {
      "god_side": "left",
      "x": {
-      "FIG-JESUS": 60,
-      "FIG-ROLLE-JUENGER": 140
-     },
-     "hold": {
-      "FIG-JESUS": "PRAY"
+      "FIG-JESUS": 56,
+      "FIG-ROLLE-JUENGER": 150
      },
      "signs_who": {
       "FIG-ZEICHEN-BETEN": [
@@ -51,6 +49,7 @@
       ]
      },
      "mood": {
+      "FIG-JESUS": "calm",
       "FIG-ROLLE-JUENGER": "earnest"
      }
     }
@@ -90,7 +89,11 @@
      "god_side": "right",
      "x": {
       "FIG-JESUS": 30,
-      "FIG-GRUPPE-JUENGER": 96
+      "FIG-GRUPPE-JUENGER": 120
+     },
+     "mood": {
+      "FIG-JESUS": "calm",
+      "FIG-GRUPPE-JUENGER": "calm"
      }
     }
    },
@@ -109,19 +112,25 @@
       "to": "FIG-GOTT",
       "icons": [
        "FIG-OBJ-BROT",
+       "FIG-ZEICHEN-TAGE",
+       "FIG-ZEICHEN-TAGE",
        "FIG-ZEICHEN-TAGE"
       ]
      }
     ],
     "action_de": "Unser tägliches Brot gib uns Tag für Tag.",
     "action_gsw": "Gib eus Tag für Tag eusers täglich Brot.",
-    "caption_de": "Brot: Die Jünger bitten den Vater um das tägliche Brot, Tag für Tag (Brot, Sonne).",
-    "caption_gsw": "Brot: D Jünger bitted de Vatter ums täglich Brot, Tag für Tag (Brot, Sunne).",
+    "caption_de": "Brot: Die Jünger bitten den Vater (Strahlenkranz) um das tägliche Brot, Tag für Tag (Brot, Sonnen in einer Reihe).",
+    "caption_gsw": "Brot: D Jünger bitted de Vatter (Strahlechranz) ums täglich Brot, Tag für Tag (Brot, Sunne i de Reihe).",
     "stage": {
      "god_side": "right",
      "x": {
-      "FIG-GRUPPE-JUENGER": 60
-     }
+      "FIG-GRUPPE-JUENGER": 124
+     },
+     "mood": {
+      "FIG-GRUPPE-JUENGER": "calm"
+     },
+     "bubble_y": 28
     }
    },
    {
@@ -139,19 +148,19 @@
       "to": "FIG-GOTT",
       "icons": [
        "FIG-ZEICHEN-VERGEBEN",
-       "FIG-ZEICHEN-BEWAHREN",
-       "FIG-ZEICHEN-VERSUCHUNG"
+       "FIG-ZEICHEN-VERSUCHUNG",
+       "FIG-ZEICHEN-NICHT"
       ]
      }
     ],
     "action_de": "Vergib uns unsere Sünden, denn auch wir vergeben jedem, der uns etwas schuldet; und führe uns nicht in Versuchung.",
     "action_gsw": "Vergib eus eusi Sünde, dänn au mir vergänd jedem, wo eus öppis schuldet; und füer eus nöd in Versuechig.",
-    "caption_de": "Vergebung und Bewahrung: Die Jünger bitten um Vergebung (zerrissener Schuldschein) und darum, nicht in Versuchung zu kommen (Schild, Köder am Haken).",
-    "caption_gsw": "Vergäbig und Bewahrig: D Jünger bitted um Vergäbig (verrissne Schuldschii) und drum, dass si nöd in Versuechig chömed (Schild, Köder am Haagge).",
+    "caption_de": "Vergebung und Versuchung: Die Jünger bitten den Vater (Strahlenkranz) um Vergebung (zerrissener Schuldschein) und darum, nicht in Versuchung zu kommen (Köder am Haken, daneben roter Kreis mit Schrägbalken: nicht).",
+    "caption_gsw": "Vergäbig und Versuechig: D Jünger bitted de Vatter (Strahlechranz) um Vergäbig (verrissne Schuldschii) und drum, dass si nöd in Versuechig chömed (Köder am Haagge, dernäbe rote Chreis mit Schrägbalke: nöd).",
     "stage": {
      "god_side": "right",
      "x": {
-      "FIG-GRUPPE-JUENGER": 60
+      "FIG-GRUPPE-JUENGER": 100
      },
      "mood": {
       "FIG-GRUPPE-JUENGER": "earnest"
@@ -159,8 +168,8 @@
     }
    }
   ],
-  "note_de": "Lukas überliefert eine kürzere Fassung des Vaterunsers mit fünf Bitten ([[LUK.11.2-LUK.11.4]]); die Bitten um Gottes Willen und um Rettung vor dem Bösen fehlen hier (vgl. [[MAT.6.10]], [[MAT.6.13]]). Gott erscheint als Strahlenkranz, angeredet einfach als «Vater». Die Zeichen sind wie bei Matthäus Deutung: Schuldschein für Sünde und Schuld, Köder für Versuchung, Schild für Bewahrung. Johannes und seine Jünger ([[LUK.11.1]]) zeigt das Bild nicht.",
-  "note_gsw": "De Lukas überlieferet e chürzeri Fassig vom Unservatter mit füf Bitte ([[LUK.11.2-LUK.11.4]]); d Bitte um Gottes Wille und um Rettig vor em Böse fehled da (vgl. [[MAT.6.10]], [[MAT.6.13]]). Gott erschiint als Strahlechranz, aagredt eifach als «Vatter». D Zeiche sind wie bim Matthäus Düütig: Schuldschii für Sünd und Schuld, Köder für Versuechig, Schild für Bewahrig. De Johannes und sini Jünger ([[LUK.11.1]]) zeigt s Bild nöd."
+  "note_de": "Lukas überliefert eine kürzere Fassung des Vaterunsers mit fünf Bitten ([[LUK.11.2-LUK.11.4]]); die Bitten um Gottes Willen und um Rettung vor dem Bösen fehlen hier (vgl. [[MAT.6.10]], [[MAT.6.13]]). Gott erscheint als Strahlenkranz, angeredet einfach als «Vater». Die Zeichen sind wie bei Matthäus Deutung: Schuldschein für Sünde und Schuld, Köder für Versuchung, das Verbotszeichen für «nicht». Johannes und seine Jünger ([[LUK.11.1]]) zeigt das Bild nicht.",
+  "note_gsw": "De Lukas überlieferet e chürzeri Fassig vom Unservatter mit füf Bitte ([[LUK.11.2-LUK.11.4]]); d Bitte um Gottes Wille und um Rettig vor em Böse fehled da (vgl. [[MAT.6.10]], [[MAT.6.13]]). Gott erschiint als Strahlechranz, aagredt eifach als «Vatter». D Zeiche sind wie bim Matthäus Düütig: Schuldschii für Sünd und Schuld, Köder für Versuechig, s Verbotszeiche für «nöd». De Johannes und sini Jünger ([[LUK.11.1]]) zeigt s Bild nöd."
  },
  {
   "suffix": "LUK-011",
@@ -184,24 +193,34 @@
     "signs": [],
     "speech": [
      {
+      "from": "FIG-JESUS",
+      "to": "FIG-GRUPPE-JUENGER",
+      "icons": [
+       "FIG-ZEICHEN-BETEN"
+      ]
+     },
+     {
       "from": "FIG-GRUPPE-JUENGER",
       "to": "FIG-GOTT",
       "icons": [
        "FIG-ZEICHEN-NAME-GOTTES",
-       "FIG-ZEICHEN-REICH-GOTTES",
-       "FIG-OBJ-BROT"
+       "FIG-ZEICHEN-REICH-GOTTES"
       ]
      }
     ],
     "action_de": "Auf die Bitte eines Jüngers lehrt Jesus das Vaterunser: Vater, dein Name werde geheiligt, dein Reich komme; gib uns Brot, vergib uns, führe uns nicht in Versuchung.",
     "action_gsw": "Uf d Bitt vo eme Jünger leert de Jesus s Unservatter: Vatter, din Name söll heilig gha wärde, dis Riich söll cho; gib eus Brot, vergib eus, füer eus nöd in Versuechig.",
-    "caption_de": "Vaterunser: Jesus lehrt beten; die Jünger beten zum Vater (Strahlenkranz): dein Name (leuchtend), dein Reich (Krone), unser Brot.",
-    "caption_gsw": "Unservatter: De Jesus leert bäte; d Jünger bätted zum Vatter (Strahlechranz): din Name (lüüchtend), dis Riich (Chrone), eusers Brot.",
+    "caption_de": "Vaterunser: Jesus lehrt beten (Gebetszeichen); die Jünger beten zum Vater (Strahlenkranz): dein Name (leuchtend), dein Reich (Krone).",
+    "caption_gsw": "Unservatter: De Jesus leert bäte (Gebätszeiche); d Jünger bätted zum Vatter (Strahlechranz): din Name (lüüchtend), dis Riich (Chrone).",
     "stage": {
      "god_side": "right",
      "x": {
-      "FIG-JESUS": 30,
-      "FIG-GRUPPE-JUENGER": 104
+      "FIG-JESUS": 34,
+      "FIG-GRUPPE-JUENGER": 136
+     },
+     "mood": {
+      "FIG-JESUS": "calm",
+      "FIG-GRUPPE-JUENGER": "calm"
      }
     }
    },
@@ -215,7 +234,8 @@
      "FIG-ORT-HAUS"
     ],
     "signs": [
-     "FIG-ZEICHEN-NACHT"
+     "FIG-ZEICHEN-NACHT",
+     "FIG-ZEICHEN-VERSCHLOSSEN"
     ],
     "speech": [
      {
@@ -230,12 +250,13 @@
     ],
     "action_de": "Jesus erzählt von einem Freund, der um Mitternacht beim anderen anklopft und um drei Brote bittet; wegen seiner Unverschämtheit steht der auf und gibt ihm, was er braucht.",
     "action_gsw": "De Jesus verzellt vo eme Fründ, wo um Mitternacht bim andere aachlopft und um drüü Brot bittet; wäge sinere Uverschämtheit staat de uf und git em, was er bruucht.",
-    "caption_de": "Der bittende Freund: In der Nacht (Mond) bittet ein Mann an der verschlossenen Tür seines Freundes um drei Brote.",
-    "caption_gsw": "De Fründ, wo bittet: I de Nacht (Mond) bittet en Maa a de zuene Tür vo sim Fründ um drüü Brot.",
+    "caption_de": "Der bittende Freund: In der Nacht (Mond) bittet ein Mann vor dem Haus seines Freundes um drei Brote; die Tür ist verschlossen (Tür mit Riegel).",
+    "caption_gsw": "De Fründ, wo bittet: I de Nacht (Mond) bittet en Maa vor em Huus vo sim Fründ um drüü Brot; d Tür isch zue (Tür mit Riegel).",
     "stage": {
      "back_side": "right",
+     "before": true,
      "x": {
-      "FIG-ROLLE-FREUND": 70
+      "FIG-ROLLE-FREUND": 116
      },
      "mood": {
       "FIG-ROLLE-FREUND": "earnest"
@@ -263,8 +284,8 @@
     ],
     "action_de": "Bittet, so wird euch gegeben: Wenn schon Menschen ihren Kindern Gutes geben, wie viel mehr wird der Vater im Himmel den Heiligen Geist geben denen, die ihn bitten.",
     "action_gsw": "Bitted, dänn wird eu gäh: Wänn scho Mänsche ihrne Chind Guets gänd, wie vill meh git de Vatter im Himmel de Heilig Geischt dene, wo en drum bitted.",
-    "caption_de": "Bittet: Die Jünger bitten den Vater (Strahlenkranz); er gibt ihnen den Heiligen Geist (Taube, Pfeil).",
-    "caption_gsw": "Bitted: D Jünger bitted de Vatter (Strahlechranz); er git ine de Heilig Geischt (Tube, Pfiil).",
+    "caption_de": "Bittet: Die Jünger bitten den Vater (Strahlenkranz); er gibt ihnen den Heiligen Geist (Taube, goldener Pfeil vom Strahlenkranz).",
+    "caption_gsw": "Bitted: D Jünger bitted de Vatter (Strahlechranz); er git ine de Heilig Geischt (Tube, goldige Pfiil vom Strahlechranz).",
     "stage": {
      "god_side": "left",
      "x": {
@@ -272,7 +293,7 @@
      },
      "arrows": [
       [
-       "FIG-HEILIGER-GEIST",
+       "FIG-GOTT",
        "FIG-GRUPPE-JUENGER",
        "act"
       ]
@@ -287,37 +308,39 @@
     "reference": "LUK.11.37-LUK.11.54",
     "figures": [
      "FIG-JESUS",
-     "FIG-ROLLE-PHARISAEER",
-     "FIG-ROLLE-SCHRIFTGELEHRTER"
+     "FIG-GRUPPE-PHARISAEER",
+     "FIG-GRUPPE-SCHRIFTGELEHRTE"
     ],
     "objects": [],
     "signs": [],
     "speech": [
      {
       "from": "FIG-JESUS",
-      "to": "FIG-ROLLE-PHARISAEER",
+      "to": "FIG-GRUPPE-PHARISAEER",
       "icons": [
+       "FIG-GRUPPE-PHARISAEER",
        "FIG-ZEICHEN-GERICHT",
        "FIG-ZEICHEN-LIEBE",
-       "FIG-GOTT"
+       "FIG-GOTT",
+       "FIG-ZEICHEN-NICHT"
       ]
      }
     ],
     "action_de": "Im Haus eines Pharisäers spricht Jesus Weherufe gegen Pharisäer und Gesetzeslehrer: Sie übergehen das Recht und die Liebe Gottes.",
     "action_gsw": "Im Huus vo eme Pharisäer redt de Jesus Wehrüef gäge Pharisäer und Gsetzesleerer: Si übergönd s Rächt und d Liebi vo Gott.",
-    "caption_de": "Scharfe Worte: Jesus hält Pharisäern und Gesetzeslehrern vor, dass sie das Recht (Waage) und die Liebe Gottes (Herz, Strahlenkranz) übergehen.",
-    "caption_gsw": "Scharfi Wort: De Jesus hebt Pharisäer und Gsetzesleerer vor, dass si s Rächt (Waag) und d Liebi vo Gott (Härz, Strahlechranz) übergönd.",
+    "caption_de": "Scharfe Worte: Jesus hält Pharisäern und Gesetzeslehrern vor, dass sie das Recht (Waage) und die Liebe Gottes (Herz, Strahlenkranz) übergehen (roter Kreis mit Schrägbalken: nicht).",
+    "caption_gsw": "Scharfi Wort: De Jesus hebt Pharisäer und Gsetzesleerer vor, dass si s Rächt (Waag) und d Liebi vo Gott (Härz, Strahlechranz) übergönd (rote Chreis mit Schrägbalke: nöd).",
     "stage": {
      "mood": {
       "FIG-JESUS": "earnest",
-      "FIG-ROLLE-PHARISAEER": "earnest",
-      "FIG-ROLLE-SCHRIFTGELEHRTER": "pensive"
+      "FIG-GRUPPE-PHARISAEER": "earnest",
+      "FIG-GRUPPE-SCHRIFTGELEHRTE": "pensive"
      }
     }
    }
   ],
-  "note_de": "Übersetzt ist bisher nur [[LUK.11.1-LUK.11.4]]; die Felder 2 bis 4 folgen der Kapitelzusammenfassung. Die Streitgespräche über Jesu Vollmacht ([[LUK.11.14-LUK.11.36]]) zeigt das Bild nicht eigens; Feld 4 steht für die Worte an Pharisäer und Gesetzeslehrer ([[LUK.11.42]], [[LUK.11.46]]). Der Gesetzeslehrer erscheint als Schriftgelehrter. Die Gegner sind ernst, nicht böse gezeigt.",
-  "note_gsw": "Übersetzt isch bis jetzt nu [[LUK.11.1-LUK.11.4]]; d Fälder 2 bis 4 folged de Kapitelzämefassig. D Striitgspröch über d Vollmacht vom Jesus ([[LUK.11.14-LUK.11.36]]) zeigt s Bild nöd eigens; s Fäld 4 staat für d Wort a Pharisäer und Gsetzesleerer ([[LUK.11.42]], [[LUK.11.46]]). De Gsetzesleerer erschiint als Schriftgleerte. D Gägner sind ernscht, nöd bös zeigt."
+  "note_de": "Übersetzt ist bisher nur [[LUK.11.1-LUK.11.4]]; die Felder 2 bis 4 folgen der Kapitelzusammenfassung. Die Streitgespräche über Jesu Vollmacht ([[LUK.11.14-LUK.11.36]]) zeigt das Bild nicht eigens; Feld 4 steht für die Worte an Pharisäer und Gesetzeslehrer ([[LUK.11.42]], [[LUK.11.46]]). Die Gesetzeslehrer erscheinen als Schriftgelehrte (mit Schriftrolle). Die Gegner sind ernst, nicht böse gezeigt.",
+  "note_gsw": "Übersetzt isch bis jetzt nu [[LUK.11.1-LUK.11.4]]; d Fälder 2 bis 4 folged de Kapitelzämefassig. D Striitgspröch über d Vollmacht vom Jesus ([[LUK.11.14-LUK.11.36]]) zeigt s Bild nöd eigens; s Fäld 4 staat für d Wort a Pharisäer und Gsetzesleerer ([[LUK.11.42]], [[LUK.11.46]]). D Gsetzesleerer erschiined als Schriftgleerti (mit Schriftrolle). D Gägner sind ernscht, nöd bös zeigt."
  },
  {
   "suffix": "LUK",
@@ -352,18 +375,19 @@
     ],
     "action_de": "Jesus wendet sich den Armen, Kranken und Ausgegrenzten zu: Selig ihr Armen, denn euch gehört das Reich Gottes.",
     "action_gsw": "De Jesus wändet sich de Arme, Chranke und Usgschlossne zue: Sälig ihr Arme, dänn eu ghört s Riich Gottes.",
-    "caption_de": "Zuwendung: Jesus wendet sich mit Erbarmen (Herz in Händen) einer armen Witwe und einem Kranken zu und spricht ihnen das Reich Gottes zu (Krone).",
-    "caption_gsw": "Zuewändig: De Jesus wändet sich mit Erbarme (Härz i de Händ) ere arme Witwe und eme Chranke zue und seit ine s Riich Gottes zue (Chrone).",
+    "caption_de": "Zuwendung: Jesus wendet sich mit Erbarmen (Herz in Händen) einer armen Witwe und einem liegenden Kranken zu und spricht ihnen das Reich Gottes zu (Krone).",
+    "caption_gsw": "Zuewändig: De Jesus wändet sich mit Erbarme (Härz i de Händ) ere arme Witwe und eme Chranke, wo liit, zue und seit ine s Riich Gottes zue (Chrone).",
     "stage": {
      "at": {
       "FIG-ZEICHEN-ERBARMEN": "FIG-JESUS"
      },
      "mood": {
+      "FIG-JESUS": "smile",
       "FIG-ROLLE-WITWE": "surprised",
-      "FIG-ROLLE-KRANKER": "smile"
+      "FIG-ROLLE-KRANKER": "calm"
      },
      "pose": {
-      "FIG-ROLLE-KRANKER": "sit"
+      "FIG-ROLLE-KRANKER": "lie"
      }
     }
    },
@@ -386,11 +410,11 @@
     "stage": {
      "back_side": "right",
      "x": {
-      "FIG-JESUS": 70,
-      "FIG-GRUPPE-JUENGER": 30
+      "FIG-GRUPPE-JUENGER": 24,
+      "FIG-JESUS": 88
      },
      "mood": {
-      "FIG-JESUS": "determined",
+      "FIG-JESUS": "calm",
       "FIG-GRUPPE-JUENGER": "calm"
      },
      "arrows": [
@@ -412,14 +436,16 @@
     "objects": [
      "FIG-ORT-JERUSALEM"
     ],
-    "signs": [],
+    "signs": [
+     "FIG-ZEICHEN-WUNDMALE"
+    ],
     "speech": [
      {
       "from": "FIG-JESUS",
       "to": "FIG-GRUPPE-JUENGER",
       "icons": [
        "FIG-OBJ-KREUZ",
-       "FIG-ZEICHEN-AUFERSTEHEN",
+       "FIG-ZEICHEN-AUFERSTEHUNG",
        "FIG-ZEICHEN-AUSBREITEN",
        "FIG-GRUPPE-VOELKER"
       ]
@@ -427,16 +453,20 @@
     ],
     "action_de": "Der Auferstandene erklärt den Jüngern: Der Christus muss leiden und am dritten Tag auferstehen; in seinem Namen wird allen Völkern Umkehr verkündet, angefangen in Jerusalem; ihr seid Zeugen.",
     "action_gsw": "De Uferstandnig erklärt de Jünger: De Christus mues liide und am dritte Tag uferstah; i sim Name wird allne Völker Umchehr verchündet, aagfange z Jerusalem; ihr sind Züüge.",
-    "caption_de": "Sendung der Zeugen: In Jerusalem sagt der Auferstandene den Jüngern: Kreuz und Auferstehung (offenes Grab, Pfeil nach oben) – die Botschaft geht zu allen Völkern (Pfeile, Völker).",
-    "caption_gsw": "Sändig vo de Züüge: Z Jerusalem seit de Uferstandnig de Jünger: Chrüz und Uferstehig (offes Grab, Pfiil ufe) – d Botschaft gaat zu allne Völker (Pfiil, Völker).",
+    "caption_de": "Sendung der Zeugen: In Jerusalem zeigt sich der Auferstandene (Hand mit Wundmal) und sagt den Jüngern: Kreuz und Auferstehung (offenes Grab, goldener Pfeil nach oben) – die Botschaft geht zu allen Völkern (Pfeile, Völker).",
+    "caption_gsw": "Sändig vo de Züüge: Z Jerusalem zeigt sich de Uferstandnig (Hand mit Wundmal) und seit de Jünger: Chrüz und Uferstehig (offes Grab, goldige Pfiil ufe) – d Botschaft gaat zu allne Völker (Pfiil, Völker).",
     "stage": {
      "back_side": "left",
      "x": {
-      "FIG-JESUS": 116,
-      "FIG-GRUPPE-JUENGER": 162
+      "FIG-JESUS": 84,
+      "FIG-GRUPPE-JUENGER": 150
      },
      "mood": {
+      "FIG-JESUS": "calm",
       "FIG-GRUPPE-JUENGER": "surprised"
+     },
+     "at": {
+      "FIG-ZEICHEN-WUNDMALE": "FIG-JESUS"
      }
     }
    }

@@ -73,9 +73,6 @@
       "action_de": "Jesus blickt sie ringsum an, zornig und betrübt über ihre verhärteten Herzen, und sagt zum Menschen: Streck die Hand aus! Er streckt sie aus, und sie ist wiederhergestellt.",
       "stage": {
         "back_side": "left",
-        "at": {
-          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
-        },
         "signs_who": {
           "FIG-ZEICHEN-TRAUER": [
             "FIG-JESUS"
@@ -91,7 +88,10 @@
             "FIG-ROLLE-KRANKER",
             "act"
           ]
-        ]
+        ],
+        "beside": {
+          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
+        }
       }
     },
     {
@@ -118,6 +118,10 @@
         "mood": {
           "FIG-GRUPPE-PHARISAEER": "earnest",
           "FIG-GRUPPE-HERODIANER": "earnest"
+        },
+        "x": {
+          "FIG-GRUPPE-PHARISAEER": 66,
+          "FIG-GRUPPE-HERODIANER": 122
         }
       }
     }
@@ -128,8 +132,8 @@
     "Die Pharisäer gehen hinaus und beraten sogleich mit den Herodianern, wie sie Jesus umbringen können."
   ],
   "captions_de": [
-    "Die Frage: Jesus fragt: Am Sabbat heilen? (zwei Lampen, Hand mit Licht, Fragezeichen); die Pharisäer schweigen (durchgestrichene Sprechblase).",
-    "Geheilt: Jesus, betrübt (Träne), sagt: Streck die Hand aus; die Hand wird heil (Hand mit Licht).",
+    "Die Frage: Jesus fragt: Am Sabbat heilen? (Sabbat-Zeichen: sechs graue und ein goldener Kreis, Hand mit Licht, Fragezeichen); die Pharisäer schweigen (durchgestrichene Sprechblase).",
+    "Geheilt: Jesus, betrübt (Tränen), sagt: Streck die Hand aus; die Hand wird heil (Hand mit Licht beim Mann).",
     "Der Beschluss: Pharisäer und Herodianer beraten gegen Jesus (Jesus, verschlossenes Grab)."
   ],
   "interpretation_note_de": "Den Zorn Jesu ([[MRK.3.5]]) zeigt das Bild nur mit einem ernsten Gesicht, die Betrübnis mit einer Träne. Das verschlossene Grab steht für den Plan, Jesus umzubringen; Gewalt wird nicht gezeigt. Pharisäer und Herodianer sind neutral gezeichnet.",
@@ -163,5 +167,132 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.3.1-MRK.3.4",
+            "figures": [
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-ROLLE-KRANKER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-SYNAGOGE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SCHWEIGEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-ZEICHEN-SABBAT",
+                  "FIG-ZEICHEN-HEILEN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "In der Synagoge ist ein Mensch mit einer verdorrten Hand; man beobachtet Jesus. Er ruft den Menschen in die Mitte und fragt: Ist es erlaubt, am Sabbat Gutes zu tun, Leben zu retten? Sie aber schweigen.",
+            "stage": {
+              "back_side": "left",
+              "at": {
+                "FIG-ZEICHEN-SCHWEIGEN": "FIG-GRUPPE-PHARISAEER"
+              },
+              "mood": {
+                "FIG-GRUPPE-PHARISAEER": "earnest",
+                "FIG-ROLLE-KRANKER": "worried",
+                "FIG-JESUS": "earnest"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.3.5",
+            "figures": [
+              "FIG-ROLLE-KRANKER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-SYNAGOGE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-HEILEN",
+              "FIG-ZEICHEN-TRAUER"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-KRANKER",
+                "icons": [
+                  "FIG-ZEICHEN-HEILEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus blickt sie ringsum an, zornig und betrübt über ihre verhärteten Herzen, und sagt zum Menschen: Streck die Hand aus! Er streckt sie aus, und sie ist wiederhergestellt.",
+            "stage": {
+              "back_side": "left",
+              "at": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-JESUS"
+                ]
+              },
+              "mood": {
+                "FIG-ROLLE-KRANKER": "delight",
+                "FIG-JESUS": "earnest"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-KRANKER",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.3.6",
+            "figures": [
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-GRUPPE-HERODIANER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-PHARISAEER",
+                "to": "FIG-GRUPPE-HERODIANER",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-TOD"
+                ]
+              }
+            ],
+            "action_de": "Die Pharisäer gehen hinaus und beraten sogleich mit den Herodianern, wie sie Jesus umbringen können.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-PHARISAEER": "earnest",
+                "FIG-GRUPPE-HERODIANER": "earnest"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Die Frage: Jesus fragt: Am Sabbat heilen? (zwei Lampen, Hand mit Licht, Fragezeichen); die Pharisäer schweigen (durchgestrichene Sprechblase).",
+          "Geheilt: Jesus, betrübt (Träne), sagt: Streck die Hand aus; die Hand wird heil (Hand mit Licht).",
+          "Der Beschluss: Pharisäer und Herodianer beraten gegen Jesus (Jesus, verschlossenes Grab)."
+        ]
+      }
+    }
+  ]
 }

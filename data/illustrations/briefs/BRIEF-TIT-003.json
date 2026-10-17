@@ -73,6 +73,9 @@
         "mood": {
           "FIG-GRUPPE-GLAUBENDE": "smile",
           "FIG-GRUPPE-MENGE": "smile"
+        },
+        "wear": {
+          "FIG-GRUPPE-MENGE": "#8A7A6A"
         }
       }
     },
@@ -110,7 +113,11 @@
           ]
         ],
         "back_side": "left",
-        "before": true
+        "before": true,
+        "mood": {
+          "FIG-TITUS": "calm",
+          "FIG-PAULUS": "calm"
+        }
       }
     }
   ],
@@ -122,7 +129,7 @@
   "captions_de": [
     "Gerettet aus Erbarmen: Gott (Strahlenkranz) rettet aus Erbarmen (Herz in Händen); der Geist (Taube) kommt herab; die Glaubenden freuen sich (Funken).",
     "Gute Werke: Die Glaubenden geben anderen Menschen Brot (Pfeil); Zeichen für gute Werke (Hand mit Brot).",
-    "Reisepläne: Paulus schickt einen Boten (Artemas oder Tychikus) zu Titus (Pfeil); Titus soll in die Stadt kommen, wo Paulus überwintert (Titus, Pfeil, Stadt, Schneeflocke)."
+    "Reisepläne: Paulus schickt einen Boten mit Brief (Artemas oder Tychikus) zu Titus (Pfeil); Titus soll in die Stadt kommen, wo Paulus überwintert (Titus, Pfeil, Stadt, Schneeflocke)."
   ],
   "interpretation_note_de": "Je ein Feld aus den drei Abschnitten des Kapitels; Einzelheiten dort.",
   "basis": [
@@ -137,5 +144,124 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "TIT.3.1-TIT.3.7",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-HEILIGER-GEIST",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-ERBARMEN",
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [],
+            "action_de": "Die Glaubenden sollen allen Menschen freundlich begegnen, weil Gott sie nicht wegen ihrer Werke, sondern aus Erbarmen gerettet hat.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-GLAUBENDE",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-ERBARMEN": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "god_side": "left",
+              "x": {
+                "FIG-GRUPPE-GLAUBENDE": 120
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "TIT.3.8-TIT.3.11",
+            "figures": [
+              "FIG-GRUPPE-GLAUBENDE",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-GUTE-WERKE"
+            ],
+            "speech": [],
+            "action_de": "Die zum Glauben gekommen sind, sollen sich für gute Werke einsetzen; das ist gut und nützlich für die Menschen.",
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-GLAUBENDE": "FIG-OBJ-BROT"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-GLAUBENDE",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-GUTE-WERKE": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "smile",
+                "FIG-GRUPPE-MENGE": "smile"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "TIT.3.12-TIT.3.15",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-ROLLE-BOTE",
+              "FIG-TITUS"
+            ],
+            "objects": [
+              "FIG-ORT-STADT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-TITUS",
+                  "FIG-ZEICHEN-BRINGEN",
+                  "FIG-ORT-STADT",
+                  "FIG-ZEICHEN-WINTER"
+                ]
+              }
+            ],
+            "action_de": "Paulus will Artemas oder Tychikus zu Titus schicken; dann soll Titus schnell zu ihm nach Nikopolis kommen, wo Paulus überwintern will.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-ROLLE-BOTE",
+                  "FIG-TITUS",
+                  "go"
+                ]
+              ],
+              "back_side": "left",
+              "before": true
+            }
+          }
+        ],
+        "captions_de": [
+          "Gerettet aus Erbarmen: Gott (Strahlenkranz) rettet aus Erbarmen (Herz in Händen); der Geist (Taube) kommt herab; die Glaubenden freuen sich (Funken).",
+          "Gute Werke: Die Glaubenden geben anderen Menschen Brot (Pfeil); Zeichen für gute Werke (Hand mit Brot).",
+          "Reisepläne: Paulus schickt einen Boten (Artemas oder Tychikus) zu Titus (Pfeil); Titus soll in die Stadt kommen, wo Paulus überwintert (Titus, Pfeil, Stadt, Schneeflocke)."
+        ]
+      }
+    }
+  ]
 }

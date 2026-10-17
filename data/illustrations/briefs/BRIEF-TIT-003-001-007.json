@@ -30,7 +30,12 @@
           ]
         }
       ],
-      "action_de": "Titus soll die Gemeinde erinnern, sich den Regierenden unterzuordnen, zu jedem guten Werk bereit zu sein und allen Menschen freundlich und sanftmütig zu begegnen."
+      "action_de": "Titus soll die Gemeinde erinnern, sich den Regierenden unterzuordnen, zu jedem guten Werk bereit zu sein und allen Menschen freundlich und sanftmütig zu begegnen.",
+      "stage": {
+        "mood": {
+          "FIG-TITUS": "calm"
+        }
+      }
     },
     {
       "n": 2,
@@ -47,13 +52,14 @@
       "action_de": "Auch die Glaubenden waren einst unverständig und irregeführt, lebten in Bosheit und Neid und hassten einander.",
       "stage": {
         "at": {
+          "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-GRUPPE-GLAUBENDE"
+        },
+        "beside": {
           "FIG-ZEICHEN-ZORN": "FIG-GRUPPE-GLAUBENDE"
         },
         "mood": {
           "FIG-GRUPPE-GLAUBENDE": "worried"
-        },
-        "air_x": 120,
-        "air_y": 30
+        }
       }
     },
     {
@@ -96,7 +102,7 @@
   ],
   "captions_de": [
     "Freundlich zu allen: Titus erinnert die Glaubenden: den Regierenden (König) gehorchen (Ohr); gute Werke (Hand mit Brot) und Frieden (Ölzweig) mit allen.",
-    "Früher: Die Glaubenden lebten im Streit (dunkle Wolke) und verirrt (grauer Nebel mit Fragezeichen).",
+    "Früher: Die Glaubenden lebten im Streit (dunkle Wolke neben den Köpfen) und verirrt (grauer gestrichelter Kreis mit Fragezeichen über den Köpfen).",
     "Gerettet aus Erbarmen: Gott (Strahlenkranz) rettet aus Erbarmen (Herz in Händen); der Geist (Taube) kommt reichlich herab; die Glaubenden freuen sich (Funken)."
   ],
   "interpretation_note_de": "Mit dem «König» sind die Regierenden und Behörden gemeint ([[TIT.3.1]]). Das «Bad der Wiedergeburt» ([[TIT.3.5]]) wird oft auf die Taufe bezogen; das Bild zeigt es nicht eigens.",
@@ -130,5 +136,99 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "TIT.3.1-TIT.3.2",
+            "figures": [
+              "FIG-TITUS",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-TITUS",
+                "to": "FIG-GRUPPE-GLAUBENDE",
+                "icons": [
+                  "FIG-ROLLE-KOENIG",
+                  "FIG-ZEICHEN-HOEREN",
+                  "FIG-ZEICHEN-GUTE-WERKE",
+                  "FIG-ZEICHEN-FRIEDE"
+                ]
+              }
+            ],
+            "action_de": "Titus soll die Gemeinde erinnern, sich den Regierenden unterzuordnen, zu jedem guten Werk bereit zu sein und allen Menschen freundlich und sanftmütig zu begegnen."
+          },
+          {
+            "n": 2,
+            "reference": "TIT.3.3",
+            "figures": [
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-ZORN",
+              "FIG-ZEICHEN-NICHT-VERSTEHEN"
+            ],
+            "speech": [],
+            "action_de": "Auch die Glaubenden waren einst unverständig und irregeführt, lebten in Bosheit und Neid und hassten einander.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-ZORN": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "worried"
+              },
+              "air_x": 120,
+              "air_y": 30
+            }
+          },
+          {
+            "n": 3,
+            "reference": "TIT.3.4-TIT.3.7",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-HEILIGER-GEIST",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-ERBARMEN",
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [],
+            "action_de": "Als die Güte und Menschenfreundlichkeit Gottes erschien, hat er sie aus Erbarmen gerettet durch das Bad der Wiedergeburt und die Erneuerung des Heiligen Geistes, den er reichlich ausgegossen hat.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-GLAUBENDE",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-ERBARMEN": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "god_side": "left",
+              "x": {
+                "FIG-GRUPPE-GLAUBENDE": 120
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Freundlich zu allen: Titus erinnert die Glaubenden: den Regierenden (König) gehorchen (Ohr); gute Werke (Hand mit Brot) und Frieden (Ölzweig) mit allen.",
+          "Früher: Die Glaubenden lebten im Streit (dunkle Wolke) und verirrt (grauer Nebel mit Fragezeichen).",
+          "Gerettet aus Erbarmen: Gott (Strahlenkranz) rettet aus Erbarmen (Herz in Händen); der Geist (Taube) kommt reichlich herab; die Glaubenden freuen sich (Funken)."
+        ]
+      }
+    }
+  ]
 }

@@ -13,8 +13,8 @@
       "n": 1,
       "reference": "PHP.4.21-PHP.4.22",
       "figures": [
-        "FIG-PAULUS",
-        "FIG-GRUPPE-GLAUBENDE"
+        "FIG-GRUPPE-GLAUBENDE",
+        "FIG-PAULUS"
       ],
       "objects": [
         "FIG-OBJ-BRIEF",
@@ -36,11 +36,17 @@
           ]
         ],
         "floor_x": {
-          "FIG-OBJ-KETTE": 14
+          "FIG-OBJ-KETTE": 76
         },
         "mood": {
-          "FIG-GRUPPE-GLAUBENDE": "smile"
-        }
+          "FIG-GRUPPE-GLAUBENDE": "smile",
+          "FIG-PAULUS": "smile"
+        },
+        "x": {
+          "FIG-GRUPPE-GLAUBENDE": 26,
+          "FIG-PAULUS": 92
+        },
+        "back_side": "right"
       }
     },
     {
@@ -68,6 +74,9 @@
       "stage": {
         "floor_x": {
           "FIG-OBJ-KETTE": 30
+        },
+        "mood": {
+          "FIG-PAULUS": "smile"
         }
       }
     }
@@ -77,7 +86,7 @@
     "Paulus schliesst mit dem Segenswunsch: Die Gnade des Herrn Jesus Christus sei mit eurem Geist."
   ],
   "captions_de": [
-    "Grüsse: Paulus (Brief, Kette) und die Geschwister bei ihm grüssen die Gemeinde in Philippi (Haus mit Menschen, Pfeil).",
+    "Grüsse: Paulus (Brief, Kette) und die Geschwister bei ihm (links) grüssen die Gemeinde in Philippi (Haus mit Menschen, Pfeil).",
     "Segenswunsch: Paulus (Kette) wünscht der Gemeinde die Gnade (Hände mit Licht) von Jesus (Kreuznimbus)."
   ],
   "interpretation_note_de": "Die Christen «aus dem Haus des Kaisers» ([[PHP.4.22]]) sind nicht eigens gezeichnet. Paulus schreibt den Brief als Gefangener «in Fesseln» ([[PHP.1.7]], [[PHP.1.13]]); deshalb liegt bei ihm eine Kette. Ein Soldat steht für die Wache im Prätorium ([[PHP.1.13]]).",
@@ -105,5 +114,81 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "PHP.4.21-PHP.4.22",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [
+              "FIG-OBJ-BRIEF",
+              "FIG-OBJ-KETTE",
+              "FIG-GRUPPE-GEMEINDE"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Paulus lässt jeden Heiligen grüssen; es grüssen die Geschwister bei ihm und alle Heiligen, besonders die aus dem Haus des Kaisers.",
+            "stage": {
+              "hold": {
+                "FIG-PAULUS": "FIG-OBJ-BRIEF"
+              },
+              "arrows": [
+                [
+                  "FIG-PAULUS",
+                  "FIG-GRUPPE-GEMEINDE",
+                  "act"
+                ]
+              ],
+              "floor_x": {
+                "FIG-OBJ-KETTE": 14
+              },
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "smile"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "PHP.4.23",
+            "figures": [
+              "FIG-PAULUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE",
+              "FIG-GRUPPE-GEMEINDE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-GRUPPE-GEMEINDE",
+                "icons": [
+                  "FIG-ZEICHEN-GNADE",
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Paulus schliesst mit dem Segenswunsch: Die Gnade des Herrn Jesus Christus sei mit eurem Geist.",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KETTE": 30
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Grüsse: Paulus (Brief, Kette) und die Geschwister bei ihm grüssen die Gemeinde in Philippi (Haus mit Menschen, Pfeil).",
+          "Segenswunsch: Paulus (Kette) wünscht der Gemeinde die Gnade (Hände mit Licht) von Jesus (Kreuznimbus)."
+        ]
+      }
+    }
+  ]
 }

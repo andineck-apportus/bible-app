@@ -69,12 +69,13 @@
         },
         "mood": {
           "FIG-LIEBLINGSJUENGER": "worried",
-          "FIG-JUDAS-ISKARIOT": "calm"
+          "FIG-JUDAS-ISKARIOT": "calm",
+          "FIG-JESUS": "calm"
         },
         "x": {
-          "FIG-LIEBLINGSJUENGER": 34,
-          "FIG-JESUS": 86,
-          "FIG-JUDAS-ISKARIOT": 146
+          "FIG-LIEBLINGSJUENGER": 64,
+          "FIG-JESUS": 98,
+          "FIG-JUDAS-ISKARIOT": 152
         },
         "arrows": [
           [
@@ -108,17 +109,18 @@
         },
         "x": {
           "FIG-JESUS": 46,
-          "FIG-JUDAS-ISKARIOT": 140
+          "FIG-JUDAS-ISKARIOT": 150
         },
         "mood": {
-          "FIG-JESUS": "earnest",
-          "FIG-JUDAS-ISKARIOT": "earnest"
+          "FIG-JESUS": "calm",
+          "FIG-JUDAS-ISKARIOT": "pensive"
         },
         "at": {
           "FIG-ZEICHEN-FLIEHEN": "FIG-JUDAS-ISKARIOT"
         },
         "air_x": 150,
-        "air_y": 8
+        "air_y": 8,
+        "before": true
       }
     }
   ],
@@ -128,8 +130,8 @@
     "Nach dem Bissen fährt der Satan in Judas. Jesus sagt zu ihm: Was du tust, das tu schnell! Judas geht sogleich hinaus. Es ist Nacht."
   ],
   "captions_de": [
-    "Ansage: Jesus sagt erschüttert: Einer von euch liefert mich aus (Jünger, gebundene Hände); die Jünger sind ratlos (Nebel mit Fragezeichen).",
-    "Der Bissen: Der Lieblingsjünger fragt (Fragezeichen); Jesus gibt Judas (Kästchen) den eingetauchten Bissen (Brot, Linie).",
+    "Ansage: Jesus sagt erschüttert: Einer von euch liefert mich aus (Jünger, gebundene Hände); die Jünger sind ratlos (graues Fragezeichen im gestrichelten Kreis).",
+    "Der Bissen: Der Lieblingsjünger lehnt an Jesus und fragt (Fragezeichen); Jesus gibt Judas (Kästchen) den eingetauchten Bissen (Brot, Linie).",
     "Judas geht hinaus: Der Satan (dunkler Schatten) fährt in Judas; Judas geht hinaus (Pfeil), es ist Nacht (Mond)."
   ],
   "interpretation_note_de": "Dass der Jünger an der Brust Jesu liegt ([[JHN.13.23]]), zeigt das Bild nur mit der Nähe. Den Satan zeigt das Bild als dunklen Schatten ohne Gestalt, wie das Lexikon vorgibt; Judas bleibt wie die anderen Jünger gezeichnet. Das Wort «Was du tust, das tu schnell» ([[JHN.13.27]]) und die Vermutungen der Jünger ([[JHN.13.28-JHN.13.29]]) zeigt das Bild nicht.",
@@ -163,5 +165,132 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.13.21-JHN.13.22",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-NICHT-VERSTEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ROLLE-JUENGER",
+                  "FIG-ZEICHEN-AUSLIEFERN"
+                ]
+              }
+            ],
+            "action_de": "Erschüttert sagt Jesus: Einer von euch wird mich ausliefern. Die Jünger blicken einander an, ratlos, von wem er redet.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "worried",
+                "FIG-GRUPPE-ZWOELF": "surprised"
+              },
+              "at": {
+                "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-GRUPPE-ZWOELF"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.13.23-JHN.13.26",
+            "figures": [
+              "FIG-LIEBLINGSJUENGER",
+              "FIG-JESUS",
+              "FIG-JUDAS-ISKARIOT"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-LIEBLINGSJUENGER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Der Jünger, den Jesus liebte, fragt an seiner Brust: Herr, wer ist es? Jesus taucht den Bissen ein und gibt ihn Judas, dem Sohn des Simon Iskariot.",
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROT"
+              },
+              "mood": {
+                "FIG-LIEBLINGSJUENGER": "worried",
+                "FIG-JUDAS-ISKARIOT": "calm"
+              },
+              "x": {
+                "FIG-LIEBLINGSJUENGER": 34,
+                "FIG-JESUS": 86,
+                "FIG-JUDAS-ISKARIOT": 146
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-JUDAS-ISKARIOT",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.13.27-JHN.13.30",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-JUDAS-ISKARIOT"
+            ],
+            "objects": [
+              "FIG-SATAN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FLIEHEN",
+              "FIG-ZEICHEN-NACHT"
+            ],
+            "speech": [],
+            "action_de": "Nach dem Bissen fährt der Satan in Judas. Jesus sagt zu ihm: Was du tust, das tu schnell! Judas geht sogleich hinaus. Es ist Nacht.",
+            "stage": {
+              "back_side": "right",
+              "pose": {
+                "FIG-JUDAS-ISKARIOT": "away"
+              },
+              "x": {
+                "FIG-JESUS": 46,
+                "FIG-JUDAS-ISKARIOT": 140
+              },
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-JUDAS-ISKARIOT": "earnest"
+              },
+              "at": {
+                "FIG-ZEICHEN-FLIEHEN": "FIG-JUDAS-ISKARIOT"
+              },
+              "air_x": 150,
+              "air_y": 8
+            }
+          }
+        ],
+        "captions_de": [
+          "Ansage: Jesus sagt erschüttert: Einer von euch liefert mich aus (Jünger, gebundene Hände); die Jünger sind ratlos (Nebel mit Fragezeichen).",
+          "Der Bissen: Der Lieblingsjünger fragt (Fragezeichen); Jesus gibt Judas (Kästchen) den eingetauchten Bissen (Brot, Linie).",
+          "Judas geht hinaus: Der Satan (dunkler Schatten) fährt in Judas; Judas geht hinaus (Pfeil), es ist Nacht (Mond)."
+        ]
+      }
+    }
+  ]
 }

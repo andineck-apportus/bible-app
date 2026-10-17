@@ -55,7 +55,6 @@
       ],
       "objects": [
         "FIG-ORT-HAUS",
-        "FIG-OBJ-LAMPE",
         "FIG-OBJ-HAHN"
       ],
       "signs": [
@@ -65,15 +64,16 @@
       "speech": [],
       "action_de": "Wie der Türhüter eines verreisten Hausherrn soll jeder wachen; der Herr kann am Abend, um Mitternacht, beim Hahnenschrei oder am Morgen kommen. Was ich euch sage, sage ich allen: Wacht!",
       "stage": {
-        "hold": {
-          "FIG-ROLLE-DIENER": "FIG-OBJ-LAMPE"
-        },
         "at": {
           "FIG-ZEICHEN-WACHEN": "FIG-ROLLE-DIENER"
         },
         "back_side": "left",
         "mood": {
-          "FIG-ROLLE-DIENER": "determined"
+          "FIG-ROLLE-DIENER": "calm"
+        },
+        "before": true,
+        "x": {
+          "FIG-ROLLE-DIENER": 58
         }
       }
     }
@@ -84,7 +84,7 @@
   ],
   "captions_de": [
     "Wann? Die Stunde kennt nur der Vater (Sanduhr, Fragezeichen, Strahlenkranz) – darum wach bleiben (Auge).",
-    "Gleichnis: Der Türhüter wacht nachts mit der Lampe vor dem Haus (Mond, Auge, Hahn)."
+    "Gleichnis: Der Türhüter wacht nachts vor dem Haus (Mond, Auge, Hahn = Hahnenschrei)."
   ],
   "interpretation_note_de": "Das zweite Feld zeigt das Gleichnis ([[MRK.13.34-MRK.13.36]]); der Diener steht für den Türhüter, der Hahn für die Nachtwache «Hahnenschrei».",
   "basis": [
@@ -111,5 +111,87 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.13.32-MRK.13.33",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-STUNDE",
+                  "FIG-ZEICHEN-FRAGEN",
+                  "FIG-GOTT"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-WACHEN"
+                ]
+              }
+            ],
+            "action_de": "Tag und Stunde weiss niemand, nicht die Engel, nicht der Sohn, nur der Vater. Seht euch vor, bleibt wach!",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "pensive",
+                "FIG-JESUS": "earnest"
+              },
+              "x": {
+                "FIG-JESUS": 50
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.13.34-MRK.13.37",
+            "figures": [
+              "FIG-ROLLE-DIENER"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS",
+              "FIG-OBJ-LAMPE",
+              "FIG-OBJ-HAHN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NACHT",
+              "FIG-ZEICHEN-WACHEN"
+            ],
+            "speech": [],
+            "action_de": "Wie der Türhüter eines verreisten Hausherrn soll jeder wachen; der Herr kann am Abend, um Mitternacht, beim Hahnenschrei oder am Morgen kommen. Was ich euch sage, sage ich allen: Wacht!",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-DIENER": "FIG-OBJ-LAMPE"
+              },
+              "at": {
+                "FIG-ZEICHEN-WACHEN": "FIG-ROLLE-DIENER"
+              },
+              "back_side": "left",
+              "mood": {
+                "FIG-ROLLE-DIENER": "determined"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Wann? Die Stunde kennt nur der Vater (Sanduhr, Fragezeichen, Strahlenkranz) – darum wach bleiben (Auge).",
+          "Gleichnis: Der Türhüter wacht nachts mit der Lampe vor dem Haus (Mond, Auge, Hahn)."
+        ]
+      }
+    }
+  ]
 }

@@ -120,7 +120,9 @@
         },
         "mood": {
           "FIG-PETRUS": "worried"
-        }
+        },
+        "air_x": 18,
+        "air_y": 46
       }
     }
   ],
@@ -165,5 +167,129 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.18.25",
+            "figures": [
+              "FIG-GRUPPE-DIENER",
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KOHLENFEUER"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-DIENER",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-GRUPPE-DIENER",
+                "icons": [
+                  "FIG-ZEICHEN-VERLEUGNEN"
+                ]
+              }
+            ],
+            "action_de": "Simon Petrus steht da und wärmt sich. Man fragt ihn: «Bist du etwa auch einer seiner Jünger?» Er leugnet: «Ich bin es nicht.»",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KOHLENFEUER": 80
+              },
+              "x": {
+                "FIG-GRUPPE-DIENER": 46,
+                "FIG-PETRUS": 138
+              },
+              "mood": {
+                "FIG-PETRUS": "worried"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.18.26-JHN.18.27",
+            "figures": [
+              "FIG-ROLLE-DIENER",
+              "FIG-PETRUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-DIENER",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-ORT-GARTEN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-ROLLE-DIENER",
+                "icons": [
+                  "FIG-ZEICHEN-VERLEUGNEN"
+                ]
+              }
+            ],
+            "action_de": "Ein Knecht des Hohepriesters, ein Verwandter des Malchus, fragt: «Habe ich dich nicht im Garten mit ihm gesehen?» Petrus leugnet wieder.",
+            "stage": {
+              "x": {
+                "FIG-ROLLE-DIENER": 40,
+                "FIG-PETRUS": 152
+              },
+              "mood": {
+                "FIG-PETRUS": "worried",
+                "FIG-ROLLE-DIENER": "earnest"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.18.27",
+            "figures": [
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-OBJ-HAHN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-VERLEUGNEN",
+              "FIG-ZEICHEN-SPRECHEN"
+            ],
+            "speech": [],
+            "action_de": "Sogleich kräht ein Hahn.",
+            "stage": {
+              "count": {
+                "FIG-ZEICHEN-VERLEUGNEN": 3
+              },
+              "at": {
+                "FIG-ZEICHEN-SPRECHEN": "FIG-OBJ-HAHN"
+              },
+              "x": {
+                "FIG-PETRUS": 62
+              },
+              "floor_x": {
+                "FIG-OBJ-HAHN": 124
+              },
+              "mood": {
+                "FIG-PETRUS": "worried"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

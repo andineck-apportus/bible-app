@@ -25,25 +25,35 @@
     "speech": [],
     "action_de": "Beim Mahl steht Jesus auf, bindet sich ein Leinentuch um, giesst Wasser in das Becken und wäscht den Jüngern die Füsse; er liebt die Seinen bis zur Vollendung.",
     "action_gsw": "Bim Ässe staht de Jesus uf, bindet sich es Liinetuech um, schüttet Wasser is Becki und wäscht de Jünger d Füess; er hät di Sine lieb bis zum Schluss.",
-    "caption_de": "Fusswaschung: Jesus kniet beim Waschbecken vor den Jüngern und wäscht ihnen die Füsse; er liebt sie (zwei Herzen).",
-    "caption_gsw": "Fuesswäsche: De Jesus chnüet bim Becki vor de Jünger und wäscht ene d Füess; er hät si lieb (zwei Härz).",
+    "caption_de": "Fusswaschung: Jesus kniet mit dem Waschbecken vor den Jüngern und wäscht ihnen die Füsse; er liebt sie (zwei Herzen bei Jesus, Linie zu den Jüngern).",
+    "caption_gsw": "Fuesswäsche: De Jesus chnüet mit em Becki vor de Jünger und wäscht ene d Füess; er hät si lieb (zwei Härz bim Jesus, Linie zu de Jünger).",
     "stage": {
      "pose": {
       "FIG-JESUS": "kneel"
      },
      "x": {
-      "FIG-JESUS": 50,
-      "FIG-GRUPPE-ZWOELF": 150
+      "FIG-JESUS": 78,
+      "FIG-GRUPPE-ZWOELF": 148
      },
      "floor_x": {
-      "FIG-OBJ-WASCHSCHUESSEL": 86
+      "FIG-OBJ-WASCHSCHUESSEL": 110
      },
      "mood": {
-      "FIG-GRUPPE-ZWOELF": "surprised"
+      "FIG-GRUPPE-ZWOELF": "surprised",
+      "FIG-JESUS": "calm"
      },
-     "at": {
-      "FIG-ZEICHEN-LIEBE": "FIG-JESUS"
-     }
+     "signs_who": {
+      "FIG-ZEICHEN-LIEBE": [
+       "FIG-JESUS"
+      ]
+     },
+     "arrows": [
+      [
+       "FIG-JESUS",
+       "FIG-GRUPPE-ZWOELF",
+       "act"
+      ]
+     ]
     }
    },
    {
@@ -71,6 +81,7 @@
       "to": "FIG-PETRUS",
       "icons": [
        "FIG-OBJ-WASCHSCHUESSEL",
+       "FIG-PETRUS",
        "FIG-ZEICHEN-FEHLT",
        "FIG-JESUS"
       ]
@@ -78,11 +89,12 @@
     ],
     "action_de": "Petrus wehrt ab: Nie sollst du mir die Füsse waschen! Jesus antwortet: Wenn ich dich nicht wasche, hast du keinen Anteil an mir.",
     "action_gsw": "De Petrus wehrt ab: Nie söllsch du mir d Füess wäsche! De Jesus antwortet: Wänn ich dich nöd wäsch, häsch du kein Teil a mir.",
-    "caption_de": "Petrus wehrt ab: Petrus will sich nicht waschen lassen (Becken, abwehrende Hand); Jesus: Ohne Waschen kein Anteil an mir (Becken, leerer Kreis, Jesus).",
-    "caption_gsw": "De Petrus wehrt ab: De Petrus wott sich nöd la wäsche (Becki, abwehrendi Hand); de Jesus: Ohni Wäsche kein Teil a mir (Becki, leere Chreis, Jesus).",
+    "caption_de": "Petrus wehrt ab: Petrus wendet sich ab und will sich nicht waschen lassen (Becken, abwehrende Hand); Jesus: Ohne Waschen hast du keinen Anteil an mir (Becken, Petrus, durchgestrichener Kreis, Jesus).",
+    "caption_gsw": "De Petrus wehrt ab: De Petrus chehrt sich ab und wott sich nöd lah wäsche (Becki, abwehrendi Hand); de Jesus: Ohni Wäsche häsch kän Teil a mir (Becki, Petrus, durchgstrichne Kreis, Jesus).",
     "stage": {
      "pose": {
-      "FIG-JESUS": "kneel"
+      "FIG-JESUS": "kneel",
+      "FIG-PETRUS": "away"
      },
      "mood": {
       "FIG-PETRUS": "surprised",
@@ -92,8 +104,8 @@
       "FIG-OBJ-WASCHSCHUESSEL": 92
      },
      "x": {
-      "FIG-PETRUS": 52,
-      "FIG-JESUS": 128
+      "FIG-PETRUS": 40,
+      "FIG-JESUS": 146
      }
     }
    }
@@ -127,18 +139,27 @@
       "icons": [
        "FIG-JESUS",
        "FIG-OBJ-WASCHSCHUESSEL",
-       "FIG-GRUPPE-ZWOELF",
-       "FIG-OBJ-WASCHSCHUESSEL"
+       "FIG-GRUPPE-ZWOELF"
+      ]
+     },
+     {
+      "from": "FIG-JESUS",
+      "to": "FIG-GRUPPE-ZWOELF",
+      "icons": [
+       "FIG-ROLLE-JUENGER",
+       "FIG-OBJ-WASCHSCHUESSEL",
+       "FIG-ROLLE-JUENGER"
       ]
      }
     ],
     "action_de": "Jesus sagt: Ich, euer Herr und Lehrer, habe euch die Füsse gewaschen; so sollt auch ihr einander die Füsse waschen. Ich habe euch ein Beispiel gegeben.",
     "action_gsw": "De Jesus seit: Ich, eue Herr und Lehrer, han eu d Füess gwäsche; so söled au ihr enand d Füess wäsche. Ich han eu es Biischpiil gä.",
-    "caption_de": "Ein Beispiel: Jesus sagt: Wie ich gewaschen habe (Jesus, Becken), so wascht auch ihr einander (Jünger, Becken).",
-    "caption_gsw": "Es Biischpiil: De Jesus seit: Wie ich gwäsche ha (Jesus, Becki), so wäsched au ihr enand (Jünger, Becki).",
+    "caption_de": "Ein Beispiel: Jesus sagt: Wie ich euch gewaschen habe (Jesus, Becken, Jünger), so wascht auch ihr einander (Jünger, Becken, Jünger).",
+    "caption_gsw": "Es Biispiil: De Jesus seit: Wie ich eu gwäsche han (Jesus, Becki, Jünger), so wäsched au ihr enand (Jünger, Becki, Jünger).",
     "stage": {
      "mood": {
-      "FIG-GRUPPE-ZWOELF": "pensive"
+      "FIG-GRUPPE-ZWOELF": "pensive",
+      "FIG-JESUS": "calm"
      }
     }
    },
@@ -168,7 +189,8 @@
     "caption_gsw": "Gschickt: Wer eu uufnimmt, nimmt mich und de Vater uf (Jünger, Jesus, Strahlechranz).",
     "stage": {
      "mood": {
-      "FIG-GRUPPE-ZWOELF": "calm"
+      "FIG-GRUPPE-ZWOELF": "calm",
+      "FIG-JESUS": "calm"
      }
     }
    }
@@ -209,8 +231,8 @@
     ],
     "action_de": "Erschüttert sagt Jesus: Einer von euch wird mich ausliefern. Die Jünger blicken einander an, ratlos, von wem er redet.",
     "action_gsw": "Erschütteret seit de Jesus: Eine vo eu wird mich uusliefere. D Jünger lueged enand aa, ratlos, vo wem er redt.",
-    "caption_de": "Ansage: Jesus sagt erschüttert: Einer von euch liefert mich aus (Jünger, gebundene Hände); die Jünger sind ratlos (Nebel mit Fragezeichen).",
-    "caption_gsw": "Aasag: De Jesus seit erschütteret: Eine vo eu lieferet mich uus (Jünger, bundeni Händ); d Jünger sind ratlos (Näbel mit Fragezeiche).",
+    "caption_de": "Ansage: Jesus sagt erschüttert: Einer von euch liefert mich aus (Jünger, gebundene Hände); die Jünger sind ratlos (graues Fragezeichen im gestrichelten Kreis).",
+    "caption_gsw": "Aasag: De Jesus seit erschüttered: Eine vo eu lieferet mich uus (Jünger, bundeni Händ); d Jünger wüssed nöd wiiter (graus Fragezeiche im gstrichlete Kreis).",
     "stage": {
      "mood": {
       "FIG-JESUS": "worried",
@@ -244,20 +266,21 @@
     ],
     "action_de": "Der Jünger, den Jesus liebte, fragt an seiner Brust: Herr, wer ist es? Jesus taucht den Bissen ein und gibt ihn Judas, dem Sohn des Simon Iskariot.",
     "action_gsw": "De Jünger, wo de Jesus lieb gha hät, fröget a sinere Bruscht: Herr, wer isch es? De Jesus tunkt de Bisse ii und git en em Judas, em Sohn vom Simon Iskariot.",
-    "caption_de": "Der Bissen: Der Lieblingsjünger fragt (Fragezeichen); Jesus gibt Judas (Kästchen) den eingetauchten Bissen (Brot, Linie).",
-    "caption_gsw": "De Bisse: De Lieblingsjünger fröget (Fragezeiche); de Jesus git em Judas (Kässeli) de iitunkt Bisse (Brot, Linie).",
+    "caption_de": "Der Bissen: Der Lieblingsjünger lehnt an Jesus und fragt (Fragezeichen); Jesus gibt Judas (Kästchen) den eingetauchten Bissen (Brot, Linie).",
+    "caption_gsw": "De Bisse: De Lieblingsjünger lehnt am Jesus und fragt (Fragezeiche); de Jesus git em Judas (Chästli) de iitunkti Bisse (Brot, Linie).",
     "stage": {
      "hold": {
       "FIG-JESUS": "FIG-OBJ-BROT"
      },
      "mood": {
       "FIG-LIEBLINGSJUENGER": "worried",
-      "FIG-JUDAS-ISKARIOT": "calm"
+      "FIG-JUDAS-ISKARIOT": "calm",
+      "FIG-JESUS": "calm"
      },
      "x": {
-      "FIG-LIEBLINGSJUENGER": 34,
-      "FIG-JESUS": 86,
-      "FIG-JUDAS-ISKARIOT": 146
+      "FIG-LIEBLINGSJUENGER": 64,
+      "FIG-JESUS": 98,
+      "FIG-JUDAS-ISKARIOT": 152
      },
      "arrows": [
       [
@@ -294,17 +317,18 @@
      },
      "x": {
       "FIG-JESUS": 46,
-      "FIG-JUDAS-ISKARIOT": 140
+      "FIG-JUDAS-ISKARIOT": 150
      },
      "mood": {
-      "FIG-JESUS": "earnest",
-      "FIG-JUDAS-ISKARIOT": "earnest"
+      "FIG-JESUS": "calm",
+      "FIG-JUDAS-ISKARIOT": "pensive"
      },
      "at": {
       "FIG-ZEICHEN-FLIEHEN": "FIG-JUDAS-ISKARIOT"
      },
      "air_x": 150,
-     "air_y": 8
+     "air_y": 8,
+     "before": true
     }
    }
   ],
@@ -335,25 +359,35 @@
       "from": "FIG-JESUS",
       "to": "FIG-GRUPPE-ZWOELF",
       "icons": [
-       "FIG-GRUPPE-ZWOELF",
+       "FIG-JESUS",
        "FIG-ZEICHEN-LIEBE",
        "FIG-GRUPPE-ZWOELF"
+      ]
+     },
+     {
+      "from": "FIG-JESUS",
+      "to": "FIG-GRUPPE-ZWOELF",
+      "icons": [
+       "FIG-ROLLE-JUENGER",
+       "FIG-ZEICHEN-LIEBE",
+       "FIG-ROLLE-JUENGER"
       ]
      }
     ],
     "action_de": "Jesus gibt den Jüngern ein neues Gebot: Wie ich euch geliebt habe, so sollt auch ihr einander lieben; daran werden alle erkennen, dass ihr meine Jünger seid.",
     "action_gsw": "De Jesus git de Jünger es nöis Gebot: Wie ich eu lieb gha han, so söled au ihr enand lieb ha; dra werded alli erchänne, dass er mini Jünger sind.",
-    "caption_de": "Das neue Gebot: Jesus sagt: Liebt einander (Jünger, Herzen, Jünger), wie ich euch geliebt habe.",
-    "caption_gsw": "S nöi Gebot: De Jesus seit: Händ enand lieb (Jünger, Härz, Jünger), wie ich eu lieb gha han.",
+    "caption_de": "Das neue Gebot: Jesus sagt: Wie ich euch geliebt habe (Jesus, Herzen, Jünger), so liebt auch einander (Jünger, Herzen, Jünger).",
+    "caption_gsw": "S nöie Gebot: De Jesus seit: Wie ich eu lieb gha han (Jesus, Härz, Jünger), so händ au enand lieb (Jünger, Härz, Jünger).",
     "stage": {
      "mood": {
-      "FIG-GRUPPE-ZWOELF": "calm"
+      "FIG-GRUPPE-ZWOELF": "calm",
+      "FIG-JESUS": "calm"
      }
     }
    },
    {
     "n": 2,
-    "reference": "JHN.13.36-JHN.13.38",
+    "reference": "JHN.13.36-JHN.13.37",
     "figures": [
      "FIG-PETRUS",
      "FIG-JESUS"
@@ -365,29 +399,53 @@
       "from": "FIG-PETRUS",
       "to": "FIG-JESUS",
       "icons": [
+       "FIG-PETRUS",
        "FIG-ZEICHEN-TOD",
        "FIG-JESUS"
       ]
-     },
+     }
+    ],
+    "action_de": "Petrus fragt, wohin Jesus geht, und sagt: Warum kann ich dir jetzt nicht folgen? Mein Leben will ich für dich hingeben.",
+    "action_gsw": "De Petrus fragt, wo de Jesus anegaht, und seit: Werum chan ich dir jetzt nöd folge? Mis Läbe wott ich für dich häregäh.",
+    "caption_de": "Petrus will sterben: Petrus sagt: Ich gebe mein Leben für dich (Petrus, Grab, Jesus).",
+    "caption_gsw": "De Petrus wott sterbe: De Petrus seit: Ich gib mis Läbe für dich (Petrus, Grab, Jesus).",
+    "stage": {
+     "mood": {
+      "FIG-PETRUS": "determined",
+      "FIG-JESUS": "calm"
+     }
+    }
+   },
+   {
+    "n": 3,
+    "reference": "JHN.13.38",
+    "figures": [
+     "FIG-JESUS",
+     "FIG-PETRUS"
+    ],
+    "objects": [],
+    "signs": [],
+    "speech": [
      {
       "from": "FIG-JESUS",
       "to": "FIG-PETRUS",
       "icons": [
        "FIG-OBJ-HAHN",
+       "FIG-PETRUS",
        "FIG-ZEICHEN-ABLEHNEN",
        "FIG-ZEICHEN-ABLEHNEN",
        "FIG-ZEICHEN-ABLEHNEN"
       ]
      }
     ],
-    "action_de": "Petrus will sein Leben für Jesus hingeben. Jesus kündigt an: Bevor ein Hahn kräht, wirst du mich dreimal verleugnen.",
-    "action_gsw": "De Petrus wott sis Läbe für de Jesus härgä. De Jesus chündet aa: Bevor en Güggel chräit, wirsch du mich drüümal verleugne.",
-    "caption_de": "Ansage der Verleugnung: Petrus will für Jesus sterben (Grab, Jesus); Jesus sagt: Bevor der Hahn kräht, verleugnest du mich dreimal (Hahn, drei abwehrende Hände).",
-    "caption_gsw": "Aasag vom Verleugne: De Petrus wott für de Jesus sterbe (Grab, Jesus); de Jesus seit: Bevor de Güggel chräit, verleugnisch du mich drüümal (Güggel, drüü abwehrendi Händ).",
+    "action_de": "Jesus kündigt an: Bevor ein Hahn kräht, wirst du mich dreimal verleugnen.",
+    "action_gsw": "De Jesus chündet aa: Bevor en Güggel chräit, wirsch mich drümal verleugne.",
+    "caption_de": "Ansage der Verleugnung: Jesus sagt: Bevor der Hahn kräht, wehrst du dreimal ab und verleugnest mich (Hahn, Petrus, drei abwehrende Hände).",
+    "caption_gsw": "Aasag vo de Verleugnig: De Jesus seit: Bevor de Güggel chräit, wehrsch drümal ab und verleugnisch mich (Güggel, Petrus, drüü abwehrendi Händ).",
     "stage": {
      "mood": {
-      "FIG-PETRUS": "determined",
-      "FIG-JESUS": "earnest"
+      "FIG-PETRUS": "surprised",
+      "FIG-JESUS": "calm"
      }
     }
    }
@@ -421,25 +479,35 @@
     "speech": [],
     "action_de": "Beim Mahl steht Jesus auf, bindet sich ein Leinentuch um, giesst Wasser in das Becken und wäscht den Jüngern die Füsse; er liebt die Seinen bis zur Vollendung.",
     "action_gsw": "Bim Ässe staht de Jesus uf, bindet sich es Liinetuech um, schüttet Wasser is Becki und wäscht de Jünger d Füess; er hät di Sine lieb bis zum Schluss.",
-    "caption_de": "Fusswaschung: Jesus kniet beim Waschbecken vor den Jüngern und wäscht ihnen die Füsse; er liebt sie (zwei Herzen).",
-    "caption_gsw": "Fuesswäsche: De Jesus chnüet bim Becki vor de Jünger und wäscht ene d Füess; er hät si lieb (zwei Härz).",
+    "caption_de": "Fusswaschung: Jesus kniet mit dem Waschbecken vor den Jüngern und wäscht ihnen die Füsse; er liebt sie (zwei Herzen bei Jesus, Linie zu den Jüngern).",
+    "caption_gsw": "Fuesswäsche: De Jesus chnüet mit em Becki vor de Jünger und wäscht ene d Füess; er hät si lieb (zwei Härz bim Jesus, Linie zu de Jünger).",
     "stage": {
      "pose": {
       "FIG-JESUS": "kneel"
      },
      "x": {
-      "FIG-JESUS": 50,
-      "FIG-GRUPPE-ZWOELF": 150
+      "FIG-JESUS": 78,
+      "FIG-GRUPPE-ZWOELF": 148
      },
      "floor_x": {
-      "FIG-OBJ-WASCHSCHUESSEL": 86
+      "FIG-OBJ-WASCHSCHUESSEL": 110
      },
      "mood": {
-      "FIG-GRUPPE-ZWOELF": "surprised"
+      "FIG-GRUPPE-ZWOELF": "surprised",
+      "FIG-JESUS": "calm"
      },
-     "at": {
-      "FIG-ZEICHEN-LIEBE": "FIG-JESUS"
-     }
+     "signs_who": {
+      "FIG-ZEICHEN-LIEBE": [
+       "FIG-JESUS"
+      ]
+     },
+     "arrows": [
+      [
+       "FIG-JESUS",
+       "FIG-GRUPPE-ZWOELF",
+       "act"
+      ]
+     ]
     }
    },
    {
@@ -458,18 +526,27 @@
       "icons": [
        "FIG-JESUS",
        "FIG-OBJ-WASCHSCHUESSEL",
-       "FIG-GRUPPE-ZWOELF",
-       "FIG-OBJ-WASCHSCHUESSEL"
+       "FIG-GRUPPE-ZWOELF"
+      ]
+     },
+     {
+      "from": "FIG-JESUS",
+      "to": "FIG-GRUPPE-ZWOELF",
+      "icons": [
+       "FIG-ROLLE-JUENGER",
+       "FIG-OBJ-WASCHSCHUESSEL",
+       "FIG-ROLLE-JUENGER"
       ]
      }
     ],
     "action_de": "Jesus sagt: Ich, euer Herr und Lehrer, habe euch die Füsse gewaschen; so sollt auch ihr einander die Füsse waschen. Ich habe euch ein Beispiel gegeben.",
     "action_gsw": "De Jesus seit: Ich, eue Herr und Lehrer, han eu d Füess gwäsche; so söled au ihr enand d Füess wäsche. Ich han eu es Biischpiil gä.",
-    "caption_de": "Ein Beispiel: Jesus sagt: Wie ich gewaschen habe (Jesus, Becken), so wascht auch ihr einander (Jünger, Becken).",
-    "caption_gsw": "Es Biischpiil: De Jesus seit: Wie ich gwäsche ha (Jesus, Becki), so wäsched au ihr enand (Jünger, Becki).",
+    "caption_de": "Ein Beispiel: Jesus sagt: Wie ich euch gewaschen habe (Jesus, Becken, Jünger), so wascht auch ihr einander (Jünger, Becken, Jünger).",
+    "caption_gsw": "Es Biispiil: De Jesus seit: Wie ich eu gwäsche han (Jesus, Becki, Jünger), so wäsched au ihr enand (Jünger, Becki, Jünger).",
     "stage": {
      "mood": {
-      "FIG-GRUPPE-ZWOELF": "pensive"
+      "FIG-GRUPPE-ZWOELF": "pensive",
+      "FIG-JESUS": "calm"
      }
     }
    },
@@ -496,20 +573,21 @@
     ],
     "action_de": "Der Jünger, den Jesus liebte, fragt an seiner Brust: Herr, wer ist es? Jesus taucht den Bissen ein und gibt ihn Judas, dem Sohn des Simon Iskariot.",
     "action_gsw": "De Jünger, wo de Jesus lieb gha hät, fröget a sinere Bruscht: Herr, wer isch es? De Jesus tunkt de Bisse ii und git en em Judas, em Sohn vom Simon Iskariot.",
-    "caption_de": "Der Bissen: Der Lieblingsjünger fragt (Fragezeichen); Jesus gibt Judas (Kästchen) den eingetauchten Bissen (Brot, Linie).",
-    "caption_gsw": "De Bisse: De Lieblingsjünger fröget (Fragezeiche); de Jesus git em Judas (Kässeli) de iitunkt Bisse (Brot, Linie).",
+    "caption_de": "Der Bissen: Der Lieblingsjünger lehnt an Jesus und fragt (Fragezeichen); Jesus gibt Judas (Kästchen) den eingetauchten Bissen (Brot, Linie).",
+    "caption_gsw": "De Bisse: De Lieblingsjünger lehnt am Jesus und fragt (Fragezeiche); de Jesus git em Judas (Chästli) de iitunkti Bisse (Brot, Linie).",
     "stage": {
      "hold": {
       "FIG-JESUS": "FIG-OBJ-BROT"
      },
      "mood": {
       "FIG-LIEBLINGSJUENGER": "worried",
-      "FIG-JUDAS-ISKARIOT": "calm"
+      "FIG-JUDAS-ISKARIOT": "calm",
+      "FIG-JESUS": "calm"
      },
      "x": {
-      "FIG-LIEBLINGSJUENGER": 34,
-      "FIG-JESUS": 86,
-      "FIG-JUDAS-ISKARIOT": 146
+      "FIG-LIEBLINGSJUENGER": 64,
+      "FIG-JESUS": 98,
+      "FIG-JUDAS-ISKARIOT": 152
      },
      "arrows": [
       [
@@ -524,25 +602,18 @@
     "n": 4,
     "reference": "JHN.13.31-JHN.13.38",
     "figures": [
-     "FIG-PETRUS",
-     "FIG-JESUS"
+     "FIG-JESUS",
+     "FIG-PETRUS"
     ],
     "objects": [],
     "signs": [],
     "speech": [
      {
-      "from": "FIG-PETRUS",
-      "to": "FIG-JESUS",
-      "icons": [
-       "FIG-ZEICHEN-TOD",
-       "FIG-JESUS"
-      ]
-     },
-     {
       "from": "FIG-JESUS",
       "to": "FIG-PETRUS",
       "icons": [
        "FIG-OBJ-HAHN",
+       "FIG-PETRUS",
        "FIG-ZEICHEN-ABLEHNEN",
        "FIG-ZEICHEN-ABLEHNEN",
        "FIG-ZEICHEN-ABLEHNEN"
@@ -551,12 +622,12 @@
     ],
     "action_de": "Petrus will sein Leben für Jesus hingeben. Jesus kündigt an: Bevor ein Hahn kräht, wirst du mich dreimal verleugnen.",
     "action_gsw": "De Petrus wott sis Läbe für de Jesus härgä. De Jesus chündet aa: Bevor en Güggel chräit, wirsch du mich drüümal verleugne.",
-    "caption_de": "Ansage der Verleugnung: Petrus will für Jesus sterben (Grab, Jesus); Jesus sagt: Bevor der Hahn kräht, verleugnest du mich dreimal (Hahn, drei abwehrende Hände).",
-    "caption_gsw": "Aasag vom Verleugne: De Petrus wott für de Jesus sterbe (Grab, Jesus); de Jesus seit: Bevor de Güggel chräit, verleugnisch du mich drüümal (Güggel, drüü abwehrendi Händ).",
+    "caption_de": "Ansage der Verleugnung: Petrus will sein Leben für Jesus geben; Jesus sagt: Bevor der Hahn kräht, wehrst du dreimal ab und verleugnest mich (Hahn, Petrus, drei abwehrende Hände).",
+    "caption_gsw": "Aasag vo de Verleugnig: De Petrus wott sis Läbe für de Jesus gäh; de Jesus seit: Bevor de Güggel chräit, wehrsch drümal ab und verleugnisch mich (Güggel, Petrus, drüü abwehrendi Händ).",
     "stage": {
      "mood": {
       "FIG-PETRUS": "determined",
-      "FIG-JESUS": "earnest"
+      "FIG-JESUS": "calm"
      }
     }
    }
@@ -638,13 +709,18 @@
     "caption_gsw": "De Wäg: De Thomas fröget nach em Wäg (Wäg, Fragezeiche); de Jesus: Ich bi de Wäg zum Vater (Jesus, Wäg, Strahlechranz).",
     "stage": {
      "mood": {
-      "FIG-THOMAS": "pensive"
+      "FIG-THOMAS": "pensive",
+      "FIG-JESUS": "calm"
+     },
+     "x": {
+      "FIG-THOMAS": 34,
+      "FIG-JESUS": 146
      }
     }
    },
    {
     "n": 3,
-    "reference": "JHN.14.8-JHN.14.14",
+    "reference": "JHN.14.8",
     "figures": [
      "FIG-PHILIPPUS",
      "FIG-JESUS"
@@ -659,7 +735,29 @@
        "FIG-ZEICHEN-ZEIGEN",
        "FIG-GOTT"
       ]
-     },
+     }
+    ],
+    "action_de": "Philippus bittet: Herr, zeig uns den Vater, und das genügt uns.",
+    "action_gsw": "De Philippus bittet: Herr, zeig üs de Vatter, und das längt üs.",
+    "caption_de": "Zeig uns den Vater: Philippus bittet (Zeigefinger, Strahlenkranz).",
+    "caption_gsw": "Zeig üs de Vatter: De Philippus bittet (Zeigfinger, Strahlechranz).",
+    "stage": {
+     "mood": {
+      "FIG-PHILIPPUS": "pensive",
+      "FIG-JESUS": "calm"
+     }
+    }
+   },
+   {
+    "n": 4,
+    "reference": "JHN.14.9-JHN.14.14",
+    "figures": [
+     "FIG-JESUS",
+     "FIG-PHILIPPUS"
+    ],
+    "objects": [],
+    "signs": [],
+    "speech": [
      {
       "from": "FIG-JESUS",
       "to": "FIG-PHILIPPUS",
@@ -670,13 +768,14 @@
       ]
      }
     ],
-    "action_de": "Philippus bittet: Herr, zeig uns den Vater. Jesus antwortet: Wer mich gesehen hat, hat den Vater gesehen; ich bin im Vater und der Vater in mir.",
-    "action_gsw": "De Philippus bittet: Herr, zeig eus de Vater. De Jesus antwortet: Wer mich gseh hät, hät de Vater gseh; ich bi im Vater und de Vater i mir.",
-    "caption_de": "Zeig uns den Vater: Philippus bittet (Zeigefinger, Strahlenkranz); Jesus: Wer mich sieht, sieht den Vater (Auge, Jesus, Strahlenkranz).",
-    "caption_gsw": "Zeig eus de Vater: De Philippus bittet (Zeigfinger, Strahlechranz); de Jesus: Wer mich gseht, gseht de Vater (Aug, Jesus, Strahlechranz).",
+    "action_de": "Jesus antwortet: Wer mich gesehen hat, hat den Vater gesehen; ich bin im Vater und der Vater in mir.",
+    "action_gsw": "De Jesus antwortet: Wer mich gseh hät, hät de Vater gseh; ich bi im Vater und de Vater i mir.",
+    "caption_de": "Wer mich sieht: Jesus antwortet Philippus: Wer mich sieht, sieht den Vater (Auge, Jesus, Strahlenkranz).",
+    "caption_gsw": "Wer mich gseht: De Jesus antwortet em Philippus: Wer mich gseht, gseht de Vater (Aug, Jesus, Strahlechranz).",
     "stage": {
      "mood": {
-      "FIG-PHILIPPUS": "pensive"
+      "FIG-PHILIPPUS": "surprised",
+      "FIG-JESUS": "calm"
      }
     }
    }
@@ -710,14 +809,15 @@
       "icons": [
        "FIG-GOTT",
        "FIG-HEILIGER-GEIST",
+       "FIG-ZEICHEN-BRINGEN",
        "FIG-GRUPPE-ZWOELF"
       ]
      }
     ],
     "action_de": "Jesus verheisst: Ich werde den Vater bitten, und er wird euch einen anderen Beistand geben, den Geist der Wahrheit, der bei euch bleibt.",
     "action_gsw": "De Jesus verheisst: Ich wirde de Vater bitte, und er wird eu en andere Biistand gä, de Geischt vo de Wahrheit, wo bi eu bliibt.",
-    "caption_de": "Der Beistand: Jesus sagt: Der Vater gibt euch den Geist (Strahlenkranz, Taube, Jünger).",
-    "caption_gsw": "De Biistand: De Jesus seit: De Vater git eu de Geischt (Strahlechranz, Tuube, Jünger).",
+    "caption_de": "Der Beistand: Jesus sagt: Der Vater gibt euch den Geist (Strahlenkranz, Taube, Pfeil, Jünger).",
+    "caption_gsw": "De Biistand: De Jesus seit: De Vater git eu de Geist (Strahlechranz, Tuube, Pfiil, Jünger).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-ZWOELF": "calm"
@@ -726,7 +826,7 @@
    },
    {
     "n": 2,
-    "reference": "JHN.14.22-JHN.14.26",
+    "reference": "JHN.14.22",
     "figures": [
      "FIG-JUDAS-NICHT-ISKARIOT",
      "FIG-JESUS"
@@ -740,11 +840,34 @@
       "icons": [
        "FIG-ZEICHEN-FRAGEN"
       ]
-     },
+     }
+    ],
+    "action_de": "Judas, nicht der Iskariot, fragt: Herr, was ist geschehen, dass du dich uns offenbaren wirst und nicht der Welt?",
+    "action_gsw": "De Judas, nöd de Iskariot, fragt: Herr, was isch passiert, dass du dich üs wirsch offebare und nöd de Wält?",
+    "caption_de": "Die Frage: Judas (nicht Iskariot) fragt Jesus (Fragezeichen).",
+    "caption_gsw": "D Frag: De Judas (nöd de Iskariot) fragt de Jesus (Fragezeiche).",
+    "stage": {
+     "mood": {
+      "FIG-JUDAS-NICHT-ISKARIOT": "pensive",
+      "FIG-JESUS": "calm"
+     }
+    }
+   },
+   {
+    "n": 3,
+    "reference": "JHN.14.23-JHN.14.26",
+    "figures": [
+     "FIG-JESUS",
+     "FIG-JUDAS-NICHT-ISKARIOT"
+    ],
+    "objects": [],
+    "signs": [],
+    "speech": [
      {
       "from": "FIG-JESUS",
       "to": "FIG-JUDAS-NICHT-ISKARIOT",
       "icons": [
+       "FIG-ROLLE-JUENGER",
        "FIG-ZEICHEN-LIEBE",
        "FIG-JESUS",
        "FIG-GOTT",
@@ -752,13 +875,14 @@
       ]
      }
     ],
-    "action_de": "Judas, nicht der Iskariot, fragt, warum Jesus sich ihnen offenbaren wird und nicht der Welt. Jesus antwortet: Wer mich liebt, hält mein Wort; mein Vater und ich werden zu ihm kommen und bei ihm Wohnung nehmen.",
-    "action_gsw": "De Judas, nöd de Iskariot, fröget, werum sich de Jesus ine offebaret und nöd de Wält. De Jesus antwortet: Wer mich lieb hät, haltet mis Wort; min Vater und ich chömed zu em und wohned bi em.",
-    "caption_de": "Wohnung nehmen: Judas (nicht Iskariot) fragt (Fragezeichen); Jesus: Wer mich liebt, bei dem wohnen der Vater und ich (Herzen, Jesus, Strahlenkranz, Haus).",
-    "caption_gsw": "Wohnig neh: De Judas (nöd de Iskariot) fröget (Fragezeiche); de Jesus: Wer mich lieb hät, bi dem wohned de Vater und ich (Härz, Jesus, Strahlechranz, Huus).",
+    "action_de": "Jesus antwortet: Wer mich liebt, hält mein Wort; mein Vater und ich werden zu ihm kommen und bei ihm Wohnung nehmen.",
+    "action_gsw": "De Jesus antwortet: Wer mich lieb hät, hebt sich a mis Wort; min Vater und ich chömed zu ihm und nämed bi ihm Wohnig.",
+    "caption_de": "Wohnung nehmen: Jesus: Wer mich liebt, bei dem wohnen der Vater und ich (Jünger, Herzen, Jesus, Strahlenkranz, Haus).",
+    "caption_gsw": "Wohnig neh: De Jesus: Wer mich lieb hät, bi dem wohned de Vater und ich (Jünger, Härz, Jesus, Strahlechranz, Huus).",
     "stage": {
      "mood": {
-      "FIG-JUDAS-NICHT-ISKARIOT": "pensive"
+      "FIG-JUDAS-NICHT-ISKARIOT": "calm",
+      "FIG-JESUS": "calm"
      }
     }
    }
@@ -882,7 +1006,12 @@
     "caption_gsw": "De Wäg: De Thomas fröget nach em Wäg (Wäg, Fragezeiche); de Jesus: Ich bi de Wäg zum Vater (Jesus, Wäg, Strahlechranz).",
     "stage": {
      "mood": {
-      "FIG-THOMAS": "pensive"
+      "FIG-THOMAS": "pensive",
+      "FIG-JESUS": "calm"
+     },
+     "x": {
+      "FIG-THOMAS": 34,
+      "FIG-JESUS": 146
      }
     }
    },
@@ -902,14 +1031,15 @@
       "icons": [
        "FIG-GOTT",
        "FIG-HEILIGER-GEIST",
+       "FIG-ZEICHEN-BRINGEN",
        "FIG-GRUPPE-ZWOELF"
       ]
      }
     ],
     "action_de": "Jesus verheisst: Ich werde den Vater bitten, und er wird euch einen anderen Beistand geben, den Geist der Wahrheit, der bei euch bleibt.",
     "action_gsw": "De Jesus verheisst: Ich wirde de Vater bitte, und er wird eu en andere Biistand gä, de Geischt vo de Wahrheit, wo bi eu bliibt.",
-    "caption_de": "Der Beistand: Jesus sagt: Der Vater gibt euch den Geist (Strahlenkranz, Taube, Jünger).",
-    "caption_gsw": "De Biistand: De Jesus seit: De Vater git eu de Geischt (Strahlechranz, Tuube, Jünger).",
+    "caption_de": "Der Beistand: Jesus sagt: Der Vater gibt euch den Geist (Strahlenkranz, Taube, Pfeil, Jünger).",
+    "caption_gsw": "De Biistand: De Jesus seit: De Vater git eu de Geist (Strahlechranz, Tuube, Pfiil, Jünger).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-ZWOELF": "calm"
@@ -998,7 +1128,8 @@
      ],
      "mood": {
       "FIG-GRUPPE-ZWOELF": "calm"
-     }
+     },
+     "big_y": 40
     }
    },
    {
@@ -1076,16 +1207,24 @@
      "mood": {
       "FIG-GRUPPE-ZWOELF": "smile"
      },
-     "god_side": "right",
-     "air_x": 146,
-     "air_y": 48,
+     "god_side": "left",
      "arrows": [
       [
        "FIG-GOTT",
        "FIG-JESUS",
        "act"
       ]
-     ]
+     ],
+     "signs_who": {
+      "FIG-ZEICHEN-LIEBE": []
+     },
+     "at": {
+      "FIG-ZEICHEN-LIEBE": "FIG-GOTT"
+     },
+     "x": {
+      "FIG-GRUPPE-ZWOELF": 46,
+      "FIG-JESUS": 140
+     }
     }
    },
    {
@@ -1177,16 +1316,17 @@
       "to": "FIG-GRUPPE-ZWOELF",
       "icons": [
        "FIG-ZEICHEN-WELT",
-       "FIG-ZEICHEN-ABLEHNEN",
+       "FIG-ZEICHEN-HASS",
        "FIG-JESUS",
+       "FIG-ZEICHEN-HASS",
        "FIG-GRUPPE-ZWOELF"
       ]
      }
     ],
     "action_de": "Jesus sagt: Wenn die Welt euch hasst, so wisst, dass sie mich vor euch gehasst hat. Wie sie mich verfolgt haben, werden sie auch euch verfolgen.",
     "action_gsw": "De Jesus seit: Wänn d Wält eu hasst, so wüssed, dass si mich vor eu ghasst hät. Wie si mich verfolgt händ, werded si au eu verfolge.",
-    "caption_de": "Der Hass der Welt: Die Welt lehnt Jesus ab und auch die Jünger (Erdkugel, abwehrende Hand, Jesus, Jünger).",
-    "caption_gsw": "De Hass vo de Wält: D Wält lehnt de Jesus ab und au d Jünger (Ärdchugle, abwehrendi Hand, Jesus, Jünger).",
+    "caption_de": "Der Hass der Welt: Die Welt hasst Jesus und auch die Jünger (Erdkugel, graues gebrochenes Herz, Jesus, graues gebrochenes Herz, Jünger).",
+    "caption_gsw": "De Hass vo de Wält: D Wält hasst de Jesus und au d Jünger (Ärdchugle, graus broches Härz, Jesus, graus broches Härz, Jünger).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-ZWOELF": "worried"
@@ -1209,15 +1349,15 @@
       "icons": [
        "FIG-HEILIGER-GEIST",
        "FIG-GRUPPE-ZWOELF",
-       "FIG-ZEICHEN-VERKUENDIGEN",
+       "FIG-ZEICHEN-SPRECHEN",
        "FIG-JESUS"
       ]
      }
     ],
     "action_de": "Jesus sagt: Wenn der Beistand kommt, den ich euch vom Vater senden werde, der Geist der Wahrheit, wird er über mich Zeugnis ablegen; und auch ihr legt Zeugnis ab.",
     "action_gsw": "De Jesus seit: Wänn de Biistand chunnt, won ich eu vom Vater schicke, de Geischt vo de Wahrheit, wird er über mich Zügnis ablegge; und au ihr leggt Zügnis ab.",
-    "caption_de": "Zeugnis: Der Geist und die Jünger legen Zeugnis über Jesus ab (Taube, Jünger, Rufer, Jesus).",
-    "caption_gsw": "Zügnis: De Geischt und d Jünger legged Zügnis über de Jesus ab (Tuube, Jünger, Rüefer, Jesus).",
+    "caption_de": "Zeugnis: Der Geist und die Jünger reden über Jesus (Taube, Jünger, Schallwellen, Jesus).",
+    "caption_gsw": "Zügnis: De Geist und d Jünger redet über de Jesus (Tuube, Jünger, Schallwälle, Jesus).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-ZWOELF": "determined"
@@ -1277,7 +1417,8 @@
      ],
      "mood": {
       "FIG-GRUPPE-ZWOELF": "calm"
-     }
+     },
+     "big_y": 40
     }
    },
    {
@@ -1311,16 +1452,24 @@
      "mood": {
       "FIG-GRUPPE-ZWOELF": "smile"
      },
-     "god_side": "right",
-     "air_x": 146,
-     "air_y": 48,
+     "god_side": "left",
      "arrows": [
       [
        "FIG-GOTT",
        "FIG-JESUS",
        "act"
       ]
-     ]
+     ],
+     "signs_who": {
+      "FIG-ZEICHEN-LIEBE": []
+     },
+     "at": {
+      "FIG-ZEICHEN-LIEBE": "FIG-GOTT"
+     },
+     "x": {
+      "FIG-GRUPPE-ZWOELF": 46,
+      "FIG-JESUS": 140
+     }
     }
    },
    {
@@ -1338,16 +1487,17 @@
       "to": "FIG-GRUPPE-ZWOELF",
       "icons": [
        "FIG-ZEICHEN-WELT",
-       "FIG-ZEICHEN-ABLEHNEN",
+       "FIG-ZEICHEN-HASS",
        "FIG-JESUS",
+       "FIG-ZEICHEN-HASS",
        "FIG-GRUPPE-ZWOELF"
       ]
      }
     ],
     "action_de": "Jesus sagt: Wenn die Welt euch hasst, so wisst, dass sie mich vor euch gehasst hat. Wie sie mich verfolgt haben, werden sie auch euch verfolgen.",
     "action_gsw": "De Jesus seit: Wänn d Wält eu hasst, so wüssed, dass si mich vor eu ghasst hät. Wie si mich verfolgt händ, werded si au eu verfolge.",
-    "caption_de": "Der Hass der Welt: Die Welt lehnt Jesus ab und auch die Jünger (Erdkugel, abwehrende Hand, Jesus, Jünger).",
-    "caption_gsw": "De Hass vo de Wält: D Wält lehnt de Jesus ab und au d Jünger (Ärdchugle, abwehrendi Hand, Jesus, Jünger).",
+    "caption_de": "Der Hass der Welt: Die Welt hasst Jesus und auch die Jünger (Erdkugel, graues gebrochenes Herz, Jesus, graues gebrochenes Herz, Jünger).",
+    "caption_gsw": "De Hass vo de Wält: D Wält hasst de Jesus und au d Jünger (Ärdchugle, graus broches Härz, Jesus, graus broches Härz, Jünger).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-ZWOELF": "worried"
@@ -1382,16 +1532,15 @@
       "from": "FIG-JESUS",
       "to": "FIG-GRUPPE-ZWOELF",
       "icons": [
-       "FIG-ORT-SYNAGOGE",
-       "FIG-ZEICHEN-ABLEHNEN",
-       "FIG-GRUPPE-ZWOELF"
+       "FIG-GRUPPE-ZWOELF",
+       "FIG-ZEICHEN-AUSSCHLUSS"
       ]
      }
     ],
     "action_de": "Jesus kündigt an: Man wird euch aus der Synagoge ausschliessen; ich sage es euch, damit ihr nicht zu Fall kommt.",
     "action_gsw": "De Jesus chündet aa: Me wird eu us de Synagoge uusschlüüsse; ich säg eu s, damit er nöd z Fall chömed.",
-    "caption_de": "Ankündigung der Verfolgung: Jesus sagt: Man wird euch aus der Synagoge ausschliessen (Synagoge, abwehrende Hand, Jünger).",
-    "caption_gsw": "Aachündigung vo de Verfolgig: De Jesus seit: Me wird eu us de Synagoge uusschlüüsse (Synagoge, abwehrendi Hand, Jünger).",
+    "caption_de": "Ankündigung der Verfolgung: Jesus sagt: Man wird euch aus der Synagoge ausschliessen (Jünger, Versammlungshaus mit rotem Pfeil aus der Tür hinaus).",
+    "caption_gsw": "Aachündigung vo de Verfolgig: De Jesus seit: Mer wird eu us de Synagoge usschlüüsse (Jünger, Versammligshuus mit rotem Pfiil zur Tür uus).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-ZWOELF": "worried"
@@ -1536,16 +1685,24 @@
       "to": "FIG-GRUPPE-ZWOELF",
       "icons": [
        "FIG-ZEICHEN-STUNDE",
-       "FIG-ZEICHEN-FEHLT",
+       "FIG-ZEICHEN-BLIND",
+       "FIG-JESUS"
+      ]
+     },
+     {
+      "from": "FIG-JESUS",
+      "to": "FIG-GRUPPE-ZWOELF",
+      "icons": [
        "FIG-ZEICHEN-STUNDE",
-       "FIG-ZEICHEN-SEHEN"
+       "FIG-ZEICHEN-SEHEN",
+       "FIG-JESUS"
       ]
      }
     ],
     "action_de": "Jesus sagt: Eine kleine Weile, und ihr seht mich nicht mehr, und wieder eine kleine Weile, und ihr werdet mich sehen. Die Jünger fragen einander, was er meint.",
     "action_gsw": "De Jesus seit: E chliini Wiil, und er gsehnd mich nüme, und wider e chliini Wiil, und er werded mich gseh. D Jünger fröged enand, was er meint.",
-    "caption_de": "Eine kleine Weile: Jesus: Kurze Zeit, und ihr seht mich nicht (Sanduhr, leerer Kreis), wieder kurze Zeit, und ihr seht mich (Sanduhr, Auge); die Jünger verstehen es nicht (Nebel).",
-    "caption_gsw": "E chliini Wiil: De Jesus: Churzi Ziit, und er gsehnd mich nöd (Sanduhr, leere Chreis), wider churzi Ziit, und er gsehnd mich (Sanduhr, Aug); d Jünger verstönd s nöd (Näbel).",
+    "caption_de": "Eine kleine Weile: Jesus: Kurze Zeit, und ihr seht mich nicht (Sanduhr, durchgestrichenes Auge, Jesus), wieder kurze Zeit, und ihr seht mich (Sanduhr, offenes Auge, Jesus); die Jünger verstehen es nicht (graues Fragezeichen im gestrichelten Kreis).",
+    "caption_gsw": "Es Wiili: De Jesus: Churz, und ihr gsehnd mich nöd (Sanduhr, durchgstrichnigs Aug, Jesus), nomal churz, und ihr gsehnd mich (Sanduhr, offes Aug, Jesus); d Jünger verstönd s nöd (graus Fragezeiche im gstrichlete Kreis).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-ZWOELF": "pensive"
@@ -1584,7 +1741,7 @@
     "stage": {
      "mood": {
       "FIG-GRUPPE-ZWOELF": "worried",
-      "FIG-JESUS": "smile"
+      "FIG-JESUS": "calm"
      }
     }
    },
@@ -1604,14 +1761,15 @@
       "icons": [
        "FIG-ZEICHEN-BETEN",
        "FIG-GOTT",
-       "FIG-ZEICHEN-GEBEN"
+       "FIG-ZEICHEN-BRINGEN",
+       "FIG-GRUPPE-ZWOELF"
       ]
      }
     ],
     "action_de": "Jesus sagt: Wenn ihr den Vater um etwas bittet, wird er es euch in meinem Namen geben. Bittet, und ihr werdet empfangen, damit eure Freude vollkommen ist.",
     "action_gsw": "De Jesus seit: Wänn er de Vater um öppis bitted, wird er s eu i mim Name gä. Bitted, und er überchömed, damit eui Fröid ganz isch.",
-    "caption_de": "Bittet: Bittet den Vater, er wird geben (betende Hände, Strahlenkranz, gebende Hand).",
-    "caption_gsw": "Bitted: Bitted de Vater, er wird gä (bätendi Händ, Strahlechranz, gäbendi Hand).",
+    "caption_de": "Bittet: Bittet den Vater, er wird euch geben (betende Hände, Strahlenkranz, Pfeil, Jünger).",
+    "caption_gsw": "Bittet: Bittet de Vater, er wird eu gäh (bättendi Händ, Strahlechranz, Pfiil, Jünger).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-ZWOELF": "smile"
@@ -1696,7 +1854,7 @@
     "stage": {
      "mood": {
       "FIG-GRUPPE-ZWOELF": "surprised",
-      "FIG-JESUS": "earnest"
+      "FIG-JESUS": "calm"
      }
     }
    },
@@ -1727,7 +1885,7 @@
     "stage": {
      "mood": {
       "FIG-GRUPPE-ZWOELF": "calm",
-      "FIG-JESUS": "determined"
+      "FIG-JESUS": "calm"
      }
     }
    }
@@ -1759,16 +1917,15 @@
       "from": "FIG-JESUS",
       "to": "FIG-GRUPPE-ZWOELF",
       "icons": [
-       "FIG-ORT-SYNAGOGE",
-       "FIG-ZEICHEN-ABLEHNEN",
-       "FIG-GRUPPE-ZWOELF"
+       "FIG-GRUPPE-ZWOELF",
+       "FIG-ZEICHEN-AUSSCHLUSS"
       ]
      }
     ],
     "action_de": "Jesus kündigt an: Man wird euch aus der Synagoge ausschliessen; ich sage es euch, damit ihr nicht zu Fall kommt.",
     "action_gsw": "De Jesus chündet aa: Me wird eu us de Synagoge uusschlüüsse; ich säg eu s, damit er nöd z Fall chömed.",
-    "caption_de": "Ankündigung der Verfolgung: Jesus sagt: Man wird euch aus der Synagoge ausschliessen (Synagoge, abwehrende Hand, Jünger).",
-    "caption_gsw": "Aachündigung vo de Verfolgig: De Jesus seit: Me wird eu us de Synagoge uusschlüüsse (Synagoge, abwehrendi Hand, Jünger).",
+    "caption_de": "Ankündigung der Verfolgung: Jesus sagt: Man wird euch aus der Synagoge ausschliessen (Jünger, Versammlungshaus mit rotem Pfeil aus der Tür hinaus).",
+    "caption_gsw": "Aachündigung vo de Verfolgig: De Jesus seit: Mer wird eu us de Synagoge usschlüüsse (Jünger, Versammligshuus mit rotem Pfiil zur Tür uus).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-ZWOELF": "worried"
@@ -1837,7 +1994,7 @@
     "stage": {
      "mood": {
       "FIG-GRUPPE-ZWOELF": "worried",
-      "FIG-JESUS": "smile"
+      "FIG-JESUS": "calm"
      }
     }
    },
@@ -1868,7 +2025,7 @@
     "stage": {
      "mood": {
       "FIG-GRUPPE-ZWOELF": "calm",
-      "FIG-JESUS": "determined"
+      "FIG-JESUS": "calm"
      }
     }
    }
@@ -1900,7 +2057,7 @@
       "from": "FIG-JESUS",
       "to": "FIG-GOTT",
       "icons": [
-       "FIG-ZEICHEN-STUNDE",
+       "FIG-ZEICHEN-STUNDE-GEKOMMEN",
        "FIG-ZEICHEN-LICHT",
        "FIG-JESUS"
       ]
@@ -1908,10 +2065,20 @@
     ],
     "action_de": "Jesus erhebt die Augen zum Himmel und betet: Vater, die Stunde ist gekommen. Verherrliche deinen Sohn, damit der Sohn dich verherrlicht.",
     "action_gsw": "De Jesus lueget ufe zum Himmel und bätet: Vater, d Stund isch cho. Verherrlich din Sohn, damit de Sohn dich verherrlicht.",
-    "caption_de": "Gebet: Jesus betet zum Vater (Strahlenkranz): Die Stunde ist da (Sanduhr), verherrliche deinen Sohn (Licht, Jesus).",
-    "caption_gsw": "Gebät: De Jesus bätet zum Vater (Strahlechranz): D Stund isch da (Sanduhr), verherrlich din Sohn (Liecht, Jesus).",
+    "caption_de": "Gebet: Jesus betet zum Vater (Linie nach oben zum Strahlenkranz): Die Stunde ist da (durchgelaufene Sanduhr), verherrliche deinen Sohn (Licht, Jesus).",
+    "caption_gsw": "Gebät: De Jesus bätet zum Vater (Linie ufe zum Strahlechranz): D Stund isch da (abglofni Sanduhr), mach din Sohn herrlich (Liecht, Jesus).",
     "stage": {
-     "god_side": "right"
+     "god_side": "right",
+     "mood": {
+      "FIG-JESUS": "calm"
+     },
+     "arrows": [
+      [
+       "FIG-JESUS",
+       "FIG-GOTT",
+       "act"
+      ]
+     ]
     }
    },
    {
@@ -1939,7 +2106,10 @@
     "caption_de": "Ewiges Leben: Jesus betet: Ewiges Leben heisst, dich und mich zu erkennen (Baum, Strahlenkranz, Jesus).",
     "caption_gsw": "Ewigs Läbe: De Jesus bätet: Ewigs Läbe heisst, dich und mich z erchänne (Baum, Strahlechranz, Jesus).",
     "stage": {
-     "god_side": "right"
+     "god_side": "right",
+     "mood": {
+      "FIG-JESUS": "calm"
+     }
     }
    }
   ],
@@ -1990,7 +2160,8 @@
       ]
      },
      "mood": {
-      "FIG-GRUPPE-ZWOELF": "calm"
+      "FIG-GRUPPE-ZWOELF": "calm",
+      "FIG-JESUS": "calm"
      }
     }
    },
@@ -2017,12 +2188,13 @@
     ],
     "action_de": "Jesus betet für die Jünger, die der Vater ihm gegeben hat: Heiliger Vater, bewahre sie in deinem Namen, damit sie eins sind wie wir.",
     "action_gsw": "De Jesus bätet für d Jünger, wo de Vater em gä hät: Heilige Vater, bewahr si i dim Name, damit si eis sind wie mir.",
-    "caption_de": "Fürbitte: Jesus bittet den Vater: Bewahre die Jünger (schützende Hände, Jünger), damit sie eins sind (Figuren im Kreis).",
-    "caption_gsw": "Fürbitt: De Jesus bittet de Vater: Bewahr d Jünger (schützendi Händ, Jünger), damit si eis sind (Figure im Chreis).",
+    "caption_de": "Fürbitte: Jesus bittet den Vater: Bewahre die Jünger (schützende Hände, Jünger), damit sie eins sind (zwei goldene Ringe).",
+    "caption_gsw": "Fürbitt: De Jesus bittet de Vater: Bhüet d Jünger (schützendi Händ, Jünger), dass si eis sind (zwei goldigi Ring).",
     "stage": {
      "god_side": "right",
      "mood": {
-      "FIG-GRUPPE-ZWOELF": "calm"
+      "FIG-GRUPPE-ZWOELF": "calm",
+      "FIG-JESUS": "calm"
      }
     }
    },
@@ -2054,7 +2226,8 @@
     "stage": {
      "god_side": "right",
      "mood": {
-      "FIG-GRUPPE-ZWOELF": "determined"
+      "FIG-GRUPPE-ZWOELF": "determined",
+      "FIG-JESUS": "calm"
      }
     }
    }
@@ -2094,10 +2267,13 @@
     ],
     "action_de": "Jesus bittet auch für die, die durch das Wort der Jünger an ihn glauben: Alle sollen eins sein, wie du, Vater, in mir bist und ich in dir, damit die Welt glaubt.",
     "action_gsw": "De Jesus bittet au für die, wo dur s Wort vo de Jünger a en glaubed: Alli söled eis sii, wie du, Vater, i mir bisch und ich i dir, damit d Wält glaubt.",
-    "caption_de": "Für alle, die glauben: Jesus bittet den Vater für die, die glauben werden (Gemeinde, Herz mit Licht): Sie sollen eins sein (Figuren im Kreis).",
-    "caption_gsw": "Für alli, wo glaubed: De Jesus bittet de Vater für die, wo glaube werded (Gmeind, Härz mit Liecht): Si söled eis sii (Figure im Chreis).",
+    "caption_de": "Für alle, die glauben: Jesus bittet den Vater für die, die glauben werden (Gemeinde, Herz mit Licht): Sie sollen eins sein (zwei goldene Ringe).",
+    "caption_gsw": "Für ali, wo glaubed: De Jesus bittet de Vater für die, wo wärded glaube (Gmeind, Härz mit Liecht): Si söled eis sii (zwei goldigi Ring).",
     "stage": {
-     "god_side": "right"
+     "god_side": "right",
+     "mood": {
+      "FIG-JESUS": "calm"
+     }
     }
    },
    {
@@ -2125,7 +2301,10 @@
     "caption_de": "Herrlichkeit sehen: Jesus bittet: Sie sollen meine Herrlichkeit sehen (Gemeinde, Auge, Licht).",
     "caption_gsw": "Herrlichkeit gseh: De Jesus bittet: Si söled mini Herrlichkeit gseh (Gmeind, Aug, Liecht).",
     "stage": {
-     "god_side": "right"
+     "god_side": "right",
+     "mood": {
+      "FIG-JESUS": "calm"
+     }
     }
    },
    {
@@ -2153,7 +2332,10 @@
     "caption_de": "Deine Liebe in ihnen: Jesus bittet: Deine Liebe sei in ihnen (Strahlenkranz, Herzen, Gemeinde).",
     "caption_gsw": "Dini Liebi i ine: De Jesus bittet: Dini Liebi söll i ine sii (Strahlechranz, Härz, Gmeind).",
     "stage": {
-     "god_side": "right"
+     "god_side": "right",
+     "mood": {
+      "FIG-JESUS": "calm"
+     }
     }
    }
   ],
@@ -2184,7 +2366,7 @@
       "from": "FIG-JESUS",
       "to": "FIG-GOTT",
       "icons": [
-       "FIG-ZEICHEN-STUNDE",
+       "FIG-ZEICHEN-STUNDE-GEKOMMEN",
        "FIG-ZEICHEN-LICHT",
        "FIG-JESUS"
       ]
@@ -2192,10 +2374,20 @@
     ],
     "action_de": "Jesus erhebt die Augen zum Himmel und betet: Vater, die Stunde ist gekommen. Verherrliche deinen Sohn, damit der Sohn dich verherrlicht.",
     "action_gsw": "De Jesus lueget ufe zum Himmel und bätet: Vater, d Stund isch cho. Verherrlich din Sohn, damit de Sohn dich verherrlicht.",
-    "caption_de": "Gebet: Jesus betet zum Vater (Strahlenkranz): Die Stunde ist da (Sanduhr), verherrliche deinen Sohn (Licht, Jesus).",
-    "caption_gsw": "Gebät: De Jesus bätet zum Vater (Strahlechranz): D Stund isch da (Sanduhr), verherrlich din Sohn (Liecht, Jesus).",
+    "caption_de": "Gebet: Jesus betet zum Vater (Linie nach oben zum Strahlenkranz): Die Stunde ist da (durchgelaufene Sanduhr), verherrliche deinen Sohn (Licht, Jesus).",
+    "caption_gsw": "Gebät: De Jesus bätet zum Vater (Linie ufe zum Strahlechranz): D Stund isch da (abglofni Sanduhr), mach din Sohn herrlich (Liecht, Jesus).",
     "stage": {
-     "god_side": "right"
+     "god_side": "right",
+     "mood": {
+      "FIG-JESUS": "calm"
+     },
+     "arrows": [
+      [
+       "FIG-JESUS",
+       "FIG-GOTT",
+       "act"
+      ]
+     ]
     }
    },
    {
@@ -2221,12 +2413,13 @@
     ],
     "action_de": "Jesus betet für die Jünger, die der Vater ihm gegeben hat: Heiliger Vater, bewahre sie in deinem Namen, damit sie eins sind wie wir.",
     "action_gsw": "De Jesus bätet für d Jünger, wo de Vater em gä hät: Heilige Vater, bewahr si i dim Name, damit si eis sind wie mir.",
-    "caption_de": "Fürbitte: Jesus bittet den Vater: Bewahre die Jünger (schützende Hände, Jünger), damit sie eins sind (Figuren im Kreis).",
-    "caption_gsw": "Fürbitt: De Jesus bittet de Vater: Bewahr d Jünger (schützendi Händ, Jünger), damit si eis sind (Figure im Chreis).",
+    "caption_de": "Fürbitte: Jesus bittet den Vater: Bewahre die Jünger (schützende Hände, Jünger), damit sie eins sind (zwei goldene Ringe).",
+    "caption_gsw": "Fürbitt: De Jesus bittet de Vater: Bhüet d Jünger (schützendi Händ, Jünger), dass si eis sind (zwei goldigi Ring).",
     "stage": {
      "god_side": "right",
      "mood": {
-      "FIG-GRUPPE-ZWOELF": "calm"
+      "FIG-GRUPPE-ZWOELF": "calm",
+      "FIG-JESUS": "calm"
      }
     }
    },
@@ -2252,10 +2445,13 @@
     ],
     "action_de": "Jesus bittet auch für die, die durch das Wort der Jünger an ihn glauben: Alle sollen eins sein, wie du, Vater, in mir bist und ich in dir, damit die Welt glaubt.",
     "action_gsw": "De Jesus bittet au für die, wo dur s Wort vo de Jünger a en glaubed: Alli söled eis sii, wie du, Vater, i mir bisch und ich i dir, damit d Wält glaubt.",
-    "caption_de": "Für alle, die glauben: Jesus bittet den Vater für die, die glauben werden (Gemeinde, Herz mit Licht): Sie sollen eins sein (Figuren im Kreis).",
-    "caption_gsw": "Für alli, wo glaubed: De Jesus bittet de Vater für die, wo glaube werded (Gmeind, Härz mit Liecht): Si söled eis sii (Figure im Chreis).",
+    "caption_de": "Für alle, die glauben: Jesus bittet den Vater für die, die glauben werden (Gemeinde, Herz mit Licht): Sie sollen eins sein (zwei goldene Ringe).",
+    "caption_gsw": "Für ali, wo glaubed: De Jesus bittet de Vater für die, wo wärded glaube (Gmeind, Härz mit Liecht): Si söled eis sii (zwei goldigi Ring).",
     "stage": {
-     "god_side": "right"
+     "god_side": "right",
+     "mood": {
+      "FIG-JESUS": "calm"
+     }
     }
    }
   ],

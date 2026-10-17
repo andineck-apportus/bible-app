@@ -35,7 +35,7 @@
     "stage": {
      "god_side": "left",
      "mood": {
-      "FIG-OBADJA": "earnest"
+      "FIG-OBADJA": "calm"
      }
     }
    },
@@ -62,15 +62,19 @@
     ],
     "action_de": "Eine Kunde ist von JHWH gekommen, und ein Bote ist unter die Völker gesandt: Steht auf, lasst uns gegen Edom aufstehen zum Kampf!",
     "action_gsw": "E Nachricht isch vo JHWH cho, und en Bott isch under d Völker gschickt: Stönd uf, mir wänd gäge Edom ufstaa zum Kampf!",
-    "caption_de": "Der Bote: Ein Bote ruft die Völker gegen Edom auf (Gebirge, Schild und Speer).",
-    "caption_gsw": "De Bott: En Bott rüeft d Völker gäge Edom uf (Gebirg, Schild und Speer).",
+    "caption_de": "Der Bote: Ein Bote mit Brief ruft die Völker gegen Edom auf (Gebirge, Schild und Speer).",
+    "caption_gsw": "De Bott: En Bott mit eme Brief rüeft d Völker gäge Edom uf (Gebirg, Schild und Speer).",
     "stage": {
      "big_side": "right",
      "mood": {
       "FIG-ROLLE-BOTE": "earnest",
       "FIG-GRUPPE-VOELKER": "earnest"
      },
-     "bubble_y": 20
+     "bubble_y": 20,
+     "x": {
+      "FIG-ROLLE-BOTE": 22,
+      "FIG-GRUPPE-VOELKER": 58
+     }
     }
    },
    {
@@ -95,8 +99,8 @@
     ],
     "action_de": "JHWH hat Edom klein gemacht unter den Völkern; doch der Übermut seines Herzens täuscht es. Es wohnt hoch in den Klüften des Felsens und denkt: Wer stürzt mich zu Boden?",
     "action_gsw": "JHWH hät Edom chlii gmacht under de Völker; aber de Übermuet vo sim Härz tüüscht s. Es wohnt höch i de Chlüft vom Fels und dänkt: Wer stürzt mich abe?",
-    "caption_de": "Hochmut: Edom wohnt hoch oben im Felsen und denkt: Wer stürzt mich hinab? (Pfeil nach unten, Fragezeichen)",
-    "caption_gsw": "Hochmuet: Edom wohnt höch obe im Fels und dänkt: Wer stürzt mich abe? (Pfiil abe, Fragezeiche)",
+    "caption_de": "Hochmut: Edom wohnt hoch oben im Felsen und sagt sich im Herzen: Wer stürzt mich hinab? (Pfeil nach unten, Fragezeichen)",
+    "caption_gsw": "Hochmuet: Edom wohnt zoberscht im Fels und seit sich im Härz: Wer stürzt mich abe? (Pfiil abe, Fragezeiche)",
     "stage": {
      "in": {
       "FIG-GRUPPE-EDOM": "FIG-ORT-EDOM-GEBIRGE"
@@ -104,10 +108,11 @@
      "in_pos": {
       "FIG-GRUPPE-EDOM": [
        0.5,
-       0.2
+       0.46
       ]
      },
-     "bubble_y": 12,
+     "big_y": 50,
+     "bubble_y": 40,
      "mood": {
       "FIG-GRUPPE-EDOM": "determined"
      }
@@ -144,10 +149,11 @@
      "in_pos": {
       "FIG-GRUPPE-EDOM": [
        0.5,
-       0.2
+       0.46
       ]
      },
      "god_side": "left",
+     "big_y": 50,
      "mood": {
       "FIG-GRUPPE-EDOM": "surprised"
      }
@@ -183,21 +189,27 @@
     "speech": [],
     "action_de": "Diebe würden nur nehmen, was sie brauchen, Winzer eine Nachlese übrig lassen; Esau aber wird durchsucht, seine verborgenen Schätze werden aufgespürt.",
     "action_gsw": "Diebe würded nu näh, was si bruuched, Winzer würded e Nachlääs übrig lah; aber Esau wird dursuecht, sini versteckte Schätz werded gfunde.",
-    "caption_de": "Ausgeplündert: Edoms verborgene Schätze sind weg (Münzen, leerer Kreis).",
-    "caption_gsw": "Uusplünderet: D versteckte Schätz vo Edom sind wäg (Münze, lääre Chreis).",
+    "caption_de": "Ausgeplündert: Edoms verborgene Schätze sind weg (Münzen, durchgestrichener Kreis).",
+    "caption_gsw": "Usplünderet: Edoms versteckti Schätz sind wäg (Münze, durchgstrichne Chreis).",
     "stage": {
-     "big_side": "right",
-     "at": {
-      "FIG-ZEICHEN-FEHLT": "FIG-OBJ-MUENZEN"
+     "in": {
+      "FIG-GRUPPE-EDOM": "FIG-ORT-EDOM-GEBIRGE"
      },
+     "in_pos": {
+      "FIG-GRUPPE-EDOM": [
+       0.5,
+       0.46
+      ]
+     },
+     "big_y": 34,
      "mood": {
       "FIG-GRUPPE-EDOM": "worried"
      },
-     "x": {
-      "FIG-GRUPPE-EDOM": 36
-     },
      "floor_x": {
-      "FIG-OBJ-MUENZEN": 64
+      "FIG-OBJ-MUENZEN": 140
+     },
+     "at": {
+      "FIG-ZEICHEN-FEHLT": "FIG-OBJ-MUENZEN"
      }
     }
    },
@@ -215,18 +227,22 @@
     "speech": [],
     "action_de": "Edoms Verbündete, die Männer seines Bundes und seines Friedens, täuschen und überwältigen es; sie drängen es bis an die Grenze und legen sein Brot als Falle unter es.",
     "action_gsw": "D Verbündete vo Edom, d Manne vo sim Bund und vo sim Fride, tüüsched und überwältiged s; si dränged s bis a d Gränze und leged sis Brot als Falle drunder.",
-    "caption_de": "Verraten: Edoms Verbündete wenden sich gegen es und stellen ihm eine Falle (Brot in der Schlinge).",
-    "caption_gsw": "Verrate: D Verbündete vo Edom chered sich gäge s und stelled em e Falle (Brot i de Schlinge).",
+    "caption_de": "Verraten: Edoms Verbündete wenden sich gegen es und legen ihm eine Falle (Brot in der Schlinge).",
+    "caption_gsw": "Verrate: D Verbündete vo Edom chered sich gäge s und leged em e Falle (Brot i de Schlinge).",
     "stage": {
      "arrows": [
       [
        "FIG-GRUPPE-VOELKER",
-       "FIG-GRUPPE-EDOM",
+       "FIG-ZEICHEN-FALLE",
        "act"
       ]
      ],
-     "at": {
-      "FIG-ZEICHEN-FALLE": "FIG-GRUPPE-EDOM"
+     "x": {
+      "FIG-GRUPPE-VOELKER": 36,
+      "FIG-GRUPPE-EDOM": 152
+     },
+     "floor_x": {
+      "FIG-ZEICHEN-FALLE": 76
      },
      "mood": {
       "FIG-GRUPPE-VOELKER": "earnest",
@@ -259,9 +275,10 @@
      "in_pos": {
       "FIG-GRUPPE-EDOM": [
        0.5,
-       0.2
+       0.46
       ]
      },
+     "big_y": 40,
      "god_side": "left",
      "arrows": [
       [
@@ -273,6 +290,7 @@
      "at": {
       "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-GRUPPE-EDOM"
      },
+     "at_top": true,
      "mood": {
       "FIG-GRUPPE-EDOM": "surprised"
      }
@@ -309,21 +327,32 @@
     "speech": [],
     "action_de": "Als Fremde Jerusalems Vermögen wegführten und über die Stadt das Los warfen, stand Edom abseits und war wie einer von ihnen; darum wird Schande es bedecken.",
     "action_gsw": "Wo Fremdi s Vermöge vo Jerusalem wäggfüert und über d Stadt s Los gworfe händ, isch Edom abseits gstande und isch wie eine vo ine gsii; drum wird Schand s zuedecke.",
-    "caption_de": "Abseits: Fremde werfen das Los über Jerusalem (Steine); Edom steht abseits (gestrichelte Linie) und schaut zu.",
-    "caption_gsw": "Abseits: Fremdi wärfed s Los über Jerusalem (Stei); Edom staat abseits (gstrichleti Linie) und luegt zue.",
+    "caption_de": "Abseits: Fremde ziehen in Jerusalems Tor und werfen das Los über die Stadt (Steine in der Hand, gepunkteter Bogen); Edom steht abseits (gestrichelte Linie) und wendet sich ab.",
+    "caption_gsw": "Näbedra: Frömdi zieched is Tor vo Jerusalem und wärfed s Los über d Stadt (Stei i de Hand, punktierte Boge); Edom staat näbedra (gstrichleti Linie) und chert sich ab.",
     "stage": {
      "back_side": "right",
+     "before": true,
      "split": 1,
-     "at": {
-      "FIG-OBJ-LOS": "FIG-GRUPPE-VOELKER"
+     "hold": {
+      "FIG-GRUPPE-VOELKER": "FIG-OBJ-LOS"
+     },
+     "arrows": [
+      [
+       "FIG-GRUPPE-VOELKER",
+       "FIG-ORT-JERUSALEM",
+       "throw"
+      ]
+     ],
+     "pose": {
+      "FIG-GRUPPE-EDOM": "away"
      },
      "mood": {
       "FIG-GRUPPE-EDOM": "calm",
       "FIG-GRUPPE-VOELKER": "earnest"
      },
      "x": {
-      "FIG-GRUPPE-EDOM": 34,
-      "FIG-GRUPPE-VOELKER": 100
+      "FIG-GRUPPE-EDOM": 28,
+      "FIG-GRUPPE-VOELKER": 90
      }
     }
    },
@@ -344,17 +373,17 @@
       "from": "FIG-GOTT",
       "to": "FIG-GRUPPE-EDOM",
       "icons": [
-       "FIG-ZEICHEN-ABLEHNEN",
-       "FIG-ZEICHEN-FREUDE",
-       "FIG-OBJ-MUENZEN",
+       "FIG-ZEICHEN-NICHT-FREUEN",
+       "FIG-ZEICHEN-NICHT-PLUENDERN",
+       "FIG-ZEICHEN-NICHT-AUSLIEFERN",
        "FIG-GRUPPE-ISRAEL"
       ]
      }
     ],
     "action_de": "Gott sagt zu Edom: Schau nicht schadenfroh auf deinen Bruder herab am Tag seines Unglücks, greif nicht nach seinem Vermögen, stell dich nicht an die Wegkreuzung, um seine Flüchtlinge auszuliefern.",
     "action_gsw": "Gott seit zu Edom: Lueg nöd schadefroh uf din Brueder abe am Tag vo sim Unglück, gryf nöd nach sim Vermöge, stell dich nöd a d Wägchrüüzig, zum sini Flüchtling uusliefere.",
-    "caption_de": "Am Tag der Not: Gott verbietet Edom (abwehrende Hand), sich über seinen Bruder zu freuen, zu plündern und seine Flüchtlinge auszuliefern (Funken, Münzen, Gruppe in Blau).",
-    "caption_gsw": "Am Tag vo de Not: Gott verbüütet Edom (abwehrendi Hand), sich über sin Brueder z fröie, z plündere und sini Flüchtling uuszliefere (Funke, Münze, Gruppe in Blau).",
+    "caption_de": "Am Tag der Not: Gott verbietet Edom, sich über seinen Bruder zu freuen, zu plündern und seine Flüchtlinge auszuliefern (durchgestrichen: Funken, Münzen, gefesselte Hände; Gruppe in Blau).",
+    "caption_gsw": "Am Tag vo de Not: Gott verbietet Edom, sich über sin Brueder z freue, z plündere und sini Flüchtling uszliefere (durchgstriche: Funke, Münze, gfesslete Händ; Gruppe in Blau).",
     "stage": {
      "god_side": "left",
      "signs_who": {
@@ -363,7 +392,7 @@
       ]
      },
      "mood": {
-      "FIG-GRUPPE-EDOM": "earnest",
+      "FIG-GRUPPE-EDOM": "calm",
       "FIG-GRUPPE-ISRAEL": "worried"
      }
     }
@@ -429,10 +458,14 @@
     "speech": [],
     "action_de": "Auf dem Berg Zion wird Rettung sein, und er wird heilig sein; das Haus Jakob wird seinen Besitz wieder in Besitz nehmen.",
     "action_gsw": "Uf em Bärg Zion wird Rettig sii, und er wird heilig sii; s Huus Jakob wird sin Bsitz wider in Bsitz näh.",
-    "caption_de": "Rettung auf dem Zion: Das Haus Jakob ist auf dem Zion gerettet (Jerusalem, Pfeil nach oben).",
-    "caption_gsw": "Rettig uf em Zion: S Huus Jakob isch uf em Zion grettet (Jerusalem, Pfiil ufe).",
+    "caption_de": "Rettung auf dem Zion: Das Haus Jakob ist auf dem Zion gerettet (vor Jerusalem, Pfeil nach oben aus den Wellen).",
+    "caption_gsw": "Rettig uf em Zion: S Huus Jakob isch uf em Zion grettet (vor Jerusalem, Pfiil ufe us de Wälle).",
     "stage": {
      "back_side": "right",
+     "before": true,
+     "x": {
+      "FIG-GRUPPE-ISRAEL": 134
+     },
      "at": {
       "FIG-ZEICHEN-RETTUNG": "FIG-GRUPPE-ISRAEL"
      },
@@ -446,8 +479,8 @@
     "reference": "OBA.1.18",
     "figures": [
      "FIG-GOTT",
-     "FIG-GRUPPE-ISRAEL",
-     "FIG-GRUPPE-EDOM"
+     "FIG-GRUPPE-EDOM",
+     "FIG-GRUPPE-ISRAEL"
     ],
     "objects": [],
     "signs": [],
@@ -457,7 +490,13 @@
       "to": "FIG-GRUPPE-EDOM",
       "icons": [
        "FIG-GRUPPE-ISRAEL",
-       "FIG-ZEICHEN-FEUER",
+       "FIG-ZEICHEN-FEUER"
+      ]
+     },
+     {
+      "from": "FIG-GOTT",
+      "to": "FIG-GRUPPE-EDOM",
+      "icons": [
        "FIG-GRUPPE-EDOM",
        "FIG-OBJ-STROH"
       ]
@@ -465,10 +504,10 @@
     ],
     "action_de": "JHWH hat gesprochen: Das Haus Jakob wird ein Feuer sein und das Haus Josef eine Flamme, das Haus Esau aber Stroh, das sie verzehren; dem Haus Esau wird kein Entronnener bleiben.",
     "action_gsw": "JHWH hät gredt: S Huus Jakob wird es Füür sii und s Huus Josef e Flamme, s Huus Esau aber Strau, wo si verzehred; vom Huus Esau wird kein entcho.",
-    "caption_de": "Feuer und Stroh: Gott sagt: Jakob (blaue Gruppe) wird wie Feuer sein, Esau (rötliche Gruppe) wie Stroh.",
-    "caption_gsw": "Füür und Strau: Gott seit: De Jakob (blaui Gruppe) wird wie Füür sii, Esau (rötlechi Gruppe) wie Strau.",
+    "caption_de": "Feuer und Stroh: Gott sagt: Jakob (blaue Gruppe) wird wie Feuer sein, Esau (rötliche Gruppe) wie Stroh (je ein Paar in einer Blase).",
+    "caption_gsw": "Füür und Strau: Gott seit: De Jakob (blaui Gruppe) wird wie Füür sii, de Esau (rötlechi Gruppe) wie Strau (je es Paar i einere Blase).",
     "stage": {
-     "god_side": "left",
+     "god_side": "right",
      "mood": {
       "FIG-GRUPPE-ISRAEL": "earnest",
       "FIG-GRUPPE-EDOM": "worried"
@@ -503,8 +542,8 @@
     "speech": [],
     "action_de": "Die Verbannten Israels und Jerusalems kehren zurück und nehmen Land nach allen Richtungen in Besitz, vom Negev bis Gilead, auch das Gebirge Esau.",
     "action_gsw": "D Verbannte vo Israel und Jerusalem chömed zrugg und nämed Land i alli Richtige in Bsitz, vom Negev bis Gilead, au s Gebirg Esau.",
-    "caption_de": "Heimkehr: Die Verbannten kehren zurück (Weg mit Pfeilen) und nehmen das Land in alle Richtungen ein (Fächerpfeile).",
-    "caption_gsw": "Heichehr: D Verbannte chömed zrugg (Wäg mit Pfiil) und nämed s Land i alli Richtige ii (Fächerpfiil).",
+    "caption_de": "Heimkehr: Die Verbannten kehren zurück (Weg mit Pfeilen) und nehmen das Land ringsum ein (fächerförmige Pfeile).",
+    "caption_gsw": "Heichehr: D Verbannte chömed zrugg (Wäg mit Pfiil) und nämed s Land ringsum ii (Pfiil wie en Fächer).",
     "stage": {
      "at": {
       "FIG-ZEICHEN-AUSBREITEN": "FIG-GRUPPE-ISRAEL"
@@ -538,21 +577,31 @@
     "speech": [],
     "action_de": "Retter ziehen auf den Berg Zion hinauf, um das Gebirge Esau zu richten, und die Königsherrschaft wird JHWH gehören.",
     "action_gsw": "Retter zieched uf de Bärg Zion ufe, zum s Gebirg Esau richte, und d Chünigsherrschaft wird JHWH ghöre.",
-    "caption_de": "Gottes Königtum: Retter stehen auf dem Zion (Jerusalem) und richten das Gebirge Esau (Waage); die Königsherrschaft gehört JHWH (Krone beim Strahlenkranz).",
-    "caption_gsw": "Gottes Chünigtum: Retter stönd uf em Zion (Jerusalem) und richted s Gebirg Esau (Waag); d Chünigsherrschaft ghört JHWH (Chrone bim Strahlechranz).",
+    "caption_de": "Gottes Königtum: Retter stehen auf dem Zion (vor Jerusalem) und richten das Gebirge Esau (Waage neben ihnen, Linie zum Gebirge); die Königsherrschaft gehört JHWH (Krone beim Strahlenkranz).",
+    "caption_gsw": "Gottes Chünigtum: Retter stönd uf em Zion (vor Jerusalem) und richted s Gebirg Esau (Waag näbe ine, Linie zum Gebirg); d Chünigsherrschaft ghört JHWH (Chrone bim Strahlechranz).",
     "stage": {
      "god_side": "left",
      "back_side": "left",
      "big_side": "right",
+     "before": true,
      "at": {
-      "FIG-ZEICHEN-KOENIGSHERRSCHAFT": "FIG-GOTT",
-      "FIG-ZEICHEN-GERICHT": "FIG-ORT-EDOM-GEBIRGE"
+      "FIG-ZEICHEN-KOENIGSHERRSCHAFT": "FIG-GOTT"
      },
+     "beside": {
+      "FIG-ZEICHEN-GERICHT": "FIG-GRUPPE-ISRAEL"
+     },
+     "arrows": [
+      [
+       "FIG-GRUPPE-ISRAEL",
+       "FIG-ORT-EDOM-GEBIRGE",
+       "act"
+      ]
+     ],
      "mood": {
-      "FIG-GRUPPE-ISRAEL": "determined"
+      "FIG-GRUPPE-ISRAEL": "calm"
      },
      "x": {
-      "FIG-GRUPPE-ISRAEL": 70
+      "FIG-GRUPPE-ISRAEL": 46
      }
     }
    }
@@ -601,10 +650,11 @@
      "in_pos": {
       "FIG-GRUPPE-EDOM": [
        0.5,
-       0.2
+       0.46
       ]
      },
      "god_side": "left",
+     "big_y": 50,
      "mood": {
       "FIG-GRUPPE-EDOM": "surprised"
      }
@@ -627,21 +677,32 @@
     "speech": [],
     "action_de": "Als Fremde Jerusalems Vermögen wegführten und über die Stadt das Los warfen, stand Edom abseits und war wie einer von ihnen; darum wird Schande es bedecken.",
     "action_gsw": "Wo Fremdi s Vermöge vo Jerusalem wäggfüert und über d Stadt s Los gworfe händ, isch Edom abseits gstande und isch wie eine vo ine gsii; drum wird Schand s zuedecke.",
-    "caption_de": "Abseits: Fremde werfen das Los über Jerusalem (Steine); Edom steht abseits (gestrichelte Linie) und schaut zu.",
-    "caption_gsw": "Abseits: Fremdi wärfed s Los über Jerusalem (Stei); Edom staat abseits (gstrichleti Linie) und luegt zue.",
+    "caption_de": "Abseits: Fremde ziehen in Jerusalems Tor und werfen das Los über die Stadt (Steine in der Hand, gepunkteter Bogen); Edom steht abseits (gestrichelte Linie) und wendet sich ab.",
+    "caption_gsw": "Näbedra: Frömdi zieched is Tor vo Jerusalem und wärfed s Los über d Stadt (Stei i de Hand, punktierte Boge); Edom staat näbedra (gstrichleti Linie) und chert sich ab.",
     "stage": {
      "back_side": "right",
+     "before": true,
      "split": 1,
-     "at": {
-      "FIG-OBJ-LOS": "FIG-GRUPPE-VOELKER"
+     "hold": {
+      "FIG-GRUPPE-VOELKER": "FIG-OBJ-LOS"
+     },
+     "arrows": [
+      [
+       "FIG-GRUPPE-VOELKER",
+       "FIG-ORT-JERUSALEM",
+       "throw"
+      ]
+     ],
+     "pose": {
+      "FIG-GRUPPE-EDOM": "away"
      },
      "mood": {
       "FIG-GRUPPE-EDOM": "calm",
       "FIG-GRUPPE-VOELKER": "earnest"
      },
      "x": {
-      "FIG-GRUPPE-EDOM": 34,
-      "FIG-GRUPPE-VOELKER": 100
+      "FIG-GRUPPE-EDOM": 28,
+      "FIG-GRUPPE-VOELKER": 90
      }
     }
    },
@@ -695,21 +756,31 @@
     "speech": [],
     "action_de": "Retter ziehen auf den Berg Zion hinauf, um das Gebirge Esau zu richten, und die Königsherrschaft wird JHWH gehören.",
     "action_gsw": "Retter zieched uf de Bärg Zion ufe, zum s Gebirg Esau richte, und d Chünigsherrschaft wird JHWH ghöre.",
-    "caption_de": "Gottes Königtum: Retter stehen auf dem Zion (Jerusalem) und richten das Gebirge Esau (Waage); die Königsherrschaft gehört JHWH (Krone beim Strahlenkranz).",
-    "caption_gsw": "Gottes Chünigtum: Retter stönd uf em Zion (Jerusalem) und richted s Gebirg Esau (Waag); d Chünigsherrschaft ghört JHWH (Chrone bim Strahlechranz).",
+    "caption_de": "Gottes Königtum: Retter stehen auf dem Zion (vor Jerusalem) und richten das Gebirge Esau (Waage neben ihnen, Linie zum Gebirge); die Königsherrschaft gehört JHWH (Krone beim Strahlenkranz).",
+    "caption_gsw": "Gottes Chünigtum: Retter stönd uf em Zion (vor Jerusalem) und richted s Gebirg Esau (Waag näbe ine, Linie zum Gebirg); d Chünigsherrschaft ghört JHWH (Chrone bim Strahlechranz).",
     "stage": {
      "god_side": "left",
      "back_side": "left",
      "big_side": "right",
+     "before": true,
      "at": {
-      "FIG-ZEICHEN-KOENIGSHERRSCHAFT": "FIG-GOTT",
-      "FIG-ZEICHEN-GERICHT": "FIG-ORT-EDOM-GEBIRGE"
+      "FIG-ZEICHEN-KOENIGSHERRSCHAFT": "FIG-GOTT"
      },
+     "beside": {
+      "FIG-ZEICHEN-GERICHT": "FIG-GRUPPE-ISRAEL"
+     },
+     "arrows": [
+      [
+       "FIG-GRUPPE-ISRAEL",
+       "FIG-ORT-EDOM-GEBIRGE",
+       "act"
+      ]
+     ],
      "mood": {
-      "FIG-GRUPPE-ISRAEL": "determined"
+      "FIG-GRUPPE-ISRAEL": "calm"
      },
      "x": {
-      "FIG-GRUPPE-ISRAEL": 70
+      "FIG-GRUPPE-ISRAEL": 46
      }
     }
    }
@@ -758,10 +829,11 @@
      "in_pos": {
       "FIG-GRUPPE-EDOM": [
        0.5,
-       0.2
+       0.46
       ]
      },
      "god_side": "left",
+     "big_y": 50,
      "mood": {
       "FIG-GRUPPE-EDOM": "surprised"
      }
@@ -784,21 +856,32 @@
     "speech": [],
     "action_de": "Als Fremde Jerusalems Vermögen wegführten und über die Stadt das Los warfen, stand Edom abseits und war wie einer von ihnen; darum wird Schande es bedecken.",
     "action_gsw": "Wo Fremdi s Vermöge vo Jerusalem wäggfüert und über d Stadt s Los gworfe händ, isch Edom abseits gstande und isch wie eine vo ine gsii; drum wird Schand s zuedecke.",
-    "caption_de": "Abseits: Fremde werfen das Los über Jerusalem (Steine); Edom steht abseits (gestrichelte Linie) und schaut zu.",
-    "caption_gsw": "Abseits: Fremdi wärfed s Los über Jerusalem (Stei); Edom staat abseits (gstrichleti Linie) und luegt zue.",
+    "caption_de": "Abseits: Fremde ziehen in Jerusalems Tor und werfen das Los über die Stadt (Steine in der Hand, gepunkteter Bogen); Edom steht abseits (gestrichelte Linie) und wendet sich ab.",
+    "caption_gsw": "Näbedra: Frömdi zieched is Tor vo Jerusalem und wärfed s Los über d Stadt (Stei i de Hand, punktierte Boge); Edom staat näbedra (gstrichleti Linie) und chert sich ab.",
     "stage": {
      "back_side": "right",
+     "before": true,
      "split": 1,
-     "at": {
-      "FIG-OBJ-LOS": "FIG-GRUPPE-VOELKER"
+     "hold": {
+      "FIG-GRUPPE-VOELKER": "FIG-OBJ-LOS"
+     },
+     "arrows": [
+      [
+       "FIG-GRUPPE-VOELKER",
+       "FIG-ORT-JERUSALEM",
+       "throw"
+      ]
+     ],
+     "pose": {
+      "FIG-GRUPPE-EDOM": "away"
      },
      "mood": {
       "FIG-GRUPPE-EDOM": "calm",
       "FIG-GRUPPE-VOELKER": "earnest"
      },
      "x": {
-      "FIG-GRUPPE-EDOM": 34,
-      "FIG-GRUPPE-VOELKER": 100
+      "FIG-GRUPPE-EDOM": 28,
+      "FIG-GRUPPE-VOELKER": 90
      }
     }
    },
@@ -820,21 +903,31 @@
     "speech": [],
     "action_de": "Retter ziehen auf den Berg Zion hinauf, um das Gebirge Esau zu richten, und die Königsherrschaft wird JHWH gehören.",
     "action_gsw": "Retter zieched uf de Bärg Zion ufe, zum s Gebirg Esau richte, und d Chünigsherrschaft wird JHWH ghöre.",
-    "caption_de": "Gottes Königtum: Retter stehen auf dem Zion (Jerusalem) und richten das Gebirge Esau (Waage); die Königsherrschaft gehört JHWH (Krone beim Strahlenkranz).",
-    "caption_gsw": "Gottes Chünigtum: Retter stönd uf em Zion (Jerusalem) und richted s Gebirg Esau (Waag); d Chünigsherrschaft ghört JHWH (Chrone bim Strahlechranz).",
+    "caption_de": "Gottes Königtum: Retter stehen auf dem Zion (vor Jerusalem) und richten das Gebirge Esau (Waage neben ihnen, Linie zum Gebirge); die Königsherrschaft gehört JHWH (Krone beim Strahlenkranz).",
+    "caption_gsw": "Gottes Chünigtum: Retter stönd uf em Zion (vor Jerusalem) und richted s Gebirg Esau (Waag näbe ine, Linie zum Gebirg); d Chünigsherrschaft ghört JHWH (Chrone bim Strahlechranz).",
     "stage": {
      "god_side": "left",
      "back_side": "left",
      "big_side": "right",
+     "before": true,
      "at": {
-      "FIG-ZEICHEN-KOENIGSHERRSCHAFT": "FIG-GOTT",
-      "FIG-ZEICHEN-GERICHT": "FIG-ORT-EDOM-GEBIRGE"
+      "FIG-ZEICHEN-KOENIGSHERRSCHAFT": "FIG-GOTT"
      },
+     "beside": {
+      "FIG-ZEICHEN-GERICHT": "FIG-GRUPPE-ISRAEL"
+     },
+     "arrows": [
+      [
+       "FIG-GRUPPE-ISRAEL",
+       "FIG-ORT-EDOM-GEBIRGE",
+       "act"
+      ]
+     ],
      "mood": {
-      "FIG-GRUPPE-ISRAEL": "determined"
+      "FIG-GRUPPE-ISRAEL": "calm"
      },
      "x": {
-      "FIG-GRUPPE-ISRAEL": 70
+      "FIG-GRUPPE-ISRAEL": 46
      }
     }
    }

@@ -16,7 +16,9 @@
         "FIG-PAULUS",
         "FIG-TITUS"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-OBJ-BRIEF"
+      ],
       "signs": [],
       "speech": [
         {
@@ -42,6 +44,9 @@
         "mood": {
           "FIG-TITUS": "smile",
           "FIG-PAULUS": "smile"
+        },
+        "hold": {
+          "FIG-PAULUS": "FIG-OBJ-BRIEF"
         }
       }
     },
@@ -85,7 +90,10 @@
           "FIG-ROLLE-AELTESTER": 78
         },
         "mood": {
-          "FIG-TITUS": "determined"
+          "FIG-TITUS": "calm"
+        },
+        "pose": {
+          "FIG-ROLLE-AELTESTER": "sit"
         }
       }
     },
@@ -111,7 +119,7 @@
       "action_de": "Titus soll die Widerspenstigen und Schwätzer scharf zurechtweisen, damit sie gesund im Glauben werden.",
       "stage": {
         "mood": {
-          "FIG-TITUS": "earnest",
+          "FIG-TITUS": "calm",
           "FIG-GRUPPE-IRRLEHRER": "earnest"
         }
       }
@@ -123,8 +131,8 @@
     "Titus soll die Widerspenstigen und Schwätzer scharf zurechtweisen, damit sie gesund im Glauben werden."
   ],
   "captions_de": [
-    "Brief an Titus: Paulus schreibt Titus (Pfeil, Brief) und wünscht ihm Gnade (Hände mit Licht) und Frieden (Ölzweig) von Gott (Strahlenkranz) und Jesus (Kreuznimbus).",
-    "Älteste einsetzen: Titus setzt in einer Stadt einen Ältesten ein (Pfeil); der Älteste hält sich an das Wort (Schriftrolle) für die Gemeinde (Gruppe).",
+    "Brief an Titus: Paulus (mit Brief) schreibt Titus (Pfeil) und wünscht ihm Gnade (Hände mit Licht) und Frieden (Ölzweig) von Gott (Strahlenkranz) und Jesus (Kreuznimbus).",
+    "Älteste einsetzen: Titus setzt in einer Stadt einen Ältesten ein (Pfeil; sitzend); der Älteste hält sich an das Wort (Schriftrolle) für die Gemeinde (Gruppe).",
     "Zurechtweisen: Titus warnt (Zeigefinger) die falschen Lehrer, damit sie gesund im Glauben werden (Herz mit Licht)."
   ],
   "interpretation_note_de": "Je ein Feld aus den drei Abschnitten des Kapitels; Einzelheiten dort. Das Einsetzen der Ältesten ([[TIT.1.5]]) ist als Auftrag gezeigt; wie es geschah, sagt der Text nicht.",
@@ -140,5 +148,127 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "TIT.1.1-TIT.1.4",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TITUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-ZEICHEN-GNADE",
+                  "FIG-ZEICHEN-FRIEDE",
+                  "FIG-GOTT",
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Paulus schreibt an Titus, sein echtes Kind im gemeinsamen Glauben, und wünscht ihm Gnade und Frieden von Gott, dem Vater, und von Christus Jesus.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-PAULUS",
+                  "FIG-TITUS",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-TITUS": "smile",
+                "FIG-PAULUS": "smile"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "TIT.1.5-TIT.1.9",
+            "figures": [
+              "FIG-TITUS",
+              "FIG-ROLLE-AELTESTER"
+            ],
+            "objects": [
+              "FIG-ORT-STADT",
+              "FIG-OBJ-SCHRIFTROLLE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-TITUS",
+                "to": "FIG-ROLLE-AELTESTER",
+                "icons": [
+                  "FIG-OBJ-SCHRIFTROLLE",
+                  "FIG-GRUPPE-GLAUBENDE"
+                ]
+              }
+            ],
+            "action_de": "Titus setzt in den Städten Kretas Älteste ein, die untadelig leben und sich an das zuverlässige Wort halten, um die Gemeinde mit gesunder Lehre zu ermahnen.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-TITUS",
+                  "FIG-ROLLE-AELTESTER",
+                  "act"
+                ]
+              ],
+              "hold": {
+                "FIG-ROLLE-AELTESTER": "FIG-OBJ-SCHRIFTROLLE"
+              },
+              "back_side": "right",
+              "x": {
+                "FIG-TITUS": 30,
+                "FIG-ROLLE-AELTESTER": 78
+              },
+              "mood": {
+                "FIG-TITUS": "determined"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "TIT.1.10-TIT.1.16",
+            "figures": [
+              "FIG-TITUS",
+              "FIG-GRUPPE-IRRLEHRER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-TITUS",
+                "to": "FIG-GRUPPE-IRRLEHRER",
+                "icons": [
+                  "FIG-ZEICHEN-WARNEN",
+                  "FIG-ZEICHEN-GLAUBEN"
+                ]
+              }
+            ],
+            "action_de": "Titus soll die Widerspenstigen und Schwätzer scharf zurechtweisen, damit sie gesund im Glauben werden.",
+            "stage": {
+              "mood": {
+                "FIG-TITUS": "earnest",
+                "FIG-GRUPPE-IRRLEHRER": "earnest"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Brief an Titus: Paulus schreibt Titus (Pfeil, Brief) und wünscht ihm Gnade (Hände mit Licht) und Frieden (Ölzweig) von Gott (Strahlenkranz) und Jesus (Kreuznimbus).",
+          "Älteste einsetzen: Titus setzt in einer Stadt einen Ältesten ein (Pfeil); der Älteste hält sich an das Wort (Schriftrolle) für die Gemeinde (Gruppe).",
+          "Zurechtweisen: Titus warnt (Zeigefinger) die falschen Lehrer, damit sie gesund im Glauben werden (Herz mit Licht)."
+        ]
+      }
+    }
+  ]
 }

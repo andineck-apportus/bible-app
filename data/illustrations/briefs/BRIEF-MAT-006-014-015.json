@@ -88,16 +88,12 @@
           "FIG-ZEICHEN-SCHULD": "FIG-GOTT"
         },
         "split": 1,
-        "arrows": [
-          [
-            "FIG-GOTT",
-            "FIG-GRUPPE-JUENGER",
-            "act"
-          ]
-        ],
         "mood": {
-          "FIG-GRUPPE-JUENGER": "earnest",
+          "FIG-GRUPPE-JUENGER": "pensive",
           "FIG-GRUPPE-MENGE": "worried"
+        },
+        "pose": {
+          "FIG-GRUPPE-JUENGER": "away"
         }
       }
     }
@@ -107,8 +103,8 @@
     "Wenn sie aber den Menschen nicht vergeben, wird ihr Vater ihre Verfehlungen auch nicht vergeben."
   ],
   "captions_de": [
-    "Vergeben: Die Jünger vergeben den Leuten (Schuldschein, zerrissen); auch der Vater (Strahlenkranz) vergibt ihnen (zerrissener Schein, Pfeil).",
-    "Nicht vergeben: Die Jünger halten den Leuten ihre Schuld vor (abwehrende Hand, ganzer Schuldschein, Linie); dann bleibt auch ihre eigene Schuld beim Vater stehen (ganzer Schuldschein)."
+    "Vergeben: Die Jünger vergeben den Leuten (Schuldschein, zerrissen); auch der Vater (Strahlenkranz) vergibt ihnen (zerrissener Schein beim Strahlenkranz, Pfeil zu den Jüngern).",
+    "Nicht vergeben: Die Jünger halten den Leuten ihre Schuld vor (abwehrende Hand, ganzer Schuldschein) und halten Abstand (gestrichelte Linie); dann bleibt auch ihre eigene Schuld beim Vater stehen (ganzer Schuldschein beim Strahlenkranz, kein Pfeil)."
   ],
   "interpretation_note_de": "Die beiden Felder zeigen die zwei Hälften des Satzes als Gegenüber. Zerrissener Schuldschein = vergeben, ganzer Schuldschein = nicht vergeben (Deutung). Jesus nimmt hier die Bitte um Vergebung aus dem Vaterunser auf ([[MAT.6.12]]). Gott erscheint als Strahlenkranz; der Text nennt ihn «euer himmlischer Vater».",
   "basis": [
@@ -135,5 +131,111 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.6.14",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-VERGEBEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-SCHULD",
+                  "FIG-ZEICHEN-VERGEBEN"
+                ]
+              }
+            ],
+            "action_de": "Wenn die Jünger den Menschen ihre Verfehlungen vergeben, wird ihr himmlischer Vater auch ihnen vergeben.",
+            "stage": {
+              "god_side": "right",
+              "x": {
+                "FIG-GRUPPE-JUENGER": 50,
+                "FIG-GRUPPE-MENGE": 128
+              },
+              "at": {
+                "FIG-ZEICHEN-VERGEBEN": "FIG-GOTT"
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-JUENGER",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "smile",
+                "FIG-GRUPPE-MENGE": "smile"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.6.15",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-SCHULD",
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-ABLEHNEN",
+                  "FIG-ZEICHEN-SCHULD"
+                ]
+              }
+            ],
+            "action_de": "Wenn sie aber den Menschen nicht vergeben, wird ihr Vater ihre Verfehlungen auch nicht vergeben.",
+            "stage": {
+              "god_side": "right",
+              "x": {
+                "FIG-GRUPPE-JUENGER": 50,
+                "FIG-GRUPPE-MENGE": 128
+              },
+              "at": {
+                "FIG-ZEICHEN-SCHULD": "FIG-GOTT"
+              },
+              "split": 1,
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-JUENGER",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "earnest",
+                "FIG-GRUPPE-MENGE": "worried"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Vergeben: Die Jünger vergeben den Leuten (Schuldschein, zerrissen); auch der Vater (Strahlenkranz) vergibt ihnen (zerrissener Schein, Pfeil).",
+          "Nicht vergeben: Die Jünger halten den Leuten ihre Schuld vor (abwehrende Hand, ganzer Schuldschein, Linie); dann bleibt auch ihre eigene Schuld beim Vater stehen (ganzer Schuldschein)."
+        ]
+      }
+    }
+  ]
 }

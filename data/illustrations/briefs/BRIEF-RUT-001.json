@@ -39,6 +39,11 @@
         "mood": {
           "FIG-ORPA": "worried",
           "FIG-RUT": "worried"
+        },
+        "x": {
+          "FIG-ORPA": 20,
+          "FIG-NOOMI": 48,
+          "FIG-RUT": 76
         }
       }
     },
@@ -76,7 +81,7 @@
         "mood": {
           "FIG-ORPA": "worried",
           "FIG-NOOMI": "worried",
-          "FIG-RUT": "determined"
+          "FIG-RUT": "calm"
         },
         "x": {
           "FIG-ORPA": 100,
@@ -93,9 +98,7 @@
         "FIG-NOOMI",
         "FIG-RUT"
       ],
-      "objects": [
-        "FIG-ORT-BETLEHEM"
-      ],
+      "objects": [],
       "signs": [],
       "speech": [
         {
@@ -112,22 +115,22 @@
           "icons": [
             "FIG-ZEICHEN-VOLL",
             "FIG-ZEICHEN-FEHLT",
-            "FIG-GOTT"
+            "FIG-GOTT",
+            "FIG-ZEICHEN-UMKEHR"
           ]
         }
       ],
       "action_de": "In Betlehem gerät die Stadt in Aufruhr; die Frauen fragen: Ist das Noomi? Sie antwortet: Nennt mich Mara; voll bin ich weggegangen, leer hat mich JHWH zurückgebracht.",
       "stage": {
-        "back_side": "right",
         "mood": {
           "FIG-GRUPPE-FRAUEN": "surprised",
           "FIG-NOOMI": "worried",
           "FIG-RUT": "calm"
         },
         "x": {
-          "FIG-GRUPPE-FRAUEN": 34,
-          "FIG-NOOMI": 96,
-          "FIG-RUT": 128
+          "FIG-GRUPPE-FRAUEN": 30,
+          "FIG-NOOMI": 126,
+          "FIG-RUT": 164
         },
         "bubble_y": 20
       }
@@ -141,7 +144,7 @@
   "captions_de": [
     "In Moab: Noomis Mann und Söhne sterben (drei Gräber); Noomi bleibt mit Orpa und Rut zurück (Träne).",
     "Abschied: Orpa geht nach Moab zurück (links, Pfeil); Rut hält sich an Noomi fest (Hände).",
-    "Nennt mich Mara: Die Frauen fragen: Noomi? Noomi klagt: Voll ging ich weg (volles Gefäss), leer (leerer Kreis) hat mich JHWH zurückgebracht (Strahlenkranz)."
+    "Nennt mich Mara: Die Frauen fragen: Noomi? Noomi klagt: Voll ging ich weg (volles Gefäss), leer (leerer Kreis) hat mich JHWH zurückkehren lassen (Strahlenkranz, Bogenpfeil)."
   ],
   "interpretation_note_de": "Je ein Feld aus den drei Abschnitten des Kapitels; Einzelheiten dort.",
   "basis": [
@@ -156,5 +159,143 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "RUT.1.1-RUT.1.5",
+            "figures": [
+              "FIG-ORPA",
+              "FIG-NOOMI",
+              "FIG-RUT"
+            ],
+            "objects": [
+              "FIG-ORT-MOAB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TOD",
+              "FIG-ZEICHEN-TRAUER"
+            ],
+            "speech": [],
+            "action_de": "Wegen einer Hungersnot zieht Noomis Familie nach Moab; dort sterben ihr Mann und ihre Söhne.",
+            "stage": {
+              "count": {
+                "FIG-ZEICHEN-TOD": 3
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-NOOMI"
+                ]
+              },
+              "back_side": "right",
+              "mood": {
+                "FIG-ORPA": "worried",
+                "FIG-RUT": "worried"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "RUT.1.6-RUT.1.18",
+            "figures": [
+              "FIG-ORPA",
+              "FIG-NOOMI",
+              "FIG-RUT"
+            ],
+            "objects": [
+              "FIG-ORT-MOAB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TREUE"
+            ],
+            "speech": [],
+            "action_de": "Orpa küsst ihre Schwiegermutter und kehrt zu ihrem Volk zurück; Rut aber hält sich an Noomi fest.",
+            "stage": {
+              "pose": {
+                "FIG-ORPA": "away"
+              },
+              "back_side": "left",
+              "arrows": [
+                [
+                  "FIG-ORPA",
+                  "FIG-ORT-MOAB",
+                  "go"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-TREUE": "FIG-RUT"
+              },
+              "mood": {
+                "FIG-ORPA": "worried",
+                "FIG-NOOMI": "worried",
+                "FIG-RUT": "determined"
+              },
+              "x": {
+                "FIG-ORPA": 100,
+                "FIG-NOOMI": 132,
+                "FIG-RUT": 162
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "RUT.1.19-RUT.1.22",
+            "figures": [
+              "FIG-GRUPPE-FRAUEN",
+              "FIG-NOOMI",
+              "FIG-RUT"
+            ],
+            "objects": [
+              "FIG-ORT-BETLEHEM"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-FRAUEN",
+                "to": "FIG-NOOMI",
+                "icons": [
+                  "FIG-NOOMI",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-NOOMI",
+                "to": "FIG-GRUPPE-FRAUEN",
+                "icons": [
+                  "FIG-ZEICHEN-VOLL",
+                  "FIG-ZEICHEN-FEHLT",
+                  "FIG-GOTT"
+                ]
+              }
+            ],
+            "action_de": "In Betlehem gerät die Stadt in Aufruhr; die Frauen fragen: Ist das Noomi? Sie antwortet: Nennt mich Mara; voll bin ich weggegangen, leer hat mich JHWH zurückgebracht.",
+            "stage": {
+              "back_side": "right",
+              "mood": {
+                "FIG-GRUPPE-FRAUEN": "surprised",
+                "FIG-NOOMI": "worried",
+                "FIG-RUT": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-FRAUEN": 34,
+                "FIG-NOOMI": 96,
+                "FIG-RUT": 128
+              },
+              "bubble_y": 20
+            }
+          }
+        ],
+        "captions_de": [
+          "In Moab: Noomis Mann und Söhne sterben (drei Gräber); Noomi bleibt mit Orpa und Rut zurück (Träne).",
+          "Abschied: Orpa geht nach Moab zurück (links, Pfeil); Rut hält sich an Noomi fest (Hände).",
+          "Nennt mich Mara: Die Frauen fragen: Noomi? Noomi klagt: Voll ging ich weg (volles Gefäss), leer (leerer Kreis) hat mich JHWH zurückgebracht (Strahlenkranz)."
+        ]
+      }
+    }
+  ]
 }

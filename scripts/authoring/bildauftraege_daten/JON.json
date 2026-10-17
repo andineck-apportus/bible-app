@@ -30,12 +30,19 @@
     ],
     "action_de": "JHWH spricht zu Jona: Geh nach Ninive, der grossen Stadt, und ruf gegen sie aus.",
     "action_gsw": "JHWH redt zum Jona: Gang uf Ninive, i di gross Stadt, und rüef gäge si uus.",
-    "caption_de": "Auftrag: Gott (Strahlenkranz) sendet Jona nach Ninive, um gegen die Stadt auszurufen (Stadt, Rufer).",
-    "caption_gsw": "Uftrag: Gott (Strahlechranz) schickt de Jona uf Ninive, er söll gäge d Stadt uusrüefe (Stadt, Rüefer).",
+    "caption_de": "Auftrag: Gott (Strahlenkranz) sendet Jona (Linie) nach Ninive, um gegen die Stadt auszurufen (Stadt, Lautsprecher).",
+    "caption_gsw": "Uftrag: Gott (Strahlechranz) schickt de Jona (Linie) uf Ninive, er söll gäge d Stadt uusrüefe (Stadt, Luutsprächer).",
     "stage": {
      "mood": {
       "FIG-JONA": "surprised"
-     }
+     },
+     "arrows": [
+      [
+       "FIG-GOTT",
+       "FIG-JONA",
+       "act"
+      ]
+     ]
     }
    },
    {
@@ -67,7 +74,7 @@
      "big_side": "right",
      "before": true,
      "x": {
-      "FIG-JONA": 70
+      "FIG-JONA": 118
      },
      "arrows": [
       [
@@ -114,8 +121,8 @@
     "speech": [],
     "action_de": "JHWH schleudert einen grossen Wind auf das Meer; die Seeleute fürchten sich und schreien zu ihren Göttern, Jona aber schläft tief unten im Schiff.",
     "action_gsw": "JHWH schlüüderet en grosse Wind uf s Meer; d Seelüüt händ Angscht und schreied zu irne Götter, de Jona aber schlaft tüüf une im Schiff.",
-    "caption_de": "Sturm: Gott schickt einen Sturm (Wolke, Blitz); die Seeleute fürchten sich, Jona schläft im Schiff (Mond).",
-    "caption_gsw": "Sturm: Gott schickt en Sturm (Wulche, Blitz); d Seelüüt händ Angscht, de Jona schlaft im Schiff (Mond).",
+    "caption_de": "Sturm: Gott schickt einen Sturm (Wolke mit Blitz neben dem Strahlenkranz); die Seeleute fürchten sich, Jona schläft im Schiff (Mond).",
+    "caption_gsw": "Sturm: Gott schickt en Sturm (Wulche mit Blitz näbem Strahlechranz); d Seelüüt händ Angscht, de Jona schlaft im Schiff (Mond).",
     "stage": {
      "in": {
       "FIG-GRUPPE-SEELEUTE": "FIG-OBJ-SCHIFF",
@@ -141,14 +148,7 @@
       "FIG-ZEICHEN-SCHLAFEN": "FIG-JONA",
       "FIG-ZEICHEN-STURM": "FIG-GOTT"
      },
-     "god_side": "left",
-     "arrows": [
-      [
-       "FIG-GOTT",
-       "FIG-OBJ-SCHIFF",
-       "act"
-      ]
-     ]
+     "god_side": "left"
     }
    },
    {
@@ -176,8 +176,8 @@
     ],
     "action_de": "Die Seeleute werfen Lose, und das Los fällt auf Jona. Er bekennt: Ich fürchte JHWH, den Gott des Himmels, der das Meer und das trockene Land gemacht hat.",
     "action_gsw": "D Seelüüt wärfed Los, und s Los fallt uf de Jona. Er bekännt: Ich fürcht JHWH, de Gott vom Himmel, wo s Meer und s tröchne Land gmacht hät.",
-    "caption_de": "Das Los fällt auf Jona (Steine über ihm); er bekennt sich zu JHWH, der Meer und Land gemacht hat (Strahlenkranz, Meer, Ufer).",
-    "caption_gsw": "S Los fallt uf de Jona (Stei über em); er bekännt sich zu JHWH, wo Meer und Land gmacht hät (Strahlechranz, Meer, Ufer).",
+    "caption_de": "Das Los fällt auf Jona (zwei helle und ein dunkler Stein bei ihm); er bekennt sich zu JHWH, der Meer und Land gemacht hat (Strahlenkranz, Meer, Ufer).",
+    "caption_gsw": "S Los fallt uf de Jona (zwee hell und en dunkle Stei bi im); er bekännt sich zu JHWH, wo Meer und Land gmacht hät (Strahlechranz, Meer, Ufer).",
     "stage": {
      "in": {
       "FIG-GRUPPE-SEELEUTE": "FIG-OBJ-SCHIFF",
@@ -199,8 +199,7 @@
      },
      "at": {
       "FIG-OBJ-LOS": "FIG-JONA"
-     },
-     "at_top": true
+     }
     }
    },
    {
@@ -218,8 +217,8 @@
     "speech": [],
     "action_de": "Auf Jonas eigenes Wort hin werfen die Seeleute ihn ins Meer; da hört das Meer auf zu toben.",
     "action_gsw": "Uf am Jona sis eiges Wort hii wärfed d Seelüüt en is Meer; da hört s Meer uf tobe.",
-    "caption_de": "Ins Meer: Auf sein eigenes Wort werfen die Seeleute Jona ins Meer; das Meer wird still.",
-    "caption_gsw": "Is Meer: Uf sis eiges Wort wärfed d Seelüüt de Jona is Meer; s Meer wird still.",
+    "caption_de": "Ins Meer: Auf sein eigenes Wort werfen die Seeleute Jona ins Meer (Bogen); das Meer wird still.",
+    "caption_gsw": "Is Meer: Uf sis eiges Wort wärfed d Seelüüt de Jona is Meer (Boge); s Meer wird still.",
     "stage": {
      "in": {
       "FIG-GRUPPE-SEELEUTE": "FIG-OBJ-SCHIFF"
@@ -245,7 +244,8 @@
        "throw"
       ]
      ],
-     "sea": "calm"
+     "sea": "calm",
+     "in_water": true
     }
    },
    {
@@ -257,7 +257,8 @@
     ],
     "objects": [
      "FIG-OBJ-SCHIFF",
-     "FIG-ORT-MEER-OFFEN"
+     "FIG-ORT-MEER-OFFEN",
+     "FIG-OBJ-ALTAR"
     ],
     "signs": [],
     "speech": [
@@ -271,8 +272,8 @@
     ],
     "action_de": "Die Seeleute fürchten nun JHWH; sie bringen ihm ein Opfer dar und geloben Gelübde.",
     "action_gsw": "D Seelüüt fürchted jetzt JHWH; si bringed em es Opfer dar und verspräched Glübd.",
-    "caption_de": "Die Seeleute wenden sich JHWH zu (Strahlenkranz), bringen ein Opfer dar und geloben Gelübde (Altar); das Meer ist still.",
-    "caption_gsw": "D Seelüüt wänded sich JHWH zue (Strahlechranz), bringed es Opfer dar und verspräched Glübd (Altar); s Meer isch still.",
+    "caption_de": "Die Seeleute wenden sich JHWH zu (Strahlenkranz), bringen ein Opfer dar (Altar auf dem Schiff) und geloben Gelübde (Sprechblase mit Altar); das Meer ist still.",
+    "caption_gsw": "D Seelüüt wänded sich JHWH zue (Strahlechranz), bringed es Opfer dar (Altar uf em Schiff) und verspräched Glübd (Sprächblase mit Altar); s Meer isch still.",
     "stage": {
      "in": {
       "FIG-GRUPPE-SEELEUTE": "FIG-OBJ-SCHIFF"
@@ -287,7 +288,10 @@
       "FIG-GRUPPE-SEELEUTE": "calm"
      },
      "god_side": "right",
-     "sea": "calm"
+     "sea": "calm",
+     "at": {
+      "FIG-OBJ-ALTAR": "FIG-GRUPPE-SEELEUTE"
+     }
     }
    }
   ],
@@ -330,7 +334,7 @@
      },
      "in_pos": {
       "FIG-JONA": [
-       0.55,
+       0.72,
        0.5
       ]
      },
@@ -350,7 +354,8 @@
        "FIG-OBJ-GROSSER-FISCH",
        "act"
       ]
-     ]
+     ],
+     "big_y": 72
     }
    }
   ],
@@ -510,7 +515,11 @@
        "FIG-JONA",
        "throw"
       ]
-     ]
+     ],
+     "big_y": 82,
+     "x": {
+      "FIG-JONA": 166
+     }
     }
    }
   ],
@@ -550,12 +559,12 @@
     ],
     "action_de": "Zum zweiten Mal sendet JHWH Jona nach Ninive; diesmal macht sich Jona auf und geht in die grosse Stadt.",
     "action_gsw": "Zum zweite Mal schickt JHWH de Jona uf Ninive; die Mal macht sich de Jona uf und gaat i di gross Stadt.",
-    "caption_de": "Zweiter Auftrag: Gott sendet Jona wieder nach Ninive (Stadt, Rufer); diesmal geht er hin (Weg zur Stadt).",
-    "caption_gsw": "Zweite Uftrag: Gott schickt de Jona wider uf Ninive (Stadt, Rüefer); die Mal gaat er häre (Wäg zur Stadt).",
+    "caption_de": "Zweiter Auftrag: Gott sendet Jona wieder nach Ninive (Stadt, Lautsprecher: ausrufen); diesmal geht er hin (Weg zur Stadt).",
+    "caption_gsw": "Zweite Uftrag: Gott schickt de Jona wider uf Ninive (Stadt, Luutsprächer: uusrüefe); die Mal gaat er häre (Wäg zur Stadt).",
     "stage": {
      "god_side": "left",
      "mood": {
-      "FIG-JONA": "calm"
+      "FIG-JONA": "earnest"
      },
      "back_side": "right",
      "x": {
@@ -598,7 +607,7 @@
     "caption_gsw": "Botschaft: De Jona rüeft z Ninive: No e Frischt (Sanduhr), dänn wird d Stadt umgstürzt (kippendi Muure).",
     "stage": {
      "mood": {
-      "FIG-JONA": "calm",
+      "FIG-JONA": "earnest",
       "FIG-GRUPPE-MENGE": "surprised"
      },
      "back_side": "right"
@@ -622,6 +631,7 @@
     "n": 1,
     "reference": "JON.3.5",
     "figures": [
+     "FIG-GOTT",
      "FIG-GRUPPE-MENGE"
     ],
     "objects": [
@@ -634,8 +644,8 @@
     "speech": [],
     "action_de": "Die Leute von Ninive glauben Gott; sie rufen ein Fasten aus und ziehen Sacktuch an, vom Grössten bis zum Kleinsten.",
     "action_gsw": "D Lüüt vo Ninive glaubed Gott; si rüefed es Faschte uus und leged Sacktuech aa, vom Gröschte bis zum Chliinschte.",
-    "caption_de": "Die Stadt glaubt: Die Leute von Ninive glauben Gott (Herz), fasten und tragen Sacktuch (dunkle Kleider; Zeichen Sacktuch und leere Schale).",
-    "caption_gsw": "D Stadt glaubt: D Lüüt vo Ninive glaubed Gott (Härz), fasted und träged Sacktuech (dunkli Chleider; Zeiche Sacktuech und lääri Schale).",
+    "caption_de": "Die Stadt glaubt: Die Leute von Ninive glauben Gott (Strahlenkranz; Herz über ihnen), fasten und tragen Sacktuch (dunkle Kleider; oben Sacktuch und durchgestrichene Schale).",
+    "caption_gsw": "D Stadt glaubt: D Lüüt vo Ninive glaubed Gott (Strahlechranz; Härz über ene), fasted und träged Sacktuech (dunkli Chleider; obe Sacktuech und duregstricheni Schale).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-MENGE": "calm"
@@ -643,7 +653,8 @@
      "back_side": "right",
      "wear": {
       "FIG-GRUPPE-MENGE": "sack"
-     }
+     },
+     "god_side": "left"
     }
    },
    {
@@ -762,8 +773,8 @@
     ],
     "action_de": "Jona ist zornig und betet: Ich wusste, dass du gnädig und barmherzig bist, darum bin ich geflohen; nimm nun mein Leben.",
     "action_gsw": "De Jona isch verruckt und bätet: Ich han gwüsst, dass du gnädig und barmhärzig bisch, drum bin ich gflüchtet; nimm jetzt mis Läbe.",
-    "caption_de": "Jonas Zorn: Jona betet zornig (Wolke): Ich wusste, dass du gnädig bist (Herz in Händen), darum floh ich (Pfeil); lass mich sterben (verschlossenes Grab).",
-    "caption_gsw": "Am Jona sin Zorn: De Jona bätet verruckt (Wulche): Ich han gwüsst, dass du gnädig bisch (Härz i de Händ), drum bin ich gflüchtet (Pfiil); la mich sterbe (zues Grab).",
+    "caption_de": "Jonas Zorn: Jona ist zornig (dunkle Wolke neben dem Kopf) und betet zu Gott: Ich wusste, dass du gnädig bist (Herz in Händen), darum floh ich (Pfeil); lass mich sterben (verschlossenes Grab).",
+    "caption_gsw": "Am Jona sin Zorn: De Jona isch verruckt (dunkli Wulche näbem Chopf) und bätet zu Gott: Ich han gwüsst, dass du gnädig bisch (Härz i de Händ), drum bin ich gflüchtet (Pfiil); la mich sterbe (zues Grab).",
     "stage": {
      "at": {
       "FIG-ZEICHEN-ZORN": "FIG-JONA"
@@ -771,7 +782,10 @@
      "mood": {
       "FIG-JONA": "worried"
      },
-     "god_side": "right"
+     "god_side": "left",
+     "x": {
+      "FIG-JONA": 120
+     }
     }
    },
    {
@@ -801,7 +815,7 @@
     "caption_gsw": "Gottes Frag: Isch es rächt, dass du verruckt bisch? (Wulche, Fragezeiche; über em Jona d Zornwulche)",
     "stage": {
      "mood": {
-      "FIG-JONA": "pensive"
+      "FIG-JONA": "earnest"
      },
      "god_side": "left",
      "at": {
@@ -853,10 +867,10 @@
      "back_side": "left",
      "before": true,
      "x": {
-      "FIG-JONA": 150
+      "FIG-JONA": 156
      },
      "floor_x": {
-      "FIG-OBJ-RIZINUS": 96
+      "FIG-OBJ-RIZINUS": 76
      },
      "god_side": "center",
      "arrows": [
@@ -904,11 +918,11 @@
       "FIG-JONA": "worried"
      },
      "x": {
-      "FIG-JONA": 150
+      "FIG-JONA": 156
      },
      "floor_x": {
-      "FIG-OBJ-RIZINUS-VERDORRT": 96,
-      "FIG-OBJ-WURM": 118
+      "FIG-OBJ-RIZINUS-VERDORRT": 76,
+      "FIG-OBJ-WURM": 96
      },
      "air_x": 40,
      "air_y": 10
@@ -922,7 +936,7 @@
      "FIG-JONA"
     ],
     "objects": [
-     "FIG-ORT-NINIVE"
+     "FIG-OBJ-RIZINUS-VERDORRT"
     ],
     "signs": [],
     "speech": [
@@ -948,8 +962,8 @@
     ],
     "action_de": "Gott fragt: Du hast Mitleid mit dem Rizinus – sollte ich nicht Mitleid haben mit Ninive, der grossen Stadt, mit ihren Menschen und dem vielen Vieh?",
     "action_gsw": "Gott fröget: Du häsch Mitleid mit em Rizinus – söt ich dänn nöd Mitleid ha mit Ninive, de grosse Stadt, mit irne Mänsche und em viele Veh?",
-    "caption_de": "Gottes letzte Frage: Du hast Mitleid mit der Staude (Staude, Herz, ?) – sollte ich nicht Mitleid haben mit Ninive, seinen Menschen und Tieren (Stadt, Menschen, Schaf, Herz)? Das Buch endet mit der Frage.",
-    "caption_gsw": "Gottes letschti Frag: Du häsch Mitleid mit de Stuude (Stuude, Härz, ?) – söt ich nöd Mitleid ha mit Ninive, sine Mänsche und Tier (Stadt, Mänsche, Schaf, Härz)? S Buech hört mit de Frag uf.",
+    "caption_de": "Gottes letzte Frage: Du hast Mitleid mit der Staude (Staude, Herz, ?) – sollte ich nicht Mitleid haben mit Ninive, seinen Menschen und Tieren (zweite Blase: Stadt, Menschen, Schaf, Herz)? Jona sitzt bei der verdorrten Staude; das Buch endet mit der Frage.",
+    "caption_gsw": "Gottes letschti Frag: Du häsch Mitleid mit de Stuude (Stuude, Härz, ?) – söt ich nöd Mitleid ha mit Ninive, sine Mänsche und Tier (zweiti Blase: Stadt, Mänsche, Schaf, Härz)? De Jona sitzt bi de verdorete Stuude; s Buech hört mit de Frag uf.",
     "stage": {
      "pose": {
       "FIG-JONA": "sit"
@@ -957,10 +971,12 @@
      "mood": {
       "FIG-JONA": "pensive"
      },
-     "god_side": "left",
-     "back_side": "right",
+     "god_side": "right",
      "x": {
-      "FIG-JONA": 60
+      "FIG-JONA": 84
+     },
+     "floor_x": {
+      "FIG-OBJ-RIZINUS-VERDORRT": 8
      }
     }
    }
@@ -1016,7 +1032,7 @@
      "back_side": "left",
      "before": true,
      "x": {
-      "FIG-JONA": 70
+      "FIG-JONA": 118
      },
      "arrows": [
       [
@@ -1047,8 +1063,8 @@
     "speech": [],
     "action_de": "Im Sturm werfen die Seeleute Jona auf sein Wort hin ins Meer; das Meer wird still.",
     "action_gsw": "Im Sturm wärfed d Seelüüt de Jona uf sis Wort hii is Meer; s Meer wird still.",
-    "caption_de": "Sturm: Die Seeleute werfen Jona ins Meer (Wolke, Blitz).",
-    "caption_gsw": "Sturm: D Seelüüt wärfed de Jona is Meer (Wulche, Blitz).",
+    "caption_de": "Sturm: Im Sturm (Wolke, Blitz) werfen die Seeleute Jona ins Meer (Bogen).",
+    "caption_gsw": "Sturm: Im Sturm (Wulche, Blitz) wärfed d Seelüüt de Jona is Meer (Boge).",
     "stage": {
      "in": {
       "FIG-GRUPPE-SEELEUTE": "FIG-OBJ-SCHIFF"
@@ -1065,15 +1081,16 @@
      "mood": {
       "FIG-GRUPPE-SEELEUTE": "worried"
      },
-     "air_x": 10,
-     "air_y": 8,
+     "air_x": 100,
+     "air_y": 6,
      "arrows": [
       [
        "FIG-GRUPPE-SEELEUTE",
        "FIG-JONA",
        "throw"
       ]
-     ]
+     ],
+     "in_water": true
     }
    },
    {
@@ -1113,7 +1130,8 @@
       "FIG-JONA": "worried"
      },
      "air_x": 60,
-     "air_y": 12
+     "air_y": 12,
+     "big_y": 72
     }
    }
   ],
@@ -1213,7 +1231,11 @@
        "FIG-JONA",
        "throw"
       ]
-     ]
+     ],
+     "big_y": 82,
+     "x": {
+      "FIG-JONA": 166
+     }
     }
    }
   ],
@@ -1247,14 +1269,15 @@
       "to": "FIG-GRUPPE-MENGE",
       "icons": [
        "FIG-ZEICHEN-STUNDE",
+       "FIG-ORT-NINIVE",
        "FIG-ZEICHEN-UMSTURZ"
       ]
      }
     ],
     "action_de": "Jona geht nach Ninive und ruft: Noch vierzig Tage, und Ninive wird umgestürzt.",
     "action_gsw": "De Jona gaat uf Ninive und rüeft: No vierzg Täg, und Ninive wird umgstürzt.",
-    "caption_de": "Botschaft: Jona ruft in Ninive: Noch eine Frist (Sanduhr), dann wird die Stadt umgestürzt.",
-    "caption_gsw": "Botschaft: De Jona rüeft z Ninive: No e Frischt (Sanduhr), dänn wird d Stadt umgstürzt.",
+    "caption_de": "Botschaft: Jona ruft in Ninive: Noch eine Frist (Sanduhr), dann wird die Stadt umgestürzt (Stadt, kippende Mauern).",
+    "caption_gsw": "Botschaft: De Jona rüeft z Ninive: No e Frischt (Sanduhr), dänn wird d Stadt umgstürzt (Stadt, kippendi Muure).",
     "stage": {
      "mood": {
       "FIG-JONA": "earnest",
@@ -1363,8 +1386,8 @@
     ],
     "action_de": "Jona ist zornig, weil Gott gnädig ist, und wünscht sich den Tod.",
     "action_gsw": "De Jona isch verruckt, wil Gott gnädig isch, und wünscht sich de Tod.",
-    "caption_de": "Zorn: Jona ärgert sich über Gottes Gnade (Herz) und will sterben (verschlossenes Grab).",
-    "caption_gsw": "Zorn: De Jona ärgeret sich über Gottes Gnad (Härz) und will sterbe (zues Grab).",
+    "caption_de": "Zorn: Jona ist zornig (dunkle Wolke) und betet zu Gott: Du bist gnädig (Herz in Händen) – lass mich sterben (verschlossenes Grab).",
+    "caption_gsw": "Zorn: De Jona isch verruckt (dunkli Wulche) und bätet zu Gott: Du bisch gnädig (Härz i de Händ) – la mich sterbe (zues Grab).",
     "stage": {
      "at": {
       "FIG-ZEICHEN-ZORN": "FIG-JONA"
@@ -1372,7 +1395,10 @@
      "mood": {
       "FIG-JONA": "worried"
      },
-     "god_side": "right"
+     "god_side": "left",
+     "x": {
+      "FIG-JONA": 120
+     }
     }
    },
    {
@@ -1402,11 +1428,11 @@
       "FIG-JONA": "worried"
      },
      "x": {
-      "FIG-JONA": 150
+      "FIG-JONA": 156
      },
      "floor_x": {
-      "FIG-OBJ-RIZINUS-VERDORRT": 96,
-      "FIG-OBJ-WURM": 118
+      "FIG-OBJ-RIZINUS-VERDORRT": 76,
+      "FIG-OBJ-WURM": 96
      },
      "air_x": 40,
      "air_y": 10
@@ -1420,7 +1446,7 @@
      "FIG-JONA"
     ],
     "objects": [
-     "FIG-ORT-NINIVE"
+     "FIG-OBJ-RIZINUS-VERDORRT"
     ],
     "signs": [],
     "speech": [
@@ -1436,8 +1462,8 @@
     ],
     "action_de": "Gott fragt Jona, ob er nicht Mitleid haben soll mit Ninive, der grossen Stadt.",
     "action_gsw": "Gott fröget de Jona, öb er nöd Mitleid söll ha mit Ninive, de grosse Stadt.",
-    "caption_de": "Gottes Frage: Sollte ich nicht Mitleid haben mit Ninive? (Herz, Stadt, Fragezeichen)",
-    "caption_gsw": "Gottes Frag: Söt ich nöd Mitleid ha mit Ninive? (Härz, Stadt, Fragezeiche)",
+    "caption_de": "Gottes Frage: Bei der verdorrten Staude fragt Gott Jona: Sollte ich nicht Mitleid haben mit Ninive? (Herz, Stadt, Fragezeichen)",
+    "caption_gsw": "Gottes Frag: Bi de verdorete Stuude fröget Gott de Jona: Söt ich nöd Mitleid ha mit Ninive? (Härz, Stadt, Fragezeiche)",
     "stage": {
      "pose": {
       "FIG-JONA": "sit"
@@ -1445,10 +1471,12 @@
      "mood": {
       "FIG-JONA": "pensive"
      },
-     "god_side": "left",
-     "back_side": "right",
+     "god_side": "right",
      "x": {
-      "FIG-JONA": 60
+      "FIG-JONA": 84
+     },
+     "floor_x": {
+      "FIG-OBJ-RIZINUS-VERDORRT": 8
      }
     }
    }
@@ -1501,15 +1529,16 @@
      "mood": {
       "FIG-GRUPPE-SEELEUTE": "worried"
      },
-     "air_x": 10,
-     "air_y": 8,
+     "air_x": 100,
+     "air_y": 6,
      "arrows": [
       [
        "FIG-GRUPPE-SEELEUTE",
        "FIG-JONA",
        "throw"
       ]
-     ]
+     ],
+     "in_water": true
     }
    },
    {
@@ -1529,14 +1558,15 @@
       "from": "FIG-JONA",
       "to": "FIG-GOTT",
       "icons": [
+       "FIG-ORT-TIEFE",
        "FIG-ZEICHEN-RETTUNG"
       ]
      }
     ],
     "action_de": "Im Bauch des grossen Fisches betet Jona; Gott rettet ihn.",
     "action_gsw": "Im Buuch vom grosse Fisch bätet de Jona; Gott rettet en.",
-    "caption_de": "Im Fisch: Jona betet und wird gerettet (Pfeil nach oben).",
-    "caption_gsw": "Im Fisch: De Jona bätet und wird grettet (Pfiil ufe).",
+    "caption_de": "Im Fisch: Jona betet zu Gott (Sprechblase): aus der Tiefe (dunkles Wasser) gerettet (Pfeil nach oben).",
+    "caption_gsw": "Im Fisch: De Jona bätet zu Gott (Sprächblase): us de Tüüfi (dunkels Wasser) grettet (Pfiil ufe).",
     "stage": {
      "in": {
       "FIG-JONA": "FIG-OBJ-GROSSER-FISCH"
@@ -1548,7 +1578,7 @@
       ]
      },
      "mood": {
-      "FIG-JONA": "smile"
+      "FIG-JONA": "calm"
      },
      "god_side": "right",
      "big_y": 66
@@ -1591,6 +1621,10 @@
      },
      "at": {
       "FIG-ZEICHEN-UMKEHR": "FIG-GRUPPE-MENGE"
+     },
+     "x": {
+      "FIG-JONA": 36,
+      "FIG-GRUPPE-MENGE": 112
      }
     }
    },
@@ -1602,8 +1636,7 @@
      "FIG-JONA"
     ],
     "objects": [
-     "FIG-OBJ-RIZINUS-VERDORRT",
-     "FIG-ORT-NINIVE"
+     "FIG-OBJ-RIZINUS-VERDORRT"
     ],
     "signs": [],
     "speech": [
@@ -1628,13 +1661,12 @@
      "mood": {
       "FIG-JONA": "pensive"
      },
-     "god_side": "left",
-     "back_side": "right",
+     "god_side": "right",
      "x": {
-      "FIG-JONA": 60
+      "FIG-JONA": 84
      },
      "floor_x": {
-      "FIG-OBJ-RIZINUS-VERDORRT": 20
+      "FIG-OBJ-RIZINUS-VERDORRT": 8
      }
     }
    }

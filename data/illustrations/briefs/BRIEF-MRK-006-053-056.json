@@ -14,25 +14,28 @@
       "reference": "MRK.6.53-MRK.6.55",
       "figures": [
         "FIG-GRUPPE-MENGE",
-        "FIG-ROLLE-KRANKER",
         "FIG-JESUS"
       ],
       "objects": [],
       "signs": [
-        "FIG-ZEICHEN-BRINGEN"
+        "FIG-ZEICHEN-KRANK"
       ],
       "speech": [],
       "action_de": "In Gennesaret legen sie an; man erkennt Jesus sogleich, läuft in der ganzen Gegend umher und trägt die Kranken auf Tragbahren dorthin, wo er ist.",
       "stage": {
-        "pose": {
-          "FIG-ROLLE-KRANKER": "lie"
-        },
         "at": {
-          "FIG-ZEICHEN-BRINGEN": "FIG-GRUPPE-MENGE"
+          "FIG-ZEICHEN-KRANK": "FIG-GRUPPE-MENGE"
         },
         "mood": {
           "FIG-GRUPPE-MENGE": "earnest"
-        }
+        },
+        "arrows": [
+          [
+            "FIG-GRUPPE-MENGE",
+            "FIG-JESUS",
+            "go"
+          ]
+        ]
       }
     },
     {
@@ -62,11 +65,13 @@
           ]
         ],
         "at": {
-          "FIG-ZEICHEN-BERUEHREN": "FIG-ROLLE-KRANKER",
           "FIG-ZEICHEN-HEILEN": "FIG-GRUPPE-MENGE"
         },
         "mood": {
           "FIG-GRUPPE-MENGE": "smile"
+        },
+        "beside": {
+          "FIG-ZEICHEN-BERUEHREN": "FIG-ROLLE-KRANKER"
         }
       }
     }
@@ -76,7 +81,7 @@
     "Wo immer er hinkommt, legt man die Kranken auf die Marktplätze; sie bitten, nur den Saum seines Mantels berühren zu dürfen, und alle, die ihn berühren, werden gerettet."
   ],
   "captions_de": [
-    "Gennesaret: Leute bringen Kranke zu Jesus (Pfeil über den Leuten); ein Kranker liegt vor ihm.",
+    "Gennesaret: Leute tragen Kranke auf Matten zu Jesus (liegende Figur auf Matte über den Leuten, Pfeil).",
     "Der Saum: Ein Kranker berührt Jesu Mantel (Hand am Saum), und alle, die ihn berühren, werden gesund (Hand mit Licht)."
   ],
   "interpretation_note_de": "Die Kranken erscheinen als eine Figur mit Matte; die Tragbahren ([[MRK.6.55]]) sind nur durch die liegende Haltung angedeutet.",
@@ -104,5 +109,80 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.6.53-MRK.6.55",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-ROLLE-KRANKER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-BRINGEN"
+            ],
+            "speech": [],
+            "action_de": "In Gennesaret legen sie an; man erkennt Jesus sogleich, läuft in der ganzen Gegend umher und trägt die Kranken auf Tragbahren dorthin, wo er ist.",
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-KRANKER": "lie"
+              },
+              "at": {
+                "FIG-ZEICHEN-BRINGEN": "FIG-GRUPPE-MENGE"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.6.56",
+            "figures": [
+              "FIG-ROLLE-KRANKER",
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-BERUEHREN",
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [],
+            "action_de": "Wo immer er hinkommt, legt man die Kranken auf die Marktplätze; sie bitten, nur den Saum seines Mantels berühren zu dürfen, und alle, die ihn berühren, werden gerettet.",
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-KRANKER": "kneel"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-KRANKER",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-BERUEHREN": "FIG-ROLLE-KRANKER",
+                "FIG-ZEICHEN-HEILEN": "FIG-GRUPPE-MENGE"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "smile"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Gennesaret: Leute bringen Kranke zu Jesus (Pfeil über den Leuten); ein Kranker liegt vor ihm.",
+          "Der Saum: Ein Kranker berührt Jesu Mantel (Hand am Saum), und alle, die ihn berühren, werden gesund (Hand mit Licht)."
+        ]
+      }
+    }
+  ]
 }

@@ -43,7 +43,11 @@
           ]
         ],
         "back_side": "left",
-        "before": true
+        "before": true,
+        "mood": {
+          "FIG-TITUS": "calm",
+          "FIG-PAULUS": "calm"
+        }
       }
     },
     {
@@ -64,7 +68,7 @@
         "arrows": [
           [
             "FIG-TITUS",
-            "FIG-ZENAS",
+            "FIG-APOLLOS",
             "act"
           ]
         ],
@@ -73,7 +77,8 @@
         },
         "mood": {
           "FIG-ZENAS": "smile",
-          "FIG-APOLLOS": "smile"
+          "FIG-APOLLOS": "smile",
+          "FIG-TITUS": "calm"
         }
       }
     },
@@ -81,8 +86,8 @@
       "n": 3,
       "reference": "TIT.3.15",
       "figures": [
-        "FIG-PAULUS",
         "FIG-GRUPPE-GLAUBENDE",
+        "FIG-PAULUS",
         "FIG-TITUS"
       ],
       "objects": [],
@@ -101,7 +106,8 @@
       "stage": {
         "mood": {
           "FIG-GRUPPE-GLAUBENDE": "smile",
-          "FIG-TITUS": "smile"
+          "FIG-TITUS": "smile",
+          "FIG-PAULUS": "smile"
         }
       }
     }
@@ -112,8 +118,8 @@
     "Alle bei Paulus grüssen Titus; er soll die grüssen, die sie im Glauben lieben. Die Gnade sei mit ihnen allen."
   ],
   "captions_de": [
-    "Reisepläne: Paulus schickt einen Boten (Artemas oder Tychikus) zu Titus (Pfeil); Titus soll in die Stadt kommen, wo Paulus überwintert (Titus, Pfeil, Stadt, Schneeflocke).",
-    "Ausrüsten: Titus rüstet Zenas und Apollos für die Reise aus (Pfeil); gute Werke (Hand mit Brot).",
+    "Reisepläne: Paulus schickt einen Boten mit Brief (Artemas oder Tychikus) zu Titus (Pfeil); Titus soll in die Stadt kommen, wo Paulus überwintert (Titus, Pfeil, Stadt, Schneeflocke).",
+    "Ausrüsten: Titus rüstet Zenas und Apollos für die Reise aus (Pfeil über beide); gute Werke (Hand mit Brot).",
     "Grüsse: Paulus und die Glaubenden bei ihm grüssen Titus; Gnade (Hände mit Licht) für alle (Gruppe)."
   ],
   "interpretation_note_de": "Ob Artemas oder Tychikus kommt, ist offen ([[TIT.3.12]]); deshalb zeigt das Bild einen Boten ohne Namen. Die Stadt steht für Nikopolis, die Schneeflocke für das Überwintern. Womit Titus die Reisenden ausrüstet, sagt der Text nicht ([[TIT.3.13]]).",
@@ -147,5 +153,116 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "TIT.3.12",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-ROLLE-BOTE",
+              "FIG-TITUS"
+            ],
+            "objects": [
+              "FIG-ORT-STADT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-TITUS",
+                  "FIG-ZEICHEN-BRINGEN",
+                  "FIG-ORT-STADT",
+                  "FIG-ZEICHEN-WINTER"
+                ]
+              }
+            ],
+            "action_de": "Paulus will Artemas oder Tychikus zu Titus schicken; dann soll Titus schnell zu ihm nach Nikopolis kommen, wo Paulus überwintern will.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-ROLLE-BOTE",
+                  "FIG-TITUS",
+                  "go"
+                ]
+              ],
+              "back_side": "left",
+              "before": true
+            }
+          },
+          {
+            "n": 2,
+            "reference": "TIT.3.13-TIT.3.14",
+            "figures": [
+              "FIG-TITUS",
+              "FIG-ZENAS",
+              "FIG-APOLLOS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-GUTE-WERKE"
+            ],
+            "speech": [],
+            "action_de": "Titus soll Zenas, den Rechtsgelehrten, und Apollos sorgfältig für die Reise ausrüsten; auch die Seinen sollen lernen, sich für gute Werke einzusetzen.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-TITUS",
+                  "FIG-ZENAS",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-GUTE-WERKE": "FIG-TITUS"
+              },
+              "mood": {
+                "FIG-ZENAS": "smile",
+                "FIG-APOLLOS": "smile"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "TIT.3.15",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-GRUPPE-GLAUBENDE",
+              "FIG-TITUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-ZEICHEN-GNADE",
+                  "FIG-GRUPPE-GLAUBENDE"
+                ]
+              }
+            ],
+            "action_de": "Alle bei Paulus grüssen Titus; er soll die grüssen, die sie im Glauben lieben. Die Gnade sei mit ihnen allen.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "smile",
+                "FIG-TITUS": "smile"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Reisepläne: Paulus schickt einen Boten (Artemas oder Tychikus) zu Titus (Pfeil); Titus soll in die Stadt kommen, wo Paulus überwintert (Titus, Pfeil, Stadt, Schneeflocke).",
+          "Ausrüsten: Titus rüstet Zenas und Apollos für die Reise aus (Pfeil); gute Werke (Hand mit Brot).",
+          "Grüsse: Paulus und die Glaubenden bei ihm grüssen Titus; Gnade (Hände mit Licht) für alle (Gruppe)."
+        ]
+      }
+    }
+  ]
 }

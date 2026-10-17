@@ -27,7 +27,7 @@
       "action_de": "Die Menschen lagern sich im Gras; Jesus dankt und teilt Brot und Fisch aus, so viel sie wollen. Alle werden satt, und die Jünger sammeln zwölf Körbe mit Brocken.",
       "stage": {
         "mood": {
-          "FIG-GRUPPE-MENGE": "delight"
+          "FIG-GRUPPE-MENGE": "smile"
         },
         "hold": {
           "FIG-JESUS": "FIG-OBJ-BROT"
@@ -76,14 +76,15 @@
         },
         "big_side": "right",
         "mood": {
-          "FIG-GRUPPE-ZWOELF": "worried",
+          "FIG-GRUPPE-ZWOELF": "surprised",
           "FIG-JESUS": "calm"
         },
         "x": {
-          "FIG-JESUS": 40
+          "FIG-JESUS": 48
         },
         "air_x": 70,
-        "air_y": 8
+        "air_y": 8,
+        "in_water": true
       }
     },
     {
@@ -111,7 +112,7 @@
       "stage": {
         "mood": {
           "FIG-JESUS": "smile",
-          "FIG-GRUPPE-MENGE": "pensive"
+          "FIG-GRUPPE-MENGE": "calm"
         }
       }
     },
@@ -139,7 +140,6 @@
           "from": "FIG-PETRUS",
           "to": "FIG-JESUS",
           "icons": [
-            "FIG-ZEICHEN-SPRECHEN",
             "FIG-ZEICHEN-LEBEN",
             "FIG-ZEICHEN-GLAUBEN"
           ]
@@ -148,7 +148,7 @@
       "action_de": "Jesus fragt die Zwölf: Wollt auch ihr weggehen? Simon Petrus antwortet: Herr, zu wem sollen wir gehen? Du hast Worte ewigen Lebens; wir haben geglaubt, dass du der Heilige Gottes bist.",
       "stage": {
         "mood": {
-          "FIG-PETRUS": "determined",
+          "FIG-PETRUS": "calm",
           "FIG-GRUPPE-ZWOELF": "calm",
           "FIG-JESUS": "calm"
         }
@@ -163,9 +163,9 @@
   ],
   "captions_de": [
     "Alle werden satt: Jesus teilt das Brot an die Menge aus (Pfeil); sie sind satt (Schale mit Haken), Körbe mit Brocken bleiben übrig.",
-    "Auf dem See: Bei Nacht (Mond) und starkem Wind sehen die Jünger im Boot Jesus über das Wasser kommen und fürchten sich.",
-    "«Ich bin das Brot des Lebens»: Jesus zeigt auf sich, das Brot und das Leben (Spross im Ring); wer zu ihm kommt, wird satt (Schale).",
-    "Petrus bleibt: Jesus fragt die Zwölf, ob auch sie gehen wollen (Pfeil, Fragezeichen); Petrus antwortet: Deine Worte geben Leben, wir glauben (Schallbogen, Spross im Ring, Herz)."
+    "Auf dem See: Bei Nacht (Mond) und starkem Wind (Windstriche) kommt Jesus über das Wasser auf das Boot zu; die Jünger erschrecken.",
+    "«Ich bin das Brot des Lebens»: Jesus spricht von sich (Jesus in der Blase), dem Brot und dem Leben (Spross im Ring); wer zu ihm kommt, wird satt (Schale mit Haken).",
+    "Petrus bleibt: Jesus fragt die Zwölf, ob auch sie gehen wollen (Zwölf, Pfeil, Fragezeichen); Petrus antwortet: Du hast Worte des Lebens, wir glauben (Spross im Ring, Herz)."
   ],
   "interpretation_note_de": "Je ein Feld zur Speisung, zum Gang auf dem See, zur Rede vom Brot des Lebens und zum Bekenntnis des Petrus; Einzelheiten in den Abschnitten.",
   "basis": [
@@ -180,5 +180,166 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.6.10-JHN.6.13",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT",
+              "FIG-OBJ-KORB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SATT"
+            ],
+            "speech": [],
+            "action_de": "Die Menschen lagern sich im Gras; Jesus dankt und teilt Brot und Fisch aus, so viel sie wollen. Alle werden satt, und die Jünger sammeln zwölf Körbe mit Brocken.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "delight"
+              },
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROT"
+              },
+              "count": {
+                "FIG-OBJ-KORB": 3
+              },
+              "at": {
+                "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.6.16-JHN.6.19",
+            "figures": [
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-WIND",
+              "FIG-ZEICHEN-NACHT"
+            ],
+            "speech": [],
+            "action_de": "Am Abend fahren die Jünger ohne Jesus über den See; ein starker Wind wühlt das Wasser auf. Sie sehen Jesus auf dem See gehen und nahe ans Boot kommen und fürchten sich.",
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-ZWOELF": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-ZWOELF": [
+                  0.4,
+                  0.42
+                ]
+              },
+              "big_side": "right",
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "worried",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-JESUS": 40
+              },
+              "air_x": 70,
+              "air_y": 8
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.6.35-JHN.6.36",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-OBJ-BROT",
+                  "FIG-ZEICHEN-LEBEN",
+                  "FIG-ZEICHEN-SATT"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: Ich bin das Brot des Lebens. Wer zu mir kommt, wird nicht hungern, und wer an mich glaubt, wird niemals Durst haben; doch ihr habt mich gesehen und glaubt nicht.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "smile",
+                "FIG-GRUPPE-MENGE": "pensive"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.6.67-JHN.6.69",
+            "figures": [
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-GRUPPE-ZWOELF",
+                  "FIG-ZEICHEN-FLIEHEN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-SPRECHEN",
+                  "FIG-ZEICHEN-LEBEN",
+                  "FIG-ZEICHEN-GLAUBEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus fragt die Zwölf: Wollt auch ihr weggehen? Simon Petrus antwortet: Herr, zu wem sollen wir gehen? Du hast Worte ewigen Lebens; wir haben geglaubt, dass du der Heilige Gottes bist.",
+            "stage": {
+              "mood": {
+                "FIG-PETRUS": "determined",
+                "FIG-GRUPPE-ZWOELF": "calm",
+                "FIG-JESUS": "calm"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Alle werden satt: Jesus teilt das Brot an die Menge aus (Pfeil); sie sind satt (Schale mit Haken), Körbe mit Brocken bleiben übrig.",
+          "Auf dem See: Bei Nacht (Mond) und starkem Wind sehen die Jünger im Boot Jesus über das Wasser kommen und fürchten sich.",
+          "«Ich bin das Brot des Lebens»: Jesus zeigt auf sich, das Brot und das Leben (Spross im Ring); wer zu ihm kommt, wird satt (Schale).",
+          "Petrus bleibt: Jesus fragt die Zwölf, ob auch sie gehen wollen (Pfeil, Fragezeichen); Petrus antwortet: Deine Worte geben Leben, wir glauben (Schallbogen, Spross im Ring, Herz)."
+        ]
+      }
+    }
+  ]
 }

@@ -44,7 +44,8 @@
         "FIG-ROLLE-SOLDAT"
       ],
       "objects": [
-        "FIG-ORT-GOLGOTA"
+        "FIG-ORT-GOLGOTA",
+        "FIG-OBJ-LANZE"
       ],
       "signs": [
         "FIG-ZEICHEN-BLUT-UND-WASSER"
@@ -66,23 +67,25 @@
             "act"
           ]
         ],
-        "air_x": 118,
-        "air_y": 58
+        "air_x": 124,
+        "air_y": 62,
+        "hold": {
+          "FIG-ROLLE-SOLDAT": "FIG-OBJ-LANZE"
+        }
       }
     },
     {
       "n": 3,
       "reference": "JHN.19.35-JHN.19.37",
       "figures": [
-        "FIG-LIEBLINGSJUENGER",
-        "FIG-GRUPPE-MENGE"
+        "FIG-LIEBLINGSJUENGER"
       ],
       "objects": [],
       "signs": [],
       "speech": [
         {
           "from": "FIG-LIEBLINGSJUENGER",
-          "to": "FIG-GRUPPE-MENGE",
+          "to": "FIG-LIEBLINGSJUENGER",
           "icons": [
             "FIG-ZEICHEN-SEHEN",
             "FIG-ZEICHEN-WAHRHEIT",
@@ -93,8 +96,7 @@
       "action_de": "Der es gesehen hat, hat es bezeugt, und sein Zeugnis ist wahr, damit auch ihr glaubt. Es geschah, damit die Schrift erfüllt würde.",
       "stage": {
         "mood": {
-          "FIG-LIEBLINGSJUENGER": "earnest",
-          "FIG-GRUPPE-MENGE": "calm"
+          "FIG-LIEBLINGSJUENGER": "calm"
         }
       }
     }
@@ -106,8 +108,8 @@
   ],
   "captions_de": [
     "Vor dem Sabbat: Die Menge bittet Pilatus: wegen des Sabbats (Lichter) die Gekreuzigten abnehmen (Kreuz, Pfeil nach unten).",
-    "Der Lanzenstich: Ein Soldat richtet die Lanze zum mittleren Kreuz (Pfeil); Blut und Wasser (zwei Tropfen).",
-    "Zeugnis: Der Augenzeuge sagt den Lesenden: Ich habe es gesehen (Auge), es ist wahr (Lot), damit ihr glaubt (Herz)."
+    "Der Lanzenstich: Ein Soldat mit Lanze sticht zum mittleren Kreuz hin (Pfeil); Blut und Wasser kommen heraus (roter und blauer Tropfen).",
+    "Zeugnis: Der Augenzeuge wendet sich an die Lesenden: Ich habe es gesehen (Auge), es ist wahr (Häkchen), damit ihr glaubt (Herz)."
   ],
   "interpretation_note_de": "Das Brechen der Beine und der Lanzenstich werden nicht ausgemalt: nur die Lanze zum leeren mittleren Kreuz und zwei kleine Tropfen ([[JHN.19.34]]). Den Zeugen ([[JHN.19.35]]) nennt der Text nicht mit Namen; das Bild zeigt den Jünger, den Jesus liebte, der beim Kreuz stand ([[JHN.19.26]]; vgl. [[JHN.21.24]]) – das ist Deutung. Die Menge steht für «ihr», die Lesenden. Die beiden Schriftworte ([[JHN.19.36-JHN.19.37]]) zeigt das Bild nicht.",
   "basis": [
@@ -140,5 +142,109 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.19.31",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-PILATUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-ZEICHEN-SABBAT",
+                  "FIG-OBJ-KREUZ",
+                  "FIG-ZEICHEN-HINAB"
+                ]
+              }
+            ],
+            "action_de": "Weil Rüsttag ist und die Leiber am grossen Sabbat nicht am Kreuz bleiben sollen, bitten die Juden Pilatus, die Gekreuzigten abnehmen zu lassen.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-PILATUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.19.32-JHN.19.34",
+            "figures": [
+              "FIG-ROLLE-SOLDAT"
+            ],
+            "objects": [
+              "FIG-ORT-GOLGOTA"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-BLUT-UND-WASSER"
+            ],
+            "speech": [],
+            "action_de": "Die Soldaten brechen den beiden anderen die Beine; bei Jesus sehen sie, dass er schon tot ist. Einer der Soldaten stösst ihm eine Lanze in die Seite, und sogleich kommen Blut und Wasser heraus.",
+            "stage": {
+              "back_side": "right",
+              "x": {
+                "FIG-ROLLE-SOLDAT": 50
+              },
+              "mood": {
+                "FIG-ROLLE-SOLDAT": "earnest"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-SOLDAT",
+                  "FIG-ORT-GOLGOTA",
+                  "act"
+                ]
+              ],
+              "air_x": 118,
+              "air_y": 58
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.19.35-JHN.19.37",
+            "figures": [
+              "FIG-LIEBLINGSJUENGER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-LIEBLINGSJUENGER",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-SEHEN",
+                  "FIG-ZEICHEN-WAHRHEIT",
+                  "FIG-ZEICHEN-GLAUBEN"
+                ]
+              }
+            ],
+            "action_de": "Der es gesehen hat, hat es bezeugt, und sein Zeugnis ist wahr, damit auch ihr glaubt. Es geschah, damit die Schrift erfüllt würde.",
+            "stage": {
+              "mood": {
+                "FIG-LIEBLINGSJUENGER": "earnest",
+                "FIG-GRUPPE-MENGE": "calm"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Vor dem Sabbat: Die Menge bittet Pilatus: wegen des Sabbats (Lichter) die Gekreuzigten abnehmen (Kreuz, Pfeil nach unten).",
+          "Der Lanzenstich: Ein Soldat richtet die Lanze zum mittleren Kreuz (Pfeil); Blut und Wasser (zwei Tropfen).",
+          "Zeugnis: Der Augenzeuge sagt den Lesenden: Ich habe es gesehen (Auge), es ist wahr (Lot), damit ihr glaubt (Herz)."
+        ]
+      }
+    }
+  ]
 }

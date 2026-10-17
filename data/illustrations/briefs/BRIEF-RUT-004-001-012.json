@@ -26,8 +26,7 @@
           "from": "FIG-BOAS",
           "to": "FIG-LOESER",
           "icons": [
-            "FIG-ORT-FELD",
-            "FIG-ZEICHEN-LOESEN",
+            "FIG-ZEICHEN-LOESERECHT",
             "FIG-ZEICHEN-FRAGEN"
           ]
         },
@@ -35,15 +34,12 @@
           "from": "FIG-LOESER",
           "to": "FIG-BOAS",
           "icons": [
-            "FIG-ZEICHEN-LOESEN"
+            "FIG-ZEICHEN-LOESERECHT"
           ]
         }
       ],
       "action_de": "Boas setzt sich ins Tor, ruft den näheren Löser herbei und nimmt zehn Älteste dazu. Er sagt: Noomi verkauft das Feld Elimelechs; willst du es lösen? Der Löser sagt: Ich will lösen.",
       "stage": {
-        "pose": {
-          "FIG-GRUPPE-AELTESTE": "sit"
-        },
         "back_side": "left",
         "mood": {
           "FIG-LOESER": "smile",
@@ -51,9 +47,9 @@
           "FIG-GRUPPE-AELTESTE": "calm"
         },
         "x": {
-          "FIG-GRUPPE-AELTESTE": 30,
-          "FIG-BOAS": 90,
-          "FIG-LOESER": 162
+          "FIG-GRUPPE-AELTESTE": 64,
+          "FIG-BOAS": 108,
+          "FIG-LOESER": 164
         },
         "bubble_y": 20
       }
@@ -66,9 +62,7 @@
         "FIG-BOAS",
         "FIG-LOESER"
       ],
-      "objects": [
-        "FIG-ORT-STADTTOR"
-      ],
+      "objects": [],
       "signs": [],
       "speech": [
         {
@@ -83,25 +77,25 @@
           "from": "FIG-LOESER",
           "to": "FIG-BOAS",
           "icons": [
-            "FIG-ZEICHEN-ABLEHNEN"
+            "FIG-ZEICHEN-LOESERECHT",
+            "FIG-ZEICHEN-NICHT"
           ]
         }
       ],
       "action_de": "Boas sagt: Mit dem Feld erwirbst du auch Rut, die Moabiterin, um den Namen des Verstorbenen zu erhalten. Da sagt der Löser: Ich kann nicht lösen, sonst schädige ich mein eigenes Erbe; löse du.",
       "stage": {
         "pose": {
-          "FIG-GRUPPE-AELTESTE": "sit"
+          "FIG-LOESER": "away"
         },
-        "back_side": "left",
         "mood": {
           "FIG-LOESER": "worried",
           "FIG-BOAS": "earnest",
           "FIG-GRUPPE-AELTESTE": "calm"
         },
         "x": {
-          "FIG-GRUPPE-AELTESTE": 30,
-          "FIG-BOAS": 90,
-          "FIG-LOESER": 162
+          "FIG-GRUPPE-AELTESTE": 20,
+          "FIG-BOAS": 62,
+          "FIG-LOESER": 164
         },
         "bubble_y": 20
       }
@@ -115,7 +109,7 @@
         "FIG-LOESER"
       ],
       "objects": [
-        "FIG-ORT-STADTTOR"
+        "FIG-OBJ-SANDALE"
       ],
       "signs": [],
       "speech": [
@@ -123,16 +117,13 @@
           "from": "FIG-LOESER",
           "to": "FIG-BOAS",
           "icons": [
-            "FIG-ZEICHEN-ABLEHNEN",
-            "FIG-ZEICHEN-LOESEN"
+            "FIG-BOAS",
+            "FIG-ZEICHEN-LOESERECHT"
           ]
         }
       ],
       "action_de": "Im Tor sagt der nähere Löser vor den Ältesten: Ich kann nicht lösen; löse du! Er zieht seinen Schuh aus und gibt ihn Boas; so wird der Verzicht bestätigt.",
       "stage": {
-        "pose": {
-          "FIG-GRUPPE-AELTESTE": "sit"
-        },
         "arrows": [
           [
             "FIG-LOESER",
@@ -140,13 +131,20 @@
             "act"
           ]
         ],
-        "back_side": "left",
         "mood": {
           "FIG-LOESER": "earnest",
           "FIG-BOAS": "calm",
           "FIG-GRUPPE-AELTESTE": "calm"
         },
-        "bubble_y": 20
+        "bubble_y": 20,
+        "x": {
+          "FIG-GRUPPE-AELTESTE": 20,
+          "FIG-BOAS": 62,
+          "FIG-LOESER": 164
+        },
+        "hold": {
+          "FIG-LOESER": "FIG-OBJ-SANDALE"
+        }
       }
     },
     {
@@ -160,30 +158,31 @@
       "objects": [
         "FIG-ORT-STADTTOR"
       ],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-SEGNEN"
+      ],
       "speech": [
         {
           "from": "FIG-GRUPPE-MENGE",
           "to": "FIG-BOAS",
           "icons": [
             "FIG-GOTT",
-            "FIG-ZEICHEN-SEGNEN",
             "FIG-ORT-HAUS"
           ]
         }
       ],
       "action_de": "Das Volk im Tor und die Ältesten sagen: Wir sind Zeugen! JHWH mache die Frau, die in dein Haus kommt, wie Rahel und Lea, und dein Haus werde wie das Haus des Perez.",
       "stage": {
-        "pose": {
-          "FIG-GRUPPE-AELTESTE": "sit"
-        },
         "back_side": "left",
         "mood": {
           "FIG-GRUPPE-MENGE": "smile",
           "FIG-GRUPPE-AELTESTE": "smile",
           "FIG-BOAS": "smile"
         },
-        "bubble_y": 20
+        "bubble_y": 20,
+        "at": {
+          "FIG-ZEICHEN-SEGNEN": "FIG-BOAS"
+        }
       }
     }
   ],
@@ -194,10 +193,10 @@
     "Das Volk im Tor und die Ältesten sagen: Wir sind Zeugen! JHWH mache die Frau, die in dein Haus kommt, wie Rahel und Lea, und dein Haus werde wie das Haus des Perez."
   ],
   "captions_de": [
-    "Im Tor: Vor den Ältesten fragt Boas den näheren Löser: Willst du Noomis Feld lösen? (Feld, Kreispfeil, Fragezeichen) Er sagt Ja (Kreispfeil).",
-    "Feld und Rut: Boas sagt: Zum Feld gehört Rut (Feld, Rut). Der Löser lehnt ab (abwehrende Hand).",
-    "Der Schuh: Vor den Ältesten verzichtet der nähere Löser (abwehrende Hand) und gibt Boas seinen Schuh (Linie).",
-    "Wir sind Zeugen: Volk und Älteste segnen Boas: JHWH segne dein Haus (Strahlenkranz, Hand, Haus)."
+    "Im Tor: Vor den Ältesten fragt Boas den näheren Löser: Willst du Noomis Feld lösen? (Feld mit Kreispfeil, Fragezeichen) Er sagt Ja (Feld mit Kreispfeil).",
+    "Feld und Rut: Boas sagt: Zum Feld gehört Rut (Feld, Rut). Der Löser wendet sich ab: Ich kann nicht lösen (Feld mit Kreispfeil, roter Kreis mit Schrägbalken).",
+    "Der Schuh: Vor den Ältesten sagt der nähere Löser zu Boas: Löse du (Boas, Feld mit Kreispfeil), und gibt ihm seinen Schuh (Sandale in der Hand, Linie).",
+    "Wir sind Zeugen: Volk und Älteste segnen Boas (Hand mit Strahlen über ihm): JHWH segne dein Haus (Strahlenkranz, Haus)."
   ],
   "interpretation_note_de": "Die zehn Ältesten ([[RUT.4.2]]) sind als Gruppe gezeigt, ohne Zahl. Der Schuh ist das Pflichtzeichen des näheren Lösers; dass er ihn auszieht und Boas gibt, beschreibt [[RUT.4.7-RUT.4.8]]. Boas' Erklärung vor Zeugen ([[RUT.4.9-RUT.4.10]]) und die Namen Rahel, Lea, Perez und Tamar ([[RUT.4.11-RUT.4.12]]) zeigt das Bild nicht.",
   "basis": [
@@ -236,5 +235,198 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "RUT.4.1-RUT.4.4",
+            "figures": [
+              "FIG-GRUPPE-AELTESTE",
+              "FIG-BOAS",
+              "FIG-LOESER"
+            ],
+            "objects": [
+              "FIG-ORT-STADTTOR"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-BOAS",
+                "to": "FIG-LOESER",
+                "icons": [
+                  "FIG-ORT-FELD",
+                  "FIG-ZEICHEN-LOESEN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-LOESER",
+                "to": "FIG-BOAS",
+                "icons": [
+                  "FIG-ZEICHEN-LOESEN"
+                ]
+              }
+            ],
+            "action_de": "Boas setzt sich ins Tor, ruft den näheren Löser herbei und nimmt zehn Älteste dazu. Er sagt: Noomi verkauft das Feld Elimelechs; willst du es lösen? Der Löser sagt: Ich will lösen.",
+            "stage": {
+              "pose": {
+                "FIG-GRUPPE-AELTESTE": "sit"
+              },
+              "back_side": "left",
+              "mood": {
+                "FIG-LOESER": "smile",
+                "FIG-BOAS": "earnest",
+                "FIG-GRUPPE-AELTESTE": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-AELTESTE": 30,
+                "FIG-BOAS": 90,
+                "FIG-LOESER": 162
+              },
+              "bubble_y": 20
+            }
+          },
+          {
+            "n": 2,
+            "reference": "RUT.4.5-RUT.4.6",
+            "figures": [
+              "FIG-GRUPPE-AELTESTE",
+              "FIG-BOAS",
+              "FIG-LOESER"
+            ],
+            "objects": [
+              "FIG-ORT-STADTTOR"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-BOAS",
+                "to": "FIG-LOESER",
+                "icons": [
+                  "FIG-ORT-FELD",
+                  "FIG-RUT"
+                ]
+              },
+              {
+                "from": "FIG-LOESER",
+                "to": "FIG-BOAS",
+                "icons": [
+                  "FIG-ZEICHEN-ABLEHNEN"
+                ]
+              }
+            ],
+            "action_de": "Boas sagt: Mit dem Feld erwirbst du auch Rut, die Moabiterin, um den Namen des Verstorbenen zu erhalten. Da sagt der Löser: Ich kann nicht lösen, sonst schädige ich mein eigenes Erbe; löse du.",
+            "stage": {
+              "pose": {
+                "FIG-GRUPPE-AELTESTE": "sit"
+              },
+              "back_side": "left",
+              "mood": {
+                "FIG-LOESER": "worried",
+                "FIG-BOAS": "earnest",
+                "FIG-GRUPPE-AELTESTE": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-AELTESTE": 30,
+                "FIG-BOAS": 90,
+                "FIG-LOESER": 162
+              },
+              "bubble_y": 20
+            }
+          },
+          {
+            "n": 3,
+            "reference": "RUT.4.7-RUT.4.10",
+            "figures": [
+              "FIG-GRUPPE-AELTESTE",
+              "FIG-BOAS",
+              "FIG-LOESER"
+            ],
+            "objects": [
+              "FIG-ORT-STADTTOR"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-LOESER",
+                "to": "FIG-BOAS",
+                "icons": [
+                  "FIG-ZEICHEN-ABLEHNEN",
+                  "FIG-ZEICHEN-LOESEN"
+                ]
+              }
+            ],
+            "action_de": "Im Tor sagt der nähere Löser vor den Ältesten: Ich kann nicht lösen; löse du! Er zieht seinen Schuh aus und gibt ihn Boas; so wird der Verzicht bestätigt.",
+            "stage": {
+              "pose": {
+                "FIG-GRUPPE-AELTESTE": "sit"
+              },
+              "arrows": [
+                [
+                  "FIG-LOESER",
+                  "FIG-BOAS",
+                  "act"
+                ]
+              ],
+              "back_side": "left",
+              "mood": {
+                "FIG-LOESER": "earnest",
+                "FIG-BOAS": "calm",
+                "FIG-GRUPPE-AELTESTE": "calm"
+              },
+              "bubble_y": 20
+            }
+          },
+          {
+            "n": 4,
+            "reference": "RUT.4.11-RUT.4.12",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-GRUPPE-AELTESTE",
+              "FIG-BOAS"
+            ],
+            "objects": [
+              "FIG-ORT-STADTTOR"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-BOAS",
+                "icons": [
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-SEGNEN",
+                  "FIG-ORT-HAUS"
+                ]
+              }
+            ],
+            "action_de": "Das Volk im Tor und die Ältesten sagen: Wir sind Zeugen! JHWH mache die Frau, die in dein Haus kommt, wie Rahel und Lea, und dein Haus werde wie das Haus des Perez.",
+            "stage": {
+              "pose": {
+                "FIG-GRUPPE-AELTESTE": "sit"
+              },
+              "back_side": "left",
+              "mood": {
+                "FIG-GRUPPE-MENGE": "smile",
+                "FIG-GRUPPE-AELTESTE": "smile",
+                "FIG-BOAS": "smile"
+              },
+              "bubble_y": 20
+            }
+          }
+        ],
+        "captions_de": [
+          "Im Tor: Vor den Ältesten fragt Boas den näheren Löser: Willst du Noomis Feld lösen? (Feld, Kreispfeil, Fragezeichen) Er sagt Ja (Kreispfeil).",
+          "Feld und Rut: Boas sagt: Zum Feld gehört Rut (Feld, Rut). Der Löser lehnt ab (abwehrende Hand).",
+          "Der Schuh: Vor den Ältesten verzichtet der nähere Löser (abwehrende Hand) und gibt Boas seinen Schuh (Linie).",
+          "Wir sind Zeugen: Volk und Älteste segnen Boas: JHWH segne dein Haus (Strahlenkranz, Hand, Haus)."
+        ]
+      }
+    }
+  ]
 }

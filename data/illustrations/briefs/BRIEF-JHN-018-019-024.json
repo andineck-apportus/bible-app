@@ -11,7 +11,7 @@
   "panels": [
     {
       "n": 1,
-      "reference": "JHN.18.19-JHN.18.21",
+      "reference": "JHN.18.19",
       "figures": [
         "FIG-HANNAS",
         "FIG-JESUS"
@@ -29,18 +29,9 @@
             "FIG-OBJ-SCHRIFTROLLE",
             "FIG-ZEICHEN-FRAGEN"
           ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-HANNAS",
-          "icons": [
-            "FIG-ORT-TEMPEL",
-            "FIG-GRUPPE-VOLK",
-            "FIG-ZEICHEN-HOEREN"
-          ]
         }
       ],
-      "action_de": "Der Hohepriester befragt Jesus über seine Jünger und seine Lehre. Jesus antwortet, er habe offen in Synagoge und Tempel geredet; man solle die fragen, die ihn gehört haben.",
+      "action_de": "Der Hohepriester befragt Jesus über seine Jünger und seine Lehre.",
       "stage": {
         "hold": {
           "FIG-JESUS": "FIG-OBJ-FESSEL"
@@ -53,6 +44,39 @@
     },
     {
       "n": 2,
+      "reference": "JHN.18.20-JHN.18.21",
+      "figures": [
+        "FIG-HANNAS",
+        "FIG-JESUS"
+      ],
+      "objects": [
+        "FIG-OBJ-FESSEL"
+      ],
+      "signs": [],
+      "speech": [
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-HANNAS",
+          "icons": [
+            "FIG-ORT-TEMPEL",
+            "FIG-GRUPPE-VOLK",
+            "FIG-ZEICHEN-HOEREN"
+          ]
+        }
+      ],
+      "action_de": "Jesus antwortet, er habe offen in Synagoge und Tempel geredet; man solle die fragen, die ihn gehört haben.",
+      "stage": {
+        "hold": {
+          "FIG-JESUS": "FIG-OBJ-FESSEL"
+        },
+        "mood": {
+          "FIG-HANNAS": "earnest",
+          "FIG-JESUS": "calm"
+        }
+      }
+    },
+    {
+      "n": 3,
       "reference": "JHN.18.22-JHN.18.23",
       "figures": [
         "FIG-ROLLE-TEMPELWACHE",
@@ -81,7 +105,7 @@
       }
     },
     {
-      "n": 3,
+      "n": 4,
       "reference": "JHN.18.24",
       "figures": [
         "FIG-HANNAS",
@@ -118,12 +142,14 @@
     }
   ],
   "actions_de": [
-    "Der Hohepriester befragt Jesus über seine Jünger und seine Lehre. Jesus antwortet, er habe offen in Synagoge und Tempel geredet; man solle die fragen, die ihn gehört haben.",
+    "Der Hohepriester befragt Jesus über seine Jünger und seine Lehre.",
+    "Jesus antwortet, er habe offen in Synagoge und Tempel geredet; man solle die fragen, die ihn gehört haben.",
     "Einer der Diener gibt Jesus einen Schlag ins Gesicht: «So antwortest du dem Hohepriester?» Jesus antwortet: «Wenn ich unrecht geredet habe, so bezeuge es; wenn aber recht, warum schlägst du mich?»",
     "Hannas schickt Jesus gefesselt zu Kajafas, dem Hohepriester."
   ],
   "captions_de": [
-    "Verhör: Der Hohepriester fragt nach den Jüngern und der Lehre (Jünger, Rolle, ?); Jesus: Ich habe offen im Tempel geredet, fragt die Zuhörer (Tempel, Menge, Ohr).",
+    "Verhör: Der Hohepriester fragt den gefesselten Jesus (Strick) nach seinen Jüngern und seiner Lehre (Jünger, Rolle, ?).",
+    "Offen geredet: Jesus: Ich habe offen im Tempel geredet, fragt die, die mich gehört haben (Tempel, Menge, Ohr).",
     "Warum schlägst du mich?: Jesus fragt den Tempeldiener, was an seiner Rede unrecht sei (Waage, ?); der Schlag selbst ist nicht gezeigt.",
     "Zu Kajafas: Hannas schickt den gefesselten Jesus (Strick) zu Kajafas (Pfeil)."
   ],
@@ -137,8 +163,14 @@
     {
       "record": "TRANS-JHN-018-001-040-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.18.19-JHN.18.21",
-      "fingerprint": "74b09cfad9f43789"
+      "reference": "JHN.18.19",
+      "fingerprint": "76dcdb748366369f"
+    },
+    {
+      "record": "TRANS-JHN-018-001-040-DE-WORKING",
+      "field": "text_by_reference",
+      "reference": "JHN.18.20-JHN.18.21",
+      "fingerprint": "b0bae8e3eaa4861d"
     },
     {
       "record": "TRANS-JHN-018-001-040-DE-WORKING",
@@ -158,5 +190,157 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.18.19-JHN.18.21",
+            "figures": [
+              "FIG-HANNAS",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-FESSEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-HANNAS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-OBJ-SCHRIFTROLLE",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-HANNAS",
+                "icons": [
+                  "FIG-ORT-TEMPEL",
+                  "FIG-GRUPPE-VOLK",
+                  "FIG-ZEICHEN-HOEREN"
+                ]
+              }
+            ],
+            "action_de": "Der Hohepriester befragt Jesus über seine Jünger und seine Lehre. Jesus antwortet, er habe offen in Synagoge und Tempel geredet; man solle die fragen, die ihn gehört haben.",
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-FESSEL"
+              },
+              "mood": {
+                "FIG-HANNAS": "earnest",
+                "FIG-JESUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.18.22-JHN.18.23",
+            "figures": [
+              "FIG-ROLLE-TEMPELWACHE",
+              "FIG-JESUS",
+              "FIG-HANNAS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-TEMPELWACHE",
+                "icons": [
+                  "FIG-ZEICHEN-GERICHT",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Einer der Diener gibt Jesus einen Schlag ins Gesicht: «So antwortest du dem Hohepriester?» Jesus antwortet: «Wenn ich unrecht geredet habe, so bezeuge es; wenn aber recht, warum schlägst du mich?»",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-TEMPELWACHE": "earnest",
+                "FIG-JESUS": "earnest",
+                "FIG-HANNAS": "earnest"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.18.24",
+            "figures": [
+              "FIG-HANNAS",
+              "FIG-JESUS",
+              "FIG-KAJAFAS"
+            ],
+            "objects": [
+              "FIG-OBJ-FESSEL"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Hannas schickt Jesus gefesselt zu Kajafas, dem Hohepriester.",
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-FESSEL"
+              },
+              "mood": {
+                "FIG-HANNAS": "earnest",
+                "FIG-KAJAFAS": "earnest"
+              },
+              "arrows": [
+                [
+                  "FIG-HANNAS",
+                  "FIG-JESUS",
+                  "act"
+                ],
+                [
+                  "FIG-JESUS",
+                  "FIG-KAJAFAS",
+                  "go"
+                ]
+              ]
+            }
+          }
+        ],
+        "actions_de": [
+          "Der Hohepriester befragt Jesus über seine Jünger und seine Lehre. Jesus antwortet, er habe offen in Synagoge und Tempel geredet; man solle die fragen, die ihn gehört haben.",
+          "Einer der Diener gibt Jesus einen Schlag ins Gesicht: «So antwortest du dem Hohepriester?» Jesus antwortet: «Wenn ich unrecht geredet habe, so bezeuge es; wenn aber recht, warum schlägst du mich?»",
+          "Hannas schickt Jesus gefesselt zu Kajafas, dem Hohepriester."
+        ],
+        "captions_de": [
+          "Verhör: Der Hohepriester fragt nach den Jüngern und der Lehre (Jünger, Rolle, ?); Jesus: Ich habe offen im Tempel geredet, fragt die Zuhörer (Tempel, Menge, Ohr).",
+          "Warum schlägst du mich?: Jesus fragt den Tempeldiener, was an seiner Rede unrecht sei (Waage, ?); der Schlag selbst ist nicht gezeigt.",
+          "Zu Kajafas: Hannas schickt den gefesselten Jesus (Strick) zu Kajafas (Pfeil)."
+        ],
+        "basis": [
+          {
+            "record": "TU-JHN-018-019-024",
+            "field": "summary",
+            "fingerprint": "b3fcdc0a0c132c11"
+          },
+          {
+            "record": "TRANS-JHN-018-001-040-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.18.19-JHN.18.21",
+            "fingerprint": "74b09cfad9f43789"
+          },
+          {
+            "record": "TRANS-JHN-018-001-040-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.18.22-JHN.18.23",
+            "fingerprint": "1dcf8771318b3227"
+          },
+          {
+            "record": "TRANS-JHN-018-001-040-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.18.24",
+            "fingerprint": "8898fd18047e9d3b"
+          }
+        ]
+      }
+    }
+  ]
 }

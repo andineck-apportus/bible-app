@@ -38,8 +38,9 @@
           "FIG-OBJ-KETTE": 20
         },
         "mood": {
-          "FIG-EUODIA": "pensive",
-          "FIG-SYNTYCHE": "pensive"
+          "FIG-EUODIA": "calm",
+          "FIG-SYNTYCHE": "calm",
+          "FIG-PAULUS": "smile"
         }
       }
     },
@@ -70,7 +71,15 @@
         "at": {
           "FIG-ZEICHEN-FRIEDE": "FIG-GRUPPE-GLAUBENDE"
         },
-        "god_side": "right"
+        "god_side": "right",
+        "arrows": [
+          [
+            "FIG-GRUPPE-GLAUBENDE",
+            "FIG-GOTT",
+            "act"
+          ]
+        ],
+        "mood": {}
       }
     },
     {
@@ -93,6 +102,7 @@
           "icons": [
             "FIG-PAULUS",
             "FIG-ZEICHEN-HOEREN",
+            "FIG-ZEICHEN-DARAUS",
             "FIG-ZEICHEN-GUTE-WERKE"
           ]
         }
@@ -104,6 +114,9 @@
         },
         "at": {
           "FIG-ZEICHEN-FRIEDE": "FIG-GRUPPE-GLAUBENDE"
+        },
+        "mood": {
+          "FIG-PAULUS": "smile"
         }
       }
     }
@@ -114,9 +127,9 @@
     "Die Gemeinde soll bedenken, was wahr, gerecht und liebenswert ist, und tun, was sie an Paulus gelernt und gesehen hat; der Gott des Friedens wird mit ihr sein."
   ],
   "captions_de": [
-    "Eines Sinnes: Paulus (Kette) bittet Euodia (altrosa) und Syntyche (hellblau), sich zu einigen (Figuren im Ring).",
-    "Beten statt sorgen: Die Glaubenden bringen ihre Sorgen (Tropfen) im Gebet (Hände) zu Gott (Strahlenkranz); sie freuen sich (Funken), der Friede Gottes (Ölzweig) ist bei ihnen.",
-    "Tun, was ihr gelernt habt: Paulus (Kette) sagt: Was ihr an mir gehört habt (Ohr), das tut (Hand mit Brot); der Friede (Ölzweig) ist mit den Glaubenden."
+    "Eines Sinnes: Paulus (Kette) bittet Euodia (altrosa) und Syntyche (hellblau), sich zu einigen (zwei goldene Ringe).",
+    "Beten statt sorgen: Die Glaubenden bringen ihre Sorgen (Tropfen mit Wellenlinie) im Gebet (Hände) zu Gott (Strahlenkranz, Linie nach oben); sie freuen sich (Funken), der Friede Gottes (Ölzweig) ist bei ihnen.",
+    "Tun, was ihr gelernt habt: Paulus (Kette) sagt: Was ihr an mir gehört habt (Ohr), daraus folgt (Pfeil): das tut (Hand mit Brot); der Friede (Ölzweig) ist mit den Glaubenden."
   ],
   "interpretation_note_de": "Ob die Sorgen in [[PHP.4.6]] bestimmte Anliegen sind, sagt der Text nicht. Die Tugenden in [[PHP.4.8]] sind nicht einzeln gezeichnet. Paulus schreibt den Brief als Gefangener «in Fesseln» ([[PHP.1.7]], [[PHP.1.13]]); deshalb liegt bei ihm eine Kette. Ein Soldat steht für die Wache im Prätorium ([[PHP.1.13]]).",
   "basis": [
@@ -149,5 +162,118 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "PHP.4.1-PHP.4.3",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-EUODIA",
+              "FIG-SYNTYCHE"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-EUODIA",
+                "icons": [
+                  "FIG-EUODIA",
+                  "FIG-SYNTYCHE",
+                  "FIG-ZEICHEN-EINHEIT"
+                ]
+              }
+            ],
+            "action_de": "Paulus bittet Euodia und Syntyche, eines Sinnes zu sein im Herrn; sie haben mit ihm für das Evangelium gekämpft.",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KETTE": 20
+              },
+              "mood": {
+                "FIG-EUODIA": "pensive",
+                "FIG-SYNTYCHE": "pensive"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "PHP.4.4-PHP.4.7",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-FRIEDE",
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-GLAUBENDE",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-SORGE",
+                  "FIG-ZEICHEN-BETEN"
+                ]
+              }
+            ],
+            "action_de": "Die Gemeinde soll sich allezeit freuen und sich um nichts sorgen, sondern ihre Anliegen im Gebet mit Dank vor Gott bringen; der Friede Gottes wird ihre Herzen bewahren.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-FRIEDE": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "god_side": "right"
+            }
+          },
+          {
+            "n": 3,
+            "reference": "PHP.4.8-PHP.4.9",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FRIEDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-GRUPPE-GLAUBENDE",
+                "icons": [
+                  "FIG-PAULUS",
+                  "FIG-ZEICHEN-HOEREN",
+                  "FIG-ZEICHEN-GUTE-WERKE"
+                ]
+              }
+            ],
+            "action_de": "Die Gemeinde soll bedenken, was wahr, gerecht und liebenswert ist, und tun, was sie an Paulus gelernt und gesehen hat; der Gott des Friedens wird mit ihr sein.",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KETTE": 26
+              },
+              "at": {
+                "FIG-ZEICHEN-FRIEDE": "FIG-GRUPPE-GLAUBENDE"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Eines Sinnes: Paulus (Kette) bittet Euodia (altrosa) und Syntyche (hellblau), sich zu einigen (Figuren im Ring).",
+          "Beten statt sorgen: Die Glaubenden bringen ihre Sorgen (Tropfen) im Gebet (Hände) zu Gott (Strahlenkranz); sie freuen sich (Funken), der Friede Gottes (Ölzweig) ist bei ihnen.",
+          "Tun, was ihr gelernt habt: Paulus (Kette) sagt: Was ihr an mir gehört habt (Ohr), das tut (Hand mit Brot); der Friede (Ölzweig) ist mit den Glaubenden."
+        ]
+      }
+    }
+  ]
 }

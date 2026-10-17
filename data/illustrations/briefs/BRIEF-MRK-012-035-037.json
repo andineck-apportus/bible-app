@@ -27,7 +27,15 @@
           "icons": [
             "FIG-DAVID",
             "FIG-GOTT",
-            "FIG-ZEICHEN-RANG",
+            "FIG-ZEICHEN-CHRISTUS",
+            "FIG-ZEICHEN-RANG"
+          ]
+        },
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-GRUPPE-MENGE",
+          "icons": [
+            "FIG-DAVID",
             "FIG-ZEICHEN-FRAGEN"
           ]
         }
@@ -35,9 +43,14 @@
       "action_de": "Jesus lehrt im Tempel: Wie können die Schriftgelehrten sagen, der Christus sei Davids Sohn? David selbst sagt: Der Herr sprach zu meinem Herrn: Setze dich zu meiner Rechten. David nennt ihn Herr – woher ist er dann sein Sohn?",
       "stage": {
         "mood": {
-          "FIG-GRUPPE-MENGE": "pensive"
+          "FIG-GRUPPE-MENGE": "calm"
         },
-        "back_side": "right"
+        "back_side": "right",
+        "before": true,
+        "x": {
+          "FIG-JESUS": 34,
+          "FIG-GRUPPE-MENGE": 100
+        }
       }
     },
     {
@@ -57,9 +70,6 @@
       "speech": [],
       "action_de": "Die grosse Menge hört ihm gern zu.",
       "stage": {
-        "at": {
-          "FIG-ZEICHEN-HOEREN": "FIG-GRUPPE-MENGE"
-        },
         "signs_who": {
           "FIG-ZEICHEN-FREUDE": [
             "FIG-GRUPPE-MENGE"
@@ -68,7 +78,11 @@
         "mood": {
           "FIG-GRUPPE-MENGE": "delight"
         },
-        "back_side": "left"
+        "back_side": "left",
+        "beside": {
+          "FIG-ZEICHEN-HOEREN": "FIG-GRUPPE-MENGE"
+        },
+        "before": true
       }
     }
   ],
@@ -77,8 +91,8 @@
     "Die grosse Menge hört ihm gern zu."
   ],
   "captions_de": [
-    "Davids Herr: David sagt im Psalm, Gott habe zu seinem Herrn gesagt: Setz dich zu meiner Rechten (David, Strahlenkranz, Ehrensitz) – wie kann der Christus dann Davids Sohn sein? (David, Fragezeichen)",
-    "Gern gehört: Die grosse Menge hört ihm gern zu (Ohr, Freude)."
+    "Davids Herr: David sagt im Psalm, Gott habe zu seinem Herrn, dem Christus, gesagt: Setz dich zu meiner Rechten (David, Strahlenkranz, Salbhorn über Krone, Ehrensitz) – wie kann der Christus dann Davids Sohn sein? (zweite Blase: David, Fragezeichen)",
+    "Gern gehört: Die grosse Menge hört Jesus gern zu (Ohr neben der Menge, Freude)."
   ],
   "interpretation_note_de": "Das Psalmwort ([[PSA.110.1]]) steht in der Sprechblase mit David (Krone), dem Strahlenkranz für «der Herr» und dem Ehrensitz für «zu meiner Rechten». Wer «mein Herr» ist, lässt das Bild offen wie die Frage Jesu.",
   "basis": [
@@ -105,5 +119,81 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.12.35-MRK.12.37",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-DAVID",
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-RANG",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus lehrt im Tempel: Wie können die Schriftgelehrten sagen, der Christus sei Davids Sohn? David selbst sagt: Der Herr sprach zu meinem Herrn: Setze dich zu meiner Rechten. David nennt ihn Herr – woher ist er dann sein Sohn?",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "pensive"
+              },
+              "back_side": "right"
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.12.37",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-HOEREN",
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [],
+            "action_de": "Die grosse Menge hört ihm gern zu.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-HOEREN": "FIG-GRUPPE-MENGE"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-GRUPPE-MENGE"
+                ]
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "delight"
+              },
+              "back_side": "left"
+            }
+          }
+        ],
+        "captions_de": [
+          "Davids Herr: David sagt im Psalm, Gott habe zu seinem Herrn gesagt: Setz dich zu meiner Rechten (David, Strahlenkranz, Ehrensitz) – wie kann der Christus dann Davids Sohn sein? (David, Fragezeichen)",
+          "Gern gehört: Die grosse Menge hört ihm gern zu (Ohr, Freude)."
+        ]
+      }
+    }
+  ]
 }

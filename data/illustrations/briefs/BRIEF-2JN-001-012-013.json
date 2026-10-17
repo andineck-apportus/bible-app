@@ -17,7 +17,7 @@
         "FIG-AUSERWAEHLTE-HERRIN"
       ],
       "objects": [
-        "FIG-OBJ-BRIEF"
+        "FIG-ORT-HAUS"
       ],
       "signs": [],
       "speech": [
@@ -26,6 +26,7 @@
           "to": "FIG-AUSERWAEHLTE-HERRIN",
           "icons": [
             "FIG-OBJ-BRIEF",
+            "FIG-ZEICHEN-NICHT",
             "FIG-ZEICHEN-BESUCH",
             "FIG-ZEICHEN-FREUDE"
           ]
@@ -33,10 +34,9 @@
       ],
       "action_de": "Er hätte noch vieles zu schreiben, will es aber nicht mit Papier und Tinte tun; er hofft zu kommen und von Mund zu Mund zu reden, damit ihre Freude vollkommen ist.",
       "stage": {
-        "hold": {
-          "FIG-DER-AELTESTE": "FIG-OBJ-BRIEF"
-        },
+        "before": true,
         "mood": {
+          "FIG-DER-AELTESTE": "smile",
           "FIG-AUSERWAEHLTE-HERRIN": "smile"
         }
       }
@@ -45,14 +45,18 @@
       "n": 2,
       "reference": "2JN.1.13",
       "figures": [
-        "FIG-GRUPPE-KINDER",
+        "FIG-GRUPPE-KINDER-DER-SCHWESTER",
         "FIG-AUSERWAEHLTE-HERRIN"
       ],
-      "objects": [],
-      "signs": [],
+      "objects": [
+        "FIG-ORT-HAUS"
+      ],
+      "signs": [
+        "FIG-ZEICHEN-ABSTAND"
+      ],
       "speech": [
         {
-          "from": "FIG-GRUPPE-KINDER",
+          "from": "FIG-GRUPPE-KINDER-DER-SCHWESTER",
           "to": "FIG-AUSERWAEHLTE-HERRIN",
           "icons": [
             "FIG-ZEICHEN-GRUESSEN"
@@ -61,8 +65,10 @@
       ],
       "action_de": "Es grüssen sie die Kinder ihrer auserwählten Schwester.",
       "stage": {
+        "split": 1,
+        "before": true,
         "mood": {
-          "FIG-GRUPPE-KINDER": "smile",
+          "FIG-GRUPPE-KINDER-DER-SCHWESTER": "smile",
           "FIG-AUSERWAEHLTE-HERRIN": "smile"
         }
       }
@@ -73,10 +79,10 @@
     "Es grüssen sie die Kinder ihrer auserwählten Schwester."
   ],
   "captions_de": [
-    "Besuch statt Brief: Statt zu schreiben (Brief) will er kommen und von Mund zu Mund reden (zwei Köpfe), zur Freude (Funken).",
-    "Grüsse: Die Kinder der auserwählten Schwester grüssen die Herrin (Handschlag)."
+    "Besuch statt Brief: Der Älteste will nicht mit Papier und Tinte schreiben (Brief, roter Kreis mit Schrägbalken = nicht), sondern kommen und von Mund zu Mund reden (zwei Köpfe), damit die Freude vollkommen ist (goldene Funken).",
+    "Grüsse: Die Kinder der auserwählten Schwester (links, grünes Gewand, von weitem hinter dem Abstand) grüssen die Herrin vor ihrem Haus (Handschlag)."
   ],
-  "interpretation_note_de": "Die Kinder der «auserwählten Schwester» ([[2JN.1.13]]) sind wie die Kinder der Herrin gezeichnet; die Schwester selbst kommt nicht vor. Die auserwählte Herrin ist als Frau mit ihren Kindern gezeichnet; ob eine Frau oder eine Gemeinde gemeint ist, ist umstritten ([[2JN.1.1]]).",
+  "interpretation_note_de": "Die Kinder der «auserwählten Schwester» ([[2JN.1.13]]) sind in anderer Farbe als die Kinder der Herrin gezeichnet und durch einen Abstand getrennt: Sie grüssen von weitem (durch den Brief); die Schwester selbst kommt nicht vor. Die auserwählte Herrin ist als Frau mit ihren Kindern gezeichnet; ob eine Frau oder eine Gemeinde gemeint ist, ist umstritten ([[2JN.1.1]]).",
   "basis": [
     {
       "record": "TU-2JN-001-012-013",
@@ -101,5 +107,78 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "2JN.1.12",
+            "figures": [
+              "FIG-DER-AELTESTE",
+              "FIG-AUSERWAEHLTE-HERRIN"
+            ],
+            "objects": [
+              "FIG-OBJ-BRIEF"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-DER-AELTESTE",
+                "to": "FIG-AUSERWAEHLTE-HERRIN",
+                "icons": [
+                  "FIG-OBJ-BRIEF",
+                  "FIG-ZEICHEN-BESUCH",
+                  "FIG-ZEICHEN-FREUDE"
+                ]
+              }
+            ],
+            "action_de": "Er hätte noch vieles zu schreiben, will es aber nicht mit Papier und Tinte tun; er hofft zu kommen und von Mund zu Mund zu reden, damit ihre Freude vollkommen ist.",
+            "stage": {
+              "hold": {
+                "FIG-DER-AELTESTE": "FIG-OBJ-BRIEF"
+              },
+              "mood": {
+                "FIG-AUSERWAEHLTE-HERRIN": "smile"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "2JN.1.13",
+            "figures": [
+              "FIG-GRUPPE-KINDER",
+              "FIG-AUSERWAEHLTE-HERRIN"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-KINDER",
+                "to": "FIG-AUSERWAEHLTE-HERRIN",
+                "icons": [
+                  "FIG-ZEICHEN-GRUESSEN"
+                ]
+              }
+            ],
+            "action_de": "Es grüssen sie die Kinder ihrer auserwählten Schwester.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-KINDER": "smile",
+                "FIG-AUSERWAEHLTE-HERRIN": "smile"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Besuch statt Brief: Statt zu schreiben (Brief) will er kommen und von Mund zu Mund reden (zwei Köpfe), zur Freude (Funken).",
+          "Grüsse: Die Kinder der auserwählten Schwester grüssen die Herrin (Handschlag)."
+        ],
+        "interpretation_note_de": "Die Kinder der «auserwählten Schwester» ([[2JN.1.13]]) sind wie die Kinder der Herrin gezeichnet; die Schwester selbst kommt nicht vor. Die auserwählte Herrin ist als Frau mit ihren Kindern gezeichnet; ob eine Frau oder eine Gemeinde gemeint ist, ist umstritten ([[2JN.1.1]])."
+      }
+    }
+  ]
 }

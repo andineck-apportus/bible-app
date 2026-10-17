@@ -18,7 +18,7 @@
         "FIG-LOESER"
       ],
       "objects": [
-        "FIG-ORT-STADTTOR"
+        "FIG-OBJ-SANDALE"
       ],
       "signs": [],
       "speech": [
@@ -26,16 +26,13 @@
           "from": "FIG-LOESER",
           "to": "FIG-BOAS",
           "icons": [
-            "FIG-ZEICHEN-ABLEHNEN",
-            "FIG-ZEICHEN-LOESEN"
+            "FIG-BOAS",
+            "FIG-ZEICHEN-LOESERECHT"
           ]
         }
       ],
       "action_de": "Im Tor sagt der nähere Löser vor den Ältesten: Ich kann nicht lösen; löse du! Er zieht seinen Schuh aus und gibt ihn Boas; so wird der Verzicht bestätigt.",
       "stage": {
-        "pose": {
-          "FIG-GRUPPE-AELTESTE": "sit"
-        },
         "arrows": [
           [
             "FIG-LOESER",
@@ -43,13 +40,20 @@
             "act"
           ]
         ],
-        "back_side": "left",
         "mood": {
           "FIG-LOESER": "earnest",
           "FIG-BOAS": "calm",
           "FIG-GRUPPE-AELTESTE": "calm"
         },
-        "bubble_y": 20
+        "bubble_y": 20,
+        "x": {
+          "FIG-GRUPPE-AELTESTE": 20,
+          "FIG-BOAS": 62,
+          "FIG-LOESER": 164
+        },
+        "hold": {
+          "FIG-LOESER": "FIG-OBJ-SANDALE"
+        }
       }
     },
     {
@@ -80,9 +84,9 @@
           ]
         },
         "x": {
-          "FIG-GRUPPE-FRAUEN": 54,
-          "FIG-NOOMI": 116,
-          "FIG-OBED": 146
+          "FIG-GRUPPE-FRAUEN": 50,
+          "FIG-NOOMI": 122,
+          "FIG-OBED": 128
         }
       }
     },
@@ -102,8 +106,15 @@
       "speech": [],
       "action_de": "Der Stammbaum führt von Perez über Boas, Obed und Isai bis zu David.",
       "stage": {
-        "air_x": 80,
-        "air_y": 8
+        "air_x": 13,
+        "air_y": 10,
+        "x": {
+          "FIG-BOAS": 30,
+          "FIG-OBED": 72,
+          "FIG-ISAI": 114,
+          "FIG-DAVID": 156
+        },
+        "mood": {}
       }
     }
   ],
@@ -113,9 +124,9 @@
     "Der Stammbaum führt von Perez über Boas, Obed und Isai bis zu David."
   ],
   "captions_de": [
-    "Der Schuh: Vor den Ältesten verzichtet der nähere Löser (abwehrende Hand) und gibt Boas seinen Schuh (Linie).",
-    "Ein Sohn für Noomi: Noomi sitzt beim Kind Obed und pflegt es; die Nachbarinnen freuen sich (Funken).",
-    "Bis David: Stammbaum (Baum) von Boas über Obed und Isai zu David (mit Königsreif)."
+    "Der Schuh: Vor den Ältesten sagt der nähere Löser zu Boas: Löse du (Boas, Feld mit Kreispfeil), und gibt ihm seinen Schuh (Sandale in der Hand, Linie).",
+    "Ein Sohn für Noomi: Noomi hat das Kind Obed auf dem Schoss und pflegt es; die Nachbarinnen freuen sich (Funken).",
+    "Bis David: Generationenlinie (Ast mit Knospen, Pfeile) von Boas über Obed und Isai zu David (mit Königsreif)."
   ],
   "interpretation_note_de": "Je ein Feld aus den drei Abschnitten des Kapitels; Einzelheiten dort.",
   "basis": [
@@ -130,5 +141,117 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "RUT.4.1-RUT.4.12",
+            "figures": [
+              "FIG-GRUPPE-AELTESTE",
+              "FIG-BOAS",
+              "FIG-LOESER"
+            ],
+            "objects": [
+              "FIG-ORT-STADTTOR"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-LOESER",
+                "to": "FIG-BOAS",
+                "icons": [
+                  "FIG-ZEICHEN-ABLEHNEN",
+                  "FIG-ZEICHEN-LOESEN"
+                ]
+              }
+            ],
+            "action_de": "Im Tor sagt der nähere Löser vor den Ältesten: Ich kann nicht lösen; löse du! Er zieht seinen Schuh aus und gibt ihn Boas; so wird der Verzicht bestätigt.",
+            "stage": {
+              "pose": {
+                "FIG-GRUPPE-AELTESTE": "sit"
+              },
+              "arrows": [
+                [
+                  "FIG-LOESER",
+                  "FIG-BOAS",
+                  "act"
+                ]
+              ],
+              "back_side": "left",
+              "mood": {
+                "FIG-LOESER": "earnest",
+                "FIG-BOAS": "calm",
+                "FIG-GRUPPE-AELTESTE": "calm"
+              },
+              "bubble_y": 20
+            }
+          },
+          {
+            "n": 2,
+            "reference": "RUT.4.13-RUT.4.17",
+            "figures": [
+              "FIG-GRUPPE-FRAUEN",
+              "FIG-NOOMI",
+              "FIG-OBED"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [],
+            "action_de": "Noomi nimmt das Kind auf ihren Schoss und wird ihm zur Pflegerin. Die Nachbarinnen sagen: Ein Sohn ist Noomi geboren! Sie nennen ihn Obed; er ist der Vater Isais, des Vaters Davids.",
+            "stage": {
+              "pose": {
+                "FIG-NOOMI": "sit"
+              },
+              "mood": {
+                "FIG-NOOMI": "delight",
+                "FIG-GRUPPE-FRAUEN": "delight"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-GRUPPE-FRAUEN"
+                ]
+              },
+              "x": {
+                "FIG-GRUPPE-FRAUEN": 54,
+                "FIG-NOOMI": 116,
+                "FIG-OBED": 146
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "RUT.4.18-RUT.4.22",
+            "figures": [
+              "FIG-BOAS",
+              "FIG-OBED",
+              "FIG-ISAI",
+              "FIG-DAVID"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-STAMMBAUM"
+            ],
+            "speech": [],
+            "action_de": "Der Stammbaum führt von Perez über Boas, Obed und Isai bis zu David.",
+            "stage": {
+              "air_x": 80,
+              "air_y": 8
+            }
+          }
+        ],
+        "captions_de": [
+          "Der Schuh: Vor den Ältesten verzichtet der nähere Löser (abwehrende Hand) und gibt Boas seinen Schuh (Linie).",
+          "Ein Sohn für Noomi: Noomi sitzt beim Kind Obed und pflegt es; die Nachbarinnen freuen sich (Funken).",
+          "Bis David: Stammbaum (Baum) von Boas über Obed und Isai zu David (mit Königsreif)."
+        ]
+      }
+    }
+  ]
 }

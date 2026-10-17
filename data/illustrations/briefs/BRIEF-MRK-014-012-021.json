@@ -66,7 +66,7 @@
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-ZWOELF",
           "icons": [
-            "FIG-GRUPPE-ZWOELF",
+            "FIG-ROLLE-JUENGER",
             "FIG-ZEICHEN-AUSLIEFERN",
             "FIG-JESUS"
           ]
@@ -84,7 +84,7 @@
         },
         "mood": {
           "FIG-GRUPPE-ZWOELF": "worried",
-          "FIG-JUDAS-ISKARIOT": "pensive",
+          "FIG-JUDAS-ISKARIOT": "calm",
           "FIG-JESUS": "earnest"
         }
       }
@@ -96,7 +96,7 @@
   ],
   "captions_de": [
     "Vorbereitung: Jesus schickt einen Jünger dem Mann mit dem Wasserkrug nach (Krug, Haus).",
-    "Ansage: Einer der Zwölf wird Jesus ausliefern (Jünger, gefesselte Hände, Jesus); die Jünger fragen traurig (Fragezeichen, Träne)."
+    "Ansage: Einer von euch wird Jesus ausliefern (ein Jünger, gefesselte Hände, Jesus); die Jünger fragen traurig (Fragezeichen, Tränen)."
   ],
   "interpretation_note_de": "Markus sagt «zwei Jünger» ([[MRK.14.13]]); das Bild zeigt einen. Dass der Mann mit dem Krug ein Diener ist, sagt der Text nicht (Deutung). Judas steht beim Mahl dabei, ohne dass Jesus ihn im Bild zeigt.",
   "basis": [
@@ -123,5 +123,99 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.14.12-MRK.14.16",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-JUENGER",
+              "FIG-ROLLE-DIENER"
+            ],
+            "objects": [
+              "FIG-OBJ-KRUG-WASSER"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-KRUG-WASSER",
+                  "FIG-ORT-HAUS"
+                ]
+              }
+            ],
+            "action_de": "Jesus sendet zwei Jünger in die Stadt: Ein Mensch mit einem Wasserkrug wird ihnen begegnen; im Haus, in das er geht, finden sie den Obersaal. Sie finden alles, wie er gesagt hat, und bereiten das Passa vor.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-DIENER": "FIG-OBJ-KRUG-WASSER"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-JUENGER",
+                  "FIG-ROLLE-DIENER",
+                  "go"
+                ]
+              ],
+              "pose": {
+                "FIG-ROLLE-DIENER": "away"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.14.17-MRK.14.21",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-JUDAS-ISKARIOT"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER",
+              "FIG-ZEICHEN-FRAGEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-GRUPPE-ZWOELF",
+                  "FIG-ZEICHEN-AUSLIEFERN",
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Beim Mahl am Abend sagt Jesus: Einer von euch, der mit mir isst, wird mich ausliefern. Die Jünger werden traurig und fragen einer nach dem anderen: Doch nicht ich?",
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-GRUPPE-ZWOELF"
+                ]
+              },
+              "at": {
+                "FIG-ZEICHEN-FRAGEN": "FIG-GRUPPE-ZWOELF"
+              },
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "worried",
+                "FIG-JUDAS-ISKARIOT": "pensive",
+                "FIG-JESUS": "earnest"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Vorbereitung: Jesus schickt einen Jünger dem Mann mit dem Wasserkrug nach (Krug, Haus).",
+          "Ansage: Einer der Zwölf wird Jesus ausliefern (Jünger, gefesselte Hände, Jesus); die Jünger fragen traurig (Fragezeichen, Träne)."
+        ]
+      }
+    }
+  ]
 }

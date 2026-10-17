@@ -66,10 +66,14 @@
       ],
       "action_de": "Philippus findet Natanaël und sagt: Den, von dem Mose im Gesetz und die Propheten geschrieben haben, haben wir gefunden: Jesus aus Nazaret. Natanaël fragt: Kann aus Nazaret etwas Gutes kommen?",
       "stage": {
-        "floor_side": "left",
+        "floor_side": "right",
         "mood": {
           "FIG-NATANAEL": "pensive",
           "FIG-PHILIPPUS": "delight"
+        },
+        "x": {
+          "FIG-PHILIPPUS": 28,
+          "FIG-NATANAEL": 124
         }
       }
     },
@@ -104,9 +108,13 @@
       ],
       "action_de": "Jesus sagt Natanaël, er habe ihn unter dem Feigenbaum gesehen, bevor Philippus ihn rief. Natanaël bekennt: Rabbi, du bist der Sohn Gottes, du bist der König Israels!",
       "stage": {
-        "floor_side": "left",
+        "floor_side": "right",
         "mood": {
           "FIG-NATANAEL": "surprised"
+        },
+        "x": {
+          "FIG-JESUS": 28,
+          "FIG-NATANAEL": 124
         }
       }
     },
@@ -127,6 +135,8 @@
           "icons": [
             "FIG-ZEICHEN-HIMMEL-OFFEN",
             "FIG-ROLLE-ENGEL",
+            "FIG-ZEICHEN-HINAUF",
+            "FIG-ZEICHEN-HINAB",
             "FIG-JESUS"
           ]
         }
@@ -150,7 +160,7 @@
     "Folge mir! Jesus ruft Philippus in die Nachfolge (Fussspuren, Jesus).",
     "Gefunden: Philippus sagt Natanaël, den Mose und die Schrift ankündigen (Mose, Rolle), sei Jesus; Natanaël unter dem Feigenbaum zweifelt (?).",
     "Bekenntnis: Jesus: Ich sah dich unter dem Feigenbaum (Auge, Baum); Natanaël: Du bist der Sohn Gottes (Strahlenkranz) und König Israels (König).",
-    "Ankündigung: Jesus sagt, sie werden den Himmel offen sehen (Wolken mit Licht) und Engel (Engel) auf den Menschensohn (Jesus) steigen."
+    "Ankündigung: Jesus sagt, sie werden den Himmel offen sehen (Wolken mit Licht) und die Engel (Engel) hinauf- und hinabsteigen sehen (Pfeil nach oben, Pfeil nach unten) auf den Menschensohn (Jesus)."
   ],
   "interpretation_note_de": "Jesus spricht in [[JHN.1.51]] zu mehreren («ihr»); das Bild zeigt Philippus und Natanaël als Hörer. Was er ankündigt, steht in der Sprechblase, nicht als Szene, weil es Zukunft ist. Dass Philippus Jesus «Sohn Josefs» nennt ([[JHN.1.45]]), ist nicht gezeichnet; die Fussspuren stehen für «Folge mir!».",
   "basis": [
@@ -189,5 +199,151 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.1.43-JHN.1.44",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-PHILIPPUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PHILIPPUS",
+                "icons": [
+                  "FIG-ZEICHEN-NACHFOLGEN",
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Jesus will nach Galiläa aufbrechen; er findet Philippus und sagt zu ihm: Folge mir!",
+            "stage": {
+              "mood": {
+                "FIG-PHILIPPUS": "surprised"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.1.45-JHN.1.46",
+            "figures": [
+              "FIG-NATANAEL",
+              "FIG-PHILIPPUS"
+            ],
+            "objects": [
+              "FIG-OBJ-FEIGENBAUM"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PHILIPPUS",
+                "to": "FIG-NATANAEL",
+                "icons": [
+                  "FIG-MOSE",
+                  "FIG-OBJ-SCHRIFTROLLE",
+                  "FIG-JESUS"
+                ]
+              },
+              {
+                "from": "FIG-NATANAEL",
+                "to": "FIG-PHILIPPUS",
+                "icons": [
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Philippus findet Natanaël und sagt: Den, von dem Mose im Gesetz und die Propheten geschrieben haben, haben wir gefunden: Jesus aus Nazaret. Natanaël fragt: Kann aus Nazaret etwas Gutes kommen?",
+            "stage": {
+              "floor_side": "left",
+              "mood": {
+                "FIG-NATANAEL": "pensive",
+                "FIG-PHILIPPUS": "delight"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.1.47-JHN.1.49",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-NATANAEL"
+            ],
+            "objects": [
+              "FIG-OBJ-FEIGENBAUM"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-NATANAEL",
+                "icons": [
+                  "FIG-ZEICHEN-SEHEN",
+                  "FIG-OBJ-FEIGENBAUM"
+                ]
+              },
+              {
+                "from": "FIG-NATANAEL",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-GOTT",
+                  "FIG-ROLLE-KOENIG"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt Natanaël, er habe ihn unter dem Feigenbaum gesehen, bevor Philippus ihn rief. Natanaël bekennt: Rabbi, du bist der Sohn Gottes, du bist der König Israels!",
+            "stage": {
+              "floor_side": "left",
+              "mood": {
+                "FIG-NATANAEL": "surprised"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.1.50-JHN.1.51",
+            "figures": [
+              "FIG-PHILIPPUS",
+              "FIG-NATANAEL",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-NATANAEL",
+                "icons": [
+                  "FIG-ZEICHEN-HIMMEL-OFFEN",
+                  "FIG-ROLLE-ENGEL",
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Jesus kündigt an: Ihr werdet Grösseres sehen: den Himmel geöffnet und die Engel Gottes hinaufsteigen und herabsteigen auf den Menschensohn.",
+            "stage": {
+              "mood": {
+                "FIG-NATANAEL": "surprised",
+                "FIG-PHILIPPUS": "surprised"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Folge mir! Jesus ruft Philippus in die Nachfolge (Fussspuren, Jesus).",
+          "Gefunden: Philippus sagt Natanaël, den Mose und die Schrift ankündigen (Mose, Rolle), sei Jesus; Natanaël unter dem Feigenbaum zweifelt (?).",
+          "Bekenntnis: Jesus: Ich sah dich unter dem Feigenbaum (Auge, Baum); Natanaël: Du bist der Sohn Gottes (Strahlenkranz) und König Israels (König).",
+          "Ankündigung: Jesus sagt, sie werden den Himmel offen sehen (Wolken mit Licht) und Engel (Engel) auf den Menschensohn (Jesus) steigen."
+        ]
+      }
+    }
+  ]
 }

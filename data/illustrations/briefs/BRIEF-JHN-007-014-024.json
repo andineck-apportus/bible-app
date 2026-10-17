@@ -22,6 +22,13 @@
       "signs": [],
       "speech": [
         {
+          "from": "FIG-JESUS",
+          "to": "FIG-GRUPPE-MENGE",
+          "icons": [
+            "FIG-ZEICHEN-SPRECHEN"
+          ]
+        },
+        {
           "from": "FIG-GRUPPE-MENGE",
           "to": "FIG-JESUS",
           "icons": [
@@ -34,6 +41,11 @@
       "stage": {
         "mood": {
           "FIG-GRUPPE-MENGE": "surprised"
+        },
+        "before": true,
+        "x": {
+          "FIG-JESUS": 28,
+          "FIG-GRUPPE-MENGE": 84
         }
       }
     },
@@ -69,7 +81,7 @@
           ]
         ],
         "mood": {
-          "FIG-GRUPPE-MENGE": "pensive"
+          "FIG-GRUPPE-MENGE": "calm"
         }
       }
     },
@@ -103,8 +115,8 @@
       "action_de": "Die Menge sagt: Du hast einen Dämon! Jesus verteidigt, dass er am Sabbat einen ganzen Menschen gesund gemacht hat, und mahnt: Urteilt mit gerechtem Urteil!",
       "stage": {
         "mood": {
-          "FIG-GRUPPE-MENGE": "earnest",
-          "FIG-JESUS": "earnest"
+          "FIG-GRUPPE-MENGE": "worried",
+          "FIG-JESUS": "calm"
         }
       }
     }
@@ -115,9 +127,9 @@
     "Die Menge sagt: Du hast einen Dämon! Jesus verteidigt, dass er am Sabbat einen ganzen Menschen gesund gemacht hat, und mahnt: Urteilt mit gerechtem Urteil!"
   ],
   "captions_de": [
-    "Lehre im Tempel: Jesus lehrt; die Leute staunen, woher er die Schriften kennt (Rolle, Fragezeichen).",
+    "Lehre im Tempel: Jesus lehrt (Schallbogen); die Leute staunen, woher er die Schriften kennt (Rolle, Fragezeichen).",
     "Von Gott gesandt: Jesus sagt, er lehre, was Gott ihm gegeben hat (Strahlenkranz, Jesus, Schallbogen); Gott sendet ihn (Pfeil).",
-    "Streit: Die Menge sagt, Jesus habe einen Dämon (dunkler Wirbel); Jesus spricht von der Heilung (Hand) und vom gerechten Urteil (Waage)."
+    "Streit: Die Menge sagt, Jesus habe einen Dämon (dunkler Wirbel); Jesus spricht von der Heilung (Hand mit Lichtstrahlen) und vom gerechten Urteil (Waage)."
   ],
   "interpretation_note_de": "Die Heilung am Sabbat, auf die Jesus anspielt, ist die in [[JHN.5.1-JHN.5.9]]; die Beschneidung ([[JHN.7.22]]) zeigt das Bild nicht. Der Dämon ist ein Vorwurf, kein Geschehen, und darum nur in der Sprechblase gezeichnet.",
   "basis": [
@@ -150,5 +162,119 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.7.14-JHN.7.15",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-OBJ-SCHRIFTROLLE",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Mitten im Fest lehrt Jesus im Tempel. Die Juden wundern sich: Wie kennt dieser die Schriften, obwohl er nicht gelernt hat?",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "surprised"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.7.16-JHN.7.19",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-GOTT",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-SPRECHEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus antwortet: Meine Lehre ist nicht meine, sondern die dessen, der mich gesandt hat; wer Gottes Willen tun will, wird das erkennen.",
+            "stage": {
+              "god_side": "right",
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-MENGE": "pensive"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.7.20-JHN.7.24",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-DAEMON"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-HEILEN",
+                  "FIG-ZEICHEN-GERICHT"
+                ]
+              }
+            ],
+            "action_de": "Die Menge sagt: Du hast einen Dämon! Jesus verteidigt, dass er am Sabbat einen ganzen Menschen gesund gemacht hat, und mahnt: Urteilt mit gerechtem Urteil!",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-JESUS": "earnest"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Lehre im Tempel: Jesus lehrt; die Leute staunen, woher er die Schriften kennt (Rolle, Fragezeichen).",
+          "Von Gott gesandt: Jesus sagt, er lehre, was Gott ihm gegeben hat (Strahlenkranz, Jesus, Schallbogen); Gott sendet ihn (Pfeil).",
+          "Streit: Die Menge sagt, Jesus habe einen Dämon (dunkler Wirbel); Jesus spricht von der Heilung (Hand) und vom gerechten Urteil (Waage)."
+        ]
+      }
+    }
+  ]
 }

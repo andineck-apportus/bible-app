@@ -24,11 +24,11 @@
       "action_de": "Paulus hat das Ziel noch nicht erreicht; er vergisst, was hinter ihm liegt, und jagt dem Siegespreis der himmlischen Berufung nach.",
       "stage": {
         "x": {
-          "FIG-PAULUS": 70
+          "FIG-PAULUS": 84
         },
         "floor_x": {
-          "FIG-OBJ-KETTE": 26,
-          "FIG-ZEICHEN-ZIEL": 150
+          "FIG-OBJ-KETTE": 16,
+          "FIG-ZEICHEN-ZIEL": 158
         },
         "arrows": [
           [
@@ -38,7 +38,7 @@
           ]
         ],
         "mood": {
-          "FIG-PAULUS": "determined"
+          "FIG-PAULUS": "smile"
         }
       }
     },
@@ -110,7 +110,8 @@
           "FIG-OBJ-KETTE": 26
         },
         "mood": {
-          "FIG-GRUPPE-GLAUBENDE": "delight"
+          "FIG-GRUPPE-GLAUBENDE": "delight",
+          "FIG-PAULUS": "smile"
         }
       }
     }
@@ -121,7 +122,7 @@
     "Das Bürgerrecht der Glaubenden ist im Himmel; von dort erwarten sie den Retter, den Herrn Jesus Christus, der ihren Leib verwandeln wird."
   ],
   "captions_de": [
-    "Lauf zum Ziel: Paulus läuft (Pfeil), die Kette hinter sich, auf das Ziel mit dem Siegeskranz zu.",
+    "Lauf zum Ziel: Paulus strebt auf das Ziel mit dem Siegeskranz zu (gestrichelter Weg); die Kette liegt hinter ihm.",
     "Unter Tränen: Paulus (Kette, Träne) spricht zu den Glaubenden von vielen Menschen, die das Kreuz ablehnen (abwehrende Hand).",
     "Bürger des Himmels: Paulus (Kette) sagt den Glaubenden: Ihr gehört zur himmlischen Stadt; von dort wird Christus (Kreuznimbus) kommen (Pfeil nach unten)."
   ],
@@ -156,5 +157,125 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "PHP.3.12-PHP.3.14",
+            "figures": [
+              "FIG-PAULUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE",
+              "FIG-ZEICHEN-ZIEL"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Paulus hat das Ziel noch nicht erreicht; er vergisst, was hinter ihm liegt, und jagt dem Siegespreis der himmlischen Berufung nach.",
+            "stage": {
+              "x": {
+                "FIG-PAULUS": 70
+              },
+              "floor_x": {
+                "FIG-OBJ-KETTE": 26,
+                "FIG-ZEICHEN-ZIEL": 150
+              },
+              "arrows": [
+                [
+                  "FIG-PAULUS",
+                  "FIG-ZEICHEN-ZIEL",
+                  "go"
+                ]
+              ],
+              "mood": {
+                "FIG-PAULUS": "determined"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "PHP.3.15-PHP.3.19",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-GRUPPE-GLAUBENDE",
+                "icons": [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-OBJ-KREUZ",
+                  "FIG-ZEICHEN-ABLEHNEN"
+                ]
+              }
+            ],
+            "action_de": "Die Gemeinde soll Paulus nachahmen; unter Tränen warnt er vor den vielen, die als Feinde des Kreuzes Christi auf das Irdische bedacht sind.",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KETTE": 26
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-PAULUS"
+                ]
+              },
+              "mood": {
+                "FIG-PAULUS": "worried",
+                "FIG-GRUPPE-GLAUBENDE": "earnest"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "PHP.3.20-PHP.3.21",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-GRUPPE-GLAUBENDE",
+                "icons": [
+                  "FIG-ZEICHEN-NEUE-SCHOEPFUNG",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-HINAB"
+                ]
+              }
+            ],
+            "action_de": "Das Bürgerrecht der Glaubenden ist im Himmel; von dort erwarten sie den Retter, den Herrn Jesus Christus, der ihren Leib verwandeln wird.",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KETTE": 26
+              },
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "delight"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Lauf zum Ziel: Paulus läuft (Pfeil), die Kette hinter sich, auf das Ziel mit dem Siegeskranz zu.",
+          "Unter Tränen: Paulus (Kette, Träne) spricht zu den Glaubenden von vielen Menschen, die das Kreuz ablehnen (abwehrende Hand).",
+          "Bürger des Himmels: Paulus (Kette) sagt den Glaubenden: Ihr gehört zur himmlischen Stadt; von dort wird Christus (Kreuznimbus) kommen (Pfeil nach unten)."
+        ]
+      }
+    }
+  ]
 }

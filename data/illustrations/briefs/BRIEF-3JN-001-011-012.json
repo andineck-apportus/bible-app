@@ -24,13 +24,26 @@
           "to": "FIG-GAIUS",
           "icons": [
             "FIG-ZEICHEN-SUENDE",
-            "FIG-ZEICHEN-ABLEHNEN",
-            "FIG-ZEICHEN-GEBEN",
-            "FIG-GOTT"
+            "FIG-ZEICHEN-NICHT"
+          ]
+        },
+        {
+          "from": "FIG-DER-AELTESTE",
+          "to": "FIG-GAIUS",
+          "icons": [
+            "FIG-GOTT",
+            "FIG-ZEICHEN-STAMMT-AUS",
+            "FIG-ZEICHEN-GUTE-WERKE"
           ]
         }
       ],
-      "action_de": "Gaius soll nicht das Böse nachahmen, sondern das Gute; wer Gutes tut, ist aus Gott."
+      "action_de": "Gaius soll nicht das Böse nachahmen, sondern das Gute; wer Gutes tut, ist aus Gott.",
+      "stage": {
+        "mood": {
+          "FIG-DER-AELTESTE": "smile",
+          "FIG-GAIUS": "smile"
+        }
+      }
     },
     {
       "n": 2,
@@ -54,9 +67,17 @@
       ],
       "action_de": "Dem Demetrius stellen alle und die Wahrheit selbst ein gutes Zeugnis aus; auch der Älteste bezeugt es.",
       "stage": {
+        "arrows": [
+          [
+            "FIG-DEMETRIUS",
+            "FIG-GAIUS",
+            "act"
+          ]
+        ],
         "mood": {
+          "FIG-DER-AELTESTE": "smile",
           "FIG-DEMETRIUS": "smile",
-          "FIG-GAIUS": "calm"
+          "FIG-GAIUS": "smile"
         }
       }
     }
@@ -66,10 +87,10 @@
     "Dem Demetrius stellen alle und die Wahrheit selbst ein gutes Zeugnis aus; auch der Älteste bezeugt es."
   ],
   "captions_de": [
-    "Das Gute nachahmen: Nicht das Böse (dunkler Fleck, abwehrende Hand); wer Gutes tut (gebende Hand), ist aus Gott (Strahlenkranz).",
-    "Gutes Zeugnis: Der Älteste empfiehlt Gaius den Demetrius (mit Brief); sein Zeugnis ist wahr (Häkchen)."
+    "Das Gute nachahmen: Nicht das Böse (dunkler Fleck, roter Kreis mit Schrägbalken); Gutes tun (Hand reicht Brot, Herz) kommt aus Gott (Strahlenkranz, Pfeil).",
+    "Gutes Zeugnis: Der Älteste empfiehlt Gaius den Demetrius (mit Brief; Pfeil zu Gaius); sein Zeugnis ist wahr (Häkchen)."
   ],
-  "interpretation_note_de": "Die gebende Hand steht für «Gutes tun» ([[3JN.1.11]]); was genau gemeint ist, sagt der Text nicht. Dass Demetrius den Brief überbringt, ist eine verbreitete Vermutung, im Text nicht gesagt. Gaius ist an seiner Farbe und der offenen Tür (Gastfreundschaft) zu erkennen, Diotrephes an der geschlossenen Tür.",
+  "interpretation_note_de": "Die Hand mit Brot und Herz steht für «Gutes tun» ([[3JN.1.11]]); was genau gemeint ist, sagt der Text nicht. Dass Demetrius den Brief überbringt, ist eine verbreitete Vermutung, im Text nicht gesagt. Gaius ist an seiner Farbe und der offenen Tür am Gewand zu erkennen, Diotrephes an der geschlossenen Tür am Gewand.",
   "basis": [
     {
       "record": "TU-3JN-001-011-012",
@@ -94,5 +115,71 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "3JN.1.11",
+            "figures": [
+              "FIG-DER-AELTESTE",
+              "FIG-GAIUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-DER-AELTESTE",
+                "to": "FIG-GAIUS",
+                "icons": [
+                  "FIG-ZEICHEN-SUENDE",
+                  "FIG-ZEICHEN-ABLEHNEN",
+                  "FIG-ZEICHEN-GEBEN",
+                  "FIG-GOTT"
+                ]
+              }
+            ],
+            "action_de": "Gaius soll nicht das Böse nachahmen, sondern das Gute; wer Gutes tut, ist aus Gott."
+          },
+          {
+            "n": 2,
+            "reference": "3JN.1.12",
+            "figures": [
+              "FIG-DER-AELTESTE",
+              "FIG-DEMETRIUS",
+              "FIG-GAIUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-DER-AELTESTE",
+                "to": "FIG-GAIUS",
+                "icons": [
+                  "FIG-DEMETRIUS",
+                  "FIG-ZEICHEN-WAHRHEIT"
+                ]
+              }
+            ],
+            "action_de": "Dem Demetrius stellen alle und die Wahrheit selbst ein gutes Zeugnis aus; auch der Älteste bezeugt es.",
+            "stage": {
+              "mood": {
+                "FIG-DEMETRIUS": "smile",
+                "FIG-GAIUS": "calm"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Das Gute nachahmen: Nicht das Böse (dunkler Fleck, abwehrende Hand); wer Gutes tut (gebende Hand), ist aus Gott (Strahlenkranz).",
+          "Gutes Zeugnis: Der Älteste empfiehlt Gaius den Demetrius (mit Brief); sein Zeugnis ist wahr (Häkchen)."
+        ],
+        "interpretation_note_de": "Die gebende Hand steht für «Gutes tun» ([[3JN.1.11]]); was genau gemeint ist, sagt der Text nicht. Dass Demetrius den Brief überbringt, ist eine verbreitete Vermutung, im Text nicht gesagt. Gaius ist an seiner Farbe und der offenen Tür (Gastfreundschaft) zu erkennen, Diotrephes an der geschlossenen Tür."
+      }
+    }
+  ]
 }

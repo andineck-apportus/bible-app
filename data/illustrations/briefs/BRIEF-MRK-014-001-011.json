@@ -47,7 +47,9 @@
         "FIG-ORT-HAUS",
         "FIG-OBJ-SALBGEFAESS"
       ],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-SALBUNG"
+      ],
       "speech": [
         {
           "from": "FIG-GRUPPE-MENGE",
@@ -82,7 +84,10 @@
             "act"
           ]
         ],
-        "back_side": "right"
+        "back_side": "right",
+        "at": {
+          "FIG-ZEICHEN-SALBUNG": "FIG-JESUS"
+        }
       }
     },
     {
@@ -114,7 +119,7 @@
       "action_de": "Judas Iskariot, einer der Zwölf, geht zu den Hohepriestern, um Jesus auszuliefern; sie freuen sich und versprechen ihm Geld.",
       "stage": {
         "mood": {
-          "FIG-GRUPPE-HOHER-RAT": "smile",
+          "FIG-GRUPPE-HOHER-RAT": "calm",
           "FIG-JUDAS-ISKARIOT": "pensive"
         }
       }
@@ -127,7 +132,7 @@
   ],
   "captions_de": [
     "Plan: Die Hohepriester beraten, Jesus zu ergreifen und zu töten (Jesus, gefesselte Hände, Grab).",
-    "Salbung: Eine Frau salbt Jesus; einige rechnen mit Geld (Gefäss, Münzen); Jesus: für mein Begräbnis (Gefäss, Grab).",
+    "Salbung: Eine Frau giesst Salböl über Jesus (Gefäss; Ölhorn mit goldenem Tropfen bei Jesus); einige rechnen mit Geld (Gefäss, Münzen); Jesus: für mein Begräbnis (Gefäss, Grab).",
     "Verrat: Judas bietet an, Jesus auszuliefern (Jesus, gefesselte Hände); die Hohepriester versprechen Geld (Münzen)."
   ],
   "interpretation_note_de": "Markus nennt die Frau nicht; [[JHN.12.3]] nennt Maria von Betanien. Wer sich empört, sagt Markus nur mit «einige» ([[MRK.14.4]]). Im dritten Feld ist das Geld nur versprochen, nicht bezahlt.",
@@ -161,5 +166,130 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.14.1-MRK.14.2",
+            "figures": [
+              "FIG-GRUPPE-HOHER-RAT"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-HOHER-RAT",
+                "to": "FIG-GRUPPE-HOHER-RAT",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-AUSLIEFERN",
+                  "FIG-ZEICHEN-TOD"
+                ]
+              }
+            ],
+            "action_de": "Zwei Tage vor dem Passa suchen die Hohepriester und Schriftgelehrten, wie sie Jesus mit List ergreifen und töten könnten – nicht am Fest, damit kein Aufruhr entsteht.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-HOHER-RAT": "earnest"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.14.3-MRK.14.9",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-ROLLE-FRAU",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS",
+              "FIG-OBJ-SALBGEFAESS"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-ROLLE-FRAU",
+                "icons": [
+                  "FIG-OBJ-SALBGEFAESS",
+                  "FIG-OBJ-MUENZEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-OBJ-SALBGEFAESS",
+                  "FIG-ZEICHEN-TOD"
+                ]
+              }
+            ],
+            "action_de": "In Betanien giesst eine Frau Jesus kostbares Salböl über den Kopf. Einige empören sich über die Verschwendung; Jesus sagt: Lasst sie! Sie hat meinen Leib im Voraus für das Begräbnis gesalbt.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-FRAU": "FIG-OBJ-SALBGEFAESS"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-ROLLE-FRAU": "calm"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-FRAU",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "back_side": "right"
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.14.10-MRK.14.11",
+            "figures": [
+              "FIG-JUDAS-ISKARIOT",
+              "FIG-GRUPPE-HOHER-RAT"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JUDAS-ISKARIOT",
+                "to": "FIG-GRUPPE-HOHER-RAT",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-AUSLIEFERN"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-HOHER-RAT",
+                "to": "FIG-JUDAS-ISKARIOT",
+                "icons": [
+                  "FIG-OBJ-MUENZEN"
+                ]
+              }
+            ],
+            "action_de": "Judas Iskariot, einer der Zwölf, geht zu den Hohepriestern, um Jesus auszuliefern; sie freuen sich und versprechen ihm Geld.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-HOHER-RAT": "smile",
+                "FIG-JUDAS-ISKARIOT": "pensive"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Plan: Die Hohepriester beraten, Jesus zu ergreifen und zu töten (Jesus, gefesselte Hände, Grab).",
+          "Salbung: Eine Frau salbt Jesus; einige rechnen mit Geld (Gefäss, Münzen); Jesus: für mein Begräbnis (Gefäss, Grab).",
+          "Verrat: Judas bietet an, Jesus auszuliefern (Jesus, gefesselte Hände); die Hohepriester versprechen Geld (Münzen)."
+        ]
+      }
+    }
+  ]
 }

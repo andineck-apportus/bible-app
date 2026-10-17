@@ -25,15 +25,13 @@
           "from": "FIG-GRUPPE-SOLDATEN",
           "to": "FIG-JESUS",
           "icons": [
+            "FIG-ZEICHEN-KNIEN",
             "FIG-ROLLE-KOENIG"
           ]
         }
       ],
       "action_de": "Die Soldaten rufen die Kohorte zusammen, ziehen Jesus einen Purpurmantel an, setzen ihm einen Dornenkranz auf und grüssen ihn zum Spott: Sei gegrüsst, König der Juden! Sie schlagen und bespucken ihn und knien vor ihm nieder.",
       "stage": {
-        "pose": {
-          "FIG-GRUPPE-SOLDATEN": "kneel"
-        },
         "at": {
           "FIG-OBJ-DORNENKRONE": "FIG-JESUS"
         },
@@ -59,6 +57,11 @@
       "stage": {
         "arrows": [
           [
+            "FIG-ROLLE-SOLDAT",
+            "FIG-JESUS",
+            "act"
+          ],
+          [
             "FIG-JESUS",
             "FIG-OBJ-KREUZ",
             "go"
@@ -76,8 +79,8 @@
     "Nach dem Spott ziehen sie ihm seine eigenen Kleider an und führen ihn hinaus, um ihn zu kreuzigen."
   ],
   "captions_de": [
-    "Spott: Soldaten knien zum Schein vor Jesus und grüssen ihn als König (König); Dornenkranz über Jesus.",
-    "Abführung: Ein Soldat führt Jesus hinaus zum Kreuz (Pfeil)."
+    "Spott: Soldaten knien zum Schein vor Jesus und grüssen ihn als König (kniende Figur, König); Dornenkranz über Jesus.",
+    "Abführung: Ein Soldat führt Jesus (Bogen vom Soldaten zu Jesus) hinaus zum Kreuz (gestrichelter Weg)."
   ],
   "interpretation_note_de": "Den Purpurmantel kann der Zeichner noch nicht zeigen; das Bild nennt ihn nur in der Handlung. Schläge und Spucken ([[MRK.15.19]]) werden nicht gezeigt; die Soldaten knien zum Spott, ohne verzerrte Gesichter.",
   "basis": [
@@ -104,5 +107,80 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.15.16-MRK.15.19",
+            "figures": [
+              "FIG-GRUPPE-SOLDATEN",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-DORNENKRONE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-SOLDATEN",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ROLLE-KOENIG"
+                ]
+              }
+            ],
+            "action_de": "Die Soldaten rufen die Kohorte zusammen, ziehen Jesus einen Purpurmantel an, setzen ihm einen Dornenkranz auf und grüssen ihn zum Spott: Sei gegrüsst, König der Juden! Sie schlagen und bespucken ihn und knien vor ihm nieder.",
+            "stage": {
+              "pose": {
+                "FIG-GRUPPE-SOLDATEN": "kneel"
+              },
+              "at": {
+                "FIG-OBJ-DORNENKRONE": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-GRUPPE-SOLDATEN": "earnest",
+                "FIG-JESUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.15.20",
+            "figures": [
+              "FIG-ROLLE-SOLDAT",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KREUZ"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Nach dem Spott ziehen sie ihm seine eigenen Kleider an und führen ihn hinaus, um ihn zu kreuzigen.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-OBJ-KREUZ",
+                  "go"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-SOLDAT": "earnest",
+                "FIG-JESUS": "calm"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Spott: Soldaten knien zum Schein vor Jesus und grüssen ihn als König (König); Dornenkranz über Jesus.",
+          "Abführung: Ein Soldat führt Jesus hinaus zum Kreuz (Pfeil)."
+        ]
+      }
+    }
+  ]
 }

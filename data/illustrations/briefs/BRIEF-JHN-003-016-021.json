@@ -41,13 +41,17 @@
         "signs_who": {
           "FIG-ZEICHEN-GLAUBEN": [
             "FIG-GRUPPE-MENGE"
-          ]
+          ],
+          "FIG-ZEICHEN-LIEBE": []
         },
         "mood": {
           "FIG-GRUPPE-MENGE": "delight"
         },
-        "air_x": 96,
-        "air_y": 8
+        "air_x": 90,
+        "air_y": 24,
+        "beside": {
+          "FIG-ZEICHEN-LEBEN": "FIG-GRUPPE-MENGE"
+        }
       }
     },
     {
@@ -59,8 +63,7 @@
       ],
       "objects": [],
       "signs": [
-        "FIG-ZEICHEN-GERICHT",
-        "FIG-ZEICHEN-NEIN",
+        "FIG-ZEICHEN-NICHT-RICHTEN",
         "FIG-ZEICHEN-WELT",
         "FIG-ZEICHEN-RETTUNG"
       ],
@@ -96,9 +99,17 @@
       "speech": [],
       "action_de": "Das ist das Gericht: Das Licht ist in die Welt gekommen, und die Menschen liebten die Finsternis mehr als das Licht. Wer aber die Wahrheit tut, kommt zum Licht.",
       "stage": {
-        "big_side": "right",
-        "air_x": 14,
-        "air_y": 10,
+        "at": {
+          "FIG-ZEICHEN-FINSTERNIS": "FIG-GRUPPE-MENGE"
+        },
+        "pose": {
+          "FIG-GRUPPE-MENGE": "away"
+        },
+        "x": {
+          "FIG-GRUPPE-MENGE": 62
+        },
+        "air_x": 128,
+        "air_y": 26,
         "mood": {
           "FIG-GRUPPE-MENGE": "pensive"
         }
@@ -111,9 +122,9 @@
     "Das ist das Gericht: Das Licht ist in die Welt gekommen, und die Menschen liebten die Finsternis mehr als das Licht. Wer aber die Wahrheit tut, kommt zum Licht."
   ],
   "captions_de": [
-    "Gott liebt die Welt: Gott (Strahlenkranz, Herzen) gibt den Sohn (Pfeil zu Jesus) in die Welt (Erdscheibe); wer glaubt (Herz), hat ewiges Leben (Keimling).",
-    "Nicht richten, sondern retten: Gott sendet den Sohn (Pfeil) nicht zum Gericht (Waage, rotes X), sondern damit die Welt (Erdscheibe) gerettet wird (Pfeil nach oben).",
-    "Licht und Finsternis: Das Licht (goldene Scheibe) ist gekommen; die Menschen wenden sich der Finsternis (dunkle Wolke) zu."
+    "Gott liebt die Welt: Gott (Strahlenkranz, Herzen) liebt die Welt (Erdscheibe) und gibt den Sohn (Pfeil zu Jesus); wer glaubt (Herz), hat ewiges Leben (Baum im Ring).",
+    "Nicht richten, sondern retten: Gott sendet den Sohn (Pfeil) nicht zum Gericht (durchgestrichene Waage), sondern damit die Welt (Erdscheibe) gerettet wird (Pfeil nach oben aus den Wellen).",
+    "Licht und Finsternis: Das Licht (goldener Schein) ist gekommen; die Menschen lieben die Finsternis mehr als das Licht (dunkle Wolke über ihnen)."
   ],
   "interpretation_note_de": "Ob diese Verse noch Rede Jesu oder Erläuterung des Evangelisten sind, lässt der Text offen; darum spricht im Bild niemand. Gott ist ohne Sprechblase gezeichnet; die Herzen und der Pfeil zum Sohn zeigen, dass er handelt. Feld 3 zeigt nur, dass Menschen die Finsternis wählen ([[JHN.3.19]]); dass, wer die Wahrheit tut, zum Licht kommt ([[JHN.3.21]]), steht in der Legende.",
   "basis": [
@@ -146,5 +157,115 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.3.16",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-LIEBE",
+              "FIG-ZEICHEN-WELT",
+              "FIG-ZEICHEN-GLAUBEN",
+              "FIG-ZEICHEN-LEBEN"
+            ],
+            "speech": [],
+            "action_de": "So hat Gott die Welt geliebt, dass er den einzigen Sohn gab, damit jeder, der an ihn glaubt, nicht verloren geht, sondern ewiges Leben hat.",
+            "stage": {
+              "god_side": "left",
+              "at": {
+                "FIG-ZEICHEN-LIEBE": "FIG-GOTT"
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "signs_who": {
+                "FIG-ZEICHEN-GLAUBEN": [
+                  "FIG-GRUPPE-MENGE"
+                ]
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "delight"
+              },
+              "air_x": 96,
+              "air_y": 8
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.3.17-JHN.3.18",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-GERICHT",
+              "FIG-ZEICHEN-NEIN",
+              "FIG-ZEICHEN-WELT",
+              "FIG-ZEICHEN-RETTUNG"
+            ],
+            "speech": [],
+            "action_de": "Gott hat den Sohn nicht in die Welt gesandt, damit er die Welt richtet, sondern damit die Welt durch ihn gerettet wird. Wer an ihn glaubt, wird nicht gerichtet.",
+            "stage": {
+              "god_side": "left",
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "x": {
+                "FIG-JESUS": 60
+              },
+              "air_x": 82,
+              "air_y": 58
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.3.19-JHN.3.21",
+            "figures": [
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-FINSTERNIS",
+              "FIG-ZEICHEN-LICHT"
+            ],
+            "speech": [],
+            "action_de": "Das ist das Gericht: Das Licht ist in die Welt gekommen, und die Menschen liebten die Finsternis mehr als das Licht. Wer aber die Wahrheit tut, kommt zum Licht.",
+            "stage": {
+              "big_side": "right",
+              "air_x": 14,
+              "air_y": 10,
+              "mood": {
+                "FIG-GRUPPE-MENGE": "pensive"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Gott liebt die Welt: Gott (Strahlenkranz, Herzen) gibt den Sohn (Pfeil zu Jesus) in die Welt (Erdscheibe); wer glaubt (Herz), hat ewiges Leben (Keimling).",
+          "Nicht richten, sondern retten: Gott sendet den Sohn (Pfeil) nicht zum Gericht (Waage, rotes X), sondern damit die Welt (Erdscheibe) gerettet wird (Pfeil nach oben).",
+          "Licht und Finsternis: Das Licht (goldene Scheibe) ist gekommen; die Menschen wenden sich der Finsternis (dunkle Wolke) zu."
+        ]
+      }
+    }
+  ]
 }

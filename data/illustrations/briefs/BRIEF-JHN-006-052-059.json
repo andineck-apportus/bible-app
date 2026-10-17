@@ -13,8 +13,8 @@
       "n": 1,
       "reference": "JHN.6.52",
       "figures": [
-        "FIG-GRUPPE-MENGE",
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-GRUPPE-MENGE"
       ],
       "objects": [
         "FIG-ORT-SYNAGOGE"
@@ -41,7 +41,12 @@
         "at": {
           "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-GRUPPE-MENGE"
         },
-        "back_side": "right"
+        "back_side": "right",
+        "before": true,
+        "x": {
+          "FIG-JESUS": 28,
+          "FIG-GRUPPE-MENGE": 76
+        }
       }
     },
     {
@@ -70,10 +75,15 @@
       "action_de": "Jesus lehrt in der Synagoge in Kafarnaum: Wer sein Fleisch isst und sein Blut trinkt, hat ewiges Leben, bleibt in ihm, und er wird ihn am letzten Tag auferwecken.",
       "stage": {
         "mood": {
-          "FIG-JESUS": "earnest",
+          "FIG-JESUS": "calm",
           "FIG-GRUPPE-MENGE": "surprised"
         },
-        "back_side": "left"
+        "back_side": "left",
+        "before": true,
+        "x": {
+          "FIG-JESUS": 104,
+          "FIG-GRUPPE-MENGE": 156
+        }
       }
     }
   ],
@@ -82,7 +92,7 @@
     "Jesus lehrt in der Synagoge in Kafarnaum: Wer sein Fleisch isst und sein Blut trinkt, hat ewiges Leben, bleibt in ihm, und er wird ihn am letzten Tag auferwecken."
   ],
   "captions_de": [
-    "Streit: In der Synagoge fragt die Menge, wie Jesus sich selbst zu essen geben kann (Jesus, Brot, Fragezeichen).",
+    "Streit: In der Synagoge fragt die Menge, wie Jesus sich selbst zu essen geben kann (Jesus, Brot, Fragezeichen); sie versteht es nicht (graues Fragezeichen über den Köpfen).",
     "Lehre in der Synagoge: Jesus spricht von sich als Speise und Trank (Brot, Becher), die Leben geben (Spross im Ring)."
   ],
   "interpretation_note_de": "Fleisch und Blut ([[JHN.6.53]]–[[JHN.6.56]]) sind als Brot und Becher gezeichnet. Das ist eine Deutung: Viele Auslegungen beziehen die Rede auf das Abendmahl, andere auf den Glauben an Jesus; der Text nennt Brot und Becher hier nicht.",
@@ -110,5 +120,86 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.6.52",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-SYNAGOGE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NICHT-VERSTEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-OBJ-BROT",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Die Juden streiten untereinander: Wie kann dieser uns sein Fleisch zu essen geben?",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "worried"
+              },
+              "at": {
+                "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-GRUPPE-MENGE"
+              },
+              "back_side": "right"
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.6.53-JHN.6.59",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-SYNAGOGE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-OBJ-BROT",
+                  "FIG-OBJ-BECHER-VOLL",
+                  "FIG-ZEICHEN-LEBEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus lehrt in der Synagoge in Kafarnaum: Wer sein Fleisch isst und sein Blut trinkt, hat ewiges Leben, bleibt in ihm, und er wird ihn am letzten Tag auferwecken.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-MENGE": "surprised"
+              },
+              "back_side": "left"
+            }
+          }
+        ],
+        "captions_de": [
+          "Streit: In der Synagoge fragt die Menge, wie Jesus sich selbst zu essen geben kann (Jesus, Brot, Fragezeichen).",
+          "Lehre in der Synagoge: Jesus spricht von sich als Speise und Trank (Brot, Becher), die Leben geben (Spross im Ring)."
+        ]
+      }
+    }
+  ]
 }

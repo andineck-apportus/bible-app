@@ -17,7 +17,9 @@
         "FIG-AUSERWAEHLTE-HERRIN",
         "FIG-GRUPPE-VERFUEHRER"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-OBJ-BRIEF"
+      ],
       "signs": [
         "FIG-ZEICHEN-ABSTAND"
       ],
@@ -26,21 +28,32 @@
           "from": "FIG-DER-AELTESTE",
           "to": "FIG-AUSERWAEHLTE-HERRIN",
           "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-ABLEHNEN",
+            "FIG-ZEICHEN-WARNEN",
             "FIG-ZEICHEN-LUEGE"
+          ]
+        },
+        {
+          "from": "FIG-GRUPPE-VERFUEHRER",
+          "to": "FIG-ZEICHEN-WELT",
+          "icons": [
+            "FIG-JESUS",
+            "FIG-ZEICHEN-NICHT"
           ]
         }
       ],
       "action_de": "Viele Verführer sind in die Welt hinausgegangen, die nicht bekennen, dass Jesus Christus im Fleisch kommt. Wer nicht in der Lehre Christi bleibt, hat Gott nicht.",
       "stage": {
         "split": 2,
+        "hold": {
+          "FIG-DER-AELTESTE": "FIG-OBJ-BRIEF"
+        },
         "pose": {
           "FIG-GRUPPE-VERFUEHRER": "away"
         },
         "mood": {
-          "FIG-AUSERWAEHLTE-HERRIN": "pensive",
-          "FIG-GRUPPE-VERFUEHRER": "earnest"
+          "FIG-DER-AELTESTE": "calm",
+          "FIG-AUSERWAEHLTE-HERRIN": "calm",
+          "FIG-GRUPPE-VERFUEHRER": "calm"
         },
         "x": {
           "FIG-GRUPPE-VERFUEHRER": 150
@@ -55,7 +68,9 @@
         "FIG-AUSERWAEHLTE-HERRIN",
         "FIG-GRUPPE-VERFUEHRER"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-OBJ-BRIEF"
+      ],
       "signs": [
         "FIG-ZEICHEN-ABSTAND"
       ],
@@ -65,17 +80,25 @@
           "to": "FIG-AUSERWAEHLTE-HERRIN",
           "icons": [
             "FIG-ZEICHEN-GASTFREUNDSCHAFT",
+            "FIG-ZEICHEN-NICHT",
             "FIG-ZEICHEN-GRUESSEN",
-            "FIG-ZEICHEN-ABLEHNEN"
+            "FIG-ZEICHEN-NICHT"
           ]
         }
       ],
       "action_de": "Wenn jemand kommt und diese Lehre nicht bringt, sollen sie ihn nicht ins Haus aufnehmen und nicht grüssen.",
       "stage": {
         "split": 2,
+        "hold": {
+          "FIG-DER-AELTESTE": "FIG-OBJ-BRIEF"
+        },
+        "pose": {
+          "FIG-GRUPPE-VERFUEHRER": "away"
+        },
         "mood": {
-          "FIG-AUSERWAEHLTE-HERRIN": "pensive",
-          "FIG-GRUPPE-VERFUEHRER": "earnest"
+          "FIG-DER-AELTESTE": "calm",
+          "FIG-AUSERWAEHLTE-HERRIN": "calm",
+          "FIG-GRUPPE-VERFUEHRER": "calm"
         },
         "x": {
           "FIG-GRUPPE-VERFUEHRER": 150
@@ -88,8 +111,8 @@
     "Wenn jemand kommt und diese Lehre nicht bringt, sollen sie ihn nicht ins Haus aufnehmen und nicht grüssen."
   ],
   "captions_de": [
-    "Warnung: Die Verführer (rechts, abgewandt) bekennen Jesus nicht (abwehrende Hand); das ist Lüge (rotes Kreuz).",
-    "Nicht aufnehmen: Solche Verführer (rechts) nicht ins Haus aufnehmen (offene Tür) und nicht grüssen (Handschlag, abwehrende Hand)."
+    "Warnung: Der Älteste (mit Brief) warnt (erhobener Zeigefinger) vor Lüge (rotes Kreuz): Die Verführer (rechts, abgewandt) bekennen Jesus nicht (Jesus, roter Kreis mit Schrägbalken = nicht).",
+    "Nicht aufnehmen: Der Älteste (mit Brief) zur Herrin: Solche Verführer (rechts, hinter dem Abstand) nicht ins Haus aufnehmen (offene Tür mit Brot, dann roter Kreis mit Schrägbalken = nicht) und nicht grüssen (Handschlag, roter Kreis mit Schrägbalken)."
   ],
   "interpretation_note_de": "Die Verführer sind neutral gezeichnet, ohne Fratzen. Die Anweisung ([[2JN.1.10]]) ist als Rede des Ältesten gezeigt, nicht als erzählter Vorfall. Die auserwählte Herrin ist als Frau mit ihren Kindern gezeichnet; ob eine Frau oder eine Gemeinde gemeint ist, ist umstritten ([[2JN.1.1]]).",
   "basis": [
@@ -116,5 +139,92 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "2JN.1.7-2JN.1.9",
+            "figures": [
+              "FIG-DER-AELTESTE",
+              "FIG-AUSERWAEHLTE-HERRIN",
+              "FIG-GRUPPE-VERFUEHRER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-DER-AELTESTE",
+                "to": "FIG-AUSERWAEHLTE-HERRIN",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-ABLEHNEN",
+                  "FIG-ZEICHEN-LUEGE"
+                ]
+              }
+            ],
+            "action_de": "Viele Verführer sind in die Welt hinausgegangen, die nicht bekennen, dass Jesus Christus im Fleisch kommt. Wer nicht in der Lehre Christi bleibt, hat Gott nicht.",
+            "stage": {
+              "split": 2,
+              "pose": {
+                "FIG-GRUPPE-VERFUEHRER": "away"
+              },
+              "mood": {
+                "FIG-AUSERWAEHLTE-HERRIN": "pensive",
+                "FIG-GRUPPE-VERFUEHRER": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-VERFUEHRER": 150
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "2JN.1.10-2JN.1.11",
+            "figures": [
+              "FIG-DER-AELTESTE",
+              "FIG-AUSERWAEHLTE-HERRIN",
+              "FIG-GRUPPE-VERFUEHRER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-DER-AELTESTE",
+                "to": "FIG-AUSERWAEHLTE-HERRIN",
+                "icons": [
+                  "FIG-ZEICHEN-GASTFREUNDSCHAFT",
+                  "FIG-ZEICHEN-GRUESSEN",
+                  "FIG-ZEICHEN-ABLEHNEN"
+                ]
+              }
+            ],
+            "action_de": "Wenn jemand kommt und diese Lehre nicht bringt, sollen sie ihn nicht ins Haus aufnehmen und nicht grüssen.",
+            "stage": {
+              "split": 2,
+              "mood": {
+                "FIG-AUSERWAEHLTE-HERRIN": "pensive",
+                "FIG-GRUPPE-VERFUEHRER": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-VERFUEHRER": 150
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Warnung: Die Verführer (rechts, abgewandt) bekennen Jesus nicht (abwehrende Hand); das ist Lüge (rotes Kreuz).",
+          "Nicht aufnehmen: Solche Verführer (rechts) nicht ins Haus aufnehmen (offene Tür) und nicht grüssen (Handschlag, abwehrende Hand)."
+        ]
+      }
+    }
+  ]
 }

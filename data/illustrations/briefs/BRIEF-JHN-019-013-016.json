@@ -13,8 +13,8 @@
       "n": 1,
       "reference": "JHN.19.13-JHN.19.14",
       "figures": [
-        "FIG-JESUS",
         "FIG-PILATUS",
+        "FIG-JESUS",
         "FIG-GRUPPE-MENGE"
       ],
       "objects": [],
@@ -34,12 +34,12 @@
       "action_de": "Pilatus führt Jesus hinaus und setzt sich auf den Richterstuhl am Steinpflaster (Gabbata). Es ist der Rüsttag des Passa, um die sechste Stunde. Er sagt zu den Juden: «Seht, euer König!»",
       "stage": {
         "x": {
-          "FIG-JESUS": 32,
-          "FIG-PILATUS": 88,
-          "FIG-GRUPPE-MENGE": 152
+          "FIG-PILATUS": 30,
+          "FIG-JESUS": 84,
+          "FIG-GRUPPE-MENGE": 148
         },
-        "air_x": 164,
-        "air_y": 56,
+        "air_x": 50,
+        "air_y": 50,
         "mood": {
           "FIG-GRUPPE-MENGE": "earnest",
           "FIG-PILATUS": "calm"
@@ -68,9 +68,8 @@
           "from": "FIG-GRUPPE-HOHEPRIESTER",
           "to": "FIG-PILATUS",
           "icons": [
-            "FIG-OBJ-KRONE",
-            "FIG-ZEICHEN-FEHLT",
-            "FIG-ZEICHEN-KAISER"
+            "FIG-ZEICHEN-KAISER",
+            "FIG-OBJ-KRONE"
           ]
         }
       ],
@@ -97,7 +96,8 @@
         "FIG-GRUPPE-SOLDATEN"
       ],
       "objects": [
-        "FIG-OBJ-FESSEL"
+        "FIG-OBJ-FESSEL",
+        "FIG-OBJ-KREUZ"
       ],
       "signs": [],
       "speech": [],
@@ -118,10 +118,18 @@
           ],
           [
             "FIG-JESUS",
-            "FIG-GRUPPE-SOLDATEN",
+            "FIG-OBJ-KREUZ",
             "go"
           ]
-        ]
+        ],
+        "x": {
+          "FIG-PILATUS": 24,
+          "FIG-JESUS": 72,
+          "FIG-GRUPPE-SOLDATEN": 118
+        },
+        "floor_x": {
+          "FIG-OBJ-KREUZ": 152
+        }
       }
     }
   ],
@@ -131,9 +139,9 @@
     "Da liefert Pilatus ihn aus, damit er gekreuzigt werde, und sie übernehmen Jesus."
   ],
   "captions_de": [
-    "Gabbata: Pilatus setzt sich zu Gericht, es ist um die sechste Stunde (Sanduhr); er zeigt auf Jesus: euer König (Jesus, Krone).",
-    "Kein König ausser dem Kaiser: Die Menge ruft «kreuzige» (Kreuz); die Hohepriester: kein König (Krone, leer), nur der Kaiser (Lorbeerkranz).",
-    "Ausgeliefert: Pilatus übergibt Jesus zur Kreuzigung (Pfeil); Soldaten übernehmen ihn."
+    "Gabbata: Pilatus setzt sich zu Gericht, es ist um die sechste Stunde (Sanduhr); er zeigt der Menge Jesus: euer König (Jesus, Krone).",
+    "Kein König ausser dem Kaiser: Die Menge ruft «kreuzige» (Kreuz); die Hohepriester: Unser König ist allein der Kaiser (Lorbeerkranz, Krone).",
+    "Ausgeliefert: Pilatus übergibt Jesus zur Kreuzigung (Pfeil, Kreuz); Soldaten übernehmen ihn."
   ],
   "interpretation_note_de": "Die sechste Stunde ([[JHN.19.14]]) steht als Sanduhr. Der Richterstuhl ([[JHN.19.13]]) ist nicht gezeichnet. Wem Pilatus Jesus ausliefert ([[JHN.19.16]]), sagt der Text nur mit «ihnen»; da nach [[JHN.19.23]] Soldaten kreuzigen, zeigt das Bild Soldaten. Ob Pilatus oder Jesus auf dem Richterstuhl sitzt, ist in [[JHN.19.13]] sprachlich nicht ganz eindeutig; das Bild folgt der üblichen Lesart (Pilatus). «Die Juden» und die Hohepriester sind als neutrale Figuren gezeichnet (Menge bzw. Amtskleid), nicht verzerrt oder eingefärbt.",
   "basis": [
@@ -166,5 +174,135 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.19.13-JHN.19.14",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-PILATUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-STUNDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PILATUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-OBJ-KRONE"
+                ]
+              }
+            ],
+            "action_de": "Pilatus führt Jesus hinaus und setzt sich auf den Richterstuhl am Steinpflaster (Gabbata). Es ist der Rüsttag des Passa, um die sechste Stunde. Er sagt zu den Juden: «Seht, euer König!»",
+            "stage": {
+              "x": {
+                "FIG-JESUS": 32,
+                "FIG-PILATUS": 88,
+                "FIG-GRUPPE-MENGE": 152
+              },
+              "air_x": 164,
+              "air_y": 56,
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-PILATUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.19.15",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-PILATUS",
+              "FIG-GRUPPE-HOHEPRIESTER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-OBJ-KREUZ"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-HOHEPRIESTER",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-OBJ-KRONE",
+                  "FIG-ZEICHEN-FEHLT",
+                  "FIG-ZEICHEN-KAISER"
+                ]
+              }
+            ],
+            "action_de": "Sie schreien: «Weg, weg mit ihm, kreuzige ihn!» Pilatus fragt: «Euren König soll ich kreuzigen?» Die Hohepriester antworten: «Wir haben keinen König ausser dem Kaiser.»",
+            "stage": {
+              "x": {
+                "FIG-GRUPPE-MENGE": 36,
+                "FIG-PILATUS": 96,
+                "FIG-GRUPPE-HOHEPRIESTER": 158
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-GRUPPE-HOHEPRIESTER": "earnest",
+                "FIG-PILATUS": "worried"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.19.16",
+            "figures": [
+              "FIG-PILATUS",
+              "FIG-JESUS",
+              "FIG-GRUPPE-SOLDATEN"
+            ],
+            "objects": [
+              "FIG-OBJ-FESSEL"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Da liefert Pilatus ihn aus, damit er gekreuzigt werde, und sie übernehmen Jesus.",
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-FESSEL"
+              },
+              "mood": {
+                "FIG-PILATUS": "worried",
+                "FIG-GRUPPE-SOLDATEN": "earnest"
+              },
+              "arrows": [
+                [
+                  "FIG-PILATUS",
+                  "FIG-JESUS",
+                  "act"
+                ],
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-SOLDATEN",
+                  "go"
+                ]
+              ]
+            }
+          }
+        ],
+        "captions_de": [
+          "Gabbata: Pilatus setzt sich zu Gericht, es ist um die sechste Stunde (Sanduhr); er zeigt auf Jesus: euer König (Jesus, Krone).",
+          "Kein König ausser dem Kaiser: Die Menge ruft «kreuzige» (Kreuz); die Hohepriester: kein König (Krone, leer), nur der Kaiser (Lorbeerkranz).",
+          "Ausgeliefert: Pilatus übergibt Jesus zur Kreuzigung (Pfeil); Soldaten übernehmen ihn."
+        ]
+      }
+    }
+  ]
 }

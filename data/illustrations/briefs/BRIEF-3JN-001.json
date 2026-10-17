@@ -25,6 +25,7 @@
           "from": "FIG-DER-AELTESTE",
           "to": "FIG-GAIUS",
           "icons": [
+            "FIG-GAIUS",
             "FIG-ZEICHEN-LIEBE",
             "FIG-ZEICHEN-WAHRHEIT"
           ]
@@ -36,6 +37,7 @@
           "FIG-DER-AELTESTE": "FIG-OBJ-BRIEF"
         },
         "mood": {
+          "FIG-DER-AELTESTE": "smile",
           "FIG-GAIUS": "smile"
         }
       }
@@ -48,12 +50,10 @@
         "FIG-GRUPPE-REISENDE"
       ],
       "objects": [
-        "FIG-ORT-HAUS",
+        "FIG-ORT-HAUS-OFFEN",
         "FIG-OBJ-BROT"
       ],
-      "signs": [
-        "FIG-ZEICHEN-GASTFREUNDSCHAFT"
-      ],
+      "signs": [],
       "speech": [],
       "action_de": "Gaius nimmt reisende Brüder treu auf und rüstet sie für die Weiterreise aus.",
       "stage": {
@@ -63,21 +63,18 @@
         "back_side": "left",
         "arrows": [
           [
-            "FIG-GRUPPE-REISENDE",
             "FIG-GAIUS",
-            "go"
+            "FIG-GRUPPE-REISENDE",
+            "act"
           ]
         ],
-        "at": {
-          "FIG-ZEICHEN-GASTFREUNDSCHAFT": "FIG-GAIUS"
-        },
         "mood": {
           "FIG-GAIUS": "smile",
           "FIG-GRUPPE-REISENDE": "smile"
         },
         "x": {
-          "FIG-GAIUS": 74,
-          "FIG-GRUPPE-REISENDE": 138
+          "FIG-GAIUS": 78,
+          "FIG-GRUPPE-REISENDE": 140
         }
       }
     },
@@ -92,13 +89,15 @@
         "FIG-GRUPPE-GEMEINDE"
       ],
       "signs": [
-        "FIG-ZEICHEN-ABLEHNEN"
+        "FIG-ZEICHEN-ABLEHNEN",
+        "FIG-ZEICHEN-ABSTAND"
       ],
       "speech": [],
       "action_de": "Diotrephes will der Erste sein, weist den Ältesten und die Brüder ab und stösst Gastgeber aus der Gemeinde aus.",
       "stage": {
         "back_side": "left",
-        "at": {
+        "split": 1,
+        "beside": {
           "FIG-ZEICHEN-ABLEHNEN": "FIG-DIOTREPHES"
         },
         "pose": {
@@ -107,6 +106,10 @@
         "mood": {
           "FIG-DIOTREPHES": "earnest",
           "FIG-GRUPPE-REISENDE": "worried"
+        },
+        "x": {
+          "FIG-DIOTREPHES": 76,
+          "FIG-GRUPPE-REISENDE": 140
         }
       }
     },
@@ -132,8 +135,17 @@
       ],
       "action_de": "Für Demetrius legt der Älteste ein gutes Zeugnis ab; er hofft, Gaius bald zu sehen.",
       "stage": {
+        "arrows": [
+          [
+            "FIG-DEMETRIUS",
+            "FIG-GAIUS",
+            "act"
+          ]
+        ],
         "mood": {
-          "FIG-DEMETRIUS": "smile"
+          "FIG-DER-AELTESTE": "smile",
+          "FIG-DEMETRIUS": "smile",
+          "FIG-GAIUS": "smile"
         }
       }
     }
@@ -145,12 +157,12 @@
     "Für Demetrius legt der Älteste ein gutes Zeugnis ab; er hofft, Gaius bald zu sehen."
   ],
   "captions_de": [
-    "Gruss an Gaius: Der Älteste (mit Brief) liebt ihn (Herzen) in Wahrheit (Häkchen).",
-    "Gastfreundschaft: Gaius nimmt Reisende auf (offene Tür) und gibt ihnen Brot.",
-    "Abgewiesen: Diotrephes (geschlossene Tür) weist die Reisenden ab (abwehrende Hand).",
-    "Gutes Zeugnis: Der Älteste empfiehlt Demetrius (mit Brief); sein Zeugnis ist wahr (Häkchen)."
+    "Gruss an Gaius: Der Älteste (mit Brief) liebt Gaius (Gaius und Herzen in der Blase) in Wahrheit (Häkchen).",
+    "Gastfreundschaft: Gaius nimmt reisende Geschwister in sein Haus auf (offene, helle Tür) und gibt ihnen Brot (Pfeil von Gaius zu den Reisenden).",
+    "Abgewiesen: Diotrephes (Tür am Gewand) steht vor der Gemeinde und weist die Reisenden ab (abwehrende Hand, Trennlinie).",
+    "Gutes Zeugnis: Der Älteste empfiehlt Gaius den Demetrius (mit Brief; Pfeil zu Gaius); sein Zeugnis ist wahr (Häkchen)."
   ],
-  "interpretation_note_de": "Fünf Abschnitte in vier Feldern; Schluss und Grüsse ([[3JN.1.13-3JN.1.14]]) sind im letzten Feld nur erwähnt. Gaius ist an seiner Farbe und der offenen Tür (Gastfreundschaft) zu erkennen, Diotrephes an der geschlossenen Tür.",
+  "interpretation_note_de": "Fünf Abschnitte in vier Feldern; Schluss und Grüsse ([[3JN.1.13-3JN.1.14]]) sind im letzten Feld nur erwähnt. Gaius ist an seiner Farbe und der offenen Tür am Gewand zu erkennen, Diotrephes an der geschlossenen Tür am Gewand.",
   "basis": [
     {
       "record": "SUM-CH-3JN-001",
@@ -163,5 +175,150 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "3JN.1.1-3JN.1.4",
+            "figures": [
+              "FIG-DER-AELTESTE",
+              "FIG-GAIUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BRIEF"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-DER-AELTESTE",
+                "to": "FIG-GAIUS",
+                "icons": [
+                  "FIG-ZEICHEN-LIEBE",
+                  "FIG-ZEICHEN-WAHRHEIT"
+                ]
+              }
+            ],
+            "action_de": "Der Älteste lobt Gaius, weil er in der Wahrheit lebt.",
+            "stage": {
+              "hold": {
+                "FIG-DER-AELTESTE": "FIG-OBJ-BRIEF"
+              },
+              "mood": {
+                "FIG-GAIUS": "smile"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "3JN.1.5-3JN.1.8",
+            "figures": [
+              "FIG-GAIUS",
+              "FIG-GRUPPE-REISENDE"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS",
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-GASTFREUNDSCHAFT"
+            ],
+            "speech": [],
+            "action_de": "Gaius nimmt reisende Brüder treu auf und rüstet sie für die Weiterreise aus.",
+            "stage": {
+              "hold": {
+                "FIG-GAIUS": "FIG-OBJ-BROT"
+              },
+              "back_side": "left",
+              "arrows": [
+                [
+                  "FIG-GRUPPE-REISENDE",
+                  "FIG-GAIUS",
+                  "go"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-GASTFREUNDSCHAFT": "FIG-GAIUS"
+              },
+              "mood": {
+                "FIG-GAIUS": "smile",
+                "FIG-GRUPPE-REISENDE": "smile"
+              },
+              "x": {
+                "FIG-GAIUS": 74,
+                "FIG-GRUPPE-REISENDE": 138
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "3JN.1.9-3JN.1.10",
+            "figures": [
+              "FIG-DIOTREPHES",
+              "FIG-GRUPPE-REISENDE"
+            ],
+            "objects": [
+              "FIG-GRUPPE-GEMEINDE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ABLEHNEN"
+            ],
+            "speech": [],
+            "action_de": "Diotrephes will der Erste sein, weist den Ältesten und die Brüder ab und stösst Gastgeber aus der Gemeinde aus.",
+            "stage": {
+              "back_side": "left",
+              "at": {
+                "FIG-ZEICHEN-ABLEHNEN": "FIG-DIOTREPHES"
+              },
+              "pose": {
+                "FIG-GRUPPE-REISENDE": "away"
+              },
+              "mood": {
+                "FIG-DIOTREPHES": "earnest",
+                "FIG-GRUPPE-REISENDE": "worried"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "3JN.1.11-3JN.1.14",
+            "figures": [
+              "FIG-DER-AELTESTE",
+              "FIG-DEMETRIUS",
+              "FIG-GAIUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-DER-AELTESTE",
+                "to": "FIG-GAIUS",
+                "icons": [
+                  "FIG-DEMETRIUS",
+                  "FIG-ZEICHEN-WAHRHEIT"
+                ]
+              }
+            ],
+            "action_de": "Für Demetrius legt der Älteste ein gutes Zeugnis ab; er hofft, Gaius bald zu sehen.",
+            "stage": {
+              "mood": {
+                "FIG-DEMETRIUS": "smile"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Gruss an Gaius: Der Älteste (mit Brief) liebt ihn (Herzen) in Wahrheit (Häkchen).",
+          "Gastfreundschaft: Gaius nimmt Reisende auf (offene Tür) und gibt ihnen Brot.",
+          "Abgewiesen: Diotrephes (geschlossene Tür) weist die Reisenden ab (abwehrende Hand).",
+          "Gutes Zeugnis: Der Älteste empfiehlt Demetrius (mit Brief); sein Zeugnis ist wahr (Häkchen)."
+        ],
+        "interpretation_note_de": "Fünf Abschnitte in vier Feldern; Schluss und Grüsse ([[3JN.1.13-3JN.1.14]]) sind im letzten Feld nur erwähnt. Gaius ist an seiner Farbe und der offenen Tür (Gastfreundschaft) zu erkennen, Diotrephes an der geschlossenen Tür."
+      }
+    }
+  ]
 }

@@ -26,6 +26,7 @@
           "to": "FIG-JESUS",
           "icons": [
             "FIG-MARIA-MUTTER-JESU",
+            "FIG-JESUS",
             "FIG-ZEICHEN-FRAGEN"
           ]
         }
@@ -65,19 +66,18 @@
         "pose": {
           "FIG-ROLLE-KRANKER": "sit"
         },
-        "at": {
-          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
-        },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-ROLLE-KRANKER",
-            "act"
-          ]
-        ],
+        "arrows": [],
         "mood": {
           "FIG-GRUPPE-MENGE": "earnest",
           "FIG-JESUS": "pensive"
+        },
+        "beside": {
+          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
+        },
+        "x": {
+          "FIG-JESUS": 28,
+          "FIG-ROLLE-KRANKER": 76,
+          "FIG-GRUPPE-MENGE": 150
         }
       }
     }
@@ -87,7 +87,7 @@
     "Jesus sagt: Ein Prophet ist nur in seiner Heimat ohne Ehre. Er kann dort keine Machttat tun, ausser dass er wenigen Kranken die Hände auflegt; er wundert sich über ihren Unglauben."
   ],
   "captions_de": [
-    "In der Synagoge: Die Leute staunen und fragen: Ist das nicht der Sohn der Maria (Maria, Fragezeichen)?",
+    "In der Synagoge: Die Leute staunen und fragen: Ist das nicht der Sohn der Maria (Maria, Jesus, Fragezeichen)?",
     "Ohne Ehre: Jesus sagt, ein Prophet werde in seiner Heimat abgelehnt (Prophet, Haus, abwehrende Hand); er heilt nur wenige Kranke."
   ],
   "interpretation_note_de": "Die Heimatstadt nennt Markus nicht; das Haus steht für Heimat, Verwandte und Haus ([[MRK.6.4]]). Den Unglauben ([[MRK.6.6]]) zeigt das Bild nur am ernsten Ausdruck der Leute.",
@@ -115,5 +115,91 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.6.1-MRK.6.3",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-SYNAGOGE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-MARIA-MUTTER-JESU",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Am Sabbat lehrt Jesus in der Synagoge seiner Heimat. Die Zuhörer staunen, nehmen aber Anstoss: Ist das nicht der Zimmermann, der Sohn der Maria?",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "surprised"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.6.4-MRK.6.6",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-KRANKER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ROLLE-PROPHET",
+                  "FIG-ORT-HAUS",
+                  "FIG-ZEICHEN-ABLEHNEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: Ein Prophet ist nur in seiner Heimat ohne Ehre. Er kann dort keine Machttat tun, ausser dass er wenigen Kranken die Hände auflegt; er wundert sich über ihren Unglauben.",
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-KRANKER": "sit"
+              },
+              "at": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-KRANKER",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-JESUS": "pensive"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "In der Synagoge: Die Leute staunen und fragen: Ist das nicht der Sohn der Maria (Maria, Fragezeichen)?",
+          "Ohne Ehre: Jesus sagt, ein Prophet werde in seiner Heimat abgelehnt (Prophet, Haus, abwehrende Hand); er heilt nur wenige Kranke."
+        ]
+      }
+    }
+  ]
 }

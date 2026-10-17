@@ -25,6 +25,7 @@
           "from": "FIG-DER-AELTESTE",
           "to": "FIG-GAIUS",
           "icons": [
+            "FIG-GAIUS",
             "FIG-ZEICHEN-LIEBE",
             "FIG-ZEICHEN-WAHRHEIT"
           ]
@@ -36,6 +37,7 @@
           "FIG-DER-AELTESTE": "FIG-OBJ-BRIEF"
         },
         "mood": {
+          "FIG-DER-AELTESTE": "smile",
           "FIG-GAIUS": "smile"
         }
       }
@@ -47,7 +49,9 @@
         "FIG-GRUPPE-GESCHWISTER",
         "FIG-DER-AELTESTE"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-OBJ-BRIEF"
+      ],
       "signs": [
         "FIG-ZEICHEN-FREUDE"
       ],
@@ -71,6 +75,9 @@
         "mood": {
           "FIG-DER-AELTESTE": "delight",
           "FIG-GRUPPE-GESCHWISTER": "smile"
+        },
+        "hold": {
+          "FIG-DER-AELTESTE": "FIG-OBJ-BRIEF"
         }
       }
     }
@@ -80,10 +87,10 @@
     "Geschwister kamen und bezeugten, dass Gaius in der Wahrheit lebt; darüber hat sich der Älteste sehr gefreut."
   ],
   "captions_de": [
-    "Gruss an Gaius: Der Älteste (mit Brief) liebt ihn (Herzen) in Wahrheit (Häkchen).",
-    "Gute Nachricht: Geschwister erzählen, dass Gaius in der Wahrheit lebt (Häkchen); der Älteste freut sich (Funken)."
+    "Gruss an Gaius: Der Älteste (mit Brief) liebt Gaius (Gaius und Herzen in der Blase) in Wahrheit (Häkchen).",
+    "Gute Nachricht: Geschwister erzählen, dass Gaius in der Wahrheit lebt (Häkchen); der Älteste (mit Brief) freut sich (Funken)."
   ],
-  "interpretation_note_de": "Gaius ist an seiner Farbe und der offenen Tür (Gastfreundschaft) zu erkennen, Diotrephes an der geschlossenen Tür.",
+  "interpretation_note_de": "Gaius ist an seiner Farbe und der offenen Tür am Gewand zu erkennen, Diotrephes an der geschlossenen Tür am Gewand.",
   "basis": [
     {
       "record": "TU-3JN-001-001-004",
@@ -108,5 +115,85 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "3JN.1.1-3JN.1.2",
+            "figures": [
+              "FIG-DER-AELTESTE",
+              "FIG-GAIUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BRIEF"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-DER-AELTESTE",
+                "to": "FIG-GAIUS",
+                "icons": [
+                  "FIG-ZEICHEN-LIEBE",
+                  "FIG-ZEICHEN-WAHRHEIT"
+                ]
+              }
+            ],
+            "action_de": "Der Älteste schreibt an den geliebten Gaius, den er in Wahrheit liebt, und wünscht ihm, dass es ihm in allem gut geht und er gesund ist.",
+            "stage": {
+              "hold": {
+                "FIG-DER-AELTESTE": "FIG-OBJ-BRIEF"
+              },
+              "mood": {
+                "FIG-GAIUS": "smile"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "3JN.1.3-3JN.1.4",
+            "figures": [
+              "FIG-GRUPPE-GESCHWISTER",
+              "FIG-DER-AELTESTE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-GESCHWISTER",
+                "to": "FIG-DER-AELTESTE",
+                "icons": [
+                  "FIG-GAIUS",
+                  "FIG-ZEICHEN-WAHRHEIT"
+                ]
+              }
+            ],
+            "action_de": "Geschwister kamen und bezeugten, dass Gaius in der Wahrheit lebt; darüber hat sich der Älteste sehr gefreut.",
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-DER-AELTESTE"
+                ]
+              },
+              "mood": {
+                "FIG-DER-AELTESTE": "delight",
+                "FIG-GRUPPE-GESCHWISTER": "smile"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Gruss an Gaius: Der Älteste (mit Brief) liebt ihn (Herzen) in Wahrheit (Häkchen).",
+          "Gute Nachricht: Geschwister erzählen, dass Gaius in der Wahrheit lebt (Häkchen); der Älteste freut sich (Funken)."
+        ],
+        "interpretation_note_de": "Gaius ist an seiner Farbe und der offenen Tür (Gastfreundschaft) zu erkennen, Diotrephes an der geschlossenen Tür."
+      }
+    }
+  ]
 }

@@ -17,9 +17,7 @@
         "FIG-NOOMI",
         "FIG-RUT"
       ],
-      "objects": [
-        "FIG-ORT-BETLEHEM"
-      ],
+      "objects": [],
       "signs": [],
       "speech": [
         {
@@ -36,22 +34,22 @@
           "icons": [
             "FIG-ZEICHEN-VOLL",
             "FIG-ZEICHEN-FEHLT",
-            "FIG-GOTT"
+            "FIG-GOTT",
+            "FIG-ZEICHEN-UMKEHR"
           ]
         }
       ],
       "action_de": "In Betlehem gerät die Stadt in Aufruhr; die Frauen fragen: Ist das Noomi? Sie antwortet: Nennt mich Mara; voll bin ich weggegangen, leer hat mich JHWH zurückgebracht.",
       "stage": {
-        "back_side": "right",
         "mood": {
           "FIG-GRUPPE-FRAUEN": "surprised",
           "FIG-NOOMI": "worried",
           "FIG-RUT": "calm"
         },
         "x": {
-          "FIG-GRUPPE-FRAUEN": 34,
-          "FIG-NOOMI": 96,
-          "FIG-RUT": 128
+          "FIG-GRUPPE-FRAUEN": 30,
+          "FIG-NOOMI": 126,
+          "FIG-RUT": 164
         },
         "bubble_y": 20
       }
@@ -75,6 +73,10 @@
         "mood": {
           "FIG-NOOMI": "calm",
           "FIG-RUT": "calm"
+        },
+        "x": {
+          "FIG-NOOMI": 30,
+          "FIG-RUT": 72
         }
       }
     }
@@ -84,7 +86,7 @@
     "So kehrt Noomi mit Rut, der Moabiterin, zurück; sie kommen nach Betlehem zu Beginn der Gerstenernte."
   ],
   "captions_de": [
-    "Nennt mich Mara: Die Frauen fragen: Noomi? Noomi klagt: Voll ging ich weg (volles Gefäss), leer (leerer Kreis) hat mich JHWH zurückgebracht (Strahlenkranz).",
+    "Nennt mich Mara: Die Frauen fragen: Noomi? Noomi klagt: Voll ging ich weg (volles Gefäss), leer (leerer Kreis) hat mich JHWH zurückkehren lassen (Strahlenkranz, Bogenpfeil).",
     "Erntebeginn: Noomi und Rut kommen nach Betlehem, als die Gerstenernte beginnt (reifes Feld)."
   ],
   "interpretation_note_de": "«Noomi» heisst «Liebliche», «Mara» «Bittere» ([[RUT.1.20]]); das Wortspiel zeigt das Bild nur mit voll und leer. «Leer» ist der kleine Kreis mit Schrägstrich. Der Erntebeginn ([[RUT.1.22]]) leitet zu Kapitel 2 über.",
@@ -112,5 +114,88 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "RUT.1.19-RUT.1.21",
+            "figures": [
+              "FIG-GRUPPE-FRAUEN",
+              "FIG-NOOMI",
+              "FIG-RUT"
+            ],
+            "objects": [
+              "FIG-ORT-BETLEHEM"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-FRAUEN",
+                "to": "FIG-NOOMI",
+                "icons": [
+                  "FIG-NOOMI",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-NOOMI",
+                "to": "FIG-GRUPPE-FRAUEN",
+                "icons": [
+                  "FIG-ZEICHEN-VOLL",
+                  "FIG-ZEICHEN-FEHLT",
+                  "FIG-GOTT"
+                ]
+              }
+            ],
+            "action_de": "In Betlehem gerät die Stadt in Aufruhr; die Frauen fragen: Ist das Noomi? Sie antwortet: Nennt mich Mara; voll bin ich weggegangen, leer hat mich JHWH zurückgebracht.",
+            "stage": {
+              "back_side": "right",
+              "mood": {
+                "FIG-GRUPPE-FRAUEN": "surprised",
+                "FIG-NOOMI": "worried",
+                "FIG-RUT": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-FRAUEN": 34,
+                "FIG-NOOMI": 96,
+                "FIG-RUT": 128
+              },
+              "bubble_y": 20
+            }
+          },
+          {
+            "n": 2,
+            "reference": "RUT.1.22",
+            "figures": [
+              "FIG-NOOMI",
+              "FIG-RUT"
+            ],
+            "objects": [
+              "FIG-ORT-FELD",
+              "FIG-ORT-BETLEHEM"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "So kehrt Noomi mit Rut, der Moabiterin, zurück; sie kommen nach Betlehem zu Beginn der Gerstenernte.",
+            "stage": {
+              "back_side": "right",
+              "mood": {
+                "FIG-NOOMI": "calm",
+                "FIG-RUT": "calm"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Nennt mich Mara: Die Frauen fragen: Noomi? Noomi klagt: Voll ging ich weg (volles Gefäss), leer (leerer Kreis) hat mich JHWH zurückgebracht (Strahlenkranz).",
+          "Erntebeginn: Noomi und Rut kommen nach Betlehem, als die Gerstenernte beginnt (reifes Feld)."
+        ]
+      }
+    }
+  ]
 }

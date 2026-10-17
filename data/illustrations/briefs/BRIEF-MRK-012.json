@@ -39,11 +39,16 @@
           [
             "FIG-ROLLE-GUTSHERR",
             "FIG-ROLLE-SOHN",
-            "go"
+            "act"
           ]
         ],
         "mood": {
           "FIG-GRUPPE-WEINBAUERN": "earnest"
+        },
+        "x": {
+          "FIG-ROLLE-GUTSHERR": 24,
+          "FIG-ROLLE-SOHN": 76,
+          "FIG-GRUPPE-WEINBAUERN": 140
         }
       }
     },
@@ -95,7 +100,13 @@
           "to": "FIG-ROLLE-SCHRIFTGELEHRTER",
           "icons": [
             "FIG-ZEICHEN-LIEBE",
-            "FIG-GOTT",
+            "FIG-GOTT"
+          ]
+        },
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-ROLLE-SCHRIFTGELEHRTER",
+          "icons": [
             "FIG-ZEICHEN-LIEBE",
             "FIG-ROLLE-MENSCH"
           ]
@@ -104,8 +115,12 @@
       "action_de": "Einem Schriftgelehrten nennt Jesus das erste Gebot: Gott lieben von ganzem Herzen und mit aller Kraft, und das zweite: den Nächsten lieben wie sich selbst.",
       "stage": {
         "mood": {
-          "FIG-ROLLE-SCHRIFTGELEHRTER": "pensive",
+          "FIG-ROLLE-SCHRIFTGELEHRTER": "calm",
           "FIG-JESUS": "smile"
+        },
+        "x": {
+          "FIG-JESUS": 42,
+          "FIG-ROLLE-SCHRIFTGELEHRTER": 140
         }
       }
     },
@@ -135,9 +150,16 @@
           [
             "FIG-ROLLE-WITWE",
             "FIG-OBJ-OPFERKASTEN",
-            "throw"
+            "act"
           ]
-        ]
+        ],
+        "x": {
+          "FIG-JESUS": 30,
+          "FIG-ROLLE-WITWE": 88
+        },
+        "floor_x": {
+          "FIG-OBJ-OPFERKASTEN": 150
+        }
       }
     }
   ],
@@ -148,10 +170,10 @@
     "Jesus sieht eine arme Witwe zwei kleine Münzen in den Opferkasten werfen und sagt: Sie hat mehr gegeben als alle, denn sie gab alles, was sie hatte."
   ],
   "captions_de": [
-    "Die Weinbauern: Der Besitzer sendet seinen Sohn (Pfeil); die Weinbauern beschliessen, ihn zu töten (Sohn, Grab, Weinberg).",
+    "Die Weinbauern: Der Besitzer sendet seinen Sohn (Bogen vom Vater zum Sohn); die Weinbauern beschliessen, ihn zu töten (Sohn, Grab, Weinberg).",
     "Steuer: Gebt dem Kaiser, was des Kaisers ist (Hand, Kaiser), und Gott, was Gottes ist (Hand, Strahlenkranz).",
-    "Das erste Gebot: Gott lieben (Herz, Strahlenkranz) und den Nächsten lieben (Herz, Mensch).",
-    "Die Witwe: Jesus sieht (Auge), wie eine arme Witwe zwei kleine Münzen einwirft (Pfeil zum Opferkasten)."
+    "Das erste Gebot: erste Blase: Gott lieben (Herz, Strahlenkranz); zweite Blase: den Nächsten lieben (Herz, Mensch).",
+    "Die Witwe: Jesus sieht (Auge), wie eine arme Witwe zwei kleine Münzen einwirft (Bogen zum Opferkasten)."
   ],
   "interpretation_note_de": "Je ein Feld zum Gleichnis von den Weinbauern, zur Steuerfrage, zum ersten Gebot und zur Witwe; die Fragen nach der Auferstehung und nach Davids Sohn sowie die Warnung vor den Schriftgelehrten ([[MRK.12.18-MRK.12.27]], [[MRK.12.35-MRK.12.40]]) sind nur in den Abschnittsbildern gezeichnet.",
   "basis": [
@@ -166,5 +188,152 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.12.1-MRK.12.12",
+            "figures": [
+              "FIG-ROLLE-GUTSHERR",
+              "FIG-ROLLE-SOHN",
+              "FIG-GRUPPE-WEINBAUERN"
+            ],
+            "objects": [
+              "FIG-ORT-WEINBERG"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-WEINBAUERN",
+                "to": "FIG-GRUPPE-WEINBAUERN",
+                "icons": [
+                  "FIG-ROLLE-SOHN",
+                  "FIG-ZEICHEN-TOD",
+                  "FIG-ORT-WEINBERG"
+                ]
+              }
+            ],
+            "action_de": "Im Gleichnis sendet der Besitzer des Weinbergs zuletzt seinen geliebten Sohn; die Weinbauern beschliessen, ihn zu töten. Die Führenden merken, dass das Gleichnis ihnen gilt.",
+            "stage": {
+              "back_side": "right",
+              "arrows": [
+                [
+                  "FIG-ROLLE-GUTSHERR",
+                  "FIG-ROLLE-SOHN",
+                  "go"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-WEINBAUERN": "earnest"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.12.13-MRK.12.17",
+            "figures": [
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-DENAR"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-ZEICHEN-GEBEN",
+                  "FIG-ROLLE-KAISER",
+                  "FIG-ZEICHEN-GEBEN",
+                  "FIG-GOTT"
+                ]
+              }
+            ],
+            "action_de": "Auf die Frage nach der Steuer antwortet Jesus: Was des Kaisers ist, gebt dem Kaiser, und was Gottes ist, Gott.",
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-DENAR"
+              },
+              "mood": {
+                "FIG-GRUPPE-PHARISAEER": "surprised"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.12.28-MRK.12.34",
+            "figures": [
+              "FIG-ROLLE-SCHRIFTGELEHRTER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-SCHRIFTGELEHRTER",
+                "icons": [
+                  "FIG-ZEICHEN-LIEBE",
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-LIEBE",
+                  "FIG-ROLLE-MENSCH"
+                ]
+              }
+            ],
+            "action_de": "Einem Schriftgelehrten nennt Jesus das erste Gebot: Gott lieben von ganzem Herzen und mit aller Kraft, und das zweite: den Nächsten lieben wie sich selbst.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-SCHRIFTGELEHRTER": "pensive",
+                "FIG-JESUS": "smile"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.12.41-MRK.12.44",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-WITWE"
+            ],
+            "objects": [
+              "FIG-OBJ-OPFERKASTEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SEHEN"
+            ],
+            "speech": [],
+            "action_de": "Jesus sieht eine arme Witwe zwei kleine Münzen in den Opferkasten werfen und sagt: Sie hat mehr gegeben als alle, denn sie gab alles, was sie hatte.",
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "sit"
+              },
+              "at": {
+                "FIG-ZEICHEN-SEHEN": "FIG-JESUS"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-WITWE",
+                  "FIG-OBJ-OPFERKASTEN",
+                  "throw"
+                ]
+              ]
+            }
+          }
+        ],
+        "captions_de": [
+          "Die Weinbauern: Der Besitzer sendet seinen Sohn (Pfeil); die Weinbauern beschliessen, ihn zu töten (Sohn, Grab, Weinberg).",
+          "Steuer: Gebt dem Kaiser, was des Kaisers ist (Hand, Kaiser), und Gott, was Gottes ist (Hand, Strahlenkranz).",
+          "Das erste Gebot: Gott lieben (Herz, Strahlenkranz) und den Nächsten lieben (Herz, Mensch).",
+          "Die Witwe: Jesus sieht (Auge), wie eine arme Witwe zwei kleine Münzen einwirft (Pfeil zum Opferkasten)."
+        ]
+      }
+    }
+  ]
 }

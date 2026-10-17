@@ -18,34 +18,34 @@
         "FIG-JOHANNES-TAEUFER",
         "FIG-GRUPPE-MENGE"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-OBJ-TAUFMUSCHEL"
+      ],
       "signs": [
-        "FIG-ZEICHEN-TAUFE",
         "FIG-ZEICHEN-ABSTAND"
       ],
       "speech": [],
       "action_de": "Jesus hält sich mit seinen Jüngern im judäischen Land auf und tauft; auch Johannes tauft noch, in Änon bei Salim, und die Leute kommen und lassen sich taufen.",
       "stage": {
         "split": 2,
-        "count": {
-          "FIG-ZEICHEN-TAUFE": 2
-        },
-        "air_x": 66,
-        "air_y": 10
+        "hold": {
+          "FIG-JESUS": "FIG-OBJ-TAUFMUSCHEL",
+          "FIG-JOHANNES-TAEUFER": "FIG-OBJ-TAUFMUSCHEL"
+        }
       }
     },
     {
       "n": 2,
       "reference": "JHN.3.25-JHN.3.26",
       "figures": [
-        "FIG-GRUPPE-JUENGER",
+        "FIG-GRUPPE-JOHANNES-JUENGER",
         "FIG-JOHANNES-TAEUFER"
       ],
       "objects": [],
       "signs": [],
       "speech": [
         {
-          "from": "FIG-GRUPPE-JUENGER",
+          "from": "FIG-GRUPPE-JOHANNES-JUENGER",
           "to": "FIG-JOHANNES-TAEUFER",
           "icons": [
             "FIG-JESUS",
@@ -57,8 +57,8 @@
       "action_de": "Die Jünger des Johannes kommen zu ihm und sagen: Rabbi, der, für den du Zeugnis abgelegt hast, tauft, und alle kommen zu ihm!",
       "stage": {
         "mood": {
-          "FIG-GRUPPE-JUENGER": "worried",
-          "FIG-JOHANNES-TAEUFER": "calm"
+          "FIG-JOHANNES-TAEUFER": "calm",
+          "FIG-GRUPPE-JOHANNES-JUENGER": "worried"
         }
       }
     },
@@ -66,7 +66,7 @@
       "n": 3,
       "reference": "JHN.3.29-JHN.3.30",
       "figures": [
-        "FIG-GRUPPE-JUENGER",
+        "FIG-GRUPPE-JOHANNES-JUENGER",
         "FIG-JOHANNES-TAEUFER"
       ],
       "objects": [],
@@ -76,7 +76,7 @@
       "speech": [
         {
           "from": "FIG-JOHANNES-TAEUFER",
-          "to": "FIG-GRUPPE-JUENGER",
+          "to": "FIG-GRUPPE-JOHANNES-JUENGER",
           "icons": [
             "FIG-JESUS",
             "FIG-ZEICHEN-WACHSEN",
@@ -94,7 +94,7 @@
         },
         "mood": {
           "FIG-JOHANNES-TAEUFER": "smile",
-          "FIG-GRUPPE-JUENGER": "pensive"
+          "FIG-GRUPPE-JOHANNES-JUENGER": "pensive"
         }
       }
     }
@@ -105,8 +105,8 @@
     "Johannes antwortet: Der Freund des Bräutigams freut sich von Herzen über die Stimme des Bräutigams; diese meine Freude ist erfüllt. Er muss wachsen, ich aber kleiner werden."
   ],
   "captions_de": [
-    "Zwei Orte: Jesus mit seinen Jüngern (links) und Johannes mit den Leuten (rechts) taufen beide (Muschel); die gestrichelte Linie trennt die Orte.",
-    "Alle gehen zu ihm: Die Jünger des Johannes melden: Jesus tauft (Jesus, Muschel), und alle kommen zu ihm (Menge).",
+    "Zwei Orte: Jesus mit seinen Jüngern (links) und Johannes mit den Leuten (rechts) taufen beide (Muschel in der Hand); die gestrichelte Linie trennt die Orte.",
+    "Alle gehen zu ihm: Die Jünger des Johannes (Fellkragen) melden: Jesus tauft (Jesus, Muschel), und alle kommen zu ihm (Menge).",
     "Er muss wachsen: Johannes freut sich wie der Freund des Bräutigams (Funken); Jesus wird grösser (Stufen hinauf), Johannes kleiner (Stufen hinab)."
   ],
   "interpretation_note_de": "Feld 1 zeigt zwei Orte zugleich; nach [[JHN.4.2]] taufte Jesus nicht selbst, sondern seine Jünger. Der Streit über die Reinigung ([[JHN.3.25]]) ist nicht gezeichnet. Die Jüngergruppe in Feld 2 und 3 sind die Jünger des Johannes. Den Bräutigam deutet das Bild nicht ausdrücklich auf Jesus; die zweite Sprechblase gibt [[JHN.3.30]] wieder.",
@@ -140,5 +140,109 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.3.22-JHN.3.24",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS",
+              "FIG-JOHANNES-TAEUFER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-TAUFE",
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [],
+            "action_de": "Jesus hält sich mit seinen Jüngern im judäischen Land auf und tauft; auch Johannes tauft noch, in Änon bei Salim, und die Leute kommen und lassen sich taufen.",
+            "stage": {
+              "split": 2,
+              "count": {
+                "FIG-ZEICHEN-TAUFE": 2
+              },
+              "air_x": 66,
+              "air_y": 10
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.3.25-JHN.3.26",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JOHANNES-TAEUFER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-JOHANNES-TAEUFER",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-TAUFE",
+                  "FIG-GRUPPE-MENGE"
+                ]
+              }
+            ],
+            "action_de": "Die Jünger des Johannes kommen zu ihm und sagen: Rabbi, der, für den du Zeugnis abgelegt hast, tauft, und alle kommen zu ihm!",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "worried",
+                "FIG-JOHANNES-TAEUFER": "calm"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.3.29-JHN.3.30",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JOHANNES-TAEUFER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JOHANNES-TAEUFER",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-WACHSEN",
+                  "FIG-JOHANNES-TAEUFER",
+                  "FIG-ZEICHEN-ABNEHMEN"
+                ]
+              }
+            ],
+            "action_de": "Johannes antwortet: Der Freund des Bräutigams freut sich von Herzen über die Stimme des Bräutigams; diese meine Freude ist erfüllt. Er muss wachsen, ich aber kleiner werden.",
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-JOHANNES-TAEUFER"
+                ]
+              },
+              "mood": {
+                "FIG-JOHANNES-TAEUFER": "smile",
+                "FIG-GRUPPE-JUENGER": "pensive"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Zwei Orte: Jesus mit seinen Jüngern (links) und Johannes mit den Leuten (rechts) taufen beide (Muschel); die gestrichelte Linie trennt die Orte.",
+          "Alle gehen zu ihm: Die Jünger des Johannes melden: Jesus tauft (Jesus, Muschel), und alle kommen zu ihm (Menge).",
+          "Er muss wachsen: Johannes freut sich wie der Freund des Bräutigams (Funken); Jesus wird grösser (Stufen hinauf), Johannes kleiner (Stufen hinab)."
+        ]
+      }
+    }
+  ]
 }

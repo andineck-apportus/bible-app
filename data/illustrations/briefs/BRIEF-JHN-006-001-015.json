@@ -15,12 +15,11 @@
       "figures": [
         "FIG-JESUS",
         "FIG-PHILIPPUS",
-        "FIG-ANDREAS",
-        "FIG-ROLLE-JUNGE"
+        "FIG-ROLLE-JUNGE",
+        "FIG-ANDREAS"
       ],
       "objects": [
-        "FIG-OBJ-BROT",
-        "FIG-OBJ-FISCH"
+        "FIG-OBJ-BROTE-FISCHE"
       ],
       "signs": [],
       "speech": [
@@ -36,24 +35,22 @@
           "from": "FIG-ANDREAS",
           "to": "FIG-JESUS",
           "icons": [
-            "FIG-OBJ-BROT",
-            "FIG-OBJ-FISCH",
+            "FIG-OBJ-BROTE-FISCHE",
+            "FIG-GRUPPE-MENGE",
             "FIG-ZEICHEN-FRAGEN"
           ]
         }
       ],
       "action_de": "Jesus fragt Philippus, woher man Brot für die grosse Menge kaufen solle. Andreas weist auf einen Jungen mit fünf Gerstenbroten und zwei Fischen: Was ist das für so viele?",
       "stage": {
-        "count": {
-          "FIG-OBJ-FISCH": 2
-        },
         "hold": {
-          "FIG-ROLLE-JUNGE": "FIG-OBJ-BROT"
+          "FIG-ROLLE-JUNGE": "FIG-OBJ-BROTE-FISCHE"
         },
         "mood": {
           "FIG-PHILIPPUS": "worried",
-          "FIG-ANDREAS": "pensive",
-          "FIG-ROLLE-JUNGE": "smile"
+          "FIG-ANDREAS": "calm",
+          "FIG-ROLLE-JUNGE": "smile",
+          "FIG-JESUS": "calm"
         }
       }
     },
@@ -75,7 +72,7 @@
       "action_de": "Die Menschen lagern sich im Gras; Jesus dankt und teilt Brot und Fisch aus, so viel sie wollen. Alle werden satt, und die Jünger sammeln zwölf Körbe mit Brocken.",
       "stage": {
         "mood": {
-          "FIG-GRUPPE-MENGE": "delight"
+          "FIG-GRUPPE-MENGE": "smile"
         },
         "hold": {
           "FIG-JESUS": "FIG-OBJ-BROT"
@@ -111,8 +108,9 @@
           "from": "FIG-GRUPPE-MENGE",
           "to": "FIG-JESUS",
           "icons": [
+            "FIG-JESUS",
             "FIG-ROLLE-PROPHET",
-            "FIG-ROLLE-KOENIG"
+            "FIG-OBJ-KRONE"
           ]
         }
       ],
@@ -133,7 +131,11 @@
             "FIG-ORT-BERG",
             "go"
           ]
-        ]
+        ],
+        "x": {
+          "FIG-GRUPPE-MENGE": 36,
+          "FIG-JESUS": 104
+        }
       }
     }
   ],
@@ -143,9 +145,9 @@
     "Die Menschen sagen: Das ist wahrhaftig der Prophet. Weil Jesus erkennt, dass sie ihn zum König machen wollen, zieht er sich allein auf den Berg zurück."
   ],
   "captions_de": [
-    "Woher Brot? Jesus fragt Philippus (Brot, Fragezeichen); Andreas zeigt auf den Jungen mit Brot und zwei Fischen: Was ist das für so viele?",
+    "Woher Brot? Jesus fragt Philippus (Brot, Fragezeichen); Andreas weist auf den Jungen, der Brote und zwei Fische in den Händen hält: Was ist das für so viele (Brote und Fische, Menge, Fragezeichen)?",
     "Alle werden satt: Jesus teilt das Brot an die Menge aus (Pfeil); sie sind satt (Schale mit Haken), Körbe mit Brocken bleiben übrig.",
-    "Prophet und König? Die Menge nennt Jesus den Propheten und will ihn zum König machen (Krone); Jesus geht allein auf den Berg (Pfeil)."
+    "Prophet und König? Die Menge nennt Jesus den Propheten (Jesus, Prophet) und will ihn zum König machen (Krone); Jesus wendet sich ab und geht allein auf den Berg (gestrichelter Pfeil)."
   ],
   "interpretation_note_de": "Das Bild zeigt nicht, wie sich das Brot vermehrt; der Text erzählt den Vorgang nicht ([[JHN.6.11]]). Die zwölf Körbe ([[JHN.6.13]]) sind als einige Körbe gezeichnet, weil das Bild keine Zahlen zeigt. Die Absicht, Jesus zum König zu machen, spricht die Menge im Text nicht aus; Jesus erkennt sie ([[JHN.6.15]]); die Krone in der Sprechblase deutet diese Absicht an.",
   "basis": [
@@ -178,5 +180,147 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.6.5-JHN.6.9",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-PHILIPPUS",
+              "FIG-ANDREAS",
+              "FIG-ROLLE-JUNGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT",
+              "FIG-OBJ-FISCH"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PHILIPPUS",
+                "icons": [
+                  "FIG-OBJ-BROT",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-ANDREAS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-OBJ-BROT",
+                  "FIG-OBJ-FISCH",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus fragt Philippus, woher man Brot für die grosse Menge kaufen solle. Andreas weist auf einen Jungen mit fünf Gerstenbroten und zwei Fischen: Was ist das für so viele?",
+            "stage": {
+              "count": {
+                "FIG-OBJ-FISCH": 2
+              },
+              "hold": {
+                "FIG-ROLLE-JUNGE": "FIG-OBJ-BROT"
+              },
+              "mood": {
+                "FIG-PHILIPPUS": "worried",
+                "FIG-ANDREAS": "pensive",
+                "FIG-ROLLE-JUNGE": "smile"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.6.10-JHN.6.13",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT",
+              "FIG-OBJ-KORB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SATT"
+            ],
+            "speech": [],
+            "action_de": "Die Menschen lagern sich im Gras; Jesus dankt und teilt Brot und Fisch aus, so viel sie wollen. Alle werden satt, und die Jünger sammeln zwölf Körbe mit Brocken.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "delight"
+              },
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROT"
+              },
+              "count": {
+                "FIG-OBJ-KORB": 3
+              },
+              "at": {
+                "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.6.14-JHN.6.15",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-BERG"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ROLLE-PROPHET",
+                  "FIG-ROLLE-KOENIG"
+                ]
+              }
+            ],
+            "action_de": "Die Menschen sagen: Das ist wahrhaftig der Prophet. Weil Jesus erkennt, dass sie ihn zum König machen wollen, zieht er sich allein auf den Berg zurück.",
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "away"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "delight",
+                "FIG-JESUS": "calm"
+              },
+              "back_side": "right",
+              "before": true,
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ORT-BERG",
+                  "go"
+                ]
+              ]
+            }
+          }
+        ],
+        "captions_de": [
+          "Woher Brot? Jesus fragt Philippus (Brot, Fragezeichen); Andreas zeigt auf den Jungen mit Brot und zwei Fischen: Was ist das für so viele?",
+          "Alle werden satt: Jesus teilt das Brot an die Menge aus (Pfeil); sie sind satt (Schale mit Haken), Körbe mit Brocken bleiben übrig.",
+          "Prophet und König? Die Menge nennt Jesus den Propheten und will ihn zum König machen (Krone); Jesus geht allein auf den Berg (Pfeil)."
+        ]
+      }
+    }
+  ]
 }

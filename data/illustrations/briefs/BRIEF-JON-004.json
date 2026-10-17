@@ -38,7 +38,10 @@
         "mood": {
           "FIG-JONA": "worried"
         },
-        "god_side": "right"
+        "god_side": "left",
+        "x": {
+          "FIG-JONA": 120
+        }
       }
     },
     {
@@ -65,11 +68,11 @@
           "FIG-JONA": "worried"
         },
         "x": {
-          "FIG-JONA": 150
+          "FIG-JONA": 156
         },
         "floor_x": {
-          "FIG-OBJ-RIZINUS-VERDORRT": 96,
-          "FIG-OBJ-WURM": 118
+          "FIG-OBJ-RIZINUS-VERDORRT": 76,
+          "FIG-OBJ-WURM": 96
         },
         "air_x": 40,
         "air_y": 10
@@ -83,7 +86,7 @@
         "FIG-JONA"
       ],
       "objects": [
-        "FIG-ORT-NINIVE"
+        "FIG-OBJ-RIZINUS-VERDORRT"
       ],
       "signs": [],
       "speech": [
@@ -105,10 +108,12 @@
         "mood": {
           "FIG-JONA": "pensive"
         },
-        "god_side": "left",
-        "back_side": "right",
+        "god_side": "right",
         "x": {
-          "FIG-JONA": 60
+          "FIG-JONA": 84
+        },
+        "floor_x": {
+          "FIG-OBJ-RIZINUS-VERDORRT": 8
         }
       }
     }
@@ -119,9 +124,9 @@
     "Gott fragt Jona, ob er nicht Mitleid haben soll mit Ninive, der grossen Stadt."
   ],
   "captions_de": [
-    "Zorn: Jona ärgert sich über Gottes Gnade (Herz) und will sterben (verschlossenes Grab).",
+    "Zorn: Jona ist zornig (dunkle Wolke) und betet zu Gott: Du bist gnädig (Herz in Händen) – lass mich sterben (verschlossenes Grab).",
     "Die Staude: Unter der Hütte sitzt Jona; ein Wurm lässt die Staude verdorren, die Sonne sticht.",
-    "Gottes Frage: Sollte ich nicht Mitleid haben mit Ninive? (Herz, Stadt, Fragezeichen)"
+    "Gottes Frage: Bei der verdorrten Staude fragt Gott Jona: Sollte ich nicht Mitleid haben mit Ninive? (Herz, Stadt, Fragezeichen)"
   ],
   "interpretation_note_de": "Je ein Feld zu Jonas Zorn, der Staude und Gottes Frage; das Buch endet offen.",
   "basis": [
@@ -243,6 +248,122 @@
         "captions_de": [
           "Zorn: Jona ärgert sich über Gottes Gnade (Herz) und will sterben (Grab).",
           "Die Staude: Ein Wurm lässt die Staude verdorren, die Sonne sticht Jona.",
+          "Gottes Frage: Sollte ich nicht Mitleid haben mit Ninive? (Herz, Stadt, Fragezeichen)"
+        ]
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JON.4.1-JON.4.4",
+            "figures": [
+              "FIG-JONA",
+              "FIG-GOTT"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-ZORN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JONA",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-ERBARMEN",
+                  "FIG-ZEICHEN-TOD"
+                ]
+              }
+            ],
+            "action_de": "Jona ist zornig, weil Gott gnädig ist, und wünscht sich den Tod.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-ZORN": "FIG-JONA"
+              },
+              "mood": {
+                "FIG-JONA": "worried"
+              },
+              "god_side": "right"
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JON.4.5-JON.4.8",
+            "figures": [
+              "FIG-JONA"
+            ],
+            "objects": [
+              "FIG-ORT-HUETTE",
+              "FIG-OBJ-RIZINUS-VERDORRT",
+              "FIG-OBJ-WURM"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-HITZE"
+            ],
+            "speech": [],
+            "action_de": "Gott lässt einen Rizinus wachsen und durch einen Wurm verdorren; die Sonne sticht Jona.",
+            "stage": {
+              "pose": {
+                "FIG-JONA": "sit"
+              },
+              "mood": {
+                "FIG-JONA": "worried"
+              },
+              "x": {
+                "FIG-JONA": 150
+              },
+              "floor_x": {
+                "FIG-OBJ-RIZINUS-VERDORRT": 96,
+                "FIG-OBJ-WURM": 118
+              },
+              "air_x": 40,
+              "air_y": 10
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JON.4.9-JON.4.11",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JONA"
+            ],
+            "objects": [
+              "FIG-ORT-NINIVE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GOTT",
+                "to": "FIG-JONA",
+                "icons": [
+                  "FIG-ZEICHEN-ERBARMEN",
+                  "FIG-ORT-NINIVE",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Gott fragt Jona, ob er nicht Mitleid haben soll mit Ninive, der grossen Stadt.",
+            "stage": {
+              "pose": {
+                "FIG-JONA": "sit"
+              },
+              "mood": {
+                "FIG-JONA": "pensive"
+              },
+              "god_side": "left",
+              "back_side": "right",
+              "x": {
+                "FIG-JONA": 60
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Zorn: Jona ärgert sich über Gottes Gnade (Herz) und will sterben (verschlossenes Grab).",
+          "Die Staude: Unter der Hütte sitzt Jona; ein Wurm lässt die Staude verdorren, die Sonne sticht.",
           "Gottes Frage: Sollte ich nicht Mitleid haben mit Ninive? (Herz, Stadt, Fragezeichen)"
         ]
       }

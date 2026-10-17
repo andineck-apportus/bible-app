@@ -56,19 +56,19 @@
       ],
       "speech": [
         {
+          "from": "FIG-JESUS",
+          "to": "FIG-GRUPPE-ZWOELF",
+          "icons": [
+            "FIG-ZEICHEN-NACHFOLGEN",
+            "FIG-ZEICHEN-LICHT"
+          ]
+        },
+        {
           "from": "FIG-GRUPPE-ZWOELF",
           "to": "FIG-JESUS",
           "icons": [
             "FIG-OBJ-STEINE",
             "FIG-ZEICHEN-FRAGEN"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-ZEICHEN-LICHT",
-            "FIG-ZEICHEN-NACHFOLGEN"
           ]
         }
       ],
@@ -81,7 +81,7 @@
           "FIG-GRUPPE-ZWOELF": "worried"
         },
         "air_x": 74,
-        "air_y": 58
+        "air_y": 84
       }
     },
     {
@@ -101,7 +101,14 @@
           "to": "FIG-GRUPPE-ZWOELF",
           "icons": [
             "FIG-LAZARUS",
-            "FIG-ZEICHEN-SCHLAFEN",
+            "FIG-ZEICHEN-SCHLAFEN"
+          ]
+        },
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-GRUPPE-ZWOELF",
+          "icons": [
+            "FIG-LAZARUS",
             "FIG-ZEICHEN-TOD"
           ]
         }
@@ -152,9 +159,9 @@
     "Thomas sagt zu den anderen Jüngern: Lasst auch uns gehen, damit wir mit ihm sterben!"
   ],
   "captions_de": [
-    "Die Nachricht: Ein Bote meldet: Lazarus ist krank (Liegender); Jesus antwortet: Die Krankheit dient der Herrlichkeit Gottes (Licht).",
-    "Zurück nach Judäa? Nach zwei Tagen (Sonnen) will Jesus gehen; die Jünger fragen: Und die Steine? Jesus: Wer im Licht geht, stösst nicht an (Fussspuren).",
-    "Eingeschlafen: Jesus sagt: Lazarus schläft (Mond); die Jünger verstehen nicht (Nebel); dann offen: Lazarus ist tot (verschlossenes Grab).",
+    "Die Nachricht: Ein Bote (Brief in der Hand) meldet: Lazarus ist krank (Liegender); Jesus antwortet: Die Krankheit dient der Herrlichkeit Gottes (Licht).",
+    "Zurück nach Judäa? Nach zwei Tagen (Sonnen) sagt Jesus: Lasst uns gehen – wer im Licht geht, stösst nicht an (Fussspuren, Licht); die Jünger fragen: Und die Steine?",
+    "Eingeschlafen: Jesus sagt: Lazarus schläft (Mond); die Jünger verstehen nicht (Nebel mit Fragezeichen); dann offen (zweite Blase): Lazarus ist tot (verschlossenes Grab).",
     "Thomas: Lasst uns mitgehen (Fussspuren) und mit ihm sterben (Grab)."
   ],
   "interpretation_note_de": "Den Boten nennt der Text nicht ausdrücklich: Die Schwestern «sandten» zu Jesus ([[JHN.11.3]]). Die Herrlichkeit Gottes ([[JHN.11.4]]) erscheint als Licht. Mit «ihm» meint Thomas wohl Jesus ([[JHN.11.16]]).",
@@ -194,5 +201,156 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.11.1-JHN.11.4",
+            "figures": [
+              "FIG-ROLLE-BOTE",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-BOTE",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-LAZARUS",
+                  "FIG-ZEICHEN-KRANK"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-BOTE",
+                "icons": [
+                  "FIG-ZEICHEN-KRANK",
+                  "FIG-ZEICHEN-LICHT"
+                ]
+              }
+            ],
+            "action_de": "Lazarus aus Betanien ist krank. Seine Schwestern Marta und Maria lassen Jesus sagen: Der, den du lieb hast, ist krank. Jesus sagt: Diese Krankheit führt nicht zum Tod, sondern dient der Herrlichkeit Gottes.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-BOTE": "worried"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.11.5-JHN.11.10",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-TAGE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-ZWOELF",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-OBJ-STEINE",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-LICHT",
+                  "FIG-ZEICHEN-NACHFOLGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus liebt Marta, Maria und Lazarus, bleibt aber noch zwei Tage. Dann sagt er: Lasst uns wieder nach Judäa gehen! Die Jünger: Eben noch wollten sie dich dort steinigen. Jesus: Wer am Tag umhergeht, stösst nicht an.",
+            "stage": {
+              "count": {
+                "FIG-ZEICHEN-TAGE": 2
+              },
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "worried"
+              },
+              "air_x": 74,
+              "air_y": 58
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.11.11-JHN.11.15",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-NICHT-VERSTEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-LAZARUS",
+                  "FIG-ZEICHEN-SCHLAFEN",
+                  "FIG-ZEICHEN-TOD"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: Lazarus ist eingeschlafen; ich gehe, ihn aufzuwecken. Die Jünger verstehen es als Schlaf. Da sagt er offen: Lazarus ist gestorben.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "pensive",
+                "FIG-JESUS": "earnest"
+              },
+              "at": {
+                "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-GRUPPE-ZWOELF"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.11.16",
+            "figures": [
+              "FIG-THOMAS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-THOMAS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-NACHFOLGEN",
+                  "FIG-ZEICHEN-TOD"
+                ]
+              }
+            ],
+            "action_de": "Thomas sagt zu den anderen Jüngern: Lasst auch uns gehen, damit wir mit ihm sterben!",
+            "stage": {
+              "mood": {
+                "FIG-THOMAS": "determined",
+                "FIG-GRUPPE-ZWOELF": "worried"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Die Nachricht: Ein Bote meldet: Lazarus ist krank (Liegender); Jesus antwortet: Die Krankheit dient der Herrlichkeit Gottes (Licht).",
+          "Zurück nach Judäa? Nach zwei Tagen (Sonnen) will Jesus gehen; die Jünger fragen: Und die Steine? Jesus: Wer im Licht geht, stösst nicht an (Fussspuren).",
+          "Eingeschlafen: Jesus sagt: Lazarus schläft (Mond); die Jünger verstehen nicht (Nebel); dann offen: Lazarus ist tot (verschlossenes Grab).",
+          "Thomas: Lasst uns mitgehen (Fussspuren) und mit ihm sterben (Grab)."
+        ]
+      }
+    }
+  ]
 }

@@ -69,6 +69,9 @@
         "mood": {
           "FIG-JESUS": "earnest",
           "FIG-GRUPPE-PHARISAEER": "earnest"
+        },
+        "pose": {
+          "FIG-JESUS": "away"
         }
       }
     }
@@ -79,7 +82,7 @@
   ],
   "captions_de": [
     "Forderung: Die Pharisäer verlangen ein Zeichen vom Himmel (Stern, Fragezeichen).",
-    "Kein Zeichen: Jesus sagt: Kein Zeichen (Stern, fehlt), und geht zum Boot (Pfeil)."
+    "Kein Zeichen: Jesus sagt: Kein Zeichen (Stern, leerer Kreis mit Schrägstrich), wendet sich ab und geht zum Boot (Pfeil)."
   ],
   "interpretation_note_de": "Der Stern ist im Bildlexikon das Zeichen für ein Zeichen (σημεῖον); «vom Himmel» ist nicht eigens gezeigt.",
   "basis": [
@@ -106,5 +109,82 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.8.11",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-PHARISAEER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-PHARISAEER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-STERN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Die Pharisäer streiten mit Jesus und verlangen von ihm ein Zeichen vom Himmel, um ihn auf die Probe zu stellen.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-PHARISAEER": "earnest"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.8.12-MRK.8.13",
+            "figures": [
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-ZEICHEN-STERN",
+                  "FIG-ZEICHEN-FEHLT"
+                ]
+              }
+            ],
+            "action_de": "Jesus seufzt tief und sagt: Diesem Geschlecht wird kein Zeichen gegeben werden. Er lässt sie stehen, steigt ins Boot und fährt ans andere Ufer.",
+            "stage": {
+              "big_side": "right",
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-OBJ-BOOT",
+                  "go"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-PHARISAEER": "earnest"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Forderung: Die Pharisäer verlangen ein Zeichen vom Himmel (Stern, Fragezeichen).",
+          "Kein Zeichen: Jesus sagt: Kein Zeichen (Stern, fehlt), und geht zum Boot (Pfeil)."
+        ]
+      }
+    }
+  ]
 }

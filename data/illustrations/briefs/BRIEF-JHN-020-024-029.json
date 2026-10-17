@@ -32,8 +32,7 @@
           "to": "FIG-GRUPPE-JUENGER",
           "icons": [
             "FIG-ZEICHEN-WUNDMALE",
-            "FIG-ZEICHEN-GLAUBEN",
-            "FIG-ZEICHEN-FEHLT"
+            "FIG-ZEICHEN-NICHT-GLAUBEN"
           ]
         }
       ],
@@ -74,20 +73,20 @@
       ],
       "action_de": "Acht Tage später kommt Jesus wieder bei verschlossenen Türen, sagt «Friede euch!» und zu Thomas: «Reich deinen Finger her und sieh meine Hände; sei nicht ungläubig, sondern gläubig!»",
       "stage": {
-        "hold": {
-          "FIG-JESUS": "FIG-ZEICHEN-WUNDMALE"
-        },
         "mood": {
           "FIG-THOMAS": "surprised",
           "FIG-JESUS": "calm"
         },
         "air_x": 150,
-        "air_y": 40
+        "air_y": 40,
+        "beside": {
+          "FIG-ZEICHEN-WUNDMALE": "FIG-JESUS"
+        }
       }
     },
     {
       "n": 3,
-      "reference": "JHN.20.28-JHN.20.29",
+      "reference": "JHN.20.28",
       "figures": [
         "FIG-THOMAS",
         "FIG-JESUS"
@@ -102,18 +101,9 @@
             "FIG-JESUS",
             "FIG-GOTT"
           ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-THOMAS",
-          "icons": [
-            "FIG-ZEICHEN-SEHEN",
-            "FIG-ZEICHEN-FEHLT",
-            "FIG-ZEICHEN-GLAUBEN"
-          ]
         }
       ],
-      "action_de": "Thomas antwortet: «Mein Herr und mein Gott!» Jesus sagt: «Weil du mich gesehen hast, hast du geglaubt? Selig sind, die nicht gesehen und doch geglaubt haben!»",
+      "action_de": "Thomas antwortet: «Mein Herr und mein Gott!»",
       "stage": {
         "pose": {
           "FIG-THOMAS": "kneel"
@@ -127,17 +117,52 @@
           "FIG-JESUS": "smile"
         }
       }
+    },
+    {
+      "n": 4,
+      "reference": "JHN.20.29",
+      "figures": [
+        "FIG-THOMAS",
+        "FIG-JESUS"
+      ],
+      "objects": [],
+      "signs": [],
+      "speech": [
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-THOMAS",
+          "icons": [
+            "FIG-ZEICHEN-SEHEN",
+            "FIG-ZEICHEN-FEHLT",
+            "FIG-ZEICHEN-GLAUBEN"
+          ]
+        }
+      ],
+      "action_de": "Jesus sagt: «Weil du mich gesehen hast, hast du geglaubt? Selig sind, die nicht gesehen und doch geglaubt haben!»",
+      "stage": {
+        "pose": {},
+        "x": {
+          "FIG-THOMAS": 30,
+          "FIG-JESUS": 150
+        },
+        "mood": {
+          "FIG-THOMAS": "calm",
+          "FIG-JESUS": "smile"
+        }
+      }
     }
   ],
   "actions_de": [
     "Thomas war nicht dabei. Die anderen Jünger sagen ihm: «Wir haben den Herrn gesehen!» Er sagt: «Wenn ich nicht das Mal der Nägel an seinen Händen sehe und berühre, werde ich gewiss nicht glauben.»",
     "Acht Tage später kommt Jesus wieder bei verschlossenen Türen, sagt «Friede euch!» und zu Thomas: «Reich deinen Finger her und sieh meine Hände; sei nicht ungläubig, sondern gläubig!»",
-    "Thomas antwortet: «Mein Herr und mein Gott!» Jesus sagt: «Weil du mich gesehen hast, hast du geglaubt? Selig sind, die nicht gesehen und doch geglaubt haben!»"
+    "Thomas antwortet: «Mein Herr und mein Gott!»",
+    "Jesus sagt: «Weil du mich gesehen hast, hast du geglaubt? Selig sind, die nicht gesehen und doch geglaubt haben!»"
   ],
   "captions_de": [
-    "Thomas zweifelt: Die Jünger: Wir haben den Herrn gesehen (Auge, Jesus); Thomas: Ohne die Male (Hand) glaube ich nicht (Herz, leer).",
+    "Thomas zweifelt: Die Jünger: Wir haben den Herrn gesehen (Auge, Jesus); Thomas: Ohne die Male (Hand) glaube ich nicht (graues Herz, durchgestrichen).",
     "Sieh meine Hände: Bei verschlossener Tür (Riegel) zeigt Jesus Thomas seine Hände (Mal) und sagt: Glaube! (Hand, Herz).",
-    "«Mein Herr und mein Gott!»: Thomas kniet (Jesus, Strahlenkranz); Jesus: Selig, die nicht sehen und doch glauben (Auge, leer, Herz)."
+    "«Mein Herr und mein Gott!»: Thomas kniet vor Jesus (Jesus, Strahlenkranz).",
+    "Selig: Jesus sagt zu Thomas: Selig, die nicht sehen und doch glauben (Auge, leer, Herz)."
   ],
   "interpretation_note_de": "«Acht Tage später» ([[JHN.20.26]]) ist nicht eigens gezeichnet. Die Male an den Händen sind nur als kleines Zeichen gezeichnet (offene Hand mit Punkt), ohne Wunde oder Blut. Ob Thomas Jesus tatsächlich berührt, sagt der Text nicht ([[JHN.20.27-JHN.20.28]]); das Bild zeigt es nicht. Der Strahlenkranz in seiner Blase steht für «mein Gott»; «selig» ist nicht eigens gezeichnet.",
   "basis": [
@@ -161,8 +186,14 @@
     {
       "record": "TRANS-JHN-020-001-031-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.20.28-JHN.20.29",
-      "fingerprint": "c3a42b47a9c5964c"
+      "reference": "JHN.20.28",
+      "fingerprint": "0c981e86cded4186"
+    },
+    {
+      "record": "TRANS-JHN-020-001-031-DE-WORKING",
+      "field": "text_by_reference",
+      "reference": "JHN.20.29",
+      "fingerprint": "76a73063990c9087"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
@@ -170,5 +201,169 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.20.24-JHN.20.25",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-THOMAS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-THOMAS",
+                "icons": [
+                  "FIG-ZEICHEN-SEHEN",
+                  "FIG-JESUS"
+                ]
+              },
+              {
+                "from": "FIG-THOMAS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-WUNDMALE",
+                  "FIG-ZEICHEN-GLAUBEN",
+                  "FIG-ZEICHEN-FEHLT"
+                ]
+              }
+            ],
+            "action_de": "Thomas war nicht dabei. Die anderen Jünger sagen ihm: «Wir haben den Herrn gesehen!» Er sagt: «Wenn ich nicht das Mal der Nägel an seinen Händen sehe und berühre, werde ich gewiss nicht glauben.»",
+            "stage": {
+              "x": {
+                "FIG-GRUPPE-JUENGER": 40,
+                "FIG-THOMAS": 152
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "delight",
+                "FIG-THOMAS": "earnest"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.20.26-JHN.20.27",
+            "figures": [
+              "FIG-THOMAS",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-VERSCHLOSSEN",
+              "FIG-ZEICHEN-WUNDMALE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-THOMAS",
+                "icons": [
+                  "FIG-ZEICHEN-WUNDMALE",
+                  "FIG-ZEICHEN-GLAUBEN"
+                ]
+              }
+            ],
+            "action_de": "Acht Tage später kommt Jesus wieder bei verschlossenen Türen, sagt «Friede euch!» und zu Thomas: «Reich deinen Finger her und sieh meine Hände; sei nicht ungläubig, sondern gläubig!»",
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-ZEICHEN-WUNDMALE"
+              },
+              "mood": {
+                "FIG-THOMAS": "surprised",
+                "FIG-JESUS": "calm"
+              },
+              "air_x": 150,
+              "air_y": 40
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.20.28-JHN.20.29",
+            "figures": [
+              "FIG-THOMAS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-THOMAS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-GOTT"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-THOMAS",
+                "icons": [
+                  "FIG-ZEICHEN-SEHEN",
+                  "FIG-ZEICHEN-FEHLT",
+                  "FIG-ZEICHEN-GLAUBEN"
+                ]
+              }
+            ],
+            "action_de": "Thomas antwortet: «Mein Herr und mein Gott!» Jesus sagt: «Weil du mich gesehen hast, hast du geglaubt? Selig sind, die nicht gesehen und doch geglaubt haben!»",
+            "stage": {
+              "pose": {
+                "FIG-THOMAS": "kneel"
+              },
+              "x": {
+                "FIG-THOMAS": 30,
+                "FIG-JESUS": 150
+              },
+              "mood": {
+                "FIG-THOMAS": "delight",
+                "FIG-JESUS": "smile"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Thomas war nicht dabei. Die anderen Jünger sagen ihm: «Wir haben den Herrn gesehen!» Er sagt: «Wenn ich nicht das Mal der Nägel an seinen Händen sehe und berühre, werde ich gewiss nicht glauben.»",
+          "Acht Tage später kommt Jesus wieder bei verschlossenen Türen, sagt «Friede euch!» und zu Thomas: «Reich deinen Finger her und sieh meine Hände; sei nicht ungläubig, sondern gläubig!»",
+          "Thomas antwortet: «Mein Herr und mein Gott!» Jesus sagt: «Weil du mich gesehen hast, hast du geglaubt? Selig sind, die nicht gesehen und doch geglaubt haben!»"
+        ],
+        "captions_de": [
+          "Thomas zweifelt: Die Jünger: Wir haben den Herrn gesehen (Auge, Jesus); Thomas: Ohne die Male (Hand) glaube ich nicht (Herz, leer).",
+          "Sieh meine Hände: Bei verschlossener Tür (Riegel) zeigt Jesus Thomas seine Hände (Mal) und sagt: Glaube! (Hand, Herz).",
+          "«Mein Herr und mein Gott!»: Thomas kniet (Jesus, Strahlenkranz); Jesus: Selig, die nicht sehen und doch glauben (Auge, leer, Herz)."
+        ],
+        "basis": [
+          {
+            "record": "TU-JHN-020-024-029",
+            "field": "summary",
+            "fingerprint": "edda735d1b18aeb3"
+          },
+          {
+            "record": "TRANS-JHN-020-001-031-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.20.24-JHN.20.25",
+            "fingerprint": "20089c08f871e5b6"
+          },
+          {
+            "record": "TRANS-JHN-020-001-031-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.20.26-JHN.20.27",
+            "fingerprint": "f9a20b549bf46d0b"
+          },
+          {
+            "record": "TRANS-JHN-020-001-031-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.20.28-JHN.20.29",
+            "fingerprint": "c3a42b47a9c5964c"
+          }
+        ]
+      }
+    }
+  ]
 }

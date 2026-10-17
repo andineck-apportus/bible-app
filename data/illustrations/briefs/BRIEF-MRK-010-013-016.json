@@ -14,16 +14,15 @@
       "reference": "MRK.10.13",
       "figures": [
         "FIG-GRUPPE-MENGE",
+        "FIG-GRUPPE-KINDER",
         "FIG-GRUPPE-ZWOELF"
       ],
-      "objects": [
-        "FIG-ZEICHEN-KIND"
-      ],
+      "objects": [],
       "signs": [],
       "speech": [
         {
           "from": "FIG-GRUPPE-ZWOELF",
-          "to": "FIG-GRUPPE-MENGE",
+          "to": "FIG-GRUPPE-KINDER",
           "icons": [
             "FIG-ZEICHEN-ABLEHNEN"
           ]
@@ -31,20 +30,25 @@
       ],
       "action_de": "Man bringt Kinder zu Jesus, damit er sie anrühre; die Jünger aber fahren die Leute an.",
       "stage": {
-        "count": {
-          "FIG-ZEICHEN-KIND": 3
-        },
-        "floor_side": "left",
         "mood": {
           "FIG-GRUPPE-ZWOELF": "earnest",
-          "FIG-GRUPPE-MENGE": "worried"
-        }
+          "FIG-GRUPPE-MENGE": "worried",
+          "FIG-GRUPPE-KINDER": "worried"
+        },
+        "arrows": [
+          [
+            "FIG-GRUPPE-MENGE",
+            "FIG-GRUPPE-KINDER",
+            "go"
+          ]
+        ]
       }
     },
     {
       "n": 2,
       "reference": "MRK.10.14-MRK.10.15",
       "figures": [
+        "FIG-GRUPPE-KINDER",
         "FIG-JESUS",
         "FIG-GRUPPE-ZWOELF"
       ],
@@ -55,8 +59,9 @@
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-ZWOELF",
           "icons": [
-            "FIG-ZEICHEN-ABLEHNEN",
-            "FIG-ZEICHEN-NICHT",
+            "FIG-ZEICHEN-KIND",
+            "FIG-JESUS",
+            "FIG-ZEICHEN-NICHT-HINDERN",
             "FIG-ZEICHEN-KIND",
             "FIG-ZEICHEN-REICH-GOTTES"
           ]
@@ -66,7 +71,8 @@
       "stage": {
         "mood": {
           "FIG-JESUS": "earnest",
-          "FIG-GRUPPE-ZWOELF": "surprised"
+          "FIG-GRUPPE-ZWOELF": "surprised",
+          "FIG-GRUPPE-KINDER": "calm"
         }
       }
     },
@@ -74,32 +80,34 @@
       "n": 3,
       "reference": "MRK.10.16",
       "figures": [
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-GRUPPE-KINDER"
       ],
-      "objects": [
-        "FIG-ZEICHEN-KIND"
-      ],
+      "objects": [],
       "signs": [
         "FIG-ZEICHEN-SEGNEN"
       ],
       "speech": [],
       "action_de": "Jesus schliesst die Kinder in die Arme und segnet sie, indem er ihnen die Hände auflegt.",
       "stage": {
-        "count": {
-          "FIG-ZEICHEN-KIND": 3
-        },
-        "at": {
-          "FIG-ZEICHEN-SEGNEN": "FIG-ZEICHEN-KIND"
-        },
         "mood": {
-          "FIG-JESUS": "smile"
+          "FIG-JESUS": "smile",
+          "FIG-GRUPPE-KINDER": "delight"
         },
         "x": {
-          "FIG-JESUS": 70
+          "FIG-JESUS": 70,
+          "FIG-GRUPPE-KINDER": 122
         },
-        "floor_x": {
-          "FIG-ZEICHEN-KIND": 92
-        }
+        "at": {
+          "FIG-ZEICHEN-SEGNEN": "FIG-GRUPPE-KINDER"
+        },
+        "arrows": [
+          [
+            "FIG-JESUS",
+            "FIG-GRUPPE-KINDER",
+            "act"
+          ]
+        ]
       }
     }
   ],
@@ -109,9 +117,9 @@
     "Jesus schliesst die Kinder in die Arme und segnet sie, indem er ihnen die Hände auflegt."
   ],
   "captions_de": [
-    "Abgewiesen: Leute bringen Kinder; die Jünger weisen sie ab (abwehrende Hand).",
-    "Lasst sie kommen: Jesus ist unwillig: Hindert sie nicht (abwehrende Hand, «nicht»); solchen gehört das Reich Gottes (Kind, Krone im Licht).",
-    "Segen: Jesus nimmt die Kinder zu sich und segnet sie (segnende Hand)."
+    "Abgewiesen: Leute bringen Kinder (Weg von den Leuten zu den Kindern); die Jünger weisen sie ab (abwehrende Hand).",
+    "Lasst sie kommen: Jesus ist unwillig: Lasst die Kinder zu mir, hindert sie nicht (Kind, Jesus, durchgestrichene abwehrende Hand); solchen gehört das Reich Gottes (Kind, Krone im Licht).",
+    "Segen: Jesus nimmt die Kinder zu sich und segnet sie (Bogen von Jesus zu den Kindern, segnende Hand über ihnen)."
   ],
   "interpretation_note_de": "Kinder sind als kleine Figuren gezeichnet (Zeichen «Kind»). Das Wort, wer das Reich Gottes nicht annehme wie ein Kind, komme nicht hinein ([[MRK.10.15]]), ist mit Kind und Krone im Licht nur angedeutet. Wer die Kinder bringt, sagt der Text nicht («man»); das Bild zeigt eine Menge.",
   "basis": [
@@ -144,5 +152,113 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.10.13",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-ZEICHEN-KIND"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-ZWOELF",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-ABLEHNEN"
+                ]
+              }
+            ],
+            "action_de": "Man bringt Kinder zu Jesus, damit er sie anrühre; die Jünger aber fahren die Leute an.",
+            "stage": {
+              "count": {
+                "FIG-ZEICHEN-KIND": 3
+              },
+              "floor_side": "left",
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "earnest",
+                "FIG-GRUPPE-MENGE": "worried"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.10.14-MRK.10.15",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-ABLEHNEN",
+                  "FIG-ZEICHEN-NICHT",
+                  "FIG-ZEICHEN-KIND",
+                  "FIG-ZEICHEN-REICH-GOTTES"
+                ]
+              }
+            ],
+            "action_de": "Jesus wird unwillig: Lasst die Kinder zu mir kommen, hindert sie nicht! Denn solchen gehört das Reich Gottes. Wer es nicht annimmt wie ein Kind, kommt nicht hinein.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-ZWOELF": "surprised"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.10.16",
+            "figures": [
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ZEICHEN-KIND"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SEGNEN"
+            ],
+            "speech": [],
+            "action_de": "Jesus schliesst die Kinder in die Arme und segnet sie, indem er ihnen die Hände auflegt.",
+            "stage": {
+              "count": {
+                "FIG-ZEICHEN-KIND": 3
+              },
+              "at": {
+                "FIG-ZEICHEN-SEGNEN": "FIG-ZEICHEN-KIND"
+              },
+              "mood": {
+                "FIG-JESUS": "smile"
+              },
+              "x": {
+                "FIG-JESUS": 70
+              },
+              "floor_x": {
+                "FIG-ZEICHEN-KIND": 92
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Abgewiesen: Leute bringen Kinder; die Jünger weisen sie ab (abwehrende Hand).",
+          "Lasst sie kommen: Jesus ist unwillig: Hindert sie nicht (abwehrende Hand, «nicht»); solchen gehört das Reich Gottes (Kind, Krone im Licht).",
+          "Segen: Jesus nimmt die Kinder zu sich und segnet sie (segnende Hand)."
+        ]
+      }
+    }
+  ]
 }

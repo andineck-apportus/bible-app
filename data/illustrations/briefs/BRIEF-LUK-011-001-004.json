@@ -26,6 +26,7 @@
           "from": "FIG-ROLLE-JUENGER",
           "to": "FIG-JESUS",
           "icons": [
+            "FIG-JESUS",
             "FIG-GRUPPE-JUENGER",
             "FIG-ZEICHEN-BETEN",
             "FIG-ZEICHEN-FRAGEN"
@@ -36,11 +37,8 @@
       "stage": {
         "god_side": "left",
         "x": {
-          "FIG-JESUS": 60,
-          "FIG-ROLLE-JUENGER": 140
-        },
-        "hold": {
-          "FIG-JESUS": "PRAY"
+          "FIG-JESUS": 56,
+          "FIG-ROLLE-JUENGER": 150
         },
         "signs_who": {
           "FIG-ZEICHEN-BETEN": [
@@ -48,6 +46,7 @@
           ]
         },
         "mood": {
+          "FIG-JESUS": "calm",
           "FIG-ROLLE-JUENGER": "earnest"
         }
       }
@@ -84,7 +83,11 @@
         "god_side": "right",
         "x": {
           "FIG-JESUS": 30,
-          "FIG-GRUPPE-JUENGER": 96
+          "FIG-GRUPPE-JUENGER": 120
+        },
+        "mood": {
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-JUENGER": "calm"
         }
       }
     },
@@ -103,6 +106,8 @@
           "to": "FIG-GOTT",
           "icons": [
             "FIG-OBJ-BROT",
+            "FIG-ZEICHEN-TAGE",
+            "FIG-ZEICHEN-TAGE",
             "FIG-ZEICHEN-TAGE"
           ]
         }
@@ -111,8 +116,12 @@
       "stage": {
         "god_side": "right",
         "x": {
-          "FIG-GRUPPE-JUENGER": 60
-        }
+          "FIG-GRUPPE-JUENGER": 124
+        },
+        "mood": {
+          "FIG-GRUPPE-JUENGER": "calm"
+        },
+        "bubble_y": 28
       }
     },
     {
@@ -130,8 +139,8 @@
           "to": "FIG-GOTT",
           "icons": [
             "FIG-ZEICHEN-VERGEBEN",
-            "FIG-ZEICHEN-BEWAHREN",
-            "FIG-ZEICHEN-VERSUCHUNG"
+            "FIG-ZEICHEN-VERSUCHUNG",
+            "FIG-ZEICHEN-NICHT"
           ]
         }
       ],
@@ -139,7 +148,7 @@
       "stage": {
         "god_side": "right",
         "x": {
-          "FIG-GRUPPE-JUENGER": 60
+          "FIG-GRUPPE-JUENGER": 100
         },
         "mood": {
           "FIG-GRUPPE-JUENGER": "earnest"
@@ -154,12 +163,12 @@
     "Vergib uns unsere Sünden, denn auch wir vergeben jedem, der uns etwas schuldet; und führe uns nicht in Versuchung."
   ],
   "captions_de": [
-    "Lehre uns beten: Jesus betet zum Vater (Strahlenkranz); danach bittet ihn ein Jünger: Lehre uns beten (Jünger, Gebetszeichen, Frage).",
+    "Lehre uns beten: Jesus hat zum Vater gebetet (Strahlenkranz, Gebetszeichen); als er aufhört, bittet ihn ein Jünger: Lehre uns beten (Jesus, Jünger, Gebetszeichen, Frage).",
     "Vater: Jesus lehrt beten (Gebetszeichen); die Jünger beten zum Vater (Strahlenkranz): dein Name (Gottesname, leuchtend), dein Reich (Krone).",
-    "Brot: Die Jünger bitten den Vater um das tägliche Brot, Tag für Tag (Brot, Sonne).",
-    "Vergebung und Bewahrung: Die Jünger bitten um Vergebung (zerrissener Schuldschein) und darum, nicht in Versuchung zu kommen (Schild, Köder am Haken)."
+    "Brot: Die Jünger bitten den Vater (Strahlenkranz) um das tägliche Brot, Tag für Tag (Brot, Sonnen in einer Reihe).",
+    "Vergebung und Versuchung: Die Jünger bitten den Vater (Strahlenkranz) um Vergebung (zerrissener Schuldschein) und darum, nicht in Versuchung zu kommen (Köder am Haken, daneben roter Kreis mit Schrägbalken: nicht)."
   ],
-  "interpretation_note_de": "Lukas überliefert eine kürzere Fassung des Vaterunsers mit fünf Bitten ([[LUK.11.2-LUK.11.4]]); die Bitten um Gottes Willen und um Rettung vor dem Bösen fehlen hier (vgl. [[MAT.6.10]], [[MAT.6.13]]). Gott erscheint als Strahlenkranz, angeredet einfach als «Vater». Die Zeichen sind wie bei Matthäus Deutung: Schuldschein für Sünde und Schuld, Köder für Versuchung, Schild für Bewahrung. Johannes und seine Jünger ([[LUK.11.1]]) zeigt das Bild nicht.",
+  "interpretation_note_de": "Lukas überliefert eine kürzere Fassung des Vaterunsers mit fünf Bitten ([[LUK.11.2-LUK.11.4]]); die Bitten um Gottes Willen und um Rettung vor dem Bösen fehlen hier (vgl. [[MAT.6.10]], [[MAT.6.13]]). Gott erscheint als Strahlenkranz, angeredet einfach als «Vater». Die Zeichen sind wie bei Matthäus Deutung: Schuldschein für Sünde und Schuld, Köder für Versuchung, das Verbotszeichen für «nicht». Johannes und seine Jünger ([[LUK.11.1]]) zeigt das Bild nicht.",
   "basis": [
     {
       "record": "TU-LUK-011-001-004",
@@ -196,5 +205,159 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "LUK.11.1",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-ROLLE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-BETEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-JUENGER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-ZEICHEN-BETEN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Als Jesus an einem Ort gebetet hat, bittet ihn einer seiner Jünger: Herr, lehre uns beten, wie auch Johannes seine Jünger gelehrt hat.",
+            "stage": {
+              "god_side": "left",
+              "x": {
+                "FIG-JESUS": 60,
+                "FIG-ROLLE-JUENGER": 140
+              },
+              "hold": {
+                "FIG-JESUS": "PRAY"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-BETEN": [
+                  "FIG-JESUS"
+                ]
+              },
+              "mood": {
+                "FIG-ROLLE-JUENGER": "earnest"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "LUK.11.2",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-BETEN"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-NAME-GOTTES",
+                  "FIG-ZEICHEN-REICH-GOTTES"
+                ]
+              }
+            ],
+            "action_de": "Jesus antwortet: Wenn ihr betet, sprecht: Vater, dein Name werde geheiligt; dein Reich komme.",
+            "stage": {
+              "god_side": "right",
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-JUENGER": 96
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "LUK.11.3",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-OBJ-BROT",
+                  "FIG-ZEICHEN-TAGE"
+                ]
+              }
+            ],
+            "action_de": "Unser tägliches Brot gib uns Tag für Tag.",
+            "stage": {
+              "god_side": "right",
+              "x": {
+                "FIG-GRUPPE-JUENGER": 60
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "LUK.11.4",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-VERGEBEN",
+                  "FIG-ZEICHEN-BEWAHREN",
+                  "FIG-ZEICHEN-VERSUCHUNG"
+                ]
+              }
+            ],
+            "action_de": "Vergib uns unsere Sünden, denn auch wir vergeben jedem, der uns etwas schuldet; und führe uns nicht in Versuchung.",
+            "stage": {
+              "god_side": "right",
+              "x": {
+                "FIG-GRUPPE-JUENGER": 60
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "earnest"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Lehre uns beten: Jesus betet zum Vater (Strahlenkranz); danach bittet ihn ein Jünger: Lehre uns beten (Jünger, Gebetszeichen, Frage).",
+          "Vater: Jesus lehrt beten (Gebetszeichen); die Jünger beten zum Vater (Strahlenkranz): dein Name (Gottesname, leuchtend), dein Reich (Krone).",
+          "Brot: Die Jünger bitten den Vater um das tägliche Brot, Tag für Tag (Brot, Sonne).",
+          "Vergebung und Bewahrung: Die Jünger bitten um Vergebung (zerrissener Schuldschein) und darum, nicht in Versuchung zu kommen (Schild, Köder am Haken)."
+        ],
+        "interpretation_note_de": "Lukas überliefert eine kürzere Fassung des Vaterunsers mit fünf Bitten ([[LUK.11.2-LUK.11.4]]); die Bitten um Gottes Willen und um Rettung vor dem Bösen fehlen hier (vgl. [[MAT.6.10]], [[MAT.6.13]]). Gott erscheint als Strahlenkranz, angeredet einfach als «Vater». Die Zeichen sind wie bei Matthäus Deutung: Schuldschein für Sünde und Schuld, Köder für Versuchung, Schild für Bewahrung. Johannes und seine Jünger ([[LUK.11.1]]) zeigt das Bild nicht."
+      }
+    }
+  ]
 }

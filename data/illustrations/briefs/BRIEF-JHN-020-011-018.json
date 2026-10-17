@@ -13,9 +13,9 @@
       "n": 1,
       "reference": "JHN.20.11-JHN.20.13",
       "figures": [
-        "FIG-MARIA-MAGDALA",
         "FIG-ROLLE-ENGEL",
-        "FIG-ROLLE-ENGEL"
+        "FIG-ROLLE-ENGEL",
+        "FIG-MARIA-MAGDALA"
       ],
       "objects": [
         "FIG-ORT-GRAB"
@@ -52,7 +52,8 @@
         "mood": {
           "FIG-MARIA-MAGDALA": "worried",
           "FIG-ROLLE-ENGEL": "calm"
-        }
+        },
+        "before": true
       }
     },
     {
@@ -97,11 +98,11 @@
         "at": {
           "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-MARIA-MAGDALA"
         },
-        "back_side": "left",
+        "back_side": "right",
         "before": true,
         "x": {
-          "FIG-MARIA-MAGDALA": 56,
-          "FIG-JESUS": 146
+          "FIG-JESUS": 40,
+          "FIG-MARIA-MAGDALA": 146
         },
         "mood": {
           "FIG-MARIA-MAGDALA": "worried",
@@ -161,27 +162,29 @@
         "FIG-GRUPPE-JUENGER"
       ],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-ABSTAND",
-        "FIG-ZEICHEN-SEHEN"
-      ],
+      "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-MARIA-MAGDALA",
           "icons": [
             "FIG-GRUPPE-JUENGER",
+            "FIG-JESUS",
             "FIG-ZEICHEN-HINAUF",
             "FIG-GOTT"
+          ]
+        },
+        {
+          "from": "FIG-MARIA-MAGDALA",
+          "to": "FIG-GRUPPE-JUENGER",
+          "icons": [
+            "FIG-ZEICHEN-SEHEN",
+            "FIG-JESUS"
           ]
         }
       ],
       "action_de": "Jesus: «Halte mich nicht fest! Geh zu meinen Brüdern und sag ihnen: Ich steige hinauf zu meinem Vater und eurem Vater, zu meinem Gott und eurem Gott.» Maria verkündet den Jüngern: «Ich habe den Herrn gesehen.»",
       "stage": {
-        "split": 2,
-        "at": {
-          "FIG-ZEICHEN-SEHEN": "FIG-MARIA-MAGDALA"
-        },
         "mood": {
           "FIG-MARIA-MAGDALA": "delight",
           "FIG-GRUPPE-JUENGER": "surprised"
@@ -204,9 +207,9 @@
   ],
   "captions_de": [
     "Zwei Engel: Die Engel fragen die weinende Maria (Träne, ?); sie antwortet: Mein Herr ist fort (Jesus, leer).",
-    "Nicht erkannt: Jesus fragt Maria (Träne, ?); sie erkennt ihn nicht (grauer Nebel) und fragt nach dem Herrn (Jesus, ?).",
+    "Nicht erkannt: Jesus fragt Maria (Träne, ?); sie erkennt ihn nicht (Wirbel mit Fragezeichen) und fragt nach dem Herrn (Jesus, ?).",
     "«Mariam!»: Jesus ruft sie beim Namen (Maria); sie erkennt ihn: «Rabbuni» (Jesus) und freut sich.",
-    "Gesandt: Jesus sendet Maria zu den Jüngern: Ich steige hinauf zu Gott (Jünger, Pfeil nach oben, Strahlenkranz); Maria geht zu den Jüngern: Ich habe den Herrn gesehen (Auge)."
+    "Gesandt: Jesus sendet Maria zu den Jüngern: Ich steige hinauf zu Gott (Jünger, Jesus, Pfeil nach oben, Strahlenkranz); Maria geht zu den Jüngern (Pfeil): Ich habe den Herrn gesehen (Auge, Jesus)."
   ],
   "interpretation_note_de": "Die zwei Engel sitzen nach [[JHN.20.12]] im Grab, einer beim Kopf, einer bei den Füssen; im Bild stehen sie vor dem Grab. Dass Maria Jesus für den Gärtner hält ([[JHN.20.15]]), zeigt das Zeichen «nicht verstehen»; Jesus selbst ist nicht verändert gezeichnet. Die gestrichelte Linie trennt die zwei Orte in Feld 4 (Garten und Jünger).",
   "basis": [
@@ -245,5 +248,207 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.20.11-JHN.20.13",
+            "figures": [
+              "FIG-MARIA-MAGDALA",
+              "FIG-ROLLE-ENGEL",
+              "FIG-ROLLE-ENGEL"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-ENGEL",
+                "to": "FIG-MARIA-MAGDALA",
+                "icons": [
+                  "FIG-ZEICHEN-TRAUER",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-MARIA-MAGDALA",
+                "to": "FIG-ROLLE-ENGEL",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FEHLT"
+                ]
+              }
+            ],
+            "action_de": "Maria steht weinend am Grab und schaut hinein; sie sieht zwei Engel in weissen Gewändern. Sie fragen: «Frau, warum weinst du?» Sie sagt: «Sie haben meinen Herrn weggenommen, und ich weiss nicht, wo sie ihn hingelegt haben.»",
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-MARIA-MAGDALA"
+                ]
+              },
+              "back_side": "right",
+              "mood": {
+                "FIG-MARIA-MAGDALA": "worried",
+                "FIG-ROLLE-ENGEL": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.20.14-JHN.20.15",
+            "figures": [
+              "FIG-MARIA-MAGDALA",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-GARTEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER",
+              "FIG-ZEICHEN-NICHT-VERSTEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-MARIA-MAGDALA",
+                "icons": [
+                  "FIG-ZEICHEN-TRAUER",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-MARIA-MAGDALA",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Sie wendet sich um und sieht Jesus dastehen, weiss aber nicht, dass es Jesus ist. Er fragt: «Frau, warum weinst du? Wen suchst du?» Sie hält ihn für den Gärtner: «Herr, wenn du ihn weggetragen hast, sag mir, wo.»",
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-MARIA-MAGDALA"
+                ]
+              },
+              "at": {
+                "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-MARIA-MAGDALA"
+              },
+              "back_side": "left",
+              "before": true,
+              "x": {
+                "FIG-MARIA-MAGDALA": 56,
+                "FIG-JESUS": 146
+              },
+              "mood": {
+                "FIG-MARIA-MAGDALA": "worried",
+                "FIG-JESUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.20.16",
+            "figures": [
+              "FIG-MARIA-MAGDALA",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-GARTEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-MARIA-MAGDALA",
+                "icons": [
+                  "FIG-MARIA-MAGDALA"
+                ]
+              },
+              {
+                "from": "FIG-MARIA-MAGDALA",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt zu ihr: «Mariam!» Sie wendet sich um und sagt auf Hebräisch: «Rabbuni!», das heisst: «Lehrer!»",
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-MARIA-MAGDALA"
+                ]
+              },
+              "back_side": "right",
+              "mood": {
+                "FIG-MARIA-MAGDALA": "delight",
+                "FIG-JESUS": "smile"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.20.17-JHN.20.18",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-MARIA-MAGDALA",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-ABSTAND",
+              "FIG-ZEICHEN-SEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-MARIA-MAGDALA",
+                "icons": [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-ZEICHEN-HINAUF",
+                  "FIG-GOTT"
+                ]
+              }
+            ],
+            "action_de": "Jesus: «Halte mich nicht fest! Geh zu meinen Brüdern und sag ihnen: Ich steige hinauf zu meinem Vater und eurem Vater, zu meinem Gott und eurem Gott.» Maria verkündet den Jüngern: «Ich habe den Herrn gesehen.»",
+            "stage": {
+              "split": 2,
+              "at": {
+                "FIG-ZEICHEN-SEHEN": "FIG-MARIA-MAGDALA"
+              },
+              "mood": {
+                "FIG-MARIA-MAGDALA": "delight",
+                "FIG-GRUPPE-JUENGER": "surprised"
+              },
+              "arrows": [
+                [
+                  "FIG-MARIA-MAGDALA",
+                  "FIG-GRUPPE-JUENGER",
+                  "go"
+                ]
+              ]
+            }
+          }
+        ],
+        "captions_de": [
+          "Zwei Engel: Die Engel fragen die weinende Maria (Träne, ?); sie antwortet: Mein Herr ist fort (Jesus, leer).",
+          "Nicht erkannt: Jesus fragt Maria (Träne, ?); sie erkennt ihn nicht (grauer Nebel) und fragt nach dem Herrn (Jesus, ?).",
+          "«Mariam!»: Jesus ruft sie beim Namen (Maria); sie erkennt ihn: «Rabbuni» (Jesus) und freut sich.",
+          "Gesandt: Jesus sendet Maria zu den Jüngern: Ich steige hinauf zu Gott (Jünger, Pfeil nach oben, Strahlenkranz); Maria geht zu den Jüngern: Ich habe den Herrn gesehen (Auge)."
+        ]
+      }
+    }
+  ]
 }

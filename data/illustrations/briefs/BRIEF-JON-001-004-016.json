@@ -52,14 +52,7 @@
           "FIG-ZEICHEN-SCHLAFEN": "FIG-JONA",
           "FIG-ZEICHEN-STURM": "FIG-GOTT"
         },
-        "god_side": "left",
-        "arrows": [
-          [
-            "FIG-GOTT",
-            "FIG-OBJ-SCHIFF",
-            "act"
-          ]
-        ]
+        "god_side": "left"
       }
     },
     {
@@ -107,8 +100,7 @@
         },
         "at": {
           "FIG-OBJ-LOS": "FIG-JONA"
-        },
-        "at_top": true
+        }
       }
     },
     {
@@ -150,7 +142,8 @@
             "throw"
           ]
         ],
-        "sea": "calm"
+        "sea": "calm",
+        "in_water": true
       }
     },
     {
@@ -162,7 +155,8 @@
       ],
       "objects": [
         "FIG-OBJ-SCHIFF",
-        "FIG-ORT-MEER-OFFEN"
+        "FIG-ORT-MEER-OFFEN",
+        "FIG-OBJ-ALTAR"
       ],
       "signs": [],
       "speech": [
@@ -189,7 +183,10 @@
           "FIG-GRUPPE-SEELEUTE": "calm"
         },
         "god_side": "right",
-        "sea": "calm"
+        "sea": "calm",
+        "at": {
+          "FIG-OBJ-ALTAR": "FIG-GRUPPE-SEELEUTE"
+        }
       }
     }
   ],
@@ -200,10 +197,10 @@
     "Die Seeleute fürchten nun JHWH; sie bringen ihm ein Opfer dar und geloben Gelübde."
   ],
   "captions_de": [
-    "Sturm: Gott schickt einen Sturm (Wolke, Blitz); die Seeleute fürchten sich, Jona schläft im Schiff (Mond).",
-    "Das Los fällt auf Jona (Steine über ihm); er bekennt sich zu JHWH, der Meer und Land gemacht hat (Strahlenkranz, Meer, Ufer).",
-    "Ins Meer: Auf sein eigenes Wort werfen die Seeleute Jona ins Meer; das Meer wird still.",
-    "Die Seeleute wenden sich JHWH zu (Strahlenkranz), bringen ein Opfer dar und geloben Gelübde (Altar); das Meer ist still."
+    "Sturm: Gott schickt einen Sturm (Wolke mit Blitz neben dem Strahlenkranz); die Seeleute fürchten sich, Jona schläft im Schiff (Mond).",
+    "Das Los fällt auf Jona (zwei helle und ein dunkler Stein bei ihm); er bekennt sich zu JHWH, der Meer und Land gemacht hat (Strahlenkranz, Meer, Ufer).",
+    "Ins Meer: Auf sein eigenes Wort werfen die Seeleute Jona ins Meer (Bogen); das Meer wird still.",
+    "Die Seeleute wenden sich JHWH zu (Strahlenkranz), bringen ein Opfer dar (Altar auf dem Schiff) und geloben Gelübde (Sprechblase mit Altar); das Meer ist still."
   ],
   "interpretation_note_de": "Die Seeleute sind eine Gruppe ohne Namen; der Text nennt sie nicht nach Herkunft. Das Bild zeigt nicht, wie das Los geworfen wird, nur, dass es auf Jona fällt ([[JON.1.7]]). Das Opfer ist als Altar mit Flamme gezeichnet, ohne Tier; wo es dargebracht wurde, sagt [[JON.1.16]] nicht.",
   "basis": [
@@ -403,6 +400,203 @@
           "Das Los fällt auf Jona (Steine); er bekennt sich zu JHWH, der Meer und Land gemacht hat (Strahlenkranz, Meer, Ufer).",
           "Ins Meer: Auf sein eigenes Wort werfen die Seeleute Jona ins Meer; das Meer wird still.",
           "Die Seeleute fürchten JHWH, bringen ein Opfer dar und geloben Gelübde (Altar)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JON.1.4-JON.1.6",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-SEELEUTE",
+              "FIG-JONA"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHIFF",
+              "FIG-ORT-MEER-OFFEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-STURM",
+              "FIG-ZEICHEN-SCHLAFEN"
+            ],
+            "speech": [],
+            "action_de": "JHWH schleudert einen grossen Wind auf das Meer; die Seeleute fürchten sich und schreien zu ihren Göttern, Jona aber schläft tief unten im Schiff.",
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-SEELEUTE": "FIG-OBJ-SCHIFF",
+                "FIG-JONA": "FIG-OBJ-SCHIFF"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-SEELEUTE": [
+                  0.28,
+                  0.42
+                ],
+                "FIG-JONA": [
+                  0.74,
+                  0.6
+                ]
+              },
+              "pose": {
+                "FIG-JONA": "sleep"
+              },
+              "mood": {
+                "FIG-GRUPPE-SEELEUTE": "surprised"
+              },
+              "at": {
+                "FIG-ZEICHEN-SCHLAFEN": "FIG-JONA",
+                "FIG-ZEICHEN-STURM": "FIG-GOTT"
+              },
+              "god_side": "left",
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-OBJ-SCHIFF",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JON.1.7-JON.1.10",
+            "figures": [
+              "FIG-GRUPPE-SEELEUTE",
+              "FIG-JONA"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHIFF",
+              "FIG-OBJ-LOS"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JONA",
+                "to": "FIG-GRUPPE-SEELEUTE",
+                "icons": [
+                  "FIG-GOTT",
+                  "FIG-ORT-MEER-OFFEN",
+                  "FIG-ORT-UFER"
+                ]
+              }
+            ],
+            "action_de": "Die Seeleute werfen Lose, und das Los fällt auf Jona. Er bekennt: Ich fürchte JHWH, den Gott des Himmels, der das Meer und das trockene Land gemacht hat.",
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-SEELEUTE": "FIG-OBJ-SCHIFF",
+                "FIG-JONA": "FIG-OBJ-SCHIFF"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-SEELEUTE": [
+                  0.27,
+                  0.42
+                ],
+                "FIG-JONA": [
+                  0.7,
+                  0.45
+                ]
+              },
+              "mood": {
+                "FIG-GRUPPE-SEELEUTE": "surprised",
+                "FIG-JONA": "calm"
+              },
+              "at": {
+                "FIG-OBJ-LOS": "FIG-JONA"
+              },
+              "at_top": true
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JON.1.12-JON.1.15",
+            "figures": [
+              "FIG-JONA",
+              "FIG-GRUPPE-SEELEUTE"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHIFF",
+              "FIG-ORT-MEER-OFFEN"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Auf Jonas eigenes Wort hin werfen die Seeleute ihn ins Meer; da hört das Meer auf zu toben.",
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-SEELEUTE": "FIG-OBJ-SCHIFF"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-SEELEUTE": [
+                  0.4,
+                  0.42
+                ]
+              },
+              "pose": {
+                "FIG-JONA": "fall"
+              },
+              "mood": {
+                "FIG-JONA": "calm",
+                "FIG-GRUPPE-SEELEUTE": "worried"
+              },
+              "big_side": "right",
+              "arrows": [
+                [
+                  "FIG-GRUPPE-SEELEUTE",
+                  "FIG-JONA",
+                  "throw"
+                ]
+              ],
+              "sea": "calm"
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JON.1.16",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-SEELEUTE"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHIFF",
+              "FIG-ORT-MEER-OFFEN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-SEELEUTE",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-OPFER"
+                ]
+              }
+            ],
+            "action_de": "Die Seeleute fürchten nun JHWH; sie bringen ihm ein Opfer dar und geloben Gelübde.",
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-SEELEUTE": "FIG-OBJ-SCHIFF"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-SEELEUTE": [
+                  0.4,
+                  0.42
+                ]
+              },
+              "mood": {
+                "FIG-GRUPPE-SEELEUTE": "calm"
+              },
+              "god_side": "right",
+              "sea": "calm"
+            }
+          }
+        ],
+        "captions_de": [
+          "Sturm: Gott schickt einen Sturm (Wolke, Blitz); die Seeleute fürchten sich, Jona schläft im Schiff (Mond).",
+          "Das Los fällt auf Jona (Steine über ihm); er bekennt sich zu JHWH, der Meer und Land gemacht hat (Strahlenkranz, Meer, Ufer).",
+          "Ins Meer: Auf sein eigenes Wort werfen die Seeleute Jona ins Meer; das Meer wird still.",
+          "Die Seeleute wenden sich JHWH zu (Strahlenkranz), bringen ein Opfer dar und geloben Gelübde (Altar); das Meer ist still."
         ]
       }
     }

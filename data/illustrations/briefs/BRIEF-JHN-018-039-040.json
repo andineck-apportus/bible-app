@@ -42,12 +42,14 @@
       "n": 2,
       "reference": "JHN.18.40",
       "figures": [
+        "FIG-GRUPPE-MENGE",
         "FIG-PILATUS",
         "FIG-JESUS",
-        "FIG-BARABBAS",
-        "FIG-GRUPPE-MENGE"
+        "FIG-BARABBAS"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-OBJ-FESSEL"
+      ],
       "signs": [],
       "speech": [
         {
@@ -55,7 +57,13 @@
           "to": "FIG-PILATUS",
           "icons": [
             "FIG-JESUS",
-            "FIG-ZEICHEN-ABLEHNEN",
+            "FIG-ZEICHEN-ABLEHNEN"
+          ]
+        },
+        {
+          "from": "FIG-GRUPPE-MENGE",
+          "to": "FIG-PILATUS",
+          "icons": [
             "FIG-BARABBAS",
             "FIG-ZEICHEN-FREILASSEN"
           ]
@@ -67,6 +75,9 @@
           "FIG-GRUPPE-MENGE": "earnest",
           "FIG-PILATUS": "worried",
           "FIG-BARABBAS": "surprised"
+        },
+        "hold": {
+          "FIG-BARABBAS": "FIG-OBJ-FESSEL"
         }
       }
     }
@@ -77,7 +88,7 @@
   ],
   "captions_de": [
     "Freilassen?: Pilatus fragt die Menge, ob er Jesus freilassen soll (Jesus, offene Fessel, ?).",
-    "Barabbas: Die Menge ruft: nicht Jesus (abwehrende Hand), sondern Barabbas freilassen (gefesselter Mann, offene Fessel)."
+    "Barabbas: Die Menge ruft: nicht Jesus (Jesus, abwehrende Hand), sondern Barabbas freilassen (Barabbas, offene Fessel); Barabbas steht gefesselt da (Strick)."
   ],
   "interpretation_note_de": "Wer «sie» sind, die nach Barabbas rufen ([[JHN.18.40]]), sagt der Abschnitt nicht genauer; Pilatus spricht «die Juden» an ([[JHN.18.38]]). Sie sind als neutrale Menge gezeichnet, nicht als Volk im Ganzen. Barabbas trägt gefesselte Hände (Gefangener).",
   "basis": [
@@ -104,5 +115,80 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.18.39",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-PILATUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PILATUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FREILASSEN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Pilatus erinnert an den Brauch, ihnen zum Passa einen Gefangenen freizulassen, und fragt: «Wollt ihr, dass ich euch den König der Juden freilasse?»",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-PILATUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.18.40",
+            "figures": [
+              "FIG-PILATUS",
+              "FIG-JESUS",
+              "FIG-BARABBAS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-ABLEHNEN",
+                  "FIG-BARABBAS",
+                  "FIG-ZEICHEN-FREILASSEN"
+                ]
+              }
+            ],
+            "action_de": "Sie schreien wieder: «Nicht diesen, sondern Barabbas!» Barabbas aber war ein Räuber.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-PILATUS": "worried",
+                "FIG-BARABBAS": "surprised"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Freilassen?: Pilatus fragt die Menge, ob er Jesus freilassen soll (Jesus, offene Fessel, ?).",
+          "Barabbas: Die Menge ruft: nicht Jesus (abwehrende Hand), sondern Barabbas freilassen (gefesselter Mann, offene Fessel)."
+        ]
+      }
+    }
+  ]
 }

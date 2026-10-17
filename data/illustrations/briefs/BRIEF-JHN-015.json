@@ -45,7 +45,8 @@
         ],
         "mood": {
           "FIG-GRUPPE-ZWOELF": "calm"
-        }
+        },
+        "big_y": 40
       }
     },
     {
@@ -76,16 +77,24 @@
         "mood": {
           "FIG-GRUPPE-ZWOELF": "smile"
         },
-        "god_side": "right",
-        "air_x": 146,
-        "air_y": 48,
+        "god_side": "left",
         "arrows": [
           [
             "FIG-GOTT",
             "FIG-JESUS",
             "act"
           ]
-        ]
+        ],
+        "signs_who": {
+          "FIG-ZEICHEN-LIEBE": []
+        },
+        "at": {
+          "FIG-ZEICHEN-LIEBE": "FIG-GOTT"
+        },
+        "x": {
+          "FIG-GRUPPE-ZWOELF": 46,
+          "FIG-JESUS": 140
+        }
       }
     },
     {
@@ -103,8 +112,9 @@
           "to": "FIG-GRUPPE-ZWOELF",
           "icons": [
             "FIG-ZEICHEN-WELT",
-            "FIG-ZEICHEN-ABLEHNEN",
+            "FIG-ZEICHEN-HASS",
             "FIG-JESUS",
+            "FIG-ZEICHEN-HASS",
             "FIG-GRUPPE-ZWOELF"
           ]
         }
@@ -125,7 +135,7 @@
   "captions_de": [
     "Der Weinstock: Jesus: Ich bin der Weinstock, ihr die Reben (Jesus, Weinstock, Jünger); der Vater pflegt ihn (Linie vom Strahlenkranz).",
     "Bleiben in der Liebe: Der Vater liebt Jesus (Herzen beim Strahlenkranz, Linie), und Jesus sagt: Ich liebe euch (Jesus, Herzen, Jünger).",
-    "Der Hass der Welt: Die Welt lehnt Jesus ab und auch die Jünger (Erdkugel, abwehrende Hand, Jesus, Jünger)."
+    "Der Hass der Welt: Die Welt hasst Jesus und auch die Jünger (Erdkugel, graues gebrochenes Herz, Jesus, graues gebrochenes Herz, Jünger)."
   ],
   "interpretation_note_de": "Je ein Feld aus den drei Abschnitten: Weinstock, Liebe, Hass der Welt.",
   "basis": [
@@ -140,5 +150,127 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.15.1-JHN.15.8",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-OBJ-WEINSTOCK"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-OBJ-WEINSTOCK",
+                  "FIG-GRUPPE-ZWOELF"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: Ich bin der wahre Weinstock, mein Vater ist der Weingärtner, ihr seid die Reben. Wer in mir bleibt, bringt viel Frucht.",
+            "stage": {
+              "god_side": "right",
+              "big_side": "right",
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-OBJ-WEINSTOCK",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.15.9-JHN.15.17",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-LIEBE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-LIEBE",
+                  "FIG-GRUPPE-ZWOELF"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: Wie mich der Vater geliebt hat, so habe auch ich euch geliebt. Bleibt in meiner Liebe!",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "smile"
+              },
+              "god_side": "right",
+              "air_x": 146,
+              "air_y": 48,
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.15.18-JHN.15.27",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-WELT",
+                  "FIG-ZEICHEN-ABLEHNEN",
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-ZWOELF"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: Wenn die Welt euch hasst, so wisst, dass sie mich vor euch gehasst hat. Wie sie mich verfolgt haben, werden sie auch euch verfolgen.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "worried"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Der Weinstock: Jesus: Ich bin der Weinstock, ihr die Reben (Jesus, Weinstock, Jünger); der Vater pflegt ihn (Linie vom Strahlenkranz).",
+          "Bleiben in der Liebe: Der Vater liebt Jesus (Herzen beim Strahlenkranz, Linie), und Jesus sagt: Ich liebe euch (Jesus, Herzen, Jünger).",
+          "Der Hass der Welt: Die Welt lehnt Jesus ab und auch die Jünger (Erdkugel, abwehrende Hand, Jesus, Jünger)."
+        ]
+      }
+    }
+  ]
 }

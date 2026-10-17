@@ -16,7 +16,8 @@
      "FIG-ROLLE-PROPHET"
     ],
     "objects": [
-     "FIG-ORT-WUESTE"
+     "FIG-ORT-WUESTE",
+     "FIG-OBJ-SCHRIFTROLLE"
     ],
     "signs": [],
     "speech": [
@@ -40,6 +41,9 @@
      },
      "x": {
       "FIG-ROLLE-PROPHET": 60
+     },
+     "hold": {
+      "FIG-ROLLE-PROPHET": "FIG-OBJ-SCHRIFTROLLE"
      }
     }
    },
@@ -72,7 +76,8 @@
     "stage": {
      "mood": {
       "FIG-GRUPPE-MENGE": "earnest"
-     }
+     },
+     "in_water": true
     }
    },
    {
@@ -93,20 +98,24 @@
       "icons": [
        "FIG-ZEICHEN-TAUFE",
        "FIG-ZEICHEN-BRINGEN",
+       "FIG-JESUS",
        "FIG-HEILIGER-GEIST"
       ]
      }
     ],
     "action_de": "Johannes kündigt an: Nach mir kommt der Stärkere; ich habe mit Wasser getauft, er wird mit heiligem Geist taufen.",
     "action_gsw": "De Johannes chündet aa: Nach mir chunnt de Stärcher; ich han mit Wasser tauft, er wird mit heiligem Geischt taufe.",
-    "caption_de": "Ankündigung: Johannes tauft mit Wasser (Taufe); der nach ihm kommt, wird mit dem Geist taufen (Pfeil, Taube).",
-    "caption_gsw": "Aachündigung: De Johannes tauft mit Wasser (Taufi); de, wo nach em chunnt, wird mit em Geischt taufe (Pfiil, Tuube).",
+    "caption_de": "Ankündigung: Johannes tauft mit Wasser (Taufe); nach ihm kommt einer (Pfeil, Jesus), der mit dem Geist tauft (Taube).",
+    "caption_gsw": "Aachündigung: De Johannes tauft mit Wasser (Taufi); nach em chunnt eine (Pfiil, Jesus), wo mit em Geischt tauft (Tuube).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-MENGE": "surprised",
       "FIG-JOHANNES-TAEUFER": "earnest"
-     }
-    }
+     },
+     "in_water": true
+    },
+    "note_de": "Johannes nennt den Kommenden nicht beim Namen; dass es Jesus ist, zeigt der Text ab [[MRK.1.9]]. Das Bild nimmt das vorweg.",
+    "note_gsw": "De Johannes seit de Name vom Chommende nöd; dass es de Jesus isch, zeigt de Text ab [[MRK.1.9]]. S Bild nimmt das vorewäg."
    }
   ],
   "note_de": "Der Prophet steht für das Schriftwort, das Markus «bei Jesaja» findet; es verbindet [[ISA.40.3]] mit [[MAL.3.1]]. Die Taube in der Sprechblase zeigt den heiligen Geist; der «Stärkere» wird in [[MRK.1.7]] nicht mit Namen genannt und ist deshalb nicht als Person gezeichnet. Heuschrecken und Honig ([[MRK.1.6]]) sind weggelassen.",
@@ -150,7 +159,8 @@
        "FIG-JESUS",
        "act"
       ]
-     ]
+     ],
+     "in_water": true
     }
    },
    {
@@ -235,12 +245,19 @@
     "speech": [],
     "action_de": "Sogleich treibt der Geist Jesus hinaus in die Wüste.",
     "action_gsw": "Grad drufabe triibt de Geischt de Jesus use i d Wüeschti.",
-    "caption_de": "Hinaus: Der Geist (Taube) treibt Jesus in die Wüste (Pfeil).",
-    "caption_gsw": "Use: De Geischt (Tuube) triibt de Jesus i d Wüeschti (Pfiil).",
+    "caption_de": "Hinaus: Der Geist (Taube) treibt Jesus in die Wüste (Bogen von der Taube zu Jesus).",
+    "caption_gsw": "Use: De Geischt (Tuube) tribt de Jesus i d Wüeschti (Boge vo de Tuube zum Jesus).",
     "stage": {
      "x": {
       "FIG-JESUS": 70
-     }
+     },
+     "arrows": [
+      [
+       "FIG-HEILIGER-GEIST",
+       "FIG-JESUS",
+       "act"
+      ]
+     ]
     }
    },
    {
@@ -261,16 +278,23 @@
     "speech": [],
     "action_de": "Jesus ist vierzig Tage in der Wüste und wird vom Satan versucht; er ist bei den wilden Tieren, und die Engel dienen ihm.",
     "action_gsw": "De Jesus isch vierzg Täg i de Wüeschti und wird vom Satan versuecht; er isch bi de wilde Tier, und d Ängel dienet em.",
-    "caption_de": "Vierzig Tage: Jesus in der Wüste; der Satan (dunkler Schatten), ein wildes Tier, ein Engel dient ihm (Sonnen: viele Tage).",
-    "caption_gsw": "Vierzg Täg: De Jesus i de Wüeschti; de Satan (dunkle Schatte), es wilds Tier, en Ängel dient em (Sunne: vil Täg).",
+    "caption_de": "Vierzig Tage: Jesus in der Wüste; der Satan (dunkler Schatten), ein wildes Tier; ein Engel dient ihm (Bogen vom Engel zu Jesus; Sonnen: viele Tage).",
+    "caption_gsw": "Vierzg Täg: De Jesus i de Wüeschti; de Satan (dunkle Schatte), es wilds Tier; en Ängel dient em (Boge vom Ängel zum Jesus; Sunne: vill Täg).",
     "stage": {
      "back_side": "left",
      "count": {
       "FIG-ZEICHEN-TAGE": 5
      },
      "mood": {
-      "FIG-JESUS": "earnest"
-     }
+      "FIG-JESUS": "calm"
+     },
+     "arrows": [
+      [
+       "FIG-ROLLE-ENGEL",
+       "FIG-JESUS",
+       "act"
+      ]
+     ]
     }
    }
   ],
@@ -301,7 +325,7 @@
       "from": "FIG-JESUS",
       "to": "FIG-GRUPPE-MENGE",
       "icons": [
-       "FIG-ZEICHEN-STUNDE",
+       "FIG-ZEICHEN-STUNDE-DA",
        "FIG-ZEICHEN-REICH-GOTTES",
        "FIG-ZEICHEN-UMKEHR",
        "FIG-ZEICHEN-GLAUBEN"
@@ -310,8 +334,8 @@
     ],
     "action_de": "Nachdem Johannes ausgeliefert ist, kommt Jesus nach Galiläa und verkündet: Die Zeit ist erfüllt, das Reich Gottes ist nahe; kehrt um und glaubt an das Evangelium.",
     "action_gsw": "Nachdem de Johannes uusgliferet worde isch, chunnt de Jesus uf Galiläa und verchündet: D Ziit isch erfüllt, s Riich vo Gott isch nooch; chered um und glaubed as Evangelium.",
-    "caption_de": "Verkündigung: Jesus spricht zur Menge: Die Zeit ist da, das Reich Gottes (Sanduhr, Krone im Licht); kehrt um und glaubt (Umkehr-Pfeil, Herz mit Licht).",
-    "caption_gsw": "Verchündigung: De Jesus redt zur Mängi: D Ziit isch da, s Riich vo Gott (Sanduhr, Chrone im Liecht); chered um und glaubed (Umchehr-Pfiil, Härz mit Liecht).",
+    "caption_de": "Verkündigung: Jesus spricht zur Menge: Die Zeit ist erfüllt (durchgelaufene Sanduhr), das Reich Gottes ist nahe (Krone im Licht); kehrt um und glaubt (Umkehr-Pfeil, Herz mit Licht).",
+    "caption_gsw": "Verchündigung: De Jesus redt zur Mängi: D Ziit isch erfüllt (durchgloffni Sanduhr), s Riich vo Gott isch nööch (Chrone im Liecht); chehred um und glaubed (Umchehr-Pfiil, Härz mit Liecht).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-MENGE": "surprised"
@@ -392,8 +416,8 @@
     ],
     "action_de": "Jesus ruft Jakobus und Johannes, die im Boot die Netze herrichten; sie lassen ihren Vater Zebedäus mit den Tagelöhnern im Boot zurück und gehen ihm nach.",
     "action_gsw": "De Jesus rüeft de Jakobus und de Johannes, wo im Boot d Netz parat mached; si lönd iren Vater Zebedäus mit de Taglöhner im Boot zrugg und gönd em noo.",
-    "caption_de": "Zurück im Boot: Jesus ruft Jakobus und Johannes (Fussspuren); sie gehen mit ihm, ihr Vater Zebedäus bleibt im Boot.",
-    "caption_gsw": "Zrugg im Boot: De Jesus rüeft de Jakobus und de Johannes (Fuessspure); si gönd mit em, iren Vater Zebedäus bliibt im Boot.",
+    "caption_de": "Beim Boot: Jesus ruft Jakobus und Johannes (Fussspuren); sie gehen mit ihm, ihr Vater Zebedäus bleibt im Boot.",
+    "caption_gsw": "Bim Boot: De Jesus rüeft de Jakobus und de Johannes (Fuessspure); si gönd mit em, iren Vater Zebedäus bliibt im Boot.",
     "stage": {
      "big_side": "right",
      "in": {
@@ -453,8 +477,8 @@
     ],
     "action_de": "Am Sabbat lehrt Jesus in der Synagoge von Kafarnaum; die Leute sind überwältigt, denn er lehrt mit Vollmacht, nicht wie die Schriftgelehrten.",
     "action_gsw": "Am Sabbat lehrt de Jesus i de Synagoge vo Kafarnaum; d Lüüt sind überwältiget, will er mit Vollmacht lehrt, nöd wie d Schriftglehrte.",
-    "caption_de": "Lehre: Am Sabbat (zwei Lampen) lehrt Jesus in der Synagoge (Schriftrolle, Licht); die Menge staunt.",
-    "caption_gsw": "Lehr: Am Sabbat (zwei Lampe) lehrt de Jesus i de Synagoge (Schriftrolle, Liecht); d Mängi stuunt.",
+    "caption_de": "Lehre: Am Sabbat (Sabbat-Zeichen: sechs graue und ein goldener Kreis) lehrt Jesus in der Synagoge (Schriftrolle, Licht); die Menge staunt.",
+    "caption_gsw": "Lehr: Am Sabbat (Sabbat-Zeiche: sächs graui und en goldige Chreis) lehrt de Jesus i de Synagoge (Schriftrolle, Liecht); d Mängi stuunt.",
     "stage": {
      "mood": {
       "FIG-GRUPPE-MENGE": "surprised"
@@ -603,20 +627,17 @@
      "FIG-ORT-HAUS"
     ],
     "signs": [
-     "FIG-ZEICHEN-HEILEN"
+     "FIG-ZEICHEN-AUFSTEHEN"
     ],
     "speech": [],
     "action_de": "Im Haus von Simon und Andreas liegt Simons Schwiegermutter mit Fieber; Jesus fasst ihre Hand und richtet sie auf, das Fieber verlässt sie, und sie dient ihnen.",
     "action_gsw": "Im Huus vom Simon und vom Andreas liit am Simon sini Schwigermuetter mit Fieber; de Jesus nimmt iri Hand und stellt si uf, s Fieber verlaat si, und si dient ine.",
-    "caption_de": "Aufgerichtet: Jesus fasst die Hand von Simons Schwiegermutter und richtet sie auf (Hand mit Licht); Simon schaut zu.",
-    "caption_gsw": "Ufgstellt: De Jesus nimmt d Hand vo de Schwigermuetter vom Simon und stellt si uf (Hand mit Liecht); de Simon luegt zue.",
+    "caption_de": "Aufgerichtet: Simons Schwiegermutter liegt mit Fieber; Jesus fasst ihre Hand (Bogen) und richtet sie auf (Figur über der Matte, goldener Pfeil nach oben); Simon schaut zu.",
+    "caption_gsw": "Ufgrichtet: Am Simon sini Schwigermuetter liit mit Fieber; de Jesus nimmt iri Hand (Boge) und richtet si uf (Figur über de Matte, goldige Pfiil nach obe); de Simon luegt zue.",
     "stage": {
      "back_side": "left",
      "pose": {
-      "FIG-SCHWIEGERMUTTER-PETRUS": "sit"
-     },
-     "at": {
-      "FIG-ZEICHEN-HEILEN": "FIG-SCHWIEGERMUTTER-PETRUS"
+      "FIG-SCHWIEGERMUTTER-PETRUS": "lie"
      },
      "arrows": [
       [
@@ -626,7 +647,15 @@
       ]
      ],
      "mood": {
-      "FIG-SCHWIEGERMUTTER-PETRUS": "smile"
+      "FIG-SCHWIEGERMUTTER-PETRUS": "calm"
+     },
+     "at": {
+      "FIG-ZEICHEN-AUFSTEHEN": "FIG-SCHWIEGERMUTTER-PETRUS"
+     },
+     "x": {
+      "FIG-PETRUS": 36,
+      "FIG-JESUS": 82,
+      "FIG-SCHWIEGERMUTTER-PETRUS": 140
      }
     }
    },
@@ -644,7 +673,8 @@
     ],
     "signs": [
      "FIG-ZEICHEN-NACHT",
-     "FIG-ZEICHEN-DAEMON"
+     "FIG-ZEICHEN-DAEMON",
+     "FIG-ZEICHEN-HEILEN"
     ],
     "speech": [
      {
@@ -657,26 +687,20 @@
     ],
     "action_de": "Am Abend bringt man alle Kranken und Besessenen; die ganze Stadt ist vor der Tür. Jesus heilt viele und treibt viele Dämonen aus, und er lässt die Dämonen nicht reden, weil sie ihn kennen.",
     "action_gsw": "Am Aabig bringt mer alli Chranke und Bsässne; di ganz Stadt isch vor de Tür. De Jesus heilt vili und triibt vili Dämone uus, und er laat d Dämone nöd rede, will si en kenned.",
-    "caption_de": "Am Abend (Mond): Vor der Tür Kranke und Besessene; Jesus heilt und verbietet den Dämonen zu reden (durchgestrichene Sprechblase).",
-    "caption_gsw": "Am Aabig (Mond): Vor de Tür Chranki und Bsässni; de Jesus heilt und verbüütet de Dämone z rede (durgstricheni Sprächblase).",
+    "caption_de": "Am Abend (Mond): Vor der Tür Kranke und Besessene; Jesus heilt (Hand mit Licht beim Kranken) und verbietet den Dämonen zu reden (durchgestrichene Sprechblase).",
+    "caption_gsw": "Am Aabig (Mond): Vor de Tüür Chranki und Bsesseni; de Jesus heilt (Hand mit Liecht bim Chranke) und verbüütet de Dämone z rede (durgstricheni Sprächblase).",
     "stage": {
      "back_side": "left",
      "at": {
-      "FIG-ZEICHEN-DAEMON": "FIG-ROLLE-BESESSENER"
+      "FIG-ZEICHEN-DAEMON": "FIG-ROLLE-BESESSENER",
+      "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
      },
      "pose": {
       "FIG-ROLLE-KRANKER": "sit"
      },
      "mood": {
       "FIG-GRUPPE-MENGE": "worried"
-     },
-     "arrows": [
-      [
-       "FIG-JESUS",
-       "FIG-ROLLE-KRANKER",
-       "act"
-      ]
-     ]
+     }
     }
    }
   ],
@@ -766,23 +790,38 @@
     "reference": "MRK.1.39",
     "figures": [
      "FIG-JESUS",
-     "FIG-GRUPPE-MENGE"
+     "FIG-GRUPPE-MENGE",
+     "FIG-ROLLE-BESESSENER"
     ],
     "objects": [
      "FIG-ORT-SYNAGOGE"
     ],
     "signs": [
-     "FIG-ZEICHEN-VERKUENDIGEN",
      "FIG-ZEICHEN-DAEMON",
      "FIG-ZEICHEN-FLIEHEN"
     ],
-    "speech": [],
+    "speech": [
+     {
+      "from": "FIG-JESUS",
+      "to": "FIG-GRUPPE-MENGE",
+      "icons": [
+       "FIG-ZEICHEN-VERKUENDIGEN"
+      ]
+     }
+    ],
     "action_de": "Jesus zieht durch ganz Galiläa, verkündet in ihren Synagogen und treibt die Dämonen aus.",
     "action_gsw": "De Jesus zieht dur ganz Galiläa, verchündet i irne Synagoge und triibt d Dämone uus.",
-    "caption_de": "Durch Galiläa: Jesus verkündet in den Synagogen (Rufer) und treibt Dämonen aus (Schatten, Pfeil weg).",
-    "caption_gsw": "Dur Galiläa: De Jesus verchündet i de Synagoge (Rüefer) und triibt Dämone uus (Schatte, Pfiil ewäg).",
+    "caption_de": "Durch Galiläa: Jesus verkündet in den Synagogen (Rufer) und treibt Dämonen aus (Schatten beim Besessenen, Pfeil weg).",
+    "caption_gsw": "Dur Galiläa: De Jesus verchündet i de Synagoge (Rüefer) und tribt Dämone uus (Schatte bim Bsessene, Pfiil wäg).",
     "stage": {
-     "back_side": "right"
+     "back_side": "right",
+     "before": true,
+     "at": {
+      "FIG-ZEICHEN-DAEMON": "FIG-ROLLE-BESESSENER"
+     },
+     "beside": {
+      "FIG-ZEICHEN-FLIEHEN": "FIG-ROLLE-BESESSENER"
+     }
     }
    }
   ],
@@ -853,8 +892,8 @@
     ],
     "action_de": "Jesus streckt die Hand aus, berührt ihn und sagt: Ich will; werde rein! Sogleich weicht der Aussatz, und er ist rein.",
     "action_gsw": "De Jesus streckt d Hand uus, rüert en aa und seit: Ich wott; wird rein! Grad wiicht de Uussatz, und er isch rein.",
-    "caption_de": "Rein: Jesus berührt ihn und sagt: Werde rein (Stern mit Tropfen); der Mann ist rein.",
-    "caption_gsw": "Rein: De Jesus rüert en aa und seit: Wird rein (Stärn mit Tropfe); de Maa isch rein.",
+    "caption_de": "Rein: Jesus streckt die Hand aus, berührt ihn (Bogen) und sagt: Werde rein (Stern mit Tropfen); der Mann ist rein.",
+    "caption_gsw": "Rein: De Jesus streckt d Hand uus, rüert en aa (Boge) und seit: Wärd rein (Stärn mit Tropfe); de Maa isch rein.",
     "stage": {
      "pose": {
       "FIG-ROLLE-AUSSAETZIGER": "kneel"
@@ -864,7 +903,7 @@
      },
      "mood": {
       "FIG-ROLLE-AUSSAETZIGER": "delight",
-      "FIG-JESUS": "earnest"
+      "FIG-JESUS": "calm"
      },
      "arrows": [
       [
@@ -872,7 +911,11 @@
        "FIG-ROLLE-AUSSAETZIGER",
        "act"
       ]
-     ]
+     ],
+     "x": {
+      "FIG-JESUS": 70,
+      "FIG-ROLLE-AUSSAETZIGER": 118
+     }
     }
    },
    {
@@ -901,7 +944,7 @@
     "caption_gsw": "Uftrag: De Jesus seit: Säg niemertem öppis (durgstricheni Sprächblase); zeig dich em Priester und bring s Opfer (Priester, Altar).",
     "stage": {
      "mood": {
-      "FIG-JESUS": "earnest"
+      "FIG-JESUS": "calm"
      }
     }
    },
@@ -982,7 +1025,8 @@
        "FIG-JESUS",
        "act"
       ]
-     ]
+     ],
+     "in_water": true
     }
    },
    {
@@ -1073,8 +1117,8 @@
     "speech": [],
     "action_de": "Jesus berührt einen Aussätzigen und macht ihn rein; der Mann erzählt es überall.",
     "action_gsw": "De Jesus rüert en Uussätzige aa und macht en rein; de Maa verzellt s überall.",
-    "caption_de": "Rein: Jesus berührt den knienden Aussätzigen, und er wird rein (Stern mit Tropfen).",
-    "caption_gsw": "Rein: De Jesus rüert de Uussätzig aa, wo chnüület, und er wird rein (Stärn mit Tropfe).",
+    "caption_de": "Rein: Jesus streckt die Hand nach dem knienden Aussätzigen aus (Bogen), und er wird rein (Stern mit Tropfen).",
+    "caption_gsw": "Rein: De Jesus streckt d Hand nach em chnüende Uussätzige uus (Boge), und er wird rein (Stärn mit Tropfe).",
     "stage": {
      "pose": {
       "FIG-ROLLE-AUSSAETZIGER": "kneel"
@@ -1083,7 +1127,8 @@
       "FIG-ZEICHEN-REIN": "FIG-ROLLE-AUSSAETZIGER"
      },
      "mood": {
-      "FIG-ROLLE-AUSSAETZIGER": "delight"
+      "FIG-ROLLE-AUSSAETZIGER": "delight",
+      "FIG-JESUS": "calm"
      },
      "arrows": [
       [
@@ -1091,7 +1136,11 @@
        "FIG-ROLLE-AUSSAETZIGER",
        "act"
       ]
-     ]
+     ],
+     "x": {
+      "FIG-JESUS": 70,
+      "FIG-ROLLE-AUSSAETZIGER": 118
+     }
     }
    }
   ],
@@ -1323,8 +1372,8 @@
     "speech": [],
     "action_de": "Im Haus des Levi liegt Jesus zu Tisch, und viele Zöllner und Sünder essen mit ihm und seinen Jüngern.",
     "action_gsw": "Im Huus vom Levi liit de Jesus am Tisch, und vili Zöllner und Sünder ässed mit ihm und sine Jünger.",
-    "caption_de": "Mahl: Jesus isst mit Zöllnern und Sündern und seinen Jüngern (Brot); Freude am Tisch.",
-    "caption_gsw": "Ässe: De Jesus isst mit Zöllner und Sünder und sine Jünger (Brot); Fröid am Tisch.",
+    "caption_de": "Mahl: Jesus isst mit Zöllnern und Sündern und seinen Jüngern (Brot zwischen ihnen); Freude bei den Zöllnern.",
+    "caption_gsw": "Mahl: De Jesus isst mit Zöllner und Sünder und sine Jünger (Brot zwüsche ine); Freud bi de Zöllner.",
     "stage": {
      "back_side": "left",
      "before": true,
@@ -1340,6 +1389,9 @@
       "FIG-ZEICHEN-FREUDE": [
        "FIG-GRUPPE-ZOELLNER"
       ]
+     },
+     "floor_x": {
+      "FIG-OBJ-BROT": 112
      }
     }
    },
@@ -1451,8 +1503,8 @@
     ],
     "action_de": "Jesus antwortet: Solange der Bräutigam bei ihnen ist, können die Hochzeitsgäste nicht fasten; es kommen Tage, da wird er weggenommen, dann werden sie fasten.",
     "action_gsw": "De Jesus antwortet: Solang de Brüütigam bi ine isch, chönd d Hochziitsgäscht nöd faschte; es chömed Täg, wo er wäggnoh wird, denn werded si faschte.",
-    "caption_de": "Der Bräutigam: Solange der Bräutigam da ist, ist Freude (Bräutigam, Funken); fehlt er, wird gefastet (fehlt, Schale).",
-    "caption_gsw": "De Brüütigam: Solang de Brüütigam da isch, isch Fröid (Brüütigam, Funke); fehlt er, wird gfaschtet (fehlt, Schale).",
+    "caption_de": "Der Bräutigam: Solange der Bräutigam da ist, ist Freude (Bräutigam, Funken); ist er weg (leerer Kreis mit Schrägstrich), wird gefastet (durchgestrichene Schale).",
+    "caption_gsw": "De Brüütigam: Solang de Brüütigam da isch, isch Freud (Brüütigam, Funke); isch er wäg (lääre Chreis mit Schrägstrich), wird gfaschtet (durgstricheni Schale).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-MENGE": "pensive"
@@ -1537,14 +1589,14 @@
     ],
     "action_de": "Am Sabbat geht Jesus durch Kornfelder, und seine Jünger rupfen Ähren ab. Die Pharisäer fragen: Warum tun sie am Sabbat, was nicht erlaubt ist?",
     "action_gsw": "Am Sabbat gaat de Jesus dur Choornfälder, und sini Jünger rupfed Ähre ab. D Pharisäer fröged: Werum mached si am Sabbat, was nöd erlaubt isch?",
-    "caption_de": "Ähren am Sabbat: Die Jünger rupfen Ähren; die Pharisäer fragen: am Sabbat? (Jünger, zwei Lampen, Fragezeichen).",
-    "caption_gsw": "Ähre am Sabbat: D Jünger rupfed Ähre; d Pharisäer fröged: am Sabbat? (Jünger, zwei Lampe, Fragezeiche).",
+    "caption_de": "Ähren am Sabbat: Die Jünger rupfen Ähren (Ähren bei den Jüngern); die Pharisäer fragen: am Sabbat? (Jünger, Sabbat-Zeichen: sechs graue und ein goldener Kreis, Fragezeichen).",
+    "caption_gsw": "Ähre am Sabbat: D Jünger rupfed Ähre (Ähre bi de Jünger); d Pharisäer fröged: am Sabbat? (Jünger, Sabbat-Zeiche: sächs graui und en goldige Chreis, Fragezeiche).",
     "stage": {
-     "hold": {
-      "FIG-GRUPPE-JUENGER": "FIG-OBJ-AEHREN"
-     },
      "mood": {
       "FIG-GRUPPE-PHARISAEER": "earnest"
+     },
+     "at": {
+      "FIG-OBJ-AEHREN": "FIG-GRUPPE-JUENGER"
      }
     }
    },
@@ -1600,18 +1652,18 @@
     ],
     "action_de": "Jesus sagt: Der Sabbat wurde für den Menschen geschaffen, nicht der Mensch für den Sabbat; darum ist der Menschensohn Herr auch über den Sabbat.",
     "action_gsw": "De Jesus seit: De Sabbat isch für de Mänsch gmacht, nöd de Mänsch für de Sabbat; drum isch de Mänschesohn Herr au über de Sabbat.",
-    "caption_de": "Für den Menschen: Jesus sagt: Der Sabbat ist für die Menschen da (zwei Lampen, Pfeil, Menschen).",
-    "caption_gsw": "Für de Mänsch: De Jesus seit: De Sabbat isch für d Mänsche da (zwei Lampe, Pfiil, Mänsche).",
+    "caption_de": "Für den Menschen: Jesus sagt: Der Sabbat ist für die Menschen da (Sabbat-Zeichen: sechs graue und ein goldener Kreis, Pfeil, Menschen).",
+    "caption_gsw": "Für de Mänsch: De Jesus seit: De Sabbat isch für d Mänsche da (Sabbat-Zeiche: sächs graui und en goldige Chreis, Pfiil, Mänsche).",
     "stage": {
      "mood": {
-      "FIG-JESUS": "earnest",
+      "FIG-JESUS": "calm",
       "FIG-GRUPPE-PHARISAEER": "pensive"
      }
     }
    }
   ],
-  "note_de": "Die zwei Lampen stehen für den Sabbat. Das «Haus Gottes», in das David ging ([[MRK.2.26]], vgl. [[1SA.21.1-1SA.21.6]]), war noch nicht der Tempel in Jerusalem; das Bild nimmt das Tempelzeichen als Haus Gottes. Der Satz über den Menschensohn als Herrn des Sabbats ([[MRK.2.28]]) steht nur in der Beschreibung.",
-  "note_gsw": "Di zwei Lampe stönd für de Sabbat. S «Huus vo Gott», wo de David drii gange isch ([[MRK.2.26]], vgl. [[1SA.21.1-1SA.21.6]]), isch no nöd de Tämpel z Jerusalem gsii; s Bild nimmt s Tämpelzeiche als Huus vo Gott. De Satz über de Mänschesohn als Herr vom Sabbat ([[MRK.2.28]]) staat nu i de Beschriibig."
+  "note_de": "Sechs graue und ein goldener Kreis stehen für den Sabbat (der siebte Tag). Das «Haus Gottes», in das David ging ([[MRK.2.26]], vgl. [[1SA.21.1-1SA.21.6]]), war noch nicht der Tempel in Jerusalem; das Bild nimmt das Tempelzeichen als Haus Gottes. Der Satz über den Menschensohn als Herrn des Sabbats ([[MRK.2.28]]) steht nur in der Beschreibung.",
+  "note_gsw": "Sächs graui und en goldige Chreis stönd für de Sabbat (de sibet Tag). S «Huus vo Gott», wo de David drii gange isch ([[MRK.2.26]], vgl. [[1SA.21.1-1SA.21.6]]), isch no nöd de Tämpel z Jerusalem gsii; s Bild nimmt s Tämpelzeiche als Huus vo Gott. De Satz über de Mänschesohn als Herr vom Sabbat ([[MRK.2.28]]) staat nu i de Beschriibig."
  },
  {
   "suffix": "MRK-002",
@@ -1745,14 +1797,14 @@
     ],
     "action_de": "Die Jünger rupfen am Sabbat Ähren; Jesus sagt: Der Sabbat ist für den Menschen da.",
     "action_gsw": "D Jünger rupfed am Sabbat Ähre; de Jesus seit: De Sabbat isch für de Mänsch da.",
-    "caption_de": "Sabbat: Die Jünger mit Ähren; Jesus: Der Sabbat ist für die Menschen (zwei Lampen, Pfeil, Menschen).",
-    "caption_gsw": "Sabbat: D Jünger mit Ähre; de Jesus: De Sabbat isch für d Mänsche (zwei Lampe, Pfiil, Mänsche).",
+    "caption_de": "Sabbat: Die Jünger mit Ähren; Jesus: Der Sabbat ist für die Menschen (Sabbat-Zeichen: sechs graue und ein goldener Kreis, Pfeil, Menschen).",
+    "caption_gsw": "Sabbat: D Jünger mit Ähre; de Jesus: De Sabbat isch für d Mänsche (Sabbat-Zeiche: sächs graui und en goldige Chreis, Pfiil, Mänsche).",
     "stage": {
-     "hold": {
-      "FIG-GRUPPE-JUENGER": "FIG-OBJ-AEHREN"
-     },
      "mood": {
       "FIG-GRUPPE-PHARISAEER": "earnest"
+     },
+     "at": {
+      "FIG-OBJ-AEHREN": "FIG-GRUPPE-JUENGER"
      }
     }
    }
@@ -1797,8 +1849,8 @@
     ],
     "action_de": "In der Synagoge ist ein Mensch mit einer verdorrten Hand; man beobachtet Jesus. Er ruft den Menschen in die Mitte und fragt: Ist es erlaubt, am Sabbat Gutes zu tun, Leben zu retten? Sie aber schweigen.",
     "action_gsw": "I de Synagoge isch en Mänsch mit ere verdorete Hand; mer beobachtet de Jesus. Er rüeft de Mänsch i d Mitti und frögt: Isch es erlaubt, am Sabbat Guets z tue, Läbe z rette? Si aber schwiiged.",
-    "caption_de": "Die Frage: Jesus fragt: Am Sabbat heilen? (zwei Lampen, Hand mit Licht, Fragezeichen); die Pharisäer schweigen (durchgestrichene Sprechblase).",
-    "caption_gsw": "D Frog: De Jesus frögt: Am Sabbat heile? (zwei Lampe, Hand mit Liecht, Fragezeiche); d Pharisäer schwiiged (durgstricheni Sprächblase).",
+    "caption_de": "Die Frage: Jesus fragt: Am Sabbat heilen? (Sabbat-Zeichen: sechs graue und ein goldener Kreis, Hand mit Licht, Fragezeichen); die Pharisäer schweigen (durchgestrichene Sprechblase).",
+    "caption_gsw": "D Frog: De Jesus frögt: Am Sabbat heile? (Sabbat-Zeiche: sächs graui und en goldige Chreis, Hand mit Liecht, Fragezeiche); d Pharisäer schwiiged (durgstricheni Sprächblase).",
     "stage": {
      "back_side": "left",
      "at": {
@@ -1836,13 +1888,10 @@
     ],
     "action_de": "Jesus blickt sie ringsum an, zornig und betrübt über ihre verhärteten Herzen, und sagt zum Menschen: Streck die Hand aus! Er streckt sie aus, und sie ist wiederhergestellt.",
     "action_gsw": "De Jesus luegt si rundum aa, toube und truurig über iri hert Härz, und seit zum Mänsch: Streck d Hand uus! Er streckt si uus, und si isch wider gsund.",
-    "caption_de": "Geheilt: Jesus, betrübt (Träne), sagt: Streck die Hand aus; die Hand wird heil (Hand mit Licht).",
-    "caption_gsw": "Gheilt: De Jesus, truurig (Träne), seit: Streck d Hand uus; d Hand wird gsund (Hand mit Liecht).",
+    "caption_de": "Geheilt: Jesus, betrübt (Tränen), sagt: Streck die Hand aus; die Hand wird heil (Hand mit Licht beim Mann).",
+    "caption_gsw": "Gheilt: De Jesus, truurig (Träne), seit: Streck d Hand uus; d Hand wird gsund (Hand mit Liecht bim Maa).",
     "stage": {
      "back_side": "left",
-     "at": {
-      "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
-     },
      "signs_who": {
       "FIG-ZEICHEN-TRAUER": [
        "FIG-JESUS"
@@ -1858,7 +1907,10 @@
        "FIG-ROLLE-KRANKER",
        "act"
       ]
-     ]
+     ],
+     "beside": {
+      "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
+     }
     }
    },
    {
@@ -1888,6 +1940,10 @@
      "mood": {
       "FIG-GRUPPE-PHARISAEER": "earnest",
       "FIG-GRUPPE-HERODIANER": "earnest"
+     },
+     "x": {
+      "FIG-GRUPPE-PHARISAEER": 66,
+      "FIG-GRUPPE-HERODIANER": 122
      }
     }
    }
@@ -1980,7 +2036,7 @@
       "FIG-ZEICHEN-DAEMON": "FIG-ROLLE-BESESSENER"
      },
      "mood": {
-      "FIG-JESUS": "earnest",
+      "FIG-JESUS": "calm",
       "FIG-ROLLE-BESESSENER": "worried"
      }
     }
@@ -2021,10 +2077,21 @@
     ],
     "action_de": "Jesus steigt auf den Berg und ruft die zu sich, die er will; und sie kommen zu ihm.",
     "action_gsw": "De Jesus gaat uf de Bärg und rüeft die zue sich, won er wott; und si chömed zuen em.",
-    "caption_de": "Auf dem Berg: Jesus ruft die zu sich, die er will (Fussspuren); sie kommen.",
-    "caption_gsw": "Uf em Bärg: De Jesus rüeft die zue sich, won er wott (Fuessspure); si chömed.",
+    "caption_de": "Auf dem Berg: Jesus ruft die zu sich, die er will (Fussspuren); sie kommen zu ihm (gestrichelter Weg).",
+    "caption_gsw": "Uf em Bärg: De Jesus rüeft die zu sich, won er wott (Fuessspuure); si chömed zu im (gstrichlete Wäg).",
     "stage": {
-     "back_side": "left"
+     "back_side": "left",
+     "arrows": [
+      [
+       "FIG-GRUPPE-ZWOELF",
+       "FIG-JESUS",
+       "go"
+      ]
+     ],
+     "x": {
+      "FIG-JESUS": 84,
+      "FIG-GRUPPE-ZWOELF": 150
+     }
     }
    },
    {
@@ -2051,12 +2118,23 @@
     ],
     "action_de": "Er setzt zwölf ein, damit sie bei ihm sind und er sie aussendet zu verkündigen, mit Vollmacht, die Dämonen auszutreiben.",
     "action_gsw": "Er setzt zwölf ii, dass si bi ihm sind und er si cha uusschicke zum Verchünde, mit Vollmacht, d Dämone uusztriibe.",
-    "caption_de": "Die Zwölf: Jesus sendet sie zu verkünden (Rufer) und Dämonen auszutreiben (Schatten, Pfeil weg).",
-    "caption_gsw": "D Zwölf: De Jesus schickt si zum Verchünde (Rüefer) und zum Dämone uustriibe (Schatte, Pfiil ewäg).",
+    "caption_de": "Die Zwölf: Jesus sendet sie (Bogen zu ihnen) zu verkünden (Rufer) und Dämonen auszutreiben (Schatten, Pfeil weg).",
+    "caption_gsw": "Di Zwölf: De Jesus schickt si (Boge zu ine) go verchünde (Rüefer) und Dämone go uustriibe (Schatte, Pfiil wäg).",
     "stage": {
      "back_side": "left",
      "mood": {
       "FIG-GRUPPE-ZWOELF": "determined"
+     },
+     "arrows": [
+      [
+       "FIG-JESUS",
+       "FIG-GRUPPE-ZWOELF",
+       "act"
+      ]
+     ],
+     "x": {
+      "FIG-JESUS": 84,
+      "FIG-GRUPPE-ZWOELF": 150
      }
     }
    },
@@ -2077,8 +2155,8 @@
     "speech": [],
     "action_de": "Die Liste der Zwölf: Simon, dem er den Namen Petrus gibt, Jakobus und Johannes, die «Söhne des Donners», Andreas und die übrigen, zuletzt Judas Iskariot, der ihn auslieferte.",
     "action_gsw": "D Lischte vo de Zwölf: De Simon, won er de Name Petrus git, de Jakobus und de Johannes, d «Söhn vom Donner», de Andreas und di andere, zletscht de Judas Iskariot, wo en uusgliferet hät.",
-    "caption_de": "Namen: Petrus (Schlüssel), Jakobus (Muschel), Johannes (Kelch), Andreas (Schrägkreuz) und Judas Iskariot (Kasse) stehen für die Zwölf.",
-    "caption_gsw": "Name: De Petrus (Schlüssel), de Jakobus (Muschle), de Johannes (Chelch), de Andreas (Schrägchrüz) und de Judas Iskariot (Kasse) stönd für d Zwölf.",
+    "caption_de": "Namen: Petrus (Schlüssel), Jakobus (Muschel), Johannes (Kelch), Andreas (Schrägkreuz) stehen für die Zwölf; Judas Iskariot (Kasse), der Jesus ausliefert, steht abseits (gestrichelte Linie).",
+    "caption_gsw": "Näme: De Petrus (Schlüssel), de Jakobus (Muschle), de Johannes (Chelch), de Andreas (Schrägchrüz) stönd für di Zwölf; de Judas Iskariot (Kasse), wo de Jesus uusliferet, staat näbedra (gstrichleti Linie).",
     "stage": {
      "split": 4
     }
@@ -2105,21 +2183,20 @@
      "FIG-GRUPPE-MENGE"
     ],
     "objects": [
-     "FIG-ORT-HAUS",
-     "FIG-OBJ-BROT"
+     "FIG-ORT-HAUS"
     ],
     "signs": [
-     "FIG-ZEICHEN-FEHLT"
+     "FIG-ZEICHEN-FEHLT-BROT"
     ],
     "speech": [],
     "action_de": "Jesus kommt in ein Haus, und wieder kommt so viel Volk zusammen, dass sie nicht einmal Brot essen können.",
     "action_gsw": "De Jesus chunnt in es Huus, und wider chunnt so vil Volk zäme, dass si nöd emal Brot chönd ässe.",
-    "caption_de": "Gedränge: Im vollen Haus kommen Jesus und die Seinen nicht einmal zum Essen (Brot, fehlt).",
-    "caption_gsw": "Gedränge: Im volle Huus chömed de Jesus und di Sine nöd emal zum Ässe (Brot, fehlt).",
+    "caption_de": "Gedränge: Beim vollen Haus kommen Jesus und die Seinen nicht einmal zum Essen (gestrichelter Umriss eines Brotes).",
+    "caption_gsw": "Gedrängel: Bim volle Huus chömed de Jesus und di Sine nöd emal zum Ässe (gstrichlete Umriss vomene Brot).",
     "stage": {
      "back_side": "left",
      "at": {
-      "FIG-ZEICHEN-FEHLT": "FIG-OBJ-BROT"
+      "FIG-ZEICHEN-FEHLT-BROT": "FIG-GRUPPE-MENGE"
      },
      "mood": {
       "FIG-GRUPPE-MENGE": "surprised"
@@ -2430,9 +2507,6 @@
     "caption_gsw": "Am Sabbat: De Jesus heilt d Hand (Hand mit Liecht); d Pharisäer lueged ernscht zue.",
     "stage": {
      "back_side": "left",
-     "at": {
-      "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
-     },
      "mood": {
       "FIG-GRUPPE-PHARISAEER": "earnest",
       "FIG-ROLLE-KRANKER": "delight"
@@ -2443,7 +2517,10 @@
        "FIG-ROLLE-KRANKER",
        "act"
       ]
-     ]
+     ],
+     "beside": {
+      "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
+     }
     }
    },
    {
@@ -2626,8 +2703,8 @@
     "speech": [],
     "action_de": "Ein Sämann geht hinaus zu säen: Einiges fällt an den Weg, und die Vögel fressen es; anderes auf felsigen Boden, wo es in der Sonne verdorrt; anderes unter die Dornen, die es ersticken.",
     "action_gsw": "En Sämaa gaat use zum Sääe: Es paar Chörnli gheied a de Wäg, und d Vögel frässed si; anderi uf felsige Bode, wo si i de Sunne verdored; anderi under d Dörn, wo si verstickt.",
-    "caption_de": "Verlorene Saat: Der Sämann sät; Vögel fressen die Saat, auf dem Fels verdorrt sie in der Sonne, die Dornen ersticken sie.",
-    "caption_gsw": "Verloreni Saat: De Sämaa säät; Vögel frässed d Saat, uf em Fels verdoret si i de Sunne, d Dörn verstickt si.",
+    "caption_de": "Verlorene Saat: Der Sämann wirft die Saat aus (Hand mit Körnern, gepunkteter Bogen); Vögel fressen sie, auf dem Fels verdorrt sie in der Sonne, die Dornen (dunkler Strauch) ersticken sie.",
+    "caption_gsw": "Verloreni Saat: De Sämaa wirft d Saat uus (Hand mit Chörnli, punktierte Boge); Vögel frässed si, uf em Fels verdoret si i de Sunne, d Dorne (dunkle Struuch) verstickt si.",
     "stage": {
      "hold": {
       "FIG-ROLLE-SAEMANN": "FIG-OBJ-SAMEN"
@@ -2637,7 +2714,14 @@
      },
      "count": {
       "FIG-OBJ-VOGEL": 2
-     }
+     },
+     "arrows": [
+      [
+       "FIG-ROLLE-SAEMANN",
+       "FIG-OBJ-FELSBODEN",
+       "throw"
+      ]
+     ]
     }
    },
    {
@@ -2717,9 +2801,9 @@
     "n": 2,
     "reference": "MRK.4.11-MRK.4.12",
     "figures": [
-     "FIG-GRUPPE-ZWOELF",
+     "FIG-GRUPPE-MENGE",
      "FIG-JESUS",
-     "FIG-GRUPPE-MENGE"
+     "FIG-GRUPPE-ZWOELF"
     ],
     "objects": [],
     "signs": [
@@ -2739,10 +2823,10 @@
     ],
     "action_de": "Jesus sagt: Euch ist das Geheimnis des Reiches Gottes gegeben; denen draussen geschieht alles in Gleichnissen, damit sie sehen und doch nicht erkennen, hören und doch nicht verstehen.",
     "action_gsw": "De Jesus seit: Eu isch s Gheimnis vom Riich vo Gott gäh; denen dusse passiert alles i Glichnis, dass si gsehnd und doch nöd erchänned, ghöred und doch nöd verstönd.",
-    "caption_de": "Geheimnis: Jesus sagt den Zwölf: Euch ist das Reich Gottes gegeben (Krone im Licht, Pfeil, Menschen); draussen (Linie) verstehen sie nicht (Nebel mit Fragezeichen).",
-    "caption_gsw": "Gheimnis: De Jesus seit de Zwölf: Eu isch s Riich vo Gott gäh (Chrone im Liecht, Pfiil, Mänsche); dusse (Linie) verstönd si nöd (Näbel mit Fragezeiche).",
+    "caption_de": "Geheimnis: Jesus sagt den Zwölf: Euch ist das Reich Gottes gegeben (Krone im Licht, Pfeil, Menschen); die draussen (jenseits der Linie) verstehen nicht (Fragezeichen im grauen Kreis).",
+    "caption_gsw": "Gheimnis: De Jesus seit de Zwölf: Eu isch s Riich vo Gott ggä (Chrone im Liecht, Pfiil, Mänsche); die dusse (änet de Linie) verstönd nöd (Fragezeiche im graue Chreis).",
     "stage": {
-     "split": 2,
+     "split": 1,
      "at": {
       "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-GRUPPE-MENGE"
      },
@@ -2772,7 +2856,9 @@
      "FIG-JESUS",
      "FIG-GRUPPE-ZWOELF"
     ],
-    "objects": [],
+    "objects": [
+     "FIG-ORT-WEG"
+    ],
     "signs": [],
     "speech": [
      {
@@ -2788,8 +2874,8 @@
     ],
     "action_de": "Jesus erklärt: Der Sämann sät das Wort. Bei denen am Weg kommt, sobald sie es hören, der Satan und nimmt das Wort weg.",
     "action_gsw": "De Jesus erchlärt: De Sämaa säät s Wort. Bi dene am Wäg chunnt, sobald si s ghöred, de Satan und nimmt s Wort wäg.",
-    "caption_de": "Am Weg: Die Saat ist das gehörte Wort (Samen, Ohr); der Satan nimmt es weg (Schatten, fehlt).",
-    "caption_gsw": "Am Wäg: D Saat isch s ghört Wort (Same, Ohr); de Satan nimmt s wäg (Schatte, fehlt).",
+    "caption_de": "Am Weg (heller Pfad): Die Saat ist das gehörte Wort (Hand mit Körnern, Ohr); der Satan nimmt es weg (Schatten, Kreis mit Schrägstrich: fehlt).",
+    "caption_gsw": "Am Wäg (heller Pfad): D Saat isch s ghöörte Wort (Hand mit Chörnli, Ohr); de Satan nimmt s wäg (Schatte, Chreis mit Schrägstrich: fehlt).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-ZWOELF": "pensive"
@@ -2813,14 +2899,15 @@
       "to": "FIG-GRUPPE-ZWOELF",
       "icons": [
        "FIG-ZEICHEN-FREUDE",
+       "FIG-ZEICHEN-BRINGEN",
        "FIG-ZEICHEN-UMSTURZ"
       ]
      }
     ],
     "action_de": "Die auf felsigem Boden nehmen das Wort mit Freude auf, haben aber keine Wurzel; wenn Bedrängnis kommt, kommen sie zu Fall.",
     "action_gsw": "Die uf felsigem Bode nämed s Wort mit Fröid uf, händ aber kei Wurzle; wänn Not chunnt, gheied si um.",
-    "caption_de": "Felsboden: Zuerst Freude (Funken), dann der Fall in der Bedrängnis (kippende Mauern).",
-    "caption_gsw": "Felsbode: Zerscht Fröid (Funke), denn de Fall i de Not (chippendi Muure).",
+    "caption_de": "Felsboden: Zuerst Freude (Funken), dann (Pfeil) der Fall in der Bedrängnis (kippende Mauern).",
+    "caption_gsw": "Felsbode: Zerscht Freud (Funke), dänn (Pfiil) de Fall i de Not (chippendi Muure).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-ZWOELF": "pensive"
@@ -2853,8 +2940,8 @@
     ],
     "action_de": "Die unter den Dornen hören das Wort, aber Sorgen, Reichtum und Begierden ersticken es, und es bleibt ohne Frucht.",
     "action_gsw": "Die under de Dörn ghöred s Wort, aber Sorge, Riichtum und Gluscht verstickeds, und es bliibt ohni Frucht.",
-    "caption_de": "Dornen: Reichtum und Sorgen ersticken das Wort (Münzen, Pfeil, Samen, fehlt).",
-    "caption_gsw": "Dörn: Riichtum und Sorge verstickt s Wort (Münz, Pfiil, Same, fehlt).",
+    "caption_de": "Dornen (dunkler Strauch): Reichtum und Sorgen ersticken das Wort (Münzen, Pfeil, Hand mit Körnern, fehlt).",
+    "caption_gsw": "Dorne (dunkle Struuch): Riichtum und Sorge verstickt s Wort (Münze, Pfiil, Hand mit Chörnli, fehlt).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-ZWOELF": "pensive"
@@ -2928,6 +3015,8 @@
       "from": "FIG-JESUS",
       "to": "FIG-GRUPPE-MENGE",
       "icons": [
+       "FIG-OBJ-SCHEFFEL",
+       "FIG-ZEICHEN-NICHT",
        "FIG-OBJ-LEUCHTER",
        "FIG-ZEICHEN-LICHT"
       ]
@@ -2935,8 +3024,8 @@
     ],
     "action_de": "Jesus sagt: Die Lampe kommt nicht unter den Scheffel, sondern auf den Leuchter; nichts ist verborgen, ausser um ans Licht zu kommen. Wer Ohren hat, höre!",
     "action_gsw": "De Jesus seit: D Lampe chunnt nöd under de Scheffel, sondern uf de Lüüchter; nüüt isch verborge, ussert zum as Liecht cho. Wer Ohre hät, söll lose!",
-    "caption_de": "Die Lampe: Die Lampe gehört auf den Leuchter, nicht unter das Messgefäss; was verborgen ist, kommt ans Licht (Leuchter, Licht).",
-    "caption_gsw": "D Lampe: D Lampe ghört uf de Lüüchter, nöd under s Mässgfäss; was verborge isch, chunnt as Liecht (Lüüchter, Liecht).",
+    "caption_de": "Die Lampe: Nicht unter das Messgefäss (Messgefäss, roter Kreis mit Schrägbalken), sondern auf den Leuchter; was verborgen ist, kommt ans Licht (Leuchter, Licht).",
+    "caption_gsw": "D Lampe: Nöd under s Mässgfäss (Mässgfäss, rote Chreis mit Schrägbalke), sondern uf de Lüüchter; was verborge isch, chunnt as Liecht (Lüüchter, Liecht).",
     "stage": {
      "floor_side": "left"
     }
@@ -2959,15 +3048,15 @@
       "icons": [
        "FIG-ZEICHEN-HOEREN",
        "FIG-OBJ-SCHEFFEL",
-       "FIG-ZEICHEN-GEBEN",
+       "FIG-ZEICHEN-BRINGEN",
        "FIG-ZEICHEN-MENSCHEN"
       ]
      }
     ],
     "action_de": "Achtet darauf, was ihr hört! Mit dem Mass, mit dem ihr messt, wird euch gemessen, und es wird noch hinzugefügt; wer hat, dem wird gegeben.",
     "action_gsw": "Passed uf, was ihr ghöred! Mit em Mass, wo ihr mit mässed, wird eu gmässe, und es wird no öppis drzue gäh; wer hät, dem wird gäh.",
-    "caption_de": "Das Mass: Achtet auf das Hören (Ohr); mit eurem Mass wird euch gegeben (Messgefäss, gebende Hand, Menschen).",
-    "caption_gsw": "S Mass: Passed uf s Lose uf (Ohr); mit eurem Mass wird eu gäh (Mässgfäss, gäbendi Hand, Mänsche).",
+    "caption_de": "Das Mass: Achtet auf das Hören (Ohr); mit dem Mass, mit dem ihr messt, wird euch zugemessen (Messgefäss, Pfeil, Menschen).",
+    "caption_gsw": "S Mäss: Passed uf, was er ghööred (Ohr); mit em Mäss, wo er mässed, wird eu zuegmässe (Mässgfäss, Pfiil, Mänsche).",
     "stage": {
      "floor_side": "left"
     }
@@ -3001,8 +3090,8 @@
     "speech": [],
     "action_de": "So ist das Reich Gottes: wie wenn ein Mensch den Samen auf die Erde wirft.",
     "action_gsw": "So isch s Riich vo Gott: wie wänn en Mänsch de Same uf d Erde wirft.",
-    "caption_de": "Aussaat: Das Reich Gottes (Krone im Licht) ist wie ein Mensch, der Samen auf die Erde wirft.",
-    "caption_gsw": "Ussaat: S Riich vo Gott (Chrone im Liecht) isch wie en Mänsch, wo Same uf d Erde wirft.",
+    "caption_de": "Aussaat: Das Reich Gottes (Krone im Licht) ist wie ein Mensch, der Samen auf die Erde wirft (Hand mit fallenden Körnern).",
+    "caption_gsw": "Ussaat: S Riich vo Gott (Chrone im Liecht) isch wie en Mänsch, wo Same uf de Bode wirft (Hand mit gheiende Chörnli).",
     "stage": {
      "hold": {
       "FIG-ROLLE-SAEMANN": "FIG-OBJ-SAMEN"
@@ -3029,8 +3118,8 @@
     "speech": [],
     "action_de": "Er schläft und steht auf, Nacht und Tag, und der Same sprosst und wächst, er weiss nicht wie; von selbst bringt die Erde Frucht, Halm, Ähre, volles Korn.",
     "action_gsw": "Er schlaft und staat uf, Nacht und Tag, und de Same spriesst und wachst, er weiss nöd wie; vo sälber bringt d Erde Frucht, Halm, Ähre, volls Chorn.",
-    "caption_de": "Von selbst: Der Mensch schläft, Nacht und Tag vergehen (Mond, Sonne); die Ähren wachsen, er weiss nicht wie (Nebel mit Fragezeichen).",
-    "caption_gsw": "Vo sälber: De Mänsch schlaft, Nacht und Tag vergönd (Mond, Sunne); d Ähre wachsed, er weiss nöd wie (Näbel mit Fragezeiche).",
+    "caption_de": "Von selbst: Der Mensch schläft, Nacht und Tag vergehen (Mond, Sonne); die Ähren wachsen, er weiss nicht wie (Fragezeichen im grauen Kreis).",
+    "caption_gsw": "Vo sälber: De Mänsch schlaaft, Nacht und Tag gönd verbii (Mond, Sunne); d Ähre wachsed, er weiss nöd wie (Fragezeiche im graue Chreis).",
     "stage": {
      "pose": {
       "FIG-ROLLE-SAEMANN": "sleep"
@@ -3094,9 +3183,7 @@
     "objects": [
      "FIG-OBJ-SENFSTAUDE"
     ],
-    "signs": [
-     "FIG-OBJ-VOGEL"
-    ],
+    "signs": [],
     "speech": [
      {
       "from": "FIG-JESUS",
@@ -3110,20 +3197,15 @@
     ],
     "action_de": "Das Reich Gottes ist wie ein Senfkorn: kleiner als alle Samen, doch es wächst und wird grösser als alle Gartenkräuter, sodass die Vögel in seinem Schatten nisten.",
     "action_gsw": "S Riich vo Gott isch wie es Senfchorn: chliiner als alli Same, aber es wachst und wird grösser als alli Gartechrüter, so dass d Vögel i sim Schatte nisted.",
-    "caption_de": "Senfkorn: Aus dem kleinsten Samen wird eine grosse Staude (Samen, Pfeil, Staude); Vögel nisten darin.",
-    "caption_gsw": "Senfchorn: Us em chliinschte Same wird e grossi Stuude (Same, Pfiil, Stuude); Vögel nisted drin.",
+    "caption_de": "Senfkorn: Aus dem kleinsten Samen wird eine grosse Staude (Hand mit Körnern, Pfeil, Staude); Vögel sitzen in ihren Zweigen.",
+    "caption_gsw": "Senfchorn: Us em chliinschte Same wird e grossi Staude (Hand mit Chörnli, Pfiil, Staude); Vögel sitzed i irne Escht.",
     "stage": {
      "x": {
       "FIG-JESUS": 44
      },
      "floor_x": {
       "FIG-OBJ-SENFSTAUDE": 112
-     },
-     "count": {
-      "FIG-OBJ-VOGEL": 3
-     },
-     "air_x": 118,
-     "air_y": 52
+     }
     }
    },
    {
@@ -3136,8 +3218,7 @@
     ],
     "objects": [],
     "signs": [
-     "FIG-ZEICHEN-ABSTAND",
-     "FIG-ZEICHEN-LICHT"
+     "FIG-ZEICHEN-ABSTAND"
     ],
     "speech": [
      {
@@ -3148,17 +3229,21 @@
        "FIG-OBJ-LEUCHTER",
        "FIG-OBJ-SENFSTAUDE"
       ]
+     },
+     {
+      "from": "FIG-JESUS",
+      "to": "FIG-GRUPPE-JUENGER",
+      "icons": [
+       "FIG-ZEICHEN-LICHT"
+      ]
      }
     ],
     "action_de": "Mit vielen solchen Gleichnissen redet Jesus zur Menge, so wie sie es hören kann; seinen Jüngern aber erklärt er alles, wenn sie allein sind.",
     "action_gsw": "Mit vile settige Glichnis redt de Jesus zur Mängi, so wie si s cha ghöre; sine Jünger aber erchlärt er alles, wänn si elei sind.",
-    "caption_de": "Gleichnisse: Zur Menge redet Jesus in Bildern (Samen, Leuchter, Staude); den Jüngern erklärt er alles (Licht über ihnen).",
-    "caption_gsw": "Glichnis: Zur Mängi redt de Jesus i Bilder (Same, Lüüchter, Stuude); de Jünger erchlärt er alles (Liecht über ine).",
+    "caption_de": "Gleichnisse: Zur Menge redet Jesus in Bildern (Hand mit Körnern, Leuchter, Staude); den Jüngern hinter der Linie erklärt er alles (zweite Sprechblase: Licht).",
+    "caption_gsw": "Glichnis: Zur Mängi redt de Jesus i Bilder (Hand mit Chörnli, Lüüchter, Staude); de Jünger hinder de Linie erchlärt er alles (zweiti Sprächblase: Liecht).",
     "stage": {
      "split": 1,
-     "at": {
-      "FIG-ZEICHEN-LICHT": "FIG-GRUPPE-JUENGER"
-     },
      "mood": {
       "FIG-GRUPPE-MENGE": "pensive",
       "FIG-GRUPPE-JUENGER": "smile"
@@ -3191,13 +3276,14 @@
      "FIG-ORT-SEE"
     ],
     "signs": [
-     "FIG-ZEICHEN-STURM"
+     "FIG-ZEICHEN-STURM",
+     "FIG-ZEICHEN-WIND"
     ],
     "speech": [],
     "action_de": "Am Abend fahren sie mit Jesus im Boot ans andere Ufer; ein grosser Sturmwind erhebt sich, und die Wellen schlagen ins Boot, sodass es volllief.",
     "action_gsw": "Am Aabig fahred si mit em Jesus im Boot as ander Ufer; en grosse Sturmwind chunnt uf, und d Wälle schlönd is Boot, so dass es volllauft.",
-    "caption_de": "Sturm: Auf der Überfahrt kommt ein grosser Sturm (Wolke, Blitz); die Jünger fürchten sich, Jesus schläft hinten im Boot.",
-    "caption_gsw": "Sturm: Uf de Überfahrt chunnt en grosse Sturm (Wulche, Blitz); d Jünger händ Angscht, de Jesus schlaft hine im Boot.",
+    "caption_de": "Sturm: Auf der Überfahrt kommt ein grosser Sturm (dunkle Wolke mit Blitz, Windlinien); die Jünger fürchten sich, Jesus schläft hinten im Boot.",
+    "caption_gsw": "Sturm: Uf de Überfahrt chunnt en grosse Sturm (dunkli Wolke mit Blitz, Windlinie); d Jünger händ Angscht, de Jesus schlaaft hine im Boot.",
     "stage": {
      "in": {
       "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT",
@@ -3219,8 +3305,8 @@
      "mood": {
       "FIG-GRUPPE-JUENGER": "worried"
      },
-     "air_x": 60,
-     "air_y": 8
+     "air_x": 70,
+     "air_y": 6
     }
    },
    {
@@ -3234,7 +3320,9 @@
      "FIG-OBJ-BOOT",
      "FIG-ORT-SEE"
     ],
-    "signs": [],
+    "signs": [
+     "FIG-ZEICHEN-STURM"
+    ],
     "speech": [
      {
       "from": "FIG-GRUPPE-JUENGER",
@@ -3247,8 +3335,8 @@
     ],
     "action_de": "Jesus schläft im Heck auf einem Kissen; sie wecken ihn: Lehrer, kümmert es dich nicht, dass wir umkommen?",
     "action_gsw": "De Jesus schlaft hine uf eme Chüssi; si wecked en: Lehrer, isch es dir gliich, dass mir umchömed?",
-    "caption_de": "Geweckt: Die Jünger wecken Jesus: Wir kommen um! (Grab, Fragezeichen).",
-    "caption_gsw": "Gweckt: D Jünger wecked de Jesus: Mir chömed um! (Grab, Fragezeiche).",
+    "caption_de": "Geweckt: Im Sturm (dunkle Wolke) wecken die Jünger Jesus (Bogen zu ihm): Wir kommen um! (Grab, Fragezeichen).",
+    "caption_gsw": "Gweckt: Im Sturm (dunkli Wolke) wecked d Jünger de Jesus (Boge zu im): Mir gönd under! (Grab, Fragezeiche).",
     "stage": {
      "in": {
       "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT",
@@ -3269,7 +3357,16 @@
      },
      "mood": {
       "FIG-GRUPPE-JUENGER": "worried"
-     }
+     },
+     "arrows": [
+      [
+       "FIG-GRUPPE-JUENGER",
+       "FIG-JESUS",
+       "act"
+      ]
+     ],
+     "air_x": 160,
+     "air_y": 30
     }
    },
    {
@@ -3315,7 +3412,7 @@
      },
      "sea": "calm",
      "mood": {
-      "FIG-JESUS": "earnest",
+      "FIG-JESUS": "calm",
       "FIG-GRUPPE-JUENGER": "surprised"
      }
     }
@@ -3407,8 +3504,8 @@
     "speech": [],
     "action_de": "Jesus erzählt das Gleichnis vom Sämann: Vieles geht verloren, was auf gute Erde fällt, bringt reiche Frucht; den Zwölf erklärt er es.",
     "action_gsw": "De Jesus verzellt s Glichnis vom Sämaa: Vil gaat verlore, was uf gueti Erde gheit, bringt riichi Frucht; de Zwölf erchlärt ers.",
-    "caption_de": "Sämann: Der Sämann sät; Vögel, Fels und Dornen nehmen die Saat, auf guter Erde wachsen Ähren.",
-    "caption_gsw": "Sämaa: De Sämaa säät; Vögel, Fels und Dörn nämed d Saat, uf guetem Bode wachsed Ähre.",
+    "caption_de": "Sämann: Der Sämann wirft die Saat aus (Hand mit Körnern, gepunkteter Bogen); Vögel, Fels und Dornen nehmen sie, auf guter Erde wachsen Ähren.",
+    "caption_gsw": "Sämaa: De Sämaa wirft d Saat uus (Hand mit Chörnli, punktierte Boge); Vögel, Fels und Dorne nämed si, uf guete Bode wachsed Ähre.",
     "stage": {
      "hold": {
       "FIG-ROLLE-SAEMANN": "FIG-OBJ-SAMEN"
@@ -3423,7 +3520,14 @@
       "FIG-OBJ-FELSBODEN": 76,
       "FIG-OBJ-DORNEN": 116,
       "FIG-OBJ-AEHREN": 160
-     }
+     },
+     "arrows": [
+      [
+       "FIG-ROLLE-SAEMANN",
+       "FIG-OBJ-FELSBODEN",
+       "throw"
+      ]
+     ]
     }
    },
    {
@@ -3466,9 +3570,7 @@
     "objects": [
      "FIG-OBJ-SENFSTAUDE"
     ],
-    "signs": [
-     "FIG-OBJ-VOGEL"
-    ],
+    "signs": [],
     "speech": [
      {
       "from": "FIG-JESUS",
@@ -3482,20 +3584,15 @@
     ],
     "action_de": "Das Reich Gottes ist wie ein Senfkorn, das zur grossen Staude wird.",
     "action_gsw": "S Riich vo Gott isch wie es Senfchorn, wo zur grosse Stuude wird.",
-    "caption_de": "Senfkorn: Aus dem kleinen Samen wird eine grosse Staude (Samen, Pfeil, Staude) mit Vögeln.",
-    "caption_gsw": "Senfchorn: Us em chliine Same wird e grossi Stuude (Same, Pfiil, Stuude) mit Vögel.",
+    "caption_de": "Senfkorn: Aus dem kleinen Samen wird eine grosse Staude (Hand mit Körnern, Pfeil, Staude); Vögel sitzen in ihren Zweigen.",
+    "caption_gsw": "Senfchorn: Us em chliine Same wird e grossi Staude (Hand mit Chörnli, Pfiil, Staude); Vögel sitzed i irne Escht.",
     "stage": {
      "x": {
       "FIG-JESUS": 44
      },
      "floor_x": {
       "FIG-OBJ-SENFSTAUDE": 112
-     },
-     "count": {
-      "FIG-OBJ-VOGEL": 3
-     },
-     "air_x": 118,
-     "air_y": 52
+     }
     }
    },
    {
@@ -3541,7 +3638,7 @@
      },
      "sea": "calm",
      "mood": {
-      "FIG-JESUS": "earnest",
+      "FIG-JESUS": "calm",
       "FIG-GRUPPE-JUENGER": "surprised"
      }
     }

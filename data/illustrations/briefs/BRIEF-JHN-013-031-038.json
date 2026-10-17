@@ -23,22 +23,32 @@
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-ZWOELF",
           "icons": [
-            "FIG-GRUPPE-ZWOELF",
+            "FIG-JESUS",
             "FIG-ZEICHEN-LIEBE",
             "FIG-GRUPPE-ZWOELF"
+          ]
+        },
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-GRUPPE-ZWOELF",
+          "icons": [
+            "FIG-ROLLE-JUENGER",
+            "FIG-ZEICHEN-LIEBE",
+            "FIG-ROLLE-JUENGER"
           ]
         }
       ],
       "action_de": "Jesus gibt den Jüngern ein neues Gebot: Wie ich euch geliebt habe, so sollt auch ihr einander lieben; daran werden alle erkennen, dass ihr meine Jünger seid.",
       "stage": {
         "mood": {
-          "FIG-GRUPPE-ZWOELF": "calm"
+          "FIG-GRUPPE-ZWOELF": "calm",
+          "FIG-JESUS": "calm"
         }
       }
     },
     {
       "n": 2,
-      "reference": "JHN.13.36-JHN.13.38",
+      "reference": "JHN.13.36-JHN.13.37",
       "figures": [
         "FIG-PETRUS",
         "FIG-JESUS"
@@ -50,37 +60,60 @@
           "from": "FIG-PETRUS",
           "to": "FIG-JESUS",
           "icons": [
+            "FIG-PETRUS",
             "FIG-ZEICHEN-TOD",
             "FIG-JESUS"
           ]
-        },
+        }
+      ],
+      "action_de": "Petrus fragt, wohin Jesus geht, und sagt: Warum kann ich dir jetzt nicht folgen? Mein Leben will ich für dich hingeben.",
+      "stage": {
+        "mood": {
+          "FIG-PETRUS": "determined",
+          "FIG-JESUS": "calm"
+        }
+      }
+    },
+    {
+      "n": 3,
+      "reference": "JHN.13.38",
+      "figures": [
+        "FIG-JESUS",
+        "FIG-PETRUS"
+      ],
+      "objects": [],
+      "signs": [],
+      "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-PETRUS",
           "icons": [
             "FIG-OBJ-HAHN",
+            "FIG-PETRUS",
             "FIG-ZEICHEN-ABLEHNEN",
             "FIG-ZEICHEN-ABLEHNEN",
             "FIG-ZEICHEN-ABLEHNEN"
           ]
         }
       ],
-      "action_de": "Petrus will sein Leben für Jesus hingeben. Jesus kündigt an: Bevor ein Hahn kräht, wirst du mich dreimal verleugnen.",
+      "action_de": "Jesus kündigt an: Bevor ein Hahn kräht, wirst du mich dreimal verleugnen.",
       "stage": {
         "mood": {
-          "FIG-PETRUS": "determined",
-          "FIG-JESUS": "earnest"
+          "FIG-PETRUS": "surprised",
+          "FIG-JESUS": "calm"
         }
       }
     }
   ],
   "actions_de": [
     "Jesus gibt den Jüngern ein neues Gebot: Wie ich euch geliebt habe, so sollt auch ihr einander lieben; daran werden alle erkennen, dass ihr meine Jünger seid.",
-    "Petrus will sein Leben für Jesus hingeben. Jesus kündigt an: Bevor ein Hahn kräht, wirst du mich dreimal verleugnen."
+    "Petrus fragt, wohin Jesus geht, und sagt: Warum kann ich dir jetzt nicht folgen? Mein Leben will ich für dich hingeben.",
+    "Jesus kündigt an: Bevor ein Hahn kräht, wirst du mich dreimal verleugnen."
   ],
   "captions_de": [
-    "Das neue Gebot: Jesus sagt: Liebt einander (Jünger, Herzen, Jünger), wie ich euch geliebt habe.",
-    "Ansage der Verleugnung: Petrus will für Jesus sterben (Grab, Jesus); Jesus sagt: Bevor der Hahn kräht, verleugnest du mich dreimal (Hahn, drei abwehrende Hände)."
+    "Das neue Gebot: Jesus sagt: Wie ich euch geliebt habe (Jesus, Herzen, Jünger), so liebt auch einander (Jünger, Herzen, Jünger).",
+    "Petrus will sterben: Petrus sagt: Ich gebe mein Leben für dich (Petrus, Grab, Jesus).",
+    "Ansage der Verleugnung: Jesus sagt: Bevor der Hahn kräht, wehrst du dreimal ab und verleugnest mich (Hahn, Petrus, drei abwehrende Hände)."
   ],
   "interpretation_note_de": "Die Verherrlichung des Menschensohns und «noch eine kleine Weile» ([[JHN.13.31-JHN.13.33]]) zeigt das Bild nicht. Die drei abwehrenden Hände stehen für das dreimalige Verleugnen ([[JHN.13.38]]); das Grab in der Blase des Petrus für «mein Leben werde ich für dich hingeben» ([[JHN.13.37]]).",
   "basis": [
@@ -98,8 +131,14 @@
     {
       "record": "TRANS-JHN-013-001-038-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.13.36-JHN.13.38",
-      "fingerprint": "ae88fc7bf92793fe"
+      "reference": "JHN.13.36-JHN.13.37",
+      "fingerprint": "99621fc871e6baa3"
+    },
+    {
+      "record": "TRANS-JHN-013-001-038-DE-WORKING",
+      "field": "text_by_reference",
+      "reference": "JHN.13.38",
+      "fingerprint": "d92e2529cc118953"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
@@ -107,5 +146,106 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.13.31-JHN.13.35",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-GRUPPE-ZWOELF",
+                  "FIG-ZEICHEN-LIEBE",
+                  "FIG-GRUPPE-ZWOELF"
+                ]
+              }
+            ],
+            "action_de": "Jesus gibt den Jüngern ein neues Gebot: Wie ich euch geliebt habe, so sollt auch ihr einander lieben; daran werden alle erkennen, dass ihr meine Jünger seid.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.13.36-JHN.13.38",
+            "figures": [
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-TOD",
+                  "FIG-JESUS"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-OBJ-HAHN",
+                  "FIG-ZEICHEN-ABLEHNEN",
+                  "FIG-ZEICHEN-ABLEHNEN",
+                  "FIG-ZEICHEN-ABLEHNEN"
+                ]
+              }
+            ],
+            "action_de": "Petrus will sein Leben für Jesus hingeben. Jesus kündigt an: Bevor ein Hahn kräht, wirst du mich dreimal verleugnen.",
+            "stage": {
+              "mood": {
+                "FIG-PETRUS": "determined",
+                "FIG-JESUS": "earnest"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus gibt den Jüngern ein neues Gebot: Wie ich euch geliebt habe, so sollt auch ihr einander lieben; daran werden alle erkennen, dass ihr meine Jünger seid.",
+          "Petrus will sein Leben für Jesus hingeben. Jesus kündigt an: Bevor ein Hahn kräht, wirst du mich dreimal verleugnen."
+        ],
+        "captions_de": [
+          "Das neue Gebot: Jesus sagt: Liebt einander (Jünger, Herzen, Jünger), wie ich euch geliebt habe.",
+          "Ansage der Verleugnung: Petrus will für Jesus sterben (Grab, Jesus); Jesus sagt: Bevor der Hahn kräht, verleugnest du mich dreimal (Hahn, drei abwehrende Hände)."
+        ],
+        "basis": [
+          {
+            "record": "TU-JHN-013-031-038",
+            "field": "summary",
+            "fingerprint": "646de0a2bb71ab7e"
+          },
+          {
+            "record": "TRANS-JHN-013-001-038-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.13.31-JHN.13.35",
+            "fingerprint": "32910016f91efe49"
+          },
+          {
+            "record": "TRANS-JHN-013-001-038-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.13.36-JHN.13.38",
+            "fingerprint": "ae88fc7bf92793fe"
+          }
+        ]
+      }
+    }
+  ]
 }

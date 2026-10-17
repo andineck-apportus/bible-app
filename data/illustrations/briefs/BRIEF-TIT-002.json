@@ -16,6 +16,7 @@
         "FIG-TITUS",
         "FIG-ROLLE-ALTER-MANN",
         "FIG-ROLLE-ALTE-FRAU",
+        "FIG-ROLLE-JUNGE-FRAU",
         "FIG-ROLLE-JUNGER-MANN"
       ],
       "objects": [],
@@ -30,7 +31,16 @@
           ]
         }
       ],
-      "action_de": "Titus soll lehren, was der gesunden Lehre entspricht: Alte und Junge, Frauen und Männer sollen besonnen leben; er selbst soll Vorbild guter Werke sein."
+      "action_de": "Titus soll lehren, was der gesunden Lehre entspricht: Alte und Junge, Frauen und Männer sollen besonnen leben; er selbst soll Vorbild guter Werke sein.",
+      "stage": {
+        "mood": {
+          "FIG-TITUS": "calm",
+          "FIG-ROLLE-ALTER-MANN": "calm",
+          "FIG-ROLLE-ALTE-FRAU": "calm",
+          "FIG-ROLLE-JUNGE-FRAU": "smile",
+          "FIG-ROLLE-JUNGER-MANN": "calm"
+        }
+      }
     },
     {
       "n": 2,
@@ -84,5 +94,68 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "TIT.2.1-TIT.2.10",
+            "figures": [
+              "FIG-TITUS",
+              "FIG-ROLLE-ALTER-MANN",
+              "FIG-ROLLE-ALTE-FRAU",
+              "FIG-ROLLE-JUNGER-MANN"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-TITUS",
+                "to": "FIG-ROLLE-ALTER-MANN",
+                "icons": [
+                  "FIG-OBJ-SCHRIFTROLLE",
+                  "FIG-ZEICHEN-GUTE-WERKE"
+                ]
+              }
+            ],
+            "action_de": "Titus soll lehren, was der gesunden Lehre entspricht: Alte und Junge, Frauen und Männer sollen besonnen leben; er selbst soll Vorbild guter Werke sein."
+          },
+          {
+            "n": 2,
+            "reference": "TIT.2.11-TIT.2.15",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-GNADE"
+            ],
+            "speech": [],
+            "action_de": "Die Gnade Gottes ist rettend für alle Menschen erschienen; sie erzieht dazu, besonnen, gerecht und fromm zu leben.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-GLAUBENDE",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-GNADE": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "god_side": "left",
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "delight"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

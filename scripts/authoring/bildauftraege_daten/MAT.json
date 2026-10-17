@@ -24,11 +24,11 @@
     "speech": [],
     "action_de": "Die Heuchler beten gern in den Synagogen und an den Ecken der Strassen, damit die Menschen sie sehen; sie haben ihren Lohn schon erhalten.",
     "action_gsw": "D Heuchler bätet gern i de Synagoge und a de Strasseegge, damit d Lüüt si gsehnd; si händ ihre Lohn scho übercho.",
-    "caption_de": "Zum Schein: Ein Heuchler betet vor allen Leuten (Gebetszeichen); die Leute schauen ihm zu (Auge, Pfeil).",
-    "caption_gsw": "Zum Schii: En Heuchler bätet vor allne Lüüt (Gebätszeiche); d Lüüt lueged em zue (Aug, Pfiil).",
+    "caption_de": "Zum Schein: Ein Heuchler betet stehend vor allen Leuten (gefaltete Hände, Gebetszeichen); die Leute schauen ihm zu (Auge, Pfeil).",
+    "caption_gsw": "Zum Schii: En Heuchler bätet stehend vor allne Lüüt (gfalteti Händ, Gebätszeiche); d Lüüt lueged em zue (Aug, Pfiil).",
     "stage": {
      "mood": {
-      "FIG-ROLLE-HEUCHLER": "smile",
+      "FIG-ROLLE-HEUCHLER": "calm",
       "FIG-GRUPPE-MENGE": "calm"
      },
      "signs_who": {
@@ -45,7 +45,10 @@
        "FIG-ROLLE-HEUCHLER",
        "act"
       ]
-     ]
+     ],
+     "hold": {
+      "FIG-ROLLE-HEUCHLER": "PRAY"
+     }
     }
    },
    {
@@ -72,29 +75,26 @@
     ],
     "action_de": "Du aber geh in deine Kammer, schliess die Tür und bete im Verborgenen zu deinem Vater; dein Vater, der ins Verborgene sieht, wird es dir vergelten.",
     "action_gsw": "Du aber gang i dini Chammere, tue d Tür zue und bät im Verborgne zu dim Vatter; din Vatter, wo is Verborgne gseht, wirds dir vergälte.",
-    "caption_de": "Im Verborgenen: Ein Jünger betet allein in der Kammer bei geschlossener Tür zum Vater (Strahlenkranz); der Vater sieht ihn (Auge, Pfeil).",
-    "caption_gsw": "Im Verborgne: En Jünger bätet elei i de Chammere bi zuener Tür zum Vatter (Strahlechranz); de Vatter gseht en (Aug, Pfiil).",
+    "caption_de": "Im Verborgenen: Ein Jünger betet allein in der Kammer bei geschlossener, verriegelter Tür zum Vater (Strahlenkranz); der Vater sieht ihn (Auge beim Strahlenkranz, Pfeil).",
+    "caption_gsw": "Im Verborgne: En Jünger bätet elei i de Chammere bi zuener, verriglete Tür zum Vatter (Strahlechranz); de Vatter gseht en (Aug bim Strahlechranz, Pfiil).",
     "stage": {
-     "pose": {
-      "FIG-ROLLE-JUENGER": "kneel"
-     },
      "mood": {
       "FIG-ROLLE-JUENGER": "calm"
      },
      "god_side": "left",
      "before": true,
      "x": {
-      "FIG-ROLLE-JUENGER": 128
+      "FIG-ROLLE-JUENGER": 100
      },
-     "air_x": 76,
-     "air_y": 52,
      "arrows": [
       [
        "FIG-GOTT",
        "FIG-ROLLE-JUENGER",
        "act"
       ]
-     ]
+     ],
+     "air_x": 66,
+     "air_y": 10
     }
    },
    {
@@ -106,9 +106,7 @@
      "FIG-GRUPPE-JUENGER"
     ],
     "objects": [],
-    "signs": [
-     "FIG-ZEICHEN-ABSTAND"
-    ],
+    "signs": [],
     "speech": [
      {
       "from": "FIG-GRUPPE-VOELKER",
@@ -132,7 +130,6 @@
     "caption_gsw": "Nöd plappere: Mänsche us de Völker mached vill Wort (vill Blase); d Jünger bätted eifach, dänn de Vatter (Strahlechranz) weiss scho, was si bruuched (Pfiil).",
     "stage": {
      "god_side": "right",
-     "split": 1,
      "x": {
       "FIG-GRUPPE-VOELKER": 40,
       "FIG-GRUPPE-JUENGER": 112
@@ -226,13 +223,20 @@
     ],
     "action_de": "Dein Reich komme; dein Wille geschehe, wie im Himmel, so auch auf Erden.",
     "action_gsw": "Dis Riich söll cho; din Wille söll gscheh, wie im Himmel, so au uf de Erde.",
-    "caption_de": "Reich und Wille: Die Jünger bitten den Vater (Strahlenkranz): dein Reich komme (Krone), dein Wille geschehe im Himmel und auf Erden (Wolke, Pfeil, Erde).",
-    "caption_gsw": "Riich und Wille: D Jünger bitted de Vatter (Strahlechranz): dis Riich söll cho (Chrone), din Wille söll gscheh im Himmel und uf de Erde (Wulche, Pfiil, Erde).",
+    "caption_de": "Reich und Wille: Die Jünger bitten den Vater (Strahlenkranz, Pfeil): dein Reich komme (Krone), dein Wille geschehe im Himmel und auf Erden (Wolke, Pfeil nach unten, grüner Erdhügel).",
+    "caption_gsw": "Riich und Wille: D Jünger bitted de Vatter (Strahlechranz, Pfiil): dis Riich söll cho (Chrone), din Wille söll gscheh im Himmel und uf de Erde (Wulche, Pfiil abe, grüene Erdhubel).",
     "stage": {
      "god_side": "right",
      "x": {
-      "FIG-GRUPPE-JUENGER": 60
-     }
+      "FIG-GRUPPE-JUENGER": 96
+     },
+     "arrows": [
+      [
+       "FIG-GRUPPE-JUENGER",
+       "FIG-GOTT",
+       "act"
+      ]
+     ]
     }
    },
    {
@@ -257,13 +261,20 @@
     ],
     "action_de": "Unser tägliches Brot gib uns heute. Und vergib uns unsere Schulden, wie auch wir unseren Schuldnern vergeben haben.",
     "action_gsw": "Gib eus hüt eusers täglich Brot. Und vergib eus eusi Schulde, wie au mir eusne Schuldner vergäh händ.",
-    "caption_de": "Brot und Vergebung: Die Jünger bitten den Vater um das Brot für heute (Brot, eine Sonne) und um Vergebung ihrer Schuld (zerrissener Schuldschein).",
-    "caption_gsw": "Brot und Vergäbig: D Jünger bitted de Vatter ums Brot für hüt (Brot, ei Sunne) und um Vergäbig vo ihrer Schuld (verrissne Schuldschii).",
+    "caption_de": "Brot und Vergebung: Die Jünger bitten den Vater (Strahlenkranz, Pfeil) um das Brot für heute (Brot, eine Sonne) und um Vergebung ihrer Schuld (zerrissener Schuldschein).",
+    "caption_gsw": "Brot und Vergäbig: D Jünger bitted de Vatter (Strahlechranz, Pfiil) ums Brot für hüt (Brot, ei Sunne) und um Vergäbig vo ihrer Schuld (verrissne Schuldschii).",
     "stage": {
      "god_side": "right",
      "x": {
-      "FIG-GRUPPE-JUENGER": 60
-     }
+      "FIG-GRUPPE-JUENGER": 124
+     },
+     "arrows": [
+      [
+       "FIG-GRUPPE-JUENGER",
+       "FIG-GOTT",
+       "act"
+      ]
+     ]
     }
    },
    {
@@ -282,28 +293,35 @@
       "icons": [
        "FIG-ZEICHEN-BEWAHREN",
        "FIG-ZEICHEN-VERSUCHUNG",
-       "FIG-ZEICHEN-RETTUNG",
-       "FIG-ZEICHEN-BOESES"
+       "FIG-ZEICHEN-BOESES",
+       "FIG-ZEICHEN-RETTUNG"
       ]
      }
     ],
     "action_de": "Und führe uns nicht in Versuchung, sondern rette uns vor dem Bösen.",
     "action_gsw": "Und füer eus nöd in Versuechig, sondern rett eus vor em Böse.",
-    "caption_de": "Bewahrung und Rettung: Die Jünger bitten, nicht in Versuchung geführt zu werden (Schild, Köder am Haken), und um Rettung vor dem Bösen (Pfeil nach oben, dunkler Schatten).",
-    "caption_gsw": "Bewahrig und Rettig: D Jünger bitted, dass si nöd in Versuechig gfüert wärded (Schild, Köder am Haagge), und um Rettig vor em Böse (Pfiil ufe, dunkle Schatte).",
+    "caption_de": "Bewahrung und Rettung: Die Jünger bitten den Vater (Strahlenkranz, Pfeil), nicht in Versuchung geführt zu werden (zwei Hände als Dach über einer Figur, Köder am Haken), und um Rettung vor dem Bösen (dunkler Schatten, daneben Pfeil nach oben aus den Wellen).",
+    "caption_gsw": "Bewahrig und Rettig: D Jünger bitted de Vatter (Strahlechranz, Pfiil), dass si nöd in Versuechig gfüert wärded (zwei Händ als Dach über ere Figur, Köder am Haagge), und um Rettig vor em Böse (dunkle Schatte, dernäbe Pfiil ufe us de Welle).",
     "stage": {
      "god_side": "right",
      "x": {
-      "FIG-GRUPPE-JUENGER": 60
+      "FIG-GRUPPE-JUENGER": 124
      },
      "mood": {
-      "FIG-GRUPPE-JUENGER": "earnest"
-     }
+      "FIG-GRUPPE-JUENGER": "calm"
+     },
+     "arrows": [
+      [
+       "FIG-GRUPPE-JUENGER",
+       "FIG-GOTT",
+       "act"
+      ]
+     ]
     }
    }
   ],
-  "note_de": "Gott erscheint als Strahlenkranz; angeredet wird er als «unser Vater in den Himmeln» ([[MAT.6.9]]). Die sieben Bitten (nach verbreiteter Zählung) stehen als Zeichen in den Sprechblasen; die Zeichen sind Deutung: leuchtender Gottesname für «geheiligt werden», Krone für das Reich, Wolke und Erde für «wie im Himmel, so auf Erden», zerrissener Schuldschein für die Vergebung der Schulden ([[MAT.6.12]]), Köder für «Versuchung», Schild für «nicht hineinführen», dunkler Schatten für «das Böse» oder «den Bösen» ([[MAT.6.13]], im Griechischen offen). Dass die Jünger selbst ihren Schuldnern vergeben haben, nennt nur die Legende; das folgende Bild zu [[MAT.6.14-MAT.6.15]] zeigt es. Den Lobpreis am Schluss («denn dein ist das Reich …») hat der Text nicht.",
-  "note_gsw": "Gott erschiint als Strahlechranz; aagredt wird er als «unser Vatter im Himmel» ([[MAT.6.9]]). Di sibe Bitte (nach verbreiteter Zellig) staand als Zeiche i de Sprächblase; d Zeiche sind Düütig: lüüchtende Gottesname für «heilig gha wärde», Chrone fürs Riich, Wulche und Erde für «wie im Himmel, so uf de Erde», verrissne Schuldschii für d Vergäbig vo de Schulde ([[MAT.6.12]]), Köder für «Versuechig», Schild für «nöd ineföere», dunkle Schatte für «s Böse» oder «de Bös» ([[MAT.6.13]], im Griechische offe). Dass d Jünger sälber ihrne Schuldner vergäh händ, seit nu d Legände; s nächscht Bild zu [[MAT.6.14-MAT.6.15]] zeigts. S Lob am Schluss («dänn dis isch s Riich …») hät de Text nöd."
+  "note_de": "Gott erscheint als Strahlenkranz; angeredet wird er als «unser Vater in den Himmeln» ([[MAT.6.9]]). Die sieben Bitten (nach verbreiteter Zählung) stehen als Zeichen in den Sprechblasen; die Zeichen sind Deutung: leuchtender Gottesname für «geheiligt werden», Krone für das Reich, Wolke, Pfeil nach unten und Erde für «wie im Himmel, so auf Erden», zerrissener Schuldschein für die Vergebung der Schulden ([[MAT.6.12]]), Köder für «Versuchung», zwei Hände als Dach (bewahren) für «nicht hineinführen», dunkler Schatten für «das Böse» oder «den Bösen» ([[MAT.6.13]], im Griechischen offen), Pfeil nach oben aus den Wellen für «retten». Dass die Jünger selbst ihren Schuldnern vergeben haben, nennt nur die Legende; das folgende Bild zu [[MAT.6.14-MAT.6.15]] zeigt es. Den Lobpreis am Schluss («denn dein ist das Reich …») hat der Text nicht.",
+  "note_gsw": "Gott erschiint als Strahlechranz; aagredt wird er als «unser Vatter im Himmel» ([[MAT.6.9]]). Di sibe Bitte (nach verbreiteter Zellig) staand als Zeiche i de Sprächblase; d Zeiche sind Düütig: lüüchtende Gottesname für «heilig gha wärde», Chrone fürs Riich, Wulche, Pfiil abe und Erde für «wie im Himmel, so uf de Erde», verrissne Schuldschii für d Vergäbig vo de Schulde ([[MAT.6.12]]), Köder für «Versuechig», zwei Händ als Dach (bewahre) für «nöd ineföere», dunkle Schatte für «s Böse» oder «de Bös» ([[MAT.6.13]], im Griechische offe), Pfiil ufe us de Welle für «rette». Dass d Jünger sälber ihrne Schuldner vergäh händ, seit nu d Legände; s nächscht Bild zu [[MAT.6.14-MAT.6.15]] zeigts. S Lob am Schluss («dänn dis isch s Riich …») hät de Text nöd."
  },
  {
   "suffix": "MAT-006-014-015",
@@ -339,8 +357,8 @@
     ],
     "action_de": "Wenn die Jünger den Menschen ihre Verfehlungen vergeben, wird ihr himmlischer Vater auch ihnen vergeben.",
     "action_gsw": "Wänn d Jünger de Mänsche ihri Verfehlige vergänd, vergit ihne au ihre himmlisch Vatter.",
-    "caption_de": "Vergeben: Die Jünger vergeben den Leuten (Schuldschein, zerrissen); auch der Vater (Strahlenkranz) vergibt ihnen (zerrissener Schein, Pfeil).",
-    "caption_gsw": "Vergäh: D Jünger vergänd de Lüüt (Schuldschii, verrisse); au de Vatter (Strahlechranz) vergit ine (verrissne Schii, Pfiil).",
+    "caption_de": "Vergeben: Die Jünger vergeben den Leuten (Schuldschein, zerrissen); auch der Vater (Strahlenkranz) vergibt ihnen (zerrissener Schein beim Strahlenkranz, Pfeil zu den Jüngern).",
+    "caption_gsw": "Vergäh: D Jünger vergänd de Lüüt (Schuldschii, verrisse); au de Vatter (Strahlechranz) vergit ine (verrissne Schii bim Strahlechranz, Pfiil zu de Jünger).",
     "stage": {
      "god_side": "right",
      "x": {
@@ -388,8 +406,8 @@
     ],
     "action_de": "Wenn sie aber den Menschen nicht vergeben, wird ihr Vater ihre Verfehlungen auch nicht vergeben.",
     "action_gsw": "Wänn si aber de Mänsche nöd vergänd, vergit ihre Vatter ihri Verfehlige au nöd.",
-    "caption_de": "Nicht vergeben: Die Jünger halten den Leuten ihre Schuld vor (abwehrende Hand, ganzer Schuldschein, Linie); dann bleibt auch ihre eigene Schuld beim Vater stehen (ganzer Schuldschein).",
-    "caption_gsw": "Nöd vergäh: D Jünger hebed de Lüüt ihri Schuld vor (abwehrendi Hand, ganze Schuldschii, Linie); dänn bliibt au ihri eigni Schuld bim Vatter staa (ganze Schuldschii).",
+    "caption_de": "Nicht vergeben: Die Jünger halten den Leuten ihre Schuld vor (abwehrende Hand, ganzer Schuldschein) und halten Abstand (gestrichelte Linie); dann bleibt auch ihre eigene Schuld beim Vater stehen (ganzer Schuldschein beim Strahlenkranz, kein Pfeil).",
+    "caption_gsw": "Nöd vergäh: D Jünger hebed de Lüüt ihri Schuld vor (abwehrendi Hand, ganze Schuldschii) und halted Abstand (gstrichleti Linie); dänn bliibt au ihri eigni Schuld bim Vatter staa (ganze Schuldschii bim Strahlechranz, kein Pfiil).",
     "stage": {
      "god_side": "right",
      "x": {
@@ -400,16 +418,12 @@
       "FIG-ZEICHEN-SCHULD": "FIG-GOTT"
      },
      "split": 1,
-     "arrows": [
-      [
-       "FIG-GOTT",
-       "FIG-GRUPPE-JUENGER",
-       "act"
-      ]
-     ],
      "mood": {
-      "FIG-GRUPPE-JUENGER": "earnest",
+      "FIG-GRUPPE-JUENGER": "pensive",
       "FIG-GRUPPE-MENGE": "worried"
+     },
+     "pose": {
+      "FIG-GRUPPE-JUENGER": "away"
      }
     }
    }
@@ -451,29 +465,26 @@
     ],
     "action_de": "Almosen, Gebet und Fasten sollen nicht vor den Menschen geschehen, sondern im Verborgenen vor dem Vater, der ins Verborgene sieht.",
     "action_gsw": "Almose, Gebät und Faschte söled nöd vor de Lüüt passiere, sondern im Verborgne vor em Vatter, wo is Verborgne gseht.",
-    "caption_de": "Im Verborgenen: Ein Jünger betet allein in der Kammer zum Vater (Strahlenkranz), der ihn sieht (Auge, Pfeil) – so auch beim Geben und Fasten.",
-    "caption_gsw": "Im Verborgne: En Jünger bätet elei i de Chammere zum Vatter (Strahlechranz), wo en gseht (Aug, Pfiil) – so au bim Gäh und Faschte.",
+    "caption_de": "Im Verborgenen: Ein Jünger betet allein in der Kammer bei geschlossener Tür zum Vater (Strahlenkranz), der ihn sieht (Auge beim Strahlenkranz, Pfeil).",
+    "caption_gsw": "Im Verborgne: En Jünger bätet elei i de Chammere bi zuener Tür zum Vatter (Strahlechranz), wo en gseht (Aug bim Strahlechranz, Pfiil).",
     "stage": {
-     "pose": {
-      "FIG-ROLLE-JUENGER": "kneel"
-     },
      "mood": {
       "FIG-ROLLE-JUENGER": "calm"
      },
      "god_side": "left",
      "before": true,
      "x": {
-      "FIG-ROLLE-JUENGER": 128
+      "FIG-ROLLE-JUENGER": 100
      },
-     "air_x": 76,
-     "air_y": 52,
      "arrows": [
       [
        "FIG-GOTT",
        "FIG-ROLLE-JUENGER",
        "act"
       ]
-     ]
+     ],
+     "air_x": 66,
+     "air_y": 10
     }
    },
    {
@@ -498,13 +509,20 @@
     ],
     "action_de": "In der Mitte steht das Vaterunser: Bitten um Gottes Namen, Reich und Willen, um Brot, Vergebung, Bewahrung und Rettung.",
     "action_gsw": "I de Mitti staat s Unservatter: Bitte um Gottes Name, Riich und Wille, um Brot, Vergäbig, Bewahrig und Rettig.",
-    "caption_de": "Vaterunser: Die Jünger bitten den Vater (Strahlenkranz), dass sein Name geheiligt werde (leuchtend), um Brot und um Vergebung (zerrissener Schuldschein).",
-    "caption_gsw": "Unservatter: D Jünger bitted de Vatter (Strahlechranz), dass sin Name heilig gha wird (lüüchtend), um Brot und um Vergäbig (verrissne Schuldschii).",
+    "caption_de": "Vaterunser: Die Jünger bitten den Vater (Strahlenkranz, Pfeil), dass sein Name geheiligt werde (Gottesname, leuchtend), um Brot und um Vergebung (zerrissener Schuldschein).",
+    "caption_gsw": "Unservatter: D Jünger bitted de Vatter (Strahlechranz, Pfiil), dass sin Name heilig gha wird (Gottesname, lüüchtend), um Brot und um Vergäbig (verrissne Schuldschii).",
     "stage": {
      "god_side": "right",
      "x": {
-      "FIG-GRUPPE-JUENGER": 60
-     }
+      "FIG-GRUPPE-JUENGER": 110
+     },
+     "arrows": [
+      [
+       "FIG-GRUPPE-JUENGER",
+       "FIG-GOTT",
+       "act"
+      ]
+     ]
     }
    },
    {
@@ -517,19 +535,21 @@
     "objects": [
      "FIG-OBJ-SCHATZ"
     ],
-    "signs": [],
+    "signs": [
+     "FIG-ZEICHEN-SCHATZ-ERDE"
+    ],
     "speech": [],
     "action_de": "Die Jünger sollen keine Schätze auf der Erde sammeln, wo Motte und Rost sie zerstören, sondern Schätze im Himmel; denn wo ihr Schatz ist, da ist auch ihr Herz.",
     "action_gsw": "D Jünger söled kei Schätz uf de Erde sammle, wo Motte und Rost si kaputt mached, sondern Schätz im Himmel; dänn wo ihre Schatz isch, det isch au ihres Härz.",
-    "caption_de": "Schatz im Himmel: Die Jünger blicken zu ihrem Schatz (Truhe) bei Gott (Strahlenkranz), nicht auf der Erde.",
-    "caption_gsw": "Schatz im Himmel: D Jünger lueged zu ihrem Schatz (Truhe) bi Gott (Strahlechranz), nöd uf de Erde.",
+    "caption_de": "Schatz im Himmel: Die Jünger blicken nach oben zu ihrem Schatz (Truhe mit Gold) beim Vater (Strahlenkranz, Pfeil), nicht zum Schatz auf der Erde (graue Truhe mit Rost und Motte, durchgestrichen).",
+    "caption_gsw": "Schatz im Himmel: D Jünger lueged ufe zu ihrem Schatz (Truhe mit Gold) bim Vatter (Strahlechranz, Pfiil), nöd zum Schatz uf de Erde (graui Truhe mit Rost und Motte, durgstriche).",
     "stage": {
      "god_side": "right",
      "at": {
       "FIG-OBJ-SCHATZ": "FIG-GOTT"
      },
      "mood": {
-      "FIG-GRUPPE-JUENGER": "smile"
+      "FIG-GRUPPE-JUENGER": "calm"
      },
      "arrows": [
       [
@@ -537,7 +557,10 @@
        "FIG-GOTT",
        "act"
       ]
-     ]
+     ],
+     "x": {
+      "FIG-GRUPPE-JUENGER": 64
+     }
     }
    },
    {
@@ -557,19 +580,16 @@
     "speech": [],
     "action_de": "Die Jünger sollen sich nicht sorgen: Der Vater ernährt die Vögel und kleidet die Blumen des Feldes; sie sollen zuerst sein Reich und seine Gerechtigkeit suchen.",
     "action_gsw": "D Jünger söled sich kei Sorge mache: De Vatter ernährt d Vögel und leit d Blueme vom Fäld aa; si söled zerscht sis Riich und sini Gerächtigkeit sueche.",
-    "caption_de": "Nicht sorgen: Der Vater (Strahlenkranz) sorgt für Vögel und Blumen (Pfeil); die Jünger suchen zuerst sein Reich (Krone).",
-    "caption_gsw": "Kei Sorge: De Vatter (Strahlechranz) luegt für Vögel und Blueme (Pfiil); d Jünger sueched zerscht sis Riich (Chrone).",
+    "caption_de": "Nicht sorgen: Der Vater (Strahlenkranz) sorgt für die Vögel und die Blumen (Pfeil an den Vögeln entlang zu den Blumen); die Jünger suchen zuerst sein Reich (Krone über ihnen).",
+    "caption_gsw": "Kei Sorge: De Vatter (Strahlechranz) luegt für d Vögel und d Blueme (Pfiil a de Vögel entlang zu de Blueme); d Jünger sueched zerscht sis Riich (Chrone über ine).",
     "stage": {
-     "god_side": "left",
+     "god_side": "center",
      "count": {
       "FIG-OBJ-VOGEL": 3,
       "FIG-OBJ-BLUME": 3
      },
-     "at": {
-      "FIG-ZEICHEN-REICH-GOTTES": "FIG-GRUPPE-JUENGER"
-     },
      "mood": {
-      "FIG-GRUPPE-JUENGER": "smile"
+      "FIG-GRUPPE-JUENGER": "calm"
      },
      "arrows": [
       [
@@ -577,12 +597,20 @@
        "FIG-OBJ-BLUME",
        "act"
       ]
-     ]
+     ],
+     "air_x": 116,
+     "air_y": 36,
+     "x": {
+      "FIG-GRUPPE-JUENGER": 44
+     },
+     "at": {
+      "FIG-ZEICHEN-REICH-GOTTES": "FIG-GRUPPE-JUENGER"
+     }
     }
    }
   ],
-  "note_de": "Übersetzt ist bisher nur [[MAT.6.5-MAT.6.15]]; die Felder 1, 3 und 4 folgen der Kapitelzusammenfassung. Feld 1 steht stellvertretend für Almosen, Gebet und Fasten ([[MAT.6.1-MAT.6.18]]); Feld 2 zeigt drei der sieben Bitten (das Reich erscheint in Feld 4). Gott erscheint als Strahlenkranz; Jesus nennt ihn «Vater». Dass der Schatz beim Strahlenkranz steht, deutet «Schätze im Himmel» ([[MAT.6.20]]) an.",
-  "note_gsw": "Übersetzt isch bis jetzt nu [[MAT.6.5-MAT.6.15]]; d Fälder 1, 3 und 4 folged de Kapitelzämefassig. S Fäld 1 staat für Almose, Gebät und Faschte ([[MAT.6.1-MAT.6.18]]); s Fäld 2 zeigt drüü vo de sibe Bitte (s Riich chunnt im Fäld 4). Gott erschiint als Strahlechranz; de Jesus nännt en «Vatter». Dass de Schatz bim Strahlechranz staat, düütet «Schätz im Himmel» ([[MAT.6.20]]) aa."
+  "note_de": "Übersetzt ist bisher nur [[MAT.6.5-MAT.6.15]]; die Felder 1, 3 und 4 folgen der Kapitelzusammenfassung. Feld 1 steht stellvertretend für Almosen, Gebet und Fasten ([[MAT.6.1-MAT.6.18]]); Feld 2 zeigt drei der sieben Bitten (das Reich erscheint in Feld 4). Gott erscheint als Strahlenkranz; Jesus nennt ihn «Vater». Dass der Schatz beim Strahlenkranz steht, deutet «Schätze im Himmel» ([[MAT.6.20]]) an; die durchgestrichene Truhe mit Rost und Motte steht für die Schätze auf der Erde ([[MAT.6.19]]).",
+  "note_gsw": "Übersetzt isch bis jetzt nu [[MAT.6.5-MAT.6.15]]; d Fälder 1, 3 und 4 folged de Kapitelzämefassig. S Fäld 1 staat für Almose, Gebät und Faschte ([[MAT.6.1-MAT.6.18]]); s Fäld 2 zeigt drüü vo de sibe Bitte (s Riich chunnt im Fäld 4). Gott erschiint als Strahlechranz; de Jesus nännt en «Vatter». Dass de Schatz bim Strahlechranz staat, düütet «Schätz im Himmel» ([[MAT.6.20]]) aa; di durgstrichni Truhe mit Rost und Motte staat für d Schätz uf de Erde ([[MAT.6.19]])."
  },
  {
   "suffix": "MAT",
@@ -618,8 +646,8 @@
     ],
     "action_de": "Auf dem Berg lehrt Jesus die Jünger und die Menge: Er erfüllt das Gesetz und die Propheten und verkündet das Himmelreich.",
     "action_gsw": "Uf em Bärg leert de Jesus d Jünger und d Mängi: Er erfüllt s Gsetz und d Prophete und verchündet s Himmelriich.",
-    "caption_de": "Bergpredigt: Jesus sitzt auf dem Berg und lehrt (Schriftrolle = die Schriften Israels, Krone = Himmelreich).",
-    "caption_gsw": "Bärgpredig: De Jesus hockt uf em Bärg und leert (Schriftrolle = d Schrifte vo Israel, Chrone = Himmelriich).",
+    "caption_de": "Bergpredigt: Jesus sitzt am Berg und lehrt die Jünger und die Menge (Schriftrolle = die Schriften Israels, Krone = Himmelreich).",
+    "caption_gsw": "Bärgpredig: De Jesus hockt am Bärg und leert d Jünger und d Mängi (Schriftrolle = d Schrifte vo Israel, Chrone = Himmelriich).",
     "stage": {
      "pose": {
       "FIG-JESUS": "sit"
@@ -662,8 +690,8 @@
     ],
     "action_de": "Jesus wird gekreuzigt und begraben; am ersten Tag der Woche wälzt ein Engel den Stein weg, die Wächter werden vor Furcht wie tot, und der Engel sagt den Frauen: Er ist nicht hier, er ist auferweckt worden.",
     "action_gsw": "De Jesus wird gchrüziget und begrabe; am erschte Tag vo de Wuche rollt en Ängel de Stei wäg, d Wächter sind vor Angscht wie tot, und de Ängel seit de Fraue: Er isch nöd da, er isch uferweckt worde.",
-    "caption_de": "Kreuz und leeres Grab: das leere Kreuz, das offene Grab; ein Wächter liegt am Boden, ein Engel sagt Maria aus Magdala: Jesus ist auferweckt (Jesus, offenes Grab mit Pfeil nach oben).",
-    "caption_gsw": "Chrüz und lääres Grab: s lääre Chrüz, s offni Grab; en Wächter liit am Bode, en Ängel seit de Maria vo Magdala: De Jesus isch uferweckt (Jesus, offes Grab mit Pfiil ufe).",
+    "caption_de": "Kreuz und leeres Grab: das leere Kreuz, das offene Grab; ein Wächter liegt am Boden, ein Engel sagt Maria aus Magdala: Jesus ist auferweckt (Jesus, offenes Grab mit Licht).",
+    "caption_gsw": "Chrüz und lääres Grab: s lääre Chrüz, s offni Grab; en Wächter liit am Bode, en Ängel seit de Maria vo Magdala: De Jesus isch uferweckt (Jesus, offes Grab mit Liecht).",
     "stage": {
      "floor_side": "left",
      "back_side": "right",
@@ -672,9 +700,9 @@
       "FIG-OBJ-KREUZ": 4
      },
      "x": {
-      "FIG-ROLLE-SOLDAT": 66,
-      "FIG-MARIA-MAGDALA": 112,
-      "FIG-ROLLE-ENGEL": 150
+      "FIG-ROLLE-SOLDAT": 54,
+      "FIG-MARIA-MAGDALA": 102,
+      "FIG-ROLLE-ENGEL": 146
      },
      "pose": {
       "FIG-ROLLE-SOLDAT": "lie"
@@ -708,8 +736,8 @@
     ],
     "action_de": "Auf einem Berg in Galiläa sendet der Auferstandene die Jünger: Macht alle Völker zu Jüngern, tauft und lehrt sie; ich bin bei euch alle Tage.",
     "action_gsw": "Uf emne Bärg z Galiläa schickt de Uferstandnig d Jünger: Mached ali Völker zu Jünger, taufed und leered si; ich bi bi eu ali Täg.",
-    "caption_de": "Sendung: Auf dem Berg sendet Jesus die Jünger zu allen Völkern (Pfeile, Gruppe der Völker).",
-    "caption_gsw": "Sändig: Uf em Bärg schickt de Jesus d Jünger zu allne Völker (Pfiil, Gruppe vo de Völker).",
+    "caption_de": "Sendung: Am Berg sendet Jesus die Jünger zu allen Völkern (Sprechblase: Pfeile in alle Richtungen, Gruppe der Völker).",
+    "caption_gsw": "Sändig: Am Bärg schickt de Jesus d Jünger zu allne Völker (Sprächblase: Pfiil in ali Richtige, Gruppe vo de Völker).",
     "stage": {
      "back_side": "left",
      "before": true,
@@ -723,7 +751,7 @@
     }
    }
   ],
-  "note_de": "Matthäus ist bisher nur in Kapitel 6 übersetzt; die Felder folgen der Buchzusammenfassung. Die Schriftrolle steht für die Schriften Israels, in deren Zusammenhang Matthäus von Jesus erzählt (z. B. [[MAT.1.22]], [[MAT.5.17]]). Engel am Grab: [[MAT.28.2-MAT.28.7]]; das offene Grab mit Pfeil nach oben steht für «er ist auferweckt worden» (Deutung). Gewalt am Kreuz wird nicht gezeigt.",
-  "note_gsw": "De Matthäus isch bis jetzt nu im Kapitel 6 übersetzt; d Fälder folged de Buechzämefassig. D Schriftrolle staat für d Schrifte vo Israel, wo de Matthäus im Zämehang mit ine vom Jesus verzellt (z. B. [[MAT.1.22]], [[MAT.5.17]]). Ängel am Grab: [[MAT.28.2-MAT.28.7]]; s offni Grab mit Pfiil ufe staat für «er isch uferweckt worde» (Düütig). Gwalt am Chrüz wird nöd zeigt."
+  "note_de": "Matthäus ist bisher nur in Kapitel 6 übersetzt; die Felder folgen der Buchzusammenfassung. Die Schriftrolle steht für die Schriften Israels, in deren Zusammenhang Matthäus von Jesus erzählt (z. B. [[MAT.1.22]], [[MAT.5.17]]). Engel am Grab: [[MAT.28.2-MAT.28.7]]; das offene Grab mit Licht steht für «er ist auferweckt worden» (Deutung). Gewalt am Kreuz wird nicht gezeigt.",
+  "note_gsw": "De Matthäus isch bis jetzt nu im Kapitel 6 übersetzt; d Fälder folged de Buechzämefassig. D Schriftrolle staat für d Schrifte vo Israel, wo de Matthäus im Zämehang mit ine vom Jesus verzellt (z. B. [[MAT.1.22]], [[MAT.5.17]]). Ängel am Grab: [[MAT.28.2-MAT.28.7]]; s offni Grab mit Liecht staat für «er isch uferweckt worde» (Düütig). Gwalt am Chrüz wird nöd zeigt."
  }
 ]

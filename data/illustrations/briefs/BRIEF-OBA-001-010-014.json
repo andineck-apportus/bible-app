@@ -27,17 +27,28 @@
       "action_de": "Als Fremde Jerusalems Vermögen wegführten und über die Stadt das Los warfen, stand Edom abseits und war wie einer von ihnen; darum wird Schande es bedecken.",
       "stage": {
         "back_side": "right",
+        "before": true,
         "split": 1,
-        "at": {
-          "FIG-OBJ-LOS": "FIG-GRUPPE-VOELKER"
+        "hold": {
+          "FIG-GRUPPE-VOELKER": "FIG-OBJ-LOS"
+        },
+        "arrows": [
+          [
+            "FIG-GRUPPE-VOELKER",
+            "FIG-ORT-JERUSALEM",
+            "throw"
+          ]
+        ],
+        "pose": {
+          "FIG-GRUPPE-EDOM": "away"
         },
         "mood": {
           "FIG-GRUPPE-EDOM": "calm",
           "FIG-GRUPPE-VOELKER": "earnest"
         },
         "x": {
-          "FIG-GRUPPE-EDOM": 34,
-          "FIG-GRUPPE-VOELKER": 100
+          "FIG-GRUPPE-EDOM": 28,
+          "FIG-GRUPPE-VOELKER": 90
         }
       }
     },
@@ -58,9 +69,9 @@
           "from": "FIG-GOTT",
           "to": "FIG-GRUPPE-EDOM",
           "icons": [
-            "FIG-ZEICHEN-ABLEHNEN",
-            "FIG-ZEICHEN-FREUDE",
-            "FIG-OBJ-MUENZEN",
+            "FIG-ZEICHEN-NICHT-FREUEN",
+            "FIG-ZEICHEN-NICHT-PLUENDERN",
+            "FIG-ZEICHEN-NICHT-AUSLIEFERN",
             "FIG-GRUPPE-ISRAEL"
           ]
         }
@@ -74,7 +85,7 @@
           ]
         },
         "mood": {
-          "FIG-GRUPPE-EDOM": "earnest",
+          "FIG-GRUPPE-EDOM": "calm",
           "FIG-GRUPPE-ISRAEL": "worried"
         }
       }
@@ -85,8 +96,8 @@
     "Gott sagt zu Edom: Schau nicht schadenfroh auf deinen Bruder herab am Tag seines Unglücks, greif nicht nach seinem Vermögen, stell dich nicht an die Wegkreuzung, um seine Flüchtlinge auszuliefern."
   ],
   "captions_de": [
-    "Abseits: Fremde werfen das Los über Jerusalem (Steine); Edom steht abseits (gestrichelte Linie) und schaut zu.",
-    "Am Tag der Not: Gott verbietet Edom (abwehrende Hand), sich über seinen Bruder zu freuen, zu plündern und seine Flüchtlinge auszuliefern (Funken, Münzen, Gruppe in Blau)."
+    "Abseits: Fremde ziehen in Jerusalems Tor und werfen das Los über die Stadt (Steine in der Hand, gepunkteter Bogen); Edom steht abseits (gestrichelte Linie) und wendet sich ab.",
+    "Am Tag der Not: Gott verbietet Edom, sich über seinen Bruder zu freuen, zu plündern und seine Flüchtlinge auszuliefern (durchgestrichen: Funken, Münzen, gefesselte Hände; Gruppe in Blau)."
   ],
   "interpretation_note_de": "Jakob ist Edoms Bruder, weil Edom von Esau, Jakobs Bruder, abstammt ([[OBA.1.10]]; [[GEN.25.25-GEN.25.26]], noch nicht übersetzt). Die Verbote ([[OBA.1.12-OBA.1.14]]) blicken auf Jerusalems Fall zurück; die Funken stehen hier für Schadenfreude. Wer die «Fremden» waren, sagt Obadja nicht; das Bild nennt kein Volk. Gewalt an Flüchtlingen wird nicht gezeigt.",
   "basis": [
@@ -113,5 +124,89 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "OBA.1.10-OBA.1.11",
+            "figures": [
+              "FIG-GRUPPE-EDOM",
+              "FIG-GRUPPE-VOELKER"
+            ],
+            "objects": [
+              "FIG-ORT-JERUSALEM",
+              "FIG-OBJ-LOS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [],
+            "action_de": "Als Fremde Jerusalems Vermögen wegführten und über die Stadt das Los warfen, stand Edom abseits und war wie einer von ihnen; darum wird Schande es bedecken.",
+            "stage": {
+              "back_side": "right",
+              "split": 1,
+              "at": {
+                "FIG-OBJ-LOS": "FIG-GRUPPE-VOELKER"
+              },
+              "mood": {
+                "FIG-GRUPPE-EDOM": "calm",
+                "FIG-GRUPPE-VOELKER": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-EDOM": 34,
+                "FIG-GRUPPE-VOELKER": 100
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "OBA.1.12-OBA.1.14",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-EDOM",
+              "FIG-GRUPPE-ISRAEL"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GOTT",
+                "to": "FIG-GRUPPE-EDOM",
+                "icons": [
+                  "FIG-ZEICHEN-ABLEHNEN",
+                  "FIG-ZEICHEN-FREUDE",
+                  "FIG-OBJ-MUENZEN",
+                  "FIG-GRUPPE-ISRAEL"
+                ]
+              }
+            ],
+            "action_de": "Gott sagt zu Edom: Schau nicht schadenfroh auf deinen Bruder herab am Tag seines Unglücks, greif nicht nach seinem Vermögen, stell dich nicht an die Wegkreuzung, um seine Flüchtlinge auszuliefern.",
+            "stage": {
+              "god_side": "left",
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-GRUPPE-ISRAEL"
+                ]
+              },
+              "mood": {
+                "FIG-GRUPPE-EDOM": "earnest",
+                "FIG-GRUPPE-ISRAEL": "worried"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Abseits: Fremde werfen das Los über Jerusalem (Steine); Edom steht abseits (gestrichelte Linie) und schaut zu.",
+          "Am Tag der Not: Gott verbietet Edom (abwehrende Hand), sich über seinen Bruder zu freuen, zu plündern und seine Flüchtlinge auszuliefern (Funken, Münzen, Gruppe in Blau)."
+        ]
+      }
+    }
+  ]
 }

@@ -14,8 +14,8 @@
       "reference": "MRK.14.43-MRK.14.46",
       "figures": [
         "FIG-GRUPPE-MENGE",
-        "FIG-JUDAS-ISKARIOT",
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-JUDAS-ISKARIOT"
       ],
       "objects": [],
       "signs": [
@@ -25,18 +25,15 @@
       "speech": [],
       "action_de": "Judas kommt mit einer Menge mit Schwertern und Knüppeln, gesandt von den Hohepriestern. Er tritt zu Jesus, sagt «Rabbi!» und küsst ihn; sie ergreifen Jesus.",
       "stage": {
-        "at": {
-          "FIG-ZEICHEN-KUSS": "FIG-JUDAS-ISKARIOT",
-          "FIG-ZEICHEN-AUSLIEFERN": "FIG-JESUS"
-        },
         "mood": {
           "FIG-GRUPPE-MENGE": "earnest",
           "FIG-JUDAS-ISKARIOT": "earnest",
           "FIG-JESUS": "calm"
         },
         "x": {
-          "FIG-JUDAS-ISKARIOT": 98,
-          "FIG-JESUS": 150
+          "FIG-GRUPPE-MENGE": 40,
+          "FIG-JESUS": 104,
+          "FIG-JUDAS-ISKARIOT": 146
         },
         "arrows": [
           [
@@ -44,7 +41,13 @@
             "FIG-JESUS",
             "act"
           ]
-        ]
+        ],
+        "beside": {
+          "FIG-ZEICHEN-KUSS": "FIG-JUDAS-ISKARIOT"
+        },
+        "at": {
+          "FIG-ZEICHEN-AUSLIEFERN": "FIG-JESUS"
+        }
       }
     },
     {
@@ -97,6 +100,10 @@
         },
         "at": {
           "FIG-ZEICHEN-FLIEHEN": "FIG-GRUPPE-ZWOELF"
+        },
+        "x": {
+          "FIG-JESUS": 34,
+          "FIG-GRUPPE-ZWOELF": 150
         }
       }
     }
@@ -107,7 +114,7 @@
     "Da verlassen ihn alle und fliehen. Ein junger Mann, nur mit einem Leinentuch bekleidet, folgt ihm; als man ihn packt, flieht er nackt."
   ],
   "captions_de": [
-    "Kuss: Judas küsst Jesus als Zeichen (Lippen); die Menge ergreift ihn (gefesselte Hände).",
+    "Kuss: Judas tritt zu Jesus und küsst ihn als Zeichen (Lippen); die Menge ergreift ihn (Bogen, gefesselte Hände).",
     "Antwort: Jesus: Ich war täglich im Tempel – so erfüllen sich die Schriften (Tempel, Schriftrolle).",
     "Flucht: Die Jünger wenden sich ab und fliehen (Pfeil); Jesus bleibt allein zurück."
   ],
@@ -142,5 +149,111 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.14.43-MRK.14.46",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JUDAS-ISKARIOT",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-KUSS",
+              "FIG-ZEICHEN-AUSLIEFERN"
+            ],
+            "speech": [],
+            "action_de": "Judas kommt mit einer Menge mit Schwertern und Knüppeln, gesandt von den Hohepriestern. Er tritt zu Jesus, sagt «Rabbi!» und küsst ihn; sie ergreifen Jesus.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-KUSS": "FIG-JUDAS-ISKARIOT",
+                "FIG-ZEICHEN-AUSLIEFERN": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-JUDAS-ISKARIOT": "earnest",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-JUDAS-ISKARIOT": 98,
+                "FIG-JESUS": 150
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.14.47-MRK.14.49",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ORT-TEMPEL",
+                  "FIG-OBJ-SCHRIFTROLLE"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: Wie gegen einen Räuber seid ihr ausgezogen? Täglich war ich bei euch im Tempel und lehrte. Aber es geschieht, damit die Schriften erfüllt werden.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-JESUS": "earnest"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.14.50-MRK.14.52",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-FLIEHEN"
+            ],
+            "speech": [],
+            "action_de": "Da verlassen ihn alle und fliehen. Ein junger Mann, nur mit einem Leinentuch bekleidet, folgt ihm; als man ihn packt, flieht er nackt.",
+            "stage": {
+              "pose": {
+                "FIG-GRUPPE-ZWOELF": "away"
+              },
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "worried",
+                "FIG-JESUS": "calm"
+              },
+              "at": {
+                "FIG-ZEICHEN-FLIEHEN": "FIG-GRUPPE-ZWOELF"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Kuss: Judas küsst Jesus als Zeichen (Lippen); die Menge ergreift ihn (gefesselte Hände).",
+          "Antwort: Jesus: Ich war täglich im Tempel – so erfüllen sich die Schriften (Tempel, Schriftrolle).",
+          "Flucht: Die Jünger wenden sich ab und fliehen (Pfeil); Jesus bleibt allein zurück."
+        ]
+      }
+    }
+  ]
 }

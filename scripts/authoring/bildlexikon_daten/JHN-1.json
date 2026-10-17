@@ -278,6 +278,10 @@
     "trait_de": "Ledersohle mit Riemen",
     "basis": "text",
     "ref": "JHN.1.27"
+   },
+   {
+    "trait_de": "Von oben gesehen: Sohle in Fussform mit gekreuzten Riemen",
+    "basis": "design"
    }
   ],
   "pal": [
@@ -360,6 +364,11 @@
     "trait_de": "Bronzefarbene Schlange an einer Stange",
     "basis": "text",
     "ref": "JHN.3.14"
+   },
+   {
+    "trait_de": "Die Schlange hängt über der Stangenspitze, die Stange steht auf einem Steinsockel",
+    "basis": "design",
+    "note_de": "Nicht um den Stab gewunden, damit sie nicht als Äskulapstab gelesen wird (Blindtest 2026-10-17)"
    }
   ],
   "pal": [
@@ -367,7 +376,8 @@
    "#7A5A34"
   ],
   "rules": [
-   "Nicht mit dem Kreuz verwechseln; die Stange ist schlicht"
+   "Nicht mit dem Kreuz verwechseln; die Stange ist schlicht",
+   "Nicht mit dem Äskulapstab verwechseln: die Schlange windet sich nicht um den Stab"
   ],
   "find": [
    [
@@ -555,8 +565,9 @@
     "note_de": "Der Text nennt fünf Säulenhallen; das Bild zeigt eine Reihe Säulen"
    },
    {
-    "trait_de": "Ummauertes Becken mit Wasser",
-    "basis": "design"
+    "trait_de": "Ummauertes Becken mit Wasser hinter den Personen, vorn ein Steinboden",
+    "basis": "design",
+    "note_de": "Die Personen stehen oder liegen am Beckenrand, nicht im Wasser (Blindtest 2026-10-17)"
    }
   ],
   "pal": [
@@ -583,7 +594,7 @@
   "gsw": "D Frau us Samarie, wo a de Jakobsquelle mit em Jesus redt und d Lüüt vo irer Stadt rüeft ([[JHN.4.7-JHN.4.42]]).",
   "traits": [
    {
-    "trait_de": "Wasserkrug",
+    "trait_de": "Wasserkrug, solange sie ihn bei sich hat (bis sie ihn am Brunnen stehen lässt)",
     "basis": "text",
     "ref": "JHN.4.28"
    },
@@ -694,8 +705,8 @@
   "kind": "group",
   "de": "Jünger (mehrere)",
   "en": "Disciples (several)",
-  "ident": "Mehrere Jünger, z. B. die Jünger Jesu oder des Johannes ([[JHN.3.22]], [[JHN.3.25-JHN.3.26]], [[JHN.4.27]]); für die Zwölf FIG-GRUPPE-ZWOELF.",
-  "gsw": "Mehreri Jünger, z. B. d Jünger vom Jesus oder vom Johannes ([[JHN.3.22]], [[JHN.3.25-JHN.3.26]], [[JHN.4.27]]); für d Zwölf FIG-GRUPPE-ZWOELF.",
+  "ident": "Mehrere Jünger, z. B. die Jünger Jesu ([[JHN.3.22]], [[JHN.4.27]]); für die Jünger des Johannes FIG-GRUPPE-JOHANNES-JUENGER, für die Zwölf FIG-GRUPPE-ZWOELF.",
+  "gsw": "Mehreri Jünger, z. B. d Jünger vom Jesus ([[JHN.3.22]], [[JHN.4.27]]); für d Jünger vom Johannes FIG-GRUPPE-JOHANNES-JUENGER, für d Zwölf FIG-GRUPPE-ZWOELF.",
   "traits": [
    {
     "trait_de": "Erdfarbene Gewänder mit Gürtel",
@@ -724,7 +735,8 @@
   ],
   "distinct": [
    "FIG-GRUPPE-ZWOELF",
-   "FIG-ROLLE-JUENGER"
+   "FIG-ROLLE-JUENGER",
+   "FIG-GRUPPE-JOHANNES-JUENGER"
   ]
  },
  {
@@ -793,6 +805,119 @@
   ],
   "distinct": [
    "FIG-ROLLE-KRANKER"
+  ]
+ },
+ {
+  "id": "FIG-ZEICHEN-LICHT-IN-FINSTERNIS",
+  "kind": "sign",
+  "de": "Licht in der Finsternis",
+  "en": "Light in the darkness",
+  "ident": "Bedeutung: Das Licht scheint mitten in der Finsternis, und die Finsternis hat es nicht erfasst ([[JHN.1.5]]; vgl. [[JHN.3.19]]).",
+  "gsw": "Bedüütig: S Liecht schiint mitten i de Fiischternis, und d Fiischternis hät s nöd packt ([[JHN.1.5]]; vgl. [[JHN.3.19]]).",
+  "traits": [
+   {
+    "trait_de": "Grosse dunkle Wolke mit grauen Wirbeln",
+    "basis": "text",
+    "ref": "JHN.1.5"
+   },
+   {
+    "trait_de": "In ihrer Mitte ein heller goldener Schein mit funkelndem Kern",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#262A36",
+   "#F2C14E"
+  ],
+  "rules": [
+   "Das Licht steht in der Wolke, nicht daneben (Blindtest: ein kleines Wölkchen neben dem Licht wurde nicht als «mitten in» gelesen)"
+  ],
+  "distinct": [
+   "FIG-ZEICHEN-LICHT",
+   "FIG-ZEICHEN-FINSTERNIS"
+  ]
+ },
+ {
+  "id": "FIG-ZEICHEN-NICHT-RICHTEN",
+  "kind": "sign",
+  "de": "nicht richten",
+  "en": "not to judge",
+  "ident": "Bedeutung: nicht zum Gericht, nicht um zu richten ([[JHN.3.17]]).",
+  "gsw": "Bedüütig: nöd zum Gricht, nöd zum richte ([[JHN.3.17]]).",
+  "traits": [
+   {
+    "trait_de": "Waage mit zwei Schalen, rot durchgestrichen",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#D9A441",
+   "#C2414E"
+  ],
+  "rules": [
+   "Das rote X liegt auf der Waage, damit die Verneinung nur dem Gericht gilt"
+  ],
+  "distinct": [
+   "FIG-ZEICHEN-GERICHT",
+   "FIG-ZEICHEN-NEIN"
+  ]
+ },
+ {
+  "id": "FIG-OBJ-TAUFMUSCHEL",
+  "kind": "object",
+  "de": "Taufmuschel (in der Hand)",
+  "en": "Baptismal shell (held)",
+  "ident": "Eine Muschelschale, aus der Wasser tropft, in der Hand dessen, der tauft ([[JHN.1.26]], [[JHN.3.22-JHN.3.23]]).",
+  "gsw": "E Muschle, wo Wasser drus tropfet, i de Hand vo dem, wo tauft ([[JHN.1.26]], [[JHN.3.22-JHN.3.23]]).",
+  "traits": [
+   {
+    "trait_de": "Muschelschale in der Hand, aus der Wasser tropft",
+    "basis": "tradition",
+    "note_de": "Die Muschel als Taufgefäss ist christliche Bildtradition; der Text nennt kein Gefäss"
+   }
+  ],
+  "pal": [
+   "#F2E6CC",
+   "#4C9BD6"
+  ],
+  "rules": [
+   "Die tauft, hält die Muschel; als freies Zeichen ohne Person FIG-ZEICHEN-TAUFE"
+  ],
+  "distinct": [
+   "FIG-ZEICHEN-TAUFE"
+  ]
+ },
+ {
+  "id": "FIG-GRUPPE-JOHANNES-JUENGER",
+  "kind": "group",
+  "de": "Jünger des Johannes",
+  "en": "Disciples of John",
+  "ident": "Die Jünger Johannes des Täufers ([[JHN.1.35]], [[JHN.3.25-JHN.3.26]]).",
+  "gsw": "D Jünger vom Johannes em Täufer ([[JHN.1.35]], [[JHN.3.25-JHN.3.26]]).",
+  "traits": [
+   {
+    "trait_de": "Braune, raue Gewänder mit Fellkragen und Gürtel wie ihr Lehrer Johannes",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#8A6A3A",
+   "#5B4630"
+  ],
+  "rules": [
+   "Erkennbar an Farbe, Kleidung und Zeichen, nicht am Gesicht; im Stil Symbol ohne ausgeführtes Gesicht, in Stilen mit Gesichtern (Anime u. a.) Züge und Hautton von Menschen der Levante im 1. Jahrhundert",
+   "Keine Karikatur, keine verzerrten oder «typisierten» Gesichts- und Körpermerkmale"
+  ],
+  "era": "nt",
+  "find": [
+   [
+    "Jünger des Johannes",
+    null
+   ]
+  ],
+  "distinct": [
+   "FIG-GRUPPE-JUENGER",
+   "FIG-JOHANNES-TAEUFER"
   ]
  }
 ]

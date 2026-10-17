@@ -35,7 +35,13 @@
         "mood": {
           "FIG-GRUPPE-ZWOELF": "pensive"
         },
-        "floor_side": "right"
+        "x": {
+          "FIG-JESUS": 30,
+          "FIG-GRUPPE-ZWOELF": 140
+        },
+        "floor_x": {
+          "FIG-OBJ-FEIGENBAUM": 58
+        }
       }
     },
     {
@@ -61,7 +67,8 @@
           "to": "FIG-GRUPPE-ZWOELF",
           "icons": [
             "FIG-JESUS",
-            "FIG-ZEICHEN-SPRECHEN"
+            "FIG-ZEICHEN-SPRECHEN",
+            "FIG-ZEICHEN-AUSDAUER"
           ]
         }
       ],
@@ -83,7 +90,7 @@
   ],
   "captions_de": [
     "Gleichnis: Jesus zeigt auf den Feigenbaum mit frischen Blättern: der Sommer ist nahe (Baum, Sonne).",
-    "Zusage: Himmel und Erde vergehen (Schöpfung, kippende Mauern), Jesu Worte bleiben (Jesus, Sprechblase)."
+    "Zusage: Himmel und Erde vergehen (Schöpfung, kippende Mauern), Jesu Worte bleiben (Jesus, Schallbögen, Anker)."
   ],
   "interpretation_note_de": "Der Feigenbaum ist Teil des Gleichnisses. «Dieses Geschlecht wird nicht vergehen» ([[MRK.13.30]]) zeigt das Bild nicht; seine Deutung ist umstritten. Das Bleiben der Worte zeigt das Bild nur durch die Gegenüberstellung der beiden Sprechblasen.",
   "basis": [
@@ -110,5 +117,86 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.13.28-MRK.13.29",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-OBJ-FEIGENBAUM"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-OBJ-FEIGENBAUM",
+                  "FIG-ZEICHEN-HITZE"
+                ]
+              }
+            ],
+            "action_de": "Lernt vom Feigenbaum: Treibt er Blätter, ist der Sommer nahe. So erkennt ihr, wenn das geschieht, dass es nahe vor der Tür ist.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "pensive"
+              },
+              "floor_side": "right"
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.13.30-MRK.13.31",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-SCHOEPFUNG",
+                  "FIG-ZEICHEN-UMSTURZ"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-SPRECHEN"
+                ]
+              }
+            ],
+            "action_de": "Himmel und Erde werden vergehen, meine Worte aber werden nicht vergehen.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "pensive",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-JESUS": 50
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Gleichnis: Jesus zeigt auf den Feigenbaum mit frischen Blättern: der Sommer ist nahe (Baum, Sonne).",
+          "Zusage: Himmel und Erde vergehen (Schöpfung, kippende Mauern), Jesu Worte bleiben (Jesus, Sprechblase)."
+        ]
+      }
+    }
+  ]
 }

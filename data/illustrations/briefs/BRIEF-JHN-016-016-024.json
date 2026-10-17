@@ -26,9 +26,17 @@
           "to": "FIG-GRUPPE-ZWOELF",
           "icons": [
             "FIG-ZEICHEN-STUNDE",
-            "FIG-ZEICHEN-FEHLT",
+            "FIG-ZEICHEN-BLIND",
+            "FIG-JESUS"
+          ]
+        },
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-GRUPPE-ZWOELF",
+          "icons": [
             "FIG-ZEICHEN-STUNDE",
-            "FIG-ZEICHEN-SEHEN"
+            "FIG-ZEICHEN-SEHEN",
+            "FIG-JESUS"
           ]
         }
       ],
@@ -68,7 +76,7 @@
       "stage": {
         "mood": {
           "FIG-GRUPPE-ZWOELF": "worried",
-          "FIG-JESUS": "smile"
+          "FIG-JESUS": "calm"
         }
       }
     },
@@ -88,7 +96,8 @@
           "icons": [
             "FIG-ZEICHEN-BETEN",
             "FIG-GOTT",
-            "FIG-ZEICHEN-GEBEN"
+            "FIG-ZEICHEN-BRINGEN",
+            "FIG-GRUPPE-ZWOELF"
           ]
         }
       ],
@@ -106,9 +115,9 @@
     "Jesus sagt: Wenn ihr den Vater um etwas bittet, wird er es euch in meinem Namen geben. Bittet, und ihr werdet empfangen, damit eure Freude vollkommen ist."
   ],
   "captions_de": [
-    "Eine kleine Weile: Jesus: Kurze Zeit, und ihr seht mich nicht (Sanduhr, leerer Kreis), wieder kurze Zeit, und ihr seht mich (Sanduhr, Auge); die Jünger verstehen es nicht (Nebel).",
+    "Eine kleine Weile: Jesus: Kurze Zeit, und ihr seht mich nicht (Sanduhr, durchgestrichenes Auge, Jesus), wieder kurze Zeit, und ihr seht mich (Sanduhr, offenes Auge, Jesus); die Jünger verstehen es nicht (graues Fragezeichen im gestrichelten Kreis).",
     "Trauer wird zu Freude: Jesus sagt den traurigen Jüngern (Tränen): Eure Trauer wird zur Freude (Träne, Pfeil, Funken).",
-    "Bittet: Bittet den Vater, er wird geben (betende Hände, Strahlenkranz, gebende Hand)."
+    "Bittet: Bittet den Vater, er wird euch geben (betende Hände, Strahlenkranz, Pfeil, Jünger)."
   ],
   "interpretation_note_de": "Das Bild der Frau, die ein Kind geboren hat ([[JHN.16.21]]), nennt nur die Bildbeschreibung; das Bild zeigt den Wechsel von Trauer zu Freude.",
   "basis": [
@@ -141,5 +150,110 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.16.16-JHN.16.19",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-NICHT-VERSTEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-STUNDE",
+                  "FIG-ZEICHEN-FEHLT",
+                  "FIG-ZEICHEN-STUNDE",
+                  "FIG-ZEICHEN-SEHEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: Eine kleine Weile, und ihr seht mich nicht mehr, und wieder eine kleine Weile, und ihr werdet mich sehen. Die Jünger fragen einander, was er meint.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "pensive"
+              },
+              "at": {
+                "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-GRUPPE-ZWOELF"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.16.20-JHN.16.22",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-TRAUER",
+                  "FIG-ZEICHEN-BRINGEN",
+                  "FIG-ZEICHEN-FREUDE"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: Ihr werdet weinen und traurig sein, aber eure Trauer wird zur Freude werden, wie bei einer Frau, die ein Kind geboren hat. Ich werde euch wiedersehen.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "worried",
+                "FIG-JESUS": "smile"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.16.23-JHN.16.24",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-BETEN",
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-GEBEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: Wenn ihr den Vater um etwas bittet, wird er es euch in meinem Namen geben. Bittet, und ihr werdet empfangen, damit eure Freude vollkommen ist.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "smile"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Eine kleine Weile: Jesus: Kurze Zeit, und ihr seht mich nicht (Sanduhr, leerer Kreis), wieder kurze Zeit, und ihr seht mich (Sanduhr, Auge); die Jünger verstehen es nicht (Nebel).",
+          "Trauer wird zu Freude: Jesus sagt den traurigen Jüngern (Tränen): Eure Trauer wird zur Freude (Träne, Pfeil, Funken).",
+          "Bittet: Bittet den Vater, er wird geben (betende Hände, Strahlenkranz, gebende Hand)."
+        ]
+      }
+    }
+  ]
 }

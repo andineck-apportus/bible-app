@@ -51,9 +51,9 @@
           "FIG-GRUPPE-KRANKE": "worried"
         },
         "x": {
-          "FIG-GRUPPE-KRANKE": 30,
-          "FIG-ROLLE-KRANKER": 92,
-          "FIG-JESUS": 160
+          "FIG-JESUS": 30,
+          "FIG-ROLLE-KRANKER": 100,
+          "FIG-GRUPPE-KRANKE": 160
         }
       }
     },
@@ -87,14 +87,14 @@
         "hold": {
           "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
         },
-        "at": {
-          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
-        },
         "mood": {
           "FIG-ROLLE-KRANKER": "delight"
         },
-        "air_x": 80,
-        "air_y": 46
+        "air_x": 140,
+        "air_y": 10,
+        "beside": {
+          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
+        }
       }
     }
   ],
@@ -131,5 +131,103 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.5.2-JHN.5.7",
+            "figures": [
+              "FIG-GRUPPE-KRANKE",
+              "FIG-ROLLE-KRANKER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-TEICH"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-KRANKER",
+                "icons": [
+                  "FIG-ZEICHEN-HEILEN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-ROLLE-KRANKER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-WASSER",
+                  "FIG-ZEICHEN-BRINGEN",
+                  "FIG-ZEICHEN-FEHLT"
+                ]
+              }
+            ],
+            "action_de": "Am Teich Betesda liegen viele Kranke. Jesus fragt einen Mann, der seit achtunddreissig Jahren krank ist: Willst du gesund werden? Er klagt: Ich habe niemanden, der mich in den Teich bringt.",
+            "stage": {
+              "pose": {
+                "FIG-GRUPPE-KRANKE": "sit",
+                "FIG-ROLLE-KRANKER": "lie"
+              },
+              "mood": {
+                "FIG-ROLLE-KRANKER": "worried",
+                "FIG-GRUPPE-KRANKE": "worried"
+              },
+              "x": {
+                "FIG-GRUPPE-KRANKE": 30,
+                "FIG-ROLLE-KRANKER": 92,
+                "FIG-JESUS": 160
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.5.8-JHN.5.9",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-KRANKER"
+            ],
+            "objects": [
+              "FIG-ORT-TEICH",
+              "FIG-OBJ-MATTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-HEILEN",
+              "FIG-ZEICHEN-SABBAT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-KRANKER",
+                "icons": [
+                  "FIG-OBJ-MATTE",
+                  "FIG-ZEICHEN-BRINGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: Steh auf, nimm deine Matte und geh umher! Sofort wird der Mann gesund, nimmt seine Matte und geht umher. Es ist Sabbat.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
+              },
+              "at": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
+              },
+              "mood": {
+                "FIG-ROLLE-KRANKER": "delight"
+              },
+              "air_x": 80,
+              "air_y": 46
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

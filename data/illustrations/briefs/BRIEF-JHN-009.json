@@ -17,7 +17,7 @@
         "FIG-ROLLE-BLINDER"
       ],
       "objects": [
-        "FIG-ORT-TEICH"
+        "FIG-ORT-SILOAM"
       ],
       "signs": [
         "FIG-ZEICHEN-HEILEN"
@@ -27,7 +27,7 @@
           "from": "FIG-JESUS",
           "to": "FIG-ROLLE-BLINDER",
           "icons": [
-            "FIG-ORT-TEICH"
+            "FIG-ORT-SILOAM"
           ]
         }
       ],
@@ -36,15 +36,12 @@
         "mood": {
           "FIG-ROLLE-BLINDER": "sleep"
         },
-        "at": {
-          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-BLINDER"
-        },
         "x": {
           "FIG-JESUS": 40,
           "FIG-ROLLE-BLINDER": 92
         },
         "floor_x": {
-          "FIG-ORT-TEICH": 126
+          "FIG-ORT-SILOAM": 126
         },
         "arrows": [
           [
@@ -54,10 +51,13 @@
           ],
           [
             "FIG-ROLLE-BLINDER",
-            "FIG-ORT-TEICH",
+            "FIG-ORT-SILOAM",
             "go"
           ]
-        ]
+        ],
+        "beside": {
+          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-BLINDER"
+        }
       }
     },
     {
@@ -69,8 +69,7 @@
       ],
       "objects": [],
       "signs": [
-        "FIG-ZEICHEN-SEHEN",
-        "FIG-ZEICHEN-SABBAT"
+        "FIG-ZEICHEN-SEHEN"
       ],
       "speech": [
         {
@@ -78,6 +77,7 @@
           "to": "FIG-ROLLE-BLINDER",
           "icons": [
             "FIG-JESUS",
+            "FIG-ZEICHEN-SABBAT",
             "FIG-ZEICHEN-FRAGEN"
           ]
         },
@@ -86,7 +86,8 @@
           "to": "FIG-GRUPPE-PHARISAEER",
           "icons": [
             "FIG-JESUS",
-            "FIG-ROLLE-PROPHET"
+            "FIG-ROLLE-PROPHET",
+            "FIG-OBJ-SCHRIFTROLLE"
           ]
         }
       ],
@@ -98,9 +99,7 @@
         },
         "at": {
           "FIG-ZEICHEN-SEHEN": "FIG-ROLLE-BLINDER"
-        },
-        "air_x": 70,
-        "air_y": 58
+        }
       }
     },
     {
@@ -134,19 +133,23 @@
         },
         "back_side": "left",
         "x": {
-          "FIG-GRUPPE-PHARISAEER": 70,
-          "FIG-ROLLE-BLINDER": 140
+          "FIG-GRUPPE-PHARISAEER": 104,
+          "FIG-ROLLE-BLINDER": 164
         },
         "at": {
           "FIG-ZEICHEN-AUSSCHLUSS": "FIG-ROLLE-BLINDER"
         },
         "arrows": [
           [
-            "FIG-GRUPPE-PHARISAEER",
+            "FIG-ORT-SYNAGOGE",
             "FIG-ROLLE-BLINDER",
             "throw"
           ]
-        ]
+        ],
+        "before": true,
+        "pose": {
+          "FIG-ROLLE-BLINDER": "away"
+        }
       }
     },
     {
@@ -194,9 +197,9 @@
     "Jesus findet ihn und fragt, ob er an den Menschensohn glaube; er glaubt und fällt vor ihm nieder."
   ],
   "captions_de": [
-    "Heilung: Jesus berührt die Augen des Blinden (Hand, Lichtpunkte) und schickt ihn zum Teich Siloam (Becken, Pfeil).",
-    "Verhör: Am Sabbat (zwei Lampen) geheilt; die Pharisäer fragen, der Geheilte sagt: Jesus ist ein Prophet.",
-    "Hinausgeworfen: «Ich war blind und sehe» (Augen); sie werfen ihn hinaus (Haus mit Pfeil).",
+    "Heilung: Jesus berührt die Augen des Blinden (Hand mit Lichtstrahlen) und schickt ihn zum Teich Siloam (Becken mit Stufen, Pfeil).",
+    "Verhör: Die Pharisäer fragen nach Jesus und dem Sabbat (Kreise, der siebte golden); der Geheilte sagt: Jesus ist ein Prophet (Figur, Schriftrolle).",
+    "Hinausgeworfen: «Ich war blind und sehe» (Augen); sie werfen ihn aus der Synagoge hinaus (Bogen aus dem Haus, Haus mit Pfeil hinaus).",
     "Ich glaube: Jesus fragt nach dem Glauben; der Geheilte kniet nieder (Herz mit Licht)."
   ],
   "interpretation_note_de": "Je ein Feld aus den vier Abschnitten des Kapitels; Einzelheiten dort.",
@@ -212,5 +215,198 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.9.1-JHN.9.12",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-BLINDER"
+            ],
+            "objects": [
+              "FIG-ORT-TEICH"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-BLINDER",
+                "icons": [
+                  "FIG-ORT-TEICH"
+                ]
+              }
+            ],
+            "action_de": "Jesus heilt einen blind geborenen Menschen: Er streicht ihm einen Brei auf die Augen und schickt ihn zum Teich Siloam; er wäscht sich und kommt sehend zurück.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-BLINDER": "sleep"
+              },
+              "at": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-BLINDER"
+              },
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-ROLLE-BLINDER": 92
+              },
+              "floor_x": {
+                "FIG-ORT-TEICH": 126
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-BLINDER",
+                  "act"
+                ],
+                [
+                  "FIG-ROLLE-BLINDER",
+                  "FIG-ORT-TEICH",
+                  "go"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.9.13-JHN.9.23",
+            "figures": [
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-ROLLE-BLINDER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-SEHEN",
+              "FIG-ZEICHEN-SABBAT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-PHARISAEER",
+                "to": "FIG-ROLLE-BLINDER",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-ROLLE-BLINDER",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-PROPHET"
+                ]
+              }
+            ],
+            "action_de": "Weil Jesus am Sabbat geheilt hat, befragen die Pharisäer den Geheilten (und seine Eltern); er nennt Jesus einen Propheten.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-PHARISAEER": "earnest",
+                "FIG-ROLLE-BLINDER": "determined"
+              },
+              "at": {
+                "FIG-ZEICHEN-SEHEN": "FIG-ROLLE-BLINDER"
+              },
+              "air_x": 70,
+              "air_y": 58
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.9.24-JHN.9.34",
+            "figures": [
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-ROLLE-BLINDER"
+            ],
+            "objects": [
+              "FIG-ORT-SYNAGOGE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-AUSSCHLUSS"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-BLINDER",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-ZEICHEN-BLIND",
+                  "FIG-ZEICHEN-SEHEN"
+                ]
+              }
+            ],
+            "action_de": "Beim zweiten Verhör bleibt er dabei: Ich war blind und sehe jetzt; da werfen sie ihn hinaus.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-PHARISAEER": "earnest",
+                "FIG-ROLLE-BLINDER": "determined"
+              },
+              "back_side": "left",
+              "x": {
+                "FIG-GRUPPE-PHARISAEER": 70,
+                "FIG-ROLLE-BLINDER": 140
+              },
+              "at": {
+                "FIG-ZEICHEN-AUSSCHLUSS": "FIG-ROLLE-BLINDER"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-PHARISAEER",
+                  "FIG-ROLLE-BLINDER",
+                  "throw"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.9.35-JHN.9.41",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-BLINDER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-GLAUBEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-BLINDER",
+                "icons": [
+                  "FIG-ZEICHEN-GLAUBEN",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus findet ihn und fragt, ob er an den Menschensohn glaube; er glaubt und fällt vor ihm nieder.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-BLINDER": "delight"
+              },
+              "pose": {
+                "FIG-ROLLE-BLINDER": "kneel"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-GLAUBEN": [
+                  "FIG-ROLLE-BLINDER"
+                ]
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Heilung: Jesus berührt die Augen des Blinden (Hand, Lichtpunkte) und schickt ihn zum Teich Siloam (Becken, Pfeil).",
+          "Verhör: Am Sabbat (zwei Lampen) geheilt; die Pharisäer fragen, der Geheilte sagt: Jesus ist ein Prophet.",
+          "Hinausgeworfen: «Ich war blind und sehe» (Augen); sie werfen ihn hinaus (Haus mit Pfeil).",
+          "Ich glaube: Jesus fragt nach dem Glauben; der Geheilte kniet nieder (Herz mit Licht)."
+        ]
+      }
+    }
+  ]
 }

@@ -36,11 +36,12 @@
           "FIG-ZEICHEN-ERBARMEN": "FIG-JESUS"
         },
         "mood": {
+          "FIG-JESUS": "smile",
           "FIG-ROLLE-WITWE": "surprised",
-          "FIG-ROLLE-KRANKER": "smile"
+          "FIG-ROLLE-KRANKER": "calm"
         },
         "pose": {
-          "FIG-ROLLE-KRANKER": "sit"
+          "FIG-ROLLE-KRANKER": "lie"
         }
       }
     },
@@ -60,11 +61,11 @@
       "stage": {
         "back_side": "right",
         "x": {
-          "FIG-JESUS": 70,
-          "FIG-GRUPPE-JUENGER": 30
+          "FIG-GRUPPE-JUENGER": 24,
+          "FIG-JESUS": 88
         },
         "mood": {
-          "FIG-JESUS": "determined",
+          "FIG-JESUS": "calm",
           "FIG-GRUPPE-JUENGER": "calm"
         },
         "arrows": [
@@ -86,14 +87,16 @@
       "objects": [
         "FIG-ORT-JERUSALEM"
       ],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-WUNDMALE"
+      ],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-JUENGER",
           "icons": [
             "FIG-OBJ-KREUZ",
-            "FIG-ZEICHEN-AUFERSTEHEN",
+            "FIG-ZEICHEN-AUFERSTEHUNG",
             "FIG-ZEICHEN-AUSBREITEN",
             "FIG-GRUPPE-VOELKER"
           ]
@@ -103,11 +106,15 @@
       "stage": {
         "back_side": "left",
         "x": {
-          "FIG-JESUS": 116,
-          "FIG-GRUPPE-JUENGER": 162
+          "FIG-JESUS": 84,
+          "FIG-GRUPPE-JUENGER": 150
         },
         "mood": {
+          "FIG-JESUS": "calm",
           "FIG-GRUPPE-JUENGER": "surprised"
+        },
+        "at": {
+          "FIG-ZEICHEN-WUNDMALE": "FIG-JESUS"
         }
       }
     }
@@ -118,9 +125,9 @@
     "Der Auferstandene erklärt den Jüngern: Der Christus muss leiden und am dritten Tag auferstehen; in seinem Namen wird allen Völkern Umkehr verkündet, angefangen in Jerusalem; ihr seid Zeugen."
   ],
   "captions_de": [
-    "Zuwendung: Jesus wendet sich mit Erbarmen (Herz in Händen) einer armen Witwe und einem Kranken zu und spricht ihnen das Reich Gottes zu (Krone).",
+    "Zuwendung: Jesus wendet sich mit Erbarmen (Herz in Händen) einer armen Witwe und einem liegenden Kranken zu und spricht ihnen das Reich Gottes zu (Krone).",
     "Weg nach Jerusalem: Jesus geht mit den Jüngern auf Jerusalem zu (Pfeil).",
-    "Sendung der Zeugen: In Jerusalem sagt der Auferstandene den Jüngern: Kreuz und Auferstehung (offenes Grab, Pfeil nach oben) – die Botschaft geht zu allen Völkern (Pfeile, Völker)."
+    "Sendung der Zeugen: In Jerusalem zeigt sich der Auferstandene (Hand mit Wundmal) und sagt den Jüngern: Kreuz und Auferstehung (offenes Grab, goldener Pfeil nach oben) – die Botschaft geht zu allen Völkern (Pfeile, Völker)."
   ],
   "interpretation_note_de": "Lukas ist bisher nur in [[LUK.11.1-LUK.11.4]] übersetzt; die Felder folgen der Buchzusammenfassung. Feld 1 fasst Jesu Zuwendung zu Armen, Kranken und Witwen zusammen (z. B. [[LUK.4.18]], [[LUK.6.20]], [[LUK.7.11-LUK.7.17]]). Tod und Auferstehung erscheinen in Feld 3 als Inhalt der Rede des Auferstandenen ([[LUK.24.46-LUK.24.48]]); die verheissene Kraft aus der Höhe ([[LUK.24.49]]) zeigt das Bild nicht.",
   "basis": [
@@ -135,5 +142,122 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "LUK.6.20-LUK.6.21",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-WITWE",
+              "FIG-ROLLE-KRANKER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-ERBARMEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-WITWE",
+                "icons": [
+                  "FIG-ZEICHEN-REICH-GOTTES"
+                ]
+              }
+            ],
+            "action_de": "Jesus wendet sich den Armen, Kranken und Ausgegrenzten zu: Selig ihr Armen, denn euch gehört das Reich Gottes.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-ERBARMEN": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-ROLLE-WITWE": "surprised",
+                "FIG-ROLLE-KRANKER": "smile"
+              },
+              "pose": {
+                "FIG-ROLLE-KRANKER": "sit"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "LUK.9.51-LUK.19.44",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-ORT-JERUSALEM"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Jesus macht sich entschlossen auf den Weg nach Jerusalem; seine Jünger folgen ihm.",
+            "stage": {
+              "back_side": "right",
+              "x": {
+                "FIG-JESUS": 70,
+                "FIG-GRUPPE-JUENGER": 30
+              },
+              "mood": {
+                "FIG-JESUS": "determined",
+                "FIG-GRUPPE-JUENGER": "calm"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ORT-JERUSALEM",
+                  "go"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "LUK.24.36-LUK.24.53",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-ORT-JERUSALEM"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-KREUZ",
+                  "FIG-ZEICHEN-AUFERSTEHEN",
+                  "FIG-ZEICHEN-AUSBREITEN",
+                  "FIG-GRUPPE-VOELKER"
+                ]
+              }
+            ],
+            "action_de": "Der Auferstandene erklärt den Jüngern: Der Christus muss leiden und am dritten Tag auferstehen; in seinem Namen wird allen Völkern Umkehr verkündet, angefangen in Jerusalem; ihr seid Zeugen.",
+            "stage": {
+              "back_side": "left",
+              "x": {
+                "FIG-JESUS": 116,
+                "FIG-GRUPPE-JUENGER": 162
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "surprised"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Zuwendung: Jesus wendet sich mit Erbarmen (Herz in Händen) einer armen Witwe und einem Kranken zu und spricht ihnen das Reich Gottes zu (Krone).",
+          "Weg nach Jerusalem: Jesus geht mit den Jüngern auf Jerusalem zu (Pfeil).",
+          "Sendung der Zeugen: In Jerusalem sagt der Auferstandene den Jüngern: Kreuz und Auferstehung (offenes Grab, Pfeil nach oben) – die Botschaft geht zu allen Völkern (Pfeile, Völker)."
+        ]
+      }
+    }
+  ]
 }

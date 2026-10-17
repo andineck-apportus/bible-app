@@ -35,10 +35,15 @@
       "action_de": "Vor dem Laubhüttenfest drängen die Brüder Jesus: Geh nach Judäa, damit deine Jünger deine Werke sehen; offenbare dich der Welt! Auch seine Brüder glaubten nicht an ihn.",
       "stage": {
         "mood": {
-          "FIG-GRUPPE-BRUEDER-JESU": "earnest",
+          "FIG-GRUPPE-BRUEDER-JESU": "calm",
           "FIG-JESUS": "calm"
         },
-        "back_side": "left"
+        "back_side": "left",
+        "before": true,
+        "x": {
+          "FIG-GRUPPE-BRUEDER-JESU": 88,
+          "FIG-JESUS": 150
+        }
       }
     },
     {
@@ -57,6 +62,7 @@
           "icons": [
             "FIG-ZEICHEN-STUNDE",
             "FIG-GRUPPE-BRUEDER-JESU",
+            "FIG-ZEICHEN-HINAUF",
             "FIG-ORT-JERUSALEM"
           ]
         }
@@ -65,7 +71,7 @@
       "stage": {
         "mood": {
           "FIG-JESUS": "calm",
-          "FIG-GRUPPE-BRUEDER-JESU": "pensive"
+          "FIG-GRUPPE-BRUEDER-JESU": "calm"
         }
       }
     }
@@ -76,7 +82,7 @@
   ],
   "captions_de": [
     "Die Brüder drängen: Zieh zum Fest nach Jerusalem (Stadt, Laubhütte) und zeige deine Werke allen (Stern, Menge)!",
-    "Noch nicht: Jesus sagt, seine Zeit sei noch nicht da (Sanduhr, oben voll); die Brüder sollen hinaufgehen (Brüder, Jerusalem)."
+    "Noch nicht: Jesus sagt, seine Zeit sei noch nicht da (Sanduhr); die Brüder sollen zum Fest hinaufgehen (Brüder, Pfeil nach oben, Jerusalem)."
   ],
   "interpretation_note_de": "Die Brüder Jesu sind als Gruppe gezeichnet; ihre Namen und Zahl nennt Johannes nicht. Dass sie nicht glaubten ([[JHN.7.5]]), sagt der Erzähler; das Bild zeigt es nicht mit einem Zeichen.",
   "basis": [
@@ -103,5 +109,79 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.7.1-JHN.7.5",
+            "figures": [
+              "FIG-GRUPPE-BRUEDER-JESU",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-HUETTE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-BRUEDER-JESU",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ORT-JERUSALEM",
+                  "FIG-ORT-HUETTE",
+                  "FIG-ZEICHEN-STERN",
+                  "FIG-GRUPPE-MENGE"
+                ]
+              }
+            ],
+            "action_de": "Vor dem Laubhüttenfest drängen die Brüder Jesus: Geh nach Judäa, damit deine Jünger deine Werke sehen; offenbare dich der Welt! Auch seine Brüder glaubten nicht an ihn.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-BRUEDER-JESU": "earnest",
+                "FIG-JESUS": "calm"
+              },
+              "back_side": "left"
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.7.6-JHN.7.9",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-BRUEDER-JESU"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-BRUEDER-JESU",
+                "icons": [
+                  "FIG-ZEICHEN-STUNDE",
+                  "FIG-GRUPPE-BRUEDER-JESU",
+                  "FIG-ORT-JERUSALEM"
+                ]
+              }
+            ],
+            "action_de": "Jesus antwortet: Meine Zeit ist noch nicht da. Geht ihr hinauf zum Fest! Er selbst bleibt in Galiläa.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-BRUEDER-JESU": "pensive"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Die Brüder drängen: Zieh zum Fest nach Jerusalem (Stadt, Laubhütte) und zeige deine Werke allen (Stern, Menge)!",
+          "Noch nicht: Jesus sagt, seine Zeit sei noch nicht da (Sanduhr, oben voll); die Brüder sollen hinaufgehen (Brüder, Jerusalem)."
+        ]
+      }
+    }
+  ]
 }

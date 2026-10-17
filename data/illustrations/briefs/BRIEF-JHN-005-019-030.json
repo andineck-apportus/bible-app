@@ -26,7 +26,6 @@
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-MENGE",
           "icons": [
-            "FIG-GOTT",
             "FIG-ZEICHEN-SEHEN",
             "FIG-JESUS"
           ]
@@ -51,6 +50,9 @@
         "x": {
           "FIG-GRUPPE-MENGE": 50,
           "FIG-JESUS": 140
+        },
+        "signs_who": {
+          "FIG-ZEICHEN-LIEBE": []
         }
       }
     },
@@ -62,14 +64,13 @@
         "FIG-GRUPPE-MENGE"
       ],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-GERICHT"
-      ],
+      "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-MENGE",
           "icons": [
+            "FIG-ZEICHEN-GERICHT",
             "FIG-ZEICHEN-HOEREN",
             "FIG-ZEICHEN-GLAUBEN",
             "FIG-ZEICHEN-LEBEN"
@@ -78,9 +79,6 @@
       ],
       "action_de": "Wie der Vater macht auch der Sohn lebendig; der Vater hat ihm das ganze Gericht gegeben. Wer sein Wort hört und dem glaubt, der ihn gesandt hat, hat ewiges Leben.",
       "stage": {
-        "at": {
-          "FIG-ZEICHEN-GERICHT": "FIG-JESUS"
-        },
         "mood": {
           "FIG-GRUPPE-MENGE": "surprised"
         }
@@ -121,9 +119,9 @@
     "Jesus kündigt an: Es kommt die Stunde, in der die Toten die Stimme des Sohnes Gottes hören werden, und die sie gehört haben, werden leben; alle in den Gräbern werden herauskommen."
   ],
   "captions_de": [
-    "Der Sohn sieht den Vater: Gott (Strahlenkranz, Herzen) zeigt dem Sohn alles (Pfeil); Jesus sagt: Was ich den Vater tun sehe, tue ich (Strahlenkranz, Auge, Jesus).",
-    "Hören und leben: Dem Sohn ist das Gericht gegeben (Waage); wer hört und glaubt (Ohr, Herz), hat ewiges Leben (Keimling).",
-    "Ankündigung: Die Stunde kommt (Sanduhr): Die Toten in den Gräbern (Grab) hören seine Stimme (Ohr) und leben (Keimling)."
+    "Der Sohn sieht den Vater: Gott (Strahlenkranz, Herzen) zeigt dem Sohn alles (Pfeil); Jesus sagt: Was ich den Vater tun sehe, tue ich (Auge, Jesus).",
+    "Hören und leben: Jesus sagt: Dem Sohn ist das Gericht gegeben (Waage); wer hört und glaubt (Ohr, Herz), hat ewiges Leben (Baum im Ring).",
+    "Ankündigung: Die Stunde kommt (Sanduhr): Die Toten in den Gräbern (Grab) hören seine Stimme (Ohr) und leben (Baum im Ring)."
   ],
   "interpretation_note_de": "Was Jesus über das Kommende sagt ([[JHN.5.25-JHN.5.29]]), steht in der Sprechblase und nicht als Szene. Dass die einen zum Leben, die anderen zum Gericht auferstehen ([[JHN.5.29]]), ist nicht gezeichnet; [[JHN.5.30]] fasst die Rede zusammen und hat kein eigenes Feld.",
   "basis": [
@@ -156,5 +154,125 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.5.19-JHN.5.20",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-LIEBE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-SEHEN",
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: Der Sohn kann nichts von sich aus tun, sondern nur, was er den Vater tun sieht; denn der Vater hat den Sohn lieb und zeigt ihm alles.",
+            "stage": {
+              "god_side": "left",
+              "at": {
+                "FIG-ZEICHEN-LIEBE": "FIG-GOTT"
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-MENGE": "pensive"
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 50,
+                "FIG-JESUS": 140
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.5.21-JHN.5.24",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-GERICHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-HOEREN",
+                  "FIG-ZEICHEN-GLAUBEN",
+                  "FIG-ZEICHEN-LEBEN"
+                ]
+              }
+            ],
+            "action_de": "Wie der Vater macht auch der Sohn lebendig; der Vater hat ihm das ganze Gericht gegeben. Wer sein Wort hört und dem glaubt, der ihn gesandt hat, hat ewiges Leben.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-GERICHT": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "surprised"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.5.25-JHN.5.29",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-STUNDE",
+                  "FIG-ZEICHEN-TOD",
+                  "FIG-ZEICHEN-HOEREN",
+                  "FIG-ZEICHEN-LEBEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus kündigt an: Es kommt die Stunde, in der die Toten die Stimme des Sohnes Gottes hören werden, und die sie gehört haben, werden leben; alle in den Gräbern werden herauskommen.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "surprised"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Der Sohn sieht den Vater: Gott (Strahlenkranz, Herzen) zeigt dem Sohn alles (Pfeil); Jesus sagt: Was ich den Vater tun sehe, tue ich (Strahlenkranz, Auge, Jesus).",
+          "Hören und leben: Dem Sohn ist das Gericht gegeben (Waage); wer hört und glaubt (Ohr, Herz), hat ewiges Leben (Keimling).",
+          "Ankündigung: Die Stunde kommt (Sanduhr): Die Toten in den Gräbern (Grab) hören seine Stimme (Ohr) und leben (Keimling)."
+        ]
+      }
+    }
+  ]
 }

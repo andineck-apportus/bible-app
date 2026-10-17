@@ -47,7 +47,8 @@
           "FIG-ORPA": 26,
           "FIG-RUT": 56,
           "FIG-NOOMI": 86
-        }
+        },
+        "mood": {}
       }
     },
     {
@@ -116,7 +117,7 @@
         "mood": {
           "FIG-ORPA": "worried",
           "FIG-NOOMI": "worried",
-          "FIG-RUT": "determined"
+          "FIG-RUT": "calm"
         },
         "x": {
           "FIG-ORPA": 100,
@@ -149,8 +150,8 @@
       "action_de": "Rut schwört: Wohin du gehst, gehe ich; dein Volk ist mein Volk, dein Gott ist mein Gott; nur der Tod wird mich und dich trennen. Da redet Noomi nicht mehr auf sie ein.",
       "stage": {
         "mood": {
-          "FIG-RUT": "determined",
-          "FIG-NOOMI": "surprised"
+          "FIG-RUT": "smile",
+          "FIG-NOOMI": "calm"
         },
         "bubble_y": 20
       }
@@ -205,5 +206,161 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "RUT.1.6-RUT.1.7",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-ORPA",
+              "FIG-RUT",
+              "FIG-NOOMI"
+            ],
+            "objects": [
+              "FIG-ORT-BETLEHEM",
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Noomi hört in Moab, dass JHWH seinem Volk wieder Brot gegeben hat; mit ihren beiden Schwiegertöchtern macht sie sich auf den Weg nach Juda.",
+            "stage": {
+              "god_side": "left",
+              "back_side": "right",
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-ORT-BETLEHEM",
+                  "act"
+                ],
+                [
+                  "FIG-NOOMI",
+                  "FIG-ORT-BETLEHEM",
+                  "go"
+                ]
+              ],
+              "floor_x": {
+                "FIG-OBJ-BROT": 150
+              },
+              "x": {
+                "FIG-ORPA": 26,
+                "FIG-RUT": 56,
+                "FIG-NOOMI": 86
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "RUT.1.8-RUT.1.13",
+            "figures": [
+              "FIG-ORPA",
+              "FIG-NOOMI",
+              "FIG-RUT"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER"
+            ],
+            "speech": [
+              {
+                "from": "FIG-NOOMI",
+                "to": "FIG-ORPA",
+                "icons": [
+                  "FIG-ZEICHEN-UMKEHR",
+                  "FIG-ORT-HAUS",
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-TREUE"
+                ]
+              }
+            ],
+            "action_de": "Noomi sagt zu den Schwiegertöchtern: Kehrt um, jede ins Haus ihrer Mutter; JHWH erweise euch Treue. Sie küsst sie, und alle weinen; Noomi drängt sie umzukehren.",
+            "stage": {
+              "mood": {
+                "FIG-NOOMI": "worried"
+              },
+              "bubble_y": 20
+            }
+          },
+          {
+            "n": 3,
+            "reference": "RUT.1.14-RUT.1.15",
+            "figures": [
+              "FIG-ORPA",
+              "FIG-NOOMI",
+              "FIG-RUT"
+            ],
+            "objects": [
+              "FIG-ORT-MOAB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TREUE"
+            ],
+            "speech": [],
+            "action_de": "Orpa küsst ihre Schwiegermutter und kehrt zu ihrem Volk zurück; Rut aber hält sich an Noomi fest.",
+            "stage": {
+              "pose": {
+                "FIG-ORPA": "away"
+              },
+              "back_side": "left",
+              "arrows": [
+                [
+                  "FIG-ORPA",
+                  "FIG-ORT-MOAB",
+                  "go"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-TREUE": "FIG-RUT"
+              },
+              "mood": {
+                "FIG-ORPA": "worried",
+                "FIG-NOOMI": "worried",
+                "FIG-RUT": "determined"
+              },
+              "x": {
+                "FIG-ORPA": 100,
+                "FIG-NOOMI": 132,
+                "FIG-RUT": 162
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "RUT.1.16-RUT.1.18",
+            "figures": [
+              "FIG-NOOMI",
+              "FIG-RUT"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-RUT",
+                "to": "FIG-NOOMI",
+                "icons": [
+                  "FIG-GRUPPE-ISRAEL",
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-TOD",
+                  "FIG-ZEICHEN-TREUE"
+                ]
+              }
+            ],
+            "action_de": "Rut schwört: Wohin du gehst, gehe ich; dein Volk ist mein Volk, dein Gott ist mein Gott; nur der Tod wird mich und dich trennen. Da redet Noomi nicht mehr auf sie ein.",
+            "stage": {
+              "mood": {
+                "FIG-RUT": "determined",
+                "FIG-NOOMI": "surprised"
+              },
+              "bubble_y": 20
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

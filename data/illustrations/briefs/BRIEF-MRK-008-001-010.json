@@ -14,8 +14,7 @@
       "reference": "MRK.8.1-MRK.8.5",
       "figures": [
         "FIG-GRUPPE-ZWOELF",
-        "FIG-JESUS",
-        "FIG-GRUPPE-MENGE"
+        "FIG-JESUS"
       ],
       "objects": [
         "FIG-ORT-WUESTE",
@@ -47,7 +46,14 @@
         "mood": {
           "FIG-GRUPPE-ZWOELF": "worried"
         },
-        "floor_side": "left"
+        "floor_side": "right",
+        "x": {
+          "FIG-GRUPPE-ZWOELF": 30,
+          "FIG-JESUS": 72
+        },
+        "floor_x": {
+          "FIG-OBJ-BROT": 96
+        }
       }
     },
     {
@@ -60,6 +66,7 @@
         "FIG-GRUPPE-MENGE"
       ],
       "objects": [
+        "FIG-OBJ-BROT",
         "FIG-OBJ-KORB"
       ],
       "signs": [
@@ -70,6 +77,7 @@
           "from": "FIG-JESUS",
           "to": "FIG-GOTT",
           "icons": [
+            "FIG-ZEICHEN-BETEN",
             "FIG-OBJ-BROT"
           ]
         }
@@ -84,21 +92,19 @@
         "at": {
           "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
         },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-GRUPPE-ZWOELF",
-            "act"
-          ],
-          [
-            "FIG-GRUPPE-ZWOELF",
-            "FIG-GRUPPE-MENGE",
-            "act"
-          ]
-        ],
         "mood": {
           "FIG-GRUPPE-MENGE": "smile"
-        }
+        },
+        "hold": {
+          "FIG-JESUS": "FIG-OBJ-BROT",
+          "FIG-GRUPPE-ZWOELF": "FIG-OBJ-BROT"
+        },
+        "floor_x": {
+          "FIG-OBJ-KORB": 4
+        },
+        "behind": [
+          "FIG-OBJ-KORB"
+        ]
       }
     }
   ],
@@ -107,8 +113,8 @@
     "Die Menge lagert sich; Jesus nimmt die sieben Brote, spricht das Dankgebet, bricht sie und lässt sie durch die Jünger austeilen, ebenso einige Fische. Alle werden satt; sieben Körbe mit Brocken bleiben übrig."
   ],
   "captions_de": [
-    "Mitleid: Jesus sagt den Jüngern, die Menge sei seit drei Tagen da (Menge, drei Sonnen; Herz mit Händen). Am Boden sieben Brote.",
-    "Satt: Jesus dankt Gott für das Brot (Strahlenkranz); die Jünger teilen aus (Pfeile), alle werden satt (volle Schale); sieben Körbe bleiben übrig."
+    "Mitleid: Jesus hat Erbarmen (Herz mit Händen) und sagt den Jüngern, die Menge sei seit drei Tagen da (Menge, drei Sonnen). Am Boden sieben Brote.",
+    "Satt: Jesus hält das Brot und dankt Gott dafür (Strahlenkranz; Blase: betende Hände, Brot); die Jünger teilen das Brot aus (Brot in der Hand), alle werden satt (volle Schale); sieben Körbe bleiben übrig."
   ],
   "interpretation_note_de": "Das Dankgebet ([[MRK.8.6]]) zeigt das Bild als Rede Jesu zu Gott (Strahlenkranz). Die Fische ([[MRK.8.7]]) und die Fahrt nach Dalmanuta ([[MRK.8.10]]) sind nicht im Bild.",
   "basis": [
@@ -135,5 +141,111 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.8.1-MRK.8.5",
+            "figures": [
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-WUESTE",
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ERBARMEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-ZEICHEN-TAGE",
+                  "FIG-ZEICHEN-TAGE",
+                  "FIG-ZEICHEN-TAGE"
+                ]
+              }
+            ],
+            "action_de": "Wieder ist eine grosse Menge seit drei Tagen bei Jesus und hat nichts zu essen. Er hat Mitleid und sagt es den Jüngern; sie fragen: Woher Brot hier in der Einöde? Sie haben sieben Brote.",
+            "stage": {
+              "count": {
+                "FIG-OBJ-BROT": 7
+              },
+              "at": {
+                "FIG-ZEICHEN-ERBARMEN": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "worried"
+              },
+              "floor_side": "left"
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.8.6-MRK.8.9",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-KORB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SATT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-OBJ-BROT"
+                ]
+              }
+            ],
+            "action_de": "Die Menge lagert sich; Jesus nimmt die sieben Brote, spricht das Dankgebet, bricht sie und lässt sie durch die Jünger austeilen, ebenso einige Fische. Alle werden satt; sieben Körbe mit Brocken bleiben übrig.",
+            "stage": {
+              "god_side": "right",
+              "floor_side": "left",
+              "count": {
+                "FIG-OBJ-KORB": 7
+              },
+              "at": {
+                "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-ZWOELF",
+                  "act"
+                ],
+                [
+                  "FIG-GRUPPE-ZWOELF",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-MENGE": "smile"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Mitleid: Jesus sagt den Jüngern, die Menge sei seit drei Tagen da (Menge, drei Sonnen; Herz mit Händen). Am Boden sieben Brote.",
+          "Satt: Jesus dankt Gott für das Brot (Strahlenkranz); die Jünger teilen aus (Pfeile), alle werden satt (volle Schale); sieben Körbe bleiben übrig."
+        ]
+      }
+    }
+  ]
 }

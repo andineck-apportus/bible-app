@@ -18,9 +18,7 @@
       "objects": [
         "FIG-OBJ-SENFSTAUDE"
       ],
-      "signs": [
-        "FIG-OBJ-VOGEL"
-      ],
+      "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
@@ -39,12 +37,7 @@
         },
         "floor_x": {
           "FIG-OBJ-SENFSTAUDE": 112
-        },
-        "count": {
-          "FIG-OBJ-VOGEL": 3
-        },
-        "air_x": 118,
-        "air_y": 52
+        }
       }
     },
     {
@@ -57,8 +50,7 @@
       ],
       "objects": [],
       "signs": [
-        "FIG-ZEICHEN-ABSTAND",
-        "FIG-ZEICHEN-LICHT"
+        "FIG-ZEICHEN-ABSTAND"
       ],
       "speech": [
         {
@@ -69,14 +61,18 @@
             "FIG-OBJ-LEUCHTER",
             "FIG-OBJ-SENFSTAUDE"
           ]
+        },
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-GRUPPE-JUENGER",
+          "icons": [
+            "FIG-ZEICHEN-LICHT"
+          ]
         }
       ],
       "action_de": "Mit vielen solchen Gleichnissen redet Jesus zur Menge, so wie sie es hören kann; seinen Jüngern aber erklärt er alles, wenn sie allein sind.",
       "stage": {
         "split": 1,
-        "at": {
-          "FIG-ZEICHEN-LICHT": "FIG-GRUPPE-JUENGER"
-        },
         "mood": {
           "FIG-GRUPPE-MENGE": "pensive",
           "FIG-GRUPPE-JUENGER": "smile"
@@ -89,8 +85,8 @@
     "Mit vielen solchen Gleichnissen redet Jesus zur Menge, so wie sie es hören kann; seinen Jüngern aber erklärt er alles, wenn sie allein sind."
   ],
   "captions_de": [
-    "Senfkorn: Aus dem kleinsten Samen wird eine grosse Staude (Samen, Pfeil, Staude); Vögel nisten darin.",
-    "Gleichnisse: Zur Menge redet Jesus in Bildern (Samen, Leuchter, Staude); den Jüngern erklärt er alles (Licht über ihnen)."
+    "Senfkorn: Aus dem kleinsten Samen wird eine grosse Staude (Hand mit Körnern, Pfeil, Staude); Vögel sitzen in ihren Zweigen.",
+    "Gleichnisse: Zur Menge redet Jesus in Bildern (Hand mit Körnern, Leuchter, Staude); den Jüngern hinter der Linie erklärt er alles (zweite Sprechblase: Licht)."
   ],
   "interpretation_note_de": "Das Bild zeigt das Wachsen nicht als Vorgang, sondern den Samen in der Sprechblase und die grosse Staude daneben.",
   "basis": [
@@ -117,5 +113,93 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.4.30-MRK.4.32",
+            "figures": [
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-SENFSTAUDE"
+            ],
+            "signs": [
+              "FIG-OBJ-VOGEL"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-OBJ-SAMEN",
+                  "FIG-ZEICHEN-BRINGEN",
+                  "FIG-OBJ-SENFSTAUDE"
+                ]
+              }
+            ],
+            "action_de": "Das Reich Gottes ist wie ein Senfkorn: kleiner als alle Samen, doch es wächst und wird grösser als alle Gartenkräuter, sodass die Vögel in seinem Schatten nisten.",
+            "stage": {
+              "x": {
+                "FIG-JESUS": 44
+              },
+              "floor_x": {
+                "FIG-OBJ-SENFSTAUDE": 112
+              },
+              "count": {
+                "FIG-OBJ-VOGEL": 3
+              },
+              "air_x": 118,
+              "air_y": 52
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.4.33-MRK.4.34",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-ABSTAND",
+              "FIG-ZEICHEN-LICHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-OBJ-SAMEN",
+                  "FIG-OBJ-LEUCHTER",
+                  "FIG-OBJ-SENFSTAUDE"
+                ]
+              }
+            ],
+            "action_de": "Mit vielen solchen Gleichnissen redet Jesus zur Menge, so wie sie es hören kann; seinen Jüngern aber erklärt er alles, wenn sie allein sind.",
+            "stage": {
+              "split": 1,
+              "at": {
+                "FIG-ZEICHEN-LICHT": "FIG-GRUPPE-JUENGER"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "pensive",
+                "FIG-GRUPPE-JUENGER": "smile"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Senfkorn: Aus dem kleinsten Samen wird eine grosse Staude (Samen, Pfeil, Staude); Vögel nisten darin.",
+          "Gleichnisse: Zur Menge redet Jesus in Bildern (Samen, Leuchter, Staude); den Jüngern erklärt er alles (Licht über ihnen)."
+        ]
+      }
+    }
+  ]
 }

@@ -17,7 +17,8 @@
         "FIG-GERASENER"
       ],
       "objects": [
-        "FIG-ORT-GRAB"
+        "FIG-ORT-GRAB",
+        "FIG-OBJ-KETTE"
       ],
       "signs": [
         "FIG-ZEICHEN-DAEMON"
@@ -33,6 +34,13 @@
         },
         "at": {
           "FIG-ZEICHEN-DAEMON": "FIG-GERASENER"
+        },
+        "hold": {
+          "FIG-GERASENER": "FIG-OBJ-KETTE"
+        },
+        "x": {
+          "FIG-JESUS": 34,
+          "FIG-GERASENER": 74
         }
       }
     },
@@ -120,9 +128,9 @@
       "n": 4,
       "reference": "MRK.5.18-MRK.5.20",
       "figures": [
-        "FIG-GRUPPE-MENGE",
         "FIG-GERASENER",
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-GRUPPE-MENGE"
       ],
       "objects": [
         "FIG-OBJ-BOOT"
@@ -130,19 +138,19 @@
       "signs": [],
       "speech": [
         {
-          "from": "FIG-GERASENER",
-          "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-ERBARMEN"
-          ]
-        },
-        {
           "from": "FIG-JESUS",
           "to": "FIG-GERASENER",
           "icons": [
             "FIG-ORT-HAUS",
             "FIG-ZEICHEN-VERKUENDIGEN"
+          ]
+        },
+        {
+          "from": "FIG-GERASENER",
+          "to": "FIG-GRUPPE-MENGE",
+          "icons": [
+            "FIG-JESUS",
+            "FIG-ZEICHEN-ERBARMEN"
           ]
         }
       ],
@@ -152,7 +160,10 @@
           "FIG-GRUPPE-MENGE": "surprised",
           "FIG-GERASENER": "smile"
         },
-        "big_side": "right"
+        "big_side": "left",
+        "wear": {
+          "FIG-GERASENER": "#C9A86A"
+        }
       }
     }
   ],
@@ -163,10 +174,10 @@
     "Der Geheilte will bei Jesus bleiben; Jesus schickt ihn nach Hause, er soll erzählen, wie viel der Herr an ihm getan hat. Er verkündet in der Dekapolis, was Jesus an ihm getan hat, und alle staunen."
   ],
   "captions_de": [
-    "Bei den Gräbern: Ein Mann mit zerrissenen Ketten und einem unreinen Geist (dunkler Schatten) wirft sich vor Jesus nieder.",
+    "Bei den Gräbern: Ein Mann mit einem unreinen Geist (dunkler Schatten), der seine Ketten zerrissen hat (Kette mit offenem Ring), wirft sich vor Jesus nieder.",
     "Ausgetrieben: Jesus gebietet dem Geist hinauszugehen (Schatten, Pfeil weg); die Geister fahren in die Schweine, die in den See stürzen.",
     "Furcht: Der Geheilte sitzt ruhig da; die Leute bitten Jesus, wegzugehen (Jesus, Pfeil weg).",
-    "Gesandt: Jesus schickt den Geheilten heim (Haus, verkünden); er erzählt den staunenden Leuten von Jesus und seinem Erbarmen (Herz mit Händen)."
+    "Gesandt: Zuerst schickt Jesus den Geheilten (jetzt im neuen Mantel) heim (Haus, Lautsprecher: verkünden); dann erzählt er den staunenden Leuten von Jesus und seinem Erbarmen (Herz mit Händen)."
   ],
   "interpretation_note_de": "Der unreine Geist erscheint als dunkler Schatten ohne Gesicht. Die zerrissenen Ketten gehören zum Lexikonbild des Mannes; nach der Heilung sitzt er «bekleidet und bei Verstand» da ([[MRK.5.15]]). Das Ertrinken der Herde ([[MRK.5.13]]) ist nur angedeutet. In [[MRK.5.19]] spricht Jesus vom «Herrn», in [[MRK.5.20]] erzählt der Mann, was Jesus getan hat; die Sprechblase des Mannes zeigt Jesus.",
   "basis": [
@@ -205,5 +216,167 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.5.1-MRK.5.7",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GERASENER"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-DAEMON"
+            ],
+            "speech": [],
+            "action_de": "Am anderen Ufer kommt Jesus aus den Grabstätten ein Mann mit einem unreinen Geist entgegen, den niemand bändigen kann; er läuft zu Jesus und wirft sich vor ihm nieder.",
+            "stage": {
+              "pose": {
+                "FIG-GERASENER": "kneel"
+              },
+              "mood": {
+                "FIG-GERASENER": "worried"
+              },
+              "at": {
+                "FIG-ZEICHEN-DAEMON": "FIG-GERASENER"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.5.8-MRK.5.13",
+            "figures": [
+              "FIG-GERASENER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHWEIN",
+              "FIG-ORT-UFER"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-DAEMON"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GERASENER",
+                "icons": [
+                  "FIG-ZEICHEN-DAEMON",
+                  "FIG-ZEICHEN-FLIEHEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus befiehlt dem unreinen Geist, aus dem Menschen auszufahren; die Geister, die sich «Legion» nennen, fahren mit seiner Erlaubnis in eine Schweineherde, die in den See stürzt und ertrinkt.",
+            "stage": {
+              "pose": {
+                "FIG-GERASENER": "kneel"
+              },
+              "count": {
+                "FIG-OBJ-SCHWEIN": 3
+              },
+              "floor_side": "left",
+              "x": {
+                "FIG-GERASENER": 116,
+                "FIG-JESUS": 158
+              },
+              "at": {
+                "FIG-ZEICHEN-DAEMON": "FIG-OBJ-SCHWEIN"
+              },
+              "arrows": [
+                [
+                  "FIG-GERASENER",
+                  "FIG-OBJ-SCHWEIN",
+                  "throw"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.5.14-MRK.5.17",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-GERASENER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FLIEHEN"
+                ]
+              }
+            ],
+            "action_de": "Die Leute aus Stadt und Gehöften kommen und sehen den Mann bekleidet und bei Verstand dasitzen; sie fürchten sich und bitten Jesus, ihr Gebiet zu verlassen.",
+            "stage": {
+              "pose": {
+                "FIG-GERASENER": "sit"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "worried",
+                "FIG-GERASENER": "calm"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.5.18-MRK.5.20",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-GERASENER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GERASENER",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-ERBARMEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GERASENER",
+                "icons": [
+                  "FIG-ORT-HAUS",
+                  "FIG-ZEICHEN-VERKUENDIGEN"
+                ]
+              }
+            ],
+            "action_de": "Der Geheilte will bei Jesus bleiben; Jesus schickt ihn nach Hause, er soll erzählen, wie viel der Herr an ihm getan hat. Er verkündet in der Dekapolis, was Jesus an ihm getan hat, und alle staunen.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "surprised",
+                "FIG-GERASENER": "smile"
+              },
+              "big_side": "right"
+            }
+          }
+        ],
+        "captions_de": [
+          "Bei den Gräbern: Ein Mann mit zerrissenen Ketten und einem unreinen Geist (dunkler Schatten) wirft sich vor Jesus nieder.",
+          "Ausgetrieben: Jesus gebietet dem Geist hinauszugehen (Schatten, Pfeil weg); die Geister fahren in die Schweine, die in den See stürzen.",
+          "Furcht: Der Geheilte sitzt ruhig da; die Leute bitten Jesus, wegzugehen (Jesus, Pfeil weg).",
+          "Gesandt: Jesus schickt den Geheilten heim (Haus, verkünden); er erzählt den staunenden Leuten von Jesus und seinem Erbarmen (Herz mit Händen)."
+        ]
+      }
+    }
+  ]
 }

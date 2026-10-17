@@ -13,26 +13,29 @@
       "n": 1,
       "reference": "1JN.4.13-1JN.4.16",
       "figures": [
-        "FIG-DER-AELTESTE",
-        "FIG-GRUPPE-GESCHWISTER"
+        "FIG-GOTT",
+        "FIG-JESUS"
       ],
       "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-DER-AELTESTE",
-          "to": "FIG-GRUPPE-GESCHWISTER",
-          "icons": [
-            "FIG-GOTT",
-            "FIG-JESUS",
-            "FIG-ZEICHEN-WELT"
-          ]
-        }
+      "signs": [
+        "FIG-ZEICHEN-WELT"
       ],
+      "speech": [],
       "action_de": "Gott hat ihnen von seinem Geist gegeben; sie bezeugen, dass der Vater den Sohn als Retter der Welt gesandt hat. Gott ist Liebe.",
       "stage": {
-        "mood": {
-          "FIG-GRUPPE-GESCHWISTER": "smile"
+        "god_side": "left",
+        "arrows": [
+          [
+            "FIG-GOTT",
+            "FIG-JESUS",
+            "act"
+          ]
+        ],
+        "x": {
+          "FIG-JESUS": 100
+        },
+        "beside": {
+          "FIG-ZEICHEN-WELT": "FIG-JESUS"
         }
       }
     },
@@ -55,7 +58,9 @@
         },
         "mood": {
           "FIG-GRUPPE-GESCHWISTER": "smile"
-        }
+        },
+        "air_x": 128,
+        "air_y": 44
       }
     },
     {
@@ -82,7 +87,7 @@
       "action_de": "Wer sagt «Ich liebe Gott» und seinen Bruder hasst, ist ein Lügner; wer den Bruder nicht liebt, den er sieht, kann Gott nicht lieben, den er nicht sieht.",
       "stage": {
         "mood": {
-          "FIG-GRUPPE-GESCHWISTER": "pensive"
+          "FIG-GRUPPE-GESCHWISTER": "calm"
         }
       }
     },
@@ -122,8 +127,8 @@
     "Das Gebot heisst: Wer Gott liebt, soll auch seinen Bruder lieben."
   ],
   "captions_de": [
-    "Zeugnis: Der Vater (Strahlenkranz) hat Jesus als Retter der Welt (Erdscheibe) gesandt.",
-    "Ohne Furcht: Wer in der Liebe bleibt (Herzen), sieht dem Gericht (Waage) mit Zuversicht entgegen.",
+    "Zeugnis: Der Vater (Strahlenkranz) hat Jesus gesandt (goldener Pfeil) als Retter der Welt (Erdscheibe neben ihm).",
+    "Ohne Furcht: Wer in der Liebe bleibt (Herzen), sieht dem Gericht (Waage daneben) mit Zuversicht entgegen.",
     "Lüge: Gott lieben (Strahlenkranz, Herzen) und den Bruder hassen (gebrochenes Herz) ist Lüge (rotes Kreuz).",
     "Das Gebot (Tafel): Gott (Strahlenkranz) und die Geschwister (Figuren an der Hand) lieben (Herzen)."
   ],
@@ -164,5 +169,126 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "1JN.4.13-1JN.4.16",
+            "figures": [
+              "FIG-DER-AELTESTE",
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-DER-AELTESTE",
+                "to": "FIG-GRUPPE-GESCHWISTER",
+                "icons": [
+                  "FIG-GOTT",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-WELT"
+                ]
+              }
+            ],
+            "action_de": "Gott hat ihnen von seinem Geist gegeben; sie bezeugen, dass der Vater den Sohn als Retter der Welt gesandt hat. Gott ist Liebe.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-GESCHWISTER": "smile"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "1JN.4.17-1JN.4.19",
+            "figures": [
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-LIEBE",
+              "FIG-ZEICHEN-GERICHT"
+            ],
+            "speech": [],
+            "action_de": "In der Liebe haben sie Zuversicht am Tag des Gerichts; Furcht ist nicht in der Liebe, die vollkommene Liebe treibt die Furcht aus. Sie lieben, weil er sie zuerst geliebt hat.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-LIEBE": "FIG-GRUPPE-GESCHWISTER"
+              },
+              "mood": {
+                "FIG-GRUPPE-GESCHWISTER": "smile"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "1JN.4.20",
+            "figures": [
+              "FIG-DER-AELTESTE",
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-DER-AELTESTE",
+                "to": "FIG-GRUPPE-GESCHWISTER",
+                "icons": [
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-LIEBE",
+                  "FIG-ZEICHEN-HASS",
+                  "FIG-ZEICHEN-LUEGE"
+                ]
+              }
+            ],
+            "action_de": "Wer sagt «Ich liebe Gott» und seinen Bruder hasst, ist ein Lügner; wer den Bruder nicht liebt, den er sieht, kann Gott nicht lieben, den er nicht sieht.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-GESCHWISTER": "pensive"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "1JN.4.21",
+            "figures": [
+              "FIG-DER-AELTESTE",
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-DER-AELTESTE",
+                "to": "FIG-GRUPPE-GESCHWISTER",
+                "icons": [
+                  "FIG-ZEICHEN-GEBOT",
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-LIEBE",
+                  "FIG-ZEICHEN-GEMEINSCHAFT"
+                ]
+              }
+            ],
+            "action_de": "Das Gebot heisst: Wer Gott liebt, soll auch seinen Bruder lieben.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-GESCHWISTER": "smile"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Zeugnis: Der Vater (Strahlenkranz) hat Jesus als Retter der Welt (Erdscheibe) gesandt.",
+          "Ohne Furcht: Wer in der Liebe bleibt (Herzen), sieht dem Gericht (Waage) mit Zuversicht entgegen.",
+          "Lüge: Gott lieben (Strahlenkranz, Herzen) und den Bruder hassen (gebrochenes Herz) ist Lüge (rotes Kreuz).",
+          "Das Gebot (Tafel): Gott (Strahlenkranz) und die Geschwister (Figuren an der Hand) lieben (Herzen)."
+        ]
+      }
+    }
+  ]
 }

@@ -41,10 +41,10 @@
           "FIG-JUDAS-ISKARIOT": "worried"
         },
         "x": {
-          "FIG-JESUS": 34,
-          "FIG-JUDAS-ISKARIOT": 82,
-          "FIG-GRUPPE-SOLDATEN": 124,
-          "FIG-ROLLE-TEMPELWACHE": 166
+          "FIG-JESUS": 30,
+          "FIG-JUDAS-ISKARIOT": 72,
+          "FIG-GRUPPE-SOLDATEN": 110,
+          "FIG-ROLLE-TEMPELWACHE": 146
         }
       }
     },
@@ -60,24 +60,21 @@
         "FIG-OBJ-HAHN"
       ],
       "signs": [
-        "FIG-ZEICHEN-VERLEUGNEN"
+        "FIG-ZEICHEN-SPRECHEN"
       ],
       "speech": [
         {
-          "from": "FIG-GRUPPE-DIENER",
-          "to": "FIG-PETRUS",
+          "from": "FIG-PETRUS",
+          "to": "FIG-GRUPPE-DIENER",
           "icons": [
-            "FIG-GRUPPE-JUENGER",
-            "FIG-JESUS",
-            "FIG-ZEICHEN-FRAGEN"
+            "FIG-ZEICHEN-VERLEUGNEN",
+            "FIG-ZEICHEN-VERLEUGNEN",
+            "FIG-ZEICHEN-VERLEUGNEN"
           ]
         }
       ],
       "action_de": "Im Hof des Hohepriesters verleugnet Petrus Jesus dreimal; da kräht ein Hahn.",
       "stage": {
-        "count": {
-          "FIG-ZEICHEN-VERLEUGNEN": 3
-        },
         "floor_x": {
           "FIG-OBJ-KOHLENFEUER": 74,
           "FIG-OBJ-HAHN": 158
@@ -88,6 +85,9 @@
         },
         "mood": {
           "FIG-PETRUS": "worried"
+        },
+        "at": {
+          "FIG-ZEICHEN-SPRECHEN": "FIG-OBJ-HAHN"
         }
       }
     },
@@ -111,26 +111,18 @@
             "FIG-ZEICHEN-WELT",
             "FIG-ZEICHEN-FEHLT"
           ]
-        },
-        {
-          "from": "FIG-PILATUS",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-ZEICHEN-WAHRHEIT",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
         }
       ],
       "action_de": "Jesus sagt Pilatus, sein Reich sei nicht aus dieser Welt und er bezeuge die Wahrheit; Pilatus fragt: «Was ist Wahrheit?»",
       "stage": {
-        "back_side": "left",
+        "back_side": "right",
         "before": true,
         "x": {
-          "FIG-PILATUS": 44,
-          "FIG-JESUS": 156
+          "FIG-JESUS": 40,
+          "FIG-PILATUS": 150
         },
         "mood": {
-          "FIG-PILATUS": "pensive"
+          "FIG-PILATUS": "calm"
         }
       }
     },
@@ -138,12 +130,14 @@
       "n": 4,
       "reference": "JHN.18.39-JHN.18.40",
       "figures": [
+        "FIG-GRUPPE-MENGE",
         "FIG-PILATUS",
         "FIG-JESUS",
-        "FIG-BARABBAS",
-        "FIG-GRUPPE-MENGE"
+        "FIG-BARABBAS"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-OBJ-FESSEL"
+      ],
       "signs": [],
       "speech": [
         {
@@ -151,7 +145,13 @@
           "to": "FIG-PILATUS",
           "icons": [
             "FIG-JESUS",
-            "FIG-ZEICHEN-ABLEHNEN",
+            "FIG-ZEICHEN-ABLEHNEN"
+          ]
+        },
+        {
+          "from": "FIG-GRUPPE-MENGE",
+          "to": "FIG-PILATUS",
+          "icons": [
             "FIG-BARABBAS",
             "FIG-ZEICHEN-FREILASSEN"
           ]
@@ -162,6 +162,9 @@
         "mood": {
           "FIG-GRUPPE-MENGE": "earnest",
           "FIG-PILATUS": "worried"
+        },
+        "hold": {
+          "FIG-BARABBAS": "FIG-OBJ-FESSEL"
         }
       }
     }
@@ -174,9 +177,9 @@
   ],
   "captions_de": [
     "Gefangennahme: Jesus sagt «Ich bin es» (Jesus); Soldaten und Tempeldiener fallen zu Boden.",
-    "Verleugnung: Am Feuer fragen die Diener Petrus (Jünger, Jesus, ?); er leugnet dreimal (drei Zeichen), der Hahn kräht.",
-    "Vor Pilatus: Jesus: Mein Reich ist nicht aus der Welt (Krone, Erdkugel, leer); Pilatus: Was ist Wahrheit? (Lot, ?).",
-    "Barabbas: Die Menge verlangt nicht Jesus, sondern Barabbas frei (abwehrende Hand, offene Fessel)."
+    "Verleugnung: Am Feuer bei den Dienern leugnet Petrus dreimal (drei getrennte Kettenglieder), der Hahn kräht (Schallstriche).",
+    "Vor Pilatus: Jesus sagt Pilatus: Mein Reich ist nicht aus der Welt (Krone, Erdkugel, leer).",
+    "Barabbas: Die Menge verlangt nicht Jesus (Jesus, abwehrende Hand), sondern den gefesselten Barabbas frei (Barabbas, offene Fessel)."
   ],
   "interpretation_note_de": "Je ein Feld zu Gefangennahme, Verleugnung, Verhör vor Pilatus und Barabbas; Einzelheiten in den Abschnitten. «Die Juden» und die Hohepriester sind als neutrale Figuren gezeichnet (Menge bzw. Amtskleid), nicht verzerrt oder eingefärbt.",
   "basis": [
@@ -191,5 +194,177 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.18.4-JHN.18.6",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-JUDAS-ISKARIOT",
+              "FIG-GRUPPE-SOLDATEN",
+              "FIG-ROLLE-TEMPELWACHE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-SOLDATEN",
+                "icons": [
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Im Garten sagt Jesus zu denen, die ihn suchen: «Ich bin es»; sie weichen zurück und fallen zu Boden.",
+            "stage": {
+              "pose": {
+                "FIG-GRUPPE-SOLDATEN": "fall",
+                "FIG-ROLLE-TEMPELWACHE": "fall"
+              },
+              "mood": {
+                "FIG-GRUPPE-SOLDATEN": "surprised",
+                "FIG-ROLLE-TEMPELWACHE": "surprised",
+                "FIG-JUDAS-ISKARIOT": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 34,
+                "FIG-JUDAS-ISKARIOT": 82,
+                "FIG-GRUPPE-SOLDATEN": 124,
+                "FIG-ROLLE-TEMPELWACHE": 166
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.18.15-JHN.18.27",
+            "figures": [
+              "FIG-GRUPPE-DIENER",
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KOHLENFEUER",
+              "FIG-OBJ-HAHN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-VERLEUGNEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-DIENER",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Im Hof des Hohepriesters verleugnet Petrus Jesus dreimal; da kräht ein Hahn.",
+            "stage": {
+              "count": {
+                "FIG-ZEICHEN-VERLEUGNEN": 3
+              },
+              "floor_x": {
+                "FIG-OBJ-KOHLENFEUER": 74,
+                "FIG-OBJ-HAHN": 158
+              },
+              "x": {
+                "FIG-GRUPPE-DIENER": 40,
+                "FIG-PETRUS": 126
+              },
+              "mood": {
+                "FIG-PETRUS": "worried"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.18.33-JHN.18.38",
+            "figures": [
+              "FIG-PILATUS",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-PRAETORIUM"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-OBJ-KRONE",
+                  "FIG-ZEICHEN-WELT",
+                  "FIG-ZEICHEN-FEHLT"
+                ]
+              },
+              {
+                "from": "FIG-PILATUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-WAHRHEIT",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt Pilatus, sein Reich sei nicht aus dieser Welt und er bezeuge die Wahrheit; Pilatus fragt: «Was ist Wahrheit?»",
+            "stage": {
+              "back_side": "left",
+              "before": true,
+              "x": {
+                "FIG-PILATUS": 44,
+                "FIG-JESUS": 156
+              },
+              "mood": {
+                "FIG-PILATUS": "pensive"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.18.39-JHN.18.40",
+            "figures": [
+              "FIG-PILATUS",
+              "FIG-JESUS",
+              "FIG-BARABBAS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-ABLEHNEN",
+                  "FIG-BARABBAS",
+                  "FIG-ZEICHEN-FREILASSEN"
+                ]
+              }
+            ],
+            "action_de": "Pilatus bietet an, Jesus freizulassen; sie schreien nach Barabbas.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-PILATUS": "worried"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Gefangennahme: Jesus sagt «Ich bin es» (Jesus); Soldaten und Tempeldiener fallen zu Boden.",
+          "Verleugnung: Am Feuer fragen die Diener Petrus (Jünger, Jesus, ?); er leugnet dreimal (drei Zeichen), der Hahn kräht.",
+          "Vor Pilatus: Jesus: Mein Reich ist nicht aus der Welt (Krone, Erdkugel, leer); Pilatus: Was ist Wahrheit? (Lot, ?).",
+          "Barabbas: Die Menge verlangt nicht Jesus, sondern Barabbas frei (abwehrende Hand, offene Fessel)."
+        ]
+      }
+    }
+  ]
 }

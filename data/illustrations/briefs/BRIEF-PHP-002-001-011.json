@@ -35,6 +35,10 @@
       "stage": {
         "floor_x": {
           "FIG-OBJ-KETTE": 26
+        },
+        "mood": {
+          "FIG-PAULUS": "smile",
+          "FIG-GRUPPE-GLAUBENDE": "calm"
         }
       }
     },
@@ -53,18 +57,25 @@
       "speech": [],
       "action_de": "Christus Jesus, der in Gottes Gestalt war, entäusserte sich, nahm Sklavengestalt an und war gehorsam bis zum Tod am Kreuz.",
       "stage": {
-        "at": {
-          "FIG-ZEICHEN-DEMUT": "FIG-JESUS"
-        },
         "x": {
-          "FIG-JESUS": 70
+          "FIG-JESUS": 56
         },
         "floor_x": {
-          "FIG-OBJ-KREUZ": 120
+          "FIG-OBJ-KREUZ": 140
         },
         "mood": {
-          "FIG-JESUS": "pensive"
-        }
+          "FIG-JESUS": "calm"
+        },
+        "beside": {
+          "FIG-ZEICHEN-DEMUT": "FIG-JESUS"
+        },
+        "arrows": [
+          [
+            "FIG-JESUS",
+            "FIG-OBJ-KREUZ",
+            "go"
+          ]
+        ]
       }
     },
     {
@@ -83,27 +94,23 @@
       "speech": [],
       "action_de": "Darum hat Gott ihn erhöht, damit sich im Namen Jesu jedes Knie beuge und jede Zunge bekenne, dass Jesus Christus der Herr ist.",
       "stage": {
-        "arrows": [
-          [
-            "FIG-GOTT",
-            "FIG-JESUS",
-            "act"
-          ]
-        ],
         "at": {
-          "FIG-ZEICHEN-ERHOEHEN": "FIG-JESUS",
           "FIG-ZEICHEN-KNIEN": "FIG-GRUPPE-GLAUBENDE"
         },
         "pose": {
           "FIG-GRUPPE-GLAUBENDE": "kneel"
         },
-        "god_side": "left",
+        "god_side": "right",
         "x": {
           "FIG-GRUPPE-GLAUBENDE": 60,
           "FIG-JESUS": 140
         },
         "mood": {
-          "FIG-GRUPPE-GLAUBENDE": "delight"
+          "FIG-GRUPPE-GLAUBENDE": "smile",
+          "FIG-JESUS": "calm"
+        },
+        "beside": {
+          "FIG-ZEICHEN-ERHOEHEN": "FIG-JESUS"
         }
       }
     }
@@ -114,9 +121,9 @@
     "Darum hat Gott ihn erhöht, damit sich im Namen Jesu jedes Knie beuge und jede Zunge bekenne, dass Jesus Christus der Herr ist."
   ],
   "captions_de": [
-    "Einmütig und demütig: Paulus (Kette) bittet die Glaubenden um Einheit (Figuren im Ring) und Demut (Verneigung).",
-    "Erniedrigung: Jesus (Kreuznimbus) verneigt sich (Demut, Pfeil nach unten) und geht den Weg bis zum Kreuz.",
-    "Erhöhung: Gott (Strahlenkranz) erhöht Jesus (goldener Pfeil nach oben); Menschen beugen die Knie vor ihm (kniende Figur)."
+    "Einmütig und demütig: Paulus (Kette) bittet die Glaubenden um Einheit (zwei goldene Ringe) und Demut (Figur, die sich verneigt).",
+    "Erniedrigung: Jesus (Kreuznimbus) erniedrigt sich (Zeichen neben ihm: Figur verneigt sich, Pfeil nach unten) und geht den Weg bis zum Kreuz (gestrichelter Pfeil).",
+    "Erhöhung: Gott (Strahlenkranz über ihm) erhöht Jesus (goldener Pfeil nach oben); Menschen beugen die Knie vor ihm (Zeichen: kniende Figur)."
   ],
   "interpretation_note_de": "Der Christushymnus ([[PHP.2.6-PHP.2.11]]) ist in zwei Feldern gezeigt: Erniedrigung und Erhöhung. Das Kreuz bleibt ohne Körper. Dass sich jedes Knie beugt, ist Ziel der Erhöhung, nicht Bericht eines Ereignisses ([[PHP.2.10]]).",
   "basis": [
@@ -149,5 +156,118 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "PHP.2.1-PHP.2.5",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-GRUPPE-GLAUBENDE",
+                "icons": [
+                  "FIG-GRUPPE-GLAUBENDE",
+                  "FIG-ZEICHEN-EINHEIT",
+                  "FIG-ZEICHEN-DEMUT"
+                ]
+              }
+            ],
+            "action_de": "Paulus bittet die Gemeinde, einmütig zu sein und in Demut einander höher zu achten als sich selbst.",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KETTE": 26
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "PHP.2.6-PHP.2.8",
+            "figures": [
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KREUZ"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-DEMUT"
+            ],
+            "speech": [],
+            "action_de": "Christus Jesus, der in Gottes Gestalt war, entäusserte sich, nahm Sklavengestalt an und war gehorsam bis zum Tod am Kreuz.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-DEMUT": "FIG-JESUS"
+              },
+              "x": {
+                "FIG-JESUS": 70
+              },
+              "floor_x": {
+                "FIG-OBJ-KREUZ": 120
+              },
+              "mood": {
+                "FIG-JESUS": "pensive"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "PHP.2.9-PHP.2.11",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-GLAUBENDE",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-ERHOEHEN",
+              "FIG-ZEICHEN-KNIEN"
+            ],
+            "speech": [],
+            "action_de": "Darum hat Gott ihn erhöht, damit sich im Namen Jesu jedes Knie beuge und jede Zunge bekenne, dass Jesus Christus der Herr ist.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-ERHOEHEN": "FIG-JESUS",
+                "FIG-ZEICHEN-KNIEN": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "pose": {
+                "FIG-GRUPPE-GLAUBENDE": "kneel"
+              },
+              "god_side": "left",
+              "x": {
+                "FIG-GRUPPE-GLAUBENDE": 60,
+                "FIG-JESUS": 140
+              },
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "delight"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Einmütig und demütig: Paulus (Kette) bittet die Glaubenden um Einheit (Figuren im Ring) und Demut (Verneigung).",
+          "Erniedrigung: Jesus (Kreuznimbus) verneigt sich (Demut, Pfeil nach unten) und geht den Weg bis zum Kreuz.",
+          "Erhöhung: Gott (Strahlenkranz) erhöht Jesus (goldener Pfeil nach oben); Menschen beugen die Knie vor ihm (kniende Figur)."
+        ]
+      }
+    }
+  ]
 }
