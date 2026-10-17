@@ -128,9 +128,9 @@ CHAR = {
     "haendler": dict(hair="#2E2017", veil="#E9D8B4", front="M-7.6-3.6Q0-8.4 7.6-3.6Q4-5.2 0-5Q-4-5.2-7.6-3.6z",
                      beard="M-8 6.4Q-7 12.4 0 13.4Q7 12.4 8 6.4Q6 10 0 10.6Q-6 10-8 6.4z", robe="#C2884A", belt="#8A6A3A"),
     "menge": dict(hair="#2E2017", front="M-10.6-.4Q-11-11.6 0-12Q11-11.6 10.6-.4Q8-6 0-6.6Q-8-6-10.6-.4z",
-                  beard="M-8 6.4Q-7 12.4 0 13.4Q7 12.4 8 6.4Q6 10 0 10.6Q-6 10-8 6.4z", robe="#8E9AAF", sash="#6F7B8F"),
-    "menge2": dict(hair="#3A2618", veil="#B9A88C", front="M-7.6-3.6Q0-8.4 7.6-3.6Q4-5.2 0-5Q-4-5.2-7.6-3.6z", robe="#9AA6B8", sash="#7A8698"),
-    "menge3": dict(hair="#24180F", front="M-10.6 0Q-11.4-10.8 0-11.8Q11.4-10.8 10.6 0Q6-8.2-1-7Q-7-6.4-10.6 0z", robe="#8592A6", sash="#6F7B8F"),
+                  beard="M-8 6.4Q-7 12.4 0 13.4Q7 12.4 8 6.4Q6 10 0 10.6Q-6 10-8 6.4z", robe="#A8987A", sash="#7E6E52"),
+    "menge2": dict(hair="#3A2618", veil="#C9B48E", front="M-7.6-3.6Q0-8.4 7.6-3.6Q4-5.2 0-5Q-4-5.2-7.6-3.6z", robe="#9C8A6A", sash="#6E5E44"),
+    "menge3": dict(hair="#24180F", front="M-10.6 0Q-11.4-10.8 0-11.8Q11.4-10.8 10.6 0Q6-8.2-1-7Q-7-6.4-10.6 0z", robe="#8E8A6E", sash="#6A664C"),
     "mose": dict(hair="#D8D2C4", front="M-10.6-1.6Q-11.4-10.8 0-11.8Q11.4-10.8 10.6-1.6Q8-8.8 0-9.4Q-8-8.8-10.6-1.6z",
                  beard="M-8.6 4.6Q-9 15 0 19Q9 15 8.6 4.6Q6.6 10.6 0 11.2Q-6.6 10.6-8.6 4.6z", robe="#7A5A34", mantle="#E7DCC4"),
     "paulus": dict(hair="#3A2618", front="M-10.6 1Q-10.8-6-8.6-8.6Q-6-6.8-6.4-1z M10.6 1Q10.8-6 8.6-8.6Q6-6.8 6.4-1z",
@@ -262,7 +262,10 @@ def person(key, x, y, s, expr="calm", look=0.0, arm=None, flip=False, tears=Fals
     if CHAR[key].get("child"):
         s *= .74
         y += 9 * s
-    held = use(hold, -4, 13, 16, 12) if hold else ""  # vor der Brust, nicht am unteren Rand
+    if hold and hold.startswith("an-a-"):  # Erkennungszeichen (Schlüssel, Kasse …) gut sichtbar auf der Brust
+        held = use(hold, 1, 16, 14, 14)
+    else:
+        held = use(hold, -4, 13, 16, 12) if hold else ""  # vor der Brust, nicht am unteren Rand
     head = head_inner(key, expr, -look if flip else look, tears)
     if flip:  # abgewandt: Hinterkopf statt Gesicht (Spiegeln allein war im Blindtest nicht sichtbar)
         c = CHAR[key]
@@ -714,7 +717,7 @@ for _k, _v in _SYMS.items():
         COPY.append(_v["sym"])
 EXTRA_META = {k: (v["place"], tuple(v["size"])) for k, v in _SYMS.items()}
 GROUP_KEYS = {"FIG-GRUPPE-MENGE": ("menge2", "menge3", "menge"), "FIG-GRUPPE-ZWOELF": ("juenger2", "juenger", "andreas")}
-POSE_SHIFT = {"sit": 7, "kneel": 13}
+POSE_SHIFT = {"sit": 6, "kneel": 9}
 
 
 class AniComposer(_auto.Composer):
@@ -834,7 +837,7 @@ class AniComposer(_auto.Composer):
             sc *= .92
         self._hr = 12 * sc
         y = 140 - 34 * sc + 4 + POSE_SHIFT.get(pose, 0) * sc
-        half = (17 + (19 if (fid in GROUP_KEYS or fid.startswith("FIG-GRUPPE-")) else 0)) * sc + 3
+        half = (17 + (11 if (fid in GROUP_KEYS or fid.startswith("FIG-GRUPPE-")) else 0)) * sc + 3
         if pose not in ("lie", "sleep", "fall"):
             x = max(half, min(_auto.W - half, x))
             s["x"] = x
