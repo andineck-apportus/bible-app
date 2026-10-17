@@ -524,7 +524,20 @@ class Composer:
                     bx = max(28 if by < 24 else 4, min(W - 4 - bw, px))
                     link = same[0]
             if not god and not same and ty - (by + bh) < 6:
-                by = max(2, ty - bh - 8)
+                nb = max(2, ty - bh - 8)
+                if not hit(bx, nb):
+                    by = nb
+                else:  # nicht wieder in eine andere Blase schieben: seitlich ausweichen, sonst kleiner
+                    alt = [c for c in (28, W - 4 - bw) + tuple(px - bw - 6 for px, pw, pb, ph in placed) + tuple(px + pw + 6 for px, pw, pb, ph in placed)
+                           if 4 <= c <= W - 4 - bw and not hit(c, nb)]
+                    if alt:
+                        bx, by = min(alt, key=lambda c: abs(c + bw / 2 - tx)), nb
+                    else:
+                        sc = max(.6, (ty - 8 - by - 12) / ih) if ty - 8 - by - 12 > 0 else .6
+                        ws = [w * sc for w in ws]
+                        ih *= sc
+                        bw = sum(ws) + 5 * (len(ws) - 1) + 12
+                        bh = ih + 12
             inner, x = [], bx + 6
             for i, w in zip(sp["icons"], ws):
                 inner.append(self.r_icon(i, x, by + 6, w, ih))
