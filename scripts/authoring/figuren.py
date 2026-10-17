@@ -270,8 +270,8 @@ def symbol_group(fid):
     """Gruppe: drei gestaffelte Figuren desselben Aussehens."""
     one = "ill-p-" + slug(fid) + "-1"
     return (symbol_person(fid).replace(f'id="ill-p-{slug(fid)}"', f'id="{one}"')
-            + f'<symbol id="ill-p-{slug(fid)}" viewBox="0 0 30 64"><use href="#{one}" x="-4" y="6" width="22" height="47" opacity=".8"/>'
-              f'<use href="#{one}" x="12" y="6" width="22" height="47" opacity=".8"/><use href="#{one}" x="3" y="2" width="25" height="54"/></symbol>')
+            + f'<symbol id="ill-p-{slug(fid)}" viewBox="0 0 30 64"><use href="#{one}" x="-4" y="17" width="22" height="47" opacity=".8"/>'
+              f'<use href="#{one}" x="12" y="17" width="22" height="47" opacity=".8"/><use href="#{one}" x="3" y="10" width="25" height="54"/></symbol>')
 
 
 def symbol_attrs():

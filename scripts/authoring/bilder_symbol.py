@@ -527,6 +527,8 @@ class SymComposer(_auto.Composer):
         if hold == "PRAY":
             out.append(use("ill-z-beten", round(x - 6, 1), round(y + h * .34, 1), 12, 13))
             hold = None
+        if hold == "FIG-OBJ-BRIEF" and (fid == "FIG-PAULUS" or (_fg.FIGS.get(fid) or {}).get("attr") == "brief"):
+            hold = None  # trägt den Brief schon als Merkmal
         if hold:
             ww, hh2 = _auto.meta(hold, self.lex, EXTRA_META)[1]
             side = arm or 1

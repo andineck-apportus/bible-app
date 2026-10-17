@@ -172,7 +172,7 @@ def look_dir(slots, i, speaker_idx, addr_idx):
     return 1 if me < W / 2 else -1
 
 
-def arrow_svg(x1, y1, x2, y2, kind="act"):
+def arrow_svg(x1, y1, x2, y2, kind="act", divine=True):
     """Handlungslinie: act (Gott sendet, sieht, bestimmt), throw (werfen, speien), go (gehen, dem Boden entlang)."""
     mx, my = (x1 + x2) / 2, min(y1, y2) - (26 if kind == "throw" else 14 if kind == "act" else 0)
     if kind == "go":
@@ -181,7 +181,7 @@ def arrow_svg(x1, y1, x2, y2, kind="act"):
     hx1, hy1 = x2 - 7 * math.cos(ang - .45), y2 - 7 * math.sin(ang - .45)
     hx2, hy2 = x2 - 7 * math.cos(ang + .45), y2 - 7 * math.sin(ang + .45)
     dash = ' stroke-dasharray="5 4"' if kind == "go" else (' stroke-dasharray="2 4"' if kind == "throw" else "")
-    col = "#C08A2A" if kind == "act" else "#3B3226"
+    col = "#C08A2A" if kind == "act" and divine else "#3B3226"
     return (f'<path d="M{x1:.1f} {y1:.1f}Q{mx:.1f} {my:.1f} {x2:.1f} {y2:.1f}" fill="none" stroke="#FFFDF6" stroke-width="4.4" stroke-linecap="round" opacity=".8"/>'
             f'<path d="M{x1:.1f} {y1:.1f}Q{mx:.1f} {my:.1f} {x2:.1f} {y2:.1f}" fill="none" stroke="{col}" stroke-width="2"{dash} stroke-linecap="round"/>'
             f'<path d="M{hx1:.1f} {hy1:.1f}L{x2:.1f} {y2:.1f}L{hx2:.1f} {hy2:.1f}" fill="none" stroke="{col}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>')
@@ -378,7 +378,7 @@ class Composer:
                 (x1, y1), (x2, y2) = pos[f], pos[t]
                 d = math.hypot(x2 - x1, y2 - y1) or 1
                 sh1, sh2 = (16 if f in sky else 12), (14 if t in bigpos or t in pos else 10)
-                out.append(arrow_svg(x1 + (x2 - x1) * sh1 / d, y1 + (y2 - y1) * sh1 / d, x2 - (x2 - x1) * sh2 / d, y2 - (y2 - y1) * sh2 / d, kind))
+                out.append(arrow_svg(x1 + (x2 - x1) * sh1 / d, y1 + (y2 - y1) * sh1 / d, x2 - (x2 - x1) * sh2 / d, y2 - (y2 - y1) * sh2 / d, kind, f in sky))
         # 10. Sprechblasen
         bubbles = []
         for sp in L["speech"][:2]:
@@ -435,7 +435,13 @@ class Composer:
                     bw = sum(ws) + 5 * (len(ws) - 1) + 12
                     bh = ih + 12
                     bx = 28 if gx - 32 >= W - (gx + gw) - 10 else gx + gw + 6
-            if not god and ty - (by + bh) < 6:
+            same = [b for b, (sp0, _, _) in zip(placed, bubbles) if sp0["from"] == sp["from"]]
+            if same:
+                # zweite Blase derselben Figur: unter die erste, gleiche Spalte
+                px, pw, pbot, ph = same[0]
+                by = pbot + 5
+                bx = max(28 if by < 24 else 4, min(W - 4 - bw, px))
+            if not god and not same and ty - (by + bh) < 6:
                 by = max(2, ty - bh - 8)
             inner, x = [], bx + 6
             for i, w in zip(sp["icons"], ws):

@@ -1,0 +1,633 @@
+[
+ {
+  "id": "FIG-ORT-BETLEHEM",
+  "kind": "place",
+  "de": "Betlehem",
+  "en": "Bethlehem",
+  "ident": "Kleine Stadt in Juda, Heimat Elimelechs und Noomis und Wohnort des Boas ([[RUT.1.1]], [[RUT.1.19]]).",
+  "gsw": "Chliini Stadt in Juda, d Heimet vom Elimelech und vo de Noomi und de Wohnort vom Boas ([[RUT.1.1]], [[RUT.1.19]]).",
+  "traits": [
+   {
+    "trait_de": "Wenige würfelförmige Häuser auf einem Hügel",
+    "basis": "design"
+   },
+   {
+    "trait_de": "Getreidefelder am Fuss des Hügels",
+    "basis": "text",
+    "ref": "RUT.1.22",
+    "note_de": "Ankunft zu Beginn der Gerstenernte."
+   }
+  ],
+  "pal": [
+   "#E7DCC4",
+   "#C9B07A"
+  ],
+  "rules": [
+   "Nicht mit Jerusalem verwechseln: kein Tempel, keine grosse Stadtmauer",
+   "Keine Weihnachtskrippe oder Stern (Rut spielt lange vor der Geburt Jesu)"
+  ],
+  "find": [
+   [
+    "Betlehem",
+    null
+   ]
+  ],
+  "distinct": [
+   "FIG-ORT-JERUSALEM"
+  ]
+ },
+ {
+  "id": "FIG-ORT-MOAB",
+  "kind": "place",
+  "de": "Moab (Gebiet)",
+  "en": "Moab (country)",
+  "ident": "Das Hochland östlich des Toten Meeres, wohin Elimelechs Familie wegen der Hungersnot zieht; Heimat Ruts und Orpas ([[RUT.1.1]], [[RUT.1.4]]).",
+  "gsw": "S Hochland öschtlich vom Tote Meer, wo d Familie vom Elimelech wäge de Hungersnot hiizieht; d Heimet vo de Rut und de Orpa ([[RUT.1.1]], [[RUT.1.4]]).",
+  "traits": [
+   {
+    "trait_de": "Rotbraunes Tafelland mit flachen Höhenzügen",
+    "basis": "design",
+    "note_de": "Moab liegt auf einer Hochebene; die Farbe ist Gestaltung."
+   },
+   {
+    "trait_de": "Blauer Streifen links (Totes Meer)",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#B88A5E",
+   "#5DA7DB"
+  ],
+  "rules": [
+   "Kein Volk als fremd oder feindlich kennzeichnen; Moab ist hier ein Ort"
+  ],
+  "find": [
+   [
+    "Moab",
+    null
+   ]
+  ],
+  "distinct": [
+   "FIG-ORT-BERG"
+  ]
+ },
+ {
+  "id": "FIG-ORT-FELD",
+  "kind": "place",
+  "de": "Getreidefeld",
+  "en": "Grain field",
+  "ident": "Feld mit Gerste oder Weizen zur Erntezeit, etwa das Feld des Boas ([[RUT.2.3]]).",
+  "gsw": "Fäld mit Gerschte oder Weize zur Ärnzit, öppe s Fäld vom Boas ([[RUT.2.3]]).",
+  "traits": [
+   {
+    "trait_de": "Goldgelbe Halme mit Ähren über die ganze Breite",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#E8C66A",
+   "#B08A2A"
+  ],
+  "rules": [
+   "Für den Dreschplatz FIG-ORT-TENNE"
+  ],
+  "find": [
+   [
+    "Feld",
+    [
+     "RUT"
+    ]
+   ]
+  ],
+  "distinct": [
+   "FIG-ORT-TENNE",
+   "FIG-ORT-WUESTE"
+  ]
+ },
+ {
+  "id": "FIG-ORT-TENNE",
+  "kind": "place",
+  "de": "Tenne (Dreschplatz)",
+  "en": "Threshing floor",
+  "ident": "Fester, ebener Platz, auf dem das Getreide gedroschen und geworfelt wird ([[RUT.3.2]], [[RUT.3.6]]).",
+  "gsw": "Feschte, äbne Platz, wo s Getreid tröschet und gworflet wird ([[RUT.3.2]], [[RUT.3.6]]).",
+  "traits": [
+   {
+    "trait_de": "Runder, gestampfter Platz mit einem Getreidehaufen",
+    "basis": "text",
+    "ref": "RUT.3.7",
+    "note_de": "Boas legt sich «am Ende des Getreidehaufens» hin."
+   }
+  ],
+  "pal": [
+   "#E2C995",
+   "#E8B84A"
+  ],
+  "rules": [
+   "Nicht mit dem Feld (FIG-ORT-FELD) verwechseln: keine stehenden Halme"
+  ],
+  "find": [
+   [
+    "Tenne",
+    null
+   ]
+  ],
+  "distinct": [
+   "FIG-ORT-FELD"
+  ]
+ },
+ {
+  "id": "FIG-ORT-STADTTOR",
+  "kind": "place",
+  "de": "Stadttor",
+  "en": "City gate",
+  "ident": "Tor in der Stadtmauer, wo man sich setzt, Recht spricht und Geschäfte vor Zeugen abschliesst ([[RUT.4.1]], [[RUT.4.11]]).",
+  "gsw": "Tor i de Stadtmuur, wo mer abhockt, Rächt sprächt und Gschäft vor Züüge abschlüüsst ([[RUT.4.1]], [[RUT.4.11]]).",
+  "traits": [
+   {
+    "trait_de": "Stadtmauer mit Zinnen und dunklem Torbogen",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#D8C8A6",
+   "#5B4630"
+  ],
+  "rules": [
+   "Ohne Tempel dahinter (sonst FIG-ORT-JERUSALEM)"
+  ],
+  "find": [
+   [
+    "\\bTor\\b",
+    [
+     "RUT"
+    ]
+   ]
+  ],
+  "distinct": [
+   "FIG-ORT-JERUSALEM"
+  ]
+ },
+ {
+  "id": "FIG-OBJ-GARBE",
+  "kind": "object",
+  "de": "Garbe (Ähren)",
+  "en": "Sheaf (ears of grain)",
+  "ident": "Gebundenes Bündel Getreidehalme mit Ähren; auch für das Ährenlesen ([[RUT.2.2]], [[RUT.2.7]]).",
+  "gsw": "Bundes Büschel Getreidehalm mit Ähre; au fürs Ährelääse ([[RUT.2.2]], [[RUT.2.7]]).",
+  "traits": [
+   {
+    "trait_de": "Goldgelbe Halme, in der Mitte zusammengebunden",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#E8B84A",
+   "#8A6A3A"
+  ],
+  "rules": [
+   "Für ausgedroschenes Korn FIG-OBJ-GERSTE"
+  ],
+  "find": [
+   [
+    "Garbe|Ähren",
+    null
+   ]
+  ],
+  "distinct": [
+   "FIG-OBJ-GERSTE"
+  ]
+ },
+ {
+  "id": "FIG-OBJ-GERSTE",
+  "kind": "object",
+  "de": "Gerste (Korn im Tuch)",
+  "en": "Barley (grain in a cloth)",
+  "ident": "Ausgeklopfte Gerstenkörner, in ein Tuch oder einen Umhang gebunden ([[RUT.2.17]], [[RUT.3.15]]).",
+  "gsw": "Uusklopfti Gerschtechörnli, imene Tuech oder Umhang iibunde ([[RUT.2.17]], [[RUT.3.15]]).",
+  "traits": [
+   {
+    "trait_de": "Helles Tuchbündel, oben gebunden, goldene Körner",
+    "basis": "text",
+    "ref": "RUT.3.15",
+    "note_de": "Boas misst Gerste in Ruts Umhang."
+   }
+  ],
+  "pal": [
+   "#C9B48E",
+   "#E8B84A"
+  ],
+  "rules": [
+   "Mengen (ein Efa, sechs Mass) nicht als Zahl zeigen"
+  ],
+  "find": [
+   [
+    "Gerste",
+    null
+   ]
+  ],
+  "distinct": [
+   "FIG-OBJ-GARBE",
+   "FIG-OBJ-BROT"
+  ]
+ },
+ {
+  "id": "FIG-ZEICHEN-HUNGERSNOT",
+  "kind": "sign",
+  "de": "Hungersnot",
+  "en": "Famine",
+  "ident": "Bedeutung: Im Land gibt es nichts zu essen, die Ernte bleibt aus (z. B. [[RUT.1.1]]).",
+  "gsw": "Bedüütig: Im Land git s nüüt z ässe, d Ärn blibt uus (z. B. [[RUT.1.1]]).",
+  "traits": [
+   {
+    "trait_de": "Rissiger, trockener Boden mit einer verdorrten, hängenden Ähre",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#C9A878",
+   "#9A8A50"
+  ],
+  "rules": [
+   "Keine hungernden Körper zeigen",
+   "Nicht mit Fasten (FIG-ZEICHEN-BUSSE, leere Schale) verwechseln"
+  ],
+  "distinct": [
+   "FIG-ZEICHEN-BUSSE"
+  ]
+ },
+ {
+  "id": "FIG-ZEICHEN-TREUE",
+  "kind": "sign",
+  "de": "Treue / zusammenhalten",
+  "en": "Loyalty / to hold together",
+  "ident": "Bedeutung: verlässliche Treue (hebräisch ḥesed) und Zusammenhalten, etwa Ruts Treue zu Noomi ([[RUT.1.14]], [[RUT.3.10]]).",
+  "gsw": "Bedüütig: verlässlichi Tröi (hebräisch ḥesed) und Zämehebe, öppe d Tröi vo de Rut zur Noomi ([[RUT.1.14]], [[RUT.3.10]]).",
+  "traits": [
+   {
+    "trait_de": "Zwei Hände, die sich fest halten, darüber ein kleines Herz",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#C89B72",
+   "#E07A8A"
+  ],
+  "rules": [
+   "Nicht mit Mitleid (FIG-ZEICHEN-ERBARMEN, Herz in zwei Händen) verwechseln"
+  ],
+  "distinct": [
+   "FIG-ZEICHEN-ERBARMEN",
+   "FIG-ZEICHEN-LIEBE"
+  ],
+  "terms": [
+   {
+    "lang": "heb",
+    "word": "חֶסֶד",
+    "translit": "ḥesed",
+    "de": "Treue, Güte, verlässliche Verbundenheit"
+   }
+  ]
+ },
+ {
+  "id": "FIG-ZEICHEN-ZUFLUCHT",
+  "kind": "sign",
+  "de": "Zuflucht unter Flügeln",
+  "en": "Refuge under wings",
+  "ident": "Bedeutung: Schutz und Zuflucht bei Gott, im Bild der schützenden Flügel ([[RUT.2.12]]).",
+  "gsw": "Bedüütig: Schutz und Zueflucht bi Gott, im Bild vo de schützende Flügel ([[RUT.2.12]]).",
+  "traits": [
+   {
+    "trait_de": "Zwei braune Flügel, die sich schützend über eine kleine Figur wölben",
+    "basis": "text",
+    "ref": "RUT.2.12",
+    "note_de": "Bildwort; der Vogel selbst wird nicht gezeigt."
+   }
+  ],
+  "pal": [
+   "#A07A44",
+   "#D9A441"
+  ],
+  "rules": [
+   "Keine Taube und kein Engel (nicht mit dem Heiligen Geist oder FIG-ROLLE-ENGEL verwechseln)",
+   "Gott nicht als Vogel darstellen: nur die Flügel als Zeichen"
+  ],
+  "distinct": [
+   "FIG-HEILIGER-GEIST",
+   "FIG-ROLLE-ENGEL",
+   "FIG-ZEICHEN-GEWANDZIPFEL"
+  ]
+ },
+ {
+  "id": "FIG-ZEICHEN-GEWANDZIPFEL",
+  "kind": "sign",
+  "de": "Gewandzipfel ausbreiten (Schutz, Ehe)",
+  "en": "Spreading the corner of a garment",
+  "ident": "Bedeutung: den Zipfel des Gewandes über jemanden breiten, d. h. ihn unter seinen Schutz nehmen, hier als Bitte um die Ehe ([[RUT.3.9]]).",
+  "gsw": "Bedüütig: de Zipfel vom Gwand über öpper uusbreite, das heisst en under sin Schutz näh, da als Bitt um d Ehe ([[RUT.3.9]]).",
+  "traits": [
+   {
+    "trait_de": "Petrolfarbener Mantelzipfel über einer kleinen, knienden Figur",
+    "basis": "text",
+    "ref": "RUT.3.9",
+    "note_de": "Farbe wie der Mantel des Boas."
+   }
+  ],
+  "pal": [
+   "#2F5F6F",
+   "#7A8B4A"
+  ],
+  "rules": [
+   "Nichts Anzügliches zeigen; das Zeichen steht für Schutz und Ehe"
+  ],
+  "distinct": [
+   "FIG-ZEICHEN-ZUFLUCHT"
+  ],
+  "terms": [
+   {
+    "lang": "heb",
+    "word": "כָּנָף",
+    "translit": "kānāp̄",
+    "de": "Flügel, Gewandzipfel (dasselbe Wort wie in [[RUT.2.12]])"
+   }
+  ]
+ },
+ {
+  "id": "FIG-ZEICHEN-LOESEN",
+  "kind": "sign",
+  "de": "lösen (Löser)",
+  "en": "to redeem (kinsman-redeemer)",
+  "ident": "Bedeutung: Ein naher Verwandter kauft Land der Familie zurück und sorgt für ihren Fortbestand; er ist der «Löser» ([[RUT.2.20]], [[RUT.4.4-RUT.4.6]]).",
+  "gsw": "Bedüütig: En nööche Verwandte chauft Land vo de Familie zrugg und luegt, dass si wiiter bestaat; er isch de «Löser» ([[RUT.2.20]], [[RUT.4.4-RUT.4.6]]).",
+  "traits": [
+   {
+    "trait_de": "Kleines Feldstück, um das ein Pfeil im Kreis zurückführt",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#E8B84A",
+   "#3B3226"
+  ],
+  "rules": [
+   "Nicht mit umkehren (FIG-ZEICHEN-UMKEHR, Bogenpfeil ohne Feld) verwechseln"
+  ],
+  "distinct": [
+   "FIG-ZEICHEN-UMKEHR"
+  ],
+  "terms": [
+   {
+    "lang": "heb",
+    "word": "גֹּאֵל",
+    "translit": "goʾēl",
+    "de": "Löser"
+   }
+  ]
+ },
+ {
+  "id": "FIG-ZEICHEN-STAMMBAUM",
+  "kind": "sign",
+  "de": "Stammbaum",
+  "en": "Genealogy",
+  "ident": "Bedeutung: Folge von Generationen, Vater auf Sohn ([[RUT.4.18-RUT.4.22]]).",
+  "gsw": "Bedüütig: Reihe vo Generatione, Vater uf Sohn ([[RUT.4.18-RUT.4.22]]).",
+  "traits": [
+   {
+    "trait_de": "Baum mit Stamm und Ästen, an den Enden runde Punkte",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#6E8B3D",
+   "#8A6A3A"
+  ],
+  "rules": [
+   "Keine Namen oder Zahlen an den Punkten"
+  ],
+  "distinct": [
+   "FIG-ZEICHEN-HOFFNUNG"
+  ]
+ },
+ {
+  "id": "FIG-GRUPPE-SCHNITTER",
+  "kind": "group",
+  "de": "Schnitter (Erntearbeiter)",
+  "en": "Reapers",
+  "ident": "Knechte, die das Getreide schneiden und binden, etwa auf dem Feld des Boas ([[RUT.2.3]], [[RUT.2.4]]).",
+  "gsw": "Chnächt, wo s Getreid schnided und bindet, öppe uf em Fäld vom Boas ([[RUT.2.3]], [[RUT.2.4]]).",
+  "traits": [
+   {
+    "trait_de": "Hellbraune Arbeitskittel mit Stirnband, Ähren in der Hand",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#C9B48E",
+   "#8A6A3A"
+  ],
+  "rules": [
+   "Erkennbar an Farbe, Kleidung und Zeichen, nicht am Gesicht; im Stil Symbol ohne ausgeführtes Gesicht, in Stilen mit Gesichtern (Anime u. a.) Züge und Hautton von Menschen der Levante im 1. Jahrhundert",
+   "Keine Karikatur, keine verzerrten oder «typisierten» Gesichts- und Körpermerkmale"
+  ],
+  "era": "any",
+  "find": [
+   [
+    "Schnitter",
+    null
+   ]
+  ],
+  "distinct": [
+   "FIG-GRUPPE-MENGE"
+  ]
+ },
+ {
+  "id": "FIG-GRUPPE-FRAUEN",
+  "kind": "group",
+  "de": "Frauen (Gruppe)",
+  "en": "Women (group)",
+  "ident": "Mehrere Frauen, etwa die Frauen von Betlehem, die Arbeiterinnen des Boas oder die Nachbarinnen Noomis ([[RUT.1.19]], [[RUT.2.23]], [[RUT.4.14-RUT.4.17]]).",
+  "gsw": "Mehreri Fraue, öppe d Fraue vo Betlehem, d Arbeiterinne vom Boas oder d Nachberinne vo de Noomi ([[RUT.1.19]], [[RUT.2.23]], [[RUT.4.14-RUT.4.17]]).",
+  "traits": [
+   {
+    "trait_de": "Drei Frauen mit hellem Kopftuch und erdfarbenem Gewand",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#B48A6A",
+   "#E2CDA8"
+  ],
+  "rules": [
+   "Erkennbar an Farbe, Kleidung und Zeichen, nicht am Gesicht; im Stil Symbol ohne ausgeführtes Gesicht, in Stilen mit Gesichtern (Anime u. a.) Züge und Hautton von Menschen der Levante im 1. Jahrhundert",
+   "Keine Karikatur, keine verzerrten oder «typisierten» Gesichts- und Körpermerkmale"
+  ],
+  "era": "any",
+  "find": [
+   [
+    "Frauen|Nachbarinnen|Arbeiterinnen",
+    [
+     "RUT"
+    ]
+   ]
+  ],
+  "distinct": [
+   "FIG-GRUPPE-MENGE",
+   "FIG-GRUPPE-GEMEINDE"
+  ]
+ },
+ {
+  "id": "FIG-GRUPPE-AELTESTE",
+  "kind": "group",
+  "de": "Älteste (Gruppe)",
+  "en": "Elders (group)",
+  "ident": "Mehrere Älteste einer Stadt, die im Tor sitzen und Zeugen sind ([[RUT.4.2]], [[RUT.4.9-RUT.4.11]]).",
+  "gsw": "Mehreri Ältischti vonere Stadt, wo im Tor hocked und Züüge sind ([[RUT.4.2]], [[RUT.4.9-RUT.4.11]]).",
+  "traits": [
+   {
+    "trait_de": "Ältere Männer mit grauem Überwurf und Stab, wie der einzelne Älteste",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#6A5A4A",
+   "#C9BFAA"
+  ],
+  "rules": [
+   "Erkennbar an Farbe, Kleidung und Zeichen, nicht am Gesicht; im Stil Symbol ohne ausgeführtes Gesicht, in Stilen mit Gesichtern (Anime u. a.) Züge und Hautton von Menschen der Levante im 1. Jahrhundert",
+   "Keine Karikatur, keine verzerrten oder «typisierten» Gesichts- und Körpermerkmale",
+   "Zahlen (zehn Älteste) nicht als Zahl zeigen"
+  ],
+  "era": "any",
+  "find": [
+   [
+    "Ältest",
+    [
+     "RUT"
+    ]
+   ]
+  ],
+  "distinct": [
+   "FIG-ROLLE-AELTESTER",
+   "FIG-GRUPPE-MENGE"
+  ]
+ },
+ {
+  "id": "FIG-GRUPPE-ISRAEL",
+  "kind": "group",
+  "de": "Israel (Volk, Haus Jakob)",
+  "en": "Israel (people, house of Jacob)",
+  "ident": "Das Volk Israel bzw. Juda, im Buch Rut «dein Volk» Noomis, bei Obadja «Jakob», «Haus Jakob» und «Söhne Judas» ([[RUT.1.16]], [[OBA.1.10]], [[OBA.1.17]]).",
+  "gsw": "S Volk Israel oder Juda, im Buech Rut «dis Volk» vo de Noomi, bim Obadja «Jakob», «Huus Jakob» und «Söhn vo Juda» ([[RUT.1.16]], [[OBA.1.10]], [[OBA.1.17]]).",
+  "traits": [
+   {
+    "trait_de": "Drei Figuren in hellem Gewand mit blauem Mantel",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#E2D6BE",
+   "#3E6E9E"
+  ],
+  "rules": [
+   "Erkennbar an Farbe, Kleidung und Zeichen, nicht am Gesicht; im Stil Symbol ohne ausgeführtes Gesicht, in Stilen mit Gesichtern (Anime u. a.) Züge und Hautton von Menschen der Levante im 1. Jahrhundert",
+   "Keine Karikatur, keine verzerrten oder «typisierten» Gesichts- und Körpermerkmale",
+   "Nicht mit der neutralen Menge (FIG-GRUPPE-MENGE) oder mit «den Juden» im Johannesevangelium gleichsetzen"
+  ],
+  "era": "any",
+  "find": [
+   [
+    "Jakob|Juda|Israel",
+    [
+     "OBA"
+    ]
+   ],
+   [
+    "[Dd]ein Volk",
+    [
+     "RUT.1.16"
+    ]
+   ]
+  ],
+  "distinct": [
+   "FIG-GRUPPE-MENGE",
+   "FIG-GRUPPE-EDOM"
+  ]
+ },
+ {
+  "id": "FIG-DAVID",
+  "kind": "person",
+  "de": "David",
+  "en": "David",
+  "ident": "König Israels aus Betlehem, Sohn Isais und Urenkel von Rut und Boas ([[RUT.4.17]], [[RUT.4.22]]).",
+  "gsw": "Chünig vo Israel us Betlehem, de Sohn vom Isai und de Urenkel vo de Rut und vom Boas ([[RUT.4.17]], [[RUT.4.22]]).",
+  "traits": [
+   {
+    "trait_de": "Königsreif",
+    "basis": "tradition",
+    "note_de": "König nach [[2SA.5.3]]; Samuelbücher noch nicht übersetzt."
+   },
+   {
+    "trait_de": "Königsblaues Gewand mit rotem Mantel",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#3F5A8A",
+   "#A33A2E"
+  ],
+  "rules": [
+   "Erkennbar an Farbe, Kleidung und Zeichen, nicht am Gesicht; im Stil Symbol ohne ausgeführtes Gesicht, in Stilen mit Gesichtern (Anime u. a.) Züge und Hautton von Menschen der Levante im 1. Jahrhundert",
+   "Keine Karikatur, keine verzerrten oder «typisierten» Gesichts- und Körpermerkmale",
+   "Nicht mit dem allgemeinen König (FIG-ROLLE-KOENIG) verwechseln"
+  ],
+  "era": "kingdom",
+  "find": [
+   [
+    "David",
+    null
+   ]
+  ],
+  "distinct": [
+   "FIG-ROLLE-KOENIG",
+   "FIG-ISAI"
+  ]
+ },
+ {
+  "id": "FIG-ISAI",
+  "kind": "person",
+  "de": "Isai",
+  "en": "Jesse",
+  "ident": "Mann aus Betlehem, Sohn Obeds und Vater Davids ([[RUT.4.17]], [[RUT.4.22]]).",
+  "gsw": "Maa vo Betlehem, de Sohn vom Obed und de Vater vom David ([[RUT.4.17]], [[RUT.4.22]]).",
+  "traits": [
+   {
+    "trait_de": "Älterer Mann mit Hirtenstab",
+    "basis": "tradition",
+    "note_de": "Herden der Familie nach [[1SA.16.11]]; Samuelbücher noch nicht übersetzt."
+   },
+   {
+    "trait_de": "Ockerfarbenes Gewand mit braunem Mantel",
+    "basis": "design"
+   }
+  ],
+  "pal": [
+   "#A88A50",
+   "#6A5A3A"
+  ],
+  "rules": [
+   "Erkennbar an Farbe, Kleidung und Zeichen, nicht am Gesicht; im Stil Symbol ohne ausgeführtes Gesicht, in Stilen mit Gesichtern (Anime u. a.) Züge und Hautton von Menschen der Levante im 1. Jahrhundert",
+   "Keine Karikatur, keine verzerrten oder «typisierten» Gesichts- und Körpermerkmale"
+  ],
+  "era": "judges",
+  "find": [
+   [
+    "Isai",
+    null
+   ]
+  ],
+  "distinct": [
+   "FIG-DAVID",
+   "FIG-ROLLE-HIRTE"
+  ]
+ }
+]
