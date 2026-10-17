@@ -44,6 +44,9 @@ def eyes(expr, look):
         if expr in ("smile",):
             out.append(f'<path d="M{ex - 2:.1f} {ey + .4:.1f}Q{ex:.1f} {ey - 2:.1f} {ex + 2:.1f} {ey + .4:.1f}" fill="none" stroke="{INK}" stroke-width="1.1" stroke-linecap="round"/>')
             continue
+        if expr == "sleep":
+            out.append(f'<path d="M{ex - 2.1:.1f} {ey + .4:.1f}Q{ex:.1f} {ey + 1.8:.1f} {ex + 2.1:.1f} {ey + .4:.1f}" fill="none" stroke="{INK}" stroke-width="1" stroke-linecap="round"/>')
+            continue
         if expr == "pensive":  # offen, Blick gesenkt und zur Seite (nicht geschlossen: wirkte im Blindtest schläfrig/hochmütig)
             out.append(f'<ellipse cx="{ex + .5:.1f}" cy="{ey + .7:.1f}" rx="1.75" ry="2.1" fill="#3A2416"/>'
                        f'<path d="M{ex - 2.4:.1f} {ey - 1.1:.1f}Q{ex:.1f} {ey - 2.6:.1f} {ex + 2.4:.1f} {ey - 1.1:.1f}" fill="none" stroke="{INK}" stroke-width="1" stroke-linecap="round"/>'
@@ -185,6 +188,15 @@ def head_inner(key, expr="calm", look=0.0, tears=False):
         o.append(f'<path d="M-10.6 0Q-11.6-9.6 0-12.4Q11.6-9.6 10.6 0Q9-8 0-9.4Q-9-8-10.6 0z" fill="#FFFFFF" stroke="#B4B2A9" stroke-width=".7"/>')
     if c.get("flowers"):
         o.append("".join(f'<circle cx="{x}" cy="{y}" r="1.7" fill="#D4537E"/>' for x, y in ((-7, -7.8), (-3.6, -10.2), (0, -11), (3.6, -10.2), (7, -7.8))))
+    if c.get("turban"):
+        o.append(f'<path d="M-11-1Q-12.4-13.6 0-14Q12.4-13.6 11-1Q9-7.4 0-7.8Q-9-7.4-11-1z" fill="{c["turban"]}" stroke="{INK}" stroke-width=".7"/>'
+                 '<path d="M-10-5Q0-10 10-5M-10.6-8.4Q0-13 10.6-8.4" fill="none" stroke="#C9BFAA" stroke-width=".7"/>')
+    if c.get("plate"):
+        o.append('<path d="M-4-10.6h8v2.2h-8z" fill="#E0B24E" stroke="#9C6F1C" stroke-width=".4"/>')
+    if c.get("band"):
+        o.append(f'<path d="M-10.6-4.6Q0-9.6 10.6-4.6v2.4Q0-7.2-10.6-2.2z" fill="{c["band"]}"/>')
+    if c.get("old"):
+        o.append(f'<path d="M-4-5.2h3M1.4-5.4h3M-7.8 6.4q.6 1.4 1.6 1.8M7.8 6.4q-.6 1.4-1.6 1.8" stroke="{SKIN_D}" stroke-width=".55" stroke-linecap="round" fill="none"/>')
     if c.get("crown"):
         o.append('<path d="M-8.6-6.6l1-6.4 3 3.6 2.6-4.8 2 4.6 2-4.6 2.6 4.8 3-3.6 1 6.4z" fill="#E0B24E" stroke="#9C6F1C" stroke-width=".6"/>'
                  '<circle cx="0" cy="-9.6" r=".9" fill="#A33A2E"/>')
@@ -204,7 +216,17 @@ def head_inner(key, expr="calm", look=0.0, tears=False):
 def body_inner(key, arm=None):
     """Brustbild unter dem Kopf (Einheiten wie Kopf); arm = (Winkel in Grad, Länge) für einen zeigenden Arm, oder None."""
     c = CHAR[key]
-    o = [f'<path d="M-17 34Q-17 19-7 15.6L7 15.6Q17 19 17 34z" fill="{c["robe"]}" stroke="{INK}" stroke-width=".8"/>']
+    o = []
+    if c.get("wings"):
+        o.append(f'<path d="M-12 22Q-30 10-26-12q8 12 14 22zM12 22q18-12 14-34-8 12-14 22z" fill="#FFFDF6" stroke="#D9A441" stroke-width=".9"/>')
+    o.append(f'<path d="M-17 34Q-17 19-7 15.6L7 15.6Q17 19 17 34z" fill="{c["robe"]}" stroke="{INK}" stroke-width=".8"/>')
+    if c.get("fur"):
+        o.append(f'<path d="M-12 18Q0 14 12 18l3 6Q0 20-15 24z" fill="#8A6A3A" stroke="{INK}" stroke-width=".6"/>')
+    if c.get("toga"):
+        o.append(f'<path d="M-9 16.4Q4 20 14 30l2 4h-6Q2 24-12 19z" fill="#FFFFFF" stroke="{INK}" stroke-width=".6"/><path d="M10 34Q4 25-10 19.6" fill="none" stroke="{c.get("trim", "#6A2E5E")}" stroke-width="1.6"/>')
+    if c.get("breast"):
+        o.append('<path d="M-5 21h10v9h-10z" fill="#D9A441" stroke="#9C6F1C" stroke-width=".6"/>'
+                 + "".join(f'<circle cx="{-3 + (i % 3) * 3}" cy="{23 + (i // 3) * 2}" r=".8" fill="{col}"/>' for i, col in enumerate(["#A33A2E", "#3E6E9E", "#6E8B3D"] * 4)))
     if c.get("mantle"):
         o.append(f'<path d="M-7 15.6Q3 17 9 15.8Q16 19 17 34L4 34Q2 24-7 15.6z" fill="{c["mantle"]}" stroke="{INK}" stroke-width=".7"/>')
     if c.get("veil"):
@@ -215,8 +237,12 @@ def body_inner(key, arm=None):
         o.append(f'<path d="M-8 16.6L10 34h-5L-11 18.4z" fill="{c["sash"]}"/>')
     if c.get("belt"):
         o.append(f'<path d="M-15.4 28h30.8v2.6h-30.8z" fill="{c["belt"]}"/>')
-    if c.get("trim"):
+    if c.get("trim") and not c.get("toga"):
         o.append(f'<path d="M-4 15.8L0 22 4 15.8" fill="none" stroke="{c["trim"]}" stroke-width="1.4"/>')
+    if c.get("chains"):
+        o.append('<g fill="none" stroke="#6A6A6A" stroke-width="1"><ellipse cx="-14" cy="30" rx="2.4" ry="1.5"/><ellipse cx="-11" cy="31.6" rx="2.4" ry="1.5"/><ellipse cx="14" cy="30" rx="2.4" ry="1.5"/><ellipse cx="11" cy="31.6" rx="2.4" ry="1.5"/></g>')
+    if c.get("bound"):
+        o.append(f'<path d="M-6 26h12v6h-12z" fill="{SKIN}" stroke="{INK}" stroke-width=".6"/><path d="M-6 29h12" stroke="#8A6A3A" stroke-width="1.6"/>')
     if arm:
         ang, ln = arm
         import math
@@ -232,6 +258,9 @@ def body_inner(key, arm=None):
 def person(key, x, y, s, expr="calm", look=0.0, arm=None, flip=False, tears=False, hold=None):
     """Brustbild: Kopfmitte bei (x, y), s = Massstab (1 = Kopfradius 10); hold = Symbol, das die Figur vor der Brust hält."""
     fl = " scale(-1 1)" if flip else ""
+    if CHAR[key].get("baby"):
+        return (f'<g transform="translate({x} {y}) scale({s})"><ellipse cx="0" cy="22" rx="14" ry="9" fill="{CHAR[key]["robe"]}" stroke="{INK}" stroke-width=".8"/>'
+                f'<g transform="translate(-6 16) scale(.55)">{head_inner(key, "sleep", 0)}</g></g>')
     held = use(hold, -4, 18, 16, 12) if hold else ""
     return f'<g transform="translate({x} {y}) scale({s}){fl}">{body_inner(key, arm)}{head_inner(key, expr, -look if flip else look, tears)}{held}</g>'
 
@@ -632,15 +661,178 @@ def library():
         vb[fid] = (sid, "0 0 38 54")
     parts.append('<symbol id="an-gemeinde" viewBox="0 0 60 44">' + use("an-haus", 20, 0, 40, 36) + person("menge2", 9, 24, .5, "smile", .6)
                  + person("menge", 22, 26, .52, "smile", .4) + person("menge3", 35, 28, .48, "smile", .3) + "</symbol>")
+    parts.append(_fg.anime_attrs())
     parts.append(f'<symbol id="an-jesus-kopf" viewBox="0 0 34 34"><g transform="translate(17 17)">{head_inner("jesus", "calm")}</g></symbol>')
     parts.append(f'<symbol id="an-p-meister-kopf" viewBox="0 0 28 30"><g transform="translate(14 15)">{head_inner("meister", "calm")}</g></symbol>')
     lib = ('<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" style="position:absolute"><defs>\n'
            '<!-- Bildsprache «Anime» (Pilot): Figuren mit Gesicht; Gegenstände und Zeichen aus der Symbol-Bibliothek übernommen (an-). '
            'Eigene Zeichnung (KI-Entwurf, Claude, 2026-10-17), CC0. -->\n' + "\n".join(parts) + "\n</defs></svg>\n")
     for fid, sid in OBJ.items():
+        if fid.startswith("_"):
+            continue
         m = re.search(r'<symbol id="%s" viewBox="([^"]+)"' % re.escape(sid), lib)
         vb[fid] = (sid, m.group(1))
     return lib, vb
+
+
+# ---------------------------------------------------------------- Automatisch gesetzte Bilder (bilder_auto.py)
+import bilder_auto as _auto  # noqa: E402
+import bildsymbole as _bs  # noqa: E402
+import figuren as _fg  # noqa: E402
+
+for _k, _v in _fg.anime_chars().items():
+    CHAR.setdefault(_k, _v)
+_SYMS = _bs.all_symbols()
+KEY = {fid: k for fid, (k, _) in PORTRAITS.items()}
+for _fid, _p in _fg.FIGS.items():
+    if _p is not None:
+        KEY.setdefault(_fid, _fg.slug(_fid))
+        PORTRAITS.setdefault(_fid, (_fg.slug(_fid), "calm"))
+for _k, _v in _SYMS.items():
+    OBJ.setdefault(_k, "an-" + _v["sym"][4:])
+    if _v["sym"] not in COPY:
+        COPY.append(_v["sym"])
+EXTRA_META = {k: (v["place"], tuple(v["size"])) for k, v in _SYMS.items()}
+GROUP_KEYS = {"FIG-GRUPPE-MENGE": ("menge2", "menge3", "menge"), "FIG-GRUPPE-ZWOELF": ("juenger2", "juenger", "petrus")}
+POSE_SHIFT = {"sit": 8, "kneel": 10}
+
+
+class AniComposer(_auto.Composer):
+    _hr = 12
+
+    def vb(self, fid):
+        return self.vbmap[fid][1]
+
+    def head_r(self):
+        return self._hr
+
+    def icon_h(self):
+        return 24
+
+    def r_floor(self):
+        return FLOOR
+
+    def r_band(self, t):
+        w, h = self.m(t)[1]
+        return use(OBJ[t], 0, 140 - h, w, h)
+
+    def r_back(self, t, x, y, w, h):
+        return use(OBJ[t], round(x, 1), round(y, 1), w, h, ' opacity=".6"')
+
+    def r_sym(self, t, x, y, w, h, flip=False):
+        sym = OBJ.get(t) or self.vbmap[t][0]
+        if flip:
+            return f'<g transform="translate({x + w:.1f} {y:.1f}) scale(-1 1)">{use(sym, 0, 0, w, h)}</g>'
+        return use(sym, round(x, 1), round(y, 1), w, h)
+
+    def r_icon(self, t, x, y, w, h):
+        return use(self.vbmap[t][0], round(x, 1), round(y, 1), round(w, 1), round(h, 1))
+
+    def r_bubble(self, x, y, w, h, tx, ty, inner):
+        return bubble(round(x, 1), round(y, 1), round(w, 1), round(h, 1), round(tx, 1), round(ty, 1), inner)
+
+    def r_head_sign_native(self, t):
+        return t in ("FIG-ZEICHEN-TRAUER", "FIG-ZEICHEN-FREUDE")
+
+    def _feel(self, fid, p, speaking):
+        st = p.get("stage") or {}
+        who = st.get("signs_who") or {}
+        humans = [f for f in p["figures"] if f not in ("FIG-GOTT", "FIG-HEILIGER-GEIST", "FIG-JESUS")]
+        tears = "FIG-ZEICHEN-TRAUER" in p["signs"] and fid in who.get("FIG-ZEICHEN-TRAUER", humans)
+        joy = "FIG-ZEICHEN-FREUDE" in p["signs"] and fid in who.get("FIG-ZEICHEN-FREUDE", humans)
+        expr = (st.get("mood") or {}).get(fid)
+        if not expr:
+            expr = "worried" if tears else "delight" if joy else "calm"
+        if (st.get("pose") or {}).get(fid) == "sleep":
+            expr = "sleep"
+        return expr, tears, joy
+
+    def _draw(self, fid, x, y, s, expr, look, arm, tears, hold, pose, out, joy=False, p_stage=None):
+        key = KEY[fid]
+        ang = {1: 24, -1: 156}.get(arm) if arm is not None else None
+        a = (ang, 12) if ang is not None else None
+        if hold == "PRAY":
+            hold = "an-z-beten"
+        wear = ((p_stage or {}).get("wear") or {}).get(fid)
+        if wear == "sack":
+            key2 = key + "~sack"
+            if key2 not in CHAR:
+                CHAR[key2] = {k: v for k, v in CHAR[key].items() if k not in ("mantle", "trim", "sash", "toga", "breast", "belt", "apron")}
+                CHAR[key2]["robe"] = "#6A5E52"
+                CHAR[key2]["belt"] = "#4E453C"
+            key = key2
+        if hold is None and CHAR[key].get("attr"):
+            hold = CHAR[key]["attr"]
+        elif hold is not None and not hold.startswith("an-"):
+            hold = OBJ.get(hold) or self.vbmap[hold][0]
+        flip = pose == "away"
+        if fid in GROUP_KEYS or (fid.startswith("FIG-GRUPPE-") and fid != "FIG-GRUPPE-GEMEINDE"):
+            keys = GROUP_KEYS.get(fid, (key, key, key))
+            if wear == "sack":
+                keys = tuple(self._sackkey(k) for k in keys)
+            sp = 13 * s
+            g = (person(keys[0], x - sp, y + 3 * s, s * .82, expr, look, None, flip, tears)
+                 + person(keys[1], x + sp, y + 4 * s, s * .8, expr, look, None, flip, tears)
+                 + person(keys[2], x, y, s, expr, look, a, flip, tears, hold))
+        else:
+            g = person(key, x, y, s, expr, look, a, flip, tears, hold)
+        if pose in ("lie", "sleep"):
+            g = f'<g transform="rotate(-80 {x:.1f} {y + 20 * s:.1f})">{g}</g>'
+        elif pose == "fall":
+            g = f'<g transform="rotate(32 {x:.1f} {y + 18 * s:.1f})">{g}</g>'
+        out.append(g)
+        if joy:
+            out.append(sparkle(x - 13 * s, y - 10 * s, .7 * s) + sparkle(x + 13 * s, y - 12 * s, .6 * s))
+
+    def _sackkey(self, k):
+        if k.endswith("~sack"):
+            return k
+        k2 = k + "~sack"
+        if k2 not in CHAR:
+            CHAR[k2] = {a: v for a, v in CHAR[k].items() if a not in ("mantle", "trim", "sash", "toga", "breast", "belt", "apron")}
+            CHAR[k2]["robe"] = "#6A5E52"
+            CHAR[k2]["belt"] = "#4E453C"
+        return k2
+
+    def r_person(self, s, n, look, arm, hold, p, out):
+        fid, x = s["fid"], s["x"]
+        st = p.get("stage") or {}
+        pose = (st.get("pose") or {}).get(fid)
+        sc = {1: 1.5, 2: 1.4, 3: 1.22, 4: 1.06, 5: .94}.get(n, .84)
+        if any(_auto.meta(t, self.lex, EXTRA_META)[0] == "big" for t in p["objects"] + p["signs"]):
+            sc = min(sc, 1.0)
+        if s["group"]:
+            sc *= .92
+        self._hr = 12 * sc
+        y = 140 - 34 * sc + 4 + POSE_SHIFT.get(pose, 0) * sc
+        expr, tears, joy = self._feel(fid, p, False)
+        self._draw(fid, x, y, sc, expr, look * 1.6, arm, tears, hold, pose, out, joy, st)
+        if pose in ("lie", "sleep"):
+            return (x - 18 * sc, y + 22 * sc)
+        if pose == "fall":
+            return (x + 8 * sc, y + 4 * sc)
+        return (x, y)
+
+    def r_inside(self, fid, cx, cy, w, p, out):
+        st = p.get("stage") or {}
+        pose = (st.get("pose") or {}).get(fid)
+        sc = .62 if w > 90 else .5
+        expr, tears, joy = self._feel(fid, p, False)
+        self._hr = 12 * sc
+        y = cy - 10 * sc
+        self._draw(fid, cx, y, sc, expr, 0, None, tears, None, pose, out, joy, st)
+        if pose in ("lie", "sleep"):
+            return (cx - 18 * sc, y + 22 * sc)
+        return (cx, y)
+
+
+def auto_svg(suffix, vb):
+    lex = _auto.gather_lex()
+    brief = json.loads((D / "illustrations/briefs" / f"BRIEF-{suffix}.json").read_text(encoding="utf-8"))
+    c = AniComposer(lex, EXTRA_META)
+    c.vbmap = vb
+    c.uid = "a" + suffix.lower()
+    return alayout([c.panel(p) for p in brief["panels"]])
 
 
 ILL_UPPER_ALT = {'BIBLE': ('Comic in vier Bildern ohne Text: 1 Am Berg spricht Gott (Strahlenkranz mit dem Gottesnamen) und gibt die Tafeln; Mose hält sie, das Volk staunt. 2 Jesus, das Kreuz und das leere Grab. 3 Die leuchtende Stadt mit Strom und Baum, darüber der Strahlenkranz. 4 Schriftrolle, Leier, ein Prophet und ein Brief.', 'Comic i vier Bilder ohni Text: 1 Am Bärg redt Gott (Strahlechranz mit em Gottesname) und git d Tafle; de Mose hebt si, s Volk stuunt. 2 De Jesus, s Chrüz und s lääre Grab. 3 Di lüüchtend Stadt mit Strom und Baum, drüber de Strahlechranz. 4 Schriftrolle, Leier, en Prophet und en Brief.'), 'OT': ('Comic in vier Bildern ohne Text: 1 Gott spricht «Licht»; Sonne, Mond, Sterne und Pflanze entstehen. 2 Mose hebt den Stab, das Volk geht froh durch das geteilte Meer. 3 Am Berg spricht Gott und gibt die Tafeln; Mose hält sie, das Volk staunt. 4 Jerusalem mit Rissen, Menschen in Tränen auf dem Weg weg und zurück; ein Prophet spricht von Hoffnung (Spross).', 'Comic i vier Bilder ohni Text: 1 Gott redt «Liecht»; Sunne, Mond, Stärn und Pflanze entstönd. 2 De Mose hebt de Stab, s Volk gaat froh dur s teilte Meer. 3 Am Bärg redt Gott und git d Tafle; de Mose hebt si, s Volk stuunt. 4 Jerusalem mit Riss, Mänsche i Träne uf em Wäg ewäg und zrugg; en Prophet redt vo Hoffnig (Schoss).'), 'NT': ('Comic in vier Bildern ohne Text: 1 Jesus spricht zur aufmerksamen Menge (Gottesname, Umkehr-Pfeil, Herz). 2 Kreuz und leeres Grab. 3 Die Geist-Taube über zwei Jüngern mit Flammen und leuchtenden Augen; Pfeile zu einer Gemeinde, ein Brief. 4 Strahlenkranz, Waage und die leuchtende Stadt.', 'Comic i vier Bilder ohni Text: 1 De Jesus redt zur ufmerksame Mängi (Gottesname, Umchehr-Pfiil, Härz). 2 Chrüz und lääres Grab. 3 D Geischt-Tube über zwei Jünger mit Flamme und lüüchtende Auge; Pfiil zu ere Gmeind, en Brief. 4 Strahlechranz, Waag und di lüüchtend Stadt.'), 'GROUP-01': ('Comic in zwei Bildern ohne Text: 1 Gott spricht «Licht»; Sonne, Mond, Sterne und Pflanze entstehen. 2 Hinter dem Volk das geteilte Meer; am Berg spricht Gott und gibt die Tafeln, Mose hält sie, das Volk staunt.', 'Comic i zwei Bilder ohni Text: 1 Gott redt «Liecht»; Sunne, Mond, Stärn und Pflanze entstönd. 2 Hinder em Volk s teilte Meer; am Bärg redt Gott und git d Tafle, de Mose hebt si, s Volk stuunt.'), 'GROUP-02': ('Comic in zwei Bildern ohne Text: 1 Ein König mit Krone vor Jerusalem, zufriedene Menschen. 2 Jerusalem mit Rissen; Menschen in Tränen, Weg weg und gestrichelt zurück.', 'Comic i zwei Bilder ohni Text: 1 En Chünig mit Chrone vor Jerusalem, zfrideni Mänsche. 2 Jerusalem mit Riss; Mänsche i Träne, Wäg ewäg und gstrichlet zrugg.'), 'GROUP-03': ('Comic in drei Bildern ohne Text: 1 Ein Mensch mit Leier spricht mit geschlossenen Augen zu Gott (Träne und Freude). 2 Braut und Bräutigam lächeln unter der Girlande. 3 Ein Mensch mit Schriftrolle denkt nach; Sanduhr und Waage.', 'Comic i drüü Bilder ohni Text: 1 En Mänsch mit Leier redt mit zuene Auge zu Gott (Träne und Fröid). 2 Brut und Brüütigam lächled under de Girlande. 3 En Mänsch mit Schriftrolle dänkt nache; Sanduhr und Waag.'), 'GROUP-04': ('Comic in zwei Bildern ohne Text: 1 Ein Prophet spricht zur besorgten Menge (Gottesname, Waage, Umkehr-Pfeil). 2 Jerusalem mit Rissen, Menschen in Tränen weggeführt; der Prophet spricht von Hoffnung (Spross).', 'Comic i zwei Bilder ohni Text: 1 En Prophet redt zur bsorgte Mängi (Gottesname, Waag, Umchehr-Pfiil). 2 Jerusalem mit Riss, Mänsche i Träne wäggfüert; de Prophet redt vo Hoffnig (Schoss).'), 'GROUP-05': ('Comic in zwei Bildern ohne Text: 1 Zwölf kleine Schriftrollen; ein Prophet spricht zur besorgten Menge (Gottesname, Waage, Umkehr-Pfeil). 2 Strahlenkranz über dem heilen Jerusalem, ein Spross, Menschen freuen sich.', 'Comic i zwei Bilder ohni Text: 1 Zwölf chlini Schriftrolle; en Prophet redt zur bsorgte Mängi (Gottesname, Waag, Umchehr-Pfiil). 2 Strahlechranz über em ganze Jerusalem, en Schoss, Mänsche fröied sich.'), 'GROUP-06': ('Comic in zwei Bildern ohne Text: 1 Vier kleine Schriftrollen; Jesus spricht zur aufmerksamen Menge (Gottesname, Umkehr-Pfeil, Herz). 2 Kreuz und leeres Grab.', 'Comic i zwei Bilder ohni Text: 1 Vier chlini Schriftrolle; de Jesus redt zur ufmerksame Mängi (Gottesname, Umchehr-Pfiil, Härz). 2 Chrüz und lääres Grab.'), 'GROUP-07': ('Comic in zwei Bildern ohne Text: 1 Die Geist-Taube kommt herab, über drei strahlenden Jüngern Flammen, dahinter Jerusalem. 2 Von Jerusalem gehen Pfeile zu einer Gemeinde; ein Schiff; Paulus mit einem Soldaten.', 'Comic i zwei Bilder ohni Text: 1 D Geischt-Tube chunnt abe, über drüü strahlende Jünger Flamme, dehinder Jerusalem. 2 Vo Jerusalem gönd Pfiil zu ere Gmeind; es Schiff; de Paulus mit eme Soldat.'), 'GROUP-08': ('Paulus spricht (Sprechblase: Kreuz und Herz); ein Brief fliegt zu einer Gemeinde vor einem Haus.', 'De Paulus redt (Sprächblase: Chrüz und Härz); en Brief flügt zu ere Gmeind vor eme Huus.'), 'GROUP-09': ('Drei Briefe gehen zu einer Gemeinde vor einem Haus; über der Gemeinde Herzen.', 'Drüü Brief gönd zu ere Gmeind vor eme Huus; über de Gmeind Härz.'), 'GROUP-10': ('Comic in zwei Bildern ohne Text: 1 Oben gross der Strahlenkranz; darunter schauen ein König und ein Soldat erstaunt hinauf, daneben Menschen in Tränen. 2 Die leuchtende Stadt mit Strom und Baum, darüber der Strahlenkranz; Menschen freuen sich.', 'Comic i zwei Bilder ohni Text: 1 Obe gross de Strahlechranz; drunder lueged en Chünig und en Soldat erstuunt ufe, dernäbe Mänsche i Träne. 2 Di lüüchtend Stadt mit Strom und Baum, drüber de Strahlechranz; Mänsche fröied sich.'), 'JHN-002': ('Comic in drei Bildern ohne Text: 1 Hochzeit: Jesus, Wasserkrüge, Pfeil zum Weinkrug, ein Stern; Braut und Bräutigam lächeln. 2 Jesus hebt die Geissel über dem davonlaufenden Schaf, ein Händler weicht zurück. 3 Menschen mit leuchtenden Augen und Herzen; eine gestrichelte Linie, Jesus wendet sich ernst ab.', 'Comic i drüü Bilder ohni Text: 1 Hochziit: de Jesus, Wasserchrüeg, Pfiil zum Wiichrueg, en Stern; Brut und Brüütigam lächled. 2 De Jesus hebt d Geissle über em Schaf, wo dervo rennt, en Händler wiicht zrugg. 3 Mänsche mit lüüchtende Auge und Härz; e gstrichleti Linie, de Jesus wändet sich ernscht ab.'), 'JHN': ('Ein brauner Adler mit ausgebreiteten Flügeln unter einem Licht mit Strahlen und funkelnden Sternchen, darunter eine Schriftrolle, auf nachtblauem Grund.', 'En brune Adler mit uusbreitete Flügel under eme Liecht mit Strahle und funkelnde Stärnli, drunder e Schriftrolle, uf nachtblauem Grund.')}
@@ -671,12 +863,17 @@ ILL = {
 
 ILL.update({f"ILL-ANI-{k}": (f"BRIEF-{k}", (lambda k=k: alayout([f() for f in UPPER[k]])), a, g) for k, (a, g) in ILL_UPPER_ALT.items() if k in UPPER})
 ILL["ILL-ANI-JHN"] = ("BRIEF-JHN", a_buch, *ILL_UPPER_ALT["JHN"])
+_VB = {}
+for _b in _auto.load_briefs():
+    ILL[f"ILL-ANI-{_b['suffix']}"] = (f"BRIEF-{_b['suffix']}", (lambda s=_b["suffix"]: auto_svg(s, _VB)),
+                                      _auto.alt_text(_b, "de", anime=True), _auto.alt_text(_b, "gsw", anime=True))
 
 
 def run():
     OUT.mkdir(parents=True, exist_ok=True)
     lex = {p.stem for p in (D / "illustrations/lexicon").glob("FIG-*.json")}
     lib, vb = library()
+    _VB.update(vb)
     n = 0
     f = OUT / "_bibliothek.svg"
     if not f.exists() or f.read_text(encoding="utf-8") != lib:

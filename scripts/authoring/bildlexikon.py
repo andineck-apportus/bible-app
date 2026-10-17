@@ -1427,6 +1427,23 @@ E("FIG-GRUPPE-GEMEINDE", "group", "Gemeinde", "Congregation / church",
   [T("Gruppe vor einem Haus, Männer und Frauen", "text", ref="ROM.16.5")],
   ("#8E9AAF", "#E2CDA8"), ["Kein Kirchengebäude (Hausgemeinden zur Zeit der Briefe)"], distinct=["FIG-GRUPPE-MENGE"])
 
+# ---------------------------------------------------------------------------------------------------------------
+# Weitere Einträge aus bildlexikon_daten/*.json (für die Bilder aller übersetzten Bücher, ab 2026-10-17)
+# Aufbau je Eintrag: id, kind, de, en, ident, gsw, traits [{trait_de, basis, ref?, note_de?}], pal [2 Farben], rules [],
+# era?, find? [[Muster, [Bereiche]]], distinct? [], terms?
+# ---------------------------------------------------------------------------------------------------------------
+def load_extra():
+    for f in sorted((pathlib.Path(__file__).resolve().parent / "bildlexikon_daten").glob("*.json")):
+        for x in json.loads(f.read_text(encoding="utf-8")):
+            traits = [T(t["trait_de"], t["basis"], t.get("ref"), t.get("note_de")) for t in x["traits"]]
+            find = [(a, b) for a, b in x["find"]] if x.get("find") else None
+            E(x["id"], x["kind"], x["de"], x["en"], x["ident"], x["gsw"], traits, tuple(x["pal"]), x.get("rules", []),
+              era=x.get("era"), find=find, distinct=x.get("distinct", []), terms=x.get("terms"))
+
+
+load_extra()
+
+
 def run():
     texts = load_texts()
     ids = [e["id"] for e in ENTRIES]

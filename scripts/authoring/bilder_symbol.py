@@ -393,6 +393,159 @@ ILL = {
 ILL.update({f"ILL-SYM-{k}": (f"BRIEF-{k}", a, g) for k, (a, g) in {'BIBLE': ('Vier Felder: 1 Über einem Berg der Strahlenkranz mit dem Gottesnamen; Mose mit den Tafeln, daneben das Volk. 2 Jesus, ein Kreuz und ein leeres Grab im Licht. 3 Eine Stadt im Licht mit Strom und Baum, darüber der Strahlenkranz. 4 Schriftrolle, Leier, ein Prophet und ein Brief.', 'Vier Fälder: 1 Über eme Bärg de Strahlechranz mit em Gottesname; de Mose mit de Tafle, dernäbe s Volk. 2 De Jesus, es Chrüz und es läärs Grab im Liecht. 3 E Stadt im Liecht mit Strom und Baum, drüber de Strahlechranz. 4 Schriftrolle, Leier, en Prophet und en Brief.'), 'OT': ('Vier Felder: 1 Der Strahlenkranz mit dem Gottesnamen spricht (Sprechblase: Licht); Erde mit Pflanze, Sonne, Mond und Sternen. 2 Mose und das Volk gehen durch das geteilte Meer. 3 Am Berg spricht der Strahlenkranz (Sprechblase: Tafeln); Mose mit den Tafeln, das Volk. 4 Jerusalem mit Rissen; Menschen mit Tränen auf dem Weg weg und gestrichelt zurück; ein Prophet spricht von Hoffnung (Spross aus dem Stumpf).', 'Vier Fälder: 1 De Strahlechranz mit em Gottesname redt (Sprächblase: Liecht); Erde mit Pflanze, Sunne, Mond und Stärn. 2 De Mose und s Volk gönd dur s teilte Meer. 3 Am Bärg redt de Strahlechranz (Sprächblase: Tafle); de Mose mit de Tafle, s Volk. 4 Jerusalem mit Riss; Mänsche mit Träne uf em Wäg ewäg und gstrichlet zrugg; en Prophet redt vo Hoffnig (Schoss us em Stumpe).'), 'NT': ('Vier Felder: 1 Jesus spricht zur Menge (Sprechblase: Gottesname, Umkehr-Pfeil, Herz). 2 Kreuz und leeres Grab. 3 Die Geist-Taube über zwei Jüngern; Pfeile breiten sich aus zu einer Gemeinde vor einem Haus, ein Brief. 4 Strahlenkranz, Waage und die leuchtende Stadt.', 'Vier Fälder: 1 De Jesus redt zur Mängi (Sprächblase: Gottesname, Umchehr-Pfiil, Härz). 2 Chrüz und läärs Grab. 3 D Geischt-Tube über zwei Jünger; Pfiil breited sich uus zu ere Gmeind vor eme Huus, en Brief. 4 Strahlechranz, Waag und di lüüchtend Stadt.'), 'GROUP-01': ('Zwei Felder: 1 Der Strahlenkranz spricht (Licht); Erde mit Pflanze, Sonne, Mond und Sternen. 2 Hinter dem Volk das geteilte Meer; am Berg spricht der Strahlenkranz (Sprechblase: Tafeln); Mose mit den Tafeln, das Volk.', 'Zwei Fälder: 1 De Strahlechranz redt (Liecht); Erde mit Pflanze, Sunne, Mond und Stärn. 2 Hinder em Volk s teilte Meer; am Bärg redt de Strahlechranz (Sprächblase: Tafle); de Mose mit de Tafle, s Volk.'), 'GROUP-02': ('Zwei Felder: 1 Ein König vor Jerusalem, daneben Menschen. 2 Jerusalem mit Rissen; Menschen mit Tränen; Weg mit Pfeil weg und gestrichelt zurück.', 'Zwei Fälder: 1 En Chünig vor Jerusalem, dernäbe Mänsche. 2 Jerusalem mit Riss; Mänsche mit Träne; Wäg mit Pfiil ewäg und gstrichlet zrugg.'), 'GROUP-03': ('Drei Felder: 1 Ein Mensch mit Leier spricht zum Strahlenkranz (Sprechblase: Träne und Freude). 2 Braut und Bräutigam unter einer Girlande, Freude. 3 Ein Mensch mit Schriftrolle, Sanduhr und Waage.', 'Drüü Fälder: 1 En Mänsch mit Leier redt zum Strahlechranz (Sprächblase: Träne und Fröid). 2 Brut und Brüütigam under ere Girlande, Fröid. 3 En Mänsch mit Schriftrolle, Sanduhr und Waag.'), 'GROUP-04': ('Zwei Felder: 1 Ein Prophet spricht zur Menge (Sprechblase: Gottesname, Waage, Umkehr-Pfeil). 2 Jerusalem mit Rissen, Menschen mit Tränen auf dem Weg weg und zurück; der Prophet spricht von Hoffnung (Spross).', 'Zwei Fälder: 1 En Prophet redt zur Mängi (Sprächblase: Gottesname, Waag, Umchehr-Pfiil). 2 Jerusalem mit Riss, Mänsche mit Träne uf em Wäg ewäg und zrugg; de Prophet redt vo Hoffnig (Schoss).'), 'GROUP-05': ('Zwei Felder: 1 Zwölf kleine Schriftrollen; ein Prophet spricht zur Menge (Gottesname, Waage, Umkehr-Pfeil). 2 Strahlenkranz über dem heilen Jerusalem, ein Spross, Menschen freuen sich.', 'Zwei Fälder: 1 Zwölf chlini Schriftrolle; en Prophet redt zur Mängi (Gottesname, Waag, Umchehr-Pfiil). 2 Strahlechranz über em ganze Jerusalem, en Schoss, Mänsche fröied sich.'), 'GROUP-06': ('Zwei Felder: 1 Vier kleine Schriftrollen; Jesus spricht zur Menge (Gottesname, Umkehr-Pfeil, Herz). 2 Kreuz und leeres Grab.', 'Zwei Fälder: 1 Vier chlini Schriftrolle; de Jesus redt zur Mängi (Gottesname, Umchehr-Pfiil, Härz). 2 Chrüz und läärs Grab.'), 'GROUP-07': ('Zwei Felder: 1 Die Geist-Taube kommt auf drei Jünger herab, dahinter Jerusalem. 2 Von Jerusalem gehen Pfeile aus zu einer Gemeinde; ein Schiff; Paulus mit einem Soldaten.', 'Zwei Fälder: 1 D Geischt-Tube chunnt uf drüü Jünger abe, dehinder Jerusalem. 2 Vo Jerusalem gönd Pfiil uus zu ere Gmeind; es Schiff; de Paulus mit eme Soldat.'), 'GROUP-08': ('Paulus spricht (Sprechblase: Kreuz und Herz); ein Brief fliegt zu einer Gemeinde vor einem Haus.', 'De Paulus redt (Sprächblase: Chrüz und Härz); en Brief flügt zu ere Gmeind vor eme Huus.'), 'GROUP-09': ('Drei Briefe gehen zu einer Gemeinde vor einem Haus; über der Gemeinde Herzen.', 'Drüü Brief gönd zu ere Gmeind vor eme Huus; über de Gmeind Härz.'), 'GROUP-10': ('Zwei Felder: 1 Oben gross der Strahlenkranz mit dem Gottesnamen; darunter ein König und ein Soldat, daneben Menschen mit Tränen. 2 Die leuchtende Stadt mit Strom und Baum, darüber der Strahlenkranz; Menschen freuen sich.', 'Zwei Fälder: 1 Obe gross de Strahlechranz mit em Gottesname; drunder en Chünig und en Soldat, dernäbe Mänsche mit Träne. 2 D lüüchtend Stadt mit Strom und Baum, drüber de Strahlechranz; Mänsche fröied sich.')}.items()})
 
 
+# ---------------------------------------------------------------------------------------------------------------
+# Automatisch gesetzte Bilder (bilder_auto.py) für alle übrigen Stellen; Figuren aus figuren.py, Bauteile aus bildsymbole.py
+# ---------------------------------------------------------------------------------------------------------------
+import bilder_auto as _auto  # noqa: E402
+import bildsymbole as _bs  # noqa: E402
+import figuren as _fg  # noqa: E402
+
+_SYMS = _bs.all_symbols()
+for _k, _v in _fg.symbol_render().items():
+    RENDER.setdefault(_k, _v)
+RENDER_X = {}  # nur zum Zeichnen (kein Lexikon-Eintrag), z. B. ruhiges Meer
+for _k, _v in _SYMS.items():
+    (RENDER_X if _k.startswith("_") else RENDER).setdefault(_k, _v["sym"])
+    VB.setdefault(_v["sym"], _v["vb"])
+EXTRA_META = {k: (v["place"], tuple(v["size"])) for k, v in _SYMS.items()}
+AUTO_BEGIN, AUTO_END = "<!-- auto:begin -->", "<!-- auto:end -->"
+
+
+def auto_library():
+    """Bibliothek mit dem automatisch erzeugten Teil (Figuren, Attribute, neue Bauteile) zwischen den Marken."""
+    lib = (OUT / "_bibliothek.svg").read_text(encoding="utf-8")
+    auto = AUTO_BEGIN + _fg.symbol_library() + _bs.symbol_defs() + AUTO_END
+    if AUTO_BEGIN in lib:
+        a, rest = lib.split(AUTO_BEGIN, 1)
+        lib = a + auto + rest.split(AUTO_END, 1)[1]
+    else:
+        lib = lib.replace("</defs></svg>", auto + "\n</defs></svg>")
+    return lib
+
+
+class SymComposer(_auto.Composer):
+    def vb(self, fid):
+        sym = RENDER[fid]
+        return VB.get(sym, VB["ill-p"] if sym.startswith("ill-p-") else "0 0 30 64")
+
+    def head_r(self):
+        return 8
+
+    def icon_h(self):
+        return 20
+
+    def r_floor(self):
+        return ""
+
+    def r_band(self, t):
+        w, h = self.m(t)[1]
+        return use(RENDER.get(t) or RENDER_X[t], 0, 140 - h, w, h)
+
+    def r_back(self, t, x, y, w, h):
+        return use(RENDER[t], x, y, w, h, ' opacity=".8"')
+
+    def r_sym(self, t, x, y, w, h, flip=False):
+        if flip:
+            return f'<g transform="translate({x + w:.1f} {y:.1f}) scale(-1 1)">{use(RENDER[t], 0, 0, w, h)}</g>'
+        return use(RENDER[t], round(x, 1), round(y, 1), w, h)
+
+    def r_icon(self, t, x, y, w, h):
+        return use(RENDER[t], round(x, 1), round(y, 1), round(w, 1), round(h, 1))
+
+    def r_bubble(self, x, y, w, h, tx, ty, inner):
+        return bubble(round(x, 1), round(y, 1), round(w, 1), round(h, 1), round(tx, 1), round(ty, 1), inner)
+
+    def r_head_sign_native(self, t):
+        return False
+
+    def _size(self, n):
+        return {1: 62, 2: 60, 3: 58, 4: 54, 5: 48}.get(n, 42)
+
+    def r_person(self, s, n, look, arm, hold, p, out):
+        fid, x = s["fid"], s["x"]
+        st = p.get("stage") or {}
+        pose = (st.get("pose") or {}).get(fid)
+        h = self._size(n)
+        w = h * 30 / 64
+        y = _auto.FLOOR_Y - h
+        sym = RENDER[fid]
+        if any(_auto.meta(t, self.lex, EXTRA_META)[0] == "big" for t in p["objects"] + p["signs"]):
+            h *= .8
+            w = h * 30 / 64
+            y = _auto.FLOOR_Y - h
+        if fid == "FIG-GRUPPE-MENGE" and pose is None:
+            sp = min(s["span"] * .3, w * .7)
+            out.append(use("ill-p-gast2", round(x - sp - w * .4, 1), round(y + 4, 1), round(w * .85, 1), round(h * .92, 1))
+                       + use("ill-p-gast", round(x + sp - w * .4, 1), round(y + 4, 1), round(w * .85, 1), round(h * .92, 1))
+                       + use(sym, round(x - w / 2, 1), round(y, 1), round(w, 1), round(h, 1)))
+            if (st.get("wear") or {}).get(fid) == "sack":
+                out.append(self._sack(x - sp * .9, y + 4, w * .85, h * .92) + self._sack(x + sp * .9, y + 4, w * .85, h * .92) + self._sack(x, y, w, h))
+            if arm is not None:
+                sx, sy = x + arm * w * .32, y + h * .42
+                out.append(gesture(round(sx, 1), round(sy, 1), round(sx + arm * 11, 1), round(sy + 5, 1)))
+            return (x, y + h * 14 / 64)
+        if pose in ("lie", "sleep"):
+            out.append(f'<g transform="rotate(-90 {x:.1f} {_auto.FLOOR_Y - 6})">{use(sym, round(x - w / 2, 1), round(_auto.FLOOR_Y - 6 - h / 2, 1), round(w, 1), h)}</g>')
+            return (x - h * .35, _auto.FLOOR_Y - 8)
+        if pose == "fall":
+            out.append(f'<g transform="rotate(35 {x:.1f} {y + h / 2:.1f})">{use(sym, round(x - w / 2, 1), round(y, 1), round(w, 1), h)}</g>')
+            return (x + 6, y + 14)
+        if pose in ("sit", "kneel"):
+            hh = h * .78
+            out.append(use(sym, round(x - w / 2, 1), round(_auto.FLOOR_Y - hh, 1), round(w, 1), round(hh, 1), ' preserveAspectRatio="none"'))
+            y = _auto.FLOOR_Y - hh
+            hy = y + hh * 14 / 64
+        else:
+            out.append(use(sym, round(x - w / 2, 1), round(y, 1), round(w, 1), h))
+            hy = y + h * 14 / 64
+        if (st.get("wear") or {}).get(fid) == "sack":
+            out.append(self._sack(x, y, w, h))
+        if arm is not None:
+            sx, sy = x + arm * w * .32, y + h * .42
+            out.append(gesture(round(sx, 1), round(sy, 1), round(sx + arm * 11, 1), round(sy + 5, 1)))
+        if hold == "PRAY":
+            out.append(use("ill-z-beten", round(x - 6, 1), round(y + h * .34, 1), 12, 13))
+            hold = None
+        if hold:
+            ww, hh2 = _auto.meta(hold, self.lex, EXTRA_META)[1]
+            side = arm or 1
+            out.append(use(RENDER[hold], round(x + side * w * .45 - ww / 2, 1), round(y + h * .45, 1), ww, hh2))
+        return (x, hy)
+
+    def _sack(self, x, y, w, h):
+        k = h / 64
+        return (f'<g transform="translate({x - w / 2:.1f} {y:.1f}) scale({w / 30:.3f} {k:.3f})"><path d="M5 62L8 26q7-7 14 0l3 36z" fill="#6A5E52" stroke="#3B3226" stroke-width="1.2"/>'
+                '<path d="M7 34h16M6 44h18M5.5 54h19" stroke="#4E453C" stroke-width=".9"/><g fill="#9A948C"><circle cx="11" cy="8" r="1"/><circle cx="17" cy="6.5" r=".9"/><circle cx="20" cy="9" r=".8"/></g></g>')
+
+    def r_inside(self, fid, cx, cy, w, p, out):
+        st = p.get("stage") or {}
+        pose = (st.get("pose") or {}).get(fid)
+        h = 30 if w > 90 else 24
+        ww = h * 30 / 64
+        sym = RENDER[fid]
+        if pose in ("lie", "sleep"):
+            out.append(f'<g transform="rotate(-90 {cx:.1f} {cy:.1f})">{use(sym, round(cx - ww / 2, 1), round(cy - h / 2, 1), round(ww, 1), h)}</g>')
+            return (cx - h * .3, cy)
+        out.append(use(sym, round(cx - ww / 2, 1), round(cy - h / 2, 1), round(ww, 1), h))
+        return (cx, cy - h / 2 + h * 14 / 64)
+
+
+AUTO = [b["suffix"] for b in _auto.load_briefs()]
+
+
+def auto_svg(suffix):
+    lex = _auto.gather_lex()
+    brief = json.loads((D / "illustrations/briefs" / f"BRIEF-{suffix}.json").read_text(encoding="utf-8"))
+    c = SymComposer(lex, EXTRA_META)
+    c.uid = "s" + suffix.lower()
+    return layout([c.panel(p) for p in brief["panels"]])
+
+
+for _b in _auto.load_briefs():
+    GENERATED[f"ILL-SYM-{_b['suffix']}"] = (lambda s=_b["suffix"]: auto_svg(s))
+    ILL[f"ILL-SYM-{_b['suffix']}"] = (f"BRIEF-{_b['suffix']}", _auto.alt_text(_b, "de"), _auto.alt_text(_b, "gsw"))
+
+
 def run():
     lex = {p.stem: json.loads(p.read_text(encoding="utf-8")) for p in (D / "illustrations/lexicon").glob("FIG-*.json")}
     for k in RENDER:
@@ -406,6 +559,10 @@ def run():
              "renderings": {k: {"symbol": v, "viewbox": VB.get(v, VB["ill-p"] if v.startswith("ill-p-") else "0 0 30 64")} for k, v in sorted(RENDER.items())},
              "license": LIC, "authorship_de": AUTH, "knowledge": {"asserted_at": DATE, "supersedes": None}}
     n = write(D / "illustrations/styles/ILLSTYLE-SYMBOL.json", style, "Darstellungen neu nach Bildlexikon (renderings statt eigener Figurenliste)")
+    lib = auto_library()
+    if (OUT / "_bibliothek.svg").read_text(encoding="utf-8") != lib:
+        (OUT / "_bibliothek.svg").write_text(lib, encoding="utf-8")
+        n += 1
     for rid, gen in GENERATED.items():
         svg = gen()
         f = OUT / f"{rid}.svg"
