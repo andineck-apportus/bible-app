@@ -20,8 +20,10 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .logo-wrap{position:relative;display:block;width:24px;height:25px}
 #bible-stream .logo-wrap .logo{position:absolute;inset:0;transition:opacity .25s ease}
 #bible-stream .logo-heart{opacity:0}
-#bible-stream [data-action=home]:is(:hover,:focus-visible,:active) .logo-heart{opacity:1}
-#bible-stream [data-action=home]:is(:hover,:focus-visible,:active) .logo-base{opacity:0}
+/* Herz: am Desktop beim Darüberfahren; auf Touch-Geräten beim Antippen kurz (Klasse .pulse, per Skript wieder entfernt), weil :hover dort hängen bleibt */
+@media (hover:hover){#bible-stream [data-action=home]:hover .logo-heart{opacity:1}#bible-stream [data-action=home]:hover .logo-base{opacity:0}}
+#bible-stream [data-action=home]:is(:focus-visible,.pulse) .logo-heart{opacity:1}
+#bible-stream [data-action=home]:is(:focus-visible,.pulse) .logo-base{opacity:0}
 
 /* Leisten */
 #bible-stream .bar{position:absolute;left:0;right:0;z-index:4;display:flex;align-items:center;gap:6px;background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:transform .25s ease,opacity .25s ease}
@@ -707,6 +709,9 @@ function chrome(){
   app.querySelector('.jump').innerHTML=jumpFrom&&nodes.has(jumpFrom)?`<button type="button" class="jump-back" data-action="back">${icon('arrow-up')}<span>${t.back} ${esc(title(nodes.get(jumpFrom)))}</span></button>`:'';
 }
 let jumpFrom=null;
+// Logo auf Touch-Geräten: Herz kurz zeigen, nach 900 ms zurück zur Ursprungsform
+document.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse')return;const h=e.target.closest&&e.target.closest('#bible-stream [data-action=home]');if(!h)return;
+  h.classList.add('pulse');clearTimeout(h._pulse);h._pulse=setTimeout(()=>{h.classList.remove('pulse');if(document.activeElement===h)h.blur();},900);},{passive:true});
 function goRef(ref){const [a]=ref.split('-');const [code,c,v]=a.split('.');const bi=CODE_IDX[code];if(bi===undefined)return;const id=v?`v${bi}-${c}-${v}`:(c?`c${bi}-${c}`:`b${bi}`);if(!nodes.has(id))return;const from=sheetAnchor||current;go(id,true);jumpFrom=from;chrome();}
 function sidebar(){const n=nodes.get(current),ids=n.level<=3?streams[n.level||1]:nodes.get(n.parent).children;
   const worked=x=>x.level===3?STUDY.sections.some(sec=>rangeOf(sec.range).code===DATA[x.b].code):x.level===4?STUDY.sections.some(sec=>{const g=rangeOf(sec.range);return g.code===DATA[x.b].code&&g.c===x.c;}):x.level===5?!!x.part:x.level===6?isPilotVerse(x):false;

@@ -2,6 +2,10 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.59 — 2026-10-17 — Logo auf dem Handy
+
+- Das Herz im Logo erscheint auf Touch-Geräten beim Antippen nur kurz (900 ms) und kehrt dann zur Ursprungsform zurück; vorher blieb es nach dem ersten Tippen stehen. Am Desktop weiterhin beim Darüberfahren.
+
 ## v0.58 — 2026-10-17 — Sprechblasen, Seitenleiste
 
 - Die Spitze einer Sprechblase geht jetzt von der Seite aus, die der sprechenden Figur zugewandt ist (unten, oben, links oder rechts), statt immer von unten; spricht Gott (Strahlenkranz), kommt sie seitlich. Blasen, die neben der Figur standen, stehen jetzt über ihr (Kana Feld 1, Tempelreinigung, Propheten, Gebet, Paulus). Keine langen, schräg verzogenen Spitzen mehr.
