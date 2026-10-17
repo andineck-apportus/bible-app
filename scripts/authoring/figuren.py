@@ -97,7 +97,7 @@ FIGS = {
     "FIG-MARIA-KLOPAS": F("#D8CBB0", None, DARK, "short", sex="f", head=("veil", "#7A6A8E")),
     "FIG-MARIA-MUTTER-JAKOBUS": F("#6E7F5A", None, DARK, "short", sex="f", head=("veil", "#D8CBB0"), attr="salbgefaess"),
     "FIG-SALOME": F("#F2E6CC", None, DARK, "short", sex="f", head=("veil", "#B07A3E"), attr="salbgefaess"),
-    "FIG-HERODIAS": F("#7A3E6A", None, BLACK, "long", sex="f", trim="#D9A441", head=("band", "#D9A441")),
+    "FIG-HERODIAS": F("#7A3E6A", None, BLACK, "long", sex="f", trim="#D9A441", head=("veil", "#C9A0BE")),
     "FIG-TOCHTER-HERODIAS": F("#D4537E", None, BLACK, "long", sex="f", age="young"),
     "FIG-EUODIA": F("#A8687A", None, DARK, "short", sex="f", head=("veil", "#F2E6CC")),
     "FIG-SYNTYCHE": F("#6A8AA8", None, BROWN, "short", sex="f", head=("veil", "#F2E6CC")),

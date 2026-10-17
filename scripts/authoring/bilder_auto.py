@@ -114,7 +114,7 @@ def plan(p, lex, extra):
     at = {**at, **st.get("beside", {})}
     floor = [t for t in things if place(t) == "floor" and t not in held.values() and t not in at]
     hand_objs = [t for t in things if place(t) == "hand" and t not in held.values() and t not in at]
-    air = [t for t in things if place(t) == "air" and t not in st.get("at", {}) and t not in st.get("beside", {})]
+    air = [t for t in things if place(t) == "air" and t not in st.get("at", {}) and t not in st.get("beside", {}) and t not in held.values()]
     head_signs = [t for t in things if place(t) == "head"]
     lines = [t for t in things if place(t) == "line"]
     x0, x1 = 10, W - 10
@@ -377,7 +377,8 @@ class Composer:
                     else:
                         out.append(self.r_sym(t, hx - w / 2, hy - self.head_r() - h - 3, w, h))
         # 8. Zeichen bei bestimmten Figuren: über dem Kopf
-        for t, f in (st.get("at") or {}).items():
+        at_pairs = [(t, f) for t, fs in (st.get("at") or {}).items() for f in (fs if isinstance(fs, list) else [fs])]
+        for t, f in at_pairs:  # at: {ZEICHEN: FIG} oder {ZEICHEN: [FIG, …]}
             w, h = self.m(t)[1]
             if f in heads:
                 hx, hy = heads[f]
@@ -499,18 +500,19 @@ class Composer:
                 # zweite Blase derselben Figur: neben die erste, sonst darunter und mit ihr verbunden (keine Spitze durch die Blase)
                 px, pw, pbot, ph = placed[same[0]]
                 ptop = pbot - ph
-                besides = [c for c in (px + pw + 5, px - bw - 5) if 4 <= c <= W - 4 - bw]
+                lo_x = 28 if ptop < 24 else 4  # Feldnummer oben links frei lassen
+                besides = [c for c in (px + pw + 5, px - bw - 5) if lo_x <= c <= W - 4 - bw]
                 besides = [c for c in besides if not any(c < gx + gw + 4 and c + bw > gx - 4 and ptop < gy + gh + 2 and ptop + bh > gy - 2
                                                          for gx, gy, gw, gh in list(sky.values()))]
                 if not besides:  # zu breit: Zeichen etwas verkleinern, damit die Blase neben die erste passt (statt den Kopf zu verdecken)
-                    room = max(W - 4 - (px + pw + 5), px - 9)
-                    if room >= bw * .55:
+                    room = max(W - 4 - (px + pw + 5), px - 5 - lo_x)
+                    if room >= bw * .72:
                         sc = (room - 12 - 5 * (len(ws) - 1)) / sum(ws)
                         ws = [w * sc for w in ws]
                         ih *= sc
                         bw = sum(ws) + 5 * (len(ws) - 1) + 12
                         bh = ih + 12
-                        cand = px + pw + 5 if W - 4 - (px + pw + 5) >= bw else px - bw - 5
+                        cand = px + pw + 5 if W - 4 - (px + pw + 5) >= bw - .5 else px - bw - 5
                         if not any(cand < gx + gw + 4 and cand + bw > gx - 4 and ptop < gy + gh + 2 and ptop + bh > gy - 2 for gx, gy, gw, gh in sky.values()):
                             besides = [cand]
                 if besides:

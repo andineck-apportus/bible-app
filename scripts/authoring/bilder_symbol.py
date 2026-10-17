@@ -513,10 +513,22 @@ class SymComposer(_auto.Composer):
             out.append(f'<g transform="rotate(35 {x:.1f} {y + h / 2:.1f})">{use(sym, round(x - w / 2, 1), round(y, 1), round(w, 1), h)}</g>')
             return (x + 6, y + 14)
         if pose in ("sit", "kneel"):
-            hh = h * (.78 if pose == "sit" else .62)
-            out.append(use(sym, round(x - w / 2, 1), round(_auto.FLOOR_Y - hh, 1), round(w, 1), round(hh, 1), ' preserveAspectRatio="none"'))
+            # Oberkörper in voller Grösse, Beine gefaltet (sitzen: nach vorn; knien: Unterschenkel am Boden) statt gestauchter Figur
+            keep = 46 if pose == "sit" else 44
+            k = h / 64
+            hh = keep * k + (6 if pose == "sit" else 8) * k
             y = _auto.FLOOR_Y - hh
-            hy = y + hh * 14 / 64
+            robe = (_fg.FIGS.get(fid) or {}).get("robe", "#9C7A4C")
+            d = arm or 1
+            if pose == "sit":
+                legs = f'<path d="M{x - w * .32:.1f} {y + keep * k - 2:.1f}h{w * .64 + d * 10:.1f}v{7 * k:.1f}h{-(w * .64 + d * 10):.1f}z" fill="{robe}" stroke="#3B3226" stroke-width="1"/>'
+                if d < 0:
+                    legs = f'<path d="M{x + w * .32:.1f} {y + keep * k - 2:.1f}h{-(w * .64 + 10):.1f}v{7 * k:.1f}h{w * .64 + 10:.1f}z" fill="{robe}" stroke="#3B3226" stroke-width="1"/>'
+            else:
+                legs = f'<path d="M{x - w * .34:.1f} {_auto.FLOOR_Y - 9 * k:.1f}q{w * .3:.1f} {-6 * k:.1f} {w * .7 + 6:.1f} 0v{9 * k:.1f}h{-(w * .7 + 6):.1f}z" fill="{robe}" stroke="#3B3226" stroke-width="1"/>'
+            out.append(legs + f'<svg x="{x - w / 2:.1f}" y="{y:.1f}" width="{w:.1f}" height="{keep * k:.1f}" viewBox="0 0 30 {keep}" overflow="hidden">'
+                       f'<use href="#{sym}" width="30" height="64"/></svg>')
+            hy = y + h * 14 / 64
         else:
             out.append(use(sym, round(x - w / 2, 1), round(y, 1), round(w, 1), h))
             hy = y + h * 14 / 64
