@@ -499,8 +499,9 @@ class SymComposer(_auto.Composer):
             if hold and hold != "PRAY":
                 ww, hh2 = self.m(hold)[1]
                 out.append(use(RENDER[hold], round(x + (arm or 1) * w * .45 - ww / 2, 1), round(y + h * .45, 1), ww, hh2))
-            if (st.get("wear") or {}).get(fid) == "sack":
-                out.append(self._sack(x - sp * .9, y + 4, w * .85, h * .92) + self._sack(x + sp * .9, y + 4, w * .85, h * .92) + self._sack(x, y, w, h))
+            wear = (st.get("wear") or {}).get(fid)
+            if wear:
+                out.append(self._sack(x - sp * .9, y + 4, w * .85, h * .92, wear) + self._sack(x + sp * .9, y + 4, w * .85, h * .92, wear) + self._sack(x, y, w, h, wear))
             if arm is not None:
                 sx, sy = x + arm * w * .32, y + h * .42
                 out.append(gesture(round(sx, 1), round(sy, 1), round(sx + arm * 11, 1), round(sy + 5, 1)))
@@ -519,8 +520,9 @@ class SymComposer(_auto.Composer):
         else:
             out.append(use(sym, round(x - w / 2, 1), round(y, 1), round(w, 1), h))
             hy = y + h * 14 / 64
-        if (st.get("wear") or {}).get(fid) == "sack":
-            out.append(self._sack(x, y, w, h))
+        wear = (st.get("wear") or {}).get(fid)
+        if wear:
+            out.append(self._sack(x, y, w, h, wear))
         if arm is not None:
             sx, sy = x + arm * w * .32, y + h * .42
             out.append(gesture(round(sx, 1), round(sy, 1), round(sx + arm * 11, 1), round(sy + 5, 1)))
@@ -535,10 +537,17 @@ class SymComposer(_auto.Composer):
             out.append(use(RENDER[hold], round(x + side * w * .45 - ww / 2, 1), round(y + h * .45, 1), ww, hh2))
         return (x, hy)
 
-    def _sack(self, x, y, w, h):
+    def _sack(self, x, y, w, h, wear="sack"):
+        """Kleidung wechseln: «sack» (Sacktuch mit Asche), «binden» (Grabtücher) oder eine Farbe (#RRGGBB, z. B. Purpurmantel)."""
         k = h / 64
-        return (f'<g transform="translate({x - w / 2:.1f} {y:.1f}) scale({w / 30:.3f} {k:.3f})"><path d="M5 62L8 26q7-7 14 0l3 36z" fill="#6A5E52" stroke="#3B3226" stroke-width="1.2"/>'
-                '<path d="M7 34h16M6 44h18M5.5 54h19" stroke="#4E453C" stroke-width=".9"/><g fill="#9A948C"><circle cx="11" cy="8" r="1"/><circle cx="17" cy="6.5" r=".9"/><circle cx="20" cy="9" r=".8"/></g></g>')
+        g = f'<g transform="translate({x - w / 2:.1f} {y:.1f}) scale({w / 30:.3f} {k:.3f})">'
+        if wear == "sack":
+            return (g + '<path d="M5 62L8 26q7-7 14 0l3 36z" fill="#6A5E52" stroke="#3B3226" stroke-width="1.2"/>'
+                    '<path d="M7 34h16M6 44h18M5.5 54h19" stroke="#4E453C" stroke-width=".9"/><g fill="#9A948C"><circle cx="11" cy="8" r="1"/><circle cx="17" cy="6.5" r=".9"/><circle cx="20" cy="9" r=".8"/></g></g>')
+        if wear == "binden":
+            return (g + '<path d="M5 62L8 26q7-7 14 0l3 36z" fill="#F4F1EA" stroke="#3B3226" stroke-width="1.2"/>'
+                    '<path d="M7 30l16 4M6 38l18 4M6 46l18 4M5 54l20 4" stroke="#C9BFAA" stroke-width="1.2"/></g>')
+        return g + f'<path d="M8 26q7-7 14 0l3 36H18L9 28z" fill="{wear}" stroke="#3B3226" stroke-width="1"/></g>'
 
     def r_inside(self, fid, cx, cy, w, p, out):
         st = p.get("stage") or {}

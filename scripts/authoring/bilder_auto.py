@@ -196,6 +196,28 @@ class Composer:
         self.lex, self.extra = lex, extra
         self._n = 0
 
+    def _draw_floor(self, L, st, items, out, pos):
+        cnt = st.get("count", {})
+        fx = st.get("floor_x", {})
+        zx = getattr(self, "_zx", None) or L["floor_zone"][0]
+        for t in items:
+            w, h = self.m(t)[1]
+            k = int(cnt.get(t, 1))
+            if t in fx:
+                x = fx[t]
+            elif L["reserve"]:
+                x = zx
+                zx += w * min(k, 3) * .85 + 2
+            else:
+                x = (W - w * min(k, 3)) / 2
+            if k > 7:
+                w, h = w * .7, h * .7
+            for q in range(min(k, 12)):
+                dx = q * (w * .8) if k <= 3 else q * (w * (.55 if k <= 7 else .45))
+                out.append(self.r_sym(t, x + dx, FLOOR_Y - h + 6 + (q % 2) * 2, w, h))
+            pos[t] = (x + w / 2, FLOOR_Y - h / 2)
+        self._zx = zx
+
     def m(self, t):
         if t.startswith("_"):
             return ("band", (186, 70))
@@ -203,6 +225,7 @@ class Composer:
 
     def panel(self, p):
         self._n += 1
+        self._zx = None
         L = plan(p, self.lex, self.extra)
         st = L["st"]
         out = []
@@ -283,6 +306,10 @@ class Composer:
                 else:
                     heads[fid] = self.r_inside(fid, cx, cy, w, p, out)
                 pos[fid] = (heads[fid][0], heads[fid][1] + 6)
+        self._floor_done = set()
+        behind = set(st.get("behind", []))
+        if behind:
+            self._draw_floor(L, st, [t for t in L["floor"] if t in behind], out, pos)
         # 4. Personen
         slots = L["row"]
         sp_idx = ad_idx = None
@@ -307,25 +334,10 @@ class Composer:
             if to_god and hold is None:
                 hold = "PRAY"
             heads[s["fid"]] = self.r_person(s, len(slots), look, arm, hold, p, out)
-            pos[s["fid"]] = (heads[s["fid"]][0], heads[s["fid"]][1] + 16)
+            pos[s["fid"]] = (heads[s["fid"]][0], heads[s["fid"]][1] + self.head_r() * 1.9)  # Körper, nicht Gesicht
         # 5. Gegenstände am Boden: eigener Platz am Rand
         cnt = st.get("count", {})
-        fx = st.get("floor_x", {})
-        zx = L["floor_zone"][0]
-        for t in L["floor"]:
-            w, h = self.m(t)[1]
-            k = int(cnt.get(t, 1))
-            if t in fx:
-                x = fx[t]
-            elif L["reserve"]:
-                x = zx
-                zx += w * min(k, 3) * .85 + 2
-            else:
-                x = (W - w * min(k, 3)) / 2
-            for q in range(min(k, 7)):
-                dx = q * (w * .8) if k <= 3 else q * (w * .55)
-                out.append(self.r_sym(t, x + dx, FLOOR_Y - h + 6 + (q % 2) * 2, w, h))
-            pos[t] = (x + w / 2, FLOOR_Y - h / 2)
+        self._draw_floor(L, st, [t for t in L["floor"] if t not in behind], out, pos)
         for t in L["hand"]:
             if slots:
                 s = slots[0]

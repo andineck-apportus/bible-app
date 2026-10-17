@@ -710,7 +710,7 @@ for _k, _v in _SYMS.items():
         COPY.append(_v["sym"])
 EXTRA_META = {k: (v["place"], tuple(v["size"])) for k, v in _SYMS.items()}
 GROUP_KEYS = {"FIG-GRUPPE-MENGE": ("menge2", "menge3", "menge"), "FIG-GRUPPE-ZWOELF": ("juenger2", "juenger", "petrus")}
-POSE_SHIFT = {"sit": 10, "kneel": 20}
+POSE_SHIFT = {"sit": 7, "kneel": 13}
 
 
 class AniComposer(_auto.Composer):
@@ -770,22 +770,22 @@ class AniComposer(_auto.Composer):
         if hold == "PRAY":
             hold = "an-z-beten"
         wear = ((p_stage or {}).get("wear") or {}).get(fid)
-        if wear == "sack":
-            key2 = key + "~sack"
-            if key2 not in CHAR:
-                CHAR[key2] = {k: v for k, v in CHAR[key].items() if k not in ("mantle", "trim", "sash", "toga", "breast", "belt", "apron")}
-                CHAR[key2]["robe"] = "#6A5E52"
-                CHAR[key2]["belt"] = "#4E453C"
-            key = key2
+        if wear:
+            key = self._sackkey(key, wear)
         if hold is None and CHAR[key].get("attr"):
             hold = CHAR[key]["attr"]
         elif hold is not None and not hold.startswith("an-"):
-            hold = OBJ.get(hold) or self.vbmap[hold][0]
+            hw, hh = self.m(hold)[1]
+            if hw >= 26 or hh >= 30:  # grosse Gegenstände (Kreuz, Krug) neben die Figur statt klein vor die Brust
+                out.append(self.r_sym(hold, x + 12 * s, y - 6 * s, hw * 1.1, hh * 1.1))
+                hold = None
+            else:
+                hold = OBJ.get(hold) or self.vbmap[hold][0]
         flip = pose == "away"
         if fid in GROUP_KEYS or (fid.startswith("FIG-GRUPPE-") and fid != "FIG-GRUPPE-GEMEINDE"):
             keys = GROUP_KEYS.get(fid, (key, key, key))
-            if wear == "sack":
-                keys = tuple(self._sackkey(k) for k in keys)
+            if wear:
+                keys = tuple(self._sackkey(k, wear) for k in keys)
             sp = 13 * s
             g = (person(keys[0], x - sp, y + 3 * s, s * .82, expr, look, None, flip, tears)
                  + person(keys[1], x + sp, y + 4 * s, s * .8, expr, look, None, flip, tears)
@@ -800,14 +800,22 @@ class AniComposer(_auto.Composer):
         if joy:
             out.append(sparkle(x - 13 * s, y - 10 * s, .7 * s) + sparkle(x + 13 * s, y - 12 * s, .6 * s))
 
-    def _sackkey(self, k):
-        if k.endswith("~sack"):
+    def _sackkey(self, k, wear="sack"):
+        """Kleidung wechseln: sack, binden oder Mantelfarbe (#RRGGBB)."""
+        if "~" in k:
             return k
-        k2 = k + "~sack"
+        k2 = k + "~" + wear
         if k2 not in CHAR:
-            CHAR[k2] = {a: v for a, v in CHAR[k].items() if a not in ("mantle", "trim", "sash", "toga", "breast", "belt", "apron")}
-            CHAR[k2]["robe"] = "#6A5E52"
-            CHAR[k2]["belt"] = "#4E453C"
+            c = dict(CHAR[k])
+            if wear == "sack":
+                c = {a: v for a, v in c.items() if a not in ("mantle", "trim", "sash", "toga", "breast", "belt", "apron")}
+                c["robe"], c["belt"] = "#6A5E52", "#4E453C"
+            elif wear == "binden":
+                c = {a: v for a, v in c.items() if a not in ("mantle", "trim", "sash", "toga", "breast", "belt", "apron")}
+                c["robe"], c["sash"] = "#F4F1EA", "#C9BFAA"
+            else:
+                c["mantle"] = wear
+            CHAR[k2] = c
         return k2
 
     def r_person(self, s, n, look, arm, hold, p, out):
