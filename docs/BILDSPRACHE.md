@@ -35,6 +35,7 @@ Für die Bücher, Kapitel und Abschnitte aller übersetzten Bücher setzt der Ze
 - **Handlungslinien** (goldener Bogen: Gott sendet, sieht, bestimmt; gepunkteter Bogen: werfen, speien; gestrichelter Weg: gehen) machen sichtbar, was geschieht; Kleidung kann wechseln (Sacktuch bei der Busse).
 - Wer zu Gott spricht, betet mit gefalteten Händen (kein erhobener Arm, der drohend wirkt); wer zu Menschen spricht, öffnet die Hand nach vorn.
 - Ein Schiff steht immer im Wasser; wer in einem Fisch oder Grab ist, erscheint in einem Fenster.
+- Lehren aus zwei KI-Blindrunden (2026-10-17): Handlungslinien zu Personen laufen über die Köpfe, nie durchs Gesicht; wer zuerst spricht, steht links; eine zweite Sprechblase derselben Figur hängt an der ersten; Mehrzahl erscheint als Menge (fünf Figuren); Abwenden zeigt den Hinterkopf; im Stil «Anime» liegt das Oberlid als feine Linie über der Pupille, denn ein dickes Lid auf der Pupille las sich als finsterer Blick. Die Legende beschreibt, was das Zeichen tatsächlich zeigt – ein Merkmal, das nicht gezeichnet ist, gehört nicht ins Lexikon.
 Wie man Aufträge dafür schreibt: [BILDAUFTRAEGE-ANLEITUNG.md](BILDAUFTRAEGE-ANLEITUNG.md).
 
 ## Ebenen

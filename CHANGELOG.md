@@ -2,6 +2,13 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.65 — 2026-10-17 — Bilder für alle übersetzten Stellen, zwei Blindrunden
+
+- **Bilder auf allen Ebenen:** Für alle übersetzten Bücher (Matthäus, Markus, Lukas, Johannes, Philipper, Titus, 1–3 Johannes, Rut, Obadja, Jona) gibt es je Buch, Kapitel und Abschnitt ein Bild im Stil Symbol und im Stil Anime (358 Bildaufträge, 716 Bilder). Die Bilder setzt ein neuer Zeichner (`scripts/authoring/bilder_auto.py`) direkt aus dem Bildauftrag; Personen, Zeichen und Orte kommen aus dem Bildlexikon (jetzt 496 Einträge). Anleitung: [docs/BILDAUFTRAEGE-ANLEITUNG.md](docs/BILDAUFTRAEGE-ANLEITUNG.md).
+- **Obere Ebenen ergänzt:** Erzeltern (Verheissung an Abraham), Landnahme, Königtum, Zerstörung und Rückkehr, Pfingsten mit Feuerzungen, der Weg nach Rom, die Briefe der Offenbarung an die Gemeinden; Propheten mit Linie vom Strahlenkranz.
+- **Zwei KI-Blindrunden** (getrennte Instanzen, nur Bild und Legende): Runde 1 über alle Anime-Bilder und eine Stichprobe der Symbolbilder, danach 20 Bereiche nachgebessert; Runde 2 über je ein Paket pro Bereich und Stil. Behoben im Zeichner: freundlichere Gesichter (feines Lid, höhere Brauen), Handlungslinien über den Köpfen statt durchs Gesicht, verbundene Sprechblasen, Leserichtung (wer zuerst spricht, steht links), Gruppen als Menge, abgewandte Figuren mit Hinterkopf, Sitzen und Knien, Gebetshände, Speien am Fischmaul, Linien zu freien Zeichen. Legenden beschreiben jetzt, was das Zeichen zeigt.
+- **Prüfvermerke** (`check`) für alle neuen Bilder mit Ergebnis und Restpunkten; nicht einzeln geprüfte Symbolbilder sind als solche gekennzeichnet.
+
 ## v0.64 — 2026-10-17 — Anime auf allen Ebenen, drei Prüfrunden
 
 - **Anime für alle 18 Bilder:** Bibel, beide Testamente, alle zehn Buchgruppen, Johannes, Johannes 2 und seine drei Abschnitte. Gegenstände und Zeichen wie im Symbolstil, Personen mit Ausdruck (ruhig, ernst, nachdenklich, besorgt, staunend, froh – nie zornig oder drohend).
