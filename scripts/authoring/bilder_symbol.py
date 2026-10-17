@@ -432,6 +432,8 @@ def auto_library():
 
 class SymComposer(_auto.Composer):
     def vb(self, fid):
+        if fid == "FIG-GRUPPE-MENGE":
+            return "0 0 50 64"
         sym = RENDER[fid]
         return VB.get(sym, VB["ill-p"] if sym.startswith("ill-p-") else "0 0 30 64")
 
@@ -457,6 +459,11 @@ class SymComposer(_auto.Composer):
         return use(RENDER[t], round(x, 1), round(y, 1), w, h)
 
     def r_icon(self, t, x, y, w, h):
+        if t == "FIG-GRUPPE-MENGE":  # Mehrzahl: drei Figuren
+            fw = w * .5
+            return (use("ill-p-gast2", round(x, 1), round(y + h * .08, 1), round(fw, 1), round(h * .92, 1))
+                    + use("ill-p-gast", round(x + w - fw, 1), round(y + h * .08, 1), round(fw, 1), round(h * .92, 1))
+                    + use("ill-p-menge", round(x + (w - fw) / 2, 1), round(y, 1), round(fw, 1), round(h, 1)))
         return use(RENDER[t], round(x, 1), round(y, 1), round(w, 1), round(h, 1))
 
     def r_bubble(self, x, y, w, h, tx, ty, inner):
@@ -498,7 +505,7 @@ class SymComposer(_auto.Composer):
             out.append(f'<g transform="rotate(35 {x:.1f} {y + h / 2:.1f})">{use(sym, round(x - w / 2, 1), round(y, 1), round(w, 1), h)}</g>')
             return (x + 6, y + 14)
         if pose in ("sit", "kneel"):
-            hh = h * .78
+            hh = h * (.78 if pose == "sit" else .62)
             out.append(use(sym, round(x - w / 2, 1), round(_auto.FLOOR_Y - hh, 1), round(w, 1), round(hh, 1), ' preserveAspectRatio="none"'))
             y = _auto.FLOOR_Y - hh
             hy = y + hh * 14 / 64

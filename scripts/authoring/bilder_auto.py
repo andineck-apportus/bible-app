@@ -111,9 +111,10 @@ def plan(p, lex, extra):
         band = ["_MEER-STILL" if b in ("FIG-ORT-MEER-OFFEN", "FIG-ORT-SEE") else b for b in band]
     held = st.get("hold", {})
     at = st.get("at", {})
+    at = {**at, **st.get("beside", {})}
     floor = [t for t in things if place(t) == "floor" and t not in held.values() and t not in at]
     hand_objs = [t for t in things if place(t) == "hand" and t not in held.values() and t not in at]
-    air = [t for t in things if place(t) == "air" and t not in st.get("at", {})]
+    air = [t for t in things if place(t) == "air" and t not in st.get("at", {}) and t not in st.get("beside", {})]
     head_signs = [t for t in things if place(t) == "head"]
     lines = [t for t in things if place(t) == "line"]
     x0, x1 = 10, W - 10
@@ -364,6 +365,12 @@ class Composer:
             elif f in pos:
                 x, y = pos[f]
                 out.append(self.r_sym(t, x - w / 2, y - h - 4, w, h))
+        for t, f in (st.get("beside") or {}).items():
+            w, h = self.m(t)[1]
+            if f in heads:
+                hx, hy = heads[f]
+                rx = hx + self.head_r() + 4 if hx < W - 44 else hx - self.head_r() - w - 4
+                out.append(self.r_sym(t, rx, hy - h / 2, w, h))
         # 9. Handlungslinien
         for a in st.get("arrows", []):
             f, t, kind = a[0], a[1], (a[2] if len(a) > 2 else "act")

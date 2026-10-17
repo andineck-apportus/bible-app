@@ -667,6 +667,14 @@ def library():
     parts.append('<symbol id="an-gemeinde" viewBox="0 0 60 44">' + use("an-haus", 20, 0, 40, 36) + person("menge2", 9, 24, .5, "smile", .6)
                  + person("menge", 22, 26, .52, "smile", .4) + person("menge3", 35, 28, .48, "smile", .3) + "</symbol>")
     parts.append(_fg.anime_attrs())
+    # Gruppen als Zeichen in Sprechblasen: drei Köpfe (Mehrzahl, nie eine Einzelfigur)
+    for fid, (key, expr) in PORTRAITS.items():
+        if fid.startswith("FIG-GRUPPE-") and fid != "FIG-GRUPPE-GEMEINDE":
+            ks = GROUP_KEYS.get(fid, (key, key, key))
+            parts.append(f'<symbol id="an-p-{key}-gruppe" viewBox="0 0 54 50"><g transform="translate(14 20) scale(.62)">{body_inner(ks[0])}{head_inner(ks[0], "calm")}</g>'
+                         f'<g transform="translate(40 20) scale(.62)">{body_inner(ks[1])}{head_inner(ks[1], "calm")}</g>'
+                         f'<g transform="translate(27 17) scale(.72)">{body_inner(ks[2])}{head_inner(ks[2], "calm")}</g></symbol>')
+            vb[fid] = (f"an-p-{key}-gruppe", "0 0 54 50")
     parts.append(f'<symbol id="an-jesus-kopf" viewBox="0 0 34 34"><g transform="translate(17 17)">{head_inner("jesus", "calm")}</g></symbol>')
     parts.append(f'<symbol id="an-p-meister-kopf" viewBox="0 0 28 30"><g transform="translate(14 15)">{head_inner("meister", "calm")}</g></symbol>')
     lib = ('<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" style="position:absolute"><defs>\n'
@@ -699,7 +707,7 @@ for _k, _v in _SYMS.items():
         COPY.append(_v["sym"])
 EXTRA_META = {k: (v["place"], tuple(v["size"])) for k, v in _SYMS.items()}
 GROUP_KEYS = {"FIG-GRUPPE-MENGE": ("menge2", "menge3", "menge"), "FIG-GRUPPE-ZWOELF": ("juenger2", "juenger", "petrus")}
-POSE_SHIFT = {"sit": 8, "kneel": 10}
+POSE_SHIFT = {"sit": 10, "kneel": 20}
 
 
 class AniComposer(_auto.Composer):
