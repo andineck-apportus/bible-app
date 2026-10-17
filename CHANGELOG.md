@@ -2,6 +2,13 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.64 — 2026-10-17 — Anime auf allen Ebenen, drei Prüfrunden
+
+- **Anime für alle 18 Bilder:** Bibel, beide Testamente, alle zehn Buchgruppen, Johannes, Johannes 2 und seine drei Abschnitte. Gegenstände und Zeichen wie im Symbolstil, Personen mit Ausdruck (ruhig, ernst, nachdenklich, besorgt, staunend, froh – nie zornig oder drohend).
+- **Drei KI-Blindrunden** (getrennte Instanzen, nur Bild und Legende), danach jeweils nachgebessert: Tränen auf den Wangen statt schwebend, Pfeile von Wegführung und Rückkehr in der richtigen Richtung, Mose trägt die Tafeln erst am Sinai, Propheten sprechen mit Gott in der Sprechblase, Paulus mit Brief (Brief als gefaltetes Blatt mit Siegel statt «E-Mail-Umschlag»), Jesus in Johannes 2,23–25 mit ruhigem, abgewandtem Blick statt geschlossener Augen (wirkte hochmütig), höherer Haaransatz bei Mose und König (wirkten grimmig), «ihr» in der Tempelantwort als Gruppe (auch im Symbolstil), Buchrolle beim Adler sichtbar.
+- **Prüfvermerke** für alle Anime-Bilder und die geänderten Symbolbilder mit Restpunkten; inhaltliche Lücken der Bildaufträge in STATUS-UND-ROADMAP.
+- Stil-Umschalter nun auch auf den Ebenen Bibel, Testament und Buchgruppe.
+
 ## v0.63 — 2026-10-17 — Stil-Umschalter beim Bild, Bildlexikon je Stil
 
 - **Stil-Umschalter direkt beim Bild** («Symbol | Anime» neben «Legende und Hinweise») und in der Legende, nur wo es das Bild in mehreren Stilen gibt; die Einstellung im Menü bleibt.

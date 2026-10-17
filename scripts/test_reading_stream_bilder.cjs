@@ -6,7 +6,7 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
   try{const p=await b.newPage({viewport:{width:390,height:844}});const errs=[];p.on('pageerror',e=>errs.push(e.message));
     await p.goto('file://'+path.join(__dirname,'../app/reading-stream/index.html'));await p.waitForTimeout(800);
     assert(await p.$('.has-ill .ill-img svg'),'Bild auf der Ebene Bibel');
-    assert.equal(await p.$$eval('.ill-styles',x=>x.length),0,'kein Stil-Umschalter, wo es nur einen Stil gibt');
+    assert.equal(await p.$$eval('.ill-styles',x=>x.length),1,'Stil-Umschalter auch auf der Ebene Bibel (Symbol und Anime)');
     await p.click('[data-action=menu]');await p.fill('input[type=search]','Joh 2,1');await p.waitForTimeout(300);await p.click('.results button');await p.waitForTimeout(900);
     while(+await p.evaluate(()=>document.querySelector('.app').dataset.level)>5){await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));await p.click('[data-action=up]');await p.waitForTimeout(800);}
     assert.equal(await p.$$eval('.has-ill .ill-styles',x=>x.length),3,'Stil-Umschalter bei den drei Abschnitten von Johannes 2');
@@ -19,7 +19,7 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     assert(!await p.$('[data-settings]'),'Umschalten öffnet nicht das Menü');
     await p.click('.sheet [data-close]');await p.waitForTimeout(300);await p.click('[data-action=menu]');await p.click('[data-figindex]');await p.waitForTimeout(300);
     const nSym=await p.$$eval('.sheet .legend-fig',x=>x.length);await p.click('[data-figindex-style=anime]');await p.waitForTimeout(300);
-    const nAni=await p.$$eval('.sheet .legend-fig',x=>x.length);assert(nSym>nAni&&nAni>10,'Bildlexikon je Stil ('+nSym+' Symbol, '+nAni+' Anime)');
+    const nAni=await p.$$eval('.sheet .legend-fig',x=>x.length);assert(nSym>=nAni&&nAni>40,'Bildlexikon je Stil ('+nSym+' Symbol, '+nAni+' Anime)');
     assert(await p.$('.sheet .legend-fig use[href^="#an-"]'),'Anime-Darstellungen im Bildlexikon');
     assert.deepEqual(errs,[],'keine Skriptfehler');
     console.log('PASS: Bilder auf allen Ebenen, Stil-Umschalter beim Bild und in der Legende, Bildlexikon je Stil (Symbol/Anime).');
