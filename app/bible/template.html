@@ -295,6 +295,7 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .ill{margin:0}
 #bible-stream .ill-img svg{display:block;width:100%!important;height:auto!important;flex:none;border-radius:12px}
 #bible-stream .ill-img svg svg{border-radius:0}
+#bible-stream .ill-img.narrow>svg{width:50%!important;margin:0 auto}
 #bible-stream .ill figcaption{margin-top:6px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px}
 #bible-stream .ill-styles{display:inline-flex;border:1px solid var(--rule);border-radius:999px;padding:2px;gap:2px}
 #bible-stream .app .ill-styles button{padding:4px 10px!important;border-radius:999px!important;font:500 12px/1.2 var(--ui);color:var(--muted)}
@@ -653,7 +654,9 @@ function illItem(key){const all=ILL.items[key]||{};return all[S.ill]||all.symbol
 // Stil-Umschalter direkt beim Bild, nur wenn es das Bild in mehreren Stilen gibt
 const illStyles=(key,cur)=>{const ks=Object.keys(ILL.styles||{}).sort((a,b)=>(a==='symbol'?0:1)-(b==='symbol'?0:1)).filter(k=>(ILL.items[key]||{})[k]);if(ks.length<2)return '';
   return `<span class="ill-styles" role="group" aria-label="${T().illStyle}">${ks.map(k=>`<button type="button" data-ill-style="${k}" data-ill-key="${esc(key)}" aria-pressed="${k===cur}">${esc(lang==='de'?ILL.styles[k].label.de:ILL.styles[k].label.en)}</button>`).join('')}</span>`;};
-const illFigure=il=>`<figure class="ill"><div class="ill-img" role="img" aria-label="${esc(il.alt)}">${il.svg}</div><figcaption><button type="button" class="link soft" data-legend="${esc(il.key)}">${T().legend}</button>${illStyles(il.key,il.style)}</figcaption></figure>`;
+// Bilder mit nur einem Feld halb breit, damit alle Felder gleich gross erscheinen (höchstens zwei Spalten)
+const illNarrow=svg=>{const m=/viewBox="0 0 ([\d.]+) /.exec(svg||'');return m&&+m[1]<300?' narrow':'';};
+const illFigure=il=>`<figure class="ill"><div class="ill-img${illNarrow(il.svg)}" role="img" aria-label="${esc(il.alt)}">${il.svg}</div><figcaption><button type="button" class="link soft" data-legend="${esc(il.key)}">${T().legend}</button>${illStyles(il.key,il.style)}</figcaption></figure>`;
 function legendSheet(key){const it0=illItem(key),st=it0&&ILL.styles[it0.style];if(!st||!it0)return;const it=LOC(it0),t=T(),L=lang==='de';
   const acts=it.actions||it.panels.map(p=>p.action),ORDER=['divine','person','role','group','object','place','action','sign'];
   // Bildhilfe je Feld: Nummer wie im Bild, Kurztitel fett, was man sieht und wofür die Zeichen stehen, Stelle klein dahinter
@@ -661,7 +664,7 @@ function legendSheet(key){const it0=illItem(key),st=it0&&ILL.styles[it0.style];i
   const steps=`<ol class="legend-panels${one?' one':''}">${it.panels.map((p,i)=>{const c=caps[i]||acts[i]||p.action,k=c.indexOf(': '),tt=k>0?c.slice(0,k):'',tx=k>0?c.slice(k+2):c;
     return `<li>${one?'':`<span class="lp-n">${p.n}</span>`}<span>${tt?`<b>${esc(tt)}</b> `:''}${rich(tx)}${it.level==='book'?'':` <span class="ref-small">${esc(refAny(p.ref))}</span>`}</span></li>`;}).join('')}</ol>`;
   const figs=(it.depicts||[]).map(id=>({id,lx:(ILL.lexicon||{})[id],r:(st.renderings||{})[id]})).filter(x=>x.lx&&x.r).sort((a,b)=>ORDER.indexOf(a.lx.kind)-ORDER.indexOf(b.lx.kind));
-  openSheet('legend',head(t.legendTitle)+`<div class="ill-img legend-img">${it.svg}</div>${illStyles(key,it0.style)}`+steps+(figs.length?`<h4>${t.legendFigures}</h4><div class="legend-figs">${figs.map(f=>`<div class="legend-fig"><svg viewBox="${f.r.viewbox}" aria-hidden="true"><use href="#${f.r.symbol}"/></svg><span><b>${esc(L?f.lx.name.de:f.lx.name.en)}</b><span class="sub">${esc(f.lx.traits.join(' · '))}</span></span></div>`).join('')}</div>`:'')+(it.note?`<p class="note">${rich(it.note)}</p>`:'')+(it.check?`<p class="note">${t.legendCheck} ${esc(it.check)}</p>`:'')+`<p class="note">${t.legendNote} ${esc(L?st.label.de:st.label.en)}.</p>`);}
+  openSheet('legend',head(t.legendTitle)+`<div class="ill-img legend-img${illNarrow(it.svg)}">${it.svg}</div>${illStyles(key,it0.style)}`+steps+(figs.length?`<h4>${t.legendFigures}</h4><div class="legend-figs">${figs.map(f=>`<div class="legend-fig"><svg viewBox="${f.r.viewbox}" aria-hidden="true"><use href="#${f.r.symbol}"/></svg><span><b>${esc(L?f.lx.name.de:f.lx.name.en)}</b><span class="sub">${esc(f.lx.traits.join(' · '))}</span></span></div>`).join('')}</div>`:'')+(it.note?`<p class="note">${rich(it.note)}</p>`:'')+(it.check?`<p class="note">${t.legendCheck} ${esc(it.check)}</p>`:'')+`<p class="note">${t.legendNote} ${esc(L?st.label.de:st.label.en)}.</p>`);}
 
 /* ---------- Einträge ---------- */
 const entryM=id=>{const n=nodes.get(id);return marks(entry(id),n&&n.b!==undefined?DATA[n.b].code:null);};
