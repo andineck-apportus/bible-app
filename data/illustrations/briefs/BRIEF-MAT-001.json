@@ -15,16 +15,35 @@
       "figures": [
         "FIG-ABRAHAM",
         "FIG-DAVID",
-        "FIG-JOSEF-NAZARET"
+        "FIG-JOSEF-NAZARET",
+        "FIG-MARIA-MUTTER-JESU"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-JESUS-KIND"
+      ],
       "signs": [
         "FIG-ZEICHEN-STAMMBAUM"
       ],
       "speech": [],
       "action_de": "Der Stammbaum Jesu Christi führt von Abraham über König David und die Wegführung nach Babylon bis zu Josef, dem Mann Marias.",
       "stage": {
-        "air_y": 14
+        "air_y": 20,
+        "air_x": 14,
+        "hold": {
+          "FIG-MARIA-MUTTER-JESU": "FIG-JESUS-KIND"
+        },
+        "x": {
+          "FIG-ABRAHAM": 31,
+          "FIG-DAVID": 73,
+          "FIG-JOSEF-NAZARET": 115,
+          "FIG-MARIA-MUTTER-JESU": 157
+        },
+        "mood": {
+          "FIG-ABRAHAM": "calm",
+          "FIG-DAVID": "calm",
+          "FIG-JOSEF-NAZARET": "calm",
+          "FIG-MARIA-MUTTER-JESU": "smile"
+        }
       }
     },
     {
@@ -68,6 +87,10 @@
         "mood": {
           "FIG-ROLLE-ENGEL": "calm",
           "FIG-JOSEF-NAZARET": "sleep"
+        },
+        "x": {
+          "FIG-ROLLE-ENGEL": 50,
+          "FIG-JOSEF-NAZARET": 130
         }
       }
     }
@@ -77,7 +100,7 @@
     "Maria ist vom heiligen Geist schwanger; ein Engel sagt Josef im Traum, er solle sie zu sich nehmen und dem Sohn den Namen Jesus geben. Josef tut es."
   ],
   "captions_de": [
-    "Stammbaum: Abraham (weisser Bart, Wanderstab), König David (Königsreif) und Josef (Wanderstab, rostbrauner Mantel); darüber der Stammbaum (Ast mit Knospen, Pfeile von links nach rechts).",
+    "Stammbaum: Abraham (weisser Bart), König David (Königsreif), Josef (rostbrauner Mantel) und Maria (blauer Schleier) mit Jesus (Kind mit Kreuznimbus); darüber der Stammbaum (Ast mit Knospen, Pfeile von links nach rechts; von jeder Knospe eine gestrichelte Linie zu einer Person).",
     "Im Traum: In der Nacht (dunkler Himmel, Mond) sagt ein Engel (Flügel) dem schlafenden Josef: Maria – vom Geist (Taube); sie bekommt einen Sohn (Säugling): Jesus."
   ],
   "interpretation_note_de": "Zwei Felder für die zwei Abschnitte: der Stammbaum (ohne Zahlen, nur drei Stationen) und der Traum Josefs. Die Schwangerschaft und die Geburt sind nur in der Sprechblase angedeutet.",
@@ -93,5 +116,81 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.1.1-MAT.1.17",
+            "figures": [
+              "FIG-ABRAHAM",
+              "FIG-DAVID",
+              "FIG-JOSEF-NAZARET"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-STAMMBAUM"
+            ],
+            "speech": [],
+            "action_de": "Der Stammbaum Jesu Christi führt von Abraham über König David und die Wegführung nach Babylon bis zu Josef, dem Mann Marias.",
+            "stage": {
+              "air_y": 14
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.1.18-MAT.1.25",
+            "figures": [
+              "FIG-ROLLE-ENGEL",
+              "FIG-JOSEF-NAZARET"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-NACHT",
+              "FIG-ZEICHEN-SCHLAFEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-ENGEL",
+                "to": "FIG-JOSEF-NAZARET",
+                "icons": [
+                  "FIG-MARIA-MUTTER-JESU",
+                  "FIG-HEILIGER-GEIST"
+                ]
+              },
+              {
+                "from": "FIG-ROLLE-ENGEL",
+                "to": "FIG-JOSEF-NAZARET",
+                "icons": [
+                  "FIG-ZEICHEN-GEBURT",
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Maria ist vom heiligen Geist schwanger; ein Engel sagt Josef im Traum, er solle sie zu sich nehmen und dem Sohn den Namen Jesus geben. Josef tut es.",
+            "stage": {
+              "pose": {
+                "FIG-JOSEF-NAZARET": "sleep"
+              },
+              "at": {
+                "FIG-ZEICHEN-SCHLAFEN": "FIG-JOSEF-NAZARET"
+              },
+              "mood": {
+                "FIG-ROLLE-ENGEL": "calm",
+                "FIG-JOSEF-NAZARET": "sleep"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Stammbaum: Abraham (weisser Bart, Wanderstab), König David (Königsreif) und Josef (Wanderstab, rostbrauner Mantel); darüber der Stammbaum (Ast mit Knospen, Pfeile von links nach rechts).",
+          "Im Traum: In der Nacht (dunkler Himmel, Mond) sagt ein Engel (Flügel) dem schlafenden Josef: Maria – vom Geist (Taube); sie bekommt einen Sohn (Säugling): Jesus."
+        ]
+      }
+    }
+  ]
 }

@@ -621,8 +621,20 @@ class Composer:
         if free:
             tot = sum((self.m(t)[1][0] + 3) * min(int(cnt.get(t, 1)), 6) for t in free) + 6 * (len(free) - 1)
             x = st.get("air_x", max(28, (W - tot) / 2))
-            k = min(1.0, (W - 6 - x) / tot) if tot else 1
             y = st.get("air_y", top if top < 60 else 10)
+            if "air_y" not in st and top >= 60 and placed:
+                # tiefe Blasen: Zeichen neben die Blasen (Blindtest: Zeichen standen in einer Sprechblase)
+                right = max(px + pw for px, pw, pb, ph in placed) + 6
+                left = min(px for px, pw, pb, ph in placed) - 6
+                if W - 6 - right >= tot * .6:
+                    x = st.get("air_x", right)
+                elif left - 28 >= tot * .6:
+                    x = st.get("air_x", 28)
+                else:
+                    y = min(top, 70)
+            k = min(1.0, (W - 6 - x) / tot) if tot else 1
+            if y == 10 and "air_x" not in st and placed and x < min(px for px, pw, pb, ph in placed):
+                k = min(k, (min(px for px, pw, pb, ph in placed) - 6 - x) / tot)
             for t in free:
                 w, h = self.m(t)[1]
                 w, h = w * k, h * k

@@ -34,7 +34,6 @@
       "action_de": "Jesus zieht in ganz Galiläa umher, lehrt in ihren Synagogen, verkündigt das Evangelium vom Reich und heilt jede Krankheit und jedes Leiden im Volk.",
       "stage": {
         "back_side": "right",
-        "before": true,
         "mood": {
           "FIG-GRUPPE-MENGE": "surprised"
         }
@@ -44,40 +43,33 @@
       "n": 2,
       "reference": "MAT.4.24",
       "figures": [
-        "FIG-ROLLE-BESESSENER",
-        "FIG-ROLLE-KRANKER",
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-GRUPPE-KRANKE"
       ],
       "objects": [],
       "signs": [
-        "FIG-ZEICHEN-DAEMON",
         "FIG-ZEICHEN-HEILEN"
       ],
       "speech": [],
       "action_de": "Man bringt Jesus alle Kranken, die von mancherlei Krankheiten und Qualen geplagt sind: Besessene, Mondsüchtige und Gelähmte; und er heilt sie.",
       "stage": {
         "at": {
-          "FIG-ZEICHEN-DAEMON": "FIG-ROLLE-BESESSENER",
-          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
-        },
-        "pose": {
-          "FIG-ROLLE-KRANKER": "lie"
+          "FIG-ZEICHEN-HEILEN": "FIG-GRUPPE-KRANKE"
         },
         "arrows": [
           [
             "FIG-JESUS",
-            "FIG-ROLLE-KRANKER",
+            "FIG-GRUPPE-KRANKE",
             "act"
           ]
         ],
         "mood": {
-          "FIG-ROLLE-BESESSENER": "worried",
-          "FIG-ROLLE-KRANKER": "calm"
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-KRANKE": "calm"
         },
         "x": {
-          "FIG-ROLLE-BESESSENER": 34,
-          "FIG-ROLLE-KRANKER": 86,
-          "FIG-JESUS": 150
+          "FIG-JESUS": 46,
+          "FIG-GRUPPE-KRANKE": 128
         }
       }
     },
@@ -89,9 +81,7 @@
         "FIG-JESUS"
       ],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-NACHFOLGEN"
-      ],
+      "signs": [],
       "speech": [],
       "action_de": "Viele Menschenmengen aus Galiläa, der Dekapolis, Jerusalem, Judäa und von jenseits des Jordan folgen ihm.",
       "stage": {
@@ -119,8 +109,8 @@
   ],
   "captions_de": [
     "Er lehrt: In der Synagoge lehrt Jesus (Schriftrolle) und verkündigt das Evangelium vom Reich (goldener Rufer, Krone im Licht).",
-    "Er heilt: Vor Jesus ein Besessener (dunkler Wirbel) und ein Gelähmter auf seiner Matte; Jesus heilt sie (Hand mit grünem Licht, Bogen).",
-    "Viele folgen: Menschenmengen folgen Jesus (Fussspuren, gestrichelter Weg)."
+    "Er heilt: Man bringt Jesus viele Kranke (Menschen in hellgrauen Gewändern); Jesus heilt sie (Bogen von Jesus zu ihnen, Hand mit grünem Licht).",
+    "Viele folgen: Menschenmengen folgen Jesus (gestrichelter Weg)."
   ],
   "interpretation_note_de": "Die Kunde in ganz Syrien ([[MAT.4.24]]) und die Mondsüchtigen sind nicht gezeichnet; die Kranken stehen als ein Besessener und ein Gelähmter. Die Herkunftsgebiete der Menschenmengen ([[MAT.4.25]]) nennt nur die Legende.",
   "basis": [
@@ -153,5 +143,122 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.4.23",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-SYNAGOGE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-OBJ-SCHRIFTROLLE",
+                  "FIG-ZEICHEN-VERKUENDIGEN",
+                  "FIG-ZEICHEN-REICH-GOTTES"
+                ]
+              }
+            ],
+            "action_de": "Jesus zieht in ganz Galiläa umher, lehrt in ihren Synagogen, verkündigt das Evangelium vom Reich und heilt jede Krankheit und jedes Leiden im Volk.",
+            "stage": {
+              "back_side": "right",
+              "before": true,
+              "mood": {
+                "FIG-GRUPPE-MENGE": "surprised"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.4.24",
+            "figures": [
+              "FIG-ROLLE-BESESSENER",
+              "FIG-ROLLE-KRANKER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-DAEMON",
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [],
+            "action_de": "Man bringt Jesus alle Kranken, die von mancherlei Krankheiten und Qualen geplagt sind: Besessene, Mondsüchtige und Gelähmte; und er heilt sie.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-DAEMON": "FIG-ROLLE-BESESSENER",
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
+              },
+              "pose": {
+                "FIG-ROLLE-KRANKER": "lie"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-KRANKER",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-BESESSENER": "worried",
+                "FIG-ROLLE-KRANKER": "calm"
+              },
+              "x": {
+                "FIG-ROLLE-BESESSENER": 34,
+                "FIG-ROLLE-KRANKER": 86,
+                "FIG-JESUS": 150
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.4.25",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-NACHFOLGEN"
+            ],
+            "speech": [],
+            "action_de": "Viele Menschenmengen aus Galiläa, der Dekapolis, Jerusalem, Judäa und von jenseits des Jordan folgen ihm.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-JESUS",
+                  "go"
+                ]
+              ],
+              "x": {
+                "FIG-GRUPPE-MENGE": 56,
+                "FIG-JESUS": 146
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "smile"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Er lehrt: In der Synagoge lehrt Jesus (Schriftrolle) und verkündigt das Evangelium vom Reich (goldener Rufer, Krone im Licht).",
+          "Er heilt: Vor Jesus ein Besessener (dunkler Wirbel) und ein Gelähmter auf seiner Matte; Jesus heilt sie (Hand mit grünem Licht, Bogen).",
+          "Viele folgen: Menschenmengen folgen Jesus (Fussspuren, gestrichelter Weg)."
+        ]
+      }
+    }
+  ]
 }
