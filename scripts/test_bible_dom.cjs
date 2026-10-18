@@ -91,7 +91,7 @@ let tested=mkAlts().length;
 // Vaterunser: Matthäus und Lukas; Suche, Zuletzt gelesen und Ausgearbeitetes stehen in der Navigation (nicht mehr im Menü)
 click('[data-action=menu]');assert(!sheetHost.querySelector('input[type=search]')&&!sheetHost.querySelector('details.worked'),'Menü ohne Suche und Listen');click('[data-close]');
 click('[data-action=index]');
-assert.equal(sheetHost.querySelectorAll('details.worked:not(.recent) [data-go^="TU-"]').length,M().sections.length,'Ausgearbeitete Stellen in der Navigation (eingeklappt)');
+assert.equal(sheetHost.querySelectorAll('details.worked:not(.recent):not(.nav-parts) [data-go^="TU-"]').length,M().sections.length,'Ausgearbeitete Stellen in der Navigation (eingeklappt)');
 assert(sheetHost.textContent.includes('Zuletzt gelesen')&&sheetHost.querySelectorAll('[data-clear-recent]').length===1,'Zuletzt gelesen nach dem Lesen');assert(sheetHost.querySelector('details.recent .recent-row'),'Zuletzt gelesen eingeklappt');
 {const rr=[...sheetHost.querySelectorAll('.recent-row')];assert(rr.length>0&&rr.every(r=>[4,5].includes(model.nodes.get(r.dataset.go).level)),'Verlauf auf Abschnitt- bzw. Kapitelebene');}
 click('[data-clear-recent]');
