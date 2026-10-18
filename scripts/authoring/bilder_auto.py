@@ -198,6 +198,21 @@ def arrow_svg(x1, y1, x2, y2, kind="act", divine=True):
             f'<path d="M{hx1:.1f} {hy1:.1f}L{x2:.1f} {y2:.1f}L{hx2:.1f} {hy2:.1f}" fill="none" stroke="{col}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>')
 
 
+def think_bubble(x, y, w, h, tx, ty, inner):
+    """Denkblase: Wolke mit kleinen Kreisen zur denkenden Figur (stilunabhängig)."""
+    ox, oy = x + w / 2, y + h
+    pts = [(ox + (tx - ox) * f, oy + (ty - oy) * f) for f in (.3, .55, .78)]
+    dots = "".join(f'<circle cx="{px:.1f}" cy="{py:.1f}" r="{r}" fill="#FFFFFF" stroke="#3B3226" stroke-width="1.2"/>'
+                   for (px, py), r in zip(pts, (3.2, 2.3, 1.5)))
+    bumps = "".join(f'<circle cx="{x + 6 + i * (w - 12) / max(1, int(w // 14)):.1f}" cy="{y + 1:.1f}" r="5" fill="#FFFFFF" stroke="#3B3226" stroke-width="1.2"/>'
+                    for i in range(int(w // 14) + 1))
+    bumps += "".join(f'<circle cx="{x + 6 + i * (w - 12) / max(1, int(w // 14)):.1f}" cy="{y + h - 1:.1f}" r="5" fill="#FFFFFF" stroke="#3B3226" stroke-width="1.2"/>'
+                     for i in range(int(w // 14) + 1))
+    body = f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h:.1f}" rx="{min(h / 2, 12):.1f}" fill="#FFFFFF" stroke="#3B3226" stroke-width="1.2"/>'
+    cover = f'<rect x="{x + 1:.1f}" y="{y + 1:.1f}" width="{w - 2:.1f}" height="{h - 2:.1f}" rx="{min(h / 2, 11):.1f}" fill="#FFFFFF"/>'
+    return f'<g>{dots}{bumps}{body}{cover}{inner}</g>'
+
+
 # ------------------------------------------------------------------ gemeinsame Zeichner-Logik
 class Composer:
     """Stilunabhängige Zeichenlogik; der Stil liefert die Bauteile (Methoden mit Präfix r_)."""
@@ -241,7 +256,12 @@ class Composer:
         st = L["st"]
         out = []
         pos = {}  # Mittelpunkte für Handlungslinien
-        # 1. Hintergrund
+        # 1. Hintergrund (bei Nacht dunkler Himmel mit Sternen)
+        night = st.get("night") or "FIG-ZEICHEN-NACHT" in p["signs"]
+        if night:
+            out.append(f'<rect x="0" y="0" width="{W}" height="{FLOOR_Y}" fill="#24304E"/>'
+                       + "".join(f'<circle cx="{x}" cy="{y}" r="{r}" fill="#F2E6CC" opacity=".85"/>'
+                                 for x, y, r in ((22, 30, 1), (58, 14, .8), (96, 26, 1.1), (132, 12, .8), (164, 34, 1), (148, 58, .7), (40, 60, .7), (110, 52, .8))))
         for t in L["band"]:
             out.append(self.r_band(t))
         if not L["band"]:
@@ -321,8 +341,22 @@ class Composer:
         behind = set(st.get("behind", []))
         if behind:
             self._draw_floor(L, st, [t for t in L["floor"] if t in behind], out, pos)
-        # 4. Personen
+        # 4. Personen (stage.on: Figur steht auf einem Ort, z. B. auf dem Berg)
         slots = L["row"]
+        self._lift = {}
+        onmap = st.get("on") or {}
+        for i_, s_ in enumerate(slots):
+            o_ = onmap.get(s_["fid"])
+            if o_ and o_ in pos:
+                ox, oy = pos[o_]
+                oh = self.m(o_)[1][1]
+                peers = [f for f, oo in onmap.items() if oo == o_]
+                k_ = peers.index(s_["fid"])
+                if not (st.get("x") or {}).get(s_["fid"]):
+                    s_["x"] = ox + (k_ - (len(peers) - 1) / 2) * 22
+                self._lift[s_["fid"]] = max(0, FLOOR_Y - (oy - oh * .02))
+        for f_ in st.get("on_water") or []:  # geht auf dem Wasser: Figur steht über den Wellen (Blindtest: Jesus stand so tief wie Petrus)
+            self._lift[f_] = getattr(self, "water_lift", 16)
         sp_idx = ad_idx = None
         names = [s["fid"] for s in slots]
         for s in L["speech"]:
@@ -344,7 +378,16 @@ class Composer:
             hold = st.get("hold", {}).get(s["fid"])
             if to_god and hold is None:
                 hold = "PRAY"
+            n0 = len(out)
             heads[s["fid"]] = self.r_person(s, len(slots), look, arm, hold, p, out)
+            lift = self._lift.get(s["fid"], 0)
+            if lift:
+                out[n0:] = [f'<g transform="translate(0 {-lift:.1f})">{"".join(out[n0:])}</g>']
+                heads[s["fid"]] = (heads[s["fid"]][0], heads[s["fid"]][1] - lift)
+                if s["fid"] in (st.get("on_water") or []):
+                    wx, wy = s["x"], getattr(self, "water_feet", FLOOR_Y) - lift + 3
+                    out.append(f'<path d="M{wx - 22:.1f} {wy:.1f}q5.5 -4 11 0t11 0t11 0t11 0" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"/>'
+                               f'<path d="M{wx - 22:.1f} {wy:.1f}q5.5 -4 11 0t11 0t11 0t11 0" fill="none" stroke="#3E7CA6" stroke-width="1" stroke-linecap="round"/>')
             pos[s["fid"]] = (heads[s["fid"]][0], heads[s["fid"]][1] + self.head_r() * 1.9)  # Körper, nicht Gesicht
         # 5. Gegenstände am Boden: eigener Platz am Rand
         cnt = st.get("count", {})
@@ -388,12 +431,16 @@ class Composer:
                     out.append(self.r_sym(t, hx - w - 14 if hx > W / 2 else hx + 14, hy - h / 2 - 2, w, h))
                 else:
                     out.append(self.r_sym(t, min(W - w - 4, max(26, hx - w / 2)), max(4, hy - self.head_r() - h - 3), w, h))
+                    pos.setdefault(t, (min(W - w - 4, max(26, hx - w / 2)) + w / 2, max(4, hy - self.head_r() - h - 3) + h / 2))
             elif f in sky:
                 x, y, w0, h0 = sky[f]
                 out.append(self.r_sym(t, x + w0 + 2 if x < W / 2 else x - w - 2, y + h0 - h, w, h))
             elif f in pos:
                 x, y = pos[f]
-                out.append(self.r_sym(t, x - w / 2, y - h - 4, w, h))
+                if f in L["back"] or f in bigpos:  # über dem Ort bzw. Gegenstand, nicht auf seiner Mitte
+                    y = y - self.m(f)[1][1] * .5 + 2
+                out.append(self.r_sym(t, x - w / 2, max(2, y - h - 4), w, h))
+                pos[t] = (x, max(2, y - h - 4) + h / 2)
         for t, f in (st.get("beside") or {}).items():
             w, h = self.m(t)[1]
             if f in heads:
@@ -440,20 +487,32 @@ class Composer:
         arrows(False)
         # 10. Sprechblasen
         bubbles = []
-        for sp in L["speech"][:2]:
+        # Blindtest Matthäus: Folgeblasen derselben Figur wurden als «Blase an Blase» gelesen. Darum alles, was eine Figur sagt,
+        # in eine Blase (Teile durch einen feinen Strich getrennt); so bleibt auch Platz für einen zweiten Sprecher.
+        merged = []
+        for sp in L["speech"]:
+            prev = next((m for m in merged if m["from"] == sp["from"] and bool(m.get("think")) == bool(sp.get("think"))), None)
+            if prev is not None:
+                prev["icons"] = list(prev["icons"]) + ["|"] + list(sp["icons"])
+            else:
+                merged.append(dict(sp))
+        for sp in merged[:2]:
             if sp["from"] in heads:
                 tx, ty = heads[sp["from"]]
                 ty -= self.head_r()
             elif sp["from"] in sky:
                 x, y, w0, h0 = sky[sp["from"]]
                 tx, ty = (x + w0, y + h0 / 2) if x < W / 2 else (x, y + h0 / 2)
+            elif sp["from"] in pos:  # sprechendes Bauteil (z. B. Satan als Schatten): Spitze an den oberen Rand
+                tx, ty = pos[sp["from"]]
+                ty -= self.m(sp["from"])[1][1] * .4
             else:
                 continue
             bubbles.append((sp, tx, ty))
         placed, drawn = [], []
         for k, (sp, tx, ty) in enumerate(bubbles):
             ih = self.icon_h()
-            ws = [icon_w(self.vb(i), ih) for i in sp["icons"]]
+            ws = [4.0 if i == "|" else icon_w(self.vb(i), ih) for i in sp["icons"]]
             bw = sum(ws) + 5 * (len(ws) - 1) + 12
             avail = W - 32
             god = sp["from"] in sky
@@ -501,18 +560,18 @@ class Composer:
                 px, pw, pbot, ph = placed[same[0]]
                 ptop = pbot - ph
                 lo_x = 28 if ptop < 24 else 4  # Feldnummer oben links frei lassen
-                besides = [c for c in (px + pw + 5, px - bw - 5) if lo_x <= c <= W - 4 - bw]
+                besides = [c for c in (px + pw + 5,) if lo_x <= c <= W - 4 - bw]  # nur rechts daneben (Leserichtung)
                 besides = [c for c in besides if not any(c < gx + gw + 4 and c + bw > gx - 4 and ptop < gy + gh + 2 and ptop + bh > gy - 2
                                                          for gx, gy, gw, gh in list(sky.values()))]
                 if not besides:  # zu breit: Zeichen etwas verkleinern, damit die Blase neben die erste passt (statt den Kopf zu verdecken)
-                    room = max(W - 4 - (px + pw + 5), px - 5 - lo_x)
+                    room = W - 4 - (px + pw + 5)
                     if room >= bw * .72:
                         sc = (room - 12 - 5 * (len(ws) - 1)) / sum(ws)
                         ws = [w * sc for w in ws]
                         ih *= sc
                         bw = sum(ws) + 5 * (len(ws) - 1) + 12
                         bh = ih + 12
-                        cand = px + pw + 5 if W - 4 - (px + pw + 5) >= bw - .5 else px - bw - 5
+                        cand = px + pw + 5
                         if not any(cand < gx + gw + 4 and cand + bw > gx - 4 and ptop < gy + gh + 2 and ptop + bh > gy - 2 for gx, gy, gw, gh in sky.values()):
                             besides = [cand]
                 if besides:
@@ -521,6 +580,13 @@ class Composer:
                     tx, ty = (px + pw - 3, ptop + ph / 2) if bx > px else (px + 3, ptop + ph / 2)
                 else:
                     by = pbot + 5
+                    room_h = ty - 6 - by
+                    if bh > room_h and not god:
+                        sc = max(.55, (room_h - 12) / ih)
+                        ws = [w * sc for w in ws]
+                        ih *= sc
+                        bw = sum(ws) + 5 * (len(ws) - 1) + 12
+                        bh = ih + 12
                     bx = max(28 if by < 24 else 4, min(W - 4 - bw, px))
                     link = same[0]
             if not god and not same and ty - (by + bh) < 6:
@@ -540,23 +606,41 @@ class Composer:
                         bh = ih + 12
             inner, x = [], bx + 6
             for i, w in zip(sp["icons"], ws):
-                inner.append(self.r_icon(i, x, by + 6, w, ih))
+                if i == "|":
+                    inner.append(f'<line x1="{x + w / 2:.1f}" y1="{by + 8:.1f}" x2="{x + w / 2:.1f}" y2="{by + 4 + ih:.1f}" stroke="#3B3226" stroke-width=".7" stroke-dasharray="2 2"/>')
+                else:
+                    inner.append(self.r_icon(i, x, by + 6, w, ih))
                 x += w + 5
             if link is not None:  # obere Blase zeigt auf die untere (verbundene Blasen)
                 lb = drawn[link]
-                drawn[link] = (lb[0], lb[1], lb[2], lb[3], bx + bw / 2, by + 3, lb[6])
-            drawn.append((bx, by, bw, bh, tx, ty, "".join(inner)))
+                drawn[link] = (lb[0], lb[1], lb[2], lb[3], bx + bw / 2, by + 3, lb[6], lb[7])
+            drawn.append((bx, by, bw, bh, tx, ty, "".join(inner), bool(sp.get("think"))))
             placed.append((bx, bw, by + bh, bh))
         for d_ in drawn:
-            out.append(self.r_bubble(*d_))
+            if d_[7]:
+                out.append(think_bubble(*d_[:7]))
+            else:
+                out.append(self.r_bubble(*d_[:7]))
         # 11. freie Zeichen oben (unter den Blasen)
         top = max([b[2] for b in placed] + [6]) + 4
         free = list(L["air"])
         if free:
             tot = sum((self.m(t)[1][0] + 3) * min(int(cnt.get(t, 1)), 6) for t in free) + 6 * (len(free) - 1)
             x = st.get("air_x", max(28, (W - tot) / 2))
-            k = min(1.0, (W - 6 - x) / tot) if tot else 1
             y = st.get("air_y", top if top < 60 else 10)
+            if "air_y" not in st and top >= 60 and placed:
+                # tiefe Blasen: Zeichen neben die Blasen (Blindtest: Zeichen standen in einer Sprechblase)
+                right = max(px + pw for px, pw, pb, ph in placed) + 6
+                left = min(px for px, pw, pb, ph in placed) - 6
+                if W - 6 - right >= tot * .6:
+                    x = st.get("air_x", right)
+                elif left - 28 >= tot * .6:
+                    x = st.get("air_x", 28)
+                else:
+                    y = min(top, 70)
+            k = min(1.0, (W - 6 - x) / tot) if tot else 1
+            if y == 10 and "air_x" not in st and placed and x < min(px for px, pw, pb, ph in placed):
+                k = min(k, (min(px for px, pw, pb, ph in placed) - 6 - x) / tot)
             for t in free:
                 w, h = self.m(t)[1]
                 w, h = w * k, h * k

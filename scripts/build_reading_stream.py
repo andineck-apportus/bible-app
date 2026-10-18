@@ -52,6 +52,8 @@ for sec in study["sections"]:
     section_of[sec["id"]] = sec["id"]
     for part in sec["parts"]:
         section_of[part["id"]] = sec["id"]
+merged_into = {m: sec["id"] for sec in study["sections"] for m in sec.get("merged", [])}  # Zwischenebenen (z. B. Mt 6,5–15)
+section_of.update(merged_into)
 background = []
 overview = []  # Hintergrund der oberen Ebenen (Bibel, Testament, Buchgruppe, Buch)
 for b in bg_recs.values():
@@ -66,6 +68,8 @@ for b in bg_recs.values():
         continue
     if b["subject"] not in section_of:
         continue  # Notiz zu einem Abschnitt, der im Lesestrom noch nicht ausgearbeitet ist
+    if b["subject"] in merged_into:
+        b = {**b, "subject": merged_into[b["subject"]]}
     ref = b["reference"]
     a, _, z = ref.partition("-")
     book, ch, v0 = a.split(".")
