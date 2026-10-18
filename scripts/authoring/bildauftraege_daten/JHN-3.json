@@ -81,8 +81,8 @@
     ],
     "action_de": "Jesus streicht dem Blinden einen Brei aus Speichel auf die Augen und schickt ihn: Geh, wasch dich im Teich Siloam. Er geht hin, wäscht sich und kommt sehend zurück.",
     "action_gsw": "De Jesus striicht em Blinde en Brei us Spöiz uf d Auge und schickt en: Gang, wäsch di im Teich Siloam. Er gaat hii, wäscht sich und chunnt sehend zrugg.",
-    "caption_de": "Heilung: Jesus berührt die Augen des Blinden (Hand mit Lichtstrahlen) und schickt ihn zum Teich Siloam (Becken mit Stufen, Pfeil).",
-    "caption_gsw": "Heilig: De Jesus berüert d Auge vom Blinde (Hand mit Liechtstrahle) und schickt en zum Teich Siloam (Becki mit Stäge, Pfiil).",
+    "caption_de": "Jesus → Blinder → Siloam: Jesus berührt die Augen des Blinden (Pfeil zu ihm, Hand mit Lichtstrahlen) und schickt ihn zum Teich Siloam (Becken mit Stufen, gestrichelter Pfeil); dort wird er sehend.",
+    "caption_gsw": "Jesus → Blinde → Siloam: De Jesus berüert d Auge vom Blinde (Pfiil zu im, Hand mit Liechtstrahle) und schickt en zum Teich Siloam (Becki mit Stäge, gstrichlete Pfiil); det wird er gsehnd.",
     "stage": {
      "mood": {
       "FIG-ROLLE-BLINDER": "sleep"
@@ -581,29 +581,15 @@
      "FIG-GRUPPE-PHARISAEER"
     ],
     "objects": [],
-    "signs": [],
-    "speech": [
-     {
-      "from": "FIG-JESUS",
-      "to": "FIG-ROLLE-BLINDER",
-      "icons": [
-       "FIG-ROLLE-BLINDER",
-       "FIG-ZEICHEN-SEHEN"
-      ]
-     },
-     {
-      "from": "FIG-JESUS",
-      "to": "FIG-GRUPPE-PHARISAEER",
-      "icons": [
-       "FIG-GRUPPE-PHARISAEER",
-       "FIG-ZEICHEN-BLIND"
-      ]
-     }
+    "signs": [
+     "FIG-ZEICHEN-SEHEN",
+     "FIG-ZEICHEN-BLIND"
     ],
+    "speech": [],
     "action_de": "Jesus sagt: Zum Gericht bin ich in diese Welt gekommen, damit die nicht Sehenden sehen und die Sehenden blind werden.",
     "action_gsw": "De Jesus seit: Zum Gricht bin ich i die Wält cho, dass die, wo nöd gsehnd, gsehnd und die, wo gsehnd, blind werded.",
-    "caption_de": "Sehen und Blindsein: Jesus sagt: Die nicht sehen, werden sehend (der Geheilte, offenes Auge); die meinen zu sehen, werden blind (die Pharisäer, durchgestrichenes Auge).",
-    "caption_gsw": "Gseh und blind sii: De Jesus seit: Die, wo nöd gsehnd, werded gsehnd (de Gheilt, offes Aug); die, wo meined, si gsäched, werded blind (d Pharisäer, durgstriches Aug).",
+    "caption_de": "Jesus → sehend und blind: Jesus ist zum Gericht gekommen (Pfeile von ihm): Der Geheilte, der nicht sah, wird sehend (offenes Auge über ihm); die Pharisäer, die meinen zu sehen, werden blind (durchgestrichenes Auge über ihnen).",
+    "caption_gsw": "Jesus → gsehnd und blind: De Jesus isch zum Gricht cho (Pfiil vo im): De Gheilt, wo nöd gseh hät, wird gsehnd (offes Aug über im); d Pharisäer, wo meined, si gsäched, werded blind (durgstriches Aug über ine).",
     "stage": {
      "mood": {
       "FIG-ROLLE-BLINDER": "calm",
@@ -614,10 +600,26 @@
       "FIG-ROLLE-BLINDER": "kneel"
      },
      "x": {
-      "FIG-ROLLE-BLINDER": 22,
-      "FIG-JESUS": 62,
-      "FIG-GRUPPE-PHARISAEER": 150
-     }
+      "FIG-ROLLE-BLINDER": 28,
+      "FIG-JESUS": 90,
+      "FIG-GRUPPE-PHARISAEER": 156
+     },
+     "at": {
+      "FIG-ZEICHEN-SEHEN": "FIG-ROLLE-BLINDER",
+      "FIG-ZEICHEN-BLIND": "FIG-GRUPPE-PHARISAEER"
+     },
+     "arrows": [
+      [
+       "FIG-JESUS",
+       "FIG-ROLLE-BLINDER",
+       "act"
+      ],
+      [
+       "FIG-JESUS",
+       "FIG-GRUPPE-PHARISAEER",
+       "act"
+      ]
+     ]
     }
    },
    {
@@ -697,8 +699,8 @@
     ],
     "action_de": "Jesus heilt einen blind geborenen Menschen: Er streicht ihm einen Brei auf die Augen und schickt ihn zum Teich Siloam; er wäscht sich und kommt sehend zurück.",
     "action_gsw": "De Jesus heilt en blind gebore Mänsch: Er striicht em en Brei uf d Auge und schickt en zum Teich Siloam; er wäscht sich und chunnt sehend zrugg.",
-    "caption_de": "Heilung: Jesus berührt die Augen des Blinden (Hand mit Lichtstrahlen) und schickt ihn zum Teich Siloam (Becken mit Stufen, Pfeil).",
-    "caption_gsw": "Heilig: De Jesus berüert d Auge vom Blinde (Hand mit Liechtstrahle) und schickt en zum Teich Siloam (Becki mit Stäge, Pfiil).",
+    "caption_de": "Jesus → Blinder → Siloam: Jesus berührt die Augen des Blinden (Pfeil zu ihm, Hand mit Lichtstrahlen) und schickt ihn zum Teich Siloam (Becken mit Stufen, gestrichelter Pfeil); dort wird er sehend.",
+    "caption_gsw": "Jesus → Blinde → Siloam: De Jesus berüert d Auge vom Blinde (Pfiil zu im, Hand mit Liechtstrahle) und schickt en zum Teich Siloam (Becki mit Stäge, gstrichlete Pfiil); det wird er gsehnd.",
     "stage": {
      "mood": {
       "FIG-ROLLE-BLINDER": "sleep"
@@ -947,8 +949,8 @@
     ],
     "action_de": "Der Hirte ruft seine Schafe mit Namen und führt sie hinaus; er geht vor ihnen her, und sie folgen ihm, weil sie seine Stimme kennen. Einem Fremden folgen sie nicht.",
     "action_gsw": "De Hirt rüeft sini Schaf mit Name und füert si use; er gaat vor ene här, und si folged em, wil si sini Stimm känned. Eme Fremde folged si nöd.",
-    "caption_de": "Sie folgen ihm: Der Hirte ruft seine Schafe (Schaf, Stimme), sie folgen ihm (Pfeil).",
-    "caption_gsw": "Si folged em: De Hirt rüeft sini Schaf (Schaf, Stimm), si folged em (Pfiil).",
+    "caption_de": "Stimme → folgen: Der Hirte ruft seine Schafe (Schaf, Stimme); weil sie seine Stimme kennen, folgen sie ihm (gestrichelter Pfeil zu ihm).",
+    "caption_gsw": "Stimm → folge: De Hirt rüeft sini Schaf (Schaf, Stimm); will si sini Stimm kenned, folged si em (gstrichlete Pfiil zu im).",
     "stage": {
      "x": {
       "FIG-ROLLE-HIRTE": 124
@@ -1088,12 +1090,12 @@
     ],
     "action_de": "Ich bin der gute Hirte; der gute Hirte gibt sein Leben hin für die Schafe. Der Lohnarbeiter dagegen sieht den Wolf kommen, lässt die Schafe im Stich und flieht.",
     "action_gsw": "Ich bi de guet Hirt; de guet Hirt git sis Läbe hii für d Schaf. De Lohnarbeiter dergäge gseht de Wolf cho, laat d Schaf im Stich und flüücht.",
-    "caption_de": "Der gute Hirte: Jesus stellt sich vor die Schafe; der Lohnarbeiter flieht vor dem Wolf (Pfeil).",
-    "caption_gsw": "De guet Hirt: De Jesus stellt sich vor d Schaf; de Lohnarbeiter flüücht vor em Wolf (Pfiil).",
+    "caption_de": "Wolf → Flucht: Der Lohnarbeiter sieht den Wolf kommen, wendet sich ab und flieht (Bewegungsstriche); Jesus, der gute Hirte, bleibt vor den Schafen.",
+    "caption_gsw": "Wolf → Flucht: De Lohnarbeiter gseht de Wolf cho, chert sich ab und flüücht (Bewegigsstrich); de Jesus, de guet Hirt, bliibt vor de Schaf.",
     "stage": {
      "x": {
       "FIG-JESUS": 66,
-      "FIG-ROLLE-LOHNARBEITER": 136
+      "FIG-ROLLE-LOHNARBEITER": 150
      },
      "pose": {
       "FIG-ROLLE-LOHNARBEITER": "away"
@@ -1184,8 +1186,8 @@
     ],
     "action_de": "Der Vater liebt mich, weil ich mein Leben hingebe, um es wieder zu nehmen. Niemand nimmt es mir; ich gebe es von mir aus hin und habe Vollmacht, es wieder zu nehmen. Diesen Auftrag habe ich vom Vater.",
     "action_gsw": "De Vater liebt mich, wil ich mis Läbe hii gib, zum s wider neh. Niemer nimmt mer s; ich gib s vo mir uus hii und ha Vollmacht, s wider z neh. De Uftrag han ich vom Vater.",
-    "caption_de": "Hingeben und wieder nehmen: Jesus betet zum Vater (Strahlenkranz, gefaltete Hände) von Tod und Auferstehung (Grab, Grab mit Pfeil nach oben); der Vater liebt ihn (Herzen).",
-    "caption_gsw": "Härgee und wider neh: De Jesus bätet zum Vater (Strahlechranz, gfalteti Händ) vom Tod und vo de Uferstehig (Grab, Grab mit Pfiil uf); de Vater hät en gärn (Härz).",
+    "caption_de": "Hingabe → Liebe des Vaters: Jesus betet (gefaltete Hände): Ich gebe mein Leben hin und nehme es wieder (Grab, Grab mit Pfeil nach oben); darum liebt ihn der Vater (Herzen beim Strahlenkranz, goldener Pfeil zu Jesus).",
+    "caption_gsw": "Härgee → Liebi vom Vater: De Jesus bätet (gfalteti Händ): Ich gib mis Läbe här und nimm s wider (Grab, Grab mit Pfiil uf); drum hät en de Vater gärn (Härz bim Strahlechranz, guldige Pfiil zum Jesus).",
     "stage": {
      "god_side": "left",
      "x": {
@@ -1193,7 +1195,14 @@
      },
      "at": {
       "FIG-ZEICHEN-LIEBE": "FIG-GOTT"
-     }
+     },
+     "arrows": [
+      [
+       "FIG-GOTT",
+       "FIG-JESUS",
+       "act"
+      ]
+     ]
     }
    }
   ],
@@ -1603,12 +1612,12 @@
     ],
     "action_de": "Ich bin der gute Hirte; der gute Hirte gibt sein Leben hin für die Schafe. Der Lohnarbeiter dagegen sieht den Wolf kommen, lässt die Schafe im Stich und flieht.",
     "action_gsw": "Ich bi de guet Hirt; de guet Hirt git sis Läbe hii für d Schaf. De Lohnarbeiter dergäge gseht de Wolf cho, laat d Schaf im Stich und flüücht.",
-    "caption_de": "Der gute Hirte: Jesus stellt sich vor die Schafe; der Lohnarbeiter flieht vor dem Wolf (Pfeil).",
-    "caption_gsw": "De guet Hirt: De Jesus stellt sich vor d Schaf; de Lohnarbeiter flüücht vor em Wolf (Pfiil).",
+    "caption_de": "Wolf → Flucht: Der Lohnarbeiter sieht den Wolf kommen, wendet sich ab und flieht (Bewegungsstriche); Jesus, der gute Hirte, bleibt vor den Schafen.",
+    "caption_gsw": "Wolf → Flucht: De Lohnarbeiter gseht de Wolf cho, chert sich ab und flüücht (Bewegigsstrich); de Jesus, de guet Hirt, bliibt vor de Schaf.",
     "stage": {
      "x": {
       "FIG-JESUS": 66,
-      "FIG-ROLLE-LOHNARBEITER": 136
+      "FIG-ROLLE-LOHNARBEITER": 150
      },
      "pose": {
       "FIG-ROLLE-LOHNARBEITER": "away"
@@ -2349,8 +2358,8 @@
     ],
     "action_de": "Jesus ruft mit lauter Stimme: Lazarus, komm heraus! Der Tote kommt heraus, an Füssen und Händen mit Binden umwickelt, das Gesicht mit einem Schweisstuch umbunden. Jesus sagt: Bindet ihn los und lasst ihn gehen!",
     "action_gsw": "De Jesus rüeft mit luuter Stimm: Lazarus, chumm use! De Tot chunnt use, a Füess und Händ mit Binde iigwicklet, s Gsicht mit eme Schweisstuech umbunde. De Jesus seit: Bindet en los und lönd en gaa!",
-    "caption_de": "Lazarus, komm heraus! (Grab mit Pfeil nach oben): Lazarus kommt mit Binden aus dem offenen Grab; die Leute staunen.",
-    "caption_gsw": "Lazarus, chumm use! (Grab mit Pfiil ufe): De Lazarus chunnt mit Binde us em offne Grab; d Lüüt stuuned.",
+    "caption_de": "Ruf → Lazarus kommt heraus: Jesus ruft: Lazarus, komm heraus! (Grab mit Pfeil nach oben; Pfeil von Jesus zu Lazarus) – Lazarus kommt mit Binden aus dem offenen Grab; die Leute staunen.",
+    "caption_gsw": "Ruef → de Lazarus chunnt use: De Jesus rüeft: Lazarus, chumm use! (Grab mit Pfiil ufe; Pfiil vom Jesus zum Lazarus) – de Lazarus chunnt mit Binde us em offne Grab; d Lüüt stuuned.",
     "stage": {
      "back_side": "right",
      "x": {
@@ -2687,8 +2696,8 @@
     ],
     "action_de": "Jesus ruft mit lauter Stimme: Lazarus, komm heraus! Der Tote kommt heraus, an Füssen und Händen mit Binden umwickelt, das Gesicht mit einem Schweisstuch umbunden. Jesus sagt: Bindet ihn los und lasst ihn gehen!",
     "action_gsw": "De Jesus rüeft mit luuter Stimm: Lazarus, chumm use! De Tot chunnt use, a Füess und Händ mit Binde iigwicklet, s Gsicht mit eme Schweisstuech umbunde. De Jesus seit: Bindet en los und lönd en gaa!",
-    "caption_de": "Lazarus, komm heraus! (Grab mit Pfeil nach oben): Lazarus kommt mit Binden aus dem offenen Grab; die Leute staunen.",
-    "caption_gsw": "Lazarus, chumm use! (Grab mit Pfiil ufe): De Lazarus chunnt mit Binde us em offne Grab; d Lüüt stuuned.",
+    "caption_de": "Ruf → Lazarus kommt heraus: Jesus ruft: Lazarus, komm heraus! (Grab mit Pfeil nach oben; Pfeil von Jesus zu Lazarus) – Lazarus kommt mit Binden aus dem offenen Grab; die Leute staunen.",
+    "caption_gsw": "Ruef → de Lazarus chunnt use: De Jesus rüeft: Lazarus, chumm use! (Grab mit Pfiil ufe; Pfiil vom Jesus zum Lazarus) – de Lazarus chunnt mit Binde us em offne Grab; d Lüüt stuuned.",
     "stage": {
      "back_side": "right",
      "x": {
@@ -3103,8 +3112,8 @@
     ],
     "action_de": "Jesus antwortet: Gekommen ist die Stunde, dass der Menschensohn verherrlicht wird. Wenn das Weizenkorn nicht in die Erde fällt und stirbt, bleibt es allein; wenn es aber stirbt, bringt es viel Frucht.",
     "action_gsw": "De Jesus antwortet: D Stund isch cho, dass de Mänschesohn verherrlicht wird. Wänn s Weizechorn nöd i d Ärde gheit und stirbt, bliibt s elei; wänn s aber stirbt, bringt s vill Frucht.",
-    "caption_de": "Das Weizenkorn: Die Stunde ist da (Sanduhr); das Korn fällt hinab (Pfeil nach unten) und bringt viel Frucht (Ähren).",
-    "caption_gsw": "S Weizechorn: D Stund isch da (Sanduhr); s Chorn fallt abe (Pfiil abe) und bringt vill Frucht (Ähre).",
+    "caption_de": "Korn stirbt → viel Frucht: Jesus sagt: Die Stunde ist da (Sanduhr); wenn das Weizenkorn in die Erde fällt (Korn, Pfeil nach unten) und stirbt, bringt es viel Frucht (Ähren).",
+    "caption_gsw": "Chorn stirbt → vill Frucht: De Jesus seit: D Stund isch da (Sanduhr); wänn s Weizechorn i d Ärde fallt (Chorn, Pfiil abe) und stirbt, bringt s vill Frucht (Ähre).",
     "stage": {
      "mood": {
       "FIG-PHILIPPUS": "pensive",
@@ -3376,8 +3385,8 @@
     ],
     "action_de": "Wer seine Worte nicht annimmt, den richtet das Wort am letzten Tag. Jesus redet nicht aus sich selbst; der Vater, der ihn gesandt hat, hat ihm geboten, was er sagen soll, und sein Gebot ist ewiges Leben.",
     "action_gsw": "Wer sini Wort nöd aanimmt, dä richtet s Wort am letschte Tag. De Jesus redt nöd us sich sälber; de Vater, wo-n-en gschickt hät, hät em botte, was er söll säge, und sis Gebot isch ewigs Läbe.",
-    "caption_de": "Das Gebot des Vaters: Der Vater (Strahlenkranz) gibt Jesus sein Gebot (Tafel), was er sagen soll; Jesus sagt: Sein Gebot ist ewiges Leben (Spross im Ring).",
-    "caption_gsw": "S Gebot vom Vater: De Vater (Strahlechranz) git em Jesus sis Gebot (Tafele), was er säge söll; de Jesus seit: Sis Gebot isch ewigs Läbe (Schoss im Ring).",
+    "caption_de": "Vater → Jesus → Menschen: Der Vater (Strahlenkranz) gibt Jesus sein Gebot (Tafel), was er sagen soll; Jesus sagt es den Menschen weiter: Sein Gebot ist ewiges Leben (Spross im Ring).",
+    "caption_gsw": "Vater → Jesus → Mänsche: De Vater (Strahlechranz) git em Jesus sis Gebot (Tafele), was er säge söll; de Jesus seit s de Mänsche wiiter: Sis Gebot isch ewigs Läbe (Schoss im Ring).",
     "stage": {
      "god_side": "right",
      "x": {
@@ -3525,8 +3534,8 @@
     ],
     "action_de": "Jesus antwortet: Gekommen ist die Stunde, dass der Menschensohn verherrlicht wird. Wenn das Weizenkorn nicht in die Erde fällt und stirbt, bleibt es allein; wenn es aber stirbt, bringt es viel Frucht.",
     "action_gsw": "De Jesus antwortet: D Stund isch cho, dass de Mänschesohn verherrlicht wird. Wänn s Weizechorn nöd i d Ärde gheit und stirbt, bliibt s elei; wänn s aber stirbt, bringt s vill Frucht.",
-    "caption_de": "Das Weizenkorn: Die Stunde ist da (Sanduhr); das Korn fällt hinab (Pfeil nach unten) und bringt viel Frucht (Ähren).",
-    "caption_gsw": "S Weizechorn: D Stund isch da (Sanduhr); s Chorn fallt abe (Pfiil abe) und bringt vill Frucht (Ähre).",
+    "caption_de": "Korn stirbt → viel Frucht: Jesus sagt: Die Stunde ist da (Sanduhr); wenn das Weizenkorn in die Erde fällt (Korn, Pfeil nach unten) und stirbt, bringt es viel Frucht (Ähren).",
+    "caption_gsw": "Chorn stirbt → vill Frucht: De Jesus seit: D Stund isch da (Sanduhr); wänn s Weizechorn i d Ärde fallt (Chorn, Pfiil abe) und stirbt, bringt s vill Frucht (Ähre).",
     "stage": {
      "mood": {
       "FIG-PHILIPPUS": "pensive",
