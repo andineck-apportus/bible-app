@@ -7,7 +7,7 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     await p.goto('file://'+path.join(__dirname,'../app/bible/index.html'));await p.waitForTimeout(800);
     assert(await p.$('.has-ill .ill-img svg'),'Bild auf der Ebene Bibel');
     assert.equal(await p.$$eval('.ill-styles',x=>x.length),1,'Stil-Umschalter auch auf der Ebene Bibel (Symbol und Anime)');
-    await p.click('[data-action=menu]');await p.fill('input[type=search]','Joh 2,1');await p.waitForTimeout(300);await p.click('.results button');await p.waitForTimeout(900);
+    await p.click('[data-action=index]');await p.fill('input[type=search]','Joh 2,1');await p.waitForTimeout(300);await p.click('.results button');await p.waitForTimeout(900);
     while(+await p.evaluate(()=>document.querySelector('.app').dataset.level)>5){await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));await p.click('[data-action=up]');await p.waitForTimeout(800);}
     assert(await p.$$eval('.has-ill .ill-styles',x=>x.length)>=3,'Stil-Umschalter bei den Abschnitten von Johannes 2 (und den geladenen Nachbarn)');
     assert.equal(await p.$eval('.has-ill .ill-styles button',e=>e.dataset.illStyle),'symbol','Symbol zuerst');

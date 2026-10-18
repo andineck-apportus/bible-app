@@ -16,7 +16,7 @@ server.listen(0,async()=>{const url=`http://localhost:${server.address().port}/i
     const ov=await ev(()=>document.querySelector('.sheet').innerText);
     assert(ov.includes('Eine Bibliothek aus rund tausend Jahren')&&!ov.includes('[['),'Hintergrund der Bibel');
     await ev(()=>document.querySelector('[data-close]').click());
-    await ev(()=>document.querySelector('[data-action=menu]').click());await ev(()=>document.querySelector('.sheet [data-go^="TU-MAT-006"]').click());await wait();
+    await ev(()=>document.querySelector('[data-action=index]').click());await ev(()=>document.querySelector('.sheet [data-go^="TU-MAT-006"]').click());await wait();
     assert(reqs.includes('b/MAT')&&reqs.includes('l/de/MAT')&&!reqs.some(x=>x.includes('gsw')),'nur Matthäus und Hochdeutsch geladen');
     await ev(()=>document.querySelector('[data-action=down]').click());await wait();  // ganzes Kapitel Mt 6: die ersten zehn Verse sind gesetzt
     assert.equal(await ev(()=>document.querySelector('[data-stream="v39-6-10"] .stream-copy').textContent),'dein Reich komme; dein Wille geschehe, wie im Himmel, so auch auf Erden.');

@@ -10,7 +10,7 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     await p.goto('file://'+path.join(__dirname,'../app/bible/index.html'));await p.waitForTimeout(800);
     const said=()=>p.evaluate(()=>window.__said.filter(Boolean));const label=()=>p.textContent('.player-label');
     assert(await p.$('.player[hidden]'),'Player zu Beginn verborgen');
-    await p.click('[data-action=menu]');await p.fill('input[type=search]','Joh 3,1');await p.waitForTimeout(300);await p.click('.results button');await p.waitForTimeout(800);
+    await p.click('[data-action=index]');await p.fill('input[type=search]','Joh 3,1');await p.waitForTimeout(300);await p.click('.results button');await p.waitForTimeout(800);
     assert(await p.$('.chapter-head [data-read]')&&await p.$('.part-head [data-read]'),'Startknöpfe bei Kapitel- und Abschnittstitel');
     await p.click('.part-head [data-read]');await p.waitForTimeout(2600);
     const s=await said();assert.deepEqual(s.slice(0,2),['Johannes 3','Jesus und Nikodemus'],'Kapitel- und Abschnittstitel einzeln, ohne Schlusspunkt (sonst «Johannes dritter»)');assert(s[2].startsWith('Es war aber ein Mensch'),'dann Vers 1: '+s[2]);
@@ -27,9 +27,9 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     await p.click('[data-ra=close]');assert(await p.$eval('.player',e=>e.hidden),'im Player schliessbar');assert(!await p.$('.stream-entry.reading'),'Markierung entfernt');
     await p.click('[data-action=up]');await p.waitForTimeout(600);await p.click('.stream-entry h2 [data-read]');await p.waitForTimeout(400);
     assert(!(await p.$eval('.player',e=>e.hidden)),'Start auf Abschnittsebene');
-    await p.click('[data-ra=close]');await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));await p.waitForTimeout(300);await p.click('[data-action=menu]');await p.fill('input[type=search]','1 Joh 2,1');await p.waitForTimeout(300);await p.click('.results button');await p.waitForTimeout(800);
+    await p.click('[data-ra=close]');await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));await p.waitForTimeout(300);await p.click('[data-action=index]');await p.fill('input[type=search]','1 Joh 2,1');await p.waitForTimeout(300);await p.click('.results button');await p.waitForTimeout(800);
     await p.evaluate(()=>{window.__said=[];});await p.click('[data-stream="v61-2-1"] .chapter-head [data-read]');await p.waitForTimeout(1500);assert.equal((await said())[0],'Erster Johannes 2','Buchnummer als Ordnungszahl');
-    await p.click('[data-ra=close]');await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));await p.waitForTimeout(300);await p.click('[data-action=menu]');await p.fill('input[type=search]','Rut 1,1');await p.waitForTimeout(300);await p.click('.results button');await p.waitForTimeout(800);
+    await p.click('[data-ra=close]');await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));await p.waitForTimeout(300);await p.click('[data-action=index]');await p.fill('input[type=search]','Rut 1,1');await p.waitForTimeout(300);await p.click('.results button');await p.waitForTimeout(800);
     await p.evaluate(()=>{window.__said=[];});await p.click('[data-stream="v7-1-1"] .chapter-head [data-read]');await p.waitForTimeout(5000);
     {const t=(await said()).join(' ');assert(t.includes('Jahwe')&&!t.includes('JHWH'),'Gottesname JHWH wird als «Jahwe» vorgelesen');}
     assert.deepEqual(errs,[],'keine Skriptfehler');
