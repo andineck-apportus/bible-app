@@ -598,13 +598,14 @@ def apanel(i, n, body):
 def alayout(bodies):
     n = len(bodies)
     head = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}"><rect width="{w}" height="{h}" fill="#FFFDF6"/>'
+    # höchstens zwei Spalten, alle Felder gleich gross (lesbar auf dem Handy); ein Feld allein in Feldgrösse (die App zeigt es halb breit)
     if n == 1:
-        return head.format(w=380, h=290) + f'<g transform="translate(4 4) scale(2)">' + apanel(0, 1, bodies[0]) + "</g></svg>"
+        return head.format(w=194, h=148) + '<g transform="translate(4 4)">' + apanel(0, 1, bodies[0]) + "</g></svg>"
     if n == 2:
         return head.format(w=380, h=148) + "".join(f'<g transform="translate({4 + i * 188} 4)">' + apanel(i, i + 1, b) + "</g>" for i, b in enumerate(bodies)) + "</svg>"
     if n == 3:
-        sc = 124 / 186
-        return head.format(w=380, h=100) + "".join(f'<g transform="translate({2 + i * 126} 2) scale({sc:.4f})">' + apanel(i, i + 1, b) + "</g>" for i, b in enumerate(bodies)) + "</svg>"
+        pos = ((4, 4), (192, 4), (98, 148))
+        return head.format(w=380, h=290) + "".join(f'<g transform="translate({x} {y})">' + apanel(i, i + 1, b) + "</g>" for i, (b, (x, y)) in enumerate(zip(bodies, pos))) + "</svg>"
     return head.format(w=380, h=290) + "".join(f'<g transform="translate({4 + (i % 2) * 188} {4 + (i // 2) * 144})">' + apanel(i, i + 1, b) + "</g>" for i, b in enumerate(bodies)) + "</svg>"
 
 

@@ -177,10 +177,9 @@ def glaube_svg():
 
 
 def kapitel_svg():
-    s = 124 / 186
-    parts = [f'<g transform="translate({i * 128} 0) scale({s:.4f})">' + panel(i + 1, 0, 0, body) + "</g>"
-             for i, body in enumerate((kana_kapitel(), tempel_1(), glaube_1()))]
-    return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 94">' + "".join(parts) + "</svg>"
+    pos = ((0, 0), (194, 0), (97, 148))  # höchstens zwei Spalten
+    parts = [panel(i + 1, x, y, body) for i, (body, (x, y)) in enumerate(zip((kana_kapitel(), tempel_1(), glaube_1()), pos))]
+    return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 288">' + "".join(parts) + "</svg>"
 
 
 def buch_svg():
@@ -345,10 +344,11 @@ def layout(bodies):
         return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 186 140">' + panel(1, 0, 0, bodies[0]) + "</svg>"
     if n == 2:
         return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 140">' + panel(1, 0, 0, bodies[0]) + panel(2, 194, 0, bodies[1]) + "</svg>"
+    # höchstens zwei Spalten, alle Felder gleich gross (lesbar auf dem Handy); bei drei Feldern das dritte mittig darunter
     if n == 3:
-        sc = 124 / 186
-        return ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 94">'
-                + "".join(f'<g transform="translate({i * 128} 0) scale({sc:.4f})">' + panel(i + 1, 0, 0, b) + "</g>" for i, b in enumerate(bodies)) + "</svg>")
+        pos = ((0, 0), (194, 0), (97, 148))
+        return ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 288">'
+                + "".join(panel(i + 1, x, y, b) for i, (b, (x, y)) in enumerate(zip(bodies, pos))) + "</svg>")
     return ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 288">'
             + "".join(panel(i + 1, (i % 2) * 194, (i // 2) * 148, b) for i, b in enumerate(bodies)) + "</svg>")
 
