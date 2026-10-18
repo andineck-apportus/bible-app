@@ -32,7 +32,6 @@
           "to": "FIG-ROLLE-HAUPTMANN",
           "icons": [
             "FIG-ZEICHEN-WEG",
-            "FIG-ORT-HAUS",
             "FIG-ZEICHEN-HEILEN"
           ]
         }
@@ -131,8 +130,7 @@
         "FIG-ORT-HAUS"
       ],
       "signs": [
-        "FIG-ZEICHEN-HEILEN",
-        "FIG-ZEICHEN-ABSTAND"
+        "FIG-ZEICHEN-HEILEN"
       ],
       "speech": [
         {
@@ -146,7 +144,6 @@
       ],
       "action_de": "Jesus sagt zum Hauptmann: Geh! Wie du geglaubt hast, soll dir geschehen. In jener Stunde wird der Diener gesund.",
       "stage": {
-        "split": 2,
         "back_side": "right",
         "at": {
           "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-DIENER"
@@ -154,6 +151,11 @@
         "mood": {
           "FIG-ROLLE-HAUPTMANN": "smile",
           "FIG-ROLLE-DIENER": "delight"
+        },
+        "x": {
+          "FIG-JESUS": 28,
+          "FIG-ROLLE-HAUPTMANN": 66,
+          "FIG-ROLLE-DIENER": 124
         }
       }
     }
@@ -165,10 +167,10 @@
     "Jesus sagt zum Hauptmann: Geh! Wie du geglaubt hast, soll dir geschehen. In jener Stunde wird der Diener gesund."
   ],
   "captions_de": [
-    "Die Bitte: Ein Hauptmann (Helm, rostroter Umhang mit Goldsaum) sagt: Mein Diener (Schürze) liegt krank (liegende Figur auf einer Matte); Jesus: Ich komme in dein Haus und heile (Weg, Haus, berührende Hand).",
+    "Die Bitte: Ein Hauptmann (Helm, rostroter Umhang mit goldenem Kragen) sagt: Mein Diener (Schürze) liegt krank (liegende Figur auf einer Matte); Jesus: Ich komme und heile ihn (Weg, berührende Hand).",
     "Nur ein Wort: Der Hauptmann, hinter ihm seine Soldaten (Helm, roter Umhang), sagt: Nicht in mein Haus (Haus, rotes X); sprich nur ein Wort, und mein Diener wird gesund (Schallwellen, Diener, berührende Hand).",
     "So ein Glaube: Jesus staunt und sagt zu denen, die ihm folgen: Solchen Glauben hat der Hauptmann (Herz mit Lichtstrahl, Hauptmann); viele aus den Völkern werden mit Abraham im Reich der Himmel sein (Völker, alter Mann mit weissem Bart, goldene Krone mit Lichtstrahlen).",
-    "Wie du geglaubt hast: Jesus sagt zum Hauptmann: Dein Glaube – geheilt (Herz mit Lichtstrahl, berührende Hand); zur selben Stunde steht der Diener gesund vor dem Haus (grüner Lichtpunkt)."
+    "Wie du geglaubt hast: Jesus sagt zum Hauptmann: Dein Glaube – geheilt (Herz mit Lichtstrahl, berührende Hand); zur selben Stunde wird der Diener daheim gesund (berührende Hand mit grünem Lichtpunkt über ihm, Haus)."
   ],
   "interpretation_note_de": "Der Hauptmann ist ein Offizier (wohl im Dienst des Herodes Antipas oder Roms); das Bild zeigt ihn wie einen römischen Soldaten mit Goldsaum und Stab. Das Wort von der äusseren Finsternis ([[MAT.8.12]]) ist nicht gezeichnet. Isaak und Jakob sind nicht eigens dargestellt; Abraham steht für die Väter. Feld 4 zeigt Hauptmann und Diener getrennt (gestrichelte Linie), weil Jesus nicht ins Haus geht.",
   "basis": [
@@ -207,5 +209,169 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.8.5-MAT.8.7",
+            "figures": [
+              "FIG-ROLLE-HAUPTMANN",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-HAUPTMANN",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ROLLE-DIENER",
+                  "FIG-ZEICHEN-KRANK"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-HAUPTMANN",
+                "icons": [
+                  "FIG-ZEICHEN-WEG",
+                  "FIG-ORT-HAUS",
+                  "FIG-ZEICHEN-HEILEN"
+                ]
+              }
+            ],
+            "action_de": "In Kafarnaum bittet ein Hauptmann Jesus: Herr, mein Diener liegt gelähmt im Haus und wird schrecklich gequält. Jesus sagt: Ich werde kommen und ihn heilen.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-HAUPTMANN": "worried",
+                "FIG-JESUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.8.8-MAT.8.9",
+            "figures": [
+              "FIG-GRUPPE-SOLDATEN",
+              "FIG-ROLLE-HAUPTMANN",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-HAUPTMANN",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ORT-HAUS",
+                  "FIG-ZEICHEN-NEIN"
+                ]
+              },
+              {
+                "from": "FIG-ROLLE-HAUPTMANN",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-SPRECHEN",
+                  "FIG-ROLLE-DIENER",
+                  "FIG-ZEICHEN-HEILEN"
+                ]
+              }
+            ],
+            "action_de": "Der Hauptmann antwortet: Herr, ich bin nicht wert, dass du unter mein Dach kommst; sprich nur ein Wort, und mein Diener wird gesund. Denn auch er steht unter Befehlsgewalt, und seine Soldaten tun, was er sagt.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-HAUPTMANN": "earnest",
+                "FIG-GRUPPE-SOLDATEN": "calm",
+                "FIG-JESUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.8.10-MAT.8.12",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-GLAUBEN",
+                  "FIG-ROLLE-HAUPTMANN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-GRUPPE-VOELKER",
+                  "FIG-ABRAHAM",
+                  "FIG-ZEICHEN-REICH-GOTTES"
+                ]
+              }
+            ],
+            "action_de": "Jesus staunt und sagt zu denen, die ihm folgen: Bei niemandem in Israel habe ich einen so grossen Glauben gefunden. Viele werden von Osten und Westen kommen und mit Abraham, Isaak und Jakob im Reich der Himmel zu Tisch liegen.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "surprised",
+                "FIG-GRUPPE-MENGE": "pensive"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.8.13",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-HAUPTMANN",
+              "FIG-ROLLE-DIENER"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-HEILEN",
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-HAUPTMANN",
+                "icons": [
+                  "FIG-ZEICHEN-GLAUBEN",
+                  "FIG-ZEICHEN-HEILEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt zum Hauptmann: Geh! Wie du geglaubt hast, soll dir geschehen. In jener Stunde wird der Diener gesund.",
+            "stage": {
+              "split": 2,
+              "back_side": "right",
+              "at": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-DIENER"
+              },
+              "mood": {
+                "FIG-ROLLE-HAUPTMANN": "smile",
+                "FIG-ROLLE-DIENER": "delight"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Die Bitte: Ein Hauptmann (Helm, rostroter Umhang mit Goldsaum) sagt: Mein Diener (Schürze) liegt krank (liegende Figur auf einer Matte); Jesus: Ich komme in dein Haus und heile (Weg, Haus, berührende Hand).",
+          "Nur ein Wort: Der Hauptmann, hinter ihm seine Soldaten (Helm, roter Umhang), sagt: Nicht in mein Haus (Haus, rotes X); sprich nur ein Wort, und mein Diener wird gesund (Schallwellen, Diener, berührende Hand).",
+          "So ein Glaube: Jesus staunt und sagt zu denen, die ihm folgen: Solchen Glauben hat der Hauptmann (Herz mit Lichtstrahl, Hauptmann); viele aus den Völkern werden mit Abraham im Reich der Himmel sein (Völker, alter Mann mit weissem Bart, goldene Krone mit Lichtstrahlen).",
+          "Wie du geglaubt hast: Jesus sagt zum Hauptmann: Dein Glaube – geheilt (Herz mit Lichtstrahl, berührende Hand); zur selben Stunde steht der Diener gesund vor dem Haus (grüner Lichtpunkt)."
+        ]
+      }
+    }
+  ]
 }

@@ -718,7 +718,7 @@ for _k, _v in _SYMS.items():
         COPY.append(_v["sym"])
 EXTRA_META = {k: (v["place"], tuple(v["size"])) for k, v in _SYMS.items()}
 GROUP_KEYS = {"FIG-GRUPPE-MENGE": ("menge2", "menge3", "menge"), "FIG-GRUPPE-ZWOELF": ("juenger2", "juenger", "andreas")}
-POSE_SHIFT = {"sit": 6, "kneel": 11}
+POSE_SHIFT = {"sit": 6, "kneel": 4}
 
 
 class AniComposer(_auto.Composer):

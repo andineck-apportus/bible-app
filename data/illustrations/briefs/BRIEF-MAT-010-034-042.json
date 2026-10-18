@@ -48,26 +48,35 @@
       "n": 2,
       "reference": "MAT.10.37-MAT.10.39",
       "figures": [
-        "FIG-JESUS",
-        "FIG-ROLLE-JUENGER"
+        "FIG-ROLLE-JUENGER",
+        "FIG-JESUS"
       ],
       "objects": [
         "FIG-OBJ-KREUZ"
       ],
-      "signs": [
-        "FIG-ZEICHEN-NACHFOLGEN"
-      ],
+      "signs": [],
       "speech": [],
       "action_de": "Wer Vater oder Mutter, Sohn oder Tochter mehr liebt als ihn oder sein Kreuz nicht auf sich nimmt und ihm nachfolgt, ist seiner nicht würdig; wer sein Leben um seinetwillen verliert, wird es finden.",
       "stage": {
         "hold": {
           "FIG-ROLLE-JUENGER": "FIG-OBJ-KREUZ"
         },
-        "at": {
-          "FIG-ZEICHEN-NACHFOLGEN": "FIG-ROLLE-JUENGER"
+        "arrows": [
+          [
+            "FIG-ROLLE-JUENGER",
+            "FIG-JESUS",
+            "go"
+          ]
+        ],
+        "pose": {
+          "FIG-JESUS": "away"
+        },
+        "x": {
+          "FIG-ROLLE-JUENGER": 40,
+          "FIG-JESUS": 140
         },
         "mood": {
-          "FIG-ROLLE-JUENGER": "determined"
+          "FIG-ROLLE-JUENGER": "calm"
         }
       }
     },
@@ -90,15 +99,12 @@
         "hold": {
           "FIG-ROLLE-MENSCH": "FIG-OBJ-BECHER-WASSER"
         },
-        "arrows": [
-          [
-            "FIG-ROLLE-MENSCH",
-            "FIG-ROLLE-JUENGER",
-            "act"
-          ]
-        ],
         "at": {
           "FIG-ZEICHEN-SCHATZ": "FIG-ROLLE-MENSCH"
+        },
+        "x": {
+          "FIG-ROLLE-MENSCH": 66,
+          "FIG-ROLLE-JUENGER": 128
         },
         "mood": {
           "FIG-ROLLE-MENSCH": "smile",
@@ -114,8 +120,8 @@
   ],
   "captions_de": [
     "Ein Schwert: Jesus sagt: Nicht Frieden, sondern ein Schwert (Olivenzweig, rotes X, Schwert); ein Vater und sein Sohn stehen getrennt (gestrichelte Linie).",
-    "Das Kreuz: Ein Jünger nimmt sein Kreuz (dunkles Holz) auf sich und folgt Jesus nach (Fussspuren).",
-    "Ein Becher Wasser: Ein Mensch gibt einem Jünger einen Becher Wasser (Becher mit blauem Wasser, Bogen); sein Lohn ist ihm gewiss (offene Truhe mit Goldmünzen)."
+    "Das Kreuz: Ein Jünger nimmt sein Kreuz (dunkles Holz) und folgt Jesus nach (gestrichelter Weg zu ihm).",
+    "Ein Becher Wasser: Ein Mensch reicht einem Jünger einen Becher Wasser (Becher mit blauem Wasser); sein Lohn ist ihm gewiss (offene Truhe mit Goldmünzen über ihm)."
   ],
   "interpretation_note_de": "Das Schwert ([[MAT.10.34]]) ist ein Bildwort für Trennung, nicht für Gewalt; es wird nicht gebraucht, nur gezeigt. Ein Vater und ein junger Mann stehen für die genannten Angehörigen ([[MAT.10.35]]). Der Lohn erscheint als Truhe (Deutung).",
   "basis": [
@@ -148,5 +154,117 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.10.34-MAT.10.36",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-VATER",
+              "FIG-ROLLE-JUNGER-MANN"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-VATER",
+                "icons": [
+                  "FIG-ZEICHEN-FRIEDE",
+                  "FIG-ZEICHEN-NEIN",
+                  "FIG-OBJ-SCHWERT"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt, er sei nicht gekommen, Frieden auf die Erde zu bringen, sondern ein Schwert: Er sei gekommen, Menschen mit ihren nächsten Angehörigen zu entzweien.",
+            "stage": {
+              "split": 2,
+              "pose": {
+                "FIG-ROLLE-JUNGER-MANN": "away"
+              },
+              "mood": {
+                "FIG-ROLLE-VATER": "worried",
+                "FIG-JESUS": "earnest"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.10.37-MAT.10.39",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-KREUZ"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NACHFOLGEN"
+            ],
+            "speech": [],
+            "action_de": "Wer Vater oder Mutter, Sohn oder Tochter mehr liebt als ihn oder sein Kreuz nicht auf sich nimmt und ihm nachfolgt, ist seiner nicht würdig; wer sein Leben um seinetwillen verliert, wird es finden.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-JUENGER": "FIG-OBJ-KREUZ"
+              },
+              "at": {
+                "FIG-ZEICHEN-NACHFOLGEN": "FIG-ROLLE-JUENGER"
+              },
+              "mood": {
+                "FIG-ROLLE-JUENGER": "determined"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.10.40-MAT.10.42",
+            "figures": [
+              "FIG-ROLLE-MENSCH",
+              "FIG-ROLLE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-BECHER-WASSER"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SCHATZ"
+            ],
+            "speech": [],
+            "action_de": "Wer die Jünger aufnimmt, nimmt Jesus auf und den, der ihn gesandt hat. Wer einem dieser Kleinen, weil er ein Jünger ist, auch nur einen Becher kaltes Wasser gibt, wird seinen Lohn gewiss nicht verlieren.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-MENSCH": "FIG-OBJ-BECHER-WASSER"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-MENSCH",
+                  "FIG-ROLLE-JUENGER",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-SCHATZ": "FIG-ROLLE-MENSCH"
+              },
+              "mood": {
+                "FIG-ROLLE-MENSCH": "smile",
+                "FIG-ROLLE-JUENGER": "smile"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Ein Schwert: Jesus sagt: Nicht Frieden, sondern ein Schwert (Olivenzweig, rotes X, Schwert); ein Vater und sein Sohn stehen getrennt (gestrichelte Linie).",
+          "Das Kreuz: Ein Jünger nimmt sein Kreuz (dunkles Holz) auf sich und folgt Jesus nach (Fussspuren).",
+          "Ein Becher Wasser: Ein Mensch gibt einem Jünger einen Becher Wasser (Becher mit blauem Wasser, Bogen); sein Lohn ist ihm gewiss (offene Truhe mit Goldmünzen)."
+        ]
+      }
+    }
+  ]
 }

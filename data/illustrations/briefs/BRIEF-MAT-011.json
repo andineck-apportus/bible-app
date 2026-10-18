@@ -13,34 +13,48 @@
       "n": 1,
       "reference": "MAT.11.2-MAT.11.6",
       "figures": [
-        "FIG-JOHANNES-TAEUFER",
         "FIG-GRUPPE-JOHANNES-JUENGER",
         "FIG-JESUS"
       ],
       "objects": [
         "FIG-ORT-GEFAENGNIS"
       ],
-      "signs": [
-        "FIG-ZEICHEN-ABSTAND"
-      ],
+      "signs": [],
       "speech": [
+        {
+          "from": "FIG-GRUPPE-JOHANNES-JUENGER",
+          "to": "FIG-JESUS",
+          "icons": [
+            "FIG-JESUS",
+            "FIG-ZEICHEN-FRAGEN"
+          ]
+        },
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-JOHANNES-JUENGER",
           "icons": [
             "FIG-ZEICHEN-SEHEN",
-            "FIG-ZEICHEN-HOEREN",
-            "FIG-ZEICHEN-REIN"
+            "FIG-ZEICHEN-HOEREN"
           ]
         }
       ],
       "action_de": "Johannes lässt aus dem Gefängnis fragen, ob Jesus der Kommende sei; Jesus verweist auf das, was die Boten hören und sehen.",
       "stage": {
         "back_side": "left",
-        "split": 1,
+        "arrows": [
+          [
+            "FIG-ORT-GEFAENGNIS",
+            "FIG-GRUPPE-JOHANNES-JUENGER",
+            "go"
+          ]
+        ],
+        "x": {
+          "FIG-GRUPPE-JOHANNES-JUENGER": 76,
+          "FIG-JESUS": 156
+        },
         "mood": {
-          "FIG-JOHANNES-TAEUFER": "pensive",
-          "FIG-GRUPPE-JOHANNES-JUENGER": "earnest"
+          "FIG-GRUPPE-JOHANNES-JUENGER": "pensive",
+          "FIG-JESUS": "calm"
         }
       }
     },
@@ -71,11 +85,9 @@
         "hold": {
           "FIG-GRUPPE-KINDER": "FIG-OBJ-FLOETE"
         },
-        "pose": {
-          "FIG-ROLLE-KIND": "away"
-        },
         "mood": {
-          "FIG-GRUPPE-KINDER": "earnest"
+          "FIG-GRUPPE-KINDER": "pensive",
+          "FIG-ROLLE-KIND": "calm"
         }
       }
     },
@@ -118,8 +130,7 @@
         "FIG-JESUS"
       ],
       "objects": [
-        "FIG-OBJ-LAST",
-        "FIG-OBJ-JOCH"
+        "FIG-OBJ-LAST"
       ],
       "signs": [],
       "speech": [
@@ -136,8 +147,7 @@
       "action_de": "Er preist den Vater, der dies den Unmündigen offenbart hat, und lädt die Beladenen ein, sein Joch auf sich zu nehmen.",
       "stage": {
         "hold": {
-          "FIG-GRUPPE-MENGE": "FIG-OBJ-LAST",
-          "FIG-JESUS": "FIG-OBJ-JOCH"
+          "FIG-GRUPPE-MENGE": "FIG-OBJ-LAST"
         },
         "mood": {
           "FIG-GRUPPE-MENGE": "worried",
@@ -153,10 +163,10 @@
     "Er preist den Vater, der dies den Unmündigen offenbart hat, und lädt die Beladenen ein, sein Joch auf sich zu nehmen."
   ],
   "captions_de": [
-    "Bist du es? Aus dem Gefängnis (Steinblock mit vergittertem Fenster) lässt Johannes durch seine Jünger fragen; Jesus antwortet: Blinde sehen, Taube hören, Aussätzige werden rein (offenes Auge, Ohr, weisser Stern).",
+    "Bist du es? Aus dem Gefängnis (Steinblock mit vergittertem Fenster) schickt Johannes seine Jünger (gestrichelter Weg); sie fragen: Bist du es? (Jesus, Fragezeichen); Jesus antwortet: Blinde sehen, Taube hören (offenes Auge, Ohr).",
     "Auf dem Marktplatz: Kinder mit der Flöte (helle Doppelflöte) rufen einem anderen Kind zu: Wir spielten – du tanzt nicht (Flöte, goldene Funken, rotes X).",
     "Wehe: Vor einer Stadt sagt Jesus: Machttaten – und keine Umkehr (goldener Stern, Pfeil im Bogen, rotes X).",
-    "Kommt zu mir: Beladene Menschen (braunes Tuchbündel, oben verschnürt) ruft Jesus zu sich (Bündel, dicker Pfeil, Jesus); er hält sein Joch (hölzernes Joch)."
+    "Kommt zu mir: Beladene Menschen (braunes Tuchbündel, oben verschnürt) ruft Jesus zu sich (Bündel, dicker Pfeil, Jesus)."
   ],
   "interpretation_note_de": "Das Kapitel hat fünf Abschnitte; die Rede Jesu über Johannes ([[MAT.11.7-MAT.11.15]]) ist im Kapitelbild nicht eigens gezeigt. Feld 2 steht für das ganze Gleichnis von den Kindern und den Vorwurf gegen Johannes und Jesus ([[MAT.11.16-MAT.11.19]]).",
   "basis": [
@@ -171,5 +181,157 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.11.2-MAT.11.6",
+            "figures": [
+              "FIG-JOHANNES-TAEUFER",
+              "FIG-GRUPPE-JOHANNES-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-GEFAENGNIS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JOHANNES-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-SEHEN",
+                  "FIG-ZEICHEN-HOEREN",
+                  "FIG-ZEICHEN-REIN"
+                ]
+              }
+            ],
+            "action_de": "Johannes lässt aus dem Gefängnis fragen, ob Jesus der Kommende sei; Jesus verweist auf das, was die Boten hören und sehen.",
+            "stage": {
+              "back_side": "left",
+              "split": 1,
+              "mood": {
+                "FIG-JOHANNES-TAEUFER": "pensive",
+                "FIG-GRUPPE-JOHANNES-JUENGER": "earnest"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.11.16-MAT.11.19",
+            "figures": [
+              "FIG-GRUPPE-KINDER",
+              "FIG-ROLLE-KIND"
+            ],
+            "objects": [
+              "FIG-OBJ-FLOETE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-KINDER",
+                "to": "FIG-ROLLE-KIND",
+                "icons": [
+                  "FIG-OBJ-FLOETE",
+                  "FIG-ZEICHEN-FREUDE",
+                  "FIG-ZEICHEN-NEIN"
+                ]
+              }
+            ],
+            "action_de": "Dieses Geschlecht vergleicht er mit Kindern, die auf nichts eingehen: Johannes nennen sie besessen, den Menschensohn einen Fresser und Weinsäufer.",
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-KINDER": "FIG-OBJ-FLOETE"
+              },
+              "pose": {
+                "FIG-ROLLE-KIND": "away"
+              },
+              "mood": {
+                "FIG-GRUPPE-KINDER": "earnest"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.11.20-MAT.11.24",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-STADT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-STERN",
+                  "FIG-ZEICHEN-UMKEHR",
+                  "FIG-ZEICHEN-NEIN"
+                ]
+              }
+            ],
+            "action_de": "Er spricht Wehe über Chorazin, Betsaida und Kafarnaum, die trotz seiner Machttaten nicht umgekehrt sind.",
+            "stage": {
+              "back_side": "right",
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-MENGE": "pensive"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.11.25-MAT.11.30",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-LAST",
+              "FIG-OBJ-JOCH"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-OBJ-LAST",
+                  "FIG-ZEICHEN-DARAUS",
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Er preist den Vater, der dies den Unmündigen offenbart hat, und lädt die Beladenen ein, sein Joch auf sich zu nehmen.",
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-MENGE": "FIG-OBJ-LAST",
+                "FIG-JESUS": "FIG-OBJ-JOCH"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "worried",
+                "FIG-JESUS": "smile"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Bist du es? Aus dem Gefängnis (Steinblock mit vergittertem Fenster) lässt Johannes durch seine Jünger fragen; Jesus antwortet: Blinde sehen, Taube hören, Aussätzige werden rein (offenes Auge, Ohr, weisser Stern).",
+          "Auf dem Marktplatz: Kinder mit der Flöte (helle Doppelflöte) rufen einem anderen Kind zu: Wir spielten – du tanzt nicht (Flöte, goldene Funken, rotes X).",
+          "Wehe: Vor einer Stadt sagt Jesus: Machttaten – und keine Umkehr (goldener Stern, Pfeil im Bogen, rotes X).",
+          "Kommt zu mir: Beladene Menschen (braunes Tuchbündel, oben verschnürt) ruft Jesus zu sich (Bündel, dicker Pfeil, Jesus); er hält sein Joch (hölzernes Joch)."
+        ]
+      }
+    }
+  ]
 }

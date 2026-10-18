@@ -36,6 +36,10 @@
         },
         "mood": {
           "FIG-GRUPPE-ZWOELF": "calm"
+        },
+        "x": {
+          "FIG-GRUPPE-ZWOELF": 26,
+          "FIG-JESUS": 64
         }
       }
     },
@@ -43,16 +47,13 @@
       "n": 2,
       "reference": "MAT.11.2-MAT.11.3",
       "figures": [
-        "FIG-JOHANNES-TAEUFER",
         "FIG-GRUPPE-JOHANNES-JUENGER",
         "FIG-JESUS"
       ],
       "objects": [
         "FIG-ORT-GEFAENGNIS"
       ],
-      "signs": [
-        "FIG-ZEICHEN-ABSTAND"
-      ],
+      "signs": [],
       "speech": [
         {
           "from": "FIG-GRUPPE-JOHANNES-JUENGER",
@@ -66,10 +67,20 @@
       "action_de": "Johannes hört im Gefängnis von den Werken des Christus und lässt Jesus durch seine Jünger fragen, ob er der Kommende sei oder ob sie auf einen anderen warten sollen.",
       "stage": {
         "back_side": "left",
-        "split": 1,
+        "arrows": [
+          [
+            "FIG-ORT-GEFAENGNIS",
+            "FIG-GRUPPE-JOHANNES-JUENGER",
+            "go"
+          ]
+        ],
+        "x": {
+          "FIG-GRUPPE-JOHANNES-JUENGER": 96,
+          "FIG-JESUS": 156
+        },
         "mood": {
-          "FIG-JOHANNES-TAEUFER": "pensive",
-          "FIG-GRUPPE-JOHANNES-JUENGER": "earnest"
+          "FIG-GRUPPE-JOHANNES-JUENGER": "pensive",
+          "FIG-JESUS": "calm"
         }
       }
     },
@@ -116,7 +127,7 @@
   ],
   "captions_de": [
     "Weiter: Nach der Rede an die Zwölf zieht Jesus weiter in die Städte (gestrichelter Weg zur Stadt).",
-    "Die Anfrage: Johannes der Täufer (Kamelhaar, Ledergurt) ist im Gefängnis (Steinblock mit vergittertem Fenster); seine Jünger fragen Jesus: Bist du es? (Jesus, Fragezeichen).",
+    "Die Anfrage: Johannes der Täufer ist im Gefängnis (Steinblock mit vergittertem Fenster) und schickt seine Jünger (gestrichelter Weg); sie fragen Jesus: Bist du es? (Jesus, Fragezeichen).",
     "Die Antwort: Jesus sagt: Blinde sehen, Taube hören (offenes Auge, Ohr); den Armen wird verkündet (Figuren in einfachen grauen Kleidern, goldener Rufer)."
   ],
   "interpretation_note_de": "«Der Kommende» ([[MAT.11.3]]) ist als Frage nach Jesus selbst gezeigt. Lahme, Aussätzige und Tote ([[MAT.11.5]]) sind in der Sprechblase nicht eigens gezeichnet. Johannes steht vor dem Gefängnis, weil der Zeichner keine Figur im Gefängnis zeigen kann.",
@@ -150,5 +161,119 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.11.1",
+            "figures": [
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-STADT"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Als Jesus seine Anweisungen an die Zwölf beendet hat, zieht er weiter, um in ihren Städten zu lehren und zu verkündigen.",
+            "stage": {
+              "back_side": "right",
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ORT-STADT",
+                  "go"
+                ]
+              ],
+              "pose": {
+                "FIG-JESUS": "away"
+              },
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.11.2-MAT.11.3",
+            "figures": [
+              "FIG-JOHANNES-TAEUFER",
+              "FIG-GRUPPE-JOHANNES-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-GEFAENGNIS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JOHANNES-JUENGER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Johannes hört im Gefängnis von den Werken des Christus und lässt Jesus durch seine Jünger fragen, ob er der Kommende sei oder ob sie auf einen anderen warten sollen.",
+            "stage": {
+              "back_side": "left",
+              "split": 1,
+              "mood": {
+                "FIG-JOHANNES-TAEUFER": "pensive",
+                "FIG-GRUPPE-JOHANNES-JUENGER": "earnest"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.11.4-MAT.11.6",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JOHANNES-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JOHANNES-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-SEHEN",
+                  "FIG-ZEICHEN-HOEREN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JOHANNES-JUENGER",
+                "icons": [
+                  "FIG-GRUPPE-ARME",
+                  "FIG-ZEICHEN-VERKUENDIGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus antwortet: Berichtet Johannes, was ihr hört und seht: Blinde sehen, Lahme gehen, Aussätzige werden rein, Taube hören, Tote werden auferweckt, und den Armen wird das Evangelium verkündigt.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-JOHANNES-JUENGER": "pensive",
+                "FIG-JESUS": "calm"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Weiter: Nach der Rede an die Zwölf zieht Jesus weiter in die Städte (gestrichelter Weg zur Stadt).",
+          "Die Anfrage: Johannes der Täufer (Kamelhaar, Ledergurt) ist im Gefängnis (Steinblock mit vergittertem Fenster); seine Jünger fragen Jesus: Bist du es? (Jesus, Fragezeichen).",
+          "Die Antwort: Jesus sagt: Blinde sehen, Taube hören (offenes Auge, Ohr); den Armen wird verkündet (Figuren in einfachen grauen Kleidern, goldener Rufer)."
+        ]
+      }
+    }
+  ]
 }

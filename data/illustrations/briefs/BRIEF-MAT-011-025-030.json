@@ -77,8 +77,7 @@
         "FIG-JESUS"
       ],
       "objects": [
-        "FIG-OBJ-LAST",
-        "FIG-OBJ-JOCH"
+        "FIG-OBJ-LAST"
       ],
       "signs": [],
       "speech": [
@@ -86,24 +85,23 @@
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-MENGE",
           "icons": [
-            "FIG-OBJ-JOCH",
-            "FIG-ZEICHEN-DEMUT"
+            "FIG-OBJ-LAST",
+            "FIG-JESUS"
           ]
         },
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-MENGE",
           "icons": [
-            "FIG-OBJ-LAST",
-            "FIG-JESUS"
+            "FIG-OBJ-JOCH",
+            "FIG-ZEICHEN-DEMUT"
           ]
         }
       ],
       "action_de": "Kommt her zu mir, alle, die ihr euch abmüht und beladen seid, ich werde euch Ruhe geben. Nehmt mein Joch auf euch und lernt von mir, denn ich bin sanftmütig und demütig im Herzen; mein Joch ist sanft und meine Last leicht.",
       "stage": {
         "hold": {
-          "FIG-GRUPPE-MENGE": "FIG-OBJ-LAST",
-          "FIG-JESUS": "FIG-OBJ-JOCH"
+          "FIG-GRUPPE-MENGE": "FIG-OBJ-LAST"
         },
         "mood": {
           "FIG-GRUPPE-MENGE": "worried",
@@ -153,5 +151,117 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.11.25-MAT.11.26",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-KIND",
+                  "FIG-ZEICHEN-LICHT"
+                ]
+              }
+            ],
+            "action_de": "Jesus preist den Vater, den Herrn des Himmels und der Erde, dass er dies vor Weisen und Verständigen verborgen und Unmündigen offenbart hat.",
+            "stage": {
+              "god_side": "right",
+              "mood": {
+                "FIG-JESUS": "smile"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.11.27",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-VOLLMACHT"
+            ],
+            "speech": [],
+            "action_de": "Alles ist ihm von seinem Vater übergeben; niemand kennt den Sohn ausser dem Vater, und niemand den Vater ausser dem Sohn und dem, dem der Sohn es offenbaren will.",
+            "stage": {
+              "god_side": "left",
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "beside": {
+                "FIG-ZEICHEN-VOLLMACHT": "FIG-JESUS"
+              },
+              "x": {
+                "FIG-JESUS": 120
+              },
+              "mood": {
+                "FIG-JESUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.11.28-MAT.11.30",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-LAST",
+              "FIG-OBJ-JOCH"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-OBJ-JOCH",
+                  "FIG-ZEICHEN-DEMUT"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-OBJ-LAST",
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Kommt her zu mir, alle, die ihr euch abmüht und beladen seid, ich werde euch Ruhe geben. Nehmt mein Joch auf euch und lernt von mir, denn ich bin sanftmütig und demütig im Herzen; mein Joch ist sanft und meine Last leicht.",
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-MENGE": "FIG-OBJ-LAST",
+                "FIG-JESUS": "FIG-OBJ-JOCH"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "worried",
+                "FIG-JESUS": "smile"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }
