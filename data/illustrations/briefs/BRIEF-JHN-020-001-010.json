@@ -130,18 +130,25 @@
             "FIG-LIEBLINGSJUENGER"
           ]
         },
-        "back_side": "right",
+        "back_side": "left",
         "x": {
-          "FIG-PETRUS": 40,
-          "FIG-LIEBLINGSJUENGER": 90
+          "FIG-LIEBLINGSJUENGER": 100,
+          "FIG-PETRUS": 154
         },
         "floor_x": {
-          "FIG-OBJ-LEINENBINDEN": 116
+          "FIG-OBJ-LEINENBINDEN": 30
         },
         "mood": {
           "FIG-PETRUS": "calm",
           "FIG-LIEBLINGSJUENGER": "delight"
         },
+        "arrows": [
+          [
+            "FIG-ORT-GRAB",
+            "FIG-LIEBLINGSJUENGER",
+            "act"
+          ]
+        ],
         "at": {
           "FIG-ZEICHEN-SEHEN": "FIG-PETRUS"
         }
@@ -158,7 +165,7 @@
     "Früh am Morgen: Noch dunkel (Mond); Maria aus Magdala sieht das Grab offen, der Stein ist weg.",
     "Nachricht: Maria sagt Petrus und dem anderen Jünger: Der Herr ist nicht mehr im Grab, wo ist er? (Grab, Jesus, leer, ?).",
     "Wettlauf: Der andere Jünger kommt zuerst ans Grab und sieht die Leinenbinden (Auge); Petrus folgt (Pfeil).",
-    "Er sah und glaubte: Leinenbinden und Schweisstuch liegen im leeren Grab; Petrus sieht sie (Auge), der andere Jünger glaubt (Herz)."
+    "Sehen → glauben: Leinenbinden und Schweisstuch liegen im leeren Grab (links); der andere Jünger daneben sieht es und glaubt (Pfeil vom Grab zu ihm, Herz); auch Petrus (rechts) sieht sie (Auge)."
   ],
   "interpretation_note_de": "Das Grab ist offen, der Stein liegt daneben ([[JHN.20.1]]). Was Petrus beim Anblick der Binden denkt, sagt der Text nicht; er ist nachdenklich gezeichnet. Das Herz gilt nur dem anderen Jünger, von dem es heisst: «er sah und glaubte» ([[JHN.20.8]]). Dass er der Jünger ist, den Jesus liebte, sagt [[JHN.20.2]].",
   "basis": [
@@ -344,6 +351,158 @@
           "Nachricht: Maria sagt Petrus und dem anderen Jünger: Der Herr ist nicht mehr im Grab, wo ist er? (Grab, Jesus, leer, ?).",
           "Wettlauf: Der andere Jünger kommt zuerst ans Grab und sieht die Leinenbinden (Auge); Petrus folgt (Pfeil).",
           "Er sah und glaubte: Leinenbinden und Schweisstuch liegen im leeren Grab; Petrus schaut, der andere Jünger glaubt (Herz)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.20.1",
+            "figures": [
+              "FIG-MARIA-MAGDALA"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NACHT"
+            ],
+            "speech": [],
+            "action_de": "Am ersten Tag der Woche kommt Maria aus Magdala früh, als es noch dunkel ist, zum Grab und sieht, dass der Stein vom Grab weggenommen ist.",
+            "stage": {
+              "back_side": "right",
+              "x": {
+                "FIG-MARIA-MAGDALA": 52
+              },
+              "mood": {
+                "FIG-MARIA-MAGDALA": "surprised"
+              },
+              "air_x": 30,
+              "air_y": 12
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.20.2",
+            "figures": [
+              "FIG-MARIA-MAGDALA",
+              "FIG-PETRUS",
+              "FIG-LIEBLINGSJUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-MARIA-MAGDALA",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-ORT-GRAB",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FEHLT",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Sie läuft zu Simon Petrus und zu dem anderen Jünger, den Jesus lieb hatte, und sagt: «Sie haben den Herrn aus dem Grab weggenommen, und wir wissen nicht, wo sie ihn hingelegt haben.»",
+            "stage": {
+              "mood": {
+                "FIG-MARIA-MAGDALA": "worried",
+                "FIG-PETRUS": "surprised",
+                "FIG-LIEBLINGSJUENGER": "surprised"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.20.3-JHN.20.5",
+            "figures": [
+              "FIG-PETRUS",
+              "FIG-LIEBLINGSJUENGER"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB",
+              "FIG-OBJ-LEINENBINDEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SEHEN"
+            ],
+            "speech": [],
+            "action_de": "Petrus und der andere Jünger laufen zum Grab; der andere Jünger ist schneller, kommt als Erster an, beugt sich vor und sieht die Leinenbinden daliegen, geht aber nicht hinein.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-SEHEN": "FIG-LIEBLINGSJUENGER"
+              },
+              "back_side": "right",
+              "x": {
+                "FIG-PETRUS": 30,
+                "FIG-LIEBLINGSJUENGER": 84
+              },
+              "floor_x": {
+                "FIG-OBJ-LEINENBINDEN": 116
+              },
+              "mood": {
+                "FIG-PETRUS": "surprised",
+                "FIG-LIEBLINGSJUENGER": "surprised"
+              },
+              "arrows": [
+                [
+                  "FIG-PETRUS",
+                  "FIG-LIEBLINGSJUENGER",
+                  "go"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.20.6-JHN.20.10",
+            "figures": [
+              "FIG-PETRUS",
+              "FIG-LIEBLINGSJUENGER"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB",
+              "FIG-OBJ-LEINENBINDEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SEHEN",
+              "FIG-ZEICHEN-GLAUBEN"
+            ],
+            "speech": [],
+            "action_de": "Petrus geht ins Grab und schaut die Leinenbinden und das zusammengewickelte Schweisstuch. Dann geht auch der andere Jünger hinein; er sieht und glaubt. Denn sie kannten die Schrift noch nicht, dass er auferstehen müsse. Dann gehen sie nach Hause.",
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-GLAUBEN": [
+                  "FIG-LIEBLINGSJUENGER"
+                ]
+              },
+              "back_side": "right",
+              "x": {
+                "FIG-PETRUS": 40,
+                "FIG-LIEBLINGSJUENGER": 90
+              },
+              "floor_x": {
+                "FIG-OBJ-LEINENBINDEN": 116
+              },
+              "mood": {
+                "FIG-PETRUS": "calm",
+                "FIG-LIEBLINGSJUENGER": "delight"
+              },
+              "at": {
+                "FIG-ZEICHEN-SEHEN": "FIG-PETRUS"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Früh am Morgen: Noch dunkel (Mond); Maria aus Magdala sieht das Grab offen, der Stein ist weg.",
+          "Nachricht: Maria sagt Petrus und dem anderen Jünger: Der Herr ist nicht mehr im Grab, wo ist er? (Grab, Jesus, leer, ?).",
+          "Wettlauf: Der andere Jünger kommt zuerst ans Grab und sieht die Leinenbinden (Auge); Petrus folgt (Pfeil).",
+          "Er sah und glaubte: Leinenbinden und Schweisstuch liegen im leeren Grab; Petrus sieht sie (Auge), der andere Jünger glaubt (Herz)."
         ]
       }
     }

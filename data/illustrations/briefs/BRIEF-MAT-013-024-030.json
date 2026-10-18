@@ -70,16 +70,23 @@
           "FIG-ZEICHEN-SCHLAFEN": "FIG-GRUPPE-DIENER"
         },
         "x": {
-          "FIG-GRUPPE-DIENER": 46,
-          "FIG-ROLLE-FEIND": 150
+          "FIG-GRUPPE-DIENER": 150,
+          "FIG-ROLLE-FEIND": 30
         },
         "floor_x": {
-          "FIG-OBJ-UNKRAUT": 96
+          "FIG-OBJ-UNKRAUT": 84
         },
         "mood": {
           "FIG-ROLLE-FEIND": "earnest",
           "FIG-GRUPPE-DIENER": "sleep"
-        }
+        },
+        "arrows": [
+          [
+            "FIG-ROLLE-FEIND",
+            "FIG-OBJ-UNKRAUT",
+            "throw"
+          ]
+        ]
       }
     },
     {
@@ -173,7 +180,7 @@
   ],
   "captions_de": [
     "Gute Saat: Der Hausherr (dunkelroter Mantel) wirft guten Samen auf seinen Acker (Hand mit Körnern, gepunkteter Bogen, brauner Acker mit Furchen).",
-    "In der Nacht: Während die Knechte schlafen (Mondsichel mit Punkten), kommt der Feind (Kapuze) mit Unkrautsamen (Hand mit Körnern): Unkraut (dunkle Halme) wächst im Weizen (Kornfeld).",
+    "Feind sät → Unkraut im Weizen: Während die Knechte schlafen (Mondsichel mit Punkten), kommt der Feind (Kapuze) mit Unkrautsamen (Hand mit Körnern) und wirft sie aus (gepunkteter Bogen): Unkraut (dunkle Halme) wächst im Weizen (Kornfeld).",
     "Woher? Die Knechte fragen nach dem Unkraut (dunkle Halme, Fragezeichen); der Hausherr antwortet: ein Feind (Mann mit Kapuze).",
     "Bei der Ernte: Der Hausherr sagt den Schnittern (Stirnband, Garbe im Arm): Unkraut ins Feuer (dunkle Halme, Flammen), Weizen in die Scheune (Garbe, Speicher mit spitzem Dach)."
   ],
@@ -378,6 +385,175 @@
           "In der Nacht: Während die Knechte schlafen (Mondsichel mit Punkten), wirft der Feind (Kapuze) Unkrautsamen aus (Hand mit Körnern, gepunkteter Bogen): Unkraut (dunkle Halme) wächst im Weizen (Kornfeld).",
           "Woher? Die Knechte fragen nach dem Unkraut (dunkle Halme, Fragezeichen); der Hausherr antwortet: ein Feind (Mann mit Kapuze).",
           "Bei der Ernte: Der Hausherr sagt den Schnittern: Unkraut ins Feuer (dunkle Halme, Flammen), Weizen in die Scheune (Garbe, Speicher mit spitzem Dach)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.13.24",
+            "figures": [
+              "FIG-ROLLE-GUTSHERR"
+            ],
+            "objects": [
+              "FIG-OBJ-ACKER",
+              "FIG-OBJ-SAMEN"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Das Reich der Himmel gleicht einem Menschen, der guten Samen auf sein Feld sät.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-GUTSHERR": "FIG-OBJ-SAMEN"
+              },
+              "x": {
+                "FIG-ROLLE-GUTSHERR": 50
+              },
+              "mood": {
+                "FIG-ROLLE-GUTSHERR": "calm"
+              },
+              "floor_x": {
+                "FIG-OBJ-ACKER": 100
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-GUTSHERR",
+                  "FIG-OBJ-ACKER",
+                  "throw"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.13.25-MAT.13.26",
+            "figures": [
+              "FIG-GRUPPE-DIENER",
+              "FIG-ROLLE-FEIND"
+            ],
+            "objects": [
+              "FIG-ORT-KORNFELD",
+              "FIG-OBJ-SAMEN",
+              "FIG-OBJ-UNKRAUT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NACHT",
+              "FIG-ZEICHEN-SCHLAFEN"
+            ],
+            "speech": [],
+            "action_de": "Während die Leute schlafen, kommt sein Feind, sät Unkraut mitten unter den Weizen und geht weg; als die Saat aufgeht, zeigt sich auch das Unkraut.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-FEIND": "FIG-OBJ-SAMEN"
+              },
+              "at": {
+                "FIG-ZEICHEN-SCHLAFEN": "FIG-GRUPPE-DIENER"
+              },
+              "x": {
+                "FIG-GRUPPE-DIENER": 46,
+                "FIG-ROLLE-FEIND": 150
+              },
+              "floor_x": {
+                "FIG-OBJ-UNKRAUT": 96
+              },
+              "mood": {
+                "FIG-ROLLE-FEIND": "earnest",
+                "FIG-GRUPPE-DIENER": "sleep"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.13.27-MAT.13.28",
+            "figures": [
+              "FIG-GRUPPE-DIENER",
+              "FIG-ROLLE-GUTSHERR"
+            ],
+            "objects": [
+              "FIG-OBJ-UNKRAUT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-DIENER",
+                "to": "FIG-ROLLE-GUTSHERR",
+                "icons": [
+                  "FIG-OBJ-UNKRAUT",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-ROLLE-GUTSHERR",
+                "to": "FIG-GRUPPE-DIENER",
+                "icons": [
+                  "FIG-ROLLE-FEIND"
+                ]
+              }
+            ],
+            "action_de": "Die Knechte fragen den Hausherrn, woher das Unkraut komme; er antwortet: «Das hat ein Feind getan.»",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-DIENER": "worried",
+                "FIG-ROLLE-GUTSHERR": "earnest"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.13.29-MAT.13.30",
+            "figures": [
+              "FIG-ROLLE-GUTSHERR",
+              "FIG-GRUPPE-SCHNITTER"
+            ],
+            "objects": [
+              "FIG-ORT-SCHEUNE",
+              "FIG-OBJ-GARBE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-GUTSHERR",
+                "to": "FIG-GRUPPE-SCHNITTER",
+                "icons": [
+                  "FIG-OBJ-UNKRAUT",
+                  "FIG-ZEICHEN-FEUER"
+                ]
+              },
+              {
+                "from": "FIG-ROLLE-GUTSHERR",
+                "to": "FIG-GRUPPE-SCHNITTER",
+                "icons": [
+                  "FIG-OBJ-GARBE",
+                  "FIG-ORT-SCHEUNE"
+                ]
+              }
+            ],
+            "action_de": "Beides soll bis zur Ernte miteinander wachsen; dann werden die Schnitter zuerst das Unkraut bündeln und verbrennen und den Weizen in die Scheune bringen.",
+            "stage": {
+              "back_side": "right",
+              "mood": {
+                "FIG-ROLLE-GUTSHERR": "calm",
+                "FIG-GRUPPE-SCHNITTER": "calm"
+              },
+              "x": {
+                "FIG-ROLLE-GUTSHERR": 30,
+                "FIG-GRUPPE-SCHNITTER": 90
+              },
+              "hold": {
+                "FIG-GRUPPE-SCHNITTER": "FIG-OBJ-GARBE"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Gute Saat: Der Hausherr (dunkelroter Mantel) wirft guten Samen auf seinen Acker (Hand mit Körnern, gepunkteter Bogen, brauner Acker mit Furchen).",
+          "In der Nacht: Während die Knechte schlafen (Mondsichel mit Punkten), kommt der Feind (Kapuze) mit Unkrautsamen (Hand mit Körnern): Unkraut (dunkle Halme) wächst im Weizen (Kornfeld).",
+          "Woher? Die Knechte fragen nach dem Unkraut (dunkle Halme, Fragezeichen); der Hausherr antwortet: ein Feind (Mann mit Kapuze).",
+          "Bei der Ernte: Der Hausherr sagt den Schnittern (Stirnband, Garbe im Arm): Unkraut ins Feuer (dunkle Halme, Flammen), Weizen in die Scheune (Garbe, Speicher mit spitzem Dach)."
         ]
       }
     }

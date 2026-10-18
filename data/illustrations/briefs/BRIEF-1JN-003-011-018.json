@@ -13,23 +13,33 @@
       "n": 1,
       "reference": "1JN.3.11-1JN.3.14",
       "figures": [
-        "FIG-DER-AELTESTE",
         "FIG-GRUPPE-GESCHWISTER"
       ],
       "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-DER-AELTESTE",
-          "to": "FIG-GRUPPE-GESCHWISTER",
-          "icons": [
-            "FIG-ZEICHEN-LIEBE",
-            "FIG-ZEICHEN-LEBEN"
-          ]
-        }
+      "signs": [
+        "FIG-ZEICHEN-LIEBE",
+        "FIG-ZEICHEN-LEBEN"
       ],
+      "speech": [],
       "action_de": "Die Botschaft von Anfang an heisst: einander lieben. Wer die Geschwister liebt, ist aus dem Tod ins Leben hinübergegangen.",
       "stage": {
+        "x": {
+          "FIG-GRUPPE-GESCHWISTER": 56
+        },
+        "signs_who": {
+          "FIG-ZEICHEN-LIEBE": [
+            "FIG-GRUPPE-GESCHWISTER"
+          ]
+        },
+        "air_x": 126,
+        "air_y": 54,
+        "arrows": [
+          [
+            "FIG-GRUPPE-GESCHWISTER",
+            "FIG-ZEICHEN-LEBEN",
+            "act"
+          ]
+        ],
         "mood": {
           "FIG-GRUPPE-GESCHWISTER": "smile"
         }
@@ -39,25 +49,33 @@
       "n": 2,
       "reference": "1JN.3.15",
       "figures": [
-        "FIG-DER-AELTESTE",
-        "FIG-GRUPPE-GESCHWISTER"
+        "FIG-ROLLE-MENSCH"
       ],
       "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-DER-AELTESTE",
-          "to": "FIG-GRUPPE-GESCHWISTER",
-          "icons": [
-            "FIG-ZEICHEN-HASS",
-            "FIG-ZEICHEN-TOD"
-          ]
-        }
+      "signs": [
+        "FIG-ZEICHEN-HASS",
+        "FIG-ZEICHEN-TOD"
       ],
+      "speech": [],
       "action_de": "Wer seinen Bruder hasst, ist ein Mörder; kein Mörder hat ewiges Leben, das in ihm bleibt.",
       "stage": {
+        "x": {
+          "FIG-ROLLE-MENSCH": 56
+        },
+        "at": {
+          "FIG-ZEICHEN-HASS": "FIG-ROLLE-MENSCH"
+        },
+        "air_x": 122,
+        "air_y": 52,
+        "arrows": [
+          [
+            "FIG-ROLLE-MENSCH",
+            "FIG-ZEICHEN-TOD",
+            "act"
+          ]
+        ],
         "mood": {
-          "FIG-GRUPPE-GESCHWISTER": "calm"
+          "FIG-ROLLE-MENSCH": "worried"
         }
       }
     },
@@ -76,15 +94,27 @@
       "speech": [],
       "action_de": "Daran haben sie die Liebe erkannt: Jesus hat sein Leben für sie hingegeben; so sollen auch sie für die Geschwister einstehen.",
       "stage": {
-        "floor_side": "right",
+        "floor_side": "left",
         "mood": {
           "FIG-GRUPPE-GESCHWISTER": "calm"
         },
         "x": {
-          "FIG-GRUPPE-GESCHWISTER": 66
+          "FIG-GRUPPE-GESCHWISTER": 132
         },
         "floor_x": {
-          "FIG-OBJ-KREUZ": 118
+          "FIG-OBJ-KREUZ": 34
+        },
+        "arrows": [
+          [
+            "FIG-OBJ-KREUZ",
+            "FIG-GRUPPE-GESCHWISTER",
+            "act"
+          ]
+        ],
+        "signs_who": {
+          "FIG-ZEICHEN-LIEBE": [
+            "FIG-GRUPPE-GESCHWISTER"
+          ]
         }
       }
     },
@@ -136,10 +166,10 @@
     "Wer Güter hat und den Bruder Not leiden sieht, soll sein Herz nicht verschliessen: nicht mit Worten lieben, sondern in Tat und Wahrheit."
   ],
   "captions_de": [
-    "Einander lieben: Liebe (zwei Herzen) führt ins Leben (Baum im Ring).",
-    "Hass: Wer hasst (gebrochenes Herz), bleibt im Tod (verschlossenes Grab).",
-    "Hingabe: Das Kreuz (ohne Körper) zeigt, dass Jesus sein Leben gegeben hat; daran erkennen sie die Liebe (Herzen über ihnen).",
-    "In Tat und Wahrheit: Die Geschwister haben einem Notleidenden Brot gegeben (Pfeil, Brot in seinen Händen) und zeigen so Liebe (Herzen)."
+    "Lieben → Leben: Wer die Geschwister liebt (Herzen über ihnen), ist aus dem Tod ins Leben hinübergegangen (Pfeil zum Baum im Ring).",
+    "Hass → Tod: Wer seinen Bruder hasst (gebrochenes Herz über ihm), hat kein ewiges Leben in sich, er bleibt im Tod (Pfeil zum verschlossenen Grab).",
+    "Hingabe → Liebe: Das Kreuz (links, ohne Körper) zeigt, dass Jesus sein Leben für sie gegeben hat; von dort führt der Pfeil zu den Geschwistern: daran erkennen sie die Liebe (Herzen über ihnen).",
+    "Liebe → Tat: Die Geschwister lieben (Herzen) nicht nur mit Worten: Sie haben einem Notleidenden Brot gegeben (Pfeil zu ihm, Brot in seinen Händen)."
   ],
   "interpretation_note_de": "Kain ([[1JN.3.12]]) und der Mord sind nicht gezeichnet (Gewalt nicht ausmalen). Das Kreuz ohne Körper steht für die Hingabe des Lebens ([[1JN.3.16]]). [[1JN.3.17]] ist eine Frage; das Bild zeigt die gemeinte Tat ([[1JN.3.18]]). Der 1. Johannesbrief nennt seinen Verfasser nicht; das Bild zeigt ihn wie den «Ältesten» aus [[2JN.1.1]] und [[3JN.1.1]] (Deutung). Die angeredeten «Kinder» und «Lieben» sind als Gruppe von Geschwistern gezeichnet.",
   "basis": [
@@ -302,6 +332,139 @@
           "Hass: Wer hasst (gebrochenes Herz), bleibt im Tod (verschlossenes Grab).",
           "Hingabe: Das Kreuz (ohne Körper) zeigt Jesu Liebe (Herzen), die er mit seinem Leben gegeben hat.",
           "In Tat und Wahrheit: Die Geschwister geben einem Notleidenden Brot und zeigen so Liebe (Herzen)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "1JN.3.11-1JN.3.14",
+            "figures": [
+              "FIG-DER-AELTESTE",
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-DER-AELTESTE",
+                "to": "FIG-GRUPPE-GESCHWISTER",
+                "icons": [
+                  "FIG-ZEICHEN-LIEBE",
+                  "FIG-ZEICHEN-LEBEN"
+                ]
+              }
+            ],
+            "action_de": "Die Botschaft von Anfang an heisst: einander lieben. Wer die Geschwister liebt, ist aus dem Tod ins Leben hinübergegangen.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-GESCHWISTER": "smile"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "1JN.3.15",
+            "figures": [
+              "FIG-DER-AELTESTE",
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-DER-AELTESTE",
+                "to": "FIG-GRUPPE-GESCHWISTER",
+                "icons": [
+                  "FIG-ZEICHEN-HASS",
+                  "FIG-ZEICHEN-TOD"
+                ]
+              }
+            ],
+            "action_de": "Wer seinen Bruder hasst, ist ein Mörder; kein Mörder hat ewiges Leben, das in ihm bleibt.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-GESCHWISTER": "calm"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "1JN.3.16",
+            "figures": [
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [
+              "FIG-OBJ-KREUZ"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-LIEBE"
+            ],
+            "speech": [],
+            "action_de": "Daran haben sie die Liebe erkannt: Jesus hat sein Leben für sie hingegeben; so sollen auch sie für die Geschwister einstehen.",
+            "stage": {
+              "floor_side": "right",
+              "mood": {
+                "FIG-GRUPPE-GESCHWISTER": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-GESCHWISTER": 66
+              },
+              "floor_x": {
+                "FIG-OBJ-KREUZ": 118
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "1JN.3.17-1JN.3.18",
+            "figures": [
+              "FIG-GRUPPE-GESCHWISTER",
+              "FIG-ROLLE-ARMER"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-LIEBE"
+            ],
+            "speech": [],
+            "action_de": "Wer Güter hat und den Bruder Not leiden sieht, soll sein Herz nicht verschliessen: nicht mit Worten lieben, sondern in Tat und Wahrheit.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-ARMER": "FIG-OBJ-BROT"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-GESCHWISTER",
+                  "FIG-ROLLE-ARMER",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-LIEBE": "FIG-GRUPPE-GESCHWISTER"
+              },
+              "mood": {
+                "FIG-GRUPPE-GESCHWISTER": "smile",
+                "FIG-ROLLE-ARMER": "smile"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-LIEBE": [
+                  "FIG-GRUPPE-GESCHWISTER"
+                ]
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Einander lieben: Liebe (zwei Herzen) führt ins Leben (Baum im Ring).",
+          "Hass: Wer hasst (gebrochenes Herz), bleibt im Tod (verschlossenes Grab).",
+          "Hingabe: Das Kreuz (ohne Körper) zeigt, dass Jesus sein Leben gegeben hat; daran erkennen sie die Liebe (Herzen über ihnen).",
+          "In Tat und Wahrheit: Die Geschwister haben einem Notleidenden Brot gegeben (Pfeil, Brot in seinen Händen) und zeigen so Liebe (Herzen)."
         ]
       }
     }

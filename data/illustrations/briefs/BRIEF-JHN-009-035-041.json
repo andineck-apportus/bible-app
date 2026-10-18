@@ -80,25 +80,11 @@
         "FIG-GRUPPE-PHARISAEER"
       ],
       "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-BLINDER",
-          "icons": [
-            "FIG-ROLLE-BLINDER",
-            "FIG-ZEICHEN-SEHEN"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-PHARISAEER",
-          "icons": [
-            "FIG-GRUPPE-PHARISAEER",
-            "FIG-ZEICHEN-BLIND"
-          ]
-        }
+      "signs": [
+        "FIG-ZEICHEN-SEHEN",
+        "FIG-ZEICHEN-BLIND"
       ],
+      "speech": [],
       "action_de": "Jesus sagt: Zum Gericht bin ich in diese Welt gekommen, damit die nicht Sehenden sehen und die Sehenden blind werden.",
       "stage": {
         "mood": {
@@ -110,10 +96,26 @@
           "FIG-ROLLE-BLINDER": "kneel"
         },
         "x": {
-          "FIG-ROLLE-BLINDER": 22,
-          "FIG-JESUS": 62,
-          "FIG-GRUPPE-PHARISAEER": 150
-        }
+          "FIG-ROLLE-BLINDER": 28,
+          "FIG-JESUS": 90,
+          "FIG-GRUPPE-PHARISAEER": 156
+        },
+        "at": {
+          "FIG-ZEICHEN-SEHEN": "FIG-ROLLE-BLINDER",
+          "FIG-ZEICHEN-BLIND": "FIG-GRUPPE-PHARISAEER"
+        },
+        "arrows": [
+          [
+            "FIG-JESUS",
+            "FIG-ROLLE-BLINDER",
+            "act"
+          ],
+          [
+            "FIG-JESUS",
+            "FIG-GRUPPE-PHARISAEER",
+            "act"
+          ]
+        ]
       }
     },
     {
@@ -162,7 +164,7 @@
   "captions_de": [
     "Jesus findet ihn: «Glaubst du (Herz mit Licht) an den Menschensohn?» – «Wer ist es?»",
     "Ich glaube: Der Geheilte kniet vor Jesus nieder (Herz mit Licht).",
-    "Sehen und Blindsein: Jesus sagt: Die nicht sehen, werden sehend (der Geheilte, offenes Auge); die meinen zu sehen, werden blind (die Pharisäer, durchgestrichenes Auge).",
+    "Jesus → sehend und blind: Jesus ist zum Gericht gekommen (Pfeile von ihm): Der Geheilte, der nicht sah, wird sehend (offenes Auge über ihm); die Pharisäer, die meinen zu sehen, werden blind (durchgestrichenes Auge über ihnen).",
     "Sind auch wir blind? Die Pharisäer fragen; Jesus antwortet: Eure Sünde bleibt (dunkler Fleck)."
   ],
   "interpretation_note_de": "«Menschensohn» erscheint in der Blase als Jesus selbst, weil er sich in [[JHN.9.37]] so zu erkennen gibt. Das Wort von Sehen und Blindsein ([[JHN.9.39]]) richtet Jesus nicht ausdrücklich an bestimmte Personen; die Blasen verteilen es auf den Geheilten und die Pharisäer, die nach [[JHN.9.40]] dabei sind (Deutung).",
@@ -352,6 +354,163 @@
           "Jesus findet ihn: «Glaubst du (Herz mit Licht) an den Menschensohn?» – «Wer ist es?»",
           "Ich glaube: Der Geheilte kniet vor Jesus nieder (Herz mit Licht).",
           "Sehen und Blindsein: Die nicht sehen, werden sehend (zum Geheilten); die meinen zu sehen, werden blind (zu den Pharisäern).",
+          "Sind auch wir blind? Die Pharisäer fragen; Jesus antwortet: Eure Sünde bleibt (dunkler Fleck)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.9.35-JHN.9.37",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-BLINDER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-BLINDER",
+                "icons": [
+                  "FIG-ZEICHEN-GLAUBEN",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-ROLLE-BLINDER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus findet den Hinausgeworfenen und fragt: Glaubst du an den Menschensohn? Er fragt: Wer ist es, Herr? Jesus sagt: Der mit dir redet, der ist es.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-BLINDER": "surprised"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.9.38",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-BLINDER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-BLINDER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-GLAUBEN"
+                ]
+              }
+            ],
+            "action_de": "Er sagt: Ich glaube, Herr!, und fällt vor ihm nieder.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-BLINDER": "delight"
+              },
+              "pose": {
+                "FIG-ROLLE-BLINDER": "kneel"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.9.39",
+            "figures": [
+              "FIG-ROLLE-BLINDER",
+              "FIG-JESUS",
+              "FIG-GRUPPE-PHARISAEER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-BLINDER",
+                "icons": [
+                  "FIG-ROLLE-BLINDER",
+                  "FIG-ZEICHEN-SEHEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-GRUPPE-PHARISAEER",
+                  "FIG-ZEICHEN-BLIND"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: Zum Gericht bin ich in diese Welt gekommen, damit die nicht Sehenden sehen und die Sehenden blind werden.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-BLINDER": "calm",
+                "FIG-GRUPPE-PHARISAEER": "pensive",
+                "FIG-JESUS": "earnest"
+              },
+              "pose": {
+                "FIG-ROLLE-BLINDER": "kneel"
+              },
+              "x": {
+                "FIG-ROLLE-BLINDER": 22,
+                "FIG-JESUS": 62,
+                "FIG-GRUPPE-PHARISAEER": 150
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.9.40-JHN.9.41",
+            "figures": [
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-PHARISAEER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-GRUPPE-PHARISAEER",
+                  "FIG-ZEICHEN-BLIND",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-GRUPPE-PHARISAEER",
+                  "FIG-ZEICHEN-SUENDE"
+                ]
+              }
+            ],
+            "action_de": "Pharisäer, die bei ihm sind, fragen: Sind etwa auch wir blind? Jesus antwortet: Wärt ihr blind, hättet ihr keine Sünde; nun sagt ihr: Wir sehen – eure Sünde bleibt.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-PHARISAEER": "surprised",
+                "FIG-JESUS": "earnest"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Jesus findet ihn: «Glaubst du (Herz mit Licht) an den Menschensohn?» – «Wer ist es?»",
+          "Ich glaube: Der Geheilte kniet vor Jesus nieder (Herz mit Licht).",
+          "Sehen und Blindsein: Jesus sagt: Die nicht sehen, werden sehend (der Geheilte, offenes Auge); die meinen zu sehen, werden blind (die Pharisäer, durchgestrichenes Auge).",
           "Sind auch wir blind? Die Pharisäer fragen; Jesus antwortet: Eure Sünde bleibt (dunkler Fleck)."
         ]
       }

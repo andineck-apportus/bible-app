@@ -31,18 +31,25 @@
             "FIG-LIEBLINGSJUENGER"
           ]
         },
-        "back_side": "right",
+        "back_side": "left",
         "x": {
-          "FIG-PETRUS": 40,
-          "FIG-LIEBLINGSJUENGER": 90
+          "FIG-LIEBLINGSJUENGER": 100,
+          "FIG-PETRUS": 154
         },
         "floor_x": {
-          "FIG-OBJ-LEINENBINDEN": 116
+          "FIG-OBJ-LEINENBINDEN": 30
         },
         "mood": {
           "FIG-PETRUS": "pensive",
           "FIG-LIEBLINGSJUENGER": "delight"
-        }
+        },
+        "arrows": [
+          [
+            "FIG-ORT-GRAB",
+            "FIG-LIEBLINGSJUENGER",
+            "act"
+          ]
+        ]
       }
     },
     {
@@ -167,8 +174,8 @@
     "Acht Tage später sieht Thomas Jesus und bekennt: «Mein Herr und mein Gott!»"
   ],
   "captions_de": [
-    "Das leere Grab: Leinenbinden im offenen Grab; der andere Jünger glaubt (Herz).",
-    "«Mariam!»: Jesus ruft Maria beim Namen (Maria); sie erkennt ihn (Jesus) und freut sich.",
+    "Sehen → glauben: Leinenbinden im offenen, leeren Grab (links); der andere Jünger daneben sieht es und glaubt (Pfeil vom Grab zu ihm, Herz); rechts Petrus.",
+    "«Mariam!» → erkannt: Jesus ruft sie beim Namen (Maria in der Blase); darauf erkennt sie ihn: «Rabbuni» (Jesus) und freut sich (Funken).",
     "«Friede euch!»: Jesus bei den Jüngern hinter verschlossener Tür (Riegel), zeigt seine Hände (Mal); Freude.",
     "Thomas: Jesus zeigt seine Hände (Mal); Thomas kniet: «Mein Herr und mein Gott» (Jesus, Strahlenkranz)."
   ],
@@ -342,6 +349,170 @@
               }
             }
           }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.20.1-JHN.20.10",
+            "figures": [
+              "FIG-PETRUS",
+              "FIG-LIEBLINGSJUENGER"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB",
+              "FIG-OBJ-LEINENBINDEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-GLAUBEN"
+            ],
+            "speech": [],
+            "action_de": "Das Grab ist leer; Petrus und der andere Jünger sehen die Leinenbinden, der andere Jünger glaubt.",
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-GLAUBEN": [
+                  "FIG-LIEBLINGSJUENGER"
+                ]
+              },
+              "back_side": "right",
+              "x": {
+                "FIG-PETRUS": 40,
+                "FIG-LIEBLINGSJUENGER": 90
+              },
+              "floor_x": {
+                "FIG-OBJ-LEINENBINDEN": 116
+              },
+              "mood": {
+                "FIG-PETRUS": "pensive",
+                "FIG-LIEBLINGSJUENGER": "delight"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.20.11-JHN.20.18",
+            "figures": [
+              "FIG-MARIA-MAGDALA",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-GARTEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-MARIA-MAGDALA",
+                "icons": [
+                  "FIG-MARIA-MAGDALA"
+                ]
+              },
+              {
+                "from": "FIG-MARIA-MAGDALA",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Jesus begegnet Maria aus Magdala im Garten und ruft sie beim Namen; sie erkennt ihn.",
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-MARIA-MAGDALA"
+                ]
+              },
+              "back_side": "right",
+              "mood": {
+                "FIG-MARIA-MAGDALA": "delight",
+                "FIG-JESUS": "smile"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.20.19-JHN.20.23",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-VERSCHLOSSEN",
+              "FIG-ZEICHEN-WUNDMALE",
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-FRIEDE"
+                ]
+              }
+            ],
+            "action_de": "Bei verschlossenen Türen kommt Jesus zu den Jüngern, grüsst sie mit «Friede euch!» und zeigt ihnen seine Hände.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "delight",
+                "FIG-JESUS": "smile"
+              },
+              "air_x": 8,
+              "air_y": 40,
+              "beside": {
+                "FIG-ZEICHEN-WUNDMALE": "FIG-JESUS"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.20.24-JHN.20.29",
+            "figures": [
+              "FIG-THOMAS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-WUNDMALE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-THOMAS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-GOTT"
+                ]
+              }
+            ],
+            "action_de": "Acht Tage später sieht Thomas Jesus und bekennt: «Mein Herr und mein Gott!»",
+            "stage": {
+              "pose": {
+                "FIG-THOMAS": "kneel"
+              },
+              "mood": {
+                "FIG-THOMAS": "delight",
+                "FIG-JESUS": "smile"
+              },
+              "beside": {
+                "FIG-ZEICHEN-WUNDMALE": "FIG-JESUS"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Das leere Grab: Leinenbinden im offenen Grab; der andere Jünger glaubt (Herz).",
+          "«Mariam!»: Jesus ruft Maria beim Namen (Maria); sie erkennt ihn (Jesus) und freut sich.",
+          "«Friede euch!»: Jesus bei den Jüngern hinter verschlossener Tür (Riegel), zeigt seine Hände (Mal); Freude.",
+          "Thomas: Jesus zeigt seine Hände (Mal); Thomas kniet: «Mein Herr und mein Gott» (Jesus, Strahlenkranz)."
         ]
       }
     }

@@ -69,26 +69,38 @@
       "n": 3,
       "reference": "MRK.9.41",
       "figures": [
-        "FIG-JESUS",
+        "FIG-ROLLE-MENSCH",
         "FIG-GRUPPE-ZWOELF"
       ],
-      "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-OBJ-BECHER-WASSER",
-            "FIG-ZEICHEN-VIELE",
-            "FIG-ZEICHEN-SCHATZ"
-          ]
-        }
+      "objects": [
+        "FIG-OBJ-BECHER-WASSER"
       ],
+      "signs": [
+        "FIG-ZEICHEN-SCHATZ"
+      ],
+      "speech": [],
       "action_de": "Wer euch einen Becher Wasser zu trinken gibt, weil ihr zu Christus gehört, wird seinen Lohn gewiss nicht verlieren.",
       "stage": {
+        "x": {
+          "FIG-ROLLE-MENSCH": 50,
+          "FIG-GRUPPE-ZWOELF": 140
+        },
+        "hold": {
+          "FIG-ROLLE-MENSCH": "FIG-OBJ-BECHER-WASSER"
+        },
+        "arrows": [
+          [
+            "FIG-ROLLE-MENSCH",
+            "FIG-GRUPPE-ZWOELF",
+            "act"
+          ]
+        ],
         "mood": {
+          "FIG-ROLLE-MENSCH": "smile",
           "FIG-GRUPPE-ZWOELF": "smile"
+        },
+        "beside": {
+          "FIG-ZEICHEN-SCHATZ": "FIG-ROLLE-MENSCH"
         }
       }
     }
@@ -101,7 +113,7 @@
   "captions_de": [
     "Bericht: Johannes erzählt von einem, der Dämonen austreibt (Mensch, Schatten, Pfeil weg), und dass sie ihn hindern wollten (abwehrende Hand).",
     "Hindert ihn nicht: Jesus verbietet es (abwehrende Hand, «nicht»); wer nicht gegen uns ist, gehört zu uns (Mensch, gefasste Hände).",
-    "Der Becher Wasser: Wer euch einen Becher Wasser gibt (Becher, Menschen), verliert seinen Lohn nicht (Schatztruhe)."
+    "Becher Wasser → Lohn: Ein Mensch reicht den Jüngern einen Becher Wasser (Becher, Bogen zu ihnen), weil sie zu Christus gehören; seinen Lohn verliert er nicht (Schatztruhe neben ihm)."
   ],
   "interpretation_note_de": "Der Mann, der im Namen Jesu Dämonen austreibt, erscheint nur in der Sprechblase; der Text erzählt den Vorfall als Bericht des Johannes. Die gefassten Hände stehen für «für uns» ([[MRK.9.40]]), die Schatztruhe für den Lohn ([[MRK.9.41]]).",
   "basis": [
@@ -134,5 +146,103 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.9.38",
+            "figures": [
+              "FIG-JOHANNES-ZEBEDAEUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JOHANNES-ZEBEDAEUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ROLLE-MENSCH",
+                  "FIG-ZEICHEN-UNREINER-GEIST",
+                  "FIG-ZEICHEN-FLIEHEN",
+                  "FIG-ZEICHEN-ABLEHNEN"
+                ]
+              }
+            ],
+            "action_de": "Johannes sagt: Lehrer, wir haben jemanden gesehen, der in deinem Namen Dämonen austrieb, und wollten ihn hindern, weil er uns nicht nachfolgte.",
+            "stage": {
+              "mood": {
+                "FIG-JOHANNES-ZEBEDAEUS": "earnest"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.9.39-MRK.9.40",
+            "figures": [
+              "FIG-JOHANNES-ZEBEDAEUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-JOHANNES-ZEBEDAEUS",
+                "icons": [
+                  "FIG-ROLLE-MENSCH",
+                  "FIG-ZEICHEN-ABLEHNEN",
+                  "FIG-ZEICHEN-NICHT",
+                  "FIG-ZEICHEN-FRIEDEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: Hindert ihn nicht! Wer in meinem Namen eine Machttat tut, kann nicht gleich schlecht über mich reden. Wer nicht gegen uns ist, der ist für uns.",
+            "stage": {
+              "mood": {
+                "FIG-JOHANNES-ZEBEDAEUS": "pensive"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.9.41",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-OBJ-BECHER-WASSER",
+                  "FIG-ZEICHEN-VIELE",
+                  "FIG-ZEICHEN-SCHATZ"
+                ]
+              }
+            ],
+            "action_de": "Wer euch einen Becher Wasser zu trinken gibt, weil ihr zu Christus gehört, wird seinen Lohn gewiss nicht verlieren.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "smile"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Bericht: Johannes erzählt von einem, der Dämonen austreibt (Mensch, Schatten, Pfeil weg), und dass sie ihn hindern wollten (abwehrende Hand).",
+          "Hindert ihn nicht: Jesus verbietet es (abwehrende Hand, «nicht»); wer nicht gegen uns ist, gehört zu uns (Mensch, gefasste Hände).",
+          "Der Becher Wasser: Wer euch einen Becher Wasser gibt (Becher, Menschen), verliert seinen Lohn nicht (Schatztruhe)."
+        ]
+      }
+    }
+  ]
 }

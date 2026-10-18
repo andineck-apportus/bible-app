@@ -78,7 +78,14 @@
         },
         "beside": {
           "FIG-ZEICHEN-ERHOEHEN": "FIG-JESUS"
-        }
+        },
+        "arrows": [
+          [
+            "FIG-GOTT",
+            "FIG-JESUS",
+            "act"
+          ]
+        ]
       }
     },
     {
@@ -168,7 +175,7 @@
   ],
   "captions_de": [
     "Erniedrigung: Jesus (Kreuznimbus) erniedrigt sich (Zeichen neben ihm: Figur verneigt sich, Pfeil nach unten) und geht den Weg bis zum Kreuz (gestrichelter Pfeil).",
-    "Erhöhung: Gott (Strahlenkranz über ihm) erhöht Jesus (goldener Pfeil nach oben); Menschen beugen die Knie vor ihm (Zeichen: kniende Figur).",
+    "Erniedrigung → Erhöhung: Darum erhöht Gott (Strahlenkranz, goldener Pfeil) Jesus (Pfeil nach oben neben ihm); Menschen beugen die Knie vor ihm (kniende Figur).",
     "Lichter in der Welt: Die Glaubenden halten eine Lampe und leuchten (Flamme über ihnen) mitten unter den vielen Menschen.",
     "Zurück nach Philippi: Gott (Strahlenkranz) hat sich über Epaphroditus erbarmt (Herz in Händen, goldener Pfeil); Paulus schickt ihn zur Gemeinde zurück (gestrichelter Weg zum Haus); Epaphroditus freut sich (Funken)."
   ],
@@ -343,6 +350,170 @@
           "Erhöhung: Gott (Strahlenkranz) erhöht Jesus (goldener Pfeil nach oben); Menschen beugen die Knie vor ihm (kniende Figur).",
           "Lichter in der Welt: Die Glaubenden halten Lampen und leuchten (Flamme) mitten unter den vielen Menschen.",
           "Zurück nach Philippi: Gott (Strahlenkranz) hat sich über Epaphroditus erbarmt (Herz in Händen); Paulus schickt ihn zur Gemeinde zurück (Pfeil), die sich freut."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "PHP.2.1-PHP.2.8",
+            "figures": [
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KREUZ"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-DEMUT"
+            ],
+            "speech": [],
+            "action_de": "Christus Jesus, der in Gottes Gestalt war, entäusserte sich, nahm Sklavengestalt an und war gehorsam bis zum Tod am Kreuz.",
+            "stage": {
+              "x": {
+                "FIG-JESUS": 56
+              },
+              "floor_x": {
+                "FIG-OBJ-KREUZ": 140
+              },
+              "mood": {
+                "FIG-JESUS": "calm"
+              },
+              "beside": {
+                "FIG-ZEICHEN-DEMUT": "FIG-JESUS"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-OBJ-KREUZ",
+                  "go"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "PHP.2.9-PHP.2.11",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-GLAUBENDE",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-ERHOEHEN",
+              "FIG-ZEICHEN-KNIEN"
+            ],
+            "speech": [],
+            "action_de": "Darum hat Gott ihn erhöht, damit sich im Namen Jesu jedes Knie beuge und jede Zunge bekenne, dass Jesus Christus der Herr ist.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-KNIEN": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "pose": {
+                "FIG-GRUPPE-GLAUBENDE": "kneel"
+              },
+              "god_side": "right",
+              "x": {
+                "FIG-GRUPPE-GLAUBENDE": 60,
+                "FIG-JESUS": 140
+              },
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "smile",
+                "FIG-JESUS": "calm"
+              },
+              "beside": {
+                "FIG-ZEICHEN-ERHOEHEN": "FIG-JESUS"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "PHP.2.12-PHP.2.18",
+            "figures": [
+              "FIG-GRUPPE-GLAUBENDE",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-LAMPE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-LEUCHTEN"
+            ],
+            "speech": [],
+            "action_de": "Ohne Murren sollen sie als Kinder Gottes mitten in einer verdrehten Generation leuchten wie Lichter in der Welt und am Wort des Lebens festhalten.",
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-GLAUBENDE": "FIG-OBJ-LAMPE"
+              },
+              "at": {
+                "FIG-ZEICHEN-LEUCHTEN": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "smile",
+                "FIG-GRUPPE-MENGE": "calm"
+              },
+              "split": 1
+            }
+          },
+          {
+            "n": 4,
+            "reference": "PHP.2.19-PHP.2.30",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-EPAPHRODITUS",
+              "FIG-PAULUS"
+            ],
+            "objects": [
+              "FIG-GRUPPE-GEMEINDE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ERBARMEN",
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [],
+            "action_de": "Epaphroditus, der Gesandte der Gemeinde, war todkrank, aber Gott hat sich über ihn erbarmt; Paulus schickt ihn zurück, damit die Gemeinde sich freut.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-EPAPHRODITUS",
+                  "act"
+                ],
+                [
+                  "FIG-EPAPHRODITUS",
+                  "FIG-GRUPPE-GEMEINDE",
+                  "go"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-ERBARMEN": "FIG-EPAPHRODITUS"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-EPAPHRODITUS"
+                ]
+              },
+              "god_side": "left",
+              "x": {
+                "FIG-PAULUS": 30,
+                "FIG-EPAPHRODITUS": 82
+              },
+              "mood": {
+                "FIG-EPAPHRODITUS": "smile",
+                "FIG-PAULUS": "smile"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Erniedrigung: Jesus (Kreuznimbus) erniedrigt sich (Zeichen neben ihm: Figur verneigt sich, Pfeil nach unten) und geht den Weg bis zum Kreuz (gestrichelter Pfeil).",
+          "Erhöhung: Gott (Strahlenkranz über ihm) erhöht Jesus (goldener Pfeil nach oben); Menschen beugen die Knie vor ihm (Zeichen: kniende Figur).",
+          "Lichter in der Welt: Die Glaubenden halten eine Lampe und leuchten (Flamme über ihnen) mitten unter den vielen Menschen.",
+          "Zurück nach Philippi: Gott (Strahlenkranz) hat sich über Epaphroditus erbarmt (Herz in Händen, goldener Pfeil); Paulus schickt ihn zur Gemeinde zurück (gestrichelter Weg zum Haus); Epaphroditus freut sich (Funken)."
         ]
       }
     }
