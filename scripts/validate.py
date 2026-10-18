@@ -258,7 +258,7 @@ def main():
                         errors.append(f"{rel}: {d} hat im Stil {r.get('style')} keine Darstellung")
             if records.get(r.get("brief"), (None, {}))[1].get("type") != "illustration_brief":
                 errors.append(f"{rel}: Bildauftrag {r.get('brief')} fehlt")
-            if r.get("level") not in ("bible", "testament", "group", "book", "chapter", "section"):
+            if r.get("level") not in ("bible", "testament", "group", "book", "chapter", "section", "verse"):
                 errors.append(f"{rel}: level {r.get('level')!r} ungültig")
         if r.get("type") == "illustration_style":
             if r.get("library") and not (ROOT / r["library"]).is_file():
