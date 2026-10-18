@@ -64,6 +64,7 @@ for b in bg_recs.values():
                          "confidence": b.get("confidence"), "chapter": "", "ref_de": "", "readers": False,
                          "evidence": [refs.display_de(r) for r in b.get("evidence_refs", [])],
                          "sources": b.get("sources_de", []), "status": b["status"], "terms": b.get("terms", []),
+                         **({"check": {k: b["source_check"][k] for k in ("date", "result")}} if b.get("source_check") else {}),
                          "i18n": i18n(b["id"], {"topic_de": "topic", "text_de": "text", "uncertain_de": "uncertain", "terms": "terms"})})
         continue
     if b["subject"] not in section_of:
@@ -81,6 +82,7 @@ for b in bg_recs.values():
                        "ref_de": refs.display_de(ref), "readers": "READERS" in b["context"],
                        "evidence": [refs.display_de(r) for r in b.get("evidence_refs", [])],
                        "sources": b.get("sources_de", []), "status": b["status"], "terms": b.get("terms", []),
+                       **({"check": {k: b["source_check"][k] for k in ("date", "result")}} if b.get("source_check") else {}),
                        "i18n": i18n(b["id"], {"topic_de": "topic", "text_de": "text", "uncertain_de": "uncertain", "terms": "terms"})})
 
 

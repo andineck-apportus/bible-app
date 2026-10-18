@@ -14,9 +14,9 @@ Besonderheiten:
 - [[MAT.11.1]] schliesst die Aussendungsrede mit der Formel ab, die alle fünf grossen Reden des Matthäus beendet;
   die Kapiteleinteilung zieht den Vers zu Kapitel 11, die Gliederung stellt ihn als Überleitung an den Anfang von
   [[MAT.11.1-MAT.11.6]].
-- [[MAT.11.9]]: Der SBLGNT setzt (wie WH und SR) das Fragezeichen nach ἐξήλθατε; KJTR, Stephanus und RP lesen
-  τί ἐξήλθετε ἰδεῖν; προφήτην; (nach den CNTR-Texten). Der importierte Apparat führt das nicht als eigene Variante;
-  der Befund steht in decisions.
+- [[MAT.11.9]]: Der SBLGNT liest (wie WH) τί ἐξήλθατε; προφήτην ἰδεῖν;, Treg, NA28 und RP τί ἐξήλθατε ἰδεῖν; προφήτην;
+  (SBLGNT-Apparat). Den Eintrag hatte der automatische Import nicht zugeordnet; er ist nachgetragen
+  (VAR-SBLGNTAPP-MAT-011-009-01) und steht als Alternative, weil Wortstellung und Zeichensetzung die Fragen anders teilen.
 
 KI-Entwurf (Claude) vom 2026-10-18 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt. Die Mundart ist noch
 nicht muttersprachlich geprüft. Handschriftenangaben stammen aus der maschinellen Zuordnung (METHOD-AUTO-COLLATION-V1)
@@ -328,7 +328,7 @@ DEC_DE = [
  ("MAT.11.8", "in weiche Kleider gehüllt", "adapted", "ἐν μαλακοῖς ἠμφιεσμένον", "in Weiches gekleidet", ["in feine Gewänder gekleidet"],
   "μαλακά sind weiche, feine Stoffe; «Kleider» ist ergänzt. Die von RP gelesene Form ἐν μαλακοῖς ἱματίοις («in weichen Kleidern») ergibt dieselbe Übersetzung und steht deshalb nicht als Alternative."),
  ("MAT.11.9", "Oder was seid ihr hinausgegangen? Einen Propheten zu sehen?", "interpretive", "ἀλλὰ τί ἐξήλθατε; προφήτην ἰδεῖν;", None, ["Oder was seid ihr hinausgegangen zu sehen? Einen Propheten?"],
-  "Der SBLGNT setzt (wie WH und SR) das Fragezeichen nach ἐξήλθατε und liest προφήτην ἰδεῖν; KJTR, Stephanus und RP lesen τί ἐξήλθετε ἰδεῖν; προφήτην; (nach den CNTR-Texten dieser Ausgaben). Der Sinn bleibt gleich. Der importierte Apparat führt die Stelle nicht als eigene Variante. ἀλλά ist in [[MAT.11.8]]–[[MAT.11.9]] mit «oder» wiedergegeben: Es leitet die nächste Möglichkeit ein."),
+  "Der SBLGNT setzt (wie WH und nach dem CNTR-Text SR) das Fragezeichen nach ἐξήλθατε und liest προφήτην ἰδεῖν; laut SBLGNT-Apparat lesen Treg, NA28 und RP τί ἐξήλθατε ἰδεῖν; προφήτην; (nach den CNTR-Texten ebenso KJTR und Stephanus, mit der Form ἐξήλθετε). Der Sinn bleibt gleich; die andere Wortstellung und Zeichensetzung steht als Alternative. ἀλλά ist in [[MAT.11.8]]–[[MAT.11.9]] mit «oder» wiedergegeben: Es leitet die nächste Möglichkeit ein."),
  ("MAT.11.10", "Boten", "interpretive", "ἄγγελόν", None, ["Engel"],
   "ἄγγελος heisst «Bote» und «Engel»; hier ist ein menschlicher Bote gemeint. Das Wort verbindet [[MAL.3.1]] mit [[EXO.23.20]] (in der Septuaginta fast gleichlautend). Wiedergabe wie [[MRK.1.2]]."),
  ("MAT.11.11", "der Kleinste", "interpretive", "ὁ μικρότερος", "der Kleinere", ["der Geringste", "der Geringere"],
@@ -522,6 +522,25 @@ ALTS = [
    "Laut der automatischen Zuordnung lesen 01, 03, 04, 032 und 05 βασιλέων; βασιλείων führt sie nur für RP."],
   ["Di zwei Forme underscheided sich i eim Buechstabe; eini cha bim Abschriibe us de andere entstande sii, βασιλείων villicht nach [[LUK.7.25]].",
    "Nach de automatische Zueornig läsed 01, 03, 04, 032 und 05 βασιλέων; βασιλείων nu RP."]),
+ ("VAR-SBLGNTAPP-MAT-011-009-01:R2", "MAT.11.9", "Oder was seid ihr hinausgegangen? Einen Propheten zu sehen?",
+  "Oder was seid ihr hinausgegangen zu sehen? Einen Propheten?",
+  "Oder was sind ir usegange? En Prophet go luege?", "Oder was sind ir usegange go luege? En Prophet?", "gering",
+  "Wortstellung und Zeichensetzung sind anders: «zu sehen» gehört dann zur ersten Frage, wie in [[MAT.11.8]]. Der Sinn bleibt gleich.",
+  "Wortstellig und Satzzeiche sind anders: «go luege» ghört dänn zur erschte Frag, wie i [[MAT.11.8]]. De Sinn bliibt gliich.",
+  {"R1": [("ἐξήλθατε; προφήτην ἰδεῖν;", "Was seid ihr hinausgegangen? Einen Propheten zu sehen?", "WH")],
+   "R2": [("ἐξήλθατε ἰδεῖν; προφήτην;", "Was seid ihr hinausgegangen zu sehen? Einen Propheten?", "Treg, NA28, RP")]},
+  {"R1": [("ἐξήλθατε; προφήτην ἰδεῖν;", "Was sind ir usegange? En Prophet go luege?", "WH")],
+   "R2": [("ἐξήλθατε ἰδεῖν; προφήτην;", "Was sind ir usegange go luege? En Prophet?", "Treg, NA28, RP")]},
+  ["Die alten Handschriften haben kaum Satzzeichen; wo die Frage endet, entscheiden die Herausgeber. Die Stellung ἰδεῖν vor "
+   "προφήτην kann die Frage an [[MAT.11.8]] (τί ἐξήλθατε ἰδεῖν;) angleichen; ebenso kann die Stellung nach προφήτην aus "
+   "Versehen entstanden sein. Mit der Lesart des SBLGNT wird «einen Propheten zu sehen» zu einer eigenen, steigernden Frage.",
+   "Laut der automatischen Zuordnung lesen 01, 03 und 032 wie der SBLGNT (032 mit der Form ἐξεληλύθατε), 04 und 05 "
+   "ἰδεῖν vor προφήτην. Die Zuordnung vergleicht nur die Wortstellung; über Satzzeichen in den Handschriften sagt sie nichts."],
+  ["Di alte Handschrifte händ chuum Satzzeiche; wo d Frag ufhört, entscheided d Herusgäber. ἰδεῖν vor προφήτην cha d Frag "
+   "a [[MAT.11.8]] aagliiche; oder d Stellig nach προφήτην isch us Versehe entstande. Mit de Läsart vom SBLGNT wird «en "
+   "Prophet go luege» e eigeti, stiigereti Frag.",
+   "Nach de automatische Zueornig läsed 01, 03 und 032 wie de SBLGNT (032 mit de Form ἐξεληλύθατε), 04 und 05 ἰδεῖν vor "
+   "προφήτην. D Zueornig vergliicht nu d Wortstellig; über Satzzeiche i de Handschrifte seit si nüüt."]),
  ("VAR-SBLGNTAPP-MAT-011-010-01:R2", "MAT.11.10", "Dieser ist es", "Denn dieser ist es", "Dä isch es", "Dä isch es nämli", "gering",
   "Ein «denn» verbindet den Satz begründend mit [[MAT.11.9]].", "Es «nämli» verbindet de Satz mit [[MAT.11.9]].",
   {"R1": [("οὗτός", "Dieser", "WH, NA28")], "R2": [("οὗτος γάρ", "Denn dieser", "Treg, RP")]},
@@ -665,7 +684,9 @@ NOTES_DE = [
   "Wörtliche Rede innerhalb dieser Reden steht in ‹ ›. ὅτι und λέγων vor direkter Rede sind nicht eigens übersetzt."),
  ("Text: Die Übersetzung folgt den SBLGNT-Tokens. Abweichende Lesarten stehen als Alternativen, soweit sie die Übersetzung "
   "verändern; Lesarten, die nur Schreibung, Wortstellung, Artikel oder Zeitform ohne Wirkung auf die Übersetzung betreffen, "
-  "sind nicht aufgenommen. In [[MAT.11.9]] folgt die Übersetzung der Zeichensetzung des SBLGNT (siehe decisions)."),
+  "sind nicht aufgenommen. In [[MAT.11.9]] folgt die Übersetzung Wortstellung und Zeichensetzung des SBLGNT; die von "
+  "Treg, NA28 und RP steht als Alternative (der Apparateintrag ist nachgetragen, weil der automatische Import ihn nicht "
+  "zugeordnet hatte)."),
  "Eigene Formulierung; nicht aus einer veröffentlichten deutschen Bibel übernommen.",
 ]
 NOTES_GSW = [

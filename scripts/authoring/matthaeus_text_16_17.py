@@ -15,8 +15,9 @@ Besonderheiten:
   (VAR-SBLGNTAPP-MAT-017-020-04); die automatische Zuordnung sieht den zusätzlichen Vers nicht, die Angaben zu den
   Handschriften stammen deshalb aus den CNTR-Transkriptionen.
 - [[MAT.16.2]]b–3 steht im SBLGNT im Text (Apparatzeichen ⸂ … ⸃). Der SBLGNT-Apparat führt dazu zwei Einträge (WH setzt
-  die Worte in doppelte eckige Klammern; RP ergänzt «Heuchler»), die in data/variants/sblgntapp-mat nicht importiert sind.
-  Deshalb stehen sie in decisions und translation_notes, nicht als Alternativen (Vorgehen wie bei [[JHN.3.31]]).
+  die Worte in doppelte eckige Klammern; RP ergänzt «Heuchler»), die der automatische Import nicht zugeordnet hatte. Sie
+  sind nachgetragen (VAR-SBLGNTAPP-MAT-016-002-01, VAR-SBLGNTAPP-MAT-016-003-01, sblgntapp_nachtrag_mat.py) und stehen
+  als Alternativen; die Handschriften sind dafür automatisch zugeordnet (bei 032 im Widerspruch zur CNTR-Transkription).
 
 KI-Entwurf (Claude) vom 2026-10-18 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt. Die Mundart ist noch
 nicht muttersprachlich geprüft. Handschriftenangaben stammen aus der maschinellen Zuordnung (METHOD-AUTO-COLLATION-V1)
@@ -164,12 +165,12 @@ DEC_DE = [
  ("MAT.16.1", "ein Zeichen vom Himmel", "literal", "σημεῖον ἐκ τοῦ οὐρανοῦ", None, ["ein Zeichen von Gott"],
   "«Himmel» kann hier den Ort meinen (ein Zeichen am Himmel) oder umschreibend für Gott stehen (ein von Gott beglaubigendes Zeichen). Die Antwort Jesu spielt mit dem sichtbaren Himmel ([[MAT.16.2]]–[[MAT.16.3]]). Vgl. die Zeichenforderung in [[MAT.12.38]]–[[MAT.12.39]]."),
  ("MAT.16.2", "Wenn es Abend wird", "literal", "Ὀψίας γενομένης", "Als es Abend geworden war", None,
-  "Textbefund: [[MAT.16.2]]b–3 («Wenn es Abend wird … nicht beurteilen») steht im SBLGNT im Text. Der SBLGNT-Apparat vermerkt, dass Treg, NA28 und RP die Worte haben und WH sie in doppelte eckige Klammern setzt (in den importierten Variantendatensätzen fehlt dieser Eintrag; deshalb keine Alternative). Nach den CNTR-Transkriptionen fehlen die Worte in 01 und 03; 04, 05 und 032 haben sie. Die einen halten sie für einen späteren Zusatz nach dem Muster von [[LUK.12.54]]–[[LUK.12.56]], andere für ursprünglich und in Gegenden ausgefallen, wo Abendrot kein gutes Wetter ankündigt. Die Übersetzung folgt den SBLGNT-Tokens."),
+  "Textbefund: [[MAT.16.2]]b–3 («Wenn es Abend wird … nicht beurteilen») steht im SBLGNT im Text. Der SBLGNT-Apparat vermerkt, dass Treg, NA28 und RP die Worte haben und WH sie in doppelte eckige Klammern setzt (nach dem Urteil von WH nicht ursprünglich); das steht als Alternative. Nach den CNTR-Transkriptionen fehlen die Worte in 01 und 03; 04, 05 und 032 haben sie (032 mit einem Sprung von πυρράζει γάρ in [[MAT.16.2]] zu στυγνάζων in [[MAT.16.3]]). Die automatische Zuordnung führt 032 dagegen bei der Auslassung. Die einen halten sie für einen späteren Zusatz nach dem Muster von [[LUK.12.54]]–[[LUK.12.56]], andere für ursprünglich und in Gegenden ausgefallen, wo Abendrot kein gutes Wetter ankündigt. Die Übersetzung folgt den SBLGNT-Tokens."),
  ("MAT.16.2", "Schönes Wetter", "literal", "Εὐδία", None, ["Heiteres Wetter"], None),
  ("MAT.16.3", "kommt ein Unwetter", "adapted", "χειμών", "Unwetter", ["Sturm", "schlechtes Wetter"],
   "Der griechische Satz hat kein Verb («Heute Unwetter»); «kommt» ist ergänzt."),
  ("MAT.16.3", "Das Aussehen des Himmels", "literal", "τὸ πρόσωπον τοῦ οὐρανοῦ", "das Angesicht des Himmels", ["den Himmel"],
-  "Laut SBLGNT-Apparat ergänzt RP davor «Ihr Heuchler» (ὑποκριταί); der Eintrag fehlt in den importierten Variantendatensätzen. Nach den CNTR-Transkriptionen steht das Wort in keiner der hier transkribierten Handschriften (04, 05, 032), wohl aber in den Ausgaben RP, KJTR und Stephanus."),
+  "Laut SBLGNT-Apparat ergänzt RP davor «Ihr Heuchler» (ὑποκριταί); das steht als Alternative. Nach den CNTR-Transkriptionen steht das Wort in keiner der hier transkribierten Handschriften (04, 05, 032), wohl aber in den Ausgaben RP, KJTR und Stephanus."),
  ("MAT.16.3", "könnt ihr nicht beurteilen", "adapted", "οὐ δύνασθε", "könnt ihr nicht", None,
   "Das Verb ist aus dem ersten Satzteil ergänzt. Welche «Zeichen der Zeiten» gemeint sind, sagt der Text nicht; viele denken an das Wirken Jesu (vgl. [[MAT.11.4]]–[[MAT.11.5]])."),
  ("MAT.16.4", "Geschlecht", "traditional", "Γενεὰ", None, ["Generation"],
@@ -353,9 +354,9 @@ DEC_GSW = [
  ("MAT.16.1", "zum en uf d Prob stelle", "interpretive", "πειράζοντες", "versuechend", ["zum en versueche"],
   "Gliich Verb wie bim Versuecher ([[MAT.4.1]])."),
  ("MAT.16.2", "Wänn s Aabig", "literal", "Ὀψίας γενομένης", None, None,
-  "Textbefund: [[MAT.16.2]]b–3 staat im SBLGNT im Text. Im SBLGNT-Apparat staat, dass WH d Wort i doppleti eckigi Chlammere setzt (i de importierte Variante-Datesätz fehlt dä Iitrag, drum kei Alternative). Nach de CNTR-Transkriptione fehled d Wort i 01 und 03; 04, 05 und 032 händ si. D Übersetzig folgt em SBLGNT."),
+  "Textbefund: [[MAT.16.2]]b–3 staat im SBLGNT im Text. Im SBLGNT-Apparat staat, dass WH d Wort i doppleti eckigi Chlammere setzt (nach em Urteil vo WH nöd ursprünglich); das staat als Alternative. Nach de CNTR-Transkriptione fehled d Wort i 01 und 03; 04, 05 und 032 händ si (032 mit eme Sprung vo πυρράζει γάρ i [[MAT.16.2]] zu στυγνάζων i [[MAT.16.3]]). D automatisch Zueornig füert 032 aber bi de Uslassig. D Übersetzig folgt em SBLGNT."),
  ("MAT.16.3", "S Uusgseh", "literal", "τὸ πρόσωπον", "S Gsicht", None,
-  "Nach em SBLGNT-Apparat setzt RP «Ir Hüüchler» devor; dä Iitrag fehlt i de importierte Datesätz."),
+  "Nach em SBLGNT-Apparat setzt RP «Ir Hüüchler» devor; das staat als Alternative."),
  ("MAT.16.3", "chönd ir nöd beurteile", "adapted", "οὐ δύνασθε", "chönd ir nöd", None, "S Verb isch us em erschte Satzteil ergänzt."),
  ("MAT.16.4", "Generation", "adapted", "Γενεὰ", None, ["Gschlächt"],
   "Wie bim Markus: γενεά «Generation», d Ziitgenosse; «Gschlächt» tönt i de Mundart altmodisch."),
@@ -427,6 +428,47 @@ DEC_GSW = [
 
 # ------------------------------------------------------------------------------------------------ Alternativen
 ALTS = [
+ *[("VAR-SBLGNTAPP-MAT-016-002-01:R2", ref, f_de, t_de, f_g, t_g, "mittel",
+    "Westcott-Hort setzen die Wetterworte ([[MAT.16.2]]b–3) in doppelte eckige Klammern: Nach ihrem Urteil gehören sie "
+    "nicht zum ursprünglichen Text. Ohne sie folgt auf «sagte zu ihnen:» direkt [[MAT.16.4]].",
+    "Westcott-Hort setzed d Wätterwort ([[MAT.16.2]]b–3) i doppleti eckigi Chlammere: Nach irem Urteil ghöred si nöd zum "
+    "ursprüngliche Text. Ohni si chunnt nach «zu ine gseit:» grad [[MAT.16.4]].",
+    {"R1": [("Ὀψίας γενομένης … οὐ δύνασθε", "Wenn es Abend wird … nicht beurteilen", "Treg, NA28, RP")],
+     "R2": [("⟦Ὀψίας γενομένης … οὐ δύνασθε⟧", "⟦Wenn es Abend wird … nicht beurteilen⟧", "⟦WH⟧")]},
+    {"R1": [("Ὀψίας γενομένης … οὐ δύνασθε", "Wänn s Aabig wird … nöd beurteile", "Treg, NA28, RP")],
+     "R2": [("⟦Ὀψίας γενομένης … οὐ δύνασθε⟧", "⟦Wänn s Aabig wird … nöd beurteile⟧", "⟦WH⟧")]},
+    ["Die Worte können ein späterer Zusatz nach dem Muster von [[LUK.12.54]]–[[LUK.12.56]] sein. Ebenso können sie "
+     "ursprünglich sein und in Gegenden weggelassen worden sein, wo Abendrot kein gutes Wetter ankündigt.",
+     "Laut der automatischen Zuordnung fehlen die Worte in 01, 03 und 032; 04 und 05 haben sie. Die Zuordnung behandelt die "
+     "Lesart von WH als Auslassung; WH hat die Worte aber in Klammern im Text (bei den Editionen gilt der Apparat). Für 032 "
+     "widerspricht die Zuordnung der CNTR-Transkription: Danach hat 032 die Worte, springt aber von πυρράζει γάρ "
+     "([[MAT.16.2]]) zu στυγνάζων ([[MAT.16.3]]); die Zuordnung von 032 ist hier unsicher."],
+    ["D Wort chönd en spööter Zuesatz nach em Muster vo [[LUK.12.54]]–[[LUK.12.56]] sii. Oder si sind ursprünglich und "
+     "sind i Gägende wägglaa worde, wo s Aabigrot kei schöns Wätter aakündet.",
+     "Nach de automatische Zueornig fehled d Wort i 01, 03 und 032; 04 und 05 händ si. D Zueornig nimmt d Läsart vo WH als "
+     "Uslassig; WH hät d Wort aber i Chlammere im Text (bi de Usgabe gilt de Apparat). Bi 032 widerspricht d Zueornig de "
+     "CNTR-Transkription: Nach dere hät 032 d Wort, springt aber vo πυρράζει γάρ ([[MAT.16.2]]) zu στυγνάζων ([[MAT.16.3]]); "
+     "d Zueornig vo 032 isch da unsicher."])
+   for ref, f_de, t_de, f_g, t_g in (
+       ("MAT.16.2", "«Wenn es Abend wird, sagt ihr: ‹Schönes Wetter! Denn der Himmel ist rot.›",
+        "«⟦Wenn es Abend wird, sagt ihr: ‹Schönes Wetter! Denn der Himmel ist rot.›",
+        "«Wänn s Aabig wird, säged ir: ‹Schöns Wätter! De Himel isch nämli rot.›",
+        "«⟦Wänn s Aabig wird, säged ir: ‹Schöns Wätter! De Himel isch nämli rot.›"),
+       ("MAT.16.3", "die Zeichen der Zeiten aber könnt ihr nicht beurteilen.",
+        "die Zeichen der Zeiten aber könnt ihr nicht beurteilen.⟧",
+        "d Zeiche vo de Ziite aber chönd ir nöd beurteile.", "d Zeiche vo de Ziite aber chönd ir nöd beurteile.⟧"))],
+ ("VAR-SBLGNTAPP-MAT-016-003-01:R2", "MAT.16.3", "Das Aussehen des Himmels", "Ihr Heuchler, das Aussehen des Himmels",
+  "S Uusgseh vom Himel", "Ir Hüüchler, s Uusgseh vom Himel", "gering",
+  "Mit der Anrede «Ihr Heuchler» wird der Vorwurf schärfer, wie in [[LUK.12.56]].",
+  "Mit de Aared «Ir Hüüchler» wird de Vorwurf schärfer, wie i [[LUK.12.56]].",
+  {"R1": [("τὸ", "Das (Aussehen)", "Treg, NA28, ⟦WH⟧")], "R2": [("Ὑποκριταί, τὸ", "Ihr Heuchler, das (Aussehen)", "RP")]},
+  {"R1": [("τὸ", "S (Uusgseh)", "Treg, NA28, ⟦WH⟧")], "R2": [("Ὑποκριταί, τὸ", "Ir Hüüchler, s (Uusgseh)", "RP")]},
+  ["Die Anrede kann aus [[LUK.12.56]] übernommen sein, wo dasselbe Wort steht; ebenso kann sie hier ausgefallen sein.",
+   "Laut der automatischen Zuordnung lesen 04, 05 und 032 ohne «Heuchler»; 01 und 03 führt sie als «liest anders», weil "
+   "dort [[MAT.16.2]]b–3 ganz fehlt."],
+  ["D Aared cha us [[LUK.12.56]] übernoo sii, wo s gliich Wort staat; oder si isch da usgfalle.",
+   "Nach de automatische Zueornig läsed 04, 05 und 032 ohni «Hüüchler»; 01 und 03 füert si als «liist anders», wil dört "
+   "[[MAT.16.2]]b–3 ganz fehlt."]),
  ("VAR-SBLGNTAPP-MAT-016-004-01:R2", "MAT.16.4", "dem Zeichen des Jona", "dem Zeichen des Propheten Jona",
   "em Zeiche vom Jona", "em Zeiche vom Prophet Jona", "gering",
   "Jona wird ausdrücklich als Prophet bezeichnet.", "De Jona wird usdrücklich Prophet gnännt.",
@@ -707,9 +749,10 @@ NOTES_DE = [
   "Übersetzung verändern; reine Wortstellungs- und Schreibvarianten ohne Folgen für die Übersetzung sind nicht aufgenommen."),
  ("[[MAT.16.2]]b–3 («Wenn es Abend wird … nicht beurteilen») steht im SBLGNT im Text. Der SBLGNT-Apparat vermerkt, dass WH "
   "die Worte in doppelte eckige Klammern setzt und dass RP in [[MAT.16.3]] «Heuchler» ergänzt. Diese beiden Apparateinträge "
-  "fehlen in den importierten Variantendatensätzen (data/variants/sblgntapp-mat); deshalb stehen sie in decisions und hier, "
-  "nicht als Alternativen. Nach den CNTR-Transkriptionen fehlen die Worte in 01 und 03 (und in den CNTR-Texten von WH und SR); "
-  "04, 05 und 032 haben sie."),
+  "hatte der automatische Import nicht zugeordnet; sie sind nachgetragen (data/variants/sblgntapp-mat) und stehen als "
+  "Alternativen. Nach den CNTR-Transkriptionen fehlen die Worte in 01 und 03 (und in den CNTR-Texten von WH und SR); "
+  "04, 05 und 032 haben sie (032 mit einem Sprung von πυρράζει γάρ zu στυγνάζων). Die automatische Zuordnung führt 032 "
+  "dagegen bei der Auslassung; die Alternative benennt den Widerspruch."),
  ("Verse ohne SBLGNT-Text: [[MAT.17.21]] («Diese Art aber fährt nur durch Gebet und Fasten aus») steht nicht im SBLGNT und hat "
   "deshalb keinen Übersetzungstext; sein Wortlaut nach Treg und RP steht als Alternative zu [[MAT.17.20]]. Die automatische "
   "Zuordnung ordnet dort alle Zeugen dem kurzen Text zu, weil sie nur bis zum Ende von [[MAT.17.20]] vergleicht; es gilt der "
@@ -732,7 +775,9 @@ NOTES_GSW = [
   "ᾅδης «Totereich»; ἐγείρω im Passiv «uferweckt wärde»; γενεά «Generation»; ἀποκτείνω «umbringe»; γάρ meischt «nämli»."),
  ("Mundart: Näme mit Artikel («de Jesus», «de Petrus»); Perfekt statt Präteritum; «wo» als Relativwort; kei Genitiv "
   "(«de Sohn vom läbige Gott»); Futur oft mit Präsens («mach ich», «findsch»), wie s i de Mundart üblich isch."),
- ("Textbefund: [[MAT.16.2]]b–3 staat im SBLGNT; i 01 und 03 fehled d Wort nach de CNTR-Transkriptione. [[MAT.17.21]] fehlt "
+ ("Textbefund: [[MAT.16.2]]b–3 staat im SBLGNT; WH setzt d Wort i doppleti eckigi Chlammere, und RP setzt i [[MAT.16.3]] "
+  "«Ir Hüüchler» dezue (beides als Alternative; d Iiträg vom Apparat sind nachtreit). I 01 und 03 fehled d Wort nach de "
+  "CNTR-Transkriptione. [[MAT.17.21]] fehlt "
   "im SBLGNT und hät kein Text; de Wortlut staat als Alternative bi [[MAT.17.20]]."),
 ]
 
@@ -763,7 +808,7 @@ def run():
         if missing != {r for r in NO_TOKENS if r.startswith(f"MAT.{c}.")}:
             raise SystemExit(f"Kapitel {c}: unerwartete Verse ohne Tokens {sorted(missing)}")
         refs_c = [r for r in all_refs if r in toks]
-        follows = sorted(f"{vid}:R1" for vid, v in variants.items() if v["reference"] in refs_c)
+        follows = sorted(f"{vid}:R1" for vid, v in variants.items() if v["reference"].split("-")[0] in refs_c)
         for lang, markup, decs, code in (("de", DE, DEC_DE, "DE"), ("gsw", GSW, DEC_GSW, "GSW-ZH")):
             texts, aligns = {}, []
             for r in refs_c:

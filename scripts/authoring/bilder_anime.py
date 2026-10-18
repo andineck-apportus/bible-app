@@ -776,6 +776,7 @@ class AniComposer(_auto.Composer):
         key = KEY[fid]
         ang = {1: -24, -1: 204}.get(arm) if arm is not None else None
         a = (ang, 10) if ang is not None else None
+        big_hold = ""
         if hold == "PRAY":
             hold = "an-z-beten"
         wear = ((p_stage or {}).get("wear") or {}).get(fid)
@@ -787,8 +788,13 @@ class AniComposer(_auto.Composer):
             hold = CHAR[key]["attr"]
         elif hold is not None and not hold.startswith("an-"):
             hw, hh = self.m(hold)[1]
-            if hw >= 26 or hh >= 30:  # grosse Gegenstände (Kreuz, Krug) neben die Figur statt klein vor die Brust
-                out.append(self.r_sym(hold, x + 12 * s, y - 6 * s, hw * 1.1, hh * 1.1))
+            if hw >= 26 or hh >= 30:  # grosse Gegenstände (Schwert, Kreuz, Rohr) seitlich in der Hand, mit sichtbarer Hand
+                k = min(1.1, 30 * s / max(hw, hh))
+                bw, bh = hw * k, hh * k
+                side = -1 if x > _auto.W - 34 * s else 1
+                gx, gy = x + side * 15 * s, y + 20 * s  # Hand auf Brusthöhe neben dem Körper
+                big_hold = (self.r_sym(hold, gx - bw / 2, gy - bh * .72, bw, bh)
+                            + f'<circle cx="{gx:.1f}" cy="{gy:.1f}" r="{2.8 * s:.1f}" fill="{SKIN}" stroke="{INK}" stroke-width="{.6 * s:.2f}"/>')
                 hold = None
             else:
                 hold = OBJ.get(hold) or self.vbmap[hold][0]
@@ -811,7 +817,7 @@ class AniComposer(_auto.Composer):
             g = f'<g transform="rotate({26 if (look or 0) >= 0 else -26} {x:.1f} {y + 30 * s:.1f})">{g}</g>'
         elif pose == "fall":
             g = f'<g transform="rotate(32 {x:.1f} {y + 18 * s:.1f})">{g}</g>'
-        out.append(g)
+        out.append(g + big_hold)
         if joy:
             out.append(sparkle(x - 13 * s, y - 10 * s, .7 * s) + sparkle(x + 13 * s, y - 12 * s, .6 * s))
 

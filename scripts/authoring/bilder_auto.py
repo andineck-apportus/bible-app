@@ -88,6 +88,7 @@ W, H, FLOOR_Y = 186, 140, 118
 
 SHIPS = {"FIG-OBJ-SCHIFF", "FIG-OBJ-BOOT"}
 WINDOW = {"FIG-OBJ-GROSSER-FISCH", "FIG-ORT-GRAB"}
+HEADWEAR = {"FIG-OBJ-DORNENKRONE", "FIG-OBJ-KRONE"}  # mit stage.at auf den Kopf gesetzt
 WATER_TOP = 96  # Wellenkamm der Bänder Meer/See
 
 
@@ -423,7 +424,13 @@ class Composer:
         at_pairs = [(t, f) for t, fs in (st.get("at") or {}).items() for f in (fs if isinstance(fs, list) else [fs])]
         for t, f in at_pairs:  # at: {ZEICHEN: FIG} oder {ZEICHEN: [FIG, …]}
             w, h = self.m(t)[1]
-            if f in heads:
+            if f in heads and t in HEADWEAR:  # Kopfbedeckung auf den Kopf, nicht darüber (Blindtest: Dornenkranz schwebte)
+                hx, hy = heads[f]
+                k = self.head_r() * 2.3 / w
+                w2, h2 = w * k, h * k
+                out.append(self.r_sym(t, hx - w2 / 2, hy - self.head_r() * 1.02 - h2 * .55, w2, h2))
+                pos.setdefault(t, (hx, hy - self.head_r()))
+            elif f in heads:
                 hx, hy = heads[f]
                 if f in spk and f not in L["inside"]:
                     out.append(self.r_sym(t, hx + self.head_r() + 3 if hx < W - 40 else hx - self.head_r() - w - 3, hy - self.head_r() - h * .4, w, h))

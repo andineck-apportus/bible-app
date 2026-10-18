@@ -162,7 +162,10 @@ def main():
     unanchored = []
     for v in sorted(variants, key=lambda x: x["id"]):
         ref = v["reference"]
-        vt = by_verse[ref]
+        # Stelle über mehrere Verse desselben Kapitels (z. B. MAT.16.2-MAT.16.3): Verse aneinanderhängen
+        r0, _, r1 = ref.partition("-")
+        vrefs = [r0] if not r1 else [f"{book}.{ch}.{n}" for n in range(int(r0.split(".")[2]), int(r1.split(".")[2]) + 1)]
+        vt = [t for r_ in vrefs for t in by_verse[r_]]
         words = [strip(t["word"]) for t in vt]
         idx = [i for i, t in enumerate(vt) if t["id"] in v["base_tokens"]]
         i0, i1 = min(idx), max(idx)
@@ -180,7 +183,8 @@ def main():
         # Lesarten, die vereinfacht gleich aussehen, lassen sich nicht unterscheiden
         for t in texts:
             src = t.get("witness") or t.get("edition")
-            mes = t["verses"].get(ref)
+            parts_ = [t["verses"].get(r_) for r_ in vrefs]
+            mes = None if all(x is None for x in parts_) else " ".join(x for x in parts_ if x and x.strip() != "-")
             if t.get("edition"):
                 ls = {"first": [(w, strip(w)) for w in re.sub(r"[/\\|]", "", mes or "").split() if strip(w)]} if mes else {}
             else:

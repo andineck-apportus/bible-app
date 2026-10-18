@@ -59,6 +59,8 @@ def write_study(cfg, label):
         rec.update({"context": ctx, "reference": ref, "topic_de": topic, "text_de": text, "confidence": conf,
                     **({"uncertain_de": unc} if unc else {}), "evidence_refs": ev, **({"sources_de": src} if src else {}),
                     **({"terms": _terms(terms)} if terms else {}), "authorship_de": AUTH, "knowledge": _kn()})
+        if bid in cfg.get("SOURCE_CHECKS", {}):  # Prüfung der genannten ausserbiblischen Quellen am Text (siehe docs/QUELLENPRUEFUNG.md)
+            rec["source_check"] = cfg["SOURCE_CHECKS"][bid]
         folder = D / "background" / ("overview" if not subj else "")
         n += write(folder / f"{bid}.json", rec)
         n += localize(bid, rec, {"topic_de": g_topic, "text_de": g_text, **({"uncertain_de": g_unc} if unc else {}),
