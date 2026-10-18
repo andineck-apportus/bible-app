@@ -186,9 +186,15 @@ def look_dir(slots, i, speaker_idx, addr_idx):
 
 def arrow_svg(x1, y1, x2, y2, kind="act", divine=True):
     """Handlungslinie: act (Gott sendet, sieht, bestimmt), throw (werfen, speien), go (gehen, dem Boden entlang)."""
-    mx, my = (x1 + x2) / 2, min(y1, y2) - (26 if kind == "throw" else 14 if kind == "act" else 0)
-    if kind == "go":
-        my = (y1 + y2) / 2
+    # Bogen quer zur Verbindungslinie (nach oben gewölbt), nicht über den höheren Punkt hinaus: so geht eine Linie von Gott
+    # direkt nach unten ab, statt zuerst nach oben (Hinweis Andi Neck 2026-10-18)
+    dx, dy = x2 - x1, y2 - y1
+    d = math.hypot(dx, dy) or 1
+    nx, ny = -dy / d, dx / d
+    if ny > 0:
+        nx, ny = -nx, -ny
+    bulge = 0 if kind == "go" else min(26 if kind == "throw" else 14, d * .22)
+    mx, my = (x1 + x2) / 2 + nx * bulge, (y1 + y2) / 2 + ny * bulge
     ang = math.atan2(y2 - my, x2 - mx)
     hx1, hy1 = x2 - 7 * math.cos(ang - .45), y2 - 7 * math.sin(ang - .45)
     hx2, hy2 = x2 - 7 * math.cos(ang + .45), y2 - 7 * math.sin(ang + .45)
@@ -488,7 +494,7 @@ class Composer:
                     x1 = bx_ + bw_ * (.94 if f in st.get("flip", []) else .06)
                     y1 = by_ + bh_ * .45
                 d = math.hypot(x2 - x1, y2 - y1) or 1
-                sh1 = 0 if (f in people or f == "FIG-OBJ-GROSSER-FISCH") else (16 if f in sky else 12)
+                sh1 = 0 if (f in people or f == "FIG-OBJ-GROSSER-FISCH") else (min(sky[f][2], sky[f][3]) * .4 if f in sky else 12)
                 sh2 = 0 if t in people else (14 if t in bigpos or t in pos else 10)
                 out.append(arrow_svg(x1 + (x2 - x1) * sh1 / d, y1 + (y2 - y1) * sh1 / d, x2 - (x2 - x1) * sh2 / d, y2 - (y2 - y1) * sh2 / d, kind, f in sky or t in sky))
         arrows(False)

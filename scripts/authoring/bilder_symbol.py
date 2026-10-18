@@ -547,6 +547,11 @@ class SymComposer(_auto.Composer):
             hold = None
         if hold == "FIG-OBJ-BRIEF" and (fid == "FIG-PAULUS" or (_fg.FIGS.get(fid) or {}).get("attr") == "brief"):
             hold = None  # trägt den Brief schon als Merkmal
+        if hold == "FIG-OBJ-POSAUNE":  # Blasinstrument am Mund, Schalltrichter in Blickrichtung von der Figur weg
+            dr = -1 if (look or 0) < 0 else 1
+            out.append(f'<g transform="translate({x + dr * self.head_r() * .6:.1f} {hy + self.head_r() * .25:.1f}) scale({dr} 1)">'
+                       + use(RENDER[hold], -1.2, -11.2, 22, 22) + '</g>')
+            hold = None
         if hold:
             ww, hh2 = _auto.meta(hold, self.lex, EXTRA_META)[1]
             side = arm or 1
