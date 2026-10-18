@@ -1,10 +1,10 @@
 // Prüfung der Bilder im Lesestrom: Bilder auf allen Ebenen über den Versen, Stil-Umschalter beim Bild und in der Legende.
-// Voraussetzung: python3 scripts/build_reading_stream.py; Playwright (PLAYWRIGHT_MODULE=Pfad oder require('playwright')).
+// Voraussetzung: python3 scripts/build_bible.py; Playwright (PLAYWRIGHT_MODULE=Pfad oder require('playwright')).
 const path=require('node:path'),assert=require('node:assert/strict');
 let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'));}catch{console.log('SKIP: Playwright nicht verfügbar');process.exit(0);}
 (async()=>{const b=await chromium.launch();
   try{const p=await b.newPage({viewport:{width:390,height:844}});const errs=[];p.on('pageerror',e=>errs.push(e.message));
-    await p.goto('file://'+path.join(__dirname,'../app/reading-stream/index.html'));await p.waitForTimeout(800);
+    await p.goto('file://'+path.join(__dirname,'../app/bible/index.html'));await p.waitForTimeout(800);
     assert(await p.$('.has-ill .ill-img svg'),'Bild auf der Ebene Bibel');
     assert.equal(await p.$$eval('.ill-styles',x=>x.length),1,'Stil-Umschalter auch auf der Ebene Bibel (Symbol und Anime)');
     await p.click('[data-action=menu]');await p.fill('input[type=search]','Joh 2,1');await p.waitForTimeout(300);await p.click('.results button');await p.waitForTimeout(900);

@@ -1,7 +1,7 @@
 // Optionale Bedienungsprüfung: npm install --no-save jsdom, dann mit Node ausführen.
 const {JSDOM}=require('jsdom'),fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 let model;
-const dom=new JSDOM(fs.readFileSync(path.join(__dirname,'../app/reading-stream/index.html'),'utf8'),{runScripts:'dangerously',pretendToBeVisual:true,beforeParse(w){w.__BIBLE_TEST__=x=>model=x;}});
+const dom=new JSDOM(fs.readFileSync(path.join(__dirname,'../app/bible/index.html'),'utf8'),{runScripts:'dangerously',pretendToBeVisual:true,beforeParse(w){w.__BIBLE_TEST__=x=>model=x;}});
 const app=dom.window.document.querySelector('#bible-stream .app');
 assert(app,'App fehlt');
 const reader=app.querySelector('.reader'),sheetHost=app.querySelector('.sheet-host');

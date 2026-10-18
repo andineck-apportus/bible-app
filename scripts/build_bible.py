@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Baut den Lesestrom (app/reading-stream/index.html) aus Vorlage und Projektdaten.
+"""Baut den Lesestrom (app/bible/index.html) aus Vorlage und Projektdaten.
 
 Eingebettet werden:
 - Navigationsgerüst (data/navigation/NAV-PROT66-KJV.json)
@@ -11,7 +11,7 @@ Eingebettet werden:
 - Wörterbuch-Einträge (data/lexica: UBS, STEPBible TBESG/TBESH), Ausgaben je Wort (STEPBible TAGNT) und
   Ketiv/Qere (STEPBible TAHOT) aus data/tagged-alignments, je Buch in den Paketen b/<BUCH>
 
-Die Vorlage app/reading-stream/template.html bearbeiten, danach dieses Skript ausführen.
+Die Vorlage app/bible/template.html bearbeiten, danach dieses Skript ausführen.
 Erzeugte Datei nicht von Hand ändern.
 """
 import base64
@@ -311,7 +311,7 @@ manifest = {"books": sorted({n.split("/")[1] for n in bundles if n.startswith("b
 sys.path.insert(0, str(ROOT / "scripts"))
 from build_source_map import catalog as _catalog  # noqa: E402
 catalog = [{k: v for k, v in s.items() if k != "checked"} for s in _catalog()]
-template = (ROOT / "app/reading-stream/template.html").read_text(encoding="utf-8")
+template = (ROOT / "app/bible/template.html").read_text(encoding="utf-8")
 dump = lambda o: json.dumps(o, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 
 
@@ -326,12 +326,12 @@ def page(inline):
 
 
 # Einzeldatei (offline, Tests): alle Pakete eingebettet
-(ROOT / "app/reading-stream/index.html").write_text(page(bundles), encoding="utf-8")
+(ROOT / "app/bible/index.html").write_text(page(bundles), encoding="utf-8")
 # Aufgeteilte Fassungen zum Veröffentlichen (deterministisches gzip):
-#   build/reading-stream/        Pakete als .json.gz (übliche Webserver)
-#   build/reading-stream-txt/    Pakete als gzip in Base64 (.gz.txt) für Hosts, die keine Binärdateien ausliefern
+#   build/bible/        Pakete als .json.gz (übliche Webserver)
+#   build/bible-txt/    Pakete als gzip in Base64 (.gz.txt) für Hosts, die keine Binärdateien ausliefern
 sizes = {}
-for folder, ext in (("reading-stream", ".json.gz"), ("reading-stream-txt", ".gz.txt")):
+for folder, ext in (("bible", ".json.gz"), ("bible-txt", ".gz.txt")):
     out = ROOT / "build" / folder
     out.mkdir(parents=True, exist_ok=True)
     manifest["ext"] = ext
@@ -346,7 +346,7 @@ for folder, ext in (("reading-stream", ".json.gz"), ("reading-stream-txt", ".gz.
     (out / "manifest.json").write_text(json.dumps({"ext": ext, "bundles": {k: {"bytes": a, "gzip": b} for k, (a, b) in sorted(sizes.items())}},
                                                   ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 manifest.pop("ext")
-out = ROOT / "build/reading-stream"
+out = ROOT / "build/bible"
 print(f"PASS: Lesestrom gebaut: {len(nav['books'])} Bücher, {len(summaries)} Zusammenfassungen, {len(background)} Hintergrundnotizen zu Abschnitten, {len(overview)} zu oberen Ebenen, "
       f"ausgearbeitet: {', '.join(refs.display_de(x['range']) for x in study['sections'])}; "
       f"{len(bundles)} Pakete ({sum(b for _, b in sizes.values()) // 1024} KB gzip, Kern {len((out / 'index.html').read_bytes()) // 1024} KB).")
