@@ -50,9 +50,9 @@ nicht zeigen). «Die Juden», Pharisäer, Hohepriester als neutrale Figuren, nie
 |---|---|
 | `mood: {FIG: expr}` | Ausdruck im Stil Anime: calm, smile, delight, worried, surprised, earnest, determined, pensive, sleep |
 | `pose: {FIG: p}` | lie, sleep, sit, kneel, fall, away (abgewandt) |
-| `hold: {FIG: OBJ}` | Figur hält Gegenstand (Gegenstand muss in `objects` stehen) |
+| `hold: {FIG: OBJ}` | Figur hält Gegenstand (Gegenstand muss in `objects` stehen); lange Gegenstände (Schwert, Rohr, Kreuz) stehen seitlich mit sichtbarer Hand |
 | `in: {FIG: OBJ}`, `in_pos: {FIG: [x, y]}` | Figur im Gegenstand (Boot, Fisch, Grab …), Lage relativ 0–1 |
-| `at: {ZEICHEN: FIG}` oder `{ZEICHEN: [FIG, …]}` | Zeichen bei einer oder mehreren Figuren (z. B. Zorn, Schlafen, Nebel) |
+| `at: {ZEICHEN: FIG}` oder `{ZEICHEN: [FIG, …]}` | Zeichen bei einer oder mehreren Figuren (z. B. Zorn, Schlafen, Nebel); Krone und Dornenkrone sitzen auf dem Kopf |
 | `signs_who: {ZEICHEN: [FIG…]}` | wer Tränen/Freude/Herz trägt (Standard: alle Personen ausser Jesus) |
 | `count: {ID: n}` | Anzahl (z. B. drei Sonnen, fünf Brote; höchstens 7) |
 | `split: n` | gestrichelte Linie (Abstand) nach der n-ten Person |
