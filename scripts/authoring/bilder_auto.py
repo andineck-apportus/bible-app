@@ -190,6 +190,15 @@ def arrow_svg(x1, y1, x2, y2, kind="act", divine=True):
     # direkt nach unten ab, statt zuerst nach oben (Hinweis Andi Neck 2026-10-18)
     dx, dy = x2 - x1, y2 - y1
     d = math.hypot(dx, dy) or 1
+    if d < 36:  # kurze Strecke (nahe Personen): Winkel «>» bzw. «<» statt eines Pfeilstummels (Hinweis Andi Neck)
+        col = "#C08A2A" if kind == "act" and divine else "#3B3226"
+        ang = math.atan2(dy, dx)
+        cx, cy = (x1 + x2) / 2, (y1 + y2) / 2
+        pts = [(cx - 4 * math.cos(ang) + 6 * math.cos(ang + a_), cy - 4 * math.sin(ang) + 6 * math.sin(ang + a_)) for a_ in (math.pi * .72, 0, -math.pi * .72)]
+        pts[1] = (cx + 4 * math.cos(ang), cy + 4 * math.sin(ang))
+        path = "M" + "L".join(f"{px:.1f} {py:.1f}" for px, py in pts)
+        return (f'<path d="{path}" fill="none" stroke="#FFFDF6" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round" opacity=".85"/>'
+                f'<path d="{path}" fill="none" stroke="{col}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>')
     nx, ny = -dy / d, dx / d
     if ny > 0:
         nx, ny = -nx, -ny
@@ -396,6 +405,9 @@ class Composer:
                     out.append(f'<path d="M{wx - 22:.1f} {wy:.1f}q5.5 -4 11 0t11 0t11 0t11 0" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"/>'
                                f'<path d="M{wx - 22:.1f} {wy:.1f}q5.5 -4 11 0t11 0t11 0t11 0" fill="none" stroke="#3E7CA6" stroke-width="1" stroke-linecap="round"/>')
             pos[s["fid"]] = (heads[s["fid"]][0], heads[s["fid"]][1] + self.head_r() * 1.9)  # Körper, nicht Gesicht
+            if hold and hold != "PRAY" and hold not in pos:  # gehaltener Gegenstand: Anfang oder Ziel einer Handlungslinie
+                side_ = arm or 1
+                pos[hold] = (heads[s["fid"]][0] + side_ * self.head_r() * 1.3, heads[s["fid"]][1] + self.head_r() * 1.6)
         # 5. Gegenstände am Boden: eigener Platz am Rand
         cnt = st.get("count", {})
         self._draw_floor(L, st, [t for t in L["floor"] if t not in behind], out, pos)
@@ -460,9 +472,19 @@ class Composer:
             w, h = self.m(t)[1]
             if f in heads:
                 hx, hy = heads[f]
-                rx = hx + self.head_r() + 4 if hx < W - 44 else hx - self.head_r() - w - 4
-                out.append(self.r_sym(t, rx, hy - h / 2, w, h))
-                pos.setdefault(t, (rx + w / 2, hy))  # auch Ziel einer Handlungslinie
+                r_ = self.head_r()
+                ry = hy - h / 2
+                # Seite mit freiem Platz wählen: nicht auf ein Nachbargesicht und nicht über den Rand (Blindtest-Rückmeldungen)
+                cands = [hx + r_ + 4, hx - r_ - w - 4] if hx < W / 2 else [hx - r_ - w - 4, hx + r_ + 4]
+                free = lambda cx: 2 <= cx <= W - w - 2 and not any(  # noqa: E731
+                    o != f and abs(ox - (cx + w / 2)) < r_ + w / 2 + 1 and abs(oy - hy) < r_ * 2.2 for o, (ox, oy) in heads.items())
+                ok = [c for c in cands if free(c)]
+                if ok:
+                    rx = ok[0]
+                else:  # kein Platz daneben: über den Kopf
+                    rx, ry = min(W - w - 2, max(2, hx - w / 2)), max(2, hy - r_ - h - 4)
+                out.append(self.r_sym(t, rx, ry, w, h))
+                pos.setdefault(t, (rx + w / 2, ry + h / 2))  # auch Ziel einer Handlungslinie
         # 9. Handlungslinien
         people = {sl["fid"] for sl in slots}
         r = self.head_r()

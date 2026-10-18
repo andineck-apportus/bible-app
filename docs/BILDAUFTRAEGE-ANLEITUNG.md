@@ -96,7 +96,7 @@ Verheissung oder Ziel? Typische Signale im Text: «denn», «weil», «damit», 
   («Arme im Geist → Reich der Himmel: …»).
 - Mehrschrittige Abläufe auf Felder verteilen (Feld 1 Ursache, Feld 2 Folge), wenn ein Feld zu voll würde.
 
-Pfeile von Gott gehen direkt vom Rand des Strahlenkranzes zum Ziel (Bogen quer zur Verbindungslinie); Blasinstrumente
+Kurze Wege (nahe Personen) zeichnet der Zeichner als Winkel «>»/«<»; `beside` sucht die freie Seite, sonst über den Kopf; ein gehaltener Gegenstand (`hold`) kann Anfang oder Ziel eines Pfeils sein. Pfeile von Gott gehen direkt vom Rand des Strahlenkranzes zum Ziel (Bogen quer zur Verbindungslinie); Blasinstrumente
 (`hold` Posaune) setzt der Zeichner an den Mund, den Trichter in Blickrichtung.
 
 ## Neue Lexikon-Einträge
