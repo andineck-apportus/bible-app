@@ -333,6 +333,11 @@ def main():
             for f in need:
                 if not r.get(f):
                     errors.append(f"{rel}: background_note ohne {f}")
+            sc = r.get("source_check")
+            if sc is not None:
+                if not isinstance(sc, dict) or sc.get("result") not in ("confirmed", "corrected", "partly", "unverifiable") \
+                        or not re.match(r"^\d{4}-\d{2}-\d{2}$", str(sc.get("date", ""))) or not sc.get("method_de") or not isinstance(sc.get("checked", []), list):
+                    errors.append(f"{rel}: source_check braucht date, result (confirmed/corrected/partly/unverifiable), method_de, checked[]")
             if scope not in (None, "bible", "testament", "book_group", "book"):
                 errors.append(f"{rel}: unbekannter scope {scope!r}")
             if scope == "testament" and r.get("testament") not in ("OT", "NT"):
