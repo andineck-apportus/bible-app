@@ -545,18 +545,18 @@ class Composer:
                 px, pw, pbot, ph = placed[same[0]]
                 ptop = pbot - ph
                 lo_x = 28 if ptop < 24 else 4  # Feldnummer oben links frei lassen
-                besides = [c for c in (px + pw + 5, px - bw - 5) if lo_x <= c <= W - 4 - bw]
+                besides = [c for c in (px + pw + 5,) if lo_x <= c <= W - 4 - bw]  # nur rechts daneben (Leserichtung)
                 besides = [c for c in besides if not any(c < gx + gw + 4 and c + bw > gx - 4 and ptop < gy + gh + 2 and ptop + bh > gy - 2
                                                          for gx, gy, gw, gh in list(sky.values()))]
                 if not besides:  # zu breit: Zeichen etwas verkleinern, damit die Blase neben die erste passt (statt den Kopf zu verdecken)
-                    room = max(W - 4 - (px + pw + 5), px - 5 - lo_x)
+                    room = W - 4 - (px + pw + 5)
                     if room >= bw * .72:
                         sc = (room - 12 - 5 * (len(ws) - 1)) / sum(ws)
                         ws = [w * sc for w in ws]
                         ih *= sc
                         bw = sum(ws) + 5 * (len(ws) - 1) + 12
                         bh = ih + 12
-                        cand = px + pw + 5 if W - 4 - (px + pw + 5) >= bw - .5 else px - bw - 5
+                        cand = px + pw + 5
                         if not any(cand < gx + gw + 4 and cand + bw > gx - 4 and ptop < gy + gh + 2 and ptop + bh > gy - 2 for gx, gy, gw, gh in sky.values()):
                             besides = [cand]
                 if besides:
