@@ -82,6 +82,23 @@ Platzierung je Eintrag (in `bildsymbole_daten`: `place`): `band` (Hintergrund ü
 `back` (Gebäude im Hintergrund), `big` (gross in der Mitte: Schiff, Fisch, Grab), `floor` (am Boden), `hand` (klein, in der Hand),
 `air` (frei oben), `head` (bei den Köpfen), `line` (zwischen Figuren).
 
+## Abläufe sichtbar machen: Ursache → Wirkung (seit 2026-10-18)
+
+Ein Bild soll zeigen, was woraus folgt, nicht nur, wer da ist. Für jedes Feld fragen: Was ist Ursache oder Bedingung, was Folge,
+Verheissung oder Ziel? Typische Signale im Text: «denn», «weil», «damit», «so dass», «darum», «wenn … dann», «wer … der», Seligpreisungen
+(«Selig sind …, denn …»), Gebote mit Begründung, Gleichnisse (Handlung → Ergebnis), Wunder (Bitte/Glaube → Heilung).
+
+- Ursache links, Folge rechts (Leserichtung); dazwischen ein Pfeil `act` von der Ursache zur Folge (z. B. Arme → Krone «Reich der Himmel»).
+- Was von Gott kommt, mit goldenem Pfeil vom Strahlenkranz zur Gabe bzw. zur Person (Gott gibt, tröstet, nennt).
+- Reaktion auf Handlung: Pfeil von der Handelnden zur Antwortenden (gute Werke → Menschen → Gott preisen).
+- Zeichen, die eine Folge darstellen, nicht frei schweben lassen, sondern als Ziel eines Pfeils oder bei der betroffenen Figur (`at`).
+- Höchstens zwei bis drei Pfeile je Feld; eine klare Kette ist besser als viele Linien. Die Legende nennt die Kette in Pfeilform
+  («Arme im Geist → Reich der Himmel: …»).
+- Mehrschrittige Abläufe auf Felder verteilen (Feld 1 Ursache, Feld 2 Folge), wenn ein Feld zu voll würde.
+
+Pfeile von Gott gehen direkt vom Rand des Strahlenkranzes zum Ziel (Bogen quer zur Verbindungslinie); Blasinstrumente
+(`hold` Posaune) setzt der Zeichner an den Mund, den Trichter in Blickrichtung.
+
 ## Neue Lexikon-Einträge
 
 Aufbau wie in `bildlexikon_daten/JON.json`: `id` (`FIG-…`, gleiche Namen für gleiche Dinge in allen Büchern, z. B. `FIG-ZEICHEN-LIEBE`),
