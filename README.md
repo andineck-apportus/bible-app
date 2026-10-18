@@ -106,7 +106,7 @@ python3 scripts/import_openbible_crossrefs.py bible_databases/sources/extras/cro
 
 Die Importer schreiben Quelle, Upstream-Commit, SHA-256, Lizenz und Importdatum in die Datensätze und brechen bei unsicherer Zuordnung ab bzw. führen nicht zuordenbare Einträge in `reports/` auf, statt sie zu raten. `scripts/import_morphgnt.py` ist der frühere Pilot-Importer (v0.6) und wird nur noch durch `scripts/test_import.py` geprüft.
 
-Prüfungen für den Lesestrom (Node.js ≥ 18): `node scripts/test_bible.cjs`; Bedienung zusätzlich mit `npm install --no-save jsdom` und `node scripts/test_bible_dom.cjs`; Vorlesen und Seitenleiste mit Playwright: `node scripts/test_bible_vorlesen.cjs`, `node scripts/test_bible_sidebar.cjs`, `node scripts/test_bible_bilder.cjs`.
+Prüfungen für den Lesestrom (Node.js ≥ 18): `node scripts/test_bible.cjs`; Merkverse und Lernen: `node scripts/test_bible_lernen.cjs` (Playwright); Bedienung zusätzlich mit `npm install --no-save jsdom` und `node scripts/test_bible_dom.cjs`; Vorlesen und Seitenleiste mit Playwright: `node scripts/test_bible_vorlesen.cjs`, `node scripts/test_bible_sidebar.cjs`, `node scripts/test_bible_bilder.cjs`.
 
 ## Ablage und Historie
 
