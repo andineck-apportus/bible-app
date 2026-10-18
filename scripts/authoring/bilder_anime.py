@@ -270,7 +270,7 @@ def person(key, x, y, s, expr="calm", look=0.0, arm=None, flip=False, tears=Fals
         held = use(hold, -4, 13, 16, 12) if hold else ""  # vor der Brust, nicht am unteren Rand
     if hold and "posaune" in hold:  # Blasinstrument am Mund, Schalltrichter von der Figur weg in Blickrichtung (Hinweis Andi Neck)
         dr = -1 if (look or 0) < 0 else 1
-        held = f'<g transform="translate({(look or 0) * 1.0 + .6 * dr:.1f} 8.4) scale({dr} 1)">{use(hold, -1.2, -11.2, 24, 24)}</g>'
+        held = f'<g transform="translate({(look or 0) * 1.0 + .8 * dr:.1f} 9.2) scale({dr} 1) rotate(16)">{use(hold, -1.8, -11.6, 24, 24)}</g>'
     head = head_inner(key, expr, -look if flip else look, tears)
     if flip:  # abgewandt: Hinterkopf statt Gesicht (Spiegeln allein war im Blindtest nicht sichtbar)
         c = CHAR[key]
@@ -793,7 +793,7 @@ class AniComposer(_auto.Composer):
             hold = CHAR[key]["attr"]
         elif hold is not None and not hold.startswith("an-"):
             hw, hh = self.m(hold)[1]
-            if hw >= 26 or hh >= 30:  # grosse Gegenstände (Schwert, Kreuz, Rohr) seitlich in der Hand, mit sichtbarer Hand
+            if (hw >= 26 or hh >= 30) and hold != "FIG-OBJ-POSAUNE":  # grosse Gegenstände (Schwert, Kreuz, Rohr) seitlich in der Hand, mit sichtbarer Hand
                 k = min(1.1, 30 * s / max(hw, hh))
                 bw, bh = hw * k, hh * k
                 side = -1 if x > _auto.W - 34 * s else 1

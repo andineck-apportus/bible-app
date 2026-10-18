@@ -155,8 +155,8 @@
     ],
     "action_de": "Eine Wolke überschattet sie, und eine Stimme aus der Wolke sagt: Dieser ist mein geliebter Sohn; hört auf ihn! Als sie sich umschauen, ist nur noch Jesus bei ihnen.",
     "action_gsw": "E Wulche überschattet si, und e Stimm us de Wulche seit: Das isch min gliebte Sohn; losed uf ihn! Wo si umeluegid, isch nu no de Jesus bi ine.",
-    "caption_de": "Die Stimme aus der Wolke: Gott (Strahlenkranz über der hellen Wolke) sagt: Dies ist mein geliebter Sohn, hört auf ihn (Jesus, Herz, Ohr); danach ist nur noch Jesus da.",
-    "caption_gsw": "D Stimm us de Wolke: Gott (Strahlechranz über de helle Wolke) seit: Das isch min liebe Sohn, losed uf ihn (Jesus, Härz, Ohr); nachher isch nume no de Jesus da.",
+    "caption_de": "Gott → Jesus: Aus der Wolke (Strahlenkranz über der hellen Wolke) nennt Gott Jesus seinen geliebten Sohn (goldener Pfeil zu Jesus) und sagt: Hört auf ihn (Jesus, Herz, Ohr); danach ist nur noch Jesus da.",
+    "caption_gsw": "Gott → Jesus: Us de Wolke (Strahlechranz über de helle Wolke) nännt Gott de Jesus sin liebe Sohn (goldige Pfiil zum Jesus) und seit: Losed uf ihn (Jesus, Härz, Ohr); nachher isch nume no de Jesus da.",
     "stage": {
      "god_side": "left",
      "air_x": 14,
@@ -165,7 +165,14 @@
       "FIG-PETRUS": "surprised",
       "FIG-JAKOBUS-ZEBEDAEUS": "surprised",
       "FIG-JOHANNES-ZEBEDAEUS": "surprised"
-     }
+     },
+     "arrows": [
+      [
+       "FIG-GOTT",
+       "FIG-JESUS",
+       "act"
+      ]
+     ]
     }
    },
    {
@@ -321,8 +328,8 @@
     ],
     "action_de": "Jesus gebietet dem unreinen Geist, aus dem Jungen auszufahren; der Geist fährt aus. Der Junge liegt wie tot da, doch Jesus nimmt ihn bei der Hand und richtet ihn auf.",
     "action_gsw": "De Jesus befiehlt em unsuubere Geischt, us em Bueb uusz fahre; de Geischt fahrt uus. De Bueb liit wie tot da, aber de Jesus nimmt en a de Hand und stellt en uf.",
-    "caption_de": "Befreit: Jesus gebietet dem Geist auszufahren (Schatten, Pfeil weg) und richtet den Jungen auf (Bogen von Jesus zum Jungen).",
-    "caption_gsw": "Befreit: De Jesus befiehlt em Geischt, er söll usefahre (Schatte, Pfiil ewäg), und hilft em Bueb uf (Boge vom Jesus zum Bueb).",
+    "caption_de": "Jesu Befehl → befreit: Jesus gebietet dem Geist auszufahren (Schatten, Pfeil weg) und richtet den Jungen auf (Bogen von Jesus zum Jungen).",
+    "caption_gsw": "Em Jesus sin Befehl → befreit: De Jesus befiehlt em Geischt, er söll usefahre (Schatte, Pfiil ewäg), und hilft em Bueb uf (Boge vom Jesus zum Bueb).",
     "stage": {
      "x": {
       "FIG-JESUS": 62,
@@ -667,29 +674,41 @@
     "n": 3,
     "reference": "MRK.9.41",
     "figures": [
-     "FIG-JESUS",
+     "FIG-ROLLE-MENSCH",
      "FIG-GRUPPE-ZWOELF"
     ],
-    "objects": [],
-    "signs": [],
-    "speech": [
-     {
-      "from": "FIG-JESUS",
-      "to": "FIG-GRUPPE-ZWOELF",
-      "icons": [
-       "FIG-OBJ-BECHER-WASSER",
-       "FIG-ZEICHEN-VIELE",
-       "FIG-ZEICHEN-SCHATZ"
-      ]
-     }
+    "objects": [
+     "FIG-OBJ-BECHER-WASSER"
     ],
+    "signs": [
+     "FIG-ZEICHEN-SCHATZ"
+    ],
+    "speech": [],
     "action_de": "Wer euch einen Becher Wasser zu trinken gibt, weil ihr zu Christus gehört, wird seinen Lohn gewiss nicht verlieren.",
     "action_gsw": "Wer eu en Becher Wasser z trinke git, will ihr zu Christus ghöred, wird sin Lohn sicher nöd verlüüre.",
-    "caption_de": "Der Becher Wasser: Wer euch einen Becher Wasser gibt (Becher, Menschen), verliert seinen Lohn nicht (Schatztruhe).",
-    "caption_gsw": "De Becher Wasser: Wer eu en Becher Wasser git (Becher, Mänsche), verlüürt sin Lohn nöd (Schatztrucke).",
+    "caption_de": "Becher Wasser → Lohn: Ein Mensch reicht den Jüngern einen Becher Wasser (Becher, Bogen zu ihnen), weil sie zu Christus gehören; seinen Lohn verliert er nicht (Schatztruhe neben ihm).",
+    "caption_gsw": "Becher Wasser → Lohn: En Mänsch git de Jünger en Becher Wasser (Becher, Boge zu ine), will si zu Christus ghöred; sin Lohn verlüürt er nöd (Schatztrucke näbed ihm).",
     "stage": {
+     "x": {
+      "FIG-ROLLE-MENSCH": 50,
+      "FIG-GRUPPE-ZWOELF": 140
+     },
+     "hold": {
+      "FIG-ROLLE-MENSCH": "FIG-OBJ-BECHER-WASSER"
+     },
+     "arrows": [
+      [
+       "FIG-ROLLE-MENSCH",
+       "FIG-GRUPPE-ZWOELF",
+       "act"
+      ]
+     ],
      "mood": {
+      "FIG-ROLLE-MENSCH": "smile",
       "FIG-GRUPPE-ZWOELF": "smile"
+     },
+     "beside": {
+      "FIG-ZEICHEN-SCHATZ": "FIG-ROLLE-MENSCH"
      }
     }
    }
@@ -847,8 +866,8 @@
     ],
     "action_de": "Auf dem Berg wird Jesus vor drei Jüngern verwandelt, Elija und Mose reden mit ihm; aus der Wolke sagt Gott: Dieser ist mein geliebter Sohn; hört auf ihn!",
     "action_gsw": "Uf em Bärg wird de Jesus vor drüü Jünger verwandlet, de Elija und de Mose redet mit em; us de Wulche seit Gott: Das isch min gliebte Sohn; losed uf ihn!",
-    "caption_de": "Verwandlung: Jesus strahlt (Strahlen) zwischen Elija (Fellmantel) und Mose (Tafeln); aus der Wolke (Strahlenkranz über der hellen Wolke) sagt Gott: Mein geliebter Sohn, hört auf ihn (Jesus, Herz, Ohr).",
-    "caption_gsw": "Verwandlig: De Jesus strahlt (Strahle) zwüschem Elija (Fällmantel) und em Mose (Tafle); us de Wolke (Strahlechranz über de helle Wolke) seit Gott: Min liebe Sohn, losed uf ihn (Jesus, Härz, Ohr).",
+    "caption_de": "Gott → Jesus: Jesus strahlt (Strahlen) zwischen Elija (Fellmantel) und Mose (Tafeln); aus der Wolke (Strahlenkranz über der hellen Wolke) nennt Gott ihn seinen geliebten Sohn (goldener Pfeil zu Jesus): Hört auf ihn (Jesus, Herz, Ohr).",
+    "caption_gsw": "Gott → Jesus: De Jesus strahlt (Strahle) zwüschem Elija (Fällmantel) und em Mose (Tafle); us de Wolke (Strahlechranz über de helle Wolke) nännt Gott en sin liebe Sohn (goldige Pfiil zum Jesus): Losed uf ihn (Jesus, Härz, Ohr).",
     "stage": {
      "god_side": "left",
      "air_x": 14,
@@ -863,7 +882,14 @@
      },
      "hold": {
       "FIG-MOSE": "FIG-OBJ-GESETZESTAFELN"
-     }
+     },
+     "arrows": [
+      [
+       "FIG-GOTT",
+       "FIG-JESUS",
+       "act"
+      ]
+     ]
     }
    },
    {
@@ -1109,9 +1135,9 @@
     "n": 1,
     "reference": "MRK.10.13",
     "figures": [
-     "FIG-GRUPPE-MENGE",
      "FIG-GRUPPE-KINDER",
-     "FIG-GRUPPE-ZWOELF"
+     "FIG-GRUPPE-ZWOELF",
+     "FIG-JESUS"
     ],
     "objects": [],
     "signs": [],
@@ -1126,8 +1152,8 @@
     ],
     "action_de": "Man bringt Kinder zu Jesus, damit er sie anrühre; die Jünger aber fahren die Leute an.",
     "action_gsw": "Me bringt Chind zum Jesus, dass er si aarüert; d Jünger aber schnauzed d Lüüt aa.",
-    "caption_de": "Abgewiesen: Leute bringen Kinder (Weg von den Leuten zu den Kindern); die Jünger weisen sie ab (abwehrende Hand).",
-    "caption_gsw": "Abgwise: Lüüt bringed Chind (Wäg vo de Lüüt zu de Chind); d Jünger wiised si ab (abwehrendi Hand).",
+    "caption_de": "Zu Jesus → abgewiesen: Kinder werden zu Jesus gebracht, damit er sie anrühre (gestrichelter Weg von den Kindern zu Jesus); die Jünger weisen sie ab (abwehrende Hand).",
+    "caption_gsw": "Zum Jesus → abgwise: Chind wärded zum Jesus bracht, dass er si aarüert (gstrichlete Wäg vo de Chind zum Jesus); d Jünger wiised si ab (abwehrendi Hand).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-ZWOELF": "earnest",
@@ -1136,11 +1162,16 @@
      },
      "arrows": [
       [
-       "FIG-GRUPPE-MENGE",
        "FIG-GRUPPE-KINDER",
+       "FIG-JESUS",
        "go"
       ]
-     ]
+     ],
+     "x": {
+      "FIG-GRUPPE-KINDER": 36,
+      "FIG-GRUPPE-ZWOELF": 100,
+      "FIG-JESUS": 160
+     }
     }
    },
    {
@@ -1152,7 +1183,9 @@
      "FIG-GRUPPE-ZWOELF"
     ],
     "objects": [],
-    "signs": [],
+    "signs": [
+     "FIG-ZEICHEN-REICH-GOTTES"
+    ],
     "speech": [
      {
       "from": "FIG-JESUS",
@@ -1160,22 +1193,34 @@
       "icons": [
        "FIG-ZEICHEN-KIND",
        "FIG-JESUS",
-       "FIG-ZEICHEN-NICHT-HINDERN",
-       "FIG-ZEICHEN-KIND",
-       "FIG-ZEICHEN-REICH-GOTTES"
+       "FIG-ZEICHEN-NICHT-HINDERN"
       ]
      }
     ],
     "action_de": "Jesus wird unwillig: Lasst die Kinder zu mir kommen, hindert sie nicht! Denn solchen gehört das Reich Gottes. Wer es nicht annimmt wie ein Kind, kommt nicht hinein.",
     "action_gsw": "De Jesus wird uwillig: Lönd d Chind zu mir cho, hindered si nöd! Dänn settige ghört s Riich vo Gott. Wer s nöd aanimmt wie es Chind, chunnt nöd ine.",
-    "caption_de": "Lasst sie kommen: Jesus ist unwillig: Lasst die Kinder zu mir, hindert sie nicht (Kind, Jesus, durchgestrichene abwehrende Hand); solchen gehört das Reich Gottes (Kind, Krone im Licht).",
-    "caption_gsw": "Lönd si cho: De Jesus isch unwillig: Lönd d Chind zu mir, hinderet si nöd (Chind, Jesus, durgstricheni abwehrendi Hand); settigne ghört s Riich vo Gott (Chind, Chrone im Liecht).",
+    "caption_de": "Kinder → Reich Gottes: Jesus ist unwillig und sagt den Jüngern: Lasst die Kinder zu mir, hindert sie nicht (Kind, Jesus, durchgestrichene abwehrende Hand); denn solchen gehört das Reich Gottes (Pfeil von den Kindern zur Krone im Licht).",
+    "caption_gsw": "Chind → Riich vo Gott: De Jesus isch unwillig und seit de Jünger: Lönd d Chind zu mir, hinderet si nöd (Chind, Jesus, durgstricheni abwehrendi Hand); dänn settigne ghört s Riich vo Gott (Pfiil vo de Chind zur Chrone im Liecht).",
     "stage": {
      "mood": {
       "FIG-JESUS": "earnest",
       "FIG-GRUPPE-ZWOELF": "surprised",
       "FIG-GRUPPE-KINDER": "calm"
-     }
+     },
+     "x": {
+      "FIG-GRUPPE-KINDER": 40,
+      "FIG-JESUS": 104,
+      "FIG-GRUPPE-ZWOELF": 154
+     },
+     "arrows": [
+      [
+       "FIG-GRUPPE-KINDER",
+       "FIG-ZEICHEN-REICH-GOTTES",
+       "act"
+      ]
+     ],
+     "air_x": 10,
+     "air_y": 22
     }
    },
    {
@@ -1192,8 +1237,8 @@
     "speech": [],
     "action_de": "Jesus schliesst die Kinder in die Arme und segnet sie, indem er ihnen die Hände auflegt.",
     "action_gsw": "De Jesus nimmt d Chind in Arm und segnet si, indem er ine d Händ uflegt.",
-    "caption_de": "Segen: Jesus nimmt die Kinder zu sich und segnet sie (Bogen von Jesus zu den Kindern, segnende Hand über ihnen).",
-    "caption_gsw": "Säge: De Jesus nimmt d Chind zu sich und segnet si (Boge vom Jesus zu de Chind, segnendi Hand über ine).",
+    "caption_de": "Jesus → Kinder: Jesus nimmt die Kinder zu sich und segnet sie (Bogen von Jesus zu den Kindern, segnende Hand über ihnen).",
+    "caption_gsw": "Jesus → Chind: De Jesus nimmt d Chind zu sich und segnet si (Boge vom Jesus zu de Chind, segnendi Hand über ine).",
     "stage": {
      "mood": {
       "FIG-JESUS": "smile",
@@ -1773,8 +1818,8 @@
     ],
     "action_de": "Jesus sagt: Geh, dein Glaube hat dich gerettet! Sogleich sieht er wieder und folgt ihm auf dem Weg.",
     "action_gsw": "De Jesus seit: Gang, din Glaube hät dich grettet! Grad gseht er wider und folget em uf em Wäg.",
-    "caption_de": "Sehend auf dem Weg: Jesus sagt: Dein Glaube hat dich gerettet (Herz mit Licht, Pfeil nach oben); Bartimäus sieht und folgt ihm (Freude, Fussspuren).",
-    "caption_gsw": "Gsehnd uf em Wäg: De Jesus seit: Din Glaube hät dich grettet (Härz mit Liecht, Pfiil ufe); de Bartimäus gseht und folget em (Fröid, Fuessspure).",
+    "caption_de": "Glaube → Rettung: Jesus sagt: Dein Glaube hat dich gerettet (Herz mit Licht, Pfeil nach oben); Bartimäus sieht und folgt ihm (Freude, Fussspuren).",
+    "caption_gsw": "Glaube → Rettig: De Jesus seit: Din Glaube hät dich grettet (Härz mit Liecht, Pfiil ufe); de Bartimäus gseht und folget em (Fröid, Fuessspure).",
     "stage": {
      "signs_who": {
       "FIG-ZEICHEN-FREUDE": [
@@ -1818,8 +1863,8 @@
     "speech": [],
     "action_de": "Jesus nimmt die Kinder in die Arme und segnet sie: Ihnen gehört das Reich Gottes.",
     "action_gsw": "De Jesus nimmt d Chind in Arm und segnet si: Ine ghört s Riich vo Gott.",
-    "caption_de": "Kinder: Jesus segnet die Kinder (Bogen von Jesus zu den Kindern, segnende Hand über ihnen).",
-    "caption_gsw": "Chind: De Jesus segnet d Chind (Boge vom Jesus zu de Chind, segnendi Hand über ine).",
+    "caption_de": "Jesus → Kinder: Jesus segnet die Kinder (Bogen von Jesus zu den Kindern, segnende Hand über ihnen).",
+    "caption_gsw": "Jesus → Chind: De Jesus segnet d Chind (Boge vom Jesus zu de Chind, segnendi Hand über ine).",
     "stage": {
      "mood": {
       "FIG-JESUS": "smile",
@@ -1929,8 +1974,8 @@
     ],
     "action_de": "In Jericho heilt Jesus den blinden Bartimäus: Dein Glaube hat dich gerettet. Er sieht und folgt Jesus auf dem Weg.",
     "action_gsw": "Z Jericho heilt de Jesus de blind Bartimäus: Din Glaube hät dich grettet. Er gseht und folget em Jesus uf em Wäg.",
-    "caption_de": "Bartimäus: Dein Glaube hat dich gerettet (Herz mit Licht, Pfeil nach oben); er sieht und folgt Jesus (Freude, Fussspuren).",
-    "caption_gsw": "Bartimäus: Din Glaube hät dich grettet (Härz mit Liecht, Pfiil ufe); er gseht und folget em Jesus (Fröid, Fuessspure).",
+    "caption_de": "Glaube → Rettung: Dein Glaube hat dich gerettet (Herz mit Licht, Pfeil nach oben); er sieht und folgt Jesus (Freude, Fussspuren).",
+    "caption_gsw": "Glaube → Rettig: Din Glaube hät dich grettet (Härz mit Liecht, Pfiil ufe); er gseht und folget em Jesus (Fröid, Fuessspure).",
     "stage": {
      "signs_who": {
       "FIG-ZEICHEN-FREUDE": [
@@ -2355,22 +2400,22 @@
     ],
     "action_de": "Am frühen Morgen sehen sie den Feigenbaum von den Wurzeln her verdorrt. Petrus erinnert sich: Rabbi, sieh, der Feigenbaum, den du verflucht hast, ist verdorrt!",
     "action_gsw": "Am früene Morge gsehnd si de Feigebaum vo de Wurzle här verdoret. De Petrus bsinnt sich: Rabbi, lueg, de Feigebaum, wo du verfluecht häsch, isch verdoret!",
-    "caption_de": "Verdorrt: Petrus zeigt Jesus den Feigenbaum, der von den Wurzeln her verdorrt ist (Bogen zum verdorrten Baum).",
-    "caption_gsw": "Verdoret: De Petrus zeigt em Jesus de Feigebaum, wo vo de Wurzle här verdoret isch (Boge zum verdorete Baum).",
+    "caption_de": "Jesu Wort → verdorrt: Petrus erinnert sich und zeigt Jesus den Feigenbaum, den er verflucht hat (Bogen von Jesus zum Baum): Er ist von den Wurzeln her verdorrt.",
+    "caption_gsw": "Em Jesus sis Wort → verdoret: De Petrus bsinnt sich und zeigt em Jesus de Feigebaum, wo er verfluecht hät (Boge vom Jesus zum Baum): Er isch vo de Wurzle här verdoret.",
     "stage": {
      "mood": {
       "FIG-PETRUS": "surprised"
      },
      "x": {
-      "FIG-JESUS": 36,
-      "FIG-PETRUS": 96
+      "FIG-JESUS": 32,
+      "FIG-PETRUS": 150
      },
      "floor_x": {
-      "FIG-OBJ-FEIGENBAUM-VERDORRT": 128
+      "FIG-OBJ-FEIGENBAUM-VERDORRT": 90
      },
      "arrows": [
       [
-       "FIG-PETRUS",
+       "FIG-JESUS",
        "FIG-OBJ-FEIGENBAUM-VERDORRT",
        "act"
       ]
@@ -2413,6 +2458,7 @@
     "n": 3,
     "reference": "MRK.11.24-MRK.11.25",
     "figures": [
+     "FIG-GOTT",
      "FIG-GRUPPE-ZWOELF",
      "FIG-JESUS"
     ],
@@ -2431,12 +2477,24 @@
     ],
     "action_de": "Alles, worum ihr betet und bittet – glaubt, dass ihr es empfangen habt, und es wird euch zuteil. Und wenn ihr betet, vergebt, wenn ihr etwas gegen jemanden habt, damit euer Vater im Himmel auch euch vergibt.",
     "action_gsw": "Alles, wo ihr drum bätted und bitted – glaubed, dass ihr s übercho händ, und es wird eu gäh. Und wänn ihr bätted, vergänd, wänn ihr öppis gäge öpper händ, dass eue Vater im Himmel eu au vergit.",
-    "caption_de": "Beten und vergeben: Was ihr im Gebet erbittet, glaubt, dass ihr es empfangen habt (betende Hände, Herz mit Licht); vergebt, wenn ihr etwas gegen jemanden habt (zerrissener Schuldschein).",
-    "caption_gsw": "Bäte und vergäh: Was ihr im Gebät erbitted, glaubed, dass ihr s übercho händ (bätendi Händ, Härz mit Liecht); vergänd, wänn ihr öppis gäge öpper händ (verrissne Schuldschii).",
+    "caption_de": "Vergeben → Vergebung: Jesus sagt: Was ihr im Gebet erbittet, glaubt, dass ihr es empfangen habt (betende Hände, Herz mit Licht); vergebt (zerrissener Schuldschein), damit auch euer Vater euch vergibt (Strahlenkranz, goldener Pfeil zu den Jüngern).",
+    "caption_gsw": "Vergäh → Vergäbig: De Jesus seit: Was ihr im Gebät erbitted, glaubed, dass ihr s übercho händ (bätendi Händ, Härz mit Liecht); vergänd (verrissne Schuldschii), dass eue Vater eu au vergit (Strahlechranz, goldige Pfiil zu de Jünger).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-ZWOELF": "smile"
-     }
+     },
+     "god_side": "left",
+     "x": {
+      "FIG-GRUPPE-ZWOELF": 70,
+      "FIG-JESUS": 150
+     },
+     "arrows": [
+      [
+       "FIG-GOTT",
+       "FIG-GRUPPE-ZWOELF",
+       "act"
+      ]
+     ]
     }
    }
   ],
@@ -2823,26 +2881,28 @@
     "objects": [
      "FIG-ORT-WEINBERG"
     ],
-    "signs": [
-     "FIG-ZEICHEN-FLIEHEN"
-    ],
+    "signs": [],
     "speech": [],
     "action_de": "Zur Erntezeit sendet er Knechte, um seinen Anteil zu holen; die Weinbauern schlagen sie, schicken sie mit leeren Händen fort oder töten sie.",
     "action_gsw": "Zur Ärntziit schickt er Chnächt, zum sin Aateil hole; d Wiibuure schlönd si, schicked si mit lääre Händ furt oder töded si.",
-    "caption_de": "Die Knechte: Ein Knecht wird mit leeren Händen weggeschickt und flieht (Pfeil weg); die Weinbauern misshandeln die Knechte (Gewalt nicht gezeigt).",
-    "caption_gsw": "D Chnächt: En Chnächt wird mit lääre Händ furtgschickt und flücht (Pfiil ewäg); d Wiibuure plaged d Chnächt (Gwalt nöd zeigt).",
+    "caption_de": "Weinbauern → Knecht: Die Weinbauern schicken den Knecht mit leeren Händen fort (Bogen von ihnen zum Knecht, der sich abwendet). Dass sie die Knechte misshandeln, ist nicht gezeigt.",
+    "caption_gsw": "Wiibuure → Chnächt: D Wiibuure schicked de Chnächt mit lääre Händ furt (Boge vo ine zum Chnächt, wo sich abwändet). Dass si d Chnächt plaged, isch nöd zeigt.",
     "stage": {
      "back_side": "left",
      "pose": {
       "FIG-ROLLE-DIENER": "away"
      },
-     "at": {
-      "FIG-ZEICHEN-FLIEHEN": "FIG-ROLLE-DIENER"
-     },
      "mood": {
       "FIG-ROLLE-DIENER": "worried",
       "FIG-GRUPPE-WEINBAUERN": "earnest"
-     }
+     },
+     "arrows": [
+      [
+       "FIG-GRUPPE-WEINBAUERN",
+       "FIG-ROLLE-DIENER",
+       "act"
+      ]
+     ]
     }
    },
    {

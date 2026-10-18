@@ -1473,8 +1473,8 @@
     "speech": [],
     "action_de": "Judas kommt mit einer Menge mit Schwertern und Knüppeln, gesandt von den Hohepriestern. Er tritt zu Jesus, sagt «Rabbi!» und küsst ihn; sie ergreifen Jesus.",
     "action_gsw": "De Judas chunnt mit ere Mängi mit Schwärter und Chnüttel, gschickt vo de Hohepriester. Er gaat zum Jesus, seit «Rabbi!» und küsst en; si packed de Jesus.",
-    "caption_de": "Kuss: Judas tritt zu Jesus und küsst ihn als Zeichen (Lippen); die Menge ergreift ihn (Bogen, gefesselte Hände).",
-    "caption_gsw": "Kuss: De Judas chunnt zum Jesus und git em en Kuss als Zeiche (Lippe); d Mängi packt en (Boge, gfesslet Händ).",
+    "caption_de": "Kuss → Festnahme: Judas küsst Jesus als Zeichen (Lippen bei Judas); darauf ergreift die Menge Jesus (Bogen von der Menge zu Jesus, gefesselte Hände).",
+    "caption_gsw": "Kuss → Feschtnahm: De Judas küsst de Jesus als Zeiche (Lippe bim Judas); druf packt d Mängi de Jesus (Boge vo de Mängi zum Jesus, gfesslet Händ).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-MENGE": "earnest",
@@ -1827,8 +1827,8 @@
     "speech": [],
     "action_de": "Sogleich kräht der Hahn zum zweiten Mal. Petrus erinnert sich an Jesu Wort, denkt daran und weint.",
     "action_gsw": "Grad dänn chräit de Güggel zum zweite Mal. De Petrus bsinnt sich as Wort vom Jesus, dänkt draa und brüelet.",
-    "caption_de": "Tränen: Der Hahn kräht (Schallbögen); Petrus weint (Träne).",
-    "caption_gsw": "Träne: De Güggel chräit (Schallböge); de Petrus briegget (Träne).",
+    "caption_de": "Hahnenschrei → Tränen: Der Hahn kräht (Schallbögen); Petrus erinnert sich an Jesu Wort (Bogen vom Hahn zu Petrus) und weint (Träne).",
+    "caption_gsw": "Güggelschrei → Träne: De Güggel chräit (Schallböge); de Petrus bsinnt sich as Wort vom Jesus (Boge vom Güggel zum Petrus) und briegget (Träne).",
     "stage": {
      "signs_who": {
       "FIG-ZEICHEN-TRAUER": [
@@ -1839,14 +1839,21 @@
       "FIG-PETRUS": "worried"
      },
      "x": {
-      "FIG-PETRUS": 70
+      "FIG-PETRUS": 124
      },
      "floor_x": {
-      "FIG-OBJ-HAHN": 120
+      "FIG-OBJ-HAHN": 44
      },
      "at": {
       "FIG-ZEICHEN-SPRECHEN": "FIG-OBJ-HAHN"
-     }
+     },
+     "arrows": [
+      [
+       "FIG-OBJ-HAHN",
+       "FIG-PETRUS",
+       "act"
+      ]
+     ]
     }
    }
   ],
@@ -1965,8 +1972,8 @@
     "speech": [],
     "action_de": "In Getsemani betet Jesus, die Jünger schlafen; Judas liefert ihn mit einem Kuss aus.",
     "action_gsw": "Z Getsemani bättet de Jesus, d Jünger schlafed; de Judas liferet en mit eme Kuss uus.",
-    "caption_de": "Getsemani: Judas küsst Jesus (Lippen); die Menge ergreift ihn (Bogen, gefesselte Hände).",
-    "caption_gsw": "Getsemani: De Judas git em Jesus en Kuss (Lippe); d Mängi packt en (Boge, gfesslet Händ).",
+    "caption_de": "Kuss → Festnahme: Judas küsst Jesus (Lippen); darauf ergreift die Menge ihn (Bogen, gefesselte Hände).",
+    "caption_gsw": "Kuss → Feschtnahm: De Judas küsst de Jesus (Lippe); druf packt en d Mängi (Boge, gfesslet Händ).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-MENGE": "earnest",
@@ -2176,8 +2183,8 @@
     "speech": [],
     "action_de": "Um die Menge zufriedenzustellen, lässt Pilatus Barabbas frei; Jesus lässt er geisseln und liefert ihn zur Kreuzigung aus.",
     "action_gsw": "Dass d Mängi zfride isch, laat de Pilatus de Barabbas frei; de Jesus laat er geissle und liferet en zum Chrüzige uus.",
-    "caption_de": "Urteil: Pilatus übergibt Jesus einem Soldaten (Bogen von Jesus zum Soldaten); Barabbas geht frei weg (Pfeil).",
-    "caption_gsw": "Urteil: De Pilatus git de Jesus emne Soldat (Boge vom Jesus zum Soldat); de Barabbas gaat frei devo (Pfiil).",
+    "caption_de": "Pilatus → Jesus: Um die Menge zufriedenzustellen, liefert Pilatus Jesus zur Kreuzigung aus (Bogen von Pilatus zu Jesus; daneben ein Soldat); Barabbas geht frei weg (Pfeil).",
+    "caption_gsw": "Pilatus → Jesus: Dass d Mängi zfride isch, liferet de Pilatus de Jesus zum Chrüzige uus (Boge vom Pilatus zum Jesus; dernäbe en Soldat); de Barabbas gaat frei devo (Pfiil).",
     "stage": {
      "pose": {
       "FIG-BARABBAS": "away"
@@ -2187,8 +2194,8 @@
      },
      "arrows": [
       [
+       "FIG-PILATUS",
        "FIG-JESUS",
-       "FIG-ROLLE-SOLDAT",
        "act"
       ]
      ],
@@ -2522,8 +2529,8 @@
     ],
     "action_de": "Jesus stösst einen lauten Schrei aus und stirbt. Der Vorhang des Tempels reisst von oben bis unten. Der Hauptmann, der ihm gegenübersteht, sagt: Wahrhaftig, dieser Mensch war Gottes Sohn!",
     "action_gsw": "De Jesus stoot en luute Schrei uus und stirbt. De Vorhang vom Tämpel verrisst vo obe bis une. De Hauptmaa, wo vis-à-vis staat, seit: Würkli, dä Mänsch isch Gottes Sohn gsi!",
-    "caption_de": "Tod: Jesus ist gestorben (leeres Kreuz, daneben verschlossenes Grab); der Tempelvorhang reisst; der Hauptmann: Gottes Sohn (Jesus, Strahlenkranz).",
-    "caption_gsw": "Tod: De Jesus isch gstorbe (läärs Chrüz, dernäbe verschlossnigs Grab); de Vorhang im Tämpel verrisst; de Hauptmaa: Gottes Sohn (Jesus, Strahlechranz).",
+    "caption_de": "Tod → Bekenntnis: Jesus ist gestorben (leeres Kreuz, daneben verschlossenes Grab); der Tempelvorhang reisst; der Hauptmann sieht, wie er starb (Bogen vom Kreuz zu ihm), und sagt: Gottes Sohn (Jesus, Strahlenkranz).",
+    "caption_gsw": "Tod → Bekänntnis: De Jesus isch gstorbe (läärs Chrüz, dernäbe verschlossnigs Grab); de Vorhang im Tämpel verrisst; de Hauptmaa gseht, wie n er gstorbe isch (Boge vom Chrüz zu ihm), und seit: Gottes Sohn (Jesus, Strahlechranz).",
     "stage": {
      "mood": {
       "FIG-ROLLE-SOLDAT": "surprised"
@@ -2533,10 +2540,17 @@
       "FIG-ROLLE-SOLDAT": 152
      },
      "floor_x": {
-      "FIG-OBJ-KREUZ": 62
+      "FIG-OBJ-KREUZ": 80
      },
-     "air_x": 96,
-     "air_y": 94
+     "air_x": 54,
+     "air_y": 94,
+     "arrows": [
+      [
+       "FIG-OBJ-KREUZ",
+       "FIG-ROLLE-SOLDAT",
+       "act"
+      ]
+     ]
     }
    },
    {
@@ -2641,14 +2655,21 @@
     ],
     "action_de": "Pilatus wundert sich, dass er schon tot ist, fragt den Hauptmann und überlässt Josef den Leichnam.",
     "action_gsw": "De Pilatus wunderet sich, dass er scho tot isch, fröget de Hauptmaa und überlaat em Josef de Liichnam.",
-    "caption_de": "Nachfrage: Pilatus fragt den Hauptmann: Ist Jesus schon tot? (Jesus, verschlossenes Grab, Fragezeichen).",
-    "caption_gsw": "Nachfrag: De Pilatus fröget de Hauptmaa: Isch de Jesus scho tot? (Jesus, verschlossnigs Grab, Fragezeiche).",
+    "caption_de": "Nachfrage → Freigabe: Pilatus fragt den Hauptmann: Ist Jesus schon tot? (Jesus, verschlossenes Grab, Fragezeichen); dann überlässt er Josef den Leichnam (Bogen von Pilatus zu Josef).",
+    "caption_gsw": "Nachfrag → Freigab: De Pilatus fröget de Hauptmaa: Isch de Jesus scho tot? (Jesus, verschlossnigs Grab, Fragezeiche); dänn überlaat er em Josef de Liichnam (Boge vom Pilatus zum Josef).",
     "stage": {
      "mood": {
       "FIG-PILATUS": "surprised",
       "FIG-ROLLE-SOLDAT": "calm",
       "FIG-JOSEF-ARIMATAEA": "pensive"
-     }
+     },
+     "arrows": [
+      [
+       "FIG-PILATUS",
+       "FIG-JOSEF-ARIMATAEA",
+       "act"
+      ]
+     ]
     }
    },
    {
@@ -2810,8 +2831,8 @@
     ],
     "action_de": "Nach der Finsternis stirbt Jesus; der Tempelvorhang reisst, der Hauptmann nennt ihn Gottes Sohn.",
     "action_gsw": "Nach de Fiischternis stirbt de Jesus; de Tämpelvorhang verrisst, de Hauptmaa nännt en Gottes Sohn.",
-    "caption_de": "Tod: leeres Kreuz, daneben das Grab-Zeichen; Vorhang zerrissen; der Hauptmann: Gottes Sohn (Jesus, Strahlenkranz).",
-    "caption_gsw": "Tod: läärs Chrüz, dernäbe s Grab-Zeiche; Vorhang verrisse; de Hauptmaa: Gottes Sohn (Jesus, Strahlechranz).",
+    "caption_de": "Tod → Bekenntnis: leeres Kreuz, daneben das Grab-Zeichen; Vorhang zerrissen; der Hauptmann sieht es (Bogen vom Kreuz zu ihm) und sagt: Gottes Sohn (Jesus, Strahlenkranz).",
+    "caption_gsw": "Tod → Bekänntnis: läärs Chrüz, dernäbe s Grab-Zeiche; Vorhang verrisse; de Hauptmaa gseht s (Boge vom Chrüz zu ihm) und seit: Gottes Sohn (Jesus, Strahlechranz).",
     "stage": {
      "mood": {
       "FIG-ROLLE-SOLDAT": "surprised"
@@ -2821,10 +2842,17 @@
       "FIG-ROLLE-SOLDAT": 152
      },
      "floor_x": {
-      "FIG-OBJ-KREUZ": 62
+      "FIG-OBJ-KREUZ": 80
      },
-     "air_x": 96,
-     "air_y": 94
+     "air_x": 54,
+     "air_y": 94,
+     "arrows": [
+      [
+       "FIG-OBJ-KREUZ",
+       "FIG-ROLLE-SOLDAT",
+       "act"
+      ]
+     ]
     }
    },
    {
@@ -3086,8 +3114,8 @@
     ],
     "action_de": "Der Auferstandene erscheint zuerst Maria aus Magdala. Sie berichtet es denen, die mit ihm gewesen waren und trauern; doch sie glauben ihr nicht.",
     "action_gsw": "De Uferstandnig erschiint zerscht de Maria vo Magdala. Si verzellt s dene, wo mit em gsi sind und truured; aber si glaubed ere nöd.",
-    "caption_de": "Erste Zeugin: Jesus erscheint Maria; sie sagt den Trauernden: Er lebt (Jesus, offenes Grab mit Pfeil) – sie glauben nicht (durchgestrichenes Herz).",
-    "caption_gsw": "Erschti Züügin: De Jesus erschiint de Maria; si seit de Truurige: Er läbt (Jesus, offes Grab mit Pfiil) – si glaubed s nöd (durgstrichnigs Härz).",
+    "caption_de": "Jesus → Maria → Jünger: Jesus erscheint Maria (Bogen zu ihr); sie sagt den Trauernden: Er lebt (Jesus, offenes Grab mit Pfeil) – sie glauben nicht (durchgestrichenes Herz).",
+    "caption_gsw": "Jesus → Maria → Jünger: De Jesus erschiint de Maria (Boge zu ire); si seit de Truurige: Er läbt (Jesus, offes Grab mit Pfiil) – si glaubed s nöd (durgstrichnigs Härz).",
     "stage": {
      "signs_who": {
       "FIG-ZEICHEN-TRAUER": [
@@ -3135,8 +3163,8 @@
     ],
     "action_de": "Danach zeigt er sich zweien von ihnen in anderer Gestalt, als sie aufs Land gehen. Sie berichten es den Übrigen; auch ihnen glauben sie nicht.",
     "action_gsw": "Dänn zeigt er sich zwei vo ine inere andere Gstalt, wo s ufs Land gönd. Si verzelled s de Andere; au ine glaubed s nöd.",
-    "caption_de": "Unterwegs: Jesus zeigt sich Jüngern auf dem Weg; ihr Bericht (Jesus, offenes Grab mit Pfeil) findet keinen Glauben (durchgestrichenes Herz).",
-    "caption_gsw": "Underwägs: De Jesus zeigt sich Jünger uf em Wäg; ire Bricht (Jesus, offes Grab mit Pfiil) findet kei Glaube (durgstrichnigs Härz).",
+    "caption_de": "Jesus → zwei Jünger → die Übrigen: Jesus zeigt sich Jüngern auf dem Weg (Bogen zu ihnen); ihr Bericht (Jesus, offenes Grab mit Pfeil) findet keinen Glauben (durchgestrichenes Herz).",
+    "caption_gsw": "Jesus → zwei Jünger → di Andere: De Jesus zeigt sich Jünger uf em Wäg (Boge zu ine); ire Bricht (Jesus, offes Grab mit Pfiil) findet kei Glaube (durgstrichnigs Härz).",
     "stage": {
      "at": {
       "FIG-ZEICHEN-NICHT-GLAUBEN": "FIG-GRUPPE-ZWOELF"
@@ -3213,8 +3241,8 @@
     "speech": [],
     "action_de": "Der Herr Jesus wird in den Himmel aufgenommen und setzt sich zur Rechten Gottes. Die Jünger ziehen aus und verkündigen überall; der Herr wirkt mit.",
     "action_gsw": "De Herr Jesus wird in Himmel ufgnoh und sitzt zur Rächte vo Gott. D Jünger zieh us und verchünded überall; de Herr schafft mit.",
-    "caption_de": "Aufnahme: Jesus in der Wolke unter dem Strahlenkranz, bei Gott; die Jünger gehen in alle Richtungen (Pfeile).",
-    "caption_gsw": "Ufnahm: De Jesus i de Wulche under em Strahlechranz, bi Gott; d Jünger gönd i alli Richtige (Pfiil).",
+    "caption_de": "Aufnahme → Sendung: Jesus in der Wolke unter dem Strahlenkranz, bei Gott; die Jünger gehen in alle Richtungen (Pfeile), und der Herr wirkt mit (Bogen von Jesus zu den Pfeilen der Jünger).",
+    "caption_gsw": "Ufnahm → Sändig: De Jesus i de Wulche under em Strahlechranz, bi Gott; d Jünger gönd i alli Richtige (Pfiil), und de Herr schafft mit (Boge vom Jesus zu de Pfiil vo de Jünger).",
     "stage": {
      "in": {
       "FIG-JESUS": "FIG-ORT-WOLKE"
@@ -3233,7 +3261,14 @@
      },
      "mood": {
       "FIG-GRUPPE-ZWOELF": "surprised"
-     }
+     },
+     "arrows": [
+      [
+       "FIG-JESUS",
+       "FIG-ZEICHEN-AUSBREITEN",
+       "act"
+      ]
+     ]
     }
    }
   ],
@@ -3311,8 +3346,8 @@
     "speech": [],
     "action_de": "Im längeren Schluss erscheint der Auferstandene, sendet die Elf in alle Welt und wird in den Himmel aufgenommen.",
     "action_gsw": "Im längere Schluss erschiint de Uferstandnig, schickt d Elf i di ganz Wält und wird in Himmel ufgnoh.",
-    "caption_de": "Sendung und Aufnahme: Jesus in der Wolke unter dem Strahlenkranz, bei Gott; die Jünger gehen in alle Richtungen (Pfeile).",
-    "caption_gsw": "Sändig und Ufnahm: De Jesus i de Wulche under em Strahlechranz, bi Gott; d Jünger gönd i alli Richtige (Pfiil).",
+    "caption_de": "Aufnahme → Sendung: Jesus in der Wolke unter dem Strahlenkranz, bei Gott; die Jünger gehen in alle Richtungen (Pfeile), der Herr wirkt mit (Bogen von Jesus zu ihren Pfeilen).",
+    "caption_gsw": "Ufnahm → Sändig: De Jesus i de Wulche under em Strahlechranz, bi Gott; d Jünger gönd i alli Richtige (Pfiil), de Herr schafft mit (Boge vom Jesus zu irne Pfiil).",
     "stage": {
      "in": {
       "FIG-JESUS": "FIG-ORT-WOLKE"
@@ -3331,7 +3366,14 @@
      },
      "mood": {
       "FIG-GRUPPE-ZWOELF": "surprised"
-     }
+     },
+     "arrows": [
+      [
+       "FIG-JESUS",
+       "FIG-ZEICHEN-AUSBREITEN",
+       "act"
+      ]
+     ]
     }
    }
   ],
