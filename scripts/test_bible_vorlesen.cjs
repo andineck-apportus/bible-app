@@ -1,5 +1,5 @@
-// Prüfung des Vorlesemodus (app/reading-stream/index.html) mit einer nachgebildeten Sprachausgabe.
-// Voraussetzung: python3 scripts/build_reading_stream.py; Playwright (PLAYWRIGHT_MODULE=Pfad oder require('playwright')).
+// Prüfung des Vorlesemodus (app/bible/index.html) mit einer nachgebildeten Sprachausgabe.
+// Voraussetzung: python3 scripts/build_bible.py; Playwright (PLAYWRIGHT_MODULE=Pfad oder require('playwright')).
 // Fehlt Playwright, wird die Prüfung übersprungen (Exit 0 mit Hinweis). Geprüft wird die Abfolge, nicht die Stimme.
 const path=require('node:path'),assert=require('node:assert/strict');
 let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'));}catch{console.log('SKIP: Playwright nicht verfügbar');process.exit(0);}
@@ -7,7 +7,7 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
   try{const p=await b.newPage({viewport:{width:390,height:780}});const errs=[];p.on('pageerror',e=>errs.push(e.message));
     await p.addInitScript(()=>{window.__said=[];window.SpeechSynthesisUtterance=class{constructor(t){this.text=t;}};
       Object.defineProperty(window,'speechSynthesis',{value:{cancel(){},speak(u){window.__said.push(u.text);if(u.text)(window.__vol=window.__vol||[]).push(u.volume??1);setTimeout(()=>u.onend&&u.onend(),150);},getVoices(){return [{name:'Test',lang:'de-CH'}];},addEventListener(){}}});});
-    await p.goto('file://'+path.join(__dirname,'../app/reading-stream/index.html'));await p.waitForTimeout(800);
+    await p.goto('file://'+path.join(__dirname,'../app/bible/index.html'));await p.waitForTimeout(800);
     const said=()=>p.evaluate(()=>window.__said.filter(Boolean));const label=()=>p.textContent('.player-label');
     assert(await p.$('.player[hidden]'),'Player zu Beginn verborgen');
     await p.click('[data-action=menu]');await p.fill('input[type=search]','Joh 3,1');await p.waitForTimeout(300);await p.click('.results button');await p.waitForTimeout(800);

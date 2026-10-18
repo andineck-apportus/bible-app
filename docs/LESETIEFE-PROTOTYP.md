@@ -1,6 +1,6 @@
 # Lesestrom · Stand 2026-10-13 (v0.35)
 
-Der Lesestrom ist seit v0.13 die **Hauptrichtung der App**. Einstieg: [app/reading-stream/index.html](../app/reading-stream/index.html). Die Datei direkt im Browser öffnen; Server und Internetzugriff sind nicht nötig. Das Design stammt aus dem Gespräch zwischen Andi Neck und einem Kollegen (v0.11). Der frühere Studienprototyp `app/prototype/` ist abgelöst (siehe unten).
+Der Lesestrom ist seit v0.13 die **Hauptrichtung der App**. Einstieg: [app/bible/index.html](../app/bible/index.html). Die Datei direkt im Browser öffnen; Server und Internetzugriff sind nicht nötig. Das Design stammt aus dem Gespräch zwischen Andi Neck und einem Kollegen (v0.11). Der frühere Studienprototyp `app/prototype/` ist abgelöst (siehe unten).
 
 ## Vorgabe vom 2026-10-12
 
@@ -47,7 +47,7 @@ Griechisch erscheint zusätzlich in lateinischer Umschrift (z. B. ponēroú) und
 
 ## Vaterunser (v0.16)
 
-Ausgearbeitet sind drei Stellen: Mk 3,20–35, Mt 6,5–15 (Vom Beten, mit dem Vaterunser) und Lk 11,1–4; seit v0.33 zudem als Muster für ganze Bücher der Titusbrief (Griechisch, mit 𝔓32) und Obadja (erster hebräischer Text: rechts nach links, Wort für Wort auf Morphem-Ebene mit Umschrift und LXX-Entsprechung). Das Menü listet sie unter «Ausgearbeitete Stellen»; auf Buch- und Kapitelebene führt ein Knopf direkt dorthin. Beim Vaterunser zeigt «Bis zur Quelle» neben den grossen Handschriften auch 𝔓75 (Lukas) und Amulette des 3. bis 6. Jahrhunderts, die das Gebet überliefern. Neue Stellen erscheinen automatisch, sobald eine Texteinheit eine Arbeitsübersetzung hat (`worked_sections()` in `scripts/project_study.py`). Veröffentlicht wird die aufgeteilte Fassung aus `build/reading-stream/` (Kern + Pakete je Buch und Sprache).
+Ausgearbeitet sind drei Stellen: Mk 3,20–35, Mt 6,5–15 (Vom Beten, mit dem Vaterunser) und Lk 11,1–4; seit v0.33 zudem als Muster für ganze Bücher der Titusbrief (Griechisch, mit 𝔓32) und Obadja (erster hebräischer Text: rechts nach links, Wort für Wort auf Morphem-Ebene mit Umschrift und LXX-Entsprechung). Das Menü listet sie unter «Ausgearbeitete Stellen»; auf Buch- und Kapitelebene führt ein Knopf direkt dorthin. Beim Vaterunser zeigt «Bis zur Quelle» neben den grossen Handschriften auch 𝔓75 (Lukas) und Amulette des 3. bis 6. Jahrhunderts, die das Gebet überliefern. Neue Stellen erscheinen automatisch, sobald eine Texteinheit eine Arbeitsübersetzung hat (`worked_sections()` in `scripts/project_study.py`). Veröffentlicht wird die aufgeteilte Fassung aus `build/bible/` (Kern + Pakete je Buch und Sprache).
 
 ## Lesarten bis zur Quelle (v0.15)
 
@@ -76,11 +76,11 @@ Jede Zoomstufe ist eine fortlaufende Lesefassung: Bibel → Testament → Buchgr
 ## Daten
 
 Seit v0.13 liegen die Inhalte im freien Kern, nicht mehr in der Vorlage:
-- `data/navigation/NAV-PROT66-KJV.json`: Testamente, zehn Buchgruppen, 66 Bücher mit Namen, Kürzeln und Versen pro Kapitel. Protestantischer Kanon und KJV-Zählung sind eine **deklarierte Testkonfiguration**, keine Festlegung. Herkunft der Zahlen: [provenance.json](../app/reading-stream/provenance.json).
+- `data/navigation/NAV-PROT66-KJV.json`: Testamente, zehn Buchgruppen, 66 Bücher mit Namen, Kürzeln und Versen pro Kapitel. Protestantischer Kanon und KJV-Zählung sind eine **deklarierte Testkonfiguration**, keine Festlegung. Herkunft der Zahlen: [provenance.json](../app/bible/provenance.json).
 - `data/summaries/`: 83 Zusammenfassungen (Bibel, Testamente, Gruppen, 66 Bücher, vier Beispielkapitel), alle `draft`. Es sind KI-Entwürfe aus dem Designgespräch vom 2026-10-11 (`authorship_de`, `migrated_from`), fachlich ungeprüft.
-- Markus 3,20–35: Studienprojektion aus `scripts/build_prototype.py` (Arbeitsübersetzung, sechs Alternativen, 249 Wörter, 28 Variantenstellen, Befunde, Deutungen mit Gegenargumenten, Prinzip, Anwendung, offene Frage).
+- Markus 3,20–35: Studienprojektion aus `scripts/project_study.py` (Arbeitsübersetzung, sechs Alternativen, 249 Wörter, 28 Variantenstellen, Befunde, Deutungen mit Gegenargumenten, Prinzip, Anwendung, offene Frage).
 
-Build: `template.html` bearbeiten, danach `python3 scripts/build_reading_stream.py`. Das Skript bettet die drei Datenquellen in `index.html` ein. Die erzeugte Datei nicht von Hand ändern.
+Build: `template.html` bearbeiten, danach `python3 scripts/build_bible.py`. Das Skript bettet die drei Datenquellen in `index.html` ein. Die erzeugte Datei nicht von Hand ändern.
 
 ## Grenzen
 
@@ -91,12 +91,12 @@ Build: `template.html` bearbeiten, danach `python3 scripts/build_reading_stream.
 - Geladene Einträge werden nicht virtualisiert. Volltextsuche fehlt (nur Buch und Stelle).
 - Die Versifikation ist noch nicht mit einem Versifikationsmodell (z. B. STEPBible TVTMS) abgeglichen.
 
-## Abgelöst: `app/prototype/`
+## Entfernt: Studienprototyp
 
-Der Studienprototyp Mk 3,20–35 (v0.9/v0.10) wird nicht weiterentwickelt. Er bleibt als Zwischenstand erhalten. `scripts/build_prototype.py` bleibt in Gebrauch, weil es die Datenprojektion für den Lesestrom liefert, und erzeugt die alte Seite weiterhin mit.
+Der Studienprototyp Mk 3,20–35 (v0.9/v0.10, früher `app/prototype/` und `scripts/build_prototype.py`) ist seit v0.67 entfernt; er liegt nur noch in der Git-Historie. Seine Inhalte sind im Lesestrom aufgegangen.
 
 ## Prüfungen
 
-- `node scripts/test_reading_stream.cjs` (ohne Zusatzpakete): vollständige Ebenen, Zählungen, Zusammenfassungen, Elternverweise, kanonische Stellen, Suche, Grenzen, Markus-Projektion.
-- `node scripts/test_reading_stream_dom.cjs` (braucht `jsdom`): Piloteinstieg, Studienblatt ohne Griechisch, Lesarten und Hintergrund im Versblatt, Hintergrund-Blatt je Abschnitt, Hinweise im Text, «Bis zur Quelle» für alle sechs Alternativen, Urtext-Modus, Rückkehrposition, Suche, Lesen über die Kapitelgrenze, Lesarten im Text.
+- `node scripts/test_bible.cjs` (ohne Zusatzpakete): vollständige Ebenen, Zählungen, Zusammenfassungen, Elternverweise, kanonische Stellen, Suche, Grenzen, Markus-Projektion.
+- `node scripts/test_bible_dom.cjs` (braucht `jsdom`): Piloteinstieg, Studienblatt ohne Griechisch, Lesarten und Hintergrund im Versblatt, Hintergrund-Blatt je Abschnitt, Hinweise im Text, «Bis zur Quelle» für alle sechs Alternativen, Urtext-Modus, Rückkehrposition, Suche, Lesen über die Kapitelgrenze, Lesarten im Text.
 - Am 2026-10-12 wurde der Lesestrom in Chromium in Handybreite (390 px) hell und dunkel angesehen. Eine Prüfung auf echten Geräten und mit Bildschirmleser steht aus. Keine dieser Prüfungen ist eine fachliche Inhaltsprüfung.

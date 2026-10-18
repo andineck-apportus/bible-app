@@ -3,7 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
 const assert = require('node:assert/strict');
-const html = fs.readFileSync(path.join(__dirname, '../app/reading-stream/index.html'), 'utf8');
+const html = fs.readFileSync(path.join(__dirname, '../app/bible/index.html'), 'utf8');
 let model;
 const sandbox = {
   document: { getElementById: () => ({ querySelectorAll: () => [] }) },

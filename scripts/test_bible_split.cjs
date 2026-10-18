@@ -1,9 +1,9 @@
-// Prüfung der aufgeteilten Fassung (build/reading-stream): Kern lädt Buch- und Sprachpakete erst bei Bedarf nach.
-// Voraussetzung: python3 scripts/build_reading_stream.py; Playwright (PLAYWRIGHT_MODULE=Pfad oder require('playwright')).
+// Prüfung der aufgeteilten Fassung (build/bible): Kern lädt Buch- und Sprachpakete erst bei Bedarf nach.
+// Voraussetzung: python3 scripts/build_bible.py; Playwright (PLAYWRIGHT_MODULE=Pfad oder require('playwright')).
 // Fehlt Playwright, wird die Prüfung übersprungen (Exit 0 mit Hinweis).
 const http=require('node:http'),fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'));}catch{console.log('SKIP: Playwright nicht verfügbar');process.exit(0);}
-const root=path.join(__dirname,'../build',process.argv[2]||'reading-stream');
+const root=path.join(__dirname,'../build',process.argv[2]||'bible');
 const server=http.createServer((q,r)=>{const f=path.join(root,decodeURIComponent(q.url.split('?')[0]));if(!f.startsWith(root)||!fs.existsSync(f)||fs.statSync(f).isDirectory()){r.writeHead(404);r.end();return;}
   r.writeHead(200,{'Content-Type':f.endsWith('.html')?'text/html; charset=utf-8':f.endsWith('.gz')?'application/gzip':f.endsWith('.txt')?'text/plain':'application/json'});fs.createReadStream(f).pipe(r);});
 server.listen(0,async()=>{const url=`http://localhost:${server.address().port}/index.html`;const b=await chromium.launch();
@@ -35,5 +35,5 @@ server.listen(0,async()=>{const url=`http://localhost:${server.address().port}/i
     const gen=await ev(()=>document.querySelector('.sheet').innerText);
     assert(gen.includes('Matthäus: Verfasser, Ziit und Gmeind')&&!gen.includes('[['),'Hintergrund auf Buchebene (Matthäus) in Mundart');
     assert.deepEqual(errs,[],'keine Skriptfehler');
-    console.log(`PASS: aufgeteilte Fassung lädt nach Bedarf (${process.argv[2]||'reading-stream'}, ${reqs.length} Pakete: ${reqs.join(', ')}).`);
+    console.log(`PASS: aufgeteilte Fassung lädt nach Bedarf (${process.argv[2]||'bible'}, ${reqs.length} Pakete: ${reqs.join(', ')}).`);
   }finally{await b.close();server.close();}});

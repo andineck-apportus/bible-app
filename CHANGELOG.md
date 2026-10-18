@@ -2,6 +2,10 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.67 — 2026-10-18 — Aufgeräumt: app/bible
+
+- **App-Verzeichnis aufgeräumt** (Andi Neck): Der Lesestrom liegt jetzt in `app/bible/` (vorher `app/reading-stream/`); Bauskript `scripts/build_bible.py`, Prüfungen `scripts/test_bible*.cjs`, aufgeteilte Fassungen in `build/bible/` und `build/bible-txt/`. Der erste Studienprototyp (`app/prototype/`, `scripts/build_prototype.py`) ist entfernt und nur noch in der Git-Historie.
+
 ## v0.66 — 2026-10-18 — Matthäusevangelium ganz übersetzt, mit Bildern
 
 - **Matthäus ganz aus dem Urtext** (SBLGNT): Hochdeutsch und Züridüütsch für alle 28 Kapitel mit vollständiger Wortzuordnung, 176 Texteinheiten (Abschnitte und Kapitel), 2100 Übersetzungsentscheidungen, 590 Lesarten-Alternativen (Apparat und automatische Kollation der Handschriften `WREAD-CNTR-MAT`). Einheitliche Begriffe über das ganze Buch (Reich der Himmel, Menschensohn, Menge/Menschenmengen, sich niederwerfen/anbeten, Fallstrick, Heuchler …); die grossen Reden ohne äussere Anführungszeichen. Werkzeuge `scripts/authoring/matthaeus_text_*.py`; das bestehende Vaterunser (Mt 6,5–15) bleibt unverändert. Im SBLGNT fehlende Verse (17,21; 18,11; 23,14) als Lesarten benannt.
