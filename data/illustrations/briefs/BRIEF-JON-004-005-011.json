@@ -91,7 +91,14 @@
           "FIG-OBJ-WURM": 96
         },
         "air_x": 40,
-        "air_y": 10
+        "air_y": 10,
+        "arrows": [
+          [
+            "FIG-ZEICHEN-HITZE",
+            "FIG-JONA",
+            "act"
+          ]
+        ]
       }
     },
     {
@@ -150,8 +157,8 @@
     "Gott fragt: Du hast Mitleid mit dem Rizinus – sollte ich nicht Mitleid haben mit Ninive, der grossen Stadt, mit ihren Menschen und dem vielen Vieh?"
   ],
   "captions_de": [
-    "Schatten: Vor der Stadt sitzt Jona unter seiner Hütte; Gott lässt eine Staude wachsen (Linie, Rizinus), Jona freut sich.",
-    "Verdorrt: Ein Wurm sticht die Staude, sie verdorrt; heisser Wind und stechende Sonne; Jona wünscht sich den Tod (verschlossenes Grab).",
+    "Gott → Staude: Gott lässt eine Staude wachsen (goldener Pfeil, Rizinus); vor der Stadt sitzt Jona unter seiner Hütte im Schatten und freut sich.",
+    "Hitze → Todeswunsch: Ein Wurm sticht die Staude, sie verdorrt; heisser Wind, und die Sonne sticht Jona (Pfeil); er wünscht sich den Tod (verschlossenes Grab).",
     "Gottes letzte Frage: Du hast Mitleid mit der Staude (Staude, Herz, ?) – sollte ich nicht Mitleid haben mit Ninive, seinen Menschen und Tieren (zweite Blase: Stadt, Menschen, Schaf, Herz)? Jona sitzt bei der verdorrten Staude; das Buch endet mit der Frage."
   ],
   "interpretation_note_de": "Ob die Pflanze ein Rizinus war, ist unsicher (hebräisch qiqajon). Das Buch endet mit Gottes Frage ([[JON.4.11]]); das Bild lässt Jonas Antwort offen.",
@@ -447,6 +454,153 @@
           "Schatten: Vor der Stadt sitzt Jona unter seiner Hütte; Gott lässt eine Staude wachsen (Linie, Rizinus), Jona freut sich.",
           "Verdorrt: Ein Wurm sticht die Staude, sie verdorrt; heisser Wind und stechende Sonne; Jona wünscht sich den Tod (verschlossenes Grab).",
           "Gottes letzte Frage: Du hast Mitleid mit der Staude (Staude, Herz, ?) – sollte ich nicht Mitleid haben mit Ninive, seinen Menschen und Tieren (Stadt, Menschen, Schaf, Herz)? Das Buch endet mit der Frage."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JON.4.5-JON.4.6",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JONA"
+            ],
+            "objects": [
+              "FIG-ORT-NINIVE",
+              "FIG-ORT-HUETTE",
+              "FIG-OBJ-RIZINUS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [],
+            "action_de": "Jona sitzt östlich der Stadt in einer Hütte und wartet; Gott lässt einen Rizinus wachsen, der ihm Schatten gibt, und Jona freut sich sehr.",
+            "stage": {
+              "pose": {
+                "FIG-JONA": "sit"
+              },
+              "mood": {
+                "FIG-JONA": "delight"
+              },
+              "back_side": "left",
+              "before": true,
+              "x": {
+                "FIG-JONA": 156
+              },
+              "floor_x": {
+                "FIG-OBJ-RIZINUS": 76
+              },
+              "god_side": "center",
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-OBJ-RIZINUS",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JON.4.7-JON.4.8",
+            "figures": [
+              "FIG-JONA"
+            ],
+            "objects": [
+              "FIG-ORT-HUETTE",
+              "FIG-OBJ-RIZINUS-VERDORRT",
+              "FIG-OBJ-WURM"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-HITZE",
+              "FIG-ZEICHEN-WIND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JONA",
+                "to": "FIG-JONA",
+                "icons": [
+                  "FIG-ZEICHEN-TOD"
+                ]
+              }
+            ],
+            "action_de": "Ein Wurm sticht den Rizinus, und er verdorrt; ein sengender Ostwind kommt, die Sonne sticht Jona auf den Kopf, und er wünscht sich zu sterben.",
+            "stage": {
+              "pose": {
+                "FIG-JONA": "sit"
+              },
+              "mood": {
+                "FIG-JONA": "worried"
+              },
+              "x": {
+                "FIG-JONA": 156
+              },
+              "floor_x": {
+                "FIG-OBJ-RIZINUS-VERDORRT": 76,
+                "FIG-OBJ-WURM": 96
+              },
+              "air_x": 40,
+              "air_y": 10
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JON.4.9-JON.4.11",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JONA"
+            ],
+            "objects": [
+              "FIG-OBJ-RIZINUS-VERDORRT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GOTT",
+                "to": "FIG-JONA",
+                "icons": [
+                  "FIG-OBJ-RIZINUS-VERDORRT",
+                  "FIG-ZEICHEN-ERBARMEN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-GOTT",
+                "to": "FIG-JONA",
+                "icons": [
+                  "FIG-ORT-NINIVE",
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-OBJ-SCHAF",
+                  "FIG-ZEICHEN-ERBARMEN"
+                ]
+              }
+            ],
+            "action_de": "Gott fragt: Du hast Mitleid mit dem Rizinus – sollte ich nicht Mitleid haben mit Ninive, der grossen Stadt, mit ihren Menschen und dem vielen Vieh?",
+            "stage": {
+              "pose": {
+                "FIG-JONA": "sit"
+              },
+              "mood": {
+                "FIG-JONA": "pensive"
+              },
+              "god_side": "right",
+              "x": {
+                "FIG-JONA": 84
+              },
+              "floor_x": {
+                "FIG-OBJ-RIZINUS-VERDORRT": 8
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Schatten: Vor der Stadt sitzt Jona unter seiner Hütte; Gott lässt eine Staude wachsen (Linie, Rizinus), Jona freut sich.",
+          "Verdorrt: Ein Wurm sticht die Staude, sie verdorrt; heisser Wind und stechende Sonne; Jona wünscht sich den Tod (verschlossenes Grab).",
+          "Gottes letzte Frage: Du hast Mitleid mit der Staude (Staude, Herz, ?) – sollte ich nicht Mitleid haben mit Ninive, seinen Menschen und Tieren (zweite Blase: Stadt, Menschen, Schaf, Herz)? Jona sitzt bei der verdorrten Staude; das Buch endet mit der Frage."
         ]
       }
     }

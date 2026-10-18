@@ -1335,14 +1335,19 @@
     ],
     "action_de": "Jesus ruft im Tempel: Der mich gesandt hat, ist wahrhaftig; ich kenne ihn, denn ich bin von ihm. Niemand legt Hand an ihn, denn seine Stunde ist noch nicht gekommen; viele aus der Menge glauben an ihn.",
     "action_gsw": "De Jesus rüeft im Tämpel: Dä, wo mich gschickt hät, isch wahrhaftig; ich känn en, will ich vo im bi. Niemer leit Hand a en, will sini Stund no nöd cho isch; vili us de Mängi glaubed a en.",
-    "caption_de": "Seine Stunde ist noch nicht da: Jesus ruft, Gott habe ihn gesandt (Strahlenkranz); niemand ergreift ihn (Sanduhr); viele glauben (Herz).",
-    "caption_gsw": "Sini Stund isch no nöd da: De Jesus rüeft, Gott heg en gschickt (Strahlechranz); niemer packt en (Sanduhr); vili glaubed (Härz).",
+    "caption_de": "Gott → Jesus → Glaube: Jesus ruft, Gott habe ihn gesandt (Strahlenkranz, Pfeil); niemand ergreift ihn, denn seine Stunde ist noch nicht da (Sanduhr); viele glauben an ihn (Pfeil zu den Leuten, Herz).",
+    "caption_gsw": "Gott → Jesus → Glaube: De Jesus rüeft, Gott heg en gschickt (Strahlechranz, Pfiil); niemer packt en, will sini Stund no nöd da isch (Sanduhr); vili glaubed a ihn (Pfiil zu de Lüüt, Härz).",
     "stage": {
      "god_side": "right",
      "arrows": [
       [
        "FIG-GOTT",
        "FIG-JESUS",
+       "act"
+      ],
+      [
+       "FIG-JESUS",
+       "FIG-GRUPPE-MENGE",
        "act"
       ]
      ],
@@ -1352,6 +1357,15 @@
      "mood": {
       "FIG-GRUPPE-MENGE": "smile",
       "FIG-JESUS": "calm"
+     },
+     "signs_who": {
+      "FIG-ZEICHEN-GLAUBEN": [
+       "FIG-GRUPPE-MENGE"
+      ]
+     },
+     "x": {
+      "FIG-JESUS": 52,
+      "FIG-GRUPPE-MENGE": 140
      }
     }
    }
@@ -2187,8 +2201,8 @@
     "n": 3,
     "reference": "JHN.8.25-JHN.8.30",
     "figures": [
-     "FIG-GRUPPE-MENGE",
-     "FIG-JESUS"
+     "FIG-JESUS",
+     "FIG-GRUPPE-MENGE"
     ],
     "objects": [],
     "signs": [
@@ -2215,8 +2229,8 @@
     ],
     "action_de": "Sie fragen: Wer bist du? Jesus sagt: Wenn ihr den Menschensohn erhöht habt, werdet ihr erkennen, dass ich bin und rede, wie mich der Vater gelehrt hat. Viele glauben an ihn.",
     "action_gsw": "Si fröged: Wer bisch du? De Jesus seit: Wänn er de Mänschesohn ufeghobe händ, werded er erchänne, dass ich bi und so rede, wie mich de Vatter glehrt hät. Vili glaubed a en.",
-    "caption_de": "«Wer bist du?» Auf die Frage der Menge kündigt Jesus an: Wenn ihr mich erhöht habt (Kreuz), werdet ihr erkennen, dass ich vom Vater komme (Jesus, Strahlenkranz); viele glauben (Herz).",
-    "caption_gsw": "«Wer bisch du?» Uf d Frag vo de Mängi chündt de Jesus aa: Wänn er mich ufeghobe händ (Chrüz), werded er erchänne, dass ich vom Vatter chume (Jesus, Strahlechranz); vili glaubed (Härz).",
+    "caption_de": "Wort Jesu → Glaube: Auf die Frage der Menge kündigt Jesus an: Wenn ihr mich erhöht habt (Kreuz), werdet ihr erkennen, dass ich vom Vater komme (Jesus, Strahlenkranz); darum glauben viele (Pfeil zu ihnen, Herz).",
+    "caption_gsw": "Wort vom Jesus → Glaube: Uf d Frag vo de Mängi chündt de Jesus aa: Wänn er mich ufeghobe händ (Chrüz), werded er erchänne, dass ich vom Vatter chume (Jesus, Strahlechranz); drum glaubed vili (Pfiil zu ine, Härz).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-MENGE": "pensive",
@@ -2226,7 +2240,18 @@
       "FIG-ZEICHEN-GLAUBEN": [
        "FIG-GRUPPE-MENGE"
       ]
-     }
+     },
+     "x": {
+      "FIG-JESUS": 52,
+      "FIG-GRUPPE-MENGE": 136
+     },
+     "arrows": [
+      [
+       "FIG-JESUS",
+       "FIG-GRUPPE-MENGE",
+       "act"
+      ]
+     ]
     }
    }
   ],

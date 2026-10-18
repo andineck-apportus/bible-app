@@ -66,11 +66,13 @@
     "reference": "JHN.1.6-JHN.1.8",
     "figures": [
      "FIG-GOTT",
-     "FIG-GRUPPE-MENGE",
-     "FIG-JOHANNES-TAEUFER"
+     "FIG-JOHANNES-TAEUFER",
+     "FIG-GRUPPE-MENGE"
     ],
     "objects": [],
-    "signs": [],
+    "signs": [
+     "FIG-ZEICHEN-GLAUBEN"
+    ],
     "speech": [
      {
       "from": "FIG-JOHANNES-TAEUFER",
@@ -83,14 +85,19 @@
     ],
     "action_de": "Johannes ist von Gott gesandt; er kommt, um vom Licht Zeugnis abzulegen, damit alle durch ihn zum Glauben kommen. Er selbst ist nicht das Licht.",
     "action_gsw": "De Johannes isch vo Gott gschickt; er chunnt, zum vom Liecht Zügnis ablegge, dass alli dur in zum Glaube chömed. Er sälber isch nöd s Liecht.",
-    "caption_de": "Zeuge: Gott (Strahlenkranz) sendet Johannes (Pfeil); Johannes weist die Menschen auf das Licht hin (Zeigefinger, Licht).",
-    "caption_gsw": "Züüg: Gott (Strahlechranz) schickt de Johannes (Pfiil); de Johannes wiist d Mänsche uf s Liecht hii (Zeigfinger, Liecht).",
+    "caption_de": "Gott → Johannes → Menschen: Gott (Strahlenkranz) sendet Johannes (Pfeil); Johannes weist die Menschen auf das Licht hin (Zeigefinger, Licht, Pfeil zu ihnen), damit sie glauben (Herz).",
+    "caption_gsw": "Gott → Johannes → Mänsche: Gott (Strahlechranz) schickt de Johannes (Pfiil); de Johannes wiist d Mänsche uf s Liecht hii (Zeigfinger, Liecht, Pfiil zu ine), damit si glaubed (Härz).",
     "stage": {
      "god_side": "left",
      "arrows": [
       [
        "FIG-GOTT",
        "FIG-JOHANNES-TAEUFER",
+       "act"
+      ],
+      [
+       "FIG-JOHANNES-TAEUFER",
+       "FIG-GRUPPE-MENGE",
        "act"
       ]
      ],
@@ -99,8 +106,13 @@
       "FIG-JOHANNES-TAEUFER": "earnest"
      },
      "x": {
-      "FIG-GRUPPE-MENGE": 56,
-      "FIG-JOHANNES-TAEUFER": 140
+      "FIG-JOHANNES-TAEUFER": 56,
+      "FIG-GRUPPE-MENGE": 140
+     },
+     "signs_who": {
+      "FIG-ZEICHEN-GLAUBEN": [
+       "FIG-GRUPPE-MENGE"
+      ]
      }
     }
    },
@@ -1033,8 +1045,8 @@
     "speech": [],
     "action_de": "So hat Gott die Welt geliebt, dass er den einzigen Sohn gab, damit jeder, der an ihn glaubt, nicht verloren geht, sondern ewiges Leben hat.",
     "action_gsw": "So fescht hät Gott d Wält gern gha, dass er de einzig Sohn ggee hät, dass jede, wo a in glaubt, nöd verlore gaat, sondern ewigs Läbe hät.",
-    "caption_de": "Gott liebt die Welt: Gott (Strahlenkranz, Herzen) liebt die Welt (Erdscheibe) und gibt den Sohn (Pfeil zu Jesus); wer glaubt (Herz), hat ewiges Leben (Baum im Ring).",
-    "caption_gsw": "Gott hät d Wält gern: Gott (Strahlechranz, Härz) hät d Wält (Ärdschiibe) gern und git de Sohn (Pfiil zum Jesus); wer glaubt (Härz), hät ewigs Läbe (Baum im Ring).",
+    "caption_de": "Gott → Sohn → Leben: Gott (Strahlenkranz, Herzen) liebt die Welt (Erdscheibe) und gibt den Sohn (Pfeil zu Jesus); von Jesus führt der Pfeil zu den Menschen: wer an ihn glaubt (Herz), hat ewiges Leben (grüner Baum im goldenen Ring).",
+    "caption_gsw": "Gott → Sohn → Läbe: Gott (Strahlechranz, Härz) hät d Wält (Ärdschiibe) gern und git de Sohn (Pfiil zum Jesus); vom Jesus gaat de Pfiil zu de Mänsche: wer a ihn glaubt (Härz), hät ewigs Läbe (grüene Baum im goldige Ring).",
     "stage": {
      "god_side": "left",
      "at": {
@@ -1044,6 +1056,11 @@
       [
        "FIG-GOTT",
        "FIG-JESUS",
+       "act"
+      ],
+      [
+       "FIG-JESUS",
+       "FIG-GRUPPE-MENGE",
        "act"
       ]
      ],
@@ -1072,15 +1089,15 @@
     ],
     "objects": [],
     "signs": [
-     "FIG-ZEICHEN-NICHT-RICHTEN",
      "FIG-ZEICHEN-WELT",
-     "FIG-ZEICHEN-RETTUNG"
+     "FIG-ZEICHEN-RETTUNG",
+     "FIG-ZEICHEN-NICHT-RICHTEN"
     ],
     "speech": [],
     "action_de": "Gott hat den Sohn nicht in die Welt gesandt, damit er die Welt richtet, sondern damit die Welt durch ihn gerettet wird. Wer an ihn glaubt, wird nicht gerichtet.",
     "action_gsw": "Gott hät de Sohn nöd i d Wält gschickt, dass er d Wält richtet, sondern dass d Wält dur in grettet wird. Wer a in glaubt, wird nöd grichtet.",
-    "caption_de": "Nicht richten, sondern retten: Gott sendet den Sohn (Pfeil) nicht zum Gericht (durchgestrichene Waage), sondern damit die Welt (Erdscheibe) gerettet wird (Pfeil nach oben aus den Wellen).",
-    "caption_gsw": "Nöd richte, sondern rette: Gott schickt de Sohn (Pfiil) nöd zum Gricht (dureggstricheni Waag), sondern dass d Wält (Ärdschiibe) grettet wird (Pfiil ufe us de Wälle).",
+    "caption_de": "Sohn → Welt gerettet: Gott sendet den Sohn (Pfeil zu Jesus); von Jesus führt der Pfeil zur Welt (Erdscheibe): sie wird durch ihn gerettet (Pfeil nach oben aus den Wellen), nicht gerichtet (durchgestrichene Waage).",
+    "caption_gsw": "Sohn → Wält grettet: Gott schickt de Sohn (Pfiil zum Jesus); vom Jesus gaat de Pfiil zur Wält (Ärdschiibe): si wird dur ihn grettet (Pfiil ufe us de Wälle), nöd grichtet (dureggstricheni Waag).",
     "stage": {
      "god_side": "left",
      "arrows": [
@@ -1088,13 +1105,18 @@
        "FIG-GOTT",
        "FIG-JESUS",
        "act"
+      ],
+      [
+       "FIG-JESUS",
+       "FIG-ZEICHEN-WELT",
+       "act"
       ]
      ],
      "x": {
       "FIG-JESUS": 60
      },
-     "air_x": 82,
-     "air_y": 58
+     "air_x": 108,
+     "air_y": 50
     }
    },
    {
@@ -1363,8 +1385,8 @@
     "speech": [],
     "action_de": "Wer an den Sohn glaubt, hat ewiges Leben; wer dem Sohn nicht gehorcht, wird das Leben nicht sehen.",
     "action_gsw": "Wer a de Sohn glaubt, hät ewigs Läbe; wer em Sohn nöd folget, wird s Läbe nöd gseh.",
-    "caption_de": "Glauben und Leben: Wer an den Sohn glaubt (Herz), hat ewiges Leben (Baum im Ring).",
-    "caption_gsw": "Glaube und Läbe: Wer a de Sohn glaubt (Härz), hät ewigs Läbe (Baum im Ring).",
+    "caption_de": "Glaube → Leben: Wer an den Sohn (Jesus) glaubt (Herz), hat ewiges Leben – der Pfeil führt von den Glaubenden zum grünen Baum im goldenen Ring.",
+    "caption_gsw": "Glaube → Läbe: Wer a de Sohn (Jesus) glaubt (Härz), hät ewigs Läbe – de Pfiil gaat vo de Glaubende zum grüene Baum im goldige Ring.",
     "stage": {
      "signs_who": {
       "FIG-ZEICHEN-GLAUBEN": [
@@ -1374,9 +1396,19 @@
      "mood": {
       "FIG-GRUPPE-MENGE": "delight"
      },
-     "beside": {
-      "FIG-ZEICHEN-LEBEN": "FIG-GRUPPE-MENGE"
-     }
+     "x": {
+      "FIG-JESUS": 40,
+      "FIG-GRUPPE-MENGE": 108
+     },
+     "air_x": 150,
+     "air_y": 20,
+     "arrows": [
+      [
+       "FIG-GRUPPE-MENGE",
+       "FIG-ZEICHEN-LEBEN",
+       "act"
+      ]
+     ]
     }
    }
   ],
@@ -1444,8 +1476,8 @@
     "speech": [],
     "action_de": "So hat Gott die Welt geliebt, dass er den einzigen Sohn gab, damit jeder, der an ihn glaubt, ewiges Leben hat.",
     "action_gsw": "So fescht hät Gott d Wält gern gha, dass er de einzig Sohn ggee hät, dass jede, wo a in glaubt, ewigs Läbe hät.",
-    "caption_de": "Gott liebt die Welt (Herzen, Erdscheibe) und gibt den Sohn (Pfeil); wer glaubt (Herz), hat ewiges Leben (Baum im Ring bei den Menschen).",
-    "caption_gsw": "Gott hät d Wält gern (Härz, Ärdschiibe) und git de Sohn (Pfiil); wer glaubt (Härz), hät ewigs Läbe (Baum im Ring bi de Mänsche).",
+    "caption_de": "Gott → Sohn → Leben: Gott liebt die Welt (Herzen, Erdscheibe) und gibt den Sohn (Pfeil zu Jesus); von Jesus zu den Menschen (Pfeil): wer glaubt (Herz), hat ewiges Leben (grüner Baum im goldenen Ring).",
+    "caption_gsw": "Gott → Sohn → Läbe: Gott hät d Wält gern (Härz, Ärdschiibe) und git de Sohn (Pfiil zum Jesus); vom Jesus zu de Mänsche (Pfiil): wer glaubt (Härz), hät ewigs Läbe (grüene Baum im goldige Ring).",
     "stage": {
      "god_side": "left",
      "at": {
@@ -1455,6 +1487,11 @@
       [
        "FIG-GOTT",
        "FIG-JESUS",
+       "act"
+      ],
+      [
+       "FIG-JESUS",
+       "FIG-GRUPPE-MENGE",
        "act"
       ]
      ],
@@ -1522,14 +1559,19 @@
     "speech": [],
     "action_de": "Der von oben kommt, ist über allen; der Vater hat alles in seine Hand gegeben. Wer an den Sohn glaubt, hat ewiges Leben.",
     "action_gsw": "Dä, wo vo obe chunnt, isch über allne; de Vatter hät im alles i d Hand ggee. Wer a de Sohn glaubt, hät ewigs Läbe.",
-    "caption_de": "Von oben: Jesus kommt von Gott (Strahlenkranz, Pfeil); wer an den Sohn glaubt (Herz), hat Leben (Baum im Ring).",
-    "caption_gsw": "Vo obe: De Jesus chunnt vo Gott (Strahlechranz, Pfiil); wer a de Sohn glaubt (Härz), hät Läbe (Baum im Ring).",
+    "caption_de": "Von oben; Glaube → Leben: Jesus kommt von Gott (Strahlenkranz, Pfeil); wer an den Sohn glaubt (Herz), hat Leben (Pfeil zum grünen Baum im goldenen Ring).",
+    "caption_gsw": "Vo obe; Glaube → Läbe: De Jesus chunnt vo Gott (Strahlechranz, Pfiil); wer a de Sohn glaubt (Härz), hät Läbe (Pfiil zum grüene Baum im goldige Ring).",
     "stage": {
      "god_side": "left",
      "arrows": [
       [
        "FIG-GOTT",
        "FIG-JESUS",
+       "act"
+      ],
+      [
+       "FIG-GRUPPE-MENGE",
+       "FIG-ZEICHEN-LEBEN",
        "act"
       ]
      ],
@@ -1539,12 +1581,11 @@
       ]
      },
      "x": {
-      "FIG-JESUS": 70,
-      "FIG-GRUPPE-MENGE": 140
+      "FIG-JESUS": 64,
+      "FIG-GRUPPE-MENGE": 120
      },
-     "beside": {
-      "FIG-ZEICHEN-LEBEN": "FIG-GRUPPE-MENGE"
-     }
+     "air_x": 156,
+     "air_y": 20
     }
    }
   ],
@@ -2098,8 +2139,8 @@
     ],
     "action_de": "Viele Samariter glauben an Jesus wegen des Wortes der Frau. Sie bitten ihn, bei ihnen zu bleiben, und er bleibt zwei Tage dort.",
     "action_gsw": "Vili Samariter glaubed a de Jesus wäg em Wort vo de Frau. Si bitted en, bi ine z bliibe, und er bliibt zwei Täg dört.",
-    "caption_de": "Bleib bei uns: Die Samariter glauben (Herzen) und bitten Jesus zu bleiben (Haus, Jesus); er bleibt zwei Tage (Sonnen).",
-    "caption_gsw": "Bliib bi öis: D Samariter glaubed (Härz) und bitted de Jesus z bliibe (Huus, Jesus); er bliibt zwei Täg (Sunne).",
+    "caption_de": "Wort der Frau → Glaube: Wegen des Wortes der Frau (Pfeil zu den Samaritern) glauben viele (Herzen); sie bitten Jesus zu bleiben (Haus, Jesus); er bleibt zwei Tage (Sonnen).",
+    "caption_gsw": "Wort vo de Frau → Glaube: Wäg em Wort vo de Frau (Pfiil zu de Samariter) glaubed vili (Härz); si bitted de Jesus z bliibe (Huus, Jesus); er bliibt zwei Täg (Sunne).",
     "stage": {
      "count": {
       "FIG-ZEICHEN-TAGE": 2
@@ -2120,16 +2161,23 @@
       "FIG-ROLLE-SAMARITANERIN": 26,
       "FIG-GRUPPE-MENGE": 84,
       "FIG-JESUS": 154
-     }
+     },
+     "arrows": [
+      [
+       "FIG-ROLLE-SAMARITANERIN",
+       "FIG-GRUPPE-MENGE",
+       "act"
+      ]
+     ]
     }
    },
    {
     "n": 2,
     "reference": "JHN.4.41-JHN.4.42",
     "figures": [
-     "FIG-ROLLE-SAMARITANERIN",
+     "FIG-JESUS",
      "FIG-GRUPPE-MENGE",
-     "FIG-JESUS"
+     "FIG-ROLLE-SAMARITANERIN"
     ],
     "objects": [],
     "signs": [
@@ -2148,8 +2196,8 @@
     ],
     "action_de": "Noch viel mehr glauben wegen seines Wortes. Sie sagen der Frau: Wir glauben nicht mehr wegen deines Redens; wir haben selbst gehört und wissen: Dieser ist wirklich der Retter der Welt.",
     "action_gsw": "No vil me glaubed wäg sim Wort. Si säged de Frau: Mir glaubed nüme wäg dim Rede; mir händ sälber ghört und wüssed: Dä isch würkli de Retter vo de Wält.",
-    "caption_de": "Retter der Welt: Die Samariter sagen der Frau: Wir haben selbst gehört (Ohr): Er rettet die Welt (Erdscheibe, Pfeil nach oben).",
-    "caption_gsw": "Retter vo de Wält: D Samariter säged de Frau: Mir händ sälber ghört (Ohr): Er rettet d Wält (Ärdschiibe, Pfiil ufe).",
+    "caption_de": "Wort Jesu → Glaube: Wegen seines Wortes (Pfeil von Jesus) glauben noch viel mehr Samariter (Herzen); sie sagen der Frau: Wir haben selbst gehört (Ohr): Er rettet die Welt (Erdscheibe, Pfeil nach oben).",
+    "caption_gsw": "Wort vom Jesus → Glaube: Wäg sim Wort (Pfiil vom Jesus) glaubed no vil meh Samariter (Härz); si säged de Frau: Mir händ sälber ghört (Ohr): Er rettet d Wält (Ärdschiibe, Pfiil ufe).",
     "stage": {
      "signs_who": {
       "FIG-ZEICHEN-GLAUBEN": [
@@ -2161,10 +2209,17 @@
       "FIG-ROLLE-SAMARITANERIN": "smile"
      },
      "x": {
-      "FIG-ROLLE-SAMARITANERIN": 30,
-      "FIG-GRUPPE-MENGE": 90,
-      "FIG-JESUS": 158
-     }
+      "FIG-JESUS": 30,
+      "FIG-GRUPPE-MENGE": 96,
+      "FIG-ROLLE-SAMARITANERIN": 158
+     },
+     "arrows": [
+      [
+       "FIG-JESUS",
+       "FIG-GRUPPE-MENGE",
+       "act"
+      ]
+     ]
     }
    }
   ],
@@ -2243,8 +2298,8 @@
     ],
     "action_de": "Jesus sagt zu ihm: Geh! Dein Sohn lebt. Der Mann glaubt dem Wort, das Jesus gesagt hat, und macht sich auf den Weg.",
     "action_gsw": "De Jesus seit zu im: Gang! Din Sohn läbt. De Maa glaubt em Wort, wo de Jesus gseit hät, und macht sich uf de Wäg.",
-    "caption_de": "Dein Sohn lebt: Jesus sagt: Dein Kind lebt (Kind, Baum im Ring); der Mann glaubt (Herz) und macht sich auf den Heimweg (Pfeil zum Haus).",
-    "caption_gsw": "Din Sohn läbt: De Jesus seit: Dis Chind läbt (Chind, Baum im Ring); de Maa glaubt (Härz) und macht sich uf de Heiwäg (Pfiil zum Huus).",
+    "caption_de": "Wort → Glaube → Heimweg: Jesus sagt: Dein Kind lebt (Kind, Baum im Ring; Pfeil zum Mann); der Mann glaubt dem Wort (Herz) und macht sich auf den Heimweg (gestrichelter Pfeil zum Haus).",
+    "caption_gsw": "Wort → Glaube → Heiwäg: De Jesus seit: Dis Chind läbt (Chind, Baum im Ring; Pfiil zum Maa); de Maa glaubt em Wort (Härz) und macht sich uf de Heiwäg (gstrichlete Pfiil zum Huus).",
     "stage": {
      "signs_who": {
       "FIG-ZEICHEN-GLAUBEN": [
@@ -2257,14 +2312,23 @@
      "mood": {
       "FIG-ROLLE-KOENIGLICHER-BEAMTER": "calm"
      },
-     "back_side": "left",
+     "back_side": "right",
      "arrows": [
+      [
+       "FIG-JESUS",
+       "FIG-ROLLE-KOENIGLICHER-BEAMTER",
+       "act"
+      ],
       [
        "FIG-ROLLE-KOENIGLICHER-BEAMTER",
        "FIG-ORT-HAUS",
        "go"
       ]
-     ]
+     ],
+     "x": {
+      "FIG-JESUS": 40,
+      "FIG-ROLLE-KOENIGLICHER-BEAMTER": 104
+     }
     }
    },
    {
@@ -2441,9 +2505,9 @@
     "n": 3,
     "reference": "JHN.4.39-JHN.4.42",
     "figures": [
-     "FIG-ROLLE-SAMARITANERIN",
+     "FIG-JESUS",
      "FIG-GRUPPE-MENGE",
-     "FIG-JESUS"
+     "FIG-ROLLE-SAMARITANERIN"
     ],
     "objects": [],
     "signs": [
@@ -2462,8 +2526,8 @@
     ],
     "action_de": "Viele Samariter glauben und sagen: Wir haben selbst gehört; er ist wirklich der Retter der Welt.",
     "action_gsw": "Vili Samariter glaubed und säged: Mir händ sälber ghört; er isch würkli de Retter vo de Wält.",
-    "caption_de": "Retter der Welt: Die Samariter glauben (Herzen): selbst gehört (Ohr), er rettet die Welt (Erdscheibe, Pfeil).",
-    "caption_gsw": "Retter vo de Wält: D Samariter glaubed (Härz): sälber ghört (Ohr), er rettet d Wält (Ärdschiibe, Pfiil).",
+    "caption_de": "Wort Jesu → Glaube: Wegen seines Wortes (Pfeil von Jesus) glauben die Samariter (Herzen): selbst gehört (Ohr), er rettet die Welt (Erdscheibe, Pfeil nach oben).",
+    "caption_gsw": "Wort vom Jesus → Glaube: Wäg sim Wort (Pfiil vom Jesus) glaubed d Samariter (Härz): sälber ghört (Ohr), er rettet d Wält (Ärdschiibe, Pfiil ufe).",
     "stage": {
      "signs_who": {
       "FIG-ZEICHEN-GLAUBEN": [
@@ -2475,10 +2539,17 @@
       "FIG-ROLLE-SAMARITANERIN": "smile"
      },
      "x": {
-      "FIG-ROLLE-SAMARITANERIN": 30,
-      "FIG-GRUPPE-MENGE": 90,
-      "FIG-JESUS": 158
-     }
+      "FIG-JESUS": 30,
+      "FIG-GRUPPE-MENGE": 96,
+      "FIG-ROLLE-SAMARITANERIN": 158
+     },
+     "arrows": [
+      [
+       "FIG-JESUS",
+       "FIG-GRUPPE-MENGE",
+       "act"
+      ]
+     ]
     }
    },
    {
@@ -2609,8 +2680,8 @@
     ],
     "action_de": "Jesus sagt: Steh auf, nimm deine Matte und geh umher! Sofort wird der Mann gesund, nimmt seine Matte und geht umher. Es ist Sabbat.",
     "action_gsw": "De Jesus seit: Stand uf, nimm dini Matte und lauf umenand! Sofort wird de Maa gsund, nimmt sini Matte und lauft umenand. Es isch Sabbat.",
-    "caption_de": "Steh auf: Jesus sagt: Nimm die Matte und geh (Matte, Pfeil); der Mann ist geheilt (Hand mit Licht) und trägt sie; es ist Sabbat (siebter Kreis gold).",
-    "caption_gsw": "Stand uf: De Jesus seit: Nimm d Matte und lauf (Matte, Pfiil); de Maa isch gheilt (Hand mit Liecht) und treit si; es isch Sabbat (sibete Kreis goldig).",
+    "caption_de": "Wort Jesu → Heilung: Jesus sagt: Nimm die Matte und geh (Matte, Pfeil); der Pfeil führt von Jesus zum Mann: er ist sofort geheilt (Hand mit Licht) und trägt sie; es ist Sabbat (siebter Kreis gold).",
+    "caption_gsw": "Wort vom Jesus → Heilig: De Jesus seit: Nimm d Matte und lauf (Matte, Pfiil); de Pfiil gaat vom Jesus zum Maa: er isch grad gheilt (Hand mit Liecht) und treit si; es isch Sabbat (sibete Kreis goldig).",
     "stage": {
      "hold": {
       "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
@@ -2622,7 +2693,14 @@
      "air_y": 10,
      "beside": {
       "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
-     }
+     },
+     "arrows": [
+      [
+       "FIG-JESUS",
+       "FIG-ROLLE-KRANKER",
+       "act"
+      ]
+     ]
     }
    }
   ],
@@ -2719,8 +2797,8 @@
     "n": 3,
     "reference": "JHN.5.16-JHN.5.18",
     "figures": [
-     "FIG-GRUPPE-MENGE",
-     "FIG-JESUS"
+     "FIG-JESUS",
+     "FIG-GRUPPE-MENGE"
     ],
     "objects": [],
     "signs": [
@@ -2740,15 +2818,22 @@
     ],
     "action_de": "Die Juden verfolgen Jesus, weil er dies am Sabbat tat. Er antwortet: Mein Vater wirkt bis jetzt, und auch ich wirke. Da suchen sie umso mehr, ihn zu töten, weil er Gott seinen eigenen Vater nennt.",
     "action_gsw": "D Jude verfolged de Jesus, wil er das am Sabbat gmacht hät. Er antwortet: Min Vatter schaffet bis jetzt, und au ich schaffe. Da sueched si erscht rächt, en z töde, wil er Gott sin eigete Vatter nännt.",
-    "caption_de": "Mein Vater und ich: Jesus sagt: Mein Vater (Strahlenkranz) wirkt (Stern), und ich (Jesus) wirke (Stern); die Leute sind zornig (dunkle Wolke).",
-    "caption_gsw": "Min Vatter und ich: De Jesus seit: Min Vatter (Strahlechranz) schaffet (Stern), und ich (Jesus) schaffe (Stern); d Lüüt sind toube (tunkli Wulche).",
+    "caption_de": "Wort → Zorn: Jesus sagt: Mein Vater (Strahlenkranz) wirkt (Stern), und ich (Jesus) wirke (Stern); darum werden die Leute zornig (Pfeil zu ihnen, dunkle Wolke).",
+    "caption_gsw": "Wort → Zorn: De Jesus seit: Min Vatter (Strahlechranz) schaffet (Stern), und ich (Jesus) schaffe (Stern); drum wärded d Lüüt toube (Pfiil zu ine, tunkli Wulche).",
     "stage": {
      "at": {
       "FIG-ZEICHEN-ZORN": "FIG-GRUPPE-MENGE"
      },
      "mood": {
       "FIG-GRUPPE-MENGE": "earnest"
-     }
+     },
+     "arrows": [
+      [
+       "FIG-JESUS",
+       "FIG-GRUPPE-MENGE",
+       "act"
+      ]
+     ]
     }
    }
   ],
@@ -3041,8 +3126,8 @@
     "n": 1,
     "reference": "JHN.5.1-JHN.5.9",
     "figures": [
-     "FIG-ROLLE-KRANKER",
-     "FIG-JESUS"
+     "FIG-JESUS",
+     "FIG-ROLLE-KRANKER"
     ],
     "objects": [
      "FIG-ORT-TEICH",
@@ -3063,8 +3148,8 @@
     ],
     "action_de": "Am Teich Betesda heilt Jesus einen Mann, der achtunddreissig Jahre krank war: Steh auf, nimm deine Matte und geh umher!",
     "action_gsw": "Am Weiher Betesda heilt de Jesus en Maa, wo achtedriissg Jahr chrank gsii isch: Stand uf, nimm dini Matte und lauf umenand!",
-    "caption_de": "Am Teich: Jesus heilt den Kranken (Hand mit Licht); er nimmt die Matte und geht (Matte, Pfeil).",
-    "caption_gsw": "Am Weiher: De Jesus heilt de Chrank (Hand mit Liecht); er nimmt d Matte und lauft (Matte, Pfiil).",
+    "caption_de": "Wort Jesu → Heilung: Jesus heilt den Kranken (Pfeil zu ihm, Hand mit Licht); er nimmt die Matte und geht (Matte, Pfeil).",
+    "caption_gsw": "Wort vom Jesus → Heilig: De Jesus heilt de Chrank (Pfiil zu ihm, Hand mit Liecht); er nimmt d Matte und lauft (Matte, Pfiil).",
     "stage": {
      "hold": {
       "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
@@ -3074,6 +3159,17 @@
      },
      "beside": {
       "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
+     },
+     "arrows": [
+      [
+       "FIG-JESUS",
+       "FIG-ROLLE-KRANKER",
+       "act"
+      ]
+     ],
+     "x": {
+      "FIG-JESUS": 50,
+      "FIG-ROLLE-KRANKER": 136
      }
     }
    },

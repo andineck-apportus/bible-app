@@ -54,9 +54,7 @@
       "objects": [
         "FIG-ORT-WEINBERG"
       ],
-      "signs": [
-        "FIG-ZEICHEN-FLIEHEN"
-      ],
+      "signs": [],
       "speech": [],
       "action_de": "Zur Erntezeit sendet er Knechte, um seinen Anteil zu holen; die Weinbauern schlagen sie, schicken sie mit leeren Händen fort oder töten sie.",
       "stage": {
@@ -64,13 +62,17 @@
         "pose": {
           "FIG-ROLLE-DIENER": "away"
         },
-        "at": {
-          "FIG-ZEICHEN-FLIEHEN": "FIG-ROLLE-DIENER"
-        },
         "mood": {
           "FIG-ROLLE-DIENER": "worried",
           "FIG-GRUPPE-WEINBAUERN": "earnest"
-        }
+        },
+        "arrows": [
+          [
+            "FIG-GRUPPE-WEINBAUERN",
+            "FIG-ROLLE-DIENER",
+            "act"
+          ]
+        ]
       }
     },
     {
@@ -164,7 +166,7 @@
   ],
   "captions_de": [
     "Der Weinberg: Ein Mann legt einen Weinberg an (Zaun, Kelter, Turm), übergibt ihn Weinbauern (Bogen zu ihnen) und reist weg (Pfeil).",
-    "Die Knechte: Ein Knecht wird mit leeren Händen weggeschickt und flieht (Pfeil weg); die Weinbauern misshandeln die Knechte (Gewalt nicht gezeigt).",
+    "Weinbauern → Knecht: Die Weinbauern schicken den Knecht mit leeren Händen fort (Bogen von ihnen zum Knecht, der sich abwendet). Dass sie die Knechte misshandeln, ist nicht gezeigt.",
     "Der Sohn: Der Besitzer sendet seinen geliebten Sohn (Bogen vom Vater zum Sohn); die Weinbauern beschliessen, ihn zu töten und den Weinberg an sich zu nehmen (Sohn, Grab, Weinberg).",
     "Der Eckstein: Jesus spricht vom verworfenen Stein, der zum Eckstein wird (Mauerecke, der goldene Stein in der Ecke); die Führenden merken, dass es ihnen gilt, und gehen weg (Pfeil weg)."
   ],
@@ -347,6 +349,166 @@
           "Die Knechte: Ein Knecht muss mit leeren Händen fliehen (Pfeil); die Weinbauern misshandeln die Knechte (Gewalt nicht gezeigt).",
           "Der Sohn: Der Besitzer sendet seinen geliebten Sohn (Pfeil); die Weinbauern beschliessen, ihn zu töten und den Weinberg an sich zu nehmen (Sohn, Grab, Weinberg).",
           "Der Eckstein: Jesus spricht vom verworfenen Stein, der zum Eckstein wird (Mauerecke mit goldenem Stein); die Führenden merken, dass es ihnen gilt, und gehen weg."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.12.1",
+            "figures": [
+              "FIG-GRUPPE-WEINBAUERN",
+              "FIG-ROLLE-GUTSHERR"
+            ],
+            "objects": [
+              "FIG-ORT-WEINBERG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FLIEHEN"
+            ],
+            "speech": [],
+            "action_de": "Jesus erzählt ein Gleichnis: Ein Mensch pflanzt einen Weinberg mit Zaun, Kelter und Turm, verpachtet ihn an Weinbauern und reist ausser Landes.",
+            "stage": {
+              "back_side": "left",
+              "pose": {
+                "FIG-ROLLE-GUTSHERR": "away"
+              },
+              "at": {
+                "FIG-ZEICHEN-FLIEHEN": "FIG-ROLLE-GUTSHERR"
+              },
+              "mood": {
+                "FIG-GRUPPE-WEINBAUERN": "calm"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-GUTSHERR",
+                  "FIG-GRUPPE-WEINBAUERN",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.12.2-MRK.12.5",
+            "figures": [
+              "FIG-GRUPPE-WEINBAUERN",
+              "FIG-ROLLE-DIENER"
+            ],
+            "objects": [
+              "FIG-ORT-WEINBERG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FLIEHEN"
+            ],
+            "speech": [],
+            "action_de": "Zur Erntezeit sendet er Knechte, um seinen Anteil zu holen; die Weinbauern schlagen sie, schicken sie mit leeren Händen fort oder töten sie.",
+            "stage": {
+              "back_side": "left",
+              "pose": {
+                "FIG-ROLLE-DIENER": "away"
+              },
+              "at": {
+                "FIG-ZEICHEN-FLIEHEN": "FIG-ROLLE-DIENER"
+              },
+              "mood": {
+                "FIG-ROLLE-DIENER": "worried",
+                "FIG-GRUPPE-WEINBAUERN": "earnest"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.12.6-MRK.12.8",
+            "figures": [
+              "FIG-ROLLE-GUTSHERR",
+              "FIG-ROLLE-SOHN",
+              "FIG-GRUPPE-WEINBAUERN"
+            ],
+            "objects": [
+              "FIG-ORT-WEINBERG"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-WEINBAUERN",
+                "to": "FIG-GRUPPE-WEINBAUERN",
+                "icons": [
+                  "FIG-ROLLE-SOHN",
+                  "FIG-ZEICHEN-TOD",
+                  "FIG-ORT-WEINBERG"
+                ]
+              }
+            ],
+            "action_de": "Zuletzt sendet er seinen geliebten Sohn: Vor ihm werden sie Achtung haben. Die Weinbauern aber sagen: Das ist der Erbe; lasst uns ihn töten, dann gehört das Erbe uns. Sie töten ihn und werfen ihn hinaus.",
+            "stage": {
+              "back_side": "right",
+              "arrows": [
+                [
+                  "FIG-ROLLE-GUTSHERR",
+                  "FIG-ROLLE-SOHN",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-GUTSHERR": "calm",
+                "FIG-ROLLE-SOHN": "calm",
+                "FIG-GRUPPE-WEINBAUERN": "earnest"
+              },
+              "x": {
+                "FIG-ROLLE-GUTSHERR": 24,
+                "FIG-ROLLE-SOHN": 76,
+                "FIG-GRUPPE-WEINBAUERN": 140
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.12.9-MRK.12.12",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-HOHEPRIESTER",
+              "FIG-ROLLE-SCHRIFTGELEHRTER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-FLIEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-HOHEPRIESTER",
+                "icons": [
+                  "FIG-ZEICHEN-ECKSTEIN"
+                ]
+              }
+            ],
+            "action_de": "Jesus fragt, was der Herr des Weinbergs tun wird, und erinnert an das Schriftwort: Der Stein, den die Bauleute verworfen haben, ist zum Eckstein geworden. Die Führenden merken, dass das Gleichnis ihnen gilt; sie fürchten die Menge und gehen weg.",
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-HOHEPRIESTER": "away",
+                "FIG-ROLLE-SCHRIFTGELEHRTER": "away"
+              },
+              "mood": {
+                "FIG-ROLLE-HOHEPRIESTER": "pensive",
+                "FIG-ROLLE-SCHRIFTGELEHRTER": "pensive",
+                "FIG-JESUS": "earnest"
+              },
+              "at": {
+                "FIG-ZEICHEN-FLIEHEN": "FIG-ROLLE-SCHRIFTGELEHRTER"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Der Weinberg: Ein Mann legt einen Weinberg an (Zaun, Kelter, Turm), übergibt ihn Weinbauern (Bogen zu ihnen) und reist weg (Pfeil).",
+          "Die Knechte: Ein Knecht wird mit leeren Händen weggeschickt und flieht (Pfeil weg); die Weinbauern misshandeln die Knechte (Gewalt nicht gezeigt).",
+          "Der Sohn: Der Besitzer sendet seinen geliebten Sohn (Bogen vom Vater zum Sohn); die Weinbauern beschliessen, ihn zu töten und den Weinberg an sich zu nehmen (Sohn, Grab, Weinberg).",
+          "Der Eckstein: Jesus spricht vom verworfenen Stein, der zum Eckstein wird (Mauerecke, der goldene Stein in der Ecke); die Führenden merken, dass es ihnen gilt, und gehen weg (Pfeil weg)."
         ]
       }
     }

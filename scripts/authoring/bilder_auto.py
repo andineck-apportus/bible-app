@@ -439,7 +439,9 @@ class Composer:
             elif f in heads:
                 hx, hy = heads[f]
                 if f in spk and f not in L["inside"]:
-                    out.append(self.r_sym(t, hx + self.head_r() + 3 if hx < W - 40 else hx - self.head_r() - w - 3, hy - self.head_r() - h * .4, w, h))
+                    ax_ = hx + self.head_r() + 3 if hx < W - 40 else hx - self.head_r() - w - 3
+                    out.append(self.r_sym(t, ax_, hy - self.head_r() - h * .4, w, h))
+                    pos.setdefault(t, (ax_ + w / 2, hy - self.head_r() - h * .4 + h / 2))  # auch Ziel einer Handlungslinie
                 elif f in L["inside"] and not st.get("at_top"):
                     out.append(self.r_sym(t, hx - w - 14 if hx > W / 2 else hx + 14, hy - h / 2 - 2, w, h))
                 else:
@@ -460,6 +462,7 @@ class Composer:
                 hx, hy = heads[f]
                 rx = hx + self.head_r() + 4 if hx < W - 44 else hx - self.head_r() - w - 4
                 out.append(self.r_sym(t, rx, hy - h / 2, w, h))
+                pos.setdefault(t, (rx + w / 2, hy))  # auch Ziel einer Handlungslinie
         # 9. Handlungslinien
         people = {sl["fid"] for sl in slots}
         r = self.head_r()

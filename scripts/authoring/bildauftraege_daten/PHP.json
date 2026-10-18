@@ -172,8 +172,8 @@
     ],
     "action_de": "Paulus bittet, dass ihre Liebe an Erkenntnis und Einsicht zunimmt, damit sie prüfen können, worauf es ankommt, erfüllt mit der Frucht der Gerechtigkeit.",
     "action_gsw": "De Paulus bittet, dass iri Liebi a Erkänntnis und Iisicht zuenimmt, damit si chönd prüefe, uf was s aachunnt, erfüllt mit de Frucht vo de Grächtigkeit.",
-    "caption_de": "Fürbitte: Paulus (Kette) bittet Gott (Strahlenkranz, Linie nach oben), dass die Liebe (Herz) der Gemeinde (Haus) wächst (Sprosse).",
-    "caption_gsw": "Fürbitt: De Paulus (Chette) bittet Gott (Strahlechranz, Linie ufe), dass d Liebi (Härz) vo de Gmeind (Huus) wachst (Schössli).",
+    "caption_de": "Fürbitte → Wachstum: Paulus (Kette) bittet Gott (Strahlenkranz, Pfeil nach oben), dass die Liebe (Herz) der Gemeinde wächst (Sprosse); Gott wirkt an der Gemeinde (goldener Pfeil zum Haus mit Menschen).",
+    "caption_gsw": "Fürbitt → Wachstum: De Paulus (Chette) bittet Gott (Strahlechranz, Pfiil ufe), dass d Liebi (Härz) vo de Gmeind wachst (Schössli); Gott würkt a de Gmeind (goldige Pfiil zum Huus mit Mänsche).",
     "stage": {
      "floor_x": {
       "FIG-OBJ-KETTE": 40
@@ -185,6 +185,11 @@
       [
        "FIG-PAULUS",
        "FIG-GOTT",
+       "act"
+      ],
+      [
+       "FIG-GOTT",
+       "FIG-GRUPPE-GEMEINDE",
        "act"
       ]
      ],
@@ -233,8 +238,8 @@
     ],
     "action_de": "Die Fesseln des Paulus sind im ganzen Prätorium als Fesseln um Christi willen bekannt geworden, und die meisten Geschwister sagen das Wort nun umso furchtloser.",
     "action_gsw": "D Fessle vom Paulus sind im ganze Prätorium als Fessle wäge Christus bekannt worde, und di meischte Gschwüschterti säged s Wort jetzt no weniger ängschtlich.",
-    "caption_de": "Gefangen für Christus: Paulus (Kette) erklärt dem Wachsoldaten, dass er um Christi willen (Kreuznimbus) gefesselt ist; die Geschwister verkündigen mutig (Rufhorn über ihnen).",
-    "caption_gsw": "Gfange für Christus: De Paulus (Chette) erchlärt em Wachsoldat, dass er wäge Christus (Chrüüznimbus) gfesslet isch; d Gschwüschterti verchündiged muetig (Rüefhorn über ine).",
+    "caption_de": "Fesseln → Mut: Paulus (Kette) erklärt dem Wachsoldaten, dass er um Christi willen (Kreuznimbus) gefesselt ist; dadurch fassen die Geschwister Mut (Pfeil) und verkündigen furchtlos (Rufhorn über ihnen).",
+    "caption_gsw": "Fessle → Muet: De Paulus (Chette) erchlärt em Wachsoldat, dass er wäge Christus (Chrüüznimbus) gfesslet isch; dur das fassed d Gschwüschterti Muet (Pfiil) und verchündiged ohni Angscht (Rüefhorn über ine).",
     "stage": {
      "floor_x": {
       "FIG-OBJ-KETTE": 76
@@ -246,7 +251,14 @@
       "FIG-ROLLE-SOLDAT": "calm",
       "FIG-GRUPPE-GLAUBENDE": "smile",
       "FIG-PAULUS": "smile"
-     }
+     },
+     "arrows": [
+      [
+       "FIG-PAULUS",
+       "FIG-GRUPPE-GLAUBENDE",
+       "act"
+      ]
+     ]
     }
    },
    {
@@ -564,8 +576,8 @@
     "speech": [],
     "action_de": "Darum hat Gott ihn erhöht, damit sich im Namen Jesu jedes Knie beuge und jede Zunge bekenne, dass Jesus Christus der Herr ist.",
     "action_gsw": "Drum hät Gott ihn erhöcht, damit sich im Name vo Jesus jedes Chnüü bügi und jedi Zunge bekänni, dass Jesus Christus de Herr isch.",
-    "caption_de": "Erhöhung: Gott (Strahlenkranz über ihm) erhöht Jesus (goldener Pfeil nach oben); Menschen beugen die Knie vor ihm (Zeichen: kniende Figur).",
-    "caption_gsw": "Erhöhig: Gott (Strahlechranz über ihm) erhöcht de Jesus (goldige Pfiil ufe); Mänsche bücked d Chnüü vor ihm (Zeiche: chnüendi Figur).",
+    "caption_de": "Erniedrigung → Erhöhung: Darum erhöht Gott (Strahlenkranz, goldener Pfeil) Jesus (Pfeil nach oben neben ihm); Menschen beugen die Knie vor ihm (kniende Figur).",
+    "caption_gsw": "Erniedrigung → Erhöhig: Drum erhöcht Gott (Strahlechranz, goldige Pfiil) de Jesus (Pfiil ufe näbe ihm); Mänsche bücked d Chnüü vor ihm (chnüendi Figur).",
     "stage": {
      "at": {
       "FIG-ZEICHEN-KNIEN": "FIG-GRUPPE-GLAUBENDE"
@@ -584,7 +596,14 @@
      },
      "beside": {
       "FIG-ZEICHEN-ERHOEHEN": "FIG-JESUS"
-     }
+     },
+     "arrows": [
+      [
+       "FIG-GOTT",
+       "FIG-JESUS",
+       "act"
+      ]
+     ]
     }
    }
   ],
@@ -613,8 +632,8 @@
     "speech": [],
     "action_de": "Die Gemeinde soll mit Furcht und Zittern ihre Rettung auswirken; denn Gott wirkt in ihnen das Wollen und das Vollbringen.",
     "action_gsw": "D Gmeind söll mit Forcht und Zittere iri Rettig uuswürke; dänn Gott würkt i ine s Wele und s Vollbringe.",
-    "caption_de": "Gott wirkt: Gott (Strahlenkranz) wirkt in den Glaubenden (Pfeil); sie hören zu.",
-    "caption_gsw": "Gott würkt: Gott (Strahlechranz) würkt i de Gläubige (Pfiil); si losed zue.",
+    "caption_de": "Gott → Glaubende: Gott (Strahlenkranz) wirkt in den Glaubenden (goldener Pfeil); sie hören zu.",
+    "caption_gsw": "Gott → Gläubigi: Gott (Strahlechranz) würkt i de Gläubige (goldige Pfiil); si losed zue.",
     "stage": {
      "arrows": [
       [
@@ -777,8 +796,8 @@
     "speech": [],
     "action_de": "Epaphroditus, Gesandter der Gemeinde und Mitarbeiter des Paulus, war krank bis an den Tod; aber Gott hat sich über ihn erbarmt.",
     "action_gsw": "De Epaphroditus, Gsandt vo de Gmeind und Mitarbeiter vom Paulus, isch chrank gsii bis an Tod; aber Gott hät sich über en erbarmet.",
-    "caption_de": "Krank und gerettet: Epaphroditus liegt todkrank; Gott (Strahlenkranz) erbarmt sich über ihn (Herz in Händen über ihm); Paulus (Kette) ist bei ihm.",
-    "caption_gsw": "Chrank und grettet: De Epaphroditus liit todchrank; Gott (Strahlechranz) erbarmt sich über en (Härz i Händ über ihm); de Paulus (Chette) isch bi ihm.",
+    "caption_de": "Gottes Erbarmen → Rettung: Epaphroditus liegt todkrank; Gott (Strahlenkranz) erbarmt sich über ihn (goldener Pfeil zum Herz in Händen über ihm); Paulus (Kette) ist bei ihm.",
+    "caption_gsw": "Gottes Erbarme → Rettig: De Epaphroditus liit todchrank; Gott (Strahlechranz) erbarmt sich über en (goldige Pfiil zum Härz i Händ über ihm); de Paulus (Chette) isch bi ihm.",
     "stage": {
      "pose": {
       "FIG-EPAPHRODITUS": "lie"
@@ -796,7 +815,14 @@
      },
      "floor_x": {
       "FIG-OBJ-KETTE": 150
-     }
+     },
+     "arrows": [
+      [
+       "FIG-GOTT",
+       "FIG-ZEICHEN-ERBARMEN",
+       "act"
+      ]
+     ]
     }
    },
    {
@@ -816,8 +842,8 @@
     "speech": [],
     "action_de": "Paulus schickt Epaphroditus eilig zurück, damit die Gemeinde sich freut; sie soll ihn mit Freude aufnehmen und solche Menschen ehren.",
     "action_gsw": "De Paulus schickt de Epaphroditus tifig zrugg, damit sich d Gmeind fröit; si söll en mit Fröid ufneh und settig Mänsche ehre.",
-    "caption_de": "Zurück nach Philippi: Paulus (Kette) schickt Epaphroditus (Pfeil) zur Gemeinde (gestrichelter Weg zum Haus); Epaphroditus freut sich (Funken).",
-    "caption_gsw": "Zrugg uf Philippi: De Paulus (Chette) schickt de Epaphroditus (Pfiil) zur Gmeind (gstrichlete Wäg zum Huus); de Epaphroditus fröit sich (Fünkli).",
+    "caption_de": "Paulus → Epaphroditus → Gemeinde: Paulus (Kette) schickt Epaphroditus (Pfeil) zur Gemeinde (gestrichelter Weg zum Haus), damit sie sich freut; Epaphroditus freut sich (Funken).",
+    "caption_gsw": "Paulus → Epaphroditus → Gmeind: De Paulus (Chette) schickt de Epaphroditus (Pfiil) zur Gmeind (gstrichlete Wäg zum Huus), damit si sich fröit; de Epaphroditus fröit sich (Fünkli).",
     "stage": {
      "arrows": [
       [
@@ -1215,21 +1241,25 @@
     ],
     "action_de": "Die Gemeinde soll sich allezeit freuen und sich um nichts sorgen, sondern ihre Anliegen im Gebet mit Dank vor Gott bringen; der Friede Gottes wird ihre Herzen bewahren.",
     "action_gsw": "D Gmeind söll sich allwäg fröie und sich um nüüt sorge, sondern iri Aaliege im Gebätt mit Dank vor Gott bringe; de Fride vo Gott wird iri Härz bewahre.",
-    "caption_de": "Beten statt sorgen: Die Glaubenden bringen ihre Sorgen (Tropfen mit Wellenlinie) im Gebet (Hände) zu Gott (Strahlenkranz, Linie nach oben); sie freuen sich (Funken), der Friede Gottes (Ölzweig) ist bei ihnen.",
-    "caption_gsw": "Bätte statt sorge: D Gläubige bringed iri Sorge (Tropfe mit Wällelinie) im Gebätt (Händ) zu Gott (Strahlechranz, Linie ufe); si fröied sich (Fünkli), de Fride vo Gott (Ölzwiig) isch bi ine.",
+    "caption_de": "Gebet → Friede: Die Glaubenden bringen ihre Sorgen (Tropfen mit Wellenlinie) im Gebet (Hände) zu Gott (Strahlenkranz, Pfeil); von Gott kommt der Friede (goldener Pfeil zum Ölzweig); sie freuen sich (Funken).",
+    "caption_gsw": "Gebätt → Fride: D Gläubige bringed iri Sorge (Tropfe mit Wällelinie) im Gebätt (Händ) zu Gott (Strahlechranz, Pfiil); vo Gott chunnt de Fride (goldige Pfiil zum Ölzwiig); si fröied sich (Fünkli).",
     "stage": {
-     "at": {
-      "FIG-ZEICHEN-FRIEDE": "FIG-GRUPPE-GLAUBENDE"
-     },
      "god_side": "right",
      "arrows": [
       [
        "FIG-GRUPPE-GLAUBENDE",
        "FIG-GOTT",
        "act"
+      ],
+      [
+       "FIG-GOTT",
+       "FIG-ZEICHEN-FRIEDE",
+       "act"
       ]
      ],
-     "mood": {}
+     "mood": {},
+     "air_x": 146,
+     "air_y": 62
     }
    },
    {
@@ -1353,8 +1383,8 @@
     ],
     "action_de": "Durch Epaphroditus hat Paulus die Gaben der Gemeinde erhalten; er nennt sie ein Opfer, das Gott gefällt.",
     "action_gsw": "Dur de Epaphroditus hät de Paulus d Gabe vo de Gmeind übercho; er nännt si es Opfer, wo Gott gfallt.",
-    "caption_de": "Die Gabe: Epaphroditus kommt von der Gemeinde (Haus mit Menschen hinter ihm) und bringt ihre Gabe (Beutel) zu Paulus (Kette), der sich freut (Funken); Paulus nennt sie ein Opfer (Altar) für Gott (Strahlenkranz).",
-    "caption_gsw": "D Gab: De Epaphroditus chunt vo de Gmeind (Huus mit Mänsche hinder ihm) und bringt iri Gab (Büütel) zum Paulus (Chette), wo sich fröit (Fünkli); de Paulus nännt si es Opfer (Altar) für Gott (Strahlechranz).",
+    "caption_de": "Gemeinde → Epaphroditus → Paulus: Epaphroditus kommt von der Gemeinde (Haus mit Menschen hinter ihm) und bringt ihre Gabe (Beutel, Pfeil) zu Paulus (Kette), der sich freut (Funken); Paulus nennt sie ein Opfer (Altar) für Gott (Strahlenkranz).",
+    "caption_gsw": "Gmeind → Epaphroditus → Paulus: De Epaphroditus chunt vo de Gmeind (Huus mit Mänsche hinder ihm) und bringt iri Gab (Büütel, Pfiil) zum Paulus (Chette), wo sich fröit (Fünkli); de Paulus nännt si es Opfer (Altar) für Gott (Strahlechranz).",
     "stage": {
      "back_side": "left",
      "signs_who": {
@@ -1371,7 +1401,14 @@
      },
      "mood": {
       "FIG-EPAPHRODITUS": "smile"
-     }
+     },
+     "arrows": [
+      [
+       "FIG-EPAPHRODITUS",
+       "FIG-PAULUS",
+       "act"
+      ]
+     ]
     }
    },
    {
@@ -1640,8 +1677,8 @@
     ],
     "action_de": "Die Fesseln des Paulus sind im ganzen Prätorium als Fesseln um Christi willen bekannt geworden, und die meisten Geschwister sagen das Wort nun umso furchtloser.",
     "action_gsw": "D Fessle vom Paulus sind im ganze Prätorium als Fessle wäge Christus bekannt worde, und di meischte Gschwüschterti säged s Wort jetzt no weniger ängschtlich.",
-    "caption_de": "Gefangen für Christus: Paulus (Kette) erklärt dem Wachsoldaten, dass er um Christi willen (Kreuznimbus) gefesselt ist; die Geschwister verkündigen mutig (Rufhorn über ihnen).",
-    "caption_gsw": "Gfange für Christus: De Paulus (Chette) erchlärt em Wachsoldat, dass er wäge Christus (Chrüüznimbus) gfesslet isch; d Gschwüschterti verchündiged muetig (Rüefhorn über ine).",
+    "caption_de": "Fesseln → Mut: Paulus (Kette) erklärt dem Wachsoldaten, dass er um Christi willen (Kreuznimbus) gefesselt ist; dadurch fassen die Geschwister Mut (Pfeil) und verkündigen furchtlos (Rufhorn über ihnen).",
+    "caption_gsw": "Fessle → Muet: De Paulus (Chette) erchlärt em Wachsoldat, dass er wäge Christus (Chrüüznimbus) gfesslet isch; dur das fassed d Gschwüschterti Muet (Pfiil) und verchündiged ohni Angscht (Rüefhorn über ine).",
     "stage": {
      "floor_x": {
       "FIG-OBJ-KETTE": 76
@@ -1653,7 +1690,14 @@
       "FIG-ROLLE-SOLDAT": "calm",
       "FIG-GRUPPE-GLAUBENDE": "smile",
       "FIG-PAULUS": "smile"
-     }
+     },
+     "arrows": [
+      [
+       "FIG-PAULUS",
+       "FIG-GRUPPE-GLAUBENDE",
+       "act"
+      ]
+     ]
     }
    },
    {
@@ -1751,8 +1795,8 @@
     "speech": [],
     "action_de": "Darum hat Gott ihn erhöht, damit sich im Namen Jesu jedes Knie beuge und jede Zunge bekenne, dass Jesus Christus der Herr ist.",
     "action_gsw": "Drum hät Gott ihn erhöcht, damit sich im Name vo Jesus jedes Chnüü bügi und jedi Zunge bekänni, dass Jesus Christus de Herr isch.",
-    "caption_de": "Erhöhung: Gott (Strahlenkranz über ihm) erhöht Jesus (goldener Pfeil nach oben); Menschen beugen die Knie vor ihm (Zeichen: kniende Figur).",
-    "caption_gsw": "Erhöhig: Gott (Strahlechranz über ihm) erhöcht de Jesus (goldige Pfiil ufe); Mänsche bücked d Chnüü vor ihm (Zeiche: chnüendi Figur).",
+    "caption_de": "Erniedrigung → Erhöhung: Darum erhöht Gott (Strahlenkranz, goldener Pfeil) Jesus (Pfeil nach oben neben ihm); Menschen beugen die Knie vor ihm (kniende Figur).",
+    "caption_gsw": "Erniedrigung → Erhöhig: Drum erhöcht Gott (Strahlechranz, goldige Pfiil) de Jesus (Pfiil ufe näbe ihm); Mänsche bücked d Chnüü vor ihm (chnüendi Figur).",
     "stage": {
      "at": {
       "FIG-ZEICHEN-KNIEN": "FIG-GRUPPE-GLAUBENDE"
@@ -1771,7 +1815,14 @@
      },
      "beside": {
       "FIG-ZEICHEN-ERHOEHEN": "FIG-JESUS"
-     }
+     },
+     "arrows": [
+      [
+       "FIG-GOTT",
+       "FIG-JESUS",
+       "act"
+      ]
+     ]
     }
    },
    {
@@ -2058,21 +2109,25 @@
     ],
     "action_de": "Die Gemeinde soll sich allezeit freuen und sich um nichts sorgen, sondern ihre Anliegen im Gebet mit Dank vor Gott bringen; der Friede Gottes wird ihre Herzen bewahren.",
     "action_gsw": "D Gmeind söll sich allwäg fröie und sich um nüüt sorge, sondern iri Aaliege im Gebätt mit Dank vor Gott bringe; de Fride vo Gott wird iri Härz bewahre.",
-    "caption_de": "Beten statt sorgen: Die Glaubenden bringen ihre Sorgen (Tropfen mit Wellenlinie) im Gebet (Hände) zu Gott (Strahlenkranz, Linie nach oben); sie freuen sich (Funken), der Friede Gottes (Ölzweig) ist bei ihnen.",
-    "caption_gsw": "Bätte statt sorge: D Gläubige bringed iri Sorge (Tropfe mit Wällelinie) im Gebätt (Händ) zu Gott (Strahlechranz, Linie ufe); si fröied sich (Fünkli), de Fride vo Gott (Ölzwiig) isch bi ine.",
+    "caption_de": "Gebet → Friede: Die Glaubenden bringen ihre Sorgen (Tropfen mit Wellenlinie) im Gebet (Hände) zu Gott (Strahlenkranz, Pfeil); von Gott kommt der Friede (goldener Pfeil zum Ölzweig); sie freuen sich (Funken).",
+    "caption_gsw": "Gebätt → Fride: D Gläubige bringed iri Sorge (Tropfe mit Wällelinie) im Gebätt (Händ) zu Gott (Strahlechranz, Pfiil); vo Gott chunnt de Fride (goldige Pfiil zum Ölzwiig); si fröied sich (Fünkli).",
     "stage": {
-     "at": {
-      "FIG-ZEICHEN-FRIEDE": "FIG-GRUPPE-GLAUBENDE"
-     },
      "god_side": "right",
      "arrows": [
       [
        "FIG-GRUPPE-GLAUBENDE",
        "FIG-GOTT",
        "act"
+      ],
+      [
+       "FIG-GOTT",
+       "FIG-ZEICHEN-FRIEDE",
+       "act"
       ]
      ],
-     "mood": {}
+     "mood": {},
+     "air_x": 146,
+     "air_y": 62
     }
    },
    {
@@ -2101,8 +2156,8 @@
     ],
     "action_de": "Durch Epaphroditus hat Paulus die Gaben der Gemeinde erhalten; er nennt sie ein Opfer, das Gott gefällt.",
     "action_gsw": "Dur de Epaphroditus hät de Paulus d Gabe vo de Gmeind übercho; er nännt si es Opfer, wo Gott gfallt.",
-    "caption_de": "Die Gabe: Epaphroditus kommt von der Gemeinde (Haus mit Menschen hinter ihm) und bringt ihre Gabe (Beutel) zu Paulus (Kette), der sich freut (Funken); Paulus nennt sie ein Opfer (Altar) für Gott (Strahlenkranz).",
-    "caption_gsw": "D Gab: De Epaphroditus chunt vo de Gmeind (Huus mit Mänsche hinder ihm) und bringt iri Gab (Büütel) zum Paulus (Chette), wo sich fröit (Fünkli); de Paulus nännt si es Opfer (Altar) für Gott (Strahlechranz).",
+    "caption_de": "Gemeinde → Epaphroditus → Paulus: Epaphroditus kommt von der Gemeinde (Haus mit Menschen hinter ihm) und bringt ihre Gabe (Beutel, Pfeil) zu Paulus (Kette), der sich freut (Funken); Paulus nennt sie ein Opfer (Altar) für Gott (Strahlenkranz).",
+    "caption_gsw": "Gmeind → Epaphroditus → Paulus: De Epaphroditus chunt vo de Gmeind (Huus mit Mänsche hinder ihm) und bringt iri Gab (Büütel, Pfiil) zum Paulus (Chette), wo sich fröit (Fünkli); de Paulus nännt si es Opfer (Altar) für Gott (Strahlechranz).",
     "stage": {
      "back_side": "left",
      "signs_who": {
@@ -2119,7 +2174,14 @@
      },
      "mood": {
       "FIG-EPAPHRODITUS": "smile"
-     }
+     },
+     "arrows": [
+      [
+       "FIG-EPAPHRODITUS",
+       "FIG-PAULUS",
+       "act"
+      ]
+     ]
     }
    },
    {
@@ -2214,8 +2276,8 @@
     ],
     "action_de": "Die Fesseln des Paulus sind im ganzen Prätorium als Fesseln um Christi willen bekannt geworden, und die meisten Geschwister sagen das Wort nun umso furchtloser.",
     "action_gsw": "D Fessle vom Paulus sind im ganze Prätorium als Fessle wäge Christus bekannt worde, und di meischte Gschwüschterti säged s Wort jetzt no weniger ängschtlich.",
-    "caption_de": "Gefangen für Christus: Paulus (Kette) erklärt dem Wachsoldaten, dass er um Christi willen (Kreuznimbus) gefesselt ist; die Geschwister verkündigen mutig (Rufhorn über ihnen).",
-    "caption_gsw": "Gfange für Christus: De Paulus (Chette) erchlärt em Wachsoldat, dass er wäge Christus (Chrüüznimbus) gfesslet isch; d Gschwüschterti verchündiged muetig (Rüefhorn über ine).",
+    "caption_de": "Fesseln → Mut: Paulus (Kette) erklärt dem Wachsoldaten, dass er um Christi willen (Kreuznimbus) gefesselt ist; dadurch fassen die Geschwister Mut (Pfeil) und verkündigen furchtlos (Rufhorn über ihnen).",
+    "caption_gsw": "Fessle → Muet: De Paulus (Chette) erchlärt em Wachsoldat, dass er wäge Christus (Chrüüznimbus) gfesslet isch; dur das fassed d Gschwüschterti Muet (Pfiil) und verchündiged ohni Angscht (Rüefhorn über ine).",
     "stage": {
      "floor_x": {
       "FIG-OBJ-KETTE": 76
@@ -2227,7 +2289,14 @@
       "FIG-ROLLE-SOLDAT": "calm",
       "FIG-GRUPPE-GLAUBENDE": "smile",
       "FIG-PAULUS": "smile"
-     }
+     },
+     "arrows": [
+      [
+       "FIG-PAULUS",
+       "FIG-GRUPPE-GLAUBENDE",
+       "act"
+      ]
+     ]
     }
    },
    {
@@ -2246,8 +2315,8 @@
     "speech": [],
     "action_de": "Darum hat Gott ihn erhöht, damit sich im Namen Jesu jedes Knie beuge und jede Zunge bekenne, dass Jesus Christus der Herr ist.",
     "action_gsw": "Drum hät Gott ihn erhöcht, damit sich im Name vo Jesus jedes Chnüü bügi und jedi Zunge bekänni, dass Jesus Christus de Herr isch.",
-    "caption_de": "Erhöhung: Gott (Strahlenkranz über ihm) erhöht Jesus (goldener Pfeil nach oben); Menschen beugen die Knie vor ihm (Zeichen: kniende Figur).",
-    "caption_gsw": "Erhöhig: Gott (Strahlechranz über ihm) erhöcht de Jesus (goldige Pfiil ufe); Mänsche bücked d Chnüü vor ihm (Zeiche: chnüendi Figur).",
+    "caption_de": "Erniedrigung → Erhöhung: Darum erhöht Gott (Strahlenkranz, goldener Pfeil) Jesus (Pfeil nach oben neben ihm); Menschen beugen die Knie vor ihm (kniende Figur).",
+    "caption_gsw": "Erniedrigung → Erhöhig: Drum erhöcht Gott (Strahlechranz, goldige Pfiil) de Jesus (Pfiil ufe näbe ihm); Mänsche bücked d Chnüü vor ihm (chnüendi Figur).",
     "stage": {
      "at": {
       "FIG-ZEICHEN-KNIEN": "FIG-GRUPPE-GLAUBENDE"
@@ -2266,7 +2335,14 @@
      },
      "beside": {
       "FIG-ZEICHEN-ERHOEHEN": "FIG-JESUS"
-     }
+     },
+     "arrows": [
+      [
+       "FIG-GOTT",
+       "FIG-JESUS",
+       "act"
+      ]
+     ]
     }
    },
    {
@@ -2329,21 +2405,25 @@
     ],
     "action_de": "Die Gemeinde soll sich allezeit freuen und sich um nichts sorgen, sondern ihre Anliegen im Gebet mit Dank vor Gott bringen; der Friede Gottes wird ihre Herzen bewahren.",
     "action_gsw": "D Gmeind söll sich allwäg fröie und sich um nüüt sorge, sondern iri Aaliege im Gebätt mit Dank vor Gott bringe; de Fride vo Gott wird iri Härz bewahre.",
-    "caption_de": "Beten statt sorgen: Die Glaubenden bringen ihre Sorgen (Tropfen mit Wellenlinie) im Gebet (Hände) zu Gott (Strahlenkranz, Linie nach oben); sie freuen sich (Funken), der Friede Gottes (Ölzweig) ist bei ihnen.",
-    "caption_gsw": "Bätte statt sorge: D Gläubige bringed iri Sorge (Tropfe mit Wällelinie) im Gebätt (Händ) zu Gott (Strahlechranz, Linie ufe); si fröied sich (Fünkli), de Fride vo Gott (Ölzwiig) isch bi ine.",
+    "caption_de": "Gebet → Friede: Die Glaubenden bringen ihre Sorgen (Tropfen mit Wellenlinie) im Gebet (Hände) zu Gott (Strahlenkranz, Pfeil); von Gott kommt der Friede (goldener Pfeil zum Ölzweig); sie freuen sich (Funken).",
+    "caption_gsw": "Gebätt → Fride: D Gläubige bringed iri Sorge (Tropfe mit Wällelinie) im Gebätt (Händ) zu Gott (Strahlechranz, Pfiil); vo Gott chunnt de Fride (goldige Pfiil zum Ölzwiig); si fröied sich (Fünkli).",
     "stage": {
-     "at": {
-      "FIG-ZEICHEN-FRIEDE": "FIG-GRUPPE-GLAUBENDE"
-     },
      "god_side": "right",
      "arrows": [
       [
        "FIG-GRUPPE-GLAUBENDE",
        "FIG-GOTT",
        "act"
+      ],
+      [
+       "FIG-GOTT",
+       "FIG-ZEICHEN-FRIEDE",
+       "act"
       ]
      ],
-     "mood": {}
+     "mood": {},
+     "air_x": 146,
+     "air_y": 62
     }
    }
   ],

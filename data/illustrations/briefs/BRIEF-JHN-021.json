@@ -53,7 +53,14 @@
         "mood": {
           "FIG-GRUPPE-JUENGER": "delight",
           "FIG-JESUS": "calm"
-        }
+        },
+        "arrows": [
+          [
+            "FIG-JESUS",
+            "FIG-OBJ-NETZ",
+            "act"
+          ]
+        ]
       }
     },
     {
@@ -169,7 +176,7 @@
     "Dieser Jünger bezeugt und hat dies geschrieben; die Welt könnte die Bücher nicht fassen, würde alles aufgeschrieben."
   ],
   "captions_de": [
-    "Fischfang: Jesus am Ufer sagt: Werft das Netz aus (Netz, Fisch); die Jünger im Boot, das Netz ist voll.",
+    "Jesu Wort → volles Netz: Jesus am Ufer (rechts) sagt: Werft das Netz aus (Netz, Fisch in der Blase); die Jünger im Boot, das Netz ist voll (Pfeil von Jesus zum Netz).",
     "Weide meine Schafe: Jesus fragt Petrus (Herzen, ?) und gibt ihm den Auftrag: Hüte meine Schafe (schützende Hände, Schaf).",
     "Und er?: Petrus fragt nach dem Jünger (Jünger, ?); Jesus: Folge du mir (Fussspuren).",
     "Das Zeugnis: Der Jünger mit der Schriftrolle; sein Zeugnis ist wahr (Häkchen)."
@@ -349,6 +356,172 @@
           "Weide meine Schafe: Jesus fragt Petrus (Herzen, ?) und gibt ihm den Auftrag (Hirte, Schaf).",
           "Und er?: Petrus fragt nach dem Jünger (Jünger, ?); Jesus: Folge du mir (Fussspuren).",
           "Das Zeugnis: Der Jünger mit der Schriftrolle; sein Zeugnis ist wahr (Lot)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.21.1-JHN.21.14",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-UFER",
+              "FIG-OBJ-NETZ"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-NETZ",
+                  "FIG-OBJ-FISCH"
+                ]
+              }
+            ],
+            "action_de": "Auf Jesu Wort fangen die Jünger am See so viele Fische, dass sie das Netz kaum einziehen können; am Ufer gibt er ihnen Brot und Fisch.",
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-JUENGER": [
+                  0.45,
+                  0.52
+                ]
+              },
+              "big_side": "left",
+              "x": {
+                "FIG-JESUS": 156
+              },
+              "floor_x": {
+                "FIG-OBJ-NETZ": 40
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "delight",
+                "FIG-JESUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.21.15-JHN.21.19",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-PETRUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-ZEICHEN-LIEBE",
+                  "FIG-ZEICHEN-FRAGEN",
+                  "FIG-ZEICHEN-BEWAHREN",
+                  "FIG-OBJ-SCHAF"
+                ]
+              }
+            ],
+            "action_de": "Jesus fragt Petrus dreimal, ob er ihn liebe, und beauftragt ihn, seine Schafe zu weiden; dann sagt er: «Folge mir!»",
+            "stage": {
+              "mood": {
+                "FIG-PETRUS": "earnest"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.21.20-JHN.21.23",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-PETRUS",
+              "FIG-LIEBLINGSJUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-LIEBLINGSJUENGER",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-ZEICHEN-NACHFOLGEN"
+                ]
+              }
+            ],
+            "action_de": "Petrus fragt nach dem Jünger, den Jesus liebte; Jesus antwortet: «Du, folge mir!»",
+            "stage": {
+              "x": {
+                "FIG-LIEBLINGSJUENGER": 22,
+                "FIG-PETRUS": 72,
+                "FIG-JESUS": 150
+              },
+              "mood": {
+                "FIG-PETRUS": "pensive"
+              },
+              "arrows": [
+                [
+                  "FIG-LIEBLINGSJUENGER",
+                  "FIG-PETRUS",
+                  "go"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.21.24-JHN.21.25",
+            "figures": [
+              "FIG-LIEBLINGSJUENGER"
+            ],
+            "objects": [
+              "FIG-GRUPPE-GEMEINDE",
+              "FIG-OBJ-SCHRIFTROLLE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-WAHRHEIT"
+            ],
+            "speech": [],
+            "action_de": "Dieser Jünger bezeugt und hat dies geschrieben; die Welt könnte die Bücher nicht fassen, würde alles aufgeschrieben.",
+            "stage": {
+              "hold": {
+                "FIG-LIEBLINGSJUENGER": "FIG-OBJ-SCHRIFTROLLE"
+              },
+              "at": {
+                "FIG-ZEICHEN-WAHRHEIT": "FIG-LIEBLINGSJUENGER"
+              },
+              "back_side": "right",
+              "x": {
+                "FIG-LIEBLINGSJUENGER": 56
+              },
+              "mood": {
+                "FIG-LIEBLINGSJUENGER": "smile"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Fischfang: Jesus am Ufer sagt: Werft das Netz aus (Netz, Fisch); die Jünger im Boot, das Netz ist voll.",
+          "Weide meine Schafe: Jesus fragt Petrus (Herzen, ?) und gibt ihm den Auftrag: Hüte meine Schafe (schützende Hände, Schaf).",
+          "Und er?: Petrus fragt nach dem Jünger (Jünger, ?); Jesus: Folge du mir (Fussspuren).",
+          "Das Zeugnis: Der Jünger mit der Schriftrolle; sein Zeugnis ist wahr (Häkchen)."
         ]
       }
     }

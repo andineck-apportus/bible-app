@@ -66,15 +66,31 @@
     ],
     "action_de": "Er schreibt es den Lesern, damit sie Gemeinschaft haben mit ihnen und mit dem Vater und dem Sohn, und damit die Freude vollkommen ist.",
     "action_gsw": "Er schriibt s de Läser, dass si Gmeinschaft händ mit ene und mit em Vater und em Sohn, und dass d Fröid ganz isch.",
-    "caption_de": "Brief: Er schreibt, damit alle Gemeinschaft haben (Figuren an der Hand) mit Gott (Strahlenkranz) und Jesus; Freude (Funken).",
-    "caption_gsw": "Brief: Er schriibt, dass alli Gmeinschaft händ (Figure a de Hand) mit Gott (Strahlechranz) und em Jesus; Fröid (Funke).",
+    "caption_de": "Brief → Gemeinschaft und Freude: Der Älteste schreibt den Geschwistern (Brief, Pfeil zu ihnen), damit sie Gemeinschaft haben (Figuren an der Hand) mit Gott (Strahlenkranz) und Jesus; so wird ihre Freude vollkommen (Funken über ihnen).",
+    "caption_gsw": "Brief → Gmeinschaft und Fröid: De Älteschti schriibt de Gschwüschterti (Brief, Pfiil zu ine), dass si Gmeinschaft händ (Figure a de Hand) mit Gott (Strahlechranz) und em Jesus; so wird iri Fröid ganz (Funke über ine).",
     "stage": {
      "hold": {
       "FIG-DER-AELTESTE": "FIG-OBJ-BRIEF"
      },
+     "x": {
+      "FIG-DER-AELTESTE": 40,
+      "FIG-GRUPPE-GESCHWISTER": 142
+     },
+     "arrows": [
+      [
+       "FIG-DER-AELTESTE",
+       "FIG-GRUPPE-GESCHWISTER",
+       "act"
+      ]
+     ],
+     "signs_who": {
+      "FIG-ZEICHEN-FREUDE": [
+       "FIG-GRUPPE-GESCHWISTER"
+      ]
+     },
      "mood": {
       "FIG-DER-AELTESTE": "smile",
-      "FIG-GRUPPE-GESCHWISTER": "smile"
+      "FIG-GRUPPE-GESCHWISTER": "delight"
      }
     }
    }
@@ -125,28 +141,36 @@
     "n": 2,
     "reference": "1JN.1.6",
     "figures": [
-     "FIG-DER-AELTESTE",
-     "FIG-GRUPPE-GESCHWISTER"
+     "FIG-ROLLE-MENSCH"
     ],
     "objects": [],
-    "signs": [],
-    "speech": [
-     {
-      "from": "FIG-DER-AELTESTE",
-      "to": "FIG-GRUPPE-GESCHWISTER",
-      "icons": [
-       "FIG-ZEICHEN-FINSTERNIS",
-       "FIG-ZEICHEN-LUEGE"
-      ]
-     }
+    "signs": [
+     "FIG-ZEICHEN-FINSTERNIS",
+     "FIG-ZEICHEN-LUEGE"
     ],
+    "speech": [],
     "action_de": "Wer Gemeinschaft mit Gott behauptet und in der Finsternis lebt, lügt und tut die Wahrheit nicht.",
     "action_gsw": "Wer behauptet, er heg Gmeinschaft mit Gott, und i de Fiischteri läbt, lüügt und tuet d Wohret nöd.",
-    "caption_de": "Finsternis: Wer in der Finsternis lebt (dunkle Wolke), lügt (rotes Kreuz).",
-    "caption_gsw": "Fiischteri: Wer i de Fiischteri läbt (dunkli Wulche), lüügt (rots Chrüüz).",
+    "caption_de": "Finsternis → Lüge: Wer behauptet, mit Gott Gemeinschaft zu haben, und in der Finsternis lebt (dunkle Wolke über ihm), der lügt (Pfeil zum roten Kreuz).",
+    "caption_gsw": "Fiischteri → Lugi: Wer behauptet, er heg Gmeinschaft mit Gott, und i de Fiischteri läbt (dunkli Wolke über em), dä lügt (Pfiil zum rote Chrüz).",
     "stage": {
+     "x": {
+      "FIG-ROLLE-MENSCH": 56
+     },
+     "at": {
+      "FIG-ZEICHEN-FINSTERNIS": "FIG-ROLLE-MENSCH"
+     },
+     "air_x": 126,
+     "air_y": 52,
+     "arrows": [
+      [
+       "FIG-ROLLE-MENSCH",
+       "FIG-ZEICHEN-LUEGE",
+       "act"
+      ]
+     ],
      "mood": {
-      "FIG-GRUPPE-GESCHWISTER": "pensive"
+      "FIG-ROLLE-MENSCH": "worried"
      }
     }
    },
@@ -154,30 +178,41 @@
     "n": 3,
     "reference": "1JN.1.7",
     "figures": [
-     "FIG-DER-AELTESTE",
+     "FIG-JESUS",
      "FIG-GRUPPE-GESCHWISTER"
     ],
     "objects": [],
-    "signs": [],
-    "speech": [
-     {
-      "from": "FIG-DER-AELTESTE",
-      "to": "FIG-GRUPPE-GESCHWISTER",
-      "icons": [
-       "FIG-ZEICHEN-LICHT",
-       "FIG-ZEICHEN-GEMEINSCHAFT",
-       "FIG-ZEICHEN-BLUT",
-       "FIG-ZEICHEN-VERGEBUNG"
-      ]
-     }
+    "signs": [
+     "FIG-ZEICHEN-LICHT",
+     "FIG-ZEICHEN-BLUT",
+     "FIG-ZEICHEN-VERGEBUNG"
     ],
+    "speech": [],
     "action_de": "Wer im Licht lebt, hat Gemeinschaft mit den anderen, und das Blut Jesu reinigt von jeder Sünde.",
     "action_gsw": "Wer im Liecht läbt, hät Gmeinschaft mit de andere, und s Bluet vo Jesus macht rein vo jedere Sünd.",
-    "caption_de": "Licht: Im Licht (goldener Schein) ist Gemeinschaft (Figuren an der Hand); das Blut Jesu (Tropfen) reinigt (sauberes Tuch).",
-    "caption_gsw": "Liecht: Im Liecht (goldige Schii) isch Gmeinschaft (Figure a de Hand); s Bluet vo Jesus (Tropfe) macht rein (suubers Tuech).",
+    "caption_de": "Blut Jesu → rein: Die Geschwister leben im Licht (goldener Schein oben); das Blut Jesu (roter Tropfen bei Jesus) reinigt sie von jeder Sünde (Pfeil zu ihnen, sauberes Tuch über ihnen).",
+    "caption_gsw": "Bluet vom Jesus → rein: D Gschwüschterti läbed im Liecht (goldige Schii obe); s Bluet vom Jesus (rote Tropfe bim Jesus) macht si rein vo jedere Sünd (Pfiil zu ine, suubers Tuech über ine).",
     "stage": {
+     "x": {
+      "FIG-JESUS": 44,
+      "FIG-GRUPPE-GESCHWISTER": 136
+     },
+     "at": {
+      "FIG-ZEICHEN-BLUT": "FIG-JESUS",
+      "FIG-ZEICHEN-VERGEBUNG": "FIG-GRUPPE-GESCHWISTER"
+     },
+     "air_x": 72,
+     "air_y": 8,
+     "arrows": [
+      [
+       "FIG-JESUS",
+       "FIG-GRUPPE-GESCHWISTER",
+       "act"
+      ]
+     ],
      "mood": {
-      "FIG-GRUPPE-GESCHWISTER": "smile"
+      "FIG-GRUPPE-GESCHWISTER": "smile",
+      "FIG-JESUS": "calm"
      }
     }
    },
@@ -203,8 +238,8 @@
     ],
     "action_de": "Wer sagt, er habe keine Sünde, täuscht sich selbst; wer seine Sünden bekennt, dem vergibt Gott, denn er ist treu und gerecht.",
     "action_gsw": "Wer seit, er heg kei Sünd, tüüscht sich sälber; wer sini Sünde bekännt, däm vergit Gott, will er treu und grächt isch.",
-    "caption_de": "Bekennen: Die Geschwister bekennen Gott ihre Sünden (dunkler Fleck); Gott vergibt und reinigt (sauberes Tuch).",
-    "caption_gsw": "Bekänne: D Gschwüschterti bekänned Gott iri Sünde (dunkle Fläck); Gott vergit und macht rein (suubers Tuech).",
+    "caption_de": "Bekennen → Vergebung: Die Geschwister bekennen Gott ihre Sünden (dunkler Fleck in der Blase); Gott (Strahlenkranz) vergibt und reinigt sie (goldener Pfeil, sauberes Tuch über ihnen).",
+    "caption_gsw": "Bekänne → Vergäbig: D Gschwüschterti bekänned Gott iri Sünde (dunkle Fläck i de Blase); Gott (Strahlechranz) vergit ene und macht si rein (goldige Pfiil, suubers Tuech über ine).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-GESCHWISTER": "pensive"
@@ -290,8 +325,8 @@
     ],
     "action_de": "Gott ist Licht; wer seine Sünden bekennt, dem vergibt er.",
     "action_gsw": "Gott isch Liecht; wer sini Sünde bekännt, däm vergit er.",
-    "caption_de": "Gott ist Licht (goldener Schein beim Strahlenkranz): Die Geschwister bekennen ihre Sünden (dunkler Fleck); Gott vergibt (sauberes Tuch).",
-    "caption_gsw": "Gott isch Liecht (goldige Schii bim Strahlechranz): D Gschwüschterti bekänned iri Sünde (dunkle Fläck); Gott vergit (suubers Tuech).",
+    "caption_de": "Bekennen → Vergebung: Die Geschwister bekennen Gott ihre Sünden (dunkler Fleck in der Blase); Gott (Strahlenkranz) vergibt und reinigt sie (goldener Pfeil, sauberes Tuch über ihnen).",
+    "caption_gsw": "Bekänne → Vergäbig: D Gschwüschterti bekänned Gott iri Sünde (dunkle Fläck i de Blase); Gott (Strahlechranz) vergit ene und macht si rein (goldige Pfiil, suubers Tuech über ine).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-GESCHWISTER": "pensive"
@@ -364,29 +399,40 @@
     "n": 2,
     "reference": "1JN.2.3-1JN.2.4",
     "figures": [
-     "FIG-DER-AELTESTE",
-     "FIG-GRUPPE-GESCHWISTER"
+     "FIG-ROLLE-MENSCH"
     ],
     "objects": [],
-    "signs": [],
-    "speech": [
-     {
-      "from": "FIG-DER-AELTESTE",
-      "to": "FIG-GRUPPE-GESCHWISTER",
-      "icons": [
-       "FIG-ZEICHEN-GEBOT",
-       "FIG-ZEICHEN-ABLEHNEN",
-       "FIG-ZEICHEN-LUEGE"
-      ]
-     }
+    "signs": [
+     "FIG-ZEICHEN-GEBOT",
+     "FIG-ZEICHEN-ABLEHNEN",
+     "FIG-ZEICHEN-LUEGE"
     ],
+    "speech": [],
     "action_de": "Daran erkennen sie, dass sie Gott kennen: wenn sie seine Gebote halten. Wer sagt, er kenne ihn, und seine Gebote nicht hält, ist ein Lügner.",
     "action_gsw": "Draa merked si, dass si Gott kenned: wänn si sini Gebot halted. Wer seit, er kenn en, und sini Gebot nöd haltet, isch en Lügner.",
-    "caption_de": "Gebote halten: Wer das Gebot (Tafel) nicht hält (abwehrende Hand), lügt (rotes Kreuz).",
-    "caption_gsw": "Gebot halte: Wer s Gebot (Tafele) nöd haltet (abwehrendi Hand), lüügt (rots Chrüüz).",
+    "caption_de": "Gebot nicht halten → Lüge: Wer sagt, er kenne Gott, aber das Gebot (Tafel über ihm) nicht hält (abwehrende Hand), der lügt (Pfeil zum roten Kreuz).",
+    "caption_gsw": "S Gebot nöd halte → Lugi: Wer seit, er kenn Gott, aber s Gebot (Tafle über em) nöd haltet (abwehrendi Hand), dä lügt (Pfiil zum rote Chrüz).",
     "stage": {
+     "x": {
+      "FIG-ROLLE-MENSCH": 54
+     },
+     "at": {
+      "FIG-ZEICHEN-GEBOT": "FIG-ROLLE-MENSCH"
+     },
+     "beside": {
+      "FIG-ZEICHEN-ABLEHNEN": "FIG-ROLLE-MENSCH"
+     },
+     "air_x": 128,
+     "air_y": 52,
+     "arrows": [
+      [
+       "FIG-ROLLE-MENSCH",
+       "FIG-ZEICHEN-LUEGE",
+       "act"
+      ]
+     ],
      "mood": {
-      "FIG-GRUPPE-GESCHWISTER": "pensive"
+      "FIG-ROLLE-MENSCH": "earnest"
      }
     }
    },
@@ -394,27 +440,38 @@
     "n": 3,
     "reference": "1JN.2.5-1JN.2.6",
     "figures": [
-     "FIG-DER-AELTESTE",
+     "FIG-GOTT",
      "FIG-GRUPPE-GESCHWISTER"
     ],
     "objects": [],
-    "signs": [],
-    "speech": [
-     {
-      "from": "FIG-DER-AELTESTE",
-      "to": "FIG-GRUPPE-GESCHWISTER",
-      "icons": [
-       "FIG-ZEICHEN-GEBOT",
-       "FIG-ZEICHEN-HOEREN",
-       "FIG-ZEICHEN-LIEBE"
-      ]
-     }
+    "signs": [
+     "FIG-ZEICHEN-GEBOT",
+     "FIG-ZEICHEN-LIEBE"
     ],
+    "speech": [],
     "action_de": "Wer sein Wort hält, in dem ist die Liebe Gottes vollendet; wer sagt, er bleibe in ihm, soll leben, wie Jesus gelebt hat.",
     "action_gsw": "Wer sis Wort haltet, i däm isch d Liebi vo Gott vollkomme; wer seit, er bliib i ihm, söll läbe, wie de Jesus gläbt hät.",
-    "caption_de": "Wort halten: Wer auf das Gebot (Tafel) hört und ihm gehorcht (Ohr), in dem ist Gottes Liebe vollendet (zwei Herzen).",
-    "caption_gsw": "s Wort halte: Wär uf s Gebot (Tafele) lost und em folget (Ohr), i dem isch Gottes Liebi volländet (zwei Härz).",
+    "caption_de": "Wort halten → Gottes Liebe: Die Geschwister halten Gottes Wort (Tafel über ihnen); Gott (Strahlenkranz) macht seine Liebe (Herzen beim Strahlenkranz) in ihnen vollkommen (goldener Pfeil zu ihnen).",
+    "caption_gsw": "S Wort halte → d Liebi vo Gott: D Gschwüschterti haltet s Wort vo Gott (Tafle über ine); Gott (Strahlechranz) macht sini Liebi (Härz bim Strahlechranz) i ine vollkomme (goldige Pfiil zu ine).",
     "stage": {
+     "god_side": "right",
+     "x": {
+      "FIG-GRUPPE-GESCHWISTER": 62
+     },
+     "at": {
+      "FIG-ZEICHEN-GEBOT": "FIG-GRUPPE-GESCHWISTER",
+      "FIG-ZEICHEN-LIEBE": "FIG-GOTT"
+     },
+     "signs_who": {
+      "FIG-ZEICHEN-LIEBE": []
+     },
+     "arrows": [
+      [
+       "FIG-GOTT",
+       "FIG-GRUPPE-GESCHWISTER",
+       "act"
+      ]
+     ],
      "mood": {
       "FIG-GRUPPE-GESCHWISTER": "smile"
      }
@@ -464,28 +521,36 @@
     "n": 2,
     "reference": "1JN.2.9",
     "figures": [
-     "FIG-DER-AELTESTE",
-     "FIG-GRUPPE-GESCHWISTER"
+     "FIG-ROLLE-MENSCH"
     ],
     "objects": [],
-    "signs": [],
-    "speech": [
-     {
-      "from": "FIG-DER-AELTESTE",
-      "to": "FIG-GRUPPE-GESCHWISTER",
-      "icons": [
-       "FIG-ZEICHEN-HASS",
-       "FIG-ZEICHEN-FINSTERNIS"
-      ]
-     }
+    "signs": [
+     "FIG-ZEICHEN-HASS",
+     "FIG-ZEICHEN-FINSTERNIS"
     ],
+    "speech": [],
     "action_de": "Wer sagt, er sei im Licht, und seinen Bruder hasst, ist noch immer in der Finsternis.",
     "action_gsw": "Wer seit, er seg im Liecht, und sin Brüeder hasst, isch immer no i de Fiischteri.",
-    "caption_de": "Hass: Wer hasst (gebrochenes Herz), ist in der Finsternis (dunkle Wolke).",
-    "caption_gsw": "Hass: Wer hasst (broches Härz), isch i de Fiischteri (dunkli Wulche).",
+    "caption_de": "Hass → Finsternis: Wer sagt, er sei im Licht, und seinen Bruder hasst (gebrochenes Herz über ihm), ist noch in der Finsternis (Pfeil zur dunklen Wolke).",
+    "caption_gsw": "Hass → Fiischteri: Wer seit, er seg im Liecht, und sin Brüeder hasst (broches Härz über em), isch na i de Fiischteri (Pfiil zur dunkle Wolke).",
     "stage": {
+     "x": {
+      "FIG-ROLLE-MENSCH": 56
+     },
+     "at": {
+      "FIG-ZEICHEN-HASS": "FIG-ROLLE-MENSCH"
+     },
+     "air_x": 122,
+     "air_y": 52,
+     "arrows": [
+      [
+       "FIG-ROLLE-MENSCH",
+       "FIG-ZEICHEN-FINSTERNIS",
+       "act"
+      ]
+     ],
      "mood": {
-      "FIG-GRUPPE-GESCHWISTER": "calm"
+      "FIG-ROLLE-MENSCH": "worried"
      }
     }
    },
@@ -493,26 +558,36 @@
     "n": 3,
     "reference": "1JN.2.10",
     "figures": [
-     "FIG-DER-AELTESTE",
      "FIG-GRUPPE-GESCHWISTER"
     ],
     "objects": [],
-    "signs": [],
-    "speech": [
-     {
-      "from": "FIG-DER-AELTESTE",
-      "to": "FIG-GRUPPE-GESCHWISTER",
-      "icons": [
-       "FIG-ZEICHEN-LIEBE",
-       "FIG-ZEICHEN-LICHT"
-      ]
-     }
+    "signs": [
+     "FIG-ZEICHEN-LIEBE",
+     "FIG-ZEICHEN-LICHT"
     ],
+    "speech": [],
     "action_de": "Wer seinen Bruder liebt, bleibt im Licht, und in ihm ist kein Anstoss.",
     "action_gsw": "Wer sin Brüeder gärn hät, blibt im Liecht, und i ihm isch kein Aastoss.",
-    "caption_de": "Liebe: Wer liebt (zwei Herzen), bleibt im Licht (goldener Schein).",
-    "caption_gsw": "Liebi: Wer gärn hät (zwei Härz), blibt im Liecht (goldige Schii).",
+    "caption_de": "Liebe → Licht: Wer die Geschwister liebt (Herzen über ihnen), bleibt im Licht (Pfeil zum goldenen Schein).",
+    "caption_gsw": "Liebi → Liecht: Wer d Gschwüschterti gärn hät (Härz über ine), blibt im Liecht (Pfiil zum goldige Schii).",
     "stage": {
+     "x": {
+      "FIG-GRUPPE-GESCHWISTER": 56
+     },
+     "signs_who": {
+      "FIG-ZEICHEN-LIEBE": [
+       "FIG-GRUPPE-GESCHWISTER"
+      ]
+     },
+     "air_x": 118,
+     "air_y": 44,
+     "arrows": [
+      [
+       "FIG-GRUPPE-GESCHWISTER",
+       "FIG-ZEICHEN-LICHT",
+       "act"
+      ]
+     ],
      "mood": {
       "FIG-GRUPPE-GESCHWISTER": "smile"
      }
@@ -630,26 +705,34 @@
     "n": 4,
     "reference": "1JN.2.17",
     "figures": [
-     "FIG-DER-AELTESTE",
      "FIG-GRUPPE-GESCHWISTER"
     ],
     "objects": [],
-    "signs": [],
-    "speech": [
-     {
-      "from": "FIG-DER-AELTESTE",
-      "to": "FIG-GRUPPE-GESCHWISTER",
-      "icons": [
-       "FIG-ZEICHEN-WILLE-GOTTES",
-       "FIG-ZEICHEN-LEBEN"
-      ]
-     }
+    "signs": [
+     "FIG-ZEICHEN-WILLE-GOTTES",
+     "FIG-ZEICHEN-LEBEN"
     ],
+    "speech": [],
     "action_de": "Die Welt vergeht mit ihrer Begierde; wer aber den Willen Gottes tut, bleibt in Ewigkeit.",
     "action_gsw": "D Wält vergaat mit irem Gluscht; wer aber de Wille vo Gott tuet, blibt i Ewigkeit.",
-    "caption_de": "Bleiben: Wer Gottes Willen tut (goldener Pfeil von der hellen Wolke zur Erde), bleibt ewig (Baum im Ring).",
-    "caption_gsw": "Bliibe: Wär Gottes Wille tuet (goldige Pfiil vo de hälle Wulche uf d Ärde), bliibt ewig (Baum im Ring).",
+    "caption_de": "Gottes Willen tun → ewig bleiben: Die Geschwister tun Gottes Willen (goldener Pfeil von der hellen Wolke zur Erde, über ihnen); das führt zum ewigen Leben (Pfeil zum Baum im Ring).",
+    "caption_gsw": "Gottes Wille tue → ewig bliibe: D Gschwüschterti tüend de Wille vo Gott (goldige Pfiil vo de helle Wolke zur Ärde, über ine); das füert is ewig Läbe (Pfiil zum Baum im Ring).",
     "stage": {
+     "x": {
+      "FIG-GRUPPE-GESCHWISTER": 56
+     },
+     "at": {
+      "FIG-ZEICHEN-WILLE-GOTTES": "FIG-GRUPPE-GESCHWISTER"
+     },
+     "air_x": 126,
+     "air_y": 54,
+     "arrows": [
+      [
+       "FIG-GRUPPE-GESCHWISTER",
+       "FIG-ZEICHEN-LEBEN",
+       "act"
+      ]
+     ],
      "mood": {
       "FIG-GRUPPE-GESCHWISTER": "smile"
      }
@@ -771,28 +854,41 @@
     "n": 4,
     "reference": "1JN.2.24-1JN.2.27",
     "figures": [
-     "FIG-DER-AELTESTE",
-     "FIG-GRUPPE-GESCHWISTER"
+     "FIG-GRUPPE-GESCHWISTER",
+     "FIG-GOTT"
     ],
     "objects": [],
-    "signs": [],
-    "speech": [
-     {
-      "from": "FIG-DER-AELTESTE",
-      "to": "FIG-GRUPPE-GESCHWISTER",
-      "icons": [
-       "FIG-ZEICHEN-HOEREN",
-       "FIG-JESUS",
-       "FIG-GOTT",
-       "FIG-ZEICHEN-LEBEN"
-      ]
-     }
+    "signs": [
+     "FIG-ZEICHEN-HOEREN",
+     "FIG-ZEICHEN-LEBEN"
     ],
+    "speech": [],
     "action_de": "Was sie von Anfang an gehört haben, soll in ihnen bleiben; dann bleiben sie im Sohn und im Vater. Die Verheissung ist das ewige Leben.",
     "action_gsw": "Was si vo Aafang aa ghört händ, söll i ene bliibe; dänn blibed si im Sohn und im Vater. D Verheissig isch s ewig Läbe.",
-    "caption_de": "Bleiben: Was sie gehört haben (Ohr), hält sie beim Sohn (Jesus) und beim Vater (Strahlenkranz); verheissen ist das ewige Leben (Baum im Ring).",
-    "caption_gsw": "Bliibe: Was si ghört händ (Ohr), bhaltet si bim Sohn (Jesus) und bim Vater (Strahlechranz); verheisse isch s ewig Läbe (Baum im Ring).",
+    "caption_de": "Gehörtes bewahren → beim Vater bleiben → ewiges Leben: Die Geschwister bewahren, was sie von Anfang an gehört haben (Ohr über ihnen), und bleiben so beim Vater (Pfeil zum Strahlenkranz); Gott verheisst das ewige Leben (goldener Pfeil zum Baum im Ring).",
+    "caption_gsw": "Ghörts bhalte → bim Vater bliibe → ewigs Läbe: D Gschwüschterti bhaltet, was si vo Aafang aa ghört händ (Ohr über ine), und blibed so bim Vater (Pfiil zum Strahlechranz); Gott verheisst s ewig Läbe (goldige Pfiil zum Baum im Ring).",
     "stage": {
+     "god_side": "right",
+     "x": {
+      "FIG-GRUPPE-GESCHWISTER": 56
+     },
+     "at": {
+      "FIG-ZEICHEN-HOEREN": "FIG-GRUPPE-GESCHWISTER"
+     },
+     "air_x": 112,
+     "air_y": 66,
+     "arrows": [
+      [
+       "FIG-GRUPPE-GESCHWISTER",
+       "FIG-GOTT",
+       "act"
+      ],
+      [
+       "FIG-GOTT",
+       "FIG-ZEICHEN-LEBEN",
+       "act"
+      ]
+     ],
      "mood": {
       "FIG-GRUPPE-GESCHWISTER": "smile"
      }
@@ -1039,8 +1135,8 @@
     "speech": [],
     "action_de": "Seht, welche Liebe der Vater geschenkt hat: Sie heissen Kinder Gottes und sind es. Wenn er erscheint, werden sie ihm gleich sein.",
     "action_gsw": "Lueged, was für e Liebi de Vater gschänkt hät: Si heissed Chind vo Gott und sinds au. Wänn er erschiint, wärded si em glich sii.",
-    "caption_de": "Kinder Gottes: Gott (Strahlenkranz) schenkt seine Liebe (Herzen); die Geschwister sind Kinder Gottes (Kind unter Strahlen).",
-    "caption_gsw": "Chind vo Gott: Gott (Strahlechranz) schänkt sini Liebi (Härz); d Gschwüschterti sind Chind vo Gott (Chind under Strahle).",
+    "caption_de": "Gottes Liebe → Kinder Gottes: Gott (Strahlenkranz) schenkt seine Liebe (Herzen, goldener Pfeil); darum heissen die Geschwister Kinder Gottes und sind es (Kind unter Strahlen über ihnen).",
+    "caption_gsw": "Gottes Liebi → Chind vo Gott: Gott (Strahlechranz) schänkt sini Liebi (Härz, goldige Pfiil); drum heissed d Gschwüschterti Chind vo Gott und sinds au (Chind under Strahle über ine).",
     "stage": {
      "god_side": "left",
      "arrows": [
@@ -1077,8 +1173,8 @@
     "speech": [],
     "action_de": "Wer die Sünde tut, stammt vom Teufel; der Sohn Gottes ist erschienen, um die Sünden wegzunehmen und die Werke des Teufels zu zerstören.",
     "action_gsw": "Wer d Sünd tuet, chunnt vom Tüüfel; de Sohn vo Gott isch erschine, zum d Sünde wägneh und d Wärch vom Tüüfel kaputt mache.",
-    "caption_de": "Gegen die Sünde: Jesus tritt dem Teufel (dunkler Schatten) und seinen Werken (dunkler Fleck daneben) entgegen.",
-    "caption_gsw": "Gäge d Sünd: De Jesus trittet em Tüüfel (dunkle Schatte) und sine Wärch (dunkle Fläck dernäbed) entgäge.",
+    "caption_de": "Der Sohn Gottes → gegen die Werke des Teufels: Jesus ist erschienen, um die Sünden wegzunehmen; der Pfeil geht von ihm zum Teufel (dunkler Schatten) und seinen Werken (dunkler Fleck daneben).",
+    "caption_gsw": "De Sohn vo Gott → gäge d Wärch vom Tüüfel: De Jesus isch erschine, zum d Sünde wägneh; de Pfiil gaat vo ihm zum Tüüfel (dunkle Schatte) und sine Wärch (dunkle Fläck dernäbed).",
     "stage": {
      "arrows": [
       [
@@ -1140,26 +1236,36 @@
     "n": 1,
     "reference": "1JN.3.11-1JN.3.14",
     "figures": [
-     "FIG-DER-AELTESTE",
      "FIG-GRUPPE-GESCHWISTER"
     ],
     "objects": [],
-    "signs": [],
-    "speech": [
-     {
-      "from": "FIG-DER-AELTESTE",
-      "to": "FIG-GRUPPE-GESCHWISTER",
-      "icons": [
-       "FIG-ZEICHEN-LIEBE",
-       "FIG-ZEICHEN-LEBEN"
-      ]
-     }
+    "signs": [
+     "FIG-ZEICHEN-LIEBE",
+     "FIG-ZEICHEN-LEBEN"
     ],
+    "speech": [],
     "action_de": "Die Botschaft von Anfang an heisst: einander lieben. Wer die Geschwister liebt, ist aus dem Tod ins Leben hinübergegangen.",
     "action_gsw": "D Botschaft vo Aafang aa heisst: enand gärn ha. Wer d Gschwüschterti gärn hät, isch us em Tod is Läbe übere gange.",
-    "caption_de": "Einander lieben: Liebe (zwei Herzen) führt ins Leben (Baum im Ring).",
-    "caption_gsw": "Enand gärn ha: Liebi (zwei Härz) füert is Läbe (Baum im Ring).",
+    "caption_de": "Lieben → Leben: Wer die Geschwister liebt (Herzen über ihnen), ist aus dem Tod ins Leben hinübergegangen (Pfeil zum Baum im Ring).",
+    "caption_gsw": "Gärn ha → Läbe: Wer d Gschwüschterti gärn hät (Härz über ine), isch vom Tod is Läbe übere gange (Pfiil zum Baum im Ring).",
     "stage": {
+     "x": {
+      "FIG-GRUPPE-GESCHWISTER": 56
+     },
+     "signs_who": {
+      "FIG-ZEICHEN-LIEBE": [
+       "FIG-GRUPPE-GESCHWISTER"
+      ]
+     },
+     "air_x": 126,
+     "air_y": 54,
+     "arrows": [
+      [
+       "FIG-GRUPPE-GESCHWISTER",
+       "FIG-ZEICHEN-LEBEN",
+       "act"
+      ]
+     ],
      "mood": {
       "FIG-GRUPPE-GESCHWISTER": "smile"
      }
@@ -1169,28 +1275,36 @@
     "n": 2,
     "reference": "1JN.3.15",
     "figures": [
-     "FIG-DER-AELTESTE",
-     "FIG-GRUPPE-GESCHWISTER"
+     "FIG-ROLLE-MENSCH"
     ],
     "objects": [],
-    "signs": [],
-    "speech": [
-     {
-      "from": "FIG-DER-AELTESTE",
-      "to": "FIG-GRUPPE-GESCHWISTER",
-      "icons": [
-       "FIG-ZEICHEN-HASS",
-       "FIG-ZEICHEN-TOD"
-      ]
-     }
+    "signs": [
+     "FIG-ZEICHEN-HASS",
+     "FIG-ZEICHEN-TOD"
     ],
+    "speech": [],
     "action_de": "Wer seinen Bruder hasst, ist ein Mörder; kein Mörder hat ewiges Leben, das in ihm bleibt.",
     "action_gsw": "Wer sin Brüeder hasst, isch en Mörder; kein Mörder hät ewigs Läbe, wo i ihm blibt.",
-    "caption_de": "Hass: Wer hasst (gebrochenes Herz), bleibt im Tod (verschlossenes Grab).",
-    "caption_gsw": "Hass: Wer hasst (broches Härz), blibt im Tod (zues Grab).",
+    "caption_de": "Hass → Tod: Wer seinen Bruder hasst (gebrochenes Herz über ihm), hat kein ewiges Leben in sich, er bleibt im Tod (Pfeil zum verschlossenen Grab).",
+    "caption_gsw": "Hass → Tod: Wer sin Brüeder hasst (broches Härz über em), hät kei ewigs Läbe i sich, er blibt im Tod (Pfiil zum verschlossne Grab).",
     "stage": {
+     "x": {
+      "FIG-ROLLE-MENSCH": 56
+     },
+     "at": {
+      "FIG-ZEICHEN-HASS": "FIG-ROLLE-MENSCH"
+     },
+     "air_x": 122,
+     "air_y": 52,
+     "arrows": [
+      [
+       "FIG-ROLLE-MENSCH",
+       "FIG-ZEICHEN-TOD",
+       "act"
+      ]
+     ],
      "mood": {
-      "FIG-GRUPPE-GESCHWISTER": "calm"
+      "FIG-ROLLE-MENSCH": "worried"
      }
     }
    },
@@ -1209,18 +1323,30 @@
     "speech": [],
     "action_de": "Daran haben sie die Liebe erkannt: Jesus hat sein Leben für sie hingegeben; so sollen auch sie für die Geschwister einstehen.",
     "action_gsw": "Draa händ si d Liebi erkännt: De Jesus hät sis Läbe für si häregäh; so söled au si für d Gschwüschterti iistah.",
-    "caption_de": "Hingabe: Das Kreuz (ohne Körper) zeigt, dass Jesus sein Leben gegeben hat; daran erkennen sie die Liebe (Herzen über ihnen).",
-    "caption_gsw": "Hiigab: S Chrüz (ohni Körper) zeigt, dass de Jesus sis Läbe ggä hät; dra erkänned si d Liebi (Härz über ine).",
+    "caption_de": "Hingabe → Liebe: Das Kreuz (links, ohne Körper) zeigt, dass Jesus sein Leben für sie gegeben hat; von dort führt der Pfeil zu den Geschwistern: daran erkennen sie die Liebe (Herzen über ihnen).",
+    "caption_gsw": "Hiigab → Liebi: S Chrüz (links, ohni Körper) zeigt, dass de Jesus sis Läbe für si ggä hät; vo det gaat de Pfiil zu de Gschwüschterti: dra erkänned si d Liebi (Härz über ine).",
     "stage": {
-     "floor_side": "right",
+     "floor_side": "left",
      "mood": {
       "FIG-GRUPPE-GESCHWISTER": "calm"
      },
      "x": {
-      "FIG-GRUPPE-GESCHWISTER": 66
+      "FIG-GRUPPE-GESCHWISTER": 132
      },
      "floor_x": {
-      "FIG-OBJ-KREUZ": 118
+      "FIG-OBJ-KREUZ": 34
+     },
+     "arrows": [
+      [
+       "FIG-OBJ-KREUZ",
+       "FIG-GRUPPE-GESCHWISTER",
+       "act"
+      ]
+     ],
+     "signs_who": {
+      "FIG-ZEICHEN-LIEBE": [
+       "FIG-GRUPPE-GESCHWISTER"
+      ]
      }
     }
    },
@@ -1240,8 +1366,8 @@
     "speech": [],
     "action_de": "Wer Güter hat und den Bruder Not leiden sieht, soll sein Herz nicht verschliessen: nicht mit Worten lieben, sondern in Tat und Wahrheit.",
     "action_gsw": "Wer Sache hät und gseht, wie de Brüeder Not liidet, söll sis Härz nöd zuemache: nöd mit Wort gärn ha, sondern mit Tat und Wohret.",
-    "caption_de": "In Tat und Wahrheit: Die Geschwister haben einem Notleidenden Brot gegeben (Pfeil, Brot in seinen Händen) und zeigen so Liebe (Herzen).",
-    "caption_gsw": "Mit de Tat und i de Wahrheit: D Gschwüschterti händ emne Notliidende Brot ggä (Pfiil, Brot i sine Händ) und zeiged eso Liebi (Härz).",
+    "caption_de": "Liebe → Tat: Die Geschwister lieben (Herzen) nicht nur mit Worten: Sie haben einem Notleidenden Brot gegeben (Pfeil zu ihm, Brot in seinen Händen).",
+    "caption_gsw": "Liebi → Tat: D Gschwüschterti händ gärn (Härz) nöd nur mit Wort: Si händ emne Notliidende Brot ggä (Pfiil zu ihm, Brot i sine Händ).",
     "stage": {
      "hold": {
       "FIG-ROLLE-ARMER": "FIG-OBJ-BROT"
@@ -1295,8 +1421,8 @@
     "speech": [],
     "action_de": "Auch wenn ihr Herz sie verurteilt, ist Gott grösser als ihr Herz und weiss alles; so haben sie Zuversicht vor ihm.",
     "action_gsw": "Au wänn ires Härz si verurteilt, isch Gott grösser als ires Härz und weiss alles; so händ si Zueversicht vor ihm.",
-    "caption_de": "Gott ist grösser: Über dem Urteil des eigenen Herzens (Waage) ist Gott (Strahlenkranz), der ihnen zugewandt ist.",
-    "caption_gsw": "Gott isch grösser: Über em Urteil vom eigne Härz (Waag) isch Gott (Strahlechranz), wo ene zuegwändt isch.",
+    "caption_de": "Gott ist grösser → Zuversicht: Über dem Urteil des eigenen Herzens (Waage über ihnen) steht Gott (Strahlenkranz); er wendet sich ihnen zu (goldener Pfeil), so haben sie Zuversicht.",
+    "caption_gsw": "Gott isch grösser → Zueversicht: Über em Urteil vom eigne Härz (Waag über ine) staat Gott (Strahlechranz); er wändet sich ene zue (goldige Pfiil), so händ si Zueversicht.",
     "stage": {
      "god_side": "left",
      "at": {
@@ -1352,8 +1478,8 @@
     "speech": [],
     "action_de": "Wer seine Gebote hält, bleibt in ihm; daran erkennen sie es: an dem Geist, den er ihnen gegeben hat.",
     "action_gsw": "Wer sini Gebot haltet, blibt i ihm; draa merked si s: am Geischt, won er ene gäh hät.",
-    "caption_de": "Der Geist: Gott hat ihnen seinen Geist gegeben (Taube); daran erkennen sie, dass er in ihnen bleibt.",
-    "caption_gsw": "De Geischt: Gott hät ene sin Geischt gäh (Tuube); draa merked si, dass er i ene blibt.",
+    "caption_de": "Der Geist → Gewissheit: Gott hat ihnen seinen Geist gegeben (Taube, Pfeil zu den Geschwistern); daran erkennen sie, dass er in ihnen bleibt.",
+    "caption_gsw": "De Geischt → Gwüssheit: Gott hät ene sin Geischt ggä (Tuube, Pfiil zu de Gschwüschterti); draa merked si, dass er i ene blibt.",
     "stage": {
      "arrows": [
       [
@@ -1396,8 +1522,8 @@
     "speech": [],
     "action_de": "Der Vater hat ihnen seine Liebe geschenkt: Sie sind Kinder Gottes.",
     "action_gsw": "De Vater hät ene sini Liebi gschänkt: Si sind Chind vo Gott.",
-    "caption_de": "Kinder Gottes: Gott (Strahlenkranz) schenkt Liebe (Herzen); sie sind Kinder Gottes (Kind unter Strahlen).",
-    "caption_gsw": "Chind vo Gott: Gott (Strahlechranz) schänkt Liebi (Härz); si sind Chind vo Gott (Chind under Strahle).",
+    "caption_de": "Gottes Liebe → Kinder Gottes: Gott (Strahlenkranz) schenkt Liebe (Herzen, goldener Pfeil); die Geschwister sind Kinder Gottes (Kind unter Strahlen).",
+    "caption_gsw": "Gottes Liebi → Chind vo Gott: Gott (Strahlechranz) schänkt Liebi (Härz, goldige Pfiil); d Gschwüschterti sind Chind vo Gott (Chind under Strahle).",
     "stage": {
      "god_side": "left",
      "arrows": [
@@ -1434,17 +1560,30 @@
     "speech": [],
     "action_de": "Jesus hat sein Leben für sie hingegeben; so sollen sie einander lieben, in Tat und Wahrheit.",
     "action_gsw": "De Jesus hät sis Läbe für si häregäh; so söled si enand gärn ha, mit Tat und Wohret.",
-    "caption_de": "Hingabe: Das Kreuz (ohne Körper) zeigt, dass Jesus sein Leben gegeben hat; daran erkennen sie die Liebe (Herzen über ihnen).",
-    "caption_gsw": "Hiigab: S Chrüz (ohni Körper) zeigt, dass de Jesus sis Läbe ggä hät; dra erkänned si d Liebi (Härz über ine).",
+    "caption_de": "Hingabe → Liebe: Das Kreuz (links, ohne Körper) zeigt, dass Jesus sein Leben für sie gegeben hat; von dort führt der Pfeil zu den Geschwistern: daran erkennen sie die Liebe (Herzen über ihnen).",
+    "caption_gsw": "Hiigab → Liebi: S Chrüz (links, ohni Körper) zeigt, dass de Jesus sis Läbe für si ggä hät; vo det gaat de Pfiil zu de Gschwüschterti: dra erkänned si d Liebi (Härz über ine).",
     "stage": {
+     "floor_side": "left",
      "mood": {
       "FIG-GRUPPE-GESCHWISTER": "calm"
      },
      "x": {
-      "FIG-GRUPPE-GESCHWISTER": 66
+      "FIG-GRUPPE-GESCHWISTER": 132
      },
      "floor_x": {
-      "FIG-OBJ-KREUZ": 118
+      "FIG-OBJ-KREUZ": 34
+     },
+     "arrows": [
+      [
+       "FIG-OBJ-KREUZ",
+       "FIG-GRUPPE-GESCHWISTER",
+       "act"
+      ]
+     ],
+     "signs_who": {
+      "FIG-ZEICHEN-LIEBE": [
+       "FIG-GRUPPE-GESCHWISTER"
+      ]
      }
     }
    },
@@ -1573,6 +1712,7 @@
     "n": 3,
     "reference": "1JN.4.4-1JN.4.6",
     "figures": [
+     "FIG-GOTT",
      "FIG-GRUPPE-GESCHWISTER",
      "FIG-GRUPPE-VERFUEHRER"
     ],
@@ -1585,14 +1725,26 @@
     "speech": [],
     "action_de": "Die Geschwister sind aus Gott und haben die falschen Propheten besiegt, denn der in ihnen ist grösser als der in der Welt. Jene sind aus der Welt, und die Welt hört auf sie.",
     "action_gsw": "D Gschwüschterti sind us Gott und händ di falsche Prophete bsiegt, will dä i ene grösser isch als dä i de Wält. Die sind us de Wält, und d Wält lost uf si.",
-    "caption_de": "Besiegt: Die Geschwister haben gesiegt (Kranz); die falschen Propheten gehören zur Welt (Erdscheibe).",
-    "caption_gsw": "Bsiegt: D Gschwüschterti händ gwunne (Chranz); di falsche Prophete ghöred zur Wält (Ärdschiibe).",
+    "caption_de": "Gott in ihnen → Sieg: Der in den Geschwistern ist (Strahlenkranz, goldener Pfeil), ist grösser; darum haben sie gesiegt (Kranz über ihnen). Rechts, hinter dem Abstand, die falschen Propheten: Sie gehören zur Welt (Erdscheibe).",
+    "caption_gsw": "Gott i ine → Sieg: Dä, wo i de Gschwüschterti isch (Strahlechranz, goldige Pfiil), isch grösser; drum händ si gwunne (Chranz über ine). Rächts, hinder em Abstand, di falsche Prophete: Si ghöred zur Wält (Ärdschiibe).",
     "stage": {
      "split": 1,
+     "god_side": "left",
+     "x": {
+      "FIG-GRUPPE-GESCHWISTER": 56,
+      "FIG-GRUPPE-VERFUEHRER": 146
+     },
      "at": {
       "FIG-ZEICHEN-SIEG": "FIG-GRUPPE-GESCHWISTER",
       "FIG-ZEICHEN-WELT": "FIG-GRUPPE-VERFUEHRER"
      },
+     "arrows": [
+      [
+       "FIG-GOTT",
+       "FIG-GRUPPE-GESCHWISTER",
+       "act"
+      ]
+     ],
      "pose": {
       "FIG-GRUPPE-VERFUEHRER": "away"
      },
@@ -1620,26 +1772,35 @@
     "n": 1,
     "reference": "1JN.4.7-1JN.4.8",
     "figures": [
-     "FIG-DER-AELTESTE",
+     "FIG-GOTT",
      "FIG-GRUPPE-GESCHWISTER"
     ],
     "objects": [],
-    "signs": [],
-    "speech": [
-     {
-      "from": "FIG-DER-AELTESTE",
-      "to": "FIG-GRUPPE-GESCHWISTER",
-      "icons": [
-       "FIG-GOTT",
-       "FIG-ZEICHEN-LIEBE"
-      ]
-     }
+    "signs": [
+     "FIG-ZEICHEN-LIEBE"
     ],
+    "speech": [],
     "action_de": "Lasst uns einander lieben, denn die Liebe ist aus Gott; wer nicht liebt, hat Gott nicht erkannt, denn Gott ist Liebe.",
     "action_gsw": "Lönd eus enand gärn ha, will d Liebi us Gott isch; wer nöd gärn hät, hät Gott nöd erkännt, will Gott Liebi isch.",
-    "caption_de": "Gott ist Liebe: Gott (Strahlenkranz) ist Liebe (zwei Herzen).",
-    "caption_gsw": "Gott isch Liebi: Gott (Strahlechranz) isch Liebi (zwei Härz).",
+    "caption_de": "Liebe aus Gott → einander lieben: Gott ist Liebe; die Liebe kommt von ihm (Strahlenkranz, goldener Pfeil), darum lieben die Geschwister einander (Herzen über ihnen).",
+    "caption_gsw": "Liebi us Gott → enand gärn ha: Gott isch Liebi; d Liebi chunnt vo ihm (Strahlechranz, goldige Pfiil), drum händ d Gschwüschterti enand gärn (Härz über ine).",
     "stage": {
+     "god_side": "left",
+     "x": {
+      "FIG-GRUPPE-GESCHWISTER": 120
+     },
+     "signs_who": {
+      "FIG-ZEICHEN-LIEBE": [
+       "FIG-GRUPPE-GESCHWISTER"
+      ]
+     },
+     "arrows": [
+      [
+       "FIG-GOTT",
+       "FIG-GRUPPE-GESCHWISTER",
+       "act"
+      ]
+     ],
      "mood": {
       "FIG-GRUPPE-GESCHWISTER": "smile"
      }
@@ -1660,8 +1821,8 @@
     "speech": [],
     "action_de": "Darin ist Gottes Liebe erschienen: Er hat seinen einzigen Sohn in die Welt gesandt, als Sühne für unsere Sünden, damit wir durch ihn leben.",
     "action_gsw": "Dadrin isch Gottes Liebi erschine: Er hät sin einzige Sohn i d Wält gschickt, als Süeni für eusi Sünde, dass mir dur ihn läbed.",
-    "caption_de": "Gesandt: Gott (Strahlenkranz) sendet aus Liebe (Herzen) seinen Sohn Jesus (goldener Pfeil) in die Welt (Erdscheibe neben ihm).",
-    "caption_gsw": "Gschickt: Gott (Strahlechranz) schickt us Liebi (Härz) sin Sohn Jesus (goldige Pfiil) i d Wält (Ärdschiibe näbed em).",
+    "caption_de": "Gottes Liebe → Sohn gesandt: Gott (Strahlenkranz) sendet aus Liebe (Herzen) seinen Sohn Jesus (goldener Pfeil) in die Welt (Erdscheibe neben ihm).",
+    "caption_gsw": "Gottes Liebi → Sohn gschickt: Gott (Strahlechranz) schickt us Liebi (Härz) sin Sohn Jesus (goldige Pfiil) i d Wält (Ärdschiibe näbed ihm).",
     "stage": {
      "god_side": "left",
      "arrows": [
@@ -1760,6 +1921,7 @@
     "n": 2,
     "reference": "1JN.4.17-1JN.4.19",
     "figures": [
+     "FIG-GOTT",
      "FIG-GRUPPE-GESCHWISTER"
     ],
     "objects": [],
@@ -1770,17 +1932,31 @@
     "speech": [],
     "action_de": "In der Liebe haben sie Zuversicht am Tag des Gerichts; Furcht ist nicht in der Liebe, die vollkommene Liebe treibt die Furcht aus. Sie lieben, weil er sie zuerst geliebt hat.",
     "action_gsw": "I de Liebi händ si Zueversicht am Tag vom Gricht; Angscht isch nöd i de Liebi, di vollkomme Liebi triibt d Angscht uus. Si händ gärn, will er si zerscht gärn gha hät.",
-    "caption_de": "Ohne Furcht: Wer in der Liebe bleibt (Herzen), sieht dem Gericht (Waage daneben) mit Zuversicht entgegen.",
-    "caption_gsw": "Ohni Angscht: Wer i de Liebi blibt (Härz), lueget em Gricht (Waag dernäbed) mit Zueversicht entgäge.",
+    "caption_de": "Gott liebt zuerst → Liebe ohne Furcht: Gott (Strahlenkranz) hat die Geschwister zuerst geliebt (goldener Pfeil); darum lieben sie (Herzen über ihnen) und sehen dem Gericht (Waage) ohne Furcht entgegen.",
+    "caption_gsw": "Gott hät zerscht gärn → Liebi ohni Angscht: Gott (Strahlechranz) hät d Gschwüschterti zerscht gärn gha (goldige Pfiil); drum händ si gärn (Härz über ine) und lueged em Gricht (Waag) ohni Angscht entgäge.",
     "stage": {
+     "god_side": "left",
+     "x": {
+      "FIG-GRUPPE-GESCHWISTER": 96
+     },
      "at": {
       "FIG-ZEICHEN-LIEBE": "FIG-GRUPPE-GESCHWISTER"
      },
+     "signs_who": {
+      "FIG-ZEICHEN-LIEBE": []
+     },
+     "arrows": [
+      [
+       "FIG-GOTT",
+       "FIG-GRUPPE-GESCHWISTER",
+       "act"
+      ]
+     ],
      "mood": {
       "FIG-GRUPPE-GESCHWISTER": "smile"
      },
-     "air_x": 128,
-     "air_y": 44
+     "air_x": 140,
+     "air_y": 50
     }
    },
    {
@@ -1940,6 +2116,7 @@
     "n": 3,
     "reference": "1JN.4.13-1JN.4.21",
     "figures": [
+     "FIG-GOTT",
      "FIG-GRUPPE-GESCHWISTER"
     ],
     "objects": [],
@@ -1950,17 +2127,31 @@
     "speech": [],
     "action_de": "Wer in der Liebe bleibt, bleibt in Gott; die vollkommene Liebe treibt die Furcht aus. Wer Gott liebt, soll auch den Bruder lieben.",
     "action_gsw": "Wer i de Liebi blibt, blibt i Gott; di vollkomme Liebi triibt d Angscht uus. Wer Gott gärn hät, söll au de Brüeder gärn ha.",
-    "caption_de": "In der Liebe bleiben: Die Geschwister lieben (Herzen) und sehen dem Gericht (Waage daneben) ohne Furcht entgegen.",
-    "caption_gsw": "I de Liebi bliibe: D Gschwüschterti händ gärn (Härz) und lueged em Gricht (Waag dernäbed) ohni Angscht entgäge.",
+    "caption_de": "Gott liebt zuerst → in der Liebe bleiben: Gott (Strahlenkranz) liebt die Geschwister (goldener Pfeil); sie lieben (Herzen über ihnen) und sehen dem Gericht (Waage) ohne Furcht entgegen.",
+    "caption_gsw": "Gott hät gärn → i de Liebi bliibe: Gott (Strahlechranz) hät d Gschwüschterti gärn (goldige Pfiil); si händ gärn (Härz über ine) und lueged em Gricht (Waag) ohni Angscht entgäge.",
     "stage": {
+     "god_side": "left",
+     "x": {
+      "FIG-GRUPPE-GESCHWISTER": 96
+     },
      "at": {
       "FIG-ZEICHEN-LIEBE": "FIG-GRUPPE-GESCHWISTER"
      },
+     "signs_who": {
+      "FIG-ZEICHEN-LIEBE": []
+     },
+     "arrows": [
+      [
+       "FIG-GOTT",
+       "FIG-GRUPPE-GESCHWISTER",
+       "act"
+      ]
+     ],
      "mood": {
       "FIG-GRUPPE-GESCHWISTER": "smile"
      },
-     "air_x": 128,
-     "air_y": 44
+     "air_x": 140,
+     "air_y": 50
     }
    }
   ],
@@ -1981,27 +2172,36 @@
     "n": 1,
     "reference": "1JN.5.1",
     "figures": [
-     "FIG-DER-AELTESTE",
      "FIG-GRUPPE-GESCHWISTER"
     ],
     "objects": [],
-    "signs": [],
-    "speech": [
-     {
-      "from": "FIG-DER-AELTESTE",
-      "to": "FIG-GRUPPE-GESCHWISTER",
-      "icons": [
-       "FIG-ZEICHEN-GLAUBEN",
-       "FIG-JESUS",
-       "FIG-ZEICHEN-KINDER-GOTTES"
-      ]
-     }
+    "signs": [
+     "FIG-ZEICHEN-GLAUBEN",
+     "FIG-ZEICHEN-KINDER-GOTTES"
     ],
+    "speech": [],
     "action_de": "Wer glaubt, dass Jesus der Christus ist, ist aus Gott geboren; wer den Vater liebt, liebt auch den, der aus ihm geboren ist.",
     "action_gsw": "Wer glaubt, dass de Jesus de Christus isch, isch us Gott gebore; wer de Vater gärn hät, hät au dä gärn, wo us ihm gebore isch.",
-    "caption_de": "Glauben: Wer an Jesus glaubt (Herz mit Strahlen), ist Kind Gottes (Kind unter Strahlen).",
-    "caption_gsw": "Glaube: Wer a de Jesus glaubt (Härz mit Strahle), isch Chind vo Gott (Chind under Strahle).",
+    "caption_de": "Glauben → Kind Gottes: Wer glaubt, dass Jesus der Christus ist (Herz mit Strahlen über ihnen), ist aus Gott geboren (Pfeil zum Kind unter Strahlen).",
+    "caption_gsw": "Glaube → Chind vo Gott: Wer glaubt, dass de Jesus de Chrischtus isch (Härz mit Strahle über ine), isch us Gott gebore (Pfiil zum Chind under Strahle).",
     "stage": {
+     "x": {
+      "FIG-GRUPPE-GESCHWISTER": 56
+     },
+     "signs_who": {
+      "FIG-ZEICHEN-GLAUBEN": [
+       "FIG-GRUPPE-GESCHWISTER"
+      ]
+     },
+     "air_x": 126,
+     "air_y": 52,
+     "arrows": [
+      [
+       "FIG-GRUPPE-GESCHWISTER",
+       "FIG-ZEICHEN-KINDER-GOTTES",
+       "act"
+      ]
+     ],
      "mood": {
       "FIG-GRUPPE-GESCHWISTER": "smile"
      }
@@ -2040,19 +2240,35 @@
     "objects": [],
     "signs": [
      "FIG-ZEICHEN-GLAUBEN",
-     "FIG-ZEICHEN-SIEG"
+     "FIG-ZEICHEN-SIEG",
+     "FIG-ZEICHEN-WELT"
     ],
     "speech": [],
     "action_de": "Was aus Gott geboren ist, besiegt die Welt; der Sieg ist ihr Glaube, dass Jesus der Sohn Gottes ist.",
     "action_gsw": "Was us Gott gebore isch, bsiegt d Wält; de Sieg isch ire Glaube, dass de Jesus de Sohn vo Gott isch.",
-    "caption_de": "Sieg über die Welt: Der Glaube (Herz mit Strahlen über ihnen) ist der Sieg (Kranz darüber), der die Welt überwunden hat.",
-    "caption_gsw": "Sieg über d Wält: De Glaube (Härz mit Strahle über ine) isch de Sieg (Chranz drüber), wo d Wält überwunde hät.",
+    "caption_de": "Glaube → Sieg über die Welt: Die Geschwister glauben (Herz mit Strahlen über ihnen); ihr Glaube ist der Sieg (Pfeil zum Kranz), der die Welt (Erdscheibe daneben) überwunden hat.",
+    "caption_gsw": "Glaube → Sieg über d Wält: D Gschwüschterti glaubed (Härz mit Strahle über ine); ire Glaube isch de Sieg (Pfiil zum Chranz), wo d Wält (Ärdschiibe dernäbed) überwunde hät.",
     "stage": {
+     "x": {
+      "FIG-GRUPPE-GESCHWISTER": 56
+     },
+     "signs_who": {
+      "FIG-ZEICHEN-GLAUBEN": [
+       "FIG-GRUPPE-GESCHWISTER"
+      ]
+     },
+     "air_x": 118,
+     "air_y": 52,
+     "arrows": [
+      [
+       "FIG-GRUPPE-GESCHWISTER",
+       "FIG-ZEICHEN-SIEG",
+       "act"
+      ]
+     ],
      "mood": {
       "FIG-GRUPPE-GESCHWISTER": "smile"
-     },
-     "air_x": 83,
-     "air_y": 14
+     }
     }
    }
   ],
@@ -2099,25 +2315,39 @@
     "reference": "1JN.5.9-1JN.5.12",
     "figures": [
      "FIG-GOTT",
+     "FIG-JESUS",
      "FIG-GRUPPE-GESCHWISTER"
     ],
     "objects": [],
-    "signs": [],
-    "speech": [
-     {
-      "from": "FIG-GOTT",
-      "to": "FIG-GRUPPE-GESCHWISTER",
-      "icons": [
-       "FIG-JESUS",
-       "FIG-ZEICHEN-LEBEN"
-      ]
-     }
+    "signs": [
+     "FIG-ZEICHEN-LEBEN"
     ],
+    "speech": [],
     "action_de": "Das Zeugnis Gottes über seinen Sohn lautet: Gott hat ewiges Leben gegeben, und dieses Leben ist in seinem Sohn. Wer den Sohn hat, hat das Leben.",
     "action_gsw": "S Zügnis vo Gott über sin Sohn heisst: Gott hät ewigs Läbe gäh, und das Läbe isch i sim Sohn. Wer de Sohn hät, hät s Läbe.",
-    "caption_de": "Gottes Zeugnis: Gott (Strahlenkranz) bezeugt: In Jesus ist das ewige Leben (Baum im Ring).",
-    "caption_gsw": "Gottes Zügnis: Gott (Strahlechranz) bezüügt: I de Jesus isch s ewig Läbe (Baum im Ring).",
+    "caption_de": "Gott → Sohn → Leben: Gott (Strahlenkranz) hat das ewige Leben gegeben, und es ist in seinem Sohn (goldener Pfeil zu Jesus); wer den Sohn hat, hat das Leben (Pfeil zu den Geschwistern, Baum im Ring über ihnen).",
+    "caption_gsw": "Gott → Sohn → Läbe: Gott (Strahlechranz) hät s ewig Läbe ggä, und es isch i sim Sohn (goldige Pfiil zum Jesus); wer de Sohn hät, hät s Läbe (Pfiil zu de Gschwüschterti, Baum im Ring über ine).",
     "stage": {
+     "god_side": "left",
+     "x": {
+      "FIG-JESUS": 70,
+      "FIG-GRUPPE-GESCHWISTER": 146
+     },
+     "at": {
+      "FIG-ZEICHEN-LEBEN": "FIG-GRUPPE-GESCHWISTER"
+     },
+     "arrows": [
+      [
+       "FIG-GOTT",
+       "FIG-JESUS",
+       "act"
+      ],
+      [
+       "FIG-JESUS",
+       "FIG-GRUPPE-GESCHWISTER",
+       "act"
+      ]
+     ],
      "mood": {
       "FIG-GRUPPE-GESCHWISTER": "smile"
      }
@@ -2147,24 +2377,39 @@
     "objects": [
      "FIG-OBJ-BRIEF"
     ],
-    "signs": [],
-    "speech": [
-     {
-      "from": "FIG-DER-AELTESTE",
-      "to": "FIG-GRUPPE-GESCHWISTER",
-      "icons": [
-       "FIG-ZEICHEN-GLAUBEN",
-       "FIG-ZEICHEN-LEBEN"
-      ]
-     }
+    "signs": [
+     "FIG-ZEICHEN-GLAUBEN",
+     "FIG-ZEICHEN-LEBEN"
     ],
+    "speech": [],
     "action_de": "Er hat das geschrieben, damit sie wissen, dass sie ewiges Leben haben, sie, die an den Namen des Sohnes Gottes glauben.",
     "action_gsw": "Er hät das gschribe, dass si wüssed, dass si ewigs Läbe händ, si, wo a de Name vom Sohn vo Gott glaubed.",
-    "caption_de": "Zweck des Briefs: Wer glaubt (Herz mit Strahlen), hat ewiges Leben (Baum im Ring).",
-    "caption_gsw": "Zwäck vom Brief: Wer glaubt (Härz mit Strahle), hät ewigs Läbe (Baum im Ring).",
+    "caption_de": "Glauben → ewiges Leben: Der Älteste (mit Brief) schreibt, damit sie es wissen: Wer an den Sohn Gottes glaubt (Herz mit Strahlen über den Geschwistern), hat ewiges Leben (Pfeil zum Baum im Ring).",
+    "caption_gsw": "Glaube → ewigs Läbe: De Älteschti (mit Brief) schriibt, dass si s wüssed: Wer a de Sohn vo Gott glaubt (Härz mit Strahle über de Gschwüschterti), hät ewigs Läbe (Pfiil zum Baum im Ring).",
     "stage": {
      "hold": {
       "FIG-DER-AELTESTE": "FIG-OBJ-BRIEF"
+     },
+     "x": {
+      "FIG-DER-AELTESTE": 30,
+      "FIG-GRUPPE-GESCHWISTER": 94
+     },
+     "signs_who": {
+      "FIG-ZEICHEN-GLAUBEN": [
+       "FIG-GRUPPE-GESCHWISTER"
+      ]
+     },
+     "air_x": 146,
+     "air_y": 52,
+     "arrows": [
+      [
+       "FIG-GRUPPE-GESCHWISTER",
+       "FIG-ZEICHEN-LEBEN",
+       "act"
+      ]
+     ],
+     "mood": {
+      "FIG-GRUPPE-GESCHWISTER": "smile"
      }
     }
    },
@@ -2173,8 +2418,8 @@
     "reference": "1JN.5.14-1JN.5.17",
     "figures": [
      "FIG-GOTT",
-     "FIG-ROLLE-MENSCH",
-     "FIG-GRUPPE-GESCHWISTER"
+     "FIG-GRUPPE-GESCHWISTER",
+     "FIG-ROLLE-MENSCH"
     ],
     "objects": [],
     "signs": [
@@ -2192,17 +2437,24 @@
     ],
     "action_de": "Gott hört, wenn sie nach seinem Willen bitten. Wer sieht, dass ein Bruder sündigt, aber nicht zum Tod, soll für ihn bitten, und Gott wird ihm Leben geben.",
     "action_gsw": "Gott lost, wänn si nach sim Wille bitted. Wer gseht, dass en Brüeder sündiget, aber nöd zum Tod, söll für en bitte, und Gott wird em Läbe gäh.",
-    "caption_de": "Fürbitte: Die Geschwister beten zu Gott (Strahlenkranz) für einen Bruder, der gesündigt hat (links, dunkler Fleck über ihm), um Leben (Baum im Ring).",
-    "caption_gsw": "Fürbitt: D Gschwüschterti bätted zu Gott (Strahlechranz) für en Brüeder, wo gsündiget hät (links, dunkle Fläck über em), um Läbe (Baum im Ring).",
+    "caption_de": "Fürbitte → Leben: Die Geschwister bitten Gott (Strahlenkranz) für einen Bruder, der gesündigt hat (rechts, dunkler Fleck über ihm), um Leben (Baum im Ring); Gott gibt ihm Leben (goldener Pfeil zu ihm).",
+    "caption_gsw": "Fürbitt → Läbe: D Gschwüschterti bitted Gott (Strahlechranz) für en Brüeder, wo gsündiget hät (rächts, dunkle Fläck über em), um Läbe (Baum im Ring); Gott git em Läbe (goldige Pfiil zu ihm).",
     "stage": {
      "god_side": "right",
      "x": {
-      "FIG-ROLLE-MENSCH": 32,
-      "FIG-GRUPPE-GESCHWISTER": 98
+      "FIG-GRUPPE-GESCHWISTER": 44,
+      "FIG-ROLLE-MENSCH": 148
      },
      "at": {
       "FIG-ZEICHEN-SUENDE": "FIG-ROLLE-MENSCH"
      },
+     "arrows": [
+      [
+       "FIG-GOTT",
+       "FIG-ROLLE-MENSCH",
+       "act"
+      ]
+     ],
      "mood": {
       "FIG-GRUPPE-GESCHWISTER": "calm",
       "FIG-ROLLE-MENSCH": "worried"
@@ -2291,19 +2543,35 @@
     "objects": [],
     "signs": [
      "FIG-ZEICHEN-GLAUBEN",
-     "FIG-ZEICHEN-SIEG"
+     "FIG-ZEICHEN-SIEG",
+     "FIG-ZEICHEN-WELT"
     ],
     "speech": [],
     "action_de": "Wer glaubt, dass Jesus der Christus ist, ist aus Gott geboren und besiegt die Welt.",
     "action_gsw": "Wer glaubt, dass de Jesus de Christus isch, isch us Gott gebore und bsiegt d Wält.",
-    "caption_de": "Sieg über die Welt: Der Glaube (Herz mit Strahlen über ihnen) ist der Sieg (Kranz darüber), der die Welt überwunden hat.",
-    "caption_gsw": "Sieg über d Wält: De Glaube (Härz mit Strahle über ine) isch de Sieg (Chranz drüber), wo d Wält überwunde hät.",
+    "caption_de": "Glaube → Sieg über die Welt: Die Geschwister glauben (Herz mit Strahlen über ihnen); ihr Glaube ist der Sieg (Pfeil zum Kranz), der die Welt (Erdscheibe daneben) überwunden hat.",
+    "caption_gsw": "Glaube → Sieg über d Wält: D Gschwüschterti glaubed (Härz mit Strahle über ine); ire Glaube isch de Sieg (Pfiil zum Chranz), wo d Wält (Ärdschiibe dernäbed) überwunde hät.",
     "stage": {
+     "x": {
+      "FIG-GRUPPE-GESCHWISTER": 56
+     },
+     "signs_who": {
+      "FIG-ZEICHEN-GLAUBEN": [
+       "FIG-GRUPPE-GESCHWISTER"
+      ]
+     },
+     "air_x": 118,
+     "air_y": 52,
+     "arrows": [
+      [
+       "FIG-GRUPPE-GESCHWISTER",
+       "FIG-ZEICHEN-SIEG",
+       "act"
+      ]
+     ],
      "mood": {
       "FIG-GRUPPE-GESCHWISTER": "smile"
-     },
-     "air_x": 83,
-     "air_y": 14
+     }
     }
    },
    {
@@ -2453,8 +2721,8 @@
     "speech": [],
     "action_de": "Gott ist Liebe: Er hat seinen Sohn gesandt; darum sollen die Glaubenden einander lieben.",
     "action_gsw": "Gott isch Liebi: Er hät sin Sohn gschickt; drum söled d Gläubige enand gärn ha.",
-    "caption_de": "Gott ist Liebe: Gott (Strahlenkranz) sendet Jesus (goldener Pfeil); die Geschwister lieben einander (Herzen) und sind verbunden (Figuren an der Hand).",
-    "caption_gsw": "Gott isch Liebi: Gott (Strahlechranz) schickt de Jesus (goldige Pfiil); d Gschwüschterti händ enand gärn (Härz) und sind verbunde (Figure a de Hand).",
+    "caption_de": "Gott sendet Jesus → einander lieben: Gott (Strahlenkranz) sendet Jesus (goldener Pfeil); darum lieben die Geschwister einander (Herzen) und sind verbunden (Figuren an der Hand).",
+    "caption_gsw": "Gott schickt de Jesus → enand gärn ha: Gott (Strahlechranz) schickt de Jesus (goldige Pfiil); drum händ d Gschwüschterti enand gärn (Härz) und sind verbunde (Figure a de Hand).",
     "stage": {
      "god_side": "left",
      "arrows": [

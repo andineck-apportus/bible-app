@@ -77,6 +77,11 @@
             "FIG-ROLLE-KOENIG",
             "FIG-GRUPPE-SOLDATEN",
             "act"
+          ],
+          [
+            "FIG-GRUPPE-SOLDATEN",
+            "FIG-ORT-STADT",
+            "act"
           ]
         ],
         "mood": {
@@ -179,7 +184,7 @@
   ],
   "captions_de": [
     "Die Einladung: Der König (Krone, Purpur) sendet seine Knechte (Bogen); sie laden zum Hochzeitsfest ein (Girlande mit Blüten), doch die Geladenen wenden sich ab (Hinterkopf).",
-    "Der Zorn des Königs: Der König (dunkle Wolke mit Zickzack) schickt seine Truppen (Bogen zu den Soldaten); ihre Stadt brennt (Flammen über der Stadt).",
+    "Zorn → Truppen → brennende Stadt: Der König (dunkle Wolke mit Zickzack) schickt seine Truppen (Pfeil zu den Soldaten); die Truppen ziehen gegen die Stadt (Pfeil zur Stadt), sie brennt (Flammen über der Stadt).",
     "Das Fest füllt sich: Die Knechte holen alle von den Strassen (gestrichelter Weg); die Gäste in hellen Festgewändern feiern (grüne Girlande mit roten Blüten, Funken).",
     "Ohne Hochzeitskleid: Der König fragt einen Gast im grauen Alltagsgewand, wo sein Festkleid sei (helles Gewand, leerer Kreis mit Schrägstrich, Fragezeichen); der Gast verstummt (durchgestrichene Sprechblase); hinten die Gäste im Festgewand."
   ],
@@ -231,6 +236,181 @@
           "Der Zorn des Königs: Der König (dunkle Wolke mit Zickzack) schickt seine Truppen (Bogen zu den Soldaten); ihre Stadt brennt (Flammen über der Stadt).",
           "Das Fest füllt sich: Die Knechte holen alle von den Strassen (gestrichelter Weg); die Gäste in hellen Festgewändern feiern (grüne Girlande mit roten Blüten, Funken).",
           "Ohne Hochzeitskleid: Der König fragt einen Gast im grauen Alltagsgewand, wo sein Festkleid sei (helles Gewand, gestrichelter Umriss, Fragezeichen); der Gast verstummt (durchgestrichene Sprechblase); hinten die Gäste im Festgewand."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.22.1-MAT.22.5",
+            "figures": [
+              "FIG-ROLLE-KOENIG",
+              "FIG-GRUPPE-DIENER",
+              "FIG-GRUPPE-VOLK"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-DIENER",
+                "to": "FIG-GRUPPE-VOLK",
+                "icons": [
+                  "FIG-ZEICHEN-HOCHZEIT"
+                ]
+              }
+            ],
+            "action_de": "Jesus erzählt: Das Reich der Himmel gleicht einem König, der für seinen Sohn ein Hochzeitsfest ausrichtet. Er sendet seine Knechte, die Geladenen zu rufen; doch sie wollen nicht kommen und gehen weg, der eine auf seinen Acker, der andere zu seinem Geschäft.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-ROLLE-KOENIG",
+                  "FIG-GRUPPE-DIENER",
+                  "act"
+                ]
+              ],
+              "pose": {
+                "FIG-GRUPPE-VOLK": "away"
+              },
+              "mood": {
+                "FIG-ROLLE-KOENIG": "calm",
+                "FIG-GRUPPE-DIENER": "smile"
+              },
+              "x": {
+                "FIG-ROLLE-KOENIG": 24,
+                "FIG-GRUPPE-DIENER": 84,
+                "FIG-GRUPPE-VOLK": 150
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.22.6-MAT.22.7",
+            "figures": [
+              "FIG-ROLLE-KOENIG",
+              "FIG-GRUPPE-SOLDATEN"
+            ],
+            "objects": [
+              "FIG-ORT-STADT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ZORN",
+              "FIG-ZEICHEN-FEUER"
+            ],
+            "speech": [],
+            "action_de": "Die übrigen ergreifen seine Knechte, misshandeln und töten sie. Der König wird zornig, schickt seine Truppen, bringt jene Mörder um und zündet ihre Stadt an.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-ZORN": "FIG-ROLLE-KOENIG",
+                "FIG-ZEICHEN-FEUER": "FIG-ORT-STADT"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-KOENIG",
+                  "FIG-GRUPPE-SOLDATEN",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-KOENIG": "earnest",
+                "FIG-GRUPPE-SOLDATEN": "earnest"
+              },
+              "back_side": "right",
+              "x": {
+                "FIG-ROLLE-KOENIG": 26,
+                "FIG-GRUPPE-SOLDATEN": 82
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.22.8-MAT.22.10",
+            "figures": [
+              "FIG-GRUPPE-DIENER",
+              "FIG-GRUPPE-GAESTE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-HOCHZEIT",
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [],
+            "action_de": "Der König schickt seine Knechte an die Ausgänge der Strassen; sie bringen alle zusammen, die sie finden, Böse und Gute, und das Hochzeitsfest füllt sich mit Gästen.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-GRUPPE-DIENER",
+                  "FIG-GRUPPE-GAESTE",
+                  "go"
+                ]
+              ],
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-GRUPPE-GAESTE"
+                ]
+              },
+              "mood": {
+                "FIG-GRUPPE-DIENER": "smile",
+                "FIG-GRUPPE-GAESTE": "delight"
+              },
+              "x": {
+                "FIG-GRUPPE-DIENER": 40,
+                "FIG-GRUPPE-GAESTE": 128
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.22.11-MAT.22.13",
+            "figures": [
+              "FIG-ROLLE-KOENIG",
+              "FIG-ROLLE-GAST",
+              "FIG-GRUPPE-GAESTE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-SCHWEIGEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-KOENIG",
+                "to": "FIG-ROLLE-GAST",
+                "icons": [
+                  "FIG-OBJ-GEWAND",
+                  "FIG-ZEICHEN-FEHLT",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Als der König hereinkommt, sieht er einen Menschen ohne Hochzeitskleid und fragt ihn: «Freund, wie bist du hier hereingekommen?» Er verstummt; der König lässt ihn binden und hinauswerfen in die Finsternis draussen.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-SCHWEIGEN": "FIG-ROLLE-GAST"
+              },
+              "wear": {
+                "FIG-ROLLE-GAST": "#7E766A"
+              },
+              "mood": {
+                "FIG-ROLLE-KOENIG": "earnest",
+                "FIG-ROLLE-GAST": "worried",
+                "FIG-GRUPPE-GAESTE": "calm"
+              },
+              "x": {
+                "FIG-ROLLE-KOENIG": 30,
+                "FIG-ROLLE-GAST": 86,
+                "FIG-GRUPPE-GAESTE": 150
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Die Einladung: Der König (Krone, Purpur) sendet seine Knechte (Bogen); sie laden zum Hochzeitsfest ein (Girlande mit Blüten), doch die Geladenen wenden sich ab (Hinterkopf).",
+          "Der Zorn des Königs: Der König (dunkle Wolke mit Zickzack) schickt seine Truppen (Bogen zu den Soldaten); ihre Stadt brennt (Flammen über der Stadt).",
+          "Das Fest füllt sich: Die Knechte holen alle von den Strassen (gestrichelter Weg); die Gäste in hellen Festgewändern feiern (grüne Girlande mit roten Blüten, Funken).",
+          "Ohne Hochzeitskleid: Der König fragt einen Gast im grauen Alltagsgewand, wo sein Festkleid sei (helles Gewand, leerer Kreis mit Schrägstrich, Fragezeichen); der Gast verstummt (durchgestrichene Sprechblase); hinten die Gäste im Festgewand."
         ]
       }
     }

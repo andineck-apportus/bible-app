@@ -39,25 +39,33 @@
       "n": 2,
       "reference": "1JN.1.6",
       "figures": [
-        "FIG-DER-AELTESTE",
-        "FIG-GRUPPE-GESCHWISTER"
+        "FIG-ROLLE-MENSCH"
       ],
       "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-DER-AELTESTE",
-          "to": "FIG-GRUPPE-GESCHWISTER",
-          "icons": [
-            "FIG-ZEICHEN-FINSTERNIS",
-            "FIG-ZEICHEN-LUEGE"
-          ]
-        }
+      "signs": [
+        "FIG-ZEICHEN-FINSTERNIS",
+        "FIG-ZEICHEN-LUEGE"
       ],
+      "speech": [],
       "action_de": "Wer Gemeinschaft mit Gott behauptet und in der Finsternis lebt, lügt und tut die Wahrheit nicht.",
       "stage": {
+        "x": {
+          "FIG-ROLLE-MENSCH": 56
+        },
+        "at": {
+          "FIG-ZEICHEN-FINSTERNIS": "FIG-ROLLE-MENSCH"
+        },
+        "air_x": 126,
+        "air_y": 52,
+        "arrows": [
+          [
+            "FIG-ROLLE-MENSCH",
+            "FIG-ZEICHEN-LUEGE",
+            "act"
+          ]
+        ],
         "mood": {
-          "FIG-GRUPPE-GESCHWISTER": "pensive"
+          "FIG-ROLLE-MENSCH": "worried"
         }
       }
     },
@@ -65,27 +73,38 @@
       "n": 3,
       "reference": "1JN.1.7",
       "figures": [
-        "FIG-DER-AELTESTE",
+        "FIG-JESUS",
         "FIG-GRUPPE-GESCHWISTER"
       ],
       "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-DER-AELTESTE",
-          "to": "FIG-GRUPPE-GESCHWISTER",
-          "icons": [
-            "FIG-ZEICHEN-LICHT",
-            "FIG-ZEICHEN-GEMEINSCHAFT",
-            "FIG-ZEICHEN-BLUT",
-            "FIG-ZEICHEN-VERGEBUNG"
-          ]
-        }
+      "signs": [
+        "FIG-ZEICHEN-LICHT",
+        "FIG-ZEICHEN-BLUT",
+        "FIG-ZEICHEN-VERGEBUNG"
       ],
+      "speech": [],
       "action_de": "Wer im Licht lebt, hat Gemeinschaft mit den anderen, und das Blut Jesu reinigt von jeder Sünde.",
       "stage": {
+        "x": {
+          "FIG-JESUS": 44,
+          "FIG-GRUPPE-GESCHWISTER": 136
+        },
+        "at": {
+          "FIG-ZEICHEN-BLUT": "FIG-JESUS",
+          "FIG-ZEICHEN-VERGEBUNG": "FIG-GRUPPE-GESCHWISTER"
+        },
+        "air_x": 72,
+        "air_y": 8,
+        "arrows": [
+          [
+            "FIG-JESUS",
+            "FIG-GRUPPE-GESCHWISTER",
+            "act"
+          ]
+        ],
         "mood": {
-          "FIG-GRUPPE-GESCHWISTER": "smile"
+          "FIG-GRUPPE-GESCHWISTER": "smile",
+          "FIG-JESUS": "calm"
         }
       }
     },
@@ -136,9 +155,9 @@
   ],
   "captions_de": [
     "Botschaft: Gott (Strahlenkranz) ist Licht (goldener Schein).",
-    "Finsternis: Wer in der Finsternis lebt (dunkle Wolke), lügt (rotes Kreuz).",
-    "Licht: Im Licht (goldener Schein) ist Gemeinschaft (Figuren an der Hand); das Blut Jesu (Tropfen) reinigt (sauberes Tuch).",
-    "Bekennen: Die Geschwister bekennen Gott ihre Sünden (dunkler Fleck); Gott vergibt und reinigt (sauberes Tuch)."
+    "Finsternis → Lüge: Wer behauptet, mit Gott Gemeinschaft zu haben, und in der Finsternis lebt (dunkle Wolke über ihm), der lügt (Pfeil zum roten Kreuz).",
+    "Blut Jesu → rein: Die Geschwister leben im Licht (goldener Schein oben); das Blut Jesu (roter Tropfen bei Jesus) reinigt sie von jeder Sünde (Pfeil zu ihnen, sauberes Tuch über ihnen).",
+    "Bekennen → Vergebung: Die Geschwister bekennen Gott ihre Sünden (dunkler Fleck in der Blase); Gott (Strahlenkranz) vergibt und reinigt sie (goldener Pfeil, sauberes Tuch über ihnen)."
   ],
   "interpretation_note_de": "Die drei «Wenn wir sagen» ([[1JN.1.6]], [[1JN.1.8]], [[1JN.1.10]]) sind zusammengefasst; das Bild zeigt das Bekennen ([[1JN.1.9]]). Der 1. Johannesbrief nennt seinen Verfasser nicht; das Bild zeigt ihn wie den «Ältesten» aus [[2JN.1.1]] und [[3JN.1.1]] (Deutung). Die angeredeten «Kinder» und «Lieben» sind als Gruppe von Geschwistern gezeichnet.",
   "basis": [
@@ -187,6 +206,138 @@
           "Botschaft: Gott (Strahlenkranz) ist Licht (Sonne mit Strahlen).",
           "Finsternis: Wer in der Finsternis lebt (dunkle Wolke), lügt (rotes Kreuz).",
           "Licht: Im Licht (Sonne) ist Gemeinschaft (Figuren an der Hand); das Blut Jesu (Tropfen) reinigt (sauberes Tuch).",
+          "Bekennen: Die Geschwister bekennen Gott ihre Sünden (dunkler Fleck); Gott vergibt und reinigt (sauberes Tuch)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "1JN.1.5",
+            "figures": [
+              "FIG-DER-AELTESTE",
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-DER-AELTESTE",
+                "to": "FIG-GRUPPE-GESCHWISTER",
+                "icons": [
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-LICHT"
+                ]
+              }
+            ],
+            "action_de": "Die Botschaft lautet: Gott ist Licht, und in ihm ist keinerlei Finsternis.",
+            "stage": {
+              "mood": {
+                "FIG-DER-AELTESTE": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "1JN.1.6",
+            "figures": [
+              "FIG-DER-AELTESTE",
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-DER-AELTESTE",
+                "to": "FIG-GRUPPE-GESCHWISTER",
+                "icons": [
+                  "FIG-ZEICHEN-FINSTERNIS",
+                  "FIG-ZEICHEN-LUEGE"
+                ]
+              }
+            ],
+            "action_de": "Wer Gemeinschaft mit Gott behauptet und in der Finsternis lebt, lügt und tut die Wahrheit nicht.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-GESCHWISTER": "pensive"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "1JN.1.7",
+            "figures": [
+              "FIG-DER-AELTESTE",
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-DER-AELTESTE",
+                "to": "FIG-GRUPPE-GESCHWISTER",
+                "icons": [
+                  "FIG-ZEICHEN-LICHT",
+                  "FIG-ZEICHEN-GEMEINSCHAFT",
+                  "FIG-ZEICHEN-BLUT",
+                  "FIG-ZEICHEN-VERGEBUNG"
+                ]
+              }
+            ],
+            "action_de": "Wer im Licht lebt, hat Gemeinschaft mit den anderen, und das Blut Jesu reinigt von jeder Sünde.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-GESCHWISTER": "smile"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "1JN.1.8-1JN.1.10",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-VERGEBUNG"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-GESCHWISTER",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-SUENDE"
+                ]
+              }
+            ],
+            "action_de": "Wer sagt, er habe keine Sünde, täuscht sich selbst; wer seine Sünden bekennt, dem vergibt Gott, denn er ist treu und gerecht.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-GESCHWISTER": "pensive"
+              },
+              "at": {
+                "FIG-ZEICHEN-VERGEBUNG": "FIG-GRUPPE-GESCHWISTER"
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-GESCHWISTER",
+                  "act"
+                ]
+              ],
+              "god_side": "right"
+            }
+          }
+        ],
+        "captions_de": [
+          "Botschaft: Gott (Strahlenkranz) ist Licht (goldener Schein).",
+          "Finsternis: Wer in der Finsternis lebt (dunkle Wolke), lügt (rotes Kreuz).",
+          "Licht: Im Licht (goldener Schein) ist Gemeinschaft (Figuren an der Hand); das Blut Jesu (Tropfen) reinigt (sauberes Tuch).",
           "Bekennen: Die Geschwister bekennen Gott ihre Sünden (dunkler Fleck); Gott vergibt und reinigt (sauberes Tuch)."
         ]
       }

@@ -143,8 +143,8 @@
         },
         "arrows": [
           [
+            "FIG-PILATUS",
             "FIG-JESUS",
-            "FIG-ROLLE-SOLDAT",
             "act"
           ]
         ],
@@ -166,7 +166,7 @@
     "Verhör: Jesus wird ausgeliefert (gefesselte Hände); Pilatus fragt: König? (König, Fragezeichen).",
     "Wahl: Pilatus fragt: den König? (König, Fragezeichen); die Menge verlangt Barabbas, den Gefangenen (gefesselte Hände über ihm).",
     "Ruf: Pilatus fragt nach Jesus (Jesus, Fragezeichen); die Menge schreit: ans Kreuz (Jesus, Kreuz).",
-    "Urteil: Pilatus übergibt Jesus einem Soldaten (Bogen von Jesus zum Soldaten); Barabbas geht frei weg (Pfeil)."
+    "Pilatus → Jesus: Um die Menge zufriedenzustellen, liefert Pilatus Jesus zur Kreuzigung aus (Bogen von Pilatus zu Jesus; daneben ein Soldat); Barabbas geht frei weg (Pfeil)."
   ],
   "interpretation_note_de": "«König der Juden» erscheint als Königsfigur in der Sprechblase. Die Geisselung ([[MRK.15.15]]) wird nicht gezeigt. Die Menge ist neutral dargestellt.",
   "basis": [
@@ -359,6 +359,166 @@
           "Wahl: Pilatus fragt: den König? (König, Fragezeichen); die Menge verlangt Barabbas (gefesselter Gefangener).",
           "Ruf: Pilatus fragt nach Jesus (Jesus, Fragezeichen); die Menge schreit: ans Kreuz (Jesus, Kreuz).",
           "Urteil: Pilatus übergibt Jesus einem Soldaten (Bogen); Barabbas geht frei weg (Pfeil)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.15.1-MRK.15.5",
+            "figures": [
+              "FIG-GRUPPE-HOHER-RAT",
+              "FIG-JESUS",
+              "FIG-PILATUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-AUSLIEFERN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PILATUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ROLLE-KOENIG",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Am Morgen fesselt der Hohe Rat Jesus und liefert ihn Pilatus aus. Pilatus fragt: Bist du der König der Juden? Jesus sagt: Du sagst es – und schweigt dann, sodass Pilatus sich wundert.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-AUSLIEFERN": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-PILATUS": "pensive",
+                "FIG-GRUPPE-HOHER-RAT": "earnest",
+                "FIG-JESUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.15.6-MRK.15.11",
+            "figures": [
+              "FIG-PILATUS",
+              "FIG-BARABBAS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-AUSLIEFERN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PILATUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ROLLE-KOENIG",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-BARABBAS"
+                ]
+              }
+            ],
+            "action_de": "Zum Fest lässt Pilatus einen Gefangenen frei. Er fragt die Menge: Soll ich euch den König der Juden freilassen? Die Hohepriester wiegeln die Menge auf, Barabbas zu verlangen.",
+            "stage": {
+              "mood": {
+                "FIG-PILATUS": "pensive",
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-BARABBAS": "pensive"
+              },
+              "at": {
+                "FIG-ZEICHEN-AUSLIEFERN": "FIG-BARABBAS"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.15.12-MRK.15.14",
+            "figures": [
+              "FIG-PILATUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PILATUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-OBJ-KREUZ"
+                ]
+              }
+            ],
+            "action_de": "Pilatus fragt: Was soll ich mit dem tun, den ihr König der Juden nennt? Was hat er Böses getan? Sie schreien: Kreuzige ihn!",
+            "stage": {
+              "mood": {
+                "FIG-PILATUS": "worried",
+                "FIG-GRUPPE-MENGE": "earnest"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.15.15",
+            "figures": [
+              "FIG-PILATUS",
+              "FIG-JESUS",
+              "FIG-ROLLE-SOLDAT",
+              "FIG-BARABBAS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-FLIEHEN"
+            ],
+            "speech": [],
+            "action_de": "Um die Menge zufriedenzustellen, lässt Pilatus Barabbas frei; Jesus lässt er geisseln und liefert ihn zur Kreuzigung aus.",
+            "stage": {
+              "pose": {
+                "FIG-BARABBAS": "away"
+              },
+              "at": {
+                "FIG-ZEICHEN-FLIEHEN": "FIG-BARABBAS"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-SOLDAT",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-BARABBAS": "smile",
+                "FIG-PILATUS": "worried",
+                "FIG-JESUS": "calm"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Verhör: Jesus wird ausgeliefert (gefesselte Hände); Pilatus fragt: König? (König, Fragezeichen).",
+          "Wahl: Pilatus fragt: den König? (König, Fragezeichen); die Menge verlangt Barabbas, den Gefangenen (gefesselte Hände über ihm).",
+          "Ruf: Pilatus fragt nach Jesus (Jesus, Fragezeichen); die Menge schreit: ans Kreuz (Jesus, Kreuz).",
+          "Urteil: Pilatus übergibt Jesus einem Soldaten (Bogen von Jesus zum Soldaten); Barabbas geht frei weg (Pfeil)."
         ]
       }
     }

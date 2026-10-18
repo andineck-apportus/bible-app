@@ -175,7 +175,7 @@ assert(sheetHost.querySelector('[data-ref-go="ISA.64.7"]'),'Stelle im Fliesstext
 assert(!sheetHost.textContent.includes('data-ref-go="SIR'),'Sirach nicht verlinkt');
 click('[data-close]');
 // Zweite Übersetzungsschicht: Züridüütsch aus dem Griechischen, umschaltbar
-click('[data-action=menu]');click('[data-settings]');assert(sheetHost.querySelector('[data-set="text"][data-value="gsw"]'),'Lesetext-Auswahl');click('[data-set="text"][data-value="gsw"]');click('[data-close]');
+click('[data-action=menu]');assert(sheetHost.querySelector('[data-set="text"][data-value="gsw"]'),'Lesetext-Auswahl');click('[data-set="text"][data-value="gsw"]');click('[data-close]');
 assert.equal(reader.querySelector('[data-stream="v39-6-11"] .stream-copy').textContent,'Öises täglich Broot gib üs hüt.','Mundart im Lesestrom');
 assert(reader.querySelector('[data-stream="v39-6-11"] .dec.traditional'),'Entscheidung «täglich» auch in der Mundart markiert');
 click('[data-action=index]');assert(sheetHost.textContent.includes('S Vatterunser')&&sheetHost.textContent.includes('Nöd zum Schiin'),'Navigator-Titel in Mundart');click('[data-close]');
@@ -191,11 +191,11 @@ assert(sheetHost.textContent.includes('Broot für de nööchscht Taag')&&sheetHo
 assert(!sheetHost.textContent.includes('Brot für den kommenden Tag'),'keine hochdeutsche Deutung im Mundart-Blatt');click('[data-close]');
 click('[data-more="v39-6-11"]');sheetHost.querySelector('.sheet-tools [data-background="TU-MAT-006-009-013"]').click();
 assert(/\b(isch|händ|de|vo)\b/.test(sheetHost.querySelector('.bg-note .body').textContent),'Hintergrund in Mundart');click('[data-close]');
-click('[data-action=menu]');click('[data-settings]');click('[data-set="text"][data-value="de"]');click('[data-close]');
+click('[data-action=menu]');click('[data-set="text"][data-value="de"]');click('[data-close]');
 assert.equal(reader.querySelector('[data-stream="v39-6-11"] .stream-copy').textContent,M().de['MAT.6.11'],'zurück zu Hochdeutsch');
 assert.equal(Object.keys(M().layers.gsw.text).length,3059,'Mundart für alle 3059 Verse');
 // Obadja (Hebräisch) und Titus: Muster ganzer Bücher
-click('[data-action=menu]');click('[data-settings]');click('[data-set="text"][data-value="de"]');if(sheetHost.querySelector('[data-toggle=advanced][aria-checked=false]'))click('[data-toggle=advanced]');click('[data-close]');
+click('[data-action=menu]');click('[data-set="text"][data-value="de"]');click('[data-settings]');if(sheetHost.querySelector('[data-toggle=advanced][aria-checked=false]'))click('[data-toggle=advanced]');click('[data-close]');
 click('[data-action=index]');sheetHost.querySelector('[data-go^="TU-OBA"]').click();click('[data-action=down]');
 assert(reader.querySelector('[data-stream="v30-1-21"]')||true);
 click('[data-more="v30-1-3"]');
