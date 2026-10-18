@@ -49,7 +49,7 @@ def eyes(expr, look):
             continue
         if expr == "pensive":  # offen, Blick gesenkt und zur Seite (nicht geschlossen: wirkte im Blindtest schläfrig/hochmütig)
             out.append(f'<ellipse cx="{ex + .5:.1f}" cy="{ey + .7:.1f}" rx="1.75" ry="2.1" fill="#3A2416"/>'
-                       f'<path d="M{ex - 2.4:.1f} {ey - 1.1:.1f}Q{ex:.1f} {ey - 2.6:.1f} {ex + 2.4:.1f} {ey - 1.1:.1f}" fill="none" stroke="{INK}" stroke-width="1" stroke-linecap="round"/>'
+                       f'<path d="M{ex - 2.2:.1f} {ey - 1.9:.1f}Q{ex:.1f} {ey - 3.4:.1f} {ex + 2.2:.1f} {ey - 1.9:.1f}" fill="none" stroke="{INK}" stroke-width=".6" stroke-linecap="round"/>'
                        f'<circle cx="{ex + 1.1:.1f}" cy="{ey:.1f}" r=".55" fill="#FFF"/>')
             continue
         if expr == "surprised":

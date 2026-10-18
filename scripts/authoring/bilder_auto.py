@@ -425,12 +425,16 @@ class Composer:
                     out.append(self.r_sym(t, hx - w - 14 if hx > W / 2 else hx + 14, hy - h / 2 - 2, w, h))
                 else:
                     out.append(self.r_sym(t, min(W - w - 4, max(26, hx - w / 2)), max(4, hy - self.head_r() - h - 3), w, h))
+                    pos.setdefault(t, (min(W - w - 4, max(26, hx - w / 2)) + w / 2, max(4, hy - self.head_r() - h - 3) + h / 2))
             elif f in sky:
                 x, y, w0, h0 = sky[f]
                 out.append(self.r_sym(t, x + w0 + 2 if x < W / 2 else x - w - 2, y + h0 - h, w, h))
             elif f in pos:
                 x, y = pos[f]
-                out.append(self.r_sym(t, x - w / 2, y - h - 4, w, h))
+                if f in L["back"] or f in bigpos:  # über dem Ort bzw. Gegenstand, nicht auf seiner Mitte
+                    y = y - self.m(f)[1][1] * .5 + 2
+                out.append(self.r_sym(t, x - w / 2, max(2, y - h - 4), w, h))
+                pos[t] = (x, max(2, y - h - 4) + h / 2)
         for t, f in (st.get("beside") or {}).items():
             w, h = self.m(t)[1]
             if f in heads:
@@ -561,6 +565,13 @@ class Composer:
                     tx, ty = (px + pw - 3, ptop + ph / 2) if bx > px else (px + 3, ptop + ph / 2)
                 else:
                     by = pbot + 5
+                    room_h = ty - 6 - by
+                    if bh > room_h and not god:
+                        sc = max(.55, (room_h - 12) / ih)
+                        ws = [w * sc for w in ws]
+                        ih *= sc
+                        bw = sum(ws) + 5 * (len(ws) - 1) + 12
+                        bh = ih + 12
                     bx = max(28 if by < 24 else 4, min(W - 4 - bw, px))
                     link = same[0]
             if not god and not same and ty - (by + bh) < 6:
