@@ -15,7 +15,7 @@ Besonderheiten:
   (Artikel mit dem Namen zusammen zugeordnet, δέ als nicht wiedergegeben markiert).
 - [[MAT.1.7]]–[[MAT.1.8]]: Der SBLGNT liest mit WH, Treg und NA28 Ἀσάφ, RP (und NIV) Ἀσά. Den Apparateintrag hatte der
   automatische Import nicht zugeordnet; er ist nachgetragen (VAR-SBLGNTAPP-MAT-001-007-01, sblgntapp_nachtrag_mat.py)
-  und steht als Alternative bei beiden Versen. Eine automatische Zuordnung der Handschriften liegt dafür nicht vor.
+  und steht als Alternative bei beiden Versen. Die Handschriften sind dafür automatisch zugeordnet (Kollation über die Versgrenze).
 - [[MAT.1.18]] und [[MAT.2.17]]: Die automatische Zuordnung der Handschriften widerspricht dort den
   CNTR-Transkriptionen; die Alternativen benennen die Unsicherheit.
 
@@ -399,11 +399,11 @@ ALTS = [
     ["Ἀσά kann eine Angleichung an den Königsnamen in den Königsbüchern und der Chronik sein ([[1KI.15.9]], [[1CH.3.10]]). "
      "Ἀσάφ kann ein Schreibversehen sein, eine schon in Vorlagen vorgefundene Form oder eine bewusste Anspielung auf den "
      "Psalmdichter (vgl. Amos in [[MAT.1.10]]).",
-     "Für diesen nachgetragenen Apparateintrag liegt keine automatische Zuordnung der Handschriften vor."],
+     "Laut der automatischen Zuordnung lesen 01, 03 und 04 Ἀσάφ, 032 Ἀσά; 05 hat hier eine Lücke."],
     ["Ἀσά cha e Aagliichig a de Königsname i de Königsbüecher und de Chronik sii ([[1KI.15.9]], [[1CH.3.10]]). Ἀσάφ cha "
      "en Schriibfähler sii, e Form, wo scho i Vorlage gstande isch, oder e bewussti Aaspilig uf de Psalmdichter (vgl. Amos "
      "i [[MAT.1.10]]).",
-     "Für dä nachtreit Iitrag vom Apparat git s kei automatischi Zueornig vo de Handschrifte."])
+     "Nach de automatische Zueornig läsed 01, 03 und 04 Ἀσάφ, 032 Ἀσά; 05 hät da e Lucke."])
    for ref, f_de, t_de, f_g, t_g in (
        ("MAT.1.7", "Abija zeugte Asaf", "Abija zeugte Asa", "vom Asaf worde", "vom Asa worde"),
        ("MAT.1.8", "Asaf zeugte Joschafat", "Asa zeugte Joschafat", "De Asaf isch", "De Asa isch"))],
@@ -550,7 +550,7 @@ NOTES_DE = [
   "Artikel in [[MAT.1.22]] und [[MAT.2.15]], ἐπί in [[MAT.2.22]], Wortstellungen ([[MAT.2.3]], [[MAT.2.8]], [[MAT.2.13]], "
   "[[MAT.2.19]], [[MAT.2.22]]) sowie [[MAT.1.24]] διεγερθείς, [[MAT.2.9]] ἔστη und [[MAT.2.21]] ἦλθεν. Den Apparateintrag "
   "zu [[MAT.1.7]]–[[MAT.1.8]] (Ἀσάφ/Ἀσά) hatte der automatische Import nicht zugeordnet; er ist nachgetragen und steht als "
-  "Alternative bei beiden Versen (eine automatische Zuordnung der Handschriften liegt dafür nicht vor). In Kapitel 1–2 "
+  "Alternative bei beiden Versen (laut automatischer Zuordnung lesen 01, 03 und 04 Ἀσάφ, 032 Ἀσά). In Kapitel 1–2 "
   "fehlt im SBLGNT kein Vers."),
  ("Abgrenzung: Kapitel 1–2 bilden die Vorgeschichte (Herkunft, Geburt und Kindheit Jesu). Kapitel 3 setzt mit «In jenen "
   "Tagen» und dem Auftreten Johannes des Täufers neu ein. Die Gliederung in Abschnitte ist ein Vorschlag; die "

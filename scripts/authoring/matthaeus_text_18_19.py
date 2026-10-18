@@ -14,8 +14,8 @@ Besonderheiten:
   Alternative bei [[MAT.18.10]] (VAR-SBLGNTAPP-MAT-018-010-01).
 - [[MAT.19.17]]: Der SBLGNT-Apparat verzeichnet die Lesart von RP («Was nennst du mich gut? Niemand ist gut ausser
   einer: Gott»). Den Eintrag hatte der automatische Import nicht zugeordnet; er ist nachgetragen
-  (VAR-SBLGNTAPP-MAT-019-017-01, sblgntapp_nachtrag_mat.py) und steht als Alternative. Eine automatische Zuordnung der
-  Handschriften liegt dafür nicht vor.
+  (VAR-SBLGNTAPP-MAT-019-017-01, sblgntapp_nachtrag_mat.py) und steht als Alternative. Die Handschriften sind dafür
+  automatisch zugeordnet.
 - Die Rede Jesu in Kapitel 18 läuft von [[MAT.18.3]] bis [[MAT.18.20]] und, nach der Frage des Petrus, von
   [[MAT.18.22]] bis [[MAT.18.35]]; Reden innerhalb des Gleichnisses stehen in ‹ ›.
 
@@ -554,10 +554,14 @@ ALTS = [
    "R2": [("λέγεις ἀγαθόν; Οὐδεὶς ἀγαθός εἰ μὴ εἷς ὁ θεός", "seisch du mir guet? Niemer isch guet usser eine: Gott.", "RP")]},
   ["Die Fassung von RP kann an [[MRK.10.18]] und [[LUK.18.19]] angeglichen sein, zusammen mit der Anrede «guter Lehrer» in [[MAT.19.16]]. "
    "Ebenso kann sie ursprünglich sein und später umgeformt worden sein, damit Jesus das Gutsein nicht für sich abzulehnen scheint.",
-   "Für diesen nachgetragenen Apparateintrag liegt keine automatische Zuordnung der Handschriften vor."],
+   "Laut der automatischen Zuordnung lesen 01, 03 und 05 «Was fragst du mich nach dem Guten?», 04 und 032 «Was nennst du "
+   "mich gut?». Die Erstschrift von 03 hat nach dem erfassten Wortlaut kein εἷς («Einer»), die Korrektur ergänzt es; 05 liest "
+   "ohne die Artikel (περὶ ἀγαθοῦ … ἀγαθός)."],
   ["D Fassig vo RP cha a [[MRK.10.18]] und [[LUK.18.19]] aaglichen sii, zäme mit de Aared «guete Lehrer» i [[MAT.19.16]]. "
    "Oder si isch ursprünglich und isch spööter umgformt worde, damit s nöd tönt, wie wänn de Jesus s Guetsii für sich ablehnti.",
-   "Für dä nachtreit Iitrag vom Apparat git s kei automatischi Zueornig vo de Handschrifte."]),
+   "Nach de automatische Zueornig läsed 01, 03 und 05 «Werum frögsch du mich nach em Guete?», 04 und 032 «Werum seisch du "
+   "mir guet?». D Erschtschrift vo 03 hät nach em erfasste Wortlaut kei εἷς («Eine»), d Korrektur ergänzt s; 05 liist ohni "
+   "d Artikel."]),
  ("VAR-SBLGNTAPP-MAT-019-020-02:R2", "MAT.19.20", "Das alles habe ich gehalten.", "Das alles habe ich gehalten von meiner Jugend an.",
   "Das alles han ich ghalte.", "Das alles han ich ghalte vo minere Jugend aa.", "gering",
   "Der Zusatz gleicht die Antwort an [[MRK.10.20]] an.", "De Zuesatz gliicht d Antwort a [[MRK.10.20]] aa.",
@@ -694,8 +698,8 @@ NOTES_DE = [
   "«oder Frau»). Abweichende Lesarten stehen als Alternativen, soweit sie die Übersetzung verändern. [[MAT.18.11]] steht "
   "nicht im SBLGNT und hat keinen Übersetzungstext; der Wortlaut steht als Alternative bei [[MAT.18.10]]. Die Lesart von "
   "RP in [[MAT.19.17]] («Was nennst du mich gut? Niemand ist gut ausser einer: Gott») verzeichnet der SBLGNT-Apparat; den "
-  "Eintrag hatte der automatische Import nicht zugeordnet. Er ist nachgetragen und steht als Alternative (eine automatische "
-  "Zuordnung der Handschriften liegt dafür nicht vor)."),
+  "Eintrag hatte der automatische Import nicht zugeordnet. Er ist nachgetragen und steht als Alternative (laut automatischer "
+  "Zuordnung lesen 01, 03 und 05 wie der SBLGNT, 04 und 032 wie RP)."),
  ("Erzählweise: Das erzählende Präsens (λέγει «sagt») ist beibehalten. ὅτι vor direkter Rede ist nicht eigens übersetzt. "
   "Anführungszeichen sind eine Entscheidung der Übersetzung, denn das Griechische hat keine."),
  "Eigene Formulierung; nicht aus einer veröffentlichten deutschen Bibel übernommen.",

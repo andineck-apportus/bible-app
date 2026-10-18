@@ -584,10 +584,15 @@ ALTS = [
   ["Die längere Fassung kann den knappen Satz verdeutlichen und die zwei Zeugen nach [[MRK.14.57]] als falsche Zeugen "
    "kennzeichnen; ebenso kann die Wiederholung von οὐχ εὗρον als überflüssig weggelassen worden oder durch Augensprung "
    "ausgefallen sein.",
-   "Für diesen nachgetragenen Apparateintrag liegt keine automatische Zuordnung der Handschriften vor."],
+   "Laut der automatischen Zuordnung lesen 01, 03 und die Erstschrift von 02 wie der SBLGNT, die Korrektur in 02 und 032 "
+   "die längere Fassung; 04 und 05 führt sie als «liest anders» (05 nach dem erfassten Wortlaut καὶ πολλοὶ προσῆλθον "
+   "ψευδομάρτυρες … ἦλθον δύο ψευδομάρτυρες). Der erfasste Wortlaut der Erstschrift von 02 hat aber ebenfalls das "
+   "wiederholte οὐχ εὗρον; ihre Zuordnung ist hier unsicher. " + LACUNA_P45],
   ["Di länger Fassig cha de churz Satz verdüütliche und di zwei Züüge nach [[MRK.14.57]] als falschi Züüge kännzeichne; "
    "oder s widerholt οὐχ εὗρον isch als überflüssig wägglaa worde oder dur en Augesprung usgfalle.",
-   "Für dä nachtreit Iitrag vom Apparat git s kei automatischi Zueornig vo de Handschrifte."]),
+   "Nach de automatische Zueornig läsed 01, 03 und d Erschtschrift vo 02 wie de SBLGNT, d Korrektur i 02 und 032 di länger "
+   "Fassig; 04 und 05 füert si als «liist anders». De erfasst Wortlaut vo de Erschtschrift vo 02 hät aber au s widerholt "
+   "οὐχ εὗρον; iri Zueornig isch da unsicher. " + LACUNA_P45_G]),
  ("VAR-SBLGNTAPP-MAT-026-061-01:R2", "MAT.26.61", "und in drei Tagen aufbauen", "und ihn in drei Tagen aufbauen",
   "und in drüü Täg ufbaue", "und en in drüü Täg ufbaue", "gering",
   "Das Objekt «ihn» (den Tempel) ist ausgesprochen; der Sinn bleibt gleich.",
@@ -595,9 +600,13 @@ ALTS = [
   {"R1": [("οἰκοδομῆσαι", "aufbauen", "WH, Treg, NA28")], "R2": [("οἰκοδομῆσαι αὐτόν", "ihn aufbauen", "RP")]},
   {"R1": [("οἰκοδομῆσαι", "ufbaue", "WH, Treg, NA28")], "R2": [("οἰκοδομῆσαι αὐτόν", "en ufbaue", "RP")]},
   ["Das Fürwort kann zur Verdeutlichung ergänzt sein; ebenso kann das kurze Wort ausgefallen sein.",
-   "Für diesen nachgetragenen Apparateintrag liegt keine automatische Zuordnung der Handschriften vor."],
+   "Laut der automatischen Zuordnung liest 03 ohne αὐτόν, 02, 05 und 032 lesen οἰκοδομῆσαι αὐτόν. 01 und 04 führt sie "
+   "beim kurzen Text, obwohl der erfasste Wortlaut αὐτὸν vor οἰκοδομῆσαι hat; die beiden haben das Fürwort also an anderer "
+   "Stelle, ihre Zuordnung ist hier unsicher. " + LACUNA_P45],
   ["S Fürwort cha zur Verdüütlichung ergänzt sii; oder s churz Wort isch usgfalle.",
-   "Für dä nachtreit Iitrag vom Apparat git s kei automatischi Zueornig vo de Handschrifte."]),
+   "Nach de automatische Zueornig liist 03 ohni αὐτόν, 02, 05 und 032 läsed οἰκοδομῆσαι αὐτόν. 01 und 04 füert si bim "
+   "churze Text, obwohl de erfasst Wortlaut αὐτὸν vor οἰκοδομῆσαι hät; die zwei händ s Fürwort also a ere andere Stell, iri "
+   "Zueornig isch da unsicher. " + LACUNA_P45_G]),
  ("VAR-SBLGNTAPP-MAT-026-063-01:R2", "MAT.26.63", "Und der Hohepriester sagte zu ihm", "Und der Hohepriester antwortete und sagte zu ihm",
   "Und de Hoheprieschter hät zu ihm gseit", "Und de Hoheprieschter hät gantwortet und zu ihm gseit", "gering",
   "Die geläufige Redeeinleitung «antwortete und sagte».", "Di gläufig Redeiileitig «hät gantwortet und gseit».",
@@ -713,7 +722,7 @@ NOTES_DE = [
   "μαθητῶν, mit WH). Abweichende Lesarten stehen als Alternativen, soweit sie die Übersetzung verändern; reine Wortstellungs- "
   "oder Formvarianten ohne Wirkung auf die Übersetzung sind nur in follows_readings erfasst. Die Apparateinträge zu "
   "[[MAT.26.60]] und [[MAT.26.61]] hatte der automatische Import nicht zugeordnet; sie sind nachgetragen und stehen als "
-  "Alternativen (eine automatische Zuordnung der Handschriften liegt dafür nicht vor)."),
+  "Alternativen (mit automatischer Zuordnung der Handschriften; Unsicherheiten benennen die Alternativen)."),
 ]
 NOTES_GSW = [
  "KI-Entwurf ohni fachlichi Prüefig. Eigeti Formulierig; nöd us ere veröffentlichte Mundart-Bible übernoo.",

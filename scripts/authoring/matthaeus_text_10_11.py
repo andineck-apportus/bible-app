@@ -534,11 +534,13 @@ ALTS = [
   ["Die alten Handschriften haben kaum Satzzeichen; wo die Frage endet, entscheiden die Herausgeber. Die Stellung ἰδεῖν vor "
    "προφήτην kann die Frage an [[MAT.11.8]] (τί ἐξήλθατε ἰδεῖν;) angleichen; ebenso kann die Stellung nach προφήτην aus "
    "Versehen entstanden sein. Mit der Lesart des SBLGNT wird «einen Propheten zu sehen» zu einer eigenen, steigernden Frage.",
-   "Für diesen nachgetragenen Apparateintrag liegt keine automatische Zuordnung der Handschriften vor."],
+   "Laut der automatischen Zuordnung lesen 01, 03 und 032 wie der SBLGNT (032 mit der Form ἐξεληλύθατε), 04 und 05 "
+   "ἰδεῖν vor προφήτην. Die Zuordnung vergleicht nur die Wortstellung; über Satzzeichen in den Handschriften sagt sie nichts."],
   ["Di alte Handschrifte händ chuum Satzzeiche; wo d Frag ufhört, entscheided d Herusgäber. ἰδεῖν vor προφήτην cha d Frag "
    "a [[MAT.11.8]] aagliiche; oder d Stellig nach προφήτην isch us Versehe entstande. Mit de Läsart vom SBLGNT wird «en "
    "Prophet go luege» e eigeti, stiigereti Frag.",
-   "Für dä nachtreit Iitrag vom Apparat git s kei automatischi Zueornig vo de Handschrifte."]),
+   "Nach de automatische Zueornig läsed 01, 03 und 032 wie de SBLGNT (032 mit de Form ἐξεληλύθατε), 04 und 05 ἰδεῖν vor "
+   "προφήτην. D Zueornig vergliicht nu d Wortstellig; über Satzzeiche i de Handschrifte seit si nüüt."]),
  ("VAR-SBLGNTAPP-MAT-011-010-01:R2", "MAT.11.10", "Dieser ist es", "Denn dieser ist es", "Dä isch es", "Dä isch es nämli", "gering",
   "Ein «denn» verbindet den Satz begründend mit [[MAT.11.9]].", "Es «nämli» verbindet de Satz mit [[MAT.11.9]].",
   {"R1": [("οὗτός", "Dieser", "WH, NA28")], "R2": [("οὗτος γάρ", "Denn dieser", "Treg, RP")]},
