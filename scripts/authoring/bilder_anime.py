@@ -718,7 +718,7 @@ for _k, _v in _SYMS.items():
         COPY.append(_v["sym"])
 EXTRA_META = {k: (v["place"], tuple(v["size"])) for k, v in _SYMS.items()}
 GROUP_KEYS = {"FIG-GRUPPE-MENGE": ("menge2", "menge3", "menge"), "FIG-GRUPPE-ZWOELF": ("juenger2", "juenger", "andreas")}
-POSE_SHIFT = {"sit": 6, "kneel": 9}
+POSE_SHIFT = {"sit": 6, "kneel": 11}
 
 
 class AniComposer(_auto.Composer):
@@ -780,6 +780,8 @@ class AniComposer(_auto.Composer):
         wear = ((p_stage or {}).get("wear") or {}).get(fid)
         if wear:
             key = self._sackkey(key, wear)
+        if hold is None and pose == "kneel":  # Knien: gefaltete Hände machen die Haltung lesbar
+            hold = "an-z-beten"
         if hold is None and CHAR[key].get("attr"):
             hold = CHAR[key]["attr"]
         elif hold is not None and not hold.startswith("an-"):
@@ -804,8 +806,8 @@ class AniComposer(_auto.Composer):
         if pose in ("lie", "sleep"):
             mat = (f'<path d="M{x - 34 * s:.1f} {y + 29 * s:.1f}h{56 * s:.1f}v{5 * s:.1f}h{-56 * s:.1f}z" fill="#C9B48E" stroke="{INK}" stroke-width="{.8 * s:.1f}"/>')
             g = mat + f'<g transform="rotate(-80 {x:.1f} {y + 20 * s:.1f})">{g}</g>'
-        elif pose == "kneel":  # Brustbild vorgeneigt zur angesprochenen bzw. gegenüberstehenden Seite
-            g = f'<g transform="rotate({18 if (look or 0) >= 0 else -18} {x:.1f} {y + 30 * s:.1f})">{g}</g>'
+        elif pose == "kneel":  # Brustbild deutlich vorgeneigt zur angesprochenen bzw. gegenüberstehenden Seite (Blindtest: 18° wurde als Stehen gelesen)
+            g = f'<g transform="rotate({26 if (look or 0) >= 0 else -26} {x:.1f} {y + 30 * s:.1f})">{g}</g>'
         elif pose == "fall":
             g = f'<g transform="rotate(32 {x:.1f} {y + 18 * s:.1f})">{g}</g>'
         out.append(g)
@@ -842,7 +844,10 @@ class AniComposer(_auto.Composer):
         self._hr = 12 * sc
         y = 140 - 34 * sc + 4 + POSE_SHIFT.get(pose, 0) * sc
         half = (17 + (11 if (fid in GROUP_KEYS or fid.startswith("FIG-GRUPPE-")) else 0)) * sc + 3
-        if pose not in ("lie", "sleep", "fall"):
+        if pose in ("lie", "sleep"):  # liegende Figur ganz ins Feld (Blindtest: rechts abgeschnitten)
+            x = max(36 * sc, min(_auto.W - 26 * sc, x))
+            s["x"] = x
+        elif pose != "fall":
             x = max(half, min(_auto.W - half, x))
             s["x"] = x
         expr, tears, joy = self._feel(fid, p, False)

@@ -481,7 +481,16 @@ class Composer:
         arrows(False)
         # 10. Sprechblasen
         bubbles = []
-        for sp in L["speech"][:2]:
+        # Blindtest Matthäus: Folgeblasen derselben Figur wurden als «Blase an Blase» gelesen. Darum alles, was eine Figur sagt,
+        # in eine Blase (Teile durch einen feinen Strich getrennt); so bleibt auch Platz für einen zweiten Sprecher.
+        merged = []
+        for sp in L["speech"]:
+            prev = next((m for m in merged if m["from"] == sp["from"] and bool(m.get("think")) == bool(sp.get("think"))), None)
+            if prev is not None:
+                prev["icons"] = list(prev["icons"]) + ["|"] + list(sp["icons"])
+            else:
+                merged.append(dict(sp))
+        for sp in merged[:2]:
             if sp["from"] in heads:
                 tx, ty = heads[sp["from"]]
                 ty -= self.head_r()
@@ -497,7 +506,7 @@ class Composer:
         placed, drawn = [], []
         for k, (sp, tx, ty) in enumerate(bubbles):
             ih = self.icon_h()
-            ws = [icon_w(self.vb(i), ih) for i in sp["icons"]]
+            ws = [4.0 if i == "|" else icon_w(self.vb(i), ih) for i in sp["icons"]]
             bw = sum(ws) + 5 * (len(ws) - 1) + 12
             avail = W - 32
             god = sp["from"] in sky
@@ -591,7 +600,10 @@ class Composer:
                         bh = ih + 12
             inner, x = [], bx + 6
             for i, w in zip(sp["icons"], ws):
-                inner.append(self.r_icon(i, x, by + 6, w, ih))
+                if i == "|":
+                    inner.append(f'<line x1="{x + w / 2:.1f}" y1="{by + 8:.1f}" x2="{x + w / 2:.1f}" y2="{by + 4 + ih:.1f}" stroke="#3B3226" stroke-width=".7" stroke-dasharray="2 2"/>')
+                else:
+                    inner.append(self.r_icon(i, x, by + 6, w, ih))
                 x += w + 5
             if link is not None:  # obere Blase zeigt auf die untere (verbundene Blasen)
                 lb = drawn[link]
