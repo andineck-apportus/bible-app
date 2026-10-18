@@ -48,17 +48,15 @@
       "n": 2,
       "reference": "MAT.26.71-MAT.26.72",
       "figures": [
-        "FIG-ROLLE-MAGD",
+        "FIG-ROLLE-FRAU",
         "FIG-GRUPPE-MENGE",
         "FIG-PETRUS"
       ],
-      "objects": [
-        "FIG-ORT-STADTTOR"
-      ],
+      "objects": [],
       "signs": [],
       "speech": [
         {
-          "from": "FIG-ROLLE-MAGD",
+          "from": "FIG-ROLLE-FRAU",
           "to": "FIG-GRUPPE-MENGE",
           "icons": [
             "FIG-PETRUS",
@@ -76,15 +74,14 @@
       "action_de": "Am Tor sagt eine andere Magd zu den Leuten dort: Dieser war mit Jesus, dem Nazoräer! Wieder leugnet Petrus mit einem Eid: Ich kenne den Menschen nicht!",
       "stage": {
         "mood": {
-          "FIG-ROLLE-MAGD": "earnest",
+          "FIG-ROLLE-FRAU": "earnest",
           "FIG-GRUPPE-MENGE": "pensive",
           "FIG-PETRUS": "worried"
         },
-        "back_side": "right",
         "x": {
-          "FIG-ROLLE-MAGD": 26,
-          "FIG-GRUPPE-MENGE": 74,
-          "FIG-PETRUS": 126
+          "FIG-ROLLE-FRAU": 26,
+          "FIG-GRUPPE-MENGE": 82,
+          "FIG-PETRUS": 146
         },
         "night": true
       }
@@ -99,7 +96,9 @@
       "objects": [
         "FIG-OBJ-HAHN"
       ],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-SPRECHEN"
+      ],
       "speech": [
         {
           "from": "FIG-GRUPPE-MENGE",
@@ -123,7 +122,10 @@
           "FIG-GRUPPE-MENGE": "earnest",
           "FIG-PETRUS": "worried"
         },
-        "night": true
+        "night": true,
+        "at": {
+          "FIG-ZEICHEN-SPRECHEN": "FIG-OBJ-HAHN"
+        }
       }
     },
     {
@@ -171,8 +173,8 @@
   ],
   "captions_de": [
     "Erste Verleugnung: Die Magd sagt: Du warst mit Jesus (Petrus, Jesus); Petrus streitet ab (getrennte Kettenglieder mit rotem Strich).",
-    "Zweite Verleugnung: Am Tor (dunkler Torbogen) sagt eine andere Magd zu den Leuten: Er war mit Jesus (Petrus, Jesus); Petrus streitet wieder ab (getrennte Kettenglieder).",
-    "Dritte Verleugnung: Die Umstehenden: Du gehörst zu ihnen (Petrus, Jünger); Petrus streitet zum dritten Mal ab (getrennte Kettenglieder); da kräht der Hahn.",
+    "Zweite Verleugnung: Beim Tor sagt eine andere Magd (Frau mit hellem Kopftuch) zu den Leuten: Er war mit Jesus (Petrus, Jesus); Petrus streitet wieder ab (getrennte Kettenglieder).",
+    "Dritte Verleugnung: Die Umstehenden: Du gehörst zu ihnen (Petrus, Jünger); Petrus streitet zum dritten Mal ab (getrennte Kettenglieder); da kräht der Hahn (Schallbögen beim Hahn).",
     "Tränen: Der Hahn kräht (Schallbögen beim Hahn); Petrus weint bitterlich (Träne)."
   ],
   "interpretation_note_de": "Matthäus nennt eine Magd im Hof und «eine andere» am Tor ([[MAT.26.69]], [[MAT.26.71]]); beide erscheinen in derselben Rolle. Ein Feuer im Hof erwähnt Matthäus nicht; es ist deshalb nicht gezeichnet. Fluch und Schwur ([[MAT.26.74]]) sind nicht eigens gezeigt.",
@@ -212,5 +214,174 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.26.69-MAT.26.70",
+            "figures": [
+              "FIG-ROLLE-MAGD",
+              "FIG-PETRUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-MAGD",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-PETRUS",
+                  "FIG-JESUS"
+                ]
+              },
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-ROLLE-MAGD",
+                "icons": [
+                  "FIG-ZEICHEN-VERLEUGNEN"
+                ]
+              }
+            ],
+            "action_de": "Petrus sitzt draussen im Hof. Eine Magd sagt zu ihm: Auch du warst mit Jesus, dem Galiläer! Er leugnet vor allen: Ich weiss nicht, was du sagst.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-MAGD": "earnest",
+                "FIG-PETRUS": "worried"
+              },
+              "night": true
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.26.71-MAT.26.72",
+            "figures": [
+              "FIG-ROLLE-MAGD",
+              "FIG-GRUPPE-MENGE",
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-ORT-STADTTOR"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-MAGD",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-PETRUS",
+                  "FIG-JESUS"
+                ]
+              },
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-VERLEUGNEN"
+                ]
+              }
+            ],
+            "action_de": "Am Tor sagt eine andere Magd zu den Leuten dort: Dieser war mit Jesus, dem Nazoräer! Wieder leugnet Petrus mit einem Eid: Ich kenne den Menschen nicht!",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-MAGD": "earnest",
+                "FIG-GRUPPE-MENGE": "pensive",
+                "FIG-PETRUS": "worried"
+              },
+              "back_side": "right",
+              "x": {
+                "FIG-ROLLE-MAGD": 26,
+                "FIG-GRUPPE-MENGE": 74,
+                "FIG-PETRUS": 126
+              },
+              "night": true
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.26.73-MAT.26.74",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-OBJ-HAHN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-PETRUS",
+                  "FIG-GRUPPE-ZWOELF"
+                ]
+              },
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-VERLEUGNEN"
+                ]
+              }
+            ],
+            "action_de": "Die Umstehenden sagen: Wirklich, auch du bist einer von ihnen; deine Sprechweise verrät dich! Da fängt er an, sich zu verfluchen und zu schwören: Ich kenne den Menschen nicht! Sogleich kräht ein Hahn.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-PETRUS": "worried"
+              },
+              "night": true
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.26.75",
+            "figures": [
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-OBJ-HAHN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER",
+              "FIG-ZEICHEN-SPRECHEN"
+            ],
+            "speech": [],
+            "action_de": "Petrus erinnert sich an das Wort Jesu: Bevor ein Hahn kräht, wirst du mich dreimal verleugnen. Er geht hinaus und weint bitterlich.",
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-PETRUS"
+                ]
+              },
+              "mood": {
+                "FIG-PETRUS": "worried"
+              },
+              "x": {
+                "FIG-PETRUS": 70
+              },
+              "floor_x": {
+                "FIG-OBJ-HAHN": 120
+              },
+              "at": {
+                "FIG-ZEICHEN-SPRECHEN": "FIG-OBJ-HAHN"
+              },
+              "night": true
+            }
+          }
+        ],
+        "captions_de": [
+          "Erste Verleugnung: Die Magd sagt: Du warst mit Jesus (Petrus, Jesus); Petrus streitet ab (getrennte Kettenglieder mit rotem Strich).",
+          "Zweite Verleugnung: Am Tor (dunkler Torbogen) sagt eine andere Magd zu den Leuten: Er war mit Jesus (Petrus, Jesus); Petrus streitet wieder ab (getrennte Kettenglieder).",
+          "Dritte Verleugnung: Die Umstehenden: Du gehörst zu ihnen (Petrus, Jünger); Petrus streitet zum dritten Mal ab (getrennte Kettenglieder); da kräht der Hahn.",
+          "Tränen: Der Hahn kräht (Schallbögen beim Hahn); Petrus weint bitterlich (Träne)."
+        ]
+      }
+    }
+  ]
 }

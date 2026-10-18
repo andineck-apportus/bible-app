@@ -32,14 +32,10 @@
           "FIG-GRUPPE-JUNGFRAUEN-KLUG": "delight",
           "FIG-ROLLE-BRAEUTIGAM": "smile"
         },
-        "arrows": [
-          [
-            "FIG-GRUPPE-JUNGFRAUEN-KLUG",
-            "FIG-ORT-HAUS-OFFEN",
-            "go"
-          ]
-        ],
-        "night": true
+        "night": true,
+        "at": {
+          "FIG-ZEICHEN-HOCHZEIT": "FIG-ORT-HAUS-OFFEN"
+        }
       }
     },
     {
@@ -47,7 +43,6 @@
       "reference": "MAT.25.14-MAT.25.30",
       "figures": [
         "FIG-GRUPPE-DIENER",
-        "FIG-ROLLE-GUTSHERR",
         "FIG-ROLLE-DIENER"
       ],
       "objects": [
@@ -63,22 +58,19 @@
         "at": {
           "FIG-ZEICHEN-GEWINN": "FIG-GRUPPE-DIENER"
         },
-        "count": {
-          "FIG-OBJ-TALENT": 2
+        "hold": {
+          "FIG-GRUPPE-DIENER": "FIG-OBJ-TALENT"
         },
         "mood": {
           "FIG-GRUPPE-DIENER": "delight",
-          "FIG-ROLLE-GUTSHERR": "calm",
           "FIG-ROLLE-DIENER": "worried"
         },
         "x": {
-          "FIG-GRUPPE-DIENER": 30,
-          "FIG-ROLLE-GUTSHERR": 82,
-          "FIG-ROLLE-DIENER": 126
+          "FIG-GRUPPE-DIENER": 48,
+          "FIG-ROLLE-DIENER": 112
         },
         "floor_x": {
-          "FIG-OBJ-TALENT": 46,
-          "FIG-OBJ-GRUBE": 146
+          "FIG-OBJ-GRUBE": 144
         }
       }
     },
@@ -86,7 +78,6 @@
       "n": 3,
       "reference": "MAT.25.31-MAT.25.46",
       "figures": [
-        "FIG-GRUPPE-ENGEL",
         "FIG-JESUS",
         "FIG-GRUPPE-VOELKER"
       ],
@@ -110,18 +101,17 @@
         "back_side": "left",
         "before": true,
         "x": {
-          "FIG-GRUPPE-ENGEL": 70,
-          "FIG-GRUPPE-VOELKER": 150
+          "FIG-GRUPPE-VOELKER": 96
         },
         "floor_x": {
-          "FIG-OBJ-SCHAF": 92,
-          "FIG-OBJ-BOCK": 124
+          "FIG-OBJ-SCHAF": 120,
+          "FIG-OBJ-BOCK": 150
         },
         "mood": {
           "FIG-GRUPPE-VOELKER": "pensive"
         },
-        "air_x": 98,
-        "air_y": 66
+        "air_x": 134,
+        "air_y": 70
       }
     }
   ],
@@ -131,9 +121,9 @@
     "Jesus kündigt an, dass der Menschensohn als König auf dem Thron alle Völker richten und scheiden wird wie ein Hirt die Schafe von den Böcken."
   ],
   "captions_de": [
-    "Die klugen Jungfrauen: Mit brennenden Lampen gehen sie mit dem Bräutigam (violettes Festgewand, goldener Kranz) zur Hochzeit hinein (offenes Haus mit Licht, Girlande).",
-    "Die Talente: Zwei Knechte haben das Geld vermehrt (Säcke, grüner Pfeil); der dritte (mit Schürze) hat seinen Sack vergraben (Grube).",
-    "Das Gericht (angekündigt): Der Menschensohn (Jesus) auf dem Thron, mit Engeln; er scheidet die Völker wie Schafe von Böcken (Schaf, Bock, Bruch mit Pfeilen)."
+    "Die klugen Jungfrauen: Mit brennenden Lampen gehen sie mit dem Bräutigam (violettes Festgewand, goldener Kranz) zur Hochzeit (offenes Haus mit Licht, darüber die Girlande).",
+    "Die Talente: Die ersten Knechte (links) haben das Geld vermehrt (Sack, Münzen mit grünem Pfeil nach oben); der dritte (mit Schürze) hat seinen Sack vergraben (Grube).",
+    "Das Gericht (angekündigt): Der Menschensohn (Jesus) auf dem Thron; er scheidet die Völker wie Schafe von Böcken (Schaf, Bock, Bruch mit Pfeilen)."
   ],
   "interpretation_note_de": "Die Bilder zeigen die beiden Gleichnisse als erzählte Geschichten und das Gericht als Ankündigung Jesu ([[MAT.25.31]]); der Arme, das Feuer und das ewige Leben sind im Abschnittsbild gezeigt.",
   "basis": [
@@ -148,5 +138,135 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.25.1-MAT.25.13",
+            "figures": [
+              "FIG-GRUPPE-JUNGFRAUEN-KLUG",
+              "FIG-ROLLE-BRAEUTIGAM"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS-OFFEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-HOCHZEIT"
+            ],
+            "speech": [],
+            "action_de": "Von zehn Jungfrauen gehen nur die fünf klugen, die Öl mitgenommen haben, mit dem Bräutigam zur Hochzeit hinein; die Tür wird verschlossen.",
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-JUNGFRAUEN-KLUG": "FIG-OBJ-LAMPE"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUNGFRAUEN-KLUG": "delight",
+                "FIG-ROLLE-BRAEUTIGAM": "smile"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-JUNGFRAUEN-KLUG",
+                  "FIG-ORT-HAUS-OFFEN",
+                  "go"
+                ]
+              ],
+              "night": true
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.25.14-MAT.25.30",
+            "figures": [
+              "FIG-GRUPPE-DIENER",
+              "FIG-ROLLE-GUTSHERR",
+              "FIG-ROLLE-DIENER"
+            ],
+            "objects": [
+              "FIG-OBJ-TALENT",
+              "FIG-OBJ-GRUBE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-GEWINN"
+            ],
+            "speech": [],
+            "action_de": "Ein Herr vertraut seinen Knechten Talente an; zwei vermehren sie, der dritte vergräbt sein Talent aus Furcht.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-GEWINN": "FIG-GRUPPE-DIENER"
+              },
+              "count": {
+                "FIG-OBJ-TALENT": 2
+              },
+              "mood": {
+                "FIG-GRUPPE-DIENER": "delight",
+                "FIG-ROLLE-GUTSHERR": "calm",
+                "FIG-ROLLE-DIENER": "worried"
+              },
+              "x": {
+                "FIG-GRUPPE-DIENER": 30,
+                "FIG-ROLLE-GUTSHERR": 82,
+                "FIG-ROLLE-DIENER": 126
+              },
+              "floor_x": {
+                "FIG-OBJ-TALENT": 46,
+                "FIG-OBJ-GRUBE": 146
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.25.31-MAT.25.46",
+            "figures": [
+              "FIG-GRUPPE-ENGEL",
+              "FIG-JESUS",
+              "FIG-GRUPPE-VOELKER"
+            ],
+            "objects": [
+              "FIG-OBJ-THRON",
+              "FIG-OBJ-SCHAF",
+              "FIG-OBJ-BOCK"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TRENNEN"
+            ],
+            "speech": [],
+            "action_de": "Jesus kündigt an, dass der Menschensohn als König auf dem Thron alle Völker richten und scheiden wird wie ein Hirt die Schafe von den Böcken.",
+            "stage": {
+              "on": {
+                "FIG-JESUS": "FIG-OBJ-THRON"
+              },
+              "pose": {
+                "FIG-JESUS": "sit"
+              },
+              "back_side": "left",
+              "before": true,
+              "x": {
+                "FIG-GRUPPE-ENGEL": 70,
+                "FIG-GRUPPE-VOELKER": 150
+              },
+              "floor_x": {
+                "FIG-OBJ-SCHAF": 92,
+                "FIG-OBJ-BOCK": 124
+              },
+              "mood": {
+                "FIG-GRUPPE-VOELKER": "pensive"
+              },
+              "air_x": 98,
+              "air_y": 66
+            }
+          }
+        ],
+        "captions_de": [
+          "Die klugen Jungfrauen: Mit brennenden Lampen gehen sie mit dem Bräutigam (violettes Festgewand, goldener Kranz) zur Hochzeit hinein (offenes Haus mit Licht, Girlande).",
+          "Die Talente: Zwei Knechte haben das Geld vermehrt (Säcke, grüner Pfeil); der dritte (mit Schürze) hat seinen Sack vergraben (Grube).",
+          "Das Gericht (angekündigt): Der Menschensohn (Jesus) auf dem Thron, mit Engeln; er scheidet die Völker wie Schafe von Böcken (Schaf, Bock, Bruch mit Pfeilen)."
+        ]
+      }
+    }
+  ]
 }

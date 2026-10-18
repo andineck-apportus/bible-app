@@ -722,6 +722,7 @@ POSE_SHIFT = {"sit": 6, "kneel": 11}
 
 
 class AniComposer(_auto.Composer):
+    water_feet, water_lift = 140, 26  # Brustbild: Wellen am unteren Bildrand der Figur
     _hr = 12
 
     def vb(self, fid):

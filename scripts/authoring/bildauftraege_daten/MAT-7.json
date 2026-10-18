@@ -64,7 +64,6 @@
       "from": "FIG-GRUPPE-JUNGFRAUEN-TOERICHT",
       "to": "FIG-GRUPPE-JUNGFRAUEN-KLUG",
       "icons": [
-       "FIG-OBJ-LAMPE-AUS",
        "FIG-OBJ-OELGEFAESS",
        "FIG-ZEICHEN-FRAGEN"
       ]
@@ -73,16 +72,16 @@
       "from": "FIG-GRUPPE-JUNGFRAUEN-KLUG",
       "to": "FIG-GRUPPE-JUNGFRAUEN-TOERICHT",
       "icons": [
-       "FIG-OBJ-OELGEFAESS",
        "FIG-ZEICHEN-NEIN",
+       "FIG-ZEICHEN-WEG",
        "FIG-ROLLE-HAENDLER"
       ]
      }
     ],
     "action_de": "Um Mitternacht ruft man: Der Bräutigam kommt! Die törichten bitten die klugen um Öl, weil ihre Lampen ausgehen; die klugen schicken sie zu den Händlern.",
     "action_gsw": "Am Mitternacht rüeft mer: De Brüütigam chunnt! Di tumme bitted di gschiide um Öl, will ihri Lampe uusgönd; di gschiide schicked si zu de Händler.",
-    "caption_de": "Kein Öl: Die törichten Jungfrauen (graublaues Kopftuch, erloschene Lampe mit Rauchfaden) bitten um Öl (Ölkrug, Fragezeichen); die klugen (brennende Lampe) sagen: Kein Öl für euch – geht zum Händler (Ölkrug, rotes X, Händler mit Kopftuch).",
-    "caption_gsw": "Kei Öl: Di tumme Jungfraue (graublaus Chopftuech, verlöschti Lampe mit Rauchfade) bitted um Öl (Ölchrueg, Fragezeiche); di gschiide (brännendi Lampe) säged: Kei Öl für eu – gönd zum Händler (Ölchrueg, roots X, Händler mit Chopftuech).",
+    "caption_de": "Kein Öl: Die törichten Jungfrauen (graublaues Kopftuch, erloschene Lampe mit Rauchfaden) bitten um Öl (Ölkrug, Fragezeichen); die klugen (brennende Lampe) sagen: Nein – geht zum Händler (rotes X, Pfad mit Pfeil, Händler mit Kopftuch).",
+    "caption_gsw": "Kei Öl: Di tumme Jungfraue (graublaus Chopftuech, verlöschti Lampe mit Rauchfade) bitted um Öl (Ölchrueg, Fragezeiche); di gschiide (brännendi Lampe) säged: Nei – gönd zum Händler (roots X, Pfad mit Pfiil, Händler mit Chopftuech).",
     "stage": {
      "hold": {
       "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": "FIG-OBJ-LAMPE-AUS",
@@ -90,7 +89,7 @@
      },
      "mood": {
       "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": "worried",
-      "FIG-GRUPPE-JUNGFRAUEN-KLUG": "earnest"
+      "FIG-GRUPPE-JUNGFRAUEN-KLUG": "calm"
      },
      "night": true
     }
@@ -111,8 +110,8 @@
     "speech": [],
     "action_de": "Während die törichten Öl kaufen gehen, kommt der Bräutigam; die bereit waren, gehen mit ihm hinein zur Hochzeit, und die Tür wird verschlossen.",
     "action_gsw": "Während di tumme go Öl chaufe, chunnt de Brüütigam; die, wo parat gsii sind, gönd mit em ine a d Hochzyt, und d Tür wird zuegschlosse.",
-    "caption_de": "Hochzeit: Der Bräutigam (violettes Festgewand, goldener Kranz) kommt; die klugen Jungfrauen (brennende Lampe) gehen mit ihm ins Haus mit offener Tür und Licht (gestrichelter Weg); darüber die Girlande der Hochzeit.",
-    "caption_gsw": "Hochzyt: De Brüütigam (violetts Feschtgwand, guldige Chranz) chunnt; di gschiide Jungfraue (brännendi Lampe) gönd mit em is Huus mit offner Tür und Liecht (gstrichlete Wäg); drüber d Girlande vo de Hochzyt.",
+    "caption_de": "Hochzeit: Der Bräutigam (violettes Festgewand, goldener Kranz) ist gekommen; die klugen Jungfrauen (brennende Lampe) gehen mit ihm zum Hochzeitshaus (offene Tür mit Licht, darüber die Girlande).",
+    "caption_gsw": "Hochzyt: De Brüütigam (violetts Feschtgwand, guldige Chranz) isch cho; di gschiide Jungfraue (brännendi Lampe) gönd mit em zum Hochzytshuus (offni Tür mit Liecht, drüber d Girlande).",
     "stage": {
      "hold": {
       "FIG-GRUPPE-JUNGFRAUEN-KLUG": "FIG-OBJ-LAMPE"
@@ -121,15 +120,11 @@
       "FIG-GRUPPE-JUNGFRAUEN-KLUG": "delight",
       "FIG-ROLLE-BRAEUTIGAM": "smile"
      },
-     "arrows": [
-      [
-       "FIG-GRUPPE-JUNGFRAUEN-KLUG",
-       "FIG-ORT-HAUS-OFFEN",
-       "go"
-      ]
-     ],
      "floor_side": "right",
-     "night": true
+     "night": true,
+     "at": {
+      "FIG-ZEICHEN-HOCHZEIT": "FIG-ORT-HAUS-OFFEN"
+     }
     }
    },
    {
@@ -138,12 +133,10 @@
     "figures": [
      "FIG-GRUPPE-JUNGFRAUEN-TOERICHT"
     ],
-    "objects": [],
-    "signs": [
-     "FIG-ZEICHEN-VERSCHLOSSEN",
-     "FIG-ZEICHEN-WACHEN",
-     "FIG-ZEICHEN-STUNDE"
+    "objects": [
+     "FIG-ORT-HAUS"
     ],
+    "signs": [],
     "speech": [
      {
       "from": "FIG-GRUPPE-JUNGFRAUEN-TOERICHT",
@@ -156,8 +149,8 @@
     ],
     "action_de": "Später kommen die übrigen Jungfrauen und rufen: Herr, Herr, mach uns auf! Er antwortet: Ich kenne euch nicht. Darum: Wacht, denn ihr kennt weder Tag noch Stunde.",
     "action_gsw": "Spöter chömed di andere Jungfraue und rüefed: Herr, Herr, mach eus uuf! Er git zur Antwort: Ich kenn eu nöd. Drum: Wached, dänn ihr wüssed weder de Tag no d Stund.",
-    "caption_de": "Zu spät: Die törichten Jungfrauen stehen vor der verschlossenen Tür (Mauer mit Querriegel) und bitten: Mach auf! – Darum wacht (offenes Auge), denn die Stunde ist unbekannt (Sanduhr).",
-    "caption_gsw": "Z spaat: Di tumme Jungfraue staand vor de verschlossne Tür (Muur mit Querriegel) und bitted: Mach uuf! – Drum wached (offes Aug), dänn d Stund isch unbekannt (Sanduhr).",
+    "caption_de": "Zu spät: Die törichten Jungfrauen (erloschene Lampe) stehen vor dem Haus mit geschlossener Tür und bitten: Mach auf! (Mauer mit Tür und Querriegel, Fragezeichen).",
+    "caption_gsw": "Z spaat: Di tumme Jungfraue (verlöschti Lampe) staand vor em Huus mit zuener Tür und bitted: Mach uuf! (Muur mit Tür und Querriegel, Fragezeiche).",
     "stage": {
      "hold": {
       "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": "FIG-OBJ-LAMPE-AUS"
@@ -166,10 +159,10 @@
       "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": "worried"
      },
      "x": {
-      "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": 60
+      "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": 70
      },
-     "air_x": 112,
-     "air_y": 50
+     "back_side": "right",
+     "before": true
     }
    }
   ],
@@ -216,9 +209,6 @@
        "act"
       ]
      ],
-     "count": {
-      "FIG-OBJ-TALENT": 3
-     },
      "mood": {
       "FIG-ROLLE-GUTSHERR": "calm",
       "FIG-GRUPPE-DIENER": "calm",
@@ -228,6 +218,10 @@
       "FIG-ROLLE-GUTSHERR": 26,
       "FIG-GRUPPE-DIENER": 82,
       "FIG-ROLLE-DIENER": 128
+     },
+     "hold": {
+      "FIG-GRUPPE-DIENER": "FIG-OBJ-TALENT",
+      "FIG-ROLLE-DIENER": "FIG-OBJ-TALENT"
      }
     }
    },
@@ -325,17 +319,14 @@
     "objects": [
      "FIG-OBJ-TALENT"
     ],
-    "signs": [
-     "FIG-ZEICHEN-FINSTERNIS"
-    ],
+    "signs": [],
     "speech": [
      {
       "from": "FIG-ROLLE-DIENER",
       "to": "FIG-ROLLE-GUTSHERR",
       "icons": [
        "FIG-ZEICHEN-SORGE",
-       "FIG-OBJ-GRUBE",
-       "FIG-OBJ-TALENT"
+       "FIG-OBJ-GRUBE"
       ]
      },
      {
@@ -343,26 +334,26 @@
       "to": "FIG-ROLLE-DIENER",
       "icons": [
        "FIG-OBJ-TALENT",
+       "FIG-ZEICHEN-GEBEN",
        "FIG-GRUPPE-DIENER"
       ]
      }
     ],
     "action_de": "Der dritte sagt, er habe sich vor dem harten Herrn gefürchtet und das Talent vergraben; hier habe er das Seine. Der Herr nennt ihn böse und faul, lässt ihm das Talent nehmen und dem mit den zehn geben und ihn in die äussere Finsternis hinauswerfen.",
     "action_gsw": "De dritt seit, er heg Angscht gha vor em herte Herr und s Talänt vergrabe; da heg er s Sine. De Herr nännt en bös und fuul, laat em s Talänt wäggnää und em gää, wo zäh hät, und en i d üsseri Finsternis uusegheie.",
-    "caption_de": "Vergraben: Der dritte Knecht bringt den einen Sack zurück: aus Angst vergraben (Schweisstropfen, Grube, Sack); der Herr: Gebt den Sack den anderen Knechten (Sack, Knechte); dunkle Wolke der Finsternis.",
-    "caption_gsw": "Vergrabe: De dritt Chnächt bringt de ei Sack zrugg: us Angscht vergrabe (Schweisstropfe, Loch, Sack); de Herr: Gänd de Sack de andere Chnächt (Sack, Chnächt); dunkli Wulche vo de Finsternis.",
+    "caption_de": "Vergraben: Der dritte Knecht bringt den einen Sack zurück (Sack in der Hand): aus Angst vergraben (Schweisstropfen, Grube); der Herr: Gebt den Sack den anderen Knechten (Sack, Hand mit Gegenstand, Knechte).",
+    "caption_gsw": "Vergrabe: De dritt Chnächt bringt de ei Sack zrugg (Sack i de Hand): us Angscht vergrabe (Schweisstropfe, Loch); de Herr: Gänd de Sack de andere Chnächt (Sack, Hand mit öppisem, Chnächt).",
     "stage": {
      "mood": {
       "FIG-ROLLE-DIENER": "worried",
       "FIG-ROLLE-GUTSHERR": "earnest"
      },
-     "at": {
-      "FIG-ZEICHEN-FINSTERNIS": "FIG-ROLLE-DIENER"
+     "hold": {
+      "FIG-ROLLE-DIENER": "FIG-OBJ-TALENT"
      },
-     "floor_side": "left",
      "x": {
-      "FIG-ROLLE-DIENER": 66,
-      "FIG-ROLLE-GUTSHERR": 140
+      "FIG-ROLLE-DIENER": 50,
+      "FIG-ROLLE-GUTSHERR": 136
      }
     }
    }
@@ -384,7 +375,6 @@
     "n": 1,
     "reference": "MAT.25.31-MAT.25.33",
     "figures": [
-     "FIG-GRUPPE-ENGEL",
      "FIG-JESUS",
      "FIG-GRUPPE-VOELKER"
     ],
@@ -399,8 +389,8 @@
     "speech": [],
     "action_de": "Wenn der Menschensohn in seiner Herrlichkeit mit allen Engeln kommt, wird er sich auf den Thron seiner Herrlichkeit setzen; alle Völker werden vor ihm versammelt, und er wird sie scheiden wie ein Hirt die Schafe von den Böcken.",
     "action_gsw": "Wänn de Mänscheson i sinere Herrlichkeit mit allne Ängel chunnt, wird er sich uf de Thron vo sinere Herrlichkeit setze; ali Völker wärded vor em versammlet, und er wird si uusenand neh wie en Hirt d Schaf vo de Böck.",
-    "caption_de": "Ankündigung: Der Menschensohn (Jesus) sitzt auf dem goldenen Thron, neben ihm Engel (Flügel); vor ihm die Völker; er scheidet sie wie Schafe von Böcken (Schaf, Bock, Bruch mit zwei Pfeilen).",
-    "caption_gsw": "Aakündigung: De Mänscheson (Jesus) sitzt uf em guldige Thron, näbed em Ängel (Flügel); vor em d Völker; er trännt si wie Schaf vo Böck (Schaf, Bock, Bruch mit zwei Pfiil).",
+    "caption_de": "Ankündigung: Der Menschensohn (Jesus) sitzt auf dem goldenen Thron; vor ihm die Völker; er scheidet sie, wie ein Hirt die Schafe von den Böcken scheidet (Schaf, Bock, Bruch mit zwei Pfeilen).",
+    "caption_gsw": "Aakündigung: De Mänschesohn (Jesus) sitzt uf em guldige Thron; vor em d Völker; er scheidet si, wie en Hirt d Schaf vo de Böck scheidet (Schaf, Bock, Bruch mit zwei Pfiil).",
     "stage": {
      "on": {
       "FIG-JESUS": "FIG-OBJ-THRON"
@@ -411,18 +401,17 @@
      "back_side": "left",
      "before": true,
      "x": {
-      "FIG-GRUPPE-ENGEL": 70,
-      "FIG-GRUPPE-VOELKER": 150
+      "FIG-GRUPPE-VOELKER": 96
      },
      "floor_x": {
-      "FIG-OBJ-SCHAF": 92,
-      "FIG-OBJ-BOCK": 124
+      "FIG-OBJ-SCHAF": 120,
+      "FIG-OBJ-BOCK": 150
      },
      "mood": {
       "FIG-GRUPPE-VOELKER": "pensive"
      },
-     "air_x": 98,
-     "air_y": 66
+     "air_x": 134,
+     "air_y": 70
     }
    },
    {
@@ -433,7 +422,9 @@
      "FIG-GRUPPE-VOELKER",
      "FIG-ROLLE-ARMER"
     ],
-    "objects": [],
+    "objects": [
+     "FIG-OBJ-SCHAF"
+    ],
     "signs": [
      "FIG-ZEICHEN-GUTE-WERKE"
     ],
@@ -457,8 +448,8 @@
     ],
     "action_de": "Der König wird zu denen zu seiner Rechten sagen: Erbt das Reich, denn ich war hungrig, durstig, fremd, nackt, krank und im Gefängnis, und ihr habt mir geholfen; was ihr einem meiner geringsten Brüder getan habt, habt ihr mir getan.",
     "action_gsw": "De König wird zu dene uf sinere rächte Siite säge: Erbed s Riich, dänn ich bi hungrig, durschtig, fremd, blutt, chrank und im Gfängnis gsii, und ihr händ mer ghulfe; was ihr eim vo mine gringschte Brüeder ta händ, händ ihr mir ta.",
-    "caption_de": "Zur Rechten: Der König (Jesus) sagt den Gesegneten: Was ihr dem Armen Gutes tatet (Armer, Hand mit Brot und Herz), habt ihr mir getan (Jesus) – erbt das Reich der Himmel (Krone mit Strahlen); daneben ein Armer mit Stock.",
-    "caption_gsw": "Uf de rächte Siite: De König (Jesus) seit de Gsägnete: Was ihr em Arme Guets ta händ (Arme, Hand mit Brot und Härz), händ ihr mir ta (Jesus) – erbed s Riich vo de Himmel (Chrone mit Strahle); dernäbed en Arme mit Stock.",
+    "caption_de": "Zur Rechten (Schaf): Der König (Jesus) sagt den Gesegneten: Was ihr dem Armen Gutes tatet (Armer, Hand mit Brot und Herz), habt ihr mir getan (Jesus) – erbt das Reich der Himmel (Krone mit Strahlen); daneben ein Armer (graues Gewand).",
+    "caption_gsw": "Zur Rächte (Schaf): De König (Jesus) seit de Gsägnete: Was ihr em Arme Guets ta händ (Arme, Hand mit Brot und Härz), händ ihr mir ta (Jesus) – erbed s Riich vo de Himmel (Chrone mit Straale); dänebe en Arme (graus Gwand).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-VOELKER": "surprised",
@@ -479,6 +470,9 @@
       "FIG-JESUS": 30,
       "FIG-GRUPPE-VOELKER": 96,
       "FIG-ROLLE-ARMER": 160
+     },
+     "hold": {
+      "FIG-GRUPPE-VOELKER": "FIG-OBJ-SCHAF"
      }
     }
    },
@@ -490,10 +484,10 @@
      "FIG-GRUPPE-VOELKER",
      "FIG-ROLLE-ARMER"
     ],
-    "objects": [],
-    "signs": [
-     "FIG-ZEICHEN-NEIN"
+    "objects": [
+     "FIG-OBJ-BOCK"
     ],
+    "signs": [],
     "speech": [
      {
       "from": "FIG-JESUS",
@@ -514,8 +508,8 @@
     ],
     "action_de": "Zu denen zur Linken wird er sagen: Geht weg von mir in das ewige Feuer, denn ihr habt mir das alles nicht getan; was ihr einem dieser Geringsten nicht getan habt, habt ihr mir auch nicht getan.",
     "action_gsw": "Zu dene uf de linke Siite wird er säge: Gönd wäg vo mir is ewig Füür, dänn ihr händ mer das alles nöd ta; was ihr eim vo dene Gringschte nöd ta händ, händ ihr mir au nöd ta.",
-    "caption_de": "Zur Linken: Der König (Jesus) sagt den anderen: Was ihr dem Armen nicht getan habt (Armer, rotes X), habt ihr mir nicht getan (Jesus) – ins Feuer (Flammen).",
-    "caption_gsw": "Uf de linke Siite: De König (Jesus) seit de andere: Was ihr em Arme nöd ta händ (Arme, roots X), händ ihr mir nöd ta (Jesus) – is Füür (Flamme).",
+    "caption_de": "Zur Linken (Bock): Der König (Jesus) sagt den anderen: Was ihr dem Armen nicht getan habt (Armer, rotes X), habt ihr mir nicht getan (Jesus) – ins Feuer (Flammen).",
+    "caption_gsw": "Zur Linke (Bock): De König (Jesus) seit de andere: Was ihr em Arme nöd ta händ (Arme, roots X), händ ihr mir nöd ta (Jesus) – is Füür (Flamme).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-VOELKER": "worried",
@@ -529,16 +523,20 @@
       "FIG-JESUS": 30,
       "FIG-GRUPPE-VOELKER": 96,
       "FIG-ROLLE-ARMER": 160
+     },
+     "hold": {
+      "FIG-GRUPPE-VOELKER": "FIG-OBJ-BOCK"
      }
     }
    },
    {
     "n": 4,
     "reference": "MAT.25.46",
-    "figures": [
-     "FIG-GRUPPE-VOELKER"
+    "figures": [],
+    "objects": [
+     "FIG-OBJ-SCHAF",
+     "FIG-OBJ-BOCK"
     ],
-    "objects": [],
     "signs": [
      "FIG-ZEICHEN-LEBEN",
      "FIG-ZEICHEN-FEUER"
@@ -546,29 +544,17 @@
     "speech": [],
     "action_de": "Diese werden weggehen in ewige Strafe, die Gerechten aber in ewiges Leben.",
     "action_gsw": "Die wärded wäggaa i di ewig Straf, d Grächte aber is ewig Läbe.",
-    "caption_de": "Zwei Wege: Die einen gehen ins ewige Leben (grüner Baum im goldenen Ring), die anderen in die ewige Strafe (Flammen).",
-    "caption_gsw": "Zwei Wäg: Di einte gönd is ewig Läbe (grüene Baum im guldige Ring), di andere i di ewig Straf (Flamme).",
+    "caption_de": "Zwei Wege: Die einen (Schaf) kommen ins ewige Leben (grüner Baum im goldenen Ring über dem Schaf), die anderen (Bock) in die ewige Strafe (Flammen über dem Bock).",
+    "caption_gsw": "Zwei Wäg: Di einte (Schaf) chömed is ewig Läbe (grüene Baum imene guldige Ring über em Schaf), di andere (Bock) i di ewig Straf (Flamme über em Bock).",
     "stage": {
-     "mood": {
-      "FIG-GRUPPE-VOELKER": "pensive"
+     "floor_x": {
+      "FIG-OBJ-SCHAF": 36,
+      "FIG-OBJ-BOCK": 120
      },
-     "x": {
-      "FIG-GRUPPE-VOELKER": 93
-     },
-     "air_x": 40,
-     "air_y": 30,
-     "arrows": [
-      [
-       "FIG-GRUPPE-VOELKER",
-       "FIG-ZEICHEN-LEBEN",
-       "go"
-      ],
-      [
-       "FIG-GRUPPE-VOELKER",
-       "FIG-ZEICHEN-FEUER",
-       "go"
-      ]
-     ]
+     "at": {
+      "FIG-ZEICHEN-LEBEN": "FIG-OBJ-SCHAF",
+      "FIG-ZEICHEN-FEUER": "FIG-OBJ-BOCK"
+     }
     }
    }
   ],
@@ -601,8 +587,8 @@
     "speech": [],
     "action_de": "Von zehn Jungfrauen gehen nur die fünf klugen, die Öl mitgenommen haben, mit dem Bräutigam zur Hochzeit hinein; die Tür wird verschlossen.",
     "action_gsw": "Vo zäh Jungfraue gönd nur di füüf gschiide, wo Öl mitgnaa händ, mit em Brüütigam a d Hochzyt ine; d Tür wird zuegschlosse.",
-    "caption_de": "Die klugen Jungfrauen: Mit brennenden Lampen gehen sie mit dem Bräutigam (violettes Festgewand, goldener Kranz) zur Hochzeit hinein (offenes Haus mit Licht, Girlande).",
-    "caption_gsw": "Di gschiide Jungfraue: Mit brännende Lampe gönd si mit em Brüütigam (violetts Feschtgwand, guldige Chranz) a d Hochzyt ine (offes Huus mit Liecht, Girlande).",
+    "caption_de": "Die klugen Jungfrauen: Mit brennenden Lampen gehen sie mit dem Bräutigam (violettes Festgewand, goldener Kranz) zur Hochzeit (offenes Haus mit Licht, darüber die Girlande).",
+    "caption_gsw": "Di gschiide Jungfraue: Mit brännende Lampe gönd si mit em Brüütigam (violetts Feschtgwand, guldige Chranz) a d Hochzyt (offes Huus mit Liecht, drüber d Girlande).",
     "stage": {
      "hold": {
       "FIG-GRUPPE-JUNGFRAUEN-KLUG": "FIG-OBJ-LAMPE"
@@ -611,14 +597,10 @@
       "FIG-GRUPPE-JUNGFRAUEN-KLUG": "delight",
       "FIG-ROLLE-BRAEUTIGAM": "smile"
      },
-     "arrows": [
-      [
-       "FIG-GRUPPE-JUNGFRAUEN-KLUG",
-       "FIG-ORT-HAUS-OFFEN",
-       "go"
-      ]
-     ],
-     "night": true
+     "night": true,
+     "at": {
+      "FIG-ZEICHEN-HOCHZEIT": "FIG-ORT-HAUS-OFFEN"
+     }
     }
    },
    {
@@ -626,7 +608,6 @@
     "reference": "MAT.25.14-MAT.25.30",
     "figures": [
      "FIG-GRUPPE-DIENER",
-     "FIG-ROLLE-GUTSHERR",
      "FIG-ROLLE-DIENER"
     ],
     "objects": [
@@ -639,28 +620,25 @@
     "speech": [],
     "action_de": "Ein Herr vertraut seinen Knechten Talente an; zwei vermehren sie, der dritte vergräbt sein Talent aus Furcht.",
     "action_gsw": "En Herr vertrout sine Chnächt Talänt aa; zwei vermehred s, de dritt vergrabt sis Talänt us Angscht.",
-    "caption_de": "Die Talente: Zwei Knechte haben das Geld vermehrt (Säcke, grüner Pfeil); der dritte (mit Schürze) hat seinen Sack vergraben (Grube).",
-    "caption_gsw": "D Talänt: Zwei Chnächt händ s Gäld vermehrt (Säck, grüene Pfiil); de dritt (mit Schürze) hät sin Sack vergrabe (Loch).",
+    "caption_de": "Die Talente: Die ersten Knechte (links) haben das Geld vermehrt (Sack, Münzen mit grünem Pfeil nach oben); der dritte (mit Schürze) hat seinen Sack vergraben (Grube).",
+    "caption_gsw": "D Talänt: Di erschte Chnächt (links) händ s Gäld vermehrt (Sack, Münze mit grüenem Pfiil uufe); de dritt (mit Schürze) hät sin Sack vergrabe (Loch).",
     "stage": {
      "at": {
       "FIG-ZEICHEN-GEWINN": "FIG-GRUPPE-DIENER"
      },
-     "count": {
-      "FIG-OBJ-TALENT": 2
+     "hold": {
+      "FIG-GRUPPE-DIENER": "FIG-OBJ-TALENT"
      },
      "mood": {
       "FIG-GRUPPE-DIENER": "delight",
-      "FIG-ROLLE-GUTSHERR": "calm",
       "FIG-ROLLE-DIENER": "worried"
      },
      "x": {
-      "FIG-GRUPPE-DIENER": 30,
-      "FIG-ROLLE-GUTSHERR": 82,
-      "FIG-ROLLE-DIENER": 126
+      "FIG-GRUPPE-DIENER": 48,
+      "FIG-ROLLE-DIENER": 112
      },
      "floor_x": {
-      "FIG-OBJ-TALENT": 46,
-      "FIG-OBJ-GRUBE": 146
+      "FIG-OBJ-GRUBE": 144
      }
     }
    },
@@ -668,7 +646,6 @@
     "n": 3,
     "reference": "MAT.25.31-MAT.25.46",
     "figures": [
-     "FIG-GRUPPE-ENGEL",
      "FIG-JESUS",
      "FIG-GRUPPE-VOELKER"
     ],
@@ -683,8 +660,8 @@
     "speech": [],
     "action_de": "Jesus kündigt an, dass der Menschensohn als König auf dem Thron alle Völker richten und scheiden wird wie ein Hirt die Schafe von den Böcken.",
     "action_gsw": "De Jesus kündigt aa, dass de Mänscheson als König uf em Thron ali Völker richte und uusenand neh wird wie en Hirt d Schaf vo de Böck.",
-    "caption_de": "Das Gericht (angekündigt): Der Menschensohn (Jesus) auf dem Thron, mit Engeln; er scheidet die Völker wie Schafe von Böcken (Schaf, Bock, Bruch mit Pfeilen).",
-    "caption_gsw": "S Gricht (aakündigt): De Mänscheson (Jesus) uf em Thron, mit Ängel; er trännt d Völker wie Schaf vo Böck (Schaf, Bock, Bruch mit Pfiil).",
+    "caption_de": "Das Gericht (angekündigt): Der Menschensohn (Jesus) auf dem Thron; er scheidet die Völker wie Schafe von Böcken (Schaf, Bock, Bruch mit Pfeilen).",
+    "caption_gsw": "S Gricht (aakündigt): De Mänschesohn (Jesus) uf em Thron; er scheidet d Völker wie Schaf vo Böck (Schaf, Bock, Bruch mit Pfiil).",
     "stage": {
      "on": {
       "FIG-JESUS": "FIG-OBJ-THRON"
@@ -695,18 +672,17 @@
      "back_side": "left",
      "before": true,
      "x": {
-      "FIG-GRUPPE-ENGEL": 70,
-      "FIG-GRUPPE-VOELKER": 150
+      "FIG-GRUPPE-VOELKER": 96
      },
      "floor_x": {
-      "FIG-OBJ-SCHAF": 92,
-      "FIG-OBJ-BOCK": 124
+      "FIG-OBJ-SCHAF": 120,
+      "FIG-OBJ-BOCK": 150
      },
      "mood": {
       "FIG-GRUPPE-VOELKER": "pensive"
      },
-     "air_x": 98,
-     "air_y": 66
+     "air_x": 134,
+     "air_y": 70
     }
    }
   ],
@@ -833,19 +809,12 @@
     "speech": [],
     "action_de": "Im Haus Simons des Aussätzigen in Betanien tritt eine Frau mit einem Alabastergefäss voll kostbarem Salböl zu Jesus und giesst es ihm über den Kopf, während er zu Tisch liegt.",
     "action_gsw": "Im Huus vom Simon, em Uussätzige, z Betanie chunnt e Frau mit eme Alabaschtergfäss voll tüürem Salböl zum Jesus und schüttets em über de Chopf, während er am Tisch liit.",
-    "caption_de": "Salbung: Eine Frau giesst Jesus Salböl aus dem Alabastergefäss über den Kopf (Gefäss, Bogen; Ölhorn mit goldenem Tropfen über Jesus); hinten das Haus.",
-    "caption_gsw": "Salbig: E Frau schüttet em Jesus Salböl us em Alabaschtergfäss über de Chopf (Gfäss, Boge; Ölhorn mit guldigem Tropfe über em Jesus); hine s Huus.",
+    "caption_de": "Salbung: Eine Frau giesst Jesus Salböl aus dem Alabastergefäss über den Kopf (Gefäss in ihrer Hand; Ölhorn mit goldenem Tropfen über Jesus); hinten das Haus.",
+    "caption_gsw": "Salbig: E Frau schüttet em Jesus Salböl us em Alabaschtergfäss über de Chopf (Gfäss i ihrere Hand; Ölhorn mit guldigem Tropfe über em Jesus); hine s Huus.",
     "stage": {
      "hold": {
       "FIG-ROLLE-FRAU": "FIG-OBJ-SALBGEFAESS"
      },
-     "arrows": [
-      [
-       "FIG-ROLLE-FRAU",
-       "FIG-JESUS",
-       "act"
-      ]
-     ],
      "at": {
       "FIG-ZEICHEN-SALBUNG": "FIG-JESUS"
      },
@@ -856,7 +825,11 @@
      "pose": {
       "FIG-JESUS": "sit"
      },
-     "back_side": "right"
+     "back_side": "right",
+     "x": {
+      "FIG-ROLLE-FRAU": 48,
+      "FIG-JESUS": 86
+     }
     }
    },
    {
@@ -1101,7 +1074,11 @@
       "FIG-GRUPPE-ZWOELF": "pensive",
       "FIG-JESUS": "calm"
      },
-     "back_side": "right"
+     "back_side": "right",
+     "x": {
+      "FIG-GRUPPE-ZWOELF": 42,
+      "FIG-JESUS": 120
+     }
     }
    },
    {
@@ -1111,7 +1088,9 @@
      "FIG-JESUS",
      "FIG-GRUPPE-ZWOELF"
     ],
-    "objects": [],
+    "objects": [
+     "FIG-OBJ-BROT"
+    ],
     "signs": [
      "FIG-ZEICHEN-TRAUER",
      "FIG-ZEICHEN-FRAGEN"
@@ -1129,8 +1108,8 @@
     ],
     "action_de": "Am Abend liegt Jesus mit den Zwölf zu Tisch und sagt beim Essen: Einer von euch wird mich ausliefern. Sie werden sehr traurig, und einer nach dem anderen fragt: Ich bin es doch nicht, Herr?",
     "action_gsw": "Am Abig liit de Jesus mit de Zwölf am Tisch und seit bim Ässe: Eine vo eu wird mich uusliferen. Si wärded sehr truurig, und eine nach em andere fraagt: Ich bis doch nöd, Herr?",
-    "caption_de": "Ansage: Beim Mahl am Abend sagt Jesus: Einer von euch wird mich ausliefern (ein Jünger, gefesselte Hände, Jesus); die Jünger fragen traurig (Tränen, Fragezeichen).",
-    "caption_gsw": "Aasag: Bim Znacht seit de Jesus: Eine vo eu wird mich uusliferen (en Jünger, gfessleti Händ, Jesus); d Jünger fraaged truurig (Träne, Fragezeiche).",
+    "caption_de": "Ansage beim Mahl: Am Abend, beim Essen (Brot in der Hand von Jesus), sagt Jesus: Einer von euch wird mich ausliefern (ein Jünger, gefesselte Hände, Jesus); die Jünger fragen traurig (Tränen, Fragezeichen).",
+    "caption_gsw": "Aasag bim Znacht: Am Abig, bim Ässe (Brot i de Hand vom Jesus), seit de Jesus: Eine vo eu wird mich uusliferen (en Jünger, gfessleti Händ, Jesus); d Jünger fraaged truurig (Träne, Fragezeiche).",
     "stage": {
      "signs_who": {
       "FIG-ZEICHEN-TRAUER": [
@@ -1144,7 +1123,10 @@
       "FIG-GRUPPE-ZWOELF": "worried",
       "FIG-JESUS": "earnest"
      },
-     "night": true
+     "night": true,
+     "hold": {
+      "FIG-JESUS": "FIG-OBJ-BROT"
+     }
     }
    },
    {
@@ -1299,8 +1281,8 @@
     "n": 3,
     "reference": "MAT.26.30",
     "figures": [
-     "FIG-JESUS",
-     "FIG-GRUPPE-ZWOELF"
+     "FIG-GRUPPE-ZWOELF",
+     "FIG-JESUS"
     ],
     "objects": [
      "FIG-ORT-BERG"
@@ -1314,7 +1296,7 @@
     "stage": {
      "arrows": [
       [
-       "FIG-GRUPPE-ZWOELF",
+       "FIG-JESUS",
        "FIG-ORT-BERG",
        "go"
       ]
@@ -1324,9 +1306,9 @@
       "FIG-GRUPPE-ZWOELF": "pensive",
       "FIG-JESUS": "calm"
      },
-     "pose": {
-      "FIG-JESUS": "away",
-      "FIG-GRUPPE-ZWOELF": "away"
+     "x": {
+      "FIG-GRUPPE-ZWOELF": 26,
+      "FIG-JESUS": 64
      },
      "night": true
     }
@@ -1368,14 +1350,16 @@
       "to": "FIG-GRUPPE-ZWOELF",
       "icons": [
        "FIG-ZEICHEN-AUFERSTEHUNG",
+       "FIG-JESUS",
+       "FIG-ZEICHEN-WEG",
        "FIG-ORT-SEE"
       ]
      }
     ],
     "action_de": "Jesus sagt den Jüngern: Ihr alle werdet in dieser Nacht an mir Anstoss nehmen; denn es steht geschrieben: Die Schafe der Herde werden zerstreut werden. Nach meiner Auferweckung gehe ich euch nach Galiläa voraus.",
     "action_gsw": "De Jesus seit de Jünger: Ihr ali wärded i dere Nacht a mir Aastoss neh; dänn es staht gschribe: D Schaf vo de Herde wärded verstreut. Nach minere Uferweckig gang ich eu vorus uf Galiläa.",
-    "caption_de": "Ankündigung: Die Schafe werden zerstreut (Schaf, Pfeile nach allen Seiten); nach der Auferweckung geht Jesus voraus nach Galiläa (offenes Grab mit Pfeil, See).",
-    "caption_gsw": "Aakündigung: D Schaf wärded verstreut (Schaf, Pfiil uf ali Siite); nach de Uferweckig gaht de Jesus vorus uf Galiläa (offes Grab mit Pfiil, See).",
+    "caption_de": "Ankündigung: Die Schafe werden zerstreut (Schaf, Pfeile nach allen Seiten); nach der Auferweckung (offenes Grab mit Pfeil) geht Jesus voraus nach Galiläa (Jesus, Pfad mit Pfeil, See).",
+    "caption_gsw": "Aakündigung: D Schaf werded verströit (Schaf, Pfiil uf ali Siite); nach de Uferweckig (offes Grab mit Pfiil) gaat de Jesus vorus uf Galiläa (Jesus, Pfad mit Pfiil, See).",
     "stage": {
      "mood": {
       "FIG-JESUS": "earnest",
@@ -1607,10 +1591,10 @@
     "n": 3,
     "reference": "MAT.26.40-MAT.26.44",
     "figures": [
-     "FIG-JESUS",
-     "FIG-PETRUS",
+     "FIG-JOHANNES-ZEBEDAEUS",
      "FIG-JAKOBUS-ZEBEDAEUS",
-     "FIG-JOHANNES-ZEBEDAEUS"
+     "FIG-PETRUS",
+     "FIG-JESUS"
     ],
     "objects": [
      "FIG-ORT-GARTEN"
@@ -1645,11 +1629,21 @@
       "FIG-JOHANNES-ZEBEDAEUS": "sleep"
      },
      "at": {
-      "FIG-ZEICHEN-SCHLAFEN": "FIG-JAKOBUS-ZEBEDAEUS"
+      "FIG-ZEICHEN-SCHLAFEN": [
+       "FIG-PETRUS",
+       "FIG-JAKOBUS-ZEBEDAEUS",
+       "FIG-JOHANNES-ZEBEDAEUS"
+      ]
      },
      "back_side": "left",
      "before": true,
-     "night": true
+     "night": true,
+     "x": {
+      "FIG-JOHANNES-ZEBEDAEUS": 24,
+      "FIG-JAKOBUS-ZEBEDAEUS": 68,
+      "FIG-PETRUS": 112,
+      "FIG-JESUS": 162
+     }
     }
    },
    {
@@ -1715,20 +1709,19 @@
      "FIG-JUDAS-ISKARIOT"
     ],
     "objects": [
-     "FIG-OBJ-SCHWERT"
+     "FIG-OBJ-FESSEL"
     ],
     "signs": [
-     "FIG-ZEICHEN-KUSS",
-     "FIG-ZEICHEN-AUSLIEFERN"
+     "FIG-ZEICHEN-KUSS"
     ],
     "speech": [],
     "action_de": "Judas kommt mit einer grossen Menge mit Schwertern und Knüppeln, von den Hohepriestern und Ältesten; er küsst Jesus als verabredetes Zeichen, und sie ergreifen ihn.",
     "action_gsw": "De Judas chunnt mit ere grosse Mängi mit Schwärter und Chnüppel, vo de Hohepriester und Ältischte; er git em Jesus es Müntschi als abgmachts Zeiche, und si packed en.",
-    "caption_de": "Kuss: Judas küsst Jesus als Zeichen (Lippen); die Menge mit Schwert ergreift ihn (Bogen, gefesselte Hände).",
-    "caption_gsw": "Müntschi: De Judas git em Jesus es Müntschi als Zeiche (Lippe); d Mängi mit Schwärt packt en (Boge, gfessleti Händ).",
+    "caption_de": "Kuss: Judas küsst Jesus als Zeichen (Lippen); die Menge ergreift ihn (Bogen; gefesselte Hände).",
+    "caption_gsw": "Müntschi: De Judas git em Jesus es Müntschi als Zeiche (Lippe); d Mängi packt en (Boge; gfessleti Händ).",
     "stage": {
      "hold": {
-      "FIG-GRUPPE-MENGE": "FIG-OBJ-SCHWERT"
+      "FIG-JESUS": "FIG-OBJ-FESSEL"
      },
      "mood": {
       "FIG-GRUPPE-MENGE": "earnest",
@@ -1736,9 +1729,9 @@
       "FIG-JESUS": "calm"
      },
      "x": {
-      "FIG-GRUPPE-MENGE": 40,
-      "FIG-JESUS": 104,
-      "FIG-JUDAS-ISKARIOT": 146
+      "FIG-GRUPPE-MENGE": 34,
+      "FIG-JESUS": 98,
+      "FIG-JUDAS-ISKARIOT": 150
      },
      "arrows": [
       [
@@ -1749,9 +1742,6 @@
      ],
      "beside": {
       "FIG-ZEICHEN-KUSS": "FIG-JUDAS-ISKARIOT"
-     },
-     "at": {
-      "FIG-ZEICHEN-AUSLIEFERN": "FIG-JESUS"
      },
      "night": true
     }
@@ -1787,8 +1777,8 @@
     ],
     "action_de": "Einer von denen, die bei Jesus sind, zieht das Schwert und schlägt dem Knecht des Hohepriesters das Ohr ab. Jesus sagt: Steck dein Schwert zurück! Ich könnte meinen Vater um mehr als zwölf Legionen Engel bitten; doch wie würden dann die Schriften erfüllt?",
     "action_gsw": "Eine vo dene, wo bim Jesus sind, zieht s Schwärt und haut em Chnächt vom Hohepriester s Ohr ab. De Jesus seit: Steck dis Schwärt ii! Ich chönnt min Vatter um meh als zwölf Legione Ängel bitte; aber wie würded dänn d Schrifte erfüllt?",
-    "caption_de": "Kein Schwert: Ein Jünger hat das Schwert gezogen; Jesus sagt: Steck es weg (Schwert, roter Kreis mit Balken) – der Vater gäbe ihm Engel, doch die Schriften müssen sich erfüllen (Engel mit Flügeln, Schriftrolle).",
-    "caption_gsw": "Kei Schwärt: En Jünger hät s Schwärt zoge; de Jesus seit: Steck s wäg (Schwärt, rote Kreis mit Balke) – de Vatter würd em Ängel gää, aber d Schrifte müend sich erfülle (Ängel mit Flügel, Schriftrolle).",
+    "caption_de": "Kein Schwert: Ein Jünger hat ein Schwert gezogen (Schwert neben ihm); Jesus sagt: Steck es weg (Schwert, roter Kreis mit Balken) – der Vater gäbe ihm Engel, doch die Schriften müssen sich erfüllen (Engel mit Flügeln, Schriftrolle).",
+    "caption_gsw": "Kei Schwärt: En Jünger hät es Schwärt zoge (Schwärt näbe dra); de Jesus seit: Steck s wäg (Schwärt, roote Chreis mit Balke) – de Vatter würd em Ängel gää, aber d Schrifte mönd sich erfüle (Ängel mit Flügel, Schriftrolle).",
     "stage": {
      "hold": {
       "FIG-ROLLE-JUENGER": "FIG-OBJ-SCHWERT"
@@ -1859,14 +1849,14 @@
       "FIG-GRUPPE-ZWOELF": "worried",
       "FIG-JESUS": "calm"
      },
-     "at": {
-      "FIG-ZEICHEN-FLIEHEN": "FIG-GRUPPE-ZWOELF"
-     },
      "x": {
       "FIG-JESUS": 34,
-      "FIG-GRUPPE-ZWOELF": 150
+      "FIG-GRUPPE-ZWOELF": 134
      },
-     "night": true
+     "night": true,
+     "beside": {
+      "FIG-ZEICHEN-FLIEHEN": "FIG-GRUPPE-ZWOELF"
+     }
     }
    }
   ],
@@ -1898,22 +1888,19 @@
     "speech": [],
     "action_de": "Jesus wird zu Kajafas, dem Hohepriester, geführt, wo die Schriftgelehrten und Ältesten versammelt sind; Petrus folgt von ferne bis in den Hof und setzt sich zu den Dienern, um den Ausgang zu sehen.",
     "action_gsw": "De Jesus wird zum Kajafas, em Hohepriester, gfüert, wo d Schriftgelehrte und d Ältischte versammlet sind; de Petrus chunnt vo wiitem nache bis in Hof und hockt zu de Diener, zum gseh, wies uusgaht.",
-    "caption_de": "Verhör bei Nacht: Jesus steht vor dem Hohen Rat; Petrus sitzt in einigem Abstand im Hof (gestrichelte Linie) und schaut zu.",
-    "caption_gsw": "Verhör i de Nacht: De Jesus staht vor em Hohe Root; de Petrus hockt imene Abstand im Hof (gstrichleti Linie) und luegt zue.",
+    "caption_de": "Verhör bei Nacht: Jesus steht vor dem Hohen Rat; Petrus ist ihm in einigem Abstand gefolgt (gestrichelte Linie) und schaut zu.",
+    "caption_gsw": "Verhör i de Nacht: De Jesus staat vor em Hoche Raat; de Petrus isch em mit es bitzli Abstand nachecho (gstrichleti Linie) und luegt zue.",
     "stage": {
      "mood": {
       "FIG-GRUPPE-HOHER-RAT": "earnest",
       "FIG-JESUS": "calm",
       "FIG-PETRUS": "worried"
      },
-     "pose": {
-      "FIG-PETRUS": "sit"
-     },
      "split": 2,
      "x": {
-      "FIG-GRUPPE-HOHER-RAT": 36,
-      "FIG-JESUS": 92,
-      "FIG-PETRUS": 160
+      "FIG-GRUPPE-HOHER-RAT": 34,
+      "FIG-JESUS": 88,
+      "FIG-PETRUS": 150
      },
      "night": true
     }
@@ -2023,7 +2010,7 @@
     "caption_gsw": "Urteil: De Kajafas hebt Gricht (Waag); de Hohi Root rüeft: Er hät de Tod verdient (Jesus, verschlossnigs Grab).",
     "stage": {
      "mood": {
-      "FIG-KAJAFAS": "surprised",
+      "FIG-KAJAFAS": "earnest",
       "FIG-GRUPPE-HOHER-RAT": "earnest",
       "FIG-JESUS": "calm"
      },
@@ -2089,17 +2076,15 @@
     "n": 2,
     "reference": "MAT.26.71-MAT.26.72",
     "figures": [
-     "FIG-ROLLE-MAGD",
+     "FIG-ROLLE-FRAU",
      "FIG-GRUPPE-MENGE",
      "FIG-PETRUS"
     ],
-    "objects": [
-     "FIG-ORT-STADTTOR"
-    ],
+    "objects": [],
     "signs": [],
     "speech": [
      {
-      "from": "FIG-ROLLE-MAGD",
+      "from": "FIG-ROLLE-FRAU",
       "to": "FIG-GRUPPE-MENGE",
       "icons": [
        "FIG-PETRUS",
@@ -2116,19 +2101,18 @@
     ],
     "action_de": "Am Tor sagt eine andere Magd zu den Leuten dort: Dieser war mit Jesus, dem Nazoräer! Wieder leugnet Petrus mit einem Eid: Ich kenne den Menschen nicht!",
     "action_gsw": "Bim Tor seit en anderi Magd zu de Lüüt det: Dä isch mit em Jesus, em Nazoräer, gsii! Wider stritet de Petrus s ab, mit eme Eid: Ich kenn dä Mänsch nöd!",
-    "caption_de": "Zweite Verleugnung: Am Tor (dunkler Torbogen) sagt eine andere Magd zu den Leuten: Er war mit Jesus (Petrus, Jesus); Petrus streitet wieder ab (getrennte Kettenglieder).",
-    "caption_gsw": "Zwöiti Verleugnig: Bim Tor (dunkle Torboge) seit en anderi Magd zu de Lüüt: Er isch mit em Jesus gsii (Petrus, Jesus); de Petrus stritet s wider ab (trännti Chettegliider).",
+    "caption_de": "Zweite Verleugnung: Beim Tor sagt eine andere Magd (Frau mit hellem Kopftuch) zu den Leuten: Er war mit Jesus (Petrus, Jesus); Petrus streitet wieder ab (getrennte Kettenglieder).",
+    "caption_gsw": "Zwöiti Verleugnig: Bim Tor seit en anderi Magd (Frau mit hällem Chopftuech) zu de Lüüt: Er isch mit em Jesus gsii (Petrus, Jesus); de Petrus stritet s wider ab (trännti Chettegliider).",
     "stage": {
      "mood": {
-      "FIG-ROLLE-MAGD": "earnest",
+      "FIG-ROLLE-FRAU": "earnest",
       "FIG-GRUPPE-MENGE": "pensive",
       "FIG-PETRUS": "worried"
      },
-     "back_side": "right",
      "x": {
-      "FIG-ROLLE-MAGD": 26,
-      "FIG-GRUPPE-MENGE": 74,
-      "FIG-PETRUS": 126
+      "FIG-ROLLE-FRAU": 26,
+      "FIG-GRUPPE-MENGE": 82,
+      "FIG-PETRUS": 146
      },
      "night": true
     }
@@ -2143,7 +2127,9 @@
     "objects": [
      "FIG-OBJ-HAHN"
     ],
-    "signs": [],
+    "signs": [
+     "FIG-ZEICHEN-SPRECHEN"
+    ],
     "speech": [
      {
       "from": "FIG-GRUPPE-MENGE",
@@ -2163,14 +2149,17 @@
     ],
     "action_de": "Die Umstehenden sagen: Wirklich, auch du bist einer von ihnen; deine Sprechweise verrät dich! Da fängt er an, sich zu verfluchen und zu schwören: Ich kenne den Menschen nicht! Sogleich kräht ein Hahn.",
     "action_gsw": "D Umstehende säged: Würkli, du bisch au eine vo dene; dini Sprooch verraatet dich! Dänn fangt er aa, sich z verflueche und z schwöre: Ich kenn dä Mänsch nöd! Grad dänn chräit en Güggel.",
-    "caption_de": "Dritte Verleugnung: Die Umstehenden: Du gehörst zu ihnen (Petrus, Jünger); Petrus streitet zum dritten Mal ab (getrennte Kettenglieder); da kräht der Hahn.",
-    "caption_gsw": "Dritti Verleugnig: D Umstehende: Du ghörsch zu dene (Petrus, Jünger); de Petrus stritet s zum dritte Mal ab (trännti Chettegliider); dänn chräit de Güggel.",
+    "caption_de": "Dritte Verleugnung: Die Umstehenden: Du gehörst zu ihnen (Petrus, Jünger); Petrus streitet zum dritten Mal ab (getrennte Kettenglieder); da kräht der Hahn (Schallbögen beim Hahn).",
+    "caption_gsw": "Dritti Verleugnig: D Lüüt drumume: Du ghörsch zu ene (Petrus, Jünger); de Petrus stritet s zum dritte Mal ab (trännti Chettegliider); da chräit de Güggel (Schallböge bim Güggel).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-MENGE": "earnest",
       "FIG-PETRUS": "worried"
      },
-     "night": true
+     "night": true,
+     "at": {
+      "FIG-ZEICHEN-SPRECHEN": "FIG-OBJ-HAHN"
+     }
     }
    },
    {
@@ -2240,31 +2229,15 @@
     "signs": [
      "FIG-ZEICHEN-SALBUNG"
     ],
-    "speech": [
-     {
-      "from": "FIG-JESUS",
-      "to": "FIG-ROLLE-FRAU",
-      "icons": [
-       "FIG-OBJ-SALBGEFAESS",
-       "FIG-ZEICHEN-TOD"
-      ]
-     }
-    ],
+    "speech": [],
     "action_de": "In Betanien giesst eine Frau Jesus kostbares Salböl über den Kopf; er deutet es als Vorbereitung für sein Begräbnis.",
     "action_gsw": "Z Betanie schüttet e Frau em Jesus tüürs Salböl über de Chopf; er düütet s als Vorbereitig für sini Beärdigung.",
-    "caption_de": "Salbung: Eine Frau salbt Jesus (Gefäss, Bogen; Ölhorn mit goldenem Tropfen) – für sein Begräbnis (Gefäss, verschlossenes Grab).",
-    "caption_gsw": "Salbig: E Frau salbet de Jesus (Gfäss, Boge; Ölhorn mit guldigem Tropfe) – für sini Beärdigung (Gfäss, verschlossnigs Grab).",
+    "caption_de": "Salbung: Eine Frau salbt Jesus in Betanien (Gefäss in ihrer Hand; Ölhorn mit goldenem Tropfen über Jesus).",
+    "caption_gsw": "Salbig: E Frau salbet de Jesus z Betanie (Gfäss i ihrere Hand; Ölhorn mit guldigem Tropfe über em Jesus).",
     "stage": {
      "hold": {
       "FIG-ROLLE-FRAU": "FIG-OBJ-SALBGEFAESS"
      },
-     "arrows": [
-      [
-       "FIG-ROLLE-FRAU",
-       "FIG-JESUS",
-       "act"
-      ]
-     ],
      "at": {
       "FIG-ZEICHEN-SALBUNG": "FIG-JESUS"
      },
@@ -2273,7 +2246,12 @@
      },
      "pose": {
       "FIG-JESUS": "sit"
-     }
+     },
+     "x": {
+      "FIG-ROLLE-FRAU": 48,
+      "FIG-JESUS": 86
+     },
+     "back_side": "right"
     }
    },
    {
@@ -2324,20 +2302,19 @@
     ],
     "objects": [
      "FIG-ORT-GARTEN",
-     "FIG-OBJ-SCHWERT"
+     "FIG-OBJ-FESSEL"
     ],
     "signs": [
-     "FIG-ZEICHEN-KUSS",
-     "FIG-ZEICHEN-AUSLIEFERN"
+     "FIG-ZEICHEN-KUSS"
     ],
     "speech": [],
     "action_de": "In Getsemani betet Jesus, während die Jünger schlafen; Judas liefert ihn mit einem Kuss aus.",
     "action_gsw": "Z Getsemani bätet de Jesus, während d Jünger schlafed; de Judas liferet en mit eme Müntschi uus.",
-    "caption_de": "Getsemani: Judas küsst Jesus (Lippen); die Menge mit Schwert ergreift ihn (Bogen, gefesselte Hände).",
-    "caption_gsw": "Getsemani: De Judas git em Jesus es Müntschi (Lippe); d Mängi mit Schwärt packt en (Boge, gfessleti Händ).",
+    "caption_de": "Getsemani: Judas küsst Jesus (Lippen); die Menge ergreift ihn (Bogen; gefesselte Hände).",
+    "caption_gsw": "Getsemani: De Judas git em Jesus es Müntschi (Lippe); d Mängi packt en (Boge; gfessleti Händ).",
     "stage": {
      "hold": {
-      "FIG-GRUPPE-MENGE": "FIG-OBJ-SCHWERT"
+      "FIG-JESUS": "FIG-OBJ-FESSEL"
      },
      "mood": {
       "FIG-GRUPPE-MENGE": "earnest",
@@ -2345,17 +2322,14 @@
       "FIG-JESUS": "calm"
      },
      "x": {
-      "FIG-GRUPPE-MENGE": 40,
-      "FIG-JESUS": 104,
-      "FIG-JUDAS-ISKARIOT": 146
+      "FIG-GRUPPE-MENGE": 34,
+      "FIG-JESUS": 98,
+      "FIG-JUDAS-ISKARIOT": 150
      },
      "back_side": "left",
      "before": true,
      "beside": {
       "FIG-ZEICHEN-KUSS": "FIG-JUDAS-ISKARIOT"
-     },
-     "at": {
-      "FIG-ZEICHEN-AUSLIEFERN": "FIG-JESUS"
      },
      "arrows": [
       [
@@ -2378,13 +2352,14 @@
     ],
     "signs": [
      "FIG-ZEICHEN-TRAUER",
-     "FIG-ZEICHEN-VERLEUGNEN"
+     "FIG-ZEICHEN-VERLEUGNEN",
+     "FIG-ZEICHEN-SPRECHEN"
     ],
     "speech": [],
     "action_de": "Vor dem Hohen Rat wird Jesus verurteilt; Petrus verleugnet ihn dreimal, und als der Hahn kräht, weint er bitterlich.",
     "action_gsw": "Vor em Hohe Root wird de Jesus verurteilt; de Petrus verleugnet en drüümal, und wo de Güggel chräit, brüelet er bitter.",
-    "caption_de": "Verleugnung: Petrus hat Jesus dreimal verleugnet (drei getrennte Kettenglieder); der Hahn kräht, Petrus weint (Träne).",
-    "caption_gsw": "Verleugnig: De Petrus hät de Jesus drüümal verleugnet (drüü trännti Chettegliider); de Güggel chräit, de Petrus brüelet (Träne).",
+    "caption_de": "Verleugnung: Petrus hat Jesus dreimal verleugnet (drei getrennte Kettenglieder); der Hahn kräht (Schallbögen beim Hahn), Petrus weint (Tränen).",
+    "caption_gsw": "Verleugnig: De Petrus hät de Jesus drüümal verleugnet (drüü trännti Chettegliider); de Güggel chräit (Schallböge bim Güggel), de Petrus brüelet (Träne).",
     "stage": {
      "signs_who": {
       "FIG-ZEICHEN-TRAUER": [
@@ -2403,7 +2378,10 @@
      "count": {
       "FIG-ZEICHEN-VERLEUGNEN": 3
      },
-     "night": true
+     "night": true,
+     "at": {
+      "FIG-ZEICHEN-SPRECHEN": "FIG-OBJ-HAHN"
+     }
     }
    }
   ],
@@ -2428,9 +2406,10 @@
      "FIG-JESUS",
      "FIG-PILATUS"
     ],
-    "objects": [],
+    "objects": [
+     "FIG-OBJ-FESSEL"
+    ],
     "signs": [
-     "FIG-ZEICHEN-AUSLIEFERN",
      "FIG-ZEICHEN-MORGEN"
     ],
     "speech": [],
@@ -2439,9 +2418,6 @@
     "caption_de": "Am Morgen (halbe Sonne mit Pfeil): Der Hohe Rat liefert den gefesselten Jesus (gefesselte Hände) an Pilatus aus (Toga mit Purpursaum; Bogen).",
     "caption_gsw": "Am Morge (halbi Sunne mit Pfiil): De Hohi Root liferet de gfesslet Jesus (gfessleti Händ) em Pilatus uus (Toga mit Purpursaum; Boge).",
     "stage": {
-     "at": {
-      "FIG-ZEICHEN-AUSLIEFERN": "FIG-JESUS"
-     },
      "arrows": [
       [
        "FIG-GRUPPE-HOHER-RAT",
@@ -2455,7 +2431,10 @@
       "FIG-PILATUS": "pensive"
      },
      "air_x": 150,
-     "air_y": 8
+     "air_y": 8,
+     "hold": {
+      "FIG-JESUS": "FIG-OBJ-FESSEL"
+     }
     }
    },
    {
@@ -2489,8 +2468,8 @@
     ],
     "action_de": "Als Judas sieht, dass Jesus verurteilt ist, reut es ihn; er bringt die dreissig Silberstücke zurück und sagt: Ich habe gesündigt, indem ich unschuldiges Blut ausgeliefert habe. Sie antworten: Was geht uns das an?",
     "action_gsw": "Wo de Judas gseht, dass de Jesus verurteilt isch, tuets em leid; er bringt di driissg Silberstück zrugg und seit: Ich ha gsündiget, ich ha unschuldigs Bluet uusgliferet. Si gänd zur Antwort: Was gaht eus das aa?",
-    "caption_de": "Reue: Judas bringt das Geld zurück: Ich habe gesündigt – unschuldiges Blut (dunkler Fleck, Jesus, Blutstropfen); die Hohepriester wehren ab (abgewandte Figur mit abwehrender Hand).",
-    "caption_gsw": "Rüü: De Judas bringt s Gäld zrugg: Ich ha gsündiget – unschuldigs Bluet (dunkle Fläcke, Jesus, Bluetstropfe); d Hohepriester wehred ab (abgwändti Figur mit abwehrender Hand).",
+    "caption_de": "Reue: Judas bringt das Geld zurück: Ich habe gesündigt – unschuldiges Blut (dunkler Fleck, Jesus, Blutstropfen); die Hohepriester wehren ab (abwehrende Hand).",
+    "caption_gsw": "Rüü: De Judas bringt s Gäld zrugg: Ich ha gsündiget – unschuldigs Bluet (dunkle Fläcke, Jesus, Bluetstropfe); d Hohepriester wehred ab (abwehrendi Hand).",
     "stage": {
      "hold": {
       "FIG-JUDAS-ISKARIOT": "FIG-OBJ-MUENZEN"
@@ -2511,14 +2490,12 @@
      "FIG-ORT-TEMPEL",
      "FIG-OBJ-MUENZEN"
     ],
-    "signs": [
-     "FIG-ZEICHEN-TOD"
-    ],
+    "signs": [],
     "speech": [],
     "action_de": "Judas wirft die Silberstücke in den Tempel, zieht sich zurück, geht weg und erhängt sich.",
     "action_gsw": "De Judas rüehrt d Silberstück in Tämpel, zieht sich zrugg, gaht wäg und hänkt sich uuf.",
-    "caption_de": "Ende des Judas: Judas wirft die Silberstücke in den Tempel (gepunkteter Bogen); er geht weg und stirbt (verschlossenes Grab).",
-    "caption_gsw": "S Änd vom Judas: De Judas rüehrt d Silberstück in Tämpel (pünktlete Boge); er gaht wäg und stirbt (verschlossnigs Grab).",
+    "caption_de": "Ende des Judas: Judas wirft die Silberstücke in den Tempel (gepunkteter Bogen zu den Münzen auf den Stufen).",
+    "caption_gsw": "S Änd vom Judas: De Judas rüehrt d Silberstück in Tämpel (pünktlete Boge zu de Münze uf de Stuefe).",
     "stage": {
      "mood": {
       "FIG-JUDAS-ISKARIOT": "worried"
@@ -2526,19 +2503,16 @@
      "arrows": [
       [
        "FIG-JUDAS-ISKARIOT",
-       "FIG-ORT-TEMPEL",
+       "FIG-OBJ-MUENZEN",
        "throw"
       ]
      ],
      "x": {
-      "FIG-JUDAS-ISKARIOT": 44
+      "FIG-JUDAS-ISKARIOT": 40
      },
      "back_side": "right",
      "floor_x": {
-      "FIG-OBJ-MUENZEN": 98
-     },
-     "at": {
-      "FIG-ZEICHEN-TOD": "FIG-JUDAS-ISKARIOT"
+      "FIG-OBJ-MUENZEN": 104
      }
     }
    },
@@ -2600,8 +2574,7 @@
     "reference": "MAT.27.11-MAT.27.14",
     "figures": [
      "FIG-PILATUS",
-     "FIG-JESUS",
-     "FIG-GRUPPE-HOHER-RAT"
+     "FIG-JESUS"
     ],
     "objects": [],
     "signs": [
@@ -2626,21 +2599,19 @@
     ],
     "action_de": "Der Statthalter fragt Jesus: Bist du der König der Juden? Jesus sagt: Du sagst es. Auf die Anklagen der Hohepriester und Ältesten antwortet er kein Wort, sodass Pilatus sich sehr wundert.",
     "action_gsw": "De Statthalter fraagt de Jesus: Bisch du de König vo de Jude? De Jesus seit: Du seisch es. Uf d Aaklage vo de Hohepriester und Ältischte seit er keis Wort, sodass sich de Pilatus sehr verwunderet.",
-    "caption_de": "Verhör: Pilatus fragt: Bist du der König? (König mit Krone, Fragezeichen); Jesus: Du sagst es (Häkchen); zu den Anklagen des Hohen Rats schweigt er (durchgestrichene Sprechblase).",
-    "caption_gsw": "Verhör: De Pilatus fraagt: Bisch du de König? (König mit Chrone, Fragezeiche); de Jesus: Du seisch es (Häkli); zu de Aaklage vom Hohe Root schwiigt er (dureggstrichni Sprächblase).",
+    "caption_de": "Verhör: Pilatus fragt: Bist du der König? (König mit Krone, Fragezeichen); Jesus: Du sagst es (Häkchen); zu den Anklagen schweigt er (durchgestrichene Sprechblase neben ihm).",
+    "caption_gsw": "Verhör: De Pilatus fraagt: Bisch du de König? (König mit Chrone, Fragezeiche); de Jesus: Du seisch es (Häkli); zu de Aaklage schwiigt er (dureggstrichni Sprächblase näbe n em).",
     "stage": {
      "mood": {
       "FIG-PILATUS": "surprised",
-      "FIG-JESUS": "calm",
-      "FIG-GRUPPE-HOHER-RAT": "earnest"
+      "FIG-JESUS": "calm"
      },
      "at": {
       "FIG-ZEICHEN-SCHWEIGEN": "FIG-JESUS"
      },
      "x": {
       "FIG-PILATUS": 34,
-      "FIG-JESUS": 112,
-      "FIG-GRUPPE-HOHER-RAT": 160
+      "FIG-JESUS": 110
      }
     }
    },
@@ -2653,11 +2624,10 @@
      "FIG-GRUPPE-MENGE"
     ],
     "objects": [
-     "FIG-OBJ-RICHTERSTUHL"
+     "FIG-OBJ-RICHTERSTUHL",
+     "FIG-OBJ-FESSEL"
     ],
-    "signs": [
-     "FIG-ZEICHEN-AUSLIEFERN"
-    ],
+    "signs": [],
     "speech": [
      {
       "from": "FIG-PILATUS",
@@ -2678,22 +2648,22 @@
     ],
     "action_de": "Zum Fest lässt der Statthalter einen Gefangenen frei. Auf dem Richterstuhl fragt Pilatus: Wen soll ich euch freilassen, Jesus Barabbas oder Jesus, den man Christus nennt? Von den Hohepriestern und Ältesten überredet, verlangen die Menschenmengen Barabbas.",
     "action_gsw": "Zum Fäscht laat de Statthalter en Gfangene frei. Uf em Richterstuel fraagt de Pilatus: Wele söll ich eu freilaa, de Jesus Barabbas oder de Jesus, wo mer Chrischtus nännt? Vo de Hohepriester und Ältischte überredt, verlanged d Mänschemängene de Barabbas.",
-    "caption_de": "Die Wahl: Pilatus (beim Richterstuhl) fragt: Barabbas oder Jesus? (Barabbas, Jesus, Fragezeichen); die Menge ruft: Barabbas (Barabbas mit gefesselten Händen).",
-    "caption_gsw": "D Wahl: De Pilatus (bim Richterstuel) fraagt: De Barabbas oder de Jesus? (Barabbas, Jesus, Fragezeiche); d Mängi rüeft: De Barabbas (Barabbas mit gfessleti Händ).",
+    "caption_de": "Die Wahl: Pilatus (beim Richterstuhl) fragt: Barabbas oder Jesus? (Barabbas, Jesus, Fragezeichen); die Menge ruft: Barabbas (Barabbas, in der Mitte mit gefesselten Händen).",
+    "caption_gsw": "D Wahl: De Pilatus (bim Richterstuel) fraagt: De Barabbas oder de Jesus? (Barabbas, Jesus, Fragezeiche); d Mängi rüeft: De Barabbas (Barabbas, i de Mitti mit gfessleti Händ).",
     "stage": {
      "mood": {
       "FIG-PILATUS": "pensive",
       "FIG-GRUPPE-MENGE": "earnest",
       "FIG-BARABBAS": "pensive"
      },
-     "at": {
-      "FIG-ZEICHEN-AUSLIEFERN": "FIG-BARABBAS"
-     },
      "floor_side": "left",
      "x": {
       "FIG-PILATUS": 52,
       "FIG-BARABBAS": 100,
       "FIG-GRUPPE-MENGE": 152
+     },
+     "hold": {
+      "FIG-BARABBAS": "FIG-OBJ-FESSEL"
      }
     }
    },
@@ -2819,8 +2789,8 @@
     ],
     "action_de": "Die Soldaten bringen Jesus ins Prätorium, legen ihm einen scharlachroten Mantel um, setzen ihm einen Dornenkranz auf, geben ihm ein Rohr in die rechte Hand, fallen vor ihm auf die Knie und verspotten ihn: Sei gegrüsst, König der Juden!",
     "action_gsw": "D Soldate bringed de Jesus is Prätorium, leged em en scharlachrote Mantel um, setzed em en Dornechranz uf, gänd em es Rohr i di rächt Hand, fallend vor em uf d Chnüü und machted sich luschtig: Sei grüesst, König vo de Jude!",
-    "caption_de": "Spott: Im Prätorium knien Soldaten zum Schein vor Jesus und grüssen ihn als König (kniende Figur, König); Jesus trägt den Dornenkranz und hält ein Rohr (grüner Halm).",
-    "caption_gsw": "Spott: Im Prätorium chnüüed Soldate zum Schii vor em Jesus und grüessed en als König (chnüündi Figur, König); de Jesus treit de Dornechranz und hebt es Rohr (grüene Halm).",
+    "caption_de": "Spott: Im Prätorium grüssen die Soldaten Jesus zum Schein kniend als König (kniende Figur, König); Jesus mit Dornenkranz (über dem Kopf) und einem Rohr (grüner Halm).",
+    "caption_gsw": "Spott: Im Prätorium grüessed d Soldate de Jesus zum Schii chnüündig als König (chnüündi Figur, König); de Jesus mit Dornechranz (über em Chopf) und emene Rohr (grüene Halm).",
     "stage": {
      "at": {
       "FIG-OBJ-DORNENKRONE": "FIG-JESUS"
@@ -2828,11 +2798,8 @@
      "hold": {
       "FIG-JESUS": "FIG-OBJ-ROHR"
      },
-     "pose": {
-      "FIG-GRUPPE-SOLDATEN": "kneel"
-     },
      "mood": {
-      "FIG-GRUPPE-SOLDATEN": "earnest",
+      "FIG-GRUPPE-SOLDATEN": "calm",
       "FIG-JESUS": "calm"
      },
      "back_side": "right",
@@ -2871,6 +2838,13 @@
      "mood": {
       "FIG-ROLLE-SOLDAT": "earnest",
       "FIG-JESUS": "calm"
+     },
+     "x": {
+      "FIG-ROLLE-SOLDAT": 28,
+      "FIG-JESUS": 76
+     },
+     "floor_x": {
+      "FIG-OBJ-KREUZ": 146
      }
     }
    }
@@ -3091,8 +3065,8 @@
      "floor_x": {
       "FIG-OBJ-KREUZ": 116
      },
-     "air_x": 112,
-     "air_y": 8,
+     "air_x": 104,
+     "air_y": 50,
      "count": {
       "FIG-ZEICHEN-FINSTERNIS": 3
      }
@@ -3122,29 +3096,22 @@
     ],
     "action_de": "Einige Umstehende meinen: Der ruft Elija! Einer läuft hin und gibt ihm mit einem Schwamm auf einem Rohr Essig zu trinken; die anderen sagen: Lass, wir wollen sehen, ob Elija kommt, um ihn zu retten.",
     "action_gsw": "Es paar Umstehendi meined: Dä rüeft em Elija! Eine rännt hi und git em mit eme Schwamm uf eme Rohr Essig z trinke; di andere säged: Lass, mir wänd luege, öb de Elija chunnt und en rettet.",
-    "caption_de": "Elija? Umstehende fragen: Ruft er Elija? (Elija mit Fellmantel, Fragezeichen); ein Mann reicht einen Schwamm mit Essig zum Kreuz (Bogen).",
-    "caption_gsw": "Elija? Umstehendi fraaged: Rüeft er em Elija? (Elija mit Fällmantel, Fragezeiche); en Maa streckt en Schwamm mit Essig zum Chrüüz (Boge).",
+    "caption_de": "Elija? Umstehende fragen: Ruft er Elija? (Elija mit Fellmantel, Fragezeichen); ein Mann hält einen Schwamm mit Essig zum Kreuz hin (Schwamm auf einem langen Zweig).",
+    "caption_gsw": "Elija? Umstehendi fraaged: Rüeft er em Elija? (Elija mit Fällmantel, Fragezeiche); en Maa hebt en Schwamm mit Essig zum Chrüüz ane (Schwamm uf emene lange Zweig).",
     "stage": {
      "hold": {
       "FIG-ROLLE-MENSCH": "FIG-OBJ-SCHWAMM"
      },
-     "arrows": [
-      [
-       "FIG-ROLLE-MENSCH",
-       "FIG-OBJ-KREUZ",
-       "act"
-      ]
-     ],
      "mood": {
       "FIG-GRUPPE-MENGE": "pensive",
       "FIG-ROLLE-MENSCH": "earnest"
      },
      "x": {
-      "FIG-GRUPPE-MENGE": 40,
-      "FIG-ROLLE-MENSCH": 100
+      "FIG-GRUPPE-MENGE": 38,
+      "FIG-ROLLE-MENSCH": 118
      },
      "floor_x": {
-      "FIG-OBJ-KREUZ": 140
+      "FIG-OBJ-KREUZ": 148
      }
     }
    },
@@ -3159,7 +3126,6 @@
      "FIG-OBJ-TEMPELVORHANG"
     ],
     "signs": [
-     "FIG-ZEICHEN-TOD",
      "FIG-ZEICHEN-ERDBEBEN"
     ],
     "speech": [
@@ -3174,8 +3140,8 @@
     ],
     "action_de": "Jesus schreit noch einmal laut und gibt den Geist auf. Der Vorhang des Tempels reisst von oben bis unten entzwei, die Erde bebt, Gräber öffnen sich. Der Hauptmann und die Wachen fürchten sich sehr und sagen: Wahrhaftig, dieser war Gottes Sohn!",
     "action_gsw": "De Jesus schreit no einisch luut und git de Geischt uuf. De Vorhang vom Tämpel verrisst vo obe bis une, d Ärde bebt, Gräber gönd uuf. De Hauptmaa und d Wache händ grossi Angscht und säged: Würkli, dä isch de Son vo Gott gsii!",
-    "caption_de": "Tod: Jesus ist gestorben (leeres Kreuz, verschlossenes Grab); der Tempelvorhang ist zerrissen, die Erde bebt (Zickzackriss); die Wachen erschrecken: Gottes Sohn! (Jesus, Strahlenkranz).",
-    "caption_gsw": "Tod: De Jesus isch gstorbe (läärs Chrüüz, verschlossnigs Grab); de Tämpelvorhang isch verrisse, d Ärde bebt (Zickzackriss); d Wache verschrecked: Son vo Gott! (Jesus, Strahlechranz).",
+    "caption_de": "Tod: Jesus ist gestorben (leeres Kreuz); der Tempelvorhang ist zerrissen, die Erde bebt (Zickzackriss am Boden); die Wachen erschrecken: Gottes Sohn! (Jesus, Strahlenkranz).",
+    "caption_gsw": "Tod: De Jesus isch gstorbe (läärs Chrüüz); de Tämpelvorhang isch verrisse, d Ärde bebt (Zickzackriss am Bode); d Wache verschrecked: Son vo Gott! (Jesus, Strahlechranz).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-SOLDATEN": "surprised"
@@ -3185,10 +3151,10 @@
       "FIG-GRUPPE-SOLDATEN": 154
      },
      "floor_x": {
-      "FIG-OBJ-KREUZ": 56
+      "FIG-OBJ-KREUZ": 54
      },
-     "air_x": 80,
-     "air_y": 96
+     "air_x": 88,
+     "air_y": 104
     }
    },
    {
@@ -3271,7 +3237,7 @@
     "caption_gsw": "Bitt: Am Abig (halbi rooti Sunne) bittet de Josef vo Arimatäa (graue Mantel, Liinetuech) de Pilatus um de tot Jesus (Jesus, verschlossnigs Grab).",
     "stage": {
      "mood": {
-      "FIG-JOSEF-ARIMATAEA": "calm",
+      "FIG-JOSEF-ARIMATAEA": "earnest",
       "FIG-PILATUS": "pensive"
      },
      "air_x": 150,
@@ -3291,18 +3257,11 @@
     "speech": [],
     "action_de": "Josef wickelt den Leib in ein reines Leinentuch, legt ihn in sein neues, in den Felsen gehauenes Grab, wälzt einen grossen Stein vor den Eingang und geht weg.",
     "action_gsw": "De Josef wicklet de Liib imene suubere Liinetuech ii, leit en i sis nöi Grab, wo in Felse ghaue isch, trölet en grosse Stei vor de Iigang und gaht wäg.",
-    "caption_de": "Begräbnis: Josef (mit Leinentuch) hat den Stein vor das Felsengrab gewälzt (Bogen).",
-    "caption_gsw": "Beärdigung: De Josef (mit Liinetuech) hät de Stei vor s Felsegrab tröölt (Boge).",
+    "caption_de": "Begräbnis: Josef (mit Leinentuch) hat Jesus in sein Felsengrab gelegt; vor dem Eingang liegt der grosse Stein.",
+    "caption_gsw": "Beärdigung: De Josef (mit Liinetuech) hät de Jesus i sis Felsegrab gleit; vor em Iigang liit de gross Stei.",
     "stage": {
-     "arrows": [
-      [
-       "FIG-JOSEF-ARIMATAEA",
-       "FIG-ORT-GRAB-VERSCHLOSSEN",
-       "act"
-      ]
-     ],
      "mood": {
-      "FIG-JOSEF-ARIMATAEA": "pensive"
+      "FIG-JOSEF-ARIMATAEA": "earnest"
      },
      "back_side": "right",
      "x": {
@@ -3388,8 +3347,8 @@
     ],
     "action_de": "Am Tag nach dem Rüsttag kommen die Hohepriester und Pharisäer zu Pilatus: Herr, wir haben uns erinnert, dass jener Verführer zu Lebzeiten gesagt hat: Nach drei Tagen werde ich auferweckt.",
     "action_gsw": "Am Tag nach em Rüschttag chömed d Hohepriester und Pharisäer zum Pilatus: Herr, mir händ eus erinneret, dass dä Verfüerer gseit hät, won er no gläbt hät: Nach drüü Täg wirde ich uferweckt.",
-    "caption_de": "Erinnerung: Hohepriester und Pharisäer (Kopfüberwurf, Quasten) sagen Pilatus: Er sprach von Auferweckung nach drei Tagen (drei Sonnen, offenes Grab mit Pfeil).",
-    "caption_gsw": "Erinnerig: Hohepriester und Pharisäer (Chopfüberwurf, Quaschte) säged em Pilatus: Er hät vo de Uferweckig nach drüü Täg gredt (drüü Sunne, offes Grab mit Pfiil).",
+    "caption_de": "Erinnerung: Hohepriester und Pharisäer (Kopfüberwurf) sagen Pilatus: Er sprach von Auferweckung nach drei Tagen (drei Sonnen, offenes Grab mit Pfeil).",
+    "caption_gsw": "Erinnerig: Hohepriester und Pharisäer (Chopfüberwurf) säged em Pilatus: Er hät vo de Uferweckig nach drüü Täg gredt (drüü Sunne, offes Grab mit Pfiil).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-HOHER-RAT": "earnest",
@@ -3418,15 +3377,15 @@
       "to": "FIG-PILATUS",
       "icons": [
        "FIG-GRUPPE-JUENGER",
-       "FIG-ORT-GRAB-VERSCHLOSSEN",
+       "FIG-ORT-GRAB",
        "FIG-ZEICHEN-LUEGE"
       ]
      }
     ],
     "action_de": "Befiehl, das Grab bis zum dritten Tag zu sichern, damit nicht seine Jünger kommen, ihn stehlen und dem Volk sagen: Er ist von den Toten auferweckt worden; die letzte Verführung wäre schlimmer als die erste.",
     "action_gsw": "Befiehl, dass mer s Grab bis zum dritte Tag sicheret, damit nöd sini Jünger chömed, en stähled und em Volk säged: Er isch vo de Tote uferweckt worde; di letscht Verfüerig wär schlimmer als di erscht.",
-    "caption_de": "Bitte um Wache: Seine Jünger könnten das Grab leeren und lügen (Jünger, verschlossenes Grab, rotes X im Kreis).",
-    "caption_gsw": "Bitt um Wach: Sini Jünger chöntid s Grab lääre und lüüge (Jünger, verschlossnigs Grab, roots X im Kreis).",
+    "caption_de": "Bitte um Wache: Seine Jünger könnten den Toten wegholen und lügen (Jünger, offenes leeres Grab, rotes X im Kreis).",
+    "caption_gsw": "Bitt um Wach: Sini Jünger chöntid de Tote wägneh und lüüge (Jünger, offes läärs Grab, roots X im Kreis).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-HOHER-RAT": "earnest",
@@ -3478,8 +3437,8 @@
     "speech": [],
     "action_de": "Sie sichern das Grab mit der Wache, indem sie den Stein versiegeln.",
     "action_gsw": "Si sichered s Grab mit de Wach, indem si de Stei versigled.",
-    "caption_de": "Versiegelt: Soldaten bewachen das Grab; der Stein ist versiegelt (rotes Siegel an einer Schnur).",
-    "caption_gsw": "Versiglet: Soldate bewached s Grab; de Stei isch versiglet (roots Sigel ane Schnuer).",
+    "caption_de": "Versiegelt: Soldaten bewachen das Grab; der Stein ist versiegelt (rotes Siegel an einer Schnur über dem Stein).",
+    "caption_gsw": "Versiglet: Soldate bewached s Grab; de Stei isch versiglet (roots Sigel ane Schnuer über em Stei).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-SOLDATEN": "earnest"
@@ -3488,8 +3447,8 @@
      "x": {
       "FIG-GRUPPE-SOLDATEN": 54
      },
-     "at": {
-      "FIG-OBJ-SIEGEL": "FIG-ORT-GRAB-VERSCHLOSSEN"
+     "floor_x": {
+      "FIG-OBJ-SIEGEL": 117
      }
     }
    }
@@ -3514,10 +3473,10 @@
      "FIG-PILATUS",
      "FIG-GRUPPE-MENGE"
     ],
-    "objects": [],
-    "signs": [
-     "FIG-ZEICHEN-WASCHEN"
+    "objects": [
+     "FIG-OBJ-WASCHSCHUESSEL"
     ],
+    "signs": [],
     "speech": [
      {
       "from": "FIG-PILATUS",
@@ -3539,15 +3498,19 @@
     ],
     "action_de": "Pilatus fragt, ob er Barabbas oder Jesus freilassen soll; die Menge verlangt die Kreuzigung Jesu, und Pilatus wäscht sich die Hände.",
     "action_gsw": "De Pilatus fraagt, öb er de Barabbas oder de Jesus söll freilaa; d Mängi verlangt, dass de Jesus gchrüüziget wird, und de Pilatus wäscht sich d Händ.",
-    "caption_de": "Pilatus: Barabbas oder Jesus? (Barabbas, Jesus, Fragezeichen); die Menge: Ans Kreuz (Jesus, Kreuz); Pilatus wäscht sich die Hände (Hände mit Wassertropfen).",
-    "caption_gsw": "De Pilatus: De Barabbas oder de Jesus? (Barabbas, Jesus, Fragezeiche); d Mängi: as Chrüüz (Jesus, Chrüüz); de Pilatus wäscht sich d Händ (Händ mit Wassertropfe).",
+    "caption_de": "Pilatus: Barabbas oder Jesus? (Barabbas, Jesus, Fragezeichen); die Menge: Ans Kreuz (Jesus, Kreuz); Pilatus wäscht sich die Hände (Becken mit Wasser und Tuch neben ihm).",
+    "caption_gsw": "De Pilatus: De Barabbas oder de Jesus? (Barabbas, Jesus, Fragezeiche); d Mängi: as Chrüüz (Jesus, Chrüüz); de Pilatus wäscht sich d Händ (Becki mit Wasser und Tuech näbe n em).",
     "stage": {
      "mood": {
       "FIG-PILATUS": "worried",
       "FIG-GRUPPE-MENGE": "earnest"
      },
-     "at": {
-      "FIG-ZEICHEN-WASCHEN": "FIG-PILATUS"
+     "floor_x": {
+      "FIG-OBJ-WASCHSCHUESSEL": 4
+     },
+     "x": {
+      "FIG-PILATUS": 58,
+      "FIG-GRUPPE-MENGE": 134
      }
     }
    },
@@ -3598,7 +3561,6 @@
      "FIG-OBJ-TEMPELVORHANG"
     ],
     "signs": [
-     "FIG-ZEICHEN-TOD",
      "FIG-ZEICHEN-ERDBEBEN"
     ],
     "speech": [
@@ -3613,8 +3575,8 @@
     ],
     "action_de": "Jesus stirbt; der Vorhang des Tempels zerreisst, die Erde bebt, und der Hauptmann und die Wachen sagen: Wahrhaftig, dieser war Gottes Sohn!",
     "action_gsw": "De Jesus stirbt; de Vorhang vom Tämpel verrisst, d Ärde bebt, und de Hauptmaa und d Wache säged: Würkli, dä isch de Son vo Gott gsii!",
-    "caption_de": "Tod: leeres Kreuz, verschlossenes Grab; Vorhang zerrissen, Erdbeben (Zickzackriss); die Wachen: Gottes Sohn (Jesus, Strahlenkranz).",
-    "caption_gsw": "Tod: läärs Chrüüz, verschlossnigs Grab; Vorhang verrisse, Ärdbebe (Zickzackriss); d Wache: Son vo Gott (Jesus, Strahlechranz).",
+    "caption_de": "Tod: leeres Kreuz; Vorhang zerrissen, Erdbeben (Zickzackriss am Boden); die Wachen: Gottes Sohn (Jesus, Strahlenkranz).",
+    "caption_gsw": "Tod: läärs Chrüüz; Vorhang verrisse, Ärdbebe (Zickzackriss am Bode); d Wache: Son vo Gott (Jesus, Strahlechranz).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-SOLDATEN": "surprised"
@@ -3624,10 +3586,10 @@
       "FIG-GRUPPE-SOLDATEN": 154
      },
      "floor_x": {
-      "FIG-OBJ-KREUZ": 56
+      "FIG-OBJ-KREUZ": 54
      },
-     "air_x": 80,
-     "air_y": 96
+     "air_x": 88,
+     "air_y": 104
     }
    },
    {
@@ -3645,20 +3607,20 @@
     "speech": [],
     "action_de": "Josef von Arimatäa legt den Leib in sein Grab; das Grab wird versiegelt und bewacht.",
     "action_gsw": "De Josef vo Arimatäa leit de Liib i sis Grab; s Grab wird versiglet und bewacht.",
-    "caption_de": "Grab: Josef (mit Leinentuch) hat das Grab verschlossen; Soldaten bewachen es, der Stein ist versiegelt (rotes Siegel).",
-    "caption_gsw": "Grab: De Josef (mit Liinetuech) hät s Grab verschlosse; Soldate bewached s, de Stei isch versiglet (roots Sigel).",
+    "caption_de": "Grab: Josef (mit Leinentuch) hat Jesus begraben; Soldaten bewachen das Grab, der Stein ist versiegelt (rotes Siegel an einer Schnur über dem Stein).",
+    "caption_gsw": "Grab: De Josef (mit Liinetuech) hät de Jesus beärdiget; Soldate bewached s Grab, de Stei isch versiglet (roots Sigel ane Schnuer über em Stei).",
     "stage": {
      "mood": {
-      "FIG-JOSEF-ARIMATAEA": "pensive",
+      "FIG-JOSEF-ARIMATAEA": "earnest",
       "FIG-GRUPPE-SOLDATEN": "earnest"
      },
      "back_side": "right",
      "x": {
-      "FIG-JOSEF-ARIMATAEA": 30,
-      "FIG-GRUPPE-SOLDATEN": 76
+      "FIG-JOSEF-ARIMATAEA": 24,
+      "FIG-GRUPPE-SOLDATEN": 80
      },
-     "at": {
-      "FIG-OBJ-SIEGEL": "FIG-ORT-GRAB-VERSCHLOSSEN"
+     "floor_x": {
+      "FIG-OBJ-SIEGEL": 117
      }
     }
    }
@@ -3732,28 +3694,30 @@
     "speech": [],
     "action_de": "Es gibt ein grosses Erdbeben: Ein Engel des Herrn steigt vom Himmel herab, wälzt den Stein weg und setzt sich darauf; er sieht aus wie ein Blitz, sein Gewand ist weiss wie Schnee. Die Wächter erbeben vor Furcht und werden wie Tote.",
     "action_gsw": "Es git es grosses Ärdbebe: En Ängel vom Herr chunnt vom Himmel abe, trölet de Stei wäg und hockt druf; er gseht uus wie en Blitz, sis Gwand isch wiiss wie Schnee. D Wächter zittered vor Angscht und wärded wie Toti.",
-    "caption_de": "Der Engel: Die Erde bebt (Zickzackriss); ein Engel (Flügel, Strahlen) sitzt beim offenen Grab auf dem weggewälzten Stein; die Wächter sind zu Boden gefallen.",
-    "caption_gsw": "De Ängel: D Ärde bebt (Zickzackriss); en Ängel (Flügel, Strahle) hockt bim offne Grab uf em wäggtröölte Stei; d Wächter sind z Bode gheit.",
+    "caption_de": "Der Engel: Die Erde bebt (Zickzackriss am Boden); ein Engel (Flügel, Strahlen) sitzt beim offenen Grab, der Stein ist weggewälzt; die Wächter liegen am Boden.",
+    "caption_gsw": "De Ängel: D Ärde bebt (Zickzackriss am Bode); en Ängel (Flügel, Strahle) hockt bim offne Grab, de Stei isch wäggtröölt; d Wächter ligged am Bode.",
     "stage": {
      "pose": {
       "FIG-ROLLE-ENGEL": "sit",
-      "FIG-GRUPPE-SOLDATEN": "fall"
+      "FIG-GRUPPE-SOLDATEN": "lie"
      },
      "mood": {
       "FIG-ROLLE-ENGEL": "calm",
       "FIG-GRUPPE-SOLDATEN": "surprised"
      },
-     "at": {
-      "FIG-ZEICHEN-STRAHLEN": "FIG-ROLLE-ENGEL"
+     "signs_who": {
+      "FIG-ZEICHEN-STRAHLEN": [
+       "FIG-ROLLE-ENGEL"
+      ]
      },
      "back_side": "left",
      "before": true,
      "x": {
-      "FIG-ROLLE-ENGEL": 70,
-      "FIG-GRUPPE-SOLDATEN": 140
+      "FIG-ROLLE-ENGEL": 88,
+      "FIG-GRUPPE-SOLDATEN": 162
      },
-     "air_x": 140,
-     "air_y": 40
+     "air_x": 30,
+     "air_y": 121
     }
    },
    {
@@ -3904,7 +3868,7 @@
     "caption_gsw": "Bricht: Soldate vo de Wach verzelled de Hohepriester i de Stadt: Ärdbebe, en Ängel, s Grab offe (Zickzackriss, Ängel, offes Grab).",
     "stage": {
      "mood": {
-      "FIG-GRUPPE-SOLDATEN": "worried",
+      "FIG-GRUPPE-SOLDATEN": "pensive",
       "FIG-GRUPPE-HOHER-RAT": "surprised"
      },
      "back_side": "right"
@@ -3941,8 +3905,8 @@
     ],
     "action_de": "Die Hohepriester beraten mit den Ältesten und geben den Soldaten reichlich Silbergeld: Sagt, seine Jünger sind in der Nacht gekommen und haben ihn gestohlen, während wir schliefen; vor dem Statthalter werden wir für euch sorgen.",
     "action_gsw": "D Hohepriester beraated mit de Ältischte und gänd de Soldate vill Silbergäld: Säged, sini Jünger seged i de Nacht cho und hebed en gstole, während mir gschlafe händ; vor em Statthalter luege mir für eu.",
-    "caption_de": "Bestechung: Der Hohe Rat gibt den Soldaten Geld (Münzen, Bogen): Sagt, die Jünger kamen zum Grab (Jünger, offenes Grab), während ihr schlieft (Soldaten, Mondsichel mit Punkten).",
-    "caption_gsw": "Bstächig: De Hohi Root git de Soldate Gäld (Münze, Boge): Säged, d Jünger seged zum Grab cho (Jünger, offes Grab), während ihr gschlafe händ (Soldate, Mondsichle mit Pünkt).",
+    "caption_de": "Bestechung: Der Hohe Rat gibt den Soldaten Geld (Münzen in der Hand, Bogen): Sagt, die Jünger kamen zum Grab (Jünger, offenes Grab), während ihr schlieft (Soldaten, Mondsichel mit Punkten).",
+    "caption_gsw": "Bstächig: De Hohi Root git de Soldate Gäld (Münze i de Hand, Boge): Säged, d Jünger seged zum Grab cho (Jünger, offes Grab), während ihr gschlafe händ (Soldate, Mondsichle mit Pünkt).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-HOHER-RAT": "earnest",
@@ -3950,13 +3914,13 @@
      },
      "arrows": [
       [
-       "FIG-OBJ-MUENZEN",
+       "FIG-GRUPPE-HOHER-RAT",
        "FIG-GRUPPE-SOLDATEN",
        "act"
       ]
      ],
-     "floor_x": {
-      "FIG-OBJ-MUENZEN": 86
+     "hold": {
+      "FIG-GRUPPE-HOHER-RAT": "FIG-OBJ-MUENZEN"
      }
     }
    },
@@ -3975,8 +3939,8 @@
     "speech": [],
     "action_de": "Die Soldaten nehmen das Silbergeld und tun, wie sie angewiesen wurden; diese Geschichte hat sich bei Juden verbreitet bis zum heutigen Tag.",
     "action_gsw": "D Soldate nämed s Silbergäld und machted, wie mer s ene gseit hät; die Gschicht hät sich bi Jude verbreitet bis hüt.",
-    "caption_de": "Verbreitet: Die Soldaten nehmen das Geld (Münzen); ihre Geschichte verbreitet sich (Pfeile nach allen Seiten).",
-    "caption_gsw": "Verbreitet: D Soldate nämed s Gäld (Münze); ihri Gschicht verbreitet sich (Pfiil uf ali Siite).",
+    "caption_de": "Verbreitet: Die Soldaten nehmen das Geld (Münzen); ihre Geschichte verbreitet sich (Pfeile nach allen Seiten über ihnen).",
+    "caption_gsw": "Verbreitet: D Soldate nämed s Gäld (Münze); ihri Gschicht verbreitet sich (Pfiil uf ali Siite über ene).",
     "stage": {
      "hold": {
       "FIG-GRUPPE-SOLDATEN": "FIG-OBJ-MUENZEN"
@@ -3985,10 +3949,11 @@
       "FIG-GRUPPE-SOLDATEN": "calm"
      },
      "x": {
-      "FIG-GRUPPE-SOLDATEN": 70
+      "FIG-GRUPPE-SOLDATEN": 93
      },
-     "air_x": 118,
-     "air_y": 30
+     "at": {
+      "FIG-ZEICHEN-AUSBREITEN": "FIG-GRUPPE-SOLDATEN"
+     }
     }
    }
   ],
@@ -4009,8 +3974,8 @@
     "n": 1,
     "reference": "MAT.28.16-MAT.28.17",
     "figures": [
-     "FIG-JESUS",
-     "FIG-GRUPPE-ZWOELF"
+     "FIG-GRUPPE-ZWOELF",
+     "FIG-JESUS"
     ],
     "objects": [
      "FIG-ORT-BERG"
@@ -4021,12 +3986,9 @@
     "speech": [],
     "action_de": "Die elf Jünger gehen nach Galiläa auf den Berg, wohin Jesus sie bestellt hat. Als sie ihn sehen, werfen sie sich nieder; einige aber zweifeln.",
     "action_gsw": "Di elf Jünger gönd uf Galiläa uf de Bärg, wo de Jesus si anebstellt hät. Wo si en gsehnd, wärfed si sich nider; es paar aber zwiifled.",
-    "caption_de": "Auf dem Berg: Jesus steht auf dem Berg; die Jünger werfen sich nieder, einige zweifeln (graues Herz mit Riss).",
-    "caption_gsw": "Uf em Bärg: De Jesus staht uf em Bärg; d Jünger wärfed sich nider, es paar zwiifled (graus Härz mit Riss).",
+    "caption_de": "Auf dem Berg in Galiläa: Jesus kommt zu den Jüngern (Berg hinten); sie werfen sich nieder, einige zweifeln (graues Herz mit Riss).",
+    "caption_gsw": "Uf em Bärg z Galiläa: De Jesus chunnt zu de Jünger (Bärg hine); si wärfed sich nider, es paar zwiifled (graus Härz mit Riss).",
     "stage": {
-     "on": {
-      "FIG-JESUS": "FIG-ORT-BERG"
-     },
      "pose": {
       "FIG-GRUPPE-ZWOELF": "kneel"
      },
@@ -4034,13 +3996,14 @@
       "FIG-ZEICHEN-UNGLAUBE": "FIG-GRUPPE-ZWOELF"
      },
      "mood": {
-      "FIG-GRUPPE-ZWOELF": "pensive",
+      "FIG-GRUPPE-ZWOELF": "calm",
       "FIG-JESUS": "calm"
      },
      "back_side": "right",
      "before": true,
      "x": {
-      "FIG-GRUPPE-ZWOELF": 56
+      "FIG-GRUPPE-ZWOELF": 48,
+      "FIG-JESUS": 128
      }
     }
    },
@@ -4125,9 +4088,7 @@
      "FIG-GRUPPE-ZWOELF"
     ],
     "objects": [],
-    "signs": [
-     "FIG-ZEICHEN-BEWAHREN"
-    ],
+    "signs": [],
     "speech": [
      {
       "from": "FIG-JESUS",
@@ -4136,6 +4097,7 @@
        "FIG-JESUS",
        "FIG-GRUPPE-ZWOELF",
        "FIG-ZEICHEN-TAGE",
+       "FIG-ZEICHEN-TAGE",
        "FIG-ZEICHEN-TAGE"
       ]
      },
@@ -4143,21 +4105,18 @@
       "from": "FIG-JESUS",
       "to": "FIG-GRUPPE-ZWOELF",
       "icons": [
-       "FIG-ZEICHEN-VOLLBRACHT"
+       "FIG-ZEICHEN-ZIEL"
       ]
      }
     ],
     "action_de": "Und siehe, ich bin bei euch alle Tage bis zur Vollendung der Weltzeit.",
     "action_gsw": "Und lueged, ich bi bi eu ali Täg bis zur Vollendig vo de Wältzyt.",
-    "caption_de": "Zusage: Ich bin bei euch alle Tage (Jesus, Jünger, Sonnen) bis zur Vollendung (goldener Ring mit Haken).",
-    "caption_gsw": "Zuesag: Ich bi bi eu ali Täg (Jesus, Jünger, Sunne) bis zur Vollendig (guldige Ring mit Hake).",
+    "caption_de": "Zusage: Ich bin bei euch alle Tage (Jesus, Jünger, Reihe von Sonnen) bis zum Ende der Weltzeit (Zielpfosten mit grünem Kranz).",
+    "caption_gsw": "Zuesag: Ich bi bi eu ali Täg (Jesus, Jünger, Reihe vo Sunne) bis as Änd vo de Wältziit (Zielpfoschte mit grüenem Chranz).",
     "stage": {
      "mood": {
       "FIG-JESUS": "smile",
       "FIG-GRUPPE-ZWOELF": "smile"
-     },
-     "at": {
-      "FIG-ZEICHEN-BEWAHREN": "FIG-GRUPPE-ZWOELF"
      }
     }
    }
@@ -4240,8 +4199,8 @@
     ],
     "action_de": "Die Hohepriester bezahlen die Soldaten, damit sie sagen, die Jünger hätten ihn nachts gestohlen.",
     "action_gsw": "D Hohepriester zahled de Soldate Gäld, damit si säged, d Jünger hebed en znacht gstole.",
-    "caption_de": "Bestechung: Der Hohe Rat gibt den Soldaten Geld (Münzen, Bogen): Sagt, die Jünger kamen nachts zum Grab (Jünger, Mondsichel, Grab).",
-    "caption_gsw": "Bstächig: De Hohi Root git de Soldate Gäld (Münze, Boge): Säged, d Jünger seged znacht zum Grab cho (Jünger, Mondsichle, Grab).",
+    "caption_de": "Bestechung: Der Hohe Rat gibt den Soldaten Geld (Münzen in der Hand, Bogen): Sagt, die Jünger kamen nachts zum Grab (Jünger, Mondsichel, Grab).",
+    "caption_gsw": "Bstächig: De Hohi Root git de Soldate Gäld (Münze i de Hand, Boge): Säged, d Jünger seged znacht zum Grab cho (Jünger, Mondsichle, Grab).",
     "stage": {
      "mood": {
       "FIG-GRUPPE-HOHER-RAT": "earnest",
@@ -4249,13 +4208,13 @@
      },
      "arrows": [
       [
-       "FIG-OBJ-MUENZEN",
+       "FIG-GRUPPE-HOHER-RAT",
        "FIG-GRUPPE-SOLDATEN",
        "act"
       ]
      ],
-     "floor_x": {
-      "FIG-OBJ-MUENZEN": 86
+     "hold": {
+      "FIG-GRUPPE-HOHER-RAT": "FIG-OBJ-MUENZEN"
      }
     }
    },
@@ -4267,9 +4226,7 @@
      "FIG-GRUPPE-ZWOELF"
     ],
     "objects": [],
-    "signs": [
-     "FIG-ZEICHEN-BEWAHREN"
-    ],
+    "signs": [],
     "speech": [
      {
       "from": "FIG-JESUS",
@@ -4279,12 +4236,20 @@
        "FIG-GRUPPE-VOELKER",
        "FIG-ZEICHEN-TAUFE"
       ]
+     },
+     {
+      "from": "FIG-JESUS",
+      "to": "FIG-GRUPPE-ZWOELF",
+      "icons": [
+       "FIG-JESUS",
+       "FIG-GRUPPE-ZWOELF"
+      ]
      }
     ],
     "action_de": "Auf einem Berg in Galiläa sendet Jesus die elf Jünger, alle Völker zu Jüngern zu machen, zu taufen und zu lehren, und verspricht, bei ihnen zu sein alle Tage.",
     "action_gsw": "Uf eme Bärg z Galiläa schickt de Jesus di elf Jünger, ali Völker zu Jünger z mache, z taufe und z lehre, und verspricht, bi ene z sii ali Täg.",
-    "caption_de": "Sendung: Geht zu allen Völkern und tauft sie (Pfeile, Völker, Muschel mit Wasser); ich bin bei euch (zwei Hände als Dach über den Jüngern).",
-    "caption_gsw": "Sändig: Gönd zu allne Völker und taufed si (Pfiil, Völker, Muschle mit Wasser); ich bi bi eu (zwei Händ als Dach über de Jünger).",
+    "caption_de": "Sendung: Geht zu allen Völkern und tauft sie (Pfeile, Völker, Muschel mit Wasser) – ich bin bei euch (Jesus, Jünger).",
+    "caption_gsw": "Sändig: Gönd zu allne Völker und taufed si (Pfiil, Völker, Muschle mit Wasser) – ich bi bi eu (Jesus, Jünger).",
     "stage": {
      "mood": {
       "FIG-JESUS": "earnest",
@@ -4292,9 +4257,6 @@
      },
      "x": {
       "FIG-JESUS": 40
-     },
-     "at": {
-      "FIG-ZEICHEN-BEWAHREN": "FIG-GRUPPE-ZWOELF"
      }
     }
    }

@@ -60,7 +60,7 @@
           "to": "FIG-PILATUS",
           "icons": [
             "FIG-GRUPPE-JUENGER",
-            "FIG-ORT-GRAB-VERSCHLOSSEN",
+            "FIG-ORT-GRAB",
             "FIG-ZEICHEN-LUEGE"
           ]
         }
@@ -121,8 +121,8 @@
         "x": {
           "FIG-GRUPPE-SOLDATEN": 54
         },
-        "at": {
-          "FIG-OBJ-SIEGEL": "FIG-ORT-GRAB-VERSCHLOSSEN"
+        "floor_x": {
+          "FIG-OBJ-SIEGEL": 117
         }
       }
     }
@@ -134,10 +134,10 @@
     "Sie sichern das Grab mit der Wache, indem sie den Stein versiegeln."
   ],
   "captions_de": [
-    "Erinnerung: Hohepriester und Pharisäer (Kopfüberwurf, Quasten) sagen Pilatus: Er sprach von Auferweckung nach drei Tagen (drei Sonnen, offenes Grab mit Pfeil).",
-    "Bitte um Wache: Seine Jünger könnten das Grab leeren und lügen (Jünger, verschlossenes Grab, rotes X im Kreis).",
+    "Erinnerung: Hohepriester und Pharisäer (Kopfüberwurf) sagen Pilatus: Er sprach von Auferweckung nach drei Tagen (drei Sonnen, offenes Grab mit Pfeil).",
+    "Bitte um Wache: Seine Jünger könnten den Toten wegholen und lügen (Jünger, offenes leeres Grab, rotes X im Kreis).",
     "Antwort: Pilatus sagt: Ihr habt eine Wache – sichert das Grab (Soldaten, verschlossenes Grab).",
-    "Versiegelt: Soldaten bewachen das Grab; der Stein ist versiegelt (rotes Siegel an einer Schnur)."
+    "Versiegelt: Soldaten bewachen das Grab; der Stein ist versiegelt (rotes Siegel an einer Schnur über dem Stein)."
   ],
   "interpretation_note_de": "Ob «Ihr habt eine Wache» ([[MAT.27.65]]) eine Tempelwache meint oder römische Soldaten zur Verfügung stellt, ist offen; das Bild zeigt Soldaten wie in [[MAT.28.12]]. Das Wort «Verführer» gibt die Sicht der Bittsteller wieder; das Zeichen «Lüge» steht für den befürchteten Betrug der Jünger.",
   "basis": [
@@ -176,5 +176,138 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.27.62-MAT.27.63",
+            "figures": [
+              "FIG-GRUPPE-HOHER-RAT",
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-PILATUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-HOHER-RAT",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-ZEICHEN-TAGE",
+                  "FIG-ZEICHEN-TAGE",
+                  "FIG-ZEICHEN-TAGE",
+                  "FIG-ZEICHEN-AUFERSTEHUNG"
+                ]
+              }
+            ],
+            "action_de": "Am Tag nach dem Rüsttag kommen die Hohepriester und Pharisäer zu Pilatus: Herr, wir haben uns erinnert, dass jener Verführer zu Lebzeiten gesagt hat: Nach drei Tagen werde ich auferweckt.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-HOHER-RAT": "earnest",
+                "FIG-GRUPPE-PHARISAEER": "earnest",
+                "FIG-PILATUS": "pensive"
+              },
+              "x": {
+                "FIG-GRUPPE-HOHER-RAT": 36,
+                "FIG-GRUPPE-PHARISAEER": 82,
+                "FIG-PILATUS": 150
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.27.64",
+            "figures": [
+              "FIG-GRUPPE-HOHER-RAT",
+              "FIG-PILATUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-HOHER-RAT",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-ORT-GRAB-VERSCHLOSSEN",
+                  "FIG-ZEICHEN-LUEGE"
+                ]
+              }
+            ],
+            "action_de": "Befiehl, das Grab bis zum dritten Tag zu sichern, damit nicht seine Jünger kommen, ihn stehlen und dem Volk sagen: Er ist von den Toten auferweckt worden; die letzte Verführung wäre schlimmer als die erste.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-HOHER-RAT": "earnest",
+                "FIG-PILATUS": "pensive"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.27.65",
+            "figures": [
+              "FIG-PILATUS",
+              "FIG-GRUPPE-HOHER-RAT"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PILATUS",
+                "to": "FIG-GRUPPE-HOHER-RAT",
+                "icons": [
+                  "FIG-GRUPPE-SOLDATEN",
+                  "FIG-ORT-GRAB-VERSCHLOSSEN"
+                ]
+              }
+            ],
+            "action_de": "Pilatus antwortet: Ihr habt eine Wache. Geht hin und sichert es, wie ihr es versteht!",
+            "stage": {
+              "mood": {
+                "FIG-PILATUS": "calm",
+                "FIG-GRUPPE-HOHER-RAT": "earnest"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.27.66",
+            "figures": [
+              "FIG-GRUPPE-SOLDATEN"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB-VERSCHLOSSEN",
+              "FIG-OBJ-SIEGEL"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Sie sichern das Grab mit der Wache, indem sie den Stein versiegeln.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-SOLDATEN": "earnest"
+              },
+              "back_side": "right",
+              "x": {
+                "FIG-GRUPPE-SOLDATEN": 54
+              },
+              "at": {
+                "FIG-OBJ-SIEGEL": "FIG-ORT-GRAB-VERSCHLOSSEN"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Erinnerung: Hohepriester und Pharisäer (Kopfüberwurf, Quasten) sagen Pilatus: Er sprach von Auferweckung nach drei Tagen (drei Sonnen, offenes Grab mit Pfeil).",
+          "Bitte um Wache: Seine Jünger könnten das Grab leeren und lügen (Jünger, verschlossenes Grab, rotes X im Kreis).",
+          "Antwort: Pilatus sagt: Ihr habt eine Wache – sichert das Grab (Soldaten, verschlossenes Grab).",
+          "Versiegelt: Soldaten bewachen das Grab; der Stein ist versiegelt (rotes Siegel an einer Schnur)."
+        ]
+      }
+    }
+  ]
 }

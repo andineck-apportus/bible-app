@@ -23,28 +23,12 @@
       "signs": [
         "FIG-ZEICHEN-SALBUNG"
       ],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-FRAU",
-          "icons": [
-            "FIG-OBJ-SALBGEFAESS",
-            "FIG-ZEICHEN-TOD"
-          ]
-        }
-      ],
+      "speech": [],
       "action_de": "In Betanien giesst eine Frau Jesus kostbares Salböl über den Kopf; er deutet es als Vorbereitung für sein Begräbnis.",
       "stage": {
         "hold": {
           "FIG-ROLLE-FRAU": "FIG-OBJ-SALBGEFAESS"
         },
-        "arrows": [
-          [
-            "FIG-ROLLE-FRAU",
-            "FIG-JESUS",
-            "act"
-          ]
-        ],
         "at": {
           "FIG-ZEICHEN-SALBUNG": "FIG-JESUS"
         },
@@ -53,7 +37,12 @@
         },
         "pose": {
           "FIG-JESUS": "sit"
-        }
+        },
+        "x": {
+          "FIG-ROLLE-FRAU": 48,
+          "FIG-JESUS": 86
+        },
+        "back_side": "right"
       }
     },
     {
@@ -101,17 +90,16 @@
       ],
       "objects": [
         "FIG-ORT-GARTEN",
-        "FIG-OBJ-SCHWERT"
+        "FIG-OBJ-FESSEL"
       ],
       "signs": [
-        "FIG-ZEICHEN-KUSS",
-        "FIG-ZEICHEN-AUSLIEFERN"
+        "FIG-ZEICHEN-KUSS"
       ],
       "speech": [],
       "action_de": "In Getsemani betet Jesus, während die Jünger schlafen; Judas liefert ihn mit einem Kuss aus.",
       "stage": {
         "hold": {
-          "FIG-GRUPPE-MENGE": "FIG-OBJ-SCHWERT"
+          "FIG-JESUS": "FIG-OBJ-FESSEL"
         },
         "mood": {
           "FIG-GRUPPE-MENGE": "earnest",
@@ -119,17 +107,14 @@
           "FIG-JESUS": "calm"
         },
         "x": {
-          "FIG-GRUPPE-MENGE": 40,
-          "FIG-JESUS": 104,
-          "FIG-JUDAS-ISKARIOT": 146
+          "FIG-GRUPPE-MENGE": 34,
+          "FIG-JESUS": 98,
+          "FIG-JUDAS-ISKARIOT": 150
         },
         "back_side": "left",
         "before": true,
         "beside": {
           "FIG-ZEICHEN-KUSS": "FIG-JUDAS-ISKARIOT"
-        },
-        "at": {
-          "FIG-ZEICHEN-AUSLIEFERN": "FIG-JESUS"
         },
         "arrows": [
           [
@@ -152,7 +137,8 @@
       ],
       "signs": [
         "FIG-ZEICHEN-TRAUER",
-        "FIG-ZEICHEN-VERLEUGNEN"
+        "FIG-ZEICHEN-VERLEUGNEN",
+        "FIG-ZEICHEN-SPRECHEN"
       ],
       "speech": [],
       "action_de": "Vor dem Hohen Rat wird Jesus verurteilt; Petrus verleugnet ihn dreimal, und als der Hahn kräht, weint er bitterlich.",
@@ -174,7 +160,10 @@
         "count": {
           "FIG-ZEICHEN-VERLEUGNEN": 3
         },
-        "night": true
+        "night": true,
+        "at": {
+          "FIG-ZEICHEN-SPRECHEN": "FIG-OBJ-HAHN"
+        }
       }
     }
   ],
@@ -185,10 +174,10 @@
     "Vor dem Hohen Rat wird Jesus verurteilt; Petrus verleugnet ihn dreimal, und als der Hahn kräht, weint er bitterlich."
   ],
   "captions_de": [
-    "Salbung: Eine Frau salbt Jesus (Gefäss, Bogen; Ölhorn mit goldenem Tropfen) – für sein Begräbnis (Gefäss, verschlossenes Grab).",
+    "Salbung: Eine Frau salbt Jesus in Betanien (Gefäss in ihrer Hand; Ölhorn mit goldenem Tropfen über Jesus).",
     "Mahl: Brot und Becher – Jesus für viele (Brot, Becher, Jesus, Menge).",
-    "Getsemani: Judas küsst Jesus (Lippen); die Menge mit Schwert ergreift ihn (Bogen, gefesselte Hände).",
-    "Verleugnung: Petrus hat Jesus dreimal verleugnet (drei getrennte Kettenglieder); der Hahn kräht, Petrus weint (Träne)."
+    "Getsemani: Judas küsst Jesus (Lippen); die Menge ergreift ihn (Bogen; gefesselte Hände).",
+    "Verleugnung: Petrus hat Jesus dreimal verleugnet (drei getrennte Kettenglieder); der Hahn kräht (Schallbögen beim Hahn), Petrus weint (Tränen)."
   ],
   "interpretation_note_de": "Vier Hauptstationen des Kapitels: Salbung, Mahl, Gefangennahme, Verleugnung. Der Plan der Hohepriester, der Handel des Judas und das Verhör vor dem Hohen Rat sind in den Abschnittsbildern gezeigt.",
   "basis": [
@@ -203,5 +192,189 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.26.1-MAT.26.16",
+            "figures": [
+              "FIG-ROLLE-FRAU",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS",
+              "FIG-OBJ-SALBGEFAESS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SALBUNG"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-FRAU",
+                "icons": [
+                  "FIG-OBJ-SALBGEFAESS",
+                  "FIG-ZEICHEN-TOD"
+                ]
+              }
+            ],
+            "action_de": "In Betanien giesst eine Frau Jesus kostbares Salböl über den Kopf; er deutet es als Vorbereitung für sein Begräbnis.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-FRAU": "FIG-OBJ-SALBGEFAESS"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-FRAU",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-SALBUNG": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-ROLLE-FRAU": "calm"
+              },
+              "pose": {
+                "FIG-JESUS": "sit"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.26.17-MAT.26.35",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT",
+              "FIG-OBJ-BECHER-VOLL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-OBJ-BROT",
+                  "FIG-OBJ-BECHER-VOLL",
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-MENGE"
+                ]
+              }
+            ],
+            "action_de": "Beim Passamahl gibt Jesus den Jüngern Brot und Becher als seinen Leib und sein Blut des Bundes.",
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROT"
+              },
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "pensive"
+              },
+              "night": true
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.26.36-MAT.26.56",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS",
+              "FIG-JUDAS-ISKARIOT"
+            ],
+            "objects": [
+              "FIG-ORT-GARTEN",
+              "FIG-OBJ-SCHWERT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-KUSS",
+              "FIG-ZEICHEN-AUSLIEFERN"
+            ],
+            "speech": [],
+            "action_de": "In Getsemani betet Jesus, während die Jünger schlafen; Judas liefert ihn mit einem Kuss aus.",
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-MENGE": "FIG-OBJ-SCHWERT"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-JUDAS-ISKARIOT": "earnest",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 40,
+                "FIG-JESUS": 104,
+                "FIG-JUDAS-ISKARIOT": 146
+              },
+              "back_side": "left",
+              "before": true,
+              "beside": {
+                "FIG-ZEICHEN-KUSS": "FIG-JUDAS-ISKARIOT"
+              },
+              "at": {
+                "FIG-ZEICHEN-AUSLIEFERN": "FIG-JESUS"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "night": true
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.26.57-MAT.26.75",
+            "figures": [
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-OBJ-HAHN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER",
+              "FIG-ZEICHEN-VERLEUGNEN"
+            ],
+            "speech": [],
+            "action_de": "Vor dem Hohen Rat wird Jesus verurteilt; Petrus verleugnet ihn dreimal, und als der Hahn kräht, weint er bitterlich.",
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-PETRUS"
+                ]
+              },
+              "mood": {
+                "FIG-PETRUS": "worried"
+              },
+              "x": {
+                "FIG-PETRUS": 70
+              },
+              "floor_x": {
+                "FIG-OBJ-HAHN": 120
+              },
+              "count": {
+                "FIG-ZEICHEN-VERLEUGNEN": 3
+              },
+              "night": true
+            }
+          }
+        ],
+        "captions_de": [
+          "Salbung: Eine Frau salbt Jesus (Gefäss, Bogen; Ölhorn mit goldenem Tropfen) – für sein Begräbnis (Gefäss, verschlossenes Grab).",
+          "Mahl: Brot und Becher – Jesus für viele (Brot, Becher, Jesus, Menge).",
+          "Getsemani: Judas küsst Jesus (Lippen); die Menge mit Schwert ergreift ihn (Bogen, gefesselte Hände).",
+          "Verleugnung: Petrus hat Jesus dreimal verleugnet (drei getrennte Kettenglieder); der Hahn kräht, Petrus weint (Träne)."
+        ]
+      }
+    }
+  ]
 }

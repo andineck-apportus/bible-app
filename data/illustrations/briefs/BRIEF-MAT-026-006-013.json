@@ -29,13 +29,6 @@
         "hold": {
           "FIG-ROLLE-FRAU": "FIG-OBJ-SALBGEFAESS"
         },
-        "arrows": [
-          [
-            "FIG-ROLLE-FRAU",
-            "FIG-JESUS",
-            "act"
-          ]
-        ],
         "at": {
           "FIG-ZEICHEN-SALBUNG": "FIG-JESUS"
         },
@@ -46,7 +39,11 @@
         "pose": {
           "FIG-JESUS": "sit"
         },
-        "back_side": "right"
+        "back_side": "right",
+        "x": {
+          "FIG-ROLLE-FRAU": 48,
+          "FIG-JESUS": 86
+        }
       }
     },
     {
@@ -137,7 +134,7 @@
     "Jesus nimmt die Frau in Schutz: Sie hat ein gutes Werk an mir getan; mit dem Salböl hat sie es für mein Begräbnis getan, und wo das Evangelium verkündigt wird in der ganzen Welt, wird man erzählen, was sie getan hat."
   ],
   "captions_de": [
-    "Salbung: Eine Frau giesst Jesus Salböl aus dem Alabastergefäss über den Kopf (Gefäss, Bogen; Ölhorn mit goldenem Tropfen über Jesus); hinten das Haus.",
+    "Salbung: Eine Frau giesst Jesus Salböl aus dem Alabastergefäss über den Kopf (Gefäss in ihrer Hand; Ölhorn mit goldenem Tropfen über Jesus); hinten das Haus.",
     "Empörung: Die Jünger sagen zur Frau: Das Salböl hätte Geld für die Armen gebracht (Gefäss, Münzen, Arme in grauen Kleidern).",
     "Für mein Begräbnis: Jesus sagt den Jüngern: Das Salböl ist für mein Begräbnis (Gefäss, verschlossenes Grab); in der ganzen Welt wird man von ihr erzählen (Erdscheibe, Rufer, Frau)."
   ],
@@ -172,5 +169,141 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.26.6-MAT.26.7",
+            "figures": [
+              "FIG-ROLLE-FRAU",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS",
+              "FIG-OBJ-SALBGEFAESS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SALBUNG"
+            ],
+            "speech": [],
+            "action_de": "Im Haus Simons des Aussätzigen in Betanien tritt eine Frau mit einem Alabastergefäss voll kostbarem Salböl zu Jesus und giesst es ihm über den Kopf, während er zu Tisch liegt.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-FRAU": "FIG-OBJ-SALBGEFAESS"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-FRAU",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-SALBUNG": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-ROLLE-FRAU": "calm",
+                "FIG-JESUS": "calm"
+              },
+              "pose": {
+                "FIG-JESUS": "sit"
+              },
+              "back_side": "right"
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.26.8-MAT.26.9",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-ROLLE-FRAU"
+            ],
+            "objects": [
+              "FIG-OBJ-SALBGEFAESS"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-ROLLE-FRAU",
+                "icons": [
+                  "FIG-OBJ-SALBGEFAESS",
+                  "FIG-OBJ-MUENZEN",
+                  "FIG-GRUPPE-ARME"
+                ]
+              }
+            ],
+            "action_de": "Die Jünger empören sich: Wozu diese Verschwendung? Man hätte das Öl für viel Geld verkaufen und den Armen geben können.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-FRAU": "FIG-OBJ-SALBGEFAESS"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "earnest",
+                "FIG-ROLLE-FRAU": "worried"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.26.10-MAT.26.13",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-ROLLE-FRAU"
+            ],
+            "objects": [
+              "FIG-OBJ-SALBGEFAESS"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-SALBGEFAESS",
+                  "FIG-ZEICHEN-TOD"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-WELT",
+                  "FIG-ZEICHEN-VERKUENDIGEN",
+                  "FIG-ROLLE-FRAU"
+                ]
+              }
+            ],
+            "action_de": "Jesus nimmt die Frau in Schutz: Sie hat ein gutes Werk an mir getan; mit dem Salböl hat sie es für mein Begräbnis getan, und wo das Evangelium verkündigt wird in der ganzen Welt, wird man erzählen, was sie getan hat.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-FRAU": "FIG-OBJ-SALBGEFAESS"
+              },
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-JUENGER": "pensive",
+                "FIG-ROLLE-FRAU": "calm"
+              },
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-GRUPPE-JUENGER": 104,
+                "FIG-ROLLE-FRAU": 158
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Salbung: Eine Frau giesst Jesus Salböl aus dem Alabastergefäss über den Kopf (Gefäss, Bogen; Ölhorn mit goldenem Tropfen über Jesus); hinten das Haus.",
+          "Empörung: Die Jünger sagen zur Frau: Das Salböl hätte Geld für die Armen gebracht (Gefäss, Münzen, Arme in grauen Kleidern).",
+          "Für mein Begräbnis: Jesus sagt den Jüngern: Das Salböl ist für mein Begräbnis (Gefäss, verschlossenes Grab); in der ganzen Welt wird man von ihr erzählen (Erdscheibe, Rufer, Frau)."
+        ]
+      }
+    }
+  ]
 }

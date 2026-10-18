@@ -16,10 +16,10 @@
         "FIG-PILATUS",
         "FIG-GRUPPE-MENGE"
       ],
-      "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-WASCHEN"
+      "objects": [
+        "FIG-OBJ-WASCHSCHUESSEL"
       ],
+      "signs": [],
       "speech": [
         {
           "from": "FIG-PILATUS",
@@ -45,8 +45,12 @@
           "FIG-PILATUS": "worried",
           "FIG-GRUPPE-MENGE": "earnest"
         },
-        "at": {
-          "FIG-ZEICHEN-WASCHEN": "FIG-PILATUS"
+        "floor_x": {
+          "FIG-OBJ-WASCHSCHUESSEL": 4
+        },
+        "x": {
+          "FIG-PILATUS": 58,
+          "FIG-GRUPPE-MENGE": 134
         }
       }
     },
@@ -94,7 +98,6 @@
         "FIG-OBJ-TEMPELVORHANG"
       ],
       "signs": [
-        "FIG-ZEICHEN-TOD",
         "FIG-ZEICHEN-ERDBEBEN"
       ],
       "speech": [
@@ -117,10 +120,10 @@
           "FIG-GRUPPE-SOLDATEN": 154
         },
         "floor_x": {
-          "FIG-OBJ-KREUZ": 56
+          "FIG-OBJ-KREUZ": 54
         },
-        "air_x": 80,
-        "air_y": 96
+        "air_x": 88,
+        "air_y": 104
       }
     },
     {
@@ -139,16 +142,16 @@
       "action_de": "Josef von Arimatäa legt den Leib in sein Grab; das Grab wird versiegelt und bewacht.",
       "stage": {
         "mood": {
-          "FIG-JOSEF-ARIMATAEA": "pensive",
+          "FIG-JOSEF-ARIMATAEA": "earnest",
           "FIG-GRUPPE-SOLDATEN": "earnest"
         },
         "back_side": "right",
         "x": {
-          "FIG-JOSEF-ARIMATAEA": 30,
-          "FIG-GRUPPE-SOLDATEN": 76
+          "FIG-JOSEF-ARIMATAEA": 24,
+          "FIG-GRUPPE-SOLDATEN": 80
         },
-        "at": {
-          "FIG-OBJ-SIEGEL": "FIG-ORT-GRAB-VERSCHLOSSEN"
+        "floor_x": {
+          "FIG-OBJ-SIEGEL": 117
         }
       }
     }
@@ -160,10 +163,10 @@
     "Josef von Arimatäa legt den Leib in sein Grab; das Grab wird versiegelt und bewacht."
   ],
   "captions_de": [
-    "Pilatus: Barabbas oder Jesus? (Barabbas, Jesus, Fragezeichen); die Menge: Ans Kreuz (Jesus, Kreuz); Pilatus wäscht sich die Hände (Hände mit Wassertropfen).",
+    "Pilatus: Barabbas oder Jesus? (Barabbas, Jesus, Fragezeichen); die Menge: Ans Kreuz (Jesus, Kreuz); Pilatus wäscht sich die Hände (Becken mit Wasser und Tuch neben ihm).",
     "Kreuzigung: Golgota, der Hügel mit drei Kreuzen (ohne Körper); Soldaten losen um die Kleider (Gewand mit Losen).",
-    "Tod: leeres Kreuz, verschlossenes Grab; Vorhang zerrissen, Erdbeben (Zickzackriss); die Wachen: Gottes Sohn (Jesus, Strahlenkranz).",
-    "Grab: Josef (mit Leinentuch) hat das Grab verschlossen; Soldaten bewachen es, der Stein ist versiegelt (rotes Siegel)."
+    "Tod: leeres Kreuz; Vorhang zerrissen, Erdbeben (Zickzackriss am Boden); die Wachen: Gottes Sohn (Jesus, Strahlenkranz).",
+    "Grab: Josef (mit Leinentuch) hat Jesus begraben; Soldaten bewachen das Grab, der Stein ist versiegelt (rotes Siegel an einer Schnur über dem Stein)."
   ],
   "interpretation_note_de": "Vier Hauptstationen: Urteil, Kreuzigung, Tod, Grab. Das Ende des Judas, der Spott und die Frauen sind in den Abschnittsbildern gezeigt. Gewalt wird nicht ausgemalt.",
   "basis": [
@@ -178,5 +181,164 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.27.1-MAT.27.26",
+            "figures": [
+              "FIG-PILATUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-WASCHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PILATUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-BARABBAS",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-OBJ-KREUZ"
+                ]
+              }
+            ],
+            "action_de": "Pilatus fragt, ob er Barabbas oder Jesus freilassen soll; die Menge verlangt die Kreuzigung Jesu, und Pilatus wäscht sich die Hände.",
+            "stage": {
+              "mood": {
+                "FIG-PILATUS": "worried",
+                "FIG-GRUPPE-MENGE": "earnest"
+              },
+              "at": {
+                "FIG-ZEICHEN-WASCHEN": "FIG-PILATUS"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.27.27-MAT.27.44",
+            "figures": [
+              "FIG-GRUPPE-SOLDATEN"
+            ],
+            "objects": [
+              "FIG-ORT-GOLGOTA",
+              "FIG-OBJ-KLEIDER-VERLOST"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Soldaten verspotten Jesus; auf Golgota wird er gekreuzigt, und sie losen um seine Kleider.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-SOLDATEN": "calm"
+              },
+              "back_side": "right",
+              "x": {
+                "FIG-GRUPPE-SOLDATEN": 44
+              },
+              "floor_x": {
+                "FIG-OBJ-KLEIDER-VERLOST": 90
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-SOLDATEN",
+                  "FIG-OBJ-KLEIDER-VERLOST",
+                  "throw"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.27.45-MAT.27.56",
+            "figures": [
+              "FIG-GRUPPE-SOLDATEN"
+            ],
+            "objects": [
+              "FIG-OBJ-KREUZ",
+              "FIG-OBJ-TEMPELVORHANG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TOD",
+              "FIG-ZEICHEN-ERDBEBEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-SOLDATEN",
+                "to": "FIG-GRUPPE-SOLDATEN",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-GOTT"
+                ]
+              }
+            ],
+            "action_de": "Jesus stirbt; der Vorhang des Tempels zerreisst, die Erde bebt, und der Hauptmann und die Wachen sagen: Wahrhaftig, dieser war Gottes Sohn!",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-SOLDATEN": "surprised"
+              },
+              "back_side": "left",
+              "x": {
+                "FIG-GRUPPE-SOLDATEN": 154
+              },
+              "floor_x": {
+                "FIG-OBJ-KREUZ": 56
+              },
+              "air_x": 80,
+              "air_y": 96
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.27.57-MAT.27.66",
+            "figures": [
+              "FIG-JOSEF-ARIMATAEA",
+              "FIG-GRUPPE-SOLDATEN"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB-VERSCHLOSSEN",
+              "FIG-OBJ-SIEGEL"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Josef von Arimatäa legt den Leib in sein Grab; das Grab wird versiegelt und bewacht.",
+            "stage": {
+              "mood": {
+                "FIG-JOSEF-ARIMATAEA": "pensive",
+                "FIG-GRUPPE-SOLDATEN": "earnest"
+              },
+              "back_side": "right",
+              "x": {
+                "FIG-JOSEF-ARIMATAEA": 30,
+                "FIG-GRUPPE-SOLDATEN": 76
+              },
+              "at": {
+                "FIG-OBJ-SIEGEL": "FIG-ORT-GRAB-VERSCHLOSSEN"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Pilatus: Barabbas oder Jesus? (Barabbas, Jesus, Fragezeichen); die Menge: Ans Kreuz (Jesus, Kreuz); Pilatus wäscht sich die Hände (Hände mit Wassertropfen).",
+          "Kreuzigung: Golgota, der Hügel mit drei Kreuzen (ohne Körper); Soldaten losen um die Kleider (Gewand mit Losen).",
+          "Tod: leeres Kreuz, verschlossenes Grab; Vorhang zerrissen, Erdbeben (Zickzackriss); die Wachen: Gottes Sohn (Jesus, Strahlenkranz).",
+          "Grab: Josef (mit Leinentuch) hat das Grab verschlossen; Soldaten bewachen es, der Stein ist versiegelt (rotes Siegel)."
+        ]
+      }
+    }
+  ]
 }

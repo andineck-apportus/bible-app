@@ -13,7 +13,6 @@
       "n": 1,
       "reference": "MAT.25.31-MAT.25.33",
       "figures": [
-        "FIG-GRUPPE-ENGEL",
         "FIG-JESUS",
         "FIG-GRUPPE-VOELKER"
       ],
@@ -37,18 +36,17 @@
         "back_side": "left",
         "before": true,
         "x": {
-          "FIG-GRUPPE-ENGEL": 70,
-          "FIG-GRUPPE-VOELKER": 150
+          "FIG-GRUPPE-VOELKER": 96
         },
         "floor_x": {
-          "FIG-OBJ-SCHAF": 92,
-          "FIG-OBJ-BOCK": 124
+          "FIG-OBJ-SCHAF": 120,
+          "FIG-OBJ-BOCK": 150
         },
         "mood": {
           "FIG-GRUPPE-VOELKER": "pensive"
         },
-        "air_x": 98,
-        "air_y": 66
+        "air_x": 134,
+        "air_y": 70
       }
     },
     {
@@ -59,7 +57,9 @@
         "FIG-GRUPPE-VOELKER",
         "FIG-ROLLE-ARMER"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-OBJ-SCHAF"
+      ],
       "signs": [
         "FIG-ZEICHEN-GUTE-WERKE"
       ],
@@ -102,6 +102,9 @@
           "FIG-JESUS": 30,
           "FIG-GRUPPE-VOELKER": 96,
           "FIG-ROLLE-ARMER": 160
+        },
+        "hold": {
+          "FIG-GRUPPE-VOELKER": "FIG-OBJ-SCHAF"
         }
       }
     },
@@ -113,10 +116,10 @@
         "FIG-GRUPPE-VOELKER",
         "FIG-ROLLE-ARMER"
       ],
-      "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-NEIN"
+      "objects": [
+        "FIG-OBJ-BOCK"
       ],
+      "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
@@ -149,16 +152,20 @@
           "FIG-JESUS": 30,
           "FIG-GRUPPE-VOELKER": 96,
           "FIG-ROLLE-ARMER": 160
+        },
+        "hold": {
+          "FIG-GRUPPE-VOELKER": "FIG-OBJ-BOCK"
         }
       }
     },
     {
       "n": 4,
       "reference": "MAT.25.46",
-      "figures": [
-        "FIG-GRUPPE-VOELKER"
+      "figures": [],
+      "objects": [
+        "FIG-OBJ-SCHAF",
+        "FIG-OBJ-BOCK"
       ],
-      "objects": [],
       "signs": [
         "FIG-ZEICHEN-LEBEN",
         "FIG-ZEICHEN-FEUER"
@@ -166,26 +173,14 @@
       "speech": [],
       "action_de": "Diese werden weggehen in ewige Strafe, die Gerechten aber in ewiges Leben.",
       "stage": {
-        "mood": {
-          "FIG-GRUPPE-VOELKER": "pensive"
+        "floor_x": {
+          "FIG-OBJ-SCHAF": 36,
+          "FIG-OBJ-BOCK": 120
         },
-        "x": {
-          "FIG-GRUPPE-VOELKER": 93
-        },
-        "air_x": 40,
-        "air_y": 30,
-        "arrows": [
-          [
-            "FIG-GRUPPE-VOELKER",
-            "FIG-ZEICHEN-LEBEN",
-            "go"
-          ],
-          [
-            "FIG-GRUPPE-VOELKER",
-            "FIG-ZEICHEN-FEUER",
-            "go"
-          ]
-        ]
+        "at": {
+          "FIG-ZEICHEN-LEBEN": "FIG-OBJ-SCHAF",
+          "FIG-ZEICHEN-FEUER": "FIG-OBJ-BOCK"
+        }
       }
     }
   ],
@@ -196,10 +191,10 @@
     "Diese werden weggehen in ewige Strafe, die Gerechten aber in ewiges Leben."
   ],
   "captions_de": [
-    "Ankündigung: Der Menschensohn (Jesus) sitzt auf dem goldenen Thron, neben ihm Engel (Flügel); vor ihm die Völker; er scheidet sie wie Schafe von Böcken (Schaf, Bock, Bruch mit zwei Pfeilen).",
-    "Zur Rechten: Der König (Jesus) sagt den Gesegneten: Was ihr dem Armen Gutes tatet (Armer, Hand mit Brot und Herz), habt ihr mir getan (Jesus) – erbt das Reich der Himmel (Krone mit Strahlen); daneben ein Armer mit Stock.",
-    "Zur Linken: Der König (Jesus) sagt den anderen: Was ihr dem Armen nicht getan habt (Armer, rotes X), habt ihr mir nicht getan (Jesus) – ins Feuer (Flammen).",
-    "Zwei Wege: Die einen gehen ins ewige Leben (grüner Baum im goldenen Ring), die anderen in die ewige Strafe (Flammen)."
+    "Ankündigung: Der Menschensohn (Jesus) sitzt auf dem goldenen Thron; vor ihm die Völker; er scheidet sie, wie ein Hirt die Schafe von den Böcken scheidet (Schaf, Bock, Bruch mit zwei Pfeilen).",
+    "Zur Rechten (Schaf): Der König (Jesus) sagt den Gesegneten: Was ihr dem Armen Gutes tatet (Armer, Hand mit Brot und Herz), habt ihr mir getan (Jesus) – erbt das Reich der Himmel (Krone mit Strahlen); daneben ein Armer (graues Gewand).",
+    "Zur Linken (Bock): Der König (Jesus) sagt den anderen: Was ihr dem Armen nicht getan habt (Armer, rotes X), habt ihr mir nicht getan (Jesus) – ins Feuer (Flammen).",
+    "Zwei Wege: Die einen (Schaf) kommen ins ewige Leben (grüner Baum im goldenen Ring über dem Schaf), die anderen (Bock) in die ewige Strafe (Flammen über dem Bock)."
   ],
   "interpretation_note_de": "Ankündigung im Futur ([[MAT.25.31]]): Das Gericht ist nicht erzählt, sondern von Jesus angekündigt. Jesus erscheint als der Menschensohn und König auf dem Thron, den Matthäus mit Jesus gleichsetzt. Die Völker sind eine Gruppe; ihre Scheidung zeigen Schaf und Bock. Die sechs Werke ([[MAT.25.35-MAT.25.36]]) fasst das Zeichen «gute Werke» (Brot und Herz) zusammen; der Arme steht für «einen dieser meiner geringsten Brüder» ([[MAT.25.40]]) – wer damit gemeint ist (alle Notleidenden oder die Jünger), ist umstritten. Das ewige Feuer ([[MAT.25.41]]) zeigt nur Flammen, keine Strafe an Menschen.",
   "basis": [
@@ -238,5 +233,200 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.25.31-MAT.25.33",
+            "figures": [
+              "FIG-GRUPPE-ENGEL",
+              "FIG-JESUS",
+              "FIG-GRUPPE-VOELKER"
+            ],
+            "objects": [
+              "FIG-OBJ-THRON",
+              "FIG-OBJ-SCHAF",
+              "FIG-OBJ-BOCK"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TRENNEN"
+            ],
+            "speech": [],
+            "action_de": "Wenn der Menschensohn in seiner Herrlichkeit mit allen Engeln kommt, wird er sich auf den Thron seiner Herrlichkeit setzen; alle Völker werden vor ihm versammelt, und er wird sie scheiden wie ein Hirt die Schafe von den Böcken.",
+            "stage": {
+              "on": {
+                "FIG-JESUS": "FIG-OBJ-THRON"
+              },
+              "pose": {
+                "FIG-JESUS": "sit"
+              },
+              "back_side": "left",
+              "before": true,
+              "x": {
+                "FIG-GRUPPE-ENGEL": 70,
+                "FIG-GRUPPE-VOELKER": 150
+              },
+              "floor_x": {
+                "FIG-OBJ-SCHAF": 92,
+                "FIG-OBJ-BOCK": 124
+              },
+              "mood": {
+                "FIG-GRUPPE-VOELKER": "pensive"
+              },
+              "air_x": 98,
+              "air_y": 66
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.25.34-MAT.25.40",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-VOELKER",
+              "FIG-ROLLE-ARMER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-GUTE-WERKE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-VOELKER",
+                "icons": [
+                  "FIG-ROLLE-ARMER",
+                  "FIG-ZEICHEN-GUTE-WERKE",
+                  "FIG-JESUS"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-VOELKER",
+                "icons": [
+                  "FIG-ZEICHEN-REICH-GOTTES"
+                ]
+              }
+            ],
+            "action_de": "Der König wird zu denen zu seiner Rechten sagen: Erbt das Reich, denn ich war hungrig, durstig, fremd, nackt, krank und im Gefängnis, und ihr habt mir geholfen; was ihr einem meiner geringsten Brüder getan habt, habt ihr mir getan.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-VOELKER": "surprised",
+                "FIG-ROLLE-ARMER": "smile",
+                "FIG-JESUS": "calm"
+              },
+              "at": {
+                "FIG-ZEICHEN-GUTE-WERKE": "FIG-GRUPPE-VOELKER"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-VOELKER",
+                  "FIG-ROLLE-ARMER",
+                  "act"
+                ]
+              ],
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-VOELKER": 96,
+                "FIG-ROLLE-ARMER": 160
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.25.41-MAT.25.45",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-VOELKER",
+              "FIG-ROLLE-ARMER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-NEIN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-VOELKER",
+                "icons": [
+                  "FIG-ROLLE-ARMER",
+                  "FIG-ZEICHEN-NEIN",
+                  "FIG-JESUS"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-VOELKER",
+                "icons": [
+                  "FIG-ZEICHEN-FEUER"
+                ]
+              }
+            ],
+            "action_de": "Zu denen zur Linken wird er sagen: Geht weg von mir in das ewige Feuer, denn ihr habt mir das alles nicht getan; was ihr einem dieser Geringsten nicht getan habt, habt ihr mir auch nicht getan.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-VOELKER": "worried",
+                "FIG-ROLLE-ARMER": "worried",
+                "FIG-JESUS": "earnest"
+              },
+              "pose": {
+                "FIG-GRUPPE-VOELKER": "away"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-VOELKER": 96,
+                "FIG-ROLLE-ARMER": 160
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.25.46",
+            "figures": [
+              "FIG-GRUPPE-VOELKER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-LEBEN",
+              "FIG-ZEICHEN-FEUER"
+            ],
+            "speech": [],
+            "action_de": "Diese werden weggehen in ewige Strafe, die Gerechten aber in ewiges Leben.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-VOELKER": "pensive"
+              },
+              "x": {
+                "FIG-GRUPPE-VOELKER": 93
+              },
+              "air_x": 40,
+              "air_y": 30,
+              "arrows": [
+                [
+                  "FIG-GRUPPE-VOELKER",
+                  "FIG-ZEICHEN-LEBEN",
+                  "go"
+                ],
+                [
+                  "FIG-GRUPPE-VOELKER",
+                  "FIG-ZEICHEN-FEUER",
+                  "go"
+                ]
+              ]
+            }
+          }
+        ],
+        "captions_de": [
+          "Ankündigung: Der Menschensohn (Jesus) sitzt auf dem goldenen Thron, neben ihm Engel (Flügel); vor ihm die Völker; er scheidet sie wie Schafe von Böcken (Schaf, Bock, Bruch mit zwei Pfeilen).",
+          "Zur Rechten: Der König (Jesus) sagt den Gesegneten: Was ihr dem Armen Gutes tatet (Armer, Hand mit Brot und Herz), habt ihr mir getan (Jesus) – erbt das Reich der Himmel (Krone mit Strahlen); daneben ein Armer mit Stock.",
+          "Zur Linken: Der König (Jesus) sagt den anderen: Was ihr dem Armen nicht getan habt (Armer, rotes X), habt ihr mir nicht getan (Jesus) – ins Feuer (Flammen).",
+          "Zwei Wege: Die einen gehen ins ewige Leben (grüner Baum im goldenen Ring), die anderen in die ewige Strafe (Flammen)."
+        ]
+      }
+    }
+  ]
 }

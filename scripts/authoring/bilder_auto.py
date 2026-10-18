@@ -355,6 +355,8 @@ class Composer:
                 if not (st.get("x") or {}).get(s_["fid"]):
                     s_["x"] = ox + (k_ - (len(peers) - 1) / 2) * 22
                 self._lift[s_["fid"]] = max(0, FLOOR_Y - (oy - oh * .02))
+        for f_ in st.get("on_water") or []:  # geht auf dem Wasser: Figur steht über den Wellen (Blindtest: Jesus stand so tief wie Petrus)
+            self._lift[f_] = getattr(self, "water_lift", 16)
         sp_idx = ad_idx = None
         names = [s["fid"] for s in slots]
         for s in L["speech"]:
@@ -382,6 +384,10 @@ class Composer:
             if lift:
                 out[n0:] = [f'<g transform="translate(0 {-lift:.1f})">{"".join(out[n0:])}</g>']
                 heads[s["fid"]] = (heads[s["fid"]][0], heads[s["fid"]][1] - lift)
+                if s["fid"] in (st.get("on_water") or []):
+                    wx, wy = s["x"], getattr(self, "water_feet", FLOOR_Y) - lift + 3
+                    out.append(f'<path d="M{wx - 22:.1f} {wy:.1f}q5.5 -4 11 0t11 0t11 0t11 0" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"/>'
+                               f'<path d="M{wx - 22:.1f} {wy:.1f}q5.5 -4 11 0t11 0t11 0t11 0" fill="none" stroke="#3E7CA6" stroke-width="1" stroke-linecap="round"/>')
             pos[s["fid"]] = (heads[s["fid"]][0], heads[s["fid"]][1] + self.head_r() * 1.9)  # Körper, nicht Gesicht
         # 5. Gegenstände am Boden: eigener Platz am Rand
         cnt = st.get("count", {})
