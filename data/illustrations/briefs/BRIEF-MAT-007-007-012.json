@@ -17,7 +17,7 @@
         "FIG-ROLLE-JUENGER"
       ],
       "objects": [
-        "FIG-ORT-HAUS-OFFEN"
+        "FIG-ORT-TUER-OFFEN"
       ],
       "signs": [],
       "speech": [
@@ -39,7 +39,7 @@
         "arrows": [
           [
             "FIG-GOTT",
-            "FIG-ORT-HAUS-OFFEN",
+            "FIG-ORT-TUER-OFFEN",
             "act"
           ]
         ],
@@ -153,9 +153,7 @@
         "FIG-ROLLE-JUENGER",
         "FIG-ROLLE-MENSCH"
       ],
-      "objects": [
-        "FIG-OBJ-SCHRIFTROLLE"
-      ],
+      "objects": [],
       "signs": [
         "FIG-ZEICHEN-GUTE-WERKE"
       ],
@@ -165,9 +163,6 @@
         "x": {
           "FIG-ROLLE-JUENGER": 60,
           "FIG-ROLLE-MENSCH": 128
-        },
-        "hold": {
-          "FIG-ROLLE-JUENGER": "FIG-OBJ-SCHRIFTROLLE"
         },
         "at": {
           "FIG-ZEICHEN-GUTE-WERKE": [
@@ -201,10 +196,10 @@
     "Alles, was ihr wollt, dass euch die Menschen tun, das tut auch ihr ihnen; denn das ist das Gesetz und die Propheten."
   ],
   "captions_de": [
-    "Bitten und anklopfen: Ein Jünger bittet den Vater (Strahlenkranz; Gebetszeichen) und steht vor einem Haus, dessen Tür geöffnet wird (weit offene Tür mit warmem Licht, goldener Pfeil).",
+    "Bitten und anklopfen: Ein Jünger bittet den Vater (Strahlenkranz; Gebetszeichen); die Tür wird ihm weit geöffnet (offene Holztür, dahinter warmes Licht; goldener Pfeil).",
     "Brot statt Stein: Ein Sohn bittet seinen Vater um Brot und Fisch (Sprechblase); der Vater gibt ihm Brot (Brot in der Hand, Pfeil), keinen Stein und keine Schlange (am Boden, roter Kreis mit Schrägbalken).",
     "Gute Gaben: Die Jünger bitten den Vater (Strahlenkranz; Gebetszeichen); er gibt ihnen Gutes (goldener Pfeil, offene Hände mit goldenem Licht).",
-    "Wie ihr es wollt: Ein Jünger und ein Mann tun einander Gutes (Hand reicht ein Brot, darüber ein Herz; Pfeile hin und her); das ist das Gesetz und die Propheten (Schriftrolle)."
+    "Wie ihr es wollt: Ein Jünger und ein Mann tun einander Gutes (Hand reicht ein Brot, darüber ein Herz; Pfeile hin und her)."
   ],
   "interpretation_note_de": "Dass Gott die Tür öffnet und gibt, deutet die Passivform («es wird euch gegeben werden», «geöffnet werden», [[MAT.7.7]]). Suchen und finden nennt nur die Handlung. Die Schlange ([[MAT.7.10]]) liegt nur als abgelehnte Gabe am Boden. In Feld 4 steht die Schriftrolle für «das Gesetz und die Propheten» ([[MAT.7.12]]).",
   "basis": [
@@ -243,5 +238,205 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.7.7-MAT.7.8",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-ROLLE-JUENGER"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS-OFFEN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-JUENGER",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-BETEN"
+                ]
+              }
+            ],
+            "action_de": "Bittet, und es wird euch gegeben werden; sucht, und ihr werdet finden; klopft an, und es wird euch geöffnet werden.",
+            "stage": {
+              "god_side": "right",
+              "x": {
+                "FIG-ROLLE-JUENGER": 50
+              },
+              "back_side": "right",
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-ORT-HAUS-OFFEN",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-JUENGER": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.7.9-MAT.7.10",
+            "figures": [
+              "FIG-ROLLE-SOHN",
+              "FIG-ROLLE-VATER"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT",
+              "FIG-OBJ-STEIN",
+              "FIG-OBJ-SCHLANGE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NICHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-SOHN",
+                "to": "FIG-ROLLE-VATER",
+                "icons": [
+                  "FIG-OBJ-BROT",
+                  "FIG-OBJ-FISCH"
+                ]
+              }
+            ],
+            "action_de": "Kein Mensch gibt seinem Sohn, der um Brot bittet, einen Stein, oder, wenn er um einen Fisch bittet, eine Schlange.",
+            "stage": {
+              "x": {
+                "FIG-ROLLE-SOHN": 40,
+                "FIG-ROLLE-VATER": 100
+              },
+              "hold": {
+                "FIG-ROLLE-VATER": "FIG-OBJ-BROT"
+              },
+              "floor_x": {
+                "FIG-OBJ-STEIN": 132,
+                "FIG-OBJ-SCHLANGE": 156
+              },
+              "at": {
+                "FIG-ZEICHEN-NICHT": [
+                  "FIG-OBJ-STEIN",
+                  "FIG-OBJ-SCHLANGE"
+                ]
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-VATER",
+                  "FIG-ROLLE-SOHN",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-SOHN": "calm",
+                "FIG-ROLLE-VATER": "smile"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.7.11",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-GNADE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-BETEN"
+                ]
+              }
+            ],
+            "action_de": "Wenn schon Menschen, die böse sind, ihren Kindern gute Gaben geben, wie viel mehr wird der Vater in den Himmeln denen Gutes geben, die ihn bitten.",
+            "stage": {
+              "god_side": "right",
+              "x": {
+                "FIG-GRUPPE-JUENGER": 70
+              },
+              "at": {
+                "FIG-ZEICHEN-GNADE": "FIG-GRUPPE-JUENGER"
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-JUENGER",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "smile"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.7.12",
+            "figures": [
+              "FIG-ROLLE-JUENGER",
+              "FIG-ROLLE-MENSCH"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHRIFTROLLE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-GUTE-WERKE"
+            ],
+            "speech": [],
+            "action_de": "Alles, was ihr wollt, dass euch die Menschen tun, das tut auch ihr ihnen; denn das ist das Gesetz und die Propheten.",
+            "stage": {
+              "x": {
+                "FIG-ROLLE-JUENGER": 60,
+                "FIG-ROLLE-MENSCH": 128
+              },
+              "hold": {
+                "FIG-ROLLE-JUENGER": "FIG-OBJ-SCHRIFTROLLE"
+              },
+              "at": {
+                "FIG-ZEICHEN-GUTE-WERKE": [
+                  "FIG-ROLLE-JUENGER",
+                  "FIG-ROLLE-MENSCH"
+                ]
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-JUENGER",
+                  "FIG-ROLLE-MENSCH",
+                  "act"
+                ],
+                [
+                  "FIG-ROLLE-MENSCH",
+                  "FIG-ROLLE-JUENGER",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-JUENGER": "smile",
+                "FIG-ROLLE-MENSCH": "smile"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Bitten und anklopfen: Ein Jünger bittet den Vater (Strahlenkranz; Gebetszeichen) und steht vor einem Haus, dessen Tür geöffnet wird (weit offene Tür mit warmem Licht, goldener Pfeil).",
+          "Brot statt Stein: Ein Sohn bittet seinen Vater um Brot und Fisch (Sprechblase); der Vater gibt ihm Brot (Brot in der Hand, Pfeil), keinen Stein und keine Schlange (am Boden, roter Kreis mit Schrägbalken).",
+          "Gute Gaben: Die Jünger bitten den Vater (Strahlenkranz; Gebetszeichen); er gibt ihnen Gutes (goldener Pfeil, offene Hände mit goldenem Licht).",
+          "Wie ihr es wollt: Ein Jünger und ein Mann tun einander Gutes (Hand reicht ein Brot, darüber ein Herz; Pfeile hin und her); das ist das Gesetz und die Propheten (Schriftrolle)."
+        ]
+      }
+    }
+  ]
 }

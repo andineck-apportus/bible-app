@@ -14,8 +14,7 @@
       "reference": "MAT.5.1-MAT.5.12",
       "figures": [
         "FIG-JESUS",
-        "FIG-GRUPPE-JUENGER",
-        "FIG-GRUPPE-MENGE"
+        "FIG-GRUPPE-JUENGER"
       ],
       "objects": [
         "FIG-ORT-BERG"
@@ -43,12 +42,10 @@
         },
         "x": {
           "FIG-JESUS": 44,
-          "FIG-GRUPPE-JUENGER": 110,
-          "FIG-GRUPPE-MENGE": 158
+          "FIG-GRUPPE-JUENGER": 128
         },
         "mood": {
-          "FIG-GRUPPE-JUENGER": "calm",
-          "FIG-GRUPPE-MENGE": "calm"
+          "FIG-GRUPPE-JUENGER": "calm"
         }
       }
     },
@@ -118,8 +115,8 @@
       "reference": "MAT.5.21-MAT.5.48",
       "figures": [
         "FIG-GOTT",
-        "FIG-GRUPPE-JUENGER",
-        "FIG-GRUPPE-GEGNER"
+        "FIG-GRUPPE-GEGNER",
+        "FIG-GRUPPE-JUENGER"
       ],
       "objects": [],
       "signs": [],
@@ -137,13 +134,20 @@
       "stage": {
         "god_side": "right",
         "x": {
-          "FIG-GRUPPE-JUENGER": 40,
-          "FIG-GRUPPE-GEGNER": 112
+          "FIG-GRUPPE-GEGNER": 34,
+          "FIG-GRUPPE-JUENGER": 112
         },
         "mood": {
           "FIG-GRUPPE-JUENGER": "calm",
           "FIG-GRUPPE-GEGNER": "earnest"
-        }
+        },
+        "arrows": [
+          [
+            "FIG-GRUPPE-JUENGER",
+            "FIG-GOTT",
+            "act"
+          ]
+        ]
       }
     }
   ],
@@ -154,10 +158,10 @@
     "In sechs Gegenüberstellungen («Ich aber sage euch») spricht er über Zorn und Versöhnung, Ehebruch, Scheidung, Schwören, Vergeltung und Feindesliebe."
   ],
   "captions_de": [
-    "Seligpreisungen: Jesus sitzt auf dem Berg und lehrt die Jünger und die Menschenmengen: Den Armen (Gruppe in grauen Kleidern) gehört das Reich der Himmel (goldene Krone mit Lichtstrahlen).",
+    "Seligpreisungen: Jesus ist oben auf dem Berg und lehrt die Jünger: Den Armen (Gruppe in grauen Kleidern) gehört das Reich der Himmel (goldene Krone mit Lichtstrahlen).",
     "Licht der Welt: Jesus sagt den Jüngern: Ihr seid das Licht (Flamme mit goldenen Strahlen) der Welt (Scheibe mit Meer und Land).",
     "Erfüllen: Jesus sagt, er erfülle das Gesetz und die Propheten (Schriftrolle, goldener Ring mit Haken).",
-    "Feinde lieben: Die Jünger beten zum Vater (Strahlenkranz) für ihre Gegner (Sprechblase: Gruppe in Grau, zwei rote Herzen)."
+    "Feinde lieben: Die Jünger beten mit gefalteten Händen zum Vater (goldene Linie zum Strahlenkranz) für ihre Gegner (Sprechblase: Gruppe in Grau, zwei rote Herzen); die Gegner stehen abseits."
   ],
   "interpretation_note_de": "Das Kapitelbild nimmt Felder aus den Abschnittsbildern auf. Feld 1 steht für alle neun Seligpreisungen ([[MAT.5.3-MAT.5.12]]), Feld 4 stellvertretend für die sechs Gegenüberstellungen ([[MAT.5.21-MAT.5.48]]) mit ihrer letzten, der Feindesliebe ([[MAT.5.44]]). Gott erscheint als Strahlenkranz.",
   "basis": [
@@ -172,5 +176,158 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.5.1-MAT.5.12",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-BERG"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-GRUPPE-ARME",
+                  "FIG-ZEICHEN-REICH-GOTTES"
+                ]
+              }
+            ],
+            "action_de": "Jesus steigt auf den Berg, setzt sich und lehrt die Jünger; er preist unter anderem die Armen im Geist selig, denn ihnen gehört das Reich der Himmel.",
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "sit"
+              },
+              "back_side": "left",
+              "before": true,
+              "on": {
+                "FIG-JESUS": "FIG-ORT-BERG"
+              },
+              "x": {
+                "FIG-JESUS": 44,
+                "FIG-GRUPPE-JUENGER": 110,
+                "FIG-GRUPPE-MENGE": 158
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "calm",
+                "FIG-GRUPPE-MENGE": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.5.13-MAT.5.16",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-ZEICHEN-LEUCHTEN",
+                  "FIG-ZEICHEN-WELT"
+                ]
+              }
+            ],
+            "action_de": "Er nennt seine Hörer Salz der Erde und Licht der Welt; ihr Licht soll vor den Menschen leuchten.",
+            "stage": {
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-GRUPPE-JUENGER": 132
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "calm"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.5.17-MAT.5.20",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-SCHRIFTROLLE",
+                  "FIG-ZEICHEN-VOLLBRACHT"
+                ]
+              }
+            ],
+            "action_de": "Er ist nicht gekommen, das Gesetz und die Propheten aufzuheben, sondern zu erfüllen.",
+            "stage": {
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-GRUPPE-JUENGER": 132
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "calm"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.5.21-MAT.5.48",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-GRUPPE-GEGNER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-GRUPPE-GEGNER",
+                  "FIG-ZEICHEN-LIEBE"
+                ]
+              }
+            ],
+            "action_de": "In sechs Gegenüberstellungen («Ich aber sage euch») spricht er über Zorn und Versöhnung, Ehebruch, Scheidung, Schwören, Vergeltung und Feindesliebe.",
+            "stage": {
+              "god_side": "right",
+              "x": {
+                "FIG-GRUPPE-JUENGER": 40,
+                "FIG-GRUPPE-GEGNER": 112
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "calm",
+                "FIG-GRUPPE-GEGNER": "earnest"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Seligpreisungen: Jesus sitzt auf dem Berg und lehrt die Jünger und die Menschenmengen: Den Armen (Gruppe in grauen Kleidern) gehört das Reich der Himmel (goldene Krone mit Lichtstrahlen).",
+          "Licht der Welt: Jesus sagt den Jüngern: Ihr seid das Licht (Flamme mit goldenen Strahlen) der Welt (Scheibe mit Meer und Land).",
+          "Erfüllen: Jesus sagt, er erfülle das Gesetz und die Propheten (Schriftrolle, goldener Ring mit Haken).",
+          "Feinde lieben: Die Jünger beten zum Vater (Strahlenkranz) für ihre Gegner (Sprechblase: Gruppe in Grau, zwei rote Herzen)."
+        ]
+      }
+    }
+  ]
 }

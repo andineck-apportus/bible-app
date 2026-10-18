@@ -78,7 +78,7 @@
           ]
         ],
         "mood": {
-          "FIG-GRUPPE-JUENGER": "delight"
+          "FIG-GRUPPE-JUENGER": "calm"
         }
       }
     },
@@ -90,7 +90,7 @@
         "FIG-SALOMO"
       ],
       "objects": [
-        "FIG-OBJ-BLUME"
+        "FIG-OBJ-LILIE"
       ],
       "signs": [],
       "speech": [],
@@ -98,21 +98,23 @@
       "stage": {
         "god_side": "right",
         "count": {
-          "FIG-OBJ-BLUME": 3
+          "FIG-OBJ-LILIE": 3
         },
         "x": {
-          "FIG-SALOMO": 50
+          "FIG-SALOMO": 44
         },
-        "floor_side": "right",
         "arrows": [
           [
             "FIG-GOTT",
-            "FIG-OBJ-BLUME",
+            "FIG-OBJ-LILIE",
             "act"
           ]
         ],
         "mood": {
-          "FIG-SALOMO": "calm"
+          "FIG-SALOMO": "surprised"
+        },
+        "floor_x": {
+          "FIG-OBJ-LILIE": 92
         }
       }
     },
@@ -151,7 +153,8 @@
         "mood": {
           "FIG-GRUPPE-VOELKER": "worried",
           "FIG-GRUPPE-JUENGER": "smile"
-        }
+        },
+        "bubble_y": 12
       }
     }
   ],
@@ -163,8 +166,8 @@
   ],
   "captions_de": [
     "Nicht sorgen: Jesus sagt den Jüngern: Sorgt euch nicht (blauer Schweisstropfen, rotes X) um Essen und Kleidung (Brot, helles Gewand).",
-    "Die Vögel: Der Vater (Strahlenkranz) ernährt die Vögel (goldener Pfeil); die Jünger schauen ihnen zu.",
-    "Die Lilien: Gott (Strahlenkranz) kleidet die Lilien (weisse Blüten, goldener Pfeil); selbst König Salomo in seiner Pracht (Krone, goldenes Gewand) ist nicht so schön gekleidet.",
+    "Die Vögel: Der Vater (Strahlenkranz) ernährt die Vögel (goldener Pfeil); die Jünger schauen zu.",
+    "Die Lilien: Gott (Strahlenkranz) kleidet die Lilien (weisse Lilien, goldener Pfeil); daneben König Salomo in seiner Pracht (Krone, goldenes Gewand): Nicht einmal er war so gekleidet wie eine von ihnen.",
     "Zuerst das Reich: Menschen aus den Völkern denken an Essen, Trinken und Kleidung (Denkblase: Brot, Becher mit Wasser, Gewand); die Jünger suchen zuerst das Reich (goldene Krone mit Lichtstrahlen über ihnen)."
   ],
   "interpretation_note_de": "Gott erscheint als Strahlenkranz; Jesus nennt ihn «euren himmlischen Vater». Die weissen Blüten stehen für die Lilien des Feldes ([[MAT.6.28]]); Salomo trägt Krone und goldenes Gewand für «all seine Pracht» ([[MAT.6.29]]). Die Elle Lebenszeit ([[MAT.6.27]]), das Gras im Ofen ([[MAT.6.30]]) und die Sorge um morgen ([[MAT.6.34]]) nennt nur die Handlung. «Heiden» ([[MAT.6.32]]) sind Menschen aus den Völkern, ohne Wertung.",
@@ -204,5 +207,166 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.6.25",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-SORGE",
+                  "FIG-ZEICHEN-NEIN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-BROT",
+                  "FIG-OBJ-GEWAND"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: Sorgt euch nicht um euer Leben, was ihr essen sollt, und nicht um euren Leib, was ihr anziehen sollt.",
+            "stage": {
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-GRUPPE-JUENGER": 132
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "worried"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.6.26-MAT.6.27",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-VOGEL"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Schaut auf die Vögel des Himmels: Sie säen nicht, ernten nicht und sammeln nicht in Scheunen, und der himmlische Vater ernährt sie; wer kann durch Sorgen sein Leben verlängern?",
+            "stage": {
+              "god_side": "left",
+              "count": {
+                "FIG-OBJ-VOGEL": 3
+              },
+              "air_x": 96,
+              "air_y": 30,
+              "x": {
+                "FIG-GRUPPE-JUENGER": 120
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-OBJ-VOGEL",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "delight"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.6.28-MAT.6.30",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-SALOMO"
+            ],
+            "objects": [
+              "FIG-OBJ-BLUME"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Seht die Lilien des Feldes: Sie mühen sich nicht ab und spinnen nicht, und nicht einmal Salomo in all seiner Pracht war gekleidet wie eine von ihnen; wie viel mehr wird Gott euch kleiden, ihr Kleingläubigen.",
+            "stage": {
+              "god_side": "right",
+              "count": {
+                "FIG-OBJ-BLUME": 3
+              },
+              "x": {
+                "FIG-SALOMO": 50
+              },
+              "floor_side": "right",
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-OBJ-BLUME",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-SALOMO": "calm"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.6.31-MAT.6.34",
+            "figures": [
+              "FIG-GRUPPE-VOELKER",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-REICH-GOTTES"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-VOELKER",
+                "to": "FIG-GRUPPE-VOELKER",
+                "icons": [
+                  "FIG-OBJ-BROT",
+                  "FIG-OBJ-BECHER-WASSER",
+                  "FIG-OBJ-GEWAND"
+                ],
+                "think": true
+              }
+            ],
+            "action_de": "Nach Essen, Trinken und Kleidung trachten die Heiden; der Vater weiss, dass sie es brauchen. Die Jünger sollen zuerst das Reich und seine Gerechtigkeit suchen, dann wird ihnen das alles dazugegeben.",
+            "stage": {
+              "x": {
+                "FIG-GRUPPE-VOELKER": 46,
+                "FIG-GRUPPE-JUENGER": 136
+              },
+              "at": {
+                "FIG-ZEICHEN-REICH-GOTTES": "FIG-GRUPPE-JUENGER"
+              },
+              "mood": {
+                "FIG-GRUPPE-VOELKER": "worried",
+                "FIG-GRUPPE-JUENGER": "smile"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Nicht sorgen: Jesus sagt den Jüngern: Sorgt euch nicht (blauer Schweisstropfen, rotes X) um Essen und Kleidung (Brot, helles Gewand).",
+          "Die Vögel: Der Vater (Strahlenkranz) ernährt die Vögel (goldener Pfeil); die Jünger schauen ihnen zu.",
+          "Die Lilien: Gott (Strahlenkranz) kleidet die Lilien (weisse Blüten, goldener Pfeil); selbst König Salomo in seiner Pracht (Krone, goldenes Gewand) ist nicht so schön gekleidet.",
+          "Zuerst das Reich: Menschen aus den Völkern denken an Essen, Trinken und Kleidung (Denkblase: Brot, Becher mit Wasser, Gewand); die Jünger suchen zuerst das Reich (goldene Krone mit Lichtstrahlen über ihnen)."
+        ]
+      }
+    }
+  ]
 }

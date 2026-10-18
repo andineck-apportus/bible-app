@@ -17,33 +17,29 @@
         "FIG-GRUPPE-JUENGER",
         "FIG-GRUPPE-VERFUEHRER"
       ],
-      "objects": [
-        "FIG-OBJ-WOLF"
+      "objects": [],
+      "signs": [],
+      "speech": [
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-GRUPPE-JUENGER",
+          "icons": [
+            "FIG-ZEICHEN-WARNEN",
+            "FIG-GRUPPE-VERFUEHRER",
+            "FIG-OBJ-WOLF"
+          ]
+        }
       ],
-      "signs": [
-        "FIG-ZEICHEN-WARNEN"
-      ],
-      "speech": [],
       "action_de": "Hütet euch vor den falschen Propheten, die in Schafskleidern kommen; innen aber sind sie reissende Wölfe.",
       "stage": {
         "x": {
           "FIG-JESUS": 30,
-          "FIG-GRUPPE-JUENGER": 80,
-          "FIG-GRUPPE-VERFUEHRER": 148
-        },
-        "split": 2,
-        "beside": {
-          "FIG-ZEICHEN-WARNEN": "FIG-JESUS"
-        },
-        "at": {
-          "FIG-OBJ-WOLF": "FIG-GRUPPE-VERFUEHRER"
-        },
-        "wear": {
-          "FIG-GRUPPE-VERFUEHRER": "#F2EEE4"
+          "FIG-GRUPPE-JUENGER": 88,
+          "FIG-GRUPPE-VERFUEHRER": 152
         },
         "mood": {
           "FIG-GRUPPE-JUENGER": "worried",
-          "FIG-GRUPPE-VERFUEHRER": "calm"
+          "FIG-GRUPPE-VERFUEHRER": "smile"
         }
       }
     },
@@ -58,7 +54,6 @@
         "FIG-OBJ-DORNEN"
       ],
       "signs": [
-        "FIG-ZEICHEN-WAHRHEIT",
         "FIG-ZEICHEN-NEIN"
       ],
       "speech": [],
@@ -68,11 +63,10 @@
           "FIG-GRUPPE-JUENGER": 44
         },
         "floor_x": {
-          "FIG-OBJ-FEIGENBAUM": 84,
-          "FIG-OBJ-DORNEN": 146
+          "FIG-OBJ-FEIGENBAUM": 80,
+          "FIG-OBJ-DORNEN": 126
         },
         "at": {
-          "FIG-ZEICHEN-WAHRHEIT": "FIG-OBJ-FEIGENBAUM",
           "FIG-ZEICHEN-NEIN": "FIG-OBJ-DORNEN"
         },
         "mood": {
@@ -128,7 +122,6 @@
           "to": "FIG-JESUS",
           "icons": [
             "FIG-ZEICHEN-VERKUENDIGEN",
-            "FIG-ZEICHEN-DAEMON",
             "FIG-ZEICHEN-STERN"
           ]
         },
@@ -160,10 +153,10 @@
     "Viele werden an jenem Tag sagen: Haben wir nicht in deinem Namen prophezeit, Dämonen ausgetrieben und Machttaten getan? Er wird ihnen erklären: Nie habe ich euch gekannt. Weicht von mir!"
   ],
   "captions_de": [
-    "Falsche Propheten: Jesus warnt die Jünger (erhobener Zeigefinger) vor falschen Propheten in weissen Schafsfellen (helle Mäntel), die innen Wölfe sind (grauer Wolf bei ihnen).",
-    "An den Früchten: Die Jünger sehen einen Feigenbaum mit Früchten (grünes Häkchen) und einen Dornstrauch ohne Feigen (rotes X).",
+    "Falsche Propheten: Jesus warnt die Jünger (Sprechblase: erhobener Zeigefinger) vor falschen Propheten (Reisende in violettgrauem Gewand), die innen reissende Wölfe sind (grauer Wolf).",
+    "An den Früchten: Die Jünger sehen einen Feigenbaum mit Früchten (violette Feigen) und einen Dornstrauch ohne Feigen (rotes X).",
     "Den Willen tun: Jesus sagt den Jüngern: Wer den Willen des Vaters tut (Wolke, goldener Pfeil nach unten auf grünen Hügel), kommt in das Reich der Himmel (dicker Pfeil, goldene Krone mit Lichtstrahlen).",
-    "Nie gekannt: Viele zählen Jesus auf, was sie in seinem Namen getan haben (Sprechblase: Rufer, dunkler Wirbel, goldener Stern); Jesus weist sie ab (abwehrende Hand; gestrichelte Linie zwischen ihnen)."
+    "Nie gekannt: Viele zählen Jesus auf, was sie in seinem Namen getan haben (Sprechblase: Rufer, goldener Stern); Jesus weist sie ab (Sprechblase: abwehrende Hand; gestrichelte Linie zwischen ihnen)."
   ],
   "interpretation_note_de": "Die falschen Propheten ([[MAT.7.15]]) erscheinen als Gruppe der Verführer mit hellen Mänteln für die Schafskleider; der Wolf bei ihnen steht für «innen reissende Wölfe», ohne Gewalt. Feigenbaum und Dornstrauch stehen für gute und schlechte Bäume und für «Feigen von Disteln» ([[MAT.7.16-MAT.7.18]]); das Umhauen und Verbrennen ([[MAT.7.19]]) zeigt das Bild nicht. In Feld 4 bedeuten Rufer = prophezeien, dunkler Wirbel = Dämonen austreiben, Stern = Machttaten ([[MAT.7.22]]); die gestrichelte Linie steht für «nie habe ich euch gekannt» ([[MAT.7.23]]). Die vielen sind keine bestimmte Gruppe.",
   "basis": [
@@ -202,5 +195,164 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.7.15",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-GRUPPE-VERFUEHRER"
+            ],
+            "objects": [
+              "FIG-OBJ-WOLF"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-WARNEN"
+            ],
+            "speech": [],
+            "action_de": "Hütet euch vor den falschen Propheten, die in Schafskleidern kommen; innen aber sind sie reissende Wölfe.",
+            "stage": {
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-JUENGER": 80,
+                "FIG-GRUPPE-VERFUEHRER": 148
+              },
+              "split": 2,
+              "beside": {
+                "FIG-ZEICHEN-WARNEN": "FIG-JESUS"
+              },
+              "at": {
+                "FIG-OBJ-WOLF": "FIG-GRUPPE-VERFUEHRER"
+              },
+              "wear": {
+                "FIG-GRUPPE-VERFUEHRER": "#F2EEE4"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "worried",
+                "FIG-GRUPPE-VERFUEHRER": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.7.16-MAT.7.20",
+            "figures": [
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-FEIGENBAUM",
+              "FIG-OBJ-DORNEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-WAHRHEIT",
+              "FIG-ZEICHEN-NEIN"
+            ],
+            "speech": [],
+            "action_de": "An ihren Früchten werdet ihr sie erkennen: Ein guter Baum bringt gute Früchte, ein fauler schlechte; man sammelt keine Feigen von Disteln; jeder Baum ohne gute Frucht wird umgehauen und ins Feuer geworfen.",
+            "stage": {
+              "x": {
+                "FIG-GRUPPE-JUENGER": 44
+              },
+              "floor_x": {
+                "FIG-OBJ-FEIGENBAUM": 84,
+                "FIG-OBJ-DORNEN": 146
+              },
+              "at": {
+                "FIG-ZEICHEN-WAHRHEIT": "FIG-OBJ-FEIGENBAUM",
+                "FIG-ZEICHEN-NEIN": "FIG-OBJ-DORNEN"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "calm"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.7.21",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-WILLE-GOTTES",
+                  "FIG-ZEICHEN-DARAUS",
+                  "FIG-ZEICHEN-REICH-GOTTES"
+                ]
+              }
+            ],
+            "action_de": "Nicht jeder, der «Herr, Herr» sagt, wird in das Reich der Himmel hineinkommen, sondern wer den Willen des Vaters in den Himmeln tut.",
+            "stage": {
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-GRUPPE-JUENGER": 132
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "calm"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.7.22-MAT.7.23",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-VOLK"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-VOLK",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-VERKUENDIGEN",
+                  "FIG-ZEICHEN-DAEMON",
+                  "FIG-ZEICHEN-STERN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-VOLK",
+                "icons": [
+                  "FIG-ZEICHEN-ABLEHNEN"
+                ]
+              }
+            ],
+            "action_de": "Viele werden an jenem Tag sagen: Haben wir nicht in deinem Namen prophezeit, Dämonen ausgetrieben und Machttaten getan? Er wird ihnen erklären: Nie habe ich euch gekannt. Weicht von mir!",
+            "stage": {
+              "x": {
+                "FIG-GRUPPE-VOLK": 46,
+                "FIG-JESUS": 140
+              },
+              "split": 1,
+              "mood": {
+                "FIG-GRUPPE-VOLK": "worried"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Falsche Propheten: Jesus warnt die Jünger (erhobener Zeigefinger) vor falschen Propheten in weissen Schafsfellen (helle Mäntel), die innen Wölfe sind (grauer Wolf bei ihnen).",
+          "An den Früchten: Die Jünger sehen einen Feigenbaum mit Früchten (grünes Häkchen) und einen Dornstrauch ohne Feigen (rotes X).",
+          "Den Willen tun: Jesus sagt den Jüngern: Wer den Willen des Vaters tut (Wolke, goldener Pfeil nach unten auf grünen Hügel), kommt in das Reich der Himmel (dicker Pfeil, goldene Krone mit Lichtstrahlen).",
+          "Nie gekannt: Viele zählen Jesus auf, was sie in seinem Namen getan haben (Sprechblase: Rufer, dunkler Wirbel, goldener Stern); Jesus weist sie ab (abwehrende Hand; gestrichelte Linie zwischen ihnen)."
+        ]
+      }
+    }
+  ]
 }

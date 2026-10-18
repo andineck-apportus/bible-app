@@ -24,6 +24,13 @@
           "to": "FIG-GRUPPE-JUENGER",
           "icons": [
             "FIG-ZEICHEN-SEHEN",
+            "FIG-ROLLE-FRAU"
+          ]
+        },
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-GRUPPE-JUENGER",
+          "icons": [
             "FIG-ZEICHEN-HERZ",
             "FIG-ZEICHEN-SUENDE"
           ]
@@ -48,15 +55,13 @@
         "FIG-GRUPPE-JUENGER"
       ],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-WARNEN"
-      ],
+      "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-JUENGER",
           "icons": [
-            "FIG-ZEICHEN-SEHEN",
+            "FIG-ZEICHEN-WARNEN",
             "FIG-ZEICHEN-STOLPERN"
           ]
         },
@@ -74,9 +79,6 @@
         "x": {
           "FIG-JESUS": 40,
           "FIG-GRUPPE-JUENGER": 132
-        },
-        "beside": {
-          "FIG-ZEICHEN-WARNEN": "FIG-JESUS"
         },
         "mood": {
           "FIG-GRUPPE-JUENGER": "worried"
@@ -157,8 +159,8 @@
     "Jesus aber sagt: Wer seine Frau entlässt, ausser wegen Unzucht, macht, dass mit ihr die Ehe gebrochen wird; und wer eine Entlassene heiratet, bricht die Ehe."
   ],
   "captions_de": [
-    "Schon im Herzen: Jesus sagt den Jüngern: Wer begehrlich ansieht (offenes Auge), hat im Herzen (rotes Herz) schon die Ehe gebrochen (dunkler Fleck).",
-    "Ernste Warnung: Jesus warnt die Jünger (erhobener Zeigefinger): Was dich zu Fall bringt (Auge; kleine Figur kippt über einen Stein), wirf weg, damit du nicht ins Feuer kommst (Flammen, rotes X).",
+    "Schon im Herzen: Jesus sagt den Jüngern: Wer eine Frau begehrlich ansieht (offenes Auge, Frau), hat im Herzen (rotes Herz) schon die Ehe gebrochen (dunkler Fleck).",
+    "Ernste Warnung: Jesus warnt die Jünger (Sprechblase: erhobener Zeigefinger): Was dich zu Fall bringt (kleine Figur kippt über einen Stein), wirf weg, damit du nicht ins Feuer kommst (Flammen, rotes X).",
     "Scheidebrief: Ein Mann gibt seiner Frau einen Scheidebrief (gefaltetes Blatt mit Siegel, Pfeil) und entlässt sie.",
     "Ich aber sage euch: Jesus sagt den Jüngern: Wer die Ehe auflöst (Mann und Frau im Band, gezackter Bruch), führt zum Ehebruch (dicker Pfeil, dunkler Fleck)."
   ],
@@ -199,5 +201,161 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.5.27-MAT.5.28",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-SEHEN",
+                  "FIG-ZEICHEN-HERZ",
+                  "FIG-ZEICHEN-SUENDE"
+                ]
+              }
+            ],
+            "action_de": "Zum Gebot «Du sollst nicht ehebrechen» sagt Jesus: Wer eine Frau ansieht, um sie zu begehren, hat in seinem Herzen schon die Ehe gebrochen.",
+            "stage": {
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-GRUPPE-JUENGER": 132
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "earnest"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.5.29-MAT.5.30",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-WARNEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-SEHEN",
+                  "FIG-ZEICHEN-STOLPERN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-FEUER",
+                  "FIG-ZEICHEN-NEIN"
+                ]
+              }
+            ],
+            "action_de": "Bringt das rechte Auge oder die rechte Hand zu Fall, soll man sie von sich werfen; besser ein Glied verlieren, als dass der ganze Leib in die Hölle kommt.",
+            "stage": {
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-GRUPPE-JUENGER": 132
+              },
+              "beside": {
+                "FIG-ZEICHEN-WARNEN": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "worried"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.5.31",
+            "figures": [
+              "FIG-ROLLE-MENSCH",
+              "FIG-ROLLE-FRAU"
+            ],
+            "objects": [
+              "FIG-OBJ-BRIEF"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Es ist gesagt worden: Wer seine Frau entlässt, soll ihr einen Scheidebrief geben.",
+            "stage": {
+              "x": {
+                "FIG-ROLLE-MENSCH": 60,
+                "FIG-ROLLE-FRAU": 128
+              },
+              "hold": {
+                "FIG-ROLLE-MENSCH": "FIG-OBJ-BRIEF"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-MENSCH",
+                  "FIG-ROLLE-FRAU",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-MENSCH": "earnest",
+                "FIG-ROLLE-FRAU": "worried"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.5.32",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-EHE",
+                  "FIG-ZEICHEN-TRENNEN",
+                  "FIG-ZEICHEN-DARAUS",
+                  "FIG-ZEICHEN-SUENDE"
+                ]
+              }
+            ],
+            "action_de": "Jesus aber sagt: Wer seine Frau entlässt, ausser wegen Unzucht, macht, dass mit ihr die Ehe gebrochen wird; und wer eine Entlassene heiratet, bricht die Ehe.",
+            "stage": {
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-GRUPPE-JUENGER": 132
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "earnest"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Schon im Herzen: Jesus sagt den Jüngern: Wer begehrlich ansieht (offenes Auge), hat im Herzen (rotes Herz) schon die Ehe gebrochen (dunkler Fleck).",
+          "Ernste Warnung: Jesus warnt die Jünger (erhobener Zeigefinger): Was dich zu Fall bringt (Auge; kleine Figur kippt über einen Stein), wirf weg, damit du nicht ins Feuer kommst (Flammen, rotes X).",
+          "Scheidebrief: Ein Mann gibt seiner Frau einen Scheidebrief (gefaltetes Blatt mit Siegel, Pfeil) und entlässt sie.",
+          "Ich aber sage euch: Jesus sagt den Jüngern: Wer die Ehe auflöst (Mann und Frau im Band, gezackter Bruch), führt zum Ehebruch (dicker Pfeil, dunkler Fleck)."
+        ]
+      }
+    }
+  ]
 }
