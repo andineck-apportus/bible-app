@@ -24,6 +24,7 @@ Danach in dieser Reihenfolge ausführen: `bildlexikon.py`, `bildauftraege.py`, `
   je Abschnitt des Kapitels ein Feld, höchstens 4 (bei mehr Abschnitten die wichtigsten zusammenfassen).
 - **Abschnitt** (`level: section`, `reference` und `target` des Abschnitts `TU-…`, `translation` = hochdeutsche Arbeitsübersetzung des Kapitels):
   1–4 Felder in der Reihenfolge des Textes; jedes Feld nennt seinen Versbereich.
+- **Merkvers** (`level: verse`, `reference` = ein Vers, `target` = Abschnitt `TU-…`, `translation` wie beim Abschnitt): ein Feld, wenige starke Zeichen zum Einprägen; `note_de` sagt, warum der Vers ein Merkvers ist. Suffix `MAT-005-003`. Die App zeigt die Karte beim Vers mit dem Verswortlaut der gewählten Fassung.
 - `suffix`: wie die Ziel-ID ohne `TU-`/`SUM-CH-`/`SUM-BOOK-` (z. B. `RUT-001-001-005`, `RUT-001`, `RUT`).
 
 ## Ein Feld

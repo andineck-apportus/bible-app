@@ -293,6 +293,14 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .ill-toggle svg{width:16px;height:16px}
 #bible-stream .app .ill-toggle button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
 #bible-stream .ill{margin:0}
+#bible-stream .merk{display:flex;gap:14px;align-items:center;margin:10px 0 18px;padding:10px;border:1px solid var(--rule);border-radius:14px;background:var(--bg)}
+#bible-stream .merk .ill-img{flex:0 0 46%;min-width:0}
+#bible-stream .merk .ill-img>svg{width:100%!important;margin:0}
+#bible-stream .merk-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:6px}
+#bible-stream .merk-label{font:600 12px/1.2 var(--ui);letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+#bible-stream .merk-text{margin:0;font:400 17px/1.4 var(--serif);color:var(--ink)}
+#bible-stream .merk-ref{font:600 14px/1.2 var(--ui);color:var(--ink)}
+@media (max-width:420px){#bible-stream .merk{flex-direction:column;align-items:stretch}#bible-stream .merk .ill-img{flex:none;width:72%;margin:0 auto}}
 #bible-stream .ill-img svg{display:block;width:100%!important;height:auto!important;flex:none;border-radius:12px}
 #bible-stream .ill-img svg svg{border-radius:0}
 #bible-stream .ill-img.narrow>svg{width:50%!important;margin:0 auto}
@@ -697,7 +705,11 @@ function verseEntry(n){
   const inline=S.inline?alts.map(a=>`<span class="alt-line" data-alternative="${esc(a.variant)}">${lang==='de'?'oder':'or'}: «${esc(a.to)}»</span>`).join(''):'';
   const bgList=S.bgInline?bgs.filter(b=>b.from===n.v):[];
   const bgLine=bgList.length?`<div class="bg-lines"><span class="bg-label">${icon('history')}</span>${bgList.map(b=>`<button type="button" class="bg-line" data-bg="${esc(b.id)}">${esc(b.topic)}</button>`).join('')}</div>`:'';
-  return `<article class="stream-entry verse" data-stream="${n.id}">${lead}<p class="verse-line">${vno}<span class="stream-copy" data-ref="${n.canonicalRef}">${S.advanced?decorate(text,LAYER().decisions[n.canonicalRef]):esc(text)}</span></p>${inline}${bgLine}</article>`;
+  return `<article class="stream-entry verse" data-stream="${n.id}">${lead}<p class="verse-line">${vno}<span class="stream-copy" data-ref="${n.canonicalRef}">${S.advanced?decorate(text,LAYER().decisions[n.canonicalRef]):esc(text)}</span></p>${inline}${bgLine}${merkCard(n,text)}</article>`;
+}
+// Merkvers-Karte: Bild zum Einprägen, Verswortlaut der gewählten Fassung und Stelle (Bild ohne Schrift, Text kommt aus der Übersetzung)
+function merkCard(n,text){if(!ILL||S.ill==='off')return '';const it=illItem(n.canonicalRef);if(!it)return '';const il={...LOC(it),key:n.canonicalRef};
+  return `<figure class="merk"><div class="ill-img" role="img" aria-label="${esc(il.alt)}">${il.svg}</div><figcaption class="merk-body"><span class="merk-label">${lang==='de'?'Merkvers':'Memory verse'}</span><p class="merk-text">«${esc(text)}»</p><span class="merk-ref">${esc(refDe(n.canonicalRef))}</span><button type="button" class="link soft" data-legend="${esc(il.key)}">${T().legend}</button></figcaption></figure>`;
 }
 function streamMarkup(){const ids=streams[nodes.get(current).level];const t=T();const warn=dataError?`<p class="note gap">${lang==='de'?'Ein Teil der Daten konnte nicht geladen werden. Wird die Seite direkt als Datei geöffnet, die Einzeldatei verwenden.':'Some data could not be loaded. When opening the page as a local file, use the single-file version.'}</p>`:'';const first=nodes.get(ids[readerStart]);const gap=S.flow&&first&&first.level===6&&!summary(first)?`<p class="note gap">${t.placeholder}</p>`:'';return `<div class="column">${warn}${readerStart?`<button type="button" class="load load-before" data-action="load-prev">${t.loadPrev}</button>`:''}${gap}${ids.slice(readerStart,readerEnd).map(entryM).join('')}${readerEnd<ids.length?`<button type="button" class="load load-after" data-action="load-next">${t.loadNext}</button>`:`<p class="end">${t.end}</p>`}</div>`;}
 let moreBusy=false;

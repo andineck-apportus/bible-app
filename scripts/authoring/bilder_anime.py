@@ -587,12 +587,12 @@ PANEL_SHAPES = [[(2, 2), (184, 2), (184, 136), (2, 138)], [(2, 2), (184, 4), (18
                 [(2, 4), (184, 2), (184, 138), (2, 138)], [(2, 2), (184, 2), (184, 138), (2, 136)]]
 
 
-def apanel(i, n, body):
+def apanel(i, n, body, num=True):
     pid = f"an-cp-{CUR[0]}-{n}"
     poly = " ".join(f"{x},{y}" for x, y in PANEL_SHAPES[i % 4])
     return (f'<clipPath id="{pid}"><polygon points="{poly}"/></clipPath><g clip-path="url(#{pid})"><polygon points="{poly}" fill="#F6EAD7"/>{body}</g>'
             f'<polygon points="{poly}" fill="none" stroke="{INK}" stroke-width="2.2" stroke-linejoin="round"/>'
-            f'<circle cx="14" cy="14" r="8.5" fill="#FFFDF6" stroke="{INK}" stroke-width="1.2"/><text x="14" y="18" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="{INK}">{n}</text>')
+            + (f'<circle cx="14" cy="14" r="8.5" fill="#FFFDF6" stroke="{INK}" stroke-width="1.2"/><text x="14" y="18" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="{INK}">{n}</text>' if num else ''))
 
 
 def alayout(bodies):
@@ -600,7 +600,7 @@ def alayout(bodies):
     head = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}"><rect width="{w}" height="{h}" fill="#FFFDF6"/>'
     # höchstens zwei Spalten, alle Felder gleich gross (lesbar auf dem Handy); ein Feld allein in Feldgrösse (die App zeigt es halb breit)
     if n == 1:
-        return head.format(w=194, h=148) + '<g transform="translate(4 4)">' + apanel(0, 1, bodies[0]) + "</g></svg>"
+        return head.format(w=194, h=148) + '<g transform="translate(4 4)">' + apanel(0, 1, bodies[0], num=False) + "</g></svg>"
     if n == 2:
         return head.format(w=380, h=148) + "".join(f'<g transform="translate({4 + i * 188} 4)">' + apanel(i, i + 1, b) + "</g>" for i, b in enumerate(bodies)) + "</svg>"
     if n == 3:

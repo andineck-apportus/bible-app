@@ -83,11 +83,11 @@ def bubble(x, y, w, h, tx, ty, inner):
     return f'<g><path d="{bubble_path(x, y, w, h, tx, ty, 8, 4.5)}" fill="{BUBBLE}" stroke="{INK}" stroke-width="1.2" stroke-linejoin="round"/>{inner}</g>'
 
 
-def panel(n, px, py, body, w=186, h=140):
+def panel(n, px, py, body, w=186, h=140, num=True):
     clip = f"ill-cp-{n}-{px}-{py}"
     return (f'<g transform="translate({px} {py})"><clipPath id="{clip}"><rect width="{w}" height="{h}" rx="10"/></clipPath>'
             f'<g clip-path="url(#{clip})"><rect width="{w}" height="{h}" fill="{PAPER}"/><rect y="{h - 22}" width="{w}" height="22" fill="{FLOOR}"/>{body}</g>'
-            f'<circle cx="13" cy="13" r="9" fill="#FFFDF6" stroke="{INK}"/><text x="13" y="17.5" text-anchor="middle" font-family="sans-serif" font-size="12" fill="{INK}">{n}</text></g>')
+            + (f'<circle cx="13" cy="13" r="9" fill="#FFFDF6" stroke="{INK}"/><text x="13" y="17.5" text-anchor="middle" font-family="sans-serif" font-size="12" fill="{INK}">{n}</text>' if num else '') + '</g>')
 
 
 # ---------- Johannes 2,1–12 (vier Felder) ----------
@@ -341,7 +341,7 @@ def f_herrschaft():
 def layout(bodies):
     n = len(bodies)
     if n == 1:
-        return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 186 140">' + panel(1, 0, 0, bodies[0]) + "</svg>"
+        return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 186 140">' + panel(1, 0, 0, bodies[0], num=False) + "</svg>"  # ein Feld: ohne Nummer
     if n == 2:
         return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 140">' + panel(1, 0, 0, bodies[0]) + panel(2, 194, 0, bodies[1]) + "</svg>"
     # höchstens zwei Spalten, alle Felder gleich gross (lesbar auf dem Handy); bei drei Feldern das dritte mittig darunter
