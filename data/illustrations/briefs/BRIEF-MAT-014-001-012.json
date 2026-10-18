@@ -66,13 +66,6 @@
           "FIG-HERODIAS": "earnest",
           "FIG-JOHANNES-TAEUFER": "earnest"
         },
-        "arrows": [
-          [
-            "FIG-JOHANNES-TAEUFER",
-            "FIG-ORT-GEFAENGNIS",
-            "go"
-          ]
-        ],
         "x": {
           "FIG-JOHANNES-TAEUFER": 96,
           "FIG-HERODES-ANTIPAS": 134,
@@ -136,7 +129,7 @@
         "FIG-JESUS"
       ],
       "objects": [
-        "FIG-ORT-GRAB"
+        "FIG-ORT-GRAB-VERSCHLOSSEN"
       ],
       "signs": [
         "FIG-ZEICHEN-TRAUER"
@@ -174,9 +167,9 @@
   ],
   "captions_de": [
     "Herodes meint: Herodes (Krone, Purpurgewand) sagt zu seinen Dienern: Johannes ist auferweckt (Johannes im Kamelhaargewand, offenes Grab mit goldenem Pfeil nach oben).",
-    "Rückblick: Johannes sagt Herodes, Herodias zu haben sei nicht erlaubt (Herodias, roter Kreis mit Schrägbalken); dafür kommt er ins Gefängnis (gestrichelter Weg zum Steinblock mit Gitterfenster).",
+    "Rückblick: Johannes sagt Herodes, Herodias zu haben sei nicht erlaubt (Herodias, roter Kreis mit Schrägbalken); dafür liess Herodes ihn ins Gefängnis werfen (Steinblock mit Gitterfenster).",
     "Das Fest: Herodes verspricht der Tochter der Herodias (rosa Gewand), was sie will (Hand reicht etwas); angestiftet von der Mutter (Pfeil von Herodias) verlangt sie den Tod des Johannes (Johannes, Felsengrab mit Stein verschlossen).",
-    "Begraben: Die Jünger des Johannes haben ihn begraben (Grab) und berichten es Jesus unter Tränen (Johannes, verschlossenes Felsengrab)."
+    "Begraben: Die Jünger des Johannes haben ihn begraben (Felsengrab mit Stein verschlossen) und berichten es Jesus unter Tränen (Johannes, verschlossenes Felsengrab)."
   ],
   "interpretation_note_de": "Feld 2 bis 4 erzählen rückblickend ([[MAT.14.3-MAT.14.12]]). Der Tod des Johannes und der Kopf auf der Schale ([[MAT.14.8-MAT.14.11]]) werden nicht gezeigt; das verschlossene Grab steht für den Tod. Dass Herodes die Menge fürchtete ([[MAT.14.5]]) und betrübt war ([[MAT.14.9]]), nennt nur die Handlung. Das offene Grab mit Pfeil steht für «auferweckt» ([[MAT.14.2]]) – so meint es Herodes, nicht der Erzähler.",
   "basis": [
@@ -215,5 +208,177 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.14.1-MAT.14.2",
+            "figures": [
+              "FIG-GRUPPE-DIENER",
+              "FIG-HERODES-ANTIPAS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-HERODES-ANTIPAS",
+                "to": "FIG-GRUPPE-DIENER",
+                "icons": [
+                  "FIG-JOHANNES-TAEUFER",
+                  "FIG-ZEICHEN-AUFERSTEHUNG"
+                ]
+              }
+            ],
+            "action_de": "Herodes, der Tetrarch, hört die Kunde von Jesus und sagt zu seinen Dienern: «Das ist Johannes der Täufer; er ist von den Toten auferweckt worden, und darum wirken die Kräfte in ihm.»",
+            "stage": {
+              "mood": {
+                "FIG-HERODES-ANTIPAS": "worried",
+                "FIG-GRUPPE-DIENER": "surprised"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.14.3-MAT.14.5",
+            "figures": [
+              "FIG-JOHANNES-TAEUFER",
+              "FIG-HERODES-ANTIPAS",
+              "FIG-HERODIAS"
+            ],
+            "objects": [
+              "FIG-ORT-GEFAENGNIS"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JOHANNES-TAEUFER",
+                "to": "FIG-HERODES-ANTIPAS",
+                "icons": [
+                  "FIG-HERODIAS",
+                  "FIG-ZEICHEN-NICHT"
+                ]
+              }
+            ],
+            "action_de": "Rückblick: Herodes hatte Johannes gefesselt ins Gefängnis gebracht wegen Herodias, der Frau seines Bruders Philippus; denn Johannes hatte ihm gesagt: «Es ist dir nicht erlaubt, sie zu haben.» Er wollte ihn töten, fürchtete aber die Menge.",
+            "stage": {
+              "back_side": "left",
+              "mood": {
+                "FIG-HERODES-ANTIPAS": "pensive",
+                "FIG-HERODIAS": "earnest",
+                "FIG-JOHANNES-TAEUFER": "earnest"
+              },
+              "arrows": [
+                [
+                  "FIG-JOHANNES-TAEUFER",
+                  "FIG-ORT-GEFAENGNIS",
+                  "go"
+                ]
+              ],
+              "x": {
+                "FIG-JOHANNES-TAEUFER": 96,
+                "FIG-HERODES-ANTIPAS": 134,
+                "FIG-HERODIAS": 166
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.14.6-MAT.14.8",
+            "figures": [
+              "FIG-HERODES-ANTIPAS",
+              "FIG-TOCHTER-HERODIAS",
+              "FIG-HERODIAS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-HERODES-ANTIPAS",
+                "to": "FIG-TOCHTER-HERODIAS",
+                "icons": [
+                  "FIG-ZEICHEN-GEBEN"
+                ]
+              },
+              {
+                "from": "FIG-TOCHTER-HERODIAS",
+                "to": "FIG-HERODES-ANTIPAS",
+                "icons": [
+                  "FIG-JOHANNES-TAEUFER",
+                  "FIG-ZEICHEN-TOD"
+                ]
+              }
+            ],
+            "action_de": "Am Geburtstag des Herodes tanzt die Tochter der Herodias und gefällt ihm; er verspricht ihr mit einem Eid, was immer sie erbittet. Von ihrer Mutter angestiftet, verlangt sie den Kopf des Johannes auf einer Schale.",
+            "stage": {
+              "mood": {
+                "FIG-HERODES-ANTIPAS": "smile",
+                "FIG-HERODIAS": "earnest",
+                "FIG-TOCHTER-HERODIAS": "calm"
+              },
+              "arrows": [
+                [
+                  "FIG-HERODIAS",
+                  "FIG-TOCHTER-HERODIAS",
+                  "act"
+                ]
+              ],
+              "x": {
+                "FIG-HERODES-ANTIPAS": 28,
+                "FIG-TOCHTER-HERODIAS": 116,
+                "FIG-HERODIAS": 164
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.14.9-MAT.14.12",
+            "figures": [
+              "FIG-GRUPPE-JOHANNES-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JOHANNES-JUENGER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JOHANNES-TAEUFER",
+                  "FIG-ZEICHEN-TOD"
+                ]
+              }
+            ],
+            "action_de": "Der König ist betrübt, lässt Johannes aber wegen der Eide und der Gäste im Gefängnis enthaupten. Die Jünger des Johannes holen den Leichnam, begraben ihn und berichten es Jesus.",
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-GRUPPE-JOHANNES-JUENGER"
+                ]
+              },
+              "back_side": "left",
+              "mood": {
+                "FIG-GRUPPE-JOHANNES-JUENGER": "worried",
+                "FIG-JESUS": "pensive"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Herodes meint: Herodes (Krone, Purpurgewand) sagt zu seinen Dienern: Johannes ist auferweckt (Johannes im Kamelhaargewand, offenes Grab mit goldenem Pfeil nach oben).",
+          "Rückblick: Johannes sagt Herodes, Herodias zu haben sei nicht erlaubt (Herodias, roter Kreis mit Schrägbalken); dafür kommt er ins Gefängnis (gestrichelter Weg zum Steinblock mit Gitterfenster).",
+          "Das Fest: Herodes verspricht der Tochter der Herodias (rosa Gewand), was sie will (Hand reicht etwas); angestiftet von der Mutter (Pfeil von Herodias) verlangt sie den Tod des Johannes (Johannes, Felsengrab mit Stein verschlossen).",
+          "Begraben: Die Jünger des Johannes haben ihn begraben (Grab) und berichten es Jesus unter Tränen (Johannes, verschlossenes Felsengrab)."
+        ]
+      }
+    }
+  ]
 }

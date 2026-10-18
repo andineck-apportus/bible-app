@@ -17,8 +17,7 @@
         "FIG-GRUPPE-JUENGER"
       ],
       "objects": [
-        "FIG-OBJ-BOOT",
-        "FIG-ORT-BERG"
+        "FIG-OBJ-BOOT"
       ],
       "signs": [
         "FIG-ZEICHEN-WIND",
@@ -38,9 +37,8 @@
           ]
         },
         "big_side": "right",
-        "back_side": "left",
-        "on": {
-          "FIG-JESUS": "FIG-ORT-BERG"
+        "x": {
+          "FIG-JESUS": 40
         },
         "signs_who": {
           "FIG-ZEICHEN-BETEN": [
@@ -51,7 +49,8 @@
           "FIG-ZEICHEN-WIND": "FIG-OBJ-BOOT"
         },
         "mood": {
-          "FIG-GRUPPE-JUENGER": "worried"
+          "FIG-GRUPPE-JUENGER": "worried",
+          "FIG-JESUS": "calm"
         }
       }
     },
@@ -92,7 +91,7 @@
         "big_side": "right",
         "mood": {
           "FIG-GRUPPE-JUENGER": "surprised",
-          "FIG-JESUS": "smile"
+          "FIG-JESUS": "calm"
         },
         "in_water": true
       }
@@ -157,7 +156,9 @@
         "FIG-OBJ-BOOT",
         "FIG-ORT-SEE"
       ],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-KNIEN"
+      ],
       "speech": [
         {
           "from": "FIG-GRUPPE-JUENGER",
@@ -191,9 +192,12 @@
         },
         "sea": "calm",
         "mood": {
-          "FIG-GRUPPE-JUENGER": "delight",
-          "FIG-PETRUS": "delight",
+          "FIG-GRUPPE-JUENGER": "calm",
+          "FIG-PETRUS": "calm",
           "FIG-JESUS": "calm"
+        },
+        "at": {
+          "FIG-ZEICHEN-KNIEN": "FIG-GRUPPE-JUENGER"
         }
       }
     }
@@ -205,10 +209,10 @@
     "Als sie ins Boot steigen, legt sich der Wind; die im Boot werfen sich vor ihm nieder und sagen: «Wahrhaftig, du bist Gottes Sohn!»"
   ],
   "captions_de": [
-    "Gegenwind: Jesus betet allein auf dem Berg (betende Hände); die Jünger mühen sich in der Nacht (Mondsichel) im Boot gegen den Wind (Windlinien).",
+    "Gegenwind: Jesus betet allein (betende Hände); die Jünger mühen sich in der Nacht (Mondsichel) im Boot gegen den Wind (Windlinien).",
     "Auf dem Wasser: Jesus geht in der Nacht auf dem See zum Boot; die Jünger erschrecken. Er sagt: Ich bin es (Jesus).",
     "Rette mich: Petrus sinkt im Wind (Windlinien) und ruft: Rette mich! (Pfeil nach oben aus den Wellen); Jesus streckt die Hand aus und ergreift ihn (Pfeil).",
-    "Gottes Sohn: Im Boot ist der See ruhig; die Jünger werfen sich vor Jesus nieder: Du bist Gottes Sohn (Jesus, Strahlenkranz)."
+    "Gottes Sohn: Im Boot ist der See ruhig; die Jünger werfen sich vor Jesus nieder (kleine kniende Figur): Du bist Gottes Sohn (Jesus, Strahlenkranz)."
   ],
   "interpretation_note_de": "Die vierte Nachtwache ([[MAT.14.25]]) ist die Zeit vor dem Morgen; das Bild zeigt Nacht. Dass die Jünger ihn für ein Gespenst halten ([[MAT.14.26]]), nennt nur die Legende. Der Strahlenkranz in der Sprechblase steht für «Gottes Sohn» ([[MAT.14.33]]); das Niederwerfen zeigt nur der Ausdruck der Jünger im Boot.",
   "basis": [
@@ -247,5 +251,209 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.14.22-MAT.14.24",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-BERG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-WIND",
+              "FIG-ZEICHEN-NACHT",
+              "FIG-ZEICHEN-BETEN"
+            ],
+            "speech": [],
+            "action_de": "Jesus lässt die Jünger im Boot vorausfahren, entlässt die Menschenmengen und steigt allein auf den Berg, um zu beten. Das Boot ist weit vom Land und wird von den Wellen bedrängt, denn der Wind steht entgegen.",
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-JUENGER": [
+                  0.3,
+                  0.45
+                ]
+              },
+              "big_side": "right",
+              "back_side": "left",
+              "on": {
+                "FIG-JESUS": "FIG-ORT-BERG"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-BETEN": [
+                  "FIG-JESUS"
+                ]
+              },
+              "at": {
+                "FIG-ZEICHEN-WIND": "FIG-OBJ-BOOT"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "worried"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.14.25-MAT.14.27",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NACHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "In der vierten Nachtwache kommt Jesus auf dem See zu ihnen; die Jünger halten ihn für ein Gespenst und schreien vor Furcht. Er sagt: «Seid getrost, ich bin es; fürchtet euch nicht!»",
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-JUENGER": [
+                  0.3,
+                  0.45
+                ]
+              },
+              "big_side": "right",
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "surprised",
+                "FIG-JESUS": "smile"
+              },
+              "in_water": true
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.14.28-MAT.14.31",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NACHT",
+              "FIG-ZEICHEN-WIND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-RETTUNG"
+                ]
+              }
+            ],
+            "action_de": "Petrus bittet, auf dem Wasser zu Jesus kommen zu dürfen; auf sein «Komm!» geht er auf dem Wasser. Als er den starken Wind sieht, fürchtet er sich, beginnt zu sinken und schreit: «Herr, rette mich!» Jesus ergreift ihn: «Du Kleingläubiger, warum hast du gezweifelt?»",
+            "stage": {
+              "in_water": true,
+              "big_side": "right",
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-PETRUS",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-WIND": "FIG-PETRUS"
+              },
+              "mood": {
+                "FIG-PETRUS": "worried",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-JESUS": 34,
+                "FIG-PETRUS": 78
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.14.32-MAT.14.33",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-PETRUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-GOTT"
+                ]
+              }
+            ],
+            "action_de": "Als sie ins Boot steigen, legt sich der Wind; die im Boot werfen sich vor ihm nieder und sagen: «Wahrhaftig, du bist Gottes Sohn!»",
+            "stage": {
+              "in": {
+                "FIG-JESUS": "FIG-OBJ-BOOT",
+                "FIG-PETRUS": "FIG-OBJ-BOOT",
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.74,
+                  0.42
+                ],
+                "FIG-PETRUS": [
+                  0.5,
+                  0.48
+                ],
+                "FIG-GRUPPE-JUENGER": [
+                  0.26,
+                  0.48
+                ]
+              },
+              "sea": "calm",
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "delight",
+                "FIG-PETRUS": "delight",
+                "FIG-JESUS": "calm"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Gegenwind: Jesus betet allein auf dem Berg (betende Hände); die Jünger mühen sich in der Nacht (Mondsichel) im Boot gegen den Wind (Windlinien).",
+          "Auf dem Wasser: Jesus geht in der Nacht auf dem See zum Boot; die Jünger erschrecken. Er sagt: Ich bin es (Jesus).",
+          "Rette mich: Petrus sinkt im Wind (Windlinien) und ruft: Rette mich! (Pfeil nach oben aus den Wellen); Jesus streckt die Hand aus und ergreift ihn (Pfeil).",
+          "Gottes Sohn: Im Boot ist der See ruhig; die Jünger werfen sich vor Jesus nieder: Du bist Gottes Sohn (Jesus, Strahlenkranz)."
+        ]
+      }
+    }
+  ]
 }

@@ -39,8 +39,8 @@
         },
         "in_pos": {
           "FIG-JESUS": [
-            0.5,
-            0.4
+            0.3,
+            0.42
           ]
         },
         "x": {
@@ -61,34 +61,28 @@
         "FIG-OBJ-UNKRAUT"
       ],
       "signs": [
-        "FIG-ZEICHEN-NACHT"
+        "FIG-ZEICHEN-NACHT",
+        "FIG-ZEICHEN-SCHLAFEN"
       ],
       "speech": [],
       "action_de": "Im Gleichnis sät ein Feind nachts Unkraut unter den Weizen eines Hausherrn; beides wächst bis zur Ernte.",
       "stage": {
         "x": {
-          "FIG-ROLLE-GUTSHERR": 30,
+          "FIG-ROLLE-GUTSHERR": 48,
           "FIG-ROLLE-FEIND": 150
         },
         "hold": {
           "FIG-ROLLE-FEIND": "FIG-OBJ-SAMEN"
         },
         "floor_x": {
-          "FIG-OBJ-UNKRAUT": 84
-        },
-        "arrows": [
-          [
-            "FIG-ROLLE-FEIND",
-            "FIG-OBJ-UNKRAUT",
-            "throw"
-          ]
-        ],
-        "pose": {
-          "FIG-ROLLE-GUTSHERR": "sleep"
+          "FIG-OBJ-UNKRAUT": 96
         },
         "mood": {
           "FIG-ROLLE-GUTSHERR": "sleep",
           "FIG-ROLLE-FEIND": "earnest"
+        },
+        "at": {
+          "FIG-ZEICHEN-SCHLAFEN": "FIG-ROLLE-GUTSHERR"
         }
       }
     },
@@ -101,7 +95,7 @@
       "objects": [
         "FIG-OBJ-SENFSTAUDE",
         "FIG-OBJ-SCHATZ",
-        "FIG-OBJ-PERLE"
+        "FIG-OBJ-PERLE-KOSTBAR"
       ],
       "signs": [],
       "speech": [
@@ -116,7 +110,7 @@
       "action_de": "Das Reich der Himmel gleicht einem Senfkorn, einem Sauerteig, einem Schatz im Feld und einer kostbaren Perle.",
       "stage": {
         "hold": {
-          "FIG-JESUS": "FIG-OBJ-PERLE"
+          "FIG-JESUS": "FIG-OBJ-PERLE-KOSTBAR"
         },
         "x": {
           "FIG-JESUS": 40
@@ -170,8 +164,8 @@
   ],
   "captions_de": [
     "Vom Boot aus: Jesus erzählt den Menschenmengen am Ufer vom Sämann (Sämann, Ohr).",
-    "Unkraut: In der Nacht (Mondsichel) sät ein Feind (Kapuze) Unkraut (Hand mit Körnern, dunkle Halme) unter den Weizen (Kornfeld), während der Hausherr schläft.",
-    "Bilder vom Reich: Jesus spricht vom Reich der Himmel (goldene Krone mit Strahlen): Senfstaude, Schatztruhe, Perle (in seiner Hand).",
+    "Unkraut: In der Nacht (Mondsichel) kommt ein Feind (Kapuze) mit Unkrautsamen (Hand mit Körnern) und sät Unkraut (dunkle Halme) unter den Weizen (Kornfeld), während der Hausherr schläft (geschlossene Augen, Mondsichel mit Punkten).",
+    "Bilder vom Reich: Jesus spricht vom Reich der Himmel (goldene Krone mit Strahlen): Senfstaude, Schatztruhe, Perle in der Muschel (in seiner Hand).",
     "Heimat: Die Leute fragen: Ist das nicht Marias Sohn? (Maria, Fragezeichen); sie glauben nicht (graues Herz mit Riss)."
   ],
   "interpretation_note_de": "Vier Stationen: Sämann ([[MAT.13.1-MAT.13.23]]), Unkraut unter dem Weizen ([[MAT.13.24-MAT.13.43]]), die Gleichnisse von Senfkorn, Schatz und Perle ([[MAT.13.31-MAT.13.52]]) und die Ablehnung in der Heimat ([[MAT.13.53-MAT.13.58]]). Sauerteig, Netz und die Deutungen zeigen die Abschnittsbilder. Dass in Feld 2 der Hausherr schläft, ist Gestaltung; der Text sagt, «die Leute» schliefen ([[MAT.13.25]]).",
@@ -187,5 +181,173 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.13.1-MAT.13.9",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-SEE",
+              "FIG-OBJ-BOOT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ROLLE-SAEMANN",
+                  "FIG-ZEICHEN-HOEREN"
+                ]
+              }
+            ],
+            "action_de": "Vom Boot aus erzählt Jesus den Menschenmengen das Gleichnis vom Sämann.",
+            "stage": {
+              "big_side": "right",
+              "in": {
+                "FIG-JESUS": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.5,
+                  0.4
+                ]
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 50
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.13.24-MAT.13.30",
+            "figures": [
+              "FIG-ROLLE-GUTSHERR",
+              "FIG-ROLLE-FEIND"
+            ],
+            "objects": [
+              "FIG-ORT-KORNFELD",
+              "FIG-OBJ-SAMEN",
+              "FIG-OBJ-UNKRAUT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NACHT"
+            ],
+            "speech": [],
+            "action_de": "Im Gleichnis sät ein Feind nachts Unkraut unter den Weizen eines Hausherrn; beides wächst bis zur Ernte.",
+            "stage": {
+              "x": {
+                "FIG-ROLLE-GUTSHERR": 30,
+                "FIG-ROLLE-FEIND": 150
+              },
+              "hold": {
+                "FIG-ROLLE-FEIND": "FIG-OBJ-SAMEN"
+              },
+              "floor_x": {
+                "FIG-OBJ-UNKRAUT": 84
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-FEIND",
+                  "FIG-OBJ-UNKRAUT",
+                  "throw"
+                ]
+              ],
+              "pose": {
+                "FIG-ROLLE-GUTSHERR": "sleep"
+              },
+              "mood": {
+                "FIG-ROLLE-GUTSHERR": "sleep",
+                "FIG-ROLLE-FEIND": "earnest"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.13.31-MAT.13.46",
+            "figures": [
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-SENFSTAUDE",
+              "FIG-OBJ-SCHATZ",
+              "FIG-OBJ-PERLE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-REICH-GOTTES"
+                ]
+              }
+            ],
+            "action_de": "Das Reich der Himmel gleicht einem Senfkorn, einem Sauerteig, einem Schatz im Feld und einer kostbaren Perle.",
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-PERLE"
+              },
+              "x": {
+                "FIG-JESUS": 40
+              },
+              "floor_x": {
+                "FIG-OBJ-SENFSTAUDE": 76,
+                "FIG-OBJ-SCHATZ": 138
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.13.53-MAT.13.58",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-SYNAGOGE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-UNGLAUBE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-MARIA-MUTTER-JESU",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "In seiner Heimat nehmen die Leute Anstoss an Jesus; wegen ihres Unglaubens tut er dort nicht viele Machttaten.",
+            "stage": {
+              "back_side": "left",
+              "at": {
+                "FIG-ZEICHEN-UNGLAUBE": "FIG-GRUPPE-MENGE"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Vom Boot aus: Jesus erzählt den Menschenmengen am Ufer vom Sämann (Sämann, Ohr).",
+          "Unkraut: In der Nacht (Mondsichel) sät ein Feind (Kapuze) Unkraut (Hand mit Körnern, dunkle Halme) unter den Weizen (Kornfeld), während der Hausherr schläft.",
+          "Bilder vom Reich: Jesus spricht vom Reich der Himmel (goldene Krone mit Strahlen): Senfstaude, Schatztruhe, Perle (in seiner Hand).",
+          "Heimat: Die Leute fragen: Ist das nicht Marias Sohn? (Maria, Fragezeichen); sie glauben nicht (graues Herz mit Riss)."
+        ]
+      }
+    }
+  ]
 }

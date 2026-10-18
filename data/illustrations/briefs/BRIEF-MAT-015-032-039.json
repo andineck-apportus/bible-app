@@ -48,11 +48,11 @@
         },
         "floor_side": "right",
         "x": {
-          "FIG-GRUPPE-JUENGER": 30,
-          "FIG-JESUS": 72
+          "FIG-GRUPPE-JUENGER": 32,
+          "FIG-JESUS": 92
         },
         "floor_x": {
-          "FIG-OBJ-BROT": 96
+          "FIG-OBJ-BROT": 118
         }
       }
     },
@@ -100,11 +100,8 @@
           "FIG-GRUPPE-JUENGER": "FIG-OBJ-BROT"
         },
         "floor_x": {
-          "FIG-OBJ-KORB": 4
-        },
-        "behind": [
-          "FIG-OBJ-KORB"
-        ]
+          "FIG-OBJ-KORB": 22
+        }
       }
     },
     {
@@ -185,5 +182,149 @@
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
-  }
+  },
+  "revision_log": [
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.15.32-MAT.15.34",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-WUESTE",
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ERBARMEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-ZEICHEN-TAGE",
+                  "FIG-ZEICHEN-TAGE",
+                  "FIG-ZEICHEN-TAGE"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt seinen Jüngern, er habe Erbarmen mit der Menge, die schon drei Tage bei ihm sei und nichts zu essen habe. Die Jünger fragen, woher sie in der Einöde so viele Brote nehmen sollen; sie haben sieben Brote und ein paar Fischlein.",
+            "stage": {
+              "count": {
+                "FIG-OBJ-BROT": 7
+              },
+              "at": {
+                "FIG-ZEICHEN-ERBARMEN": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "worried"
+              },
+              "floor_side": "right",
+              "x": {
+                "FIG-GRUPPE-JUENGER": 30,
+                "FIG-JESUS": 72
+              },
+              "floor_x": {
+                "FIG-OBJ-BROT": 96
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.15.35-MAT.15.38",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT",
+              "FIG-OBJ-KORB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SATT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-BETEN",
+                  "FIG-OBJ-BROT"
+                ]
+              }
+            ],
+            "action_de": "Jesus lässt die Menge sich lagern, nimmt die sieben Brote und die Fische, spricht das Dankgebet, bricht sie und gibt sie den Jüngern, die sie den Menschenmengen geben. Alle werden satt; sieben Körbe bleiben übrig. Es sind viertausend Männer, ohne Frauen und Kinder.",
+            "stage": {
+              "god_side": "right",
+              "floor_side": "left",
+              "count": {
+                "FIG-OBJ-KORB": 7
+              },
+              "at": {
+                "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "smile"
+              },
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROT",
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BROT"
+              },
+              "floor_x": {
+                "FIG-OBJ-KORB": 4
+              },
+              "behind": [
+                "FIG-OBJ-KORB"
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.15.39",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Jesus entlässt die Menschenmengen, steigt ins Boot und kommt in das Gebiet von Magadan.",
+            "stage": {
+              "big_side": "right",
+              "in": {
+                "FIG-JESUS": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.5,
+                  0.4
+                ]
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 60
+              },
+              "pose": {
+                "FIG-GRUPPE-MENGE": "away"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "smile"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }
