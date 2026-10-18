@@ -462,6 +462,7 @@ class Composer:
                 hx, hy = heads[f]
                 rx = hx + self.head_r() + 4 if hx < W - 44 else hx - self.head_r() - w - 4
                 out.append(self.r_sym(t, rx, hy - h / 2, w, h))
+                pos.setdefault(t, (rx + w / 2, hy))  # auch Ziel einer Handlungslinie
         # 9. Handlungslinien
         people = {sl["fid"] for sl in slots}
         r = self.head_r()

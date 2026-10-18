@@ -20,7 +20,7 @@ server.listen(0,async()=>{const url=`http://localhost:${server.address().port}/i
     assert(reqs.includes('b/MAT')&&reqs.includes('l/de/MAT')&&!reqs.some(x=>x.includes('gsw')),'nur Matthäus und Hochdeutsch geladen');
     await ev(()=>document.querySelector('[data-action=down]').click());await wait();  // ganzes Kapitel Mt 6: die ersten zehn Verse sind gesetzt
     assert.equal(await ev(()=>document.querySelector('[data-stream="v39-6-10"] .stream-copy').textContent),'dein Reich komme; dein Wille geschehe, wie im Himmel, so auch auf Erden.');
-    await ev(()=>document.querySelector('[data-action=menu]').click());await ev(()=>document.querySelector('[data-settings]').click());await ev(()=>document.querySelector('[data-set="text"][data-value="gsw"]').click());await wait();await ev(()=>document.querySelector('[data-close]').click());
+    await ev(()=>document.querySelector('[data-action=menu]').click());await ev(()=>document.querySelector('[data-set="text"][data-value="gsw"]').click());await wait();await ev(()=>document.querySelector('[data-close]').click());
     assert(reqs.includes('l/gsw/MAT')&&reqs.includes('l/gsw/common'),'Mundart-Pakete nachgeladen');
     assert.equal(await ev(()=>document.querySelector('[data-stream="v39-6-10"] .stream-copy').textContent),'diis Riich söll choo, diin Wile söll gschee, wie im Himel, eso au uf de Ärde.');
     await ev(()=>document.querySelector('[data-more="v39-6-10"]').click());await ev(()=>document.querySelector('.sheet-tools [data-background="TU-MAT-006-009-013"]').click());await wait();
