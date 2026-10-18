@@ -95,7 +95,7 @@ assert(sheetHost.textContent.includes('Zuletzt gelesen')&&sheetHost.querySelecto
 {const rr=[...sheetHost.querySelectorAll('.recent-row')];assert(rr.length>0&&rr.every(r=>[4,5].includes(model.nodes.get(r.dataset.go).level)),'Verlauf auf Abschnitt- bzw. Kapitelebene');}
 click('[data-clear-recent]');
 assert(!sheetHost.textContent.includes('Zuletzt gelesen'),'Verlauf löschen');
-click('.sheet [data-go="TU-MAT-006-005-008"]');
+click('.sheet [data-go="TU-MAT-006-001-004"]');
 click('[data-deep="TU-MAT-006-009-013"]');
 const mtv=v=>reader.querySelector(`[data-stream="v39-6-${v}"] .stream-copy`);
 for(let v=9;v<=13;v++)assert.equal(mtv(v).textContent,M().de['MAT.6.'+v]);
@@ -192,7 +192,7 @@ click('[data-more="v39-6-11"]');sheetHost.querySelector('.sheet-tools [data-back
 assert(/\b(isch|händ|de|vo)\b/.test(sheetHost.querySelector('.bg-note .body').textContent),'Hintergrund in Mundart');click('[data-close]');
 click('[data-action=menu]');click('[data-settings]');click('[data-set="text"][data-value="de"]');click('[data-close]');
 assert.equal(reader.querySelector('[data-stream="v39-6-11"] .stream-copy').textContent,M().de['MAT.6.11'],'zurück zu Hochdeutsch');
-assert.equal(Object.keys(M().layers.gsw.text).length,2002,'Mundart für alle 2002 Verse');
+assert.equal(Object.keys(M().layers.gsw.text).length,3059,'Mundart für alle 3059 Verse');
 // Obadja (Hebräisch) und Titus: Muster ganzer Bücher
 click('[data-action=menu]');click('[data-settings]');click('[data-set="text"][data-value="de"]');if(sheetHost.querySelector('[data-toggle=advanced][aria-checked=false]'))click('[data-toggle=advanced]');click('[data-close]');
 click('[data-action=menu]');sheetHost.querySelector('[data-go^="TU-OBA"]').click();click('[data-action=down]');

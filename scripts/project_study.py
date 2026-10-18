@@ -74,9 +74,16 @@ def project(section_ids=None):
 
     L10N = localizations.load({**tu, **findings, **ints, **prin, **apps, **qs})
     sections, scope, subjects = [], {}, set()
+    mid = {}  # Zwischenebenen je Abschnitt: ihre Inhalte gelten für den ganzen Abschnitt
     for sid in section_ids:
         s = tu[sid]
-        parts = [tu[p] for p in s.get("parts", [])] or [s]
+
+        def leaves(u):  # verschachtelte Teile (z. B. Mt 6 mit dem Vaterunser 6,5–15 und dessen Teilen) bis zur kleinsten Einheit
+            if not u.get("parts"):
+                return [u]
+            mid.setdefault(sid, []).extend([u["id"]] if u is not s else [])
+            return [x for p in u["parts"] for x in leaves(tu[p])]
+        parts = leaves(s) if s.get("parts") else [s]
 
         def names(u):
             loc = L10N.get(u["id"], {})
@@ -87,7 +94,8 @@ def project(section_ids=None):
                                    for p in parts]})
         b, c, v0, v1 = _span(s["range"])
         scope.setdefault((b, c), set()).update(range(v0, v1 + 1))
-        subjects.update([s["id"]] + [p["id"] for p in parts])
+        subjects.update([s["id"]] + [p["id"] for p in parts] + mid.get(sid, []))
+        sections[-1]["merged"] = mid.get(sid, [])
 
     def in_scope(ref):
         try:
@@ -236,7 +244,16 @@ def project(section_ids=None):
                 return ins[x]["subject"]
         return None
 
-    return {
+    alias = {m: sid for sid, ms in mid.items() for m in ms}
+
+    def re_subject(o):
+        if isinstance(o, dict):
+            return {k: (alias.get(v, v) if k in ("subject", "from", "to") and isinstance(v, str) else re_subject(v)) for k, v in o.items()}
+        if isinstance(o, list):
+            return [re_subject(x) for x in o]
+        return o
+
+    out = {
         "built_from": "bible-app data/ (freier Kern)",
         "sections": sections,
         "layers": layers, "layer_order": ["de"] + sorted(k for k in layers if k != "de"),
@@ -269,6 +286,11 @@ def project(section_ids=None):
         # Wörter anderer Ausgaben bzw. Ketiv ohne Qere je Vers
         "lexicon": lexicon, "ketiv": ketiv, "ketiv_only": ketiv_only, "ed_extra": ed_extra,
     }
+    if alias:
+        for k in ("findings", "interpretations", "principles", "applications", "relations", "questions"):
+            if k in out:
+                out[k] = re_subject(out[k])
+    return out
 
 
 def _norm(s):
