@@ -247,10 +247,11 @@ def body_inner(key, arm=None):
         x0, y0 = (12 if math.cos(math.radians(ang)) >= 0 else -12), 21
         x1, y1 = x0 + ln * math.cos(math.radians(ang)), y0 + ln * math.sin(math.radians(ang))
         sleeve = c.get("mantle") or c["robe"]
+        # Offene Hand ohne abstehenden Daumen: der Daumen las sich je nach Armrichtung als «Daumen hoch» bzw. «Daumen runter»
         o.append(f'<path d="M{x0} {y0}L{x1:.1f} {y1:.1f}" stroke="{INK}" stroke-width="5.4" stroke-linecap="round"/>'
                  f'<path d="M{x0} {y0}L{x1:.1f} {y1:.1f}" stroke="{sleeve}" stroke-width="4" stroke-linecap="round"/>'
                  f'<g transform="translate({x1:.1f} {y1:.1f}) rotate({ang + 90:.0f})"><path d="M-2.4 1.2Q-2.8-2.6-1.6-4.2h3.2Q2.8-2.6 2.4 1.2z" fill="{SKIN}" stroke="{INK}" stroke-width=".6"/>'
-                 f'<path d="M3 -.6l1.6-1.8" stroke="{INK}" stroke-width="1.6" stroke-linecap="round"/><path d="M3 -.6l1.6-1.8" stroke="{SKIN}" stroke-width=".8" stroke-linecap="round"/></g>')
+                 f'<path d="M-.8-3.9v1.6M.8-3.9v1.6" stroke="{SKIN_D}" stroke-width=".4" stroke-linecap="round"/></g>')
     return "".join(o)
 
 
