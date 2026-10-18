@@ -26,7 +26,7 @@ def toks(ch, v, a, b=None):
 ENTRIES = [
     ("VAR-SBLGNTAPP-MAT-001-007-01", "MAT.1.7-MAT.1.8", toks(1, 7, 15) + toks(1, 8, 1),
      "7–8 Ἀσάφ Ἀσὰφ WH Treg NA28 ] Ἀσά Ἀσὰ NIV RP",
-     [("Ἀσάφ … Ἀσὰφ", ["WH", "Treg", "NA28"]), ("Ἀσά … Ἀσὰ", ["NIV", "RP"])],
+     [("Ἀσάφ Ἀσὰφ", ["WH", "Treg", "NA28"]), ("Ἀσά Ἀσὰ", ["NIV", "RP"])],
      "Asaf (Name des Psalmdichters) oder Asa (Name des Königs, vgl. [[1KI.15.9]])."),
     ("VAR-SBLGNTAPP-MAT-011-009-01", "MAT.11.9", toks(11, 9, 3, 5),
      "; προφήτην ἰδεῖν WH ] ἰδεῖν; προφήτην Treg NA28 RP",

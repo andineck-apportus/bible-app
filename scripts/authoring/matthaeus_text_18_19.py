@@ -13,8 +13,9 @@ Besonderheiten:
 - [[MAT.18.11]] steht nicht im SBLGNT (keine Tokens) und erhält keinen Übersetzungstext; der Wortlaut steht als
   Alternative bei [[MAT.18.10]] (VAR-SBLGNTAPP-MAT-018-010-01).
 - [[MAT.19.17]]: Der SBLGNT-Apparat verzeichnet die Lesart von RP («Was nennst du mich gut? Niemand ist gut ausser
-  einem: Gott»); sie fehlt in den importierten Variantendaten (kein Datensatz VAR-SBLGNTAPP-MAT-019-017-01) und steht
-  deshalb in decisions und translation_notes, nicht als Alternative.
+  einer: Gott»). Den Eintrag hatte der automatische Import nicht zugeordnet; er ist nachgetragen
+  (VAR-SBLGNTAPP-MAT-019-017-01, sblgntapp_nachtrag_mat.py) und steht als Alternative. Eine automatische Zuordnung der
+  Handschriften liegt dafür nicht vor.
 - Die Rede Jesu in Kapitel 18 läuft von [[MAT.18.3]] bis [[MAT.18.20]] und, nach der Frage des Petrus, von
   [[MAT.18.22]] bis [[MAT.18.35]]; Reden innerhalb des Gleichnisses stehen in ‹ ›.
 
@@ -319,7 +320,7 @@ DEC_DE = [
   "Ohne «guter» (anders [[MRK.10.17]] und RP; siehe Alternativen)."),
  ("MAT.19.16", "erlange", "literal", "σχῶ", "habe", ["bekomme"], None),
  ("MAT.19.17", "Was fragst du mich nach dem Guten?", "literal", "Τί με ἐρωτᾷς περὶ τοῦ ἀγαθοῦ;", "Warum fragst du mich über das Gute?", None,
-  "Bei Markus ([[MRK.10.18]]) lautet die Antwort: «Was nennst du mich gut? Niemand ist gut ausser einer: Gott.» Der SBLGNT-Apparat verzeichnet diese Fassung auch für Matthäus als Lesart von RP (gegen WH, Treg und NA28: λέγεις ἀγαθόν; Οὐδεὶς ἀγαθός εἰ μὴ εἷς ὁ θεός). Sie fehlt in den importierten Variantendaten und steht deshalb nicht bei den Alternativen."),
+  "Bei Markus ([[MRK.10.18]]) lautet die Antwort: «Was nennst du mich gut? Niemand ist gut ausser einer: Gott.» Der SBLGNT-Apparat verzeichnet diese Fassung auch für Matthäus als Lesart von RP (gegen WH, Treg und NA28: λέγεις ἀγαθόν; Οὐδεὶς ἀγαθός εἰ μὴ εἷς ὁ θεός). Sie steht als Alternative."),
  ("MAT.19.17", "Einer ist der Gute", "interpretive", "εἷς ἐστιν ὁ ἀγαθός", None, ["Nur einer ist gut"],
   "Gemeint ist Gott; der Satz nennt ihn nicht ausdrücklich."),
  ("MAT.19.17", "in das Leben hineingehen", "literal", "εἰς τὴν ζωὴν εἰσελθεῖν", None, None,
@@ -399,7 +400,7 @@ DEC_GSW = [
   "πορνεία isch en wiite Begriff für sexuells Fehlverhalte; d Uusnaam staat nu bim Matthäus ([[MAT.5.32]]). Si wird verschide düütet: Eebruch, verboteni Verwandteee, Unzucht vor de Ee."),
  ("MAT.19.12", "Eunuche", "literal", "εὐνοῦχοι", None, ["Verschnitteni"], "Di dritt Gruppe wird meischt bildlich verstande: Lüüt, wo wäge em Riich nöd hürated."),
  ("MAT.19.17", "Werum frögsch du mich nach em Guete?", "literal", "Τί με ἐρωτᾷς περὶ τοῦ ἀγαθοῦ;", None, None,
-  "Bim Markus ([[MRK.10.18]]) und nach em SBLGNT-Apparat bi RP heisst s: «Werum seisch du mir guet? Niemer isch guet usser eine: Gott.» Die Läsart fehlt i de importierte Variantedate."),
+  "Bim Markus ([[MRK.10.18]]) und nach em SBLGNT-Apparat bi RP heisst s: «Werum seisch du mir guet? Niemer isch guet usser eine: Gott.» Die Läsart staat als Alternative."),
  ("MAT.19.17", "Eine isch de Guet", "interpretive", "εἷς ἐστιν ὁ ἀγαθός", None, None, "Gmeint isch Gott."),
  ("MAT.19.21", "vollkomme", "interpretive", "τέλειος", None, ["ganz"], "Vgl. [[MAT.5.48]]."),
  ("MAT.19.24", "Riich vo Gott", "literal", "τὴν βασιλείαν τοῦ θεοῦ", None, None, "Eini vo de vier Stelle, wo de Matthäus «Riich vo Gott» seit."),
@@ -542,6 +543,21 @@ ALTS = [
    "Laut der automatischen Zuordnung lesen 01, 03 und 05 «Lehrer», 04 und 032 «guter Lehrer»."],
   ["D Aared cha us [[MRK.10.17]] und [[LUK.18.18]] übernoo sii; oder si isch wägglaa worde, wo d Frag i [[MAT.19.17]] uf «s Guet» bezoge worde isch.",
    "Nach de automatische Zueornig läsed 01, 03 und 05 «Lehrer», 04 und 032 «guete Lehrer»."]),
+ ("VAR-SBLGNTAPP-MAT-019-017-01:R2", "MAT.19.17", "Was fragst du mich nach dem Guten? Einer ist der Gute.",
+  "Was nennst du mich gut? Niemand ist gut ausser einer: Gott.",
+  "Werum frögsch du mich nach em Guete? Eine isch de Guet.", "Werum seisch du mir guet? Niemer isch guet usser eine: Gott.", "mittel",
+  "Jesus geht dann auf die Anrede «guter Lehrer» ein (so RP in [[MAT.19.16]]) und nennt Gott ausdrücklich; so lautet die Antwort in [[MRK.10.18]] und [[LUK.18.19]].",
+  "De Jesus gaat dänn uf d Aared «guete Lehrer» ii (so RP i [[MAT.19.16]]) und nännt Gott usdrücklich; so heisst d Antwort i [[MRK.10.18]] und [[LUK.18.19]].",
+  {"R1": [("ἐρωτᾷς περὶ τοῦ ἀγαθοῦ; εἷς ἐστιν ὁ ἀγαθός", "fragst du mich nach dem Guten? Einer ist der Gute.", "WH, Treg, NA28")],
+   "R2": [("λέγεις ἀγαθόν; Οὐδεὶς ἀγαθός εἰ μὴ εἷς ὁ θεός", "nennst du mich gut? Niemand ist gut ausser einer: Gott.", "RP")]},
+  {"R1": [("ἐρωτᾷς περὶ τοῦ ἀγαθοῦ; εἷς ἐστιν ὁ ἀγαθός", "frögsch du mich nach em Guete? Eine isch de Guet.", "WH, Treg, NA28")],
+   "R2": [("λέγεις ἀγαθόν; Οὐδεὶς ἀγαθός εἰ μὴ εἷς ὁ θεός", "seisch du mir guet? Niemer isch guet usser eine: Gott.", "RP")]},
+  ["Die Fassung von RP kann an [[MRK.10.18]] und [[LUK.18.19]] angeglichen sein, zusammen mit der Anrede «guter Lehrer» in [[MAT.19.16]]. "
+   "Ebenso kann sie ursprünglich sein und später umgeformt worden sein, damit Jesus das Gutsein nicht für sich abzulehnen scheint.",
+   "Für diesen nachgetragenen Apparateintrag liegt keine automatische Zuordnung der Handschriften vor."],
+  ["D Fassig vo RP cha a [[MRK.10.18]] und [[LUK.18.19]] aaglichen sii, zäme mit de Aared «guete Lehrer» i [[MAT.19.16]]. "
+   "Oder si isch ursprünglich und isch spööter umgformt worde, damit s nöd tönt, wie wänn de Jesus s Guetsii für sich ablehnti.",
+   "Für dä nachtreit Iitrag vom Apparat git s kei automatischi Zueornig vo de Handschrifte."]),
  ("VAR-SBLGNTAPP-MAT-019-020-02:R2", "MAT.19.20", "Das alles habe ich gehalten.", "Das alles habe ich gehalten von meiner Jugend an.",
   "Das alles han ich ghalte.", "Das alles han ich ghalte vo minere Jugend aa.", "gering",
   "Der Zusatz gleicht die Antwort an [[MRK.10.20]] an.", "De Zuesatz gliicht d Antwort a [[MRK.10.20]] aa.",
@@ -677,8 +693,9 @@ NOTES_DE = [
  ("Text: Die Übersetzung folgt den SBLGNT-Tokens, auch wo der SBLGNT gegen WH, Treg und NA28 liest (z. B. [[MAT.19.29]] "
   "«oder Frau»). Abweichende Lesarten stehen als Alternativen, soweit sie die Übersetzung verändern. [[MAT.18.11]] steht "
   "nicht im SBLGNT und hat keinen Übersetzungstext; der Wortlaut steht als Alternative bei [[MAT.18.10]]. Die Lesart von "
-  "RP in [[MAT.19.17]] («Was nennst du mich gut? Niemand ist gut ausser einem: Gott») verzeichnet der SBLGNT-Apparat, sie "
-  "fehlt aber in den importierten Variantendaten; sie ist deshalb in decisions genannt, nicht als Alternative geführt."),
+  "RP in [[MAT.19.17]] («Was nennst du mich gut? Niemand ist gut ausser einer: Gott») verzeichnet der SBLGNT-Apparat; den "
+  "Eintrag hatte der automatische Import nicht zugeordnet. Er ist nachgetragen und steht als Alternative (eine automatische "
+  "Zuordnung der Handschriften liegt dafür nicht vor)."),
  ("Erzählweise: Das erzählende Präsens (λέγει «sagt») ist beibehalten. ὅτι vor direkter Rede ist nicht eigens übersetzt. "
   "Anführungszeichen sind eine Entscheidung der Übersetzung, denn das Griechische hat keine."),
  "Eigene Formulierung; nicht aus einer veröffentlichten deutschen Bibel übernommen.",
@@ -697,7 +714,7 @@ NOTES_GSW = [
   "(«s Riich vo de Himel»); kei Futur, wo s d Mundart nöd brucht. D Red i Kapitel 18 staat ohni ussereri Aafüerigszeiche; "
   "Rede im Gliichnis stönd i « »."),
  ("[[MAT.18.11]] staat nöd im SBLGNT und hät kein Text; de Wortlut staat als Alternative bi [[MAT.18.10]]. D Läsart vo RP "
-  "i [[MAT.19.17]] staat i de decisions."),
+  "i [[MAT.19.17]] staat als Alternative (de Iitrag vom Apparat isch nachtreit)."),
  "Eigeti Formulierig; nöd us ere veröffentlichte Mundart-Bible übernoo.",
 ]
 

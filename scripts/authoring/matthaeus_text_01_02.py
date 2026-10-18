@@ -13,8 +13,9 @@ Besonderheiten:
 - In Matthäus 1–2 fehlt im SBLGNT kein Vers (per Skript geprüft); alle Verse haben Tokens.
 - Stammbaum ([[MAT.1.2]]–[[MAT.1.16]]): Das reihende δέ und der Artikel vor den Namen sind nicht eigens wiedergegeben
   (Artikel mit dem Namen zusammen zugeordnet, δέ als nicht wiedergegeben markiert).
-- [[MAT.1.7]]–[[MAT.1.8]]: Der SBLGNT liest Ἀσάφ; der Apparat verzeichnet keine Variante, nach den CNTR-Texten lesen RP
-  und KJTR Ἀσά. Das steht in decisions und translation_notes, nicht als Alternative.
+- [[MAT.1.7]]–[[MAT.1.8]]: Der SBLGNT liest mit WH, Treg und NA28 Ἀσάφ, RP (und NIV) Ἀσά. Den Apparateintrag hatte der
+  automatische Import nicht zugeordnet; er ist nachgetragen (VAR-SBLGNTAPP-MAT-001-007-01, sblgntapp_nachtrag_mat.py)
+  und steht als Alternative bei beiden Versen. Eine automatische Zuordnung der Handschriften liegt dafür nicht vor.
 - [[MAT.1.18]] und [[MAT.2.17]]: Die automatische Zuordnung der Handschriften widerspricht dort den
   CNTR-Transkriptionen; die Alternativen benennen die Unsicherheit.
 
@@ -190,7 +191,7 @@ DEC_DE = [
  ("MAT.1.6", "der Frau des Urija", "adapted", "τῆς τοῦ Οὐρίου", "der des Urija", ["Batseba"],
   "Griechisch nur «der (Frau) des Urija»; «Frau» ist ergänzt. Gemeint ist Batseba ([[2SA.11.3]]), die Matthäus nicht mit Namen nennt."),
  ("MAT.1.7", "Asaf", "literal", "Ἀσάφ", None, ["Asa"],
-  "Der König von Juda heisst Asa ([[1KI.15.9]]). Der SBLGNT liest mit 01, 03 und 04 (nach den CNTR-Transkriptionen) Ἀσάφ, den Namen des Psalmdichters Asaf ([[PSA.50.1]]); nach den CNTR-Texten lesen RP und KJTR sowie 032 Ἀσά. Der SBLGNT-Apparat verzeichnet hier keine Variante; deshalb steht der Befund hier und nicht als Alternative. Erklärt wird Ἀσάφ als Schreibweise, die schon in Vorlagen vorkam, als Versehen oder als bewusste Anspielung auf den Psalmdichter. Ebenso [[MAT.1.8]]."),
+  "Der König von Juda heisst Asa ([[1KI.15.9]]). Der SBLGNT liest mit WH, Treg und NA28 Ἀσάφ, den Namen des Psalmdichters Asaf ([[PSA.50.1]]); laut SBLGNT-Apparat liest RP (ebenso NIV) Ἀσά. Die Lesart Ἀσά steht als Alternative (bei [[MAT.1.7]] und [[MAT.1.8]]). Nach den CNTR-Transkriptionen lesen 01, 03 und 04 Ἀσάφ, 032 Ἀσά; nach den CNTR-Texten liest auch KJTR Ἀσά. Erklärt wird Ἀσάφ als Schreibweise, die schon in Vorlagen vorkam, als Versehen oder als bewusste Anspielung auf den Psalmdichter. Ebenso [[MAT.1.8]]."),
  ("MAT.1.8", "Joram zeugte Usija", "literal", "Ἰωρὰμ δὲ ἐγέννησεν τὸν Ὀζίαν", None, None,
   "Zwischen Joram und Usija (Asarja) nennt [[1CH.3.11]]–[[1CH.3.12]] drei weitere Könige (Ahasja, Joasch, Amazja). «Zeugte» meint hier also einen Vorfahren; die Auslassung ist eine Folge der schematischen Zählung ([[MAT.1.17]])."),
  ("MAT.1.10", "Amos", "literal", "Ἀμώς", None, ["Amon"],
@@ -317,7 +318,7 @@ DEC_GSW = [
  ("MAT.1.6", "vo de Frau vom Urija", "adapted", "τῆς τοῦ Οὐρίου", "vo dere vom Urija", ["vo de Batseba"],
   "«Frau» isch ergänzt; gmeint isch d Batseba ([[2SA.11.3]])."),
  ("MAT.1.7", "Asaf", "literal", "Ἀσάφ", None, ["Asa"],
-  "De König heisst Asa ([[1KI.15.9]]); de SBLGNT list Ἀσάφ, de Name vom Psalmdichter. De SBLGNT-Apparat hät kei Variante; nach de CNTR-Text läsed RP und KJTR Ἀσά."),
+  "De König heisst Asa ([[1KI.15.9]]); de SBLGNT list mit WH, Treg und NA28 Ἀσάφ, de Name vom Psalmdichter. Nach em SBLGNT-Apparat list RP (und NIV) Ἀσά; die Läsart staat als Alternative (bi [[MAT.1.7]] und [[MAT.1.8]])."),
  ("MAT.1.10", "Amos", "literal", "Ἀμώς", None, ["Amon"],
   "De König heisst Amon ([[2KI.21.18]]); Ἀμώς isch de Name vom Prophet. D Läsart Ἀμών staat als Alternative."),
  ("MAT.1.11", "Wägfüerig", "literal", "μετοικεσίας", "Umsidlig", ["Verbannig", "Exil"],
@@ -388,6 +389,24 @@ ALTS = [
    "Laut der automatischen Zuordnung lesen 01 und 03 ohne Zusatz, 04 und 032 mit ihm; 05 hat hier eine Lücke."],
   ["De Zuesatz cha de Titel us em Satz devor widerhole; oder er isch bim Abschriibe usgfalle, wil «König» grad vorher scho staat.",
    "Nach de automatische Zueornig läsed 01 und 03 ohni Zuesatz, 04 und 032 mit; 05 hät da e Lucke."]),
+ *[("VAR-SBLGNTAPP-MAT-001-007-01:R2", ref, f_de, t_de, f_g, t_g, "gering",
+    "Mit Ἀσά steht der Name des Königs von Juda ([[1KI.15.9]]) statt des Namens des Psalmdichters Asaf ([[PSA.50.1]]). "
+    "Die Lesart betrifft [[MAT.1.7]] und [[MAT.1.8]].",
+    "Mit Ἀσά staat de Name vom König vo Juda ([[1KI.15.9]]) statt em Name vom Psalmdichter Asaf ([[PSA.50.1]]). "
+    "D Läsart betrifft [[MAT.1.7]] und [[MAT.1.8]].",
+    {"R1": [("Ἀσάφ … Ἀσὰφ", "Asaf … Asaf", "WH, Treg, NA28")], "R2": [("Ἀσά … Ἀσὰ", "Asa … Asa", "NIV, RP")]},
+    {"R1": [("Ἀσάφ … Ἀσὰφ", "Asaf … Asaf", "WH, Treg, NA28")], "R2": [("Ἀσά … Ἀσὰ", "Asa … Asa", "NIV, RP")]},
+    ["Ἀσά kann eine Angleichung an den Königsnamen in den Königsbüchern und der Chronik sein ([[1KI.15.9]], [[1CH.3.10]]). "
+     "Ἀσάφ kann ein Schreibversehen sein, eine schon in Vorlagen vorgefundene Form oder eine bewusste Anspielung auf den "
+     "Psalmdichter (vgl. Amos in [[MAT.1.10]]).",
+     "Für diesen nachgetragenen Apparateintrag liegt keine automatische Zuordnung der Handschriften vor."],
+    ["Ἀσά cha e Aagliichig a de Königsname i de Königsbüecher und de Chronik sii ([[1KI.15.9]], [[1CH.3.10]]). Ἀσάφ cha "
+     "en Schriibfähler sii, e Form, wo scho i Vorlage gstande isch, oder e bewussti Aaspilig uf de Psalmdichter (vgl. Amos "
+     "i [[MAT.1.10]]).",
+     "Für dä nachtreit Iitrag vom Apparat git s kei automatischi Zueornig vo de Handschrifte."])
+   for ref, f_de, t_de, f_g, t_g in (
+       ("MAT.1.7", "Abija zeugte Asaf", "Abija zeugte Asa", "vom Asaf worde", "vom Asa worde"),
+       ("MAT.1.8", "Asaf zeugte Joschafat", "Asa zeugte Joschafat", "De Asaf isch", "De Asa isch"))],
  ("VAR-SBLGNTAPP-MAT-001-010-01:R2", "MAT.1.10", "Manasse zeugte Amos, Amos zeugte Joschija", "Manasse zeugte Amon, Amon zeugte Joschija",
   "vom Amos worde, de Amos", "vom Amon worde, de Amon", "gering",
   "Mit Ἀμών steht der Name des Königs von Juda ([[2KI.21.18]]) statt des Prophetennamens Amos.",
@@ -529,8 +548,9 @@ NOTES_DE = [
  ("Text: Die Übersetzung folgt den SBLGNT-Tokens. Varianten, die die Übersetzung nicht verändern, stehen nicht als "
   "Alternativen: Schreibweisen von Namen ([[MAT.1.5]] Βόες/Βοός/Βοόζ und Ἰωβήδ/Ὠβήδ, [[MAT.1.20]] Μαρίαν/Μαριάμ), der "
   "Artikel in [[MAT.1.22]] und [[MAT.2.15]], ἐπί in [[MAT.2.22]], Wortstellungen ([[MAT.2.3]], [[MAT.2.8]], [[MAT.2.13]], "
-  "[[MAT.2.19]], [[MAT.2.22]]) sowie [[MAT.1.24]] διεγερθείς, [[MAT.2.9]] ἔστη und [[MAT.2.21]] ἦλθεν. In [[MAT.1.7]]–"
-  "[[MAT.1.8]] (Ἀσάφ/Ἀσά) verzeichnet der SBLGNT-Apparat keine Variante; der Befund steht in decisions. In Kapitel 1–2 "
+  "[[MAT.2.19]], [[MAT.2.22]]) sowie [[MAT.1.24]] διεγερθείς, [[MAT.2.9]] ἔστη und [[MAT.2.21]] ἦλθεν. Den Apparateintrag "
+  "zu [[MAT.1.7]]–[[MAT.1.8]] (Ἀσάφ/Ἀσά) hatte der automatische Import nicht zugeordnet; er ist nachgetragen und steht als "
+  "Alternative bei beiden Versen (eine automatische Zuordnung der Handschriften liegt dafür nicht vor). In Kapitel 1–2 "
   "fehlt im SBLGNT kein Vers."),
  ("Abgrenzung: Kapitel 1–2 bilden die Vorgeschichte (Herkunft, Geburt und Kindheit Jesu). Kapitel 3 setzt mit «In jenen "
   "Tagen» und dem Auftreten Johannes des Täufers neu ein. Die Gliederung in Abschnitte ist ein Vorschlag; die "
@@ -580,7 +600,7 @@ def run():
         refs_c = [f"MAT.{c}.{v}" for v in range(1, last + 1) if f"MAT.{c}.{v}" in toks]
         if len(refs_c) != last or len(toks) != last:
             raise SystemExit(f"MAT {c}: unerwartete Versanzahl")
-        follows = sorted(f"{vid}:{r['reading_id']}" for vid, v in variants.items() if v["reference"] in refs_c
+        follows = sorted(f"{vid}:{r['reading_id']}" for vid, v in variants.items() if v["reference"].split("-")[0] in refs_c
                          for r in v["readings"] if r.get("is_sblgnt_text"))
         for lang, markup, decs, code in (("de", DE, DEC_DE, "DE"), ("gsw", GSW, DEC_GSW, "GSW-ZH")):
             texts, aligns = {}, []
