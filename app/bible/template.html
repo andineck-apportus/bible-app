@@ -293,6 +293,20 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .ill-toggle svg{width:16px;height:16px}
 #bible-stream .app .ill-toggle button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
 #bible-stream .ill{margin:0}
+#bible-stream .merk-mark{display:inline-flex!important;vertical-align:middle;margin-left:4px;width:28px;height:28px;align-items:center;justify-content:center;color:var(--muted);border-radius:8px}
+#bible-stream .merk-mark svg{width:18px;height:18px}
+#bible-stream .learn-img{width:72%;margin:8px auto}
+#bible-stream .learn-ref{margin:6px 0}
+#bible-stream .learn-letters{letter-spacing:.06em}
+#bible-stream .learn-main{display:inline-flex!important;align-items:center;gap:8px;padding:10px 18px!important;border-radius:var(--r);background:var(--ink)!important;color:var(--bg)!important;font-weight:600;margin:10px 0}
+#bible-stream .learn-rate{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+#bible-stream .learn-rate button{flex:1;min-width:64px;padding:10px 6px!important;border:1px solid var(--rule)!important;border-radius:var(--r)}
+#bible-stream .learn-rate button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+#bible-stream .learn-nav{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+#bible-stream .cloze .gap{display:inline!important;padding:0 2px!important;color:var(--muted);letter-spacing:1px;border-bottom:1px solid var(--muted)!important}
+#bible-stream .order-pool .chip.miss{background:#C4473A;color:#fff}
+#bible-stream .learn-opts .row.ok{font-weight:700}
+#bible-stream .learn-opts .row.bad{color:#C4473A;text-decoration:line-through}
 #bible-stream .merk{display:flex;gap:14px;align-items:center;margin:10px 0 18px;padding:10px;border:1px solid var(--rule);border-radius:14px;background:var(--bg)}
 #bible-stream .merk .ill-img{flex:0 0 46%;min-width:0}
 #bible-stream .merk .ill-img>svg{width:100%!important;margin:0}
@@ -445,7 +459,7 @@ function search(q){q=q.trim();if(!q)return[];const match=q.match(/^(.+?)\s*(\d+)
 
 /* ---------- Hilfen ---------- */
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const ICONS={'arrow-up':'M12 19V5m-6 6 6-6 6 6','arrow-down':'M12 5v14m-6-6 6 6 6-6','chevron-right':'m9 6 6 6-6 6','menu':'M4 7h16M4 12h16M4 17h16','list':'M9 6h11M9 12h11M9 18h11M4 6h1M4 12h1M4 18h1','plus':'M12 6v12M6 12h12','x':'m6 6 12 12M6 18 18 6','check':'M5 12.5l4.5 4.5L19 7.5','play':'M8 5.5v13l10.5-6.5z','pause':'M8.5 5.5v13M15.5 5.5v13','prev':'M18 6.5 10 12l8 5.5zM6.5 6v12','next':'M6 6.5 14 12l-8 5.5zM17.5 6v12','speak':'M11 5 6 9H3v6h3l5 4zM15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13','understand':'M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1 2V16h5.2v-.2c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z','history':'M3 12a9 9 0 1 0 3-6.7M3 4v4h4M12 7v5l3 2','settings':'M18.2 12a6.2 6.2 0 1 1-12.4 0 6.2 6.2 0 0 1 12.4 0zM14.5 12a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0zM18.2 12.0L21.0 12.0M16.4 16.4L18.4 18.4M12.0 18.2L12.0 21.0M7.6 16.4L5.6 18.4M5.8 12.0L3.0 12.0M7.6 7.6L5.6 5.6M12.0 5.8L12.0 3.0M16.4 7.6L18.4 5.6','text':'M5 6.5h14M5 11h14M5 15.5h14M5 20h8','image':'M4.5 4.5h15v15h-15zM4.5 16l4.5-4.5 4 4 2.5-2.5 4 4M15 8.5h.01'};
+const ICONS={'bookmark':'M7 4h10v16l-5-3.5L7 20z','learn':'M3 9l9-5 9 5-9 5-9-5zm4 2.5v4.5c0 1.5 2.5 3 5 3s5-1.5 5-3v-4.5','arrow-up':'M12 19V5m-6 6 6-6 6 6','arrow-down':'M12 5v14m-6-6 6 6 6-6','chevron-right':'m9 6 6 6-6 6','menu':'M4 7h16M4 12h16M4 17h16','list':'M9 6h11M9 12h11M9 18h11M4 6h1M4 12h1M4 18h1','plus':'M12 6v12M6 12h12','x':'m6 6 12 12M6 18 18 6','check':'M5 12.5l4.5 4.5L19 7.5','play':'M8 5.5v13l10.5-6.5z','pause':'M8.5 5.5v13M15.5 5.5v13','prev':'M18 6.5 10 12l8 5.5zM6.5 6v12','next':'M6 6.5 14 12l-8 5.5zM17.5 6v12','speak':'M11 5 6 9H3v6h3l5 4zM15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13','understand':'M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1 2V16h5.2v-.2c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z','history':'M3 12a9 9 0 1 0 3-6.7M3 4v4h4M12 7v5l3 2','settings':'M18.2 12a6.2 6.2 0 1 1-12.4 0 6.2 6.2 0 0 1 12.4 0zM14.5 12a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0zM18.2 12.0L21.0 12.0M16.4 16.4L18.4 18.4M12.0 18.2L12.0 21.0M7.6 16.4L5.6 18.4M5.8 12.0L3.0 12.0M7.6 7.6L5.6 5.6M12.0 5.8L12.0 3.0M16.4 7.6L18.4 5.6','text':'M5 6.5h14M5 11h14M5 15.5h14M5 20h8','image':'M4.5 4.5h15v15h-15zM4.5 16l4.5-4.5 4 4 2.5-2.5 4 4M15 8.5h.01'};
 /* ---------- Umschrift (Griechisch → lateinische Schrift) ----------
    Wissenschaftliche Umschrift nach dem Muster des SBL-Handbuchs: η = ē, ω = ō, θ = th, φ = ph, χ = ch, ψ = ps,
    υ = y (in Diphthongen u), γγ/γκ/γξ/γχ = ng/nk/nx/nch, Spiritus asper = h, betonte Silbe (Akut/Zirkumflex, nur die erste je Wort) als Akut. */
@@ -480,7 +494,7 @@ const CONF={high:'gut begründet',probable:'wahrscheinlich',possible:'möglich'}
 
 root.querySelectorAll('.app').forEach((app,appIndex)=>{
 let current='all',lang='de',sheet=null,query='';
-let S={v:3,text:'de',flow:true,theme:'auto',read:19,advanced:true,inline:true,bgInline:true,translit:true,pron:'modern',rate:0.85,voice:{},readVoice:'',readRate:1,godName:'Jahwe',ill:'symbol',view:'text'};
+let S={v:3,text:'de',flow:true,theme:'auto',read:19,advanced:true,inline:true,bgInline:true,translit:true,pron:'modern',rate:0.85,voice:{},readVoice:'',readRate:1,godName:'Jahwe',ill:'symbol',view:'text',merk:'mark'};
 try{const s=JSON.parse(localStorage.getItem('lesestrom')||'null');if(s){const keep={...s};if(!(s.v>=2)){delete keep.advanced;delete keep.inline;delete keep.bgInline;}if(!(s.v>=3))delete keep.flow;S={...S,...keep,v:3};}}catch(e){}
 const save=()=>{try{localStorage.setItem('lesestrom',JSON.stringify(S));}catch(e){}};
 const mq=globalThis.matchMedia?globalThis.matchMedia('(prefers-color-scheme: dark)'):null;
@@ -705,12 +719,100 @@ function verseEntry(n){
   const inline=S.inline?alts.map(a=>`<span class="alt-line" data-alternative="${esc(a.variant)}">${lang==='de'?'oder':'or'}: «${esc(a.to)}»</span>`).join(''):'';
   const bgList=S.bgInline?bgs.filter(b=>b.from===n.v):[];
   const bgLine=bgList.length?`<div class="bg-lines"><span class="bg-label">${icon('history')}</span>${bgList.map(b=>`<button type="button" class="bg-line" data-bg="${esc(b.id)}">${esc(b.topic)}</button>`).join('')}</div>`:'';
-  return `<article class="stream-entry verse" data-stream="${n.id}">${lead}<p class="verse-line">${vno}<span class="stream-copy" data-ref="${n.canonicalRef}">${S.advanced?decorate(text,LAYER().decisions[n.canonicalRef]):esc(text)}</span></p>${inline}${bgLine}${merkCard(n,text)}</article>`;
+  return `<article class="stream-entry verse" data-stream="${n.id}">${lead}<p class="verse-line">${vno}<span class="stream-copy" data-ref="${n.canonicalRef}">${S.advanced?decorate(text,LAYER().decisions[n.canonicalRef]):esc(text)}</span>${merkMark(n)}</p>${inline}${bgLine}${merkCard(n,text)}</article>`;
 }
-// Merkvers-Karte: Bild zum Einprägen, Verswortlaut der gewählten Fassung und Stelle (Bild ohne Schrift, Text kommt aus der Übersetzung)
-function merkCard(n,text){if(!ILL||S.ill==='off')return '';const it=illItem(n.canonicalRef);if(!it)return '';const il={...LOC(it),key:n.canonicalRef};
-  return `<figure class="merk"><div class="ill-img" role="img" aria-label="${esc(il.alt)}">${il.svg}</div><figcaption class="merk-body"><span class="merk-label">${lang==='de'?'Merkvers':'Memory verse'}</span><p class="merk-text">«${esc(text)}»</p><span class="merk-ref">${esc(refDe(n.canonicalRef))}</span><button type="button" class="link soft" data-legend="${esc(il.key)}">${T().legend}</button></figcaption></figure>`;
-}
+// ---------- Merkverse und Lernen ----------
+// Merkverse: Bilder der Ebene «verse» (ILL.merk). Anzeige im Lesestrom nach Einstellung S.merk: 'mark' (kleines Zeichen am Vers,
+// Karte auf Antippen), 'card' (Karte im Text), 'off'. Lernen: Merkverse eines Kapitels, Buches oder alle, mit mehreren Methoden.
+// Lernstand nur auf diesem Gerät (localStorage «lesestrom-lernen»): je Vers Kasten (Leitner) und nächste Wiederholung.
+const LEARN_KEY='lesestrom-lernen',BOX_DAYS=[0,1,3,7,14,30,60];
+let LS={};try{LS=JSON.parse(localStorage.getItem(LEARN_KEY)||'{}')||{};}catch(e){LS={};}
+const lsSave=()=>{try{localStorage.setItem(LEARN_KEY,JSON.stringify(LS));}catch(e){}};
+const MERK=()=>(ILL&&ILL.merk)||[];
+const isDue=r=>!LS[r]||!LS[r].due||LS[r].due<=Date.now();
+const merkCode=r=>r.split('.')[0];
+function merkCardHtml(ref,text){const it=illItem(ref);if(!it)return '';const il={...LOC(it),key:ref};
+  return `<figure class="merk"><div class="ill-img" role="img" aria-label="${esc(il.alt)}">${il.svg}</div><figcaption class="merk-body"><span class="merk-label">${lang==='de'?'Merkvers':'Memory verse'}</span><p class="merk-text">«${esc(text)}»</p><span class="merk-ref">${esc(refDe(ref))}</span><button type="button" class="link soft" data-legend="${esc(il.key)}">${T().legend}</button></figcaption></figure>`;}
+function merkCard(n,text){if(!ILL||S.ill==='off'||(S.merk||'mark')!=='card')return '';return merkCardHtml(n.canonicalRef,text);}
+function merkMark(n){if(!ILL||S.ill==='off'||(S.merk||'mark')!=='mark'||!MERK().includes(n.canonicalRef))return '';
+  return `<button type="button" class="merk-mark" data-merk="${n.canonicalRef}" aria-label="${lang==='de'?'Merkvers mit Bild':'Memory verse with picture'}" title="${lang==='de'?'Merkvers':'Memory verse'}">${icon('bookmark')}</button>`;}
+function merkSheet(ref){withData([merkCode(ref)],()=>{const L_=lang==='de',tx=LAYER().text[ref]||STUDY.layers.de.text[ref]||'';
+  openSheet('merk',head(L_?'Merkvers':'Memory verse')+merkCardHtml(ref,tx)+`<button type="button" class="row" data-learn="scope:ch:${ref}">${icon('list')}<span>${L_?'Merkverse dieses Kapitels lernen':'Learn this chapter’s memory verses'}<span class="sub">${L_?'Karteikarten, Anfangsbuchstaben, Lückentext …':'Flashcards, first letters, cloze …'}</span></span>${icon('chevron-right')}</button>`);});}
+// Lernsitzung
+let LN=null;
+const METHODS=[
+ ['cards','Karteikarten','Bild und Stelle sehen, den Vers aus dem Gedächtnis sagen, dann aufdecken und ehrlich bewerten. Fällige Karten kommen nach dem Leitner-System wieder (1, 3, 7, 14, 30, 60 Tage).','Flashcards','See picture and reference, recall the verse, reveal and rate yourself. Due cards return by the Leitner system (1, 3, 7, 14, 30, 60 days).'],
+ ['letters','Anfangsbuchstaben','Nur der erste Buchstabe jedes Wortes steht da; den Vers dazu laut sagen. Hilft beim wörtlichen Einprägen.','First letters','Only the first letter of each word is shown; say the verse aloud. Helps word-for-word memorising.'],
+ ['cloze','Lückentext stufenweise','Erst fehlen wenige Wörter, dann immer mehr, bis der ganze Vers aus dem Gedächtnis kommt. Lücke antippen zeigt das Wort.','Fading cloze','First a few words are missing, then more, until the whole verse comes from memory. Tap a gap to show the word.'],
+ ['order','Wörter ordnen','Die Wörter des Verses in die richtige Reihenfolge tippen.','Word order','Tap the words of the verse in the right order.'],
+ ['quiz','Wo steht das?','Zum Vers die richtige Stelle wählen – oder zum Bild. Übt die Verbindung von Wortlaut, Bild und Stelle.','Where is it?','Pick the right reference for the verse or the picture. Links wording, picture and reference.']];
+const shuffle=(a,seed)=>{a=[...a];let x=seed||1;for(let i=a.length-1;i>0;i--){x=(x*9301+49297)%233280;const j=Math.floor(x/233280*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
+const hashStr=s=>{let h=7;for(const c of s)h=(h*31+c.charCodeAt(0))%100003;return h;};
+const words=t=>t.split(/\s+/).filter(Boolean);
+const core=w=>w.replace(/^[«‹(„"'\[]+|[»›)"'.,;:!?\]…–-]+$/g,'');
+function scopeRefs(sc){const all=MERK();if(sc.startsWith('ch:')){const [b,c]=sc.slice(3).split('.');return all.filter(r=>r.startsWith(b+'.'+c+'.'));}
+  if(sc.startsWith('bk:')){const b=sc.slice(3);return all.filter(r=>merkCode(r)===b);}if(sc==='due')return all.filter(isDue);return all;}
+function scopeLabel(sc){const L_=lang==='de';if(sc.startsWith('ch:')){const [b,c]=sc.slice(3).split('.');return refDe(b+'.'+c+'.1').replace(/[,:]1$/,'');}
+  if(sc.startsWith('bk:')){const d=DATA.find(x=>x.code===sc.slice(3));return d?(L_?d.de:d.en):sc;}return sc==='due'?(L_?'Heute fällig':'Due today'):(L_?'Alle Merkverse':'All memory verses');}
+function learnSheet(){const L_=lang==='de',all=MERK(),n=nodes.get(current),code=n&&n.b!==undefined?DATA[n.b].code:null;
+  const due=all.filter(isDue).length,known=all.filter(r=>LS[r]&&LS[r].box>=3).length;
+  const scopes=[];if(code&&n.c){const sc='ch:'+code+'.'+n.c;if(scopeRefs(sc).length)scopes.push(sc);}if(code&&scopeRefs('bk:'+code).length)scopes.push('bk:'+code);
+  for(const b of [...new Set(all.map(merkCode))])if(!scopes.includes('bk:'+b))scopes.push('bk:'+b);scopes.push('all');if(due)scopes.unshift('due');
+  const sc=LN&&LN.pickScope&&scopes.includes(LN.pickScope)?LN.pickScope:scopes[0];LN={pickScope:sc};
+  openSheet('learn',head(L_?'Lernen':'Learn')+`<button type="button" class="link soft back-menu" data-action="menu">${icon('arrow-up')}<span>${T().backMenu}</span></button>
+  <p class="note">${all.length} ${L_?'Merkverse':'memory verses'} · ${due} ${L_?'heute fällig':'due today'} · ${known} ${L_?'sicher (ab Kasten 3)':'secure (box 3+)'}</p>
+  ${all.length?`<h4 class="set-group">${L_?'Was lernen':'What to learn'}</h4><div class="chips">${scopes.map(x=>`<button type="button" class="chip${x===sc?' cur':''}" data-learn="pick:${x}" aria-pressed="${x===sc}">${esc(scopeLabel(x))} (${scopeRefs(x).length})</button>`).join('')}</div>
+  <h4 class="set-group">${L_?'Wie lernen':'How to learn'}</h4>${METHODS.map(m=>`<button type="button" class="row" data-learn="start:${m[0]}"><span>${L_?m[1]:m[3]}<span class="sub">${L_?m[2]:m[4]}</span></span>${icon('chevron-right')}</button>`).join('')}
+  <p class="note">${L_?'Tipps: kurz und oft üben (wenige Minuten am Tag), laut sprechen, erst selbst abrufen, dann nachsehen; Methoden abwechseln. Der Lernstand bleibt nur auf diesem Gerät.':'Tips: short and often, say it aloud, recall before checking, vary the methods. Progress stays on this device only.'}</p>
+  <button type="button" class="link soft" data-learn="reset">${L_?'Lernstand zurücksetzen':'Reset progress'}</button>`:`<p class="note">${L_?'Noch keine Merkverse vorhanden.':'No memory verses yet.'}</p>`}`);}
+function learnStart(method){const sc=(LN&&LN.pickScope)||'all';let refs=scopeRefs(sc);if(!refs.length)return;
+  if(method==='cards'){const d=refs.filter(isDue);refs=(d.length?d:refs);}
+  refs=shuffle(refs,Date.now()%997+1);LN={pickScope:sc,method,refs,i:0,step:0,stage:1,shown:new Set(),placed:[],wrong:0,score:0,done:0};
+  withData([...new Set(refs.map(merkCode))],learnRender);}
+const vtext=r=>LAYER().text[r]||STUDY.layers.de.text[r]||'';
+function learnRender(){const L_=lang==='de',m=LN.method,r=LN.refs[LN.i],tx=vtext(r),ws=words(tx),it=illItem(r),img=it?`<div class="ill-img learn-img" role="img" aria-label="${esc(LOC(it).alt)}">${LOC(it).svg}</div>`:'';
+  const name=METHODS.find(x=>x[0]===m),prog=`<p class="note">${L_?name[1]:name[3]} · ${LN.i+1}/${LN.refs.length} · ${esc(scopeLabel(LN.pickScope))}</p>`;
+  const say=synth?`<button type="button" class="link soft" data-learn="say">${icon('speak')}<span>${L_?'Vorlesen':'Read aloud'}</span></button>`:'';
+  let body='';
+  if(m==='cards'){body=img+`<p class="merk-ref learn-ref">${esc(refDe(r))}</p>`+(LN.step?`<p class="merk-text">«${esc(tx)}»</p>${say}<div class="learn-rate">${[['again',L_?'Nochmal':'Again'],['hard',L_?'Schwer':'Hard'],['good',L_?'Gut':'Good'],['easy',L_?'Leicht':'Easy']].map(([k,l])=>`<button type="button" data-learn="rate:${k}">${l}</button>`).join('')}</div><p class="note">${L_?'Kasten':'Box'} ${(LS[r]||{}).box||0}</p>`
+    :`<p class="note">${L_?'Sag den Vers aus dem Gedächtnis.':'Recall the verse.'}</p><button type="button" class="learn-main" data-learn="reveal">${L_?'Aufdecken':'Reveal'}</button>`);}
+  else if(m==='letters'){const fl=ws.map(w=>w.replace(/^([«‹(„"']*)(\p{L})[\p{L}\p{M}'’-]*/u,'$1$2')).join(' ');
+    body=img+`<p class="merk-ref learn-ref">${esc(refDe(r))}</p><p class="merk-text learn-letters">${esc(LN.step?tx:fl)}</p>${LN.step?say:`<button type="button" class="learn-main" data-learn="reveal">${L_?'Ganzen Vers zeigen':'Show full verse'}</button>`}`;}
+  else if(m==='cloze'){const frac=[0,.25,.5,.75,1][LN.stage],idx=ws.map((w,i)=>i).filter(i=>core(ws[i]).length>1),hide=new Set(shuffle(idx,hashStr(r)).slice(0,Math.round(idx.length*frac)));
+    body=img+`<p class="merk-ref learn-ref">${esc(refDe(r))}</p><p class="merk-text cloze">${ws.map((w,i)=>hide.has(i)&&!LN.shown.has(i)?(()=>{const c=core(w),a=w.indexOf(c);return esc(w.slice(0,a))+`<button type="button" class="gap" data-learn="word:${i}" aria-label="${L_?'Wort zeigen':'Show word'}">${'_'.repeat(Math.min(10,c.length))}</button>`+esc(w.slice(a+c.length));})():esc(w)).join(' ')}</p>
+    <div class="learn-rate">${[1,2,3,4].map(s=>`<button type="button" data-learn="stage:${s}" aria-pressed="${LN.stage===s}">${s===4?(L_?'alles':'all'):Math.round([0,.25,.5,.75][s]*100)+' %'}</button>`).join('')}</div><p class="note">${L_?'Lücken: mehr Lücken, wenn es sitzt.':'Gaps: increase when it sticks.'}</p>`;}
+  else if(m==='order'){if(!LN.pool){LN.pool=shuffle(ws.map((w,i)=>i),hashStr(r)+LN.i);LN.placed=[];LN.wrong=0;}
+    const done=LN.placed.length===ws.length;
+    body=img+`<p class="merk-ref learn-ref">${esc(refDe(r))}</p><p class="merk-text order-line">${LN.placed.map(i=>esc(ws[i])).join(' ')}${done?'':' …'}</p>
+    ${done?`<p class="note">${L_?'Richtig geordnet':'Correct order'}${LN.wrong?` · ${LN.wrong} ${L_?'Fehlgriffe':'misses'}`:''}</p>${say}`:`<div class="chips order-pool">${LN.pool.filter(i=>!LN.placed.includes(i)).map(i=>`<button type="button" class="chip" data-learn="pick-word:${i}">${esc(core(ws[i])||ws[i])}</button>`).join('')}</div>`}`;}
+  else if(m==='quiz'){if(!LN.opts){const pool=MERK().filter(x=>x!==r);LN.opts=shuffle([r,...shuffle(pool,hashStr(r)).slice(0,3)],LN.i+7);LN.pick=null;LN.asImg=(LN.i%2===1)&&!!it;}
+    body=(LN.asImg?img:`<p class="merk-text">«${esc(tx)}»</p>`)+`<p class="note">${L_?'Wo steht das?':'Where is this?'}</p><div class="learn-opts">${LN.opts.map(o=>`<button type="button" class="row${LN.pick?(o===r?' ok':o===LN.pick?' bad':''):''}" data-learn="answer:${o}" ${LN.pick?'disabled':''}><span>${esc(refDe(o))}</span>${LN.pick&&o===r?icon('check'):''}</button>`).join('')}</div>${LN.pick&&LN.asImg?`<p class="merk-text">«${esc(tx)}»</p>`:''}`;}
+  const last=LN.i>=LN.refs.length-1,canNext=m!=='cards';
+  openSheet('learn',head(L_?'Lernen':'Learn')+`<button type="button" class="link soft back-menu" data-learn="menu">${icon('arrow-up')}<span>${L_?'Zur Auswahl':'Back to choice'}</span></button>`+prog+body+
+    (canNext?`<div class="learn-nav">${LN.i?`<button type="button" class="link soft" data-learn="prev">${icon('prev')}<span>${L_?'Zurück':'Back'}</span></button>`:'<span></span>'}<button type="button" class="learn-main" data-learn="${last?'finish':'next'}">${last?(L_?'Fertig':'Done'):(L_?'Weiter':'Next')}${icon('next')}</button></div>`:''));}
+function learnRate(k){const r=LN.refs[LN.i],o=LS[r]||{box:0};o.box=k==='again'?0:k==='hard'?Math.max(1,o.box):k==='good'?Math.min(6,o.box+1):Math.min(6,o.box+2);
+  o.due=Date.now()+BOX_DAYS[o.box]*864e5;o.seen=(o.seen||0)+1;LS[r]=o;lsSave();if(k==='again')LN.refs.push(r);learnNext();}
+function learnNext(){if(LN.i>=LN.refs.length-1){learnFinish();return;}LN.i++;LN.step=0;LN.shown=new Set();LN.pool=null;LN.opts=null;learnRender();}
+function learnFinish(){const L_=lang==='de';const n_=LN.refs.length;openSheet('learn',head(L_?'Lernen':'Learn')+`<p class="merk-text">${L_?'Geschafft':'Done'} – ${n_} ${L_?'Karten':'cards'}.</p><p class="note">${L_?'Am besten morgen kurz wiederholen; fällige Merkverse zeigt das Menü «Lernen».':'Best repeat briefly tomorrow; due verses appear under «Learn».'}</p><button type="button" class="learn-main" data-learn="menu">${L_?'Zur Auswahl':'Back to choice'}</button>`);}
+function learnAct(a){const [k,...rest]=a.split(':'),v=rest.join(':');
+  if(k==='menu'){learnSheet();return;}
+  if(k==='pick'){LN={pickScope:v};learnSheet();return;}
+  if(k==='scope'){const [b,c]=v.split('.');LN={pickScope:'ch:'+b+'.'+c};learnSheet();return;}
+  if(k==='start'){learnStart(v);return;}
+  if(k==='reset'){LS={};lsSave();learnSheet();return;}
+  if(!LN||!LN.refs)return;
+  if(k==='reveal'){LN.step=1;learnRender();return;}
+  if(k==='rate'){learnRate(v);return;}
+  if(k==='say'){if(synth){synth.cancel();synth.speak(readUtter(vtext(LN.refs[LN.i])));}return;}
+  if(k==='word'){LN.shown.add(Number(v));learnRender();return;}
+  if(k==='stage'){LN.stage=Number(v);LN.shown=new Set();learnRender();return;}
+  if(k==='pick-word'){const i=Number(v),ws=words(vtext(LN.refs[LN.i])),exp=LN.placed.length;
+    if(i===exp||core(ws[i])===core(ws[exp])){LN.placed.push(i===exp?i:exp);}else{LN.wrong++;const el=host.querySelector(`[data-learn="pick-word:${i}"]`);if(el){el.classList.add('miss');setTimeout(()=>el.classList.remove('miss'),400);}return;}
+    learnRender();return;}
+  if(k==='answer'){LN.pick=v;if(v===LN.refs[LN.i])LN.score++;learnRender();return;}
+  if(k==='next'){learnNext();return;}
+  if(k==='prev'){LN.i=Math.max(0,LN.i-1);LN.step=0;LN.shown=new Set();LN.pool=null;LN.opts=null;learnRender();return;}
+  if(k==='finish'){learnFinish();return;}}
 function streamMarkup(){const ids=streams[nodes.get(current).level];const t=T();const warn=dataError?`<p class="note gap">${lang==='de'?'Ein Teil der Daten konnte nicht geladen werden. Wird die Seite direkt als Datei geöffnet, die Einzeldatei verwenden.':'Some data could not be loaded. When opening the page as a local file, use the single-file version.'}</p>`:'';const first=nodes.get(ids[readerStart]);const gap=S.flow&&first&&first.level===6&&!summary(first)?`<p class="note gap">${t.placeholder}</p>`:'';return `<div class="column">${warn}${readerStart?`<button type="button" class="load load-before" data-action="load-prev">${t.loadPrev}</button>`:''}${gap}${ids.slice(readerStart,readerEnd).map(entryM).join('')}${readerEnd<ids.length?`<button type="button" class="load load-after" data-action="load-next">${t.loadNext}</button>`:`<p class="end">${t.end}</p>`}</div>`;}
 let moreBusy=false;
 function loadMore(before=false){
@@ -939,6 +1041,7 @@ function menuSheet(){
   openSheet('menu',head(t.menu,t.done)+`<label for="find-${appIndex}" class="note">${t.search}</label><input id="find-${appIndex}" type="search" placeholder="${t.hint}" value="${esc(query)}" autocomplete="off"><div class="results"></div>
   ${recent.length?`<details class="worked recent"><summary>${t.recent} (${recent.length})</summary>${recent.map(x=>`<button type="button" class="row recent-row" data-go="${x.id}"><span>${esc(recentLabel(x.id))}</span>${icon('chevron-right')}</button>`).join('')}<button type="button" class="link soft clear-recent" data-clear-recent>${t.recentClear}</button></details>`:''}
   <details class="worked"><summary>${t.examples} (${STUDY.sections.length})</summary>${STUDY.sections.map(sec=>`<button type="button" class="row" data-go="${sec.parts[0].id}"><span>${esc(refDe(sec.range))} · ${esc(pTitle(sec))}</span>${icon('chevron-right')}</button>`).join('')}</details>
+  ${MERK().length?`<button type="button" class="row settings-row" data-learn="menu">${icon('learn')}<span>${lang==='de'?'Lernen':'Learn'}<span class="sub">${lang==='de'?'Merkverse einprägen: Karteikarten, Anfangsbuchstaben, Lückentext, Wörter ordnen, Stellen zuordnen':'Memorise key verses: flashcards, first letters, cloze, word order, references'}${MERK().filter(isDue).length?` · ${MERK().filter(isDue).length} ${lang==='de'?'fällig':'due'}`:''}</span></span>${icon('chevron-right')}</button>`:''}
   ${Object.keys(ILL.styles||{}).length?`<button type="button" class="row settings-row" data-figindex>${icon('image')}<span>${t.figIndex}<span class="sub">${t.figIndexSub}</span></span>${icon('chevron-right')}</button>`:''}
   <button type="button" class="row settings-row" data-settings>${icon('settings')}<span>${t.settings}<span class="sub">${t.settingsSub}</span></span>${icon('chevron-right')}</button>
   <button type="button" class="row" data-sources-map><span>${t.sourcesMap}<span class="sub">${t.sourcesMapSub}</span></span>${icon('chevron-right')}</button>
@@ -967,6 +1070,7 @@ function settingsSheet(){
   <div class="set"><span>${t.size}</span>${seg('read',[[17,'A−'],[19,'A'],[22,'A+']],S.read)}</div>
   <div class="set"><span>${t.language}</span>${seg('lang',[['de','Deutsch'],['en','English']],lang)}</div>
   ${Object.keys(ILL.styles||{}).length?`<div class="set"><span>${t.ill}<span class="sub">${t.illSub}</span></span>${seg('ill',[['off',t.illOff],...Object.entries(ILL.styles).map(([k,st])=>[k,lang==='de'?st.label.de:st.label.en])],S.ill)}</div>`:''}
+  ${MERK().length?`<div class="set"><span>${lang==='de'?'Merkverse':'Memory verses'}<span class="sub">${lang==='de'?'Bild und Wortlaut ausgewählter Kernverse. «Zeichen»: kleines Lesezeichen am Vers, Karte auf Antippen – stört den Lesefluss nicht.':'Picture and wording of selected key verses. «Mark»: small bookmark at the verse, card on tap.'}</span></span>${seg('merk',[['off',t.illOff],['mark',lang==='de'?'Zeichen':'Mark'],['card',lang==='de'?'Karte':'Card']],S.merk||'mark')}</div>`:''}
   ${sw('flow',t.flow,t.flowSub)}
   <h4 class="set-group">${t.grpText}</h4>
   ${STUDY.layer_order.length>1?`<div class="set"><span>${t.readText}<span class="sub">${t.readTextSub}</span></span>${seg('text',STUDY.layer_order.map(k=>[k,STUDY.layers[k].label]),S.text)}</div>`:''}
@@ -1122,6 +1226,8 @@ app.addEventListener('click',e=>{
   if(b.hasAttribute('data-clear-recent')){clearRecent();menuSheet();return;}
   if(b.hasAttribute('data-settings')){settingsSheet();return;}
   if(b.hasAttribute('data-figindex')){figIndexSheet();return;}
+  if(b.dataset.merk){merkSheet(b.dataset.merk);return;}
+  if(b.dataset.learn){learnAct(b.dataset.learn);return;}
   if(b.dataset.figindexStyle){figIndexSheet(b.dataset.figindexStyle);return;}
   if(b.dataset.go){go(b.dataset.go);return;}
   if(b.dataset.level!==undefined){go(resolveLevel(Number(b.dataset.level)));return;}

@@ -257,6 +257,10 @@ for rid, r in ill_recs.items():
             m["captions"] = f["captions_de"]
         if m:
             bundle(f"l/{lg}/common").setdefault("i18n", {}).setdefault(rid, {}).update(m)
+# Merkverse (Bilder der Ebene «verse»): Liste im Kern, damit Menü und Lernmodus sie kennen, bevor ein Buch geladen ist
+_bo = {code: i for i, (code, _, _) in enumerate(refs.BOOKS)}
+ill_core["merk"] = sorted({r["reference"] for r in ill_recs.values() if r["type"] == "illustration" and r["level"] == "verse"},
+                          key=lambda x: (_bo.get(x.split(".")[0], 999), int(x.split(".")[1]), int(x.split(".")[2])))
 core_sums = {}
 for sid, x in summaries.items():
     for lg, f in (x.get("i18n") or {}).items():
