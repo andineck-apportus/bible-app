@@ -35,7 +35,10 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .icon-btn:hover,#bible-stream .location:hover,#bible-stream .dock button:hover:not(:disabled){background:var(--soft)}
 #bible-stream .app .location{border-radius:var(--r)!important;padding:0 10px!important}
 #bible-stream .dock button{border-radius:var(--r)!important}
-#bible-stream .location{flex:1;min-width:0;height:44px;display:flex;align-items:center;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#bible-stream .location{flex:1;min-width:0;height:44px;display:flex;align-items:center;gap:8px;font-size:14px;white-space:nowrap;overflow:hidden}
+#bible-stream .location svg{width:18px;height:18px;flex:none;color:var(--muted)}
+#bible-stream .location .loc-text{overflow:hidden;text-overflow:ellipsis}
+#bible-stream .row.settings-row>span{flex:1;text-align:left}
 #bible-stream .dock button{height:44px;display:flex;align-items:center;gap:8px;font-size:14px;padding:0 10px}
 #bible-stream .dock [data-action=down]{justify-content:flex-end}
 #bible-stream .dock .depth{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:0 14px}
@@ -332,6 +335,7 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .back-menu{display:inline-flex;align-items:center;gap:6px;margin:0 0 6px}
 #bible-stream .back-menu svg{width:14px;height:14px;transform:rotate(-90deg)}
 #bible-stream .settings-row>svg:first-child{width:20px;height:20px;flex:none;margin-right:10px}
+#bible-stream .settings-row>span{flex:1;min-width:0;text-align:left}
 #bible-stream .legend-panels{margin:12px 0 4px;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:15px;line-height:1.45}
 #bible-stream .legend-panels li{display:flex;gap:10px;align-items:baseline}
 #bible-stream .legend-panels .lp-n{flex:none;display:inline-grid;place-items:center;width:20px;height:20px;border:1px solid var(--ink);border-radius:50%;font:500 12px/1 var(--ui);transform:translateY(-1px)}
@@ -459,7 +463,7 @@ function search(q){q=q.trim();if(!q)return[];const match=q.match(/^(.+?)\s*(\d+)
 
 /* ---------- Hilfen ---------- */
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const ICONS={'bookmark':'M7 4h10v16l-5-3.5L7 20z','learn':'M3 9l9-5 9 5-9 5-9-5zm4 2.5v4.5c0 1.5 2.5 3 5 3s5-1.5 5-3v-4.5','arrow-up':'M12 19V5m-6 6 6-6 6 6','arrow-down':'M12 5v14m-6-6 6 6 6-6','chevron-right':'m9 6 6 6-6 6','menu':'M4 7h16M4 12h16M4 17h16','list':'M9 6h11M9 12h11M9 18h11M4 6h1M4 12h1M4 18h1','plus':'M12 6v12M6 12h12','x':'m6 6 12 12M6 18 18 6','check':'M5 12.5l4.5 4.5L19 7.5','play':'M8 5.5v13l10.5-6.5z','pause':'M8.5 5.5v13M15.5 5.5v13','prev':'M18 6.5 10 12l8 5.5zM6.5 6v12','next':'M6 6.5 14 12l-8 5.5zM17.5 6v12','speak':'M11 5 6 9H3v6h3l5 4zM15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13','understand':'M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1 2V16h5.2v-.2c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z','history':'M3 12a9 9 0 1 0 3-6.7M3 4v4h4M12 7v5l3 2','settings':'M18.2 12a6.2 6.2 0 1 1-12.4 0 6.2 6.2 0 0 1 12.4 0zM14.5 12a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0zM18.2 12.0L21.0 12.0M16.4 16.4L18.4 18.4M12.0 18.2L12.0 21.0M7.6 16.4L5.6 18.4M5.8 12.0L3.0 12.0M7.6 7.6L5.6 5.6M12.0 5.8L12.0 3.0M16.4 7.6L18.4 5.6','text':'M5 6.5h14M5 11h14M5 15.5h14M5 20h8','image':'M4.5 4.5h15v15h-15zM4.5 16l4.5-4.5 4 4 2.5-2.5 4 4M15 8.5h.01'};
+const ICONS={'search':'M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14zm9 16-4-4','bookmark':'M7 4h10v16l-5-3.5L7 20z','learn':'M3 9l9-5 9 5-9 5-9-5zm4 2.5v4.5c0 1.5 2.5 3 5 3s5-1.5 5-3v-4.5','arrow-up':'M12 19V5m-6 6 6-6 6 6','arrow-down':'M12 5v14m-6-6 6 6 6-6','chevron-right':'m9 6 6 6-6 6','menu':'M4 7h16M4 12h16M4 17h16','list':'M9 6h11M9 12h11M9 18h11M4 6h1M4 12h1M4 18h1','plus':'M12 6v12M6 12h12','x':'m6 6 12 12M6 18 18 6','check':'M5 12.5l4.5 4.5L19 7.5','play':'M8 5.5v13l10.5-6.5z','pause':'M8.5 5.5v13M15.5 5.5v13','prev':'M18 6.5 10 12l8 5.5zM6.5 6v12','next':'M6 6.5 14 12l-8 5.5zM17.5 6v12','speak':'M11 5 6 9H3v6h3l5 4zM15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13','understand':'M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1 2V16h5.2v-.2c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z','history':'M3 12a9 9 0 1 0 3-6.7M3 4v4h4M12 7v5l3 2','settings':'M18.2 12a6.2 6.2 0 1 1-12.4 0 6.2 6.2 0 0 1 12.4 0zM14.5 12a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0zM18.2 12.0L21.0 12.0M16.4 16.4L18.4 18.4M12.0 18.2L12.0 21.0M7.6 16.4L5.6 18.4M5.8 12.0L3.0 12.0M7.6 7.6L5.6 5.6M12.0 5.8L12.0 3.0M16.4 7.6L18.4 5.6','text':'M5 6.5h14M5 11h14M5 15.5h14M5 20h8','image':'M4.5 4.5h15v15h-15zM4.5 16l4.5-4.5 4 4 2.5-2.5 4 4M15 8.5h.01'};
 /* ---------- Umschrift (Griechisch → lateinische Schrift) ----------
    Wissenschaftliche Umschrift nach dem Muster des SBL-Handbuchs: η = ē, ω = ō, θ = th, φ = ph, χ = ch, ψ = ps,
    υ = y (in Diphthongen u), γγ/γκ/γξ/γχ = ng/nk/nx/nch, Spiritus asper = h, betonte Silbe (Akut/Zirkumflex, nur die erste je Wort) als Akut. */
@@ -833,7 +837,7 @@ function clearRecent(){recent=[];try{localStorage.removeItem(RECENT_KEY);}catch(
 function recentLabel(id){const n=nodes.get(id),b=DATA[n.b];const name=lang==='de'?b.de:b.en;if(n.level===4)return `${name} ${n.c}`;return `${name} ${n.c},${n.v}${n.last>n.v?'–'+n.last:''}`+(n.part?' · '+pTitle(n.part):'');}
 function chrome(){
   const n=nodes.get(current),t=T();app.lang=lang;app.dataset.level=n.level;recordRecent();
-  app.querySelector('.location').textContent=title(n);
+  app.querySelector('.location').innerHTML=icon('search')+`<span class="loc-text">${esc(title(n))}</span>`;
   app.querySelector('.location').setAttribute('aria-label',t.contents+': '+title(n));
   app.querySelector('[data-action=home]').setAttribute('aria-label',t.home);
   app.querySelector('[data-action=menu]').innerHTML=icon('menu');app.querySelector('[data-action=menu]').setAttribute('aria-label',t.menu);
@@ -1038,13 +1042,11 @@ function sourcesMapSheet(){
 function menuSheet(){
   const t=T(),seg=(key,opts,val)=>`<div class="seg" role="group">${opts.map(([v,l])=>`<button type="button" data-set="${key}" data-value="${v}" aria-pressed="${String(val)===String(v)}">${l}</button>`).join('')}</div>`;
   const sw=(key,label,sub)=>`<div class="set"><span>${label}<span class="sub">${sub}</span></span><button type="button" class="switch" role="switch" aria-checked="${S[key]}" data-toggle="${key}" aria-label="${label}"></button></div>`;
-  openSheet('menu',head(t.menu,t.done)+`<label for="find-${appIndex}" class="note">${t.search}</label><input id="find-${appIndex}" type="search" placeholder="${t.hint}" value="${esc(query)}" autocomplete="off"><div class="results"></div>
-  ${recent.length?`<details class="worked recent"><summary>${t.recent} (${recent.length})</summary>${recent.map(x=>`<button type="button" class="row recent-row" data-go="${x.id}"><span>${esc(recentLabel(x.id))}</span>${icon('chevron-right')}</button>`).join('')}<button type="button" class="link soft clear-recent" data-clear-recent>${t.recentClear}</button></details>`:''}
-  <details class="worked"><summary>${t.examples} (${STUDY.sections.length})</summary>${STUDY.sections.map(sec=>`<button type="button" class="row" data-go="${sec.parts[0].id}"><span>${esc(refDe(sec.range))} · ${esc(pTitle(sec))}</span>${icon('chevron-right')}</button>`).join('')}</details>
+  openSheet('menu',head(t.menu,t.done)+`
   ${MERK().length?`<button type="button" class="row settings-row" data-learn="menu">${icon('learn')}<span>${lang==='de'?'Lernen':'Learn'}<span class="sub">${lang==='de'?'Merkverse einprägen: Karteikarten, Anfangsbuchstaben, Lückentext, Wörter ordnen, Stellen zuordnen':'Memorise key verses: flashcards, first letters, cloze, word order, references'}${MERK().filter(isDue).length?` · ${MERK().filter(isDue).length} ${lang==='de'?'fällig':'due'}`:''}</span></span>${icon('chevron-right')}</button>`:''}
   ${Object.keys(ILL.styles||{}).length?`<button type="button" class="row settings-row" data-figindex>${icon('image')}<span>${t.figIndex}<span class="sub">${t.figIndexSub}</span></span>${icon('chevron-right')}</button>`:''}
   <button type="button" class="row settings-row" data-settings>${icon('settings')}<span>${t.settings}<span class="sub">${t.settingsSub}</span></span>${icon('chevron-right')}</button>
-  <button type="button" class="row" data-sources-map><span>${t.sourcesMap}<span class="sub">${t.sourcesMapSub}</span></span>${icon('chevron-right')}</button>
+  <button type="button" class="row settings-row" data-sources-map>${icon('list')}<span>${t.sourcesMap}<span class="sub">${t.sourcesMapSub}</span></span>${icon('chevron-right')}</button>
   <details class="about"><summary>${t.about}</summary><div>
    <p>${lang==='de'?'Ein Prototyp. Zusammenfassungen, Übersetzung und Erklärungen sind KI-Entwürfe und noch nicht fachlich geprüft. Ausgearbeitet sind bisher '+STUDY.sections.map(x=>refDe(x.range)).join(', ')+'; an anderen Stellen fehlt der Bibeltext noch.':'A prototype. Summaries, translation and notes are AI drafts, not yet reviewed. Worked out so far: '+STUDY.sections.map(x=>refDe(x.range)).join(', ')+'.'}</p>
    <p>${lang==='de'?'Bücher, Kapitel und Verszählung folgen vorläufig dem protestantischen Kanon mit 66 Büchern und der Zählung der King-James-Bibel (Testkonfiguration). Abschnitte ausserhalb der ausgearbeiteten Stellen umfassen der Einfachheit halber je bis zu fünf Verse.':'Books and verse numbering follow the 66-book Protestant canon with KJV numbering for now.'}</p>
@@ -1095,8 +1097,10 @@ function navSheet(reset){
   const name=n=>n.level===0?t.bible:n.level===5&&n.part?pTitle(n.part):n.level===4?(L?'Kapitel ':'Chapter ')+n.c:n.level===6?(L?'Vers ':'Verse ')+n.v:n.level===5?(L?'Verse ':'Verses ')+n.v+'–'+n.last:(L?n.de:n.en);
   const crumbs=ancestors(current).map(id=>`<button type="button" data-go="${id}" ${id===current?'aria-current="true"':''}>${esc(name(nodes.get(id)))}</button>`).join('<span class="sep">›</span>');
   const workedBook=code=>STUDY.sections.some(sec=>rangeOf(sec.range).code===code),workedCh=(code,c)=>STUDY.sections.some(sec=>{const g=rangeOf(sec.range);return g.code===code&&g.c===c;});
-  let h=head(t.contents)+`<p class="note">${t.here}</p><div class="crumbs">${crumbs}</div>`;
-  h+=`<label for="find-nav-${appIndex}" class="note">${t.search}</label><input id="find-nav-${appIndex}" type="search" placeholder="${t.hint}" value="${esc(query)}" autocomplete="off"><div class="results"></div>`;
+  let h=head(t.contents)+`<label for="find-nav-${appIndex}" class="note">${t.search}</label><input id="find-nav-${appIndex}" type="search" placeholder="${t.hint}" value="${esc(query)}" autocomplete="off"><div class="results"></div>
+  ${recent.length?`<details class="worked recent"><summary>${t.recent} (${recent.length})</summary>${recent.map(x=>`<button type="button" class="row recent-row" data-go="${x.id}"><span>${esc(recentLabel(x.id))}</span>${icon('chevron-right')}</button>`).join('')}<button type="button" class="link soft clear-recent" data-clear-recent>${t.recentClear}</button></details>`:''}
+  <details class="worked"><summary>${t.examples} (${STUDY.sections.length})</summary>${STUDY.sections.map(sec=>`<button type="button" class="row" data-go="${sec.parts[0].id}"><span>${esc(refDe(sec.range))} · ${esc(pTitle(sec))}</span>${icon('chevron-right')}</button>`).join('')}</details>
+  <p class="note">${t.here}</p><div class="crumbs">${crumbs}</div>`;
   h+=`<div class="nav-block"><div class="seg" role="group">${['ot','nt'].map(x=>`<button type="button" data-nav="t:${x}" aria-pressed="${nav.t===x}">${esc(L?nodes.get(x).de:nodes.get(x).en)}</button>`).join('')}</div>
    <div class="chips">${nodes.get(nav.t).children.map(gid=>{const g=nodes.get(gid);return `<button type="button" class="chip${nav.g===g.gi?' cur':''}" data-nav="g:${g.gi}">${esc(L?g.de:g.en)}</button>`;}).join('')}</div></div>`;
   if(nav.g!=null){const gn=nodes.get('g'+nav.g);
@@ -1223,7 +1227,7 @@ app.addEventListener('click',e=>{
   if(b.dataset.refGo){goRef(b.dataset.refGo);return;}
   if(b.dataset.nav){const [k,v]=b.dataset.nav.split(':');if(k==='t'){nav={t:v,g:null,b:null,c:null};}else if(k==='g'){nav.g=Number(v);nav.b=null;nav.c=null;}else if(k==='b'){nav.b=Number(v);nav.c=null;}else if(k==='c'){nav.c=Number(v);}
     const old=host.querySelector('.sheet'),y=old?old.scrollTop:0;navSheet();const sh=host.querySelector('.sheet');if(sh&&sh.scrollTo)sh.scrollTo(0,y);const last=host.querySelector('.nav-block:last-of-type');if(last&&last.scrollIntoView)last.scrollIntoView({block:'nearest'});return;}
-  if(b.hasAttribute('data-clear-recent')){clearRecent();menuSheet();return;}
+  if(b.hasAttribute('data-clear-recent')){clearRecent();navSheet();return;}
   if(b.hasAttribute('data-settings')){settingsSheet();return;}
   if(b.hasAttribute('data-figindex')){figIndexSheet();return;}
   if(b.dataset.merk){merkSheet(b.dataset.merk);return;}

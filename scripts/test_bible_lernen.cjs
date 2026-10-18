@@ -6,7 +6,7 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
 (async()=>{const b=await chromium.launch();
   try{const p=await b.newPage({viewport:{width:390,height:844}});const errs=[];p.on('pageerror',e=>errs.push(e.message));
     await p.goto('file://'+path.join(__dirname,'../app/bible/index.html'));await p.waitForTimeout(800);
-    await p.click('[data-action=menu]');await p.fill('input[type=search]','Mt 5,3');await p.waitForTimeout(300);await p.click('.results button');await p.waitForTimeout(1200);
+    await p.click('[data-action=index]');await p.fill('input[type=search]','Mt 5,3');await p.waitForTimeout(300);await p.click('.results button');await p.waitForTimeout(1200);
     assert(await p.$('[data-merk="MAT.5.3"]'),'Merkvers-Zeichen am Vers');
     assert.equal(await p.$$eval('.reader .merk',x=>x.length),0,'Standard: keine Karte im Lesefluss');
     await p.click('[data-merk="MAT.5.3"]');await p.waitForTimeout(400);

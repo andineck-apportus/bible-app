@@ -19,7 +19,7 @@ for(const k of ['inline','bgInline','advanced'])click(`[data-toggle=${k}]`);
 click('[data-close]');
 
 // Einstieg über das Menü in den Pilotabschnitt; Studienblatt mit Deutung und Gegenargument
-click('[data-action=menu]');click('[data-go="TU-MRK-003-020-021"]');
+click('[data-action=index]');click('[data-go="TU-MRK-003-020-021"]');
 assert.equal(sheetHost.textContent,'','Menü schliesst nach Navigation');
 assert(reader.querySelector('[data-stream="TU-MRK-003-031-035"]'));
 click('[data-study="TU-MRK-003-022-030"]');
@@ -65,7 +65,7 @@ click('[data-close]');
 click('[data-action=up]');assert.equal(reader.scrollTop,137,'Rückkehrposition');
 
 // Suche, fortlaufendes Lesen über die Kapitelgrenze, Lesarten im Fliesstext
-click('[data-action=menu]');click('[data-settings]');click('[data-toggle=inline]');click('[data-action=menu]');
+click('[data-action=menu]');click('[data-settings]');click('[data-toggle=inline]');click('[data-close]');click('[data-action=index]');
 const input=sheetHost.querySelector('input[type=search]');input.value='Mk 3,20';input.dispatchEvent(new dom.window.Event('input',{bubbles:true}));
 sheetHost.querySelector('.results [data-go]').click();
 click('[data-action=load-next]');
@@ -88,9 +88,10 @@ for(const a of mkAlts()){
 let tested=mkAlts().length;
 
 
-// Vaterunser: Matthäus und Lukas
-click('[data-action=menu]');
-assert.equal(sheetHost.querySelectorAll('details.worked:not(.recent) [data-go^="TU-"]').length,M().sections.length,'Ausgearbeitete Stellen im Menü (eingeklappt)');
+// Vaterunser: Matthäus und Lukas; Suche, Zuletzt gelesen und Ausgearbeitetes stehen in der Navigation (nicht mehr im Menü)
+click('[data-action=menu]');assert(!sheetHost.querySelector('input[type=search]')&&!sheetHost.querySelector('details.worked'),'Menü ohne Suche und Listen');click('[data-close]');
+click('[data-action=index]');
+assert.equal(sheetHost.querySelectorAll('details.worked:not(.recent) [data-go^="TU-"]').length,M().sections.length,'Ausgearbeitete Stellen in der Navigation (eingeklappt)');
 assert(sheetHost.textContent.includes('Zuletzt gelesen')&&sheetHost.querySelectorAll('[data-clear-recent]').length===1,'Zuletzt gelesen nach dem Lesen');assert(sheetHost.querySelector('details.recent .recent-row'),'Zuletzt gelesen eingeklappt');
 {const rr=[...sheetHost.querySelectorAll('.recent-row')];assert(rr.length>0&&rr.every(r=>[4,5].includes(model.nodes.get(r.dataset.go).level)),'Verlauf auf Abschnitt- bzw. Kapitelebene');}
 click('[data-clear-recent]');
@@ -136,7 +137,7 @@ click('[data-action=menu]');click('[data-settings]');assert(sheetHost.textConten
 click('[data-more="v39-6-13"]');click('.sheet [data-source="VAR-SBLGNTAPP-MAT-006-013-01"]');assert(!sheetHost.querySelector('.tr'),'Umschrift abschaltbar');click('[data-close]');
 click('[data-action=menu]');click('[data-settings]');click('[data-toggle=translit]');click('[data-close]');
 for(const a of M().alternatives.filter(a=>a.ref.startsWith('MAT.6.'))){const v=vOf(a.ref);if(!reader.querySelector(`[data-more="v39-6-${v}"]`)){continue;}click(`[data-more="v39-6-${v}"]`);sheetHost.querySelector(`[data-source="${a.variant}"]`).click();assert(sheetHost.textContent.includes('Was die gedruckten Ausgaben haben'),a.variant);click('[data-close]');tested++;}
-click('[data-action=menu]');const inp=sheetHost.querySelector('input[type=search]');inp.value='Lk 11,2';inp.dispatchEvent(new dom.window.Event('input',{bubbles:true}));sheetHost.querySelector('.results [data-go]').click();
+click('[data-action=index]');const inp=sheetHost.querySelector('input[type=search]');inp.value='Lk 11,2';inp.dispatchEvent(new dom.window.Event('input',{bubbles:true}));sheetHost.querySelector('.results [data-go]').click();
 assert.equal(reader.querySelector('[data-stream="v41-11-2"] .stream-copy').textContent,M().de['LUK.11.2']);
 click('[data-more="v41-11-2"]');click('.sheet [data-source="VAR-SBLGNTAPP-LUK-011-002-01"]');
 txt=sheetHost.textContent;assert(txt.includes('Papyrus 75')&&txt.includes('Codex Vaticanus'),'P75 zu Lk 11,2');tested++;click('[data-close]');
@@ -159,7 +160,7 @@ click('[data-nav="t:nt"]');assert(sheetHost.querySelector('[data-nav="g:5"]'),'G
 click('[data-close]');
 
 // Querverweise und Stellen im Text sind verlinkt; Rücksprung
-click('[data-action=menu]');const inp2=sheetHost.querySelector('input[type=search]');inp2.value='Mt 6,11';inp2.dispatchEvent(new dom.window.Event('input',{bubbles:true}));sheetHost.querySelector('.results [data-go]').click();
+click('[data-action=index]');const inp2=sheetHost.querySelector('input[type=search]');inp2.value='Mt 6,11';inp2.dispatchEvent(new dom.window.Event('input',{bubbles:true}));sheetHost.querySelector('.results [data-go]').click();
 click('[data-more="v39-6-11"]');
 assert(sheetHost.querySelector('.xrefs [data-ref-go="PRO.30.8"]'),'Querverweis Spr 30,8');
 assert(sheetHost.textContent.includes('Spr 30,8')&&sheetHost.textContent.includes('Lk 11,3'),'Kurzform der Stellen');
@@ -195,7 +196,7 @@ assert.equal(reader.querySelector('[data-stream="v39-6-11"] .stream-copy').textC
 assert.equal(Object.keys(M().layers.gsw.text).length,3059,'Mundart für alle 3059 Verse');
 // Obadja (Hebräisch) und Titus: Muster ganzer Bücher
 click('[data-action=menu]');click('[data-settings]');click('[data-set="text"][data-value="de"]');if(sheetHost.querySelector('[data-toggle=advanced][aria-checked=false]'))click('[data-toggle=advanced]');click('[data-close]');
-click('[data-action=menu]');sheetHost.querySelector('[data-go^="TU-OBA"]').click();click('[data-action=down]');
+click('[data-action=index]');sheetHost.querySelector('[data-go^="TU-OBA"]').click();click('[data-action=down]');
 assert(reader.querySelector('[data-stream="v30-1-21"]')||true);
 click('[data-more="v30-1-3"]');
 assert(sheetHost.querySelector('.il.he .heb'),'Hebräisch Wort für Wort');
@@ -208,7 +209,7 @@ assert(model.STUDY.words.filter(w=>w.ref==='OBA.1.1').every(w=>w.wtr),'Umschrift
 assert(model.STUDY.layers.gsw.text['TIT.3.15'].startsWith('Es grüessed dich alli'),'Titus in Mundart');
 assert(model.STUDY&&dom.window.document.querySelector('#bible-stream'));
 // Wörterbuch (UBS/STEPBible), Ketiv/Qere (TAHOT), Ausgaben je Wort (TAGNT); Urtext-Modus ist an
-const goto=q=>{click('[data-action=menu]');const i=sheetHost.querySelector('input[type=search]');i.value=q;i.dispatchEvent(new dom.window.Event('input',{bubbles:true}));sheetHost.querySelector('.results [data-go]').click();};
+const goto=q=>{click('[data-action=index]');const i=sheetHost.querySelector('input[type=search]');i.value=q;i.dispatchEvent(new dom.window.Event('input',{bubbles:true}));sheetHost.querySelector('.results [data-go]').click();};
 goto('Obadja 1,11');click('[data-more="v30-1-11"]');
 let ltx=sheetHost.textContent;
 const hc=x=>x.replace(/[^\u05D0-\u05EA ]/g,'');
