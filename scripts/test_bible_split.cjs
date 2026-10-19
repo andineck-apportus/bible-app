@@ -8,7 +8,7 @@ const server=http.createServer((q,r)=>{const f=path.join(root,decodeURIComponent
   r.writeHead(200,{'Content-Type':f.endsWith('.html')?'text/html; charset=utf-8':f.endsWith('.gz')?'application/gzip':f.endsWith('.txt')?'text/plain':'application/json'});fs.createReadStream(f).pipe(r);});
 server.listen(0,async()=>{const url=`http://localhost:${server.address().port}/index.html`;const b=await chromium.launch();
   try{const p=await b.newPage({viewport:{width:390,height:800}});const reqs=[],errs=[];
-    p.on('request',r=>{if(/\.(json\.gz|gz\.txt)$/.test(r.url()))reqs.push(r.url().split('/').slice(-3).join('/').replace(/^.*?\/(b|l)\//,'$1/').replace(/\.(json\.gz|gz\.txt)$/,''));});p.on('pageerror',e=>errs.push(e.message));
+    p.on('request',r=>{if(/\.(json\.gz|gz\.txt)$/.test(r.url()))reqs.push(r.url().split('/').slice(-3).join('/').replace(/^.*?\/(b|l|n)\//,'$1/').replace(/\.(json\.gz|gz\.txt)$/,''));});p.on('pageerror',e=>errs.push(e.message));
     const ev=f=>p.evaluate(f);const wait=()=>p.waitForTimeout(400);
     await p.goto(url);await p.waitForRequest(r=>/_overview/.test(r.url()),{timeout:5000}).catch(()=>{});await wait();
     assert.deepEqual(reqs,['b/_overview'],'auf Bibelebene nur der Hintergrund der oberen Ebenen');
@@ -34,6 +34,12 @@ server.listen(0,async()=>{const url=`http://localhost:${server.address().port}/i
     await ev(()=>document.querySelector('[data-overview="b39"]').click());await wait();
     const gen=await ev(()=>document.querySelector('.sheet').innerText);
     assert(gen.includes('Matthäus: Verfasser, Ziit und Gmeind')&&!gen.includes('[['),'Hintergrund auf Buchebene (Matthäus) in Mundart');
+    // Noch nicht übersetztes Buch mit Handschriften vom Toten Meer (nicht kommerzielle Schicht n/ISA)
+    await ev(()=>document.querySelector('[data-action=index]').click());await p.fill('input[type=search]','Jes 53,11');await wait();await ev(()=>document.querySelector('.results button').click());await wait();await wait();
+    assert(reqs.some(x=>x.endsWith('n/ISA')),'Paket Jesaja (Qumran) nachgeladen');
+    await ev(()=>document.querySelector('[data-dss="ISA.53.11"]').click());await wait();
+    const q=await ev(()=>document.querySelector('.sheet').innerText);
+    assert(q.includes('grosse Jesaja-Rolle')&&q.includes('אור')&&q.includes('CC BY-NC'),'Jes 53,11 in 1QIsa a mit «Licht»');
     assert.deepEqual(errs,[],'keine Skriptfehler');
     console.log(`PASS: aufgeteilte Fassung lädt nach Bedarf (${process.argv[2]||'bible'}, ${reqs.length} Pakete: ${reqs.join(', ')}).`);
   }finally{await b.close();server.close();}});
