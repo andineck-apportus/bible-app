@@ -227,6 +227,7 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .dss-name{margin:0 0 4px;font:500 14px/1.35 var(--ui)} #bible-stream .dss-name .sub{display:block;font-weight:400;font-size:12.5px;color:var(--muted)}
 #bible-stream .dss-text{margin:0 0 6px;font-size:calc(var(--read) * 1.05);line-height:1.9}
 #bible-stream .dw.reconstructed{color:var(--muted)} #bible-stream .dw.differs,#bible-stream .dw.extra{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.3em}
+#bible-stream .app button.dss-chip{margin:0 6px 0 2px;padding:0 7px;border:1px solid var(--rule);border-radius:999px;color:var(--muted);font:500 11px/1.7 var(--ui);vertical-align:.15em;white-space:nowrap}
 #bible-stream .dw.spelling{text-decoration:underline dotted;text-underline-offset:.3em}
 
 #bible-stream .app{--r-free:#2e7a4b;--r-sa:#2b7d7a;--r-nc:#2f5fa8;--r-ask:#9a6a00;--r-prot:#b03a2e}
@@ -715,7 +716,7 @@ function verseEntry(n){
   const t=T(),text=summary(n);let lead='';
   if(n.v===1)lead+=`<h2 class="chapter-head">${esc(bookName(n)+' '+n.c)}${readBtn(n.id)}</h2>`;
   const p=nodes.get(n.parent);if(p.part&&p.v===n.v)lead+=`<div class="part-head"><h3>${esc(pTitle(p.part))}${readBtn(n.id)}</h3>${tools(p.id)}</div>`;
-  if(!text)return `<article class="stream-entry verse placeholder" data-stream="${n.id}">${lead}<p class="verse-line"><span class="vno">${n.v}</span><span class="stream-copy">${S.flow?'…':t.placeholder}</span></p></article>`;
+  if(!text)return `<article class="stream-entry verse placeholder" data-stream="${n.id}">${lead}<p class="verse-line"><span class="vno">${n.v}</span><span class="stream-copy">${S.flow?'…':t.placeholder}</span>${dssChip(n)}</p></article>`;
   const alts=altsFor(n);
   const bgs=bgFor(n);
   const has=alts.length||bgs.length||S.advanced||LAYER().decisions[n.canonicalRef]||CMP(n.canonicalRef).some(g=>g.items.length);
@@ -889,10 +890,15 @@ const dots=(n,of)=>n==null?'':`<span class="dots" aria-hidden="true">${Array.fro
 const support=(n,of)=>n==null?(lang==='de'?'Einige alte Handschriften lesen so; diese Angabe ist noch nicht geprüft.':'Reported in some old manuscripts; not yet verified.'):(lang==='de'?`Steht in ${n} von ${of} wichtigen Textausgaben.`:`Found in ${n} of ${of} major editions.`);
 
 const DSS_ST={same:['gleich','Gleiche Konsonanten wie der Leningrad-Codex'],spelling:['Schreibweise','Nur Lesehilfen (ו, י) oder lange Endung anders: gleiche Lesung'],partial:['teilweise','Nur ein Teil des Worts ist erhalten'],differs:['abweichend','Andere Konsonanten als der Leningrad-Codex'],extra:['zusätzlich','Wort steht nicht im Leningrad-Codex'],reconstructed:['ergänzt','Nicht erhalten; von den Herausgebern ergänzt']};
+// Noch nicht übersetzte Verse mit Handschriften vom Toten Meer: kleines Zeichen, das die Rollen im Blatt zeigt
+function dssChip(n){const arr=DSS[n.canonicalRef];if(!arr||!arr.length)return '';const k=arr.length;
+  return ` <button type="button" class="dss-chip" data-dss="${n.canonicalRef}" title="${lang==='de'?'Texte vom Toten Meer':'Dead Sea Scrolls'}">${lang==='de'?(k>1?k+' Rollen':'Rolle'):(k>1?k+' scrolls':'scroll')}</button>`;}
+function dssSheet(ref){openSheet('dss',head(refDe(ref))+(lang==='de'?'<p class="note">Für diesen Vers gibt es noch keine Übersetzung; gezeigt werden die Handschriften vom Toten Meer.</p>':'<p class="note">No translation yet; showing the Dead Sea Scrolls.</p>')+dssBlock({canonicalRef:ref}));}
+const finalForm=w=>w.replace(/[כמנפצ]$/,c=>({'כ':'ך','מ':'ם','נ':'ן','פ':'ף','צ':'ץ'})[c]);
 function dssBlock(n){const arr=DSS[n.canonicalRef];if(!arr||!arr.length)return'';
   const notable=arr.flatMap(x=>x.words).filter(w=>w.s==='differs'||w.s==='extra').length;
   return `<h4>Texte vom Toten Meer</h4><p class="note">Hebräische Handschriften aus Qumran und der Wüste Juda, rund tausend Jahre älter als der Leningrad-Codex. Eckige Klammern: nicht erhalten, von den Herausgebern ergänzt. ${notable?'Markierte Wörter weichen in den Konsonanten ab.':'Keine abweichenden Konsonanten in den erhaltenen Wörtern.'}</p>`+
-  arr.map(x=>`<div class="dss"><p class="dss-name">${esc(x.name||x.id)}<span class="sub">${esc(x.place||'')} · Fragment/Zeile ${esc(x.loc.join(', '))}</span></p><p class="heb dss-text" dir="rtl" lang="he">${x.words.map(w=>`<span class="dw ${w.s}" title="${esc(DSS_ST[w.s][1]+(w.wlc?' · Leningrad-Codex: '+w.wlc:''))}">${esc(w.t)}</span>`).join(' ')}</p>${x.words.filter(w=>w.s==='differs'||w.s==='extra'||w.s==='spelling').map(w=>`<p class="note"><span class="heb" lang="he">${esc(w.t)}</span> · ${DSS_ST[w.s][0]}${w.wlc?` · Leningrad-Codex: <span class="heb" lang="he">${esc(w.wlc)}</span>`:''}</p>`).join('')}</div>`).join('')+
+  arr.map(x=>`<div class="dss"><p class="dss-name">${esc(x.name||x.id)}<span class="sub">${esc(x.place||'')} · Fragment/Zeile ${esc(x.loc.join(', '))}</span></p><p class="heb dss-text" dir="rtl" lang="he">${x.words.map(w=>`<span class="dw ${w.s}" title="${esc(DSS_ST[w.s][1]+(w.wlc?' · Leningrad-Codex: '+finalForm(w.wlc):''))}">${esc(w.t)}</span>`).join(' ')}</p>${x.words.filter(w=>w.s==='differs'||w.s==='extra'||w.s==='spelling').map(w=>`<p class="note"><span class="heb" lang="he">${esc(w.t)}</span> · ${DSS_ST[w.s][0]}${w.wlc?` · Leningrad-Codex: <span class="heb" lang="he">${esc(finalForm(w.wlc))}</span>`:''}</p>`).join('')}</div>`).join('')+
   `<p class="note">Maschineller Vergleich der Konsonanten mit dem Leningrad-Codex; gepunktet: nur andere Schreibweise. Nicht am Faksimile geprüft; die Ergänzungen der Herausgeber folgen oft dem masoretischen Text und sind deshalb keine Bezeugung. Daten: ${esc(NC_INFO?NC_INFO.attribution:'')} (${esc(NC_INFO?NC_INFO.license:'')}); nicht kommerzielle Studienschicht.</p>`;}
 /* Wörterbuch (UBS, STEPBible TBESG/TBESH), Ausgaben je Wort (STEPBible TAGNT), Ketiv/Qere (STEPBible TAHOT) */
 const ED8=['NA28','NA27','Tyn','SBL','WH','Treg','TR','Byz'],edName=e=>({Tyn:'THGNT',Treg:'Tregelles'})[e]||e;
@@ -1231,6 +1237,7 @@ app.addEventListener('click',e=>{
   if(b.hasAttribute('data-settings')){settingsSheet();return;}
   if(b.hasAttribute('data-figindex')){figIndexSheet();return;}
   if(b.dataset.merk){merkSheet(b.dataset.merk);return;}
+  if(b.dataset.dss){dssSheet(b.dataset.dss);return;}
   if(b.dataset.learn){learnAct(b.dataset.learn);return;}
   if(b.dataset.figindexStyle){figIndexSheet(b.dataset.figindexStyle);return;}
   if(b.dataset.go){go(b.dataset.go);return;}
