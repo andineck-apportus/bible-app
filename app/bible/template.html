@@ -382,7 +382,7 @@ function mergeBundle(d){
     Object.assign(STUDY.lexicon,d.lex||{});Object.assign(STUDY.ketiv,d.ketiv||{});Object.assign(STUDY.ketiv_only,d.kq_only||{});Object.assign(STUDY.ed_extra,d.ed_extra||{});
     BG.push(...(d.bg||[]));Object.assign(XREF.verses,d.xref||{});Object.assign(SRC.readings,d.readings||{});Object.assign(SRC.variants,d.src_variants||{});}
 }
-async function fetchBundle(name){const ext=(MANIFEST&&MANIFEST.ext)||'.json.gz';const r=await fetch(name+ext);if(!r.ok)throw new Error(name+': '+r.status);let buf=new Uint8Array(await r.arrayBuffer());
+async function fetchBundle(name){const ext=(MANIFEST&&MANIFEST.ext)||'.json.gz',ver=MANIFEST&&MANIFEST.v&&MANIFEST.v[name];const r=await fetch(name+ext+(ver?'?v='+ver:''));if(!r.ok)throw new Error(name+': '+r.status);let buf=new Uint8Array(await r.arrayBuffer());
   // Hosts ohne Binärdateien: gzip als Base64-Text (.gz.txt)
   if(ext.endsWith('.txt')){const b=atob(new TextDecoder().decode(buf).trim());buf=Uint8Array.from(b,c=>c.charCodeAt(0));}
   // Manche Server liefern .gz schon entpackt aus; dann direkt lesen

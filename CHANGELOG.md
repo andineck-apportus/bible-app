@@ -2,6 +2,12 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.69 — 2026-10-20 — Veröffentlichung über Cloudflare Pages
+
+- **Automatischer Build** (GitHub Actions, `.github/workflows/deploy.yml`): Daten prüfen, Python- und App-Tests (jsdom, Playwright), bauen; bei Push auf `main` Veröffentlichung von `build/bible/` auf Cloudflare Pages (Projekt `atmo-bible`). Braucht die Repo-Geheimnisse `CLOUDFLARE_API_TOKEN` und `CLOUDFLARE_ACCOUNT_ID`.
+- **Cache:** Pakete mit Prüfsumme in der Adresse (`?v=…`, im Manifest der Seite), dürfen ein Jahr im Cache bleiben; `index.html` und `manifest.json` immer neu prüfen (`_headers`, vom Build erzeugt).
+- **Einzeldatei nicht mehr im Repo:** `app/bible/index.html` (rund 72 MB) wird beim Build erzeugt und in GitHub Actions als Download abgelegt; das Repo wächst nicht mehr mit jeder Fassung (Grenze von GitHub: 100 MB je Datei).
+
 ## v0.68 — 2026-10-20 — Name: Atmo Bible
 
 - **Name** (Andi Neck): «Atmo Bible – open, free, from overview to original». Steht nur dort, wo er gebraucht wird: Seitentitel, Name für den Startbildschirm, «Über diese Fassung», README; Begründung und verworfene Varianten in docs/ENTSCHEIDUNGEN.md.
