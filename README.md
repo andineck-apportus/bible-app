@@ -13,7 +13,7 @@ Dies ist der Konzept- und Datenprototyp, noch keine fertige Benutzer-App. Vorhan
 - die Pilotstudie Mk 3,22–30 mit Befunden, Deutungen, Prinzip, Anwendung und einer vollständigen deutschen Arbeitsübersetzung mit Wortzuordnung (KI-Entwurf, ungeprüft),
 - eine einheitliche Bibelstellen-Konvention, ein generisches Schema und ein Validator.
 
-**Hauptrichtung: die [App](app/bible/index.html)** – eine eigenständige HTML-Datei zum Öffnen im Browser. Man liest die Bibel auf jeder Ebene fortlaufend (ganze Bibel, Testamente, Buchgruppen, Bücher, Kapitel, Abschnitte, Verse) und taucht an jeder Stelle eine Stufe tiefer. Die App ist für Leserinnen und Leser ohne Griechisch und Hebräisch gemacht: Lesarten (auf Wunsch bis zu den alten Handschriften), Hintergrund zur Zeit damals, Erklärungen und Quellen öffnen sich nur auf Wunsch; Urtext und Grammatik gibt es im Modus «Urtext und Details». Ausgearbeitet sind bisher Markus 3,20–35, das Vaterunser (Mt 6,5–15; Lk 11,1–4) sowie ganze Bücher: Philipper und Titus (Griechisch), Rut und Obadja (Hebräisch); sonst gibt es vorerst das Gerüst und ungeprüfte Zusammenfassungen. [Bedienung, Daten und Grenzen](docs/LESETIEFE-PROTOTYP.md).
+**Hauptrichtung: die App** (`app/bible/`) – im Browser, veröffentlicht über Cloudflare Pages (siehe «Veröffentlichung»); zum Offline-Lesen als eigenständige HTML-Datei. Man liest die Bibel auf jeder Ebene fortlaufend (ganze Bibel, Testamente, Buchgruppen, Bücher, Kapitel, Abschnitte, Verse) und taucht an jeder Stelle eine Stufe tiefer. Die App ist für Leserinnen und Leser ohne Griechisch und Hebräisch gemacht: Lesarten (auf Wunsch bis zu den alten Handschriften), Hintergrund zur Zeit damals, Erklärungen und Quellen öffnen sich nur auf Wunsch; Urtext und Grammatik gibt es im Modus «Urtext und Details». Ausgearbeitet sind bisher Markus 3,20–35, das Vaterunser (Mt 6,5–15; Lk 11,1–4) sowie ganze Bücher: Philipper und Titus (Griechisch), Rut und Obadja (Hebräisch); sonst gibt es vorerst das Gerüst und ungeprüfte Zusammenfassungen. [Bedienung, Daten und Grenzen](docs/LESETIEFE-PROTOTYP.md).
 
 Der frühere Studienprototyp (v0.9/v0.10) ist entfernt; er liegt nur noch in der Git-Historie. SQLite-Projektion und Handschriftenbelege fehlen noch.
 
@@ -111,13 +111,21 @@ Die Importer schreiben Quelle, Upstream-Commit, SHA-256, Lizenz und Importdatum 
 
 Prüfungen für die App (Node.js ≥ 18): `node scripts/test_bible.cjs`; Merkverse und Lernen: `node scripts/test_bible_lernen.cjs` (Playwright); Bedienung zusätzlich mit `npm install --no-save jsdom` und `node scripts/test_bible_dom.cjs`; Vorlesen und Seitenleiste mit Playwright: `node scripts/test_bible_vorlesen.cjs`, `node scripts/test_bible_sidebar.cjs`, `node scripts/test_bible_bilder.cjs`.
 
+## Veröffentlichung
+
+GitHub Actions (`.github/workflows/deploy.yml`) baut und prüft bei jedem Pull Request; bei jedem Push auf `main` wird zusätzlich die aufgeteilte Fassung `build/bible/` auf **Cloudflare Pages** (Projekt `atmo-bible`) veröffentlicht. Die Pakete tragen eine Prüfsumme in der Adresse (`?v=…`) und dürfen deshalb lange im Cache bleiben (`build/bible/_headers`); `index.html` und `manifest.json` werden immer neu geprüft.
+
+Die Einzeldatei `app/bible/index.html` (alle Pakete eingebettet, rund 70 MB) ist nicht mehr im Repo: lokal mit `python3 scripts/build_bible.py` erzeugen; jede Ausführung in GitHub Actions legt sie als Download «atmo-bible-offline» ab.
+
+Einmalig nötig: im Repo die Geheimnisse `CLOUDFLARE_API_TOKEN` (Recht «Cloudflare Pages: Edit») und `CLOUDFLARE_ACCOUNT_ID` hinterlegen.
+
 ## Ablage und Historie
 
 - `data/`: freier Kern, kanonische strukturierte Daten; Git ist die massgebliche Quelle. Darin seit v0.13 auch `navigation/` (Kanon- und Zählgerüst, Testkonfiguration) und `summaries/` (Zusammenfassungen je Ebene, Entwürfe), seit v0.14 `background/` (Hintergrund damals).
 - `data-nc/`: Studienschicht für nicht kommerziell lizenzierte Quellen (noch leer), siehe [LIZENZEN.md](LIZENZEN.md).
 - `schema/`: generisches Schema mit allen Typen und Statuswerten; typspezifische Schemas folgen.
 - `scripts/`: Prüfung, Import, Bibelstellen-Werkzeug; `scripts/migrations/` dokumentierte Datenmigrationen.
-- `app/bible/`: App; `template.html` ist die Vorlage, `index.html` die erzeugte eigenständige Seite (nicht von Hand bearbeiten).
+- `app/bible/`: App; `template.html` ist die Vorlage, `index.html` die erzeugte eigenständige Seite (nicht im Repo, nicht von Hand bearbeiten).
 - `reports/`: Auswertungen; `working-text-counts.json` ist eine ältere Demonstration ohne Aussagekraft für die Perikope.
 - `archive/packages/`: fünf unveränderte Originalpakete v0.1–v0.5.
 - `provenance/`: Paketprüfsummen, Dateiinventar und Migrationsprotokolle (`provenance/migrations/`).

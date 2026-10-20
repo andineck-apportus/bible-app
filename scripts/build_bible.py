@@ -336,22 +336,48 @@ def page(inline):
 # Aufgeteilte Fassungen zum Veröffentlichen (deterministisches gzip):
 #   build/bible/        Pakete als .json.gz (übliche Webserver)
 #   build/bible-txt/    Pakete als gzip in Base64 (.gz.txt) für Hosts, die keine Binärdateien ausliefern
-sizes = {}
+import hashlib  # noqa: E402
+sizes, packed = {}, {}
+for name, d in bundles.items():
+    raw = json.dumps(d, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+    gz = gzip.compress(raw, compresslevel=9, mtime=0)
+    packed[name] = gz
+    sizes[name] = (len(raw), len(gz))
+# Version je Paket (Prüfsumme): die App lädt «<paket><ext>?v=<version>», damit Pakete lange im Cache bleiben dürfen
+# und eine neue Fassung trotzdem sofort ankommt (siehe _headers).
+manifest["v"] = {name: hashlib.sha256(gz).hexdigest()[:12] for name, gz in sorted(packed.items())}
+HEADERS = """# Cloudflare Pages: Cache und Sicherheit (erzeugt von scripts/build_bible.py)
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+/
+  Cache-Control: no-cache
+/index.html
+  Cache-Control: no-cache
+/manifest.json
+  Cache-Control: no-cache
+/b/*
+  Cache-Control: public, max-age=31536000, immutable
+/l/*
+  Cache-Control: public, max-age=31536000, immutable
+/n/*
+  Cache-Control: public, max-age=31536000, immutable
+"""
 for folder, ext in (("bible", ".json.gz"), ("bible-txt", ".gz.txt")):
     out = ROOT / "build" / folder
     out.mkdir(parents=True, exist_ok=True)
     manifest["ext"] = ext
     (out / "index.html").write_text(page(None), encoding="utf-8")
-    for name, d in bundles.items():
-        raw = json.dumps(d, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
-        gz = gzip.compress(raw, compresslevel=9, mtime=0)
+    for name, gz in packed.items():
         f = out / f"{name}{ext}"
         f.parent.mkdir(parents=True, exist_ok=True)
         f.write_bytes(gz if ext.endswith(".gz") else base64.b64encode(gz) + b"\n")
-        sizes[name] = (len(raw), len(gz))
     (out / "manifest.json").write_text(json.dumps({"ext": ext, "bundles": {k: {"bytes": a, "gzip": b} for k, (a, b) in sorted(sizes.items())}},
                                                   ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    if folder == "bible":
+        (out / "_headers").write_text(HEADERS, encoding="utf-8")
 manifest.pop("ext")
+manifest.pop("v")
 out = ROOT / "build/bible"
 print(f"PASS: App gebaut: {len(nav['books'])} Bücher, {len(summaries)} Zusammenfassungen, {len(background)} Hintergrundnotizen zu Abschnitten, {len(overview)} zu oberen Ebenen, "
       f"ausgearbeitet: {', '.join(refs.display_de(x['range']) for x in study['sections'])}; "
