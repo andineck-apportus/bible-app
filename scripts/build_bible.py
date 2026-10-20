@@ -345,7 +345,7 @@ for name, d in bundles.items():
     sizes[name] = (len(raw), len(gz))
 # Version je Paket (Prüfsumme): die App lädt «<paket><ext>?v=<version>», damit Pakete lange im Cache bleiben dürfen
 # und eine neue Fassung trotzdem sofort ankommt (siehe _headers).
-manifest["v"] = {name: hashlib.sha256(gz).hexdigest()[:12] for name, gz in sorted(packed.items())}
+versions = {name: hashlib.sha256(gz).hexdigest()[:12] for name, gz in sorted(packed.items())}
 HEADERS = """# Cloudflare Pages: Cache und Sicherheit (erzeugt von scripts/build_bible.py)
 /*
   X-Content-Type-Options: nosniff
@@ -367,6 +367,10 @@ for folder, ext in (("bible", ".json.gz"), ("bible-txt", ".gz.txt")):
     out = ROOT / "build" / folder
     out.mkdir(parents=True, exist_ok=True)
     manifest["ext"] = ext
+    if folder == "bible":  # nur die Fassung für Cloudflare Pages; bible-txt (Claude-Artefakt) ohne Adresszusatz
+        manifest["v"] = versions
+    else:
+        manifest.pop("v", None)
     (out / "index.html").write_text(page(None), encoding="utf-8")
     for name, gz in packed.items():
         f = out / f"{name}{ext}"
@@ -377,7 +381,7 @@ for folder, ext in (("bible", ".json.gz"), ("bible-txt", ".gz.txt")):
     if folder == "bible":
         (out / "_headers").write_text(HEADERS, encoding="utf-8")
 manifest.pop("ext")
-manifest.pop("v")
+manifest.pop("v", None)
 out = ROOT / "build/bible"
 print(f"PASS: App gebaut: {len(nav['books'])} Bücher, {len(summaries)} Zusammenfassungen, {len(background)} Hintergrundnotizen zu Abschnitten, {len(overview)} zu oberen Ebenen, "
       f"ausgearbeitet: {', '.join(refs.display_de(x['range']) for x in study['sections'])}; "
