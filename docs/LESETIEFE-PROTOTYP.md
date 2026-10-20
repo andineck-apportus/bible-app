@@ -1,6 +1,6 @@
-# Lesestrom · Stand 2026-10-13 (v0.35)
+# App · Stand 2026-10-13 (v0.35)
 
-Der Lesestrom ist seit v0.13 die **Hauptrichtung der App**. Einstieg: [app/bible/index.html](../app/bible/index.html). Die Datei direkt im Browser öffnen; Server und Internetzugriff sind nicht nötig. Das Design stammt aus dem Gespräch zwischen Andi Neck und einem Kollegen (v0.11). Der frühere Studienprototyp `app/prototype/` ist abgelöst (siehe unten).
+Die App ist seit v0.13 die **Hauptrichtung der App**. Einstieg: [app/bible/index.html](../app/bible/index.html). Die Datei direkt im Browser öffnen; Server und Internetzugriff sind nicht nötig. Das Design stammt aus dem Gespräch zwischen Andi Neck und einem Kollegen (v0.11). Der frühere Studienprototyp `app/prototype/` ist abgelöst (siehe unten).
 
 ## Vorgabe vom 2026-10-12
 
@@ -63,7 +63,7 @@ Daten: `data/witnesses/`, `data/witness-texts/` (CNTR, CC BY-SA 4.0), `data/witn
 
 ## Hintergrund damals (v0.14)
 
-Rückmeldung vom 2026-10-12: Auf Versebene passt der Lesestrom; es fehlt der Hintergrund damals. Seit v0.14 gibt es 13 Hintergrundnotizen zu Markus 3,20–35 (`data/background/`), alle als ungeprüfte KI-Entwürfe:
+Rückmeldung vom 2026-10-12: Auf Versebene passt die App; es fehlt der Hintergrund damals. Seit v0.14 gibt es 13 Hintergrundnotizen zu Markus 3,20–35 (`data/background/`), alle als ungeprüfte KI-Entwürfe:
 - **Im Versblatt** («+»): unter «Damals» die Notizen zu diesem Vers, z. B. zu Schriftgelehrten aus Jerusalem, Beelzebul, Geisteraustreibung, dem Bild vom Binden des Starken, «Amen», Lästerung, den Brüdern Jesu, dem Sitzen um einen Lehrer, Familie und Ehre. Das «+» erscheint jetzt auch an Versen, zu denen es Hintergrund gibt.
 - **Pro Abschnitt:** «Hintergrund damals» am Abschnittsende, auf der Abschnittsebene und im Verstehen-Blatt. Dort stehen auch Zeit und Ort sowie die erste Leserschaft des Markus.
 - **Optional im Text:** Der Menüschalter «Hintergrund im Text zeigen» setzt kurze Hinweise («Damals: Beelzebul») unter den Vers, an dem eine Notiz beginnt.
@@ -93,10 +93,10 @@ Build: `template.html` bearbeiten, danach `python3 scripts/build_bible.py`. Das 
 
 ## Entfernt: Studienprototyp
 
-Der Studienprototyp Mk 3,20–35 (v0.9/v0.10, früher `app/prototype/` und `scripts/build_prototype.py`) ist seit v0.67 entfernt; er liegt nur noch in der Git-Historie. Seine Inhalte sind im Lesestrom aufgegangen.
+Der Studienprototyp Mk 3,20–35 (v0.9/v0.10, früher `app/prototype/` und `scripts/build_prototype.py`) ist seit v0.67 entfernt; er liegt nur noch in der Git-Historie. Seine Inhalte sind in der App aufgegangen.
 
 ## Prüfungen
 
 - `node scripts/test_bible.cjs` (ohne Zusatzpakete): vollständige Ebenen, Zählungen, Zusammenfassungen, Elternverweise, kanonische Stellen, Suche, Grenzen, Markus-Projektion.
 - `node scripts/test_bible_dom.cjs` (braucht `jsdom`): Piloteinstieg, Studienblatt ohne Griechisch, Lesarten und Hintergrund im Versblatt, Hintergrund-Blatt je Abschnitt, Hinweise im Text, «Bis zur Quelle» für alle sechs Alternativen, Urtext-Modus, Rückkehrposition, Suche, Lesen über die Kapitelgrenze, Lesarten im Text.
-- Am 2026-10-12 wurde der Lesestrom in Chromium in Handybreite (390 px) hell und dunkel angesehen. Eine Prüfung auf echten Geräten und mit Bildschirmleser steht aus. Keine dieser Prüfungen ist eine fachliche Inhaltsprüfung.
+- Am 2026-10-12 wurde die App in Chromium in Handybreite (390 px) hell und dunkel angesehen. Eine Prüfung auf echten Geräten und mit Bildschirmleser steht aus. Keine dieser Prüfungen ist eine fachliche Inhaltsprüfung.

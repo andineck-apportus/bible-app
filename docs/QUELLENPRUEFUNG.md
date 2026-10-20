@@ -35,5 +35,5 @@ belegt gelten kann, wird sie am Text nachgeschlagen; das Ergebnis steht im Feld 
 - Die Prüfung ist eine KI-Prüfung; sie ersetzt keine fachliche Prüfung (AGENTS.md).
 
 In den Studienwerkzeugen (`scripts/authoring/*_study_*.py`) steht das Feld als Wörterbuch `SOURCE_CHECKS = {"BG-…": {…}}`
-neben `BACKGROUND`; `_study.write_study` schreibt es in die Notiz. Der Lesestrom zeigt unter der Notiz, ob und mit welchem
+neben `BACKGROUND`; `_study.write_study` schreibt es in die Notiz. Die App zeigt unter der Notiz, ob und mit welchem
 Ergebnis nachgeschlagen wurde.

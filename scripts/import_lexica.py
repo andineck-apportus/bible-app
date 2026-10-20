@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Import freier Wörterbücher für die Wörter der importierten Bücher (Lexikon-Ansicht im Lesestrom).
+"""Import freier Wörterbücher für die Wörter der importierten Bücher (Lexikon-Ansicht in der App).
 
 Aufruf:
     python3 scripts/import_lexica.py --ubs PFAD/ubs-open-license --ubs-commit SHA --step PFAD/STEPBible-Data --step-commit SHA

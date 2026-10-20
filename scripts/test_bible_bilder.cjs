@@ -1,4 +1,4 @@
-// Prüfung der Bilder im Lesestrom: Bilder auf allen Ebenen über den Versen, Stil-Umschalter beim Bild und in der Legende.
+// Prüfung der Bilder in der App: Bilder auf allen Ebenen über den Versen, Stil-Umschalter beim Bild und in der Legende.
 // Voraussetzung: python3 scripts/build_bible.py; Playwright (PLAYWRIGHT_MODULE=Pfad oder require('playwright')).
 const path=require('node:path'),assert=require('node:assert/strict');
 let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'));}catch{console.log('SKIP: Playwright nicht verfügbar');process.exit(0);}

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Baut den Lesestrom (app/bible/index.html) aus Vorlage und Projektdaten.
+"""Baut die App (app/bible/index.html) aus Vorlage und Projektdaten.
 
 Eingebettet werden:
 - Navigationsgerüst (data/navigation/NAV-PROT66-KJV.json)
@@ -68,7 +68,7 @@ for b in bg_recs.values():
                          "i18n": i18n(b["id"], {"topic_de": "topic", "text_de": "text", "uncertain_de": "uncertain", "terms": "terms"})})
         continue
     if b["subject"] not in section_of:
-        continue  # Notiz zu einem Abschnitt, der im Lesestrom noch nicht ausgearbeitet ist
+        continue  # Notiz zu einem Abschnitt, der in der App noch nicht ausgearbeitet ist
     if b["subject"] in merged_into:
         b = {**b, "subject": merged_into[b["subject"]]}
     ref = b["reference"]
@@ -218,7 +218,7 @@ for vid, v in variants_extra.items():
     bundle(f"b/{ref_book(v['ref'])}").setdefault("src_variants", {})[vid] = v
 # Bildsprache (docs/BILDSPRACHE.md): Bildlexikon (Namen, Merkmale) und Stile (Darstellungen, Bausteinbibliothek) im Kern;
 # Bilder samt Bildauftrag (Felder, Deutungshinweis) im Paket ihres Buchs (Buchebene in b/_overview).
-# Schlüssel im Lesestrom: Bibel, Testamente, Buchgruppen = ID der Zusammenfassung; Buch «JHN», Kapitel «JHN.2», Abschnitt = ID der Texteinheit.
+# Schlüssel in der App: Bibel, Testamente, Buchgruppen = ID der Zusammenfassung; Buch «JHN», Kapitel «JHN.2», Abschnitt = ID der Texteinheit.
 import localizations as _l10n  # noqa: E402
 ill_recs = {}
 for p in sorted((ROOT / "data/illustrations").rglob("*.json")):
@@ -353,6 +353,6 @@ for folder, ext in (("bible", ".json.gz"), ("bible-txt", ".gz.txt")):
                                                   ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 manifest.pop("ext")
 out = ROOT / "build/bible"
-print(f"PASS: Lesestrom gebaut: {len(nav['books'])} Bücher, {len(summaries)} Zusammenfassungen, {len(background)} Hintergrundnotizen zu Abschnitten, {len(overview)} zu oberen Ebenen, "
+print(f"PASS: App gebaut: {len(nav['books'])} Bücher, {len(summaries)} Zusammenfassungen, {len(background)} Hintergrundnotizen zu Abschnitten, {len(overview)} zu oberen Ebenen, "
       f"ausgearbeitet: {', '.join(refs.display_de(x['range']) for x in study['sections'])}; "
       f"{len(bundles)} Pakete ({sum(b for _, b in sizes.values()) // 1024} KB gzip, Kern {len((out / 'index.html').read_bytes()) // 1024} KB).")

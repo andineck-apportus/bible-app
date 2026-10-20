@@ -1,4 +1,4 @@
-"""Studienprojektion für den Lesestrom: ausgearbeitete Abschnitte aus dem freien Kern (data/).
+"""Studienprojektion für die App: ausgearbeitete Abschnitte aus dem freien Kern (data/).
 
 Verwendung: from project_study import project; data = project(["TU-MRK-003-020-035", ...])
 

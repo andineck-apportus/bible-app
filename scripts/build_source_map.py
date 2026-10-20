@@ -3,7 +3,7 @@
 
 Aufruf: python3 scripts/build_source_map.py
 Ausgabe: app/quellenkarte/index.html (eigenständige Seite) und build/quellenkarte/artifact.html (ohne Dokumentrahmen,
-für die Veröffentlichung als Claude-Artefakt). Gleiche Daten nutzt der Lesestrom (Blatt «Quellen und Rechte»).
+für die Veröffentlichung als Claude-Artefakt). Gleiche Daten nutzt die App (Blatt «Quellen und Rechte»).
 """
 import json
 import pathlib
