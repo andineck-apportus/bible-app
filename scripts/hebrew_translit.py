@@ -2,7 +2,7 @@
 """Lesehilfe: punktiertes Hebräisch in eine einfache, deutsch lesbare Umschrift.
 
 Zweck: Aussprachehilfe für Leserinnen und Leser ohne Hebräischkenntnisse (wie die griechische Umschrift im
-Lesestrom), keine wissenschaftliche Transliteration. Die wissenschaftliche Umschrift von MACULA Hebrew bleibt
+App), keine wissenschaftliche Transliteration. Die wissenschaftliche Umschrift von MACULA Hebrew bleibt
 daneben in den Annotationen erhalten.
 
 Regeln (vereinfacht, nach der heute üblichen Aussprache):

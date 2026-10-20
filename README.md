@@ -1,8 +1,11 @@
-# bible-app
+# Atmo Bible
+
+**Atmo Bible – open, free, from overview to original.** (Repository `bible-app`)
+
 
 Git-versionierter Bibel-Wissensfundus: Quellen, Textbefunde, konkurrierende Interpretationen, Prinzipien und kontextabhängige Anwendungen nachvollziehbar miteinander verbinden.
 
-**Stand: 18. Oktober 2026 · UI v0.67 (Lesestrom) · Urtext: Matthäus, Markus, Lukas, Johannes, Philipper, Titus, 1–3 Johannes (Griechisch), Rut, Obadja, Jona (Hebräisch); ausgearbeitet: das Vaterunser (Lk 11,1–4) sowie Matthäus, Markus, Johannes, Rut, Obadja, Jona, Philipper, Titus und 1–3 Johannes ganz; Wörterbuch (UBS, CC BY-SA) im Wortblatt. Der Lesetext geht immer vom Urtext aus.**
+**Stand: 20. Oktober 2026 · UI v0.68 · Urtext: Matthäus, Markus, Lukas, Johannes, Philipper, Titus, 1–3 Johannes (Griechisch), Rut, Obadja, Jona (Hebräisch); ausgearbeitet: das Vaterunser (Lk 11,1–4) sowie Matthäus, Markus, Johannes, Rut, Obadja, Jona, Philipper, Titus und 1–3 Johannes ganz; Wörterbuch (UBS, CC BY-SA) im Wortblatt. Der Lesetext geht immer vom Urtext aus.**
 
 Dies ist der Konzept- und Datenprototyp, noch keine fertige Benutzer-App. Vorhanden sind 4509 strukturierte Datensätze, darunter:
 - der **ganze griechische Text des Markusevangeliums** (SBLGNT, 11 286 Wörter mit stabilen IDs) mit Lemma, Morphologie, Syntaxrollen, Referenten und Glossen aus MACULA Greek als eigener Annotationsschicht,
@@ -10,7 +13,7 @@ Dies ist der Konzept- und Datenprototyp, noch keine fertige Benutzer-App. Vorhan
 - die Pilotstudie Mk 3,22–30 mit Befunden, Deutungen, Prinzip, Anwendung und einer vollständigen deutschen Arbeitsübersetzung mit Wortzuordnung (KI-Entwurf, ungeprüft),
 - eine einheitliche Bibelstellen-Konvention, ein generisches Schema und ein Validator.
 
-**Hauptrichtung: der [Lesestrom](app/bible/index.html)** – eine eigenständige HTML-Datei zum Öffnen im Browser. Man liest die Bibel auf jeder Ebene fortlaufend (ganze Bibel, Testamente, Buchgruppen, Bücher, Kapitel, Abschnitte, Verse) und taucht an jeder Stelle eine Stufe tiefer. Der Lesestrom ist für Leserinnen und Leser ohne Griechisch und Hebräisch gemacht: Lesarten (auf Wunsch bis zu den alten Handschriften), Hintergrund zur Zeit damals, Erklärungen und Quellen öffnen sich nur auf Wunsch; Urtext und Grammatik gibt es im Modus «Urtext und Details». Ausgearbeitet sind bisher Markus 3,20–35, das Vaterunser (Mt 6,5–15; Lk 11,1–4) sowie ganze Bücher: Philipper und Titus (Griechisch), Rut und Obadja (Hebräisch); sonst gibt es vorerst das Gerüst und ungeprüfte Zusammenfassungen. [Bedienung, Daten und Grenzen](docs/LESETIEFE-PROTOTYP.md).
+**Hauptrichtung: die [App](app/bible/index.html)** – eine eigenständige HTML-Datei zum Öffnen im Browser. Man liest die Bibel auf jeder Ebene fortlaufend (ganze Bibel, Testamente, Buchgruppen, Bücher, Kapitel, Abschnitte, Verse) und taucht an jeder Stelle eine Stufe tiefer. Die App ist für Leserinnen und Leser ohne Griechisch und Hebräisch gemacht: Lesarten (auf Wunsch bis zu den alten Handschriften), Hintergrund zur Zeit damals, Erklärungen und Quellen öffnen sich nur auf Wunsch; Urtext und Grammatik gibt es im Modus «Urtext und Details». Ausgearbeitet sind bisher Markus 3,20–35, das Vaterunser (Mt 6,5–15; Lk 11,1–4) sowie ganze Bücher: Philipper und Titus (Griechisch), Rut und Obadja (Hebräisch); sonst gibt es vorerst das Gerüst und ungeprüfte Zusammenfassungen. [Bedienung, Daten und Grenzen](docs/LESETIEFE-PROTOTYP.md).
 
 Der frühere Studienprototyp (v0.9/v0.10) ist entfernt; er liegt nur noch in der Git-Historie. SQLite-Projektion und Handschriftenbelege fehlen noch.
 
@@ -45,7 +48,7 @@ python3 scripts/validate.py
 python3 scripts/test_validate.py
 python3 scripts/test_import.py
 python3 scripts/refs.py "Mk 3,22–30"   # Stelle in kanonische Form umwandeln
-python3 scripts/build_bible.py # Lesestrom aus data/ bauen (Projektion aus scripts/project_study.py)
+python3 scripts/build_bible.py # App aus data/ bauen (Projektion aus scripts/project_study.py)
 ```
 
 Der Validator prüft das Schema (`schema/record.schema.json`, ausgewertete Teilmenge von JSON Schema), eindeutige IDs, Tags, Verweise zwischen Datensätzen einschliesslich Lesarten (`VAR-…:R1`) und Token-IDs, Annotationen, Bewertungen, alle Bibelstellen und die Trennung von freiem Kern (`data/`) und Studienschicht (`data-nc/`). Ein PASS ist keine wissenschaftliche Freigabe; typspezifische Pflichtfelder werden noch nicht geprüft.
@@ -106,7 +109,7 @@ python3 scripts/import_openbible_crossrefs.py bible_databases/sources/extras/cro
 
 Die Importer schreiben Quelle, Upstream-Commit, SHA-256, Lizenz und Importdatum in die Datensätze und brechen bei unsicherer Zuordnung ab bzw. führen nicht zuordenbare Einträge in `reports/` auf, statt sie zu raten. `scripts/import_morphgnt.py` ist der frühere Pilot-Importer (v0.6) und wird nur noch durch `scripts/test_import.py` geprüft.
 
-Prüfungen für den Lesestrom (Node.js ≥ 18): `node scripts/test_bible.cjs`; Merkverse und Lernen: `node scripts/test_bible_lernen.cjs` (Playwright); Bedienung zusätzlich mit `npm install --no-save jsdom` und `node scripts/test_bible_dom.cjs`; Vorlesen und Seitenleiste mit Playwright: `node scripts/test_bible_vorlesen.cjs`, `node scripts/test_bible_sidebar.cjs`, `node scripts/test_bible_bilder.cjs`.
+Prüfungen für die App (Node.js ≥ 18): `node scripts/test_bible.cjs`; Merkverse und Lernen: `node scripts/test_bible_lernen.cjs` (Playwright); Bedienung zusätzlich mit `npm install --no-save jsdom` und `node scripts/test_bible_dom.cjs`; Vorlesen und Seitenleiste mit Playwright: `node scripts/test_bible_vorlesen.cjs`, `node scripts/test_bible_sidebar.cjs`, `node scripts/test_bible_bilder.cjs`.
 
 ## Ablage und Historie
 
@@ -114,7 +117,7 @@ Prüfungen für den Lesestrom (Node.js ≥ 18): `node scripts/test_bible.cjs`; M
 - `data-nc/`: Studienschicht für nicht kommerziell lizenzierte Quellen (noch leer), siehe [LIZENZEN.md](LIZENZEN.md).
 - `schema/`: generisches Schema mit allen Typen und Statuswerten; typspezifische Schemas folgen.
 - `scripts/`: Prüfung, Import, Bibelstellen-Werkzeug; `scripts/migrations/` dokumentierte Datenmigrationen.
-- `app/bible/`: Lesestrom; `template.html` ist die Vorlage, `index.html` die erzeugte eigenständige Seite (nicht von Hand bearbeiten).
+- `app/bible/`: App; `template.html` ist die Vorlage, `index.html` die erzeugte eigenständige Seite (nicht von Hand bearbeiten).
 - `reports/`: Auswertungen; `working-text-counts.json` ist eine ältere Demonstration ohne Aussagekraft für die Perikope.
 - `archive/packages/`: fünf unveränderte Originalpakete v0.1–v0.5.
 - `provenance/`: Paketprüfsummen, Dateiinventar und Migrationsprotokolle (`provenance/migrations/`).

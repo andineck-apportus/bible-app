@@ -45,7 +45,7 @@ Die Entwürfe unten sind so geschrieben, dass sie mit oder ohne Verein passen: `
 
 ## Entwürfe
 
-Platzhalter: `[Absender]`, `[Adresse]`, `[Link]` (Lesestrom oder GitHub `andineck-apportus/bible-app`), `[Datum]`.
+Platzhalter: `[Absender]`, `[Adresse]`, `[Link]` (App oder GitHub `andineck-apportus/bible-app`), `[Datum]`.
 
 ### 1. Deutsche Bibelgesellschaft (Deutsch)
 

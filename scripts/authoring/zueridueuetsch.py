@@ -290,7 +290,7 @@ for tid, (title, summary) in TU_GSW.items():
     rec["by_language_authorship_de"] = AUTH
     log = rec.setdefault("revision_log", [])
     if not any(x.get("change_de", "").startswith("Züridüütsch") for x in log):
-        log.append({"date": DATE, "change_de": "Züridüütsch-Titel und -Zusammenfassung ergänzt (title_by_language, summary_by_language); hochdeutsche Felder unverändert", "reason_de": "Mundart-Schicht im Lesestrom"})
+        log.append({"date": DATE, "change_de": "Züridüütsch-Titel und -Zusammenfassung ergänzt (title_by_language, summary_by_language); hochdeutsche Felder unverändert", "reason_de": "Mundart-Schicht in der App"})
     p.write_text(json.dumps(rec, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     written.append(tid + " (Titel/Zusammenfassung)")
 print(f"PASS: {len(written)} Datensätze geschrieben (Züridüütsch)")

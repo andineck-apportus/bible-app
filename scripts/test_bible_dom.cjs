@@ -32,7 +32,7 @@ click('[data-close]');
 reader.scrollTop=137;click('[data-deep="TU-MRK-003-022-030"]');
 const verse=reader.querySelector('[data-stream="v40-3-29"]');
 assert.equal(verse.querySelector('.stream-copy').textContent,mk(29));
-assert(!verse.querySelector('[data-alternative]'),'Lesarten standardmässig nicht im Lesestrom');
+assert(!verse.querySelector('[data-alternative]'),'Lesarten standardmässig nicht im Lesetext');
 for(let v=22;v<=30;v++){const want=mkAlts().some(a=>vOf(a.ref)===v)||model.BG.some(b=>!b.wide&&b.chapter==='MRK.3'&&b.from<=v&&v<=b.to)||!!M().decisions['MRK.3.'+v]||(M().compare['MRK.3.'+v]||[]).some(c=>c.lang==='de');
  assert.equal(!!reader.querySelector(`[data-more="v40-3-${v}"]`),want,`«+» nur bei Lesarten oder Hintergrund (3,${v})`);}
 
@@ -45,7 +45,7 @@ click('[data-background="TU-MRK-003-022-030"]');
 for(const b of model.BG.filter(x=>(x.wide&&x.section==='TU-MRK-003-020-035')||x.subject==='TU-MRK-003-022-030'))assert(sheetHost.querySelector(`[data-bg-note="${b.id}"]`),b.id);
 assert(sheetHost.textContent.includes('Josephus'),'Quellenangabe sichtbar');
 click('[data-close]');
-assert(!reader.querySelector('.bg-line'),'Hintergrund standardmässig nicht im Lesestrom');
+assert(!reader.querySelector('.bg-line'),'Hintergrund standardmässig nicht im Lesetext');
 click('[data-action=menu]');click('[data-settings]');click('[data-toggle=bgInline]');click('[data-close]');
 click('.bg-line[data-bg="BG-MRK-0008"]');assert(sheetHost.textContent.includes('Jes 49,24–25'));click('[data-close]');
 click('[data-action=menu]');click('[data-settings]');click('[data-toggle=bgInline]');click('[data-close]');
@@ -176,7 +176,7 @@ assert(!sheetHost.textContent.includes('data-ref-go="SIR'),'Sirach nicht verlink
 click('[data-close]');
 // Zweite Übersetzungsschicht: Züridüütsch aus dem Griechischen, umschaltbar
 click('[data-action=menu]');assert(sheetHost.querySelector('[data-set="text"][data-value="gsw"]'),'Lesetext-Auswahl');click('[data-set="text"][data-value="gsw"]');click('[data-close]');
-assert.equal(reader.querySelector('[data-stream="v39-6-11"] .stream-copy').textContent,'Öises täglich Broot gib üs hüt.','Mundart im Lesestrom');
+assert.equal(reader.querySelector('[data-stream="v39-6-11"] .stream-copy').textContent,'Öises täglich Broot gib üs hüt.','Mundart im Lesetext');
 assert(reader.querySelector('[data-stream="v39-6-11"] .dec.traditional'),'Entscheidung «täglich» auch in der Mundart markiert');
 click('[data-action=index]');assert(sheetHost.textContent.includes('S Vatterunser')&&sheetHost.textContent.includes('Nöd zum Schiin'),'Navigator-Titel in Mundart');click('[data-close]');
 click('[data-action=up]');assert(reader.textContent.includes('mit sibe Bitte')&&reader.querySelector('[data-stream="TU-MAT-006-009-013"] h2').textContent==='S Vatterunser','Abschnittstitel und -zusammenfassung in Mundart');click('[data-action=down]');

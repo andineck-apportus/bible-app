@@ -13,7 +13,7 @@ Schreibt bzw. ergänzt `source`-Datensätze in data/sources/ um das Feld `catalo
   urls     Adressen, unter denen die Quelle in Datensätzen als Herkunft steht (Validator: jede Herkunft muss im Katalog stehen)
   why_de   wofür verwendet bzw. weshalb (noch) nicht
 Bestehende Datensätze werden nur um `catalog` ergänzt (frühere Fassung im revision_log). Aus dem Katalog entstehen die
-Quellenkarte (scripts/build_source_map.py -> app/quellenkarte/index.html) und das Blatt «Quellen und Rechte» im Lesestrom.
+Quellenkarte (scripts/build_source_map.py -> app/quellenkarte/index.html) und das Blatt «Quellen und Rechte» in der App.
 Lizenzangaben nach docs/QUELLEN.md (Recherche 9. und 13. Oktober 2026); KI-Recherche (Claude), keine Rechtsberatung.
 """
 import json

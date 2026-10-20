@@ -36,7 +36,7 @@ Ergebnis für das ganze Markusevangelium (929 Stellen): Die SBLGNT-Lesart ist 70
 **Was diese Methode nicht misst:** die Bezeugung in Handschriften. Die Editionen sind keine unabhängigen Zeugen; «4 gegen 1» heisst oft «kritische Editionen gegen byzantinischen Mehrheitstext». Die Angaben zu den Editionen stammen aus dem SBLGNT-Apparat und sind nicht an den Editionen selbst geprüft.
 
 ## Handschriftenbelege (seit v0.15)
-Für Mk 3,20–35 ist zusätzlich erfasst, welche der sechs ältesten importierten Handschriften welche Lesart haben (`METHOD-AUTO-COLLATION-V1`, maschinell, mit Rohtext). Der Lesestrom zeigt dazu eine einfache Zählung («von 6 alten Handschriften haben 2 den Wortlaut des Lesetexts»). Das ist noch keine Bewertungsmethode: Die Auswahl ist klein, Handschriften werden nicht gewichtet, Korrekturen nur getrennt angezeigt.
+Für Mk 3,20–35 ist zusätzlich erfasst, welche der sechs ältesten importierten Handschriften welche Lesart haben (`METHOD-AUTO-COLLATION-V1`, maschinell, mit Rohtext). Die App zeigt dazu eine einfache Zählung («von 6 alten Handschriften haben 2 den Wortlaut des Lesetexts»). Das ist noch keine Bewertungsmethode: Die Auswahl ist klein, Handschriften werden nicht gewichtet, Korrekturen nur getrennt angezeigt.
 
 ## Geplante weitere Methoden (Vorschlag, nicht vereinbart)
 - **Handschriftenbezeugung:** Alter, geografische Verbreitung und Textgruppe der Zeugen, aus offenen Transkriptionen (NTVMR CC BY 4.0, CNTR).

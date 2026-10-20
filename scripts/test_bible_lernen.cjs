@@ -22,7 +22,7 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     assert.equal(await p.$$eval('.sheet [data-learn^="start:"]',x=>x.length),5,'fünf Lernmethoden');
     await p.click('[data-learn="start:cards"]');await p.waitForTimeout(600);
     assert(await p.$('.sheet .learn-img svg'),'Karteikarte mit Bild');await p.click('[data-learn=reveal]');await p.click('[data-learn="rate:good"]');
-    const st=await p.evaluate(()=>JSON.parse(localStorage.getItem('lesestrom-lernen')||'{}'));assert(Object.values(st).some(x=>x.box===1&&x.due>Date.now()),'Leitner: Kasten 1, nächste Wiederholung gesetzt');
+    const st=await p.evaluate(()=>JSON.parse(localStorage.getItem('bible:learn')||'{}'));assert(Object.values(st).some(x=>x.box===1&&x.due>Date.now()),'Leitner: Kasten 1, nächste Wiederholung gesetzt');
     await p.click('[data-learn=menu]');await p.click('[data-learn="start:letters"]');await p.waitForTimeout(400);
     const fl=await p.$eval('.sheet .learn-letters',e=>e.textContent);assert(fl.split(' ').every(w=>w.replace(/[^\p{L}]/gu,'').length<=1),'Anfangsbuchstaben');
     await p.click('[data-learn=menu]');await p.click('[data-learn="start:cloze"]');await p.waitForTimeout(400);

@@ -2,6 +2,13 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.68 — 2026-10-20 — Name: Atmo Bible
+
+- **Name** (Andi Neck): «Atmo Bible – open, free, from overview to original». Steht nur dort, wo er gebraucht wird: Seitentitel, Name für den Startbildschirm, «Über diese Fassung», README; Begründung und verworfene Varianten in docs/ENTSCHEIDUNGEN.md.
+- **Bereinigt:** Der Arbeitsname «Lesestrom» ist aus App, Skripten, Tests und Dokumentation entfernt; dort steht neutral «App».
+- **Speicher unabhängig vom Namen:** Schlüssel `bible:settings`, `bible:learn`, `bible:recent`; die alten (`lesestrom…`) werden beim ersten Start übernommen, Einstellungen und Lernstand bleiben erhalten.
+- Historische Einträge (Changelog, Revisionsprotokolle der Datensätze) behalten den alten Namen.
+
 ## v0.67 — 2026-10-18 — Aufgeräumt: app/bible; Quellen nachgeschlagen, Apparat ergänzt
 
 - **App-Verzeichnis aufgeräumt** (Andi Neck): Der Lesestrom liegt jetzt in `app/bible/` (vorher `app/reading-stream/`); Bauskript `scripts/build_bible.py`, Prüfungen `scripts/test_bible*.cjs`, aufgeteilte Fassungen in `build/bible/` und `build/bible-txt/`. Der erste Studienprototyp (`app/prototype/`, `scripts/build_prototype.py`) ist entfernt und nur noch in der Git-Historie.

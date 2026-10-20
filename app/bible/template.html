@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Bibel · Lesestrom</title>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Atmo Bible</title><meta name="description" content="Atmo Bible – open, free, from overview to original"><meta name="application-name" content="Atmo Bible"><meta name="apple-mobile-web-app-title" content="Atmo Bible">
 <style>
-/* Ein Lesestrom über die ganze Bibel. Ruhige Fläche, Leisten treten beim Lesen zurück; Erklärungen und Hintergrund nur auf Wunsch (Blatt von unten). */
+/* Die ganze Bibel fortlaufend lesen. Ruhige Fläche, Leisten treten beim Lesen zurück; Erklärungen und Hintergrund nur auf Wunsch (Blatt von unten). */
 :root{color-scheme:light dark}
 html,body{margin:0;height:100%;background:#f7f7f6}
 #bible-stream{height:100%}
@@ -500,8 +500,8 @@ const CONF={high:'gut begründet',probable:'wahrscheinlich',possible:'möglich'}
 root.querySelectorAll('.app').forEach((app,appIndex)=>{
 let current='all',lang='de',sheet=null,query='';
 let S={v:3,text:'de',flow:true,theme:'auto',read:19,advanced:true,inline:true,bgInline:true,translit:true,pron:'modern',rate:0.85,voice:{},readVoice:'',readRate:1,godName:'Jahwe',ill:'symbol',view:'text',merk:'mark'};
-try{const s=JSON.parse(localStorage.getItem('lesestrom')||'null');if(s){const keep={...s};if(!(s.v>=2)){delete keep.advanced;delete keep.inline;delete keep.bgInline;}if(!(s.v>=3))delete keep.flow;S={...S,...keep,v:3};}}catch(e){}
-const save=()=>{try{localStorage.setItem('lesestrom',JSON.stringify(S));}catch(e){}};
+try{const s=JSON.parse(localStorage.getItem('bible:settings')||localStorage.getItem('lesestrom')||'null');if(s){const keep={...s};if(!(s.v>=2)){delete keep.advanced;delete keep.inline;delete keep.bgInline;}if(!(s.v>=3))delete keep.flow;S={...S,...keep,v:3};}}catch(e){}
+const save=()=>{try{localStorage.setItem('bible:settings',JSON.stringify(S));}catch(e){}};
 const mq=globalThis.matchMedia?globalThis.matchMedia('(prefers-color-scheme: dark)'):null;
 /* ---------- Aussprache (Stimmen des Geräts, Web Speech API) ---------- */
 const synth=globalThis.speechSynthesis||null;
@@ -727,11 +727,11 @@ function verseEntry(n){
   return `<article class="stream-entry verse" data-stream="${n.id}">${lead}<p class="verse-line">${vno}<span class="stream-copy" data-ref="${n.canonicalRef}">${S.advanced?decorate(text,LAYER().decisions[n.canonicalRef]):esc(text)}</span>${merkMark(n)}</p>${inline}${bgLine}${merkCard(n,text)}</article>`;
 }
 // ---------- Merkverse und Lernen ----------
-// Merkverse: Bilder der Ebene «verse» (ILL.merk). Anzeige im Lesestrom nach Einstellung S.merk: 'mark' (kleines Zeichen am Vers,
+// Merkverse: Bilder der Ebene «verse» (ILL.merk). Anzeige im Lesetext nach Einstellung S.merk: 'mark' (kleines Zeichen am Vers,
 // Karte auf Antippen), 'card' (Karte im Text), 'off'. Lernen: Merkverse eines Kapitels, Buches oder alle, mit mehreren Methoden.
-// Lernstand nur auf diesem Gerät (localStorage «lesestrom-lernen»): je Vers Kasten (Leitner) und nächste Wiederholung.
-const LEARN_KEY='lesestrom-lernen',BOX_DAYS=[0,1,3,7,14,30,60];
-let LS={};try{LS=JSON.parse(localStorage.getItem(LEARN_KEY)||'{}')||{};}catch(e){LS={};}
+// Lernstand nur auf diesem Gerät (localStorage «bible:learn»; ältere Fassungen: «lesestrom-lernen», wird übernommen): je Vers Kasten (Leitner) und nächste Wiederholung.
+const LEARN_KEY='bible:learn',LEARN_OLD='lesestrom-lernen',BOX_DAYS=[0,1,3,7,14,30,60];
+let LS={};try{LS=JSON.parse(localStorage.getItem(LEARN_KEY)||localStorage.getItem(LEARN_OLD)||'{}')||{};}catch(e){LS={};}
 const lsSave=()=>{try{localStorage.setItem(LEARN_KEY,JSON.stringify(LS));}catch(e){}};
 const MERK=()=>(ILL&&ILL.merk)||[];
 const isDue=r=>!LS[r]||!LS[r].due||LS[r].due<=Date.now();
@@ -829,9 +829,9 @@ function loadMore(before=false){
 }
 
 /* ---------- Leisten ---------- */
-// Zuletzt gelesen: nur auf diesem Gerät (localStorage, Schlüssel «lesestrom-zuletzt»); Abschnitt- bzw. Kapitelebene.
-const RECENT_KEY='lesestrom-zuletzt',RECENT_MAX=12;
-let recent=[];try{recent=JSON.parse(localStorage.getItem(RECENT_KEY)||'[]').filter(x=>x&&nodes.has(x.id));}catch(e){recent=[];}
+// Zuletzt gelesen: nur auf diesem Gerät (localStorage, Schlüssel «bible:recent»; ältere Fassungen: «lesestrom-zuletzt», wird übernommen); Abschnitt- bzw. Kapitelebene.
+const RECENT_KEY='bible:recent',RECENT_OLD='lesestrom-zuletzt',RECENT_MAX=12;
+let recent=[];try{recent=JSON.parse(localStorage.getItem(RECENT_KEY)||localStorage.getItem(RECENT_OLD)||'[]').filter(x=>x&&nodes.has(x.id));}catch(e){recent=[];}
 function recentTarget(id){let n=nodes.get(id);if(!n||n.level<4)return null;if(n.level===6)n=nodes.get(n.parent);return n.id;}
 function recordRecent(){const id=recentTarget(current);if(!id||(recent[0]&&recent[0].id===id))return;recent=[{id,ts:Date.now()},...recent.filter(x=>x.id!==id)].slice(0,RECENT_MAX);try{localStorage.setItem(RECENT_KEY,JSON.stringify(recent));}catch(e){}}
 function clearRecent(){recent=[];try{localStorage.removeItem(RECENT_KEY);}catch(e){}}
@@ -1056,6 +1056,7 @@ function menuSheet(){
   ${Object.keys(ILL.styles||{}).length?`<button type="button" class="row settings-row" data-figindex>${icon('image')}<span>${t.figIndex}<span class="sub">${t.figIndexSub}</span></span>${icon('chevron-right')}</button>`:''}
   <button type="button" class="row settings-row" data-sources-map>${icon('list')}<span>${t.sourcesMap}<span class="sub">${t.sourcesMapSub}</span></span>${icon('chevron-right')}</button>
   <details class="about"><summary>${t.about}</summary><div>
+   <p><strong>Atmo Bible</strong> – open, free, from overview to original.</p>
    <p>${lang==='de'?'Ein Prototyp. Zusammenfassungen, Übersetzung und Erklärungen sind KI-Entwürfe und noch nicht fachlich geprüft. Ausgearbeitet sind bisher '+STUDY.sections.map(x=>refDe(x.range)).join(', ')+'; an anderen Stellen fehlt der Bibeltext noch.':'A prototype. Summaries, translation and notes are AI drafts, not yet reviewed. Worked out so far: '+STUDY.sections.map(x=>refDe(x.range)).join(', ')+'.'}</p>
    <p>${lang==='de'?'Bücher, Kapitel und Verszählung folgen vorläufig dem protestantischen Kanon mit 66 Büchern und der Zählung der King-James-Bibel (Testkonfiguration). Abschnitte ausserhalb der ausgearbeiteten Stellen umfassen der Einfachheit halber je bis zu fünf Verse.':'Books and verse numbering follow the 66-book Protestant canon with KJV numbering for now.'}</p>
    <p>${stats.books} ${lang==='de'?'Bücher':'books'} · ${stats.chapters.toLocaleString(lang)} ${lang==='de'?'Kapitel':'chapters'} · ${stats.verses.toLocaleString(lang)} ${t.verses}</p>

@@ -56,7 +56,7 @@ Angaben zu Datierung, Fundort und Sammlung der Amulette (`data/witnesses/WIT-TM-
 
 Alle übrigen Dateien in `data/`, `docs/`, `scripts/` usw. sind eigene Beiträge unter CC0 1.0.
 
-## Numerische Testdaten des Lesestroms
+## Numerische Testdaten der App
 
 Seit v0.13 liegt das Mengengerüst als `data/navigation/NAV-PROT66-KJV.json` im freien Kern und wird in `app/bible/index.html` eingebettet. Es enthält nachgezählte Kapitel-/Versanzahlen aus der von eBible.org / CrossWire als **Public Domain** ausgewiesenen KJV-Ausgabe: https://ebible.org/Scriptures/eng-kjv_usfm.zip (Quelldateien 2026-09-26). Aus dieser KJV-Quelle wurden kein Bibeltext und kein fremder Programmcode übernommen. Die Quelle weist auf besondere Druckrechte für den Übersetzungstext im Vereinigten Königreich hin. Prüfsumme und Ableitung sind in `app/bible/provenance.json` dokumentiert. Eine ursprünglich im Chat benutzte, nicht lizenzierte JSON-Zählliste wurde nicht als Fremddatei ins Repository übernommen; alle Zahlen wurden für diesen Import unabhängig aus dem genannten USFM-Bestand gewonnen und abgeglichen.
 
@@ -68,11 +68,11 @@ Logo, Linienicons, Code und redaktionelle Entwürfe dieses Prototyps sind eigene
 |---|---|---|---|---|
 | `data-nc/witness-texts/DSS-*.json`, `data-nc/witnesses/WIT-DSS-*.json` | Biblische Texte vom Toten Meer (Qumran, Murabbaʿat) je Vers mit Fundort, für Rut (2QRuth a/b, 4QRuth a/b) und Obadja (4QXII g, MurXII); maschineller Vergleich mit dem WLC | ETCBC dss, Text-Fabric 2.0.1, Commit `ac91a978`; Daten von Martin G. Abegg Jr., James E. Bowley, Edward M. Cook | **CC BY-NC 4.0** | Namensnennung (Abegg/Bowley/Cook, ETCBC/CACCHT); nur nicht kommerziell |
 
-Im Lesestrom liegen diese Daten in eigenen Paketen `n/<BUCH>`; mit `BIBLE_APP_NO_NC=1` baut `scripts/build_bible.py` ohne sie. Die Einzeldatei `app/bible/index.html` und die veröffentlichte Fassung enthalten sie (gemeinnütziger Betrieb).
+In der App liegen diese Daten in eigenen Paketen `n/<BUCH>`; mit `BIBLE_APP_NO_NC=1` baut `scripts/build_bible.py` ohne sie. Die Einzeldatei `app/bible/index.html` und die veröffentlichte Fassung enthalten sie (gemeinnütziger Betrieb).
 
 Hinweis: Diese Übersicht ist keine Rechtsberatung. Lizenzangaben vor jedem Import erneut prüfen und im Quellendatensatz festhalten.
 
-## Eingebettete Markus-Daten im Lesestrom
+## Eingebettete Markus-Daten in der App
 
 Seit v0.15 enthält `app/bible/index.html` zusätzlich Textausschnitte der CNTR-Transkriptionen und die daraus abgeleiteten Zuordnungen (CC BY-SA 4.0, Alan Bunning, Center for New Testament Restoration); die Attribution steht in der Seite beim jeweiligen Blatt.
 
