@@ -315,6 +315,9 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .app .ill-toggle button{display:inline-grid;place-items:center;width:30px;height:26px;padding:0!important;border-radius:999px!important;color:var(--muted)}
 #bible-stream .ill-toggle svg{width:16px;height:16px}
 #bible-stream .app .ill-toggle button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+#bible-stream .tm-toggle{display:inline-flex;align-self:center;border:1px solid var(--rule);border-radius:999px;padding:2px;gap:2px;margin-right:6px}
+#bible-stream .app .tm-toggle button{min-width:38px;height:30px;padding:0 10px!important;border-radius:999px!important;font-size:13px;font-weight:600;letter-spacing:.03em;color:var(--muted);text-align:center}
+#bible-stream .app .tm-toggle button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
 #bible-stream .ill{margin:0}
 #bible-stream .merk-mark{display:inline-flex!important;vertical-align:middle;margin-left:4px;width:28px;height:28px;align-items:center;justify-content:center;color:var(--muted);border-radius:8px}
 #bible-stream .merk-mark svg{width:18px;height:18px}
@@ -1171,8 +1174,8 @@ function navSheet(reset){
   let h=head(t.contents)+`${recent.length?`<details class="worked recent"><summary>${t.recent} (${recent.length})</summary>${recent.map(x=>`<button type="button" class="row recent-row" data-go="${x.id}"><span>${esc(recentLabel(x.id))}</span>${icon('chevron-right')}</button>`).join('')}<button type="button" class="link soft clear-recent" data-clear-recent>${t.recentClear}</button></details>`:''}
   <label for="find-nav-${appIndex}" class="note">${t.search}</label><input id="find-nav-${appIndex}" type="search" placeholder="${t.hint}" value="${esc(query)}" autocomplete="off"><div class="results"></div>
   <p class="note">${picked?(L?'Auswahl':'Selection'):t.here}</p><div class="crumbs${picked?' sel':''}">${picked?selCrumbs:crumbs}</div>`;
-  h+=`<div class="nav-block"><div class="seg" role="group">${['ot','nt'].map(x=>`<button type="button" data-nav="t:${x}" aria-pressed="${nav.t===x}">${esc(L?nodes.get(x).de:nodes.get(x).en)}</button>`).join('')}</div>
-   <div class="chips">${nodes.get(nav.t).children.map(gid=>{const g=nodes.get(gid);return `<button type="button" class="chip${nav.g===g.gi?' cur':''}" data-nav="g:${g.gi}">${esc(L?g.de:g.en)}</button>`;}).join('')}</div></div>`;
+  // Testament als kleiner Umschalter (wie Text/Bild) direkt vor den Buchgruppen
+  h+=`<div class="nav-block"><div class="chips"><span class="tm-toggle" role="group" aria-label="${L?'Testament':'Testament'}">${['ot','nt'].map(x=>{const full=L?nodes.get(x).de:nodes.get(x).en;return `<button type="button" data-nav="t:${x}" aria-pressed="${nav.t===x}" aria-label="${esc(full)}" title="${esc(full)}">${x==='ot'?(L?'AT':'OT'):'NT'}</button>`;}).join('')}</span>${nodes.get(nav.t).children.map(gid=>{const g=nodes.get(gid);return `<button type="button" class="chip${nav.g===g.gi?' cur':''}" data-nav="g:${g.gi}">${esc(L?g.de:g.en)}</button>`;}).join('')}</div></div>`;
   if(nav.g!=null){const gn=nodes.get('g'+nav.g);
     h+=`<div class="nav-block"><h4><span>${L?'Buch':'Book'}</span>${nav.b!=null?`<button type="button" class="open" data-go="b${nav.b}">${esc(L?DATA[nav.b].de:DATA[nav.b].en)} ${t.open}${icon('chevron-right')}</button>`:''}</h4><div class="grid books">${gn.children.map(bid=>{const bn=nodes.get(bid),d=DATA[bn.b];return `<button type="button" class="${nav.b===bn.b?'cur':''}${workedBook(d.code)?' study':''}" data-nav="b:${bn.b}" aria-label="${esc(L?d.de:d.en)}"><b>${esc(L?(SHORT[d.code]||d.abbr):d.abbr)}</b><small>${esc(L?d.de:d.en)}</small></button>`;}).join('')}</div></div>`;}
   if(nav.b!=null){const bn=nodes.get('b'+nav.b),code=DATA[nav.b].code;
