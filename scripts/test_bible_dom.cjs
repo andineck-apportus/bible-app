@@ -179,7 +179,7 @@ click('[data-action=menu]');assert(sheetHost.querySelector('[data-set="text"][da
 assert.equal(reader.querySelector('[data-stream="v39-6-11"] .stream-copy').textContent,'Öises täglich Broot gib üs hüt.','Mundart im Lesetext');
 assert(reader.querySelector('[data-stream="v39-6-11"] .dec.traditional'),'Entscheidung «täglich» auch in der Mundart markiert');
 click('[data-action=index]');assert(sheetHost.textContent.includes('S Vatterunser')&&sheetHost.textContent.includes('Nöd zum Schiin'),'Navigator-Titel in Mundart');click('[data-close]');
-click('[data-action=up]');assert(reader.textContent.includes('mit sibe Bitte')&&reader.querySelector('[data-stream="TU-MAT-006-009-013"] h2').textContent==='S Vatterunser','Abschnittstitel und -zusammenfassung in Mundart');click('[data-action=down]');
+click('[data-action=up]');assert(reader.textContent.includes('mit sibe Bitte')&&reader.querySelector('[data-stream="TU-MAT-006-009-013"] h2').textContent==='S Vatterunser','Abschnittstitel und -zusammenfassung in Mundart');click('[data-action=down]');assert(sheetHost.querySelector('.grid.nums .cur[data-go="v39-6-11"]'),'Auswahl unten markiert den zuletzt gelesenen Vers');click('.grid.nums .cur');
 assert(reader.querySelector('.alt-line[data-alternative="VAR-SBLGNTAPP-MAT-006-012-01"]').textContent.includes('vergänd'),'Mundart-Lesart im Text');
 click('[data-more="v39-6-11"]');assert(sheetHost.textContent.includes('Ältere Übersetzungen · Züridüütsch')&&sheetHost.textContent.includes('noch keine Vergleichsübersetzung')&&sheetHost.textContent.includes('Ältere Übersetzungen · Hochdeutsch')&&sheetHost.textContent.includes('Lutherbibel'),'Vergleichsübersetzungen nach Sprache des Zielkontexts');click('[data-close]');
 click('[data-more="v39-6-11"]');assert(sheetHost.textContent.includes('Öises täglich Broot')&&sheetHost.textContent.includes('für de nööchscht Taag'),'Mundart-Entscheidung im Versblatt');
@@ -196,7 +196,7 @@ assert.equal(reader.querySelector('[data-stream="v39-6-11"] .stream-copy').textC
 assert.equal(Object.keys(M().layers.gsw.text).length,3059,'Mundart für alle 3059 Verse');
 // Obadja (Hebräisch) und Titus: Muster ganzer Bücher
 click('[data-action=menu]');click('[data-set="text"][data-value="de"]');click('[data-settings]');if(sheetHost.querySelector('[data-toggle=advanced][aria-checked=false]'))click('[data-toggle=advanced]');click('[data-close]');
-click('[data-action=index]');sheetHost.querySelector('[data-go^="TU-OBA"]').click();click('[data-action=down]');
+click('[data-action=index]');sheetHost.querySelector('[data-go^="TU-OBA"]').click();click('[data-action=down]');sheetHost.querySelector('.grid.nums [data-go]').click();
 assert(reader.querySelector('[data-stream="v30-1-21"]')||true);
 click('[data-more="v30-1-3"]');
 assert(sheetHost.querySelector('.il.he .heb'),'Hebräisch Wort für Wort');
@@ -250,5 +250,12 @@ click('[data-close]');
  click('[data-nav="c:5"]');click('[data-nav="s:TU-MAT-005-001-012"]');
  assert.equal(sheetHost.querySelectorAll('.nav-block:last-of-type .grid.nums [data-go]').length,12,'Abschnitt gewählt: seine 12 Verse');assert(sheetHost.querySelector('.open[data-go="TU-MAT-005-001-012"]'),'Abschnitt öffnen');
  click('[data-close]');}
+// Pfad unten: Glieder springen direkt; rechts die Auswahl der Ebene darunter (auch Platzhalter-Abschnitte ungeprüfter Kapitel)
+{const crumbs=[...app.querySelectorAll('.dock .path button')];assert(crumbs.length>=2&&crumbs.at(-1).getAttribute('aria-current')==='true'&&crumbs.at(-2).dataset.action==='up','Pfad unten mit aktueller Stelle');
+ crumbs[0].click();assert.equal(app.dataset.level,'0','erstes Glied: direkt zur ganzen Bibel');
+ click('[data-action=down]');assert(sheetHost.querySelector('.pick-list [data-go="ot"]'),'Auswahl darunter: Testamente');click('[data-close]');
+ const i=(click('[data-action=index]'),sheetHost.querySelector('input[type=search]'));i.value='Apg 4';i.dispatchEvent(new dom.window.Event('input',{bubbles:true}));sheetHost.querySelector('.results [data-pick^="c"]').click();
+ assert(sheetHost.querySelectorAll('.nav-parts [data-nav^="s:"]').length>=7,'Abschnitte auch bei nicht ausgearbeiteten Kapiteln (Verse 1–5 …)');sheetHost.querySelector('.nav-block:last-of-type [data-go]').click();
+ assert.equal(app.dataset.level,'6');assert(app.querySelector('[data-action=down]').hidden,'auf Versebene keine Auswahl darunter');}
 console.log(`PASS: Navigation (Suche nach Stelle und Abschnitt, Auswahl im Pfad), Pilotzugang, Studienblatt ohne Griechisch, Lesarten auf Wunsch (${M().alternatives.length}), Hintergrund damals (${model.BG.length}), Bis zur Quelle (${tested}), Urtext-Modus, Rückkehrposition, Suche, Kapitelgrenze, Vaterunser Mt/Lk, Übersetzungsentscheidungen und Vergleich, Wort-Blatt, Umschrift und Anhören, Verse fortlaufend, Navigator, Querverweise und Rücksprung, Lesetext Hochdeutsch/Züridüütsch mit Titeln, Obadja hebräisch Wort für Wort, Titus, Quellen und Rechte, Texte vom Toten Meer, Wörterbuch, Ketiv/Qere, Ausgaben je Wort.`);
 dom.window.close();

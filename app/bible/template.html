@@ -28,7 +28,7 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 /* Leisten */
 #bible-stream .bar{position:absolute;left:0;right:0;z-index:4;display:flex;align-items:center;gap:6px;background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:transform .25s ease,opacity .25s ease}
 #bible-stream .top{top:0;padding:calc(6px + env(safe-area-inset-top,0px)) 10px 6px;border-bottom:1px solid var(--rule)}
-#bible-stream .dock{bottom:0;padding:6px 8px calc(6px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--rule);display:grid;grid-template-columns:1fr auto 1fr}
+#bible-stream .dock{bottom:0;padding:6px 8px calc(6px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px}
 #bible-stream .immersed .top{transform:translateY(-105%);opacity:0}
 #bible-stream .immersed .dock{transform:translateY(105%);opacity:0}
 #bible-stream .icon-btn{width:44px;height:44px;display:grid!important;place-items:center;border-radius:var(--r)!important}
@@ -40,8 +40,16 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .location .loc-text{overflow:hidden;text-overflow:ellipsis}
 #bible-stream .row.settings-row>span{flex:1;text-align:left}
 #bible-stream .dock button{height:44px;display:flex;align-items:center;gap:8px;font-size:14px;padding:0 10px}
-#bible-stream .dock [data-action=down]{justify-content:flex-end}
-#bible-stream .dock .depth{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:0 14px}
+/* Pfad unten: jedes Glied springt direkt auf seine Ebene; rechts die Auswahl der Ebene darunter */
+#bible-stream .dock .path{display:flex;align-items:center;min-width:0;overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 14px);mask-image:linear-gradient(to right,transparent 0,#000 14px)}
+#bible-stream .dock .path::-webkit-scrollbar{display:none}
+#bible-stream .dock .path button{flex:none;height:40px;padding:0 8px;font-size:14px;color:var(--muted);max-width:11em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+#bible-stream .dock .path button[aria-current=true]{color:var(--ink);font-weight:600;background:var(--soft)}
+#bible-stream .dock .path .sep{flex:none;color:var(--muted);opacity:.6;padding:0 1px}
+#bible-stream .dock .pick{gap:4px;font-weight:600;padding:0 10px 0 12px;border:1px solid var(--rule)!important}
+#bible-stream .dock .pick svg{width:18px;height:18px}
+#bible-stream .dock .pick[hidden]{display:none!important}
+#bible-stream .pick-list .row .note{margin-left:6px}
 
 /* Lesefläche */
 #bible-stream aside{display:none}
@@ -219,7 +227,7 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .edrow{margin:0}
 #bible-stream .row{display:flex!important;justify-content:space-between;align-items:center;width:100%;min-height:50px;border-top:1px solid var(--rule)!important;gap:10px}
 #bible-stream .row .sub{display:block;font-size:12.5px;color:var(--muted)}
-#bible-stream .nav-parts .row.cur{font-weight:600;box-shadow:inset 3px 0 0 var(--ink,currentColor);padding-left:10px}
+#bible-stream .nav-parts .row.cur,#bible-stream .pick-list .row.cur{font-weight:600;box-shadow:inset 3px 0 0 var(--ink,currentColor);padding-left:10px}
 #bible-stream .row.result .lv{display:inline-block;min-width:4.6em;margin-right:4px;font-size:11.5px;letter-spacing:.02em;text-transform:uppercase;color:var(--muted)}
 #bible-stream .row.current{font-weight:600}
 #bible-stream details.worked{margin:8px 0 4px;border-top:1px solid var(--rule)}
@@ -603,7 +611,7 @@ if(synth&&synth.addEventListener)synth.addEventListener('voiceschanged',()=>{if(
 function applyPrefs(){app.classList.toggle('flow',!!S.flow);if(S.ill!=='off'&&!(ILL.styles||{})[S.ill])S.ill=Object.keys(ILL.styles||{})[0]||'off';app.dataset.view=S.view==='image'?'image':'text';if(S.ill!=='off')app.dataset.ill='1';else delete app.dataset.ill;app.dataset.theme=S.theme==='auto'?(mq&&mq.matches?'dark':'light'):S.theme;app.style.setProperty('--read',S.read+'px');}
 mq&&mq.addEventListener&&mq.addEventListener('change',applyPrefs);
 const remembered=new Map(),savedStreams=new Map();let readerStart=0,readerEnd=0;
-app.innerHTML=`<header class="bar top"><button type="button" class="icon-btn" data-action="home" aria-label="">${logo}</button><button type="button" class="location" data-action="index"></button><button type="button" class="icon-btn" data-action="menu"></button></header><div class="jump"></div><aside aria-label="Navigation"></aside><main class="reader" tabindex="0" role="region"></main><nav class="bar dock"><button type="button" data-action="up"></button><button type="button" data-action="levels" class="depth"></button><button type="button" data-action="down"></button></nav><div class="sheet-host"></div><span class="live" aria-live="polite"></span>`;
+app.innerHTML=`<header class="bar top"><button type="button" class="icon-btn" data-action="home" aria-label="">${logo}</button><button type="button" class="location" data-action="index"></button><button type="button" class="icon-btn" data-action="menu"></button></header><div class="jump"></div><aside aria-label="Navigation"></aside><main class="reader" tabindex="0" role="region"></main><nav class="bar dock"><div class="path"></div><button type="button" data-action="down" class="pick"></button></nav><div class="sheet-host"></div><span class="live" aria-live="polite"></span>`;
 const reader=app.querySelector('.reader'),aside=app.querySelector('aside'),host=app.querySelector('.sheet-host');
 const T=()=>ui[lang];
 const bookName=n=>DATA[n.b][lang];
@@ -854,16 +862,34 @@ function recentTarget(id){let n=nodes.get(id);if(!n||n.level<4)return null;if(n.
 function recordRecent(){const id=recentTarget(current);if(!id||(recent[0]&&recent[0].id===id))return;recent=[{id,ts:Date.now()},...recent.filter(x=>x.id!==id)].slice(0,RECENT_MAX);try{localStorage.setItem(RECENT_KEY,JSON.stringify(recent));}catch(e){}}
 function clearRecent(){recent=[];try{localStorage.removeItem(RECENT_KEY);}catch(e){}}
 function recentLabel(id){const n=nodes.get(id),b=DATA[n.b];const name=lang==='de'?b.de:b.en;if(n.level===4)return `${name} ${n.c}`;return `${name} ${n.c},${n.v}${n.last>n.v?'–'+n.last:''}`+(n.part?' · '+pTitle(n.part):'');}
+// Pfad unten: kurze Namen; Glied antippen = direkt auf diese Ebene (der Vorgänger trägt data-action=up)
+function crumbLabel(n){const L=lang==='de';if(n.level===0)return L?'Bibel':'Bible';if(n.level===1)return n.id==='ot'?(L?'AT':'OT'):'NT';if(n.level===2)return n[lang];
+  if(n.level===3){const d=DATA[n.b];return L?(SHORT[d.code]||d.abbr):d.abbr;}if(n.level===4)return String(n.c);if(n.level===5)return n.part?pTitle(n.part):n.v+'–'+n.last;return String(n.v);}
+function renderPath(n){const box=app.querySelector('.dock .path'),ids=ancestors(n.id);
+  box.setAttribute('aria-label',lang==='de'?'Pfad':'Path');
+  box.innerHTML=ids.map((id,i)=>{const x=nodes.get(id),last=i===ids.length-1,act=last?'data-action="levels"':i===ids.length-2?'data-action="up"':`data-go="${id}"`;
+    return `<button type="button" ${act} ${last?'aria-current="true"':''} title="${esc(title(x))}" aria-label="${esc(title(x))}">${esc(crumbLabel(x))}</button>`;}).join('<span class="sep" aria-hidden="true">›</span>');
+  box.scrollLeft=box.scrollWidth;}
+// Auswahl der Ebene darunter (zum aktuellen Ort): Liste oder Raster, der zuletzt besuchte Untereintrag markiert
+function childLabel(x){if(x.level<=2)return x[lang];if(x.level===3)return lang==='de'?DATA[x.b].de:DATA[x.b].en;if(x.level===4)return String(x.c);if(x.level===5)return x.part?pTitle(x.part):(lang==='de'?'Verse ':'Verses ')+x.v+'–'+x.last;return String(x.v);}
+function childPicker(n){const kids=n.children.map(id=>nodes.get(id)),rem=remembered.get(n.id),L=lang==='de';
+  if(n.level===2)return `<div class="grid books">${kids.map(x=>{const d=DATA[x.b];return `<button type="button" data-go="${x.id}" class="${x.id===rem?'cur':''}"><b>${esc(L?(SHORT[d.code]||d.abbr):d.abbr)}</b><small>${esc(L?d.de:d.en)}</small></button>`;}).join('')}</div>`;
+  if(n.level===3||n.level===5)return `<div class="grid nums">${kids.map(x=>`<button type="button" data-go="${x.id}" class="${x.id===rem?'cur':''}${n.level===5&&isPilotVerse(x)?' study':''}">${x.level===4?x.c:x.v}</button>`).join('')}</div>`;
+  if(n.level===4){const vs=kids.flatMap(x=>x.children.map(id=>nodes.get(id)));
+    return `<div class="pick-list">${kids.map(x=>`<button type="button" class="row${x.id===rem?' cur':''}" data-go="${x.id}"><span>${esc(childLabel(x))}${x.part?`<span class="note">${x.v}–${x.last}</span>`:''}</span>${icon('chevron-right')}</button>`).join('')}</div>
+      <div class="nav-block"><h4><span>${L?'Vers':'Verse'}</span></h4><div class="grid nums">${vs.map(v=>`<button type="button" data-go="${v.id}" class="${isPilotVerse(v)?'study':''}">${v.v}</button>`).join('')}</div></div>`;}
+  return `<div class="pick-list">${kids.map(x=>`<button type="button" class="row${x.id===rem?' cur':''}" data-go="${x.id}"><span>${esc(childLabel(x))}</span>${icon('chevron-right')}</button>`).join('')}</div>`;}
+function pickSheet(){const n=nodes.get(current);if(!n.children.length)return;
+  openSheet('pick',head(title(n))+`<p class="note">${lang==='de'?'Wähle':'Choose'}: ${esc(LV[lang][n.level+1])}</p>`+childPicker(n));}
 function chrome(){
   const n=nodes.get(current),t=T();app.lang=lang;app.dataset.level=n.level;recordRecent();
   app.querySelector('.location').innerHTML=icon('search')+`<span class="loc-text">${esc(title(n))}</span>`;
   app.querySelector('.location').setAttribute('aria-label',t.contents+': '+title(n));
   app.querySelector('[data-action=home]').setAttribute('aria-label',t.home);
   app.querySelector('[data-action=menu]').innerHTML=icon('menu');app.querySelector('[data-action=menu]').setAttribute('aria-label',t.menu);
-  app.querySelector('[data-action=up]').innerHTML=icon('arrow-up')+'<span>'+t.up+'</span>';
-  app.querySelector('[data-action=down]').innerHTML='<span>'+t.down+'</span>'+icon('arrow-down');
-  app.querySelector('.depth').textContent=t.levels[n.level];
-  app.querySelector('[data-action=up]').disabled=!n.parent;app.querySelector('[data-action=down]').disabled=!n.children.length;
+  renderPath(n);
+  const pk=app.querySelector('[data-action=down]');pk.disabled=!n.children.length;pk.hidden=!n.children.length;
+  pk.innerHTML=n.children.length?'<span>'+esc(LV[lang][n.level+1])+'</span>'+icon('arrow-down'):'';pk.setAttribute('aria-label',n.children.length?(lang==='de'?'Ebene darunter wählen: ':'Choose the level below: ')+LV[lang][n.level+1]:'');
   reader.setAttribute('aria-label',T().bible);
   app.querySelector('.jump').innerHTML=jumpFrom&&nodes.has(jumpFrom)?`<button type="button" class="jump-back" data-action="back">${icon('arrow-up')}<span>${t.back} ${esc(title(nodes.get(jumpFrom)))}</span></button>`:'';
 }
@@ -1142,13 +1168,12 @@ function navSheet(reset){
     h+=`<div class="nav-block"><h4><span>${L?'Buch':'Book'}</span>${nav.b!=null?`<button type="button" class="open" data-go="b${nav.b}">${esc(L?DATA[nav.b].de:DATA[nav.b].en)} ${t.open}${icon('chevron-right')}</button>`:''}</h4><div class="grid books">${gn.children.map(bid=>{const bn=nodes.get(bid),d=DATA[bn.b];return `<button type="button" class="${nav.b===bn.b?'cur':''}${workedBook(d.code)?' study':''}" data-nav="b:${bn.b}" aria-label="${esc(L?d.de:d.en)}"><b>${esc(L?(SHORT[d.code]||d.abbr):d.abbr)}</b><small>${esc(L?d.de:d.en)}</small></button>`;}).join('')}</div></div>`;}
   if(nav.b!=null){const bn=nodes.get('b'+nav.b),code=DATA[nav.b].code;
     h+=`<div class="nav-block"><h4><span>${L?'Kapitel':'Chapter'}</span>${nav.c?`<button type="button" class="open" data-go="c${nav.b}-${nav.c}">${esc(L?DATA[nav.b].de:DATA[nav.b].en)} ${nav.c} ${t.open}${icon('chevron-right')}</button>`:''}</h4><div class="grid nums">${bn.children.map(cid=>{const cn=nodes.get(cid);return `<button type="button" class="${nav.c===cn.c?'cur':''}${workedCh(code,cn.c)?' study':''}" data-nav="c:${cn.c}">${cn.c}</button>`;}).join('')}</div></div>`;}
-  if(nav.b!=null&&nav.c){const cn=nodes.get(`c${nav.b}-${nav.c}`),parts=cn.children.map(id=>nodes.get(id)).filter(x=>x.part),sn=nav.s&&nodes.get(nav.s),vs=sn?sn.children:cn.children.flatMap(sid=>nodes.get(sid).children);
-    h+=`${parts.length?`<details class="worked nav-parts"${sn?' open':''}><summary>${L?'Abschnitt wählen':'Choose a passage'} (${parts.length})</summary>${parts.map(x=>`<button type="button" class="row${nav.s===x.id?' cur':''}" data-nav="s:${x.id}"><span>${esc(pTitle(x.part))} <span class="note">${x.v}–${x.last}</span></span>${icon('chevron-right')}</button>`).join('')}</details>`:''}<div class="nav-block"><h4><span>${L?'Vers':'Verse'}</span>${sn?`<button type="button" class="open" data-go="${sn.id}">${esc(pTitle(sn.part))} ${t.open}${icon('chevron-right')}</button>`:''}</h4><div class="grid nums">${vs.map(vid=>{const v=nodes.get(vid);return `<button type="button" class="${current===vid?'cur':''}${isPilotVerse(v)?' study':''}" data-go="${vid}">${v.v}</button>`;}).join('')}</div></div>`;}
+  if(nav.b!=null&&nav.c){const cn=nodes.get(`c${nav.b}-${nav.c}`),parts=cn.children.map(id=>nodes.get(id)),sn=nav.s&&nodes.get(nav.s),vs=sn?sn.children:cn.children.flatMap(sid=>nodes.get(sid).children);
+    h+=`${parts.length?`<details class="worked nav-parts"${sn?' open':''}><summary>${L?'Abschnitt wählen':'Choose a passage'} (${parts.length})</summary>${parts.map(x=>`<button type="button" class="row${nav.s===x.id?' cur':''}" data-nav="s:${x.id}"><span>${x.part?`${esc(pTitle(x.part))} <span class="note">${x.v}–${x.last}</span>`:esc(childLabel(x))}</span>${icon('chevron-right')}</button>`).join('')}</details>`:''}<div class="nav-block"><h4><span>${L?'Vers':'Verse'}</span>${sn?`<button type="button" class="open" data-go="${sn.id}">${esc(childLabel(sn))} ${t.open}${icon('chevron-right')}</button>`:''}</h4><div class="grid nums">${vs.map(vid=>{const v=nodes.get(vid);return `<button type="button" class="${current===vid?'cur':''}${isPilotVerse(v)?' study':''}" data-go="${vid}">${v.v}</button>`;}).join('')}</div></div>`;}
   h+=`<p class="note nav-legend"><span class="dot"></span> ${L?'ausgearbeitet':'worked out'}</p>`;
   h+=`<details class="worked"><summary>${t.examples} (${STUDY.sections.length})</summary>${STUDY.sections.map(sec=>`<button type="button" class="row" data-go="${sec.parts[0].id}"><span>${esc(refDe(sec.range))} · ${esc(pTitle(sec))}</span>${icon('chevron-right')}</button>`).join('')}</details>`;
   openSheet('nav',h);renderResults();
 }
-function levelsSheet(){const n=nodes.get(current);openSheet('levels',head(T().levelsTitle)+T().levels.map((name,i)=>`<button type="button" class="row ${i===n.level?'current':''}" data-level="${i}"><span>${name}</span>${icon('chevron-right')}</button>`).join(''));}
 
 /* ---------- Ereignisse ---------- */
 /* ---------- Vorlesen (fortlaufend, Web Speech API) ----------
@@ -1285,8 +1310,8 @@ app.addEventListener('click',e=>{
   if(b.dataset.toggle){S[b.dataset.toggle]=!S[b.dataset.toggle];save();rerenderKeep();reopenMenu();return;}
   const a=b.dataset.action,n=nodes.get(current);
   if(a==='home')go('all');else if(a==='menu'){if(sheet==='menu')closeSheet();else menuSheet();}
-  else if(a==='index')navSheet(true);else if(a==='back'){const tgt=jumpFrom;jumpFrom=null;go(tgt);}else if(a==='levels')levelsSheet();
-  else if(a==='up')go(n.parent);else if(a==='down')go(remembered.get(current)||n.children[0]);
+  else if(a==='index')navSheet(true);else if(a==='back'){const tgt=jumpFrom;jumpFrom=null;go(tgt);}else if(a==='levels'){if(n.children.length)pickSheet();else navSheet(true);}
+  else if(a==='up')go(n.parent);else if(a==='down')pickSheet();
   else if(a==='load-next')loadMore();else if(a==='load-prev')loadMore(true);
 });
 app.addEventListener('input',e=>{if(e.target.type==='search'){query=e.target.value;renderResults();}});
