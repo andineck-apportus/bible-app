@@ -248,7 +248,7 @@ click('[data-close]');
  assert(sheetHost.querySelector('.crumbs.sel')&&sheetHost.querySelector('.crumbs.sel [aria-current=true]').textContent==='Kapitel 5','Auswahl als Pfad bis zum Kapitel');assert(!sheetHost.querySelector('.results .row'),'Treffer nach der Auswahl ausgeblendet');
  sheetHost.querySelector('.crumbs.sel [data-nav^="b:"]').click();assert(!sheetHost.querySelector('.crumbs.sel [data-nav^="c:"]')&&sheetHost.querySelector('.grid.nums [data-nav="c:5"]'),'Pfad klickbar: zurück zum Buch, Kapitel wählbar');
  click('[data-nav="c:5"]');click('[data-nav="s:TU-MAT-005-001-012"]');
- assert.equal(sheetHost.querySelectorAll('.nav-block:last-of-type .grid.nums [data-go]').length,12,'Abschnitt gewählt: seine 12 Verse');assert(sheetHost.querySelector('.open[data-go="TU-MAT-005-001-012"]'),'Abschnitt öffnen');
+ assert.equal(sheetHost.querySelectorAll('.nav-block:last-of-type .grid.nums [data-go]').length,12,'Abschnitt gewählt: seine 12 Verse');assert(sheetHost.querySelector('.open[data-go="TU-MAT-005-001-012"]'),'Abschnitt öffnen');assert(sheetHost.querySelector('.nav-parts .open-row[data-go="TU-MAT-005-043-048"]'),'Abschnitt direkt in der Zeile öffnen');
  click('[data-close]');}
 // Pfad unten: Glieder springen direkt; rechts die Auswahl der Ebene darunter (auch Platzhalter-Abschnitte ungeprüfter Kapitel)
 {const crumbs=[...app.querySelectorAll('.dock .path button')];assert(crumbs.length>=2&&crumbs.at(-1).getAttribute('aria-current')==='true'&&crumbs.at(-2).dataset.action==='up','Pfad unten mit aktueller Stelle');
