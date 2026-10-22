@@ -5,6 +5,7 @@
 ## v0.71 — 2026-10-22 — Pfad unten statt Lesetiefe
 
 - **Eine Navigation nach oben und unten** (Andi Neck): Die Leiste unten zeigt den Pfad mit echten Namen («Bibel › NT › Evangelien › Mt › 5 › Die Seligpreisungen › 9»); jedes Glied springt direkt auf seine Ebene. Rechts öffnet ein Knopf mit der nächsten Ebene («Kapitel ↓», «Abschnitt ↓», «Vers ↓») die Auswahl am aktuellen Ort (Liste oder Raster, zuletzt gelesener Eintrag markiert). Auf Versebene entfällt der Knopf.
+- **Abschnitt direkt öffnen** (Andi Neck): Im Navigator öffnet ein Tipp auf die Abschnittszeile (Pfeil-Knopf) den Abschnitt sofort; «Verse» rechts zeigt nur seine Verse zur Wahl. Auch in der Auswahl unten zeigt ein Pfeil, dass die Zeile öffnet.
 - **Entfernt:** «Lesetiefe wählen» sowie die Knöpfe «Kontext» und «Vertiefen»; ihre Aufgabe übernehmen Pfad und Auswahl.
 - **Abschnitte auch in noch nicht ausgearbeiteten Kapiteln:** Navigator und Auswahl bieten dort die vorläufigen Fünf-Vers-Abschnitte an («Verse 1–5» …), damit jedes Kapitel dieselben Stufen hat.
 
