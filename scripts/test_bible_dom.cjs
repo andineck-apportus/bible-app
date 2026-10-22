@@ -237,5 +237,18 @@ assert(sheetHost.textContent.includes('Quellen und Rechte')&&sheetHost.querySele
 click('[data-src-filter="used"]');
 assert(sheetHost.querySelectorAll('.src-item').length===sheetHost.querySelectorAll('.src-item .u-used').length&&sheetHost.textContent.includes('MACULA Hebrew'),'Filter verwendet');
 click('[data-close]');
-console.log(`PASS: Pilotzugang, Studienblatt ohne Griechisch, Lesarten auf Wunsch (${M().alternatives.length}), Hintergrund damals (${model.BG.length}), Bis zur Quelle (${tested}), Urtext-Modus, Rückkehrposition, Suche, Kapitelgrenze, Vaterunser Mt/Lk, Übersetzungsentscheidungen und Vergleich, Wort-Blatt, Umschrift und Anhören, Verse fortlaufend, Navigator, Querverweise und Rücksprung, Lesetext Hochdeutsch/Züridüütsch mit Titeln, Obadja hebräisch Wort für Wort, Titus, Quellen und Rechte, Texte vom Toten Meer, Wörterbuch, Ketiv/Qere, Ausgaben je Wort.`);
+// Navigation: Zuletzt gelesen vor der Suche, ausgearbeitete Stellen am Ende; Suche nach Stelle und Abschnittstitel;
+// Treffer oberhalb der Versebene werden im Navigator ausgewählt (Pfad «Auswahl», darunterliegende Ebene wählbar)
+{click('[data-action=index]');const blocks=[...sheetHost.querySelectorAll('details.recent, input[type=search], details.worked:not(.recent):not(.nav-parts)')];
+ assert(blocks.length===3&&blocks[0].matches('details.recent')&&blocks[2].matches('details.worked'),'Reihenfolge: Zuletzt gelesen, Suche, … ausgearbeitete Stellen am Ende');
+ const find=q=>{const i=sheetHost.querySelector('input[type=search]');i.value=q;i.dispatchEvent(new dom.window.Event('input',{bubbles:true}));return [...sheetHost.querySelectorAll('.results .row')];};
+ let r=find('Mt 5,3');assert.deepEqual(r.map(x=>x.querySelector('.lv').textContent),['Vers','Abschnitt','Kapitel','Buch'],'Treffer Vers, Abschnitt, Kapitel, Buch');assert(r[0].dataset.go&&!r[1].dataset.go&&r[1].dataset.pick,'Vers öffnet direkt, Abschnitt wird ausgewählt');
+ r=find('Feindesliebe');assert(r.some(x=>x.dataset.pick==='TU-MAT-005-043-048'),'Abschnitt über den Titel gefunden');
+ find('Mt 5');sheetHost.querySelector('.results [data-pick^="c"]').click();
+ assert(sheetHost.querySelector('.crumbs.sel')&&sheetHost.querySelector('.crumbs.sel [aria-current=true]').textContent==='Kapitel 5','Auswahl als Pfad bis zum Kapitel');assert(!sheetHost.querySelector('.results .row'),'Treffer nach der Auswahl ausgeblendet');
+ sheetHost.querySelector('.crumbs.sel [data-nav^="b:"]').click();assert(!sheetHost.querySelector('.crumbs.sel [data-nav^="c:"]')&&sheetHost.querySelector('.grid.nums [data-nav="c:5"]'),'Pfad klickbar: zurück zum Buch, Kapitel wählbar');
+ click('[data-nav="c:5"]');click('[data-nav="s:TU-MAT-005-001-012"]');
+ assert.equal(sheetHost.querySelectorAll('.nav-block:last-of-type .grid.nums [data-go]').length,12,'Abschnitt gewählt: seine 12 Verse');assert(sheetHost.querySelector('.open[data-go="TU-MAT-005-001-012"]'),'Abschnitt öffnen');
+ click('[data-close]');}
+console.log(`PASS: Navigation (Suche nach Stelle und Abschnitt, Auswahl im Pfad), Pilotzugang, Studienblatt ohne Griechisch, Lesarten auf Wunsch (${M().alternatives.length}), Hintergrund damals (${model.BG.length}), Bis zur Quelle (${tested}), Urtext-Modus, Rückkehrposition, Suche, Kapitelgrenze, Vaterunser Mt/Lk, Übersetzungsentscheidungen und Vergleich, Wort-Blatt, Umschrift und Anhören, Verse fortlaufend, Navigator, Querverweise und Rücksprung, Lesetext Hochdeutsch/Züridüütsch mit Titeln, Obadja hebräisch Wort für Wort, Titus, Quellen und Rechte, Texte vom Toten Meer, Wörterbuch, Ketiv/Qere, Ausgaben je Wort.`);
 dom.window.close();

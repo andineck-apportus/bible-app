@@ -2,6 +2,13 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.70 — 2026-10-22 — Navigation: Suche und Auswahl
+
+- **Reihenfolge** (Andi Neck): «Zuletzt gelesen» steht vor der Suche, «Ausgearbeitete Stellen» am Ende des Navigators.
+- **Suche** findet je nach Eingabe Vers, Abschnitt, Kapitel und Buch («Mt 5,3» → Vers, Abschnitt, Kapitel, Buch; «Mt 5» → Kapitel, seine Abschnitte, Buch) und Abschnitte über ihren Titel («Feindesliebe»); jeder Treffer mit Ebene und, beim Vers, dem Anfang des Textes.
+- **Treffer antippen:** Ein Vers öffnet sich direkt. Höhere Ebenen werden im Navigator ausgewählt: Der Pfad («Auswahl: Die Bibel › Neues Testament › Evangelien › Matthäus › Kapitel 5») ist klickbar, darunter ist die nächste Ebene wählbar (Kapitel, Abschnitt, Verse); «… öffnen» springt hin.
+- Abschnitte unter «Abschnitt wählen» werden ebenfalls ausgewählt statt gleich geöffnet; danach stehen nur ihre Verse zur Wahl.
+
 ## v0.69 — 2026-10-20 — Veröffentlichung über Cloudflare Pages
 
 - **Automatischer Build** (GitHub Actions, `.github/workflows/deploy.yml`): Daten prüfen, Python- und App-Tests (jsdom, Playwright), bauen; bei Push auf `main` Veröffentlichung von `build/bible/` auf Cloudflare Pages (Projekt `atmo-bible`). Braucht die Repo-Geheimnisse `CLOUDFLARE_API_TOKEN` und `CLOUDFLARE_ACCOUNT_ID`.

@@ -219,6 +219,8 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .edrow{margin:0}
 #bible-stream .row{display:flex!important;justify-content:space-between;align-items:center;width:100%;min-height:50px;border-top:1px solid var(--rule)!important;gap:10px}
 #bible-stream .row .sub{display:block;font-size:12.5px;color:var(--muted)}
+#bible-stream .nav-parts .row.cur{font-weight:600;box-shadow:inset 3px 0 0 var(--ink,currentColor);padding-left:10px}
+#bible-stream .row.result .lv{display:inline-block;min-width:4.6em;margin-right:4px;font-size:11.5px;letter-spacing:.02em;text-transform:uppercase;color:var(--muted)}
 #bible-stream .row.current{font-weight:600}
 #bible-stream details.worked{margin:8px 0 4px;border-top:1px solid var(--rule)}
 #bible-stream details.worked>summary{cursor:pointer;padding:12px 0;font:500 14px/1.3 var(--ui);color:var(--muted)}
@@ -460,7 +462,22 @@ const stats={books:DATA.length,chapters:DATA.reduce((a,b)=>a+b.counts.length,0),
 const norm=s=>s.toLowerCase().normalize('NFD').replace(/[̀-ͯ.\s]/g,'');
 function ancestors(id){const a=[];for(let n=nodes.get(id);n;n=nodes.get(n.parent))a.unshift(n.id);return a;}
 function sibling(id,delta){const n=nodes.get(id);const s=streams[n.level];return s[n.si+delta]||null;}
-function search(q){q=q.trim();if(!q)return[];const match=q.match(/^(.+?)\s*(\d+)(?:\s*[:,]\s*(\d+))?$/);if(match){const name=norm(match[1]),c=Number(match[2]),v=match[3]?Number(match[3]):null;const candidates=DATA.map((b,i)=>({b,i})).filter(({b})=>[b.de,b.en,b.abbr,...b.alias].some(s=>norm(s)===name));return candidates.map(({i})=>nodes.get(v?`v${i}-${c}-${v}`:`c${i}-${c}`)).filter(Boolean);}const needle=norm(q);return DATA.map((b,i)=>({b,i})).filter(({b})=>[b.de,b.en,b.abbr,...b.alias].some(s=>norm(s).includes(needle))).map(({i})=>nodes.get('b'+i));}
+// Titel eines Abschnitts in der gewählten Lesesprache (wird von der App gesetzt; ohne App: Grundtitel)
+let partTitle=p=>p.title||'';
+// Suche: Bibelstelle («Mt 5», «Mt 5,3», «1 Joh 2,1–5») ergibt Vers, Abschnitt, Kapitel und Buch (je nach Eingabe);
+// Text ergibt Bücher und Abschnitte, deren Titel alle Wörter enthalten (in allen Sprachen der Titel).
+function bookIdx(name){const n=norm(name);return DATA.map((b,i)=>({b,i})).filter(({b})=>[b.de,b.en,b.abbr,...b.alias].some(x=>norm(x)===n)).map(x=>x.i);}
+function search(q){q=q.trim();if(!q)return[];const out=[],add=n=>{if(n&&!out.includes(n))out.push(n);};
+  const m=q.match(/^(.+?)\s*(\d+)(?:\s*[:,.]\s*(\d+)(?:\s*[-–]\s*\d+)?)?$/);
+  if(m)for(const i of bookIdx(m[1])){const c=Number(m[2]),v=m[3]?Number(m[3]):null,ch=nodes.get(`c${i}-${c}`);if(!ch)continue;
+    if(v){const vn=nodes.get(`v${i}-${c}-${v}`);if(vn){add(vn);const sec=nodes.get(vn.parent);if(sec&&sec.part)add(sec);}}
+    add(ch);if(!v)ch.children.map(id=>nodes.get(id)).filter(x=>x.part).forEach(add);add(nodes.get('b'+i));}
+  if(out.length)return out;
+  const words=q.split(/\s+/).map(norm).filter(Boolean),all=words.join('');
+  DATA.forEach((b,i)=>{if([b.de,b.en,b.abbr,...b.alias].some(x=>norm(x).includes(all)))add(nodes.get('b'+i));});
+  for(const n of nodes.values()){if(out.length>=40)break;if(n.level!==5||!n.part)continue;
+    const hay=norm([partTitle(n.part),n.part.title,...Object.values(n.part.titles||{})].filter(Boolean).join(' '));if(words.every(w=>hay.includes(w)))add(n);}
+  return out;}
 
 /* ---------- Hilfen ---------- */
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -625,6 +642,7 @@ const LOC=o=>{const t=o&&(((I18N[S.text]||{})[o.id])||(o.i18n&&o.i18n[S.text]));
 const SUMT=id=>SUMS[id]?LOC({...SUMS[id],id}).text:null;
 const TXT=ref=>LAYER().text[ref]||STUDY.layers.de.text[ref]||null;
 const pTitle=p=>((I18N[S.text]||{})[p.id]||{}).title||(p.titles&&(p.titles[S.text]||p.titles.de))||p.title;
+partTitle=pTitle;
 const pSummary=p=>((I18N[S.text]||{})[p.id]||{}).summary||(p.summaries&&(p.summaries[S.text]||p.summaries.de))||p.summary;
 const isPilotVerse=n=>n.level===6&&!!TXT(n.canonicalRef);
 const DEC={literal:['wörtlich','literal'],adapted:['sprachlich angepasst','adapted'],interpretive:['Deutungsentscheidung','interpretive choice'],traditional:['folgt der vertrauten Wiedergabe','follows traditional wording']};
@@ -1096,27 +1114,38 @@ function settingsSheet(){
   <div class="set"><span>${t.readSample}</span><span class="grc-line">${esc(t.readSampleShort)}<button type="button" class="play" data-ra-sample aria-label="${t.readSample}">${icon('speak')}</button></span></div>
   <p class="note">${t.readVoiceHint}</p>`);
 }
-function renderResults(){const box=host.querySelector('.results');if(!box)return;box.innerHTML=query?search(query).map(n=>`<button type="button" class="row" data-go="${n.id}"><span>${esc(title(n))}</span>${icon('chevron-right')}</button>`).join('')||`<p class="note" role="status">${T().empty}</p>`:'';}
+const LV={de:['Bibel','Testament','Buchgruppe','Buch','Kapitel','Abschnitt','Vers'],en:['Bible','Testament','Group','Book','Chapter','Passage','Verse']};
+function resultRow(n){const bk=n.level>=3?bookName(n):'',sep=lang==='de'?',':':';let label=title(n),sub='';
+  if(n.level===3)label=bk;else if(n.level===4)label=bk+' '+n.c;
+  else if(n.level===5){label=`${bk} ${n.c}${sep}${n.v}–${n.last}`;if(n.part)sub=pTitle(n.part);}
+  else if(n.level===6){label=`${bk} ${n.c}${sep}${n.v}`;const tx=(LAYER().text||{})[n.canonicalRef]||((STUDY.layers.de||{}).text||{})[n.canonicalRef]||'';sub=String(tx).replace(/<[^>]*>/g,'').replace(MARK_RE,'').slice(0,90)+(String(tx).length>90?'…':'');}
+  // Vers: direkt öffnen; höhere Ebenen: im Navigator auswählen (darunterliegende Ebene wählbar)
+  return `<button type="button" class="row result" ${n.level===6?`data-go="${n.id}"`:`data-pick="${n.id}"`}><span><span class="lv">${LV[lang][n.level]}</span> ${esc(label)}${sub?`<span class="sub">${esc(sub)}</span>`:''}</span>${icon('chevron-right')}</button>`;}
+function renderResults(){const box=host.querySelector('.results');if(!box)return;box.innerHTML=query?search(query).map(resultRow).join('')||`<p class="note" role="status">${T().empty}</p>`:'';}
 let nav=null;
-function navFrom(id){const st={t:'nt',g:null,b:null,c:null};for(const x of ancestors(id)){const n=nodes.get(x);if(n.level===1)st.t=n.id;if(n.level===2)st.g=n.gi;if(n.level===3)st.b=n.b;if(n.level===4)st.c=n.c;}return st;}
+function navFrom(id,withPart){const st={t:'nt',g:null,b:null,c:null,s:null};for(const x of ancestors(id)){const n=nodes.get(x);if(n.level===1)st.t=n.id;if(n.level===2)st.g=n.gi;if(n.level===3)st.b=n.b;if(n.level===4)st.c=n.c;if(withPart&&n.level===5&&n.part)st.s=n.id;}return st;}
 function navSheet(reset){
   if(reset||!nav)nav=navFrom(current);const t=T(),L=lang==='de';
   const name=n=>n.level===0?t.bible:n.level===5&&n.part?pTitle(n.part):n.level===4?(L?'Kapitel ':'Chapter ')+n.c:n.level===6?(L?'Vers ':'Verse ')+n.v:n.level===5?(L?'Verse ':'Verses ')+n.v+'–'+n.last:(L?n.de:n.en);
   const crumbs=ancestors(current).map(id=>`<button type="button" data-go="${id}" ${id===current?'aria-current="true"':''}>${esc(name(nodes.get(id)))}</button>`).join('<span class="sep">›</span>');
   const workedBook=code=>STUDY.sections.some(sec=>rangeOf(sec.range).code===code),workedCh=(code,c)=>STUDY.sections.some(sec=>{const g=rangeOf(sec.range);return g.code===code&&g.c===c;});
-  let h=head(t.contents)+`<label for="find-nav-${appIndex}" class="note">${t.search}</label><input id="find-nav-${appIndex}" type="search" placeholder="${t.hint}" value="${esc(query)}" autocomplete="off"><div class="results"></div>
-  ${recent.length?`<details class="worked recent"><summary>${t.recent} (${recent.length})</summary>${recent.map(x=>`<button type="button" class="row recent-row" data-go="${x.id}"><span>${esc(recentLabel(x.id))}</span>${icon('chevron-right')}</button>`).join('')}<button type="button" class="link soft clear-recent" data-clear-recent>${t.recentClear}</button></details>`:''}
-  <details class="worked"><summary>${t.examples} (${STUDY.sections.length})</summary>${STUDY.sections.map(sec=>`<button type="button" class="row" data-go="${sec.parts[0].id}"><span>${esc(refDe(sec.range))} · ${esc(pTitle(sec))}</span>${icon('chevron-right')}</button>`).join('')}</details>
-  <p class="note">${t.here}</p><div class="crumbs">${crumbs}</div>`;
+  // Auswahl im Navigator (nach einem Suchtreffer oder Antippen) als klickbarer Pfad; ohne Auswahl die aktuelle Position
+  const pos=navFrom(current),picked=['t','g','b','c','s'].some(k=>(nav[k]??null)!==(pos[k]??null));
+  const selIds=[['all','t:'+nav.t],[nav.t,'t:'+nav.t],nav.g!=null&&['g'+nav.g,'g:'+nav.g],nav.b!=null&&['b'+nav.b,'b:'+nav.b],nav.c&&[`c${nav.b}-${nav.c}`,'c:'+nav.c],nav.s&&[nav.s,'s:'+nav.s]].filter(Boolean);
+  const selCrumbs=selIds.map(([id,k],i)=>`<button type="button" data-nav="${k}" ${i===selIds.length-1?'aria-current="true"':''}>${esc(name(nodes.get(id)))}</button>`).join('<span class="sep">›</span>');
+  let h=head(t.contents)+`${recent.length?`<details class="worked recent"><summary>${t.recent} (${recent.length})</summary>${recent.map(x=>`<button type="button" class="row recent-row" data-go="${x.id}"><span>${esc(recentLabel(x.id))}</span>${icon('chevron-right')}</button>`).join('')}<button type="button" class="link soft clear-recent" data-clear-recent>${t.recentClear}</button></details>`:''}
+  <label for="find-nav-${appIndex}" class="note">${t.search}</label><input id="find-nav-${appIndex}" type="search" placeholder="${t.hint}" value="${esc(query)}" autocomplete="off"><div class="results"></div>
+  <p class="note">${picked?(L?'Auswahl':'Selection'):t.here}</p><div class="crumbs${picked?' sel':''}">${picked?selCrumbs:crumbs}</div>`;
   h+=`<div class="nav-block"><div class="seg" role="group">${['ot','nt'].map(x=>`<button type="button" data-nav="t:${x}" aria-pressed="${nav.t===x}">${esc(L?nodes.get(x).de:nodes.get(x).en)}</button>`).join('')}</div>
    <div class="chips">${nodes.get(nav.t).children.map(gid=>{const g=nodes.get(gid);return `<button type="button" class="chip${nav.g===g.gi?' cur':''}" data-nav="g:${g.gi}">${esc(L?g.de:g.en)}</button>`;}).join('')}</div></div>`;
   if(nav.g!=null){const gn=nodes.get('g'+nav.g);
     h+=`<div class="nav-block"><h4><span>${L?'Buch':'Book'}</span>${nav.b!=null?`<button type="button" class="open" data-go="b${nav.b}">${esc(L?DATA[nav.b].de:DATA[nav.b].en)} ${t.open}${icon('chevron-right')}</button>`:''}</h4><div class="grid books">${gn.children.map(bid=>{const bn=nodes.get(bid),d=DATA[bn.b];return `<button type="button" class="${nav.b===bn.b?'cur':''}${workedBook(d.code)?' study':''}" data-nav="b:${bn.b}" aria-label="${esc(L?d.de:d.en)}"><b>${esc(L?(SHORT[d.code]||d.abbr):d.abbr)}</b><small>${esc(L?d.de:d.en)}</small></button>`;}).join('')}</div></div>`;}
   if(nav.b!=null){const bn=nodes.get('b'+nav.b),code=DATA[nav.b].code;
     h+=`<div class="nav-block"><h4><span>${L?'Kapitel':'Chapter'}</span>${nav.c?`<button type="button" class="open" data-go="c${nav.b}-${nav.c}">${esc(L?DATA[nav.b].de:DATA[nav.b].en)} ${nav.c} ${t.open}${icon('chevron-right')}</button>`:''}</h4><div class="grid nums">${bn.children.map(cid=>{const cn=nodes.get(cid);return `<button type="button" class="${nav.c===cn.c?'cur':''}${workedCh(code,cn.c)?' study':''}" data-nav="c:${cn.c}">${cn.c}</button>`;}).join('')}</div></div>`;}
-  if(nav.b!=null&&nav.c){const cn=nodes.get(`c${nav.b}-${nav.c}`),parts=cn.children.map(id=>nodes.get(id)).filter(x=>x.part),vs=cn.children.flatMap(sid=>nodes.get(sid).children);
-    h+=`${parts.length?`<details class="worked nav-parts"><summary>${L?'Abschnitt wählen':'Choose a passage'} (${parts.length})</summary>${parts.map(x=>`<button type="button" class="row" data-go="${x.id}"><span>${esc(pTitle(x.part))} <span class="note">${x.v}–${x.last}</span></span>${icon('chevron-right')}</button>`).join('')}</details>`:''}<div class="nav-block"><h4><span>${L?'Vers':'Verse'}</span></h4><div class="grid nums">${vs.map(vid=>{const v=nodes.get(vid);return `<button type="button" class="${current===vid?'cur':''}${isPilotVerse(v)?' study':''}" data-go="${vid}">${v.v}</button>`;}).join('')}</div></div>`;}
+  if(nav.b!=null&&nav.c){const cn=nodes.get(`c${nav.b}-${nav.c}`),parts=cn.children.map(id=>nodes.get(id)).filter(x=>x.part),sn=nav.s&&nodes.get(nav.s),vs=sn?sn.children:cn.children.flatMap(sid=>nodes.get(sid).children);
+    h+=`${parts.length?`<details class="worked nav-parts"${sn?' open':''}><summary>${L?'Abschnitt wählen':'Choose a passage'} (${parts.length})</summary>${parts.map(x=>`<button type="button" class="row${nav.s===x.id?' cur':''}" data-nav="s:${x.id}"><span>${esc(pTitle(x.part))} <span class="note">${x.v}–${x.last}</span></span>${icon('chevron-right')}</button>`).join('')}</details>`:''}<div class="nav-block"><h4><span>${L?'Vers':'Verse'}</span>${sn?`<button type="button" class="open" data-go="${sn.id}">${esc(pTitle(sn.part))} ${t.open}${icon('chevron-right')}</button>`:''}</h4><div class="grid nums">${vs.map(vid=>{const v=nodes.get(vid);return `<button type="button" class="${current===vid?'cur':''}${isPilotVerse(v)?' study':''}" data-go="${vid}">${v.v}</button>`;}).join('')}</div></div>`;}
   h+=`<p class="note nav-legend"><span class="dot"></span> ${L?'ausgearbeitet':'worked out'}</p>`;
+  h+=`<details class="worked"><summary>${t.examples} (${STUDY.sections.length})</summary>${STUDY.sections.map(sec=>`<button type="button" class="row" data-go="${sec.parts[0].id}"><span>${esc(refDe(sec.range))} · ${esc(pTitle(sec))}</span>${icon('chevron-right')}</button>`).join('')}</details>`;
   openSheet('nav',h);renderResults();
 }
 function levelsSheet(){const n=nodes.get(current);openSheet('levels',head(T().levelsTitle)+T().levels.map((name,i)=>`<button type="button" class="row ${i===n.level?'current':''}" data-level="${i}"><span>${name}</span>${icon('chevron-right')}</button>`).join(''));}
@@ -1232,7 +1261,8 @@ app.addEventListener('click',e=>{
   if(b.hasAttribute('data-close')){closeSheet();return;}
   if(b.dataset.deep){const n=nodes.get(b.dataset.deep);current=b.dataset.deep;go(remembered.get(current)||n.children[0]);return;}
   if(b.dataset.refGo){goRef(b.dataset.refGo);return;}
-  if(b.dataset.nav){const [k,v]=b.dataset.nav.split(':');if(k==='t'){nav={t:v,g:null,b:null,c:null};}else if(k==='g'){nav.g=Number(v);nav.b=null;nav.c=null;}else if(k==='b'){nav.b=Number(v);nav.c=null;}else if(k==='c'){nav.c=Number(v);}
+  if(b.dataset.pick){nav=navFrom(b.dataset.pick,true);query='';navSheet();const last=host.querySelector('.nav-parts[open]')||host.querySelector('.nav-block:last-of-type');if(last&&last.scrollIntoView)last.scrollIntoView({block:'nearest'});return;}
+  if(b.dataset.nav){const [k,v]=b.dataset.nav.split(':');if(k==='t'){nav={t:v,g:null,b:null,c:null,s:null};}else if(k==='g'){nav.g=Number(v);nav.b=null;nav.c=null;nav.s=null;}else if(k==='b'){nav.b=Number(v);nav.c=null;nav.s=null;}else if(k==='c'){nav.c=Number(v);nav.s=null;}else if(k==='s'){nav.s=v;}
     const old=host.querySelector('.sheet'),y=old?old.scrollTop:0;navSheet();const sh=host.querySelector('.sheet');if(sh&&sh.scrollTo)sh.scrollTo(0,y);const last=host.querySelector('.nav-block:last-of-type');if(last&&last.scrollIntoView)last.scrollIntoView({block:'nearest'});return;}
   if(b.hasAttribute('data-clear-recent')){clearRecent();navSheet();return;}
   if(b.hasAttribute('data-settings')){settingsSheet();return;}
