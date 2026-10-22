@@ -2,6 +2,12 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.71 — 2026-10-22 — Pfad unten statt Lesetiefe
+
+- **Eine Navigation nach oben und unten** (Andi Neck): Die Leiste unten zeigt den Pfad mit echten Namen («Bibel › NT › Evangelien › Mt › 5 › Die Seligpreisungen › 9»); jedes Glied springt direkt auf seine Ebene. Rechts öffnet ein Knopf mit der nächsten Ebene («Kapitel ↓», «Abschnitt ↓», «Vers ↓») die Auswahl am aktuellen Ort (Liste oder Raster, zuletzt gelesener Eintrag markiert). Auf Versebene entfällt der Knopf.
+- **Entfernt:** «Lesetiefe wählen» sowie die Knöpfe «Kontext» und «Vertiefen»; ihre Aufgabe übernehmen Pfad und Auswahl.
+- **Abschnitte auch in noch nicht ausgearbeiteten Kapiteln:** Navigator und Auswahl bieten dort die vorläufigen Fünf-Vers-Abschnitte an («Verse 1–5» …), damit jedes Kapitel dieselben Stufen hat.
+
 ## v0.70 — 2026-10-22 — Navigation: Suche und Auswahl
 
 - **Reihenfolge** (Andi Neck): «Zuletzt gelesen» steht vor der Suche, «Ausgearbeitete Stellen» am Ende des Navigators.

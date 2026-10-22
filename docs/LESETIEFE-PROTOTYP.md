@@ -71,7 +71,7 @@ Rückmeldung vom 2026-10-12: Auf Versebene passt die App; es fehlt der Hintergru
 
 ## Bedienidee (seit v0.11)
 
-Jede Zoomstufe ist eine fortlaufende Lesefassung: Bibel → Testament → Buchgruppe → Buch → Kapitel → Abschnitt → Vers. Scrollen führt zum nächsten Eintrag derselben Ebene, «Vertiefen» öffnet die darunterliegende Fassung am aktuellen Eintrag, «Kontext» führt zur übergeordneten zurück. Lesepositionen bleiben pro Ebene erhalten. Inhaltsverzeichnis (Tippen auf den Ort oben), Ebenenwahl (Mitte unten) und Stellensuche (Menü) sind zusätzliche Sprungmöglichkeiten. Die Gestaltung ist ruhig und typografisch, inspiriert vom Auftritt der Fondation Beyeler; es wurden keine Markenassets übernommen. Logo: geometrisches B, gedreht, mit zwei Quadraten; reine SVG-Pfade.
+Jede Zoomstufe ist eine fortlaufende Lesefassung: Bibel → Testament → Buchgruppe → Buch → Kapitel → Abschnitt → Vers. Scrollen führt zum nächsten Eintrag derselben Ebene. Seit v0.71 zeigt die Leiste unten den Pfad mit echten Namen (z. B. «Bibel › NT › Evangelien › Mt › 5 › Die Seligpreisungen › 9»): jedes Glied springt direkt auf seine Ebene; der Knopf rechts («Kapitel ↓», «Vers ↓» …) öffnet die Auswahl der Ebene darunter am aktuellen Ort, der zuletzt gelesene Eintrag ist markiert. Lesepositionen bleiben pro Ebene erhalten. Der Navigator (Lupe oben) bietet Zuletzt gelesen, Suche und freies Blättern. Die Gestaltung ist ruhig und typografisch, inspiriert vom Auftritt der Fondation Beyeler; es wurden keine Markenassets übernommen. Logo: geometrisches B, gedreht, mit zwei Quadraten; reine SVG-Pfade.
 
 ## Daten
 
