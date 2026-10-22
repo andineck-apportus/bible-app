@@ -5,6 +5,8 @@
 ## v0.71 — 2026-10-22 — Pfad unten statt Lesetiefe
 
 - **Eine Navigation nach oben und unten** (Andi Neck): Die Leiste unten zeigt den Pfad mit echten Namen («Bibel › NT › Evangelien › Mt › 5 › Die Seligpreisungen › 9»); jedes Glied springt direkt auf seine Ebene. Rechts öffnet ein Knopf mit der nächsten Ebene («Kapitel ↓», «Abschnitt ↓», «Vers ↓») die Auswahl am aktuellen Ort (Liste oder Raster, zuletzt gelesener Eintrag markiert). Auf Versebene entfällt der Knopf.
+- **Richtige Stelle nach dem Navigieren** (Hinweis Andi Neck): Der gewählte Eintrag steht jetzt genau oben unter der Kopfleiste und bleibt dort, während sich darüber noch etwas aufbaut; Titelzeile und Pfad zeigen sofort die gewählte Stelle (vorher teils den Eintrag davor, z. B. «Maleachi 4,6» vor Matthäus). Beim Nachladen nach oben bleibt der oberste sichtbare Eintrag stehen, statt zu springen; die Leisten bleiben nach dem Sprung sichtbar.
+- **Ausgearbeitete Verse markiert, bevor das Buch geladen ist** (z. B. Rut im Navigator).
 - **Testament-Umschalter** (Andi Neck): «AT | NT» als kleiner runder Umschalter wie Text/Bild, direkt vor den Buchgruppen (voller Name als Hinweis).
 - **Abschnitt direkt öffnen** (Andi Neck): Im Navigator öffnet ein Tipp auf die Abschnittszeile (Pfeil-Knopf) den Abschnitt sofort; «Verse» rechts zeigt nur seine Verse zur Wahl. Auch in der Auswahl unten zeigt ein Pfeil, dass die Zeile öffnet.
 - **Entfernt:** «Lesetiefe wählen» sowie die Knöpfe «Kontext» und «Vertiefen»; ihre Aufgabe übernehmen Pfad und Auswahl.

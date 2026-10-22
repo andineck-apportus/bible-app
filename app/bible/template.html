@@ -664,7 +664,9 @@ const TXT=ref=>LAYER().text[ref]||STUDY.layers.de.text[ref]||null;
 const pTitle=p=>((I18N[S.text]||{})[p.id]||{}).title||(p.titles&&(p.titles[S.text]||p.titles.de))||p.title;
 partTitle=pTitle;
 const pSummary=p=>((I18N[S.text]||{})[p.id]||{}).summary||(p.summaries&&(p.summaries[S.text]||p.summaries.de))||p.summary;
-const isPilotVerse=n=>n.level===6&&!!TXT(n.canonicalRef);
+// Ausgearbeitet: Text geladen oder Vers in einer ausgearbeiteten Stelle (auch bevor das Buchpaket geladen ist)
+let WORKED=null;const inWorked=n=>{if(!WORKED)WORKED=STUDY.sections.map(sec=>rangeOf(sec.range));const code=DATA[n.b].code;return WORKED.some(g=>g.code===code&&g.c===n.c&&n.v>=g.from&&n.v<=g.to);};
+const isPilotVerse=n=>n.level===6&&(!!TXT(n.canonicalRef)||inWorked(n));
 const DEC={literal:['wörtlich','literal'],adapted:['sprachlich angepasst','adapted'],interpretive:['Deutungsentscheidung','interpretive choice'],traditional:['folgt der vertrauten Wiedergabe','follows traditional wording']};
 function decorate(text,decs){
   // Markiert Stellen, an denen die Übersetzung einer Tradition folgt oder eine Deutung wählt (nur im Urtext-Modus)
@@ -862,7 +864,7 @@ function loadMore(before=false){
   const ids=streams[nodes.get(current).level],col=reader.querySelector('.column'),t=T();if(!col||moreBusy)return;
   const p=needData(codesOf(before?ids.slice(Math.max(0,readerStart-10),readerStart):ids.slice(readerEnd,readerEnd+10)));
   if(p){moreBusy=true;p.then(()=>{moreBusy=false;loadMore(before);});return;}
-  if(before&&readerStart>0){const old=reader.scrollHeight,start=Math.max(0,readerStart-10);col.querySelector('.load-before')?.remove();col.insertAdjacentHTML('afterbegin',(start>0?`<button type="button" class="load load-before" data-action="load-prev">${t.loadPrev}</button>`:'')+ids.slice(start,readerStart).map(entryM).join(''));readerStart=start;reader.scrollTop+=reader.scrollHeight-old;}
+  if(before&&readerStart>0){const anchor=activeEntry(),aTop=anchor?anchor.getBoundingClientRect().top:0,old=reader.scrollHeight,start=Math.max(0,readerStart-10);col.querySelector('.load-before')?.remove();col.insertAdjacentHTML('afterbegin',(start>0?`<button type="button" class="load load-before" data-action="load-prev">${t.loadPrev}</button>`:'')+ids.slice(start,readerStart).map(entryM).join(''));readerStart=start;if(anchor&&anchor.isConnected){reader.scrollTop+=anchor.getBoundingClientRect().top-aTop;holdPin(anchor.dataset.stream,aTop-reader.getBoundingClientRect().top);}else reader.scrollTop+=reader.scrollHeight-old;}
   else if(!before&&readerEnd<ids.length){col.querySelector('.load-after')?.remove();const end=Math.min(readerEnd+10,ids.length);col.insertAdjacentHTML('beforeend',ids.slice(readerEnd,end).map(entryM).join('')+(end<ids.length?`<button type="button" class="load load-after" data-action="load-next">${t.loadNext}</button>`:`<p class="end">${t.end}</p>`));readerEnd=end;if(typeof watchEnd==='function')watchEnd();}
 }
 
@@ -921,6 +923,17 @@ function sidebar(){const n=nodes.get(current),ids=n.level<=3?streams[n.level||1]
   aside.dataset.parent=P?P.id:'';
   aside.innerHTML=(P?`<button type="button" class="side-head eyebrow" data-go="${P.id}" title="${esc(head)}">${esc(head)}</button>`:`<p class="eyebrow">${esc(head)}</p>`)+step(prevT,'prev')+ids.slice(0,200).map(id=>{const x=nodes.get(id);return `<button type="button" data-go="${id}" aria-current="${id===current}"><span>${esc(lab(x))}</span>${worked(x)?'<span class="dot"></span>':''}</button>`;}).join('')+step(nextT,'next');
   const cur=aside.querySelector('[aria-current=true]');if(cur&&cur.scrollIntoView&&aside.clientHeight)try{cur.scrollIntoView({block:'center'});}catch(e){}}
+/* Lage nach dem Navigieren: Der gewählte Eintrag steht oben an der Lesefläche (unter der Kopfleiste) und bleibt dort,
+   auch wenn sich darüber noch etwas aufbaut (Schriften, Bilder, nachgeladene Einträge) – bis gelesen bzw. gescrollt wird. */
+const padTop=()=>parseFloat(getComputedStyle(reader).paddingTop)||0;
+function activeEntry(){const y=reader.getBoundingClientRect().top+padTop()+12;return [...reader.querySelectorAll('[data-stream]')].find(el=>el.getBoundingClientRect().bottom>y)||null;}
+let pin=null;
+function applyPin(){if(!pin)return;if(Date.now()>pin.until){pin=null;return;}const el=reader.querySelector(`[data-stream="${pin.id}"]`);if(!el)return;
+  const want=reader.getBoundingClientRect().top+pin.off,d=el.getBoundingClientRect().top-want;if(Math.abs(d)>1)reader.scrollTop+=d;}
+function holdPin(id,off){pin={id,off,until:Date.now()+1500};applyPin();}
+function pinTo(id){holdPin(id,padTop());}
+if('ResizeObserver' in globalThis){const ro=new ResizeObserver(()=>applyPin());ro.observe(reader);new MutationObserver(()=>{const c=reader.querySelector('.column');if(c)ro.observe(c);}).observe(reader,{childList:true});}
+for(const ev of ['wheel','touchstart','keydown','pointerdown'])reader.addEventListener(ev,()=>{pin=null;},{passive:true});
 function render(after){const n=nodes.get(current);const r=savedStreams.get(n.level);const [s0,e0]=(r&&r.id===current)?[r.start,r.end]:[n.si,Math.min(n.si+10,streams[n.level].length)];
   withData(codesOf(streams[n.level].slice(s0,e0)),()=>{if(nodes.get(current)!==n)return;applyPrefs();chrome();sidebar();readerStart=s0;readerEnd=e0;reader.innerHTML=streamMarkup();if(after)after();});}
 function rerenderKeep(){withData(codesOf(streams[nodes.get(current).level].slice(readerStart,readerEnd)),rerenderNow);}
@@ -934,7 +947,7 @@ function rerenderNow(){
 }
 function reopenMenu(){const old=host.querySelector('.sheet'),y=old?old.scrollTop:0;if(sheet==='settings')settingsSheet();else menuSheet();const nw=host.querySelector('.sheet');if(nw)nw.scrollTop=y;}
 function saveStream(){savedStreams.set(nodes.get(current).level,{id:current,start:readerStart,end:readerEnd,offset:reader.scrollTop});}
-function go(id,keepJump){if(!id||!nodes.has(id))return;if(!keepJump)jumpFrom=null;saveStream();for(const child of ancestors(id).slice(1))remembered.set(nodes.get(child).parent,child);current=id;closeSheet();const r=savedStreams.get(nodes.get(id).level);render(()=>{reader.scrollTop=r&&r.id===id?r.offset:0;});app.classList.remove('immersed');app.querySelector('.live').textContent=title(nodes.get(id));}
+function go(id,keepJump){if(!id||!nodes.has(id))return;if(!keepJump)jumpFrom=null;saveStream();for(const child of ancestors(id).slice(1))remembered.set(nodes.get(child).parent,child);current=id;closeSheet();const r=savedStreams.get(nodes.get(id).level);render(()=>{if(r&&r.id===id)reader.scrollTop=r.offset;else pinTo(id);});app.classList.remove('immersed');app.querySelector('.live').textContent=title(nodes.get(id));}
 function resolveLevel(level){let n=nodes.get(current);while(n.level>level)n=nodes.get(n.parent);while(n.level<level)n=nodes.get(remembered.get(n.id)||n.children[0]);return n.id;}
 
 /* ---------- Blätter ---------- */
@@ -1332,8 +1345,8 @@ app.addEventListener('keydown',e=>{if(e.key==='Escape'&&sheet){closeSheet();read
   if((e.key==='Enter'||e.key===' ')&&e.target.matches&&e.target.matches('[role=button].dec')){e.preventDefault();e.target.click();}});
 let busy=false,lastTop=0;
 reader.addEventListener('scroll',()=>{if(busy)return;busy=true;
-  const y=reader.scrollTop;if(y>80&&y-lastTop>6)app.classList.add('immersed');else if(lastTop-y>6||y<40)app.classList.remove('immersed');lastTop=y;
-  const top=reader.getBoundingClientRect().top+70;const active=[...reader.querySelectorAll('[data-stream]')].find(el=>el.getBoundingClientRect().bottom>top);
+  const y=reader.scrollTop;if(pin&&Date.now()<=pin.until){lastTop=y;}else if(y>80&&y-lastTop>6)app.classList.add('immersed');else if(lastTop-y>6||y<40)app.classList.remove('immersed');lastTop=y;
+  const active=pin&&Date.now()<=pin.until?null:activeEntry();
   if(active&&active.dataset.stream!==current){current=active.dataset.stream;for(const child of ancestors(current).slice(1))remembered.set(nodes.get(child).parent,child);chrome();const cn=nodes.get(current);if(cn.level>=4&&aside.dataset.parent!==cn.parent)sidebar();else aside.querySelectorAll('[data-go]:not(.side-step):not(.side-head)').forEach(x=>x.setAttribute('aria-current',String(x.dataset.go===current)));}
   if(reader.scrollTop+reader.clientHeight>reader.scrollHeight-300)loadMore();else if(reader.scrollTop<30&&readerStart>0)loadMore(true);
   busy=false;},{passive:true});
