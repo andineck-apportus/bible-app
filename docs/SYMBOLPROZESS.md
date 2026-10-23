@@ -56,4 +56,29 @@ Wortzeichen. Bericht: `reports/zeichen-blindtest-<datum>.json` und die Zusammenf
 
 ## Ergebnisse
 
-(wird nach der Ausgangsmessung ergänzt)
+### Ausgangsmessung 2026-10-23
+
+Alle 191 Zeichen, allein und ohne Legende, im Stil «Symbol» (Anime verwendet dieselben Zeichen). Freie Benennung durch vier
+KI-Instanzen, Auswahl aus vier Begriffen durch vier andere, Bewertung durch eine fünfte. Daten:
+`reports/zeichen-blindtest-2026-10-23.json`.
+
+| Klasse | Anzahl | frei getroffen | frei mindestens verwandt | Auswahl aus vier | Ziel frei |
+|---|---|---|---|---|---|
+| Gegenstand, Ort, Zeit | 38 | 66 % | 82 % | 89 % | 90 % |
+| Handlung, Gefühl | 99 | 47 % | 67 % | 96 % | 70 % |
+| Begriff | 54 | 20 % | 69 % | 94 % | – (Wortzeichen) |
+
+Urteil je Zeichen: 82 behalten, 60 nachbessern, 6 neu entwerfen, 43 Begriffe als Wortzeichen. Die schwachen Zeichen
+machen 1539 der 2971 Verwendungen in Bildaufträgen aus. Am häufigsten verwendet und schlecht erkannt: «glauben» (87-mal,
+gelesen als «Liebe Gottes»), «Tod / sterben» (81, «Grab»), «Freude» (71, «Licht»), «fliehen» (69, «eilen»), «Leben»
+(53, «Baum»), «heilen» (52, «säen»), «bringen» (51, «gehen»), «verwerfen» (47, «rufen»), «Reich Gottes» (46, «Krone»).
+
+Lehre für den Test selbst: Die Auswahl aus vier war zu leicht (89–96 %), weil die Ablenker oft zufällig und weit weg waren.
+Künftig wählt eine KI-Instanz drei naheliegende Verwechslungen (gleiches Feld, ähnliche Form), bevor getestet wird.
+Massgeblich ist bis dahin die freie Benennung.
+
+### Reihenfolge der Überarbeitung
+
+1. Die 20 meistverwendeten schwachen Zeichen (rund die Hälfte aller schwachen Verwendungen).
+2. Übrige Handlungen und Gegenstände.
+3. Begriffe als Wortzeichen, sobald Worte im Bild umgesetzt sind (BILDPROZESS.md).
