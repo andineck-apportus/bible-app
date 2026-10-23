@@ -292,6 +292,14 @@ def main():
                     warnings.append(f"{rel}: Bild wird neu erstellt ({r['rework'].get('reason_de', '')}); Text {b_.get('record')} {b_.get('reference', '')} geändert")
                 elif localizations.fingerprint(cur) != b_.get("fingerprint"):
                     errors.append(f"{rel}: Bildauftrag veraltet – Text {b_.get('record')} {b_.get('reference', '')} hat sich geändert; Auftrag und Bilder prüfen, dann mit BIBLE_BRIEF_CONFIRM=1 bestätigen")
+        if r.get("core_basis"):
+            # Zusammenfassung aus der Kernanalyse (docs/VERDICHTUNG.md): veraltet, wenn sich die Kernanalyse geändert hat
+            cb = r["core_basis"]
+            core = records.get(cb.get("core"), (None, {}))[1]
+            if not core:
+                errors.append(f"{rel}: core_basis verweist auf unbekannte Kernanalyse {cb.get('core')}")
+            elif localizations.fingerprint(json.dumps({k: core.get(k) for k in ("core_de", "moments")}, ensure_ascii=False, sort_keys=True)) != cb.get("fingerprint"):
+                warnings.append(f"{rel}: Zusammenfassung veraltet – Kernanalyse {cb.get('core')} hat sich geändert; mit scripts/authoring/zusammenfassungen.py erneuern")
         if r.get("type") == "lexicon" and not isinstance(r.get("entries"), dict):
             errors.append(f"{rel}: lexicon braucht entries als Objekt (Schlüssel → Eintrag)")
         if r.get("type") == "crossref_set":

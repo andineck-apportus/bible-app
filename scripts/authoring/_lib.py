@@ -157,6 +157,9 @@ def localize(rid, original, fields, lang, code, ctx, authorship, date):
             if k in fields:
                 fields[k] = e["gsw"]
                 summary_override(original)
+                lp = D / "localizations" / lang / f"{rid}.json"
+                if lp.exists():
+                    authorship = json.loads(lp.read_text(encoding="utf-8")).get("authorship_de", authorship)
     for k, v in fields.items():
         ov = [t.get("de") for t in original.get("terms", [])] if k == "terms" else original.get(k)
         if ov is None or type(ov) is not type(v) or (isinstance(v, list) and len(v) != len(ov)):
