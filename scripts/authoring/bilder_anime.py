@@ -80,6 +80,10 @@ def eyes(expr, look, big=False):
             out.append(f'<ellipse cx="{ex:.1f}" cy="{ey + .2:.1f}" rx="1.75" ry="2.1" fill="#3A2416"/><circle cx="{ex + .5:.1f}" cy="{ey - .3:.1f}" r=".5" fill="#FFF"/>'
                        f'<path d="M{ex - side * 2.4:.1f} {ey - 1.2:.1f}L{ex + side * 2.3:.1f} {ey - 2.6:.1f}" stroke="{INK}" stroke-width="1.1" stroke-linecap="round" transform="scale(-1 1) translate({-2 * ex:.1f} 0)"/>')
             continue
+        if expr == "question":  # fragend: Blick nach oben zur Seite
+            out.append(f'<ellipse cx="{ex:.1f}" cy="{ey:.1f}" rx="1.9" ry="2.3" fill="#FFF" stroke="{INK}" stroke-width=".6"/>'
+                       f'<circle cx="{ex + .7:.1f}" cy="{ey - .9:.1f}" r="1.2" fill="#3A2416"/>')
+            continue
         if expr == "surprised":
             out.append(f'<ellipse cx="{ex:.1f}" cy="{ey:.1f}" rx="2.1" ry="2.5" fill="#FFF" stroke="{INK}" stroke-width=".7"/>'
                        f'<circle cx="{ex + look * .5:.1f}" cy="{ey + .2:.1f}" r=".95" fill="{INK}"/>')
@@ -87,7 +91,7 @@ def eyes(expr, look, big=False):
         iris = "#3A2416"
         # Oberlid als feine Linie über der Pupille: ein dickes Lid auf der Pupille las sich im Blindtest als finsterer Blick (2026-10-17)
         out.append(f'<ellipse cx="{ex:.1f}" cy="{ey:.1f}" rx="1.75" ry="2.35" fill="{iris}"/>'
-                   f'<path d="M{ex - 2.2:.1f} {ey - 2.2:.1f}Q{ex:.1f} {ey - 3.9:.1f} {ex + 2.2:.1f} {ey - 2.2:.1f}" fill="none" stroke="{INK}" stroke-width=".6" stroke-linecap="round"/>')
+                   f'<path d="M{ex - 1.9:.1f} {ey - 1.3:.1f}Q{ex:.1f} {ey - 3.3:.1f} {ex + 1.9:.1f} {ey - 1.3:.1f}" fill="none" stroke="{INK}" stroke-width=".7" stroke-linecap="round"/>')  # Lidlinie eng am Auge (frei stehender Bogen las sich als zweite Braue, Hinweis Andi Neck 2026-10-23)
         if expr == "delight":
             sx, sy = ex + .2, ey - .4
             out.append(f'<path d="M{sx:.1f} {sy - 1.3:.1f}l.35 .95.95 .35-.95 .35-.35 .95-.35-.95-.95-.35.95-.35z" fill="#FFF"/>')
@@ -111,8 +115,11 @@ def brows(expr, look, color):
             a, b = (-5.4, -5.4)
         elif expr == "surprised":
             a, b = (-6.4, -6.4)
+        elif expr == "question":  # eine Braue hochgezogen
+            a, b = ((-5.8, -6.2) if side < 0 else (-4.4, -4.6))
         else:
             a, b = (-5.3, -5.3)
+        a, b = a + 2.0, b + 2.0  # näher am Auge: weiter oben lagen sie unter dem Haaransatz (Hinweis Andi Neck 2026-10-23)
         mid = (a + b) / 2 if expr == "angry" else min(a, b) - (1.1 if expr in ("calm", "smile", "delight", "surprised", "pensive", "worried", "fear", "pain") else .7)
         d.append(f"M{ex - 2.2:.1f} {a:.1f}Q{ex:.1f} {mid:.1f} {ex + 2.2:.1f} {b:.1f}")
     return f'<path d="{"".join(d)}" fill="none" stroke="{color}" stroke-width="{1.2 if expr == "angry" else .75}" stroke-linecap="round"/>'
@@ -128,6 +135,8 @@ def mouth(expr, look):
         return f'<path d="M{x - 2.2:.1f} 8.6l1.1-.8 1.1.8 1.1-.8 1.1.8" fill="none" stroke="{INK}" stroke-width=".8" stroke-linecap="round" stroke-linejoin="round"/>'
     if expr == "dead":
         return f'<path d="M{x - 1.4:.1f} 8.4h2.8" stroke="{INK}" stroke-width=".7" stroke-linecap="round"/>'
+    if expr == "question":
+        return f'<path d="M{x - 1.2:.1f} 8.6Q{x + .4:.1f} 7.9 {x + 1.6:.1f} 8.2" fill="none" stroke="{INK}" stroke-width=".8" stroke-linecap="round"/>'
     if expr == "worried":
         return f'<path d="M{x - 1.8:.1f} 8.3q.9-.8 1.8 0t1.8 0" fill="none" stroke="{INK}" stroke-width=".8" stroke-linecap="round"/>'
     if expr == "surprised":
@@ -206,6 +215,8 @@ def head_inner(key, expr="calm", look=0.0, tears=False):
         o.append(f'<path d="{c["back"]}" fill="{hair}"/>')
     o.append(f'<path d="M-2.4 11h4.8v6h-4.8z" fill="{SKIN if c.get("female") or child else SKIN_D}"/>')  # Hals (bei Frauen hell: dunkler Hals las sich mit dunklem Schleier als Bart)
     o.append(f'<path d="{FACE_CHILD if child else FACE}" fill="{SKIN}" stroke="{INK}" stroke-width=".7"/>')
+    if expr == "dead":  # tot: fahle, gräuliche Haut (Unterschied zu schlafend)
+        o.append(f'<path d="{FACE_CHILD if child else FACE}" fill="#8E9AA0" opacity=".45"/>')
     ears = []  # Dreiviertelansicht: bei starkem Blick zur Seite ist das Ohr auf dieser Seite verdeckt
     if look < 2.2:
         ears.append("M10.3 2.4q1.8.4 1.2 2.6-.6 1.6-1.8 1z")
@@ -216,7 +227,7 @@ def head_inner(key, expr="calm", look=0.0, tears=False):
         o.append(f'<path d="{c["beard"]}" fill="{hair}" opacity=".92"/>')
     if c.get("mustache") and not child:
         o.append(f'<path d="M{look - 3:.1f} 6.6q3-1.6 6 0" fill="none" stroke="{hair}" stroke-width="1.3" stroke-linecap="round"/>')
-    o.append(eyes(expr, look, big=child) + brows(expr, look, hair))
+    o.append(eyes(expr, look, big=child))
     if c.get("female") and expr not in ("sleep",) and not child:  # Frauen: Wimpern aussen am Oberlid und farbige Lippen (Blindtest 2026-10-23: Frauen als Männer gelesen)
         for side in (-1, 1):
             ex = side * 4.2 + max(-1.6, min(1.6, look * 1.4))
@@ -247,6 +258,8 @@ def head_inner(key, expr="calm", look=0.0, tears=False):
         o.append('<path d="M-10.9-3.6Q0-11.4 10.9-3.6M-10.6-.8Q0-8.6 10.6-.8" fill="none" stroke="#2E4A7A" stroke-width="1.2"/>')
     if c.get("veil") == "#FFFFFF":
         o.append(f'<path d="M-10.6 0Q-11.6-9.6 0-12.4Q11.6-9.6 10.6 0Q9-8 0-9.4Q-9-8-10.6 0z" fill="#FFFFFF" stroke="#B4B2A9" stroke-width=".7"/>')
+    if expr not in ("sleep", "dead"):  # Brauen über Haar und Schleier, damit sie über den Augen sichtbar sind
+        o.append(brows(expr, look, hair if _light(hair) < .7 else "#6A5A4A"))
     if c.get("flowers"):
         o.append("".join(f'<circle cx="{x}" cy="{y}" r="1.7" fill="#D4537E"/>' for x, y in ((-7, -7.8), (-3.6, -10.2), (0, -11), (3.6, -10.2), (7, -7.8))))
     if c.get("turban"):
