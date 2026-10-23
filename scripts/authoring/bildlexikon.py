@@ -61,6 +61,26 @@ def T(trait, basis, ref=None, note=None):
 ENTRIES = []
 
 
+_GRUPPEN = None
+
+
+def display_group(fid, kind):
+    """Anzeigegruppe (Bildlexikon, Legende): divine, people, thing, place, action, concept (Entscheid 2026-10-23).
+    Zeichen werden nach der Testklasse aufgeteilt (bildlexikon_daten/_gruppen.json); kind bleibt für die Bildplatzierung."""
+    global _GRUPPEN
+    if _GRUPPEN is None:
+        import pathlib as _p
+        f = _p.Path(__file__).resolve().parent / "bildlexikon_daten" / "_gruppen.json"
+        _GRUPPEN = json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
+    if kind in ("person", "role", "group"):
+        return "people"
+    if kind == "object":
+        return "thing"
+    if kind in ("sign", "action"):
+        return _GRUPPEN.get(fid, "action" if kind == "action" else "concept")
+    return kind
+
+
 def E(fid, kind, de, en, ident, gsw, traits, pal, rules, era=None, find=None, distinct=(), tags=(), terms=None):
     ENTRIES.append(dict(id=fid, kind=kind, de=de, en=en, ident=ident, gsw=gsw, traits=traits, pal=pal, rules=rules,
                         era=era, find=find, distinct=list(distinct), tags=list(tags), terms=terms))
@@ -1300,6 +1320,7 @@ def build(e, texts):
            "names": {"de": e["de"], "en": e["en"]}, "identity_de": e["ident"]}
     if e["era"]:
         rec["era"] = e["era"]
+    rec["display_group"] = display_group(fid, e["kind"])
     rec["traits"] = e["traits"]
     rec["palette"] = {"primary": e["pal"][0], "secondary": e["pal"][1]}
     rec["rules_de"] = e["rules"]
@@ -1433,7 +1454,7 @@ E("FIG-GRUPPE-GEMEINDE", "group", "Gemeinde", "Congregation / church",
 # era?, find? [[Muster, [Bereiche]]], distinct? [], terms?
 # ---------------------------------------------------------------------------------------------------------------
 def load_extra():
-    for f in sorted((pathlib.Path(__file__).resolve().parent / "bildlexikon_daten").glob("*.json")):
+    for f in sorted((pathlib.Path(__file__).resolve().parent / "bildlexikon_daten").glob("[!_]*.json")):
         for x in json.loads(f.read_text(encoding="utf-8")):
             traits = [T(t["trait_de"], t["basis"], t.get("ref"), t.get("note_de")) for t in x["traits"]]
             find = [(a, b) for a, b in x["find"]] if x.get("find") else None
