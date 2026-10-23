@@ -2,6 +2,19 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.76 — 2026-10-23 — Zusammenfassungen aus der Kernanalyse (Pilot)
+
+- **Neue Zusammenfassungen** für Rut, Titus, Markus 5 und die Bergpredigt Mt 5–7 auf Abschnitts-, Kapitel- und Buchebene (58), je auf Hochdeutsch und Züridüütsch.
+  - Sie entstehen aus den Kernanalysen, mit festem Umfang je Ebene (docs/VERDICHTUNG.md).
+  - Eine getrennte KI-Instanz hat Inhalt (Momente, Sprecher, Auftrag statt Tatsache) und Sprache geprüft; die Befunde sind eingearbeitet.
+  - Die früheren Fassungen stehen im revision_log.
+  - Die Mundart ist nicht muttersprachlich geprüft.
+- **Werkzeug** `scripts/authoring/zusammenfassungen.py`: prüft Umfang, Momente und Satzzahl der Mundart und schreibt Datensatz, Lokalisierung und `core_basis`.
+  - Die älteren Buchwerkzeuge übernehmen die neuen Texte (`_lib.py`), ein erneuter Lauf setzt sie nicht zurück.
+  - Der Validator meldet Zusammenfassungen als veraltet, wenn sich die Kernanalyse ändert.
+- **Bilder dieser Stellen** sind als «neu zu erstellen» vermerkt (`rework` im Bildauftrag, 66 Aufträge). Sie zeigen bis dahin noch die frühere Fassung; der Validator meldet das als Hinweis statt als Fehler.
+- Kernanalyse Rut 2,18–23 bereinigt: Die Kernaussage nannte einen Moment, der als weggelassen geführt war.
+
 ## v0.75 — 2026-10-23 — Alternativen markiert, Knöpfe auf allen Ebenen
 
 - **Gepunktet unterstrichen = Alternativen** (Andi Neck): Unterstrichen sind jetzt auch Stellen, an denen die Handschriften abweichen (andere Lesarten, z. B. Mt 6,13), nicht nur Übersetzungsentscheide. Antippen öffnet das Versblatt bei der Lesart, mit ihren Quellen.

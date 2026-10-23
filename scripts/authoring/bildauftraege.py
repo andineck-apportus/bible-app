@@ -347,6 +347,9 @@ def run():
                                 "Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
                "authorship_de": AUTH if "date" not in b else AUTH.replace("2026-10-14", b["date"]),
                "knowledge": {"asserted_at": b.get("date", DATE), "supersedes": None}}
+        # Neu zu zeichnen (z. B. Zusammenfassung neu aus der Kernanalyse): bleibt vermerkt, bis der Auftrag bestätigt wird
+        if path.exists() and not confirm and json.loads(path.read_text(encoding="utf-8")).get("rework"):
+            rec["rework"] = json.loads(path.read_text(encoding="utf-8"))["rework"]
         n += write(path, rec)
         n += localize(rid, rec, {"interpretation_note_de": b["note_gsw"], "actions_de": [ACTIONS_GSW[p["action_de"]] for p in b["panels"]],
                                   "captions_de": [c[1] for c in CAPTIONS[b["suffix"]]]}, "gsw-u-sd-chzh", "GSW-ZH", "CTX-CH-ZH-GSW-2026", AUTH_GSW, DATE)

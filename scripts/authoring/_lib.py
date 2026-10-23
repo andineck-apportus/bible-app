@@ -95,8 +95,41 @@ def alignment_entries(ref, markup, tokens, tokid):
     return text, out
 
 
+SUMMARY_SRC = ROOT / "scripts/authoring/zusammenfassungen_daten"
+_OVERRIDES = None
+
+
+def load_summary_overrides():
+    """Zusammenfassungen aus der Kernanalyse (scripts/authoring/zusammenfassungen.py): {Datensatz-ID: Eintrag}."""
+    global _OVERRIDES
+    if _OVERRIDES is None:
+        _OVERRIDES = {}
+        for f in sorted(SUMMARY_SRC.glob("*.json")):
+            for e in json.loads(f.read_text(encoding="utf-8")):
+                for rid in e["ids"]:
+                    _OVERRIDES[rid] = e
+    return _OVERRIDES
+
+
+def summary_override(rec):
+    """Ältere Autorenwerkzeuge schreiben Zusammenfassungen selbst; liegt eine neue aus der Kernanalyse vor, gilt sie,
+    samt Urheberangabe, revision_log-Grund und core_basis, die zusammenfassungen.py gesetzt hat."""
+    e = load_summary_overrides().get(rec.get("id"))
+    if not e or rec.get("type") not in ("text_unit", "summary"):
+        return rec
+    path = next((p for p in D.rglob(f"{rec['id']}.json") if "localizations" not in p.parts), None)
+    cur = json.loads(path.read_text(encoding="utf-8")) if path else {}
+    field, auth = ("summary_de", "summary_authorship_de") if rec["type"] == "text_unit" else ("text_de", "authorship_de")
+    rec[field] = e["de"]
+    for k in (auth, "core_basis"):
+        if k in cur:
+            rec[k] = cur[k]
+    return rec
+
+
 def write(path, rec, change_de="Inhalt überarbeitet"):
     """Schreibt nur bei inhaltlicher Änderung; frühere Fassung kommt ins revision_log."""
+    rec = summary_override(rec)
     path = pathlib.Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     if path.exists():
@@ -118,6 +151,15 @@ def write(path, rec, change_de="Inhalt überarbeitet"):
 
 def localize(rid, original, fields, lang, code, ctx, authorship, date):
     """Lokalisierung eines Originaldatensatzes schreiben (Feldnamen wie im Original)."""
+    e = load_summary_overrides().get(rid)
+    if e and lang == "gsw-u-sd-chzh":
+        for k in ("summary_de", "text_de"):
+            if k in fields:
+                fields[k] = e["gsw"]
+                summary_override(original)
+                lp = D / "localizations" / lang / f"{rid}.json"
+                if lp.exists():
+                    authorship = json.loads(lp.read_text(encoding="utf-8")).get("authorship_de", authorship)
     for k, v in fields.items():
         ov = [t.get("de") for t in original.get("terms", [])] if k == "terms" else original.get(k)
         if ov is None or type(ov) is not type(v) or (isinstance(v, list) and len(v) != len(ov)):
