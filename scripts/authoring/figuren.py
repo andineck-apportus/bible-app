@@ -483,7 +483,7 @@ FIGS = {
     "FIG-AUSERWAEHLTE-HERRIN": F("#6A4A7A", None, DARK, "short", sex="f", head=("veil", "#F2E6CC"), attr="kinder-brief"),
     # Rut
     "FIG-RUT": F("#7A8B4A", None, BROWN, "short", sex="f", head=("veil", "#E8B84A"), attr="garbe"),
-    "FIG-NOOMI": F("#C9BFAA", None, GREY, "short", sex="f", age="old", head=("veil", "#2E2E38"), attr="saeugling"),  # Witwenkopftuch dunkel, Kind Obed (Rut 4,16)
+    "FIG-NOOMI": F("#C9BFAA", None, GREY, "short", sex="f", age="old", head=("veil", "#2E2E38")),  # Witwenkopftuch dunkel; kein Kind als Zeichen (wirkte im Bildtest vor Rut 4 wie ein eigenes Kind)
     "FIG-ORPA": F("#C08A8A", None, DARK, "short", sex="f", head=("veil", "#E2CDA8"), attr="buendel-tuch"),  # altrosa, Reisebündel (kehrt zurück, Rut 1,14-15)
     "FIG-BOAS": F("#E7DCC4", "#2F5F6F", "#5A4A3A", "short", "full", trim="#D9A441", attr="worfel"),  # helles Gewand mit Goldsaum (wohlhabend), Petrolmantel
     "FIG-ELIMELECH": F("#C9BFAA", "#6A5A4A", GREY, "short", "full", attr="buendel"),

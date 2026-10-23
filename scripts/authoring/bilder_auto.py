@@ -190,7 +190,9 @@ def arrow_svg(x1, y1, x2, y2, kind="act", divine=True):
     # direkt nach unten ab, statt zuerst nach oben (Hinweis Andi Neck 2026-10-18)
     dx, dy = x2 - x1, y2 - y1
     d = math.hypot(dx, dy) or 1
-    if d < 36:  # kurze Strecke (nahe Personen): Winkel «>» bzw. «<» statt eines Pfeilstummels (Hinweis Andi Neck)
+    if d < 22:  # zu kurz für eine lesbare Linie (wirkte als loses Häkchen); die Nähe der Figuren zeigt den Bezug
+        return ""
+    if d < 36 and False:  # früher Winkel «>»/«<»; im Bildtest ohne Legende als Vergleichszeichen gelesen (2026-10-23), darum auch kurz ein Pfeil
         col = "#C08A2A" if kind == "act" and divine else "#3B3226"
         ang = math.atan2(dy, dx)
         cx, cy = (x1 + x2) / 2, (y1 + y2) / 2

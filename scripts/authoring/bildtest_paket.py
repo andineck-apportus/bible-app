@@ -5,8 +5,9 @@
 
 Legt an:
 - AUSGABE/bilder/Bild NN.png (Hochdeutsch) und AUSGABE/bilder/fragen.json – nur das, was die Testperson sehen darf:
-  Ebene, Buch und vier Kandidaten derselben Ebene (Stelle mit Titel), keine Legende, kein Auftrag;
-- AUSGABE/schluessel.json – richtige Antwort, Kernanalyse (Kernaussage, Momente, Sprecher, Textart) für die Bewertung.
+  Ebene und Buch, keine Legende, kein Auftrag; die Stelle nennt sie frei;
+- AUSGABE/schluessel.json – richtige Stelle mit Titel, drei Nachbarstellen derselben Ebene (zum Abgrenzen) und die
+  Kernanalyse (Kernaussage, Momente, Sprecher, Textart) für die Bewertung.
 
 Kandidaten: Abschnitt → andere Abschnitte desselben Kapitels (sonst Nachbarkapitel); Kapitel → andere Kapitel desselben
 Buches; Buch → andere Bücher mit Bild; Merkvers → andere Merkverse desselben Kapitels. Reihenfolge fest gemischt (Seed 11).
@@ -102,12 +103,13 @@ def main():
         shutil.copy(tmp / f"{k}.png", out / "bilder" / f"Bild {nr}.png")
         cands = candidates(k)
         letters = "ABCD"
+        # Ohne Kandidaten: Die Testperson nennt die Stelle frei (Kandidaten mit Titeln machten die Wahl zu leicht, 98 % richtig
+        # schon bei den alten Bildern; Bildtest 2026-10-23). Die Kandidaten stehen nur im Schlüssel, für die Bewertung.
         fragen.append({"bild": f"Bild {nr}.png", "ebene": {"section": "Abschnitt", "chapter": "Kapitel", "book": "Buch", "verse": "Merkvers"}[BRIEFS[k]["level"]],
-                       "buch": refs.display_de(k.split("-")[0]) if BRIEFS[k]["level"] != "book" else "(Bibel)",
-                       "kandidaten": {letters[j]: label(c) for j, c in enumerate(cands)}})
+                       "buch": BOOK_DE.get(k.split("-")[0], k.split("-")[0]) if BRIEFS[k]["level"] != "book" else "(Bibel)"})
         core = D / "core-analyses" / f"CORE-{k}.json"
         ca = json.loads(core.read_text(encoding="utf-8")) if core.exists() else {}
-        key[nr] = {"suffix": k, "richtig": letters[cands.index(k)], "kern": ca.get("core_de"), "textart": ca.get("mode"),
+        key[nr] = {"suffix": k, "stelle": label(k), "nachbarn": [label(c) for c in cands if c != k], "kern": ca.get("core_de"), "textart": ca.get("mode"),
                    "sprecher": ca.get("voice"), "momente": [m.get("text_de") for m in ca.get("moments", [])]}
     (out / "bilder" / "fragen.json").write_text(json.dumps(fragen, ensure_ascii=False, indent=1), encoding="utf-8")
     (out / "schluessel.json").write_text(json.dumps(key, ensure_ascii=False, indent=1), encoding="utf-8")

@@ -552,7 +552,7 @@ E("FIG-NOOMI", "person", "Noomi", "Naomi",
   "Frau Elimelechs aus Betlehem, die in Moab Mann und Söhne verliert und mit Rut zurückkehrt ([[RUT.1.3-RUT.1.5]], [[RUT.1.20]]).",
   "D Frau vom Elimelech vo Betlehem, wo z Moab de Maa und d Söhn verlüürt und mit de Rut zrugg chunnt ([[RUT.1.3-RUT.1.5]], [[RUT.1.20]]).",
   [T("Dunkles Witwenkopftuch", "design"),
-   T("Kind Obed als Zeichen, in olivgrünem Tuch mit gerstengelbem Streifen (Farben Ruts)", "text", "RUT.4.16", "Weisse Wickelbänder lasen sich als Christkind (Blindtest Runde 3)")],
+   T("Ältere Frau mit grauem Haar", "design", note="Kein Kind als Zeichen: In den Bildern vor [[RUT.4.16]] wirkte es wie ein eigenes Kind (Bildtest ohne Legende 2026-10-23); Obed nur dort, wo der Text ihn nennt")],
   ("#2E2E38", "#C9BFAA"),
   [FACE, "Ältere Frau, aber nicht gebrechlich"],
   era="judges", find=[(r"Noomi", None)], distinct=["FIG-RUT", "FIG-ROLLE-WITWE"])
