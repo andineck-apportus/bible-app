@@ -30,7 +30,7 @@ Bilder ohne Text taugen vorerst für alle Sprachen. Später soll es Bildsprachen
   - Handlung über Bewegung und Folge: erhobene Hand oder Peitsche, umgestossener Tisch, fliegende Münzen, fliehende Tiere,
     Bewegungslinien, fallende Figur; der Augenblick davor oder danach statt des Schlags selbst.
   - Tod: liegende Figur mit geschlossenen Augen, Grabtuch, Trauernde; getötet: Waffe und fallende Figur, keine Wunden.
-  - Kreuzigung: Jesus am Kreuz in einfacher Form (Kopf geneigt, aus mittlerer Entfernung), ohne Wunden im Detail; kein Blut
+  - Kreuzigung (bestätigt von Andi Neck 2026-10-23): Jesus am Kreuz in einfacher Form (Kopf geneigt, aus mittlerer Entfernung; `stage.pose` «cross»), ohne Wunden im Detail; kein Blut
     ausser als Zeichen (Tropfen).
   - Täter nicht dämonisieren und keiner Gruppe zuschreiben, was der Text nicht sagt.
 - **Personen** im Stil «Symbol» ohne ausgeführtes Gesicht (im Stil «Anime» mit Gesicht und Ausdruck, siehe oben), erkennbar an Farbe, Kleidung und Zeichen. Keine Karikatur, keine «typisierten» Merkmale einer Volksgruppe; «die Juden» im Johannesevangelium als neutrale Menge, nie eingefärbt oder vereinheitlicht.
