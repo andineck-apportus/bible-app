@@ -11,7 +11,7 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MRK.5.21-MRK.5.23",
+      "reference": "MRK.5.22-MRK.5.23",
       "figures": [
         "FIG-GRUPPE-MENGE",
         "FIG-JESUS",
@@ -25,18 +25,36 @@
           "to": "FIG-JESUS",
           "icons": [
             "FIG-TOCHTER-JAIRUS",
-            "FIG-ZEICHEN-KRANK",
             "FIG-ZEICHEN-HEILEN"
-          ]
+          ],
+          "word": {
+            "de": "komm",
+            "gsw": "chumm"
+          }
         }
       ],
-      "action_de": "Am See kommt der Synagogenvorsteher Jairus, fällt Jesus zu Füssen und bittet ihn: Meine Tochter liegt im Sterben; komm und lege ihr die Hände auf, damit sie lebt.",
+      "action_de": "Der Synagogenvorsteher Jairus fällt Jesus zu Füssen und bittet: Mein Töchterchen liegt im Sterben; komm doch und lege ihr die Hände auf, damit sie gerettet wird und lebt!",
+      "keywords": {
+        "de": "liegt im Sterben",
+        "gsw": "isch am Sterbe"
+      },
+      "names": {
+        "FIG-JAIRUS": {
+          "de": "Jairus",
+          "gsw": "Jairus"
+        }
+      },
       "stage": {
         "pose": {
           "FIG-JAIRUS": "kneel"
         },
+        "x": {
+          "FIG-GRUPPE-MENGE": 36,
+          "FIG-JESUS": 100,
+          "FIG-JAIRUS": 160
+        },
         "mood": {
-          "FIG-JAIRUS": "worried"
+          "FIG-JAIRUS": "pain"
         }
       }
     },
@@ -53,7 +71,11 @@
       ],
       "signs": [],
       "speech": [],
-      "action_de": "Jesus geht mit Jairus; eine grosse Menge folgt ihm und drängt sich um ihn.",
+      "action_de": "Jesus geht mit Jairus; eine grosse Menge folgt ihm und umdrängt ihn.",
+      "keywords": {
+        "de": "umdrängten ihn",
+        "gsw": "händ sich um en drängt"
+      },
       "stage": {
         "back_side": "left",
         "pose": {
@@ -73,25 +95,25 @@
     }
   ],
   "actions_de": [
-    "Am See kommt der Synagogenvorsteher Jairus, fällt Jesus zu Füssen und bittet ihn: Meine Tochter liegt im Sterben; komm und lege ihr die Hände auf, damit sie lebt.",
-    "Jesus geht mit Jairus; eine grosse Menge folgt ihm und drängt sich um ihn."
+    "Der Synagogenvorsteher Jairus fällt Jesus zu Füssen und bittet: Mein Töchterchen liegt im Sterben; komm doch und lege ihr die Hände auf, damit sie gerettet wird und lebt!",
+    "Jesus geht mit Jairus; eine grosse Menge folgt ihm und umdrängt ihn."
   ],
   "captions_de": [
-    "Bitte: Jairus kniet vor Jesus: Meine Tochter liegt im Sterben – komm und heile sie (Mädchen, liegende Figur auf Matte, heilende Hand).",
-    "Unterwegs: Jesus geht mit Jairus zu dessen Haus (Pfeil); die Menge drängt nach."
+    "Bitte: Jairus kniet vor Jesus: «Komm» – zu seiner Tochter (Mädchen), die Hände auflegen (heilende Hand).",
+    "Unterwegs: Jesus geht mit Jairus (gestrichelter Pfeil zum Haus); die Menge drängt sich um ihn."
   ],
-  "interpretation_note_de": "Das Grab-Zeichen steht hier für «im Sterben liegen». Das Haus des Jairus nennt der Text erst in [[MRK.5.38]]; hier zeigt es das Ziel des Wegs.",
+  "interpretation_note_de": "Bild aus der Kernanalyse (Bitte des Jairus, Weg mit der Menge). Das Haus des Jairus nennt der Text erst in [[MRK.5.38]]; hier zeigt es das Ziel des Wegs (Deutung).",
   "basis": [
     {
       "record": "TU-MRK-005-021-024",
       "field": "summary",
-      "fingerprint": "c35b40467400a40c"
+      "fingerprint": "c041c4f138bf4d88"
     },
     {
       "record": "TRANS-MRK-005-001-043-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.5.21-MRK.5.23",
-      "fingerprint": "068eca3f2931184b"
+      "reference": "MRK.5.22-MRK.5.23",
+      "fingerprint": "872068a6128a8c30"
     },
     {
       "record": "TRANS-MRK-005-001-043-DE-WORKING",
@@ -101,7 +123,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -180,10 +202,221 @@
           "Unterwegs: Jesus geht mit Jairus zu dessen Haus (Pfeil); die Menge drängt nach."
         ]
       }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.5.21-MRK.5.23",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS",
+              "FIG-JAIRUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JAIRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-TOCHTER-JAIRUS",
+                  "FIG-ZEICHEN-KRANK",
+                  "FIG-ZEICHEN-HEILEN"
+                ]
+              }
+            ],
+            "action_de": "Am See kommt der Synagogenvorsteher Jairus, fällt Jesus zu Füssen und bittet ihn: Meine Tochter liegt im Sterben; komm und lege ihr die Hände auf, damit sie lebt.",
+            "stage": {
+              "pose": {
+                "FIG-JAIRUS": "kneel"
+              },
+              "mood": {
+                "FIG-JAIRUS": "worried"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.5.24",
+            "figures": [
+              "FIG-JAIRUS",
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Jesus geht mit Jairus; eine grosse Menge folgt ihm und drängt sich um ihn.",
+            "stage": {
+              "back_side": "left",
+              "pose": {
+                "FIG-JAIRUS": "away"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ORT-HAUS",
+                  "go"
+                ]
+              ],
+              "mood": {
+                "FIG-JAIRUS": "worried"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Am See kommt der Synagogenvorsteher Jairus, fällt Jesus zu Füssen und bittet ihn: Meine Tochter liegt im Sterben; komm und lege ihr die Hände auf, damit sie lebt.",
+          "Jesus geht mit Jairus; eine grosse Menge folgt ihm und drängt sich um ihn."
+        ],
+        "captions_de": [
+          "Bitte: Jairus kniet vor Jesus: Meine Tochter liegt im Sterben – komm und heile sie (Mädchen, liegende Figur auf Matte, heilende Hand).",
+          "Unterwegs: Jesus geht mit Jairus zu dessen Haus (Pfeil); die Menge drängt nach."
+        ],
+        "interpretation_note_de": "Das Grab-Zeichen steht hier für «im Sterben liegen». Das Haus des Jairus nennt der Text erst in [[MRK.5.38]]; hier zeigt es das Ziel des Wegs.",
+        "basis": [
+          {
+            "record": "TU-MRK-005-021-024",
+            "field": "summary",
+            "fingerprint": "c35b40467400a40c"
+          },
+          {
+            "record": "TRANS-MRK-005-001-043-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.5.21-MRK.5.23",
+            "fingerprint": "068eca3f2931184b"
+          },
+          {
+            "record": "TRANS-MRK-005-001-043-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.5.24",
+            "fingerprint": "c735a38f0ca43319"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.5.22-MRK.5.23",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS",
+              "FIG-JAIRUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JAIRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-TOCHTER-JAIRUS",
+                  "FIG-ZEICHEN-HEILEN"
+                ],
+                "word": {
+                  "de": "komm",
+                  "gsw": "chumm"
+                }
+              }
+            ],
+            "action_de": "Der Synagogenvorsteher Jairus fällt Jesus zu Füssen und bittet: Mein Töchterchen liegt im Sterben; komm doch und lege ihr die Hände auf, damit sie gerettet wird und lebt!",
+            "keywords": {
+              "de": "Töchterchen liegt im Sterben",
+              "gsw": "Töchterli isch am Sterbe"
+            },
+            "names": {
+              "FIG-JAIRUS": {
+                "de": "Jairus",
+                "gsw": "Jairus"
+              }
+            },
+            "stage": {
+              "pose": {
+                "FIG-JAIRUS": "kneel"
+              },
+              "mood": {
+                "FIG-JAIRUS": "pain"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.5.24",
+            "figures": [
+              "FIG-JAIRUS",
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Jesus geht mit Jairus; eine grosse Menge folgt ihm und umdrängt ihn.",
+            "keywords": {
+              "de": "umdrängten ihn",
+              "gsw": "händ sich um en drängt"
+            },
+            "stage": {
+              "back_side": "left",
+              "pose": {
+                "FIG-JAIRUS": "away"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ORT-HAUS",
+                  "go"
+                ]
+              ],
+              "mood": {
+                "FIG-JAIRUS": "worried"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Bild neu aus der Kernanalyse (Worte im Bild)",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MRK-005-021-024",
+            "field": "summary",
+            "fingerprint": "c35b40467400a40c"
+          },
+          {
+            "record": "TRANS-MRK-005-001-043-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.5.22-MRK.5.23",
+            "fingerprint": "872068a6128a8c30"
+          },
+          {
+            "record": "TRANS-MRK-005-001-043-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.5.24",
+            "fingerprint": "c735a38f0ca43319"
+          }
+        ],
+        "rework": {
+          "since": "2026-10-23",
+          "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
+        }
+      }
     }
-  ],
-  "rework": {
-    "since": "2026-10-23",
-    "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
-  }
+  ]
 }

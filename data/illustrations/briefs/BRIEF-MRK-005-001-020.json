@@ -11,7 +11,7 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MRK.5.1-MRK.5.7",
+      "reference": "MRK.5.2-MRK.5.5",
       "figures": [
         "FIG-JESUS",
         "FIG-GERASENER"
@@ -24,13 +24,14 @@
         "FIG-ZEICHEN-DAEMON"
       ],
       "speech": [],
-      "action_de": "Am anderen Ufer kommt Jesus aus den Grabstätten ein Mann mit einem unreinen Geist entgegen, den niemand bändigen kann; er läuft zu Jesus und wirft sich vor ihm nieder.",
+      "action_de": "Aus den Grabstätten kommt Jesus ein Mensch mit einem unreinen Geist entgegen; niemand kann ihn binden, er hat die Ketten zerrissen, schreit Tag und Nacht und zerschlägt sich mit Steinen.",
+      "keywords": {
+        "de": "unreinen Geist",
+        "gsw": "unreine Geischt"
+      },
       "stage": {
-        "pose": {
-          "FIG-GERASENER": "kneel"
-        },
         "mood": {
-          "FIG-GERASENER": "worried"
+          "FIG-GERASENER": "angry"
         },
         "at": {
           "FIG-ZEICHEN-DAEMON": "FIG-GERASENER"
@@ -39,50 +40,56 @@
           "FIG-GERASENER": "FIG-OBJ-KETTE"
         },
         "x": {
-          "FIG-JESUS": 34,
-          "FIG-GERASENER": 74
-        }
+          "FIG-JESUS": 30,
+          "FIG-GERASENER": 150
+        },
+        "back_side": "right"
       }
     },
     {
       "n": 2,
-      "reference": "MRK.5.8-MRK.5.13",
+      "reference": "MRK.5.9-MRK.5.13",
       "figures": [
         "FIG-GERASENER",
         "FIG-JESUS"
       ],
       "objects": [
         "FIG-OBJ-SCHWEIN",
-        "FIG-ORT-UFER"
+        "FIG-ORT-SEE"
       ],
       "signs": [
         "FIG-ZEICHEN-DAEMON"
       ],
       "speech": [
         {
-          "from": "FIG-JESUS",
-          "to": "FIG-GERASENER",
-          "icons": [
-            "FIG-ZEICHEN-DAEMON",
-            "FIG-ZEICHEN-FLIEHEN"
-          ]
+          "from": "FIG-GERASENER",
+          "to": "FIG-JESUS",
+          "icons": [],
+          "word": {
+            "de": "Legion",
+            "gsw": "Legion"
+          }
         }
       ],
-      "action_de": "Jesus befiehlt dem unreinen Geist, aus dem Menschen auszufahren; die Geister, die sich «Legion» nennen, fahren mit seiner Erlaubnis in eine Schweineherde, die in den See stürzt und ertrinkt.",
+      "action_de": "Der Geist nennt sich «Legion, denn wir sind viele»; Jesus erlaubt den Geistern, in die Schweine zu fahren, und die Herde stürmt den Abhang hinunter in den See.",
+      "keywords": {
+        "de": "in die Schweine",
+        "gsw": "i d Söi"
+      },
       "stage": {
-        "pose": {
-          "FIG-GERASENER": "kneel"
-        },
         "count": {
           "FIG-OBJ-SCHWEIN": 3
         },
         "floor_side": "left",
         "x": {
-          "FIG-GERASENER": 116,
-          "FIG-JESUS": 158
+          "FIG-GERASENER": 128,
+          "FIG-JESUS": 166
         },
         "at": {
           "FIG-ZEICHEN-DAEMON": "FIG-OBJ-SCHWEIN"
+        },
+        "mood": {
+          "FIG-GERASENER": "fear"
         },
         "arrows": [
           [
@@ -95,7 +102,7 @@
     },
     {
       "n": 3,
-      "reference": "MRK.5.14-MRK.5.17",
+      "reference": "MRK.5.15-MRK.5.20",
       "figures": [
         "FIG-GRUPPE-MENGE",
         "FIG-GERASENER",
@@ -105,62 +112,35 @@
       "signs": [],
       "speech": [
         {
-          "from": "FIG-GRUPPE-MENGE",
-          "to": "FIG-JESUS",
+          "from": "FIG-GERASENER",
+          "to": "FIG-GRUPPE-MENGE",
           "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-FLIEHEN"
-          ]
+            "FIG-JESUS"
+          ],
+          "word": {
+            "de": "verkünden",
+            "gsw": "verchünde"
+          }
         }
       ],
-      "action_de": "Die Leute aus Stadt und Gehöften kommen und sehen den Mann bekleidet und bei Verstand dasitzen; sie fürchten sich und bitten Jesus, ihr Gebiet zu verlassen.",
+      "action_de": "Die Leute finden den Mann bekleidet und bei Verstand bei Jesus sitzen und fürchten sich; Jesus schickt ihn zu den Seinen, und er verkündet in der Dekapolis, wie viel Jesus an ihm getan hat.",
+      "keywords": {
+        "de": "bei Verstand",
+        "gsw": "bi klarem Verstand"
+      },
       "stage": {
         "pose": {
           "FIG-GERASENER": "sit"
         },
-        "mood": {
-          "FIG-GRUPPE-MENGE": "worried",
-          "FIG-GERASENER": "calm"
-        }
-      }
-    },
-    {
-      "n": 4,
-      "reference": "MRK.5.18-MRK.5.20",
-      "figures": [
-        "FIG-GERASENER",
-        "FIG-JESUS",
-        "FIG-GRUPPE-MENGE"
-      ],
-      "objects": [
-        "FIG-OBJ-BOOT"
-      ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GERASENER",
-          "icons": [
-            "FIG-ORT-HAUS",
-            "FIG-ZEICHEN-VERKUENDIGEN"
-          ]
+        "x": {
+          "FIG-GRUPPE-MENGE": 40,
+          "FIG-GERASENER": 128,
+          "FIG-JESUS": 166
         },
-        {
-          "from": "FIG-GERASENER",
-          "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-ERBARMEN"
-          ]
-        }
-      ],
-      "action_de": "Der Geheilte will bei Jesus bleiben; Jesus schickt ihn nach Hause, er soll erzählen, wie viel der Herr an ihm getan hat. Er verkündet in der Dekapolis, was Jesus an ihm getan hat, und alle staunen.",
-      "stage": {
         "mood": {
-          "FIG-GRUPPE-MENGE": "surprised",
+          "FIG-GRUPPE-MENGE": "fear",
           "FIG-GERASENER": "smile"
         },
-        "big_side": "left",
         "wear": {
           "FIG-GERASENER": "#C9A86A"
         }
@@ -168,51 +148,43 @@
     }
   ],
   "actions_de": [
-    "Am anderen Ufer kommt Jesus aus den Grabstätten ein Mann mit einem unreinen Geist entgegen, den niemand bändigen kann; er läuft zu Jesus und wirft sich vor ihm nieder.",
-    "Jesus befiehlt dem unreinen Geist, aus dem Menschen auszufahren; die Geister, die sich «Legion» nennen, fahren mit seiner Erlaubnis in eine Schweineherde, die in den See stürzt und ertrinkt.",
-    "Die Leute aus Stadt und Gehöften kommen und sehen den Mann bekleidet und bei Verstand dasitzen; sie fürchten sich und bitten Jesus, ihr Gebiet zu verlassen.",
-    "Der Geheilte will bei Jesus bleiben; Jesus schickt ihn nach Hause, er soll erzählen, wie viel der Herr an ihm getan hat. Er verkündet in der Dekapolis, was Jesus an ihm getan hat, und alle staunen."
+    "Aus den Grabstätten kommt Jesus ein Mensch mit einem unreinen Geist entgegen; niemand kann ihn binden, er hat die Ketten zerrissen, schreit Tag und Nacht und zerschlägt sich mit Steinen.",
+    "Der Geist nennt sich «Legion, denn wir sind viele»; Jesus erlaubt den Geistern, in die Schweine zu fahren, und die Herde stürmt den Abhang hinunter in den See.",
+    "Die Leute finden den Mann bekleidet und bei Verstand bei Jesus sitzen und fürchten sich; Jesus schickt ihn zu den Seinen, und er verkündet in der Dekapolis, wie viel Jesus an ihm getan hat."
   ],
   "captions_de": [
-    "Bei den Gräbern: Ein Mann mit einem unreinen Geist (dunkler Schatten), der seine Ketten zerrissen hat (Kette mit offenem Ring), wirft sich vor Jesus nieder.",
-    "Befehl → in die Schweine: Jesus gebietet dem Geist hinauszugehen (Schatten, Pfeil weg); vom Mann führt der gepunktete Bogen zu den Schweinen: Die Geister fahren in sie, die Herde stürzt in den See.",
-    "Furcht: Der Geheilte sitzt ruhig da; die Leute bitten Jesus, wegzugehen (Jesus, Pfeil weg).",
-    "Gesandt: Zuerst schickt Jesus den Geheilten (jetzt im neuen Mantel) heim (Haus, Lautsprecher: verkünden); dann erzählt er den staunenden Leuten von Jesus und seinem Erbarmen (Herz mit Händen)."
+    "Bei den Gräbern: Ein Mann mit einem unreinen Geist (dunkler Schatten) schreit, die zerrissene Kette in der Hand; Jesus kommt zu ihm.",
+    "«Legion»: Der Mann nennt Jesus voller Angst den Namen der Geister; vom Mann führt der gepunktete Bogen zu den Schweinen: Die Geister (Schatten) fahren in sie, die Herde stürzt in den See.",
+    "Bei Verstand: Der Mann sitzt ruhig und bekleidet (neuer Mantel) neben Jesus und verkündet, was Jesus an ihm getan hat; die Leute erschrecken."
   ],
-  "interpretation_note_de": "Der unreine Geist erscheint als dunkler Schatten ohne Gesicht. Die zerrissenen Ketten gehören zum Lexikonbild des Mannes; nach der Heilung sitzt er «bekleidet und bei Verstand» da ([[MRK.5.15]]). Das Ertrinken der Herde ([[MRK.5.13]]) ist nur angedeutet. In [[MRK.5.19]] spricht Jesus vom «Herrn», in [[MRK.5.20]] erzählt der Mann, was Jesus getan hat; die Sprechblase des Mannes zeigt Jesus.",
+  "interpretation_note_de": "Bild aus der Kernanalyse (drei Momente: Lage, Wendepunkt «Legion», Ausgang). Der unreine Geist erscheint als dunkler Schatten ohne Gesicht. Das Ertrinken der Herde ([[MRK.5.13]]) ist nur angedeutet. Weggelassen: Anrede «Sohn Gottes» ([[MRK.5.7]]), Hirten und Bitte der Leute ([[MRK.5.14-17]]). Im dritten Feld sind Sitzen und Verkünden ([[MRK.5.15]], [[MRK.5.20]]) in einem Bild zusammengezogen (Deutung).",
   "basis": [
     {
       "record": "TU-MRK-005-001-020",
       "field": "summary",
-      "fingerprint": "c711e21bdc2bc7bc"
+      "fingerprint": "49be21f9ebc8bc89"
     },
     {
       "record": "TRANS-MRK-005-001-043-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.5.1-MRK.5.7",
-      "fingerprint": "0bf15084ddd42331"
+      "reference": "MRK.5.2-MRK.5.5",
+      "fingerprint": "2b58b0319f03e0fe"
     },
     {
       "record": "TRANS-MRK-005-001-043-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.5.8-MRK.5.13",
-      "fingerprint": "3816fe4d99808778"
+      "reference": "MRK.5.9-MRK.5.13",
+      "fingerprint": "723fe9910a73aac2"
     },
     {
       "record": "TRANS-MRK-005-001-043-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.5.14-MRK.5.17",
-      "fingerprint": "1b38860b51f569f0"
-    },
-    {
-      "record": "TRANS-MRK-005-001-043-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MRK.5.18-MRK.5.20",
-      "fingerprint": "9636cdc293cab293"
+      "reference": "MRK.5.15-MRK.5.20",
+      "fingerprint": "9b6490a3b6aadd0c"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -389,10 +361,399 @@
           "Gesandt: Zuerst schickt Jesus den Geheilten (jetzt im neuen Mantel) heim (Haus, Lautsprecher: verkünden); dann erzählt er den staunenden Leuten von Jesus und seinem Erbarmen (Herz mit Händen)."
         ]
       }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.5.1-MRK.5.7",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GERASENER"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB",
+              "FIG-OBJ-KETTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-DAEMON"
+            ],
+            "speech": [],
+            "action_de": "Am anderen Ufer kommt Jesus aus den Grabstätten ein Mann mit einem unreinen Geist entgegen, den niemand bändigen kann; er läuft zu Jesus und wirft sich vor ihm nieder.",
+            "stage": {
+              "pose": {
+                "FIG-GERASENER": "kneel"
+              },
+              "mood": {
+                "FIG-GERASENER": "worried"
+              },
+              "at": {
+                "FIG-ZEICHEN-DAEMON": "FIG-GERASENER"
+              },
+              "hold": {
+                "FIG-GERASENER": "FIG-OBJ-KETTE"
+              },
+              "x": {
+                "FIG-JESUS": 34,
+                "FIG-GERASENER": 74
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.5.8-MRK.5.13",
+            "figures": [
+              "FIG-GERASENER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHWEIN",
+              "FIG-ORT-UFER"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-DAEMON"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GERASENER",
+                "icons": [
+                  "FIG-ZEICHEN-DAEMON",
+                  "FIG-ZEICHEN-FLIEHEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus befiehlt dem unreinen Geist, aus dem Menschen auszufahren; die Geister, die sich «Legion» nennen, fahren mit seiner Erlaubnis in eine Schweineherde, die in den See stürzt und ertrinkt.",
+            "stage": {
+              "pose": {
+                "FIG-GERASENER": "kneel"
+              },
+              "count": {
+                "FIG-OBJ-SCHWEIN": 3
+              },
+              "floor_side": "left",
+              "x": {
+                "FIG-GERASENER": 116,
+                "FIG-JESUS": 158
+              },
+              "at": {
+                "FIG-ZEICHEN-DAEMON": "FIG-OBJ-SCHWEIN"
+              },
+              "arrows": [
+                [
+                  "FIG-GERASENER",
+                  "FIG-OBJ-SCHWEIN",
+                  "throw"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.5.14-MRK.5.17",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-GERASENER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FLIEHEN"
+                ]
+              }
+            ],
+            "action_de": "Die Leute aus Stadt und Gehöften kommen und sehen den Mann bekleidet und bei Verstand dasitzen; sie fürchten sich und bitten Jesus, ihr Gebiet zu verlassen.",
+            "stage": {
+              "pose": {
+                "FIG-GERASENER": "sit"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "worried",
+                "FIG-GERASENER": "calm"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.5.18-MRK.5.20",
+            "figures": [
+              "FIG-GERASENER",
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GERASENER",
+                "icons": [
+                  "FIG-ORT-HAUS",
+                  "FIG-ZEICHEN-VERKUENDIGEN"
+                ]
+              },
+              {
+                "from": "FIG-GERASENER",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-ERBARMEN"
+                ]
+              }
+            ],
+            "action_de": "Der Geheilte will bei Jesus bleiben; Jesus schickt ihn nach Hause, er soll erzählen, wie viel der Herr an ihm getan hat. Er verkündet in der Dekapolis, was Jesus an ihm getan hat, und alle staunen.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "surprised",
+                "FIG-GERASENER": "smile"
+              },
+              "big_side": "left",
+              "wear": {
+                "FIG-GERASENER": "#C9A86A"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Am anderen Ufer kommt Jesus aus den Grabstätten ein Mann mit einem unreinen Geist entgegen, den niemand bändigen kann; er läuft zu Jesus und wirft sich vor ihm nieder.",
+          "Jesus befiehlt dem unreinen Geist, aus dem Menschen auszufahren; die Geister, die sich «Legion» nennen, fahren mit seiner Erlaubnis in eine Schweineherde, die in den See stürzt und ertrinkt.",
+          "Die Leute aus Stadt und Gehöften kommen und sehen den Mann bekleidet und bei Verstand dasitzen; sie fürchten sich und bitten Jesus, ihr Gebiet zu verlassen.",
+          "Der Geheilte will bei Jesus bleiben; Jesus schickt ihn nach Hause, er soll erzählen, wie viel der Herr an ihm getan hat. Er verkündet in der Dekapolis, was Jesus an ihm getan hat, und alle staunen."
+        ],
+        "captions_de": [
+          "Bei den Gräbern: Ein Mann mit einem unreinen Geist (dunkler Schatten), der seine Ketten zerrissen hat (Kette mit offenem Ring), wirft sich vor Jesus nieder.",
+          "Befehl → in die Schweine: Jesus gebietet dem Geist hinauszugehen (Schatten, Pfeil weg); vom Mann führt der gepunktete Bogen zu den Schweinen: Die Geister fahren in sie, die Herde stürzt in den See.",
+          "Furcht: Der Geheilte sitzt ruhig da; die Leute bitten Jesus, wegzugehen (Jesus, Pfeil weg).",
+          "Gesandt: Zuerst schickt Jesus den Geheilten (jetzt im neuen Mantel) heim (Haus, Lautsprecher: verkünden); dann erzählt er den staunenden Leuten von Jesus und seinem Erbarmen (Herz mit Händen)."
+        ],
+        "interpretation_note_de": "Der unreine Geist erscheint als dunkler Schatten ohne Gesicht. Die zerrissenen Ketten gehören zum Lexikonbild des Mannes; nach der Heilung sitzt er «bekleidet und bei Verstand» da ([[MRK.5.15]]). Das Ertrinken der Herde ([[MRK.5.13]]) ist nur angedeutet. In [[MRK.5.19]] spricht Jesus vom «Herrn», in [[MRK.5.20]] erzählt der Mann, was Jesus getan hat; die Sprechblase des Mannes zeigt Jesus.",
+        "basis": [
+          {
+            "record": "TU-MRK-005-001-020",
+            "field": "summary",
+            "fingerprint": "c711e21bdc2bc7bc"
+          },
+          {
+            "record": "TRANS-MRK-005-001-043-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.5.1-MRK.5.7",
+            "fingerprint": "0bf15084ddd42331"
+          },
+          {
+            "record": "TRANS-MRK-005-001-043-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.5.8-MRK.5.13",
+            "fingerprint": "3816fe4d99808778"
+          },
+          {
+            "record": "TRANS-MRK-005-001-043-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.5.14-MRK.5.17",
+            "fingerprint": "1b38860b51f569f0"
+          },
+          {
+            "record": "TRANS-MRK-005-001-043-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.5.18-MRK.5.20",
+            "fingerprint": "9636cdc293cab293"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.5.2-MRK.5.5",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GERASENER"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB",
+              "FIG-OBJ-KETTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-DAEMON"
+            ],
+            "speech": [],
+            "action_de": "Aus den Grabstätten kommt Jesus ein Mensch mit einem unreinen Geist entgegen; niemand kann ihn binden, er hat die Ketten zerrissen, schreit Tag und Nacht und zerschlägt sich mit Steinen.",
+            "keywords": {
+              "de": "unreinen Geist",
+              "gsw": "unreine Geischt"
+            },
+            "stage": {
+              "mood": {
+                "FIG-GERASENER": "angry"
+              },
+              "at": {
+                "FIG-ZEICHEN-DAEMON": "FIG-GERASENER"
+              },
+              "hold": {
+                "FIG-GERASENER": "FIG-OBJ-KETTE"
+              },
+              "x": {
+                "FIG-JESUS": 34,
+                "FIG-GERASENER": 120
+              },
+              "back_side": "right"
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.5.9-MRK.5.13",
+            "figures": [
+              "FIG-GERASENER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHWEIN",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-DAEMON"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GERASENER",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Legion",
+                  "gsw": "Legion"
+                }
+              }
+            ],
+            "action_de": "Der Geist nennt sich «Legion, denn wir sind viele»; Jesus erlaubt den Geistern, in die Schweine zu fahren, und die Herde stürmt den Abhang hinunter in den See.",
+            "keywords": {
+              "de": "in die Schweine",
+              "gsw": "i d Söi"
+            },
+            "stage": {
+              "pose": {
+                "FIG-GERASENER": "kneel"
+              },
+              "count": {
+                "FIG-OBJ-SCHWEIN": 3
+              },
+              "floor_side": "left",
+              "x": {
+                "FIG-GERASENER": 116,
+                "FIG-JESUS": 158
+              },
+              "at": {
+                "FIG-ZEICHEN-DAEMON": "FIG-OBJ-SCHWEIN"
+              },
+              "mood": {
+                "FIG-GERASENER": "fear"
+              },
+              "arrows": [
+                [
+                  "FIG-GERASENER",
+                  "FIG-OBJ-SCHWEIN",
+                  "throw"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.5.15-MRK.5.20",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-GERASENER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GERASENER",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-JESUS"
+                ],
+                "word": {
+                  "de": "verkünden",
+                  "gsw": "verchünde"
+                }
+              }
+            ],
+            "action_de": "Die Leute finden den Mann bekleidet und bei Verstand bei Jesus sitzen und fürchten sich; Jesus schickt ihn zu den Seinen, und er verkündet in der Dekapolis, wie viel Jesus an ihm getan hat.",
+            "keywords": {
+              "de": "bei Verstand",
+              "gsw": "bi klarem Verstand"
+            },
+            "stage": {
+              "pose": {
+                "FIG-GERASENER": "sit"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "fear",
+                "FIG-GERASENER": "smile"
+              },
+              "wear": {
+                "FIG-GERASENER": "#C9A86A"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Bei den Gräbern: Ein Mann mit einem unreinen Geist (dunkler Schatten) schreit, die zerrissene Kette in der Hand; Jesus kommt zu ihm.",
+          "«Legion»: Der Mann kniet vor Jesus und nennt den Namen der Geister; vom Mann führt der gepunktete Bogen zu den Schweinen: Die Geister (Schatten) fahren in sie, die Herde stürzt in den See.",
+          "Bei Verstand: Der Mann sitzt ruhig und bekleidet (neuer Mantel) neben Jesus und verkündet, was Jesus an ihm getan hat; die Leute erschrecken."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Bild neu aus der Kernanalyse (Worte im Bild)",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MRK-005-001-020",
+            "field": "summary",
+            "fingerprint": "c711e21bdc2bc7bc"
+          },
+          {
+            "record": "TRANS-MRK-005-001-043-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.5.2-MRK.5.5",
+            "fingerprint": "2b58b0319f03e0fe"
+          },
+          {
+            "record": "TRANS-MRK-005-001-043-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.5.9-MRK.5.13",
+            "fingerprint": "723fe9910a73aac2"
+          },
+          {
+            "record": "TRANS-MRK-005-001-043-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.5.15-MRK.5.20",
+            "fingerprint": "9b6490a3b6aadd0c"
+          }
+        ],
+        "rework": {
+          "since": "2026-10-23",
+          "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
+        }
+      }
     }
-  ],
-  "rework": {
-    "since": "2026-10-23",
-    "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
-  }
+  ]
 }

@@ -13,52 +13,68 @@
       "n": 1,
       "reference": "MAT.5.44",
       "figures": [
-        "FIG-ROLLE-MENSCH",
-        "FIG-GRUPPE-GEGNER"
+        "FIG-JESUS",
+        "FIG-GRUPPE-GEGNER",
+        "FIG-ROLLE-JUENGER"
       ],
       "objects": [],
       "signs": [
         "FIG-ZEICHEN-LIEBE"
       ],
-      "speech": [],
-      "action_de": "Liebt eure Feinde und betet für die, die euch verfolgen.",
+      "speech": [
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-ROLLE-JUENGER",
+          "icons": [],
+          "word": {
+            "de": "Ich aber sage euch",
+            "gsw": "Ich aber säg eu"
+          }
+        }
+      ],
+      "action_de": "Jesus sagt: Ich aber sage euch: Liebt eure Feinde und betet für die, die euch verfolgen.",
+      "keywords": {
+        "de": "Liebt eure Feinde",
+        "gsw": "Liebed eui Find"
+      },
       "stage": {
         "x": {
-          "FIG-ROLLE-MENSCH": 48,
-          "FIG-GRUPPE-GEGNER": 138
+          "FIG-JESUS": 22,
+          "FIG-GRUPPE-GEGNER": 84,
+          "FIG-ROLLE-JUENGER": 162
         },
         "hold": {
-          "FIG-ROLLE-MENSCH": "PRAY"
+          "FIG-ROLLE-JUENGER": "PRAY"
         },
         "at": {
-          "FIG-ZEICHEN-LIEBE": "FIG-ROLLE-MENSCH"
+          "FIG-ZEICHEN-LIEBE": "FIG-ROLLE-JUENGER"
         },
         "arrows": [
           [
-            "FIG-ROLLE-MENSCH",
+            "FIG-ROLLE-JUENGER",
             "FIG-GRUPPE-GEGNER",
             "act"
           ]
         ],
         "mood": {
-          "FIG-ROLLE-MENSCH": "calm",
-          "FIG-GRUPPE-GEGNER": "earnest"
+          "FIG-ROLLE-JUENGER": "calm",
+          "FIG-GRUPPE-GEGNER": "angry"
         }
       }
     }
   ],
   "actions_de": [
-    "Liebt eure Feinde und betet für die, die euch verfolgen."
+    "Jesus sagt: Ich aber sage euch: Liebt eure Feinde und betet für die, die euch verfolgen."
   ],
   "captions_de": [
-    "Feinde lieben: Ein Mensch betet (Hände) für seine Gegner (graue Gruppe rechts) und liebt sie (zwei Herzen, Pfeil zu ihnen)."
+    "Feinde lieben: Jesus (links) sagt «Ich aber sage euch»; ein Jünger (rechts) betet (Hände) für seine Gegner (graue Gruppe) und liebt sie (zwei Herzen, Pfeil)."
   ],
-  "interpretation_note_de": "Merkvers: Feindesliebe. Bild zum Einprägen: betender Mensch, Herzen zu den Gegnern.",
+  "interpretation_note_de": "Merkvers: Feindesliebe, Höhepunkt der Gegenüberstellungen («Ich aber sage euch»). Rede: Jesus am Rand; ein Jünger betet für die Gegner. Der Zorn der Gegner ist Deutung von «verfolgen».",
   "basis": [
     {
       "record": "TU-MAT-005-043-048",
       "field": "summary",
-      "fingerprint": "df4906bb7266d61b"
+      "fingerprint": "22b6c4725f7a4949"
     },
     {
       "record": "TRANS-MAT-005-001-048-DE-WORKING",
@@ -68,7 +84,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-18 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-18",
     "supersedes": null
@@ -119,10 +135,146 @@
           }
         ]
       }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.5.44",
+            "figures": [
+              "FIG-ROLLE-MENSCH",
+              "FIG-GRUPPE-GEGNER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-LIEBE"
+            ],
+            "speech": [],
+            "action_de": "Liebt eure Feinde und betet für die, die euch verfolgen.",
+            "stage": {
+              "x": {
+                "FIG-ROLLE-MENSCH": 48,
+                "FIG-GRUPPE-GEGNER": 138
+              },
+              "hold": {
+                "FIG-ROLLE-MENSCH": "PRAY"
+              },
+              "at": {
+                "FIG-ZEICHEN-LIEBE": "FIG-ROLLE-MENSCH"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-MENSCH",
+                  "FIG-GRUPPE-GEGNER",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-MENSCH": "calm",
+                "FIG-GRUPPE-GEGNER": "earnest"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Liebt eure Feinde und betet für die, die euch verfolgen."
+        ],
+        "captions_de": [
+          "Feinde lieben: Ein Mensch betet (Hände) für seine Gegner (graue Gruppe rechts) und liebt sie (zwei Herzen, Pfeil zu ihnen)."
+        ],
+        "interpretation_note_de": "Merkvers: Feindesliebe. Bild zum Einprägen: betender Mensch, Herzen zu den Gegnern.",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-18 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.5.44",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-JUENGER",
+              "FIG-GRUPPE-GEGNER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-LIEBE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-JUENGER",
+                "icons": [],
+                "word": {
+                  "de": "Ich aber sage euch",
+                  "gsw": "Ich aber säg eu"
+                }
+              }
+            ],
+            "action_de": "Jesus sagt: Ich aber sage euch: Liebt eure Feinde und betet für die, die euch verfolgen.",
+            "keywords": {
+              "de": "Liebt eure Feinde",
+              "gsw": "Liebed eui Find"
+            },
+            "stage": {
+              "x": {
+                "FIG-JESUS": 24,
+                "FIG-ROLLE-JUENGER": 84,
+                "FIG-GRUPPE-GEGNER": 146
+              },
+              "hold": {
+                "FIG-ROLLE-JUENGER": "PRAY"
+              },
+              "at": {
+                "FIG-ZEICHEN-LIEBE": "FIG-ROLLE-JUENGER"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-JUENGER",
+                  "FIG-GRUPPE-GEGNER",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-JUENGER": "calm",
+                "FIG-GRUPPE-GEGNER": "angry"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Feinde lieben: Jesus (links) sagt «Ich aber sage euch»; ein Jünger betet (Hände) für seine Gegner (graue Gruppe rechts) und liebt sie (zwei Herzen, Pfeil)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Bild neu aus der Kernanalyse (Worte im Bild)",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-005-043-048",
+            "field": "summary",
+            "fingerprint": "df4906bb7266d61b"
+          },
+          {
+            "record": "TRANS-MAT-005-001-048-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.5.44",
+            "fingerprint": "a7046092e6351bd4"
+          }
+        ],
+        "rework": {
+          "since": "2026-10-23",
+          "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
+        }
+      }
     }
-  ],
-  "rework": {
-    "since": "2026-10-23",
-    "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
-  }
+  ]
 }

@@ -24,35 +24,53 @@
           "from": "FIG-GRUPPE-MENGE",
           "to": "FIG-JAIRUS",
           "icons": [
-            "FIG-TOCHTER-JAIRUS",
-            "FIG-ZEICHEN-TOD"
-          ]
+            "FIG-TOCHTER-JAIRUS"
+          ],
+          "word": {
+            "de": "gestorben",
+            "gsw": "gstorbe"
+          }
         },
         {
           "from": "FIG-JESUS",
           "to": "FIG-JAIRUS",
           "icons": [
             "FIG-ZEICHEN-GLAUBEN"
-          ]
+          ],
+          "word": {
+            "de": "glaube nur",
+            "gsw": "glaub nu"
+          }
         }
       ],
-      "action_de": "Leute aus dem Haus des Jairus melden: Deine Tochter ist gestorben. Jesus überhört es und sagt zu Jairus: Fürchte dich nicht, glaube nur!",
+      "action_de": "Leute vom Synagogenvorsteher melden: Deine Tochter ist gestorben. Jesus überhört es und sagt zu Jairus: Fürchte dich nicht, glaube nur!",
+      "keywords": {
+        "de": "Fürchte dich nicht",
+        "gsw": "Häb kei Angscht"
+      },
+      "names": {
+        "FIG-JAIRUS": {
+          "de": "Jairus",
+          "gsw": "Jairus"
+        }
+      },
       "stage": {
         "mood": {
-          "FIG-JAIRUS": "worried",
+          "FIG-JAIRUS": "pain",
           "FIG-GRUPPE-MENGE": "worried"
         }
       }
     },
     {
       "n": 2,
-      "reference": "MRK.5.37-MRK.5.40",
+      "reference": "MRK.5.38-MRK.5.40",
       "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-MENGE"
+        "FIG-TOCHTER-JAIRUS",
+        "FIG-GRUPPE-MENGE",
+        "FIG-JESUS"
       ],
       "objects": [
-        "FIG-ORT-HAUS"
+        "FIG-OBJ-MATTE"
       ],
       "signs": [
         "FIG-ZEICHEN-TRAUER"
@@ -62,23 +80,40 @@
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-MENGE",
           "icons": [
-            "FIG-TOCHTER-JAIRUS",
             "FIG-ZEICHEN-SCHLAFEN"
-          ]
+          ],
+          "word": {
+            "de": "schläft",
+            "gsw": "schlaft"
+          }
         }
       ],
-      "action_de": "Mit Petrus, Jakobus und Johannes kommt Jesus ins Haus; die Leute weinen und klagen laut. Jesus sagt: Das Kind ist nicht gestorben, es schläft. Sie lachen ihn aus.",
+      "action_de": "Im Haus weinen und klagen die Leute laut. Jesus sagt: Das Kind ist nicht gestorben, sondern schläft. Sie lachen ihn aus; er schickt alle hinaus und geht mit den Eltern und den drei Jüngern zum Kind.",
+      "keywords": {
+        "de": "lachten ihn aus",
+        "gsw": "händ en usglachet"
+      },
       "stage": {
+        "pose": {
+          "FIG-TOCHTER-JAIRUS": "lie"
+        },
         "mood": {
+          "FIG-TOCHTER-JAIRUS": "dead",
           "FIG-GRUPPE-MENGE": "worried"
+        },
+        "signs_who": {
+          "FIG-ZEICHEN-TRAUER": [
+            "FIG-GRUPPE-MENGE"
+          ]
         }
       }
     },
     {
       "n": 3,
-      "reference": "MRK.5.40-MRK.5.42",
+      "reference": "MRK.5.41-MRK.5.42",
       "figures": [
         "FIG-JAIRUS",
+        "FIG-ROLLE-MUTTER",
         "FIG-TOCHTER-JAIRUS",
         "FIG-JESUS"
       ],
@@ -90,14 +125,29 @@
           "to": "FIG-TOCHTER-JAIRUS",
           "icons": [
             "FIG-ZEICHEN-AUFSTEHEN"
-          ]
+          ],
+          "word": {
+            "de": "Talita kum!",
+            "gsw": "Talita kum!"
+          }
         }
       ],
-      "action_de": "Mit den Eltern und den drei Jüngern geht Jesus zum Kind, fasst seine Hand und sagt: Talita kum – Mädchen, steh auf! Sogleich steht das zwölfjährige Mädchen auf und geht umher; alle geraten ausser sich vor Staunen.",
+      "action_de": "Jesus fasst die Hand des Kindes und sagt: «Talita kum!» – Mädchen, steh auf! Sogleich steht das Mädchen auf und geht umher; die Eltern geraten ausser sich vor Staunen.",
+      "keywords": {
+        "de": "Steh auf!",
+        "gsw": "Stand uf!"
+      },
       "stage": {
+        "x": {
+          "FIG-JAIRUS": 26,
+          "FIG-ROLLE-MUTTER": 62,
+          "FIG-TOCHTER-JAIRUS": 134,
+          "FIG-JESUS": 170
+        },
         "mood": {
           "FIG-JAIRUS": "surprised",
-          "FIG-TOCHTER-JAIRUS": "calm"
+          "FIG-ROLLE-MUTTER": "surprised",
+          "FIG-TOCHTER-JAIRUS": "delight"
         },
         "arrows": [
           [
@@ -110,21 +160,21 @@
     }
   ],
   "actions_de": [
-    "Leute aus dem Haus des Jairus melden: Deine Tochter ist gestorben. Jesus überhört es und sagt zu Jairus: Fürchte dich nicht, glaube nur!",
-    "Mit Petrus, Jakobus und Johannes kommt Jesus ins Haus; die Leute weinen und klagen laut. Jesus sagt: Das Kind ist nicht gestorben, es schläft. Sie lachen ihn aus.",
-    "Mit den Eltern und den drei Jüngern geht Jesus zum Kind, fasst seine Hand und sagt: Talita kum – Mädchen, steh auf! Sogleich steht das zwölfjährige Mädchen auf und geht umher; alle geraten ausser sich vor Staunen."
+    "Leute vom Synagogenvorsteher melden: Deine Tochter ist gestorben. Jesus überhört es und sagt zu Jairus: Fürchte dich nicht, glaube nur!",
+    "Im Haus weinen und klagen die Leute laut. Jesus sagt: Das Kind ist nicht gestorben, sondern schläft. Sie lachen ihn aus; er schickt alle hinaus und geht mit den Eltern und den drei Jüngern zum Kind.",
+    "Jesus fasst die Hand des Kindes und sagt: «Talita kum!» – Mädchen, steh auf! Sogleich steht das Mädchen auf und geht umher; die Eltern geraten ausser sich vor Staunen."
   ],
   "captions_de": [
-    "Nachricht: Leute melden Jairus den Tod der Tochter (Mädchen, Grab); Jesus sagt: Glaube nur (Herz mit Licht).",
-    "Klage: Die Leute weinen (Tränen); Jesus sagt, das Mädchen schlafe (Mondsichel).",
-    "Wort → Aufstehen: Jesus wendet sich dem Mädchen zu (Pfeil), nimmt es bei der Hand und sagt: Steh auf (Figur über Matte mit Pfeil nach oben); es steht auf, der Vater staunt."
+    "Todesnachricht: Leute melden Jairus «gestorben» (Mädchen); Jesus sagt ihm: «Glaube nur» (Herz mit Licht).",
+    "Tot im Haus: Das Mädchen liegt tot da (fahl, Augen zu); die Leute weinen (Tränen); Jesus sagt: «schläft» (Mondsichel) – sie lachen ihn aus.",
+    "Talita kum: Jesus wendet sich dem Mädchen zu (Pfeil) und sagt: Steh auf (Figur mit Pfeil nach oben); das Mädchen steht auf, die Eltern staunen."
   ],
-  "interpretation_note_de": "Die Mutter und die drei Jünger ([[MRK.5.37]], [[MRK.5.40]]) sind im letzten Feld nicht gezeichnet, um das Bild nicht zu überladen. Das Auslachen ([[MRK.5.40]]), das Schweigegebot und die Anweisung, ihr zu essen zu geben ([[MRK.5.43]]), sind nicht im Bild.",
+  "interpretation_note_de": "Bild aus der Kernanalyse (Todesnachricht und «Glaube nur», Klage und Spott im Haus, «Talita kum»). Das Mädchen liegt im zweiten Feld tot da und steht im dritten auf. Die drei Jünger ([[MRK.5.37]], [[MRK.5.40]]) sind nicht gezeichnet, um das Bild nicht zu überladen; Schweigegebot und Essen ([[MRK.5.43]]) sind nicht im Bild.",
   "basis": [
     {
       "record": "TU-MRK-005-035-043",
       "field": "summary",
-      "fingerprint": "699a79ade4bcdc45"
+      "fingerprint": "0e1cc282cf14887f"
     },
     {
       "record": "TRANS-MRK-005-001-043-DE-WORKING",
@@ -135,18 +185,18 @@
     {
       "record": "TRANS-MRK-005-001-043-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.5.37-MRK.5.40",
-      "fingerprint": "80402314508e152d"
+      "reference": "MRK.5.38-MRK.5.40",
+      "fingerprint": "f3ea3c21f2df78e3"
     },
     {
       "record": "TRANS-MRK-005-001-043-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.5.40-MRK.5.42",
-      "fingerprint": "7eea230e04921ce4"
+      "reference": "MRK.5.41-MRK.5.42",
+      "fingerprint": "b100c8ead28881ee"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -274,10 +324,498 @@
           "Talita kum: Jesus wendet sich dem Mädchen zu (Pfeil), nimmt es bei der Hand und sagt: Steh auf (Figur über Matte mit Pfeil nach oben); es steht auf, der Vater staunt."
         ]
       }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.5.35-MRK.5.36",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JAIRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JAIRUS",
+                "icons": [
+                  "FIG-TOCHTER-JAIRUS",
+                  "FIG-ZEICHEN-TOD"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-JAIRUS",
+                "icons": [
+                  "FIG-ZEICHEN-GLAUBEN"
+                ]
+              }
+            ],
+            "action_de": "Leute aus dem Haus des Jairus melden: Deine Tochter ist gestorben. Jesus überhört es und sagt zu Jairus: Fürchte dich nicht, glaube nur!",
+            "stage": {
+              "mood": {
+                "FIG-JAIRUS": "worried",
+                "FIG-GRUPPE-MENGE": "worried"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.5.37-MRK.5.40",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-TOCHTER-JAIRUS",
+                  "FIG-ZEICHEN-SCHLAFEN"
+                ]
+              }
+            ],
+            "action_de": "Mit Petrus, Jakobus und Johannes kommt Jesus ins Haus; die Leute weinen und klagen laut. Jesus sagt: Das Kind ist nicht gestorben, es schläft. Sie lachen ihn aus.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "worried"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.5.40-MRK.5.42",
+            "figures": [
+              "FIG-JAIRUS",
+              "FIG-TOCHTER-JAIRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-TOCHTER-JAIRUS",
+                "icons": [
+                  "FIG-ZEICHEN-AUFSTEHEN"
+                ]
+              }
+            ],
+            "action_de": "Mit den Eltern und den drei Jüngern geht Jesus zum Kind, fasst seine Hand und sagt: Talita kum – Mädchen, steh auf! Sogleich steht das zwölfjährige Mädchen auf und geht umher; alle geraten ausser sich vor Staunen.",
+            "stage": {
+              "mood": {
+                "FIG-JAIRUS": "surprised",
+                "FIG-TOCHTER-JAIRUS": "calm"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-TOCHTER-JAIRUS",
+                  "act"
+                ]
+              ]
+            }
+          }
+        ],
+        "actions_de": [
+          "Leute aus dem Haus des Jairus melden: Deine Tochter ist gestorben. Jesus überhört es und sagt zu Jairus: Fürchte dich nicht, glaube nur!",
+          "Mit Petrus, Jakobus und Johannes kommt Jesus ins Haus; die Leute weinen und klagen laut. Jesus sagt: Das Kind ist nicht gestorben, es schläft. Sie lachen ihn aus.",
+          "Mit den Eltern und den drei Jüngern geht Jesus zum Kind, fasst seine Hand und sagt: Talita kum – Mädchen, steh auf! Sogleich steht das zwölfjährige Mädchen auf und geht umher; alle geraten ausser sich vor Staunen."
+        ],
+        "captions_de": [
+          "Nachricht: Leute melden Jairus den Tod der Tochter (Mädchen, Grab); Jesus sagt: Glaube nur (Herz mit Licht).",
+          "Klage: Die Leute weinen (Tränen); Jesus sagt, das Mädchen schlafe (Mondsichel).",
+          "Wort → Aufstehen: Jesus wendet sich dem Mädchen zu (Pfeil), nimmt es bei der Hand und sagt: Steh auf (Figur über Matte mit Pfeil nach oben); es steht auf, der Vater staunt."
+        ],
+        "interpretation_note_de": "Die Mutter und die drei Jünger ([[MRK.5.37]], [[MRK.5.40]]) sind im letzten Feld nicht gezeichnet, um das Bild nicht zu überladen. Das Auslachen ([[MRK.5.40]]), das Schweigegebot und die Anweisung, ihr zu essen zu geben ([[MRK.5.43]]), sind nicht im Bild.",
+        "basis": [
+          {
+            "record": "TU-MRK-005-035-043",
+            "field": "summary",
+            "fingerprint": "699a79ade4bcdc45"
+          },
+          {
+            "record": "TRANS-MRK-005-001-043-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.5.35-MRK.5.36",
+            "fingerprint": "f11c0229201b34e4"
+          },
+          {
+            "record": "TRANS-MRK-005-001-043-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.5.37-MRK.5.40",
+            "fingerprint": "80402314508e152d"
+          },
+          {
+            "record": "TRANS-MRK-005-001-043-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.5.40-MRK.5.42",
+            "fingerprint": "7eea230e04921ce4"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.5.35-MRK.5.36",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JAIRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JAIRUS",
+                "icons": [
+                  "FIG-TOCHTER-JAIRUS"
+                ],
+                "word": {
+                  "de": "gestorben",
+                  "gsw": "gstorbe"
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-JAIRUS",
+                "icons": [
+                  "FIG-ZEICHEN-GLAUBEN"
+                ],
+                "word": {
+                  "de": "glaube nur",
+                  "gsw": "glaub nu"
+                }
+              }
+            ],
+            "action_de": "Leute vom Synagogenvorsteher melden: Deine Tochter ist gestorben. Jesus überhört es und sagt zu Jairus: Fürchte dich nicht, glaube nur!",
+            "keywords": {
+              "de": "Fürchte dich nicht",
+              "gsw": "Häb kei Angscht"
+            },
+            "names": {
+              "FIG-JAIRUS": {
+                "de": "Jairus",
+                "gsw": "Jairus"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-JAIRUS": "pain",
+                "FIG-GRUPPE-MENGE": "worried"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.5.38-MRK.5.40",
+            "figures": [
+              "FIG-TOCHTER-JAIRUS",
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-MATTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-SCHLAFEN"
+                ],
+                "word": {
+                  "de": "schläft",
+                  "gsw": "schlaft"
+                }
+              }
+            ],
+            "action_de": "Im Haus weinen und klagen die Leute laut. Jesus sagt: Das Kind ist nicht gestorben, sondern schläft. Sie lachen ihn aus; er schickt alle hinaus und geht mit den Eltern und den drei Jüngern zum Kind.",
+            "keywords": {
+              "de": "lachten ihn aus",
+              "gsw": "händ en usglachet"
+            },
+            "stage": {
+              "pose": {
+                "FIG-TOCHTER-JAIRUS": "lie"
+              },
+              "mood": {
+                "FIG-TOCHTER-JAIRUS": "dead",
+                "FIG-GRUPPE-MENGE": "worried"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-GRUPPE-MENGE"
+                ]
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.5.41-MRK.5.42",
+            "figures": [
+              "FIG-JAIRUS",
+              "FIG-ROLLE-MUTTER",
+              "FIG-TOCHTER-JAIRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-TOCHTER-JAIRUS",
+                "icons": [
+                  "FIG-ZEICHEN-AUFSTEHEN"
+                ],
+                "word": {
+                  "de": "Talita kum!",
+                  "gsw": "Talita kum!"
+                }
+              }
+            ],
+            "action_de": "Jesus fasst die Hand des Kindes und sagt: «Talita kum!» – Mädchen, steh auf! Sogleich steht das Mädchen auf und geht umher; die Eltern geraten ausser sich vor Staunen.",
+            "keywords": {
+              "de": "Steh auf!",
+              "gsw": "Stand uf!"
+            },
+            "stage": {
+              "mood": {
+                "FIG-JAIRUS": "surprised",
+                "FIG-ROLLE-MUTTER": "surprised",
+                "FIG-TOCHTER-JAIRUS": "delight"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-TOCHTER-JAIRUS",
+                  "act"
+                ]
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.5.35-MRK.5.36",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JAIRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JAIRUS",
+                "icons": [
+                  "FIG-TOCHTER-JAIRUS"
+                ],
+                "word": {
+                  "de": "gestorben",
+                  "gsw": "gstorbe"
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-JAIRUS",
+                "icons": [
+                  "FIG-ZEICHEN-GLAUBEN"
+                ],
+                "word": {
+                  "de": "glaube nur",
+                  "gsw": "glaub nu"
+                }
+              }
+            ],
+            "action_de": "Leute vom Synagogenvorsteher melden: Deine Tochter ist gestorben. Jesus überhört es und sagt zu Jairus: Fürchte dich nicht, glaube nur!",
+            "keywords": {
+              "de": "Fürchte dich nicht",
+              "gsw": "Häb kei Angscht"
+            },
+            "names": {
+              "FIG-JAIRUS": {
+                "de": "Jairus",
+                "gsw": "Jairus"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-JAIRUS": "pain",
+                "FIG-GRUPPE-MENGE": "worried"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.5.38-MRK.5.40",
+            "figures": [
+              "FIG-TOCHTER-JAIRUS",
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-MATTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-SCHLAFEN"
+                ],
+                "word": {
+                  "de": "schläft",
+                  "gsw": "schlaft"
+                }
+              }
+            ],
+            "action_de": "Im Haus weinen und klagen die Leute laut. Jesus sagt: Das Kind ist nicht gestorben, sondern schläft. Sie lachen ihn aus; er schickt alle hinaus und geht mit den Eltern und den drei Jüngern zum Kind.",
+            "keywords": {
+              "de": "lachten ihn aus",
+              "gsw": "händ en usglachet"
+            },
+            "stage": {
+              "pose": {
+                "FIG-TOCHTER-JAIRUS": "lie"
+              },
+              "mood": {
+                "FIG-TOCHTER-JAIRUS": "dead",
+                "FIG-GRUPPE-MENGE": "worried"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-GRUPPE-MENGE"
+                ]
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.5.41-MRK.5.42",
+            "figures": [
+              "FIG-JAIRUS",
+              "FIG-ROLLE-MUTTER",
+              "FIG-TOCHTER-JAIRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-MATTE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-TOCHTER-JAIRUS",
+                "icons": [
+                  "FIG-ZEICHEN-AUFSTEHEN"
+                ],
+                "word": {
+                  "de": "Talita kum!",
+                  "gsw": "Talita kum!"
+                }
+              }
+            ],
+            "action_de": "Jesus fasst die Hand des Kindes und sagt: «Talita kum!» – Mädchen, steh auf! Sogleich steht das Mädchen auf und geht umher; die Eltern geraten ausser sich vor Staunen.",
+            "keywords": {
+              "de": "Steh auf!",
+              "gsw": "Stand uf!"
+            },
+            "stage": {
+              "x": {
+                "FIG-JAIRUS": 26,
+                "FIG-ROLLE-MUTTER": 62,
+                "FIG-TOCHTER-JAIRUS": 134,
+                "FIG-JESUS": 170
+              },
+              "floor_x": {
+                "FIG-OBJ-MATTE": 134
+              },
+              "mood": {
+                "FIG-JAIRUS": "surprised",
+                "FIG-ROLLE-MUTTER": "surprised",
+                "FIG-TOCHTER-JAIRUS": "delight"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-TOCHTER-JAIRUS",
+                  "act"
+                ]
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Bild neu aus der Kernanalyse (Worte im Bild)",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MRK-005-035-043",
+            "field": "summary",
+            "fingerprint": "699a79ade4bcdc45"
+          },
+          {
+            "record": "TRANS-MRK-005-001-043-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.5.35-MRK.5.36",
+            "fingerprint": "f11c0229201b34e4"
+          },
+          {
+            "record": "TRANS-MRK-005-001-043-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.5.38-MRK.5.40",
+            "fingerprint": "f3ea3c21f2df78e3"
+          },
+          {
+            "record": "TRANS-MRK-005-001-043-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.5.41-MRK.5.42",
+            "fingerprint": "b100c8ead28881ee"
+          }
+        ],
+        "rework": {
+          "since": "2026-10-23",
+          "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
+        }
+      }
     }
-  ],
-  "rework": {
-    "since": "2026-10-23",
-    "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
-  }
+  ]
 }
