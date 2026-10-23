@@ -117,7 +117,9 @@ mit Erklärung; nur er darf in Bildern abstrakt verwendet werden.
 
 ## Zu entscheiden
 
-1. Worte im Bild: Stichwortband und Kernwort in Sprechblasen erlauben? (Empfehlung: ja)
+1. Worte im Bild: **entschieden 2026-10-23 (Andi Neck): ja.** Folge: Bilder werden je Übersetzung erzeugt (gleicher
+   Auftrag, Wortband aus der jeweiligen Übersetzungsschicht); das passt zum Ziel, die Bibel in verschiedene Sprachen und
+   Kulturen zu übertragen.
 2. Zielwerte wie oben?
 3. Pilotstellen wie oben?
 4. Namensschilder für Hauptfiguren beim ersten Auftreten: ja oder nur über die Legende?
