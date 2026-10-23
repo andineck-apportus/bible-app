@@ -1,7 +1,8 @@
-# Bilder, die man lesen kann – Erstellung und Prüfung (Vorschlag)
+# Bilder, die man lesen kann – Erstellung und Prüfung
 
-Stand 2026-10-23, Vorschlag zur Entscheidung durch Andi Neck. Ergänzt [BILDSPRACHE.md](BILDSPRACHE.md) und
-[BILDAUFTRAEGE-ANLEITUNG.md](BILDAUFTRAEGE-ANLEITUNG.md); nach dem Entscheid werden die dortigen Regeln angepasst.
+Stand 2026-10-23. Teil der Kette [VERDICHTUNG.md](VERDICHTUNG.md) (Kernanalyse: was gezeigt und was weggelassen wird) →
+**Bild** (dieses Dokument) mit den Zeichen aus [SYMBOLPROZESS.md](SYMBOLPROZESS.md). Ergänzt [BILDSPRACHE.md](BILDSPRACHE.md) und
+[BILDAUFTRAEGE-ANLEITUNG.md](BILDAUFTRAEGE-ANLEITUNG.md); deren Regeln werden im Pilot angepasst.
 
 ## Ziel
 
@@ -32,7 +33,7 @@ Was gut funktioniert: die festen Erkennungszeichen (Gott, Jesus, Geist) und der 
    wer sagt was zu wem. Lieber ein starkes Feld als drei schwache.
 2. **Konkret vor abstrakt.** Ort, Gegenstände, Gesten und Haltung erzählen zuerst. Abstrakte Zeichen nur aus einem kleinen,
    getesteten Grundbestand (rund 30, im Symbolindex erklärt), höchstens zwei je Feld.
-3. **Wenige Worte im Bild** (Entscheid nötig, heute verboten):
+3. **Wenige Worte im Bild** (Entscheid 2026-10-23: ja; Bilder werden je Übersetzung erzeugt):
    - ein Stichwortband je Feld mit 1–4 Wörtern aus dem Wortlaut der gewählten Übersetzung, z. B. «Steh auf!»,
      «Selig die Armen», «Wer bist du?»;
    - in Sprechblasen ein Kernwort plus höchstens zwei Zeichen statt einer Zeichenkette.
@@ -49,11 +50,8 @@ Was gut funktioniert: die festen Erkennungszeichen (Gott, Jesus, Geist) und der 
    | Aufzählung (Tugenden, Laster, Gebote) | Raster mit Wort und Zeichen je Eintrag |
    | Gebet, Lob, Klage | Betende Figur, Gott als Gegenüber, Kernwort des Gebets |
 
-5. **Ebenengerecht.**
-   - Bibel, Testament, Buchgruppe, Buch: Zeitleiste oder Karte mit beschrifteten Stationen statt Bilderrätsel.
-   - Kapitel: Bildfolge der Abschnitte, je Feld der kurze Abschnittstitel.
-   - Abschnitt: 1–3 Felder im Erzählverlauf.
-   - Merkvers: ein Bild mit dem Verswort.
+5. **Ebenengerecht:** Umfang und Auswahl je Ebene nach VERDICHTUNG.md (ein Feld je tragendem Moment; Buch und höher
+   als Zeitleiste oder Karte mit beschrifteten Stationen; Kapitel als Bildfolge der Abschnitte mit kurzem Titel).
 6. **Wiedererkennbare Personen.** Hauptfiguren mit festem Erkennungszeichen wie heute bei Gott und Jesus; bei erstem
    Auftreten in einem Bild auf Wunsch mit Namensschild. Nebenfiguren je Geschichte mit eigener Farbe.
 7. **Auf dem Handy lesbar.** Höchstens zwei Felder nebeneinander, Mindestgrösse für Zeichen und Schrift, im Abschnitt
@@ -61,14 +59,9 @@ Was gut funktioniert: die festen Erkennungszeichen (Gott, Jesus, Geist) und der 
 
 ## Ablauf je Stelle
 
-1. **Textanalyse** (KI-Bearbeiter, strukturiert, im Bildauftrag gespeichert):
-   - `mode`: Erzählung, Rede, Gleichnis, Auftrag, Aussage, Aufzählung, Gebet;
-   - `voice`: wer im Text spricht (bei Briefen der Verfasser), bei Auftrag zusätzlich der Empfänger;
-   - `core_de`: Kernaussage in einem Satz;
-   - `moment_de`: der Erkennungsmoment je Feld;
-   - `keywords`: 1–4 Wörter je Feld, wörtlich aus der Übersetzung;
-   - Personen, Orte, Gegenstände, Ursache → Wirkung.
-2. **Bildentwurf** nach dem Bildtyp der Textart.
+1. **Kernanalyse** der Einheit liegt vor und ist geprüft (VERDICHTUNG.md): Kernaussage, tragende Momente mit
+   Erkennungsmoment und Schlüsselwörtern, Textart, Sprecher. Das Bild zeigt genau diese Momente, ein Feld je Moment.
+2. **Bildentwurf** nach dem Bildtyp der Textart; Gegenstände, Ursache → Wirkung und Gesten aus dem Text.
 3. **Automatische Regelprüfung** (`scripts/validate.py`, blockiert die Veröffentlichung):
    - Pflichtfelder vorhanden; Stichwörter stehen so im Text;
    - wer im Bild spricht, spricht oder wird angesprochen im Text; bei Briefen spricht der Verfasser oder er wird zitiert;
@@ -80,7 +73,7 @@ Was gut funktioniert: die festen Erkennungszeichen (Gott, Jesus, Geist) und der 
    - (a) Welche Stelle ist es? Auswahl aus vier Kandidaten derselben Ebene, z. B. den Abschnitten desselben Kapitels;
    - (b) Was geschieht oder wird gesagt? Freie Beschreibung;
    - (c) Wer ist wer? Geschieht etwas oder wird es verlangt?
-   Ein zweiter Durchgang vergleicht die Antworten mit `core_de`, `moment_de` und `voice` und vergibt Punkte.
+   Ein zweiter Durchgang vergleicht die Antworten mit Kernaussage, Momenten und Sprecher der Kernanalyse und vergibt Punkte.
 6. **Nachbessern** bis zum Zielwert, höchstens drei Runden. Was danach offen ist, kommt auf eine kurze Liste für Andi Neck.
 7. **Prüfprotokoll** im Bild-Datensatz: Datum, Modell, Punktzahl, offene Punkte, Fingerabdruck von Text und Bild.
    Ändert sich eines davon, gilt die Prüfung als veraltet.
@@ -101,25 +94,21 @@ dafür der Anfang.
 
 ## Zeichen-Grundbestand
 
-Jedes abstrakte Zeichen wird einzeln getestet: Ein Modell sieht nur das Zeichen und nennt die Bedeutung, dazu eine Auswahl aus
-vier Begriffen. Was nicht erkannt wird, wird neu gezeichnet oder durch ein Wort ersetzt. Der Grundbestand steht im Symbolindex
-mit Erklärung; nur er darf in Bildern abstrakt verwendet werden.
+Nur getestete Zeichen dürfen abstrakt verwendet werden; Ablauf, Zielwerte und Ausgangsmessung in SYMBOLPROZESS.md.
 
 ## Einführung in Etappen
 
-1. **Ausgangslage messen:** Blindtest ohne Legende für alle 537 Bilder. Ergibt je Buch und Ebene die heutigen Werte.
-2. **Pilot:**
-   - Regeln, neue Felder, Bildtypen und Stichwortband im Zeichner einbauen;
-   - neu erstellen: Rut (Erzählung), Titus (Brief), Markus 5 (Heilungen) und die Bergpredigt Mt 5–7 (Rede);
-   - Werte vorher und nachher vergleichen; Andi Neck sieht sich den Pilot an.
-3. **Ausrollen** auf alle Bücher mit KI-Bearbeitern in Gruppen, mit Liste der offenen Fälle.
-4. **Zeichen-Grundbestand** testen und bereinigen, Symbolindex nachführen.
+1. **Ausgangslage messen:** Blindtest ohne Legende für die heutigen Bilder der Pilotstellen (später alle 537).
+2. **Vorbereiten, parallel:** Worte im Bild (Stichwortband, Wortzeichen) und Bildtypen im Zeichner; die meistverwendeten
+   schwachen Zeichen neu entwerfen (SYMBOLPROZESS.md).
+3. **Pilot** (VERDICHTUNG.md): Kernanalysen für Rut, Titus, Markus 5 und die Bergpredigt; nach Durchsicht durch Andi Neck
+   Zusammenfassungen und Bilder daraus neu; Werte vorher und nachher.
+4. **Ausrollen** auf alle Bücher mit KI-Bearbeitern in Gruppen, mit Liste der offenen Fälle.
 
-## Zu entscheiden
+## Entscheide
 
-1. Worte im Bild: **entschieden 2026-10-23 (Andi Neck): ja.** Folge: Bilder werden je Übersetzung erzeugt (gleicher
-   Auftrag, Wortband aus der jeweiligen Übersetzungsschicht); das passt zum Ziel, die Bibel in verschiedene Sprachen und
-   Kulturen zu übertragen.
-2. Zielwerte wie oben?
-3. Pilotstellen wie oben?
-4. Namensschilder für Hauptfiguren beim ersten Auftreten: ja oder nur über die Legende?
+1. Worte im Bild: ja (Andi Neck, 2026-10-23). Bilder werden je Übersetzung erzeugt: gleicher Auftrag, Wortband aus der
+   jeweiligen Übersetzungsschicht; das passt zum Ziel, die Bibel in verschiedene Sprachen und Kulturen zu übertragen.
+2. Auswahl und Umfang über die gemeinsame Kernanalyse (VERDICHTUNG.md), Kernaussage vor Bekanntheit (2026-10-23).
+
+Noch offen: Zielwerte wie oben bestätigen; Namensschilder für Hauptfiguren beim ersten Auftreten oder nur über die Legende.
