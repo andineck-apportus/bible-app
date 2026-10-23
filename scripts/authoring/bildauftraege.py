@@ -246,8 +246,13 @@ for _b in _load_json():
     _panels = []
     for _p in _b["panels"]:
         _q = {"n": _p["n"], "reference": _p["reference"], "figures": _p.get("figures", []), "objects": _p.get("objects", []),
-              "signs": _p.get("signs", []), "speech": [{"from": s["from"], "to": s["to"], "icons": s["icons"], **({"think": True} if s.get("think") else {})} for s in _p.get("speech", [])],
+              "signs": _p.get("signs", []), "speech": [{"from": s["from"], "to": s["to"], "icons": s["icons"], **({"think": True} if s.get("think") else {}),
+                          **({"word": s["word"]} if s.get("word") else {})} for s in _p.get("speech", [])],
               "action_de": _p["action_de"]}
+        # Worte im Bild (BILDPROZESS.md): Stichwortband, Namensschilder beim ersten Auftreten, Briefrahmen für Aufträge
+        for _k in ("keywords", "names", "letter"):
+            if _p.get(_k):
+                _q[_k] = _p[_k]
         if _p.get("stage"):
             _q["stage"] = _p["stage"]
         _panels.append(_q)

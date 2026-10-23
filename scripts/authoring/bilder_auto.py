@@ -214,6 +214,67 @@ def arrow_svg(x1, y1, x2, y2, kind="act", divine=True):
             f'<path d="M{hx1:.1f} {hy1:.1f}L{x2:.1f} {y2:.1f}L{hx2:.1f} {hy2:.1f}" fill="none" stroke="{col}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>')
 
 
+# ------------------------------------------------------------------ Worte im Bild (BILDPROZESS.md, Entscheid 2026-10-23)
+# Ein Bild für alle Übersetzungen: jedes Wort steht je Sprache als eigener <text> mit Klasse lw-<sprache>; die App blendet
+# nur die gewählte Sprache ein (data-tl am App-Element). Ohne App-Stil (Vorschau) gilt Hochdeutsch.
+LANGS = ("de", "gsw")
+
+
+def _esc(s):
+    return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def _lab(v):
+    """Wort je Sprache: {"de": …, "gsw": …} oder eine Zeichenkette für alle."""
+    if isinstance(v, str):
+        return {k: v for k in LANGS}
+    return {k: v.get(k) or v.get("de", "") for k in LANGS}
+
+
+def text_w(s, fs):
+    """Geschätzte Breite einer Zeile (serifenlose Schrift, fett)."""
+    return sum(.36 if c in "il.,:;!'| " else (.82 if c in "mwMWÄÖÜ" else .6) for c in s) * fs
+
+
+def ltext(x, y, v, fs=9, anchor="middle", weight="700", fill="#3B3226"):
+    lab = _lab(v)
+    if len(set(lab.values())) == 1:
+        return (f'<text x="{x:.1f}" y="{y:.1f}" text-anchor="{anchor}" font-family="sans-serif" font-size="{fs}" font-weight="{weight}" '
+                f'fill="{fill}">{_esc(lab["de"])}</text>')
+    return "".join(f'<text class="lw lw-{k}" x="{x:.1f}" y="{y:.1f}" text-anchor="{anchor}" font-family="sans-serif" font-size="{fs}" '
+                   f'font-weight="{weight}" fill="{fill}">{_esc(s)}</text>' for k, s in lab.items())
+
+
+def lwidth(v, fs):
+    return max(text_w(s, fs) for s in _lab(v).values())
+
+
+def word_band(v, letter=False):
+    """Stichwortband unten im Feld: 1–4 Wörter aus dem Wortlaut (über dem Boden, nicht über Gesichtern)."""
+    fs = 10
+    w = min(W - 12, lwidth(v, fs) + 16 + (14 if letter else 0))
+    while lwidth(v, fs) + 16 + (14 if letter else 0) > W - 12 and fs > 7:
+        fs -= .5
+    x = (W - w) / 2
+    y = H - 19
+    icon = ""
+    if letter:  # Briefrahmen: kleiner Brief vor dem Wort (Auftrag im Brief)
+        icon = (f'<rect x="{x + 6:.1f}" y="{y + 4:.1f}" width="11" height="8" rx="1" fill="#FFFDF6" stroke="#3B3226" stroke-width=".8"/>'
+                f'<path d="M{x + 6:.1f} {y + 4:.1f}l5.5 4.4 5.5-4.4" fill="none" stroke="#3B3226" stroke-width=".8"/>')
+    tx = x + w / 2 + (7 if letter else 0)
+    return (f'<g class="ill-words"><rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="16" rx="3" fill="#FFF4D6" stroke="#3B3226" stroke-width="1"/>'
+            + icon + ltext(tx, y + 11.6, v, fs) + "</g>")
+
+
+def name_tag(x, y, v):
+    """Namensschild beim ersten Auftreten einer Hauptfigur (unter dem Kinn, auf der Brust)."""
+    fs = 7.5
+    w = lwidth(v, fs) + 8
+    x = min(W - 3 - w / 2, max(3 + w / 2, x))
+    return (f'<g class="ill-name"><rect x="{x - w / 2:.1f}" y="{y - 7.5:.1f}" width="{w:.1f}" height="10" rx="5" fill="#FFFDF6" stroke="#3B3226" stroke-width=".7"/>'
+            + ltext(x, y, v, fs) + "</g>")
+
+
 def think_bubble(x, y, w, h, tx, ty, inner):
     """Denkblase: Wolke mit kleinen Kreisen zur denkenden Figur (stilunabhängig)."""
     ox, oy = x + w / 2, y + h
@@ -282,6 +343,8 @@ class Composer:
             out.append(self.r_band(t))
         if not L["band"]:
             out.append(self.r_floor())
+        if p.get("letter"):  # Auftrag im Brief: Briefrand (gestrichelt), damit das Verlangte nicht als Erzählung gelesen wird
+            out.append(f'<rect x="3.5" y="3.5" width="{W - 7}" height="{H - 7}" rx="4" fill="none" stroke="#B08A4A" stroke-width="1.4" stroke-dasharray="6 3"/>')
         for t in L["band"]:
             pos[t] = (W * .78, 112)
         WATER = {"FIG-ORT-SEE", "FIG-ORT-MEER-OFFEN", "_MEER-STILL", "FIG-ORT-UFER"}
@@ -550,7 +613,9 @@ class Composer:
         placed, drawn = [], []
         for k, (sp, tx, ty) in enumerate(bubbles):
             ih = self.icon_h()
-            ws = [4.0 if i == "|" else icon_w(self.vb(i), ih) for i in sp["icons"]]
+            if sp.get("word") and "§W" not in sp["icons"]:  # Kernwort in der Sprechblase, vor höchstens zwei Zeichen
+                sp["icons"] = ["§W"] + list(sp["icons"])
+            ws = [4.0 if i == "|" else (lwidth(sp["word"], 10) if i == "§W" else icon_w(self.vb(i), ih)) for i in sp["icons"]]
             bw = sum(ws) + 5 * (len(ws) - 1) + 12
             avail = W - 32
             god = sp["from"] in sky
@@ -646,6 +711,9 @@ class Composer:
             for i, w in zip(sp["icons"], ws):
                 if i == "|":
                     inner.append(f'<line x1="{x + w / 2:.1f}" y1="{by + 8:.1f}" x2="{x + w / 2:.1f}" y2="{by + 4 + ih:.1f}" stroke="#3B3226" stroke-width=".7" stroke-dasharray="2 2"/>')
+                elif i == "§W":
+                    fs_ = min(10, 10 * w / max(1, lwidth(sp["word"], 10)))
+                    inner.append(ltext(x + w / 2, by + 6 + ih / 2 + fs_ * .36, sp["word"], fs_))
                 else:
                     inner.append(self.r_icon(i, x, by + 6, w, ih))
                 x += w + 5
@@ -688,6 +756,13 @@ class Composer:
                     x += w + 3 * k
                 x += 6 * k
         arrows(True)  # Handlungslinien zu freien Zeichen erst, wenn deren Lage feststeht
+        # 12. Worte im Bild: Namensschilder (erstes Auftreten) und Stichwortband
+        for fid, v in (p.get("names") or {}).items():
+            if fid in heads:
+                hx, hy = heads[fid]
+                out.append(name_tag(hx, min(hy + self.head_r() * 2.05, H - 23 if p.get("keywords") else H - 4), v))  # über dem Stichwortband
+        if p.get("keywords"):
+            out.append(word_band(p["keywords"], letter=bool(p.get("letter"))))
         return "".join(out)
 
 
@@ -700,4 +775,4 @@ def tilt(x, y, ang):
     return f' transform="rotate({ang} {x:.1f} {y:.1f})"'
 
 
-__all__ = ["load_briefs", "alt_text", "Composer", "META", "plan", "gather_lex", "W", "H", "FLOOR_Y", "math", "tilt"]
+__all__ = ["ltext", "word_band", "name_tag", "load_briefs", "alt_text", "Composer", "META", "plan", "gather_lex", "W", "H", "FLOOR_Y", "math", "tilt"]

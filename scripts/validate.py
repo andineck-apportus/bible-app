@@ -276,6 +276,23 @@ def main():
                     if records.get(x, (None, {}))[1].get("type") != "figure":
                         errors.append(f"{rel}: {x} nicht im Bildlexikon")
                 check_ref(rel, f"panels[{p_.get('n')}].reference", p_.get("reference")); ref_count += 1
+                # Worte im Bild: Stichwörter stehen so im Text (Hochdeutsch; ohne Satzzeichen und Gross-/Kleinschreibung)
+                kw_ = (p_.get("keywords") or {}).get("de") if isinstance(p_.get("keywords"), dict) else p_.get("keywords")
+                if kw_:
+                    norm_ = lambda s: " ".join(re.sub(r"[^\w\s]", " ", s.lower()).split())  # noqa: E731
+                    txt_ = ""
+                    for b_ in r.get("basis") or []:
+                        if b_.get("field") != "summary":
+                            tbr_ = records.get(b_.get("record"), (None, {}))[1].get("text_by_reference") or {}
+                            a_, _, z_ = str(p_.get("reference", "")).partition("-")
+                            bk_, c_, v1_ = (a_.split(".") + ["", "", ""])[:3]
+                            c2_, v2_ = (z_.split(".")[1], z_.split(".")[2]) if z_ else (c_, v1_)
+                            for k_, s_ in tbr_.items():
+                                kb_, kc_, kv_ = (k_.split(".") + ["", "", ""])[:3]
+                                if kb_ == bk_ and kv_.isdigit() and c_.isdigit() and (int(c_), int(v1_ or 0)) <= (int(kc_), int(kv_)) <= (int(c2_), int(v2_ or 0)):
+                                    txt_ += " " + s_
+                    if txt_ and norm_(kw_) not in norm_(txt_):
+                        warnings.append(f"{rel}: Feld {p_.get('n')}: Stichwort «{kw_}» steht so nicht im Text {p_.get('reference')}")
             if r.get("target") not in records:
                 errors.append(f"{rel}: Ziel {r.get('target')} unbekannt")
             for b_ in r.get("basis") or []:

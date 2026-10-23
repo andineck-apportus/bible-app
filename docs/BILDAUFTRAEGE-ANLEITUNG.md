@@ -41,9 +41,32 @@ Danach in dieser Reihenfolge ausführen: `bildlexikon.py`, `bildauftraege.py`, `
 ```
 
 Prüfen wie eine Zusammenfassung: Handelnde, wer zu wem, Zeitform, Ankündigung statt Bericht; nichts zeigen, was der Text nicht
-sagt (oder es in `note_de` als Deutung benennen). Sprechblasen nur mit Zeichen (keine Wörter, keine Zahlen; höchstens 6 Zeichen).
+sagt (oder es in `note_de` als Deutung benennen). Sprechblasen ohne Worte nur mit Zeichen (höchstens 6); in neuen Aufträgen ein Kernwort und höchstens zwei Zeichen (siehe «Worte im Bild»).
 Mehrzahl («ihr», «die Leute») als Gruppe (`FIG-GRUPPE-…`), nie als Einzelfigur. Gewalt und starke Gefühle erkennbar zeigen, nicht ausmalen (docs/BILDSPRACHE.md, Regel vom
 2026-10-23: Gefühl im Gesicht, Handlung über Bewegung und Folge, Tod als liegende Figur, Jesus am Kreuz ohne Wunden im Detail). «Die Juden», Pharisäer, Hohepriester als neutrale Figuren, nie verzerrt.
+
+## Worte im Bild (ab 2026-10-23, Pilot Rut, Titus, Mk 5, Mt 5–7)
+
+Entscheid Andi Neck 2026-10-23 (BILDPROZESS.md): wenige Worte im Bild, aus dem Wortlaut der jeweiligen Übersetzung. Ein Bild gilt für
+alle Übersetzungen; jedes Wort steht je Sprache im Auftrag, die App zeigt die gewählte Textsprache.
+
+```json
+{"n": 1, "reference": "RUT.4.9-RUT.4.11", …,
+ "keywords": {"de": "Wir sind Zeugen!", "gsw": "Mir sind Züüge!"},     // Stichwortband: 1–4 Wörter, wörtlich aus dem Text des Felds
+ "names": {"FIG-BOAS": {"de": "Boas", "gsw": "Boas"}},                 // Namensschild: Hauptfiguren beim ersten Auftreten im Bild
+ "speech": [{"from": "FIG-BOAS", "to": "FIG-GRUPPE-AELTESTE", "word": {"de": "Zeugen", "gsw": "Züüge"},
+             "icons": ["FIG-ORT-FELD"]}],                               // Kernwort + höchstens zwei Zeichen
+ "letter": true}                                                        // nur bei Aufträgen im Brief: Briefrand und Brief im Band
+```
+
+- **Ein Feld je tragendem Moment** der Kernanalyse (`data/core-analyses/CORE-…json`, `moments`); die Stichwörter nach deren
+  `keywords`. Das hochdeutsche Stichwort muss so im Text des Felds stehen (der Validator warnt sonst; Satzzeichen und
+  Grossschreibung zählen nicht), das züridüütsche aus der Mundartfassung desselben Verses.
+- **Bildtyp nach Textart** (`mode` der Kernanalyse): Erzählung als Szene; Rede, Lehre, Gleichnis mit dem Redner klein am Rand
+  und dem Inhalt gross; Auftrag im Brief mit `letter: true` und Absender/Empfänger als Figuren (Paulus links, Titus rechts) –
+  das Verlangte als Zeichen in der Sprechblase, nicht als geschehene Szene; Aufzählung als wenige Zeichen nebeneinander.
+- **Namensschild** nur beim ersten Auftreten einer benannten Hauptfigur im Bild (nicht bei Gott, Jesus, Gruppen und Rollen).
+- Höchstens zwei abstrakte Zeichen je Feld; Wörter statt Zeichenketten.
 
 ## Hinweise an den Zeichner (`stage`)
 
