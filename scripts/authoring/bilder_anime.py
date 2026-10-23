@@ -399,8 +399,8 @@ def person(key, x, y, s, expr="calm", look=0.0, arm=None, flip=False, tears=Fals
     if CHAR[key].get("child"):
         s *= .74
         y += 9 * s
-    if hold and hold.startswith("an-a-"):  # Erkennungszeichen (Schlüssel, Kasse …) gut sichtbar auf der Brust
-        held = use(hold, 1, 16, 14, 14)
+    if hold and hold.startswith("an-a-"):  # Erkennungszeichen (Schlüssel, Kasse …) gross auf der Brust, mit Kontur
+        held = f'<g filter="url(#an-kontur)">{use(hold, -8, 17, 16, 16)}</g>'
     else:
         held = use(hold, -4, 13, 16, 12) if hold else ""  # vor der Brust, nicht am unteren Rand
     if hold and "posaune" in hold:  # Blasinstrument am Mund, Schalltrichter von der Figur weg in Blickrichtung (Hinweis Andi Neck)
@@ -1022,22 +1022,27 @@ def library():
         if not m:
             raise SystemExit(f"{sid} fehlt in der Symbol-Bibliothek")
         parts.append(m.group(0).replace('id="ill-', 'id="an-').replace('href="#ill-', 'href="#an-'))
+    # Kontur für Erkennungszeichen: dunkler Aussenrand, heller Innenrand (lesbar auf jeder Gewandfarbe)
+    parts.append('<filter id="an-kontur" x="-25%" y="-25%" width="150%" height="150%"><feMorphology in="SourceAlpha" operator="dilate" radius="1.4" result="a"/>'
+                 f'<feFlood flood-color="{INK}"/><feComposite in2="a" operator="in" result="ink"/><feMorphology in="SourceAlpha" operator="dilate" radius=".85" result="b"/>'
+                 '<feFlood flood-color="#FFFDF6"/><feComposite in2="b" operator="in" result="hell"/><feMerge><feMergeNode in="ink"/><feMergeNode in="hell"/><feMergeNode in="SourceGraphic"/></feMerge></filter>')
     vb = {}
     for fid, (key, expr) in PORTRAITS.items():
         sid = f"an-p-{key}"
         at = CHAR[key].get("attr")  # Erkennungszeichen auch im Lexikon-Porträt, gross in der Hand (Blindtest 2026-10-23: ohne Attribut kaum unterscheidbar)
-        held = (f'<path d="M30 40L35 44" stroke="{INK}" stroke-width="4.6" stroke-linecap="round"/><path d="M30 40L35 44" stroke="{CHAR[key].get("mantle") or CHAR[key]["robe"]}" stroke-width="3.2" stroke-linecap="round"/>'
-                + use(at, 29, 24, 20, 20) + f'<circle cx="37" cy="44" r="2.8" fill="{SKIN}" stroke="{INK}" stroke-width=".6"/>') if at else ""
-        vbx = "0 0 50 54" if at else "0 0 38 54"
+        # Erkennungszeichen gross auf der Brust, mit hellem Rand und Kontur; keine Arme (Andi Neck 2026-10-23: ohne Hand halten
+        # lieber ohne Arme, Zeichen auf die Brust mit Konturen)
+        held = f'<g filter="url(#an-kontur)">{use(at, -9, 17, 18, 18)}</g>' if at else ""
+        vbx = "0 0 38 54"
         c = CHAR[key]
         if c.get("baby"):  # Säugling: gewickelt, kleines Gesicht (früher Erwachsenenbüste ohne Haar)
             fig = (f'<g transform="translate(19 30)"><ellipse cx="0" cy="8" rx="15" ry="10" fill="{c["robe"]}" stroke="{INK}" stroke-width=".8"/>'
                    f'<path d="M-11 4q11-6 22 0" fill="none" stroke="{INK}" stroke-width=".5" opacity=".5"/><g transform="translate(-4 -2) scale(.62)">{head_inner(key, "smile", .4)}</g></g>')
         elif c.get("child"):  # Kind: kleiner, grosser Kopf, kindliches Gesicht
-            fig = f'<g transform="translate(19 26) scale(.78)">{body_inner(key, None, 6)}{head_inner(key, expr)}</g>'
+            fig = f'<g transform="translate(19 26) scale(.78)">{body_inner(key, None, 6)}{head_inner(key, expr)}{held}</g>'
         else:
-            fig = f'<g transform="translate(19 18)">{body_inner(key)}{head_inner(key, expr)}</g>'
-        parts.append(f'<symbol id="{sid}" viewBox="{vbx}">{fig}{held}</symbol>')
+            fig = f'<g transform="translate(19 18)">{body_inner(key)}{head_inner(key, expr)}{held}</g>'
+        parts.append(f'<symbol id="{sid}" viewBox="{vbx}">{fig}</symbol>')
         vb[fid] = (sid, vbx)
     # Gemeinde: Männer, Frauen und ein Kind vor dem Haus; die Menschen grösser als das Haus (Blindtest 2026-10-23: Haus dominierte)
     parts.append('<symbol id="an-gemeinde" viewBox="0 0 60 44">' + use("an-haus", 30, 0, 30, 27)
