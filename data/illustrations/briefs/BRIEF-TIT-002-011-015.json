@@ -17,9 +17,7 @@
         "FIG-GRUPPE-VOELKER"
       ],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-GNADE"
-      ],
+      "signs": [],
       "speech": [],
       "action_de": "Die Gnade Gottes ist erschienen, rettend für alle Menschen; sie erzieht uns, besonnen, gerecht und fromm zu leben.",
       "keywords": {
@@ -96,13 +94,10 @@
         {
           "from": "FIG-PAULUS",
           "to": "FIG-TITUS",
-          "icons": [
-            "FIG-ZEICHEN-VOLLMACHT",
-            "FIG-ZEICHEN-WARNEN"
-          ],
+          "icons": [],
           "word": {
-            "de": "Vollmacht",
-            "gsw": "Vollmacht"
+            "de": "mit aller Vollmacht",
+            "gsw": "mit voller Vollmacht"
           }
         }
       ],
@@ -136,9 +131,9 @@
     "Titus soll das sagen, ermahnen und mit aller Vollmacht zurechtweisen; niemand soll ihn geringschätzen."
   ],
   "captions_de": [
-    "Gott → Gnade → alle Menschen: Von Gott (Strahlenkranz) kommt Gnade (goldener Pfeil, offene Hände mit Licht) zu allen Menschen.",
+    "Gott → Gnade → alle Menschen: Von Gott (Strahlenkranz) kommt die Gnade (goldener Pfeil) zu allen Menschen; sie freuen sich.",
     "Erwarten: Die Glaubenden denken an Jesus (Denkblase: «Herrlichkeit», Kreuznimbus) – noch nicht erschienen; neben ihnen das Kreuz (hingegeben) und eine gesprengte Kette (losgekauft).",
-    "Auftrag an Titus – mit Vollmacht: Paulus schreibt Titus: «Vollmacht» (goldenes Zepter) zum Ermahnen (Zeigefinger)."
+    "Auftrag an Titus – mit Vollmacht: Paulus schreibt Titus: Ermahne und weise zurecht «mit aller Vollmacht»."
   ],
   "interpretation_note_de": "Das Erscheinen der Herrlichkeit Christi ([[TIT.2.13]]) wird erwartet, nicht erzählt; darum steht Jesus nur in der Denkblase. Kreuz und gesprengte Kette deuten «sich hingegeben» und «loskaufen» an ([[TIT.2.14]]). Titus ist ein Brief: Was Paulus verlangt, ist Auftrag, nicht erzählte Tatsache; solche Felder haben einen gestrichelten Briefrand, einen Brief im Stichwortband, und das Verlangte steht als Kernwort mit Zeichen in der Sprechblase des Paulus.",
   "basis": [
@@ -692,6 +687,139 @@
           "since": "2026-10-23",
           "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
         }
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Nachbesserung nach Bildtest ohne Legende",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "TIT.2.11-TIT.2.12",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-VOELKER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-GNADE"
+            ],
+            "speech": [],
+            "action_de": "Die Gnade Gottes ist erschienen, rettend für alle Menschen; sie erzieht uns, besonnen, gerecht und fromm zu leben.",
+            "keywords": {
+              "de": "die Gnade Gottes",
+              "gsw": "d Gnad vo Gott"
+            },
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-VOELKER",
+                  "act"
+                ]
+              ],
+              "god_side": "left",
+              "mood": {
+                "FIG-GRUPPE-VOELKER": "delight"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "TIT.2.13-TIT.2.14",
+            "figures": [
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [
+              "FIG-OBJ-KREUZ"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-LOESEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-GLAUBENDE",
+                "to": "FIG-GRUPPE-GLAUBENDE",
+                "icons": [
+                  "FIG-JESUS"
+                ],
+                "think": true,
+                "word": {
+                  "de": "Herrlichkeit",
+                  "gsw": "Herrlichkeit"
+                }
+              }
+            ],
+            "action_de": "Die Glaubenden erwarten das Erscheinen der Herrlichkeit Jesu Christi, der sich für sie hingegeben hat, um sie loszukaufen und sich ein Volk zu reinigen, eifrig in guten Werken.",
+            "keywords": {
+              "de": "für uns hingegeben",
+              "gsw": "für üs häregää"
+            },
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-LOESEN": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "delight"
+              },
+              "floor_x": {
+                "FIG-OBJ-KREUZ": 8
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "TIT.2.15",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TITUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-ZEICHEN-VOLLMACHT",
+                  "FIG-ZEICHEN-WARNEN"
+                ],
+                "word": {
+                  "de": "Vollmacht",
+                  "gsw": "Vollmacht"
+                }
+              }
+            ],
+            "action_de": "Titus soll das sagen, ermahnen und mit aller Vollmacht zurechtweisen; niemand soll ihn geringschätzen.",
+            "keywords": {
+              "de": "Niemand soll dich geringschätzen",
+              "gsw": "Niemer söll dich gringschätze"
+            },
+            "names": {
+              "FIG-PAULUS": {
+                "de": "Paulus",
+                "gsw": "Paulus"
+              },
+              "FIG-TITUS": {
+                "de": "Titus",
+                "gsw": "Titus"
+              }
+            },
+            "letter": true,
+            "stage": {
+              "mood": {
+                "FIG-PAULUS": "earnest",
+                "FIG-TITUS": "determined"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Gott → Gnade → alle Menschen: Von Gott (Strahlenkranz) kommt Gnade (goldener Pfeil, offene Hände mit Licht) zu allen Menschen.",
+          "Erwarten: Die Glaubenden denken an Jesus (Denkblase: «Herrlichkeit», Kreuznimbus) – noch nicht erschienen; neben ihnen das Kreuz (hingegeben) und eine gesprengte Kette (losgekauft).",
+          "Auftrag an Titus – mit Vollmacht: Paulus schreibt Titus: «Vollmacht» (goldenes Zepter) zum Ermahnen (Zeigefinger)."
+        ]
       }
     }
   ]

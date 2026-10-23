@@ -44,10 +44,6 @@
           "FIG-ROLLE-JUNGER-MANN": 72,
           "FIG-ROLLE-MENSCH": 128
         },
-        "beside": {
-          "FIG-OBJ-BALKEN": "FIG-ROLLE-MENSCH",
-          "FIG-OBJ-SPLITTER": "FIG-ROLLE-JUNGER-MANN"
-        },
         "mood": {
           "FIG-JESUS": "earnest",
           "FIG-ROLLE-MENSCH": "earnest",
@@ -55,6 +51,12 @@
         },
         "size": {
           "FIG-JESUS": 0.7
+        },
+        "at": {
+          "FIG-OBJ-BALKEN": "FIG-ROLLE-MENSCH"
+        },
+        "beside": {
+          "FIG-OBJ-SPLITTER": "FIG-ROLLE-JUNGER-MANN"
         }
       }
     },
@@ -170,19 +172,18 @@
       "reference": "MAT.7.28-MAT.7.29",
       "figures": [
         "FIG-JESUS",
-        "FIG-GRUPPE-MENGE"
+        "FIG-GRUPPE-MENGE",
+        "FIG-GRUPPE-SCHRIFTGELEHRTE"
       ],
       "objects": [
         "FIG-ORT-BERG"
       ],
-      "signs": [
-        "FIG-ZEICHEN-VOLLMACHT"
-      ],
+      "signs": [],
       "speech": [],
       "action_de": "Als Jesus diese Worte beendet hat, sind die Menschenmengen überwältigt von seiner Lehre, denn er lehrt sie wie einer, der Vollmacht hat, und nicht wie ihre Schriftgelehrten.",
       "keywords": {
-        "de": "überwältigt von seiner Lehre",
-        "gsw": "überwältiget vo sinere Lehr"
+        "de": "der Vollmacht hat",
+        "gsw": "wo Vollmacht hät"
       },
       "stage": {
         "back_side": "left",
@@ -194,14 +195,25 @@
           "FIG-JESUS": "sit"
         },
         "x": {
-          "FIG-JESUS": 44,
-          "FIG-GRUPPE-MENGE": 132
+          "FIG-JESUS": 30,
+          "FIG-GRUPPE-MENGE": 88,
+          "FIG-GRUPPE-SCHRIFTGELEHRTE": 156
         },
-        "beside": {
-          "FIG-ZEICHEN-VOLLMACHT": "FIG-JESUS"
+        "split": 2,
+        "size": {
+          "FIG-JESUS": 0.85
         },
+        "arrows": [
+          [
+            "FIG-JESUS",
+            "FIG-GRUPPE-MENGE",
+            "act"
+          ]
+        ],
         "mood": {
-          "FIG-GRUPPE-MENGE": "surprised"
+          "FIG-JESUS": "earnest",
+          "FIG-GRUPPE-MENGE": "surprised",
+          "FIG-GRUPPE-SCHRIFTGELEHRTE": "pensive"
         }
       }
     }
@@ -213,10 +225,10 @@
     "Als Jesus diese Worte beendet hat, sind die Menschenmengen überwältigt von seiner Lehre, denn er lehrt sie wie einer, der Vollmacht hat, und nicht wie ihre Schriftgelehrten."
   ],
   "captions_de": [
-    "Splitter und Balken: Rechts ein Mann mit einem Balken im eigenen Auge (langer Holzbalken neben dem Kopf); er will seinem Bruder (Mitte) den Splitter (kleines Holzstück neben dem Auge) herausziehen. Jesus (links) lehrt.",
+    "Splitter und Balken: Rechts ein Mann mit einem Balken im eigenen Auge (langer Holzbalken an seinem Kopf) sagt zu seinem Bruder (Mitte): «Splitter» (kleines Holzstück neben dessen Auge). Jesus (links) lehrt.",
     "Wie ihr es wollt: Ein Jünger reicht einem Mann ein Brot (Pfeil), wie er es sich selbst von ihm wünscht; Jesus (links) sagt: Das ist das Gesetz (Sprechblase: Schriftrolle).",
     "Fels oder Sand: Jesus (Mitte) sagt: Wer hört und tut … Links steht das Haus auf dem Felsen, rechts stürzt das Haus auf dem Sand im Sturm ein (dunkle Wolke mit Blitz).",
-    "Lehre mit Vollmacht: Jesus sitzt auf dem Berg, bei ihm die Vollmacht (goldenes Zepter mit Strahlen); die Menschenmengen staunen über seine Lehre."
+    "Lehre mit Vollmacht: Jesus sitzt auf dem Berg und lehrt (Pfeil); die Menschenmengen staunen, denn er lehrt wie einer, der Vollmacht hat – nicht wie ihre Schriftgelehrten (rechts, mit Schriftrolle, hinter der gestrichelten Linie)."
   ],
   "interpretation_note_de": "Das Kapitelbild nimmt Felder aus den Abschnittsbildern auf (Kernanalyse des Kapitels): Splitter und Balken ([[MAT.7.3-MAT.7.5]]), die Goldene Regel ([[MAT.7.12]]), das Gleichnis vom Haus auf dem Felsen und auf dem Sand ([[MAT.7.24-MAT.7.27]]) und die staunende Menge am Schluss ([[MAT.7.28-MAT.7.29]]). Bitten und Anklopfen, das enge Tor und die falschen Propheten stehen in den Abschnitten.",
   "basis": [
@@ -962,6 +974,216 @@
           "since": "2026-10-23",
           "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
         }
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Nachbesserung nach Bildtest ohne Legende",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.7.3-MAT.7.5",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-JUNGER-MANN",
+              "FIG-ROLLE-MENSCH"
+            ],
+            "objects": [
+              "FIG-OBJ-BALKEN",
+              "FIG-OBJ-SPLITTER"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-MENSCH",
+                "to": "FIG-ROLLE-JUNGER-MANN",
+                "icons": [],
+                "word": {
+                  "de": "Splitter",
+                  "gsw": "Splitter"
+                }
+              }
+            ],
+            "action_de": "Wer den Splitter im Auge seines Bruders sieht und den Balken im eigenen Auge nicht bemerkt, soll zuerst den Balken aus dem eigenen Auge ziehen; dann sieht er klar, um den Splitter herauszuziehen.",
+            "keywords": {
+              "de": "den Balken",
+              "gsw": "de Balke"
+            },
+            "stage": {
+              "x": {
+                "FIG-JESUS": 24,
+                "FIG-ROLLE-JUNGER-MANN": 72,
+                "FIG-ROLLE-MENSCH": 128
+              },
+              "beside": {
+                "FIG-OBJ-BALKEN": "FIG-ROLLE-MENSCH",
+                "FIG-OBJ-SPLITTER": "FIG-ROLLE-JUNGER-MANN"
+              },
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-ROLLE-MENSCH": "earnest",
+                "FIG-ROLLE-JUNGER-MANN": "surprised"
+              },
+              "size": {
+                "FIG-JESUS": 0.7
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.7.12",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-JUENGER",
+              "FIG-ROLLE-MENSCH"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-SCHRIFTROLLE"
+                ],
+                "word": {
+                  "de": "das Gesetz",
+                  "gsw": "s Gsetz"
+                }
+              }
+            ],
+            "action_de": "Alles, was ihr wollt, dass euch die Menschen tun, so tut auch ihr ihnen; denn das ist das Gesetz und die Propheten.",
+            "keywords": {
+              "de": "so tut auch ihr ihnen",
+              "gsw": "eso tüend au ir ine"
+            },
+            "stage": {
+              "x": {
+                "FIG-JESUS": 24,
+                "FIG-ROLLE-JUENGER": 84,
+                "FIG-ROLLE-MENSCH": 162
+              },
+              "beside": {
+                "FIG-OBJ-BROT": "FIG-ROLLE-JUENGER"
+              },
+              "arrows": [
+                [
+                  "FIG-OBJ-BROT",
+                  "FIG-ROLLE-MENSCH",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-ROLLE-JUENGER": "smile",
+                "FIG-ROLLE-MENSCH": "smile"
+              },
+              "size": {
+                "FIG-JESUS": 0.7
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.7.24-MAT.7.27",
+            "figures": [
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS-SAND",
+              "FIG-ORT-HAUS-FELS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-STURM"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [],
+                "word": {
+                  "de": "hört und sie tut",
+                  "gsw": "ghört und si tuet"
+                }
+              }
+            ],
+            "action_de": "Wer Jesu Worte hört und tut, baut sein Haus auf den Felsen, und es steht im Sturm; wer sie hört und nicht tut, baut auf den Sand, und sein Haus stürzt ein.",
+            "keywords": {
+              "de": "auf den Felsen",
+              "gsw": "uf de Fels"
+            },
+            "stage": {
+              "back_side": "right",
+              "x": {
+                "FIG-JESUS": 93
+              },
+              "air_x": 140,
+              "air_y": 26,
+              "mood": {
+                "FIG-JESUS": "earnest"
+              },
+              "arrows": [
+                [
+                  "FIG-ZEICHEN-STURM",
+                  "FIG-ORT-HAUS-SAND",
+                  "act"
+                ]
+              ],
+              "size": {
+                "FIG-JESUS": 0.7
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.7.28-MAT.7.29",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-BERG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-VOLLMACHT"
+            ],
+            "speech": [],
+            "action_de": "Als Jesus diese Worte beendet hat, sind die Menschenmengen überwältigt von seiner Lehre, denn er lehrt sie wie einer, der Vollmacht hat, und nicht wie ihre Schriftgelehrten.",
+            "keywords": {
+              "de": "überwältigt von seiner Lehre",
+              "gsw": "überwältiget vo sinere Lehr"
+            },
+            "stage": {
+              "back_side": "left",
+              "before": true,
+              "on": {
+                "FIG-JESUS": "FIG-ORT-BERG"
+              },
+              "pose": {
+                "FIG-JESUS": "sit"
+              },
+              "x": {
+                "FIG-JESUS": 44,
+                "FIG-GRUPPE-MENGE": 132
+              },
+              "beside": {
+                "FIG-ZEICHEN-VOLLMACHT": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "surprised"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Splitter und Balken: Rechts ein Mann mit einem Balken im eigenen Auge (langer Holzbalken neben dem Kopf); er will seinem Bruder (Mitte) den Splitter (kleines Holzstück neben dem Auge) herausziehen. Jesus (links) lehrt.",
+          "Wie ihr es wollt: Ein Jünger reicht einem Mann ein Brot (Pfeil), wie er es sich selbst von ihm wünscht; Jesus (links) sagt: Das ist das Gesetz (Sprechblase: Schriftrolle).",
+          "Fels oder Sand: Jesus (Mitte) sagt: Wer hört und tut … Links steht das Haus auf dem Felsen, rechts stürzt das Haus auf dem Sand im Sturm ein (dunkle Wolke mit Blitz).",
+          "Lehre mit Vollmacht: Jesus sitzt auf dem Berg, bei ihm die Vollmacht (goldenes Zepter mit Strahlen); die Menschenmengen staunen über seine Lehre."
+        ]
       }
     }
   ]

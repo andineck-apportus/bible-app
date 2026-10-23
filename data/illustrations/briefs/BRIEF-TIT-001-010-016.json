@@ -77,7 +77,6 @@
           "from": "FIG-PAULUS",
           "to": "FIG-TITUS",
           "icons": [
-            "FIG-ZEICHEN-WARNEN",
             "FIG-ZEICHEN-GLAUBEN"
           ],
           "word": {
@@ -106,7 +105,7 @@
       "reference": "TIT.1.16",
       "figures": [
         "FIG-GRUPPE-IRRLEHRER",
-        "FIG-GRUPPE-GLAUBENDE"
+        "FIG-GRUPPE-MENGE"
       ],
       "objects": [],
       "signs": [
@@ -116,7 +115,7 @@
       "speech": [
         {
           "from": "FIG-GRUPPE-IRRLEHRER",
-          "to": "FIG-GRUPPE-GLAUBENDE",
+          "to": "FIG-GRUPPE-MENGE",
           "icons": [
             "FIG-ZEICHEN-NAME-GOTTES"
           ],
@@ -134,11 +133,17 @@
       "stage": {
         "x": {
           "FIG-GRUPPE-IRRLEHRER": 48,
-          "FIG-GRUPPE-GLAUBENDE": 146
+          "FIG-GRUPPE-MENGE": 146
+        },
+        "at": {
+          "FIG-ZEICHEN-NICHT": "FIG-GRUPPE-IRRLEHRER"
+        },
+        "beside": {
+          "FIG-ZEICHEN-GUTE-WERKE": "FIG-GRUPPE-IRRLEHRER"
         },
         "mood": {
-          "FIG-GRUPPE-IRRLEHRER": "earnest",
-          "FIG-GRUPPE-GLAUBENDE": "question"
+          "FIG-GRUPPE-IRRLEHRER": "smile",
+          "FIG-GRUPPE-MENGE": "question"
         }
       }
     }
@@ -150,8 +155,8 @@
   ],
   "captions_de": [
     "Auftrag an Titus – den Mund stopfen: Paulus schreibt Titus über die Verführer (rechts, Gekritzel = Gerede): «Mund stopfen» (Sprechblase durchgestrichen).",
-    "Auftrag an Titus – scharf zurechtweisen: Paulus schreibt Titus über die Verführer (rechts): «gesund im Glauben» sollen sie werden (Herz mit Licht), nach Ermahnung (Zeigefinger).",
-    "Worte ohne Werke: Die Verführer reden von Gott (Gottesname in der Sprechblase), doch gute Werke (Hand mit Brot) fehlen (roter Verbotskreis)."
+    "Auftrag an Titus – scharf zurechtweisen: Paulus schreibt Titus über die Verführer (rechts): «gesund im Glauben» sollen sie werden (Herz mit Licht).",
+    "Worte ohne Werke: Die Verführer (links, mit Schriftrolle) sagen den Leuten, sie kennen Gott (Gottesname in der Sprechblase); doch bei ihnen fehlen gute Werke (Hand mit Brot, roter Kreis mit Schrägbalken)."
   ],
   "interpretation_note_de": "Das Zitat über die Kreter ([[TIT.1.12]]) ist weder gezeichnet noch im Stichwortband, um kein Volk abzuwerten; das Bild zeigt den Auftrag, der daraus folgt. Die Verführer tragen keine jüdischen Merkmale, obwohl der Text «besonders die aus der Beschneidung» nennt ([[TIT.1.10]]). Titus ist ein Brief: Was Paulus verlangt, ist Auftrag, nicht erzählte Tatsache; solche Felder haben einen gestrichelten Briefrand, einen Brief im Stichwortband, und das Verlangte steht als Kernwort mit Zeichen in der Sprechblase des Paulus.",
   "basis": [
@@ -1012,6 +1017,152 @@
           "since": "2026-10-23",
           "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
         }
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Nachbesserung nach Bildtest ohne Legende",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "TIT.1.11",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TITUS",
+              "FIG-GRUPPE-IRRLEHRER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-GEREDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-ZEICHEN-SCHWEIGEN"
+                ],
+                "word": {
+                  "de": "Mund stopfen",
+                  "gsw": "Muul stopfe"
+                }
+              }
+            ],
+            "action_de": "Den Verführern muss man den Mund stopfen, denn um schändlichen Gewinns willen bringen sie mit ihrer Lehre ganze Familien durcheinander.",
+            "keywords": {
+              "de": "ganze Familien durcheinander",
+              "gsw": "ganzi Familie durenand"
+            },
+            "names": {
+              "FIG-PAULUS": {
+                "de": "Paulus",
+                "gsw": "Paulus"
+              },
+              "FIG-TITUS": {
+                "de": "Titus",
+                "gsw": "Titus"
+              }
+            },
+            "letter": true,
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-GEREDE": "FIG-GRUPPE-IRRLEHRER"
+              },
+              "split": 2,
+              "mood": {
+                "FIG-PAULUS": "angry",
+                "FIG-TITUS": "determined",
+                "FIG-GRUPPE-IRRLEHRER": "earnest"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "TIT.1.12-TIT.1.13",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TITUS",
+              "FIG-GRUPPE-IRRLEHRER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-ZEICHEN-WARNEN",
+                  "FIG-ZEICHEN-GLAUBEN"
+                ],
+                "word": {
+                  "de": "gesund im Glauben",
+                  "gsw": "gsund im Glaube"
+                }
+              }
+            ],
+            "action_de": "Paulus zitiert einen Spruch über die Kreter und trägt Titus auf, die Verführer scharf zurechtzuweisen, damit sie gesund im Glauben sind.",
+            "keywords": {
+              "de": "weise sie scharf zurecht",
+              "gsw": "wiis si schaarf zrächt"
+            },
+            "letter": true,
+            "stage": {
+              "split": 2,
+              "mood": {
+                "FIG-PAULUS": "earnest",
+                "FIG-TITUS": "determined",
+                "FIG-GRUPPE-IRRLEHRER": "pensive"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "TIT.1.16",
+            "figures": [
+              "FIG-GRUPPE-IRRLEHRER",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-NICHT",
+              "FIG-ZEICHEN-GUTE-WERKE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-IRRLEHRER",
+                "to": "FIG-GRUPPE-GLAUBENDE",
+                "icons": [
+                  "FIG-ZEICHEN-NAME-GOTTES"
+                ],
+                "word": {
+                  "de": "Gott zu kennen",
+                  "gsw": "kännted Gott"
+                }
+              }
+            ],
+            "action_de": "Die Verführer behaupten, Gott zu kennen, mit ihren Werken aber verleugnen sie ihn und sind für jedes gute Werk untauglich.",
+            "keywords": {
+              "de": "verleugnen sie ihn",
+              "gsw": "verleugned si en"
+            },
+            "stage": {
+              "x": {
+                "FIG-GRUPPE-IRRLEHRER": 48,
+                "FIG-GRUPPE-GLAUBENDE": 146
+              },
+              "mood": {
+                "FIG-GRUPPE-IRRLEHRER": "earnest",
+                "FIG-GRUPPE-GLAUBENDE": "question"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Auftrag an Titus – den Mund stopfen: Paulus schreibt Titus über die Verführer (rechts, Gekritzel = Gerede): «Mund stopfen» (Sprechblase durchgestrichen).",
+          "Auftrag an Titus – scharf zurechtweisen: Paulus schreibt Titus über die Verführer (rechts): «gesund im Glauben» sollen sie werden (Herz mit Licht), nach Ermahnung (Zeigefinger).",
+          "Worte ohne Werke: Die Verführer reden von Gott (Gottesname in der Sprechblase), doch gute Werke (Hand mit Brot) fehlen (roter Verbotskreis)."
+        ]
       }
     }
   ]

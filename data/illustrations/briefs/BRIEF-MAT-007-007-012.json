@@ -63,8 +63,8 @@
       "reference": "MAT.7.9-MAT.7.11",
       "figures": [
         "FIG-JESUS",
-        "FIG-ROLLE-VATER",
-        "FIG-ROLLE-SOHN"
+        "FIG-ROLLE-MENSCH",
+        "FIG-ROLLE-JUNGE"
       ],
       "objects": [
         "FIG-OBJ-BROT",
@@ -73,7 +73,17 @@
       "signs": [
         "FIG-ZEICHEN-NICHT"
       ],
-      "speech": [],
+      "speech": [
+        {
+          "from": "FIG-ROLLE-JUNGE",
+          "to": "FIG-ROLLE-MENSCH",
+          "icons": [],
+          "word": {
+            "de": "Brot",
+            "gsw": "Broot"
+          }
+        }
+      ],
       "action_de": "Kein Vater gibt seinem Sohn, der um Brot bittet, einen Stein; wenn schon ihr euren Kindern gute Gaben gebt, wie viel mehr wird der Vater in den Himmeln denen Gutes geben, die ihn bitten.",
       "keywords": {
         "de": "um Brot bittet",
@@ -82,11 +92,11 @@
       "stage": {
         "x": {
           "FIG-JESUS": 24,
-          "FIG-ROLLE-VATER": 86,
-          "FIG-ROLLE-SOHN": 146
+          "FIG-ROLLE-MENSCH": 86,
+          "FIG-ROLLE-JUNGE": 146
         },
         "beside": {
-          "FIG-OBJ-BROT": "FIG-ROLLE-VATER"
+          "FIG-OBJ-BROT": "FIG-ROLLE-MENSCH"
         },
         "floor_x": {
           "FIG-OBJ-STEIN": 112
@@ -97,14 +107,14 @@
         "arrows": [
           [
             "FIG-OBJ-BROT",
-            "FIG-ROLLE-SOHN",
+            "FIG-ROLLE-JUNGE",
             "act"
           ]
         ],
         "mood": {
           "FIG-JESUS": "calm",
-          "FIG-ROLLE-VATER": "smile",
-          "FIG-ROLLE-SOHN": "delight"
+          "FIG-ROLLE-MENSCH": "smile",
+          "FIG-ROLLE-JUNGE": "delight"
         },
         "size": {
           "FIG-JESUS": 0.7
@@ -175,7 +185,7 @@
   ],
   "captions_de": [
     "Anklopfen → geöffnet: Ein Jünger geht zu einer Tür (gestrichelter Pfeil), die weit offen steht (offene Holztür, dahinter warmes Licht); Jesus (links) sagt: Bittet!",
-    "Brot, nicht Stein: Ein Vater reicht seinem Sohn ein Brot (Pfeil zum Sohn); den Stein (am Boden, roter Kreis mit Schrägbalken) gibt er ihm nicht. Jesus (links) lehrt.",
+    "Brot, nicht Stein: Ein Junge bittet seinen Vater: «Brot»; der Vater reicht ihm ein Brot (Pfeil zum Jungen), den Stein (am Boden, roter Kreis mit Schrägbalken) gibt er ihm nicht. Jesus (links) lehrt.",
     "Wie ihr es wollt: Ein Jünger reicht einem Mann ein Brot (Pfeil), wie er es sich selbst von ihm wünscht; Jesus (links) sagt: Das ist das Gesetz (Sprechblase: Schriftrolle)."
   ],
   "interpretation_note_de": "Bild einer Rede: Jesus (links) spricht, das Gesagte ist gross daneben gezeigt. Suchen und Finden ([[MAT.7.7]]) nennt nur die Handlung; Fisch und Schlange ([[MAT.7.10]]) sind nicht im Bild. In Feld 3 ist das Brot ein Beispiel für das Gute, das man einander tut; das ist Deutung.",
@@ -861,6 +871,177 @@
           "since": "2026-10-23",
           "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
         }
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Nachbesserung nach Bildtest ohne Legende",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.7.7-MAT.7.8",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-JUENGER"
+            ],
+            "objects": [
+              "FIG-ORT-TUER-OFFEN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-JUENGER",
+                "icons": [],
+                "word": {
+                  "de": "Bittet",
+                  "gsw": "Bitted"
+                }
+              }
+            ],
+            "action_de": "Bittet, und es wird euch gegeben werden; sucht, und ihr werdet finden; klopft an, und es wird euch geöffnet werden.",
+            "keywords": {
+              "de": "klopft an",
+              "gsw": "chlopfed aa"
+            },
+            "stage": {
+              "x": {
+                "FIG-JESUS": 24,
+                "FIG-ROLLE-JUENGER": 82
+              },
+              "back_side": "right",
+              "arrows": [
+                [
+                  "FIG-ROLLE-JUENGER",
+                  "FIG-ORT-TUER-OFFEN",
+                  "go"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-ROLLE-JUENGER": "smile"
+              },
+              "size": {
+                "FIG-JESUS": 0.7
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.7.9-MAT.7.11",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-VATER",
+              "FIG-ROLLE-SOHN"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT",
+              "FIG-OBJ-STEIN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NICHT"
+            ],
+            "speech": [],
+            "action_de": "Kein Vater gibt seinem Sohn, der um Brot bittet, einen Stein; wenn schon ihr euren Kindern gute Gaben gebt, wie viel mehr wird der Vater in den Himmeln denen Gutes geben, die ihn bitten.",
+            "keywords": {
+              "de": "um Brot bittet",
+              "gsw": "um Broot bittet"
+            },
+            "stage": {
+              "x": {
+                "FIG-JESUS": 24,
+                "FIG-ROLLE-VATER": 86,
+                "FIG-ROLLE-SOHN": 146
+              },
+              "beside": {
+                "FIG-OBJ-BROT": "FIG-ROLLE-VATER"
+              },
+              "floor_x": {
+                "FIG-OBJ-STEIN": 112
+              },
+              "at": {
+                "FIG-ZEICHEN-NICHT": "FIG-OBJ-STEIN"
+              },
+              "arrows": [
+                [
+                  "FIG-OBJ-BROT",
+                  "FIG-ROLLE-SOHN",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-ROLLE-VATER": "smile",
+                "FIG-ROLLE-SOHN": "delight"
+              },
+              "size": {
+                "FIG-JESUS": 0.7
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.7.12",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-JUENGER",
+              "FIG-ROLLE-MENSCH"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-SCHRIFTROLLE"
+                ],
+                "word": {
+                  "de": "das Gesetz",
+                  "gsw": "s Gsetz"
+                }
+              }
+            ],
+            "action_de": "Alles, was ihr wollt, dass euch die Menschen tun, so tut auch ihr ihnen; denn das ist das Gesetz und die Propheten.",
+            "keywords": {
+              "de": "so tut auch ihr ihnen",
+              "gsw": "eso tüend au ir ine"
+            },
+            "stage": {
+              "x": {
+                "FIG-JESUS": 24,
+                "FIG-ROLLE-JUENGER": 84,
+                "FIG-ROLLE-MENSCH": 162
+              },
+              "beside": {
+                "FIG-OBJ-BROT": "FIG-ROLLE-JUENGER"
+              },
+              "arrows": [
+                [
+                  "FIG-OBJ-BROT",
+                  "FIG-ROLLE-MENSCH",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-ROLLE-JUENGER": "smile",
+                "FIG-ROLLE-MENSCH": "smile"
+              },
+              "size": {
+                "FIG-JESUS": 0.7
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Anklopfen → geöffnet: Ein Jünger geht zu einer Tür (gestrichelter Pfeil), die weit offen steht (offene Holztür, dahinter warmes Licht); Jesus (links) sagt: Bittet!",
+          "Brot, nicht Stein: Ein Vater reicht seinem Sohn ein Brot (Pfeil zum Sohn); den Stein (am Boden, roter Kreis mit Schrägbalken) gibt er ihm nicht. Jesus (links) lehrt.",
+          "Wie ihr es wollt: Ein Jünger reicht einem Mann ein Brot (Pfeil), wie er es sich selbst von ihm wünscht; Jesus (links) sagt: Das ist das Gesetz (Sprechblase: Schriftrolle)."
+        ]
       }
     }
   ]

@@ -114,7 +114,9 @@
      "FIG-GRUPPE-JUENGER",
      "FIG-GRUPPE-GEGNER"
     ],
-    "objects": [],
+    "objects": [
+     "FIG-OBJ-STEINE"
+    ],
     "signs": [
      "FIG-ZEICHEN-FREUDE"
     ],
@@ -135,8 +137,8 @@
     },
     "action_de": "Jesus spricht die Jünger direkt an: Selig seid ihr, wenn man euch seinetwegen beschimpft, verfolgt und euch fälschlich alles Böse nachsagt; freut euch und jubelt, denn euer Lohn in den Himmeln ist gross.",
     "action_gsw": "De Jesus redt d Jünger diräkt aa: Sälig sind ir, wänn me eu wäge ihm beschimpft, verfolgt und eu alles Bööse noosait und debii lüügt; fröied eu und jubled, dänn eue Loon i de Himel isch gross.",
-    "caption_de": "Selig seid ihr: Jesus (links) sagt den Jüngern: Freut euch! Die Jünger freuen sich (goldene Funken), obwohl Gegner (rechts, zornig) sie verfolgen.",
-    "caption_gsw": "Sälig sind ir: De Jesus (links) seit de Jünger: Fröied eu! D Jünger fröied sich (goldigi Funke), au wänn Gägner (rächts, wüetig) si verfolged.",
+    "caption_de": "Selig seid ihr: Jesus (links) sagt den Jüngern: Freut euch! Die Jünger freuen sich (goldene Funken), obwohl Gegner (rechts, zornig, Steine in der Hand) sie verfolgen.",
+    "caption_gsw": "Sälig sind ir: De Jesus (links) seit de Jünger: Fröied eu! D Jünger fröied sich (goldigi Funke), au wänn Gägner (rächts, wüetig, Stei i de Hand) si verfolged.",
     "stage": {
      "x": {
       "FIG-JESUS": 28,
@@ -155,6 +157,9 @@
      },
      "size": {
       "FIG-JESUS": 0.7
+     },
+     "hold": {
+      "FIG-GRUPPE-GEGNER": "FIG-OBJ-STEINE"
      }
     }
    }
@@ -351,8 +356,7 @@
        "gsw": "wiit über"
       },
       "icons": [
-       "FIG-ZEICHEN-GERICHT",
-       "FIG-ZEICHEN-WACHSEN"
+       "FIG-GRUPPE-PHARISAEER"
       ]
      }
     ],
@@ -362,8 +366,8 @@
     },
     "action_de": "Jesus sagt: Wenn eure Gerechtigkeit nicht weit über die der Schriftgelehrten und Pharisäer hinausgeht, werdet ihr nicht in das Reich der Himmel hineinkommen.",
     "action_gsw": "De Jesus seit: Wänn eui Grächtigkeit nöd wiit über die vo de Schriftgelehrte und Pharisäer usegaat, chömed ir nöd i s Riich vo de Himel ine.",
-    "caption_de": "Grössere Gerechtigkeit: Jesus (links) sagt den Jüngern: Eure Gerechtigkeit (Waage) muss weit über die der Pharisäer (rechts) hinausgehen (grüne Stufen nach oben).",
-    "caption_gsw": "Grösseri Grächtigkeit: De Jesus (links) seit de Jünger: Eui Grächtigkeit (Waag) mues wiit über die vo de Pharisäer (rächts) usegaa (grüeni Stufe nach obe).",
+    "caption_de": "Grössere Gerechtigkeit: Jesus (links) sagt den Jüngern: Eure Gerechtigkeit muss «weit über» die der Pharisäer (rechts, gestreifter Gebetsmantel) hinausgehen.",
+    "caption_gsw": "Grösseri Grächtigkeit: De Jesus (links) seit de Jünger: Eui Grächtigkeit mues «wiit über» die vo de Pharisäer (rächts, gstreifte Gebetsmantel) usegaa.",
     "stage": {
      "x": {
       "FIG-JESUS": 28,
@@ -483,8 +487,8 @@
      },
      "arrows": [
       [
-       "FIG-OBJ-ALTAR",
        "FIG-ROLLE-MENSCH",
+       "FIG-ROLLE-JUNGER-MANN",
        "go"
       ]
      ],
@@ -517,16 +521,14 @@
      "FIG-ROLLE-FRAU"
     ],
     "objects": [],
-    "signs": [
-     "FIG-ZEICHEN-HERZ"
-    ],
+    "signs": [],
     "speech": [
      {
       "from": "FIG-JESUS",
       "to": "FIG-ROLLE-MENSCH",
       "word": {
-       "de": "Herzen",
-       "gsw": "Härz"
+       "de": "die Ehe gebrochen",
+       "gsw": "d Ee broche"
       },
       "icons": []
      }
@@ -537,16 +539,13 @@
     },
     "action_de": "Jesus stellt dem Gebot «Du sollst nicht ehebrechen» entgegen: Wer eine Frau ansieht, um sie zu begehren, hat in seinem Herzen schon mit ihr die Ehe gebrochen.",
     "action_gsw": "De Jesus stellt em Gebot «Du söllsch nöd d Ee breche» entgäge: Wer e Frau aaluegt, für si z begääre, hät i sim Härz scho mit ire d Ee broche.",
-    "caption_de": "Schon im Herzen: Ein Mann blickt begehrend auf eine Frau (Pfeil); über ihm sein Herz (rotes Herz). Jesus (links) sagt: Das geschieht schon im Herzen.",
-    "caption_gsw": "Scho im Härz: En Maa luegt e Frau begäärig aa (Pfiil); über ihm sis Härz (roots Härz). De Jesus (links) seit: Das gschiet scho im Härz.",
+    "caption_de": "Schon im Herzen: Ein Mann sieht eine Frau begehrend an (Pfeil); Jesus (links) sagt: Er hat in seinem Herzen schon «die Ehe gebrochen».",
+    "caption_gsw": "Scho im Härz: En Maa luegt e Frau begäärig aa (Pfiil); de Jesus (links) seit: Er hät i sim Härz scho «d Ee broche».",
     "stage": {
      "x": {
       "FIG-JESUS": 26,
       "FIG-ROLLE-MENSCH": 96,
       "FIG-ROLLE-FRAU": 156
-     },
-     "at": {
-      "FIG-ZEICHEN-HERZ": "FIG-ROLLE-MENSCH"
      },
      "arrows": [
       [
@@ -557,7 +556,7 @@
      ],
      "mood": {
       "FIG-JESUS": "earnest",
-      "FIG-ROLLE-MENSCH": "pensive",
+      "FIG-ROLLE-MENSCH": "earnest",
       "FIG-ROLLE-FRAU": "calm"
      },
      "size": {
@@ -579,12 +578,11 @@
       "from": "FIG-JESUS",
       "to": "FIG-GRUPPE-JUENGER",
       "word": {
-       "de": "weg!",
-       "gsw": "wäg!"
+       "de": "wirf es von dir weg!",
+       "gsw": "wirf s vo dir wäg!"
       },
       "icons": [
-       "FIG-ZEICHEN-SEHEN",
-       "FIG-ZEICHEN-STOLPERN"
+       "FIG-ZEICHEN-SEHEN"
       ]
      }
     ],
@@ -594,8 +592,8 @@
     },
     "action_de": "Wenn das rechte Auge oder die rechte Hand zu Fall bringt, soll man es von sich werfen; besser ein Glied verlieren als den ganzen Leib.",
     "action_gsw": "Wänn s rächt Aug oder di rächt Hand z Fall bringt, söll me s vo sich wägwerfe; besser es Glid verlüüre als de ganz Liib.",
-    "caption_de": "Ernstes Bildwort: Jesus sagt den Jüngern: Wenn dein Auge (offenes Auge) dich zu Fall bringt (Figur kippt über einen Stein), weg damit! Die Jünger hören ernst zu.",
-    "caption_gsw": "Ärnschts Bildwort: De Jesus seit de Jünger: Wänn dis Aug (offes Aug) dich z Fall bringt (Figur kippt über en Stei), wäg dämit! D Jünger losed ärnscht zue.",
+    "caption_de": "Ernstes Bildwort: Jesus sagt den Jüngern: Wenn dein Auge (offenes Auge) dich zu Fall bringt: «wirf es von dir weg!» Die Jünger hören ernst zu.",
+    "caption_gsw": "Ärnschts Bildwort: De Jesus seit de Jünger: Wänn dis Aug (offes Aug) dich z Fall bringt: «wirf s vo dir wäg!» D Jünger losed ärnscht zue.",
     "stage": {
      "x": {
       "FIG-JESUS": 40,
@@ -627,12 +625,10 @@
       "from": "FIG-JESUS",
       "to": "FIG-ROLLE-MENSCH",
       "word": {
-       "de": "Ich aber",
-       "gsw": "Ich aber"
+       "de": "Ich aber sage euch",
+       "gsw": "Ich aber säg eu"
       },
-      "icons": [
-       "FIG-ZEICHEN-NEIN"
-      ]
+      "icons": []
      }
     ],
     "keywords": {
@@ -641,8 +637,8 @@
     },
     "action_de": "Jesus stellt dem Wort vom Scheidebrief entgegen: Wer seine Frau entlässt, ausser wegen Unzucht, macht, dass mit ihr die Ehe gebrochen wird.",
     "action_gsw": "De Jesus stellt em Wort vom Scheidigsbrief entgäge: Wer sini Frau entlaat, ussert wäge Unzucht, macht, dass mit ire d Ee broche wird.",
-    "caption_de": "Scheidebrief: Ein Mann gibt seiner Frau einen Scheidebrief (gefaltetes Blatt mit Siegel, Pfeil); Jesus (links) widerspricht: «Ich aber …» (rotes X).",
-    "caption_gsw": "Scheidigsbrief: En Maa git sinere Frau en Scheidigsbrief (gfaltets Blatt mit Siegel, Pfiil); de Jesus (links) widerspricht: «Ich aber …» (roots X).",
+    "caption_de": "Scheidebrief: Ein Mann gibt seiner Frau einen Scheidebrief (gefaltetes Blatt mit Siegel, Pfeil); Jesus (links) widerspricht: «Ich aber sage euch …».",
+    "caption_gsw": "Scheidigsbrief: En Maa git sinere Frau en Scheidigsbrief (gfaltets Blatt mit Siegel, Pfiil); de Jesus (links) widerspricht: «Ich aber säg eu …».",
     "stage": {
      "x": {
       "FIG-JESUS": 26,
@@ -744,6 +740,15 @@
     "signs": [],
     "speech": [
      {
+      "from": "FIG-JESUS",
+      "to": "FIG-ROLLE-JUENGER",
+      "word": {
+       "de": "Eure Rede",
+       "gsw": "Eui Red"
+      },
+      "icons": []
+     },
+     {
       "from": "FIG-ROLLE-JUENGER",
       "to": "FIG-ROLLE-MENSCH",
       "word": {
@@ -759,8 +764,8 @@
     },
     "action_de": "Eure Rede sei «Ja, ja», «nein, nein»; was darüber hinausgeht, ist vom Bösen.",
     "action_gsw": "Eui Red söll sii: «Ja, ja», «nei, nei»; was mee isch als das, isch vom Bööse.",
-    "caption_de": "Ja oder nein: Ein Jünger antwortet einem Mann schlicht «Ja, ja», ohne Schwur; Jesus (links) hat es so gelehrt.",
-    "caption_gsw": "Ja oder nei: En Jünger antwortet eme Maa eifach «Ja, ja», ohni Schwur; de Jesus (links) hät s eso gleert.",
+    "caption_de": "Ja oder nein: Jesus (links) sagt: «Eure Rede sei …» und zeigt auf einen Jünger (Pfeil) als Beispiel: Der Jünger antwortet einem Mann schlicht «Ja, ja», ohne Schwur.",
+    "caption_gsw": "Ja oder nei: De Jesus (links) seit: «Eui Red söll sii …» und zeigt uf en Jünger (Pfiil) als Biispiil: De Jünger antwortet eme Maa eifach «Ja, ja», ohni Schwur.",
     "stage": {
      "x": {
       "FIG-JESUS": 26,
@@ -774,7 +779,14 @@
      },
      "size": {
       "FIG-JESUS": 0.7
-     }
+     },
+     "arrows": [
+      [
+       "FIG-JESUS",
+       "FIG-ROLLE-JUENGER",
+       "act"
+      ]
+     ]
     }
    }
   ],
@@ -1257,8 +1269,7 @@
        "gsw": "bätted"
       },
       "icons": [
-       "FIG-GRUPPE-GEGNER",
-       "FIG-ZEICHEN-LIEBE"
+       "FIG-GRUPPE-GEGNER"
       ]
      }
     ],
@@ -1268,8 +1279,8 @@
     },
     "action_de": "Jesus stellt dem Wort «Du sollst deinen Nächsten lieben und deinen Feind hassen» entgegen: Liebt eure Feinde und betet für die, die euch verfolgen.",
     "action_gsw": "De Jesus stellt em Wort «Du söllsch din Nächschte liebe und din Find hasse» entgäge: Liebed eui Find und bätted für die, wo eu verfolged.",
-    "caption_de": "Liebt eure Feinde: Jesus (links) lehrt; die Jünger beten zum Vater (Strahlenkranz) für ihre Verfolger (Sprechblase: Gruppe in Grau, zwei rote Herzen); die Verfolger stehen zornig rechts.",
-    "caption_gsw": "Liebed eui Find: De Jesus (links) leert; d Jünger bätted zum Vatter (Strahlechranz) für die, wo si verfolged (Spraachblase: Gruppe in Grau, zwei rooti Härz); die stönd wüetig rächts.",
+    "caption_de": "Liebt eure Feinde: Jesus (links) lehrt; die Jünger beten zum Vater (Strahlenkranz) für ihre Verfolger (Sprechblase: Gruppe in Grau); die Verfolger stehen zornig rechts.",
+    "caption_gsw": "Liebed eui Find: De Jesus (links) leert; d Jünger bätted zum Vatter (Strahlechranz) für iri Verfolger (Spraachblase: Gruppe in Grau); d Verfolger stönd wüetig rächts.",
     "stage": {
      "god_side": "right",
      "x": {
@@ -1378,8 +1389,8 @@
     },
     "action_de": "Wer Almosen gibt, soll nicht die Posaune vor sich her blasen wie die Heuchler, damit sie von den Menschen gerühmt werden; die linke Hand soll nicht wissen, was die rechte tut, damit das Almosen im Verborgenen bleibt, und der Vater, der ins Verborgene sieht, wird es vergelten.",
     "action_gsw": "Wer Almose git, söll nöd d Posuune vor sich här blaase wie d Hüüchler, damit si vo de Lüüt grüemt wärded; di linggi Hand söll nöd wüsse, was di rächti macht, damit s Almose im Verborgne bliibt, und de Vatter, wo is Verborgne gseht, wird s vergälte.",
-    "caption_de": "Nicht mit Posaune: Links bläst ein Heuchler die Posaune (goldgelbes Blasrohr; rotes X); rechts gibt ein Jünger einem Armen still Geld (Münzen, Pfeil zum Armen).",
-    "caption_gsw": "Nöd mit Posuune: Links blaast en Hüüchler d Posuune (goldgäls Blaasrohr; roots X); rächts git en Jünger eme Arme still Gäld (Münze, Pfiil zum Arme).",
+    "caption_de": "Nicht mit Posaune: Links bläst ein Heuchler die Posaune (goldgelbes Blasrohr; rotes X); rechts gibt ein Jünger einem Armen still Geld (Münzen in seiner Hand, Pfeil zum Armen).",
+    "caption_gsw": "Nöd mit Posuune: Links blaast en Hüüchler d Posuune (goldgäls Blaasrohr; roots X); rächts git en Jünger eme Arme still Gäld (Münze i sinere Hand, Pfiil zum Arme).",
     "stage": {
      "x": {
       "FIG-ROLLE-HEUCHLER": 34,
@@ -1387,10 +1398,8 @@
       "FIG-ROLLE-JUENGER": 156
      },
      "hold": {
-      "FIG-ROLLE-HEUCHLER": "FIG-OBJ-POSAUNE"
-     },
-     "beside": {
-      "FIG-OBJ-MUENZEN": "FIG-ROLLE-JUENGER"
+      "FIG-ROLLE-HEUCHLER": "FIG-OBJ-POSAUNE",
+      "FIG-ROLLE-JUENGER": "FIG-OBJ-MUENZEN"
      },
      "at": {
       "FIG-ZEICHEN-NEIN": "FIG-ROLLE-HEUCHLER"
@@ -1492,9 +1501,10 @@
      "FIG-ROLLE-DIEB",
      "FIG-GRUPPE-JUENGER"
     ],
-    "objects": [],
+    "objects": [
+     "FIG-ZEICHEN-SCHATZ-ERDE"
+    ],
     "signs": [
-     "FIG-ZEICHEN-SCHATZ-ERDE",
      "FIG-ZEICHEN-SCHATZ"
     ],
     "speech": [],
@@ -1504,31 +1514,23 @@
     },
     "action_de": "Sammelt euch keine Schätze auf der Erde, wo Motte und Frass zerstören und Diebe einbrechen, sondern Schätze im Himmel; denn wo dein Schatz ist, dort wird auch dein Herz sein.",
     "action_gsw": "Sammled eu kei Schätz uf de Ärde, wo Schabe und Frass alles kaputt mached und Dieb iibräched, sondern Schätz im Himel; dänn wo diin Schatz isch, dört wird au diis Härz sii.",
-    "caption_de": "Schatz im Himmel: Links ein Dieb bei der Truhe auf der Erde (Truhe mit Rost und Motte, rot durchgestrichen); rechts blicken die Jünger zu ihrem Schatz beim Vater (Truhe mit Gold beim Strahlenkranz, Pfeil).",
-    "caption_gsw": "Schatz im Himel: Links en Dieb bi de Truhe uf de Ärde (Truhe mit Roscht und Schabe, root dureggstriche); rächts lueged d Jünger zu irem Schatz bim Vatter (Truhe mit Gold bim Strahlechranz, Pfiil).",
+    "caption_de": "Schatz im Himmel: Links trägt ein Dieb (dunkle Kapuze, Beutesack) die Truhe auf der Erde (Truhe mit Rost und Motte, rot durchgestrichen); rechts freuen sich die Jünger über ihren Schatz beim Vater (Truhe mit Gold beim Strahlenkranz).",
+    "caption_gsw": "Schatz im Himel: Links treit en Dieb (dunkli Kapuze, Büütesack) d Truhe uf de Ärde (Truhe mit Rost und Schabe, root dureggstriche); rächts freued sich d Jünger über iren Schatz bim Vatter (Truhe mit Gold bim Strahlechranz).",
     "stage": {
      "god_side": "right",
      "x": {
       "FIG-ROLLE-DIEB": 34,
       "FIG-GRUPPE-JUENGER": 130
      },
-     "floor_side": "left",
-     "floor_x": {
-      "FIG-ZEICHEN-SCHATZ-ERDE": 74
-     },
      "at": {
       "FIG-ZEICHEN-SCHATZ": "FIG-GOTT"
      },
-     "arrows": [
-      [
-       "FIG-GRUPPE-JUENGER",
-       "FIG-ZEICHEN-SCHATZ",
-       "act"
-      ]
-     ],
      "mood": {
-      "FIG-ROLLE-DIEB": "earnest",
+      "FIG-ROLLE-DIEB": "determined",
       "FIG-GRUPPE-JUENGER": "smile"
+     },
+     "hold": {
+      "FIG-ROLLE-DIEB": "FIG-ZEICHEN-SCHATZ-ERDE"
      }
     }
    },
@@ -1548,8 +1550,8 @@
     ],
     "speech": [
      {
-      "from": "FIG-ROLLE-JUENGER",
-      "to": "FIG-GOTT",
+      "from": "FIG-JESUS",
+      "to": "FIG-ROLLE-JUENGER",
       "word": {
        "de": "Gott dienen",
        "gsw": "Gott diene"
@@ -1563,8 +1565,8 @@
     },
     "action_de": "Niemand kann zwei Herren dienen; ihr könnt nicht Gott dienen und dem Mammon.",
     "action_gsw": "Niemer cha zwei Herre diene; ir chönd nöd Gott diene und em Mammon.",
-    "caption_de": "Zwei Herren: Ein Jünger wendet sich betend Gott zu (Strahlenkranz) und kehrt dem Geld den Rücken (Münzen, roter Kreis mit Schrägbalken); Jesus (links) lehrt.",
-    "caption_gsw": "Zwee Herre: En Jünger chehrt sich bätend Gott zue (Strahlechranz) und em Gäld de Rugge (Münze, roote Chreis mit Schrägbalke); de Jesus (links) leert.",
+    "caption_de": "Zwei Herren: Jesus (links) sagt: «Gott dienen» – nicht Gott und dem Mammon zugleich; ein Jünger wendet sich dem Vater zu (Strahlenkranz) und kehrt dem Geld den Rücken (Münzen, roter Kreis mit Schrägbalken).",
+    "caption_gsw": "Zwei Herre: De Jesus (links) seit: «Gott diene» – nöd Gott und em Mammon mitenand; en Jünger chehrt sich em Vatter zue (Strahlechranz) und em Gäld de Rugge (Münze, roote Chreis mit Schrägbalke).",
     "stage": {
      "god_side": "left",
      "x": {
@@ -1608,13 +1610,21 @@
      "FIG-GRUPPE-JUENGER"
     ],
     "objects": [],
-    "signs": [
-     "FIG-ZEICHEN-SORGE"
-    ],
+    "signs": [],
     "speech": [
      {
       "from": "FIG-JESUS",
       "to": "FIG-GRUPPE-JUENGER",
+      "word": {
+       "de": "Sorgt euch nicht",
+       "gsw": "Mached eu kei Sorge"
+      },
+      "icons": []
+     },
+     {
+      "from": "FIG-GRUPPE-JUENGER",
+      "to": "FIG-GRUPPE-JUENGER",
+      "think": true,
       "icons": [
        "FIG-OBJ-BROT",
        "FIG-OBJ-GEWAND"
@@ -1622,25 +1632,17 @@
      }
     ],
     "keywords": {
-     "de": "Sorgt euch nicht",
-     "gsw": "Mached eu kei Sorge"
+     "de": "was ihr essen sollt",
+     "gsw": "was ir ässed"
     },
     "action_de": "Jesus sagt: Sorgt euch nicht um euer Leben, was ihr essen sollt, und nicht um euren Leib, was ihr anziehen sollt; ist nicht das Leben mehr als die Nahrung?",
     "action_gsw": "De Jesus seit: Mached eu kei Sorge um eues Läbe, was ir ässed, und nöd um eue Liib, was ir aalegged; isch nöd s Läbe meh als s Ässe?",
-    "caption_de": "Nicht sorgen: Jesus sagt den besorgten Jüngern (blauer Schweisstropfen): Sorgt euch nicht um Essen und Kleidung (Sprechblase: Brot, helles Gewand).",
-    "caption_gsw": "Kei Sorge: De Jesus seit de Jünger, wo sich Sorge mached (blaue Schweisstropfe): Mached eu kei Sorge um s Ässe und d Chleider (Spraachblase: Broot, häll Gwand).",
+    "caption_de": "Nicht sorgen: Die Jünger denken besorgt an Essen und Kleidung (Denkblase: Brot, helles Gewand); Jesus (links) sagt ihnen: «Sorgt euch nicht».",
+    "caption_gsw": "Kei Sorge: D Jünger dänked bsorgt as Ässe und d Chleider (Dänkblase: Broot, häll Gwand); de Jesus (links) seit ine: «Mached eu kei Sorge».",
     "stage": {
      "x": {
       "FIG-JESUS": 40,
       "FIG-GRUPPE-JUENGER": 132
-     },
-     "signs_who": {
-      "FIG-ZEICHEN-SORGE": [
-       "FIG-GRUPPE-JUENGER"
-      ]
-     },
-     "at": {
-      "FIG-ZEICHEN-SORGE": "FIG-GRUPPE-JUENGER"
      },
      "mood": {
       "FIG-JESUS": "calm",
@@ -1803,12 +1805,10 @@
       "from": "FIG-JESUS",
       "to": "FIG-ROLLE-MENSCH",
       "word": {
-       "de": "Mass",
-       "gsw": "Mass"
+       "de": "wird euch gemessen",
+       "gsw": "wird eu gmässe"
       },
-      "icons": [
-       "FIG-ZEICHEN-NICHT-RICHTEN"
-      ]
+      "icons": []
      }
     ],
     "keywords": {
@@ -1817,8 +1817,8 @@
     },
     "action_de": "Richtet nicht, damit ihr nicht gerichtet werdet; denn mit dem Urteil, mit dem ihr richtet, werdet ihr gerichtet, und mit dem Mass, mit dem ihr messt, wird euch gemessen.",
     "action_gsw": "Richted nöd, damit ir nöd grichtet wärded; dänn mit em Urteil, wo ir richted, wärded ir grichtet, und mit em Mass, wo ir mässed, wird eu gmässe.",
-    "caption_de": "Nicht richten: Ein Mann zeigt urteilend auf einen anderen (zeigender Finger); Jesus (links) wehrt ab: Richtet nicht (Sprechblase: Waage, rot durchgestrichen) – mit eurem Mass wird euch gemessen.",
-    "caption_gsw": "Nöd richte: En Maa zeigt urteilend uf en andere (zeigende Finger); de Jesus (links) wehrt ab: Richted nöd (Spraachblase: Waag, root dureggstriche) – mit eurem Mass wird eu gmässe.",
+    "caption_de": "Nicht richten: Ein Mann zeigt urteilend auf einen anderen (zeigender Finger); Jesus (links) warnt: Mit eurem Mass «wird euch gemessen».",
+    "caption_gsw": "Nöd richte: En Maa zeigt urteilend uf en andere (zeigende Finger); de Jesus (links) warnt: Mit eurem Mass «wird eu gmässe».",
     "stage": {
      "x": {
       "FIG-JESUS": 24,
@@ -1868,17 +1868,13 @@
     },
     "action_de": "Wer den Splitter im Auge seines Bruders sieht und den Balken im eigenen Auge nicht bemerkt, soll zuerst den Balken aus dem eigenen Auge ziehen; dann sieht er klar, um den Splitter herauszuziehen.",
     "action_gsw": "Wer de Splitter im Aug vo sim Brueder gseht und de Balke im eigete Aug nöd merkt, söll zerscht de Balke us em eigete Aug zie; dänn gseht er klar, zum de Splitter usezie.",
-    "caption_de": "Splitter und Balken: Rechts ein Mann mit einem Balken im eigenen Auge (langer Holzbalken neben dem Kopf); er will seinem Bruder (Mitte) den Splitter (kleines Holzstück neben dem Auge) herausziehen. Jesus (links) lehrt.",
-    "caption_gsw": "Splitter und Balke: Rächts en Maa mit eme Balke im eigete Aug (lange Holzbalke näbem Chopf); er wott sim Brueder (Mitti) de Splitter (chliis Holzstück näbem Aug) usezie. De Jesus (links) leert.",
+    "caption_de": "Splitter und Balken: Rechts ein Mann mit einem Balken im eigenen Auge (langer Holzbalken an seinem Kopf) sagt zu seinem Bruder (Mitte): «Splitter» (kleines Holzstück neben dessen Auge). Jesus (links) lehrt.",
+    "caption_gsw": "Splitter und Balke: Rächts seit en Maa mit eme Balke im eigete Aug (lange Holzbalke a sim Chopf) zu sim Brueder (Mitti): «Splitter» (chliis Holzstück näbe sim Aug). De Jesus (links) leert.",
     "stage": {
      "x": {
       "FIG-JESUS": 24,
       "FIG-ROLLE-JUNGER-MANN": 72,
       "FIG-ROLLE-MENSCH": 128
-     },
-     "beside": {
-      "FIG-OBJ-BALKEN": "FIG-ROLLE-MENSCH",
-      "FIG-OBJ-SPLITTER": "FIG-ROLLE-JUNGER-MANN"
      },
      "mood": {
       "FIG-JESUS": "earnest",
@@ -1887,6 +1883,12 @@
      },
      "size": {
       "FIG-JESUS": 0.7
+     },
+     "at": {
+      "FIG-OBJ-BALKEN": "FIG-ROLLE-MENSCH"
+     },
+     "beside": {
+      "FIG-OBJ-SPLITTER": "FIG-ROLLE-JUNGER-MANN"
      }
     }
    }
@@ -1961,8 +1963,8 @@
     "reference": "MAT.7.9-MAT.7.11",
     "figures": [
      "FIG-JESUS",
-     "FIG-ROLLE-VATER",
-     "FIG-ROLLE-SOHN"
+     "FIG-ROLLE-MENSCH",
+     "FIG-ROLLE-JUNGE"
     ],
     "objects": [
      "FIG-OBJ-BROT",
@@ -1971,23 +1973,33 @@
     "signs": [
      "FIG-ZEICHEN-NICHT"
     ],
-    "speech": [],
+    "speech": [
+     {
+      "from": "FIG-ROLLE-JUNGE",
+      "to": "FIG-ROLLE-MENSCH",
+      "word": {
+       "de": "Brot",
+       "gsw": "Broot"
+      },
+      "icons": []
+     }
+    ],
     "keywords": {
      "de": "um Brot bittet",
      "gsw": "um Broot bittet"
     },
     "action_de": "Kein Vater gibt seinem Sohn, der um Brot bittet, einen Stein; wenn schon ihr euren Kindern gute Gaben gebt, wie viel mehr wird der Vater in den Himmeln denen Gutes geben, die ihn bitten.",
     "action_gsw": "Kein Vatter git sim Sohn, wo um Broot bittet, en Stei; wänn scho ir eune Chind gueti Gabe gänd, wie vil meh wird de Vatter i de Himel dene Guets gää, wo en drum bitted.",
-    "caption_de": "Brot, nicht Stein: Ein Vater reicht seinem Sohn ein Brot (Pfeil zum Sohn); den Stein (am Boden, roter Kreis mit Schrägbalken) gibt er ihm nicht. Jesus (links) lehrt.",
-    "caption_gsw": "Broot, kei Stei: En Vatter git sim Sohn es Broot (Pfiil zum Sohn); de Stei (am Bode, roote Chreis mit Schrägbalke) git er em nöd. De Jesus (links) leert.",
+    "caption_de": "Brot, nicht Stein: Ein Junge bittet seinen Vater: «Brot»; der Vater reicht ihm ein Brot (Pfeil zum Jungen), den Stein (am Boden, roter Kreis mit Schrägbalken) gibt er ihm nicht. Jesus (links) lehrt.",
+    "caption_gsw": "Broot, kei Stei: En Bueb bittet sin Vatter: «Broot»; de Vatter git em es Broot (Pfiil zum Bueb), de Stei (am Bode, roote Chreis mit Schrägbalke) git er em nöd. De Jesus (links) leert.",
     "stage": {
      "x": {
       "FIG-JESUS": 24,
-      "FIG-ROLLE-VATER": 86,
-      "FIG-ROLLE-SOHN": 146
+      "FIG-ROLLE-MENSCH": 86,
+      "FIG-ROLLE-JUNGE": 146
      },
      "beside": {
-      "FIG-OBJ-BROT": "FIG-ROLLE-VATER"
+      "FIG-OBJ-BROT": "FIG-ROLLE-MENSCH"
      },
      "floor_x": {
       "FIG-OBJ-STEIN": 112
@@ -1998,14 +2010,14 @@
      "arrows": [
       [
        "FIG-OBJ-BROT",
-       "FIG-ROLLE-SOHN",
+       "FIG-ROLLE-JUNGE",
        "act"
       ]
      ],
      "mood": {
       "FIG-JESUS": "calm",
-      "FIG-ROLLE-VATER": "smile",
-      "FIG-ROLLE-SOHN": "delight"
+      "FIG-ROLLE-MENSCH": "smile",
+      "FIG-ROLLE-JUNGE": "delight"
      },
      "size": {
       "FIG-JESUS": 0.7
@@ -2097,8 +2109,7 @@
      "FIG-ORT-STADTTOR"
     ],
     "signs": [
-     "FIG-ZEICHEN-FINSTERNIS",
-     "FIG-ZEICHEN-LEBEN"
+     "FIG-ZEICHEN-FINSTERNIS"
     ],
     "speech": [],
     "keywords": {
@@ -2107,8 +2118,8 @@
     },
     "action_de": "Geht hinein durch das enge Tor; denn weit ist das Tor und breit der Weg, der ins Verderben führt, und viele gehen dort hinein; eng ist das Tor und schmal der Weg, der ins Leben führt, und wenige finden ihn.",
     "action_gsw": "Gönd dur s äng Tor ine; dänn wiit isch s Tor und breit de Wäg, wo is Verderbe füert, und vil gönd dört ine; äng isch s Tor und schmaal de Wäg, wo is Läbe füert, und wenig finded en.",
-    "caption_de": "Zwei Tore: Links gehen viele (Menge) auf ein weites Tor zu (dunkler Torbogen), über dem es finster ist (dunkle Wolke); rechts geht ein Einzelner zum engen Tor (schmale Öffnung in der Mauer), das ins Leben führt (grüner Baum im goldenen Ring).",
-    "caption_gsw": "Zwei Tor: Links gönd vil (Mängi) uf es wiits Tor zue (dunkle Torboge), wo s drüber fiischter isch (dunkli Wolke); rächts gaat en Einzelne zum änge Tor (schmali Öffnig i de Muur), wo is Läbe füert (grüene Baum im goldige Ring).",
+    "caption_de": "Zwei Tore: Links gehen viele (Menge) auf ein weites Tor zu (dunkler Torbogen), über dem es finster ist (dunkle Wolke); rechts geht ein Einzelner zum engen Tor (schmale Öffnung in der Mauer).",
+    "caption_gsw": "Zwei Tor: Links gönd vili (Mängi) uf es wiits Tor zue (dunkle Torboge), über dem s finschter isch (dunkli Wolke); rächts gaat en Einzelne zum ängge Tor (schmali Öffnig i de Muur).",
     "stage": {
      "back_side": "right",
      "x": {
@@ -2120,8 +2131,7 @@
       "FIG-ROLLE-JUENGER": 0.72
      },
      "at": {
-      "FIG-ZEICHEN-FINSTERNIS": "FIG-ORT-STADTTOR",
-      "FIG-ZEICHEN-LEBEN": "FIG-ORT-TOR-ENG"
+      "FIG-ZEICHEN-FINSTERNIS": "FIG-ORT-STADTTOR"
      },
      "arrows": [
       [
@@ -2164,7 +2174,8 @@
     ],
     "objects": [
      "FIG-OBJ-FEIGENBAUM",
-     "FIG-OBJ-DORNEN"
+     "FIG-OBJ-DORNEN",
+     "FIG-OBJ-WOLF"
     ],
     "signs": [
      "FIG-ZEICHEN-NEIN"
@@ -2177,9 +2188,7 @@
        "de": "Schafskleidern",
        "gsw": "Schaafchleider"
       },
-      "icons": [
-       "FIG-OBJ-WOLF"
-      ]
+      "icons": []
      }
     ],
     "keywords": {
@@ -2188,8 +2197,8 @@
     },
     "action_de": "Jesus warnt vor den falschen Propheten, die in Schafskleidern kommen, innen aber reissende Wölfe sind: An ihren Früchten werdet ihr sie erkennen; ein guter Baum bringt gute Früchte, ein fauler schlechte.",
     "action_gsw": "De Jesus warnt vor de falsche Prophete, wo i Schaafchleider chömed, inne aber riissendi Wölf sind: A irne Frücht wärded ir si erchänne; en guete Baum bringt gueti Frücht, en fuule schlächti.",
-    "caption_de": "An den Früchten: Jesus (links) warnt vor falschen Propheten (Reisende in violettgrauem Gewand): in Schafskleidern, innen Wölfe (Sprechblase: grauer Wolf). Rechts ein Baum mit Früchten (Feigen) und ein Dornstrauch ohne Früchte (rotes X).",
-    "caption_gsw": "A de Frücht: De Jesus (links) warnt vor falsche Prophete (Reisendi im violettgraue Gwand): i Schaafchleider, inne Wölf (Spraachblase: graue Wolf). Rächts en Baum mit Frücht (Fiige) und en Dornbusch ohni Frücht (roots X).",
+    "caption_de": "An den Früchten: Jesus (links) warnt vor falschen Propheten (violettgraue Kapuzenmäntel): in «Schafskleidern», innen Wölfe (grauer Wolf bei ihnen). Rechts ein Baum mit Früchten (Feigen) und ein Dornstrauch ohne Früchte (rotes X).",
+    "caption_gsw": "A de Frücht: De Jesus (links) warnt vor falsche Prophete (violettgraui Kapuzemäntel): i «Schaafchleider», inne Wölf (graue Wolf bi ine). Rächts en Baum mit Frücht (Fiige) und en Dornbusch ohni Frücht (roots X).",
     "stage": {
      "x": {
       "FIG-JESUS": 24,
@@ -2204,6 +2213,9 @@
      },
      "size": {
       "FIG-JESUS": 0.7
+     },
+     "beside": {
+      "FIG-OBJ-WOLF": "FIG-GRUPPE-VERFUEHRER"
      }
     }
    },
@@ -2230,12 +2242,10 @@
       "from": "FIG-JESUS",
       "to": "FIG-GRUPPE-VOLK",
       "word": {
-       "de": "Nie",
-       "gsw": "Nie"
+       "de": "Nie habe ich euch gekannt",
+       "gsw": "Nie han ich eu kännt"
       },
-      "icons": [
-       "FIG-ZEICHEN-ABLEHNEN"
-      ]
+      "icons": []
      }
     ],
     "keywords": {
@@ -2244,8 +2254,8 @@
     },
     "action_de": "Nicht jeder, der «Herr, Herr!» sagt, kommt ins Reich der Himmel, sondern wer den Willen des Vaters tut; an jenem Tag wird Jesus denen, die nur «Herr, Herr» sagen, erklären: «Nie habe ich euch gekannt.»",
     "action_gsw": "Nöd jede, wo «Herr, Herr!» seit, chunnt is Riich vo de Himel, sondern wer de Wile vom Vatter tuet; a dem Tag wird de Jesus dene, wo nu «Herr, Herr» säged, säge: «Nie han ich eu kännt.»",
-    "caption_de": "Herr, Herr: An jenem Tag rufen viele Jesus «Herr, Herr!» zu (links); Jesus weist sie ab: «Nie (habe ich euch gekannt)» (Sprechblase: abwehrende Hand).",
-    "caption_gsw": "Herr, Herr: A dem Tag rüefed vil em Jesus «Herr, Herr!» zue (links); de Jesus wiist si ab: «Nie (han ich eu kännt)» (Spraachblase: abwehrendi Hand).",
+    "caption_de": "Herr, Herr: An jenem Tag rufen viele Jesus «Herr, Herr!» zu (links); Jesus weist sie ab: «Nie habe ich euch gekannt».",
+    "caption_gsw": "Herr, Herr: A dem Tag rüefed vili em Jesus «Herr, Herr!» zue (links); de Jesus wiist si ab: «Nie han ich eu kännt».",
     "stage": {
      "x": {
       "FIG-GRUPPE-VOLK": 50,
@@ -2402,23 +2412,22 @@
     "reference": "MAT.7.28-MAT.7.29",
     "figures": [
      "FIG-JESUS",
-     "FIG-GRUPPE-MENGE"
+     "FIG-GRUPPE-MENGE",
+     "FIG-GRUPPE-SCHRIFTGELEHRTE"
     ],
     "objects": [
      "FIG-ORT-BERG"
     ],
-    "signs": [
-     "FIG-ZEICHEN-VOLLMACHT"
-    ],
+    "signs": [],
     "speech": [],
     "keywords": {
-     "de": "überwältigt von seiner Lehre",
-     "gsw": "überwältiget vo sinere Lehr"
+     "de": "der Vollmacht hat",
+     "gsw": "wo Vollmacht hät"
     },
     "action_de": "Als Jesus diese Worte beendet hat, sind die Menschenmengen überwältigt von seiner Lehre, denn er lehrt sie wie einer, der Vollmacht hat, und nicht wie ihre Schriftgelehrten.",
     "action_gsw": "Wo de Jesus mit dene Wort fertig isch, sind d Lüüt überwältiget vo sinere Lehr, dänn er leert si wie eine, wo Vollmacht hät, und nöd wie iri Schriftgelehrte.",
-    "caption_de": "Lehre mit Vollmacht: Jesus sitzt auf dem Berg, bei ihm die Vollmacht (goldenes Zepter mit Strahlen); die Menschenmengen staunen über seine Lehre.",
-    "caption_gsw": "Lehr mit Vollmacht: De Jesus sitzt uf em Bärg, bi ihm d Vollmacht (goldigs Zepter mit Straale); d Lüüt stuuned über sini Lehr.",
+    "caption_de": "Lehre mit Vollmacht: Jesus sitzt auf dem Berg und lehrt (Pfeil); die Menschenmengen staunen, denn er lehrt wie einer, der Vollmacht hat – nicht wie ihre Schriftgelehrten (rechts, mit Schriftrolle, hinter der gestrichelten Linie).",
+    "caption_gsw": "Lehr mit Vollmacht: De Jesus sitzt uf em Bärg und leert (Pfiil); d Lüüt stuuned, dänn er leert wie eine, wo Vollmacht hät – nöd wie iri Schriftgelehrte (rächts, mit Schriftrolle, hinder de gstrichlete Linie).",
     "stage": {
      "back_side": "left",
      "before": true,
@@ -2429,14 +2438,25 @@
       "FIG-JESUS": "sit"
      },
      "x": {
-      "FIG-JESUS": 44,
-      "FIG-GRUPPE-MENGE": 132
+      "FIG-JESUS": 30,
+      "FIG-GRUPPE-MENGE": 88,
+      "FIG-GRUPPE-SCHRIFTGELEHRTE": 156
      },
-     "beside": {
-      "FIG-ZEICHEN-VOLLMACHT": "FIG-JESUS"
+     "split": 2,
+     "size": {
+      "FIG-JESUS": 0.85
      },
+     "arrows": [
+      [
+       "FIG-JESUS",
+       "FIG-GRUPPE-MENGE",
+       "act"
+      ]
+     ],
      "mood": {
-      "FIG-GRUPPE-MENGE": "surprised"
+      "FIG-JESUS": "earnest",
+      "FIG-GRUPPE-MENGE": "surprised",
+      "FIG-GRUPPE-SCHRIFTGELEHRTE": "pensive"
      }
     }
    }
@@ -2484,17 +2504,13 @@
     },
     "action_de": "Wer den Splitter im Auge seines Bruders sieht und den Balken im eigenen Auge nicht bemerkt, soll zuerst den Balken aus dem eigenen Auge ziehen; dann sieht er klar, um den Splitter herauszuziehen.",
     "action_gsw": "Wer de Splitter im Aug vo sim Brueder gseht und de Balke im eigete Aug nöd merkt, söll zerscht de Balke us em eigete Aug zie; dänn gseht er klar, zum de Splitter usezie.",
-    "caption_de": "Splitter und Balken: Rechts ein Mann mit einem Balken im eigenen Auge (langer Holzbalken neben dem Kopf); er will seinem Bruder (Mitte) den Splitter (kleines Holzstück neben dem Auge) herausziehen. Jesus (links) lehrt.",
-    "caption_gsw": "Splitter und Balke: Rächts en Maa mit eme Balke im eigete Aug (lange Holzbalke näbem Chopf); er wott sim Brueder (Mitti) de Splitter (chliis Holzstück näbem Aug) usezie. De Jesus (links) leert.",
+    "caption_de": "Splitter und Balken: Rechts ein Mann mit einem Balken im eigenen Auge (langer Holzbalken an seinem Kopf) sagt zu seinem Bruder (Mitte): «Splitter» (kleines Holzstück neben dessen Auge). Jesus (links) lehrt.",
+    "caption_gsw": "Splitter und Balke: Rächts seit en Maa mit eme Balke im eigete Aug (lange Holzbalke a sim Chopf) zu sim Brueder (Mitti): «Splitter» (chliis Holzstück näbe sim Aug). De Jesus (links) leert.",
     "stage": {
      "x": {
       "FIG-JESUS": 24,
       "FIG-ROLLE-JUNGER-MANN": 72,
       "FIG-ROLLE-MENSCH": 128
-     },
-     "beside": {
-      "FIG-OBJ-BALKEN": "FIG-ROLLE-MENSCH",
-      "FIG-OBJ-SPLITTER": "FIG-ROLLE-JUNGER-MANN"
      },
      "mood": {
       "FIG-JESUS": "earnest",
@@ -2503,6 +2519,12 @@
      },
      "size": {
       "FIG-JESUS": 0.7
+     },
+     "at": {
+      "FIG-OBJ-BALKEN": "FIG-ROLLE-MENSCH"
+     },
+     "beside": {
+      "FIG-OBJ-SPLITTER": "FIG-ROLLE-JUNGER-MANN"
      }
     }
    },
@@ -2624,23 +2646,22 @@
     "reference": "MAT.7.28-MAT.7.29",
     "figures": [
      "FIG-JESUS",
-     "FIG-GRUPPE-MENGE"
+     "FIG-GRUPPE-MENGE",
+     "FIG-GRUPPE-SCHRIFTGELEHRTE"
     ],
     "objects": [
      "FIG-ORT-BERG"
     ],
-    "signs": [
-     "FIG-ZEICHEN-VOLLMACHT"
-    ],
+    "signs": [],
     "speech": [],
     "keywords": {
-     "de": "überwältigt von seiner Lehre",
-     "gsw": "überwältiget vo sinere Lehr"
+     "de": "der Vollmacht hat",
+     "gsw": "wo Vollmacht hät"
     },
     "action_de": "Als Jesus diese Worte beendet hat, sind die Menschenmengen überwältigt von seiner Lehre, denn er lehrt sie wie einer, der Vollmacht hat, und nicht wie ihre Schriftgelehrten.",
     "action_gsw": "Wo de Jesus mit dene Wort fertig isch, sind d Lüüt überwältiget vo sinere Lehr, dänn er leert si wie eine, wo Vollmacht hät, und nöd wie iri Schriftgelehrte.",
-    "caption_de": "Lehre mit Vollmacht: Jesus sitzt auf dem Berg, bei ihm die Vollmacht (goldenes Zepter mit Strahlen); die Menschenmengen staunen über seine Lehre.",
-    "caption_gsw": "Lehr mit Vollmacht: De Jesus sitzt uf em Bärg, bi ihm d Vollmacht (goldigs Zepter mit Straale); d Lüüt stuuned über sini Lehr.",
+    "caption_de": "Lehre mit Vollmacht: Jesus sitzt auf dem Berg und lehrt (Pfeil); die Menschenmengen staunen, denn er lehrt wie einer, der Vollmacht hat – nicht wie ihre Schriftgelehrten (rechts, mit Schriftrolle, hinter der gestrichelten Linie).",
+    "caption_gsw": "Lehr mit Vollmacht: De Jesus sitzt uf em Bärg und leert (Pfiil); d Lüüt stuuned, dänn er leert wie eine, wo Vollmacht hät – nöd wie iri Schriftgelehrte (rächts, mit Schriftrolle, hinder de gstrichlete Linie).",
     "stage": {
      "back_side": "left",
      "before": true,
@@ -2651,14 +2672,25 @@
       "FIG-JESUS": "sit"
      },
      "x": {
-      "FIG-JESUS": 44,
-      "FIG-GRUPPE-MENGE": 132
+      "FIG-JESUS": 30,
+      "FIG-GRUPPE-MENGE": 88,
+      "FIG-GRUPPE-SCHRIFTGELEHRTE": 156
      },
-     "beside": {
-      "FIG-ZEICHEN-VOLLMACHT": "FIG-JESUS"
+     "split": 2,
+     "size": {
+      "FIG-JESUS": 0.85
      },
+     "arrows": [
+      [
+       "FIG-JESUS",
+       "FIG-GRUPPE-MENGE",
+       "act"
+      ]
+     ],
      "mood": {
-      "FIG-GRUPPE-MENGE": "surprised"
+      "FIG-JESUS": "earnest",
+      "FIG-GRUPPE-MENGE": "surprised",
+      "FIG-GRUPPE-SCHRIFTGELEHRTE": "pensive"
      }
     }
    }

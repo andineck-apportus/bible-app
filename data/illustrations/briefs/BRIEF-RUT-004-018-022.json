@@ -33,12 +33,13 @@
       "reference": "RUT.4.21-RUT.4.22",
       "figures": [
         "FIG-BOAS",
-        "FIG-OBED",
         "FIG-ISAI",
         "FIG-DAVID"
       ],
       "objects": [],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-GEBURT"
+      ],
       "speech": [],
       "action_de": "Boas zeugt Obed, Obed zeugt Isai, und Isai zeugt David.",
       "keywords": {
@@ -49,10 +50,6 @@
         "FIG-BOAS": {
           "de": "Boas",
           "gsw": "Boas"
-        },
-        "FIG-OBED": {
-          "de": "Obed",
-          "gsw": "Obed"
         },
         "FIG-ISAI": {
           "de": "Isai",
@@ -65,16 +62,28 @@
       },
       "stage": {
         "x": {
-          "FIG-BOAS": 26,
-          "FIG-OBED": 70,
-          "FIG-ISAI": 116,
-          "FIG-DAVID": 160
+          "FIG-BOAS": 30,
+          "FIG-ISAI": 104,
+          "FIG-DAVID": 162
         },
+        "beside": {
+          "FIG-ZEICHEN-GEBURT": "FIG-BOAS"
+        },
+        "arrows": [
+          [
+            "FIG-BOAS",
+            "FIG-ISAI",
+            "go"
+          ],
+          [
+            "FIG-ISAI",
+            "FIG-DAVID",
+            "go"
+          ]
+        ],
         "mood": {
+          "FIG-BOAS": "smile",
           "FIG-DAVID": "smile"
-        },
-        "size": {
-          "FIG-OBED": 1.8
         }
       }
     }
@@ -85,7 +94,7 @@
   ],
   "captions_de": [
     "Stammbaum: eine Generationenlinie (Ast mit Knospen).",
-    "Bis David: Boas, Obed, Isai und David (mit Königsreif) von links nach rechts, Generation um Generation."
+    "Bis David: Boas mit seinem Sohn Obed (gewickelter Säugling), dann Isai und David (mit Königsreif) – Generation um Generation (Pfeile)."
   ],
   "interpretation_note_de": "Aufzählung: Der Stammbaum hat zehn Glieder von Perez bis David ([[RUT.4.18-RUT.4.22]]); das Bild zeigt den Anfang als Zeichen und die letzten vier als Figuren. David trägt den Königsreif als Hinweis auf sein späteres Königtum; der Text nennt nur seinen Namen.",
   "basis": [
@@ -510,6 +519,87 @@
           "since": "2026-10-23",
           "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
         }
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Nachbesserung nach Bildtest ohne Legende",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "RUT.4.18",
+            "figures": [],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-STAMMBAUM"
+            ],
+            "speech": [],
+            "action_de": "Es folgt der Stammbaum des Perez.",
+            "keywords": {
+              "de": "Stammbaum des Perez",
+              "gsw": "Stammbaum vom Perez"
+            },
+            "stage": {
+              "air_x": 40,
+              "air_y": 30
+            }
+          },
+          {
+            "n": 2,
+            "reference": "RUT.4.21-RUT.4.22",
+            "figures": [
+              "FIG-BOAS",
+              "FIG-OBED",
+              "FIG-ISAI",
+              "FIG-DAVID"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Boas zeugt Obed, Obed zeugt Isai, und Isai zeugt David.",
+            "keywords": {
+              "de": "Isai zeugte David",
+              "gsw": "Vatter vom David"
+            },
+            "names": {
+              "FIG-BOAS": {
+                "de": "Boas",
+                "gsw": "Boas"
+              },
+              "FIG-OBED": {
+                "de": "Obed",
+                "gsw": "Obed"
+              },
+              "FIG-ISAI": {
+                "de": "Isai",
+                "gsw": "Isai"
+              },
+              "FIG-DAVID": {
+                "de": "David",
+                "gsw": "David"
+              }
+            },
+            "stage": {
+              "x": {
+                "FIG-BOAS": 26,
+                "FIG-OBED": 70,
+                "FIG-ISAI": 116,
+                "FIG-DAVID": 160
+              },
+              "mood": {
+                "FIG-DAVID": "smile"
+              },
+              "size": {
+                "FIG-OBED": 1.8
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Stammbaum: eine Generationenlinie (Ast mit Knospen).",
+          "Bis David: Boas, Obed, Isai und David (mit Königsreif) von links nach rechts, Generation um Generation."
+        ]
       }
     }
   ]

@@ -66,7 +66,7 @@
       "reference": "TIT.1.16",
       "figures": [
         "FIG-GRUPPE-IRRLEHRER",
-        "FIG-GRUPPE-GLAUBENDE"
+        "FIG-GRUPPE-MENGE"
       ],
       "objects": [],
       "signs": [
@@ -76,7 +76,7 @@
       "speech": [
         {
           "from": "FIG-GRUPPE-IRRLEHRER",
-          "to": "FIG-GRUPPE-GLAUBENDE",
+          "to": "FIG-GRUPPE-MENGE",
           "icons": [
             "FIG-ZEICHEN-NAME-GOTTES"
           ],
@@ -94,11 +94,17 @@
       "stage": {
         "x": {
           "FIG-GRUPPE-IRRLEHRER": 48,
-          "FIG-GRUPPE-GLAUBENDE": 146
+          "FIG-GRUPPE-MENGE": 146
+        },
+        "at": {
+          "FIG-ZEICHEN-NICHT": "FIG-GRUPPE-IRRLEHRER"
+        },
+        "beside": {
+          "FIG-ZEICHEN-GUTE-WERKE": "FIG-GRUPPE-IRRLEHRER"
         },
         "mood": {
-          "FIG-GRUPPE-IRRLEHRER": "earnest",
-          "FIG-GRUPPE-GLAUBENDE": "question"
+          "FIG-GRUPPE-IRRLEHRER": "smile",
+          "FIG-GRUPPE-MENGE": "question"
         }
       }
     },
@@ -110,9 +116,7 @@
         "FIG-GRUPPE-VOELKER"
       ],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-GNADE"
-      ],
+      "signs": [],
       "speech": [],
       "action_de": "Die Gnade Gottes ist erschienen, rettend für alle Menschen; sie erzieht uns, besonnen, gerecht und fromm zu leben.",
       "keywords": {
@@ -138,7 +142,9 @@
       "reference": "TIT.3.13-TIT.3.14",
       "figures": [
         "FIG-PAULUS",
-        "FIG-TITUS"
+        "FIG-TITUS",
+        "FIG-ZENAS",
+        "FIG-APOLLOS"
       ],
       "objects": [],
       "signs": [],
@@ -146,10 +152,7 @@
         {
           "from": "FIG-PAULUS",
           "to": "FIG-TITUS",
-          "icons": [
-            "FIG-ZENAS",
-            "FIG-APOLLOS"
-          ],
+          "icons": [],
           "word": {
             "de": "für die Reise",
             "gsw": "für d Reis"
@@ -161,11 +164,29 @@
         "de": "nicht ohne Frucht",
         "gsw": "nöd ohni Frucht"
       },
+      "names": {
+        "FIG-ZENAS": {
+          "de": "Zenas",
+          "gsw": "Zenas"
+        },
+        "FIG-APOLLOS": {
+          "de": "Apollos",
+          "gsw": "Apollos"
+        }
+      },
       "letter": true,
       "stage": {
+        "x": {
+          "FIG-PAULUS": 26,
+          "FIG-TITUS": 78,
+          "FIG-ZENAS": 124,
+          "FIG-APOLLOS": 164
+        },
         "mood": {
           "FIG-PAULUS": "earnest",
-          "FIG-TITUS": "calm"
+          "FIG-TITUS": "calm",
+          "FIG-ZENAS": "smile",
+          "FIG-APOLLOS": "smile"
         }
       }
     }
@@ -178,9 +199,9 @@
   ],
   "captions_de": [
     "Auftrag an Titus – Älteste einsetzen: Paulus ist fern (gestrichelte Linie) und schreibt Titus: «Älteste» (alter Mann mit Stab) in jeder Stadt (Stadt hinter Titus).",
-    "Worte ohne Werke: Die Verführer reden von Gott (Gottesname in der Sprechblase), doch gute Werke (Hand mit Brot) fehlen (roter Verbotskreis).",
-    "Gott → Gnade → alle Menschen: Von Gott (Strahlenkranz) kommt Gnade (goldener Pfeil, offene Hände mit Licht) zu allen Menschen.",
-    "Auftrag an Titus – ausrüsten: Paulus schreibt Titus: Zenas und Apollos (zwei Männer in der Sprechblase) «für die Reise» ausrüsten."
+    "Worte ohne Werke: Die Verführer (links, mit Schriftrolle) sagen den Leuten, sie kennen Gott (Gottesname in der Sprechblase); doch bei ihnen fehlen gute Werke (Hand mit Brot, roter Kreis mit Schrägbalken).",
+    "Gott → Gnade → alle Menschen: Von Gott (Strahlenkranz) kommt die Gnade (goldener Pfeil) zu allen Menschen; sie freuen sich.",
+    "Auftrag an Titus – ausrüsten: Paulus schreibt Titus, er soll Zenas und Apollos (rechts) «für die Reise» ausrüsten."
   ],
   "interpretation_note_de": "Vier der sechs Stationen der Kernanalyse (höchstens vier Felder): Älteste einsetzen, Verführer ohne gute Werke, die erschienene Gnade, gute Werke. Die Anweisungen an die Gruppen ([[TIT.2.1-TIT.2.2]]) und die Rettung aus Erbarmen ([[TIT.3.4-TIT.3.7]]) sind nicht eigens gezeigt. Titus ist ein Brief: Was Paulus verlangt, ist Auftrag, nicht erzählte Tatsache; solche Felder haben einen gestrichelten Briefrand, einen Brief im Stichwortband, und das Verlangte steht als Kernwort mit Zeichen in der Sprechblase des Paulus.",
   "basis": [
@@ -1446,6 +1467,180 @@
           "since": "2026-10-23",
           "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
         }
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Nachbesserung nach Bildtest ohne Legende",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "TIT.1.5",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TITUS"
+            ],
+            "objects": [
+              "FIG-ORT-STADT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-ROLLE-AELTESTER",
+                  "FIG-ORT-STADT"
+                ],
+                "word": {
+                  "de": "Älteste",
+                  "gsw": "Ältischte"
+                }
+              }
+            ],
+            "action_de": "Paulus hat Titus in Kreta zurückgelassen, damit er in Ordnung bringt, was noch fehlt, und in jeder Stadt Älteste einsetzt.",
+            "keywords": {
+              "de": "in Kreta zurückgelassen",
+              "gsw": "z Kreta zrugglaa"
+            },
+            "names": {
+              "FIG-PAULUS": {
+                "de": "Paulus",
+                "gsw": "Paulus"
+              },
+              "FIG-TITUS": {
+                "de": "Titus",
+                "gsw": "Titus"
+              }
+            },
+            "letter": true,
+            "stage": {
+              "split": 1,
+              "back_side": "right",
+              "mood": {
+                "FIG-PAULUS": "earnest",
+                "FIG-TITUS": "determined"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "TIT.1.16",
+            "figures": [
+              "FIG-GRUPPE-IRRLEHRER",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-NICHT",
+              "FIG-ZEICHEN-GUTE-WERKE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-IRRLEHRER",
+                "to": "FIG-GRUPPE-GLAUBENDE",
+                "icons": [
+                  "FIG-ZEICHEN-NAME-GOTTES"
+                ],
+                "word": {
+                  "de": "Gott zu kennen",
+                  "gsw": "kännted Gott"
+                }
+              }
+            ],
+            "action_de": "Die Verführer behaupten, Gott zu kennen, mit ihren Werken aber verleugnen sie ihn und sind für jedes gute Werk untauglich.",
+            "keywords": {
+              "de": "verleugnen sie ihn",
+              "gsw": "verleugned si en"
+            },
+            "stage": {
+              "x": {
+                "FIG-GRUPPE-IRRLEHRER": 48,
+                "FIG-GRUPPE-GLAUBENDE": 146
+              },
+              "mood": {
+                "FIG-GRUPPE-IRRLEHRER": "earnest",
+                "FIG-GRUPPE-GLAUBENDE": "question"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "TIT.2.11-TIT.2.12",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-VOELKER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-GNADE"
+            ],
+            "speech": [],
+            "action_de": "Die Gnade Gottes ist erschienen, rettend für alle Menschen; sie erzieht uns, besonnen, gerecht und fromm zu leben.",
+            "keywords": {
+              "de": "die Gnade Gottes",
+              "gsw": "d Gnad vo Gott"
+            },
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-VOELKER",
+                  "act"
+                ]
+              ],
+              "god_side": "left",
+              "mood": {
+                "FIG-GRUPPE-VOELKER": "delight"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "TIT.3.13-TIT.3.14",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TITUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-ZENAS",
+                  "FIG-APOLLOS"
+                ],
+                "word": {
+                  "de": "für die Reise",
+                  "gsw": "für d Reis"
+                }
+              }
+            ],
+            "action_de": "Titus soll Zenas und Apollos sorgfältig für die Reise ausrüsten, damit ihnen nichts fehlt; auch die Glaubenden sollen lernen, sich für gute Werke einzusetzen, damit sie nicht ohne Frucht sind.",
+            "keywords": {
+              "de": "nicht ohne Frucht",
+              "gsw": "nöd ohni Frucht"
+            },
+            "letter": true,
+            "stage": {
+              "mood": {
+                "FIG-PAULUS": "earnest",
+                "FIG-TITUS": "calm"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Auftrag an Titus – Älteste einsetzen: Paulus ist fern (gestrichelte Linie) und schreibt Titus: «Älteste» (alter Mann mit Stab) in jeder Stadt (Stadt hinter Titus).",
+          "Worte ohne Werke: Die Verführer reden von Gott (Gottesname in der Sprechblase), doch gute Werke (Hand mit Brot) fehlen (roter Verbotskreis).",
+          "Gott → Gnade → alle Menschen: Von Gott (Strahlenkranz) kommt Gnade (goldener Pfeil, offene Hände mit Licht) zu allen Menschen.",
+          "Auftrag an Titus – ausrüsten: Paulus schreibt Titus: Zenas und Apollos (zwei Männer in der Sprechblase) «für die Reise» ausrüsten."
+        ]
       }
     }
   ]

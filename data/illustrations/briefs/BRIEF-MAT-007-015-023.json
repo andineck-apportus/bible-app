@@ -18,7 +18,8 @@
       ],
       "objects": [
         "FIG-OBJ-FEIGENBAUM",
-        "FIG-OBJ-DORNEN"
+        "FIG-OBJ-DORNEN",
+        "FIG-OBJ-WOLF"
       ],
       "signs": [
         "FIG-ZEICHEN-NEIN"
@@ -27,9 +28,7 @@
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-VERFUEHRER",
-          "icons": [
-            "FIG-OBJ-WOLF"
-          ],
+          "icons": [],
           "word": {
             "de": "Schafskleidern",
             "gsw": "Schaafchleider"
@@ -55,6 +54,9 @@
         },
         "size": {
           "FIG-JESUS": 0.7
+        },
+        "beside": {
+          "FIG-OBJ-WOLF": "FIG-GRUPPE-VERFUEHRER"
         }
       }
     },
@@ -80,12 +82,10 @@
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-VOLK",
-          "icons": [
-            "FIG-ZEICHEN-ABLEHNEN"
-          ],
+          "icons": [],
           "word": {
-            "de": "Nie",
-            "gsw": "Nie"
+            "de": "Nie habe ich euch gekannt",
+            "gsw": "Nie han ich eu kännt"
           }
         }
       ],
@@ -111,8 +111,8 @@
     "Nicht jeder, der «Herr, Herr!» sagt, kommt ins Reich der Himmel, sondern wer den Willen des Vaters tut; an jenem Tag wird Jesus denen, die nur «Herr, Herr» sagen, erklären: «Nie habe ich euch gekannt.»"
   ],
   "captions_de": [
-    "An den Früchten: Jesus (links) warnt vor falschen Propheten (Reisende in violettgrauem Gewand): in Schafskleidern, innen Wölfe (Sprechblase: grauer Wolf). Rechts ein Baum mit Früchten (Feigen) und ein Dornstrauch ohne Früchte (rotes X).",
-    "Herr, Herr: An jenem Tag rufen viele Jesus «Herr, Herr!» zu (links); Jesus weist sie ab: «Nie (habe ich euch gekannt)» (Sprechblase: abwehrende Hand)."
+    "An den Früchten: Jesus (links) warnt vor falschen Propheten (violettgraue Kapuzenmäntel): in «Schafskleidern», innen Wölfe (grauer Wolf bei ihnen). Rechts ein Baum mit Früchten (Feigen) und ein Dornstrauch ohne Früchte (rotes X).",
+    "Herr, Herr: An jenem Tag rufen viele Jesus «Herr, Herr!» zu (links); Jesus weist sie ab: «Nie habe ich euch gekannt»."
   ],
   "interpretation_note_de": "Bild einer Rede. In Feld 1 steht der graue Wolf in der Sprechblase für die «reissenden Wölfe» unter den Schafskleidern ([[MAT.7.15]]); Feigenbaum und Dornstrauch stehen für gute und schlechte Früchte ([[MAT.7.16-MAT.7.17]]). Feld 2 ist eine Ankündigung Jesu für «jenen Tag» ([[MAT.7.22]]), nicht ein Bericht; Jesus spricht hier selbst in der Szene.",
   "basis": [
@@ -513,6 +513,114 @@
           "since": "2026-10-23",
           "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
         }
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Nachbesserung nach Bildtest ohne Legende",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.7.15-MAT.7.17",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-VERFUEHRER"
+            ],
+            "objects": [
+              "FIG-OBJ-FEIGENBAUM",
+              "FIG-OBJ-DORNEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NEIN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-VERFUEHRER",
+                "icons": [
+                  "FIG-OBJ-WOLF"
+                ],
+                "word": {
+                  "de": "Schafskleidern",
+                  "gsw": "Schaafchleider"
+                }
+              }
+            ],
+            "action_de": "Jesus warnt vor den falschen Propheten, die in Schafskleidern kommen, innen aber reissende Wölfe sind: An ihren Früchten werdet ihr sie erkennen; ein guter Baum bringt gute Früchte, ein fauler schlechte.",
+            "keywords": {
+              "de": "An ihren Früchten",
+              "gsw": "A irne Frücht"
+            },
+            "stage": {
+              "x": {
+                "FIG-JESUS": 24,
+                "FIG-GRUPPE-VERFUEHRER": 76
+              },
+              "at": {
+                "FIG-ZEICHEN-NEIN": "FIG-OBJ-DORNEN"
+              },
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-VERFUEHRER": "smile"
+              },
+              "size": {
+                "FIG-JESUS": 0.7
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.7.21-MAT.7.23",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-VOLK"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-VOLK",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Herr, Herr!",
+                  "gsw": "Herr, Herr!"
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-VOLK",
+                "icons": [
+                  "FIG-ZEICHEN-ABLEHNEN"
+                ],
+                "word": {
+                  "de": "Nie",
+                  "gsw": "Nie"
+                }
+              }
+            ],
+            "action_de": "Nicht jeder, der «Herr, Herr!» sagt, kommt ins Reich der Himmel, sondern wer den Willen des Vaters tut; an jenem Tag wird Jesus denen, die nur «Herr, Herr» sagen, erklären: «Nie habe ich euch gekannt.»",
+            "keywords": {
+              "de": "den Willen meines Vaters",
+              "gsw": "Wile vo mim Vatter"
+            },
+            "stage": {
+              "x": {
+                "FIG-GRUPPE-VOLK": 50,
+                "FIG-JESUS": 140
+              },
+              "mood": {
+                "FIG-GRUPPE-VOLK": "worried",
+                "FIG-JESUS": "earnest"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "An den Früchten: Jesus (links) warnt vor falschen Propheten (Reisende in violettgrauem Gewand): in Schafskleidern, innen Wölfe (Sprechblase: grauer Wolf). Rechts ein Baum mit Früchten (Feigen) und ein Dornstrauch ohne Früchte (rotes X).",
+          "Herr, Herr: An jenem Tag rufen viele Jesus «Herr, Herr!» zu (links); Jesus weist sie ab: «Nie (habe ich euch gekannt)» (Sprechblase: abwehrende Hand)."
+        ]
       }
     }
   ]

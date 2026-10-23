@@ -110,12 +110,13 @@
       "reference": "RUT.4.21-RUT.4.22",
       "figures": [
         "FIG-BOAS",
-        "FIG-OBED",
         "FIG-ISAI",
         "FIG-DAVID"
       ],
       "objects": [],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-GEBURT"
+      ],
       "speech": [],
       "action_de": "Boas zeugt Obed, Obed zeugt Isai, und Isai zeugt David.",
       "keywords": {
@@ -123,14 +124,6 @@
         "gsw": "Vatter vom David"
       },
       "names": {
-        "FIG-BOAS": {
-          "de": "Boas",
-          "gsw": "Boas"
-        },
-        "FIG-OBED": {
-          "de": "Obed",
-          "gsw": "Obed"
-        },
         "FIG-ISAI": {
           "de": "Isai",
           "gsw": "Isai"
@@ -142,16 +135,28 @@
       },
       "stage": {
         "x": {
-          "FIG-BOAS": 26,
-          "FIG-OBED": 70,
-          "FIG-ISAI": 116,
-          "FIG-DAVID": 160
+          "FIG-BOAS": 30,
+          "FIG-ISAI": 104,
+          "FIG-DAVID": 162
         },
+        "beside": {
+          "FIG-ZEICHEN-GEBURT": "FIG-BOAS"
+        },
+        "arrows": [
+          [
+            "FIG-BOAS",
+            "FIG-ISAI",
+            "go"
+          ],
+          [
+            "FIG-ISAI",
+            "FIG-DAVID",
+            "go"
+          ]
+        ],
         "mood": {
+          "FIG-BOAS": "smile",
           "FIG-DAVID": "smile"
-        },
-        "size": {
-          "FIG-OBED": 1.8
         }
       }
     }
@@ -164,7 +169,7 @@
   "captions_de": [
     "Wir sind Zeugen: Boas erklärt dem Volk im Tor: Rut (Bild in der Blase) zur Frau erworben; das Volk freut sich.",
     "Ein Sohn für Noomi: Noomi hält das Kind Obed (Säugling im Arm); die Nachbarinnen freuen sich.",
-    "Bis David: Boas, Obed, Isai und David (mit Königsreif) von links nach rechts, Generation um Generation."
+    "Bis David: Boas mit seinem Sohn Obed (gewickelter Säugling), dann Isai und David (mit Königsreif) – Generation um Generation (Pfeile)."
   ],
   "interpretation_note_de": "Je ein Feld aus den tragenden Momenten der Kernanalyse des Kapitels ([[RUT.4]]); Einzelheiten in den Abschnittsbildern. Verzicht des Lösers mit dem Schuh, Geburt und Lob der Frauen fehlen hier (Kernanalyse).",
   "basis": [
@@ -1103,6 +1108,165 @@
               }
             }
           }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Nachbesserung nach Bildtest ohne Legende",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "RUT.4.9-RUT.4.11",
+            "figures": [
+              "FIG-GRUPPE-VOLK",
+              "FIG-BOAS"
+            ],
+            "objects": [
+              "FIG-ORT-STADTTOR"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-BOAS",
+                "to": "FIG-GRUPPE-VOLK",
+                "icons": [
+                  "FIG-RUT"
+                ],
+                "word": {
+                  "de": "zur Frau erworben",
+                  "gsw": "zur Frau erworbe"
+                }
+              }
+            ],
+            "action_de": "Boas erklärt vor den Ältesten und dem ganzen Volk: Zeugen seid ihr heute, dass ich Elimelechs Besitz und Rut zur Frau erworben habe; und alle antworten: «Wir sind Zeugen!»",
+            "keywords": {
+              "de": "Wir sind Zeugen!",
+              "gsw": "Mir sind Züüge!"
+            },
+            "names": {
+              "FIG-BOAS": {
+                "de": "Boas",
+                "gsw": "Boas"
+              }
+            },
+            "stage": {
+              "back_side": "left",
+              "mood": {
+                "FIG-GRUPPE-VOLK": "delight",
+                "FIG-BOAS": "smile"
+              },
+              "x": {
+                "FIG-GRUPPE-VOLK": 52,
+                "FIG-BOAS": 150
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "RUT.4.16-RUT.4.17",
+            "figures": [
+              "FIG-GRUPPE-FRAUEN",
+              "FIG-NOOMI"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-FRAUEN",
+                "to": "FIG-NOOMI",
+                "icons": [],
+                "word": {
+                  "de": "Ein Sohn ist Noomi geboren!",
+                  "gsw": "De Noomi isch en Sohn gebore!"
+                }
+              }
+            ],
+            "action_de": "Noomi nimmt das Kind auf ihren Schoss; die Nachbarinnen rufen: «Ein Sohn ist Noomi geboren!» und nennen ihn Obed. Er ist der Vater Isais, des Vaters Davids.",
+            "keywords": {
+              "de": "sie nannten ihn Obed",
+              "gsw": "en Obed gnännt"
+            },
+            "names": {
+              "FIG-NOOMI": {
+                "de": "Noomi",
+                "gsw": "Noomi"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-NOOMI": "delight",
+                "FIG-GRUPPE-FRAUEN": "delight"
+              },
+              "x": {
+                "FIG-GRUPPE-FRAUEN": 50,
+                "FIG-NOOMI": 140
+              },
+              "size": {
+                "FIG-NOOMI": 1.15
+              },
+              "bubble_y": 14,
+              "hold": {
+                "FIG-NOOMI": "FIG-OBED"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "RUT.4.21-RUT.4.22",
+            "figures": [
+              "FIG-BOAS",
+              "FIG-OBED",
+              "FIG-ISAI",
+              "FIG-DAVID"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Boas zeugt Obed, Obed zeugt Isai, und Isai zeugt David.",
+            "keywords": {
+              "de": "Isai zeugte David",
+              "gsw": "Vatter vom David"
+            },
+            "names": {
+              "FIG-BOAS": {
+                "de": "Boas",
+                "gsw": "Boas"
+              },
+              "FIG-OBED": {
+                "de": "Obed",
+                "gsw": "Obed"
+              },
+              "FIG-ISAI": {
+                "de": "Isai",
+                "gsw": "Isai"
+              },
+              "FIG-DAVID": {
+                "de": "David",
+                "gsw": "David"
+              }
+            },
+            "stage": {
+              "x": {
+                "FIG-BOAS": 26,
+                "FIG-OBED": 70,
+                "FIG-ISAI": 116,
+                "FIG-DAVID": 160
+              },
+              "mood": {
+                "FIG-DAVID": "smile"
+              },
+              "size": {
+                "FIG-OBED": 1.8
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Wir sind Zeugen: Boas erklärt dem Volk im Tor: Rut (Bild in der Blase) zur Frau erworben; das Volk freut sich.",
+          "Ein Sohn für Noomi: Noomi hält das Kind Obed (Säugling im Arm); die Nachbarinnen freuen sich.",
+          "Bis David: Boas, Obed, Isai und David (mit Königsreif) von links nach rechts, Generation um Generation."
         ]
       }
     }
