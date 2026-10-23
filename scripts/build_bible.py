@@ -241,7 +241,7 @@ for rid, r in ill_recs.items():
                                         "renderings": r.get("renderings", {}), "library": (ROOT / r["library"]).read_text(encoding="utf-8")}
 ill_l10n = _l10n.load(ill_recs)
 for rid, r in ill_recs.items():
-    if r["type"] != "illustration":
+    if r["type"] != "illustration" or r["style"] not in ill_recs:  # eingestellter Stil (deprecated, z. B. «Symbol» seit 2026-10-23)
         continue
     st, br = ill_recs[r["style"]], ill_recs[r["brief"]]
     key = r["target"] if r["level"] in ("section", "bible", "testament", "group") else r["reference"]
