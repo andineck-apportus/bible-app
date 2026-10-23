@@ -63,7 +63,7 @@ def main():
             cells.append(f'<div class="c"><b>{label}</b><svg viewBox="{box}"><use href="#{sym}"/></svg></div>')
         name = f"blatt-{pg // per + 1:02d}"
         (out / f"{name}.html").write_text(
-            f'<html><body style="margin:0;background:#fff;font:13px sans-serif"><div style="display:none">{lib}</div>'
+            f'<html><head><meta charset="utf-8"></head><body style="margin:0;background:#fff;font:13px sans-serif"><div style="display:none">{lib}</div>'
             f'<div style="display:grid;grid-template-columns:repeat(6,{px + 16}px);gap:6px">{"".join(cells)}</div>'
             f'<style>.c{{text-align:center;border:1px solid #ddd}}.c svg{{width:{px}px;height:{px}px;display:block;margin:auto}}</style></body></html>',
             encoding="utf-8")
