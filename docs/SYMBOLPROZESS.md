@@ -1,0 +1,59 @@
+# Zeichen, die man erraten kann – Erstellung und Prüfung
+
+Stand 2026-10-23 (Auftrag Andi Neck). Gegenstück zu [BILDPROZESS.md](BILDPROZESS.md) für die Bildzeichen im Lexikon
+(`data/illustrations/lexicon/FIG-ZEICHEN-*`, heute 191). Personen, Orte und Gegenstände folgen denselben Schritten,
+mit strengeren Zielwerten (siehe unten).
+
+## Ausgangslage
+
+Bisher gab es keinen eigenen Ablauf für Zeichen. Ein Zeichen entstand, wenn ein Bildauftrag einen Begriff brauchte. Die
+Bedeutung wurde im Lexikon beschrieben (Pflichtmerkmale, Verwechslungen); geprüft wurde nur im Gesamtbild mit Legende.
+Viele Zeichen sind deshalb eigene Abmachungen, die man ohne Legende kaum errät, z. B. offene Hände mit Licht für «Gnade»,
+Herz mit Lichtstrahl für «glauben», Hand mit Brot für «gute Werke» (Rückmeldung Andi Neck, 2026-10-23: «Hand» u. a.).
+
+## Grundsätze
+
+1. **Eine Bedeutung je Zeichen**, überall gleich (wie heute).
+2. **Bekannte Bildsprache vor eigener Erfindung.** Erst prüfen, ob es ein weit verbreitetes Piktogramm gibt (Verkehrs- und
+   Informationszeichen, verbreitete Emoji, kirchliche Grundzeichen); nur wenn nicht, ein eigenes entwerfen.
+3. **Konkret statt abstrakt.** Ein Begriff wird durch eine typische Handlung oder einen Gegenstand gezeigt (Metonymie):
+   «vergeben» als zerrissener Schuldschein, «gute Werke» als Brot geben an eine Person. Ist das nicht möglich, wird das
+   Zeichen ein **Wortzeichen**: Zeichen plus Wort aus der Übersetzung, nie allein (seit Worte im Bild erlaubt sind).
+4. **Unverwechselbare Form.** Klare Umrisse, auch klein (24 px) erkennbar; Farbe nie als einziges Unterscheidungsmerkmal.
+5. **Kulturell vorsichtig.** Gesten, Farben und Tiere werden in Kulturen verschieden gelesen; Varianten je Zielkontext
+   werden am Lexikon-Eintrag geführt (siehe BILDSPRACHE.md), nie stillschweigend.
+
+## Drei Klassen mit Zielwerten
+
+| Klasse | Beispiele | Allein erkannt (frei benannt) | Auswahl aus vier |
+|---|---|---|---|
+| Gegenstand, Ort, Person | Brot, Krug, Tempel, Boot | mindestens 90 % | mindestens 95 % |
+| Handlung, Geste, Zustand | beten, heilen, weinen, schlafen | mindestens 70 % | mindestens 85 % |
+| Begriff (abstrakt) | Gnade, Glaube, Gerechtigkeit | – | mindestens 70 %, sonst Wortzeichen |
+
+## Ablauf je Zeichen
+
+1. **Bedarf:** Begriff, Belegstellen, wie oft er in Bildaufträgen vorkommt. Gibt es schon ein Zeichen mit derselben oder
+   ähnlicher Bedeutung, wird es verwendet statt ein neues zu zeichnen.
+2. **Bedeutung festlegen:** ein Satz «bedeutet …», ein Satz «bedeutet nicht …», Verwechslungskandidaten (`distinct_from`).
+3. **Drei Entwürfe** aus verschiedenen Richtungen: bekanntes Piktogramm, konkrete Handlung, Gegenstand.
+4. **Blindtest je Entwurf** mit getrennten KI-Instanzen, die nur das Zeichen sehen:
+   - frei benennen («Was bedeutet dieses Zeichen in einer Bilderbibel? ein bis drei Wörter»);
+   - Auswahl aus vier Begriffen: die Bedeutung und drei naheliegende Verwechslungen;
+   - in zwei, später allen Grössen, in denen es vorkommt (24 px, 48 px).
+   Eine dritte Instanz bewertet die freien Antworten gegen die Bedeutung (0 falsch, 1 verwandt, 2 getroffen).
+5. **Auswahl:** bester Entwurf, der den Zielwert seiner Klasse erreicht. Erreicht keiner ihn, wird das Zeichen bei
+   Gegenständen und Handlungen neu entworfen, bei Begriffen zum Wortzeichen.
+6. **Protokoll am Lexikon-Eintrag:** Datum, Modell, Ergebnisse, Verwechslungen; der Symbolindex zeigt die Erklärung.
+7. **Im Gesamtbild prüfen:** Das neue Zeichen wird in zwei typischen Bildern verwendet und im Blindtest ohne Legende
+   geprüft (BILDPROZESS.md, Schritt 5).
+8. **Bei Änderungen:** Ändert sich ein Zeichen, werden alle Bilder neu gezeichnet und geprüft, die es verwenden.
+
+## Bestand prüfen
+
+Alle bestehenden Zeichen durchlaufen Schritt 4 als Ausgangsmessung. Ergebnis je Zeichen: behalten, neu entwerfen oder
+Wortzeichen. Bericht: `reports/zeichen-blindtest-<datum>.json` und die Zusammenfassung unten.
+
+## Ergebnisse
+
+(wird nach der Ausgangsmessung ergänzt)
