@@ -2,6 +2,10 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.78 — 2026-10-23 — Fokus nach der Suche
+
+- **Fokus auf dem gewählten Treffer** (Andi Neck): Wählt man in der Suche einen Abschnitt (Klick oder Tab und Enter), liegt der Fokus danach auf diesem Abschnitt im Navigator. Enter öffnet ihn, Tab führt zu den weiteren Abschnitten. Bei Kapitel, Buch und Buchgruppe liegt der Fokus auf dem gewählten Feld.
+
 ## v0.77 — 2026-10-23 — Ein Bildstil: Anime
 
 - **Stil «Symbol» eingestellt** (Andi Neck): Die App zeigt nur noch Anime-Bilder, ohne Stil-Umschalter. Die Symbol-Daten bleiben im Repository (Status deprecated), werden aber nicht mehr gebaut.
