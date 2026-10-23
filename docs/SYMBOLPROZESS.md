@@ -69,6 +69,15 @@ vor dem Einfügen in Bilder geprüft, verbessert und erneut geprüft. Gilt für 
    Bildaufträgen; Personen erhalten feste, aus dem Text oder der Tradition begründete Erkennungsmerkmale.
 3. **Erneut messen** mit neuen Instanzen, gleicher Test. Erst dann werden die Bilder neu gezeichnet.
 
+## Anzeigegruppen (Entscheid 2026-10-23)
+
+Im Bildlexikon und in der Legende stehen die Einträge in sechs Gruppen (Feld `display_group`): Gott, Jesus, Heiliger Geist ·
+Menschen (Personen, Rollen, Gruppen) · Dinge, Natur und Zeit (Gegenstände und konkrete Zeichen wie Herz, Blut, Blitz,
+Abend) · Orte · Handlungen und Gefühle · Begriffe (Glaube, Hoffnung, Gnade …; werden Wortzeichen). Die Zuordnung der
+Zeichen folgt der Testklasse der Ausgangsmessung (`scripts/authoring/bildlexikon_daten/_gruppen.json`). Das Feld `kind`
+bleibt unverändert, weil es die Platzierung in den Bildern steuert. Körperteile sind keine eigene Gruppe: als Zeichen
+(z. B. «Herz (das Innere)», «verdorrte Hand») oder als Teil der Figur.
+
 ## Ergebnisse
 
 ### Ausgangsmessung 2026-10-23
