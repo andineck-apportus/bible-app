@@ -123,6 +123,52 @@ Offen nach Runde 2: Gruppen (zu viele kleine Köpfe; besser 3–4 grosse Figuren
 mehrdeutige Attribute (Worfelschaufel als Hammer, Matte als Schriftrolle, Muschel als Fächer), Nebenfiguren ohne Attribut,
 Satan, Besessener, Königin von Saba (Geschlecht), flache Landschaftsstreifen, Doppelbilder.
 
+### Runde 3, 2026-10-23
+
+Überarbeitet nach Runde 2 und den Hinweisen von Andi Neck:
+- Gruppen: drei (bei Text mit vier Personen vier) grössere Figuren, eine Gruppenfarbe, Zeichen gross auf der Brust der vorderen Figur.
+- 58 Personen und Rollen mit eindeutigerem Zeichen.
+- 29 Gegenstände und Orte, Landschaften mit Himmel und Hügeln.
+- Abgestimmte Grundformen:
+  - Locken auf dem Scheitel;
+  - Kopftuch tiefer in der Stirn;
+  - Glatze mit Haarkranz;
+  - dünnere Kontur;
+  - Wanderstab über der Schulter;
+  - dezentere Altersfalten.
+
+Gemessen wie zuvor (vier blinde Beschreiber, ein Bewerter), aber mit neuen Instanzen und einer strengeren Regel: «getroffen» heisst, mindestens zwei von vier Beschreibungen erkennen Figur, Rolle oder Ding. Daten: `reports/figuren-blindtest-2026-10-23-runde3.json`.
+
+| Art | Anzahl | getroffen Runde 2 | getroffen Runde 3 | behalten Runde 3 |
+|---|---|---|---|---|
+| Gott, Jesus, Geist | 4 | 100 % | 100 % | 4 |
+| Personen | 79 | 68 % | 33 % | 18 |
+| Rollen | 61 | 70 % | 69 % | 42 → 33 |
+| Gruppen | 46 | 41 % | 54 % | 22 |
+| Gegenstände | 139 | 88 % | 91 % | 122 |
+| Orte | 48 | 90 % | 88 % | 41 |
+| Alle | 377 | 76 % | 70 % | 240 |
+
+Die Zahlen sind nicht direkt vergleichbar:
+- Die 244 Einträge, die in Runde 3 nicht überarbeitet wurden, galten in Runde 2 alle als getroffen, jetzt nur noch 199 (82 %). Die Messung ist also strenger geworden.
+- Die 133 überarbeiteten Einträge (Gruppen, Personen, Rollen, Dinge) stiegen trotzdem von 41 auf 66 getroffen (31 % → 50 %).
+
+Offen nach Runde 3 (Bewerter):
+- Apostel: Die traditionellen Attribute (Messer, Säge, Walkerstange, Winkelmass, Kelch) tragen ohne Namen nicht; es fehlt ein gemeinsames Jüngermerkmal.
+- Gemischte Gruppen (Mann, Frau, Kind) werden als Familie gelesen.
+- Frauen mit Kind werden zu Maria oder Elisabet.
+- Gegenstände an Personen ergeben falsche Bildwörter: Saatbeutel wird als Schleuder gelesen, Kreuzbalken als «Balken im Auge».
+- Paare, die nicht unterscheidbar sind:
+  - Maria Magdala und Maria von Betanien;
+  - die zwei jungen Männer in Weiss;
+  - Blinde und Besessene;
+  - Soldat und Hauptmann.
+- Orte, die als bekanntere Orte gelesen werden: Ninive als Babel, Moab als Galiläa.
+- Leere und schmutzige Gefässe, Lose, Splitter.
+
+Eine Grenze ist bewusst gesetzt: Viele Nebenfiguren sind ohne Namen nicht erratbar. Im Bild tragen Hauptfiguren deshalb ein
+Namensschild beim ersten Auftreten (VERDICHTUNG.md); der Blindtest ohne Namen ist hier die strengste Prüfung.
+
 ### Reihenfolge der Überarbeitung
 
 1. Die 20 meistverwendeten schwachen Zeichen (rund die Hälfte aller schwachen Verwendungen).

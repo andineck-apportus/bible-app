@@ -2,6 +2,28 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.80 — 2026-10-23 — Figuren und Zeichen, Runde 3 (Arbeitszweig figuren-qualitaet)
+
+- **Abgestimmte Grundformen** (Hinweise Andi Neck):
+  - Locken auf dem Scheitel statt seitlich;
+  - Kopftuch tiefer, ohne Bogen über den Brauen;
+  - Glatze mit tiefem Haarkranz;
+  - dünnere Kontur der Zeichen;
+  - Wanderstab schräg über der Schulter, ohne Arm;
+  - Altersfalten dezenter.
+- **Gruppen:** drei grössere Figuren (vier, wo der Text vier nennt), eine Gruppenfarbe aus dem Lexikon, Zeichen gross vorn. Die Matte ist jetzt ein Strohgeflecht, die Gegner haben einen strengen Blick statt verschränkter Arme.
+- **58 Personen und Rollen:**
+  - Satan als Rauchschatten;
+  - Besessene mit Schatten dahinter;
+  - Königin von Saba klar weiblich;
+  - Titus mit Kreta statt Brief;
+  - Nebenfiguren mit eigenem Zeichen.
+- **29 Gegenstände und Orte** neu gezeichnet, Landschaften mit Tiefe, vier Doppelbilder unterscheidbar.
+- **Blindtest Runde 3** (docs/SYMBOLPROZESS.md):
+  - Überarbeitete Einträge 31 % → 50 % getroffen, gemessen nach einer strengeren Regel.
+  - Offen: Apostel, gemischte Gruppen als Familie, mehrere verwechselbare Paare.
+- Die Bilder der Bibelstellen sind noch nicht neu gezeichnet; die App zeigt bis dahin den früheren Stand.
+
 ## v0.79 — 2026-10-23 — Bildlexikon in sechs Gruppen
 
 - **Klarere Gruppen** (Rückfrage Andi Neck): Im Bildlexikon und in der Legende stehen die Einträge jetzt in sechs Gruppen statt acht Arten: Gott, Jesus, Heiliger Geist · Menschen · Dinge, Natur und Zeit · Orte · Handlungen und Gefühle · Begriffe.
