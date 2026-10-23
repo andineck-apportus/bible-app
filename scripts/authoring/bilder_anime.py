@@ -271,12 +271,9 @@ def person(key, x, y, s, expr="calm", look=0.0, arm=None, flip=False, tears=Fals
     if hold and "posaune" in hold:  # Blasinstrument am Mund, Schalltrichter von der Figur weg in Blickrichtung (Hinweis Andi Neck)
         dr = -1 if (look or 0) < 0 else 1
         held = f'<g transform="translate({(look or 0) * 1.0 + .8 * dr:.1f} 9.2) scale({dr} 1) rotate(16)">{use(hold, -1.8, -11.6, 24, 24)}</g>'
-    head = head_inner(key, expr, -look if flip else look, tears)
-    if flip:  # abgewandt: Hinterkopf statt Gesicht (Spiegeln allein war im Blindtest nicht sichtbar)
-        c = CHAR[key]
-        cover = c.get("veil") or c.get("turban") or c["hair"]
-        head += (f'<path d="M-10.8 0Q-11.4-12 0-12.4Q11.4-12 10.8 0Q10.6 9 4 12.4H-4Q-10.6 9-10.8 0z" fill="{cover}" stroke="{INK}" stroke-width=".7"/>'
-                 f'<path d="M-4 12.4Q0 14 4 12.4" fill="none" stroke="{SKIN_D}" stroke-width="1.2"/>')
+    # abgewandt: gespiegelt und mit Blick deutlich zur Seite (Dreiviertelansicht, Ohr verdeckt). Das Gesicht bleibt
+    # sichtbar, damit die Figur wie in der Legende erkennbar ist (früher Hinterkopf; Hinweis Andi Neck: «Händler ohne Gesicht»)
+    head = head_inner(key, expr, 2.6 if flip else look, tears)
     return f'<g transform="translate({x} {y}) scale({s}){fl}">{body_inner(key, arm)}{head}{held}</g>'
 
 
