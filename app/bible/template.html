@@ -1395,7 +1395,10 @@ app.addEventListener('click',e=>{
   if(b.hasAttribute('data-close')){closeSheet();return;}
   if(b.dataset.deep){const n=nodes.get(b.dataset.deep);current=b.dataset.deep;go(remembered.get(current)||n.children[0]);return;}
   if(b.dataset.refGo){goRef(b.dataset.refGo);return;}
-  if(b.dataset.pick){nav=navFrom(b.dataset.pick,true);query='';navSheet();const last=host.querySelector('.nav-parts[open]')||host.querySelector('.nav-block:last-of-type');if(last&&last.scrollIntoView)last.scrollIntoView({block:'nearest'});return;}
+  if(b.dataset.pick){const id=b.dataset.pick,n=nodes.get(id);nav=navFrom(id,true);query='';navSheet();const last=host.querySelector('.nav-parts[open]')||host.querySelector('.nav-block:last-of-type');if(last&&last.scrollIntoView)last.scrollIntoView({block:'nearest'});
+    // Fokus auf das gewählte Ergebnis: Enter öffnet es (Abschnitt) bzw. zeigt seine Teile, Tab führt zu den Nachbarn (Wunsch Andi Neck)
+    const f=host.querySelector(`.sheet .open-row[data-go="${id}"]`)||(n&&n.level===4?host.querySelector(`.sheet [data-nav="c:${n.c}"]`):null)||(n&&n.level===3?host.querySelector(`.sheet [data-nav="b:${n.b}"]`):null)||(n&&n.level===2?host.querySelector(`.sheet [data-nav="g:${n.gi}"]`):null);
+    if(f){f.focus({preventScroll:false});if(f.scrollIntoView)f.scrollIntoView({block:'nearest'});}return;}
   if(b.dataset.nav){const [k,v]=b.dataset.nav.split(':');if(k==='t'){nav={t:v,g:null,b:null,c:null,s:null};}else if(k==='g'){nav.g=Number(v);nav.b=null;nav.c=null;nav.s=null;}else if(k==='b'){nav.b=Number(v);nav.c=null;nav.s=null;}else if(k==='c'){nav.c=Number(v);nav.s=null;}else if(k==='s'){nav.s=v;}
     const old=host.querySelector('.sheet'),y=old?old.scrollTop:0;navSheet();const sh=host.querySelector('.sheet');if(sh&&sh.scrollTo)sh.scrollTo(0,y);const last=host.querySelector('.nav-block:last-of-type');if(last&&last.scrollIntoView)last.scrollIntoView({block:'nearest'});return;}
   if(b.hasAttribute('data-clear-recent')){clearRecent();navSheet();return;}
