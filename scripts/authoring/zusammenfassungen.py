@@ -104,8 +104,11 @@ def run(books):
         basis = {"core": e["core"], "fingerprint": core_fp(core)}
         if rec.get(field) != e["de"] or rec.get("core_basis") != basis:
             if rec.get(field) != e["de"]:
-                rec.setdefault("revision_log", []).append({"date": DATE, "change_de": f"Neu aus der Kernanalyse {e['core']} (docs/VERDICHTUNG.md)",
-                                                           "previous": {field: rec.get(field)}})
+                log = rec.setdefault("revision_log", [])
+                entry = {"date": DATE, "change_de": f"Neu aus der Kernanalyse {e['core']} (docs/VERDICHTUNG.md)", "previous": {field: rec.get(field)}}
+                # Nachbesserungen am selben Tag aus demselben Werkzeug: ein Eintrag, die Fassung davor bleibt «previous»
+                if not (log and log[-1].get("date") == DATE and log[-1].get("change_de") == entry["change_de"]):
+                    log.append(entry)
             rec[field] = e["de"]
             rec[auth_field] = AUTH.format(d=DATE, c=e["core"])
             rec["core_basis"] = basis
@@ -119,8 +122,10 @@ def run(books):
         fp = localizations.fingerprint(e["de"])
         if loc["fields"].get(field) != e["gsw"] or loc["source_fingerprint"].get(field) != fp:
             if field in loc["fields"] and loc["fields"][field] != e["gsw"]:
-                loc.setdefault("revision_log", []).append({"date": DATE, "change_de": f"Neu aus der Kernanalyse {e['core']}",
-                                                           "previous": {field: loc["fields"][field]}})
+                log = loc.setdefault("revision_log", [])
+                entry = {"date": DATE, "change_de": f"Neu aus der Kernanalyse {e['core']}", "previous": {field: loc["fields"][field]}}
+                if not (log and log[-1].get("date") == DATE and log[-1].get("change_de") == entry["change_de"]):
+                    log.append(entry)
             loc["fields"][field] = e["gsw"]
             loc["source_fingerprint"][field] = fp
             loc["authorship_de"] = AUTH_GSW.format(d=DATE)
