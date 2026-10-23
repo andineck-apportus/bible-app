@@ -624,11 +624,20 @@ def run():
              "library": "data/illustrations/symbol/_bibliothek.svg",
              "renderings": {k: {"symbol": v, "viewbox": VB.get(v, VB["ill-p"] if v.startswith("ill-p-") else "0 0 30 64")} for k, v in sorted(RENDER.items())},
              "license": LIC, "authorship_de": AUTH, "knowledge": {"asserted_at": DATE, "supersedes": None}}
-    n = write(D / "illustrations/styles/ILLSTYLE-SYMBOL.json", style, "Darstellungen neu nach Bildlexikon (renderings statt eigener Figurenliste)")
+    # Stil seit 2026-10-23 eingestellt (Andi Neck): Status bleibt «deprecated». Die Bibliothek bleibt Quelle der
+    # Gegenstände und Zeichen des Stils Anime (bilder_anime.COPY); mit --bibliothek nur sie neu schreiben.
+    sp = D / "illustrations/styles/ILLSTYLE-SYMBOL.json"
+    if sp.exists():
+        style["status"] = json.loads(sp.read_text(encoding="utf-8")).get("status", style["status"])
     lib = auto_library()
+    n = 0
     if (OUT / "_bibliothek.svg").read_text(encoding="utf-8") != lib:
         (OUT / "_bibliothek.svg").write_text(lib, encoding="utf-8")
         n += 1
+    if "--bibliothek" in sys.argv:
+        print(f"PASS: Bibliothek Symbol (Quelle für Anime); {n} Datei geschrieben")
+        return
+    n += write(sp, style, "Darstellungen neu nach Bildlexikon (renderings statt eigener Figurenliste)")
     for rid, gen in GENERATED.items():
         svg = gen()
         f = OUT / f"{rid}.svg"
