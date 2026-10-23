@@ -42,14 +42,14 @@ Danach in dieser Reihenfolge ausführen: `bildlexikon.py`, `bildauftraege.py`, `
 
 Prüfen wie eine Zusammenfassung: Handelnde, wer zu wem, Zeitform, Ankündigung statt Bericht; nichts zeigen, was der Text nicht
 sagt (oder es in `note_de` als Deutung benennen). Sprechblasen nur mit Zeichen (keine Wörter, keine Zahlen; höchstens 6 Zeichen).
-Mehrzahl («ihr», «die Leute») als Gruppe (`FIG-GRUPPE-…`), nie als Einzelfigur. Gewalt nicht ausmalen (Kreuz ohne Körper, Schlag
-nicht zeigen). «Die Juden», Pharisäer, Hohepriester als neutrale Figuren, nie verzerrt.
+Mehrzahl («ihr», «die Leute») als Gruppe (`FIG-GRUPPE-…`), nie als Einzelfigur. Gewalt und starke Gefühle erkennbar zeigen, nicht ausmalen (docs/BILDSPRACHE.md, Regel vom
+2026-10-23: Gefühl im Gesicht, Handlung über Bewegung und Folge, Tod als liegende Figur, Jesus am Kreuz ohne Wunden im Detail). «Die Juden», Pharisäer, Hohepriester als neutrale Figuren, nie verzerrt.
 
 ## Hinweise an den Zeichner (`stage`)
 
 | Schlüssel | Wirkung |
 |---|---|
-| `mood: {FIG: expr}` | Ausdruck im Stil Anime: calm, smile, delight, worried, surprised, earnest, determined, pensive, sleep |
+| `mood: {FIG: expr}` | Ausdruck im Stil Anime: calm, smile, delight, worried, surprised, earnest, determined, pensive, sleep, angry (Zorn), fear (Angst), pain (Schmerz), dead (tot) |
 | `pose: {FIG: p}` | lie, sleep, sit, kneel, fall, away (abgewandt: gespiegelt, Blick zur Seite, Gesicht bleibt sichtbar wie in der Legende) |
 | `hold: {FIG: OBJ}` | Figur hält Gegenstand (Gegenstand muss in `objects` stehen); lange Gegenstände (Schwert, Rohr, Kreuz) stehen seitlich mit sichtbarer Hand |
 | `in: {FIG: OBJ}`, `in_pos: {FIG: [x, y]}` | Figur im Gegenstand (Boot, Fisch, Grab …), Lage relativ 0–1 |

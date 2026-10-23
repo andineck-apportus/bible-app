@@ -66,6 +66,20 @@ def eyes(expr, look, big=False):
                        f'<path d="M{ex - 2.2:.1f} {ey - 1.9:.1f}Q{ex:.1f} {ey - 3.4:.1f} {ex + 2.2:.1f} {ey - 1.9:.1f}" fill="none" stroke="{INK}" stroke-width=".6" stroke-linecap="round"/>'
                        f'<circle cx="{ex + 1.1:.1f}" cy="{ey:.1f}" r=".55" fill="#FFF"/>')
             continue
+        if expr in ("dead",):  # Tod: geschlossene Augen als ruhige, gerade Linie (nicht Schlaf-Bogen)
+            out.append(f'<path d="M{ex - 2:.1f} {ey + .6:.1f}h4" stroke="{INK}" stroke-width=".9" stroke-linecap="round"/>')
+            continue
+        if expr == "pain":  # Schmerz: zusammengekniffene Augen
+            out.append(f'<path d="M{ex - side * 1.9:.1f} {ey - 1.4:.1f}l{side * 3:.1f} 1.6-{side * 3:.1f} 1.4" fill="none" stroke="{INK}" stroke-width=".9" stroke-linecap="round" stroke-linejoin="round"/>')
+            continue
+        if expr == "fear":  # Angst: weit offene Augen, kleine Pupillen
+            out.append(f'<ellipse cx="{ex:.1f}" cy="{ey:.1f}" rx="2.2" ry="2.7" fill="#FFF" stroke="{INK}" stroke-width=".7"/>'
+                       f'<circle cx="{ex + look * .4:.1f}" cy="{ey + .3:.1f}" r=".7" fill="{INK}"/>')
+            continue
+        if expr == "angry":  # Zorn: schweres, nach innen abfallendes Oberlid über der Pupille
+            out.append(f'<ellipse cx="{ex:.1f}" cy="{ey + .2:.1f}" rx="1.75" ry="2.1" fill="#3A2416"/><circle cx="{ex + .5:.1f}" cy="{ey - .3:.1f}" r=".5" fill="#FFF"/>'
+                       f'<path d="M{ex - side * 2.4:.1f} {ey - 1.2:.1f}L{ex + side * 2.3:.1f} {ey - 2.6:.1f}" stroke="{INK}" stroke-width="1.1" stroke-linecap="round" transform="scale(-1 1) translate({-2 * ex:.1f} 0)"/>')
+            continue
         if expr == "surprised":
             out.append(f'<ellipse cx="{ex:.1f}" cy="{ey:.1f}" rx="2.1" ry="2.5" fill="#FFF" stroke="{INK}" stroke-width=".7"/>'
                        f'<circle cx="{ex + look * .5:.1f}" cy="{ey + .2:.1f}" r=".95" fill="{INK}"/>')
@@ -87,21 +101,33 @@ def brows(expr, look, color):
     d = []
     for side in (-1, 1):
         ex = side * 4.2 + max(-1.6, min(1.6, look * 1.4))
-        if expr == "worried":
+        if expr in ("worried", "pain", "fear"):
             a, b = (-4.8, -6.0) if side < 0 else (-6.0, -4.8)
+            if expr == "fear":
+                a, b = a - .8, b - .8
+        elif expr == "angry":  # Zorn: Brauen stark zur Mitte gesenkt (V)
+            a, b = (-6.6, -3.6) if side < 0 else (-3.6, -6.6)
         elif expr == "determined":  # entschlossen: gerade Brauen, nicht nach innen gesenkt (wirkte zornig)
             a, b = (-5.4, -5.4)
         elif expr == "surprised":
             a, b = (-6.4, -6.4)
         else:
             a, b = (-5.3, -5.3)
-        mid = min(a, b) - (1.1 if expr in ("calm", "smile", "delight", "surprised", "pensive", "worried") else .7)
+        mid = (a + b) / 2 if expr == "angry" else min(a, b) - (1.1 if expr in ("calm", "smile", "delight", "surprised", "pensive", "worried", "fear", "pain") else .7)
         d.append(f"M{ex - 2.2:.1f} {a:.1f}Q{ex:.1f} {mid:.1f} {ex + 2.2:.1f} {b:.1f}")
-    return f'<path d="{"".join(d)}" fill="none" stroke="{color}" stroke-width=".75" stroke-linecap="round"/>'
+    return f'<path d="{"".join(d)}" fill="none" stroke="{color}" stroke-width="{1.2 if expr == "angry" else .75}" stroke-linecap="round"/>'
 
 
 def mouth(expr, look):
     x = look * 1.0
+    if expr == "angry":  # Zorn: offener, rufender Mund mit geraden Lippen
+        return f'<path d="M{x - 2.3:.1f} 7.6h4.6l-.8 2.4h-3z" fill="#5A2A22" stroke="{INK}" stroke-width=".6" stroke-linejoin="round"/>'
+    if expr == "fear":
+        return f'<ellipse cx="{x:.1f}" cy="8.6" rx="1.3" ry="1.7" fill="#5A2A22" stroke="{INK}" stroke-width=".5"/>'
+    if expr == "pain":  # Schmerz: zusammengebissene, verzerrte Lippen
+        return f'<path d="M{x - 2.2:.1f} 8.6l1.1-.8 1.1.8 1.1-.8 1.1.8" fill="none" stroke="{INK}" stroke-width=".8" stroke-linecap="round" stroke-linejoin="round"/>'
+    if expr == "dead":
+        return f'<path d="M{x - 1.4:.1f} 8.4h2.8" stroke="{INK}" stroke-width=".7" stroke-linecap="round"/>'
     if expr == "worried":
         return f'<path d="M{x - 1.8:.1f} 8.3q.9-.8 1.8 0t1.8 0" fill="none" stroke="{INK}" stroke-width=".8" stroke-linecap="round"/>'
     if expr == "surprised":
