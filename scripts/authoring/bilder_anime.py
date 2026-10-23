@@ -167,7 +167,7 @@ CHAR = {
                    robe="#B8A98A", apron=True),
     "diener2": dict(hair="#3A2A1C", front="M-10.6 0Q-11.4-10.8 0-11.8Q11.4-10.8 10.6 0Q8.4-7 0-7.4Q-8.4-7-10.6 0z",
                     robe="#A8987A", apron=True),
-    "meister": dict(hair="#6A5646", front="M-10.6 1Q-10.8-6-8.6-8.6Q-6-6.8-6.4-1z M10.6 1Q10.8-6 8.6-8.6Q6-6.8 6.4-1z",
+    "meister": dict(hair="#6A5646", front="M-10.9 2.4Q-11.4-2.6-10-5Q-8.4-3.4-8.2 1.6z M10.9 2.4Q11.4-2.6 10-5Q8.4-3.4 8.2 1.6z",
                     mustache=True, robe="#4F7A4A", belt="#D9A441", attr="an-becher"),  # Becher: Festleiter kostet den Wein (Joh 2,8-9)
     "braeutigam": dict(hair="#24180F", front="M-10.6-1.8Q-11-11.6 0-12Q11-11.6 10.6-1.8Q8-8.6 0-9.2Q-8-8.6-10.6-1.8z",
                        beard="M-8 6.4Q-7 12.4 0 13.4Q7 12.4 8 6.4Q6 10 0 10.6Q-6 10-8 6.4z", robe="#5A3E7A", trim="#D9A441", wreath="flowers"),
@@ -184,7 +184,7 @@ CHAR = {
     "menge3": dict(hair="#24180F", front="M-10.6 0Q-11.4-10.8 0-11.8Q11.4-10.8 10.6 0Q6-8.2-1-7Q-7-6.4-10.6 0z", robe="#8E8A6E", sash="#6A664C"),
     "mose": dict(hair="#D8D2C4", front="M-10.6-1.6Q-11.4-10.8 0-11.8Q11.4-10.8 10.6-1.6Q8-8.8 0-9.4Q-8-8.8-10.6-1.6z",
                  beard="M-8.6 4.6Q-9 15 0 19Q9 15 8.6 4.6Q6.6 10.6 0 11.2Q-6.6 10.6-8.6 4.6z", robe="#7A5A34", mantle="#E7DCC4", staff=True),  # Stab (Ex 4,2.17)
-    "paulus": dict(hair="#3A2618", front="M-10.6 1Q-10.8-6-8.6-8.6Q-6-6.8-6.4-1z M10.6 1Q10.8-6 8.6-8.6Q6-6.8 6.4-1z",
+    "paulus": dict(hair="#3A2618", front="M-10.9 2.4Q-11.4-2.6-10-5Q-8.4-3.4-8.2 1.6z M10.9 2.4Q11.4-2.6 10-5Q8.4-3.4 8.2 1.6z",
                    beard="M-8.4 5Q-8 14 0 15.6Q8 14 8.4 5Q6.6 10.4 0 11Q-6.6 10.4-8.4 5z", robe="#A79A80", mantle="#6A3F2F",
                    attr="an-a-brief", sword=True),  # Brief (Tradition, Briefe des Paulus) und Schwert an der Seite (Tradition)
     # Prophet: dunkler, rauer Mantel und Schriftrolle statt Hirten-Kopftuch (Blindtest 2026-10-23)
@@ -249,15 +249,20 @@ def head_inner(key, expr="calm", look=0.0, tears=False):
         o.append(f'<path d="M-10.6 2Q-11.8-9.4 0-12.8Q11.8-9.4 10.6 2Q9.2-7.8 0-9.4Q-9.2-7.8-10.6 2z" fill="{c["veil"]}" stroke="{INK}" stroke-width=".8"/>'
                  f'<path d="M-9.6 0Q-9.8-7.8 0-10.4Q9.8-7.8 9.6 0" fill="none" stroke="{INK}" stroke-width=".45" opacity=".55"/>')
     elif c.get("curls"):
-        o.append("".join(f'<circle cx="{x}" cy="{y}" r="3.1" fill="{hair}"/>' for x, y in ((-8, -4), (-6, -8.6), (-1.6, -10.6), (3.2, -10.4), (7.2, -8), (8.8, -3.6))))
-    elif c.get("front"):
+        # Locken: geschlossene Haarkappe, Locken entlang des Scheitelbogens (vorher seitlich zu viel, oben Lücken; Hinweis Andi Neck 2026-10-23)
+        o.append(f'<path d="M-10.2-2Q-10.8-11.8 0-12.2Q10.8-11.8 10.2-2Q8-7 0-7.4Q-8-7-10.2-2z" fill="{hair}"/>'
+                 + "".join(f'<circle cx="{x}" cy="{y}" r="2.9" fill="{hair}"/>' for x, y in ((-9.4, -5.2), (-6.7, -9.0), (-2.7, -11.1), (1.8, -11.3), (6.0, -9.6), (9.1, -6.0))))
+    elif c.get("front") and not c.get("veil"):  # unter Kopftuch/Schleier kein Haarbogen (wirkte wie zweite Braue)
         o.append(f'<path d="{c["front"]}" fill="{hair}"/>')
+        if c["front"] == "M-10.9 2.4Q-11.4-2.6-10-5Q-8.4-3.4-8.2 1.6z M10.9 2.4Q11.4-2.6 10-5Q8.4-3.4 8.2 1.6z":  # Glanzlicht auf der Glatze: liest sich als Kopfhaut, nicht als hohe Stirn
+            o.append('<path d="M-5.6-8.6Q-2-11 2.4-10.4" stroke="#FFFFFF" stroke-opacity=".45" stroke-width="1.3" fill="none" stroke-linecap="round"/>')
     if c.get("veil") and c["veil"] != "#FFFFFF" and not c.get("cowl"):
-        o.append(f'<path d="M-10.4 1Q-11.6-8.8 0-12.2Q11.6-8.8 10.4 1Q9-7.8 0-9.4Q-9-7.8-10.4 1z" fill="{c["veil"]}" stroke="{INK}" stroke-width=".7"/>')
+        # Kopftuch tiefer in die Stirn, ohne Haarbogen darunter (Hinweis Andi Neck 2026-10-23)
+        o.append(f'<path d="M-10.4 1.4Q-11.6-8.8 0-12.2Q11.6-8.8 10.4 1.4Q8.8-5.6 0-6.4Q-8.8-5.6-10.4 1.4z" fill="{c["veil"]}" stroke="{INK}" stroke-width=".7"/>')
     if c.get("hood") and not c.get("cowl"):  # Gebetsmantel: dunkle Querstreifen
         o.append('<path d="M-10.9-3.6Q0-11.4 10.9-3.6M-10.6-.8Q0-8.6 10.6-.8" fill="none" stroke="#2E4A7A" stroke-width="1.2"/>')
     if c.get("veil") == "#FFFFFF":
-        o.append(f'<path d="M-10.6 0Q-11.6-9.6 0-12.4Q11.6-9.6 10.6 0Q9-8 0-9.4Q-9-8-10.6 0z" fill="#FFFFFF" stroke="#B4B2A9" stroke-width=".7"/>')
+        o.append(f'<path d="M-10.6 1.4Q-11.6-9.6 0-12.4Q11.6-9.6 10.6 1.4Q8.8-5.6 0-6.4Q-8.8-5.6-10.6 1.4z" fill="#FFFFFF" stroke="#B4B2A9" stroke-width=".7"/>')
     if expr not in ("sleep", "dead"):  # Brauen über Haar und Schleier, damit sie über den Augen sichtbar sind
         o.append(brows(expr, look, hair if _light(hair) < .7 else "#6A5A4A"))
     if c.get("flowers"):
@@ -1023,8 +1028,8 @@ def library():
             raise SystemExit(f"{sid} fehlt in der Symbol-Bibliothek")
         parts.append(m.group(0).replace('id="ill-', 'id="an-').replace('href="#ill-', 'href="#an-'))
     # Kontur für Erkennungszeichen: dunkler Aussenrand, heller Innenrand (lesbar auf jeder Gewandfarbe)
-    parts.append('<filter id="an-kontur" x="-25%" y="-25%" width="150%" height="150%"><feMorphology in="SourceAlpha" operator="dilate" radius="1.4" result="a"/>'
-                 f'<feFlood flood-color="{INK}"/><feComposite in2="a" operator="in" result="ink"/><feMorphology in="SourceAlpha" operator="dilate" radius=".85" result="b"/>'
+    parts.append('<filter id="an-kontur" x="-25%" y="-25%" width="150%" height="150%"><feMorphology in="SourceAlpha" operator="dilate" radius=".45" result="a"/>'
+                 f'<feFlood flood-color="{INK}"/><feComposite in2="a" operator="in" result="ink"/><feMorphology in="SourceAlpha" operator="dilate" radius=".2" result="b"/>'
                  '<feFlood flood-color="#FFFDF6"/><feComposite in2="b" operator="in" result="hell"/><feMerge><feMergeNode in="ink"/><feMergeNode in="hell"/><feMergeNode in="SourceGraphic"/></feMerge></filter>')
     vb = {}
     for fid, (key, expr) in PORTRAITS.items():
