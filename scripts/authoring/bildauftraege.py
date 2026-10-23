@@ -318,11 +318,14 @@ def summary_of(target):
 
 
 def run():
-    confirm = os.environ.get("BIBLE_BRIEF_CONFIRM") == "1"
+    confirm_all = os.environ.get("BIBLE_BRIEF_CONFIRM") == "1"
+    # nur bestimmte Aufträge bestätigen (Präfixe der Suffixe, kommagetrennt), z. B. BIBLE_BRIEF_ONLY=RUT,MAT-005
+    only = [x for x in os.environ.get("BIBLE_BRIEF_ONLY", "").split(",") if x]
     lex = {p.stem for p in (D / "illustrations/lexicon").glob("FIG-*.json")}
     n = 0
     for b in BRIEFS:
         rid = f"BRIEF-{b['suffix']}"
+        confirm = confirm_all and (not only or any(b["suffix"] == x or b["suffix"].startswith(x + "-") for x in only))
         if len(CAPTIONS.get(b["suffix"], [])) != len(b["panels"]):
             raise SystemExit(f"{rid}: Bildhilfe (CAPTIONS) passt nicht zur Zahl der Felder")
         for p in b["panels"]:
@@ -358,7 +361,7 @@ def run():
         n += write(path, rec)
         n += localize(rid, rec, {"interpretation_note_de": b["note_gsw"], "actions_de": [ACTIONS_GSW[p["action_de"]] for p in b["panels"]],
                                   "captions_de": [c[1] for c in CAPTIONS[b["suffix"]]]}, "gsw-u-sd-chzh", "GSW-ZH", "CTX-CH-ZH-GSW-2026", AUTH_GSW, DATE)
-    print(f"PASS: {len(BRIEFS)} Bildaufträge; {n} Dateien geschrieben" + (" (Text erneut geprüft und bestätigt)" if confirm else ""))
+    print(f"PASS: {len(BRIEFS)} Bildaufträge; {n} Dateien geschrieben" + (" (Text erneut geprüft und bestätigt" + (f": {', '.join(only)})" if only else ")") if confirm_all else ""))
 
 
 if __name__ == "__main__":

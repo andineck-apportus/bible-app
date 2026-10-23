@@ -256,7 +256,7 @@ def word_band(v, letter=False):
     while lwidth(v, fs) + 16 + (14 if letter else 0) > W - 12 and fs > 7:
         fs -= .5
     x = (W - w) / 2
-    y = H - 19
+    y = 1
     icon = ""
     if letter:  # Briefrahmen: kleiner Brief vor dem Wort (Auftrag im Brief)
         icon = (f'<rect x="{x + 6:.1f}" y="{y + 4:.1f}" width="11" height="8" rx="1" fill="#FFFDF6" stroke="#3B3226" stroke-width=".8"/>'
@@ -760,9 +760,10 @@ class Composer:
         for fid, v in (p.get("names") or {}).items():
             if fid in heads:
                 hx, hy = heads[fid]
-                out.append(name_tag(hx, min(hy + self.head_r() * 2.05, H - 23 if p.get("keywords") else H - 4), v))  # über dem Stichwortband
-        if p.get("keywords"):
-            out.append(word_band(p["keywords"], letter=bool(p.get("letter"))))
+                out.append(name_tag(hx, min(hy + self.head_r() * 2.05, H - 4), v))  # auf der Brust, unter dem Kinn
+        # Stichwortband unter dem Feld (nicht im Bild: es verdeckte Hände, Gegenstände und Kniende; Pilot 2026-10-23)
+        self.bands = getattr(self, "bands", [])
+        self.bands.append(word_band(p["keywords"], letter=bool(p.get("letter"))) if p.get("keywords") else "")
         return "".join(out)
 
 
