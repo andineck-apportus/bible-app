@@ -163,8 +163,9 @@ CHAR = {
                   beard="M-8.2 5.6Q-7.6 12.8 0 14.2Q7.6 12.8 8.2 5.6Q6.6 10.4 0 11Q-6.6 10.4-8.2 5.6z",
                   robe="#F4F1EA", mantle="#A33A2E", halo=True),
     "maria": dict(female=True, hair="#3A2618", veil="#2E5478", front="M-7.6-3.6Q0-8.4 7.6-3.6Q4-5.2 0-5Q-4-5.2-7.6-3.6z", robe="#3E6E9E", mantle="#2E5478"),
+    # Diener: sandbeiges Gewand, Schürze und Tablett mit Krug und Bechern über der Schürze (Joh 2,8; Blindtest 2026-10-23: grau, ohne Zeichen)
     "diener": dict(hair="#24180F", front="M-10.6-.4Q-11-11.6 0-12Q11-11.6 10.6-.4Q9-5.4 5-6.8Q1-4.6-3-6.8Q-8-5.4-10.6-.4z",
-                   robe="#B8A98A", apron=True),
+                   robe="#C9B48E", apron=True, attr="an-a-tablett", attr_box=(-8, 11, 16, 16)),
     "diener2": dict(hair="#3A2A1C", front="M-10.6 0Q-11.4-10.8 0-11.8Q11.4-10.8 10.6 0Q8.4-7 0-7.4Q-8.4-7-10.6 0z",
                     robe="#A8987A", apron=True),
     "meister": dict(hair="#6A5646", front="M-10.9 2.4Q-11.4-2.6-10-5Q-8.4-3.4-8.2 1.6z M10.9 2.4Q11.4-2.6 10-5Q8.4-3.4 8.2 1.6z",
@@ -173,11 +174,16 @@ CHAR = {
                        beard="M-8 6.4Q-7 12.4 0 13.4Q7 12.4 8 6.4Q6 10 0 10.6Q-6 10-8 6.4z", robe="#5A3E7A", trim="#D9A441", wreath="flowers"),
     "braut": dict(female=True, hair="#2E2017", veil="#FFFFFF", front="M-8-3.4Q0-8.6 8-3.4Q4-5.4 0-5.2Q-4-5.4-8-3.4z", robe="#FBF3E4", flowers=True),
     # Jünger mit Wanderstab (Mk 6,8: «nichts mitnehmen ausser einem Stab»), sonst wie Arbeiter gelesen (Blindtest 2026-10-23)
-    "juenger": dict(hair="#2E2017", curls=True, beard="M-8 6.4Q-7 12 0 13Q7 12 8 6.4Q6 9.8 0 10.4Q-6 9.8-8 6.4z", robe="#9C7A4C", belt="#5B4630", staff=True),
+    # Jünger-Rolle: Fussspuren «folgt mir nach» (Mk 1,17-18) statt Wanderstab, damit er nicht als Hirte gelesen wird (Hinweis Projektleiter 2026-10-23)
+    "juenger": dict(hair="#2E2017", curls=True, beard="M-8 6.4Q-7 12 0 13Q7 12 8 6.4Q6 9.8 0 10.4Q-6 9.8-8 6.4z", robe="#9C7A4C", belt="#5B4630", staff=True,
+                    attr="an-a-fussspuren"),
     "juenger2": dict(hair="#4A3020", front="M-10.6 0Q-11.4-10.8 0-11.8Q11.4-10.8 10.6 0Q6-8.2-1-7Q-7-6.4-10.6 0z", robe="#8A6A40", belt="#5B4630", staff=True),
-    "gast": dict(hair="#2E2017", front="M-10.6-.4Q-11-11.6 0-12Q11-11.6 10.6-.4Q8-6 0-6.6Q-8-6-10.6-.4z", robe="#B4A98F", attr="an-becher"),
-    "haendler": dict(hair="#2E2017", veil="#E9D8B4", front="M-7.6-3.6Q0-8.4 7.6-3.6Q4-5.2 0-5Q-4-5.2-7.6-3.6z",
-                     beard="M-8 6.4Q-7 12.4 0 13.4Q7 12.4 8 6.4Q6 10 0 10.6Q-6 10-8 6.4z", robe="#C2884A", belt="#8A6A3A", attr="an-a-geldbeutel"),
+    # Gast: helles Festgewand mit Goldsaum und Festbecher mit zwei Henkeln (vorher Becher wie ein Eimer, Blindtest 2026-10-23)
+    "gast": dict(hair="#2E2017", front="M-10.6-.4Q-11-11.6 0-12Q11-11.6 10.6-.4Q8-6 0-6.6Q-8-6-10.6-.4z", robe="#F2EAD6", mantle="#8E6A9A", trim="#D9A441",
+                 beard="M-8 6.4Q-7 12.4 0 13.4Q7 12.4 8 6.4Q6 10 0 10.6Q-6 10-8 6.4z", attr="an-a-festbecher"),
+    # Händler: Mann mit vollem Bart, ohne Kopftuch (mit Kopftuch als Frau gelesen, Hinweis Projektleiter 2026-10-23); Marktstand statt Geldbeutel (Lexikon-Regel: keine Geldsack-Stereotype)
+    "haendler": dict(hair="#2E2017", front="M-10.6-.4Q-11-11.6 0-12Q11-11.6 10.6-.4Q8-6 0-6.6Q-8-6-10.6-.4z",
+                     beard="M-8.4 5Q-8 14 0 15.6Q8 14 8.4 5Q6.6 10.4 0 11Q-6.6 10.4-8.4 5z", robe="#C2884A", belt="#8A6A3A", band="#7A3E2A", attr="an-a-marktstand"),
     "menge": dict(hair="#2E2017", front="M-10.6-.4Q-11-11.6 0-12Q11-11.6 10.6-.4Q8-6 0-6.6Q-8-6-10.6-.4z",
                   beard="M-8 6.4Q-7 12.4 0 13.4Q7 12.4 8 6.4Q6 10 0 10.6Q-6 10-8 6.4z", robe="#A8987A", sash="#7E6E52"),
     "menge2": dict(female=True, hair="#3A2618", veil="#C9B48E", front="M-7.6-3.6Q0-8.4 7.6-3.6Q4-5.2 0-5Q-4-5.2-7.6-3.6z", robe="#9C8A6A", sash="#6E5E44"),
@@ -223,6 +229,9 @@ def head_inner(key, expr="calm", look=0.0, tears=False):
     if look > -2.2:
         ears.append("M-10.3 2.4q-1.8.4-1.2 2.6.6 1.6 1.8 1z")
     o.append(f'<path d="{" ".join(ears)}" fill="{SKIN}" stroke="{INK}" stroke-width=".5"/>')
+    if c.get("jewels"):  # Ohrgehänge aus Gold (vornehme Frauen; Blindtest 2026-10-23: Königin als junger König gelesen)
+        o.append("".join(f'<path d="M{sx * 10.9:.1f} 5.4v1.2" stroke="#9C6F1C" stroke-width=".5"/><circle cx="{sx * 10.9:.1f}" cy="7.6" r="1.15" fill="#E0B24E" stroke="#9C6F1C" stroke-width=".45"/>'
+                         for sx, ok in ((1, look < 2.2), (-1, look > -2.2)) if ok))
     if c.get("beard") and not child:
         o.append(f'<path d="{c["beard"]}" fill="{hair}" opacity=".92"/>')
     if c.get("mustache") and not child:
@@ -237,6 +246,9 @@ def head_inner(key, expr="calm", look=0.0, tears=False):
     if expr in ("delight", "worried") or c.get("flowers") or child:
         o.append(blush())
     o.append(mouth(expr, look) if not child else f'<g transform="translate({look * .2:.1f} .8) scale(.8)">{mouth(expr, look)}</g>')
+    if c.get("muffle"):  # Aussätziger: Tuch über Mund und Bart (Lev 13,45 «den Bart verhüllen»)
+        o.append(f'<path d="M-10 5Q0 3.2 10 5Q9.8 10 0 13Q-9.8 10-10 5z" fill="#D8CBB0" stroke="{INK}" stroke-width=".6"/>'
+                 '<path d="M-6.6 6.6Q0 5.4 6.6 6.6M-5 9.4Q0 8.4 5 9.4" fill="none" stroke="#A89A80" stroke-width=".5"/>')
     if c.get("old"):  # Alter: zwei Stirnfalten, feine Fältchen an den Augen, kurze Linie neben dem Mund (dezenter, Hinweis Andi Neck 2026-10-23)
         o.append('<g stroke="#8A5A3A" stroke-linecap="round" fill="none">'
                  '<path d="M-2.6-5.5q1.3-.5 2.6 0t2.6 0M-2-4.4q1-.4 2 0t2 0" stroke-width=".42" opacity=".75"/>'
@@ -278,6 +290,9 @@ def head_inner(key, expr="calm", look=0.0, tears=False):
         o.append('<path d="M-10.8-2.6Q0-8.4 10.8-4.6l-.2 2.6Q0-5.8-10.6.2z" fill="#F6F1E4" stroke="#B4B2A9" stroke-width=".5"/><path d="M-4-5.6l2 2.4M2-6.4l2 2.2" stroke="#D8CBB0" stroke-width=".5"/>')
     if c.get("plate"):
         o.append('<path d="M-4-10.6h8v2.2h-8z" fill="#E0B24E" stroke="#9C6F1C" stroke-width=".4"/>')
+    if c.get("diadem"):  # Stirnreif aus Gold mit Stein (vornehme Frau am Hof)
+        o.append('<path d="M-10-1.6Q0-8.8 10-1.6" fill="none" stroke="#9C6F1C" stroke-width="1.9"/><path d="M-10-1.6Q0-8.8 10-1.6" fill="none" stroke="#E0B24E" stroke-width="1.1"/>'
+                 '<path d="M0-7.4l1.5 1.8L0-3.8-1.5-5.6z" fill="#A33A2E" stroke="#9C6F1C" stroke-width=".45"/>')
     if c.get("band"):
         o.append(f'<path d="M-10.6-4.6Q0-9.6 10.6-4.6v2.4Q0-7.2-10.6-2.2z" fill="{c["band"]}"/>')
     if c.get("crown") == "royal":  # König: hohe Bügelkrone mit Steinen (Herodes Antipas: niedrige Zackenkrone)
@@ -310,6 +325,29 @@ def head_inner(key, expr="calm", look=0.0, tears=False):
     return "".join(o)
 
 
+# Rauchiger Schatten (Satan, unreiner Geist): Wolke aus sich überlagernden Kreisen mit weichem Rand und Rauchfahnen,
+# schwebend, ohne Umriss einer Gestalt (Blindtest 2026-10-23: die frühere glatte Form wurde als Sack bzw. Mantel gelesen)
+SMOKE_PUFFS = ((20, 14, 8.6), (13.6, 19, 6.6), (26.4, 19, 6.6), (20, 23, 8.4), (15, 29, 5.8), (25, 29, 5.8), (20, 32, 6.2),
+               (18, 38, 3.8), (22.4, 40, 3), (19.6, 44, 2.2))
+# Rauch steigt oben in Schwaden auf und löst sich unten in einer dünnen Fahne auf (keine Fangarme)
+SMOKE_TOP = "M11 12Q8 6 12 2.6q-1 4 2.4 5.4M29 12q3-6-1-9.4q1 4-2.4 5.4M18 5.4q-1.4-4 2-5.2-.4 3 2.6 4.4M20.4 46q-2.4 2 .4 3.6"
+
+
+def smoke(x, y, s=1.0, eyes=False, op=.94):
+    """Rauchschatten mit Mitte (x, y); Grundmass wie das Satan-Zeichen (40 × 50, Mitte 20/25). Weicher Rand über den
+    Weichzeichner an-weich (library), damit die Form nicht als Sack oder Mantel gelesen wird."""
+    puffs = "".join(f'<circle cx="{cx}" cy="{cy}" r="{r}"/>' for cx, cy, r in SMOKE_PUFFS)
+    big = "".join(f'<circle cx="{cx}" cy="{cy}" r="{r * 1.18:.1f}"/>' for cx, cy, r in SMOKE_PUFFS)
+    o = (f'<g transform="translate({x:.1f} {y:.1f}) scale({s:.3g}) translate(-20 -25)">'
+         f'<g fill="#3A3240" opacity="{op * .55:.2f}" filter="url(#an-weich)">{big}</g>'
+         f'<path d="{SMOKE_TOP}" fill="#3A3240" opacity="{op * .6:.2f}" filter="url(#an-weich)"/>'
+         f'<g fill="#2A2430" opacity="{op}" filter="url(#an-weich-k)">{puffs}</g>'
+         '<path d="M14 13q3-3 6-1M23 18q3-2 5 1M15 26q2-2 5 0M21 32q3-2 5 1" fill="none" stroke="#5A5066" stroke-width="1" stroke-linecap="round" opacity=".8"/>')
+    if eyes:  # zwei schmale, helle Augen (keine Fratze)
+        o += '<path d="M14 17.4q2.4-1.8 4.8 0-2.4 1.5-4.8 0zM21.2 17.4q2.4-1.8 4.8 0-2.4 1.5-4.8 0z" fill="#F2D27A"/>'
+    return o + "</g>"
+
+
 def staff_svg(side=1, hand=True, col="#7A5A34"):
     """Wanderstab schräg auf der Brust, ohne Arm, mit Kontur wie die anderen Erkennungszeichen (Einheiten wie Kopf).
     Vorher lang neben der Figur mit runder Hand: wirkte wie eine Stange daneben (Hinweis Andi Neck 2026-10-23)."""
@@ -325,6 +363,11 @@ def body_inner(key, arm=None, ext=0, staff=True):
     ext = Gewand nach unten verlängern (hintere Figuren einer Gruppe, damit sie nicht in der Luft enden)."""
     c = CHAR[key]
     o = []
+    if c.get("shadow"):  # unreiner Geist als dunkler Rauchschatten hinter ihm, nicht als Ding in der Hand (Hinweis Projektleiter 2026-10-23)
+        o.append(smoke(8, -4, .82, op=.88))
+    if c.get("glow"):  # heller Schein hinter der Figur (junger Mann im weissen Gewand am Grab), ohne Flügel
+        o.append('<circle cx="0" cy="1" r="14" fill="#F5CF6E" opacity=".85" filter="url(#an-glanz)"/>'
+                 '<path d="M0-17.6v-1.6M-9.6-14.8l-1-1.3M9.6-14.8l1-1.3M-15.6-7.4l-1.5-.6M15.6-7.4l1.5-.6" stroke="#E8B84A" stroke-width="1.1" stroke-linecap="round"/>')
     if c.get("wings"):
         o.append(f'<path d="M-12 22Q-30 10-26-12q8 12 14 22zM12 22q18-12 14-34-8 12-14 22z" fill="#FFFDF6" stroke="#D9A441" stroke-width=".9"/>')
     yb = 34 + ext  # Unterkante (bei ext tiefer, ohne Querlinie)
@@ -364,6 +407,16 @@ def body_inner(key, arm=None, ext=0, staff=True):
         o.append('<g stroke-linecap="round"><path d="M-14.6 29v5M-13 29v5M13 29v5M14.6 29v5" stroke="#FFFDF6" stroke-width="1.1"/><path d="M-13.8 29v5M13.8 29v5" stroke="#2E4A7A" stroke-width=".7"/></g>')
     if c.get("trim") and not c.get("toga"):
         o.append(f'<path d="M-4 15.8L0 22 4 15.8" fill="none" stroke="{c["trim"]}" stroke-width="1.4"/>')
+    if c.get("necklace"):  # Halskette aus Gold
+        o.append('<path d="M-5.6 16Q0 22.4 5.6 16" fill="none" stroke="#9C6F1C" stroke-width="1.5"/><path d="M-5.6 16Q0 22.4 5.6 16" fill="none" stroke="#E0B24E" stroke-width=".9"/>'
+                 '<circle cx="0" cy="20.2" r="1.3" fill="#3E6E9E" stroke="#9C6F1C" stroke-width=".5"/><circle cx="-3.4" cy="18.9" r=".6" fill="#A33A2E"/><circle cx="3.4" cy="18.9" r=".6" fill="#A33A2E"/>')
+    if c.get("wrapped"):  # Grabbinden locker um den Körper (Joh 11,44), drei schräge Bahnen (keine Mumie, Lexikon-Regel); keine gefesselten Hände (las sich als Gefangener)
+        bands = "".join(f'<path d="M-18 {y0:.1f}L18 {y0 + d:.1f}v2.6L-18 {y0 + 2.6:.1f}z"/>' for y0, d in ((18.4, 2.6), (24.6, -2.6), (30.4, 2.4)))
+        o.append(f'<g clip-path="url(#an-clip-robe)"><g fill="#FBF7EC" stroke="#A89C84" stroke-width=".45">{bands}</g></g>')
+    if c.get("linen"):  # Leinentuch über der Schulter, mit Falten und Fransen (Mk 15,46); vorher Tuch auf der Brust, las sich als Pergament
+        o.append(f'<path d="M-15.4 22Q-12 15.4-6 15.8L11.6 30.4 13 34H3.4L-8.4 22.6Q-11 21.4-15.4 22z" fill="#FBF7EC" stroke="{INK}" stroke-width=".65"/>'
+                 '<path d="M-7 18.6L8.4 31.6M-9.6 20.6L4.6 33" fill="none" stroke="#C9BFAA" stroke-width=".7"/>'
+                 '<path d="M4.4 34l.4 1.6M6.6 34l.4 1.6M8.8 34l.4 1.6M11 34l.4 1.6" stroke="#C9BFAA" stroke-width=".6"/>')
     if c.get("sword"):  # Schwert in der Scheide an der Seite (Paulus, Tradition)
         o.append(f'<path d="M-12.4 21.6l-2.6 13" stroke="{INK}" stroke-width="2.8" stroke-linecap="round"/><path d="M-12.4 21.6l-2.6 13" stroke="#6A4A2A" stroke-width="1.8" stroke-linecap="round"/>'
                  f'<path d="M-14.6 20.6l4.4.9" stroke="#9C6F1C" stroke-width="1.3" stroke-linecap="round"/><path d="M-12.2 20.8l.5-2.6" stroke="#9C6F1C" stroke-width="1.2" stroke-linecap="round"/><circle cx="-11.6" cy="17.9" r=".8" fill="#D9A441"/>')
@@ -410,7 +463,8 @@ def person(key, x, y, s, expr="calm", look=0.0, arm=None, flip=False, tears=Fals
         s *= .74
         y += 9 * s
     if hold and (hold.startswith("an-a-") or big):  # Erkennungszeichen (Schlüssel, Kasse …) gross auf der Brust, mit Kontur
-        held = f'<g filter="url(#an-kontur)">{use(hold, -8, 17, 16, 16)}</g>'
+        bx = CHAR[key].get("attr_box") if hold == CHAR[key].get("attr") else None  # eigene Lage, z. B. Tablett über der Schürze
+        held = f'<g filter="url(#an-kontur)">{use(hold, *(bx or (-8, 17, 16, 16)))}</g>'
     else:
         held = use(hold, -4, 13, 16, 12) if hold else ""  # vor der Brust, nicht am unteren Rand
     if hold and "posaune" in hold:  # Blasinstrument am Mund, Schalltrichter von der Figur weg in Blickrichtung (Hinweis Andi Neck)
@@ -1040,6 +1094,21 @@ OBJ = {"FIG-OBJ-KRUG-WASSER": "an-jar", "FIG-OBJ-KRUG-WEIN-LEER": "an-jar-leer",
        "FIG-ZEICHEN-TRAUER": "an-z-trauer", "FIG-ZEICHEN-LICHT": "an-licht", "FIG-SYMBOL-ADLER": "an-adler", "FIG-OBJ-SCHRIFTROLLE": "an-schriftrolle"}
 
 
+# Hinweise hinter der Figur, nur im Lexikon-Porträt (Einheiten wie Kopf, Kopfmitte 0/0)
+BACKDROP = {
+    # Jona: grosser Fisch hinter ihm (Jona 2,1), statt Fisch auf der Brust (las sich als Fischer, Blindtest 2026-10-23)
+    "fisch": ('<g transform="translate(-1.2 0) scale(.88)">'
+              f'<path d="M-19.6 5Q-17-15 1-17.6Q13-18.4 16.6-8.6L21-15.4V4L16.6-1.6Q13 7 2 8.4H-8Q-17 10-19.6 5z" fill="#5A8AB0" stroke="{INK}" stroke-width=".7"/>'
+              f'<path d="M-2-17.4q4-5 9-2.6l-1.6 2.6" fill="#4A7AA0" stroke="{INK}" stroke-width=".6"/><circle cx="-15.6" cy="-1.6" r="1.3" fill="#FFFDF6" stroke="{INK}" stroke-width=".5"/>'
+              f'<circle cx="-15.4" cy="-1.4" r=".6" fill="{INK}"/><path d="M-19.4 4.6q2.4-.4 4 1.2" fill="none" stroke="{INK}" stroke-width=".6"/>'
+              '<path d="M-14-9q3-3 7-4M10-11q3 2 4 5" fill="none" stroke="#8FB8D8" stroke-width=".8" stroke-linecap="round"/></g>'),
+    # Lazarus beim Herauskommen: dunkle Grabhöhle hinter ihm, Stein weggerollt (Joh 11,38.41)
+    "grab": (f'<path d="M-18.6 40V-1Q-18.6-17.6 0-17.6Q18.6-17.6 18.6-1V40z" fill="#A89A84" stroke="{INK}" stroke-width=".7"/>'
+             '<path d="M-14.6 40V0Q-14.6-14 0-14Q14.6-14 14.6 0V40z" fill="#2E2A24"/>'
+             '<path d="M-17.4 6l1.6.4M-17 14l1.4-.2M16 4l1.6.6" stroke="#7A6E5E" stroke-width=".6"/>'),
+}
+
+
 def library():
     sym = SYM_LIB.read_text(encoding="utf-8")
     parts = []
@@ -1052,22 +1121,34 @@ def library():
     parts.append('<filter id="an-kontur" x="-25%" y="-25%" width="150%" height="150%"><feMorphology in="SourceAlpha" operator="dilate" radius=".45" result="a"/>'
                  f'<feFlood flood-color="{INK}"/><feComposite in2="a" operator="in" result="ink"/><feMorphology in="SourceAlpha" operator="dilate" radius=".2" result="b"/>'
                  '<feFlood flood-color="#FFFDF6"/><feComposite in2="b" operator="in" result="hell"/><feMerge><feMergeNode in="ink"/><feMergeNode in="hell"/><feMergeNode in="SourceGraphic"/></feMerge></filter>')
+    # Weichzeichner und Zuschnitt für Rauchschatten, Lichtschein und Grabbinden (body_inner); Weichzeichner statt Farbverläufen,
+    # weil Verläufe aus einer verborgenen Bibliothek in Chromium nicht gezeichnet werden
+    parts.append('<clipPath id="an-clip-robe"><path d="M-17 34Q-17 19-7 15.6L7 15.6Q17 19 17 34z"/></clipPath>'
+                 '<filter id="an-weich" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="1.6"/></filter>'
+                 '<filter id="an-weich-k" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation=".8"/></filter>'
+                 '<filter id="an-glanz" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="3.2"/></filter>')
+    # Satan: schwebender dunkler Rauchschatten mit zwei hellen Augen, ohne Mantel- oder Sackform (Hinweis Projektleiter 2026-10-23)
+    parts.append(f'<symbol id="an-p-satan" viewBox="0 0 40 50">{smoke(20, 25, 1.0, eyes=True)}</symbol>')
     vb = {}
     for fid, (key, expr) in PORTRAITS.items():
         sid = f"an-p-{key}"
         at = CHAR[key].get("attr")  # Erkennungszeichen auch im Lexikon-Porträt, gross in der Hand (Blindtest 2026-10-23: ohne Attribut kaum unterscheidbar)
         # Erkennungszeichen gross auf der Brust, mit hellem Rand und Kontur; keine Arme (Andi Neck 2026-10-23: ohne Hand halten
         # lieber ohne Arme, Zeichen auf die Brust mit Konturen)
-        held = f'<g filter="url(#an-kontur)">{use(at, -9, 17, 18, 18)}</g>' if at else ""
-        vbx = "0 0 38 54"
         c = CHAR[key]
+        held = f'<g filter="url(#an-kontur)">{use(at, *(c.get("attr_box") or (-9, 17, 18, 18)))}</g>' if at else ""
+        vbx = "0 0 38 54"
+        tears = bool(c.get("weeping"))  # Rahel weint um ihre Kinder (Mt 2,18): Tränen schon im Porträt
+        if tears and expr == "calm":
+            expr = "worried"
+        back = BACKDROP.get(c.get("backdrop"), "")  # Hinweis hinter der Figur, nur im Lexikon-Porträt (Jona: Fisch; Lazarus: Grab)
         if c.get("baby"):  # Säugling: gewickelt, kleines Gesicht (früher Erwachsenenbüste ohne Haar)
             fig = (f'<g transform="translate(19 30)"><ellipse cx="0" cy="8" rx="15" ry="10" fill="{c["robe"]}" stroke="{INK}" stroke-width=".8"/>'
                    f'<path d="M-11 4q11-6 22 0" fill="none" stroke="{INK}" stroke-width=".5" opacity=".5"/><g transform="translate(-4 -2) scale(.62)">{head_inner(key, "smile", .4)}</g></g>')
         elif c.get("child"):  # Kind: kleiner, grosser Kopf, kindliches Gesicht
-            fig = f'<g transform="translate(19 26) scale(.78)">{body_inner(key, None, 6)}{head_inner(key, expr)}{held}</g>'
+            fig = f'<g transform="translate(19 26) scale(.78)">{back}{body_inner(key, None, 6)}{head_inner(key, expr, 0.0, tears)}{held}</g>'
         else:
-            fig = f'<g transform="translate(19 18)">{body_inner(key)}{head_inner(key, expr)}{held}</g>'
+            fig = f'<g transform="translate(19 18)">{back}{body_inner(key)}{head_inner(key, expr, 0.0, tears)}{held}</g>'
         parts.append(f'<symbol id="{sid}" viewBox="{vbx}">{fig}</symbol>')
         vb[fid] = (sid, vbx)
     # Gemeinde: Männer, Frauen und ein Kind vor dem Haus; die Menschen grösser als das Haus (Blindtest 2026-10-23: Haus dominierte)
@@ -1115,6 +1196,7 @@ for _k, _v in _SYMS.items():
     OBJ.setdefault(_k, "an-" + _v["sym"][4:])
     if _v["sym"] not in COPY:
         COPY.append(_v["sym"])
+OBJ["FIG-SATAN"] = "an-p-satan"  # im Stil Anime eigener Rauchschatten (library), gleiche viewBox wie das Bauteil ill-satan
 EXTRA_META = {k: (v["place"], tuple(v["size"])) for k, v in _SYMS.items()}
 POSE_SHIFT = {"sit": 6, "kneel": 4}
 
