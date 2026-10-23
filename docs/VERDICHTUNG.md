@@ -76,6 +76,20 @@ sagt; eine Deutung wird als Deutung gekennzeichnet.
 6. **Synchron halten:** Ändert sich der Text oder eine Kernanalyse darunter, gelten Kernanalyse, Zusammenfassung und Bild
    darüber als veraltet und werden in dieser Reihenfolge erneuert.
 
+## Werkzeug und Ablage
+
+- Eingabe der Bearbeiter: `scripts/authoring/kernanalysen_daten/<BUCH>.json` (eine Liste von Einheiten).
+- `python3 scripts/authoring/kernanalyse.py [BUCH …]` prüft und schreibt `data/core-analyses/CORE-<suffix>.json`
+  (Typ `core_analysis`).
+- Geprüft werden:
+  - Umfang je Ebene und Pflichtfelder;
+  - Stellen innerhalb der Einheit;
+  - Schlüsselwörter wörtlich in der hochdeutschen Arbeitsübersetzung;
+  - Personen und Orte im Bildlexikon;
+  - Momente höherer Ebenen aus Momenten der Ebene darunter.
+- `basis` hält Fingerabdrücke fest: beim Abschnitt des Textes, darüber der Kernanalysen der Kinder. Erneuert werden sie
+  nur mit `BIBLE_CORE_CONFIRM=1`, nach einer Prüfung.
+
 ## Pilot
 
 Rut (Erzählung), Titus (Brief), Markus 5 (Heilungen) und die Bergpredigt Mt 5–7 (Rede), jeweils mit Kapitel und Buch.
