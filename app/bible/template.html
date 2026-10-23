@@ -79,6 +79,7 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .tool svg{width:16px;height:16px}
 #bible-stream .tool:hover,#bible-stream .tool:active{color:var(--ink);background:var(--soft)}
 #bible-stream button.vno.more{display:inline-grid!important;place-items:center;min-width:1.9em;height:1.9em;padding:0 3px!important;margin:0 5px 0 -2px;border:1px solid var(--rule)!important;border-radius:var(--r)!important;vertical-align:.25em;color:var(--ink);font:500 11px/1 var(--ui)}
+#bible-stream button.vno.plain{padding:0!important;margin:0 5px 0 0}
 #bible-stream button.vno.more:hover,#bible-stream button.vno.more:active{background:var(--soft)}
 #bible-stream .dec[role=button]{cursor:pointer}
 #bible-stream button.dec{display:inline!important;padding:0!important;font:inherit;color:inherit;background:none;border:0!important;cursor:pointer;text-align:inherit}
@@ -147,8 +148,10 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .il.he details>dl,#bible-stream .il.he details>.ref-id,#bible-stream .il.he details>.note{direction:ltr;text-align:left}
 #bible-stream .il .m{display:block;font-size:12px;color:var(--muted)}
 #bible-stream .dec{text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:.22em;text-decoration-color:var(--muted)}
-#bible-stream .dec.traditional{text-decoration-style:dotted}
-#bible-stream .dec.interpretive{text-decoration-style:dashed}
+#bible-stream .dec{text-decoration-style:dotted}
+#bible-stream .vno-demo{display:inline-grid;place-items:center;min-width:1.9em;height:1.9em;border:1px solid var(--rule);border-radius:var(--r);font:500 11px/1 var(--ui);color:var(--ink)}
+#bible-stream .dss-demo{padding:0 7px;border:1px solid var(--rule);border-radius:999px;color:var(--muted);font:500 11px/1.7 var(--ui)}
+#bible-stream ol.steps{margin:0 0 8px;padding-left:1.3em;display:grid;gap:8px}
 #bible-stream .dec-tag.traditional,#bible-stream .dec-tag.interpretive{color:var(--ink)}
 #bible-stream .grc-line{display:inline-flex;align-items:center;flex-wrap:wrap;gap:2px}
 #bible-stream .play{display:inline-flex!important;align-items:center;justify-content:center;width:32px;height:32px;margin-left:4px;vertical-align:middle;color:var(--muted);border-radius:var(--r);flex:none}
@@ -543,6 +546,9 @@ root.querySelectorAll('.app').forEach((app,appIndex)=>{
 let current='all',lang='de',sheet=null,query='';
 let S={v:3,text:'de',flow:true,theme:'auto',read:19,advanced:true,inline:true,bgInline:true,translit:true,pron:'modern',rate:0.85,voice:{},readVoice:'',readRate:1,godName:'Jahwe',ill:'symbol',view:'text',merk:'mark'};
 try{const s=JSON.parse(localStorage.getItem('bible:settings')||localStorage.getItem('lesestrom')||'null');if(s){const keep={...s};if(!(s.v>=2)){delete keep.advanced;delete keep.inline;delete keep.bgInline;}if(!(s.v>=3))delete keep.flow;S={...S,...keep,v:3};}}catch(e){}
+/* Feste Darstellung (Andi Neck, 2026-10-23; docs/LESEN-UND-VERTIEFEN.md): Verse fortlaufend, Urtext und Details, Umschrift an;
+   keine Lesarten- und Hintergrundzeilen im Text. Nicht einstellbar, damit die Regeln eindeutig und testbar sind. */
+const FIXED={flow:true,advanced:true,translit:true,inline:false,bgInline:false};Object.assign(S,FIXED);
 const save=()=>{try{localStorage.setItem('bible:settings',JSON.stringify(S));}catch(e){}};
 const mq=globalThis.matchMedia?globalThis.matchMedia('(prefers-color-scheme: dark)'):null;
 /* ---------- Aussprache (Stimmen des Geräts, Web Speech API) ---------- */
@@ -671,6 +677,8 @@ partTitle=pTitle;
 const pSummary=p=>((I18N[S.text]||{})[p.id]||{}).summary||(p.summaries&&(p.summaries[S.text]||p.summaries.de))||p.summary;
 // Ausgearbeitet: Text geladen oder Vers in einer ausgearbeiteten Stelle (auch bevor das Buchpaket geladen ist)
 let WORKED=null;const inWorked=n=>{if(!WORKED)WORKED=STUDY.sections.map(sec=>rangeOf(sec.range));const code=DATA[n.b].code;return WORKED.some(g=>g.code===code&&g.c===n.c&&n.v>=g.from&&n.v<=g.to);};
+const worked=n=>!!(altsFor(n).length||bgFor(n).length||(LAYER().decisions[n.canonicalRef]||[]).length||wordRefs().has(n.canonicalRef));
+let WREF=null,WREFN=-1;const wordRefs=()=>{if(!WREF||WREFN!==STUDY.words.length){WREF=new Set(STUDY.words.map(w=>w.ref));WREFN=STUDY.words.length;}return WREF;};
 const isPilotVerse=n=>n.level===6&&(!!TXT(n.canonicalRef)||inWorked(n));
 const DEC={literal:['wörtlich','literal'],adapted:['sprachlich angepasst','adapted'],interpretive:['Deutungsentscheidung','interpretive choice'],traditional:['folgt der vertrauten Wiedergabe','follows traditional wording']};
 function decorate(text,decs){
@@ -698,7 +706,7 @@ function decisionSheet(ref,i){
 }
 function decisionsBlock(n){
   const L=lang==='de',ds=LAYER().decisions[n.canonicalRef]||[],groups=CMP(n.canonicalRef);let h='';
-  if(ds.length){h+=`<h4>${L?'Wie ist übersetzt?':'How is it translated?'}</h4><p class="note">${L?'Wo diese Übersetzung wörtlich ist, wo sie sprachlich glättet, wo sie deutet und wo sie einer vertrauten Wiedergabe folgt. Im Urtext-Modus sind die beiden letzten Arten im Text unterstrichen.':'Where this translation is literal, smoothed, interpretive or traditional.'}</p>`+ds.map(d=>`<div class="point dec-point"><span class="tag dec-tag ${d.kind}">${DEC[d.kind][L?0:1]}</span><p class="body">«${esc(d.target)}»</p>${d.grc?`<div>${grcLine(d.grc)}</div>`:''}${d.heb?`<div>${hebLine(d.heb,d.heb_tr)}</div>`:''}${d.more_literal?`<p class="note"><b>${L?'Wörtlicher:':'More literal:'}</b> «${esc(d.more_literal)}»</p>`:''}${d.other_options?`<p class="note"><b>${L?'Auch möglich:':'Also possible:'}</b> ${d.other_options.map(x=>'«'+esc(x)+'»').join(', ')}</p>`:''}<p class="note">${rich(d.note||'')}</p></div>`).join('');}
+  if(ds.length){h+=`<h4>${L?'Wie ist übersetzt?':'How is it translated?'}</h4><p class="note">${L?'Wo diese Übersetzung wörtlich ist, wo sie sprachlich glättet, wo sie deutet und wo sie einer vertrauten Wiedergabe folgt. Die beiden letzten Arten sind im Lesetext gepunktet unterstrichen.':'Where this translation is literal, smoothed, interpretive or traditional.'}</p>`+ds.map(d=>`<div class="point dec-point"><span class="tag dec-tag ${d.kind}">${DEC[d.kind][L?0:1]}</span><p class="body">«${esc(d.target)}»</p>${d.grc?`<div>${grcLine(d.grc)}</div>`:''}${d.heb?`<div>${hebLine(d.heb,d.heb_tr)}</div>`:''}${d.more_literal?`<p class="note"><b>${L?'Wörtlicher:':'More literal:'}</b> «${esc(d.more_literal)}»</p>`:''}${d.other_options?`<p class="note"><b>${L?'Auch möglich:':'Also possible:'}</b> ${d.other_options.map(x=>'«'+esc(x)+'»').join(', ')}</p>`:''}<p class="note">${rich(d.note||'')}</p></div>`).join('');}
   if(groups.some(g=>g.items.length))for(const g of groups){const cmp=g.items;
     if(!cmp.length){h+=`<h4>${L?'Ältere Übersetzungen':'Older translations'} · ${esc(cmpLabel(g.lang))}</h4><p class="note">${L?'Für diese Sprache ist noch keine Vergleichsübersetzung erfasst.':'No comparison translation recorded for this language yet.'}</p>`;continue;}
     h+=`<h4>${L?'Ältere Übersetzungen':'Older translations'} · ${esc(cmpLabel(g.lang))}</h4><p class="note">${L?'Zum Vergleich, gemeinfrei. Sie beruhen teils auf anderen griechischen Textausgaben und sind nicht die Grundlage der Übersetzung hier.':'For comparison (public domain); not the basis of this translation.'}</p>`+cmp.map(c=>`<div class="point"><span class="tag">${esc(c.title)}</span><p class="body">${esc(c.text)}</p>${(c.notes||[]).map(x=>`<p class="note">${esc(x)}</p>`).join('')}</div>`).join('');}
@@ -779,12 +787,9 @@ function verseEntry(n){
   if(!text)return `<article class="stream-entry verse placeholder" data-stream="${n.id}">${lead}<p class="verse-line"><span class="vno">${n.v}</span><span class="stream-copy">${S.flow?'…':t.placeholder}</span>${dssChip(n)}</p></article>`;
   const alts=altsFor(n);
   const bgs=bgFor(n);
-  const has=alts.length||bgs.length||S.advanced||LAYER().decisions[n.canonicalRef]||CMP(n.canonicalRef).some(g=>g.items.length);
-  const vno=has?`<button type="button" class="vno more" data-more="${n.id}" aria-label="${t.more} ${n.v}">${n.v}</button>`:`<span class="vno">${n.v}</span>`;
-  const inline=S.inline?alts.map(a=>`<span class="alt-line" data-alternative="${esc(a.variant)}">${lang==='de'?'oder':'or'}: «${esc(a.to)}»</span>`).join(''):'';
-  const bgList=S.bgInline?bgs.filter(b=>b.from===n.v):[];
-  const bgLine=bgList.length?`<div class="bg-lines"><span class="bg-label">${icon('history')}</span>${bgList.map(b=>`<button type="button" class="bg-line" data-bg="${esc(b.id)}">${esc(b.topic)}</button>`).join('')}</div>`:'';
-  return `<article class="stream-entry verse" data-stream="${n.id}">${lead}<p class="verse-line">${vno}<span class="stream-copy" data-ref="${n.canonicalRef}">${S.advanced?decorate(text,LAYER().decisions[n.canonicalRef]):esc(text)}</span>${merkMark(n)}</p>${inline}${bgLine}${merkCard(n,text)}</article>`;
+  const has=worked(n);
+  const vno=`<button type="button" class="vno${has?' more':' plain'}" data-more="${n.id}" aria-label="${t.more} ${n.v}">${n.v}</button>`;
+  return `<article class="stream-entry verse" data-stream="${n.id}">${lead}<p class="verse-line">${vno}<span class="stream-copy" data-ref="${n.canonicalRef}">${S.advanced?decorate(text,LAYER().decisions[n.canonicalRef]):esc(text)}</span>${merkMark(n)}</p>${merkCard(n,text)}</article>`;
 }
 // ---------- Merkverse und Lernen ----------
 // Merkverse: Bilder der Ebene «verse» (ILL.merk). Anzeige im Lesetext nach Einstellung S.merk: 'mark' (kleines Zeichen am Vers,
@@ -1014,6 +1019,17 @@ function edBlock(words,n){const L=lang==='de',ex=STUDY.ed_extra[n.canonicalRef]|
   for(const w of words){const l=edLine(w.ed);if(l)rows.push(`<p class="edrow"><span class="grc">${esc(w.text.replace(/[⸀-⸅]/g,''))}</span> <span class="note">${l}</span></p>`);ex.filter(x=>x.after===w.id).forEach(add);}
   if(!rows.length)return '';
   return `<h4>${L?'Wörter in den Textausgaben':'Words in the editions'}</h4><p class="note">${L?'Welche gedruckten Ausgaben ein Wort enthalten, nach STEPBible TAGNT: NA28/NA27 (Nestle-Aland), THGNT (Tyndale House), SBL, WH (Westcott-Hort), Tregelles, TR (Textus Receptus), Byz (Byzantinischer Text). Gezeigt sind nur Wörter, die nicht in allen acht stehen, und Wörter anderer Ausgaben (+). Das ist ein Befund über Ausgaben, nicht über Handschriften; die Zuordnung zu unserem Text ist maschinell.':'Which printed editions contain a word (STEPBible TAGNT). Edition evidence, not manuscripts; machine-aligned.'}</p><div class="edw">${rows.join('')}</div>`;}
+/* Stand dieser Stelle: was für den Vers erfasst ist und was (noch) nicht – damit Fehlendes nicht als «gibt es nicht» gelesen wird */
+function coverage(n){const L=lang==='de',code=DATA[n.b].code,nt=CODE_IDX[code]>=39,alts=altsFor(n).length,bgs=bgFor(n).length,ds=(LAYER().decisions[n.canonicalRef]||[]).length,w=wordRefs().has(n.canonicalRef),src=TXT(n.canonicalRef);
+  const row=(k,v)=>`<dt>${k}</dt><dd>${v}</dd>`;
+  const lesarten=!w?(L?'noch nicht erfasst':'not yet recorded'):nt?(alts?(L?`${alts} abweichende Lesart${alts>1?'en':''}, oben`:`${alts} other reading(s), above`):(L?'keine Abweichung, die die Übersetzung ändert (geprüft am Apparat der SBLGNT)':'no difference affecting the translation (checked against the SBLGNT apparatus)')):(L?'hebräische Handschriften noch nicht verglichen'+(dssChip(n)?'; Texte vom Toten Meer: siehe «Rolle»':''):'Hebrew manuscripts not yet compared');
+  return `<h4>${L?'Stand dieser Stelle':'Status of this passage'}</h4><dl class="kv">`+
+    row(L?'Übersetzung':'Translation',src?(w?(L?'eigene Übersetzung aus dem Urtext (KI-Entwurf)':'own translation from the original (AI draft)'):(L?'Lesetext, noch nicht am Urtext ausgearbeitet':'reading text, not yet worked from the original')):(L?'noch kein Text':'no text yet'))+
+    row(L?'Wort für Wort':'Word by word',w?(L?'vorhanden, oben':'available, above'):(L?'noch nicht erfasst':'not yet recorded'))+
+    row(L?'Andere Lesarten':'Other readings',lesarten)+
+    row(L?'Entscheide':'Choices',ds?(L?`${ds} beim Übersetzen, oben`:`${ds}, above`):(w?(L?'keine besonderen':'none noted'):(L?'noch nicht erfasst':'not yet recorded')))+
+    row(L?'Hintergrund':'Background',bgs?(L?`${bgs} Hinweis${bgs>1?'e':''}, oben`:`${bgs}, above`):(L?'zu diesem Vers keiner':'none for this verse'))+
+    `</dl><p class="note">${L?'Alles ist KI-Entwurf und noch nicht fachlich geprüft. Wie wir vorgehen: Menü › «So arbeiten wir».':'All AI drafts, not yet reviewed. How we work: menu › “How we work”.'}</p>`;}
 function verseSheet(id){
   const n=nodes.get(id),t=T(),alts=altsFor(n);refCtx=DATA[n.b].code;sheetAnchor=id;
   let h=head(title(n))+`<p class="body">${esc(TXT(n.canonicalRef))}</p>`;
@@ -1035,9 +1051,8 @@ function verseSheet(id){
     if(vars.length)h+=`<h4>${lang==='de'?'Vergleich der Textausgaben':'Edition comparison'}</h4><p class="note">${lang==='de'?'Vergleich gedruckter Textausgaben laut SBLGNT-Apparat. Keine Handschriftenzählung.':'Comparison of printed editions (SBLGNT apparatus). Not a manuscript count.'}</p>`+vars.map(v=>`<div class="point">${v.readings.map(r=>{const a=(v.assessment||[]).find(x=>x.reading===r.id);return `<p><span class="body">${esc(r.text)}</span> <span class="note">${a?esc(a.editions.map(e=>ED[e]).join(', '))+` (${a.support}/${a.of})`:esc((r.witnesses||[]).join(', ')+(lang==='de'?' · berichtet, ungeprüft':' · reported, unverified'))}</span></p>`;}).join('')}<p class="ref-id">${esc(v.id)}</p></div>`).join('');
     if(!(words.length&&words[0].lang==='he'))h+=edBlock(words,n);
     h+=sourcesBlock(n)+`<p class="ref-id">${esc(LAYER().source[n.canonicalRef]||STUDY.layers.de.source[n.canonicalRef]||'')}</p>`;
-  }else{
-    h+=`<p class="note">${lang==='de'?'Urtext, Grammatik und Quellen: im Menü «Urtext und Details» einschalten.':'Original text, grammar and sources: turn on “Original text and details” in the menu.'}</p>`;
   }
+  h+=coverage(n);
   const p=nodes.get(n.parent);if(p.part)h+=sheetTools(p.id,'uh');
   openSheet('verse',h);
 }
@@ -1143,6 +1158,7 @@ function menuSheet(){
   <button type="button" class="row settings-row" data-settings>${icon('settings')}<span>${t.settings}<span class="sub">${t.settingsSub}</span></span>${icon('chevron-right')}</button>
   ${MERK().length?`<button type="button" class="row settings-row" data-learn="menu">${icon('learn')}<span>${lang==='de'?'Lernen':'Learn'}<span class="sub">${lang==='de'?'Merkverse einprägen: Karteikarten, Anfangsbuchstaben, Lückentext, Wörter ordnen, Stellen zuordnen':'Memorise key verses: flashcards, first letters, cloze, word order, references'}${MERK().filter(isDue).length?` · ${MERK().filter(isDue).length} ${lang==='de'?'fällig':'due'}`:''}</span></span>${icon('chevron-right')}</button>`:''}
   ${Object.keys(ILL.styles||{}).length?`<button type="button" class="row settings-row" data-figindex>${icon('image')}<span>${t.figIndex}<span class="sub">${t.figIndexSub}</span></span>${icon('chevron-right')}</button>`:''}
+  <button type="button" class="row settings-row" data-method>${icon('list')}<span>${lang==='de'?'So arbeiten wir':'How we work'}<span class="sub">${lang==='de'?'Vorgehen, Prüfung, Stand, Zeichen im Text':'Method, checks, status, marks in the text'}</span></span>${icon('chevron-right')}</button>
   <button type="button" class="row settings-row" data-sources-map>${icon('list')}<span>${t.sourcesMap}<span class="sub">${t.sourcesMapSub}</span></span>${icon('chevron-right')}</button>
   <details class="about"><summary>${t.about}</summary><div>
    <p><strong>Atmo Bible</strong> – open, free, from overview to original.</p>
@@ -1161,6 +1177,34 @@ function figIndexSheet(styleKey){const t=T(),L=lang==='de',keys=Object.keys(ILL.
   const groups=ORDER.map(kind=>{const fs=figs.filter(f=>f.lx.kind===kind).sort((a,b)=>(L?a.lx.name.de:a.lx.name.en).localeCompare(L?b.lx.name.de:b.lx.name.en,lang));
     return fs.length?`<h4 class="set-group">${esc(t.kinds[kind]||kind)} (${fs.length})</h4><div class="legend-figs">${fs.map(f=>`<div class="legend-fig"><svg viewBox="${f.r.viewbox}" aria-hidden="true"><use href="#${f.r.symbol}"/></svg><span><b>${esc(L?f.lx.name.de:f.lx.name.en)}</b><span class="sub">${esc(f.lx.traits.join(' · '))}</span></span></div>`).join('')}</div>`:'';}).join('');
   openSheet('figindex',head(t.figIndex)+`<button type="button" class="link soft back-menu" data-action="menu">${icon('arrow-up')}<span>${t.backMenu}</span></button><div>${sw}</div><p class="note">${figs.length} / ${Object.keys(lex).length} ${t.figIndexCount}. ${esc(st.description||'')}</p>${groups}`);}
+/* So arbeiten wir: Vorgehen, Prüfung, Stand und Zeichen im Text (docs/LESEN-UND-VERTIEFEN.md) */
+function methodSheet(){const L=lang==='de',t=T(),gh='https://github.com/andineck-apportus/bible-app';
+  if(!L){openSheet('method',head('How we work')+`<button type="button" class="link soft back-menu" data-action="menu">${icon('arrow-up')}<span>${t.backMenu}</span></button><p class="body">Read undisturbed; for more, tap a verse number or the buttons at a passage title. Everything is translated from the original languages, all drafts are AI-made and checked by a separate AI instance, not yet by scholars. Data and rules are open: <a class="link" href="${gh}" target="_blank" rel="noopener">GitHub</a>.</p>`);return;}
+  const li=a=>`<ol class="steps">${a.map(x=>`<li>${x}</li>`).join('')}</ol>`;
+  openSheet('method',head('So arbeiten wir')+`<button type="button" class="link soft back-menu" data-action="menu">${icon('arrow-up')}<span>${t.backMenu}</span></button>
+  <p class="body">Ungestört lesen; wer mehr will, tippt auf die Versnummer oder auf die Knöpfe am Abschnittstitel. Alles bleibt erreichbar, bis zur Quelle.</p>
+  <h4>Was wo steht</h4>
+  <dl class="kv"><dt>Versnummer</dt><dd>Das Versblatt: Übersetzungsentscheide, ältere Übersetzungen, Querverweise, Hintergrund, andere Lesarten (bis zur Handschrift), Urtext Wort für Wort, Quellen und der Stand dieser Stelle.</dd>
+  <dt>Verstehen</dt><dd>Am Abschnittstitel: was dasteht (Befunde) und wie man es verstehen kann (Deutungen, wenn nötig mehrere).</dd>
+  <dt>Damals → Heute</dt><dd>Am Abschnittstitel: Hintergrund damals, abgeleiteter Grundsatz, Anwendung heute je Zielgruppe.</dd>
+  <dt>Text | Bild</dt><dd>Zusammenfassungen und Bilder auf jeder Ebene, vom Vers bis zur ganzen Bibel.</dd></dl>
+  <h4>Zeichen im Text</h4>
+  <dl class="kv"><dt><span class="vno-demo">5</span> umrandet</dt><dd>Dieser Vers ist ausgearbeitet: Urtext, Lesarten, Entscheide oder Hintergrund. Jede Versnummer öffnet das Versblatt.</dd>
+  <dt><span class="dec">Wort</span></dt><dd>Gepunktet unterstrichen: Hier folgt die Übersetzung einer vertrauten Wiedergabe oder wählt eine Deutung. Antippen zeigt die Möglichkeiten.</dd>
+  <dt><span class="dss-demo">Rolle</span></dt><dd>Zu diesem Vers gibt es Text in Rollen vom Toten Meer.</dd></dl>
+  <h4>Der Weg zu einer Stelle</h4>${li([
+   '<b>Quellen:</b> nur freie Quellen (gemeinfrei, CC); geschützte werden nur genannt. Übersicht im Menü unter «Quellen».',
+   '<b>Übersetzung aus dem Urtext</b> (Hebräisch, Griechisch), Wort für Wort zugeordnet; wo sie glättet, deutet oder einer Tradition folgt, steht es beim Vers.',
+   '<b>Andere Lesarten:</b> wo alte Handschriften abweichen, stehen die Möglichkeiten nebeneinander, mit den Zeugen. Wir entscheiden nicht, was «richtig» ist.',
+   '<b>Befunde und Deutungen:</b> was im Text steht, getrennt von dem, wie man es verstehen kann; mehrere Sichtweisen bleiben stehen, mit Angabe, wie sicher sie sind.',
+   '<b>Kernanalyse:</b> je Einheit die Kernaussage und die tragenden Momente; daraus entstehen Zusammenfassung und Bild, damit beide dasselbe zeigen.',
+   '<b>Damals → Prinzip → Heute:</b> der Bibeltext bleibt treu; Hintergrund, Grundsatz und Anwendung je Zielgruppe stehen daneben und sind gekennzeichnet.'])}
+  <h4>Wer prüft</h4>
+  <p class="body">Die Inhalte sind KI-Entwürfe (Claude). Jede Arbeit wird von einer getrennten KI-Instanz gegen den Text geprüft; Bilder zusätzlich im Blindtest. Eine fachliche Prüfung durch Personen und eine muttersprachliche Prüfung der Mundart stehen noch aus und werden nicht behauptet.</p>
+  <h4>Stand</h4>
+  <p class="body">Ausgearbeitet: ${esc(STUDY.sections.map(x=>refDe(x.range)).join(', '))}. Übrige Stellen: Zusammenfassungen und, soweit vorhanden, der Lesetext; Lesarten der hebräischen Handschriften sind noch nicht verglichen.</p>
+  <h4>Offen</h4>
+  <p class="body">Daten, Regeln und Prüfprotokolle sind öffentlich: <a class="link" href="${gh}" target="_blank" rel="noopener">github.com/andineck-apportus/bible-app</a> (Ordner «docs»).</p>`);}
 function settingsSheet(){
   const t=T(),seg=(key,opts,val)=>`<div class="seg" role="group">${opts.map(([v,l])=>`<button type="button" data-set="${key}" data-value="${v}" aria-pressed="${String(val)===String(v)}">${l}</button>`).join('')}</div>`;
   const sw=(key,label,sub)=>`<div class="set"><span>${label}<span class="sub">${sub}</span></span><button type="button" class="switch" role="switch" aria-checked="${S[key]}" data-toggle="${key}" aria-label="${label}"></button></div>`;
@@ -1170,9 +1214,6 @@ function settingsSheet(){
   <div class="set"><span>${t.size}</span>${seg('read',[[17,'A−'],[19,'A'],[22,'A+']],S.read)}</div>
   ${Object.keys(ILL.styles||{}).length?`<div class="set"><span>${t.ill}<span class="sub">${t.illSub}</span></span>${seg('ill',[['off',t.illOff],...Object.entries(ILL.styles).map(([k,st])=>[k,lang==='de'?st.label.de:st.label.en])],S.ill)}</div>`:''}
   ${MERK().length?`<div class="set"><span>${lang==='de'?'Merkverse':'Memory verses'}<span class="sub">${lang==='de'?'Bild und Wortlaut ausgewählter Kernverse. «Zeichen»: kleines Lesezeichen am Vers, Karte auf Antippen – stört den Lesefluss nicht.':'Picture and wording of selected key verses. «Mark»: small bookmark at the verse, card on tap.'}</span></span>${seg('merk',[['off',t.illOff],['mark',lang==='de'?'Zeichen':'Mark'],['card',lang==='de'?'Karte':'Card']],S.merk||'mark')}</div>`:''}
-  ${sw('flow',t.flow,t.flowSub)}
-  <h4 class="set-group">${t.grpText}</h4>
-  ${sw('inline',t.inline,t.inlineSub)}${sw('bgInline',t.bgInline,t.bgInlineSub)}${sw('advanced',t.advanced,t.advancedSub)}${sw('translit',t.translit,t.translitSub)}
   <h4 class="set-group">${t.grpOrig}</h4>
   <div class="set"><span>${t.pron}<span class="sub">${t.pronSub}</span></span>${seg('pron',[['modern',t.pronModern],['school',t.pronSchool]],S.pron)}</div>
   ${(S.pron==='school'?[['de',t.voiceDe]]:[['el',t.voiceEl],['he',t.voiceHe]]).map(([lg,label])=>{const vs=voicesFor(lg),cur=(S.voice||{})[lg]||'';return `<div class="set"><span>${label}${vs.length?'':`<span class="sub">${t.noVoice}</span>`}</span>${vs.length?`<div class="chips" role="group">${[['',t.voiceAuto],...vs.map(v=>[v.name,v.name.replace(/\s*\(.*\)$/,'')])].map(([v,l])=>`<button type="button" class="chip${cur===v?' cur':''}" data-set="voice" data-voice-lang="${lg}" data-value="${esc(v)}" aria-pressed="${cur===v}">${esc(l)}</button>`).join('')}</div>`:''}</div>`;}).join('')}
@@ -1350,11 +1391,12 @@ app.addEventListener('click',e=>{
   if(b.dataset.dph){const x=host.querySelector('#dph-'+b.dataset.dph);if(x&&x.scrollIntoView)x.scrollIntoView({behavior:'smooth',block:'start'});return;}
   if(b.dataset.aud){S.aud=b.dataset.aud;save();bgSheet(b.dataset.audPart);const sh=host.querySelector('.sheet'),h=sh&&sh.querySelector('#dph-today');if(h&&h.scrollIntoView)h.scrollIntoView();return;}
   if(b.dataset.overview){overviewSheet(b.dataset.overview);return;}
+  if(b.hasAttribute('data-method')){methodSheet();return;}
   if(b.hasAttribute('data-sources-map')){sourcesMapSheet();return;}
   if(b.dataset.srcFilter){S.srcFilter=b.dataset.srcFilter;sourcesMapSheet();return;}
   if(b.dataset.bg){bgOne(b.dataset.bg);return;}
   if(b.dataset.set){const k=b.dataset.set,v=b.dataset.value;if(k==='lang')lang=v;else if(k==='voice')S.voice={...(S.voice||{}),[b.dataset.voiceLang||pronLang('el')]:v};else S[k]=(k==='read'||k==='rate'||k==='readRate')?Number(v):v;save();rerenderKeep();reopenMenu();return;}
-  if(b.dataset.toggle){S[b.dataset.toggle]=!S[b.dataset.toggle];save();rerenderKeep();reopenMenu();return;}
+  if(b.dataset.toggle){if(b.dataset.toggle in FIXED)return;S[b.dataset.toggle]=!S[b.dataset.toggle];save();rerenderKeep();reopenMenu();return;}
   const a=b.dataset.action,n=nodes.get(current);
   if(a==='home')go('all');else if(a==='menu'){if(sheet==='menu')closeSheet();else menuSheet();}
   else if(a==='index'){navSheet(true);const f=host.querySelector('input[type=search]');if(f){f.focus({preventScroll:true});f.select();}}else if(a==='back'){const tgt=jumpFrom;jumpFrom=null;go(tgt);}else if(a==='levels'){if(n.children.length)pickSheet();else navSheet(true);}

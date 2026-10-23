@@ -2,6 +2,15 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.74 — 2026-10-23 — Lesen und vertiefen: feste Regeln
+
+- **Feste Darstellung** (Andi Neck, docs/LESEN-UND-VERTIEFEN.md): Verse fortlaufend, Urtext und Details sowie Umschrift sind immer an. Lesarten- und Hintergrundzeilen im Text gibt es nicht mehr. Die fünf Schalter sind aus den Einstellungen entfernt.
+- **Jede Information hat ein Zuhause:** Alles zu einem Vers steht im Versblatt, alles zum Abschnitt hinter «Verstehen» und «Damals → Heute».
+- **Versnummer:** Jede Versnummer öffnet das Versblatt. Umrandet ist sie nur, wenn der Vers ausgearbeitet ist (vorher war im Urtext-Modus jede umrandet).
+- **Unterstreichung:** eine einzige Strichart (gepunktet) für Übersetzungsentscheide, statt zwei.
+- **Stand dieser Stelle:** Am Ende jedes Versblatts steht, was erfasst ist und was noch nicht, z. B. «hebräische Handschriften noch nicht verglichen». So wird Fehlendes nicht als «gibt es nicht» gelesen.
+- **Neuer Menüpunkt «So arbeiten wir»:** Er erklärt, was wo steht, die Zeichen im Text, den Weg zu einer Stelle, wer prüft, den Stand und den Link zu Daten und Regeln auf GitHub.
+
 ## v0.73 — 2026-10-23 — Damals → Prinzip → Heute
 
 - **Grundsatz** (Andi Neck, docs/DAMALS-PRINZIP-HEUTE.md):

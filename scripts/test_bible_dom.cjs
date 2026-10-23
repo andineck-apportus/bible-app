@@ -11,12 +11,12 @@ const mk=v=>M().de['MRK.3.'+v];
 const vOf=r=>Number(r.split('.')[2]);
 const mkAlts=()=>M().alternatives.filter(a=>a.ref.startsWith('MRK.3.')&&vOf(a.ref)>=20); // Pilotabschnitt Mk 3,20–35
 
-// Voreinstellung: Lesarten, Hintergrund und Urtext sind eingeschaltet; für die folgenden Prüfungen zuerst aus
-click('[data-action=menu]');assert(sheetHost.querySelector('[data-settings]')&&!sheetHost.querySelector('[data-toggle]'),'Hauptmenü ohne Einstellungen, mit Eintrag «Einstellungen»');click('[data-settings]');assert.equal(sheetHost.querySelectorAll('h4.set-group').length,4,'Einstellungen in vier Gruppen');click('[data-close]');
-click('[data-action=menu]');click('[data-settings]');
-for(const k of ['inline','bgInline','advanced'])assert.equal(sheetHost.querySelector(`[data-toggle=${k}]`).getAttribute('aria-checked'),'true',k+' standardmässig an');
-for(const k of ['inline','bgInline','advanced'])click(`[data-toggle=${k}]`);
+// Feste Darstellung (docs/LESEN-UND-VERTIEFEN.md): fortlaufend, Urtext und Umschrift an, keine Zeilen für Lesarten und Hintergrund im Text; nicht einstellbar
+click('[data-action=menu]');assert(sheetHost.querySelector('[data-settings]')&&!sheetHost.querySelector('[data-toggle]'),'Hauptmenü ohne Einstellungen, mit Eintrag «Einstellungen»');click('[data-settings]');assert.equal(sheetHost.querySelectorAll('h4.set-group').length,3,'Einstellungen in drei Gruppen');
+for(const k of ['flow','inline','bgInline','advanced','translit'])assert(!sheetHost.querySelector(`[data-toggle=${k}]`),k+' nicht einstellbar');
 click('[data-close]');
+// So arbeiten wir
+click('[data-action=menu]');click('[data-method]');{const tx=sheetHost.textContent;assert(tx.includes('Was wo steht')&&tx.includes('Zeichen im Text')&&tx.includes('Wer prüft')&&tx.includes('github.com/andineck-apportus/bible-app'),'So arbeiten wir');}click('[data-close]');
 
 // Einstieg über das Menü in den Pilotabschnitt; Studienblatt mit Deutung und Gegenargument
 click('[data-action=index]');click('[data-go="TU-MRK-003-020-021"]');
@@ -25,7 +25,6 @@ assert(reader.querySelector('[data-stream="TU-MRK-003-031-035"]'));
 click('[data-study="TU-MRK-003-022-030"]');
 const counter=M().interpretations.find(i=>['TU-MRK-003-022-030','TU-MRK-003-020-035'].includes(i.subject)&&i.counter.length)?.counter[0];
 assert(counter&&sheetHost.textContent.includes(counter.slice(0,40)),'Gegenargument im Studienblatt');
-assert(!/[Ͱ-Ͽἀ-῿]/.test(sheetHost.textContent),'Ohne Urtext-Modus kein Griechisch im Studienblatt');
 click('[data-close]');
 
 // Vertiefen in die Verse; Rückkehrposition
@@ -33,8 +32,9 @@ reader.scrollTop=137;click('[data-deep="TU-MRK-003-022-030"]');
 const verse=reader.querySelector('[data-stream="v40-3-29"]');
 assert.equal(verse.querySelector('.stream-copy').textContent,mk(29));
 assert(!verse.querySelector('[data-alternative]'),'Lesarten standardmässig nicht im Lesetext');
-for(let v=22;v<=30;v++){const want=mkAlts().some(a=>vOf(a.ref)===v)||model.BG.some(b=>!b.wide&&b.chapter==='MRK.3'&&b.from<=v&&v<=b.to)||!!M().decisions['MRK.3.'+v]||(M().compare['MRK.3.'+v]||[]).some(c=>c.lang==='de');
- assert.equal(!!reader.querySelector(`[data-more="v40-3-${v}"]`),want,`«+» nur bei Lesarten oder Hintergrund (3,${v})`);}
+for(let v=22;v<=30;v++){const want=mkAlts().some(a=>vOf(a.ref)===v)||model.BG.some(b=>!b.wide&&b.chapter==='MRK.3'&&b.from<=v&&v<=b.to)||!!(M().decisions['MRK.3.'+v]||[]).length||M().words.some(w=>w.ref==='MRK.3.'+v);
+ assert(reader.querySelector(`[data-more="v40-3-${v}"]`),`jede Versnummer öffnet das Versblatt (3,${v})`);
+ assert.equal(!!reader.querySelector(`.vno.more[data-more="v40-3-${v}"]`),want,`Rahmen nur bei Erarbeitetem (3,${v})`);}
 
 // Hintergrund damals: Vers, Abschnitt, Hinweise im Text
 click('[data-more="v40-3-22"]');
@@ -45,19 +45,13 @@ click('[data-background="TU-MRK-003-022-030"]');
 for(const b of model.BG.filter(x=>(x.wide&&x.section==='TU-MRK-003-020-035')||x.subject==='TU-MRK-003-022-030'))assert(sheetHost.querySelector(`[data-bg-note="${b.id}"]`),b.id);
 assert(sheetHost.textContent.includes('Josephus'),'Quellenangabe sichtbar');
 click('[data-close]');
-assert(!reader.querySelector('.bg-line'),'Hintergrund standardmässig nicht im Lesetext');
-click('[data-action=menu]');click('[data-settings]');click('[data-toggle=bgInline]');click('[data-close]');
-click('.bg-line[data-bg="BG-MRK-0008"]');assert(sheetHost.textContent.includes('Jes 49,24–25'));click('[data-close]');
-click('[data-action=menu]');click('[data-settings]');click('[data-toggle=bgInline]');click('[data-close]');
+assert(!reader.querySelector('.bg-line'),'Hintergrund nicht im Lesetext, nur im Versblatt');
+click('[data-more="v40-3-27"]');assert(sheetHost.textContent.includes('Jes 49,24–25'),'Hintergrund 3,27 im Versblatt');click('[data-close]');
 
-// Versblatt ohne und mit Urtext-Modus
+// Versblatt: Lesarten, Urtext, Stand dieser Stelle
 click('[data-more="v40-3-29"]');
 assert(sheetHost.querySelector('[data-alternative]'),'Lesarten im Versblatt');
-assert(!sheetHost.textContent.includes('MorphGNT'),'Ohne Urtext-Modus keine Wortanalyse');
-click('[data-close]');
-
-click('[data-action=menu]');click('[data-settings]');click('[data-toggle=advanced]');click('[data-close]');
-click('[data-more="v40-3-29"]');
+assert(sheetHost.textContent.includes('Stand dieser Stelle')&&sheetHost.textContent.includes('abweichende Lesart'),'Stand dieser Stelle');
 const details=sheetHost.querySelector('details');details.querySelector('summary').click();assert(details.open);
 assert(sheetHost.textContent.includes('Keine Handschriftenzählung'));
 assert(sheetHost.textContent.includes('MorphGNT'));
@@ -65,13 +59,13 @@ click('[data-close]');
 click('[data-action=up]');assert.equal(reader.scrollTop,137,'Rückkehrposition');
 
 // Suche, fortlaufendes Lesen über die Kapitelgrenze, Lesarten im Fliesstext
-click('[data-action=menu]');click('[data-settings]');click('[data-toggle=inline]');click('[data-close]');click('[data-action=index]');
+click('[data-action=index]');
 const input=sheetHost.querySelector('input[type=search]');input.value='Mk 3,20';input.dispatchEvent(new dom.window.Event('input',{bubbles:true}));
 sheetHost.querySelector('.results [data-go]').click();
 click('[data-action=load-next]');
 for(let v=20;v<=35;v++)assert.equal(reader.querySelector(`[data-stream="v40-3-${v}"] .stream-copy`).textContent,mk(v));
 assert(reader.querySelector('[data-stream="v40-4-1"]'));
-assert.equal(reader.querySelectorAll('.alt-line[data-alternative]').length,mkAlts().length);
+assert.equal(reader.querySelectorAll('.alt-line').length,0,'keine Lesarten-Zeilen im Lesetext');
 // Bis zur Quelle: jede Alternative führt zu Handschriften, Ausgaben, Wortbedeutungen und Erklärungen
 for(const a of mkAlts()){
  const vid=`v40-3-${vOf(a.ref)}`;
@@ -148,16 +142,15 @@ assert(txt.includes('ponēroú'),'Umschrift sichtbar');
 const det=sheetHost.querySelector('details.wit');const pb=det.querySelector('.play');if(pb){pb.click();assert(!det.open,'Anhören klappt nicht auf');}
 sheetHost.querySelector('.word-row .play').click();assert(app.querySelector('.live').textContent.length>0,'Rückmeldung ohne Sprachausgabe');
 tested++;click('[data-close]');
-click('[data-action=menu]');click('[data-settings]');assert(sheetHost.textContent.includes('Aussprache'),'Aussprache-Einstellung');click('[data-toggle=translit]');click('[data-close]');
-click('[data-more="v39-6-13"]');click('.sheet [data-source="VAR-SBLGNTAPP-MAT-006-013-01"]');assert(!sheetHost.querySelector('.tr'),'Umschrift abschaltbar');click('[data-close]');
-click('[data-action=menu]');click('[data-settings]');click('[data-toggle=translit]');click('[data-close]');
+click('[data-action=menu]');click('[data-settings]');assert(sheetHost.textContent.includes('Aussprache'),'Aussprache-Einstellung');click('[data-close]');
+click('[data-more="v39-6-13"]');click('.sheet [data-source="VAR-SBLGNTAPP-MAT-006-013-01"]');assert(sheetHost.querySelector('.tr'),'Umschrift immer an');click('[data-close]');
 for(const a of M().alternatives.filter(a=>a.ref.startsWith('MAT.6.'))){const v=vOf(a.ref);if(!reader.querySelector(`[data-more="v39-6-${v}"]`)){continue;}click(`[data-more="v39-6-${v}"]`);sheetHost.querySelector(`[data-source="${a.variant}"]`).click();assert(sheetHost.textContent.includes('Was die gedruckten Ausgaben haben'),a.variant);click('[data-close]');tested++;}
 click('[data-action=index]');const inp=sheetHost.querySelector('input[type=search]');inp.value='Lk 11,2';inp.dispatchEvent(new dom.window.Event('input',{bubbles:true}));sheetHost.querySelector('.results [data-go]').click();
 assert.equal(reader.querySelector('[data-stream="v41-11-2"] .stream-copy').textContent,M().de['LUK.11.2']);
 click('[data-more="v41-11-2"]');click('.sheet [data-source="VAR-SBLGNTAPP-LUK-011-002-01"]');
 txt=sheetHost.textContent;assert(txt.includes('Papyrus 75')&&txt.includes('Codex Vaticanus'),'P75 zu Lk 11,2');tested++;click('[data-close]');
 assert(app.classList.contains('flow'),'Verse fortlaufend ist Standard');
-click('[data-action=menu]');click('[data-settings]');click('[data-toggle=flow]');assert(!app.classList.contains('flow'),'Verse fortlaufend abschaltbar');click('[data-toggle=flow]');assert(app.classList.contains('flow'));click('[data-close]');
+
 
 // Navigator: Pfad, Hierarchie AT/NT → Gruppe → Buch → Kapitel → Vers
 click('[data-action=index]');
@@ -195,7 +188,7 @@ assert.equal(reader.querySelector('[data-stream="v39-6-11"] .stream-copy').textC
 assert(reader.querySelector('[data-stream="v39-6-11"] .dec.traditional'),'Entscheidung «täglich» auch in der Mundart markiert');
 click('[data-action=index]');assert(sheetHost.textContent.includes('S Vatterunser')&&sheetHost.textContent.includes('Nöd zum Schiin'),'Navigator-Titel in Mundart');click('[data-close]');
 click('[data-action=up]');assert(reader.textContent.includes('mit sibe Bitte')&&reader.querySelector('[data-stream="TU-MAT-006-009-013"] h2').textContent==='S Vatterunser','Abschnittstitel und -zusammenfassung in Mundart');click('[data-action=down]');assert(sheetHost.querySelector('.grid.nums .cur[data-go="v39-6-11"]'),'Auswahl unten markiert den zuletzt gelesenen Vers');click('.grid.nums .cur');
-assert(reader.querySelector('.alt-line[data-alternative="VAR-SBLGNTAPP-MAT-006-012-01"]').textContent.includes('vergänd'),'Mundart-Lesart im Text');
+click('[data-more="v39-6-12"]');assert(sheetHost.querySelector('[data-alternative="VAR-SBLGNTAPP-MAT-006-012-01"]').textContent.includes('vergänd'),'Mundart-Lesart im Versblatt');click('[data-close]');
 click('[data-more="v39-6-11"]');assert(sheetHost.textContent.includes('Ältere Übersetzungen · Züridüütsch')&&sheetHost.textContent.includes('noch keine Vergleichsübersetzung')&&sheetHost.textContent.includes('Ältere Übersetzungen · Hochdeutsch')&&sheetHost.textContent.includes('Lutherbibel'),'Vergleichsübersetzungen nach Sprache des Zielkontexts');click('[data-close]');
 click('[data-more="v39-6-11"]');assert(sheetHost.textContent.includes('Öises täglich Broot')&&sheetHost.textContent.includes('für de nööchscht Taag'),'Mundart-Entscheidung im Versblatt');
 sheetHost.querySelector('.sheet [data-source="VAR-SBLGNTAPP-MAT-006-013-01"]')||click('[data-close]');
@@ -210,7 +203,7 @@ click('[data-action=menu]');click('[data-set="text"][data-value="de"]');click('[
 assert.equal(reader.querySelector('[data-stream="v39-6-11"] .stream-copy').textContent,M().de['MAT.6.11'],'zurück zu Hochdeutsch');
 assert.equal(Object.keys(M().layers.gsw.text).length,3059,'Mundart für alle 3059 Verse');
 // Obadja (Hebräisch) und Titus: Muster ganzer Bücher
-click('[data-action=menu]');click('[data-set="text"][data-value="de"]');click('[data-settings]');if(sheetHost.querySelector('[data-toggle=advanced][aria-checked=false]'))click('[data-toggle=advanced]');click('[data-close]');
+click('[data-action=menu]');click('[data-set="text"][data-value="de"]');click('[data-close]');
 click('[data-action=index]');sheetHost.querySelector('[data-go^="TU-OBA"]').click();click('[data-action=down]');sheetHost.querySelector('.grid.nums [data-go]').click();
 assert(reader.querySelector('[data-stream="v30-1-21"]')||true);
 click('[data-more="v30-1-3"]');
