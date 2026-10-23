@@ -68,6 +68,7 @@ Rückmeldung vom 2026-10-12: Auf Versebene passt die App; es fehlt der Hintergru
 - **Pro Abschnitt:** «Hintergrund damals» am Abschnittsende, auf der Abschnittsebene und im Verstehen-Blatt. Dort stehen auch Zeit und Ort sowie die erste Leserschaft des Markus.
 - **Optional im Text:** Der Menüschalter «Hintergrund im Text zeigen» setzt kurze Hinweise («Damals: Beelzebul») unter den Vers, an dem eine Notiz beginnt.
 - Jede Notiz zeigt, wie sicher sie ist, was umstritten ist und womit man vergleichen kann (Bibelstellen sowie Fundstellen wie Josephus oder die Mischna, nur zitiert). Hintergrund ist bewusst von Befunden, Deutungen und heutiger Anwendung getrennt.
+- **Seit v0.73:** Der Abschnittsknopf heisst «Damals → Heute» und zeigt Hintergrund, Prinzip und Anwendung je Zielgruppe in einem Blatt ([DAMALS-PRINZIP-HEUTE.md](DAMALS-PRINZIP-HEUTE.md)).
 
 ## Bedienidee (seit v0.11)
 

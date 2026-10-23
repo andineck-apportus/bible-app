@@ -268,10 +268,12 @@ def project(section_ids=None):
                              "i18n": i18n(k, {"claim_de": "claim", "caveat_de": "caveat", "counterarguments_de": "counter", "terms": "terms"})}
                             for k, v in sorted(ins.items())],
         "principles": [{"id": k, "text": v["statement_de"], "confidence": v.get("confidence"),
-                        "subject": subject_of_principle(v), "i18n": i18n(k, {"statement_de": "text"})} for k, v in sorted(prs.items())],
+                        "subject": subject_of_principle(v), "ref": v.get("reference"), "i18n": i18n(k, {"statement_de": "text"})} for k, v in sorted(prs.items())],
         "applications": [{"id": k, "text": v["statement_de"], "limits": v.get("limitations_de"),
                           "subject": subject_of_principle(prs[v["principle"]]),
                           "context": ctx.get(v.get("context"), {}).get("audience"), "confidence": v.get("confidence"),
+                          # Zielgruppe für die Auswahl «Heute» und optionale Einschränkung auf Verse (docs/DAMALS-PRINZIP-HEUTE.md)
+                          "ctx": v.get("context"), "ctx_label": ctx.get(v.get("context"), {}).get("label_de"), "ref": v.get("reference"),
                           "i18n": i18n(k, {"statement_de": "text", "limitations_de": "limits"})}
                          for k, v in sorted(aps.items())],
         "relations": [{"from": v["from"], "from_ref": tu.get(v["from"], {}).get("range"), "to": v["to_ref"], "to_de": refs.display_de(v["to_ref"]), "kind": v["relation"],
