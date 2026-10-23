@@ -25,7 +25,7 @@ Aussprache und Vorlesen.
 | Information | Zuhause | im Lesetext |
 |---|---|---|
 | Übersetzungsentscheid (Tradition, Deutung) | Versblatt | Wort gepunktet unterstrichen |
-| Andere Lesarten der Handschriften, bis zur Quelle | Versblatt | – |
+| Andere Lesarten der Handschriften, bis zur Quelle | Versblatt | Wort gepunktet unterstrichen |
 | Hintergrund zum Vers | Versblatt | – |
 | Ältere Übersetzungen, Querverweise | Versblatt | – |
 | Urtext Wort für Wort, Ausgabenvergleich, Quellen | Versblatt | – |
@@ -39,12 +39,15 @@ Was im Lesetext markiert ist, ist nur ein Hinweis: Die volle Information steht i
 
 ## Zeichen im Text
 
-- **Umrandete Versnummer:** Der Vers ist ausgearbeitet (Urtext Wort für Wort, Lesarten, Entscheide oder Hintergrund).
-  Jede Versnummer öffnet das Versblatt, auch ohne Rahmen.
-- **Gepunktet unterstrichenes Wort:** Die Übersetzung folgt hier einer vertrauten Wiedergabe oder wählt eine Deutung.
-  Eine einzige Strichart für beide; welche Art es ist, steht im Versblatt.
-- **«Rolle»:** Zu diesem Vers gibt es Text in Rollen vom Toten Meer.
+- **Umrandete Versnummer:** Urtext, Lesarten, Entscheide, Handschriften oder Hintergrund vorhanden. Jede Versnummer
+  öffnet das Versblatt, auch ohne Rahmen.
+- **Gepunktet unterstrichenes Wort:** Hier gibt es Alternativen, sei es eine andere Lesart in den Handschriften (Vorrang)
+  oder eine andere mögliche Übersetzung (die Übersetzung folgt einer Tradition oder wählt eine Deutung). Antippen zeigt sie
+  mit ihren Quellen.
 - **Merkvers-Zeichen:** ausgewählter Kernvers mit Bild (Einstellung «Merkverse»).
+
+Einzelne Quellen (z. B. die Rollen vom Toten Meer) erhalten kein eigenes Zeichen im Text; sie sind eine Quelle unter
+vielen und stehen im Versblatt unter «Alte Handschriften». Grundsatz: Zu jeder Angabe ist die Quelle genannt.
 
 ## Stand dieser Stelle
 

@@ -677,15 +677,17 @@ partTitle=pTitle;
 const pSummary=p=>((I18N[S.text]||{})[p.id]||{}).summary||(p.summaries&&(p.summaries[S.text]||p.summaries.de))||p.summary;
 // Ausgearbeitet: Text geladen oder Vers in einer ausgearbeiteten Stelle (auch bevor das Buchpaket geladen ist)
 let WORKED=null;const inWorked=n=>{if(!WORKED)WORKED=STUDY.sections.map(sec=>rangeOf(sec.range));const code=DATA[n.b].code;return WORKED.some(g=>g.code===code&&g.c===n.c&&n.v>=g.from&&n.v<=g.to);};
-const worked=n=>!!(altsFor(n).length||bgFor(n).length||(LAYER().decisions[n.canonicalRef]||[]).length||wordRefs().has(n.canonicalRef));
+const worked=n=>!!((DSS[n.canonicalRef]||[]).length||altsFor(n).length||bgFor(n).length||(LAYER().decisions[n.canonicalRef]||[]).length||wordRefs().has(n.canonicalRef));
 let WREF=null,WREFN=-1;const wordRefs=()=>{if(!WREF||WREFN!==STUDY.words.length){WREF=new Set(STUDY.words.map(w=>w.ref));WREFN=STUDY.words.length;}return WREF;};
 const isPilotVerse=n=>n.level===6&&(!!TXT(n.canonicalRef)||inWorked(n));
 const DEC={literal:['wörtlich','literal'],adapted:['sprachlich angepasst','adapted'],interpretive:['Deutungsentscheidung','interpretive choice'],traditional:['folgt der vertrauten Wiedergabe','follows traditional wording']};
-function decorate(text,decs){
-  // Markiert Stellen, an denen die Übersetzung einer Tradition folgt oder eine Deutung wählt (nur im Urtext-Modus)
+function decorate(text,decs,alts,vid){
+  // Gepunktet unterstrichen = hier gibt es Alternativen (docs/LESEN-UND-VERTIEFEN.md): andere Lesarten der Handschriften
+  // (Vorrang) sowie Übersetzungsentscheide, bei denen die Übersetzung einer Tradition folgt oder eine Deutung wählt
   const marks=(decs||[]).filter(d=>d.kind==='traditional'||d.kind==='interpretive');let html='',pos=0;const hits=[];
+  for(const a of alts||[]){const i=a.from?text.indexOf(a.from):-1;if(i>=0&&!hits.some(h=>i<h.e&&i+a.from.length>h.s))hits.push({s:i,e:i+a.from.length,alt:a.variant});}
   for(const d of marks){const i=text.indexOf(d.target);if(i>=0&&!hits.some(h=>i<h.e&&i+d.target.length>h.s))hits.push({s:i,e:i+d.target.length,k:d.kind,di:decs.indexOf(d)});}
-  hits.sort((a,b)=>a.s-b.s);for(const h of hits){html+=esc(text.slice(pos,h.s))+`<span role="button" tabindex="0" class="dec ${h.k}" data-dec="${h.di}">${esc(text.slice(h.s,h.e))}</span>`;pos=h.e;}
+  hits.sort((a,b)=>a.s-b.s);for(const h of hits){html+=esc(text.slice(pos,h.s))+(h.alt?`<span role="button" tabindex="0" class="dec alt" data-alt-open="${esc(h.alt)}" data-alt-verse="${vid}">`:`<span role="button" tabindex="0" class="dec ${h.k}" data-dec="${h.di}">`)+`${esc(text.slice(h.s,h.e))}</span>`;pos=h.e;}
   return html+esc(text.slice(pos));
 }
 function verseNodeOf(ref){const [code,c,v]=ref.split('.');const b=DATA.findIndex(x=>x.code===code);return nodes.get(`v${b}-${c}-${v}`);}
@@ -784,12 +786,12 @@ function verseEntry(n){
   const t=T(),text=summary(n);let lead='';
   if(n.v===1)lead+=`<h2 class="chapter-head">${esc(bookName(n)+' '+n.c)}${readBtn(n.id)}</h2>`;
   const p=nodes.get(n.parent);if(p.part&&p.v===n.v)lead+=`<div class="part-head"><h3>${esc(pTitle(p.part))}${readBtn(n.id)}</h3>${tools(p.id)}</div>`;
-  if(!text)return `<article class="stream-entry verse placeholder" data-stream="${n.id}">${lead}<p class="verse-line"><span class="vno">${n.v}</span><span class="stream-copy">${S.flow?'…':t.placeholder}</span>${dssChip(n)}</p></article>`;
+  if(!text)return `<article class="stream-entry verse placeholder" data-stream="${n.id}">${lead}<p class="verse-line">${DSS[n.canonicalRef]&&DSS[n.canonicalRef].length?`<button type="button" class="vno more" data-more="${n.id}" aria-label="${t.more} ${n.v}">${n.v}</button>`:`<span class="vno">${n.v}</span>`}<span class="stream-copy">${S.flow?'…':t.placeholder}</span></p></article>`;
   const alts=altsFor(n);
   const bgs=bgFor(n);
   const has=worked(n);
   const vno=`<button type="button" class="vno${has?' more':' plain'}" data-more="${n.id}" aria-label="${t.more} ${n.v}">${n.v}</button>`;
-  return `<article class="stream-entry verse" data-stream="${n.id}">${lead}<p class="verse-line">${vno}<span class="stream-copy" data-ref="${n.canonicalRef}">${S.advanced?decorate(text,LAYER().decisions[n.canonicalRef]):esc(text)}</span>${merkMark(n)}</p>${merkCard(n,text)}</article>`;
+  return `<article class="stream-entry verse" data-stream="${n.id}">${lead}<p class="verse-line">${vno}<span class="stream-copy" data-ref="${n.canonicalRef}">${decorate(text,LAYER().decisions[n.canonicalRef],alts,n.id)}</span>${merkMark(n)}</p>${merkCard(n,text)}</article>`;
 }
 // ---------- Merkverse und Lernen ----------
 // Merkverse: Bilder der Ebene «verse» (ILL.merk). Anzeige im Lesetext nach Einstellung S.merk: 'mark' (kleines Zeichen am Vers,
@@ -985,13 +987,10 @@ const support=(n,of)=>n==null?(lang==='de'?'Einige alte Handschriften lesen so; 
 
 const DSS_ST={same:['gleich','Gleiche Konsonanten wie der Leningrad-Codex'],spelling:['Schreibweise','Nur Lesehilfen (ו, י) oder lange Endung anders: gleiche Lesung'],partial:['teilweise','Nur ein Teil des Worts ist erhalten'],differs:['abweichend','Andere Konsonanten als der Leningrad-Codex'],extra:['zusätzlich','Wort steht nicht im Leningrad-Codex'],reconstructed:['ergänzt','Nicht erhalten; von den Herausgebern ergänzt']};
 // Noch nicht übersetzte Verse mit Handschriften vom Toten Meer: kleines Zeichen, das die Rollen im Blatt zeigt
-function dssChip(n){const arr=DSS[n.canonicalRef];if(!arr||!arr.length)return '';const k=arr.length;
-  return ` <button type="button" class="dss-chip" data-dss="${n.canonicalRef}" title="${lang==='de'?'Texte vom Toten Meer':'Dead Sea Scrolls'}">${lang==='de'?(k>1?k+' Rollen':'Rolle'):(k>1?k+' scrolls':'scroll')}</button>`;}
-function dssSheet(ref){openSheet('dss',head(refDe(ref))+(lang==='de'?'<p class="note">Für diesen Vers gibt es noch keine Übersetzung; gezeigt werden die Handschriften vom Toten Meer.</p>':'<p class="note">No translation yet; showing the Dead Sea Scrolls.</p>')+dssBlock({canonicalRef:ref}));}
 const finalForm=w=>w.replace(/[כמנפצ]$/,c=>({'כ':'ך','מ':'ם','נ':'ן','פ':'ף','צ':'ץ'})[c]);
 function dssBlock(n){const arr=DSS[n.canonicalRef];if(!arr||!arr.length)return'';
   const notable=arr.flatMap(x=>x.words).filter(w=>w.s==='differs'||w.s==='extra').length;
-  return `<h4>Texte vom Toten Meer</h4><p class="note">Hebräische Handschriften aus Qumran und der Wüste Juda, rund tausend Jahre älter als der Leningrad-Codex. Eckige Klammern: nicht erhalten, von den Herausgebern ergänzt. ${notable?'Markierte Wörter weichen in den Konsonanten ab.':'Keine abweichenden Konsonanten in den erhaltenen Wörtern.'}</p>`+
+  return `<h4>Alte Handschriften</h4><p class="note">Hebräische Handschriften aus Qumran und der Wüste Juda, rund tausend Jahre älter als der Leningrad-Codex. Eckige Klammern: nicht erhalten, von den Herausgebern ergänzt. ${notable?'Markierte Wörter weichen in den Konsonanten ab.':'Keine abweichenden Konsonanten in den erhaltenen Wörtern.'}</p>`+
   arr.map(x=>`<div class="dss"><p class="dss-name">${esc(x.name||x.id)}<span class="sub">${esc(x.place||'')} · Fragment/Zeile ${esc(x.loc.join(', '))}</span></p><p class="heb dss-text" dir="rtl" lang="he">${x.words.map(w=>`<span class="dw ${w.s}" title="${esc(DSS_ST[w.s][1]+(w.wlc?' · Leningrad-Codex: '+finalForm(w.wlc):''))}">${esc(w.t)}</span>`).join(' ')}</p>${x.words.filter(w=>w.s==='differs'||w.s==='extra'||w.s==='spelling').map(w=>`<p class="note"><span class="heb" lang="he">${esc(w.t)}</span> · ${DSS_ST[w.s][0]}${w.wlc?` · Leningrad-Codex: <span class="heb" lang="he">${esc(finalForm(w.wlc))}</span>`:''}</p>`).join('')}</div>`).join('')+
   `<p class="note">Maschineller Vergleich der Konsonanten mit dem Leningrad-Codex; gepunktet: nur andere Schreibweise. Nicht am Faksimile geprüft; die Ergänzungen der Herausgeber folgen oft dem masoretischen Text und sind deshalb keine Bezeugung. Daten: ${esc(NC_INFO?NC_INFO.attribution:'')} (${esc(NC_INFO?NC_INFO.license:'')}); nicht kommerzielle Studienschicht.</p>`;}
 /* Wörterbuch (UBS, STEPBible TBESG/TBESH), Ausgaben je Wort (STEPBible TAGNT), Ketiv/Qere (STEPBible TAHOT) */
@@ -1022,7 +1021,7 @@ function edBlock(words,n){const L=lang==='de',ex=STUDY.ed_extra[n.canonicalRef]|
 /* Stand dieser Stelle: was für den Vers erfasst ist und was (noch) nicht – damit Fehlendes nicht als «gibt es nicht» gelesen wird */
 function coverage(n){const L=lang==='de',code=DATA[n.b].code,nt=CODE_IDX[code]>=39,alts=altsFor(n).length,bgs=bgFor(n).length,ds=(LAYER().decisions[n.canonicalRef]||[]).length,w=wordRefs().has(n.canonicalRef),src=TXT(n.canonicalRef);
   const row=(k,v)=>`<dt>${k}</dt><dd>${v}</dd>`;
-  const lesarten=!w?(L?'noch nicht erfasst':'not yet recorded'):nt?(alts?(L?`${alts} abweichende Lesart${alts>1?'en':''}, oben`:`${alts} other reading(s), above`):(L?'keine Abweichung, die die Übersetzung ändert (geprüft am Apparat der SBLGNT)':'no difference affecting the translation (checked against the SBLGNT apparatus)')):(L?'hebräische Handschriften noch nicht verglichen'+(dssChip(n)?'; Texte vom Toten Meer: siehe «Rolle»':''):'Hebrew manuscripts not yet compared');
+  const lesarten=!w?(L?'noch nicht erfasst':'not yet recorded'):nt?(alts?(L?`${alts} abweichende Lesart${alts>1?'en':''}, oben`:`${alts} other reading(s), above`):(L?'keine Abweichung, die die Übersetzung ändert (geprüft am Apparat der SBLGNT)':'no difference affecting the translation (checked against the SBLGNT apparatus)')):(L?'hebräische Handschriften noch nicht verglichen'+(DSS[n.canonicalRef]&&DSS[n.canonicalRef].length?'; einzelne alte Handschriften oben':''):'Hebrew manuscripts not yet compared');
   return `<h4>${L?'Stand dieser Stelle':'Status of this passage'}</h4><dl class="kv">`+
     row(L?'Übersetzung':'Translation',src?(w?(L?'eigene Übersetzung aus dem Urtext (KI-Entwurf)':'own translation from the original (AI draft)'):(L?'Lesetext, noch nicht am Urtext ausgearbeitet':'reading text, not yet worked from the original')):(L?'noch kein Text':'no text yet'))+
     row(L?'Wort für Wort':'Word by word',w?(L?'vorhanden, oben':'available, above'):(L?'noch nicht erfasst':'not yet recorded'))+
@@ -1045,7 +1044,7 @@ function verseSheet(id){
   }
   if(S.advanced){
     const words=STUDY.words.filter(w=>w.ref===n.canonicalRef),vars=STUDY.variants.filter(v=>v.ref===n.canonicalRef);
-    if(words.length&&words[0].lang==='he'){h+=hebrewWords(words,n)+dssBlock(n);}else
+    if(words.length&&words[0].lang==='he'){h+=hebrewWords(words,n)+dssBlock(n);}else if(!words.length&&DSS[n.canonicalRef]){h+=dssBlock(n);}else
     h+=`<h4>${lang==='de'?'Griechisch Wort für Wort':'Greek word by word'}</h4><p class="note">${lang==='de'?'Ganzer Vers':'Whole verse'} ${play(words.map(w=>w.text.replace(/[⸀-⸅]/g,'')).join(' '))}</p><div class="il">${words.map(w=>{const m=w.mac,d=LAYER().align[w.id];const de=d?(d.target===null?'·':(d.first?d.target:'″')):(m.gloss_berean||'');const form=['person','tense','voice','mood','case','number','gender'].map(k=>m[k]&&GR[k][m[k]]).filter(Boolean).join(', ');
       const gw=w.text.replace(/[⸀-⸅]/g,'');return `<details><summary><span class="g">${esc(gw)}${play(gw)}</span>${tr(gw)}<span class="d">${esc(de)}</span><span class="e">${esc(m.gloss_berean||'')}</span></summary><dl class="kv"><dt>Grundform</dt><dd>${esc(m.lemma||'')} · ${w.freq}× in ${esc(DATA[n.b].de)}</dd><dt>Wortart</dt><dd>${esc(POS[m.pos]||m.pos||'')}</dd>${form?`<dt>Form</dt><dd>${esc(form)}</dd>`:''}${m.role?`<dt>Satzrolle</dt><dd>${esc(ROLE[m.role]||m.role)}</dd>`:''}${d&&d.note?`<dt>Hinweis</dt><dd>${esc(d.note)}</dd>`:''}${w.mgnt?`<dt>MorphGNT</dt><dd>${esc(w.mgnt.lemma)} · ${esc(w.mgnt.parsing)}</dd>`:''}${w.lx?`<dt>${lang==='de'?'Wörterbuch':'Dictionary'}</dt><dd class="lexdd">${lexHtml(w.lx)}</dd>`:''}${edLine(w.ed)?`<dt>${lang==='de'?'Ausgaben':'Editions'}</dt><dd>${edLine(w.ed)}</dd>`:''}</dl><p class="ref-id">${esc(w.id)}</p></details>`;}).join('')}</div>`;
     if(vars.length)h+=`<h4>${lang==='de'?'Vergleich der Textausgaben':'Edition comparison'}</h4><p class="note">${lang==='de'?'Vergleich gedruckter Textausgaben laut SBLGNT-Apparat. Keine Handschriftenzählung.':'Comparison of printed editions (SBLGNT apparatus). Not a manuscript count.'}</p>`+vars.map(v=>`<div class="point">${v.readings.map(r=>{const a=(v.assessment||[]).find(x=>x.reading===r.id);return `<p><span class="body">${esc(r.text)}</span> <span class="note">${a?esc(a.editions.map(e=>ED[e]).join(', '))+` (${a.support}/${a.of})`:esc((r.witnesses||[]).join(', ')+(lang==='de'?' · berichtet, ungeprüft':' · reported, unverified'))}</span></p>`;}).join('')}<p class="ref-id">${esc(v.id)}</p></div>`).join('');
@@ -1189,9 +1188,9 @@ function methodSheet(){const L=lang==='de',t=T(),gh='https://github.com/andineck
   <dt>Damals → Heute</dt><dd>Am Abschnittstitel: Hintergrund damals, abgeleiteter Grundsatz, Anwendung heute je Zielgruppe.</dd>
   <dt>Text | Bild</dt><dd>Zusammenfassungen und Bilder auf jeder Ebene, vom Vers bis zur ganzen Bibel.</dd></dl>
   <h4>Zeichen im Text</h4>
-  <dl class="kv"><dt><span class="vno-demo">5</span> umrandet</dt><dd>Dieser Vers ist ausgearbeitet: Urtext, Lesarten, Entscheide oder Hintergrund. Jede Versnummer öffnet das Versblatt.</dd>
-  <dt><span class="dec">Wort</span></dt><dd>Gepunktet unterstrichen: Hier folgt die Übersetzung einer vertrauten Wiedergabe oder wählt eine Deutung. Antippen zeigt die Möglichkeiten.</dd>
-  <dt><span class="dss-demo">Rolle</span></dt><dd>Zu diesem Vers gibt es Text in Rollen vom Toten Meer.</dd></dl>
+  <dl class="kv"><dt><span class="vno-demo">5</span> umrandet</dt><dd>Urtext, Lesarten, Entscheide oder Hintergrund vorhanden. Jede Versnummer öffnet das Versblatt.</dd>
+  <dt><span class="dec">Wort</span></dt><dd>Gepunktet unterstrichen: Hier gibt es Alternativen, sei es eine andere Lesart in den Handschriften oder eine andere mögliche Übersetzung. Antippen zeigt sie mit ihren Quellen.</dd></dl>
+  <p class="note">Zu jeder Angabe ist die Quelle genannt: Handschrift, Textausgabe oder Fachliteratur, im Versblatt und unter «Quellen und Rechte».</p>
   <h4>Der Weg zu einer Stelle</h4>${li([
    '<b>Quellen:</b> nur freie Quellen (gemeinfrei, CC); geschützte werden nur genannt. Übersicht im Menü unter «Quellen».',
    '<b>Übersetzung aus dem Urtext</b> (Hebräisch, Griechisch), Wort für Wort zugeordnet; wo sie glättet, deutet oder einer Tradition folgt, steht es beim Vers.',
@@ -1361,6 +1360,7 @@ app.insertAdjacentHTML('beforeend',`<div class="player" role="region" hidden><sp
 app.addEventListener('click',e=>{
   const b=e.target.closest('button,[data-close],[role=button]');
   if(!b){if(e.target.closest('.reader'))app.classList.toggle('immersed');return;}
+  if(b.dataset.altOpen){verseSheet(b.dataset.altVerse);const x=host.querySelector(`.sheet [data-alternative="${b.dataset.altOpen}"]`);if(x&&x.scrollIntoView)x.scrollIntoView({block:'center'});return;}
   if(b.dataset.dec!==undefined){const c=b.closest('[data-ref]');if(c){decisionSheet(c.dataset.ref,Number(b.dataset.dec));return;}}
   if(b.dataset.read){e.stopPropagation();if(RA.on&&RA.activeBtn===b.dataset.read)raControl('toggle');else readStart(b.dataset.read);return;}
   if(b.dataset.ra){raControl(b.dataset.ra);return;}
@@ -1379,7 +1379,6 @@ app.addEventListener('click',e=>{
   if(b.hasAttribute('data-settings')){settingsSheet();return;}
   if(b.hasAttribute('data-figindex')){figIndexSheet();return;}
   if(b.dataset.merk){merkSheet(b.dataset.merk);return;}
-  if(b.dataset.dss){dssSheet(b.dataset.dss);return;}
   if(b.dataset.learn){learnAct(b.dataset.learn);return;}
   if(b.dataset.figindexStyle){figIndexSheet(b.dataset.figindexStyle);return;}
   if(b.dataset.go){go(b.dataset.go);return;}

@@ -37,7 +37,7 @@ server.listen(0,async()=>{const url=`http://localhost:${server.address().port}/i
     // Noch nicht übersetztes Buch mit Handschriften vom Toten Meer (nicht kommerzielle Schicht n/ISA)
     await ev(()=>document.querySelector('[data-action=index]').click());await p.fill('input[type=search]','Jes 53,11');await wait();await ev(()=>document.querySelector('.results button').click());await wait();await wait();
     assert(reqs.some(x=>x.endsWith('n/ISA')),'Paket Jesaja (Qumran) nachgeladen');
-    await ev(()=>document.querySelector('[data-dss="ISA.53.11"]').click());await wait();
+    await ev(()=>document.querySelector('[data-more="v22-53-11"]').click());await wait();
     const q=await ev(()=>document.querySelector('.sheet').innerText);
     assert(q.includes('grosse Jesaja-Rolle')&&q.includes('אור')&&q.includes('CC BY-NC'),'Jes 53,11 in 1QIsa a mit «Licht»');
     assert.deepEqual(errs,[],'keine Skriptfehler');
