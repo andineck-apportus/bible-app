@@ -127,6 +127,18 @@ Bildes), `scripts/authoring/bildtest_paket.py` (Testpaket ohne Legende). Bericht
 | Bilder mit Fehler bei Wer-zu-wem (c) | 0–2 | 2–3 (danach behoben) |
 | genannte Unklarheiten (ohne Buchangabe) | 62 | 95 |
 
+Nach der ersten Nachbesserung (Sprecher korrigiert, abstrakte Zeichen durch Wort oder Geste ersetzt): b 2,00, Wer-zu-wem-Fehler
+in 1 Bild. Die Unklarheiten wurden diesmal einzeln gezählt (147), darum nicht vergleichbar.
+
+Offen nach dem Pilot (Liste für Andi Neck):
+- Rut zu Boas' Füssen bzw. niederfallend ist nicht sichtbar; der Zeichner kann diese Haltung nicht.
+- Der Balken liegt neben statt im Auge.
+- Der Beter steht vor der Kammer statt darin.
+- Kleine Gegenstände sind schwer zu erkennen: Schuh, Steine, Kette, Schwurhand; ihre Grösse lässt sich nicht einstellen.
+- Einige Stichwörter sind als Satzteil schwer verständlich, zum Beispiel «weit über» oder «zwei Herren dienen».
+- Der Gottesname im Strahlenkranz ist ohne Vorwissen nicht lesbar.
+- «Löser» ist nur mit Vorwissen verständlich.
+
 Grenzen der Messung:
 - a ist gesättigt. Die KI-Testpersonen kennen die Bibel sehr gut und sahen die Bilder in Buchreihenfolge, darum erkannten
   sie die Stellen auch ohne Buchangabe. Der Test misst so vor allem b, c und die Unklarheiten.
