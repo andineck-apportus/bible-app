@@ -1027,7 +1027,7 @@ function coverage(n){const L=lang==='de',code=DATA[n.b].code,nt=CODE_IDX[code]>=
     row(L?'Übersetzung':'Translation',src?(w?(L?'eigene Übersetzung aus dem Urtext (KI-Entwurf)':'own translation from the original (AI draft)'):(L?'Lesetext, noch nicht am Urtext ausgearbeitet':'reading text, not yet worked from the original')):(L?'noch kein Text':'no text yet'))+
     row(L?'Wort für Wort':'Word by word',w?(L?'vorhanden, oben':'available, above'):(L?'noch nicht erfasst':'not yet recorded'))+
     row(L?'Andere Lesarten':'Other readings',lesarten)+
-    row(L?'Übersetzungsentscheide':'Translation choices',ds?(L?`${ds}, oben`:`${ds}, above`):(w?(L?'keine besonderen':'none noted'):(L?'noch nicht erfasst':'not yet recorded')))+
+    row(L?'Entscheide':'Choices',ds?(L?`${ds} beim Übersetzen, oben`:`${ds}, above`):(w?(L?'keine besonderen':'none noted'):(L?'noch nicht erfasst':'not yet recorded')))+
     row(L?'Hintergrund':'Background',bgs?(L?`${bgs} Hinweis${bgs>1?'e':''}, oben`:`${bgs}, above`):(L?'zu diesem Vers keiner':'none for this verse'))+
     `</dl><p class="note">${L?'Alles ist KI-Entwurf und noch nicht fachlich geprüft. Wie wir vorgehen: Menü › «So arbeiten wir».':'All AI drafts, not yet reviewed. How we work: menu › “How we work”.'}</p>`;}
 function verseSheet(id){
