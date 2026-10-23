@@ -9,6 +9,7 @@ README.md sowie docs/STATUS-UND-ROADMAP.md zuerst lesen. Git ist Source of Truth
 - Edition, Handschrift und Übersetzung nie gleichsetzen. Sekundärtranskription nicht als eigene Faksimile-Prüfung darstellen.
 - Fehlende Originaltexte, Belege, Token, Wortzahlen oder Prüfer niemals erfinden.
 - Historischen Kontext und heutigen Anwendungskontext gesondert modellieren: Damals → Prinzip → Heute ([docs/DAMALS-PRINZIP-HEUTE.md](docs/DAMALS-PRINZIP-HEUTE.md)). Heutiges nie in Bibeltext, Zusammenfassung oder Bild, sondern als Anwendung mit Zielgruppe und Grenze.
+- App-Darstellung nach [docs/LESEN-UND-VERTIEFEN.md](docs/LESEN-UND-VERTIEFEN.md): feste Regeln, jede Information hat ein Zuhause (Versblatt, «Verstehen», «Damals → Heute»); neue Inhaltsarten dort einordnen und in «So arbeiten wir» nachführen.
 - Epoche, Ort/Land, Kultur, Sprache, Zielgruppe/Situation und Wissensstand berücksichtigen.
 - Alle relevanten Objekte unterstützen mehrere kontrollierte Tag-IDs. Tags ersetzen keine typisierten Beziehungen.
 - Inhaltliche Revisionen mit Vorgänger, Datum, Grund und Quellenstand festhalten. Frühere Positionen müssen rekonstruierbar bleiben.
