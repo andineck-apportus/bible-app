@@ -90,6 +90,11 @@ sagt; eine Deutung wird als Deutung gekennzeichnet.
 - `basis` hält Fingerabdrücke fest: beim Abschnitt des Textes, darüber der Kernanalysen der Kinder. Erneuert werden sie
   nur mit `BIBLE_CORE_CONFIRM=1`, nach einer Prüfung.
 
+- Zusammenfassungen aus der Kernanalyse: `scripts/authoring/zusammenfassungen_daten/<BUCH>.json` (Hochdeutsch und
+  Züridüütsch je Einheit), `python3 scripts/authoring/zusammenfassungen.py [BUCH …]` prüft Umfang und Momente und schreibt
+  Datensatz, Mundart-Lokalisierung, revision_log und `core_basis` (Kernanalyse mit Fingerabdruck). Ältere
+  Autorenwerkzeuge übernehmen diese Texte über `scripts/authoring/_lib.py`, damit ein erneuter Lauf sie nicht zurücksetzt.
+
 ## Pilot
 
 Rut (Erzählung), Titus (Brief), Markus 5 (Heilungen) und die Bergpredigt Mt 5–7 (Rede), jeweils mit Kapitel und Buch.
