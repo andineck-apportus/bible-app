@@ -237,9 +237,11 @@ def head_inner(key, expr="calm", look=0.0, tears=False):
     if expr in ("delight", "worried") or c.get("flowers") or child:
         o.append(blush())
     o.append(mouth(expr, look) if not child else f'<g transform="translate({look * .2:.1f} .8) scale(.8)">{mouth(expr, look)}</g>')
-    if c.get("old"):  # Alter deutlich: Falten an Augen und Wangen
-        o.append(f'<path d="M-7.6 1.6l-1.4-.5M-7.6 2.9l-1.5.1M7.6 1.6l1.4-.5M7.6 2.9l1.5.1M-6 5.2q1.8.8 3.6 0M2.4 5.2q1.8.8 3.6 0'
-                 f'M-3.4 6.2q-1.3 1.6-.6 3.6M3.4 6.2q1.3 1.6.6 3.6" stroke="#8A5A3A" stroke-width=".5" stroke-linecap="round" fill="none"/>')
+    if c.get("old"):  # Alter: zwei Stirnfalten, feine Fältchen an den Augen, kurze Linie neben dem Mund (dezenter, Hinweis Andi Neck 2026-10-23)
+        o.append('<g stroke="#8A5A3A" stroke-linecap="round" fill="none">'
+                 '<path d="M-2.6-5.5q1.3-.5 2.6 0t2.6 0M-2-4.4q1-.4 2 0t2 0" stroke-width=".42" opacity=".75"/>'
+                 '<path d="M-7.6 1.8l-1.2-.4M-7.6 2.9l-1.2.1M7.6 1.8l1.2-.4M7.6 2.9l1.2.1" stroke-width=".4" opacity=".7"/>'
+                 '<path d="M-3.3 6.6q-.7.9-.5 2M3.3 6.6q.7.9.5 2" stroke-width=".35" opacity=".45"/></g>')
     if tears:
         for side in (-1, 1):
             ex = side * 4.2 + max(-1.6, min(1.6, look * 1.4))
@@ -312,10 +314,10 @@ def staff_svg(side=1, hand=True, col="#7A5A34"):
     """Wanderstab schräg auf der Brust, ohne Arm, mit Kontur wie die anderen Erkennungszeichen (Einheiten wie Kopf).
     Vorher lang neben der Figur mit runder Hand: wirkte wie eine Stange daneben (Hinweis Andi Neck 2026-10-23)."""
     s = side
-    # oben über die Schulter hinaus und mit Knauf, damit er nicht als Gurt gelesen wird
-    return (f'<g filter="url(#an-kontur)"><path d="M{-6 * s:.1f} 34L{10.6 * s:.1f} 9" stroke="{col}" stroke-width="2.2" stroke-linecap="round"/>'
-            f'<path d="M{-6.5 * s:.1f} 33.7L{10.1 * s:.1f} 8.7" stroke="#A07A4A" stroke-width=".7" stroke-linecap="round"/>'
-            f'<circle cx="{10.8 * s:.1f}" cy="8.6" r="1.9" fill="{col}"/></g>')
+    # knapp über die Schulter (nicht weit abstehend, Hinweis Andi Neck 2026-10-23) und mit Knauf, damit er nicht als Gurt gelesen wird
+    return (f'<g filter="url(#an-kontur)"><path d="M{-6 * s:.1f} 34L{8.4 * s:.1f} 13.4" stroke="{col}" stroke-width="2.2" stroke-linecap="round"/>'
+            f'<path d="M{-6.5 * s:.1f} 33.7L{7.9 * s:.1f} 13.1" stroke="#A07A4A" stroke-width=".7" stroke-linecap="round"/>'
+            f'<circle cx="{8.6 * s:.1f}" cy="13" r="1.8" fill="{col}"/></g>')
 
 
 def body_inner(key, arm=None, ext=0, staff=True):
