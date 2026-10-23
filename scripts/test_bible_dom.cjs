@@ -110,7 +110,7 @@ assert(sheetHost.querySelector('.dph-steps [data-dph="today"]')&&sheetHost.query
 assert(sheetHost.textContent.includes('abgeleiteter Grundsatz')&&sheetHost.textContent.includes('Grenze:'),'Prinzip und Anwendung');
 assert(!sheetHost.querySelector('[data-app="APP-MAT-1007"]'),'Anwendung zu Mt 6,5–6 nicht beim Vaterunser');
 click('[data-close]');
-click('[data-deep="TU-MAT-006-005-008"]');
+click('[data-action=up]');
 click('[data-background="TU-MAT-006-005-008"]');
 assert(sheetHost.textContent.includes('Kammer')&&sheetHost.querySelector('[data-app="APP-MAT-1007"]')&&sheetHost.querySelector('[data-app="APP-MAT-1004"]'),'Kammer damals, Anwendungen heute');
 click('.dph-aud [data-aud="CTX-CH-YOUTH-2026"]');
