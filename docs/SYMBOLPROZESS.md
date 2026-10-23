@@ -169,6 +169,42 @@ Offen nach Runde 3 (Bewerter):
 Eine Grenze ist bewusst gesetzt: Viele Nebenfiguren sind ohne Namen nicht erratbar. Im Bild tragen Hauptfiguren deshalb ein
 Namensschild beim ersten Auftreten (VERDICHTUNG.md); der Blindtest ohne Namen ist hier die strengste Prüfung.
 
+### Runde 4, 2026-10-23
+
+Überarbeitet nach Runde 3:
+- Gemeinsames Jüngermerkmal: Jüngergewand, Gürtel und Wanderstab bis Schulterhöhe.
+- Klarere Apostel-Zeichen.
+- Verwechselbare Paare getrennt: Maria Magdala und Maria von Betanien, Blinde, Soldat und Hauptmann.
+- Mengen ohne Kind vorn, mit Umrissen dahinter.
+- Die Zwölf mit der Zahl 12, Jünger mit Fussspuren.
+- Neu gezeichnet: Gefässe, Lose, Splitter, Ninive, Moab, enges Tor.
+
+Gemessen mit neuen Instanzen und derselben strengen Regel wie Runde 3, also direkt vergleichbar.
+Daten: `reports/figuren-blindtest-2026-10-23-runde4.json`.
+
+| Art | Anzahl | getroffen Runde 3 | getroffen Runde 4 | behalten Runde 3 → 4 |
+|---|---|---|---|---|
+| Gott, Jesus, Geist | 4 | 100 % | 100 % | 4 → 4 |
+| Personen | 79 | 33 % | 47 % | 18 → 27 |
+| Rollen | 61 | 69 % | 69 % | 33 → 35 |
+| Gruppen | 46 | 54 % | 67 % | 22 → 24 |
+| Gegenstände | 139 | 91 % | 94 % | 122 → 126 |
+| Orte | 48 | 88 % | 88 % | 41 → 39 |
+| Alle | 377 | 70 % | 76 % | 240 → 255 |
+
+54 Einträge wurden besser erkannt, 23 schlechter (Streuung der Testpersonen).
+
+Offen nach Runde 4:
+- Pilatus (95 Verwendungen) wird nicht als Römer erkannt.
+- Glaubende und Menge sind nicht unterscheidbar.
+- Apostel werden trotz Jüngermerkmal über ihr Attribut als Handwerker oder Räuber gelesen.
+- Gegenstände in der Hand werden als Erkennungszeichen einer anderen Figur gelesen: Lazarus mit Grab als Josef von Arimatäa, Frau mit Saum als Lydia.
+- Frauen mit Krug oder Brot werden als Witwe von Zarpat oder Samariterin gelesen.
+- Prätorium (Feldzeichen als Kreuz gelesen), Salz, Last, enges Tor.
+
+Im fertigen Bild helfen Namensschild, Stichwortband und Szene. Der Blindtest der ganzen Bilder ohne Legende
+(BILDPROZESS.md) misst, ob das reicht.
+
 ### Reihenfolge der Überarbeitung
 
 1. Die 20 meistverwendeten schwachen Zeichen (rund die Hälfte aller schwachen Verwendungen).
