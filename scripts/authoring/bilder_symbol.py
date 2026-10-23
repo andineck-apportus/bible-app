@@ -532,9 +532,7 @@ class SymComposer(_auto.Composer):
         else:
             out.append(use(sym, round(x - w / 2, 1), round(y, 1), round(w, 1), h))
             hy = y + h * 14 / 64
-            if pose == "away" and not s["group"]:  # abgewandt: Hinterkopf (Haar über dem ganzen Kopf)
-                hp = _fg.FIGS.get(fid) or {}
-                out.append(f'<circle cx="{x:.1f}" cy="{hy:.1f}" r="{6.6 * h / 64:.1f}" fill="{hp.get("hair", "#3B2A1E")}" stroke="#3B3226" stroke-width="1"/>')
+            # abgewandt: Figur bleibt mit Gesicht erkennbar wie in der Legende (früher Hinterkopf)
         wear = (st.get("wear") or {}).get(fid)
         if wear:
             out.append(self._sack(x, y, w, h, wear))

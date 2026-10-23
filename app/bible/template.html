@@ -1335,7 +1335,7 @@ app.addEventListener('click',e=>{
   if(b.dataset.toggle){S[b.dataset.toggle]=!S[b.dataset.toggle];save();rerenderKeep();reopenMenu();return;}
   const a=b.dataset.action,n=nodes.get(current);
   if(a==='home')go('all');else if(a==='menu'){if(sheet==='menu')closeSheet();else menuSheet();}
-  else if(a==='index')navSheet(true);else if(a==='back'){const tgt=jumpFrom;jumpFrom=null;go(tgt);}else if(a==='levels'){if(n.children.length)pickSheet();else navSheet(true);}
+  else if(a==='index'){navSheet(true);const f=host.querySelector('input[type=search]');if(f){f.focus({preventScroll:true});f.select();}}else if(a==='back'){const tgt=jumpFrom;jumpFrom=null;go(tgt);}else if(a==='levels'){if(n.children.length)pickSheet();else navSheet(true);}
   else if(a==='up')go(n.parent);else if(a==='down')pickSheet();
   else if(a==='load-next')loadMore();else if(a==='load-prev')loadMore(true);
 });

@@ -5,6 +5,9 @@
 ## v0.71 — 2026-10-22 — Pfad unten statt Lesetiefe
 
 - **Eine Navigation nach oben und unten** (Andi Neck): Die Leiste unten zeigt den Pfad mit echten Namen («Bibel › NT › Evangelien › Mt › 5 › Die Seligpreisungen › 9»); jedes Glied springt direkt auf seine Ebene. Rechts öffnet ein Knopf mit der nächsten Ebene («Kapitel ↓», «Abschnitt ↓», «Vers ↓») die Auswahl am aktuellen Ort (Liste oder Raster, zuletzt gelesener Eintrag markiert). Auf Versebene entfällt der Knopf.
+- **Suchfeld sofort aktiv** (Andi Neck): Beim Öffnen der Navigation steht der Cursor im Suchfeld; man kann gleich tippen.
+- **Abgewandte Figuren mit Gesicht** (Hinweis Andi Neck, Händler in Joh 2): Statt Hinterkopf gespiegelt mit Blick zur Seite, damit die Figur wie in der Legende erkennbar bleibt (beide Stile, alle 90 Stellen mit «away»).
+- **Titus: Auftrag statt Tatsache** (Hinweis Andi Neck): Der Brief ist von Paulus. Wo Bilder Titus handelnd zeigen, beschreibt die Legende jetzt den Auftrag («Auftrag an Titus – …: Titus soll …»); bei Tit 1,6–8 spricht Paulus, nicht Titus.
 - **Richtige Stelle nach dem Navigieren** (Hinweis Andi Neck): Der gewählte Eintrag steht jetzt genau oben unter der Kopfleiste und bleibt dort, während sich darüber noch etwas aufbaut; Titelzeile und Pfad zeigen sofort die gewählte Stelle (vorher teils den Eintrag davor, z. B. «Maleachi 4,6» vor Matthäus). Beim Nachladen nach oben bleibt der oberste sichtbare Eintrag stehen, statt zu springen; die Leisten bleiben nach dem Sprung sichtbar.
 - **Ausgearbeitete Verse markiert, bevor das Buch geladen ist** (z. B. Rut im Navigator).
 - **Testament-Umschalter** (Andi Neck): «AT | NT» als kleiner runder Umschalter wie Text/Bild, direkt vor den Buchgruppen (voller Name als Hinweis).

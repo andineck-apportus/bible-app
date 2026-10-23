@@ -50,7 +50,7 @@ nicht zeigen). «Die Juden», Pharisäer, Hohepriester als neutrale Figuren, nie
 | Schlüssel | Wirkung |
 |---|---|
 | `mood: {FIG: expr}` | Ausdruck im Stil Anime: calm, smile, delight, worried, surprised, earnest, determined, pensive, sleep |
-| `pose: {FIG: p}` | lie, sleep, sit, kneel, fall, away (abgewandt) |
+| `pose: {FIG: p}` | lie, sleep, sit, kneel, fall, away (abgewandt: gespiegelt, Blick zur Seite, Gesicht bleibt sichtbar wie in der Legende) |
 | `hold: {FIG: OBJ}` | Figur hält Gegenstand (Gegenstand muss in `objects` stehen); lange Gegenstände (Schwert, Rohr, Kreuz) stehen seitlich mit sichtbarer Hand |
 | `in: {FIG: OBJ}`, `in_pos: {FIG: [x, y]}` | Figur im Gegenstand (Boot, Fisch, Grab …), Lage relativ 0–1 |
 | `at: {ZEICHEN: FIG}` oder `{ZEICHEN: [FIG, …]}` | Zeichen bei einer oder mehreren Figuren (z. B. Zorn, Schlafen, Nebel); Krone und Dornenkrone sitzen auf dem Kopf |
