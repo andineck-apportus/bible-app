@@ -14,8 +14,9 @@
       "reference": "MAT.5.43-MAT.5.44",
       "figures": [
         "FIG-GOTT",
-        "FIG-GRUPPE-GEGNER",
-        "FIG-GRUPPE-JUENGER"
+        "FIG-JESUS",
+        "FIG-GRUPPE-JUENGER",
+        "FIG-GRUPPE-GEGNER"
       ],
       "objects": [],
       "signs": [],
@@ -26,27 +27,33 @@
           "icons": [
             "FIG-GRUPPE-GEGNER",
             "FIG-ZEICHEN-LIEBE"
-          ]
+          ],
+          "word": {
+            "de": "betet",
+            "gsw": "bätted"
+          }
         }
       ],
-      "action_de": "Zum Wort «Du sollst deinen Nächsten lieben und deinen Feind hassen» sagt Jesus: Liebt eure Feinde und betet für die, die euch verfolgen.",
+      "action_de": "Jesus stellt dem Wort «Du sollst deinen Nächsten lieben und deinen Feind hassen» entgegen: Liebt eure Feinde und betet für die, die euch verfolgen.",
+      "keywords": {
+        "de": "Liebt eure Feinde",
+        "gsw": "Liebed eui Find"
+      },
       "stage": {
         "god_side": "right",
         "x": {
-          "FIG-GRUPPE-GEGNER": 34,
-          "FIG-GRUPPE-JUENGER": 112
+          "FIG-JESUS": 26,
+          "FIG-GRUPPE-JUENGER": 84,
+          "FIG-GRUPPE-GEGNER": 160
         },
         "mood": {
+          "FIG-JESUS": "calm",
           "FIG-GRUPPE-JUENGER": "calm",
-          "FIG-GRUPPE-GEGNER": "earnest"
+          "FIG-GRUPPE-GEGNER": "angry"
         },
-        "arrows": [
-          [
-            "FIG-GRUPPE-JUENGER",
-            "FIG-GOTT",
-            "act"
-          ]
-        ]
+        "size": {
+          "FIG-JESUS": 0.7
+        }
       }
     },
     {
@@ -54,30 +61,31 @@
       "reference": "MAT.5.45",
       "figures": [
         "FIG-GOTT",
+        "FIG-JESUS",
         "FIG-ROLLE-MENSCH",
         "FIG-ROLLE-JUNGER-MANN"
       ],
       "objects": [],
       "signs": [
-        "FIG-ZEICHEN-WASSER",
-        "FIG-ZEICHEN-SUENDE"
+        "FIG-ZEICHEN-MORGEN",
+        "FIG-ZEICHEN-WASSER"
       ],
       "speech": [],
-      "action_de": "So werden sie Söhne ihres Vaters in den Himmeln; denn er lässt seine Sonne aufgehen über Böse und Gute und lässt regnen über Gerechte und Ungerechte.",
+      "action_de": "Der Vater in den Himmeln lässt seine Sonne aufgehen über Böse und Gute und lässt regnen über Gerechte und Ungerechte.",
+      "keywords": {
+        "de": "seine Sonne aufgehen",
+        "gsw": "sini Sunne ufgaa"
+      },
       "stage": {
-        "god_side": "center",
+        "god_side": "right",
         "x": {
-          "FIG-ROLLE-MENSCH": 50,
-          "FIG-ROLLE-JUNGER-MANN": 136
+          "FIG-JESUS": 26,
+          "FIG-ROLLE-MENSCH": 92,
+          "FIG-ROLLE-JUNGER-MANN": 152
         },
         "at": {
-          "FIG-ZEICHEN-WASSER": [
-            "FIG-ROLLE-MENSCH",
-            "FIG-ROLLE-JUNGER-MANN"
-          ]
-        },
-        "beside": {
-          "FIG-ZEICHEN-SUENDE": "FIG-ROLLE-JUNGER-MANN"
+          "FIG-ZEICHEN-MORGEN": "FIG-ROLLE-MENSCH",
+          "FIG-ZEICHEN-WASSER": "FIG-ROLLE-JUNGER-MANN"
         },
         "arrows": [
           [
@@ -92,43 +100,17 @@
           ]
         ],
         "mood": {
+          "FIG-JESUS": "calm",
           "FIG-ROLLE-MENSCH": "smile",
-          "FIG-ROLLE-JUNGER-MANN": "calm"
+          "FIG-ROLLE-JUNGER-MANN": "angry"
+        },
+        "size": {
+          "FIG-JESUS": 0.7
         }
       }
     },
     {
       "n": 3,
-      "reference": "MAT.5.46-MAT.5.47",
-      "figures": [
-        "FIG-GRUPPE-ZOELLNER",
-        "FIG-GRUPPE-VOELKER"
-      ],
-      "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-LIEBE"
-      ],
-      "speech": [],
-      "action_de": "Wer nur die liebt, die ihn lieben, und nur seine Brüder grüsst, tut nichts Besonderes; das tun auch die Zöllner und die Heiden.",
-      "stage": {
-        "x": {
-          "FIG-GRUPPE-ZOELLNER": 50,
-          "FIG-GRUPPE-VOELKER": 136
-        },
-        "signs_who": {
-          "FIG-ZEICHEN-LIEBE": [
-            "FIG-GRUPPE-ZOELLNER",
-            "FIG-GRUPPE-VOELKER"
-          ]
-        },
-        "mood": {
-          "FIG-GRUPPE-ZOELLNER": "smile",
-          "FIG-GRUPPE-VOELKER": "smile"
-        }
-      }
-    },
-    {
-      "n": 4,
       "reference": "MAT.5.48",
       "figures": [
         "FIG-GOTT",
@@ -136,53 +118,64 @@
         "FIG-GRUPPE-JUENGER"
       ],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-VOLLBRACHT"
-      ],
+      "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-JUENGER",
           "icons": [
-            "FIG-GRUPPE-JUENGER",
             "FIG-ZEICHEN-VOLLBRACHT"
-          ]
+          ],
+          "word": {
+            "de": "vollkommen",
+            "gsw": "vollkomme"
+          }
         }
       ],
-      "action_de": "Ihr sollt also vollkommen sein, wie euer himmlischer Vater vollkommen ist.",
+      "action_de": "Jesus sagt: Ihr sollt also vollkommen sein, wie euer himmlischer Vater vollkommen ist.",
+      "keywords": {
+        "de": "wie euer himmlischer Vater",
+        "gsw": "wie eue himmlisch Vatter"
+      },
       "stage": {
         "god_side": "right",
         "x": {
-          "FIG-JESUS": 36,
-          "FIG-GRUPPE-JUENGER": 104
+          "FIG-JESUS": 40,
+          "FIG-GRUPPE-JUENGER": 120
         },
-        "at": {
-          "FIG-ZEICHEN-VOLLBRACHT": "FIG-GOTT"
-        },
+        "arrows": [
+          [
+            "FIG-GRUPPE-JUENGER",
+            "FIG-GOTT",
+            "act"
+          ]
+        ],
         "mood": {
+          "FIG-JESUS": "calm",
           "FIG-GRUPPE-JUENGER": "calm"
+        },
+        "size": {
+          "FIG-JESUS": 0.7
         }
       }
     }
   ],
   "actions_de": [
-    "Zum Wort «Du sollst deinen Nächsten lieben und deinen Feind hassen» sagt Jesus: Liebt eure Feinde und betet für die, die euch verfolgen.",
-    "So werden sie Söhne ihres Vaters in den Himmeln; denn er lässt seine Sonne aufgehen über Böse und Gute und lässt regnen über Gerechte und Ungerechte.",
-    "Wer nur die liebt, die ihn lieben, und nur seine Brüder grüsst, tut nichts Besonderes; das tun auch die Zöllner und die Heiden.",
-    "Ihr sollt also vollkommen sein, wie euer himmlischer Vater vollkommen ist."
+    "Jesus stellt dem Wort «Du sollst deinen Nächsten lieben und deinen Feind hassen» entgegen: Liebt eure Feinde und betet für die, die euch verfolgen.",
+    "Der Vater in den Himmeln lässt seine Sonne aufgehen über Böse und Gute und lässt regnen über Gerechte und Ungerechte.",
+    "Jesus sagt: Ihr sollt also vollkommen sein, wie euer himmlischer Vater vollkommen ist."
   ],
   "captions_de": [
-    "Feinde lieben: Die Jünger beten mit gefalteten Händen zum Vater (goldene Linie zum Strahlenkranz) für ihre Gegner (Sprechblase: Gruppe in Grau, zwei rote Herzen); die Gegner stehen abseits.",
-    "Der Vater gibt allen → Söhne des Vaters werden: Der Vater (Strahlenkranz) lässt es über einen Gerechten und einen Ungerechten regnen (blaue Tropfen über beiden, goldene Pfeile vom Strahlenkranz); beim Ungerechten ein dunkler Fleck.",
-    "Nichts Besonderes: Auch Zöllner (graugrüne Gewänder) und Menschen aus den Völkern (blau mit rotbraunem Überwurf) lieben die, die sie lieben (zwei rote Herzen über beiden Gruppen).",
-    "Vollkommen: Jesus sagt den Jüngern: Ihr sollt vollkommen, ganz sein (geschlossener goldener Ring mit Haken), wie euer Vater (Strahlenkranz, daneben derselbe Ring) vollkommen ist."
+    "Liebt eure Feinde: Jesus (links) lehrt; die Jünger beten zum Vater (Strahlenkranz) für ihre Verfolger (Sprechblase: Gruppe in Grau, zwei rote Herzen); die Verfolger stehen zornig rechts.",
+    "Sonne und Regen für alle: Der Vater (Strahlenkranz) lässt über beiden Männern die Sonne aufgehen (aufgehende Sonne) und es regnen (Tropfen), über dem freundlichen wie über dem zornigen (goldene Pfeile); Jesus (links) lehrt.",
+    "Vollkommen wie der Vater: Jesus sagt den Jüngern: vollkommen sein (Sprechblase: goldener Ring mit Haken) wie euer Vater (Strahlenkranz); die Jünger blicken zu ihm auf (Pfeil)."
   ],
-  "interpretation_note_de": "Die Gegner in Feld 1 stehen für «die, die euch verfolgen» ([[MAT.5.44]]). Die Sonne über Böse und Gute ([[MAT.5.45]]) zeigt das Bild nicht, weil der Strahlenkranz sonst als Sonne gelesen wird; es zeigt den Regen. Der dunkle Fleck kennzeichnet den Ungerechten. «Heiden» ([[MAT.5.47]]) sind Menschen aus den Völkern, ohne Wertung. Der goldene Ring mit Haken steht für «vollkommen» ([[MAT.5.48]]).",
+  "interpretation_note_de": "Bild einer Rede: Jesus (links) spricht, das Gesagte ist gross daneben gezeigt. Gott erscheint als Strahlenkranz; Jesus nennt ihn «euren Vater in den Himmeln». In Feld 2 steht der freundliche Mann für die Guten und Gerechten, der zornige für die Bösen und Ungerechten ([[MAT.5.45]]); Sonne und Regen gelten beiden. Zöllner und Heiden als Vergleich ([[MAT.5.46-MAT.5.47]]) sind nicht im Bild.",
   "basis": [
     {
       "record": "TU-MAT-005-043-048",
       "field": "summary",
-      "fingerprint": "df4906bb7266d61b"
+      "fingerprint": "22b6c4725f7a4949"
     },
     {
       "record": "TRANS-MAT-005-001-048-DE-WORKING",
@@ -195,12 +188,6 @@
       "field": "text_by_reference",
       "reference": "MAT.5.45",
       "fingerprint": "bec3f94cd9bb9a90"
-    },
-    {
-      "record": "TRANS-MAT-005-001-048-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.5.46-MAT.5.47",
-      "fingerprint": "8d512b1cea5b92bb"
     },
     {
       "record": "TRANS-MAT-005-001-048-DE-WORKING",
@@ -392,10 +379,248 @@
           "Vollkommen: Jesus sagt den Jüngern: Ihr sollt vollkommen, ganz sein (geschlossener goldener Ring mit Haken), wie euer Vater (Strahlenkranz, daneben derselbe Ring) vollkommen ist."
         ]
       }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.5.43-MAT.5.44",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-GEGNER",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-GRUPPE-GEGNER",
+                  "FIG-ZEICHEN-LIEBE"
+                ]
+              }
+            ],
+            "action_de": "Zum Wort «Du sollst deinen Nächsten lieben und deinen Feind hassen» sagt Jesus: Liebt eure Feinde und betet für die, die euch verfolgen.",
+            "stage": {
+              "god_side": "right",
+              "x": {
+                "FIG-GRUPPE-GEGNER": 34,
+                "FIG-GRUPPE-JUENGER": 112
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "calm",
+                "FIG-GRUPPE-GEGNER": "earnest"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-GOTT",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.5.45",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-ROLLE-MENSCH",
+              "FIG-ROLLE-JUNGER-MANN"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-WASSER",
+              "FIG-ZEICHEN-SUENDE"
+            ],
+            "speech": [],
+            "action_de": "So werden sie Söhne ihres Vaters in den Himmeln; denn er lässt seine Sonne aufgehen über Böse und Gute und lässt regnen über Gerechte und Ungerechte.",
+            "stage": {
+              "god_side": "center",
+              "x": {
+                "FIG-ROLLE-MENSCH": 50,
+                "FIG-ROLLE-JUNGER-MANN": 136
+              },
+              "at": {
+                "FIG-ZEICHEN-WASSER": [
+                  "FIG-ROLLE-MENSCH",
+                  "FIG-ROLLE-JUNGER-MANN"
+                ]
+              },
+              "beside": {
+                "FIG-ZEICHEN-SUENDE": "FIG-ROLLE-JUNGER-MANN"
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-ROLLE-MENSCH",
+                  "act"
+                ],
+                [
+                  "FIG-GOTT",
+                  "FIG-ROLLE-JUNGER-MANN",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-MENSCH": "smile",
+                "FIG-ROLLE-JUNGER-MANN": "calm"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.5.46-MAT.5.47",
+            "figures": [
+              "FIG-GRUPPE-ZOELLNER",
+              "FIG-GRUPPE-VOELKER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-LIEBE"
+            ],
+            "speech": [],
+            "action_de": "Wer nur die liebt, die ihn lieben, und nur seine Brüder grüsst, tut nichts Besonderes; das tun auch die Zöllner und die Heiden.",
+            "stage": {
+              "x": {
+                "FIG-GRUPPE-ZOELLNER": 50,
+                "FIG-GRUPPE-VOELKER": 136
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-LIEBE": [
+                  "FIG-GRUPPE-ZOELLNER",
+                  "FIG-GRUPPE-VOELKER"
+                ]
+              },
+              "mood": {
+                "FIG-GRUPPE-ZOELLNER": "smile",
+                "FIG-GRUPPE-VOELKER": "smile"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.5.48",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-VOLLBRACHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-ZEICHEN-VOLLBRACHT"
+                ]
+              }
+            ],
+            "action_de": "Ihr sollt also vollkommen sein, wie euer himmlischer Vater vollkommen ist.",
+            "stage": {
+              "god_side": "right",
+              "x": {
+                "FIG-JESUS": 36,
+                "FIG-GRUPPE-JUENGER": 104
+              },
+              "at": {
+                "FIG-ZEICHEN-VOLLBRACHT": "FIG-GOTT"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "calm"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Zum Wort «Du sollst deinen Nächsten lieben und deinen Feind hassen» sagt Jesus: Liebt eure Feinde und betet für die, die euch verfolgen.",
+          "So werden sie Söhne ihres Vaters in den Himmeln; denn er lässt seine Sonne aufgehen über Böse und Gute und lässt regnen über Gerechte und Ungerechte.",
+          "Wer nur die liebt, die ihn lieben, und nur seine Brüder grüsst, tut nichts Besonderes; das tun auch die Zöllner und die Heiden.",
+          "Ihr sollt also vollkommen sein, wie euer himmlischer Vater vollkommen ist."
+        ],
+        "captions_de": [
+          "Feinde lieben: Die Jünger beten mit gefalteten Händen zum Vater (goldene Linie zum Strahlenkranz) für ihre Gegner (Sprechblase: Gruppe in Grau, zwei rote Herzen); die Gegner stehen abseits.",
+          "Der Vater gibt allen → Söhne des Vaters werden: Der Vater (Strahlenkranz) lässt es über einen Gerechten und einen Ungerechten regnen (blaue Tropfen über beiden, goldene Pfeile vom Strahlenkranz); beim Ungerechten ein dunkler Fleck.",
+          "Nichts Besonderes: Auch Zöllner (graugrüne Gewänder) und Menschen aus den Völkern (blau mit rotbraunem Überwurf) lieben die, die sie lieben (zwei rote Herzen über beiden Gruppen).",
+          "Vollkommen: Jesus sagt den Jüngern: Ihr sollt vollkommen, ganz sein (geschlossener goldener Ring mit Haken), wie euer Vater (Strahlenkranz, daneben derselbe Ring) vollkommen ist."
+        ],
+        "interpretation_note_de": "Die Gegner in Feld 1 stehen für «die, die euch verfolgen» ([[MAT.5.44]]). Die Sonne über Böse und Gute ([[MAT.5.45]]) zeigt das Bild nicht, weil der Strahlenkranz sonst als Sonne gelesen wird; es zeigt den Regen. Der dunkle Fleck kennzeichnet den Ungerechten. «Heiden» ([[MAT.5.47]]) sind Menschen aus den Völkern, ohne Wertung. Der goldene Ring mit Haken steht für «vollkommen» ([[MAT.5.48]]).",
+        "basis": [
+          {
+            "record": "TU-MAT-005-043-048",
+            "field": "summary",
+            "fingerprint": "df4906bb7266d61b"
+          },
+          {
+            "record": "TRANS-MAT-005-001-048-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.5.43-MAT.5.44",
+            "fingerprint": "62cc1230ce3bbe97"
+          },
+          {
+            "record": "TRANS-MAT-005-001-048-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.5.45",
+            "fingerprint": "bec3f94cd9bb9a90"
+          },
+          {
+            "record": "TRANS-MAT-005-001-048-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.5.46-MAT.5.47",
+            "fingerprint": "8d512b1cea5b92bb"
+          },
+          {
+            "record": "TRANS-MAT-005-001-048-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.5.48",
+            "fingerprint": "9e92bf148973a2c3"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Bild neu aus der Kernanalyse (Worte im Bild)",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-005-043-048",
+            "field": "summary",
+            "fingerprint": "df4906bb7266d61b"
+          },
+          {
+            "record": "TRANS-MAT-005-001-048-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.5.43-MAT.5.44",
+            "fingerprint": "62cc1230ce3bbe97"
+          },
+          {
+            "record": "TRANS-MAT-005-001-048-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.5.45",
+            "fingerprint": "bec3f94cd9bb9a90"
+          },
+          {
+            "record": "TRANS-MAT-005-001-048-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.5.48",
+            "fingerprint": "9e92bf148973a2c3"
+          }
+        ],
+        "rework": {
+          "since": "2026-10-23",
+          "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
+        }
+      }
     }
-  ],
-  "rework": {
-    "since": "2026-10-23",
-    "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
-  }
+  ]
 }

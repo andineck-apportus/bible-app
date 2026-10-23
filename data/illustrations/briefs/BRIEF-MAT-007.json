@@ -11,8 +11,9 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.7.1-MAT.7.6",
+      "reference": "MAT.7.3-MAT.7.5",
       "figures": [
+        "FIG-JESUS",
         "FIG-ROLLE-JUNGER-MANN",
         "FIG-ROLLE-MENSCH"
       ],
@@ -25,16 +26,22 @@
         {
           "from": "FIG-ROLLE-MENSCH",
           "to": "FIG-ROLLE-JUNGER-MANN",
-          "icons": [
-            "FIG-OBJ-SPLITTER",
-            "FIG-ZEICHEN-ZEIGEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Splitter",
+            "gsw": "Splitter"
+          }
         }
       ],
-      "action_de": "Jesus warnt davor, andere zu richten: Wer den Splitter im Auge des Bruders sieht, soll zuerst den Balken aus dem eigenen Auge ziehen.",
+      "action_de": "Wer den Splitter im Auge seines Bruders sieht und den Balken im eigenen Auge nicht bemerkt, soll zuerst den Balken aus dem eigenen Auge ziehen; dann sieht er klar, um den Splitter herauszuziehen.",
+      "keywords": {
+        "de": "den Balken",
+        "gsw": "de Balke"
+      },
       "stage": {
         "x": {
-          "FIG-ROLLE-JUNGER-MANN": 50,
+          "FIG-JESUS": 24,
+          "FIG-ROLLE-JUNGER-MANN": 72,
           "FIG-ROLLE-MENSCH": 128
         },
         "beside": {
@@ -42,143 +49,181 @@
           "FIG-OBJ-SPLITTER": "FIG-ROLLE-JUNGER-MANN"
         },
         "mood": {
+          "FIG-JESUS": "earnest",
           "FIG-ROLLE-MENSCH": "earnest",
           "FIG-ROLLE-JUNGER-MANN": "surprised"
+        },
+        "size": {
+          "FIG-JESUS": 0.7
         }
       }
     },
     {
       "n": 2,
-      "reference": "MAT.7.7-MAT.7.12",
+      "reference": "MAT.7.12",
       "figures": [
-        "FIG-GOTT",
-        "FIG-ROLLE-JUENGER"
+        "FIG-JESUS",
+        "FIG-ROLLE-JUENGER",
+        "FIG-ROLLE-MENSCH"
       ],
       "objects": [
-        "FIG-ORT-TUER-OFFEN"
+        "FIG-OBJ-BROT"
       ],
       "signs": [],
       "speech": [
         {
-          "from": "FIG-ROLLE-JUENGER",
-          "to": "FIG-GOTT",
+          "from": "FIG-JESUS",
+          "to": "FIG-ROLLE-JUENGER",
           "icons": [
-            "FIG-ZEICHEN-BETEN"
-          ]
+            "FIG-OBJ-SCHRIFTROLLE"
+          ],
+          "word": {
+            "de": "das Gesetz",
+            "gsw": "s Gsetz"
+          }
         }
       ],
-      "action_de": "Er ermutigt zum Bitten, Suchen und Anklopfen, denn der Vater in den Himmeln gibt denen Gutes, die ihn bitten.",
+      "action_de": "Alles, was ihr wollt, dass euch die Menschen tun, so tut auch ihr ihnen; denn das ist das Gesetz und die Propheten.",
+      "keywords": {
+        "de": "so tut auch ihr ihnen",
+        "gsw": "eso tüend au ir ine"
+      },
       "stage": {
-        "god_side": "right",
         "x": {
-          "FIG-ROLLE-JUENGER": 50
+          "FIG-JESUS": 24,
+          "FIG-ROLLE-JUENGER": 84,
+          "FIG-ROLLE-MENSCH": 162
         },
-        "back_side": "right",
+        "beside": {
+          "FIG-OBJ-BROT": "FIG-ROLLE-JUENGER"
+        },
         "arrows": [
           [
-            "FIG-GOTT",
-            "FIG-ORT-TUER-OFFEN",
+            "FIG-OBJ-BROT",
+            "FIG-ROLLE-MENSCH",
             "act"
           ]
         ],
         "mood": {
-          "FIG-ROLLE-JUENGER": "calm"
+          "FIG-JESUS": "calm",
+          "FIG-ROLLE-JUENGER": "smile",
+          "FIG-ROLLE-MENSCH": "smile"
+        },
+        "size": {
+          "FIG-JESUS": 0.7
         }
       }
     },
     {
       "n": 3,
-      "reference": "MAT.7.13-MAT.7.23",
+      "reference": "MAT.7.24-MAT.7.27",
       "figures": [
-        "FIG-ROLLE-JUENGER",
-        "FIG-ROLLE-FRAU"
+        "FIG-JESUS"
       ],
       "objects": [
-        "FIG-ORT-TOR-ENG"
+        "FIG-ORT-HAUS-SAND",
+        "FIG-ORT-HAUS-FELS"
       ],
       "signs": [
-        "FIG-ZEICHEN-LEBEN"
+        "FIG-ZEICHEN-STURM"
       ],
-      "speech": [],
-      "action_de": "Er ruft dazu auf, durch das enge Tor zu gehen, und warnt vor falschen Propheten, die man an ihren Früchten erkennt.",
+      "speech": [
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-GRUPPE-JUENGER",
+          "icons": [],
+          "word": {
+            "de": "hört und sie tut",
+            "gsw": "ghört und si tuet"
+          }
+        }
+      ],
+      "action_de": "Wer Jesu Worte hört und tut, baut sein Haus auf den Felsen, und es steht im Sturm; wer sie hört und nicht tut, baut auf den Sand, und sein Haus stürzt ein.",
+      "keywords": {
+        "de": "auf den Felsen",
+        "gsw": "uf de Fels"
+      },
       "stage": {
-        "x": {
-          "FIG-ROLLE-JUENGER": 34,
-          "FIG-ROLLE-FRAU": 72
-        },
         "back_side": "right",
+        "x": {
+          "FIG-JESUS": 93
+        },
+        "air_x": 140,
+        "air_y": 26,
+        "mood": {
+          "FIG-JESUS": "earnest"
+        },
         "arrows": [
           [
-            "FIG-ROLLE-FRAU",
-            "FIG-ORT-TOR-ENG",
-            "go"
+            "FIG-ZEICHEN-STURM",
+            "FIG-ORT-HAUS-SAND",
+            "act"
           ]
         ],
-        "mood": {
-          "FIG-ROLLE-JUENGER": "calm",
-          "FIG-ROLLE-FRAU": "smile"
-        },
-        "at": {
-          "FIG-ZEICHEN-LEBEN": "FIG-ORT-TOR-ENG"
+        "size": {
+          "FIG-JESUS": 0.7
         }
       }
     },
     {
       "n": 4,
-      "reference": "MAT.7.24-MAT.7.29",
+      "reference": "MAT.7.28-MAT.7.29",
       "figures": [
-        "FIG-ROLLE-MENSCH"
+        "FIG-JESUS",
+        "FIG-GRUPPE-MENGE"
       ],
       "objects": [
-        "FIG-ORT-HAUS-FELS"
+        "FIG-ORT-BERG"
       ],
       "signs": [
-        "FIG-ZEICHEN-HOEREN",
-        "FIG-ZEICHEN-STURM"
+        "FIG-ZEICHEN-VOLLMACHT"
       ],
       "speech": [],
-      "action_de": "Wer seine Worte hört und tut, gleicht einem klugen Mann, der auf Felsen baut; die Menschenmengen sind überwältigt, denn er lehrt mit Vollmacht.",
+      "action_de": "Als Jesus diese Worte beendet hat, sind die Menschenmengen überwältigt von seiner Lehre, denn er lehrt sie wie einer, der Vollmacht hat, und nicht wie ihre Schriftgelehrten.",
+      "keywords": {
+        "de": "überwältigt von seiner Lehre",
+        "gsw": "überwältiget vo sinere Lehr"
+      },
       "stage": {
+        "back_side": "left",
+        "before": true,
+        "on": {
+          "FIG-JESUS": "FIG-ORT-BERG"
+        },
+        "pose": {
+          "FIG-JESUS": "sit"
+        },
         "x": {
-          "FIG-ROLLE-MENSCH": 50
+          "FIG-JESUS": 44,
+          "FIG-GRUPPE-MENGE": 132
         },
-        "back_side": "right",
         "beside": {
-          "FIG-ZEICHEN-HOEREN": "FIG-ROLLE-MENSCH"
+          "FIG-ZEICHEN-VOLLMACHT": "FIG-JESUS"
         },
-        "air_x": 112,
-        "air_y": 8,
         "mood": {
-          "FIG-ROLLE-MENSCH": "calm"
-        },
-        "arrows": [
-          [
-            "FIG-ZEICHEN-STURM",
-            "FIG-ORT-HAUS-FELS",
-            "act"
-          ]
-        ]
+          "FIG-GRUPPE-MENGE": "surprised"
+        }
       }
     }
   ],
   "actions_de": [
-    "Jesus warnt davor, andere zu richten: Wer den Splitter im Auge des Bruders sieht, soll zuerst den Balken aus dem eigenen Auge ziehen.",
-    "Er ermutigt zum Bitten, Suchen und Anklopfen, denn der Vater in den Himmeln gibt denen Gutes, die ihn bitten.",
-    "Er ruft dazu auf, durch das enge Tor zu gehen, und warnt vor falschen Propheten, die man an ihren Früchten erkennt.",
-    "Wer seine Worte hört und tut, gleicht einem klugen Mann, der auf Felsen baut; die Menschenmengen sind überwältigt, denn er lehrt mit Vollmacht."
+    "Wer den Splitter im Auge seines Bruders sieht und den Balken im eigenen Auge nicht bemerkt, soll zuerst den Balken aus dem eigenen Auge ziehen; dann sieht er klar, um den Splitter herauszuziehen.",
+    "Alles, was ihr wollt, dass euch die Menschen tun, so tut auch ihr ihnen; denn das ist das Gesetz und die Propheten.",
+    "Wer Jesu Worte hört und tut, baut sein Haus auf den Felsen, und es steht im Sturm; wer sie hört und nicht tut, baut auf den Sand, und sein Haus stürzt ein.",
+    "Als Jesus diese Worte beendet hat, sind die Menschenmengen überwältigt von seiner Lehre, denn er lehrt sie wie einer, der Vollmacht hat, und nicht wie ihre Schriftgelehrten."
   ],
   "captions_de": [
-    "Splitter und Balken: Rechts ein Mann, aus dessen Auge ein langer Holzbalken ragt; er will den Splitter (kleines Holzstück neben dem Auge) aus dem Auge seines Bruders links ziehen.",
-    "Bitten → geöffnet: Ein Jünger bittet den Vater (Strahlenkranz; Gebetszeichen); der Vater öffnet ihm die Tür weit (goldener Pfeil zur offenen Holztür, dahinter warmes Licht).",
-    "Enges Tor: Wenige gehen (gestrichelter Pfeil) in ein enges Tor mit Licht (schmale Öffnung in der Mauer), das ins Leben führt (grüner Baum im goldenen Ring über dem Tor).",
-    "Hören und tun → das Haus steht: Ein Mann hört Jesu Worte (Ohr) und tut sie; sein Haus steht auf dem Felsen (Haus auf grauem Felsen). Der Sturm prallt dagegen (dunkle Wolke mit Blitz, Pfeil zum Haus) und bringt es nicht zum Einsturz."
+    "Splitter und Balken: Rechts ein Mann mit einem Balken im eigenen Auge (langer Holzbalken neben dem Kopf); er will seinem Bruder (Mitte) den Splitter (kleines Holzstück neben dem Auge) herausziehen. Jesus (links) lehrt.",
+    "Wie ihr es wollt: Ein Jünger reicht einem Mann ein Brot (Pfeil), wie er es sich selbst von ihm wünscht; Jesus (links) sagt: Das ist das Gesetz (Sprechblase: Schriftrolle).",
+    "Fels oder Sand: Jesus (Mitte) sagt: Wer hört und tut … Links steht das Haus auf dem Felsen, rechts stürzt das Haus auf dem Sand im Sturm ein (dunkle Wolke mit Blitz).",
+    "Lehre mit Vollmacht: Jesus sitzt auf dem Berg, bei ihm die Vollmacht (goldenes Zepter mit Strahlen); die Menschenmengen staunen über seine Lehre."
   ],
-  "interpretation_note_de": "Das Kapitelbild nimmt Felder aus den Abschnittsbildern auf. Feld 3 steht auch für die Warnung vor den falschen Propheten ([[MAT.7.15-MAT.7.23]]), Feld 4 auch für den Schluss der Bergpredigt ([[MAT.7.28-MAT.7.29]]). Gott erscheint als Strahlenkranz.",
+  "interpretation_note_de": "Das Kapitelbild nimmt Felder aus den Abschnittsbildern auf (Kernanalyse des Kapitels): Splitter und Balken ([[MAT.7.3-MAT.7.5]]), die Goldene Regel ([[MAT.7.12]]), das Gleichnis vom Haus auf dem Felsen und auf dem Sand ([[MAT.7.24-MAT.7.27]]) und die staunende Menge am Schluss ([[MAT.7.28-MAT.7.29]]). Bitten und Anklopfen, das enge Tor und die falschen Propheten stehen in den Abschnitten.",
   "basis": [
     {
       "record": "SUM-CH-MAT-007",
       "field": "summary",
-      "fingerprint": "7a188a6de2779f23"
+      "fingerprint": "c344c859ccf1c755"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
@@ -502,10 +547,422 @@
           "Auf Felsen gebaut: Ein Mann hört Jesu Worte (Ohr) und tut sie: Er hat sein Haus auf den Felsen gebaut (Haus auf grauem Felsen); der Sturm (dunkle Wolke mit Blitz und Wind) bringt es nicht zum Einsturz."
         ]
       }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.7.1-MAT.7.6",
+            "figures": [
+              "FIG-ROLLE-JUNGER-MANN",
+              "FIG-ROLLE-MENSCH"
+            ],
+            "objects": [
+              "FIG-OBJ-BALKEN",
+              "FIG-OBJ-SPLITTER"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-MENSCH",
+                "to": "FIG-ROLLE-JUNGER-MANN",
+                "icons": [
+                  "FIG-OBJ-SPLITTER",
+                  "FIG-ZEICHEN-ZEIGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus warnt davor, andere zu richten: Wer den Splitter im Auge des Bruders sieht, soll zuerst den Balken aus dem eigenen Auge ziehen.",
+            "stage": {
+              "x": {
+                "FIG-ROLLE-JUNGER-MANN": 50,
+                "FIG-ROLLE-MENSCH": 128
+              },
+              "beside": {
+                "FIG-OBJ-BALKEN": "FIG-ROLLE-MENSCH",
+                "FIG-OBJ-SPLITTER": "FIG-ROLLE-JUNGER-MANN"
+              },
+              "mood": {
+                "FIG-ROLLE-MENSCH": "earnest",
+                "FIG-ROLLE-JUNGER-MANN": "surprised"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.7.7-MAT.7.12",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-ROLLE-JUENGER"
+            ],
+            "objects": [
+              "FIG-ORT-TUER-OFFEN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-JUENGER",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-BETEN"
+                ]
+              }
+            ],
+            "action_de": "Er ermutigt zum Bitten, Suchen und Anklopfen, denn der Vater in den Himmeln gibt denen Gutes, die ihn bitten.",
+            "stage": {
+              "god_side": "right",
+              "x": {
+                "FIG-ROLLE-JUENGER": 50
+              },
+              "back_side": "right",
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-ORT-TUER-OFFEN",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-JUENGER": "calm"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.7.13-MAT.7.23",
+            "figures": [
+              "FIG-ROLLE-JUENGER",
+              "FIG-ROLLE-FRAU"
+            ],
+            "objects": [
+              "FIG-ORT-TOR-ENG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-LEBEN"
+            ],
+            "speech": [],
+            "action_de": "Er ruft dazu auf, durch das enge Tor zu gehen, und warnt vor falschen Propheten, die man an ihren Früchten erkennt.",
+            "stage": {
+              "x": {
+                "FIG-ROLLE-JUENGER": 34,
+                "FIG-ROLLE-FRAU": 72
+              },
+              "back_side": "right",
+              "arrows": [
+                [
+                  "FIG-ROLLE-FRAU",
+                  "FIG-ORT-TOR-ENG",
+                  "go"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-JUENGER": "calm",
+                "FIG-ROLLE-FRAU": "smile"
+              },
+              "at": {
+                "FIG-ZEICHEN-LEBEN": "FIG-ORT-TOR-ENG"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.7.24-MAT.7.29",
+            "figures": [
+              "FIG-ROLLE-MENSCH"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS-FELS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-HOEREN",
+              "FIG-ZEICHEN-STURM"
+            ],
+            "speech": [],
+            "action_de": "Wer seine Worte hört und tut, gleicht einem klugen Mann, der auf Felsen baut; die Menschenmengen sind überwältigt, denn er lehrt mit Vollmacht.",
+            "stage": {
+              "x": {
+                "FIG-ROLLE-MENSCH": 50
+              },
+              "back_side": "right",
+              "beside": {
+                "FIG-ZEICHEN-HOEREN": "FIG-ROLLE-MENSCH"
+              },
+              "air_x": 112,
+              "air_y": 8,
+              "mood": {
+                "FIG-ROLLE-MENSCH": "calm"
+              },
+              "arrows": [
+                [
+                  "FIG-ZEICHEN-STURM",
+                  "FIG-ORT-HAUS-FELS",
+                  "act"
+                ]
+              ]
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus warnt davor, andere zu richten: Wer den Splitter im Auge des Bruders sieht, soll zuerst den Balken aus dem eigenen Auge ziehen.",
+          "Er ermutigt zum Bitten, Suchen und Anklopfen, denn der Vater in den Himmeln gibt denen Gutes, die ihn bitten.",
+          "Er ruft dazu auf, durch das enge Tor zu gehen, und warnt vor falschen Propheten, die man an ihren Früchten erkennt.",
+          "Wer seine Worte hört und tut, gleicht einem klugen Mann, der auf Felsen baut; die Menschenmengen sind überwältigt, denn er lehrt mit Vollmacht."
+        ],
+        "captions_de": [
+          "Splitter und Balken: Rechts ein Mann, aus dessen Auge ein langer Holzbalken ragt; er will den Splitter (kleines Holzstück neben dem Auge) aus dem Auge seines Bruders links ziehen.",
+          "Bitten → geöffnet: Ein Jünger bittet den Vater (Strahlenkranz; Gebetszeichen); der Vater öffnet ihm die Tür weit (goldener Pfeil zur offenen Holztür, dahinter warmes Licht).",
+          "Enges Tor: Wenige gehen (gestrichelter Pfeil) in ein enges Tor mit Licht (schmale Öffnung in der Mauer), das ins Leben führt (grüner Baum im goldenen Ring über dem Tor).",
+          "Hören und tun → das Haus steht: Ein Mann hört Jesu Worte (Ohr) und tut sie; sein Haus steht auf dem Felsen (Haus auf grauem Felsen). Der Sturm prallt dagegen (dunkle Wolke mit Blitz, Pfeil zum Haus) und bringt es nicht zum Einsturz."
+        ],
+        "interpretation_note_de": "Das Kapitelbild nimmt Felder aus den Abschnittsbildern auf. Feld 3 steht auch für die Warnung vor den falschen Propheten ([[MAT.7.15-MAT.7.23]]), Feld 4 auch für den Schluss der Bergpredigt ([[MAT.7.28-MAT.7.29]]). Gott erscheint als Strahlenkranz."
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.7.3-MAT.7.5",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-JUNGER-MANN",
+              "FIG-ROLLE-MENSCH"
+            ],
+            "objects": [
+              "FIG-OBJ-BALKEN",
+              "FIG-OBJ-SPLITTER"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-MENSCH",
+                "to": "FIG-ROLLE-JUNGER-MANN",
+                "icons": [],
+                "word": {
+                  "de": "Splitter",
+                  "gsw": "Splitter"
+                }
+              }
+            ],
+            "action_de": "Wer den Splitter im Auge seines Bruders sieht und den Balken im eigenen Auge nicht bemerkt, soll zuerst den Balken aus dem eigenen Auge ziehen; dann sieht er klar, um den Splitter herauszuziehen.",
+            "keywords": {
+              "de": "den Balken",
+              "gsw": "de Balke"
+            },
+            "stage": {
+              "x": {
+                "FIG-JESUS": 24,
+                "FIG-ROLLE-JUNGER-MANN": 92,
+                "FIG-ROLLE-MENSCH": 152
+              },
+              "beside": {
+                "FIG-OBJ-BALKEN": "FIG-ROLLE-MENSCH",
+                "FIG-OBJ-SPLITTER": "FIG-ROLLE-JUNGER-MANN"
+              },
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-ROLLE-MENSCH": "earnest",
+                "FIG-ROLLE-JUNGER-MANN": "surprised"
+              },
+              "size": {
+                "FIG-JESUS": 0.7
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.7.12",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-JUENGER",
+              "FIG-ROLLE-MENSCH"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-SCHRIFTROLLE"
+                ],
+                "word": {
+                  "de": "das Gesetz",
+                  "gsw": "s Gsetz"
+                }
+              }
+            ],
+            "action_de": "Alles, was ihr wollt, dass euch die Menschen tun, so tut auch ihr ihnen; denn das ist das Gesetz und die Propheten.",
+            "keywords": {
+              "de": "so tut auch ihr ihnen",
+              "gsw": "eso tüend au ir ine"
+            },
+            "stage": {
+              "x": {
+                "FIG-JESUS": 24,
+                "FIG-ROLLE-JUENGER": 96,
+                "FIG-ROLLE-MENSCH": 156
+              },
+              "beside": {
+                "FIG-OBJ-BROT": "FIG-ROLLE-JUENGER"
+              },
+              "arrows": [
+                [
+                  "FIG-OBJ-BROT",
+                  "FIG-ROLLE-MENSCH",
+                  "act"
+                ],
+                [
+                  "FIG-ROLLE-MENSCH",
+                  "FIG-ROLLE-JUENGER",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-ROLLE-JUENGER": "smile",
+                "FIG-ROLLE-MENSCH": "smile"
+              },
+              "size": {
+                "FIG-JESUS": 0.7
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.7.24-MAT.7.27",
+            "figures": [
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS-SAND",
+              "FIG-ORT-HAUS-FELS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-STURM"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [],
+                "word": {
+                  "de": "hört und sie tut",
+                  "gsw": "ghört und si tuet"
+                }
+              }
+            ],
+            "action_de": "Wer Jesu Worte hört und tut, baut sein Haus auf den Felsen, und es steht im Sturm; wer sie hört und nicht tut, baut auf den Sand, und sein Haus stürzt ein.",
+            "keywords": {
+              "de": "auf den Felsen",
+              "gsw": "uf de Fels"
+            },
+            "stage": {
+              "back_side": "right",
+              "x": {
+                "FIG-JESUS": 93
+              },
+              "air_x": 132,
+              "air_y": 6,
+              "mood": {
+                "FIG-JESUS": "earnest"
+              },
+              "arrows": [
+                [
+                  "FIG-ZEICHEN-STURM",
+                  "FIG-ORT-HAUS-SAND",
+                  "act"
+                ]
+              ],
+              "size": {
+                "FIG-JESUS": 0.7
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.7.28-MAT.7.29",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-BERG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-VOLLMACHT"
+            ],
+            "speech": [],
+            "action_de": "Als Jesus diese Worte beendet hat, sind die Menschenmengen überwältigt von seiner Lehre, denn er lehrt sie wie einer, der Vollmacht hat, und nicht wie ihre Schriftgelehrten.",
+            "keywords": {
+              "de": "überwältigt von seiner Lehre",
+              "gsw": "überwältiget vo sinere Lehr"
+            },
+            "stage": {
+              "back_side": "left",
+              "before": true,
+              "on": {
+                "FIG-JESUS": "FIG-ORT-BERG"
+              },
+              "pose": {
+                "FIG-JESUS": "sit"
+              },
+              "x": {
+                "FIG-JESUS": 44,
+                "FIG-GRUPPE-MENGE": 132
+              },
+              "beside": {
+                "FIG-ZEICHEN-VOLLMACHT": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "surprised"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Splitter und Balken: Rechts ein Mann, aus dessen Auge ein langer Holzbalken ragt; er will seinem Bruder (Mitte) den Splitter (kleines Holzstück neben dem Auge) herausziehen. Jesus (links) lehrt.",
+          "Wie ihr es wollt: Ein Jünger reicht einem Mann ein Brot und bekommt Gutes zurück (Pfeile hin und zurück); Jesus (links) sagt: Das ist das Gesetz (Sprechblase: Schriftrolle).",
+          "Fels oder Sand: Jesus (Mitte) sagt: Wer hört und tut … Links steht das Haus auf dem Felsen, rechts stürzt das Haus auf dem Sand im Sturm ein (dunkle Wolke mit Blitz).",
+          "Lehre mit Vollmacht: Jesus sitzt auf dem Berg, bei ihm die Vollmacht (goldenes Zepter mit Strahlen); die Menschenmengen staunen über seine Lehre."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "captions_de": [
+          "Splitter und Balken: Rechts ein Mann, aus dessen Auge ein langer Holzbalken ragt; er will seinem Bruder (Mitte) den Splitter (kleines Holzstück neben dem Auge) herausziehen. Jesus (links) lehrt.",
+          "Wie ihr es wollt: Ein Jünger reicht einem Mann ein Brot (Pfeil), wie er es sich selbst von ihm wünscht; Jesus (links) sagt: Das ist das Gesetz (Sprechblase: Schriftrolle).",
+          "Fels oder Sand: Jesus (Mitte) sagt: Wer hört und tut … Links steht das Haus auf dem Felsen, rechts stürzt das Haus auf dem Sand im Sturm ein (dunkle Wolke mit Blitz).",
+          "Lehre mit Vollmacht: Jesus sitzt auf dem Berg, bei ihm die Vollmacht (goldenes Zepter mit Strahlen); die Menschenmengen staunen über seine Lehre."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Bild neu aus der Kernanalyse (Worte im Bild)",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-MAT-007",
+            "field": "summary",
+            "fingerprint": "7a188a6de2779f23"
+          }
+        ],
+        "rework": {
+          "since": "2026-10-23",
+          "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
+        }
+      }
     }
-  ],
-  "rework": {
-    "since": "2026-10-23",
-    "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
-  }
+  ]
 }

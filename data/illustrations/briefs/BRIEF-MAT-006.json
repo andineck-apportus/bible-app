@@ -11,52 +11,55 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.6.1-MAT.6.18",
+      "reference": "MAT.6.5-MAT.6.6",
       "figures": [
         "FIG-GOTT",
+        "FIG-GRUPPE-MENGE",
+        "FIG-ROLLE-HEUCHLER",
         "FIG-ROLLE-JUENGER"
       ],
       "objects": [
         "FIG-ORT-KAMMER"
       ],
-      "signs": [
-        "FIG-ZEICHEN-SEHEN"
-      ],
+      "signs": [],
       "speech": [
         {
           "from": "FIG-ROLLE-JUENGER",
           "to": "FIG-GOTT",
-          "icons": [
-            "FIG-ZEICHEN-BETEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Vater",
+            "gsw": "Vatter"
+          }
         }
       ],
-      "action_de": "Almosen, Gebet und Fasten sollen nicht vor den Menschen geschehen, sondern im Verborgenen vor dem Vater, der ins Verborgene sieht.",
+      "action_de": "Statt wie die Heuchler an den Strassenecken zu beten, damit die Menschen sie sehen, soll man in die Kammer gehen, die Tür schliessen und zum Vater beten, der im Verborgenen ist; der Vater, der ins Verborgene sieht, wird es vergelten.",
+      "keywords": {
+        "de": "in deine Kammer",
+        "gsw": "i dini Chammer"
+      },
       "stage": {
-        "mood": {
-          "FIG-ROLLE-JUENGER": "calm"
-        },
-        "god_side": "left",
+        "god_side": "right",
+        "back_side": "right",
         "before": true,
         "x": {
-          "FIG-ROLLE-JUENGER": 100
+          "FIG-GRUPPE-MENGE": 26,
+          "FIG-ROLLE-HEUCHLER": 70,
+          "FIG-ROLLE-JUENGER": 140
         },
-        "arrows": [
-          [
-            "FIG-GOTT",
-            "FIG-ROLLE-JUENGER",
-            "act"
-          ]
-        ],
-        "air_x": 66,
-        "air_y": 10
+        "mood": {
+          "FIG-GRUPPE-MENGE": "calm",
+          "FIG-ROLLE-HEUCHLER": "smile",
+          "FIG-ROLLE-JUENGER": "calm"
+        }
       }
     },
     {
       "n": 2,
-      "reference": "MAT.6.9-MAT.6.15",
+      "reference": "MAT.6.9-MAT.6.10",
       "figures": [
         "FIG-GOTT",
+        "FIG-JESUS",
         "FIG-GRUPPE-JUENGER"
       ],
       "objects": [],
@@ -66,126 +69,151 @@
           "from": "FIG-GRUPPE-JUENGER",
           "to": "FIG-GOTT",
           "icons": [
-            "FIG-ZEICHEN-NAME-GOTTES",
-            "FIG-OBJ-BROT",
-            "FIG-ZEICHEN-VERGEBEN"
-          ]
+            "FIG-ZEICHEN-REICH-GOTTES"
+          ],
+          "word": {
+            "de": "dein Reich komme",
+            "gsw": "diis Riich söll choo"
+          }
         }
       ],
-      "action_de": "In der Mitte steht das Vaterunser: Bitten um Gottes Namen, Reich und Willen, um Brot, Vergebung, Bewahrung und Rettung.",
+      "action_de": "Jesus gibt den Jüngern das Gebet vor: «Unser Vater in den Himmeln, dein Name werde geheiligt; dein Reich komme; dein Wille geschehe, wie im Himmel, so auch auf Erden.»",
+      "keywords": {
+        "de": "Unser Vater",
+        "gsw": "Öise Vatter"
+      },
       "stage": {
         "god_side": "right",
         "x": {
+          "FIG-JESUS": 28,
           "FIG-GRUPPE-JUENGER": 110
         },
-        "arrows": [
-          [
-            "FIG-GRUPPE-JUENGER",
-            "FIG-GOTT",
-            "act"
-          ]
-        ]
+        "mood": {
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-JUENGER": "calm"
+        },
+        "size": {
+          "FIG-JESUS": 0.7
+        }
       }
     },
     {
       "n": 3,
-      "reference": "MAT.6.19-MAT.6.24",
+      "reference": "MAT.6.19-MAT.6.21",
       "figures": [
         "FIG-GOTT",
+        "FIG-ROLLE-DIEB",
         "FIG-GRUPPE-JUENGER"
       ],
-      "objects": [
-        "FIG-OBJ-SCHATZ"
-      ],
+      "objects": [],
       "signs": [
-        "FIG-ZEICHEN-SCHATZ-ERDE"
+        "FIG-ZEICHEN-SCHATZ-ERDE",
+        "FIG-ZEICHEN-SCHATZ"
       ],
       "speech": [],
-      "action_de": "Die Jünger sollen keine Schätze auf der Erde sammeln, wo Motte und Rost sie zerstören, sondern Schätze im Himmel; denn wo ihr Schatz ist, da ist auch ihr Herz. Das Auge ist die Lampe des Leibes, und niemand kann zwei Herren dienen, Gott und dem Mammon.",
+      "action_de": "Sammelt euch keine Schätze auf der Erde, wo Motte und Frass zerstören und Diebe einbrechen, sondern Schätze im Himmel; denn wo dein Schatz ist, dort wird auch dein Herz sein.",
+      "keywords": {
+        "de": "Schätze im Himmel",
+        "gsw": "Schätz im Himel"
+      },
       "stage": {
         "god_side": "right",
-        "at": {
-          "FIG-OBJ-SCHATZ": "FIG-GOTT"
+        "x": {
+          "FIG-ROLLE-DIEB": 34,
+          "FIG-GRUPPE-JUENGER": 130
         },
-        "mood": {
-          "FIG-GRUPPE-JUENGER": "calm"
+        "floor_side": "left",
+        "floor_x": {
+          "FIG-ZEICHEN-SCHATZ-ERDE": 74
+        },
+        "at": {
+          "FIG-ZEICHEN-SCHATZ": "FIG-GOTT"
         },
         "arrows": [
           [
             "FIG-GRUPPE-JUENGER",
-            "FIG-GOTT",
+            "FIG-ZEICHEN-SCHATZ",
             "act"
           ]
         ],
-        "x": {
-          "FIG-GRUPPE-JUENGER": 140
-        },
-        "floor_x": {
-          "FIG-ZEICHEN-SCHATZ-ERDE": 40
+        "mood": {
+          "FIG-ROLLE-DIEB": "earnest",
+          "FIG-GRUPPE-JUENGER": "smile"
         }
       }
     },
     {
       "n": 4,
-      "reference": "MAT.6.25-MAT.6.34",
+      "reference": "MAT.6.33",
       "figures": [
-        "FIG-GOTT",
+        "FIG-JESUS",
         "FIG-GRUPPE-JUENGER"
       ],
       "objects": [
-        "FIG-OBJ-VOGEL",
-        "FIG-OBJ-BLUME"
+        "FIG-OBJ-BROT",
+        "FIG-OBJ-GEWAND"
       ],
       "signs": [
         "FIG-ZEICHEN-REICH-GOTTES"
       ],
-      "speech": [],
-      "action_de": "Die Jünger sollen sich nicht sorgen: Der Vater ernährt die Vögel und kleidet die Blumen des Feldes; sie sollen zuerst sein Reich und seine Gerechtigkeit suchen.",
+      "speech": [
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-GRUPPE-JUENGER",
+          "icons": [],
+          "word": {
+            "de": "Sucht",
+            "gsw": "Sueched"
+          }
+        }
+      ],
+      "action_de": "Sucht aber zuerst das Reich und seine Gerechtigkeit, und dies alles wird euch dazugegeben.",
+      "keywords": {
+        "de": "zuerst das Reich",
+        "gsw": "zerscht s Riich"
+      },
       "stage": {
-        "god_side": "center",
-        "count": {
-          "FIG-OBJ-VOGEL": 3,
-          "FIG-OBJ-BLUME": 3
+        "x": {
+          "FIG-JESUS": 28,
+          "FIG-GRUPPE-JUENGER": 96
         },
-        "mood": {
-          "FIG-GRUPPE-JUENGER": "calm"
-        },
+        "air_x": 150,
+        "air_y": 20,
         "arrows": [
           [
-            "FIG-GOTT",
-            "FIG-OBJ-BLUME",
+            "FIG-GRUPPE-JUENGER",
+            "FIG-ZEICHEN-REICH-GOTTES",
             "act"
           ]
         ],
-        "air_x": 116,
-        "air_y": 36,
-        "x": {
-          "FIG-GRUPPE-JUENGER": 44
+        "mood": {
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-JUENGER": "smile"
         },
-        "at": {
-          "FIG-ZEICHEN-REICH-GOTTES": "FIG-GRUPPE-JUENGER"
+        "size": {
+          "FIG-JESUS": 0.7
         }
       }
     }
   ],
   "actions_de": [
-    "Almosen, Gebet und Fasten sollen nicht vor den Menschen geschehen, sondern im Verborgenen vor dem Vater, der ins Verborgene sieht.",
-    "In der Mitte steht das Vaterunser: Bitten um Gottes Namen, Reich und Willen, um Brot, Vergebung, Bewahrung und Rettung.",
-    "Die Jünger sollen keine Schätze auf der Erde sammeln, wo Motte und Rost sie zerstören, sondern Schätze im Himmel; denn wo ihr Schatz ist, da ist auch ihr Herz. Das Auge ist die Lampe des Leibes, und niemand kann zwei Herren dienen, Gott und dem Mammon.",
-    "Die Jünger sollen sich nicht sorgen: Der Vater ernährt die Vögel und kleidet die Blumen des Feldes; sie sollen zuerst sein Reich und seine Gerechtigkeit suchen."
+    "Statt wie die Heuchler an den Strassenecken zu beten, damit die Menschen sie sehen, soll man in die Kammer gehen, die Tür schliessen und zum Vater beten, der im Verborgenen ist; der Vater, der ins Verborgene sieht, wird es vergelten.",
+    "Jesus gibt den Jüngern das Gebet vor: «Unser Vater in den Himmeln, dein Name werde geheiligt; dein Reich komme; dein Wille geschehe, wie im Himmel, so auch auf Erden.»",
+    "Sammelt euch keine Schätze auf der Erde, wo Motte und Frass zerstören und Diebe einbrechen, sondern Schätze im Himmel; denn wo dein Schatz ist, dort wird auch dein Herz sein.",
+    "Sucht aber zuerst das Reich und seine Gerechtigkeit, und dies alles wird euch dazugegeben."
   ],
   "captions_de": [
-    "Im Verborgenen → der Vater sieht: Ein Jünger betet allein in der Kammer bei geschlossener Tür zum Vater (Strahlenkranz); der Vater sieht ihn (Auge beim Strahlenkranz) und wendet sich ihm zu (goldener Pfeil zum Jünger).",
-    "Vaterunser: Die Jünger bitten den Vater (Strahlenkranz, Pfeil), dass sein Name geheiligt werde (Gottesname, leuchtend), um Brot und um Vergebung (zerrissener Schuldschein).",
-    "Schatz im Himmel → dort ist das Herz: Links der Schatz auf der Erde (graue Truhe mit Rost und Motte, durchgestrichen); rechts blicken die Jünger nach oben zu ihrem Schatz (Truhe mit Gold) beim Vater (Strahlenkranz; Pfeil von den Jüngern hinauf).",
-    "Der Vater sorgt → nicht sorgen: Der Vater (Strahlenkranz) sorgt für die Vögel und die Blumen (goldener Pfeil an den Vögeln entlang zu den Blumen); darum sorgen sich die Jünger nicht, sondern suchen zuerst sein Reich (Krone über ihnen)."
+    "In der Kammer: Links betet ein Heuchler (gelbe Ärmelborten) vor den Leuten, die ihm zuschauen; rechts betet ein Jünger allein vor der Kammer mit geschlossener Tür zum Vater (Strahlenkranz).",
+    "Unser Vater: Jesus (links) lehrt die Jünger beten; sie beten zum Vater (Strahlenkranz): Dein Reich komme (Sprechblase: goldene Krone mit Lichtstrahlen).",
+    "Schatz im Himmel: Links ein Dieb bei der Truhe auf der Erde (Truhe mit Rost und Motte, rot durchgestrichen); rechts blicken die Jünger zu ihrem Schatz beim Vater (Truhe mit Gold beim Strahlenkranz, Pfeil).",
+    "Zuerst das Reich: Jesus (links) sagt: Sucht! Die Jünger blicken zum Reich (goldene Krone mit Lichtstrahlen, Pfeil); Brot und Kleid (rechts am Boden) lassen sie hinter sich."
   ],
-  "interpretation_note_de": "Übersetzt ist bisher nur [[MAT.6.5-MAT.6.15]]; die Felder 1, 3 und 4 folgen der Kapitelzusammenfassung. Feld 1 steht stellvertretend für Almosen, Gebet und Fasten ([[MAT.6.1-MAT.6.18]]); Feld 2 zeigt drei der sieben Bitten (das Reich erscheint in Feld 4). Gott erscheint als Strahlenkranz; Jesus nennt ihn «Vater». Dass der Schatz beim Strahlenkranz steht, deutet «Schätze im Himmel» ([[MAT.6.20]]) an; die durchgestrichene Truhe mit Rost und Motte steht für die Schätze auf der Erde ([[MAT.6.19]]).",
+  "interpretation_note_de": "Das Kapitelbild nimmt je ein Feld aus den Abschnittsbildern auf (Kernanalyse des Kapitels): das Gebet in der Kammer ([[MAT.6.5-MAT.6.6]]) steht auch für Almosen und Fasten im Verborgenen, dann das Vaterunser ([[MAT.6.9-MAT.6.10]]), die Schätze im Himmel ([[MAT.6.19-MAT.6.21]]) und «Sucht zuerst das Reich» ([[MAT.6.33]]). Vögel und Lilien stehen im Abschnitt. Gott erscheint als Strahlenkranz.",
   "basis": [
     {
       "record": "SUM-CH-MAT-006",
       "field": "summary",
-      "fingerprint": "8ce62b49533058ee"
+      "fingerprint": "5aea0ecb937f093a"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
@@ -695,10 +723,396 @@
           "Nicht sorgen: Der Vater (Strahlenkranz) sorgt für die Vögel und die Blumen (Pfeil an den Vögeln entlang zu den Blumen); die Jünger suchen zuerst sein Reich (Krone über ihnen)."
         ]
       }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.6.1-MAT.6.18",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-ROLLE-JUENGER"
+            ],
+            "objects": [
+              "FIG-ORT-KAMMER"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-JUENGER",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-BETEN"
+                ]
+              }
+            ],
+            "action_de": "Almosen, Gebet und Fasten sollen nicht vor den Menschen geschehen, sondern im Verborgenen vor dem Vater, der ins Verborgene sieht.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-JUENGER": "calm"
+              },
+              "god_side": "left",
+              "before": true,
+              "x": {
+                "FIG-ROLLE-JUENGER": 100
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-ROLLE-JUENGER",
+                  "act"
+                ]
+              ],
+              "air_x": 66,
+              "air_y": 10
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.6.9-MAT.6.15",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-NAME-GOTTES",
+                  "FIG-OBJ-BROT",
+                  "FIG-ZEICHEN-VERGEBEN"
+                ]
+              }
+            ],
+            "action_de": "In der Mitte steht das Vaterunser: Bitten um Gottes Namen, Reich und Willen, um Brot, Vergebung, Bewahrung und Rettung.",
+            "stage": {
+              "god_side": "right",
+              "x": {
+                "FIG-GRUPPE-JUENGER": 110
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-GOTT",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.6.19-MAT.6.24",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHATZ"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SCHATZ-ERDE"
+            ],
+            "speech": [],
+            "action_de": "Die Jünger sollen keine Schätze auf der Erde sammeln, wo Motte und Rost sie zerstören, sondern Schätze im Himmel; denn wo ihr Schatz ist, da ist auch ihr Herz. Das Auge ist die Lampe des Leibes, und niemand kann zwei Herren dienen, Gott und dem Mammon.",
+            "stage": {
+              "god_side": "right",
+              "at": {
+                "FIG-OBJ-SCHATZ": "FIG-GOTT"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "calm"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-GOTT",
+                  "act"
+                ]
+              ],
+              "x": {
+                "FIG-GRUPPE-JUENGER": 140
+              },
+              "floor_x": {
+                "FIG-ZEICHEN-SCHATZ-ERDE": 40
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.6.25-MAT.6.34",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-VOGEL",
+              "FIG-OBJ-BLUME"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-REICH-GOTTES"
+            ],
+            "speech": [],
+            "action_de": "Die Jünger sollen sich nicht sorgen: Der Vater ernährt die Vögel und kleidet die Blumen des Feldes; sie sollen zuerst sein Reich und seine Gerechtigkeit suchen.",
+            "stage": {
+              "god_side": "center",
+              "count": {
+                "FIG-OBJ-VOGEL": 3,
+                "FIG-OBJ-BLUME": 3
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "calm"
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-OBJ-BLUME",
+                  "act"
+                ]
+              ],
+              "air_x": 116,
+              "air_y": 36,
+              "x": {
+                "FIG-GRUPPE-JUENGER": 44
+              },
+              "at": {
+                "FIG-ZEICHEN-REICH-GOTTES": "FIG-GRUPPE-JUENGER"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Almosen, Gebet und Fasten sollen nicht vor den Menschen geschehen, sondern im Verborgenen vor dem Vater, der ins Verborgene sieht.",
+          "In der Mitte steht das Vaterunser: Bitten um Gottes Namen, Reich und Willen, um Brot, Vergebung, Bewahrung und Rettung.",
+          "Die Jünger sollen keine Schätze auf der Erde sammeln, wo Motte und Rost sie zerstören, sondern Schätze im Himmel; denn wo ihr Schatz ist, da ist auch ihr Herz. Das Auge ist die Lampe des Leibes, und niemand kann zwei Herren dienen, Gott und dem Mammon.",
+          "Die Jünger sollen sich nicht sorgen: Der Vater ernährt die Vögel und kleidet die Blumen des Feldes; sie sollen zuerst sein Reich und seine Gerechtigkeit suchen."
+        ],
+        "captions_de": [
+          "Im Verborgenen → der Vater sieht: Ein Jünger betet allein in der Kammer bei geschlossener Tür zum Vater (Strahlenkranz); der Vater sieht ihn (Auge beim Strahlenkranz) und wendet sich ihm zu (goldener Pfeil zum Jünger).",
+          "Vaterunser: Die Jünger bitten den Vater (Strahlenkranz, Pfeil), dass sein Name geheiligt werde (Gottesname, leuchtend), um Brot und um Vergebung (zerrissener Schuldschein).",
+          "Schatz im Himmel → dort ist das Herz: Links der Schatz auf der Erde (graue Truhe mit Rost und Motte, durchgestrichen); rechts blicken die Jünger nach oben zu ihrem Schatz (Truhe mit Gold) beim Vater (Strahlenkranz; Pfeil von den Jüngern hinauf).",
+          "Der Vater sorgt → nicht sorgen: Der Vater (Strahlenkranz) sorgt für die Vögel und die Blumen (goldener Pfeil an den Vögeln entlang zu den Blumen); darum sorgen sich die Jünger nicht, sondern suchen zuerst sein Reich (Krone über ihnen)."
+        ],
+        "interpretation_note_de": "Übersetzt ist bisher nur [[MAT.6.5-MAT.6.15]]; die Felder 1, 3 und 4 folgen der Kapitelzusammenfassung. Feld 1 steht stellvertretend für Almosen, Gebet und Fasten ([[MAT.6.1-MAT.6.18]]); Feld 2 zeigt drei der sieben Bitten (das Reich erscheint in Feld 4). Gott erscheint als Strahlenkranz; Jesus nennt ihn «Vater». Dass der Schatz beim Strahlenkranz steht, deutet «Schätze im Himmel» ([[MAT.6.20]]) an; die durchgestrichene Truhe mit Rost und Motte steht für die Schätze auf der Erde ([[MAT.6.19]])."
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.6.5-MAT.6.6",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-MENGE",
+              "FIG-ROLLE-HEUCHLER",
+              "FIG-ROLLE-JUENGER"
+            ],
+            "objects": [
+              "FIG-ORT-KAMMER"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-JUENGER",
+                "to": "FIG-GOTT",
+                "icons": [],
+                "word": {
+                  "de": "Vater",
+                  "gsw": "Vatter"
+                }
+              }
+            ],
+            "action_de": "Statt wie die Heuchler an den Strassenecken zu beten, damit die Menschen sie sehen, soll man in die Kammer gehen, die Tür schliessen und zum Vater beten, der im Verborgenen ist; der Vater, der ins Verborgene sieht, wird es vergelten.",
+            "keywords": {
+              "de": "in deine Kammer",
+              "gsw": "i dini Chammer"
+            },
+            "stage": {
+              "god_side": "right",
+              "back_side": "right",
+              "before": true,
+              "x": {
+                "FIG-GRUPPE-MENGE": 26,
+                "FIG-ROLLE-HEUCHLER": 70,
+                "FIG-ROLLE-JUENGER": 140
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "calm",
+                "FIG-ROLLE-HEUCHLER": "smile",
+                "FIG-ROLLE-JUENGER": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.6.9-MAT.6.10",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-REICH-GOTTES"
+                ],
+                "word": {
+                  "de": "dein Reich komme",
+                  "gsw": "diis Riich söll choo"
+                }
+              }
+            ],
+            "action_de": "Jesus gibt den Jüngern das Gebet vor: «Unser Vater in den Himmeln, dein Name werde geheiligt; dein Reich komme; dein Wille geschehe, wie im Himmel, so auch auf Erden.»",
+            "keywords": {
+              "de": "Unser Vater",
+              "gsw": "Öise Vatter"
+            },
+            "stage": {
+              "god_side": "right",
+              "x": {
+                "FIG-JESUS": 28,
+                "FIG-GRUPPE-JUENGER": 110
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "calm"
+              },
+              "size": {
+                "FIG-JESUS": 0.7
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.6.19-MAT.6.21",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-ROLLE-DIEB",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-SCHATZ-ERDE",
+              "FIG-ZEICHEN-SCHATZ"
+            ],
+            "speech": [],
+            "action_de": "Sammelt euch keine Schätze auf der Erde, wo Motte und Frass zerstören und Diebe einbrechen, sondern Schätze im Himmel; denn wo dein Schatz ist, dort wird auch dein Herz sein.",
+            "keywords": {
+              "de": "Schätze im Himmel",
+              "gsw": "Schätz im Himel"
+            },
+            "stage": {
+              "god_side": "right",
+              "x": {
+                "FIG-ROLLE-DIEB": 34,
+                "FIG-GRUPPE-JUENGER": 130
+              },
+              "floor_side": "left",
+              "floor_x": {
+                "FIG-ZEICHEN-SCHATZ-ERDE": 74
+              },
+              "at": {
+                "FIG-ZEICHEN-SCHATZ": "FIG-GOTT"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-ZEICHEN-SCHATZ",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-DIEB": "earnest",
+                "FIG-GRUPPE-JUENGER": "smile"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.6.33",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT",
+              "FIG-OBJ-GEWAND"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-REICH-GOTTES"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [],
+                "word": {
+                  "de": "Sucht",
+                  "gsw": "Sueched"
+                }
+              }
+            ],
+            "action_de": "Sucht aber zuerst das Reich und seine Gerechtigkeit, und dies alles wird euch dazugegeben.",
+            "keywords": {
+              "de": "zuerst das Reich",
+              "gsw": "zerscht s Riich"
+            },
+            "stage": {
+              "x": {
+                "FIG-JESUS": 28,
+                "FIG-GRUPPE-JUENGER": 96
+              },
+              "air_x": 70,
+              "air_y": 6,
+              "arrows": [
+                [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-ZEICHEN-REICH-GOTTES",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "smile"
+              },
+              "size": {
+                "FIG-JESUS": 0.7
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Bild neu aus der Kernanalyse (Worte im Bild)",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-MAT-006",
+            "field": "summary",
+            "fingerprint": "8ce62b49533058ee"
+          }
+        ],
+        "rework": {
+          "since": "2026-10-23",
+          "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
+        }
+      }
     }
-  ],
-  "rework": {
-    "since": "2026-10-23",
-    "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
-  }
+  ]
 }

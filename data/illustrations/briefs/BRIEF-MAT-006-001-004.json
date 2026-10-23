@@ -11,124 +11,133 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.6.1-MAT.6.2",
+      "reference": "MAT.6.1",
+      "figures": [
+        "FIG-JESUS",
+        "FIG-ROLLE-MENSCH",
+        "FIG-GRUPPE-MENGE"
+      ],
+      "objects": [],
+      "signs": [
+        "FIG-ZEICHEN-GUTE-WERKE",
+        "FIG-ZEICHEN-SEHEN"
+      ],
+      "speech": [
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-ROLLE-MENSCH",
+          "icons": [],
+          "word": {
+            "de": "Achtet darauf",
+            "gsw": "Passed uf"
+          }
+        }
+      ],
+      "action_de": "Jesus warnt: Achtet darauf, eure Gerechtigkeit nicht vor den Menschen zu üben, um von ihnen gesehen zu werden; sonst habt ihr keinen Lohn bei eurem Vater in den Himmeln.",
+      "keywords": {
+        "de": "gesehen zu werden",
+        "gsw": "damit si eu gsehnd"
+      },
+      "stage": {
+        "x": {
+          "FIG-JESUS": 26,
+          "FIG-ROLLE-MENSCH": 92,
+          "FIG-GRUPPE-MENGE": 156
+        },
+        "at": {
+          "FIG-ZEICHEN-GUTE-WERKE": "FIG-ROLLE-MENSCH",
+          "FIG-ZEICHEN-SEHEN": "FIG-GRUPPE-MENGE"
+        },
+        "pose": {
+          "FIG-ROLLE-MENSCH": "away"
+        },
+        "mood": {
+          "FIG-JESUS": "earnest",
+          "FIG-ROLLE-MENSCH": "smile",
+          "FIG-GRUPPE-MENGE": "surprised"
+        },
+        "size": {
+          "FIG-JESUS": 0.7
+        }
+      }
+    },
+    {
+      "n": 2,
+      "reference": "MAT.6.2-MAT.6.4",
       "figures": [
         "FIG-ROLLE-HEUCHLER",
         "FIG-ROLLE-ARMER",
-        "FIG-GRUPPE-MENGE"
+        "FIG-ROLLE-JUENGER"
       ],
       "objects": [
         "FIG-OBJ-POSAUNE",
         "FIG-OBJ-MUENZEN"
       ],
       "signs": [
-        "FIG-ZEICHEN-SEHEN"
+        "FIG-ZEICHEN-NEIN"
       ],
       "speech": [],
-      "action_de": "Wer Almosen gibt, soll nicht die Posaune vor sich her blasen wie die Heuchler, damit sie von den Menschen gerühmt werden; sie haben ihren Lohn schon erhalten.",
+      "action_de": "Wer Almosen gibt, soll nicht die Posaune vor sich her blasen wie die Heuchler, damit sie von den Menschen gerühmt werden; die linke Hand soll nicht wissen, was die rechte tut, damit das Almosen im Verborgenen bleibt, und der Vater, der ins Verborgene sieht, wird es vergelten.",
+      "keywords": {
+        "de": "blas nicht die Posaune",
+        "gsw": "blaas nöd d Posuune"
+      },
       "stage": {
         "x": {
-          "FIG-ROLLE-HEUCHLER": 36,
+          "FIG-ROLLE-HEUCHLER": 34,
           "FIG-ROLLE-ARMER": 100,
-          "FIG-GRUPPE-MENGE": 156
+          "FIG-ROLLE-JUENGER": 156
         },
         "hold": {
-          "FIG-ROLLE-HEUCHLER": "FIG-OBJ-POSAUNE",
-          "FIG-ROLLE-ARMER": "FIG-OBJ-MUENZEN"
+          "FIG-ROLLE-HEUCHLER": "FIG-OBJ-POSAUNE"
+        },
+        "beside": {
+          "FIG-OBJ-MUENZEN": "FIG-ROLLE-JUENGER"
         },
         "at": {
-          "FIG-ZEICHEN-SEHEN": "FIG-GRUPPE-MENGE"
+          "FIG-ZEICHEN-NEIN": "FIG-ROLLE-HEUCHLER"
         },
         "arrows": [
           [
-            "FIG-ROLLE-HEUCHLER",
-            "FIG-GRUPPE-MENGE",
+            "FIG-OBJ-MUENZEN",
+            "FIG-ROLLE-ARMER",
             "act"
           ]
         ],
         "mood": {
           "FIG-ROLLE-HEUCHLER": "smile",
-          "FIG-ROLLE-ARMER": "calm",
-          "FIG-GRUPPE-MENGE": "surprised"
+          "FIG-ROLLE-ARMER": "smile",
+          "FIG-ROLLE-JUENGER": "calm"
         }
-      }
-    },
-    {
-      "n": 2,
-      "reference": "MAT.6.3-MAT.6.4",
-      "figures": [
-        "FIG-GOTT",
-        "FIG-ROLLE-JUENGER",
-        "FIG-ROLLE-ARMER"
-      ],
-      "objects": [
-        "FIG-OBJ-MUENZEN"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-SEHEN",
-        "FIG-ZEICHEN-SCHATZ"
-      ],
-      "speech": [],
-      "action_de": "Wer Almosen gibt, soll es im Verborgenen tun: Die linke Hand soll nicht wissen, was die rechte tut; der Vater, der ins Verborgene sieht, wird es vergelten.",
-      "stage": {
-        "god_side": "left",
-        "x": {
-          "FIG-ROLLE-JUENGER": 92,
-          "FIG-ROLLE-ARMER": 150
-        },
-        "hold": {
-          "FIG-ROLLE-ARMER": "FIG-OBJ-MUENZEN"
-        },
-        "at": {
-          "FIG-ZEICHEN-SCHATZ": "FIG-GOTT"
-        },
-        "arrows": [
-          [
-            "FIG-ROLLE-JUENGER",
-            "FIG-ROLLE-ARMER",
-            "act"
-          ],
-          [
-            "FIG-GOTT",
-            "FIG-ROLLE-JUENGER",
-            "act"
-          ]
-        ],
-        "mood": {
-          "FIG-ROLLE-JUENGER": "calm",
-          "FIG-ROLLE-ARMER": "smile"
-        },
-        "air_x": 34,
-        "air_y": 46
       }
     }
   ],
   "actions_de": [
-    "Wer Almosen gibt, soll nicht die Posaune vor sich her blasen wie die Heuchler, damit sie von den Menschen gerühmt werden; sie haben ihren Lohn schon erhalten.",
-    "Wer Almosen gibt, soll es im Verborgenen tun: Die linke Hand soll nicht wissen, was die rechte tut; der Vater, der ins Verborgene sieht, wird es vergelten."
+    "Jesus warnt: Achtet darauf, eure Gerechtigkeit nicht vor den Menschen zu üben, um von ihnen gesehen zu werden; sonst habt ihr keinen Lohn bei eurem Vater in den Himmeln.",
+    "Wer Almosen gibt, soll nicht die Posaune vor sich her blasen wie die Heuchler, damit sie von den Menschen gerühmt werden; die linke Hand soll nicht wissen, was die rechte tut, damit das Almosen im Verborgenen bleibt, und der Vater, der ins Verborgene sieht, wird es vergelten."
   ],
   "captions_de": [
-    "Geben mit Posaune → gerühmt werden: Ein Heuchler bläst die Posaune (goldgelbes Blasrohr) und hat einem Armen gegeben (Münzen beim Armen); der Pfeil führt vom Heuchler zu den Leuten, die auf ihn schauen (Auge) – das ist schon sein Lohn.",
-    "Geben im Verborgenen → der Vater vergilt: Ein Jünger gibt einem Armen still Geld (Pfeil; Münzen beim Armen); der Vater (Strahlenkranz, darunter ein Auge) sieht es und wird es vergelten (offene Truhe mit Goldmünzen beim Strahlenkranz, goldener Pfeil zum Jünger)."
+    "Um gesehen zu werden: Ein Mann tut Gutes (Hand reicht ein Brot, Herz) und schaut zu den Leuten, die ihm zusehen (Auge); Jesus (links) warnt: Achtet darauf!",
+    "Nicht mit Posaune: Links bläst ein Heuchler die Posaune (goldgelbes Blasrohr; rotes X); rechts gibt ein Jünger einem Armen still Geld (Münzen, Pfeil zum Armen)."
   ],
-  "interpretation_note_de": "Der Heuchler ([[MAT.6.2]]) ist eine Rolle in Jesu Rede, keine bestimmte Gruppe; Synagogen und Gassen werden nicht gezeigt. Dass er beim Geben die Posaune selbst bläst, nimmt das Bildwort wörtlich. «Die linke Hand soll nicht wissen, was die rechte tut» ([[MAT.6.3]]) zeigt das Bild als stilles Geben. Die offene Truhe steht für den Lohn, den der Vater gibt ([[MAT.6.4]]); Gott erscheint als Strahlenkranz.",
+  "interpretation_note_de": "Bild einer Rede: Jesus spricht, das Gesagte ist gross daneben gezeigt. Feld 1 zeigt die Warnung ([[MAT.6.1]]), Feld 2 Jesu Beispiel: den Heuchler mit der Posaune und den Jünger, der still gibt ([[MAT.6.2-MAT.6.4]]). Synagogen und Gassen sind nicht im Bild. Das rote X beim Heuchler bedeutet «nicht so» und richtet sich gegen das Tun, nicht gegen die Person.",
   "basis": [
     {
       "record": "TU-MAT-006-001-004",
       "field": "summary",
-      "fingerprint": "95d9eba24fa0d0c2"
+      "fingerprint": "90e0bdc8af565141"
     },
     {
       "record": "TRANS-MAT-006-001-004-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.6.1-MAT.6.2",
-      "fingerprint": "a01dd007da14778c"
+      "reference": "MAT.6.1",
+      "fingerprint": "4e9002c4ab5c3866"
     },
     {
       "record": "TRANS-MAT-006-001-004-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.6.3-MAT.6.4",
-      "fingerprint": "24281e85f70ce353"
+      "reference": "MAT.6.2-MAT.6.4",
+      "fingerprint": "7168b65dbda01f1d"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
@@ -339,10 +348,164 @@
           "Im Verborgenen: Ein Jünger gibt einem Armen still Geld (Pfeil; Münzen beim Armen); der Vater (Strahlenkranz, darunter ein Auge) sieht es und wird es vergelten (offene Truhe mit Goldmünzen beim Strahlenkranz, goldener Pfeil zum Jünger)."
         ]
       }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.6.1-MAT.6.2",
+            "figures": [
+              "FIG-ROLLE-HEUCHLER",
+              "FIG-ROLLE-ARMER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-POSAUNE",
+              "FIG-OBJ-MUENZEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SEHEN"
+            ],
+            "speech": [],
+            "action_de": "Wer Almosen gibt, soll nicht die Posaune vor sich her blasen wie die Heuchler, damit sie von den Menschen gerühmt werden; sie haben ihren Lohn schon erhalten.",
+            "stage": {
+              "x": {
+                "FIG-ROLLE-HEUCHLER": 36,
+                "FIG-ROLLE-ARMER": 100,
+                "FIG-GRUPPE-MENGE": 156
+              },
+              "hold": {
+                "FIG-ROLLE-HEUCHLER": "FIG-OBJ-POSAUNE",
+                "FIG-ROLLE-ARMER": "FIG-OBJ-MUENZEN"
+              },
+              "at": {
+                "FIG-ZEICHEN-SEHEN": "FIG-GRUPPE-MENGE"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-HEUCHLER",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-HEUCHLER": "smile",
+                "FIG-ROLLE-ARMER": "calm",
+                "FIG-GRUPPE-MENGE": "surprised"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.6.3-MAT.6.4",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-ROLLE-JUENGER",
+              "FIG-ROLLE-ARMER"
+            ],
+            "objects": [
+              "FIG-OBJ-MUENZEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SEHEN",
+              "FIG-ZEICHEN-SCHATZ"
+            ],
+            "speech": [],
+            "action_de": "Wer Almosen gibt, soll es im Verborgenen tun: Die linke Hand soll nicht wissen, was die rechte tut; der Vater, der ins Verborgene sieht, wird es vergelten.",
+            "stage": {
+              "god_side": "left",
+              "x": {
+                "FIG-ROLLE-JUENGER": 92,
+                "FIG-ROLLE-ARMER": 150
+              },
+              "hold": {
+                "FIG-ROLLE-ARMER": "FIG-OBJ-MUENZEN"
+              },
+              "at": {
+                "FIG-ZEICHEN-SCHATZ": "FIG-GOTT"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-JUENGER",
+                  "FIG-ROLLE-ARMER",
+                  "act"
+                ],
+                [
+                  "FIG-GOTT",
+                  "FIG-ROLLE-JUENGER",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-JUENGER": "calm",
+                "FIG-ROLLE-ARMER": "smile"
+              },
+              "air_x": 34,
+              "air_y": 46
+            }
+          }
+        ],
+        "actions_de": [
+          "Wer Almosen gibt, soll nicht die Posaune vor sich her blasen wie die Heuchler, damit sie von den Menschen gerühmt werden; sie haben ihren Lohn schon erhalten.",
+          "Wer Almosen gibt, soll es im Verborgenen tun: Die linke Hand soll nicht wissen, was die rechte tut; der Vater, der ins Verborgene sieht, wird es vergelten."
+        ],
+        "captions_de": [
+          "Geben mit Posaune → gerühmt werden: Ein Heuchler bläst die Posaune (goldgelbes Blasrohr) und hat einem Armen gegeben (Münzen beim Armen); der Pfeil führt vom Heuchler zu den Leuten, die auf ihn schauen (Auge) – das ist schon sein Lohn.",
+          "Geben im Verborgenen → der Vater vergilt: Ein Jünger gibt einem Armen still Geld (Pfeil; Münzen beim Armen); der Vater (Strahlenkranz, darunter ein Auge) sieht es und wird es vergelten (offene Truhe mit Goldmünzen beim Strahlenkranz, goldener Pfeil zum Jünger)."
+        ],
+        "interpretation_note_de": "Der Heuchler ([[MAT.6.2]]) ist eine Rolle in Jesu Rede, keine bestimmte Gruppe; Synagogen und Gassen werden nicht gezeigt. Dass er beim Geben die Posaune selbst bläst, nimmt das Bildwort wörtlich. «Die linke Hand soll nicht wissen, was die rechte tut» ([[MAT.6.3]]) zeigt das Bild als stilles Geben. Die offene Truhe steht für den Lohn, den der Vater gibt ([[MAT.6.4]]); Gott erscheint als Strahlenkranz.",
+        "basis": [
+          {
+            "record": "TU-MAT-006-001-004",
+            "field": "summary",
+            "fingerprint": "95d9eba24fa0d0c2"
+          },
+          {
+            "record": "TRANS-MAT-006-001-004-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.6.1-MAT.6.2",
+            "fingerprint": "a01dd007da14778c"
+          },
+          {
+            "record": "TRANS-MAT-006-001-004-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.6.3-MAT.6.4",
+            "fingerprint": "24281e85f70ce353"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Bild neu aus der Kernanalyse (Worte im Bild)",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-006-001-004",
+            "field": "summary",
+            "fingerprint": "95d9eba24fa0d0c2"
+          },
+          {
+            "record": "TRANS-MAT-006-001-004-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.6.1",
+            "fingerprint": "4e9002c4ab5c3866"
+          },
+          {
+            "record": "TRANS-MAT-006-001-004-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.6.2-MAT.6.4",
+            "fingerprint": "7168b65dbda01f1d"
+          }
+        ],
+        "rework": {
+          "since": "2026-10-23",
+          "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
+        }
+      }
     }
-  ],
-  "rework": {
-    "since": "2026-10-23",
-    "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
-  }
+  ]
 }

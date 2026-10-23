@@ -14,35 +14,47 @@
       "reference": "MAT.7.1-MAT.7.2",
       "figures": [
         "FIG-JESUS",
-        "FIG-GRUPPE-JUENGER"
+        "FIG-ROLLE-MENSCH",
+        "FIG-ROLLE-JUNGER-MANN"
       ],
       "objects": [],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-ZEIGEN"
+      ],
       "speech": [
         {
           "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
+          "to": "FIG-ROLLE-MENSCH",
           "icons": [
             "FIG-ZEICHEN-NICHT-RICHTEN"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-OBJ-SCHEFFEL",
-            "FIG-ZEICHEN-UMKEHR"
-          ]
+          ],
+          "word": {
+            "de": "Mass",
+            "gsw": "Mass"
+          }
         }
       ],
-      "action_de": "Richtet nicht, damit ihr nicht gerichtet werdet; mit dem Mass, mit dem ihr messt, wird euch gemessen werden.",
+      "action_de": "Richtet nicht, damit ihr nicht gerichtet werdet; denn mit dem Urteil, mit dem ihr richtet, werdet ihr gerichtet, und mit dem Mass, mit dem ihr messt, wird euch gemessen.",
+      "keywords": {
+        "de": "Richtet nicht",
+        "gsw": "Richted nöd"
+      },
       "stage": {
         "x": {
-          "FIG-JESUS": 40,
-          "FIG-GRUPPE-JUENGER": 132
+          "FIG-JESUS": 24,
+          "FIG-ROLLE-MENSCH": 92,
+          "FIG-ROLLE-JUNGER-MANN": 154
+        },
+        "beside": {
+          "FIG-ZEICHEN-ZEIGEN": "FIG-ROLLE-MENSCH"
         },
         "mood": {
-          "FIG-GRUPPE-JUENGER": "calm"
+          "FIG-JESUS": "earnest",
+          "FIG-ROLLE-MENSCH": "angry",
+          "FIG-ROLLE-JUNGER-MANN": "worried"
+        },
+        "size": {
+          "FIG-JESUS": 0.7
         }
       }
     },
@@ -50,6 +62,7 @@
       "n": 2,
       "reference": "MAT.7.3-MAT.7.5",
       "figures": [
+        "FIG-JESUS",
         "FIG-ROLLE-JUNGER-MANN",
         "FIG-ROLLE-MENSCH"
       ],
@@ -62,16 +75,22 @@
         {
           "from": "FIG-ROLLE-MENSCH",
           "to": "FIG-ROLLE-JUNGER-MANN",
-          "icons": [
-            "FIG-OBJ-SPLITTER",
-            "FIG-ZEICHEN-ZEIGEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Splitter",
+            "gsw": "Splitter"
+          }
         }
       ],
-      "action_de": "Wer den Splitter im Auge seines Bruders sieht, den Balken im eigenen Auge aber nicht bemerkt, soll zuerst den Balken aus dem eigenen Auge ziehen.",
+      "action_de": "Wer den Splitter im Auge seines Bruders sieht und den Balken im eigenen Auge nicht bemerkt, soll zuerst den Balken aus dem eigenen Auge ziehen; dann sieht er klar, um den Splitter herauszuziehen.",
+      "keywords": {
+        "de": "den Balken",
+        "gsw": "de Balke"
+      },
       "stage": {
         "x": {
-          "FIG-ROLLE-JUNGER-MANN": 50,
+          "FIG-JESUS": 24,
+          "FIG-ROLLE-JUNGER-MANN": 72,
           "FIG-ROLLE-MENSCH": 128
         },
         "beside": {
@@ -79,60 +98,30 @@
           "FIG-OBJ-SPLITTER": "FIG-ROLLE-JUNGER-MANN"
         },
         "mood": {
+          "FIG-JESUS": "earnest",
           "FIG-ROLLE-MENSCH": "earnest",
           "FIG-ROLLE-JUNGER-MANN": "surprised"
-        }
-      }
-    },
-    {
-      "n": 3,
-      "reference": "MAT.7.6",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-JUENGER"
-      ],
-      "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-OBJ-PERLE",
-            "FIG-ZEICHEN-DARAUS",
-            "FIG-OBJ-SCHWEIN",
-            "FIG-ZEICHEN-NEIN"
-          ]
-        }
-      ],
-      "action_de": "Gebt das Heilige nicht den Hunden und werft eure Perlen nicht vor die Schweine.",
-      "stage": {
-        "x": {
-          "FIG-JESUS": 30,
-          "FIG-GRUPPE-JUENGER": 140
         },
-        "mood": {
-          "FIG-GRUPPE-JUENGER": "calm"
+        "size": {
+          "FIG-JESUS": 0.7
         }
       }
     }
   ],
   "actions_de": [
-    "Richtet nicht, damit ihr nicht gerichtet werdet; mit dem Mass, mit dem ihr messt, wird euch gemessen werden.",
-    "Wer den Splitter im Auge seines Bruders sieht, den Balken im eigenen Auge aber nicht bemerkt, soll zuerst den Balken aus dem eigenen Auge ziehen.",
-    "Gebt das Heilige nicht den Hunden und werft eure Perlen nicht vor die Schweine."
+    "Richtet nicht, damit ihr nicht gerichtet werdet; denn mit dem Urteil, mit dem ihr richtet, werdet ihr gerichtet, und mit dem Mass, mit dem ihr messt, wird euch gemessen.",
+    "Wer den Splitter im Auge seines Bruders sieht und den Balken im eigenen Auge nicht bemerkt, soll zuerst den Balken aus dem eigenen Auge ziehen; dann sieht er klar, um den Splitter herauszuziehen."
   ],
   "captions_de": [
-    "Nicht richten: Jesus sagt den Jüngern: Richtet nicht (Waage, rot durchgestrichen); mit eurem Mass (Messgefäss) wird euch zurückgemessen (Pfeil, der im Bogen umkehrt).",
-    "Splitter und Balken: Rechts ein Mann, aus dessen Auge ein langer Holzbalken ragt; er will den Splitter (kleines Holzstück neben dem Auge) aus dem Auge seines Bruders links ziehen (Sprechblase: Splitter, zeigender Finger).",
-    "Perlen nicht vor die Schweine: Jesus sagt den Jüngern: die Perlen (drei weisse Perlen) nicht den Schweinen hinwerfen (Pfeil zum Schwein, rotes X)."
+    "Nicht richten: Ein Mann zeigt urteilend auf einen anderen (zeigender Finger); Jesus (links) wehrt ab: Richtet nicht (Sprechblase: Waage, rot durchgestrichen) – mit eurem Mass wird euch gemessen.",
+    "Splitter und Balken: Rechts ein Mann mit einem Balken im eigenen Auge (langer Holzbalken neben dem Kopf); er will seinem Bruder (Mitte) den Splitter (kleines Holzstück neben dem Auge) herausziehen. Jesus (links) lehrt."
   ],
-  "interpretation_note_de": "Das Messgefäss (Scheffel) steht für «das Mass, mit dem ihr messt» ([[MAT.7.2]]). Balken und Splitter ([[MAT.7.3-MAT.7.5]]) stehen neben den Köpfen, damit keine Verletzung gezeigt wird; der Bruder erscheint als junger Mann. «Das Heilige» ([[MAT.7.6]]), oft als Opferfleisch verstanden, und die Hunde nennt nur die Handlung. Was Hunde und Schweine tun, zeigt es nicht.",
+  "interpretation_note_de": "Bild einer Rede: Jesus (links) spricht, das Gesagte ist gross daneben gezeigt. In Feld 2 ist der Balken im Auge ein Bildwort Jesu ([[MAT.7.3-MAT.7.5]]), keine wirkliche Szene. Das Wort von den Perlen vor den Schweinen ([[MAT.7.6]]) ist nicht im Bild.",
   "basis": [
     {
       "record": "TU-MAT-007-001-006",
       "field": "summary",
-      "fingerprint": "8b915d433947b85a"
+      "fingerprint": "86e1c11a51b89fb0"
     },
     {
       "record": "TRANS-MAT-007-001-029-DE-WORKING",
@@ -145,12 +134,6 @@
       "field": "text_by_reference",
       "reference": "MAT.7.3-MAT.7.5",
       "fingerprint": "f5fedd6d8f36a8b5"
-    },
-    {
-      "record": "TRANS-MAT-007-001-029-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.7.6",
-      "fingerprint": "7902139cacbcb8e0"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
@@ -278,10 +261,302 @@
           "Perlen nicht vor die Schweine: Jesus sagt den Jüngern: die Perlen (drei weisse Perlen) nicht den Schweinen (Schwein, rotes X)."
         ]
       }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.7.1-MAT.7.2",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-NICHT-RICHTEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-SCHEFFEL",
+                  "FIG-ZEICHEN-UMKEHR"
+                ]
+              }
+            ],
+            "action_de": "Richtet nicht, damit ihr nicht gerichtet werdet; mit dem Mass, mit dem ihr messt, wird euch gemessen werden.",
+            "stage": {
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-GRUPPE-JUENGER": 132
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.7.3-MAT.7.5",
+            "figures": [
+              "FIG-ROLLE-JUNGER-MANN",
+              "FIG-ROLLE-MENSCH"
+            ],
+            "objects": [
+              "FIG-OBJ-BALKEN",
+              "FIG-OBJ-SPLITTER"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-MENSCH",
+                "to": "FIG-ROLLE-JUNGER-MANN",
+                "icons": [
+                  "FIG-OBJ-SPLITTER",
+                  "FIG-ZEICHEN-ZEIGEN"
+                ]
+              }
+            ],
+            "action_de": "Wer den Splitter im Auge seines Bruders sieht, den Balken im eigenen Auge aber nicht bemerkt, soll zuerst den Balken aus dem eigenen Auge ziehen.",
+            "stage": {
+              "x": {
+                "FIG-ROLLE-JUNGER-MANN": 50,
+                "FIG-ROLLE-MENSCH": 128
+              },
+              "beside": {
+                "FIG-OBJ-BALKEN": "FIG-ROLLE-MENSCH",
+                "FIG-OBJ-SPLITTER": "FIG-ROLLE-JUNGER-MANN"
+              },
+              "mood": {
+                "FIG-ROLLE-MENSCH": "earnest",
+                "FIG-ROLLE-JUNGER-MANN": "surprised"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.7.6",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-PERLE",
+                  "FIG-ZEICHEN-DARAUS",
+                  "FIG-OBJ-SCHWEIN",
+                  "FIG-ZEICHEN-NEIN"
+                ]
+              }
+            ],
+            "action_de": "Gebt das Heilige nicht den Hunden und werft eure Perlen nicht vor die Schweine.",
+            "stage": {
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-JUENGER": 140
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "calm"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Richtet nicht, damit ihr nicht gerichtet werdet; mit dem Mass, mit dem ihr messt, wird euch gemessen werden.",
+          "Wer den Splitter im Auge seines Bruders sieht, den Balken im eigenen Auge aber nicht bemerkt, soll zuerst den Balken aus dem eigenen Auge ziehen.",
+          "Gebt das Heilige nicht den Hunden und werft eure Perlen nicht vor die Schweine."
+        ],
+        "captions_de": [
+          "Nicht richten: Jesus sagt den Jüngern: Richtet nicht (Waage, rot durchgestrichen); mit eurem Mass (Messgefäss) wird euch zurückgemessen (Pfeil, der im Bogen umkehrt).",
+          "Splitter und Balken: Rechts ein Mann, aus dessen Auge ein langer Holzbalken ragt; er will den Splitter (kleines Holzstück neben dem Auge) aus dem Auge seines Bruders links ziehen (Sprechblase: Splitter, zeigender Finger).",
+          "Perlen nicht vor die Schweine: Jesus sagt den Jüngern: die Perlen (drei weisse Perlen) nicht den Schweinen hinwerfen (Pfeil zum Schwein, rotes X)."
+        ],
+        "interpretation_note_de": "Das Messgefäss (Scheffel) steht für «das Mass, mit dem ihr messt» ([[MAT.7.2]]). Balken und Splitter ([[MAT.7.3-MAT.7.5]]) stehen neben den Köpfen, damit keine Verletzung gezeigt wird; der Bruder erscheint als junger Mann. «Das Heilige» ([[MAT.7.6]]), oft als Opferfleisch verstanden, und die Hunde nennt nur die Handlung. Was Hunde und Schweine tun, zeigt es nicht.",
+        "basis": [
+          {
+            "record": "TU-MAT-007-001-006",
+            "field": "summary",
+            "fingerprint": "8b915d433947b85a"
+          },
+          {
+            "record": "TRANS-MAT-007-001-029-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.7.1-MAT.7.2",
+            "fingerprint": "1e2524694260c4cb"
+          },
+          {
+            "record": "TRANS-MAT-007-001-029-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.7.3-MAT.7.5",
+            "fingerprint": "f5fedd6d8f36a8b5"
+          },
+          {
+            "record": "TRANS-MAT-007-001-029-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.7.6",
+            "fingerprint": "7902139cacbcb8e0"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.7.1-MAT.7.2",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-MENSCH",
+              "FIG-ROLLE-JUNGER-MANN"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-ZEIGEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-MENSCH",
+                "icons": [
+                  "FIG-ZEICHEN-NICHT-RICHTEN"
+                ],
+                "word": {
+                  "de": "Mass",
+                  "gsw": "Mass"
+                }
+              }
+            ],
+            "action_de": "Richtet nicht, damit ihr nicht gerichtet werdet; denn mit dem Urteil, mit dem ihr richtet, werdet ihr gerichtet, und mit dem Mass, mit dem ihr messt, wird euch gemessen.",
+            "keywords": {
+              "de": "Richtet nicht",
+              "gsw": "Richted nöd"
+            },
+            "stage": {
+              "x": {
+                "FIG-JESUS": 24,
+                "FIG-ROLLE-MENSCH": 92,
+                "FIG-ROLLE-JUNGER-MANN": 154
+              },
+              "beside": {
+                "FIG-ZEICHEN-ZEIGEN": "FIG-ROLLE-MENSCH"
+              },
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-ROLLE-MENSCH": "angry",
+                "FIG-ROLLE-JUNGER-MANN": "worried"
+              },
+              "size": {
+                "FIG-JESUS": 0.7
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.7.3-MAT.7.5",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-JUNGER-MANN",
+              "FIG-ROLLE-MENSCH"
+            ],
+            "objects": [
+              "FIG-OBJ-BALKEN",
+              "FIG-OBJ-SPLITTER"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-MENSCH",
+                "to": "FIG-ROLLE-JUNGER-MANN",
+                "icons": [],
+                "word": {
+                  "de": "Splitter",
+                  "gsw": "Splitter"
+                }
+              }
+            ],
+            "action_de": "Wer den Splitter im Auge seines Bruders sieht und den Balken im eigenen Auge nicht bemerkt, soll zuerst den Balken aus dem eigenen Auge ziehen; dann sieht er klar, um den Splitter herauszuziehen.",
+            "keywords": {
+              "de": "den Balken",
+              "gsw": "de Balke"
+            },
+            "stage": {
+              "x": {
+                "FIG-JESUS": 24,
+                "FIG-ROLLE-JUNGER-MANN": 92,
+                "FIG-ROLLE-MENSCH": 152
+              },
+              "beside": {
+                "FIG-OBJ-BALKEN": "FIG-ROLLE-MENSCH",
+                "FIG-OBJ-SPLITTER": "FIG-ROLLE-JUNGER-MANN"
+              },
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-ROLLE-MENSCH": "earnest",
+                "FIG-ROLLE-JUNGER-MANN": "surprised"
+              },
+              "size": {
+                "FIG-JESUS": 0.7
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "captions_de": [
+          "Nicht richten: Ein Mann zeigt urteilend auf einen anderen (zeigender Finger); Jesus (links) wehrt ab: Richtet nicht (Sprechblase: Waage, rot durchgestrichen) – mit eurem Mass wird euch gemessen.",
+          "Splitter und Balken: Rechts ein Mann, aus dessen Auge ein langer Holzbalken ragt; er will seinem Bruder (Mitte) den Splitter (kleines Holzstück neben dem Auge) herausziehen. Jesus (links) lehrt."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Bild neu aus der Kernanalyse (Worte im Bild)",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-007-001-006",
+            "field": "summary",
+            "fingerprint": "8b915d433947b85a"
+          },
+          {
+            "record": "TRANS-MAT-007-001-029-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.7.1-MAT.7.2",
+            "fingerprint": "1e2524694260c4cb"
+          },
+          {
+            "record": "TRANS-MAT-007-001-029-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.7.3-MAT.7.5",
+            "fingerprint": "f5fedd6d8f36a8b5"
+          }
+        ],
+        "rework": {
+          "since": "2026-10-23",
+          "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
+        }
+      }
     }
-  ],
-  "rework": {
-    "since": "2026-10-23",
-    "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
-  }
+  ]
 }
