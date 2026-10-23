@@ -115,6 +115,7 @@ click('[data-background="TU-MAT-006-005-008"]');
 assert(sheetHost.textContent.includes('Kammer')&&sheetHost.querySelector('[data-app="APP-MAT-1007"]')&&sheetHost.querySelector('[data-app="APP-MAT-1004"]'),'Kammer damals, Anwendungen heute');
 click('.dph-aud [data-aud="CTX-CH-YOUTH-2026"]');
 assert(sheetHost.querySelector('[data-app="APP-MAT-1007"]')&&!sheetHost.querySelector('[data-app="APP-MAT-1004"]'),'Zielgruppe Jugendliche');
+assert(!sheetHost.querySelector('[data-app="APP-MAT-1005"]'),'Anwendung zu Mt 6,19–34 nicht bei 6,5–8');
 click('.dph-aud [data-aud="all"]');assert(sheetHost.querySelector('[data-app="APP-MAT-1004"]'),'wieder alle');
 click('[data-close]');
 click('[data-deep="TU-MAT-006-009-013"]');

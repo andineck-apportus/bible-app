@@ -41,8 +41,9 @@ Zielgruppen sind `context`-Datensätze mit `label_de` (kurzer Name für die Ausw
 
 Weitere (Familie, Beruf, Kirche, Menschen ohne kirchlichen Hintergrund) werden nach Bedarf ergänzt.
 
-Eine Anwendung kann mit `reference` auf einen Teil des Prinzips eingeschränkt werden (z. B. `MAT.6.5-MAT.6.6`); die App zeigt
-sie dann nur bei Abschnitten, die diese Verse enthalten.
+Grundsätze und Anwendungen erscheinen nur bei Abschnitten, deren Verse sie betreffen. Massgeblich ist das Feld
+`reference`, z. B. `MAT.6.5-MAT.6.6`. Fehlt es, gilt bei Grundsätzen die erste Stellen-Marke ihrer Aussage und bei
+Anwendungen der Bereich ihres Grundsatzes.
 
 ## In der App
 
