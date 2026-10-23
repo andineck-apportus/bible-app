@@ -706,6 +706,8 @@ def group_svg(fid, x, y, s, n, expr="calm", look=0.0, arm=None, flip=False, tear
         dx, dy, k = lay[i]
         front = i == 0
         hd = hold if (front and hold) else CHAR[keys[i]].get("attr")
+        if scene and hd in SCENE_NO_ATTR:
+            hd = None
         lk = look if front else look * .6 + (.5 if dx < 0 else -.5)
         if not front and hd and not hd.startswith("an-a-"):
             hd = None  # Gegenstände nur bei der vorderen Figur (sonst klein und unleserlich)

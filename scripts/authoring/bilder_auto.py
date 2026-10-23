@@ -764,7 +764,7 @@ class Composer:
         for fid, v in (p.get("names") or {}).items():
             if fid in heads:
                 hx, hy = heads[fid]
-                out.append(name_tag(hx, min(hy + self.head_r() * 2.05, H - 4), v))  # auf der Brust, unter dem Kinn
+                out.append(name_tag(hx, H - 7, v))  # am unteren Rand: verdeckt weder Gesicht noch das Zeichen auf der Brust
         # Stichwortband unter dem Feld (nicht im Bild: es verdeckte Hände, Gegenstände und Kniende; Pilot 2026-10-23)
         self.bands = getattr(self, "bands", [])
         self.bands.append(word_band(p["keywords"], letter=bool(p.get("letter"))) if p.get("keywords") else "")
