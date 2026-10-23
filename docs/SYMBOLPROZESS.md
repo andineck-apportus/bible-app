@@ -44,10 +44,12 @@ Herz mit Lichtstrahl für «glauben», Hand mit Brot für «gute Werke» (Rückm
    Eine dritte Instanz bewertet die freien Antworten gegen die Bedeutung (0 falsch, 1 verwandt, 2 getroffen).
 5. **Auswahl:** bester Entwurf, der den Zielwert seiner Klasse erreicht. Erreicht keiner ihn, wird das Zeichen bei
    Gegenständen und Handlungen neu entworfen, bei Begriffen zum Wortzeichen.
-6. **Protokoll am Lexikon-Eintrag:** Datum, Modell, Ergebnisse, Verwechslungen; der Symbolindex zeigt die Erklärung.
-7. **Im Gesamtbild prüfen:** Das neue Zeichen wird in zwei typischen Bildern verwendet und im Blindtest ohne Legende
+6. **Kurzer Legendentext:** ein Erkennungstext von höchstens etwa 60 Zeichen für «Figuren und Zeichen», bei allen Einträgen
+   gleich knapp; die ausführliche Bedeutung bleibt im Lexikon und im Symbolindex.
+7. **Protokoll am Lexikon-Eintrag:** Datum, Modell, Ergebnisse, Verwechslungen; der Symbolindex zeigt die Erklärung.
+8. **Im Gesamtbild prüfen:** Das neue Zeichen wird in zwei typischen Bildern verwendet und im Blindtest ohne Legende
    geprüft (BILDPROZESS.md, Schritt 5).
-8. **Bei Änderungen:** Ändert sich ein Zeichen, werden alle Bilder neu gezeichnet und geprüft, die es verwenden.
+9. **Bei Änderungen:** Ändert sich ein Zeichen, werden alle Bilder neu gezeichnet und geprüft, die es verwenden.
 
 ## Bestand prüfen
 

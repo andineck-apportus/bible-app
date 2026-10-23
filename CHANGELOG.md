@@ -5,6 +5,7 @@
 ## v0.71 — 2026-10-22 — Pfad unten statt Lesetiefe
 
 - **Eine Navigation nach oben und unten** (Andi Neck): Die Leiste unten zeigt den Pfad mit echten Namen («Bibel › NT › Evangelien › Mt › 5 › Die Seligpreisungen › 9»); jedes Glied springt direkt auf seine Ebene. Rechts öffnet ein Knopf mit der nächsten Ebene («Kapitel ↓», «Abschnitt ↓», «Vers ↓») die Auswahl am aktuellen Ort (Liste oder Raster, zuletzt gelesener Eintrag markiert). Auf Versebene entfällt der Knopf.
+- **Entscheide zu Bildern** (Andi Neck): Zielwerte vorerst zum Ausprobieren und nach dem Pilot überprüfen; Namensschilder für Hauptfiguren beim ersten Auftreten; kurze, gleichmässige Legendentexte je Figur und Zeichen.
 - **Verdichtung** (docs/VERDICHTUNG.md, Entscheide Andi Neck): eine gemeinsame Kernanalyse je Einheit als Grundlage für Zusammenfassung und Bild, Auswahlregeln (Kernaussage vor Bekanntheit), Umfang je Ebene, von unten nach oben; alle Zusammenfassungen werden neu erstellt. BILDPROZESS.md auf den Bildteil gekürzt.
 - **Zeichen: Prozess und Ausgangsmessung** (docs/SYMBOLPROZESS.md, reports/zeichen-blindtest-2026-10-23.json): alle 191 Bildzeichen ohne Legende getestet; frei erkannt: Gegenstände 66 %, Handlungen 47 %, Begriffe 20 %. 82 bleiben, 66 werden überarbeitet, 43 Begriffe werden Wortzeichen.
 - **Vorschlag Bildprozess** (docs/BILDPROZESS.md): Bilder, die man ohne Legende lesen kann – Bildtypen je Textart, Erkennungsmoment, Stichwortband, Blindtest ohne Legende mit Zielwerten, Prüfprotokoll; Entscheide offen.

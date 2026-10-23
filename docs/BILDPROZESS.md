@@ -52,8 +52,13 @@ Was gut funktioniert: die festen Erkennungszeichen (Gott, Jesus, Geist) und der 
 
 5. **Ebenengerecht:** Umfang und Auswahl je Ebene nach VERDICHTUNG.md (ein Feld je tragendem Moment; Buch und höher
    als Zeitleiste oder Karte mit beschrifteten Stationen; Kapitel als Bildfolge der Abschnitte mit kurzem Titel).
-6. **Wiedererkennbare Personen.** Hauptfiguren mit festem Erkennungszeichen wie heute bei Gott und Jesus; bei erstem
-   Auftreten in einem Bild auf Wunsch mit Namensschild. Nebenfiguren je Geschichte mit eigener Farbe.
+6. **Wiedererkennbare Personen.** Hauptfiguren mit festem Erkennungszeichen wie heute bei Gott und Jesus und beim ersten
+   Auftreten in einem Bild mit Namensschild (Name aus der Übersetzungsschicht; Entscheid 2026-10-23). Nebenfiguren je
+   Geschichte mit eigener Farbe.
+8. **Kurze, gleichmässige Legende.** Unter «Figuren und Zeichen» steht je Figur und Zeichen ein kurzer Erkennungstext von
+   höchstens etwa 60 Zeichen (eine bis zwei kurze Zeilen), bei allen gleich lang gehalten, z. B. Gott: «Goldener
+   Strahlenkranz mit dem Gottesnamen יהוה». Ausführliche Erklärungen stehen im Symbolindex, nicht in der Legende
+   (Hinweis Andi Neck, 2026-10-23).
 7. **Auf dem Handy lesbar.** Höchstens zwei Felder nebeneinander, Mindestgrösse für Zeichen und Schrift, im Abschnitt
    höchstens drei Felder.
 
@@ -62,7 +67,7 @@ Was gut funktioniert: die festen Erkennungszeichen (Gott, Jesus, Geist) und der 
 1. **Kernanalyse** der Einheit liegt vor und ist geprüft (VERDICHTUNG.md): Kernaussage, tragende Momente mit
    Erkennungsmoment und Schlüsselwörtern, Textart, Sprecher. Das Bild zeigt genau diese Momente, ein Feld je Moment.
 2. **Bildentwurf** nach dem Bildtyp der Textart; Gegenstände, Ursache → Wirkung und Gesten aus dem Text.
-3. **Automatische Regelprüfung** (`scripts/validate.py`, blockiert die Veröffentlichung):
+3. **Automatische Regelprüfung** (`scripts/validate.py`, blockiert die Veröffentlichung; dazu: Legendentext je Figur und Zeichen höchstens etwa 60 Zeichen):
    - Pflichtfelder vorhanden; Stichwörter stehen so im Text;
    - wer im Bild spricht, spricht oder wird angesprochen im Text; bei Briefen spricht der Verfasser oder er wird zitiert;
    - bei `mode: Auftrag` Briefrahmen und Legende «Auftrag an …»;
@@ -89,6 +94,9 @@ Was gut funktioniert: die festen Erkennungszeichen (Gott, Jesus, Geist) und der 
 | Wer-ist-wer und Erzählung/Auftrag (Blindtest c) | ohne Fehler |
 | Einzelzeichen im Grundbestand allein erkannt | mindestens 70 %, sonst neu zeichnen oder durch ein Wort ersetzen |
 
+Die Zielwerte gelten vorerst zum Ausprobieren (Andi Neck, 2026-10-23). Nach dem Pilot und den ersten Rückmeldungen werden
+sie überprüft: Reicht die Verständlichkeit trotz erreichter Werte nicht, werden sie angehoben oder der Test geschärft.
+
 Die Zahlen sind KI-Messungen. Sie ersetzen keine Prüfung mit Leserinnen und Lesern; die Rückmeldungen aus der App sind
 dafür der Anfang.
 
@@ -111,4 +119,6 @@ Nur getestete Zeichen dürfen abstrakt verwendet werden; Ablauf, Zielwerte und A
    jeweiligen Übersetzungsschicht; das passt zum Ziel, die Bibel in verschiedene Sprachen und Kulturen zu übertragen.
 2. Auswahl und Umfang über die gemeinsame Kernanalyse (VERDICHTUNG.md), Kernaussage vor Bekanntheit (2026-10-23).
 
-Noch offen: Zielwerte wie oben bestätigen; Namensschilder für Hauptfiguren beim ersten Auftreten oder nur über die Legende.
+3. Zielwerte wie oben, vorerst zum Ausprobieren; nach dem Pilot überprüfen (2026-10-23).
+4. Namensschilder für Hauptfiguren beim ersten Auftreten in einem Bild: ja (2026-10-23).
+5. Legende: kurzer, gleichmässiger Erkennungstext je Figur und Zeichen (2026-10-23).
