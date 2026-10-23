@@ -11,7 +11,7 @@
   "panels": [
     {
       "n": 1,
-      "reference": "RUT.1",
+      "reference": "RUT.1.16-RUT.1.17",
       "figures": [
         "FIG-NOOMI",
         "FIG-RUT"
@@ -24,59 +24,89 @@
           "to": "FIG-NOOMI",
           "icons": [
             "FIG-GRUPPE-ISRAEL",
-            "FIG-GOTT",
-            "FIG-ZEICHEN-TOD",
-            "FIG-ZEICHEN-TREUE"
-          ]
+            "FIG-GOTT"
+          ],
+          "word": {
+            "de": "dahin gehe ich",
+            "gsw": "gaan ich ane"
+          }
         }
       ],
-      "action_de": "Rut schwört: Wohin du gehst, gehe ich; dein Volk ist mein Volk, dein Gott ist mein Gott; nur der Tod wird mich und dich trennen. Da redet Noomi nicht mehr auf sie ein.",
+      "action_de": "Rut sagt zu Noomi: Wohin du gehst, dahin gehe ich; dein Volk ist mein Volk und dein Gott mein Gott; nur der Tod wird uns trennen.",
+      "keywords": {
+        "de": "Wohin du gehst",
+        "gsw": "wo du anegaasch"
+      },
+      "names": {
+        "FIG-NOOMI": {
+          "de": "Noomi",
+          "gsw": "Noomi"
+        },
+        "FIG-RUT": {
+          "de": "Rut",
+          "gsw": "Rut"
+        }
+      },
       "stage": {
         "mood": {
-          "FIG-RUT": "smile",
-          "FIG-NOOMI": "calm"
-        },
-        "bubble_y": 20
+          "FIG-RUT": "determined",
+          "FIG-NOOMI": "surprised"
+        }
       }
     },
     {
       "n": 2,
-      "reference": "RUT.2",
+      "reference": "RUT.1.19-RUT.1.21",
       "figures": [
-        "FIG-RUT",
-        "FIG-BOAS"
+        "FIG-GRUPPE-FRAUEN",
+        "FIG-NOOMI",
+        "FIG-RUT"
       ],
-      "objects": [
-        "FIG-ORT-FELD"
-      ],
+      "objects": [],
       "signs": [],
       "speech": [
         {
-          "from": "FIG-BOAS",
-          "to": "FIG-RUT",
+          "from": "FIG-GRUPPE-FRAUEN",
+          "to": "FIG-NOOMI",
+          "icons": [],
+          "word": {
+            "de": "Noomi?",
+            "gsw": "d Noomi?"
+          }
+        },
+        {
+          "from": "FIG-NOOMI",
+          "to": "FIG-GRUPPE-FRAUEN",
           "icons": [
-            "FIG-NOOMI",
-            "FIG-ZEICHEN-TREUE",
-            "FIG-GOTT",
-            "FIG-ZEICHEN-ZUFLUCHT"
-          ]
+            "FIG-GOTT"
+          ],
+          "word": {
+            "de": "leer",
+            "gsw": "läär"
+          }
         }
       ],
-      "action_de": "Rut verneigt sich und fragt, warum er sie, eine Fremde, beachtet. Boas antwortet: Man hat mir erzählt, was du an deiner Schwiegermutter getan hast; JHWH, unter dessen Flügeln du Zuflucht suchst, vergelte es dir.",
+      "action_de": "In Betlehem fragen die Frauen: «Ist das Noomi?» Sie antwortet: «Nennt mich Mara»; voll sei sie weggegangen, und leer habe JHWH sie zurückgebracht.",
+      "keywords": {
+        "de": "Nennt mich Mara",
+        "gsw": "säged mir Mara"
+      },
       "stage": {
-        "pose": {
-          "FIG-RUT": "kneel"
-        },
         "mood": {
-          "FIG-RUT": "surprised",
-          "FIG-BOAS": "smile"
+          "FIG-GRUPPE-FRAUEN": "surprised",
+          "FIG-NOOMI": "pain",
+          "FIG-RUT": "worried"
         },
-        "bubble_y": 20
+        "x": {
+          "FIG-GRUPPE-FRAUEN": 40,
+          "FIG-NOOMI": 126,
+          "FIG-RUT": 164
+        }
       }
     },
     {
       "n": 3,
-      "reference": "RUT.3",
+      "reference": "RUT.3.8-RUT.3.9",
       "figures": [
         "FIG-BOAS",
         "FIG-RUT"
@@ -89,92 +119,106 @@
       ],
       "speech": [
         {
-          "from": "FIG-BOAS",
-          "to": "FIG-RUT",
-          "icons": [
-            "FIG-ZEICHEN-FRAGEN"
-          ]
-        },
-        {
           "from": "FIG-RUT",
           "to": "FIG-BOAS",
           "icons": [
-            "FIG-ZEICHEN-GEWANDZIPFEL",
-            "FIG-ZEICHEN-LOESERECHT"
-          ]
+            "FIG-ZEICHEN-GEWANDZIPFEL"
+          ],
+          "word": {
+            "de": "du bist ein Löser",
+            "gsw": "du bisch en Löser"
+          }
         }
       ],
-      "action_de": "Um Mitternacht schreckt Boas auf: Wer bist du? Rut antwortet: Ich bin Rut, deine Dienerin; breite den Zipfel deines Gewandes über mich, denn du bist ein Löser.",
+      "action_de": "Um Mitternacht schreckt Boas auf: Eine Frau liegt zu seinen Füssen. «Wer bist du?» – «Ich bin Rut; breite den Zipfel deines Gewandes über mich, denn du bist ein Löser.»",
+      "keywords": {
+        "de": "zu seinen Füssen",
+        "gsw": "zu sine Füess"
+      },
+      "names": {
+        "FIG-BOAS": {
+          "de": "Boas",
+          "gsw": "Boas"
+        }
+      },
       "stage": {
         "pose": {
           "FIG-RUT": "kneel"
         },
         "mood": {
           "FIG-BOAS": "surprised",
-          "FIG-RUT": "calm"
+          "FIG-RUT": "earnest"
         },
-        "air_x": 104,
-        "air_y": 6,
         "x": {
-          "FIG-BOAS": 50,
-          "FIG-RUT": 130
+          "FIG-BOAS": 52,
+          "FIG-RUT": 132
         },
-        "bubble_y": 20
+        "size": {
+          "FIG-RUT": 1.25
+        },
+        "air_x": 166,
+        "air_y": 50
       }
     },
     {
       "n": 4,
-      "reference": "RUT.4",
+      "reference": "RUT.4.16-RUT.4.17",
       "figures": [
         "FIG-GRUPPE-FRAUEN",
-        "FIG-NOOMI",
-        "FIG-OBED"
+        "FIG-NOOMI"
       ],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-FREUDE"
+      "signs": [],
+      "speech": [
+        {
+          "from": "FIG-GRUPPE-FRAUEN",
+          "to": "FIG-NOOMI",
+          "icons": [],
+          "word": {
+            "de": "Ein Sohn ist Noomi geboren!",
+            "gsw": "De Noomi isch en Sohn gebore!"
+          }
+        }
       ],
-      "speech": [],
-      "action_de": "Noomi nimmt das Kind auf ihren Schoss und wird ihm zur Pflegerin. Die Nachbarinnen sagen: Ein Sohn ist Noomi geboren! Sie nennen ihn Obed; er ist der Vater Isais, des Vaters Davids.",
+      "action_de": "Noomi nimmt das Kind auf ihren Schoss; die Nachbarinnen rufen: «Ein Sohn ist Noomi geboren!» und nennen ihn Obed. Er ist der Vater Isais, des Vaters Davids.",
+      "keywords": {
+        "de": "sie nannten ihn Obed",
+        "gsw": "en Obed gnännt"
+      },
       "stage": {
-        "pose": {
-          "FIG-NOOMI": "sit"
-        },
         "mood": {
           "FIG-NOOMI": "delight",
           "FIG-GRUPPE-FRAUEN": "delight"
         },
-        "signs_who": {
-          "FIG-ZEICHEN-FREUDE": [
-            "FIG-GRUPPE-FRAUEN"
-          ]
-        },
         "x": {
           "FIG-GRUPPE-FRAUEN": 50,
-          "FIG-NOOMI": 122,
-          "FIG-OBED": 128
-        }
+          "FIG-NOOMI": 140
+        },
+        "size": {
+          "FIG-NOOMI": 1.15
+        },
+        "bubble_y": 14
       }
     }
   ],
   "actions_de": [
-    "Rut schwört: Wohin du gehst, gehe ich; dein Volk ist mein Volk, dein Gott ist mein Gott; nur der Tod wird mich und dich trennen. Da redet Noomi nicht mehr auf sie ein.",
-    "Rut verneigt sich und fragt, warum er sie, eine Fremde, beachtet. Boas antwortet: Man hat mir erzählt, was du an deiner Schwiegermutter getan hast; JHWH, unter dessen Flügeln du Zuflucht suchst, vergelte es dir.",
-    "Um Mitternacht schreckt Boas auf: Wer bist du? Rut antwortet: Ich bin Rut, deine Dienerin; breite den Zipfel deines Gewandes über mich, denn du bist ein Löser.",
-    "Noomi nimmt das Kind auf ihren Schoss und wird ihm zur Pflegerin. Die Nachbarinnen sagen: Ein Sohn ist Noomi geboren! Sie nennen ihn Obed; er ist der Vater Isais, des Vaters Davids."
+    "Rut sagt zu Noomi: Wohin du gehst, dahin gehe ich; dein Volk ist mein Volk und dein Gott mein Gott; nur der Tod wird uns trennen.",
+    "In Betlehem fragen die Frauen: «Ist das Noomi?» Sie antwortet: «Nennt mich Mara»; voll sei sie weggegangen, und leer habe JHWH sie zurückgebracht.",
+    "Um Mitternacht schreckt Boas auf: Eine Frau liegt zu seinen Füssen. «Wer bist du?» – «Ich bin Rut; breite den Zipfel deines Gewandes über mich, denn du bist ein Löser.»",
+    "Noomi nimmt das Kind auf ihren Schoss; die Nachbarinnen rufen: «Ein Sohn ist Noomi geboren!» und nennen ihn Obed. Er ist der Vater Isais, des Vaters Davids."
   ],
   "captions_de": [
-    "Wohin du gehst: Rut sagt zu Noomi: Dein Volk ist mein Volk, dein Gott mein Gott (Gruppe, Strahlenkranz); bis in den Tod halte ich zu dir (Grab, Hände).",
-    "Treue → Gottes Schutz: Rut verneigt sich; Boas lobt ihre Treue zu Noomi (Noomi, Hände) und wünscht ihr dafür Gottes Schutz (Strahlenkranz, Flügel).",
-    "Breite deinen Mantel über mich: Boas fragt in der Nacht: Wer bist du? Rut bittet um seinen Schutz (Mantelzipfel), denn er ist ein Löser (Feld mit Kreispfeil).",
-    "Ein Sohn für Noomi: Noomi hat das Kind Obed auf dem Schoss und pflegt es; die Nachbarinnen freuen sich (Funken)."
+    "Wohin du gehst: Rut sagt zu Noomi: dahin gehe ich – zu deinem Volk (Gruppe) und deinem Gott (Strahlenkranz).",
+    "Nennt mich Mara: Die Frauen fragen: Noomi? Noomi antwortet: leer (Strahlenkranz: JHWH hat sie leer zurückgebracht).",
+    "Du bist ein Löser: Nachts auf der Tenne (Mond, Getreidehaufen) schreckt Boas auf; Rut zu seinen Füssen bittet um den Zipfel seines Gewandes (Mantelzipfel).",
+    "Ein Sohn für Noomi: Noomi hält das Kind Obed (Säugling im Arm); die Nachbarinnen freuen sich."
   ],
-  "interpretation_note_de": "Je ein Feld zu den vier Kapiteln: Ruts Treue zu Noomi, Boas' Schutz auf dem Feld, die Bitte auf der Tenne und das Kind für Noomi. Einzelheiten in den Kapitel- und Abschnittsbildern.",
+  "interpretation_note_de": "Vier Stationen aus den sechs Momenten der Kernanalyse des Buches (höchstens vier Felder): Ruts Treue, Noomis «leer», die Bitte an Boas als Löser, das Kind für Noomi. Boas' Segen auf dem Feld ([[RUT.2.10-RUT.2.12]]) und der Erwerb vor Zeugen im Tor ([[RUT.4.9-RUT.4.11]]) zeigen die Kapitelbilder; dass aus Obeds Linie David kommt, das Bild zu [[RUT.4.18-RUT.4.22]].",
   "basis": [
     {
       "record": "SUM-BOOK-RUT",
       "field": "summary",
-      "fingerprint": "399830bfe4471da9"
+      "fingerprint": "e4d6e80b37d7ad15"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
@@ -356,10 +400,602 @@
           "Ein Sohn für Noomi: Noomi hat das Kind Obed auf dem Schoss und pflegt es; die Nachbarinnen freuen sich (Funken)."
         ]
       }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "RUT.1",
+            "figures": [
+              "FIG-NOOMI",
+              "FIG-RUT"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-RUT",
+                "to": "FIG-NOOMI",
+                "icons": [
+                  "FIG-GRUPPE-ISRAEL",
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-TOD",
+                  "FIG-ZEICHEN-TREUE"
+                ]
+              }
+            ],
+            "action_de": "Rut schwört: Wohin du gehst, gehe ich; dein Volk ist mein Volk, dein Gott ist mein Gott; nur der Tod wird mich und dich trennen. Da redet Noomi nicht mehr auf sie ein.",
+            "stage": {
+              "mood": {
+                "FIG-RUT": "smile",
+                "FIG-NOOMI": "calm"
+              },
+              "bubble_y": 20
+            }
+          },
+          {
+            "n": 2,
+            "reference": "RUT.2",
+            "figures": [
+              "FIG-RUT",
+              "FIG-BOAS"
+            ],
+            "objects": [
+              "FIG-ORT-FELD"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-BOAS",
+                "to": "FIG-RUT",
+                "icons": [
+                  "FIG-NOOMI",
+                  "FIG-ZEICHEN-TREUE",
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-ZUFLUCHT"
+                ]
+              }
+            ],
+            "action_de": "Rut verneigt sich und fragt, warum er sie, eine Fremde, beachtet. Boas antwortet: Man hat mir erzählt, was du an deiner Schwiegermutter getan hast; JHWH, unter dessen Flügeln du Zuflucht suchst, vergelte es dir.",
+            "stage": {
+              "pose": {
+                "FIG-RUT": "kneel"
+              },
+              "mood": {
+                "FIG-RUT": "surprised",
+                "FIG-BOAS": "smile"
+              },
+              "bubble_y": 20
+            }
+          },
+          {
+            "n": 3,
+            "reference": "RUT.3",
+            "figures": [
+              "FIG-BOAS",
+              "FIG-RUT"
+            ],
+            "objects": [
+              "FIG-ORT-TENNE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NACHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-BOAS",
+                "to": "FIG-RUT",
+                "icons": [
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-RUT",
+                "to": "FIG-BOAS",
+                "icons": [
+                  "FIG-ZEICHEN-GEWANDZIPFEL",
+                  "FIG-ZEICHEN-LOESERECHT"
+                ]
+              }
+            ],
+            "action_de": "Um Mitternacht schreckt Boas auf: Wer bist du? Rut antwortet: Ich bin Rut, deine Dienerin; breite den Zipfel deines Gewandes über mich, denn du bist ein Löser.",
+            "stage": {
+              "pose": {
+                "FIG-RUT": "kneel"
+              },
+              "mood": {
+                "FIG-BOAS": "surprised",
+                "FIG-RUT": "calm"
+              },
+              "air_x": 104,
+              "air_y": 6,
+              "x": {
+                "FIG-BOAS": 50,
+                "FIG-RUT": 130
+              },
+              "bubble_y": 20
+            }
+          },
+          {
+            "n": 4,
+            "reference": "RUT.4",
+            "figures": [
+              "FIG-GRUPPE-FRAUEN",
+              "FIG-NOOMI",
+              "FIG-OBED"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [],
+            "action_de": "Noomi nimmt das Kind auf ihren Schoss und wird ihm zur Pflegerin. Die Nachbarinnen sagen: Ein Sohn ist Noomi geboren! Sie nennen ihn Obed; er ist der Vater Isais, des Vaters Davids.",
+            "stage": {
+              "pose": {
+                "FIG-NOOMI": "sit"
+              },
+              "mood": {
+                "FIG-NOOMI": "delight",
+                "FIG-GRUPPE-FRAUEN": "delight"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-GRUPPE-FRAUEN"
+                ]
+              },
+              "x": {
+                "FIG-GRUPPE-FRAUEN": 50,
+                "FIG-NOOMI": 122,
+                "FIG-OBED": 128
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Rut schwört: Wohin du gehst, gehe ich; dein Volk ist mein Volk, dein Gott ist mein Gott; nur der Tod wird mich und dich trennen. Da redet Noomi nicht mehr auf sie ein.",
+          "Rut verneigt sich und fragt, warum er sie, eine Fremde, beachtet. Boas antwortet: Man hat mir erzählt, was du an deiner Schwiegermutter getan hast; JHWH, unter dessen Flügeln du Zuflucht suchst, vergelte es dir.",
+          "Um Mitternacht schreckt Boas auf: Wer bist du? Rut antwortet: Ich bin Rut, deine Dienerin; breite den Zipfel deines Gewandes über mich, denn du bist ein Löser.",
+          "Noomi nimmt das Kind auf ihren Schoss und wird ihm zur Pflegerin. Die Nachbarinnen sagen: Ein Sohn ist Noomi geboren! Sie nennen ihn Obed; er ist der Vater Isais, des Vaters Davids."
+        ],
+        "captions_de": [
+          "Wohin du gehst: Rut sagt zu Noomi: Dein Volk ist mein Volk, dein Gott mein Gott (Gruppe, Strahlenkranz); bis in den Tod halte ich zu dir (Grab, Hände).",
+          "Treue → Gottes Schutz: Rut verneigt sich; Boas lobt ihre Treue zu Noomi (Noomi, Hände) und wünscht ihr dafür Gottes Schutz (Strahlenkranz, Flügel).",
+          "Breite deinen Mantel über mich: Boas fragt in der Nacht: Wer bist du? Rut bittet um seinen Schutz (Mantelzipfel), denn er ist ein Löser (Feld mit Kreispfeil).",
+          "Ein Sohn für Noomi: Noomi hat das Kind Obed auf dem Schoss und pflegt es; die Nachbarinnen freuen sich (Funken)."
+        ],
+        "interpretation_note_de": "Je ein Feld zu den vier Kapiteln: Ruts Treue zu Noomi, Boas' Schutz auf dem Feld, die Bitte auf der Tenne und das Kind für Noomi. Einzelheiten in den Kapitel- und Abschnittsbildern."
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "RUT.1.16-RUT.1.17",
+            "figures": [
+              "FIG-NOOMI",
+              "FIG-RUT"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-RUT",
+                "to": "FIG-NOOMI",
+                "icons": [
+                  "FIG-GRUPPE-ISRAEL",
+                  "FIG-GOTT"
+                ],
+                "word": {
+                  "de": "dahin gehe ich",
+                  "gsw": "gaan ich ane"
+                }
+              }
+            ],
+            "action_de": "Rut sagt zu Noomi: Wohin du gehst, dahin gehe ich; dein Volk ist mein Volk und dein Gott mein Gott; nur der Tod wird uns trennen.",
+            "keywords": {
+              "de": "Wohin du gehst",
+              "gsw": "wo du anegaasch"
+            },
+            "names": {
+              "FIG-NOOMI": {
+                "de": "Noomi",
+                "gsw": "Noomi"
+              },
+              "FIG-RUT": {
+                "de": "Rut",
+                "gsw": "Rut"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-RUT": "determined",
+                "FIG-NOOMI": "surprised"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "RUT.1.19-RUT.1.21",
+            "figures": [
+              "FIG-GRUPPE-FRAUEN",
+              "FIG-NOOMI",
+              "FIG-RUT"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-FRAUEN",
+                "to": "FIG-NOOMI",
+                "icons": [],
+                "word": {
+                  "de": "Noomi?",
+                  "gsw": "d Noomi?"
+                }
+              },
+              {
+                "from": "FIG-NOOMI",
+                "to": "FIG-GRUPPE-FRAUEN",
+                "icons": [
+                  "FIG-GOTT"
+                ],
+                "word": {
+                  "de": "leer",
+                  "gsw": "läär"
+                }
+              }
+            ],
+            "action_de": "In Betlehem fragen die Frauen: «Ist das Noomi?» Sie antwortet: «Nennt mich Mara»; voll sei sie weggegangen, und leer habe JHWH sie zurückgebracht.",
+            "keywords": {
+              "de": "Nennt mich Mara",
+              "gsw": "säged mir Mara"
+            },
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-FRAUEN": "surprised",
+                "FIG-NOOMI": "pain",
+                "FIG-RUT": "worried"
+              },
+              "x": {
+                "FIG-GRUPPE-FRAUEN": 40,
+                "FIG-NOOMI": 126,
+                "FIG-RUT": 164
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "RUT.3.8-RUT.3.9",
+            "figures": [
+              "FIG-BOAS",
+              "FIG-RUT"
+            ],
+            "objects": [
+              "FIG-ORT-TENNE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NACHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-RUT",
+                "to": "FIG-BOAS",
+                "icons": [
+                  "FIG-ZEICHEN-GEWANDZIPFEL"
+                ],
+                "word": {
+                  "de": "du bist ein Löser",
+                  "gsw": "du bisch en Löser"
+                }
+              }
+            ],
+            "action_de": "Um Mitternacht schreckt Boas auf: Eine Frau liegt zu seinen Füssen. «Wer bist du?» – «Ich bin Rut; breite den Zipfel deines Gewandes über mich, denn du bist ein Löser.»",
+            "keywords": {
+              "de": "zu seinen Füssen",
+              "gsw": "zu sine Füess"
+            },
+            "names": {
+              "FIG-BOAS": {
+                "de": "Boas",
+                "gsw": "Boas"
+              }
+            },
+            "stage": {
+              "pose": {
+                "FIG-RUT": "kneel"
+              },
+              "mood": {
+                "FIG-BOAS": "surprised",
+                "FIG-RUT": "earnest"
+              },
+              "x": {
+                "FIG-BOAS": 52,
+                "FIG-RUT": 132
+              },
+              "air_x": 166,
+              "air_y": 50
+            }
+          },
+          {
+            "n": 4,
+            "reference": "RUT.4.16-RUT.4.17",
+            "figures": [
+              "FIG-GRUPPE-FRAUEN",
+              "FIG-NOOMI",
+              "FIG-OBED"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-FRAUEN",
+                "to": "FIG-NOOMI",
+                "icons": [],
+                "word": {
+                  "de": "Ein Sohn ist Noomi geboren!",
+                  "gsw": "De Noomi isch en Sohn gebore!"
+                }
+              }
+            ],
+            "action_de": "Noomi nimmt das Kind auf ihren Schoss; die Nachbarinnen rufen: «Ein Sohn ist Noomi geboren!» und nennen ihn Obed. Er ist der Vater Isais, des Vaters Davids.",
+            "keywords": {
+              "de": "sie nannten ihn Obed",
+              "gsw": "en Obed gnännt"
+            },
+            "stage": {
+              "pose": {
+                "FIG-NOOMI": "sit"
+              },
+              "mood": {
+                "FIG-NOOMI": "delight",
+                "FIG-GRUPPE-FRAUEN": "delight"
+              },
+              "x": {
+                "FIG-GRUPPE-FRAUEN": 50,
+                "FIG-NOOMI": 130,
+                "FIG-OBED": 136
+              },
+              "bubble_y": 14
+            }
+          }
+        ],
+        "captions_de": [
+          "Wohin du gehst: Rut sagt zu Noomi: dahin gehe ich – zu deinem Volk (Gruppe) und deinem Gott (Strahlenkranz).",
+          "Nennt mich Mara: Die Frauen fragen: Noomi? Noomi antwortet: leer (Strahlenkranz: JHWH hat sie leer zurückgebracht).",
+          "Du bist ein Löser: Nachts auf der Tenne (Mond, Getreidehaufen) schreckt Boas auf; Rut zu seinen Füssen bittet um den Zipfel seines Gewandes (Mantelzipfel).",
+          "Ein Sohn für Noomi: Noomi hält Obed auf dem Schoss; die Nachbarinnen freuen sich."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "RUT.1.16-RUT.1.17",
+            "figures": [
+              "FIG-NOOMI",
+              "FIG-RUT"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-RUT",
+                "to": "FIG-NOOMI",
+                "icons": [
+                  "FIG-GRUPPE-ISRAEL",
+                  "FIG-GOTT"
+                ],
+                "word": {
+                  "de": "dahin gehe ich",
+                  "gsw": "gaan ich ane"
+                }
+              }
+            ],
+            "action_de": "Rut sagt zu Noomi: Wohin du gehst, dahin gehe ich; dein Volk ist mein Volk und dein Gott mein Gott; nur der Tod wird uns trennen.",
+            "keywords": {
+              "de": "Wohin du gehst",
+              "gsw": "wo du anegaasch"
+            },
+            "names": {
+              "FIG-NOOMI": {
+                "de": "Noomi",
+                "gsw": "Noomi"
+              },
+              "FIG-RUT": {
+                "de": "Rut",
+                "gsw": "Rut"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-RUT": "determined",
+                "FIG-NOOMI": "surprised"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "RUT.1.19-RUT.1.21",
+            "figures": [
+              "FIG-GRUPPE-FRAUEN",
+              "FIG-NOOMI",
+              "FIG-RUT"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-FRAUEN",
+                "to": "FIG-NOOMI",
+                "icons": [],
+                "word": {
+                  "de": "Noomi?",
+                  "gsw": "d Noomi?"
+                }
+              },
+              {
+                "from": "FIG-NOOMI",
+                "to": "FIG-GRUPPE-FRAUEN",
+                "icons": [
+                  "FIG-GOTT"
+                ],
+                "word": {
+                  "de": "leer",
+                  "gsw": "läär"
+                }
+              }
+            ],
+            "action_de": "In Betlehem fragen die Frauen: «Ist das Noomi?» Sie antwortet: «Nennt mich Mara»; voll sei sie weggegangen, und leer habe JHWH sie zurückgebracht.",
+            "keywords": {
+              "de": "Nennt mich Mara",
+              "gsw": "säged mir Mara"
+            },
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-FRAUEN": "surprised",
+                "FIG-NOOMI": "pain",
+                "FIG-RUT": "worried"
+              },
+              "x": {
+                "FIG-GRUPPE-FRAUEN": 40,
+                "FIG-NOOMI": 126,
+                "FIG-RUT": 164
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "RUT.3.8-RUT.3.9",
+            "figures": [
+              "FIG-BOAS",
+              "FIG-RUT"
+            ],
+            "objects": [
+              "FIG-ORT-TENNE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NACHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-RUT",
+                "to": "FIG-BOAS",
+                "icons": [
+                  "FIG-ZEICHEN-GEWANDZIPFEL"
+                ],
+                "word": {
+                  "de": "du bist ein Löser",
+                  "gsw": "du bisch en Löser"
+                }
+              }
+            ],
+            "action_de": "Um Mitternacht schreckt Boas auf: Eine Frau liegt zu seinen Füssen. «Wer bist du?» – «Ich bin Rut; breite den Zipfel deines Gewandes über mich, denn du bist ein Löser.»",
+            "keywords": {
+              "de": "zu seinen Füssen",
+              "gsw": "zu sine Füess"
+            },
+            "names": {
+              "FIG-BOAS": {
+                "de": "Boas",
+                "gsw": "Boas"
+              }
+            },
+            "stage": {
+              "pose": {
+                "FIG-RUT": "kneel"
+              },
+              "mood": {
+                "FIG-BOAS": "surprised",
+                "FIG-RUT": "earnest"
+              },
+              "x": {
+                "FIG-BOAS": 52,
+                "FIG-RUT": 132
+              },
+              "size": {
+                "FIG-RUT": 1.1
+              },
+              "air_x": 166,
+              "air_y": 50
+            }
+          },
+          {
+            "n": 4,
+            "reference": "RUT.4.16-RUT.4.17",
+            "figures": [
+              "FIG-GRUPPE-FRAUEN",
+              "FIG-NOOMI",
+              "FIG-OBED"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-FRAUEN",
+                "to": "FIG-NOOMI",
+                "icons": [],
+                "word": {
+                  "de": "Ein Sohn ist Noomi geboren!",
+                  "gsw": "De Noomi isch en Sohn gebore!"
+                }
+              }
+            ],
+            "action_de": "Noomi nimmt das Kind auf ihren Schoss; die Nachbarinnen rufen: «Ein Sohn ist Noomi geboren!» und nennen ihn Obed. Er ist der Vater Isais, des Vaters Davids.",
+            "keywords": {
+              "de": "sie nannten ihn Obed",
+              "gsw": "en Obed gnännt"
+            },
+            "stage": {
+              "mood": {
+                "FIG-NOOMI": "delight",
+                "FIG-GRUPPE-FRAUEN": "delight"
+              },
+              "x": {
+                "FIG-GRUPPE-FRAUEN": 46,
+                "FIG-NOOMI": 118,
+                "FIG-OBED": 160
+              },
+              "size": {
+                "FIG-OBED": 1.3
+              },
+              "bubble_y": 14
+            }
+          }
+        ],
+        "captions_de": [
+          "Wohin du gehst: Rut sagt zu Noomi: dahin gehe ich – zu deinem Volk (Gruppe) und deinem Gott (Strahlenkranz).",
+          "Nennt mich Mara: Die Frauen fragen: Noomi? Noomi antwortet: leer (Strahlenkranz: JHWH hat sie leer zurückgebracht).",
+          "Du bist ein Löser: Nachts auf der Tenne (Mond, Getreidehaufen) schreckt Boas auf; Rut zu seinen Füssen bittet um den Zipfel seines Gewandes (Mantelzipfel).",
+          "Ein Sohn für Noomi: Noomi mit dem Kind Obed; die Nachbarinnen freuen sich."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Bild neu aus der Kernanalyse (Worte im Bild)",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-BOOK-RUT",
+            "field": "summary",
+            "fingerprint": "399830bfe4471da9"
+          }
+        ],
+        "rework": {
+          "since": "2026-10-23",
+          "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
+        }
+      }
     }
-  ],
-  "rework": {
-    "since": "2026-10-23",
-    "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
-  }
+  ]
 }

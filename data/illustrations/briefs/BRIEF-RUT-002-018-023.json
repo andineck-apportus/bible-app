@@ -11,103 +11,111 @@
   "panels": [
     {
       "n": 1,
-      "reference": "RUT.2.18-RUT.2.20",
+      "reference": "RUT.2.18",
       "figures": [
         "FIG-RUT",
         "FIG-NOOMI"
       ],
       "objects": [
-        "FIG-OBJ-GERSTE"
+        "FIG-OBJ-GERSTE",
+        "FIG-OBJ-BROT"
       ],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-RUT",
-          "to": "FIG-NOOMI",
-          "icons": [
-            "FIG-BOAS"
-          ]
+      "speech": [],
+      "action_de": "Rut bringt die aufgelesene Gerste in die Stadt und gibt Noomi auch, was sie vom Essen übrig gelassen hat.",
+      "keywords": {
+        "de": "übrig gelassen",
+        "gsw": "übrig gloo"
+      },
+      "names": {
+        "FIG-RUT": {
+          "de": "Rut",
+          "gsw": "Rut"
         },
-        {
-          "from": "FIG-NOOMI",
-          "to": "FIG-RUT",
-          "icons": [
-            "FIG-ZEICHEN-SEGNEN",
-            "FIG-BOAS",
-            "FIG-ZEICHEN-LOESERECHT"
-          ]
+        "FIG-NOOMI": {
+          "de": "Noomi",
+          "gsw": "Noomi"
         }
-      ],
-      "action_de": "Rut bringt die Gerste zu Noomi und erzählt, sie habe bei Boas gearbeitet. Noomi sagt: Gesegnet sei er von JHWH! Der Mann ist nah mit uns verwandt, er ist einer von unseren Lösern.",
+      },
       "stage": {
-        "hold": {
-          "FIG-RUT": "FIG-OBJ-GERSTE"
-        },
+        "arrows": [
+          [
+            "FIG-OBJ-GERSTE",
+            "FIG-NOOMI",
+            "act"
+          ]
+        ],
         "mood": {
-          "FIG-NOOMI": "delight",
-          "FIG-RUT": "smile"
+          "FIG-RUT": "smile",
+          "FIG-NOOMI": "surprised"
         },
-        "bubble_y": 20
+        "floor_x": {
+          "FIG-OBJ-GERSTE": 84,
+          "FIG-OBJ-BROT": 104
+        }
       }
     },
     {
       "n": 2,
-      "reference": "RUT.2.21-RUT.2.23",
+      "reference": "RUT.2.19-RUT.2.20",
       "figures": [
-        "FIG-GRUPPE-FRAUEN",
-        "FIG-RUT"
+        "FIG-RUT",
+        "FIG-NOOMI"
       ],
-      "objects": [
-        "FIG-ORT-FELD",
-        "FIG-OBJ-GARBE"
-      ],
+      "objects": [],
       "signs": [],
-      "speech": [],
-      "action_de": "Auf Noomis Rat hält sich Rut zu den Arbeiterinnen des Boas und liest auf, bis die Gersten- und die Weizenernte zu Ende sind; sie wohnt bei ihrer Schwiegermutter.",
+      "speech": [
+        {
+          "from": "FIG-NOOMI",
+          "to": "FIG-RUT",
+          "icons": [
+            "FIG-BOAS"
+          ],
+          "word": {
+            "de": "einer von unseren Lösern",
+            "gsw": "eine vo öisne Löser"
+          }
+        }
+      ],
+      "action_de": "Rut nennt den Namen Boas; Noomi segnet ihn im Namen JHWHs, der seine Treue den Lebenden und den Toten nicht entzogen hat, und sagt: Er ist einer von unseren Lösern.",
+      "keywords": {
+        "de": "seine Treue",
+        "gsw": "sini Tröii"
+      },
       "stage": {
-        "pose": {
-          "FIG-RUT": "kneel"
-        },
-        "count": {
-          "FIG-OBJ-GARBE": 2
-        },
         "mood": {
-          "FIG-GRUPPE-FRAUEN": "smile",
-          "FIG-RUT": "calm"
-        },
-        "x": {
-          "FIG-GRUPPE-FRAUEN": 50,
-          "FIG-RUT": 112
+          "FIG-NOOMI": "delight",
+          "FIG-RUT": "smile"
         }
       }
     }
   ],
   "actions_de": [
-    "Rut bringt die Gerste zu Noomi und erzählt, sie habe bei Boas gearbeitet. Noomi sagt: Gesegnet sei er von JHWH! Der Mann ist nah mit uns verwandt, er ist einer von unseren Lösern.",
-    "Auf Noomis Rat hält sich Rut zu den Arbeiterinnen des Boas und liest auf, bis die Gersten- und die Weizenernte zu Ende sind; sie wohnt bei ihrer Schwiegermutter."
+    "Rut bringt die aufgelesene Gerste in die Stadt und gibt Noomi auch, was sie vom Essen übrig gelassen hat.",
+    "Rut nennt den Namen Boas; Noomi segnet ihn im Namen JHWHs, der seine Treue den Lebenden und den Toten nicht entzogen hat, und sagt: Er ist einer von unseren Lösern."
   ],
   "captions_de": [
-    "Einer unserer Löser: Rut bringt Gerste und erzählt von Boas; Noomi segnet ihn (Hand mit Strahlen) und sagt: Er ist ein Löser (Feld mit Kreispfeil).",
-    "Bis zum Ende der Ernte: Rut liest bei den Arbeiterinnen des Boas Ähren auf, die ganze Erntezeit lang (Garben)."
+    "Heimkehr mit Gerste: Rut bringt Noomi die Gerste (Bündel, Linie) und das übrige Essen (Brot).",
+    "Ein Löser: Noomi sagt froh zu Rut über Boas (Bild in der Blase): einer von unseren Lösern."
   ],
-  "interpretation_note_de": "Der Löser ist ein naher Verwandter, der Land und Namen der Familie bewahrt ([[RUT.2.20]]; zur Sache [[LEV.25.25]], noch nicht übersetzt). Das Bild zeigt nicht, dass Noomi Rut auch das übrige Essen gibt ([[RUT.2.18]]).",
+  "interpretation_note_de": "Der Löser ist ein naher Verwandter, der Land und Namen der Familie bewahrt ([[RUT.2.20]]; zur Sache [[LEV.25.25]], noch nicht übersetzt). Ruts Bericht über Boas' Anweisung ([[RUT.2.21-RUT.2.22]]) und die Zeit bis zum Ende der Ernte ([[RUT.2.23]]) zeigt das Bild nicht.",
   "basis": [
     {
       "record": "TU-RUT-002-018-023",
       "field": "summary",
-      "fingerprint": "55c9b2984de1ba45"
+      "fingerprint": "1c67d30a1ded902f"
     },
     {
       "record": "TRANS-RUT-002-001-023-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "RUT.2.18-RUT.2.20",
-      "fingerprint": "d590dd89f5dad227"
+      "reference": "RUT.2.18",
+      "fingerprint": "bc39b28e894496a3"
     },
     {
       "record": "TRANS-RUT-002-001-023-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "RUT.2.21-RUT.2.23",
-      "fingerprint": "7af181d8b7b2412b"
+      "reference": "RUT.2.19-RUT.2.20",
+      "fingerprint": "dd4a8dd8de8b166a"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
@@ -200,10 +208,237 @@
           "Bis zum Ende der Ernte: Rut liest mit den Arbeiterinnen des Boas auf, bis Gersten- und Weizenernte vorbei sind (Garben)."
         ]
       }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "RUT.2.18-RUT.2.20",
+            "figures": [
+              "FIG-RUT",
+              "FIG-NOOMI"
+            ],
+            "objects": [
+              "FIG-OBJ-GERSTE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-RUT",
+                "to": "FIG-NOOMI",
+                "icons": [
+                  "FIG-BOAS"
+                ]
+              },
+              {
+                "from": "FIG-NOOMI",
+                "to": "FIG-RUT",
+                "icons": [
+                  "FIG-ZEICHEN-SEGNEN",
+                  "FIG-BOAS",
+                  "FIG-ZEICHEN-LOESERECHT"
+                ]
+              }
+            ],
+            "action_de": "Rut bringt die Gerste zu Noomi und erzählt, sie habe bei Boas gearbeitet. Noomi sagt: Gesegnet sei er von JHWH! Der Mann ist nah mit uns verwandt, er ist einer von unseren Lösern.",
+            "stage": {
+              "hold": {
+                "FIG-RUT": "FIG-OBJ-GERSTE"
+              },
+              "mood": {
+                "FIG-NOOMI": "delight",
+                "FIG-RUT": "smile"
+              },
+              "bubble_y": 20
+            }
+          },
+          {
+            "n": 2,
+            "reference": "RUT.2.21-RUT.2.23",
+            "figures": [
+              "FIG-GRUPPE-FRAUEN",
+              "FIG-RUT"
+            ],
+            "objects": [
+              "FIG-ORT-FELD",
+              "FIG-OBJ-GARBE"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Auf Noomis Rat hält sich Rut zu den Arbeiterinnen des Boas und liest auf, bis die Gersten- und die Weizenernte zu Ende sind; sie wohnt bei ihrer Schwiegermutter.",
+            "stage": {
+              "pose": {
+                "FIG-RUT": "kneel"
+              },
+              "count": {
+                "FIG-OBJ-GARBE": 2
+              },
+              "mood": {
+                "FIG-GRUPPE-FRAUEN": "smile",
+                "FIG-RUT": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-FRAUEN": 50,
+                "FIG-RUT": 112
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Rut bringt die Gerste zu Noomi und erzählt, sie habe bei Boas gearbeitet. Noomi sagt: Gesegnet sei er von JHWH! Der Mann ist nah mit uns verwandt, er ist einer von unseren Lösern.",
+          "Auf Noomis Rat hält sich Rut zu den Arbeiterinnen des Boas und liest auf, bis die Gersten- und die Weizenernte zu Ende sind; sie wohnt bei ihrer Schwiegermutter."
+        ],
+        "captions_de": [
+          "Einer unserer Löser: Rut bringt Gerste und erzählt von Boas; Noomi segnet ihn (Hand mit Strahlen) und sagt: Er ist ein Löser (Feld mit Kreispfeil).",
+          "Bis zum Ende der Ernte: Rut liest bei den Arbeiterinnen des Boas Ähren auf, die ganze Erntezeit lang (Garben)."
+        ],
+        "interpretation_note_de": "Der Löser ist ein naher Verwandter, der Land und Namen der Familie bewahrt ([[RUT.2.20]]; zur Sache [[LEV.25.25]], noch nicht übersetzt). Das Bild zeigt nicht, dass Noomi Rut auch das übrige Essen gibt ([[RUT.2.18]]).",
+        "basis": [
+          {
+            "record": "TU-RUT-002-018-023",
+            "field": "summary",
+            "fingerprint": "55c9b2984de1ba45"
+          },
+          {
+            "record": "TRANS-RUT-002-001-023-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "RUT.2.18-RUT.2.20",
+            "fingerprint": "d590dd89f5dad227"
+          },
+          {
+            "record": "TRANS-RUT-002-001-023-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "RUT.2.21-RUT.2.23",
+            "fingerprint": "7af181d8b7b2412b"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "RUT.2.18",
+            "figures": [
+              "FIG-RUT",
+              "FIG-NOOMI"
+            ],
+            "objects": [
+              "FIG-OBJ-GERSTE",
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Rut bringt die aufgelesene Gerste in die Stadt und gibt Noomi auch, was sie vom Essen übrig gelassen hat.",
+            "keywords": {
+              "de": "übrig gelassen",
+              "gsw": "übrig gloo"
+            },
+            "names": {
+              "FIG-RUT": {
+                "de": "Rut",
+                "gsw": "Rut"
+              },
+              "FIG-NOOMI": {
+                "de": "Noomi",
+                "gsw": "Noomi"
+              }
+            },
+            "stage": {
+              "hold": {
+                "FIG-RUT": "FIG-OBJ-GERSTE"
+              },
+              "arrows": [
+                [
+                  "FIG-RUT",
+                  "FIG-NOOMI",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-RUT": "smile",
+                "FIG-NOOMI": "surprised"
+              },
+              "floor_x": {
+                "FIG-OBJ-BROT": 93
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "RUT.2.19-RUT.2.20",
+            "figures": [
+              "FIG-RUT",
+              "FIG-NOOMI"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-NOOMI",
+                "to": "FIG-RUT",
+                "icons": [
+                  "FIG-BOAS"
+                ],
+                "word": {
+                  "de": "einer von unseren Lösern",
+                  "gsw": "eine vo öisne Löser"
+                }
+              }
+            ],
+            "action_de": "Rut nennt den Namen Boas; Noomi segnet ihn im Namen JHWHs, der seine Treue den Lebenden und den Toten nicht entzogen hat, und sagt: Er ist einer von unseren Lösern.",
+            "keywords": {
+              "de": "seine Treue",
+              "gsw": "sini Tröii"
+            },
+            "stage": {
+              "mood": {
+                "FIG-NOOMI": "delight",
+                "FIG-RUT": "smile"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Heimkehr mit Gerste: Rut bringt Noomi die Gerste (Bündel in ihrer Hand, Linie) und das übrige Essen (Brot).",
+          "Ein Löser: Noomi sagt froh zu Rut über Boas (Bild in der Blase): einer von unseren Lösern."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Bild neu aus der Kernanalyse (Worte im Bild)",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-RUT-002-018-023",
+            "field": "summary",
+            "fingerprint": "55c9b2984de1ba45"
+          },
+          {
+            "record": "TRANS-RUT-002-001-023-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "RUT.2.18",
+            "fingerprint": "bc39b28e894496a3"
+          },
+          {
+            "record": "TRANS-RUT-002-001-023-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "RUT.2.19-RUT.2.20",
+            "fingerprint": "dd4a8dd8de8b166a"
+          }
+        ],
+        "rework": {
+          "since": "2026-10-23",
+          "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
+        }
+      }
     }
-  ],
-  "rework": {
-    "since": "2026-10-23",
-    "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
-  }
+  ]
 }
