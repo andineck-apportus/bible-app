@@ -2,6 +2,25 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.72 — 2026-10-23 — Kernanalysen Pilot
+
+- **Kernanalysen** (docs/VERDICHTUNG.md, neuer Typ `core_analysis` in `data/core-analyses/`):
+  - Jede Einheit hat eine Kernaussage, 1–6 tragende Momente und eine Liste des bewusst Weggelassenen.
+  - Jeder Moment hat einen Erkennungsmoment (fürs Bild) und Stichwörter wörtlich aus der hochdeutschen Arbeitsübersetzung (fürs Wortband).
+  - Erfasst sind auch Textart, Sprecher sowie Personen und Orte.
+  - Pilot mit 58 Einheiten:
+    - Rut: Abschnitte, Kapitel, Buch;
+    - Titus: Abschnitte, Kapitel, Buch;
+    - Markus 5: Abschnitte, Kapitel;
+    - Bergpredigt Mt 5–7: Abschnitte, Kapitel.
+  - Entstanden als KI-Entwurf und geprüft von einer getrennten KI-Instanz gegen den Text; die Befunde sind eingearbeitet und je Einheit unter `review` festgehalten.
+  - Keine fachliche Prüfung durch Personen; Durchsicht durch Andi Neck steht aus.
+- **Werkzeug** `scripts/authoring/kernanalyse.py`:
+  - prüft Umfang je Ebene, ob die Stellen innerhalb der Einheit liegen und ob die Stichwörter im Text stehen;
+  - prüft, ob die Personen und Orte im Bildlexikon stehen;
+  - prüft «oben nichts, was unten fehlt»;
+  - schreibt Fingerabdrücke von Text bzw. Kinderanalysen.
+
 ## v0.71 — 2026-10-22 — Pfad unten statt Lesetiefe
 
 - **Eine Navigation nach oben und unten** (Andi Neck): Die Leiste unten zeigt den Pfad mit echten Namen («Bibel › NT › Evangelien › Mt › 5 › Die Seligpreisungen › 9»); jedes Glied springt direkt auf seine Ebene. Rechts öffnet ein Knopf mit der nächsten Ebene («Kapitel ↓», «Abschnitt ↓», «Vers ↓») die Auswahl am aktuellen Ort (Liste oder Raster, zuletzt gelesener Eintrag markiert). Auf Versebene entfällt der Knopf.
