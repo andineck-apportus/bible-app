@@ -44,6 +44,8 @@ Bilder gibt es auf allen Ebenen über den Versen: Bibel, Testamente, Buchgruppen
 
 ## Prüfung auf Verständlichkeit (Blindtest)
 
+Überarbeiteter Ablauf mit Blindtest ohne Legende, Bildtypen je Textart und Zielwerten: Vorschlag in [BILDPROZESS.md](BILDPROZESS.md) (2026-10-23, Entscheid offen).
+
 1. Bild rendern (PNG).
 2. Eine getrennte KI-Instanz beschreibt es **ohne** Bildauftrag, nur mit der Legende, wie sie die App zeigt: wer, wer zu wem, was gesagt/getan, Sicherheit; dazu alles Unklare.
 3. Beschreibung mit dem Auftrag vergleichen. Weicht sie bei Handelnden, Wer-zu-wem, Handlung oder Reihenfolge ab, Symbol oder Anordnung nachbessern und erneut prüfen.
