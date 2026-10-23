@@ -101,6 +101,28 @@ Lehre für den Test selbst: Die Auswahl aus vier war zu leicht (89–96 %), weil
 Künftig wählt eine KI-Instanz drei naheliegende Verwechslungen (gleiches Feld, ähnliche Form), bevor getestet wird.
 Massgeblich ist bis dahin die freie Benennung.
 
+### Figuren und Gegenstände im Stil Anime, 2026-10-23
+
+377 Einträge (Gott, Personen, Rollen, Gruppen, Gegenstände, Orte), ohne Legende frei beschrieben von je vier KI-Instanzen, bewertet
+von einer fünften gegen Name, Identität und Pflichtmerkmale. Runde 1 vor, Runde 2 nach der ersten Überarbeitung
+(Erkennungszeichen gross in der Hand, Frauen- und Altersmerkmale, Gebetsmantel, gestaffelte gemischte Gruppen mit gemeinsamem
+Merkmal, 50 Gegenstände und Orte neu gezeichnet, Lexikon angeglichen). Daten: `reports/figuren-blindtest-2026-10-23.json`,
+`reports/figuren-blindtest-2026-10-23-runde2.json`.
+
+| Art | Anzahl | getroffen Runde 1 | getroffen Runde 2 | behalten Runde 1 → 2 |
+|---|---|---|---|---|
+| Gott, Jesus, Geist | 4 | 100 % | 100 % | 4 → 4 |
+| Personen | 79 | 14 % | 68 % | 10 → 48 |
+| Rollen | 61 | 28 % | 70 % | 12 → 34 |
+| Gruppen | 46 | 17 % | 41 % | 6 → 18 |
+| Gegenstände | 139 | 73 % | 88 % | 101 → 115 |
+| Orte | 48 | 75 % | 90 % | 36 → 43 |
+| Alle | 377 | 47 % | 76 % | 169 → 262 |
+
+Offen nach Runde 2: Gruppen (zu viele kleine Köpfe; besser 3–4 grosse Figuren, feste Erkennungsfarbe, grosses Attribut),
+mehrdeutige Attribute (Worfelschaufel als Hammer, Matte als Schriftrolle, Muschel als Fächer), Nebenfiguren ohne Attribut,
+Satan, Besessener, Königin von Saba (Geschlecht), flache Landschaftsstreifen, Doppelbilder.
+
 ### Reihenfolge der Überarbeitung
 
 1. Die 20 meistverwendeten schwachen Zeichen (rund die Hälfte aller schwachen Verwendungen).
