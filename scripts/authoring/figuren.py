@@ -19,24 +19,10 @@ SKIN = "#C89B72"
 # ------------------------------------------------------------------ Attribute (klein, viewBox 0 0 16 16)
 ATTR = {
     "schluessel": '<g fill="none" stroke="#C08A2A" stroke-width="1.8" stroke-linecap="round"><circle cx="5" cy="5" r="3.2"/><path d="M7.4 7.4l6.4 6.4M11 11l1.8-1.8M12.6 12.6l1.6-1.6"/></g>',
-    "x-kreuz": '<path d="M2 2l12 12M14 2L2 14" stroke="#7A5A34" stroke-width="2.6" stroke-linecap="round"/>',
-    "messer": '<path d="M3 13l8-8 2 1-8 8z" fill="#C9C2B4" stroke="#3B3226" stroke-width=".7"/><path d="M11 5l2.6-2.6" stroke="#5B4630" stroke-width="2.2" stroke-linecap="round"/>',
-    "saege": '<path d="M1 10h13v3H1z" fill="#C9C2B4" stroke="#3B3226" stroke-width=".7"/><path d="M1 10l1.5-2 1.5 2 1.5-2 1.5 2 1.5-2 1.5 2 1.5-2 1.5 2" fill="none" stroke="#3B3226" stroke-width=".7"/><path d="M14 9h2v5h-2z" fill="#7A5A34"/>',
-    # Keule: kurzer Griff, dicker knorriger Kopf mit Astknoten (Tradition Thaddäus); vorher Kugel am Stab (Blindtest 2026-10-23)
-    "keule": '<path d="M2.6 15.4L8.8 7" stroke="#5B4630" stroke-width="2.2" stroke-linecap="round"/><path d="M3.4 13.8l1.2.9M4.4 12.4l1.2.9" stroke="#3B3226" stroke-width=".7"/>'
-             '<path d="M7.4 8.2Q5.8 5.4 7.8 2.8 10.4.2 13.4 1.4q2.4 1.6 1.8 4.6-.8 3-4.4 3.6-2.2.4-3.4-1.4z" fill="#8A6A3A" stroke="#3B3226" stroke-width=".9"/>'
-             '<circle cx="10.4" cy="3.4" r=".9" fill="#5B4630"/><circle cx="13" cy="5.6" r=".8" fill="#5B4630"/><circle cx="9.6" cy="6.8" r=".7" fill="#5B4630"/><path d="M11.6 2.4l.6-1.4M14.6 3.2l1.2-.6M8.4 3.4l-1.2-.8" stroke="#3B3226" stroke-width=".9" stroke-linecap="round"/>',
     "winkelmass": '<path d="M3 2v11h11" fill="none" stroke="#8C8070" stroke-width="2.4" stroke-linejoin="round"/>',
     "kreuzstab": '<path d="M8 1v15M4.5 4.5h7" stroke="#7A5A34" stroke-width="1.8" stroke-linecap="round"/>',
-    "kasse": '<path d="M2 6h12v8H2z" fill="#8A6A3A" stroke="#3B3226" stroke-width=".8"/><path d="M2 6l2-3h8l2 3" fill="#A07A44" stroke="#3B3226" stroke-width=".8"/><circle cx="8" cy="10" r="1.3" fill="#D9A441"/>',
     "muschel": '<path d="M8 14L2 5q6-5 12 0z" fill="#F2E6CC" stroke="#3B3226" stroke-width=".8"/><path d="M8 14L5 4M8 14V3M8 14l3-10" stroke="#B4A98F" stroke-width=".7"/>',
-    # Walkerstange: langer Stab mit flachem, breitem Schlagholz (Tradition Jakobus, Sohn des Alphäus); vorher Querholz, las sich als Hammer/Axt
-    "walkerstange": '<path d="M1.6 15.6L9 6.6" stroke="#7A5A34" stroke-width="1.6" stroke-linecap="round"/>'
-                    '<rect x="9.8" y=".2" width="3.6" height="8.4" rx="1.6" transform="rotate(39.4 11.6 4.4)" fill="#B48A54" stroke="#3B3226" stroke-width=".8"/>'
-                    '<path d="M10.4 6.2l3.6-4.2" stroke="#8A6A3A" stroke-width=".6" stroke-linecap="round"/>',
     "buch": '<path d="M2 3h6v11H2zM8 3h6v11H8z" fill="#F4F1EA" stroke="#3B3226" stroke-width=".8"/><path d="M13 1l2 6" stroke="#3B3226" stroke-width="1"/>',
-    "kelch": '<path d="M4 2h8q0 6-4 7-4-1-4-7z" fill="#D9A441" stroke="#9C6F1C" stroke-width=".8"/><path d="M8 9v4M5 14h6" stroke="#9C6F1C" stroke-width="1.4" stroke-linecap="round"/>',
-    "stabkreuz": '<path d="M8 1v15M5 4h6" stroke="#8F6BA8" stroke-width="1.6" stroke-linecap="round"/>',
     "feigenblatt": '<path d="M8 15V8M8 8Q2 9 2 4q3 1 4-2 2 2 2 2 0 0 2-2 1 3 4 2 0 5-6 4z" fill="#5E7F3A" stroke="#3B3226" stroke-width=".7"/>',
     "aehren": '<g stroke="#B08A2A" stroke-width="1.1" stroke-linecap="round"><path d="M5 15L7 3M8 15V2M11 15L9 3"/></g><g fill="#E8B84A" stroke="#B08A2A" stroke-width=".5"><ellipse cx="7" cy="4" rx="1.4" ry="2.4"/><ellipse cx="8" cy="3" rx="1.4" ry="2.4"/><ellipse cx="9.2" cy="4" rx="1.4" ry="2.4"/></g>',
     # Worfelgabel: langer Stiel mit fünf Zinken, dazu Gerstenkörner (Rut 3,2); vorher Schaufelblatt, las sich als Hammer/Axt (Blindtest 2026-10-23)
@@ -83,7 +69,6 @@ ATTR = {
     "daemon": '<path d="M9 13Q3.4 12.6 3 7.6q-.2-3.2 2.2-5.4Q5 5 6.8 5.6 6.4 2.6 9 1q-.2 2.8 1.8 4 2.6 2 2.2 4.8Q12.6 13.2 9 13zM6 13.4q-1.4 1.4-3.4 1.2M10.4 13.4q.8 1.6 2.6 2" fill="#4A4050" stroke="#2A2430" stroke-width=".6" opacity=".9"/>',
     "muschelstab": '<path d="M12 1v15" stroke="#7A5A34" stroke-width="1.8" stroke-linecap="round"/><path d="M6 13.4L1.4 6.6Q2 2 6 1.6q4 .4 4.6 5z" fill="#F2C78E" stroke="#3B3226" stroke-width=".8"/><path d="M6 13.4L3 4.4M6 13.4l-1-10M6 13.4l1-10M6 13.4l3-9" stroke="#B07A3E" stroke-width=".7"/><path d="M4.6 12.4h2.8v1.8H4.6z" fill="#F2C78E" stroke="#3B3226" stroke-width=".6"/><path d="M7.2 9.4l4.8-3" stroke="#5B4630" stroke-width=".8"/>',
     "geldbeutel": '<path d="M5 6q-3.4 3-3.4 6.2 0 3 6.4 3t6.4-3Q14.4 9 11 6z" fill="#7A3E2A" stroke="#3B3226" stroke-width=".8"/><path d="M5 6q3-1.6 6 0M6 5.6L4.6 2.6M10 5.6l1.4-3" stroke="#D9A441" stroke-width="1.1" stroke-linecap="round" fill="none"/><circle cx="8" cy="11" r="2.4" fill="#E0B24E" stroke="#9C6F1C" stroke-width=".6"/><circle cx="12.6" cy="2.6" r="1.6" fill="#E0B24E" stroke="#9C6F1C" stroke-width=".5"/>',
-    "saatbeutel": '<path d="M4 4.6q-3 3-3 6t5.6 3 5.6-3-3-6z" fill="#A08A5A" stroke="#3B3226" stroke-width=".8"/><path d="M4 4.6h4.4" stroke="#5B4630" stroke-width="1.4"/><path d="M4.6 4.4Q8 .2 14 1.6" fill="none" stroke="#5B4630" stroke-width="1"/><g fill="#E8C98E" stroke="#8A6A3A" stroke-width=".35"><ellipse cx="12.4" cy="6.4" rx=".8" ry="1.1"/><ellipse cx="14" cy="9.4" rx=".8" ry="1.1"/><ellipse cx="11.6" cy="11" rx=".8" ry="1.1"/><ellipse cx="13.8" cy="13.6" rx=".8" ry="1.1"/></g>',
     "gebetsriemen": '<path d="M2 12Q8 8 14 12" fill="none" stroke="#2E2017" stroke-width="1.6"/><path d="M5.2 3.2h5.6v5.6H5.2z" fill="#1E1610" stroke="#5B4630" stroke-width=".6"/><path d="M5.2 3.2l1-1.6h5.6l-1 1.6zM10.8 3.2l1-1.6v5.6l-1 1.6z" fill="#3B3226"/><path d="M8 8.8V11M3 11.4q-1 2 0 4.4M13 11.4q1 2 0 4.4" fill="none" stroke="#2E2017" stroke-width="1.2"/>',
     "feuerrad": '<path d="M3.6 9Q2 4.6 5 2q-.2 2.4 1.4 3Q6.6 1.4 9.8.6 8.8 3 10.6 4q1.6-1.6 1.2-3.4 3.2 3.2 1 8z" fill="#E8783A" stroke="#A3461E" stroke-width=".6"/><circle cx="8" cy="10.4" r="4.6" fill="none" stroke="#7A5A34" stroke-width="1.4"/><path d="M8 5.8v9.2M3.4 10.4h9.2M4.8 7.2l6.4 6.4M11.2 7.2l-6.4 6.4" stroke="#7A5A34" stroke-width=".8"/><circle cx="8" cy="10.4" r="1.2" fill="#5B4630"/>',
     "leinen": '<path d="M2 2.4h12l-.6 4.6 1 8.6-2.6-1.4-2.4 1.4-2.4-1.4-2.4 1.4-2.4-1.4L1.6 7z" fill="#F6EBD9" stroke="#3B3226" stroke-width=".8"/><path d="M2 2.4q6 3 12 0" fill="#E2D6BE" stroke="#3B3226" stroke-width=".6"/><path d="M5 5.4l-.4 8.6M8 5.8v8.6M11 5.4l.4 8.6" stroke="#D8CBB0" stroke-width=".7"/>',
@@ -150,9 +135,6 @@ ATTR = {
     "tuer-zu": '<path d="M1.4 15.6V5.4Q1.4 1.4 6 1.4t4.6 4v10.2z" fill="#6A4A2A" stroke="#3B3226" stroke-width=".9"/>'
                '<path d="M4.4 2.2v13.4M7.4 2.2v13.4" stroke="#4A3220" stroke-width=".6"/><path d="M1.4 9h9.2" stroke="#3B3226" stroke-width="1.5"/>'
                '<path d="M11 15.6v-4.4Q9.4 10.4 9.4 8.8l.5-.4 1.3 1.1V4.6q0-.8.7-.8t.7.8v3.2V3.2q0-.8.7-.8t.7.8v4.6V3.8q0-.8.7-.8t.7.8v4.4V5.4q0-.8.6-.8t.6.8v5.8q0 2.2-1.4 3.4v1z" fill="#C89B72" stroke="#3B3226" stroke-width=".6"/>',
-    # Vater: Sohn an seiner Seite (Mt 7,9; Mk 9,17)
-    "sohn-kind": '<circle cx="8" cy="4.4" r="3" fill="#C89B72" stroke="#3B3226" stroke-width=".7"/><path d="M5 4Q5 1 8 1t3 3Q9.8 2.6 8 2.8T5 4z" fill="#2E2017"/>'
-                 '<path d="M4.2 15.6Q3.8 9.2 8 8.2q4.2 1 3.8 7.4z" fill="#4F7AA8" stroke="#3B3226" stroke-width=".7"/><path d="M4.8 10.4l-1.8 3M11.2 10.4l1.8 3" stroke="#C89B72" stroke-width="1.3" stroke-linecap="round"/>',
     # Diener: Tablett mit Krug und Bechern (Joh 2,8 «bringt es»), über der Schürze
     "tablett": '<path d="M.8 11.8h14.4l-1.2 1.6H2z" fill="#B07A3E" stroke="#3B3226" stroke-width=".7"/>'
                '<path d="M4 11.8Q2.4 9.4 3.2 7.2 3.8 6 5.2 5.8V4.6h1.8v1.2q1.4.2 2 1.4.8 2.2-.6 4.6z" fill="#C2884A" stroke="#3B3226" stroke-width=".6"/>'
@@ -247,13 +229,11 @@ ATTR = {
     "insel": '<path d="M.6 11h14.8v4.6H.6z" fill="#5A8AB0" stroke="#3B3226" stroke-width=".7"/><path d="M2 13.2q1-.8 2 0t2 0M8.6 14.2q1-.8 2 0t2 0" fill="none" stroke="#DCEBF6" stroke-width=".6"/>'
              '<path d="M1.6 11.4Q3.6 6.8 7.2 3.2q1.4 1.6 2.6 1.2 2.8 2.4 4.6 7z" fill="#8A9A5A" stroke="#3B3226" stroke-width=".8"/>'
              '<path d="M4.4 9h1.8v2H4.4zM8 8.2h2v2.8H8zM11 9.4h1.6v1.6H11z" fill="#F4F1EA" stroke="#3B3226" stroke-width=".4"/><path d="M4.2 9l1.1-1 1.1 1M7.8 8.2l1.2-1 1.2 1" fill="#A33A2E" stroke="#3B3226" stroke-width=".3"/>',
-    # Noomi: Säugling Obed gewickelt (Rut 4,16), grösser als vorher
-    "saeugling": '<path d="M2.4 13.8Q.8 11.4 3 9.6l6.8-5.2q2.6-1.4 3.8.8 1 2.2-1 3.8l-6.8 5.2q-2 1.4-3.4-.4z" fill="#F2E6CC" stroke="#3B3226" stroke-width=".8"/>'
-                 '<path d="M5 9l2.4 3M7.8 6.8l2.4 3" stroke="#C9B48E" stroke-width="1"/>'
+    # Noomi: Säugling Obed (Rut 4,16), Tuch in Ruts Olivgrün mit Gerstengelb (Runde 4: weisse Wickelbänder lasen sich als Christkind)
+    "saeugling": '<path d="M2.4 13.8Q.8 11.4 3 9.6l6.8-5.2q2.6-1.4 3.8.8 1 2.2-1 3.8l-6.8 5.2q-2 1.4-3.4-.4z" fill="#8A9A5A" stroke="#3B3226" stroke-width=".8"/>'
+                 '<path d="M5 9l2.4 3M7.8 6.8l2.4 3" stroke="#E8B84A" stroke-width="1"/>'
                  '<circle cx="12.2" cy="4.8" r="2.9" fill="#C89B72" stroke="#3B3226" stroke-width=".7"/><path d="M10.6 4.6q.6.6 1.2 0M12.8 4.2q.6.6 1.2 0" fill="none" stroke="#3B3226" stroke-width=".5"/>'
                  '<path d="M10.4 3.2q1.8-2 3.6-.4" fill="none" stroke="#3A2618" stroke-width="1"/>',
-    # Jünger-Rolle: zwei Fussspuren «folgt mir nach» (Mk 1,17-18)
-    "fussspuren": '<g fill="#5B4630"><g transform="translate(4.4 11.2) rotate(-8) scale(.92)"><path d="M0 5.2q-1.9 0-2-2.1 0-1.5.7-2.9.5-1.3.2-2.6-.3-1.9 1.4-2.3 1.9-.2 2.1 1.9.1 1.7-.6 3.1-.4 1-.2 2.5.2 2.4-1.6 2.4z"/><circle cx="-1.7" cy="-6.6" r=".95"/><circle cx="-.2" cy="-7.4" r=".78"/><circle cx="1.1" cy="-7.3" r=".68"/><circle cx="2.2" cy="-6.7" r=".58"/><circle cx="3" cy="-5.8" r=".5"/></g><g transform="translate(11.4 8) rotate(8) scale(.92)"><path d="M0 5.2q-1.9 0-2-2.1 0-1.5.7-2.9.5-1.3.2-2.6-.3-1.9 1.4-2.3 1.9-.2 2.1 1.9.1 1.7-.6 3.1-.4 1-.2 2.5.2 2.4-1.6 2.4z"/><circle cx="-1.7" cy="-6.6" r=".95"/><circle cx="-.2" cy="-7.4" r=".78"/><circle cx="1.1" cy="-7.3" r=".68"/><circle cx="2.2" cy="-6.7" r=".58"/><circle cx="3" cy="-5.8" r=".5"/></g></g>',
     # Elimelech: Stab mit grossem, verknotetem Reisebündel (Wegzug nach Moab, Rut 1,1)
     "buendel": '<path d="M1.4 15.8L10.6 3.6" stroke="#7A5A34" stroke-width="1.7" stroke-linecap="round"/>'
                '<path d="M10.8 4.4Q6 4.6 5.6 9.2q.2 4.8 5.2 5 5-.2 5.2-5-.4-4.6-5.2-4.8z" fill="#C9A27A" stroke="#3B3226" stroke-width=".8"/>'
@@ -278,12 +258,12 @@ def _jakobsmuschel():
     import math
     n, cx, cy, hx, hy = 9, 8, 8.4, 8, 14.2
     pts = [(cx + 7.2 * math.cos(math.radians(a)), cy + 7.4 * math.sin(math.radians(a))) for a in [190 + i * 160 / (n - 1) for i in range(n)]]
-    out = ['<path d="M4.4 15.6L5.2 12.4h5.6l.8 3.2z" fill="#E0A870" stroke="#3B3226" stroke-width=".7"/>']
+    out = ['<path d="M4.4 15.6L5.2 12.4h5.6l.8 3.2z" fill="#E6D4AE" stroke="#3B3226" stroke-width=".7"/>']
     for i in range(n - 1):
         (x1, y1), (x2, y2) = pts[i], pts[i + 1]
         mx, my = (x1 + x2) / 2, (y1 + y2) / 2
         qx, qy = mx + (mx - cx) * .22, my + (my - cy) * .22
-        col = "#F6C98E" if i % 2 else "#E89A5E"
+        col = "#F7EEDC" if i % 2 else "#E2CFA8"  # naturweiss statt orange (Runde 4: las sich als Fächer)
         out.append(f'<path d="M{hx} {hy}L{x1:.2f} {y1:.2f}Q{qx:.2f} {qy:.2f} {x2:.2f} {y2:.2f}z" fill="{col}"/>')
     edge = f"M{hx} {hy}L{pts[0][0]:.2f} {pts[0][1]:.2f}"
     for i in range(n - 1):
@@ -291,11 +271,171 @@ def _jakobsmuschel():
         mx, my = (x1 + x2) / 2, (y1 + y2) / 2
         edge += f"Q{mx + (mx - cx) * .22:.2f} {my + (my - cy) * .22:.2f} {x2:.2f} {y2:.2f}"
     out.append(f'<path d="{edge}z" fill="none" stroke="#3B3226" stroke-width=".8" stroke-linejoin="round"/>')
-    out.append("".join(f'<path d="M{hx} {hy}L{x:.2f} {y:.2f}" stroke="#B0683A" stroke-width=".45"/>' for x, y in pts[1:-1]))
+    out.append("".join(f'<path d="M{hx} {hy}L{x:.2f} {y:.2f}" stroke="#9A8058" stroke-width=".5"/>' for x, y in pts[1:-1]))
     return "".join(out)
 
 
 ATTR["jakobsmuschel"] = _jakobsmuschel()
+
+
+# ---- Runde 4 (2026-10-23, Blindtest Runde 3): Zeichen, die als etwas anderes gelesen wurden, neu gezeichnet
+def _saege():
+    """Handsäge: Blatt mit deutlichen Zähnen und Holzgriff mit Griffloch (vorher flacher Streifen, las sich als Krone/Kamm)."""
+    teeth = "".join("l.5 1.3.5-1.3" for _ in range(10))
+    return ('<g transform="rotate(-30 8 8.4)">'
+            '<path d="M.6 7.4L11.4 5.6v5.6H1.2z" fill="#D6D2C8" stroke="#3B3226" stroke-width=".7" stroke-linejoin="round"/>'
+            f'<path d="M1.2 11.2{teeth}" fill="#D6D2C8" stroke="#3B3226" stroke-width=".55" stroke-linejoin="round"/>'
+            '<path d="M2 8.6l8.8-1.4" stroke="#FFFDF6" stroke-width=".6"/>'
+            '<path d="M10.8 4.2h3.4q1.8 0 1.8 1.8v5.8q0 1.8-1.8 1.8h-3.4z" fill="#A0703A" stroke="#3B3226" stroke-width=".75"/>'
+            '<rect x="12.4" y="6.2" width="2" height="5" rx="1" fill="#FFFDF6" stroke="#3B3226" stroke-width=".5"/>'
+            '<circle cx="11.6" cy="5.4" r=".45" fill="#D9A441"/><circle cx="11.6" cy="12.4" r=".45" fill="#D9A441"/></g>')
+
+
+ATTR.update({
+    "saege": _saege(),
+    # Messer gesenkt, Spitze nach unten, mit Holzgriff (Tradition Bartholomäus); vorher schräg nach oben, las sich als Opfermesser (Abraham)
+    "messer": '<g transform="rotate(24 8 8)"><path d="M6.4.6h3.2v6H6.4z" fill="#6A4A2A" stroke="#3B3226" stroke-width=".7"/>'
+              '<circle cx="8" cy="2.2" r=".45" fill="#D9A441"/><circle cx="8" cy="4.8" r=".45" fill="#D9A441"/>'
+              '<path d="M5.4 6.4h5.2v1.4H5.4z" fill="#8C8070" stroke="#3B3226" stroke-width=".5"/>'
+              '<path d="M6.2 7.8h3.6q.8 4.2-1.6 7.8-.6.4-.8-.4.4-3.6-1.2-7.4z" fill="#D6D2C8" stroke="#3B3226" stroke-width=".7"/>'
+              '<path d="M8.8 8.4q.4 3.2-.8 6" fill="none" stroke="#FFFDF6" stroke-width=".5"/></g>',
+    # Kelch mit Schlange (Legende vom Giftbecher, Tradition Johannes); vorher Prunkkelch allein, las sich als Becher des Mundschenks
+    "kelch": '<path d="M3.4 6.4h9.2q-.2 5-4.6 5.8-4.4-.8-4.6-5.8z" fill="#C9A04A" stroke="#8A6A2A" stroke-width=".8"/>'
+             '<ellipse cx="8" cy="6.4" rx="4.6" ry="1.1" fill="#9C7A34" stroke="#8A6A2A" stroke-width=".5"/>'
+             '<path d="M8 12.2v2M5 15.2h6" stroke="#8A6A2A" stroke-width="1.5" stroke-linecap="round"/>'
+             '<path d="M8.8 6.6Q5.4 5.4 7.2 3.6 9.6 2 7.6 1.2" fill="none" stroke="#3B3226" stroke-width="2.3" stroke-linecap="round"/>'
+             '<path d="M8.8 6.6Q5.4 5.4 7.2 3.6 9.6 2 7.6 1.2" fill="none" stroke="#5E9A3A" stroke-width="1.35" stroke-linecap="round"/>'
+             '<ellipse cx="6.6" cy="1.3" rx="1.6" ry="1.05" fill="#5E9A3A" stroke="#3B3226" stroke-width=".5"/>'
+             '<circle cx="6.2" cy="1" r=".3" fill="#1E1610"/><path d="M5.1 1.4l-1.1.4M5.1 1.4l-1-.5" stroke="#A33A2E" stroke-width=".4"/>',
+    # Walkerstange: langer Stab mit flachem, geradem Brett (Tradition Jakobus, Sohn des Alphäus)
+    "walkerstange": '<path d="M1.2 15.8L8.8 7.8" stroke="#3B3226" stroke-width="2.4" stroke-linecap="round"/><path d="M1.2 15.8L8.8 7.8" stroke="#8A6234" stroke-width="1.4" stroke-linecap="round"/>'
+                    '<g transform="rotate(42 11.4 4.4)"><rect x="9.2" y="-.6" width="4.4" height="9" rx=".5" fill="#D2A86E" stroke="#3B3226" stroke-width=".8"/>'
+                    '<path d="M10.6.2v7.4M12.2.2v7.4" stroke="#A8803E" stroke-width=".45"/></g>',
+    # Keule: Holzknüppel, unten schmal, oben dick, Astknorren am Umriss (Tradition Thaddäus); vorher runder Kopf mit Punkten, las sich als Honigwabe
+    "keule": '<path d="M1.8 15.2L3 13.6 11.2 2.6Q12.6.6 14.6 1.6 16 3 14.6 4.8L4.2 15.6Q2.6 16.6 1.8 15.2z" fill="#8A6A3A" stroke="#3B3226" stroke-width=".8"/>'
+             '<path d="M9.6 5.4q-1.6-.4-1.4 1.2M13.2 6.8q.8 1.2 2 .4M6.6 10q-1.4-.2-1.2 1.2" fill="#8A6A3A" stroke="#3B3226" stroke-width=".7"/>'
+             '<path d="M4.6 13.6L12.4 3.4M6.6 13.2l7-8.6" stroke="#6A4A2A" stroke-width=".45"/><path d="M2.6 13.4l1.6 1.4M3.6 12.2l1.6 1.4" stroke="#3B3226" stroke-width=".7"/>',
+    # X-Kreuz aus zwei Holzbalken mit Maserung (Tradition Andreas); vorher zwei Striche, lasen sich als gekreuzte Bänder
+    "x-kreuz": "".join(f'<g transform="rotate({a} 8 8)"><rect x="6.3" y=".4" width="3.4" height="15.2" rx=".4" fill="#A0703A" stroke="#3B3226" stroke-width=".8"/>'
+                       '<path d="M7.4 1.2v13.6M8.7 1.2v13.6" stroke="#7A5230" stroke-width=".4"/></g>' for a in (45, -45)),
+    # Stabkreuz: langer Holzstab mit kleinem Kreuz oben (Tradition Philippus); vorher kurzes Kreuz, las sich als Kreuzträger
+    "stabkreuz": '<path d="M8 3.4v12.4" stroke="#3B3226" stroke-width="2.3" stroke-linecap="round"/><path d="M8 3.4v12.4" stroke="#8A6234" stroke-width="1.3" stroke-linecap="round"/>'
+                 '<path d="M8 .9v7.2M4.4 3.8h7.2" stroke="#3B3226" stroke-width="2.6" stroke-linecap="round"/><path d="M8 .9v7.2M4.4 3.8h7.2" stroke="#E0B24E" stroke-width="1.5" stroke-linecap="round"/>'
+                 '<g fill="#E0B24E" stroke="#3B3226" stroke-width=".5"><circle cx="8" cy=".9" r="1"/><circle cx="4.2" cy="3.8" r="1"/><circle cx="11.8" cy="3.8" r="1"/></g>'
+                 '<circle cx="8" cy="15.4" r="1" fill="#8A6234" stroke="#3B3226" stroke-width=".5"/>',
+    # Thomas: Hand mit Wundmal, ein Finger zeigt darauf (Joh 20,25-27); vorher Winkelmass, las sich als Baumeister
+    "wundmal": '<path d="M3 15.6V9.2Q2.4 8 1.6 7.2.8 6.2 1.6 5.6q1-.4 2.2 1.2l.4.4V3q0-1 .8-1t.8 1v3.4V1.6q0-1 .8-1t.8 1v4.8V2.2q0-1 .8-1t.8 1v4.4V3.6q0-.9.8-.9t.8.9v6q0 2.4-1.4 3.6v2.4z" fill="#C89B72" stroke="#3B3226" stroke-width=".65"/>'
+               '<circle cx="6.6" cy="10.2" r="1.1" fill="#A33A2E" stroke="#6A1E16" stroke-width=".4"/>'
+               '<path d="M16 8.6h-3.4q-1.2 0-1.6 1l-2.6.1q-.9.1-.9.8t.9.8l2.8.1q.4 1.8 2 2h2.8z" fill="#B88A62" stroke="#3B3226" stroke-width=".7"/>'
+               '<path d="M11.4 11.2h2M11.6 12.4h1.8" stroke="#3B3226" stroke-width=".4"/>',
+    # Matthäus: Buch mit Feder und Münzen (Evangelist, Tradition; Zöllner, Mt 10,3); vorher Buch allein, las sich als Lehrer
+    "buch-muenzen": '<path d="M.6 5Q3.6 3.6 7 5v9.4Q3.6 13 .6 14.4z" fill="#F4F1EA" stroke="#3B3226" stroke-width=".7"/><path d="M7 5q3.4-1.4 6.4 0v9.4Q10.4 13 7 14.4z" fill="#F4F1EA" stroke="#3B3226" stroke-width=".7"/>'
+                    '<path d="M1.8 7q2.2-.8 4 0M1.8 9q2.2-.8 4 0M1.8 11q2.2-.8 4 0M8.2 7q2.2-.8 4 0M8.2 9q2.2-.8 4 0" fill="none" stroke="#A79A80" stroke-width=".5"/>'
+                    '<path d="M8.6 10.6Q10.8 4 15.6.4q.4 4.6-4.6 8.4z" fill="#FFFDF6" stroke="#3B3226" stroke-width=".6"/><path d="M8.6 10.6l4-6.6" stroke="#3B3226" stroke-width=".4"/>'
+                    '<circle cx="12.2" cy="13.4" r="2.3" fill="#E0B24E" stroke="#9C6F1C" stroke-width=".6"/><circle cx="14.4" cy="11.2" r="1.7" fill="#C9C2B4" stroke="#8C8070" stroke-width=".55"/>',
+    # Judas Iskariot: Kasse mit Einwurfschlitz, eine Silbermünze fällt hinein (Joh 12,6: «er hatte die Kasse»); vorher Kästchen, las sich als Talent
+    "kasse": '<path d="M1.4 8h10.4v7.6H1.4z" fill="#8A6A3A" stroke="#3B3226" stroke-width=".8"/><path d="M1.4 8l2.8-2.8h10.2L11.8 8z" fill="#A9844C" stroke="#3B3226" stroke-width=".7"/>'
+             '<path d="M11.8 8l2.6-2.8v7.8l-2.6 2.6z" fill="#6E5230" stroke="#3B3226" stroke-width=".7"/><path d="M3.6 8v7.6M9.6 8v7.6" stroke="#5B4630" stroke-width=".9"/>'
+             '<path d="M5.6 6.6h4.6" stroke="#1E1610" stroke-width="1" stroke-linecap="round"/>'
+             '<path d="M5.4 10.4h2.4v2.6H5.4z" fill="#D9A441" stroke="#9C6F1C" stroke-width=".5"/><circle cx="6.6" cy="11.4" r=".4" fill="#1E1610"/>'
+             '<ellipse cx="7.9" cy="2.6" rx="1.1" ry="2" fill="#C9C2B4" stroke="#6E6A60" stroke-width=".55"/><path d="M5.6 1.2v2M10.2 1.2v2" stroke="#8C8070" stroke-width=".5" stroke-linecap="round"/>',
+    # Judas, nicht der Iskariot: Frage beim Mahl (Joh 14,22): Sprechblase mit Fragezeichen über Tischkante mit Brot und Becher
+    "frage-mahl": '<path d="M8 .6C3.8.6 1 2.6 1 5.2c0 2 1.6 3.6 4 4.2L3.8 11.8 7.4 9.8H8c4.2 0 7-2 7-4.6S12.2.6 8 .6z" fill="#FFFDF6" stroke="#3B3226" stroke-width=".8"/>'
+                  '<path d="M6.4 3.4q0-1.6 1.6-1.6t1.6 1.4q0 1-1.2 1.6-.5.3-.5 1.2" fill="none" stroke="#2E5478" stroke-width="1.15" stroke-linecap="round"/><circle cx="7.9" cy="7.2" r=".6" fill="#2E5478"/>'
+                  '<ellipse cx="11.4" cy="13.8" rx="3.6" ry="1.9" fill="#D9A060" stroke="#3B3226" stroke-width=".6"/><path d="M9.6 13.2q1.8-1 3.6 0M10 14.6q1.4-.6 2.8 0" fill="none" stroke="#A8743A" stroke-width=".45"/>'
+                  '<path d="M3.2 10.8h3.4l-.5 3.4H3.7z" fill="#C2884A" stroke="#3B3226" stroke-width=".55"/><path d="M4.9 14.2v1M3.6 15.6h2.6" stroke="#3B3226" stroke-width=".7" stroke-linecap="round"/>',
+    # Der Jünger, den Jesus liebte (Joh 13,23): Herz
+    "herz": '<path d="M8 15Q.8 10.4 1 5.4 1.4 1.4 4.8 1.4 7 1.4 8 3.8 9 1.4 11.2 1.4q3.4 0 3.8 4 .2 5-7 9.6z" fill="#C8414A" stroke="#3B3226" stroke-width=".8"/>'
+            '<path d="M3.4 4.6q.6-1.6 2.2-1.4" fill="none" stroke="#F4B4B4" stroke-width=".9" stroke-linecap="round"/>',
+    # Jünger-Rolle: Spur auf dem Weg, goldene Fussspuren voraus (Jesus), braune folgen (Mk 1,17-18); vorher zwei lose Spuren, zu schwach
+    "fussspuren": None,
+    # Sämann: offener Beutel mit Saatkörnern, Körner fliegen im Bogen heraus (Mk 4,3); vorher Beutel mit Schlaufe, las sich als Schleuder
+    "saatbeutel": '<path d="M8.4 7.4Q11.4 1.4 15.8.2M9.4 8.6Q13 5.4 15.8 6" fill="none" stroke="#B4A070" stroke-width=".5" stroke-dasharray="1 .9"/>'
+                  '<path d="M2 9.4Q.4 11.8 1.4 14 2.4 15.8 6.2 15.8t4.8-1.8q1-2.2-.6-4.6z" fill="#A08A5A" stroke="#3B3226" stroke-width=".8"/>'
+                  '<ellipse cx="6.2" cy="9.4" rx="4.3" ry="1.6" fill="#6E5A36" stroke="#3B3226" stroke-width=".7"/><path d="M2.8 9.4q3.4-2.2 6.8 0" fill="#E8C98E" stroke="#8A6A3A" stroke-width=".4"/>'
+                  '<path d="M3.4 12.4q2.8 1 5.6 0" fill="none" stroke="#7A6640" stroke-width=".5"/>'
+                  '<g fill="#F2D896" stroke="#8A6A3A" stroke-width=".4">' + "".join(
+                      f'<ellipse cx="{x}" cy="{y}" rx=".6" ry=".9" transform="rotate({r} {x} {y})"/>' for x, y, r in
+                      ((9.6, 4.6, 30), (12.4, 2, 55), (15.2, 1, 75), (13, 5.8, 40), (15.4, 4.6, 60), (14.6, 8.4, 20))) + '</g>',
+    # Löser: ausgezogener Schuh von der Seite, mit Sohle und Riemen (Rut 4,8); die Sandale von oben las sich als Brot, Riemen allein als Knoten
+    "sandale": '<g transform="rotate(-12 8 9)"><path d="M1.6 11.4Q1.2 6.2 4.6 6l3.4.4q1.6 2.8 5 3.2 2.6.4 2.4 2.2z" fill="#A0703A" stroke="#3B3226" stroke-width=".8" stroke-linejoin="round"/>'
+               '<ellipse cx="5.6" cy="6.6" rx="2.4" ry=".9" fill="#3B2616" stroke="#3B3226" stroke-width=".5"/>'
+               '<path d="M7.4 6.6q.4 2.6-1.4 4.8" fill="none" stroke="#5B3A20" stroke-width="1"/>'
+               '<path d="M1.2 11.4h14.4v1.4q0 1.2-1.4 1.2H2.4q-1.2 0-1.2-1.2z" fill="#5B3A20" stroke="#3B3226" stroke-width=".6"/>'
+               '<path d="M3 9.4q1.4 1 3.2.6" fill="none" stroke="#7A4E2A" stroke-width=".5"/></g>',
+    # Kranker: flache Strohmatte in Schrägsicht mit Geflecht und Fransen (Mk 2,4); gerollt las sie sich als Schriftrolle
+    "matte-flach": '<path d="M.4 13.6L3.6 4.8h12l-3.2 8.8z" fill="#E0C68A" stroke="#3B3226" stroke-width=".8" stroke-linejoin="round"/>'
+                   '<path d="M2 13.6l3.2-8.8M3.6 13.6l3.2-8.8M5.2 13.6l3.2-8.8M6.8 13.6L10 4.8M8.4 13.6l3.2-8.8M10 13.6l3.2-8.8M11.6 13.6l3.2-8.8" stroke="#B4944E" stroke-width=".5"/>'
+                   '<path d="M1.4 10.8h12M2.8 7.2h12" stroke="#6A4A2A" stroke-width="1"/>'
+                   '<path d="M.4 13.6l-.3 1.8M1.6 13.6l-.3 1.8M2.8 13.6l-.3 1.8M4 13.6l-.3 1.8M5.2 13.6l-.3 1.8M6.4 13.6l-.3 1.8M7.6 13.6l-.3 1.8M8.8 13.6l-.3 1.8M10 13.6l-.3 1.8M11.2 13.6l-.3 1.8M12.4 13.6l-.3 1.8" stroke="#B4944E" stroke-width=".6" stroke-linecap="round"/>',
+    # Maria von Betanien: Fläschchen giesst Öl auf einen Fuss (Joh 12,3); vorher Fläschchen allein, wie das Salbgefäss der Maria aus Magdala
+    "salbt-fuss": None,
+    # Blinder: Zeichen «blind» über einer Bettelschale mit Münze (er sass da und bettelte, Joh 9,8)
+    "blind-schale": '<path d="M2 5Q8-.8 14 5 8 10.8 2 5z" fill="#FFFDF6" stroke="#3B3226" stroke-width=".9"/><circle cx="8" cy="5" r="2" fill="#3B3226"/>'
+                    '<path d="M3 9.4L13 .6" stroke="#A33A2E" stroke-width="1.7" stroke-linecap="round"/>'
+                    '<path d="M1.4 11h13.2q-.6 4.6-6.6 4.8-6-.2-6.6-4.8z" fill="#B4643A" stroke="#3B3226" stroke-width=".8"/><ellipse cx="8" cy="11" rx="6.6" ry="1.2" fill="#8A4A2A" stroke="#3B3226" stroke-width=".6"/>'
+                    '<circle cx="9.6" cy="10.8" r="1.2" fill="#C9C2B4" stroke="#6E6A60" stroke-width=".45"/>',
+    # Epaphroditus: Korb mit Gaben (Brot, Krug, Tuch mit Band), keine Münzen (Phil 4,18); der Gabenbeutel las sich als Geldbeutel (Judas)
+    "gabenkorb": '<path d="M2.6 8.6Q8-.4 13.4 8.6" fill="none" stroke="#3B3226" stroke-width="1.8"/><path d="M2.6 8.6Q8-.4 13.4 8.6" fill="none" stroke="#B48A54" stroke-width=".9"/>'
+                 '<ellipse cx="5.4" cy="8.2" rx="3" ry="1.8" fill="#D9A060" stroke="#3B3226" stroke-width=".6"/>'
+                 '<path d="M9.6 9V5.6h1.2V4.6h2.4v1h1.2V9z" fill="#B4643A" stroke="#3B3226" stroke-width=".55"/>'
+                 '<path d="M6.8 9.4q.6-3 2.6-3t2 3z" fill="#E2CDA8" stroke="#3B3226" stroke-width=".55"/><path d="M7.4 7.6l3.6 1M9.4 6.4v3" stroke="#A33A2E" stroke-width=".7"/>'
+                 '<path d="M1.2 8.8h13.6l-1.6 6.8H2.8z" fill="#B48A54" stroke="#3B3226" stroke-width=".8"/>'
+                 '<path d="M1.7 11h12.6M2.2 13.2h11.6M4.4 8.8l.4 6.8M8 8.8v6.8M11.6 8.8l-.4 6.8" stroke="#8A6234" stroke-width=".55"/>',
+    # Die auserwählte Herrin: Brief und zwei grössere Kinder (2 Joh 1,1); vorher Kleinkind, las sich als Maria mit Kind
+    "kinder-brief": '<path d="M.6 1h9.6l2.2 2.2V9H.6z" fill="#F4F1EA" stroke="#3B3226" stroke-width=".7"/><path d="M2 3.4h6.4M2 5.2h7.4" stroke="#A79A80" stroke-width=".6"/><circle cx="10.6" cy="7.2" r="1.3" fill="#A33A2E"/>'
+                    '<circle cx="5.4" cy="7.6" r="2.3" fill="#C89B72" stroke="#3B3226" stroke-width=".6"/><path d="M3.1 7.4Q3 5 5.4 5t2.3 2.4Q6.8 6 5.4 6.1 4 6 3.1 7.4z" fill="#3A2618"/>'
+                    '<path d="M2.4 16q-.2-5.2 3-6t3 6z" fill="#E8B84A" stroke="#3B3226" stroke-width=".6"/>'
+                    '<circle cx="11.4" cy="9.4" r="2" fill="#C89B72" stroke="#3B3226" stroke-width=".6"/><path d="M9.4 9.2Q9.4 7.2 11.4 7.2t2 2Q12.6 8.1 11.4 8.2 10.2 8.1 9.4 9.2z" fill="#2E2017"/>'
+                    '<path d="M8.8 16q-.2-4.2 2.6-4.8 2.8.6 2.6 4.8z" fill="#7FA05A" stroke="#3B3226" stroke-width=".6"/>',
+    # Vater: Knabe steht neben ihm, ganze Figur mit Beinen (Mt 7,9); vorher Kind mit erhobenen Armen, las sich als Simeon mit Jesuskind
+    "sohn-kind": '<circle cx="8" cy="3.4" r="2.7" fill="#C89B72" stroke="#3B3226" stroke-width=".6"/><path d="M5.3 3.2Q5.2.6 8 .6t2.7 2.6Q9.8 1.8 8 1.9 6.2 1.8 5.3 3.2z" fill="#2E2017"/>'
+                 '<path d="M5.6 13V8.4Q5.6 6.2 8 6.1q2.4.1 2.4 2.3V13z" fill="#C8A25A" stroke="#3B3226" stroke-width=".6"/><path d="M5.6 10.4h4.8" stroke="#7A5A34" stroke-width=".9"/>'
+                 '<path d="M5.2 7.4q-.8 2.4-.4 4.6M10.8 7.4q.8 2.4.4 4.6" fill="none" stroke="#3B3226" stroke-width="1.5" stroke-linecap="round"/>'
+                 '<path d="M5.2 7.4q-.8 2.4-.4 4.6M10.8 7.4q.8 2.4.4 4.6" fill="none" stroke="#C8A25A" stroke-width=".8" stroke-linecap="round"/>'
+                 '<path d="M6.8 13v2.4M9.2 13v2.4" stroke="#C89B72" stroke-width="1.3" stroke-linecap="round"/><path d="M6 15.6h1.6M8.6 15.6h1.6" stroke="#5B3A20" stroke-width=".9" stroke-linecap="round"/>',
+    # Pilatus: Richterstuhl (Joh 19,13) als römischer Amtsstuhl mit gekreuzten Beinen und Purpurkissen auf einem Podest
+    "richterstuhl": '<path d="M.6 13.6h14.8v2.2H.6z" fill="#D8CBB0" stroke="#3B3226" stroke-width=".6"/><path d="M2.2 11.8h11.6v1.8H2.2z" fill="#E7DCC4" stroke="#3B3226" stroke-width=".6"/>'
+                    '<path d="M4 7.6q4 2.6 8 4.2M12 7.6q-4 2.6-8 4.2" fill="none" stroke="#3B3226" stroke-width="2.2" stroke-linecap="round"/>'
+                    '<path d="M4 7.6q4 2.6 8 4.2M12 7.6q-4 2.6-8 4.2" fill="none" stroke="#D9A441" stroke-width="1.2" stroke-linecap="round"/>'
+                    '<path d="M2.6 5.2h10.8v2.4H2.6z" rx="1" fill="#6A2E5E" stroke="#3B3226" stroke-width=".6"/><path d="M2.2 7.6h11.6" stroke="#9C6F1C" stroke-width="1"/>'
+                    '<path d="M2.6 5.2l-.8-1.4M13.4 5.2l.8-1.4" stroke="#6A2E5E" stroke-width="1" stroke-linecap="round"/>',
+    # Hauptmann: Rebstock-Stab des Zenturio (Tradition), knorrig, mit Knauf
+    "rebstock": '<path d="M2.4 15.2L13 2.4" stroke="#3B3226" stroke-width="2.6" stroke-linecap="round"/><path d="M2.4 15.2L13 2.4" stroke="#7A4E2A" stroke-width="1.6" stroke-linecap="round"/>'
+                '<path d="M5.4 12.2q-1.4-.4-1.6.8M8.4 8.2q1.4.4 1.8-.6M10.6 5.6q-1.2-.6-1.6.4" fill="#7A4E2A" stroke="#3B3226" stroke-width=".6"/>'
+                '<path d="M4 13.8l8.4-10" stroke="#A8743A" stroke-width=".4" stroke-dasharray="1.2 .8"/>'
+                '<circle cx="13.2" cy="2.2" r="1.5" fill="#D9A441" stroke="#3B3226" stroke-width=".6"/>',
+    # Schriftgelehrter: offene Schriftrolle, darüber der lehrend erhobene Zeigefinger (Mk 1,22); Feder liess ihn als Schreiber lesen
+    "rolle-lehre": '<path d="M2.8 8.6h10.4v6.6H2.8z" fill="#F4F1EA" stroke="#3B3226" stroke-width=".7"/><path d="M4.2 10.4h7.6M4.2 12h7.6M4.2 13.6h5" stroke="#A79A80" stroke-width=".6"/>'
+                   '<rect x="1" y="7.8" width="2.6" height="8" rx="1.3" fill="#B07A3E" stroke="#3B3226" stroke-width=".6"/><rect x="12.4" y="7.8" width="2.6" height="8" rx="1.3" fill="#B07A3E" stroke="#3B3226" stroke-width=".6"/>'
+                   '<path d="M7.2 7.4V4.2q0-.7.7-.7V.9q0-.8.8-.8t.8.8v4.2h1q1.2 0 1.2 1.2v1.1z" fill="#C89B72" stroke="#3B3226" stroke-width=".6"/>'
+                   '<path d="M9.5 5.1h1.6v-.3q0-.7.7-.7t.6.7v1.4M7.2 5.4l-.7.2" fill="none" stroke="#3B3226" stroke-width=".45"/>'
+                   '<path d="M5.4 1.6l1 .9M5 4.2h1.2M12 1.6l-1 .9" stroke="#D9A441" stroke-width=".8" stroke-linecap="round"/>',
+})
+
+_FOOT = ('<path d="M0 5.2q-1.9 0-2-2.1 0-1.5.7-2.9.5-1.3.2-2.6-.3-1.9 1.4-2.3 1.9-.2 2.1 1.9.1 1.7-.6 3.1-.4 1-.2 2.5.2 2.4-1.6 2.4z"/>'
+         '<circle cx="-1.7" cy="-6.6" r=".95"/><circle cx="-.2" cy="-7.4" r=".78"/><circle cx="1.1" cy="-7.3" r=".68"/><circle cx="2.2" cy="-6.7" r=".58"/><circle cx="3" cy="-5.8" r=".5"/>')
+
+
+def _fussspuren():
+    """Zwei Fussspuren: die goldene voraus (Jesus), die braune folgt ihr (der Jünger), Mk 1,17-18."""
+    return "".join(f'<g transform="translate({x} {y}) rotate({rot}) scale({sc})" fill="{col}" stroke="#2B211A" stroke-width=".55">{_FOOT}</g>'
+                   for x, y, sc, rot, col in ((4.4, 11.4, .86, -8, "#5B4630"), (11.4, 7.4, .86, 8, "#C08A2A")))
+
+
+def _salbt_fuss():
+    """Maria von Betanien: schlankes Fläschchen, aus dem Öl auf einen nackten Fuss (von der Seite) tropft (Joh 12,3)."""
+    return ('<path d="M10.2 7.4h5V5.8h-5z" fill="#6B8E7A" stroke="#3B3226" stroke-width=".5"/>'
+            '<path d="M10.8 7.4h3.8v5.2Q15 15.6 12.4 15.6H2.4Q.6 15.6.8 13.8 1 12.4 2.8 12.2l5.6-.8q2.2-.6 2.4-2.4z" fill="#C89B72" stroke="#3B3226" stroke-width=".7"/>'
+            '<g fill="#C89B72" stroke="#3B3226" stroke-width=".5"><circle cx="1.5" cy="13" r=".8"/><circle cx="2.8" cy="12.4" r=".7"/><circle cx="4" cy="12.1" r=".6"/></g>'
+            '<path d="M11.6 14.6q1.2.2 2-.6" fill="none" stroke="#8A5A3A" stroke-width=".45" stroke-linecap="round"/>'
+            '<g transform="rotate(-125 5.2 4.2)"><path d="M4 1.2h2.4v2.2l1.2 1.4v4.4H2.8V4.8L4 3.4z" fill="#E9D8B4" stroke="#3B3226" stroke-width=".65"/>'
+            '<path d="M4 .4h2.4v1H4z" fill="#6B8E7A" stroke="#3B3226" stroke-width=".4"/></g>'
+            '<g fill="#E8C060" stroke="#9C6F1C" stroke-width=".35"><path d="M8.2 6.4q.7 1 0 1.5-.7-.5 0-1.5z"/><path d="M8.6 8.8q.7 1 0 1.5-.7-.5 0-1.5z"/></g>')
+
+
+ATTR["fussspuren"] = _fussspuren()
+ATTR["salbt-fuss"] = _salbt_fuss()
 ATTR_VB = "0 0 16 16"
 
 # ------------------------------------------------------------------ Figuren
@@ -308,27 +448,30 @@ def F(robe, mantle=None, hair="#2E2017", style="short", beard=None, head=None, a
 
 GREY, WHITE, DARK, BROWN, BLACK = "#8A8478", "#D8D2C4", "#2E2017", "#4A3020", "#1E1610"
 APOSTLE = "#9C7A4C"
+# Gemeinsames Jüngermerkmal (Runde 4, Blindtest Runde 3): Jüngergewand wie FIG-GRUPPE-ZWOELF, dunkler Gürtel und Wanderstab (Mk 6,8)
+# an der linken Schulter; dazu je Jünger eigene Mantelfarbe und eigenes Zeichen auf der Brust
+J = dict(belt="#5B4630", jstaff=True)
 FIGS = {
     # Zwölf und Jünger (Jüngergewand, je eigene Mantelfarbe)
-    "FIG-PETRUS": F(APOSTLE, "#C08A2A", GREY, "curls", "short", attr="schluessel"),
-    "FIG-ANDREAS": F(APOSTLE, "#6E8B3D", "#5A4A3A", "long", "full", attr="x-kreuz"),
-    "FIG-JAKOBUS-ZEBEDAEUS": F(APOSTLE, "#2F6F73", BROWN, "short", "full", attr="jakobsmuschel"),  # Muschel allein (am Stab las sie sich als Fächer)
-    "FIG-JOHANNES-ZEBEDAEUS": F(APOSTLE, "#6A8FB3", "#6A4A2A", "short", None, age="young", attr="kelch"),
-    "FIG-PHILIPPUS": F(APOSTLE, "#8F6BA8", DARK, "short", "short", attr="stabkreuz"),
-    "FIG-BARTHOLOMAEUS": F(APOSTLE, "#7A4E3A", DARK, "curls", "full", attr="messer"),
-    "FIG-NATANAEL": F(APOSTLE, "#5E7F3A", DARK, "curls", "full", attr="feigenbaum"),
-    "FIG-MATTHAEUS": F(APOSTLE, "#3F5A7A", BROWN, "short", "full", attr="buch"),
+    "FIG-PETRUS": F(APOSTLE, "#C08A2A", GREY, "curls", "short", attr="schluessel", **J),
+    "FIG-ANDREAS": F(APOSTLE, "#6E8B3D", "#5A4A3A", "long", "full", attr="x-kreuz", **J),
+    "FIG-JAKOBUS-ZEBEDAEUS": F(APOSTLE, "#2F6F73", BROWN, "short", "full", attr="jakobsmuschel", **J),  # Muschel allein (am Stab las sie sich als Fächer)
+    "FIG-JOHANNES-ZEBEDAEUS": F(APOSTLE, "#6A8FB3", "#6A4A2A", "short", None, age="young", attr="kelch", **J),
+    "FIG-PHILIPPUS": F(APOSTLE, "#8F6BA8", DARK, "short", "short", attr="stabkreuz", **J),
+    "FIG-BARTHOLOMAEUS": F(APOSTLE, "#7A4E3A", DARK, "curls", "full", attr="messer", **J),
+    "FIG-NATANAEL": F(APOSTLE, "#5E7F3A", DARK, "curls", "full", attr="feigenbaum", **J),
+    "FIG-MATTHAEUS": F(APOSTLE, "#3F5A7A", BROWN, "short", "full", attr="buch-muenzen", **J),
     "FIG-LEVI": F("#4A6B5A", "#4A6B5A", BROWN, "short", "short", attr="muenzen"),
-    "FIG-THOMAS": F(APOSTLE, "#A0703A", DARK, "short", "short", attr="winkelmass"),
-    "FIG-JAKOBUS-ALPHAEUS": F(APOSTLE, "#6B6B8A", BROWN, "short", "full", attr="walkerstange"),
-    "FIG-THADDAEUS": F(APOSTLE, "#5F7A2A", DARK, "long", "full", attr="keule"),  # Mantel kräftiger moosgrün (Blindtest 2026-10-23)
-    "FIG-JUDAS-NICHT-ISKARIOT": F(APOSTLE, "#5F8F8A", DARK, "short", "short", attr="frage"),
-    "FIG-SIMON-KANANAEUS": F(APOSTLE, "#9A4E4E", "#3A2A1C", "curls", "full", attr="saege"),
-    "FIG-JUDAS-ISKARIOT": F(APOSTLE, "#7A8A9A", DARK, "short", "short", attr="kasse"),
-    "FIG-LIEBLINGSJUENGER": F(APOSTLE, "#E2CDA8", "#4A3020", "curls", None, age="young"),
+    "FIG-THOMAS": F(APOSTLE, "#A0703A", DARK, "short", "short", attr="wundmal", **J),  # Wundmal (Joh 20,27) statt Winkelmass (las sich als Baumeister)
+    "FIG-JAKOBUS-ALPHAEUS": F(APOSTLE, "#6B6B8A", BROWN, "short", "full", attr="walkerstange", **J),
+    "FIG-THADDAEUS": F(APOSTLE, "#5F7A2A", DARK, "long", "full", attr="keule", **J),  # Mantel kräftiger moosgrün (Blindtest 2026-10-23)
+    "FIG-JUDAS-NICHT-ISKARIOT": F(APOSTLE, "#5F8F8A", DARK, "curls", "short", attr="frage-mahl", **J),  # Frage beim Mahl; Locken zur Unterscheidung von Thomas
+    "FIG-SIMON-KANANAEUS": F(APOSTLE, "#9A4E4E", "#3A2A1C", "curls", "full", attr="saege", **J),
+    "FIG-JUDAS-ISKARIOT": F(APOSTLE, "#7A8A9A", DARK, "short", "short", attr="kasse", **J),
+    "FIG-LIEBLINGSJUENGER": F(APOSTLE, "#E2CDA8", "#4A3020", "curls", None, age="young", attr="herz", **J),
     # Frauen
-    "FIG-MARIA-MAGDALA": F("#E2CDA8", "#8E3B5E", "#4A2A1A", "long", sex="f", head=("veil", "#8E3B5E"), attr="alabaster"),
-    "FIG-MARIA-BETANIEN": F("#6B8E7A", None, "#3A2618", "long", sex="f", attr="flaeschchen"),
+    "FIG-MARIA-MAGDALA": F("#E2CDA8", "#8E3B5E", "#4A2A1A", "long", sex="f", head=("veil", "#8E3B5E"), attr="alabaster", backdrop="grab"),  # offenes Grab hinter ihr (Joh 20,1)
+    "FIG-MARIA-BETANIEN": F("#6B8E7A", None, "#3A2618", "long", sex="f", attr="salbt-fuss"),  # salbt die Füsse (Joh 12,3)
     "FIG-MARTA": F("#B4704A", None, "#3A2618", "short", sex="f", head=("veil", "#E9D8B4"), attr="kelle"),
     "FIG-MARIA-KLOPAS": F("#D8CBB0", None, DARK, "short", sex="f", head=("veil", "#7A6A8E")),
     "FIG-MARIA-MUTTER-JAKOBUS": F("#6E7F5A", None, DARK, "short", sex="f", head=("veil", "#D8CBB0"), attr="oelkrug"),
@@ -337,16 +480,16 @@ FIGS = {
     "FIG-TOCHTER-HERODIAS": F("#D4537E", None, BLACK, "long", sex="f", age="young", attr="tamburin"),
     "FIG-EUODIA": F("#A8687A", None, DARK, "short", sex="f", head=("veil", "#D8B4A0")),
     "FIG-SYNTYCHE": F("#6A8AA8", None, BROWN, "short", sex="f", head=("veil", "#F2E6CC"), attr="handschlag"),
-    "FIG-AUSERWAEHLTE-HERRIN": F("#6A4A7A", None, DARK, "short", sex="f", head=("veil", "#F2E6CC"), attr="kind"),
+    "FIG-AUSERWAEHLTE-HERRIN": F("#6A4A7A", None, DARK, "short", sex="f", head=("veil", "#F2E6CC"), attr="kinder-brief"),
     # Rut
     "FIG-RUT": F("#7A8B4A", None, BROWN, "short", sex="f", head=("veil", "#E8B84A"), attr="garbe"),
     "FIG-NOOMI": F("#C9BFAA", None, GREY, "short", sex="f", age="old", head=("veil", "#2E2E38"), attr="saeugling"),  # Witwenkopftuch dunkel, Kind Obed (Rut 4,16)
     "FIG-ORPA": F("#C08A8A", None, DARK, "short", sex="f", head=("veil", "#E2CDA8"), attr="buendel-tuch"),  # altrosa, Reisebündel (kehrt zurück, Rut 1,14-15)
-    "FIG-BOAS": F("#E8B84A", "#2F5F6F", "#5A4A3A", "short", "full", attr="worfel"),
+    "FIG-BOAS": F("#E7DCC4", "#2F5F6F", "#5A4A3A", "short", "full", trim="#D9A441", attr="worfel"),  # helles Gewand mit Goldsaum (wohlhabend), Petrolmantel
     "FIG-ELIMELECH": F("#C9BFAA", "#6A5A4A", GREY, "short", "full", attr="buendel"),
     "FIG-MACHLON": F("#7A6A5A", None, DARK, "short", None, age="young", sash="#7A8B4A", attr="acker"),
     "FIG-KILJON": F("#7A6A5A", None, DARK, "curls", None, age="young", sash="#8E6A7A"),
-    "FIG-LOESER": F("#8A7A6A", "#5B4630", DARK, "short", "full", attr="schuh"),
+    "FIG-LOESER": F("#8A7A6A", "#5B4630", DARK, "short", "full", attr="sandale"),  # Sandale von der Seite (von oben las sie sich als Brot)
     "FIG-OBED": F("#F2E6CC", None, DARK, "none", age="baby"),
     # Propheten, Könige
     "FIG-JONA": F("#6FB2E6", "#4A6E8A", DARK, "short", "full", backdrop="fisch"),  # Fisch hinter ihm statt auf der Brust (las sich als Fischer)
@@ -358,20 +501,20 @@ FIGS = {
     "FIG-NIKODEMUS": F("#C9BFAA", "#3B4A6B", GREY, "short", "full", head=("turban", "#3B4A6B"), attr="lampe"),
     "FIG-LAZARUS": F("#E7DCC4", None, BROWN, "short", "short", belt="#8A7A60", attr="grab-offen"),
     "FIG-JAIRUS": F("#E7DCC4", "#4F6B7A", "#4A3020", "short", "full", head=("hood", "#E7DCC4"), tassels=True),
-    "FIG-BARTIMAEUS": F("#C9BFAA", "#8A7A60", GREY, "short", "short", attr="blind"),  # blind (Mk 10,46); Stab allein las sich als Wanderer
+    "FIG-BARTIMAEUS": F("#C9BFAA", None, GREY, "short", "short", attr="blind", cloak_off="#8A7A60"),  # wirft den Mantel ab (Mk 10,50)  # blind (Mk 10,46); Stab allein las sich als Wanderer
     "FIG-GERASENER": F("#8A8070", None, DARK, "long", "full", attr="kette-gesprengt"),  # voller Bart (mit kurzem Bart als Frau gelesen)
     "FIG-JOSEF-ARIMATAEA": F("#7A8AA0", "#5A5A5A", GREY, "short", "full", linen=True),  # Leinentuch über der Schulter statt auf der Brust
-    "FIG-SIMON-KYRENE": F("#8A7A50", None, DARK, "short", "short", belt="#5B4630", attr="balken"),
+    "FIG-SIMON-KYRENE": F("#8A7A50", None, DARK, "short", "short", belt="#5B4630", beam=True),  # Balken auf der Schulter (auf der Brust las er sich als «Balken im Auge»)
     "FIG-BARABBAS": F("#7A6A5A", None, BLACK, "short", "short", bound=True),
     "FIG-MALCHUS": F("#B8A98A", None, DARK, "short", None, sash="#4A5A7A", attr="ohr-schwert"),
-    "FIG-PILATUS": F("#F2E6CC", None, "#5A4A3A", "short", None, trim="#6A2E5E", toga=True),
+    "FIG-PILATUS": F("#F2E6CC", None, "#9A948A", "short", None, trim="#6A2E5E", toga=True, attr="richterstuhl"),  # ergraut, Richterstuhl (Joh 19,13)
     "FIG-KAJAFAS": F("#4A5A7A", None, GREY, "short", "full", head=("turban", "#F6EBD9"), breast=True, plate=True),
     "FIG-HANNAS": F("#6A6A7A", "#8A8A8A", WHITE, "short", "long", head=("turban", "#F6EBD9"), attr="stab", breast=True),
     "FIG-SATAN": None,  # dunkler Schatten ohne Gestalt: Bauteil in bildsymbole.py
     # Mitarbeitende und Briefpersonen
     "FIG-TIMOTHEUS": F("#5A7A9A", None, BROWN, "short", None, age="young", attr="stab-brief"),
     "FIG-TITUS": F("#5A6A3A", None, DARK, "curls", "short", attr="insel"),  # Kreta statt Brief (Paulus trägt den Brief)
-    "FIG-EPAPHRODITUS": F("#7A8A5A", "#E2CDA8", BROWN, "short", "short", attr="gabenbeutel"),
+    "FIG-EPAPHRODITUS": F("#7A8A5A", "#E2CDA8", BROWN, "short", "short", attr="gabenkorb"),  # Gabenkorb statt Beutel (las sich als Geldbeutel)
     "FIG-DER-AELTESTE": F("#6A6A6A", "#E7DCC4", WHITE, "short", "long", age="old", attr="brief-feder"),
     "FIG-GAIUS": F("#8A6A4A", "#F6EBD9", DARK, "short", "short", attr="tuer-offen-licht"),
     "FIG-DIOTREPHES": F("#6A5A5A", "#C9BFAA", DARK, "short", "short", attr="tuer-zu"),
@@ -384,10 +527,10 @@ FIGS = {
     "FIG-ROLLE-HIRTE": F("#8A7A50", "#F6EBD9", DARK, "short", "short", attr="hirte"),
     "FIG-ROLLE-HOHEPRIESTER": F("#4A5A7A", None, GREY, "short", "full", head=("turban", "#F6EBD9"), breast=True),
     "FIG-ROLLE-KAPITAEN": F("#8A6A3A", "#2F4F6F", DARK, "short", "full", head=("band", "#2F4F6F"), attr="schiff"),  # Schiff statt Ruder und Seil (las sich als Löffel, überladen)
-    "FIG-ROLLE-KRANKER": F("#C9BFAA", None, DARK, "short", "short", attr="matte-rolle"),
+    "FIG-ROLLE-KRANKER": F("#C9BFAA", None, DARK, "short", "short", attr="matte-flach", bandage=True),  # flache Matte (gerollt las sie sich als Schriftrolle), Verband
     "FIG-ROLLE-PHARISAEER": F("#5A6A7A", "#4F6D8A", DARK, "short", "full", tassels=True, tallit=True, tefillin=True),
     "FIG-ROLLE-PRIESTER": F("#F6EBD9", None, DARK, "short", "short", head=("turban", "#F6EBD9"), sash="#4A5A7A"),
-    "FIG-ROLLE-SCHRIFTGELEHRTER": F("#6A5A4A", "#E7DCC4", DARK, "short", "full", attr="rolle-feder"),
+    "FIG-ROLLE-SCHRIFTGELEHRTER": F("#6A5A4A", "#E7DCC4", DARK, "short", "full", attr="rolle-lehre"),  # lehrt (mit Feder als Schreiber gelesen)
     "FIG-ROLLE-TEMPELWACHE": F("#4A5A6A", None, DARK, "short", "short", belt="#C9BFAA", attr="laterne"),
     "FIG-ROLLE-WITWE": F("#C9BFAA", None, GREY, "short", sex="f", age="old", head=("veil", "#4A4A4A"), attr="zwei-muenzen"),
     # Gruppen
@@ -580,7 +723,8 @@ def anime_char(fid):
         c["wreath"] = True
     for k in ("belt", "sash", "trim", "wings", "chains", "bound", "fur", "breast", "plate", "toga", "tassels",
               "tallit", "tefillin", "bandage", "crossed", "rope", "patches", "sword", "staff", "rough",
-              "jewels", "necklace", "diadem", "muffle", "shadow", "glow", "wrapped", "linen", "weeping", "backdrop", "attr_box"):  # Schalter des Zeichners (bilder_anime.head_inner/body_inner)
+              "jewels", "necklace", "diadem", "muffle", "shadow", "glow", "wrapped", "linen", "weeping", "backdrop", "attr_box",
+              "jstaff", "beam", "cloak_off", "crest"):  # Schalter des Zeichners (bilder_anime.head_inner/body_inner)
         if p.get(k):
             c[k] = p[k]
     if p["age"] in ("young", "child"):
