@@ -309,13 +309,16 @@ def head_inner(key, expr="calm", look=0.0, tears=False):
 
 
 def staff_svg(side=1, hand=True, col="#7A5A34"):
-    """Wanderstab neben der Figur, Hand auf Brusthöhe (Einheiten wie Kopf)."""
-    x = 14.6 * side
-    return (f'<path d="M{x:.1f} 40V-17" stroke="{INK}" stroke-width="2.6" stroke-linecap="round"/><path d="M{x:.1f} 40V-17" stroke="{col}" stroke-width="1.6" stroke-linecap="round"/>'
-            + (f'<circle cx="{x:.1f}" cy="23" r="2.5" fill="{SKIN}" stroke="{INK}" stroke-width=".6"/>' if hand else ""))
+    """Wanderstab schräg auf der Brust, ohne Arm, mit Kontur wie die anderen Erkennungszeichen (Einheiten wie Kopf).
+    Vorher lang neben der Figur mit runder Hand: wirkte wie eine Stange daneben (Hinweis Andi Neck 2026-10-23)."""
+    s = side
+    # oben über die Schulter hinaus und mit Knauf, damit er nicht als Gurt gelesen wird
+    return (f'<g filter="url(#an-kontur)"><path d="M{-6 * s:.1f} 34L{10.6 * s:.1f} 9" stroke="{col}" stroke-width="2.2" stroke-linecap="round"/>'
+            f'<path d="M{-6.5 * s:.1f} 33.7L{10.1 * s:.1f} 8.7" stroke="#A07A4A" stroke-width=".7" stroke-linecap="round"/>'
+            f'<circle cx="{10.8 * s:.1f}" cy="8.6" r="1.9" fill="{col}"/></g>')
 
 
-def body_inner(key, arm=None, ext=0):
+def body_inner(key, arm=None, ext=0, staff=True):
     """Brustbild unter dem Kopf (Einheiten wie Kopf); arm = (Winkel in Grad, Länge) für einen zeigenden Arm, oder None.
     ext = Gewand nach unten verlängern (hintere Figuren einer Gruppe, damit sie nicht in der Luft enden)."""
     c = CHAR[key]
@@ -386,8 +389,8 @@ def body_inner(key, arm=None, ext=0):
                  f'<path d="M{x0} {y0}L{x1:.1f} {y1:.1f}" stroke="{sleeve}" stroke-width="4" stroke-linecap="round"/>'
                  f'<g transform="translate({x1:.1f} {y1:.1f}) rotate({ang + 90:.0f})"><path d="M-2.4 1.2Q-2.8-2.6-1.6-4.2h3.2Q2.8-2.6 2.4 1.2z" fill="{SKIN}" stroke="{INK}" stroke-width=".6"/>'
                  f'<path d="M-.8-3.9v1.6M.8-3.9v1.6" stroke="{SKIN_D}" stroke-width=".4" stroke-linecap="round"/></g>')
-    elif c.get("staff"):  # Wanderstab (Mk 6,8), nur wenn die Hand nicht zeigt
-        o.append(staff_svg(-1 if c.get("attr") else 1))
+    elif staff and c.get("staff") and not c.get("attr"):  # Wanderstab (Mk 6,8) auf der Brust; ein anderes Erkennungszeichen geht vor
+        o.append(staff_svg(1))
     out = "".join(o)
     if c.get("child"):  # Kind: schmale Schultern
         out = f'<g transform="translate(0 16) scale(.78 .9) translate(0 -16)">{out}</g>'
@@ -414,7 +417,7 @@ def person(key, x, y, s, expr="calm", look=0.0, arm=None, flip=False, tears=Fals
     # abgewandt: gespiegelt und mit Blick deutlich zur Seite (Dreiviertelansicht, Ohr verdeckt). Das Gesicht bleibt
     # sichtbar, damit die Figur wie in der Legende erkennbar ist (früher Hinterkopf; Hinweis Andi Neck: «Händler ohne Gesicht»)
     head = head_inner(key, expr, 2.6 if flip else look, tears)
-    return f'<g transform="translate({x:.1f} {y:.1f}) scale({s:.3g}){fl}">{body_inner(key, arm, ext)}{head}{held}</g>'
+    return f'<g transform="translate({x:.1f} {y:.1f}) scale({s:.3g}){fl}">{body_inner(key, arm, ext, staff=not hold)}{head}{held}</g>'
 
 
 # ---------------------------------------------------------------- Gruppen
