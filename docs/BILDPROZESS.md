@@ -73,6 +73,9 @@ Was gut funktioniert: die festen Erkennungszeichen (Gott, Jesus, Geist) und der 
    - bei `mode: Auftrag` Briefrahmen und Legende «Auftrag an …»;
    - höchstens zwei abstrakte Zeichen je Feld, nur aus dem getesteten Grundbestand;
    - jede Figur der Legende ist im Bild mit Gesicht zu sehen.
+   - **Worte im Bild sprachlich prüfen** (Hinweis Andi Neck 2026-10-23): Stichwortband und Sprechblasen, in allen Sprachen,
+     müssen für sich allein verständlich und grammatisch richtig sein, keine Satzfragmente. Prüfung durch eine getrennte
+     KI-Instanz mit `scripts/authoring/bildworte.py`; Regeln in BILDAUFTRAEGE-ANLEITUNG.md («Worte im Bild»).
 4. **Zeichnen** im Stil Anime (einziger Stil seit 2026-10-23).
 5. **Blindtest ohne Legende.** Ein unabhängiges KI-Modell sieht nur das Bild, die Ebene und das Buch, nicht Auftrag und Legende:
    - (a) Welche Stelle ist es? Auswahl aus vier Kandidaten derselben Ebene, z. B. den Abschnitten desselben Kapitels;

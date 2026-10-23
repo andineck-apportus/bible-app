@@ -52,7 +52,7 @@ alle Übersetzungen; jedes Wort steht je Sprache im Auftrag, die App zeigt die g
 
 ```json
 {"n": 1, "reference": "RUT.4.9-RUT.4.11", …,
- "keywords": {"de": "Wir sind Zeugen!", "gsw": "Mir sind Züüge!"},     // Stichwortband: 1–4 Wörter, wörtlich aus dem Text des Felds
+ "keywords": {"de": "Wir sind Zeugen!", "gsw": "Mir sind Züüge!"},     // Stichwortband: wenige Wörter (höchstens etwa 6), wörtlich, für sich verständlich
  "names": {"FIG-BOAS": {"de": "Boas", "gsw": "Boas"}},                 // Namensschild: Hauptfiguren beim ersten Auftreten im Bild
  "speech": [{"from": "FIG-BOAS", "to": "FIG-GRUPPE-AELTESTE", "word": {"de": "Zeugen", "gsw": "Züüge"},
              "icons": ["FIG-ORT-FELD"]}],                               // Kernwort + höchstens zwei Zeichen
@@ -67,6 +67,21 @@ alle Übersetzungen; jedes Wort steht je Sprache im Auftrag, die App zeigt die g
   das Verlangte als Zeichen in der Sprechblase, nicht als geschehene Szene; Aufzählung als wenige Zeichen nebeneinander.
 - **Namensschild** nur beim ersten Auftreten einer benannten Hauptfigur im Bild (nicht bei Gott, Jesus, Gruppen und Rollen).
 - Höchstens zwei abstrakte Zeichen je Feld; Wörter statt Zeichenketten.
+- **Verständlich und grammatisch richtig** (Hinweis Andi Neck 2026-10-23): Jedes Band und jede Sprechblase muss für sich
+  allein verständlich und in der jeweiligen Sprache grammatisch richtig sein, auch ohne den Vers daneben. Gemeint ist ein
+  kurzer ganzer Satz oder ein klarer Begriff, keine abgehackten Satzteile (schlecht: «hört und sie tut», «nicht tut»,
+  «weit über», «weise … ab»).
+  - Das Stichwortband bleibt wörtlich, aber als sinnvolle Einheit gewählt, höchstens etwa 6 Wörter, z. B. «Wer meine Worte
+    hört und tut».
+  - Die Sprechblase darf die Aussage des Sprechers nah am Text knapp in eigenen Worten fassen, wenn kein wörtlicher Ausschnitt
+    für sich steht. Sie darf nichts behaupten, was der Text nicht sagt.
+- **Mundart:** Die Worte stammen aus der Mundartfassung, müssen dort aber idiomatisch richtig sein. Zum Beispiel tönt
+  «zur Frau erworbe» nach «gchauft»; besser ist «zur Frau gnoo». Ist die Mundartfassung selbst holprig, wird sie mit
+  Entscheid und revision_log verbessert (Werkzeug des Buches) und das Wort danach übernommen.
+- **Prüfung:** Nach dem Zeichnen listet `python3 scripts/authoring/bildworte.py <Präfix>` alle Worte im Bild je Sprache auf.
+  Eine getrennte KI-Instanz prüft sie auf Verständlichkeit für sich allein, Grammatik und Mundart. Gleiches gilt für
+  Zusammenfassungen (AGENTS.md). Befunde werden behoben, bevor das Bild veröffentlicht wird; muttersprachliche Prüfung nicht
+  behaupten.
 
 ## Hinweise an den Zeichner (`stage`)
 
