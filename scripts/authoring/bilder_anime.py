@@ -1250,6 +1250,9 @@ for _k, _v in _SYMS.items():
         COPY.append(_v["sym"])
 OBJ["FIG-SATAN"] = "an-p-satan"  # im Stil Anime eigener Rauchschatten (library), gleiche viewBox wie das Bauteil ill-satan
 EXTRA_META = {k: (v["place"], tuple(v["size"])) for k, v in _SYMS.items()}
+# Erkennungszeichen, die nur im Lexikon gelten: in Szenen verwirrten sie (Bildtest ohne Legende 2026-10-23: Fussspuren und
+# Personen-Piktogramm auf der Brust von Jüngern bzw. «jemand» wurden als eigene Aussage gelesen)
+SCENE_NO_ATTR = {"an-a-fussspuren", "an-a-mensch"}
 POSE_SHIFT = {"sit": 6, "kneel": 4, "cross": -12}
 
 
@@ -1318,7 +1321,7 @@ class AniComposer(_auto.Composer):
             key = self._sackkey(key, wear)
         if hold is None and pose == "kneel":  # Knien: gefaltete Hände machen die Haltung lesbar
             hold = "an-z-beten"
-        if hold is None and CHAR[key].get("attr"):
+        if hold is None and CHAR[key].get("attr") and CHAR[key]["attr"] not in SCENE_NO_ATTR:
             hold = CHAR[key]["attr"]
         elif hold is not None and not hold.startswith("an-"):
             hw, hh = self.m(hold)[1]
