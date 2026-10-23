@@ -253,21 +253,56 @@ def lwidth(v, fs):
     return max(text_w(s, fs) for s in _lab(v).values())
 
 
+def split2(s, fs, maxw):
+    """Eine Zeile oder zwei möglichst gleich lange Zeilen (Umbruch an einem Leerzeichen), damit die Schrift nicht schrumpft."""
+    if text_w(s, fs) <= maxw or " " not in s:
+        return [s]
+    ws = s.split(" ")
+    best = min(range(1, len(ws)), key=lambda i: max(text_w(" ".join(ws[:i]), fs), text_w(" ".join(ws[i:]), fs)))
+    return [" ".join(ws[:best]), " ".join(ws[best:])]
+
+
+def lwrap(v, fs, maxw):
+    """Zeilen je Sprache, Breite der breitesten Zeile und grösste Zeilenzahl."""
+    lines = {k: split2(s, fs, maxw) for k, s in _lab(v).items()}
+    return lines, max(text_w(x, fs) for ls in lines.values() for x in ls), max(len(ls) for ls in lines.values())
+
+
+def ltext_ml(x, yc, v, fs, maxw, weight="700", fill="#3B3226"):
+    """Text um die Mitte yc, bei Bedarf auf zwei Zeilen umbrochen (je Sprache)."""
+    lines, _, _ = lwrap(v, fs, maxw)
+    lh = fs * 1.15
+    out = []
+    same = len({tuple(ls) for ls in lines.values()}) == 1
+    for k, ls in (list(lines.items())[:1] if same else lines.items()):
+        y0 = yc - len(ls) * lh / 2 + fs * .8
+        cls = "" if same else f' class="lw lw-{k}"'
+        spans = "".join(f'<tspan x="{x:.1f}" y="{y0 + i * lh:.1f}">{_esc(s)}</tspan>' for i, s in enumerate(ls))
+        out.append(f'<text{cls} text-anchor="middle" font-family="sans-serif" font-size="{fs}" font-weight="{weight}" fill="{fill}">{spans}</text>')
+    return "".join(out)
+
+
 def word_band(v, letter=False):
-    """Stichwortband unten im Feld: 1–4 Wörter aus dem Wortlaut (über dem Boden, nicht über Gesichtern)."""
+    """Stichwortband unter dem Feld: wenige Wörter aus dem Wortlaut; lieber zwei Zeilen als kleine Schrift (Hinweis Andi Neck).
+    Ergebnis: (SVG, Höhe)."""
+    extra = 16 + (14 if letter else 0)
+    maxw = W - 12 - extra
     fs = 10
-    w = min(W - 12, lwidth(v, fs) + 16 + (14 if letter else 0))
-    while lwidth(v, fs) + 16 + (14 if letter else 0) > W - 12 and fs > 7:
+    lines, lw, n = lwrap(v, fs, maxw)
+    while lw > maxw and fs > 7:
         fs -= .5
+        lines, lw, n = lwrap(v, fs, maxw)
+    h = 16 if n == 1 else 28
+    w = min(W - 12, lw + extra)
     x = (W - w) / 2
     y = 1
     icon = ""
     if letter:  # Briefrahmen: kleiner Brief vor dem Wort (Auftrag im Brief)
-        icon = (f'<rect x="{x + 6:.1f}" y="{y + 4:.1f}" width="11" height="8" rx="1" fill="#FFFDF6" stroke="#3B3226" stroke-width=".8"/>'
-                f'<path d="M{x + 6:.1f} {y + 4:.1f}l5.5 4.4 5.5-4.4" fill="none" stroke="#3B3226" stroke-width=".8"/>')
+        icon = (f'<rect x="{x + 6:.1f}" y="{y + h / 2 - 4:.1f}" width="11" height="8" rx="1" fill="#FFFDF6" stroke="#3B3226" stroke-width=".8"/>'
+                f'<path d="M{x + 6:.1f} {y + h / 2 - 4:.1f}l5.5 4.4 5.5-4.4" fill="none" stroke="#3B3226" stroke-width=".8"/>')
     tx = x + w / 2 + (7 if letter else 0)
-    return (f'<g class="ill-words"><rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="16" rx="3" fill="#FFF4D6" stroke="#3B3226" stroke-width="1"/>'
-            + icon + ltext(tx, y + 11.6, v, fs) + "</g>")
+    return (f'<g class="ill-words"><rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h}" rx="3" fill="#FFF4D6" stroke="#3B3226" stroke-width="1"/>'
+            + icon + ltext_ml(tx, y + h / 2, v, fs, maxw) + "</g>", h)
 
 
 def name_tag(x, y, v):
@@ -619,7 +654,8 @@ class Composer:
             ih = self.icon_h()
             if sp.get("word") and "§W" not in sp["icons"]:  # Kernwort in der Sprechblase, vor höchstens zwei Zeichen
                 sp["icons"] = ["§W"] + list(sp["icons"])
-            ws = [4.0 if i == "|" else (lwidth(sp["word"], 10) if i == "§W" else icon_w(self.vb(i), ih)) for i in sp["icons"]]
+            WMAX = 104  # breiter: zweizeilig statt kleiner (Hinweis Andi Neck 2026-10-23)
+            ws = [4.0 if i == "|" else (lwrap(sp["word"], 10, WMAX)[1] if i == "§W" else icon_w(self.vb(i), ih)) for i in sp["icons"]]
             bw = sum(ws) + 5 * (len(ws) - 1) + 12
             avail = W - 32
             god = sp["from"] in sky
@@ -642,6 +678,21 @@ class Composer:
             bx = max(28 if by < 24 else 4, min(W - 4 - bw, bx))
             boxes = [b for k2, b in sky.items() if k2 != sp["from"]] + [(px, pyb - ph, pw, ph) for px, pw, pyb, ph in placed]
             hit = lambda x_, y_: any(x_ < gx + gw + 4 and x_ + bw > gx - 4 and y_ < gy + gh + 2 and y_ + bh > gy - 2 for gx, gy, gw, gh in boxes)  # noqa: E731
+            if not god and "bubble_y" not in st and len(bubbles) == 1:  # nur bei einer Blase (zwei Sprecher brauchen den Platz oben)
+                # Blase tiefer, nahe über dem Sprecher, wenn dort kein anderes Gesicht ist (kürzere Spitze; Hinweis Andi Neck)
+                faces = [(hx - 15, hy - 16, 30, 32) for o_, (hx, hy) in heads.items() if o_ != sp["from"]]
+                low = ty - bh - 22
+                if low > by and not hit(bx, low) and not any(bx < fx + fw and bx + bw > fx and low < fy + fh and low + bh > fy for fx, fy, fw, fh in faces):
+                    by = low
+            if hit(bx, by) and not god:
+                # Blase nahe beim Sprecher halten (Hinweis Andi Neck: lange schräge Spitzen quer durchs Bild); auch unter eine
+                # Gottes-Darstellung ausweichen statt ans andere Ende des Felds
+                xs = [tx - bw / 2, tx - bw + 18, tx - 18, 28, W - 4 - bw] + [gx - bw - 6 for gx, gy, gw, gh in boxes] + [gx + gw + 6 for gx, gy, gw, gh in boxes]
+                ys = [by] + [gy + gh + 4 for gx, gy, gw, gh in boxes]
+                cands = [(abs(cx + bw / 2 - tx) + (cy - by) * .4, cx, cy) for cx in xs for cy in ys
+                         if (28 if cy < 24 else 4) <= cx <= W - 4 - bw and cy + bh <= ty - 6 and not hit(cx, cy)]
+                if cands:
+                    _, bx, by = min(cands)
             if hit(bx, by):
                 done = False
                 for cand in (bx, 28, W - 4 - bw) + tuple(gx - bw - 6 for gx, gy, gw, gh in boxes) + tuple(gx + gw + 6 for gx, gy, gw, gh in boxes):
@@ -716,8 +767,8 @@ class Composer:
                 if i == "|":
                     inner.append(f'<line x1="{x + w / 2:.1f}" y1="{by + 8:.1f}" x2="{x + w / 2:.1f}" y2="{by + 4 + ih:.1f}" stroke="#3B3226" stroke-width=".7" stroke-dasharray="2 2"/>')
                 elif i == "§W":
-                    fs_ = min(10, 10 * w / max(1, lwidth(sp["word"], 10)))
-                    inner.append(ltext(x + w / 2, by + 6 + ih / 2 + fs_ * .36, sp["word"], fs_))
+                    fs_ = min(10, 10 * w / max(1, lwrap(sp["word"], 10, WMAX)[1]))
+                    inner.append(ltext_ml(x + w / 2, by + 6 + ih / 2, sp["word"], fs_, WMAX * fs_ / 10))
                 else:
                     inner.append(self.r_icon(i, x, by + 6, w, ih))
                 x += w + 5
@@ -751,6 +802,16 @@ class Composer:
             k = min(1.0, (W - 6 - x) / tot) if tot else 1
             if y == 10 and "air_x" not in st and placed and x < min(px for px, pw, pb, ph in placed):
                 k = min(k, (min(px for px, pw, pb, ph in placed) - 6 - x) / tot)
+            hmax = max(self.m(t)[1][1] * k for t in free)
+            over = lambda yy: any(x < px + pw and x + tot * k > px and yy < pb and yy + hmax > pb - ph for px, pw, pb, ph in placed)  # noqa: E731
+            if over(y):  # freie Zeichen nie über oder in eine Sprechblase (Hinweis Andi Neck: Krone über der Blase)
+                y2 = max(pb for px, pw, pb, ph in placed) + 3
+                if y2 + hmax < FLOOR_Y - 30:
+                    y = y2
+                else:
+                    right = max(px + pw for px, pw, pb, ph in placed) + 4
+                    if right + tot * k <= W - 4:
+                        x = right
             for t in free:
                 w, h = self.m(t)[1]
                 w, h = w * k, h * k

@@ -75,6 +75,11 @@ alle Übersetzungen; jedes Wort steht je Sprache im Auftrag, die App zeigt die g
     hört und tut».
   - Die Sprechblase darf die Aussage des Sprechers nah am Text knapp in eigenen Worten fassen, wenn kein wörtlicher Ausschnitt
     für sich steht. Sie darf nichts behaupten, was der Text nicht sagt.
+- **Darstellung durch den Zeichner** (Hinweise Andi Neck 2026-10-23):
+  - Längere Worte brechen auf zwei Zeilen um, statt kleiner zu werden; das Band wird dann höher.
+  - Die Sprechblase steht nahe über ihrem Sprecher; die Spitze zeigt auf ihn, nicht quer durchs Bild.
+  - Freie Zeichen weichen den Sprechblasen aus und stehen nie darüber.
+  - Beim Prüfen der Bilder gehört dazu: Spitze am richtigen Sprecher? Kein Zeichen über einer Blase? Schrift gut lesbar?
 - **Mundart:** Die Worte stammen aus der Mundartfassung, müssen dort aber idiomatisch richtig sein. Zum Beispiel tönt
   «zur Frau erworbe» nach «gchauft»; besser ist «zur Frau gnoo». Ist die Mundartfassung selbst holprig, wird sie mit
   Entscheid und revision_log verbessert (Werkzeug des Buches) und das Wort danach übernommen.

@@ -1062,7 +1062,8 @@ BAND_H = 20  # Höhe des Stichwortbands unter einem Feld
 def alayout(bodies, bands=None):
     n = len(bodies)
     if bands and any(bands):  # Worte im Bild: Band unter jedem Feld, Raster entsprechend höher
-        bh = BAND_H
+        bh = max([b[1] for b in bands if b] + [16]) + 4
+        bands = [b[0] if b else "" for b in bands]
         step = 140 + bh + 4
         cell = lambda i, b, x, y: (f'<g transform="translate({x} {y})">' + apanel(i, i + 1, b, num=n > 1)  # noqa: E731
                                    + (f'<g transform="translate(0 {140 + 2})">{bands[i]}</g>' if bands[i] else "") + "</g>")

@@ -2,6 +2,14 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.83 — 2026-10-23 — Sprechblasen und Worte besser gesetzt
+
+Hinweise Andi Neck:
+- **Zwei Zeilen statt kleiner Schrift:** Längere Worte brechen in Band und Sprechblase auf zwei Zeilen um.
+- **Sprechblase nahe beim Sprecher:** Bei einer einzelnen Blase steht sie tief über dem Sprecher, wenn dort kein anderes Gesicht ist. Sie weicht nicht mehr ans andere Ende des Felds aus, sondern auch unter die Darstellung Gottes. Die Spitze bleibt dadurch kurz und eindeutig.
+- **Keine Zeichen über Sprechblasen:** Freie Zeichen, zum Beispiel eine Krone, weichen den Blasen aus.
+- Alle 537 Bilder neu gezeichnet.
+
 ## v0.82 — 2026-10-23 — Worte im Bild sprachlich geprüft
 
 - **Neue Prüfregel** (Hinweis Andi Neck): Stichwortband und Sprechblasen müssen für sich allein verständlich und grammatisch richtig sein, in jeder Sprache, ohne Satzfragmente. Die Regel steht in der Anleitung, in BILDPROZESS.md und in AGENTS.md. Das Werkzeug `bildworte.py` listet die Worte für die Prüfung auf.
