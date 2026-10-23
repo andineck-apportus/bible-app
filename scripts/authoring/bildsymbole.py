@@ -29,11 +29,25 @@ SYMBOLS = {
     # ---- Gegenstände
     "FIG-OBJ-BROT": S("ill-brot", "0 0 24 14", f'<path d="M2 11q0-8 10-8t10 8q0 2-10 2T2 11z" fill="#D9A15E" stroke="{INK}" stroke-width="1"/>'
                       '<path d="M7 6l2 4M12 5l1 5M17 6l-1 4" stroke="#A8713A" stroke-width="1"/>', "floor", (16, 10)),
-    "FIG-OBJ-FISCH": S("ill-fisch", "0 0 26 12", f'<path d="M2 6q8-6 16 0-8 6-16 0zM18 6l6-4v8z" fill="#8FA3B8" stroke="{INK}" stroke-width=".9"/><circle cx="6" cy="5.4" r=".9" fill="{INK}"/>', "floor", (18, 9)),
+    # Fisch naturalistisch (Runde 4, 2026-10-23): Rücken- und Brustflosse, Gabelschwanz, Kiemenbogen, Schuppen, silbergrau
+    "FIG-OBJ-FISCH": S("ill-fisch", "0 0 26 12",
+                       '<path d="M8.6 2.6Q12 -.4 16.6 2.8z" fill="#7E8E9C" stroke="#3B3226" stroke-width=".6" stroke-linejoin="round"/>'
+                       f'<path d="M1.4 6Q5.6 1.8 12.6 2.2 17 2.6 19.6 5L24.8 1.6Q23.4 6 24.8 10.4L19.6 7Q17 9.4 12.6 9.8 5.6 10.2 1.4 6z" fill="#AEBBC6" stroke="{INK}" stroke-width=".8" stroke-linejoin="round"/>'
+                       '<path d="M3.4 7Q11 9.6 19 7 12 8.4 3.4 7z" fill="#E2E8EC"/><path d="M6.6 3.4q1.6 2.6 0 5.2" fill="none" stroke="#3B3226" stroke-width=".6"/>'
+                       '<g fill="none" stroke="#7E8E9C" stroke-width=".45"><path d="M9.4 4.2q.9.9 0 1.8M11.6 3.8q.9.9 0 1.8M13.8 4q.9.9 0 1.8M10.6 6q.9.9 0 1.8M12.8 5.8q.9.9 0 1.8M15 6q.9.9 0 1.8M16 4.2q.8.8 0 1.6"/></g>'
+                       '<path d="M9.6 7.2l2.6 2.6.6-2.2z" fill="#7E8E9C" stroke="#3B3226" stroke-width=".4"/><path d="M21 3.4l2.4 2.4M21 8.4l2.4-2.4" stroke="#7E8E9C" stroke-width=".4"/>'
+                       '<circle cx="4.4" cy="5.2" r="1" fill="#FFFDF6" stroke="#3B3226" stroke-width=".4"/><circle cx="4.5" cy="5.2" r=".5" fill="#3B3226"/>', "floor", (18, 9)),
+    # Grosser Fisch (Runde 4): weit offenes Maul mit dunklem Schlund, zwei kleine Fische daneben zeigen die Grösse
     "FIG-OBJ-GROSSER-FISCH": S("ill-grosser-fisch", "0 0 120 64",
-                               f'<path d="M6 34Q20 6 64 8q34 2 44 22l10-14v38l-10-14Q98 54 64 58 20 60 6 34z" fill="#5E7F9A" stroke="{INK}" stroke-width="1.6"/>'
-                               '<path d="M14 40q30 14 70 8q14-2 24-12" fill="#9CB4C4"/><circle cx="24" cy="26" r="3" fill="#FFFDF6" stroke="#3B3226"/><circle cx="24.6" cy="26.4" r="1.4" fill="#3B3226"/>'
-                               '<path d="M8 36q6 2 12 0" fill="none" stroke="#3B3226" stroke-width="1.4"/><path d="M50 12q4 8 0 16M62 10q4 9 0 18" fill="none" stroke="#4A6E8A" stroke-width="1.2"/>', "big", (120, 64)),
+                               f'<path d="M4 18Q20 6 60 10q32 3 44 20l12-14v36l-12-14Q92 56 60 58 22 60 4 48 12 34 4 18z" fill="#5E7F9A" stroke="{INK}" stroke-width="1.6" stroke-linejoin="round"/>'
+                               '<path d="M14 46q30 12 70 6q14-2 22-14Q88 54 58 54 30 54 14 46z" fill="#9CB4C4"/>'
+                               f'<path d="M3 19Q10 26 30 33 10 40 3 47 8 34 3 19z" fill="#1F2A36" stroke="{INK}" stroke-width="1.4" stroke-linejoin="round"/>'
+                               '<path d="M6 23q8 5 18 9M6 43q8-4 18-8" fill="none" stroke="#C86E6E" stroke-width="1.2" stroke-linecap="round"/>'
+                               '<circle cx="34" cy="22" r="3.2" fill="#FFFDF6" stroke="#3B3226"/><circle cx="34.6" cy="22.4" r="1.5" fill="#3B3226"/>'
+                               '<path d="M46 14q5 10 0 22" fill="none" stroke="#3B3226" stroke-width="1.2"/><path d="M62 12q4 9 0 18M74 13q4 9 0 18" fill="none" stroke="#4A6E8A" stroke-width="1.2"/>'
+                               '<path d="M60 10q8-8 22-4-8 2-10 6z" fill="#4A6E8A" stroke="#3B3226" stroke-width="1" stroke-linejoin="round"/>'
+                               '<g fill="#FFFFFF" stroke="#A9D2F0" stroke-width=".8"><circle cx="8" cy="12" r="2"/><circle cx="13" cy="6" r="1.4"/><circle cx="6" cy="4" r="1"/></g>'
+                               '<use href="#ill-fisch" x="88" y="0" width="16" height="7.4"/><use href="#ill-fisch" x="100" y="6" width="13" height="6"/>', "big", (120, 64)),
     "FIG-OBJ-LAMPE": S("ill-lampe", "0 0 24 16",
         '<path d="M3 11Q3 7.6 10 7.6Q15 7.6 17 9.2L21 10.4Q22.6 11.2 21 12.2L17 12.8Q14 14.8 10 14.8Q3 14.8 3 11z" fill="#B07A3E" stroke="#3B3226" stroke-width=".9" stroke-linejoin="round"/><ellipse cx="9.6" cy="9.8" rx="4.4" ry="1.6" fill="#8A5A2E" stroke="#3B3226" stroke-width=".6"/><ellipse cx="9.6" cy="9.8" rx="1.4" ry=".6" fill="#3B3226"/><path d="M3.4 10q-3.2-.2-2.8 2.4.4 1.6 2.6 1.2" fill="none" stroke="#3B3226" stroke-width="1"/><path d="M5 13q5 1.6 10 0" fill="none" stroke="#8A5A2E" stroke-width=".7"/><path d="M21.8 10.2q-2.8-3.6 0-9.4 2.8 5.8 0 9.4z" fill="#F2B53A" stroke="#C0781A" stroke-width=".5"/><path d="M21.8 9.4q-1.2-1.8 0-4.4 1.2 2.6 0 4.4z" fill="#FFF0B0"/>', "hand", (16, 11)),
     "FIG-OBJ-RIZINUS-VERDORRT": S("ill-rizinus-verdorrt", "0 0 70 80",

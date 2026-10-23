@@ -12,9 +12,18 @@
   "display_group": "place",
   "traits": [
     {
-      "trait_de": "Mauer mit Torturm; im Turm eine schmale, hohe Toröffnung, durch die helles Licht fällt",
+      "trait_de": "Enges Tor",
+      "basis": "text",
+      "ref": "[[MAT.7.13]]"
+    },
+    {
+      "trait_de": "Schmaler Weg, der hinführt",
       "basis": "text",
       "ref": "[[MAT.7.14]]"
+    },
+    {
+      "trait_de": "Breite, hohe Mauer ohne Zinnen und ohne Turm; darin ein kaum schulterbreiter, heller Spalt; ein schmaler Pfad führt hin",
+      "basis": "design"
     }
   ],
   "palette": {
@@ -22,11 +31,13 @@
     "secondary": "#FBE7A6"
   },
   "rules_de": [
-    "Deutlich schmaler als das weite Stadttor"
+    "Deutlich schmaler als das weite Stadttor",
+    "Keine Zinnen, kein Torturm, keine Lichtstrahlen (sonst Stadttor oder himmlisches Jerusalem)"
   ],
   "distinct_from": [
     "FIG-ORT-STADTTOR",
-    "FIG-OBJ-TUER"
+    "FIG-OBJ-TUER",
+    "FIG-ORT-TUER-OFFEN"
   ],
   "appears_in": [],
   "appears_in_note_de": "Allgemeines Bildzeichen, nicht an bestimmte Stellen gebunden.",
@@ -53,6 +64,26 @@
       "date": "2026-10-23",
       "change_de": "Anzeigegruppe ergänzt (display_group, Entscheid Andi Neck 2026-10-23)",
       "previous": {}
+    },
+    {
+      "date": "2026-10-14",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "traits": [
+          {
+            "trait_de": "Mauer mit Torturm; im Turm eine schmale, hohe Toröffnung, durch die helles Licht fällt",
+            "basis": "text",
+            "ref": "[[MAT.7.14]]"
+          }
+        ],
+        "rules_de": [
+          "Deutlich schmaler als das weite Stadttor"
+        ],
+        "distinct_from": [
+          "FIG-ORT-STADTTOR",
+          "FIG-OBJ-TUER"
+        ]
+      }
     }
   ]
 }

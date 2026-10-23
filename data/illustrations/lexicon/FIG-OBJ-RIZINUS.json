@@ -12,14 +12,23 @@
   "display_group": "thing",
   "traits": [
     {
-      "trait_de": "Hohe Staude mit grossen, handförmigen Blättern",
+      "trait_de": "Hohe Staude mit grossen, handförmig gelappten Blättern, die ein Blätterdach bilden",
       "basis": "design",
       "note_de": "Die Pflanze ist nicht sicher bestimmbar; Rizinus ist eine gängige Deutung"
     },
     {
-      "trait_de": "Rote Stängel und rote, stachelige Fruchtstände",
+      "trait_de": "Rote Stängel und rote Blattadern",
       "basis": "tradition",
       "note_de": "Merkmale des Rizinus, der gängigen Deutung der Pflanze"
+    },
+    {
+      "trait_de": "Spendet Schatten",
+      "basis": "text",
+      "ref": "[[JON.4.6]]"
+    },
+    {
+      "trait_de": "Breiter Schatten am Boden unter dem Blätterdach; keine Blüten oder Früchte",
+      "basis": "design"
     }
   ],
   "palette": {
@@ -27,7 +36,12 @@
     "secondary": "#6B5A2A"
   },
   "rules_de": [
-    "Verdorrt: FIG-OBJ-RIZINUS-VERDORRT"
+    "Verdorrt: FIG-OBJ-RIZINUS-VERDORRT",
+    "Keine roten Blüten oder Stacheln (sonst Strauch mit Blüten oder Dornbusch)"
+  ],
+  "distinct_from": [
+    "FIG-OBJ-DORNBUSCH",
+    "FIG-OBJ-RIZINUS-VERDORRT"
   ],
   "terms": [
     {
@@ -62,6 +76,27 @@
             "basis": "design",
             "note_de": "Die Pflanze ist nicht sicher bestimmbar; Rizinus ist eine gängige Deutung"
           }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-14",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "traits": [
+          {
+            "trait_de": "Hohe Staude mit grossen, handförmigen Blättern",
+            "basis": "design",
+            "note_de": "Die Pflanze ist nicht sicher bestimmbar; Rizinus ist eine gängige Deutung"
+          },
+          {
+            "trait_de": "Rote Stängel und rote, stachelige Fruchtstände",
+            "basis": "tradition",
+            "note_de": "Merkmale des Rizinus, der gängigen Deutung der Pflanze"
+          }
+        ],
+        "rules_de": [
+          "Verdorrt: FIG-OBJ-RIZINUS-VERDORRT"
         ]
       }
     }

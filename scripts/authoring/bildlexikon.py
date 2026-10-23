@@ -937,19 +937,20 @@ E("FIG-OBJ-KRUG-WEIN", "object", "Krug mit Wein", "Jar of wine",
 E("FIG-OBJ-KRUG-WEIN-LEER", "object", "Leerer Weinkrug", "Empty wine jar",
   "Ein Weinkrug, aus dem nichts mehr kommt: «Sie haben keinen Wein mehr» ([[JHN.2.3]]).",
   "En Wiichrueg, wo nüüt meh drin isch: «Si händ kei Wii meh» ([[JHN.2.3]]).",
-  [T("Trauben-Emblem", "design"), T("Sichtbar leer: derselbe Krug wie der Weinkrug, schräg geneigt, die Öffnung dunkel, kein Wein", "design")],
+  [T("Trauben-Emblem", "design"), T("Sichtbar leer: derselbe feste Krug wie der Weinkrug, nur leicht geneigt, die Öffnung gross und dunkel, kein Wein", "design"),
+   T("Daneben ein gestrichelter, leerer Tropfen: es kommt nichts mehr", "design")],
   ("#C89B72", "#E2CDA8"),
   ["Immer zusammen mit dem Zeichen «fehlt/leer» (FIG-ZEICHEN-FEHLT), wenn der Mangel die Aussage ist",
    "Der Text nennt keinen leeren Krug; das Bild drückt den Mangel aus"],
-  find=[(r"Wein", ["JHN.2.3"])], distinct=["FIG-OBJ-KRUG-WEIN", "FIG-OBJ-KRUG-WASSER"])
+  find=[(r"Wein", ["JHN.2.3"])], distinct=["FIG-OBJ-KRUG-WEIN", "FIG-OBJ-KRUG-WASSER", "FIG-OBJ-WEINSCHLAUCH"])
 
 E("FIG-OBJ-BECHER-LEER", "object", "Leerer Becher", "Empty cup",
   "Ein Trinkbecher ohne Inhalt.",
   "En Trinkbächer ohni Inhalt.",
-  [T("Derselbe ockerfarbene Becher ohne Fuss wie der volle Becher, leicht von oben gesehen: helle, leere Innenseite mit sichtbarem Boden", "design")],
+  [T("Kleiner ockerfarbener Trinkbecher ohne Fuss, mit Henkel, schräg gekippt: innen nur die Wand und der dunkle Boden, nichts darin", "design")],
   ("#D9A55C", "#FFFDF6"),
-  ["Becher ohne Fuss; der Kelch mit Fuss gehört zu Johannes, dem Sohn des Zebedäus"],
-  distinct=["FIG-OBJ-BECHER-VOLL", "FIG-JOHANNES-ZEBEDAEUS"])
+  ["Becher ohne Fuss; der Kelch mit Fuss gehört zu Johannes, dem Sohn des Zebedäus", "Klein und mit Henkel, nicht als weites Gefäss mit hellem Inhalt (sonst Scheffel mit Mehl)"],
+  distinct=["FIG-OBJ-BECHER-VOLL", "FIG-OBJ-BECHER-SCHMUTZIG", "FIG-JOHANNES-ZEBEDAEUS"])
 
 E("FIG-OBJ-BECHER-VOLL", "object", "Voller Becher (Wein)", "Full cup (wine)",
   "Ein Trinkbecher mit Wein.",
@@ -970,15 +971,16 @@ E("FIG-OBJ-BROT", "object", "Brot", "Bread",
 E("FIG-OBJ-FISCH", "object", "Fisch", "Fish",
   "Fisch als Speise oder Fang am See von Galiläa ([[JHN.6.9]], [[JHN.21.11]]).",
   "Fisch als Ässe oder Fang am See vo Galiläa ([[JHN.6.9]], [[JHN.21.11]]).",
-  [T("Kleiner silbergrauer Fisch", "design")],
+  [T("Kleiner silbergrauer Fisch, naturalistisch: Rücken- und Brustflosse, Gabelschwanz, Kiemenbogen, Schuppen, heller Bauch", "design")],
   ("#8FA3A0", "#6FB2E6"),
-  ["Nicht mit dem grossen Fisch des Jona verwechseln"],
+  ["Nicht mit dem grossen Fisch des Jona verwechseln", "Kein Fischsymbol aus zwei Bögen (Ichthys)"],
   find=[(r"Fisch", ["MRK", "JHN"])], distinct=["FIG-OBJ-GROSSER-FISCH"])
 
 E("FIG-OBJ-GROSSER-FISCH", "object", "Grosser Fisch (Jona)", "Great fish (Jonah)",
   "Der grosse Fisch, den JHWH bestimmt, um Jona zu verschlingen ([[JON.1.17]], [[JON.2.10]]).",
   "De gross Fisch, wo JHWH bestimmt, dass er de Jona verschluckt ([[JON.1.17]], [[JON.2.10]]).",
-  [T("Grosser Fisch", "text", "JON.1.17"), T("Blaugrau, grösser als das Boot", "design")],
+  [T("Grosser Fisch", "text", "JON.1.17"), T("Blaugrau, grösser als das Boot", "design"),
+   T("Weit offenes Maul mit dunklem Schlund; zwei kleine Fische daneben zeigen die Grösse", "design")],
   ("#4A6E8A", "#8FA3A0"),
   ["Kein Wal mit Fontäne", "Nicht bedrohlich-monsterhaft"],
   find=[(r"Fisch", ["JON"])], distinct=["FIG-OBJ-FISCH"])
@@ -1451,8 +1453,9 @@ E("FIG-ZEICHEN-AUSBREITEN", "action", "sich ausbreiten / hinausgehen", "spread o
 E("FIG-OBJ-BRIEF", "object", "Brief", "Letter",
   "Ein Brief an eine Gemeinde oder eine Person (z. B. [[PHP.1.1]], [[3JN.1.1]]).",
   "En Brief a e Gmeind oder e Person (z. B. [[PHP.1.1]], [[3JN.1.1]]).",
-  [T("Gefaltetes Blatt mit Schriftzeilen und rotem Siegel", "design")],
-  ("#F4F1EA", "#A33A2E"), ["Für Bücher und Schriftrollen FIG-OBJ-SCHRIFTROLLE"], distinct=["FIG-OBJ-SCHRIFTROLLE"])
+  [T("Dreifach gefaltetes Blatt mit sichtbaren Faltkanten, Zeilen in Handschrift und rotem Siegel", "design")],
+  ("#F4F1EA", "#A33A2E"), ["Für Bücher und Schriftrollen FIG-OBJ-SCHRIFTROLLE", "Kein flaches Blatt mit umgeknickter Ecke (wird als Urkunde oder Schuldschein gelesen)"],
+  distinct=["FIG-OBJ-SCHRIFTROLLE", "FIG-ZEICHEN-SCHULD"])
 E("FIG-GRUPPE-GEMEINDE", "group", "Gemeinde", "Congregation / church",
   "Menschen, die sich im Namen Jesu versammeln, oft in einem Haus ([[ROM.16.5]], [[PHM.1.2]]).",
   "Mänsche, wo sich im Name vo Jesus versammled, mängisch imene Huus ([[ROM.16.5]], [[PHM.1.2]]).",
