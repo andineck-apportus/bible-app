@@ -17,16 +17,10 @@
         "FIG-GRUPPE-JUENGER"
       ],
       "objects": [],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-SORGE"
+      ],
       "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-ZEICHEN-SORGE",
-            "FIG-ZEICHEN-NEIN"
-          ]
-        },
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-JUENGER",
@@ -36,74 +30,81 @@
           ]
         }
       ],
-      "action_de": "Jesus sagt: Sorgt euch nicht um euer Leben, was ihr essen sollt, und nicht um euren Leib, was ihr anziehen sollt.",
+      "action_de": "Jesus sagt: Sorgt euch nicht um euer Leben, was ihr essen sollt, und nicht um euren Leib, was ihr anziehen sollt; ist nicht das Leben mehr als die Nahrung?",
+      "keywords": {
+        "de": "Sorgt euch nicht",
+        "gsw": "Mached eu kei Sorge"
+      },
       "stage": {
         "x": {
           "FIG-JESUS": 40,
           "FIG-GRUPPE-JUENGER": 132
         },
+        "signs_who": {
+          "FIG-ZEICHEN-SORGE": [
+            "FIG-GRUPPE-JUENGER"
+          ]
+        },
+        "at": {
+          "FIG-ZEICHEN-SORGE": "FIG-GRUPPE-JUENGER"
+        },
         "mood": {
+          "FIG-JESUS": "calm",
           "FIG-GRUPPE-JUENGER": "worried"
+        },
+        "size": {
+          "FIG-JESUS": 0.7
         }
       }
     },
     {
       "n": 2,
-      "reference": "MAT.6.26-MAT.6.27",
+      "reference": "MAT.6.26-MAT.6.30",
       "figures": [
         "FIG-GOTT",
-        "FIG-GRUPPE-JUENGER"
+        "FIG-JESUS"
       ],
       "objects": [
-        "FIG-OBJ-VOGEL"
+        "FIG-OBJ-VOGEL",
+        "FIG-OBJ-LILIE"
       ],
       "signs": [],
-      "speech": [],
-      "action_de": "Schaut auf die Vögel des Himmels: Sie säen nicht, ernten nicht und sammeln nicht in Scheunen, und der himmlische Vater ernährt sie; wer kann durch Sorgen sein Leben verlängern?",
+      "speech": [
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-GRUPPE-JUENGER",
+          "icons": [],
+          "word": {
+            "de": "Schaut",
+            "gsw": "Lueged"
+          }
+        }
+      ],
+      "action_de": "Schaut auf die Vögel des Himmels: Sie säen und ernten nicht, und der himmlische Vater ernährt sie. Seht die Lilien des Feldes: Sie mühen sich nicht ab, und nicht einmal Salomo in all seiner Pracht war gekleidet wie eine von ihnen.",
+      "keywords": {
+        "de": "Vögel des Himmels",
+        "gsw": "Vögel am Himel"
+      },
       "stage": {
-        "god_side": "left",
+        "god_side": "right",
+        "x": {
+          "FIG-JESUS": 30
+        },
         "count": {
-          "FIG-OBJ-VOGEL": 3
+          "FIG-OBJ-VOGEL": 3,
+          "FIG-OBJ-LILIE": 3
         },
         "air_x": 96,
-        "air_y": 30,
-        "x": {
-          "FIG-GRUPPE-JUENGER": 120
+        "air_y": 34,
+        "floor_x": {
+          "FIG-OBJ-LILIE": 120
         },
         "arrows": [
           [
             "FIG-GOTT",
             "FIG-OBJ-VOGEL",
             "act"
-          ]
-        ],
-        "mood": {
-          "FIG-GRUPPE-JUENGER": "calm"
-        }
-      }
-    },
-    {
-      "n": 3,
-      "reference": "MAT.6.28-MAT.6.30",
-      "figures": [
-        "FIG-GOTT",
-        "FIG-SALOMO"
-      ],
-      "objects": [
-        "FIG-OBJ-LILIE"
-      ],
-      "signs": [],
-      "speech": [],
-      "action_de": "Seht die Lilien des Feldes: Sie mühen sich nicht ab und spinnen nicht, und nicht einmal Salomo in all seiner Pracht war gekleidet wie eine von ihnen; wie viel mehr wird Gott euch kleiden, ihr Kleingläubigen.",
-      "stage": {
-        "god_side": "right",
-        "count": {
-          "FIG-OBJ-LILIE": 3
-        },
-        "x": {
-          "FIG-SALOMO": 44
-        },
-        "arrows": [
+          ],
           [
             "FIG-GOTT",
             "FIG-OBJ-LILIE",
@@ -111,71 +112,83 @@
           ]
         ],
         "mood": {
-          "FIG-SALOMO": "surprised"
+          "FIG-JESUS": "smile"
         },
-        "floor_x": {
-          "FIG-OBJ-LILIE": 92
+        "size": {
+          "FIG-JESUS": 0.7
         }
       }
     },
     {
-      "n": 4,
-      "reference": "MAT.6.31-MAT.6.34",
+      "n": 3,
+      "reference": "MAT.6.33",
       "figures": [
-        "FIG-GRUPPE-VOELKER",
+        "FIG-JESUS",
         "FIG-GRUPPE-JUENGER"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-OBJ-BROT",
+        "FIG-OBJ-GEWAND"
+      ],
       "signs": [
         "FIG-ZEICHEN-REICH-GOTTES"
       ],
       "speech": [
         {
-          "from": "FIG-GRUPPE-VOELKER",
-          "to": "FIG-GRUPPE-VOELKER",
-          "icons": [
-            "FIG-OBJ-BROT",
-            "FIG-OBJ-BECHER-WASSER",
-            "FIG-OBJ-GEWAND"
-          ],
-          "think": true
+          "from": "FIG-JESUS",
+          "to": "FIG-GRUPPE-JUENGER",
+          "icons": [],
+          "word": {
+            "de": "Sucht",
+            "gsw": "Sueched"
+          }
         }
       ],
-      "action_de": "Nach Essen, Trinken und Kleidung trachten die Heiden; der Vater weiss, dass sie es brauchen. Die Jünger sollen zuerst das Reich und seine Gerechtigkeit suchen, dann wird ihnen das alles dazugegeben.",
+      "action_de": "Sucht aber zuerst das Reich und seine Gerechtigkeit, und dies alles wird euch dazugegeben.",
+      "keywords": {
+        "de": "zuerst das Reich",
+        "gsw": "zerscht s Riich"
+      },
       "stage": {
         "x": {
-          "FIG-GRUPPE-VOELKER": 46,
-          "FIG-GRUPPE-JUENGER": 136
+          "FIG-JESUS": 28,
+          "FIG-GRUPPE-JUENGER": 96
         },
-        "at": {
-          "FIG-ZEICHEN-REICH-GOTTES": "FIG-GRUPPE-JUENGER"
-        },
+        "air_x": 150,
+        "air_y": 20,
+        "arrows": [
+          [
+            "FIG-GRUPPE-JUENGER",
+            "FIG-ZEICHEN-REICH-GOTTES",
+            "act"
+          ]
+        ],
         "mood": {
-          "FIG-GRUPPE-VOELKER": "worried",
+          "FIG-JESUS": "calm",
           "FIG-GRUPPE-JUENGER": "smile"
         },
-        "bubble_y": 12
+        "size": {
+          "FIG-JESUS": 0.7
+        }
       }
     }
   ],
   "actions_de": [
-    "Jesus sagt: Sorgt euch nicht um euer Leben, was ihr essen sollt, und nicht um euren Leib, was ihr anziehen sollt.",
-    "Schaut auf die Vögel des Himmels: Sie säen nicht, ernten nicht und sammeln nicht in Scheunen, und der himmlische Vater ernährt sie; wer kann durch Sorgen sein Leben verlängern?",
-    "Seht die Lilien des Feldes: Sie mühen sich nicht ab und spinnen nicht, und nicht einmal Salomo in all seiner Pracht war gekleidet wie eine von ihnen; wie viel mehr wird Gott euch kleiden, ihr Kleingläubigen.",
-    "Nach Essen, Trinken und Kleidung trachten die Heiden; der Vater weiss, dass sie es brauchen. Die Jünger sollen zuerst das Reich und seine Gerechtigkeit suchen, dann wird ihnen das alles dazugegeben."
+    "Jesus sagt: Sorgt euch nicht um euer Leben, was ihr essen sollt, und nicht um euren Leib, was ihr anziehen sollt; ist nicht das Leben mehr als die Nahrung?",
+    "Schaut auf die Vögel des Himmels: Sie säen und ernten nicht, und der himmlische Vater ernährt sie. Seht die Lilien des Feldes: Sie mühen sich nicht ab, und nicht einmal Salomo in all seiner Pracht war gekleidet wie eine von ihnen.",
+    "Sucht aber zuerst das Reich und seine Gerechtigkeit, und dies alles wird euch dazugegeben."
   ],
   "captions_de": [
-    "Nicht sorgen: Jesus sagt den Jüngern: Sorgt euch nicht (blauer Schweisstropfen, rotes X) um Essen und Kleidung (Brot, helles Gewand).",
-    "Der Vater ernährt die Vögel → nicht sorgen: Der Vater (Strahlenkranz) ernährt die Vögel (goldener Pfeil zu den Vögeln); die Jünger schauen zu.",
-    "Gott kleidet die Lilien → er wird auch euch kleiden: Gott (Strahlenkranz) kleidet die Lilien (weisse Lilien, goldener Pfeil zu ihnen); daneben König Salomo in seiner Pracht (Krone, goldenes Gewand): Nicht einmal er war so gekleidet wie eine von ihnen.",
-    "Zuerst das Reich: Menschen aus den Völkern denken an Essen, Trinken und Kleidung (Denkblase: Brot, Becher mit Wasser, Gewand); die Jünger suchen zuerst das Reich (goldene Krone mit Lichtstrahlen über ihnen)."
+    "Nicht sorgen: Jesus sagt den besorgten Jüngern (blauer Schweisstropfen): Sorgt euch nicht um Essen und Kleidung (Sprechblase: Brot, helles Gewand).",
+    "Vögel und Lilien: Jesus (links) sagt: Schaut! Der Vater (Strahlenkranz) ernährt die Vögel und kleidet die Lilien (goldene Pfeile zu den Vögeln und den weissen Lilien).",
+    "Zuerst das Reich: Jesus (links) sagt: Sucht! Die Jünger blicken zum Reich (goldene Krone mit Lichtstrahlen, Pfeil); Brot und Kleid (rechts am Boden) lassen sie hinter sich."
   ],
-  "interpretation_note_de": "Gott erscheint als Strahlenkranz; Jesus nennt ihn «euren himmlischen Vater». Die weissen Blüten stehen für die Lilien des Feldes ([[MAT.6.28]]); Salomo trägt Krone und goldenes Gewand für «all seine Pracht» ([[MAT.6.29]]). Die Elle Lebenszeit ([[MAT.6.27]]), das Gras im Ofen ([[MAT.6.30]]) und die Sorge um morgen ([[MAT.6.34]]) nennt nur die Handlung. «Heiden» ([[MAT.6.32]]) sind Menschen aus den Völkern, ohne Wertung.",
+  "interpretation_note_de": "Bild einer Rede: Jesus spricht, das Gesagte ist gross daneben gezeigt. Gott erscheint als Strahlenkranz; Jesus nennt ihn «euren himmlischen Vater». Die weissen Blüten stehen für die Lilien des Feldes ([[MAT.6.28]]); Salomo ([[MAT.6.29]]) ist nicht im Bild. In Feld 3 sind Brot und Kleid «dies alles», das dazugegeben wird ([[MAT.6.33]]). Die Elle Lebenszeit ([[MAT.6.27]]), das Gras im Ofen ([[MAT.6.30]]) und die Sorge um morgen ([[MAT.6.34]]) nennt nur die Handlung.",
   "basis": [
     {
       "record": "TU-MAT-006-025-034",
       "field": "summary",
-      "fingerprint": "eec468c6fc7840ea"
+      "fingerprint": "f008637bcb17ec2e"
     },
     {
       "record": "TRANS-MAT-006-016-034-DE-WORKING",
@@ -186,20 +199,14 @@
     {
       "record": "TRANS-MAT-006-016-034-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.6.26-MAT.6.27",
-      "fingerprint": "cae0be65ad95e7ed"
+      "reference": "MAT.6.26-MAT.6.30",
+      "fingerprint": "ce15a8045eeb124d"
     },
     {
       "record": "TRANS-MAT-006-016-034-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.6.28-MAT.6.30",
-      "fingerprint": "aac548b15782bbb5"
-    },
-    {
-      "record": "TRANS-MAT-006-016-034-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.6.31-MAT.6.34",
-      "fingerprint": "409619df0448b814"
+      "reference": "MAT.6.33",
+      "fingerprint": "fa90c755201d573d"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
@@ -379,10 +386,412 @@
           "Zuerst das Reich: Menschen aus den Völkern denken an Essen, Trinken und Kleidung (Denkblase: Brot, Becher mit Wasser, Gewand); die Jünger suchen zuerst das Reich (goldene Krone mit Lichtstrahlen über ihnen)."
         ]
       }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.6.25",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-SORGE",
+                  "FIG-ZEICHEN-NEIN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-BROT",
+                  "FIG-OBJ-GEWAND"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: Sorgt euch nicht um euer Leben, was ihr essen sollt, und nicht um euren Leib, was ihr anziehen sollt.",
+            "stage": {
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-GRUPPE-JUENGER": 132
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "worried"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.6.26-MAT.6.27",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-VOGEL"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Schaut auf die Vögel des Himmels: Sie säen nicht, ernten nicht und sammeln nicht in Scheunen, und der himmlische Vater ernährt sie; wer kann durch Sorgen sein Leben verlängern?",
+            "stage": {
+              "god_side": "left",
+              "count": {
+                "FIG-OBJ-VOGEL": 3
+              },
+              "air_x": 96,
+              "air_y": 30,
+              "x": {
+                "FIG-GRUPPE-JUENGER": 120
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-OBJ-VOGEL",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "calm"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.6.28-MAT.6.30",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-SALOMO"
+            ],
+            "objects": [
+              "FIG-OBJ-LILIE"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Seht die Lilien des Feldes: Sie mühen sich nicht ab und spinnen nicht, und nicht einmal Salomo in all seiner Pracht war gekleidet wie eine von ihnen; wie viel mehr wird Gott euch kleiden, ihr Kleingläubigen.",
+            "stage": {
+              "god_side": "right",
+              "count": {
+                "FIG-OBJ-LILIE": 3
+              },
+              "x": {
+                "FIG-SALOMO": 44
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-OBJ-LILIE",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-SALOMO": "surprised"
+              },
+              "floor_x": {
+                "FIG-OBJ-LILIE": 92
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.6.31-MAT.6.34",
+            "figures": [
+              "FIG-GRUPPE-VOELKER",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-REICH-GOTTES"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-VOELKER",
+                "to": "FIG-GRUPPE-VOELKER",
+                "icons": [
+                  "FIG-OBJ-BROT",
+                  "FIG-OBJ-BECHER-WASSER",
+                  "FIG-OBJ-GEWAND"
+                ],
+                "think": true
+              }
+            ],
+            "action_de": "Nach Essen, Trinken und Kleidung trachten die Heiden; der Vater weiss, dass sie es brauchen. Die Jünger sollen zuerst das Reich und seine Gerechtigkeit suchen, dann wird ihnen das alles dazugegeben.",
+            "stage": {
+              "x": {
+                "FIG-GRUPPE-VOELKER": 46,
+                "FIG-GRUPPE-JUENGER": 136
+              },
+              "at": {
+                "FIG-ZEICHEN-REICH-GOTTES": "FIG-GRUPPE-JUENGER"
+              },
+              "mood": {
+                "FIG-GRUPPE-VOELKER": "worried",
+                "FIG-GRUPPE-JUENGER": "smile"
+              },
+              "bubble_y": 12
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus sagt: Sorgt euch nicht um euer Leben, was ihr essen sollt, und nicht um euren Leib, was ihr anziehen sollt.",
+          "Schaut auf die Vögel des Himmels: Sie säen nicht, ernten nicht und sammeln nicht in Scheunen, und der himmlische Vater ernährt sie; wer kann durch Sorgen sein Leben verlängern?",
+          "Seht die Lilien des Feldes: Sie mühen sich nicht ab und spinnen nicht, und nicht einmal Salomo in all seiner Pracht war gekleidet wie eine von ihnen; wie viel mehr wird Gott euch kleiden, ihr Kleingläubigen.",
+          "Nach Essen, Trinken und Kleidung trachten die Heiden; der Vater weiss, dass sie es brauchen. Die Jünger sollen zuerst das Reich und seine Gerechtigkeit suchen, dann wird ihnen das alles dazugegeben."
+        ],
+        "captions_de": [
+          "Nicht sorgen: Jesus sagt den Jüngern: Sorgt euch nicht (blauer Schweisstropfen, rotes X) um Essen und Kleidung (Brot, helles Gewand).",
+          "Der Vater ernährt die Vögel → nicht sorgen: Der Vater (Strahlenkranz) ernährt die Vögel (goldener Pfeil zu den Vögeln); die Jünger schauen zu.",
+          "Gott kleidet die Lilien → er wird auch euch kleiden: Gott (Strahlenkranz) kleidet die Lilien (weisse Lilien, goldener Pfeil zu ihnen); daneben König Salomo in seiner Pracht (Krone, goldenes Gewand): Nicht einmal er war so gekleidet wie eine von ihnen.",
+          "Zuerst das Reich: Menschen aus den Völkern denken an Essen, Trinken und Kleidung (Denkblase: Brot, Becher mit Wasser, Gewand); die Jünger suchen zuerst das Reich (goldene Krone mit Lichtstrahlen über ihnen)."
+        ],
+        "interpretation_note_de": "Gott erscheint als Strahlenkranz; Jesus nennt ihn «euren himmlischen Vater». Die weissen Blüten stehen für die Lilien des Feldes ([[MAT.6.28]]); Salomo trägt Krone und goldenes Gewand für «all seine Pracht» ([[MAT.6.29]]). Die Elle Lebenszeit ([[MAT.6.27]]), das Gras im Ofen ([[MAT.6.30]]) und die Sorge um morgen ([[MAT.6.34]]) nennt nur die Handlung. «Heiden» ([[MAT.6.32]]) sind Menschen aus den Völkern, ohne Wertung.",
+        "basis": [
+          {
+            "record": "TU-MAT-006-025-034",
+            "field": "summary",
+            "fingerprint": "eec468c6fc7840ea"
+          },
+          {
+            "record": "TRANS-MAT-006-016-034-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.6.25",
+            "fingerprint": "6ddca05891683eea"
+          },
+          {
+            "record": "TRANS-MAT-006-016-034-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.6.26-MAT.6.27",
+            "fingerprint": "cae0be65ad95e7ed"
+          },
+          {
+            "record": "TRANS-MAT-006-016-034-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.6.28-MAT.6.30",
+            "fingerprint": "aac548b15782bbb5"
+          },
+          {
+            "record": "TRANS-MAT-006-016-034-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.6.31-MAT.6.34",
+            "fingerprint": "409619df0448b814"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.6.25",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-SORGE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-BROT",
+                  "FIG-OBJ-GEWAND"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: Sorgt euch nicht um euer Leben, was ihr essen sollt, und nicht um euren Leib, was ihr anziehen sollt; ist nicht das Leben mehr als die Nahrung?",
+            "keywords": {
+              "de": "Sorgt euch nicht",
+              "gsw": "Mached eu kei Sorge"
+            },
+            "stage": {
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-GRUPPE-JUENGER": 132
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-SORGE": [
+                  "FIG-GRUPPE-JUENGER"
+                ]
+              },
+              "at": {
+                "FIG-ZEICHEN-SORGE": "FIG-GRUPPE-JUENGER"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "worried"
+              },
+              "size": {
+                "FIG-JESUS": 0.7
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.6.26-MAT.6.30",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-VOGEL",
+              "FIG-OBJ-LILIE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [],
+                "word": {
+                  "de": "Schaut",
+                  "gsw": "Lueged"
+                }
+              }
+            ],
+            "action_de": "Schaut auf die Vögel des Himmels: Sie säen und ernten nicht, und der himmlische Vater ernährt sie. Seht die Lilien des Feldes: Sie mühen sich nicht ab, und nicht einmal Salomo in all seiner Pracht war gekleidet wie eine von ihnen.",
+            "keywords": {
+              "de": "Vögel des Himmels",
+              "gsw": "Vögel am Himel"
+            },
+            "stage": {
+              "god_side": "right",
+              "x": {
+                "FIG-JESUS": 30
+              },
+              "count": {
+                "FIG-OBJ-VOGEL": 3,
+                "FIG-OBJ-LILIE": 3
+              },
+              "air_x": 96,
+              "air_y": 34,
+              "floor_x": {
+                "FIG-OBJ-LILIE": 120
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-OBJ-VOGEL",
+                  "act"
+                ],
+                [
+                  "FIG-GOTT",
+                  "FIG-OBJ-LILIE",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "smile"
+              },
+              "size": {
+                "FIG-JESUS": 0.7
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.6.33",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT",
+              "FIG-OBJ-GEWAND"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-REICH-GOTTES"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [],
+                "word": {
+                  "de": "Sucht",
+                  "gsw": "Sueched"
+                }
+              }
+            ],
+            "action_de": "Sucht aber zuerst das Reich und seine Gerechtigkeit, und dies alles wird euch dazugegeben.",
+            "keywords": {
+              "de": "zuerst das Reich",
+              "gsw": "zerscht s Riich"
+            },
+            "stage": {
+              "x": {
+                "FIG-JESUS": 28,
+                "FIG-GRUPPE-JUENGER": 96
+              },
+              "air_x": 70,
+              "air_y": 6,
+              "arrows": [
+                [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-ZEICHEN-REICH-GOTTES",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "smile"
+              },
+              "size": {
+                "FIG-JESUS": 0.7
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Bild neu aus der Kernanalyse (Worte im Bild)",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-006-025-034",
+            "field": "summary",
+            "fingerprint": "eec468c6fc7840ea"
+          },
+          {
+            "record": "TRANS-MAT-006-016-034-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.6.25",
+            "fingerprint": "6ddca05891683eea"
+          },
+          {
+            "record": "TRANS-MAT-006-016-034-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.6.26-MAT.6.30",
+            "fingerprint": "ce15a8045eeb124d"
+          },
+          {
+            "record": "TRANS-MAT-006-016-034-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.6.33",
+            "fingerprint": "fa90c755201d573d"
+          }
+        ],
+        "rework": {
+          "since": "2026-10-23",
+          "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
+        }
+      }
     }
-  ],
-  "rework": {
-    "since": "2026-10-23",
-    "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
-  }
+  ]
 }

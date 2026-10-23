@@ -11,7 +11,7 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.6.9",
+      "reference": "MAT.6.9-MAT.6.10",
       "figures": [
         "FIG-GOTT",
         "FIG-JESUS",
@@ -21,68 +21,39 @@
       "signs": [],
       "speech": [
         {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-ZEICHEN-BETEN"
-          ]
-        },
-        {
           "from": "FIG-GRUPPE-JUENGER",
           "to": "FIG-GOTT",
           "icons": [
-            "FIG-ZEICHEN-NAME-GOTTES"
-          ]
+            "FIG-ZEICHEN-REICH-GOTTES"
+          ],
+          "word": {
+            "de": "dein Reich komme",
+            "gsw": "diis Riich söll choo"
+          }
         }
       ],
-      "action_de": "Jesus sagt den Jüngern: So sollt ihr beten: Unser Vater in den Himmeln, dein Name werde geheiligt.",
+      "action_de": "Jesus gibt den Jüngern das Gebet vor: «Unser Vater in den Himmeln, dein Name werde geheiligt; dein Reich komme; dein Wille geschehe, wie im Himmel, so auch auf Erden.»",
+      "keywords": {
+        "de": "Unser Vater",
+        "gsw": "Öise Vatter"
+      },
       "stage": {
         "god_side": "right",
         "x": {
-          "FIG-JESUS": 32,
-          "FIG-GRUPPE-JUENGER": 104
+          "FIG-JESUS": 28,
+          "FIG-GRUPPE-JUENGER": 110
         },
         "mood": {
+          "FIG-JESUS": "calm",
           "FIG-GRUPPE-JUENGER": "calm"
+        },
+        "size": {
+          "FIG-JESUS": 0.7
         }
       }
     },
     {
       "n": 2,
-      "reference": "MAT.6.10",
-      "figures": [
-        "FIG-GOTT",
-        "FIG-GRUPPE-JUENGER"
-      ],
-      "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-JUENGER",
-          "to": "FIG-GOTT",
-          "icons": [
-            "FIG-ZEICHEN-REICH-GOTTES",
-            "FIG-ZEICHEN-WILLE-GOTTES"
-          ]
-        }
-      ],
-      "action_de": "Dein Reich komme; dein Wille geschehe, wie im Himmel, so auch auf Erden.",
-      "stage": {
-        "god_side": "right",
-        "x": {
-          "FIG-GRUPPE-JUENGER": 96
-        },
-        "arrows": [
-          [
-            "FIG-GRUPPE-JUENGER",
-            "FIG-GOTT",
-            "act"
-          ]
-        ]
-      }
-    },
-    {
-      "n": 3,
       "reference": "MAT.6.11-MAT.6.12",
       "figures": [
         "FIG-GOTT",
@@ -96,28 +67,31 @@
           "to": "FIG-GOTT",
           "icons": [
             "FIG-OBJ-BROT",
-            "FIG-ZEICHEN-TAGE",
             "FIG-ZEICHEN-VERGEBEN"
-          ]
+          ],
+          "word": {
+            "de": "tägliches Brot",
+            "gsw": "täglich Broot"
+          }
         }
       ],
-      "action_de": "Unser tägliches Brot gib uns heute. Und vergib uns unsere Schulden, wie auch wir unseren Schuldnern vergeben haben.",
+      "action_de": "Die Betenden bitten: Unser tägliches Brot gib uns heute, und vergib uns unsere Schulden, wie auch wir unseren Schuldnern vergeben haben.",
+      "keywords": {
+        "de": "vergib uns unsere Schulden",
+        "gsw": "vergib üs öisi Schulde"
+      },
       "stage": {
         "god_side": "right",
         "x": {
-          "FIG-GRUPPE-JUENGER": 124
+          "FIG-GRUPPE-JUENGER": 70
         },
-        "arrows": [
-          [
-            "FIG-GRUPPE-JUENGER",
-            "FIG-GOTT",
-            "act"
-          ]
-        ]
+        "mood": {
+          "FIG-GRUPPE-JUENGER": "calm"
+        }
       }
     },
     {
-      "n": 4,
+      "n": 3,
       "reference": "MAT.6.13",
       "figures": [
         "FIG-GOTT",
@@ -130,62 +104,53 @@
           "from": "FIG-GRUPPE-JUENGER",
           "to": "FIG-GOTT",
           "icons": [
-            "FIG-ZEICHEN-BEWAHREN",
             "FIG-ZEICHEN-VERSUCHUNG",
-            "FIG-ZEICHEN-BOESES",
-            "FIG-ZEICHEN-RETTUNG"
-          ]
+            "FIG-ZEICHEN-BOESES"
+          ],
+          "word": {
+            "de": "rette uns",
+            "gsw": "rett üs"
+          }
         }
       ],
-      "action_de": "Und führe uns nicht in Versuchung, sondern rette uns vor dem Bösen.",
+      "action_de": "Die Betenden bitten: Führe uns nicht in Versuchung, sondern rette uns vor dem Bösen.",
+      "keywords": {
+        "de": "vor dem Bösen",
+        "gsw": "vor em Bööse"
+      },
       "stage": {
         "god_side": "right",
         "x": {
-          "FIG-GRUPPE-JUENGER": 124
+          "FIG-GRUPPE-JUENGER": 70
         },
         "mood": {
-          "FIG-GRUPPE-JUENGER": "calm"
-        },
-        "arrows": [
-          [
-            "FIG-GRUPPE-JUENGER",
-            "FIG-GOTT",
-            "act"
-          ]
-        ]
+          "FIG-GRUPPE-JUENGER": "worried"
+        }
       }
     }
   ],
   "actions_de": [
-    "Jesus sagt den Jüngern: So sollt ihr beten: Unser Vater in den Himmeln, dein Name werde geheiligt.",
-    "Dein Reich komme; dein Wille geschehe, wie im Himmel, so auch auf Erden.",
-    "Unser tägliches Brot gib uns heute. Und vergib uns unsere Schulden, wie auch wir unseren Schuldnern vergeben haben.",
-    "Und führe uns nicht in Versuchung, sondern rette uns vor dem Bösen."
+    "Jesus gibt den Jüngern das Gebet vor: «Unser Vater in den Himmeln, dein Name werde geheiligt; dein Reich komme; dein Wille geschehe, wie im Himmel, so auch auf Erden.»",
+    "Die Betenden bitten: Unser tägliches Brot gib uns heute, und vergib uns unsere Schulden, wie auch wir unseren Schuldnern vergeben haben.",
+    "Die Betenden bitten: Führe uns nicht in Versuchung, sondern rette uns vor dem Bösen."
   ],
   "captions_de": [
-    "Unser Vater: Jesus lehrt die Jünger beten (Gebetszeichen); sie reden Gott als Vater an (Strahlenkranz): dein Name werde geheiligt (Gottesname, leuchtend).",
-    "Reich und Wille: Die Jünger bitten den Vater (Strahlenkranz, Pfeil): dein Reich komme (Krone), dein Wille geschehe im Himmel und auf Erden (Wolke, Pfeil nach unten, grüner Erdhügel).",
-    "Brot und Vergebung: Die Jünger bitten den Vater (Strahlenkranz, Pfeil) um das Brot für heute (Brot, eine Sonne) und um Vergebung ihrer Schuld (zerrissener Schuldschein).",
-    "Bewahrung und Rettung: Die Jünger bitten den Vater (Strahlenkranz, Pfeil), nicht in Versuchung geführt zu werden (zwei Hände als Dach über einer Figur, Köder am Haken), und um Rettung vor dem Bösen (dunkler Schatten, daneben Pfeil nach oben aus den Wellen)."
+    "Unser Vater: Jesus (links) lehrt die Jünger beten; sie beten zum Vater (Strahlenkranz): Dein Reich komme (Sprechblase: goldene Krone mit Lichtstrahlen).",
+    "Brot und Vergebung: Die Jünger bitten den Vater (Strahlenkranz) um das tägliche Brot (Brot) und um Vergebung (zerrissener Schuldschein).",
+    "Rettung vor dem Bösen: Die Jünger bitten den Vater (Strahlenkranz), sie nicht in Versuchung zu führen (Köder am Haken) und vor dem Bösen zu retten (dunkler zackiger Schatten)."
   ],
-  "interpretation_note_de": "Gott erscheint als Strahlenkranz; angeredet wird er als «unser Vater in den Himmeln» ([[MAT.6.9]]). Die sieben Bitten (nach verbreiteter Zählung) stehen als Zeichen in den Sprechblasen; die Zeichen sind Deutung: leuchtender Gottesname für «geheiligt werden», Krone für das Reich, Wolke, Pfeil nach unten und Erde für «wie im Himmel, so auf Erden», zerrissener Schuldschein für die Vergebung der Schulden ([[MAT.6.12]]), Köder für «Versuchung», zwei Hände als Dach (bewahren) für «nicht hineinführen», dunkler Schatten für «das Böse» oder «den Bösen» ([[MAT.6.13]], im Griechischen offen), Pfeil nach oben aus den Wellen für «retten». Dass die Jünger selbst ihren Schuldnern vergeben haben, nennt nur die Legende; das folgende Bild zu [[MAT.6.14-MAT.6.15]] zeigt es. Den Lobpreis am Schluss («denn dein ist das Reich …») hat der Text nicht.",
+  "interpretation_note_de": "Bild eines Gebets: Die Jünger beten, Gott (Strahlenkranz) ist ihr Gegenüber. In Feld 1 lehrt Jesus (links) die Worte ([[MAT.6.9]]). Das Bild zeigt je Feld eine Bitte als Wort und Zeichen; «dein Name werde geheiligt» und «dein Wille geschehe» ([[MAT.6.9-MAT.6.10]]) nennt nur die Handlung.",
   "basis": [
     {
       "record": "TU-MAT-006-009-013",
       "field": "summary",
-      "fingerprint": "e0434529d0dd53fd"
+      "fingerprint": "01351285d3a543e5"
     },
     {
       "record": "TRANS-MAT-006-005-015-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.6.9",
-      "fingerprint": "a048a1639d63387d"
-    },
-    {
-      "record": "TRANS-MAT-006-005-015-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.6.10",
-      "fingerprint": "cb2afa68f95ed25b"
+      "reference": "MAT.6.9-MAT.6.10",
+      "fingerprint": "4e3f7f868cd34fdc"
     },
     {
       "record": "TRANS-MAT-006-005-015-DE-WORKING",
@@ -346,10 +311,239 @@
         ],
         "interpretation_note_de": "Gott erscheint als Strahlenkranz; angeredet wird er als «unser Vater in den Himmeln» ([[MAT.6.9]]). Die sieben Bitten (nach verbreiteter Zählung) stehen als Zeichen in den Sprechblasen; die Zeichen sind Deutung: leuchtender Gottesname für «geheiligt werden», Krone für das Reich, Wolke und Erde für «wie im Himmel, so auf Erden», zerrissener Schuldschein für die Vergebung der Schulden ([[MAT.6.12]]), Köder für «Versuchung», Schild für «nicht hineinführen», dunkler Schatten für «das Böse» oder «den Bösen» ([[MAT.6.13]], im Griechischen offen). Dass die Jünger selbst ihren Schuldnern vergeben haben, nennt nur die Legende; das folgende Bild zu [[MAT.6.14-MAT.6.15]] zeigt es. Den Lobpreis am Schluss («denn dein ist das Reich …») hat der Text nicht."
       }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.6.9",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-BETEN"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-NAME-GOTTES"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt den Jüngern: So sollt ihr beten: Unser Vater in den Himmeln, dein Name werde geheiligt.",
+            "stage": {
+              "god_side": "right",
+              "x": {
+                "FIG-JESUS": 32,
+                "FIG-GRUPPE-JUENGER": 104
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.6.10",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-REICH-GOTTES",
+                  "FIG-ZEICHEN-WILLE-GOTTES"
+                ]
+              }
+            ],
+            "action_de": "Dein Reich komme; dein Wille geschehe, wie im Himmel, so auch auf Erden.",
+            "stage": {
+              "god_side": "right",
+              "x": {
+                "FIG-GRUPPE-JUENGER": 96
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-GOTT",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.6.11-MAT.6.12",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-OBJ-BROT",
+                  "FIG-ZEICHEN-TAGE",
+                  "FIG-ZEICHEN-VERGEBEN"
+                ]
+              }
+            ],
+            "action_de": "Unser tägliches Brot gib uns heute. Und vergib uns unsere Schulden, wie auch wir unseren Schuldnern vergeben haben.",
+            "stage": {
+              "god_side": "right",
+              "x": {
+                "FIG-GRUPPE-JUENGER": 124
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-GOTT",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.6.13",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-BEWAHREN",
+                  "FIG-ZEICHEN-VERSUCHUNG",
+                  "FIG-ZEICHEN-BOESES",
+                  "FIG-ZEICHEN-RETTUNG"
+                ]
+              }
+            ],
+            "action_de": "Und führe uns nicht in Versuchung, sondern rette uns vor dem Bösen.",
+            "stage": {
+              "god_side": "right",
+              "x": {
+                "FIG-GRUPPE-JUENGER": 124
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "calm"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-GOTT",
+                  "act"
+                ]
+              ]
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus sagt den Jüngern: So sollt ihr beten: Unser Vater in den Himmeln, dein Name werde geheiligt.",
+          "Dein Reich komme; dein Wille geschehe, wie im Himmel, so auch auf Erden.",
+          "Unser tägliches Brot gib uns heute. Und vergib uns unsere Schulden, wie auch wir unseren Schuldnern vergeben haben.",
+          "Und führe uns nicht in Versuchung, sondern rette uns vor dem Bösen."
+        ],
+        "captions_de": [
+          "Unser Vater: Jesus lehrt die Jünger beten (Gebetszeichen); sie reden Gott als Vater an (Strahlenkranz): dein Name werde geheiligt (Gottesname, leuchtend).",
+          "Reich und Wille: Die Jünger bitten den Vater (Strahlenkranz, Pfeil): dein Reich komme (Krone), dein Wille geschehe im Himmel und auf Erden (Wolke, Pfeil nach unten, grüner Erdhügel).",
+          "Brot und Vergebung: Die Jünger bitten den Vater (Strahlenkranz, Pfeil) um das Brot für heute (Brot, eine Sonne) und um Vergebung ihrer Schuld (zerrissener Schuldschein).",
+          "Bewahrung und Rettung: Die Jünger bitten den Vater (Strahlenkranz, Pfeil), nicht in Versuchung geführt zu werden (zwei Hände als Dach über einer Figur, Köder am Haken), und um Rettung vor dem Bösen (dunkler Schatten, daneben Pfeil nach oben aus den Wellen)."
+        ],
+        "interpretation_note_de": "Gott erscheint als Strahlenkranz; angeredet wird er als «unser Vater in den Himmeln» ([[MAT.6.9]]). Die sieben Bitten (nach verbreiteter Zählung) stehen als Zeichen in den Sprechblasen; die Zeichen sind Deutung: leuchtender Gottesname für «geheiligt werden», Krone für das Reich, Wolke, Pfeil nach unten und Erde für «wie im Himmel, so auf Erden», zerrissener Schuldschein für die Vergebung der Schulden ([[MAT.6.12]]), Köder für «Versuchung», zwei Hände als Dach (bewahren) für «nicht hineinführen», dunkler Schatten für «das Böse» oder «den Bösen» ([[MAT.6.13]], im Griechischen offen), Pfeil nach oben aus den Wellen für «retten». Dass die Jünger selbst ihren Schuldnern vergeben haben, nennt nur die Legende; das folgende Bild zu [[MAT.6.14-MAT.6.15]] zeigt es. Den Lobpreis am Schluss («denn dein ist das Reich …») hat der Text nicht.",
+        "basis": [
+          {
+            "record": "TU-MAT-006-009-013",
+            "field": "summary",
+            "fingerprint": "e0434529d0dd53fd"
+          },
+          {
+            "record": "TRANS-MAT-006-005-015-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.6.9",
+            "fingerprint": "a048a1639d63387d"
+          },
+          {
+            "record": "TRANS-MAT-006-005-015-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.6.10",
+            "fingerprint": "cb2afa68f95ed25b"
+          },
+          {
+            "record": "TRANS-MAT-006-005-015-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.6.11-MAT.6.12",
+            "fingerprint": "64c617de532d9019"
+          },
+          {
+            "record": "TRANS-MAT-006-005-015-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.6.13",
+            "fingerprint": "c43fd20613756f13"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Bild neu aus der Kernanalyse (Worte im Bild)",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-006-009-013",
+            "field": "summary",
+            "fingerprint": "e0434529d0dd53fd"
+          },
+          {
+            "record": "TRANS-MAT-006-005-015-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.6.9-MAT.6.10",
+            "fingerprint": "4e3f7f868cd34fdc"
+          },
+          {
+            "record": "TRANS-MAT-006-005-015-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.6.11-MAT.6.12",
+            "fingerprint": "64c617de532d9019"
+          },
+          {
+            "record": "TRANS-MAT-006-005-015-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.6.13",
+            "fingerprint": "c43fd20613756f13"
+          }
+        ],
+        "rework": {
+          "since": "2026-10-23",
+          "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
+        }
+      }
     }
-  ],
-  "rework": {
-    "since": "2026-10-23",
-    "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
-  }
+  ]
 }

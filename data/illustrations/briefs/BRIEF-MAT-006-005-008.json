@@ -11,88 +11,51 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.6.5",
-      "figures": [
-        "FIG-ROLLE-HEUCHLER",
-        "FIG-GRUPPE-MENGE"
-      ],
-      "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-BETEN",
-        "FIG-ZEICHEN-SEHEN"
-      ],
-      "speech": [],
-      "action_de": "Die Heuchler beten gern in den Synagogen und an den Ecken der Strassen, damit die Menschen sie sehen; sie haben ihren Lohn schon erhalten.",
-      "stage": {
-        "mood": {
-          "FIG-ROLLE-HEUCHLER": "calm",
-          "FIG-GRUPPE-MENGE": "calm"
-        },
-        "signs_who": {
-          "FIG-ZEICHEN-BETEN": [
-            "FIG-ROLLE-HEUCHLER"
-          ]
-        },
-        "at": {
-          "FIG-ZEICHEN-SEHEN": "FIG-GRUPPE-MENGE"
-        },
-        "arrows": [
-          [
-            "FIG-ROLLE-HEUCHLER",
-            "FIG-GRUPPE-MENGE",
-            "act"
-          ]
-        ],
-        "hold": {
-          "FIG-ROLLE-HEUCHLER": "PRAY"
-        }
-      }
-    },
-    {
-      "n": 2,
-      "reference": "MAT.6.6",
+      "reference": "MAT.6.5-MAT.6.6",
       "figures": [
         "FIG-GOTT",
+        "FIG-GRUPPE-MENGE",
+        "FIG-ROLLE-HEUCHLER",
         "FIG-ROLLE-JUENGER"
       ],
       "objects": [
         "FIG-ORT-KAMMER"
       ],
-      "signs": [
-        "FIG-ZEICHEN-SEHEN"
-      ],
+      "signs": [],
       "speech": [
         {
           "from": "FIG-ROLLE-JUENGER",
           "to": "FIG-GOTT",
-          "icons": [
-            "FIG-ZEICHEN-BETEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Vater",
+            "gsw": "Vatter"
+          }
         }
       ],
-      "action_de": "Du aber geh in deine Kammer, schliess die Tür und bete im Verborgenen zu deinem Vater; dein Vater, der ins Verborgene sieht, wird es dir vergelten.",
+      "action_de": "Statt wie die Heuchler an den Strassenecken zu beten, damit die Menschen sie sehen, soll man in die Kammer gehen, die Tür schliessen und zum Vater beten, der im Verborgenen ist; der Vater, der ins Verborgene sieht, wird es vergelten.",
+      "keywords": {
+        "de": "in deine Kammer",
+        "gsw": "i dini Chammer"
+      },
       "stage": {
-        "mood": {
-          "FIG-ROLLE-JUENGER": "calm"
-        },
-        "god_side": "left",
+        "god_side": "right",
+        "back_side": "right",
         "before": true,
         "x": {
-          "FIG-ROLLE-JUENGER": 100
+          "FIG-GRUPPE-MENGE": 26,
+          "FIG-ROLLE-HEUCHLER": 70,
+          "FIG-ROLLE-JUENGER": 140
         },
-        "arrows": [
-          [
-            "FIG-GOTT",
-            "FIG-ROLLE-JUENGER",
-            "act"
-          ]
-        ],
-        "air_x": 66,
-        "air_y": 10
+        "mood": {
+          "FIG-GRUPPE-MENGE": "calm",
+          "FIG-ROLLE-HEUCHLER": "smile",
+          "FIG-ROLLE-JUENGER": "calm"
+        }
       }
     },
     {
-      "n": 3,
+      "n": 2,
       "reference": "MAT.6.7-MAT.6.8",
       "figures": [
         "FIG-GOTT",
@@ -106,28 +69,33 @@
           "from": "FIG-GRUPPE-VOELKER",
           "to": "FIG-GOTT",
           "icons": [
-            "FIG-ZEICHEN-VIELE-WORTE",
             "FIG-ZEICHEN-VIELE-WORTE"
-          ]
+          ],
+          "word": {
+            "de": "viele Worte",
+            "gsw": "vil Wort"
+          }
         },
         {
           "from": "FIG-GRUPPE-JUENGER",
           "to": "FIG-GOTT",
-          "icons": [
-            "FIG-ZEICHEN-BETEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Vater",
+            "gsw": "Vatter"
+          }
         }
       ],
-      "action_de": "Beim Beten sollen die Jünger nicht plappern wie die Heiden, die meinen, mit vielen Worten erhört zu werden; denn ihr Vater weiss, was sie brauchen, bevor sie ihn bitten.",
+      "action_de": "Man soll beim Beten nicht plappern wie die Heiden, die meinen, sie würden erhört, wenn sie viele Worte machen; denn der Vater weiss, was ihr braucht, bevor ihr ihn bittet.",
+      "keywords": {
+        "de": "euer Vater weiss",
+        "gsw": "eue Vatter weiss"
+      },
       "stage": {
         "god_side": "right",
         "x": {
-          "FIG-GRUPPE-VOELKER": 40,
-          "FIG-GRUPPE-JUENGER": 112
-        },
-        "mood": {
-          "FIG-GRUPPE-VOELKER": "earnest",
-          "FIG-GRUPPE-JUENGER": "calm"
+          "FIG-GRUPPE-VOELKER": 44,
+          "FIG-GRUPPE-JUENGER": 124
         },
         "arrows": [
           [
@@ -135,38 +103,34 @@
             "FIG-GRUPPE-JUENGER",
             "act"
           ]
-        ]
+        ],
+        "mood": {
+          "FIG-GRUPPE-VOELKER": "worried",
+          "FIG-GRUPPE-JUENGER": "calm"
+        }
       }
     }
   ],
   "actions_de": [
-    "Die Heuchler beten gern in den Synagogen und an den Ecken der Strassen, damit die Menschen sie sehen; sie haben ihren Lohn schon erhalten.",
-    "Du aber geh in deine Kammer, schliess die Tür und bete im Verborgenen zu deinem Vater; dein Vater, der ins Verborgene sieht, wird es dir vergelten.",
-    "Beim Beten sollen die Jünger nicht plappern wie die Heiden, die meinen, mit vielen Worten erhört zu werden; denn ihr Vater weiss, was sie brauchen, bevor sie ihn bitten."
+    "Statt wie die Heuchler an den Strassenecken zu beten, damit die Menschen sie sehen, soll man in die Kammer gehen, die Tür schliessen und zum Vater beten, der im Verborgenen ist; der Vater, der ins Verborgene sieht, wird es vergelten.",
+    "Man soll beim Beten nicht plappern wie die Heiden, die meinen, sie würden erhört, wenn sie viele Worte machen; denn der Vater weiss, was ihr braucht, bevor ihr ihn bittet."
   ],
   "captions_de": [
-    "Beten zum Schein → gesehen werden: Ein Heuchler betet stehend vor allen Leuten (gefaltete Hände, Gebetszeichen); der Pfeil führt von ihm zu den Leuten, die ihm zuschauen (Auge) – das ist schon sein Lohn.",
-    "Beten im Verborgenen → der Vater sieht und vergilt: Ein Jünger betet allein in der Kammer bei geschlossener, verriegelter Tür zum Vater (Strahlenkranz); der Vater sieht ihn (Auge beim Strahlenkranz) und wendet sich ihm zu (goldener Pfeil zum Jünger).",
-    "Der Vater weiss es schon → nicht plappern: Menschen aus den Völkern machen viele Worte (viele Blasen); die Jünger beten schlicht (Gebetszeichen), denn der Vater (Strahlenkranz) weiss schon, was sie brauchen (goldener Pfeil zu den Jüngern)."
+    "In der Kammer: Links betet ein Heuchler (gelbe Ärmelborten) vor den Leuten, die ihm zuschauen; rechts betet ein Jünger allein vor der Kammer mit geschlossener Tür zum Vater (Strahlenkranz).",
+    "Der Vater weiss es: Menschen aus den Völkern machen beim Beten viele Worte (Sprechblase: viele kleine Blasen); die Jünger beten schlicht zum Vater (Strahlenkranz), der schon weiss, was sie brauchen (goldener Pfeil)."
   ],
-  "interpretation_note_de": "Die Heuchler ([[MAT.6.5]]) sind in Jesu Rede keine bestimmte Gruppe; das Bild zeigt sie deshalb nicht als Pharisäer. «Heiden» ([[MAT.6.7]]) sind Menschen aus den Völkern; das Bild zeigt sie als eigene Gruppe, ohne Wertung. Gott erscheint als Strahlenkranz; Jesus nennt ihn «Vater». Synagoge, Strassenecke und der Lohn des Vaters ([[MAT.6.6]]) werden nicht gezeigt.",
+  "interpretation_note_de": "Bild einer Lehre über das Beten. Jesus selbst ist hier nicht im Bild; er spricht im ganzen Abschnitt. Gott erscheint als Strahlenkranz. Feld 1 stellt den Heuchler an der Strassenecke und den Jünger vor der Kammer nebeneinander ([[MAT.6.5-MAT.6.6]]); «Heiden» ([[MAT.6.7]]) sind Menschen aus den Völkern, ohne Wertung.",
   "basis": [
     {
       "record": "TU-MAT-006-005-008",
       "field": "summary",
-      "fingerprint": "cddfe6206161e858"
+      "fingerprint": "27155bc81534aaa9"
     },
     {
       "record": "TRANS-MAT-006-005-015-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.6.5",
-      "fingerprint": "1dc56fe2f4e8e799"
-    },
-    {
-      "record": "TRANS-MAT-006-005-015-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.6.6",
-      "fingerprint": "c9310b3f66625551"
+      "reference": "MAT.6.5-MAT.6.6",
+      "fingerprint": "810148697231972e"
     },
     {
       "record": "TRANS-MAT-006-005-015-DE-WORKING",
@@ -468,10 +432,317 @@
           "Nicht plappern: Menschen aus den Völkern machen viele Worte (viele Blasen); die Jünger beten schlicht, denn der Vater (Strahlenkranz) weiss schon, was sie brauchen (Pfeil)."
         ]
       }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.6.5",
+            "figures": [
+              "FIG-ROLLE-HEUCHLER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-BETEN",
+              "FIG-ZEICHEN-SEHEN"
+            ],
+            "speech": [],
+            "action_de": "Die Heuchler beten gern in den Synagogen und an den Ecken der Strassen, damit die Menschen sie sehen; sie haben ihren Lohn schon erhalten.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-HEUCHLER": "calm",
+                "FIG-GRUPPE-MENGE": "calm"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-BETEN": [
+                  "FIG-ROLLE-HEUCHLER"
+                ]
+              },
+              "at": {
+                "FIG-ZEICHEN-SEHEN": "FIG-GRUPPE-MENGE"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-HEUCHLER",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ],
+              "hold": {
+                "FIG-ROLLE-HEUCHLER": "PRAY"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.6.6",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-ROLLE-JUENGER"
+            ],
+            "objects": [
+              "FIG-ORT-KAMMER"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-JUENGER",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-BETEN"
+                ]
+              }
+            ],
+            "action_de": "Du aber geh in deine Kammer, schliess die Tür und bete im Verborgenen zu deinem Vater; dein Vater, der ins Verborgene sieht, wird es dir vergelten.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-JUENGER": "calm"
+              },
+              "god_side": "left",
+              "before": true,
+              "x": {
+                "FIG-ROLLE-JUENGER": 100
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-ROLLE-JUENGER",
+                  "act"
+                ]
+              ],
+              "air_x": 66,
+              "air_y": 10
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.6.7-MAT.6.8",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-VOELKER",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-VOELKER",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-VIELE-WORTE",
+                  "FIG-ZEICHEN-VIELE-WORTE"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-BETEN"
+                ]
+              }
+            ],
+            "action_de": "Beim Beten sollen die Jünger nicht plappern wie die Heiden, die meinen, mit vielen Worten erhört zu werden; denn ihr Vater weiss, was sie brauchen, bevor sie ihn bitten.",
+            "stage": {
+              "god_side": "right",
+              "x": {
+                "FIG-GRUPPE-VOELKER": 40,
+                "FIG-GRUPPE-JUENGER": 112
+              },
+              "mood": {
+                "FIG-GRUPPE-VOELKER": "earnest",
+                "FIG-GRUPPE-JUENGER": "calm"
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-JUENGER",
+                  "act"
+                ]
+              ]
+            }
+          }
+        ],
+        "actions_de": [
+          "Die Heuchler beten gern in den Synagogen und an den Ecken der Strassen, damit die Menschen sie sehen; sie haben ihren Lohn schon erhalten.",
+          "Du aber geh in deine Kammer, schliess die Tür und bete im Verborgenen zu deinem Vater; dein Vater, der ins Verborgene sieht, wird es dir vergelten.",
+          "Beim Beten sollen die Jünger nicht plappern wie die Heiden, die meinen, mit vielen Worten erhört zu werden; denn ihr Vater weiss, was sie brauchen, bevor sie ihn bitten."
+        ],
+        "captions_de": [
+          "Beten zum Schein → gesehen werden: Ein Heuchler betet stehend vor allen Leuten (gefaltete Hände, Gebetszeichen); der Pfeil führt von ihm zu den Leuten, die ihm zuschauen (Auge) – das ist schon sein Lohn.",
+          "Beten im Verborgenen → der Vater sieht und vergilt: Ein Jünger betet allein in der Kammer bei geschlossener, verriegelter Tür zum Vater (Strahlenkranz); der Vater sieht ihn (Auge beim Strahlenkranz) und wendet sich ihm zu (goldener Pfeil zum Jünger).",
+          "Der Vater weiss es schon → nicht plappern: Menschen aus den Völkern machen viele Worte (viele Blasen); die Jünger beten schlicht (Gebetszeichen), denn der Vater (Strahlenkranz) weiss schon, was sie brauchen (goldener Pfeil zu den Jüngern)."
+        ],
+        "interpretation_note_de": "Die Heuchler ([[MAT.6.5]]) sind in Jesu Rede keine bestimmte Gruppe; das Bild zeigt sie deshalb nicht als Pharisäer. «Heiden» ([[MAT.6.7]]) sind Menschen aus den Völkern; das Bild zeigt sie als eigene Gruppe, ohne Wertung. Gott erscheint als Strahlenkranz; Jesus nennt ihn «Vater». Synagoge, Strassenecke und der Lohn des Vaters ([[MAT.6.6]]) werden nicht gezeigt.",
+        "basis": [
+          {
+            "record": "TU-MAT-006-005-008",
+            "field": "summary",
+            "fingerprint": "cddfe6206161e858"
+          },
+          {
+            "record": "TRANS-MAT-006-005-015-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.6.5",
+            "fingerprint": "1dc56fe2f4e8e799"
+          },
+          {
+            "record": "TRANS-MAT-006-005-015-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.6.6",
+            "fingerprint": "c9310b3f66625551"
+          },
+          {
+            "record": "TRANS-MAT-006-005-015-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.6.7-MAT.6.8",
+            "fingerprint": "df201401694f2511"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.6.5-MAT.6.6",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-MENGE",
+              "FIG-ROLLE-HEUCHLER",
+              "FIG-ROLLE-JUENGER"
+            ],
+            "objects": [
+              "FIG-ORT-KAMMER"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-JUENGER",
+                "to": "FIG-GOTT",
+                "icons": [],
+                "word": {
+                  "de": "Vater",
+                  "gsw": "Vatter"
+                }
+              }
+            ],
+            "action_de": "Statt wie die Heuchler an den Strassenecken zu beten, damit die Menschen sie sehen, soll man in die Kammer gehen, die Tür schliessen und zum Vater beten, der im Verborgenen ist; der Vater, der ins Verborgene sieht, wird es vergelten.",
+            "keywords": {
+              "de": "in deine Kammer",
+              "gsw": "i dini Chammer"
+            },
+            "stage": {
+              "god_side": "right",
+              "back_side": "right",
+              "before": true,
+              "x": {
+                "FIG-GRUPPE-MENGE": 26,
+                "FIG-ROLLE-HEUCHLER": 70,
+                "FIG-ROLLE-JUENGER": 140
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "calm",
+                "FIG-ROLLE-HEUCHLER": "smile",
+                "FIG-ROLLE-JUENGER": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.6.7-MAT.6.8",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-VOELKER",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-VOELKER",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-VIELE-WORTE"
+                ],
+                "word": {
+                  "de": "viele Worte",
+                  "gsw": "vil Wort"
+                }
+              },
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-GOTT",
+                "icons": [],
+                "word": {
+                  "de": "Vater",
+                  "gsw": "Vatter"
+                }
+              }
+            ],
+            "action_de": "Man soll beim Beten nicht plappern wie die Heiden, die meinen, sie würden erhört, wenn sie viele Worte machen; denn der Vater weiss, was ihr braucht, bevor ihr ihn bittet.",
+            "keywords": {
+              "de": "euer Vater weiss",
+              "gsw": "eue Vatter weiss"
+            },
+            "stage": {
+              "god_side": "center",
+              "x": {
+                "FIG-GRUPPE-VOELKER": 44,
+                "FIG-GRUPPE-JUENGER": 140
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-JUENGER",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-VOELKER": "worried",
+                "FIG-GRUPPE-JUENGER": "calm"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Bild neu aus der Kernanalyse (Worte im Bild)",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-006-005-008",
+            "field": "summary",
+            "fingerprint": "cddfe6206161e858"
+          },
+          {
+            "record": "TRANS-MAT-006-005-015-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.6.5-MAT.6.6",
+            "fingerprint": "810148697231972e"
+          },
+          {
+            "record": "TRANS-MAT-006-005-015-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.6.7-MAT.6.8",
+            "fingerprint": "df201401694f2511"
+          }
+        ],
+        "rework": {
+          "since": "2026-10-23",
+          "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
+        }
+      }
     }
-  ],
-  "rework": {
-    "since": "2026-10-23",
-    "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
-  }
+  ]
 }

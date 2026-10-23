@@ -14,36 +14,52 @@
       "reference": "MAT.5.27-MAT.5.28",
       "figures": [
         "FIG-JESUS",
-        "FIG-GRUPPE-JUENGER"
+        "FIG-ROLLE-MENSCH",
+        "FIG-ROLLE-FRAU"
       ],
       "objects": [],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-HERZ"
+      ],
       "speech": [
         {
           "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-ZEICHEN-SEHEN",
-            "FIG-ROLLE-FRAU"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-ZEICHEN-HERZ",
-            "FIG-ZEICHEN-SUENDE"
-          ]
+          "to": "FIG-ROLLE-MENSCH",
+          "icons": [],
+          "word": {
+            "de": "Herzen",
+            "gsw": "Härz"
+          }
         }
       ],
-      "action_de": "Zum Gebot «Du sollst nicht ehebrechen» sagt Jesus: Wer eine Frau ansieht, um sie zu begehren, hat in seinem Herzen schon die Ehe gebrochen.",
+      "action_de": "Jesus stellt dem Gebot «Du sollst nicht ehebrechen» entgegen: Wer eine Frau ansieht, um sie zu begehren, hat in seinem Herzen schon mit ihr die Ehe gebrochen.",
+      "keywords": {
+        "de": "in seinem Herzen",
+        "gsw": "i sim Härz"
+      },
       "stage": {
         "x": {
-          "FIG-JESUS": 40,
-          "FIG-GRUPPE-JUENGER": 132
+          "FIG-JESUS": 26,
+          "FIG-ROLLE-MENSCH": 96,
+          "FIG-ROLLE-FRAU": 156
         },
+        "at": {
+          "FIG-ZEICHEN-HERZ": "FIG-ROLLE-MENSCH"
+        },
+        "arrows": [
+          [
+            "FIG-ROLLE-MENSCH",
+            "FIG-ROLLE-FRAU",
+            "act"
+          ]
+        ],
         "mood": {
-          "FIG-GRUPPE-JUENGER": "earnest"
+          "FIG-JESUS": "earnest",
+          "FIG-ROLLE-MENSCH": "pensive",
+          "FIG-ROLLE-FRAU": "calm"
+        },
+        "size": {
+          "FIG-JESUS": 0.7
         }
       }
     },
@@ -61,34 +77,39 @@
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-JUENGER",
           "icons": [
-            "FIG-ZEICHEN-WARNEN",
+            "FIG-ZEICHEN-SEHEN",
             "FIG-ZEICHEN-STOLPERN"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-ZEICHEN-FEUER",
-            "FIG-ZEICHEN-NEIN"
-          ]
+          ],
+          "word": {
+            "de": "weg!",
+            "gsw": "wäg!"
+          }
         }
       ],
-      "action_de": "Bringt das rechte Auge oder die rechte Hand zu Fall, soll man sie von sich werfen; besser ein Glied verlieren, als dass der ganze Leib in die Hölle kommt.",
+      "action_de": "Wenn das rechte Auge oder die rechte Hand zu Fall bringt, soll man es von sich werfen; besser ein Glied verlieren als den ganzen Leib.",
+      "keywords": {
+        "de": "dein rechtes Auge",
+        "gsw": "dis rächt Aug"
+      },
       "stage": {
         "x": {
           "FIG-JESUS": 40,
           "FIG-GRUPPE-JUENGER": 132
         },
         "mood": {
+          "FIG-JESUS": "earnest",
           "FIG-GRUPPE-JUENGER": "worried"
+        },
+        "size": {
+          "FIG-JESUS": 0.7
         }
       }
     },
     {
       "n": 3,
-      "reference": "MAT.5.31",
+      "reference": "MAT.5.31-MAT.5.32",
       "figures": [
+        "FIG-JESUS",
         "FIG-ROLLE-MENSCH",
         "FIG-ROLLE-FRAU"
       ],
@@ -96,80 +117,67 @@
         "FIG-OBJ-BRIEF"
       ],
       "signs": [],
-      "speech": [],
-      "action_de": "Es ist gesagt worden: Wer seine Frau entlässt, soll ihr einen Scheidebrief geben.",
+      "speech": [
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-ROLLE-MENSCH",
+          "icons": [
+            "FIG-ZEICHEN-NEIN"
+          ],
+          "word": {
+            "de": "Ich aber",
+            "gsw": "Ich aber"
+          }
+        }
+      ],
+      "action_de": "Jesus stellt dem Wort vom Scheidebrief entgegen: Wer seine Frau entlässt, ausser wegen Unzucht, macht, dass mit ihr die Ehe gebrochen wird.",
+      "keywords": {
+        "de": "Scheidebrief",
+        "gsw": "Scheidigsbrief"
+      },
       "stage": {
         "x": {
-          "FIG-ROLLE-MENSCH": 60,
-          "FIG-ROLLE-FRAU": 128
+          "FIG-JESUS": 26,
+          "FIG-ROLLE-MENSCH": 94,
+          "FIG-ROLLE-FRAU": 156
         },
-        "hold": {
-          "FIG-ROLLE-MENSCH": "FIG-OBJ-BRIEF"
+        "beside": {
+          "FIG-OBJ-BRIEF": "FIG-ROLLE-MENSCH"
         },
         "arrows": [
           [
-            "FIG-ROLLE-MENSCH",
+            "FIG-OBJ-BRIEF",
             "FIG-ROLLE-FRAU",
             "act"
           ]
         ],
         "mood": {
+          "FIG-JESUS": "earnest",
           "FIG-ROLLE-MENSCH": "earnest",
           "FIG-ROLLE-FRAU": "worried"
-        }
-      }
-    },
-    {
-      "n": 4,
-      "reference": "MAT.5.32",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-JUENGER"
-      ],
-      "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-ZEICHEN-EHE",
-            "FIG-ZEICHEN-TRENNEN",
-            "FIG-ZEICHEN-DARAUS",
-            "FIG-ZEICHEN-SUENDE"
-          ]
-        }
-      ],
-      "action_de": "Jesus aber sagt: Wer seine Frau entlässt, ausser wegen Unzucht, macht, dass mit ihr die Ehe gebrochen wird; und wer eine Entlassene heiratet, bricht die Ehe.",
-      "stage": {
-        "x": {
-          "FIG-JESUS": 40,
-          "FIG-GRUPPE-JUENGER": 132
         },
-        "mood": {
-          "FIG-GRUPPE-JUENGER": "earnest"
+        "size": {
+          "FIG-JESUS": 0.7
         }
       }
     }
   ],
   "actions_de": [
-    "Zum Gebot «Du sollst nicht ehebrechen» sagt Jesus: Wer eine Frau ansieht, um sie zu begehren, hat in seinem Herzen schon die Ehe gebrochen.",
-    "Bringt das rechte Auge oder die rechte Hand zu Fall, soll man sie von sich werfen; besser ein Glied verlieren, als dass der ganze Leib in die Hölle kommt.",
-    "Es ist gesagt worden: Wer seine Frau entlässt, soll ihr einen Scheidebrief geben.",
-    "Jesus aber sagt: Wer seine Frau entlässt, ausser wegen Unzucht, macht, dass mit ihr die Ehe gebrochen wird; und wer eine Entlassene heiratet, bricht die Ehe."
+    "Jesus stellt dem Gebot «Du sollst nicht ehebrechen» entgegen: Wer eine Frau ansieht, um sie zu begehren, hat in seinem Herzen schon mit ihr die Ehe gebrochen.",
+    "Wenn das rechte Auge oder die rechte Hand zu Fall bringt, soll man es von sich werfen; besser ein Glied verlieren als den ganzen Leib.",
+    "Jesus stellt dem Wort vom Scheidebrief entgegen: Wer seine Frau entlässt, ausser wegen Unzucht, macht, dass mit ihr die Ehe gebrochen wird."
   ],
   "captions_de": [
-    "Schon im Herzen: Jesus sagt den Jüngern: Wer eine Frau begehrlich ansieht (offenes Auge, Frau), hat im Herzen (rotes Herz) schon die Ehe gebrochen (dunkler Fleck).",
-    "Ernste Warnung: Jesus warnt die Jünger (Sprechblase: erhobener Zeigefinger): Was dich zu Fall bringt (kleine Figur kippt über einen Stein), wirf weg, damit du nicht ins Feuer kommst (Flammen, rotes X).",
-    "Scheidebrief: Ein Mann gibt seiner Frau einen Scheidebrief (gefaltetes Blatt mit Siegel, Pfeil) und entlässt sie.",
-    "Ich aber sage euch: Jesus sagt den Jüngern: Wer die Ehe auflöst (Mann und Frau im Band, gezackter Bruch), führt zum Ehebruch (dicker Pfeil, dunkler Fleck)."
+    "Schon im Herzen: Ein Mann blickt begehrend auf eine Frau (Pfeil); über ihm sein Herz (rotes Herz). Jesus (links) sagt: Das geschieht schon im Herzen.",
+    "Ernstes Bildwort: Jesus sagt den Jüngern: Wenn dein Auge (offenes Auge) dich zu Fall bringt (Figur kippt über einen Stein), weg damit! Die Jünger hören ernst zu.",
+    "Scheidebrief: Ein Mann gibt seiner Frau einen Scheidebrief (gefaltetes Blatt mit Siegel, Pfeil); Jesus (links) widerspricht: «Ich aber …» (rotes X)."
   ],
-  "interpretation_note_de": "Das Bild zeigt das Begehren nicht als Szene, sondern als Zeichen in Jesu Rede: Auge, Herz und dunkler Fleck für den Ehebruch im Herzen ([[MAT.5.28]]). Das Ausreissen des Auges und das Abhauen der Hand ([[MAT.5.29-MAT.5.30]]) sind drastische Bildworte; das Bild zeigt sie nicht, sondern nur die Warnung vor dem, was zu Fall bringt, und vor dem Feuer der Hölle. Die Ausnahme «ausser wegen Unzucht» ([[MAT.5.32]]) nennt nur die Handlung.",
+  "interpretation_note_de": "Bild einer Rede: Jesus (links) spricht, das Gesagte ist gross daneben gezeigt. Das Bildwort vom Auge und von der Hand ([[MAT.5.29-MAT.5.30]]) zeigt das Bild nicht als Handlung, sondern als Wort Jesu in der Sprechblase. Das Herz in Feld 1 steht für den Ehebruch «in seinem Herzen» ([[MAT.5.28]]). Die Ausnahme «wegen Unzucht» und die Heirat einer Entlassenen ([[MAT.5.32]]) nennt nur die Handlung.",
   "basis": [
     {
       "record": "TU-MAT-005-027-032",
       "field": "summary",
-      "fingerprint": "77e123a0237cffac"
+      "fingerprint": "2f040d0a76508563"
     },
     {
       "record": "TRANS-MAT-005-001-048-DE-WORKING",
@@ -186,14 +194,8 @@
     {
       "record": "TRANS-MAT-005-001-048-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.5.31",
-      "fingerprint": "9e82a855fdb9f6bc"
-    },
-    {
-      "record": "TRANS-MAT-005-001-048-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.5.32",
-      "fingerprint": "86083d711965243f"
+      "reference": "MAT.5.31-MAT.5.32",
+      "fingerprint": "ff90a4697192901d"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
@@ -356,10 +358,235 @@
           "Ich aber sage euch: Jesus sagt den Jüngern: Wer die Ehe auflöst (Mann und Frau im Band, gezackter Bruch), führt zum Ehebruch (dicker Pfeil, dunkler Fleck)."
         ]
       }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.5.27-MAT.5.28",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-SEHEN",
+                  "FIG-ROLLE-FRAU"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-HERZ",
+                  "FIG-ZEICHEN-SUENDE"
+                ]
+              }
+            ],
+            "action_de": "Zum Gebot «Du sollst nicht ehebrechen» sagt Jesus: Wer eine Frau ansieht, um sie zu begehren, hat in seinem Herzen schon die Ehe gebrochen.",
+            "stage": {
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-GRUPPE-JUENGER": 132
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "earnest"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.5.29-MAT.5.30",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-WARNEN",
+                  "FIG-ZEICHEN-STOLPERN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-FEUER",
+                  "FIG-ZEICHEN-NEIN"
+                ]
+              }
+            ],
+            "action_de": "Bringt das rechte Auge oder die rechte Hand zu Fall, soll man sie von sich werfen; besser ein Glied verlieren, als dass der ganze Leib in die Hölle kommt.",
+            "stage": {
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-GRUPPE-JUENGER": 132
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "worried"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.5.31",
+            "figures": [
+              "FIG-ROLLE-MENSCH",
+              "FIG-ROLLE-FRAU"
+            ],
+            "objects": [
+              "FIG-OBJ-BRIEF"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Es ist gesagt worden: Wer seine Frau entlässt, soll ihr einen Scheidebrief geben.",
+            "stage": {
+              "x": {
+                "FIG-ROLLE-MENSCH": 60,
+                "FIG-ROLLE-FRAU": 128
+              },
+              "hold": {
+                "FIG-ROLLE-MENSCH": "FIG-OBJ-BRIEF"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-MENSCH",
+                  "FIG-ROLLE-FRAU",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-MENSCH": "earnest",
+                "FIG-ROLLE-FRAU": "worried"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.5.32",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-EHE",
+                  "FIG-ZEICHEN-TRENNEN",
+                  "FIG-ZEICHEN-DARAUS",
+                  "FIG-ZEICHEN-SUENDE"
+                ]
+              }
+            ],
+            "action_de": "Jesus aber sagt: Wer seine Frau entlässt, ausser wegen Unzucht, macht, dass mit ihr die Ehe gebrochen wird; und wer eine Entlassene heiratet, bricht die Ehe.",
+            "stage": {
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-GRUPPE-JUENGER": 132
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "earnest"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Zum Gebot «Du sollst nicht ehebrechen» sagt Jesus: Wer eine Frau ansieht, um sie zu begehren, hat in seinem Herzen schon die Ehe gebrochen.",
+          "Bringt das rechte Auge oder die rechte Hand zu Fall, soll man sie von sich werfen; besser ein Glied verlieren, als dass der ganze Leib in die Hölle kommt.",
+          "Es ist gesagt worden: Wer seine Frau entlässt, soll ihr einen Scheidebrief geben.",
+          "Jesus aber sagt: Wer seine Frau entlässt, ausser wegen Unzucht, macht, dass mit ihr die Ehe gebrochen wird; und wer eine Entlassene heiratet, bricht die Ehe."
+        ],
+        "captions_de": [
+          "Schon im Herzen: Jesus sagt den Jüngern: Wer eine Frau begehrlich ansieht (offenes Auge, Frau), hat im Herzen (rotes Herz) schon die Ehe gebrochen (dunkler Fleck).",
+          "Ernste Warnung: Jesus warnt die Jünger (Sprechblase: erhobener Zeigefinger): Was dich zu Fall bringt (kleine Figur kippt über einen Stein), wirf weg, damit du nicht ins Feuer kommst (Flammen, rotes X).",
+          "Scheidebrief: Ein Mann gibt seiner Frau einen Scheidebrief (gefaltetes Blatt mit Siegel, Pfeil) und entlässt sie.",
+          "Ich aber sage euch: Jesus sagt den Jüngern: Wer die Ehe auflöst (Mann und Frau im Band, gezackter Bruch), führt zum Ehebruch (dicker Pfeil, dunkler Fleck)."
+        ],
+        "interpretation_note_de": "Das Bild zeigt das Begehren nicht als Szene, sondern als Zeichen in Jesu Rede: Auge, Herz und dunkler Fleck für den Ehebruch im Herzen ([[MAT.5.28]]). Das Ausreissen des Auges und das Abhauen der Hand ([[MAT.5.29-MAT.5.30]]) sind drastische Bildworte; das Bild zeigt sie nicht, sondern nur die Warnung vor dem, was zu Fall bringt, und vor dem Feuer der Hölle. Die Ausnahme «ausser wegen Unzucht» ([[MAT.5.32]]) nennt nur die Handlung.",
+        "basis": [
+          {
+            "record": "TU-MAT-005-027-032",
+            "field": "summary",
+            "fingerprint": "77e123a0237cffac"
+          },
+          {
+            "record": "TRANS-MAT-005-001-048-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.5.27-MAT.5.28",
+            "fingerprint": "de88b5f3fe20e07c"
+          },
+          {
+            "record": "TRANS-MAT-005-001-048-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.5.29-MAT.5.30",
+            "fingerprint": "348d777e607a9b35"
+          },
+          {
+            "record": "TRANS-MAT-005-001-048-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.5.31",
+            "fingerprint": "9e82a855fdb9f6bc"
+          },
+          {
+            "record": "TRANS-MAT-005-001-048-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.5.32",
+            "fingerprint": "86083d711965243f"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Bild neu aus der Kernanalyse (Worte im Bild)",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-005-027-032",
+            "field": "summary",
+            "fingerprint": "77e123a0237cffac"
+          },
+          {
+            "record": "TRANS-MAT-005-001-048-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.5.27-MAT.5.28",
+            "fingerprint": "de88b5f3fe20e07c"
+          },
+          {
+            "record": "TRANS-MAT-005-001-048-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.5.29-MAT.5.30",
+            "fingerprint": "348d777e607a9b35"
+          },
+          {
+            "record": "TRANS-MAT-005-001-048-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.5.31-MAT.5.32",
+            "fingerprint": "ff90a4697192901d"
+          }
+        ],
+        "rework": {
+          "since": "2026-10-23",
+          "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
+        }
+      }
     }
-  ],
-  "rework": {
-    "since": "2026-10-23",
-    "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
-  }
+  ]
 }
