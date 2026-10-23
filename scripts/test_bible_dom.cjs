@@ -98,6 +98,8 @@ click('[data-study="TU-MAT-006-009-013"]');
 assert(sheetHost.textContent.includes('Brot für den kommenden Tag'),'Deutungen zu epiousios');
 assert(!sheetHost.textContent.includes('Grenze:'),'Anwendung nicht mehr im Studienblatt');
 click('[data-close]');
+{const u=reader.querySelector('[data-stream="v39-6-13"] .dec.alt');assert(u,'Lesart in Mt 6,13 unterstrichen');u.click();assert(sheetHost.querySelector('[data-alternative]')&&sheetHost.textContent.includes('Andere Lesarten'),'Unterstreichung öffnet Lesarten');}
+click('[data-close]');
 // Damals → Prinzip → Heute (docs/DAMALS-PRINZIP-HEUTE.md)
 click('[data-background="TU-MAT-006-009-013"]');
 assert(sheetHost.querySelector('.dph-steps [data-dph="today"]')&&sheetHost.querySelector('#dph-then')&&sheetHost.querySelector('#dph-principle'),'drei Stufen');
@@ -112,6 +114,15 @@ assert(sheetHost.querySelector('[data-app="APP-MAT-1007"]')&&!sheetHost.querySel
 assert(!sheetHost.querySelector('[data-app="APP-MAT-1005"]'),'Anwendung zu Mt 6,19–34 nicht bei 6,5–8');
 click('.dph-aud [data-aud="all"]');assert(sheetHost.querySelector('[data-app="APP-MAT-1004"]'),'wieder alle');
 click('[data-close]');
+// Gleiche Knöpfe auf allen Ebenen; Kapitel mit Kernanalyse
+click('[data-action=up]');
+{const ch=[...reader.querySelectorAll('[data-stream]')].find(e=>e.dataset.stream&&model.nodes.get(e.dataset.stream)&&model.nodes.get(e.dataset.stream).level===4&&e.querySelector('[data-study]'));assert(ch,'Kapitel mit Verstehen');
+ assert(ch.querySelector('[data-background]'),'Kapitel mit Damals → Heute');}
+click('[data-study="'+[...reader.querySelectorAll('[data-study]')].map(b=>b.dataset.study).find(id=>model.nodes.get(id).level===4&&model.nodes.get(id).c===6)+'"]');
+assert(sheetHost.textContent.includes('Worum es geht')&&sheetHost.textContent.includes('Die tragenden Momente'),'Kernanalyse Mt 6');click('[data-close]');
+click('[data-action=up]');
+{const b=[...reader.querySelectorAll('[data-study]')].find(x=>model.nodes.get(x.dataset.study).level===3);assert(b,'Buch mit Verstehen');b.click();assert(sheetHost.textContent.includes('noch keine Kernanalyse')||sheetHost.textContent.includes('Worum es geht'),'Buchblatt');click('[data-close]');}
+click('[data-action=index]');click('.sheet [data-go="TU-MAT-006-001-004"]');
 click('[data-deep="TU-MAT-006-009-013"]');
 assert(reader.querySelector('.part-head [data-study="TU-MAT-006-009-013"]')&&reader.querySelector('.part-head [data-background="TU-MAT-006-009-013"]'),'Werkzeuge am Abschnittstitel');
 assert(!reader.querySelector('.part-end'),'keine Links am Abschnittsende');
@@ -210,7 +221,7 @@ click('[data-more="v30-1-3"]');
 assert(sheetHost.querySelector('.il.he .heb'),'Hebräisch Wort für Wort');
 assert(sheetHost.textContent.includes('Hebräisch Wort für Wort')&&sheetHost.textContent.includes('Westminster Leningrad Codex'),'Quellen für den hebräischen Text');
 assert(sheetHost.textContent.includes('sela'),'Lesehilfe-Umschrift');
-assert(sheetHost.textContent.includes('Texte vom Toten Meer')&&sheetHost.textContent.includes('MurXII')&&sheetHost.textContent.includes('CC BY-NC'),'Texte vom Toten Meer (nicht kommerzielle Schicht)');
+assert(sheetHost.textContent.includes('Alte Handschriften')&&sheetHost.textContent.includes('MurXII')&&sheetHost.textContent.includes('CC BY-NC'),'Texte vom Toten Meer (nicht kommerzielle Schicht)');
 click('[data-close]');
 assert.equal(model.STUDY.layers.de.text['OBA.1.21'],'Und Retter werden hinaufziehen auf den Berg Zion, um das Gebirge Esau zu richten; und die Königsherrschaft wird JHWH gehören.');
 assert(model.STUDY.words.filter(w=>w.ref==='OBA.1.1').every(w=>w.wtr),'Umschrift je Wort');

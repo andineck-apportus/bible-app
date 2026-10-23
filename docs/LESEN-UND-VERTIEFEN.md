@@ -25,13 +25,13 @@ Aussprache und Vorlesen.
 | Information | Zuhause | im Lesetext |
 |---|---|---|
 | Übersetzungsentscheid (Tradition, Deutung) | Versblatt | Wort gepunktet unterstrichen |
-| Andere Lesarten der Handschriften, bis zur Quelle | Versblatt | – |
+| Andere Lesarten der Handschriften, bis zur Quelle | Versblatt | Wort gepunktet unterstrichen |
 | Hintergrund zum Vers | Versblatt | – |
 | Ältere Übersetzungen, Querverweise | Versblatt | – |
 | Urtext Wort für Wort, Ausgabenvergleich, Quellen | Versblatt | – |
 | Stand dieser Stelle (was erfasst ist, was noch nicht) | Versblatt | – |
-| Befunde, Deutungen, Fragen, ähnliche Stellen | «Verstehen» am Titel | – |
-| Hintergrund, Grundsatz, Anwendung je Zielgruppe | «Damals → Heute» am Titel ([DAMALS-PRINZIP-HEUTE.md](DAMALS-PRINZIP-HEUTE.md)) | – |
+| Befunde, Deutungen, Fragen, ähnliche Stellen | «Verstehen» am Titel jeder Ebene | – |
+| Hintergrund, Grundsatz, Anwendung je Zielgruppe | «Damals → Heute» am Titel jeder Ebene ([DAMALS-PRINZIP-HEUTE.md](DAMALS-PRINZIP-HEUTE.md)) | – |
 | Zusammenfassung und Bild | Ebene selbst (Text \| Bild) | – |
 | Vorgehen, Prüfung, Stand, Zeichen | Menü › «So arbeiten wir» | – |
 
@@ -39,12 +39,15 @@ Was im Lesetext markiert ist, ist nur ein Hinweis: Die volle Information steht i
 
 ## Zeichen im Text
 
-- **Umrandete Versnummer:** Der Vers ist ausgearbeitet (Urtext Wort für Wort, Lesarten, Entscheide oder Hintergrund).
-  Jede Versnummer öffnet das Versblatt, auch ohne Rahmen.
-- **Gepunktet unterstrichenes Wort:** Die Übersetzung folgt hier einer vertrauten Wiedergabe oder wählt eine Deutung.
-  Eine einzige Strichart für beide; welche Art es ist, steht im Versblatt.
-- **«Rolle»:** Zu diesem Vers gibt es Text in Rollen vom Toten Meer.
+- **Umrandete Versnummer:** Urtext, Lesarten, Entscheide, Handschriften oder Hintergrund vorhanden. Jede Versnummer
+  öffnet das Versblatt, auch ohne Rahmen.
+- **Gepunktet unterstrichenes Wort:** Hier gibt es Alternativen, sei es eine andere Lesart in den Handschriften (Vorrang)
+  oder eine andere mögliche Übersetzung (die Übersetzung folgt einer Tradition oder wählt eine Deutung). Antippen zeigt sie
+  mit ihren Quellen.
 - **Merkvers-Zeichen:** ausgewählter Kernvers mit Bild (Einstellung «Merkverse»).
+
+Einzelne Quellen (z. B. die Rollen vom Toten Meer) erhalten kein eigenes Zeichen im Text; sie sind eine Quelle unter
+vielen und stehen im Versblatt unter «Alte Handschriften». Grundsatz: Zu jeder Angabe ist die Quelle genannt.
 
 ## Stand dieser Stelle
 
@@ -53,7 +56,13 @@ Hintergrund, jeweils vorhanden oder «noch nicht erfasst». So wird das Fehlen e
 Insbesondere: Im Neuen Testament sind in den ausgearbeiteten Stellen die Lesarten am Apparat der SBLGNT erfasst; im Alten
 Testament sind die hebräischen Handschriften noch nicht verglichen (ausser Rollen vom Toten Meer bei Jesaja und Psalmen).
 
-## Noch offen (vorgeschlagen, nicht umgesetzt)
+## Gleiche Knöpfe auf allen Ebenen
 
-- Dieselben Knöpfe «Verstehen» und «Damals → Heute» auf allen Ebenen (Kapitel, Buch, Buchgruppe, Testament, Bibel); wo noch
-  nichts erarbeitet ist, sagt das Blatt das. Auf Kapitel- und Buchebene mit der Kernanalyse ([VERDICHTUNG.md](VERDICHTUNG.md)).
+«Verstehen» und «Damals → Heute» stehen am Titel jeder Ebene: Bibel, Testament, Buchgruppe, Buch, Kapitel, Abschnitt.
+
+- **Verstehen:** die Kernanalyse der Ebene ([VERDICHTUNG.md](VERDICHTUNG.md)): Wozu geschrieben (Buch), Worum es geht, die
+  tragenden Momente mit Stelle, bewusst Weggelassenes. Beim Abschnitt zusätzlich Befunde, Deutungen, Fragen, ähnliche Stellen;
+  beim Kapitel die Befunde und Deutungen zum ganzen Kapitel.
+- **Damals → Heute:** beim Abschnitt wie beschrieben; beim Kapitel der kapitelweite Hintergrund und die Grundsätze und
+  Anwendungen des Kapitels; bei Buch und höher der Hintergrund der Ebene.
+- Wo noch nichts erarbeitet ist, sagt das Blatt das offen, statt dass der Knopf fehlt.
