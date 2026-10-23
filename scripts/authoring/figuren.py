@@ -318,12 +318,16 @@ def anime_char(fid):
     if hd and hd[0] in ("veil", "hood"):
         c["veil"] = hd[1]
         c["front"] = FRONT["veil"]
+        if hd[0] == "hood":  # Gebetsmantel über dem Kopf (Männer): Streifen, damit er nicht als Frauenschleier gelesen wird (Blindtest 2026-10-23)
+            c["hood"] = True
     elif st == "curls":
         c["curls"] = True
     elif st in FRONT:
         c["front"] = FRONT[st]
     if st == "long" and not hd:
         c["back"] = BACK_LONG
+    if p.get("sex") == "f":  # Wimpern und Lippen im Stil Anime (bilder_anime.head_inner)
+        c["female"] = True
     if p.get("beard"):
         c["beard"] = BEARD[p["beard"]]
     if hd and hd[0] == "crown":

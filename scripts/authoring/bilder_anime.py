@@ -113,7 +113,7 @@ CHAR = {
                   front="M-10.6-1Q-10.5-11.6 0-12Q10.5-11.6 10.6-1Q7-6.4 .8-7.6L0-5.4-.8-7.6Q-7-6.4-10.6-1z",
                   beard="M-8.2 5.6Q-7.6 12.8 0 14.2Q7.6 12.8 8.2 5.6Q6.6 10.4 0 11Q-6.6 10.4-8.2 5.6z",
                   robe="#F4F1EA", mantle="#A33A2E", halo=True),
-    "maria": dict(hair="#3A2618", veil="#2E5478", front="M-7.6-3.6Q0-8.4 7.6-3.6Q4-5.2 0-5Q-4-5.2-7.6-3.6z", robe="#3E6E9E", mantle="#2E5478"),
+    "maria": dict(female=True, hair="#3A2618", veil="#2E5478", front="M-7.6-3.6Q0-8.4 7.6-3.6Q4-5.2 0-5Q-4-5.2-7.6-3.6z", robe="#3E6E9E", mantle="#2E5478"),
     "diener": dict(hair="#24180F", front="M-10.6-.4Q-11-11.6 0-12Q11-11.6 10.6-.4Q9-5.4 5-6.8Q1-4.6-3-6.8Q-8-5.4-10.6-.4z",
                    robe="#B8A98A", apron=True),
     "diener2": dict(hair="#3A2A1C", front="M-10.6 0Q-11.4-10.8 0-11.8Q11.4-10.8 10.6 0Q8.4-7 0-7.4Q-8.4-7-10.6 0z",
@@ -122,7 +122,7 @@ CHAR = {
                     mustache=True, robe="#4F7A4A", belt="#D9A441"),
     "braeutigam": dict(hair="#24180F", front="M-10.6-1.8Q-11-11.6 0-12Q11-11.6 10.6-1.8Q8-8.6 0-9.2Q-8-8.6-10.6-1.8z",
                        beard="M-8 6.4Q-7 12.4 0 13.4Q7 12.4 8 6.4Q6 10 0 10.6Q-6 10-8 6.4z", robe="#5A3E7A", trim="#D9A441", wreath=True),
-    "braut": dict(hair="#2E2017", veil="#FFFFFF", front="M-8-3.4Q0-8.6 8-3.4Q4-5.4 0-5.2Q-4-5.4-8-3.4z", robe="#FBF3E4", flowers=True),
+    "braut": dict(female=True, hair="#2E2017", veil="#FFFFFF", front="M-8-3.4Q0-8.6 8-3.4Q4-5.4 0-5.2Q-4-5.4-8-3.4z", robe="#FBF3E4", flowers=True),
     "juenger": dict(hair="#2E2017", curls=True, beard="M-8 6.4Q-7 12 0 13Q7 12 8 6.4Q6 9.8 0 10.4Q-6 9.8-8 6.4z", robe="#9C7A4C", belt="#5B4630"),
     "juenger2": dict(hair="#4A3020", front="M-10.6 0Q-11.4-10.8 0-11.8Q11.4-10.8 10.6 0Q6-8.2-1-7Q-7-6.4-10.6 0z", robe="#8A6A40", belt="#5B4630"),
     "gast": dict(hair="#2E2017", front="M-10.6-.4Q-11-11.6 0-12Q11-11.6 10.6-.4Q8-6 0-6.6Q-8-6-10.6-.4z", robe="#B4A98F"),
@@ -130,7 +130,7 @@ CHAR = {
                      beard="M-8 6.4Q-7 12.4 0 13.4Q7 12.4 8 6.4Q6 10 0 10.6Q-6 10-8 6.4z", robe="#C2884A", belt="#8A6A3A"),
     "menge": dict(hair="#2E2017", front="M-10.6-.4Q-11-11.6 0-12Q11-11.6 10.6-.4Q8-6 0-6.6Q-8-6-10.6-.4z",
                   beard="M-8 6.4Q-7 12.4 0 13.4Q7 12.4 8 6.4Q6 10 0 10.6Q-6 10-8 6.4z", robe="#A8987A", sash="#7E6E52"),
-    "menge2": dict(hair="#3A2618", veil="#C9B48E", front="M-7.6-3.6Q0-8.4 7.6-3.6Q4-5.2 0-5Q-4-5.2-7.6-3.6z", robe="#9C8A6A", sash="#6E5E44"),
+    "menge2": dict(female=True, hair="#3A2618", veil="#C9B48E", front="M-7.6-3.6Q0-8.4 7.6-3.6Q4-5.2 0-5Q-4-5.2-7.6-3.6z", robe="#9C8A6A", sash="#6E5E44"),
     "menge3": dict(hair="#24180F", front="M-10.6 0Q-11.4-10.8 0-11.8Q11.4-10.8 10.6 0Q6-8.2-1-7Q-7-6.4-10.6 0z", robe="#8E8A6E", sash="#6A664C"),
     "mose": dict(hair="#D8D2C4", front="M-10.6-1.6Q-11.4-10.8 0-11.8Q11.4-10.8 10.6-1.6Q8-8.8 0-9.4Q-8-8.8-10.6-1.6z",
                  beard="M-8.6 4.6Q-9 15 0 19Q9 15 8.6 4.6Q6.6 10.6 0 11.2Q-6.6 10.6-8.6 4.6z", robe="#7A5A34", mantle="#E7DCC4"),
@@ -141,7 +141,7 @@ CHAR = {
     "koenig": dict(hair="#24180F", front="M-10.6-.4Q-11-11.6 0-12Q11-11.6 10.6-.4Q8-6 0-6.6Q-8-6-10.6-.4z",
                    beard="M-8 6.4Q-7 12.4 0 13.4Q7 12.4 8 6.4Q6 10 0 10.6Q-6 10-8 6.4z", robe="#6A2E5E", trim="#D9A441", crown=True),
     "soldat": dict(hair="#24180F", robe="#8FA3A0", mantle="#8E1F2F", helmet=True),
-    "gast2": dict(hair="#3A2618", veil="#C7B9D6", front="M-7.6-3.6Q0-8.4 7.6-3.6Q4-5.2 0-5Q-4-5.2-7.6-3.6z", robe="#8FA3A0"),
+    "gast2": dict(female=True, hair="#3A2618", veil="#C7B9D6", front="M-7.6-3.6Q0-8.4 7.6-3.6Q4-5.2 0-5Q-4-5.2-7.6-3.6z", robe="#8FA3A0"),
 }
 
 
@@ -154,7 +154,7 @@ def head_inner(key, expr="calm", look=0.0, tears=False):
         o.append(f'<path d="M-13 18Q-14.6-4-9.4-10.6Q0-17 9.4-10.6Q14.6-4 13 18z" fill="{c["veil"]}" stroke="{INK}" stroke-width=".7"/>')
     if c.get("back"):
         o.append(f'<path d="{c["back"]}" fill="{c["hair"]}"/>')
-    o.append(f'<path d="M-2.4 11h4.8v6h-4.8z" fill="{SKIN_D}"/>')  # Hals
+    o.append(f'<path d="M-2.4 11h4.8v6h-4.8z" fill="{SKIN if c.get("female") else SKIN_D}"/>')  # Hals (bei Frauen hell: dunkler Hals las sich mit dunklem Schleier als Bart)
     o.append(f'<path d="{FACE}" fill="{SKIN}" stroke="{INK}" stroke-width=".7"/>')
     ears = []  # Dreiviertelansicht: bei starkem Blick zur Seite ist das Ohr auf dieser Seite verdeckt
     if look < 2.2:
@@ -167,6 +167,11 @@ def head_inner(key, expr="calm", look=0.0, tears=False):
     if c.get("mustache"):
         o.append(f'<path d="M{look - 3:.1f} 6.6q3-1.6 6 0" fill="none" stroke="{c["hair"]}" stroke-width="1.3" stroke-linecap="round"/>')
     o.append(eyes(expr, look) + brows(expr, look, c["hair"]))
+    if c.get("female") and expr not in ("sleep",):  # Frauen: Wimpern aussen am Oberlid und farbige Lippen (Blindtest 2026-10-23: Frauen als Männer gelesen)
+        for side in (-1, 1):
+            ex = side * 4.2 + max(-1.6, min(1.6, look * 1.4))
+            o.append(f'<path d="M{ex + side * 1.9:.1f} {.5:.1f}l{side * 1.3:.1f}-1.1M{ex + side * 1.2:.1f} {-.2:.1f}l{side * .8:.1f}-1.3" stroke="{INK}" stroke-width=".55" stroke-linecap="round"/>')
+        o.append(f'<path d="M{look - 1.6:.1f} 8.4Q{look:.1f} 9.9 {look + 1.6:.1f} 8.4Q{look:.1f} 8.9 {look - 1.6:.1f} 8.4z" fill="#B5524A" opacity=".85"/>')
     o.append(f'<path d="M{look * .8:.1f} 4.8l-.6 1.6h1" fill="none" stroke="{SKIN_D}" stroke-width=".7" stroke-linecap="round"/>')
     if expr in ("delight", "worried") or c.get("flowers"):
         o.append(blush())
@@ -182,6 +187,8 @@ def head_inner(key, expr="calm", look=0.0, tears=False):
         o.append(f'<path d="{c["front"]}" fill="{c["hair"]}"/>')
     if c.get("veil") and c["veil"] != "#FFFFFF":
         o.append(f'<path d="M-10.4 1Q-11.6-8.8 0-12.2Q11.6-8.8 10.4 1Q9-7.8 0-9.4Q-9-7.8-10.4 1z" fill="{c["veil"]}" stroke="{INK}" stroke-width=".7"/>')
+    if c.get("hood"):  # Gebetsmantel: dunkle Querstreifen
+        o.append('<path d="M-10.9-3.6Q0-11.4 10.9-3.6M-10.6-.8Q0-8.6 10.6-.8" fill="none" stroke="#2E4A7A" stroke-width="1.2"/>')
     if c.get("veil") == "#FFFFFF":
         o.append(f'<path d="M-10.6 0Q-11.6-9.6 0-12.4Q11.6-9.6 10.6 0Q9-8 0-9.4Q-9-8-10.6 0z" fill="#FFFFFF" stroke="#B4B2A9" stroke-width=".7"/>')
     if c.get("flowers"):
@@ -235,6 +242,8 @@ def body_inner(key, arm=None):
         o.append(f'<path d="M-8 16.6L10 34h-5L-11 18.4z" fill="{c["sash"]}"/>')
     if c.get("belt"):
         o.append(f'<path d="M-15.4 28h30.8v2.6h-30.8z" fill="{c["belt"]}"/>')
+    if c.get("tassels"):  # Quasten an den Mantelecken (Mt 23,5): weiss mit blauem Faden
+        o.append('<g stroke-linecap="round"><path d="M-14.6 29v5M-13 29v5M13 29v5M14.6 29v5" stroke="#FFFDF6" stroke-width="1.1"/><path d="M-13.8 29v5M13.8 29v5" stroke="#2E4A7A" stroke-width=".7"/></g>')
     if c.get("trim") and not c.get("toga"):
         o.append(f'<path d="M-4 15.8L0 22 4 15.8" fill="none" stroke="{c["trim"]}" stroke-width="1.4"/>')
     if c.get("chains"):
@@ -675,8 +684,12 @@ def library():
     vb = {}
     for fid, (key, expr) in PORTRAITS.items():
         sid = f"an-p-{key}"
-        parts.append(f'<symbol id="{sid}" viewBox="0 0 38 54"><g transform="translate(19 18)">{body_inner(key)}{head_inner(key, expr)}</g></symbol>')
-        vb[fid] = (sid, "0 0 38 54")
+        at = CHAR[key].get("attr")  # Erkennungszeichen auch im Lexikon-Porträt, gross in der Hand (Blindtest 2026-10-23: ohne Attribut kaum unterscheidbar)
+        held = (f'<path d="M30 40L35 44" stroke="{INK}" stroke-width="4.6" stroke-linecap="round"/><path d="M30 40L35 44" stroke="{CHAR[key].get("mantle") or CHAR[key]["robe"]}" stroke-width="3.2" stroke-linecap="round"/>'
+                + use(at, 29, 24, 20, 20) + f'<circle cx="37" cy="44" r="2.8" fill="{SKIN}" stroke="{INK}" stroke-width=".6"/>') if at else ""
+        vbx = "0 0 50 54" if at else "0 0 38 54"
+        parts.append(f'<symbol id="{sid}" viewBox="{vbx}"><g transform="translate(19 18)">{body_inner(key)}{head_inner(key, expr)}</g>{held}</symbol>')
+        vb[fid] = (sid, vbx)
     parts.append('<symbol id="an-gemeinde" viewBox="0 0 60 44">' + use("an-haus", 20, 0, 40, 36) + person("menge2", 9, 24, .5, "smile", .6)
                  + person("menge", 22, 26, .52, "smile", .4) + person("menge3", 35, 28, .48, "smile", .3) + "</symbol>")
     parts.append(_fg.anime_attrs())
