@@ -10,6 +10,7 @@ keine Inhalte; sie formatiert nur.
 """
 import json
 import pathlib
+import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -244,6 +245,13 @@ def project(section_ids=None):
                 return ins[x]["subject"]
         return None
 
+    def scope_of_principle(p):
+        """Verse, für die ein Grundsatz gilt: Feld `reference`, sonst die erste Stellen-Marke seiner Aussage."""
+        if p.get("reference"):
+            return p["reference"]
+        m = re.search(r"\[\[([A-Z0-9]+\.\d+\.\d+(?:-[A-Z0-9]+\.\d+\.\d+)?)\]\]", p.get("statement_de", ""))
+        return m.group(1) if m else None
+
     alias = {m: sid for sid, ms in mid.items() for m in ms}
 
     def re_subject(o):
@@ -268,10 +276,13 @@ def project(section_ids=None):
                              "i18n": i18n(k, {"claim_de": "claim", "caveat_de": "caveat", "counterarguments_de": "counter", "terms": "terms"})}
                             for k, v in sorted(ins.items())],
         "principles": [{"id": k, "text": v["statement_de"], "confidence": v.get("confidence"),
-                        "subject": subject_of_principle(v), "i18n": i18n(k, {"statement_de": "text"})} for k, v in sorted(prs.items())],
+                        "subject": subject_of_principle(v), "ref": scope_of_principle(v), "i18n": i18n(k, {"statement_de": "text"})} for k, v in sorted(prs.items())],
         "applications": [{"id": k, "text": v["statement_de"], "limits": v.get("limitations_de"),
                           "subject": subject_of_principle(prs[v["principle"]]),
                           "context": ctx.get(v.get("context"), {}).get("audience"), "confidence": v.get("confidence"),
+                          # Zielgruppe für die Auswahl «Heute» und optionale Einschränkung auf Verse (docs/DAMALS-PRINZIP-HEUTE.md)
+                          "ctx": v.get("context"), "ctx_label": ctx.get(v.get("context"), {}).get("label_de"),
+                          "ref": v.get("reference") or scope_of_principle(prs[v["principle"]]),
                           "i18n": i18n(k, {"statement_de": "text", "limitations_de": "limits"})}
                          for k, v in sorted(aps.items())],
         "relations": [{"from": v["from"], "from_ref": tu.get(v["from"], {}).get("range"), "to": v["to_ref"], "to_de": refs.display_de(v["to_ref"]), "kind": v["relation"],

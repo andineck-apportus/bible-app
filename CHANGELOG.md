@@ -2,6 +2,21 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.73 — 2026-10-23 — Damals → Prinzip → Heute
+
+- **Grundsatz** (Andi Neck, docs/DAMALS-PRINZIP-HEUTE.md):
+  - Der Bibeltext bleibt treu zum Urtext.
+  - Übertragen wird daneben, in drei gekennzeichneten Stufen: Hintergrund damals, abgeleitetes Prinzip, Anwendung heute je Zielgruppe.
+  - Heutiges, z. B. soziale Medien, steht nie im Text, in Zusammenfassung oder Bild.
+- **In der App:** Am Abschnittstitel öffnet «Damals → Heute» (vorher «Geschichte») ein Blatt mit den drei Stufen.
+  - Unter «Heute» wählt man die Zielgruppe; die Wahl bleibt gespeichert.
+  - «Verstehen» zeigt nur noch, was dasteht und wie man es verstehen kann.
+- **Zielgruppen:**
+  - Neu ist «Jugendliche» (`CTX-CH-YOUTH-2026`).
+  - Die bisherige Zielgruppe heisst in der Auswahl «Allgemein».
+  - Eine Anwendung kann mit `reference` auf einzelne Verse eingeschränkt werden.
+- **Pilot:** Mt 6,5–6 für Jugendliche (`APP-MAT-1007`): Glaube nicht als Bühne, beten ohne zu posten. Die Grenze ist angegeben: Der Text verbietet nicht, vom Glauben zu erzählen (Mt 5,16).
+
 ## v0.72 — 2026-10-23 — Kernanalysen Pilot
 
 - **Kernanalysen** (docs/VERDICHTUNG.md, neuer Typ `core_analysis` in `data/core-analyses/`):
