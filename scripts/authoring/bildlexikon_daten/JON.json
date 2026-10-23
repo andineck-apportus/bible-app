@@ -10,15 +10,20 @@
    {
     "trait_de": "Grosse Stadt",
     "basis": "text",
-    "ref": "[[JON.3.3]]"
+    "ref": "JON.3.3"
    },
    {
-    "trait_de": "Grosser gestufter Turm (Zikkurat) mit Mitteltreppe hinter der Stadtmauer; ockerfarbener Lehmziegel",
+    "trait_de": "Viele Häuser dicht an dicht hinter einer langen Stadtmauer mit Zinnen und Tor",
     "basis": "design"
    },
    {
-    "trait_de": "Stadtmauer mit Zinnen, Ecktürmen und Tor",
+    "trait_de": "Kleiner gestufter Turm (Zikkurat) hinten, nicht grösser als die Stadt",
     "basis": "design"
+   },
+   {
+    "trait_de": "Fluss vor der Mauer",
+    "basis": "design",
+    "note_de": "Ninive lag am Tigris (Geschichte, nicht im Text)"
    }
   ],
   "pal": [
@@ -26,7 +31,8 @@
    "#B48A5E"
   ],
   "rules": [
-   "Nicht mit Jerusalem verwechseln: kein Tempel mit Säulen"
+   "Nicht mit Jerusalem verwechseln: kein Tempel mit Säulen",
+   "Der Turm bleibt klein (sonst Turm zu Babel)"
   ],
   "find": [
    [
@@ -86,7 +92,12 @@
   "gsw": "Markierti Stei, wo me wirft, zum en Entscheid erfahre ([[JON.1.7]], [[MRK.15.24]]).",
   "traits": [
    {
-    "trait_de": "Zwei helle und ein dunkler Stein mit eingeritztem Zeichen, ruhig auf der offenen Hand",
+    "trait_de": "Lose werden geworfen",
+    "basis": "text",
+    "ref": "JON.1.7"
+   },
+   {
+    "trait_de": "Drei kantige Steine (zwei hell, einer dunkel) mit grossen, kontrastreichen Ritzzeichen, von einer Hand geworfen; gestrichelte Wurfbögen",
     "basis": "design"
    }
   ],
@@ -94,7 +105,9 @@
    "#E7DCC4",
    "#3B3226"
   ],
-  "rules": [],
+  "rules": [
+   "Steine kantig, nicht rund und nicht goldfarben (sonst Münzen oder Brote)"
+  ],
   "find": [
    [
     "Los",
@@ -102,6 +115,10 @@
      "JON"
     ]
    ]
+  ],
+  "distinct": [
+   "FIG-OBJ-MUENZEN",
+   "FIG-OBJ-BROT"
   ]
  },
  {
@@ -113,14 +130,23 @@
   "gsw": "D Stuude, wo Gott über em Jona lat wachse, dass si em Schatte git ([[JON.4.6]]); hebräisch קִיקָיוֹן (qiqajon), mängisch mit Rizinus übersetzt.",
   "traits": [
    {
-    "trait_de": "Hohe Staude mit grossen, handförmigen Blättern",
+    "trait_de": "Hohe Staude mit grossen, handförmig gelappten Blättern, die ein Blätterdach bilden",
     "basis": "design",
     "note_de": "Die Pflanze ist nicht sicher bestimmbar; Rizinus ist eine gängige Deutung"
    },
    {
-    "trait_de": "Rote Stängel und rote, stachelige Fruchtstände",
+    "trait_de": "Rote Stängel und rote Blattadern",
     "basis": "tradition",
     "note_de": "Merkmale des Rizinus, der gängigen Deutung der Pflanze"
+   },
+   {
+    "trait_de": "Spendet Schatten",
+    "basis": "text",
+    "ref": "JON.4.6"
+   },
+   {
+    "trait_de": "Breiter Schatten am Boden unter dem Blätterdach; keine Blüten oder Früchte",
+    "basis": "design"
    }
   ],
   "pal": [
@@ -128,7 +154,8 @@
    "#6B5A2A"
   ],
   "rules": [
-   "Verdorrt: FIG-OBJ-RIZINUS-VERDORRT"
+   "Verdorrt: FIG-OBJ-RIZINUS-VERDORRT",
+   "Keine roten Blüten oder Stacheln (sonst Strauch mit Blüten oder Dornbusch)"
   ],
   "find": [
    [
@@ -145,6 +172,10 @@
     "translit": "qiqajon",
     "de": "Staude (Rizinus?)"
    }
+  ],
+  "distinct": [
+   "FIG-OBJ-DORNBUSCH",
+   "FIG-OBJ-RIZINUS-VERDORRT"
   ]
  },
  {
