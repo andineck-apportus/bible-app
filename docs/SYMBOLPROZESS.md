@@ -143,7 +143,7 @@ Gemessen wie zuvor (vier blinde Beschreiber, ein Bewerter), aber mit neuen Insta
 |---|---|---|---|---|
 | Gott, Jesus, Geist | 4 | 100 % | 100 % | 4 |
 | Personen | 79 | 68 % | 33 % | 18 |
-| Rollen | 61 | 70 % | 69 % | 42 → 33 |
+| Rollen | 61 | 70 % | 69 % | 33 |
 | Gruppen | 46 | 41 % | 54 % | 22 |
 | Gegenstände | 139 | 88 % | 91 % | 122 |
 | Orte | 48 | 90 % | 88 % | 41 |
