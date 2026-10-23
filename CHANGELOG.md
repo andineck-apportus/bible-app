@@ -2,6 +2,34 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.81 — 2026-10-23 — Pilotbilder mit Worten, Figuren Runde 4
+
+- **Worte im Bild** (Entscheid Andi Neck 2026-10-23):
+  - Stichwortband als Leiste unter jedem Feld, mit 1–4 Wörtern wörtlich aus dem Text;
+  - Namensschild für Hauptfiguren beim ersten Auftreten;
+  - Kernwort in der Sprechblase statt einer Zeichenkette;
+  - Briefrand für Aufträge im Brief.
+  
+  Ein Bild gilt für alle Übersetzungen; die App zeigt die Worte der gewählten Textsprache (Hochdeutsch oder Züridüütsch). Der Validator prüft, dass die Stichwörter so im Text stehen.
+- **66 Pilotbilder neu aus den Kernanalysen:** Rut, Titus, Mk 5, Bergpredigt Mt 5–7 mit Merkversen. Ein Feld je tragendem Moment, Bildtyp nach Textart; Redner bei Lehre klein am Rand. Blindtest ohne Legende vorher und nachher, eine Nachbesserungsrunde (docs/BILDPROZESS.md).
+- **Kreuzigung** (Entscheid Andi Neck): Jesus am Kreuz in einfacher Form, ohne Wunden, in Joh 19, Mk 15,33–34 und Mt 27,45–46.
+- **Kurze Legende:**
+  - Je Figur und Zeichen ein Erkennungstext von höchstens 60 Zeichen, Hochdeutsch und Züridüütsch.
+  - Die Mundart ist ein KI-Entwurf, nicht muttersprachlich geprüft.
+- **Figuren Runde 4:**
+  - gemeinsames Jüngermerkmal, klarere Apostel-Zeichen;
+  - verwechselbare Paare getrennt;
+  - Mengen ohne Kind vorn, die Zwölf mit der Zahl 12;
+  - Gefässe, Lose, Ninive und Moab neu.
+  
+  Blindtest Runde 4: 76 % getroffen, Personen 33 → 47 %.
+- **Alle 537 Bilder neu gezeichnet:** Noomi ohne Kind als Zeichen; keine Pfeilwinkel «>» zwischen nahen Figuren; die Zeichen von Rollen wie Jünger und «Mensch» erscheinen nur im Lexikon.
+- **Werkzeuge:**
+  - `vorschau_bild.py`, `bildtest_paket.py`;
+  - `BIBLE_BRIEF_ONLY` bestätigt nur ausgewählte Bildaufträge;
+  - `stage.size` verkleinert Figuren;
+  - `stage.pose` «cross» zeichnet Jesus am Kreuz.
+
 ## v0.80 — 2026-10-23 — Figuren und Zeichen, Runde 3 (Arbeitszweig figuren-qualitaet)
 
 - **Abgestimmte Grundformen** (Hinweise Andi Neck):

@@ -113,6 +113,28 @@ Nur getestete Zeichen dürfen abstrakt verwendet werden; Ablauf, Zielwerte und A
    Zusammenfassungen und Bilder daraus neu; Werte vorher und nachher.
 4. **Ausrollen** auf alle Bücher mit KI-Bearbeitern in Gruppen, mit Liste der offenen Fälle.
 
+## Pilot 2026-10-23: Ergebnisse
+
+Die 66 Pilotbilder (Rut, Titus, Mk 5, Mt 5–7 mit Merkversen) sind neu aus den Kernanalysen gebaut: ein Feld je Moment,
+Bildtyp nach Textart, Worte im Bild, Namensschilder. Werkzeuge: `scripts/authoring/vorschau_bild.py` (Vorschau eines
+Bildes), `scripts/authoring/bildtest_paket.py` (Testpaket ohne Legende). Bericht: `reports/bildtest-pilot-2026-10-23.json`.
+
+| Messgrösse | alte Bilder | neue Bilder |
+|---|---|---|
+| Stelle frei richtig genannt (a) | 100 % | 100 % |
+| Kernaussage getroffen (b, Mittel 0–2) | 1,82–1,85 | 1,98 |
+| Bilder mit b unter 2 | 10–12 | 1 |
+| Bilder mit Fehler bei Wer-zu-wem (c) | 0–2 | 2–3 (danach behoben) |
+| genannte Unklarheiten (ohne Buchangabe) | 62 | 95 |
+
+Grenzen der Messung:
+- a ist gesättigt. Die KI-Testpersonen kennen die Bibel sehr gut und sahen die Bilder in Buchreihenfolge, darum erkannten
+  sie die Stellen auch ohne Buchangabe. Der Test misst so vor allem b, c und die Unklarheiten.
+- Die Unklarheiten der neuen Bilder betrafen vor allem abstrakte Zeichen (Zepter, Angelhaken, Ölzweig, Gewandzipfel,
+  Fussspuren auf der Brust).
+- Diese Zeichen sind in einer ersten Nachbesserung durch Wort oder Geste ersetzt oder entfernt, die Sprecher korrigiert.
+- Für eine schärfere Messung braucht es Leserinnen und Leser ohne Bibelwissen oder gemischte Reihenfolge.
+
 ## Entscheide
 
 0. Ein Bildstil: Anime; «Symbol» eingestellt (Andi Neck, 2026-10-23). Vor neuen Bildern werden alle Figuren und Zeichen
