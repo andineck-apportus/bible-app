@@ -84,7 +84,7 @@ ATTR = {
     "buendel": '<path d="M2.6 16L13 1.4" stroke="#7A5A34" stroke-width="1.6" stroke-linecap="round"/><path d="M11.2 4.6q-4 .4-4.4 4.4.2 4 4.4 4.2 4.2-.2 4.4-4.2-.4-4-4.4-4.4z" fill="#C9A27A" stroke="#3B3226" stroke-width=".8"/><path d="M8.6 7.2q2.6 1.6 5.2 0M9 10.6q2.2 1 4.4 0" fill="none" stroke="#9A6A3A" stroke-width=".6"/><path d="M10.2 4.8l1-2 1 2" fill="#C9A27A" stroke="#3B3226" stroke-width=".6"/>',
     "frage": '<path d="M1.6 2.4h12.8v9H7l-3.4 3.4v-3.4h-2z" fill="#FFFDF6" stroke="#3B3226" stroke-width=".8"/><path d="M6 5.4q0-1.8 2-1.8t2 1.6q0 1.2-1.4 1.8-.6.4-.6 1.4" fill="none" stroke="#2E5478" stroke-width="1.2" stroke-linecap="round"/><circle cx="8" cy="9.8" r=".7" fill="#2E5478"/>',
     "balken": '<path d="M.6 6.4L14 .8l1.4 3.4L2 9.8z" fill="#9A6A3A" stroke="#3B3226" stroke-width=".8"/><path d="M3 6.6l9.6-4M4.4 7.6l6-2.6" stroke="#6A4A2A" stroke-width=".5"/>',
-    "ruder": '<path d="M2.4 15.6L11.6 4.4" stroke="#7A5A34" stroke-width="1.5" stroke-linecap="round"/><path d="M9.8 6.6Q10.4 2.4 13.6.8q2 .4 1.4 2.6-1 3.2-5.2 3.2z" fill="#A07A44" stroke="#3B3226" stroke-width=".7"/><path d="M1.2 12.6l3 2.6" stroke="#7A5A34" stroke-width="1.5" stroke-linecap="round"/><g fill="none" stroke="#C9A86A" stroke-width=".9"><ellipse cx="11.6" cy="12.4" rx="3.2" ry="2"/><ellipse cx="11.6" cy="12.4" rx="1.8" ry="1"/></g>',
+    "ruder": '<path d="M2.4 15.6L11.6 4.4" stroke="#7A5A34" stroke-width="1.5" stroke-linecap="round"/><path d="M9.8 6.6Q10.4 2.4 13.6.8q2 .4 1.4 2.6-1 3.2-5.2 3.2z" fill="#A07A44" stroke="#3B3226" stroke-width=".7"/><path d="M1.2 12.6l3 2.6" stroke="#7A5A34" stroke-width="1.5" stroke-linecap="round"/>',
     "sack": '<path d="M4 6.4Q1 9 1.6 12.4 2.4 15.6 8 15.6t6.4-3.2Q15 9 12 6.4z" fill="#5E5A52" stroke="#2E2A24" stroke-width=".8"/><path d="M4 6.4q4-1.6 8 0" fill="none" stroke="#2E2A24" stroke-width="1"/><path d="M6 5.8Q6.2 2 8 1.6q1.8.4 2 4.2" fill="#5E5A52" stroke="#2E2A24" stroke-width=".7"/><path d="M5.4 4.8h5.2" stroke="#8A6A3A" stroke-width="1.2"/>',
     "unkraut": '<g stroke="#3E4A2A" stroke-width="1" stroke-linecap="round" fill="none"><path d="M6 16Q6 8 3 2M8 16V1.4M10 16q0-8 3-14"/></g><g fill="#2E3420"><ellipse cx="3.4" cy="3" rx=".9" ry="1.5"/><ellipse cx="4.6" cy="5.4" rx=".9" ry="1.5"/><ellipse cx="8" cy="2.4" rx=".9" ry="1.5"/><ellipse cx="8" cy="5" rx=".9" ry="1.5"/><ellipse cx="12.6" cy="3" rx=".9" ry="1.5"/><ellipse cx="11.4" cy="5.4" rx=".9" ry="1.5"/></g>',
 }
@@ -142,7 +142,7 @@ FIGS = {
     "FIG-OBED": F("#F2E6CC", None, DARK, "none", age="baby"),
     # Propheten, Könige
     "FIG-JONA": F("#6FB2E6", "#4A6E8A", DARK, "short", "full", attr="fisch"),
-    "FIG-OBADJA": F("#E7DCC4", "#6A5A7A", GREY, "short", "long", attr="rolle"),
+    "FIG-OBADJA": F("#E7DCC4", "#6A5A7A", GREY, "short", "long", attr="rolle", rough=True),
     "FIG-ELIJA": F("#8A6A3A", "#5B4630", GREY, "long", "long", fur=True, attr="feuerrad"),
     "FIG-HERODES-ANTIPAS": F("#6A2E5E", "#3E1A36", BLACK, "short", "short", head=("band", "#D9A441"), trim="#D9A441"),
     # Johannes der Täufer und Evangelien-Personen
@@ -170,14 +170,14 @@ FIGS = {
     "FIG-DEMETRIUS": F("#4A7A6A", "#E7DCC4", BROWN, "short", "short", attr="brief"),
     # Rollen
     "FIG-ROLLE-AELTESTER": F("#C9BFAA", "#6A5A4A", GREY, "short", "long", age="old", attr="stab"),
-    "FIG-ROLLE-BOTE": F("#E2CDA8", "#8A6A3A", DARK, "short", "short", attr="brief"),
+    "FIG-ROLLE-BOTE": F("#E2CDA8", "#8A6A3A", DARK, "short", "short", attr="brief", staff=True),
     "FIG-ROLLE-ENGEL": F("#FFFFFF", None, "#D9A441", "short", None, wings=True),
     "FIG-ROLLE-FISCHER": F("#6A7F8A", None, DARK, "curls", "short", attr="netz"),
     "FIG-ROLLE-HIRTE": F("#8A7A50", "#F6EBD9", DARK, "short", "short", attr="hirte"),
     "FIG-ROLLE-HOHEPRIESTER": F("#4A5A7A", None, GREY, "short", "full", head=("turban", "#F6EBD9"), breast=True),
-    "FIG-ROLLE-KAPITAEN": F("#8A6A3A", "#2F4F6F", DARK, "short", "full", head=("band", "#2F4F6F"), attr="ruder"),
+    "FIG-ROLLE-KAPITAEN": F("#8A6A3A", "#2F4F6F", DARK, "short", "full", head=("band", "#2F4F6F"), attr="ruder", rope=True),
     "FIG-ROLLE-KRANKER": F("#C9BFAA", None, DARK, "short", "short", attr="matte-rolle"),
-    "FIG-ROLLE-PHARISAEER": F("#5A6A7A", "#4F6D8A", DARK, "short", "full", head=("hood", "#F2E6CC"), tassels=True, attr="gebetsriemen"),
+    "FIG-ROLLE-PHARISAEER": F("#5A6A7A", "#4F6D8A", DARK, "short", "full", tassels=True, tallit=True, tefillin=True),
     "FIG-ROLLE-PRIESTER": F("#F6EBD9", None, DARK, "short", "short", head=("turban", "#F6EBD9"), sash="#4A5A7A"),
     "FIG-ROLLE-SCHRIFTGELEHRTER": F("#6A5A4A", "#E7DCC4", DARK, "short", "full", attr="rolle-feder"),
     "FIG-ROLLE-TEMPELWACHE": F("#4A5A6A", None, DARK, "short", "short", belt="#C9BFAA", attr="laterne"),
@@ -370,7 +370,8 @@ def anime_char(fid):
         c["band"] = hd[1]
     if hd and hd[0] == "wreath":
         c["wreath"] = True
-    for k in ("belt", "sash", "trim", "wings", "chains", "bound", "fur", "breast", "plate", "toga", "tassels"):
+    for k in ("belt", "sash", "trim", "wings", "chains", "bound", "fur", "breast", "plate", "toga", "tassels",
+              "tallit", "tefillin", "bandage", "crossed", "rope", "patches", "sword", "staff", "rough"):  # Schalter des Zeichners (bilder_anime.head_inner/body_inner)
         if p.get(k):
             c[k] = p[k]
     if p["age"] in ("young", "child"):
