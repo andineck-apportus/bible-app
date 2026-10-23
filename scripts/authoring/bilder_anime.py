@@ -489,16 +489,16 @@ def person(key, x, y, s, expr="calm", look=0.0, arm=None, flip=False, tears=Fals
 # gross auf der Brust der vorderen Figur (Kontur wie bei Einzelfiguren). Die Zahl im Bild steht nicht für die Zahl im Text.
 #   color: Gewandfarbe aller Mitglieder; mantle: Mantelfarbe aller (None = ohne Mantel)
 GROUP_SPEC = {
-    "FIG-GRUPPE-MENGE": dict(mix="mfc", n=3, keys=("menge", "menge2", "menge3"), ghosts=True),
-    "FIG-GRUPPE-GEMEINDE": dict(mix="mfc", n=5, keys=("menge", "menge2", "menge3")),  # Zeichen mit Haus (an-gemeinde), bleibt
-    "FIG-GRUPPE-VOLK": dict(mix="mfc", n=3, color="#A79A80", mantle=None),
-    "FIG-GRUPPE-ISRAEL": dict(mix="mfc", n=3, color="#E2D6BE", mantle="#3E6E9E"),  # heller Rock, blauer Mantel (Lexikon)
-    "FIG-GRUPPE-VOELKER": dict(mix="mf", n=3, color="#4F7FA8", mantle="#B4583A", male={"turban": "#2F6F73", "band": None}),  # Kopfbund statt Stirnband
+    "FIG-GRUPPE-MENGE": dict(mix="crowd", n=4, keys=("menge", "menge2", "menge3"), ghosts=True),
+    "FIG-GRUPPE-GEMEINDE": dict(mix="crowd", n=5, keys=("menge", "menge2", "menge3")),  # Zeichen mit Haus (an-gemeinde), bleibt
+    "FIG-GRUPPE-VOLK": dict(mix="crowd", n=4, color="#A79A80", mantle=None, ghosts=True),  # Runde 4: ohne Kind vorn, Umrisse dahinter (sonst «Familie»)
+    "FIG-GRUPPE-ISRAEL": dict(mix="crowd", n=4, color="#E2D6BE", mantle="#3E6E9E", ghosts=True),  # heller Rock, blauer Mantel (Lexikon)
+    "FIG-GRUPPE-VOELKER": dict(mix="crowd", n=4, ghosts=True, color="#4F7FA8", mantle="#B4583A", male={"turban": "#2F6F73", "band": None}),  # Kopfbund statt Stirnband
     # Die Zwölf: nur Männer, gleiche Mantelfarbe, Wanderstab (Mk 6,8)
-    "FIG-GRUPPE-ZWOELF": dict(mix="m", n=3, color="#9C7A4C", mantle=None, every={"staff": True, "belt": "#5B4630"}),
-    "FIG-GRUPPE-JUENGER": dict(mix="m", n=3, color="#A0825A", mantle=None, every={"staff": True, "belt": "#5B4630"}),
+    "FIG-GRUPPE-ZWOELF": dict(mix="m", n=3, color="#9C7A4C", mantle=None, every={"belt": "#5B4630"}, hold={0: "an-a-g-zwoelf"}),  # Zahl 12 statt Stäben (wurden als Hirten gelesen)
+    "FIG-GRUPPE-JUENGER": dict(mix="m", n=3, color="#A0825A", mantle=None, every={"belt": "#5B4630"}, hold={0: "an-a-fussspuren"}),  # «folgt mir nach» wie die Jünger-Rolle
     # wie der Täufer: Fellkragen und Ledergurt (Mk 1,6), jüngere Männer
-    "FIG-GRUPPE-JOHANNES-JUENGER": dict(mix="m", n=3, color="#8A6A3A", mantle=None, every={"fur": True, "belt": "#5B4630", "old": None}),
+    "FIG-GRUPPE-JOHANNES-JUENGER": dict(mix="m", n=3, color="#8A6A3A", mantle=None, every={"fur": True, "belt": "#5B4630", "old": None}, hold={0: "an-a-kreuzstab"}),  # Zeichen ihres Lehrers
     "FIG-GRUPPE-BRUEDER-JESU": dict(mix="m", n=4, alike=True, color="#B8A27A", mantle=None, sash="#6A7A5A"),  # vier Brüder (Mk 6,3), gleicher Haarschnitt
     # Pharisäer: Gebetsmantel mit Streifen über den Schultern, Quasten und Gebetskapsel (Mt 23,5); Kopf frei, Bart
     "FIG-GRUPPE-PHARISAEER": dict(mix="m", n=3, beards=True, every={"tallit": True, "tefillin": True, "veil": None, "hood": None, "front": "short"}),
@@ -514,38 +514,39 @@ GROUP_SPEC = {
     "FIG-GRUPPE-SOLDATEN": dict(mix="same", n=3),
     "FIG-GRUPPE-ENGEL": dict(mix="same", n=3),
     "FIG-GRUPPE-STERNDEUTER": dict(mix="m", n=3, beards=True, hold={0: "an-a-myrrhe"}),  # Geschenke (Mt 2,11)
-    "FIG-GRUPPE-GESCHWISTER": dict(mix="mf", n=3, color="#8E9AAF", mantle="#E2CDA8"),
-    "FIG-GRUPPE-GLAUBENDE": dict(mix="mf", n=3, color="#8E9AAF", mantle="#E2CDA8", hold={0: "an-brot"}),  # Brot brechen (Apg 2,42)
+    "FIG-GRUPPE-GESCHWISTER": dict(mix="crowd", n=4, color="#8E9AAF", mantle="#E2CDA8", hold={0: "an-a-handschlag"}),
+    "FIG-GRUPPE-GLAUBENDE": dict(mix="crowd", n=4, color="#8E9AAF", mantle="#E2CDA8", hold={0: "an-brot"}),  # Brot brechen (Apg 2,42)
     "FIG-GRUPPE-GEGNER": dict(mix="m", n=3, color="#6A6A6A", mantle=None),  # strenger Blick statt verschränkter Arme (wurden als gefesselt gelesen)
     "FIG-GRUPPE-IRRLEHRER": dict(mix="m", n=3, hold={0: "an-a-rolle"}),
     "FIG-GRUPPE-VERFUEHRER": dict(mix="m", n=3, beards=True, every={"cowl": True, "hood": None, "staff": True}),
-    "FIG-GRUPPE-REISENDE": dict(mix="m", n=3, beards=True, every={"cowl": True, "hood": None}, hold={0: "an-a-buendel"}),
+    "FIG-GRUPPE-REISENDE": dict(mix="m", n=3, beards=True, every={"band": "#6A4A2A", "hood": None, "veil": None, "front": "short", "staff": True}, hold={0: "an-a-buendel"}),  # ohne Kapuze (wurde als Schleier gelesen)
     # Griechen: bartlos, kurzes Haar, Gewand mit farbiger Borte (statt Wanderstab, wurden als Wanderer gelesen)
     "FIG-GRUPPE-GRIECHEN": dict(mix="m", n=3, color="#E8E2D0", mantle="#7FA3B8", every={"beard": None, "mustache": None, "curls": None, "front": "short", "trim": "#3E6E9E"}),
     "FIG-GRUPPE-DIENER": dict(mix="m", n=3, color="#D8C29A", mantle=None, every={"apron": True}, hold={0: "an-a-wasserkrug"}),
-    "FIG-GRUPPE-ARBEITER": dict(mix="m", n=3, color="#C9A060", mantle=None, hold={0: "an-korb"}),
+    "FIG-GRUPPE-ARBEITER": dict(mix="m", n=3, color="#C9A060", mantle=None, every={"band": "#7A5A34"}, hold={0: "an-a-hacke"}),  # Hacke statt Korb (wurde als Brotkorb gelesen)
     "FIG-GRUPPE-SCHNITTER": dict(mix="m", n=3, hold={0: "an-a-aehren"}),
     "FIG-GRUPPE-WEINBAUERN": dict(mix="m", n=3, hold={0: "an-a-traube"}),
     "FIG-GRUPPE-FISCHER": dict(mix="m", n=3, hold={0: "an-a-netz"}),
     "FIG-GRUPPE-SEELEUTE": dict(mix="m", n=3, color="#2F4F6F", mantle=None, every={"rope": True}),
     "FIG-GRUPPE-ZOELLNER": dict(mix="m", n=3, hold={0: "an-a-geldbeutel"}),
     "FIG-GRUPPE-EINNEHMER": dict(mix="m", n=3, hold={0: "an-a-beutel"}),
-    "FIG-GRUPPE-TRAEGER": dict(mix="m", n=4, back="matte"),  # vier Männer (Mk 2,3), Matte vorn
-    "FIG-GRUPPE-KRANKE": dict(mix="mf", n=3, back="matte", per=[{"bandage": True}, {}, {"old": True}]),
+    "FIG-GRUPPE-TRAEGER": dict(mix="m", n=4, back="matte", row=True),  # vier nebeneinander, alle sichtbar  # vier Männer (Mk 2,3), Matte vorn
+    "FIG-GRUPPE-KRANKE": dict(mix="mf", n=3, per=[{"bandage": True}, {"attr": "an-a-blind"}, {"old": True}]),  # Blinde und Lahme (Joh 5,3), ohne Matte (wurde als Trage gelesen)
     "FIG-GRUPPE-ARME": dict(mix="mf", n=3, every={"patches": True, "mantle": None}, hold={0: "an-a-zwei-muenzen"}),
     "FIG-GRUPPE-GAESTE": dict(mix="mf", n=3, hold={0: "an-becher"}),
     "FIG-GRUPPE-FRAUEN": dict(mix="f", n=3),
     "FIG-GRUPPE-JUNGFRAUEN-KLUG": dict(mix="f", n=3, young=True, hold={i: "an-a-lampe" for i in range(3)}),  # brennende Lampen (Mt 25,4)
     "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": dict(mix="f", n=3, young=True, hold={i: "an-a-g-lampe-aus" for i in range(3)}),  # ohne Öl (Mt 25,8)
     "FIG-GRUPPE-KINDER": dict(mix="c", n=3),
-    "FIG-GRUPPE-KINDER-DER-SCHWESTER": dict(mix="c", n=3),
-    "FIG-GRUPPE-EDOM": dict(mix="mf", n=3, back="fels"),  # Felsenwohnungen (Obd 3)
+    "FIG-GRUPPE-KINDER-DER-SCHWESTER": dict(mix="c", n=3, hold={0: "an-a-brief"}),  # Gruss im Brief (2 Joh 13)
+    "FIG-GRUPPE-EDOM": dict(mix="mf", n=3, back="fels", color="#9A4E3A", mantle="#C9A27A"),  # Felsenwohnungen (Obd 3)
 }
 GROUP_EXPR = {"FIG-GRUPPE-GEGNER": "angry"}
 G_HAIR = ["#2E2017", "#4A3020", "#24180F", "#5A4030", "#3A2618", "#1E1610"]
 G_VEIL = ["#E2CDA8", "#C9B48E", "#B9A7C4", "#D8CBB0", "#A8B8A0"]
 # Rollen der Mitglieder je Mischung (Index 0 = vorn); m = Mann, m2 = andere Bartform, o = alt, y = jung, f = Frau, fo = alte Frau, c = Kind
-G_ROLES = {"m": ["m", "m2", "o", "y", "m3", "m2"], "mf": ["m", "f", "o", "fo", "y", "f"], "mfc": ["m", "f", "c", "o", "fo", "y"],
+G_ROLES = {"crowd": ["m", "f", "m2", "f", "y", "o"],  # Menge ohne Kind und ohne Alter vorn: liest sich nicht als Familie
+           "m": ["m", "m2", "o", "y", "m3", "m2"], "mf": ["m", "f", "o", "fo", "y", "f"], "mfc": ["m", "f", "c", "o", "fo", "y"],
            "f": ["f", "fo", "f", "f", "f"], "c": ["c", "cf", "c", "cf", "c"], "same": ["m", "m", "m", "m", "m", "m"]}
 _STRIP = ("beard", "mustache", "curls", "helmet", "turban", "band", "hood", "crown", "cowl", "tefillin", "back", "tallit", "wreath", "plate")
 
@@ -651,6 +652,7 @@ G_LAYOUT = {
     4: [(0, 0, 1), (-19, -5, .84), (19, -5, .84), (0, -17, .7)],
     3: [(0, 0, 1), (-17, -4, .86), (17, -4, .86)],
 }
+G_LAYOUT_ROW = {4: [(-9, 0, 1), (9, 0, 1), (-26, -3, .9), (26, -3, .9)]}
 # in Szenen schmaler (gleiche Breite wie früher die Dreiergruppe), höchstens fünf Köpfe
 G_LAYOUT_SCENE = {
     5: [(0, 0, 1), (-16, -3, .78), (16, -3, .78), (-8, -14, .64), (8, -15, .64)],
@@ -664,8 +666,8 @@ def group_svg(fid, x, y, s, n, expr="calm", look=0.0, arm=None, flip=False, tear
     keys = group_members(fid, n)
     if wear and sack:
         keys = [sack(k, wear) for k in keys]
-    lay = (G_LAYOUT_SCENE if scene else G_LAYOUT)[n]
     sp = GROUP_SPEC.get(fid, {})
+    lay = G_LAYOUT_ROW[n] if (sp.get("row") and n in G_LAYOUT_ROW and not scene) else (G_LAYOUT_SCENE if scene else G_LAYOUT)[n]
     o = []
     if sp.get("ghosts"):  # Menge: weitere Köpfe nur als Umriss dahinter
         for dx in ((-20, -7, 7, 20) if scene else (-34, -12, 12, 34)):
@@ -1156,8 +1158,13 @@ def library():
                  + group_svg("FIG-GRUPPE-GEMEINDE", 26, 26, .6, 5, "smile", .2, ext=14, ext_front=8) + "</symbol>")
     parts.append(_fg.anime_attrs())
     # Zusätzliche Erkennungszeichen für Gruppen (viewBox wie figuren.ATTR)
-    parts.append('<symbol id="an-a-g-lampe-aus" viewBox="0 0 16 16"><path d="M2 12q6-5 11 0l2-1v2q-7 4-13-1z" fill="#B07A3E" stroke="#3B3226" stroke-width=".8"/>'
-                 '<path d="M13.4 10q-2-2 0-3.6t0-3.6" fill="none" stroke="#8A8A8A" stroke-width="1" stroke-linecap="round"/></symbol>')
+    # erloschene Lampe: dunkler Docht und drei Rauchfäden, gross (Runde 4: wurde nicht gesehen)
+    parts.append('<symbol id="an-a-g-lampe-aus" viewBox="0 0 16 16"><path d="M1.6 12.4q6.4-5.4 11.6 0l2.2-1.2v2.4q-7.6 4.4-13.8-1.2z" fill="#B07A3E" stroke="#3B3226" stroke-width=".8"/>'
+                 '<path d="M13.6 10.6l.6-1.4" stroke="#2A2420" stroke-width="1.2" stroke-linecap="round"/>'
+                 '<g fill="none" stroke="#6E6E6E" stroke-width=".9" stroke-linecap="round"><path d="M14 8.6q-1.6-1.6 0-3.2t0-3.2"/><path d="M11.8 8.8q-1.2-1.4 0-2.8t0-2.6" opacity=".7"/><path d="M15.6 8q.8-1.2 0-2.4" opacity=".7"/></g></symbol>')
+    # Zahl 12 für «die Zwölf» (Worte und Zahlen im Bild erlaubt, Entscheid 2026-10-23)
+    parts.append('<symbol id="an-a-g-zwoelf" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="#F4EAD2" stroke="#3B3226" stroke-width=".9"/>'
+                 '<text x="8" y="11.2" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="9" fill="#3B3226">12</text></symbol>')
     # Gruppen (Lexikon-Porträt und Zeichen in Sprechblasen): 4–6 verschiedene Köpfe mit gemeinsamem Merkmal (GROUP_SPEC)
     for fid, (key, expr) in PORTRAITS.items():
         if fid.startswith("FIG-GRUPPE-") and fid != "FIG-GRUPPE-GEMEINDE":
