@@ -11,43 +11,48 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MRK.5.1-MRK.5.20",
+      "reference": "MRK.5.9-MRK.5.13",
       "figures": [
         "FIG-GERASENER",
         "FIG-JESUS"
       ],
       "objects": [
         "FIG-OBJ-SCHWEIN",
-        "FIG-ORT-UFER"
+        "FIG-ORT-SEE"
       ],
       "signs": [
         "FIG-ZEICHEN-DAEMON"
       ],
       "speech": [
         {
-          "from": "FIG-JESUS",
-          "to": "FIG-GERASENER",
-          "icons": [
-            "FIG-ZEICHEN-DAEMON",
-            "FIG-ZEICHEN-FLIEHEN"
-          ]
+          "from": "FIG-GERASENER",
+          "to": "FIG-JESUS",
+          "icons": [],
+          "word": {
+            "de": "Legion",
+            "gsw": "Legion"
+          }
         }
       ],
-      "action_de": "Im Gebiet der Gerasener befreit Jesus einen Mann von der «Legion» unreiner Geister; die Geister fahren in eine Schweineherde, die in den See stürzt.",
+      "action_de": "Der Geist nennt sich «Legion, denn wir sind viele»; Jesus erlaubt den Geistern, in die Schweine zu fahren, und die Herde stürmt den Abhang hinunter in den See.",
+      "keywords": {
+        "de": "in die Schweine",
+        "gsw": "i d Söi"
+      },
       "stage": {
-        "pose": {
-          "FIG-GERASENER": "kneel"
-        },
         "count": {
           "FIG-OBJ-SCHWEIN": 3
         },
         "floor_side": "left",
         "x": {
-          "FIG-GERASENER": 116,
-          "FIG-JESUS": 158
+          "FIG-GERASENER": 128,
+          "FIG-JESUS": 166
         },
         "at": {
           "FIG-ZEICHEN-DAEMON": "FIG-OBJ-SCHWEIN"
+        },
+        "mood": {
+          "FIG-GERASENER": "fear"
         },
         "arrows": [
           [
@@ -60,8 +65,9 @@
     },
     {
       "n": 2,
-      "reference": "MRK.5.21-MRK.5.24",
+      "reference": "MRK.5.22-MRK.5.23",
       "figures": [
+        "FIG-GRUPPE-MENGE",
         "FIG-JESUS",
         "FIG-JAIRUS"
       ],
@@ -73,24 +79,42 @@
           "to": "FIG-JESUS",
           "icons": [
             "FIG-TOCHTER-JAIRUS",
-            "FIG-ZEICHEN-KRANK",
             "FIG-ZEICHEN-HEILEN"
-          ]
+          ],
+          "word": {
+            "de": "komm",
+            "gsw": "chumm"
+          }
         }
       ],
-      "action_de": "Jairus fällt Jesus zu Füssen und bittet für seine sterbende Tochter.",
+      "action_de": "Der Synagogenvorsteher Jairus fällt Jesus zu Füssen und bittet: Mein Töchterchen liegt im Sterben; komm doch und lege ihr die Hände auf, damit sie gerettet wird und lebt!",
+      "keywords": {
+        "de": "liegt im Sterben",
+        "gsw": "isch am Sterbe"
+      },
+      "names": {
+        "FIG-JAIRUS": {
+          "de": "Jairus",
+          "gsw": "Jairus"
+        }
+      },
       "stage": {
         "pose": {
           "FIG-JAIRUS": "kneel"
         },
+        "x": {
+          "FIG-GRUPPE-MENGE": 36,
+          "FIG-JESUS": 100,
+          "FIG-JAIRUS": 160
+        },
         "mood": {
-          "FIG-JAIRUS": "worried"
+          "FIG-JAIRUS": "pain"
         }
       }
     },
     {
       "n": 3,
-      "reference": "MRK.5.25-MRK.5.34",
+      "reference": "MRK.5.27-MRK.5.34",
       "figures": [
         "FIG-ROLLE-FRAU-BLUTFLUSS",
         "FIG-JESUS",
@@ -102,7 +126,11 @@
         "FIG-ZEICHEN-HEILEN"
       ],
       "speech": [],
-      "action_de": "Unterwegs berührt eine Frau, die seit zwölf Jahren an Blutfluss leidet, Jesu Mantel und wird geheilt.",
+      "action_de": "Eine Frau berührt im Gedränge von hinten Jesu Mantel und wird geheilt; Jesus sagt ihr: Tochter, dein Glaube hat dich gerettet.",
+      "keywords": {
+        "de": "Glaube hat dich gerettet",
+        "gsw": "Glaube hät dich grettet"
+      },
       "stage": {
         "arrows": [
           [
@@ -119,14 +147,18 @@
         },
         "beside": {
           "FIG-ZEICHEN-BERUEHREN": "FIG-ROLLE-FRAU-BLUTFLUSS"
+        },
+        "pose": {
+          "FIG-JESUS": "away"
         }
       }
     },
     {
       "n": 4,
-      "reference": "MRK.5.35-MRK.5.43",
+      "reference": "MRK.5.36-MRK.5.42",
       "figures": [
         "FIG-JAIRUS",
+        "FIG-ROLLE-MUTTER",
         "FIG-TOCHTER-JAIRUS",
         "FIG-JESUS"
       ],
@@ -138,14 +170,29 @@
           "to": "FIG-TOCHTER-JAIRUS",
           "icons": [
             "FIG-ZEICHEN-AUFSTEHEN"
-          ]
+          ],
+          "word": {
+            "de": "Talita kum!",
+            "gsw": "Talita kum!"
+          }
         }
       ],
-      "action_de": "Jesus nimmt die tote Tochter des Jairus bei der Hand und sagt: Talita kum! Das Mädchen steht auf.",
+      "action_de": "Trotz der Todesnachricht sagt Jesus zu Jairus: Fürchte dich nicht, glaube nur! Er fasst die Hand des Mädchens und sagt: «Talita kum!» – und es steht auf.",
+      "keywords": {
+        "de": "glaube nur",
+        "gsw": "glaub nu"
+      },
       "stage": {
+        "x": {
+          "FIG-JAIRUS": 26,
+          "FIG-ROLLE-MUTTER": 62,
+          "FIG-TOCHTER-JAIRUS": 134,
+          "FIG-JESUS": 170
+        },
         "mood": {
           "FIG-JAIRUS": "surprised",
-          "FIG-TOCHTER-JAIRUS": "calm"
+          "FIG-ROLLE-MUTTER": "surprised",
+          "FIG-TOCHTER-JAIRUS": "delight"
         },
         "arrows": [
           [
@@ -158,27 +205,27 @@
     }
   ],
   "actions_de": [
-    "Im Gebiet der Gerasener befreit Jesus einen Mann von der «Legion» unreiner Geister; die Geister fahren in eine Schweineherde, die in den See stürzt.",
-    "Jairus fällt Jesus zu Füssen und bittet für seine sterbende Tochter.",
-    "Unterwegs berührt eine Frau, die seit zwölf Jahren an Blutfluss leidet, Jesu Mantel und wird geheilt.",
-    "Jesus nimmt die tote Tochter des Jairus bei der Hand und sagt: Talita kum! Das Mädchen steht auf."
+    "Der Geist nennt sich «Legion, denn wir sind viele»; Jesus erlaubt den Geistern, in die Schweine zu fahren, und die Herde stürmt den Abhang hinunter in den See.",
+    "Der Synagogenvorsteher Jairus fällt Jesus zu Füssen und bittet: Mein Töchterchen liegt im Sterben; komm doch und lege ihr die Hände auf, damit sie gerettet wird und lebt!",
+    "Eine Frau berührt im Gedränge von hinten Jesu Mantel und wird geheilt; Jesus sagt ihr: Tochter, dein Glaube hat dich gerettet.",
+    "Trotz der Todesnachricht sagt Jesus zu Jairus: Fürchte dich nicht, glaube nur! Er fasst die Hand des Mädchens und sagt: «Talita kum!» – und es steht auf."
   ],
   "captions_de": [
-    "Befehl → in die Schweine: Jesus treibt die Geister aus (Schatten, Pfeil weg); vom Mann führt der gepunktete Bogen zu den Schweinen: Die Geister fahren in sie.",
-    "Jairus bittet kniend: Meine Tochter liegt im Sterben – komm und heile sie (Mädchen, liegende Figur auf Matte, heilende Hand).",
-    "Berührung → Heilung: Die Frau berührt Jesu Mantel (Pfeil zu Jesus, Hand am roten Saum) und wird geheilt (Hand mit Licht).",
-    "Wort → Aufstehen: Jesus wendet sich dem Mädchen zu (Pfeil) und sagt: Steh auf (Figur über Matte mit Pfeil nach oben); der Vater staunt."
+    "«Legion»: Der Mann nennt Jesus voller Angst den Namen der Geister; vom Mann führt der gepunktete Bogen zu den Schweinen: Die Geister (Schatten) fahren in sie, die Herde stürzt in den See.",
+    "Bitte: Jairus kniet vor Jesus: «Komm» – zu seiner Tochter (Mädchen), die Hände auflegen (heilende Hand).",
+    "Glaube → Rettung: Die Frau berührt von hinten Jesu Mantel (Hand am roten Saum, Pfeil zu Jesus) und wird geheilt (Hand mit Licht).",
+    "Talita kum: Jesus sagt zum toten Mädchen: Steh auf (Figur mit Pfeil nach oben); es steht auf, die Eltern staunen."
   ],
-  "interpretation_note_de": "Kapitelbild aus den Abschnittsbildern. Der unreine Geist erscheint als dunkler Schatten ohne Gesicht; das Grab-Zeichen steht im zweiten Feld für «im Sterben liegen».",
+  "interpretation_note_de": "Kapitelbild aus der Kernanalyse des Kapitels: Macht über die Geister, die Bitte des Jairus, die Frau («Dein Glaube hat dich gerettet») und die Auferweckung («Glaube nur!», «Talita kum»). Der unreine Geist erscheint als dunkler Schatten ohne Gesicht.",
   "basis": [
     {
       "record": "SUM-CH-MRK-005",
       "field": "summary",
-      "fingerprint": "5722e3a982b98cbc"
+      "fingerprint": "7f339446edc62158"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -352,10 +399,599 @@
           "Talita kum: Jesus wendet sich dem Mädchen zu (Pfeil) und sagt: Steh auf (Figur über Matte mit Pfeil nach oben); der Vater staunt."
         ]
       }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.5.1-MRK.5.20",
+            "figures": [
+              "FIG-GERASENER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHWEIN",
+              "FIG-ORT-UFER"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-DAEMON"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GERASENER",
+                "icons": [
+                  "FIG-ZEICHEN-DAEMON",
+                  "FIG-ZEICHEN-FLIEHEN"
+                ]
+              }
+            ],
+            "action_de": "Im Gebiet der Gerasener befreit Jesus einen Mann von der «Legion» unreiner Geister; die Geister fahren in eine Schweineherde, die in den See stürzt.",
+            "stage": {
+              "pose": {
+                "FIG-GERASENER": "kneel"
+              },
+              "count": {
+                "FIG-OBJ-SCHWEIN": 3
+              },
+              "floor_side": "left",
+              "x": {
+                "FIG-GERASENER": 116,
+                "FIG-JESUS": 158
+              },
+              "at": {
+                "FIG-ZEICHEN-DAEMON": "FIG-OBJ-SCHWEIN"
+              },
+              "arrows": [
+                [
+                  "FIG-GERASENER",
+                  "FIG-OBJ-SCHWEIN",
+                  "throw"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.5.21-MRK.5.24",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-JAIRUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JAIRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-TOCHTER-JAIRUS",
+                  "FIG-ZEICHEN-KRANK",
+                  "FIG-ZEICHEN-HEILEN"
+                ]
+              }
+            ],
+            "action_de": "Jairus fällt Jesus zu Füssen und bittet für seine sterbende Tochter.",
+            "stage": {
+              "pose": {
+                "FIG-JAIRUS": "kneel"
+              },
+              "mood": {
+                "FIG-JAIRUS": "worried"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.5.25-MRK.5.34",
+            "figures": [
+              "FIG-ROLLE-FRAU-BLUTFLUSS",
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-BERUEHREN",
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [],
+            "action_de": "Unterwegs berührt eine Frau, die seit zwölf Jahren an Blutfluss leidet, Jesu Mantel und wird geheilt.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-ROLLE-FRAU-BLUTFLUSS",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-FRAU-BLUTFLUSS"
+              },
+              "mood": {
+                "FIG-ROLLE-FRAU-BLUTFLUSS": "pensive"
+              },
+              "beside": {
+                "FIG-ZEICHEN-BERUEHREN": "FIG-ROLLE-FRAU-BLUTFLUSS"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.5.35-MRK.5.43",
+            "figures": [
+              "FIG-JAIRUS",
+              "FIG-TOCHTER-JAIRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-TOCHTER-JAIRUS",
+                "icons": [
+                  "FIG-ZEICHEN-AUFSTEHEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus nimmt die tote Tochter des Jairus bei der Hand und sagt: Talita kum! Das Mädchen steht auf.",
+            "stage": {
+              "mood": {
+                "FIG-JAIRUS": "surprised",
+                "FIG-TOCHTER-JAIRUS": "calm"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-TOCHTER-JAIRUS",
+                  "act"
+                ]
+              ]
+            }
+          }
+        ],
+        "actions_de": [
+          "Im Gebiet der Gerasener befreit Jesus einen Mann von der «Legion» unreiner Geister; die Geister fahren in eine Schweineherde, die in den See stürzt.",
+          "Jairus fällt Jesus zu Füssen und bittet für seine sterbende Tochter.",
+          "Unterwegs berührt eine Frau, die seit zwölf Jahren an Blutfluss leidet, Jesu Mantel und wird geheilt.",
+          "Jesus nimmt die tote Tochter des Jairus bei der Hand und sagt: Talita kum! Das Mädchen steht auf."
+        ],
+        "captions_de": [
+          "Befehl → in die Schweine: Jesus treibt die Geister aus (Schatten, Pfeil weg); vom Mann führt der gepunktete Bogen zu den Schweinen: Die Geister fahren in sie.",
+          "Jairus bittet kniend: Meine Tochter liegt im Sterben – komm und heile sie (Mädchen, liegende Figur auf Matte, heilende Hand).",
+          "Berührung → Heilung: Die Frau berührt Jesu Mantel (Pfeil zu Jesus, Hand am roten Saum) und wird geheilt (Hand mit Licht).",
+          "Wort → Aufstehen: Jesus wendet sich dem Mädchen zu (Pfeil) und sagt: Steh auf (Figur über Matte mit Pfeil nach oben); der Vater staunt."
+        ],
+        "interpretation_note_de": "Kapitelbild aus den Abschnittsbildern. Der unreine Geist erscheint als dunkler Schatten ohne Gesicht; das Grab-Zeichen steht im zweiten Feld für «im Sterben liegen».",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.5.9-MRK.5.13",
+            "figures": [
+              "FIG-GERASENER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHWEIN",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-DAEMON"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GERASENER",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Legion",
+                  "gsw": "Legion"
+                }
+              }
+            ],
+            "action_de": "Der Geist nennt sich «Legion, denn wir sind viele»; Jesus erlaubt den Geistern, in die Schweine zu fahren, und die Herde stürmt den Abhang hinunter in den See.",
+            "keywords": {
+              "de": "in die Schweine",
+              "gsw": "i d Söi"
+            },
+            "stage": {
+              "pose": {
+                "FIG-GERASENER": "kneel"
+              },
+              "count": {
+                "FIG-OBJ-SCHWEIN": 3
+              },
+              "floor_side": "left",
+              "x": {
+                "FIG-GERASENER": 116,
+                "FIG-JESUS": 158
+              },
+              "at": {
+                "FIG-ZEICHEN-DAEMON": "FIG-OBJ-SCHWEIN"
+              },
+              "mood": {
+                "FIG-GERASENER": "fear"
+              },
+              "arrows": [
+                [
+                  "FIG-GERASENER",
+                  "FIG-OBJ-SCHWEIN",
+                  "throw"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.5.22-MRK.5.23",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS",
+              "FIG-JAIRUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JAIRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-TOCHTER-JAIRUS",
+                  "FIG-ZEICHEN-HEILEN"
+                ],
+                "word": {
+                  "de": "komm",
+                  "gsw": "chumm"
+                }
+              }
+            ],
+            "action_de": "Der Synagogenvorsteher Jairus fällt Jesus zu Füssen und bittet: Mein Töchterchen liegt im Sterben; komm doch und lege ihr die Hände auf, damit sie gerettet wird und lebt!",
+            "keywords": {
+              "de": "Töchterchen liegt im Sterben",
+              "gsw": "Töchterli isch am Sterbe"
+            },
+            "names": {
+              "FIG-JAIRUS": {
+                "de": "Jairus",
+                "gsw": "Jairus"
+              }
+            },
+            "stage": {
+              "pose": {
+                "FIG-JAIRUS": "kneel"
+              },
+              "mood": {
+                "FIG-JAIRUS": "pain"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.5.27-MRK.5.34",
+            "figures": [
+              "FIG-ROLLE-FRAU-BLUTFLUSS",
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-BERUEHREN",
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [],
+            "action_de": "Eine Frau berührt im Gedränge von hinten Jesu Mantel und wird geheilt; Jesus sagt ihr: Tochter, dein Glaube hat dich gerettet.",
+            "keywords": {
+              "de": "Glaube hat dich gerettet",
+              "gsw": "Glaube hät dich grettet"
+            },
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-ROLLE-FRAU-BLUTFLUSS",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-FRAU-BLUTFLUSS"
+              },
+              "mood": {
+                "FIG-ROLLE-FRAU-BLUTFLUSS": "pensive"
+              },
+              "beside": {
+                "FIG-ZEICHEN-BERUEHREN": "FIG-ROLLE-FRAU-BLUTFLUSS"
+              },
+              "pose": {
+                "FIG-JESUS": "away"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.5.36-MRK.5.42",
+            "figures": [
+              "FIG-JAIRUS",
+              "FIG-ROLLE-MUTTER",
+              "FIG-TOCHTER-JAIRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-TOCHTER-JAIRUS",
+                "icons": [
+                  "FIG-ZEICHEN-AUFSTEHEN"
+                ],
+                "word": {
+                  "de": "Talita kum!",
+                  "gsw": "Talita kum!"
+                }
+              }
+            ],
+            "action_de": "Trotz der Todesnachricht sagt Jesus zu Jairus: Fürchte dich nicht, glaube nur! Er fasst die Hand des Mädchens und sagt: «Talita kum!» – und es steht auf.",
+            "keywords": {
+              "de": "glaube nur",
+              "gsw": "glaub nu"
+            },
+            "stage": {
+              "mood": {
+                "FIG-JAIRUS": "surprised",
+                "FIG-ROLLE-MUTTER": "surprised",
+                "FIG-TOCHTER-JAIRUS": "delight"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-TOCHTER-JAIRUS",
+                  "act"
+                ]
+              ]
+            }
+          }
+        ],
+        "captions_de": [
+          "«Legion»: Der Mann kniet vor Jesus und nennt den Namen der Geister; vom Mann führt der gepunktete Bogen zu den Schweinen: Die Geister (Schatten) fahren in sie, die Herde stürzt in den See.",
+          "Bitte: Jairus kniet vor Jesus: «Komm» – zu seiner Tochter (Mädchen), die Hände auflegen (heilende Hand).",
+          "Glaube → Rettung: Die Frau berührt von hinten Jesu Mantel (Hand am roten Saum, Pfeil zu Jesus) und wird geheilt (Hand mit Licht).",
+          "Talita kum: Jesus sagt zum toten Mädchen: Steh auf (Figur mit Pfeil nach oben); es steht auf, die Eltern staunen."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.5.9-MRK.5.13",
+            "figures": [
+              "FIG-GERASENER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHWEIN",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-DAEMON"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GERASENER",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Legion",
+                  "gsw": "Legion"
+                }
+              }
+            ],
+            "action_de": "Der Geist nennt sich «Legion, denn wir sind viele»; Jesus erlaubt den Geistern, in die Schweine zu fahren, und die Herde stürmt den Abhang hinunter in den See.",
+            "keywords": {
+              "de": "in die Schweine",
+              "gsw": "i d Söi"
+            },
+            "stage": {
+              "count": {
+                "FIG-OBJ-SCHWEIN": 3
+              },
+              "floor_side": "left",
+              "x": {
+                "FIG-GERASENER": 128,
+                "FIG-JESUS": 166
+              },
+              "at": {
+                "FIG-ZEICHEN-DAEMON": "FIG-OBJ-SCHWEIN"
+              },
+              "mood": {
+                "FIG-GERASENER": "fear"
+              },
+              "arrows": [
+                [
+                  "FIG-GERASENER",
+                  "FIG-OBJ-SCHWEIN",
+                  "throw"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.5.22-MRK.5.23",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS",
+              "FIG-JAIRUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JAIRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-TOCHTER-JAIRUS",
+                  "FIG-ZEICHEN-HEILEN"
+                ],
+                "word": {
+                  "de": "komm",
+                  "gsw": "chumm"
+                }
+              }
+            ],
+            "action_de": "Der Synagogenvorsteher Jairus fällt Jesus zu Füssen und bittet: Mein Töchterchen liegt im Sterben; komm doch und lege ihr die Hände auf, damit sie gerettet wird und lebt!",
+            "keywords": {
+              "de": "liegt im Sterben",
+              "gsw": "isch am Sterbe"
+            },
+            "names": {
+              "FIG-JAIRUS": {
+                "de": "Jairus",
+                "gsw": "Jairus"
+              }
+            },
+            "stage": {
+              "pose": {
+                "FIG-JAIRUS": "kneel"
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 36,
+                "FIG-JESUS": 100,
+                "FIG-JAIRUS": 160
+              },
+              "mood": {
+                "FIG-JAIRUS": "pain"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.5.27-MRK.5.34",
+            "figures": [
+              "FIG-ROLLE-FRAU-BLUTFLUSS",
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-BERUEHREN",
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [],
+            "action_de": "Eine Frau berührt im Gedränge von hinten Jesu Mantel und wird geheilt; Jesus sagt ihr: Tochter, dein Glaube hat dich gerettet.",
+            "keywords": {
+              "de": "Glaube hat dich gerettet",
+              "gsw": "Glaube hät dich grettet"
+            },
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-ROLLE-FRAU-BLUTFLUSS",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-FRAU-BLUTFLUSS"
+              },
+              "mood": {
+                "FIG-ROLLE-FRAU-BLUTFLUSS": "pensive"
+              },
+              "beside": {
+                "FIG-ZEICHEN-BERUEHREN": "FIG-ROLLE-FRAU-BLUTFLUSS"
+              },
+              "pose": {
+                "FIG-JESUS": "away"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.5.36-MRK.5.42",
+            "figures": [
+              "FIG-JAIRUS",
+              "FIG-ROLLE-MUTTER",
+              "FIG-TOCHTER-JAIRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-MATTE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-TOCHTER-JAIRUS",
+                "icons": [
+                  "FIG-ZEICHEN-AUFSTEHEN"
+                ],
+                "word": {
+                  "de": "Talita kum!",
+                  "gsw": "Talita kum!"
+                }
+              }
+            ],
+            "action_de": "Trotz der Todesnachricht sagt Jesus zu Jairus: Fürchte dich nicht, glaube nur! Er fasst die Hand des Mädchens und sagt: «Talita kum!» – und es steht auf.",
+            "keywords": {
+              "de": "glaube nur",
+              "gsw": "glaub nu"
+            },
+            "stage": {
+              "x": {
+                "FIG-JAIRUS": 26,
+                "FIG-ROLLE-MUTTER": 62,
+                "FIG-TOCHTER-JAIRUS": 134,
+                "FIG-JESUS": 170
+              },
+              "floor_x": {
+                "FIG-OBJ-MATTE": 134
+              },
+              "mood": {
+                "FIG-JAIRUS": "surprised",
+                "FIG-ROLLE-MUTTER": "surprised",
+                "FIG-TOCHTER-JAIRUS": "delight"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-TOCHTER-JAIRUS",
+                  "act"
+                ]
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Bild neu aus der Kernanalyse (Worte im Bild)",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-MRK-005",
+            "field": "summary",
+            "fingerprint": "5722e3a982b98cbc"
+          }
+        ],
+        "rework": {
+          "since": "2026-10-23",
+          "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
+        }
+      }
     }
-  ],
-  "rework": {
-    "since": "2026-10-23",
-    "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
-  }
+  ]
 }

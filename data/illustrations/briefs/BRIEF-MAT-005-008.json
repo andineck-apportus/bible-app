@@ -13,26 +13,38 @@
       "n": 1,
       "reference": "MAT.5.8",
       "figures": [
-        "FIG-GOTT",
-        "FIG-ROLLE-MENSCH"
+        "FIG-JESUS",
+        "FIG-ROLLE-MENSCH",
+        "FIG-GOTT"
       ],
       "objects": [],
       "signs": [
-        "FIG-ZEICHEN-HERZ",
-        "FIG-ZEICHEN-SEHEN"
+        "FIG-ZEICHEN-HERZ"
       ],
-      "speech": [],
-      "action_de": "Selig sind, die ein reines Herz haben; sie werden Gott sehen.",
+      "speech": [
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-ROLLE-MENSCH",
+          "icons": [],
+          "word": {
+            "de": "Gott sehen",
+            "gsw": "Gott gseh"
+          }
+        }
+      ],
+      "action_de": "Jesus sagt: Selig sind die, die ein reines Herz haben, denn sie werden Gott sehen.",
+      "keywords": {
+        "de": "reines Herz",
+        "gsw": "reins Härz"
+      },
       "stage": {
         "god_side": "right",
         "x": {
-          "FIG-ROLLE-MENSCH": 66
+          "FIG-JESUS": 30,
+          "FIG-ROLLE-MENSCH": 110
         },
         "beside": {
           "FIG-ZEICHEN-HERZ": "FIG-ROLLE-MENSCH"
-        },
-        "at": {
-          "FIG-ZEICHEN-SEHEN": "FIG-ROLLE-MENSCH"
         },
         "arrows": [
           [
@@ -48,17 +60,17 @@
     }
   ],
   "actions_de": [
-    "Selig sind, die ein reines Herz haben; sie werden Gott sehen."
+    "Jesus sagt: Selig sind die, die ein reines Herz haben, denn sie werden Gott sehen."
   ],
   "captions_de": [
-    "Reines Herz → Gott sehen: Ein Mensch mit reinem Herzen (rotes Herz neben ihm) – der Pfeil führt von ihm zu Gott (Strahlenkranz): er wird Gott sehen (offenes Auge)."
+    "Reines Herz → Gott sehen: Jesus (links) verheisst es einem Menschen mit reinem Herzen (Herz); er blickt zu Gott (Strahlenkranz, Pfeil)."
   ],
-  "interpretation_note_de": "Merkvers: Verheissung, Gott zu sehen. Bild zum Einprägen: Herz und Auge, Blick zu Gott.",
+  "interpretation_note_de": "Merkvers: Verheissung, Gott zu sehen. Rede: Jesus am Rand; das Herz steht für das Innere, der Blick zu Gott für die Verheissung (Deutung).",
   "basis": [
     {
       "record": "TU-MAT-005-001-012",
       "field": "summary",
-      "fingerprint": "8a9a6f42e1d3de65"
+      "fingerprint": "f6d9b9ce0771fc6a"
     },
     {
       "record": "TRANS-MAT-005-001-048-DE-WORKING",
@@ -68,7 +80,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-18 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-18",
     "supersedes": null
@@ -82,10 +94,82 @@
           "Reines Herz: Ein Mensch mit einem Herzen (rotes Herz neben ihm) schaut zu Gott (offenes Auge, Pfeil zum Strahlenkranz)."
         ]
       }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.5.8",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-ROLLE-MENSCH"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-HERZ",
+              "FIG-ZEICHEN-SEHEN"
+            ],
+            "speech": [],
+            "action_de": "Selig sind, die ein reines Herz haben; sie werden Gott sehen.",
+            "stage": {
+              "god_side": "right",
+              "x": {
+                "FIG-ROLLE-MENSCH": 66
+              },
+              "beside": {
+                "FIG-ZEICHEN-HERZ": "FIG-ROLLE-MENSCH"
+              },
+              "at": {
+                "FIG-ZEICHEN-SEHEN": "FIG-ROLLE-MENSCH"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-MENSCH",
+                  "FIG-GOTT",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-MENSCH": "delight"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Selig sind, die ein reines Herz haben; sie werden Gott sehen."
+        ],
+        "captions_de": [
+          "Reines Herz → Gott sehen: Ein Mensch mit reinem Herzen (rotes Herz neben ihm) – der Pfeil führt von ihm zu Gott (Strahlenkranz): er wird Gott sehen (offenes Auge)."
+        ],
+        "interpretation_note_de": "Merkvers: Verheissung, Gott zu sehen. Bild zum Einprägen: Herz und Auge, Blick zu Gott.",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-18 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Bild neu aus der Kernanalyse (Worte im Bild)",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-005-001-012",
+            "field": "summary",
+            "fingerprint": "8a9a6f42e1d3de65"
+          },
+          {
+            "record": "TRANS-MAT-005-001-048-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.5.8",
+            "fingerprint": "0ba4cc8583540d62"
+          }
+        ],
+        "rework": {
+          "since": "2026-10-23",
+          "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
+        }
+      }
     }
-  ],
-  "rework": {
-    "since": "2026-10-23",
-    "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
-  }
+  ]
 }
