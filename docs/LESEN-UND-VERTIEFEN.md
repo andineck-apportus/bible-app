@@ -30,8 +30,8 @@ Aussprache und Vorlesen.
 | Ältere Übersetzungen, Querverweise | Versblatt | – |
 | Urtext Wort für Wort, Ausgabenvergleich, Quellen | Versblatt | – |
 | Stand dieser Stelle (was erfasst ist, was noch nicht) | Versblatt | – |
-| Befunde, Deutungen, Fragen, ähnliche Stellen | «Verstehen» am Titel | – |
-| Hintergrund, Grundsatz, Anwendung je Zielgruppe | «Damals → Heute» am Titel ([DAMALS-PRINZIP-HEUTE.md](DAMALS-PRINZIP-HEUTE.md)) | – |
+| Befunde, Deutungen, Fragen, ähnliche Stellen | «Verstehen» am Titel jeder Ebene | – |
+| Hintergrund, Grundsatz, Anwendung je Zielgruppe | «Damals → Heute» am Titel jeder Ebene ([DAMALS-PRINZIP-HEUTE.md](DAMALS-PRINZIP-HEUTE.md)) | – |
 | Zusammenfassung und Bild | Ebene selbst (Text \| Bild) | – |
 | Vorgehen, Prüfung, Stand, Zeichen | Menü › «So arbeiten wir» | – |
 
@@ -56,7 +56,13 @@ Hintergrund, jeweils vorhanden oder «noch nicht erfasst». So wird das Fehlen e
 Insbesondere: Im Neuen Testament sind in den ausgearbeiteten Stellen die Lesarten am Apparat der SBLGNT erfasst; im Alten
 Testament sind die hebräischen Handschriften noch nicht verglichen (ausser Rollen vom Toten Meer bei Jesaja und Psalmen).
 
-## Noch offen (vorgeschlagen, nicht umgesetzt)
+## Gleiche Knöpfe auf allen Ebenen
 
-- Dieselben Knöpfe «Verstehen» und «Damals → Heute» auf allen Ebenen (Kapitel, Buch, Buchgruppe, Testament, Bibel); wo noch
-  nichts erarbeitet ist, sagt das Blatt das. Auf Kapitel- und Buchebene mit der Kernanalyse ([VERDICHTUNG.md](VERDICHTUNG.md)).
+«Verstehen» und «Damals → Heute» stehen am Titel jeder Ebene: Bibel, Testament, Buchgruppe, Buch, Kapitel, Abschnitt.
+
+- **Verstehen:** die Kernanalyse der Ebene ([VERDICHTUNG.md](VERDICHTUNG.md)): Wozu geschrieben (Buch), Worum es geht, die
+  tragenden Momente mit Stelle, bewusst Weggelassenes. Beim Abschnitt zusätzlich Befunde, Deutungen, Fragen, ähnliche Stellen;
+  beim Kapitel die Befunde und Deutungen zum ganzen Kapitel.
+- **Damals → Heute:** beim Abschnitt wie beschrieben; beim Kapitel der kapitelweite Hintergrund und die Grundsätze und
+  Anwendungen des Kapitels; bei Buch und höher der Hintergrund der Ebene.
+- Wo noch nichts erarbeitet ist, sagt das Blatt das offen, statt dass der Knopf fehlt.

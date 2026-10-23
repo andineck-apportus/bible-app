@@ -2,6 +2,15 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.75 — 2026-10-23 — Alternativen markiert, Knöpfe auf allen Ebenen
+
+- **Gepunktet unterstrichen = Alternativen** (Andi Neck): Unterstrichen sind jetzt auch Stellen, an denen die Handschriften abweichen (andere Lesarten, z. B. Mt 6,13), nicht nur Übersetzungsentscheide. Antippen öffnet das Versblatt bei der Lesart, mit ihren Quellen.
+- **Keine eigenen Zeichen für einzelne Quellen** (Andi Neck): Der Knopf «Rolle» entfällt. Die Rollen vom Toten Meer stehen als eine Quelle unter vielen im Versblatt unter «Alte Handschriften». Die Versnummer ist umrandet, wenn Handschriften vorhanden sind.
+- **«Verstehen» und «Damals → Heute» auf allen Ebenen** (Andi Neck): Die Knöpfe stehen bei Bibel, Testament, Buchgruppe, Buch, Kapitel und Abschnitt.
+  - «Verstehen» zeigt die Kernanalyse: wozu geschrieben, worum es geht, die tragenden Momente und was weggelassen ist; Pilot bei Rut, Titus, Mk 5 und Mt 5–7.
+  - Wo noch nichts erarbeitet ist, sagt das Blatt das offen.
+- **Legende «Zeichen im Text»** in «So arbeiten wir» angepasst; dazu der Grundsatz, dass zu jeder Angabe die Quelle genannt ist.
+
 ## v0.74 — 2026-10-23 — Lesen und vertiefen: feste Regeln
 
 - **Feste Darstellung** (Andi Neck, docs/LESEN-UND-VERTIEFEN.md): Verse fortlaufend, Urtext und Details sowie Umschrift sind immer an. Lesarten- und Hintergrundzeilen im Text gibt es nicht mehr. Die fünf Schalter sind aus den Einstellungen entfernt.

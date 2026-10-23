@@ -12,7 +12,7 @@ server.listen(0,async()=>{const url=`http://localhost:${server.address().port}/i
     const ev=f=>p.evaluate(f);const wait=()=>p.waitForTimeout(400);
     await p.goto(url);await p.waitForRequest(r=>/_overview/.test(r.url()),{timeout:5000}).catch(()=>{});await wait();
     assert.deepEqual(reqs,['b/_overview'],'auf Bibelebene nur der Hintergrund der oberen Ebenen');
-    await ev(()=>document.querySelector('[data-overview="all"]').click());await wait();
+    await ev(()=>document.querySelector('[data-background="all"]').click());await wait();
     const ov=await ev(()=>document.querySelector('.sheet').innerText);
     assert(ov.includes('Eine Bibliothek aus rund tausend Jahren')&&!ov.includes('[['),'Hintergrund der Bibel');
     await ev(()=>document.querySelector('[data-close]').click());
@@ -28,10 +28,10 @@ server.listen(0,async()=>{const url=`http://localhost:${server.address().port}/i
     assert(!sheet.includes('[[')&&sheet.includes('Vatterunser'),'Hintergrund in Mundart, Stellen als Anzeige');
     await ev(()=>document.querySelector('[data-close]').click());await ev(()=>document.querySelector('[data-action=home]')?.click());await wait();
     await ev(()=>document.querySelector('[data-action=down]').click());await ev(()=>document.querySelector('.sheet [data-go="nt"]').click());await wait();await ev(()=>document.querySelector('[data-action=down]').click());await ev(()=>document.querySelector('.sheet [data-go="g5"]').click());await wait();
-    await ev(()=>document.querySelector('[data-overview="g5"]').click());await wait();
+    await ev(()=>document.querySelector('[data-background="g5"]').click());await wait();
     assert((await ev(()=>document.querySelector('.sheet').innerText)).includes('Vier Verzellige vom Jesus'),'Hintergrund der Buchgruppe in Mundart');
     await ev(()=>document.querySelector('[data-close]').click());await ev(()=>document.querySelector('[data-action=down]').click());await ev(()=>document.querySelector('.sheet [data-go="b39"]').click());await wait();
-    await ev(()=>document.querySelector('[data-overview="b39"]').click());await wait();
+    await ev(()=>document.querySelector('[data-background="b39"]').click());await wait();
     const gen=await ev(()=>document.querySelector('.sheet').innerText);
     assert(gen.includes('Matthäus: Verfasser, Ziit und Gmeind')&&!gen.includes('[['),'Hintergrund auf Buchebene (Matthäus) in Mundart');
     // Noch nicht übersetztes Buch mit Handschriften vom Toten Meer (nicht kommerzielle Schicht n/ISA)

@@ -114,6 +114,15 @@ assert(sheetHost.querySelector('[data-app="APP-MAT-1007"]')&&!sheetHost.querySel
 assert(!sheetHost.querySelector('[data-app="APP-MAT-1005"]'),'Anwendung zu Mt 6,19–34 nicht bei 6,5–8');
 click('.dph-aud [data-aud="all"]');assert(sheetHost.querySelector('[data-app="APP-MAT-1004"]'),'wieder alle');
 click('[data-close]');
+// Gleiche Knöpfe auf allen Ebenen; Kapitel mit Kernanalyse
+click('[data-action=up]');
+{const ch=[...reader.querySelectorAll('[data-stream]')].find(e=>e.dataset.stream&&model.nodes.get(e.dataset.stream)&&model.nodes.get(e.dataset.stream).level===4&&e.querySelector('[data-study]'));assert(ch,'Kapitel mit Verstehen');
+ assert(ch.querySelector('[data-background]'),'Kapitel mit Damals → Heute');}
+click('[data-study="'+[...reader.querySelectorAll('[data-study]')].map(b=>b.dataset.study).find(id=>model.nodes.get(id).level===4&&model.nodes.get(id).c===6)+'"]');
+assert(sheetHost.textContent.includes('Worum es geht')&&sheetHost.textContent.includes('Die tragenden Momente'),'Kernanalyse Mt 6');click('[data-close]');
+click('[data-action=up]');
+{const b=[...reader.querySelectorAll('[data-study]')].find(x=>model.nodes.get(x.dataset.study).level===3);assert(b,'Buch mit Verstehen');b.click();assert(sheetHost.textContent.includes('noch keine Kernanalyse')||sheetHost.textContent.includes('Worum es geht'),'Buchblatt');click('[data-close]');}
+click('[data-action=index]');click('.sheet [data-go="TU-MAT-006-001-004"]');
 click('[data-deep="TU-MAT-006-009-013"]');
 assert(reader.querySelector('.part-head [data-study="TU-MAT-006-009-013"]')&&reader.querySelector('.part-head [data-background="TU-MAT-006-009-013"]'),'Werkzeuge am Abschnittstitel');
 assert(!reader.querySelector('.part-end'),'keine Links am Abschnittsende');
