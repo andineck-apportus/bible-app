@@ -2,6 +2,16 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.82 — 2026-10-23 — Worte im Bild sprachlich geprüft
+
+- **Neue Prüfregel** (Hinweis Andi Neck): Stichwortband und Sprechblasen müssen für sich allein verständlich und grammatisch richtig sein, in jeder Sprache, ohne Satzfragmente. Die Regel steht in der Anleitung, in BILDPROZESS.md und in AGENTS.md. Das Werkzeug `bildworte.py` listet die Worte für die Prüfung auf.
+- **Pilotbilder überarbeitet:** 250 von 292 Worten neu, zum Beispiel «Hören und tun!» statt «hört und sie tut», «Seid gerechter als die Pharisäer!» statt «weit über».
+- **Rut 4 Züridüütsch** (Hinweise Andi Neck), mit Übersetzungsentscheid:
+  - 4,10 «han ich mir zur Frau gnoo» statt «erworbe» (tönt nach gekauft);
+  - 4,17 «D Noomi hät en Sohn übercho!».
+  
+  Bibeltext, Zusammenfassungen und Titel sind angepasst.
+
 ## v0.81 — 2026-10-23 — Pilotbilder mit Worten, Figuren Runde 4
 
 - **Worte im Bild** (Entscheid Andi Neck 2026-10-23):
