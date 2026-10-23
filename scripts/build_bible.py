@@ -235,7 +235,7 @@ for p in sorted((ROOT / "data/illustrations").rglob("*.json")):
 ill_core = {"styles": {}, "items": {}, "lexicon": {}}
 for rid, r in ill_recs.items():
     if r["type"] == "figure":
-        ill_core["lexicon"][rid] = {"kind": r["kind"], "group": r.get("display_group", r["kind"]), "name": r["names"], "traits": [t["trait_de"] for t in r.get("traits", [])]}
+        ill_core["lexicon"][rid] = {"kind": r["kind"], "group": r.get("display_group", r["kind"]), "name": r["names"], "traits": [t["trait_de"] for t in r.get("traits", [])], **({"legend": r["legend"]} if r.get("legend") else {})}
     elif r["type"] == "illustration_style":
         ill_core["styles"][r["key"]] = {"id": rid, "label": r["labels"], "description": r.get("description_de"),
                                         "renderings": r.get("renderings", {}), "library": (ROOT / r["library"]).read_text(encoding="utf-8")}

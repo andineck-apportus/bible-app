@@ -64,6 +64,19 @@ ENTRIES = []
 _GRUPPEN = None
 
 
+_KURZ = None
+
+
+def legend_short(fid):
+    """Kurzer Legendentext je Sprache aus bildlexikon_daten/_legende.json ({FIG: {"de": …, "gsw": …}})."""
+    global _KURZ
+    if _KURZ is None:
+        import pathlib as _p
+        f = _p.Path(__file__).resolve().parent / "bildlexikon_daten" / "_legende.json"
+        _KURZ = json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
+    return _KURZ.get(fid)
+
+
 def display_group(fid, kind):
     """Anzeigegruppe (Bildlexikon, Legende): divine, people, thing, place, action, concept (Entscheid 2026-10-23).
     Zeichen werden nach der Testklasse aufgeteilt (bildlexikon_daten/_gruppen.json); kind bleibt für die Bildplatzierung."""
@@ -1356,6 +1369,11 @@ def build(e, texts):
         rec["era"] = e["era"]
     rec["display_group"] = display_group(fid, e["kind"])
     rec["traits"] = e["traits"]
+    kz = legend_short(fid)
+    if kz:  # kurzer Erkennungstext für die Legende «Figuren und Zeichen» (höchstens etwa 60 Zeichen, BILDPROZESS.md)
+        if any(len(v) > 70 for v in kz.values()):
+            raise SystemExit(f"{fid}: Legendentext zu lang ({kz})")
+        rec["legend"] = kz
     rec["palette"] = {"primary": e["pal"][0], "secondary": e["pal"][1]}
     rec["rules_de"] = e["rules"]
     if e["distinct"]:
