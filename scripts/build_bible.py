@@ -199,6 +199,13 @@ for key in ("findings", "interpretations", "principles", "applications", "questi
         bundle(f"b/{b}").setdefault(key, []).append(x)
 for x in study["relations"]:
     bundle(f"b/{book_of_id[x['from']]}").setdefault("relations", []).append(x)
+# Kernanalysen (docs/VERDICHTUNG.md) für «Verstehen» auf Kapitel- und Buchebene; nur Hochdeutsch (noch keine Lokalisierungen)
+for f in sorted((ROOT / "data/core-analyses").glob("CORE-*.json")):
+    c = json.loads(f.read_text(encoding="utf-8"))
+    bundle(f"b/{c['reference'].split('.')[0]}").setdefault("core", []).append({
+        "id": c["id"], "level": c["level"], "ref": c["reference"], "core": c["core_de"], "purpose": c.get("purpose_de"),
+        "mode": c.get("mode"), "moments": [{"ref": m["reference"], "text": m["text_de"]} for m in c["moments"]],
+        "omitted": c.get("omitted_de", []), "checked": bool(c.get("review"))})
 for x in background:
     b = x["chapter"].split(".")[0]
     x = dict(x)

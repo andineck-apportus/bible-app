@@ -98,6 +98,8 @@ click('[data-study="TU-MAT-006-009-013"]');
 assert(sheetHost.textContent.includes('Brot für den kommenden Tag'),'Deutungen zu epiousios');
 assert(!sheetHost.textContent.includes('Grenze:'),'Anwendung nicht mehr im Studienblatt');
 click('[data-close]');
+{const u=reader.querySelector('[data-stream="v39-6-13"] .dec.alt');assert(u,'Lesart in Mt 6,13 unterstrichen');u.click();assert(sheetHost.querySelector('[data-alternative]')&&sheetHost.textContent.includes('Andere Lesarten'),'Unterstreichung öffnet Lesarten');}
+click('[data-close]');
 // Damals → Prinzip → Heute (docs/DAMALS-PRINZIP-HEUTE.md)
 click('[data-background="TU-MAT-006-009-013"]');
 assert(sheetHost.querySelector('.dph-steps [data-dph="today"]')&&sheetHost.querySelector('#dph-then')&&sheetHost.querySelector('#dph-principle'),'drei Stufen');
@@ -210,7 +212,7 @@ click('[data-more="v30-1-3"]');
 assert(sheetHost.querySelector('.il.he .heb'),'Hebräisch Wort für Wort');
 assert(sheetHost.textContent.includes('Hebräisch Wort für Wort')&&sheetHost.textContent.includes('Westminster Leningrad Codex'),'Quellen für den hebräischen Text');
 assert(sheetHost.textContent.includes('sela'),'Lesehilfe-Umschrift');
-assert(sheetHost.textContent.includes('Texte vom Toten Meer')&&sheetHost.textContent.includes('MurXII')&&sheetHost.textContent.includes('CC BY-NC'),'Texte vom Toten Meer (nicht kommerzielle Schicht)');
+assert(sheetHost.textContent.includes('Alte Handschriften')&&sheetHost.textContent.includes('MurXII')&&sheetHost.textContent.includes('CC BY-NC'),'Texte vom Toten Meer (nicht kommerzielle Schicht)');
 click('[data-close]');
 assert.equal(model.STUDY.layers.de.text['OBA.1.21'],'Und Retter werden hinaufziehen auf den Berg Zion, um das Gebirge Esau zu richten; und die Königsherrschaft wird JHWH gehören.');
 assert(model.STUDY.words.filter(w=>w.ref==='OBA.1.1').every(w=>w.wtr),'Umschrift je Wort');
