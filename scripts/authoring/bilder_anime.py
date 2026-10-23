@@ -399,7 +399,7 @@ def body_inner(key, arm=None, ext=0, staff=True):
     return out
 
 
-def person(key, x, y, s, expr="calm", look=0.0, arm=None, flip=False, tears=False, hold=None, ext=0):
+def person(key, x, y, s, expr="calm", look=0.0, arm=None, flip=False, tears=False, hold=None, ext=0, big=False):
     """Brustbild: Kopfmitte bei (x, y), s = Massstab (1 = Kopfradius 10); hold = Symbol, das die Figur vor der Brust hält;
     ext = Gewand nach unten verlängern (hintere Figuren einer Gruppe)."""
     fl = " scale(-1 1)" if flip else ""
@@ -409,7 +409,7 @@ def person(key, x, y, s, expr="calm", look=0.0, arm=None, flip=False, tears=Fals
     if CHAR[key].get("child"):
         s *= .74
         y += 9 * s
-    if hold and hold.startswith("an-a-"):  # Erkennungszeichen (Schlüssel, Kasse …) gross auf der Brust, mit Kontur
+    if hold and (hold.startswith("an-a-") or big):  # Erkennungszeichen (Schlüssel, Kasse …) gross auf der Brust, mit Kontur
         held = f'<g filter="url(#an-kontur)">{use(hold, -8, 17, 16, 16)}</g>'
     else:
         held = use(hold, -4, 13, 16, 12) if hold else ""  # vor der Brust, nicht am unteren Rand
@@ -430,57 +430,64 @@ def person(key, x, y, s, expr="calm", look=0.0, arm=None, flip=False, tears=Fals
 #   n:     Köpfe im Lexikon-Porträt (in Szenen höchstens 5)
 #   every: Schalter für alle Mitglieder; per: Schalter je Mitglied (Liste, Index wie oben); hold: Gegenstand je Mitglied
 #   back:  Hintergrund im Lexikon-Porträt; ghosts: angedeutete Köpfe dahinter (Menge)
+# Runde 3 (Andi Neck 2026-10-23, Blindtest Runde 2: Gruppen überladen): im Lexikon-Porträt nur drei, in Ausnahmen vier
+# grössere Figuren (vorn eine, seitlich zwei), alle in derselben Gruppenfarbe (color/mantle) und das Erkennungszeichen
+# gross auf der Brust der vorderen Figur (Kontur wie bei Einzelfiguren). Die Zahl im Bild steht nicht für die Zahl im Text.
+#   color: Gewandfarbe aller Mitglieder; mantle: Mantelfarbe aller (None = ohne Mantel)
 GROUP_SPEC = {
-    "FIG-GRUPPE-MENGE": dict(mix="mfc", n=6, keys=("menge", "menge2", "menge3"), ghosts=True),
-    "FIG-GRUPPE-GEMEINDE": dict(mix="mfc", n=5, keys=("menge", "menge2", "menge3")),
-    "FIG-GRUPPE-VOLK": dict(mix="mfc", n=5),
-    "FIG-GRUPPE-ISRAEL": dict(mix="mfc", n=5),
-    "FIG-GRUPPE-VOELKER": dict(mix="mf", n=5, male={"turban": "#2F6F73", "band": None}),  # Kopfbund statt Stirnband
+    "FIG-GRUPPE-MENGE": dict(mix="mfc", n=3, keys=("menge", "menge2", "menge3"), ghosts=True),
+    "FIG-GRUPPE-GEMEINDE": dict(mix="mfc", n=5, keys=("menge", "menge2", "menge3")),  # Zeichen mit Haus (an-gemeinde), bleibt
+    "FIG-GRUPPE-VOLK": dict(mix="mfc", n=3, color="#A79A80", mantle=None),
+    "FIG-GRUPPE-ISRAEL": dict(mix="mfc", n=3, color="#E2D6BE", mantle="#3E6E9E"),  # heller Rock, blauer Mantel (Lexikon)
+    "FIG-GRUPPE-VOELKER": dict(mix="mf", n=3, color="#4F7FA8", mantle="#B4583A", male={"turban": "#2F6F73", "band": None}),  # Kopfbund statt Stirnband
     # Die Zwölf: nur Männer, gleiche Mantelfarbe, Wanderstab (Mk 6,8)
-    "FIG-GRUPPE-ZWOELF": dict(mix="m", n=6, every={"staff": True}),
-    "FIG-GRUPPE-JUENGER": dict(mix="m", n=5, every={"staff": True}),
-    "FIG-GRUPPE-JOHANNES-JUENGER": dict(mix="m", n=5),
-    "FIG-GRUPPE-BRUEDER-JESU": dict(mix="m", n=4, alike=True),  # vier Brüder (Mk 6,3), gleicher Haarschnitt
+    "FIG-GRUPPE-ZWOELF": dict(mix="m", n=3, color="#9C7A4C", mantle=None, every={"staff": True, "belt": "#5B4630"}),
+    "FIG-GRUPPE-JUENGER": dict(mix="m", n=3, color="#A0825A", mantle=None, every={"staff": True, "belt": "#5B4630"}),
+    # wie der Täufer: Fellkragen und Ledergurt (Mk 1,6), jüngere Männer
+    "FIG-GRUPPE-JOHANNES-JUENGER": dict(mix="m", n=3, color="#8A6A3A", mantle=None, every={"fur": True, "belt": "#5B4630", "old": None}),
+    "FIG-GRUPPE-BRUEDER-JESU": dict(mix="m", n=4, alike=True, color="#B8A27A", mantle=None, sash="#6A7A5A"),  # vier Brüder (Mk 6,3), gleicher Haarschnitt
     # Pharisäer: Gebetsmantel mit Streifen über den Schultern, Quasten und Gebetskapsel (Mt 23,5); Kopf frei, Bart
-    "FIG-GRUPPE-PHARISAEER": dict(mix="m", n=5, beards=True, every={"tallit": True, "tefillin": True, "veil": None, "hood": None, "front": "short"}),
-    "FIG-GRUPPE-SCHRIFTGELEHRTE": dict(mix="m", n=5, beards=True, hold={0: "an-a-rolle", 1: "an-a-rolle", 2: "an-a-rolle"}),
-    "FIG-GRUPPE-HOHER-RAT": dict(mix="m", n=5, beards=True, per=[{"breast": True, "mantle": None, "robe": "#4A5A7A"}, {"turban": None, "front": "short", "attr": "an-a-rolle"},
+    "FIG-GRUPPE-PHARISAEER": dict(mix="m", n=3, beards=True, every={"tallit": True, "tefillin": True, "veil": None, "hood": None, "front": "short"}),
+    "FIG-GRUPPE-SCHRIFTGELEHRTE": dict(mix="m", n=3, beards=True, hold={0: "an-a-rolle-feder"}),
+    "FIG-GRUPPE-HOHER-RAT": dict(mix="m", n=3, beards=True, per=[{"breast": True, "mantle": None, "robe": "#4A5A7A"}, {"turban": None, "front": "short", "attr": "an-a-rolle"},
                                                                {"old": True, "beard": "long", "turban": None, "front": "short"}]),
-    "FIG-GRUPPE-HOHEPRIESTER": dict(mix="m", n=4, beards=True),
-    "FIG-GRUPPE-PRIESTER": dict(mix="m", n=5),
-    "FIG-GRUPPE-SADDUZAEER": dict(mix="m", n=4, beards=True, every={"trim": "#D9A441"}),
-    "FIG-GRUPPE-OBERE": dict(mix="m", n=4, beards=True, every={"trim": "#D9A441", "old": True}),
-    "FIG-GRUPPE-AELTESTE": dict(mix="m", n=4, beards=True, every={"old": True}, hold={1: "an-a-stab"}),
-    "FIG-GRUPPE-HERODIANER": dict(mix="m", n=4, every={"trim": "#D9A441", "mantle": "#5E1F5A"}),
-    "FIG-GRUPPE-SOLDATEN": dict(mix="same", n=5),
-    "FIG-GRUPPE-ENGEL": dict(mix="same", n=5),
-    "FIG-GRUPPE-STERNDEUTER": dict(mix="m", n=3, beards=True),
-    "FIG-GRUPPE-GESCHWISTER": dict(mix="mf", n=5),
-    "FIG-GRUPPE-GLAUBENDE": dict(mix="mf", n=5, hold={0: "an-brot"}),  # Brot brechen (Apg 2,42)
-    "FIG-GRUPPE-GEGNER": dict(mix="m", n=4, every={"crossed": True}),
-    "FIG-GRUPPE-IRRLEHRER": dict(mix="m", n=4, hold={0: "an-a-rolle", 1: "an-a-rolle"}),
-    "FIG-GRUPPE-VERFUEHRER": dict(mix="m", n=4, beards=True, every={"cowl": True, "hood": None, "staff": True}),
-    "FIG-GRUPPE-REISENDE": dict(mix="m", n=4, beards=True, every={"cowl": True, "hood": None, "staff": True}),
-    "FIG-GRUPPE-GRIECHEN": dict(mix="m", n=4, every={"staff": True}),
-    "FIG-GRUPPE-DIENER": dict(mix="m", n=4, every={"apron": True}, hold={0: "an-jar"}),
-    "FIG-GRUPPE-ARBEITER": dict(mix="m", n=4, hold={0: "an-korb"}),
-    "FIG-GRUPPE-SCHNITTER": dict(mix="m", n=4, hold={0: "an-a-aehren", 1: "an-sichel"}),
-    "FIG-GRUPPE-WEINBAUERN": dict(mix="m", n=4, hold={0: "an-a-traube", 1: "an-a-traube"}),
-    "FIG-GRUPPE-FISCHER": dict(mix="m", n=4, hold={0: "an-a-netz"}),
-    "FIG-GRUPPE-SEELEUTE": dict(mix="m", n=4, every={"rope": True}),
-    "FIG-GRUPPE-ZOELLNER": dict(mix="m", n=4, hold={0: "an-a-muenzen", 1: "an-a-geldbeutel"}),
-    "FIG-GRUPPE-EINNEHMER": dict(mix="m", n=4, hold={0: "an-a-beutel", 1: "an-a-muenzen"}),
+    "FIG-GRUPPE-HOHEPRIESTER": dict(mix="m", n=3, beards=True),
+    "FIG-GRUPPE-PRIESTER": dict(mix="m", n=3),
+    "FIG-GRUPPE-SADDUZAEER": dict(mix="m", n=3, beards=True, color="#E7DCC4", mantle="#3E5A5A", every={"trim": "#D9A441", "turban": "#E8DCC0"}),
+    "FIG-GRUPPE-OBERE": dict(mix="m", n=3, beards=True, every={"trim": "#D9A441", "old": True}),
+    "FIG-GRUPPE-AELTESTE": dict(mix="m", n=3, beards=True, every={"old": True}, hold={0: "an-a-stab"}),
+    "FIG-GRUPPE-HERODIANER": dict(mix="m", n=3, color="#B8A98A", mantle="#6A2E5E", every={"trim": "#E0B040"}),
+    "FIG-GRUPPE-SOLDATEN": dict(mix="same", n=3),
+    "FIG-GRUPPE-ENGEL": dict(mix="same", n=3),
+    "FIG-GRUPPE-STERNDEUTER": dict(mix="m", n=3, beards=True, hold={0: "an-a-myrrhe"}),  # Geschenke (Mt 2,11)
+    "FIG-GRUPPE-GESCHWISTER": dict(mix="mf", n=3, color="#8E9AAF", mantle="#E2CDA8"),
+    "FIG-GRUPPE-GLAUBENDE": dict(mix="mf", n=3, color="#8E9AAF", mantle="#E2CDA8", hold={0: "an-brot"}),  # Brot brechen (Apg 2,42)
+    "FIG-GRUPPE-GEGNER": dict(mix="m", n=3, color="#6A6A6A", mantle=None),  # strenger Blick statt verschränkter Arme (wurden als gefesselt gelesen)
+    "FIG-GRUPPE-IRRLEHRER": dict(mix="m", n=3, hold={0: "an-a-rolle"}),
+    "FIG-GRUPPE-VERFUEHRER": dict(mix="m", n=3, beards=True, every={"cowl": True, "hood": None, "staff": True}),
+    "FIG-GRUPPE-REISENDE": dict(mix="m", n=3, beards=True, every={"cowl": True, "hood": None}, hold={0: "an-a-buendel"}),
+    # Griechen: bartlos, kurzes Haar, Gewand mit farbiger Borte (statt Wanderstab, wurden als Wanderer gelesen)
+    "FIG-GRUPPE-GRIECHEN": dict(mix="m", n=3, color="#E8E2D0", mantle="#7FA3B8", every={"beard": None, "mustache": None, "curls": None, "front": "short", "trim": "#3E6E9E"}),
+    "FIG-GRUPPE-DIENER": dict(mix="m", n=3, color="#D8C29A", mantle=None, every={"apron": True}, hold={0: "an-a-wasserkrug"}),
+    "FIG-GRUPPE-ARBEITER": dict(mix="m", n=3, color="#C9A060", mantle=None, hold={0: "an-korb"}),
+    "FIG-GRUPPE-SCHNITTER": dict(mix="m", n=3, hold={0: "an-a-aehren"}),
+    "FIG-GRUPPE-WEINBAUERN": dict(mix="m", n=3, hold={0: "an-a-traube"}),
+    "FIG-GRUPPE-FISCHER": dict(mix="m", n=3, hold={0: "an-a-netz"}),
+    "FIG-GRUPPE-SEELEUTE": dict(mix="m", n=3, color="#2F4F6F", mantle=None, every={"rope": True}),
+    "FIG-GRUPPE-ZOELLNER": dict(mix="m", n=3, hold={0: "an-a-geldbeutel"}),
+    "FIG-GRUPPE-EINNEHMER": dict(mix="m", n=3, hold={0: "an-a-beutel"}),
     "FIG-GRUPPE-TRAEGER": dict(mix="m", n=4, back="matte"),  # vier Männer (Mk 2,3), Matte vorn
-    "FIG-GRUPPE-KRANKE": dict(mix="mf", n=4, back="matte", per=[{"bandage": True}, {"staff": True}, {}, {"old": True}]),
-    "FIG-GRUPPE-ARME": dict(mix="mf", n=4, every={"patches": True, "mantle": None}, hold={0: "an-a-zwei-muenzen"}),
-    "FIG-GRUPPE-GAESTE": dict(mix="mf", n=5, hold={0: "an-becher", 1: "an-becher"}),
-    "FIG-GRUPPE-FRAUEN": dict(mix="f", n=4),
-    "FIG-GRUPPE-JUNGFRAUEN-KLUG": dict(mix="f", n=5, young=True, hold={i: "an-a-lampe" for i in range(5)}),  # brennende Lampen (Mt 25,4)
-    "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": dict(mix="f", n=5, young=True, hold={i: "an-a-g-lampe-aus" for i in range(5)}),  # ohne Öl (Mt 25,8)
-    "FIG-GRUPPE-KINDER": dict(mix="c", n=5),
-    "FIG-GRUPPE-KINDER-DER-SCHWESTER": dict(mix="c", n=4),
-    "FIG-GRUPPE-EDOM": dict(mix="mf", n=4, back="fels"),  # Felsenwohnungen (Obd 3)
+    "FIG-GRUPPE-KRANKE": dict(mix="mf", n=3, back="matte", per=[{"bandage": True}, {}, {"old": True}]),
+    "FIG-GRUPPE-ARME": dict(mix="mf", n=3, every={"patches": True, "mantle": None}, hold={0: "an-a-zwei-muenzen"}),
+    "FIG-GRUPPE-GAESTE": dict(mix="mf", n=3, hold={0: "an-becher"}),
+    "FIG-GRUPPE-FRAUEN": dict(mix="f", n=3),
+    "FIG-GRUPPE-JUNGFRAUEN-KLUG": dict(mix="f", n=3, young=True, hold={i: "an-a-lampe" for i in range(3)}),  # brennende Lampen (Mt 25,4)
+    "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": dict(mix="f", n=3, young=True, hold={i: "an-a-g-lampe-aus" for i in range(3)}),  # ohne Öl (Mt 25,8)
+    "FIG-GRUPPE-KINDER": dict(mix="c", n=3),
+    "FIG-GRUPPE-KINDER-DER-SCHWESTER": dict(mix="c", n=3),
+    "FIG-GRUPPE-EDOM": dict(mix="mf", n=3, back="fels"),  # Felsenwohnungen (Obd 3)
 }
+GROUP_EXPR = {"FIG-GRUPPE-GEGNER": "angry"}
 G_HAIR = ["#2E2017", "#4A3020", "#24180F", "#5A4030", "#3A2618", "#1E1610"]
 G_VEIL = ["#E2CDA8", "#C9B48E", "#B9A7C4", "#D8CBB0", "#A8B8A0"]
 # Rollen der Mitglieder je Mischung (Index 0 = vorn); m = Mann, m2 = andere Bartform, o = alt, y = jung, f = Frau, fo = alte Frau, c = Kind
@@ -514,6 +521,10 @@ def group_members(fid, n):
             c.pop(a, None) if v is None else c.__setitem__(a, v)
         if c.get("front") == "short":
             c["front"] = _fg.FRONT["short"]
+        if sp.get("color"):  # eine Gruppenfarbe für alle
+            c["robe"] = sp["color"]
+            c.pop("sash", None) if not sp.get("sash") else c.__setitem__("sash", sp["sash"])
+            c.pop("mantle", None) if sp.get("mantle") is None else c.__setitem__("mantle", sp["mantle"])
         r = roles[i % len(roles)]
         female_base = c.get("female")
         if r in ("f", "fo", "cf") and not female_base:
@@ -583,8 +594,8 @@ def group_members(fid, n):
 G_LAYOUT = {
     6: [(0, 0, 1), (-21, -5, .8), (21, -5, .8), (-26, -16, .64), (0, -20, .64), (26, -16, .64)],
     5: [(0, 0, 1), (-22, -5, .82), (22, -5, .82), (-12, -17, .66), (12, -17, .66)],
-    4: [(0, 0, 1), (-22, -5, .82), (22, -5, .82), (0, -19, .68)],
-    3: [(0, 0, 1), (-20, -4, .84), (20, -4, .84)],
+    4: [(0, 0, 1), (-19, -5, .84), (19, -5, .84), (0, -17, .7)],
+    3: [(0, 0, 1), (-17, -4, .86), (17, -4, .86)],
 }
 # in Szenen schmaler (gleiche Breite wie früher die Dreiergruppe), höchstens fünf Köpfe
 G_LAYOUT_SCENE = {
@@ -604,7 +615,7 @@ def group_svg(fid, x, y, s, n, expr="calm", look=0.0, arm=None, flip=False, tear
     o = []
     if sp.get("ghosts"):  # Menge: weitere Köpfe nur als Umriss dahinter
         for dx in ((-20, -7, 7, 20) if scene else (-34, -12, 12, 34)):
-            gx, gy, gs = x + dx * s, y - 22 * s - (3 if abs(dx) < 20 else 0) * s, .5 * s
+            gx, gy, gs = x + dx * s, y - (22 if scene else 15) * s - (3 if abs(dx) < 20 else 0) * s, .5 * s
             o.append(f'<g transform="translate({gx:.1f} {gy:.1f}) scale({gs:.3g})" opacity=".5"><circle r="10" fill="#B8A98A" stroke="{INK}" stroke-width=".8"/>'
                      f'<path d="M-17 40V30Q-17 17-7 14h14q10 3 10 16v10z" fill="#B8A98A" stroke="{INK}" stroke-width=".8"/></g>')
     order = sorted(range(n), key=lambda i: (lay[i][2], i))  # hinten (klein) zuerst
@@ -613,7 +624,10 @@ def group_svg(fid, x, y, s, n, expr="calm", look=0.0, arm=None, flip=False, tear
         front = i == 0
         hd = hold if (front and hold) else CHAR[keys[i]].get("attr")
         lk = look if front else look * .6 + (.5 if dx < 0 else -.5)
-        fig = person(keys[i], x + dx * s, y + dy * s, s * k, expr, lk, arm if front else None, flip, tears, hd, ext_front if front else ext)
+        if not front and hd and not hd.startswith("an-a-"):
+            hd = None  # Gegenstände nur bei der vorderen Figur (sonst klein und unleserlich)
+        fig = person(keys[i], x + dx * s, y + dy * s, s * k, expr, lk, arm if front else None, flip, tears, hd, ext_front if front else ext,
+                     big=front and not scene)
         o.append(fig)
     return "".join(o)
 
@@ -630,10 +644,12 @@ def group_back(fid, w, h):
 
 def group_front(fid, w, h):
     b = GROUP_SPEC.get(fid, {}).get("back")
-    if b == "matte":  # Matte bzw. Trage vorn (Mk 2,3-4; Joh 5,3)
-        return (f'<path d="M1 {h - 5.5}h{w - 2}" stroke="#7A5A34" stroke-width="1.6" stroke-linecap="round"/>'
-                f'<path d="M5 {h - 7}h{w - 10}v4.4H5z" fill="#C9B48E" stroke="{INK}" stroke-width=".6"/>'
-                + "".join(f'<path d="M{x} {h - 7}v4.4" stroke="#A79A80" stroke-width=".5"/>' for x in range(9, w - 6, 4)))
+    if b == "matte":  # Liegematte vorn (Mk 2,3-4; Joh 5,3): Strohgeflecht mit Fransen, leicht durchhängend (vorher als Brett/Rolle gelesen)
+        y0 = h - 9
+        weave = "".join(f'<path d="M{x} {y0 + 1.2}l2 2.6-2 2.6" fill="none" stroke="#9A7E4E" stroke-width=".5"/>' for x in range(7, w - 7, 3))
+        fr = "".join(f'<path d="M{x} {y0 + 6.6}l-.4 1.8" stroke="#9A7E4E" stroke-width=".5"/>' for x in range(6, w - 5, 2))
+        return (f'<path d="M4 {y0}Q{w / 2} {y0 + 2.4} {w - 4} {y0}v6.6Q{w / 2} {y0 + 9} 4 {y0 + 6.6}z" fill="#E2C98E" stroke="{INK}" stroke-width=".6"/>'
+                + weave + fr)
     return ""
 
 
@@ -1067,7 +1083,7 @@ def library():
             n = GROUP_SPEC.get(fid, {}).get("n", 5)
             kids = GROUP_SPEC.get(fid, {}).get("mix") == "c"
             parts.append(f'<symbol id="an-p-{key}-gruppe" viewBox="0 0 54 50">{group_back(fid, 54, 50)}'
-                         f'{group_svg(fid, 27, 27 if kids else 29, .8 if kids else .72, n, "calm", 0, ext=14, ext_front=6)}{group_front(fid, 54, 50)}</symbol>')
+                         f'{group_svg(fid, 27, 22 if kids else 21, (.86 if kids else .8) if n <= 3 else .74, n, GROUP_EXPR.get(fid, "calm"), 0, ext=14, ext_front=6)}{group_front(fid, 54, 50)}</symbol>')
             vb[fid] = (f"an-p-{key}-gruppe", "0 0 54 50")
     parts.append(f'<symbol id="an-jesus-kopf" viewBox="0 0 34 34"><g transform="translate(17 17)">{head_inner("jesus", "calm")}</g></symbol>')
     parts.append(f'<symbol id="an-p-meister-kopf" viewBox="0 0 28 30"><g transform="translate(14 15)">{head_inner("meister", "calm")}</g></symbol>')
