@@ -11,19 +11,24 @@
   "panels": [
     {
       "n": 1,
-      "reference": "TIT.3.1-TIT.3.7",
+      "reference": "TIT.3.4-TIT.3.7",
       "figures": [
         "FIG-GOTT",
         "FIG-HEILIGER-GEIST",
         "FIG-GRUPPE-GLAUBENDE"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-ORT-TEICH"
+      ],
       "signs": [
-        "FIG-ZEICHEN-ERBARMEN",
-        "FIG-ZEICHEN-FREUDE"
+        "FIG-ZEICHEN-ERBARMEN"
       ],
       "speech": [],
-      "action_de": "Die Glaubenden sollen allen Menschen freundlich begegnen, weil Gott sie nicht wegen ihrer Werke, sondern aus Erbarmen gerettet hat.",
+      "action_de": "Als die Güte und Menschenfreundlichkeit Gottes erschien, hat er uns nicht wegen unserer Werke, sondern aus Erbarmen gerettet durch das Bad der Wiedergeburt und die Erneuerung des heiligen Geistes, damit wir Erben werden gemäss der Hoffnung auf ewiges Leben.",
+      "keywords": {
+        "de": "Bad der Wiedergeburt",
+        "gsw": "Bad vo de Widergeburt"
+      },
       "stage": {
         "arrows": [
           [
@@ -32,115 +37,119 @@
             "act"
           ]
         ],
-        "at": {
-          "FIG-ZEICHEN-ERBARMEN": "FIG-GRUPPE-GLAUBENDE"
-        },
         "god_side": "left",
-        "x": {
-          "FIG-GRUPPE-GLAUBENDE": 120
+        "air_x": 138,
+        "air_y": 18,
+        "in_water": true,
+        "sea": "calm",
+        "mood": {
+          "FIG-GRUPPE-GLAUBENDE": "delight"
         }
       }
     },
     {
       "n": 2,
-      "reference": "TIT.3.8-TIT.3.11",
-      "figures": [
-        "FIG-GRUPPE-GLAUBENDE",
-        "FIG-GRUPPE-MENGE"
-      ],
-      "objects": [
-        "FIG-OBJ-BROT"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-GUTE-WERKE"
-      ],
-      "speech": [],
-      "action_de": "Die zum Glauben gekommen sind, sollen sich für gute Werke einsetzen; das ist gut und nützlich für die Menschen.",
-      "stage": {
-        "hold": {
-          "FIG-GRUPPE-GLAUBENDE": "FIG-OBJ-BROT"
-        },
-        "arrows": [
-          [
-            "FIG-GRUPPE-GLAUBENDE",
-            "FIG-GRUPPE-MENGE",
-            "act"
-          ]
-        ],
-        "at": {
-          "FIG-ZEICHEN-GUTE-WERKE": "FIG-GRUPPE-GLAUBENDE"
-        },
-        "mood": {
-          "FIG-GRUPPE-GLAUBENDE": "smile",
-          "FIG-GRUPPE-MENGE": "smile"
-        },
-        "wear": {
-          "FIG-GRUPPE-MENGE": "#8A7A6A"
-        }
-      }
-    },
-    {
-      "n": 3,
-      "reference": "TIT.3.12-TIT.3.15",
+      "reference": "TIT.3.8",
       "figures": [
         "FIG-PAULUS",
-        "FIG-ROLLE-BOTE",
         "FIG-TITUS"
       ],
-      "objects": [
-        "FIG-ORT-STADT"
-      ],
+      "objects": [],
       "signs": [],
       "speech": [
         {
           "from": "FIG-PAULUS",
           "to": "FIG-TITUS",
           "icons": [
-            "FIG-TITUS",
-            "FIG-ZEICHEN-BRINGEN",
-            "FIG-ORT-STADT",
-            "FIG-ZEICHEN-WINTER"
-          ]
+            "FIG-GRUPPE-GLAUBENDE",
+            "FIG-ZEICHEN-GUTE-WERKE"
+          ],
+          "word": {
+            "de": "gute Werke",
+            "gsw": "gueti Wärch"
+          }
         }
       ],
-      "action_de": "Paulus will Artemas oder Tychikus zu Titus schicken; dann soll Titus schnell zu ihm nach Nikopolis kommen, wo Paulus überwintern will.",
+      "action_de": "Paulus bekräftigt das zuverlässige Wort und will, dass Titus fest auftritt, damit die Glaubenden sich für gute Werke einsetzen.",
+      "keywords": {
+        "de": "Zuverlässig ist das Wort",
+        "gsw": "Zueverlässig isch s Wort"
+      },
+      "names": {
+        "FIG-PAULUS": {
+          "de": "Paulus",
+          "gsw": "Paulus"
+        },
+        "FIG-TITUS": {
+          "de": "Titus",
+          "gsw": "Titus"
+        }
+      },
+      "letter": true,
       "stage": {
-        "arrows": [
-          [
-            "FIG-ROLLE-BOTE",
-            "FIG-TITUS",
-            "go"
-          ]
-        ],
-        "back_side": "left",
-        "before": true,
         "mood": {
-          "FIG-TITUS": "calm",
-          "FIG-PAULUS": "calm"
+          "FIG-PAULUS": "earnest",
+          "FIG-TITUS": "determined"
+        }
+      }
+    },
+    {
+      "n": 3,
+      "reference": "TIT.3.13-TIT.3.14",
+      "figures": [
+        "FIG-PAULUS",
+        "FIG-TITUS"
+      ],
+      "objects": [],
+      "signs": [],
+      "speech": [
+        {
+          "from": "FIG-PAULUS",
+          "to": "FIG-TITUS",
+          "icons": [
+            "FIG-ZENAS",
+            "FIG-APOLLOS"
+          ],
+          "word": {
+            "de": "für die Reise",
+            "gsw": "für d Reis"
+          }
+        }
+      ],
+      "action_de": "Titus soll Zenas und Apollos sorgfältig für die Reise ausrüsten, damit ihnen nichts fehlt; auch die Glaubenden sollen lernen, sich für gute Werke einzusetzen, damit sie nicht ohne Frucht sind.",
+      "keywords": {
+        "de": "nicht ohne Frucht",
+        "gsw": "nöd ohni Frucht"
+      },
+      "letter": true,
+      "stage": {
+        "mood": {
+          "FIG-PAULUS": "earnest",
+          "FIG-TITUS": "calm"
         }
       }
     }
   ],
   "actions_de": [
-    "Die Glaubenden sollen allen Menschen freundlich begegnen, weil Gott sie nicht wegen ihrer Werke, sondern aus Erbarmen gerettet hat.",
-    "Die zum Glauben gekommen sind, sollen sich für gute Werke einsetzen; das ist gut und nützlich für die Menschen.",
-    "Paulus will Artemas oder Tychikus zu Titus schicken; dann soll Titus schnell zu ihm nach Nikopolis kommen, wo Paulus überwintern will."
+    "Als die Güte und Menschenfreundlichkeit Gottes erschien, hat er uns nicht wegen unserer Werke, sondern aus Erbarmen gerettet durch das Bad der Wiedergeburt und die Erneuerung des heiligen Geistes, damit wir Erben werden gemäss der Hoffnung auf ewiges Leben.",
+    "Paulus bekräftigt das zuverlässige Wort und will, dass Titus fest auftritt, damit die Glaubenden sich für gute Werke einsetzen.",
+    "Titus soll Zenas und Apollos sorgfältig für die Reise ausrüsten, damit ihnen nichts fehlt; auch die Glaubenden sollen lernen, sich für gute Werke einzusetzen, damit sie nicht ohne Frucht sind."
   ],
   "captions_de": [
-    "Gottes Erbarmen → Rettung: Gott (Strahlenkranz, goldener Pfeil) rettet aus Erbarmen (Herz in Händen); der Geist (Taube) kommt herab; die Glaubenden freuen sich (Funken).",
-    "Gute Werke → Menschen: Die Glaubenden geben anderen Menschen Brot (Pfeil); Zeichen für gute Werke (Hand mit Brot).",
-    "Reisepläne: Paulus schickt einen Boten mit Brief (Artemas oder Tychikus) zu Titus (Pfeil); Titus soll in die Stadt kommen, wo Paulus überwintert (Titus, Pfeil, Stadt, Schneeflocke)."
+    "Gottes Erbarmen → Rettung: Gott (Strahlenkranz, goldener Pfeil) rettet aus Erbarmen (Herz in Händen); die Glaubenden stehen im Wasser (Bad), der Geist (Taube) kommt herab.",
+    "Auftrag an Titus – gute Werke: Paulus schreibt Titus, die Glaubenden (Gruppe) sollen sich für «gute Werke» einsetzen (Hand mit Brot).",
+    "Auftrag an Titus – ausrüsten: Paulus schreibt Titus: Zenas und Apollos (zwei Männer in der Sprechblase) «für die Reise» ausrüsten."
   ],
-  "interpretation_note_de": "Je ein Feld aus den drei Abschnitten des Kapitels; Einzelheiten dort.",
+  "interpretation_note_de": "Je ein Moment aus den drei Abschnitten des Kapitels nach der Kernanalyse: Rettung aus Erbarmen, gute Werke, Ausrüsten der Reisenden. Titus ist ein Brief: Was Paulus verlangt, ist Auftrag, nicht erzählte Tatsache; solche Felder haben einen gestrichelten Briefrand, einen Brief im Stichwortband, und das Verlangte steht als Kernwort mit Zeichen in der Sprechblase des Paulus.",
   "basis": [
     {
       "record": "SUM-CH-TIT-003",
       "field": "summary",
-      "fingerprint": "0ac484e49bddb47c"
+      "fingerprint": "42ee96104b54696e"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -273,10 +282,556 @@
           "Reisepläne: Paulus schickt einen Boten mit Brief (Artemas oder Tychikus) zu Titus (Pfeil); Titus soll in die Stadt kommen, wo Paulus überwintert (Titus, Pfeil, Stadt, Schneeflocke)."
         ]
       }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "TIT.3.1-TIT.3.7",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-HEILIGER-GEIST",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-ERBARMEN",
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [],
+            "action_de": "Die Glaubenden sollen allen Menschen freundlich begegnen, weil Gott sie nicht wegen ihrer Werke, sondern aus Erbarmen gerettet hat.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-GLAUBENDE",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-ERBARMEN": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "god_side": "left",
+              "x": {
+                "FIG-GRUPPE-GLAUBENDE": 120
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "TIT.3.8-TIT.3.11",
+            "figures": [
+              "FIG-GRUPPE-GLAUBENDE",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-GUTE-WERKE"
+            ],
+            "speech": [],
+            "action_de": "Die zum Glauben gekommen sind, sollen sich für gute Werke einsetzen; das ist gut und nützlich für die Menschen.",
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-GLAUBENDE": "FIG-OBJ-BROT"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-GLAUBENDE",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-GUTE-WERKE": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "smile",
+                "FIG-GRUPPE-MENGE": "smile"
+              },
+              "wear": {
+                "FIG-GRUPPE-MENGE": "#8A7A6A"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "TIT.3.12-TIT.3.15",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-ROLLE-BOTE",
+              "FIG-TITUS"
+            ],
+            "objects": [
+              "FIG-ORT-STADT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-TITUS",
+                  "FIG-ZEICHEN-BRINGEN",
+                  "FIG-ORT-STADT",
+                  "FIG-ZEICHEN-WINTER"
+                ]
+              }
+            ],
+            "action_de": "Paulus will Artemas oder Tychikus zu Titus schicken; dann soll Titus schnell zu ihm nach Nikopolis kommen, wo Paulus überwintern will.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-ROLLE-BOTE",
+                  "FIG-TITUS",
+                  "go"
+                ]
+              ],
+              "back_side": "left",
+              "before": true,
+              "mood": {
+                "FIG-TITUS": "calm",
+                "FIG-PAULUS": "calm"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Die Glaubenden sollen allen Menschen freundlich begegnen, weil Gott sie nicht wegen ihrer Werke, sondern aus Erbarmen gerettet hat.",
+          "Die zum Glauben gekommen sind, sollen sich für gute Werke einsetzen; das ist gut und nützlich für die Menschen.",
+          "Paulus will Artemas oder Tychikus zu Titus schicken; dann soll Titus schnell zu ihm nach Nikopolis kommen, wo Paulus überwintern will."
+        ],
+        "captions_de": [
+          "Gottes Erbarmen → Rettung: Gott (Strahlenkranz, goldener Pfeil) rettet aus Erbarmen (Herz in Händen); der Geist (Taube) kommt herab; die Glaubenden freuen sich (Funken).",
+          "Gute Werke → Menschen: Die Glaubenden geben anderen Menschen Brot (Pfeil); Zeichen für gute Werke (Hand mit Brot).",
+          "Reisepläne: Paulus schickt einen Boten mit Brief (Artemas oder Tychikus) zu Titus (Pfeil); Titus soll in die Stadt kommen, wo Paulus überwintert (Titus, Pfeil, Stadt, Schneeflocke)."
+        ],
+        "interpretation_note_de": "Je ein Feld aus den drei Abschnitten des Kapitels; Einzelheiten dort.",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "TIT.3.4-TIT.3.7",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-HEILIGER-GEIST",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [
+              "FIG-ORT-TEICH"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ERBARMEN"
+            ],
+            "speech": [],
+            "action_de": "Als die Güte und Menschenfreundlichkeit Gottes erschien, hat er uns nicht wegen unserer Werke, sondern aus Erbarmen gerettet durch das Bad der Wiedergeburt und die Erneuerung des heiligen Geistes, damit wir Erben werden gemäss der Hoffnung auf ewiges Leben.",
+            "keywords": {
+              "de": "Bad der Wiedergeburt",
+              "gsw": "Bad vo de Widergeburt"
+            },
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-GLAUBENDE",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-ERBARMEN": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "god_side": "left",
+              "in_water": true,
+              "sea": "calm",
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "delight"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "TIT.3.8",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TITUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-GRUPPE-GLAUBENDE",
+                  "FIG-ZEICHEN-GUTE-WERKE"
+                ],
+                "word": {
+                  "de": "gute Werke",
+                  "gsw": "gueti Wärch"
+                }
+              }
+            ],
+            "action_de": "Paulus bekräftigt das zuverlässige Wort und will, dass Titus fest auftritt, damit die Glaubenden sich für gute Werke einsetzen.",
+            "keywords": {
+              "de": "Zuverlässig ist das Wort",
+              "gsw": "Zueverlässig isch s Wort"
+            },
+            "names": {
+              "FIG-PAULUS": {
+                "de": "Paulus",
+                "gsw": "Paulus"
+              },
+              "FIG-TITUS": {
+                "de": "Titus",
+                "gsw": "Titus"
+              }
+            },
+            "letter": true,
+            "stage": {
+              "mood": {
+                "FIG-PAULUS": "earnest",
+                "FIG-TITUS": "determined"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "TIT.3.13-TIT.3.14",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TITUS",
+              "FIG-ZENAS",
+              "FIG-APOLLOS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-ZEICHEN-GUTE-WERKE"
+                ],
+                "word": {
+                  "de": "für die Reise",
+                  "gsw": "für d Reis"
+                }
+              }
+            ],
+            "action_de": "Titus soll Zenas und Apollos sorgfältig für die Reise ausrüsten, damit ihnen nichts fehlt; auch die Glaubenden sollen lernen, sich für gute Werke einzusetzen, damit sie nicht ohne Frucht sind.",
+            "keywords": {
+              "de": "nicht ohne Frucht",
+              "gsw": "nöd ohni Frucht"
+            },
+            "names": {
+              "FIG-ZENAS": {
+                "de": "Zenas",
+                "gsw": "Zenas"
+              },
+              "FIG-APOLLOS": {
+                "de": "Apollos",
+                "gsw": "Apollos"
+              }
+            },
+            "letter": true,
+            "stage": {
+              "mood": {
+                "FIG-PAULUS": "earnest",
+                "FIG-TITUS": "calm",
+                "FIG-ZENAS": "smile",
+                "FIG-APOLLOS": "smile"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Gottes Erbarmen → Rettung: Gott (Strahlenkranz, goldener Pfeil) rettet aus Erbarmen (Herz in Händen); die Glaubenden stehen im Wasser (Bad), der Geist (Taube) kommt herab.",
+          "Auftrag an Titus – gute Werke: Paulus schreibt Titus, die Glaubenden (Gruppe) sollen sich für «gute Werke» einsetzen (Hand mit Brot).",
+          "Auftrag an Titus – ausrüsten: Paulus schreibt Titus: Zenas und Apollos (rechts) «für die Reise» ausrüsten – gute Werke (Hand mit Brot)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "TIT.3.4-TIT.3.7",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-HEILIGER-GEIST",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [
+              "FIG-ORT-TEICH"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ERBARMEN"
+            ],
+            "speech": [],
+            "action_de": "Als die Güte und Menschenfreundlichkeit Gottes erschien, hat er uns nicht wegen unserer Werke, sondern aus Erbarmen gerettet durch das Bad der Wiedergeburt und die Erneuerung des heiligen Geistes, damit wir Erben werden gemäss der Hoffnung auf ewiges Leben.",
+            "keywords": {
+              "de": "Bad der Wiedergeburt",
+              "gsw": "Bad vo de Widergeburt"
+            },
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-GLAUBENDE",
+                  "act"
+                ]
+              ],
+              "beside": {
+                "FIG-ZEICHEN-ERBARMEN": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "god_side": "left",
+              "in_water": true,
+              "sea": "calm",
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "delight"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "TIT.3.8",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TITUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-GRUPPE-GLAUBENDE",
+                  "FIG-ZEICHEN-GUTE-WERKE"
+                ],
+                "word": {
+                  "de": "gute Werke",
+                  "gsw": "gueti Wärch"
+                }
+              }
+            ],
+            "action_de": "Paulus bekräftigt das zuverlässige Wort und will, dass Titus fest auftritt, damit die Glaubenden sich für gute Werke einsetzen.",
+            "keywords": {
+              "de": "Zuverlässig ist das Wort",
+              "gsw": "Zueverlässig isch s Wort"
+            },
+            "names": {
+              "FIG-PAULUS": {
+                "de": "Paulus",
+                "gsw": "Paulus"
+              },
+              "FIG-TITUS": {
+                "de": "Titus",
+                "gsw": "Titus"
+              }
+            },
+            "letter": true,
+            "stage": {
+              "mood": {
+                "FIG-PAULUS": "earnest",
+                "FIG-TITUS": "determined"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "TIT.3.13-TIT.3.14",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TITUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-ZENAS",
+                  "FIG-APOLLOS"
+                ],
+                "word": {
+                  "de": "für die Reise",
+                  "gsw": "für d Reis"
+                }
+              }
+            ],
+            "action_de": "Titus soll Zenas und Apollos sorgfältig für die Reise ausrüsten, damit ihnen nichts fehlt; auch die Glaubenden sollen lernen, sich für gute Werke einzusetzen, damit sie nicht ohne Frucht sind.",
+            "keywords": {
+              "de": "nicht ohne Frucht",
+              "gsw": "nöd ohni Frucht"
+            },
+            "letter": true,
+            "stage": {
+              "mood": {
+                "FIG-PAULUS": "earnest",
+                "FIG-TITUS": "calm"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "TIT.3.4-TIT.3.7",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-HEILIGER-GEIST",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [
+              "FIG-ORT-TEICH"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ERBARMEN"
+            ],
+            "speech": [],
+            "action_de": "Als die Güte und Menschenfreundlichkeit Gottes erschien, hat er uns nicht wegen unserer Werke, sondern aus Erbarmen gerettet durch das Bad der Wiedergeburt und die Erneuerung des heiligen Geistes, damit wir Erben werden gemäss der Hoffnung auf ewiges Leben.",
+            "keywords": {
+              "de": "Bad der Wiedergeburt",
+              "gsw": "Bad vo de Widergeburt"
+            },
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-GLAUBENDE",
+                  "act"
+                ]
+              ],
+              "god_side": "left",
+              "in_water": true,
+              "sea": "calm",
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "delight"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "TIT.3.8",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TITUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-GRUPPE-GLAUBENDE",
+                  "FIG-ZEICHEN-GUTE-WERKE"
+                ],
+                "word": {
+                  "de": "gute Werke",
+                  "gsw": "gueti Wärch"
+                }
+              }
+            ],
+            "action_de": "Paulus bekräftigt das zuverlässige Wort und will, dass Titus fest auftritt, damit die Glaubenden sich für gute Werke einsetzen.",
+            "keywords": {
+              "de": "Zuverlässig ist das Wort",
+              "gsw": "Zueverlässig isch s Wort"
+            },
+            "names": {
+              "FIG-PAULUS": {
+                "de": "Paulus",
+                "gsw": "Paulus"
+              },
+              "FIG-TITUS": {
+                "de": "Titus",
+                "gsw": "Titus"
+              }
+            },
+            "letter": true,
+            "stage": {
+              "mood": {
+                "FIG-PAULUS": "earnest",
+                "FIG-TITUS": "determined"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "TIT.3.13-TIT.3.14",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TITUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-ZENAS",
+                  "FIG-APOLLOS"
+                ],
+                "word": {
+                  "de": "für die Reise",
+                  "gsw": "für d Reis"
+                }
+              }
+            ],
+            "action_de": "Titus soll Zenas und Apollos sorgfältig für die Reise ausrüsten, damit ihnen nichts fehlt; auch die Glaubenden sollen lernen, sich für gute Werke einzusetzen, damit sie nicht ohne Frucht sind.",
+            "keywords": {
+              "de": "nicht ohne Frucht",
+              "gsw": "nöd ohni Frucht"
+            },
+            "letter": true,
+            "stage": {
+              "mood": {
+                "FIG-PAULUS": "earnest",
+                "FIG-TITUS": "calm"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Bild neu aus der Kernanalyse (Worte im Bild)",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-TIT-003",
+            "field": "summary",
+            "fingerprint": "0ac484e49bddb47c"
+          }
+        ],
+        "rework": {
+          "since": "2026-10-23",
+          "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
+        }
+      }
     }
-  ],
-  "rework": {
-    "since": "2026-10-23",
-    "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
-  }
+  ]
 }

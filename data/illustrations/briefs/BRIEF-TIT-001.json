@@ -11,7 +11,7 @@
   "panels": [
     {
       "n": 1,
-      "reference": "TIT.1.1-TIT.1.4",
+      "reference": "TIT.1.4",
       "figures": [
         "FIG-PAULUS",
         "FIG-TITUS"
@@ -19,132 +19,151 @@
       "objects": [
         "FIG-OBJ-BRIEF"
       ],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-ABSTAND"
+      ],
       "speech": [
         {
           "from": "FIG-PAULUS",
           "to": "FIG-TITUS",
-          "icons": [
-            "FIG-ZEICHEN-GNADE",
-            "FIG-ZEICHEN-FRIEDE",
-            "FIG-GOTT",
-            "FIG-JESUS"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Gnade und Friede",
+            "gsw": "Gnad und Fride"
+          }
         }
       ],
-      "action_de": "Paulus schreibt an Titus, sein echtes Kind im gemeinsamen Glauben, und wünscht ihm Gnade und Frieden von Gott, dem Vater, und von Christus Jesus.",
-      "stage": {
-        "arrows": [
-          [
-            "FIG-PAULUS",
-            "FIG-TITUS",
-            "act"
-          ]
-        ],
-        "mood": {
-          "FIG-TITUS": "smile",
-          "FIG-PAULUS": "smile"
+      "action_de": "Paulus richtet den Brief an Titus, sein echtes Kind im gemeinsamen Glauben, und wünscht ihm Gnade und Friede von Gott, dem Vater, und von Christus Jesus.",
+      "keywords": {
+        "de": "mein echtes Kind",
+        "gsw": "mim ächte Chind"
+      },
+      "names": {
+        "FIG-PAULUS": {
+          "de": "Paulus",
+          "gsw": "Paulus"
         },
+        "FIG-TITUS": {
+          "de": "Titus",
+          "gsw": "Titus"
+        }
+      },
+      "letter": true,
+      "stage": {
         "hold": {
-          "FIG-PAULUS": "FIG-OBJ-BRIEF"
+          "FIG-TITUS": "FIG-OBJ-BRIEF"
+        },
+        "split": 1,
+        "mood": {
+          "FIG-PAULUS": "smile",
+          "FIG-TITUS": "smile"
         }
       }
     },
     {
       "n": 2,
-      "reference": "TIT.1.5-TIT.1.9",
+      "reference": "TIT.1.5",
       "figures": [
-        "FIG-TITUS",
-        "FIG-ROLLE-AELTESTER"
+        "FIG-PAULUS",
+        "FIG-TITUS"
       ],
       "objects": [
-        "FIG-ORT-STADT",
-        "FIG-OBJ-SCHRIFTROLLE"
+        "FIG-ORT-STADT"
       ],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-ABSTAND"
+      ],
       "speech": [
         {
-          "from": "FIG-TITUS",
-          "to": "FIG-ROLLE-AELTESTER",
+          "from": "FIG-PAULUS",
+          "to": "FIG-TITUS",
           "icons": [
-            "FIG-OBJ-SCHRIFTROLLE",
-            "FIG-GRUPPE-GLAUBENDE"
-          ]
+            "FIG-ROLLE-AELTESTER",
+            "FIG-ORT-STADT"
+          ],
+          "word": {
+            "de": "Älteste",
+            "gsw": "Ältischte"
+          }
         }
       ],
-      "action_de": "Titus soll in den Städten Kretas Älteste einsetzen, die untadelig leben und sich an das zuverlässige Wort halten, um die Gemeinde mit gesunder Lehre zu ermahnen.",
+      "action_de": "Paulus hat Titus in Kreta zurückgelassen, damit er in Ordnung bringt, was noch fehlt, und in jeder Stadt Älteste einsetzt.",
+      "keywords": {
+        "de": "in Kreta zurückgelassen",
+        "gsw": "z Kreta zrugglaa"
+      },
+      "letter": true,
       "stage": {
-        "arrows": [
-          [
-            "FIG-TITUS",
-            "FIG-ROLLE-AELTESTER",
-            "act"
-          ]
-        ],
-        "hold": {
-          "FIG-ROLLE-AELTESTER": "FIG-OBJ-SCHRIFTROLLE"
-        },
+        "split": 1,
         "back_side": "right",
-        "x": {
-          "FIG-TITUS": 30,
-          "FIG-ROLLE-AELTESTER": 78
-        },
         "mood": {
-          "FIG-TITUS": "calm"
-        },
-        "pose": {
-          "FIG-ROLLE-AELTESTER": "sit"
+          "FIG-PAULUS": "earnest",
+          "FIG-TITUS": "determined"
         }
       }
     },
     {
       "n": 3,
-      "reference": "TIT.1.10-TIT.1.16",
+      "reference": "TIT.1.16",
       "figures": [
-        "FIG-TITUS",
-        "FIG-GRUPPE-IRRLEHRER"
+        "FIG-GRUPPE-IRRLEHRER",
+        "FIG-GRUPPE-GLAUBENDE"
       ],
       "objects": [],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-NICHT",
+        "FIG-ZEICHEN-GUTE-WERKE"
+      ],
       "speech": [
         {
-          "from": "FIG-TITUS",
-          "to": "FIG-GRUPPE-IRRLEHRER",
+          "from": "FIG-GRUPPE-IRRLEHRER",
+          "to": "FIG-GRUPPE-GLAUBENDE",
           "icons": [
-            "FIG-ZEICHEN-WARNEN",
-            "FIG-ZEICHEN-GLAUBEN"
-          ]
+            "FIG-ZEICHEN-NAME-GOTTES"
+          ],
+          "word": {
+            "de": "Gott zu kennen",
+            "gsw": "kännted Gott"
+          }
         }
       ],
-      "action_de": "Titus soll die Widerspenstigen und Schwätzer scharf zurechtweisen, damit sie gesund im Glauben werden.",
+      "action_de": "Die Verführer behaupten, Gott zu kennen, mit ihren Werken aber verleugnen sie ihn und sind für jedes gute Werk untauglich.",
+      "keywords": {
+        "de": "verleugnen sie ihn",
+        "gsw": "verleugned si en"
+      },
       "stage": {
+        "x": {
+          "FIG-GRUPPE-IRRLEHRER": 48,
+          "FIG-GRUPPE-GLAUBENDE": 146
+        },
         "mood": {
-          "FIG-TITUS": "calm",
-          "FIG-GRUPPE-IRRLEHRER": "earnest"
+          "FIG-GRUPPE-IRRLEHRER": "earnest",
+          "FIG-GRUPPE-GLAUBENDE": "question"
         }
       }
     }
   ],
   "actions_de": [
-    "Paulus schreibt an Titus, sein echtes Kind im gemeinsamen Glauben, und wünscht ihm Gnade und Frieden von Gott, dem Vater, und von Christus Jesus.",
-    "Titus soll in den Städten Kretas Älteste einsetzen, die untadelig leben und sich an das zuverlässige Wort halten, um die Gemeinde mit gesunder Lehre zu ermahnen.",
-    "Titus soll die Widerspenstigen und Schwätzer scharf zurechtweisen, damit sie gesund im Glauben werden."
+    "Paulus richtet den Brief an Titus, sein echtes Kind im gemeinsamen Glauben, und wünscht ihm Gnade und Friede von Gott, dem Vater, und von Christus Jesus.",
+    "Paulus hat Titus in Kreta zurückgelassen, damit er in Ordnung bringt, was noch fehlt, und in jeder Stadt Älteste einsetzt.",
+    "Die Verführer behaupten, Gott zu kennen, mit ihren Werken aber verleugnen sie ihn und sind für jedes gute Werk untauglich."
   ],
   "captions_de": [
-    "Brief an Titus: Paulus (mit Brief) schreibt Titus (Pfeil) und wünscht ihm Gnade (Hände mit Licht) und Frieden (Ölzweig) von Gott (Strahlenkranz) und Jesus (Kreuznimbus).",
-    "Auftrag an Titus – Älteste einsetzen: Titus soll in jeder Stadt Älteste einsetzen (Pfeil; sitzend); der Älteste hält sich an das Wort (Schriftrolle) für die Gemeinde (Gruppe).",
-    "Auftrag an Titus – zurechtweisen: Titus soll die falschen Lehrer warnen (Zeigefinger), damit sie gesund im Glauben werden (Herz mit Licht)."
+    "Brief an Titus: Titus hält den Brief; der Absender Paulus ist fern (gestrichelte Linie) und wünscht ihm «Gnade und Friede».",
+    "Auftrag an Titus – Älteste einsetzen: Paulus ist fern (gestrichelte Linie) und schreibt Titus: «Älteste» (alter Mann mit Stab) in jeder Stadt (Stadt hinter Titus).",
+    "Worte ohne Werke: Die Verführer reden von Gott (Gottesname in der Sprechblase), doch gute Werke (Hand mit Brot) fehlen (roter Verbotskreis)."
   ],
-  "interpretation_note_de": "Je ein Feld aus den drei Abschnitten des Kapitels; Einzelheiten dort. Das Einsetzen der Ältesten ([[TIT.1.5]]) ist als Auftrag gezeigt; wie es geschah, sagt der Text nicht.",
+  "interpretation_note_de": "Je ein Moment aus den drei Abschnitten des Kapitels nach der Kernanalyse; der Spruch über die Kreter und die Hoffnung auf ewiges Leben fallen auf dieser Ebene weg. Titus ist ein Brief: Was Paulus verlangt, ist Auftrag, nicht erzählte Tatsache; solche Felder haben einen gestrichelten Briefrand, einen Brief im Stichwortband, und das Verlangte steht als Kernwort mit Zeichen in der Sprechblase des Paulus.",
   "basis": [
     {
       "record": "SUM-CH-TIT-001",
       "field": "summary",
-      "fingerprint": "94a60e44731154c6"
+      "fingerprint": "7b27ff9cb550602f"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -402,10 +421,588 @@
           "Zurechtweisen: Titus warnt (Zeigefinger) die falschen Lehrer, damit sie gesund im Glauben werden (Herz mit Licht)."
         ]
       }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "TIT.1.1-TIT.1.4",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TITUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BRIEF"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-ZEICHEN-GNADE",
+                  "FIG-ZEICHEN-FRIEDE",
+                  "FIG-GOTT",
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Paulus schreibt an Titus, sein echtes Kind im gemeinsamen Glauben, und wünscht ihm Gnade und Frieden von Gott, dem Vater, und von Christus Jesus.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-PAULUS",
+                  "FIG-TITUS",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-TITUS": "smile",
+                "FIG-PAULUS": "smile"
+              },
+              "hold": {
+                "FIG-PAULUS": "FIG-OBJ-BRIEF"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "TIT.1.5-TIT.1.9",
+            "figures": [
+              "FIG-TITUS",
+              "FIG-ROLLE-AELTESTER"
+            ],
+            "objects": [
+              "FIG-ORT-STADT",
+              "FIG-OBJ-SCHRIFTROLLE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-TITUS",
+                "to": "FIG-ROLLE-AELTESTER",
+                "icons": [
+                  "FIG-OBJ-SCHRIFTROLLE",
+                  "FIG-GRUPPE-GLAUBENDE"
+                ]
+              }
+            ],
+            "action_de": "Titus soll in den Städten Kretas Älteste einsetzen, die untadelig leben und sich an das zuverlässige Wort halten, um die Gemeinde mit gesunder Lehre zu ermahnen.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-TITUS",
+                  "FIG-ROLLE-AELTESTER",
+                  "act"
+                ]
+              ],
+              "hold": {
+                "FIG-ROLLE-AELTESTER": "FIG-OBJ-SCHRIFTROLLE"
+              },
+              "back_side": "right",
+              "x": {
+                "FIG-TITUS": 30,
+                "FIG-ROLLE-AELTESTER": 78
+              },
+              "mood": {
+                "FIG-TITUS": "calm"
+              },
+              "pose": {
+                "FIG-ROLLE-AELTESTER": "sit"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "TIT.1.10-TIT.1.16",
+            "figures": [
+              "FIG-TITUS",
+              "FIG-GRUPPE-IRRLEHRER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-TITUS",
+                "to": "FIG-GRUPPE-IRRLEHRER",
+                "icons": [
+                  "FIG-ZEICHEN-WARNEN",
+                  "FIG-ZEICHEN-GLAUBEN"
+                ]
+              }
+            ],
+            "action_de": "Titus soll die Widerspenstigen und Schwätzer scharf zurechtweisen, damit sie gesund im Glauben werden.",
+            "stage": {
+              "mood": {
+                "FIG-TITUS": "calm",
+                "FIG-GRUPPE-IRRLEHRER": "earnest"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Paulus schreibt an Titus, sein echtes Kind im gemeinsamen Glauben, und wünscht ihm Gnade und Frieden von Gott, dem Vater, und von Christus Jesus.",
+          "Titus soll in den Städten Kretas Älteste einsetzen, die untadelig leben und sich an das zuverlässige Wort halten, um die Gemeinde mit gesunder Lehre zu ermahnen.",
+          "Titus soll die Widerspenstigen und Schwätzer scharf zurechtweisen, damit sie gesund im Glauben werden."
+        ],
+        "captions_de": [
+          "Brief an Titus: Paulus (mit Brief) schreibt Titus (Pfeil) und wünscht ihm Gnade (Hände mit Licht) und Frieden (Ölzweig) von Gott (Strahlenkranz) und Jesus (Kreuznimbus).",
+          "Auftrag an Titus – Älteste einsetzen: Titus soll in jeder Stadt Älteste einsetzen (Pfeil; sitzend); der Älteste hält sich an das Wort (Schriftrolle) für die Gemeinde (Gruppe).",
+          "Auftrag an Titus – zurechtweisen: Titus soll die falschen Lehrer warnen (Zeigefinger), damit sie gesund im Glauben werden (Herz mit Licht)."
+        ],
+        "interpretation_note_de": "Je ein Feld aus den drei Abschnitten des Kapitels; Einzelheiten dort. Das Einsetzen der Ältesten ([[TIT.1.5]]) ist als Auftrag gezeigt; wie es geschah, sagt der Text nicht.",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "TIT.1.4",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TITUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BRIEF"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [],
+                "word": {
+                  "de": "Gnade und Friede",
+                  "gsw": "Gnad und Fride"
+                }
+              }
+            ],
+            "action_de": "Paulus richtet den Brief an Titus, sein echtes Kind im gemeinsamen Glauben, und wünscht ihm Gnade und Friede von Gott, dem Vater, und von Christus Jesus.",
+            "keywords": {
+              "de": "mein echtes Kind",
+              "gsw": "mim ächte Chind"
+            },
+            "names": {
+              "FIG-PAULUS": {
+                "de": "Paulus",
+                "gsw": "Paulus"
+              },
+              "FIG-TITUS": {
+                "de": "Titus",
+                "gsw": "Titus"
+              }
+            },
+            "letter": true,
+            "stage": {
+              "hold": {
+                "FIG-TITUS": "FIG-OBJ-BRIEF"
+              },
+              "split": 1,
+              "mood": {
+                "FIG-PAULUS": "smile",
+                "FIG-TITUS": "smile"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "TIT.1.5",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TITUS"
+            ],
+            "objects": [
+              "FIG-ORT-STADT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-ROLLE-AELTESTER",
+                  "FIG-ORT-STADT"
+                ],
+                "word": {
+                  "de": "Älteste",
+                  "gsw": "Ältischte"
+                }
+              }
+            ],
+            "action_de": "Paulus hat Titus in Kreta zurückgelassen, damit er in Ordnung bringt, was noch fehlt, und in jeder Stadt Älteste einsetzt.",
+            "keywords": {
+              "de": "in Kreta zurückgelassen",
+              "gsw": "z Kreta zrugglaa"
+            },
+            "letter": true,
+            "stage": {
+              "split": 1,
+              "back_side": "right",
+              "mood": {
+                "FIG-PAULUS": "earnest",
+                "FIG-TITUS": "determined"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "TIT.1.16",
+            "figures": [
+              "FIG-GRUPPE-IRRLEHRER",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-NICHT",
+              "FIG-ZEICHEN-GUTE-WERKE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-IRRLEHRER",
+                "to": "FIG-GRUPPE-GLAUBENDE",
+                "icons": [
+                  "FIG-ZEICHEN-NAME-GOTTES"
+                ],
+                "word": {
+                  "de": "Gott zu kennen",
+                  "gsw": "kännted Gott"
+                }
+              }
+            ],
+            "action_de": "Die Verführer behaupten, Gott zu kennen, mit ihren Werken aber verleugnen sie ihn und sind für jedes gute Werk untauglich.",
+            "keywords": {
+              "de": "verleugnen sie ihn",
+              "gsw": "verleugned si en"
+            },
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-GUTE-WERKE": "FIG-GRUPPE-IRRLEHRER",
+                "FIG-ZEICHEN-NICHT": "FIG-GRUPPE-IRRLEHRER"
+              },
+              "mood": {
+                "FIG-GRUPPE-IRRLEHRER": "earnest",
+                "FIG-GRUPPE-GLAUBENDE": "question"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "TIT.1.4",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TITUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BRIEF"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [],
+                "word": {
+                  "de": "Gnade und Friede",
+                  "gsw": "Gnad und Fride"
+                }
+              }
+            ],
+            "action_de": "Paulus richtet den Brief an Titus, sein echtes Kind im gemeinsamen Glauben, und wünscht ihm Gnade und Friede von Gott, dem Vater, und von Christus Jesus.",
+            "keywords": {
+              "de": "mein echtes Kind",
+              "gsw": "mim ächte Chind"
+            },
+            "names": {
+              "FIG-PAULUS": {
+                "de": "Paulus",
+                "gsw": "Paulus"
+              },
+              "FIG-TITUS": {
+                "de": "Titus",
+                "gsw": "Titus"
+              }
+            },
+            "letter": true,
+            "stage": {
+              "hold": {
+                "FIG-TITUS": "FIG-OBJ-BRIEF"
+              },
+              "split": 1,
+              "mood": {
+                "FIG-PAULUS": "smile",
+                "FIG-TITUS": "smile"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "TIT.1.5",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TITUS"
+            ],
+            "objects": [
+              "FIG-ORT-STADT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-ROLLE-AELTESTER",
+                  "FIG-ORT-STADT"
+                ],
+                "word": {
+                  "de": "Älteste",
+                  "gsw": "Ältischte"
+                }
+              }
+            ],
+            "action_de": "Paulus hat Titus in Kreta zurückgelassen, damit er in Ordnung bringt, was noch fehlt, und in jeder Stadt Älteste einsetzt.",
+            "keywords": {
+              "de": "in Kreta zurückgelassen",
+              "gsw": "z Kreta zrugglaa"
+            },
+            "letter": true,
+            "stage": {
+              "split": 1,
+              "back_side": "right",
+              "mood": {
+                "FIG-PAULUS": "earnest",
+                "FIG-TITUS": "determined"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "TIT.1.16",
+            "figures": [
+              "FIG-GRUPPE-IRRLEHRER",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-NICHT",
+              "FIG-ZEICHEN-GUTE-WERKE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-IRRLEHRER",
+                "to": "FIG-GRUPPE-GLAUBENDE",
+                "icons": [
+                  "FIG-ZEICHEN-NAME-GOTTES"
+                ],
+                "word": {
+                  "de": "Gott zu kennen",
+                  "gsw": "kännted Gott"
+                }
+              }
+            ],
+            "action_de": "Die Verführer behaupten, Gott zu kennen, mit ihren Werken aber verleugnen sie ihn und sind für jedes gute Werk untauglich.",
+            "keywords": {
+              "de": "verleugnen sie ihn",
+              "gsw": "verleugned si en"
+            },
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-GUTE-WERKE": "FIG-GRUPPE-IRRLEHRER",
+                "FIG-ZEICHEN-NICHT": "FIG-GRUPPE-IRRLEHRER"
+              },
+              "x": {
+                "FIG-GRUPPE-IRRLEHRER": 48,
+                "FIG-GRUPPE-GLAUBENDE": 146
+              },
+              "mood": {
+                "FIG-GRUPPE-IRRLEHRER": "earnest",
+                "FIG-GRUPPE-GLAUBENDE": "question"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "TIT.1.4",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TITUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BRIEF"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [],
+                "word": {
+                  "de": "Gnade und Friede",
+                  "gsw": "Gnad und Fride"
+                }
+              }
+            ],
+            "action_de": "Paulus richtet den Brief an Titus, sein echtes Kind im gemeinsamen Glauben, und wünscht ihm Gnade und Friede von Gott, dem Vater, und von Christus Jesus.",
+            "keywords": {
+              "de": "mein echtes Kind",
+              "gsw": "mim ächte Chind"
+            },
+            "names": {
+              "FIG-PAULUS": {
+                "de": "Paulus",
+                "gsw": "Paulus"
+              },
+              "FIG-TITUS": {
+                "de": "Titus",
+                "gsw": "Titus"
+              }
+            },
+            "letter": true,
+            "stage": {
+              "hold": {
+                "FIG-TITUS": "FIG-OBJ-BRIEF"
+              },
+              "split": 1,
+              "mood": {
+                "FIG-PAULUS": "smile",
+                "FIG-TITUS": "smile"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "TIT.1.5",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TITUS"
+            ],
+            "objects": [
+              "FIG-ORT-STADT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-ROLLE-AELTESTER",
+                  "FIG-ORT-STADT"
+                ],
+                "word": {
+                  "de": "Älteste",
+                  "gsw": "Ältischte"
+                }
+              }
+            ],
+            "action_de": "Paulus hat Titus in Kreta zurückgelassen, damit er in Ordnung bringt, was noch fehlt, und in jeder Stadt Älteste einsetzt.",
+            "keywords": {
+              "de": "in Kreta zurückgelassen",
+              "gsw": "z Kreta zrugglaa"
+            },
+            "letter": true,
+            "stage": {
+              "split": 1,
+              "back_side": "right",
+              "mood": {
+                "FIG-PAULUS": "earnest",
+                "FIG-TITUS": "determined"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "TIT.1.16",
+            "figures": [
+              "FIG-GRUPPE-IRRLEHRER",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-NICHT",
+              "FIG-ZEICHEN-GUTE-WERKE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-IRRLEHRER",
+                "to": "FIG-GRUPPE-GLAUBENDE",
+                "icons": [
+                  "FIG-ZEICHEN-NAME-GOTTES"
+                ],
+                "word": {
+                  "de": "Gott zu kennen",
+                  "gsw": "kännted Gott"
+                }
+              }
+            ],
+            "action_de": "Die Verführer behaupten, Gott zu kennen, mit ihren Werken aber verleugnen sie ihn und sind für jedes gute Werk untauglich.",
+            "keywords": {
+              "de": "verleugnen sie ihn",
+              "gsw": "verleugned si en"
+            },
+            "stage": {
+              "beside": {
+                "FIG-ZEICHEN-GUTE-WERKE": "FIG-GRUPPE-IRRLEHRER",
+                "FIG-ZEICHEN-NICHT": "FIG-GRUPPE-IRRLEHRER"
+              },
+              "x": {
+                "FIG-GRUPPE-IRRLEHRER": 48,
+                "FIG-GRUPPE-GLAUBENDE": 146
+              },
+              "mood": {
+                "FIG-GRUPPE-IRRLEHRER": "earnest",
+                "FIG-GRUPPE-GLAUBENDE": "question"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Bild neu aus der Kernanalyse (Worte im Bild)",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-TIT-001",
+            "field": "summary",
+            "fingerprint": "94a60e44731154c6"
+          }
+        ],
+        "rework": {
+          "since": "2026-10-23",
+          "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
+        }
+      }
     }
-  ],
-  "rework": {
-    "since": "2026-10-23",
-    "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
-  }
+  ]
 }

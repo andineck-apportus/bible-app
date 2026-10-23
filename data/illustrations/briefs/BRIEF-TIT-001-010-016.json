@@ -11,48 +11,62 @@
   "panels": [
     {
       "n": 1,
-      "reference": "TIT.1.10-TIT.1.11",
+      "reference": "TIT.1.11",
       "figures": [
+        "FIG-PAULUS",
+        "FIG-TITUS",
         "FIG-GRUPPE-IRRLEHRER"
       ],
-      "objects": [
-        "FIG-ORT-HAUS"
-      ],
+      "objects": [],
       "signs": [
-        "FIG-ZEICHEN-UMSTURZ"
+        "FIG-ZEICHEN-GEREDE"
       ],
       "speech": [
         {
-          "from": "FIG-GRUPPE-IRRLEHRER",
-          "to": "FIG-ORT-HAUS",
+          "from": "FIG-PAULUS",
+          "to": "FIG-TITUS",
           "icons": [
-            "FIG-ZEICHEN-GEREDE",
-            "FIG-OBJ-MUENZEN"
-          ]
+            "FIG-ZEICHEN-SCHWEIGEN"
+          ],
+          "word": {
+            "de": "Mund stopfen",
+            "gsw": "Muul stopfe"
+          }
         }
       ],
-      "action_de": "Viele Schwätzer und Verführer bringen ganze Familien durcheinander, weil sie um schändlichen Gewinns willen lehren, was nicht sein darf.",
+      "action_de": "Den Verführern muss man den Mund stopfen, denn um schändlichen Gewinns willen bringen sie mit ihrer Lehre ganze Familien durcheinander.",
+      "keywords": {
+        "de": "ganze Familien durcheinander",
+        "gsw": "ganzi Familie durenand"
+      },
+      "names": {
+        "FIG-PAULUS": {
+          "de": "Paulus",
+          "gsw": "Paulus"
+        },
+        "FIG-TITUS": {
+          "de": "Titus",
+          "gsw": "Titus"
+        }
+      },
+      "letter": true,
       "stage": {
-        "back_side": "right",
-        "mood": {
-          "FIG-GRUPPE-IRRLEHRER": "earnest"
-        },
         "at": {
-          "FIG-ZEICHEN-UMSTURZ": "FIG-ORT-HAUS"
+          "FIG-ZEICHEN-GEREDE": "FIG-GRUPPE-IRRLEHRER"
         },
-        "arrows": [
-          [
-            "FIG-GRUPPE-IRRLEHRER",
-            "FIG-ORT-HAUS",
-            "act"
-          ]
-        ]
+        "split": 2,
+        "mood": {
+          "FIG-PAULUS": "angry",
+          "FIG-TITUS": "determined",
+          "FIG-GRUPPE-IRRLEHRER": "earnest"
+        }
       }
     },
     {
       "n": 2,
-      "reference": "TIT.1.12-TIT.1.14",
+      "reference": "TIT.1.12-TIT.1.13",
       "figures": [
+        "FIG-PAULUS",
         "FIG-TITUS",
         "FIG-GRUPPE-IRRLEHRER"
       ],
@@ -60,27 +74,39 @@
       "signs": [],
       "speech": [
         {
-          "from": "FIG-TITUS",
-          "to": "FIG-GRUPPE-IRRLEHRER",
+          "from": "FIG-PAULUS",
+          "to": "FIG-TITUS",
           "icons": [
             "FIG-ZEICHEN-WARNEN",
             "FIG-ZEICHEN-GLAUBEN"
-          ]
+          ],
+          "word": {
+            "de": "gesund im Glauben",
+            "gsw": "gsund im Glaube"
+          }
         }
       ],
-      "action_de": "Titus soll die Widerspenstigen und Schwätzer scharf zurechtweisen, damit sie gesund im Glauben werden.",
+      "action_de": "Paulus zitiert einen Spruch über die Kreter und trägt Titus auf, die Verführer scharf zurechtzuweisen, damit sie gesund im Glauben sind.",
+      "keywords": {
+        "de": "weise sie scharf zurecht",
+        "gsw": "wiis si schaarf zrächt"
+      },
+      "letter": true,
       "stage": {
+        "split": 2,
         "mood": {
-          "FIG-TITUS": "calm",
-          "FIG-GRUPPE-IRRLEHRER": "earnest"
+          "FIG-PAULUS": "earnest",
+          "FIG-TITUS": "determined",
+          "FIG-GRUPPE-IRRLEHRER": "pensive"
         }
       }
     },
     {
       "n": 3,
-      "reference": "TIT.1.15-TIT.1.16",
+      "reference": "TIT.1.16",
       "figures": [
-        "FIG-GRUPPE-IRRLEHRER"
+        "FIG-GRUPPE-IRRLEHRER",
+        "FIG-GRUPPE-GLAUBENDE"
       ],
       "objects": [],
       "signs": [
@@ -92,60 +118,69 @@
           "from": "FIG-GRUPPE-IRRLEHRER",
           "to": "FIG-GRUPPE-GLAUBENDE",
           "icons": [
-            "FIG-GOTT"
-          ]
+            "FIG-ZEICHEN-NAME-GOTTES"
+          ],
+          "word": {
+            "de": "Gott zu kennen",
+            "gsw": "kännted Gott"
+          }
         }
       ],
-      "action_de": "Sie behaupten, Gott zu kennen, verleugnen ihn aber mit ihren Werken und sind für jedes gute Werk untauglich.",
+      "action_de": "Die Verführer behaupten, Gott zu kennen, mit ihren Werken aber verleugnen sie ihn und sind für jedes gute Werk untauglich.",
+      "keywords": {
+        "de": "verleugnen sie ihn",
+        "gsw": "verleugned si en"
+      },
       "stage": {
-        "mood": {
-          "FIG-GRUPPE-IRRLEHRER": "earnest"
+        "x": {
+          "FIG-GRUPPE-IRRLEHRER": 48,
+          "FIG-GRUPPE-GLAUBENDE": 146
         },
-        "at": {
-          "FIG-ZEICHEN-GUTE-WERKE": "FIG-GRUPPE-IRRLEHRER",
-          "FIG-ZEICHEN-NICHT": "FIG-GRUPPE-IRRLEHRER"
+        "mood": {
+          "FIG-GRUPPE-IRRLEHRER": "earnest",
+          "FIG-GRUPPE-GLAUBENDE": "question"
         }
       }
     }
   ],
   "actions_de": [
-    "Viele Schwätzer und Verführer bringen ganze Familien durcheinander, weil sie um schändlichen Gewinns willen lehren, was nicht sein darf.",
-    "Titus soll die Widerspenstigen und Schwätzer scharf zurechtweisen, damit sie gesund im Glauben werden.",
-    "Sie behaupten, Gott zu kennen, verleugnen ihn aber mit ihren Werken und sind für jedes gute Werk untauglich."
+    "Den Verführern muss man den Mund stopfen, denn um schändlichen Gewinns willen bringen sie mit ihrer Lehre ganze Familien durcheinander.",
+    "Paulus zitiert einen Spruch über die Kreter und trägt Titus auf, die Verführer scharf zurechtzuweisen, damit sie gesund im Glauben sind.",
+    "Die Verführer behaupten, Gott zu kennen, mit ihren Werken aber verleugnen sie ihn und sind für jedes gute Werk untauglich."
   ],
   "captions_de": [
-    "Gerede → wankende Familien: Falsche Lehrer reden wirr (Gekritzel) um Geld (Münzen); dadurch geraten Familien ins Wanken (Pfeil zum Haus, darüber Mauerstücke mit Rissen).",
-    "Auftrag an Titus – zurechtweisen: Titus soll die falschen Lehrer warnen (Zeigefinger), damit sie gesund im Glauben werden (Herz mit Licht).",
-    "Worte ohne Werke: Die falschen Lehrer reden von Gott (Strahlenkranz), doch gute Werke (Hand mit Brot) fehlen (roter Verbotskreis über der Hand)."
+    "Auftrag an Titus – den Mund stopfen: Paulus schreibt Titus über die Verführer (rechts, Gekritzel = Gerede): «Mund stopfen» (Sprechblase durchgestrichen).",
+    "Auftrag an Titus – scharf zurechtweisen: Paulus schreibt Titus über die Verführer (rechts): «gesund im Glauben» sollen sie werden (Herz mit Licht), nach Ermahnung (Zeigefinger).",
+    "Worte ohne Werke: Die Verführer reden von Gott (Gottesname in der Sprechblase), doch gute Werke (Hand mit Brot) fehlen (roter Verbotskreis)."
   ],
-  "interpretation_note_de": "Das Zitat über die Kreter ([[TIT.1.12]]) ist nicht gezeichnet, um kein Volk abzuwerten. Die falschen Lehrer tragen keine jüdischen Merkmale, obwohl der Text «besonders die aus der Beschneidung» nennt ([[TIT.1.10]]). Die kippenden Mauern deuten «ganze Familien durcheinanderbringen» an ([[TIT.1.11]]).",
+  "interpretation_note_de": "Das Zitat über die Kreter ([[TIT.1.12]]) ist weder gezeichnet noch im Stichwortband, um kein Volk abzuwerten; das Bild zeigt den Auftrag, der daraus folgt. Die Verführer tragen keine jüdischen Merkmale, obwohl der Text «besonders die aus der Beschneidung» nennt ([[TIT.1.10]]). Titus ist ein Brief: Was Paulus verlangt, ist Auftrag, nicht erzählte Tatsache; solche Felder haben einen gestrichelten Briefrand, einen Brief im Stichwortband, und das Verlangte steht als Kernwort mit Zeichen in der Sprechblase des Paulus.",
   "basis": [
     {
       "record": "TU-TIT-001-010-016",
       "field": "summary",
-      "fingerprint": "ff1f9539423a9f36"
+      "fingerprint": "eb3ca44bc4b8201c"
     },
     {
       "record": "TRANS-TIT-001-001-016-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "TIT.1.10-TIT.1.11",
-      "fingerprint": "5884ad8997c34b5a"
+      "reference": "TIT.1.11",
+      "fingerprint": "bd8d1e2686884fd4"
     },
     {
       "record": "TRANS-TIT-001-001-016-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "TIT.1.12-TIT.1.14",
-      "fingerprint": "6c8b0c793e15d359"
+      "reference": "TIT.1.12-TIT.1.13",
+      "fingerprint": "0623786e4322b48d"
     },
     {
       "record": "TRANS-TIT-001-001-016-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "TIT.1.15-TIT.1.16",
-      "fingerprint": "3d287be589dc2e1a"
+      "reference": "TIT.1.16",
+      "fingerprint": "ea65bb9b6132b6a6"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -369,10 +404,615 @@
           "Worte ohne Werke: Die falschen Lehrer reden von Gott (Strahlenkranz), doch gute Werke (Hand mit Brot) fehlen (roter Verbotskreis über der Hand)."
         ]
       }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "TIT.1.10-TIT.1.11",
+            "figures": [
+              "FIG-GRUPPE-IRRLEHRER"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-UMSTURZ"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-IRRLEHRER",
+                "to": "FIG-ORT-HAUS",
+                "icons": [
+                  "FIG-ZEICHEN-GEREDE",
+                  "FIG-OBJ-MUENZEN"
+                ]
+              }
+            ],
+            "action_de": "Viele Schwätzer und Verführer bringen ganze Familien durcheinander, weil sie um schändlichen Gewinns willen lehren, was nicht sein darf.",
+            "stage": {
+              "back_side": "right",
+              "mood": {
+                "FIG-GRUPPE-IRRLEHRER": "earnest"
+              },
+              "at": {
+                "FIG-ZEICHEN-UMSTURZ": "FIG-ORT-HAUS"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-IRRLEHRER",
+                  "FIG-ORT-HAUS",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "TIT.1.12-TIT.1.14",
+            "figures": [
+              "FIG-TITUS",
+              "FIG-GRUPPE-IRRLEHRER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-TITUS",
+                "to": "FIG-GRUPPE-IRRLEHRER",
+                "icons": [
+                  "FIG-ZEICHEN-WARNEN",
+                  "FIG-ZEICHEN-GLAUBEN"
+                ]
+              }
+            ],
+            "action_de": "Titus soll die Widerspenstigen und Schwätzer scharf zurechtweisen, damit sie gesund im Glauben werden.",
+            "stage": {
+              "mood": {
+                "FIG-TITUS": "calm",
+                "FIG-GRUPPE-IRRLEHRER": "earnest"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "TIT.1.15-TIT.1.16",
+            "figures": [
+              "FIG-GRUPPE-IRRLEHRER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-NICHT",
+              "FIG-ZEICHEN-GUTE-WERKE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-IRRLEHRER",
+                "to": "FIG-GRUPPE-GLAUBENDE",
+                "icons": [
+                  "FIG-GOTT"
+                ]
+              }
+            ],
+            "action_de": "Sie behaupten, Gott zu kennen, verleugnen ihn aber mit ihren Werken und sind für jedes gute Werk untauglich.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-IRRLEHRER": "earnest"
+              },
+              "at": {
+                "FIG-ZEICHEN-GUTE-WERKE": "FIG-GRUPPE-IRRLEHRER",
+                "FIG-ZEICHEN-NICHT": "FIG-GRUPPE-IRRLEHRER"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Viele Schwätzer und Verführer bringen ganze Familien durcheinander, weil sie um schändlichen Gewinns willen lehren, was nicht sein darf.",
+          "Titus soll die Widerspenstigen und Schwätzer scharf zurechtweisen, damit sie gesund im Glauben werden.",
+          "Sie behaupten, Gott zu kennen, verleugnen ihn aber mit ihren Werken und sind für jedes gute Werk untauglich."
+        ],
+        "captions_de": [
+          "Gerede → wankende Familien: Falsche Lehrer reden wirr (Gekritzel) um Geld (Münzen); dadurch geraten Familien ins Wanken (Pfeil zum Haus, darüber Mauerstücke mit Rissen).",
+          "Auftrag an Titus – zurechtweisen: Titus soll die falschen Lehrer warnen (Zeigefinger), damit sie gesund im Glauben werden (Herz mit Licht).",
+          "Worte ohne Werke: Die falschen Lehrer reden von Gott (Strahlenkranz), doch gute Werke (Hand mit Brot) fehlen (roter Verbotskreis über der Hand)."
+        ],
+        "interpretation_note_de": "Das Zitat über die Kreter ([[TIT.1.12]]) ist nicht gezeichnet, um kein Volk abzuwerten. Die falschen Lehrer tragen keine jüdischen Merkmale, obwohl der Text «besonders die aus der Beschneidung» nennt ([[TIT.1.10]]). Die kippenden Mauern deuten «ganze Familien durcheinanderbringen» an ([[TIT.1.11]]).",
+        "basis": [
+          {
+            "record": "TU-TIT-001-010-016",
+            "field": "summary",
+            "fingerprint": "ff1f9539423a9f36"
+          },
+          {
+            "record": "TRANS-TIT-001-001-016-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "TIT.1.10-TIT.1.11",
+            "fingerprint": "5884ad8997c34b5a"
+          },
+          {
+            "record": "TRANS-TIT-001-001-016-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "TIT.1.12-TIT.1.14",
+            "fingerprint": "6c8b0c793e15d359"
+          },
+          {
+            "record": "TRANS-TIT-001-001-016-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "TIT.1.15-TIT.1.16",
+            "fingerprint": "3d287be589dc2e1a"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "TIT.1.11",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TITUS",
+              "FIG-GRUPPE-IRRLEHRER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-GEREDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-ZEICHEN-SCHWEIGEN"
+                ],
+                "word": {
+                  "de": "Mund stopfen",
+                  "gsw": "Muul stopfe"
+                }
+              }
+            ],
+            "action_de": "Den Verführern muss man den Mund stopfen, denn um schändlichen Gewinns willen bringen sie mit ihrer Lehre ganze Familien durcheinander.",
+            "keywords": {
+              "de": "ganze Familien durcheinander",
+              "gsw": "ganzi Familie durenand"
+            },
+            "names": {
+              "FIG-PAULUS": {
+                "de": "Paulus",
+                "gsw": "Paulus"
+              },
+              "FIG-TITUS": {
+                "de": "Titus",
+                "gsw": "Titus"
+              }
+            },
+            "letter": true,
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-GEREDE": "FIG-GRUPPE-IRRLEHRER"
+              },
+              "split": 2,
+              "mood": {
+                "FIG-PAULUS": "angry",
+                "FIG-TITUS": "determined",
+                "FIG-GRUPPE-IRRLEHRER": "earnest"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "TIT.1.12-TIT.1.13",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TITUS",
+              "FIG-GRUPPE-IRRLEHRER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-ZEICHEN-WARNEN",
+                  "FIG-ZEICHEN-GLAUBEN"
+                ],
+                "word": {
+                  "de": "gesund im Glauben",
+                  "gsw": "gsund im Glaube"
+                }
+              }
+            ],
+            "action_de": "Paulus zitiert einen Spruch über die Kreter und trägt Titus auf, die Verführer scharf zurechtzuweisen, damit sie gesund im Glauben sind.",
+            "keywords": {
+              "de": "weise sie scharf zurecht",
+              "gsw": "wiis si schaarf zrächt"
+            },
+            "letter": true,
+            "stage": {
+              "split": 2,
+              "mood": {
+                "FIG-PAULUS": "earnest",
+                "FIG-TITUS": "determined",
+                "FIG-GRUPPE-IRRLEHRER": "pensive"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "TIT.1.16",
+            "figures": [
+              "FIG-GRUPPE-IRRLEHRER",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-NICHT",
+              "FIG-ZEICHEN-GUTE-WERKE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-IRRLEHRER",
+                "to": "FIG-GRUPPE-GLAUBENDE",
+                "icons": [
+                  "FIG-ZEICHEN-NAME-GOTTES"
+                ],
+                "word": {
+                  "de": "Gott zu kennen",
+                  "gsw": "kännted Gott"
+                }
+              }
+            ],
+            "action_de": "Die Verführer behaupten, Gott zu kennen, mit ihren Werken aber verleugnen sie ihn und sind für jedes gute Werk untauglich.",
+            "keywords": {
+              "de": "verleugnen sie ihn",
+              "gsw": "verleugned si en"
+            },
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-GUTE-WERKE": "FIG-GRUPPE-IRRLEHRER",
+                "FIG-ZEICHEN-NICHT": "FIG-GRUPPE-IRRLEHRER"
+              },
+              "mood": {
+                "FIG-GRUPPE-IRRLEHRER": "earnest",
+                "FIG-GRUPPE-GLAUBENDE": "question"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "TIT.1.11",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TITUS",
+              "FIG-GRUPPE-IRRLEHRER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-GEREDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-ZEICHEN-SCHWEIGEN"
+                ],
+                "word": {
+                  "de": "Mund stopfen",
+                  "gsw": "Muul stopfe"
+                }
+              }
+            ],
+            "action_de": "Den Verführern muss man den Mund stopfen, denn um schändlichen Gewinns willen bringen sie mit ihrer Lehre ganze Familien durcheinander.",
+            "keywords": {
+              "de": "ganze Familien durcheinander",
+              "gsw": "ganzi Familie durenand"
+            },
+            "names": {
+              "FIG-PAULUS": {
+                "de": "Paulus",
+                "gsw": "Paulus"
+              },
+              "FIG-TITUS": {
+                "de": "Titus",
+                "gsw": "Titus"
+              }
+            },
+            "letter": true,
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-GEREDE": "FIG-GRUPPE-IRRLEHRER"
+              },
+              "split": 2,
+              "mood": {
+                "FIG-PAULUS": "angry",
+                "FIG-TITUS": "determined",
+                "FIG-GRUPPE-IRRLEHRER": "earnest"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "TIT.1.12-TIT.1.13",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TITUS",
+              "FIG-GRUPPE-IRRLEHRER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-ZEICHEN-WARNEN",
+                  "FIG-ZEICHEN-GLAUBEN"
+                ],
+                "word": {
+                  "de": "gesund im Glauben",
+                  "gsw": "gsund im Glaube"
+                }
+              }
+            ],
+            "action_de": "Paulus zitiert einen Spruch über die Kreter und trägt Titus auf, die Verführer scharf zurechtzuweisen, damit sie gesund im Glauben sind.",
+            "keywords": {
+              "de": "weise sie scharf zurecht",
+              "gsw": "wiis si schaarf zrächt"
+            },
+            "letter": true,
+            "stage": {
+              "split": 2,
+              "mood": {
+                "FIG-PAULUS": "earnest",
+                "FIG-TITUS": "determined",
+                "FIG-GRUPPE-IRRLEHRER": "pensive"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "TIT.1.16",
+            "figures": [
+              "FIG-GRUPPE-IRRLEHRER",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-NICHT",
+              "FIG-ZEICHEN-GUTE-WERKE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-IRRLEHRER",
+                "to": "FIG-GRUPPE-GLAUBENDE",
+                "icons": [
+                  "FIG-ZEICHEN-NAME-GOTTES"
+                ],
+                "word": {
+                  "de": "Gott zu kennen",
+                  "gsw": "kännted Gott"
+                }
+              }
+            ],
+            "action_de": "Die Verführer behaupten, Gott zu kennen, mit ihren Werken aber verleugnen sie ihn und sind für jedes gute Werk untauglich.",
+            "keywords": {
+              "de": "verleugnen sie ihn",
+              "gsw": "verleugned si en"
+            },
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-GUTE-WERKE": "FIG-GRUPPE-IRRLEHRER",
+                "FIG-ZEICHEN-NICHT": "FIG-GRUPPE-IRRLEHRER"
+              },
+              "x": {
+                "FIG-GRUPPE-IRRLEHRER": 48,
+                "FIG-GRUPPE-GLAUBENDE": 146
+              },
+              "mood": {
+                "FIG-GRUPPE-IRRLEHRER": "earnest",
+                "FIG-GRUPPE-GLAUBENDE": "question"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "TIT.1.11",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TITUS",
+              "FIG-GRUPPE-IRRLEHRER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-GEREDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-ZEICHEN-SCHWEIGEN"
+                ],
+                "word": {
+                  "de": "Mund stopfen",
+                  "gsw": "Muul stopfe"
+                }
+              }
+            ],
+            "action_de": "Den Verführern muss man den Mund stopfen, denn um schändlichen Gewinns willen bringen sie mit ihrer Lehre ganze Familien durcheinander.",
+            "keywords": {
+              "de": "ganze Familien durcheinander",
+              "gsw": "ganzi Familie durenand"
+            },
+            "names": {
+              "FIG-PAULUS": {
+                "de": "Paulus",
+                "gsw": "Paulus"
+              },
+              "FIG-TITUS": {
+                "de": "Titus",
+                "gsw": "Titus"
+              }
+            },
+            "letter": true,
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-GEREDE": "FIG-GRUPPE-IRRLEHRER"
+              },
+              "split": 2,
+              "mood": {
+                "FIG-PAULUS": "angry",
+                "FIG-TITUS": "determined",
+                "FIG-GRUPPE-IRRLEHRER": "earnest"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "TIT.1.12-TIT.1.13",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TITUS",
+              "FIG-GRUPPE-IRRLEHRER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-ZEICHEN-WARNEN",
+                  "FIG-ZEICHEN-GLAUBEN"
+                ],
+                "word": {
+                  "de": "gesund im Glauben",
+                  "gsw": "gsund im Glaube"
+                }
+              }
+            ],
+            "action_de": "Paulus zitiert einen Spruch über die Kreter und trägt Titus auf, die Verführer scharf zurechtzuweisen, damit sie gesund im Glauben sind.",
+            "keywords": {
+              "de": "weise sie scharf zurecht",
+              "gsw": "wiis si schaarf zrächt"
+            },
+            "letter": true,
+            "stage": {
+              "split": 2,
+              "mood": {
+                "FIG-PAULUS": "earnest",
+                "FIG-TITUS": "determined",
+                "FIG-GRUPPE-IRRLEHRER": "pensive"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "TIT.1.16",
+            "figures": [
+              "FIG-GRUPPE-IRRLEHRER",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-NICHT",
+              "FIG-ZEICHEN-GUTE-WERKE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-IRRLEHRER",
+                "to": "FIG-GRUPPE-GLAUBENDE",
+                "icons": [
+                  "FIG-ZEICHEN-NAME-GOTTES"
+                ],
+                "word": {
+                  "de": "Gott zu kennen",
+                  "gsw": "kännted Gott"
+                }
+              }
+            ],
+            "action_de": "Die Verführer behaupten, Gott zu kennen, mit ihren Werken aber verleugnen sie ihn und sind für jedes gute Werk untauglich.",
+            "keywords": {
+              "de": "verleugnen sie ihn",
+              "gsw": "verleugned si en"
+            },
+            "stage": {
+              "beside": {
+                "FIG-ZEICHEN-GUTE-WERKE": "FIG-GRUPPE-IRRLEHRER",
+                "FIG-ZEICHEN-NICHT": "FIG-GRUPPE-IRRLEHRER"
+              },
+              "x": {
+                "FIG-GRUPPE-IRRLEHRER": 48,
+                "FIG-GRUPPE-GLAUBENDE": 146
+              },
+              "mood": {
+                "FIG-GRUPPE-IRRLEHRER": "earnest",
+                "FIG-GRUPPE-GLAUBENDE": "question"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Bild neu aus der Kernanalyse (Worte im Bild)",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-TIT-001-010-016",
+            "field": "summary",
+            "fingerprint": "ff1f9539423a9f36"
+          },
+          {
+            "record": "TRANS-TIT-001-001-016-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "TIT.1.11",
+            "fingerprint": "bd8d1e2686884fd4"
+          },
+          {
+            "record": "TRANS-TIT-001-001-016-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "TIT.1.12-TIT.1.13",
+            "fingerprint": "0623786e4322b48d"
+          },
+          {
+            "record": "TRANS-TIT-001-001-016-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "TIT.1.16",
+            "fingerprint": "ea65bb9b6132b6a6"
+          }
+        ],
+        "rework": {
+          "since": "2026-10-23",
+          "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
+        }
+      }
     }
-  ],
-  "rework": {
-    "since": "2026-10-23",
-    "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
-  }
+  ]
 }

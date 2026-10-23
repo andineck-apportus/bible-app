@@ -11,27 +11,43 @@
   "panels": [
     {
       "n": 1,
-      "reference": "TIT.1.1-TIT.1.3",
+      "reference": "TIT.1.1",
       "figures": [
         "FIG-GOTT",
         "FIG-PAULUS",
-        "FIG-GRUPPE-GLAUBENDE"
+        "FIG-TITUS"
       ],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-VERKUENDIGEN"
-      ],
+      "signs": [],
       "speech": [
         {
           "from": "FIG-PAULUS",
-          "to": "FIG-GRUPPE-GLAUBENDE",
+          "to": "FIG-TITUS",
           "icons": [
-            "FIG-ZEICHEN-GLAUBEN",
-            "FIG-ZEICHEN-HOFFNUNG"
-          ]
+            "FIG-JESUS"
+          ],
+          "word": {
+            "de": "Apostel",
+            "gsw": "Apostel"
+          }
         }
       ],
-      "action_de": "Paulus, Knecht Gottes und Apostel Jesu Christi, dient dem Glauben und der Hoffnung auf ewiges Leben; die Verkündigung ist ihm nach Gottes Auftrag anvertraut.",
+      "action_de": "Paulus stellt sich im Brief an Titus vor: Knecht Gottes und Apostel Jesu Christi, für den Glauben der Auserwählten Gottes.",
+      "keywords": {
+        "de": "Knecht Gottes",
+        "gsw": "Chnächt vo Gott"
+      },
+      "names": {
+        "FIG-PAULUS": {
+          "de": "Paulus",
+          "gsw": "Paulus"
+        },
+        "FIG-TITUS": {
+          "de": "Titus",
+          "gsw": "Titus"
+        }
+      },
+      "letter": true,
       "stage": {
         "arrows": [
           [
@@ -40,21 +56,58 @@
             "act"
           ]
         ],
-        "at": {
-          "FIG-ZEICHEN-VERKUENDIGEN": "FIG-PAULUS"
-        },
         "god_side": "right",
         "mood": {
-          "FIG-GRUPPE-GLAUBENDE": "smile"
-        },
-        "x": {
-          "FIG-PAULUS": 60,
-          "FIG-GRUPPE-GLAUBENDE": 140
+          "FIG-PAULUS": "earnest",
+          "FIG-TITUS": "calm"
         }
       }
     },
     {
       "n": 2,
+      "reference": "TIT.1.2-TIT.1.3",
+      "figures": [
+        "FIG-GOTT",
+        "FIG-PAULUS",
+        "FIG-GRUPPE-GLAUBENDE"
+      ],
+      "objects": [],
+      "signs": [],
+      "speech": [
+        {
+          "from": "FIG-PAULUS",
+          "to": "FIG-GRUPPE-GLAUBENDE",
+          "icons": [
+            "FIG-ZEICHEN-LEBEN"
+          ],
+          "word": {
+            "de": "verheissen",
+            "gsw": "versproche"
+          }
+        }
+      ],
+      "action_de": "Gott, der nicht lügt, hat das ewige Leben vor ewigen Zeiten verheissen; zu seiner Zeit hat er sein Wort in der Verkündigung offenbart, die Paulus anvertraut ist.",
+      "keywords": {
+        "de": "Hoffnung auf ewiges Leben",
+        "gsw": "Hoffnig uf ewigs Läbe"
+      },
+      "stage": {
+        "arrows": [
+          [
+            "FIG-GOTT",
+            "FIG-PAULUS",
+            "act"
+          ]
+        ],
+        "god_side": "right",
+        "mood": {
+          "FIG-GRUPPE-GLAUBENDE": "smile",
+          "FIG-PAULUS": "earnest"
+        }
+      }
+    },
+    {
+      "n": 3,
       "reference": "TIT.1.4",
       "figures": [
         "FIG-PAULUS",
@@ -63,58 +116,66 @@
       "objects": [
         "FIG-OBJ-BRIEF"
       ],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-ABSTAND"
+      ],
       "speech": [
         {
           "from": "FIG-PAULUS",
           "to": "FIG-TITUS",
-          "icons": [
-            "FIG-ZEICHEN-GNADE",
-            "FIG-ZEICHEN-FRIEDE",
-            "FIG-GOTT",
-            "FIG-JESUS"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Gnade und Friede",
+            "gsw": "Gnad und Fride"
+          }
         }
       ],
-      "action_de": "Paulus schreibt an Titus, sein echtes Kind im gemeinsamen Glauben, und wünscht ihm Gnade und Frieden von Gott, dem Vater, und von Christus Jesus.",
+      "action_de": "Paulus richtet den Brief an Titus, sein echtes Kind im gemeinsamen Glauben, und wünscht ihm Gnade und Friede von Gott, dem Vater, und von Christus Jesus.",
+      "keywords": {
+        "de": "mein echtes Kind",
+        "gsw": "mim ächte Chind"
+      },
+      "letter": true,
       "stage": {
-        "arrows": [
-          [
-            "FIG-PAULUS",
-            "FIG-TITUS",
-            "act"
-          ]
-        ],
-        "mood": {
-          "FIG-TITUS": "smile",
-          "FIG-PAULUS": "smile"
-        },
         "hold": {
-          "FIG-PAULUS": "FIG-OBJ-BRIEF"
+          "FIG-TITUS": "FIG-OBJ-BRIEF"
+        },
+        "split": 1,
+        "mood": {
+          "FIG-PAULUS": "smile",
+          "FIG-TITUS": "smile"
         }
       }
     }
   ],
   "actions_de": [
-    "Paulus, Knecht Gottes und Apostel Jesu Christi, dient dem Glauben und der Hoffnung auf ewiges Leben; die Verkündigung ist ihm nach Gottes Auftrag anvertraut.",
-    "Paulus schreibt an Titus, sein echtes Kind im gemeinsamen Glauben, und wünscht ihm Gnade und Frieden von Gott, dem Vater, und von Christus Jesus."
+    "Paulus stellt sich im Brief an Titus vor: Knecht Gottes und Apostel Jesu Christi, für den Glauben der Auserwählten Gottes.",
+    "Gott, der nicht lügt, hat das ewige Leben vor ewigen Zeiten verheissen; zu seiner Zeit hat er sein Wort in der Verkündigung offenbart, die Paulus anvertraut ist.",
+    "Paulus richtet den Brief an Titus, sein echtes Kind im gemeinsamen Glauben, und wünscht ihm Gnade und Friede von Gott, dem Vater, und von Christus Jesus."
   ],
   "captions_de": [
-    "Apostel im Auftrag: Gott (Strahlenkranz) beauftragt Paulus (goldener Pfeil) mit der Verkündigung (Schalltrichter); er spricht zu den Glaubenden von Glauben (Herz mit Licht) und Hoffnung auf Leben (Spross).",
-    "Brief an Titus: Paulus (mit Brief) schreibt Titus (Pfeil) und wünscht ihm Gnade (Hände mit Licht) und Frieden (Ölzweig) von Gott (Strahlenkranz) und Jesus (Kreuznimbus)."
+    "Absender: Paulus, Knecht Gottes (goldener Pfeil vom Strahlenkranz), schreibt Titus: «Apostel» von Jesus (Kreuznimbus).",
+    "Verheissen: Gott (Strahlenkranz) vertraut Paulus die Verkündigung an (goldener Pfeil); Paulus sagt den Glaubenden: «verheissen» – ewiges Leben (Baum im goldenen Ring).",
+    "Brief an Titus: Titus hält den Brief; der Absender Paulus ist fern (gestrichelte Linie) und wünscht ihm «Gnade und Friede»."
   ],
-  "interpretation_note_de": "Paulus spricht hier zu Titus als Empfänger des Briefs. Die Hoffnung auf ewiges Leben ([[TIT.1.2]]) ist mit dem Spross angedeutet.",
+  "interpretation_note_de": "Ein Feld je Moment der Kernanalyse: Absender, Verheissung des ewigen Lebens, Empfänger. Der Baum im goldenen Ring steht für das ewige Leben; dass Gott Paulus die Verkündigung anvertraut ([[TIT.1.3]]), zeigt der goldene Pfeil (Deutung). Titus ist ein Brief: Was Paulus verlangt, ist Auftrag, nicht erzählte Tatsache; solche Felder haben einen gestrichelten Briefrand, einen Brief im Stichwortband, und das Verlangte steht als Kernwort mit Zeichen in der Sprechblase des Paulus.",
   "basis": [
     {
       "record": "TU-TIT-001-001-004",
       "field": "summary",
-      "fingerprint": "42c3df04e8dff892"
+      "fingerprint": "f21609779bf43055"
     },
     {
       "record": "TRANS-TIT-001-001-016-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "TIT.1.1-TIT.1.3",
-      "fingerprint": "bfef4ef9e67021ee"
+      "reference": "TIT.1.1",
+      "fingerprint": "c65b17154955593f"
+    },
+    {
+      "record": "TRANS-TIT-001-001-016-DE-WORKING",
+      "field": "text_by_reference",
+      "reference": "TIT.1.2-TIT.1.3",
+      "fingerprint": "4323a4235fee8928"
     },
     {
       "record": "TRANS-TIT-001-001-016-DE-WORKING",
@@ -124,7 +185,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -216,10 +277,307 @@
           "Brief an Titus: Paulus schreibt Titus (Pfeil, Brief) und wünscht ihm Gnade (Hände mit Licht) und Frieden (Ölzweig) von Gott (Strahlenkranz) und Jesus (Kreuznimbus)."
         ]
       }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "TIT.1.1-TIT.1.3",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-PAULUS",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-VERKUENDIGEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-GRUPPE-GLAUBENDE",
+                "icons": [
+                  "FIG-ZEICHEN-GLAUBEN",
+                  "FIG-ZEICHEN-HOFFNUNG"
+                ]
+              }
+            ],
+            "action_de": "Paulus, Knecht Gottes und Apostel Jesu Christi, dient dem Glauben und der Hoffnung auf ewiges Leben; die Verkündigung ist ihm nach Gottes Auftrag anvertraut.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-PAULUS",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-VERKUENDIGEN": "FIG-PAULUS"
+              },
+              "god_side": "right",
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "smile"
+              },
+              "x": {
+                "FIG-PAULUS": 60,
+                "FIG-GRUPPE-GLAUBENDE": 140
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "TIT.1.4",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TITUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BRIEF"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-ZEICHEN-GNADE",
+                  "FIG-ZEICHEN-FRIEDE",
+                  "FIG-GOTT",
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Paulus schreibt an Titus, sein echtes Kind im gemeinsamen Glauben, und wünscht ihm Gnade und Frieden von Gott, dem Vater, und von Christus Jesus.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-PAULUS",
+                  "FIG-TITUS",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-TITUS": "smile",
+                "FIG-PAULUS": "smile"
+              },
+              "hold": {
+                "FIG-PAULUS": "FIG-OBJ-BRIEF"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Paulus, Knecht Gottes und Apostel Jesu Christi, dient dem Glauben und der Hoffnung auf ewiges Leben; die Verkündigung ist ihm nach Gottes Auftrag anvertraut.",
+          "Paulus schreibt an Titus, sein echtes Kind im gemeinsamen Glauben, und wünscht ihm Gnade und Frieden von Gott, dem Vater, und von Christus Jesus."
+        ],
+        "captions_de": [
+          "Apostel im Auftrag: Gott (Strahlenkranz) beauftragt Paulus (goldener Pfeil) mit der Verkündigung (Schalltrichter); er spricht zu den Glaubenden von Glauben (Herz mit Licht) und Hoffnung auf Leben (Spross).",
+          "Brief an Titus: Paulus (mit Brief) schreibt Titus (Pfeil) und wünscht ihm Gnade (Hände mit Licht) und Frieden (Ölzweig) von Gott (Strahlenkranz) und Jesus (Kreuznimbus)."
+        ],
+        "interpretation_note_de": "Paulus spricht hier zu Titus als Empfänger des Briefs. Die Hoffnung auf ewiges Leben ([[TIT.1.2]]) ist mit dem Spross angedeutet.",
+        "basis": [
+          {
+            "record": "TU-TIT-001-001-004",
+            "field": "summary",
+            "fingerprint": "42c3df04e8dff892"
+          },
+          {
+            "record": "TRANS-TIT-001-001-016-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "TIT.1.1-TIT.1.3",
+            "fingerprint": "bfef4ef9e67021ee"
+          },
+          {
+            "record": "TRANS-TIT-001-001-016-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "TIT.1.4",
+            "fingerprint": "c558db3287b670a4"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "TIT.1.1",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-PAULUS",
+              "FIG-TITUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [
+                  "FIG-JESUS"
+                ],
+                "word": {
+                  "de": "Apostel",
+                  "gsw": "Apostel"
+                }
+              }
+            ],
+            "action_de": "Paulus stellt sich im Brief an Titus vor: Knecht Gottes und Apostel Jesu Christi, für den Glauben der Auserwählten Gottes.",
+            "keywords": {
+              "de": "Knecht Gottes",
+              "gsw": "Chnächt vo Gott"
+            },
+            "names": {
+              "FIG-PAULUS": {
+                "de": "Paulus",
+                "gsw": "Paulus"
+              },
+              "FIG-TITUS": {
+                "de": "Titus",
+                "gsw": "Titus"
+              }
+            },
+            "letter": true,
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-PAULUS",
+                  "act"
+                ]
+              ],
+              "god_side": "left",
+              "mood": {
+                "FIG-PAULUS": "earnest",
+                "FIG-TITUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "TIT.1.2-TIT.1.3",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-PAULUS",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-GRUPPE-GLAUBENDE",
+                "icons": [
+                  "FIG-ZEICHEN-LEBEN"
+                ],
+                "word": {
+                  "de": "verheissen",
+                  "gsw": "versproche"
+                }
+              }
+            ],
+            "action_de": "Gott, der nicht lügt, hat das ewige Leben vor ewigen Zeiten verheissen; zu seiner Zeit hat er sein Wort in der Verkündigung offenbart, die Paulus anvertraut ist.",
+            "keywords": {
+              "de": "Hoffnung auf ewiges Leben",
+              "gsw": "Hoffnig uf ewigs Läbe"
+            },
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-PAULUS",
+                  "act"
+                ]
+              ],
+              "god_side": "left",
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "smile",
+                "FIG-PAULUS": "earnest"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "TIT.1.4",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TITUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BRIEF"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TITUS",
+                "icons": [],
+                "word": {
+                  "de": "Gnade und Friede",
+                  "gsw": "Gnad und Fride"
+                }
+              }
+            ],
+            "action_de": "Paulus richtet den Brief an Titus, sein echtes Kind im gemeinsamen Glauben, und wünscht ihm Gnade und Friede von Gott, dem Vater, und von Christus Jesus.",
+            "keywords": {
+              "de": "mein echtes Kind",
+              "gsw": "mim ächte Chind"
+            },
+            "letter": true,
+            "stage": {
+              "hold": {
+                "FIG-TITUS": "FIG-OBJ-BRIEF"
+              },
+              "split": 1,
+              "mood": {
+                "FIG-PAULUS": "smile",
+                "FIG-TITUS": "smile"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "change_de": "Bild neu aus der Kernanalyse (Worte im Bild)",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-TIT-001-001-004",
+            "field": "summary",
+            "fingerprint": "42c3df04e8dff892"
+          },
+          {
+            "record": "TRANS-TIT-001-001-016-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "TIT.1.1",
+            "fingerprint": "c65b17154955593f"
+          },
+          {
+            "record": "TRANS-TIT-001-001-016-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "TIT.1.2-TIT.1.3",
+            "fingerprint": "4323a4235fee8928"
+          },
+          {
+            "record": "TRANS-TIT-001-001-016-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "TIT.1.4",
+            "fingerprint": "c558db3287b670a4"
+          }
+        ],
+        "rework": {
+          "since": "2026-10-23",
+          "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
+        }
+      }
     }
-  ],
-  "rework": {
-    "since": "2026-10-23",
-    "reason_de": "Zusammenfassung neu aus der Kernanalyse (docs/VERDICHTUNG.md); Bild wird nach docs/BILDPROZESS.md neu erstellt"
-  }
+  ]
 }
