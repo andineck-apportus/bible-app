@@ -176,7 +176,7 @@ CHAR = {
     # Jünger mit Wanderstab (Mk 6,8: «nichts mitnehmen ausser einem Stab»), sonst wie Arbeiter gelesen (Blindtest 2026-10-23)
     # Jünger-Rolle: Fussspuren «folgt mir nach» (Mk 1,17-18) statt Wanderstab, damit er nicht als Hirte gelesen wird (Hinweis Projektleiter 2026-10-23)
     "juenger": dict(hair="#2E2017", curls=True, beard="M-8 6.4Q-7 12 0 13Q7 12 8 6.4Q6 9.8 0 10.4Q-6 9.8-8 6.4z", robe="#9C7A4C", belt="#5B4630", staff=True,
-                    attr="an-a-fussspuren"),
+                    attr="an-a-fussspuren", jstaff=True),  # Runde 4: Wanderstab an der Schulter wie bei den Zwölf
     "juenger2": dict(hair="#4A3020", front="M-10.6 0Q-11.4-10.8 0-11.8Q11.4-10.8 10.6 0Q6-8.2-1-7Q-7-6.4-10.6 0z", robe="#8A6A40", belt="#5B4630", staff=True),
     # Gast: helles Festgewand mit Goldsaum und Festbecher mit zwei Henkeln (vorher Becher wie ein Eimer, Blindtest 2026-10-23)
     "gast": dict(hair="#2E2017", front="M-10.6-.4Q-11-11.6 0-12Q11-11.6 10.6-.4Q8-6 0-6.6Q-8-6-10.6-.4z", robe="#F2EAD6", mantle="#8E6A9A", trim="#D9A441",
@@ -302,8 +302,14 @@ def head_inner(key, expr="calm", look=0.0, tears=False):
         o.append('<path d="M-8.6-6.6l1-6.4 3 3.6 2.6-4.8 2 4.6 2-4.6 2.6 4.8 3-3.6 1 6.4z" fill="#E0B24E" stroke="#9C6F1C" stroke-width=".6"/>'
                  '<circle cx="0" cy="-9.6" r=".9" fill="#A33A2E"/>')
     if c.get("helmet"):
-        o.append(f'<path d="M-11 1Q-12-12 0-12.6Q12-12 11 1L8.6 1Q8-7 0-7.6Q-8-7-8.6 1z" fill="#8C8070" stroke="{INK}" stroke-width=".7"/>'
-                 f'<path d="M-1.8-12.4Q-2.6-19 0-21Q2.6-19 1.8-12.4z" fill="#8E1F2F" stroke="{INK}" stroke-width=".5"/>')  # Helmbusch längs (von vorn schmal); quer = Hauptmann
+        if c.get("crest") == "quer":  # Hauptmann: Helmbusch quer von Ohr zu Ohr (crista transversa, Tradition), vor dem Helm breit sichtbar
+            o.append(f'<path d="M-13.6-5.4Q-14.4-17.6 0-19.6Q14.4-17.6 13.6-5.4L10.6-6.6Q10-14.4 0-15.6Q-10-14.4-10.6-6.6z" fill="#B0402A" stroke="{INK}" stroke-width=".55"/>'
+                     '<path d="M-11.6-8Q-11.6-15.6 0-17.4Q11.6-15.6 11.6-8" fill="none" stroke="#7A2418" stroke-width=".5" stroke-dasharray="1 .9"/>')
+        o.append(f'<path d="M-11 1Q-12-12 0-12.6Q12-12 11 1L8.6 1Q8-7 0-7.6Q-8-7-8.6 1z" fill="#8C8070" stroke="{INK}" stroke-width=".7"/>')
+        if c.get("crest") != "quer":
+            o.append(f'<path d="M-1.8-12.4Q-2.6-19 0-21Q2.6-19 1.8-12.4z" fill="#8E1F2F" stroke="{INK}" stroke-width=".5"/>')  # Helmbusch längs (von vorn schmal); quer = Hauptmann
+        else:
+            o.append('<path d="M-11-3.6Q0-10.6 11-3.6" fill="none" stroke="#D9A441" stroke-width=".9"/>')  # Goldrand am Helm (Offizier)
     if c.get("wreath") == "flowers":  # Bräutigam: grüner Kranz mit Blüten (goldener Lorbeer las sich als Herrscherkranz, Blindtest 2026-10-23)
         leaves = []
         for i, a in enumerate(range(200, 345, 18)):
@@ -446,6 +452,27 @@ def body_inner(key, arm=None, ext=0, staff=True):
                  f'<path d="M-.8-3.9v1.6M.8-3.9v1.6" stroke="{SKIN_D}" stroke-width=".4" stroke-linecap="round"/></g>')
     elif staff and c.get("staff") and not c.get("attr"):  # Wanderstab (Mk 6,8) auf der Brust; ein anderes Erkennungszeichen geht vor
         o.append(staff_svg(1))
+    if c.get("jstaff") and not arm:
+        # Jüngermerkmal (Runde 4, Blindtest Runde 3: es fehlte ein gemeinsames Merkmal der Zwölf): Wanderstab (Mk 6,8) senkrecht
+        # an der linken Schulter, neben dem eigenen Zeichen auf der Brust, dazu Jüngergewand mit dunklem Gürtel wie die Gruppe
+        o.append(f'<g filter="url(#an-kontur)"><path d="M-15.4 34L-12.4 9.6" stroke="#7A5A34" stroke-width="2.2" stroke-linecap="round"/>'
+                 '<path d="M-15.9 33.8L-12.9 9.6" stroke="#A07A4A" stroke-width=".7" stroke-linecap="round"/>'
+                 '<circle cx="-12.3" cy="9" r="1.8" fill="#7A5A34"/></g>')
+    if c.get("beam"):
+        # Kreuzbalken auf der rechten Schulter, hinter dem Kopf schräg nach oben (Mk 15,21); vorher Balken auf der Brust,
+        # las sich als «Balken im Auge» (Blindtest Runde 3)
+        o.append(f'<g filter="url(#an-kontur)"><path d="M-17.6 1.4L17.4 17.2l-1.8 4.6L-19 6.2z" fill="#9A6A3A" stroke="{INK}" stroke-width=".6"/>'
+                 '<path d="M-16.4 3.6L16.6 18.6M-17.2 5L12 18.4" stroke="#6A4A2A" stroke-width=".45"/>'
+                 '<path d="M17.4 17.2l-1.8 4.6" stroke="#6A4A2A" stroke-width=".9"/></g>')
+    if c.get("cloak_off"):
+        # Bartimäus wirft seinen Mantel ab (Mk 10,50): der Mantel rutscht von der Schulter (tiefer als sonst), Bewegungslinien darüber;
+        # geflickt wie ein Bettlermantel (Mk 10,46). Ein wegfliegender Mantel las sich als Flügel.
+        col = c["cloak_off"]
+        o.append(f'<path d="M3 34Q2.4 26 8 22.4Q13.6 19.6 16.6 23.2Q17.4 28 17 34z" fill="{col}" stroke="{INK}" stroke-width=".7"/>'
+                 '<path d="M7.4 26.6q3.6-2.4 8.2-.8M9 30.4q3-1.6 7.2-.6" fill="none" stroke="#5B4630" stroke-width=".5"/>'
+                 f'<path d="M11.4 27.4l3.6-.4.4 3.4-3.6.4z" fill="#B4A890" stroke="{INK}" stroke-width=".45"/>'
+                 '<path d="M9.4 16.2l1.4 3.2M12.6 16.6l1.2 3M15.6 18l.8 2.6" stroke="#6A5A4A" stroke-width=".8" stroke-linecap="round"/>'
+                 '<path d="M10.8 19.4l-.9-.2.6-.7M13.8 19.6l-.9-.1.5-.8M16.4 20.6l-.9.1.4-.8" fill="none" stroke="#6A5A4A" stroke-width=".6"/>')
     out = "".join(o)
     if c.get("child"):  # Kind: schmale Schultern
         out = f'<g transform="translate(0 16) scale(.78 .9) translate(0 -16)">{out}</g>'
