@@ -43,7 +43,7 @@ AUTH_GSW = "KI-Entwurf (Claude) vom {d}; Mundartfassung der neuen Zusammenfassun
 
 def sentences(t):
     t = re.sub(r"\b(z|u|v|d|s|bzw|vgl|ca|usw|Kap|Mt|Mk|Lk|Joh)\.(?=\s)", r"\1", t)  # Abkürzungen
-    return [s for s in re.split(r"(?<=[.!?])\s+(?=[«„A-ZÄÖÜ0-9])", t.strip()) if s]
+    return [s for s in re.split(r"(?:(?<=[.!?])|(?<=[.!?][»“\"']))\s+(?=[«„A-ZÄÖÜ0-9])", t.strip()) if s]
 
 
 def find(rid):
