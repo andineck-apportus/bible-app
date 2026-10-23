@@ -2,6 +2,11 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.77 — 2026-10-23 — Ein Bildstil: Anime
+
+- **Stil «Symbol» eingestellt** (Andi Neck): Die App zeigt nur noch Anime-Bilder, ohne Stil-Umschalter. Die Symbol-Daten bleiben im Repository (Status deprecated), werden aber nicht mehr gebaut.
+- **Figuren und Zeichen zuerst:** Vor neuen Bildern werden alle 569 Lexikon-Einträge im Stil Anime geprüft, verbessert und erneut geprüft (docs/SYMBOLPROZESS.md).
+
 ## v0.76 — 2026-10-23 — Zusammenfassungen aus der Kernanalyse (Pilot)
 
 - **Neue Zusammenfassungen** für Rut, Titus, Markus 5 und die Bergpredigt Mt 5–7 auf Abschnitts-, Kapitel- und Buchebene (58), je auf Hochdeutsch und Züridüütsch.

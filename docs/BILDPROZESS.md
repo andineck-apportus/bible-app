@@ -73,7 +73,7 @@ Was gut funktioniert: die festen Erkennungszeichen (Gott, Jesus, Geist) und der 
    - bei `mode: Auftrag` Briefrahmen und Legende «Auftrag an …»;
    - höchstens zwei abstrakte Zeichen je Feld, nur aus dem getesteten Grundbestand;
    - jede Figur der Legende ist im Bild mit Gesicht zu sehen.
-4. **Zeichnen** in beiden Stilen.
+4. **Zeichnen** im Stil Anime (einziger Stil seit 2026-10-23).
 5. **Blindtest ohne Legende.** Ein unabhängiges KI-Modell sieht nur das Bild, die Ebene und das Buch, nicht Auftrag und Legende:
    - (a) Welche Stelle ist es? Auswahl aus vier Kandidaten derselben Ebene, z. B. den Abschnitten desselben Kapitels;
    - (b) Was geschieht oder wird gesagt? Freie Beschreibung;
@@ -114,6 +114,9 @@ Nur getestete Zeichen dürfen abstrakt verwendet werden; Ablauf, Zielwerte und A
 4. **Ausrollen** auf alle Bücher mit KI-Bearbeitern in Gruppen, mit Liste der offenen Fälle.
 
 ## Entscheide
+
+0. Ein Bildstil: Anime; «Symbol» eingestellt (Andi Neck, 2026-10-23). Vor neuen Bildern werden alle Figuren und Zeichen
+   geprüft, verbessert und erneut geprüft (SYMBOLPROZESS.md, «Figuren und Zeichen vor dem Einsatz»).
 
 1. Worte im Bild: ja (Andi Neck, 2026-10-23). Bilder werden je Übersetzung erzeugt: gleicher Auftrag, Wortband aus der
    jeweiligen Übersetzungsschicht; das passt zum Ziel, die Bibel in verschiedene Sprachen und Kulturen zu übertragen.

@@ -544,7 +544,7 @@ const CONF={high:'gut begründet',probable:'wahrscheinlich',possible:'möglich'}
 
 root.querySelectorAll('.app').forEach((app,appIndex)=>{
 let current='all',lang='de',sheet=null,query='';
-let S={v:3,text:'de',flow:true,theme:'auto',read:19,advanced:true,inline:true,bgInline:true,translit:true,pron:'modern',rate:0.85,voice:{},readVoice:'',readRate:1,godName:'Jahwe',ill:'symbol',view:'text',merk:'mark'};
+let S={v:3,text:'de',flow:true,theme:'auto',read:19,advanced:true,inline:true,bgInline:true,translit:true,pron:'modern',rate:0.85,voice:{},readVoice:'',readRate:1,godName:'Jahwe',ill:'anime',view:'text',merk:'mark'};
 try{const s=JSON.parse(localStorage.getItem('bible:settings')||localStorage.getItem('lesestrom')||'null');if(s){const keep={...s};if(!(s.v>=2)){delete keep.advanced;delete keep.inline;delete keep.bgInline;}if(!(s.v>=3))delete keep.flow;S={...S,...keep,v:3};}}catch(e){}
 /* Feste Darstellung (Andi Neck, 2026-10-23; docs/LESEN-UND-VERTIEFEN.md): Verse fortlaufend, Urtext und Details, Umschrift an;
    keine Lesarten- und Hintergrundzeilen im Text. Nicht einstellbar, damit die Regeln eindeutig und testbar sind. */

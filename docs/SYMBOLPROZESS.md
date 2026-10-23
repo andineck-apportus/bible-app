@@ -56,6 +56,19 @@ Herz mit Lichtstrahl für «glauben», Hand mit Brot für «gute Werke» (Rückm
 Alle bestehenden Zeichen durchlaufen Schritt 4 als Ausgangsmessung. Ergebnis je Zeichen: behalten, neu entwerfen oder
 Wortzeichen. Bericht: `reports/zeichen-blindtest-<datum>.json` und die Zusammenfassung unten.
 
+## Figuren und Zeichen vor dem Einsatz (Entscheid 2026-10-23)
+
+Andi Neck: Anime ist der einzige Bildstil; die Bildqualität soll allgemein besser werden; alle Figuren und Zeichen werden
+vor dem Einfügen in Bilder geprüft, verbessert und erneut geprüft. Gilt für alle 569 Einträge des Bildlexikons im Stil Anime:
+
+1. **Ausgangsmessung** ohne Legende: Personen, Rollen, Gruppen und Gott werden frei beschrieben (wer könnte das sein,
+   Merkmale, Unterscheidbarkeit, Zeichenqualität); Gegenstände und Orte frei benannt. Zeichen und Handlungen: Messung
+   vom 2026-10-23 (gleiche Zeichnungen wie im eingestellten Stil Symbol). Bewertung gegen Name, Identität und
+   Pflichtmerkmale des Lexikons durch eine getrennte Instanz.
+2. **Verbessern:** zuerst die Einträge mit schwacher Erkennung und schwacher Zeichenqualität, gewichtet nach Verwendung in
+   Bildaufträgen; Personen erhalten feste, aus dem Text oder der Tradition begründete Erkennungsmerkmale.
+3. **Erneut messen** mit neuen Instanzen, gleicher Test. Erst dann werden die Bilder neu gezeichnet.
+
 ## Ergebnisse
 
 ### Ausgangsmessung 2026-10-23
