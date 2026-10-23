@@ -36,7 +36,7 @@
       "action_de": "Von der sechsten bis zur neunten Stunde kommt eine Finsternis über das Land. Jesus schreit: Eloi, Eloi, lema sabachthani? – Mein Gott, mein Gott, wozu hast du mich verlassen?",
       "stage": {
         "mood": {
-          "FIG-JESUS": "worried"
+          "FIG-JESUS": "pain"
         },
         "x": {
           "FIG-JESUS": 70
@@ -48,6 +48,9 @@
         "air_y": 8,
         "count": {
           "FIG-ZEICHEN-FINSTERNIS": 3
+        },
+        "pose": {
+          "FIG-JESUS": "cross"
         }
       }
     },
@@ -420,6 +423,134 @@
           "Schrei: Finsternis (dunkle Wolken); Jesus schreit: Mein Gott – warum getrennt von mir? (Strahlenkranz, Trennlinie, Jesus, Fragezeichen).",
           "Tod: Jesus ist gestorben (leeres Kreuz, daneben verschlossenes Grab); der Tempelvorhang reisst; der Hauptmann: Gottes Sohn (Jesus, Strahlenkranz).",
           "Zeuginnen: Drei Frauen schauen von ferne zum Kreuz (Tränen)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.15.33-MRK.15.34",
+            "figures": [
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KREUZ"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FINSTERNIS"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-ABSTAND",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Von der sechsten bis zur neunten Stunde kommt eine Finsternis über das Land. Jesus schreit: Eloi, Eloi, lema sabachthani? – Mein Gott, mein Gott, wozu hast du mich verlassen?",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 70
+              },
+              "floor_x": {
+                "FIG-OBJ-KREUZ": 116
+              },
+              "air_x": 112,
+              "air_y": 8,
+              "count": {
+                "FIG-ZEICHEN-FINSTERNIS": 3
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.15.35-MRK.15.39",
+            "figures": [
+              "FIG-ROLLE-SOLDAT"
+            ],
+            "objects": [
+              "FIG-OBJ-KREUZ",
+              "FIG-OBJ-TEMPELVORHANG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TOD"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-SOLDAT",
+                "to": "FIG-ROLLE-SOLDAT",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-GOTT"
+                ]
+              }
+            ],
+            "action_de": "Jesus stösst einen lauten Schrei aus und stirbt. Der Vorhang des Tempels reisst von oben bis unten. Der Hauptmann, der ihm gegenübersteht, sagt: Wahrhaftig, dieser Mensch war Gottes Sohn!",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-SOLDAT": "surprised"
+              },
+              "back_side": "left",
+              "x": {
+                "FIG-ROLLE-SOLDAT": 152
+              },
+              "floor_x": {
+                "FIG-OBJ-KREUZ": 80
+              },
+              "air_x": 54,
+              "air_y": 94,
+              "arrows": [
+                [
+                  "FIG-OBJ-KREUZ",
+                  "FIG-ROLLE-SOLDAT",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.15.40-MRK.15.41",
+            "figures": [
+              "FIG-MARIA-MAGDALA",
+              "FIG-MARIA-MUTTER-JAKOBUS",
+              "FIG-SALOME"
+            ],
+            "objects": [
+              "FIG-OBJ-KREUZ"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER"
+            ],
+            "speech": [],
+            "action_de": "Frauen schauen von ferne zu, darunter Maria aus Magdala, Maria, die Mutter von Jakobus dem Kleinen und Joses, und Salome; sie sind ihm seit Galiläa gefolgt und haben ihm gedient.",
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-MARIA-MAGDALA",
+                  "FIG-MARIA-MUTTER-JAKOBUS",
+                  "FIG-SALOME"
+                ]
+              },
+              "mood": {
+                "FIG-MARIA-MAGDALA": "worried",
+                "FIG-MARIA-MUTTER-JAKOBUS": "worried",
+                "FIG-SALOME": "worried"
+              },
+              "floor_side": "right"
+            }
+          }
         ]
       }
     }

@@ -325,7 +325,8 @@ def run():
     n = 0
     for b in BRIEFS:
         rid = f"BRIEF-{b['suffix']}"
-        confirm = confirm_all and (not only or any(b["suffix"] == x or b["suffix"].startswith(x + "-") for x in only))
+        # «=MAT-005» trifft nur genau diesen Auftrag, «MAT-005» auch alle darunter (Abschnitte, Merkverse)
+        confirm = confirm_all and (not only or any(b["suffix"] == x.lstrip("=") or (not x.startswith("=") and b["suffix"].startswith(x + "-")) for x in only))
         if len(CAPTIONS.get(b["suffix"], [])) != len(b["panels"]):
             raise SystemExit(f"{rid}: Bildhilfe (CAPTIONS) passt nicht zur Zahl der Felder")
         for p in b["panels"]:

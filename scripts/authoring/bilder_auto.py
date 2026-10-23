@@ -99,6 +99,8 @@ def plan(p, lex, extra):
     humans = [f for f in p["figures"] if (lex[f]["kind"] in HUMAN_KINDS or f == "FIG-JESUS") and f not in as_place]
     divine = [f for f in p["figures"] if f in ("FIG-GOTT", "FIG-HEILIGER-GEIST")]
     things = as_place + list(p["objects"]) + list(p["signs"])
+    if "cross" in (st.get("pose") or {}).values():  # Jesus am Kreuz: das Kreuz zeichnet die Figur selbst
+        things = [x for x in things if x != "FIG-OBJ-KREUZ"]
     inside = st.get("in", {})
     row = [h for h in humans if h not in inside]
     place = lambda t: meta(t, lex, extra)[0]  # noqa: E731

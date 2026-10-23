@@ -1250,7 +1250,7 @@ for _k, _v in _SYMS.items():
         COPY.append(_v["sym"])
 OBJ["FIG-SATAN"] = "an-p-satan"  # im Stil Anime eigener Rauchschatten (library), gleiche viewBox wie das Bauteil ill-satan
 EXTRA_META = {k: (v["place"], tuple(v["size"])) for k, v in _SYMS.items()}
-POSE_SHIFT = {"sit": 6, "kneel": 4}
+POSE_SHIFT = {"sit": 6, "kneel": 4, "cross": -12}
 
 
 class AniComposer(_auto.Composer):
@@ -1307,10 +1307,12 @@ class AniComposer(_auto.Composer):
     def _draw(self, fid, x, y, s, expr, look, arm, tears, hold, pose, out, joy=False, p_stage=None):
         key = KEY[fid]
         ang = {1: -24, -1: 204}.get(arm) if arm is not None else None
-        a = (ang, 10) if ang is not None else None
+        a = (ang, 10) if ang is not None and pose != "cross" else None  # am Kreuz kein Zeigearm
         big_hold = ""
         if hold == "PRAY":
             hold = "an-z-beten"
+        if hold and KEY.get(hold) and CHAR.get(KEY[hold], {}).get("baby"):  # Säugling im Arm (z. B. Noomi mit Obed, Rut 4,16)
+            hold = "an-a-saeugling"
         wear = ((p_stage or {}).get("wear") or {}).get(fid)
         if wear:
             key = self._sackkey(key, wear)
@@ -1344,6 +1346,19 @@ class AniComposer(_auto.Composer):
             g = f'<g transform="rotate({26 if (look or 0) >= 0 else -26} {x:.1f} {y + 30 * s:.1f})">{g}</g>'
         elif pose == "fall":
             g = f'<g transform="rotate(32 {x:.1f} {y + 18 * s:.1f})">{g}</g>'
+        elif pose == "cross":
+            # Jesus am Kreuz in einfacher Form (Entscheid Andi Neck 2026-10-23): Holzkreuz hinter ihm, Arme am Querbalken,
+            # Kopf leicht geneigt; keine Wunden im Detail, kein Blut (BILDSPRACHE.md)
+            wood, dark = "#8A6A3A", "#5B4630"
+            by = y + 13 * s
+            cross = (f'<rect x="{x - 3.4 * s:.1f}" y="{y - 30 * s:.1f}" width="{6.8 * s:.1f}" height="{_auto.FLOOR_Y + 22 - (y - 30 * s):.1f}" fill="{wood}" stroke="{INK}" stroke-width="{.8 * s:.2f}"/>'
+                     f'<rect x="{x - 36 * s:.1f}" y="{by - 3.2 * s:.1f}" width="{72 * s:.1f}" height="{6.4 * s:.1f}" fill="{wood}" stroke="{INK}" stroke-width="{.8 * s:.2f}"/>'
+                     f'<rect x="{x - 9 * s:.1f}" y="{y - 27 * s:.1f}" width="{18 * s:.1f}" height="{6 * s:.1f}" fill="#F2E6CC" stroke="{dark}" stroke-width="{.6 * s:.2f}"/>')
+            sleeve = CHAR[key].get("robe", "#E8DCC0")
+            arms = "".join(f'<path d="M{x + d * 12 * s:.1f} {y + 18 * s:.1f}L{x + d * 31 * s:.1f} {by:.1f}" stroke="{INK}" stroke-width="{5.6 * s:.2f}" stroke-linecap="round"/>'
+                           f'<path d="M{x + d * 12 * s:.1f} {y + 18 * s:.1f}L{x + d * 31 * s:.1f} {by:.1f}" stroke="{sleeve}" stroke-width="{4.2 * s:.2f}" stroke-linecap="round"/>'
+                           f'<circle cx="{x + d * 33 * s:.1f}" cy="{by:.1f}" r="{2.6 * s:.1f}" fill="{SKIN}" stroke="{INK}" stroke-width="{.6 * s:.2f}"/>' for d in (-1, 1))
+            g = cross + arms + f'<g transform="rotate(-9 {x:.1f} {y + 12 * s:.1f})">{g}</g>'
         out.append(g + big_hold)
         if joy:
             out.append(sparkle(x - 13 * s, y - 10 * s, .7 * s) + sparkle(x + 13 * s, y - 12 * s, .6 * s))
