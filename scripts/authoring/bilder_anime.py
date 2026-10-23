@@ -455,9 +455,9 @@ def body_inner(key, arm=None, ext=0, staff=True):
     if c.get("jstaff") and not arm:
         # Jüngermerkmal (Runde 4, Blindtest Runde 3: es fehlte ein gemeinsames Merkmal der Zwölf): Wanderstab (Mk 6,8) senkrecht
         # an der linken Schulter, neben dem eigenen Zeichen auf der Brust, dazu Jüngergewand mit dunklem Gürtel wie die Gruppe
-        o.append(f'<g filter="url(#an-kontur)"><path d="M-15.4 34L-12.4 9.6" stroke="#7A5A34" stroke-width="2.2" stroke-linecap="round"/>'
-                 '<path d="M-15.9 33.8L-12.9 9.6" stroke="#A07A4A" stroke-width=".7" stroke-linecap="round"/>'
-                 '<circle cx="-12.3" cy="9" r="1.8" fill="#7A5A34"/></g>')
+        o.append(f'<g filter="url(#an-kontur)"><path d="M-15.4 34L-13 14.6" stroke="#7A5A34" stroke-width="2.2" stroke-linecap="round"/>'
+                 '<path d="M-15.9 33.8L-13.5 14.6" stroke="#A07A4A" stroke-width=".7" stroke-linecap="round"/>'
+                 '<circle cx="-12.9" cy="14" r="1.8" fill="#7A5A34"/></g>')  # oben knapp auf Schulterhöhe (Hinweis Andi Neck 2026-10-23: Stab nicht weit abstehend)
     if c.get("beam"):
         # Kreuzbalken auf der rechten Schulter, hinter dem Kopf schräg nach oben (Mk 15,21); vorher Balken auf der Brust,
         # las sich als «Balken im Auge» (Blindtest Runde 3)
@@ -522,8 +522,8 @@ GROUP_SPEC = {
     "FIG-GRUPPE-ISRAEL": dict(mix="crowd", n=4, color="#E2D6BE", mantle="#3E6E9E", ghosts=True),  # heller Rock, blauer Mantel (Lexikon)
     "FIG-GRUPPE-VOELKER": dict(mix="crowd", n=4, ghosts=True, color="#4F7FA8", mantle="#B4583A", male={"turban": "#2F6F73", "band": None}),  # Kopfbund statt Stirnband
     # Die Zwölf: nur Männer, gleiche Mantelfarbe, Wanderstab (Mk 6,8)
-    "FIG-GRUPPE-ZWOELF": dict(mix="m", n=3, color="#9C7A4C", mantle=None, every={"belt": "#5B4630"}, hold={0: "an-a-g-zwoelf"}),  # Zahl 12 statt Stäben (wurden als Hirten gelesen)
-    "FIG-GRUPPE-JUENGER": dict(mix="m", n=3, color="#A0825A", mantle=None, every={"belt": "#5B4630"}, hold={0: "an-a-fussspuren"}),  # «folgt mir nach» wie die Jünger-Rolle
+    "FIG-GRUPPE-ZWOELF": dict(mix="m", n=3, color="#9C7A4C", mantle=None, every={"belt": "#5B4630", "jstaff": None}, hold={0: "an-a-g-zwoelf"}),  # Zahl 12 statt Stäben (wurden als Hirten gelesen)
+    "FIG-GRUPPE-JUENGER": dict(mix="m", n=3, color="#A0825A", mantle=None, every={"belt": "#5B4630", "jstaff": None}, hold={0: "an-a-fussspuren"}),  # «folgt mir nach» wie die Jünger-Rolle
     # wie der Täufer: Fellkragen und Ledergurt (Mk 1,6), jüngere Männer
     "FIG-GRUPPE-JOHANNES-JUENGER": dict(mix="m", n=3, color="#8A6A3A", mantle=None, every={"fur": True, "belt": "#5B4630", "old": None}, hold={0: "an-a-kreuzstab"}),  # Zeichen ihres Lehrers
     "FIG-GRUPPE-BRUEDER-JESU": dict(mix="m", n=4, alike=True, color="#B8A27A", mantle=None, sash="#6A7A5A"),  # vier Brüder (Mk 6,3), gleicher Haarschnitt
