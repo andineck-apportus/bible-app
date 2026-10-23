@@ -37,10 +37,24 @@ HAIR = "#2E2017"
 FACE = "M-10 -1Q-10 9 0 12.6Q10 9 10 -1A10 10.6 0 0 0 -10 -1z"
 
 
-def eyes(expr, look):
+FACE_CHILD = "M-10 -1Q-10.4 8.4 0 11.2Q10.4 8.4 10-1A10 10.6 0 0 0-10-1z"  # Kind: rundes Gesicht, kurzes Kinn
+OLD_HAIR = "#C9C2B6"  # Alte: graues bzw. weisses Haar (Blindtest 2026-10-23: Alte nicht als alt gelesen)
+
+
+def _light(col):
+    h = col.lstrip("#")
+    r, g, b = (int(h[i:i + 2], 16) for i in (0, 2, 4))
+    return (.299 * r + .587 * g + .114 * b) / 255
+
+
+def eyes(expr, look, big=False):
     out = []
     for side in (-1, 1):
-        ex, ey = side * 4.2 + max(-1.6, min(1.6, look * 1.4)), 2.4
+        ex, ey = side * 4.2 + max(-1.6, min(1.6, look * 1.4)), (3.0 if big else 2.4)
+        if big and expr not in ("smile", "delight", "sleep", "surprised"):  # Kind: grosse runde Augen mit grossem Glanzpunkt
+            out.append(f'<ellipse cx="{ex:.1f}" cy="{ey:.1f}" rx="2.15" ry="2.6" fill="#3A2416"/>'
+                       f'<circle cx="{ex + .7:.1f}" cy="{ey - .8:.1f}" r=".9" fill="#FFF"/><circle cx="{ex - .6:.1f}" cy="{ey + .9:.1f}" r=".4" fill="#FFF"/>')
+            continue
         if expr in ("smile", "delight"):  # Freude mit lachenden Augen (Sternaugen wirkten befremdlich)
             out.append(f'<path d="M{ex - 2:.1f} {ey + .4:.1f}Q{ex:.1f} {ey - 2:.1f} {ex + 2:.1f} {ey + .4:.1f}" fill="none" stroke="{INK}" stroke-width="1.1" stroke-linecap="round"/>')
             continue
@@ -119,27 +133,31 @@ CHAR = {
     "diener2": dict(hair="#3A2A1C", front="M-10.6 0Q-11.4-10.8 0-11.8Q11.4-10.8 10.6 0Q8.4-7 0-7.4Q-8.4-7-10.6 0z",
                     robe="#A8987A", apron=True),
     "meister": dict(hair="#6A5646", front="M-10.6 1Q-10.8-6-8.6-8.6Q-6-6.8-6.4-1z M10.6 1Q10.8-6 8.6-8.6Q6-6.8 6.4-1z",
-                    mustache=True, robe="#4F7A4A", belt="#D9A441"),
+                    mustache=True, robe="#4F7A4A", belt="#D9A441", attr="an-becher"),  # Becher: Festleiter kostet den Wein (Joh 2,8-9)
     "braeutigam": dict(hair="#24180F", front="M-10.6-1.8Q-11-11.6 0-12Q11-11.6 10.6-1.8Q8-8.6 0-9.2Q-8-8.6-10.6-1.8z",
-                       beard="M-8 6.4Q-7 12.4 0 13.4Q7 12.4 8 6.4Q6 10 0 10.6Q-6 10-8 6.4z", robe="#5A3E7A", trim="#D9A441", wreath=True),
+                       beard="M-8 6.4Q-7 12.4 0 13.4Q7 12.4 8 6.4Q6 10 0 10.6Q-6 10-8 6.4z", robe="#5A3E7A", trim="#D9A441", wreath="flowers"),
     "braut": dict(female=True, hair="#2E2017", veil="#FFFFFF", front="M-8-3.4Q0-8.6 8-3.4Q4-5.4 0-5.2Q-4-5.4-8-3.4z", robe="#FBF3E4", flowers=True),
-    "juenger": dict(hair="#2E2017", curls=True, beard="M-8 6.4Q-7 12 0 13Q7 12 8 6.4Q6 9.8 0 10.4Q-6 9.8-8 6.4z", robe="#9C7A4C", belt="#5B4630"),
-    "juenger2": dict(hair="#4A3020", front="M-10.6 0Q-11.4-10.8 0-11.8Q11.4-10.8 10.6 0Q6-8.2-1-7Q-7-6.4-10.6 0z", robe="#8A6A40", belt="#5B4630"),
-    "gast": dict(hair="#2E2017", front="M-10.6-.4Q-11-11.6 0-12Q11-11.6 10.6-.4Q8-6 0-6.6Q-8-6-10.6-.4z", robe="#B4A98F"),
+    # Jünger mit Wanderstab (Mk 6,8: «nichts mitnehmen ausser einem Stab»), sonst wie Arbeiter gelesen (Blindtest 2026-10-23)
+    "juenger": dict(hair="#2E2017", curls=True, beard="M-8 6.4Q-7 12 0 13Q7 12 8 6.4Q6 9.8 0 10.4Q-6 9.8-8 6.4z", robe="#9C7A4C", belt="#5B4630", staff=True),
+    "juenger2": dict(hair="#4A3020", front="M-10.6 0Q-11.4-10.8 0-11.8Q11.4-10.8 10.6 0Q6-8.2-1-7Q-7-6.4-10.6 0z", robe="#8A6A40", belt="#5B4630", staff=True),
+    "gast": dict(hair="#2E2017", front="M-10.6-.4Q-11-11.6 0-12Q11-11.6 10.6-.4Q8-6 0-6.6Q-8-6-10.6-.4z", robe="#B4A98F", attr="an-becher"),
     "haendler": dict(hair="#2E2017", veil="#E9D8B4", front="M-7.6-3.6Q0-8.4 7.6-3.6Q4-5.2 0-5Q-4-5.2-7.6-3.6z",
-                     beard="M-8 6.4Q-7 12.4 0 13.4Q7 12.4 8 6.4Q6 10 0 10.6Q-6 10-8 6.4z", robe="#C2884A", belt="#8A6A3A"),
+                     beard="M-8 6.4Q-7 12.4 0 13.4Q7 12.4 8 6.4Q6 10 0 10.6Q-6 10-8 6.4z", robe="#C2884A", belt="#8A6A3A", attr="an-a-geldbeutel"),
     "menge": dict(hair="#2E2017", front="M-10.6-.4Q-11-11.6 0-12Q11-11.6 10.6-.4Q8-6 0-6.6Q-8-6-10.6-.4z",
                   beard="M-8 6.4Q-7 12.4 0 13.4Q7 12.4 8 6.4Q6 10 0 10.6Q-6 10-8 6.4z", robe="#A8987A", sash="#7E6E52"),
     "menge2": dict(female=True, hair="#3A2618", veil="#C9B48E", front="M-7.6-3.6Q0-8.4 7.6-3.6Q4-5.2 0-5Q-4-5.2-7.6-3.6z", robe="#9C8A6A", sash="#6E5E44"),
     "menge3": dict(hair="#24180F", front="M-10.6 0Q-11.4-10.8 0-11.8Q11.4-10.8 10.6 0Q6-8.2-1-7Q-7-6.4-10.6 0z", robe="#8E8A6E", sash="#6A664C"),
     "mose": dict(hair="#D8D2C4", front="M-10.6-1.6Q-11.4-10.8 0-11.8Q11.4-10.8 10.6-1.6Q8-8.8 0-9.4Q-8-8.8-10.6-1.6z",
-                 beard="M-8.6 4.6Q-9 15 0 19Q9 15 8.6 4.6Q6.6 10.6 0 11.2Q-6.6 10.6-8.6 4.6z", robe="#7A5A34", mantle="#E7DCC4"),
+                 beard="M-8.6 4.6Q-9 15 0 19Q9 15 8.6 4.6Q6.6 10.6 0 11.2Q-6.6 10.6-8.6 4.6z", robe="#7A5A34", mantle="#E7DCC4", staff=True),  # Stab (Ex 4,2.17)
     "paulus": dict(hair="#3A2618", front="M-10.6 1Q-10.8-6-8.6-8.6Q-6-6.8-6.4-1z M10.6 1Q10.8-6 8.6-8.6Q6-6.8 6.4-1z",
-                   beard="M-8.4 5Q-8 14 0 15.6Q8 14 8.4 5Q6.6 10.4 0 11Q-6.6 10.4-8.4 5z", robe="#A79A80", mantle="#6A3F2F"),
-    "prophet": dict(hair="#2E2017", veil="#5B4E3C", front="M-7.6-3.6Q0-8.4 7.6-3.6Q4-5.2 0-5Q-4-5.2-7.6-3.6z",
-                    beard="M-8.4 5Q-8 15 0 16.6Q8 15 8.4 5Q6.6 10.4 0 11Q-6.6 10.4-8.4 5z", robe="#8A7A62", mantle="#5B4E3C"),
+                   beard="M-8.4 5Q-8 14 0 15.6Q8 14 8.4 5Q6.6 10.4 0 11Q-6.6 10.4-8.4 5z", robe="#A79A80", mantle="#6A3F2F",
+                   attr="an-a-brief", sword=True),  # Brief (Tradition, Briefe des Paulus) und Schwert an der Seite (Tradition)
+    # Prophet: dunkler, rauer Mantel und Schriftrolle statt Hirten-Kopftuch (Blindtest 2026-10-23)
+    "prophet": dict(hair="#2E2017", back="M-10.6 -2Q-12.5 9-10 17L-5.6 16Q-8.4 7-7.6-1z M10.6 -2Q12.5 9 10 17L5.6 16Q8.4 7 7.6-1z",
+                    front="M-10.6-1Q-10.5-11.6 0-12Q10.5-11.6 10.6-1Q7-6.4 .8-7.6L0-5.4-.8-7.6Q-7-6.4-10.6-1z",
+                    beard="M-8.4 5Q-8 15 0 16.6Q8 15 8.4 5Q6.6 10.4 0 11Q-6.6 10.4-8.4 5z", robe="#8A7A62", mantle="#3E352A", rough=True, attr="an-a-rolle"),
     "koenig": dict(hair="#24180F", front="M-10.6-.4Q-11-11.6 0-12Q11-11.6 10.6-.4Q8-6 0-6.6Q-8-6-10.6-.4z",
-                   beard="M-8 6.4Q-7 12.4 0 13.4Q7 12.4 8 6.4Q6 10 0 10.6Q-6 10-8 6.4z", robe="#6A2E5E", trim="#D9A441", crown=True),
+                   beard="M-8 6.4Q-7 12.4 0 13.4Q7 12.4 8 6.4Q6 10 0 10.6Q-6 10-8 6.4z", robe="#4A2E6E", mantle="#C08A2A", trim="#D9A441", crown="royal"),  # anders als Herodes Antipas: hohe Bügelkrone, goldener Mantel
     "soldat": dict(hair="#24180F", robe="#8FA3A0", mantle="#8E1F2F", helmet=True),
     "gast2": dict(female=True, hair="#3A2618", veil="#C7B9D6", front="M-7.6-3.6Q0-8.4 7.6-3.6Q4-5.2 0-5Q-4-5.2-7.6-3.6z", robe="#8FA3A0"),
 }
@@ -147,47 +165,59 @@ CHAR = {
 
 def head_inner(key, expr="calm", look=0.0, tears=False):
     c = CHAR[key]
+    child = c.get("child")
+    hair = c["hair"]
+    if c.get("old") and _light(hair) < .62:
+        hair = OLD_HAIR
     o = []
     if c.get("halo"):
         o.append(f'<circle r="15.5" fill="#F7DB9A" stroke="#D9A441" stroke-width="1.2"/><path d="M0-15.5v5M-15.5 0h5M15.5 0h-5" stroke="#C08A2A" stroke-width="2.2"/>')
-    if c.get("veil"):
+    if c.get("cowl"):  # Kapuze eines Reisemantels: spitz, mit dickem Rand, liegt auf den Schultern (Schleierform las sich als Frauenkopftuch)
+        o.append(f'<path d="M-12.8 17Q-14.6-1-10-9.6Q-5-17.6 1.6-20Q4-16.6 9.8-9.6Q14.6-1 12.8 17z" fill="{c["veil"]}" stroke="{INK}" stroke-width=".7"/>')
+    elif c.get("veil"):
         o.append(f'<path d="M-13 18Q-14.6-4-9.4-10.6Q0-17 9.4-10.6Q14.6-4 13 18z" fill="{c["veil"]}" stroke="{INK}" stroke-width=".7"/>')
     if c.get("back"):
-        o.append(f'<path d="{c["back"]}" fill="{c["hair"]}"/>')
-    o.append(f'<path d="M-2.4 11h4.8v6h-4.8z" fill="{SKIN if c.get("female") else SKIN_D}"/>')  # Hals (bei Frauen hell: dunkler Hals las sich mit dunklem Schleier als Bart)
-    o.append(f'<path d="{FACE}" fill="{SKIN}" stroke="{INK}" stroke-width=".7"/>')
+        o.append(f'<path d="{c["back"]}" fill="{hair}"/>')
+    o.append(f'<path d="M-2.4 11h4.8v6h-4.8z" fill="{SKIN if c.get("female") or child else SKIN_D}"/>')  # Hals (bei Frauen hell: dunkler Hals las sich mit dunklem Schleier als Bart)
+    o.append(f'<path d="{FACE_CHILD if child else FACE}" fill="{SKIN}" stroke="{INK}" stroke-width=".7"/>')
     ears = []  # Dreiviertelansicht: bei starkem Blick zur Seite ist das Ohr auf dieser Seite verdeckt
     if look < 2.2:
         ears.append("M10.3 2.4q1.8.4 1.2 2.6-.6 1.6-1.8 1z")
     if look > -2.2:
         ears.append("M-10.3 2.4q-1.8.4-1.2 2.6.6 1.6 1.8 1z")
     o.append(f'<path d="{" ".join(ears)}" fill="{SKIN}" stroke="{INK}" stroke-width=".5"/>')
-    if c.get("beard"):
-        o.append(f'<path d="{c["beard"]}" fill="{c["hair"]}" opacity=".92"/>')
-    if c.get("mustache"):
-        o.append(f'<path d="M{look - 3:.1f} 6.6q3-1.6 6 0" fill="none" stroke="{c["hair"]}" stroke-width="1.3" stroke-linecap="round"/>')
-    o.append(eyes(expr, look) + brows(expr, look, c["hair"]))
-    if c.get("female") and expr not in ("sleep",):  # Frauen: Wimpern aussen am Oberlid und farbige Lippen (Blindtest 2026-10-23: Frauen als Männer gelesen)
+    if c.get("beard") and not child:
+        o.append(f'<path d="{c["beard"]}" fill="{hair}" opacity=".92"/>')
+    if c.get("mustache") and not child:
+        o.append(f'<path d="M{look - 3:.1f} 6.6q3-1.6 6 0" fill="none" stroke="{hair}" stroke-width="1.3" stroke-linecap="round"/>')
+    o.append(eyes(expr, look, big=child) + brows(expr, look, hair))
+    if c.get("female") and expr not in ("sleep",) and not child:  # Frauen: Wimpern aussen am Oberlid und farbige Lippen (Blindtest 2026-10-23: Frauen als Männer gelesen)
         for side in (-1, 1):
             ex = side * 4.2 + max(-1.6, min(1.6, look * 1.4))
             o.append(f'<path d="M{ex + side * 1.9:.1f} {.5:.1f}l{side * 1.3:.1f}-1.1M{ex + side * 1.2:.1f} {-.2:.1f}l{side * .8:.1f}-1.3" stroke="{INK}" stroke-width=".55" stroke-linecap="round"/>')
         o.append(f'<path d="M{look - 1.6:.1f} 8.4Q{look:.1f} 9.9 {look + 1.6:.1f} 8.4Q{look:.1f} 8.9 {look - 1.6:.1f} 8.4z" fill="#B5524A" opacity=".85"/>')
-    o.append(f'<path d="M{look * .8:.1f} 4.8l-.6 1.6h1" fill="none" stroke="{SKIN_D}" stroke-width=".7" stroke-linecap="round"/>')
-    if expr in ("delight", "worried") or c.get("flowers"):
+    o.append(f'<path d="M{look * .8:.1f} {5.4 if child else 4.8}l-.{4 if child else 6} 1.{2 if child else 6}h{.7 if child else 1}" fill="none" stroke="{SKIN_D}" stroke-width=".7" stroke-linecap="round"/>')
+    if expr in ("delight", "worried") or c.get("flowers") or child:
         o.append(blush())
-    o.append(mouth(expr, look))
+    o.append(mouth(expr, look) if not child else f'<g transform="translate({look * .2:.1f} .8) scale(.8)">{mouth(expr, look)}</g>')
+    if c.get("old"):  # Alter deutlich: Falten an Augen und Wangen
+        o.append(f'<path d="M-7.6 1.6l-1.4-.5M-7.6 2.9l-1.5.1M7.6 1.6l1.4-.5M7.6 2.9l1.5.1M-6 5.2q1.8.8 3.6 0M2.4 5.2q1.8.8 3.6 0'
+                 f'M-3.4 6.2q-1.3 1.6-.6 3.6M3.4 6.2q1.3 1.6.6 3.6" stroke="#8A5A3A" stroke-width=".5" stroke-linecap="round" fill="none"/>')
     if tears:
         for side in (-1, 1):
             ex = side * 4.2 + max(-1.6, min(1.6, look * 1.4))
             o.append(f'<path d="M{ex:.1f} 4.4q-.6 2.6-.2 5.4" fill="none" stroke="#6FA8D8" stroke-width="1.3" stroke-linecap="round"/>'
                      f'<path d="M{ex - .2:.1f} 9.2q1.4 1.8 0 2.8-1.4-1 0-2.8z" fill="#8FC8EE" stroke="#2E6E9E" stroke-width=".4"/>')
-    if c.get("curls"):
-        o.append("".join(f'<circle cx="{x}" cy="{y}" r="3.1" fill="{c["hair"]}"/>' for x, y in ((-8, -4), (-6, -8.6), (-1.6, -10.6), (3.2, -10.4), (7.2, -8), (8.8, -3.6))))
+    if c.get("cowl"):  # Kapuzenrand über der Stirn, etwas dunkler als der Mantel
+        o.append(f'<path d="M-10.6 2Q-11.8-9.4 0-12.8Q11.8-9.4 10.6 2Q9.2-7.8 0-9.4Q-9.2-7.8-10.6 2z" fill="{c["veil"]}" stroke="{INK}" stroke-width=".8"/>'
+                 f'<path d="M-9.6 0Q-9.8-7.8 0-10.4Q9.8-7.8 9.6 0" fill="none" stroke="{INK}" stroke-width=".45" opacity=".55"/>')
+    elif c.get("curls"):
+        o.append("".join(f'<circle cx="{x}" cy="{y}" r="3.1" fill="{hair}"/>' for x, y in ((-8, -4), (-6, -8.6), (-1.6, -10.6), (3.2, -10.4), (7.2, -8), (8.8, -3.6))))
     elif c.get("front"):
-        o.append(f'<path d="{c["front"]}" fill="{c["hair"]}"/>')
-    if c.get("veil") and c["veil"] != "#FFFFFF":
+        o.append(f'<path d="{c["front"]}" fill="{hair}"/>')
+    if c.get("veil") and c["veil"] != "#FFFFFF" and not c.get("cowl"):
         o.append(f'<path d="M-10.4 1Q-11.6-8.8 0-12.2Q11.6-8.8 10.4 1Q9-7.8 0-9.4Q-9-7.8-10.4 1z" fill="{c["veil"]}" stroke="{INK}" stroke-width=".7"/>')
-    if c.get("hood"):  # Gebetsmantel: dunkle Querstreifen
+    if c.get("hood") and not c.get("cowl"):  # Gebetsmantel: dunkle Querstreifen
         o.append('<path d="M-10.9-3.6Q0-11.4 10.9-3.6M-10.6-.8Q0-8.6 10.6-.8" fill="none" stroke="#2E4A7A" stroke-width="1.2"/>')
     if c.get("veil") == "#FFFFFF":
         o.append(f'<path d="M-10.6 0Q-11.6-9.6 0-12.4Q11.6-9.6 10.6 0Q9-8 0-9.4Q-9-8-10.6 0z" fill="#FFFFFF" stroke="#B4B2A9" stroke-width=".7"/>')
@@ -196,63 +226,114 @@ def head_inner(key, expr="calm", look=0.0, tears=False):
     if c.get("turban"):
         o.append(f'<path d="M-11-1Q-12.4-13.6 0-14Q12.4-13.6 11-1Q9-7.4 0-7.8Q-9-7.4-11-1z" fill="{c["turban"]}" stroke="{INK}" stroke-width=".7"/>'
                  '<path d="M-10-5Q0-10 10-5M-10.6-8.4Q0-13 10.6-8.4" fill="none" stroke="#C9BFAA" stroke-width=".7"/>')
+    if c.get("tefillin"):  # Gebetskapsel an der Stirn mit Riemen (Mt 23,5)
+        o.append('<path d="M-10.4-3.4Q0-8.6 10.4-3.4" fill="none" stroke="#1E1610" stroke-width=".8"/><path d="M-2.4-11.6h4.8v4.4h-4.8z" fill="#1E1610" stroke="#000" stroke-width=".3"/>')
+    if c.get("bandage"):  # Verband um den Kopf (Kranke)
+        o.append('<path d="M-10.8-2.6Q0-8.4 10.8-4.6l-.2 2.6Q0-5.8-10.6.2z" fill="#F6F1E4" stroke="#B4B2A9" stroke-width=".5"/><path d="M-4-5.6l2 2.4M2-6.4l2 2.2" stroke="#D8CBB0" stroke-width=".5"/>')
     if c.get("plate"):
         o.append('<path d="M-4-10.6h8v2.2h-8z" fill="#E0B24E" stroke="#9C6F1C" stroke-width=".4"/>')
     if c.get("band"):
         o.append(f'<path d="M-10.6-4.6Q0-9.6 10.6-4.6v2.4Q0-7.2-10.6-2.2z" fill="{c["band"]}"/>')
-    if c.get("old"):
-        o.append(f'<path d="M-4-5.2h3M1.4-5.4h3M-7.8 6.4q.6 1.4 1.6 1.8M7.8 6.4q-.6 1.4-1.6 1.8" stroke="{SKIN_D}" stroke-width=".55" stroke-linecap="round" fill="none"/>')
-    if c.get("crown"):
+    if c.get("crown") == "royal":  # König: hohe Bügelkrone mit Steinen (Herodes Antipas: niedrige Zackenkrone)
+        o.append('<path d="M-9-6.4l-.6-6.8 3.2 2.4 2-7 4.4 4.6 4.4-4.6 2 7 3.2-2.4-.6 6.8z" fill="#E0B24E" stroke="#9C6F1C" stroke-width=".6"/>'
+                 '<path d="M-9-8.6h18" stroke="#9C6F1C" stroke-width="1.2"/><circle cx="0" cy="-12.6" r="1.1" fill="#3E6E9E"/><circle cx="-5" cy="-10.6" r=".8" fill="#A33A2E"/><circle cx="5" cy="-10.6" r=".8" fill="#A33A2E"/>')
+    elif c.get("crown"):
         o.append('<path d="M-8.6-6.6l1-6.4 3 3.6 2.6-4.8 2 4.6 2-4.6 2.6 4.8 3-3.6 1 6.4z" fill="#E0B24E" stroke="#9C6F1C" stroke-width=".6"/>'
                  '<circle cx="0" cy="-9.6" r=".9" fill="#A33A2E"/>')
     if c.get("helmet"):
         o.append(f'<path d="M-11 1Q-12-12 0-12.6Q12-12 11 1L8.6 1Q8-7 0-7.6Q-8-7-8.6 1z" fill="#8C8070" stroke="{INK}" stroke-width=".7"/>'
                  f'<path d="M-1.8-12.4Q-2.6-19 0-21Q2.6-19 1.8-12.4z" fill="#8E1F2F" stroke="{INK}" stroke-width=".5"/>')  # Helmbusch längs (von vorn schmal); quer = Hauptmann
-    if c.get("wreath"):
+    if c.get("wreath") == "flowers":  # Bräutigam: grüner Kranz mit Blüten (goldener Lorbeer las sich als Herrscherkranz, Blindtest 2026-10-23)
+        leaves = []
+        for i, a in enumerate(range(200, 345, 18)):
+            r = math.radians(a)
+            x, y = 10.4 * math.cos(r), 10.4 * math.sin(r) - .6
+            leaves.append(f'<ellipse cx="{x:.1f}" cy="{y:.1f}" rx="2.2" ry="1" transform="rotate({a + 90 + 25} {x:.1f} {y:.1f})" fill="#6E8B3D" stroke="#4A5E2A" stroke-width=".35"/>')
+            if i % 2:
+                leaves.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="1.3" fill="#F4F1EA" stroke="#D4537E" stroke-width=".5"/>')
+        o.append("".join(leaves))
+    elif c.get("wreath"):
         leaves = []
         for a in range(200, 345, 18):
             r = math.radians(a)
             x, y = 10.4 * math.cos(r), 10.4 * math.sin(r) - .6
             leaves.append(f'<ellipse cx="{x:.1f}" cy="{y:.1f}" rx="2.2" ry=".95" transform="rotate({a + 90 + 25} {x:.1f} {y:.1f})" fill="#D9A441" stroke="#9C6F1C" stroke-width=".35"/>')
         o.append("".join(leaves))
+    if child:  # Kind: Kopf im Verhältnis zum Körper grösser
+        return f'<g transform="scale(1.12)">{"".join(o)}</g>'
     return "".join(o)
 
 
-def body_inner(key, arm=None):
-    """Brustbild unter dem Kopf (Einheiten wie Kopf); arm = (Winkel in Grad, Länge) für einen zeigenden Arm, oder None."""
+def staff_svg(side=1, hand=True, col="#7A5A34"):
+    """Wanderstab neben der Figur, Hand auf Brusthöhe (Einheiten wie Kopf)."""
+    x = 14.6 * side
+    return (f'<path d="M{x:.1f} 40V-17" stroke="{INK}" stroke-width="2.6" stroke-linecap="round"/><path d="M{x:.1f} 40V-17" stroke="{col}" stroke-width="1.6" stroke-linecap="round"/>'
+            + (f'<circle cx="{x:.1f}" cy="23" r="2.5" fill="{SKIN}" stroke="{INK}" stroke-width=".6"/>' if hand else ""))
+
+
+def body_inner(key, arm=None, ext=0):
+    """Brustbild unter dem Kopf (Einheiten wie Kopf); arm = (Winkel in Grad, Länge) für einen zeigenden Arm, oder None.
+    ext = Gewand nach unten verlängern (hintere Figuren einer Gruppe, damit sie nicht in der Luft enden)."""
     c = CHAR[key]
     o = []
     if c.get("wings"):
         o.append(f'<path d="M-12 22Q-30 10-26-12q8 12 14 22zM12 22q18-12 14-34-8 12-14 22z" fill="#FFFDF6" stroke="#D9A441" stroke-width=".9"/>')
-    o.append(f'<path d="M-17 34Q-17 19-7 15.6L7 15.6Q17 19 17 34z" fill="{c["robe"]}" stroke="{INK}" stroke-width=".8"/>')
-    if c.get("fur"):
-        o.append(f'<path d="M-12 18Q0 14 12 18l3 6Q0 20-15 24z" fill="#8A6A3A" stroke="{INK}" stroke-width=".6"/>')
+    yb = 34 + ext  # Unterkante (bei ext tiefer, ohne Querlinie)
+    o.append(f'<path d="M-17 {yb}V34Q-17 19-7 15.6L7 15.6Q17 19 17 34V{yb}z" fill="{c["robe"]}" stroke="{INK}" stroke-width=".8"/>')
+    if c.get("fur"):  # Fellkragen: zottiger Rand, damit er nicht als Schal gelesen wird
+        o.append(f'<path d="M-13.4 18.6Q0 13.4 13.4 18.6l2 6.4-2.2-1.4-1.6 1.8-1.8-1.6-2 1.6-1.8-1.6-2 1.6-2-1.6-2 1.6-2-1.6-2 1.6-1.8-1.6-2 1.6-1.6-1.8-2.2 1.4z" fill="#8A6A3A" stroke="{INK}" stroke-width=".6"/>'
+                 '<path d="M-9 19l.6 2.4M-4.6 18l.4 2.6M0 17.6v2.6M4.6 18l-.4 2.6M9 19l-.6 2.4" stroke="#5B4630" stroke-width=".6" stroke-linecap="round"/>')
     if c.get("toga"):
         o.append(f'<path d="M-9 16.4Q4 20 14 30l2 4h-6Q2 24-12 19z" fill="#FFFFFF" stroke="{INK}" stroke-width=".6"/><path d="M10 34Q4 25-10 19.6" fill="none" stroke="{c.get("trim", "#6A2E5E")}" stroke-width="1.6"/>')
     if c.get("breast"):
         o.append('<path d="M-5 21h10v9h-10z" fill="#D9A441" stroke="#9C6F1C" stroke-width=".6"/>'
                  + "".join(f'<circle cx="{-3 + (i % 3) * 3}" cy="{23 + (i // 3) * 2}" r=".8" fill="{col}"/>' for i, col in enumerate(["#A33A2E", "#3E6E9E", "#6E8B3D"] * 4)))
     if c.get("mantle"):
-        o.append(f'<path d="M-7 15.6Q3 17 9 15.8Q16 19 17 34L4 34Q2 24-7 15.6z" fill="{c["mantle"]}" stroke="{INK}" stroke-width=".7"/>')
+        o.append(f'<path d="M-7 15.6Q3 17 9 15.8Q16 19 17 34V{yb}H4V34Q2 24-7 15.6z" fill="{c["mantle"]}" stroke="{INK}" stroke-width=".7"/>')
+        if c.get("rough"):  # rauer Prophetenmantel: Fransen und grobe Falten
+            o.append('<path d="M6 20.6l1.6 4.4M9.6 19.6l1.8 5M12.6 21l1.4 4.2M8 27.6l1.4 4.6M12 27.4l1 4.6" stroke="#2A221A" stroke-width=".6" stroke-linecap="round" opacity=".7"/>')
+    if c.get("tallit"):  # Gebetsmantel über den Schultern: weiss mit dunkelblauen Streifen (Pharisäer, Mt 23,5)
+        o.append(f'<path d="M-15.6 24Q-15 18.4-7.6 15.6L-2.6 15.6Q-7 18.6-6.6 34H-13.2zM15.6 24Q15 18.4 7.6 15.6L2.6 15.6Q7 18.6 6.6 34H13.2z" fill="#F6F1E4" stroke="{INK}" stroke-width=".6"/>'
+                 '<path d="M-14.6 27.4l7.4-.4M-14.4 29.6l7.4-.4M14.6 27.4l-7.4-.4M14.4 29.6l-7.4-.4" stroke="#2E4A7A" stroke-width=".9"/>')
     if c.get("veil"):
         o.append(f'<path d="M-13 18Q-17 24-17 34h-.4V20zM13 18Q17 24 17 34V20z" fill="{c["veil"]}"/>')
     if c.get("apron"):
         o.append(f'<path d="M-6 22h12v12h-12z" fill="#FFFDF6" stroke="{INK}" stroke-width=".6"/><path d="M-7 22h14" stroke="#8A7A5A" stroke-width="1"/>')
+    if c.get("patches"):  # geflickt (Arme)
+        o.append(f'<path d="M-12 25l4.4-.6.4 4.2-4.4.4zM6.4 28.6h4.4v3.8h-4.4z" fill="#B8AE9E" stroke="{INK}" stroke-width=".45"/>'
+                 '<path d="M-11.4 25.6l.3 2.8M7 29.2h3.2" stroke="#6A6258" stroke-width=".4" stroke-dasharray=".8 .6"/>')
     if c.get("sash"):
         o.append(f'<path d="M-8 16.6L10 34h-5L-11 18.4z" fill="{c["sash"]}"/>')
     if c.get("belt"):
         o.append(f'<path d="M-15.4 28h30.8v2.6h-30.8z" fill="{c["belt"]}"/>')
+    if c.get("rope"):  # Seilrolle über der Schulter (Seeleute)
+        o.append('<g fill="none" stroke-linecap="round"><path d="M-12 17L8 34" stroke="#8A6A3A" stroke-width="2"/>'
+                 '<ellipse cx="-10.6" cy="24.4" rx="3.8" ry="5.4" transform="rotate(-24 -10.6 24.4)" stroke="#5B4630" stroke-width="2.4"/>'
+                 '<ellipse cx="-10.6" cy="24.4" rx="3.8" ry="5.4" transform="rotate(-24 -10.6 24.4)" stroke="#C9A060" stroke-width="1.3"/>'
+                 '<ellipse cx="-9.6" cy="24.8" rx="2.6" ry="4" transform="rotate(-24 -9.6 24.8)" stroke="#C9A060" stroke-width="1.1"/></g>')
     if c.get("tassels"):  # Quasten an den Mantelecken (Mt 23,5): weiss mit blauem Faden
         o.append('<g stroke-linecap="round"><path d="M-14.6 29v5M-13 29v5M13 29v5M14.6 29v5" stroke="#FFFDF6" stroke-width="1.1"/><path d="M-13.8 29v5M13.8 29v5" stroke="#2E4A7A" stroke-width=".7"/></g>')
     if c.get("trim") and not c.get("toga"):
         o.append(f'<path d="M-4 15.8L0 22 4 15.8" fill="none" stroke="{c["trim"]}" stroke-width="1.4"/>')
+    if c.get("sword"):  # Schwert in der Scheide an der Seite (Paulus, Tradition)
+        o.append(f'<path d="M-12.4 21.6l-2.6 13" stroke="{INK}" stroke-width="2.8" stroke-linecap="round"/><path d="M-12.4 21.6l-2.6 13" stroke="#6A4A2A" stroke-width="1.8" stroke-linecap="round"/>'
+                 f'<path d="M-14.6 20.6l4.4.9" stroke="#9C6F1C" stroke-width="1.3" stroke-linecap="round"/><path d="M-12.2 20.8l.5-2.6" stroke="#9C6F1C" stroke-width="1.2" stroke-linecap="round"/><circle cx="-11.6" cy="17.9" r=".8" fill="#D9A441"/>')
     if c.get("chains"):
         o.append('<g fill="none" stroke="#6A6A6A" stroke-width="1"><ellipse cx="-14" cy="30" rx="2.4" ry="1.5"/><ellipse cx="-11" cy="31.6" rx="2.4" ry="1.5"/><ellipse cx="14" cy="30" rx="2.4" ry="1.5"/><ellipse cx="11" cy="31.6" rx="2.4" ry="1.5"/></g>')
     if c.get("bound"):
-        o.append(f'<path d="M-6 26h12v6h-12z" fill="{SKIN}" stroke="{INK}" stroke-width=".6"/><path d="M-6 29h12" stroke="#8A6A3A" stroke-width="1.6"/>')
+        # gefesselte Hände: Unterarme vor dem Körper, Handgelenke gekreuzt, mit Strick umwickelt (Kästchen las sich nicht als Fesselung)
+        sl = c.get("mantle") or c["robe"]
+        o.append(f'<g stroke-linecap="round"><path d="M-13 22L-1 29.4M13 22L1 29.4" stroke="{INK}" stroke-width="5.4"/><path d="M-13 22L-1 29.4M13 22L1 29.4" stroke="{sl}" stroke-width="4"/></g>'
+                 f'<path d="M-3.2 28.4l4.4 4.8 2.4-1.4-4.4-4.8zM3.2 28.4l-4.4 4.8-2.4-1.4 4.4-4.8z" fill="{SKIN}" stroke="{INK}" stroke-width=".55"/>'
+                 '<path d="M-3.6 29.6l7.2 0M-3.2 31.4l6.4.2M-2.4 27.8l4.8 4.8" stroke="#8A6A3A" stroke-width="1.1" stroke-linecap="round"/>'
+                 '<path d="M3.4 31.6q2.4 1.6 1.6 4.4" fill="none" stroke="#8A6A3A" stroke-width="1" stroke-linecap="round"/>')
+    if c.get("crossed") and not arm:  # verschränkte Arme (abwehrende Haltung, Gegner)
+        sl = c.get("mantle") or c["robe"]
+        o.append(f'<g stroke-linecap="round"><path d="M-14 22.6L7.6 27.2" stroke="{INK}" stroke-width="5.6"/><path d="M-14 22.6L7.6 27.2" stroke="{c["robe"]}" stroke-width="4.2"/>'
+                 f'<path d="M14 22.6L-7.6 27.6" stroke="{INK}" stroke-width="5.6"/><path d="M14 22.6L-7.6 27.6" stroke="{sl}" stroke-width="4.2"/></g>'
+                 f'<circle cx="-8.6" cy="27.8" r="2.2" fill="{SKIN}" stroke="{INK}" stroke-width=".55"/><circle cx="8.8" cy="26.4" r="2.2" fill="{SKIN}" stroke="{INK}" stroke-width=".55"/>')
     if arm:
         ang, ln = arm
-        import math
         x0, y0 = (12 if math.cos(math.radians(ang)) >= 0 else -12), 21
         x1, y1 = x0 + ln * math.cos(math.radians(ang)), y0 + ln * math.sin(math.radians(ang))
         sleeve = c.get("mantle") or c["robe"]
@@ -261,11 +342,17 @@ def body_inner(key, arm=None):
                  f'<path d="M{x0} {y0}L{x1:.1f} {y1:.1f}" stroke="{sleeve}" stroke-width="4" stroke-linecap="round"/>'
                  f'<g transform="translate({x1:.1f} {y1:.1f}) rotate({ang + 90:.0f})"><path d="M-2.4 1.2Q-2.8-2.6-1.6-4.2h3.2Q2.8-2.6 2.4 1.2z" fill="{SKIN}" stroke="{INK}" stroke-width=".6"/>'
                  f'<path d="M-.8-3.9v1.6M.8-3.9v1.6" stroke="{SKIN_D}" stroke-width=".4" stroke-linecap="round"/></g>')
-    return "".join(o)
+    elif c.get("staff"):  # Wanderstab (Mk 6,8), nur wenn die Hand nicht zeigt
+        o.append(staff_svg(-1 if c.get("attr") else 1))
+    out = "".join(o)
+    if c.get("child"):  # Kind: schmale Schultern
+        out = f'<g transform="translate(0 16) scale(.78 .9) translate(0 -16)">{out}</g>'
+    return out
 
 
-def person(key, x, y, s, expr="calm", look=0.0, arm=None, flip=False, tears=False, hold=None):
-    """Brustbild: Kopfmitte bei (x, y), s = Massstab (1 = Kopfradius 10); hold = Symbol, das die Figur vor der Brust hält."""
+def person(key, x, y, s, expr="calm", look=0.0, arm=None, flip=False, tears=False, hold=None, ext=0):
+    """Brustbild: Kopfmitte bei (x, y), s = Massstab (1 = Kopfradius 10); hold = Symbol, das die Figur vor der Brust hält;
+    ext = Gewand nach unten verlängern (hintere Figuren einer Gruppe)."""
     fl = " scale(-1 1)" if flip else ""
     if CHAR[key].get("baby"):
         return (f'<g transform="translate({x} {y}) scale({s})"><ellipse cx="0" cy="22" rx="14" ry="9" fill="{CHAR[key]["robe"]}" stroke="{INK}" stroke-width=".8"/>'
@@ -283,7 +370,222 @@ def person(key, x, y, s, expr="calm", look=0.0, arm=None, flip=False, tears=Fals
     # abgewandt: gespiegelt und mit Blick deutlich zur Seite (Dreiviertelansicht, Ohr verdeckt). Das Gesicht bleibt
     # sichtbar, damit die Figur wie in der Legende erkennbar ist (früher Hinterkopf; Hinweis Andi Neck: «Händler ohne Gesicht»)
     head = head_inner(key, expr, 2.6 if flip else look, tears)
-    return f'<g transform="translate({x} {y}) scale({s}){fl}">{body_inner(key, arm)}{head}{held}</g>'
+    return f'<g transform="translate({x:.1f} {y:.1f}) scale({s:.3g}){fl}">{body_inner(key, arm, ext)}{head}{held}</g>'
+
+
+# ---------------------------------------------------------------- Gruppen
+# Eine Gruppe ist eine Menge verschiedener Menschen (Blindtest 2026-10-23: drei gleiche Köpfe wurden als Familie oder
+# Einzelperson gelesen): 4–6 gestaffelte Köpfe mit Varianten (Haar, Bart, Alter, je nach Gruppe Frauen und Kinder),
+# hintere kleiner, dazu ein gemeinsames Gruppenmerkmal. Index 0 steht vorn in der Mitte, 1–2 seitlich, ab 3 hinten.
+#   mix:   m (Männer) | mf (Männer und Frauen) | mfc (mit Kind) | f (Frauen) | c (Kinder) | same (Uniform: nur Haarfarbe)
+#   n:     Köpfe im Lexikon-Porträt (in Szenen höchstens 5)
+#   every: Schalter für alle Mitglieder; per: Schalter je Mitglied (Liste, Index wie oben); hold: Gegenstand je Mitglied
+#   back:  Hintergrund im Lexikon-Porträt; ghosts: angedeutete Köpfe dahinter (Menge)
+GROUP_SPEC = {
+    "FIG-GRUPPE-MENGE": dict(mix="mfc", n=6, keys=("menge", "menge2", "menge3"), ghosts=True),
+    "FIG-GRUPPE-GEMEINDE": dict(mix="mfc", n=5, keys=("menge", "menge2", "menge3")),
+    "FIG-GRUPPE-VOLK": dict(mix="mfc", n=5),
+    "FIG-GRUPPE-ISRAEL": dict(mix="mfc", n=5),
+    "FIG-GRUPPE-VOELKER": dict(mix="mf", n=5, male={"turban": "#2F6F73", "band": None}),  # Kopfbund statt Stirnband
+    # Die Zwölf: nur Männer, gleiche Mantelfarbe, Wanderstab (Mk 6,8)
+    "FIG-GRUPPE-ZWOELF": dict(mix="m", n=6, every={"staff": True}),
+    "FIG-GRUPPE-JUENGER": dict(mix="m", n=5, every={"staff": True}),
+    "FIG-GRUPPE-JOHANNES-JUENGER": dict(mix="m", n=5),
+    "FIG-GRUPPE-BRUEDER-JESU": dict(mix="m", n=4, alike=True),  # vier Brüder (Mk 6,3), gleicher Haarschnitt
+    # Pharisäer: Gebetsmantel mit Streifen über den Schultern, Quasten und Gebetskapsel (Mt 23,5); Kopf frei, Bart
+    "FIG-GRUPPE-PHARISAEER": dict(mix="m", n=5, beards=True, every={"tallit": True, "tefillin": True, "veil": None, "hood": None, "front": "short"}),
+    "FIG-GRUPPE-SCHRIFTGELEHRTE": dict(mix="m", n=5, beards=True, hold={0: "an-a-rolle", 1: "an-a-rolle", 2: "an-a-rolle"}),
+    "FIG-GRUPPE-HOHER-RAT": dict(mix="m", n=5, beards=True, per=[{"breast": True, "mantle": None, "robe": "#4A5A7A"}, {"turban": None, "front": "short", "attr": "an-a-rolle"},
+                                                               {"old": True, "beard": "long", "turban": None, "front": "short"}]),
+    "FIG-GRUPPE-HOHEPRIESTER": dict(mix="m", n=4, beards=True),
+    "FIG-GRUPPE-PRIESTER": dict(mix="m", n=5),
+    "FIG-GRUPPE-SADDUZAEER": dict(mix="m", n=4, beards=True, every={"trim": "#D9A441"}),
+    "FIG-GRUPPE-OBERE": dict(mix="m", n=4, beards=True, every={"trim": "#D9A441", "old": True}),
+    "FIG-GRUPPE-AELTESTE": dict(mix="m", n=4, beards=True, every={"old": True}, hold={1: "an-a-stab"}),
+    "FIG-GRUPPE-HERODIANER": dict(mix="m", n=4, every={"trim": "#D9A441", "mantle": "#5E1F5A"}),
+    "FIG-GRUPPE-SOLDATEN": dict(mix="same", n=5),
+    "FIG-GRUPPE-ENGEL": dict(mix="same", n=5),
+    "FIG-GRUPPE-STERNDEUTER": dict(mix="m", n=3, beards=True),
+    "FIG-GRUPPE-GESCHWISTER": dict(mix="mf", n=5),
+    "FIG-GRUPPE-GLAUBENDE": dict(mix="mf", n=5, hold={0: "an-brot"}),  # Brot brechen (Apg 2,42)
+    "FIG-GRUPPE-GEGNER": dict(mix="m", n=4, every={"crossed": True}),
+    "FIG-GRUPPE-IRRLEHRER": dict(mix="m", n=4, hold={0: "an-a-rolle", 1: "an-a-rolle"}),
+    "FIG-GRUPPE-VERFUEHRER": dict(mix="m", n=4, beards=True, every={"cowl": True, "hood": None, "staff": True}),
+    "FIG-GRUPPE-REISENDE": dict(mix="m", n=4, beards=True, every={"cowl": True, "hood": None, "staff": True}),
+    "FIG-GRUPPE-GRIECHEN": dict(mix="m", n=4, every={"staff": True}),
+    "FIG-GRUPPE-DIENER": dict(mix="m", n=4, every={"apron": True}, hold={0: "an-jar"}),
+    "FIG-GRUPPE-ARBEITER": dict(mix="m", n=4, hold={0: "an-korb"}),
+    "FIG-GRUPPE-SCHNITTER": dict(mix="m", n=4, hold={0: "an-a-aehren", 1: "an-sichel"}),
+    "FIG-GRUPPE-WEINBAUERN": dict(mix="m", n=4, hold={0: "an-a-traube", 1: "an-a-traube"}),
+    "FIG-GRUPPE-FISCHER": dict(mix="m", n=4, hold={0: "an-a-netz"}),
+    "FIG-GRUPPE-SEELEUTE": dict(mix="m", n=4, every={"rope": True}),
+    "FIG-GRUPPE-ZOELLNER": dict(mix="m", n=4, hold={0: "an-a-muenzen", 1: "an-a-geldbeutel"}),
+    "FIG-GRUPPE-EINNEHMER": dict(mix="m", n=4, hold={0: "an-a-beutel", 1: "an-a-muenzen"}),
+    "FIG-GRUPPE-TRAEGER": dict(mix="m", n=4, back="matte"),  # vier Männer (Mk 2,3), Matte vorn
+    "FIG-GRUPPE-KRANKE": dict(mix="mf", n=4, back="matte", per=[{"bandage": True}, {"staff": True}, {}, {"old": True}]),
+    "FIG-GRUPPE-ARME": dict(mix="mf", n=4, every={"patches": True, "mantle": None}, hold={0: "an-a-zwei-muenzen"}),
+    "FIG-GRUPPE-GAESTE": dict(mix="mf", n=5, hold={0: "an-becher", 1: "an-becher"}),
+    "FIG-GRUPPE-FRAUEN": dict(mix="f", n=4),
+    "FIG-GRUPPE-JUNGFRAUEN-KLUG": dict(mix="f", n=5, young=True, hold={i: "an-a-lampe" for i in range(5)}),  # brennende Lampen (Mt 25,4)
+    "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": dict(mix="f", n=5, young=True, hold={i: "an-a-g-lampe-aus" for i in range(5)}),  # ohne Öl (Mt 25,8)
+    "FIG-GRUPPE-KINDER": dict(mix="c", n=5),
+    "FIG-GRUPPE-KINDER-DER-SCHWESTER": dict(mix="c", n=4),
+    "FIG-GRUPPE-EDOM": dict(mix="mf", n=4, back="fels"),  # Felsenwohnungen (Obd 3)
+}
+G_HAIR = ["#2E2017", "#4A3020", "#24180F", "#5A4030", "#3A2618", "#1E1610"]
+G_VEIL = ["#E2CDA8", "#C9B48E", "#B9A7C4", "#D8CBB0", "#A8B8A0"]
+# Rollen der Mitglieder je Mischung (Index 0 = vorn); m = Mann, m2 = andere Bartform, o = alt, y = jung, f = Frau, fo = alte Frau, c = Kind
+G_ROLES = {"m": ["m", "m2", "o", "y", "m3", "m2"], "mf": ["m", "f", "o", "fo", "y", "f"], "mfc": ["m", "f", "c", "o", "fo", "y"],
+           "f": ["f", "fo", "f", "f", "f"], "c": ["c", "cf", "c", "cf", "c"], "same": ["m", "m", "m", "m", "m", "m"]}
+_STRIP = ("beard", "mustache", "curls", "helmet", "turban", "band", "hood", "crown", "cowl", "tefillin", "back", "tallit", "wreath", "plate")
+
+
+def _gkey(fid):
+    return KEY.get(fid) or GROUP_SPEC[fid]["keys"][0]
+
+
+def group_members(fid, n):
+    """Schlüssel der Mitglieder (in CHAR angelegt), Index 0 = vorn."""
+    sp = GROUP_SPEC.get(fid, {})
+    base = _gkey(fid)
+    roles = G_ROLES[sp.get("mix", "m")]
+    if sp.get("young") and sp.get("mix") == "f":
+        roles = ["f"] * 6
+    out = []
+    for i in range(n):
+        k = f"{fid[11:].lower()}~g{i}"
+        if k in CHAR:
+            out.append(k)
+            continue
+        src = sp.get("keys", ())[i] if i < len(sp.get("keys", ())) else base
+        c = dict(CHAR[src])
+        if i:
+            c.pop("attr", None)
+        for a, v in (sp.get("every") or {}).items():
+            c.pop(a, None) if v is None else c.__setitem__(a, v)
+        if c.get("front") == "short":
+            c["front"] = _fg.FRONT["short"]
+        r = roles[i % len(roles)]
+        female_base = c.get("female")
+        if r in ("f", "fo", "cf") and not female_base:
+            for a in _STRIP:
+                c.pop(a, None)
+            c["female"] = True
+            c["veil"] = G_VEIL[i % len(G_VEIL)] if r != "cf" else None
+            if r == "cf":
+                c.pop("veil")
+                c.pop("curls", None)
+                c["front"], c["back"] = _fg.FRONT["long"], _fg.BACK_LONG
+            else:
+                c["front"] = _fg.FRONT["veil"]
+        elif r in ("f", "fo") and i:  # Frauengruppe: Kopftücher leicht verschieden
+            if c.get("veil") and not sp.get("young"):
+                c["veil"] = [c["veil"], "#D8CBB0", c["veil"], "#C9B48E", c["veil"]][i % 5]
+        if r in ("m", "m2", "m3", "o", "y") and sp.get("male") and not c.get("female"):
+            for a, v in sp["male"].items():
+                c.pop(a, None) if v is None else c.__setitem__(a, v)
+            if c.get("turban"):
+                c.pop("curls", None)
+        if r in ("c", "cf"):
+            for a in ("beard", "mustache", "old", "helmet", "turban", "hood", "cowl", "tallit", "tefillin"):
+                c.pop(a, None)
+            c["child"] = c["young"] = True
+        if r == "fo" or r == "o":
+            c["old"] = True
+            if r == "o" and not c.get("female") and sp.get("mix") != "same":
+                c["beard"] = _fg.BEARD["long"]
+        if r == "y" and not sp.get("beards"):
+            c.pop("beard", None)
+            c.pop("mustache", None)
+            c["young"] = True
+        if not sp.get("alike") and sp.get("mix") != "c" and not c.get("female") and i:
+            c["hair"] = G_HAIR[(i + 1) % len(G_HAIR)] if not c.get("old") else c["hair"]
+            if r == "m2" and not c.get("helmet"):
+                c["beard"] = _fg.BEARD["full" if c.get("beard") != _fg.BEARD["full"] else "short"]
+            if r == "m3" and (c.get("beard") or sp.get("beards")):
+                c["beard"] = _fg.BEARD["short"]
+            if i % 2 and c.get("curls") and not sp.get("alike"):  # nicht alle mit Locken
+                c.pop("curls")
+                c["front"] = _fg.FRONT["short"]
+        if sp.get("mix") in ("c",) and i:
+            c["hair"] = ["#3A2618", "#5A3A22", "#24180F", "#4A3020"][i % 4]
+        if r == "y" and sp.get("beards") and c.get("beard"):
+            c["beard"] = _fg.BEARD["short"]
+        if c.get("old") and r not in ("o", "fo") and not (sp.get("every") or {}).get("old"):
+            c.pop("old")
+        per = sp.get("per") or []
+        for a, v in (per[i] if i < len(per) else {}).items():
+            if a == "beard" and v:
+                v = _fg.BEARD[v]
+            if a == "front" and v:
+                v = _fg.FRONT[v]
+            c.pop(a, None) if v is None else c.__setitem__(a, v)
+        if c.get("staff") and (c.get("female") or i >= 3):  # Stäbe nur bei den vorderen drei (sonst ein Wald von Stäben)
+            c.pop("staff")
+        hd = (sp.get("hold") or {}).get(i)
+        if hd:
+            c["attr"] = hd
+        CHAR[k] = c
+        out.append(k)
+    return out
+
+
+# Lagen der Mitglieder: (dx, dy, Massstab) relativ zur vorderen Figur; Reihenfolge = Index
+G_LAYOUT = {
+    6: [(0, 0, 1), (-21, -5, .8), (21, -5, .8), (-26, -16, .64), (0, -20, .64), (26, -16, .64)],
+    5: [(0, 0, 1), (-22, -5, .82), (22, -5, .82), (-12, -17, .66), (12, -17, .66)],
+    4: [(0, 0, 1), (-22, -5, .82), (22, -5, .82), (0, -19, .68)],
+    3: [(0, 0, 1), (-20, -4, .84), (20, -4, .84)],
+}
+# in Szenen schmaler (gleiche Breite wie früher die Dreiergruppe), höchstens fünf Köpfe
+G_LAYOUT_SCENE = {
+    5: [(0, 0, 1), (-16, -3, .78), (16, -3, .78), (-8, -14, .64), (8, -15, .64)],
+    4: [(0, 0, 1), (-16, -3, .78), (16, -3, .78), (0, -15, .64)],
+    3: [(0, 0, 1), (-15, -3, .8), (15, -3, .8)],
+}
+
+
+def group_svg(fid, x, y, s, n, expr="calm", look=0.0, arm=None, flip=False, tears=False, hold=None, wear=None, sack=None, ext=10, ext_front=0, scene=False):
+    """Gruppe zeichnen: vordere Figur bei (x, y) im Massstab s, die anderen gestaffelt dahinter."""
+    keys = group_members(fid, n)
+    if wear and sack:
+        keys = [sack(k, wear) for k in keys]
+    lay = (G_LAYOUT_SCENE if scene else G_LAYOUT)[n]
+    sp = GROUP_SPEC.get(fid, {})
+    o = []
+    if sp.get("ghosts"):  # Menge: weitere Köpfe nur als Umriss dahinter
+        for dx in ((-20, -7, 7, 20) if scene else (-34, -12, 12, 34)):
+            gx, gy, gs = x + dx * s, y - 22 * s - (3 if abs(dx) < 20 else 0) * s, .5 * s
+            o.append(f'<g transform="translate({gx:.1f} {gy:.1f}) scale({gs:.3g})" opacity=".5"><circle r="10" fill="#B8A98A" stroke="{INK}" stroke-width=".8"/>'
+                     f'<path d="M-17 40V30Q-17 17-7 14h14q10 3 10 16v10z" fill="#B8A98A" stroke="{INK}" stroke-width=".8"/></g>')
+    order = sorted(range(n), key=lambda i: (lay[i][2], i))  # hinten (klein) zuerst
+    for i in order:
+        dx, dy, k = lay[i]
+        front = i == 0
+        hd = hold if (front and hold) else CHAR[keys[i]].get("attr")
+        lk = look if front else look * .6 + (.5 if dx < 0 else -.5)
+        fig = person(keys[i], x + dx * s, y + dy * s, s * k, expr, lk, arm if front else None, flip, tears, hd, ext_front if front else ext)
+        o.append(fig)
+    return "".join(o)
+
+
+def group_back(fid, w, h):
+    """Hintergrund bzw. Vordergrund einer Gruppe im Lexikon-Porträt (Felsen, Matte)."""
+    b = GROUP_SPEC.get(fid, {}).get("back")
+    if b == "fels":  # rötliche Felswand mit Wohnhöhlen hoch im Gebirge (Obd 3)
+        return (f'<path d="M0 {h}V14L7 5l8 5 9-9 10 7 9-5 11 9V{h}z" fill="#D9B49A" stroke="{INK}" stroke-width=".7"/>'
+                '<path d="M4 15q2-4 4 0v4H4zM45 12q2-4 4 0v4h-4zM24 7q2-3.4 4 0v3.4h-4zM14 13q1.6-3 3.2 0v3h-3.2z" fill="#3B2A22"/>'
+                '<path d="M10 22l5-3M38 20l6 2M30 14l-4 3" stroke="#A8806A" stroke-width=".7"/>')
+    return ""
+
+
+def group_front(fid, w, h):
+    b = GROUP_SPEC.get(fid, {}).get("back")
+    if b == "matte":  # Matte bzw. Trage vorn (Mk 2,3-4; Joh 5,3)
+        return (f'<path d="M1 {h - 5.5}h{w - 2}" stroke="#7A5A34" stroke-width="1.6" stroke-linecap="round"/>'
+                f'<path d="M5 {h - 7}h{w - 10}v4.4H5z" fill="#C9B48E" stroke="{INK}" stroke-width=".6"/>'
+                + "".join(f'<path d="M{x} {h - 7}v4.4" stroke="#A79A80" stroke-width=".5"/>' for x in range(9, w - 6, 4)))
+    return ""
 
 
 # ---------------------------------------------------------------- Zeichen
@@ -688,18 +990,30 @@ def library():
         held = (f'<path d="M30 40L35 44" stroke="{INK}" stroke-width="4.6" stroke-linecap="round"/><path d="M30 40L35 44" stroke="{CHAR[key].get("mantle") or CHAR[key]["robe"]}" stroke-width="3.2" stroke-linecap="round"/>'
                 + use(at, 29, 24, 20, 20) + f'<circle cx="37" cy="44" r="2.8" fill="{SKIN}" stroke="{INK}" stroke-width=".6"/>') if at else ""
         vbx = "0 0 50 54" if at else "0 0 38 54"
-        parts.append(f'<symbol id="{sid}" viewBox="{vbx}"><g transform="translate(19 18)">{body_inner(key)}{head_inner(key, expr)}</g>{held}</symbol>')
+        c = CHAR[key]
+        if c.get("baby"):  # Säugling: gewickelt, kleines Gesicht (früher Erwachsenenbüste ohne Haar)
+            fig = (f'<g transform="translate(19 30)"><ellipse cx="0" cy="8" rx="15" ry="10" fill="{c["robe"]}" stroke="{INK}" stroke-width=".8"/>'
+                   f'<path d="M-11 4q11-6 22 0" fill="none" stroke="{INK}" stroke-width=".5" opacity=".5"/><g transform="translate(-4 -2) scale(.62)">{head_inner(key, "smile", .4)}</g></g>')
+        elif c.get("child"):  # Kind: kleiner, grosser Kopf, kindliches Gesicht
+            fig = f'<g transform="translate(19 26) scale(.78)">{body_inner(key, None, 6)}{head_inner(key, expr)}</g>'
+        else:
+            fig = f'<g transform="translate(19 18)">{body_inner(key)}{head_inner(key, expr)}</g>'
+        parts.append(f'<symbol id="{sid}" viewBox="{vbx}">{fig}{held}</symbol>')
         vb[fid] = (sid, vbx)
-    parts.append('<symbol id="an-gemeinde" viewBox="0 0 60 44">' + use("an-haus", 20, 0, 40, 36) + person("menge2", 9, 24, .5, "smile", .6)
-                 + person("menge", 22, 26, .52, "smile", .4) + person("menge3", 35, 28, .48, "smile", .3) + "</symbol>")
+    # Gemeinde: Männer, Frauen und ein Kind vor dem Haus; die Menschen grösser als das Haus (Blindtest 2026-10-23: Haus dominierte)
+    parts.append('<symbol id="an-gemeinde" viewBox="0 0 60 44">' + use("an-haus", 30, 0, 30, 27)
+                 + group_svg("FIG-GRUPPE-GEMEINDE", 26, 26, .6, 5, "smile", .2, ext=14, ext_front=8) + "</symbol>")
     parts.append(_fg.anime_attrs())
-    # Gruppen als Zeichen in Sprechblasen: drei Köpfe (Mehrzahl, nie eine Einzelfigur)
+    # Zusätzliche Erkennungszeichen für Gruppen (viewBox wie figuren.ATTR)
+    parts.append('<symbol id="an-a-g-lampe-aus" viewBox="0 0 16 16"><path d="M2 12q6-5 11 0l2-1v2q-7 4-13-1z" fill="#B07A3E" stroke="#3B3226" stroke-width=".8"/>'
+                 '<path d="M13.4 10q-2-2 0-3.6t0-3.6" fill="none" stroke="#8A8A8A" stroke-width="1" stroke-linecap="round"/></symbol>')
+    # Gruppen (Lexikon-Porträt und Zeichen in Sprechblasen): 4–6 verschiedene Köpfe mit gemeinsamem Merkmal (GROUP_SPEC)
     for fid, (key, expr) in PORTRAITS.items():
         if fid.startswith("FIG-GRUPPE-") and fid != "FIG-GRUPPE-GEMEINDE":
-            ks = GROUP_KEYS.get(fid, (key, key, key))
-            parts.append(f'<symbol id="an-p-{key}-gruppe" viewBox="0 0 54 50"><g transform="translate(14 20) scale(.62)">{body_inner(ks[0])}{head_inner(ks[0], "calm")}</g>'
-                         f'<g transform="translate(40 20) scale(.62)">{body_inner(ks[1])}{head_inner(ks[1], "calm")}</g>'
-                         f'<g transform="translate(27 17) scale(.72)">{body_inner(ks[2])}{head_inner(ks[2], "calm")}</g></symbol>')
+            n = GROUP_SPEC.get(fid, {}).get("n", 5)
+            kids = GROUP_SPEC.get(fid, {}).get("mix") == "c"
+            parts.append(f'<symbol id="an-p-{key}-gruppe" viewBox="0 0 54 50">{group_back(fid, 54, 50)}'
+                         f'{group_svg(fid, 27, 27 if kids else 29, .8 if kids else .72, n, "calm", 0, ext=14, ext_front=6)}{group_front(fid, 54, 50)}</symbol>')
             vb[fid] = (f"an-p-{key}-gruppe", "0 0 54 50")
     parts.append(f'<symbol id="an-jesus-kopf" viewBox="0 0 34 34"><g transform="translate(17 17)">{head_inner("jesus", "calm")}</g></symbol>')
     parts.append(f'<symbol id="an-p-meister-kopf" viewBox="0 0 28 30"><g transform="translate(14 15)">{head_inner("meister", "calm")}</g></symbol>')
@@ -732,7 +1046,6 @@ for _k, _v in _SYMS.items():
     if _v["sym"] not in COPY:
         COPY.append(_v["sym"])
 EXTRA_META = {k: (v["place"], tuple(v["size"])) for k, v in _SYMS.items()}
-GROUP_KEYS = {"FIG-GRUPPE-MENGE": ("menge2", "menge3", "menge"), "FIG-GRUPPE-ZWOELF": ("juenger2", "juenger", "andreas")}
 POSE_SHIFT = {"sit": 6, "kneel": 4}
 
 
@@ -814,15 +1127,10 @@ class AniComposer(_auto.Composer):
             else:
                 hold = OBJ.get(hold) or self.vbmap[hold][0]
         flip = pose == "away"
-        if fid in GROUP_KEYS or (fid.startswith("FIG-GRUPPE-") and fid != "FIG-GRUPPE-GEMEINDE"):
-            keys = GROUP_KEYS.get(fid, (key, key, key))
-            if wear:
-                keys = tuple(self._sackkey(k, wear) for k in keys)
-            sp = 13 * s
-            bk = f'<g opacity=".75">{person(keys[1], x - 6 * s, y - 5 * s, s * .66, expr, look, None, flip, tears)}{person(keys[0], x + 7 * s, y - 6 * s, s * .64, expr, look, None, flip, tears)}</g>'
-            g = (bk + person(keys[0], x - sp, y + 3 * s, s * .82, expr, look, None, flip, tears)
-                 + person(keys[1], x + sp, y + 4 * s, s * .8, expr, look, None, flip, tears)
-                 + person(keys[2], x, y, s, expr, look, a, flip, tears, hold))
+        if fid.startswith("FIG-GRUPPE-") and fid != "FIG-GRUPPE-GEMEINDE":
+            # Gruppe platzsparend: höchstens fünf Köpfe, gleiche Mitglieder und Merkmale wie im Lexikon-Porträt
+            n = min(5, GROUP_SPEC.get(fid, {}).get("n", 5))
+            g = group_svg(fid, x, y, s * .95, n, expr, look, a, flip, tears, hold, wear, self._sackkey, ext=12, scene=True)
         else:
             g = person(key, x, y, s, expr, look, a, flip, tears, hold)
         if pose in ("lie", "sleep"):
@@ -838,7 +1146,8 @@ class AniComposer(_auto.Composer):
 
     def _sackkey(self, k, wear="sack"):
         """Kleidung wechseln: sack, binden oder Mantelfarbe (#RRGGBB)."""
-        if "~" in k:
+        last = k.split("~")[-1]
+        if "~" in k and (last in ("sack", "binden") or last.startswith("#")):
             return k
         k2 = k + "~" + wear
         if k2 not in CHAR:
@@ -865,7 +1174,7 @@ class AniComposer(_auto.Composer):
             sc *= .92
         self._hr = 12 * sc
         y = 140 - 34 * sc + 4 + POSE_SHIFT.get(pose, 0) * sc
-        half = (17 + (11 if (fid in GROUP_KEYS or fid.startswith("FIG-GRUPPE-")) else 0)) * sc + 3
+        half = (17 + (11 if fid.startswith("FIG-GRUPPE-") else 0)) * sc + 3
         if pose in ("lie", "sleep"):  # liegende Figur ganz ins Feld (Blindtest: rechts abgeschnitten)
             x = max(36 * sc, min(_auto.W - 26 * sc, x))
             s["x"] = x
