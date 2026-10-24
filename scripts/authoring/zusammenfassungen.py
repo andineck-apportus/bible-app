@@ -9,6 +9,7 @@ gleich lauten.
 
 Prüft:
 - Kernanalyse vorhanden;
+- Kapitel: jeder Abschnitt mit seiner Kernaussage erkennbar (Schlüsselwort oder Wort der Kernaussage);
 - Umfang je Ebene (Abschnitt 2–4, Kapitel 3–5, Buch 4–6 Sätze; Mundart gleich viele Sätze ±1); strukturierte Zusammenfassung:
   Zeilen mit «– » sind eine Liste aller Glieder (zählt als ein Satz, beliebig viele Punkte, Mundart gleich viele);
 - kein «ß»;
@@ -93,6 +94,17 @@ def check(e, errs, warns):
             errs.append(f"{e['core']}: «ß» in {k}")
         if "[[" in e[k]:
             errs.append(f"{e['core']}: Stellen-Marke in {k} (reiner Text verlangt)")
+    if core["level"] == "chapter" and core.get("children"):
+        # Kapitel: die Kernaussage jedes Abschnitts ist enthalten (Hinweis Andi Neck 2026-10-24); geprüft wird, ob jeder
+        # Abschnitt mit einem Schlüsselwort oder einem Wort seiner Kernaussage vorkommt (Inhalt prüft die getrennte Instanz)
+        low_ = e["de"].lower()
+        for c in core["children"]:
+            cp_ = D / "core-analyses" / f"{c}.json"
+            if cp_.exists():
+                cc = json.loads(cp_.read_text(encoding="utf-8"))
+                words = [w.lower() for m in cc.get("moments", []) for w in m.get("keywords", [])] + [w.lower() for w in re.findall(r"\w{6,}", cc.get("core_de", ""))]
+                if not any(w in low_ for w in words):
+                    errs.append(f"{e['core']}: Kernaussage von {c} in der Kapitel-Zusammenfassung nicht erkennbar")
     low = e["de"].lower()
     for i, m in enumerate(core["moments"], 1):
         words = [w.lower() for w in m.get("keywords", [])] + [w.lower() for w in re.findall(r"\w{6,}", m["text_de"])]

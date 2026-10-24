@@ -365,5 +365,31 @@ def run():
     print(f"PASS: {len(BRIEFS)} Bildaufträge; {n} Dateien geschrieben" + (" (Text erneut geprüft und bestätigt" + (f": {', '.join(only)})" if only else ")") if confirm_all else ""))
 
 
+def check_chapters():
+    """Kapitelbild: die Felder decken jeden Abschnitt ab (Kernaussage jedes Abschnitts, Hinweis Andi Neck 2026-10-24);
+    gilt für Kapitel mit Kernanalyse."""
+    import kernanalyse as K
+    errs = []
+    for b in BRIEFS:
+        if b["level"] != "chapter":
+            continue
+        cp = pathlib.Path(__file__).resolve().parents[2] / "data/core-analyses" / f"CORE-{b['suffix']}.json"
+        if not cp.exists():
+            continue
+        core = json.loads(cp.read_text(encoding="utf-8"))
+        shown = set()
+        for p in b["panels"]:
+            shown |= set(K.verses(p["reference"]))
+        for c in core.get("children", []):
+            cc = json.loads((pathlib.Path(__file__).resolve().parents[2] / "data/core-analyses" / f"{c}.json").read_text(encoding="utf-8"))
+            if not set(K.verses(cc["reference"])) & shown:
+                errs.append(f"{b['suffix']}: Abschnitt {cc['reference']} kommt in keinem Feld des Kapitelbilds vor")
+    for e in errs:
+        print("FEHLER:", e)
+    if errs:
+        sys.exit(1)
+
+
 if __name__ == "__main__":
     run()
+    check_chapters()

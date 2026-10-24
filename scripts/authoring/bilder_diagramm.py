@@ -38,9 +38,16 @@ GAP = 5
 
 
 # ------------------------------------------------------------------ Text in mehreren Zeilen
-def wrapn(s, fs, maxw, maxlines=6, bold=True):
+def wrapn(s, fs, maxw, maxlines=14, bold=True):
     k = 1.0 if bold else .94
-    words, lines, cur = s.split(" "), [], ""
+    words = []
+    for w in s.split(" "):  # zu langes Wort (schmale Zelle): mit Trennstrich teilen, nicht über den Rand
+        while text_w(w, fs) * k > maxw and len(w) > 6:
+            cut = max(3, min(len(w) - 3, int(len(w) * maxw / (text_w(w, fs) * k)) - 1))
+            words.append(w[:cut] + "-")
+            w = w[cut:]
+        words.append(w)
+    lines, cur = [], ""
     for w in words:
         t = (cur + " " + w).strip()
         if text_w(t, fs) * k <= maxw or not cur:
@@ -55,7 +62,7 @@ def wrapn(s, fs, maxw, maxlines=6, bold=True):
     return lines
 
 
-def fit(v, fs, maxw, maxlines=6, bold=True, min_fs=6.5):
+def fit(v, fs, maxw, maxlines=14, bold=True, min_fs=6.5):
     """Schriftgrösse so, dass die längste Wortfolge passt (je Sprache gleich), und Zeilenzahl."""
     lab = _lab(v)
     while True:
@@ -66,7 +73,7 @@ def fit(v, fs, maxw, maxlines=6, bold=True, min_fs=6.5):
         fs -= .5
 
 
-def block(x, y, v, fs, maxw, anchor="middle", weight="700", fill=INK, maxlines=6):
+def block(x, y, v, fs, maxw, anchor="middle", weight="700", fill=INK, maxlines=14):
     """Text ab Oberkante y, umbrochen; gibt (svg, Höhe) zurück (Höhe der längsten Sprachfassung)."""
     if not v:
         return "", 0
@@ -81,7 +88,7 @@ def block(x, y, v, fs, maxw, anchor="middle", weight="700", fill=INK, maxlines=6
     return "".join(out), n * lh
 
 
-def block_h(v, fs, maxw, weight="700", maxlines=6):
+def block_h(v, fs, maxw, weight="700", maxlines=14):
     if not v:
         return 0
     fs, _, n = fit(v, fs, maxw, maxlines, weight == "700")
@@ -139,7 +146,7 @@ class Cells:
         fill = FILL.get(tone, FILL["plain"])
         dash = ' stroke-dasharray="3 2"' if z.get("empty") else ""
         sw = 1.3 if tone == "new" else .9
-        out = [f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h:.1f}" rx="4" fill="{fill}" stroke="{INK}" stroke-width="{sw}"{dash}/>']
+        out = [f'<g class="dg-cell"><rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h:.1f}" rx="4" fill="{fill}" stroke="{INK}" stroke-width="{sw}"{dash}/>']
         tx, tw = x + w / 2, w - 2 * self.PAD
         if z.get("who"):
             out.append(self.portrait(z["who"], x + 3, y + (h - 18) / 2, 18))
@@ -165,7 +172,7 @@ class Cells:
             out.append(f'<text x="{x + w / 2:.1f}" y="{y + h / 2 + 3:.1f}" text-anchor="middle" font-family="sans-serif" font-size="8" fill="{MUTED}">–</text>')
         if z.get("strike"):
             out.append(f'<path d="M{x + 4:.1f} {y + h - 4:.1f}L{x + w - 4:.1f} {y + 4:.1f}" stroke="#B0413E" stroke-width="1.3" stroke-linecap="round" opacity=".5"/>')
-        return "".join(out)
+        return "".join(out) + "</g>"
 
 
 def arrow(x1, y1, x2, y2, col=INK, head=True, dash=False, sw=1.4):
@@ -178,8 +185,16 @@ def arrow(x1, y1, x2, y2, col=INK, head=True, dash=False, sw=1.4):
     return f'<path d="M{x1:.1f} {y1:.1f}L{x2:.1f} {y2:.1f}" stroke="{col}" stroke-width="{sw}" stroke-linecap="round"{d}/>' + h
 
 
+def label_w(v, fs=6.4):
+    return _auto.lwidth(v, fs) + 6 if v else 0
+
+
 def small_label(x, y, v, fs=6.8, fill="#8A6A2A", anchor="middle"):
-    return _auto.ltext(x, y, v, fs, anchor=anchor, weight="700", fill=fill)
+    """Beschriftung (Pfeil, Zweig) auf einem hellen Schild, damit sie nichts überdeckt und lesbar bleibt; y = Grundlinie."""
+    w = _auto.lwidth(v, fs) + 5
+    x0 = x - w / 2 if anchor == "middle" else (x - 2.5 if anchor == "start" else x - w + 2.5)
+    return (f'<g class="dg-label"><rect x="{x0:.1f}" y="{y - fs * .9:.1f}" width="{w:.1f}" height="{fs * 1.25:.1f}" rx="{fs * .6:.1f}" fill="#FFF8E8" stroke="#C9B48A" stroke-width=".5"/>'
+            + _auto.ltext(x, y, v, fs, anchor=anchor, weight="700", fill=fill) + "</g>")
 
 
 # ------------------------------------------------------------------ Kachel
@@ -277,7 +292,10 @@ def _arrows(C, d, w, y, chain=False):
     if chain:
         per = d.get("cols") or (2 if w < 300 else 4)
     per = max(1, min(per, len(cells)))
-    gap = 26 if any(links) else 16
+    while per > 1 and (w - 16) / per < 74:  # Zellen nicht zu schmal (Handy)
+        per -= 1
+    gap = max([16] + [label_w(lk) + 10 for lk in links if lk])
+    gap = min(gap, (w - 16) / per * .6)
     cw = (w - 16 - gap * (per - 1)) / per
     out, boxes = [], []
     rows = [cells[i:i + per] for i in range(0, len(cells), per)]
@@ -295,7 +313,7 @@ def _arrows(C, d, w, y, chain=False):
             ax1, ay, ax2 = x1 + w1 + 1.5, y1 + h1 / 2, x2 - 1.5
             out.append(arrow(ax1, ay, ax2, ay, head=not chain))
             if lab:
-                out.append(small_label((ax1 + ax2) / 2, ay - 4, lab, 6))
+                out.append(small_label((ax1 + ax2) / 2, ay - 4, lab, 6.2))
         else:  # nächste Zeile: von unten Mitte zum Anfang der nächsten Zeile
             sx, sy, ex, ey = x1 + w1 / 2, y1 + h1 + 1, x2 + w2 / 2, y2 - 1.5
             midy = (sy + ey) / 2
@@ -364,6 +382,17 @@ def _timeline(C, d, w, y):
     if not n:
         return "", y
     cw = (w - 16 - GAP * (n - 1)) / n
+    if cw < 72:  # schmal (Handy): Zeitleiste senkrecht, Stationen untereinander
+        out, x0, bw = [], 20, w - 28
+        top = y + 2
+        for z in cells:
+            h = C.height(z, bw)
+            out.append(f'<circle cx="12" cy="{y + h / 2:.1f}" r="3" fill="#C08A2A" stroke="{INK}" stroke-width=".8"/>'
+                       f'<path d="M15 {y + h / 2:.1f}H{x0:.1f}" stroke="{INK}" stroke-width=".8"/>')
+            out.append(C.draw(z, x0, y, bw, h))
+            y += h + 4
+        out.insert(0, arrow(12, top, 12, y, sw=1.6))
+        return "".join(out), y
     h = max(C.height(z, cw) for z in cells)
     ay = y + 6
     out = [arrow(8, ay, w - 6, ay, sw=1.6)]
