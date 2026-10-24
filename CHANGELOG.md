@@ -2,6 +2,16 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.86 — 2026-10-24 — Pilot «Struktur zuerst»: Zusammenfassungen und Strukturbilder
+
+Entscheide Andi Neck vom 2026-10-24 (Verdichtung: Struktur zuerst, Strukturkatalog):
+- **Strukturanalyse im Pilot:** Alle 58 Kernanalysen (Rut, Titus, Mk 5, Mt 5–7) haben ein Feld `structure` mit Baumuster, allen Gliedern, Merkmalen (Sprecher, Musterbruch, Modalität, Deutung …) und Darstellung, von einer getrennten KI-Instanz auf Strukturtreue geprüft. Was vorher «weggelassen» war und trägt, steht jetzt drin (z. B. alle Verheissungen der Seligpreisungen, beide Zweige von Bedingungen, der ganze Ältestenspiegel, alle Namen des Stammbaums in Rut 4).
+- **Zusammenfassungen neu** (Hochdeutsch und Züridüütsch): wo der Text Reihe, Gegensatz oder Raster ist, als Liste aller Glieder («– die Armen im Geist → ihnen gehört das Reich der Himmel»); die App zeigt die Liste als Liste und liest sie Satz für Satz vor.
+- **Strukturbilder:** Reden, Lehre und Briefe als Raster, Spalten («Ihr habt gehört … Ich aber sage euch …»), Weiche mit beiden Zweigen, Pfeilkette («denn», «damit»), Waage («wie viel mehr»), Zeitleiste, Gliederung, Dialog, Kreis, Ringe, zwei Ebenen und Stammbaum; Erzählungen bleiben Szenen. Das Thema steht im Band (z. B. «Wenn ihr aber fastet»).
+- **Kacheln einzeln:** Jede Kachel ist ein eigenes Bild; auf dem Handy stehen sie untereinander in voller Breite, breite Strukturbilder haben eine schmale Fassung fürs Handy.
+- **Worte im Bild sprachlich geprüft** (getrennte KI-Instanz): rund 30 Befunde verbessert (Satzteile zu ganzen Sätzen, Zeitformen, «zur Frau nehmen» statt «erwerben» in der Mundart, Bezüge von «es/ihn»). Vereinheitlichung der Mundart-Schreibung (din/diin, Söi/Säu …) folgt mit der allgemeinen Überarbeitung des Züridüütsch.
+- Werkzeuge: `kernanalyse.py --check`, Entwurfsordner (`BIBLE_CORE_SRC`, `BIBLE_SUMMARY_SRC`), `vorschau_auftrag.py`, `bildworte.py` mit den Worten der Strukturbilder.
+
 ## v0.85 — 2026-10-24 — Gleicher Massstab für alle Personen
 
 Hinweis Andi Neck: Jesus wirkte als Redner am Rand teilweise wie ein Kind, andere übergross.
