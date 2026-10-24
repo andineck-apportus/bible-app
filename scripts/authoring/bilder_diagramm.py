@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Strukturbilder (docs/STRUKTURKATALOG.md, Abschnitt 2c «Darstellungen»): Kacheln, die den Bau eines Textes zeigen statt
 einer Szene – Raster, Spalten, Pfeilkette, Weiche, Gliederungsbild, Dialogspalten, Zeitleiste, Waage, Treppe, zwei Ebenen,
-Ringe, Spiegelachse, Kette (Stammbaum).
+Ringe, Spiegelachse, Kette (Stammbaum), Kreis.
 
 Ein Feld im Bildauftrag trägt dafür `diagram` statt einer Bühne:
 
@@ -15,6 +15,7 @@ Ein Feld im Bildauftrag trägt dafür `diagram` statt einer Bühne:
                 "top": [Zelle], "bottom": [Zelle], "top_label": Wort, "bottom_label": Wort   # levels
                 "ring": Zelle, "core": [Zelle]            # rings (Rahmen und Mitte)
                 "turns": [{"who": "FIG-…", "cell": Zelle}]   # dialogue
+                "cells" + "there"/"back": Wort         # circle (zwei Glieder: hin und zurück; mehr: Kreislauf)
                }
     Zelle = {"a": Wort (fett), "b": Wort (normal, optional), "icons": ["FIG-…"], "who": "FIG-…" (Porträt),
              "role": Wort (kleine Überschrift, outline), "empty": true, "strike": true, "tone": "old|new|plain"}
@@ -442,8 +443,52 @@ def _tree(C, d, w, y):
     return _arrows(C, d, w, y, chain=True)
 
 
+def _circle(C, d, w, y):
+    """Kreislauf oder Spiegelstrafe: Glieder auf einem Kreis, Pfeile im Kreis herum (zwei Glieder: hin und zurück)."""
+    cells = d.get("cells", [])
+    n = len(cells)
+    if not n:
+        return "", y
+    cw = (w - 16 - 40) / 2 if n <= 2 else min(110 if w > 300 else 62, (w - 24) / 3)
+    hs = [C.height(z, cw) for z in cells]
+    rx = (w - 16 - cw) / 2 * (1 if n <= 2 else .82)
+    ry = max(26, max(hs) * (.9 if n <= 2 else 1.7))
+    cx, cy = w / 2, y + max(hs) / 2 + ry
+    pos = []
+    for i in range(n):
+        a = -math.pi / 2 + 2 * math.pi * i / n if n > 2 else (math.pi if i == 0 else 0)
+        pos.append((cx + rx * math.cos(a), cy + ry * math.sin(a) * (1 if n > 2 else 0)))
+    out = []
+    if n <= 2:  # zwei Glieder nebeneinander, oben Pfeil hin, unten Pfeil zurück
+        h = max(hs)
+        x1, x2 = 8, w - 8 - cw
+        y0 = y + 6
+        out.append(C.draw(cells[0], x1, y0, cw, h))
+        if n == 2:
+            out.append(C.draw(cells[1], x2, y0, cw, h, "new"))
+        a1, a2 = x1 + cw + 4, x2 - 4
+        out.append(f'<path d="M{a1:.1f} {y0 + h * .3:.1f}Q{w / 2:.1f} {y0 - 8:.1f} {a2:.1f} {y0 + h * .3:.1f}" fill="none" stroke="{INK}" stroke-width="1.4"/>'
+                   + arrow(a2 - 3, y0 + h * .3 - 2.5, a2, y0 + h * .3))
+        out.append(f'<path d="M{a2:.1f} {y0 + h * .7:.1f}Q{w / 2:.1f} {y0 + h + 8:.1f} {a1:.1f} {y0 + h * .7:.1f}" fill="none" stroke="{INK}" stroke-width="1.4"/>'
+                   + arrow(a1 + 3, y0 + h * .7 + 2.5, a1, y0 + h * .7))
+        for k, lk in ((0, "there"), (1, "back")):
+            if d.get(lk):
+                out.append(small_label(w / 2, (y0 + 1) if k == 0 else (y0 + h + 9), d[lk], 6.4))
+        return "".join(out), y0 + h + 12
+    out.append(f'<ellipse cx="{cx:.1f}" cy="{cy:.1f}" rx="{rx:.1f}" ry="{ry:.1f}" fill="none" stroke="{INK}" stroke-width="1.3" stroke-dasharray="4 3"/>')
+    for i in range(n):  # Pfeilspitze auf dem Kreis zwischen zwei Gliedern
+        a = -math.pi / 2 + 2 * math.pi * (i + .5) / n
+        px, py = cx + rx * math.cos(a), cy + ry * math.sin(a)
+        tx, ty = -rx * math.sin(a), ry * math.cos(a)
+        L = math.hypot(tx, ty) or 1
+        out.append(arrow(px - tx / L * 4, py - ty / L * 4, px + tx / L * 2, py + ty / L * 2))
+    for (px, py), z, h in zip(pos, cells, hs):
+        out.append(C.draw(z, px - cw / 2, py - h / 2, cw, h))
+    return "".join(out), cy + ry + max(hs) / 2
+
+
 VISUALS = {
     "grid": _grid, "columns": _columns, "mirror": lambda C, d, w, y: _columns(C, d, w, y, mirror=True),
     "arrows": _arrows, "switch": _switch, "outline": _outline, "dialogue": _dialogue, "timeline": _timeline,
-    "balance": _balance, "stairs": _stairs, "levels": _levels, "rings": _rings, "tree": _tree,
+    "balance": _balance, "stairs": _stairs, "levels": _levels, "rings": _rings, "tree": _tree, "circle": _circle,
 }
