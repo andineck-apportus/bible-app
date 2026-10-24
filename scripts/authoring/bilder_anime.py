@@ -1053,7 +1053,7 @@ def apanel(i, n, body, num=True, size=(186, 140)):
     w_, h_ = size  # Kachel nach Inhalt (Strukturbilder): Ecken behalten ihren Abstand zum Rand, die Schräge wächst nicht mit
     poly = " ".join(f"{x if x < 93 else w_ - (186 - x):g},{y if y < 70 else h_ - (140 - y):g}" for x, y in PANEL_SHAPES[i % 4])
     return (f'<clipPath id="{pid}"><polygon points="{poly}"/></clipPath><g clip-path="url(#{pid})"><polygon points="{poly}" fill="#F6EAD7"/>{body}</g>'
-            f'<polygon points="{poly}" fill="none" stroke="{INK}" stroke-width="2.2" stroke-linejoin="round"/>'
+            f'<polygon class="pn-frame" points="{poly}" fill="none" stroke="{INK}" stroke-width="2.2" stroke-linejoin="round"/>'
             + (f'<circle cx="14" cy="14" r="8.5" fill="#FFFDF6" stroke="{INK}" stroke-width="1.2"/><text x="14" y="18" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="{INK}">{n}</text>' if num else ''))
 
 
