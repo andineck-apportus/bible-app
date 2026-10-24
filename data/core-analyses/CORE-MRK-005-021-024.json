@@ -11,11 +11,89 @@
  "voice": {
   "speaker": "narrator"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Rahmen A der Schachtelung [[MRK.5.21-MRK.5.43]]; die Erzählung bleibt offen und wird in [[MRK.5.35-MRK.5.43]] fortgesetzt",
+    "range": "MRK.5.21-MRK.5.24",
+    "elements": [
+     {
+      "label": "Am See versammelt sich eine grosse Menge bei Jesus.",
+      "ref": "MRK.5.21",
+      "role": "Anfang"
+     },
+     {
+      "label": "Der Synagogenvorsteher Jairus fällt Jesus zu Füssen.",
+      "ref": "MRK.5.22",
+      "role": "Annäherung"
+     },
+     {
+      "label": "Die Bitte des Jairus",
+      "child": "s2"
+     },
+     {
+      "label": "Jesus geht mit ihm; eine grosse Menge folgt und umdrängt ihn.",
+      "ref": "MRK.5.24",
+      "role": "Ausgang (offen)"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Erzähler",
+       "to": "Leser"
+      },
+      {
+       "who": "Jairus",
+       "to": "Jesus",
+       "ref": "MRK.5.23"
+      }
+     ],
+     "modality": [
+      {
+       "ref": "MRK.5.23",
+       "kind": "Bitte, keine Zusage: Jesus antwortet nicht mit Worten, er geht mit (5.24)"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "cause",
+    "subtype": "Zweck",
+    "range": "MRK.5.23",
+    "elements": [
+     {
+      "label": "Anlass: «Mein Töchterchen liegt im Sterben.»",
+      "ref": "MRK.5.23",
+      "role": "Anlass"
+     },
+     {
+      "label": "Bitte: Jesus soll kommen und ihr die Hände auflegen.",
+      "ref": "MRK.5.23",
+      "role": "Bitte"
+     },
+     {
+      "label": "Zweck: damit sie gerettet wird und lebt.",
+      "ref": "MRK.5.23",
+      "role": "Zweck"
+     }
+    ],
+    "visual": "arrows",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
    "reference": "MRK.5.22-MRK.5.23",
    "text_de": "Jairus fällt Jesus zu Füssen und bittet: «Mein Töchterchen liegt im Sterben; komm doch und lege ihr die Hände auf, damit sie gerettet wird und lebt!»",
-   "reason_de": "Trägt die Kernaussage (die Bitte eines Vaters in Todesnot) und ist wörtliche Rede an der entscheidenden Stelle; eröffnet die Rahmengeschichte bis 5.43.",
+   "reason_de": "Trägt die Kernaussage (die Bitte eines Vaters in Todesnot, mit Zweck «damit sie gerettet wird und lebt») und ist wörtliche Rede an der entscheidenden Stelle; eröffnet die Rahmengeschichte, die erst in 5.35–43 weitergeht.",
    "recognition_de": "Ein angesehener Mann kniet am Seeufer vor Jesus nieder, die Hände bittend erhoben, ringsum eine grosse Menge.",
    "keywords": [
     "Jairus",
@@ -35,8 +113,8 @@
   }
  ],
  "omitted_de": [
-  "Überfahrt ans andere Ufer (5.21) – Übergang, Ortsangabe",
-  "Amt des Jairus als Synagogenvorsteher als eigener Zug – Hintergrund, gehört in «Hintergrund damals»"
+  "Überfahrt im Boot ans andere Ufer (5.21) – Übergang, Ortsangabe",
+  "Bedeutung des Amtes Synagogenvorsteher – Hintergrund, gehört in «Hintergrund damals»"
  ],
  "persons": [
   "FIG-JESUS",
@@ -53,18 +131,15 @@
    "fingerprint": "0566ddd47ccac77e"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Kernaussage und Momente sind belegt; Zitat und Schlüsselwort wurden präzisiert.",
-  "changes_de": [
-   "Moment 1 text_de: Bitte aus 5.23 vollständig wörtlich zitiert, inkl. «gerettet»",
-   "Moment 2 Schlüsselwort «Er ging mit ihm» durch «grosse Menge» ersetzt (stärker fürs Wortband, kein Gross-/Kleinschreibungsproblem)"
-  ]
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Rahmen A der Schachtelung mit offenem Ausgang, Bitte mit Anlass → Bitte → Zweck richtig; Bitte nicht als Zusage dargestellt.",
+  "changes_de": []
  }
 }

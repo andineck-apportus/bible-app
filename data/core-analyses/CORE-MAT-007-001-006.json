@@ -6,35 +6,181 @@
  "level": "section",
  "reference": "MAT.7.1-MAT.7.6",
  "target": "TU-MAT-007-001-006",
- "core_de": "Die Jünger sollen nicht richten, denn mit dem eigenen Mass werden sie gemessen; wer den Splitter beim Bruder sieht, soll zuerst den Balken aus dem eigenen Auge ziehen.",
+ "core_de": "Die Jünger sollen nicht richten, denn mit dem eigenen Urteil und Mass werden sie gerichtet und gemessen; wer den Splitter beim Bruder sieht, soll zuerst den Balken aus dem eigenen Auge ziehen; das Heilige sollen sie nicht den Hunden geben und die Perlen nicht vor die Schweine werfen.",
  "mode": "instruction",
  "voice": {
   "speaker": "FIG-JESUS",
   "addressee": "FIG-GRUPPE-JUENGER"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "series",
+    "subtype": "drei Weisungen (mit Begründung, Bildwort, Zweck)",
+    "range": "MAT.7.1-MAT.7.6",
+    "elements": [
+     {
+      "label": "Richtet nicht – mit eurem Mass wird euch gemessen",
+      "ref": "MAT.7.1-MAT.7.2",
+      "role": "Weisung 1",
+      "child": "s2"
+     },
+     {
+      "label": "Zuerst den Balken aus dem eigenen Auge, dann den Splitter beim Bruder",
+      "ref": "MAT.7.3-MAT.7.5",
+      "role": "Weisung 2",
+      "child": "s3"
+     },
+     {
+      "label": "Das Heilige nicht den Hunden, die Perlen nicht vor die Schweine",
+      "ref": "MAT.7.6",
+      "role": "Weisung 3",
+      "child": "s4"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Jesus",
+       "to": "die Jünger (ihr/du); die Menschenmengen hören zu ([[MAT.5.1]], [[MAT.7.28]])"
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "Wie 7,6 mit 7,1–5 zusammenhängt und wer mit Hunden und Schweinen gemeint ist, sagt der Text nicht; das ist Auslegung."
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "cause",
+    "subtype": "Spiegelstrafe",
+    "range": "MAT.7.1-MAT.7.2",
+    "elements": [
+     {
+      "label": "Richtet nicht",
+      "ref": "MAT.7.1",
+      "role": "Weisung"
+     },
+     {
+      "label": "damit ihr nicht gerichtet werdet",
+      "ref": "MAT.7.1",
+      "role": "Zweck"
+     },
+     {
+      "label": "denn mit welchem Urteil ihr richtet, werdet ihr gerichtet werden",
+      "ref": "MAT.7.2",
+      "role": "Begründung (denn)"
+     },
+     {
+      "label": "und mit welchem Mass ihr messt, wird euch gemessen werden",
+      "ref": "MAT.7.2",
+      "role": "Begründung"
+     }
+    ],
+    "visual": "circle",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "parable",
+    "subtype": "Bildwort",
+    "range": "MAT.7.3-MAT.7.5",
+    "elements": [
+     {
+      "label": "Frage: Warum siehst du den Splitter im Auge deines Bruders, den Balken in deinem eigenen Auge aber bemerkst du nicht?",
+      "ref": "MAT.7.3",
+      "role": "Bild"
+     },
+     {
+      "label": "Frage: Wie kannst du sagen «Lass mich den Splitter herausziehen», wenn in deinem Auge der Balken ist?",
+      "ref": "MAT.7.4",
+      "role": "Bild"
+     },
+     {
+      "label": "Du Heuchler! Zieh zuerst den Balken aus deinem Auge → dann wirst du klar sehen, um den Splitter herauszuziehen",
+      "ref": "MAT.7.5",
+      "role": "Weisung: zuerst → dann"
+     }
+    ],
+    "features": {
+     "interpretation": [
+      {
+       "note": "Der Text deutet das Bildwort nicht ausdrücklich; der Bezug zum Richten ergibt sich aus 7,1–2."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s4",
+    "pattern": "cause",
+    "subtype": "Weisung – damit nicht",
+    "range": "MAT.7.6",
+    "elements": [
+     {
+      "label": "Gebt das Heilige nicht den Hunden",
+      "ref": "MAT.7.6",
+      "role": "Weisung"
+     },
+     {
+      "label": "Werft eure Perlen nicht vor die Schweine",
+      "ref": "MAT.7.6",
+      "role": "Weisung"
+     },
+     {
+      "label": "damit sie sie nicht mit den Füssen zertreten und sich umdrehen und euch zerreissen",
+      "ref": "MAT.7.6",
+      "role": "Zweck (damit nicht)"
+     }
+    ],
+    "visual": "arrows",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
    "reference": "MAT.7.1-MAT.7.2",
-   "text_de": "Richtet nicht, damit ihr nicht gerichtet werdet; mit welchem Mass ihr messt, wird euch gemessen.",
-   "reason_de": "Leitsatz des Abschnitts (Kriterium 1 und 2).",
-   "recognition_de": "Jesus spricht zu den Jüngern und wehrt den erhobenen Zeigefinger eines Urteilenden ab.",
+   "text_de": "Richtet nicht, damit ihr nicht gerichtet werdet; denn mit welchem Urteil ihr richtet, werdet ihr gerichtet, und mit welchem Mass ihr messt, wird euch gemessen.",
+   "reason_de": "Leitsatz des Abschnitts mit Begründung (Kriterium 1 und 2).",
+   "recognition_de": "Erstes Feld als Kreispfeil: Ein Urteilender misst mit einem Mass, und dasselbe Mass kehrt zu ihm zurück; Beschriftung «Richtet nicht».",
    "keywords": [
-    "Richtet nicht"
+    "Richtet nicht",
+    "Mass"
    ]
   },
   {
    "reference": "MAT.7.3-MAT.7.5",
-   "text_de": "Wer den Splitter im Auge seines Bruders sieht, soll zuerst den Balken aus dem eigenen Auge ziehen.",
-   "reason_de": "Bekanntestes Erkennungsbild der Stelle (Kriterium 4), das den Leitsatz veranschaulicht (Kriterium 1).",
-   "recognition_de": "Ein Mann mit einem Balken im eigenen Auge will seinem Bruder einen Splitter aus dem Auge ziehen.",
+   "text_de": "Wer den Splitter im Auge seines Bruders sieht, den Balken im eigenen aber nicht, soll zuerst den Balken aus dem eigenen Auge ziehen; dann sieht er klar für den Splitter.",
+   "reason_de": "Bekanntestes Erkennungsbild (Kriterium 4), das den Leitsatz veranschaulicht (Kriterium 1).",
+   "recognition_de": "Zweites Feld: Ein Mann mit einem Balken im eigenen Auge will seinem Bruder einen Splitter aus dem Auge ziehen; Beschriftung «zuerst – dann».",
    "keywords": [
     "Splitter",
-    "Balken"
+    "Balken",
+    "zuerst"
+   ]
+  },
+  {
+   "reference": "MAT.7.6",
+   "text_de": "Gebt das Heilige nicht den Hunden und werft eure Perlen nicht vor die Schweine, damit sie sie nicht zertreten und euch zerreissen.",
+   "reason_de": "Dritte Weisung des Abschnitts; gehört zur Gestalt (Regel 1 der Strukturtreue), auch wenn ihr Bezug zum Vorigen offen ist.",
+   "recognition_de": "Drittes Feld: Perlen und Heiliges werden zurückgehalten, davor ein Hund und ein Schwein; Pfeil «damit nicht» zu zertretenen Perlen.",
+   "keywords": [
+    "Hunden",
+    "Perlen",
+    "Schweine"
    ]
   }
  ],
  "omitted_de": [
-  "Das Heilige nicht den Hunden, Perlen nicht vor die Schweine (7,6) – eigenständiges Wort, das die Kernaussage nicht trägt"
+  "Doppelte Frage im Bildwort (7,3 und 7,4) im Bild – Wiederholung desselben Bildes, in einer Szene zusammengefasst; in der Struktur erhalten"
  ],
  "persons": [
   "FIG-JESUS",
@@ -50,15 +196,19 @@
    "fingerprint": "e5a55516e6cdd3df"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Gegen den Text geprüft; Kernaussage, Momente, Textart und Sprecher stimmen, keine Änderung.",
-  "changes_de": []
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Reihe von drei Weisungen richtig; Spiegelstrafe (Kreis), Bildwort und «damit nicht» passend; offener Bezug von 7,6 korrekt als Auslegung vermerkt.",
+  "changes_de": [
+   "Untertyp präzisiert: nur 7,1–2 hat eine Begründung, 7,3–5 ist Bildwort, 7,6 hat einen Zweck",
+   "Label 7,3 als Frage wie im Text («Warum siehst du …?») statt als Aussage",
+   "Erkennungsmoment 1: hinzugefügte Handlung «Jesus wehrt den erhobenen Zeigefinger ab» gestrichen"
+  ]
  }
 }

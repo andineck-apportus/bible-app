@@ -6,37 +6,226 @@
  "level": "section",
  "reference": "MAT.7.15-MAT.7.23",
  "target": "TU-MAT-007-015-023",
- "core_de": "Falsche Propheten erkennt man an ihren Früchten; ins Reich der Himmel kommt nicht, wer «Herr, Herr» sagt, sondern wer den Willen des Vaters tut.",
+ "core_de": "Falsche Propheten kommen in Schafskleidern und sind innen reissende Wölfe; man erkennt sie an ihren Früchten wie einen Baum. Ins Reich der Himmel kommt nicht jeder, der «Herr, Herr» sagt, sondern wer den Willen des Vaters tut; vielen, die sich an jenem Tag auf Taten in seinem Namen berufen, wird Jesus sagen: «Nie habe ich euch gekannt.»",
  "mode": "instruction",
  "voice": {
   "speaker": "FIG-JESUS",
   "addressee": "FIG-GRUPPE-JUENGER"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "series",
+    "subtype": "zwei Warnungen",
+    "range": "MAT.7.15-MAT.7.23",
+    "elements": [
+     {
+      "label": "Falsche Propheten: an ihren Früchten werdet ihr sie erkennen",
+      "ref": "MAT.7.15-MAT.7.20",
+      "role": "Warnung 1",
+      "child": "s2"
+     },
+     {
+      "label": "Nicht «Herr, Herr» sagen, sondern den Willen des Vaters tun",
+      "ref": "MAT.7.21-MAT.7.23",
+      "role": "Warnung 2",
+      "child": "s4"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Jesus",
+       "to": "die Jünger (ihr/du); die Menschenmengen hören zu ([[MAT.5.1]], [[MAT.7.28]])"
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "Propheten / prophezeit",
+       "refs": [
+        "MAT.7.15",
+        "MAT.7.22"
+       ],
+       "role": "verbindet die beiden Warnungen"
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "Ob die «vielen» von 7,22 die falschen Propheten von 7,15 sind, sagt der Text nicht; das ist Auslegung."
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "frame",
+    "subtype": "Inklusio",
+    "range": "MAT.7.15-MAT.7.20",
+    "elements": [
+     {
+      "label": "Warnung: Hütet euch vor den falschen Propheten – aussen Schafskleider, innen reissende Wölfe",
+      "ref": "MAT.7.15",
+      "role": "Anlass"
+     },
+     {
+      "label": "An ihren Früchten werdet ihr sie erkennen",
+      "ref": "MAT.7.16",
+      "role": "A",
+      "links": [
+       "MAT.7.20"
+      ]
+     },
+     {
+      "label": "Frage: Sammelt man Trauben von Dornen oder Feigen von Disteln?",
+      "ref": "MAT.7.16",
+      "role": "Bild"
+     },
+     {
+      "label": "Guter Baum ↔ fauler Baum",
+      "ref": "MAT.7.17-MAT.7.18",
+      "role": "Inneres (Bild)",
+      "child": "s3"
+     },
+     {
+      "label": "Folge: Jeder Baum ohne gute Frucht wird umgehauen und ins Feuer geworfen",
+      "ref": "MAT.7.19",
+      "role": "Folge"
+     },
+     {
+      "label": "Also an ihren Früchten werdet ihr sie erkennen",
+      "ref": "MAT.7.20",
+      "role": "A'",
+      "links": [
+       "MAT.7.16"
+      ]
+     }
+    ],
+    "features": {
+     "leitwort": [
+      {
+       "word": "An ihren Früchten werdet ihr sie erkennen",
+       "refs": [
+        "MAT.7.16",
+        "MAT.7.20"
+       ],
+       "role": "verklammernd"
+      }
+     ]
+    },
+    "visual": "rings",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "contrast",
+    "subtype": "Paarreihe",
+    "range": "MAT.7.17-MAT.7.18",
+    "elements": [
+     {
+      "label": "Jeder gute Baum bringt gute Früchte ↔ der faule Baum bringt schlechte Früchte",
+      "ref": "MAT.7.17",
+      "role": "Paar: gut ↔ faul"
+     },
+     {
+      "label": "Ein guter Baum kann keine schlechten Früchte bringen ↔ ein fauler Baum keine guten",
+      "ref": "MAT.7.18",
+      "role": "Paar: gut ↔ faul"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   },
+   {
+    "id": "s4",
+    "pattern": "contrast",
+    "subtype": "nicht – sondern, mit Ausblick",
+    "range": "MAT.7.21-MAT.7.23",
+    "elements": [
+     {
+      "label": "Nicht jeder, der zu mir «Herr, Herr!» sagt, kommt ins Reich der Himmel ↔ sondern wer den Willen meines Vaters in den Himmeln tut",
+      "ref": "MAT.7.21",
+      "role": "nicht ↔ sondern"
+     },
+     {
+      "label": "An jenem Tag: Viele berufen sich auf ihre Taten, Jesus weist sie ab",
+      "ref": "MAT.7.22-MAT.7.23",
+      "role": "Ausblick",
+      "child": "s5"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   },
+   {
+    "id": "s5",
+    "pattern": "dialogue",
+    "subtype": "Rede und Antwort (angekündigt)",
+    "range": "MAT.7.22-MAT.7.23",
+    "elements": [
+     {
+      "label": "Viele: «Herr, Herr, haben wir nicht in deinem Namen prophezeit, Dämonen ausgetrieben und viele Machttaten getan?»",
+      "ref": "MAT.7.22",
+      "role": "Rede"
+     },
+     {
+      "label": "Jesus: «Nie habe ich euch gekannt. Weicht von mir, die ihr Gesetzlosigkeit übt!»",
+      "ref": "MAT.7.23",
+      "role": "Antwort"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "viele",
+       "to": "Jesus"
+      },
+      {
+       "who": "Jesus",
+       "to": "die vielen"
+      }
+     ],
+     "modality": [
+      {
+       "note": "Ankündigung für «jenen Tag» (Futur), kein Bericht"
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
-   "reference": "MAT.7.15-MAT.7.17",
-   "text_de": "Jesus warnt vor falschen Propheten in Schafskleidern, die innen reissende Wölfe sind: An ihren Früchten werdet ihr sie erkennen.",
-   "reason_de": "Kern und Erkennungsbild (Kriterium 1 und 4); der Satz «an ihren Früchten» rahmt 7,16–20 (Kriterium 2).",
-   "recognition_de": "Ein Wolf in Schafskleid; daneben ein guter Baum mit guten Früchten und ein fauler Baum.",
+   "reference": "MAT.7.15-MAT.7.20",
+   "text_de": "Jesus warnt vor falschen Propheten in Schafskleidern, die innen reissende Wölfe sind: An ihren Früchten werdet ihr sie erkennen; ein guter Baum bringt gute Früchte, ein fauler schlechte, und jeder Baum ohne gute Frucht wird umgehauen und ins Feuer geworfen.",
+   "reason_de": "Die ganze gerahmte Warnung mit Gegenpaar und Folge (Kriterium 1 und 4); der Satz «an ihren Früchten» rahmt 7,16–20 (Kriterium 2).",
+   "recognition_de": "Erstes Feld, Rahmen «An ihren Früchten werdet ihr sie erkennen» oben und unten: ein Wolf im Schafskleid; in der Mitte zwei Spalten, guter Baum mit guten Früchten ↔ fauler Baum mit schlechten, daneben die Axt.",
    "keywords": [
     "Schafskleidern",
-    "An ihren Früchten"
+    "An ihren Früchten",
+    "guter Baum"
    ]
   },
   {
    "reference": "MAT.7.21-MAT.7.23",
-   "text_de": "Nicht wer «Herr, Herr!» sagt, kommt ins Reich der Himmel, sondern wer den Willen des Vaters tut; zu denen, die nur «Herr, Herr» sagen, wird Jesus an jenem Tag sagen: «Nie habe ich euch gekannt.»",
-   "reason_de": "Zuspitzung auf das Tun und Ausblick auf «jenen Tag» (Kriterium 1 und 2).",
-   "recognition_de": "Ankündigung für «jenen Tag»: Menschen rufen Jesus «Herr, Herr» zu, und er weist sie ab.",
+   "text_de": "Nicht wer «Herr, Herr!» sagt, kommt ins Reich der Himmel, sondern wer den Willen des Vaters tut; an jenem Tag werden viele sich auf Prophezeien, Dämonenaustreiben und Machttaten berufen, und Jesus wird ihnen sagen: «Nie habe ich euch gekannt.»",
+   "reason_de": "Zuspitzung auf das Tun und Ausblick auf «jenen Tag» mit Rede und Antwort (Kriterium 1 und 2).",
+   "recognition_de": "Zweites Feld, zwei Spalten: links Menschen rufen «Herr, Herr» (durchgestrichen als Einlass), rechts einer tut den Willen des Vaters (Zeichen Wille Gottes); darunter Sprechblasen für «jenen Tag» (Ankündigung): die vielen nennen ihre Taten, Jesus weist sie ab.",
    "keywords": [
     "Herr, Herr",
-    "den Willen meines Vaters"
+    "den Willen meines Vaters",
+    "Nie habe ich euch gekannt"
    ]
   }
  ],
  "omitted_de": [
-  "Trauben, Dornen, Feigen, Disteln (7,16) und umgehauener Baum im Feuer (7,19) – weitere Bilder desselben Gedankens",
-  "Prophezeien, Dämonen austreiben, Machttaten (7,22) – Aufzählung, nicht Kern"
+  "Trauben/Dornen und Feigen/Disteln (7,16) im Bild – Fragen zum selben Gedanken; in der Struktur erhalten",
+  "Einzelne Taten (7,22) im Bild nur als Sprechblase – Aufzählung innerhalb der Rede; in der Struktur erhalten"
  ],
  "persons": [
   "FIG-JESUS",
@@ -52,17 +241,19 @@
    "fingerprint": "e0d8d093ac7f6382"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Gegen den Text geprüft; Abweichungen vom Wortlaut bzw. ungekennzeichnete Deutungen wurden korrigiert.",
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Zwei Warnungen mit Inklusio «An ihren Früchten», Gegenpaar der Bäume, «nicht – sondern» und angekündigter Rede und Antwort richtig; Futur gekennzeichnet.",
   "changes_de": [
-   "Moment 7,21–23: als Ankündigung (Futur, «an jenem Tag») statt als Bericht gefasst; «zu den anderen» präzisiert."
+   "core_de: «zu den anderen» ersetzt durch die im Text Genannten (viele, die sich auf Taten in seinem Namen berufen); «nicht jeder» wie im Text",
+   "Inklusio: Rolle «Mitte» (betonte Mitte eines Chiasmus) zu «Inneres» geändert, der Text sichert keine Mitte",
+   "Leitwort Propheten / prophezeit (7,15 / 7,22) ergänzt, Gleichsetzung der Gruppen als Auslegung gekennzeichnet"
   ]
  }
 }

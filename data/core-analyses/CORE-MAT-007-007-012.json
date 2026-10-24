@@ -6,38 +6,158 @@
  "level": "section",
  "reference": "MAT.7.7-MAT.7.12",
  "target": "TU-MAT-007-007-012",
- "core_de": "Wer bittet, sucht und anklopft, empfängt vom Vater Gutes, wie ein Vater seinem Kind Brot und nicht einen Stein gibt; darum sollen die Jünger den Menschen tun, was sie von ihnen wollen, denn das ist das Gesetz und die Propheten.",
+ "core_de": "Wer bittet, sucht und anklopft, empfängt, findet und dem wird geöffnet; wenn schon böse Menschen ihren Kindern Gutes geben, wie viel mehr der Vater in den Himmeln denen, die ihn bitten. Alles nun, was die Jünger von den Menschen wollen, sollen sie ihnen tun, denn das ist das Gesetz und die Propheten.",
  "mode": "instruction",
  "voice": {
   "speaker": "FIG-JESUS",
   "addressee": "FIG-GRUPPE-JUENGER"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "argument",
+    "subtype": "Zusage – Begründung – wie viel mehr – Folgerung (nun)",
+    "range": "MAT.7.7-MAT.7.12",
+    "elements": [
+     {
+      "label": "Drei Weisungen mit Zusage: bittet, sucht, klopft an",
+      "ref": "MAT.7.7",
+      "role": "These",
+      "child": "s2"
+     },
+     {
+      "label": "Begründung: Jeder, der bittet, empfängt; wer sucht, findet; wer anklopft, dem wird geöffnet",
+      "ref": "MAT.7.8",
+      "role": "Begründung (denn)"
+     },
+     {
+      "label": "Vergleich: Ihr gebt euren Kindern Gutes – wie viel mehr der Vater in den Himmeln",
+      "ref": "MAT.7.9-MAT.7.11",
+      "role": "Beleg (wie viel mehr)",
+      "child": "s3"
+     },
+     {
+      "label": "Folgerung: Alles, was ihr wollt, dass euch die Menschen tun, so tut auch ihr ihnen",
+      "ref": "MAT.7.12",
+      "role": "Folgerung (nun)"
+     },
+     {
+      "label": "Begründung: denn das ist das Gesetz und die Propheten",
+      "ref": "MAT.7.12",
+      "role": "Begründung (denn)",
+      "links": [
+       "MAT.5.17"
+      ]
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Jesus",
+       "to": "die Jünger (ihr/du); die Menschenmengen hören zu ([[MAT.5.1]], [[MAT.7.28]])"
+      }
+     ],
+     "modality": [
+      {
+       "note": "Zusagen im Futur («wird gegeben werden»); der Vergleich steht als Frage"
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "Ob «nun» in 7,12 nur an 7,7–11 anschliesst oder die Weisungen seit [[MAT.5.17]] zusammenfasst, ist Auslegung; die Wendung «das Gesetz und die Propheten» steht in beiden Versen."
+      }
+     ]
+    },
+    "visual": "arrows",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "series",
+    "subtype": "Weisung → Zusage",
+    "range": "MAT.7.7",
+    "elements": [
+     {
+      "label": "Bittet → es wird euch gegeben werden",
+      "ref": "MAT.7.7",
+      "role": "Weisung → Zusage"
+     },
+     {
+      "label": "Sucht → ihr werdet finden",
+      "ref": "MAT.7.7",
+      "role": "Weisung → Zusage"
+     },
+     {
+      "label": "Klopft an → es wird euch geöffnet werden",
+      "ref": "MAT.7.7",
+      "role": "Weisung → Zusage"
+     }
+    ],
+    "visual": "grid",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "balance",
+    "subtype": "Schluss vom Kleineren aufs Grössere",
+    "range": "MAT.7.9-MAT.7.11",
+    "elements": [
+     {
+      "label": "Wer von euch gibt seinem Sohn, der um Brot bittet, einen Stein?",
+      "ref": "MAT.7.9",
+      "role": "Beispiel (Frage)"
+     },
+     {
+      "label": "Oder wenn er um einen Fisch bittet, eine Schlange?",
+      "ref": "MAT.7.10",
+      "role": "Beispiel (Frage)"
+     },
+     {
+      "label": "Wenn nun ihr, die ihr böse seid, euren Kindern gute Gaben zu geben wisst",
+      "ref": "MAT.7.11",
+      "role": "das Kleinere"
+     },
+     {
+      "label": "wie viel mehr wird euer Vater in den Himmeln denen Gutes geben, die ihn bitten!",
+      "ref": "MAT.7.11",
+      "role": "das Grössere"
+     }
+    ],
+    "visual": "balance",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
    "reference": "MAT.7.7-MAT.7.8",
-   "text_de": "Bittet, und es wird euch gegeben; sucht, und ihr werdet finden; klopft an, und es wird euch geöffnet.",
-   "reason_de": "Kern und dreifache Wiederholung (Kriterium 1 und 2); Erkennungsmoment (Kriterium 4).",
-   "recognition_de": "Ein Jünger klopft an eine Tür, die sich öffnet.",
+   "text_de": "Bittet, und es wird euch gegeben; sucht, und ihr werdet finden; klopft an, und es wird euch geöffnet – denn jeder, der bittet, empfängt.",
+   "reason_de": "Die Reihe der drei Weisungen mit Zusage und ihre Begründung (Kriterium 1 und 2); Erkennungsmoment (Kriterium 4).",
+   "recognition_de": "Erstes Feld der Pfeilkette, dreigeteilt: ein Jünger bittet und erhält; sucht und findet; klopft an eine Tür, die sich öffnet.",
    "keywords": [
     "Bittet",
+    "sucht",
     "klopft an"
    ]
   },
   {
    "reference": "MAT.7.9-MAT.7.11",
-   "text_de": "Kein Vater gibt seinem Sohn einen Stein statt Brot oder eine Schlange statt Fisch; wie viel mehr gibt der Vater in den Himmeln Gutes.",
-   "reason_de": "Begründung der Zusage aus dem Vergleich mit einem menschlichen Vater (Kriterium 1); anschauliche Gegenstände (Kriterium 4).",
-   "recognition_de": "Ein Vater reicht seinem Sohn ein Brot, nicht einen Stein.",
+   "text_de": "Kein Vater gibt seinem Sohn einen Stein statt Brot oder eine Schlange statt Fisch; wenn schon ihr, die ihr böse seid, euren Kindern Gutes gebt, wie viel mehr wird der Vater in den Himmeln denen Gutes geben, die ihn bitten.",
+   "reason_de": "Begründung der Zusage im Schluss vom Kleineren aufs Grössere (Kriterium 1); anschauliche Gegenstände (Kriterium 4).",
+   "recognition_de": "Belegkasten als Waage in zwei Stufen: unten ein Vater reicht seinem Sohn ein Brot, nicht einen Stein; oben der Vater in den Himmeln, «wie viel mehr».",
    "keywords": [
     "Brot",
-    "Stein"
+    "Stein",
+    "wie viel mehr"
    ]
   },
   {
    "reference": "MAT.7.12",
-   "text_de": "Alles, was ihr wollt, dass euch die Menschen tun, das tut auch ihr ihnen; das ist das Gesetz und die Propheten.",
-   "reason_de": "Zusammenfassung mit Rückbezug auf 5,17 «Gesetz und Propheten» (Kriterium 2, Rahmen der Rede).",
-   "recognition_de": "Deutung für das Bild: Ein Mensch reicht einem anderen ein Brot, das er sich selbst wünscht, und erhält dasselbe zurück.",
+   "text_de": "Alles, was ihr wollt, dass euch die Menschen tun, das tut auch ihr ihnen; denn das ist das Gesetz und die Propheten.",
+   "reason_de": "Folgerung des Abschnitts mit Rückbezug auf 5,17 «Gesetz und Propheten» (Kriterium 2, Rahmen der Rede).",
+   "recognition_de": "Letztes Feld der Pfeilkette: Deutung für das Bild: Ein Mensch tut einem anderen, was er sich selbst wünscht (reicht ihm ein Brot); Beschriftung «das Gesetz und die Propheten».",
    "keywords": [
     "so tut auch ihr ihnen",
     "das Gesetz und die Propheten"
@@ -45,13 +165,14 @@
   }
  ],
  "omitted_de": [
-  "Schlange und Fisch (7,10) – Wiederholung des Brot-Stein-Vergleichs"
+  "Fisch und Schlange (7,10) im Bild – zweites Beispiel desselben Vergleichs; in der Struktur erhalten"
  ],
  "persons": [
   "FIG-JESUS",
   "FIG-GRUPPE-JUENGER",
   "FIG-ROLLE-VATER",
-  "FIG-ROLLE-SOHN"
+  "FIG-ROLLE-SOHN",
+  "FIG-GOTT"
  ],
  "places": [
   "FIG-ORT-BERG"
@@ -63,18 +184,19 @@
    "fingerprint": "f24b7c7c20c3188e"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Gegen den Text geprüft; Abweichungen vom Wortlaut bzw. ungekennzeichnete Deutungen wurden korrigiert.",
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Beweisgang Zusage – denn – wie viel mehr – Folgerung richtig; offener Bezug von «nun» (7,12) korrekt als Auslegung vermerkt. Die Waage hatte beide Schalen in einem Glied.",
   "changes_de": [
-   "core_de: spätere Bezeichnung «Goldene Regel» durch den Inhalt von 7,12 ersetzt.",
-   "Moment 7,12: Erkennungsmoment konkretisiert (als Deutung gekennzeichnet); Stichwort «so tut auch ihr ihnen» (die Regel selbst) vor den Rückbezug gestellt."
+   "Waage 7,9–11: das Kleinere (ihr, die ihr böse seid, gebt Gutes) und das Grössere (wie viel mehr der Vater) getrennt; die beiden Fragen als Beispiele",
+   "Label «gibt ihm der Vater einen Stein» ersetzt (der Text sagt «wer unter euch», der «Vater» war mit dem Vater in den Himmeln verwechselbar)",
+   "core_de: «Darum» durch «nun» des Textes ersetzt, da der Anschluss offen ist"
   ]
  }
 }

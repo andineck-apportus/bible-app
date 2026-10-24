@@ -6,17 +6,117 @@
  "level": "section",
  "reference": "RUT.3.1-RUT.3.5",
  "target": "TU-RUT-003-001-005",
- "core_de": "Noomi will Rut ein gutes Zuhause verschaffen und entwirft einen Plan, wie Rut nachts auf der Tenne an Boas herantreten soll; Rut willigt ein.",
+ "core_de": "Noomi will Rut einen Ort der Ruhe suchen, wo es ihr gut geht, und entwirft einen Plan, wie Rut nachts auf der Tenne an Boas herantreten soll; Rut willigt ein.",
  "mode": "narrative",
  "voice": {
   "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "dialogue",
+    "subtype": "Auftrag → Zusage",
+    "range": "RUT.3.1-RUT.3.5",
+    "elements": [
+     {
+      "label": "Noomis Plan",
+      "ref": "RUT.3.1-RUT.3.4",
+      "role": "Auftrag",
+      "child": "s2"
+     },
+     {
+      "label": "Rut: «Alles, was du mir sagst, werde ich tun.»",
+      "ref": "RUT.3.5",
+      "role": "Zusage"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Noomi",
+       "to": "Rut",
+       "refs": [
+        "RUT.3.1-RUT.3.4"
+       ]
+      },
+      {
+       "who": "Rut",
+       "to": "Noomi",
+       "refs": [
+        "RUT.3.5"
+       ]
+      }
+     ],
+     "modality": [
+      {
+       "ref": "RUT.3.1-RUT.3.4",
+       "kind": "Auftrag",
+       "note": "Plan und Anweisung, noch keine Handlung; ausgeführt erst in [[RUT.3.6-RUT.3.7]]."
+      },
+      {
+       "ref": "RUT.3.5",
+       "kind": "Zusage",
+       "note": "Ruts Zusage, noch nicht die Ausführung."
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "Ruhe",
+       "refs": [
+        "RUT.3.1"
+       ],
+       "role": "Zweck; nimmt Noomis Wunsch [[RUT.1.9]] auf («Ruhe finden»)"
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "sequence",
+    "subtype": "Plan in Schritten",
+    "range": "RUT.3.1-RUT.3.4",
+    "elements": [
+     {
+      "label": "Zweck: Ich will dir einen Ort der Ruhe suchen, wo es dir gut geht",
+      "ref": "RUT.3.1",
+      "role": "Zweck"
+     },
+     {
+      "label": "Lage: Boas, unser Verwandter, worfelt heute Nacht die Gerste auf der Tenne",
+      "ref": "RUT.3.2",
+      "role": "Anlass"
+     },
+     {
+      "label": "Wasch und salbe dich, zieh deine Kleider an und geh hinab zur Tenne; gib dich nicht zu erkennen, bis er gegessen und getrunken hat",
+      "ref": "RUT.3.3",
+      "role": "Schritt"
+     },
+     {
+      "label": "Wenn er sich hinlegt: Deck seine Füsse auf und leg dich hin",
+      "ref": "RUT.3.4",
+      "role": "Bedingung → Schritt"
+     },
+     {
+      "label": "Er wird dir sagen, was du tun sollst",
+      "ref": "RUT.3.4",
+      "role": "Erwartung"
+     }
+    ],
+    "visual": "scenes",
+    "basis": "text"
+   }
+  ]
  },
  "moments": [
   {
    "reference": "RUT.3.1-RUT.3.4",
    "text_de": "Noomi will Rut einen Ort der Ruhe suchen und schickt sie nachts zur Tenne, wo sie Boas die Füsse aufdecken und sich hinlegen soll.",
-   "reason_de": "Anfang des Bogens (Kriterium 3): Noomi ergreift nun selbst die Initiative, damit Boas als Löser handelt.",
-   "recognition_de": "Noomi gibt Rut Anweisungen für die Nacht auf der Tenne, wo Boas Gerste worfelt.",
+   "reason_de": "Anfang des Bogens (Kriterium 3): Noomi ergreift nun selbst die Initiative; als Zweck nennt sie einen Ort der Ruhe für Rut (das Wort «Löser» fällt hier nicht).",
+   "recognition_de": "Noomi gibt Rut Anweisungen für die Nacht auf der Tenne, wo Boas Gerste worfelt; als Plan in Schritten gezeigt, noch nicht ausgeführt.",
    "keywords": [
     "Ort der Ruhe",
     "Tenne",
@@ -34,7 +134,7 @@
   }
  ],
  "omitted_de": [
-  "Einzelheiten der Vorbereitung (waschen, salben, Kleider, 3,3) – Detail"
+  "Einzelheiten der Vorbereitung (waschen, salben, Kleider anziehen, 3,3) – Ausschmückung des Schritts «geh hinab zur Tenne»"
  ],
  "persons": [
   "FIG-NOOMI",
@@ -51,18 +151,18 @@
    "fingerprint": "38ef3c13ee5e0f3d"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Auswahl belegt; ein Bezug war als Deutung zu kennzeichnen.",
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Auftrag → Zusage mit Plan in Schritten richtig; core und Begründung enthielten Wertungen bzw. einen Zweck, der nicht im Text steht.",
   "changes_de": [
-   "reason_de 3,5: Bezug auf 1,16–17 als «Deutung:» gekennzeichnet",
-   "omitted_de: Worfeln (3,2) gestrichen, da es im Erkennungsmoment 3,1–4 vorkommt"
+   "core_de nah am Wortlaut («Ort der Ruhe» statt «gutes Zuhause»); reason_de Moment 1: Zweck «damit Boas als Löser handelt» steht nicht im Text, ersetzt durch Noomis eigenen Zweck.",
+   "Leitwort «Ruhe»: Verweis auf «nicht ruhen» (3,18) gestrichen – Anklang nur der deutschen Übersetzung (im Hebräischen verschiedene Wörter)."
   ]
  }
 }

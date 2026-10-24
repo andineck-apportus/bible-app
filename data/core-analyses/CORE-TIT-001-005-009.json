@@ -12,6 +12,174 @@
   "speaker": "FIG-PAULUS",
   "addressee": "FIG-TITUS"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "cause",
+    "subtype": "Auftrag – Voraussetzung – Begründung – Zweck",
+    "range": "TIT.1.5-TIT.1.9",
+    "elements": [
+     {
+      "label": "Auftrag: Titus soll in Kreta Fehlendes ordnen und in jeder Stadt Älteste einsetzen",
+      "ref": "TIT.1.5",
+      "role": "Auftrag"
+     },
+     {
+      "label": "Voraussetzung: Eingesetzt wird, wer untadelig ist",
+      "ref": "TIT.1.6-TIT.1.9",
+      "role": "Bedingung",
+      "child": "s2"
+     },
+     {
+      "label": "Begründung: Der Aufseher muss als Verwalter Gottes untadelig sein",
+      "ref": "TIT.1.7",
+      "role": "Begründung («denn»)"
+     },
+     {
+      "label": "Zweck: mit der gesunden Lehre ermahnen und die Widersprechenden zurechtweisen",
+      "ref": "TIT.1.9",
+      "role": "Zweck («damit»)",
+      "links": [
+       "TIT.1.10-TIT.1.16"
+      ]
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Paulus",
+       "to": "Titus"
+      }
+     ],
+     "modality": [
+      {
+       "note": "Auftrag: Das Einsetzen der Ältesten ist verlangt, nicht berichtet."
+      }
+     ],
+     "leitwort": [
+      {
+       "note": "«untadelig» (1,6; 1,7)"
+      },
+      {
+       "note": "Bezeichnungswechsel im Text: «Älteste» (1,5) – «der Aufseher» (1,7), durch «denn» verbunden; nicht stillschweigend vereinheitlichen"
+      }
+     ]
+    },
+    "visual": "arrows",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "series",
+    "subtype": "Katalog (Ältestenspiegel)",
+    "range": "TIT.1.6-TIT.1.9",
+    "elements": [
+     {
+      "label": "untadelig",
+      "ref": "TIT.1.6",
+      "role": "Ruf"
+     },
+     {
+      "label": "Mann einer einzigen Frau",
+      "ref": "TIT.1.6",
+      "role": "Familie"
+     },
+     {
+      "label": "gläubige Kinder, nicht liederlich oder widerspenstig",
+      "ref": "TIT.1.6",
+      "role": "Familie"
+     },
+     {
+      "label": "der Aufseher als Verwalter Gottes: nicht so – sondern so",
+      "ref": "TIT.1.7-TIT.1.8",
+      "role": "Haltung",
+      "child": "s3"
+     },
+     {
+      "label": "hält sich an das zuverlässige Wort, das der Lehre entspricht",
+      "ref": "TIT.1.9",
+      "role": "Lehre"
+     }
+    ],
+    "visual": "grid",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "contrast",
+    "subtype": "nicht … sondern (Reihe gegen Reihe)",
+    "range": "TIT.1.7-TIT.1.8",
+    "elements": [
+     {
+      "label": "nicht eigenmächtig",
+      "ref": "TIT.1.7",
+      "role": "nicht"
+     },
+     {
+      "label": "nicht jähzornig",
+      "ref": "TIT.1.7",
+      "role": "nicht"
+     },
+     {
+      "label": "kein Trinker",
+      "ref": "TIT.1.7",
+      "role": "nicht"
+     },
+     {
+      "label": "kein Schläger",
+      "ref": "TIT.1.7",
+      "role": "nicht"
+     },
+     {
+      "label": "nicht auf schändlichen Gewinn aus",
+      "ref": "TIT.1.7",
+      "role": "nicht"
+     },
+     {
+      "label": "gastfreundlich",
+      "ref": "TIT.1.8",
+      "role": "sondern"
+     },
+     {
+      "label": "dem Guten zugetan",
+      "ref": "TIT.1.8",
+      "role": "sondern"
+     },
+     {
+      "label": "besonnen",
+      "ref": "TIT.1.8",
+      "role": "sondern"
+     },
+     {
+      "label": "gerecht",
+      "ref": "TIT.1.8",
+      "role": "sondern"
+     },
+     {
+      "label": "fromm",
+      "ref": "TIT.1.8",
+      "role": "sondern"
+     },
+     {
+      "label": "beherrscht",
+      "ref": "TIT.1.8",
+      "role": "sondern"
+     }
+    ],
+    "features": {
+     "numbers": [
+      {
+       "note": "5 Verneinungen gegen 6 Tugenden; die Glieder sind nicht paarweise zugeordnet, nur die Reihen stehen gegeneinander."
+      }
+     ]
+    },
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
    "reference": "TIT.1.5",
@@ -25,13 +193,13 @@
    "mode": "instruction"
   },
   {
-   "reference": "TIT.1.7-TIT.1.8",
-   "text_de": "Der Aufseher muss als Verwalter Gottes untadelig sein: nicht jähzornig, kein Trinker, kein Schläger, sondern gastfreundlich, besonnen und gerecht.",
-   "reason_de": "Der Text betont «untadelig» zweimal (1,6 und 1,7); die Liste macht sichtbar, wer leiten soll (Kriterien 2 und 4).",
-   "recognition_de": "Paulus an Titus, wie der Aufseher sein muss: ein Ältester, der gastfreundlich seine Tür öffnet, statt zu trinken oder zuzuschlagen (Deutung für das Bild: offene Tür für «gastfreundlich»).",
+   "reference": "TIT.1.6-TIT.1.8",
+   "text_de": "Der Älteste muss untadelig sein: Mann einer einzigen Frau, mit gläubigen Kindern; der Aufseher als Verwalter Gottes nicht eigenmächtig, nicht jähzornig, kein Trinker, kein Schläger, nicht auf schändlichen Gewinn aus, sondern gastfreundlich, dem Guten zugetan, besonnen, gerecht, fromm und beherrscht.",
+   "reason_de": "Der Ältestenspiegel ist die tragende Reihe des Abschnitts; «untadelig» steht zweimal (1,6 und 1,7), die Reihe zeigt, wer leiten soll (Kriterien 1, 2, 4). Als ein Moment mit allen Gliedern.",
+   "recognition_de": "Paulus an Titus, wie ein Ältester sein muss: Raster mit allen Gliedern – oben Ruf und Familie (untadelig, eine Frau, gläubige Kinder), darunter zwei Spalten: fünf durchgestrichene Felder (eigenmächtig, jähzornig, Trinker, Schläger, schändlicher Gewinn) gegenüber sechs Feldern «sondern» (gastfreundlich, dem Guten zugetan, besonnen, gerecht, fromm, beherrscht).",
    "keywords": [
-    "Verwalter Gottes",
     "untadelig",
+    "Verwalter Gottes",
     "gastfreundlich"
    ],
    "mode": "list"
@@ -40,7 +208,7 @@
    "reference": "TIT.1.9",
    "text_de": "Der Älteste soll sich an das zuverlässige Wort halten, um mit der gesunden Lehre zu ermahnen und Widersprechende zurechtzuweisen.",
    "reason_de": "Ziel der Liste und Überleitung zum nächsten Abschnitt über die Widersprechenden; trägt die Kernaussage (Kriterien 1 und 3).",
-   "recognition_de": "Paulus an Titus, was der Älteste können muss: ein Ältester, der am Wort festhält und zur Gemeinde spricht (Deutung für das Bild: Schriftrolle in seiner Hand für «sich an das zuverlässige Wort halten»).",
+   "recognition_de": "Paulus an Titus, wozu der Älteste da ist: letztes Feld des Rasters – ein Ältester hält sich an das Wort und spricht zur Gemeinde, um zu ermahnen und Widersprechende zurechtzuweisen (Deutung für das Bild: Schriftrolle in seiner Hand für «sich an das zuverlässige Wort halten»).",
    "keywords": [
     "zuverlässige Wort",
     "gesunden Lehre"
@@ -49,8 +217,7 @@
   }
  ],
  "omitted_de": [
-  "Einzelheiten zur Familie des Ältesten (eine Frau, gläubige Kinder, Tit 1,6) – Teil der Liste, nicht eigener Moment",
-  "Weitere Eigenschaften (nicht eigenmächtig, fromm, beherrscht) – Wiederholung derselben Aussage"
+  "Nachsatz «wie ich es dir aufgetragen habe» (Tit 1,5) – Wiederholung des Auftrags"
  ],
  "persons": [
   "FIG-PAULUS",
@@ -66,18 +233,17 @@
    "fingerprint": "e89f5c116aef93ed"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Auswahl stimmt; der Auftrag war als ausgeführt dargestellt, Bildzeichen ungekennzeichnet.",
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Auftrag → Voraussetzung (Katalog) → Begründung → Zweck richtig; Ältestenspiegel vollständig (3 Glieder Ruf/Familie, 5 «nicht» gegen 6 «sondern», Festhalten am Wort), Zählung gegen den Text geprüft; «denn» (1,7) und «damit» (1,9) erhalten.",
   "changes_de": [
-   "1,5 Erkennungsmoment: Einsetzen der Ältesten als verlangte Handlung im Briefrahmen «Paulus an Titus», nicht als geschehen",
-   "1,7–8 und 1,9: Briefrahmen ergänzt; offene Tür und Schriftrolle als «Deutung für das Bild» gekennzeichnet"
+   "Wechsel «Älteste» (1,5) → «der Aufseher» (1,7) sichtbar gemacht: Moment 2 und Label des Glieds s2/4 nennen «der Aufseher als Verwalter Gottes»; Hinweis im Merkmal leitwort ergänzt."
   ]
  }
 }

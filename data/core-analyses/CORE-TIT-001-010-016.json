@@ -6,11 +6,134 @@
  "level": "section",
  "reference": "TIT.1.10-TIT.1.16",
  "target": "TU-TIT-001-010-016",
- "core_de": "Viele Schwätzer und Verführer bringen um Gewinns willen Familien durcheinander; Titus soll sie scharf zurechtweisen, denn sie bekennen Gott mit Worten und verleugnen ihn mit ihren Werken.",
+ "core_de": "Viele Schwätzer und Verführer bringen um schändlichen Gewinns willen ganze Familien durcheinander; darum soll Titus sie scharf zurechtweisen. Sie behaupten, Gott zu kennen, verleugnen ihn aber mit ihren Werken.",
  "mode": "instruction",
  "voice": {
   "speaker": "FIG-PAULUS",
   "addressee": "FIG-TITUS"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "cause",
+    "subtype": "Begründung und Zweck",
+    "range": "TIT.1.10-TIT.1.16",
+    "elements": [
+     {
+      "label": "Es gibt viele Widerspenstige, Schwätzer und Verführer",
+      "ref": "TIT.1.10",
+      "role": "Ursache («denn»)",
+      "links": [
+       "TIT.1.9"
+      ]
+     },
+     {
+      "label": "Ihnen muss man den Mund stopfen",
+      "ref": "TIT.1.11",
+      "role": "Auftrag"
+     },
+     {
+      "label": "Sie bringen ganze Familien durcheinander, um schändlichen Gewinns willen",
+      "ref": "TIT.1.11",
+      "role": "Begründung («denn»)"
+     },
+     {
+      "label": "Einer von ihnen, ihr eigener Prophet: «Kreter sind immer Lügner, böse Tiere, faule Bäuche.» Paulus: Dieses Zeugnis ist wahr.",
+      "ref": "TIT.1.12-TIT.1.13",
+      "role": "Beleg"
+     },
+     {
+      "label": "Darum: Weise sie scharf zurecht",
+      "ref": "TIT.1.13",
+      "role": "Auftrag («aus diesem Grund»)"
+     },
+     {
+      "label": "Zweck: damit sie gesund im Glauben sind und nicht auf jüdische Mythen und Gebote von Menschen achten",
+      "ref": "TIT.1.13-TIT.1.14",
+      "role": "Zweck («damit»)"
+     },
+     {
+      "label": "Grundsatz: rein ↔ befleckt",
+      "ref": "TIT.1.15",
+      "role": "Grundsatz",
+      "child": "s2"
+     },
+     {
+      "label": "Urteil: Worte ↔ Werke",
+      "ref": "TIT.1.16",
+      "role": "Urteil",
+      "child": "s3"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Paulus",
+       "to": "Titus"
+      },
+      {
+       "who": "ein Prophet der Kreter",
+       "to": "(zitiert)",
+       "note": "Zitat in 1,12; Paulus bestätigt es in 1,13 als wahr"
+      }
+     ],
+     "modality": [
+      {
+       "note": "Mund stopfen und scharf zurechtweisen sind Aufträge an Titus, nicht Bericht."
+      }
+     ],
+     "leitwort": [
+      {
+       "note": "«gutes Werk» erstmals in 1,16, trägt Kapitel 2 und 3"
+      }
+     ]
+    },
+    "visual": "arrows",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "Paarreihe",
+    "range": "TIT.1.15",
+    "elements": [
+     {
+      "label": "Für die Reinen ist alles rein",
+      "ref": "TIT.1.15",
+      "role": "rein"
+     },
+     {
+      "label": "Für die Befleckten und Ungläubigen ist nichts rein; befleckt sind Verstand und Gewissen",
+      "ref": "TIT.1.15",
+      "role": "befleckt"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "contrast",
+    "subtype": "Worte ↔ Werke",
+    "range": "TIT.1.16",
+    "elements": [
+     {
+      "label": "Mit Worten: Sie behaupten, Gott zu kennen",
+      "ref": "TIT.1.16",
+      "role": "Worte"
+     },
+     {
+      "label": "Mit Werken: Sie verleugnen ihn und sind für jedes gute Werk untauglich",
+      "ref": "TIT.1.16",
+      "role": "Werke"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
  },
  "moments": [
   {
@@ -36,10 +159,10 @@
    "mode": "instruction"
   },
   {
-   "reference": "TIT.1.16",
-   "text_de": "Sie behaupten, Gott zu kennen, verleugnen ihn aber mit ihren Werken und sind für jedes gute Werk untauglich.",
-   "reason_de": "Schlusssatz und Kern des Abschnitts; führt das Leitwort «gute Werke» ein, das Kapitel 2 und 3 tragen (Kriterien 1–3).",
-   "recognition_de": "Ein Mann zeigt mit dem Finger nach oben zu Gott, während seine Hände Schlechtes tun (Deutung für das Bild: Zeigefinger für «behaupten, Gott zu kennen», Hände für «mit den Werken verleugnen»).",
+   "reference": "TIT.1.15-TIT.1.16",
+   "text_de": "Für die Reinen ist alles rein, für die Befleckten nichts; die Verführer behaupten, Gott zu kennen, verleugnen ihn aber mit ihren Werken und sind für jedes gute Werk untauglich.",
+   "reason_de": "Schluss und Kern des Abschnitts: zwei Gegensätze (rein ↔ befleckt, Worte ↔ Werke) als ein Moment; führt das Leitwort «gute Werke» ein, das Kapitel 2 und 3 tragen (Kriterien 1–3).",
+   "recognition_de": "Zwei Spalten: links ein Mann, der mit dem Finger nach oben zu Gott zeigt («behaupten, Gott zu kennen»), rechts dieselben Hände bei schlechten Taten («mit den Werken verleugnen»); darüber klein «rein ↔ befleckt» (Deutung für das Bild: Zeigefinger und Hände).",
    "keywords": [
     "Gott zu kennen",
     "verleugnen sie ihn"
@@ -48,8 +171,8 @@
   }
  ],
  "omitted_de": [
-  "«Die aus der Beschneidung» und jüdische Mythen (Tit 1,10.14) – Erklärung der Gegner, gehört in «Hintergrund damals»",
-  "«Alles ist rein für die Reinen» (Tit 1,15) – Nebengedanke, der den Schluss vorbereitet"
+  "«besonders die aus der Beschneidung» (Tit 1,10) – nähere Bestimmung der Gegner, Erklärung gehört in «Hintergrund damals»",
+  "Die Schimpfwörter «abscheulich und ungehorsam» (Tit 1,16) – Ausschmückung des Urteils"
  ],
  "persons": [
   "FIG-TITUS",
@@ -64,18 +187,18 @@
    "fingerprint": "01983bc1147a66b5"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Von der Prüfung ohne Befund; nach den allgemeinen Vorgaben nur Erkennungsmomente präzisiert.",
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Begründungskette (denn – Auftrag – denn – Beleg – «aus diesem Grund» – damit) mit zwei Gegensätzen (rein ↔ befleckt, Worte ↔ Werke) richtig erkannt; Zitat des Kreters als fremde Stimme gekennzeichnet.",
   "changes_de": [
-   "1,11 und 1,16: Bildzeichen (aufgehaltene Hand, Zeigefinger/Hände) als «Deutung für das Bild» gekennzeichnet",
-   "1,12–13: Zurechtweisen als verlangte Handlung im Briefrahmen «Paulus an Titus»"
+   "core_de: Das eingefügte «denn sie bekennen Gott mit Worten …» begründete die Zurechtweisung mit 1,16; der Text begründet sie mit dem Zeugnis (1,13 «aus diesem Grund») bzw. dem Schaden für die Familien (1,11). Neu: «…; darum soll Titus sie scharf zurechtweisen. Sie behaupten, Gott zu kennen, …» (auch «bekennen» → Wortlaut «behaupten, Gott zu kennen»).",
+   "Label 1,12 näher am Wortlaut: «Einer von ihnen, ihr eigener Prophet: …» statt «Ein eigener Prophet der Kreter»."
   ]
  }
 }

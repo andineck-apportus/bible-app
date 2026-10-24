@@ -6,18 +6,137 @@
  "level": "section",
  "reference": "MAT.5.27-MAT.5.32",
  "target": "TU-MAT-005-027-032",
- "core_de": "Ehebruch beginnt schon im begehrenden Blick des Herzens; was zu Fall bringt, ist entschlossen abzulegen, und wer seine Frau entlässt, ausser wegen Unzucht, macht, dass mit ihr die Ehe gebrochen wird.",
+ "core_de": "Wer eine Frau ansieht, um sie zu begehren, hat in seinem Herzen schon die Ehe gebrochen; was zu Fall bringt, Auge oder Hand, ist wegzuwerfen, denn besser ein Glied verlieren als den ganzen Leib; und wer seine Frau entlässt, ausser wegen Unzucht, macht, dass mit ihr die Ehe gebrochen wird, und wer eine Entlassene heiratet, bricht die Ehe.",
  "mode": "instruction",
  "voice": {
   "speaker": "FIG-JESUS",
   "addressee": "FIG-GRUPPE-JUENGER"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "contrast",
+    "subtype": "Paarreihe: zwei Antithesen",
+    "range": "MAT.5.27-MAT.5.32",
+    "elements": [
+     {
+      "label": "Ihr habt gehört, dass gesagt worden ist: Du sollst nicht ehebrechen",
+      "ref": "MAT.5.27",
+      "role": "Paar 1: «Ihr habt gehört …»",
+      "links": [
+       "MAT.5.28"
+      ]
+     },
+     {
+      "label": "Ich aber sage euch: Jeder, der eine Frau ansieht, um sie zu begehren, hat in seinem Herzen schon mit ihr die Ehe gebrochen",
+      "ref": "MAT.5.28",
+      "role": "Paar 1: «Ich aber sage euch …»",
+      "links": [
+       "MAT.5.27"
+      ]
+     },
+     {
+      "label": "Folgerung: Auge und Hand, die zu Fall bringen",
+      "ref": "MAT.5.29-MAT.5.30",
+      "role": "Folgerung zu Paar 1",
+      "child": "s2"
+     },
+     {
+      "label": "Es ist aber gesagt worden: Wer seine Frau entlässt, soll ihr einen Scheidebrief geben",
+      "ref": "MAT.5.31",
+      "role": "Paar 2: «Es ist aber gesagt worden …»",
+      "links": [
+       "MAT.5.32"
+      ]
+     },
+     {
+      "label": "Ich aber sage euch: Jeder, der seine Frau entlässt, ausser wegen Unzucht, macht, dass mit ihr die Ehe gebrochen wird; und wer eine Entlassene heiratet, bricht die Ehe",
+      "ref": "MAT.5.32",
+      "role": "Paar 2: «Ich aber sage euch …»",
+      "links": [
+       "MAT.5.31"
+      ]
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Jesus",
+       "to": "seine Jünger, vor den Menschenmengen (5,1–2)"
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "Ihr habt gehört … Ich aber sage euch",
+       "role": "gliedernd (2. und 3. Gegensatz)"
+      }
+     ],
+     "pattern_break": [
+      {
+       "ref": "MAT.5.31",
+       "kind": "kürzere Einleitung «Es ist aber gesagt worden» ohne «Ihr habt gehört»"
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "EXO.20.14",
+       "kind": "Bezug von «Du sollst nicht ehebrechen»; Zuordnung als Deutung"
+      },
+      {
+       "ref": "DEU.5.18",
+       "kind": "Bezug von «Du sollst nicht ehebrechen» (Dekalog in Dtn); Zuordnung als Deutung"
+      },
+      {
+       "ref": "DEU.24.1",
+       "kind": "Bezug der Scheidebrief-Regel; Zuordnung als Deutung"
+      }
+     ]
+    },
+    "visual": "columns",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "condition",
+    "subtype": "zwei gleich gebaute Fälle mit Begründung",
+    "range": "MAT.5.29-MAT.5.30",
+    "elements": [
+     {
+      "label": "Wenn dein rechtes Auge dich zu Fall bringt → reiss es heraus und wirf es weg",
+      "ref": "MAT.5.29",
+      "role": "Fall 1: Bedingung → Weisung"
+     },
+     {
+      "label": "Wenn deine rechte Hand dich zu Fall bringt → hau sie ab und wirf sie weg",
+      "ref": "MAT.5.30",
+      "role": "Fall 2: Bedingung → Weisung"
+     },
+     {
+      "label": "Denn es ist besser für dich, dass eines deiner Glieder verloren geht, als dass dein ganzer Leib in die Hölle kommt",
+      "ref": "MAT.5.29-MAT.5.30",
+      "role": "Begründung («denn besser … als»)"
+     }
+    ],
+    "features": {
+     "interpretation": [
+      {
+       "note": "Auge und Hand werden gewöhnlich als drastisches Bildwort verstanden, nicht als wörtliche Anweisung; der Text sagt das nicht ausdrücklich (Deutung). Im Bild nicht als Handlung darstellen."
+      }
+     ]
+    },
+    "visual": "switch",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
    "reference": "MAT.5.27-MAT.5.28",
    "text_de": "Jesus stellt dem Gebot «Du sollst nicht ehebrechen» entgegen: Wer eine Frau begehrend ansieht, hat in seinem Herzen schon die Ehe gebrochen.",
-   "reason_de": "Kern der Gegenüberstellung (Kriterium 1 und 2).",
-   "recognition_de": "Jesus spricht; ein Mann blickt begehrend auf eine Frau, das Herz ist hervorgehoben.",
+   "reason_de": "Kern der ersten Gegenüberstellung (Kriterium 1 und 2).",
+   "recognition_de": "Erste Zeile der Spalten: links «Du sollst nicht ehebrechen», rechts ein Mann, der begehrend auf eine Frau blickt, das Herz hervorgehoben.",
    "keywords": [
     "Ich aber sage euch",
     "in seinem Herzen"
@@ -25,9 +144,9 @@
   },
   {
    "reference": "MAT.5.29-MAT.5.30",
-   "text_de": "Wenn das rechte Auge oder die rechte Hand zu Fall bringt, soll man es wegwerfen; besser ein Glied verlieren als der ganze Leib.",
-   "reason_de": "Drastisches, wiederholtes Bildwort (Kriterium 2 und 4); zeigt den Ernst der Forderung.",
-   "recognition_de": "Deutung für das Bild: ein Auge und eine Hand werden weggeworfen – als Bildwort, nicht als wörtliche Handlung darzustellen.",
+   "text_de": "Wenn das rechte Auge oder die rechte Hand zu Fall bringt, soll man es wegwerfen; denn besser ein Glied verlieren, als dass der ganze Leib in die Hölle kommt.",
+   "reason_de": "Zwei gleich gebaute Fälle mit Begründung (Kriterium 2 und 4); zeigt den Ernst der Forderung.",
+   "recognition_de": "Weiche unter der ersten Zeile: Auge und Hand als Zeichen, je mit Pfeil «wegwerfen», daneben die Abwägung Glied ↔ ganzer Leib. Deutung für das Bild: als Bildwort, nicht als wörtliche Handlung darzustellen.",
    "keywords": [
     "rechtes Auge",
     "rechte Hand"
@@ -35,16 +154,17 @@
   },
   {
    "reference": "MAT.5.31-MAT.5.32",
-   "text_de": "Jesus stellt dem Scheidebrief entgegen: Wer seine Frau entlässt, ausser wegen Unzucht, macht, dass mit ihr die Ehe gebrochen wird.",
+   "text_de": "Jesus stellt dem Scheidebrief entgegen: Wer seine Frau entlässt, ausser wegen Unzucht, macht, dass mit ihr die Ehe gebrochen wird; und wer eine Entlassene heiratet, bricht die Ehe.",
    "reason_de": "Eigene Gegenüberstellung im Abschnitt (Kriterium 2); trägt den zweiten Teil der Kernaussage.",
-   "recognition_de": "Ein Mann übergibt seiner Frau einen Scheidebrief; Jesus widerspricht.",
+   "recognition_de": "Zweite Zeile der Spalten: links ein Mann übergibt seiner Frau einen Scheidebrief, rechts Jesus mit Wortband «Ich aber sage euch».",
    "keywords": [
-    "Scheidebrief"
+    "Scheidebrief",
+    "ausser wegen Unzucht"
    ]
   }
  ],
  "omitted_de": [
-  "Der Unterschied zwischen ganzem Leib und Hölle (5,29–30) – Begründung, im Bild durch das Wegwerfen getragen"
+  "Wiederholung der Begründung in 5,30 – fast wortgleich mit 5,29, im Glied einmal genannt"
  ],
  "persons": [
   "FIG-JESUS",
@@ -60,17 +180,20 @@
    "fingerprint": "7e5e6a58734d6210"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Gegen den Text geprüft; Abweichungen vom Wortlaut bzw. ungekennzeichnete Deutungen wurden korrigiert.",
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Zwei Gegensätze (Ehebruch, Scheidebrief) mit Folgerung (Auge und Hand, zwei Fälle mit «denn besser») richtig erkannt; kürzere Einleitung in 5,31 als Musterbruch vermerkt.",
   "changes_de": [
-   "core_de: Deutung «nicht rechtmässig auflösbar» durch den Wortlaut von 5,32 samt Ausnahme ersetzt."
+   "Paare in je zwei Glieder mit Gegenverweis geteilt und mit den Textformeln bezeichnet («Ihr habt gehört …», «Es ist aber gesagt worden …» / «Ich aber sage euch …») statt «damals → jetzt» mit Pfeil (ein Gegensatz ist keine Folge)",
+   "core_de nah am Wortlaut («hat in seinem Herzen schon die Ehe gebrochen» statt «Ehebruch beginnt …»); zweites Glied von 5,32 (Heirat einer Entlassenen) ergänzt",
+   "Erkennungsbild zu 5,31–32: «Jesus widerspricht» (Wertung) ersetzt durch das Wortband «Ich aber sage euch»",
+   "Querverweis DEU.5.18 ergänzt"
   ]
  }
 }

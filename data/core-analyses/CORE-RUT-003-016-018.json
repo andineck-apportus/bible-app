@@ -11,10 +11,88 @@
  "voice": {
   "speaker": "narrator"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "dialogue",
+    "subtype": "Bericht und Rat",
+    "range": "RUT.3.16-RUT.3.18",
+    "elements": [
+     {
+      "label": "Noomi: «Wie steht es um dich, meine Tochter?» – Rut erzählt alles, was Boas für sie getan hat",
+      "ref": "RUT.3.16",
+      "role": "Frage und Bericht"
+     },
+     {
+      "label": "Rut zeigt die Gerste: Boas sagte: «Komm nicht mit leeren Händen zu deiner Schwiegermutter!»",
+      "ref": "RUT.3.17",
+      "role": "Gabe mit Begründung"
+     },
+     {
+      "label": "Noomi: «Bleib sitzen, bis du weisst, wie die Sache ausgeht; denn der Mann wird nicht ruhen, bis er sie heute zu Ende gebracht hat»",
+      "ref": "RUT.3.18",
+      "role": "Rat mit Begründung"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Noomi",
+       "to": "Rut",
+       "refs": [
+        "RUT.3.16",
+        "RUT.3.18"
+       ]
+      },
+      {
+       "who": "Rut",
+       "to": "Noomi",
+       "refs": [
+        "RUT.3.16-RUT.3.17"
+       ]
+      },
+      {
+       "who": "Boas (zitiert von Rut)",
+       "to": "Rut",
+       "refs": [
+        "RUT.3.17"
+       ]
+      }
+     ],
+     "modality": [
+      {
+       "ref": "RUT.3.18",
+       "kind": "Erwartung",
+       "note": "Noomis Gewissheit über Boas, noch kein Bericht."
+      }
+     ],
+     "open_end": [
+      {
+       "ref": "RUT.3.18",
+       "note": "«wie die Sache ausgeht» bleibt am Kapitelende offen."
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "leer",
+       "refs": [
+        "RUT.3.17"
+       ],
+       "role": "deutend; vgl. [[RUT.1.21]]"
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
    "reference": "RUT.3.16-RUT.3.17",
-   "text_de": "Rut erzählt Noomi alles und zeigt die Gerste, die Boas ihr gab, damit sie nicht mit leeren Händen zur Schwiegermutter komme.",
+   "text_de": "Auf Noomis Frage erzählt Rut alles und zeigt die Gerste, die Boas ihr gab, damit sie nicht mit leeren Händen zur Schwiegermutter komme.",
    "reason_de": "Erkennungsmoment (Kriterium 4) und Wiederholung des Leitworts (Kriterium 2); Deutung: Gegenstück zu Noomis «leer» in 1,21.",
    "recognition_de": "Rut öffnet vor Noomi ihren Umhang voller Gerste.",
    "keywords": [
@@ -34,8 +112,7 @@
   }
  ],
  "omitted_de": [
-  "Noomis Frage «Wie steht es um dich?» – Übergang",
-  "«sechs Mass» – Zahl"
+  "«sechs Mass» (3,17) – Zahl"
  ],
  "persons": [
   "FIG-RUT",
@@ -49,15 +126,15 @@
    "fingerprint": "4f12c9a349539145"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Ohne Befund.",
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Bericht und Rat mit Begründungen richtig, offenes Ende vermerkt, Deutung «leer» gekennzeichnet; keine Änderung.",
   "changes_de": []
  }
 }

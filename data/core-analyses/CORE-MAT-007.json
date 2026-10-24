@@ -14,48 +14,195 @@
   "CORE-MAT-007-024-027",
   "CORE-MAT-007-028-029"
  ],
- "core_de": "Zum Schluss der Bergpredigt mahnt Jesus, nicht zu richten und den Menschen zu tun, was man von ihnen will; entscheidend ist, seine Worte nicht nur zu hören, sondern zu tun – und die Menge staunt über seine Vollmacht.",
+ "core_de": "Zum Schluss der Bergpredigt mahnt Jesus, nicht zu richten, sagt zu, dass der Vater den Bittenden Gutes gibt, und schliesst: Alles nun, was ihr wollt, dass euch die Menschen tun, so tut auch ihr ihnen. Dann folgen Gegenüberstellungen (enges ↔ weites Tor, guter ↔ fauler Baum, «Herr, Herr» sagen ↔ den Willen des Vaters tun) bis zum Haus auf dem Felsen oder auf dem Sand: wer seine Worte hört und tut, dessen Haus steht, wer sie nicht tut, dessen Haus stürzt ein; die Menge ist überwältigt von seiner Vollmacht.",
  "mode": "speech",
  "voice": {
   "speaker": "FIG-JESUS",
   "addressee": "FIG-GRUPPE-JUENGER"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "collection",
+    "subtype": "Rede in Teilen (Teile verschieden gebaut)",
+    "range": "MAT.7.1-MAT.7.29",
+    "elements": [
+     {
+      "label": "Richten, Splitter und Balken, das Heilige",
+      "ref": "MAT.7.1-MAT.7.6",
+      "role": "Teil 1",
+      "child": "s2"
+     },
+     {
+      "label": "Bittet – wie viel mehr der Vater – alles nun, was ihr wollt, dass euch die Menschen tun, so tut auch ihr ihnen",
+      "ref": "MAT.7.7-MAT.7.12",
+      "role": "Teil 2",
+      "child": "s3"
+     },
+     {
+      "label": "Vier Gegenpaare zum Schluss der Rede",
+      "ref": "MAT.7.13-MAT.7.27",
+      "role": "Teil 3",
+      "child": "s4"
+     },
+     {
+      "label": "Rahmen: Die Menschenmengen staunen, denn er lehrt mit Vollmacht",
+      "ref": "MAT.7.28-MAT.7.29",
+      "role": "Rahmenschluss",
+      "links": [
+       "MAT.5.1-MAT.5.2"
+      ]
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Jesus",
+       "to": "die Jünger; die Menschenmengen hören zu ([[MAT.7.28]])"
+      },
+      {
+       "who": "Erzähler",
+       "to": "Leser",
+       "note": "Rahmenschluss 7,28–29"
+      }
+     ]
+    },
+    "visual": "outline",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "series",
+    "subtype": "drei Weisungen mit Begründung",
+    "range": "MAT.7.1-MAT.7.6",
+    "elements": [
+     {
+      "label": "Richtet nicht – mit eurem Mass wird euch gemessen",
+      "ref": "MAT.7.1-MAT.7.2",
+      "role": "Weisung 1"
+     },
+     {
+      "label": "Zuerst den Balken aus dem eigenen Auge, dann den Splitter beim Bruder",
+      "ref": "MAT.7.3-MAT.7.5",
+      "role": "Weisung 2"
+     },
+     {
+      "label": "Das Heilige nicht den Hunden, die Perlen nicht vor die Schweine",
+      "ref": "MAT.7.6",
+      "role": "Weisung 3"
+     }
+    ],
+    "visual": "grid",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "argument",
+    "subtype": "Zusage – wie viel mehr – Folgerung",
+    "range": "MAT.7.7-MAT.7.12",
+    "elements": [
+     {
+      "label": "Bittet → es wird euch gegeben; sucht → ihr werdet finden; klopft an → es wird euch geöffnet",
+      "ref": "MAT.7.7-MAT.7.8",
+      "role": "These"
+     },
+     {
+      "label": "Kein Vater gibt seinem Sohn einen Stein statt Brot – wie viel mehr gibt der Vater in den Himmeln Gutes",
+      "ref": "MAT.7.9-MAT.7.11",
+      "role": "Beleg (wie viel mehr)"
+     },
+     {
+      "label": "Folgerung: Was ihr wollt, dass euch die Menschen tun, so tut auch ihr ihnen – das ist das Gesetz und die Propheten",
+      "ref": "MAT.7.12",
+      "role": "Folgerung (nun)",
+      "links": [
+       "MAT.5.17"
+      ]
+     }
+    ],
+    "visual": "arrows",
+    "basis": "text"
+   },
+   {
+    "id": "s4",
+    "pattern": "contrast",
+    "subtype": "Reihe von Gegenpaaren",
+    "range": "MAT.7.13-MAT.7.27",
+    "elements": [
+     {
+      "label": "Tor: weites Tor und breiter Weg ins Verderben ↔ enges Tor und schmaler Weg ins Leben",
+      "ref": "MAT.7.13-MAT.7.14",
+      "role": "Paar 1"
+     },
+     {
+      "label": "Baum: guter Baum mit guten Früchten ↔ fauler Baum mit schlechten Früchten (falsche Propheten)",
+      "ref": "MAT.7.15-MAT.7.20",
+      "role": "Paar 2"
+     },
+     {
+      "label": "Bekenntnis: «Herr, Herr» sagen ↔ den Willen des Vaters tun",
+      "ref": "MAT.7.21-MAT.7.23",
+      "role": "Paar 3"
+     },
+     {
+      "label": "Haus: hören und tun, auf den Felsen gebaut ↔ hören und nicht tun, auf den Sand gebaut",
+      "ref": "MAT.7.24-MAT.7.27",
+      "role": "Paar 4"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text",
+    "features": {
+     "interpretation": [
+      {
+       "note": "Die Zusammenfassung von 7,13–27 als Reihe von Gegenpaaren ist eine Gliederung der Auslegung; jedes Paar selbst steht so im Text."
+      }
+     ]
+    }
+   }
+  ]
+ },
  "moments": [
   {
-   "reference": "MAT.7.3-MAT.7.5",
-   "text_de": "Wer den Splitter im Auge des Bruders sieht, soll zuerst den Balken aus dem eigenen Auge ziehen.",
-   "reason_de": "Erkennungsbild für das Verbot zu richten (Kriterium 1 und 4).",
-   "recognition_de": "Ein Mann mit einem Balken im Auge will dem Bruder einen Splitter herausziehen.",
+   "reference": "MAT.7.1-MAT.7.5",
+   "text_de": "Richtet nicht, denn mit eurem Mass wird euch gemessen; wer den Splitter im Auge des Bruders sieht, soll zuerst den Balken aus dem eigenen Auge ziehen.",
+   "reason_de": "Erster Teil: Leitsatz mit Erkennungsbild (Kriterium 1 und 4).",
+   "recognition_de": "Erstes Feld: Ein Mann mit einem Balken im Auge will dem Bruder einen Splitter herausziehen; Beschriftung «Richtet nicht».",
    "keywords": [
+    "Richtet nicht",
     "Splitter",
     "Balken"
    ]
   },
   {
-   "reference": "MAT.7.12",
-   "text_de": "Alles, was ihr wollt, dass euch die Menschen tun, das tut auch ihr ihnen; das ist das Gesetz und die Propheten.",
-   "reason_de": "Fasst die Forderungen der Rede zusammen und schliesst mit «das Gesetz und die Propheten» den Rahmen zu 5,17 (Kriterium 1 und 2).",
-   "recognition_de": "Deutung für das Bild: Ein Mensch reicht einem anderen ein Brot, das er sich selbst wünscht, und erhält dasselbe zurück.",
+   "reference": "MAT.7.7-MAT.7.12",
+   "text_de": "Bittet, und es wird euch gegeben; wenn schon ein Vater seinem Sohn Brot und keinen Stein gibt, wie viel mehr gibt der Vater in den Himmeln Gutes. Alles nun, was ihr wollt, dass euch die Menschen tun, das tut auch ihr ihnen; denn das ist das Gesetz und die Propheten.",
+   "reason_de": "Zweiter Teil als Begründungskette mit Folgerung (Kriterium 1 und 2); 7,12 schliesst mit «das Gesetz und die Propheten» den Rahmen zu 5,17.",
+   "recognition_de": "Zweites Feld als Pfeilkette: Tür öffnet sich → Vater reicht Brot, nicht Stein, «wie viel mehr» → Deutung für das Bild: Ein Mensch tut einem anderen, was er sich selbst wünscht.",
    "keywords": [
+    "Bittet",
     "so tut auch ihr ihnen"
    ]
   },
   {
-   "reference": "MAT.7.24-MAT.7.27",
-   "text_de": "Wer Jesu Worte hört und tut, baut sein Haus auf Felsen; wer sie nicht tut, baut auf Sand, und sein Haus stürzt ein.",
-   "reason_de": "Schluss und Höhepunkt der ganzen Rede, trägt die Kernaussage Hören und Tun (Kriterium 1, 2 und 3).",
-   "recognition_de": "Ein Haus auf dem Felsen steht im Sturm, ein Haus auf dem Sand stürzt ein.",
+   "reference": "MAT.7.13-MAT.7.27",
+   "text_de": "Zum Schluss stellt Jesus gegenüber: das enge ↔ das weite Tor, der gute ↔ der faule Baum, «Herr, Herr» sagen ↔ den Willen des Vaters tun, auf den Felsen ↔ auf den Sand gebaut: Wer seine Worte hört und tut, dessen Haus steht; wer sie nicht tut, dessen Haus stürzt ein.",
+   "reason_de": "Dritter Teil als Reihe von Gegenpaaren, ein Moment mit allen vier Paaren; das Hausgleichnis ist Schluss und Höhepunkt der Rede (Kriterium 1, 2 und 3).",
+   "recognition_de": "Drittes Feld, zwei Spalten mit vier Zeilen: Tor, Baum, «Herr, Herr» ↔ Wille, Haus; die Hauszeile als Schluss grösser: Haus auf dem Felsen steht, Haus auf dem Sand stürzt ein.",
    "keywords": [
+    "das enge Tor",
+    "guter Baum",
     "auf den Felsen",
     "auf den Sand"
-   ],
-   "mode": "parable"
+   ]
   },
   {
    "reference": "MAT.7.28-MAT.7.29",
-   "text_de": "Als Jesus seine Rede beendet, sind die Menschenmengen überwältigt, denn er lehrt wie einer, der Vollmacht hat.",
-   "reason_de": "Erzählerischer Schluss der Rede und Gegenstück zu 5,1–2 (Kriterium 2 und 3, Bogen); ohne Buch-Einheit für die Bergpredigt erscheint dieser Rahmen sonst über der Abschnittsebene nirgends.",
-   "recognition_de": "Die Menschenmengen stehen staunend vor Jesus, der auf dem Berg gelehrt hat.",
+   "text_de": "Als Jesus seine Rede beendet hat, sind die Menschenmengen überwältigt, denn er lehrt wie einer, der Vollmacht hat.",
+   "reason_de": "Erzählerischer Rahmenschluss, Gegenstück zu 5,1–2 (Kriterium 2 und 3, Bogen).",
+   "recognition_de": "Viertes Feld: Die Menschenmengen stehen staunend vor Jesus, der auf dem Berg gelehrt hat.",
    "keywords": [
     "überwältigt",
     "Vollmacht"
@@ -64,10 +211,8 @@
   }
  ],
  "omitted_de": [
-  "Perlen vor die Schweine (7,6) – Einzelwort ohne Bezug zur Kernaussage",
-  "Bittet, sucht, klopft an (7,7–11) – Zusage, die die Kernaussage (Tun) nicht trägt; im Kapitel vertreten durch die Folgerung 7,12; bleibt im Abschnitt",
-  "Das enge Tor (7,13–14) – die Entscheidung zwischen zwei Wegen trägt das Hausgleichnis als Schluss stärker; der Bogen verlangt den Rahmen 7,28–29",
-  "Falsche Propheten und Früchte, «Herr, Herr» (7,15–23) – Mahnung zum Tun, die im Hausgleichnis aufgenommen wird"
+  "Das Heilige und die Perlen (7,6) im Kapitelbild – Bezug zu 7,1–5 offen (Auslegung), im Kapitelbild entbehrlich; in der Struktur erhalten",
+  "Einzelheiten der Warnungen (Wölfe im Schafskleid, Taten «an jenem Tag», 7,15–23) im Kapitelbild – Ausschmückung der Gegenpaare; in den Strukturen der Abschnitte erhalten"
  ],
  "persons": [
   "FIG-JESUS",
@@ -82,42 +227,44 @@
  "basis": [
   {
    "record": "CORE-MAT-007-001-006",
-   "fingerprint": "89490ef961b24031"
+   "fingerprint": "0cb5aa9b5fd1261e"
   },
   {
    "record": "CORE-MAT-007-007-012",
-   "fingerprint": "232da6c953feb8a4"
+   "fingerprint": "6ba93851dae1fb51"
   },
   {
    "record": "CORE-MAT-007-013-014",
-   "fingerprint": "aa4852fe68a824d6"
+   "fingerprint": "dac9a801ee70252a"
   },
   {
    "record": "CORE-MAT-007-015-023",
-   "fingerprint": "72aea010a40c0da4"
+   "fingerprint": "0c1978017743a440"
   },
   {
    "record": "CORE-MAT-007-024-027",
-   "fingerprint": "c2ea674f9697106a"
+   "fingerprint": "1fa189b61cd57880"
   },
   {
    "record": "CORE-MAT-007-028-029",
-   "fingerprint": "405d7eb48f28c5ce"
+   "fingerprint": "09cea9ad712a2b34"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Gegen den Text geprüft; die Kapitelauswahl wurde nach «Kernaussage vor Bekanntheit» und Bogen geändert (offen für Andi Neck).",
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Gliederung (drei Weisungen, Beweisgang, Gegenpaare, Rahmenschluss) übernimmt die Abschnitte; alle vier Gegenpaare im Moment. Zusammenfassung der Gegenpaare als Reihe ist Gliederung der Auslegung und war im Kern als Befund formuliert.",
   "changes_de": [
-   "Moment 7,12 (Inhalt des Verses, ohne die spätere Bezeichnung) statt 7,7–8, weil er die Forderungen zusammenfasst und den Rahmen zu 5,17 schliesst – offen für Andi Neck.",
-   "Moment 7,28–29 (Staunen der Menge, narrative) statt des engen Tors 7,13–14, als Rahmen zu 5,1–2 (Bogen) – offen für Andi Neck.",
-   "core_de an die neue Auswahl angepasst; omitted_de mit Begründungen nach den Kriterien."
+   "core_de: «stellt in vier Gegenpaaren vor die Wahl» und «Entscheidend ist» (Wertung) durch die Gegenüberstellungen selbst und den Ausgang des Hausgleichnisses ersetzt; «folgert» durch «nun» des Textes",
+   "Label Teil 2 und Moment 2: «darum» durch «nun» des Textes ersetzt (Anschluss offen, vgl. Abschnitt)",
+   "Kennzeichnung als Auslegung von s1 an die betroffene Einheit s4 (Reihe von Gegenpaaren) verschoben",
+   "Weglassgrund zu 7,6 neutral formuliert («Bezug offen» statt «ohne Bezug zur Kernaussage»)",
+   "Wurzel als collection (Rede in Teilen) statt series: die Teile sind nicht gleich gebaut (Entscheid nach der Prüfung, 2026-10-24)."
   ]
  }
 }

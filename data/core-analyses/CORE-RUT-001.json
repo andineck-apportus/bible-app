@@ -16,33 +16,272 @@
  "voice": {
   "speaker": "narrator"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Wegzug – Scheideweg – Ankunft",
+    "range": "RUT.1.1-RUT.1.22",
+    "elements": [
+     {
+      "label": "Verlust in Stufen: Auszug nach Moab, Tod Elimelechs, Heirat der Söhne, Tod der Söhne; Noomi bleibt allein zurück",
+      "ref": "RUT.1.1-RUT.1.5",
+      "role": "Abschnitt: Ablauf"
+     },
+     {
+      "label": "Wechselrede in drei Runden auf dem Rückweg",
+      "ref": "RUT.1.6-RUT.1.18",
+      "role": "Abschnitt: Wechselrede",
+      "child": "s2"
+     },
+     {
+      "label": "Ankunft in Betlehem: «Ist das Noomi?» – Noomis Antwort",
+      "ref": "RUT.1.19-RUT.1.21",
+      "role": "Abschnitt: Ankunft",
+      "child": "s4"
+     },
+     {
+      "label": "Noomi kehrt mit Rut, der Moabiterin, zurück, zu Beginn der Gerstenernte",
+      "ref": "RUT.1.22",
+      "role": "Schlussnotiz"
+     }
+    ],
+    "features": {
+     "leitwort": [
+      {
+       "word": "umkehren / zurückkehren",
+       "refs": [
+        "RUT.1.6-RUT.1.16",
+        "RUT.1.21",
+        "RUT.1.22"
+       ],
+       "role": "gliedernd"
+      },
+      {
+       "word": "blieb zurück",
+       "refs": [
+        "RUT.1.3",
+        "RUT.1.5"
+       ],
+       "role": "gliedernd"
+      }
+     ],
+     "speakers": [
+      {
+       "who": "Erzähler",
+       "to": "Leser",
+       "refs": [
+        "RUT.1.1-RUT.1.22"
+       ]
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "dialogue",
+    "subtype": "drei Runden: Aufforderung → Antwort",
+    "range": "RUT.1.6-RUT.1.18",
+    "elements": [
+     {
+      "label": "Anlass: JHWH hat seinem Volk Brot gegeben; Noomi bricht mit beiden Schwiegertöchtern auf",
+      "ref": "RUT.1.6-RUT.1.7",
+      "role": "Anlass"
+     },
+     {
+      "label": "Runde 1 – Noomi: «Kehrt um!» – beide: «Nein, mit dir wollen wir zurückkehren!»",
+      "ref": "RUT.1.8-RUT.1.10",
+      "role": "Runde 1"
+     },
+     {
+      "label": "Runde 2 – Noomi: «Kehrt um, meine Töchter!» – Orpa küsst sie zum Abschied, Rut hält sich an ihr fest",
+      "ref": "RUT.1.11-RUT.1.14",
+      "role": "Runde 2"
+     },
+     {
+      "label": "Runde 3 – Noomi: «Kehr um, deiner Schwägerin nach!» – Rut schwört",
+      "ref": "RUT.1.15-RUT.1.17",
+      "role": "Runde 3",
+      "child": "s3"
+     },
+     {
+      "label": "Noomi hört auf, auf sie einzureden",
+      "ref": "RUT.1.18",
+      "role": "Schluss"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Noomi",
+       "to": "Orpa und Rut",
+       "refs": [
+        "RUT.1.8-RUT.1.13"
+       ]
+      },
+      {
+       "who": "Orpa und Rut",
+       "to": "Noomi",
+       "refs": [
+        "RUT.1.10"
+       ]
+      },
+      {
+       "who": "Noomi",
+       "to": "Rut",
+       "refs": [
+        "RUT.1.15"
+       ]
+      },
+      {
+       "who": "Rut",
+       "to": "Noomi",
+       "refs": [
+        "RUT.1.16-RUT.1.17"
+       ]
+      }
+     ],
+     "pattern_break": [
+      {
+       "ref": "RUT.1.14",
+       "note": "Ab Runde 2 trennen sich die Antworten: Orpa geht, Rut bleibt."
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "series",
+    "subtype": "Treueschwur in Paaren «du → ich»",
+    "range": "RUT.1.16-RUT.1.17",
+    "elements": [
+     {
+      "label": "Abweisung: «Dräng mich nicht, dich zu verlassen!»",
+      "ref": "RUT.1.16",
+      "role": "Einleitung"
+     },
+     {
+      "label": "Wohin du gehst → dahin gehe ich",
+      "ref": "RUT.1.16",
+      "role": "du → ich"
+     },
+     {
+      "label": "Wo du übernachtest → da übernachte ich",
+      "ref": "RUT.1.16",
+      "role": "du → ich"
+     },
+     {
+      "label": "Dein Volk → ist mein Volk",
+      "ref": "RUT.1.16",
+      "role": "du → ich"
+     },
+     {
+      "label": "Dein Gott → ist mein Gott",
+      "ref": "RUT.1.16",
+      "role": "du → ich"
+     },
+     {
+      "label": "Wo du stirbst → da sterbe ich und will dort begraben werden",
+      "ref": "RUT.1.17",
+      "role": "du → ich"
+     },
+     {
+      "label": "Schwur bei JHWH: «So soll JHWH mir tun … nur der Tod wird mich und dich trennen!»",
+      "ref": "RUT.1.17",
+      "role": "Schwurformel"
+     }
+    ],
+    "features": {
+     "pattern_break": [
+      {
+       "ref": "RUT.1.17",
+       "note": "Die Reihe endet mit der Schwurformel «So soll JHWH mir tun …» als Pointe."
+      }
+     ],
+     "modality": [
+      {
+       "ref": "RUT.1.17",
+       "kind": "Schwur",
+       "note": "Selbstverfluchung, mit der sich Rut bindet; kein Wunsch, sondern Verpflichtung."
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   },
+   {
+    "id": "s4",
+    "pattern": "contrast",
+    "subtype": "nicht – sondern; vorher ↔ nachher",
+    "range": "RUT.1.20-RUT.1.21",
+    "elements": [
+     {
+      "label": "Nicht Noomi → sondern Mara",
+      "ref": "RUT.1.20",
+      "role": "Name: nicht – sondern"
+     },
+     {
+      "label": "Voll bin ich weggegangen → leer hat mich JHWH zurückgebracht",
+      "ref": "RUT.1.21",
+      "role": "vorher → nachher"
+     },
+     {
+      "label": "Begründung: Der Allmächtige hat es mir sehr bitter gemacht; JHWH hat gegen mich ausgesagt, der Allmächtige hat mir Böses angetan",
+      "ref": "RUT.1.20-RUT.1.21",
+      "role": "denn",
+      "links": [
+       "RUT.1.20",
+       "RUT.1.21"
+      ]
+     }
+    ],
+    "features": {
+     "wordplay": [
+      {
+       "ref": "RUT.1.20",
+       "note": "«Mara» hängt am Wort «bitter» («der Allmächtige hat es mir sehr bitter gemacht»); was «Noomi» bedeutet, sagt der Text nicht."
+      }
+     ]
+    },
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
-   "reference": "RUT.1.5",
-   "text_de": "Nach Elimelech sterben auch beide Söhne, und Noomi bleibt ohne Mann und Kinder zurück.",
-   "reason_de": "Trägt die Kernaussage (Kriterium 1) und ist der Tiefpunkt, den der Text betont: «ohne ihre beiden Kinder und ohne ihren Mann».",
-   "recognition_de": "Noomi steht allein da, ohne Mann und Söhne, nur mit den beiden moabitischen Schwiegertöchtern.",
+   "reference": "RUT.1.1-RUT.1.5",
+   "text_de": "Wegen einer Hungersnot zieht Elimelech mit Noomi und den Söhnen nach Moab; dort sterben Elimelech und beide Söhne, und Noomi bleibt ohne Mann und Kinder zurück.",
+   "reason_de": "Anfang und Tiefpunkt (Kriterien 1 und 3): die Stufen des Verlusts als ein Moment; der Text betont «ohne ihre beiden Kinder und ohne ihren Mann».",
+   "recognition_de": "Szene 1: Noomi allein in Moab, ohne Mann und Söhne, nur mit den Schwiegertöchtern Orpa und Rut.",
    "keywords": [
+    "Hungersnot",
     "ohne ihre beiden Kinder",
     "ohne ihren Mann"
    ]
   },
   {
-   "reference": "RUT.1.16-RUT.1.17",
-   "text_de": "Rut schwört, mit Noomi zu gehen, ihr Volk und ihren Gott zu teilen und sich nur durch den Tod von ihr trennen zu lassen.",
-   "reason_de": "Trägt die Kernaussage (Kriterium 1), Höhepunkt in wörtlicher Rede (Kriterium 2) und der bekannteste Satz des Buches (Kriterium 4).",
-   "recognition_de": "Rut steht auf dem Weg nach Juda vor Noomi und spricht ihr Treuewort, während Orpa zurückgeht.",
+   "reference": "RUT.1.14-RUT.1.17",
+   "text_de": "Noomi drängt ihre Schwiegertöchter umzukehren; Orpa küsst sie zum Abschied, Rut aber hält sich an ihr fest und schwört, mit Noomi zu gehen, ihr Volk und ihren Gott zu teilen und sich nur durch den Tod von ihr trennen zu lassen.",
+   "reason_de": "Trägt die Kernaussage (Kriterium 1), Höhepunkt der Wechselrede in wörtlicher Rede (Kriterium 2) und der bekannteste Satz des Buches (Kriterium 4); die drei Runden und alle Paare des Schwurs stehen in structure.",
+   "recognition_de": "Szene 2: Orpa geht zurück, Rut hält sich an Noomi fest und spricht ihren Schwur: wohin du gehst – dahin gehe ich; dein Volk – mein Volk; dein Gott – mein Gott; nur der Tod trennt.",
    "keywords": [
+    "Orpa küsste ihre Schwiegermutter",
     "Wohin du gehst",
-    "dahin gehe ich",
     "nur der Tod"
    ]
   },
   {
    "reference": "RUT.1.19-RUT.1.21",
-   "text_de": "In Betlehem fragen die Frauen «Ist das Noomi?», und sie antwortet, man solle sie Mara nennen, denn voll sei sie weggegangen und leer habe JHWH sie zurückgebracht.",
-   "reason_de": "Trägt die Kernaussage des Kapitels (Kriterium 1) und benennt mit «voll – leer» das Thema, das das Buch bis zum Schluss trägt (Kriterium 2).",
-   "recognition_de": "In Betlehem umringen die Frauen Noomi und fragen «Ist das Noomi?»; sie antwortet «Nennt mich Mara», Rut neben ihr.",
+   "text_de": "In Betlehem fragen die Frauen «Ist das Noomi?», und sie antwortet, man solle sie nicht Noomi, sondern Mara nennen, denn der Allmächtige habe es ihr bitter gemacht: Voll sei sie weggegangen, leer habe JHWH sie zurückgebracht.",
+   "reason_de": "Trägt die Kernaussage des Kapitels (Kriterium 1) und benennt mit «voll – leer» das Thema, das das Buch bis zum Schluss trägt (Kriterium 2); beide Gegenüberstellungen und ihre Begründung stehen in structure.",
+   "recognition_de": "Szene 3: In Betlehem fragen die Frauen «Ist das Noomi?»; Noomi antwortet «nicht Noomi – Mara» und «voll weggegangen – leer zurückgebracht»; Rut steht neben ihr.",
    "keywords": [
     "Ist das Noomi",
     "Nennt mich Mara",
@@ -51,9 +290,9 @@
   }
  ],
  "omitted_de": [
-  "Auszug wegen Hungersnot (1,1) – Vorgeschichte, im Tiefpunkt 1,5 enthalten",
-  "Orpas Abschied (1,14) – Gegenfigur, in Ruts Schwur mitgesagt",
-  "Ankunft zur Gerstenernte (1,22) – Übergang zu Kapitel 2"
+  "Zeitangabe und Namen (1,1–2) – Nebenangaben",
+  "Noomis ausgemalter Gedanke an neue Söhne (1,12b–13a) – Ausschmückung der Begründung in Runde 2",
+  "Ankunft zu Beginn der Gerstenernte (1,22) – Übergang zu Kapitel 2; dass Rut mitkommt, zeigt die Szene 1,19–21"
  ],
  "persons": [
   "FIG-NOOMI",
@@ -68,26 +307,30 @@
  "basis": [
   {
    "record": "CORE-RUT-001-001-005",
-   "fingerprint": "39dc5bdfcf891144"
+   "fingerprint": "203631c7faf9dd19"
   },
   {
    "record": "CORE-RUT-001-006-018",
-   "fingerprint": "66ea429a419c1751"
+   "fingerprint": "1b998859386ba615"
   },
   {
    "record": "CORE-RUT-001-019-022",
-   "fingerprint": "b4be9159453dced8"
+   "fingerprint": "d4027e75b206f9de"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Ohne Befund.",
-  "changes_de": []
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Kapitel übernimmt die Struktur der drei Abschnitte (Ablauf, Wechselrede mit Schwur, Gegenüberstellung); Sprecherzuordnung 1,15 und zwei Labels berichtigt.",
+  "changes_de": [
+   "subtype «Weg weg – …» sprachlich berichtigt («Wegzug – Scheideweg – Ankunft»).",
+   "s2 speakers: 1,15 spricht Noomi nur zu Rut (vorher «zu Orpa und Rut» bis 1,15).",
+   "s3 Schwurformel und s4 Begründung wie im Abschnitt vervollständigt."
+  ]
  }
 }

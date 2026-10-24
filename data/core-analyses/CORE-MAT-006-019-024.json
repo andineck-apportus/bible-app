@@ -6,28 +6,165 @@
  "level": "section",
  "reference": "MAT.6.19-MAT.6.24",
  "target": "TU-MAT-006-019-024",
- "core_de": "Die Jünger sollen Schätze im Himmel sammeln statt auf der Erde, denn wo der Schatz ist, ist das Herz; niemand kann Gott und dem Mammon dienen.",
+ "core_de": "Drei Bildworte stellen je zwei Möglichkeiten gegenüber: Schätze auf der Erde oder im Himmel – denn wo der Schatz ist, ist das Herz; ein klares oder ein schlechtes Auge, das den ganzen Leib hell oder finster macht; und zwei Herren, von denen man nur einem dienen kann: Gott oder dem Mammon.",
  "mode": "instruction",
  "voice": {
   "speaker": "FIG-JESUS",
   "addressee": "FIG-GRUPPE-JUENGER"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "series",
+    "subtype": "drei Bildworte mit je zwei Möglichkeiten",
+    "range": "MAT.6.19-MAT.6.24",
+    "elements": [
+     {
+      "label": "Schätze: auf der Erde ↔ im Himmel",
+      "ref": "MAT.6.19-MAT.6.21",
+      "role": "Bildwort 1",
+      "child": "s2"
+     },
+     {
+      "label": "Auge: klar ↔ schlecht",
+      "ref": "MAT.6.22-MAT.6.23",
+      "role": "Bildwort 2",
+      "child": "s3"
+     },
+     {
+      "label": "Herren: Gott ↔ Mammon",
+      "ref": "MAT.6.24",
+      "role": "Bildwort 3",
+      "child": "s4"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Jesus",
+       "to": "die Jünger (ihr/du); die Menschenmengen hören zu ([[MAT.5.1]], [[MAT.7.28]])"
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "Dass die drei Bildworte ein gemeinsames Thema haben (ungeteilte Ausrichtung), ist Auslegung; der Text reiht sie ohne Verbindungswort."
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "nicht – sondern – denn",
+    "range": "MAT.6.19-MAT.6.21",
+    "elements": [
+     {
+      "label": "Sammelt euch keine Schätze auf der Erde, wo Motte und Frass zerstören und Diebe einbrechen und stehlen",
+      "ref": "MAT.6.19",
+      "role": "nicht"
+     },
+     {
+      "label": "Sammelt euch Schätze im Himmel, wo weder Motte noch Frass zerstören und keine Diebe einbrechen",
+      "ref": "MAT.6.20",
+      "role": "sondern"
+     },
+     {
+      "label": "Denn wo dein Schatz ist, dort wird auch dein Herz sein",
+      "ref": "MAT.6.21",
+      "role": "Begründung (denn)"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "condition",
+    "subtype": "Bildsatz mit zwei Zweigen und Steigerung",
+    "range": "MAT.6.22-MAT.6.23",
+    "elements": [
+     {
+      "label": "Bildsatz: Die Lampe des Leibes ist das Auge",
+      "ref": "MAT.6.22",
+      "role": "Grundsatz"
+     },
+     {
+      "label": "Wenn dein Auge klar ist → wird dein ganzer Leib hell sein",
+      "ref": "MAT.6.22",
+      "role": "Bedingung → Folge"
+     },
+     {
+      "label": "Wenn dein Auge schlecht ist → wird dein ganzer Leib finster sein",
+      "ref": "MAT.6.23",
+      "role": "Bedingung → Folge"
+     },
+     {
+      "label": "Wenn das Licht in dir Finsternis ist → wie gross ist dann die Finsternis!",
+      "ref": "MAT.6.23",
+      "role": "Steigerung (Ausruf)"
+     }
+    ],
+    "visual": "switch",
+    "basis": "text"
+   },
+   {
+    "id": "s4",
+    "pattern": "cause",
+    "subtype": "Grundsatz – denn – Folgerung",
+    "range": "MAT.6.24",
+    "elements": [
+     {
+      "label": "Niemand kann zwei Herren dienen",
+      "ref": "MAT.6.24",
+      "role": "Grundsatz"
+     },
+     {
+      "label": "denn entweder wird er den einen hassen und den anderen lieben, oder er wird dem einen anhängen und den anderen verachten",
+      "ref": "MAT.6.24",
+      "role": "Begründung (denn)"
+     },
+     {
+      "label": "Ihr könnt nicht Gott dienen und dem Mammon",
+      "ref": "MAT.6.24",
+      "role": "Folgerung"
+     }
+    ],
+    "visual": "arrows",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
    "reference": "MAT.6.19-MAT.6.21",
-   "text_de": "Sammelt keine Schätze auf der Erde, wo Motte, Frass und Diebe zerstören, sondern im Himmel; denn wo dein Schatz ist, dort ist dein Herz.",
-   "reason_de": "Kern und Erkennungsmoment (Kriterium 1 und 4); der Satz vom Herzen ist die Pointe (Kriterium 2).",
-   "recognition_de": "Auf der Erde wird eine Truhe von Motten zerfressen und von Dieben aufgebrochen; ein Jünger blickt auf einen Schatz im Himmel.",
+   "text_de": "Sammelt keine Schätze auf der Erde, wo Motte, Frass und Diebe sie nehmen, sondern im Himmel, wo nichts sie zerstört; denn wo dein Schatz ist, dort ist dein Herz.",
+   "reason_de": "Erstes Bildwort mit beiden Seiten und der Begründung als Pointe (Kriterium 1 und 4).",
+   "recognition_de": "Erstes Feld, geteilt: auf der Erde eine Truhe, von Motten zerfressen und von Dieben aufgebrochen; im Himmel ein unversehrter Schatz; dazwischen das Herz beim Schatz.",
    "keywords": [
     "Schätze im Himmel",
     "dort wird auch dein Herz sein"
    ]
   },
   {
+   "reference": "MAT.6.22-MAT.6.23",
+   "text_de": "Das Auge ist die Lampe des Leibes: Ist es klar, wird der ganze Leib hell; ist es schlecht, wird er finster – und wie gross ist dann die Finsternis!",
+   "reason_de": "Zweites Bildwort der Reihe mit beiden Zweigen; gehört zur Gestalt des Abschnitts (Regel 1 der Strukturtreue).",
+   "recognition_de": "Zweites Feld, geteilt: ein klares Auge als Lampe, der Leib hell; ein schlechtes Auge, der Leib finster.",
+   "keywords": [
+    "Die Lampe des Leibes ist das Auge",
+    "hell",
+    "finster"
+   ]
+  },
+  {
    "reference": "MAT.6.24",
-   "text_de": "Niemand kann zwei Herren dienen; ihr könnt nicht Gott dienen und dem Mammon.",
-   "reason_de": "Schlusssatz des Abschnitts, der die Entscheidung zuspitzt (Kriterium 2 und 3).",
-   "recognition_de": "Ein Mensch steht zwischen zwei Herren und kann nur einem zugewandt sein.",
+   "text_de": "Niemand kann zwei Herren dienen, denn er wird den einen hassen und den anderen lieben; ihr könnt nicht Gott dienen und dem Mammon.",
+   "reason_de": "Drittes Bildwort und Schluss des Abschnitts, das die Entscheidung zuspitzt (Kriterium 2 und 3).",
+   "recognition_de": "Drittes Feld, geteilt: ein Mensch zwischen zwei Herren, Gott und Mammon, kann nur einem zugewandt sein.",
    "keywords": [
     "zwei Herren dienen",
     "Mammon"
@@ -35,7 +172,8 @@
   }
  ],
  "omitted_de": [
-  "Das Auge als Lampe des Leibes (6,22–23) – eigenes Bildwort, das den Gedanken des ungeteilten Herzens stützt, aber nicht den Kern bildet"
+  "Einzelheiten der Zerstörung (Motte, Frass, Diebe, 6,19–20) im Bild nur als ein Zeichen – Ausschmückung der Erdseite; im Wortlaut der Struktur erhalten",
+  "Doppelte Ausformung der Begründung bei den zwei Herren (hassen/lieben, anhängen/verachten) im Bild – Wiederholung derselben Aussage"
  ],
  "persons": [
   "FIG-JESUS",
@@ -49,15 +187,17 @@
    "fingerprint": "69cf0d612022a3a6"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Gegen den Text geprüft; Kernaussage, Momente, Textart und Sprecher stimmen, keine Änderung.",
-  "changes_de": []
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Reihe von drei Bildworten mit je eigener Binnenstruktur (nicht – sondern – denn; Weiche mit Steigerung; Grundsatz – denn – Folgerung) richtig; gemeinsames Thema korrekt als Auslegung gekennzeichnet.",
+  "changes_de": [
+   "Label der Begründung in 6,24 auf das Futur des Textes («wird … hassen») zurückgeführt"
+  ]
  }
 }

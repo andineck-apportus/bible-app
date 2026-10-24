@@ -6,18 +6,179 @@
  "level": "section",
  "reference": "TIT.2.1-TIT.2.10",
  "target": "TU-TIT-002-001-010",
- "core_de": "Titus soll reden, was der gesunden Lehre entspricht, und jede Gruppe – Ältere, Jüngere, Sklaven – zu einem besonnenen Leben anleiten, damit ihr Verhalten die Lehre Gottes schmückt.",
+ "core_de": "Titus soll reden, was der gesunden Lehre entspricht: Er weist ältere Männer, ältere Frauen (die die jungen Frauen anleiten), jüngere Männer und Sklaven an und ist selbst Vorbild guter Werke, damit das Wort Gottes nicht in Verruf kommt, der Gegner beschämt wird und die Lehre Gottes geschmückt wird.",
  "mode": "instruction",
  "voice": {
   "speaker": "FIG-PAULUS",
   "addressee": "FIG-TITUS"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "form",
+    "form_type": "household",
+    "subtype": "Gruppentafel",
+    "range": "TIT.2.1-TIT.2.10",
+    "elements": [
+     {
+      "label": "Überschrift: Du aber rede, was der gesunden Lehre entspricht",
+      "ref": "TIT.2.1",
+      "role": "Überschrift",
+      "links": [
+       "TIT.1.10-TIT.1.16"
+      ]
+     },
+     {
+      "label": "Gruppen mit Pflicht und Zweck",
+      "ref": "TIT.2.2-TIT.2.10",
+      "role": "Gruppen",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Paulus",
+       "to": "Titus"
+      },
+      {
+       "who": "ältere Frauen",
+       "to": "junge Frauen",
+       "ref": "TIT.2.4",
+       "note": "Die Weisung an die jungen Frauen geht nicht von Titus aus, sondern ist Inhalt der Anleitung durch die älteren Frauen."
+      }
+     ],
+     "modality": [
+      {
+       "note": "Alles Weisung an Titus («rede», «ermahne», «zeige dich»), nicht Beschreibung der Gemeinde."
+      }
+     ],
+     "leitwort": [
+      {
+       "note": "«damit» (2,4; 2,5; 2,8; 2,10) nennt den Zweck: das Leben macht die Lehre glaubwürdig; «besonnen» (2,2; 2,5; 2,6)"
+      }
+     ],
+     "pattern_break": [
+      {
+       "note": "Gegenpflichten fehlen (keine Weisung an Herren oder Ehemänner); die Begründung «denn» folgt erst in [[TIT.2.11-TIT.2.14]]."
+      }
+     ],
+     "genre": [
+      {
+       "note": "Haustafel (Forschungsbegriff)"
+      }
+     ]
+    },
+    "visual": "outline",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "matrix",
+    "subtype": "Gruppen × Pflicht und Zweck",
+    "range": "TIT.2.2-TIT.2.10",
+    "elements": [
+     {
+      "label": "Ältere Männer: nüchtern, würdig, besonnen, gesund im Glauben, in der Liebe, in der Ausdauer",
+      "ref": "TIT.2.2",
+      "role": "Pflicht",
+      "row": "ältere Männer",
+      "col": "Pflicht"
+     },
+     {
+      "label": "kein Zweck genannt",
+      "role": "Zweck",
+      "row": "ältere Männer",
+      "col": "Zweck («damit»)",
+      "empty": true
+     },
+     {
+      "label": "Ältere Frauen: ehrwürdig, nicht verleumderisch, nicht dem Wein verfallen, Lehrerinnen des Guten",
+      "ref": "TIT.2.3",
+      "role": "Pflicht",
+      "row": "ältere Frauen",
+      "col": "Pflicht"
+     },
+     {
+      "label": "damit sie die jungen Frauen anleiten",
+      "ref": "TIT.2.4",
+      "role": "Zweck",
+      "row": "ältere Frauen",
+      "col": "Zweck («damit»)"
+     },
+     {
+      "label": "Junge Frauen, von den älteren angeleitet: ihre Männer und Kinder lieben, besonnen, rein, häuslich tätig, gütig, ihren eigenen Männern untergeordnet",
+      "ref": "TIT.2.4-TIT.2.5",
+      "role": "Pflicht",
+      "row": "junge Frauen (von den älteren Frauen angeleitet)",
+      "col": "Pflicht",
+      "links": [
+       "TIT.2.4"
+      ]
+     },
+     {
+      "label": "damit das Wort Gottes nicht in Verruf kommt",
+      "ref": "TIT.2.5",
+      "role": "Zweck",
+      "row": "junge Frauen (von den älteren Frauen angeleitet)",
+      "col": "Zweck («damit»)"
+     },
+     {
+      "label": "Jüngere Männer: besonnen sein in allem",
+      "ref": "TIT.2.6-TIT.2.7",
+      "role": "Pflicht",
+      "row": "jüngere Männer",
+      "col": "Pflicht"
+     },
+     {
+      "label": "kein Zweck genannt",
+      "role": "Zweck",
+      "row": "jüngere Männer",
+      "col": "Zweck («damit»)",
+      "empty": true
+     },
+     {
+      "label": "Titus selbst: Vorbild guter Werke, unverfälscht und würdig in der Lehre, gesunde, unanfechtbare Rede",
+      "ref": "TIT.2.7-TIT.2.8",
+      "role": "Pflicht",
+      "row": "Titus selbst",
+      "col": "Pflicht"
+     },
+     {
+      "label": "damit der Gegner beschämt wird, weil er nichts Schlechtes über uns zu sagen hat",
+      "ref": "TIT.2.8",
+      "role": "Zweck",
+      "row": "Titus selbst",
+      "col": "Zweck («damit»)"
+     },
+     {
+      "label": "Sklaven: sich den Herren in allem unterordnen, gefällig sein, nicht widersprechen, nichts unterschlagen, volle Treue beweisen",
+      "ref": "TIT.2.9-TIT.2.10",
+      "role": "Pflicht",
+      "row": "Sklaven",
+      "col": "Pflicht"
+     },
+     {
+      "label": "damit sie die Lehre Gottes, unseres Retters, in allem schmücken",
+      "ref": "TIT.2.10",
+      "role": "Zweck",
+      "row": "Sklaven",
+      "col": "Zweck («damit»)"
+     }
+    ],
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
-   "reference": "TIT.2.1-TIT.2.2",
-   "text_de": "Titus soll reden, was der gesunden Lehre entspricht; die Anweisungen beginnen bei den älteren Männern, die nüchtern, besonnen und gesund im Glauben sein sollen.",
-   "reason_de": "Leitsatz des Kapitels und Beginn der Aufzählung der Gruppen; der Gegensatz «Du aber» zu den Verführern ist vom Text betont (Kriterien 1–3).",
-   "recognition_de": "Paulus an Titus: Titus soll vor der Gemeinde reden, in der ältere Männer, ältere und junge Frauen, junge Männer und Sklaven stehen (verlangte Handlung).",
+   "reference": "TIT.2.1",
+   "text_de": "Titus soll reden, was der gesunden Lehre entspricht – im Gegensatz zu den Verführern.",
+   "reason_de": "Überschrift der Gruppentafel; das «Du aber» setzt Titus gegen die Verführer von Kapitel 1 (Kriterien 1–2).",
+   "recognition_de": "Paulus an Titus: Kopfzeile über dem Raster – Titus soll vor der Gemeinde reden (verlangte Handlung).",
    "keywords": [
     "Du aber rede",
     "gesunden Lehre"
@@ -25,30 +186,23 @@
    "mode": "instruction"
   },
   {
-   "reference": "TIT.2.7",
-   "text_de": "Titus selbst soll sich in allem als Vorbild guter Werke zeigen.",
-   "reason_de": "Der Auftraggeber nimmt Titus selbst in die Pflicht; wiederholt das Leitwort «gute Werke» (Kriterien 1–2).",
-   "recognition_de": "Paulus an Titus: Titus soll selbst Vorbild sein – er hilft mit, die Jüngeren schauen ihm zu (verlangte Handlung; Deutung für das Bild: Mithelfen für «gute Werke»).",
+   "reference": "TIT.2.2-TIT.2.10",
+   "text_de": "Jede Gruppe erhält ihre Weisung: ältere Männer, ältere Frauen, die die jungen Frauen anleiten, jüngere Männer, Titus selbst als Vorbild guter Werke und Sklaven; nach «damit sie die jungen Frauen anleiten» nennt «damit» dreimal die Wirkung nach aussen: dass das Wort Gottes nicht in Verruf kommt, der Gegner beschämt wird und die Lehre Gottes geschmückt wird.",
+   "reason_de": "Die Gruppentafel ist die tragende Reihe des Abschnitts; der wiederholte Zweck «damit» zeigt, worauf alles zielt (Kriterien 1–2). Als ein Moment mit allen Gliedern.",
+   "recognition_de": "Paulus an Titus: Raster mit sechs Zeilen (ältere Männer, ältere Frauen, junge Frauen, jüngere Männer, Titus, Sklaven) und zwei Spalten «Pflicht» und «damit»; bei älteren und jüngeren Männern bleibt das Feld «damit» leer (verlangte Handlungen; Deutung für das Bild: Glanz für «schmücken», Mithelfen für «gute Werke»).",
    "keywords": [
-    "Vorbild guter Werke"
-   ],
-   "mode": "instruction"
-  },
-  {
-   "reference": "TIT.2.10",
-   "text_de": "Sklaven sollen treu sein, damit sie die Lehre Gottes, unseres Retters, in allem schmücken.",
-   "reason_de": "Schluss der Aufzählung; das wiederholte «damit» (2,5; 2,8; 2,10) zeigt den Zweck: das Leben macht die Lehre glaubwürdig (Kriterien 1–2).",
-   "recognition_de": "Paulus an Titus, was Sklaven tun sollen: ein Sklave arbeitet treu, und von ihm geht ein Glanz auf die Lehre Gottes aus (Deutung für das Bild: Glanz für «schmücken»).",
-   "keywords": [
-    "Lehre Gottes",
+    "Ältere Männer",
+    "Ältere Frauen",
+    "jüngeren Männer",
+    "Vorbild guter Werke",
+    "Sklaven",
     "schmücken"
    ],
    "mode": "instruction"
   }
  ],
  "omitted_de": [
-  "Einzelne Tugenden der älteren und jüngeren Frauen (Tit 2,3–5) – Teil derselben Aufzählung, im ersten Moment mitgemeint",
-  "Der beschämte Gegner (Tit 2,8) – Wiederholung des Zwecks «damit»"
+  "Übergangswort «ebenso» (Tit 2,3; 2,6) – verbindet die Gruppen, keine eigene Aussage"
  ],
  "persons": [
   "FIG-PAULUS",
@@ -64,19 +218,19 @@
    "fingerprint": "2dd2aacebb39ac93"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Auswahl stimmt; ein Satz klang nach Bericht, Aufträge waren als geschehen dargestellt.",
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Haustafel (form household) mit Raster Gruppen × Pflicht/Zweck richtig; leere Zweckfelder bei älteren und jüngeren Männern korrekt leer; fehlende Gegenpflichten und nachgestellte Begründung als Musterbruch vermerkt.",
   "changes_de": [
-   "2,1–2 text_de: «beginnt bei den älteren Männern» → «die Anweisungen beginnen bei …», weil die Aufzählung von Paulus stammt",
-   "2,1–2 Stichwörter: «Ältere Männer» durch «Du aber rede» ersetzt (tragendes Wort, kennzeichnet auch auf Buchebene)",
-   "2,1–2, 2,7, 2,10: Erkennungsmomente als verlangte Handlung; Mithelfen und Glanz als «Deutung für das Bild» gekennzeichnet"
+   "Zuordnung wer zu wem: Die jungen Frauen werden nicht von Titus angeredet, sondern von den älteren Frauen angeleitet (2,4). Zeile, Label und Merkmal speakers entsprechend angepasst.",
+   "core_de: verallgemeinerndes «zu einem besonnenen Leben anleiten» (nicht bei Sklaven und Titus) und «damit ihr Verhalten die Lehre schmückt» (nur bei Sklaven) ersetzt durch die drei Zwecke des Textes.",
+   "Moment 2: «dreimal nennt «damit» den Zweck» widersprach dem Leitwort (viermal «damit»); präzisiert (erstes «damit» = Anleitung, dann dreimal Wirkung nach aussen)."
   ]
  }
 }

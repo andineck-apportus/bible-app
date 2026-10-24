@@ -11,11 +11,161 @@
  "voice": {
   "speaker": "narrator"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Mitte (B) der Schachtelung [[MRK.5.21-MRK.5.43]]",
+    "range": "MRK.5.25-MRK.5.34",
+    "elements": [
+     {
+      "label": "Eine Frau leidet seit zwölf Jahren an Blutfluss; die vielen Ärzte haben ihr nicht geholfen, es ist schlimmer geworden.",
+      "ref": "MRK.5.25-MRK.5.26",
+      "role": "Not"
+     },
+     {
+      "label": "Was die Frau sich sagt",
+      "child": "s2"
+     },
+     {
+      "label": "Sie kommt in der Menge von hinten heran und berührt seinen Mantel.",
+      "ref": "MRK.5.27",
+      "role": "Handlung"
+     },
+     {
+      "label": "Sogleich merkt sie am Körper, dass sie geheilt ist.",
+      "ref": "MRK.5.29",
+      "role": "Wendepunkt"
+     },
+     {
+      "label": "Jesus merkt, dass Kraft von ihm ausgegangen ist, und fragt: «Wer hat meine Kleider berührt?»",
+      "ref": "MRK.5.30",
+      "role": "Frage"
+     },
+     {
+      "label": "Die Jünger wenden ein: «Du siehst die Menge, die dich umdrängt»; Jesus blickt umher.",
+      "ref": "MRK.5.31-MRK.5.32",
+      "role": "Einwand"
+     },
+     {
+      "label": "Die Frau fällt zitternd vor ihm nieder und sagt ihm die ganze Wahrheit.",
+      "ref": "MRK.5.33",
+      "role": "Bekenntnis"
+     },
+     {
+      "label": "Was Jesus ihr sagt",
+      "child": "s3"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Erzähler",
+       "to": "Leser"
+      },
+      {
+       "who": "die Frau",
+       "to": "sich selbst",
+       "ref": "MRK.5.28"
+      },
+      {
+       "who": "Jesus",
+       "to": "die Menge",
+       "ref": "MRK.5.30"
+      },
+      {
+       "who": "die Jünger",
+       "to": "Jesus",
+       "ref": "MRK.5.31"
+      },
+      {
+       "who": "Jesus",
+       "to": "die Frau («Tochter»)",
+       "ref": "MRK.5.34"
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "MAT.9.20-MAT.9.22",
+       "kind": "Parallelfassung (nicht angleichen)"
+      },
+      {
+       "ref": "LUK.8.43-LUK.8.48",
+       "kind": "Parallelfassung (nicht angleichen)"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "condition",
+    "subtype": "offene Hoffnung (innere Rede)",
+    "range": "MRK.5.28",
+    "elements": [
+     {
+      "label": "Bedingung: «Wenn ich auch nur seine Kleider berühre …»",
+      "ref": "MRK.5.28",
+      "role": "Bedingung"
+     },
+     {
+      "label": "Folge: «… werde ich gerettet.»",
+      "ref": "MRK.5.28",
+      "role": "Folge",
+      "links": [
+       "MRK.5.34"
+      ]
+     }
+    ],
+    "features": {
+     "modality": [
+      {
+       "ref": "MRK.5.28",
+       "kind": "Gedanke der Frau («denn sie sagte sich»), keine Zusage"
+      }
+     ]
+    },
+    "visual": "switch",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "cause",
+    "subtype": "Begründung und Zuspruch",
+    "range": "MRK.5.34",
+    "elements": [
+     {
+      "label": "Ursache: ihr Glaube («Tochter, dein Glaube …»)",
+      "ref": "MRK.5.34",
+      "role": "Ursache"
+     },
+     {
+      "label": "Wirkung: Er hat sie gerettet.",
+      "ref": "MRK.5.34",
+      "role": "Wirkung",
+      "links": [
+       "MRK.5.28"
+      ]
+     },
+     {
+      "label": "Zuspruch: «Geh in Frieden und sei geheilt von deiner Plage!»",
+      "ref": "MRK.5.34",
+      "role": "Zuspruch"
+     }
+    ],
+    "visual": "arrows",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
    "reference": "MRK.5.27-MRK.5.29",
-   "text_de": "Die Frau kommt in der Menge von hinten heran, berührt seinen Mantel und merkt sogleich, dass sie geheilt ist.",
-   "reason_de": "Erkennungsmoment der Stelle und Wendepunkt: die heimliche Berührung im Vertrauen («wenn ich auch nur seine Kleider berühre») und die sofortige Heilung.",
+   "text_de": "Die Frau sagt sich: «Wenn ich auch nur seine Kleider berühre, werde ich gerettet»; sie kommt in der Menge von hinten heran, berührt seinen Mantel und merkt sogleich, dass sie geheilt ist.",
+   "reason_de": "Erkennungsmoment der Stelle und Wendepunkt: die heimliche Berührung, begründet mit ihrem Gedanken (Bedingung → Folge, 5.28), und die sofortige Heilung.",
    "recognition_de": "Eine Frau streckt sich gebückt durch das Gedränge und berührt von hinten Jesu Mantel.",
    "keywords": [
     "von hinten",
@@ -24,9 +174,9 @@
   },
   {
    "reference": "MRK.5.30-MRK.5.32",
-   "text_de": "Jesus merkt, dass Kraft von ihm ausgegangen ist, wendet sich um und fragt: «Wer hat meine Kleider berührt?»",
+   "text_de": "Jesus merkt, dass Kraft von ihm ausgegangen ist, wendet sich um und fragt: «Wer hat meine Kleider berührt?»; die Jünger halten ihm die drängende Menge entgegen, er aber blickt umher.",
    "reason_de": "Vom Text betont (Frage, Einwand der Jünger, Umherblicken): die Heilung bleibt nicht heimlich, Jesus sucht die Begegnung.",
-   "recognition_de": "Jesus bleibt stehen und blickt sich in der dichten Menge um, die Jünger zucken ratlos mit den Schultern.",
+   "recognition_de": "Jesus bleibt stehen und blickt sich in der dichten Menge um, die Jünger weisen auf die drängende Menge.",
    "keywords": [
     "Wer hat meine Kleider berührt"
    ]
@@ -34,7 +184,7 @@
   {
    "reference": "MRK.5.33-MRK.5.34",
    "text_de": "Die Frau fällt zitternd vor ihm nieder und sagt die ganze Wahrheit; Jesus sagt: «Tochter, dein Glaube hat dich gerettet; geh in Frieden.»",
-   "reason_de": "Höhepunkt und Kernaussage in wörtlicher Rede: Jesus nennt als Grund der Rettung ihren Glauben und spricht sie mit «Tochter» an.",
+   "reason_de": "Höhepunkt und Kernaussage in wörtlicher Rede: Jesus nennt als Grund der Rettung ihren Glauben (Ursache → Wirkung) und spricht sie mit «Tochter» an; «gerettet» nimmt das Wort aus ihrem Gedanken (5.28) auf.",
    "recognition_de": "Die Frau kniet zitternd vor Jesus, der sich ihr zuwendet und zu ihr spricht.",
    "keywords": [
     "Tochter",
@@ -44,9 +194,9 @@
   }
  ],
  "omitted_de": [
-  "Zwölf Jahre Krankheit (5.25) – Zahl; Deutung: Bezug zum Alter des Mädchens (5.42) gehört in «Hintergrund damals»",
-  "Viele Ärzte und verlorenes Vermögen (5.26) – Ausmalung der Not, nicht tragend",
-  "Einwand der Jünger im Einzelnen (5.31) – Nebenfiguren; im zweiten Moment enthalten"
+  "Einzelheiten der Krankengeschichte (Hab und Gut aufgewendet, 5.26) – Ausmalung der Not; im Glied «Not» knapp zusammengefasst",
+  "«Die Quelle ihres Blutes versiegte» (5.29) – Einzelheit der Heilung; im Bild nur als Heilung erkennbar",
+  "Zwölf Jahre (5.25) – als Zahl nicht im Bild; als Klammer zum Alter des Mädchens (5.42) in der Struktur des Kapitels (leitwort) erfasst; was die Entsprechung bedeutet, gehört als Deutung in «Hintergrund damals»"
  ],
  "persons": [
   "FIG-JESUS",
@@ -62,19 +212,17 @@
    "fingerprint": "9c814635a3816ef9"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Momente sind belegt; eine Markus-fremde Einzelheit, eine ungekennzeichnete Deutung und eine Übertreibung im Kernsatz wurden korrigiert.",
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Mitte der Schachtelung mit innerer Rede (offene Hoffnung, ein Zweig) und Ursache → Wirkung im Wort Jesu richtig; «gerettet» verbindet 5,28 und 5,34; Sprecher vollständig.",
   "changes_de": [
-   "Moment 1 recognition_de: «Saum» gestrichen – steht nur bei Mt/Lk, Mk 5.27 sagt «Mantel»",
-   "Moment 3 reason_de: Deutung (Berührung gegen Glaube, «angenommen») durch textnahe Begründung ersetzt",
-   "core_de: «holt sie hervor» ersetzt durch «sucht sie in der Menge, sie bekennt ihm alles» (5.32–33)"
+   "Erkennungsmoment 2: erfundene Geste «zucken ratlos mit den Schultern» durch das ersetzt, was der Text sagt (die Jünger weisen auf die drängende Menge, 5,31)."
   ]
  }
 }

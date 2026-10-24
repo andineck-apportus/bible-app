@@ -11,6 +11,180 @@
  "voice": {
   "speaker": "narrator"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Begegnung auf dem Feld",
+    "range": "RUT.2.4-RUT.2.17",
+    "elements": [
+     {
+      "label": "Boas kommt aufs Feld und fragt nach der jungen Frau: Es ist die Moabiterin, die mit Noomi zurückgekommen ist",
+      "ref": "RUT.2.4-RUT.2.7",
+      "role": "Anlass"
+     },
+     {
+      "label": "Boas zu Rut: «Geh auf kein anderes Feld, halte dich zu meinen Arbeiterinnen; ich habe den Knechten geboten, dich nicht anzurühren; trink, was sie schöpfen»",
+      "ref": "RUT.2.8-RUT.2.9",
+      "role": "Schutz"
+     },
+     {
+      "label": "Ruts Frage und Boas' Antwort",
+      "ref": "RUT.2.10-RUT.2.12",
+      "role": "Mitte",
+      "child": "s2"
+     },
+     {
+      "label": "Rut: «Möge ich Gunst finden in deinen Augen, mein Herr! Denn du hast mich getröstet»",
+      "ref": "RUT.2.13",
+      "role": "Antwort"
+     },
+     {
+      "label": "Beim Essen reicht Boas ihr geröstetes Korn; sie wird satt und lässt übrig",
+      "ref": "RUT.2.14",
+      "role": "Fülle"
+     },
+     {
+      "label": "Boas gebietet den Knechten: Sie darf auch zwischen den Garben auflesen; zieht eigens etwas aus den Bündeln für sie heraus und lasst es liegen",
+      "ref": "RUT.2.15-RUT.2.16",
+      "role": "Fülle"
+     },
+     {
+      "label": "Am Abend hat sie etwa ein Efa Gerste",
+      "ref": "RUT.2.17",
+      "role": "Ertrag"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Boas",
+       "to": "Schnitter und Vorarbeiter",
+       "refs": [
+        "RUT.2.4-RUT.2.5"
+       ]
+      },
+      {
+       "who": "Vorarbeiter",
+       "to": "Boas",
+       "refs": [
+        "RUT.2.6-RUT.2.7"
+       ]
+      },
+      {
+       "who": "Boas",
+       "to": "Rut",
+       "refs": [
+        "RUT.2.8-RUT.2.9",
+        "RUT.2.11-RUT.2.12",
+        "RUT.2.14"
+       ]
+      },
+      {
+       "who": "Rut",
+       "to": "Boas",
+       "refs": [
+        "RUT.2.10",
+        "RUT.2.13"
+       ]
+      },
+      {
+       "who": "Boas",
+       "to": "Knechte",
+       "refs": [
+        "RUT.2.15-RUT.2.16"
+       ]
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "Gunst",
+       "refs": [
+        "RUT.2.10",
+        "RUT.2.13"
+       ],
+       "role": "verklammernd"
+      },
+      {
+       "word": "auflesen",
+       "refs": [
+        "RUT.2.7",
+        "RUT.2.15",
+        "RUT.2.16",
+        "RUT.2.17"
+       ],
+       "role": "Motiv"
+      }
+     ],
+     "numbers": [
+      {
+       "ref": "RUT.2.17",
+       "note": "«etwa ein Efa Gerste»; nicht umrechnen"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "cause",
+    "subtype": "Frage → Grund → Segenswunsch",
+    "range": "RUT.2.10-RUT.2.12",
+    "elements": [
+     {
+      "label": "Rut: «Warum beachtest du mich, wo ich doch eine Fremde bin?»",
+      "ref": "RUT.2.10",
+      "role": "Frage"
+     },
+     {
+      "label": "Grund: alles, was du an deiner Schwiegermutter getan hast nach dem Tod deines Mannes",
+      "ref": "RUT.2.11",
+      "role": "Ursache"
+     },
+     {
+      "label": "Grund: Du hast Vater, Mutter und das Land deiner Herkunft verlassen und bist zu einem Volk gegangen, das du nicht kanntest",
+      "ref": "RUT.2.11",
+      "role": "Ursache"
+     },
+     {
+      "label": "Wunsch: JHWH vergelte dein Tun; dein Lohn sei voll von JHWH, unter dessen Flügeln du Zuflucht suchst",
+      "ref": "RUT.2.12",
+      "role": "Folge (Wunsch)"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Rut",
+       "to": "Boas",
+       "refs": [
+        "RUT.2.10"
+       ]
+      },
+      {
+       "who": "Boas",
+       "to": "Rut",
+       "refs": [
+        "RUT.2.11-RUT.2.12"
+       ]
+      }
+     ],
+     "modality": [
+      {
+       "ref": "RUT.2.12",
+       "kind": "Segenswunsch",
+       "note": "Wunsch an JHWH, keine Zusage."
+      }
+     ]
+    },
+    "visual": "arrows",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
    "reference": "RUT.2.8-RUT.2.9",
@@ -25,9 +199,9 @@
   },
   {
    "reference": "RUT.2.10-RUT.2.12",
-   "text_de": "Rut fällt vor Boas nieder und fragt, warum er sie, eine Fremde, beachte; Boas antwortet mit ihrer Treue zu Noomi und wünscht ihr Lohn von JHWH, unter dessen Flügeln sie Zuflucht sucht.",
-   "reason_de": "Trägt die Kernaussage (Kriterium 1) und ist der Höhepunkt in wörtlicher Rede (Kriterium 2): Ruts Treue wird erkannt und vor Gott gesegnet.",
-   "recognition_de": "Rut liegt mit dem Gesicht zur Erde vor Boas auf dem Feld, Boas spricht zu ihr.",
+   "text_de": "Rut fällt vor Boas nieder und fragt, warum er sie, eine Fremde, beachte; Boas nennt als Grund, was sie an ihrer Schwiegermutter getan hat und dass sie Eltern und Heimat verlassen hat, und wünscht ihr Lohn von JHWH, unter dessen Flügeln sie Zuflucht sucht.",
+   "reason_de": "Trägt die Kernaussage (Kriterium 1) und ist der Höhepunkt in wörtlicher Rede (Kriterium 2): Ruts Treue wird erkannt und vor Gott gesegnet. Frage, beide Gründe und Segenswunsch stehen als Kette in structure.",
+   "recognition_de": "Rut liegt mit dem Gesicht zur Erde vor Boas auf dem Feld; Boas antwortet ihr – ein Pfeil führt von ihrer Treue zu Noomi zum Segenswunsch «JHWH vergelte dein Tun».",
    "keywords": [
     "auf ihr Gesicht",
     "eine Fremde",
@@ -35,10 +209,10 @@
    ]
   },
   {
-   "reference": "RUT.2.14",
-   "text_de": "Beim Essen ruft Boas Rut herbei, sie setzt sich neben die Schnitter, er reicht ihr geröstetes Korn, und sie isst sich satt und behält noch übrig.",
-   "reason_de": "Zeigt den Ausgang (Kriterium 3) und sichtbare Fülle (Kriterium 4); Deutung: erster Gegenpol zum «leer» aus 1,21.",
-   "recognition_de": "Rut sitzt neben den Schnittern, Boas reicht ihr eine Handvoll geröstetes Korn, daneben Brot.",
+   "reference": "RUT.2.14-RUT.2.17",
+   "text_de": "Beim Essen ruft Boas Rut herbei, sie setzt sich neben die Schnitter, er reicht ihr geröstetes Korn, und sie isst sich satt und behält noch übrig; danach weist er die Knechte an, eigens Ähren für sie aus den Bündeln zu ziehen und liegen zu lassen, und am Abend hat sie etwa ein Efa Gerste.",
+   "reason_de": "Zeigt den Ausgang (Kriterium 3) und sichtbare Fülle in drei Gliedern: satt, Anweisung, eigens Ähren liegen zu lassen, Ertrag des Tages (Kriterium 4); Deutung: erster Gegenpol zum «leer» aus 1,21.",
+   "recognition_de": "Rut sitzt neben den Schnittern, Boas reicht ihr eine Handvoll geröstetes Korn; daneben Boas, der den Knechten aufträgt, eigens Ähren liegen zu lassen, und am Abend ihr Ertrag an Gerste.",
    "keywords": [
     "iss vom Brot",
     "geröstetes Korn",
@@ -48,10 +222,8 @@
  ],
  "omitted_de": [
   "Gruss zwischen Boas und Schnittern (2,4) – Übergang",
-  "Auskunft des Vorarbeiters über Rut (2,5–7) – wiederholt Bekanntes",
-  "Ruts Dank (2,13) – Wiederholung",
-  "Anweisung, Ähren absichtlich liegen zu lassen (2,15–16) – vertieft nur die Grosszügigkeit",
-  "«etwa ein Efa Gerste» (2,17) – Zahl"
+  "Einzelheiten der Auskunft des Vorarbeiters (2,6–7) – wiederholen Bekanntes; dass Boas nach Rut fragt, steht in structure",
+  "Ruts Dank (2,13) als eigener Moment – nimmt das Stichwort «Gunst» aus 2,10 auf, ohne neue Wendung; in structure als Antwort"
  ],
  "persons": [
   "FIG-RUT",
@@ -68,17 +240,19 @@
    "fingerprint": "ac539682a6e884fa"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Auswahl belegt; eine Einzelheit im Momentsatz stand nicht im Text.",
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Ablauf mit Kette Frage → zwei Gründe → Segenswunsch richtig; zwei Anweisungen des Boas waren als Tatsachen formuliert, Ruts Antwort 2,13 fehlte in der Struktur.",
   "changes_de": [
-   "Moment 2,14: «an den Tisch der Schnitter» ersetzt durch «ruft Rut herbei, sie setzt sich neben die Schnitter» – einen Tisch nennt der Text nicht"
+   "Moment 3 und Glied «Fülle» (2,15–16): Boas' Anweisung an die Knechte als Auftrag wiedergegeben, nicht als ausgeführte Tatsache (Regel 2).",
+   "Glied «Schutz»: «die Knechte rühren dich nicht an» → «ich habe den Knechten geboten, dich nicht anzurühren» (Auftrag ≠ Tatsache).",
+   "Ruts Antwort (2,13) als Glied in s1 ergänzt (Leitwort «Gunst» 2,10/2,13 verweist darauf); Grund in omitted_de berichtigt (keine blosse Wiederholung)."
   ]
  }
 }

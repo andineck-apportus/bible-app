@@ -6,18 +6,144 @@
  "level": "section",
  "reference": "MAT.5.1-MAT.5.12",
  "target": "TU-MAT-005-001-012",
- "core_de": "Jesus setzt sich auf dem Berg und preist die Armen im Geist, Trauernden, Sanftmütigen, Barmherzigen, Friedensstifter und Verfolgten selig: ihnen gehört das Reich der Himmel, und jeder Gruppe gilt eine Verheissung.",
+ "core_de": "Jesus preist auf dem Berg acht Gruppen selig und sagt jeder zu, was sie erwartet, gerahmt vom Reich der Himmel für die Armen im Geist und die Verfolgten; zuletzt spricht er die Jünger selbst selig, wenn man sie seinetwegen verfolgt.",
  "mode": "speech",
  "voice": {
   "speaker": "FIG-JESUS",
   "addressee": "FIG-GRUPPE-JUENGER"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "series",
+    "subtype": "Einleitung – Reihe der Seligpreisungen – Schlussglied an die Jünger",
+    "range": "MAT.5.1-MAT.5.12",
+    "elements": [
+     {
+      "label": "Jesus sieht die Menschenmengen, setzt sich auf dem Berg, die Jünger treten zu ihm, und er lehrt sie",
+      "ref": "MAT.5.1-MAT.5.2",
+      "role": "Einleitung"
+     },
+     {
+      "label": "Acht Seligpreisungen: wer → was sie erwartet",
+      "ref": "MAT.5.3-MAT.5.10",
+      "role": "Reihe",
+      "child": "s2"
+     },
+     {
+      "label": "Selig seid ihr, wenn man euch meinetwegen beschimpft und verfolgt → freut euch und jubelt, denn euer Lohn ist gross in den Himmeln; so hat man nämlich die Propheten vor euch verfolgt",
+      "ref": "MAT.5.11-MAT.5.12",
+      "role": "Schlussglied: Anrede «ihr», Fall → Aufruf mit zwei Begründungen («denn», «nämlich»)"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Jesus",
+       "to": "seine Jünger, vor den Menschenmengen (5,1–2)"
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "Selig",
+       "role": "gliedernd, in allen neun Gliedern"
+      }
+     ],
+     "pattern_break": [
+      {
+       "ref": "MAT.5.11-MAT.5.12",
+       "kind": "Wechsel von «die» zu «ihr»; längeres Glied mit «wenn» und Aufruf «Freut euch»"
+      }
+     ],
+     "modality": [
+      {
+       "note": "Zusagen, keine Bedingungen: «gehört» in der Gegenwart (5,3 und 5,10), «werden» in der Zukunft (5,4–9); 5,11 nennt einen Fall («wenn sie euch beschimpfen»), keine Feststellung."
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "LUK.6.20-LUK.6.23",
+       "kind": "Parallelfassung (Feldrede); nicht vermischen"
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "frame",
+    "subtype": "Inklusio: «Reich der Himmel» im ersten und achten Glied",
+    "range": "MAT.5.3-MAT.5.10",
+    "elements": [
+     {
+      "label": "Selig sind die Armen im Geist → ihnen gehört das Reich der Himmel",
+      "ref": "MAT.5.3",
+      "role": "A: wer → Verheissung (Rahmen)",
+      "links": [
+       "MAT.5.10"
+      ]
+     },
+     {
+      "label": "Selig sind die Trauernden → sie werden getröstet werden",
+      "ref": "MAT.5.4",
+      "role": "wer → Verheissung"
+     },
+     {
+      "label": "Selig sind die Sanftmütigen → sie werden die Erde erben",
+      "ref": "MAT.5.5",
+      "role": "wer → Verheissung"
+     },
+     {
+      "label": "Selig sind, die nach der Gerechtigkeit hungern und dürsten → sie werden satt werden",
+      "ref": "MAT.5.6",
+      "role": "wer → Verheissung"
+     },
+     {
+      "label": "Selig sind die Barmherzigen → sie werden Barmherzigkeit erfahren",
+      "ref": "MAT.5.7",
+      "role": "wer → Verheissung"
+     },
+     {
+      "label": "Selig sind, die ein reines Herz haben → sie werden Gott sehen",
+      "ref": "MAT.5.8",
+      "role": "wer → Verheissung"
+     },
+     {
+      "label": "Selig sind, die Frieden stiften → sie werden Söhne Gottes genannt werden",
+      "ref": "MAT.5.9",
+      "role": "wer → Verheissung"
+     },
+     {
+      "label": "Selig sind, die wegen der Gerechtigkeit verfolgt worden sind → ihnen gehört das Reich der Himmel",
+      "ref": "MAT.5.10",
+      "role": "A': wer → Verheissung (Rahmen)",
+      "links": [
+       "MAT.5.3"
+      ]
+     }
+    ],
+    "features": {
+     "leitwort": [
+      {
+       "word": "Reich der Himmel",
+       "role": "verklammernd (5,3 und 5,10)"
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
  },
  "moments": [
   {
    "reference": "MAT.5.1-MAT.5.2",
    "text_de": "Als Jesus die Menschenmengen sieht, steigt er auf den Berg, setzt sich, und seine Jünger treten zu ihm; er beginnt zu lehren.",
    "reason_de": "Rahmen der ganzen Bergpredigt (Kriterium 2 und 3): Ort, Lehrhaltung und Zuhörer werden hier festgelegt.",
-   "recognition_de": "Jesus sitzt auf dem Berg, die Jünger treten zu ihm heran, dahinter die Menschenmengen.",
+   "recognition_de": "Kopfzeile über dem Raster: Jesus sitzt auf dem Berg, die Jünger treten zu ihm heran, dahinter die Menschenmengen.",
    "keywords": [
     "stieg er auf den Berg",
     "seine Jünger"
@@ -26,19 +152,20 @@
   },
   {
    "reference": "MAT.5.3-MAT.5.10",
-   "text_de": "Jesus preist die Armen im Geist, die Trauernden, Sanftmütigen, Hungernden nach Gerechtigkeit, Barmherzigen, Reinen, Friedensstifter und Verfolgten selig.",
-   "reason_de": "Trägt die Kernaussage (Kriterium 1); die achtfache Wiederholung «Selig sind» und die Klammer «Reich der Himmel» in 5,3 und 5,10 betont sie (Kriterium 2); bekanntester Erkennungsmoment der Stelle (Kriterium 4).",
-   "recognition_de": "Jesus sitzt auf dem Berg und spricht zu den Jüngern; Wortband «Selig sind». Deutung für das Bild: die Seliggepriesenen (Arme, Trauernde, Verfolgte) können als Bildzeichen neben dem Wortband erscheinen.",
+   "text_de": "Jesus preist acht Gruppen selig, je mit ihrer Verheissung: die Armen im Geist (ihnen gehört das Reich der Himmel), die Trauernden (getröstet), die Sanftmütigen (die Erde erben), die nach der Gerechtigkeit hungern und dürsten (satt werden), die Barmherzigen (Barmherzigkeit erfahren), die ein reines Herz haben (Gott sehen), die Frieden stiften (Söhne Gottes genannt) und die wegen der Gerechtigkeit Verfolgten (ihnen gehört das Reich der Himmel).",
+   "reason_de": "Trägt die Kernaussage (Kriterium 1): wer → was ihn erwartet; achtfaches «Selig sind» und die Klammer «Reich der Himmel» in 5,3 und 5,10 (Kriterium 2); bekanntester Erkennungsmoment (Kriterium 4). Eine Reihe zählt als ein Moment, alle acht Paare stehen in structure.",
+   "recognition_de": "Raster mit acht Feldern, je Feld die Gruppe und ihre Verheissung (z. B. Trauernde → getröstet, Sanftmütige → Erde erben); erstes und letztes Feld durch «Reich der Himmel» als Rahmen markiert; Wortband «Selig sind».",
    "keywords": [
     "Selig sind",
-    "Reich der Himmel"
+    "Reich der Himmel",
+    "getröstet werden"
    ]
   },
   {
    "reference": "MAT.5.11-MAT.5.12",
-   "text_de": "Jesus spricht die Jünger direkt an: Selig seid ihr, wenn ihr seinetwegen verfolgt werdet; freut euch, euer Lohn ist gross.",
-   "reason_de": "Wendung von «die» zu «ihr» am Schluss (Kriterium 2): die Seligpreisung trifft die Zuhörer selbst.",
-   "recognition_de": "Jesus wendet sich den Jüngern direkt zu und ruft sie zur Freude, auch wenn man sie seinetwegen verfolgen wird.",
+   "text_de": "Jesus spricht die Jünger direkt an: Selig seid ihr, wenn man euch seinetwegen beschimpft und verfolgt; freut euch und jubelt, denn euer Lohn ist gross in den Himmeln, so hat man nämlich die Propheten vor euch verfolgt.",
+   "reason_de": "Wendung von «die» zu «ihr» am Schluss (Kriterium 2, Musterbruch): die Seligpreisung trifft die Zuhörer selbst.",
+   "recognition_de": "Eigenes, abgesetztes Feld unter dem Raster: Jesus wendet sich den Jüngern zu; Wortband «Selig seid ihr – freut euch und jubelt».",
    "keywords": [
     "Selig seid ihr",
     "Freut euch und jubelt"
@@ -46,8 +173,7 @@
   }
  ],
  "omitted_de": [
-  "Die einzelnen Verheissungen (getröstet, Erde erben, satt werden usw.) – im Bild nicht einzeln darstellbar, die Reihe als Ganzes trägt",
-  "Hinweis auf die verfolgten Propheten (5,12) – Begründung, nicht Kern"
+  "Einzelheiten der Anfeindung («fälschlich alles Böse nachsagen», 5,11) – Aufzählung, im Glied als «beschimpfen und verfolgen» knapp enthalten"
  ],
  "persons": [
   "FIG-JESUS",
@@ -64,19 +190,18 @@
    "fingerprint": "cba8584226787759"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Gegen den Text geprüft; Abweichungen vom Wortlaut bzw. ungekennzeichnete Deutungen wurden korrigiert.",
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Struktur (Reihe von acht Seligpreisungen im Rahmen «Reich der Himmel», Einleitung und abgesetztes Schlussglied an «ihr») richtig erkannt; alle acht Glieder mit Verheissung, Musterbruch erhalten. Zweite Begründung in 5,12 (Propheten) war als Nebengedanke weggelassen; sie ist ein «denn/nämlich»-Glied und wurde aufgenommen.",
   "changes_de": [
-   "core_de: «im Geist» ergänzt; «Reich der Himmel» gilt im Text nur 5,3 und 5,10, die übrigen Verheissungen jetzt erwähnt.",
-   "Moment 5,3–10, recognition_de: Zuhörer sind die Jünger; die Seliggepriesenen nur als gekennzeichnete Deutung für das Bild.",
-   "Moment 5,11–12: Bedingung («wenn sie euch beschimpfen») nicht mehr als Tatsache dargestellt; Stichwort «Selig seid ihr» ergänzt, da die Wendung zu «ihr» der Wahlgrund ist."
+   "Schlussglied 5,11–12: zweite Begründung «so haben sie nämlich die Propheten verfolgt» in Glied und Moment aufgenommen, aus omitted_de gestrichen (Regel 1: Begründungen nicht weglassen)",
+   "Rolle des Schlussglieds präzisiert: Fall → Aufruf («Freut euch und jubelt») mit zwei Begründungen statt «Fall → Zuspruch»"
   ]
  }
 }

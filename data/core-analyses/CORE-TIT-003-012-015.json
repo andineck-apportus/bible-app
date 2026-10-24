@@ -12,12 +12,75 @@
   "speaker": "FIG-PAULUS",
   "addressee": "FIG-TITUS"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "form",
+    "form_type": "letter",
+    "subtype": "Briefschluss",
+    "range": "TIT.3.12-TIT.3.15",
+    "elements": [
+     {
+      "label": "Reisen: Wenn Paulus Artemas oder Tychikus schickt, soll Titus rasch zu ihm nach Nikopolis kommen; dort will Paulus den Winter verbringen",
+      "ref": "TIT.3.12",
+      "role": "Reisen"
+     },
+     {
+      "label": "Auftrag: Zenas und Apollos sorgfältig für die Reise ausrüsten, damit ihnen nichts fehlt",
+      "ref": "TIT.3.13",
+      "role": "Reisen"
+     },
+     {
+      "label": "Letzte Mahnung: Auch die Unseren sollen lernen, sich für gute Werke einzusetzen, damit sie nicht ohne Frucht sind",
+      "ref": "TIT.3.14",
+      "role": "Paränese"
+     },
+     {
+      "label": "Grüsse: Es grüssen dich alle, die bei mir sind; grüsse die, die uns im Glauben lieben",
+      "ref": "TIT.3.15",
+      "role": "Grüsse"
+     },
+     {
+      "label": "Segen: Die Gnade sei mit euch allen",
+      "ref": "TIT.3.15",
+      "role": "Segen",
+      "links": [
+       "TIT.1.4"
+      ]
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Paulus",
+       "to": "Titus",
+       "note": "Segen an «euch alle» (3,15) weitet den Kreis"
+      }
+     ],
+     "modality": [
+      {
+       "note": "Kommen, Ausrüsten, Lernen: verlangte Handlungen."
+      }
+     ],
+     "leitwort": [
+      {
+       "note": "«gute Werke» (3,14) zum letzten Mal"
+      }
+     ]
+    },
+    "visual": "outline",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
    "reference": "TIT.3.12",
    "text_de": "Sobald Paulus einen Boten schickt, soll Titus rasch zu ihm nach Nikopolis kommen, wo Paulus den Winter verbringen will.",
    "reason_de": "Zeigt die Lage des Briefes: Titus soll nach seinem Auftrag auf Kreta zu Paulus kommen (Kriterium 3).",
-   "recognition_de": "Paulus an Titus: Ein Bote kommt zu Titus, und Titus soll rasch zu Paulus aufbrechen (verlangte Handlung).",
+   "recognition_de": "Briefbild, Feld «Reisen»: Ein Bote kommt zu Titus, und Titus soll rasch zu Paulus aufbrechen (verlangte Handlung).",
    "keywords": [
     "nach Nikopolis",
     "den Winter"
@@ -28,7 +91,7 @@
    "reference": "TIT.3.13-TIT.3.14",
    "text_de": "Titus soll Zenas und Apollos für die Reise ausrüsten, und die Glaubenden sollen lernen, sich für gute Werke einzusetzen, damit sie nicht ohne Frucht sind.",
    "reason_de": "Letzte Wiederholung des Leitworts «gute Werke», an einem konkreten Beispiel (Kriterien 1–2).",
-   "recognition_de": "Paulus an Titus: Titus und die Glaubenden sollen zwei Reisende, Zenas und Apollos, sorgfältig ausrüsten, damit ihnen nichts fehlt (verlangte Handlung).",
+   "recognition_de": "Briefbild, Feld «letzte Mahnung»: Titus und die Glaubenden rüsten zwei Reisende, Zenas und Apollos, sorgfältig aus, damit ihnen nichts fehlt (verlangte Handlung).",
    "keywords": [
     "gute Werke",
     "dringenden Bedürfnisse",
@@ -40,7 +103,7 @@
    "reference": "TIT.3.15",
    "text_de": "Alle bei Paulus grüssen, und Paulus wünscht allen die Gnade.",
    "reason_de": "Rahmen: Schluss des Briefes mit dem Gnadenwunsch, wie er begann (Kriterium 2).",
-   "recognition_de": "Paulus beendet den Brief, um ihn stehen Freunde, die mitgrüssen.",
+   "recognition_de": "Briefbild, Schlussfeld: Paulus beendet den Brief, um ihn stehen Freunde, die mitgrüssen; darunter der Segen an alle.",
    "keywords": [
     "Es grüssen dich alle",
     "Die Gnade sei mit euch allen"
@@ -49,8 +112,8 @@
   }
  ],
  "omitted_de": [
-  "Artemas und Tychikus – Nebenfiguren, nur als Boten genannt",
-  "«Zenas, der Rechtsgelehrte» als Berufsangabe – Nebenumstand"
+  "«Zenas, der Rechtsgelehrte» als Berufsangabe – Nebenumstand",
+  "Namen der Boten Artemas oder Tychikus (Tit 3,12) – Nebenfiguren; im Moment «ein Bote», in der Struktur genannt"
  ],
  "persons": [
   "FIG-PAULUS",
@@ -66,19 +129,17 @@
    "fingerprint": "3dbcbe40acd887c2"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Auswahl stimmt; eine Deutung im Text-Satz, Nebennamen als Stichwörter und ein Zusatz wurden korrigiert.",
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Briefschluss (form letter) mit Reisen, letzter Mahnung, Grüssen und Segen vollständig; Rahmen zum Gruss 1,4 korrekt verknüpft.",
   "changes_de": [
-   "3,12 text_de: «sobald Artemas oder Tychikus ihn ablöst» (Deutung) → «sobald Paulus einen Boten schickt»; Nebenfiguren nicht mehr genannt",
-   "3,13–14 Stichwörter: «Zenas», «Apollos» → «gute Werke», «dringenden Bedürfnisse» (tragendes Leitwort)",
-   "3,15: «siegelt» gestrichen (steht nicht im Text); 3,12 und 3,13–14 als verlangte Handlung"
+   "omitted_de: Weglassen der Botennamen Artemas/Tychikus im Moment ausdrücklich begründet."
   ]
  }
 }

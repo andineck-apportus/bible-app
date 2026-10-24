@@ -11,6 +11,193 @@
  "voice": {
   "speaker": "narrator"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Heilungserzählung (Austreibung)",
+    "range": "MRK.5.1-MRK.5.20",
+    "elements": [
+     {
+      "label": "Aus den Grabstätten kommt Jesus ein Mensch mit einem unreinen Geist entgegen; niemand kann ihn bändigen.",
+      "ref": "MRK.5.1-MRK.5.5",
+      "role": "Anfang"
+     },
+     {
+      "label": "Er wirft sich vor Jesus nieder und schreit: «Was habe ich mit dir zu tun, Jesus, Sohn Gottes, des Höchsten?» Jesus hatte gesagt: «Komm heraus!»",
+      "ref": "MRK.5.6-MRK.5.8",
+      "role": "Begegnung"
+     },
+     {
+      "label": "Jesus fragt nach dem Namen: «Legion ist mein Name, denn wir sind viele.»",
+      "ref": "MRK.5.9-MRK.5.10",
+      "role": "Name"
+     },
+     {
+      "label": "Jesus erlaubt den Geistern, in die Schweine zu fahren; die Herde stürzt in den See.",
+      "ref": "MRK.5.11-MRK.5.13",
+      "role": "Wendepunkt"
+     },
+     {
+      "label": "Die Leute sehen den Mann bekleidet und bei Verstand dasitzen, fürchten sich und bitten Jesus, wegzugehen.",
+      "ref": "MRK.5.14-MRK.5.17",
+      "role": "Reaktion"
+     },
+     {
+      "label": "Der Geheilte will bei Jesus bleiben; Jesus sagt: «Geh zu den Deinen und berichte ihnen, wie viel der Herr an dir getan hat.»",
+      "ref": "MRK.5.18-MRK.5.19",
+      "role": "Auftrag"
+     },
+     {
+      "label": "Er verkündet in der Dekapolis, wie viel Jesus an ihm getan hatte, und alle staunen.",
+      "ref": "MRK.5.20",
+      "role": "Ausgang"
+     },
+     {
+      "label": "Vorher und nachher: vom Mann in den Grabstätten zum Boten",
+      "child": "s2"
+     },
+     {
+      "label": "Vier Bitten an Jesus",
+      "child": "s3"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Erzähler",
+       "to": "Leser"
+      },
+      {
+       "who": "der Besessene bzw. die Geister («wir»)",
+       "to": "Jesus",
+       "ref": "MRK.5.7-MRK.5.12"
+      },
+      {
+       "who": "Jesus",
+       "to": "den unreinen Geist",
+       "ref": "MRK.5.8-MRK.5.9"
+      },
+      {
+       "who": "Jesus",
+       "to": "den Geheilten",
+       "ref": "MRK.5.19"
+      }
+     ],
+     "modality": [
+      {
+       "ref": "MRK.5.19",
+       "kind": "Auftrag: im eigenen Haus berichten, «wie viel der Herr an dir getan hat»"
+      },
+      {
+       "ref": "MRK.5.20",
+       "kind": "Bericht der Ausführung: er verkündet in der Dekapolis, «wie viel Jesus an ihm getan hatte»; Auftrag und Ausführung nicht angleichen"
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "MAT.8.28-MAT.8.34",
+       "kind": "Parallelfassung (nicht angleichen)"
+      },
+      {
+       "ref": "LUK.8.26-LUK.8.39",
+       "kind": "Parallelfassung (nicht angleichen)"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "reversal",
+    "subtype": "Vorher – Nachher",
+    "range": "MRK.5.2-MRK.5.20",
+    "elements": [
+     {
+      "label": "Vorher: Er wohnt in den Grabstätten, zerreisst Ketten, schreit Tag und Nacht und zerschlägt sich mit Steinen.",
+      "ref": "MRK.5.2-MRK.5.5",
+      "role": "vorher",
+      "links": [
+       "MRK.5.15"
+      ]
+     },
+     {
+      "label": "Umschlag: «Komm heraus, du unreiner Geist!» – die Geister fahren in die Schweine.",
+      "ref": "MRK.5.8-MRK.5.13",
+      "role": "Umschlagpunkt"
+     },
+     {
+      "label": "Nachher: Er sitzt bei Jesus, bekleidet und bei Verstand.",
+      "ref": "MRK.5.15",
+      "role": "nachher",
+      "links": [
+       "MRK.5.2-MRK.5.5"
+      ]
+     },
+     {
+      "label": "Nachher: Er verkündet, wie viel Jesus an ihm getan hatte.",
+      "ref": "MRK.5.20",
+      "role": "nachher"
+     }
+    ],
+    "visual": "mirror",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "series",
+    "subtype": "Reihe der Bitten",
+    "range": "MRK.5.10-MRK.5.19",
+    "elements": [
+     {
+      "label": "Der Geist bittet, sie nicht aus dem Gebiet fortzuschicken (keine eigene Antwort).",
+      "ref": "MRK.5.10",
+      "role": "Bitte 1"
+     },
+     {
+      "label": "Die Geister bitten: «Schick uns in die Schweine!» → Jesus erlaubt es.",
+      "ref": "MRK.5.12-MRK.5.13",
+      "role": "Bitte 2"
+     },
+     {
+      "label": "Die Leute bitten Jesus, ihr Gebiet zu verlassen → er steigt ins Boot.",
+      "ref": "MRK.5.17-MRK.5.18",
+      "role": "Bitte 3"
+     },
+     {
+      "label": "Der Geheilte bittet, bei Jesus sein zu dürfen → Jesus gestattet es nicht, sondern sendet ihn zu den Seinen.",
+      "ref": "MRK.5.18-MRK.5.19",
+      "role": "Bitte 4"
+     }
+    ],
+    "features": {
+     "leitwort": [
+      {
+       "word": "bitten",
+       "refs": [
+        "MRK.5.10",
+        "MRK.5.12",
+        "MRK.5.17",
+        "MRK.5.18"
+       ],
+       "role": "gliedernd"
+      }
+     ],
+     "pattern_break": [
+      {
+       "ref": "MRK.5.19",
+       "kind": "Nur die Bitte des Geheilten wird ausdrücklich abgelehnt; statt dessen erhält er einen Auftrag. Die erste Bitte bleibt ohne eigene Antwort."
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
    "reference": "MRK.5.2-MRK.5.5",
@@ -37,7 +224,7 @@
   {
    "reference": "MRK.5.15-MRK.5.20",
    "text_de": "Die Leute finden den Mann bekleidet und bei Verstand bei Jesus sitzen; er darf nicht mitgehen, sondern soll den Seinen berichten, wie viel der Herr an ihm getan hat, und er verkündet in der Dekapolis, wie viel Jesus an ihm getan hatte.",
-   "reason_de": "Ausgang des Bogens und Kernaussage: die Verwandlung (sitzend, bekleidet, bei Verstand), der Auftrag zu berichten, wie viel der Herr an ihm getan hat, und seine Verkündigung; der Text stellt ihn der Furcht der Leute gegenüber.",
+   "reason_de": "Ausgang des Bogens und Kernaussage: die Verwandlung (sitzend, bekleidet, bei Verstand) als Gegenbild zum Anfang, der Auftrag zu berichten, wie viel der Herr an ihm getan hat, und seine Verkündigung; der Text stellt ihn der Furcht der Leute gegenüber. Die Reihe der Bitten (5.10–19) steht vollständig in structure.",
    "recognition_de": "Der Mann sitzt ruhig und bekleidet neben Jesus, die Leute aus der Stadt stehen erschrocken davor.",
    "keywords": [
     "bekleidet und bei Verstand",
@@ -46,11 +233,10 @@
   }
  ],
  "omitted_de": [
-  "Anrede «Sohn Gottes, des Höchsten» und Beschwörung (5.7) – trägt die Pointe nicht zusätzlich, steckt im Wendepunkt",
-  "Zahl der Schweine (etwa zweitausend) – Zahl, nicht tragend",
-  "Hirten, die fliehen und berichten (5.14, 5.16) – Nebenfiguren, Übergang",
-  "Bitte der Leute, das Gebiet zu verlassen (5.17) – Nebenzug; im Ausgang durch ihre Furcht angedeutet",
-  "Ortsangabe Gebiet der Gerasener – Ortsangabe"
+  "Zahl der Schweine (etwa zweitausend, 5.13) – Zahl, nicht tragend",
+  "Hirten, die fliehen und berichten (5.14, 5.16) – Nebenfiguren, Übergang; im Ablauf als «die Leute» zusammengefasst",
+  "Ortsangabe Gebiet der Gerasener (5.1) – Ortsangabe",
+  "Einzelheiten der Fesselung (Fussfesseln, zerriebene Ketten, 5.4) – Ausmalung; im Glied «vorher» knapp enthalten"
  ],
  "persons": [
   "FIG-JESUS",
@@ -67,19 +253,17 @@
    "fingerprint": "72b2247e3e6329d7"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Kernaussage und Momente sind belegt; Auftrag (5.19) und Verkündigung (5.20) waren vermischt und wurden getrennt.",
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Ablauf (Austreibung) mit Vorher – Nachher und Reihe der vier Bitten richtig erkannt; Auftrag («der Herr») und Ausführung («Jesus») nicht angeglichen; Parallelfassungen gegen OpenBible geprüft.",
   "changes_de": [
-   "Moment 3 text_de/reason_de: Auftrag «wie viel der Herr an dir getan hat» (5.19) und Verkündigung «wie viel Jesus an ihm getan hatte» (5.20) getrennt, textgetreu",
-   "Moment 3 recognition_de auf eine zeichenbare Szene beschränkt",
-   "omitted_de: Stellenangabe zu «5.14, 5.16» korrigiert"
+   "Reihe der Bitten: Die erste Bitte (5,10) erhält im Text keine eigene Antwort; Label und Musterbruch («nur … ausdrücklich abgelehnt») entsprechend präzisiert."
   ]
  }
 }

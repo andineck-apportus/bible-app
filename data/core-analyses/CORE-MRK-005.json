@@ -12,27 +12,165 @@
   "CORE-MRK-005-025-034",
   "CORE-MRK-005-035-043"
  ],
- "core_de": "Jesus erweist seine Macht über unreine Geister, Krankheit und Tod; der Frau sagt er «Dein Glaube hat dich gerettet», dem Jairus «Fürchte dich nicht, glaube nur!».",
+ "core_de": "Jesus befreit den Mann in den Grabstätten von der «Legion» und sendet ihn als Boten; in die Bitte des Jairus für seine sterbende Tochter ist die Heilung der Frau eingeschoben: Ihr sagt er «Dein Glaube hat dich gerettet», dem Jairus «Fürchte dich nicht, glaube nur!», und das Mädchen steht auf.",
  "mode": "narrative",
  "voice": {
   "speaker": "narrator"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "zwei Erzählungen, die zweite geschachtelt",
+    "range": "MRK.5.1-MRK.5.43",
+    "elements": [
+     {
+      "label": "Befreiung: Jesus treibt die «Legion» aus dem Mann in den Grabstätten aus; die Geister fahren in die Schweine, die Herde stürzt in den See.",
+      "ref": "MRK.5.1-MRK.5.13",
+      "role": "Erzählung 1: Wendepunkt"
+     },
+     {
+      "label": "Die Leute fürchten sich und bitten Jesus, wegzugehen; der Geheilte, bekleidet und bei Verstand, wird zu den Seinen gesandt und verkündet, wie viel Jesus an ihm getan hatte.",
+      "ref": "MRK.5.14-MRK.5.20",
+      "role": "Erzählung 1: Ausgang"
+     },
+     {
+      "label": "Schachtelung: Jairus – die Frau – Jairus",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Erzähler",
+       "to": "Leser"
+      },
+      {
+       "who": "Jesus",
+       "to": "den Geheilten, die Frau, Jairus, das Mädchen"
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "MAT.8.28-MAT.8.34",
+       "kind": "Parallelfassung (nicht angleichen)"
+      },
+      {
+       "ref": "MAT.9.18-MAT.9.26",
+       "kind": "Parallelfassung, bei Matthäus getrennt und in anderer Reihenfolge (nicht angleichen)"
+      },
+      {
+       "ref": "LUK.8.26-LUK.8.56",
+       "kind": "Parallelfassung (nicht angleichen)"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "frame",
+    "subtype": "Schachtelung (A – B – A')",
+    "range": "MRK.5.21-MRK.5.43",
+    "elements": [
+     {
+      "label": "A: Jairus bittet für sein sterbendes Töchterchen, «damit sie gerettet wird und lebt»; Jesus geht mit.",
+      "ref": "MRK.5.21-MRK.5.24",
+      "role": "A",
+      "links": [
+       "MRK.5.35-MRK.5.43"
+      ]
+     },
+     {
+      "label": "B: Eine Frau berührt Jesu Mantel und wird geheilt; Jesus sagt: «Tochter, dein Glaube hat dich gerettet.»",
+      "ref": "MRK.5.25-MRK.5.34",
+      "role": "B (Mitte)"
+     },
+     {
+      "label": "A': «Deine Tochter ist gestorben» – Jesus: «Fürchte dich nicht, glaube nur!» – «Talita kum!»: Das Mädchen steht auf.",
+      "ref": "MRK.5.35-MRK.5.43",
+      "role": "A'",
+      "links": [
+       "MRK.5.21-MRK.5.24"
+      ]
+     }
+    ],
+    "features": {
+     "leitwort": [
+      {
+       "word": "Tochter / Töchterchen",
+       "refs": [
+        "MRK.5.23",
+        "MRK.5.34",
+        "MRK.5.35"
+       ],
+       "role": "verklammernd"
+      },
+      {
+       "word": "gerettet",
+       "refs": [
+        "MRK.5.23",
+        "MRK.5.28",
+        "MRK.5.34"
+       ],
+       "role": "verklammernd"
+      },
+      {
+       "word": "zwölf Jahre",
+       "refs": [
+        "MRK.5.25",
+        "MRK.5.42"
+       ],
+       "role": "verklammernd"
+      },
+      {
+       "word": "Furcht ↔ Glaube",
+       "refs": [
+        "MRK.5.33",
+        "MRK.5.34",
+        "MRK.5.36"
+       ],
+       "role": "deutend"
+      }
+     ],
+     "chronology": [
+      {
+       "ref": "MRK.5.35",
+       "kind": "«Während er noch redete»: B und A' greifen ineinander"
+      }
+     ],
+     "interpretation": [
+      {
+       "kind": "Auslegung, nicht Text",
+       "note": "Dass die Mitte den Rahmen deutet (der Glaube der Frau als Beispiel für das «glaube nur» an Jairus) und was die zweimal zwölf Jahre bedeuten, ist Deutung; im Text stehen nur die Klammerwörter."
+      }
+     ]
+    },
+    "visual": "outline",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
-   "reference": "MRK.5.9-MRK.5.13",
-   "text_de": "Jesus befreit den Mann in den Grabstätten von der «Legion»; die Geister fahren in die Schweine, und die Herde stürzt in den See.",
-   "reason_de": "Erster Hauptabschnitt: Macht über die unreinen Geister; bekanntester Erkennungsmoment des Kapitels.",
-   "recognition_de": "Eine Schweineherde stürmt den Abhang hinunter in den See, während Jesus vor dem Mann steht.",
+   "reference": "MRK.5.9-MRK.5.20",
+   "text_de": "Jesus befreit den Mann in den Grabstätten von der «Legion»; die Geister fahren in die Schweine. Danach sitzt der Mann bekleidet und bei Verstand da und verkündet, wie viel Jesus an ihm getan hatte.",
+   "reason_de": "Erster Hauptabschnitt mit Wendepunkt und Ausgang (vorher → nachher); bekanntester Erkennungsmoment des Kapitels.",
+   "recognition_de": "Links stürmt eine Schweineherde den Abhang hinunter in den See; rechts, danach, sitzt der Mann ruhig und bekleidet bei Jesus.",
    "keywords": [
     "Legion",
-    "Schweine"
+    "Schweine",
+    "bekleidet und bei Verstand"
    ]
   },
   {
    "reference": "MRK.5.22-MRK.5.23",
    "text_de": "Jairus fällt Jesus zu Füssen und bittet für sein sterbendes Töchterchen.",
-   "reason_de": "Eröffnet die Rahmengeschichte, in die die Heilung der Frau eingebettet ist; ohne die Bitte ist die Auferweckung nicht verständlich.",
-   "recognition_de": "Ein angesehener Mann kniet vor Jesus nieder, die Hände bittend erhoben, ringsum eine grosse Menge.",
+   "reason_de": "Eröffnet die Rahmengeschichte (A), in die die Heilung der Frau eingeschoben ist; ohne die Bitte ist das Aufstehen des Mädchens nicht verständlich.",
+   "recognition_de": "Ein angesehener Mann kniet vor Jesus nieder, die Hände bittend erhoben, ringsum eine grosse Menge; das Feld bildet mit dem vierten Feld den Rahmen um die Szene mit der Frau.",
    "keywords": [
     "Jairus",
     "Töchterchen liegt im Sterben"
@@ -41,8 +179,8 @@
   {
    "reference": "MRK.5.27-MRK.5.34",
    "text_de": "Eine kranke Frau berührt von hinten Jesu Mantel und wird geheilt; Jesus sagt ihr: «Tochter, dein Glaube hat dich gerettet.»",
-   "reason_de": "Macht über die Krankheit; trägt mit dem Wort vom rettenden Glauben die Kernaussage des Kapitels.",
-   "recognition_de": "Eine Frau berührt im Gedränge von hinten Jesu Mantel.",
+   "reason_de": "Mitte der Schachtelung (B): Macht über die Krankheit; trägt mit dem Wort vom rettenden Glauben die Kernaussage des Kapitels.",
+   "recognition_de": "Eine Frau berührt im Gedränge von hinten Jesu Mantel; das Feld steht im Jairus-Rahmen (Bild im Bild).",
    "keywords": [
     "berührte seinen Mantel",
     "dein Glaube hat dich gerettet"
@@ -51,8 +189,8 @@
   {
    "reference": "MRK.5.36-MRK.5.42",
    "text_de": "Trotz der Todesnachricht sagt Jesus: «Fürchte dich nicht, glaube nur!», fasst die Hand des Mädchens und sagt «Talita kum!» – und es steht auf.",
-   "reason_de": "Höhepunkt und Ausgang des Kapitels: Macht über den Tod; Glaube statt Furcht.",
-   "recognition_de": "Jesus hält die Hand des Mädchens auf dem Bett, das Mädchen richtet sich auf, die Eltern staunen.",
+   "reason_de": "Höhepunkt und Ausgang des Kapitels, Rahmen A': Glaube statt Furcht gegen die Todesnachricht; das Mädchen steht auf.",
+   "recognition_de": "Jesus hält die Hand des Mädchens, das Mädchen richtet sich auf, die Eltern staunen.",
    "keywords": [
     "glaube nur",
     "Talita kum"
@@ -60,11 +198,10 @@
   }
  ],
  "omitted_de": [
-  "Die Verwandlung und Sendung des Geheilten in die Dekapolis (5.15-20) – im Abschnitt enthalten, für das Kapitel tritt die Macht über die Geister in den Vordergrund",
-  "Bitte der Gerasener, Jesus solle gehen – Nebenzug",
-  "Spott der Klagenden und Auswahl der drei Jünger – Zwischenstufe im Abschnitt",
-  "Zahlen (zweitausend Schweine, zwölf Jahre) – Zahlen",
-  "Schweigegebot (5.43) – Schluss nach dem Höhepunkt"
+  "Die Reihe der Bitten und die Anrede «Sohn Gottes, des Höchsten» (5.7–18) – im Abschnitt vollständig erfasst; für das Kapitel genügen Befreiung und Sendung",
+  "Klage, Spott und Auswahl der drei Jünger (5.37–40) – im Abschnitt als Gegensatz «Stimmen des Todes ↔ Jesu Wort» erfasst; im Kapitel in A' verkürzt",
+  "Zahl der Schweine (etwa zweitausend) – Zahl",
+  "Schweigegebot und Anweisung, ihr zu essen zu geben (5.43) – Schluss nach dem Höhepunkt; im Abschnitt als Schlussglied erfasst"
  ],
  "persons": [
   "FIG-JESUS",
@@ -81,33 +218,34 @@
  "basis": [
   {
    "record": "CORE-MRK-005-001-020",
-   "fingerprint": "cfcb75ad00570758"
+   "fingerprint": "82dec86f7fe2bafe"
   },
   {
    "record": "CORE-MRK-005-021-024",
-   "fingerprint": "ac2f7acc851ac462"
+   "fingerprint": "ced57d07a9be18a5"
   },
   {
    "record": "CORE-MRK-005-025-034",
-   "fingerprint": "665af2bd6a3fe498"
+   "fingerprint": "94772c33221d07c9"
   },
   {
    "record": "CORE-MRK-005-035-043",
-   "fingerprint": "3c31c475b2de2789"
+   "fingerprint": "a4fb8685534be83d"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Auswahl der Momente ist belegt; eine verallgemeinernde Deutung im Kernsatz und der «Saum» wurden korrigiert.",
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Zwei Erzählungen, die zweite als Schachtelung A – B – A' (frame, outline) richtig; Klammerwörter belegt, Deutung der Mitte als interpretation gekennzeichnet; je Abschnitt ein Moment.",
   "changes_de": [
-   "core_de: verallgemeinernde Deutung «wer ihm vertraut, wird gerettet» durch die beiden Jesusworte aus dem Text ersetzt",
-   "Moment 3 recognition_de: «Saum» gestrichen (bei Markus nur «Mantel»)"
+   "Erkennungsmoment 1: «während» stellte Schweinesturz und das Sitzen des Geheilten gleichzeitig dar; im Text folgen sie nacheinander (5,13 → 5,15).",
+   "Querverweis MAT.8.28-MAT.9.26 umfasste fremdes Material (Mt 9,1–17); aufgeteilt in MAT.8.28-MAT.8.34 und MAT.9.18-MAT.9.26 (gegen OpenBible geprüft).",
+   "Erkennungsmoment 4: «auf dem Bett» entfernt (nicht im Text)."
   ]
  }
 }

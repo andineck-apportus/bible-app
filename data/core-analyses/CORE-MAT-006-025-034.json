@@ -6,50 +6,187 @@
  "level": "section",
  "reference": "MAT.6.25-MAT.6.34",
  "target": "TU-MAT-006-025-034",
- "core_de": "Die Jünger sollen sich nicht um Essen, Kleidung und den morgigen Tag sorgen, weil der himmlische Vater Vögel und Lilien versorgt und weiss, was sie brauchen; sie sollen zuerst das Reich suchen.",
+ "core_de": "Die Jünger sollen sich nicht um Essen, Kleidung und den morgigen Tag sorgen: Wenn der himmlische Vater schon Vögel ernährt und Lilien und Gras kleidet, wie viel mehr sie; er weiss, was sie brauchen. Sie sollen zuerst das Reich und seine Gerechtigkeit suchen, dann wird ihnen dies alles dazugegeben.",
  "mode": "instruction",
  "voice": {
   "speaker": "FIG-JESUS",
   "addressee": "FIG-GRUPPE-JUENGER"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "argument",
+    "subtype": "Weisung – Begründungen – Folgerung (darum … also)",
+    "range": "MAT.6.25-MAT.6.34",
+    "elements": [
+     {
+      "label": "Weisung: Sorgt euch nicht um euer Leben, was ihr essen, und um euren Leib, was ihr anziehen sollt",
+      "ref": "MAT.6.25",
+      "role": "These (darum)",
+      "links": [
+       "MAT.6.24"
+      ]
+     },
+     {
+      "label": "Frage: Ist nicht das Leben mehr als die Nahrung und der Leib mehr als die Kleidung?",
+      "ref": "MAT.6.25",
+      "role": "Beleg"
+     },
+     {
+      "label": "Vögel des Himmels: der Vater ernährt sie – ihr seid viel mehr wert",
+      "ref": "MAT.6.26",
+      "role": "Beleg (wie viel mehr)",
+      "child": "s2"
+     },
+     {
+      "label": "Frage: Wer kann durch sein Sorgen seiner Lebenszeit eine einzige Elle hinzufügen?",
+      "ref": "MAT.6.27",
+      "role": "Beleg"
+     },
+     {
+      "label": "Lilien und Gras des Feldes: Gott kleidet sie – wie viel mehr euch",
+      "ref": "MAT.6.28-MAT.6.30",
+      "role": "Beleg (wie viel mehr)",
+      "child": "s3"
+     },
+     {
+      "label": "Folgerung: Sorgt euch also nicht und sagt nicht: «Was sollen wir essen, trinken, anziehen?»",
+      "ref": "MAT.6.31",
+      "role": "Folgerung (also)"
+     },
+     {
+      "label": "Begründung: Danach trachten die Heiden; euer himmlischer Vater weiss, dass ihr das alles braucht",
+      "ref": "MAT.6.32",
+      "role": "Begründung (denn)"
+     },
+     {
+      "label": "Sucht zuerst das Reich und seine Gerechtigkeit → dies alles wird euch dazugegeben",
+      "ref": "MAT.6.33",
+      "role": "Gegenweisung (aber, gegenüber den Heiden) → Zusage"
+     },
+     {
+      "label": "Schluss: Sorgt euch also nicht um den morgigen Tag; denn der morgige Tag wird für sich selbst sorgen. Es genügt dem Tag seine eigene Plage",
+      "ref": "MAT.6.34",
+      "role": "Folgerung (also)"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Jesus",
+       "to": "die Jünger (ihr/du); die Menschenmengen hören zu ([[MAT.5.1]], [[MAT.7.28]])"
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "Sorgt euch nicht",
+       "refs": [
+        "MAT.6.25",
+        "MAT.6.31",
+        "MAT.6.34"
+       ],
+       "role": "gliedernd: Anfang, Mitte, Schluss"
+      }
+     ],
+     "modality": [
+      {
+       "note": "Weisung; «wird dazugegeben» ist Zusage (Zukunft); die Vergleiche stehen als Fragen"
+      }
+     ]
+    },
+    "visual": "arrows",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "balance",
+    "subtype": "Schluss vom Kleineren aufs Grössere",
+    "range": "MAT.6.26",
+    "elements": [
+     {
+      "label": "Die Vögel des Himmels säen nicht, ernten nicht, sammeln nicht in Scheunen – euer himmlischer Vater ernährt sie",
+      "ref": "MAT.6.26",
+      "role": "das Kleinere"
+     },
+     {
+      "label": "Seid ihr nicht viel mehr wert als sie?",
+      "ref": "MAT.6.26",
+      "role": "das Grössere"
+     }
+    ],
+    "visual": "balance",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "balance",
+    "subtype": "Schluss vom Kleineren aufs Grössere",
+    "range": "MAT.6.28-MAT.6.30",
+    "elements": [
+     {
+      "label": "Die Lilien des Feldes mühen sich nicht ab und spinnen nicht – nicht einmal Salomo in all seiner Pracht war so gekleidet",
+      "ref": "MAT.6.28-MAT.6.29",
+      "role": "das Kleinere"
+     },
+     {
+      "label": "Gott kleidet das Gras des Feldes, das morgen in den Ofen geworfen wird",
+      "ref": "MAT.6.30",
+      "role": "das Kleinere"
+     },
+     {
+      "label": "Wird er dann nicht viel mehr euch kleiden, ihr Kleingläubigen?",
+      "ref": "MAT.6.30",
+      "role": "das Grössere"
+     }
+    ],
+    "visual": "balance",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
    "reference": "MAT.6.25",
-   "text_de": "Jesus sagt: Sorgt euch nicht um euer Leben, was ihr essen, und um euren Leib, was ihr anziehen sollt.",
-   "reason_de": "Leitsatz, der in 6,31 und 6,34 wiederholt wird (Kriterium 2).",
-   "recognition_de": "Jesus spricht zu besorgten Jüngern, die auf Brot und Kleider blicken.",
+   "text_de": "Jesus sagt: Sorgt euch nicht um euer Leben, was ihr essen, und um euren Leib, was ihr anziehen sollt; ist nicht das Leben mehr als die Nahrung?",
+   "reason_de": "Leitsatz, der in 6,31 und 6,34 wiederkehrt (Kriterium 2); Anfang der Begründungskette.",
+   "recognition_de": "Erstes Feld der Pfeilkette: Jesus spricht zu besorgten Jüngern, die auf Brot und Kleider blicken; Beschriftung «Sorgt euch nicht».",
    "keywords": [
     "Sorgt euch nicht"
    ]
   },
   {
    "reference": "MAT.6.26-MAT.6.30",
-   "text_de": "Die Vögel säen und ernten nicht, und der Vater ernährt sie; die Lilien des Feldes mühen sich nicht ab und sind schöner gekleidet als Salomo.",
-   "reason_de": "Bekanntester Erkennungsmoment der Stelle (Kriterium 4); begründet die Kernaussage mit der Fürsorge des Vaters (Kriterium 1).",
-   "recognition_de": "Jesus zeigt auf Vögel am Himmel und Lilien auf dem Feld.",
+   "text_de": "Die Vögel säen und ernten nicht, und der Vater ernährt sie; die Lilien mühen sich nicht ab und sind schöner gekleidet als Salomo, und Gott kleidet sogar das Gras – wie viel mehr wird er euch versorgen, ihr Kleingläubigen.",
+   "reason_de": "Die beiden Schlüsse vom Kleineren aufs Grössere tragen die Begründung (Kriterium 1); bekanntester Erkennungsmoment (Kriterium 4).",
+   "recognition_de": "Belegkästen in der Pfeilkette, je als Waage: Vögel des Himmels ↔ ihr, «viel mehr wert»; Lilien und Gras des Feldes ↔ ihr, «viel mehr euch kleiden».",
    "keywords": [
     "Vögel des Himmels",
-    "Lilien des Feldes"
+    "Lilien des Feldes",
+    "viel mehr"
    ]
   },
   {
    "reference": "MAT.6.33",
    "text_de": "Sucht zuerst das Reich und seine Gerechtigkeit, und dies alles wird euch dazugegeben.",
-   "reason_de": "Positive Spitze des Abschnitts (Kriterium 1 und 2).",
-   "recognition_de": "Deutung für das Bild: Die Jünger lassen Brot und Kleider hinter sich und wenden sich dem Zeichen des Reiches zu (FIG-ZEICHEN-REICH-GOTTES).",
+   "reason_de": "Positive Weisung mit Zusage, Spitze der Kette (Kriterium 1 und 2).",
+   "recognition_de": "Letztes Feld der Pfeilkette, betont: Die Jünger wenden sich dem Zeichen des Reiches zu (FIG-ZEICHEN-REICH-GOTTES), Brot und Kleider kommen als «dazugegeben» hinzu (Zusage). Deutung für das Bild: das Zeichen steht für «das Reich».",
    "keywords": [
-    "Sucht aber zuerst das Reich"
+    "Sucht aber zuerst das Reich",
+    "dazugegeben"
    ]
   }
  ],
  "omitted_de": [
-  "Elle der Lebenszeit (6,27) und Gras im Ofen (6,30) – weitere Vergleiche mit derselben Aussage",
-  "Salomo (6,29) – Vergleichsfigur, im Lilienbild enthalten, keine handelnde Person",
-  "Plage des Tages (6,34) – Wiederholung des Leitsatzes"
+  "Elle der Lebenszeit (6,27) im Bild – zusätzliche Frage zum selben Gedanken; in der Struktur erhalten",
+  "Plage des Tages (6,34) im Bild – Wiederholung des Leitsatzes; in der Struktur als Schluss erhalten",
+  "Heiden als Gegenbild (6,32) im Bild – Nebenglied der Begründung; in der Struktur erhalten"
  ],
  "persons": [
   "FIG-JESUS",
-  "FIG-GRUPPE-JUENGER"
+  "FIG-GRUPPE-JUENGER",
+  "FIG-GOTT"
  ],
  "places": [
   "FIG-ORT-FELD"
@@ -61,17 +198,18 @@
    "fingerprint": "1d5945b126dbc93f"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Gegen den Text geprüft; Abweichungen vom Wortlaut bzw. ungekennzeichnete Deutungen wurden korrigiert.",
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Beweisgang mit Leitsatz «Sorgt euch nicht» (Anfang, Mitte, Schluss), beiden Schlüssen vom Kleineren aufs Grössere, allen Fragen und der Zusage 6,33 vollständig; Richtung stimmt.",
   "changes_de": [
-   "Moment 6,33, recognition_de: zeichenbar gemacht und als Deutung gekennzeichnet; «Reich Gottes» durch das Bildzeichen ersetzt, da der Text «das Reich» sagt."
+   "Rolle von 6,33: «aber» als Gegenweisung zu den Heiden (6,32) sichtbar gemacht",
+   "Label 6,34 auf den Wortlaut gebracht («denn …», «Es genügt dem Tag seine eigene Plage» statt «jedem Tag genügt»)"
   ]
  }
 }

@@ -6,18 +6,125 @@
  "level": "section",
  "reference": "MAT.5.21-MAT.5.26",
  "target": "TU-MAT-005-021-026",
- "core_de": "Nicht erst das Töten, schon der Zorn gegen den Bruder verfällt dem Gericht; darum geht Versöhnung sogar der Opfergabe vor.",
+ "core_de": "Nicht erst das Töten, schon der Zorn gegen den Bruder ist dem Gericht verfallen; darum geht die Versöhnung mit dem Bruder der Opfergabe vor, und mit dem Gegner soll man sich schnell einigen, bevor es vor den Richter kommt.",
  "mode": "instruction",
  "voice": {
   "speaker": "FIG-JESUS",
   "addressee": "FIG-GRUPPE-JUENGER"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "contrast",
+    "subtype": "Antithese «Ihr habt gehört … Ich aber sage euch»",
+    "range": "MAT.5.21-MAT.5.26",
+    "elements": [
+     {
+      "label": "Ihr habt gehört, dass zu den Alten gesagt worden ist: Du sollst nicht töten; wer tötet, wird dem Gericht verfallen",
+      "ref": "MAT.5.21",
+      "role": "«Ihr habt gehört …»",
+      "links": [
+       "MAT.5.22"
+      ]
+     },
+     {
+      "label": "Ich aber sage euch: Jeder, der seinem Bruder zürnt, wird dem Gericht verfallen",
+      "ref": "MAT.5.22",
+      "role": "«Ich aber sage euch …»",
+      "links": [
+       "MAT.5.21"
+      ],
+      "child": "s2"
+     },
+     {
+      "label": "Folgerung: sich versöhnen und einigen",
+      "ref": "MAT.5.23-MAT.5.26",
+      "role": "Folgerung («nun»)",
+      "child": "s3"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Jesus",
+       "to": "seine Jünger, vor den Menschenmengen (5,1–2)"
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "Ihr habt gehört … Ich aber sage euch",
+       "role": "gliedernd (1. Gegensatz)"
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "EXO.20.13",
+       "kind": "Bezug des Gebots «Du sollst nicht töten»; Zuordnung als Deutung, der Text nennt keine Quelle"
+      },
+      {
+       "ref": "DEU.5.17",
+       "kind": "Bezug des Gebots «Du sollst nicht töten» (Dekalog in Dtn); Zuordnung als Deutung"
+      }
+     ]
+    },
+    "visual": "columns",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "climax",
+    "subtype": "Steigerung",
+    "range": "MAT.5.22",
+    "elements": [
+     {
+      "label": "Wer seinem Bruder zürnt → wird dem Gericht verfallen",
+      "ref": "MAT.5.22",
+      "role": "Stufe 1"
+     },
+     {
+      "label": "Wer zu seinem Bruder «Raka!» sagt → wird dem Hohen Rat verfallen",
+      "ref": "MAT.5.22",
+      "role": "Stufe 2"
+     },
+     {
+      "label": "Wer sagt «Du Narr!» → wird dem Feuer der Hölle verfallen",
+      "ref": "MAT.5.22",
+      "role": "Stufe 3"
+     }
+    ],
+    "visual": "stairs",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "series",
+    "subtype": "zwei Beispiele der Versöhnung",
+    "range": "MAT.5.23-MAT.5.26",
+    "elements": [
+     {
+      "label": "Wenn du deine Gabe zum Altar bringst und dich erinnerst, dass dein Bruder etwas gegen dich hat → lass die Gabe dort, versöhne dich zuerst, dann bring sie dar",
+      "ref": "MAT.5.23-MAT.5.24",
+      "role": "Fall → Weisung"
+     },
+     {
+      "label": "Einige dich schnell mit deinem Gegner auf dem Weg → sonst übergibt er dich dem Richter, und du kommst nicht frei, bis du den letzten Rappen bezahlt hast",
+      "ref": "MAT.5.25-MAT.5.26",
+      "role": "Weisung → Warnung («damit nicht»)"
+     }
+    ],
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
    "reference": "MAT.5.21-MAT.5.22",
-   "text_de": "Jesus stellt dem Gebot «Du sollst nicht töten» entgegen: Schon wer seinem Bruder zürnt, verfällt dem Gericht.",
-   "reason_de": "Erste Gegenüberstellung «Ihr habt gehört … Ich aber sage euch» (Kriterium 2) und Kern des Abschnitts (Kriterium 1).",
-   "recognition_de": "Jesus spricht; zwei Brüder stehen sich zornig gegenüber.",
+   "text_de": "Jesus stellt dem Gebot «Du sollst nicht töten» entgegen: Jeder, der seinem Bruder zürnt, wird dem Gericht verfallen; wer ihn «Raka» oder «Narr» nennt, dem Hohen Rat und dem Feuer der Hölle.",
+   "reason_de": "Erste Gegenüberstellung «Ihr habt gehört … Ich aber sage euch» (Kriterium 2) und Kern des Abschnitts (Kriterium 1); ein Gegensatz mit seiner Steigerung zählt als ein Moment.",
+   "recognition_de": "Zwei Spalten: links «Du sollst nicht töten», rechts Jesus spricht, zwei Brüder stehen sich zornig gegenüber; darunter eine Treppe Gericht → Hoher Rat → Feuer der Hölle.",
    "keywords": [
     "Ich aber sage euch",
     "seinem Bruder zürnt"
@@ -26,17 +133,26 @@
   {
    "reference": "MAT.5.23-MAT.5.24",
    "text_de": "Wer seine Gabe zum Altar bringt und sich erinnert, dass sein Bruder etwas gegen ihn hat, soll die Gabe liegen lassen und sich zuerst versöhnen.",
-   "reason_de": "Konkretes Handlungsbild, an dem man die Stelle erkennt (Kriterium 4), und positive Folgerung des Kerns (Kriterium 1).",
+   "reason_de": "Konkretes Handlungsbild, an dem man die Stelle erkennt (Kriterium 4), und erste Folgerung des Kerns (Kriterium 1).",
    "recognition_de": "Ein Mann lässt seine Gabe vor dem Altar liegen und geht seinem Bruder entgegen.",
    "keywords": [
     "Altar",
     "versöhne dich zuerst"
    ]
+  },
+  {
+   "reference": "MAT.5.25-MAT.5.26",
+   "text_de": "Einige dich schnell mit deinem Gegner, solange ihr unterwegs seid, sonst übergibt er dich dem Richter, und du kommst nicht frei, bis du den letzten Rappen bezahlt hast.",
+   "reason_de": "Zweites Beispiel der Folgerung; gehört zur Reihe der Weisungen (Regel 1).",
+   "recognition_de": "Zwei Männer unterwegs reichen sich die Hand; im Hintergrund, gestrichelt, der Richter und eine Gefängnistür.",
+   "keywords": [
+    "Einige dich schnell",
+    "letzten Rappen"
+   ]
   }
  ],
  "omitted_de": [
-  "Raka und Narr, Hoher Rat und Hölle (5,22) – Steigerungsstufen, nicht Kern",
-  "Einigung mit dem Gegner auf dem Weg zum Richter, Gefängnis, letzter Rappen (5,25–26) – zweites Beispiel mit derselben Aussage"
+  "Kette Richter → Gerichtsdiener → Gefängnis (5,25) – Ausschmückung der Warnung, im Glied knapp zusammengefasst"
  ],
  "persons": [
   "FIG-JESUS",
@@ -52,15 +168,20 @@
    "fingerprint": "ffc7d3f370a0efb2"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Gegen den Text geprüft; Kernaussage, Momente, Textart und Sprecher stimmen, keine Änderung.",
-  "changes_de": []
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Gegensatz mit gestufter Folge (Gericht → Hoher Rat → Feuer der Hölle) und zwei Folgerungen («nun») richtig erkannt; alle Glieder vorhanden.",
+  "changes_de": [
+   "Seiten des Gegensatzes mit den Textformeln «Ihr habt gehört …» / «Ich aber sage euch …» statt «damals/jetzt» bezeichnet",
+   "Zeitform des Textes übernommen: «wird dem Gericht verfallen» statt «ist … verfallen»; eingefügtes «schon» in Glied und Moment gestrichen (steht nicht im Text)",
+   "Altar-Glied in Textfolge: Gabe bringen und sich erinnern → Gabe dort lassen, sich zuerst versöhnen",
+   "Querverweis DEU.5.17 neben EXO.20.13 ergänzt (OpenBible, höchste Stimmenzahl)"
+  ]
  }
 }

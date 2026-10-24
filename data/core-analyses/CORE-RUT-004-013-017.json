@@ -11,6 +11,116 @@
  "voice": {
   "speaker": "narrator"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Geburt und Lob",
+    "range": "RUT.4.13-RUT.4.17",
+    "elements": [
+     {
+      "label": "Boas nimmt Rut zur Frau; JHWH lässt sie schwanger werden, und sie gebiert einen Sohn",
+      "ref": "RUT.4.13",
+      "role": "Ausgang"
+     },
+     {
+      "label": "Lob der Frauen",
+      "ref": "RUT.4.14-RUT.4.15",
+      "role": "Deutung durch die Frauen",
+      "child": "s2"
+     },
+     {
+      "label": "Noomi legt das Kind auf ihren Schoss und wird ihm zur Pflegerin",
+      "ref": "RUT.4.16",
+      "role": "Bild der Wende"
+     },
+     {
+      "label": "Die Nachbarinnen: «Ein Sohn ist Noomi geboren!» – sie nennen ihn Obed; Erzähler: Er ist der Vater Isais, des Vaters Davids",
+      "ref": "RUT.4.17",
+      "role": "Name und Ausblick"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "die Frauen",
+       "to": "Noomi",
+       "refs": [
+        "RUT.4.14-RUT.4.15"
+       ]
+      },
+      {
+       "who": "die Nachbarinnen",
+       "to": "nicht angegeben (Ausruf bei der Namengebung)",
+       "refs": [
+        "RUT.4.17"
+       ]
+      },
+      {
+       "who": "Erzähler",
+       "to": "Leser",
+       "refs": [
+        "RUT.4.17"
+       ],
+       "note": "«Er ist der Vater Isais, des Vaters Davids»"
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "Löser",
+       "refs": [
+        "RUT.4.14"
+       ],
+       "role": "Abschluss des Leitworts"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "cause",
+    "subtype": "Lob → Ankündigung → Begründung",
+    "range": "RUT.4.14-RUT.4.15",
+    "elements": [
+     {
+      "label": "Gepriesen sei JHWH, der es dir heute nicht an einem Löser hat fehlen lassen",
+      "ref": "RUT.4.14",
+      "role": "Lob"
+     },
+     {
+      "label": "Sein Name werde bekannt in Israel",
+      "ref": "RUT.4.14",
+      "role": "Wunsch"
+     },
+     {
+      "label": "Er wird dir das Leben zurückbringen und dich in deinem Alter versorgen",
+      "ref": "RUT.4.15",
+      "role": "Folge (Ankündigung)"
+     },
+     {
+      "label": "denn deine Schwiegertochter, die dich liebt und für dich besser ist als sieben Söhne, hat ihn geboren",
+      "ref": "RUT.4.15",
+      "role": "Begründung"
+     }
+    ],
+    "features": {
+     "modality": [
+      {
+       "ref": "RUT.4.15",
+       "kind": "Ankündigung",
+       "note": "«er wird …» – Erwartung der Frauen, kein Bericht."
+      }
+     ]
+    },
+    "visual": "arrows",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
    "reference": "RUT.4.13",
@@ -23,8 +133,8 @@
   },
   {
    "reference": "RUT.4.14-RUT.4.15",
-   "text_de": "Die Frauen preisen JHWH, der Noomi nicht ohne Löser gelassen hat, und nennen Rut besser für sie als sieben Söhne.",
-   "reason_de": "Trägt die Kernaussage (Kriterium 1): Die Frauen aus 1,19 deuten jetzt die Wende; Rut wird ausdrücklich gewürdigt.",
+   "text_de": "Die Frauen preisen JHWH, der Noomi nicht ohne Löser gelassen hat: Das Kind werde ihr das Leben zurückbringen und sie im Alter versorgen, denn Rut, die sie liebt, hat es geboren, besser für sie als sieben Söhne.",
+   "reason_de": "Trägt die Kernaussage (Kriterium 1): Die Frauen aus 1,19 deuten jetzt die Wende; Rut wird ausdrücklich gewürdigt. Lob, Ankündigung und Begründung stehen als Kette in structure.",
    "recognition_de": "Die Frauen von Betlehem stehen jubelnd um Noomi.",
    "keywords": [
     "nicht an einem Löser",
@@ -34,7 +144,7 @@
   {
    "reference": "RUT.4.16-RUT.4.17",
    "text_de": "Noomi nimmt das Kind auf ihren Schoss; die Nachbarinnen rufen «Ein Sohn ist Noomi geboren!» und nennen ihn Obed, den Grossvater Davids.",
-   "reason_de": "Höhepunkt und Rahmen (Kriterium 2): Die leer gewordene Noomi hält ein Kind; Erkennungsmoment des Schlusses (Kriterium 4).",
+   "reason_de": "Höhepunkt und Rahmen (Kriterium 2): Noomi, die ohne Kinder zurückblieb (1,5), hält ein Kind (Deutung: Gegenbild zu «leer», 1,21); Erkennungsmoment des Schlusses (Kriterium 4).",
    "recognition_de": "Noomi sitzt mit dem kleinen Obed auf dem Schoss, umringt von Nachbarinnen.",
    "keywords": [
     "Sohn ist Noomi geboren",
@@ -44,8 +154,8 @@
   }
  ],
  "omitted_de": [
-  "Wunsch, dass sein Name in Israel bekannt werde (4,14b) – Wiederholung",
-  "Noomi als Pflegerin (4,16b) – im Bild der Schoss enthalten"
+  "Wunsch, dass sein Name in Israel bekannt werde (4,14b) – Nebenaussage des Lobs",
+  "Noomi als Pflegerin (4,16b) – im Bild des Schosses enthalten"
  ],
  "persons": [
   "FIG-RUT",
@@ -65,17 +175,18 @@
    "fingerprint": "032b978a4d775584"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Ohne Befund in diesem Abschnitt; Schlüsselwort auf Wunsch der Buchprüfung angepasst.",
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Geburt, Lob mit Ankündigung und Begründung, Namengebung richtig; der Ausblick auf David war den Nachbarinnen statt dem Erzähler zugeordnet.",
   "changes_de": [
-   "Moment 4,16–17: Schlüsselwort «auf ihren Schoss» ersetzt durch «Vaters Davids», damit die Station David nennt (der Schoss bleibt im Erkennungsmoment)"
+   "Glied 4,17: Ausblick auf Isai und David dem Erzähler zugeordnet, nicht den Nachbarinnen; Adressat der Nachbarinnen nicht erfunden («einander» → nicht angegeben).",
+   "reason_de Moment 3: Bezug auf «leer» als Deutung gekennzeichnet."
   ]
  }
 }
