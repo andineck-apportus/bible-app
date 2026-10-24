@@ -2,6 +2,12 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.90 — 2026-10-24 — Pfeile genau von Zelle zu Zelle
+
+Hinweis Andi Neck: Pfeile in den Strukturbildern waren leicht verschoben.
+- Pfeile zwischen Spalten, in Pfeilketten und Weichen beginnen und enden genau an den Zellen.
+- `pruefe_bilder.py` prüft das bei jedem Lauf (Anfang und Ende höchstens 3 Einheiten von einer Zelle, nicht darin).
+
 ## v0.89 — 2026-10-24 — Zeichen «Zuflucht» neu, Test fragt zuerst nach dem Abbild
 
 Rückmeldung Andi Neck: die Henne mit Küken (Rut 2,12 «unter seinen Flügeln») sah aus wie eine Fruchtplatte.

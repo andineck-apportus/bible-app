@@ -189,6 +189,11 @@ def label_w(v, fs=6.4):
     return _auto.lwidth(v, fs) + 6 if v else 0
 
 
+def link(svg, x1, y1, x2, y2):
+    """Verbindung zwischen zwei Zellen: Anfang und Ende als Daten, damit pruefe_bilder.py prüft, dass sie an den Zellen sitzen."""
+    return f'<g class="dg-link" data-a="{x1:.1f},{y1:.1f}" data-b="{x2:.1f},{y2:.1f}">{svg}</g>'
+
+
 def small_label(x, y, v, fs=6.8, fill="#8A6A2A", anchor="middle"):
     """Beschriftung (Pfeil, Zweig) auf einem hellen Schild, damit sie nichts überdeckt und lesbar bleibt; y = Grundlinie."""
     w = _auto.lwidth(v, fs) + 5
@@ -280,9 +285,11 @@ def _columns(C, d, w, y, mirror=False):
         if mid and len(r) == 2:
             ax = xs[0] + cw + GAP / 2
             if mirror:
-                out.append(arrow(ax + 1, y + h / 2, ax + mid + GAP - 1, y + h / 2, sw=1.1) + arrow(ax + mid + GAP - 1, y + h / 2, ax + 1, y + h / 2, sw=1.1))
+                a1, a2 = xs[0] + cw + 1.5, xs[1] - 1.5
+                out.append(link(arrow(a1, y + h / 2, a2, y + h / 2, sw=1.1) + arrow(a2, y + h / 2, a1, y + h / 2, sw=1.1), a1, y + h / 2, a2, y + h / 2))
             else:
-                out.append(arrow(ax, y + h / 2, ax + mid + GAP - 1, y + h / 2))
+                a1, a2 = xs[0] + cw + 1.5, xs[1] - 1.5  # Pfeil genau von Zelle zu Zelle (Hinweis Andi Neck 2026-10-24)
+                out.append(link(arrow(a1, y + h / 2, a2, y + h / 2), a1, y + h / 2, a2, y + h / 2))
         y += h + GAP
     return "".join(out), y - GAP
 
@@ -313,14 +320,14 @@ def _arrows(C, d, w, y, chain=False):
         lab = links[k] if k < len(links) else None
         if abs(y1 - y2) < 1:  # gleiche Zeile
             ax1, ay, ax2 = x1 + w1 + 1.5, y1 + h1 / 2, x2 - 1.5
-            out.append(arrow(ax1, ay, ax2, ay, head=not chain))
+            out.append(link(arrow(ax1, ay, ax2, ay, head=not chain), ax1, ay, ax2, ay))
             if lab:
                 out.append(small_label((ax1 + ax2) / 2, ay - 4, lab, 6.2))
         else:  # nächste Zeile: von unten Mitte zum Anfang der nächsten Zeile
             sx, sy, ex, ey = x1 + w1 / 2, y1 + h1 + 1, x2 + w2 / 2, y2 - 1.5
             midy = (sy + ey) / 2
             path = f'M{sx:.1f} {sy:.1f}V{midy:.1f}H{ex:.1f}V{ey - 4:.1f}'
-            out.append(f'<path d="{path}" fill="none" stroke="{INK}" stroke-width="1.4" stroke-linejoin="round"/>' + arrow(ex, ey - 5, ex, ey, head=not chain))
+            out.append(link(f'<path d="{path}" fill="none" stroke="{INK}" stroke-width="1.4" stroke-linejoin="round"/>' + arrow(ex, ey - 5, ex, ey, head=not chain), sx, sy, ex, ey))
             if lab:
                 out.append(small_label((sx + ex) / 2, midy - 2.5, lab, 6.2))
     return "".join(out), y
@@ -337,8 +344,8 @@ def _switch(C, d, w, y):
     hb = max(C.height(d["yes"], bw), C.height(d["no"], bw))
     for i, (k, lk) in enumerate((("yes", "yes_label"), ("no", "no_label"))):
         bx = 8 + i * (bw + 10)
-        out.append(f'<path d="M{cx:.1f} {y + h:.1f}V{y + h + 8:.1f}H{bx + bw / 2:.1f}V{y2 - 5:.1f}" fill="none" stroke="{INK}" stroke-width="1.4" stroke-linejoin="round"/>'
-                   + arrow(bx + bw / 2, y2 - 6, bx + bw / 2, y2 - 1))
+        out.append(link(f'<path d="M{cx:.1f} {y + h:.1f}V{y + h + 8:.1f}H{bx + bw / 2:.1f}V{y2 - 5:.1f}" fill="none" stroke="{INK}" stroke-width="1.4" stroke-linejoin="round"/>'
+                   + arrow(bx + bw / 2, y2 - 6, bx + bw / 2, y2 - 1.5), cx, y + h, bx + bw / 2, y2 - 1.5))
         if d.get(lk):
             out.append(small_label(bx + bw / 2 + (8 if i == 0 else -8), y + h + 18, d[lk], 6.6, anchor="start" if i == 0 else "end"))
         out.append(C.draw(d[k], bx, y2, bw, hb, "new" if i == 0 else "old"))

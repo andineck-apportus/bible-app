@@ -2,6 +2,7 @@
 """Anordnung der Bilder im Browser prüfen (BILDPROZESS.md, Leitlinie 9; Hinweis Andi Neck 2026-10-24):
 - Text in einer Zelle eines Strukturbilds ragt nicht über die Zelle hinaus;
 - Beschriftungen von Pfeilen und Zweigen überdecken keine Zelle und keine andere Beschriftung;
+- Pfeile zwischen Zellen beginnen und enden an einer Zelle (nicht daneben, nicht darin);
 - keine Zeile eines Rasters oder einer Pfeilkette lässt grossen Leerraum (eine Zelle ohne Nachbarn füllt die Breite);
 Geprüft wird je Sprache (de, gsw), mit der echten Schrift im Browser.
 
@@ -47,6 +48,12 @@ for(const lang of ['de','gsw']){
           rs.forEach(b=>{const k=Math.round(b.y);(rows[k]=rows[k]||[]).push(b);});
           Object.values(rows).forEach(r=>{const span=Math.max(...r.map(b=>b.x+b.width))-Math.min(...r.map(b=>b.x));
             if(span<full*.8)res.push(`${id} ${nm} [${lang}]: Leerraum – Zeile mit ${r.length} Zelle(n) füllt nur ${Math.round(100*span/full)} % der Breite (${g.dataset.visual})`);});});
+        // Verbindungen: Anfang und Ende sitzen an einer Zelle (höchstens 3 Einheiten Abstand, Hinweis Andi Neck 2026-10-24)
+        const crs=[...tile.querySelectorAll('g.dg-cell>rect')].map(r=>r.getBBox());
+        const dist=(x,y,R)=>{const dx=Math.max(R.x-x,0,x-(R.x+R.width)),dy=Math.max(R.y-y,0,y-(R.y+R.height));return Math.hypot(dx,dy);};
+        tile.querySelectorAll('g.dg-link').forEach(L=>{for(const k of ['a','b']){const [x,y]=L.dataset[k].split(',').map(Number);
+          const dmin=Math.min(...crs.map(R=>dist(x,y,R)));if(!(dmin<=3))res.push(`${id} ${nm} [${lang}]: Pfeil-${k==='a'?'Anfang':'Ende'} nicht an einer Zelle (Abstand ${dmin.toFixed(1)})`);
+          if(crs.some(R=>x>R.x+2&&x<R.x+R.width-2&&y>R.y+2&&y<R.y+R.height-2))res.push(`${id} ${nm} [${lang}]: Pfeil-${k==='a'?'Anfang':'Ende'} liegt in einer Zelle`);}});
         // Beschriftungen
         const cells=[...tile.querySelectorAll('g.dg-cell>rect')].map(r=>r.getBBox());
         const labs=[...tile.querySelectorAll('g.dg-label')].map(g=>({g,B:g.querySelector('rect').getBBox()}));
