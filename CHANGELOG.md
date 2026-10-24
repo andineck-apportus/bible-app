@@ -2,6 +2,12 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.92 — 2026-10-24 — Mt 5,37 «Euer Ja sei ein Ja»
+
+Hinweis Andi Neck:
+- **Mt 5,37** lautet jetzt «Euer Ja sei ein Ja, euer Nein ein Nein; was aber darüber hinausgeht, ist vom Bösen» (Züridüütsch «Eues Ja söll es Ja sii, eues Nei es Nei; …»). Die wörtliche Fassung «Eure Rede aber sei: «Ja, ja», «nein, nein»» steht als wörtlichere Fassung in den Übersetzungsentscheidungen, weil «jaja/neinnein» heute abschwächend klingt (Grundsatz in ENTSCHEIDUNGEN.md). Frühere Fassung im `revision_log`.
+- Angepasst: Kernanalysen und Zusammenfassungen Mt 5,33–37 und Mt 5, Texteinheit, Bild Mt 5,33–37 (Feld 3, Stichwortband) und Kapitelbild Mt 5.
+
 ## v0.91 — 2026-10-24 — Tod und Böses nicht ausblenden; Abstand zum Rahmen
 
 Hinweise Andi Neck:
