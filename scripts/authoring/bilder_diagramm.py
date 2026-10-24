@@ -121,7 +121,7 @@ class Cells:
         return (f'<circle cx="{x + s / 2:.1f}" cy="{y + s / 2:.1f}" r="{s / 2 + 1:.1f}" fill="#FFFDF6" stroke="{INK}" stroke-width=".8"/>'
                 + self.c.r_icon(fid, x + s * .08, y + s * .04, s * .84, s * .9))
 
-    ICON_H = 16
+    ICON_H = 20  # gut erkennbar (Hinweis Andi Neck 2026-10-24: Zeichen mit Händen zu klein)
     PAD = 4
 
     def height(self, z, w):
@@ -231,7 +231,7 @@ def diagram(comp, d):
     if fn is None:
         raise SystemExit(f"FEHLER: Darstellung {v} im Zeichner noch nicht umgesetzt")
     s, y = fn(C, d, w, y)
-    out.append(s)
+    out.append(f'<g class="dg-vis" data-visual="{v}">{s}</g>')
     return "".join(out), w, max(56, y + 8)
 
 
@@ -239,12 +239,13 @@ def _grid(C, d, w, y, cells=None, cols=None, tone=None):
     cells = cells if cells is not None else d.get("cells", [])
     cols = cols or d.get("cols") or (4 if w > 300 else 2)
     cols = max(1, min(cols, len(cells)))
-    cw = (w - 16 - GAP * (cols - 1)) / cols
     out = []
-    for r in range(0, len(cells), cols):
-        row = cells[r:r + cols]
+    rows = [cells[r:r + cols] for r in range(0, len(cells), cols)]
+    # jede Zeile füllt die Breite, auch eine kürzere letzte (keine Zelle ohne Nachbarn mit Leerraum daneben, Hinweis Andi Neck 2026-10-24)
+    for row in rows:
+        cw = (w - 16 - GAP * (len(row) - 1)) / len(row)
         h = max(C.height(z, cw) for z in row)
-        x = 8 + (w - 16 - (len(row) * cw + GAP * (len(row) - 1))) / 2
+        x = 8
         for z in row:
             out.append(C.draw(z, x, y, cw, h, tone))
             x += cw + GAP
@@ -300,11 +301,12 @@ def _arrows(C, d, w, y, chain=False):
     out, boxes = [], []
     rows = [cells[i:i + per] for i in range(0, len(cells), per)]
     for ri, row in enumerate(rows):
-        h = max(C.height(z, cw) for z in row)
+        rw = (w - 16 - gap * (len(row) - 1)) / len(row)  # Zeile füllt die Breite, auch die letzte
+        h = max(C.height(z, rw) for z in row)
         for ci, z in enumerate(row):
-            x = 8 + ci * (cw + gap)
-            out.append(C.draw(z, x, y, cw, h))
-            boxes.append((x, y, cw, h))
+            x = 8 + ci * (rw + gap)
+            out.append(C.draw(z, x, y, rw, h))
+            boxes.append((x, y, rw, h))
         y += h + (18 if ri < len(rows) - 1 else 0)
     for k in range(len(boxes) - 1):
         (x1, y1, w1, h1), (x2, y2, w2, h2) = boxes[k], boxes[k + 1]

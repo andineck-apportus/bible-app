@@ -2,6 +2,7 @@
 """Anordnung der Bilder im Browser prüfen (BILDPROZESS.md, Leitlinie 9; Hinweis Andi Neck 2026-10-24):
 - Text in einer Zelle eines Strukturbilds ragt nicht über die Zelle hinaus;
 - Beschriftungen von Pfeilen und Zweigen überdecken keine Zelle und keine andere Beschriftung;
+- keine Zeile eines Rasters oder einer Pfeilkette lässt grossen Leerraum (eine Zelle ohne Nachbarn füllt die Breite);
 Geprüft wird je Sprache (de, gsw), mit der echten Schrift im Browser.
 
     python3 scripts/authoring/pruefe_bilder.py [PRÄFIX …]     # z. B. RUT MAT-005; ohne Präfix alle Anime-Bilder
@@ -39,6 +40,13 @@ for(const lang of ['de','gsw']){
           c.querySelectorAll('text').forEach(t=>{if(!vis(t))return;const B=t.getBBox();
             if(B.x<R.x-tol||B.y<R.y-tol||B.x+B.width>R.x+R.width+tol||B.y+B.height>R.y+R.height+tol)
               res.push(`${id} ${nm} [${lang}]: Text ragt über die Zelle: «${t.textContent.slice(0,50)}»`);});});
+        // Leerraum: in Raster, Pfeilkette, Kette und Spalten füllt jede Zeile die Breite (Hinweis Andi Neck 2026-10-24)
+        tile.querySelectorAll('g.dg-vis').forEach(g=>{if(!['grid','arrows','tree','columns'].includes(g.dataset.visual))return;
+          const rs=[...g.querySelectorAll(':scope > g.dg-cell > rect, :scope g.dg-cell > rect')].map(r=>r.getBBox());if(!rs.length)return;
+          const full=Math.max(...rs.map(b=>b.x+b.width))-Math.min(...rs.map(b=>b.x));const rows={};
+          rs.forEach(b=>{const k=Math.round(b.y);(rows[k]=rows[k]||[]).push(b);});
+          Object.values(rows).forEach(r=>{const span=Math.max(...r.map(b=>b.x+b.width))-Math.min(...r.map(b=>b.x));
+            if(span<full*.8)res.push(`${id} ${nm} [${lang}]: Leerraum – Zeile mit ${r.length} Zelle(n) füllt nur ${Math.round(100*span/full)} % der Breite (${g.dataset.visual})`);});});
         // Beschriftungen
         const cells=[...tile.querySelectorAll('g.dg-cell>rect')].map(r=>r.getBBox());
         const labs=[...tile.querySelectorAll('g.dg-label')].map(g=>({g,B:g.querySelector('rect').getBBox()}));
