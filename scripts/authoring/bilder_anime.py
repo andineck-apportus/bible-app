@@ -1048,9 +1048,10 @@ PANEL_SHAPES = [[(2, 2), (184, 2), (184, 136), (2, 138)], [(2, 2), (184, 4), (18
                 [(2, 4), (184, 2), (184, 138), (2, 138)], [(2, 2), (184, 2), (184, 138), (2, 136)]]
 
 
-def apanel(i, n, body, num=True):
+def apanel(i, n, body, num=True, size=(186, 140)):
     pid = f"an-cp-{CUR[0]}-{n}"
-    poly = " ".join(f"{x},{y}" for x, y in PANEL_SHAPES[i % 4])
+    sx, sy = (size[0] - 2) / 184, (size[1] - 2) / 138  # Kachel nach Inhalt (Strukturbilder): Form gestreckt, Strich gleich
+    poly = " ".join(f"{round(x * sx, 1):g},{round(y * sy, 1):g}" for x, y in PANEL_SHAPES[i % 4])
     return (f'<clipPath id="{pid}"><polygon points="{poly}"/></clipPath><g clip-path="url(#{pid})"><polygon points="{poly}" fill="#F6EAD7"/>{body}</g>'
             f'<polygon points="{poly}" fill="none" stroke="{INK}" stroke-width="2.2" stroke-linejoin="round"/>'
             + (f'<circle cx="14" cy="14" r="8.5" fill="#FFFDF6" stroke="{INK}" stroke-width="1.2"/><text x="14" y="18" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="{INK}">{n}</text>' if num else ''))
@@ -1059,8 +1060,45 @@ def apanel(i, n, body, num=True):
 BAND_H = 20  # Höhe des Stichwortbands unter einem Feld
 
 
-def alayout(bodies, bands=None):
+def alayout_free(bodies, bands, sizes):
+    """Kacheln unterschiedlicher Grösse: höchstens zwei nebeneinander, breite Kacheln (Strukturbilder mit span 2) allein in einer
+    Zeile, eine einzelne Kachel mittig; das Band steht direkt unter seiner Kachel."""
     n = len(bodies)
+    bands = bands or [""] * n
+    bh = [(b[1] + 6) if b else 0 for b in bands]
+    rows, cur = [], []
+    for i, (w, h) in enumerate(sizes):
+        if w > 200:
+            if cur:
+                rows.append(cur)
+                cur = []
+            rows.append([i])
+        else:
+            cur.append(i)
+            if len(cur) == 2:
+                rows.append(cur)
+                cur = []
+    if cur:
+        rows.append(cur)
+    width = 380 if any(len(r) == 2 or sizes[r[0]][0] > 200 for r in rows) else 194
+    out, y = [], 4
+    for r in rows:
+        rh = max(sizes[i][1] + bh[i] for i in r)
+        tot = sum(sizes[i][0] for i in r) + 2 * (len(r) - 1)
+        x = (width - tot) / 2
+        for i in r:
+            w, h = sizes[i]
+            band = f'<g transform="translate({(w - 186) / 2:.1f} {h + 2})">{bands[i][0]}</g>' if bands[i] else ""
+            out.append(f'<g transform="translate({x:.1f} {y})">' + apanel(i, i + 1, bodies[i], num=n > 1, size=(w, h)) + band + "</g>")
+            x += w + 2
+        y += rh + 4
+    return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {y}">' + "".join(out) + "</svg>"
+
+
+def alayout(bodies, bands=None, sizes=None):
+    n = len(bodies)
+    if sizes and any(s != (186, 140) for s in sizes):
+        return alayout_free(bodies, bands, sizes)
     if bands and any(bands):  # Worte im Bild: Band unter jedem Feld, Raster entsprechend höher
         bh = max([b[1] for b in bands if b] + [16]) + 4
         bands = [b[0] if b else "" for b in bands]
@@ -1447,7 +1485,7 @@ def auto_svg(suffix, vb):
     c.vbmap = vb
     c.uid = "a" + suffix.lower()
     bodies = [c.panel(p) for p in brief["panels"]]
-    return alayout(bodies, getattr(c, "bands", None))
+    return alayout(bodies, getattr(c, "bands", None), getattr(c, "sizes", None))
 
 
 ILL_UPPER_ALT = {'BIBLE': ('Comic in vier Bildern ohne Text: 1 Am Berg spricht Gott (Strahlenkranz mit dem Gottesnamen) und gibt die Tafeln; Mose hält sie, das Volk staunt. 2 Jesus, das Kreuz und das leere Grab. 3 Die leuchtende Stadt mit Strom und Baum, darüber der Strahlenkranz. 4 Schriftrolle, Leier, ein Prophet und ein Brief.', 'Comic i vier Bilder ohni Text: 1 Am Bärg redt Gott (Strahlechranz mit em Gottesname) und git d Tafle; de Mose hebt si, s Volk stuunt. 2 De Jesus, s Chrüz und s lääre Grab. 3 Di lüüchtend Stadt mit Strom und Baum, drüber de Strahlechranz. 4 Schriftrolle, Leier, en Prophet und en Brief.'), 'OT': ('Comic in vier Bildern ohne Text: 1 Gott spricht «Licht»; Sonne, Mond, Sterne und Pflanze entstehen. 2 Mose hebt den Stab, das Volk geht froh durch das geteilte Meer. 3 Am Berg spricht Gott und gibt die Tafeln; Mose hält sie, das Volk staunt. 4 Jerusalem mit Rissen, Menschen in Tränen auf dem Weg weg und zurück; ein Prophet spricht von Hoffnung (Spross).', 'Comic i vier Bilder ohni Text: 1 Gott redt «Liecht»; Sunne, Mond, Stärn und Pflanze entstönd. 2 De Mose hebt de Stab, s Volk gaat froh dur s teilte Meer. 3 Am Bärg redt Gott und git d Tafle; de Mose hebt si, s Volk stuunt. 4 Jerusalem mit Riss, Mänsche i Träne uf em Wäg ewäg und zrugg; en Prophet redt vo Hoffnig (Schoss).'), 'NT': ('Comic in vier Bildern ohne Text: 1 Jesus spricht zur aufmerksamen Menge (Gottesname, Umkehr-Pfeil, Herz). 2 Kreuz und leeres Grab. 3 Die Geist-Taube über zwei Jüngern mit Flammen und leuchtenden Augen; Pfeile zu einer Gemeinde, ein Brief. 4 Strahlenkranz, Waage und die leuchtende Stadt.', 'Comic i vier Bilder ohni Text: 1 De Jesus redt zur ufmerksame Mängi (Gottesname, Umchehr-Pfiil, Härz). 2 Chrüz und lääres Grab. 3 D Geischt-Tube über zwei Jünger mit Flamme und lüüchtende Auge; Pfiil zu ere Gmeind, en Brief. 4 Strahlechranz, Waag und di lüüchtend Stadt.'), 'GROUP-01': ('Comic in zwei Bildern ohne Text: 1 Gott spricht «Licht»; Sonne, Mond, Sterne und Pflanze entstehen. 2 Hinter dem Volk das geteilte Meer; am Berg spricht Gott und gibt die Tafeln, Mose hält sie, das Volk staunt.', 'Comic i zwei Bilder ohni Text: 1 Gott redt «Liecht»; Sunne, Mond, Stärn und Pflanze entstönd. 2 Hinder em Volk s teilte Meer; am Bärg redt Gott und git d Tafle, de Mose hebt si, s Volk stuunt.'), 'GROUP-02': ('Comic in zwei Bildern ohne Text: 1 Ein König mit Krone vor Jerusalem, zufriedene Menschen. 2 Jerusalem mit Rissen; Menschen in Tränen, Weg weg und gestrichelt zurück.', 'Comic i zwei Bilder ohni Text: 1 En Chünig mit Chrone vor Jerusalem, zfrideni Mänsche. 2 Jerusalem mit Riss; Mänsche i Träne, Wäg ewäg und gstrichlet zrugg.'), 'GROUP-03': ('Comic in drei Bildern ohne Text: 1 Ein Mensch mit Leier spricht mit geschlossenen Augen zu Gott (Träne und Freude). 2 Braut und Bräutigam lächeln unter der Girlande. 3 Ein Mensch mit Schriftrolle denkt nach; Sanduhr und Waage.', 'Comic i drüü Bilder ohni Text: 1 En Mänsch mit Leier redt mit zuene Auge zu Gott (Träne und Fröid). 2 Brut und Brüütigam lächled under de Girlande. 3 En Mänsch mit Schriftrolle dänkt nache; Sanduhr und Waag.'), 'GROUP-04': ('Comic in zwei Bildern ohne Text: 1 Ein Prophet spricht zur besorgten Menge (Gottesname, Waage, Umkehr-Pfeil). 2 Jerusalem mit Rissen, Menschen in Tränen weggeführt; der Prophet spricht von Hoffnung (Spross).', 'Comic i zwei Bilder ohni Text: 1 En Prophet redt zur bsorgte Mängi (Gottesname, Waag, Umchehr-Pfiil). 2 Jerusalem mit Riss, Mänsche i Träne wäggfüert; de Prophet redt vo Hoffnig (Schoss).'), 'GROUP-05': ('Comic in zwei Bildern ohne Text: 1 Zwölf kleine Schriftrollen; ein Prophet spricht zur besorgten Menge (Gottesname, Waage, Umkehr-Pfeil). 2 Strahlenkranz über dem heilen Jerusalem, ein Spross, Menschen freuen sich.', 'Comic i zwei Bilder ohni Text: 1 Zwölf chlini Schriftrolle; en Prophet redt zur bsorgte Mängi (Gottesname, Waag, Umchehr-Pfiil). 2 Strahlechranz über em ganze Jerusalem, en Schoss, Mänsche fröied sich.'), 'GROUP-06': ('Comic in zwei Bildern ohne Text: 1 Vier kleine Schriftrollen; Jesus spricht zur aufmerksamen Menge (Gottesname, Umkehr-Pfeil, Herz). 2 Kreuz und leeres Grab.', 'Comic i zwei Bilder ohni Text: 1 Vier chlini Schriftrolle; de Jesus redt zur ufmerksame Mängi (Gottesname, Umchehr-Pfiil, Härz). 2 Chrüz und lääres Grab.'), 'GROUP-07': ('Comic in zwei Bildern ohne Text: 1 Die Geist-Taube kommt herab, über drei strahlenden Jüngern Flammen, dahinter Jerusalem. 2 Von Jerusalem gehen Pfeile zu einer Gemeinde; ein Schiff; Paulus mit einem Soldaten.', 'Comic i zwei Bilder ohni Text: 1 D Geischt-Tube chunnt abe, über drüü strahlende Jünger Flamme, dehinder Jerusalem. 2 Vo Jerusalem gönd Pfiil zu ere Gmeind; es Schiff; de Paulus mit eme Soldat.'), 'GROUP-08': ('Paulus spricht (Sprechblase: Kreuz und Herz); ein Brief fliegt zu einer Gemeinde vor einem Haus.', 'De Paulus redt (Sprächblase: Chrüz und Härz); en Brief flügt zu ere Gmeind vor eme Huus.'), 'GROUP-09': ('Drei Briefe gehen zu einer Gemeinde vor einem Haus; über der Gemeinde Herzen.', 'Drüü Brief gönd zu ere Gmeind vor eme Huus; über de Gmeind Härz.'), 'GROUP-10': ('Comic in zwei Bildern ohne Text: 1 Oben gross der Strahlenkranz; darunter schauen ein König und ein Soldat erstaunt hinauf, daneben Menschen in Tränen. 2 Die leuchtende Stadt mit Strom und Baum, darüber der Strahlenkranz; Menschen freuen sich.', 'Comic i zwei Bilder ohni Text: 1 Obe gross de Strahlechranz; drunder lueged en Chünig und en Soldat erstuunt ufe, dernäbe Mänsche i Träne. 2 Di lüüchtend Stadt mit Strom und Baum, drüber de Strahlechranz; Mänsche fröied sich.'), 'JHN-002': ('Comic in drei Bildern ohne Text: 1 Hochzeit: Jesus, Wasserkrüge, Pfeil zum Weinkrug, ein Stern; Braut und Bräutigam lächeln. 2 Jesus hebt die Geissel über dem davonlaufenden Schaf, ein Händler weicht zurück. 3 Menschen mit leuchtenden Augen und Herzen; eine gestrichelte Linie, Jesus wendet sich ernst ab.', 'Comic i drüü Bilder ohni Text: 1 Hochziit: de Jesus, Wasserchrüeg, Pfiil zum Wiichrueg, en Stern; Brut und Brüütigam lächled. 2 De Jesus hebt d Geissle über em Schaf, wo dervo rennt, en Händler wiicht zrugg. 3 Mänsche mit lüüchtende Auge und Härz; e gstrichleti Linie, de Jesus wändet sich ernscht ab.'), 'JHN': ('Ein brauner Adler mit ausgebreiteten Flügeln unter einem Licht mit Strahlen und funkelnden Sternchen, darunter eine Schriftrolle, auf nachtblauem Grund.', 'En brune Adler mit uusbreitete Flügel under eme Liecht mit Strahle und funkelnde Stärnli, drunder e Schriftrolle, uf nachtblauem Grund.')}

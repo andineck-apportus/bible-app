@@ -155,3 +155,17 @@ Aufbau wie in `bildlexikon_daten/JON.json`: `id` (`FIG-…`, gleiche Namen für 
 für «kommt vor in»). Personen und Rollen brauchen ein Aussehen in `figuren_daten`, alles andere eine Zeichnung in `bildsymbole_daten`
 (`{"FIG-…": {"sym": "ill-…", "vb": "0 0 w h", "svg": "…", "place": "floor", "size": [w, h]}}`, flache Formen, Strich `#3B3226`,
 keine Schrift).
+
+## Strukturbilder (`diagram`)
+
+Seit 2026-10-24 («Struktur zuerst», [STRUKTURKATALOG.md](STRUKTURKATALOG.md)) kann ein Feld statt einer Bühne ein Strukturbild
+tragen: `"diagram": {"visual": …}` mit einer der Darstellungen grid, columns, mirror, arrows, switch, outline, dialogue,
+timeline, balance, stairs, levels, rings, tree. Aufbau und Felder stehen im Kopf von `scripts/authoring/bilder_diagramm.py`.
+
+- Wahl nach der Struktur der Kernanalyse (`structure.units[].visual`); Erzählungen bleiben Szenen.
+- Jede Zelle hat ihre Worte je Sprache (`{"de": …, "gsw": …}`), kurz, für sich verständlich, grammatisch richtig; Glieder
+  vollständig (eine Reihe mit acht Gliedern zeigt acht Zellen).
+- Sprecher als Porträt mit Titelblase (`speaker`, `title`), Zeichen oder Porträts in Zellen (`icons`, `who`), wo sie das
+  Erkennen erleichtern.
+- Die Kachel ist so gross wie ihr Inhalt; `span: 2` nimmt die ganze Breite (für breite Reihen, Pfeilketten, Raster).
+

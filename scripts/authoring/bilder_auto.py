@@ -435,6 +435,14 @@ class Composer:
         return meta(t, self.lex, self.extra)
 
     def panel(self, p):
+        if p.get("diagram"):  # Strukturbild (bilder_diagramm.py): Kachel nach Inhalt, Stichwortband wie bei Szenen
+            import bilder_diagramm
+            body, w, h = bilder_diagramm.diagram(self, p["diagram"])
+            self.sizes = getattr(self, "sizes", []) + [(w, h)]
+            self.bands = getattr(self, "bands", [])
+            self.bands.append(word_band(p["keywords"], letter=bool(p.get("letter"))) if p.get("keywords") else "")
+            return body
+        self.sizes = getattr(self, "sizes", []) + [(W, H)]
         self._n += 1
         self._zx = None
         L = plan(p, self.lex, self.extra)

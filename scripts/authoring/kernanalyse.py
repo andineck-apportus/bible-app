@@ -16,7 +16,8 @@ Eine Einheit:
                    "form_type": "lament" (nur bei pattern form), "range": "MAT.5.3-MAT.5.12",
                    "elements": [{"label": "Arme im Geist → Himmelreich", "ref": "MAT.5.3", "role": "…", "links": ["…"],
                                  "child": "s2", "row": "…", "col": "…", "empty": true}],
-                   "features": {"speakers": …, "pattern_break": …}, "visual": "grid",
+                   "features": {"speakers": [{"who": "FIG-JESUS", "to": "FIG-GRUPPE-JUENGER"}],
+                                "modality": [{"kind": "Zusage", "ref": "MAT.5.4", "note": "…"}]}, "visual": "grid",
                    "basis": "text|proposal", "source_de": "… (Pflicht bei proposal)"}]}}
 Strukturanalyse nach docs/STRUKTURKATALOG.md («Struktur zuerst»): Baumuster, Glieder, Merkmale und Darstellung aus den Listen
 dort. Eine Reihe, ein Raster oder ein Gegensatz zählt als ein Moment; seine Glieder stehen vollständig in `structure`.
@@ -53,6 +54,7 @@ FORM_TYPES = {"lament", "hymn", "thanksgiving", "liturgy", "lawsuit", "woe", "ca
               "regnal", "case_ruling", "letter", "household", "testament"}
 FEATURES = {"speakers", "stance", "authority", "genre", "leitwort", "pattern_break", "open_end", "modality", "wordplay",
             "text_forms", "interpretation", "crossref", "chronology", "numbers", "weight"}
+FEATURE_KEYS = {"ref", "refs", "note", "word", "role", "who", "to", "kind"}  # Merkmal: Liste solcher Objekte
 VISUALS = {"scenes", "timeline", "lanes", "grid", "columns", "mirror", "switch", "arrows", "tree", "rings", "circle", "stairs",
            "map", "model", "figure", "levels", "dialogue", "balance", "outline", "network"}
 LEX = {p.stem for p in (D / "illustrations/lexicon").glob("FIG-*.json")}
@@ -165,9 +167,15 @@ def check_structure(u, errs):
             errs.append(f"{xid}: basis muss text oder proposal sein")
         if x.get("basis") == "proposal" and not x.get("source_de"):
             errs.append(f"{xid}: Forschungsvorschlag ohne source_de")
-        for k in (x.get("features") or {}):
+        for k, v in (x.get("features") or {}).items():
             if k not in FEATURES:
                 errs.append(f"{xid}: Merkmal {k} nicht im Katalog")
+            if not isinstance(v, list) or not all(isinstance(i, dict) and i and set(i) <= FEATURE_KEYS for i in v):
+                errs.append(f"{xid}: Merkmal {k}: Liste von Objekten mit Schlüsseln aus {sorted(FEATURE_KEYS)} verlangt")
+            for i in v if isinstance(v, list) else []:
+                for r in ([i["ref"]] if isinstance(i, dict) and i.get("ref") else []) + (i.get("refs") or [] if isinstance(i, dict) else []):
+                    if k not in ("crossref", "leitwort") and not set(verses(r)) <= unit_vs:
+                        errs.append(f"{xid}: Merkmal {k}: Stelle {r} liegt nicht in der Einheit")
         rv = set(verses(x["range"])) if x.get("range") else unit_vs
         if not rv or not rv <= unit_vs:
             errs.append(f"{xid}: range {x.get('range')} liegt nicht in der Einheit")
