@@ -9,6 +9,7 @@ Ein Feld im Bildauftrag trägt dafür `diagram` statt einer Bühne:
                 "span": 1|2, "cols": 2,
                 "cells": [Zelle, …]                       # grid, arrows, stairs, timeline, outline, tree
                 "head": [Wort, Wort], "rows": [[Zelle, Zelle], …]   # columns, mirror
+                "head_tones": ["old", "new"], "tones": false, "arrow": false   # columns: Farben, ohne Pfeil (keine Paare)
                 "links": [Wort, …]                        # arrows: Beschriftung je Pfeil (z. B. «denn»), optional
                 "cond": Zelle, "yes": Zelle, "no": Zelle, "yes_label": Wort, "no_label": Wort   # switch
                 "left": [Zelle], "right": [Zelle], "verdict": Wort   # balance
@@ -163,7 +164,7 @@ class Cells:
         if z.get("empty") and not (z.get("a") or z.get("b")):
             out.append(f'<text x="{x + w / 2:.1f}" y="{y + h / 2 + 3:.1f}" text-anchor="middle" font-family="sans-serif" font-size="8" fill="{MUTED}">–</text>')
         if z.get("strike"):
-            out.append(f'<path d="M{x + 4:.1f} {y + h - 4:.1f}L{x + w - 4:.1f} {y + 4:.1f}" stroke="#B0413E" stroke-width="1.6" stroke-linecap="round" opacity=".85"/>')
+            out.append(f'<path d="M{x + 4:.1f} {y + h - 4:.1f}L{x + w - 4:.1f} {y + 4:.1f}" stroke="#B0413E" stroke-width="1.3" stroke-linecap="round" opacity=".5"/>')
         return "".join(out)
 
 
@@ -246,7 +247,10 @@ def _columns(C, d, w, y, mirror=False):
     if head:
         hh = max(block_h(hd, 7.6, cw - 6) for hd in head) + 6
         for i, hd in enumerate(head):
-            out.append(f'<rect x="{xs[i]:.1f}" y="{y:.1f}" width="{cw:.1f}" height="{hh:.1f}" rx="3" fill="{"#E3D4BA" if i == 0 and ncol == 2 else "#F2D9A0"}" stroke="{INK}" stroke-width=".9"/>')
+            ht = (d.get("head_tones") or [])[i] if i < len(d.get("head_tones") or []) else (
+                ("old" if i == 0 else "new") if ncol == 2 and d.get("tones", True) and not mirror else "plain")
+            hf = {"old": "#E3D4BA", "new": "#F2D9A0", "plain": "#EADFC8"}.get(ht, "#EADFC8")
+            out.append(f'<rect x="{xs[i]:.1f}" y="{y:.1f}" width="{cw:.1f}" height="{hh:.1f}" rx="3" fill="{hf}" stroke="{INK}" stroke-width=".9"/>')
             s, _ = block(xs[i] + cw / 2, y + 3, hd, 7.6, cw - 6)
             out.append(s)
         y += hh + 4
@@ -402,7 +406,7 @@ def _stairs(C, d, w, y):
     if not n:
         return "", y
     cw = (w - 16 - 3 * (n - 1)) / n
-    hs = [C.height(z, cw) for z in cells]
+    hs = [max(C.height(z, cw) for z in cells)] * n  # gleich hohe Stufen
     step = 9
     top = y
     base = y + max(hs) + step * (n - 1)

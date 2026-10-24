@@ -13,73 +13,68 @@
       "n": 1,
       "reference": "MAT.6.14-MAT.6.15",
       "figures": [
-        "FIG-GOTT",
         "FIG-JESUS",
-        "FIG-ROLLE-JUENGER",
-        "FIG-ROLLE-MENSCH"
+        "FIG-GOTT"
       ],
       "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-JUENGER",
-          "icons": [
-            "FIG-ZEICHEN-VERGEBEN"
-          ],
-          "word": {
-            "de": "Vergebt, dann vergibt euch Gott",
-            "gsw": "Vergänd, dänn vergit eu Gott"
-          }
-        }
-      ],
-      "action_de": "Jesus sagt: Wenn ihr den Menschen ihre Verfehlungen vergebt, wird euer himmlischer Vater auch euch vergeben; wenn ihr aber nicht vergebt, wird er euch auch nicht vergeben.",
+      "speech": [],
+      "action_de": "Wenn ihr den Menschen ihre Verfehlungen vergebt, wird euer himmlischer Vater auch euch vergeben; wenn ihr ihnen nicht vergebt, wird euer Vater eure Verfehlungen auch nicht vergeben.",
       "keywords": {
-        "de": "Euer himmlischer Vater",
-        "gsw": "Eue himmlisch Vatter"
+        "de": "Wenn ihr den Menschen ihre Verfehlungen vergebt",
+        "gsw": "Wänn ir de Lüüt iri Fääler vergänd"
       },
-      "stage": {
-        "god_side": "center",
-        "x": {
-          "FIG-JESUS": 26,
-          "FIG-ROLLE-JUENGER": 96,
-          "FIG-ROLLE-MENSCH": 156
+      "diagram": {
+        "visual": "switch",
+        "speaker": "FIG-JESUS",
+        "title": {
+          "de": "Vergeben – oder nicht vergeben?",
+          "gsw": "Vergää – oder nöd vergää?"
         },
-        "arrows": [
-          [
-            "FIG-ROLLE-JUENGER",
-            "FIG-ROLLE-MENSCH",
-            "act"
-          ],
-          [
-            "FIG-GOTT",
-            "FIG-ROLLE-JUENGER",
-            "act"
+        "cond": {
+          "a": {
+            "de": "Vergebt ihr den Menschen ihre Verfehlungen?",
+            "gsw": "Vergänd ir de Lüüt iri Fääler?"
+          }
+        },
+        "yes_label": {
+          "de": "ja",
+          "gsw": "ja"
+        },
+        "no_label": {
+          "de": "nein",
+          "gsw": "nei"
+        },
+        "yes": {
+          "a": {
+            "de": "Euer himmlischer Vater wird auch euch vergeben",
+            "gsw": "Eue himmlisch Vatter wird au eu vergää"
+          },
+          "icons": [
+            "FIG-GOTT"
           ]
-        ],
-        "mood": {
-          "FIG-JESUS": "calm",
-          "FIG-ROLLE-JUENGER": "smile",
-          "FIG-ROLLE-MENSCH": "surprised"
         },
-        "size": {
-          "FIG-JESUS": 0.7
+        "no": {
+          "a": {
+            "de": "Euer Vater wird eure Verfehlungen auch nicht vergeben",
+            "gsw": "Eue Vatter wird eui Fääler au nöd vergää"
+          }
         }
       }
     }
   ],
   "actions_de": [
-    "Jesus sagt: Wenn ihr den Menschen ihre Verfehlungen vergebt, wird euer himmlischer Vater auch euch vergeben; wenn ihr aber nicht vergebt, wird er euch auch nicht vergeben."
+    "Wenn ihr den Menschen ihre Verfehlungen vergebt, wird euer himmlischer Vater auch euch vergeben; wenn ihr ihnen nicht vergebt, wird euer Vater eure Verfehlungen auch nicht vergeben."
   ],
   "captions_de": [
-    "Vergeben → vergeben werden: Jesus (links) sagt: «vergebt» (zerrissener Schuldschein); ein Jünger vergibt einem Mann (Pfeil zum Mann), und der Vater (Strahlenkranz) vergibt auch ihm (goldener Pfeil zum Jünger)."
+    "Weiche: Jesus fragt, ob ihr den Menschen vergebt; Zweig «ja» → der Vater (Strahlenkranz) wird auch euch vergeben, Zweig «nein» → er wird nicht vergeben."
   ],
-  "interpretation_note_de": "Bild einer Rede: Jesus spricht, das Gesagte ist gross daneben gezeigt. Gott erscheint als Strahlenkranz. Das Bild zeigt die erste Hälfte des Satzes (vergeben → vergeben werden); die Kehrseite ([[MAT.6.15]]) nennt nur die Handlung. Der Mann steht für «die Menschen» mit ihren Verfehlungen ([[MAT.6.14]]).",
+  "interpretation_note_de": "Strukturbild einer Rede (Bedingung mit zwei Zweigen, Kernanalyse): beide Zweige aus [[MAT.6.14-MAT.6.15]]. Die Folgen sind Zusage und Warnung für die Zukunft, kein geschildertes Geschehen. Das «Denn» knüpft an die Bitte um Vergebung im Vaterunser an ([[MAT.6.12]]). Die Frage in der Sprechblase fasst die Bedingung in eigenen Worten.",
   "basis": [
     {
       "record": "TU-MAT-006-014-015",
       "field": "summary",
-      "fingerprint": "1dce7b9f5878f25c"
+      "fingerprint": "9eb05a89c90c02e0"
     },
     {
       "record": "TRANS-MAT-006-005-015-DE-WORKING",
@@ -482,6 +477,98 @@
                 "FIG-JESUS": 0.7
               }
             }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-24",
+      "change_de": "Struktur zuerst: Zusammenfassung aus der Strukturanalyse neu (alle Glieder, Liste wo der Text so gebaut ist)",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.6.14-MAT.6.15",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-ROLLE-JUENGER",
+              "FIG-ROLLE-MENSCH"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-VERGEBEN"
+                ],
+                "word": {
+                  "de": "Vergebt, dann vergibt euch Gott",
+                  "gsw": "Vergänd, dänn vergit eu Gott"
+                }
+              }
+            ],
+            "action_de": "Jesus sagt: Wenn ihr den Menschen ihre Verfehlungen vergebt, wird euer himmlischer Vater auch euch vergeben; wenn ihr aber nicht vergebt, wird er euch auch nicht vergeben.",
+            "keywords": {
+              "de": "Euer himmlischer Vater",
+              "gsw": "Eue himmlisch Vatter"
+            },
+            "stage": {
+              "god_side": "center",
+              "x": {
+                "FIG-JESUS": 26,
+                "FIG-ROLLE-JUENGER": 96,
+                "FIG-ROLLE-MENSCH": 156
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-JUENGER",
+                  "FIG-ROLLE-MENSCH",
+                  "act"
+                ],
+                [
+                  "FIG-GOTT",
+                  "FIG-ROLLE-JUENGER",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-ROLLE-JUENGER": "smile",
+                "FIG-ROLLE-MENSCH": "surprised"
+              },
+              "size": {
+                "FIG-JESUS": 0.7
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus sagt: Wenn ihr den Menschen ihre Verfehlungen vergebt, wird euer himmlischer Vater auch euch vergeben; wenn ihr aber nicht vergebt, wird er euch auch nicht vergeben."
+        ],
+        "captions_de": [
+          "Vergeben → vergeben werden: Jesus (links) sagt: «vergebt» (zerrissener Schuldschein); ein Jünger vergibt einem Mann (Pfeil zum Mann), und der Vater (Strahlenkranz) vergibt auch ihm (goldener Pfeil zum Jünger)."
+        ],
+        "interpretation_note_de": "Bild einer Rede: Jesus spricht, das Gesagte ist gross daneben gezeigt. Gott erscheint als Strahlenkranz. Das Bild zeigt die erste Hälfte des Satzes (vergeben → vergeben werden); die Kehrseite ([[MAT.6.15]]) nennt nur die Handlung. Der Mann steht für «die Menschen» mit ihren Verfehlungen ([[MAT.6.14]])."
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-006-014-015",
+            "field": "summary",
+            "fingerprint": "1dce7b9f5878f25c"
+          },
+          {
+            "record": "TRANS-MAT-006-005-015-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.6.14-MAT.6.15",
+            "fingerprint": "615caac1e11b3d52"
           }
         ]
       }

@@ -357,6 +357,11 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .ill-img svg{display:block;width:100%!important;height:auto!important;flex:none;border-radius:12px}
 #bible-stream .ill-img svg svg{border-radius:0}
 #bible-stream .ill-img.tiles{margin:0 auto;width:100%}
+#bible-stream .ill-tiles{display:flex;flex-wrap:wrap;justify-content:center;gap:4px}
+#bible-stream .ill-tiles>svg.ill-tile{flex:1 1 300px;width:100%!important;max-width:340px;height:auto!important;border-radius:0}
+#bible-stream .ill-tiles>svg.ill-tile[data-span="2"]{flex-basis:100%;max-width:680px}
+#bible-stream .ill-tiles>svg.ill-narrow{display:none}
+@media (max-width:600px){#bible-stream .ill-tiles>svg.ill-tile[data-span="2"]:has(+ svg.ill-narrow){display:none}#bible-stream .ill-tiles>svg.ill-narrow{display:block}}
 #bible-stream .ill figcaption{margin-top:6px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px}
 #bible-stream .ill-styles{display:inline-flex;border:1px solid var(--rule);border-radius:999px;padding:2px;gap:2px}
 #bible-stream .app .ill-styles button{padding:4px 10px!important;border-radius:999px!important;font:500 12px/1.2 var(--ui);color:var(--muted)}
@@ -792,9 +797,13 @@ const illStyles=(key,cur)=>{const ks=Object.keys(ILL.styles||{}).sort((a,b)=>(a=
 // Bildgrösse nach Kacheln, nicht nach Platz (Hinweis Andi Neck 2026-10-24): jede Kachel höchstens etwa 340 px breit, ein Bild
 // mit mehreren Kacheln nebeneinander entsprechend breiter; auf breiten Bildschirmen steht es dann unter dem Text statt daneben.
 const illVbW=svg=>{const m=/viewBox="0 0 ([\d.]+) /.exec(svg||'');return m?+m[1]:380;};
-const illNarrow=svg=>` tiles" style="max-width:${Math.round(illVbW(svg)*1.8)}px`;
-const illWide=il=>illVbW(il&&il.svg)>=300;
-const illFigure=il=>`<figure class="ill"><div class="ill-img${illNarrow(il.svg)}" role="img" aria-label="${esc(il.alt)}">${il.svg}</div><figcaption><button type="button" class="link soft" data-legend="${esc(il.key)}">${T().legend}</button>${illStyles(il.key,il.style)}</figcaption></figure>`;
+// Kacheln (class="ill-tile") einzeln zeigen: auf dem Handy untereinander in voller Breite, sonst bis zwei nebeneinander
+const TILE_RE=/<svg class="ill-tile[^"]*"[\s\S]*?<\/svg>/g;
+const illTiles=svg=>{const t=String(svg||'').match(TILE_RE);if(!t)return null;return t.map(x=>x.replace(/ x="[^"]*" y="[^"]*" width="[^"]*" height="[^"]*"/,''));};
+const illSvg=svg=>{const t=illTiles(svg);return t?`<div class="ill-tiles">${t.join('')}</div>`:svg;};
+const illNarrow=svg=>illTiles(svg)?'':` tiles" style="max-width:${Math.round(illVbW(svg)*1.8)}px`;
+const illWide=il=>{const t=illTiles(il&&il.svg);return t?(t.filter(x=>!x.includes('ill-narrow')).length>1||t.some(x=>x.includes('data-span="2"'))):illVbW(il&&il.svg)>=300;};
+const illFigure=il=>`<figure class="ill"><div class="ill-img${illNarrow(il.svg)}" role="img" aria-label="${esc(il.alt)}">${illSvg(il.svg)}</div><figcaption><button type="button" class="link soft" data-legend="${esc(il.key)}">${T().legend}</button>${illStyles(il.key,il.style)}</figcaption></figure>`;
 function legendSheet(key){const it0=illItem(key),st=it0&&ILL.styles[it0.style];if(!st||!it0)return;const it=LOC(it0),t=T(),L=lang==='de';
   const acts=it.actions||it.panels.map(p=>p.action),ORDER=['divine','people','thing','place','action','concept'],grp=l=>l.group||l.kind;
   // Bildhilfe je Feld: Nummer wie im Bild, Kurztitel fett, was man sieht und wofür die Zeichen stehen, Stelle klein dahinter
@@ -802,7 +811,7 @@ function legendSheet(key){const it0=illItem(key),st=it0&&ILL.styles[it0.style];i
   const steps=`<ol class="legend-panels${one?' one':''}">${it.panels.map((p,i)=>{const c=caps[i]||acts[i]||p.action,k=c.indexOf(': '),tt=k>0?c.slice(0,k):'',tx=k>0?c.slice(k+2):c;
     return `<li>${one?'':`<span class="lp-n">${p.n}</span>`}<span>${tt?`<b>${esc(tt)}</b> `:''}${rich(tx)}${it.level==='book'?'':` <span class="ref-small">${esc(refAny(p.ref))}</span>`}</span></li>`;}).join('')}</ol>`;
   const figs=(it.depicts||[]).map(id=>({id,lx:(ILL.lexicon||{})[id],r:(st.renderings||{})[id]})).filter(x=>x.lx&&x.r).sort((a,b)=>ORDER.indexOf(grp(a.lx))-ORDER.indexOf(grp(b.lx)));
-  openSheet('legend',head(t.legendTitle)+`<div class="ill-img legend-img${illNarrow(it.svg)}">${it.svg}</div>${illStyles(key,it0.style)}`+steps+(figs.length?`<h4>${t.legendFigures}</h4><div class="legend-figs">${figs.map(f=>`<div class="legend-fig"><svg viewBox="${f.r.viewbox}" aria-hidden="true"><use href="#${f.r.symbol}"/></svg><span><b>${esc(L?f.lx.name.de:f.lx.name.en)}</b><span class="sub">${esc(f.lx.legend?(f.lx.legend[S.text]||f.lx.legend.de):f.lx.traits.join(' · '))}</span></span></div>`).join('')}</div>`:'')+(it.note?`<p class="note">${rich(it.note)}</p>`:'')+(it.check?`<p class="note">${t.legendCheck} ${esc(it.check)}</p>`:'')+`<p class="note">${t.legendNote} ${esc(L?st.label.de:st.label.en)}.</p>`);}
+  openSheet('legend',head(t.legendTitle)+`<div class="ill-img legend-img${illNarrow(it.svg)}">${illSvg(it.svg)}</div>${illStyles(key,it0.style)}`+steps+(figs.length?`<h4>${t.legendFigures}</h4><div class="legend-figs">${figs.map(f=>`<div class="legend-fig"><svg viewBox="${f.r.viewbox}" aria-hidden="true"><use href="#${f.r.symbol}"/></svg><span><b>${esc(L?f.lx.name.de:f.lx.name.en)}</b><span class="sub">${esc(f.lx.legend?(f.lx.legend[S.text]||f.lx.legend.de):f.lx.traits.join(' · '))}</span></span></div>`).join('')}</div>`:'')+(it.note?`<p class="note">${rich(it.note)}</p>`:'')+(it.check?`<p class="note">${t.legendCheck} ${esc(it.check)}</p>`:'')+`<p class="note">${t.legendNote} ${esc(L?st.label.de:st.label.en)}.</p>`);}
 
 /* ---------- Einträge ---------- */
 const entryM=id=>{const n=nodes.get(id);return marks(entry(id),n&&n.b!==undefined?DATA[n.b].code:null);};
@@ -844,7 +853,7 @@ const MERK=()=>(ILL&&ILL.merk)||[];
 const isDue=r=>!LS[r]||!LS[r].due||LS[r].due<=Date.now();
 const merkCode=r=>r.split('.')[0];
 function merkCardHtml(ref,text){const it=illItem(ref);if(!it)return '';const il={...LOC(it),key:ref};
-  return `<figure class="merk"><div class="ill-img" role="img" aria-label="${esc(il.alt)}">${il.svg}</div><figcaption class="merk-body"><span class="merk-label">${lang==='de'?'Merkvers':'Memory verse'}</span><p class="merk-text">«${esc(text)}»</p><span class="merk-ref">${esc(refDe(ref))}</span><button type="button" class="link soft" data-legend="${esc(il.key)}">${T().legend}</button></figcaption></figure>`;}
+  return `<figure class="merk"><div class="ill-img" role="img" aria-label="${esc(il.alt)}">${illSvg(il.svg)}</div><figcaption class="merk-body"><span class="merk-label">${lang==='de'?'Merkvers':'Memory verse'}</span><p class="merk-text">«${esc(text)}»</p><span class="merk-ref">${esc(refDe(ref))}</span><button type="button" class="link soft" data-legend="${esc(il.key)}">${T().legend}</button></figcaption></figure>`;}
 function merkCard(n,text){if(!ILL||S.ill==='off'||(S.merk||'mark')!=='card')return '';return merkCardHtml(n.canonicalRef,text);}
 function merkMark(n){if(!ILL||S.ill==='off'||(S.merk||'mark')!=='mark'||!MERK().includes(n.canonicalRef))return '';
   return `<button type="button" class="merk-mark" data-merk="${n.canonicalRef}" aria-label="${lang==='de'?'Merkvers mit Bild':'Memory verse with picture'}" title="${lang==='de'?'Merkvers':'Memory verse'}">${icon('bookmark')}</button>`;}

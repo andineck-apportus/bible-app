@@ -12,104 +12,178 @@
     {
       "n": 1,
       "reference": "MAT.5.17",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-JUENGER"
-      ],
+      "figures": [],
       "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-OBJ-SCHRIFTROLLE",
-            "FIG-ZEICHEN-VOLLBRACHT"
-          ],
-          "word": {
-            "de": "Erfüllen, nicht aufheben",
-            "gsw": "Erfülle, nöd ufhebe"
-          }
-        }
-      ],
+      "speech": [],
       "action_de": "Jesus sagt: Meint nicht, dass ich gekommen sei, das Gesetz oder die Propheten aufzuheben; ich bin nicht gekommen, um aufzuheben, sondern um zu erfüllen.",
       "keywords": {
         "de": "Das Gesetz oder die Propheten",
         "gsw": "S Gsetz oder d Prophete"
       },
-      "stage": {
-        "x": {
-          "FIG-JESUS": 40,
-          "FIG-GRUPPE-JUENGER": 132
+      "diagram": {
+        "visual": "columns",
+        "speaker": "FIG-JESUS",
+        "title": {
+          "de": "Ich bin nicht gekommen, um aufzuheben, sondern um zu erfüllen.",
+          "gsw": "Ich bi nöd choo zum Ufhebe, sondern zum Erfülle."
         },
-        "mood": {
-          "FIG-JESUS": "earnest",
-          "FIG-GRUPPE-JUENGER": "calm"
-        },
-        "size": {
-          "FIG-JESUS": 0.7
-        }
+        "head": [
+          {
+            "de": "nicht …",
+            "gsw": "nöd …"
+          },
+          {
+            "de": "sondern …",
+            "gsw": "sondern …"
+          }
+        ],
+        "rows": [
+          [
+            {
+              "icons": [
+                "FIG-OBJ-SCHRIFTROLLE"
+              ],
+              "a": {
+                "de": "aufheben",
+                "gsw": "ufhebe"
+              },
+              "strike": true
+            },
+            {
+              "icons": [
+                "FIG-OBJ-SCHRIFTROLLE"
+              ],
+              "a": {
+                "de": "erfüllen",
+                "gsw": "erfülle"
+              }
+            }
+          ]
+        ]
       }
     },
     {
       "n": 2,
-      "reference": "MAT.5.20",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-JUENGER",
-        "FIG-GRUPPE-PHARISAEER"
-      ],
+      "reference": "MAT.5.18-MAT.5.19",
+      "figures": [],
       "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
+      "speech": [],
+      "action_de": "Jesus sagt: Kein einziges Jota und kein Häkchen vergeht vom Gesetz, bis alles geschieht. Wer eines der kleinsten Gebote auflöst und so lehrt, wird im Reich der Himmel der Kleinste genannt; wer sie tut und lehrt, wird gross genannt.",
+      "keywords": {
+        "de": "Ein einziges Jota oder ein einziges Häkchen",
+        "gsw": "Es einzigs Jota oder es einzigs Hääggli"
+      },
+      "diagram": {
+        "visual": "switch",
+        "speaker": "FIG-JESUS",
+        "title": {
+          "de": "Kein Jota vergeht vom Gesetz.",
+          "gsw": "Kei Jota vergaat vom Gsetz."
+        },
+        "cond": {
           "icons": [
-            "FIG-GRUPPE-PHARISAEER"
+            "FIG-OBJ-SCHRIFTROLLE"
           ],
-          "word": {
-            "de": "Seid gerechter als die Pharisäer!",
-            "gsw": "Sind grächter als d Pharisäer!"
+          "a": {
+            "de": "Wer eines dieser kleinsten Gebote …",
+            "gsw": "Wer eis vo dene chliinschte Gebot …"
           }
+        },
+        "yes": {
+          "a": {
+            "de": "… auflöst und so lehrt",
+            "gsw": "… uflööst und eso leert"
+          },
+          "b": {
+            "de": "→ wird im Reich der Himmel der Kleinste genannt",
+            "gsw": "→ wird im Riich vo de Himel de Chliinscht gnännt"
+          },
+          "tone": "old"
+        },
+        "no": {
+          "a": {
+            "de": "… tut und lehrt",
+            "gsw": "… tuet und leert"
+          },
+          "b": {
+            "de": "→ wird im Reich der Himmel gross genannt",
+            "gsw": "→ wird im Riich vo de Himel gross gnännt"
+          },
+          "tone": "new"
+        },
+        "yes_label": {
+          "de": "auflösen",
+          "gsw": "uflööse"
+        },
+        "no_label": {
+          "de": "tun",
+          "gsw": "tue"
         }
-      ],
-      "action_de": "Jesus sagt: Wenn eure Gerechtigkeit nicht weit über die der Schriftgelehrten und Pharisäer hinausgeht, werdet ihr nicht in das Reich der Himmel hineinkommen.",
+      }
+    },
+    {
+      "n": 3,
+      "reference": "MAT.5.20",
+      "figures": [],
+      "objects": [],
+      "signs": [],
+      "speech": [],
+      "action_de": "Jesus sagt: Wenn eure Gerechtigkeit nicht weit über die der Schriftgelehrten und Pharisäer hinausgeht, werdet ihr gewiss nicht in das Reich der Himmel hineinkommen.",
       "keywords": {
         "de": "Eure Gerechtigkeit",
         "gsw": "Eui Grächtigkeit"
       },
-      "stage": {
-        "x": {
-          "FIG-JESUS": 28,
-          "FIG-GRUPPE-JUENGER": 86,
-          "FIG-GRUPPE-PHARISAEER": 160
+      "diagram": {
+        "visual": "arrows",
+        "speaker": "FIG-JESUS",
+        "title": {
+          "de": "Denn ich sage euch:",
+          "gsw": "Ich säg eu nämli:"
         },
-        "mood": {
-          "FIG-JESUS": "earnest",
-          "FIG-GRUPPE-JUENGER": "calm",
-          "FIG-GRUPPE-PHARISAEER": "calm"
-        },
-        "size": {
-          "FIG-JESUS": 0.7
-        }
+        "span": 2,
+        "cols": 2,
+        "cells": [
+          {
+            "icons": [
+              "FIG-GRUPPE-PHARISAEER"
+            ],
+            "a": {
+              "de": "Wenn eure Gerechtigkeit nicht weit über die der Schriftgelehrten und Pharisäer hinausgeht",
+              "gsw": "Wänn eui Grächtigkeit nöd wiit über die vo de Schriftgelehrte und Pharisäer usegaat"
+            }
+          },
+          {
+            "icons": [
+              "FIG-ZEICHEN-REICH-GOTTES"
+            ],
+            "a": {
+              "de": "kommt ihr gewiss nicht in das Reich der Himmel.",
+              "gsw": "chömed ir sicher nöd is Riich vo de Himel ine."
+            },
+            "tone": "old"
+          }
+        ]
       }
     }
   ],
   "actions_de": [
     "Jesus sagt: Meint nicht, dass ich gekommen sei, das Gesetz oder die Propheten aufzuheben; ich bin nicht gekommen, um aufzuheben, sondern um zu erfüllen.",
-    "Jesus sagt: Wenn eure Gerechtigkeit nicht weit über die der Schriftgelehrten und Pharisäer hinausgeht, werdet ihr nicht in das Reich der Himmel hineinkommen."
+    "Jesus sagt: Kein einziges Jota und kein Häkchen vergeht vom Gesetz, bis alles geschieht. Wer eines der kleinsten Gebote auflöst und so lehrt, wird im Reich der Himmel der Kleinste genannt; wer sie tut und lehrt, wird gross genannt.",
+    "Jesus sagt: Wenn eure Gerechtigkeit nicht weit über die der Schriftgelehrten und Pharisäer hinausgeht, werdet ihr gewiss nicht in das Reich der Himmel hineinkommen."
   ],
   "captions_de": [
-    "Erfüllen: Jesus sagt den Jüngern: Ich bin nicht gekommen, das Gesetz und die Propheten (Sprechblase: Schriftrolle) aufzuheben, sondern zu erfüllen (goldener Ring mit Haken).",
-    "Grössere Gerechtigkeit: Jesus (links) sagt den Jüngern: Eure Gerechtigkeit muss weit über die der Pharisäer (rechts, gestreifter Gebetsmantel) hinausgehen."
+    "Nicht aufheben, sondern erfüllen: zwei Spalten mit der Schriftrolle (Gesetz und Propheten), links «aufheben» durchgestrichen, rechts «erfüllen».",
+    "Die kleinsten Gebote: Weiche mit zwei Zweigen: auflösen und so lehren → der Kleinste; tun und lehren → gross genannt (hervorgehoben).",
+    "Eure Gerechtigkeit: Wenn sie nicht weit über die der Schriftgelehrten und Pharisäer (Gruppe) hinausgeht → kein Weg ins Reich der Himmel (Krone)."
   ],
-  "interpretation_note_de": "Bild einer Rede. Die Schriftrolle steht für «das Gesetz oder die Propheten» ([[MAT.5.17]]), der goldene Ring mit Haken für «erfüllen». Die Pharisäer in Feld 2 stehen für «die Schriftgelehrten und Pharisäer» ([[MAT.5.20]]) als Massstab, nicht als Gegner im Bild. Jota und Häkchen ([[MAT.5.18]]) und die Kleinsten und Grössten im Reich ([[MAT.5.19]]) sind nicht im Bild.",
+  "interpretation_note_de": "Bild einer Rede als Strukturbild des Beweisgangs: Grundsatz «nicht aufheben, sondern erfüllen» ([[MAT.5.17]]), Begründung und Folgerung mit beiden Zweigen der kleinsten Gebote ([[MAT.5.18-MAT.5.19]]), Zuspitzung mit nur einem Zweig, wie im Text ([[MAT.5.20]]). Die Pharisäer stehen als Massstab, nicht als Gegner. Die Schriftrolle steht für «das Gesetz oder die Propheten».",
   "basis": [
     {
       "record": "TU-MAT-005-017-020",
       "field": "summary",
-      "fingerprint": "76efe116dcee1bd8"
+      "fingerprint": "953c1e81e128bddc"
     },
     {
       "record": "TRANS-MAT-005-001-048-DE-WORKING",
@@ -120,12 +194,18 @@
     {
       "record": "TRANS-MAT-005-001-048-DE-WORKING",
       "field": "text_by_reference",
+      "reference": "MAT.5.18-MAT.5.19",
+      "fingerprint": "ff4df860e6858086"
+    },
+    {
+      "record": "TRANS-MAT-005-001-048-DE-WORKING",
+      "field": "text_by_reference",
       "reference": "MAT.5.20",
       "fingerprint": "a76865e95c3be192"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-24 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -626,6 +706,160 @@
                 "FIG-JESUS": 0.7
               }
             }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-24",
+      "change_de": "Struktur zuerst: Zusammenfassung aus der Strukturanalyse neu (alle Glieder, Liste wo der Text so gebaut ist)",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.5.17",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-SCHRIFTROLLE",
+                  "FIG-ZEICHEN-VOLLBRACHT"
+                ],
+                "word": {
+                  "de": "Erfüllen, nicht aufheben",
+                  "gsw": "Erfülle, nöd ufhebe"
+                }
+              }
+            ],
+            "action_de": "Jesus sagt: Meint nicht, dass ich gekommen sei, das Gesetz oder die Propheten aufzuheben; ich bin nicht gekommen, um aufzuheben, sondern um zu erfüllen.",
+            "keywords": {
+              "de": "Das Gesetz oder die Propheten",
+              "gsw": "S Gsetz oder d Prophete"
+            },
+            "stage": {
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-GRUPPE-JUENGER": 132
+              },
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-JUENGER": "calm"
+              },
+              "size": {
+                "FIG-JESUS": 0.7
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.5.20",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-GRUPPE-PHARISAEER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-GRUPPE-PHARISAEER"
+                ],
+                "word": {
+                  "de": "Seid gerechter als die Pharisäer!",
+                  "gsw": "Sind grächter als d Pharisäer!"
+                }
+              }
+            ],
+            "action_de": "Jesus sagt: Wenn eure Gerechtigkeit nicht weit über die der Schriftgelehrten und Pharisäer hinausgeht, werdet ihr nicht in das Reich der Himmel hineinkommen.",
+            "keywords": {
+              "de": "Eure Gerechtigkeit",
+              "gsw": "Eui Grächtigkeit"
+            },
+            "stage": {
+              "x": {
+                "FIG-JESUS": 28,
+                "FIG-GRUPPE-JUENGER": 86,
+                "FIG-GRUPPE-PHARISAEER": 160
+              },
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-JUENGER": "calm",
+                "FIG-GRUPPE-PHARISAEER": "calm"
+              },
+              "size": {
+                "FIG-JESUS": 0.7
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus sagt: Meint nicht, dass ich gekommen sei, das Gesetz oder die Propheten aufzuheben; ich bin nicht gekommen, um aufzuheben, sondern um zu erfüllen.",
+          "Jesus sagt: Wenn eure Gerechtigkeit nicht weit über die der Schriftgelehrten und Pharisäer hinausgeht, werdet ihr nicht in das Reich der Himmel hineinkommen."
+        ],
+        "captions_de": [
+          "Erfüllen: Jesus sagt den Jüngern: Ich bin nicht gekommen, das Gesetz und die Propheten (Sprechblase: Schriftrolle) aufzuheben, sondern zu erfüllen (goldener Ring mit Haken).",
+          "Grössere Gerechtigkeit: Jesus (links) sagt den Jüngern: Eure Gerechtigkeit muss weit über die der Pharisäer (rechts, gestreifter Gebetsmantel) hinausgehen."
+        ],
+        "interpretation_note_de": "Bild einer Rede. Die Schriftrolle steht für «das Gesetz oder die Propheten» ([[MAT.5.17]]), der goldene Ring mit Haken für «erfüllen». Die Pharisäer in Feld 2 stehen für «die Schriftgelehrten und Pharisäer» ([[MAT.5.20]]) als Massstab, nicht als Gegner im Bild. Jota und Häkchen ([[MAT.5.18]]) und die Kleinsten und Grössten im Reich ([[MAT.5.19]]) sind nicht im Bild.",
+        "basis": [
+          {
+            "record": "TU-MAT-005-017-020",
+            "field": "summary",
+            "fingerprint": "76efe116dcee1bd8"
+          },
+          {
+            "record": "TRANS-MAT-005-001-048-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.5.17",
+            "fingerprint": "5a6a28b8800d25e6"
+          },
+          {
+            "record": "TRANS-MAT-005-001-048-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.5.20",
+            "fingerprint": "a76865e95c3be192"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-24",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-005-017-020",
+            "field": "summary",
+            "fingerprint": "76efe116dcee1bd8"
+          },
+          {
+            "record": "TRANS-MAT-005-001-048-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.5.17",
+            "fingerprint": "5a6a28b8800d25e6"
+          },
+          {
+            "record": "TRANS-MAT-005-001-048-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.5.18-MAT.5.19",
+            "fingerprint": "ff4df860e6858086"
+          },
+          {
+            "record": "TRANS-MAT-005-001-048-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.5.20",
+            "fingerprint": "a76865e95c3be192"
           }
         ]
       }

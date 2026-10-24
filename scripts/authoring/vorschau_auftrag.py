@@ -62,7 +62,7 @@ def main():
         c.vbmap = vb
         c.uid = "a" + k.lower()
         bodies = [c.panel(panel(p)) for p in by[k]["panels"]]
-        svg = A.alayout(bodies, getattr(c, "bands", None), getattr(c, "sizes", None)).replace("<svg ", f'<svg width="{px}" ', 1)
+        svg = A.alayout(bodies, getattr(c, "bands", None), getattr(c, "sizes", None), getattr(c, "alts", None)).replace("<svg ", f'<svg width="{px}" ', 1)
         (out / f"{k}.html").write_text(f'<html><head><meta charset="utf-8">{css}</head><body style="margin:0;background:#E9E4DA">'
                                        f'<div style="display:none">{lib}</div>{svg}</body></html>', encoding="utf-8")
     js = ("const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');(async()=>{const b=await chromium.launch();"

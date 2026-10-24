@@ -32,7 +32,7 @@
           }
         }
       ],
-      "action_de": "Boas setzt sich ins Tor, ruft den Löser, der gerade vorbeikommt, herbei und lässt zehn Älteste der Stadt Platz nehmen.",
+      "action_de": "Boas setzt sich ins Tor und ruft den Löser herbei: «Komm herüber, setz dich hierher!» Dann lässt er zehn Älteste der Stadt Platz nehmen.",
       "keywords": {
         "de": "Boas aber ging hinauf zum Tor",
         "gsw": "De Boas aber isch zum Tor ufegange"
@@ -43,8 +43,8 @@
           "gsw": "Boas"
         },
         "FIG-LOESER": {
-          "de": "Löser",
-          "gsw": "Löser"
+          "de": "der Löser",
+          "gsw": "de Löser"
         }
       },
       "stage": {
@@ -63,58 +63,76 @@
     },
     {
       "n": 2,
-      "reference": "RUT.4.6-RUT.4.8",
-      "figures": [
-        "FIG-GRUPPE-AELTESTE",
-        "FIG-BOAS",
-        "FIG-LOESER"
-      ],
-      "objects": [
-        "FIG-OBJ-SANDALE"
-      ],
+      "reference": "RUT.4.3-RUT.4.8",
+      "figures": [],
+      "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-LOESER",
-          "to": "FIG-BOAS",
-          "icons": [],
-          "word": {
-            "de": "Ich kann nicht lösen",
-            "gsw": "Ich cha nöd löse"
-          }
-        }
-      ],
-      "action_de": "Als mit dem Feld auch Rut zu erwerben ist, sagt der Löser: «Ich kann nicht lösen», überlässt Boas das Löserecht und zieht zur Beglaubigung seinen Schuh aus.",
+      "speech": [],
+      "action_de": "Boas bietet dem Löser das Feld Elimelechs an: Wenn er lösen will, soll er lösen, sonst kommt Boas nach ihm. Der Löser sagt zuerst: «Ich will lösen.» Als Boas sagt, dass er mit dem Feld auch Rut erwirbt, verzichtet er: «Ich kann nicht lösen. Löse du!», und zieht zur Beglaubigung seinen Schuh aus.",
       "keywords": {
-        "de": "Er zog seinen Schuh aus",
-        "gsw": "Er hät sin Schue abzoge"
+        "de": "Ich kann nicht lösen",
+        "gsw": "Ich cha nöd löse"
       },
-      "stage": {
-        "arrows": [
-          [
-            "FIG-LOESER",
-            "FIG-BOAS",
-            "act"
-          ]
-        ],
-        "hold": {
-          "FIG-LOESER": "FIG-OBJ-SANDALE"
+      "diagram": {
+        "visual": "switch",
+        "span": 1,
+        "speaker": "FIG-BOAS",
+        "title": {
+          "de": "Noomi verkauft das Feldstück Elimelechs.",
+          "gsw": "D Noomi verchauft s Fäldstück vom Elimelech."
         },
-        "mood": {
-          "FIG-LOESER": "worried",
-          "FIG-BOAS": "calm",
-          "FIG-GRUPPE-AELTESTE": "calm"
+        "cond": {
+          "a": {
+            "de": "Wenn du lösen willst, dann löse!",
+            "gsw": "Wänn du löse wottsch, dänn lös!"
+          },
+          "b": {
+            "de": "Sonst komme ich nach dir.",
+            "gsw": "Suscht chume ich nach dir."
+          },
+          "who": "FIG-BOAS"
         },
-        "x": {
-          "FIG-GRUPPE-AELTESTE": 30,
-          "FIG-BOAS": 96,
-          "FIG-LOESER": 156
+        "yes": {
+          "a": {
+            "de": "«Ich will lösen.»",
+            "gsw": "«Ich wott löse.»"
+          },
+          "b": {
+            "de": "Doch mit dem Feld gehört Rut dazu.",
+            "gsw": "Aber mit em Fäld ghört d Rut dezue."
+          },
+          "who": "FIG-LOESER",
+          "strike": true,
+          "tone": "plain"
+        },
+        "no": {
+          "a": {
+            "de": "«Ich kann nicht lösen. Löse du!»",
+            "gsw": "«Ich cha nöd löse. Lös du!»"
+          },
+          "b": {
+            "de": "Er zieht seinen Schuh aus.",
+            "gsw": "Er zieht sin Schue ab."
+          },
+          "who": "FIG-LOESER",
+          "icons": [
+            "FIG-OBJ-SANDALE"
+          ],
+          "tone": "new"
+        },
+        "yes_label": {
+          "de": "ja",
+          "gsw": "ja"
+        },
+        "no_label": {
+          "de": "nein",
+          "gsw": "nei"
         }
       }
     },
     {
       "n": 3,
-      "reference": "RUT.4.9-RUT.4.11",
+      "reference": "RUT.4.9-RUT.4.12",
       "figures": [
         "FIG-GRUPPE-VOLK",
         "FIG-BOAS"
@@ -136,7 +154,7 @@
           }
         }
       ],
-      "action_de": "Boas erklärt vor den Ältesten und dem ganzen Volk: Zeugen seid ihr heute, dass ich Elimelechs Besitz und Rut zur Frau gnoon habe; und alle antworten: «Wir sind Zeugen!»",
+      "action_de": "Boas sagt zu den Ältesten und zum ganzen Volk: «Zeugen seid ihr heute»: Er hat Elimelechs Besitz erworben und Rut zur Frau, damit der Name des Verstorbenen nicht ausgelöscht wird. Alle sagen: «Wir sind Zeugen!» und wünschen: Dein Haus werde wie das Haus des Perez.",
       "keywords": {
         "de": "Wir sind Zeugen!",
         "gsw": "Mir sind Züüge!"
@@ -155,21 +173,21 @@
     }
   ],
   "actions_de": [
-    "Boas setzt sich ins Tor, ruft den Löser, der gerade vorbeikommt, herbei und lässt zehn Älteste der Stadt Platz nehmen.",
-    "Als mit dem Feld auch Rut zu erwerben ist, sagt der Löser: «Ich kann nicht lösen», überlässt Boas das Löserecht und zieht zur Beglaubigung seinen Schuh aus.",
-    "Boas erklärt vor den Ältesten und dem ganzen Volk: Zeugen seid ihr heute, dass ich Elimelechs Besitz und Rut zur Frau gnoon habe; und alle antworten: «Wir sind Zeugen!»"
+    "Boas setzt sich ins Tor und ruft den Löser herbei: «Komm herüber, setz dich hierher!» Dann lässt er zehn Älteste der Stadt Platz nehmen.",
+    "Boas bietet dem Löser das Feld Elimelechs an: Wenn er lösen will, soll er lösen, sonst kommt Boas nach ihm. Der Löser sagt zuerst: «Ich will lösen.» Als Boas sagt, dass er mit dem Feld auch Rut erwirbt, verzichtet er: «Ich kann nicht lösen. Löse du!», und zieht zur Beglaubigung seinen Schuh aus.",
+    "Boas sagt zu den Ältesten und zum ganzen Volk: «Zeugen seid ihr heute»: Er hat Elimelechs Besitz erworben und Rut zur Frau, damit der Name des Verstorbenen nicht ausgelöscht wird. Alle sagen: «Wir sind Zeugen!» und wünschen: Dein Haus werde wie das Haus des Perez."
   ],
   "captions_de": [
-    "Im Tor: Boas ruft den anderen Löser herbei; die Ältesten sitzen dabei (Stadttor).",
-    "Der Schuh: Vor den Ältesten sagt der andere Löser: Ich kann nicht lösen, und gibt Boas seinen Schuh (Sandale in der Hand, Pfeil zu Boas).",
-    "Wir sind Zeugen: Boas erklärt dem Volk im Tor: Rut (Bild in der Blase) wird seine Frau; das Volk freut sich."
+    "Im Stadttor: Boas ruft den Löser herbei; die Ältesten sitzen dabei.",
+    "Weiche im Tor: Boas (Bild): Willst du lösen? ja → «Ich will lösen» (durchgestrichen: mit dem Feld gehört Rut dazu); nein → «Ich kann nicht lösen», der Löser zieht seinen Schuh aus (Sandale).",
+    "Im Tor: Boas sagt vor dem Volk, Rut werde seine Frau (Bild in der Sprechblase); das Volk ruft: Wir sind Zeugen!"
   ],
-  "interpretation_note_de": "Die zehn Ältesten ([[RUT.4.2]]) sind als Gruppe gezeigt, ohne Zahl; im dritten Feld stehen Älteste und Volk zusammen als Menge. Den alten Brauch mit dem Schuh erklärt [[RUT.4.7]]. Das erste Angebot ([[RUT.4.3-RUT.4.5]]) und der Segenswunsch mit Rahel, Lea, Perez und Tamar ([[RUT.4.11-RUT.4.12]]) zeigt das Bild nicht.",
+  "interpretation_note_de": "Löserverfahren im Tor ([[RUT.4.1-RUT.4.12]]): Vorladung mit Zeugen (Szene, [[RUT.4.1-RUT.4.2]]); Angebot als Weiche, der erste Zweig «Ich will lösen» endet, als Rut dazugehört, der zweite führt zum Verzicht mit dem Schuh ([[RUT.4.3-RUT.4.8]]); Erwerb vor Zeugen und Segen ([[RUT.4.9-RUT.4.12]]). «Rechtsverfahren» ist ein Gattungsbegriff, keine Angabe des Textes. Die Erklärung des Schuhbrauchs ([[RUT.4.7]]) und die Namen im Segenswunsch fehlen.",
   "basis": [
     {
       "record": "TU-RUT-004-001-012",
       "field": "summary",
-      "fingerprint": "e6291c53a62f2885"
+      "fingerprint": "db300b9558007835"
     },
     {
       "record": "TRANS-RUT-004-001-022-DE-WORKING",
@@ -180,14 +198,14 @@
     {
       "record": "TRANS-RUT-004-001-022-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "RUT.4.6-RUT.4.8",
-      "fingerprint": "c92c68c91d9c0279"
+      "reference": "RUT.4.3-RUT.4.8",
+      "fingerprint": "301574919ccf80cb"
     },
     {
       "record": "TRANS-RUT-004-001-022-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "RUT.4.9-RUT.4.11",
-      "fingerprint": "46f90028e7a5ad30"
+      "reference": "RUT.4.9-RUT.4.12",
+      "fingerprint": "72145af470031abe"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
@@ -1145,6 +1163,225 @@
           "Im Tor: Boas ruft den anderen Löser herbei; die Ältesten sitzen dabei (Stadttor).",
           "Der Schuh: Vor den Ältesten sagt der andere Löser: nicht lösen, und gibt Boas seinen Schuh (Sandale in der Hand, Pfeil zu Boas).",
           "Wir sind Zeugen: Boas erklärt dem Volk im Tor: Rut (Bild in der Blase) zur Frau gnoon; das Volk freut sich."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-24",
+      "change_de": "Struktur zuerst: Zusammenfassung aus der Strukturanalyse neu (alle Glieder, Liste wo der Text so gebaut ist)",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "RUT.4.1-RUT.4.2",
+            "figures": [
+              "FIG-GRUPPE-AELTESTE",
+              "FIG-BOAS",
+              "FIG-LOESER"
+            ],
+            "objects": [
+              "FIG-ORT-STADTTOR"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-BOAS",
+                "to": "FIG-LOESER",
+                "icons": [],
+                "word": {
+                  "de": "Setz dich hierher!",
+                  "gsw": "Hock ab da!"
+                }
+              }
+            ],
+            "action_de": "Boas setzt sich ins Tor, ruft den Löser, der gerade vorbeikommt, herbei und lässt zehn Älteste der Stadt Platz nehmen.",
+            "keywords": {
+              "de": "Boas aber ging hinauf zum Tor",
+              "gsw": "De Boas aber isch zum Tor ufegange"
+            },
+            "names": {
+              "FIG-BOAS": {
+                "de": "Boas",
+                "gsw": "Boas"
+              },
+              "FIG-LOESER": {
+                "de": "Löser",
+                "gsw": "Löser"
+              }
+            },
+            "stage": {
+              "back_side": "left",
+              "mood": {
+                "FIG-LOESER": "calm",
+                "FIG-BOAS": "earnest",
+                "FIG-GRUPPE-AELTESTE": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-AELTESTE": 50,
+                "FIG-BOAS": 112,
+                "FIG-LOESER": 162
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "RUT.4.6-RUT.4.8",
+            "figures": [
+              "FIG-GRUPPE-AELTESTE",
+              "FIG-BOAS",
+              "FIG-LOESER"
+            ],
+            "objects": [
+              "FIG-OBJ-SANDALE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-LOESER",
+                "to": "FIG-BOAS",
+                "icons": [],
+                "word": {
+                  "de": "Ich kann nicht lösen",
+                  "gsw": "Ich cha nöd löse"
+                }
+              }
+            ],
+            "action_de": "Als mit dem Feld auch Rut zu erwerben ist, sagt der Löser: «Ich kann nicht lösen», überlässt Boas das Löserecht und zieht zur Beglaubigung seinen Schuh aus.",
+            "keywords": {
+              "de": "Er zog seinen Schuh aus",
+              "gsw": "Er hät sin Schue abzoge"
+            },
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-LOESER",
+                  "FIG-BOAS",
+                  "act"
+                ]
+              ],
+              "hold": {
+                "FIG-LOESER": "FIG-OBJ-SANDALE"
+              },
+              "mood": {
+                "FIG-LOESER": "worried",
+                "FIG-BOAS": "calm",
+                "FIG-GRUPPE-AELTESTE": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-AELTESTE": 30,
+                "FIG-BOAS": 96,
+                "FIG-LOESER": 156
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "RUT.4.9-RUT.4.11",
+            "figures": [
+              "FIG-GRUPPE-VOLK",
+              "FIG-BOAS"
+            ],
+            "objects": [
+              "FIG-ORT-STADTTOR"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-BOAS",
+                "to": "FIG-GRUPPE-VOLK",
+                "icons": [
+                  "FIG-RUT"
+                ],
+                "word": {
+                  "de": "Rut wird meine Frau",
+                  "gsw": "D Rut wird mini Frau"
+                }
+              }
+            ],
+            "action_de": "Boas erklärt vor den Ältesten und dem ganzen Volk: Zeugen seid ihr heute, dass ich Elimelechs Besitz und Rut zur Frau gnoon habe; und alle antworten: «Wir sind Zeugen!»",
+            "keywords": {
+              "de": "Wir sind Zeugen!",
+              "gsw": "Mir sind Züüge!"
+            },
+            "stage": {
+              "back_side": "left",
+              "mood": {
+                "FIG-GRUPPE-VOLK": "delight",
+                "FIG-BOAS": "smile"
+              },
+              "x": {
+                "FIG-GRUPPE-VOLK": 52,
+                "FIG-BOAS": 150
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Boas setzt sich ins Tor, ruft den Löser, der gerade vorbeikommt, herbei und lässt zehn Älteste der Stadt Platz nehmen.",
+          "Als mit dem Feld auch Rut zu erwerben ist, sagt der Löser: «Ich kann nicht lösen», überlässt Boas das Löserecht und zieht zur Beglaubigung seinen Schuh aus.",
+          "Boas erklärt vor den Ältesten und dem ganzen Volk: Zeugen seid ihr heute, dass ich Elimelechs Besitz und Rut zur Frau gnoon habe; und alle antworten: «Wir sind Zeugen!»"
+        ],
+        "captions_de": [
+          "Im Tor: Boas ruft den anderen Löser herbei; die Ältesten sitzen dabei (Stadttor).",
+          "Der Schuh: Vor den Ältesten sagt der andere Löser: Ich kann nicht lösen, und gibt Boas seinen Schuh (Sandale in der Hand, Pfeil zu Boas).",
+          "Wir sind Zeugen: Boas erklärt dem Volk im Tor: Rut (Bild in der Blase) wird seine Frau; das Volk freut sich."
+        ],
+        "interpretation_note_de": "Die zehn Ältesten ([[RUT.4.2]]) sind als Gruppe gezeigt, ohne Zahl; im dritten Feld stehen Älteste und Volk zusammen als Menge. Den alten Brauch mit dem Schuh erklärt [[RUT.4.7]]. Das erste Angebot ([[RUT.4.3-RUT.4.5]]) und der Segenswunsch mit Rahel, Lea, Perez und Tamar ([[RUT.4.11-RUT.4.12]]) zeigt das Bild nicht.",
+        "basis": [
+          {
+            "record": "TU-RUT-004-001-012",
+            "field": "summary",
+            "fingerprint": "e6291c53a62f2885"
+          },
+          {
+            "record": "TRANS-RUT-004-001-022-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "RUT.4.1-RUT.4.2",
+            "fingerprint": "8f479357ce02bd17"
+          },
+          {
+            "record": "TRANS-RUT-004-001-022-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "RUT.4.6-RUT.4.8",
+            "fingerprint": "c92c68c91d9c0279"
+          },
+          {
+            "record": "TRANS-RUT-004-001-022-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "RUT.4.9-RUT.4.11",
+            "fingerprint": "46f90028e7a5ad30"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-RUT-004-001-012",
+            "field": "summary",
+            "fingerprint": "e6291c53a62f2885"
+          },
+          {
+            "record": "TRANS-RUT-004-001-022-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "RUT.4.1-RUT.4.2",
+            "fingerprint": "8f479357ce02bd17"
+          },
+          {
+            "record": "TRANS-RUT-004-001-022-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "RUT.4.3-RUT.4.8",
+            "fingerprint": "301574919ccf80cb"
+          },
+          {
+            "record": "TRANS-RUT-004-001-022-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "RUT.4.9-RUT.4.12",
+            "fingerprint": "72145af470031abe"
+          }
         ]
       }
     }
