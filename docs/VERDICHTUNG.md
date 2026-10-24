@@ -26,6 +26,11 @@ Jede Kernanalyse beginnt mit der Strukturanalyse (Feld `structure`). Sie bestimm
 ineinander: Eine Reihe kann in einem Rahmen stehen, ein Gegensatz kann aus Bedingung und Folge bestehen. Jedes Baumuster hat
 eine passende Darstellung in Zusammenfassung und Bild.
 
+Die Tabelle ist die Kurzfassung. Der vollständige Katalog aus der Analyse aller 66 Bücher steht in
+[STRUKTURKATALOG.md](STRUKTURKATALOG.md) (Entwurf 2026-10-24, zur Durchsicht): 33 Baumuster in 9 Familien, 15 Merkmale (z. B. Sprecher,
+Musterbruch, offenes Ende, Textfassungen, Deutung statt Text) und 20 Darstellungen als Vorgabe für das Zeichnen, dazu eine
+Übersicht aller Bücher und Fallstricke.
+
 | Baumuster (`pattern`) | Beispiele | Zusammenfassung | Bild (`visual`) |
 |---|---|---|---|
 | `sequence` Ablauf in der Zeit | Erzählungen, Rut, Mk 5 | Fliesstext in der Reihenfolge | Bildfolge (Szenen) oder Zeitleiste |
