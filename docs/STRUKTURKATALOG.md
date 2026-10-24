@@ -1,9 +1,9 @@
 # Strukturkatalog: Baumuster, Merkmale, Darstellungen
 
-Status: `draft`. KI-Entwurf vom 2026-10-24, fachlich nicht geprüft. Grundlage sind die acht Strukturanalysen der ganzen Bibel
+Status: gilt seit 2026-10-24 (Entscheid Andi Neck). Inhalt KI-Entwurf, fachlich nicht geprüft. Grundlage sind die acht Strukturanalysen der ganzen Bibel
 vom 2026-10-24 (Tora; Geschichtsbücher; Poesie und Weisheit; grosse Propheten; kleine Propheten; Evangelien und Apostelgeschichte;
 Paulusbriefe; Hebräer, katholische Briefe und Offenbarung). Stellen sind aus den Analysen übernommen, nicht neu erhoben.
-Forschungsvorschläge sind als «Vorschlag» gekennzeichnet. Ergänzt [VERDICHTUNG.md](VERDICHTUNG.md); gilt erst nach Durchsicht durch Andi Neck.
+Forschungsvorschläge sind als «Vorschlag» gekennzeichnet. Ergänzt [VERDICHTUNG.md](VERDICHTUNG.md). Offene Fragen am 2026-10-24 von Andi Neck entschieden (Abschnitt 7).
 
 Verszählung: Die Marken folgen der Navigationszählung (KJV) wie alle Marken der App ([BIBELSTELLEN.md](BIBELSTELLEN.md)).
 Die Analysen zählen deutsch bzw. hebräisch; ihre Stellen sind mit den TVTMS-Daten umgerechnet (47 Marken, z. B. Joel 3,1 deutsch =
@@ -785,8 +785,8 @@ Gesamtaufbau als Muster, dann die wichtigsten Strukturen. Alles aus den Analysen
 - `elements` mit `label`, `ref`, `role` (z. B. Bedingung/Folge, A/A', Zeile/Spalte), `links` (Gegenpaar, Pfeil, Erfüllung), `child` für
   Verschachtelung; bei `matrix` `row` und `col`, leere Zellen ausdrücklich als `empty`.
 - `features` als Objekt mit den 15 Schlüsseln aus 2b.
-- `basis`: `text` (vom Text gesichert) oder `proposal` (Forschungsvorschlag, mit Quelle). Ein Muster mit `proposal` darf nur dargestellt
-  werden, wenn das Bild als Deutung gekennzeichnet ist.
+- `basis`: `text` (vom Text gesichert) oder `proposal` (Forschungsvorschlag, mit Quelle). Ein Muster mit `proposal` darf im Bild
+  erscheinen, aber nur als Deutung gekennzeichnet (Entscheid 3).
 - Marken immer in Navigationszählung (KJV); die deutsche Zählung erscheint nur in der Anzeige (Umrechnung `scripts/versification.py`, TVTMS).
 
 **Prüfung «Strukturtreue» (Erweiterung)**
@@ -804,18 +804,17 @@ Gesamtaufbau als Muster, dann die wichtigsten Strukturen. Alles aus den Analysen
 - Regeln der Strukturtreue ergänzen: (6) Stimmen trennen; (7) Offenheit erhalten (offene Enden, «vielleicht», Spannungen);
   (8) Parallelfassungen nicht harmonisieren; (9) Text, Deutung und Forschungsvorschlag trennen; (10) Verzeichnisse nach Gliederung und
   Summe verdichten, Reihen nach allen Gliedern.
-- Umfang je Ebene: Regel für vollständige Reihen mit mehr als 8 Gliedern (offene Frage 2).
+- Umfang je Ebene: vollständige Reihen mit mehr als 8 Gliedern erlaubt (Entscheid 2, umgesetzt).
 
-## 7. Offene Fragen
+## 7. Entscheide (2026-10-24, Andi Neck)
 
-1. **Gattungsformen:** Ein Muster `form` mit Verzeichnis von 15 Untertypen (Vorschlag) oder einzelne Muster für die häufigsten Formen
-   (`lawsuit`, `letter`, `lament`)?
-2. **Umfang je Ebene:** VERDICHTUNG.md erlaubt im Raster bis 8 Felder. Tragende Reihen haben 12 bis 22 Glieder ([[ECC.3.1-ECC.3.8]]: 14 Paare;
-   Ps 119: 22 Strophen; Jakobssegen: 12; Sendschreiben: 7 × 8). Ausnahme für vollständige Reihen, Zoom im Bild oder Gruppierung?
-3. **Forschungsgliederungen im Bild:** Sollen Vorschläge (Chiasmen, konzentrische Visionszyklen, Dreiteilung Jesajas, Gliederung des
-   Galaterbriefs als Gerichtsrede) im Bild erscheinen, als Deutung gekennzeichnet, oder nur in «Verstehen»?
-4. **Textfassung:** Welche Fassung verdichtet die App bei stark abweichenden Fassungen (Est hebräisch ↔ griechisch; Jer MT ↔ LXX; Dan mit
-   oder ohne Zusätze; Mk mit Schluss 16,8)? Vorschlag: Grundlage der Arbeitsübersetzung, andere Fassung als Merkmal `text_forms`.
+1. **Gattungsformen:** ein Muster `form` mit Untertypen (`form_type`) und Pflichtgliedern, wie in 3.22 vorgeschlagen.
+2. **Lange Reihen:** Ausnahme von der Grenze «Raster bis 8 Felder»: Tragende Reihen bleiben vollständig, das Bild gruppiert oder
+   verkleinert, damit keine wichtige Information verloren geht ([VERDICHTUNG.md](VERDICHTUNG.md), Regel 6).
+3. **Forschungsgliederungen:** dürfen auch im Bild erscheinen, als Deutung gekennzeichnet (`basis: proposal`; Regel 7).
+4. **Textfassung:** Verdichtet wird die Grundlage der Arbeitsübersetzung; andere Fassungen als Hinweis (`text_forms`) in
+   Zusammenfassung und Kernanalyse, nicht im Bild. Mehrere Fassungen im Bild verwirren; sie gehören ins vertiefte Studium auf
+   Versebene (Regel 8).
 
 ## Anhang: Verbleib aller Vorschläge der Analysen
 

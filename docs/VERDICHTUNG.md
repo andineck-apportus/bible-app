@@ -27,7 +27,7 @@ ineinander: Eine Reihe kann in einem Rahmen stehen, ein Gegensatz kann aus Bedin
 eine passende Darstellung in Zusammenfassung und Bild.
 
 Die Tabelle ist die Kurzfassung. Der vollständige Katalog aus der Analyse aller 66 Bücher steht in
-[STRUKTURKATALOG.md](STRUKTURKATALOG.md) (Entwurf 2026-10-24, zur Durchsicht): 33 Baumuster in 9 Familien, 15 Merkmale (z. B. Sprecher,
+[STRUKTURKATALOG.md](STRUKTURKATALOG.md) (2026-10-24, offene Fragen von Andi Neck entschieden): 33 Baumuster in 9 Familien, 15 Merkmale (z. B. Sprecher,
 Musterbruch, offenes Ende, Textfassungen, Deutung statt Text) und 20 Darstellungen als Vorgabe für das Zeichnen, dazu eine
 Übersicht aller Bücher und Fallstricke.
 
@@ -63,6 +63,15 @@ Musterbruch, offenes Ende, Textfassungen, Deutung statt Text) und 20 Darstellung
    Mt 5 zeigt Reihe (5,3–12), Bildworte (5,13–16), Grundsatz (5,17–20) und Gegensätze (5,21–48).
 5. **Prüfung «Strukturtreue»** durch eine getrennte Instanz vor der Freigabe: Ist die Struktur richtig erkannt? Fehlt ein
    Glied? Stimmen Richtung und Zuordnung? Zeigt die Darstellung die Struktur?
+6. **Vollständige Reihen gehen vor der Feldzahl.** Trägt eine Reihe oder ein Raster die Aussage, bleiben alle Glieder
+   erhalten, auch über 8 Felder hinaus (Pred 3: 14 Paare, Ps 119: 22 Strophen, Sendschreiben 7 × 8). Das Bild gruppiert dann
+   (z. B. 7 Paare + 7 Paare) oder verkleinert die Felder, die Zusammenfassung bleibt eine knappe Liste aller Glieder.
+7. **Forschungsgliederungen sind gekennzeichnet.** Gliederungen, die die Forschung vorschlägt (spiegelbildlicher Aufbau,
+   konzentrische Visionen, Dreiteilung Jesajas), dürfen auch im Bild erscheinen, aber sichtbar als Deutung gekennzeichnet
+   (Band «Deutung» bzw. «Vorschlag der Forschung»), nie als Befund des Textes.
+8. **Eine Textfassung je Verdichtung.** Verdichtet wird die Grundlage der Arbeitsübersetzung. Abweichende Fassungen (Ester
+   hebräisch ↔ griechisch, Jeremia MT ↔ LXX, Zusätze zu Daniel, Markus-Schluss) werden in Zusammenfassung und Kernanalyse als
+   Hinweis genannt, im Bild nicht gezeigt: Varianten gehören ins vertiefte Studium auf Versebene.
 
 ## Die Kernanalyse
 
@@ -99,7 +108,7 @@ sagt; eine Deutung wird als Deutung gekennzeichnet.
 
 | Ebene | Momente | Zusammenfassung | Bild |
 |---|---|---|---|
-| Abschnitt | 1–3; eine Reihe, ein Gegensatz oder ein Baum zählt als ein Moment mit allen Gliedern | 2–4 Sätze oder eine kurze Liste | 1–3 Szenen oder eine Übersicht (Raster bis 8 Felder, Spalten, Baum, Modell) |
+| Abschnitt | 1–3; eine Reihe, ein Gegensatz oder ein Baum zählt als ein Moment mit allen Gliedern | 2–4 Sätze oder eine kurze Liste | 1–3 Szenen oder eine Übersicht (Raster bis 8 Felder, bei tragenden Reihen alle Glieder, gruppiert; Spalten, Baum, Modell) |
 | Kapitel | ein Moment je Hauptabschnitt, höchstens 4 | 3–5 Sätze | höchstens 4 Felder |
 | Buch | 4–6 Stationen | 4–6 Sätze | Zeitleiste oder Karte mit den Stationen |
 | Buchgruppe, Testament, Bibel | 4–6 Stationen | 4–6 Sätze | Stationen mit Beschriftung |
