@@ -1,0 +1,7968 @@
+{
+ "datum": "2026-10-24",
+ "runde": "Runde 6 (Einsatzgrösse 32 px, Detailstufen)",
+ "anlass_de": "Rückmeldung Andi Neck 2026-10-24: Zeichen mit Händen in den Zellen der Strukturbilder nicht erkennbar (Blindtest bei 160 px bestanden, in der Zelle nur etwa 28–36 px); Hände brauchen klare Merkmale; Münzen mehr Detail; auch für schwierige Begriffe Zeichen; prüfen, ob mehr Detail hilft, egal ist oder stört.",
+ "methode_de": "Werkzeug scripts/authoring/zeichen_test.py: Testblätter ohne Namen, Schlüssel getrennt; Zeichen 32 CSS-Pixel hoch bei Pixeldichte 2 (wie in einer Zelle), zusätzlich 160 px und 32 px in der Zelle mit Text (bilder_diagramm.Cells). Blinde Benennung durch getrennte KI-Instanzen (claude -p, Claude Opus 5.5, nur Lesezugriff auf das Blatt); Bewertung durch eine weitere Instanz: Bedeutung 0/1/2 und «Bild erkannt» 0/1. Ausgangsmessung: alle 127 Zeichen, Gegenstände und Orte in den Zellen der Pilot-Strukturbilder (RUT, TIT, MAT-2, MAT, MRK-2), 32 px allein, je vier Instanzen. Überarbeitete und neue Zeichen: je drei Detailstufen (1 einfach/Silhouette, 2 mittel = Silhouette + 1–2 Erkennungsmerkmale, 3 detailliert); die Stufen auf drei Sätze verteilt, jede Instanz sah ein Zeichen nur in einer Stufe. 32 px allein: vier Instanzen je Satz; 32 px in der Zelle und 160 px: je zwei. Zusatzfragen je Zeichen: «Würde mehr Detail helfen, ist es egal, oder stört es?» und «Womit verwechselbar?». Runde 6b: fünf Zeichen nach der ersten Messung neu gezeichnet (Almosen, Verleumden, enges und weites Tor, töricht) und gleich gemessen. Wahl: Stufe mit den meisten Treffern bei 32 px allein, bei Gleichstand mehr «Bild erkannt» (32 px und Zelle), sonst die einfachere. «Erkannt» = mindestens zwei von vier Antworten treffen die Bedeutung. Keine Prüfung mit Leserinnen und Lesern.",
+ "ausgangsmessung_32px": {
+  "anzahl": 127,
+  "erkannt": 65,
+  "bild_erkannt": 118,
+  "zeichen": {
+   "FIG-ORT-FELD": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Weizenfeld",
+     "Erntefeld",
+     "Kornfeld",
+     "Kornfeld"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-OHRFEIGE": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Schlag ins Gesicht",
+     "Schlag ins Gesicht",
+     "Ohrfeige",
+     "Schlag ins Gesicht"
+    ],
+    "note": "«Schlag ins Gesicht» (gleichwertig)"
+   },
+   "FIG-OBJ-LAMPE": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Öllampe",
+     "Öllampe",
+     "Öllampe",
+     "Öllampe"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-GEBEN": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Münze geben",
+     "Münze geben",
+     "Münze geben",
+     "Münze geben"
+    ],
+    "note": "Gegenstand als Münze gelesen"
+   },
+   "FIG-ZEICHEN-JOTA": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Schrift erforschen",
+     "Schrift erforschen",
+     "Schrift erforschen",
+     "Schriftforschung"
+    ],
+    "note": "Schrift erforschen; Jota nicht erkannt"
+   },
+   "FIG-ZEICHEN-GLAUBEN": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Herz",
+     "Liebe",
+     "Liebe",
+     "Liebe"
+    ],
+    "note": "Herz als Liebe gelesen"
+   },
+   "FIG-OBJ-BAUM-FAUL": {
+    "treffer": 1,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Kranker Feigenbaum",
+     "kranker Feigenbaum",
+     "kranker Feigenbaum",
+     "Kranker Baum"
+    ],
+    "note": "kranker Feigenbaum"
+   },
+   "FIG-ZEICHEN-STURM": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Unwetter",
+     "Unwetter",
+     "Unwetter",
+     "Unwetter"
+    ],
+    "note": "Unwetter (gleichwertig)"
+   },
+   "FIG-ZEICHEN-BOESES": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 2,
+    "antworten": [
+     "Finsternis",
+     "Sünde",
+     "Finsternis",
+     "Sünde"
+    ],
+    "note": "Finsternis/Sünde"
+   },
+   "FIG-ZEICHEN-MAMMON": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Schatz",
+     "Reichtum",
+     "Schatz",
+     "Reichtum"
+    ],
+    "note": "Schatz/Reichtum, Herr-Aspekt fehlt"
+   },
+   "FIG-ORT-TENNE": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Dreschplatz",
+     "Dreschplatz",
+     "Dreschplatz",
+     "Dreschplatz"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-OBJ-ALTAR": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Brandopfer",
+     "Brandopferaltar",
+     "Opferaltar",
+     "Brandopfer"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-GEWINN": {
+    "treffer": 1,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Zinsen",
+     "Zinsen",
+     "Gewinn",
+     "Zins"
+    ],
+    "note": "Zinsen"
+   },
+   "FIG-ZEICHEN-GERICHT": {
+    "treffer": 3,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Waage",
+     "Gerechtigkeit",
+     "Gerechtigkeit",
+     "Gerechtigkeit"
+    ],
+    "note": "nur Gegenstand «Waage»"
+   },
+   "FIG-ZEICHEN-MENSCHEN": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Menschenmenge",
+     "Volk",
+     "Volk",
+     "Volk"
+    ],
+    "note": "Volk (gleichwertig)"
+   },
+   "FIG-ZEICHEN-SEGNEN": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 1,
+    "antworten": [
+     "Mahnender Finger",
+     "Zeugnis ablegen",
+     "Gebot",
+     "Berührung"
+    ],
+    "note": "Hand als mahnender Finger/Gebot gelesen"
+   },
+   "FIG-ZEICHEN-HOFFNUNG": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Spross",
+     "Spross aus Baumstumpf",
+     "Spross",
+     "Spross"
+    ],
+    "note": "nur Bild «Spross» genannt"
+   },
+   "FIG-ZEICHEN-LOESEN": {
+    "treffer": 3,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Zerbrochene Ketten",
+     "Befreiung",
+     "Befreiung",
+     "Befreiung"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ORT-TOR-WEIT": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 2,
+    "antworten": [
+     "Stadttor",
+     "leeres Grab",
+     "Stadttor",
+     "Leeres Grab"
+    ],
+    "note": "leeres Grab / Stadttor"
+   },
+   "FIG-OBJ-AXT-WURZEL": {
+    "treffer": 1,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Baum fällen",
+     "Axt an Wurzel",
+     "Baum fällen",
+     "Baum fällen"
+    ],
+    "note": "Baum fällen"
+   },
+   "FIG-ZEICHEN-HUNGERSNOT": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Hungersnot",
+     "Hungersnot",
+     "Hungersnot",
+     "Hungersnot"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ORT-STADTTOR": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Stadttor",
+     "Stadttor",
+     "Stadttor",
+     "Stadttor"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-OBJ-SCHWEIN": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Schwein",
+     "Schwein",
+     "Schwein",
+     "Schwein"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-KOPF-HAAR": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 0,
+    "antworten": [
+     "Gedanke",
+     "Gedanke",
+     "zur Besinnung kommen",
+     "Gedanke"
+    ],
+    "note": "Gedanke"
+   },
+   "FIG-ZEICHEN-UMKEHR": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Umkehr",
+     "Umkehr",
+     "Umkehr",
+     "Umkehr"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ORT-GEFAENGNIS": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Gefängnis",
+     "Gefängnis",
+     "Gefängnis",
+     "Gefängnis"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-OBJ-KETTE": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Kette",
+     "Kette",
+     "Kette",
+     "Kette"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-OBJ-SANDALE": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Sandale",
+     "Sandale",
+     "Sandale",
+     "Sandale"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-ALMOSEN": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Bezahlung",
+     "Bestechung",
+     "Erbteil auszahlen",
+     "Bezahlen"
+    ],
+    "note": "Bezahlung; Armer nicht erkannt"
+   },
+   "FIG-ZEICHEN-TRENNEN": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Trennung",
+     "Trennung",
+     "Trennung",
+     "Trennung"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-EHE": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Ehe",
+     "Ehe",
+     "Ehe",
+     "Ehe"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-OBJ-PERLE": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Perlen",
+     "Perlen",
+     "Perlen",
+     "Perlen"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-SCHATZ": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Schatz",
+     "Schatz",
+     "Schatz",
+     "Schatz"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-OBJ-OBERGEWAND": {
+    "treffer": 3,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Mantel",
+     "Mantel",
+     "Gewand",
+     "Mantel"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-FRAGEN": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Frage",
+     "Frage",
+     "Frage",
+     "Frage"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-OBJ-BALKEN": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Balken",
+     "Balken",
+     "Balken",
+     "Balken"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-ZUFLUCHT": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Engel",
+     "Cherub",
+     "Cherub",
+     "Cherub"
+    ],
+    "note": "Cherub/Engel"
+   },
+   "FIG-ZEICHEN-UNREIN": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Schmutz",
+     "Schmutz",
+     "Schmutz",
+     "Staub"
+    ],
+    "note": "nur «Schmutz»"
+   },
+   "FIG-ZEICHEN-WARNEN": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 3,
+    "antworten": [
+     "Erinnern",
+     "Gebot",
+     "Gebot",
+     "Splitter"
+    ],
+    "note": "Gebot"
+   },
+   "FIG-ZEICHEN-FINSTERNIS": {
+    "treffer": 3,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Finsternis",
+     "Finsternis",
+     "dunkle Wolke",
+     "Dunkelheit"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-OBJ-FISCH": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Fisch",
+     "Fisch",
+     "Fisch",
+     "Fisch"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-VIELE-WORTE": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Gespräch",
+     "Gespräch",
+     "reden",
+     "Gespräche"
+    ],
+    "note": "Gespräch; «zu viel» nicht erkannt"
+   },
+   "FIG-OBJ-VOGEL": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Vogel",
+     "Vogel",
+     "Vogel",
+     "Vogel"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-WEG": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Weg",
+     "Weg",
+     "Weg",
+     "Weg"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-TROST": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 0,
+    "antworten": [
+     "weinen",
+     "Weinen",
+     "weinen",
+     "Weinen"
+    ],
+    "note": "weinen; Wegwischen übersehen"
+   },
+   "FIG-ORT-JERUSALEM": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Stadt Jerusalem",
+     "Jerusalem",
+     "Jerusalem",
+     "Jerusalem"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-LIEBE": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Liebe",
+     "Liebe",
+     "Liebe",
+     "Liebe"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-NEIN": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "nein",
+     "Nein",
+     "nicht",
+     "Nein"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-VERLEUGNEN": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 1,
+    "antworten": [
+     "Bund gebrochen",
+     "Vergänglich",
+     "nicht ewig",
+     "Endlich"
+    ],
+    "note": "vergänglich/endlich"
+   },
+   "FIG-OBJ-OELGEFAESS": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Öl",
+     "Öl",
+     "Öl",
+     "Öl"
+    ],
+    "note": "nur «Öl», Gefäss nicht genannt"
+   },
+   "FIG-OBJ-THRON": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Thron",
+     "Thron",
+     "Thron",
+     "Thron"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-OBJ-WOLF": {
+    "treffer": 2,
+    "n": 4,
+    "bild": 2,
+    "antworten": [
+     "Wolf",
+     "Esel",
+     "Wolf",
+     "Esel"
+    ],
+    "note": "Esel"
+   },
+   "FIG-ZEICHEN-GASTFREUNDSCHAFT": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Tür",
+     "Tür",
+     "Tür",
+     "Tür"
+    ],
+    "note": "nur «Tür»"
+   },
+   "FIG-ORT-HAUS-FELS": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Haus auf Fels",
+     "Haus auf Fels",
+     "Haus auf Fels",
+     "Haus auf Fels"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-NAME-GOTTES": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Gott (JHWH)",
+     "Gott (JHWH)",
+     "Gott (JHWH)",
+     "Gott (JHWH)"
+    ],
+    "note": "Gott statt Name/heiligen"
+   },
+   "FIG-ZEICHEN-FRIEDEN": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Bund schließen",
+     "Bund",
+     "Bund",
+     "Bund"
+    ],
+    "note": "Bund"
+   },
+   "FIG-ZEICHEN-AUGE": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "sehen",
+     "Sehen",
+     "sehen",
+     "Sehen"
+    ],
+    "note": "sehen statt Körperteil"
+   },
+   "FIG-ORT-TOR-ENG": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 0,
+    "antworten": [
+     "Mauer",
+     "Mauer",
+     "Mauer einstürzen",
+     "Mauer"
+    ],
+    "note": "Mauer; Spalt übersehen"
+   },
+   "FIG-ZEICHEN-WAHRHEIT": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "ja",
+     "Ja",
+     "ja",
+     "Ja"
+    ],
+    "note": "ja"
+   },
+   "FIG-ZEICHEN-PREISEN": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Lobpreis",
+     "Lobpreis",
+     "loben",
+     "Lobpreis"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-LEUCHTEN": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Heiliger Geist",
+     "Heiliger Geist",
+     "Heiliger Geist",
+     "Feuer"
+    ],
+    "note": "Heiliger Geist"
+   },
+   "FIG-ZEICHEN-WILLE-GOTTES": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Segen vom Himmel",
+     "Segen vom Himmel",
+     "Segen vom Himmel",
+     "Segen vom Himmel"
+    ],
+    "note": "Segen vom Himmel"
+   },
+   "FIG-ZEICHEN-KIND": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 0,
+    "antworten": [
+     "Frau",
+     "Frau",
+     "Frau",
+     "Frau"
+    ],
+    "note": "Frau"
+   },
+   "FIG-ZEICHEN-FREUDE": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Licht",
+     "Herrlichkeit",
+     "Licht",
+     "Licht"
+    ],
+    "note": "Licht"
+   },
+   "FIG-ZEICHEN-FRIEDE": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Olivenzweig",
+     "Olivenzweig",
+     "Olivenzweig",
+     "Olivenzweig"
+    ],
+    "note": "nur «Olivenzweig»"
+   },
+   "FIG-ORT-LAND": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Gelobtes Land",
+     "Gelobtes Land",
+     "Gelobtes Land",
+     "Gelobtes Land"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-SONNE": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Sonne",
+     "Sonne",
+     "Sonne",
+     "Sonne"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-GEBURT": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Säugling in Windeln",
+     "Säugling in Windeln",
+     "Säugling in Windeln",
+     "Säugling in Windeln"
+    ],
+    "note": "Säugling statt geboren werden"
+   },
+   "FIG-OBJ-SCHAF": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Schaf",
+     "Schaf",
+     "Schaf",
+     "Schaf"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-REIN": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Stern",
+     "Tau",
+     "Stern",
+     "Stern"
+    ],
+    "note": "Stern"
+   },
+   "FIG-ZEICHEN-TOD": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Grab",
+     "Grab",
+     "Grab",
+     "Grab mit Stein"
+    ],
+    "note": "Grab"
+   },
+   "FIG-ZEICHEN-SPRECHEN": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Stimme",
+     "Stimme",
+     "Stimme",
+     "Stimme"
+    ],
+    "note": "Stimme"
+   },
+   "FIG-ZEICHEN-VERSUCHUNG": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Angelhaken",
+     "Angelhaken",
+     "Angelhaken",
+     "Angelhaken mit Münze"
+    ],
+    "note": "nur «Angelhaken»"
+   },
+   "FIG-ZEICHEN-ABLEHNEN": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Winken",
+     "Winken",
+     "Winken",
+     "Winken"
+    ],
+    "note": "Winken"
+   },
+   "FIG-OBJ-SALZ": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Manna",
+     "Manna",
+     "Manna",
+     "Manna"
+    ],
+    "note": "Manna"
+   },
+   "FIG-ZEICHEN-LEBEN": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 2,
+    "antworten": [
+     "Schöpfung",
+     "Schöpfung",
+     "Lebensbaum",
+     "Baum des Lebens"
+    ],
+    "note": "Schöpfung"
+   },
+   "FIG-ZEICHEN-REGEN": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Regen",
+     "Regen",
+     "Regen",
+     "Regen"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-OBJ-HUND": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Hund",
+     "Hund",
+     "Hund",
+     "Hund"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-OBJ-POSAUNE": {
+    "treffer": 3,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Trompete",
+     "Posaune",
+     "Posaune",
+     "Horn"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-NACHT": {
+    "treffer": 2,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Mond",
+     "Nacht",
+     "Nacht",
+     "Mond"
+    ],
+    "note": "Mond"
+   },
+   "FIG-ORT-KAMMER": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Haus",
+     "Haus",
+     "Haus",
+     "Haus"
+    ],
+    "note": "Haus; Verschluss übersehen"
+   },
+   "FIG-ZEICHEN-REICH-GOTTES": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "König",
+     "König",
+     "König",
+     "König"
+    ],
+    "note": "König"
+   },
+   "FIG-ZEICHEN-SCHWUR": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 3,
+    "antworten": [
+     "Lobpreis",
+     "Hand erheben",
+     "Hand erheben",
+     "Klopfen"
+    ],
+    "note": "Hand erheben, Band übersehen"
+   },
+   "FIG-ZEICHEN-GRUESSEN": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Bund",
+     "Bund",
+     "Bund",
+     "Bund"
+    ],
+    "note": "Bund"
+   },
+   "FIG-OBJ-LILIE": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Lilie",
+     "Lilie",
+     "Lilie",
+     "Lilie"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-TRAUER": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Träne",
+     "Tropfen",
+     "Träne",
+     "Träne"
+    ],
+    "note": "nur «Träne»"
+   },
+   "FIG-ORT-HAUS-SAND": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Haus auf Sand",
+     "Haus auf Sand",
+     "Haus auf Sand",
+     "Haus auf Sand"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-OBJ-LEUCHTER": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Leuchter",
+     "Leuchter",
+     "Leuchter",
+     "Leuchter"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-HAND": {
+    "treffer": 2,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Schwur",
+     "Schwören",
+     "Hand",
+     "Hand"
+    ],
+    "note": "Schwur"
+   },
+   "FIG-OBJ-BECHER-LEER": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Ausgießen",
+     "Ausgießen",
+     "Becher ausgießen",
+     "Ausgießen"
+    ],
+    "note": "ausgiessen"
+   },
+   "FIG-ZEICHEN-SCHULD": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Urkunde",
+     "Urkunde",
+     "Urkunde",
+     "Urkunde"
+    ],
+    "note": "Urkunde"
+   },
+   "FIG-ZEICHEN-ZORN": {
+    "treffer": 3,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Gewitter",
+     "Zorn",
+     "Zorn",
+     "Zorn"
+    ],
+    "note": "Gewitter"
+   },
+   "FIG-ZEICHEN-WELT": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Welt",
+     "Welt",
+     "Welt",
+     "Welt"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-SATT": {
+    "treffer": 1,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Brot",
+     "Reine Speise",
+     "Brot",
+     "Brot genügt"
+    ],
+    "note": "Brot; Haken ignoriert"
+   },
+   "FIG-ZEICHEN-HERZ": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Liebe",
+     "Liebe",
+     "Liebe",
+     "Liebe"
+    ],
+    "note": "Liebe"
+   },
+   "FIG-ZEICHEN-SEHEN": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Sehen",
+     "Sehen",
+     "Sehen",
+     "Sehen"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-VERKUENDIGEN": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Verkünden",
+     "Verkünden",
+     "Verkünden",
+     "Verkünden"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-SCHATZ-ERDE": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 3,
+    "antworten": [
+     "Kein Schatz",
+     "Kein Götzenopfer",
+     "Keine Schätze",
+     "Keine Schätze"
+    ],
+    "note": "keine Schätze; Vergänglichkeit nicht erkannt"
+   },
+   "FIG-ZEICHEN-KUSS": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Mund",
+     "Mund",
+     "Mund",
+     "Mund"
+    ],
+    "note": "Mund"
+   },
+   "FIG-OBJ-SCHRIFTROLLE": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Schriftrolle",
+     "Schriftrolle",
+     "Schriftrolle",
+     "Schriftrolle"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-OBJ-KRUG-WEIN": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Weinkrug",
+     "Weinkrug",
+     "Weinkrug",
+     "Weinkrug"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-HASS": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "gebrochenes Herz",
+     "gebrochenes Herz",
+     "gebrochenes Herz",
+     "gebrochenes Herz"
+    ],
+    "note": "gebrochenes Herz"
+   },
+   "FIG-ZEICHEN-VERGEBEN": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "zerrissene Urkunde",
+     "zerrissene Urkunde",
+     "zerrissener Vertrag",
+     "zerrissener Vertrag"
+    ],
+    "note": "zerrissene Urkunde"
+   },
+   "FIG-ZEICHEN-FASTEN": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Fasten",
+     "Fasten",
+     "Fasten",
+     "Fasten"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-GUTE-WERKE": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Brot schenken",
+     "Brot teilen",
+     "Brot teilen",
+     "Brot teilen"
+    ],
+    "note": "Brot teilen"
+   },
+   "FIG-ZEICHEN-TREUE": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Versöhnung",
+     "Versöhnung",
+     "Liebe schenken",
+     "Versöhnung"
+    ],
+    "note": "Versöhnung"
+   },
+   "FIG-OBJ-SPLITTER": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 0,
+    "antworten": [
+     "Gebot",
+     "Gebot",
+     "Gebot",
+     "Gebot Gottes"
+    ],
+    "note": "Gebot (Finger statt Splitter)"
+   },
+   "FIG-OBJ-BROT": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Brot",
+     "Brot",
+     "Brot",
+     "Brot"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-ERBARMEN": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Liebe",
+     "Liebe schenken",
+     "Liebe empfangen",
+     "Liebe schenken"
+    ],
+    "note": "Liebe"
+   },
+   "FIG-ZEICHEN-FEUER": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Feuer",
+     "Feuer",
+     "Feuer",
+     "Feuer"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-OBJ-GARBE": {
+    "treffer": 3,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Ernte",
+     "Garbe",
+     "Garbe",
+     "Garbe"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-OBJ-BAUM-GUT": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Fruchtbaum",
+     "Fruchtbaum",
+     "Fruchtbaum",
+     "Fruchtbaum"
+    ],
+    "note": "Fruchtbaum, «gut» fehlt"
+   },
+   "FIG-OBJ-SCHEFFEL": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Kornmaß",
+     "Kornmaß",
+     "Kornmaß",
+     "Kornmaß"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-GEREDE": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Lüge",
+     "Lüge",
+     "Lüge",
+     "Lüge"
+    ],
+    "note": "Lüge"
+   },
+   "FIG-OBJ-BRIEF": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 0,
+    "antworten": [
+     "Schriftrolle",
+     "Gesetzesrolle",
+     "Gesetzesrolle",
+     "Schriftrolle"
+    ],
+    "note": "Schriftrolle/Gesetzesrolle"
+   },
+   "FIG-ZEICHEN-HOEREN": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Hören",
+     "Hören",
+     "Hören",
+     "Hören"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ORT-TUER-OFFEN": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "offene Tür",
+     "offene Tür",
+     "offene Tür",
+     "offene Tür"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-OBJ-GEWAND": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Gewand",
+     "Gewand",
+     "Gewand",
+     "Gewand"
+    ],
+    "note": "allgemein «Gewand», Untergewand nicht unterschieden"
+   },
+   "FIG-ZEICHEN-GNADE": {
+    "treffer": 1,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Gnade empfangen",
+     "Gabe empfangen",
+     "Gabe empfangen",
+     "Gabe empfangen"
+    ],
+    "note": "Gabe empfangen"
+   },
+   "FIG-ZEICHEN-STAMMBAUM": {
+    "treffer": 2,
+    "n": 4,
+    "bild": 2,
+    "antworten": [
+     "Generationen",
+     "Weinranke",
+     "Aussaat",
+     "Generationen"
+    ],
+    "note": "Weinranke/Aussaat"
+   },
+   "FIG-OBJ-FEUER": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Feuer",
+     "Feuer",
+     "Feuer",
+     "Feuer"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-OBJ-BECHER-VOLL": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Becher Wein",
+     "Becher Wein",
+     "Becher Wein",
+     "Weinbecher"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-LICHT": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Stern",
+     "Stern",
+     "Stern",
+     "Stern"
+    ],
+    "note": "Stern"
+   },
+   "FIG-ZEICHEN-BETEN": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Gebet",
+     "Gebet",
+     "Gebet",
+     "Gebet"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-OBJ-MEILENSTEIN": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Meilenstein",
+     "Meilenstein",
+     "Meilenstein",
+     "Meilenstein"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "FIG-ZEICHEN-WASCHEN": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 0,
+    "antworten": [
+     "Waschschüssel",
+     "Wasserschale",
+     "Wasserschale",
+     "Wasserschale"
+    ],
+    "note": "Wasserschale (Hände als Schale gelesen)"
+   },
+   "FIG-ORT-STADT": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Stadt",
+     "Stadt",
+     "Stadt",
+     "Stadt"
+    ],
+    "note": "keine Fehldeutung"
+   }
+  }
+ },
+ "zeichen": [
+  {
+   "id": "FIG-ZEICHEN-ALMOSEN",
+   "name_de": "Almosen geben",
+   "neu": false,
+   "vorher_32px": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Bezahlung",
+     "Bestechung",
+     "Erbteil auszahlen",
+     "Bezahlen"
+    ],
+    "note": "Bezahlung; Armer nicht erkannt"
+   },
+   "runde_a": {
+    "1": {
+     "treffer32": 2,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 0,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 2,
+      "mehr": 4
+     },
+     "antworten32": [
+      "Opfer der Witwe",
+      "Witwe Scherflein",
+      "Almosen geben",
+      "Almosen geben"
+     ],
+     "antworten_zelle": [
+      "Person mit Schale",
+      "Person mit Schale"
+     ],
+     "antworten160": [
+      "Scherflein der Witwe",
+      "Scherflein der Witwe"
+     ],
+     "verwechslung": [
+      "Almosen, Betteln",
+      "Opfergabe, Almosen",
+      "Opfer, Witwenscherflein",
+      "Opfergabe, Scherflein",
+      "Bettler, Opfer",
+      "Bettler, Opfergabe"
+     ]
+    },
+    "2": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Witwe opfert Scherflein",
+      "Witwe opfert Scherflein",
+      "Witwe opfert",
+      "Witwe opfert Münze"
+     ],
+     "antworten_zelle": [
+      "Person mit Schale, Münze",
+      "Person mit Schale, Münze"
+     ],
+     "antworten160": [
+      "Opfer der Witwe",
+      "Scherflein der Witwe"
+     ],
+     "verwechslung": [
+      "Kochen, Almosen",
+      "Kochen, Almosen",
+      "Kochen, Almosen",
+      "Kochen, Almosen",
+      "Bettler",
+      "Kochende Person"
+     ]
+    },
+    "3": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 3,
+      "egal": 3
+     },
+     "antworten32": [
+      "Witwe opfert",
+      "Witwenscherflein",
+      "Scherflein der Witwe",
+      "Scherflein der Witwe"
+     ],
+     "antworten_zelle": [
+      "Bettler mit Schale",
+      "Person gibt Münze"
+     ],
+     "antworten160": [
+      "Scherflein der Witwe",
+      "Witwenopfer"
+     ],
+     "verwechslung": [
+      "betteln",
+      "Betteln, Opfer",
+      "Opfer, Almosen",
+      "Opfer, Almosen",
+      "Mönch, Koch",
+      "Bettler, Opferschale"
+     ]
+    }
+   },
+   "runde_b": {
+    "1": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Almosen geben",
+      "Almosen geben",
+      "Almosen geben",
+      "Almosen geben"
+     ],
+     "antworten_zelle": [
+      "Münze in Schale",
+      "Münze in Bettelschale"
+     ],
+     "antworten160": [
+      "Almosen geben",
+      "Almosen geben"
+     ],
+     "verwechslung": [
+      "Bettler, Opfergabe",
+      "Opfergabe, Bettler",
+      "Bettler, Opfergabe",
+      "Opfergabe, Betteln",
+      "Opfergabe",
+      "Essen servieren"
+     ]
+    },
+    "2": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Almosen geben",
+      "Almosen geben",
+      "Almosen geben",
+      "Almosen geben"
+     ],
+     "antworten_zelle": [
+      "Münze in Bettelschale",
+      "Münze in Bettlerschale"
+     ],
+     "antworten160": [
+      "Almosen geben",
+      "Almosen geben"
+     ],
+     "verwechslung": [
+      "Betteln, Opfergabe",
+      "Bettler, Opfergabe",
+      "Bettler, Opfergabe",
+      "Bettler, Opfergabe",
+      "Kochtopf, Essen",
+      "Kochtopf, Essen"
+     ]
+    },
+    "3": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Almosen geben",
+      "Almosen geben",
+      "Almosen geben",
+      "Almosen geben"
+     ],
+     "antworten_zelle": [
+      "Münze fällt in Schale",
+      "Hand wirft Münze"
+     ],
+     "antworten160": [
+      "Almosen geben",
+      "Almosen geben"
+     ],
+     "verwechslung": [
+      "Opfergabe, Bettler",
+      "Opfergabe, Lohn",
+      "Betteln, Opfergabe",
+      "Opfergabe, Bettler",
+      "Bettler mit Napf",
+      "Bettler mit Schale"
+     ]
+    }
+   },
+   "gewaehlt": {
+    "stufe": 1,
+    "treffer32": 4,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": true,
+   "wortzeichen": false,
+   "tragende_merkmale": [
+    "Sitzender Bettler als Mann mit Bart, ohne Schleier (mit Schleier als «Witwe opfert» gelesen)",
+    "Bettelschale am Boden",
+    "Hand von oben lässt eine Münze sichtbar in die Schale fallen"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-TROST",
+   "name_de": "trösten / getröstet werden",
+   "neu": false,
+   "vorher_32px": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 0,
+    "antworten": [
+     "weinen",
+     "Weinen",
+     "weinen",
+     "Weinen"
+    ],
+    "note": "weinen; Wegwischen übersehen"
+   },
+   "runde_a": {
+    "1": {
+     "treffer32": 3,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 5,
+      "egal": 1
+     },
+     "antworten32": [
+      "trösten",
+      "Freundschaft",
+      "trösten",
+      "trösten"
+     ],
+     "antworten_zelle": [
+      "zwei umarmende Personen",
+      "zwei Personen umarmen"
+     ],
+     "antworten160": [
+      "Freundschaft",
+      "Freundschaft"
+     ],
+     "verwechslung": [
+      "Freundschaft",
+      "trösten",
+      "Freundschaft, umarmen",
+      "umarmen, Freundschaft",
+      "Freunde, Paar",
+      "Freunde, Begrüßung"
+     ]
+    },
+    "2": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 3,
+      "mehr": 3
+     },
+     "antworten32": [
+      "Freundschaft",
+      "Freundschaft",
+      "Freundschaft",
+      "Freundschaft"
+     ],
+     "antworten_zelle": [
+      "Umarmende, Träne",
+      "Zwei Personen umarmen"
+     ],
+     "antworten160": [
+      "trösten",
+      "Trost"
+     ],
+     "verwechslung": [
+      "Umarmung, Geschwister",
+      "umarmen, Geschwister",
+      "Umarmung, Familie",
+      "Umarmung, Versöhnung",
+      "Freunde",
+      "Freunde, Trösten"
+     ]
+    },
+    "3": {
+     "treffer32": 1,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 4,
+      "mehr": 2
+     },
+     "antworten32": [
+      "Umarmung, Versöhnung",
+      "Trost, Umarmung",
+      "Umarmung, Versöhnung",
+      "Versöhnung, Umarmung"
+     ],
+     "antworten_zelle": [
+      "trauernde Personen umarmt",
+      "Zwei Personen umarmend"
+     ],
+     "antworten160": [
+      "Trösten",
+      "trösten"
+     ],
+     "verwechslung": [
+      "Freundschaft, Trost",
+      "Freundschaft, Versöhnung",
+      "Freundschaft, Trost",
+      "Freundschaft, Trost",
+      "Freunde",
+      "Freunde, Familie"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 1,
+    "treffer32": 3,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": true,
+   "wortzeichen": false,
+   "tragende_merkmale": [
+    "Zwei Brustbilder: eines legt dem anderen den Arm um die Schultern",
+    "Ohne Gesichtszüge (mit lächelnden Gesichtern als «Freundschaft» gelesen)"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-ABLEHNEN",
+   "name_de": "verwerfen / ablehnen",
+   "neu": false,
+   "vorher_32px": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Winken",
+     "Winken",
+     "Winken",
+     "Winken"
+    ],
+    "note": "Winken"
+   },
+   "runde_a": {
+    "1": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 4,
+      "egal": 2
+     },
+     "antworten32": [
+      "Daumen runter",
+      "Daumen runter",
+      "Daumen runter",
+      "Daumen runter"
+     ],
+     "antworten_zelle": [
+      "Daumen nach unten",
+      "Daumen nach unten"
+     ],
+     "antworten160": [
+      "schlecht",
+      "schlecht"
+     ],
+     "verwechslung": [
+      "Zeigefinger, Ablehnung",
+      "Zeigen, Ablehnung",
+      "Ablehnung, schlecht",
+      "Ablehnung, Hand",
+      "Zeigefinger nach unten",
+      "zeigende Hand"
+     ]
+    },
+    "2": {
+     "treffer32": 3,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "ablehnen",
+      "Ablehnen",
+      "schlecht",
+      "ablehnen"
+     ],
+     "antworten_zelle": [
+      "Daumen runter",
+      "Daumen nach unten"
+     ],
+     "antworten160": [
+      "Ablehnen",
+      "Ablehnung"
+     ],
+     "verwechslung": [
+      "schlecht",
+      "schlecht",
+      "ablehnen",
+      "schlecht, verwerfen",
+      "Zeigefinger",
+      "Ablehnung, schlecht"
+     ]
+    },
+    "3": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 5,
+      "mehr": 1
+     },
+     "antworten32": [
+      "Schlecht",
+      "schlecht",
+      "Unten",
+      "schlecht"
+     ],
+     "antworten_zelle": [
+      "Daumen runter",
+      "Daumen runter"
+     ],
+     "antworten160": [
+      "schlecht, ablehnen",
+      "ablehnen"
+     ],
+     "verwechslung": [
+      "Ablehnung, Abwärts",
+      "ablehnen, falsch",
+      "Hinabsteigen, Erniedrigen",
+      "ablehnen",
+      "Schlecht",
+      "Ablehnung, Schlecht"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 2,
+    "treffer32": 3,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": true,
+   "wortzeichen": false,
+   "tragende_merkmale": [
+    "Grosse Faust mit Daumen nach unten",
+    "Ärmel oben und Fingerlinien (ohne sie nur «Daumen runter» gelesen)"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-WARNEN",
+   "name_de": "warnen / ermahnen",
+   "neu": false,
+   "vorher_32px": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 3,
+    "antworten": [
+     "Erinnern",
+     "Gebot",
+     "Gebot",
+     "Splitter"
+    ],
+    "note": "Gebot"
+   },
+   "runde_a": {
+    "1": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Warnung",
+      "Warnung",
+      "Warnung",
+      "Warnung"
+     ],
+     "antworten_zelle": [
+      "Warndreieck mit Ausrufezeichen",
+      "Warndreieck mit Ausrufezeichen"
+     ],
+     "antworten160": [
+      "Warnung",
+      "Warnung"
+     ],
+     "verwechslung": [
+      "Gefahr, Achtung",
+      "Gefahr",
+      "Gefahr",
+      "Gefahr",
+      "Verkehrsschild Gefahr",
+      "Verkehrsschild"
+     ]
+    },
+    "2": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Warnung",
+      "Warnung",
+      "Warnung",
+      "Warnung"
+     ],
+     "antworten_zelle": [
+      "Warndreieck",
+      "Warndreieck"
+     ],
+     "antworten160": [
+      "Warnung",
+      "Warnung"
+     ],
+     "verwechslung": [
+      "Gefahr, Achtung",
+      "Gefahr, Achtung",
+      "Gefahr, Achtung",
+      "Gefahr, Vorsicht",
+      "Gefahr, Fehler",
+      "Gefahr"
+     ]
+    },
+    "3": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Warnung",
+      "Warnung",
+      "Warnung",
+      "Warnung"
+     ],
+     "antworten_zelle": [
+      "Warndreieck",
+      "Warndreieck mit Ausrufezeichen"
+     ],
+     "antworten160": [
+      "Warnung",
+      "Warnung"
+     ],
+     "verwechslung": [
+      "Gefahr",
+      "Gefahr",
+      "Gefahr",
+      "Gefahr",
+      "Verkehrsschild",
+      "Verkehrsschild"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 1,
+    "treffer32": 4,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": true,
+   "wortzeichen": false,
+   "tragende_merkmale": [
+    "Gelbes Warndreieck mit rotem Rand und schwarzem Ausrufezeichen (bekanntes Verkehrszeichen)"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-SEGNEN",
+   "name_de": "segnen",
+   "neu": false,
+   "vorher_32px": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 1,
+    "antworten": [
+     "Mahnender Finger",
+     "Zeugnis ablegen",
+     "Gebot",
+     "Berührung"
+    ],
+    "note": "Hand als mahnender Finger/Gebot gelesen"
+   },
+   "runde_a": {
+    "1": {
+     "treffer32": 3,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 0,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Kind segnen",
+      "Kind segnen",
+      "lehren",
+      "Kind segnen"
+     ],
+     "antworten_zelle": [
+      "Mann zeigt, Kind",
+      "Erwachsener zeigt, Kind"
+     ],
+     "antworten160": [
+      "Segnen",
+      "segnen"
+     ],
+     "verwechslung": [
+      "zurechtweisen",
+      "belehren",
+      "segnen, zurechtweisen",
+      "lehren",
+      "Lehrer mit Schüler",
+      "Lehrer und Schüler"
+     ]
+    },
+    "2": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 0,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 4,
+      "mehr": 2
+     },
+     "antworten32": [
+      "Segnen",
+      "Segnen",
+      "Segnen",
+      "Segnen"
+     ],
+     "antworten_zelle": [
+      "Mann zeigt auf Kind",
+      "Erwachsener zeigt auf Kind"
+     ],
+     "antworten160": [
+      "segnen",
+      "segnen"
+     ],
+     "verwechslung": [
+      "Heilen, Handauflegen",
+      "Heilen",
+      "Heilen",
+      "Heilen",
+      "Lehrer mit Schüler",
+      "Lehrer mit Schüler"
+     ]
+    },
+    "3": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 0,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 3,
+      "mehr": 3
+     },
+     "antworten32": [
+      "Segnen",
+      "Segnen",
+      "segnen",
+      "Segnen"
+     ],
+     "antworten_zelle": [
+      "Erwachsener und Kind",
+      "Erwachsener zeigt, Kind"
+     ],
+     "antworten160": [
+      "segnen",
+      "segnen"
+     ],
+     "verwechslung": [
+      "Handauflegen, heilen",
+      "Handauflegung, Heilen",
+      "heilen, Handauflegung",
+      "Handauflegung, Heilen",
+      "Lehrer, Segnung",
+      "Lehrer"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 2,
+    "treffer32": 4,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": true,
+   "wortzeichen": false,
+   "tragende_merkmale": [
+    "Grosse Figur legt einer kleineren die Hand auf den Kopf",
+    "Goldene Lichtstriche über der Hand"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-GRUESSEN",
+   "name_de": "grüssen",
+   "neu": false,
+   "vorher_32px": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Bund",
+     "Bund",
+     "Bund",
+     "Bund"
+    ],
+    "note": "Bund"
+   },
+   "runde_a": {
+    "1": {
+     "treffer32": 2,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Winken, Rufen",
+      "Winken, Gruß",
+      "Winken, Abschied",
+      "Winken, Gruß"
+     ],
+     "antworten_zelle": [
+      "winkende Hand",
+      "Winkende Hand"
+     ],
+     "antworten160": [
+      "Winken",
+      "winken"
+     ],
+     "verwechslung": [
+      "Abschied, Gruß",
+      "Abschied, Rufen",
+      "Gruß, Hand",
+      "Hand, Abschied",
+      "Stopp-Zeichen",
+      "Hallo, Abschied"
+     ]
+    },
+    "2": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "winken",
+      "Winken",
+      "winken",
+      "winken"
+     ],
+     "antworten_zelle": [
+      "winkende Hand",
+      "winkende Hand"
+     ],
+     "antworten160": [
+      "Winken",
+      "Winken"
+     ],
+     "verwechslung": [
+      "grüßen",
+      "Grüßen",
+      "grüßen, Hand",
+      "grüßen, Abschied",
+      "Abschied, Stopp",
+      "Abschied, Stopp-Hand"
+     ]
+    },
+    "3": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Winken",
+      "winken",
+      "Winken",
+      "winken"
+     ],
+     "antworten_zelle": [
+      "Winkende Hand",
+      "Winkende Hand"
+     ],
+     "antworten160": [
+      "winken",
+      "winken"
+     ],
+     "verwechslung": [
+      "Grüßen, Rufen",
+      "grüßen, rufen",
+      "Grüßen, Zittern",
+      "grüßen, rufen",
+      "Stopp",
+      "Abschied, Stopp"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 1,
+    "treffer32": 2,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": true,
+   "wortzeichen": false,
+   "tragende_merkmale": [
+    "Offene Hand, leicht geneigt, vier abgesetzte Finger und abstehender Daumen",
+    "Bewegungsbögen links und rechts (Winken)"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-HAND",
+   "name_de": "Hand (rechte Hand)",
+   "neu": false,
+   "vorher_32px": {
+    "treffer": 2,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Schwur",
+     "Schwören",
+     "Hand",
+     "Hand"
+    ],
+    "note": "Schwur"
+   },
+   "runde_a": {
+    "1": {
+     "treffer32": 2,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 1,
+     "n160": 2,
+     "detail": {
+      "egal": 4,
+      "mehr": 2
+     },
+     "antworten32": [
+      "Halt",
+      "Hand",
+      "Halt",
+      "Hand"
+     ],
+     "antworten_zelle": [
+      "Erhobene Hand",
+      "Offene Hand"
+     ],
+     "antworten160": [
+      "Hand",
+      "Halt, stopp"
+     ],
+     "verwechslung": [
+      "Hand, Grüßen",
+      "halt, stopp",
+      "Hand, Fünf",
+      "halt, stopp",
+      "Stopp",
+      "Stopp, Winken"
+     ]
+    },
+    "2": {
+     "treffer32": 3,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 2,
+      "mehr": 4
+     },
+     "antworten32": [
+      "Halt, Stopp",
+      "Hand, Halt",
+      "Hand, halt",
+      "Hand, Halt"
+     ],
+     "antworten_zelle": [
+      "erhobene Hand",
+      "Erhobene Hand"
+     ],
+     "antworten160": [
+      "Halt, Stopp",
+      "Halt"
+     ],
+     "verwechslung": [
+      "Grüßen, Hand",
+      "Grüßen, Stopp",
+      "Gruß, Stopp",
+      "Gruß, Stopp",
+      "Stopp-Zeichen",
+      "Stopp-Zeichen"
+     ]
+    },
+    "3": {
+     "treffer32": 3,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "mehr": 3,
+      "egal": 3
+     },
+     "antworten32": [
+      "Hand",
+      "Hand, fünf",
+      "Hand, fünf",
+      "Stopp"
+     ],
+     "antworten_zelle": [
+      "erhobene Hand",
+      "Erhobene Hand"
+     ],
+     "antworten160": [
+      "Hand",
+      "Hand, halt"
+     ],
+     "verwechslung": [
+      "stopp, grüßen",
+      "Halt, Gruß",
+      "Halt, Gruß",
+      "Grüßen, Schwur",
+      "Stopp-Geste",
+      "Stopp, Winken"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 2,
+    "treffer32": 3,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": true,
+   "wortzeichen": false,
+   "tragende_merkmale": [
+    "Offene Hand mit vier abgesetzten Fingern und abstehendem Daumen",
+    "Ärmel am Handgelenk"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-SCHWUR",
+   "name_de": "schwören / Schwur",
+   "neu": false,
+   "vorher_32px": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 3,
+    "antworten": [
+     "Lobpreis",
+     "Hand erheben",
+     "Hand erheben",
+     "Klopfen"
+    ],
+    "note": "Hand erheben, Band übersehen"
+   },
+   "runde_a": {
+    "1": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Gesetz",
+      "Gesetz",
+      "Gesetz",
+      "Gesetz halten"
+     ],
+     "antworten_zelle": [
+      "erhobene Hand, Schriftrolle",
+      "erhobene Hand, Schriftrolle"
+     ],
+     "antworten160": [
+      "Schwören, Gesetz",
+      "Schwur"
+     ],
+     "verwechslung": [
+      "Schwur",
+      "Schriftrolle, Schwur",
+      "Schwur, Schriftrolle",
+      "Schriftrolle, schwören",
+      "Stopp-Geste, Gruß",
+      "Stopp-Hand, Winken"
+     ]
+    },
+    "2": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Schwören",
+      "schwören",
+      "Schwur",
+      "Schwur"
+     ],
+     "antworten_zelle": [
+      "Erhobene Hand, Schriftrolle",
+      "Erhobene Hand, Schriftrolle"
+     ],
+     "antworten160": [
+      "Schwur, Eid",
+      "Schwur"
+     ],
+     "verwechslung": [
+      "Segnen, Gesetz",
+      "Gesetz, segnen",
+      "Gesetz, Zeugnis",
+      "Gesetz, Gebot",
+      "Winken",
+      "Schwur, Melden"
+     ]
+    },
+    "3": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Schwur, Eid",
+      "Schwur, Gesetz",
+      "Schwur, Gelübde",
+      "Schwur, Eid"
+     ],
+     "antworten_zelle": [
+      "erhobene Hand, Schriftrolle",
+      "Erhobene Hand, Schriftrolle"
+     ],
+     "antworten160": [
+      "schwören",
+      "Schwören"
+     ],
+     "verwechslung": [
+      "Gesetz, Gebot",
+      "Zeugnis, Gebot",
+      "Gesetz, Zeugnis",
+      "Gesetz, Gebot",
+      "Winken",
+      "Winkende Hand"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 2,
+    "treffer32": 4,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": true,
+   "wortzeichen": false,
+   "tragende_merkmale": [
+    "Erhobene offene Hand",
+    "Schriftrolle darunter",
+    "Goldene Striche neben der Hand (ohne sie als «Gesetz» gelesen)"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-FRIEDEN",
+   "name_de": "Frieden / zusammengehören",
+   "neu": false,
+   "vorher_32px": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Bund schließen",
+     "Bund",
+     "Bund",
+     "Bund"
+    ],
+    "note": "Bund"
+   },
+   "runde_a": {
+    "1": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 5,
+      "mehr": 1
+     },
+     "antworten32": [
+      "Umarmung",
+      "Umarmung",
+      "Umarmung",
+      "Umarmung"
+     ],
+     "antworten_zelle": [
+      "Zwei Personen umarmen sich",
+      "zwei Personen umarmen"
+     ],
+     "antworten160": [
+      "Umarmung",
+      "umarmen"
+     ],
+     "verwechslung": [
+      "Freundschaft, Versöhnung",
+      "Freundschaft, Versöhnung",
+      "Versöhnung, Freundschaft",
+      "Freundschaft, Versöhnung",
+      "Händeschütteln, Ringen",
+      "Freundschaft"
+     ]
+    },
+    "2": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Versöhnung",
+      "Versöhnung",
+      "Versöhnung",
+      "Versöhnung"
+     ],
+     "antworten_zelle": [
+      "Zwei Umarmende, Zweig",
+      "Umarmung mit Zweig"
+     ],
+     "antworten160": [
+      "Versöhnung",
+      "Versöhnung"
+     ],
+     "verwechslung": [
+      "Freundschaft, Frieden",
+      "Frieden, Umarmung",
+      "Freundschaft, Frieden",
+      "Freundschaft, Frieden",
+      "Freunde, Geschwister",
+      "Freunde, Geschwister"
+     ]
+    },
+    "3": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Versöhnung",
+      "Versöhnung",
+      "Versöhnung, Frieden",
+      "Versöhnung"
+     ],
+     "antworten_zelle": [
+      "Umarmung, Zweig",
+      "Umarmung, Ölzweig"
+     ],
+     "antworten160": [
+      "Versöhnung",
+      "Versöhnung"
+     ],
+     "verwechslung": [
+      "Freundschaft, Frieden",
+      "Freundschaft, Umarmung",
+      "Freundschaft, Umarmung",
+      "Umarmung, Frieden",
+      "Freundschaft, Versöhnung",
+      "Freundschaft, Versöhnung"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 2,
+    "treffer32": 4,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": true,
+   "wortzeichen": false,
+   "tragende_merkmale": [
+    "Zwei Menschen umarmen sich, beide lächeln",
+    "Kleiner Olivenzweig darüber (ohne ihn nur «Umarmung»)"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-TREUE",
+   "name_de": "Treue / zusammenhalten",
+   "neu": false,
+   "vorher_32px": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Versöhnung",
+     "Versöhnung",
+     "Liebe schenken",
+     "Versöhnung"
+    ],
+    "note": "Versöhnung"
+   },
+   "runde_a": {
+    "1": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 0,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 5,
+      "egal": 1
+     },
+     "antworten32": [
+      "Trösten",
+      "Trösten",
+      "Trösten",
+      "Trösten"
+     ],
+     "antworten_zelle": [
+      "zwei Frauen umarmen",
+      "zwei Frauen umarmen sich"
+     ],
+     "antworten160": [
+      "Freundinnen",
+      "Freundinnen"
+     ],
+     "verwechslung": [
+      "Umarmen, Freundschaft",
+      "Umarmen, Begrüßung",
+      "Freundschaft",
+      "Umarmen, Freundschaft",
+      "Begrüßung, Trost",
+      "zwei Freundinnen"
+     ]
+    },
+    "2": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 1,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 5,
+      "egal": 1
+     },
+     "antworten32": [
+      "Versöhnung",
+      "Freundschaft, Versöhnung",
+      "Versöhnung",
+      "Versöhnung"
+     ],
+     "antworten_zelle": [
+      "zwei Frauen",
+      "zwei Frauen umarmen"
+     ],
+     "antworten160": [
+      "Freundschaft",
+      "Freundinnen"
+     ],
+     "verwechslung": [
+      "Freundschaft, Hilfe",
+      "Ehe, Umarmung",
+      "Freundschaft, Trost",
+      "Freundschaft, Trost",
+      "Umarmung, Schwestern",
+      "Mutter, Tochter"
+     ]
+    },
+    "3": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 0,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "mehr": 4,
+      "egal": 2
+     },
+     "antworten32": [
+      "trösten",
+      "trösten",
+      "Freundschaft, helfen",
+      "Helfen"
+     ],
+     "antworten_zelle": [
+      "zwei Frauen umarmend",
+      "Zwei Frauen umarmen"
+     ],
+     "antworten160": [
+      "Rut und Noomi",
+      "begleiten (Ruth, Noomi)"
+     ],
+     "verwechslung": [
+      "Freundinnen, helfen",
+      "Freundschaft, helfen",
+      "Schwestern, begleiten",
+      "Freundschaft, Trösten",
+      "Paar",
+      "Freundinnen, Trost"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 2,
+    "treffer32": 0,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": false,
+   "wortzeichen": true,
+   "tragende_merkmale": [
+    "Zwei Frauen mit Kopftuch gehen Hand in Hand",
+    "Gemeinsamer Weg darunter"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-WASCHEN",
+   "name_de": "Hände waschen",
+   "neu": false,
+   "vorher_32px": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 0,
+    "antworten": [
+     "Waschschüssel",
+     "Wasserschale",
+     "Wasserschale",
+     "Wasserschale"
+    ],
+    "note": "Wasserschale (Hände als Schale gelesen)"
+   },
+   "runde_a": {
+    "1": {
+     "treffer32": 1,
+     "n32": 4,
+     "bild32": 2,
+     "bild_zelle": 1,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 4,
+      "egal": 2
+     },
+     "antworten32": [
+      "geben",
+      "Salben",
+      "geben",
+      "Hände waschen"
+     ],
+     "antworten_zelle": [
+      "Krug gießt Wasser",
+      "Wasserhahn, Hand"
+     ],
+     "antworten160": [
+      "Salben",
+      "Salbung"
+     ],
+     "verwechslung": [
+      "salben",
+      "Waschen, Taufe",
+      "salben, ausgießen",
+      "salben, gießen",
+      "Hammer, Wasserhahn",
+      "Händewaschen, Brunnen"
+     ]
+    },
+    "2": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 4,
+      "mehr": 2
+     },
+     "antworten32": [
+      "Waschen der Hände",
+      "Hände waschen",
+      "Hände waschen",
+      "Waschen"
+     ],
+     "antworten_zelle": [
+      "Krug gießt Wasser",
+      "Krug gießt Wasser"
+     ],
+     "antworten160": [
+      "Handwaschung",
+      "Händewaschen"
+     ],
+     "verwechslung": [
+      "Salbung, Taufe",
+      "Taufe, Salbung",
+      "Salbung, Taufe",
+      "Salben, Taufe",
+      "Händewaschen, Kochen",
+      "Händewaschen, Teekanne"
+     ]
+    },
+    "3": {
+     "treffer32": 1,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Salbung",
+      "Fußwaschung",
+      "Salbung",
+      "Waschen"
+     ],
+     "antworten_zelle": [
+      "Wasserhahn, Händewaschen",
+      "Hände unter Wasser"
+     ],
+     "antworten160": [
+      "Hände waschen",
+      "Händewaschen"
+     ],
+     "verwechslung": [
+      "Waschen, Taufe",
+      "Händewaschen, Taufe",
+      "Fußwaschung, Taufe",
+      "Reinigung, Taufe",
+      "Hammer, Waschbecken",
+      "Wasserhahn"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 2,
+    "treffer32": 4,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": true,
+   "wortzeichen": false,
+   "tragende_merkmale": [
+    "Krug giesst Wasser über die offene Hand",
+    "Ärmel am Handgelenk",
+    "Becken darunter"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-ERBARMEN",
+   "name_de": "Mitleid / Erbarmen",
+   "neu": false,
+   "vorher_32px": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Liebe",
+     "Liebe schenken",
+     "Liebe empfangen",
+     "Liebe schenken"
+    ],
+    "note": "Liebe"
+   },
+   "runde_a": {
+    "1": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Kind trösten",
+      "Pflegen, helfen",
+      "helfen",
+      "Fürsorge"
+     ],
+     "antworten_zelle": [
+      "Mensch hilft Mensch",
+      "Person hilft Person"
+     ],
+     "antworten160": [
+      "trösten",
+      "trösten"
+     ],
+     "verwechslung": [
+      "heilen, aufrichten",
+      "Heilen, Trösten",
+      "heilen, aufrichten",
+      "Heilen, Helfen",
+      "Umarmung, Pflege",
+      "Umarmung"
+     ]
+    },
+    "2": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 5,
+      "egal": 1
+     },
+     "antworten32": [
+      "Barmherzigkeit",
+      "Barmherzigkeit",
+      "Barmherzigkeit",
+      "Barmherzigkeit"
+     ],
+     "antworten_zelle": [
+      "Person hilft Kind",
+      "Helfer mit Herz"
+     ],
+     "antworten160": [
+      "Trösten",
+      "Trost"
+     ],
+     "verwechslung": [
+      "Krankenpflege, Trost",
+      "Krankenpflege, Trost",
+      "Krankenpflege, Trost",
+      "Krankenpflege, Trost",
+      "Umarmung, Trösten",
+      "Elternteil mit Kind"
+     ]
+    },
+    "3": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 1,
+     "n160": 2,
+     "detail": {
+      "egal": 5,
+      "mehr": 1
+     },
+     "antworten32": [
+      "Barmherzigkeit",
+      "Barmherzigkeit",
+      "Barmherzigkeit, Pflege",
+      "Mitgefühl"
+     ],
+     "antworten_zelle": [
+      "Helfer beugt sich",
+      "Helfender Mensch, Herz"
+     ],
+     "antworten160": [
+      "Barmherzigkeit",
+      "Trösten"
+     ],
+     "verwechslung": [
+      "Trösten, Pflege",
+      "Mitleid, Pflege",
+      "Heilung, Samariter",
+      "Trösten, Heilen",
+      "Pflege, Gebet",
+      "Pflege, Heilung"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 2,
+    "treffer32": 4,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": true,
+   "wortzeichen": false,
+   "tragende_merkmale": [
+    "Einer beugt sich zu einem am Boden und hilft ihm auf",
+    "Kleines rotes Herz darüber (ohne es nur «helfen»)"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-KUSS",
+   "name_de": "Kuss",
+   "neu": false,
+   "vorher_32px": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Mund",
+     "Mund",
+     "Mund",
+     "Mund"
+    ],
+    "note": "Mund"
+   },
+   "runde_a": {
+    "1": {
+     "treffer32": 1,
+     "n32": 4,
+     "bild32": 3,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 1,
+     "n160": 2,
+     "detail": {
+      "mehr": 3,
+      "egal": 3
+     },
+     "antworten32": [
+      "Vergebung",
+      "Verrat Kuss",
+      "Judaskuss, Verrat",
+      "Kuss"
+     ],
+     "antworten_zelle": [
+      "Zwei Frauen küssend",
+      "Zwei Frauen küssend"
+     ],
+     "antworten160": [
+      "Judaskuss",
+      "Kuss"
+     ],
+     "verwechslung": [
+      "Umarmung, Kuss",
+      "Begrüßung, Liebe",
+      "Begrüßung, Liebe",
+      "Verrat, Begrüßung",
+      "Umarmung, Abschied",
+      "Umarmung, Abschied"
+     ]
+    },
+    "2": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 4,
+      "mehr": 2
+     },
+     "antworten32": [
+      "Kuss",
+      "Kuss",
+      "Kuss",
+      "Kuss"
+     ],
+     "antworten_zelle": [
+      "Zwei Frauen küssen sich",
+      "zwei Frauen küssen"
+     ],
+     "antworten160": [
+      "Kuss",
+      "küssen"
+     ],
+     "verwechslung": [
+      "Liebe, Flüstern",
+      "Liebe, Verrat (Judaskuss)",
+      "Liebe, Judaskuss",
+      "Liebe, Ehe",
+      "Umarmung, Flüstern",
+      "Liebespaar"
+     ]
+    },
+    "3": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 1,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "lieben",
+      "Liebespaar",
+      "Liebe, Ehepaar",
+      "Liebe"
+     ],
+     "antworten_zelle": [
+      "zwei Frauen küssend",
+      "Zwei küssen sich"
+     ],
+     "antworten160": [
+      "Judaskuss",
+      "Kuss"
+     ],
+     "verwechslung": [
+      "küssen, Ehe",
+      "Ehe, küssen",
+      "küssen, Verlobung",
+      "Kuss, Ehe",
+      "Liebespaar",
+      "Liebespaar, Abschied"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 2,
+    "treffer32": 4,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": true,
+   "wortzeichen": false,
+   "tragende_merkmale": [
+    "Zwei Köpfe im Profil, Kuss auf die Wange",
+    "Rote Lippen zwischen den Köpfen (ein zweites Herz macht «Liebespaar»)"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-KIND",
+   "name_de": "Kind / Kinder",
+   "neu": false,
+   "vorher_32px": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 0,
+    "antworten": [
+     "Frau",
+     "Frau",
+     "Frau",
+     "Frau"
+    ],
+    "note": "Frau"
+   },
+   "runde_a": {
+    "1": {
+     "treffer32": 2,
+     "n32": 4,
+     "bild32": 2,
+     "bild_zelle": 0,
+     "n_zelle": 2,
+     "treffer160": 1,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "denken",
+      "Perle",
+      "Kind / jemand",
+      "Kind"
+     ],
+     "antworten_zelle": [
+      "Kind, grauer Kreis",
+      "Kind, grauer Kreis"
+     ],
+     "antworten160": [
+      "Kind, Nacht",
+      "Gedanke"
+     ],
+     "verwechslung": [
+      "träumen",
+      "Stein, Mond",
+      "Person, Mond",
+      "Mond, träumen",
+      "Kind mit Ball",
+      "Kind, Mond"
+     ]
+    },
+    "2": {
+     "treffer32": 1,
+     "n32": 4,
+     "bild32": 2,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Vorbild",
+      "Waise",
+      "Unsichtbar",
+      "Kind"
+     ],
+     "antworten_zelle": [
+      "Kind, Erwachsener",
+      "Kind, graue Figur"
+     ],
+     "antworten160": [
+      "Vorfahr",
+      "verstorbener Vater"
+     ],
+     "verwechslung": [
+      "Schutz, Nachfolgen",
+      "Kind, Geist",
+      "Geist, Fremder",
+      "Sohn, Waise",
+      "Familie",
+      "Eltern, Schatten"
+     ]
+    },
+    "3": {
+     "treffer32": 2,
+     "n32": 4,
+     "bild32": 3,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 1,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Geist, Erscheinung",
+      "Kind folgt",
+      "Kind, Erbe",
+      "Jesus segnet Kind"
+     ],
+     "antworten_zelle": [
+      "Kind mit Erwachsenem",
+      "Kind mit Erwachsenem"
+     ],
+     "antworten160": [
+      "Kind",
+      "Vormund"
+     ],
+     "verwechslung": [
+      "Engel, Toter",
+      "Führen, Erbe",
+      "Geist, Engel",
+      "Führen, Geist",
+      "Familie",
+      "Eltern, Familie"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 3,
+    "treffer32": 2,
+    "n32": 4,
+    "bild32": 3
+   },
+   "erkannt_32px": true,
+   "wortzeichen": false,
+   "tragende_merkmale": [
+    "Kind mit grossem Kopf und kurzem gelbem Kittel",
+    "Grauer Erwachsener daneben als Grössenvergleich",
+    "Beine und Arm"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-ZUFLUCHT",
+   "name_de": "Zuflucht unter Flügeln",
+   "neu": false,
+   "vorher_32px": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Engel",
+     "Cherub",
+     "Cherub",
+     "Cherub"
+    ],
+    "note": "Cherub/Engel"
+   },
+   "runde_a": {
+    "1": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 0,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 5,
+      "egal": 1
+     },
+     "antworten32": [
+      "Vergrabener Schatz",
+      "Erbe",
+      "Schuldner, Bettler",
+      "Geld verstecken"
+     ],
+     "antworten_zelle": [
+      "Henne mit Küken",
+      "Henne mit Küken"
+     ],
+     "antworten160": [
+      "Goldenes Kalb",
+      "Henne mit Küken"
+     ],
+     "verwechslung": [
+      "Erdhaufen, Brot",
+      "Besitz, Kamel",
+      "Sack, Niederwerfen",
+      "Erdhaufen, vergrabener Schatz",
+      "Vogelnest, Brot",
+      "Nest, Brot"
+     ]
+    },
+    "2": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 0,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Reichtum, Schatz",
+      "Geldsack, Schatz",
+      "Goldenes Kalb",
+      "Brot"
+     ],
+     "antworten_zelle": [
+      "Henne mit Küken",
+      "Henne mit Küken"
+     ],
+     "antworten160": [
+      "Trojanisches Pferd",
+      "Trojanisches Pferd"
+     ],
+     "verwechslung": [
+      "Sack, Getreide",
+      "Brot, Ernte",
+      "Kamel, Stier",
+      "Huhn, Opfergabe",
+      "Vogelnest",
+      "Vogelnest, Brot"
+     ]
+    },
+    "3": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 4,
+      "mehr": 2
+     },
+     "antworten32": [
+      "Henne mit Küken",
+      "Henne mit Küken",
+      "Henne mit Küken",
+      "Henne mit Küken"
+     ],
+     "antworten_zelle": [
+      "Henne mit Küken",
+      "Henne mit Küken"
+     ],
+     "antworten160": [
+      "Henne mit Küken",
+      "Henne mit Küken"
+     ],
+     "verwechslung": [
+      "Vogelnest",
+      "Vogelnest",
+      "Vogelnest",
+      "Vogelnest",
+      "Laubhaufen",
+      "Laubhaufen, Vogelnest"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 3,
+    "treffer32": 0,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": false,
+   "wortzeichen": true,
+   "tragende_merkmale": [
+    "Henne breitet den Flügel über drei gelbe Küken",
+    "Kamm, Schnabel und Federlinien (ohne sie als Geldsack gelesen)"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-LEUCHTEN",
+   "name_de": "leuchten (wie Lichter)",
+   "neu": false,
+   "vorher_32px": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Heiliger Geist",
+     "Heiliger Geist",
+     "Heiliger Geist",
+     "Feuer"
+    ],
+    "note": "Heiliger Geist"
+   },
+   "runde_a": {
+    "1": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Öllampe",
+      "Öllampe",
+      "Öllampe",
+      "Öllampe"
+     ],
+     "antworten_zelle": [
+      "Öllampe mit Flamme",
+      "Öllampe mit Flamme"
+     ],
+     "antworten160": [
+      "Öllampe",
+      "Öllampe"
+     ],
+     "verwechslung": [
+      "Kerze",
+      "Leuchter",
+      "Kerze",
+      "Leuchter",
+      "Kelch, Fackel",
+      "Kerze, Feuerschale"
+     ]
+    },
+    "2": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Öllampe",
+      "Öllampe",
+      "Öllampe",
+      "Öllampe"
+     ],
+     "antworten_zelle": [
+      "Öllampe auf Ständer",
+      "Öllampe auf Ständer"
+     ],
+     "antworten160": [
+      "Öllampe",
+      "Öllampe"
+     ],
+     "verwechslung": [
+      "Opferfeuer, Leuchter",
+      "Licht, Opfer",
+      "Opferfeuer, Leuchter",
+      "Leuchter, Opferfeuer",
+      "Kerze, Fackel",
+      "Kerze, Feuerschale"
+     ]
+    },
+    "3": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Öllampe",
+      "Öllampe",
+      "Öllampe",
+      "Öllampe"
+     ],
+     "antworten_zelle": [
+      "leuchtende Öllampe",
+      "Öllampe mit Flamme"
+     ],
+     "antworten160": [
+      "Öllampe",
+      "Öllampe"
+     ],
+     "verwechslung": [
+      "Leuchter, Licht",
+      "Licht, Leuchter",
+      "Leuchter, Licht",
+      "Leuchter, Licht",
+      "Kerze, Fackel",
+      "Fackel"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 1,
+    "treffer32": 0,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": false,
+   "wortzeichen": true,
+   "tragende_merkmale": [
+    "Brennende Öllampe auf Ständer mit grosser Flamme"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-REIN",
+   "name_de": "rein / rein werden",
+   "neu": false,
+   "vorher_32px": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Stern",
+     "Tau",
+     "Stern",
+     "Stern"
+    ],
+    "note": "Stern"
+   },
+   "runde_a": {
+    "1": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 1,
+      "egal": 5
+     },
+     "antworten32": [
+      "Gewand",
+      "Gewand",
+      "Gewand",
+      "Gewand"
+     ],
+     "antworten_zelle": [
+      "Hemd",
+      "Hemd"
+     ],
+     "antworten160": [
+      "Gewand",
+      "Gewand"
+     ],
+     "verwechslung": [
+      "Hemd, Tunika",
+      "Hemd, Tunika",
+      "Hemd, Mantel",
+      "Hemd, Tunika",
+      "T-Shirt, Kleid",
+      "Kleid"
+     ]
+    },
+    "2": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 4,
+      "egal": 2
+     },
+     "antworten32": [
+      "weißes Gewand",
+      "weißes Gewand",
+      "weißes Gewand",
+      "weißes Gewand"
+     ],
+     "antworten_zelle": [
+      "Weißes Gewand, Funkeln",
+      "weißes Gewand"
+     ],
+     "antworten160": [
+      "Weißes Gewand",
+      "Neues Gewand"
+     ],
+     "verwechslung": [
+      "Reinheit, Kleid",
+      "Taufkleid, Reinheit",
+      "Reinheit, Taufkleid",
+      "Reinheit, Taufkleid",
+      "Hemd, Kleid",
+      "Pullover, Hemd"
+     ]
+    },
+    "3": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 1,
+     "n160": 2,
+     "detail": {
+      "mehr": 5,
+      "egal": 1
+     },
+     "antworten32": [
+      "Gewand",
+      "Kleid",
+      "Gewand",
+      "Gewand"
+     ],
+     "antworten_zelle": [
+      "Gewand mit Tropfen",
+      "Weißes Gewand, Tropfen"
+     ],
+     "antworten160": [
+      "weißes Gewand",
+      "reines Gewand"
+     ],
+     "verwechslung": [
+      "Hemd, Kleidung",
+      "Gewand, Hemd",
+      "Priesterkleid, Mantel",
+      "Priesterkleid, Hemd",
+      "Hemd",
+      "Hemd waschen"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 1,
+    "treffer32": 0,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": false,
+   "wortzeichen": true,
+   "tragende_merkmale": [
+    "Langes weisses Gewand mit Ärmeln, kräftige Kontur"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-VERLEUGNEN",
+   "name_de": "verleugnen",
+   "neu": false,
+   "vorher_32px": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 1,
+    "antworten": [
+     "Bund gebrochen",
+     "Vergänglich",
+     "nicht ewig",
+     "Endlich"
+    ],
+    "note": "vergänglich/endlich"
+   },
+   "runde_a": {
+    "1": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "mehr": 1,
+      "egal": 5
+     },
+     "antworten32": [
+      "Lügen",
+      "verneinen",
+      "Verbieten",
+      "verneinen"
+     ],
+     "antworten_zelle": [
+      "Person, Sprechblase X",
+      "Person, durchgestrichene Sprechblase"
+     ],
+     "antworten160": [
+      "verleugnen",
+      "Verleugnung"
+     ],
+     "verwechslung": [
+      "Verneinen, Widersprechen",
+      "lügen, ablehnen",
+      "Lüge, Nein sagen",
+      "lügen, verbieten",
+      "Ablehnen",
+      "Schweigen, Nein sagen"
+     ]
+    },
+    "2": {
+     "treffer32": 3,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 2,
+      "egal": 4
+     },
+     "antworten32": [
+      "Lüge, Verleugnung",
+      "Leugnen, Nein sagen",
+      "Leugnen, Nein",
+      "Lüge, Verneinen"
+     ],
+     "antworten_zelle": [
+      "Person, Sprechblase X",
+      "Person, Sprechblase mit X"
+     ],
+     "antworten160": [
+      "Verbot",
+      "Ablehnen"
+     ],
+     "verwechslung": [
+      "Nein sagen",
+      "Lüge, Verbot",
+      "Lüge, Ablehnung",
+      "Verbot, Widerspruch",
+      "Nein sagen",
+      "Nein sagen"
+     ]
+    },
+    "3": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 0,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "stört": 2,
+      "mehr": 4
+     },
+     "antworten32": [
+      "Hahn verleugnen",
+      "verleugnen",
+      "Verleugnung (Petrus)",
+      "Verleugnen"
+     ],
+     "antworten_zelle": [
+      "Person, Kreuz, Hand",
+      "Person, X, Hand"
+     ],
+     "antworten160": [
+      "Petrus verleugnet",
+      "Verleugnung (Petrus)"
+     ],
+     "verwechslung": [
+      "lügen, nein",
+      "nein sagen, Hahn",
+      "Lüge, nein sagen",
+      "Lügen, Hahnenschrei",
+      "Verbotsschild",
+      "Ablehnen, Fehler"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 3,
+    "treffer32": 4,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": true,
+   "wortzeichen": false,
+   "tragende_merkmale": [
+    "Abgewandter Kopf im Profil",
+    "Sprechblase mit rotem X",
+    "Hahn daneben (erst mit ihm «verleugnen» erkannt)"
+   ]
+  },
+  {
+   "id": "FIG-ORT-TOR-ENG",
+   "name_de": "Enges Tor",
+   "neu": false,
+   "vorher_32px": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 0,
+    "antworten": [
+     "Mauer",
+     "Mauer",
+     "Mauer einstürzen",
+     "Mauer"
+    ],
+    "note": "Mauer; Spalt übersehen"
+   },
+   "runde_a": {
+    "1": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "offene Tür",
+      "Tür offen",
+      "offene Tür",
+      "Offenes Tor"
+     ],
+     "antworten_zelle": [
+      "enge Tür",
+      "Schmale Türöffnung"
+     ],
+     "antworten160": [
+      "offene Tür",
+      "offenes Grab"
+     ],
+     "verwechslung": [
+      "Tor, Buch",
+      "Buch, Tor",
+      "Buch, Vorhang",
+      "Buch, Grabeingang",
+      "offenes Buch",
+      "Offenes Buch"
+     ]
+    },
+    "2": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 1,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Zerrissener Vorhang",
+      "Tempelvorhang zerrissen",
+      "Zerrissener Vorhang",
+      "Tür verschlossen"
+     ],
+     "antworten_zelle": [
+      "Schmales Tor",
+      "Schmale Tür"
+     ],
+     "antworten160": [
+      "Vorhang zerreißt",
+      "Vorhang zerreißt"
+     ],
+     "verwechslung": [
+      "Tür, Tempeltor",
+      "Tür, Tor",
+      "Tempeltor, Tür",
+      "Vorhang zerrissen, Tor",
+      "Buch, Tür",
+      "Buch, Vorhang"
+     ]
+    },
+    "3": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Mauerbresche",
+      "Mauerbresche",
+      "Mauerbresche",
+      "Mauerbruch"
+     ],
+     "antworten_zelle": [
+      "schmale Mauerpforte",
+      "schmaler Mauerspalt"
+     ],
+     "antworten160": [
+      "Tor öffnen",
+      "Tor schließen"
+     ],
+     "verwechslung": [
+      "Stadttor, Engpass",
+      "Stadttor, Riss",
+      "Stadttor, Riss",
+      "Engpass, Tor",
+      "Mauer, Tür",
+      "Buch"
+     ]
+    }
+   },
+   "runde_b": {
+    "1": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 0,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Stadttor geschlossen",
+      "Geschlossenes Stadttor",
+      "Geschlossenes Stadttor",
+      "Geschlossenes Stadttor"
+     ],
+     "antworten_zelle": [
+      "Mauer mit Spalt",
+      "Mauer mit Spalt"
+     ],
+     "antworten160": [
+      "Stadttor geschlossen",
+      "Stadtmauer"
+     ],
+     "verwechslung": [
+      "Mauer, Burg",
+      "Stadtmauer, Burg",
+      "Stadtmauer, Burg",
+      "Stadtmauer, Burg",
+      "Burgturm, Tür",
+      "Burg, Tür"
+     ]
+    },
+    "2": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "mehr": 5,
+      "egal": 1
+     },
+     "antworten32": [
+      "enge Pforte",
+      "enge Pforte",
+      "Enge Pforte",
+      "enge Pforte"
+     ],
+     "antworten_zelle": [
+      "Schmales Tor, Person",
+      "Schmale Pforte, Person"
+     ],
+     "antworten160": [
+      "Enge Pforte",
+      "Enges Tor"
+     ],
+     "verwechslung": [
+      "Stadtmauer, Stadttor",
+      "Stadtmauer, Tür",
+      "Stadttor, Mauer",
+      "Stadttor, Wächter",
+      "Turm, Mauer",
+      "Turm, Mauer"
+     ]
+    },
+    "3": {
+     "treffer32": 3,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Enges Tor",
+      "enge Pforte",
+      "Engstelle/enge Pforte",
+      "Stadtmauer mit Wächter"
+     ],
+     "antworten_zelle": [
+      "Mauer mit Spalt",
+      "Mauer mit Spalt"
+     ],
+     "antworten160": [
+      "enge Pforte",
+      "enge Pforte"
+     ],
+     "verwechslung": [
+      "Stadtmauer, Wächter",
+      "Stadtmauer, Gefängnis",
+      "Stadtmauer, Gefängnis",
+      "Stadttor, Gefängnis",
+      "Burgturm",
+      "Burg, Turm"
+     ]
+    }
+   },
+   "gewaehlt": {
+    "stufe": 2,
+    "treffer32": 4,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": true,
+   "wortzeichen": false,
+   "tragende_merkmale": [
+    "Stadttor mit zwei Türmen und Zinnen",
+    "Schmaler dunkler Spalt",
+    "Eine Figur im Spalt (ohne sie «geschlossenes Tor»)"
+   ]
+  },
+  {
+   "id": "FIG-ORT-TOR-WEIT",
+   "name_de": "Weites Tor",
+   "neu": false,
+   "vorher_32px": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 2,
+    "antworten": [
+     "Stadttor",
+     "leeres Grab",
+     "Stadttor",
+     "Leeres Grab"
+    ],
+    "note": "leeres Grab / Stadttor"
+   },
+   "runde_a": {
+    "1": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 2,
+      "mehr": 4
+     },
+     "antworten32": [
+      "Tor",
+      "Tor",
+      "Tor",
+      "Tor"
+     ],
+     "antworten_zelle": [
+      "offenes Tor",
+      "offenes Tor"
+     ],
+     "antworten160": [
+      "Tor",
+      "Tor"
+     ],
+     "verwechslung": [
+      "Tür, Durchgang",
+      "Durchgang, Bogen",
+      "Tür, Bogen",
+      "Tür, Durchgang",
+      "Torbogen, Fenster",
+      "Fenster"
+     ]
+    },
+    "2": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 4,
+      "egal": 2
+     },
+     "antworten32": [
+      "Eingang",
+      "Tor öffnen",
+      "Tor öffnen",
+      "Eingang, Tor"
+     ],
+     "antworten_zelle": [
+      "weites Tor",
+      "Weit offenes Tor"
+     ],
+     "antworten160": [
+      "Tor öffnen",
+      "offenes Tor"
+     ],
+     "verwechslung": [
+      "Grab, Tor",
+      "Eingang, Tür",
+      "Stadttor, Grab",
+      "Fenster, Bühne",
+      "Fenster",
+      "Fenster, Vorhang"
+     ]
+    },
+    "3": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 1,
+      "egal": 4,
+      "stört": 1
+     },
+     "antworten32": [
+      "Tor öffnen",
+      "Stadttor öffnen",
+      "Stadttor",
+      "Tor öffnen"
+     ],
+     "antworten_zelle": [
+      "offenes Steintor",
+      "offenes Steintor"
+     ],
+     "antworten160": [
+      "Tor öffnen",
+      "offenes Stadttor"
+     ],
+     "verwechslung": [
+      "Stadttor, Eingang",
+      "Eingang, Tempel",
+      "Tempeltor",
+      "Stadttor, Eingang",
+      "Brücke, Torbogen",
+      "Torbogen, Brücke"
+     ]
+    }
+   },
+   "runde_b": {
+    "1": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 5,
+      "mehr": 1
+     },
+     "antworten32": [
+      "Stadttor",
+      "Stadttor",
+      "Stadttor",
+      "Stadttor"
+     ],
+     "antworten_zelle": [
+      "Mauer mit Torbogen",
+      "Mauer mit Torbogen"
+     ],
+     "antworten160": [
+      "Stadttor",
+      "Stadttor"
+     ],
+     "verwechslung": [
+      "Burg, Festung",
+      "Burg, weite Pforte",
+      "Burg, Stadt",
+      "Burg, Stadtmauer",
+      "Burg, Stadttor",
+      "Burg, Stadttor"
+     ]
+    },
+    "2": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 5,
+      "mehr": 1
+     },
+     "antworten32": [
+      "Stadttor offen",
+      "Stadttor, Versammlung",
+      "Offenes Stadttor",
+      "Offenes Stadttor"
+     ],
+     "antworten_zelle": [
+      "Tor mit Menschenmenge",
+      "Tor mit Menschen"
+     ],
+     "antworten160": [
+      "Zuflucht, Aufnahme",
+      "Zuflucht"
+     ],
+     "verwechslung": [
+      "Stadt, Versammlung",
+      "Stadtbewohner, Gemeinde",
+      "Stadt, Gemeinde",
+      "Stadt betreten, Gemeinde",
+      "Stadttor, Kirche",
+      "Burg, Stadttor"
+     ]
+    },
+    "3": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 4,
+      "egal": 2
+     },
+     "antworten32": [
+      "Stadttor",
+      "Versammlung am Stadttor",
+      "Offenes Stadttor",
+      "Versammlung im Stadttor"
+     ],
+     "antworten_zelle": [
+      "Breites Tor, Menschen",
+      "Stadttor mit Menschenmenge"
+     ],
+     "antworten160": [
+      "Stadttor, Menschen",
+      "Stadttor, Versammlung"
+     ],
+     "verwechslung": [
+      "Einzug, Versammlung",
+      "Stadt, Einzug",
+      "Zufluchtsstadt, Einzug",
+      "Zufluchtsstadt, Stadteinzug",
+      "Burg, Stadttor",
+      "Burg, Festung"
+     ]
+    }
+   },
+   "gewaehlt": {
+    "stufe": 1,
+    "treffer32": 0,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": false,
+   "wortzeichen": true,
+   "tragende_merkmale": [
+    "Stadttor mit zwei Türmen und Zinnen",
+    "Breiter heller Bogen"
+   ]
+  },
+  {
+   "id": "FIG-OBJ-MUENZEN",
+   "name_de": "Münzen",
+   "neu": false,
+   "vorher_32px": null,
+   "runde_a": {
+    "1": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Geld",
+      "Geld",
+      "Münzen, Geld",
+      "Münzen"
+     ],
+     "antworten_zelle": [
+      "Drei Münzen",
+      "Drei Münzen"
+     ],
+     "antworten160": [
+      "Münzen",
+      "Münzen"
+     ],
+     "verwechslung": [
+      "Münzen, Talente",
+      "Münzen, Lohn",
+      "Talente, Silberlinge",
+      "Geld, Talente",
+      "Kreise, Kugeln",
+      "Kreise, Punkte"
+     ]
+    },
+    "2": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Münzen",
+      "Geld, Münzen",
+      "Geld",
+      "Geld"
+     ],
+     "antworten_zelle": [
+      "Münzen",
+      "Münzen"
+     ],
+     "antworten160": [
+      "Geld",
+      "Geld"
+     ],
+     "verwechslung": [
+      "Geld, Lohn",
+      "Lohn, Reichtum",
+      "Münzen, Lohn",
+      "Münzen, Lohn",
+      "Medaillen, Kekse",
+      "Medaillen"
+     ]
+    },
+    "3": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Münzen",
+      "Münzen",
+      "Münzen",
+      "Münzen"
+     ],
+     "antworten_zelle": [
+      "Münzen",
+      "Gold- und Silbermünzen"
+     ],
+     "antworten160": [
+      "Münzen",
+      "Münzen"
+     ],
+     "verwechslung": [
+      "Geld",
+      "Geld",
+      "Geld, Silberlinge",
+      "Geld, Silberlinge",
+      "Medaillen",
+      "Medaillen, Denar"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 1,
+    "treffer32": 4,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": true,
+   "wortzeichen": false,
+   "tragende_merkmale": [
+    "Drei runde Münzen, gold und silbern, dunkle Kontur"
+   ]
+  },
+  {
+   "id": "FIG-OBJ-DENAR",
+   "name_de": "Denar (Münze)",
+   "neu": false,
+   "vorher_32px": null,
+   "runde_a": {
+    "1": {
+     "treffer32": 1,
+     "n32": 4,
+     "bild32": 2,
+     "bild_zelle": 0,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Silber",
+      "Silbermünze",
+      "nichts / leer",
+      "Stein"
+     ],
+     "antworten_zelle": [
+      "grauer Kreis",
+      "grauer Kreis"
+     ],
+     "antworten160": [
+      "Silbermünze",
+      "Silbermünze"
+     ],
+     "verwechslung": [
+      "Stein",
+      "Stein, Kreis",
+      "Kreis, Ring",
+      "Kreis, Mond",
+      "Knopf, Teller",
+      "Teller, Knopf"
+     ]
+    },
+    "2": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "mehr": 2,
+      "egal": 4
+     },
+     "antworten32": [
+      "Silbermünze (Denar)",
+      "Silbermünze",
+      "Silbermünze (Denar)",
+      "Silbermünze"
+     ],
+     "antworten_zelle": [
+      "Münze mit Kopf",
+      "Münze mit Kopf"
+     ],
+     "antworten160": [
+      "Münze mit Kaiserbild",
+      "Kaisermünze"
+     ],
+     "verwechslung": [
+      "Medaille, Siegel",
+      "Denar, Medaille",
+      "Medaille, Kaisermünze",
+      "Denar, Medaille",
+      "Medaille",
+      "Medaille"
+     ]
+    },
+    "3": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Silbermünze",
+      "Silbermünze",
+      "Silbermünze",
+      "Silbermünze"
+     ],
+     "antworten_zelle": [
+      "Silbermünze",
+      "Silbermünze"
+     ],
+     "antworten160": [
+      "Silbermünze",
+      "Silbermünze"
+     ],
+     "verwechslung": [
+      "Denar, Medaille",
+      "Denar, Groschen",
+      "Denar, Drachme",
+      "Denar, Geld",
+      "Medaille, Knopf",
+      "Medaille"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 2,
+    "treffer32": 4,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": true,
+   "wortzeichen": false,
+   "tragende_merkmale": [
+    "Silbermünze mit dunkler Kontur",
+    "Prägung: Kopf im Profil (ohne Prägung als Stein oder «leer» gelesen)"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-MAMMON",
+   "name_de": "Mammon (Geld als Herr)",
+   "neu": false,
+   "vorher_32px": {
+    "treffer": 0,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Schatz",
+     "Reichtum",
+     "Schatz",
+     "Reichtum"
+    ],
+    "note": "Schatz/Reichtum, Herr-Aspekt fehlt"
+   },
+   "runde_a": {
+    "1": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 0,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Geldbeutel",
+      "Geldbeutel",
+      "Geldbeutel",
+      "Geldbeutel"
+     ],
+     "antworten_zelle": [
+      "Geldsack mit Münzen",
+      "Geldsack mit Münzen"
+     ],
+     "antworten160": [
+      "Geldsack",
+      "Geldsack"
+     ],
+     "verwechslung": [
+      "Silberlinge, Schatz",
+      "Schatz, Silberlinge",
+      "Schatz, Reichtum",
+      "Reichtum, Schatz",
+      "Vase, Krug",
+      "Vase, Krug"
+     ]
+    },
+    "2": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Reichtum",
+      "Reichtum",
+      "Reichtum",
+      "Reichtum"
+     ],
+     "antworten_zelle": [
+      "Geldsack mit Krone",
+      "Geldsack mit Krone"
+     ],
+     "antworten160": [
+      "Schatz",
+      "Schatz"
+     ],
+     "verwechslung": [
+      "Schatz, Mammon",
+      "Schatz, Mammon",
+      "Schatz, Steuer",
+      "Schatz, Mammon",
+      "Schatzbeutel, Mehlsack",
+      "Schatzbeutel"
+     ]
+    },
+    "3": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Reichtum",
+      "Schatz",
+      "Reichtum",
+      "Schatz"
+     ],
+     "antworten_zelle": [
+      "Geldsack mit Krone",
+      "Geldsack mit Krone"
+     ],
+     "antworten160": [
+      "Reichtum",
+      "Schatz des Königs"
+     ],
+     "verwechslung": [
+      "Gold, Schatz",
+      "Steuer, Reichtum",
+      "Schatz, Gold",
+      "Reichtum, Steuer",
+      "Schatz",
+      "Reichtum, Schatz"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 2,
+    "treffer32": 0,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": false,
+   "wortzeichen": true,
+   "tragende_merkmale": [
+    "Praller Geldsack mit kleiner Krone",
+    "Münze mit Prägung davor, Münzstapel"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-GEWINN",
+   "name_de": "Gewinn",
+   "neu": false,
+   "vorher_32px": {
+    "treffer": 1,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Zinsen",
+     "Zinsen",
+     "Gewinn",
+     "Zins"
+    ],
+    "note": "Zinsen"
+   },
+   "runde_a": {
+    "1": {
+     "treffer32": 2,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Zinsen",
+      "Zinsen",
+      "Gewinn, Zinsen",
+      "Gewinn"
+     ],
+     "antworten_zelle": [
+      "Münzstapel, Pfeil",
+      "Münzstapel, Pfeil"
+     ],
+     "antworten160": [
+      "Zinsen, Gewinn",
+      "Gewinn"
+     ],
+     "verwechslung": [
+      "Gewinn, Wachstum",
+      "Gewinn, Talente",
+      "Reichtum, Talente vermehren",
+      "Zinsen, Vermehrung",
+      "Gewinn, Wachstum",
+      "Gewinn, Wachstum"
+     ]
+    },
+    "2": {
+     "treffer32": 3,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Reichtum, Gewinn",
+      "Reichtum mehren",
+      "Gewinn",
+      "Gewinn"
+     ],
+     "antworten_zelle": [
+      "Münzstapel mit Pfeil",
+      "Münzstapel, Pfeil aufwärts"
+     ],
+     "antworten160": [
+      "Reichtum",
+      "reich werden"
+     ],
+     "verwechslung": [
+      "Zins, Geld",
+      "Gewinn, Zinsen",
+      "Reichtum, Zinsen",
+      "Reichtum, Zinsen",
+      "Zinsen, Geldanlage",
+      "Zinsen, Wachstum"
+     ]
+    },
+    "3": {
+     "treffer32": 3,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 1,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Gewinn",
+      "Zinsen",
+      "Gewinn",
+      "Gewinn"
+     ],
+     "antworten_zelle": [
+      "Münzstapel, Pfeil hoch",
+      "Münzstapel, Pfeil hoch"
+     ],
+     "antworten160": [
+      "Zinsen",
+      "Gewinn"
+     ],
+     "verwechslung": [
+      "Zinsen",
+      "Gewinn",
+      "Zins, reich",
+      "Zinsen, Reichtum",
+      "Börse, Gewinn",
+      "Gewinn, Ersparnisse"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 2,
+    "treffer32": 3,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": true,
+   "wortzeichen": false,
+   "tragende_merkmale": [
+    "Zwei Münzstapel, der rechte höher",
+    "Münze mit Prägung",
+    "Grüner Pfeil nach oben"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-GEBEN",
+   "name_de": "geben",
+   "neu": false,
+   "vorher_32px": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Münze geben",
+     "Münze geben",
+     "Münze geben",
+     "Münze geben"
+    ],
+    "note": "Gegenstand als Münze gelesen"
+   },
+   "runde_a": {
+    "1": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Münze geben",
+      "Münze geben",
+      "Münze geben",
+      "Münze geben"
+     ],
+     "antworten_zelle": [
+      "Hand mit Münze",
+      "Hand gibt Münze"
+     ],
+     "antworten160": [
+      "Münze geben",
+      "Münze geben"
+     ],
+     "verwechslung": [
+      "bezahlen, Almosen",
+      "bezahlen, Almosen",
+      "spenden, bezahlen",
+      "Almosen",
+      "Hand mit Ball",
+      "Zahlen, Ball"
+     ]
+    },
+    "2": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Geben, bezahlen",
+      "Geben, Opfergabe",
+      "Geben",
+      "Geben, Spenden"
+     ],
+     "antworten_zelle": [
+      "Hand reicht Münze",
+      "Hand gibt Münze"
+     ],
+     "antworten160": [
+      "Geld geben",
+      "Geld geben"
+     ],
+     "verwechslung": [
+      "Opfergabe, Spenden",
+      "Bezahlen",
+      "Opfergabe",
+      "Bezahlen",
+      "Bezahlen",
+      "bezahlen"
+     ]
+    },
+    "3": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Geld geben",
+      "Geld geben",
+      "Geben, bezahlen",
+      "Geben, Bezahlen"
+     ],
+     "antworten_zelle": [
+      "Hand gibt Münze",
+      "Hand gibt Münze"
+     ],
+     "antworten160": [
+      "Bezahlen",
+      "bezahlen"
+     ],
+     "verwechslung": [
+      "Bezahlen, Leihen",
+      "Bezahlen, Leihen",
+      "Opfer, Leihen",
+      "Leihen, Opfern",
+      "Bezahlen",
+      "Bezahlen, Kaufen"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 1,
+    "treffer32": 4,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": true,
+   "wortzeichen": false,
+   "tragende_merkmale": [
+    "Ausgestreckte Hand mit Ärmel, darüber eine Münze"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-SCHATZ",
+   "name_de": "Schatz / Lohn",
+   "neu": false,
+   "vorher_32px": {
+    "treffer": 4,
+    "n": 4,
+    "bild": 4,
+    "antworten": [
+     "Schatz",
+     "Schatz",
+     "Schatz",
+     "Schatz"
+    ],
+    "note": "keine Fehldeutung"
+   },
+   "runde_a": {
+    "1": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Schatztruhe",
+      "Schatztruhe",
+      "Schatztruhe",
+      "Schatz"
+     ],
+     "antworten_zelle": [
+      "Truhe mit Gold",
+      "Schatztruhe"
+     ],
+     "antworten160": [
+      "Schatztruhe",
+      "Schatzkiste"
+     ],
+     "verwechslung": [
+      "Opferkasten, Reichtum",
+      "Opferkasten, Reichtum",
+      "Opferkasten, Reichtum",
+      "Opfergabe, Truhe",
+      "Kiste, Kuchen",
+      "Kiste"
+     ]
+    },
+    "2": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Schatz",
+      "Schatz",
+      "Schatz",
+      "Schatz"
+     ],
+     "antworten_zelle": [
+      "Schatztruhe mit Münzen",
+      "Schatztruhe mit Goldmünzen"
+     ],
+     "antworten160": [
+      "Schatz",
+      "Schatz"
+     ],
+     "verwechslung": [
+      "Opferkasten",
+      "Opferkasten",
+      "Opferkasten",
+      "Schatzkiste, Opferkasten",
+      "Koffer, Kiste",
+      "Kiste, Koffer"
+     ]
+    },
+    "3": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Schatztruhe",
+      "Schatz",
+      "Schatz",
+      "Schatz"
+     ],
+     "antworten_zelle": [
+      "Schatztruhe mit Gold",
+      "Schatztruhe mit Gold"
+     ],
+     "antworten160": [
+      "Schatz",
+      "Schatz"
+     ],
+     "verwechslung": [
+      "Reichtum, Bundeslade",
+      "Reichtum, Truhe",
+      "Schatztruhe, Opferkasten",
+      "Schatztruhe, Reichtum",
+      "Kiste, Reichtum",
+      "Reichtum, Kiste"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 1,
+    "treffer32": 4,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": true,
+   "wortzeichen": false,
+   "tragende_merkmale": [
+    "Truhe voller Münzen",
+    "Grosse Münze obenauf"
+   ]
+  },
+  {
+   "id": "FIG-OBJ-TALENT",
+   "name_de": "Talent (Silbergeld im Sack)",
+   "neu": false,
+   "vorher_32px": null,
+   "runde_a": {
+    "1": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Silber",
+      "Geldbeutel",
+      "Silber",
+      "Geldbeutel"
+     ],
+     "antworten_zelle": [
+      "Geldsack, Münzen",
+      "Geldsack, Münzen"
+     ],
+     "antworten160": [
+      "Silber",
+      "Silbergeld"
+     ],
+     "verwechslung": [
+      "Geldbeutel, Mühlstein",
+      "Sack, Silber",
+      "Geldbeutel, Mühlstein",
+      "Sack, Silber",
+      "Stein",
+      "Stein, Mehlsack"
+     ]
+    },
+    "2": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 5,
+      "mehr": 1
+     },
+     "antworten32": [
+      "Geldbeutel",
+      "Geldbeutel",
+      "Geldbeutel",
+      "Geldbeutel"
+     ],
+     "antworten_zelle": [
+      "Geldsack mit Münzen",
+      "Geldsack mit Münzen"
+     ],
+     "antworten160": [
+      "Geldbeutel",
+      "Geldbeutel"
+     ],
+     "verwechslung": [
+      "Schatz, Sack",
+      "Schatz, Sack",
+      "Sack, Schatz",
+      "Schatz, Sack",
+      "Vase, Topf",
+      "Topf"
+     ]
+    },
+    "3": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Geldsack",
+      "Geldsack",
+      "Geldsack",
+      "Geldsack"
+     ],
+     "antworten_zelle": [
+      "Geldsack mit Münzen",
+      "Geldsack mit Münzen"
+     ],
+     "antworten160": [
+      "Silberschatz",
+      "Geldbeutel"
+     ],
+     "verwechslung": [
+      "Mehlsack",
+      "Mehlsack",
+      "Silbermünzen, Tasche",
+      "Mehlsack",
+      "Steinhaufen",
+      "Steinsack, Glocke"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 1,
+    "treffer32": 0,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": false,
+   "wortzeichen": true,
+   "tragende_merkmale": [
+    "Grosser grauer Sack (Silber) mit Münzen"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-LOESERECHT",
+   "name_de": "lösen (Löser, Löserecht)",
+   "neu": false,
+   "vorher_32px": null,
+   "runde_a": {
+    "1": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 0,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Zurückzahlen",
+      "Zurückzahlen",
+      "Rückzahlung",
+      "Erstattung"
+     ],
+     "antworten_zelle": [
+      "Pfeil, Tuch, Münzen",
+      "Tuch, Münzen, Pfeil"
+     ],
+     "antworten160": [
+      "Schuld erlassen",
+      "Zurückzahlen"
+     ],
+     "verwechslung": [
+      "Erstattung, Tausch",
+      "Erstatten, Tausch",
+      "Schulderlass, Umkehr",
+      "Lohn, Tausch",
+      "Rückgabe, Tausch",
+      "Tausch"
+     ]
+    },
+    "2": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 0,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "zurückzahlen",
+      "zurückzahlen",
+      "zurückzahlen",
+      "Zurückzahlen"
+     ],
+     "antworten_zelle": [
+      "Tuch, Münzen, Pfeil",
+      "Tafel, Münzen, Pfeil"
+     ],
+     "antworten160": [
+      "Geld zurückgeben",
+      "Tische umstoßen"
+     ],
+     "verwechslung": [
+      "Opfergabe",
+      "erstatten, umkehren",
+      "Lohn, Schulden",
+      "Tausch, Opfergabe",
+      "Buch mit Münzen",
+      "Rückgabe, Tausch"
+     ]
+    },
+    "3": {
+     "treffer32": 1,
+     "n32": 4,
+     "bild32": 2,
+     "bild_zelle": 0,
+     "n_zelle": 2,
+     "treffer160": 1,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Schuld erlassen",
+      "Verlorener Sohn",
+      "Feld zurückkaufen",
+      "Erbteil zurückgeben"
+     ],
+     "antworten_zelle": [
+      "Matte, Münzen, Pfeil",
+      "Tuch, Münzen, Pfeil"
+     ],
+     "antworten160": [
+      "Schuldenerlass",
+      "Acker zurückkaufen"
+     ],
+     "verwechslung": [
+      "Rückzahlung, Bezahlung",
+      "Rückkehr, Vergeudung",
+      "Acker verkaufen, Erbe",
+      "Acker verkaufen, Bezahlen",
+      "Teppich, Tausch",
+      "Teppich, Zahlung"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 3,
+    "treffer32": 1,
+    "n32": 4,
+    "bild32": 2
+   },
+   "erkannt_32px": false,
+   "wortzeichen": true,
+   "tragende_merkmale": [
+    "Feldstück mit Ähren",
+    "Münzstapel daneben (Kaufpreis)",
+    "Pfeil im Bogen zurück"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-GERECHT",
+   "name_de": "gerecht",
+   "neu": false,
+   "vorher_32px": null,
+   "runde_a": {
+    "1": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "gerecht",
+      "gerecht",
+      "gerecht",
+      "Gerechtigkeit"
+     ],
+     "antworten_zelle": [
+      "Waage mit Haken",
+      "Waage mit Haken"
+     ],
+     "antworten160": [
+      "gerechtes Urteil",
+      "gerechtes Urteil"
+     ],
+     "verwechslung": [
+      "Waage, Gericht",
+      "Gericht, Waage",
+      "Waage, Gericht",
+      "Waage, Gericht",
+      "Kreuz",
+      "Kreuz, Gleichgewicht"
+     ]
+    },
+    "2": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Gerechtigkeit",
+      "Gerechtigkeit",
+      "Gerechtigkeit",
+      "Gerechtigkeit"
+     ],
+     "antworten_zelle": [
+      "Waage mit Haken",
+      "Waage mit Haken"
+     ],
+     "antworten160": [
+      "Gerechtigkeit",
+      "Gerechtigkeit"
+     ],
+     "verwechslung": [
+      "Gericht, Urteil",
+      "Gericht, Urteil",
+      "Gericht, Urteil",
+      "Gericht, Urteil",
+      "Gericht",
+      "Justiz, Gleichgewicht"
+     ]
+    },
+    "3": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Gerechtigkeit",
+      "Gerechtigkeit",
+      "Gerechtigkeit",
+      "Gerechtigkeit"
+     ],
+     "antworten_zelle": [
+      "Waage mit Häkchen",
+      "Waage mit Haken"
+     ],
+     "antworten160": [
+      "Gerechtigkeit",
+      "Gerecht"
+     ],
+     "verwechslung": [
+      "Gericht, Urteil",
+      "gerechtes Urteil",
+      "Gericht, Urteil",
+      "Gericht, Urteil",
+      "Gericht",
+      "Justizwaage"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 1,
+    "treffer32": 4,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": true,
+   "wortzeichen": false,
+   "tragende_merkmale": [
+    "Waage genau im Gleichgewicht",
+    "Grüner Haken darüber (unterscheidet von «Gericht»)"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-BESONNEN",
+   "name_de": "besonnen / beherrscht",
+   "neu": false,
+   "vorher_32px": null,
+   "runde_a": {
+    "1": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 0,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 5,
+      "stört": 1
+     },
+     "antworten32": [
+      "Pferd",
+      "Pferd",
+      "Pferd",
+      "Pferd"
+     ],
+     "antworten_zelle": [
+      "Pferdekopf",
+      "Pferdekopf"
+     ],
+     "antworten160": [
+      "Pferd",
+      "Pferd"
+     ],
+     "verwechslung": [
+      "Esel, Schachfigur",
+      "Esel, Schachfigur",
+      "Esel, Springer",
+      "Esel, Schachfigur",
+      "Schachfigur",
+      "Schachfigur, Springer"
+     ]
+    },
+    "2": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 5,
+      "egal": 1
+     },
+     "antworten32": [
+      "Pferd",
+      "Pferd",
+      "Pferd",
+      "Pferd"
+     ],
+     "antworten_zelle": [
+      "Pferdekopf mit Zaumzeug",
+      "Pferdekopf mit Zaum"
+     ],
+     "antworten160": [
+      "Pferd mit Zaumzeug",
+      "Pferd mit Zaumzeug"
+     ],
+     "verwechslung": [
+      "Esel, Schachfigur",
+      "Esel, Streitross",
+      "Esel, Streitross",
+      "Esel, Schachfigur",
+      "Schachpferd, Hund",
+      "Schachspringer, Vogel"
+     ]
+    },
+    "3": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 0,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 5,
+      "stört": 1
+     },
+     "antworten32": [
+      "Pferd",
+      "Pferd",
+      "Pferd",
+      "Pferd"
+     ],
+     "antworten_zelle": [
+      "Pferdekopf",
+      "Pferdekopf"
+     ],
+     "antworten160": [
+      "Pferd",
+      "Pferd"
+     ],
+     "verwechslung": [
+      "Esel, Maultier",
+      "Esel",
+      "Esel, Streitross",
+      "Esel",
+      "Schachfigur",
+      "Schachfigur, Esel"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 2,
+    "treffer32": 0,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": false,
+   "wortzeichen": true,
+   "tragende_merkmale": [
+    "Pferdekopf",
+    "Zaum und ruhig gehaltener Zügel"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-FROMM",
+   "name_de": "fromm",
+   "neu": false,
+   "vorher_32px": null,
+   "runde_a": {
+    "1": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 2,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Priester",
+      "Witwe",
+      "Priester",
+      "Säugling"
+     ],
+     "antworten_zelle": [
+      "Verhüllte Person",
+      "Person mit Schleier"
+     ],
+     "antworten160": [
+      "Frau, Witwe",
+      "Nonne"
+     ],
+     "verwechslung": [
+      "Alter Mann, Prophet",
+      "Frau, Nonne",
+      "Prophet, alter Mann",
+      "Mensch, Totenhemd",
+      "Gespenst",
+      "Nonne, Gespenst"
+     ]
+    },
+    "2": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Engel",
+      "Engel, Heiliger",
+      "Engel",
+      "Heiliger"
+     ],
+     "antworten_zelle": [
+      "strahlende Person",
+      "betende Person"
+     ],
+     "antworten160": [
+      "Engel",
+      "Heilige"
+     ],
+     "verwechslung": [
+      "Prophet, Heiliger",
+      "Priester, Erscheinung",
+      "Heiliger, Priester",
+      "Engel, Prophet",
+      "Heiliger, Braut",
+      "Heiliger"
+     ]
+    },
+    "3": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Priester",
+      "Priester",
+      "Priester",
+      "Priester"
+     ],
+     "antworten_zelle": [
+      "betende Person",
+      "Strahlende Person"
+     ],
+     "antworten160": [
+      "Priester",
+      "Priester"
+     ],
+     "verwechslung": [
+      "Engel, Prophet",
+      "Prophet, Engel",
+      "Engel, Prophet",
+      "Engel, Prophet",
+      "Arzt",
+      "Priester, Heiliger"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 2,
+    "treffer32": 0,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": false,
+   "wortzeichen": true,
+   "tragende_merkmale": [
+    "Mensch im weissen Gebetsmantel mit blauen Streifen",
+    "Licht von oben"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-FREUNDLICH",
+   "name_de": "freundlich / gütig",
+   "neu": false,
+   "vorher_32px": null,
+   "runde_a": {
+    "1": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "froh",
+      "froh",
+      "froh",
+      "Freude"
+     ],
+     "antworten_zelle": [
+      "lächelndes Gesicht",
+      "Lächelndes Gesicht"
+     ],
+     "antworten160": [
+      "Freude",
+      "Freude"
+     ],
+     "verwechslung": [
+      "zufrieden, lächeln",
+      "zufrieden, lächeln",
+      "Freude, lächeln",
+      "Glücklich, Lächeln",
+      "Sonne",
+      "Glücklich sein"
+     ]
+    },
+    "2": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Freude",
+      "Freude",
+      "Freude",
+      "Freude"
+     ],
+     "antworten_zelle": [
+      "Lächelndes Gesicht",
+      "Lächelndes Gesicht"
+     ],
+     "antworten160": [
+      "Freude",
+      "Freude"
+     ],
+     "verwechslung": [
+      "Zufriedenheit, Lächeln",
+      "Zufriedenheit, Glück",
+      "Zufriedenheit, Glück",
+      "Lächeln, Zufriedenheit",
+      "Freude, Smiley",
+      "Freude, Zufriedenheit"
+     ]
+    },
+    "3": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Freude",
+      "Freude",
+      "Freude",
+      "Freude"
+     ],
+     "antworten_zelle": [
+      "lächelndes Gesicht",
+      "Lächelndes Gesicht"
+     ],
+     "antworten160": [
+      "Freude",
+      "froh"
+     ],
+     "verwechslung": [
+      "Zufriedenheit",
+      "Zufriedenheit, Glück",
+      "Glück, Zufriedenheit",
+      "Glück, Lächeln",
+      "glücklich",
+      "Glücklich, Emoji"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 1,
+    "treffer32": 0,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": false,
+   "wortzeichen": true,
+   "tragende_merkmale": [
+    "Gelbes rundes Gesicht mit geschwungenem Lächeln und lachenden Augen"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-SANFTMUT",
+   "name_de": "Sanftmut / sanftmütig",
+   "neu": false,
+   "vorher_32px": null,
+   "runde_a": {
+    "1": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 3,
+      "egal": 3
+     },
+     "antworten32": [
+      "Schaf",
+      "Schaf",
+      "Schaf",
+      "Schaf"
+     ],
+     "antworten_zelle": [
+      "Schaf",
+      "Schaf"
+     ],
+     "antworten160": [
+      "Schaf",
+      "Schaf"
+     ],
+     "verwechslung": [
+      "Wolke",
+      "Wolke, Lamm",
+      "Wolke, Lamm",
+      "Wolke, Lamm",
+      "Wolke",
+      "Wolke"
+     ]
+    },
+    "2": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Schaf",
+      "Schaf",
+      "Schaf",
+      "Schaf"
+     ],
+     "antworten_zelle": [
+      "Schaf",
+      "Schaf"
+     ],
+     "antworten160": [
+      "Schaf",
+      "Schaf"
+     ],
+     "verwechslung": [
+      "Wolke",
+      "Wolke",
+      "Wolke, Lamm",
+      "Wolke, Lamm",
+      "Wolke",
+      "Wolke, Lamm"
+     ]
+    },
+    "3": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Schaf",
+      "Schaf",
+      "Schaf",
+      "Schaf"
+     ],
+     "antworten_zelle": [
+      "Schaf",
+      "Schaf"
+     ],
+     "antworten160": [
+      "Schaf",
+      "Schaf"
+     ],
+     "verwechslung": [
+      "Lamm, Herde",
+      "Lamm, Wolle",
+      "Lamm, Herde",
+      "Lamm",
+      "Wolke",
+      "Wolke, Lamm"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 1,
+    "treffer32": 0,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": false,
+   "wortzeichen": true,
+   "tragende_merkmale": [
+    "Liegendes weisses Lamm mit dunklem Kopf"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-GUTES-ZUGETAN",
+   "name_de": "dem Guten zugetan",
+   "neu": false,
+   "vorher_32px": null,
+   "runde_a": {
+    "1": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Liebe",
+      "Liebe",
+      "Liebe",
+      "Liebe"
+     ],
+     "antworten_zelle": [
+      "Herz mit Haken",
+      "Herz mit Haken"
+     ],
+     "antworten160": [
+      "Liebe, Annahme",
+      "Liebe"
+     ],
+     "verwechslung": [
+      "Gesundheit, Zustimmung",
+      "gut, Herz",
+      "Gefallen, Gnade",
+      "Gefallen, gut",
+      "Gefällt mir",
+      "Gefällt mir, Liebe"
+     ]
+    },
+    "2": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Gefallen Gottes",
+      "Liebe, Wohlgefallen",
+      "Liebe",
+      "Gefallen"
+     ],
+     "antworten_zelle": [
+      "Herz mit Haken",
+      "Herz mit Haken"
+     ],
+     "antworten160": [
+      "Wohlgefallen",
+      "Wohlgefallen"
+     ],
+     "verwechslung": [
+      "Liebe, Zustimmung",
+      "Herz, Zustimmung",
+      "Wohlgefallen, Gesundheit",
+      "Liebe, Zustimmung",
+      "Gesundheit, Zustimmung",
+      "Gesundheit"
+     ]
+    },
+    "3": {
+     "treffer32": 3,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Liebe richtig",
+      "Liebe gut",
+      "Liebe Gottes",
+      "Liebe ist gut"
+     ],
+     "antworten_zelle": [
+      "Herz mit Haken",
+      "Herz mit Haken"
+     ],
+     "antworten160": [
+      "Gottgefallen, gut",
+      "Glaube"
+     ],
+     "verwechslung": [
+      "Herz, gut",
+      "gefallen, mögen",
+      "gut, gefallen",
+      "Gefällt, Herz",
+      "Gesundheit",
+      "Gesundheit, Liebe"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 3,
+    "treffer32": 3,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": true,
+   "wortzeichen": false,
+   "tragende_merkmale": [
+    "Rotes Herz",
+    "Grüner Haken mit weissem Rand darauf (ohne Rand nur «Liebe» gelesen)"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-EIGENMAECHTIG",
+   "name_de": "eigenmächtig",
+   "neu": false,
+   "vorher_32px": null,
+   "runde_a": {
+    "1": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 1,
+      "egal": 5
+     },
+     "antworten32": [
+      "König krönen",
+      "Königin",
+      "Königin",
+      "Königin"
+     ],
+     "antworten_zelle": [
+      "Person mit Krone",
+      "Person mit Krone"
+     ],
+     "antworten160": [
+      "Krönung",
+      "König krönen"
+     ],
+     "verwechslung": [
+      "Königin, jubeln",
+      "König, Prinzessin",
+      "König, krönen",
+      "König, Krönung",
+      "König",
+      "König, Königin"
+     ]
+    },
+    "2": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Königin",
+      "Königin",
+      "Königin",
+      "König"
+     ],
+     "antworten_zelle": [
+      "Gekrönte Person",
+      "Person mit Krone"
+     ],
+     "antworten160": [
+      "König",
+      "König krönen"
+     ],
+     "verwechslung": [
+      "Prinzessin, Sieg",
+      "Prinzessin, König",
+      "Sieger, Prinzessin",
+      "Königin, Prinz",
+      "König",
+      "König, Königin"
+     ]
+    },
+    "3": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 1,
+      "egal": 5
+     },
+     "antworten32": [
+      "Königin",
+      "König",
+      "König",
+      "Königin"
+     ],
+     "antworten_zelle": [
+      "Person mit Krone",
+      "Person mit Krone"
+     ],
+     "antworten160": [
+      "König werden",
+      "König werden"
+     ],
+     "verwechslung": [
+      "König, Krönung",
+      "Krönung, Königin",
+      "Königin, Krönung",
+      "König, Krönung",
+      "König, Sieger",
+      "König"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 1,
+    "treffer32": 0,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": false,
+   "wortzeichen": true,
+   "tragende_merkmale": [
+    "Mann hebt sich selbst eine goldene Krone auf den Kopf"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-VERLEUMDEN",
+   "name_de": "verleumden / Verleumdung",
+   "neu": false,
+   "vorher_32px": null,
+   "runde_a": {
+    "1": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 0,
+     "bild_zelle": 1,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Zurechtweisen",
+      "Zurechtweisen",
+      "Bestrafung",
+      "Anweisung"
+     ],
+     "antworten_zelle": [
+      "Person mit Blitz",
+      "Person, Blitz, Person"
+     ],
+     "antworten160": [
+      "zurechtweisen",
+      "Zurechtweisen"
+     ],
+     "verwechslung": [
+      "Lehren, Befehlen",
+      "Lehren, Befehlen",
+      "Zurechtweisung, Fluch",
+      "Lehren, Befehlen",
+      "Streit, Schreien",
+      "Streit"
+     ]
+    },
+    "2": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 3,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "strafen",
+      "Fluch",
+      "verfluchen",
+      "verfluchen"
+     ],
+     "antworten_zelle": [
+      "Flüsternder, Blitz, Person",
+      "Person flüstert, Blitz"
+     ],
+     "antworten160": [
+      "Zorn, Schelten",
+      "Zorn"
+     ],
+     "verwechslung": [
+      "Fluch",
+      "Zorn, Strafe",
+      "Streit, zornig",
+      "schimpfen, Streit",
+      "Streit, Gespräch",
+      "Streit, Schimpfen"
+     ]
+    },
+    "3": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 0,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Unrecht tun",
+      "Bekehrung",
+      "Lehren, unterweisen",
+      "Zurechtweisen"
+     ],
+     "antworten_zelle": [
+      "Flüsternder Mann, Blitz",
+      "Flüsternder Mann, Blitz"
+     ],
+     "antworten160": [
+      "Zurechtweisung",
+      "Zurechtweisung"
+     ],
+     "verwechslung": [
+      "Zurechtweisung, Streit",
+      "Streit, Belehrung",
+      "Zurechtweisen, Streit",
+      "Lehren, Streit",
+      "Streit, Gespräch",
+      "Streit, Klatsch"
+     ]
+    }
+   },
+   "runde_b": {
+    "1": {
+     "treffer32": 1,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Lüge",
+      "Lüge, Verleumdung",
+      "Lüge, Verführung",
+      "Lüge"
+     ],
+     "antworten_zelle": [
+      "Person mit Schlangenzunge",
+      "Mann mit Schlangenzunge"
+     ],
+     "antworten160": [
+      "Lästern / böse Worte",
+      "Lästern / böse Worte"
+     ],
+     "verwechslung": [
+      "Verführung, Schelten",
+      "Zurechtweisung, Spott",
+      "Schimpfen, Lehren",
+      "Verleumdung, Fluch",
+      "Person spuckt Feuer",
+      "Zunge herausstrecken"
+     ]
+    },
+    "2": {
+     "treffer32": 1,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 0,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Lästern",
+      "Lästern",
+      "Lästern/Verleumden",
+      "Lästern, böse Zunge"
+     ],
+     "antworten_zelle": [
+      "Mann mit Zunge",
+      "Mann mit roter Zunge"
+     ],
+     "antworten160": [
+      "Lästerung, böse Zunge",
+      "Lästern, böse Worte"
+     ],
+     "verwechslung": [
+      "Lüge, Verleumdung",
+      "Lügen, Verleumdung",
+      "Lügen, Schimpfen",
+      "Lügen, Schlange",
+      "Schreien, Feuerspucken",
+      "Flüstern, Schreien"
+     ]
+    },
+    "3": {
+     "treffer32": 1,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 1,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Lästern / Verleumden",
+      "Lästern",
+      "Lästern / böse Rede",
+      "Lästern / Spotten"
+     ],
+     "antworten_zelle": [
+      "Mann mit Schlangenzunge",
+      "Kopf mit Schlangenzunge"
+     ],
+     "antworten160": [
+      "Lüge, Verleumdung",
+      "Lüge"
+     ],
+     "verwechslung": [
+      "Lügen, Schimpfen",
+      "Lügen, Schimpfen",
+      "Lüge, Fluchen",
+      "Schreien, Lügen",
+      "Flüstern, Kuss",
+      "Flüstern, Pfeife"
+     ]
+    }
+   },
+   "gewaehlt": {
+    "stufe": 1,
+    "treffer32": 1,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": false,
+   "wortzeichen": true,
+   "tragende_merkmale": [
+    "Kopf im Profil mit gespaltener roter Schlangenzunge",
+    "Die Zunge zielt auf einen anderen"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-UNTERORDNEN",
+   "name_de": "sich unterordnen",
+   "neu": false,
+   "vorher_32px": null,
+   "runde_a": {
+    "1": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 0,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Trösten",
+      "trösten",
+      "Trösten",
+      "trösten"
+     ],
+     "antworten_zelle": [
+      "Person verbeugt sich",
+      "Person verbeugt sich"
+     ],
+     "antworten160": [
+      "Fußwaschung",
+      "Niederknien"
+     ],
+     "verwechslung": [
+      "Umarmen, Helfen",
+      "umarmen, pflegen",
+      "Umarmung, Pflege",
+      "umarmen, helfen",
+      "Beten",
+      "Beten, Bitten"
+     ]
+    },
+    "2": {
+     "treffer32": 1,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Huldigung, Unterwerfung",
+      "Bitten vor König",
+      "Fußfall, Bitten",
+      "Bitten vor König"
+     ],
+     "antworten_zelle": [
+      "Verbeugung vor Herrscher",
+      "Verbeugung vor Herrscher"
+     ],
+     "antworten160": [
+      "Hilfe",
+      "Huldigen"
+     ],
+     "verwechslung": [
+      "Bitte, Gebet",
+      "Huldigung, Anbetung",
+      "Anbetung, Huldigung",
+      "Huldigung, Gebet",
+      "Anbetung",
+      "Beten, Umarmung"
+     ]
+    },
+    "3": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 2,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Hirte mit Schaf",
+      "Bitte an König",
+      "König bitten",
+      "Hirte und Schafe"
+     ],
+     "antworten_zelle": [
+      "Verbeugung vor Herrscher",
+      "Person verbeugt sich"
+     ],
+     "antworten160": [
+      "Huldigung",
+      "Verneigen vor König"
+     ],
+     "verwechslung": [
+      "Ruth, Herde",
+      "niederknien, beten",
+      "niederknien, Audienz",
+      "Lehrer, Prophet",
+      "Bettler",
+      "Betteln, Bedienen"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 2,
+    "treffer32": 1,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": false,
+   "wortzeichen": true,
+   "tragende_merkmale": [
+    "Einer verneigt sich tief",
+    "Gegenüber steht einer erhöht auf einer Stufe, mit Stab"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-SUCHEN-FINDEN",
+   "name_de": "suchen und finden",
+   "neu": false,
+   "vorher_32px": null,
+   "runde_a": {
+    "1": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 0,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "suchen",
+      "suchen",
+      "suchen",
+      "Suchen"
+     ],
+     "antworten_zelle": [
+      "Lupe",
+      "Lupe"
+     ],
+     "antworten160": [
+      "verlorene Münze suchen",
+      "verlorene Münze suchen"
+     ],
+     "verwechslung": [
+      "finden, prüfen",
+      "untersuchen, finden",
+      "finden, Lupe",
+      "Lupe, Pfanne",
+      "Bratpfanne",
+      "Tischtennisschläger"
+     ]
+    },
+    "2": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Verlorene Münze suchen",
+      "Suchen Münze",
+      "Verlorene Münze suchen",
+      "Münze suchen"
+     ],
+     "antworten_zelle": [
+      "Lupe über Münze",
+      "Lupe über Münze"
+     ],
+     "antworten160": [
+      "verlorene Münze",
+      "verlorene Münze"
+     ],
+     "verwechslung": [
+      "Suche, Prüfung",
+      "Finden, Untersuchen",
+      "Finden, Prüfen",
+      "Finden, Untersuchen",
+      "Suche, Prüfung",
+      "Suche, Prüfung"
+     ]
+    },
+    "3": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Suchen, verlorene Münze",
+      "Suchen, verlorene Münze",
+      "Suchen, verlorene Münze",
+      "Schatz suchen"
+     ],
+     "antworten_zelle": [
+      "Lupe mit Münze",
+      "Lupe mit Münze"
+     ],
+     "antworten160": [
+      "verlorene Münze",
+      "Verlorene Münze"
+     ],
+     "verwechslung": [
+      "Prüfen, Finden",
+      "Untersuchen, Finden",
+      "Finden, Prüfen",
+      "Finden, Prüfen",
+      "Untersuchen",
+      "Untersuchen, Geld"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 1,
+    "treffer32": 4,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": true,
+   "wortzeichen": false,
+   "tragende_merkmale": [
+    "Lupe mit Griff",
+    "Darin eine gefundene Münze"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-BAUEN-SAND",
+   "name_de": "Haus auf Sand gebaut",
+   "neu": false,
+   "vorher_32px": null,
+   "runde_a": {
+    "1": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "mehr": 4,
+      "egal": 2
+     },
+     "antworten32": [
+      "Haus auf Sand",
+      "Haus auf Sand",
+      "Haus auf Sand",
+      "Haus auf Sand"
+     ],
+     "antworten_zelle": [
+      "Haus auf Sand",
+      "Haus auf Sand"
+     ],
+     "antworten160": [
+      "Haus auf Sand",
+      "Haus auf Sand"
+     ],
+     "verwechslung": [
+      "Haus am Wasser",
+      "Haus am Wasser",
+      "Haus, Stadt",
+      "Haus, Ufer",
+      "Haus am Strand",
+      "Hütte am Strand"
+     ]
+    },
+    "2": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Haus auf Sand",
+      "Haus auf Sand",
+      "Haus auf Sand",
+      "Haus auf Sand"
+     ],
+     "antworten_zelle": [
+      "Haus auf Sand",
+      "Haus auf Sand"
+     ],
+     "antworten160": [
+      "Haus auf Sand",
+      "Haus auf Sand"
+     ],
+     "verwechslung": [
+      "Ufer",
+      "Haus am Meer",
+      "Insel, Küste",
+      "Strandhaus, Insel",
+      "Strandhütte, Insel",
+      "Strandhaus, Insel"
+     ]
+    },
+    "3": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Haus auf Sand",
+      "Haus auf Sand",
+      "Haus auf Sand",
+      "Haus auf Sand"
+     ],
+     "antworten_zelle": [
+      "Haus auf Sand",
+      "Haus auf Sand"
+     ],
+     "antworten160": [
+      "Haus auf Sand",
+      "Haus auf Sand"
+     ],
+     "verwechslung": [
+      "Haus auf Fels",
+      "Haus auf Fels",
+      "Haus am Meer",
+      "Strandhaus, Fundament",
+      "Insel, Strandhaus",
+      "Insel, Strandhaus"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 1,
+    "treffer32": 4,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": true,
+   "wortzeichen": false,
+   "tragende_merkmale": [
+    "Würfelhaus steht auf einem Sandhügel",
+    "Wasser davor"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-BITTER",
+   "name_de": "bitter",
+   "neu": false,
+   "vorher_32px": null,
+   "runde_a": {
+    "1": {
+     "treffer32": 3,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Bitterkeit",
+      "Bitterkeit",
+      "Bitterkeit",
+      "trauern"
+     ],
+     "antworten_zelle": [
+      "Trauriges Gesicht, Becher",
+      "Trauriges Gesicht, Becher"
+     ],
+     "antworten160": [
+      "bitterer Kelch",
+      "bitterer Kelch"
+     ],
+     "verwechslung": [
+      "Fasten, Trauer",
+      "Ekel, Essig",
+      "Trauer, Fasten",
+      "Bitterkeit, krank",
+      "Übelkeit",
+      "Übelkeit, Krankheit"
+     ]
+    },
+    "2": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Bitterkeit",
+      "Bitterkeit, Essig",
+      "bittere Galle",
+      "Bitterkeit"
+     ],
+     "antworten_zelle": [
+      "Gesicht mit Becher",
+      "Gesicht mit Becher"
+     ],
+     "antworten160": [
+      "Bitterkeit",
+      "Bitterkeit"
+     ],
+     "verwechslung": [
+      "Essig trinken, Ekel",
+      "Ekel, Zorn",
+      "Essig, Ekel",
+      "Essig, Ekel",
+      "wütendes Gesicht, Trinken",
+      "Krankheit"
+     ]
+    },
+    "3": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "bitterer Kelch",
+      "bitterer Kelch",
+      "bitterer Kelch",
+      "bitterer Kelch"
+     ],
+     "antworten_zelle": [
+      "Verbittertes Gesicht, Becher",
+      "verärgertes Gesicht, Becher"
+     ],
+     "antworten160": [
+      "Bitterkeit",
+      "Bitterkeit"
+     ],
+     "verwechslung": [
+      "Zorn, Ekel",
+      "Ekel, Essig",
+      "Zorn, Ekel",
+      "Zorn, Essig",
+      "Wütendes Gesicht, Übelkeit",
+      "Kranker mit Tee"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 2,
+    "treffer32": 4,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": true,
+   "wortzeichen": false,
+   "tragende_merkmale": [
+    "Gesicht verzieht sich (zugekniffene Augen, Zickzackmund, zusammengezogene Brauen)",
+    "Becher mit grünlichem Trank"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-KLUG",
+   "name_de": "klug / weise",
+   "neu": false,
+   "vorher_32px": null,
+   "runde_a": {
+    "1": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 1,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "schmecken",
+      "Feuer speien",
+      "Zunge, sprechen",
+      "Lampe, Licht"
+     ],
+     "antworten_zelle": [
+      "Kopf mit Lampe",
+      "Kopf mit Flamme"
+     ],
+     "antworten160": [
+      "Glaube entzündet",
+      "Erleuchtung, Geist"
+     ],
+     "verwechslung": [
+      "Zunge, sprechen",
+      "Lampe, Zunge",
+      "Feuer, essen",
+      "Feuer essen, Reden",
+      "Kopf mit Flamme",
+      "Idee, Fieber"
+     ]
+    },
+    "2": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Erleuchtung",
+      "Erleuchtung",
+      "Erleuchtung, Verstand",
+      "Erleuchtung"
+     ],
+     "antworten_zelle": [
+      "Kopf mit Flamme",
+      "Kopf mit Flamme"
+     ],
+     "antworten160": [
+      "Erleuchtung",
+      "Erleuchtung"
+     ],
+     "verwechslung": [
+      "Idee, Weisheit",
+      "Idee, Weisheit",
+      "Heiliger Geist, Idee",
+      "Idee, Weisheit",
+      "Idee, Fieber",
+      "Idee, Fieber"
+     ]
+    },
+    "3": {
+     "treffer32": 2,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 5,
+      "egal": 1
+     },
+     "antworten32": [
+      "Erleuchtung, Verstand",
+      "Erleuchtung, Einsicht",
+      "Erleuchtung, Weisheit",
+      "Erleuchtung, Weisheit"
+     ],
+     "antworten_zelle": [
+      "Kopf mit Lampe",
+      "Kopf mit Flamme"
+     ],
+     "antworten160": [
+      "Erleuchtung",
+      "Erleuchtung"
+     ],
+     "verwechslung": [
+      "Heiliger Geist",
+      "Heiliger Geist",
+      "Idee, Geist",
+      "Idee, Geist",
+      "Idee",
+      "Kopfschmerzen, Fieber"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 3,
+    "treffer32": 2,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": true,
+   "wortzeichen": false,
+   "tragende_merkmale": [
+    "Kopf im Profil",
+    "Darin eine brennende Öllampe mit hellem Schein",
+    "Goldene Striche über dem Kopf"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-TOERICHT",
+   "name_de": "töricht",
+   "neu": false,
+   "vorher_32px": null,
+   "runde_a": {
+    "1": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 0,
+     "bild_zelle": 0,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Gedanke, Begierde",
+      "Gedanken, Sorge",
+      "Gedanken, Sorge",
+      "Hunger, Begierde"
+     ],
+     "antworten_zelle": [
+      "Kopf mit leerer Schale",
+      "Kopf mit leerer Schale"
+     ],
+     "antworten160": [
+      "erloschener Glaube",
+      "Erlöschen"
+     ],
+     "verwechslung": [
+      "Hunger, Sorge",
+      "Hunger, Begierde",
+      "Hunger, Begierde",
+      "Sorge, Gedanke",
+      "Nachdenken",
+      "Kluger Mann"
+     ]
+    },
+    "2": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 0,
+     "bild_zelle": 1,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "riechen",
+      "riechen",
+      "durstig",
+      "Duft riechen"
+     ],
+     "antworten_zelle": [
+      "Kopf mit Schale",
+      "Kopf mit Rauchwolke"
+     ],
+     "antworten160": [
+      "erloschener Glaube",
+      "erloschenes Licht"
+     ],
+     "verwechslung": [
+      "essen, atmen",
+      "atmen, seufzen",
+      "riechen, atmen",
+      "Atmen, Seufzen",
+      "trinkender Mann",
+      "Denkender Kopf"
+     ]
+    },
+    "3": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 0,
+     "bild_zelle": 0,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "mehr": 6
+     },
+     "antworten32": [
+      "Essen, Hunger",
+      "Essen",
+      "Essen",
+      "Essen"
+     ],
+     "antworten_zelle": [
+      "Kopf mit Kringeln",
+      "Kopf mit Kringel"
+     ],
+     "antworten160": [
+      "Gedanke, Sorge",
+      "Sorge, Gedanken"
+     ],
+     "verwechslung": [
+      "Trinken, Fasten",
+      "Fasten",
+      "Fasten",
+      "Riechen, Trinken",
+      "Schwindel, Kopfschmerz",
+      "verwirrter Mann"
+     ]
+    }
+   },
+   "runde_b": {
+    "1": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 4,
+      "mehr": 2
+     },
+     "antworten32": [
+      "Zweifel",
+      "Zweifel",
+      "Zweifel",
+      "Zweifel"
+     ],
+     "antworten_zelle": [
+      "Kopf mit Fragezeichen",
+      "Kopf mit Fragezeichenwolke"
+     ],
+     "antworten160": [
+      "Zweifel",
+      "Zweifel"
+     ],
+     "verwechslung": [
+      "Verwirrung, Unwissenheit",
+      "Verwirrung, Unwissenheit",
+      "Verwirrung, Unwissenheit",
+      "Verwirrung, Unwissenheit",
+      "Verwirrter Mensch",
+      "Nachdenken, Verwirrung"
+     ]
+    },
+    "2": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Zweifel",
+      "Zweifel",
+      "Zweifel",
+      "Zweifel, Verwirrung"
+     ],
+     "antworten_zelle": [
+      "Kopf mit Fragezeichen",
+      "Kopf mit Fragezeichen"
+     ],
+     "antworten160": [
+      "Zweifel",
+      "Zweifel"
+     ],
+     "verwechslung": [
+      "Verwirrung, Sorge",
+      "Verwirrung, Unwissenheit",
+      "Verwirrung, Unwissenheit",
+      "Unwissenheit, Sorge",
+      "Nachdenken, Verwirrung",
+      "Verwirrung, Nachdenken"
+     ]
+    },
+    "3": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 5,
+      "mehr": 1
+     },
+     "antworten32": [
+      "Zweifel",
+      "Zweifel",
+      "Zweifel",
+      "Zweifel"
+     ],
+     "antworten_zelle": [
+      "Kopf mit Fragezeichen",
+      "Kopf mit Fragezeichen"
+     ],
+     "antworten160": [
+      "Zweifel",
+      "Zweifel"
+     ],
+     "verwechslung": [
+      "Verwirrung, Nachdenken",
+      "Verwirrung, Nachdenken",
+      "Verwirrung, Unwissen",
+      "Verwirrung, Nachdenken",
+      "Nachdenken, Verwirrung",
+      "Verwirrung, Nachdenken"
+     ]
+    }
+   },
+   "gewaehlt": {
+    "stufe": 1,
+    "treffer32": 0,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": false,
+   "wortzeichen": true,
+   "tragende_merkmale": [
+    "Kopf im Profil (wie «klug»)",
+    "Darin graue Nebelwolke mit weissem Fragezeichen"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-LOHN-ERHALTEN",
+   "name_de": "Lohn schon erhalten",
+   "neu": false,
+   "vorher_32px": null,
+   "runde_a": {
+    "1": {
+     "treffer32": 0,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Bezahlen",
+      "bezahlen",
+      "Bezahlen",
+      "bezahlen"
+     ],
+     "antworten_zelle": [
+      "Hand mit Münzen",
+      "Hand mit Münzen, Haken"
+     ],
+     "antworten160": [
+      "bezahlen",
+      "Geld annehmen"
+     ],
+     "verwechslung": [
+      "Geben, Opfergabe",
+      "geben, Opfer",
+      "Opfergabe, Lohn",
+      "geben, Opfergabe",
+      "Bezahlen",
+      "Bezahlen, Spende"
+     ]
+    },
+    "2": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Bezahlt, Lohn",
+      "Bezahlt, Lohn erhalten",
+      "Bezahlt, Lohn",
+      "Bezahlt, Lohn"
+     ],
+     "antworten_zelle": [
+      "Hand mit Münzen, Häkchen",
+      "Hand mit Münzen, Haken"
+     ],
+     "antworten160": [
+      "Lohn",
+      "Geld erhalten"
+     ],
+     "verwechslung": [
+      "Spende, Schuld",
+      "Schuld beglichen",
+      "Schuld erlassen",
+      "Geben, Schuld",
+      "Bezahlt",
+      "Bezahlt, Quittung"
+     ]
+    },
+    "3": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "bezahlt",
+      "bezahlt",
+      "bezahlt",
+      "Bezahlt"
+     ],
+     "antworten_zelle": [
+      "Hand, Münzen, Haken",
+      "Hand, Münzen, Haken"
+     ],
+     "antworten160": [
+      "Lohn bezahlt",
+      "Lohn bezahlt"
+     ],
+     "verwechslung": [
+      "Lohn, ehrlich",
+      "Lohn erhalten",
+      "Lohn erhalten",
+      "Lohn, Spende",
+      "Zahlung bestätigt",
+      "Bezahlen"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 2,
+    "treffer32": 4,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": true,
+   "wortzeichen": false,
+   "tragende_merkmale": [
+    "Hand mit Ärmel hält einen Münzstapel",
+    "Grosser grüner Haken (erledigt)"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-RUHE",
+   "name_de": "Ruhe / Zuhause",
+   "neu": false,
+   "vorher_32px": null,
+   "runde_a": {
+    "1": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Zuhause",
+      "Zuhause",
+      "Zuhause",
+      "Zuhause"
+     ],
+     "antworten_zelle": [
+      "Haus mit Herz",
+      "Haus mit Herz"
+     ],
+     "antworten160": [
+      "Familie, Zuhause",
+      "Zuhause"
+     ],
+     "verwechslung": [
+      "Familie",
+      "Familie",
+      "Familie, Haus",
+      "Familie, Haus",
+      "Zuhause, Kirche",
+      "Zuhause, Kapelle"
+     ]
+    },
+    "2": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 0,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Zuhause",
+      "Zuhause",
+      "Zuhause, Familie",
+      "Zuhause"
+     ],
+     "antworten_zelle": [
+      "Haus mit Mond",
+      "Haus mit Mond"
+     ],
+     "antworten160": [
+      "Gastfreundschaft",
+      "Herberge"
+     ],
+     "verwechslung": [
+      "Nacht, Herberge",
+      "Herberge, Nacht",
+      "Herberge, Nachtruhe",
+      "Nachtruhe, Herberge",
+      "Nacht, Zuhause",
+      "Nacht, Zuhause"
+     ]
+    },
+    "3": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 5,
+      "mehr": 1
+     },
+     "antworten32": [
+      "Zuhause",
+      "Heim, Zuhause",
+      "Zuhause",
+      "Zuhause"
+     ],
+     "antworten_zelle": [
+      "Haus mit Mond",
+      "Haus mit Mond"
+     ],
+     "antworten160": [
+      "Zuhause",
+      "Zuhause"
+     ],
+     "verwechslung": [
+      "Herberge, Familie",
+      "Haus, Herberge",
+      "Haus, Herberge",
+      "Herberge, Familie",
+      "Zuhause, Nacht",
+      "Zuhause"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 1,
+    "treffer32": 4,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": true,
+   "wortzeichen": false,
+   "tragende_merkmale": [
+    "Haus mit Giebeldach und warm beleuchteter Tür",
+    "Herz über der Tür"
+   ]
+  },
+  {
+   "id": "FIG-ZEICHEN-STREIT",
+   "name_de": "streiten / Streit",
+   "neu": false,
+   "vorher_32px": null,
+   "runde_a": {
+    "1": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Streit",
+      "Streit",
+      "Streit",
+      "Streit"
+     ],
+     "antworten_zelle": [
+      "Zwei Streitende, Blitz",
+      "Zwei Personen, Blitz"
+     ],
+     "antworten160": [
+      "Streit",
+      "Streit"
+     ],
+     "verwechslung": [
+      "Diskussion, Gespräch",
+      "Diskussion",
+      "Diskussion",
+      "Diskussion",
+      "Diskussion",
+      "Diskussion, Streitgespräch"
+     ]
+    },
+    "2": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "egal": 6
+     },
+     "antworten32": [
+      "Streit",
+      "Streit",
+      "Streit",
+      "Streit"
+     ],
+     "antworten_zelle": [
+      "zwei Personen, Blitz",
+      "Zwei Personen, Blitz"
+     ],
+     "antworten160": [
+      "Streit",
+      "Streit"
+     ],
+     "verwechslung": [
+      "Diskussion",
+      "Diskussion, Zwietracht",
+      "Diskussion, Gespräch",
+      "Gespräch, Diskussion",
+      "Streit",
+      "Streit, Diskussion"
+     ]
+    },
+    "3": {
+     "treffer32": 4,
+     "n32": 4,
+     "bild32": 4,
+     "bild_zelle": 2,
+     "n_zelle": 2,
+     "treffer160": 2,
+     "n160": 2,
+     "detail": {
+      "mehr": 1,
+      "egal": 5
+     },
+     "antworten32": [
+      "Streit",
+      "Streit",
+      "Streit",
+      "Streit"
+     ],
+     "antworten_zelle": [
+      "Streitende mit Blitz",
+      "zwei Streitende, Blitz"
+     ],
+     "antworten160": [
+      "Streit",
+      "Streit"
+     ],
+     "verwechslung": [
+      "Meinungsverschiedenheit",
+      "Uneinigkeit",
+      "Diskussion, Uneinigkeit",
+      "Uneinigkeit, Diskussion",
+      "Diskussion, Gewitter",
+      "Diskussion, Debatte"
+     ]
+    }
+   },
+   "runde_b": null,
+   "gewaehlt": {
+    "stufe": 1,
+    "treffer32": 4,
+    "n32": 4,
+    "bild32": 4
+   },
+   "erkannt_32px": true,
+   "wortzeichen": false,
+   "tragende_merkmale": [
+    "Zwei Köpfe mit Sprechblasen gegeneinander",
+    "Roter Blitz dazwischen"
+   ]
+  }
+ ],
+ "detailauswertung": {
+  "treffer_32px_je_stufe_runde_a": {
+   "1": "58/184 (32 %)",
+   "2": "86/184 (47 %)",
+   "3": "84/184 (46 %)"
+  },
+  "treffer_160px_je_stufe_runde_a": {
+   "1": "34/92",
+   "2": "34/92",
+   "3": "47/92"
+  },
+  "bild_in_der_zelle_je_stufe": {
+   "1": "70/92",
+   "2": "85/92",
+   "3": "79/92"
+  },
+  "beste_stufe_anzahl_zeichen_runde_a": {
+   "1": 20,
+   "2": 20,
+   "3": 6
+  },
+  "haende_treffer_32px": {
+   "1": "17/40",
+   "2": "26/40",
+   "3": "21/40"
+  },
+  "muenzen_treffer_32px": {
+   "1": "19/36",
+   "2": "27/36",
+   "3": "27/36"
+  },
+  "figuren_mit_gesicht_treffer_32px": {
+   "1": "7/24",
+   "2": "16/24",
+   "3": "13/24"
+  },
+  "selbsteinschaetzung_de": "Die Instanzen wünschten in allen Stufen etwa gleich oft «mehr Detail» (Stufe 1: 151, Stufe 2: 131, Stufe 3: 114 Nennungen) und fanden Detail fast nie störend (6 Nennungen). Die Selbsteinschätzung sagt die Erkennung nicht voraus; massgeblich ist die Messung."
+ },
+ "wortzeichen": [
+  "FIG-ZEICHEN-TREUE",
+  "FIG-ZEICHEN-ZUFLUCHT",
+  "FIG-ZEICHEN-LEUCHTEN",
+  "FIG-ZEICHEN-REIN",
+  "FIG-ORT-TOR-WEIT",
+  "FIG-ZEICHEN-MAMMON",
+  "FIG-OBJ-TALENT",
+  "FIG-ZEICHEN-LOESERECHT",
+  "FIG-ZEICHEN-BESONNEN",
+  "FIG-ZEICHEN-FROMM",
+  "FIG-ZEICHEN-FREUNDLICH",
+  "FIG-ZEICHEN-SANFTMUT",
+  "FIG-ZEICHEN-EIGENMAECHTIG",
+  "FIG-ZEICHEN-VERLEUMDEN",
+  "FIG-ZEICHEN-UNTERORDNEN",
+  "FIG-ZEICHEN-TOERICHT",
+  "FIG-ZEICHEN-KOPF-HAAR",
+  "FIG-ZEICHEN-JOTA"
+ ],
+ "unveraendert_de": "FIG-ZEICHEN-KOPF-HAAR: Neuentwurf (halb weisses, halb schwarzes Haar) als «junger Mann/Frau» gelesen, schlechter als die bisherige Zeichnung; Zeichnung bleibt, als Wortzeichen eingetragen (drei Runden: Runde 5 A/B, Runde 6).",
+ "nicht_gesetzt_de": "FIG-ZEICHEN-RUHE (Rut 3,1) ist gezeichnet und erkannt (4/4 «Zuhause»), steht aber in keiner Zelle: der Satz «Ich will dir einen Ort der Ruhe suchen» ist im Pilotbild Titel des Feldes, der kein Zeichen trägt.",
+ "grenzen_de": "KI-Instanzen statt Leserinnen und Leser; dieselbe Modellfamilie zeichnet und prüft. Bei Pixeldichte 2 sieht die Instanz 64 Bildpunkte, ein Bildschirm mit Pixeldichte 1 zeigt weniger. Der Bewerter ist streng (z. B. «Versöhnung» für Frieden zählt, «Lästern» für Verleumden meist nur verwandt) und streut zwischen Läufen um etwa ±3 von 127. Vier Antworten je Stufe sind wenig; Unterschiede von einer Antwort sind nicht belastbar.",
+ "einsatz_in_pilotbildern_de": "Entwurf, nicht übernommen: Kopien von RUT, TIT, MAT-2, MAT (bildauftraege_daten) mit geänderten icons (58 Zellen, höchstens zwei Zeichen je Zelle, Gegenstücke klug/töricht, Haus auf Sand/auf dem Felsen, Lohn schon erhalten/Vater vergilt) liegen ausserhalb des Repositorys in der Arbeitsumgebung (scratchpad/zeichen2). Die Bildaufträge im Repository sind unverändert.",
+ "offen_de": "Salz, Splitter, Kammer, Becher leer, Freude, Licht bei 32 px nicht erkannt (nicht Teil dieser Runde). Blindtest der ganzen Strukturbilder mit den neuen Zeichen steht aus; alle Anime-Bilder wurden neu gezeichnet, aber nicht erneut blind geprüft."
+}
