@@ -39,7 +39,8 @@ Herz mit Lichtstrahl für «glauben», Hand mit Brot für «gute Werke» (Rückm
 2. **Bedeutung festlegen:** ein Satz «bedeutet …», ein Satz «bedeutet nicht …», Verwechslungskandidaten (`distinct_from`).
 3. **Drei Entwürfe** aus verschiedenen Richtungen: bekanntes Piktogramm, konkrete Handlung, Gegenstand.
 4. **Blindtest je Entwurf** mit getrennten KI-Instanzen, die nur das Zeichen sehen:
-   - frei benennen («Was bedeutet dieses Zeichen in einer Bilderbibel? ein bis drei Wörter»);
+   - zuerst offen nach dem Abbild fragen («Was ist abgebildet?», Gegenstand oder Lebewesen, ohne Bedeutung), dann frei
+     benennen («Was könnte es in einer Bilderbibel bedeuten? ein bis drei Wörter»), siehe «Prüfung in Einsatzgrösse», Punkt 5;
    - Auswahl aus vier Begriffen: die Bedeutung und drei naheliegende Verwechslungen;
    - in der Einsatzgrösse (in einer Zelle 32 px hoch, allein und in der Zelle mit Text) und bei 160 px;
      die Zielwerte gelten für die Einsatzgrösse (siehe unten).
@@ -68,10 +69,22 @@ Strukturbilder aber nur etwa 28–36 px hoch und dort nicht lesbar. Deshalb:
    (`AUSGABE/blind/…png` für die blinde Instanz, `AUSGABE/schluessel.json` getrennt). Mit `--auftraege RUT,TIT` alle Zeichen
    aus den Zellen dieser Bildaufträge, mit `--zelle` in der Zelle, mit `--px 160` gross, mit `--befragen 4` vier getrennte
    Instanzen (`claude -p`, nur Lesezugriff auf das Blatt), mit `--bewerten` eine weitere Instanz (Bedeutung 0/1/2 und
-   «Bild erkannt» 0/1).
+   «Bild erkannt» 0/1), mit `--frage abbild` zuerst die offene Frage nach dem Abbild (Punkt 5), mit `--silhouette` nur der
+   Umriss.
 4. **Zwei Masse:** «erkannt» (mindestens zwei von vier Antworten treffen die Bedeutung) und «Bild erkannt» (die Mehrheit sieht,
    was gezeichnet ist). Ist das Bild erkannt, die Bedeutung aber nicht, ist das Zeichen gut gezeichnet, aber ein Begriff:
    dann Wortzeichen, nicht neu zeichnen.
+5. **Zuerst nach dem Abbild fragen (Regel seit 2026-10-24, Runde 6c).** KI-Testpersonen erkennen manche Zeichen, Menschen
+   nicht: Die Henne mit Küken (Runde 6) benannten 12 von 12 Instanzen als «Henne mit Küken», Andi Neck sah «eine Fruchtplatte»
+   (brauner Hügel mit gelben Kugeln). Die Instanzen schliessen aus wenigen Merkmalen und dem Zusammenhang auf das Gemeinte.
+   Deshalb fragt der Test zuerst offen «Was ist abgebildet?» (Gegenstand, Lebewesen; ohne Bedeutung, ohne Hinweis auf die
+   Bibel) und erst danach «Was könnte es bedeuten?» (`zeichen_test.py --frage abbild`). **Ein Zeichen gilt nur als erkannt,
+   wenn das Abbild selbst richtig benannt wird**; eine getroffene Bedeutung bei falschem oder nur ungefährem Abbild («Hügel
+   mit Kugeln», «Vogel auf Nest») zählt nicht. Zusätzlich wird der Umriss geprüft (`--silhouette`, alles einfarbig schwarz,
+   32 px): Er kommt dem ersten Blick eines Menschen näher. Die alte Henne wurde als Umriss als «Busch mit Flamme» oder
+   «kniende Person» gelesen, der erste Neuentwurf als «Wagen mit Zugtier» (Küken als Räder unter einem Kasten), ein Vogel von
+   vorn über einer Figur als «Engel». Getragen haben erst frei stehende Teile mit eigenem Umriss: Junge mit Kopf und Schnabel
+   statt Kugeln, Flügel mit getrennten Schwungfedern statt Fläche, Abstand zwischen Vogel und Figur.
 
 ## Detailstufen (Regel seit 2026-10-24)
 
@@ -331,6 +344,7 @@ der ersten Messung nochmals neu gezeichnet und gleich gemessen (6b). Treffer je 
 | Kuss | 0/4 «Mund» | 1 · 4 · 0 von 4 | 2 | «Kuss» | erkannt |
 | Kind / Kinder | 0/4 «Frau» | 2 · 1 · 2 von 4 | 3 | «Geist, Kind folgt» | knapp erkannt |
 | Zuflucht unter Flügeln | 0/4 «Engel, Cherub» | 0 · 0 · 0 von 4 | 3 | «Henne mit Küken» | Wortzeichen |
+| Zuflucht unter Flügeln (6c: Vogel breitet den Flügel über kniende Frau) | Henne: Andi Neck «Fruchtplatte», als Umriss «Busch, kniende Person» | 4 · 4 · 4 von 4 (Abbild 4 · 4 · 4, Umriss 4 · 4 · 4) | 2 | «Adler über Person», «Schutz unter Flügeln» | erkannt |
 | leuchten (wie Lichter) | 0/4 «Heiliger Geist, Feuer» | 0 · 0 · 0 von 4 | 1 | «Öllampe» | Wortzeichen |
 | rein / rein werden | 0/4 «Stern, Tau» | 0 · 0 · 0 von 4 | 1 | «Gewand» | Wortzeichen |
 | verleugnen | 0/4 «Bund gebrochen, Vergänglich» | 0 · 3 · 4 von 4 | 3 | «Hahn verleugnen, verleugnen» | erkannt |
@@ -362,15 +376,18 @@ der ersten Messung nochmals neu gezeichnet und gleich gemessen (6b). Treffer je 
 | Ruhe / Zuhause | neu | 4 · 4 · 4 von 4 | 1 | «Zuhause» | erkannt |
 | streiten / Streit | neu | 4 · 4 · 4 von 4 | 1 | «Streit» | erkannt |
 
-Wortzeichen (das Bild wird gesehen, die Bedeutung nur mit dem Wort aus der Übersetzung): Treue, Zuflucht, leuchten, rein,
+Wortzeichen (das Bild wird gesehen, die Bedeutung nur mit dem Wort aus der Übersetzung): Treue, leuchten, rein,
 weites Tor (nur im Paar mit dem engen Tor), Mammon, Talent, Löser, besonnen, fromm, freundlich, Sanftmut, eigenmächtig,
 verleumden («Lästern», «Lüge»), sich unterordnen, töricht («Zweifel»), dazu wie bisher Kopf mit Haar (Neuentwurf schlechter,
 die alte Zeichnung bleibt) und Jota. Knapp erkannt (2 von 4): grüssen, Kind, klug. «Ruhe / Zuhause» (Rut 3,1) ist erkannt,
 steht im Pilotbild aber im Titel eines Feldes, der kein Zeichen trägt.
 
-Entscheide, die frühere Regeln ändern: Die Zuflucht ist jetzt eine Henne mit Küken (vorher nur Flügel, als Cherub oder Engel
-gelesen; Bild nach [[MAT.23.37]], nicht als Darstellung Gottes, nur mit Wort). Enges und weites Tor haben Türme und Zinnen
-(ohne sie als Mauer oder Tür gelesen). Münzen ohne Prägung, wo die Form genügt (Haufen, Stapel, Truhe); die einzelne Münze
+Entscheide, die frühere Regeln ändern: Die Zuflucht ist jetzt ein grosser Vogel im Profil, der den Flügel wie ein Dach über
+eine kleine kniende Frau breitet (Runde 6c, nach [[RUT.2.12]]; Bild des Schutzes, nicht Darstellung Gottes; von der Henne
+FIG-OBJ-HENNE und dem Adler des Johannes getrennt). Vorher nur Flügel (als Cherub oder Engel gelesen), dann eine Henne mit
+Küken, die Andi Neck als «Fruchtplatte» las (Daten: `reports/zeichen-blindtest-2026-10-24-runde6c.json`; auch eine neu
+gezeichnete Henne bestand den Test, die Figur unter dem Flügel trifft aber die Bedeutung öfter, 12 statt 7 von 12).
+Enges und weites Tor haben Türme und Zinnen (ohne sie als Mauer oder Tür gelesen). Münzen ohne Prägung, wo die Form genügt (Haufen, Stapel, Truhe); die einzelne Münze
 (Denar, Mammon, Gewinn) mit Prägung.
 
 Offen: Salz, Splitter, Kammer, Becher leer, Freude, Licht (32 px nicht erkannt, nicht Teil dieser Runde); Test der ganzen

@@ -19,6 +19,10 @@ Optionen:
   --verteilen        Detailstufen (…@1, …@2, …@3) auf getrennte Sätze verteilen: jeder Satz (und damit jede Instanz)
                      sieht ein Zeichen nur in einer Stufe, alle Stufen kommen gleich oft vor
   --frage detail     zusätzlich je Zeichen: «Würde mehr Detail helfen, ist es egal, oder stört es?» und «Womit verwechselbar?»
+  --frage abbild     zuerst offen «Was ist abgebildet?» (Gegenstand, Lebewesen; ohne Bedeutung), dann «Was könnte es
+                     bedeuten?»; «Bild erkannt» wird dann nur an der Antwort zum Abbild bewertet (seit 2026-10-24, Runde 6c)
+  --silhouette       nur der Umriss: alle Flächen und Linien einfarbig dunkel (prüft, ob die Silhouette allein trägt; bei
+                     Runde 6c erkannten die Instanzen die alte Henne in Farbe, Menschen nicht; als Umriss nicht)
   --nur-zeichen      nur FIG-ZEICHEN-*
   --je-blatt 20 --seed 7
   --befragen 4       danach N getrennte Instanzen je Blatt blind benennen lassen (claude -p, nur Lesezugriff auf das Blatt)
@@ -51,6 +55,17 @@ FRAGE = ("Auf dem Bild {blatt} siehst du nummerierte kleine Bildzeichen aus eine
 FRAGE_ZELLE = ("Auf dem Bild {blatt} siehst du nummerierte Zellen aus einem Schaubild einer Bilderbibel; jede Zelle hat ein kleines "
                "Bildzeichen über dem Text. Lies die Bilddatei mit dem Read-Werkzeug. Nenne für jede Nummer in einem bis drei Wörtern "
                "auf Deutsch, was das kleine Bildzeichen selbst zeigt (was gezeichnet ist, nicht was im Text steht). ")
+FRAGE_ABBILD = ("Auf dem Bild {blatt} siehst du nummerierte kleine Bildzeichen. Lies die Bilddatei mit dem Read-Werkzeug. "
+                "Beantworte für jede Nummer zwei Fragen nacheinander. Erstens «Was ist abgebildet?»: nur was du siehst "
+                "(Gegenstand, Lebewesen, Szene), in einem bis vier Wörtern auf Deutsch, ohne Deutung. Zweitens «Was könnte es "
+                "bedeuten?»: Die Zeichen stammen aus einer Bilderbibel; ein bis drei Wörter. Rate, wenn du unsicher bist. ")
+FRAGE_ABBILD_ZELLE = ("Auf dem Bild {blatt} siehst du nummerierte Zellen aus einem Schaubild; jede Zelle hat ein kleines Bildzeichen "
+                      "über dem Text. Lies die Bilddatei mit dem Read-Werkzeug. Beantworte für jede Nummer zwei Fragen nacheinander. "
+                      "Erstens «Was ist abgebildet?»: nur was das kleine Bildzeichen selbst zeigt (Gegenstand, Lebewesen, Szene; "
+                      "nicht was im Text steht), in einem bis vier Wörtern auf Deutsch, ohne Deutung. Zweitens «Was könnte es "
+                      "bedeuten?»: ein bis drei Wörter. Rate, wenn du unsicher bist. ")
+ANTWORT_ABBILD = ("Antworte nur mit einem JSON-Objekt {{\"N01\": {{\"abbild\": \"…\", \"bedeutung\": \"…\"}}, …}}, "
+                  "ohne weiteren Text.")
 ANTWORT = "Antworte nur mit einem JSON-Objekt {{\"N01\": \"…\", …}}, ohne weiteren Text."
 ANTWORT_DETAIL = ("Beantworte je Nummer zusätzlich: Würde mehr Detail helfen, das Zeichen zu erkennen, ist es egal, oder würde es "
                   "stören (\"mehr\", \"egal\" oder \"stört\")? Womit könntest du es verwechseln (ein bis drei Wörter)? Antworte nur "
@@ -167,7 +182,10 @@ def main():
         comp.vbmap = vb
         cells = DG.Cells(comp)
         k_scale = px / cells.ICON_H
-    frage = (FRAGE_ZELLE if zelle else FRAGE) + (ANTWORT_DETAIL if opts["--frage"] == "detail" else ANTWORT)
+    if opts["--frage"] == "abbild":
+        frage = (FRAGE_ABBILD_ZELLE if zelle else FRAGE_ABBILD) + ANTWORT_ABBILD
+    else:
+        frage = (FRAGE_ZELLE if zelle else FRAGE) + (ANTWORT_DETAIL if opts["--frage"] == "detail" else ANTWORT)
     blind = out / "blind"
     blind.mkdir(parents=True, exist_ok=True)
     key, pages = {}, []
@@ -201,12 +219,13 @@ def main():
                 f'<html><head><meta charset="utf-8"><style>.lw{{display:none}}.lw-de{{display:inline}}</style></head><body style="margin:0;background:#fff;font:13px sans-serif">'
                 f'<div style="display:none">{lib}</div>'
                 f'<div style="display:grid;grid-template-columns:repeat({cols},{colw}px);gap:14px;padding:10px">{"".join(items)}</div>'
+                + ('<style>.c svg{filter:brightness(0)}</style>' if "--silhouette" in flags else '') +
                 f'<style>.c{{text-align:center;border:1px solid #ddd;padding:6px 2px;background:#FFFDF6}}.c b{{display:block;color:#888;font-size:12px;margin-bottom:6px}}.c svg{{display:block;margin:auto}}</style></body></html>',
                 encoding="utf-8")
             pages.append(name)
     render(blind, pages, cols * (colw + 14) + 20, dpr)
     (blind / "frage.txt").write_text(frage.format(blatt="blatt-NN.png") + "\n", encoding="utf-8")
-    meta = {"px": px, "dpr": dpr, "zelle": zelle, "frage": opts["--frage"] or "benennen", "saetze": len(sets), "blaetter": key}
+    meta = {"px": px, "dpr": dpr, "zelle": zelle, "silhouette": "--silhouette" in flags, "frage": opts["--frage"] or "benennen", "saetze": len(sets), "blaetter": key}
     (out / "schluessel.json").write_text(json.dumps(meta, indent=1, ensure_ascii=False), encoding="utf-8")
     print(f"PASS: {sum(len(s) for s in sets)} Zeichen in {len(sets)} Satz/Sätzen, {len(pages)} Blätter in {blind} "
           f"({px:g} px, dpr {dpr:g}{', in der Zelle' if zelle else ''}); Schlüssel {out / 'schluessel.json'}")
@@ -235,10 +254,18 @@ def main():
             L = lex.get(base(k)) or {}
             return {"bedeutung": e.get("bedeutung") or (L.get("names", {}).get("de", "") + " – " + L.get("identity_de", "")[:220]),
                     "gezeichnet": e.get("gezeichnet") or (L.get("legend") or {}).get("de", "")}
-        task = {k: {**info(k), "antworten": [x.get("antwort", "") for x in v]} for k, v in ans.items()}
+        abb = opts["--frage"] == "abbild"
+        task = {k: {**info(k), "antworten": [({"abbild": x.get("abbild", ""), "bedeutung": x.get("bedeutung", "")} if abb
+                                               else x.get("antwort", "")) for x in v]} for k, v in ans.items()}
         tmp = out / "bewertung_auftrag.json"
         tmp.write_text(json.dumps(task, indent=1, ensure_ascii=False), encoding="utf-8")
-        prompt = (f"Lies {tmp}. Für jedes Bildzeichen stehen Bedeutung, was gezeichnet ist, und freie Antworten blinder Betrachter. "
+        prompt = (f"Lies {tmp}. Für jedes Bildzeichen stehen Bedeutung, was gezeichnet ist, und Antworten blinder Betrachter: "
+                  "«abbild» (was sie sehen) und «bedeutung» (was es bedeuten könnte). Bewerte jede Antwort zweifach: «bild»: 1 = "
+                  "«abbild» benennt das Gezeichnete richtig (gleicher Gegenstand, gleiches Lebewesen, gleiche Szene; blosse Formen "
+                  "oder Farben wie «Hügel mit Kugeln» und andere Dinge wie Essen zählen 0), sonst 0; «scores» für «bedeutung»: "
+                  "2 = trifft die Bedeutung (gleicher Begriff oder gleichwertig), 1 = verwandt, 0 = falsch. Antworte nur mit JSON "
+                  "{\"ID\": {\"scores\": [..], \"bild\": [..], \"note\": \"kurz, häufigste Fehldeutung\"}, …} für alle IDs.") if abb else (
+                  f"Lies {tmp}. Für jedes Bildzeichen stehen Bedeutung, was gezeichnet ist, und freie Antworten blinder Betrachter. "
                   "Bewerte jede Antwort zweifach: «scores»: 2 = trifft die Bedeutung (gleicher Begriff oder gleichwertig), 1 = verwandt, "
                   "0 = falsch; «bild»: 1 = die Antwort zeigt, dass das Gezeichnete richtig gesehen wurde (auch wenn die Bedeutung "
                   "nicht getroffen ist), sonst 0. Antworte nur mit JSON {\"ID\": {\"scores\": [..], \"bild\": [..], "
@@ -246,7 +273,8 @@ def main():
         b = ask(out, prompt, opts["--modell"])
         (out / "bewertung.json").write_text(json.dumps(b, indent=1, ensure_ascii=False), encoding="utf-8")
         tr = sum(1 for k, v in b.items() if isinstance(v, dict) and sum(1 for s in v.get("scores", []) if s == 2) >= 2)
-        print(f"PASS: bewertet, erkannt (≥2 Treffer) {tr} von {len(ans)}; {out / 'bewertung.json'}")
+        bi = sum(1 for k, v in b.items() if isinstance(v, dict) and 2 * sum(v.get("bild", [])) > len(v.get("bild", [])))
+        print(f"PASS: bewertet, erkannt (≥2 Treffer) {tr} von {len(ans)}, Bild erkannt (Mehrheit) {bi}; {out / 'bewertung.json'}")
 
 
 if __name__ == "__main__":
