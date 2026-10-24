@@ -9,7 +9,8 @@ gleich lauten.
 
 Prüft:
 - Kernanalyse vorhanden;
-- Umfang je Ebene (Abschnitt 2–4, Kapitel 3–5, Buch 4–6 Sätze; Mundart gleich viele Sätze ±1);
+- Umfang je Ebene (Abschnitt 2–4, Kapitel 3–5, Buch 4–6 Sätze; Mundart gleich viele Sätze ±1); strukturierte Zusammenfassung:
+  Zeilen mit «– » sind eine Liste aller Glieder (zählt als ein Satz, beliebig viele Punkte, Mundart gleich viele);
 - kein «ß»;
 - keine Stellen-Marken (Zusammenfassungen werden als reiner Text gezeigt);
 - die Momente der Kernanalyse kommen vor: je Moment mindestens ein Schlüsselwort oder ein Wort aus dem Momentsatz
@@ -46,6 +47,14 @@ def sentences(t):
     return [s for s in re.split(r"(?:(?<=[.!?])|(?<=[.!?][»“\"']))\s+(?=[«„A-ZÄÖÜ0-9])", t.strip()) if s]
 
 
+def shape(t):
+    """(Sätze ausserhalb der Liste, Listenpunkte). Listenpunkte: Zeilen, die mit «– » beginnen."""
+    lines = [x.strip() for x in t.split("\n") if x.strip()]
+    items = [x for x in lines if re.match(r"^[–-]\s+", x)]
+    rest = " ".join(x for x in lines if x not in items)
+    return len(sentences(rest)) if rest else 0, len(items)
+
+
 def find(rid):
     hits = [p for p in D.rglob(f"{rid}.json") if "localizations" not in p.parts]
     if len(hits) != 1:
@@ -54,7 +63,7 @@ def find(rid):
 
 
 def core_fp(core):
-    return localizations.fingerprint(json.dumps({k: core.get(k) for k in ("core_de", "moments")}, ensure_ascii=False, sort_keys=True))
+    return localizations.fingerprint(json.dumps({k: core.get(k) for k in ("core_de", "moments", "structure") if k != "structure" or core.get(k)}, ensure_ascii=False, sort_keys=True))
 
 
 def check(e, errs, warns):
@@ -64,8 +73,18 @@ def check(e, errs, warns):
         return None
     core = json.loads(cp.read_text(encoding="utf-8"))
     lo, hi = BUDGET[core["level"]]
-    n_de, n_gsw = len(sentences(e["de"])), len(sentences(e["gsw"]))
-    if not lo <= n_de <= hi:
+    (n_de, l_de), (n_gsw, l_gsw) = shape(e["de"]), shape(e["gsw"])
+    if l_de:  # strukturierte Zusammenfassung: Liste zählt als ein Satz, enthält alle Glieder (VERDICHTUNG.md, Regel 6)
+        if l_de < 2:
+            errs.append(f"{e['core']}: Liste mit nur {l_de} Punkt")
+        if not 1 <= n_de + 1 <= hi:
+            errs.append(f"{e['core']}: {n_de} Sätze neben der Liste, erlaubt höchstens {hi - 1} ({core['level']})")
+        if l_gsw != l_de:
+            errs.append(f"{e['core']}: Mundart hat {l_gsw} Listenpunkte, Hochdeutsch {l_de}")
+        glieder = sum(len(x.get("elements", [])) for x in (core.get("structure") or {}).get("units", []))
+        if glieder and l_de > glieder:
+            warns.append(f"{e['core']}: mehr Listenpunkte ({l_de}) als Glieder in der Struktur ({glieder})")
+    elif not lo <= n_de <= hi:
         errs.append(f"{e['core']}: {n_de} Sätze, erlaubt {lo}–{hi} ({core['level']})")
     if abs(n_de - n_gsw) > 1:
         errs.append(f"{e['core']}: Mundart hat {n_gsw} Sätze, Hochdeutsch {n_de}")

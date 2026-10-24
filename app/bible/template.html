@@ -95,6 +95,9 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .app.flow .bg-label svg{display:inline-block!important;vertical-align:-2px;margin-right:.25em}
 #bible-stream .app.flow .part-head{margin:22px 0 6px}
 #bible-stream .vno{font:500 11px/1 var(--ui);color:var(--muted);vertical-align:.6em;margin-right:4px;font-variant-numeric:tabular-nums}
+#bible-stream .sum .stream-copy+.stream-copy,#bible-stream .sum-list+.stream-copy{margin-top:.5em}
+#bible-stream .sum-list{font:400 var(--read)/1.5 var(--serif);margin:.4em 0;padding-left:1.2em}
+#bible-stream .sum-list li{margin:.15em 0}
 #bible-stream .placeholder .stream-copy{color:var(--muted);font-size:calc(var(--read) * .8)}
 #bible-stream .more{display:inline-grid!important;place-items:center;width:28px;height:28px;margin-left:4px;vertical-align:-6px;border-radius:var(--r)!important;color:var(--muted)}
 #bible-stream .more:hover{background:var(--soft);color:var(--ink)}
@@ -353,7 +356,7 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 @media (max-width:420px){#bible-stream .merk{flex-direction:column;align-items:stretch}#bible-stream .merk .ill-img{flex:none;width:72%;margin:0 auto}}
 #bible-stream .ill-img svg{display:block;width:100%!important;height:auto!important;flex:none;border-radius:12px}
 #bible-stream .ill-img svg svg{border-radius:0}
-#bible-stream .ill-img.narrow>svg{width:50%!important;margin:0 auto}
+#bible-stream .ill-img.tiles{margin:0 auto;width:100%}
 #bible-stream .ill figcaption{margin-top:6px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px}
 #bible-stream .ill-styles{display:inline-flex;border:1px solid var(--rule);border-radius:999px;padding:2px;gap:2px}
 #bible-stream .app .ill-styles button{padding:4px 10px!important;border-radius:999px!important;font:500 12px/1.2 var(--ui);color:var(--muted)}
@@ -378,6 +381,7 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 @media (min-width:760px){
   #bible-stream .app[data-ill]:not([data-level="6"]) .reader .column{max-width:min(64em,calc(100% - 32px))}
   #bible-stream .ill-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start}
+  #bible-stream .ill-wrap.wide{grid-template-columns:minmax(0,1fr);gap:16px}
   #bible-stream .ill-toggle{display:none!important}
   #bible-stream .app .ill,#bible-stream .app .ill-text{display:block!important}
 }
@@ -657,6 +661,14 @@ function summary(n){
   if(n.level===4)return SUMT('SUM-CH-'+DATA[n.b].code+'-'+String(n.c).padStart(3,'0'));
   return null;
 }
+// Strukturierte Zusammenfassung (docs/VERDICHTUNG.md, «Struktur zuerst»): Zeilen mit «– » am Anfang werden eine Liste,
+// übrige Zeilen Absätze; «→» bleibt sichtbar. Vorlesen: Listenpunkte als Sätze, «→» als Doppelpunkt.
+const isItem=l=>/^[–-]\s+/.test(l);
+function sumHtml(text){const lines=String(text).split('\n').map(l=>l.trim()).filter(Boolean);let h='',ul=[];
+  const flush=()=>{if(ul.length){h+=`<ul class="sum-list">${ul.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`;ul=[];}};
+  for(const l of lines){if(isItem(l))ul.push(l.replace(/^[–-]\s+/,''));else{flush();h+=`<p class="stream-copy">${esc(l)}</p>`;}}
+  flush();return `<div class="sum">${h}</div>`;}
+const spokenSummary=t=>String(t).split('\n').map(l=>l.trim()).filter(Boolean).map(l=>{if(!isItem(l))return l;l=l.replace(/^[–-]\s+/,'');return /[.!?…»]$/.test(l)?l:l+'.';}).join(' ').replace(/\s*→\s*/g,': ');
 function eyebrow(n){if(n.level===0)return '';const p=nodes.get(n.parent);if(n.level===5)return n.part?refDe(n.part.range):title(p);return title(p);}
 const LAYER=()=>STUDY.layers[S.text]||STUDY.layers.de;
 // Benötigte Pakete: Sprachen = Lesetext, deren Vergleichssprachen und Hochdeutsch (Rückfall); Bücher der gezeigten Einträge
@@ -777,7 +789,11 @@ function illItem(key){const all=ILL.items[key]||{};return all[S.ill]||all.symbol
 const illStyles=(key,cur)=>{const ks=Object.keys(ILL.styles||{}).sort((a,b)=>(a==='symbol'?0:1)-(b==='symbol'?0:1)).filter(k=>(ILL.items[key]||{})[k]);if(ks.length<2)return '';
   return `<span class="ill-styles" role="group" aria-label="${T().illStyle}">${ks.map(k=>`<button type="button" data-ill-style="${k}" data-ill-key="${esc(key)}" aria-pressed="${k===cur}">${esc(lang==='de'?ILL.styles[k].label.de:ILL.styles[k].label.en)}</button>`).join('')}</span>`;};
 // Bilder mit nur einem Feld halb breit, damit alle Felder gleich gross erscheinen (höchstens zwei Spalten)
-const illNarrow=svg=>{const m=/viewBox="0 0 ([\d.]+) /.exec(svg||'');return m&&+m[1]<300?' narrow':'';};
+// Bildgrösse nach Kacheln, nicht nach Platz (Hinweis Andi Neck 2026-10-24): jede Kachel höchstens etwa 340 px breit, ein Bild
+// mit mehreren Kacheln nebeneinander entsprechend breiter; auf breiten Bildschirmen steht es dann unter dem Text statt daneben.
+const illVbW=svg=>{const m=/viewBox="0 0 ([\d.]+) /.exec(svg||'');return m?+m[1]:380;};
+const illNarrow=svg=>` tiles" style="max-width:${Math.round(illVbW(svg)*1.8)}px`;
+const illWide=il=>illVbW(il&&il.svg)>=300;
 const illFigure=il=>`<figure class="ill"><div class="ill-img${illNarrow(il.svg)}" role="img" aria-label="${esc(il.alt)}">${il.svg}</div><figcaption><button type="button" class="link soft" data-legend="${esc(il.key)}">${T().legend}</button>${illStyles(il.key,il.style)}</figcaption></figure>`;
 function legendSheet(key){const it0=illItem(key),st=it0&&ILL.styles[it0.style];if(!st||!it0)return;const it=LOC(it0),t=T(),L=lang==='de';
   const acts=it.actions||it.panels.map(p=>p.action),ORDER=['divine','people','thing','place','action','concept'],grp=l=>l.group||l.kind;
@@ -797,11 +813,11 @@ function entry(id){
   const deep=n.children.length?`<button type="button" class="link" data-deep="${id}">${t.deeper[n.level]}${icon('arrow-down')}</button>`:'';
 
   const heading=n.level===5&&n.part?pTitle(n.part):(n.level===5?(lang==='de'?'Verse ':'Verses ')+n.v+'–'+n.last:title(n));
-  const copy=text?`<p class="stream-copy">${esc(text)}</p>`:`<p class="stream-copy quiet">${n.level===5?t.noPart:t.noSummary}</p>`;
+  const copy=text?sumHtml(text):`<p class="stream-copy quiet">${n.level===5?t.noPart:t.noSummary}</p>`;
   const il=illFor(n);
   const tg=il?`<span class="ill-toggle" role="group" aria-label="${t.viewText} / ${t.viewImage}">${['text','image'].map(v=>`<button type="button" data-view="${v}" aria-label="${v==='text'?t.viewText:t.viewImage}" title="${v==='text'?t.viewText:t.viewImage}" aria-pressed="${(S.view==='image'?'image':'text')===v}">${icon(v)}</button>`).join('')}</span>`:'';
   const tl=tools(id);
-  const body=il?`<div class="ill-wrap"><div class="ill-text">${copy}</div>${illFigure(il)}</div>`:copy;
+  const body=il?`<div class="ill-wrap${illWide(il)?' wide':''}"><div class="ill-text">${copy}</div>${illFigure(il)}</div>`:copy;
   return `<article class="stream-entry${il?' has-ill':''}" data-stream="${id}">${eyebrow(n)?`<p class="eyebrow">${esc(eyebrow(n))}</p>`:''}<h2>${esc(heading)}${readBtn(id)}</h2>${tg?`<div class="entry-tools">${tl}${tg}</div>`:tl}${body}<div class="actions">${deep}</div></article>`;
 }
 function tools(id,which='uh'){const t=T();return `<span class="part-tools">${which.includes('u')?`<button type="button" class="tool" data-study="${id}" aria-label="${t.understand}">${icon('understand')}<span>${t.toolUnderstand}</span></button>`:''}${which.includes('h')?`<button type="button" class="tool" data-background="${id}" aria-label="${t.dph}">${icon('history')}<span>${t.toolHistory}</span></button>`:''}</span>`;}
@@ -1316,7 +1332,7 @@ const startsTitle=n=>n.level===6&&(n.v===1||(()=>{const p=nodes.get(n.parent);re
 // Ein Durchgang: bei Versen alle folgenden Verse bis zum nächsten Titel (höchstens ~1500 Zeichen) als ein Text, damit die
 // Satzmelodie über Versgrenzen läuft; jeder Abschnitt merkt sich den Vers, in dem er beginnt (Anzeige und Markierung).
 function buildRun(si){const ids=streams[RA.level],n=nodes.get(ids[si]),first=summary(n);if(!first)return null;
-  if(n.level<6){const t=spokenRefs(first);return {end:si,parts:[...titleParts(n),...chunksOf(t).map(x=>({t:x,vi:si}))]};}
+  if(n.level<6){const t=spokenRefs(spokenSummary(first));return {end:si,parts:[...titleParts(n),...chunksOf(t).map(x=>({t:x,vi:si}))]};}
   let text='',marks=[],k=si;
   while(k<ids.length){const m=nodes.get(ids[k]);if(k>si&&startsTitle(m))break;const s=summary(m);if(!s)break;if(k>si&&text.length>1500)break;
     const piece=spokenRefs(s);marks.push([text.length,k]);text+=(text?' ':'')+piece;if(text.length&&marks[marks.length-1][0]>0)marks[marks.length-1][0]+=1;k++;}

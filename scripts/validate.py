@@ -315,7 +315,7 @@ def main():
             core = records.get(cb.get("core"), (None, {}))[1]
             if not core:
                 errors.append(f"{rel}: core_basis verweist auf unbekannte Kernanalyse {cb.get('core')}")
-            elif localizations.fingerprint(json.dumps({k: core.get(k) for k in ("core_de", "moments")}, ensure_ascii=False, sort_keys=True)) != cb.get("fingerprint"):
+            elif localizations.fingerprint(json.dumps({k: core.get(k) for k in ("core_de", "moments", "structure") if k != "structure" or core.get(k)}, ensure_ascii=False, sort_keys=True)) != cb.get("fingerprint"):
                 warnings.append(f"{rel}: Zusammenfassung veraltet – Kernanalyse {cb.get('core')} hat sich geändert; mit scripts/authoring/zusammenfassungen.py erneuern")
         if r.get("type") == "lexicon" and not isinstance(r.get("entries"), dict):
             errors.append(f"{rel}: lexicon braucht entries als Objekt (Schlüssel → Eintrag)")

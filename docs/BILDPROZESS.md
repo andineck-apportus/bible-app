@@ -60,7 +60,20 @@ Was gut funktioniert: die festen Erkennungszeichen (Gott, Jesus, Geist) und der 
    Strahlenkranz mit dem Gottesnamen יהוה». Ausführliche Erklärungen stehen im Symbolindex, nicht in der Legende
    (Hinweis Andi Neck, 2026-10-23).
 7. **Auf dem Handy lesbar.** Höchstens zwei Felder nebeneinander, Mindestgrösse für Zeichen und Schrift, im Abschnitt
-   höchstens drei Felder.
+   höchstens drei Felder (Ausnahme: tragende Reihen, VERDICHTUNG.md Regel 6). Die App zeigt jede Kachel in gleicher,
+   lesbarer Grösse (höchstens etwa 340 px breit); Bilder mit mehreren Kacheln werden breiter und stehen auf breiten
+   Bildschirmen unter dem Text, statt in die halbe Spalte gequetscht zu werden. Hintergrund zwischen den Kacheln
+   durchsichtig (Hinweise Andi Neck 2026-10-24).
+9. **Anordnung: nichts Wesentliches verdecken** (Hinweise Andi Neck 2026-10-24):
+   - Sprechblasen verdecken keine Gesichter, Zeichen und Gegenstände; der Zeichner sucht eine andere Lage nahe beim Sprecher
+     und verkleinert sonst die Blase.
+   - Handlungspfeile führen nicht über fremde Köpfe, Zeichen oder Blasen; wo möglich weichen sie aus (stärkerer Bogen,
+     seitlicher Ansatz am Kopf).
+   - Gedanken stehen in einer deutlichen Gedankenwolke (Bögen rundum, kleiner werdende Kreise zur Figur), damit sie nicht
+     als Rede gelesen werden.
+10. **Die Bildaussage trifft das Thema.** Wer das Bild sieht, erkennt im Kern, worum es geht: Das Thema der Stelle steht im
+    Stichwortband oder in der Sprechblase (z. B. «Fasten im Verborgenen», nicht nur «Wasche dein Gesicht»), und Zeichen
+    müssen ohne Legende verständlich sein. Ein schwer verständliches Zeichen wird durch Szene oder Wort ersetzt.
 
 ## Ablauf je Stelle
 
@@ -73,6 +86,8 @@ Was gut funktioniert: die festen Erkennungszeichen (Gott, Jesus, Geist) und der 
    - bei `mode: Auftrag` Briefrahmen und Legende «Auftrag an …»;
    - höchstens zwei abstrakte Zeichen je Feld, nur aus dem getesteten Grundbestand;
    - jede Figur der Legende ist im Bild mit Gesicht zu sehen.
+   - **Sichtprüfung der Anordnung** (Leitlinie 9 und 10): keine Blase und kein Pfeil über Gesicht, Zeichen oder Gegenstand;
+     Thema der Stelle im Bild genannt; Gedanken als Wolke erkennbar.
    - **Worte im Bild sprachlich prüfen** (Hinweis Andi Neck 2026-10-23): Stichwortband und Sprechblasen, in allen Sprachen,
      müssen für sich allein verständlich und grammatisch richtig sein, keine Satzfragmente. Prüfung durch eine getrennte
      KI-Instanz mit `scripts/authoring/bildworte.py`; Regeln in BILDAUFTRAEGE-ANLEITUNG.md («Worte im Bild»).
