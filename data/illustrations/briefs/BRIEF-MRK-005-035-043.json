@@ -24,7 +24,7 @@
           "from": "FIG-GRUPPE-MENGE",
           "to": "FIG-JAIRUS",
           "icons": [
-            "FIG-TOCHTER-JAIRUS"
+            "FIG-ZEICHEN-VERSTORBEN"
           ],
           "word": {
             "de": "Deine Tochter ist gestorben.",
@@ -70,7 +70,10 @@
       "objects": [
         "FIG-OBJ-MATTE"
       ],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-TRAUER",
+        "FIG-ZEICHEN-TOTENKLAGE"
+      ],
       "speech": [
         {
           "from": "FIG-JESUS",
@@ -84,8 +87,8 @@
       ],
       "action_de": "Im Haus weinen und klagen die Leute laut. Jesus sagt: «Das Kind ist nicht gestorben, sondern schläft.» Sie lachen ihn aus; er wirft alle hinaus und geht mit den Eltern und den drei Jüngern zum Kind.",
       "keywords": {
-        "de": "Sie lachten ihn aus",
-        "gsw": "Si händ en usglachet"
+        "de": "Leute, die weinen und laut klagen",
+        "gsw": "Lüüt, wo briegged und luut jammered"
       },
       "stage": {
         "pose": {
@@ -93,7 +96,20 @@
         },
         "mood": {
           "FIG-TOCHTER-JAIRUS": "dead",
-          "FIG-GRUPPE-MENGE": "delight"
+          "FIG-GRUPPE-MENGE": "pain"
+        },
+        "signs_who": {
+          "FIG-ZEICHEN-TRAUER": [
+            "FIG-GRUPPE-MENGE"
+          ]
+        },
+        "wear": {
+          "FIG-TOCHTER-JAIRUS": "binden"
+        },
+        "x": {
+          "FIG-TOCHTER-JAIRUS": 56,
+          "FIG-GRUPPE-MENGE": 112,
+          "FIG-JESUS": 166
         }
       }
     },
@@ -152,11 +168,11 @@
     "Jesus fasst die Hand des Kindes und sagt: «Talita kum!», das heisst: «Mädchen, ich sage dir: Steh auf!» Sogleich steht das Mädchen auf und geht umher; die Eltern geraten ausser sich vor Staunen."
   ],
   "captions_de": [
-    "Todesnachricht ↔ Jesu Wort: Leute melden Jairus «gestorben» (Mädchen); Jesus sagt ihm: «Glaube nur!»",
-    "Ausgelacht: Das Mädchen liegt da (fahl, Augen zu); Jesus sagt: «Das Kind ist nicht gestorben, sondern schläft» – die Leute lachen ihn aus.",
+    "Todesnachricht ↔ Jesu Wort: Leute melden Jairus «gestorben» (Verstorbene auf der Bahre); Jesus sagt ihm: «Glaube nur!»",
+    "Totenklage: Das Mädchen liegt da (fahl, Augen zu, im Leinentuch); die Leute weinen und klagen laut; Jesus sagt: «Das Kind ist nicht gestorben, sondern schläft.» Danach lachen sie ihn aus.",
     "Talita kum: Jesus wendet sich dem Mädchen zu (Pfeil) und sagt «Talita kum!»; das Band übersetzt: «Mädchen, steh auf!» Das Mädchen steht auf, die Eltern staunen."
   ],
-  "interpretation_note_de": "Erzählung als Bildfolge aus der Kernanalyse; jedes Feld stellt eine Stimme des Todes dem Wort Jesu gegenüber (Gegensatz in drei Paaren): Todesnachricht ↔ «Glaube nur!» ([[MRK.5.35-MRK.5.36]]), Klage und Spott ↔ «nicht gestorben, sondern schläft» ([[MRK.5.38-MRK.5.40]]), Tod ↔ «Talita kum!» ([[MRK.5.41-MRK.5.42]]). Der Erzähler stellt den Tod nicht selbst fest; beide Aussagen bleiben stehen. Die drei Jünger ([[MRK.5.37]], [[MRK.5.40]]) sind nicht gezeichnet; Schweigegebot und Essen ([[MRK.5.43]]) sind nicht im Bild.",
+  "interpretation_note_de": "Erzählung als Bildfolge aus der Kernanalyse; jedes Feld stellt eine Stimme des Todes dem Wort Jesu gegenüber (Gegensatz in drei Paaren): Todesnachricht ↔ «Glaube nur!» ([[MRK.5.35-MRK.5.36]]), Klage und Spott ↔ «nicht gestorben, sondern schläft» ([[MRK.5.38-MRK.5.40]]), Tod ↔ «Talita kum!» ([[MRK.5.41-MRK.5.42]]). Der Erzähler stellt den Tod nicht selbst fest; beide Aussagen bleiben stehen. Die drei Jünger ([[MRK.5.37]], [[MRK.5.40]]) sind nicht gezeichnet; Schweigegebot und Essen ([[MRK.5.43]]) sind nicht im Bild. Ergänzt 2026-10-24 («Tod und Böses nicht ausblenden»): In der Todesnachricht steht die Verstorbene statt eines gesunden Mädchens; das zweite Feld zeigt die Totenklage ([[MRK.5.38]]) mit weinenden Leuten statt lachender, das Auslachen ([[MRK.5.40]]) nennt die Legende.",
   "basis": [
     {
       "record": "TU-MRK-005-035-043",
@@ -1307,6 +1323,156 @@
             "fingerprint": "b100c8ead28881ee"
           }
         ]
+      }
+    },
+    {
+      "date": "2026-10-24",
+      "change_de": "Tod und Böses nicht ausblenden (Hinweis Andi Neck)",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.5.35-MRK.5.36",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JAIRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JAIRUS",
+                "icons": [
+                  "FIG-TOCHTER-JAIRUS"
+                ],
+                "word": {
+                  "de": "Deine Tochter ist gestorben.",
+                  "gsw": "Dini Tochter isch gstorbe."
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-JAIRUS",
+                "icons": [],
+                "word": {
+                  "de": "Glaube nur!",
+                  "gsw": "Glaub nu!"
+                }
+              }
+            ],
+            "action_de": "Leute vom Synagogenvorsteher melden: «Deine Tochter ist gestorben; was bemühst du den Lehrer noch?» Jesus überhört es und sagt zu Jairus: «Fürchte dich nicht, glaube nur!»",
+            "keywords": {
+              "de": "Fürchte dich nicht, glaube nur!",
+              "gsw": "Häb kei Angscht, glaub nu!"
+            },
+            "names": {
+              "FIG-JAIRUS": {
+                "de": "Jairus",
+                "gsw": "Jairus"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-JAIRUS": "pain",
+                "FIG-GRUPPE-MENGE": "worried"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.5.38-MRK.5.40",
+            "figures": [
+              "FIG-TOCHTER-JAIRUS",
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-MATTE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [],
+                "word": {
+                  "de": "Das Kind ist nicht gestorben, sondern schläft.",
+                  "gsw": "S Chind isch nöd gstorbe, sondern schlaft."
+                }
+              }
+            ],
+            "action_de": "Im Haus weinen und klagen die Leute laut. Jesus sagt: «Das Kind ist nicht gestorben, sondern schläft.» Sie lachen ihn aus; er wirft alle hinaus und geht mit den Eltern und den drei Jüngern zum Kind.",
+            "keywords": {
+              "de": "Sie lachten ihn aus",
+              "gsw": "Si händ en usglachet"
+            },
+            "stage": {
+              "pose": {
+                "FIG-TOCHTER-JAIRUS": "lie"
+              },
+              "mood": {
+                "FIG-TOCHTER-JAIRUS": "dead",
+                "FIG-GRUPPE-MENGE": "delight"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.5.41-MRK.5.42",
+            "figures": [
+              "FIG-JAIRUS",
+              "FIG-ROLLE-MUTTER",
+              "FIG-TOCHTER-JAIRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-TOCHTER-JAIRUS",
+                "icons": [],
+                "word": {
+                  "de": "Talita kum!",
+                  "gsw": "Talita kum!"
+                }
+              }
+            ],
+            "action_de": "Jesus fasst die Hand des Kindes und sagt: «Talita kum!», das heisst: «Mädchen, ich sage dir: Steh auf!» Sogleich steht das Mädchen auf und geht umher; die Eltern geraten ausser sich vor Staunen.",
+            "keywords": {
+              "de": "Mädchen, ich sage dir: Steh auf!",
+              "gsw": "Meitli, ich säg dir: Stand uf!"
+            },
+            "stage": {
+              "x": {
+                "FIG-JAIRUS": 26,
+                "FIG-ROLLE-MUTTER": 62,
+                "FIG-TOCHTER-JAIRUS": 134,
+                "FIG-JESUS": 170
+              },
+              "mood": {
+                "FIG-JAIRUS": "surprised",
+                "FIG-ROLLE-MUTTER": "surprised",
+                "FIG-TOCHTER-JAIRUS": "delight"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-TOCHTER-JAIRUS",
+                  "act"
+                ]
+              ]
+            }
+          }
+        ],
+        "captions_de": [
+          "Todesnachricht ↔ Jesu Wort: Leute melden Jairus «gestorben» (Mädchen); Jesus sagt ihm: «Glaube nur!»",
+          "Ausgelacht: Das Mädchen liegt da (fahl, Augen zu); Jesus sagt: «Das Kind ist nicht gestorben, sondern schläft» – die Leute lachen ihn aus.",
+          "Talita kum: Jesus wendet sich dem Mädchen zu (Pfeil) und sagt «Talita kum!»; das Band übersetzt: «Mädchen, steh auf!» Das Mädchen steht auf, die Eltern staunen."
+        ],
+        "interpretation_note_de": "Erzählung als Bildfolge aus der Kernanalyse; jedes Feld stellt eine Stimme des Todes dem Wort Jesu gegenüber (Gegensatz in drei Paaren): Todesnachricht ↔ «Glaube nur!» ([[MRK.5.35-MRK.5.36]]), Klage und Spott ↔ «nicht gestorben, sondern schläft» ([[MRK.5.38-MRK.5.40]]), Tod ↔ «Talita kum!» ([[MRK.5.41-MRK.5.42]]). Der Erzähler stellt den Tod nicht selbst fest; beide Aussagen bleiben stehen. Die drei Jünger ([[MRK.5.37]], [[MRK.5.40]]) sind nicht gezeichnet; Schweigegebot und Essen ([[MRK.5.43]]) sind nicht im Bild."
       }
     }
   ]

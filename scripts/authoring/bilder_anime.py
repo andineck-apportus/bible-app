@@ -51,7 +51,7 @@ def eyes(expr, look, big=False):
     out = []
     for side in (-1, 1):
         ex, ey = side * 4.2 + max(-1.6, min(1.6, look * 1.4)), (3.0 if big else 2.4)
-        if big and expr not in ("smile", "delight", "sleep", "surprised"):  # Kind: grosse runde Augen mit grossem Glanzpunkt
+        if big and expr not in ("smile", "delight", "sleep", "surprised", "dead"):  # Kind: grosse runde Augen mit grossem Glanzpunkt (nicht bei «tot»: das gestorbene Mädchen, Mk 5,40, hatte offene Augen; 2026-10-24)
             out.append(f'<ellipse cx="{ex:.1f}" cy="{ey:.1f}" rx="2.15" ry="2.6" fill="#3A2416"/>'
                        f'<circle cx="{ex + .7:.1f}" cy="{ey - .8:.1f}" r=".9" fill="#FFF"/><circle cx="{ex - .6:.1f}" cy="{ey + .9:.1f}" r=".4" fill="#FFF"/>')
             continue

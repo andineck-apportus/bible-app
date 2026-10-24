@@ -1,0 +1,2562 @@
+{
+ "datum": "2026-10-24",
+ "runde": "Runde 7 (Tod und Böses nicht ausblenden)",
+ "anlass_de": "Hinweis Andi Neck 2026-10-24: «Tod und Sterben werden in den Bildern stark ausgeblendet und Symbole weggelassen. Das verzerrt das Bild. … Bitte entsprechende Symbole ausarbeiten und wenn nötig Regeln anpassen.»",
+ "methode_de": "scripts/authoring/zeichen_test.py mit --frage abbild (zuerst «Was ist abgebildet?», dann «Was könnte es bedeuten?»), Detailstufen verteilt (--verteilen): 32 px bei Pixeldichte 2 allein je vier Instanzen, als Umriss (--silhouette) je vier, in der Zelle und bei 160 px je zwei; Bewertung durch eine weitere Instanz (Bedeutung 0/1/2, Abbild 0/1). Runde 7a: sechs Entwürfe in drei Stufen und zwölf vorhandene Zeichen als Vergleich (Tod/Grab, Trauer, krank, Gericht, Feuer, Wolf, Gefängnis, das Böse, Sünde, Kreuz, Dämon, Hass alt). Runde 7b: «töten» neu mit Keule und mit Schwert, dazu fünf vorhandene Zeichen (Brot, Streit, Ohrfeige, Schwert, Gericht). claude -p, Claude Opus 5.5, nur Lesezugriff.",
+ "gewaehlt": {
+  "FIG-ZEICHEN-VERSTORBEN": "Stufe 2 (neu)",
+  "FIG-ZEICHEN-TOTENKLAGE": "Stufe 2 (neu)",
+  "FIG-ZEICHEN-TOETEN": "Entwurf Schwert, Stufe 2 (neu; Stein und Keule verworfen)",
+  "FIG-ZEICHEN-GEHENNA": "Stufe 1 (neu)",
+  "FIG-ZEICHEN-VERFOLGEN": "Stufe 2 (neu)",
+  "FIG-ZEICHEN-HASS": "Stufe 2 (neu gezeichnet; altes zerbrochenes Herz 0/4)"
+ },
+ "ergebnisse": {
+  "FIG-ZEICHEN-GERICHT": {
+   "7a": {
+    "32px_allein": {
+     "n": 16,
+     "bedeutung_getroffen": 16,
+     "bild_erkannt": 16,
+     "antworten": [
+      "Waage → Gericht",
+      "Waage → Gericht",
+      "Waage → Gericht",
+      "Waage → Gericht",
+      "Waage → Gericht, Gerechtigkeit",
+      "Waage → Gericht, Gerechtigkeit",
+      "Waage → Gericht, Gerechtigkeit",
+      "Waage → Gericht, Gerechtigkeit",
+      "Waage → Gericht",
+      "Waage → Gericht",
+      "Waage → Gericht",
+      "Waage → Gericht",
+      "Waage → Gericht, Gerechtigkeit",
+      "Waage → Gericht, Gerechtigkeit",
+      "Balkenwaage → Gericht, Gerechtigkeit",
+      "Waage → Gericht, Gerechtigkeit"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "32px_umriss": {
+     "n": 16,
+     "bedeutung_getroffen": 16,
+     "bild_erkannt": 16,
+     "antworten": [
+      "Waage → Gericht",
+      "Waage → Gericht",
+      "Waage → Gericht",
+      "Waage → Gericht",
+      "Waage → Gericht, Gerechtigkeit",
+      "Waage → Gericht, Gerechtigkeit",
+      "Waage → Gericht, Gerechtigkeit",
+      "Waage → Gericht, Gerechtigkeit",
+      "Waage → Gericht, Gerechtigkeit",
+      "Waage → Gericht, Gerechtigkeit",
+      "Waage → Gericht",
+      "Waage → Gericht",
+      "Waage → Gericht",
+      "Waage → Gericht",
+      "Waage → Gericht, Gerechtigkeit",
+      "Waage → Gericht"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "32px_zelle": {
+     "n": 8,
+     "bedeutung_getroffen": 8,
+     "bild_erkannt": 8,
+     "antworten": [
+      "Waage → Gericht",
+      "Waage → Gericht",
+      "Waage → Gericht, Gerechtigkeit",
+      "Waage → Gericht, Gerechtigkeit",
+      "Waage → Gerechtigkeit, Gericht",
+      "Waage → Gerechtigkeit, Gericht",
+      "Waage → Gerechtigkeit, Gericht",
+      "Waage → Gerechtigkeit, Gericht"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "160px": {
+     "n": 8,
+     "bedeutung_getroffen": 8,
+     "bild_erkannt": 8,
+     "antworten": [
+      "Waage → Gericht",
+      "Balkenwaage → Gericht",
+      "Waage → Gericht",
+      "Waage → Gericht",
+      "Waage → Gericht",
+      "Waage → Gericht",
+      "Waage → Gericht",
+      "Waage → Gericht, Gerechtigkeit"
+     ],
+     "bewerter": "keine Fehldeutung"
+    }
+   },
+   "7b": {
+    "32px_allein": {
+     "n": 12,
+     "bedeutung_getroffen": 12,
+     "bild_erkannt": 12,
+     "antworten": [
+      "Waage → Gerechtigkeit, Gericht",
+      "Waage → Gericht",
+      "Waage → Gericht",
+      "Waage → Gericht",
+      "Waage → Gerechtigkeit",
+      "Waage → Gerechtigkeit",
+      "Waage → Gerechtigkeit",
+      "Waage → Gerechtigkeit, Gericht",
+      "Waage → Gericht",
+      "Waage → Gerechtigkeit, Gericht",
+      "Waage → Gerechtigkeit",
+      "Waage → Gerechtigkeit"
+     ],
+     "bewerter": "Keine Fehldeutung"
+    },
+    "32px_umriss": {
+     "n": 12,
+     "bedeutung_getroffen": 12,
+     "bild_erkannt": 12,
+     "antworten": [
+      "Waage → Gericht, Gerechtigkeit",
+      "Waage → Gericht, Gerechtigkeit",
+      "Waage → Gericht",
+      "Waage → Gericht",
+      "Waage → Gericht",
+      "Waage → Gericht, Gerechtigkeit",
+      "Waage → Gerechtigkeit, Gericht",
+      "Waage → Gericht",
+      "Waage → Gericht, Gerechtigkeit",
+      "Waage → Gericht, Gerechtigkeit",
+      "Waage → Gericht",
+      "Waage → Gericht, Gerechtigkeit"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "32px_zelle": {
+     "n": 6,
+     "bedeutung_getroffen": 6,
+     "bild_erkannt": 6,
+     "antworten": [
+      "Waage → Gerechtigkeit",
+      "Waage → Gerechtigkeit",
+      "Waage → Gerechtigkeit",
+      "Waage → Gerechtigkeit",
+      "Waage → Gerechtigkeit",
+      "Waage → Gerechtigkeit"
+     ],
+     "bewerter": "keine Fehldeutung, Waage = Gerechtigkeit"
+    },
+    "160px": {
+     "n": 6,
+     "bedeutung_getroffen": 6,
+     "bild_erkannt": 6,
+     "antworten": [
+      "Waage → Gerechtigkeit, Gericht",
+      "Waage → Gericht",
+      "Balkenwaage → Gerechtigkeit",
+      "Balkenwaage → Gerechtigkeit",
+      "Waage → Gerechtigkeit",
+      "Waage → Gerechtigkeit"
+     ],
+     "bewerter": "keine Fehldeutung; meist «Gerechtigkeit» statt «Gericht»"
+    }
+   }
+  },
+  "FIG-ZEICHEN-KRANK": {
+   "7a": {
+    "32px_allein": {
+     "n": 16,
+     "bedeutung_getroffen": 16,
+     "bild_erkannt": 16,
+     "antworten": [
+      "Liegender Mensch, Hitzelinien → Krankheit, Fieber",
+      "Liegender Mensch, Hitzewellen → Krankheit, Fieber",
+      "Liegender mit Hitzewellen → Krankheit, Fieber",
+      "Liegender Mensch, Fieberwellen → Krankheit",
+      "Liegender Mensch mit Hitze → Krankheit, Fieber",
+      "liegender Mensch, Hitzewellen → Krankheit, Fieber",
+      "liegender Mensch, Hitzezeichen → Krankheit, Fieber",
+      "liegender Mann, Hitzelinien → Krankheit, Fieber",
+      "Liegender Mensch, Hitzewellen → Krankheit, Fieber",
+      "Liegende Person, Hitzelinien → Krankheit, Fieber",
+      "Liegender Kranker im Bett → Krankheit",
+      "Liegende Person, Hitzewellen → Fieber, Krankheit",
+      "Mensch im Bett, fiebernd → Krankheit",
+      "Mensch im Bett, Hitze → Krankheit, Fieber",
+      "liegender Mensch mit Fieber → Krankheit",
+      "Fiebernder Mensch im Bett → Krankheit"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "32px_umriss": {
+     "n": 16,
+     "bedeutung_getroffen": 16,
+     "bild_erkannt": 16,
+     "antworten": [
+      "Liegende Person, Dampf → Krankheit",
+      "Liegende Person, Dampf → Krankheit",
+      "liegende Person, Dampf → Krankheit",
+      "Liegende Person, Dampf → Krankheit",
+      "liegende Person, Dampf → Krankheit, Fieber",
+      "Liegende Person, Dampf → Krankheit, Fieber",
+      "liegende Person, Dampf → Krankheit, Fieber",
+      "Liegende Person, Dampf → Krankheit, Fieber",
+      "liegende Person, Dampf → Krankheit, Fieber",
+      "Liegende Person, Dampf → Krankheit, Sterben",
+      "Liegende Person, Dampf → Krankheit",
+      "Liegender mit Dampf → Krankheit",
+      "Liegende Person, Dampf → Fieber, Krankheit",
+      "Kranker auf Bett → Krankheit",
+      "liegende Person, Dampf → Fieber, Krankheit",
+      "Kranker im Bett → Krankheit"
+     ],
+     "bewerter": "keine Fehldeutung; Wärmelinien als Dampf gelesen"
+    },
+    "32px_zelle": {
+     "n": 8,
+     "bedeutung_getroffen": 8,
+     "bild_erkannt": 8,
+     "antworten": [
+      "Person im Bett, Hitzewellen → Fieber, Krankheit",
+      "Person mit Fieber im Bett → Krankheit",
+      "Fiebernde Person im Bett → Krankheit",
+      "Fiebernder Mensch im Bett → Krankheit",
+      "Liegende Person, Hitzelinien → Krankheit, Fieber",
+      "Liegende Person mit Fieber → Krankheit",
+      "Liegende Person, Hitzelinien → Krankheit, Fieber",
+      "Kranker im Bett → Krankheit, Fieber"
+     ],
+     "bewerter": "keine Fehldeutung; oft nur als Fieber gesehen"
+    },
+    "160px": {
+     "n": 8,
+     "bedeutung_getroffen": 8,
+     "bild_erkannt": 8,
+     "antworten": [
+      "Liegender Mensch mit Fieberlinien → Krankheit",
+      "Liegende Person, Hitzewellen → Krankheit",
+      "Liegender Mensch, Hitze → Krankheit, Fieber",
+      "Liegende Person, Hitzewellen → Krankheit",
+      "Liegender Mensch, Hitzewellen → Krankheit, Fieber",
+      "Liegende Person, Hitzelinien → Krankheit, Fieber",
+      "Liegender Mensch mit Hitzewellen → Krankheit",
+      "Mensch liegt fiebernd → Krankheit"
+     ],
+     "bewerter": "keine Fehldeutung"
+    }
+   }
+  },
+  "FIG-ZEICHEN-TOTENKLAGE@2": {
+   "7a": {
+    "32px_allein": {
+     "n": 8,
+     "bedeutung_getroffen": 8,
+     "bild_erkannt": 8,
+     "antworten": [
+      "Weinende Person, erhobene Arme → Klage, Trauer",
+      "Weinender Mensch, Arme erhoben → Wehklage",
+      "Weinende Person, Arme erhoben → Klage, Trauer",
+      "Weinende Person, Arme erhoben → Klage",
+      "weinende Person, Arme erhoben → Klage, Trauer",
+      "weinende Person, Arme erhoben → Klage, Trauer",
+      "weinender Mensch, Hände erhoben → Trauer, Klage",
+      "Weinender Mensch, Arme erhoben → Klage, Trauer"
+     ],
+     "bewerter": "keine Fehldeutung; Bezug zum Toten fehlt"
+    },
+    "32px_umriss": {
+     "n": 8,
+     "bedeutung_getroffen": 7,
+     "bild_erkannt": 8,
+     "antworten": [
+      "Person mit erhobenen Armen → Klage",
+      "Person mit erhobenen Armen → Klage",
+      "Person mit erhobenen Armen → Klage",
+      "Person, Hände erhoben → Klage",
+      "Person, Hände am Kopf → Klage, Trauer",
+      "Person mit erhobenen Händen → Klage",
+      "Person mit erhobenen Händen → Klage, Verzweiflung",
+      "Person mit erhobenen Armen → Verzweiflung"
+     ],
+     "bewerter": "meist Klage erkannt; Bezug zum Toten fehlt, einmal nur Verzweiflung"
+    },
+    "32px_zelle": {
+     "n": 4,
+     "bedeutung_getroffen": 3,
+     "bild_erkannt": 4,
+     "antworten": [
+      "weinende Person, Arme erhoben → Trauer, Klage",
+      "weinende Person, Arme erhoben → Trauer",
+      "Weinende Person, Hände erhoben → Trauer, Klage",
+      "weinende Person, Arme erhoben → Trauer, Klage"
+     ],
+     "bewerter": "teils nur «Trauer» ohne das laute Klagen"
+    },
+    "160px": {
+     "n": 4,
+     "bedeutung_getroffen": 4,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Weinende Person, Arme erhoben → Klage, Trauer",
+      "Weinende Person, erhobene Arme → Klage",
+      "Weinende Person, Arme erhoben → Klage, Trauer",
+      "weinende Person, Arme erhoben → Klage, Trauer"
+     ],
+     "bewerter": "keine Fehldeutung; Bezug auf einen Toten nicht genannt"
+    }
+   }
+  },
+  "FIG-ZEICHEN-TOETEN@3": {
+   "7a": {
+    "32px_allein": {
+     "n": 8,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 8,
+     "antworten": [
+      "Mann wirft Stein auf Person → Steinigung",
+      "Mann wirft Stein → Steinigung",
+      "Mann wirft Stein → Steinigung",
+      "Mann wirft Stein auf Mann → Steinigung",
+      "Mann wirft Stein auf Mann → Steinigung",
+      "Mann wirft Stein auf Mann → Steinigung",
+      "Mann wirft Stein auf Mann → Steinigung",
+      "Mann wirft Stein auf Mann → Steinigung"
+     ],
+     "bewerter": "Steinigung statt töten/Mord"
+    },
+    "32px_umriss": {
+     "n": 8,
+     "bedeutung_getroffen": 7,
+     "bild_erkannt": 8,
+     "antworten": [
+      "Person schlägt Kniende → Totschlag",
+      "Person schlägt andere → Mord",
+      "Person schlägt Liegenden → Mord",
+      "Person schlägt Liegenden → Mord",
+      "Person erschlägt Kniende → Mord, Totschlag",
+      "Person schlägt Kniende → Mord",
+      "Person schlägt Kniende → Mord, Totschlag",
+      "Person schlägt Kniende → Gewalt"
+     ],
+     "bewerter": "gut erkannt; einmal nur allgemein Gewalt"
+    },
+    "32px_zelle": {
+     "n": 4,
+     "bedeutung_getroffen": 4,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Mann schlägt mit Stein → Mord",
+      "Mann schlägt Person mit Stein → Mord",
+      "Mann schlägt mit Stein → Mord",
+      "Mann schlägt Mann → Mord, Gewalt"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "160px": {
+     "n": 4,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Mann wirft Stein auf Mann → Steinigung",
+      "Mann wirft Stein → Steinigung",
+      "Mann wirft Stein auf Mann → Steinigung",
+      "Mann wirft Stein → Steinigung"
+     ],
+     "bewerter": "Steinigung statt töten/Mord"
+    }
+   },
+   "7b": {
+    "32px_allein": {
+     "n": 4,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Mann schlägt Mann → Kain erschlägt Abel",
+      "Mann schlägt anderen nieder → Kain erschlägt Abel",
+      "Mann schlägt anderen Mann → erschlagen",
+      "Mann schlägt Mann → erschlagen"
+     ],
+     "bewerter": "Wird auf die Geschichte von Kain und Abel festgelegt statt auf den allgemeinen Begriff «töten»"
+    },
+    "32px_umriss": {
+     "n": 4,
+     "bedeutung_getroffen": 3,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Person schlägt kniende Person → töten, erschlagen",
+      "Person schlägt mit Keule → schlagen, erschlagen",
+      "Person schlägt Liegenden → Totschlag",
+      "Person schlägt Knienden → schlagen"
+     ],
+     "bewerter": "teils nur als «schlagen» gelesen, nicht als töten"
+    },
+    "32px_zelle": {
+     "n": 2,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Mann schlägt mit Keule → Kain erschlägt Abel",
+      "Mann schlägt mit Keule → Kain erschlägt Abel"
+     ],
+     "bewerter": "Szene richtig erkannt, aber als bestimmte Geschichte gelesen (Kain erschlägt Abel) und nicht als allgemeiner Begriff «töten»"
+    },
+    "160px": {
+     "n": 2,
+     "bedeutung_getroffen": 1,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Mann schlägt anderen Mann → Kain erschlägt Abel",
+      "Mann schlägt anderen Mann → schlagen"
+     ],
+     "bewerter": "wird als blosses Schlagen gelesen, nicht als Töten"
+    }
+   }
+  },
+  "FIG-ZEICHEN-BOESES": {
+   "7a": {
+    "32px_allein": {
+     "n": 16,
+     "bedeutung_getroffen": 10,
+     "bild_erkannt": 16,
+     "antworten": [
+      "Dunkler gezackter Fleck → Sünde",
+      "Dunkler gezackter Fleck → Sünde",
+      "Dunkler gezackter Fleck → Sünde",
+      "Dunkler gezackter Fleck → Sünde",
+      "Dunkler gezackter Fleck → Böses, Finsternis",
+      "dunkler gezackter Fleck → Böses, Finsternis",
+      "dunkler gezackter Fleck → Böses, Finsternis",
+      "dunkle gezackte Form → Böses, Finsternis",
+      "Dunkler gezackter Fleck → Sünde, Böses",
+      "Dunkler gezackter Fleck → Böses, Sünde",
+      "Dunkler gezackter Fleck → Böses",
+      "Dunkle gezackte Form → Böses",
+      "dunkler gezackter Fleck → Unreinheit, Sünde",
+      "dunkle zackige Wolke → Unheil, Finsternis",
+      "dunkler gezackter Fleck → Sünde, Böses",
+      "Dunkler gezackter Fleck → Böses, Unreinheit"
+     ],
+     "bewerter": "Sünde statt das Böse"
+    },
+    "32px_umriss": {
+     "n": 16,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 13,
+     "antworten": [
+      "Gezackter Fleck → Zorn",
+      "Zerknülltes Blatt → Zerstörung",
+      "gezackter Klecks → Zorn",
+      "Gezackter Fleck → Zerstörung",
+      "gezackter Fleck, Gesicht → Zorn, Wut",
+      "Zackiger Fleck, Gesicht → Zorn, Bosheit",
+      "gezackter Fleck → Aussatz, Plage",
+      "Gezackter Fleck → Seuche, Plage",
+      "zackiger Klumpen → Zorn",
+      "Gezackter Fleck → Zerstörung, Unheil",
+      "Gezackter Fleck → Sünde",
+      "zackiger Klumpen → Plage",
+      "Gezackter Fleck → Unreinheit, Aussatz",
+      "Gezackter Fleck → Zorn",
+      "gezackter Fleck → Sünde, Unreinheit",
+      "gezackter dunkler Fleck → Böses"
+     ],
+     "bewerter": "meist als Zorn gelesen, auch Plage/Aussatz/Zerstörung"
+    },
+    "32px_zelle": {
+     "n": 8,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 8,
+     "antworten": [
+      "dunkler gezackter Fleck → Bosheit, Zorn",
+      "dunkler gezackter Fleck → Zorn",
+      "Dunkler gezackter Fleck → Zorn, Unheil",
+      "Dunkler Stachelklecks → Zorn, Unheil",
+      "Dunkler gezackter Fleck → Zorn",
+      "Dunkler gezackter Fleck → Böses, Wut",
+      "Dunkler gezackter Fleck → Zorn, Schmerz",
+      "dunkler Zackenfleck → Zorn, Unheil"
+     ],
+     "bewerter": "als «Zorn» gelesen; die Form wird richtig benannt, weil nur ein Schatten gezeichnet ist"
+    },
+    "160px": {
+     "n": 8,
+     "bedeutung_getroffen": 7,
+     "bild_erkannt": 8,
+     "antworten": [
+      "Dunkle gezackte Form → Böses, Unheil",
+      "Dunkler gezackter Fleck → Böses",
+      "Dunkler Stachelklecks → Böses, Zorn",
+      "Dunkle gezackte Form → Böses",
+      "Dunkler Zackenfleck → Böses",
+      "Dunkle gezackte Form → Böses",
+      "Zackiger dunkler Klecks → Zorn, Unheil",
+      "dunkler gezackter Fleck → Böses, Unheil"
+     ],
+     "bewerter": "vereinzelt Zorn/Unheil"
+    }
+   }
+  },
+  "FIG-OBJ-KREUZ": {
+   "7a": {
+    "32px_allein": {
+     "n": 16,
+     "bedeutung_getroffen": 16,
+     "bild_erkannt": 16,
+     "antworten": [
+      "Holzkreuz mit Schild → Kreuzigung",
+      "Holzkreuz mit Tafel → Kreuzigung",
+      "Holzkreuz mit Schild → Kreuzigung",
+      "Holzkreuz mit Tafel → Kreuzigung",
+      "Holzkreuz mit Tafel → Kreuzigung",
+      "Holzkreuz mit Schild → Kreuzigung, Tod Jesu",
+      "Holzkreuz mit Schild → Kreuzigung",
+      "Holzkreuz mit Tafel → Kreuzigung",
+      "Holzkreuz mit Tafel → Kreuzigung",
+      "Holzkreuz mit Tafel → Kreuzigung",
+      "Holzkreuz mit Tafel → Kreuzigung",
+      "Holzkreuz mit Tafel → Kreuzigung",
+      "Holzkreuz mit Tafel → Kreuzigung",
+      "Holzkreuz mit Tafel → Kreuzigung",
+      "Kreuz mit Tafel → Kreuzigung",
+      "Holzkreuz mit Schild → Kreuzigung"
+     ],
+     "bewerter": "Kreuzigung (gleichwertig)"
+    },
+    "32px_umriss": {
+     "n": 16,
+     "bedeutung_getroffen": 7,
+     "bild_erkannt": 16,
+     "antworten": [
+      "Kreuz → Tod",
+      "Kreuz → Tod",
+      "Kreuz → Tod",
+      "Kreuz → Tod",
+      "Kreuz → Tod, Grab",
+      "Kreuz → Tod, Grab",
+      "Kreuz → Kreuzigung, Tod",
+      "Kreuz → Tod, Grab",
+      "Kreuz → Kreuzigung, Tod",
+      "Kreuz → Tod, Kreuzigung",
+      "Kreuz → Tod",
+      "Kreuz → Tod",
+      "Kreuz → Tod, Kreuzigung",
+      "Kreuz → Kreuzigung",
+      "Kreuz → Tod, Kreuzigung",
+      "Kreuz → Kreuzigung"
+     ],
+     "bewerter": "oft nur allgemein Tod statt Kreuz/Kreuzigung"
+    },
+    "32px_zelle": {
+     "n": 8,
+     "bedeutung_getroffen": 7,
+     "bild_erkannt": 8,
+     "antworten": [
+      "Holzkreuz → Kreuzigung",
+      "Holzkreuz → Tod",
+      "Kreuz mit Schild → Kreuzigung, Opfer",
+      "Kreuz mit Schild → Kreuzigung, Tod Jesu",
+      "Kreuz mit Schild → Kreuzigung",
+      "Kreuz mit Schild → Kreuzigung",
+      "Holzkreuz mit Schild → Kreuzigung",
+      "Kreuz mit Tafel → Kreuzigung"
+     ],
+     "bewerter": "einmal nur allgemein «Tod»"
+    },
+    "160px": {
+     "n": 8,
+     "bedeutung_getroffen": 8,
+     "bild_erkannt": 8,
+     "antworten": [
+      "Holzkreuz mit Tafel → Kreuzigung",
+      "Holzkreuz mit Schild → Kreuzigung",
+      "Holzkreuz mit Tafel → Kreuzigung",
+      "Holzkreuz mit Tafel → Kreuzigung",
+      "Holzkreuz mit Schild → Kreuzigung",
+      "Holzkreuz mit Tafel → Kreuzigung",
+      "Holzkreuz mit Tafel → Kreuzigung",
+      "Kreuz mit Schild → Kreuzigung"
+     ],
+     "bewerter": "keine Fehldeutung"
+    }
+   }
+  },
+  "FIG-ZEICHEN-GEHENNA@1": {
+   "7a": {
+    "32px_allein": {
+     "n": 8,
+     "bedeutung_getroffen": 8,
+     "bild_erkannt": 8,
+     "antworten": [
+      "Feuer zwischen Felsen → Hölle",
+      "Feuer in Schlucht → Hölle",
+      "Feuer in Schlucht → Hölle",
+      "Feuer in Schlucht → Hölle",
+      "Feuer in Schlucht → Hölle",
+      "Feuer in Schlucht → Hölle",
+      "Feuer in Schlucht → Hölle",
+      "Feuer in Schlucht → Hölle"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "32px_umriss": {
+     "n": 8,
+     "bedeutung_getroffen": 4,
+     "bild_erkannt": 8,
+     "antworten": [
+      "Flammen → Hölle",
+      "Flammen → Hölle",
+      "Flammen → Feuer",
+      "Flammen, Feuer → Hölle",
+      "Flammen, Zacken → Zerstörung",
+      "Flammen → Verderben",
+      "Flammen → Hölle, Gericht",
+      "Flammen zwischen Mauern → Zerstörung"
+     ],
+     "bewerter": "Schlucht nicht gesehen; teils Zerstörung statt Hölle"
+    },
+    "32px_zelle": {
+     "n": 4,
+     "bedeutung_getroffen": 4,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Feuer zwischen Felsen → Hölle",
+      "Feuer zwischen Felsen → Hölle",
+      "Feuer zwischen Felsen → Hölle",
+      "Feuer zwischen Felsen → Hölle"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "160px": {
+     "n": 4,
+     "bedeutung_getroffen": 4,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Feuer in Schlucht → Hölle",
+      "Feuer in Schlucht → Hölle",
+      "Feuer zwischen Felsen → Hölle",
+      "Feuer in Felsschlucht → Hölle"
+     ],
+     "bewerter": "keine Fehldeutung"
+    }
+   }
+  },
+  "FIG-ZEICHEN-VERSTORBEN@1": {
+   "7a": {
+    "32px_allein": {
+     "n": 8,
+     "bedeutung_getroffen": 8,
+     "bild_erkannt": 8,
+     "antworten": [
+      "Verhüllte Gestalt auf Bahre → Tod, Leichnam",
+      "Liegende Gestalt auf Bahre → Tod",
+      "Verhüllte Gestalt auf Bahre → Tod, Leichnam",
+      "Verhüllte Gestalt auf Bahre → Tod",
+      "verhüllter Körper auf Bahre → Tod, Leichnam",
+      "verhüllter Körper auf Bahre → Tod, Leichnam",
+      "verhüllter Körper auf Bahre → Tod, Leichnam",
+      "Verhüllte Gestalt auf Bahre → Tod, Leichnam"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "32px_umriss": {
+     "n": 8,
+     "bedeutung_getroffen": 8,
+     "bild_erkannt": 8,
+     "antworten": [
+      "Person auf Liege → Tod",
+      "Person auf Liege → Tod",
+      "Person auf Liege → Tod",
+      "Person auf Liege → Tod",
+      "Person liegt auf Bett → Krankheit, Tod",
+      "Liegende Person auf Bett → Tod",
+      "liegende Person auf Bett → Krankheit, Tod",
+      "liegende Person auf Bett → Tod"
+     ],
+     "bewerter": "Bahre als Bett gelesen, teils Krankheit vermutet"
+    },
+    "32px_zelle": {
+     "n": 4,
+     "bedeutung_getroffen": 4,
+     "bild_erkannt": 0,
+     "antworten": [
+      "Person liegt im Bett → Tod, Sterben",
+      "Person liegt im Bett → Sterben",
+      "Person liegt im Bett → Tod",
+      "Person im Bett → Tod, Sterben"
+     ],
+     "bewerter": "Bild als «Person im Bett» gesehen, Leichentuch und Bahre nicht erkannt"
+    },
+    "160px": {
+     "n": 4,
+     "bedeutung_getroffen": 4,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Verhüllte Gestalt auf Bahre → Tod",
+      "Verhüllte Person auf Bahre → Tod",
+      "Verhüllte Gestalt auf Bahre → Tod",
+      "verhüllte Gestalt auf Bahre → Tod, Leichnam"
+     ],
+     "bewerter": "keine Fehldeutung"
+    }
+   }
+  },
+  "FIG-OBJ-WOLF": {
+   "7a": {
+    "32px_allein": {
+     "n": 16,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 16,
+     "antworten": [
+      "Grauer Wolf → Feind, falscher Prophet",
+      "Grauer Wolf → Gefahr, Feind",
+      "Grauer Wolf → Feind, falscher Prophet",
+      "Grauer Wolf → Wolf",
+      "Grauer Wolf → Gefahr, falscher Prophet",
+      "grauer Wolf → Gefahr, falsche Propheten",
+      "grauer Wolf → Gefahr, falsche Propheten",
+      "grauer Wolf → Gefahr, falsche Propheten",
+      "Grauer Wolf → Feind, Gefahr",
+      "Grauer Wolf → Feind, Gefahr",
+      "Grauer Wolf → Feind",
+      "Grauer Wolf → Wolf, Gefahr",
+      "grauer Wolf → Gefahr, falscher Prophet",
+      "grauer Wolf → Gefahr, falscher Prophet",
+      "grauer Wolf → Gefahr, falscher Prophet",
+      "Grauer Wolf → Gefahr, falscher Prophet"
+     ],
+     "bewerter": "übertragen als falscher Prophet/Feind statt Wolf"
+    },
+    "32px_umriss": {
+     "n": 16,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 11,
+     "antworten": [
+      "Hund → Unrein",
+      "Hund → Unreinheit",
+      "Hund → Hund",
+      "Wolf → Feind",
+      "Wolf oder Hund → Raubtier, Gefahr",
+      "Wolf oder Fuchs → Gefahr, Feind",
+      "Hund oder Wolf → Raubtier, Gefahr",
+      "Wolf oder Fuchs → Gefahr, falscher Prophet",
+      "Hund → Unreinheit",
+      "Hund → Unreinheit",
+      "Wolf → Feind",
+      "Wolf → Feind",
+      "Wolf → Feind, Gefahr",
+      "Wolf → Feind",
+      "Wolf → Feind, falscher Prophet",
+      "Wolf → falsche Propheten"
+     ],
+     "bewerter": "oft als Hund gelesen und dann als Unreinheit; sonst nur Feind/Gefahr"
+    },
+    "32px_zelle": {
+     "n": 8,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 8,
+     "antworten": [
+      "graues Tier, Wolf → Gefahr, falsche Propheten",
+      "grauer Wolf → Gefahr",
+      "Grauer Wolf → Gefahr, Feind",
+      "Grauer Wolf → Gefahr, falsche Propheten",
+      "Grauer Wolf → Gefahr, Feind",
+      "Grauer Wolf → Gefahr, Feind",
+      "Grauer Wolf → Gefahr, Feind",
+      "grauer Wolf → Gefahr, Feind"
+     ],
+     "bewerter": "Wolf erkannt, aber als «Gefahr/Feind» gedeutet statt als Wolf selbst"
+    },
+    "160px": {
+     "n": 8,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 8,
+     "antworten": [
+      "Grauer Wolf → Gefahr, falsche Propheten",
+      "Grauer Wolf → Gefahr",
+      "Grauer Wolf → Falscher Prophet",
+      "Grauer Wolf → Falscher Prophet",
+      "Grauer Wolf → Wolf, Gefahr",
+      "Graues Tier, Wolf → Wolf, Feind",
+      "Grauer Wolf → Falsche Propheten",
+      "grauer Wolf → Feind, Gefahr"
+     ],
+     "bewerter": "übertragen als falsche Propheten/Gefahr statt Wolf"
+    }
+   }
+  },
+  "FIG-ZEICHEN-HASS@3": {
+   "7a": {
+    "32px_allein": {
+     "n": 4,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Zwei Personen, gebrochenes Herz → Streit, Feindschaft",
+      "Zwei Menschen, gebrochenes Herz → Streit, Zerwürfnis",
+      "Zwei Personen, gebrochenes Herz → Streit, Feindschaft",
+      "Zwei Männer, gebrochenes Herz → Streit"
+     ],
+     "bewerter": "Streit statt Hass"
+    },
+    "32px_umriss": {
+     "n": 4,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Zwei Personen, gebrochenes Herz → Trennung",
+      "Paar, gebrochenes Herz → Trennung",
+      "zwei Personen, gebrochenes Herz → Trauer",
+      "Zwei Personen, gebrochenes Herz → Trauer"
+     ],
+     "bewerter": "gebrochenes Herz als Trennung/Trauer gelesen, Hass nicht erkannt"
+    },
+    "32px_zelle": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 2,
+     "antworten": [
+      "zwei Personen, gebrochenes Herz → Hass, Streit",
+      "zwei Personen, zerbrochenes Herz → Hass"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "160px": {
+     "n": 2,
+     "bedeutung_getroffen": 1,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Zwei zornige Männer, gebrochenes Herz → Streit, Feindschaft",
+      "Zwei Männer, gebrochenes Herz → Streit"
+     ],
+     "bewerter": "Streit statt Hass"
+    }
+   }
+  },
+  "FIG-ZEICHEN-SUENDE": {
+   "7a": {
+    "32px_allein": {
+     "n": 16,
+     "bedeutung_getroffen": 13,
+     "bild_erkannt": 16,
+     "antworten": [
+      "Schwarzer Klecks → Unreinheit",
+      "Schwarzer Klecks → Unreinheit, Sünde",
+      "Schwarzer Klecks → Unreinheit, Sünde",
+      "Schwarzer Klecks → Unreinheit",
+      "Schwarzer Klecks → Schuld, Unreinheit",
+      "schwarzer Klecks → Sünde, Unreinheit",
+      "schwarzer Klecks → Sünde, Unreinheit",
+      "schwarzer Klecks → Sünde, Unreinheit",
+      "Schwarzer Klecks → Sünde, Unreinheit",
+      "Schwarzer Klecks → Sünde, Unreinheit",
+      "Schwarzer Klecks → Sünde",
+      "Schwarzer Fleck → Sünde",
+      "schwarzer Klecks → Sünde",
+      "schwarzer Fleck → Sünde",
+      "dunkler Klecks → Sünde, Unreinheit",
+      "Dunkler Klecks → Sünde"
+     ],
+     "bewerter": "Unreinheit"
+    },
+    "32px_umriss": {
+     "n": 16,
+     "bedeutung_getroffen": 5,
+     "bild_erkannt": 6,
+     "antworten": [
+      "Klecks mit Spritzern → Sünde",
+      "Fleck, Klecks → Sünde",
+      "dunkle Wolke → Plage",
+      "Dunkle Wolke → Sünde",
+      "Klecks mit Spritzern → Sünde, Unreinheit",
+      "Kleckse, Spritzer → Schmutz, Unreinheit",
+      "dunkle Wolke mit Spritzern → Schmutz, Unreinheit",
+      "Klecks mit Spritzern → Sünde, Unreinheit",
+      "dunkle Wolke → Plage, Unheil",
+      "Wolke mit Punkten → Staub, Asche",
+      "Klecks mit Spritzern → Unreinheit",
+      "Wolke mit Tropfen → Seuche",
+      "Wolke, Staub → Staub, Vergänglichkeit",
+      "Staubwolke → Staub",
+      "Wolke mit Spritzern → Plage, Verderben",
+      "dunkle Wolke → Unheil"
+     ],
+     "bewerter": "Klecks oft als Wolke/Staub gelesen, dann Plage oder Staub"
+    },
+    "32px_zelle": {
+     "n": 8,
+     "bedeutung_getroffen": 7,
+     "bild_erkannt": 4,
+     "antworten": [
+      "schwarze Wolke → Unheil, Sünde",
+      "schwarze Wolke → Unheil",
+      "Schwarzer Klecks → Sünde, Schmutz",
+      "Schwarzer Fleck → Sünde, Schuld",
+      "Schwarzer Klecks → Sünde, Schuld",
+      "Schwarzer Klecks → Sünde, Schmutz",
+      "Schwarze Wolke → Unheil, Sünde",
+      "dunkle Wolke → Unheil, Sünde"
+     ],
+     "bewerter": "Klecks als «schwarze Wolke» gesehen, teils nur als «Unheil» gedeutet"
+    },
+    "160px": {
+     "n": 8,
+     "bedeutung_getroffen": 6,
+     "bild_erkannt": 8,
+     "antworten": [
+      "Schwarzer Fleck → Sünde",
+      "Schwarzer Fleck → Sünde",
+      "Schwarzer Fleck → Unreinheit",
+      "Schwarzer Klecks → Unreinheit",
+      "Schwarzer Klecks → Sünde",
+      "Schwarzer Fleck → Sünde",
+      "Dunkler Fleck → Sünde",
+      "schwarzer Fleck → Sünde"
+     ],
+     "bewerter": "Unreinheit"
+    }
+   }
+  },
+  "FIG-ZEICHEN-TRAUER": {
+   "7a": {
+    "32px_allein": {
+     "n": 16,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 0,
+     "antworten": [
+      "Wassertropfen → Träne, Wasser",
+      "Wassertropfen → Träne",
+      "Wassertropfen → Träne",
+      "Wassertropfen → Träne",
+      "Wassertropfen → Träne",
+      "Tropfen → Träne, Wasser",
+      "Wassertropfen → Träne, Trauer",
+      "Tropfen → Träne, Trauer",
+      "Wassertropfen → Träne",
+      "Wassertropfen → Träne",
+      "Wassertropfen → Träne",
+      "Wassertropfen → Wasser",
+      "Wassertropfen → Träne, Wasser",
+      "Tropfen → Träne, Wasser",
+      "Wassertropfen → Träne, Wasser",
+      "Tropfen → Träne, Wasser"
+     ],
+     "bewerter": "nur Wassertropfen/Träne erkannt, gesenkter Kopf übersehen"
+    },
+    "32px_umriss": {
+     "n": 16,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 0,
+     "antworten": [
+      "Tropfen → Blut",
+      "Tropfen → Blut",
+      "Tropfen → Blut",
+      "Tropfen → Blut",
+      "Tropfen → Blut, Träne",
+      "Tropfen → Blut, Träne",
+      "Tropfen → Blut, Träne",
+      "Tropfen → Blut, Träne",
+      "Tropfen → Blut",
+      "Tropfen → Blut",
+      "Tropfen → Blut",
+      "Tropfen → Blut",
+      "Tropfen → Blut, Träne",
+      "Tropfen → Träne",
+      "Tropfen → Blut, Träne",
+      "Tropfen → Träne"
+     ],
+     "bewerter": "gesenkter Kopf nicht gesehen; Träne meist als Blut gelesen"
+    },
+    "32px_zelle": {
+     "n": 8,
+     "bedeutung_getroffen": 1,
+     "bild_erkannt": 0,
+     "antworten": [
+      "Wassertropfen → Träne, Wasser",
+      "Wassertropfen → Tränen",
+      "Wassertropfen → Träne, Leid",
+      "Wassertropfen → Träne, Leid",
+      "Wassertropfen → Träne, Trauer",
+      "Wassertropfen → Träne, Wasser",
+      "Wassertropfen → Träne, Wasser",
+      "Tropfen → Träne, Wasser"
+     ],
+     "bewerter": "nur der Tropfen wird gesehen, der gesenkte Kopf fehlt; meist als «Träne/Wasser» statt Trauer gedeutet"
+    },
+    "160px": {
+     "n": 8,
+     "bedeutung_getroffen": 1,
+     "bild_erkannt": 0,
+     "antworten": [
+      "Tropfen → Träne, Trauer",
+      "Wassertropfen → Träne",
+      "Tropfen → Träne",
+      "Tropfen → Träne",
+      "Wassertropfen → Träne",
+      "Wassertropfen → Träne",
+      "Tropfen → Träne",
+      "Wassertropfen → Träne, Wasser"
+     ],
+     "bewerter": "nur Tropfen/Träne erkannt, gesenkter Kopf übersehen"
+    }
+   }
+  },
+  "FIG-ZEICHEN-TOD": {
+   "7a": {
+    "32px_allein": {
+     "n": 16,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 16,
+     "antworten": [
+      "Felsengrab mit Rollstein → Grab",
+      "Höhle mit Rollstein → Grab",
+      "Felsgrab mit Stein → Grab",
+      "Felsengrab mit Rollstein → Grab",
+      "Felsengrab mit Stein → Grab",
+      "Felsgrab mit Stein → Grab",
+      "Felsengrab mit Stein → Grab",
+      "Höhle mit Rollstein → Grab",
+      "Höhle mit Rollstein → Grab",
+      "Grabhöhle mit Stein → Grab",
+      "Grab mit Stein → Grab",
+      "Höhle mit Rollstein → Grab",
+      "Höhle mit Rollstein → Grab",
+      "Höhle mit Rollstein → Grab",
+      "Felsgrab mit Stein → Grab",
+      "Felsengrab mit Stein → Grab"
+     ],
+     "bewerter": "Grab statt Tod/sterben"
+    },
+    "32px_umriss": {
+     "n": 16,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Gewölbte Öffnung → Grab",
+      "Gewölbte Öffnung → Grab",
+      "Höhleneingang → Grab",
+      "Grabstein → Grab",
+      "Bogenform, Grabstein → Grab",
+      "Bogenform, Torbogen → Grab, Höhle",
+      "Grabstein oder Bogen → Grab",
+      "Gewölbter Bogen → Grab, Höhle",
+      "Bogenförmige Öffnung → Grab",
+      "Gewölbte Öffnung → Grabhöhle",
+      "Gewölbte Öffnung → Grab",
+      "Grabstein → Grab",
+      "Bogenförmige Öffnung → Grabhöhle",
+      "Gewölbter Eingang → Grabhöhle",
+      "Torbogen, Höhle → Grab",
+      "dunkler Bogen → Grabhöhle"
+     ],
+     "bewerter": "nur als Bogen/Grabstein gesehen; als Grab statt Tod gedeutet"
+    },
+    "32px_zelle": {
+     "n": 8,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 8,
+     "antworten": [
+      "Höhle mit Rollstein → Grab",
+      "Grabhöhle mit Stein → Grab",
+      "Felsengrab mit Stein → Grab, Begräbnis",
+      "Grab mit Rollstein → Grab, Begräbnis",
+      "Grabhöhle mit Stein → Grab",
+      "Grabhöhle mit Stein → Grab",
+      "Felsgrab mit Stein → Grab",
+      "Grabhöhle mit Stein → Grab"
+     ],
+     "bewerter": "als «Grab» gedeutet statt als Tod/Sterben"
+    },
+    "160px": {
+     "n": 8,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 8,
+     "antworten": [
+      "Felsengrab mit Stein → Grab",
+      "Grabhöhle mit Stein → Grab",
+      "Höhle mit Rollstein → Grab",
+      "Höhle mit Rollstein → Grab",
+      "Felsengrab mit Stein → Grab",
+      "Höhle mit Rollstein → Grab",
+      "Höhle mit rundem Stein → Grab",
+      "Höhle mit Rollstein → Grab"
+     ],
+     "bewerter": "Grab statt Tod/sterben"
+    }
+   }
+  },
+  "FIG-ZEICHEN-VERFOLGEN@2": {
+   "7a": {
+    "32px_allein": {
+     "n": 8,
+     "bedeutung_getroffen": 8,
+     "bild_erkannt": 8,
+     "antworten": [
+      "Mann jagt Person mit Stock → Verfolgung",
+      "Mann verfolgt Mann mit Stock → Verfolgung",
+      "Mann verfolgt Fliehenden → Verfolgung",
+      "Mann verfolgt Mann → Verfolgung",
+      "Mann jagt Mann mit Stock → Verfolgung",
+      "Mann jagt Mann mit Stock → Verfolgung",
+      "Mann jagt Mann mit Stock → Verfolgung",
+      "Mann jagt Mann mit Stock → Verfolgung"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "32px_umriss": {
+     "n": 8,
+     "bedeutung_getroffen": 8,
+     "bild_erkannt": 8,
+     "antworten": [
+      "Person verfolgt Fliehenden → Verfolgung",
+      "Verfolgung zweier Personen → Verfolgung",
+      "Person verfolgt Fliehenden → Verfolgung",
+      "Person verfolgt Fliehenden → Verfolgung",
+      "Person schlägt Fliehenden → Verfolgung",
+      "Person schlägt fliehende Person → Verfolgung",
+      "Person schlägt fliehende Person → Verfolgung, Gewalt",
+      "Person schlägt fliehende Person → Verfolgung"
+     ],
+     "bewerter": "gut erkannt; teils als Schlagen statt Verfolgen gesehen"
+    },
+    "32px_zelle": {
+     "n": 4,
+     "bedeutung_getroffen": 4,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Mann jagt Mann mit Stock → Verfolgung",
+      "Mann jagt Person mit Stock → Verfolgung",
+      "Mann jagt Fliehenden → Verfolgung",
+      "Mann jagt fliehenden Mann → Verfolgung"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "160px": {
+     "n": 4,
+     "bedeutung_getroffen": 4,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Mann jagt Mann mit Stock → Verfolgung",
+      "Mann jagt Mann mit Stock → Verfolgung",
+      "Mann jagt Mann mit Knüppel → Verfolgung",
+      "Mann jagt Mann mit Stock → Verfolgung"
+     ],
+     "bewerter": "keine Fehldeutung"
+    }
+   }
+  },
+  "FIG-ORT-GEFAENGNIS": {
+   "7a": {
+    "32px_allein": {
+     "n": 16,
+     "bedeutung_getroffen": 16,
+     "bild_erkannt": 16,
+     "antworten": [
+      "Mauer mit Gitterfenster → Gefängnis",
+      "Steinmauer mit Gitterfenster → Gefängnis",
+      "Gemauertes Gitterfenster → Gefängnis",
+      "Steinmauer mit Gitterfenster → Gefängnis",
+      "Mauer mit Gitterfenster → Gefängnis",
+      "Mauer mit vergittertem Fenster → Gefängnis",
+      "Mauer mit Gitterfenster → Gefängnis",
+      "Steinmauer mit Gitter → Gefängnis",
+      "Vergittertes Mauerfenster → Gefängnis",
+      "Steinmauer mit Gitterfenster → Gefängnis",
+      "Gefängnisfenster mit Gittern → Gefangenschaft",
+      "Steinmauer mit Gitterfenster → Gefängnis",
+      "Steinmauer mit Gitterfenster → Gefängnis",
+      "Steinmauer mit Gitterfenster → Gefängnis",
+      "Steinmauer mit Gitterfenster → Gefängnis",
+      "Mauer mit vergittertem Fenster → Gefängnis"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "32px_umriss": {
+     "n": 16,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 0,
+     "antworten": [
+      "Schwarzes Rechteck → Finsternis",
+      "Schwarzer Kasten → Sarg",
+      "schwarzes Rechteck → Finsternis",
+      "Schwarzes Rechteck → Finsternis",
+      "schwarzes Rechteck, Kasten → Sarg, Finsternis",
+      "Schwarzes Rechteck, Kiste → Sarg, Finsternis",
+      "schwarzes Rechteck → Finsternis, Sarg",
+      "Schwarzer Kasten → Sarg, Finsternis",
+      "schwarzes Rechteck → Finsternis",
+      "Schwarzes Rechteck → Grab",
+      "Schwarzes Rechteck → Finsternis",
+      "schwarzes Rechteck → Finsternis",
+      "Schwarzes Rechteck → Grab",
+      "Schwarzes Rechteck → Grab",
+      "schwarzes Rechteck → Grab, Finsternis",
+      "schwarzes Rechteck → Grab"
+     ],
+     "bewerter": "Gitterfenster unsichtbar; nur schwarzes Rechteck, als Finsternis/Sarg/Grab gedeutet"
+    },
+    "32px_zelle": {
+     "n": 8,
+     "bedeutung_getroffen": 8,
+     "bild_erkannt": 8,
+     "antworten": [
+      "Steinmauer mit Gitterfenster → Gefängnis",
+      "Mauer mit vergittertem Fenster → Gefängnis",
+      "Mauer mit Gitterfenster → Gefängnis",
+      "Gemauertes vergittertes Fenster → Gefängnis",
+      "Steinmauer mit Gitterfenster → Gefängnis",
+      "Steinmauer mit Gitterfenster → Gefängnis",
+      "Steinmauer mit Gitterfenster → Gefängnis",
+      "Steinmauer mit Gitterfenster → Gefängnis"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "160px": {
+     "n": 8,
+     "bedeutung_getroffen": 8,
+     "bild_erkannt": 8,
+     "antworten": [
+      "Steinmauer mit Gitterfenster → Gefängnis",
+      "Mauer mit Gitterfenster → Gefängnis",
+      "Steinmauer mit Gitter → Gefängnis",
+      "Steinmauer mit Gitterfenster → Gefängnis",
+      "Steinmauer mit Gitterfenster → Gefängnis",
+      "Steinmauer mit Gitterfenster → Gefängnis",
+      "Steinmauer mit Gitterfenster → Gefängnis",
+      "vergittertes Steingebäude → Gefängnis"
+     ],
+     "bewerter": "keine Fehldeutung"
+    }
+   }
+  },
+  "FIG-ZEICHEN-FEUER": {
+   "7a": {
+    "32px_allein": {
+     "n": 16,
+     "bedeutung_getroffen": 16,
+     "bild_erkannt": 16,
+     "antworten": [
+      "Flamme → Feuer, Gericht",
+      "Flamme → Feuer",
+      "Flamme → Feuer, Zorn",
+      "Flamme → Feuer",
+      "Flamme → Feuer, Gericht",
+      "Flamme → Feuer, Gericht",
+      "Flamme → Feuer, Gericht",
+      "Flamme → Feuer, Gericht",
+      "Flamme → Feuer, Gericht",
+      "Flamme → Feuer, Gericht",
+      "Flamme → Feuer",
+      "Flamme → Feuer",
+      "Flamme → Feuer, Gericht",
+      "Flamme → Feuer, Gericht",
+      "Flamme → Feuer, Gericht",
+      "Flamme → Feuer, Gericht"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "32px_umriss": {
+     "n": 16,
+     "bedeutung_getroffen": 16,
+     "bild_erkannt": 16,
+     "antworten": [
+      "Flamme → Feuer",
+      "Flamme → Feuer",
+      "Flamme → Feuer",
+      "Flamme → Feuer",
+      "Flamme → Feuer, Gericht",
+      "Flamme → Feuer, Gericht",
+      "Flamme → Feuer, Gericht",
+      "Flamme → Feuer, Gericht",
+      "Flamme → Feuer, Gericht",
+      "Flamme → Feuer, Hölle",
+      "Flamme → Feuer",
+      "Flamme → Feuer",
+      "Flamme → Feuer, Gericht",
+      "Flamme → Feuer",
+      "Flamme → Feuer, Strafe",
+      "Flamme → Feuer"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "32px_zelle": {
+     "n": 8,
+     "bedeutung_getroffen": 8,
+     "bild_erkannt": 8,
+     "antworten": [
+      "Flamme → Feuer, Gericht",
+      "Flamme → Feuer",
+      "Flamme → Feuer, Gericht",
+      "Flamme → Feuer, Gericht",
+      "Flamme → Feuer, Gericht",
+      "Flamme → Feuer, Strafe",
+      "Flamme → Feuer, Gericht",
+      "Flamme → Feuer, Gericht"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "160px": {
+     "n": 8,
+     "bedeutung_getroffen": 8,
+     "bild_erkannt": 8,
+     "antworten": [
+      "Flamme → Feuer, Gericht",
+      "Flamme → Feuer",
+      "Flamme → Feuer, Gericht",
+      "Flamme → Feuer",
+      "Flamme → Feuer",
+      "Flamme → Feuer",
+      "Flamme → Feuer, Gericht",
+      "Flamme → Feuer, Gericht"
+     ],
+     "bewerter": "keine Fehldeutung"
+    }
+   }
+  },
+  "FIG-ZEICHEN-DAEMON": {
+   "7a": {
+    "32px_allein": {
+     "n": 16,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 15,
+     "antworten": [
+      "Dunkle Spirale → Böses, Versuchung",
+      "Dunkle Spirale → Böses, Finsternis",
+      "Dunkle Spirale → Böser Geist",
+      "Dunkle Spirale → Böser Geist",
+      "Dunkler Spiralfleck → Sünde",
+      "dunkle Spirale → Sünde, Verwirrung",
+      "dunkle Spirale → Sünde, Verwirrung",
+      "dunkle Spiralform → Sünde, Verderben",
+      "Dunkle Spirale → Chaos, Verwirrung",
+      "Dunkler Wirbel → Chaos, Finsternis",
+      "Dunkle Spirale → Chaos",
+      "Dunkle Spirale → Seele, Geist",
+      "dunkler Spiralstein → Böses, Verstockung",
+      "dunkle Spirale → Böses, Versuchung",
+      "dunkle Spirale → Böses, Verwirrung",
+      "Dunkle Spirale → Böses, Versuchung"
+     ],
+     "bewerter": "allgemein Böses/Sünde/Chaos statt Dämon"
+    },
+    "32px_umriss": {
+     "n": 16,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 15,
+     "antworten": [
+      "Spirale in Kreis → Verwesung",
+      "Spirale im Fleck → Chaos",
+      "Spirale in Blase → Verwirrung",
+      "Dunkler Kreis, Spirale → Abgrund",
+      "dunkle Spirale → Finsternis, Chaos",
+      "Spiralförmiger Fleck → Verwirrung, Sünde",
+      "dunkler Stein mit Spirale → Stein, Steinigung",
+      "Spirale in Form → Same, Leben",
+      "Spirale im Oval → Seele, Geist",
+      "Spiralform → Seele, Leben",
+      "Spirale im Oval → Seele",
+      "Spirale im Oval → Seele",
+      "Spirale im Kreis → Verwirrung",
+      "Spirale im Kreis → Verwirrung",
+      "Kreis mit Spirale → Verwesung, Wurm",
+      "dunkle Spirale → Sünde"
+     ],
+     "bewerter": "Spirale als Verwirrung oder Seele gelesen, Dämon nie erkannt"
+    },
+    "32px_zelle": {
+     "n": 8,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 8,
+     "antworten": [
+      "dunkle Spirale → Finsternis, Verwirrung",
+      "dunkle Form mit Spirale → Verwirrung",
+      "Dunkle Spiralform → Böses, Verwirrung",
+      "Dunkle Spirale → Böses, Verwirrung",
+      "Dunkle Spirale → Verwirrung, Unheil",
+      "Dunkle Spirale → Verwirrung, Unheil",
+      "Dunkler Wirbel → Böses, Chaos",
+      "dunkler Spiralfleck → Böses, Verwirrung"
+     ],
+     "bewerter": "als «Verwirrung» gedeutet, nie als Dämon oder Geist"
+    },
+    "160px": {
+     "n": 8,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 6,
+     "antworten": [
+      "Dunkle Form mit Spirale → Finsternis, Chaos",
+      "Dunkle Form mit Spirale → Finsternis",
+      "Dunkler Stein mit Spirale → Sünde",
+      "Dunkler Fleck mit Spirale → Sünde",
+      "Dunkle Form mit Spirale → Finsternis",
+      "Dunkle Form mit Spirale → Finsternis",
+      "Dunkle Form mit Spirale → Böses, Satan",
+      "dunkler Stein mit Spirale → Bosheit, Unheil"
+     ],
+     "bewerter": "Finsternis/Sünde statt Dämon; teils als Stein gesehen"
+    }
+   }
+  },
+  "FIG-ZEICHEN-VERFOLGEN@3": {
+   "7a": {
+    "32px_allein": {
+     "n": 4,
+     "bedeutung_getroffen": 4,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Mann verfolgt Mann → Verfolgung",
+      "Mann jagt Mann mit Stock → Verfolgung",
+      "Mann verfolgt Mann mit Stock → Verfolgung",
+      "Mann jagt Mann → Verfolgung"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "32px_umriss": {
+     "n": 4,
+     "bedeutung_getroffen": 1,
+     "bild_erkannt": 1,
+     "antworten": [
+      "Person schlägt Person → Gewalt, Mord",
+      "Mann schlägt Mann → Mord, Gewalt",
+      "Person schlägt Person → Gewalt, Mord",
+      "Person schlägt Fliehenden → Gewalt, Verfolgung"
+     ],
+     "bewerter": "als Schlägerei/Mord gelesen statt als Verfolgung"
+    },
+    "32px_zelle": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Mann jagt Mann mit Stock → Verfolgung",
+      "Mann verfolgt Mann → Verfolgung"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "160px": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 1,
+     "antworten": [
+      "Mann schlägt Mann → Gewalt, Verfolgung",
+      "Mann jagt Mann mit Stock → Verfolgung"
+     ],
+     "bewerter": "einmal als Schlagen statt Jagen gesehen"
+    }
+   }
+  },
+  "FIG-ZEICHEN-TOETEN@1": {
+   "7a": {
+    "32px_allein": {
+     "n": 4,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Mann wirft Stein → Steinigung",
+      "Mann wirft Stein → Steinigung",
+      "Mann wirft Stein → Steinigung",
+      "Mann wirft Stein → Steinigung"
+     ],
+     "bewerter": "Steinigung statt töten/Mord"
+    },
+    "32px_umriss": {
+     "n": 4,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Person erschlägt Kniende → Totschlag, Kain",
+      "Person mit Stein, Kniender → Steinigung",
+      "Person mit Stein, Kniender → Steinigung",
+      "Person erschlägt Kniende → Mord, Totschlag"
+     ],
+     "bewerter": "teils als Steinigung gelesen"
+    },
+    "32px_zelle": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Mann schlägt mit Stein → Mord, Gewalt",
+      "Mann schlägt Mann → Mord, Gewalt"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "160px": {
+     "n": 2,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Mann wirft Stein → Steinigung",
+      "Mann wirft Stein → Steinigung"
+     ],
+     "bewerter": "Steinigung statt töten/Mord"
+    }
+   },
+   "7b": {
+    "32px_allein": {
+     "n": 4,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Mann schwingt Keule → Kain erschlägt Abel",
+      "Mann schlägt mit Keule → Totschlag",
+      "Mann schlägt mit Keule → Totschlag",
+      "Mann schwingt Keule → Schlagen, Gewalt"
+     ],
+     "bewerter": "Wird auf Kain und Abel festgelegt oder nur als «Schlagen, Gewalt» ohne Tötung gelesen"
+    },
+    "32px_umriss": {
+     "n": 4,
+     "bedeutung_getroffen": 3,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Person schlägt Kniende → Totschlag",
+      "Person schlägt Kniende → Totschlag, Gewalt",
+      "Person mit erhobenem Arm, kniende Person → Schlag, Mord",
+      "Person mit Keule, Kniender → Schlagen"
+     ],
+     "bewerter": "einmal nur «schlagen»"
+    },
+    "32px_zelle": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Mensch hebt Keule gegen Menschen → Totschlag",
+      "Mann schwingt Keule → Totschlag"
+     ],
+     "bewerter": "keine Fehldeutung, «Totschlag»"
+    },
+    "160px": {
+     "n": 2,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Mann schwingt Keule → Schlagen",
+      "Mann schwingt Keule → Gewalt"
+     ],
+     "bewerter": "nur Schlagen/Gewalt; das tödliche Ende wird nicht erkannt"
+    }
+   }
+  },
+  "FIG-ZEICHEN-VERSTORBEN@2": {
+   "7a": {
+    "32px_allein": {
+     "n": 4,
+     "bedeutung_getroffen": 4,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Verhüllter Leichnam auf Bahre → Tod, Begräbnis",
+      "eingewickelter Leichnam auf Bahre → Tod, Begräbnis",
+      "Leiche auf Bahre → Tod, Begräbnis",
+      "Leichnam auf Bahre → Tod, Begräbnis"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "32px_umriss": {
+     "n": 4,
+     "bedeutung_getroffen": 4,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Person liegt auf Bahre → Tod, Leichnam",
+      "Liegende Person auf Bahre → Tod, Leichnam",
+      "liegende Person auf Bahre → Tod, Leichnam",
+      "Liegende Person auf Bahre → Tod, Leichnam"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "32px_zelle": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Verhüllter Körper auf Bahre → Tod",
+      "Verhüllter Toter auf Bahre → Tod"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "160px": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Eingewickelter Leichnam → Tod",
+      "Verhüllte Gestalt auf Bahre → Tod"
+     ],
+     "bewerter": "keine Fehldeutung"
+    }
+   }
+  },
+  "FIG-ZEICHEN-TOTENKLAGE@3": {
+   "7a": {
+    "32px_allein": {
+     "n": 4,
+     "bedeutung_getroffen": 4,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Weinende Person, Arme erhoben → Klage, Trauer",
+      "weinende Person, Arme erhoben → Klage, Trauer",
+      "weinende Person, Arme erhoben → Klage, Trauer",
+      "weinender Mann, Arme erhoben → Klage, Trauer"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "32px_umriss": {
+     "n": 4,
+     "bedeutung_getroffen": 3,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Person mit erhobenen Armen → Angst, Wehklage",
+      "Zitternde Person, Arme hoch → Angst, Entsetzen",
+      "Person mit erhobenen Armen → Klage, Verzweiflung",
+      "Person, Hände über Kopf → Verzweiflung, Klage"
+     ],
+     "bewerter": "teils als Angst/Entsetzen gelesen"
+    },
+    "32px_zelle": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Weinende Person, Arme erhoben → Trauer, Klage",
+      "Weinende Frau, Arme erhoben → Trauer, Klage"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "160px": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Weinende Person → Klage, Trauer",
+      "Weinende Person, Arme erhoben → Klage"
+     ],
+     "bewerter": "keine Fehldeutung"
+    }
+   }
+  },
+  "FIG-ZEICHEN-GEHENNA@2": {
+   "7a": {
+    "32px_allein": {
+     "n": 4,
+     "bedeutung_getroffen": 4,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Feuer in Schlucht → Hölle",
+      "Feuer zwischen Felsen → Hölle, Verderben",
+      "Feuer in Schlucht → Hölle",
+      "Feuer in Schlucht → Hölle, Gehenna"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "32px_umriss": {
+     "n": 4,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 0,
+     "antworten": [
+      "brennende Stadt, Rauch → Zerstörung, Untergang",
+      "Zerstörte Gebäude, Rauch → Zerstörung, Untergang",
+      "Gebäude mit Rauchwolke → Zerstörung, Krieg",
+      "Brennende Häuser, Rauch → Zerstörung, Krieg"
+     ],
+     "bewerter": "als brennende Stadt gesehen, Zerstörung/Krieg statt Hölle"
+    },
+    "32px_zelle": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Feuer zwischen Felsen → Hölle, Strafe",
+      "Feuer zwischen Felsen → Hölle"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "160px": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Feuer in Schlucht → Hölle",
+      "Feuer in Schlucht → Hölle"
+     ],
+     "bewerter": "keine Fehldeutung"
+    }
+   }
+  },
+  "FIG-ZEICHEN-HASS": {
+   "7a": {
+    "32px_allein": {
+     "n": 4,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Gebrochenes Herz → Kummer, Schmerz",
+      "gebrochenes Herz → Kummer, Reue",
+      "gebrochenes Herz → Kummer, Reue",
+      "zerbrochenes Herz → Kummer, Schmerz"
+     ],
+     "bewerter": "gebrochenes Herz als Kummer/Reue gelesen"
+    },
+    "32px_umriss": {
+     "n": 4,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 4,
+     "antworten": [
+      "gebrochenes Herz → Trauer, Schmerz",
+      "Gebrochenes Herz → Trauer, Kummer",
+      "gebrochenes Herz → Trauer, Schmerz",
+      "Gebrochenes Herz → Trauer, Schmerz"
+     ],
+     "bewerter": "gebrochenes Herz immer als Trauer/Schmerz gelesen"
+    },
+    "32px_zelle": {
+     "n": 2,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Gebrochenes Herz → Kummer, Schmerz",
+      "Gebrochenes Herz → Kummer, Schmerz"
+     ],
+     "bewerter": "gebrochenes Herz als «Kummer/Schmerz» gelesen statt als Hass"
+    },
+    "160px": {
+     "n": 2,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Gebrochenes Herz → Kummer",
+      "Gebrochenes Herz → Trauer"
+     ],
+     "bewerter": "gebrochenes Herz als Kummer/Trauer gelesen"
+    }
+   }
+  },
+  "FIG-ZEICHEN-VERSTORBEN@3": {
+   "7a": {
+    "32px_allein": {
+     "n": 4,
+     "bedeutung_getroffen": 3,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Verhüllte Gestalt auf Bahre → Tod, Begräbnis",
+      "Eingewickelter Körper auf Bahre → Tod, Begräbnis",
+      "Mumie auf Bahre → Begräbnis",
+      "Eingewickelte Gestalt auf Bahre → Leichnam, Begräbnis"
+     ],
+     "bewerter": "Begräbnis; einmal Mumie"
+    },
+    "32px_umriss": {
+     "n": 4,
+     "bedeutung_getroffen": 4,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Person auf Bahre → Tod, Leichnam",
+      "Liegende Person auf Bahre → Toter, Leichnam",
+      "Liegende Person auf Bahre → Leichnam",
+      "Liegender auf Bahre → Tod"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "32px_zelle": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Mumie auf Bahre → Tod",
+      "Eingewickelter Leichnam auf Bahre → Tod, Begräbnis"
+     ],
+     "bewerter": "einmal als «Mumie» gesehen, Bedeutung trotzdem richtig"
+    },
+    "160px": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Mumie auf Bahre → Toter, Begräbnis",
+      "Verhüllter Körper auf Bahre → Leichnam, Begräbnis"
+     ],
+     "bewerter": "einmal als Mumie gesehen"
+    }
+   }
+  },
+  "FIG-ZEICHEN-GEHENNA@3": {
+   "7a": {
+    "32px_allein": {
+     "n": 4,
+     "bedeutung_getroffen": 4,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Feuer in Schlucht, Rauch → Hölle",
+      "Feuer in Grube, Rauch → Hölle",
+      "Feuer zwischen Felsen → Hölle",
+      "Feuer zwischen Felsen, Rauch → Hölle"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "32px_umriss": {
+     "n": 4,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Wolke über Feuer → Vernichtung, Rauch",
+      "Baum zwischen Felsen → Garten Gethsemane",
+      "Baum zwischen Felsen → Wüste",
+      "Rauch über Feuer → Zerstörung"
+     ],
+     "bewerter": "Zerstörung statt Hölle; teils Baum zwischen Felsen gesehen"
+    },
+    "32px_zelle": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Feuer zwischen Felsen → Hölle",
+      "Feuer zwischen Felsen, Rauch → Hölle, Gericht"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "160px": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Feuer zwischen Felsen → Hölle",
+      "Feuer in Felsschlucht → Hölle"
+     ],
+     "bewerter": "keine Fehldeutung"
+    }
+   }
+  },
+  "FIG-ZEICHEN-VERFOLGEN@1": {
+   "7a": {
+    "32px_allein": {
+     "n": 4,
+     "bedeutung_getroffen": 4,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Mann schlägt Fliehenden → Verfolgung, Gewalt",
+      "Mann schlägt Fliehenden → Mord, Verfolgung",
+      "Mann verfolgt Mann → Verfolgung",
+      "Mann mit Stock verfolgt Mann → Verfolgung"
+     ],
+     "bewerter": "teils als Schlagen gelesen (Gewalt/Mord)"
+    },
+    "32px_umriss": {
+     "n": 4,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 1,
+     "antworten": [
+      "Mann schlägt Fliehenden → Mord, Kain",
+      "Person schlägt Person → Mord, Totschlag",
+      "Zwei kämpfende Figuren → Mord",
+      "zwei Kämpfende → Mord"
+     ],
+     "bewerter": "als Kampf gelesen, als Mord gedeutet"
+    },
+    "32px_zelle": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Mann mit Stock jagt Mann → Verfolgung",
+      "Mann jagt Mann mit Stock → Verfolgung"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "160px": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Mann jagt Mann → Verfolgung",
+      "Mann mit Stock jagt Mann → Verfolgung"
+     ],
+     "bewerter": "keine Fehldeutung"
+    }
+   }
+  },
+  "FIG-ZEICHEN-TOTENKLAGE@1": {
+   "7a": {
+    "32px_allein": {
+     "n": 4,
+     "bedeutung_getroffen": 4,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Person mit erhobenen Armen → Klage, Verzweiflung",
+      "Person mit erhobenen Armen → Klage, Verzweiflung",
+      "Person hebt Arme → Klage",
+      "Person mit erhobenen Armen → Klage, Verzweiflung"
+     ],
+     "bewerter": "Weinen nicht erkannt, Verzweiflung"
+    },
+    "32px_umriss": {
+     "n": 4,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Person, Hände am Kopf → Trauer, Klage",
+      "Person mit erhobenen Armen → Klage, Trauer",
+      "Person mit Händen am Kopf → Trauer",
+      "Person, Hände am Kopf → Trauer"
+     ],
+     "bewerter": "teils nur Trauer ohne laute Klage"
+    },
+    "32px_zelle": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 0,
+     "antworten": [
+      "Person mit erhobenen Armen → Klage, Trauer",
+      "Person mit erhobenen Armen → Klage, Trauer"
+     ],
+     "bewerter": "Weinen nicht erkannt, nur «erhobene Arme» gesehen"
+    },
+    "160px": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Person mit erhobenen Armen → Klage",
+      "Person mit erhobenen Armen → Klage, Verzweiflung"
+     ],
+     "bewerter": "Weinen nicht erkannt, nur erhobene Arme"
+    }
+   }
+  },
+  "FIG-ZEICHEN-HASS@1": {
+   "7a": {
+    "32px_allein": {
+     "n": 4,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Zwei abgewandte Köpfe → Streit, Trennung",
+      "Zwei Personen Rücken an Rücken → Streit, Trennung",
+      "Zwei Menschen Rücken an Rücken → Streit",
+      "Zwei Menschen → Menschen, Paar"
+     ],
+     "bewerter": "Streit/Trennung statt Hass"
+    },
+    "32px_umriss": {
+     "n": 4,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 4,
+     "antworten": [
+      "zwei Personen → Menschen, Volk",
+      "Zwei Personen → Menschen, Volk",
+      "Zwei Personen → Menschen",
+      "zwei Personen → Menschen"
+     ],
+     "bewerter": "nur zwei Personen gesehen, als Menschen/Volk gedeutet"
+    },
+    "32px_zelle": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Zwei abgewandte Personen → Hass, Streit",
+      "Zwei abgewandte Personen → Streit, Hass"
+     ],
+     "bewerter": "keine Fehldeutung; zerbrochenes Herz nicht erwähnt"
+    },
+    "160px": {
+     "n": 2,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Zwei abgewandte Köpfe → Streit, Trennung",
+      "Zwei abgewandte Köpfe → Streit, Entzweiung"
+     ],
+     "bewerter": "Streit/Trennung statt Hass"
+    }
+   }
+  },
+  "FIG-ZEICHEN-TOETEN@2": {
+   "7a": {
+    "32px_allein": {
+     "n": 4,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Mann wirft Stein auf Person → Steinigung",
+      "Mann wirft Stein auf Person → Steinigung",
+      "Mann wirft Stein → Steinigung",
+      "Mann wirft Stein auf Person → Steinigung"
+     ],
+     "bewerter": "Steinigung statt töten/Mord"
+    },
+    "32px_umriss": {
+     "n": 4,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Person wirft Stein → Steinigung",
+      "Person wirft Stein → Steinigung",
+      "Figur schlägt Kniende → Strafe",
+      "Person schlägt Kniende → Gewalt"
+     ],
+     "bewerter": "als Steinigung oder Strafe gelesen"
+    },
+    "32px_zelle": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Mann schlägt mit Stein → Mord",
+      "Mann schlägt mit Stein → Mord, Gewalt"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "160px": {
+     "n": 2,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Mann wirft Stein → Steinigung",
+      "Mann wirft Stein → Steinigung"
+     ],
+     "bewerter": "Steinigung statt töten/Mord"
+    }
+   },
+   "7b": {
+    "32px_allein": {
+     "n": 4,
+     "bedeutung_getroffen": 4,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Mann schlägt mit Keule → Totschlag",
+      "Mann schlägt mit Keule → erschlagen",
+      "Mann schlägt mit Keule → Totschlag",
+      "Mann mit Keule, fallender Mann → Totschlag"
+     ],
+     "bewerter": "Keine Fehldeutung"
+    },
+    "32px_umriss": {
+     "n": 4,
+     "bedeutung_getroffen": 3,
+     "bild_erkannt": 3,
+     "antworten": [
+      "Person schlägt Kniende → Schlagen, Gewalt",
+      "Person mit erhobenem Gegenstand → Totschlag, Mord",
+      "Person schlägt Kniende → Töten",
+      "Person mit erhobener Keule → Angriff, Mord"
+     ],
+     "bewerter": "Opfer teils nicht gesehen; einmal nur «schlagen/Gewalt»"
+    },
+    "32px_zelle": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Person schlägt mit Keule → Totschlag",
+      "Person mit Keule, Opfer → Totschlag"
+     ],
+     "bewerter": "keine Fehldeutung, «Totschlag»"
+    },
+    "160px": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Mann schlägt mit Stein → Totschlag",
+      "Mann schlägt mit Keule → Totschlag"
+     ],
+     "bewerter": "Keule wird einmal als Stein gesehen"
+    }
+   }
+  },
+  "FIG-ZEICHEN-HASS@2": {
+   "7a": {
+    "32px_allein": {
+     "n": 4,
+     "bedeutung_getroffen": 4,
+     "bild_erkannt": 4,
+     "antworten": [
+      "zwei streitende Männer → Streit, Feindschaft",
+      "zwei streitende Männer → Streit, Feindschaft",
+      "zwei grimmige Männer → Feindschaft, Streit",
+      "Zwei Männer, Blick abgewandt → Streit, Feindschaft"
+     ],
+     "bewerter": "Streit/Feindschaft (Feindschaft als gleichwertig)"
+    },
+    "32px_umriss": {
+     "n": 4,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Zwei Personen → Gemeinschaft",
+      "Zwei Personen → Menschen",
+      "zwei Personen → Menschen, Gemeinschaft",
+      "zwei Personen → Gemeinschaft"
+     ],
+     "bewerter": "als Gemeinschaft gelesen, das Gegenteil von Hass"
+    },
+    "32px_zelle": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Zwei wütende Gesichter → Hass",
+      "zwei böse blickende Personen → Hass, Feindschaft"
+     ],
+     "bewerter": "keine Fehldeutung; die abgewandten Rücken werden kaum erwähnt"
+    },
+    "160px": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Zwei finster blickende Männer → Feindschaft",
+      "zwei finstere Männer → Feinde, Böse"
+     ],
+     "bewerter": "Feindschaft, Herz nicht genannt"
+    }
+   }
+  },
+  "FIG-ZEICHEN-TOETEN-SCHWERT@1": {
+   "7b": {
+    "32px_allein": {
+     "n": 4,
+     "bedeutung_getroffen": 4,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Mann mit Messer, Mann → Mord",
+      "Mann mit Dolch, Fallender → Mord",
+      "Mann mit Schwert, Fliehender → töten",
+      "Mann mit Messer, Mann → töten"
+     ],
+     "bewerter": "Schwert wird als Messer oder Dolch gesehen; zweimal fehlt die Tat ganz"
+    },
+    "32px_umriss": {
+     "n": 4,
+     "bedeutung_getroffen": 3,
+     "bild_erkannt": 3,
+     "antworten": [
+      "Person mit Messer, Kniender → ermorden, Kain und Abel",
+      "Person mit Messer, Tier → Opfer, schlachten",
+      "Person mit Messer, Liegender → Mord",
+      "Person mit Dolch, Kniender → töten"
+     ],
+     "bewerter": "Schwert als Messer/Dolch gesehen; einmal als Tieropfer/Schlachten gelesen"
+    },
+    "32px_zelle": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Mann mit Messer, Opfer → Mord",
+      "Mann mit Messer, Opfer → Mord"
+     ],
+     "bewerter": "Schwert wird als Messer gelesen, Szene und Bedeutung «Mord» stimmen"
+    },
+    "160px": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Mann mit erhobenem Messer → Mord",
+      "Mann mit erhobenem Messer → töten"
+     ],
+     "bewerter": "Schwert wird als Messer gesehen, das fallende Opfer wird nicht erwähnt"
+    }
+   }
+  },
+  "FIG-OBJ-BROT": {
+   "7b": {
+    "32px_allein": {
+     "n": 12,
+     "bedeutung_getroffen": 12,
+     "bild_erkannt": 12,
+     "antworten": [
+      "Brot → Brot, Nahrung",
+      "Brotlaib → Brot",
+      "Brotlaib → Brot",
+      "Brot → Brot",
+      "Brotlaib → Brot",
+      "Brotlaib → Brot",
+      "Brotlaib → Brot",
+      "Brotlaib → Brot, Nahrung",
+      "Brotlaib → Brot",
+      "Brotlaib → Brot",
+      "Brotlaib → Brot",
+      "Brotlaib → Brot"
+     ],
+     "bewerter": "Keine Fehldeutung"
+    },
+    "32px_umriss": {
+     "n": 12,
+     "bedeutung_getroffen": 3,
+     "bild_erkannt": 1,
+     "antworten": [
+      "Hügel → Grab, Erde",
+      "schwarze Halbkugel → Hügel, Grab",
+      "Grabhügel → Grab",
+      "schwarzer Hügel → Grab",
+      "Hügel → Grab",
+      "Erdhügel → Grab",
+      "Halbrunde schwarze Form → Brot, Hügel",
+      "Brotlaib → Brot",
+      "Hügel → Grab",
+      "Schwarze Halbkugel → Brot",
+      "Schwarze Halbkugel → Grab",
+      "Schwarzer Hügel → Grab"
+     ],
+     "bewerter": "als schwarzer Hügel bzw. Grabhügel gelesen, also «Grab»"
+    },
+    "32px_zelle": {
+     "n": 6,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 6,
+     "antworten": [
+      "Brotlaib → Nahrung",
+      "Brotlaib → Nahrung",
+      "Brotlaib → Nahrung",
+      "Brotlaib → Nahrung",
+      "Brotlaib → Brot",
+      "Brotlaib → Brot, Nahrung"
+     ],
+     "bewerter": "meist nur allgemein «Nahrung» statt «Brot»"
+    },
+    "160px": {
+     "n": 6,
+     "bedeutung_getroffen": 6,
+     "bild_erkannt": 6,
+     "antworten": [
+      "Brotlaib → Brot, Nahrung",
+      "Brotlaib → Brot",
+      "Brotlaib → Brot",
+      "Brotlaib → Brot",
+      "Brotlaib → Brot",
+      "Brotlaib → Brot"
+     ],
+     "bewerter": "keine Fehldeutung"
+    }
+   }
+  },
+  "FIG-OBJ-SCHWERT": {
+   "7b": {
+    "32px_allein": {
+     "n": 12,
+     "bedeutung_getroffen": 9,
+     "bild_erkannt": 12,
+     "antworten": [
+      "Schwert → Schwert, Gewalt",
+      "Schwert → Gewalt",
+      "Schwert → Schwert",
+      "Schwert → Schwert",
+      "Schwert → Gewalt",
+      "Schwert → Gewalt, Krieg",
+      "Schwert → Schwert",
+      "Schwert → Schwert, Krieg",
+      "Schwert → Schwert",
+      "Schwert → Schwert, Gewalt",
+      "Schwert → Schwert",
+      "Schwert → Schwert, Gewalt"
+     ],
+     "bewerter": "Wird abstrakt als «Gewalt» oder «Krieg» gelesen statt als Gegenstand Schwert"
+    },
+    "32px_umriss": {
+     "n": 12,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 12,
+     "antworten": [
+      "Schwert → Krieg, Gewalt",
+      "Schwert → Schwert, Krieg",
+      "Schwert → Todesstrafe",
+      "Schwert → Schwert",
+      "Schwert → Tod",
+      "Schwert → Strafe, Tod",
+      "Schwert → Gewalt, Krieg",
+      "Schwert → Krieg",
+      "Schwert → Strafe, Tod",
+      "Schwert → Strafe, Krieg",
+      "Schwert → Tötung",
+      "Schwert → Strafe, Krieg"
+     ],
+     "bewerter": "Abbild immer richtig; als Symbol für Krieg, Strafe oder Tod gedeutet statt als Gegenstand Schwert"
+    },
+    "32px_zelle": {
+     "n": 6,
+     "bedeutung_getroffen": 0,
+     "bild_erkannt": 6,
+     "antworten": [
+      "Schwert → Gewalt",
+      "Schwert → Gewalt, Krieg",
+      "Schwert → Gewalt",
+      "Schwert → Gewalt",
+      "Schwert → Gewalt",
+      "Schwert → Gewalt, Krieg"
+     ],
+     "bewerter": "Gegenstand erkannt, aber als Sinnbild «Gewalt/Krieg» gedeutet statt als Schwert selbst"
+    },
+    "160px": {
+     "n": 6,
+     "bedeutung_getroffen": 3,
+     "bild_erkannt": 6,
+     "antworten": [
+      "Schwert → Gewalt, Krieg",
+      "Schwert → Schwert",
+      "Schwert → Schwert",
+      "Schwert → Schwert",
+      "Schwert → Gewalt",
+      "Schwert → Gewalt"
+     ],
+     "bewerter": "wird als abstrakte «Gewalt» gedeutet statt als Gegenstand Schwert"
+    }
+   }
+  },
+  "FIG-ZEICHEN-STREIT": {
+   "7b": {
+    "32px_allein": {
+     "n": 12,
+     "bedeutung_getroffen": 12,
+     "bild_erkannt": 12,
+     "antworten": [
+      "Zwei streitende Personen → Streit",
+      "Zwei Streitende mit Sprechblasen → Streit",
+      "Zwei Personen, Sprechblasen, Blitz → Streit",
+      "zwei Personen, Sprechblasen, Blitz → Streit",
+      "Zwei Personen, Blitz → Streit",
+      "Zwei Personen mit Sprechblasen → Streit",
+      "Zwei Personen, Blitz, Schilder → Streit",
+      "Zwei Personen, Blitz → Streit",
+      "Zwei Personen, Blitz → Streit",
+      "Zwei Personen, Blitz → Streit",
+      "Zwei Personen, Blitz → Streit",
+      "Zwei Personen mit Sprechblasen, Blitz → Streit"
+     ],
+     "bewerter": "Keine Fehldeutung"
+    },
+    "32px_umriss": {
+     "n": 12,
+     "bedeutung_getroffen": 12,
+     "bild_erkannt": 12,
+     "antworten": [
+      "zwei Personen, Blitz → Streit, Feindschaft",
+      "Zwei Personen, Blitz → Streit",
+      "Zwei Personen, Blitz → Streit",
+      "zwei Personen, Sprechblasen, Blitz → Streit",
+      "Zwei Personen, Blitz → Streit",
+      "Zwei Personen, Blitz → Streit, Zorn",
+      "Zwei Personen, Blitz → Streit, Konflikt",
+      "Zwei Personen, Blitz → Streit",
+      "Zwei Personen, Blitz → Streit",
+      "Zwei Personen, Blitz, Sprechblasen → Streit",
+      "Zwei Personen mit Blitz → Streit",
+      "Zwei Personen, Blitz, Sprechblasen → Streit"
+     ],
+     "bewerter": "keine Fehldeutung"
+    },
+    "32px_zelle": {
+     "n": 6,
+     "bedeutung_getroffen": 6,
+     "bild_erkannt": 6,
+     "antworten": [
+      "Zwei Personen, Blitz → Streit",
+      "Zwei Personen mit Schildern, Blitz → Streit",
+      "Zwei Personen mit Blitz → Streit",
+      "Zwei Personen, Blitz → Streit",
+      "Zwei Personen mit Blitz → Streit",
+      "Zwei Personen, Blitz, Sprechblasen → Streit"
+     ],
+     "bewerter": "keine Fehldeutung; einmal kommen Schilder dazu, die nicht gezeichnet sind"
+    },
+    "160px": {
+     "n": 6,
+     "bedeutung_getroffen": 6,
+     "bild_erkannt": 6,
+     "antworten": [
+      "Zwei Personen mit Sprechblasen, Blitz → Streit",
+      "Zwei Personen, Sprechblasen, Blitz → Streit",
+      "Zwei Personen mit Sprechblasen, Blitz → Streit",
+      "Zwei Personen, Blitz → Streit",
+      "Zwei Personen, Sprechblasen, Blitz → Streit",
+      "Zwei Personen, Sprechblasen, Blitz → Streit"
+     ],
+     "bewerter": "keine Fehldeutung"
+    }
+   }
+  },
+  "FIG-ZEICHEN-OHRFEIGE": {
+   "7b": {
+    "32px_allein": {
+     "n": 12,
+     "bedeutung_getroffen": 11,
+     "bild_erkannt": 12,
+     "antworten": [
+      "Hand schlägt Gesicht → Ohrfeige, Schlag",
+      "Hand schlägt ins Gesicht → Backenstreich",
+      "Hand schlägt Gesicht → Ohrfeige",
+      "Hand schlägt Gesicht → Ohrfeige",
+      "Hand schlägt Gesicht → Ohrfeige",
+      "Hand schlägt Gesicht → Ohrfeige, Demütigung",
+      "Hand schlägt Gesicht → Ohrfeige",
+      "Ohrfeige ins Gesicht → Schlag, Demütigung",
+      "Hand schlägt Gesicht → Ohrfeige",
+      "Hand schlägt Gesicht → Ohrfeige, Schlag",
+      "Hand schlägt Gesicht → Ohrfeige",
+      "Hand schlägt Gesicht → Ohrfeige"
+     ],
+     "bewerter": "Einmal nur allgemein «Schlag, Demütigung» statt Ohrfeige"
+    },
+    "32px_umriss": {
+     "n": 12,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 6,
+     "antworten": [
+      "Hand schlägt Kopf → schlagen, Strafe",
+      "Hand an Kopf → Schlag, Trauer",
+      "Hand wirft Stein → Steinigung",
+      "Hand mit rundem Stein → steinigen",
+      "Hand an Kopf → Ohrfeige",
+      "Hand bedeckt Kopf → Trauer, Scham",
+      "Hand an Kopf → Schlag, Schmerz",
+      "Hand am Kopf → Trauer",
+      "Hand stößt Kugel → Steinigung",
+      "Hand an Kugel → Stein, Steinigung",
+      "Hand an Kopf → Ohrfeige",
+      "Hand am Stein → Steinigung"
+     ],
+     "bewerter": "Wange als Stein oder Kugel gesehen, also «Steinigung»; sonst als Trauer (Hand am Kopf) gelesen"
+    },
+    "32px_zelle": {
+     "n": 6,
+     "bedeutung_getroffen": 5,
+     "bild_erkannt": 6,
+     "antworten": [
+      "Hand ohrfeigt Gesicht → Ohrfeige, Gewalt",
+      "Hand schlägt Gesicht → Ohrfeige",
+      "Hand schlägt Gesicht → Ohrfeige",
+      "Ohrfeige ins Gesicht → Schlagen",
+      "Hand ohrfeigt Gesicht → Ohrfeige",
+      "Hand schlägt Gesicht → Ohrfeige, Gewalt"
+     ],
+     "bewerter": "einmal nur allgemein «Schlagen» statt Ohrfeige oder Kränkung"
+    },
+    "160px": {
+     "n": 6,
+     "bedeutung_getroffen": 3,
+     "bild_erkannt": 6,
+     "antworten": [
+      "Hand schlägt Wange → Andere Wange hinhalten",
+      "Hand schlägt Wange → Ohrfeige",
+      "Ohrfeige ins Gesicht → Schlag auf die Wange",
+      "Ohrfeige ins Gesicht → Schlag",
+      "Hand schlägt Gesicht → Ohrfeige",
+      "Ohrfeige ins Gesicht → Schlagen"
+     ],
+     "bewerter": "zu allgemein als «Schlag/Schlagen» gedeutet; einmal als «andere Wange hinhalten»"
+    }
+   }
+  },
+  "FIG-ZEICHEN-TOETEN-SCHWERT@2": {
+   "7b": {
+    "32px_allein": {
+     "n": 4,
+     "bedeutung_getroffen": 4,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Mann schwingt Schwert → Mord",
+      "Mann ersticht Person → Mord",
+      "Mann sticht mit Schwert → Mord",
+      "Mann schwingt Schwert → Töten, Mord"
+     ],
+     "bewerter": "Ausholen wird als Zustechen gesehen; Bedeutung wird getroffen"
+    },
+    "32px_umriss": {
+     "n": 4,
+     "bedeutung_getroffen": 3,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Person mit Stab, Kniende → Strafe",
+      "Person mit Messer, Kniender → Mord, Opfer",
+      "Person mit Gegenstand, kniende Person → Hinrichtung, Tötung",
+      "Person mit Messer, Liegender → Töten"
+     ],
+     "bewerter": "Schwert als Stab/Messer gesehen; einmal nur als «Strafe» gelesen"
+    },
+    "32px_zelle": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Mensch hebt Messer gegen Menschen → Mord",
+      "Mann mit Messer, Opfer → Mord"
+     ],
+     "bewerter": "Schwert wird als Messer gelesen"
+    },
+    "160px": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Mann sticht mit Messer → Mord",
+      "Mann sticht mit Messer → Mord"
+     ],
+     "bewerter": "Schwert wird als Messer gesehen"
+    }
+   }
+  },
+  "FIG-ZEICHEN-TOETEN-SCHWERT@3": {
+   "7b": {
+    "32px_allein": {
+     "n": 4,
+     "bedeutung_getroffen": 4,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Mann sticht Person nieder → Mord",
+      "Mann sticht Liegenden → töten, ermorden",
+      "Mann sticht Liegenden → Mord",
+      "Mann mit Messer, fallender Mann → Mord"
+     ],
+     "bewerter": "Fallender wird als Liegender gesehen, Schwert einmal als Messer"
+    },
+    "32px_umriss": {
+     "n": 4,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 4,
+     "antworten": [
+      "Person schlägt Liegenden → Totschlag",
+      "Person schlägt liegende Person → Schlagen, Gewalt",
+      "Person schlägt Kniende → Schlagen",
+      "Person schlägt Liegenden → Totschlag, Kain"
+     ],
+     "bewerter": "Schwert nicht erkannt; als «schlagen» bzw. Gewalt gelesen statt töten"
+    },
+    "32px_zelle": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Person sticht mit Messer zu → Mord",
+      "Person mit Messer, Opfer → Mord"
+     ],
+     "bewerter": "Schwert wird als Messer gelesen"
+    },
+    "160px": {
+     "n": 2,
+     "bedeutung_getroffen": 2,
+     "bild_erkannt": 2,
+     "antworten": [
+      "Mann sticht mit Messer → Mord",
+      "Mann mit erhobenem Messer → Mord"
+     ],
+     "bewerter": "Schwert wird als Messer gesehen"
+    }
+   }
+  }
+ },
+ "lehre_de": [
+  "Wo das Bild eine bekannte Szene ist (Leichnam auf der Bahre, Feuer in der Schlucht, Verfolgung), tragen schon einfache Stufen (100 %).",
+  "Ein Stein in der erhobenen Hand liest sich als «Steinigung», nicht als «töten»; eine Keule als «Kain und Abel»; das Schwert als «Mord».",
+  "Ohne Tränen werden erhobene Hände als «Verzweiflung» gelesen; die Tränen machen daraus die Klage.",
+  "Das zerbrochene Herz liest sich als Kummer, nicht als Hass; Hass trägt die Abwendung mit bösem Blick.",
+  "Die Rauchwolke über der Gehenna machte den Umriss zur «brennenden Stadt»; ohne sie bleibt die Schlucht lesbar.",
+  "Vorhandene Zeichen: das Grab (FIG-ZEICHEN-TOD) wird immer als Grab gesehen, nie als «sterben» (0/16); die Trauer (ein Tropfen) als «Wassertropfen», als Umriss «Blut» (0/16 Bild erkannt)."
+ ],
+ "grenzen_de": "KI-Instanzen kennen die Bibel und deuten aus wenigen Merkmalen; der Test ersetzt keine Prüfung mit Leserinnen und Lesern, besonders nicht bei belastenden Bildern (Tod, Gewalt). Kleine Zahlen je Stufe (4 bzw. 2 Antworten). Die ganzen Bilder mit den neuen Zeichen sind nur in Sichtprüfung, nicht im Blindtest ohne Legende geprüft.",
+ "geaendert_de": "Neu im Lexikon und in bildsymbole_daten/TOD.json: VERSTORBEN, TOTENKLAGE, TOETEN, GEHENNA, VERFOLGEN. Neu gezeichnet: HASS (bildsymbole_daten/1JN.json). TOD erhält eine Regel zur Abgrenzung. bilder_anime.py: Kinder mit Ausdruck «tot» ohne offene Kinderaugen (das gestorbene Mädchen in Mk 5,40 hatte offene Augen)."
+}

@@ -393,6 +393,35 @@ Enges und weites Tor haben Türme und Zinnen (ohne sie als Mauer oder Tür geles
 Offen: Salz, Splitter, Kammer, Becher leer, Freude, Licht (32 px nicht erkannt, nicht Teil dieser Runde); Test der ganzen
 Strukturbilder mit den neuen Zeichen.
 
+### Runde 7 (Tod und Böses, 2026-10-24)
+
+Anlass (Andi Neck, 2026-10-24): «Tod und Sterben werden in den Bildern stark ausgeblendet und Symbole weggelassen. Das
+verzerrt das Bild.» Regel dazu in BILDSPRACHE.md («Tod und Böses nicht ausblenden»). Gemessen wie Runde 6c
+(`zeichen_test.py --frage abbild --verteilen`): 32 px allein je Stufe vier Instanzen, als Umriss vier, in der Zelle und bei
+160 px je zwei; Bewertung durch eine weitere Instanz. Daten: `reports/zeichen-blindtest-2026-10-24-runde7.json`.
+
+| Zeichen | vorher | Stufe 1 · 2 · 3 (32 px allein) | Umriss | gewählt | gelesen als | Urteil |
+|---|---|---|---|---|---|---|
+| gestorben / Verstorbener (neu) | Grab (Tod) 0/16 «Grab» | 8/8 · 4/4 · 3/4 | 8/8 · 4/4 · 4/4 | 2 | «Leichnam auf Bahre → Tod» | erkannt |
+| Totenklage (neu) | – | 4/4 · 8/8 · 4/4 | 2/4 · 7/8 · 3/4 | 2 | «Weinende Person, Arme erhoben → Klage, Trauer» | erkannt |
+| töten / Mord (neu, mit Stein) | – | 0/4 · 0/4 · 0/8 | 2/4 · 0/4 · 7/8 | – | «Steinigung» | verworfen |
+| töten / Mord (mit Keule) | – | 2/4 · 4/4 · 2/4 | 3/4 · 3/4 · 3/4 | – | «Totschlag», «Kain und Abel» | verworfen |
+| töten / Mord (mit Schwert) | – | 4/4 · 4/4 · 4/4 | 3/4 · 3/4 · 2/4 | 2 | «Mann schwingt Schwert → Mord» | erkannt |
+| Feuer der Hölle (Gehenna, neu) | Flamme (Feuer) | 8/8 · 4/4 · 4/4 | 4/8 · 0/4 · 0/4 | 1 | «Feuer in Schlucht → Hölle» | erkannt |
+| verfolgen (neu) | – | 4/4 · 8/8 · 4/4 | 0/4 · 8/8 · 1/4 | 2 | «Mann verfolgt Fliehenden → Verfolgung» | erkannt |
+| Hass (neu gezeichnet) | zerbrochenes Herz 0/4 «Kummer» | 0/4 · 4/4 · 2/4 | 0/4 · 0/4 · 0/4 | 2 | «zwei grimmige Männer, abgewandt → Feindschaft» | erkannt (Umriss nicht) |
+
+Vorhandene Zeichen in derselben Messung (32 px allein, 16 Antworten): Gericht (Waage), krank, Feuer, Kreuz, Gefängnis je 16/16;
+das Böse 10/16 (meist «Sünde»), Sünde 13/16 («Unreinheit»), Wolf als Bild 16/16 (Bedeutung «falscher Prophet, Feind»),
+Dämon 2/16 (Wortzeichen); Grab für «Tod» 0/16 (immer «Grab»); Trauer (Tropfen) 0/16 als Bild erkannt («Wassertropfen»,
+als Umriss «Blut»).
+
+Lehren: Ein Stein in der erhobenen Hand liest sich als Steinigung, eine Keule als Kain und Abel, das Schwert als Mord. Ohne
+Tränen werden erhobene Hände als Verzweiflung gelesen. Das zerbrochene Herz liest sich als Kummer; Hass trägt die Abwendung
+mit bösem Blick. Die Rauchwolke über der Gehenna machte den Umriss zur brennenden Stadt. Für «er starb», «gestorben» steht
+künftig der Verstorbene auf der Bahre, das Grab für «begraben» und «Grab». Offen: die Trauer als Tropfen (in Zellen nicht als
+Trauer gesehen; in Szenen bleiben es Tränen im Gesicht), Hass als Umriss, ein Test der ganzen Bilder ohne Legende.
+
 ### Reihenfolge der Überarbeitung
 
 1. Die 20 meistverwendeten schwachen Zeichen (rund die Hälfte aller schwachen Verwendungen).

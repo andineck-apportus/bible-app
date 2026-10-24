@@ -78,6 +78,11 @@ Was gut funktioniert: die festen Erkennungszeichen (Gott, Jesus, Geist) und der 
 10. **Die Bildaussage trifft das Thema.** Wer das Bild sieht, erkennt im Kern, worum es geht: Das Thema der Stelle steht im
     Stichwortband oder in der Sprechblase (z. B. «Fasten im Verborgenen», nicht nur «Wasche dein Gesicht»), und Zeichen
     müssen ohne Legende verständlich sein. Ein schwer verständliches Zeichen wird durch Szene oder Wort ersetzt.
+11. **Tod und Böses nicht ausblenden** (Andi Neck, 2026-10-24): Tod, Sterben, Trauer, Böses, Sünde, Gericht und Gewalt
+    werden gezeigt, wo der Text sie nennt – nicht weggelassen, nicht beschönigt und nicht ausgemalt (keine Wunden, kein Blut
+    im Detail, keine Verherrlichung, keine Schockbilder). Weglassen nur mit Grund in `omitted_de` bzw. `note_de`
+    (BILDSPRACHE.md, «Tod und Böses nicht ausblenden»). Bei der Sichtprüfung eigens fragen: Kommt im Text jemand um, wird
+    getötet, verfolgt, gerichtet oder betrauert – und sieht man es im Bild?
 
 ## Ablauf je Stelle
 
@@ -96,8 +101,9 @@ Was gut funktioniert: die festen Erkennungszeichen (Gott, Jesus, Geist) und der 
      entstehen nur noch nach der Strukturanalyse.
    - **Anordnung im Browser** (`scripts/authoring/pruefe_bilder.py`, de und gsw): Text ragt nicht über die Zellen der
      Strukturbilder, Beschriftungen von Pfeilen und Zweigen überdecken nichts (Hinweis Andi Neck 2026-10-24).
-   - **Sichtprüfung der Anordnung** (Leitlinie 9 und 10): keine Blase und kein Pfeil über Gesicht, Zeichen oder Gegenstand;
-     Thema der Stelle im Bild genannt; Gedanken als Wolke erkennbar.
+   - **Sichtprüfung der Anordnung** (Leitlinie 9 bis 11): keine Blase und kein Pfeil über Gesicht, Zeichen oder Gegenstand;
+     Thema der Stelle im Bild genannt; Gedanken als Wolke erkennbar; Tod, Trauer, Gewalt, Böses und Gericht, die der Text
+     nennt, sind zu sehen oder ihr Fehlen ist begründet.
    - **Worte im Bild sprachlich prüfen** (Hinweis Andi Neck 2026-10-23): Stichwortband und Sprechblasen, in allen Sprachen,
      müssen für sich allein verständlich und grammatisch richtig sein, keine Satzfragmente. Prüfung durch eine getrennte
      KI-Instanz mit `scripts/authoring/bildworte.py`; Regeln in BILDAUFTRAEGE-ANLEITUNG.md («Worte im Bild»).
