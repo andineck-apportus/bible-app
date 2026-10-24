@@ -16,54 +16,312 @@
   "CORE-MAT-005-038-042",
   "CORE-MAT-005-043-048"
  ],
- "core_de": "Auf dem Berg preist Jesus die Armen im Geist, Trauernden, Barmherzigen und Verfolgten selig, nennt die Jünger Salz und Licht und fordert, das Gesetz erfüllend, eine Gerechtigkeit, die bis zur Feindesliebe reicht.",
+ "core_de": "Auf dem Berg preist Jesus acht Gruppen selig und sagt jeder zu, was sie erwartet, nennt die Jünger Salz der Erde und Licht der Welt, erklärt, er sei gekommen, Gesetz und Propheten zu erfüllen, und stellt in sechs Gegensätzen dem Gehörten sein «Ich aber sage euch» gegenüber, bis zur Feindesliebe und zum Ruf, vollkommen zu sein wie der himmlische Vater.",
  "mode": "speech",
  "voice": {
   "speaker": "FIG-JESUS",
   "addressee": "FIG-GRUPPE-JUENGER"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "collection",
+    "subtype": "Rede in Teilen (Teile verschieden gebaut)",
+    "range": "MAT.5.1-MAT.5.48",
+    "elements": [
+     {
+      "label": "Einleitung: Jesus sieht die Menschenmengen, setzt sich auf dem Berg, die Jünger treten zu ihm",
+      "ref": "MAT.5.1-MAT.5.2",
+      "role": "Einleitung"
+     },
+     {
+      "label": "Seligpreisungen: wer → was sie erwartet",
+      "ref": "MAT.5.3-MAT.5.12",
+      "role": "Reihe",
+      "child": "s2"
+     },
+     {
+      "label": "Bildworte: Salz der Erde und Licht der Welt",
+      "ref": "MAT.5.13-MAT.5.16",
+      "role": "Bildworte",
+      "child": "s3"
+     },
+     {
+      "label": "Grundsatz: nicht aufheben, sondern erfüllen",
+      "ref": "MAT.5.17-MAT.5.20",
+      "role": "Grundsatz",
+      "child": "s4"
+     },
+     {
+      "label": "Sechs Gegensätze: Ihr habt gehört … Ich aber sage euch",
+      "ref": "MAT.5.21-MAT.5.48",
+      "role": "Gegensätze",
+      "child": "s5"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Jesus",
+       "to": "seine Jünger, vor den Menschenmengen (5,1–2)"
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "LUK.6.20-LUK.6.36",
+       "kind": "Teilparallele in der Feldrede; nicht vermischen"
+      }
+     ]
+    },
+    "visual": "outline",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "series",
+    "subtype": "acht Seligpreisungen im Rahmen «Reich der Himmel» (5,3 und 5,10), Schlussglied an «ihr»",
+    "range": "MAT.5.3-MAT.5.12",
+    "elements": [
+     {
+      "label": "Selig sind die Armen im Geist → ihnen gehört das Reich der Himmel",
+      "ref": "MAT.5.3",
+      "role": "A: wer → Verheissung (Rahmen)",
+      "links": [
+       "MAT.5.10"
+      ]
+     },
+     {
+      "label": "Selig sind die Trauernden → sie werden getröstet werden",
+      "ref": "MAT.5.4",
+      "role": "wer → Verheissung"
+     },
+     {
+      "label": "Selig sind die Sanftmütigen → sie werden die Erde erben",
+      "ref": "MAT.5.5",
+      "role": "wer → Verheissung"
+     },
+     {
+      "label": "Selig sind, die nach der Gerechtigkeit hungern und dürsten → sie werden satt werden",
+      "ref": "MAT.5.6",
+      "role": "wer → Verheissung"
+     },
+     {
+      "label": "Selig sind die Barmherzigen → sie werden Barmherzigkeit erfahren",
+      "ref": "MAT.5.7",
+      "role": "wer → Verheissung"
+     },
+     {
+      "label": "Selig sind, die ein reines Herz haben → sie werden Gott sehen",
+      "ref": "MAT.5.8",
+      "role": "wer → Verheissung"
+     },
+     {
+      "label": "Selig sind, die Frieden stiften → sie werden Söhne Gottes genannt werden",
+      "ref": "MAT.5.9",
+      "role": "wer → Verheissung"
+     },
+     {
+      "label": "Selig sind, die wegen der Gerechtigkeit verfolgt worden sind → ihnen gehört das Reich der Himmel",
+      "ref": "MAT.5.10",
+      "role": "A': wer → Verheissung (Rahmen)",
+      "links": [
+       "MAT.5.3"
+      ]
+     },
+     {
+      "label": "Selig seid ihr, wenn man euch meinetwegen beschimpft und verfolgt → freut euch, denn euer Lohn ist gross in den Himmeln",
+      "ref": "MAT.5.11-MAT.5.12",
+      "role": "Schlussglied an «ihr»: Fall → Aufruf und Begründung"
+     }
+    ],
+    "features": {
+     "leitwort": [
+      {
+       "word": "Reich der Himmel",
+       "role": "verklammernd (5,3 und 5,10)"
+      }
+     ],
+     "pattern_break": [
+      {
+       "ref": "MAT.5.11-MAT.5.12",
+       "kind": "Wechsel von «die» zu «ihr»; längeres Glied mit «wenn» und Aufruf «Freut euch»"
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "parallel",
+    "subtype": "zwei parallele Bildworte",
+    "range": "MAT.5.13-MAT.5.16",
+    "elements": [
+     {
+      "label": "Ihr seid das Salz der Erde → wenn das Salz fad wird, taugt es zu nichts mehr",
+      "ref": "MAT.5.13",
+      "role": "Bildwort 1 mit Warnung"
+     },
+     {
+      "label": "Ihr seid das Licht der Welt → euer Licht soll leuchten, damit die Menschen eure guten Werke sehen und den Vater preisen",
+      "ref": "MAT.5.14-MAT.5.16",
+      "role": "Bildwort 2 mit Zweck"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   },
+   {
+    "id": "s4",
+    "pattern": "argument",
+    "subtype": "Grundsatz – Begründung – Folgerung – Zuspitzung",
+    "range": "MAT.5.17-MAT.5.20",
+    "elements": [
+     {
+      "label": "Ich bin nicht gekommen aufzuheben, sondern zu erfüllen",
+      "ref": "MAT.5.17",
+      "role": "These"
+     },
+     {
+      "label": "Kein Jota und kein Häkchen vergeht vom Gesetz",
+      "ref": "MAT.5.18",
+      "role": "Begründung"
+     },
+     {
+      "label": "Wer die kleinsten Gebote auflöst und so lehrt → der Kleinste; wer sie tut und lehrt → gross genannt",
+      "ref": "MAT.5.19",
+      "role": "Folgerung, zwei Zweige"
+     },
+     {
+      "label": "Wenn eure Gerechtigkeit nicht weit über die der Schriftgelehrten und Pharisäer hinausgeht → nicht ins Reich der Himmel",
+      "ref": "MAT.5.20",
+      "role": "Zuspitzung («denn»), nur Drohzweig"
+     }
+    ],
+    "visual": "arrows",
+    "basis": "text"
+   },
+   {
+    "id": "s5",
+    "pattern": "contrast",
+    "subtype": "Paarreihe: sechs Antithesen mit Schluss",
+    "range": "MAT.5.21-MAT.5.48",
+    "elements": [
+     {
+      "label": "Ihr habt gehört: Du sollst nicht töten | Ich aber sage euch: Wer seinem Bruder zürnt, wird dem Gericht verfallen; versöhne dich zuerst",
+      "ref": "MAT.5.21-MAT.5.26",
+      "role": "Paar: «Ihr habt gehört …» | «Ich aber sage euch …»"
+     },
+     {
+      "label": "Ihr habt gehört: Du sollst nicht ehebrechen | Ich aber sage euch: Wer eine Frau ansieht, um sie zu begehren, hat in seinem Herzen schon die Ehe gebrochen",
+      "ref": "MAT.5.27-MAT.5.30",
+      "role": "Paar: «Ihr habt gehört …» | «Ich aber sage euch …»"
+     },
+     {
+      "label": "Es ist aber gesagt worden: Wer seine Frau entlässt, soll ihr einen Scheidebrief geben | Ich aber sage euch: Wer sie entlässt, ausser wegen Unzucht, macht, dass mit ihr die Ehe gebrochen wird",
+      "ref": "MAT.5.31-MAT.5.32",
+      "role": "Paar: «Es ist aber gesagt worden …» | «Ich aber sage euch …»"
+     },
+     {
+      "label": "Ihr habt gehört: Du sollst keinen Meineid schwören | Ich aber sage euch: Ihr sollt überhaupt nicht schwören; eure Rede sei «Ja, ja», «nein, nein»",
+      "ref": "MAT.5.33-MAT.5.37",
+      "role": "Paar: «Ihr habt gehört …» | «Ich aber sage euch …»"
+     },
+     {
+      "label": "Ihr habt gehört: Auge um Auge und Zahn um Zahn | Ich aber sage euch: Ihr sollt dem Bösen nicht widerstehen; halte auch die andere Wange hin, lass auch den Mantel, geh zwei Meilen, gib dem, der dich bittet",
+      "ref": "MAT.5.38-MAT.5.42",
+      "role": "Paar: «Ihr habt gehört …» | «Ich aber sage euch …»"
+     },
+     {
+      "label": "Ihr habt gehört: Du sollst deinen Nächsten lieben und deinen Feind hassen | Ich aber sage euch: Liebt eure Feinde und betet für die, die euch verfolgen, damit ihr Söhne eures Vaters werdet",
+      "ref": "MAT.5.43-MAT.5.47",
+      "role": "Paar: «Ihr habt gehört …» | «Ich aber sage euch …»"
+     },
+     {
+      "label": "Ihr sollt vollkommen sein, wie euer himmlischer Vater vollkommen ist",
+      "ref": "MAT.5.48",
+      "role": "Schluss («also»)"
+     }
+    ],
+    "features": {
+     "leitwort": [
+      {
+       "word": "Ihr habt gehört … Ich aber sage euch",
+       "role": "gliedernd"
+      }
+     ],
+     "pattern_break": [
+      {
+       "ref": "MAT.5.31",
+       "kind": "3. Gegensatz mit kürzerer Einleitung «Es ist aber gesagt worden»"
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "LEV.19.18",
+       "kind": "«deinen Feind hassen» steht so nicht im Alten Testament"
+      }
+     ],
+     "interpretation": [
+      {
+       "ref": "MAT.5.48",
+       "note": "Letzter Satz der Reihe; dass er alle sechs Gegensätze abschliesst, ist verbreitete Deutung, der Text sagt es nicht ausdrücklich."
+      }
+     ]
+    },
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
-   "reference": "MAT.5.3-MAT.5.10",
-   "text_de": "Jesus preist die Armen im Geist, Trauernden, Sanftmütigen, Barmherzigen, Friedensstifter und Verfolgten selig.",
-   "reason_de": "Eröffnung der Rede und bekanntester Teil des Kapitels (Kriterium 2, 3 und 4).",
-   "recognition_de": "Jesus sitzt auf dem Berg und spricht zu den Jüngern; Wortband «Selig sind». Deutung für das Bild: die Seliggepriesenen als Bildzeichen neben dem Wortband.",
+   "reference": "MAT.5.3-MAT.5.12",
+   "text_de": "Jesus preist acht Gruppen selig, je mit ihrer Verheissung: die Armen im Geist (ihnen gehört das Reich der Himmel), die Trauernden (getröstet), die Sanftmütigen (die Erde erben), die nach der Gerechtigkeit hungern und dürsten (satt werden), die Barmherzigen (Barmherzigkeit erfahren), die ein reines Herz haben (Gott sehen), die Frieden stiften (Söhne Gottes genannt) und die wegen der Gerechtigkeit Verfolgten (ihnen gehört das Reich der Himmel); zuletzt die Jünger selbst, wenn man sie seinetwegen verfolgt (ihr Lohn ist gross in den Himmeln).",
+   "reason_de": "Eröffnung der Rede und bekanntester Teil des Kapitels (Kriterium 2, 3 und 4); die Reihe zählt als ein Moment, alle Paare stehen in structure.",
+   "recognition_de": "Feld 1: Raster der acht Seligpreisungen (Gruppe → Verheissung), darunter abgesetzt «Selig seid ihr»; darüber als Kopfzeile Jesus auf dem Berg mit den Jüngern.",
    "keywords": [
-    "Selig sind"
+    "Selig sind",
+    "Selig seid ihr"
    ]
   },
   {
-   "reference": "MAT.5.14-MAT.5.16",
-   "text_de": "Jesus nennt die Jünger das Licht der Welt, das auf den Leuchter gehört.",
-   "reason_de": "Bestimmt die Rolle der Jünger in der Welt (Kriterium 1); bekanntes Bild (Kriterium 4).",
-   "recognition_de": "Eine Lampe auf dem Leuchter statt unter dem Scheffel.",
+   "reference": "MAT.5.13-MAT.5.16",
+   "text_de": "Jesus nennt die Jünger das Salz der Erde – fades Salz taugt zu nichts mehr – und das Licht der Welt, das auf den Leuchter gehört; ihr Licht soll leuchten, damit die Menschen ihre guten Werke sehen und den Vater preisen.",
+   "reason_de": "Bestimmt die Rolle der Jünger in der Welt (Kriterium 1); zwei parallele Bildworte, bekannte Bilder (Kriterium 4).",
+   "recognition_de": "Feld 2, zweigeteilt: Salz | Lampe auf dem Leuchter statt unter dem Scheffel.",
    "keywords": [
+    "Salz der Erde",
     "Licht der Welt"
    ]
   },
   {
-   "reference": "MAT.5.17",
-   "text_de": "Jesus ist nicht gekommen, das Gesetz aufzuheben, sondern zu erfüllen.",
-   "reason_de": "Grundsatz, der die Gegenüberstellungen 5,21–48 trägt (Kriterium 1 und 2).",
-   "recognition_de": "Deutung für das Bild: Jesus hält die Schriftrolle von Gesetz und Propheten fest.",
+   "reference": "MAT.5.17-MAT.5.20",
+   "text_de": "Jesus ist nicht gekommen, das Gesetz aufzuheben, sondern zu erfüllen; kein Jota vergeht, wer die kleinsten Gebote auflöst, wird der Kleinste genannt, wer sie tut und lehrt, gross; und wenn die Gerechtigkeit der Jünger nicht weit über die der Schriftgelehrten und Pharisäer hinausgeht, kommen sie nicht ins Reich der Himmel.",
+   "reason_de": "Grundsatz des Kapitels, der den Gegensätzen vorausgeht (Kriterium 1 und 2).",
+   "recognition_de": "Feld 3: «aufheben» durchgestrichen, «erfüllen» hervorgehoben; Deutung für das Bild: Jesus hält die Schriftrolle von Gesetz und Propheten fest.",
    "keywords": [
-    "um zu erfüllen"
+    "um zu erfüllen",
+    "Gerechtigkeit"
    ]
   },
   {
-   "reference": "MAT.5.43-MAT.5.44",
-   "text_de": "Jesus stellt dem Hass auf den Feind entgegen: Liebt eure Feinde und betet für die, die euch verfolgen.",
-   "reason_de": "Höhepunkt und Schluss der Gegenüberstellungen «Ich aber sage euch» (Kriterium 2 und 3); steht stellvertretend für die Reihe.",
-   "recognition_de": "Ein Jünger betet mit offenen Händen für seine Verfolger.",
+   "reference": "MAT.5.21-MAT.5.48",
+   "text_de": "In sechs Gegensätzen stellt Jesus dem Gehörten sein «Ich aber sage euch» gegenüber: nicht töten – wer dem Bruder zürnt, verfällt dem Gericht, darum zuerst versöhnen; nicht ehebrechen – wer begehrend ansieht, hat im Herzen schon die Ehe gebrochen; Scheidebrief – wer seine Frau entlässt, ausser wegen Unzucht, macht, dass mit ihr die Ehe gebrochen wird; kein Meineid – überhaupt nicht schwören; Auge um Auge – dem Bösen nicht widerstehen; den Nächsten lieben und den Feind hassen – die Feinde lieben und für die Verfolger beten; zuletzt: vollkommen sein wie der himmlische Vater.",
+   "reason_de": "Längster Teil des Kapitels (Kriterium 3); die Paarreihe zählt als ein Moment, alle sechs Paare stehen in structure; Höhepunkt Feindesliebe (Kriterium 2 und 4).",
+   "recognition_de": "Feld 4: zwei Spalten «Ihr habt gehört» | «Ich aber sage euch» mit sechs Zeilen als kleine Zeichen (Brüder im Zorn, Herz, Scheidebrief, Schwurhand, andere Wange, Beten für Verfolger); darunter Band «vollkommen wie euer Vater».",
    "keywords": [
-    "Liebt eure Feinde"
+    "Ich aber sage euch",
+    "Liebt eure Feinde",
+    "vollkommen"
    ]
   }
  ],
  "omitted_de": [
-  "Salz der Erde (5,13) – Bildwort neben dem Licht, im Bild nur ein Feld möglich; das Lichtwort trägt das Ziel «Vater preisen»",
-  "Die Gegenüberstellungen zu Zorn, Ehebruch, Scheidung, Schwören und Vergeltung (5,21–42) – stehen im Abschnitt, im Kapitel vertreten durch ihren Höhepunkt, die Feindesliebe",
-  "Gerechtigkeit über die der Schriftgelehrten hinaus (5,20) – im Grundsatz «erfüllen» und in der Feindesliebe enthalten"
+  "Einzelheiten innerhalb der Gegensätze (Raka und Narr, Gegner auf dem Weg, Auge und Hand, die einzelnen Schwurformeln, Zöllner und Heiden) – stehen in den Abschnitten; im Kapitel je Gegensatz das Paar «Ihr habt gehört …» | «Ich aber sage euch …»",
+  "Stadt auf dem Berg, Jota und kleinste Gebote im Einzelnen (5,14; 5,18–19) – Teile der Bildworte und des Grundsatzes, in den Abschnitten vollständig"
  ],
  "persons": [
   "FIG-JESUS",
@@ -76,49 +334,54 @@
  "basis": [
   {
    "record": "CORE-MAT-005-001-012",
-   "fingerprint": "3ef4b30a1b2e09be"
+   "fingerprint": "677f38703bc8c4db"
   },
   {
    "record": "CORE-MAT-005-013-016",
-   "fingerprint": "1768cd1adb59ffcc"
+   "fingerprint": "4d9b98d98441f3f9"
   },
   {
    "record": "CORE-MAT-005-017-020",
-   "fingerprint": "9fe432837fd87839"
+   "fingerprint": "2ae20c4ef427a23c"
   },
   {
    "record": "CORE-MAT-005-021-026",
-   "fingerprint": "7b2f35c7eb381753"
+   "fingerprint": "4b9b137e02a28644"
   },
   {
    "record": "CORE-MAT-005-027-032",
-   "fingerprint": "bdf61079e26fad52"
+   "fingerprint": "382d405cce729506"
   },
   {
    "record": "CORE-MAT-005-033-037",
-   "fingerprint": "34e0ddf33822032f"
+   "fingerprint": "7371f71c6be06b1b"
   },
   {
    "record": "CORE-MAT-005-038-042",
-   "fingerprint": "9467130a20cd71b1"
+   "fingerprint": "66b209d1695b3801"
   },
   {
    "record": "CORE-MAT-005-043-048",
-   "fingerprint": "777099a70035c010"
+   "fingerprint": "eff3999a82b4c748"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Gegen den Text geprüft; Abweichungen vom Wortlaut bzw. ungekennzeichnete Deutungen wurden korrigiert.",
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Gliederung Einleitung – Seligpreisungen – Bildworte – Grundsatz – sechs Gegensätze übernimmt die Abschnitte (Regel 4). Mängel: Momente gaben nur die erste Verheissung der Reihe wieder (genau der Auslöser der Regel 1), der Grundsatz-Moment machte aus der Drohung 5,20 ein «muss» und liess 5,19 weg, die Gegensätze standen als «damals → jetzt» und «Zorn statt Töten».",
   "changes_de": [
-   "core_de: Deutung «die nichts vorzuweisen haben» durch die im Text genannten Gruppen ersetzt.",
-   "Moment 5,3–10, recognition_de: wie im Abschnitt – Zuhörer sind die Jünger, die Seliggepriesenen nur als gekennzeichnete Deutung."
+   "Moment 1: alle acht Verheissungen und das Schlussglied an «ihr» ausgeschrieben (Regel 1)",
+   "Moment 3: beide Zweige von 5,19 ergänzt und 5,20 als Bedingung mit Folge statt «muss … hinausgehen» (Regel 2)",
+   "Moment 4: Paare in der Textfolge «gehört – ich aber sage euch» statt «Zorn statt erst Töten …»; Moment 2 mit der Warnung zum faden Salz",
+   "s5: Labels und Rollen mit den Textformeln statt «damals → jetzt»; «wird dem Gericht verfallen»; 5. Paar mit allen vier Beispielen, 6. Paar mit Zweck «damit ihr Söhne eures Vaters werdet»; Schluss 5,48 als Deutung gekennzeichnet",
+   "s2: als Reihe mit Rahmenmarken A/A' und Leitwort «Reich der Himmel» wie im Abschnitt; Labels am Wortlaut («hungern und dürsten», «die Frieden stiften», «genannt werden»); Schlussglied mit Aufruf und Begründung",
+   "s4: Labels als verständliche Sätze, Zuspitzung ergänzt; s1: Darstellung outline wie bei MAT-006/MAT-007 (Redeteile ungleichen Baus)",
+   "Wurzel als collection (Rede in Teilen) statt series: die Teile sind nicht gleich gebaut (Entscheid nach der Prüfung, 2026-10-24)."
   ]
  }
 }

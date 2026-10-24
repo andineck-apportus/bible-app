@@ -47,8 +47,8 @@
    }
   ],
   "omitted_de": [
-   "Einzelne Titel Gottes («unser Retter») – wiederholen sich im ganzen Brief und werden in Tit 2 und 3 entfaltet",
-   "Formel «Erkenntnis der Wahrheit, die der Frömmigkeit entspricht» – Erklärung, gehört in «Hintergrund damals»"
+   "Wiederholte Gottestitel («unser Retter», Tit 1,3–4) – Wiederholung, im ganzen Brief entfaltet",
+   "Zusatz «die der Frömmigkeit entspricht» (Tit 1,1) – Erläuterung zur Erkenntnis der Wahrheit, gehört in «Hintergrund damals»"
   ],
   "persons": [
    "FIG-PAULUS",
@@ -56,13 +56,110 @@
    "FIG-GOTT"
   ],
   "places": [],
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "form",
+     "form_type": "letter",
+     "subtype": "Präskript",
+     "range": "TIT.1.1-TIT.1.4",
+     "elements": [
+      {
+       "label": "Absender: Paulus, Knecht Gottes und Apostel Jesu Christi",
+       "ref": "TIT.1.1",
+       "role": "Absender"
+      },
+      {
+       "label": "Apostel für den Glauben der Auserwählten und die Erkenntnis der Wahrheit",
+       "ref": "TIT.1.1",
+       "role": "Bestimmung des Apostelamts"
+      },
+      {
+       "label": "Hoffnung auf ewiges Leben: verheissen und offenbart",
+       "ref": "TIT.1.2-TIT.1.3",
+       "role": "Grund des Auftrags",
+       "child": "s2"
+      },
+      {
+       "label": "Empfänger: Titus, mein echtes Kind im gemeinsamen Glauben",
+       "ref": "TIT.1.4",
+       "role": "Empfänger"
+      },
+      {
+       "label": "Gruss: Gnade und Friede von Gott, dem Vater, und von Christus Jesus",
+       "ref": "TIT.1.4",
+       "role": "Gruss"
+      }
+     ],
+     "features": {
+      "speakers": [
+       {
+        "who": "Paulus",
+        "to": "Titus"
+       }
+      ],
+      "genre": [
+       {
+        "note": "Briefformular, Präskript (Forschungsbegriff)"
+       }
+      ],
+      "leitwort": [
+       {
+        "note": "«unser Retter» (1,3; 1,4), im ganzen Brief wiederkehrend"
+       }
+      ]
+     },
+     "visual": "outline",
+     "basis": "text"
+    },
+    {
+     "id": "s2",
+     "pattern": "fulfilment",
+     "subtype": "Verheissung → Offenbarung",
+     "range": "TIT.1.2-TIT.1.3",
+     "elements": [
+      {
+       "label": "Gott, der nicht lügt, hat das ewige Leben vor ewigen Zeiten verheissen",
+       "ref": "TIT.1.2",
+       "role": "Verheissung",
+       "links": [
+        "TIT.1.3"
+       ]
+      },
+      {
+       "label": "Zu seiner Zeit hat er sein Wort in der Verkündigung offenbart",
+       "ref": "TIT.1.3",
+       "role": "Offenbarung"
+      },
+      {
+       "label": "Die Verkündigung ist Paulus nach dem Auftrag Gottes anvertraut",
+       "ref": "TIT.1.3",
+       "role": "Auftrag"
+      }
+     ],
+     "features": {
+      "crossref": [
+       {
+        "ref": "TIT.3.7",
+        "kind": "Rahmen: Hoffnung auf ewiges Leben"
+       }
+      ]
+     },
+     "visual": "timeline",
+     "basis": "text"
+    }
+   ]
+  },
+  "date": "2026-10-24",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
   "review": {
-   "date": "2026-10-23",
-   "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-   "summary_de": "Auswahl und Textart stimmen; zwei Erkennungsmomente waren ungenau bzw. abstrakt.",
+   "date": "2026-10-24",
+   "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+   "summary_de": "Präskript (form letter) mit eingebetteter Verheissung → Offenbarung (1,2–3) richtig erkannt; alle Glieder (Absender, Bestimmung, Hoffnung, Empfänger, Gruss) vorhanden; Momente decken die Struktur.",
    "changes_de": [
-    "1,4 Erkennungsmoment: persönliche Übergabe und «älter/jünger» gestrichen – Paulus schreibt aus der Ferne, Titus ist auf Kreta (1,5)",
-    "1,2–3 Erkennungsmoment: konkrete Szene statt Wiederholung des Satzes, Schriftzug als Deutung für das Bild gekennzeichnet"
+    "Label «Auftrag: für den Glauben …» (1,1) in «Apostel für den Glauben … » geändert, Rolle «Bestimmung des Apostelamts»: Das Wort «Auftrag» steht erst in 1,3 (Auftrag Gottes an Paulus) und sollte nicht doppelt belegt werden."
    ]
   }
  },
@@ -90,13 +187,13 @@
     "mode": "instruction"
    },
    {
-    "reference": "TIT.1.7-TIT.1.8",
-    "text_de": "Der Aufseher muss als Verwalter Gottes untadelig sein: nicht jähzornig, kein Trinker, kein Schläger, sondern gastfreundlich, besonnen und gerecht.",
-    "reason_de": "Der Text betont «untadelig» zweimal (1,6 und 1,7); die Liste macht sichtbar, wer leiten soll (Kriterien 2 und 4).",
-    "recognition_de": "Paulus an Titus, wie der Aufseher sein muss: ein Ältester, der gastfreundlich seine Tür öffnet, statt zu trinken oder zuzuschlagen (Deutung für das Bild: offene Tür für «gastfreundlich»).",
+    "reference": "TIT.1.6-TIT.1.8",
+    "text_de": "Der Älteste muss untadelig sein: Mann einer einzigen Frau, mit gläubigen Kindern; der Aufseher als Verwalter Gottes nicht eigenmächtig, nicht jähzornig, kein Trinker, kein Schläger, nicht auf schändlichen Gewinn aus, sondern gastfreundlich, dem Guten zugetan, besonnen, gerecht, fromm und beherrscht.",
+    "reason_de": "Der Ältestenspiegel ist die tragende Reihe des Abschnitts; «untadelig» steht zweimal (1,6 und 1,7), die Reihe zeigt, wer leiten soll (Kriterien 1, 2, 4). Als ein Moment mit allen Gliedern.",
+    "recognition_de": "Paulus an Titus, wie ein Ältester sein muss: Raster mit allen Gliedern – oben Ruf und Familie (untadelig, eine Frau, gläubige Kinder), darunter zwei Spalten: fünf durchgestrichene Felder (eigenmächtig, jähzornig, Trinker, Schläger, schändlicher Gewinn) gegenüber sechs Feldern «sondern» (gastfreundlich, dem Guten zugetan, besonnen, gerecht, fromm, beherrscht).",
     "keywords": [
-     "Verwalter Gottes",
      "untadelig",
+     "Verwalter Gottes",
      "gastfreundlich"
     ],
     "mode": "list"
@@ -105,7 +202,7 @@
     "reference": "TIT.1.9",
     "text_de": "Der Älteste soll sich an das zuverlässige Wort halten, um mit der gesunden Lehre zu ermahnen und Widersprechende zurechtzuweisen.",
     "reason_de": "Ziel der Liste und Überleitung zum nächsten Abschnitt über die Widersprechenden; trägt die Kernaussage (Kriterien 1 und 3).",
-    "recognition_de": "Paulus an Titus, was der Älteste können muss: ein Ältester, der am Wort festhält und zur Gemeinde spricht (Deutung für das Bild: Schriftrolle in seiner Hand für «sich an das zuverlässige Wort halten»).",
+    "recognition_de": "Paulus an Titus, wozu der Älteste da ist: letztes Feld des Rasters – ein Ältester hält sich an das Wort und spricht zur Gemeinde, um zu ermahnen und Widersprechende zurechtzuweisen (Deutung für das Bild: Schriftrolle in seiner Hand für «sich an das zuverlässige Wort halten»).",
     "keywords": [
      "zuverlässige Wort",
      "gesunden Lehre"
@@ -114,8 +211,7 @@
    }
   ],
   "omitted_de": [
-   "Einzelheiten zur Familie des Ältesten (eine Frau, gläubige Kinder, Tit 1,6) – Teil der Liste, nicht eigener Moment",
-   "Weitere Eigenschaften (nicht eigenmächtig, fromm, beherrscht) – Wiederholung derselben Aussage"
+   "Nachsatz «wie ich es dir aufgetragen habe» (Tit 1,5) – Wiederholung des Auftrags"
   ],
   "persons": [
    "FIG-PAULUS",
@@ -124,13 +220,182 @@
    "FIG-GRUPPE-GEMEINDE"
   ],
   "places": [],
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "cause",
+     "subtype": "Auftrag – Voraussetzung – Begründung – Zweck",
+     "range": "TIT.1.5-TIT.1.9",
+     "elements": [
+      {
+       "label": "Auftrag: Titus soll in Kreta Fehlendes ordnen und in jeder Stadt Älteste einsetzen",
+       "ref": "TIT.1.5",
+       "role": "Auftrag"
+      },
+      {
+       "label": "Voraussetzung: Eingesetzt wird, wer untadelig ist",
+       "ref": "TIT.1.6-TIT.1.9",
+       "role": "Bedingung",
+       "child": "s2"
+      },
+      {
+       "label": "Begründung: Der Aufseher muss als Verwalter Gottes untadelig sein",
+       "ref": "TIT.1.7",
+       "role": "Begründung («denn»)"
+      },
+      {
+       "label": "Zweck: mit der gesunden Lehre ermahnen und die Widersprechenden zurechtweisen",
+       "ref": "TIT.1.9",
+       "role": "Zweck («damit»)",
+       "links": [
+        "TIT.1.10-TIT.1.16"
+       ]
+      }
+     ],
+     "features": {
+      "speakers": [
+       {
+        "who": "Paulus",
+        "to": "Titus"
+       }
+      ],
+      "modality": [
+       {
+        "note": "Auftrag: Das Einsetzen der Ältesten ist verlangt, nicht berichtet."
+       }
+      ],
+      "leitwort": [
+       {
+        "note": "«untadelig» (1,6; 1,7)"
+       },
+       {
+        "note": "Bezeichnungswechsel im Text: «Älteste» (1,5) – «der Aufseher» (1,7), durch «denn» verbunden; nicht stillschweigend vereinheitlichen"
+       }
+      ]
+     },
+     "visual": "arrows",
+     "basis": "text"
+    },
+    {
+     "id": "s2",
+     "pattern": "series",
+     "subtype": "Katalog (Ältestenspiegel)",
+     "range": "TIT.1.6-TIT.1.9",
+     "elements": [
+      {
+       "label": "untadelig",
+       "ref": "TIT.1.6",
+       "role": "Ruf"
+      },
+      {
+       "label": "Mann einer einzigen Frau",
+       "ref": "TIT.1.6",
+       "role": "Familie"
+      },
+      {
+       "label": "gläubige Kinder, nicht liederlich oder widerspenstig",
+       "ref": "TIT.1.6",
+       "role": "Familie"
+      },
+      {
+       "label": "der Aufseher als Verwalter Gottes: nicht so – sondern so",
+       "ref": "TIT.1.7-TIT.1.8",
+       "role": "Haltung",
+       "child": "s3"
+      },
+      {
+       "label": "hält sich an das zuverlässige Wort, das der Lehre entspricht",
+       "ref": "TIT.1.9",
+       "role": "Lehre"
+      }
+     ],
+     "visual": "grid",
+     "basis": "text"
+    },
+    {
+     "id": "s3",
+     "pattern": "contrast",
+     "subtype": "nicht … sondern (Reihe gegen Reihe)",
+     "range": "TIT.1.7-TIT.1.8",
+     "elements": [
+      {
+       "label": "nicht eigenmächtig",
+       "ref": "TIT.1.7",
+       "role": "nicht"
+      },
+      {
+       "label": "nicht jähzornig",
+       "ref": "TIT.1.7",
+       "role": "nicht"
+      },
+      {
+       "label": "kein Trinker",
+       "ref": "TIT.1.7",
+       "role": "nicht"
+      },
+      {
+       "label": "kein Schläger",
+       "ref": "TIT.1.7",
+       "role": "nicht"
+      },
+      {
+       "label": "nicht auf schändlichen Gewinn aus",
+       "ref": "TIT.1.7",
+       "role": "nicht"
+      },
+      {
+       "label": "gastfreundlich",
+       "ref": "TIT.1.8",
+       "role": "sondern"
+      },
+      {
+       "label": "dem Guten zugetan",
+       "ref": "TIT.1.8",
+       "role": "sondern"
+      },
+      {
+       "label": "besonnen",
+       "ref": "TIT.1.8",
+       "role": "sondern"
+      },
+      {
+       "label": "gerecht",
+       "ref": "TIT.1.8",
+       "role": "sondern"
+      },
+      {
+       "label": "fromm",
+       "ref": "TIT.1.8",
+       "role": "sondern"
+      },
+      {
+       "label": "beherrscht",
+       "ref": "TIT.1.8",
+       "role": "sondern"
+      }
+     ],
+     "features": {
+      "numbers": [
+       {
+        "note": "5 Verneinungen gegen 6 Tugenden; die Glieder sind nicht paarweise zugeordnet, nur die Reihen stehen gegeneinander."
+       }
+      ]
+     },
+     "visual": "columns",
+     "basis": "text"
+    }
+   ]
+  },
+  "date": "2026-10-24",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
   "review": {
-   "date": "2026-10-23",
-   "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-   "summary_de": "Auswahl stimmt; der Auftrag war als ausgeführt dargestellt, Bildzeichen ungekennzeichnet.",
+   "date": "2026-10-24",
+   "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+   "summary_de": "Auftrag → Voraussetzung (Katalog) → Begründung → Zweck richtig; Ältestenspiegel vollständig (3 Glieder Ruf/Familie, 5 «nicht» gegen 6 «sondern», Festhalten am Wort), Zählung gegen den Text geprüft; «denn» (1,7) und «damit» (1,9) erhalten.",
    "changes_de": [
-    "1,5 Erkennungsmoment: Einsetzen der Ältesten als verlangte Handlung im Briefrahmen «Paulus an Titus», nicht als geschehen",
-    "1,7–8 und 1,9: Briefrahmen ergänzt; offene Tür und Schriftrolle als «Deutung für das Bild» gekennzeichnet"
+    "Wechsel «Älteste» (1,5) → «der Aufseher» (1,7) sichtbar gemacht: Moment 2 und Label des Glieds s2/4 nennen «der Aufseher als Verwalter Gottes»; Hinweis im Merkmal leitwort ergänzt."
    ]
   }
  },
@@ -139,7 +404,7 @@
   "level": "section",
   "target": "TU-TIT-001-010-016",
   "reference": "TIT.1.10-TIT.1.16",
-  "core_de": "Viele Schwätzer und Verführer bringen um Gewinns willen Familien durcheinander; Titus soll sie scharf zurechtweisen, denn sie bekennen Gott mit Worten und verleugnen ihn mit ihren Werken.",
+  "core_de": "Viele Schwätzer und Verführer bringen um schändlichen Gewinns willen ganze Familien durcheinander; darum soll Titus sie scharf zurechtweisen. Sie behaupten, Gott zu kennen, verleugnen ihn aber mit ihren Werken.",
   "mode": "instruction",
   "voice": {
    "speaker": "FIG-PAULUS",
@@ -169,10 +434,10 @@
     "mode": "instruction"
    },
    {
-    "reference": "TIT.1.16",
-    "text_de": "Sie behaupten, Gott zu kennen, verleugnen ihn aber mit ihren Werken und sind für jedes gute Werk untauglich.",
-    "reason_de": "Schlusssatz und Kern des Abschnitts; führt das Leitwort «gute Werke» ein, das Kapitel 2 und 3 tragen (Kriterien 1–3).",
-    "recognition_de": "Ein Mann zeigt mit dem Finger nach oben zu Gott, während seine Hände Schlechtes tun (Deutung für das Bild: Zeigefinger für «behaupten, Gott zu kennen», Hände für «mit den Werken verleugnen»).",
+    "reference": "TIT.1.15-TIT.1.16",
+    "text_de": "Für die Reinen ist alles rein, für die Befleckten nichts; die Verführer behaupten, Gott zu kennen, verleugnen ihn aber mit ihren Werken und sind für jedes gute Werk untauglich.",
+    "reason_de": "Schluss und Kern des Abschnitts: zwei Gegensätze (rein ↔ befleckt, Worte ↔ Werke) als ein Moment; führt das Leitwort «gute Werke» ein, das Kapitel 2 und 3 tragen (Kriterien 1–3).",
+    "recognition_de": "Zwei Spalten: links ein Mann, der mit dem Finger nach oben zu Gott zeigt («behaupten, Gott zu kennen»), rechts dieselben Hände bei schlechten Taten («mit den Werken verleugnen»); darüber klein «rein ↔ befleckt» (Deutung für das Bild: Zeigefinger und Hände).",
     "keywords": [
      "Gott zu kennen",
      "verleugnen sie ihn"
@@ -181,8 +446,8 @@
    }
   ],
   "omitted_de": [
-   "«Die aus der Beschneidung» und jüdische Mythen (Tit 1,10.14) – Erklärung der Gegner, gehört in «Hintergrund damals»",
-   "«Alles ist rein für die Reinen» (Tit 1,15) – Nebengedanke, der den Schluss vorbereitet"
+   "«besonders die aus der Beschneidung» (Tit 1,10) – nähere Bestimmung der Gegner, Erklärung gehört in «Hintergrund damals»",
+   "Die Schimpfwörter «abscheulich und ungehorsam» (Tit 1,16) – Ausschmückung des Urteils"
   ],
   "persons": [
    "FIG-TITUS",
@@ -190,13 +455,138 @@
    "FIG-GRUPPE-GEMEINDE"
   ],
   "places": [],
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "cause",
+     "subtype": "Begründung und Zweck",
+     "range": "TIT.1.10-TIT.1.16",
+     "elements": [
+      {
+       "label": "Es gibt viele Widerspenstige, Schwätzer und Verführer",
+       "ref": "TIT.1.10",
+       "role": "Ursache («denn»)",
+       "links": [
+        "TIT.1.9"
+       ]
+      },
+      {
+       "label": "Ihnen muss man den Mund stopfen",
+       "ref": "TIT.1.11",
+       "role": "Auftrag"
+      },
+      {
+       "label": "Sie bringen ganze Familien durcheinander, um schändlichen Gewinns willen",
+       "ref": "TIT.1.11",
+       "role": "Begründung («denn»)"
+      },
+      {
+       "label": "Einer von ihnen, ihr eigener Prophet: «Kreter sind immer Lügner, böse Tiere, faule Bäuche.» Paulus: Dieses Zeugnis ist wahr.",
+       "ref": "TIT.1.12-TIT.1.13",
+       "role": "Beleg"
+      },
+      {
+       "label": "Darum: Weise sie scharf zurecht",
+       "ref": "TIT.1.13",
+       "role": "Auftrag («aus diesem Grund»)"
+      },
+      {
+       "label": "Zweck: damit sie gesund im Glauben sind und nicht auf jüdische Mythen und Gebote von Menschen achten",
+       "ref": "TIT.1.13-TIT.1.14",
+       "role": "Zweck («damit»)"
+      },
+      {
+       "label": "Grundsatz: rein ↔ befleckt",
+       "ref": "TIT.1.15",
+       "role": "Grundsatz",
+       "child": "s2"
+      },
+      {
+       "label": "Urteil: Worte ↔ Werke",
+       "ref": "TIT.1.16",
+       "role": "Urteil",
+       "child": "s3"
+      }
+     ],
+     "features": {
+      "speakers": [
+       {
+        "who": "Paulus",
+        "to": "Titus"
+       },
+       {
+        "who": "ein Prophet der Kreter",
+        "to": "(zitiert)",
+        "note": "Zitat in 1,12; Paulus bestätigt es in 1,13 als wahr"
+       }
+      ],
+      "modality": [
+       {
+        "note": "Mund stopfen und scharf zurechtweisen sind Aufträge an Titus, nicht Bericht."
+       }
+      ],
+      "leitwort": [
+       {
+        "note": "«gutes Werk» erstmals in 1,16, trägt Kapitel 2 und 3"
+       }
+      ]
+     },
+     "visual": "arrows",
+     "basis": "text"
+    },
+    {
+     "id": "s2",
+     "pattern": "contrast",
+     "subtype": "Paarreihe",
+     "range": "TIT.1.15",
+     "elements": [
+      {
+       "label": "Für die Reinen ist alles rein",
+       "ref": "TIT.1.15",
+       "role": "rein"
+      },
+      {
+       "label": "Für die Befleckten und Ungläubigen ist nichts rein; befleckt sind Verstand und Gewissen",
+       "ref": "TIT.1.15",
+       "role": "befleckt"
+      }
+     ],
+     "visual": "columns",
+     "basis": "text"
+    },
+    {
+     "id": "s3",
+     "pattern": "contrast",
+     "subtype": "Worte ↔ Werke",
+     "range": "TIT.1.16",
+     "elements": [
+      {
+       "label": "Mit Worten: Sie behaupten, Gott zu kennen",
+       "ref": "TIT.1.16",
+       "role": "Worte"
+      },
+      {
+       "label": "Mit Werken: Sie verleugnen ihn und sind für jedes gute Werk untauglich",
+       "ref": "TIT.1.16",
+       "role": "Werke"
+      }
+     ],
+     "visual": "columns",
+     "basis": "text"
+    }
+   ]
+  },
+  "date": "2026-10-24",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
   "review": {
-   "date": "2026-10-23",
-   "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-   "summary_de": "Von der Prüfung ohne Befund; nach den allgemeinen Vorgaben nur Erkennungsmomente präzisiert.",
+   "date": "2026-10-24",
+   "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+   "summary_de": "Begründungskette (denn – Auftrag – denn – Beleg – «aus diesem Grund» – damit) mit zwei Gegensätzen (rein ↔ befleckt, Worte ↔ Werke) richtig erkannt; Zitat des Kreters als fremde Stimme gekennzeichnet.",
    "changes_de": [
-    "1,11 und 1,16: Bildzeichen (aufgehaltene Hand, Zeigefinger/Hände) als «Deutung für das Bild» gekennzeichnet",
-    "1,12–13: Zurechtweisen als verlangte Handlung im Briefrahmen «Paulus an Titus»"
+    "core_de: Das eingefügte «denn sie bekennen Gott mit Worten …» begründete die Zurechtweisung mit 1,16; der Text begründet sie mit dem Zeugnis (1,13 «aus diesem Grund») bzw. dem Schaden für die Familien (1,11). Neu: «…; darum soll Titus sie scharf zurechtweisen. Sie behaupten, Gott zu kennen, …» (auch «bekennen» → Wortlaut «behaupten, Gott zu kennen»).",
+    "Label 1,12 näher am Wortlaut: «Einer von ihnen, ihr eigener Prophet: …» statt «Ein eigener Prophet der Kreter»."
    ]
   }
  },
@@ -205,7 +595,7 @@
   "level": "section",
   "target": "TU-TIT-002-001-010",
   "reference": "TIT.2.1-TIT.2.10",
-  "core_de": "Titus soll reden, was der gesunden Lehre entspricht, und jede Gruppe – Ältere, Jüngere, Sklaven – zu einem besonnenen Leben anleiten, damit ihr Verhalten die Lehre Gottes schmückt.",
+  "core_de": "Titus soll reden, was der gesunden Lehre entspricht: Er weist ältere Männer, ältere Frauen (die die jungen Frauen anleiten), jüngere Männer und Sklaven an und ist selbst Vorbild guter Werke, damit das Wort Gottes nicht in Verruf kommt, der Gegner beschämt wird und die Lehre Gottes geschmückt wird.",
   "mode": "instruction",
   "voice": {
    "speaker": "FIG-PAULUS",
@@ -213,10 +603,10 @@
   },
   "moments": [
    {
-    "reference": "TIT.2.1-TIT.2.2",
-    "text_de": "Titus soll reden, was der gesunden Lehre entspricht; die Anweisungen beginnen bei den älteren Männern, die nüchtern, besonnen und gesund im Glauben sein sollen.",
-    "reason_de": "Leitsatz des Kapitels und Beginn der Aufzählung der Gruppen; der Gegensatz «Du aber» zu den Verführern ist vom Text betont (Kriterien 1–3).",
-    "recognition_de": "Paulus an Titus: Titus soll vor der Gemeinde reden, in der ältere Männer, ältere und junge Frauen, junge Männer und Sklaven stehen (verlangte Handlung).",
+    "reference": "TIT.2.1",
+    "text_de": "Titus soll reden, was der gesunden Lehre entspricht – im Gegensatz zu den Verführern.",
+    "reason_de": "Überschrift der Gruppentafel; das «Du aber» setzt Titus gegen die Verführer von Kapitel 1 (Kriterien 1–2).",
+    "recognition_de": "Paulus an Titus: Kopfzeile über dem Raster – Titus soll vor der Gemeinde reden (verlangte Handlung).",
     "keywords": [
      "Du aber rede",
      "gesunden Lehre"
@@ -224,30 +614,23 @@
     "mode": "instruction"
    },
    {
-    "reference": "TIT.2.7",
-    "text_de": "Titus selbst soll sich in allem als Vorbild guter Werke zeigen.",
-    "reason_de": "Der Auftraggeber nimmt Titus selbst in die Pflicht; wiederholt das Leitwort «gute Werke» (Kriterien 1–2).",
-    "recognition_de": "Paulus an Titus: Titus soll selbst Vorbild sein – er hilft mit, die Jüngeren schauen ihm zu (verlangte Handlung; Deutung für das Bild: Mithelfen für «gute Werke»).",
+    "reference": "TIT.2.2-TIT.2.10",
+    "text_de": "Jede Gruppe erhält ihre Weisung: ältere Männer, ältere Frauen, die die jungen Frauen anleiten, jüngere Männer, Titus selbst als Vorbild guter Werke und Sklaven; nach «damit sie die jungen Frauen anleiten» nennt «damit» dreimal die Wirkung nach aussen: dass das Wort Gottes nicht in Verruf kommt, der Gegner beschämt wird und die Lehre Gottes geschmückt wird.",
+    "reason_de": "Die Gruppentafel ist die tragende Reihe des Abschnitts; der wiederholte Zweck «damit» zeigt, worauf alles zielt (Kriterien 1–2). Als ein Moment mit allen Gliedern.",
+    "recognition_de": "Paulus an Titus: Raster mit sechs Zeilen (ältere Männer, ältere Frauen, junge Frauen, jüngere Männer, Titus, Sklaven) und zwei Spalten «Pflicht» und «damit»; bei älteren und jüngeren Männern bleibt das Feld «damit» leer (verlangte Handlungen; Deutung für das Bild: Glanz für «schmücken», Mithelfen für «gute Werke»).",
     "keywords": [
-     "Vorbild guter Werke"
-    ],
-    "mode": "instruction"
-   },
-   {
-    "reference": "TIT.2.10",
-    "text_de": "Sklaven sollen treu sein, damit sie die Lehre Gottes, unseres Retters, in allem schmücken.",
-    "reason_de": "Schluss der Aufzählung; das wiederholte «damit» (2,5; 2,8; 2,10) zeigt den Zweck: das Leben macht die Lehre glaubwürdig (Kriterien 1–2).",
-    "recognition_de": "Paulus an Titus, was Sklaven tun sollen: ein Sklave arbeitet treu, und von ihm geht ein Glanz auf die Lehre Gottes aus (Deutung für das Bild: Glanz für «schmücken»).",
-    "keywords": [
-     "Lehre Gottes",
+     "Ältere Männer",
+     "Ältere Frauen",
+     "jüngeren Männer",
+     "Vorbild guter Werke",
+     "Sklaven",
      "schmücken"
     ],
     "mode": "instruction"
    }
   ],
   "omitted_de": [
-   "Einzelne Tugenden der älteren und jüngeren Frauen (Tit 2,3–5) – Teil derselben Aufzählung, im ersten Moment mitgemeint",
-   "Der beschämte Gegner (Tit 2,8) – Wiederholung des Zwecks «damit»"
+   "Übergangswort «ebenso» (Tit 2,3; 2,6) – verbindet die Gruppen, keine eigene Aussage"
   ],
   "persons": [
    "FIG-PAULUS",
@@ -256,14 +639,177 @@
    "FIG-ROLLE-SKLAVE"
   ],
   "places": [],
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "form",
+     "form_type": "household",
+     "subtype": "Gruppentafel",
+     "range": "TIT.2.1-TIT.2.10",
+     "elements": [
+      {
+       "label": "Überschrift: Du aber rede, was der gesunden Lehre entspricht",
+       "ref": "TIT.2.1",
+       "role": "Überschrift",
+       "links": [
+        "TIT.1.10-TIT.1.16"
+       ]
+      },
+      {
+       "label": "Gruppen mit Pflicht und Zweck",
+       "ref": "TIT.2.2-TIT.2.10",
+       "role": "Gruppen",
+       "child": "s2"
+      }
+     ],
+     "features": {
+      "speakers": [
+       {
+        "who": "Paulus",
+        "to": "Titus"
+       },
+       {
+        "who": "ältere Frauen",
+        "to": "junge Frauen",
+        "ref": "TIT.2.4",
+        "note": "Die Weisung an die jungen Frauen geht nicht von Titus aus, sondern ist Inhalt der Anleitung durch die älteren Frauen."
+       }
+      ],
+      "modality": [
+       {
+        "note": "Alles Weisung an Titus («rede», «ermahne», «zeige dich»), nicht Beschreibung der Gemeinde."
+       }
+      ],
+      "leitwort": [
+       {
+        "note": "«damit» (2,4; 2,5; 2,8; 2,10) nennt den Zweck: das Leben macht die Lehre glaubwürdig; «besonnen» (2,2; 2,5; 2,6)"
+       }
+      ],
+      "pattern_break": [
+       {
+        "note": "Gegenpflichten fehlen (keine Weisung an Herren oder Ehemänner); die Begründung «denn» folgt erst in [[TIT.2.11-TIT.2.14]]."
+       }
+      ],
+      "genre": [
+       {
+        "note": "Haustafel (Forschungsbegriff)"
+       }
+      ]
+     },
+     "visual": "outline",
+     "basis": "text"
+    },
+    {
+     "id": "s2",
+     "pattern": "matrix",
+     "subtype": "Gruppen × Pflicht und Zweck",
+     "range": "TIT.2.2-TIT.2.10",
+     "elements": [
+      {
+       "label": "Ältere Männer: nüchtern, würdig, besonnen, gesund im Glauben, in der Liebe, in der Ausdauer",
+       "ref": "TIT.2.2",
+       "role": "Pflicht",
+       "row": "ältere Männer",
+       "col": "Pflicht"
+      },
+      {
+       "label": "kein Zweck genannt",
+       "role": "Zweck",
+       "row": "ältere Männer",
+       "col": "Zweck («damit»)",
+       "empty": true
+      },
+      {
+       "label": "Ältere Frauen: ehrwürdig, nicht verleumderisch, nicht dem Wein verfallen, Lehrerinnen des Guten",
+       "ref": "TIT.2.3",
+       "role": "Pflicht",
+       "row": "ältere Frauen",
+       "col": "Pflicht"
+      },
+      {
+       "label": "damit sie die jungen Frauen anleiten",
+       "ref": "TIT.2.4",
+       "role": "Zweck",
+       "row": "ältere Frauen",
+       "col": "Zweck («damit»)"
+      },
+      {
+       "label": "Junge Frauen, von den älteren angeleitet: ihre Männer und Kinder lieben, besonnen, rein, häuslich tätig, gütig, ihren eigenen Männern untergeordnet",
+       "ref": "TIT.2.4-TIT.2.5",
+       "role": "Pflicht",
+       "row": "junge Frauen (von den älteren Frauen angeleitet)",
+       "col": "Pflicht",
+       "links": [
+        "TIT.2.4"
+       ]
+      },
+      {
+       "label": "damit das Wort Gottes nicht in Verruf kommt",
+       "ref": "TIT.2.5",
+       "role": "Zweck",
+       "row": "junge Frauen (von den älteren Frauen angeleitet)",
+       "col": "Zweck («damit»)"
+      },
+      {
+       "label": "Jüngere Männer: besonnen sein in allem",
+       "ref": "TIT.2.6-TIT.2.7",
+       "role": "Pflicht",
+       "row": "jüngere Männer",
+       "col": "Pflicht"
+      },
+      {
+       "label": "kein Zweck genannt",
+       "role": "Zweck",
+       "row": "jüngere Männer",
+       "col": "Zweck («damit»)",
+       "empty": true
+      },
+      {
+       "label": "Titus selbst: Vorbild guter Werke, unverfälscht und würdig in der Lehre, gesunde, unanfechtbare Rede",
+       "ref": "TIT.2.7-TIT.2.8",
+       "role": "Pflicht",
+       "row": "Titus selbst",
+       "col": "Pflicht"
+      },
+      {
+       "label": "damit der Gegner beschämt wird, weil er nichts Schlechtes über uns zu sagen hat",
+       "ref": "TIT.2.8",
+       "role": "Zweck",
+       "row": "Titus selbst",
+       "col": "Zweck («damit»)"
+      },
+      {
+       "label": "Sklaven: sich den Herren in allem unterordnen, gefällig sein, nicht widersprechen, nichts unterschlagen, volle Treue beweisen",
+       "ref": "TIT.2.9-TIT.2.10",
+       "role": "Pflicht",
+       "row": "Sklaven",
+       "col": "Pflicht"
+      },
+      {
+       "label": "damit sie die Lehre Gottes, unseres Retters, in allem schmücken",
+       "ref": "TIT.2.10",
+       "role": "Zweck",
+       "row": "Sklaven",
+       "col": "Zweck («damit»)"
+      }
+     ],
+     "visual": "grid",
+     "basis": "text"
+    }
+   ]
+  },
+  "date": "2026-10-24",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
   "review": {
-   "date": "2026-10-23",
-   "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-   "summary_de": "Auswahl stimmt; ein Satz klang nach Bericht, Aufträge waren als geschehen dargestellt.",
+   "date": "2026-10-24",
+   "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+   "summary_de": "Haustafel (form household) mit Raster Gruppen × Pflicht/Zweck richtig; leere Zweckfelder bei älteren und jüngeren Männern korrekt leer; fehlende Gegenpflichten und nachgestellte Begründung als Musterbruch vermerkt.",
    "changes_de": [
-    "2,1–2 text_de: «beginnt bei den älteren Männern» → «die Anweisungen beginnen bei …», weil die Aufzählung von Paulus stammt",
-    "2,1–2 Stichwörter: «Ältere Männer» durch «Du aber rede» ersetzt (tragendes Wort, kennzeichnet auch auf Buchebene)",
-    "2,1–2, 2,7, 2,10: Erkennungsmomente als verlangte Handlung; Mithelfen und Glanz als «Deutung für das Bild» gekennzeichnet"
+    "Zuordnung wer zu wem: Die jungen Frauen werden nicht von Titus angeredet, sondern von den älteren Frauen angeleitet (2,4). Zeile, Label und Merkmal speakers entsprechend angepasst.",
+    "core_de: verallgemeinerndes «zu einem besonnenen Leben anleiten» (nicht bei Sklaven und Titus) und «damit ihr Verhalten die Lehre schmückt» (nur bei Sklaven) ersetzt durch die drei Zwecke des Textes.",
+    "Moment 2: «dreimal nennt «damit» den Zweck» widersprach dem Leitwort (viermal «damit»); präzisiert (erstes «damit» = Anleitung, dann dreimal Wirkung nach aussen)."
    ]
   }
  },
@@ -272,7 +818,7 @@
   "level": "section",
   "target": "TU-TIT-002-011-015",
   "reference": "TIT.2.11-TIT.2.15",
-  "core_de": "Die Gnade Gottes ist rettend für alle Menschen erschienen und erzieht zu einem besonnenen, gerechten Leben, bis Jesus Christus in Herrlichkeit erscheint, der sich hingegeben hat, um sich ein Volk eifrig in guten Werken zu reinigen; das soll Titus mit Vollmacht lehren.",
+  "core_de": "Die Gnade Gottes ist rettend für alle Menschen erschienen und erzieht zu einem besonnenen, gerechten Leben in Erwartung des Erscheinens der Herrlichkeit Jesu Christi, der sich hingegeben hat, um sich ein Volk eifrig in guten Werken zu reinigen; das soll Titus mit Vollmacht lehren.",
   "mode": "statement",
   "voice": {
    "speaker": "FIG-PAULUS",
@@ -283,7 +829,7 @@
     "reference": "TIT.2.11-TIT.2.12",
     "text_de": "Die Gnade Gottes ist erschienen, rettend für alle Menschen, und erzieht uns, besonnen, gerecht und fromm zu leben.",
     "reason_de": "Begründung («denn») aller Anweisungen von 2,1–10 und Kern des Kapitels; bekannteste Stelle des Briefes (Kriterien 1, 2, 4).",
-    "recognition_de": "Licht fällt auf alle Menschen; eine Gruppe von Glaubenden, Paulus eingeschlossen, wendet sich von Gottlosigkeit und Begierden ab (Deutung für das Bild: Licht für «erschienen»).",
+    "recognition_de": "Zeitachse, links: Licht fällt auf alle Menschen (erschienen); in der Mitte eine Gruppe von Glaubenden, Paulus eingeschlossen, die sich von Gottlosigkeit und Begierden abwendet (jetzt) (Deutung für das Bild: Licht für «erschienen»).",
     "keywords": [
      "Gnade Gottes",
      "rettend für alle Menschen",
@@ -295,7 +841,7 @@
     "reference": "TIT.2.13-TIT.2.14",
     "text_de": "Wir erwarten das Erscheinen der Herrlichkeit Jesu Christi, der sich für uns hingegeben hat, um uns loszukaufen und sich ein Volk eifrig in guten Werken zu reinigen.",
     "reason_de": "Das zweite «Erscheinen» bildet mit 2,11 einen Bogen von der Gnade zur Hoffnung; Hingabe Christi als Grund (Kriterien 1–3).",
-    "recognition_de": "Glaubende blicken erwartungsvoll nach oben; gelöste Ketten liegen an ihren Füssen am Boden (Deutung für das Bild: gelöste Ketten für «loskaufen»).",
+    "recognition_de": "Zeitachse, rechts: Glaubende blicken erwartungsvoll nach vorn zum Erscheinen der Herrlichkeit; gelöste Ketten liegen an ihren Füssen am Boden (Deutung für das Bild: gelöste Ketten für «loskaufen»).",
     "keywords": [
      "Erscheinen der Herrlichkeit",
      "sich selbst für uns hingegeben"
@@ -315,7 +861,7 @@
    }
   ],
   "omitted_de": [
-   "Die Begriffe «Gottlosigkeit» und «weltliche Begierden» im Einzelnen – Teil der ersten Aussage"
+   "«die selige Hoffnung» (Tit 2,13) als eigener Begriff – im Erwarten des Erscheinens enthalten"
   ],
   "persons": [
    "FIG-PAULUS",
@@ -325,14 +871,116 @@
    "FIG-GRUPPE-GLAUBENDE"
   ],
   "places": [],
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "cause",
+     "subtype": "Zuspruch als nachgestellte Begründung («denn») der Weisungen",
+     "range": "TIT.2.11-TIT.2.15",
+     "elements": [
+      {
+       "label": "Zwei Erscheinungen: Die Gnade ist erschienen – die Herrlichkeit wird erwartet",
+       "ref": "TIT.2.11-TIT.2.13",
+       "role": "Zuspruch («denn»)",
+       "child": "s2",
+       "links": [
+        "TIT.2.1-TIT.2.10"
+       ]
+      },
+      {
+       "label": "Die Gnade erzieht uns, der Gottlosigkeit und den weltlichen Begierden abzusagen",
+       "ref": "TIT.2.12",
+       "role": "Wirkung"
+      },
+      {
+       "label": "Jesus Christus hat sich selbst für uns hingegeben",
+       "ref": "TIT.2.14",
+       "role": "Grund"
+      },
+      {
+       "label": "um uns von aller Gesetzlosigkeit loszukaufen",
+       "ref": "TIT.2.14",
+       "role": "Zweck"
+      },
+      {
+       "label": "und sich ein Volk zum Eigentum zu reinigen, eifrig in guten Werken",
+       "ref": "TIT.2.14",
+       "role": "Zweck"
+      },
+      {
+       "label": "Auftrag: Das sage, ermahne und weise zurecht mit aller Vollmacht; niemand soll dich geringschätzen",
+       "ref": "TIT.2.15",
+       "role": "Auftrag"
+      }
+     ],
+     "features": {
+      "speakers": [
+       {
+        "who": "Paulus",
+        "to": "Titus",
+        "note": "«uns/wir» in 2,12–14 schliesst Paulus ein"
+       }
+      ],
+      "modality": [
+       {
+        "note": "2,11–14 Aussage (Zuspruch, «erwarten» als Hoffnung); 2,15 Auftrag an Titus."
+       }
+      ],
+      "leitwort": [
+       {
+        "note": "«erscheinen» (2,11; 2,13; wieder 3,4); «gute Werke» (2,14)"
+       }
+      ],
+      "interpretation": [
+       {
+        "note": "Die Wendung «unseres grossen Gottes und Retters Jesus Christus» (2,13) wird in der Auslegung verschieden gelesen (eine Person oder Gott und Christus); die Labels folgen der Arbeitsübersetzung."
+       }
+      ]
+     },
+     "visual": "arrows",
+     "basis": "text"
+    },
+    {
+     "id": "s2",
+     "pattern": "sequence",
+     "subtype": "Zeitachse: erschienen – jetzt – erwartet",
+     "range": "TIT.2.11-TIT.2.13",
+     "elements": [
+      {
+       "label": "Erschienen ist die Gnade Gottes, rettend für alle Menschen",
+       "ref": "TIT.2.11",
+       "role": "erschienen",
+       "links": [
+        "TIT.2.13"
+       ]
+      },
+      {
+       "label": "damit wir besonnen, gerecht und fromm leben in der jetzigen Zeit",
+       "ref": "TIT.2.12",
+       "role": "jetzt (Zweck der Erziehung)"
+      },
+      {
+       "label": "und erwarten das Erscheinen der Herrlichkeit Jesu Christi",
+       "ref": "TIT.2.13",
+       "role": "erwartet (Zweck der Erziehung)"
+      }
+     ],
+     "visual": "timeline",
+     "basis": "text"
+    }
+   ]
+  },
+  "date": "2026-10-24",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
   "review": {
-   "date": "2026-10-23",
-   "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-   "summary_de": "Auswahl stimmt; ein Erkennungsmoment war sachlich falsch, Bildzeichen ungekennzeichnet.",
+   "date": "2026-10-24",
+   "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+   "summary_de": "Zuspruch als nachgestellte Begründung («denn») mit Zeitachse erschienen – jetzt – erwartet und Zweckangaben (2,14) richtig; Auslegungsfrage zu 2,13 korrekt als interpretation vermerkt.",
    "changes_de": [
-    "2,11–12: Abwendung von der Gottlosigkeit betrifft «uns» (die Glaubenden), nicht alle Menschen; Licht als Deutung für das Bild",
-    "2,13–14: Vergangenheitsaussage durch sichtbares Bild ersetzt (gelöste Ketten, als Deutung für «loskaufen»)",
-    "2,15: Auftrag als verlangte Handlung"
+    "Richtung Zweck ≠ Tatsache: Die Glieder «Wir leben besonnen …» und «Wir erwarten …» stehen im Text als Zweck der Erziehung («damit wir … leben … und erwarten», 2,12–13); Labels und Rollen entsprechend.",
+    "core_de: «bis Jesus Christus erscheint» setzt eine Zeitgrenze, die nicht im Text steht; ersetzt durch «in Erwartung des Erscheinens der Herrlichkeit Jesu Christi»."
    ]
   }
  },
@@ -350,32 +998,23 @@
   "moments": [
    {
     "reference": "TIT.3.1-TIT.3.2",
-    "text_de": "Titus soll die Glaubenden erinnern, den Behörden gehorsam, zu jedem guten Werk bereit und gegenüber allen Menschen freundlich und sanftmütig zu sein.",
-    "reason_de": "Auftrag, auf den die folgende Begründung zielt; Leitwort «gutes Werk» (Kriterien 1–2).",
-    "recognition_de": "Paulus an Titus: Titus soll die Glaubenden erinnern, Behörden und Nachbarn freundlich und sanftmütig zu begegnen (verlangte Handlung).",
+    "text_de": "Titus soll die Glaubenden erinnern, sich den Regierenden und Behörden unterzuordnen, gehorsam und zu jedem guten Werk bereit zu sein, niemanden zu verleumden, nicht streitsüchtig, sondern freundlich zu sein und allen Menschen Sanftmut zu zeigen.",
+    "reason_de": "Die Reihe der Weisungen, auf die die folgende Begründung «denn» zielt; Leitwort «gutes Werk» (Kriterien 1–2). Als ein Moment mit allen Gliedern.",
+    "recognition_de": "Paulus an Titus: Raster mit sieben Feldern – Behörden achten, gehorsam, bereit zu gutem Werk, nicht verleumden, nicht streiten, freundlich, sanftmütig zu allen Menschen (verlangte Handlung).",
     "keywords": [
      "freundlich",
-     "gegenüber allen Menschen"
+     "gegenüber allen Menschen",
+     "zu jedem guten Werk bereit"
     ],
     "mode": "instruction"
    },
    {
-    "reference": "TIT.3.3",
-    "text_de": "Auch wir waren einst unverständig, ungehorsam, Sklaven der Begierden, lebten in Bosheit und Neid und hassten einander.",
-    "reason_de": "Das «einst» ist der Ausgangspunkt des Bogens einst – jetzt; begründet, warum niemand auf andere herabsehen soll (Kriterien 1 und 3).",
-    "recognition_de": "Menschen, Paulus eingeschlossen, kehren einander verfeindet den Rücken zu, gebunden in Ketten (Deutung für das Bild: Ketten für «Sklaven vielfältiger Begierden»).",
+    "reference": "TIT.3.3-TIT.3.7",
+    "text_de": "Denn auch wir waren einst unverständig, ungehorsam, Sklaven der Begierden und hassten einander; als aber die Güte und Menschenfreundlichkeit Gottes erschien, hat er uns nicht aufgrund von Werken, sondern nach seinem Erbarmen gerettet durch das Bad der Wiedergeburt und die Erneuerung des heiligen Geistes, damit wir Erben werden gemäss der Hoffnung auf ewiges Leben.",
+    "reason_de": "Der Gegensatz einst ↔ als aber begründet die Weisungen und ist Wendepunkt und Höhepunkt; er schliesst den Rahmen der Hoffnung auf ewiges Leben (Tit 1,2) (Kriterien 1–4). Als ein Moment mit beiden Seiten.",
+    "recognition_de": "Zwei Spalten: links «einst» – Menschen, Paulus eingeschlossen, kehren einander verfeindet den Rücken zu, gebunden in Ketten; rechts «als aber» – Gottes Güte erscheint wie Licht, Menschen steigen aus dem Wasser des Bades der Wiedergeburt, und über sie wird der Geist ausgegossen; darunter das Feld «Werke» durchgestrichen, «Erbarmen» hervorgehoben (Deutung für das Bild: Ketten, Licht, Wasser).",
     "keywords": [
      "auch wir waren einst",
-     "hassten einander"
-    ],
-    "mode": "statement"
-   },
-   {
-    "reference": "TIT.3.4-TIT.3.7",
-    "text_de": "Als die Güte und Menschenfreundlichkeit Gottes erschien, hat er uns nicht wegen unserer Werke, sondern aus Erbarmen gerettet durch das Bad der Wiedergeburt und den heiligen Geist, damit wir Erben werden gemäss der Hoffnung auf ewiges Leben.",
-    "reason_de": "Wendepunkt und Höhepunkt; ein einziger zusammenhängender Satz, der den Rahmen der Hoffnung auf ewiges Leben (Tit 1,2) schliesst (Kriterien 1–4).",
-    "recognition_de": "Gottes Güte erscheint wie Licht; Menschen steigen aus dem Wasser des Bades der Wiedergeburt, und über sie wird der Geist ausgegossen (Deutung für das Bild: Licht für «erschien», Wasser für «Bad»).",
-    "keywords": [
      "Menschenfreundlichkeit Gottes",
      "Bad der Wiedergeburt",
      "Erben"
@@ -384,8 +1023,7 @@
    }
   ],
   "omitted_de": [
-   "Einzelaufzählung der früheren Laster (Tit 3,3) – im Moment zusammengefasst",
-   "Die Rechtfertigung durch Gnade (Tit 3,7) als Lehrbegriff – Erklärung gehört in «Hintergrund damals»"
+   "Die Rechtfertigung (Tit 3,7) als Lehrbegriff – das Glied steht in der Struktur, die Erklärung gehört in «Hintergrund damals»"
   ],
   "persons": [
    "FIG-PAULUS",
@@ -396,15 +1034,178 @@
    "FIG-GRUPPE-GLAUBENDE"
   ],
   "places": [],
-  "review": {
-   "date": "2026-10-23",
-   "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-   "summary_de": "Auswahl stimmt; Kernaussage verschob die Sprecherperspektive und stellte ein Ziel als erreicht dar.",
-   "changes_de": [
-    "core_de: «auch sie» → «auch wir – Paulus eingeschlossen», wie der Text (3,3)",
-    "core_de und 3,4–7 text_de: «zu Erben machte» → «damit wir Erben … werden» (Ziel, nicht Tatsache, 3,7)",
-    "3,3 und 3,4–7: Ketten, Licht und Wasser als «Deutung für das Bild» gekennzeichnet; 3,1–2 als verlangte Handlung"
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "cause",
+     "subtype": "Ermahnung → «denn» Begründung",
+     "range": "TIT.3.1-TIT.3.7",
+     "elements": [
+      {
+       "label": "Erinnere sie: so sollen sie leben",
+       "ref": "TIT.3.1-TIT.3.2",
+       "role": "Anspruch",
+       "child": "s2"
+      },
+      {
+       "label": "Denn: einst ↔ als aber",
+       "ref": "TIT.3.3-TIT.3.7",
+       "role": "Begründung («denn»)",
+       "child": "s3"
+      }
+     ],
+     "features": {
+      "speakers": [
+       {
+        "who": "Paulus",
+        "to": "Titus",
+        "note": "«auch wir» (3,3) schliesst Paulus ein"
+       }
+      ],
+      "modality": [
+       {
+        "note": "3,1–2 Auftrag (erinnern); 3,7 Ziel («damit wir … Erben werden»), nicht als erreicht."
+       }
+      ],
+      "leitwort": [
+       {
+        "note": "«gutes Werk» (3,1) ↔ «nicht aufgrund von Werken» (3,5); «erschien» (3,4) wie 2,11"
+       }
+      ]
+     },
+     "visual": "arrows",
+     "basis": "text"
+    },
+    {
+     "id": "s2",
+     "pattern": "series",
+     "subtype": "Katalog",
+     "range": "TIT.3.1-TIT.3.2",
+     "elements": [
+      {
+       "label": "sich den Regierenden und Behörden unterordnen",
+       "ref": "TIT.3.1",
+       "role": "Weisung"
+      },
+      {
+       "label": "gehorsam sein",
+       "ref": "TIT.3.1",
+       "role": "Weisung"
+      },
+      {
+       "label": "zu jedem guten Werk bereit sein",
+       "ref": "TIT.3.1",
+       "role": "Weisung"
+      },
+      {
+       "label": "niemanden verleumden",
+       "ref": "TIT.3.2",
+       "role": "Weisung"
+      },
+      {
+       "label": "nicht streitsüchtig sein",
+       "ref": "TIT.3.2",
+       "role": "Weisung"
+      },
+      {
+       "label": "freundlich sein",
+       "ref": "TIT.3.2",
+       "role": "Weisung"
+      },
+      {
+       "label": "volle Sanftmut zeigen gegenüber allen Menschen",
+       "ref": "TIT.3.2",
+       "role": "Weisung"
+      }
+     ],
+     "visual": "grid",
+     "basis": "text"
+    },
+    {
+     "id": "s3",
+     "pattern": "contrast",
+     "subtype": "einst – jetzt",
+     "range": "TIT.3.3-TIT.3.7",
+     "elements": [
+      {
+       "label": "Einst waren auch wir unverständig, ungehorsam, irregeführt",
+       "ref": "TIT.3.3",
+       "role": "einst"
+      },
+      {
+       "label": "Einst waren wir Sklaven vielfältiger Begierden und Lüste",
+       "ref": "TIT.3.3",
+       "role": "einst"
+      },
+      {
+       "label": "Einst lebten wir in Bosheit und Neid, verhasst, und hassten einander",
+       "ref": "TIT.3.3",
+       "role": "einst"
+      },
+      {
+       "label": "Als aber die Güte und Menschenfreundlichkeit Gottes, unseres Retters, erschien",
+       "ref": "TIT.3.4",
+       "role": "als aber"
+      },
+      {
+       "label": "hat er uns gerettet: nicht aus Werken, sondern nach seinem Erbarmen",
+       "ref": "TIT.3.5",
+       "role": "als aber",
+       "child": "s4"
+      },
+      {
+       "label": "durch das Bad der Wiedergeburt und der Erneuerung des heiligen Geistes",
+       "ref": "TIT.3.5",
+       "role": "als aber: Mittel"
+      },
+      {
+       "label": "den Geist hat er reichlich über uns ausgegossen durch Jesus Christus",
+       "ref": "TIT.3.6",
+       "role": "als aber: Mittel"
+      },
+      {
+       "label": "damit wir, gerecht gemacht durch seine Gnade, Erben werden gemäss der Hoffnung auf ewiges Leben",
+       "ref": "TIT.3.7",
+       "role": "als aber: Zweck",
+       "links": [
+        "TIT.1.2"
+       ]
+      }
+     ],
+     "visual": "columns",
+     "basis": "text"
+    },
+    {
+     "id": "s4",
+     "pattern": "contrast",
+     "subtype": "nicht … sondern",
+     "range": "TIT.3.5",
+     "elements": [
+      {
+       "label": "nicht aufgrund von Werken, die wir in Gerechtigkeit getan hätten",
+       "ref": "TIT.3.5",
+       "role": "nicht"
+      },
+      {
+       "label": "sondern nach seinem Erbarmen hat er uns gerettet",
+       "ref": "TIT.3.5",
+       "role": "sondern"
+      }
+     ],
+     "visual": "columns",
+     "basis": "text"
+    }
    ]
+  },
+  "date": "2026-10-24",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
+  "review": {
+   "date": "2026-10-24",
+   "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+   "summary_de": "Ermahnung (Katalog, 7 Glieder vollständig) → «denn» Begründung einst ↔ als aber mit «nicht … sondern» richtig verschachtelt; Mittel und Zweck (3,5–7) erhalten, Ziel nicht als erreicht dargestellt; Bildelemente als Deutung gekennzeichnet.",
+   "changes_de": []
   }
  },
  {
@@ -420,41 +1221,32 @@
   },
   "moments": [
    {
-    "reference": "TIT.3.8",
-    "text_de": "Paulus bekräftigt das zuverlässige Wort und will, dass Titus fest auftritt, damit die Glaubenden sich für gute Werke einsetzen.",
-    "reason_de": "Bekräftigt das Vorangehende und nennt das Ziel des ganzen Briefes; Leitwort «gute Werke» (Kriterien 1–2).",
-    "recognition_de": "Paulus an Titus: Titus soll fest vor der Gemeinde auftreten, damit die Glaubenden sich für gute Werke einsetzen (verlangte Handlung; Deutung für das Bild: Mithelfen für «gute Werke»).",
+    "reference": "TIT.3.8-TIT.3.9",
+    "text_de": "Das Wort ist zuverlässig: Titus soll fest auftreten, damit die Glaubenden sich für gute Werke einsetzen – das ist gut und nützlich; törichte Streitfragen, Geschlechtsregister und Streit um das Gesetz soll er meiden, denn sie sind nutzlos und leer.",
+    "reason_de": "Gegensatz nützlich ↔ nutzlos als ein Moment; bekräftigt das Vorangehende und nennt das Ziel des Briefes mit dem Leitwort «gute Werke» (Kriterien 1–2).",
+    "recognition_de": "Paulus an Titus: zwei Spalten – links Glaubende, die mit anpacken und helfen («gut und nützlich»), rechts zwei Männer, die über einer langen Ahnenliste streiten («nutzlos und leer»), von denen Titus sich abwendet (verlangte Handlungen; Deutung für das Bild: Mithelfen für «gute Werke», Ahnenliste nach «Geschlechtsregister»).",
     "keywords": [
      "Zuverlässig ist das Wort",
-     "gute Werke"
-    ],
-    "mode": "instruction"
-   },
-   {
-    "reference": "TIT.3.9",
-    "text_de": "Törichte Streitfragen, Geschlechtsregister und Streit um das Gesetz soll Titus meiden, denn sie sind nutzlos und leer.",
-    "reason_de": "Gegenstück zu den guten Werken: was nicht nützt (Kriterien 1 und 4).",
-    "recognition_de": "Paulus an Titus: Zwei Männer streiten über einer langen Ahnenliste, und Titus soll sich davon abwenden (verlangte Handlung; Ahnenliste nach «Geschlechtsregister»).",
-    "keywords": [
-     "Törichte Streitfragen",
+     "gute Werke",
      "nutzlos und leer"
     ],
     "mode": "instruction"
    },
    {
     "reference": "TIT.3.10-TIT.3.11",
-    "text_de": "Einen Menschen, der Spaltungen verursacht, soll Titus nach einer ersten und zweiten Ermahnung abweisen.",
+    "text_de": "Einen Menschen, der Spaltungen verursacht, soll Titus nach einer ersten und zweiten Ermahnung abweisen, da er weiss, dass ein solcher verdreht ist und sündigt; er hat sich selbst das Urteil gesprochen.",
     "reason_de": "Schluss des Abschnitts und konkrete Anweisung zur Gemeindeordnung (Kriterien 2–3).",
-    "recognition_de": "Paulus an Titus: Titus soll einen Spalter zweimal ermahnen und ihn dann abweisen (verlangte Handlung).",
+    "recognition_de": "Paulus an Titus: drei Stufen auf einer Leiste – erste Ermahnung, zweite Ermahnung, Abweisen eines Spalters (verlangte Handlung).",
     "keywords": [
      "Spaltungen verursacht",
-     "zweiten Ermahnung"
+     "zweiten Ermahnung",
+     "selbst das Urteil gesprochen"
     ],
     "mode": "instruction"
    }
   ],
   "omitted_de": [
-   "Die Begründung «er hat sich selbst das Urteil gesprochen» (Tit 3,11) – im dritten Moment mitgemeint"
+   "Umschreibung «die, die zum Glauben an Gott gekommen sind» (Tit 3,8) – im Moment kurz «die Glaubenden»"
   ],
   "persons": [
    "FIG-PAULUS",
@@ -463,14 +1255,108 @@
    "FIG-ROLLE-SPALTER"
   ],
   "places": [],
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "contrast",
+     "subtype": "gut und nützlich ↔ nutzlos und leer",
+     "range": "TIT.3.8-TIT.3.11",
+     "elements": [
+      {
+       "label": "Zuverlässig ist das Wort: Titus soll darin fest auftreten",
+       "ref": "TIT.3.8",
+       "role": "Bekräftigung",
+       "links": [
+        "TIT.3.3-TIT.3.7"
+       ]
+      },
+      {
+       "label": "damit die Glaubenden sich für gute Werke einsetzen – das ist gut und nützlich für die Menschen",
+       "ref": "TIT.3.8",
+       "role": "nützlich"
+      },
+      {
+       "label": "Törichte Streitfragen, Geschlechtsregister, Zank und Streit um das Gesetz meide – denn sie sind nutzlos und leer",
+       "ref": "TIT.3.9",
+       "role": "nutzlos"
+      },
+      {
+       "label": "Umgang mit einem, der Spaltungen verursacht",
+       "ref": "TIT.3.10-TIT.3.11",
+       "role": "Anwendung",
+       "child": "s2"
+      }
+     ],
+     "features": {
+      "speakers": [
+       {
+        "who": "Paulus",
+        "to": "Titus"
+       }
+      ],
+      "modality": [
+       {
+        "note": "Fest auftreten, meiden, abweisen: Aufträge an Titus selbst; das Einsetzen für gute Werke betrifft die Glaubenden."
+       }
+      ],
+      "leitwort": [
+       {
+        "note": "«gute Werke» (3,8); Gegenwort «nutzlos» zu «nützlich»"
+       }
+      ]
+     },
+     "visual": "columns",
+     "basis": "text"
+    },
+    {
+     "id": "s2",
+     "pattern": "sequence",
+     "subtype": "Verfahren in Stufen",
+     "range": "TIT.3.10-TIT.3.11",
+     "elements": [
+      {
+       "label": "erste Ermahnung",
+       "ref": "TIT.3.10",
+       "role": "Stufe 1"
+      },
+      {
+       "label": "zweite Ermahnung",
+       "ref": "TIT.3.10",
+       "role": "Stufe 2"
+      },
+      {
+       "label": "dann weise ihn ab",
+       "ref": "TIT.3.10",
+       "role": "Folge"
+      },
+      {
+       "label": "da du weisst: Ein solcher ist verdreht und sündigt; er hat sich selbst das Urteil gesprochen",
+       "ref": "TIT.3.11",
+       "role": "Begründung («da du weisst»)"
+      }
+     ],
+     "features": {
+      "open_end": [
+       {
+        "note": "Der Text nennt keinen Zweig für den Fall, dass er auf die Ermahnung hört; nicht ergänzen."
+       }
+      ]
+     },
+     "visual": "timeline",
+     "basis": "text"
+    }
+   ]
+  },
+  "date": "2026-10-24",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
   "review": {
-   "date": "2026-10-23",
-   "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-   "summary_de": "Auswahl stimmt; in der Kernaussage war falsch zugeordnet, wer handeln soll.",
+   "date": "2026-10-24",
+   "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+   "summary_de": "Gegensatz gut und nützlich ↔ nutzlos und leer mit Bekräftigung und gestuftem Verfahren richtig; fehlender Zweig (Spalter hört) zu Recht als offen vermerkt, nicht ergänzt.",
    "changes_de": [
-    "core_de: Streitfragen meiden und Spalter abweisen sind Aufträge an Titus selbst, nicht an die Glaubenden",
-    "3,10–11: «aus der Gemeinde» gestrichen (steht nicht im Text)",
-    "alle Erkennungsmomente als verlangte Handlung im Briefrahmen «Paulus an Titus»"
+    "Begründung 3,11 näher am Wortlaut: «da du weisst: …» statt «denn …» (Label s2/4 und Moment 2)."
    ]
   }
  },
@@ -490,7 +1376,7 @@
     "reference": "TIT.3.12",
     "text_de": "Sobald Paulus einen Boten schickt, soll Titus rasch zu ihm nach Nikopolis kommen, wo Paulus den Winter verbringen will.",
     "reason_de": "Zeigt die Lage des Briefes: Titus soll nach seinem Auftrag auf Kreta zu Paulus kommen (Kriterium 3).",
-    "recognition_de": "Paulus an Titus: Ein Bote kommt zu Titus, und Titus soll rasch zu Paulus aufbrechen (verlangte Handlung).",
+    "recognition_de": "Briefbild, Feld «Reisen»: Ein Bote kommt zu Titus, und Titus soll rasch zu Paulus aufbrechen (verlangte Handlung).",
     "keywords": [
      "nach Nikopolis",
      "den Winter"
@@ -501,7 +1387,7 @@
     "reference": "TIT.3.13-TIT.3.14",
     "text_de": "Titus soll Zenas und Apollos für die Reise ausrüsten, und die Glaubenden sollen lernen, sich für gute Werke einzusetzen, damit sie nicht ohne Frucht sind.",
     "reason_de": "Letzte Wiederholung des Leitworts «gute Werke», an einem konkreten Beispiel (Kriterien 1–2).",
-    "recognition_de": "Paulus an Titus: Titus und die Glaubenden sollen zwei Reisende, Zenas und Apollos, sorgfältig ausrüsten, damit ihnen nichts fehlt (verlangte Handlung).",
+    "recognition_de": "Briefbild, Feld «letzte Mahnung»: Titus und die Glaubenden rüsten zwei Reisende, Zenas und Apollos, sorgfältig aus, damit ihnen nichts fehlt (verlangte Handlung).",
     "keywords": [
      "gute Werke",
      "dringenden Bedürfnisse",
@@ -513,7 +1399,7 @@
     "reference": "TIT.3.15",
     "text_de": "Alle bei Paulus grüssen, und Paulus wünscht allen die Gnade.",
     "reason_de": "Rahmen: Schluss des Briefes mit dem Gnadenwunsch, wie er begann (Kriterium 2).",
-    "recognition_de": "Paulus beendet den Brief, um ihn stehen Freunde, die mitgrüssen.",
+    "recognition_de": "Briefbild, Schlussfeld: Paulus beendet den Brief, um ihn stehen Freunde, die mitgrüssen; darunter der Segen an alle.",
     "keywords": [
      "Es grüssen dich alle",
      "Die Gnade sei mit euch allen"
@@ -522,8 +1408,8 @@
    }
   ],
   "omitted_de": [
-   "Artemas und Tychikus – Nebenfiguren, nur als Boten genannt",
-   "«Zenas, der Rechtsgelehrte» als Berufsangabe – Nebenumstand"
+   "«Zenas, der Rechtsgelehrte» als Berufsangabe – Nebenumstand",
+   "Namen der Boten Artemas oder Tychikus (Tit 3,12) – Nebenfiguren; im Moment «ein Bote», in der Struktur genannt"
   ],
   "persons": [
    "FIG-PAULUS",
@@ -532,14 +1418,77 @@
    "FIG-APOLLOS"
   ],
   "places": [],
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "form",
+     "form_type": "letter",
+     "subtype": "Briefschluss",
+     "range": "TIT.3.12-TIT.3.15",
+     "elements": [
+      {
+       "label": "Reisen: Wenn Paulus Artemas oder Tychikus schickt, soll Titus rasch zu ihm nach Nikopolis kommen; dort will Paulus den Winter verbringen",
+       "ref": "TIT.3.12",
+       "role": "Reisen"
+      },
+      {
+       "label": "Auftrag: Zenas und Apollos sorgfältig für die Reise ausrüsten, damit ihnen nichts fehlt",
+       "ref": "TIT.3.13",
+       "role": "Reisen"
+      },
+      {
+       "label": "Letzte Mahnung: Auch die Unseren sollen lernen, sich für gute Werke einzusetzen, damit sie nicht ohne Frucht sind",
+       "ref": "TIT.3.14",
+       "role": "Paränese"
+      },
+      {
+       "label": "Grüsse: Es grüssen dich alle, die bei mir sind; grüsse die, die uns im Glauben lieben",
+       "ref": "TIT.3.15",
+       "role": "Grüsse"
+      },
+      {
+       "label": "Segen: Die Gnade sei mit euch allen",
+       "ref": "TIT.3.15",
+       "role": "Segen",
+       "links": [
+        "TIT.1.4"
+       ]
+      }
+     ],
+     "features": {
+      "speakers": [
+       {
+        "who": "Paulus",
+        "to": "Titus",
+        "note": "Segen an «euch alle» (3,15) weitet den Kreis"
+       }
+      ],
+      "modality": [
+       {
+        "note": "Kommen, Ausrüsten, Lernen: verlangte Handlungen."
+       }
+      ],
+      "leitwort": [
+       {
+        "note": "«gute Werke» (3,14) zum letzten Mal"
+       }
+      ]
+     },
+     "visual": "outline",
+     "basis": "text"
+    }
+   ]
+  },
+  "date": "2026-10-24",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
   "review": {
-   "date": "2026-10-23",
-   "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-   "summary_de": "Auswahl stimmt; eine Deutung im Text-Satz, Nebennamen als Stichwörter und ein Zusatz wurden korrigiert.",
+   "date": "2026-10-24",
+   "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+   "summary_de": "Briefschluss (form letter) mit Reisen, letzter Mahnung, Grüssen und Segen vollständig; Rahmen zum Gruss 1,4 korrekt verknüpft.",
    "changes_de": [
-    "3,12 text_de: «sobald Artemas oder Tychikus ihn ablöst» (Deutung) → «sobald Paulus einen Boten schickt»; Nebenfiguren nicht mehr genannt",
-    "3,13–14 Stichwörter: «Zenas», «Apollos» → «gute Werke», «dringenden Bedürfnisse» (tragendes Leitwort)",
-    "3,15: «siegelt» gestrichen (steht nicht im Text); 3,12 und 3,13–14 als verlangte Handlung"
+    "omitted_de: Weglassen der Botennamen Artemas/Tychikus im Moment ausdrücklich begründet."
    ]
   }
  },
@@ -553,7 +1502,7 @@
    "TIT-001-005-009",
    "TIT-001-010-016"
   ],
-  "core_de": "Paulus beauftragt Titus, die Gemeinden auf Kreta zu ordnen und Älteste einzusetzen, die an der gesunden Lehre festhalten – gegen Verführer, die Gott mit Worten bekennen und mit ihren Werken verleugnen.",
+  "core_de": "Paulus beauftragt Titus, die Gemeinden auf Kreta zu ordnen und Älteste einzusetzen, die an der gesunden Lehre festhalten – gegen Verführer, die behaupten, Gott zu kennen, ihn aber mit ihren Werken verleugnen.",
   "mode": "instruction",
   "voice": {
    "speaker": "FIG-PAULUS",
@@ -584,10 +1533,22 @@
     "mode": "instruction"
    },
    {
-    "reference": "TIT.1.16",
-    "text_de": "Sie behaupten, Gott zu kennen, verleugnen ihn aber mit ihren Werken und sind für jedes gute Werk untauglich.",
-    "reason_de": "Aus dem Abschnitt gegen die Verführer: der Schlusssatz trägt die Kernaussage und führt das Leitwort «gute Werke» ein; vor dem bekannteren Kreter-Spruch gewählt, weil die Kernaussage vor der Bekanntheit geht (Kriterium 1).",
-    "recognition_de": "Ein Mann zeigt mit dem Finger nach oben zu Gott, während seine Hände Schlechtes tun (Deutung für das Bild: Zeigefinger für «behaupten, Gott zu kennen», Hände für «mit den Werken verleugnen»).",
+    "reference": "TIT.1.6-TIT.1.8",
+    "text_de": "Der Älteste muss untadelig sein: Mann einer einzigen Frau, mit gläubigen Kindern; der Aufseher als Verwalter Gottes nicht eigenmächtig, nicht jähzornig, kein Trinker, kein Schläger, nicht auf schändlichen Gewinn aus, sondern gastfreundlich, dem Guten zugetan, besonnen, gerecht, fromm und beherrscht.",
+    "reason_de": "Aus dem Abschnitt über die Ältesten: die tragende Reihe, wer leiten soll; als ein Moment mit allen Gliedern (Kriterien 1–2, Regel 4).",
+    "recognition_de": "Paulus an Titus, wie ein Ältester sein muss: Raster mit allen Gliedern – oben Ruf und Familie (untadelig, eine Frau, gläubige Kinder), darunter zwei Spalten: fünf durchgestrichene Felder (eigenmächtig, jähzornig, Trinker, Schläger, schändlicher Gewinn) gegenüber sechs Feldern «sondern» (gastfreundlich, dem Guten zugetan, besonnen, gerecht, fromm, beherrscht).",
+    "keywords": [
+     "untadelig",
+     "Verwalter Gottes",
+     "gastfreundlich"
+    ],
+    "mode": "list"
+   },
+   {
+    "reference": "TIT.1.15-TIT.1.16",
+    "text_de": "Für die Reinen ist alles rein, für die Befleckten nichts; die Verführer behaupten, Gott zu kennen, verleugnen ihn aber mit ihren Werken und sind für jedes gute Werk untauglich.",
+    "reason_de": "Aus dem Abschnitt gegen die Verführer: der Schluss trägt die Kernaussage und führt das Leitwort «gute Werke» ein; vor dem bekannteren Kreter-Spruch gewählt, weil die Kernaussage vor der Bekanntheit geht (Kriterium 1).",
+    "recognition_de": "Zwei Spalten: links ein Mann, der mit dem Finger nach oben zu Gott zeigt («behaupten, Gott zu kennen»), rechts dieselben Hände bei schlechten Taten («mit den Werken verleugnen»); darüber klein «rein ↔ befleckt» (Deutung für das Bild: Zeigefinger und Hände).",
     "keywords": [
      "Gott zu kennen",
      "verleugnen sie ihn"
@@ -596,9 +1557,8 @@
    }
   ],
   "omitted_de": [
-   "Hoffnung auf ewiges Leben (Tit 1,2) – auf Buchebene über Tit 3,7 vertreten",
-   "Eigenschaften der Ältesten im Einzelnen – Teil des Auftrags",
-   "Der Spruch über die Kreter (Tit 1,12) – Erkennungsmoment des Abschnitts, trägt aber die Kernaussage weniger"
+   "Der Spruch über die Kreter (Tit 1,12) als eigener Moment – Beleg innerhalb der Begründung, steht in der Struktur; bekannt, trägt aber die Kernaussage weniger",
+   "«besonders die aus der Beschneidung» und jüdische Mythen im Einzelnen (Tit 1,10.14) – Erklärung der Gegner, gehört in «Hintergrund damals»"
   ],
   "persons": [
    "FIG-PAULUS",
@@ -607,12 +1567,114 @@
    "FIG-GRUPPE-IRRLEHRER"
   ],
   "places": [],
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "cause",
+     "subtype": "Briefkopf → Auftrag → «denn» Gefahr",
+     "range": "TIT.1.1-TIT.1.16",
+     "elements": [
+      {
+       "label": "Briefkopf: Paulus, Apostel, an Titus, sein echtes Kind, in der Hoffnung auf ewiges Leben",
+       "ref": "TIT.1.1-TIT.1.4",
+       "role": "Präskript",
+       "links": [
+        "TIT.3.7"
+       ]
+      },
+      {
+       "label": "Auftrag: in jeder Stadt Älteste einsetzen",
+       "ref": "TIT.1.5",
+       "role": "Auftrag"
+      },
+      {
+       "label": "Ältestenspiegel: untadelig; nicht so – sondern so; am zuverlässigen Wort festhalten",
+       "ref": "TIT.1.6-TIT.1.9",
+       "role": "Voraussetzung"
+      },
+      {
+       "label": "Denn es gibt viele Verführer: Mund stopfen, scharf zurechtweisen (bestätigt durch das Zeugnis eines kretischen Propheten)",
+       "ref": "TIT.1.10-TIT.1.14",
+       "role": "Begründung («denn»)"
+      },
+      {
+       "label": "Urteil: Sie behaupten, Gott zu kennen, mit den Werken aber verleugnen sie ihn",
+       "ref": "TIT.1.15-TIT.1.16",
+       "role": "Urteil"
+      },
+      {
+       "label": "Ältester ↔ Verführer",
+       "ref": "TIT.1.6-TIT.1.16",
+       "role": "Gegenüberstellung",
+       "child": "s2"
+      }
+     ],
+     "features": {
+      "speakers": [
+       {
+        "who": "Paulus",
+        "to": "Titus"
+       }
+      ],
+      "modality": [
+       {
+        "note": "Einsetzen, Mund stopfen, zurechtweisen: Aufträge, nicht Bericht."
+       }
+      ]
+     },
+     "visual": "arrows",
+     "basis": "text"
+    },
+    {
+     "id": "s2",
+     "pattern": "contrast",
+     "subtype": "Wortechos zwischen Ältestenspiegel und Gegnerbild",
+     "range": "TIT.1.6-TIT.1.16",
+     "elements": [
+      {
+       "label": "Ältester: nicht auf schändlichen Gewinn aus ↔ Verführer: lehren um schändlichen Gewinns willen",
+       "ref": "TIT.1.7-TIT.1.11",
+       "role": "Paar"
+      },
+      {
+       "label": "Ältester: Kinder nicht widerspenstig ↔ Verführer: viele Widerspenstige",
+       "ref": "TIT.1.6-TIT.1.10",
+       "role": "Paar"
+      },
+      {
+       "label": "Ältester: hält sich an das Wort, das der Lehre entspricht ↔ Verführer: lehren, was nicht sein darf",
+       "ref": "TIT.1.9-TIT.1.11",
+       "role": "Paar"
+      },
+      {
+       "label": "Ältester: dem Guten zugetan ↔ Verführer: für jedes gute Werk untauglich",
+       "ref": "TIT.1.8-TIT.1.16",
+       "role": "Paar"
+      }
+     ],
+     "features": {
+      "interpretation": [
+       {
+        "note": "Die Paare beruhen auf gleichen Wörtern im Text (schändlicher Gewinn, widerspenstig, Lehre, gut); die Gegenüberstellung als Ganzes ist Analyse, der Text stellt sie nicht ausdrücklich auf."
+       }
+      ]
+     },
+     "visual": "columns",
+     "basis": "text"
+    }
+   ]
+  },
+  "date": "2026-10-24",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
   "review": {
-   "date": "2026-10-23",
-   "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-   "summary_de": "Auswahl und Kernaussage stimmen; übernommene Momente nach den Abschnitten korrigiert.",
+   "date": "2026-10-24",
+   "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+   "summary_de": "Kapitel fügt die drei Abschnitte (Präskript, Auftrag mit Ältestenspiegel, «denn» Verführer) richtig zusammen; Gegenüberstellung Ältester ↔ Verführer als Wortechos korrekt als Analyse gekennzeichnet; Momente aus den Abschnitten, Kreter-Spruch begründet weggelassen.",
    "changes_de": [
-    "Momente 1,4 und 1,5 aus den korrigierten Abschnitten übernommen (keine Übergabe; Auftrag als verlangte Handlung)"
+    "core_de und Label s1/5: «mit Worten bekennen» durch den Wortlaut «behaupten, Gott zu kennen» ersetzt.",
+    "Moment 3 an Abschnitt angeglichen («der Aufseher als Verwalter Gottes»)."
    ]
   }
  },
@@ -633,10 +1695,10 @@
   },
   "moments": [
    {
-    "reference": "TIT.2.1-TIT.2.2",
-    "text_de": "Titus soll reden, was der gesunden Lehre entspricht; die Anweisungen beginnen bei den älteren Männern, die nüchtern, besonnen und gesund im Glauben sein sollen.",
-    "reason_de": "Aus dem Hauptabschnitt der Anweisungen: Leitsatz und Beginn der Aufzählung der Gruppen (Kriterien 1–3).",
-    "recognition_de": "Paulus an Titus: Titus soll vor der Gemeinde reden, in der ältere Männer, ältere und junge Frauen, junge Männer und Sklaven stehen (verlangte Handlung).",
+    "reference": "TIT.2.1",
+    "text_de": "Titus soll reden, was der gesunden Lehre entspricht – im Gegensatz zu den Verführern.",
+    "reason_de": "Aus der Gruppentafel: Überschrift und Gegensatz «Du aber» zu den Verführern (Kriterien 1–2).",
+    "recognition_de": "Paulus an Titus: Kopfzeile über dem Raster – Titus soll vor der Gemeinde reden (verlangte Handlung).",
     "keywords": [
      "Du aber rede",
      "gesunden Lehre"
@@ -644,22 +1706,46 @@
     "mode": "instruction"
    },
    {
+    "reference": "TIT.2.2-TIT.2.10",
+    "text_de": "Jede Gruppe erhält ihre Weisung: ältere Männer, ältere Frauen, die die jungen Frauen anleiten, jüngere Männer, Titus selbst als Vorbild guter Werke und Sklaven; nach «damit sie die jungen Frauen anleiten» nennt «damit» dreimal die Wirkung nach aussen: dass das Wort Gottes nicht in Verruf kommt, der Gegner beschämt wird und die Lehre Gottes geschmückt wird.",
+    "reason_de": "Aus der Gruppentafel: die Reihe aller Gruppen mit Pflicht und Zweck, als ein Moment (Kriterien 1–2, Regel 4).",
+    "recognition_de": "Paulus an Titus: Raster mit sechs Zeilen (ältere Männer, ältere Frauen, junge Frauen, jüngere Männer, Titus, Sklaven) und zwei Spalten «Pflicht» und «damit»; bei älteren und jüngeren Männern bleibt das Feld «damit» leer (verlangte Handlungen; Deutung für das Bild: Glanz für «schmücken», Mithelfen für «gute Werke»).",
+    "keywords": [
+     "Ältere Männer",
+     "Ältere Frauen",
+     "jüngeren Männer",
+     "Vorbild guter Werke",
+     "Sklaven",
+     "schmücken"
+    ],
+    "mode": "instruction"
+   },
+   {
     "reference": "TIT.2.11-TIT.2.12",
     "text_de": "Die Gnade Gottes ist erschienen, rettend für alle Menschen, und erzieht uns, besonnen, gerecht und fromm zu leben.",
-    "reason_de": "Aus dem Hauptabschnitt der Begründung: die Aussage, auf der alle Anweisungen ruhen; Höhepunkt des Kapitels (Kriterien 1, 2, 4).",
-    "recognition_de": "Licht fällt auf alle Menschen; eine Gruppe von Glaubenden, Paulus eingeschlossen, wendet sich von Gottlosigkeit und Begierden ab (Deutung für das Bild: Licht für «erschienen»).",
+    "reason_de": "Aus der Begründung: die Aussage, auf der alle Anweisungen ruhen; Höhepunkt des Kapitels (Kriterien 1, 2, 4).",
+    "recognition_de": "Zeitachse, links: Licht fällt auf alle Menschen (erschienen); in der Mitte eine Gruppe von Glaubenden, Paulus eingeschlossen, die sich von Gottlosigkeit und Begierden abwendet (jetzt) (Deutung für das Bild: Licht für «erschienen»).",
     "keywords": [
      "Gnade Gottes",
      "rettend für alle Menschen",
      "sie erzieht uns"
     ],
     "mode": "statement"
+   },
+   {
+    "reference": "TIT.2.13-TIT.2.14",
+    "text_de": "Wir erwarten das Erscheinen der Herrlichkeit Jesu Christi, der sich für uns hingegeben hat, um uns loszukaufen und sich ein Volk eifrig in guten Werken zu reinigen.",
+    "reason_de": "Aus der Begründung: das zweite «Erscheinen» und die Hingabe Christi mit dem Ziel «eifrig in guten Werken» (Kriterien 1, 3).",
+    "recognition_de": "Zeitachse, rechts: Glaubende blicken erwartungsvoll nach vorn zum Erscheinen der Herrlichkeit; gelöste Ketten liegen an ihren Füssen am Boden (Deutung für das Bild: gelöste Ketten für «loskaufen»).",
+    "keywords": [
+     "Erscheinen der Herrlichkeit",
+     "sich selbst für uns hingegeben"
+    ],
+    "mode": "statement"
    }
   ],
   "omitted_de": [
-   "Titus als Vorbild und die Sklaven (Tit 2,7.10) – Teil der Anweisungen",
-   "Erscheinen der Herrlichkeit Christi (Tit 2,13–14) – vertieft die Begründung, im Kapitel aber Nebengedanke",
-   "Vollmacht des Titus (Tit 2,15) – Übergang"
+   "Vollmacht des Titus (Tit 2,15) als eigener Moment – Rahmen und Übergang, steht in der Struktur"
   ],
   "persons": [
    "FIG-PAULUS",
@@ -668,12 +1754,79 @@
    "FIG-GOTT"
   ],
   "places": [],
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "cause",
+     "subtype": "Anspruch → nachgestelltes «denn» Zuspruch",
+     "range": "TIT.2.1-TIT.2.15",
+     "elements": [
+      {
+       "label": "Du aber rede, was der gesunden Lehre entspricht",
+       "ref": "TIT.2.1",
+       "role": "Überschrift",
+       "links": [
+        "TIT.2.15"
+       ]
+      },
+      {
+       "label": "Gruppentafel: ältere Männer, ältere Frauen (sie leiten die jungen Frauen an), jüngere Männer, Titus selbst, Sklaven – je Pflicht und oft «damit»",
+       "ref": "TIT.2.2-TIT.2.10",
+       "role": "Anspruch"
+      },
+      {
+       "label": "Denn die Gnade Gottes ist erschienen und erzieht uns zu einem besonnenen, gerechten, frommen Leben",
+       "ref": "TIT.2.11-TIT.2.12",
+       "role": "Zuspruch («denn»)"
+      },
+      {
+       "label": "Wir erwarten das Erscheinen der Herrlichkeit; Christus hat sich hingegeben, um sich ein Volk zu reinigen, eifrig in guten Werken",
+       "ref": "TIT.2.13-TIT.2.14",
+       "role": "Zuspruch: Ziel"
+      },
+      {
+       "label": "Das sage und weise zurecht mit aller Vollmacht",
+       "ref": "TIT.2.15",
+       "role": "Auftrag (Rahmen)",
+       "links": [
+        "TIT.2.1"
+       ]
+      }
+     ],
+     "features": {
+      "speakers": [
+       {
+        "who": "Paulus",
+        "to": "Titus"
+       }
+      ],
+      "leitwort": [
+       {
+        "note": "Rahmen «rede» (2,1) ↔ «Das sage» (2,15); «erscheinen» (2,11; 2,13); «gute Werke» (2,7; 2,14)"
+       }
+      ],
+      "modality": [
+       {
+        "note": "2,1–10 und 2,15 Weisungen; 2,11–14 Aussage."
+       }
+      ]
+     },
+     "visual": "arrows",
+     "basis": "text"
+    }
+   ]
+  },
+  "date": "2026-10-24",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
   "review": {
-   "date": "2026-10-23",
-   "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-   "summary_de": "Auswahl stimmt; übernommene Momente nach den Abschnitten korrigiert.",
+   "date": "2026-10-24",
+   "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+   "summary_de": "Anspruch (Gruppentafel) → nachgestelltes «denn» Zuspruch → Auftrag als Rahmen (2,1 ↔ 2,15) richtig; Struktur der Abschnitte zusammengefasst, nicht übergangen.",
    "changes_de": [
-    "Momente 2,1–2 und 2,11–12 aus den korrigierten Abschnitten übernommen («Anweisungen beginnen», «uns» statt alle, Licht als Deutung)"
+    "Label der Gruppentafel: junge Frauen als von den älteren Frauen Angeleitete statt als eigene von Titus angeredete Gruppe.",
+    "Moment 2 an Abschnitt angeglichen («damit» viermal, davon dreimal Wirkung nach aussen)."
    ]
   }
  },
@@ -687,7 +1840,7 @@
    "TIT-003-008-011",
    "TIT-003-012-015"
   ],
-  "core_de": "Die Glaubenden sollen freundlich zu allen sein und sich für gute Werke einsetzen, weil Gott in seiner Güte sie nicht wegen ihrer Werke, sondern aus Erbarmen gerettet hat; nutzloser Streit und Spaltungen haben keinen Platz.",
+  "core_de": "Die Glaubenden sollen freundlich zu allen sein und sich für gute Werke einsetzen, weil Gott in seiner Güte sie nicht wegen ihrer Werke, sondern aus Erbarmen gerettet hat; nutzlose Streitfragen soll Titus meiden und einen Spalter nach zweimaliger Ermahnung abweisen.",
   "mode": "instruction",
   "voice": {
    "speaker": "FIG-PAULUS",
@@ -695,11 +1848,24 @@
   },
   "moments": [
    {
-    "reference": "TIT.3.4-TIT.3.7",
-    "text_de": "Als die Güte und Menschenfreundlichkeit Gottes erschien, hat er uns nicht wegen unserer Werke, sondern aus Erbarmen gerettet durch das Bad der Wiedergeburt und den heiligen Geist, damit wir Erben werden gemäss der Hoffnung auf ewiges Leben.",
-    "reason_de": "Aus dem ersten Hauptabschnitt: Wendepunkt und Höhepunkt, Grund aller Anweisungen des Kapitels (Kriterien 1–4).",
-    "recognition_de": "Gottes Güte erscheint wie Licht; Menschen steigen aus dem Wasser des Bades der Wiedergeburt, und über sie wird der Geist ausgegossen (Deutung für das Bild: Licht für «erschien», Wasser für «Bad»).",
+    "reference": "TIT.3.1-TIT.3.2",
+    "text_de": "Titus soll die Glaubenden erinnern, sich den Regierenden und Behörden unterzuordnen, gehorsam und zu jedem guten Werk bereit zu sein, niemanden zu verleumden, nicht streitsüchtig, sondern freundlich zu sein und allen Menschen Sanftmut zu zeigen.",
+    "reason_de": "Aus dem ersten Abschnitt: die Weisungen, die das «denn» begründet (Kriterien 1–2).",
+    "recognition_de": "Paulus an Titus: Raster mit sieben Feldern – Behörden achten, gehorsam, bereit zu gutem Werk, nicht verleumden, nicht streiten, freundlich, sanftmütig zu allen Menschen (verlangte Handlung).",
     "keywords": [
+     "freundlich",
+     "gegenüber allen Menschen",
+     "zu jedem guten Werk bereit"
+    ],
+    "mode": "instruction"
+   },
+   {
+    "reference": "TIT.3.3-TIT.3.7",
+    "text_de": "Denn auch wir waren einst unverständig, ungehorsam, Sklaven der Begierden und hassten einander; als aber die Güte und Menschenfreundlichkeit Gottes erschien, hat er uns nicht aufgrund von Werken, sondern nach seinem Erbarmen gerettet durch das Bad der Wiedergeburt und die Erneuerung des heiligen Geistes, damit wir Erben werden gemäss der Hoffnung auf ewiges Leben.",
+    "reason_de": "Aus dem ersten Abschnitt: Gegensatz einst ↔ als aber, Wendepunkt und Grund aller Weisungen des Kapitels (Kriterien 1–4).",
+    "recognition_de": "Zwei Spalten: links «einst» – Menschen, Paulus eingeschlossen, kehren einander verfeindet den Rücken zu, gebunden in Ketten; rechts «als aber» – Gottes Güte erscheint wie Licht, Menschen steigen aus dem Wasser des Bades der Wiedergeburt, und über sie wird der Geist ausgegossen; darunter das Feld «Werke» durchgestrichen, «Erbarmen» hervorgehoben (Deutung für das Bild: Ketten, Licht, Wasser).",
+    "keywords": [
+     "auch wir waren einst",
      "Menschenfreundlichkeit Gottes",
      "Bad der Wiedergeburt",
      "Erben"
@@ -707,13 +1873,14 @@
     "mode": "statement"
    },
    {
-    "reference": "TIT.3.8",
-    "text_de": "Paulus bekräftigt das zuverlässige Wort und will, dass Titus fest auftritt, damit die Glaubenden sich für gute Werke einsetzen.",
-    "reason_de": "Aus dem zweiten Hauptabschnitt: bekräftigt das Wort und nennt das Ziel «gute Werke» (Kriterien 1–2).",
-    "recognition_de": "Paulus an Titus: Titus soll fest vor der Gemeinde auftreten, damit die Glaubenden sich für gute Werke einsetzen (verlangte Handlung; Deutung für das Bild: Mithelfen für «gute Werke»).",
+    "reference": "TIT.3.8-TIT.3.9",
+    "text_de": "Das Wort ist zuverlässig: Titus soll fest auftreten, damit die Glaubenden sich für gute Werke einsetzen – das ist gut und nützlich; törichte Streitfragen, Geschlechtsregister und Streit um das Gesetz soll er meiden, denn sie sind nutzlos und leer.",
+    "reason_de": "Aus dem zweiten Abschnitt: Bekräftigung und Gegensatz nützlich ↔ nutzlos mit dem Ziel «gute Werke» (Kriterien 1–2).",
+    "recognition_de": "Paulus an Titus: zwei Spalten – links Glaubende, die mit anpacken und helfen («gut und nützlich»), rechts zwei Männer, die über einer langen Ahnenliste streiten («nutzlos und leer»), von denen Titus sich abwendet (verlangte Handlungen; Deutung für das Bild: Mithelfen für «gute Werke», Ahnenliste nach «Geschlechtsregister»).",
     "keywords": [
      "Zuverlässig ist das Wort",
-     "gute Werke"
+     "gute Werke",
+     "nutzlos und leer"
     ],
     "mode": "instruction"
    },
@@ -721,7 +1888,7 @@
     "reference": "TIT.3.13-TIT.3.14",
     "text_de": "Titus soll Zenas und Apollos für die Reise ausrüsten, und die Glaubenden sollen lernen, sich für gute Werke einzusetzen, damit sie nicht ohne Frucht sind.",
     "reason_de": "Aus dem Briefschluss: letzte Wiederholung des Leitworts, an einem konkreten Beispiel (Kriterien 1–2).",
-    "recognition_de": "Paulus an Titus: Titus und die Glaubenden sollen zwei Reisende, Zenas und Apollos, sorgfältig ausrüsten, damit ihnen nichts fehlt (verlangte Handlung).",
+    "recognition_de": "Briefbild, Feld «letzte Mahnung»: Titus und die Glaubenden rüsten zwei Reisende, Zenas und Apollos, sorgfältig aus, damit ihnen nichts fehlt (verlangte Handlung).",
     "keywords": [
      "gute Werke",
      "dringenden Bedürfnisse",
@@ -731,9 +1898,8 @@
    }
   ],
   "omitted_de": [
-   "Freundlichkeit gegenüber Behörden und allen Menschen (Tit 3,1–2) – im Kern genannt, als Folge des Hauptmoments",
-   "Streitfragen und Spalter (Tit 3,9–11) – im Kern genannt",
-   "Reisepläne und Grüsse (Tit 3,12.15) – Rahmen ohne eigene Aussage"
+   "Spalter (Tit 3,10–11) als eigener Moment – Anwendung der Abgrenzung, steht in der Struktur",
+   "Reisepläne und Grüsse (Tit 3,12.15) als eigene Momente – Briefrahmen, steht in der Struktur"
   ],
   "persons": [
    "FIG-PAULUS",
@@ -744,12 +1910,103 @@
    "FIG-APOLLOS"
   ],
   "places": [],
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "cause",
+     "subtype": "Anspruch → «denn» Zuspruch → Folgerung",
+     "range": "TIT.3.1-TIT.3.15",
+     "elements": [
+      {
+       "label": "Erinnere sie: unterordnen, zu jedem guten Werk bereit, freundlich und sanftmütig gegenüber allen Menschen",
+       "ref": "TIT.3.1-TIT.3.2",
+       "role": "Anspruch"
+      },
+      {
+       "label": "Denn: einst ↔ als aber",
+       "ref": "TIT.3.3-TIT.3.7",
+       "role": "Zuspruch («denn»)",
+       "child": "s2"
+      },
+      {
+       "label": "Zuverlässig ist das Wort: gute Werke sind gut und nützlich ↔ Streitfragen sind nutzlos und leer",
+       "ref": "TIT.3.8-TIT.3.9",
+       "role": "Folgerung"
+      },
+      {
+       "label": "Einen Spalter nach erster und zweiter Ermahnung abweisen",
+       "ref": "TIT.3.10-TIT.3.11",
+       "role": "Folgerung"
+      },
+      {
+       "label": "Briefschluss: Reisen, Ausrüstung der Reisenden, gute Werke, damit sie nicht ohne Frucht sind; Grüsse und Gnadenwunsch",
+       "ref": "TIT.3.12-TIT.3.15",
+       "role": "Briefschluss"
+      }
+     ],
+     "features": {
+      "speakers": [
+       {
+        "who": "Paulus",
+        "to": "Titus"
+       }
+      ],
+      "leitwort": [
+       {
+        "note": "«gute Werke» (3,1; 3,8; 3,14) ↔ «nicht aufgrund von Werken» (3,5)"
+       }
+      ],
+      "modality": [
+       {
+        "note": "Weisungen 3,1–2 und 3,8–14; 3,3–7 Aussage, 3,7 Ziel."
+       }
+      ]
+     },
+     "visual": "arrows",
+     "basis": "text"
+    },
+    {
+     "id": "s2",
+     "pattern": "contrast",
+     "subtype": "einst – jetzt",
+     "range": "TIT.3.3-TIT.3.7",
+     "elements": [
+      {
+       "label": "Einst: auch wir unverständig, ungehorsam, Sklaven der Begierden; wir hassten einander",
+       "ref": "TIT.3.3",
+       "role": "einst"
+      },
+      {
+       "label": "Als aber Gottes Güte erschien, hat er uns gerettet – nicht aufgrund von Werken, sondern nach seinem Erbarmen",
+       "ref": "TIT.3.4-TIT.3.5",
+       "role": "als aber"
+      },
+      {
+       "label": "durch das Bad der Wiedergeburt und die Erneuerung des heiligen Geistes",
+       "ref": "TIT.3.5-TIT.3.6",
+       "role": "als aber: Mittel"
+      },
+      {
+       "label": "damit wir Erben werden gemäss der Hoffnung auf ewiges Leben",
+       "ref": "TIT.3.7",
+       "role": "als aber: Zweck"
+      }
+     ],
+     "visual": "columns",
+     "basis": "text"
+    }
+   ]
+  },
+  "date": "2026-10-24",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
   "review": {
-   "date": "2026-10-23",
-   "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-   "summary_de": "Auswahl stimmt; übernommene Momente nach den Abschnitten korrigiert.",
+   "date": "2026-10-24",
+   "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+   "summary_de": "Anspruch → «denn» Zuspruch (einst ↔ als aber) → Folgerungen → Briefschluss richtig; Leitwort gute Werke ↔ nicht aus Werken erfasst; Momente im Rahmen.",
    "changes_de": [
-    "Momente 3,4–7 und 3,13–14 aus den korrigierten Abschnitten übernommen (Licht als Deutung; Stichwörter «gute Werke» statt Namen)"
+    "core_de: wertende Wendung «haben keinen Platz» durch die Weisungen des Textes ersetzt (meiden, nach zweimaliger Ermahnung abweisen)."
    ]
   }
  },
@@ -763,8 +2020,8 @@
    "TIT-002",
    "TIT-003"
   ],
-  "core_de": "Weil Gottes Gnade und Güte rettend erschienen sind, soll die Gemeinde auf Kreta unter treuen Ältesten an der gesunden Lehre festhalten und sich – anders als die Verführer – in einem Leben guter Werke bewähren.",
-  "purpose_de": "Paulus schreibt an seinen Mitarbeiter Titus, den er auf Kreta zurückgelassen hat, um ihn mit Autorität auszustatten: Er soll die jungen Gemeinden ordnen, Älteste einsetzen, Irrlehrern wehren und alle Gruppen zu einem Leben anleiten, das der gesunden Lehre entspricht; über Titus richtet sich der Brief auch an die Gemeinden («euch allen», Tit 3,15).",
+  "core_de": "Weil Gottes Gnade und Güte rettend erschienen sind – zweimal mit «denn» begründet –, soll die Gemeinde auf Kreta unter untadeligen Ältesten an der gesunden Lehre festhalten und sich, anders als die Verführer, in einem Leben guter Werke bewähren.",
+  "purpose_de": "Paulus schreibt an seinen Mitarbeiter Titus, den er auf Kreta zurückgelassen hat, um ihn mit Autorität auszustatten: Er soll Fehlendes in den Gemeinden ordnen, Älteste einsetzen, Irrlehrern wehren und alle Gruppen zu einem Leben anleiten, das der gesunden Lehre entspricht; über Titus richtet sich der Brief auch an die Gemeinden («euch allen», Tit 3,15).",
   "mode": "instruction",
   "voice": {
    "speaker": "FIG-PAULUS",
@@ -794,20 +2051,21 @@
     "mode": "statement"
    },
    {
-    "reference": "TIT.2.1-TIT.2.2",
-    "text_de": "Titus soll reden, was der gesunden Lehre entspricht; die Anweisungen beginnen bei den älteren Männern, die nüchtern, besonnen und gesund im Glauben sein sollen.",
-    "reason_de": "Gesunde Lehre für alle Gruppen der Gemeinde – der Alltag, in dem sich der Glaube zeigt (Zweck, Kriterien 1 und 3).",
-    "recognition_de": "Paulus an Titus: Titus soll vor der Gemeinde reden, in der ältere Männer, ältere und junge Frauen, junge Männer und Sklaven stehen (verlangte Handlung).",
+    "reference": "TIT.2.1-TIT.2.10",
+    "text_de": "Titus soll reden, was der gesunden Lehre entspricht, und jeder Gruppe – Älteren, Jüngeren, Sklaven und sich selbst als Vorbild – ihre Weisung geben, damit ihr Leben die Lehre Gottes schmückt.",
+    "reason_de": "Erster Anspruch: die Gruppentafel, der Alltag, in dem sich der Glaube zeigt (Zweck, Kriterien 1 und 3).",
+    "recognition_de": "Paulus an Titus: Raster der Gruppen (ältere Männer, ältere Frauen, junge Frauen, jüngere Männer, Titus, Sklaven), Titus redet davor zur Gemeinde (verlangte Handlung).",
     "keywords": [
      "Du aber rede",
-     "gesunden Lehre"
+     "gesunden Lehre",
+     "schmücken"
     ],
     "mode": "instruction"
    },
    {
     "reference": "TIT.2.11-TIT.2.12",
     "text_de": "Die Gnade Gottes ist erschienen, rettend für alle Menschen, und erzieht uns, besonnen, gerecht und fromm zu leben.",
-    "reason_de": "Erste Begründung: die erschienene Gnade erzieht zum neuen Leben; bekannteste Stelle (Kriterien 1, 2, 4).",
+    "reason_de": "Erster Zuspruch, nachgestellt mit «denn»: die erschienene Gnade erzieht zum neuen Leben; bekannteste Stelle (Kriterien 1, 2, 4).",
     "recognition_de": "Licht fällt auf alle Menschen; eine Gruppe von Glaubenden, Paulus eingeschlossen, wendet sich von Gottlosigkeit und Begierden ab (Deutung für das Bild: Licht für «erschienen»).",
     "keywords": [
      "Gnade Gottes",
@@ -817,11 +2075,13 @@
     "mode": "statement"
    },
    {
-    "reference": "TIT.3.4-TIT.3.7",
-    "text_de": "Als die Güte und Menschenfreundlichkeit Gottes erschien, hat er uns nicht wegen unserer Werke, sondern aus Erbarmen gerettet durch das Bad der Wiedergeburt und den heiligen Geist, damit wir Erben werden gemäss der Hoffnung auf ewiges Leben.",
-    "reason_de": "Zweite Begründung und Höhepunkt: Rettung aus Erbarmen, nicht aus Werken, mit der Hoffnung auf ewiges Leben als Rahmen zu Tit 1,2 (Kriterien 1–3).",
-    "recognition_de": "Gottes Güte erscheint wie Licht; Menschen steigen aus dem Wasser des Bades der Wiedergeburt, und über sie wird der Geist ausgegossen (Deutung für das Bild: Licht für «erschien», Wasser für «Bad»).",
+    "reference": "TIT.3.1-TIT.3.7",
+    "text_de": "Die Glaubenden sollen freundlich zu allen Menschen sein, denn auch wir waren einst unverständig, ungehorsam und hassten einander; als aber Gottes Güte und Menschenfreundlichkeit erschien, hat er uns nicht aufgrund von Werken, sondern nach seinem Erbarmen gerettet durch das Bad der Wiedergeburt und den heiligen Geist, damit wir Erben werden gemäss der Hoffnung auf ewiges Leben.",
+    "reason_de": "Zweiter Anspruch mit zweitem Zuspruch und Höhepunkt: Rettung aus Erbarmen, nicht aus Werken; die Hoffnung auf ewiges Leben schliesst den Rahmen zu Tit 1,2 (Kriterien 1–3).",
+    "recognition_de": "Zwei Spalten unter der Weisung «freundlich zu allen»: links «einst» – Menschen in Ketten, verfeindet; rechts «als aber» – Gottes Güte wie Licht, Menschen steigen aus dem Wasser, der Geist wird ausgegossen (Deutung für das Bild: Ketten, Licht, Wasser).",
     "keywords": [
+     "gegenüber allen Menschen",
+     "auch wir waren einst",
      "Menschenfreundlichkeit Gottes",
      "Bad der Wiedergeburt",
      "Erben"
@@ -842,10 +2102,9 @@
    }
   ],
   "omitted_de": [
-   "Gruss und Schlussgrüsse – Rahmen ohne eigene Aussage, im Zweck genannt",
-   "Der Spruch über die Kreter – bekannt, trägt aber die Kernaussage nicht",
-   "Einzelne Tugendlisten für Älteste und Gruppen – Einzelheiten der Kapitel",
-   "Streitfragen und Spalter (Tit 3,9–11) – Wiederholung der Abgrenzung gegen die Verführer"
+   "Gruss und Schlussgrüsse als eigene Stationen – Briefrahmen, in Struktur und Zweck genannt",
+   "Der Spruch über die Kreter – bekannt, Beleg innerhalb der Abgrenzung, trägt die Kernaussage nicht",
+   "Streitfragen und Spalter (Tit 3,9–11) als eigene Station – Folgerung, steht in der Struktur"
   ],
   "persons": [
    "FIG-PAULUS",
@@ -857,13 +2116,123 @@
    "FIG-JESUS"
   ],
   "places": [],
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "form",
+     "form_type": "letter",
+     "subtype": "Mandatsbrief",
+     "range": "TIT",
+     "elements": [
+      {
+       "label": "Präskript: Paulus an Titus, in der Hoffnung auf ewiges Leben; Gnade und Friede",
+       "ref": "TIT.1.1-TIT.1.4",
+       "role": "Präskript"
+      },
+      {
+       "label": "kein Dank nach dem Präskript",
+       "role": "Proömium",
+       "empty": true
+      },
+      {
+       "label": "Korpus: zweimal Anspruch → «denn» Zuspruch",
+       "ref": "TIT.1.5-TIT.3.11",
+       "role": "Korpus",
+       "child": "s2"
+      },
+      {
+       "label": "Schluss: Reisen, letzte Mahnung zu guten Werken, Grüsse, Gnade für alle",
+       "ref": "TIT.3.12-TIT.3.15",
+       "role": "Schluss"
+      }
+     ],
+     "features": {
+      "speakers": [
+       {
+        "who": "Paulus",
+        "to": "Titus",
+        "note": "über Titus auch an die Gemeinden («euch allen», 3,15)"
+       }
+      ],
+      "genre": [
+       {
+        "note": "Mandatsbrief (Forschungsbegriff)"
+       }
+      ],
+      "pattern_break": [
+       {
+        "note": "Kein Dank oder Lobpreis nach dem Präskript; der Brief geht in 1,5 direkt zum Auftrag über."
+       }
+      ],
+      "leitwort": [
+       {
+        "note": "«gute Werke» (1,16; 2,7; 2,14; 3,1; 3,8; 3,14); «gesunde Lehre» (1,9; 2,1); «erscheinen» (2,11; 2,13; 3,4); Rahmen «Hoffnung auf ewiges Leben» (1,2 ↔ 3,7)"
+       }
+      ]
+     },
+     "visual": "outline",
+     "basis": "text"
+    },
+    {
+     "id": "s2",
+     "pattern": "cause",
+     "subtype": "Anspruch → nachgestelltes «denn» Zuspruch (zweimal)",
+     "range": "TIT.1.5-TIT.3.11",
+     "elements": [
+      {
+       "label": "Auftrag: Älteste einsetzen, die untadelig sind und am zuverlässigen Wort festhalten",
+       "ref": "TIT.1.5-TIT.1.9",
+       "role": "Auftrag"
+      },
+      {
+       "label": "Gegenbild: Verführer behaupten, Gott zu kennen, und verleugnen ihn mit den Werken",
+       "ref": "TIT.1.10-TIT.1.16",
+       "role": "Abgrenzung"
+      },
+      {
+       "label": "Anspruch 1: Gruppentafel – jede Gruppe erhält ihre Weisung, damit das Wort Gottes nicht in Verruf kommt, der Gegner beschämt wird und die Lehre Gottes geschmückt wird",
+       "ref": "TIT.2.1-TIT.2.10",
+       "role": "Anspruch"
+      },
+      {
+       "label": "Zuspruch 1: Denn die Gnade Gottes ist erschienen und erzieht uns, damit wir besonnen leben und das Erscheinen der Herrlichkeit erwarten; Christus hat sich für uns hingegeben, um sich ein Volk zu reinigen, eifrig in guten Werken",
+       "ref": "TIT.2.11-TIT.2.15",
+       "role": "Zuspruch («denn»)"
+      },
+      {
+       "label": "Anspruch 2: unterordnen, zu jedem guten Werk bereit, freundlich zu allen Menschen",
+       "ref": "TIT.3.1-TIT.3.2",
+       "role": "Anspruch"
+      },
+      {
+       "label": "Zuspruch 2: Denn einst waren auch wir unverständig und ungehorsam; als aber Gottes Güte erschien, rettete er uns aus Erbarmen, damit wir Erben werden",
+       "ref": "TIT.3.3-TIT.3.7",
+       "role": "Zuspruch («denn»)"
+      },
+      {
+       "label": "Folgerung: auf guten Werken bestehen, nutzlosen Streit meiden, Spalter abweisen",
+       "ref": "TIT.3.8-TIT.3.11",
+       "role": "Folgerung"
+      }
+     ],
+     "visual": "arrows",
+     "basis": "text"
+    }
+   ]
+  },
+  "date": "2026-10-24",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
   "review": {
-   "date": "2026-10-23",
-   "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-   "summary_de": "Zweck, Kernaussage und die sechs Stationen stimmen; übernommene Mängel der Stationen behoben.",
+   "date": "2026-10-24",
+   "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+   "summary_de": "Briefformular mit fehlendem Proömium (als Musterbruch und leeres Feld) und Korpus aus zweimal Anspruch → «denn» Zuspruch richtig erkannt; Leitwörter vollständig; sechs Stationen aus den Kapiteln.",
    "changes_de": [
-    "Stationen 1,5, 2,1–2, 2,11–12, 3,4–7, 3,13–14 aus den korrigierten Kapiteln übernommen",
-    "Station 2,1–2: Stichwörter «Du aber rede», «gesunden Lehre» statt «Ältere Männer»"
+    "Richtung: Untertyp von s2 hiess «Zuspruch → Anspruch», im Brief steht der Anspruch voran und der Zuspruch folgt mit «denn»; korrigiert zu «Anspruch → nachgestelltes «denn» Zuspruch (zweimal)».",
+    "«einst verloren» (Label Zuspruch 2 und Moment 5) steht nicht im Text; ersetzt durch Wortlaut aus 3,3 (unverständig, ungehorsam, hassten einander).",
+    "Label Anspruch 1: verallgemeinerndes «jede Gruppe soll besonnen leben, damit sie die Lehre schmückt» durch die drei Zwecke des Textes ersetzt; Label Zuspruch 1 um den Zweck «damit wir … leben … erwarten» und die Hingabe Christi (2,14) ergänzt.",
+    "Wertungen ohne Textgrundlage ersetzt: «treuen Ältesten» → «untadeligen Ältesten» (core_de), «die jungen Gemeinden» → «Fehlendes in den Gemeinden» (purpose_de, nach 1,5); «bekennen» → «behaupten, Gott zu kennen»."
    ]
   }
  }

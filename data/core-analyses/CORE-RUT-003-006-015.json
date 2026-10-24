@@ -6,17 +6,190 @@
  "level": "section",
  "reference": "RUT.3.6-RUT.3.15",
  "target": "TU-RUT-003-006-015",
- "core_de": "Rut bittet Boas nachts auf der Tenne, als Löser für sie einzustehen; Boas segnet ihre Treue und verspricht, sie zu lösen, falls der nähere Löser es nicht tut.",
+ "core_de": "Rut bittet Boas nachts auf der Tenne, als Löser für sie einzustehen; Boas segnet ihre Treue und schwört: Will der nähere Löser sie lösen, soll er es tun, will er nicht, löst Boas sie selbst.",
  "mode": "narrative",
  "voice": {
   "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Nacht auf der Tenne",
+    "range": "RUT.3.6-RUT.3.15",
+    "elements": [
+     {
+      "label": "Rut tut alles, wie Noomi es ihr aufgetragen hat: Sie deckt seine Füsse auf und legt sich hin",
+      "ref": "RUT.3.6-RUT.3.7",
+      "role": "Ausführung",
+      "links": [
+       "RUT.3.3-RUT.3.4"
+      ]
+     },
+     {
+      "label": "Um Mitternacht schrickt Boas auf: «Wer bist du?»",
+      "ref": "RUT.3.8-RUT.3.9",
+      "role": "Frage"
+     },
+     {
+      "label": "Ruts Bitte",
+      "ref": "RUT.3.9",
+      "role": "Bitte",
+      "child": "s2"
+     },
+     {
+      "label": "Boas segnet Rut: Ihre Treue ist jetzt noch schöner als am Anfang, sie ist nicht den jungen Männern nachgegangen",
+      "ref": "RUT.3.10",
+      "role": "Segen mit Begründung"
+     },
+     {
+      "label": "«Fürchte dich nicht! Alles, was du sagst, werde ich für dich tun; denn alle wissen: Du bist eine tüchtige Frau»",
+      "ref": "RUT.3.11",
+      "role": "Zusage mit Begründung"
+     },
+     {
+      "label": "«Ich bin ein Löser, aber es gibt einen Löser, der näher verwandt ist als ich»",
+      "ref": "RUT.3.12",
+      "role": "Vorbehalt"
+     },
+     {
+      "label": "Boas' Schwur",
+      "ref": "RUT.3.13",
+      "role": "Entscheidung offen",
+      "child": "s3"
+     },
+     {
+      "label": "Sie liegt bis zum Morgen zu seinen Füssen und geht vor Tagesanbruch; es soll nicht bekannt werden",
+      "ref": "RUT.3.14",
+      "role": "Aufbruch"
+     },
+     {
+      "label": "Boas misst ihr sechs Mass Gerste in den Umhang",
+      "ref": "RUT.3.15",
+      "role": "Gabe"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Boas",
+       "to": "Rut",
+       "refs": [
+        "RUT.3.9",
+        "RUT.3.10-RUT.3.13",
+        "RUT.3.15"
+       ]
+      },
+      {
+       "who": "Rut",
+       "to": "Boas",
+       "refs": [
+        "RUT.3.9"
+       ]
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "lösen / Löser",
+       "refs": [
+        "RUT.3.9",
+        "RUT.3.12",
+        "RUT.3.13"
+       ],
+       "role": "Leitwort"
+      },
+      {
+       "word": "Treue",
+       "refs": [
+        "RUT.3.10"
+       ],
+       "role": "deutend"
+      }
+     ],
+     "numbers": [
+      {
+       "ref": "RUT.3.15",
+       "note": "«sechs Mass Gerste»; Mass nicht angegeben, nicht umrechnen"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "cause",
+    "subtype": "Bitte mit Begründung",
+    "range": "RUT.3.9",
+    "elements": [
+     {
+      "label": "«Breite den Zipfel deines Gewandes über deine Dienerin aus»",
+      "ref": "RUT.3.9",
+      "role": "Bitte"
+     },
+     {
+      "label": "denn du bist ein Löser",
+      "ref": "RUT.3.9",
+      "role": "Begründung"
+     }
+    ],
+    "features": {
+     "modality": [
+      {
+       "ref": "RUT.3.9",
+       "kind": "Bitte",
+       "note": "Bitte, noch keine Zusage."
+      }
+     ]
+    },
+    "visual": "arrows",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "condition",
+    "subtype": "Weiche mit Schwur",
+    "range": "RUT.3.13",
+    "elements": [
+     {
+      "label": "Wenn der nähere Löser dich lösen will → gut, soll er lösen",
+      "ref": "RUT.3.13",
+      "role": "Zweig 1"
+     },
+     {
+      "label": "Wenn er nicht willens ist → dann löse ich dich, ich selbst – so wahr JHWH lebt",
+      "ref": "RUT.3.13",
+      "role": "Zweig 2"
+     }
+    ],
+    "features": {
+     "modality": [
+      {
+       "ref": "RUT.3.13",
+       "kind": "Schwur",
+       "note": "Boas bindet sich mit «so wahr JHWH lebt»; welcher Zweig gilt, ist noch offen."
+      }
+     ],
+     "open_end": [
+      {
+       "ref": "RUT.3.13",
+       "note": "Die Entscheidung fällt erst am Morgen im Tor ([[RUT.4.6]])."
+      }
+     ]
+    },
+    "visual": "switch",
+    "basis": "text"
+   }
+  ]
  },
  "moments": [
   {
    "reference": "RUT.3.8-RUT.3.9",
    "text_de": "Um Mitternacht findet Boas eine Frau zu seinen Füssen; Rut nennt sich und bittet ihn, den Zipfel seines Gewandes über sie zu breiten, denn er sei ein Löser.",
    "reason_de": "Trägt die Kernaussage (Kriterium 1), Höhepunkt der Nacht in wörtlicher Rede (Kriterium 2) und Erkennungsmoment (Kriterium 4).",
-   "recognition_de": "Nacht auf der Tenne neben dem Getreidehaufen: Boas fährt hoch, Rut liegt zu seinen Füssen und zeigt auf den Saum seines Gewandes.",
+   "recognition_de": "Nacht auf der Tenne neben dem Getreidehaufen: Boas fährt hoch, Rut liegt zu seinen Füssen und zeigt auf den Zipfel seines Gewandes.",
    "keywords": [
     "zu seinen Füssen",
     "Zipfel deines Gewandes",
@@ -25,9 +198,9 @@
   },
   {
    "reference": "RUT.3.10-RUT.3.13",
-   "text_de": "Boas segnet Rut für ihre Treue, nennt sie eine tüchtige Frau und schwört, sie selbst zu lösen, falls der näher verwandte Löser es nicht tut.",
-   "reason_de": "Antwort auf den Höhepunkt und Wendepunkt zu Kapitel 4 (Kriterium 1 und 2): Boas bestätigt Ruts Treue und bindet sich mit einem Schwur; die Spannung um den näheren Löser trägt in Kapitel 4 hinüber (Kriterium 3).",
-   "recognition_de": "Boas antwortet in der Nacht auf der Tenne der zu seinen Füssen liegenden Rut mit dem Schwur «so wahr JHWH lebt».",
+   "text_de": "Boas segnet Rut für ihre Treue, nennt sie eine tüchtige Frau, verweist auf einen näher verwandten Löser und schwört: Will dieser sie lösen, soll er lösen; will er nicht, löst Boas sie selbst.",
+   "reason_de": "Antwort auf den Höhepunkt und Wendepunkt zu Kapitel 4 (Kriterium 1 und 2): Boas bestätigt Ruts Treue und bindet sich mit einem Schwur; die Spannung um den näheren Löser trägt in Kapitel 4 hinüber (Kriterium 3). Beide Zweige der Bedingung stehen in structure.",
+   "recognition_de": "Boas antwortet in der Nacht auf der Tenne der zu seinen Füssen liegenden Rut; eine Weiche zeigt beide Wege: der nähere Löser löst – oder Boas löst sie selbst, «so wahr JHWH lebt».",
    "keywords": [
     "tüchtige Frau",
     "werde ich dich lösen",
@@ -38,7 +211,7 @@
  "omitted_de": [
   "Ausführung des Plans im Einzelnen (3,6–7) – Wiederholung von 3,3–4",
   "Ruts Aufbruch vor Tagesanbruch und Boas' Diskretion (3,14) – Übergang",
-  "Sechs Mass Gerste im Umhang (3,15) – im folgenden Abschnitt als Moment gewählt; Zahl"
+  "Sechs Mass Gerste im Umhang (3,15) – die Gabe wird im folgenden Abschnitt gezeigt, wo Rut sie Noomi bringt (3,17); Zahl"
  ],
  "persons": [
   "FIG-RUT",
@@ -54,18 +227,17 @@
    "fingerprint": "35306a703c3859b0"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Drei im Bild kaum unterscheidbare Nachtszenen; zusammengelegt.",
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Ablauf mit Bitte und Begründung und Weiche mit beiden Zweigen (3,13) richtig; nur eine Wortwahl im Erkennungsmoment.",
   "changes_de": [
-   "Momente 3,10–11 und 3,12–13 zu einem Moment 3,10–13 (Segen, tüchtige Frau, Vorbehalt, Schwur) zusammengelegt – sonst drei fast gleiche Felder",
-   "Schlüsselwort «ich selbst» ersetzt durch «werde ich dich lösen» und «so wahr JHWH lebt» – allein verständlich"
+   "Erkennungsmoment: «Saum» → «Zipfel» (Wortlaut 3,9)."
   ]
  }
 }

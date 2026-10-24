@@ -6,48 +6,166 @@
  "level": "section",
  "reference": "MAT.6.9-MAT.6.13",
  "target": "TU-MAT-006-009-013",
- "core_de": "Jesus gibt den Jüngern das Vaterunser: Bitte um die Heiligung des Namens, das Kommen des Reiches und den Willen des Vaters, um tägliches Brot, Vergebung und Rettung vor dem Bösen.",
+ "core_de": "Jesus gibt den Jüngern das Vaterunser: nach der Anrede «Unser Vater in den Himmeln» die Bitten mit «dein» (Name, Reich, Wille) und die Bitten mit «uns» (tägliches Brot, Vergebung der Schulden, nicht in Versuchung führen, sondern vor dem Bösen retten).",
  "mode": "instruction",
  "voice": {
   "speaker": "FIG-JESUS",
   "addressee": "FIG-GRUPPE-JUENGER"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "series",
+    "subtype": "Gebet: Anrede und zwei Gruppen von Bitten",
+    "range": "MAT.6.9-MAT.6.13",
+    "elements": [
+     {
+      "label": "Einleitung: So sollt ihr nun beten",
+      "ref": "MAT.6.9",
+      "role": "Einleitung"
+     },
+     {
+      "label": "Anrede: Unser Vater in den Himmeln",
+      "ref": "MAT.6.9",
+      "role": "Anrede"
+     },
+     {
+      "label": "Bitten mit «dein»: Name, Reich, Wille",
+      "ref": "MAT.6.9-MAT.6.10",
+      "role": "Gruppe 1",
+      "child": "s2"
+     },
+     {
+      "label": "Bitten mit «uns»: Brot, Vergebung, Versuchung und Rettung",
+      "ref": "MAT.6.11-MAT.6.13",
+      "role": "Gruppe 2",
+      "child": "s3"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Jesus",
+       "to": "die Jünger",
+       "note": "gibt das Gebet vor"
+      },
+      {
+       "who": "die Betenden (wir)",
+       "to": "den Vater in den Himmeln",
+       "note": "Gebet"
+      }
+     ],
+     "modality": [
+      {
+       "note": "Bitten, keine Zusagen und keine Berichte"
+      }
+     ],
+     "text_forms": [
+      {
+       "note": "Spätere Handschriften fügen am Schluss einen Lobpreis an («Denn dein ist das Reich …»); die Arbeitsübersetzung folgt der kürzeren Fassung ohne ihn."
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "LUK.11.2-LUK.11.4",
+       "kind": "Parallelfassung"
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "Die Zählung «sieben Bitten» stammt aus der Auslegung; der Text zählt nicht. Die Gruppierung folgt den Fürwörtern «dein» und «uns» im Text."
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "series",
+    "subtype": "dein …",
+    "range": "MAT.6.9-MAT.6.10",
+    "elements": [
+     {
+      "label": "Dein Name werde geheiligt",
+      "ref": "MAT.6.9",
+      "role": "Bitte"
+     },
+     {
+      "label": "Dein Reich komme",
+      "ref": "MAT.6.10",
+      "role": "Bitte"
+     },
+     {
+      "label": "Dein Wille geschehe, wie im Himmel, so auch auf Erden",
+      "ref": "MAT.6.10",
+      "role": "Bitte"
+     }
+    ],
+    "visual": "grid",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "series",
+    "subtype": "uns …",
+    "range": "MAT.6.11-MAT.6.13",
+    "elements": [
+     {
+      "label": "Unser tägliches Brot gib uns heute",
+      "ref": "MAT.6.11",
+      "role": "Bitte"
+     },
+     {
+      "label": "Vergib uns unsere Schulden, wie auch wir unseren Schuldnern vergeben haben",
+      "ref": "MAT.6.12",
+      "role": "Bitte",
+      "links": [
+       "MAT.6.14-MAT.6.15"
+      ]
+     },
+     {
+      "label": "Führe uns nicht in Versuchung, sondern rette uns vor dem Bösen",
+      "ref": "MAT.6.13",
+      "role": "Bitte (nicht – sondern)"
+     }
+    ],
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
    "reference": "MAT.6.9-MAT.6.10",
-   "text_de": "Jesus gibt das Gebet vor («So sollt ihr nun beten»); es beginnt mit der Anrede «Unser Vater in den Himmeln» und den Bitten um Namen, Reich und Willen Gottes.",
-   "reason_de": "Anfang des Gebets und Ausrichtung auf Gott (Kriterium 1, 2 und 4).",
-   "recognition_de": "Die Jünger beten gemeinsam mit erhobenem Blick, Jesus lehrt sie die Worte.",
+   "text_de": "Jesus gibt das Gebet vor («So sollt ihr nun beten»): Anrede «Unser Vater in den Himmeln», dann die Bitten: dein Name werde geheiligt, dein Reich komme, dein Wille geschehe, wie im Himmel, so auch auf Erden.",
+   "reason_de": "Anrede und erste Gruppe der Bitten, vollständig (Kriterium 1, 2 und 4).",
+   "recognition_de": "Raster: oben das Feld der Anrede (Jesus lehrt, die Jünger beten zum Vater in den Himmeln), darunter drei Felder «dein …»: Name, Reich, Wille (Himmel und Erde).",
    "keywords": [
     "Unser Vater in den Himmeln",
-    "dein Reich komme"
+    "dein Name werde geheiligt",
+    "dein Reich komme",
+    "dein Wille geschehe"
    ],
    "mode": "prayer"
   },
   {
-   "reference": "MAT.6.11-MAT.6.12",
-   "text_de": "Die Betenden bitten um das tägliche Brot und um Vergebung der Schulden, wie sie selbst vergeben haben.",
-   "reason_de": "Mitte des Gebets mit den Bitten für das eigene Leben; die Vergebungsbitte wird in 6,14–15 eigens aufgenommen (Kriterium 2).",
-   "recognition_de": "Ein Brot in offenen Händen; daneben erlässt ein Betender seinem Schuldner die Schuld.",
+   "reference": "MAT.6.11-MAT.6.13",
+   "text_de": "Dann die Bitten für die Betenden: unser tägliches Brot gib uns heute; vergib uns unsere Schulden, wie auch wir unseren Schuldnern vergeben haben; führe uns nicht in Versuchung, sondern rette uns vor dem Bösen.",
+   "reason_de": "Zweite Gruppe der Bitten, vollständig; die Vergebungsbitte wird in 6,14–15 eigens aufgenommen (Kriterium 1 und 2).",
+   "recognition_de": "Raster, zweite Zeile mit drei Feldern «uns …»: Brot in offenen Händen; Betende bitten den Vater um Vergebung ihrer Schulden, daneben vergibt einer seinem Schuldner («wie auch wir … vergeben haben»); Betende bitten mit erhobenen Händen um Rettung (Deutung für das Bild: das Böse als Zeichen, von dem sie weggeführt werden). Alles als Bitte, nicht als Geschehen.",
    "keywords": [
     "tägliches Brot",
-    "vergib uns unsere Schulden"
-   ],
-   "mode": "prayer"
-  },
-  {
-   "reference": "MAT.6.13",
-   "text_de": "Die Betenden bitten, nicht in Versuchung geführt, sondern vor dem Bösen gerettet zu werden.",
-   "reason_de": "Schluss des Gebets (Kriterium 3).",
-   "recognition_de": "Die Betenden bitten mit erhobenen Händen um Rettung. Deutung für das Bild: das Böse als Zeichen, von dem sie sich abwenden.",
-   "keywords": [
+    "vergib uns unsere Schulden",
     "rette uns vor dem Bösen"
    ],
    "mode": "prayer"
   }
  ],
  "omitted_de": [
-  "Einzelne Formulierungen wie «wie im Himmel, so auch auf Erden» – im ersten Moment enthalten"
+  "Nichts Tragendes – Anrede und alle Bitten stehen in der Struktur; im Bild entfällt nur die Ausformulierung «wie im Himmel, so auch auf Erden» als eigenes Feld (Teil der dritten Bitte)"
  ],
  "persons": [
   "FIG-JESUS",
@@ -62,19 +180,19 @@
    "fingerprint": "464f3f7b4a702199"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Gegen den Text geprüft; Abweichungen vom Wortlaut bzw. ungekennzeichnete Deutungen wurden korrigiert.",
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Reihe mit Einleitung, Anrede und zwei Gruppen von Bitten vollständig; Zählung der Auslegung («sieben Bitten») und Textfassung (Lobpreis) richtig als Hinweis; Parallele [[LUK.11.2-LUK.11.4]] durch die Querverweise gestützt.",
   "changes_de": [
-   "mode/voice: Einheit als Anweisung Jesu an die Jünger (instruction, «So sollt ihr nun beten»), die Momente als Gebet (prayer) an den Vater; FIG-GOTT als Angesprochener in persons ergänzt.",
-   "Moment 6,11–12, recognition_de: im Text vergibt der Betende einseitig seinen Schuldnern, nicht gegenseitig.",
-   "Moment 6,13, recognition_de: als Bitte gefasst statt als Geschehen; Bildvorschlag als Deutung gekennzeichnet."
+   "core_de: «Bewahrung vor Versuchung» durch den Wortlaut ersetzt («nicht in Versuchung führen, sondern vor dem Bösen retten»); «Bitten um Gottes Sache» (Deutung) durch «Bitten mit «dein»» ersetzt",
+   "Labels der beiden Gruppen nach den Fürwörtern des Textes statt «Gottes Sache»",
+   "Erkennungsmoment 2: Vergebungsbitte zeigte nur den Nebensatz (Mensch vergibt Schuldner); jetzt zuerst die Bitte an den Vater, dann der Nebensatz"
   ]
  }
 }

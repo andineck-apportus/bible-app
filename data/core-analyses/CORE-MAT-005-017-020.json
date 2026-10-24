@@ -6,28 +6,150 @@
  "level": "section",
  "reference": "MAT.5.17-MAT.5.20",
  "target": "TU-MAT-005-017-020",
- "core_de": "Jesus ist nicht gekommen, Gesetz und Propheten aufzuheben, sondern sie zu erfüllen, und fordert eine Gerechtigkeit, die weit über die der Schriftgelehrten und Pharisäer hinausgeht.",
+ "core_de": "Jesus ist nicht gekommen, Gesetz und Propheten aufzuheben, sondern zu erfüllen: Kein Jota des Gesetzes vergeht, wer die kleinsten Gebote tut und lehrt, wird gross genannt, und wessen Gerechtigkeit nicht weit über die der Schriftgelehrten und Pharisäer hinausgeht, kommt nicht ins Reich der Himmel.",
  "mode": "speech",
  "voice": {
   "speaker": "FIG-JESUS",
   "addressee": "FIG-GRUPPE-JUENGER"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "argument",
+    "subtype": "Grundsatz – Begründung – Folgerung – Zuspitzung",
+    "range": "MAT.5.17-MAT.5.20",
+    "elements": [
+     {
+      "label": "Grundsatz: nicht aufheben, sondern erfüllen",
+      "ref": "MAT.5.17",
+      "role": "These",
+      "child": "s2"
+     },
+     {
+      "label": "Kein einziges Jota und kein Häkchen vergeht vom Gesetz, bis alles geschieht",
+      "ref": "MAT.5.18",
+      "role": "Begründung («nämlich»)"
+     },
+     {
+      "label": "Kleinste Gebote auflösen oder tun und lehren",
+      "ref": "MAT.5.19",
+      "role": "Folgerung («also»)",
+      "child": "s3"
+     },
+     {
+      "label": "Eine Gerechtigkeit, die weit über die der Schriftgelehrten und Pharisäer hinausgeht",
+      "ref": "MAT.5.20",
+      "role": "Zuspitzung («denn»)",
+      "child": "s4"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Jesus",
+       "to": "seine Jünger, vor den Menschenmengen (5,1–2)"
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "Dass 5,17–20 als Überschrift über die Gegensätze 5,21–48 steht, ist eine verbreitete Deutung; der Text sagt es nicht ausdrücklich."
+      }
+     ]
+    },
+    "visual": "arrows",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "nicht … sondern",
+    "range": "MAT.5.17",
+    "elements": [
+     {
+      "label": "nicht gekommen, das Gesetz oder die Propheten aufzuheben",
+      "ref": "MAT.5.17",
+      "role": "nicht"
+     },
+     {
+      "label": "sondern gekommen, um zu erfüllen",
+      "ref": "MAT.5.17",
+      "role": "sondern"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "condition",
+    "subtype": "Weiche mit zwei Zweigen",
+    "range": "MAT.5.19",
+    "elements": [
+     {
+      "label": "Wer eines dieser kleinsten Gebote auflöst und die Menschen so lehrt → wird im Reich der Himmel der Kleinste genannt",
+      "ref": "MAT.5.19",
+      "role": "Zweig 1: Bedingung → Folge"
+     },
+     {
+      "label": "Wer sie tut und lehrt → wird im Reich der Himmel gross genannt",
+      "ref": "MAT.5.19",
+      "role": "Zweig 2: Bedingung → Folge"
+     }
+    ],
+    "visual": "switch",
+    "basis": "text"
+   },
+   {
+    "id": "s4",
+    "pattern": "condition",
+    "subtype": "Drohung, nur ein Zweig genannt",
+    "range": "MAT.5.20",
+    "elements": [
+     {
+      "label": "Wenn eure Gerechtigkeit nicht weit über die der Schriftgelehrten und Pharisäer hinausgeht",
+      "ref": "MAT.5.20",
+      "role": "Bedingung"
+     },
+     {
+      "label": "→ werdet ihr gewiss nicht in das Reich der Himmel hineinkommen",
+      "ref": "MAT.5.20",
+      "role": "Folge"
+     }
+    ],
+    "visual": "switch",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
    "reference": "MAT.5.17",
    "text_de": "Jesus erklärt, er sei nicht gekommen, das Gesetz oder die Propheten aufzuheben, sondern zu erfüllen.",
-   "reason_de": "Grundsatzsatz, der die folgenden Gegenüberstellungen trägt (Kriterium 1 und 2).",
-   "recognition_de": "Deutung für das Bild: Jesus hält die Schriftrolle von Gesetz und Propheten fest, statt sie wegzulegen.",
+   "reason_de": "These des Beweisgangs, «nicht … sondern» (Kriterium 1 und 2).",
+   "recognition_de": "Erstes Feld der Pfeilkette, zweigeteilt: «aufheben» durchgestrichen, «erfüllen» hervorgehoben. Deutung für das Bild: Jesus hält die Schriftrolle von Gesetz und Propheten fest, statt sie wegzulegen.",
    "keywords": [
     "nicht gekommen",
     "um zu erfüllen"
    ]
   },
   {
+   "reference": "MAT.5.18-MAT.5.19",
+   "text_de": "Kein einziges Jota und kein Häkchen vergeht vom Gesetz; wer eines der kleinsten Gebote auflöst und so lehrt, wird im Reich der Himmel der Kleinste genannt, wer sie tut und lehrt, gross.",
+   "reason_de": "Begründung und Folgerung des Grundsatzes mit beiden Zweigen (Regel 1: kein Zweig fällt weg).",
+   "recognition_de": "Mittleres Feld: kleines Schriftzeichen (Jota) als Beleg; darunter eine Weiche: auflösen → «Kleinster», tun und lehren → «gross».",
+   "keywords": [
+    "Jota",
+    "Häkchen",
+    "tut und lehrt"
+   ]
+  },
+  {
    "reference": "MAT.5.20",
-   "text_de": "Jesus sagt: Wenn eure Gerechtigkeit nicht weit über die der Schriftgelehrten und Pharisäer hinausgeht, kommt ihr nicht ins Reich der Himmel.",
-   "reason_de": "Zuspitzung des Abschnitts und Überschrift über 5,21–48 (Kriterium 2).",
-   "recognition_de": "Jesus spricht zu den Jüngern; daneben Schriftgelehrte und Pharisäer als Massstab, den die Jünger übertreffen sollen.",
+   "text_de": "Jesus sagt: Wenn eure Gerechtigkeit nicht weit über die der Schriftgelehrten und Pharisäer hinausgeht, kommt ihr gewiss nicht ins Reich der Himmel.",
+   "reason_de": "Zuspitzung am Schluss des Abschnitts (Kriterium 2).",
+   "recognition_de": "Letztes Feld: Jesus spricht zu den Jüngern; daneben Schriftgelehrte und Pharisäer als Massstab; Weiche: wenn die Gerechtigkeit nicht weit darüber hinausgeht → kein Zugang zum Reich der Himmel (nur dieser Zweig steht im Text).",
    "keywords": [
     "Gerechtigkeit",
     "Reich der Himmel"
@@ -35,8 +157,8 @@
   }
  ],
  "omitted_de": [
-  "Jota und Häkchen (5,18) – Einzelheit, die die Dauer des Gesetzes betont, aber durch 5,17 getragen ist",
-  "Kleinste und Grösste im Reich der Himmel (5,19) – Abstufung, nicht Kern"
+  "Zeitangaben «bis der Himmel und die Erde vergehen … bis alles geschieht» (5,18) – betonen die Dauer, im Glied verkürzt",
+  "Einleitung «Meint nicht» (5,17) – Abwehr eines Missverständnisses, im «nicht … sondern» enthalten"
  ],
  "persons": [
   "FIG-JESUS",
@@ -54,15 +176,18 @@
    "fingerprint": "f4b824aca374678a"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Gegen den Text geprüft; Kernaussage, Momente, Textart und Sprecher stimmen, keine Änderung.",
-  "changes_de": []
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Beweisgang These – Begründung («nämlich») – Folgerung («also», zwei Zweige) – Zuspitzung («denn», nur Drohzweig) richtig erkannt; Deutung «Überschrift über 5,21–48» korrekt als interpretation gekennzeichnet.",
+  "changes_de": [
+   "Erkennungsbild zu 5,20 auf die Richtung des Textes gebracht: negative Bedingung → kein Zugang, statt eines positiven Pfeils «weit darüber hinaus» zum Reich der Himmel (Regel 2; nur dieser Zweig steht im Text)",
+   "Wortlaut «eines dieser kleinsten Gebote» und «gewiss nicht» übernommen"
+  ]
  }
 }

@@ -6,17 +6,118 @@
  "level": "section",
  "reference": "RUT.1.19-RUT.1.22",
  "target": "TU-RUT-001-019-022",
- "core_de": "Noomi kommt bitter nach Betlehem zurück und nennt sich «Mara», weil JHWH sie leer zurückgebracht habe; mit ihr kommt Rut, als die Gerstenernte beginnt.",
+ "core_de": "Noomi kommt nach Betlehem zurück und will nicht mehr Noomi, sondern Mara heissen, denn der Allmächtige habe es ihr bitter gemacht: Voll sei sie weggegangen, leer habe JHWH sie zurückgebracht; mit ihr kommt Rut, als die Gerstenernte beginnt.",
  "mode": "narrative",
  "voice": {
   "speaker": "narrator"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Ankunft und Antwort",
+    "range": "RUT.1.19-RUT.1.22",
+    "elements": [
+     {
+      "label": "Ankunft in Betlehem: Die Stadt gerät in Aufruhr, die Frauen fragen: «Ist das Noomi?»",
+      "ref": "RUT.1.19",
+      "role": "Frage"
+     },
+     {
+      "label": "Noomis Antwort",
+      "ref": "RUT.1.20-RUT.1.21",
+      "role": "Antwort",
+      "child": "s2"
+     },
+     {
+      "label": "Noomi kehrt zurück, mit ihr Rut, die Moabiterin, zu Beginn der Gerstenernte",
+      "ref": "RUT.1.22",
+      "role": "Schlussnotiz"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "die Frauen von Betlehem",
+       "to": "nicht angegeben (Frage über Noomi)",
+       "refs": [
+        "RUT.1.19"
+       ]
+      },
+      {
+       "who": "Noomi",
+       "to": "die Frauen",
+       "refs": [
+        "RUT.1.20-RUT.1.21"
+       ]
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "zurückkehren",
+       "refs": [
+        "RUT.1.22"
+       ],
+       "role": "Abschluss des Kapitels"
+      }
+     ],
+     "interpretation": [
+      {
+       "ref": "RUT.1.22",
+       "note": "Deutung: Der Erzähler stellt Rut, die Moabiterin, gleich neben Noomis «leer»; der Text sagt das nicht ausdrücklich."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "nicht – sondern; vorher ↔ nachher",
+    "range": "RUT.1.20-RUT.1.21",
+    "elements": [
+     {
+      "label": "Nicht Noomi → sondern Mara",
+      "ref": "RUT.1.20",
+      "role": "Name: nicht – sondern"
+     },
+     {
+      "label": "Voll bin ich weggegangen → leer hat mich JHWH zurückgebracht",
+      "ref": "RUT.1.21",
+      "role": "vorher → nachher"
+     },
+     {
+      "label": "Begründung: Der Allmächtige hat es mir sehr bitter gemacht; JHWH hat gegen mich ausgesagt, der Allmächtige hat mir Böses angetan",
+      "ref": "RUT.1.20-RUT.1.21",
+      "role": "denn",
+      "links": [
+       "RUT.1.20",
+       "RUT.1.21"
+      ]
+     }
+    ],
+    "features": {
+     "wordplay": [
+      {
+       "ref": "RUT.1.20",
+       "note": "«Mara» hängt am Wort «bitter» («der Allmächtige hat es mir sehr bitter gemacht»); was «Noomi» bedeutet, sagt der Text nicht."
+      }
+     ]
+    },
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
    "reference": "RUT.1.19-RUT.1.21",
-   "text_de": "In Betlehem fragen die Frauen «Ist das Noomi?», und sie antwortet, man solle sie Mara nennen, denn voll sei sie weggegangen und leer habe JHWH sie zurückgebracht.",
-   "reason_de": "Trägt die Kernaussage des Kapitels (Kriterium 1) und benennt mit «voll – leer» das Thema, das das Buch bis zum Schluss trägt (Kriterium 2).",
-   "recognition_de": "In Betlehem umringen die Frauen Noomi und fragen «Ist das Noomi?»; sie antwortet «Nennt mich Mara», Rut neben ihr.",
+   "text_de": "In Betlehem fragen die Frauen «Ist das Noomi?», und sie antwortet, man solle sie nicht Noomi, sondern Mara nennen, denn der Allmächtige habe es ihr bitter gemacht: Voll sei sie weggegangen, leer habe JHWH sie zurückgebracht.",
+   "reason_de": "Trägt die Kernaussage des Kapitels (Kriterium 1) und benennt mit «voll – leer» das Thema, das das Buch bis zum Schluss trägt (Kriterium 2); beide Gegenüberstellungen und ihre Begründung stehen in structure.",
+   "recognition_de": "In Betlehem fragen die Frauen «Ist das Noomi?»; Noomi antwortet mit zwei Gegenüberstellungen: «nicht Noomi – Mara» und «voll weggegangen – leer zurückgebracht»; Rut steht neben ihr.",
    "keywords": [
     "Ist das Noomi",
     "Nennt mich Mara",
@@ -34,8 +135,8 @@
   }
  ],
  "omitted_de": [
-  "Aufruhr der ganzen Stadt – im Bild durch die Frauen vertreten",
-  "Wiederholte Klage gegen den Allmächtigen (1,21b) – Wiederholung von «bitter»"
+  "Aufruhr der ganzen Stadt (1,19) – im Bild durch die Frauen vertreten",
+  "Zweite Nennung der Klage «JHWH hat gegen mich ausgesagt, der Allmächtige hat mir Böses angetan» (1,21b) – Wiederholung der Begründung aus 1,20b; in structure mit ihr zusammengefasst"
  ],
  "persons": [
   "FIG-NOOMI",
@@ -52,15 +153,19 @@
    "fingerprint": "3ff77ab377427ab5"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Ohne Befund.",
-  "changes_de": []
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Ankunft mit Gegenüberstellung nicht Noomi – Mara und voll – leer richtig; die Begründung «denn» war im core_de an die falsche Aussage gebunden.",
+  "changes_de": [
+   "core_de: «denn» an die Begründung des Textes gebunden (der Allmächtige hat es mir bitter gemacht), nicht an «voll – leer» (Regel 2).",
+   "speakers: Adressat der Frage «Ist das Noomi?» nicht erfunden («einander» → nicht angegeben).",
+   "s2 Begründung vollständig (auch «der Allmächtige hat mir Böses angetan», 1,21b)."
+  ]
  }
 }

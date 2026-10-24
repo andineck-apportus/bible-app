@@ -250,7 +250,7 @@ for _b in _load_json():
                           **({"word": s["word"]} if s.get("word") else {})} for s in _p.get("speech", [])],
               "action_de": _p["action_de"]}
         # Worte im Bild (BILDPROZESS.md): Stichwortband, Namensschilder beim ersten Auftreten, Briefrahmen für Aufträge
-        for _k in ("keywords", "names", "letter"):
+        for _k in ("keywords", "names", "letter", "diagram"):
             if _p.get(_k):
                 _q[_k] = _p[_k]
         if _p.get("stage"):

@@ -6,26 +6,82 @@
  "level": "section",
  "reference": "MAT.6.14-MAT.6.15",
  "target": "TU-MAT-006-014-015",
- "core_de": "Wer den Menschen ihre Verfehlungen vergibt, dem vergibt auch der himmlische Vater; wer nicht vergibt, dem wird nicht vergeben.",
+ "core_de": "Wenn die Jünger den Menschen ihre Verfehlungen vergeben, wird der himmlische Vater auch ihnen vergeben; wenn sie nicht vergeben, wird er ihre Verfehlungen auch nicht vergeben.",
  "mode": "instruction",
  "voice": {
   "speaker": "FIG-JESUS",
   "addressee": "FIG-GRUPPE-JUENGER"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "condition",
+    "subtype": "Weiche mit zwei Zweigen",
+    "range": "MAT.6.14-MAT.6.15",
+    "elements": [
+     {
+      "label": "Wenn ihr den Menschen ihre Verfehlungen vergebt → wird euer himmlischer Vater auch euch vergeben",
+      "ref": "MAT.6.14",
+      "role": "Bedingung → Folge (Zusage)",
+      "links": [
+       "MAT.6.12"
+      ]
+     },
+     {
+      "label": "Wenn ihr den Menschen nicht vergebt → wird euer Vater eure Verfehlungen auch nicht vergeben",
+      "ref": "MAT.6.15",
+      "role": "Bedingung → Folge (Warnung)",
+      "links": [
+       "MAT.6.12"
+      ]
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Jesus",
+       "to": "die Jünger (ihr/du); die Menschenmengen hören zu ([[MAT.5.1]], [[MAT.7.28]])"
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "vergeben",
+       "refs": [
+        "MAT.6.12",
+        "MAT.6.14",
+        "MAT.6.15"
+       ],
+       "role": "verknüpft mit der Vergebungsbitte; «Denn» schliesst an das Gebet an"
+      }
+     ],
+     "modality": [
+      {
+       "note": "Zusage und Warnung im Futur, keine Schilderung eines Geschehens"
+      }
+     ]
+    },
+    "visual": "switch",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
    "reference": "MAT.6.14-MAT.6.15",
-   "text_de": "Jesus sagt: Wenn ihr den Menschen vergebt, wird euer himmlischer Vater auch euch vergeben; wenn nicht, dann nicht.",
-   "reason_de": "Der ganze kurze Abschnitt trägt die Kernaussage (Kriterium 1); Doppelform positiv und negativ (Kriterium 2).",
-   "recognition_de": "Deutung für das Bild: Ein Jünger vergibt seinem Schuldner; darüber das Zeichen des himmlischen Vaters (FIG-GOTT), der ihm vergibt.",
+   "text_de": "Jesus sagt: Wenn ihr den Menschen ihre Verfehlungen vergebt, wird euer himmlischer Vater auch euch vergeben; wenn ihr ihnen nicht vergebt, wird euer Vater eure Verfehlungen auch nicht vergeben.",
+   "reason_de": "Der ganze Abschnitt ist eine Weiche mit beiden Zweigen (Kriterium 1 und 2).",
+   "recognition_de": "Weiche: Ein Jünger und sein Schuldner; Zweig «vergeben» führt zum Vater (FIG-GOTT), der auch ihm vergibt; Zweig «nicht vergeben» führt zum Vater, der nicht vergibt. Beide Folgen als Ankündigung (Zukunft) gekennzeichnet.",
    "keywords": [
     "vergebt",
-    "auch euch vergeben"
+    "auch euch vergeben",
+    "nicht vergebt"
    ]
   }
  ],
  "omitted_de": [
-  "Keine – der Abschnitt ist ein einziger Gedanke"
+  "Keine – beide Zweige stehen in der Struktur und im Moment"
  ],
  "persons": [
   "FIG-JESUS",
@@ -40,18 +96,15 @@
    "fingerprint": "615caac1e11b3d52"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Gegen den Text geprüft; Abweichungen vom Wortlaut bzw. ungekennzeichnete Deutungen wurden korrigiert.",
-  "changes_de": [
-   "recognition_de: Verheissung (Futur) nicht als Geschehen dargestellt, konkreter Bildvorschlag als Deutung gekennzeichnet; FIG-GOTT in persons.",
-   "keywords: «himmlischer Vater» (in Mt 5–7 häufig) durch «auch euch vergeben» (6,14) ersetzt."
-  ]
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Weiche mit beiden Zweigen (vergeben → vergeben; nicht vergeben → nicht vergeben), Anschluss «Denn» an 6,12 vermerkt, Futur als Zusage bzw. Warnung; Darstellung Weiche passt.",
+  "changes_de": []
  }
 }

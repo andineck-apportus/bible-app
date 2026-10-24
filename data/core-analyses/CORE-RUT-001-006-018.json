@@ -6,37 +6,238 @@
  "level": "section",
  "reference": "RUT.1.6-RUT.1.18",
  "target": "TU-RUT-001-006-018",
- "core_de": "Auf dem Rückweg will Noomi ihre Schwiegertöchter zurückschicken; Orpa kehrt um, Rut aber bindet sich mit einem Schwur an Noomi, ihr Volk und ihren Gott.",
+ "core_de": "Auf dem Rückweg drängt Noomi ihre Schwiegertöchter in drei Reden umzukehren; Orpa kehrt um, Rut aber bindet sich mit einem Schwur an Noomi, ihr Volk und ihren Gott.",
  "mode": "narrative",
  "voice": {
   "speaker": "narrator"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "dialogue",
+    "subtype": "drei Runden: Aufforderung → Antwort",
+    "range": "RUT.1.6-RUT.1.18",
+    "elements": [
+     {
+      "label": "Anlass (denn): Noomi hat gehört, dass JHWH seinem Volk Brot gegeben hat; sie bricht mit beiden Schwiegertöchtern nach Juda auf",
+      "ref": "RUT.1.6-RUT.1.7",
+      "role": "Anlass"
+     },
+     {
+      "label": "Runde 1 – Noomi: «Kehrt um, jede in das Haus ihrer Mutter! JHWH erweise euch Treue»",
+      "ref": "RUT.1.8-RUT.1.9",
+      "role": "Aufforderung"
+     },
+     {
+      "label": "Antwort beider: «Nein, mit dir wollen wir zu deinem Volk zurückkehren!»",
+      "ref": "RUT.1.10",
+      "role": "Antwort"
+     },
+     {
+      "label": "Runde 2 – Noomi: «Kehrt um, meine Töchter! Habe ich denn noch Söhne, die eure Männer werden könnten? Die Hand JHWHs hat sich gegen mich gewendet»",
+      "ref": "RUT.1.11-RUT.1.13",
+      "role": "Aufforderung mit Begründung"
+     },
+     {
+      "label": "Antwort: Orpa küsst ihre Schwiegermutter, Rut hält sich an ihr fest",
+      "ref": "RUT.1.14",
+      "role": "Antwort",
+      "child": "s2"
+     },
+     {
+      "label": "Runde 3 – Noomi zu Rut: «Deine Schwägerin ist zurückgekehrt. Kehr um, ihr nach!»",
+      "ref": "RUT.1.15",
+      "role": "Aufforderung"
+     },
+     {
+      "label": "Antwort Ruts: Treueschwur",
+      "ref": "RUT.1.16-RUT.1.17",
+      "role": "Antwort",
+      "child": "s3"
+     },
+     {
+      "label": "Noomi sieht, dass Rut fest entschlossen ist, und hört auf, auf sie einzureden",
+      "ref": "RUT.1.18",
+      "role": "Schluss"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Noomi",
+       "to": "Orpa und Rut",
+       "refs": [
+        "RUT.1.8-RUT.1.9",
+        "RUT.1.11-RUT.1.13"
+       ]
+      },
+      {
+       "who": "Orpa und Rut",
+       "to": "Noomi",
+       "refs": [
+        "RUT.1.10"
+       ]
+      },
+      {
+       "who": "Noomi",
+       "to": "Rut",
+       "refs": [
+        "RUT.1.15"
+       ]
+      },
+      {
+       "who": "Rut",
+       "to": "Noomi",
+       "refs": [
+        "RUT.1.16-RUT.1.17"
+       ]
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "umkehren / zurückkehren",
+       "refs": [
+        "RUT.1.6",
+        "RUT.1.7",
+        "RUT.1.8",
+        "RUT.1.10",
+        "RUT.1.11",
+        "RUT.1.12",
+        "RUT.1.15",
+        "RUT.1.16"
+       ],
+       "role": "gliedernd"
+      }
+     ],
+     "pattern_break": [
+      {
+       "ref": "RUT.1.14",
+       "note": "Ab Runde 2 antworten die beiden nicht mehr gemeinsam: Orpa geht, Rut bleibt; in Runde 3 spricht nur noch Rut."
+      }
+     ],
+     "modality": [
+      {
+       "ref": "RUT.1.8-RUT.1.9",
+       "kind": "Segenswunsch",
+       "note": "«JHWH erweise euch Treue … gebe euch Ruhe» ist Wunsch, keine Zusage."
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "zwei Wege",
+    "range": "RUT.1.14-RUT.1.15",
+    "elements": [
+     {
+      "label": "Orpa: küsst ihre Schwiegermutter; nach Noomis Wort ist sie zu ihrem Volk und ihren Göttern zurückgekehrt",
+      "ref": "RUT.1.14-RUT.1.15",
+      "role": "Orpa"
+     },
+     {
+      "label": "Rut: hält sich an ihr fest",
+      "ref": "RUT.1.14",
+      "role": "Rut"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "series",
+    "subtype": "Treueschwur in Paaren «du → ich»",
+    "range": "RUT.1.16-RUT.1.17",
+    "elements": [
+     {
+      "label": "Abweisung: «Dräng mich nicht, dich zu verlassen!»",
+      "ref": "RUT.1.16",
+      "role": "Einleitung"
+     },
+     {
+      "label": "Wohin du gehst → dahin gehe ich",
+      "ref": "RUT.1.16",
+      "role": "du → ich"
+     },
+     {
+      "label": "Wo du übernachtest → da übernachte ich",
+      "ref": "RUT.1.16",
+      "role": "du → ich"
+     },
+     {
+      "label": "Dein Volk → ist mein Volk",
+      "ref": "RUT.1.16",
+      "role": "du → ich"
+     },
+     {
+      "label": "Dein Gott → ist mein Gott",
+      "ref": "RUT.1.16",
+      "role": "du → ich"
+     },
+     {
+      "label": "Wo du stirbst → da sterbe ich und will dort begraben werden",
+      "ref": "RUT.1.17",
+      "role": "du → ich"
+     },
+     {
+      "label": "Schwur bei JHWH: «So soll JHWH mir tun … nur der Tod wird mich und dich trennen!»",
+      "ref": "RUT.1.17",
+      "role": "Schwurformel"
+     }
+    ],
+    "features": {
+     "pattern_break": [
+      {
+       "ref": "RUT.1.17",
+       "note": "Die Reihe endet mit der Schwurformel «So soll JHWH mir tun …» als Pointe."
+      }
+     ],
+     "modality": [
+      {
+       "ref": "RUT.1.17",
+       "kind": "Schwur",
+       "note": "Selbstverfluchung, mit der sich Rut bindet; kein Wunsch, sondern Verpflichtung."
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
-   "reference": "RUT.1.8-RUT.1.9",
-   "text_de": "Unterwegs nach Juda drängt Noomi ihre Schwiegertöchter, umzukehren, jede in das Haus ihrer Mutter, und segnet sie.",
-   "reason_de": "Wendepunkt (Kriterium 2): Noomis «Kehrt um!» wird dreimal wiederholt und stellt die Entscheidungsfrage des Abschnitts.",
-   "recognition_de": "Noomi auf dem Weg küsst die beiden jungen Frauen zum Abschied, alle drei weinen.",
+   "reference": "RUT.1.6-RUT.1.10",
+   "text_de": "Weil Noomi gehört hat, dass JHWH seinem Volk Brot gegeben hat, bricht Noomi mit ihren Schwiegertöchtern nach Juda auf; unterwegs drängt sie beide, umzukehren, jede in das Haus ihrer Mutter, und wünscht ihnen JHWHs Treue, doch beide wollen mit ihr gehen.",
+   "reason_de": "Runde 1 der Wechselrede (Kriterium 2): Mit Noomis «Kehrt um!» beginnt die Entscheidungsfrage, die der Text in drei Reden wiederholt; der Anlass «denn … Brot» bleibt als Begründung erhalten.",
+   "recognition_de": "Runde 1 in Dialogspalten: Noomi unterwegs: «Kehrt um!» – Orpa und Rut: «Nein, mit dir wollen wir zurückkehren!»",
    "keywords": [
     "kehrt um",
-    "Haus ihrer Mutter"
+    "Haus ihrer Mutter",
+    "mit dir wollen wir"
    ]
   },
   {
-   "reference": "RUT.1.14",
-   "text_de": "Orpa küsst ihre Schwiegermutter zum Abschied, Rut aber hält sich an ihr fest.",
-   "reason_de": "Der Text stellt die beiden Wege direkt gegeneinander (Kriterium 2); daran erkennt man die Szene (Kriterium 4).",
-   "recognition_de": "Am Wegrand: Orpa wendet sich nach dem Kuss zurück, Rut klammert sich an Noomi.",
+   "reference": "RUT.1.11-RUT.1.14",
+   "text_de": "Noomi drängt erneut: Sie könne ihnen keine Söhne mehr als Männer geben, die Hand JHWHs habe sich gegen sie gewendet; da küsst Orpa ihre Schwiegermutter zum Abschied, Rut aber hält sich an ihr fest.",
+   "reason_de": "Runde 2: Der Text stellt die beiden Wege direkt gegeneinander (Kriterium 2); daran erkennt man die Szene (Kriterium 4).",
+   "recognition_de": "Runde 2: Noomi: «Kehrt um, meine Töchter!» – darunter zwei Spalten: Orpa küsst sie und wendet sich ab, Rut hält sich an Noomi fest.",
    "keywords": [
+    "Kehrt um, meine Töchter",
     "Orpa küsste ihre Schwiegermutter",
     "Rut hielt sich"
    ]
   },
   {
-   "reference": "RUT.1.16-RUT.1.17",
-   "text_de": "Rut schwört, mit Noomi zu gehen, ihr Volk und ihren Gott zu teilen und sich nur durch den Tod von ihr trennen zu lassen.",
-   "reason_de": "Trägt die Kernaussage (Kriterium 1), Höhepunkt in wörtlicher Rede (Kriterium 2) und der bekannteste Satz des Buches (Kriterium 4).",
-   "recognition_de": "Rut steht auf dem Weg nach Juda vor Noomi und spricht ihr Treuewort, während Orpa zurückgeht.",
+   "reference": "RUT.1.15-RUT.1.18",
+   "text_de": "Noomi drängt Rut, ihrer Schwägerin nachzugehen; Rut aber schwört, mit Noomi zu gehen, ihr Volk und ihren Gott zu teilen und sich nur durch den Tod von ihr trennen zu lassen; da hört Noomi auf, auf sie einzureden.",
+   "reason_de": "Runde 3: trägt die Kernaussage (Kriterium 1), Höhepunkt in wörtlicher Rede (Kriterium 2) und der bekannteste Satz des Buches (Kriterium 4); der Schwur ist eine Reihe und steht mit allen Paaren in structure.",
+   "recognition_de": "Runde 3: Noomi: «Kehr um, deiner Schwägerin nach!» – Rut antwortet mit ihrem Schwur, als Paare gezeigt: wohin du gehst – dahin gehe ich; dein Volk – mein Volk; dein Gott – mein Gott; nur der Tod trennt.",
    "keywords": [
     "Wohin du gehst",
     "dahin gehe ich",
@@ -45,9 +246,8 @@
   }
  ],
  "omitted_de": [
-  "Anlass der Rückkehr (JHWH gibt seinem Volk wieder Brot, 1,6) – Übergang, im Kapitel durch die Rückkehr selbst enthalten",
-  "Noomis Begründung mit den ungeborenen Söhnen (1,11–13) – Teil der Rede, verdeutlicht nur das «Kehrt um»",
-  "Noomis Schweigen am Schluss (1,18) – Übergang"
+  "Noomis ausgemalter Gedanke, noch heute Nacht einen Mann zu haben und Söhne zu gebären (1,12b–13a) – Ausschmückung der Begründung, die in Runde 2 knapp steht",
+  "Wiederholtes Weinen (1,14a) – Wiederholung von 1,9b"
  ],
  "persons": [
   "FIG-NOOMI",
@@ -65,15 +265,19 @@
    "fingerprint": "1b7ce962cd8e94d8"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Ohne Befund.",
-  "changes_de": []
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Wechselrede in drei Runden mit Antwort je Runde, Gegensatz Orpa ↔ Rut und Schwur mit allen fünf Paaren richtig erkannt; kleine Korrekturen an Begründung, Zuordnung der Aussage über Orpa und Schwurformel.",
+  "changes_de": [
+   "Moment 1 und Glied «Anlass»: Begründung wie im Text als Gehörtes Noomis («denn sie hatte gehört …»), «wieder» gestrichen; «segnet» → «wünscht ihnen JHWHs Treue» (Segenswunsch, vgl. modality).",
+   "s2 Glied Orpa: Rückkehr «zu ihrem Volk und ihren Göttern» als Noomis Aussage (1,15) gekennzeichnet, nicht als Erzählerbericht; überflüssigen Selbstverweis (links) entfernt.",
+   "s3 Schwurformel: «So soll JHWH mir tun» ins Label aufgenommen (Rut nennt hier JHWH; trägt die Selbstverfluchung)."
+  ]
  }
 }

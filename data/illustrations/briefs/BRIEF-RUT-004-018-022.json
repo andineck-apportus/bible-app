@@ -11,109 +11,114 @@
   "panels": [
     {
       "n": 1,
-      "reference": "RUT.4.18",
+      "reference": "RUT.4.18-RUT.4.22",
       "figures": [],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-STAMMBAUM"
-      ],
+      "signs": [],
       "speech": [],
-      "action_de": "Es folgt der Stammbaum des Perez.",
+      "action_de": "Der Stammbaum des Perez: Perez zeugte Hezron, Hezron Ram, Ram Amminadab, Amminadab Nachschon, Nachschon Salma; Salmon zeugte Boas, Boas Obed, Obed Isai, und Isai zeugte David.",
       "keywords": {
         "de": "Dies ist der Stammbaum des Perez",
         "gsw": "Das isch de Stammbaum vom Perez"
       },
-      "stage": {
-        "air_x": 40,
-        "air_y": 30
-      }
-    },
-    {
-      "n": 2,
-      "reference": "RUT.4.21-RUT.4.22",
-      "figures": [
-        "FIG-BOAS",
-        "FIG-ISAI",
-        "FIG-DAVID"
-      ],
-      "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-GEBURT"
-      ],
-      "speech": [],
-      "action_de": "Boas zeugt Obed, Obed zeugt Isai, und Isai zeugt David.",
-      "keywords": {
-        "de": "Isai zeugte David",
-        "gsw": "De Isai isch de Vatter vom David gsii"
-      },
-      "names": {
-        "FIG-BOAS": {
-          "de": "Boas",
-          "gsw": "Boas"
-        },
-        "FIG-ISAI": {
-          "de": "Isai",
-          "gsw": "Isai"
-        },
-        "FIG-DAVID": {
-          "de": "David",
-          "gsw": "David"
-        }
-      },
-      "stage": {
-        "x": {
-          "FIG-BOAS": 30,
-          "FIG-ISAI": 104,
-          "FIG-DAVID": 162
-        },
-        "beside": {
-          "FIG-ZEICHEN-GEBURT": "FIG-BOAS"
-        },
-        "arrows": [
-          [
-            "FIG-BOAS",
-            "FIG-ISAI",
-            "go"
-          ],
-          [
-            "FIG-ISAI",
-            "FIG-DAVID",
-            "go"
-          ]
-        ],
-        "mood": {
-          "FIG-BOAS": "smile",
-          "FIG-DAVID": "smile"
-        }
+      "diagram": {
+        "visual": "tree",
+        "span": 2,
+        "cols": 5,
+        "cells": [
+          {
+            "a": {
+              "de": "Perez",
+              "gsw": "Perez"
+            }
+          },
+          {
+            "a": {
+              "de": "Hezron",
+              "gsw": "Hezron"
+            }
+          },
+          {
+            "a": {
+              "de": "Ram",
+              "gsw": "Ram"
+            }
+          },
+          {
+            "a": {
+              "de": "Amminadab",
+              "gsw": "Amminadab"
+            }
+          },
+          {
+            "a": {
+              "de": "Nachschon",
+              "gsw": "Nachschon"
+            }
+          },
+          {
+            "a": {
+              "de": "Salma",
+              "gsw": "Salma"
+            },
+            "b": {
+              "de": "auch Salmon",
+              "gsw": "au Salmon"
+            }
+          },
+          {
+            "a": {
+              "de": "Boas",
+              "gsw": "Boas"
+            },
+            "who": "FIG-BOAS",
+            "tone": "new"
+          },
+          {
+            "a": {
+              "de": "Obed",
+              "gsw": "Obed"
+            },
+            "who": "FIG-OBED",
+            "tone": "new"
+          },
+          {
+            "a": {
+              "de": "Isai",
+              "gsw": "Isai"
+            },
+            "who": "FIG-ISAI"
+          },
+          {
+            "a": {
+              "de": "David",
+              "gsw": "David"
+            },
+            "who": "FIG-DAVID",
+            "tone": "new"
+          }
+        ]
       }
     }
   ],
   "actions_de": [
-    "Es folgt der Stammbaum des Perez.",
-    "Boas zeugt Obed, Obed zeugt Isai, und Isai zeugt David."
+    "Der Stammbaum des Perez: Perez zeugte Hezron, Hezron Ram, Ram Amminadab, Amminadab Nachschon, Nachschon Salma; Salmon zeugte Boas, Boas Obed, Obed Isai, und Isai zeugte David."
   ],
   "captions_de": [
-    "Stammbaum: eine Generationenlinie (Ast mit Knospen).",
-    "Bis David: Boas mit seinem Sohn Obed (gewickelter Säugling), dann Isai und David (mit Königsreif) – Generation um Generation (Pfeile)."
+    "Stammbaum als Kette von Perez bis David, alle zehn Namen; hervorgehoben Boas, Obed und David (mit Bild)."
   ],
-  "interpretation_note_de": "Aufzählung: Der Stammbaum hat zehn Glieder von Perez bis David ([[RUT.4.18-RUT.4.22]]); das Bild zeigt den Anfang als Zeichen und die letzten vier als Figuren. David trägt den Königsreif als Hinweis auf sein späteres Königtum; der Text nennt nur seinen Namen.",
+  "interpretation_note_de": "Stammbaum ([[RUT.4.18-RUT.4.22]]) als Kette mit allen zehn Gliedern; die Formel «zeugte» steht nicht bei jedem Glied. In [[RUT.4.20]] heisst der Name Salma, in [[RUT.4.21]] Salmon; beide Formen stehen im Text.",
   "basis": [
     {
       "record": "TU-RUT-004-018-022",
       "field": "summary",
-      "fingerprint": "d6dcad696a30e1cb"
+      "fingerprint": "0ff0150d4911c7f4"
     },
     {
       "record": "TRANS-RUT-004-001-022-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "RUT.4.18",
-      "fingerprint": "c598a79f3c2f4338"
-    },
-    {
-      "record": "TRANS-RUT-004-001-022-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "RUT.4.21-RUT.4.22",
-      "fingerprint": "e91a1d2d76962def"
+      "reference": "RUT.4.18-RUT.4.22",
+      "fingerprint": "f1b646bf30df2119"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
@@ -683,6 +688,238 @@
                 "FIG-BOAS": "smile",
                 "FIG-DAVID": "smile"
               }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-24",
+      "change_de": "Struktur zuerst: Zusammenfassung aus der Strukturanalyse neu (alle Glieder, Liste wo der Text so gebaut ist)",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "RUT.4.18",
+            "figures": [],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-STAMMBAUM"
+            ],
+            "speech": [],
+            "action_de": "Es folgt der Stammbaum des Perez.",
+            "keywords": {
+              "de": "Dies ist der Stammbaum des Perez",
+              "gsw": "Das isch de Stammbaum vom Perez"
+            },
+            "stage": {
+              "air_x": 40,
+              "air_y": 30
+            }
+          },
+          {
+            "n": 2,
+            "reference": "RUT.4.21-RUT.4.22",
+            "figures": [
+              "FIG-BOAS",
+              "FIG-ISAI",
+              "FIG-DAVID"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-GEBURT"
+            ],
+            "speech": [],
+            "action_de": "Boas zeugt Obed, Obed zeugt Isai, und Isai zeugt David.",
+            "keywords": {
+              "de": "Isai zeugte David",
+              "gsw": "De Isai isch de Vatter vom David gsii"
+            },
+            "names": {
+              "FIG-BOAS": {
+                "de": "Boas",
+                "gsw": "Boas"
+              },
+              "FIG-ISAI": {
+                "de": "Isai",
+                "gsw": "Isai"
+              },
+              "FIG-DAVID": {
+                "de": "David",
+                "gsw": "David"
+              }
+            },
+            "stage": {
+              "x": {
+                "FIG-BOAS": 30,
+                "FIG-ISAI": 104,
+                "FIG-DAVID": 162
+              },
+              "beside": {
+                "FIG-ZEICHEN-GEBURT": "FIG-BOAS"
+              },
+              "arrows": [
+                [
+                  "FIG-BOAS",
+                  "FIG-ISAI",
+                  "go"
+                ],
+                [
+                  "FIG-ISAI",
+                  "FIG-DAVID",
+                  "go"
+                ]
+              ],
+              "mood": {
+                "FIG-BOAS": "smile",
+                "FIG-DAVID": "smile"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Es folgt der Stammbaum des Perez.",
+          "Boas zeugt Obed, Obed zeugt Isai, und Isai zeugt David."
+        ],
+        "captions_de": [
+          "Stammbaum: eine Generationenlinie (Ast mit Knospen).",
+          "Bis David: Boas mit seinem Sohn Obed (gewickelter Säugling), dann Isai und David (mit Königsreif) – Generation um Generation (Pfeile)."
+        ],
+        "interpretation_note_de": "Aufzählung: Der Stammbaum hat zehn Glieder von Perez bis David ([[RUT.4.18-RUT.4.22]]); das Bild zeigt den Anfang als Zeichen und die letzten vier als Figuren. David trägt den Königsreif als Hinweis auf sein späteres Königtum; der Text nennt nur seinen Namen.",
+        "basis": [
+          {
+            "record": "TU-RUT-004-018-022",
+            "field": "summary",
+            "fingerprint": "d6dcad696a30e1cb"
+          },
+          {
+            "record": "TRANS-RUT-004-001-022-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "RUT.4.18",
+            "fingerprint": "c598a79f3c2f4338"
+          },
+          {
+            "record": "TRANS-RUT-004-001-022-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "RUT.4.21-RUT.4.22",
+            "fingerprint": "e91a1d2d76962def"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-RUT-004-018-022",
+            "field": "summary",
+            "fingerprint": "d6dcad696a30e1cb"
+          },
+          {
+            "record": "TRANS-RUT-004-001-022-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "RUT.4.18-RUT.4.22",
+            "fingerprint": "f1b646bf30df2119"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "RUT.4.18-RUT.4.22",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Der Stammbaum des Perez: Perez zeugte Hezron, Hezron Ram, Ram Amminadab, Amminadab Nachschon, Nachschon Salma; Salmon zeugte Boas, Boas Obed, Obed Isai, und Isai zeugte David.",
+            "keywords": {
+              "de": "Dies ist der Stammbaum des Perez",
+              "gsw": "Das isch de Stammbaum vom Perez"
+            },
+            "diagram": {
+              "visual": "tree",
+              "span": 2,
+              "cols": 5,
+              "cells": [
+                {
+                  "a": {
+                    "de": "Perez",
+                    "gsw": "Perez"
+                  }
+                },
+                {
+                  "a": {
+                    "de": "Hezron",
+                    "gsw": "Hezron"
+                  }
+                },
+                {
+                  "a": {
+                    "de": "Ram",
+                    "gsw": "Ram"
+                  }
+                },
+                {
+                  "a": {
+                    "de": "Amminadab",
+                    "gsw": "Amminadab"
+                  }
+                },
+                {
+                  "a": {
+                    "de": "Nachschon",
+                    "gsw": "Nachschon"
+                  }
+                },
+                {
+                  "a": {
+                    "de": "Salma",
+                    "gsw": "Salma"
+                  },
+                  "b": {
+                    "de": "auch Salmon",
+                    "gsw": "auch Salmon"
+                  }
+                },
+                {
+                  "a": {
+                    "de": "Boas",
+                    "gsw": "Boas"
+                  },
+                  "who": "FIG-BOAS",
+                  "tone": "new"
+                },
+                {
+                  "a": {
+                    "de": "Obed",
+                    "gsw": "Obed"
+                  },
+                  "who": "FIG-OBED",
+                  "tone": "new"
+                },
+                {
+                  "a": {
+                    "de": "Isai",
+                    "gsw": "Isai"
+                  },
+                  "who": "FIG-ISAI"
+                },
+                {
+                  "a": {
+                    "de": "David",
+                    "gsw": "David"
+                  },
+                  "who": "FIG-DAVID",
+                  "tone": "new"
+                }
+              ]
             }
           }
         ]

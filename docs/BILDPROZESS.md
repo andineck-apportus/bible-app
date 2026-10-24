@@ -63,7 +63,9 @@ Was gut funktioniert: die festen Erkennungszeichen (Gott, Jesus, Geist) und der 
    höchstens drei Felder (Ausnahme: tragende Reihen, VERDICHTUNG.md Regel 6). Die App zeigt jede Kachel in gleicher,
    lesbarer Grösse (höchstens etwa 340 px breit); Bilder mit mehreren Kacheln werden breiter und stehen auf breiten
    Bildschirmen unter dem Text, statt in die halbe Spalte gequetscht zu werden. Hintergrund zwischen den Kacheln
-   durchsichtig (Hinweise Andi Neck 2026-10-24).
+   durchsichtig (Hinweise Andi Neck 2026-10-24). Jede Kachel ist ein eigenes SVG (`ill-tile`); die App ordnet die Kacheln
+   nach Bildschirmbreite (Handy untereinander in voller Breite, sonst bis zwei nebeneinander). Breite Strukturbilder haben
+   zusätzlich eine schmale Fassung fürs Handy, damit die Schrift lesbar bleibt.
 9. **Anordnung: nichts Wesentliches verdecken** (Hinweise Andi Neck 2026-10-24):
    - Sprechblasen verdecken keine Gesichter, Zeichen und Gegenstände; der Zeichner sucht eine andere Lage nahe beim Sprecher
      und verkleinert sonst die Blase.

@@ -6,10 +6,241 @@
  "level": "section",
  "reference": "RUT.4.1-RUT.4.12",
  "target": "TU-RUT-004-001-012",
- "core_de": "Im Stadttor verzichtet der nähere Löser, und Boas erwirbt vor Zeugen Elimelechs Besitz und Rut zur Frau, damit der Name des Verstorbenen bleibt.",
+ "core_de": "Im Stadttor bietet Boas dem näheren Löser vor Zeugen das Löserecht an; der verzichtet, als dazu Rut gehört, und Boas erwirbt Elimelechs Besitz und Rut zur Frau, damit der Name des Verstorbenen bleibt.",
  "mode": "narrative",
  "voice": {
   "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "form",
+    "subtype": "Löserverfahren im Tor",
+    "form_type": "lawsuit",
+    "range": "RUT.4.1-RUT.4.12",
+    "elements": [
+     {
+      "label": "Vorladung: Boas setzt sich ins Tor und ruft den Löser herbei: «Komm herüber, setz dich hierher!»",
+      "ref": "RUT.4.1",
+      "role": "Vorladung"
+     },
+     {
+      "label": "Zeugen: Zehn Älteste der Stadt setzen sich dazu",
+      "ref": "RUT.4.2",
+      "role": "Zeugen"
+     },
+     {
+      "label": "Sache: Noomi verkauft das Feldstück Elimelechs",
+      "ref": "RUT.4.3",
+      "role": "Sache"
+     },
+     {
+      "label": "Angebot an den Löser",
+      "ref": "RUT.4.4",
+      "role": "Angebot mit Bedingung",
+      "child": "s2"
+     },
+     {
+      "label": "Der Löser: «Ich will lösen.»",
+      "ref": "RUT.4.4",
+      "role": "erste Antwort"
+     },
+     {
+      "label": "Boas: Mit dem Feld erwirbst du auch Rut, die Moabiterin, um den Namen des Verstorbenen auf seinem Erbteil zu erhalten",
+      "ref": "RUT.4.5",
+      "role": "Zusatz"
+     },
+     {
+      "label": "Der Löser verzichtet: «Ich kann nicht lösen, sonst schädige ich mein eigenes Erbteil. Löse du!»",
+      "ref": "RUT.4.6",
+      "role": "Wende: Verzicht"
+     },
+     {
+      "label": "Der Erzähler erklärt den alten Brauch: Wer löst oder tauscht, zieht seinen Schuh aus und gibt ihn dem anderen",
+      "ref": "RUT.4.7",
+      "role": "Erzählerkommentar"
+     },
+     {
+      "label": "Beglaubigung: «Erwirb es für dich!» – der Löser zieht seinen Schuh aus",
+      "ref": "RUT.4.8",
+      "role": "Beglaubigung"
+     },
+     {
+      "label": "Erklärung des Boas vor Zeugen",
+      "ref": "RUT.4.9-RUT.4.10",
+      "role": "Rechtsakt",
+      "child": "s3"
+     },
+     {
+      "label": "Volk und Älteste: «Wir sind Zeugen!»",
+      "ref": "RUT.4.11",
+      "role": "Bestätigung"
+     },
+     {
+      "label": "Segenswunsch: JHWH mache die Frau wie Rahel und Lea; bring es zu Vermögen in Efrata; dein Haus werde wie das Haus des Perez durch die Nachkommen, die JHWH dir von dieser jungen Frau geben wird",
+      "ref": "RUT.4.11-RUT.4.12",
+      "role": "Segen"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Boas",
+       "to": "den Löser",
+       "refs": [
+        "RUT.4.1",
+        "RUT.4.3-RUT.4.5"
+       ]
+      },
+      {
+       "who": "Boas",
+       "to": "die Ältesten",
+       "refs": [
+        "RUT.4.2"
+       ]
+      },
+      {
+       "who": "der Löser",
+       "to": "Boas",
+       "refs": [
+        "RUT.4.4",
+        "RUT.4.6",
+        "RUT.4.8"
+       ]
+      },
+      {
+       "who": "Erzähler",
+       "to": "Leser",
+       "refs": [
+        "RUT.4.7"
+       ]
+      },
+      {
+       "who": "Boas",
+       "to": "die Ältesten und das ganze Volk",
+       "refs": [
+        "RUT.4.9-RUT.4.10"
+       ]
+      },
+      {
+       "who": "Volk und Älteste",
+       "to": "Boas",
+       "refs": [
+        "RUT.4.11-RUT.4.12"
+       ]
+      }
+     ],
+     "genre": [
+      {
+       "note": "«Rechtsverfahren» (lawsuit) ist eine Einordnung als Gattungsbegriff, keine Angabe des Textes."
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "lösen / Löser",
+       "refs": [
+        "RUT.4.1",
+        "RUT.4.3-RUT.4.4",
+        "RUT.4.6",
+        "RUT.4.8"
+       ],
+       "role": "Leitwort"
+      },
+      {
+       "word": "Zeugen",
+       "refs": [
+        "RUT.4.9",
+        "RUT.4.10",
+        "RUT.4.11"
+       ],
+       "role": "Wiederholung am Höhepunkt"
+      },
+      {
+       "word": "Name des Verstorbenen",
+       "refs": [
+        "RUT.4.5",
+        "RUT.4.10"
+       ],
+       "role": "Zweck"
+      }
+     ],
+     "modality": [
+      {
+       "ref": "RUT.4.11-RUT.4.12",
+       "kind": "Segenswunsch",
+       "note": "Wunsch, keine Zusage."
+      }
+     ],
+     "pattern_break": [
+      {
+       "ref": "RUT.4.1-RUT.4.12",
+       "note": "Kein Streitfall: Anklage, Beweis und Urteil des Formulars fehlen; an ihre Stelle treten Sache und Angebot (4,3–4), Verzicht (4,6), Beglaubigung (4,8) und Bezeugung durch Älteste und Volk (4,9–11)."
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "RUT.4.11",
+       "kind": "Bezug im Text",
+       "note": "Rahel und Lea, «die beide das Haus Israel gebaut haben»: [[GEN.29.31-GEN.30.24]]."
+      },
+      {
+       "ref": "RUT.4.12",
+       "kind": "Bezug im Text",
+       "note": "«Perez, den Tamar dem Juda geboren hat»: [[GEN.38]], Geburt des Perez [[GEN.38.29]]."
+      }
+     ]
+    },
+    "visual": "outline",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "condition",
+    "subtype": "Weiche",
+    "range": "RUT.4.4",
+    "elements": [
+     {
+      "label": "Wenn du lösen willst → dann löse!",
+      "ref": "RUT.4.4",
+      "role": "Zweig 1"
+     },
+     {
+      "label": "Wenn nicht → sag es mir; ausser dir kann keiner lösen, und ich komme nach dir",
+      "ref": "RUT.4.4",
+      "role": "Zweig 2"
+     }
+    ],
+    "visual": "switch",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "cause",
+    "subtype": "Zweck",
+    "range": "RUT.4.9-RUT.4.10",
+    "elements": [
+     {
+      "label": "Boas hat alles, was Elimelech, Kiljon und Machlon gehörte, aus der Hand Noomis erworben",
+      "ref": "RUT.4.9",
+      "role": "Handlung"
+     },
+     {
+      "label": "und Rut, die Moabiterin, die Frau Machlons, zur Frau",
+      "ref": "RUT.4.10",
+      "role": "Handlung"
+     },
+     {
+      "label": "damit der Name des Verstorbenen auf seinem Erbteil bleibt und nicht ausgelöscht wird",
+      "ref": "RUT.4.10",
+      "role": "Zweck"
+     }
+    ],
+    "visual": "arrows",
+    "basis": "text"
+   }
+  ]
  },
  "moments": [
   {
@@ -23,31 +254,32 @@
    ]
   },
   {
-   "reference": "RUT.4.6-RUT.4.8",
-   "text_de": "Als mit dem Feld auch Rut zu erwerben ist, verzichtet der Löser, überlässt Boas das Löserecht und zieht zur Beglaubigung seinen Schuh aus.",
-   "reason_de": "Wendepunkt (Kriterium 2) und Erkennungsmoment (Kriterium 4): der ausgezogene Schuh.",
-   "recognition_de": "Der andere Löser zieht vor den Ältesten seinen Schuh aus, Boas steht ihm gegenüber.",
+   "reference": "RUT.4.3-RUT.4.8",
+   "text_de": "Boas bietet dem Löser Elimelechs Feld an: Will er lösen, soll er lösen, sonst komme Boas nach ihm. Der Löser will zuerst lösen; als mit dem Feld auch Rut zu erwerben ist, verzichtet er, überlässt Boas das Löserecht und zieht zur Beglaubigung seinen Schuh aus.",
+   "reason_de": "Wendepunkt (Kriterium 2) mit beiden Zweigen der Bedingung aus 4,4 und Erkennungsmoment (Kriterium 4): der ausgezogene Schuh.",
+   "recognition_de": "Eine Weiche im Tor: Der Zweig «Ich will lösen» endet, als Rut dazugehört; der andere Löser zieht vor den Ältesten seinen Schuh aus, Boas steht ihm gegenüber.",
    "keywords": [
+    "Ich will lösen",
     "nicht lösen",
     "Schuh aus"
    ]
   },
   {
-   "reference": "RUT.4.9-RUT.4.11",
-   "text_de": "Boas erklärt vor Ältesten und Volk, er habe Elimelechs Besitz und Rut zur Frau erworben, um den Namen des Verstorbenen zu erhalten, und alle bezeugen und segnen es.",
+   "reference": "RUT.4.9-RUT.4.12",
+   "text_de": "Boas erklärt vor Ältesten und Volk, er habe Elimelechs Besitz und Rut zur Frau erworben, um den Namen des Verstorbenen zu erhalten; alle bezeugen es und wünschen, sein Haus werde wie das Haus des Perez.",
    "reason_de": "Trägt die Kernaussage (Kriterium 1) und ist der Höhepunkt in wörtlicher Rede mit Wiederholung «Zeugen» (Kriterium 2).",
    "recognition_de": "Boas spricht im Tor zu den Ältesten und dem Volk, die antworten: «Wir sind Zeugen!»",
    "keywords": [
     "Zeugen seid ihr heute",
     "zur Frau erworben",
-    "Wir sind Zeugen"
+    "Wir sind Zeugen",
+    "Haus des Perez"
    ]
   }
  ],
  "omitted_de": [
-  "Erläuterung des alten Schuhbrauchs (4,7) – Hintergrund damals",
-  "Erstes Angebot und Zusage des Lösers (4,3–4) – Vorstufe des Verzichts",
-  "Segenswunsch mit Rahel, Lea, Perez, Tamar und Juda (4,11b–12) – Nebenfiguren"
+  "Erläuterung des alten Schuhbrauchs (4,7) – Erzählerkommentar, Hintergrund damals",
+  "Namen im Segenswunsch (Rahel, Lea, Tamar, Juda; 4,11b–12) – Nebenfiguren; der Wunsch selbst und das Haus des Perez stehen im Moment 4,9–12"
  ],
  "persons": [
   "FIG-BOAS",
@@ -66,18 +298,18 @@
    "fingerprint": "4f70e8078f705a04"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Auswahl belegt; Erkennungsmoment und omitted_de angeglichen.",
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Verfahren im Tor mit Weiche (4,4) und Zweck (4,10) richtig; fehlende Pflichtglieder des Formulars lawsuit waren nicht vermerkt, der Segenswunsch unvollständig.",
   "changes_de": [
-   "Erkennungsmoment 4,6–8: Übergabe des Schuhs an Boas gestrichen – 4,8 sagt nur «er zog seinen Schuh aus»",
-   "omitted_de: «4,3–5» auf «4,3–4» beschränkt, da der Moment 4,6–8 den Inhalt von 4,5 verwendet"
+   "form lawsuit: fehlende Pflichtglieder (Anklage, Beweis, Urteil) als pattern_break vermerkt (Prüffrage 3.22).",
+   "Glied Segenswunsch: JHWH als Handelnder und «Nachkommen, die JHWH dir … geben wird» ergänzt (bereitet 4,13 vor); crossref auf Gen 29–30 und Gen 38 (vom Text selbst genannt, OpenBible bestätigt)."
   ]
  }
 }

@@ -21,10 +21,10 @@
     ]
    },
    {
-    "reference": "RUT.1.5",
-    "text_de": "Nach Elimelech sterben auch beide Söhne, und Noomi bleibt ohne Mann und Kinder zurück.",
-    "reason_de": "Trägt die Kernaussage (Kriterium 1) und ist der Tiefpunkt, den der Text betont: «ohne ihre beiden Kinder und ohne ihren Mann».",
-    "recognition_de": "Noomi steht allein da, ohne Mann und Söhne, nur mit den beiden moabitischen Schwiegertöchtern.",
+    "reference": "RUT.1.3-RUT.1.5",
+    "text_de": "Elimelech stirbt, die Söhne heiraten die Moabiterinnen Orpa und Rut, dann sterben auch beide Söhne, und Noomi bleibt ohne Mann und Kinder zurück.",
+    "reason_de": "Trägt die Kernaussage (Kriterium 1) und ist der Tiefpunkt, den der Text betont: «ohne ihre beiden Kinder und ohne ihren Mann». Die Stufen des Verlusts (1,3–5) bilden zusammen einen Moment.",
+    "recognition_de": "Noomi steht allein da, ohne Mann und Söhne, nur mit den beiden moabitischen Schwiegertöchtern Orpa und Rut.",
     "keywords": [
      "ohne ihre beiden Kinder",
      "ohne ihren Mann"
@@ -32,10 +32,9 @@
    }
   ],
   "omitted_de": [
-   "Zeitangabe «Tage der Richter» – Rahmen ohne Bildwert",
-   "Namen der Söhne (Machlon, Kiljon) und Herkunft «Efratiter» – Nebenangaben",
-   "Heirat mit Orpa und Rut als eigener Moment – im Bild über die beiden Schwiegertöchter an Noomis Seite enthalten",
-   "«etwa zehn Jahre» – Zahl"
+   "Zeitangabe «in den Tagen, als die Richter richteten» (1,1) – Rahmen ohne Bildwert; als Merkmal chronology in structure",
+   "Namen der Söhne (Machlon, Kiljon) und Herkunft «Efratiter» (1,2) – Nebenangaben",
+   "«etwa zehn Jahre» (1,4) – Zahl"
   ],
   "persons": [
    "FIG-NOOMI",
@@ -49,14 +48,72 @@
    "FIG-ORT-BETLEHEM",
    "FIG-ORT-MOAB"
   ],
-  "review": {
-   "date": "2026-10-23",
-   "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-   "summary_de": "Auswahl und Kernaussage belegt; Erkennungsmoment und eine Weglass-Begründung enthielten Nichtgesagtes.",
-   "changes_de": [
-    "Erkennungsmoment 1,1: «über ausgedörrtes Land» gestrichen – der Text nennt eine Hungersnot, keine Dürre",
-    "omitted_de: «Schwiegertöchter am Grab» ersetzt durch «an Noomis Seite» – ein Grab nennt der Text nicht"
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "sequence",
+     "subtype": "Verlust in Stufen",
+     "range": "RUT.1.1-RUT.1.5",
+     "elements": [
+      {
+       "label": "Hungersnot im Land: Elimelech zieht mit Noomi und den beiden Söhnen von Betlehem ins Gebiet von Moab",
+       "ref": "RUT.1.1-RUT.1.2",
+       "role": "Anfang"
+      },
+      {
+       "label": "Elimelech stirbt; Noomi bleibt mit ihren beiden Söhnen zurück",
+       "ref": "RUT.1.3",
+       "role": "Verlust"
+      },
+      {
+       "label": "Die Söhne heiraten die Moabiterinnen Orpa und Rut; sie wohnen dort etwa zehn Jahre",
+       "ref": "RUT.1.4",
+       "role": "Zwischenstation"
+      },
+      {
+       "label": "Auch Machlon und Kiljon sterben; Noomi bleibt zurück, ohne ihre Kinder und ohne ihren Mann",
+       "ref": "RUT.1.5",
+       "role": "Tiefpunkt"
+      }
+     ],
+     "features": {
+      "leitwort": [
+       {
+        "word": "blieb zurück",
+        "refs": [
+         "RUT.1.3",
+         "RUT.1.5"
+        ],
+        "role": "gliedernd"
+       }
+      ],
+      "chronology": [
+       {
+        "ref": "RUT.1.1",
+        "note": "«in den Tagen, als die Richter richteten» – Zeitrahmen ohne Jahreszahl"
+       }
+      ],
+      "numbers": [
+       {
+        "ref": "RUT.1.4",
+        "note": "«etwa zehn Jahre»"
+       }
+      ]
+     },
+     "visual": "scenes",
+     "basis": "text"
+    }
    ]
+  },
+  "date": "2026-10-24",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
+  "review": {
+   "date": "2026-10-24",
+   "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+   "summary_de": "Ablauf in vier Stufen vollständig (Auszug, Tod Elimelechs, Heirat, Tod der Söhne); Richtung und Leitwort «blieb zurück» stimmen; Weggelassenes trägt nicht.",
+   "changes_de": []
   }
  },
  {
@@ -64,37 +121,39 @@
   "level": "section",
   "target": "TU-RUT-001-006-018",
   "reference": "RUT.1.6-RUT.1.18",
-  "core_de": "Auf dem Rückweg will Noomi ihre Schwiegertöchter zurückschicken; Orpa kehrt um, Rut aber bindet sich mit einem Schwur an Noomi, ihr Volk und ihren Gott.",
+  "core_de": "Auf dem Rückweg drängt Noomi ihre Schwiegertöchter in drei Reden umzukehren; Orpa kehrt um, Rut aber bindet sich mit einem Schwur an Noomi, ihr Volk und ihren Gott.",
   "mode": "narrative",
   "voice": {
    "speaker": "narrator"
   },
   "moments": [
    {
-    "reference": "RUT.1.8-RUT.1.9",
-    "text_de": "Unterwegs nach Juda drängt Noomi ihre Schwiegertöchter, umzukehren, jede in das Haus ihrer Mutter, und segnet sie.",
-    "reason_de": "Wendepunkt (Kriterium 2): Noomis «Kehrt um!» wird dreimal wiederholt und stellt die Entscheidungsfrage des Abschnitts.",
-    "recognition_de": "Noomi auf dem Weg küsst die beiden jungen Frauen zum Abschied, alle drei weinen.",
+    "reference": "RUT.1.6-RUT.1.10",
+    "text_de": "Weil Noomi gehört hat, dass JHWH seinem Volk Brot gegeben hat, bricht Noomi mit ihren Schwiegertöchtern nach Juda auf; unterwegs drängt sie beide, umzukehren, jede in das Haus ihrer Mutter, und wünscht ihnen JHWHs Treue, doch beide wollen mit ihr gehen.",
+    "reason_de": "Runde 1 der Wechselrede (Kriterium 2): Mit Noomis «Kehrt um!» beginnt die Entscheidungsfrage, die der Text in drei Reden wiederholt; der Anlass «denn … Brot» bleibt als Begründung erhalten.",
+    "recognition_de": "Runde 1 in Dialogspalten: Noomi unterwegs: «Kehrt um!» – Orpa und Rut: «Nein, mit dir wollen wir zurückkehren!»",
     "keywords": [
      "kehrt um",
-     "Haus ihrer Mutter"
+     "Haus ihrer Mutter",
+     "mit dir wollen wir"
     ]
    },
    {
-    "reference": "RUT.1.14",
-    "text_de": "Orpa küsst ihre Schwiegermutter zum Abschied, Rut aber hält sich an ihr fest.",
-    "reason_de": "Der Text stellt die beiden Wege direkt gegeneinander (Kriterium 2); daran erkennt man die Szene (Kriterium 4).",
-    "recognition_de": "Am Wegrand: Orpa wendet sich nach dem Kuss zurück, Rut klammert sich an Noomi.",
+    "reference": "RUT.1.11-RUT.1.14",
+    "text_de": "Noomi drängt erneut: Sie könne ihnen keine Söhne mehr als Männer geben, die Hand JHWHs habe sich gegen sie gewendet; da küsst Orpa ihre Schwiegermutter zum Abschied, Rut aber hält sich an ihr fest.",
+    "reason_de": "Runde 2: Der Text stellt die beiden Wege direkt gegeneinander (Kriterium 2); daran erkennt man die Szene (Kriterium 4).",
+    "recognition_de": "Runde 2: Noomi: «Kehrt um, meine Töchter!» – darunter zwei Spalten: Orpa küsst sie und wendet sich ab, Rut hält sich an Noomi fest.",
     "keywords": [
+     "Kehrt um, meine Töchter",
      "Orpa küsste ihre Schwiegermutter",
      "Rut hielt sich"
     ]
    },
    {
-    "reference": "RUT.1.16-RUT.1.17",
-    "text_de": "Rut schwört, mit Noomi zu gehen, ihr Volk und ihren Gott zu teilen und sich nur durch den Tod von ihr trennen zu lassen.",
-    "reason_de": "Trägt die Kernaussage (Kriterium 1), Höhepunkt in wörtlicher Rede (Kriterium 2) und der bekannteste Satz des Buches (Kriterium 4).",
-    "recognition_de": "Rut steht auf dem Weg nach Juda vor Noomi und spricht ihr Treuewort, während Orpa zurückgeht.",
+    "reference": "RUT.1.15-RUT.1.18",
+    "text_de": "Noomi drängt Rut, ihrer Schwägerin nachzugehen; Rut aber schwört, mit Noomi zu gehen, ihr Volk und ihren Gott zu teilen und sich nur durch den Tod von ihr trennen zu lassen; da hört Noomi auf, auf sie einzureden.",
+    "reason_de": "Runde 3: trägt die Kernaussage (Kriterium 1), Höhepunkt in wörtlicher Rede (Kriterium 2) und der bekannteste Satz des Buches (Kriterium 4); der Schwur ist eine Reihe und steht mit allen Paaren in structure.",
+    "recognition_de": "Runde 3: Noomi: «Kehr um, deiner Schwägerin nach!» – Rut antwortet mit ihrem Schwur, als Paare gezeigt: wohin du gehst – dahin gehe ich; dein Volk – mein Volk; dein Gott – mein Gott; nur der Tod trennt.",
     "keywords": [
      "Wohin du gehst",
      "dahin gehe ich",
@@ -103,9 +162,8 @@
    }
   ],
   "omitted_de": [
-   "Anlass der Rückkehr (JHWH gibt seinem Volk wieder Brot, 1,6) – Übergang, im Kapitel durch die Rückkehr selbst enthalten",
-   "Noomis Begründung mit den ungeborenen Söhnen (1,11–13) – Teil der Rede, verdeutlicht nur das «Kehrt um»",
-   "Noomis Schweigen am Schluss (1,18) – Übergang"
+   "Noomis ausgemalter Gedanke, noch heute Nacht einen Mann zu haben und Söhne zu gebären (1,12b–13a) – Ausschmückung der Begründung, die in Runde 2 knapp steht",
+   "Wiederholtes Weinen (1,14a) – Wiederholung von 1,9b"
   ],
   "persons": [
    "FIG-NOOMI",
@@ -116,11 +174,216 @@
    "FIG-ORT-WEG",
    "FIG-ORT-MOAB"
   ],
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "dialogue",
+     "subtype": "drei Runden: Aufforderung → Antwort",
+     "range": "RUT.1.6-RUT.1.18",
+     "elements": [
+      {
+       "label": "Anlass (denn): Noomi hat gehört, dass JHWH seinem Volk Brot gegeben hat; sie bricht mit beiden Schwiegertöchtern nach Juda auf",
+       "ref": "RUT.1.6-RUT.1.7",
+       "role": "Anlass"
+      },
+      {
+       "label": "Runde 1 – Noomi: «Kehrt um, jede in das Haus ihrer Mutter! JHWH erweise euch Treue»",
+       "ref": "RUT.1.8-RUT.1.9",
+       "role": "Aufforderung"
+      },
+      {
+       "label": "Antwort beider: «Nein, mit dir wollen wir zu deinem Volk zurückkehren!»",
+       "ref": "RUT.1.10",
+       "role": "Antwort"
+      },
+      {
+       "label": "Runde 2 – Noomi: «Kehrt um, meine Töchter! Habe ich denn noch Söhne, die eure Männer werden könnten? Die Hand JHWHs hat sich gegen mich gewendet»",
+       "ref": "RUT.1.11-RUT.1.13",
+       "role": "Aufforderung mit Begründung"
+      },
+      {
+       "label": "Antwort: Orpa küsst ihre Schwiegermutter, Rut hält sich an ihr fest",
+       "ref": "RUT.1.14",
+       "role": "Antwort",
+       "child": "s2"
+      },
+      {
+       "label": "Runde 3 – Noomi zu Rut: «Deine Schwägerin ist zurückgekehrt. Kehr um, ihr nach!»",
+       "ref": "RUT.1.15",
+       "role": "Aufforderung"
+      },
+      {
+       "label": "Antwort Ruts: Treueschwur",
+       "ref": "RUT.1.16-RUT.1.17",
+       "role": "Antwort",
+       "child": "s3"
+      },
+      {
+       "label": "Noomi sieht, dass Rut fest entschlossen ist, und hört auf, auf sie einzureden",
+       "ref": "RUT.1.18",
+       "role": "Schluss"
+      }
+     ],
+     "features": {
+      "speakers": [
+       {
+        "who": "Noomi",
+        "to": "Orpa und Rut",
+        "refs": [
+         "RUT.1.8-RUT.1.9",
+         "RUT.1.11-RUT.1.13"
+        ]
+       },
+       {
+        "who": "Orpa und Rut",
+        "to": "Noomi",
+        "refs": [
+         "RUT.1.10"
+        ]
+       },
+       {
+        "who": "Noomi",
+        "to": "Rut",
+        "refs": [
+         "RUT.1.15"
+        ]
+       },
+       {
+        "who": "Rut",
+        "to": "Noomi",
+        "refs": [
+         "RUT.1.16-RUT.1.17"
+        ]
+       }
+      ],
+      "leitwort": [
+       {
+        "word": "umkehren / zurückkehren",
+        "refs": [
+         "RUT.1.6",
+         "RUT.1.7",
+         "RUT.1.8",
+         "RUT.1.10",
+         "RUT.1.11",
+         "RUT.1.12",
+         "RUT.1.15",
+         "RUT.1.16"
+        ],
+        "role": "gliedernd"
+       }
+      ],
+      "pattern_break": [
+       {
+        "ref": "RUT.1.14",
+        "note": "Ab Runde 2 antworten die beiden nicht mehr gemeinsam: Orpa geht, Rut bleibt; in Runde 3 spricht nur noch Rut."
+       }
+      ],
+      "modality": [
+       {
+        "ref": "RUT.1.8-RUT.1.9",
+        "kind": "Segenswunsch",
+        "note": "«JHWH erweise euch Treue … gebe euch Ruhe» ist Wunsch, keine Zusage."
+       }
+      ]
+     },
+     "visual": "dialogue",
+     "basis": "text"
+    },
+    {
+     "id": "s2",
+     "pattern": "contrast",
+     "subtype": "zwei Wege",
+     "range": "RUT.1.14-RUT.1.15",
+     "elements": [
+      {
+       "label": "Orpa: küsst ihre Schwiegermutter; nach Noomis Wort ist sie zu ihrem Volk und ihren Göttern zurückgekehrt",
+       "ref": "RUT.1.14-RUT.1.15",
+       "role": "Orpa"
+      },
+      {
+       "label": "Rut: hält sich an ihr fest",
+       "ref": "RUT.1.14",
+       "role": "Rut"
+      }
+     ],
+     "visual": "columns",
+     "basis": "text"
+    },
+    {
+     "id": "s3",
+     "pattern": "series",
+     "subtype": "Treueschwur in Paaren «du → ich»",
+     "range": "RUT.1.16-RUT.1.17",
+     "elements": [
+      {
+       "label": "Abweisung: «Dräng mich nicht, dich zu verlassen!»",
+       "ref": "RUT.1.16",
+       "role": "Einleitung"
+      },
+      {
+       "label": "Wohin du gehst → dahin gehe ich",
+       "ref": "RUT.1.16",
+       "role": "du → ich"
+      },
+      {
+       "label": "Wo du übernachtest → da übernachte ich",
+       "ref": "RUT.1.16",
+       "role": "du → ich"
+      },
+      {
+       "label": "Dein Volk → ist mein Volk",
+       "ref": "RUT.1.16",
+       "role": "du → ich"
+      },
+      {
+       "label": "Dein Gott → ist mein Gott",
+       "ref": "RUT.1.16",
+       "role": "du → ich"
+      },
+      {
+       "label": "Wo du stirbst → da sterbe ich und will dort begraben werden",
+       "ref": "RUT.1.17",
+       "role": "du → ich"
+      },
+      {
+       "label": "Schwur bei JHWH: «So soll JHWH mir tun … nur der Tod wird mich und dich trennen!»",
+       "ref": "RUT.1.17",
+       "role": "Schwurformel"
+      }
+     ],
+     "features": {
+      "pattern_break": [
+       {
+        "ref": "RUT.1.17",
+        "note": "Die Reihe endet mit der Schwurformel «So soll JHWH mir tun …» als Pointe."
+       }
+      ],
+      "modality": [
+       {
+        "ref": "RUT.1.17",
+        "kind": "Schwur",
+        "note": "Selbstverfluchung, mit der sich Rut bindet; kein Wunsch, sondern Verpflichtung."
+       }
+      ]
+     },
+     "visual": "grid",
+     "basis": "text"
+    }
+   ]
+  },
+  "date": "2026-10-24",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
   "review": {
-   "date": "2026-10-23",
-   "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-   "summary_de": "Ohne Befund.",
-   "changes_de": []
+   "date": "2026-10-24",
+   "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+   "summary_de": "Wechselrede in drei Runden mit Antwort je Runde, Gegensatz Orpa ↔ Rut und Schwur mit allen fünf Paaren richtig erkannt; kleine Korrekturen an Begründung, Zuordnung der Aussage über Orpa und Schwurformel.",
+   "changes_de": [
+    "Moment 1 und Glied «Anlass»: Begründung wie im Text als Gehörtes Noomis («denn sie hatte gehört …»), «wieder» gestrichen; «segnet» → «wünscht ihnen JHWHs Treue» (Segenswunsch, vgl. modality).",
+    "s2 Glied Orpa: Rückkehr «zu ihrem Volk und ihren Göttern» als Noomis Aussage (1,15) gekennzeichnet, nicht als Erzählerbericht; überflüssigen Selbstverweis (links) entfernt.",
+    "s3 Schwurformel: «So soll JHWH mir tun» ins Label aufgenommen (Rut nennt hier JHWH; trägt die Selbstverfluchung)."
+   ]
   }
  },
  {
@@ -128,7 +391,7 @@
   "level": "section",
   "target": "TU-RUT-001-019-022",
   "reference": "RUT.1.19-RUT.1.22",
-  "core_de": "Noomi kommt bitter nach Betlehem zurück und nennt sich «Mara», weil JHWH sie leer zurückgebracht habe; mit ihr kommt Rut, als die Gerstenernte beginnt.",
+  "core_de": "Noomi kommt nach Betlehem zurück und will nicht mehr Noomi, sondern Mara heissen, denn der Allmächtige habe es ihr bitter gemacht: Voll sei sie weggegangen, leer habe JHWH sie zurückgebracht; mit ihr kommt Rut, als die Gerstenernte beginnt.",
   "mode": "narrative",
   "voice": {
    "speaker": "narrator"
@@ -136,9 +399,9 @@
   "moments": [
    {
     "reference": "RUT.1.19-RUT.1.21",
-    "text_de": "In Betlehem fragen die Frauen «Ist das Noomi?», und sie antwortet, man solle sie Mara nennen, denn voll sei sie weggegangen und leer habe JHWH sie zurückgebracht.",
-    "reason_de": "Trägt die Kernaussage des Kapitels (Kriterium 1) und benennt mit «voll – leer» das Thema, das das Buch bis zum Schluss trägt (Kriterium 2).",
-    "recognition_de": "In Betlehem umringen die Frauen Noomi und fragen «Ist das Noomi?»; sie antwortet «Nennt mich Mara», Rut neben ihr.",
+    "text_de": "In Betlehem fragen die Frauen «Ist das Noomi?», und sie antwortet, man solle sie nicht Noomi, sondern Mara nennen, denn der Allmächtige habe es ihr bitter gemacht: Voll sei sie weggegangen, leer habe JHWH sie zurückgebracht.",
+    "reason_de": "Trägt die Kernaussage des Kapitels (Kriterium 1) und benennt mit «voll – leer» das Thema, das das Buch bis zum Schluss trägt (Kriterium 2); beide Gegenüberstellungen und ihre Begründung stehen in structure.",
+    "recognition_de": "In Betlehem fragen die Frauen «Ist das Noomi?»; Noomi antwortet mit zwei Gegenüberstellungen: «nicht Noomi – Mara» und «voll weggegangen – leer zurückgebracht»; Rut steht neben ihr.",
     "keywords": [
      "Ist das Noomi",
      "Nennt mich Mara",
@@ -156,8 +419,8 @@
    }
   ],
   "omitted_de": [
-   "Aufruhr der ganzen Stadt – im Bild durch die Frauen vertreten",
-   "Wiederholte Klage gegen den Allmächtigen (1,21b) – Wiederholung von «bitter»"
+   "Aufruhr der ganzen Stadt (1,19) – im Bild durch die Frauen vertreten",
+   "Zweite Nennung der Klage «JHWH hat gegen mich ausgesagt, der Allmächtige hat mir Böses angetan» (1,21b) – Wiederholung der Begründung aus 1,20b; in structure mit ihr zusammengefasst"
   ],
   "persons": [
    "FIG-NOOMI",
@@ -167,11 +430,118 @@
   "places": [
    "FIG-ORT-BETLEHEM"
   ],
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "sequence",
+     "subtype": "Ankunft und Antwort",
+     "range": "RUT.1.19-RUT.1.22",
+     "elements": [
+      {
+       "label": "Ankunft in Betlehem: Die Stadt gerät in Aufruhr, die Frauen fragen: «Ist das Noomi?»",
+       "ref": "RUT.1.19",
+       "role": "Frage"
+      },
+      {
+       "label": "Noomis Antwort",
+       "ref": "RUT.1.20-RUT.1.21",
+       "role": "Antwort",
+       "child": "s2"
+      },
+      {
+       "label": "Noomi kehrt zurück, mit ihr Rut, die Moabiterin, zu Beginn der Gerstenernte",
+       "ref": "RUT.1.22",
+       "role": "Schlussnotiz"
+      }
+     ],
+     "features": {
+      "speakers": [
+       {
+        "who": "die Frauen von Betlehem",
+        "to": "nicht angegeben (Frage über Noomi)",
+        "refs": [
+         "RUT.1.19"
+        ]
+       },
+       {
+        "who": "Noomi",
+        "to": "die Frauen",
+        "refs": [
+         "RUT.1.20-RUT.1.21"
+        ]
+       }
+      ],
+      "leitwort": [
+       {
+        "word": "zurückkehren",
+        "refs": [
+         "RUT.1.22"
+        ],
+        "role": "Abschluss des Kapitels"
+       }
+      ],
+      "interpretation": [
+       {
+        "ref": "RUT.1.22",
+        "note": "Deutung: Der Erzähler stellt Rut, die Moabiterin, gleich neben Noomis «leer»; der Text sagt das nicht ausdrücklich."
+       }
+      ]
+     },
+     "visual": "scenes",
+     "basis": "text"
+    },
+    {
+     "id": "s2",
+     "pattern": "contrast",
+     "subtype": "nicht – sondern; vorher ↔ nachher",
+     "range": "RUT.1.20-RUT.1.21",
+     "elements": [
+      {
+       "label": "Nicht Noomi → sondern Mara",
+       "ref": "RUT.1.20",
+       "role": "Name: nicht – sondern"
+      },
+      {
+       "label": "Voll bin ich weggegangen → leer hat mich JHWH zurückgebracht",
+       "ref": "RUT.1.21",
+       "role": "vorher → nachher"
+      },
+      {
+       "label": "Begründung: Der Allmächtige hat es mir sehr bitter gemacht; JHWH hat gegen mich ausgesagt, der Allmächtige hat mir Böses angetan",
+       "ref": "RUT.1.20-RUT.1.21",
+       "role": "denn",
+       "links": [
+        "RUT.1.20",
+        "RUT.1.21"
+       ]
+      }
+     ],
+     "features": {
+      "wordplay": [
+       {
+        "ref": "RUT.1.20",
+        "note": "«Mara» hängt am Wort «bitter» («der Allmächtige hat es mir sehr bitter gemacht»); was «Noomi» bedeutet, sagt der Text nicht."
+       }
+      ]
+     },
+     "visual": "columns",
+     "basis": "text"
+    }
+   ]
+  },
+  "date": "2026-10-24",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
   "review": {
-   "date": "2026-10-23",
-   "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-   "summary_de": "Ohne Befund.",
-   "changes_de": []
+   "date": "2026-10-24",
+   "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+   "summary_de": "Ankunft mit Gegenüberstellung nicht Noomi – Mara und voll – leer richtig; die Begründung «denn» war im core_de an die falsche Aussage gebunden.",
+   "changes_de": [
+    "core_de: «denn» an die Begründung des Textes gebunden (der Allmächtige hat es mir bitter gemacht), nicht an «voll – leer» (Regel 2).",
+    "speakers: Adressat der Frage «Ist das Noomi?» nicht erfunden («einander» → nicht angegeben).",
+    "s2 Begründung vollständig (auch «der Allmächtige hat mir Böses angetan», 1,21b)."
+   ]
   }
  },
  {
@@ -187,12 +557,13 @@
   "moments": [
    {
     "reference": "RUT.2.2",
-    "text_de": "Rut bittet Noomi, aufs Feld gehen und Ähren auflesen zu dürfen, wo man ihr Gunst erweist.",
+    "text_de": "Rut bittet Noomi, aufs Feld gehen und Ähren auflesen zu dürfen, wo man ihr Gunst erweist, und Noomi lässt sie gehen.",
     "reason_de": "Anfang des Bogens (Kriterium 3): Rut ergreift selbst die Initiative, um für beide zu sorgen.",
-    "recognition_de": "Rut steht vor Noomi und bittet, auf die Felder hinausgehen zu dürfen.",
+    "recognition_de": "Rut steht vor Noomi und bittet, auf die Felder hinausgehen zu dürfen; Noomi antwortet: «Geh, meine Tochter!»",
     "keywords": [
      "Ähren auflesen",
-     "Gunst"
+     "Gunst",
+     "Geh, meine Tochter"
     ]
    },
    {
@@ -207,8 +578,7 @@
    }
   ],
   "omitted_de": [
-   "Einführung des Boas als Mann von Vermögen (2,1) – Hintergrund, im Moment 2.3 mitgenannt",
-   "Noomis knappe Zustimmung «Geh, meine Tochter!» – Übergang"
+   "Vermögen des Boas (2,1) – Nebenangabe; dass er ein Verwandter aus der Sippe Elimelechs ist, steht im Moment 2,3"
   ],
   "persons": [
    "FIG-RUT",
@@ -219,13 +589,92 @@
   "places": [
    "FIG-ORT-FELD"
   ],
-  "review": {
-   "date": "2026-10-23",
-   "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-   "summary_de": "Auswahl belegt; Widerspruch zwischen Erkennungsmoment und omitted_de.",
-   "changes_de": [
-    "Erkennungsmoment 2,2: Noomis «Geh, meine Tochter!» gestrichen, da in omitted_de als weggelassen geführt"
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "sequence",
+     "subtype": "Ausgangslage → Bitte → «Zufall»",
+     "range": "RUT.2.1-RUT.2.3",
+     "elements": [
+      {
+       "label": "Der Erzähler stellt Boas vor: ein Verwandter Noomis aus der Sippe Elimelechs, ein Mann von Vermögen",
+       "ref": "RUT.2.1",
+       "role": "Vorwissen des Lesers"
+      },
+      {
+       "label": "Rut zu Noomi: «Lass mich aufs Feld gehen und Ähren auflesen!» – Noomi: «Geh, meine Tochter!»",
+       "ref": "RUT.2.2",
+       "role": "Bitte und Zustimmung"
+      },
+      {
+       "label": "Rut liest auf dem Feld hinter den Schnittern Ähren auf",
+       "ref": "RUT.2.3",
+       "role": "Ausführung"
+      },
+      {
+       "label": "Es trifft sich zufällig: Sie kommt auf das Feldstück des Boas aus der Sippe Elimelechs",
+       "ref": "RUT.2.3",
+       "role": "Wende",
+       "links": [
+        "RUT.2.1"
+       ]
+      }
+     ],
+     "features": {
+      "speakers": [
+       {
+        "who": "Rut",
+        "to": "Noomi",
+        "refs": [
+         "RUT.2.2"
+        ]
+       },
+       {
+        "who": "Noomi",
+        "to": "Rut",
+        "refs": [
+         "RUT.2.2"
+        ]
+       }
+      ],
+      "leitwort": [
+       {
+        "word": "aus der Sippe Elimelechs",
+        "refs": [
+         "RUT.2.1",
+         "RUT.2.3"
+        ],
+        "role": "verklammernd"
+       }
+      ],
+      "modality": [
+       {
+        "ref": "RUT.2.2",
+        "kind": "Bitte",
+        "note": "Rut sucht jemanden, «in dessen Augen ich Gunst finde» – Hoffnung, noch keine Zusage."
+       }
+      ],
+      "interpretation": [
+       {
+        "ref": "RUT.2.3",
+        "note": "Deutung: Mit «zufällig» lässt der Erzähler Gottes verborgene Führung anklingen; der Text nennt Gott hier nicht."
+       }
+      ]
+     },
+     "visual": "scenes",
+     "basis": "text"
+    }
    ]
+  },
+  "date": "2026-10-24",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
+  "review": {
+   "date": "2026-10-24",
+   "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+   "summary_de": "Ablauf Vorwissen → Bitte → «Zufall» stimmt; Deutung der verborgenen Führung gekennzeichnet; keine Änderung.",
+   "changes_de": []
   }
  },
  {
@@ -252,9 +701,9 @@
    },
    {
     "reference": "RUT.2.10-RUT.2.12",
-    "text_de": "Rut fällt vor Boas nieder und fragt, warum er sie, eine Fremde, beachte; Boas antwortet mit ihrer Treue zu Noomi und wünscht ihr Lohn von JHWH, unter dessen Flügeln sie Zuflucht sucht.",
-    "reason_de": "Trägt die Kernaussage (Kriterium 1) und ist der Höhepunkt in wörtlicher Rede (Kriterium 2): Ruts Treue wird erkannt und vor Gott gesegnet.",
-    "recognition_de": "Rut liegt mit dem Gesicht zur Erde vor Boas auf dem Feld, Boas spricht zu ihr.",
+    "text_de": "Rut fällt vor Boas nieder und fragt, warum er sie, eine Fremde, beachte; Boas nennt als Grund, was sie an ihrer Schwiegermutter getan hat und dass sie Eltern und Heimat verlassen hat, und wünscht ihr Lohn von JHWH, unter dessen Flügeln sie Zuflucht sucht.",
+    "reason_de": "Trägt die Kernaussage (Kriterium 1) und ist der Höhepunkt in wörtlicher Rede (Kriterium 2): Ruts Treue wird erkannt und vor Gott gesegnet. Frage, beide Gründe und Segenswunsch stehen als Kette in structure.",
+    "recognition_de": "Rut liegt mit dem Gesicht zur Erde vor Boas auf dem Feld; Boas antwortet ihr – ein Pfeil führt von ihrer Treue zu Noomi zum Segenswunsch «JHWH vergelte dein Tun».",
     "keywords": [
      "auf ihr Gesicht",
      "eine Fremde",
@@ -262,10 +711,10 @@
     ]
    },
    {
-    "reference": "RUT.2.14",
-    "text_de": "Beim Essen ruft Boas Rut herbei, sie setzt sich neben die Schnitter, er reicht ihr geröstetes Korn, und sie isst sich satt und behält noch übrig.",
-    "reason_de": "Zeigt den Ausgang (Kriterium 3) und sichtbare Fülle (Kriterium 4); Deutung: erster Gegenpol zum «leer» aus 1,21.",
-    "recognition_de": "Rut sitzt neben den Schnittern, Boas reicht ihr eine Handvoll geröstetes Korn, daneben Brot.",
+    "reference": "RUT.2.14-RUT.2.17",
+    "text_de": "Beim Essen ruft Boas Rut herbei, sie setzt sich neben die Schnitter, er reicht ihr geröstetes Korn, und sie isst sich satt und behält noch übrig; danach weist er die Knechte an, eigens Ähren für sie aus den Bündeln zu ziehen und liegen zu lassen, und am Abend hat sie etwa ein Efa Gerste.",
+    "reason_de": "Zeigt den Ausgang (Kriterium 3) und sichtbare Fülle in drei Gliedern: satt, Anweisung, eigens Ähren liegen zu lassen, Ertrag des Tages (Kriterium 4); Deutung: erster Gegenpol zum «leer» aus 1,21.",
+    "recognition_de": "Rut sitzt neben den Schnittern, Boas reicht ihr eine Handvoll geröstetes Korn; daneben Boas, der den Knechten aufträgt, eigens Ähren liegen zu lassen, und am Abend ihr Ertrag an Gerste.",
     "keywords": [
      "iss vom Brot",
      "geröstetes Korn",
@@ -275,10 +724,8 @@
   ],
   "omitted_de": [
    "Gruss zwischen Boas und Schnittern (2,4) – Übergang",
-   "Auskunft des Vorarbeiters über Rut (2,5–7) – wiederholt Bekanntes",
-   "Ruts Dank (2,13) – Wiederholung",
-   "Anweisung, Ähren absichtlich liegen zu lassen (2,15–16) – vertieft nur die Grosszügigkeit",
-   "«etwa ein Efa Gerste» (2,17) – Zahl"
+   "Einzelheiten der Auskunft des Vorarbeiters (2,6–7) – wiederholen Bekanntes; dass Boas nach Rut fragt, steht in structure",
+   "Ruts Dank (2,13) als eigener Moment – nimmt das Stichwort «Gunst» aus 2,10 auf, ohne neue Wendung; in structure als Antwort"
   ],
   "persons": [
    "FIG-RUT",
@@ -288,12 +735,190 @@
   "places": [
    "FIG-ORT-FELD"
   ],
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "sequence",
+     "subtype": "Begegnung auf dem Feld",
+     "range": "RUT.2.4-RUT.2.17",
+     "elements": [
+      {
+       "label": "Boas kommt aufs Feld und fragt nach der jungen Frau: Es ist die Moabiterin, die mit Noomi zurückgekommen ist",
+       "ref": "RUT.2.4-RUT.2.7",
+       "role": "Anlass"
+      },
+      {
+       "label": "Boas zu Rut: «Geh auf kein anderes Feld, halte dich zu meinen Arbeiterinnen; ich habe den Knechten geboten, dich nicht anzurühren; trink, was sie schöpfen»",
+       "ref": "RUT.2.8-RUT.2.9",
+       "role": "Schutz"
+      },
+      {
+       "label": "Ruts Frage und Boas' Antwort",
+       "ref": "RUT.2.10-RUT.2.12",
+       "role": "Mitte",
+       "child": "s2"
+      },
+      {
+       "label": "Rut: «Möge ich Gunst finden in deinen Augen, mein Herr! Denn du hast mich getröstet»",
+       "ref": "RUT.2.13",
+       "role": "Antwort"
+      },
+      {
+       "label": "Beim Essen reicht Boas ihr geröstetes Korn; sie wird satt und lässt übrig",
+       "ref": "RUT.2.14",
+       "role": "Fülle"
+      },
+      {
+       "label": "Boas gebietet den Knechten: Sie darf auch zwischen den Garben auflesen; zieht eigens etwas aus den Bündeln für sie heraus und lasst es liegen",
+       "ref": "RUT.2.15-RUT.2.16",
+       "role": "Fülle"
+      },
+      {
+       "label": "Am Abend hat sie etwa ein Efa Gerste",
+       "ref": "RUT.2.17",
+       "role": "Ertrag"
+      }
+     ],
+     "features": {
+      "speakers": [
+       {
+        "who": "Boas",
+        "to": "Schnitter und Vorarbeiter",
+        "refs": [
+         "RUT.2.4-RUT.2.5"
+        ]
+       },
+       {
+        "who": "Vorarbeiter",
+        "to": "Boas",
+        "refs": [
+         "RUT.2.6-RUT.2.7"
+        ]
+       },
+       {
+        "who": "Boas",
+        "to": "Rut",
+        "refs": [
+         "RUT.2.8-RUT.2.9",
+         "RUT.2.11-RUT.2.12",
+         "RUT.2.14"
+        ]
+       },
+       {
+        "who": "Rut",
+        "to": "Boas",
+        "refs": [
+         "RUT.2.10",
+         "RUT.2.13"
+        ]
+       },
+       {
+        "who": "Boas",
+        "to": "Knechte",
+        "refs": [
+         "RUT.2.15-RUT.2.16"
+        ]
+       }
+      ],
+      "leitwort": [
+       {
+        "word": "Gunst",
+        "refs": [
+         "RUT.2.10",
+         "RUT.2.13"
+        ],
+        "role": "verklammernd"
+       },
+       {
+        "word": "auflesen",
+        "refs": [
+         "RUT.2.7",
+         "RUT.2.15",
+         "RUT.2.16",
+         "RUT.2.17"
+        ],
+        "role": "Motiv"
+       }
+      ],
+      "numbers": [
+       {
+        "ref": "RUT.2.17",
+        "note": "«etwa ein Efa Gerste»; nicht umrechnen"
+       }
+      ]
+     },
+     "visual": "scenes",
+     "basis": "text"
+    },
+    {
+     "id": "s2",
+     "pattern": "cause",
+     "subtype": "Frage → Grund → Segenswunsch",
+     "range": "RUT.2.10-RUT.2.12",
+     "elements": [
+      {
+       "label": "Rut: «Warum beachtest du mich, wo ich doch eine Fremde bin?»",
+       "ref": "RUT.2.10",
+       "role": "Frage"
+      },
+      {
+       "label": "Grund: alles, was du an deiner Schwiegermutter getan hast nach dem Tod deines Mannes",
+       "ref": "RUT.2.11",
+       "role": "Ursache"
+      },
+      {
+       "label": "Grund: Du hast Vater, Mutter und das Land deiner Herkunft verlassen und bist zu einem Volk gegangen, das du nicht kanntest",
+       "ref": "RUT.2.11",
+       "role": "Ursache"
+      },
+      {
+       "label": "Wunsch: JHWH vergelte dein Tun; dein Lohn sei voll von JHWH, unter dessen Flügeln du Zuflucht suchst",
+       "ref": "RUT.2.12",
+       "role": "Folge (Wunsch)"
+      }
+     ],
+     "features": {
+      "speakers": [
+       {
+        "who": "Rut",
+        "to": "Boas",
+        "refs": [
+         "RUT.2.10"
+        ]
+       },
+       {
+        "who": "Boas",
+        "to": "Rut",
+        "refs": [
+         "RUT.2.11-RUT.2.12"
+        ]
+       }
+      ],
+      "modality": [
+       {
+        "ref": "RUT.2.12",
+        "kind": "Segenswunsch",
+        "note": "Wunsch an JHWH, keine Zusage."
+       }
+      ]
+     },
+     "visual": "arrows",
+     "basis": "text"
+    }
+   ]
+  },
+  "date": "2026-10-24",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
   "review": {
-   "date": "2026-10-23",
-   "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-   "summary_de": "Auswahl belegt; eine Einzelheit im Momentsatz stand nicht im Text.",
+   "date": "2026-10-24",
+   "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+   "summary_de": "Ablauf mit Kette Frage → zwei Gründe → Segenswunsch richtig; zwei Anweisungen des Boas waren als Tatsachen formuliert, Ruts Antwort 2,13 fehlte in der Struktur.",
    "changes_de": [
-    "Moment 2,14: «an den Tisch der Schnitter» ersetzt durch «ruft Rut herbei, sie setzt sich neben die Schnitter» – einen Tisch nennt der Text nicht"
+    "Moment 3 und Glied «Fülle» (2,15–16): Boas' Anweisung an die Knechte als Auftrag wiedergegeben, nicht als ausgeführte Tatsache (Regel 2).",
+    "Glied «Schutz»: «die Knechte rühren dich nicht an» → «ich habe den Knechten geboten, dich nicht anzurühren» (Auftrag ≠ Tatsache).",
+    "Ruts Antwort (2,13) als Glied in s1 ergänzt (Leitwort «Gunst» 2,10/2,13 verweist darauf); Grund in omitted_de berichtigt (keine blosse Wiederholung)."
    ]
   }
  },
@@ -319,9 +944,9 @@
     ]
    },
    {
-    "reference": "RUT.2.20",
-    "text_de": "Als Noomi den Namen Boas hört, segnet sie ihn im Namen JHWHs, der seine Treue nicht entzogen hat, und sagt: Er ist einer unserer Löser.",
-    "reason_de": "Trägt die Kernaussage (Kriterium 1) und ist der Wendepunkt (Kriterium 2): Noomi spricht zum ersten Mal wieder von JHWHs Treue, und das Stichwort «Löser» fällt.",
+    "reference": "RUT.2.19-RUT.2.20",
+    "text_de": "Auf Noomis Frage nennt Rut den Namen Boas; Noomi segnet ihn: «Gesegnet sei er von JHWH, der seine Treue den Lebenden und den Toten nicht entzogen hat!», und sagt: Er ist einer unserer Löser.",
+    "reason_de": "Trägt die Kernaussage (Kriterium 1) und ist der Wendepunkt (Kriterium 2): Noomi spricht nach ihrer Klage (1,20–21) wieder von Treue (ob JHWHs oder Boas', lässt der Text offen), und das Stichwort «Löser» fällt.",
     "recognition_de": "Noomi spricht einen Segen über Boas, als Rut ihr seinen Namen nennt.",
     "keywords": [
      "Treue",
@@ -330,8 +955,8 @@
    }
   ],
   "omitted_de": [
-   "Ruts Bericht über Boas' Anweisung (2,21) und Noomis Rat (2,22) – Wiederholung",
-   "Dauer bis Ende der Gersten- und Weizenernte (2,23) – Übergang"
+   "Ruts Bericht über Boas' Anweisung (2,21) und Noomis Rat (2,22) – Wiederholung von 2,8–9",
+   "Schlussnotiz bis zum Ende der Gersten- und Weizenernte (2,23) – Übergang"
   ],
   "persons": [
    "FIG-RUT",
@@ -340,15 +965,99 @@
   "places": [
    "FIG-ORT-BETLEHEM"
   ],
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "sequence",
+     "subtype": "Heimkehr und Gespräch",
+     "range": "RUT.2.18-RUT.2.23",
+     "elements": [
+      {
+       "label": "Rut bringt die aufgelesene Gerste in die Stadt und gibt Noomi, was sie vom Essen übrig gelassen hat",
+       "ref": "RUT.2.18",
+       "role": "Ankunft"
+      },
+      {
+       "label": "Noomi fragt: «Wo hast du heute aufgelesen? Gesegnet sei, der dich beachtet hat!» – Rut nennt den Namen Boas",
+       "ref": "RUT.2.19",
+       "role": "Frage und Antwort"
+      },
+      {
+       "label": "Noomi: «Gesegnet sei er von JHWH, der seine Treue den Lebenden und den Toten nicht entzogen hat! Er ist einer von unseren Lösern.»",
+       "ref": "RUT.2.20",
+       "role": "Wende"
+      },
+      {
+       "label": "Rut berichtet Boas' Wort, sie solle bei seinen Leuten bleiben bis zum Ende der Ernte; Noomi rät dazu",
+       "ref": "RUT.2.21-RUT.2.22",
+       "role": "Bestätigung"
+      },
+      {
+       "label": "Rut liest bei den Arbeiterinnen des Boas bis zum Ende der Gersten- und Weizenernte und wohnt bei Noomi",
+       "ref": "RUT.2.23",
+       "role": "Schlussnotiz"
+      }
+     ],
+     "features": {
+      "speakers": [
+       {
+        "who": "Noomi",
+        "to": "Rut",
+        "refs": [
+         "RUT.2.19",
+         "RUT.2.20",
+         "RUT.2.22"
+        ]
+       },
+       {
+        "who": "Rut",
+        "to": "Noomi",
+        "refs": [
+         "RUT.2.19",
+         "RUT.2.21"
+        ]
+       }
+      ],
+      "leitwort": [
+       {
+        "word": "Löser",
+        "refs": [
+         "RUT.2.20"
+        ],
+        "role": "Stichwort, erstmals im Buch"
+       },
+       {
+        "word": "gesegnet",
+        "refs": [
+         "RUT.2.19",
+         "RUT.2.20"
+        ],
+        "role": "Steigerung: erst allgemein («der dich beachtet hat»), dann «von JHWH», nachdem Rut den Namen Boas genannt hat"
+       }
+      ],
+      "interpretation": [
+       {
+        "ref": "RUT.2.20",
+        "note": "Ob sich «der seine Treue … nicht entzogen hat» auf JHWH oder auf Boas bezieht, lässt der Text offen."
+       }
+      ]
+     },
+     "visual": "scenes",
+     "basis": "text"
+    }
+   ]
+  },
+  "date": "2026-10-24",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
   "review": {
-   "date": "2026-10-23",
-   "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-   "summary_de": "Auswahl belegt; Kernaussage legte den offenen Bezug von «Treue» in 2,20 fest.",
+   "date": "2026-10-24",
+   "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+   "summary_de": "Ablauf mit Wende «Löser» richtig; der im Merkmal als offen bezeichnete Bezug von «der seine Treue … nicht entzogen hat» war im Moment festgelegt.",
    "changes_de": [
-    "core_de: «lobt JHWHs Treue» ersetzt durch das wörtliche Zitat aus 2,20 – der Bezug (JHWH oder Boas) bleibt offen",
-    "Erkennungsmoment 2,20: «hebt überrascht die Hände» ersetzt durch den Segen, den der Text nennt",
-    "Schlüsselwort 2,18: «ihre Schwiegermutter sah» ersetzt durch «aufgelesen» – kennzeichnender",
-    "2026-10-23: Kernaussage ohne 2,23 («liest bis zum Ende der Ernte»), weil omitted_de diesen Übergang weglässt (Hinweis der Prüfung der Zusammenfassungen)."
+    "Moment 2: Bezug von «der seine Treue … nicht entzogen hat» offen gelassen wie im Text (vorher auf JHWH festgelegt, im Widerspruch zum eigenen Merkmal interpretation).",
+    "Leitwort «gesegnet»: Rolle verständlich formuliert."
    ]
   }
  },
@@ -357,7 +1066,7 @@
   "level": "section",
   "target": "TU-RUT-003-001-005",
   "reference": "RUT.3.1-RUT.3.5",
-  "core_de": "Noomi will Rut ein gutes Zuhause verschaffen und entwirft einen Plan, wie Rut nachts auf der Tenne an Boas herantreten soll; Rut willigt ein.",
+  "core_de": "Noomi will Rut einen Ort der Ruhe suchen, wo es ihr gut geht, und entwirft einen Plan, wie Rut nachts auf der Tenne an Boas herantreten soll; Rut willigt ein.",
   "mode": "narrative",
   "voice": {
    "speaker": "narrator"
@@ -366,8 +1075,8 @@
    {
     "reference": "RUT.3.1-RUT.3.4",
     "text_de": "Noomi will Rut einen Ort der Ruhe suchen und schickt sie nachts zur Tenne, wo sie Boas die Füsse aufdecken und sich hinlegen soll.",
-    "reason_de": "Anfang des Bogens (Kriterium 3): Noomi ergreift nun selbst die Initiative, damit Boas als Löser handelt.",
-    "recognition_de": "Noomi gibt Rut Anweisungen für die Nacht auf der Tenne, wo Boas Gerste worfelt.",
+    "reason_de": "Anfang des Bogens (Kriterium 3): Noomi ergreift nun selbst die Initiative; als Zweck nennt sie einen Ort der Ruhe für Rut (das Wort «Löser» fällt hier nicht).",
+    "recognition_de": "Noomi gibt Rut Anweisungen für die Nacht auf der Tenne, wo Boas Gerste worfelt; als Plan in Schritten gezeigt, noch nicht ausgeführt.",
     "keywords": [
      "Ort der Ruhe",
      "Tenne",
@@ -385,7 +1094,7 @@
    }
   ],
   "omitted_de": [
-   "Einzelheiten der Vorbereitung (waschen, salben, Kleider, 3,3) – Detail"
+   "Einzelheiten der Vorbereitung (waschen, salben, Kleider anziehen, 3,3) – Ausschmückung des Schritts «geh hinab zur Tenne»"
   ],
   "persons": [
    "FIG-NOOMI",
@@ -395,13 +1104,115 @@
   "places": [
    "FIG-ORT-TENNE"
   ],
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "dialogue",
+     "subtype": "Auftrag → Zusage",
+     "range": "RUT.3.1-RUT.3.5",
+     "elements": [
+      {
+       "label": "Noomis Plan",
+       "ref": "RUT.3.1-RUT.3.4",
+       "role": "Auftrag",
+       "child": "s2"
+      },
+      {
+       "label": "Rut: «Alles, was du mir sagst, werde ich tun.»",
+       "ref": "RUT.3.5",
+       "role": "Zusage"
+      }
+     ],
+     "features": {
+      "speakers": [
+       {
+        "who": "Noomi",
+        "to": "Rut",
+        "refs": [
+         "RUT.3.1-RUT.3.4"
+        ]
+       },
+       {
+        "who": "Rut",
+        "to": "Noomi",
+        "refs": [
+         "RUT.3.5"
+        ]
+       }
+      ],
+      "modality": [
+       {
+        "ref": "RUT.3.1-RUT.3.4",
+        "kind": "Auftrag",
+        "note": "Plan und Anweisung, noch keine Handlung; ausgeführt erst in [[RUT.3.6-RUT.3.7]]."
+       },
+       {
+        "ref": "RUT.3.5",
+        "kind": "Zusage",
+        "note": "Ruts Zusage, noch nicht die Ausführung."
+       }
+      ],
+      "leitwort": [
+       {
+        "word": "Ruhe",
+        "refs": [
+         "RUT.3.1"
+        ],
+        "role": "Zweck; nimmt Noomis Wunsch [[RUT.1.9]] auf («Ruhe finden»)"
+       }
+      ]
+     },
+     "visual": "dialogue",
+     "basis": "text"
+    },
+    {
+     "id": "s2",
+     "pattern": "sequence",
+     "subtype": "Plan in Schritten",
+     "range": "RUT.3.1-RUT.3.4",
+     "elements": [
+      {
+       "label": "Zweck: Ich will dir einen Ort der Ruhe suchen, wo es dir gut geht",
+       "ref": "RUT.3.1",
+       "role": "Zweck"
+      },
+      {
+       "label": "Lage: Boas, unser Verwandter, worfelt heute Nacht die Gerste auf der Tenne",
+       "ref": "RUT.3.2",
+       "role": "Anlass"
+      },
+      {
+       "label": "Wasch und salbe dich, zieh deine Kleider an und geh hinab zur Tenne; gib dich nicht zu erkennen, bis er gegessen und getrunken hat",
+       "ref": "RUT.3.3",
+       "role": "Schritt"
+      },
+      {
+       "label": "Wenn er sich hinlegt: Deck seine Füsse auf und leg dich hin",
+       "ref": "RUT.3.4",
+       "role": "Bedingung → Schritt"
+      },
+      {
+       "label": "Er wird dir sagen, was du tun sollst",
+       "ref": "RUT.3.4",
+       "role": "Erwartung"
+      }
+     ],
+     "visual": "scenes",
+     "basis": "text"
+    }
+   ]
+  },
+  "date": "2026-10-24",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
   "review": {
-   "date": "2026-10-23",
-   "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-   "summary_de": "Auswahl belegt; ein Bezug war als Deutung zu kennzeichnen.",
+   "date": "2026-10-24",
+   "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+   "summary_de": "Auftrag → Zusage mit Plan in Schritten richtig; core und Begründung enthielten Wertungen bzw. einen Zweck, der nicht im Text steht.",
    "changes_de": [
-    "reason_de 3,5: Bezug auf 1,16–17 als «Deutung:» gekennzeichnet",
-    "omitted_de: Worfeln (3,2) gestrichen, da es im Erkennungsmoment 3,1–4 vorkommt"
+    "core_de nah am Wortlaut («Ort der Ruhe» statt «gutes Zuhause»); reason_de Moment 1: Zweck «damit Boas als Löser handelt» steht nicht im Text, ersetzt durch Noomis eigenen Zweck.",
+    "Leitwort «Ruhe»: Verweis auf «nicht ruhen» (3,18) gestrichen – Anklang nur der deutschen Übersetzung (im Hebräischen verschiedene Wörter)."
    ]
   }
  },
@@ -410,7 +1221,7 @@
   "level": "section",
   "target": "TU-RUT-003-006-015",
   "reference": "RUT.3.6-RUT.3.15",
-  "core_de": "Rut bittet Boas nachts auf der Tenne, als Löser für sie einzustehen; Boas segnet ihre Treue und verspricht, sie zu lösen, falls der nähere Löser es nicht tut.",
+  "core_de": "Rut bittet Boas nachts auf der Tenne, als Löser für sie einzustehen; Boas segnet ihre Treue und schwört: Will der nähere Löser sie lösen, soll er es tun, will er nicht, löst Boas sie selbst.",
   "mode": "narrative",
   "voice": {
    "speaker": "narrator"
@@ -420,7 +1231,7 @@
     "reference": "RUT.3.8-RUT.3.9",
     "text_de": "Um Mitternacht findet Boas eine Frau zu seinen Füssen; Rut nennt sich und bittet ihn, den Zipfel seines Gewandes über sie zu breiten, denn er sei ein Löser.",
     "reason_de": "Trägt die Kernaussage (Kriterium 1), Höhepunkt der Nacht in wörtlicher Rede (Kriterium 2) und Erkennungsmoment (Kriterium 4).",
-    "recognition_de": "Nacht auf der Tenne neben dem Getreidehaufen: Boas fährt hoch, Rut liegt zu seinen Füssen und zeigt auf den Saum seines Gewandes.",
+    "recognition_de": "Nacht auf der Tenne neben dem Getreidehaufen: Boas fährt hoch, Rut liegt zu seinen Füssen und zeigt auf den Zipfel seines Gewandes.",
     "keywords": [
      "zu seinen Füssen",
      "Zipfel deines Gewandes",
@@ -429,9 +1240,9 @@
    },
    {
     "reference": "RUT.3.10-RUT.3.13",
-    "text_de": "Boas segnet Rut für ihre Treue, nennt sie eine tüchtige Frau und schwört, sie selbst zu lösen, falls der näher verwandte Löser es nicht tut.",
-    "reason_de": "Antwort auf den Höhepunkt und Wendepunkt zu Kapitel 4 (Kriterium 1 und 2): Boas bestätigt Ruts Treue und bindet sich mit einem Schwur; die Spannung um den näheren Löser trägt in Kapitel 4 hinüber (Kriterium 3).",
-    "recognition_de": "Boas antwortet in der Nacht auf der Tenne der zu seinen Füssen liegenden Rut mit dem Schwur «so wahr JHWH lebt».",
+    "text_de": "Boas segnet Rut für ihre Treue, nennt sie eine tüchtige Frau, verweist auf einen näher verwandten Löser und schwört: Will dieser sie lösen, soll er lösen; will er nicht, löst Boas sie selbst.",
+    "reason_de": "Antwort auf den Höhepunkt und Wendepunkt zu Kapitel 4 (Kriterium 1 und 2): Boas bestätigt Ruts Treue und bindet sich mit einem Schwur; die Spannung um den näheren Löser trägt in Kapitel 4 hinüber (Kriterium 3). Beide Zweige der Bedingung stehen in structure.",
+    "recognition_de": "Boas antwortet in der Nacht auf der Tenne der zu seinen Füssen liegenden Rut; eine Weiche zeigt beide Wege: der nähere Löser löst – oder Boas löst sie selbst, «so wahr JHWH lebt».",
     "keywords": [
      "tüchtige Frau",
      "werde ich dich lösen",
@@ -442,7 +1253,7 @@
   "omitted_de": [
    "Ausführung des Plans im Einzelnen (3,6–7) – Wiederholung von 3,3–4",
    "Ruts Aufbruch vor Tagesanbruch und Boas' Diskretion (3,14) – Übergang",
-   "Sechs Mass Gerste im Umhang (3,15) – im folgenden Abschnitt als Moment gewählt; Zahl"
+   "Sechs Mass Gerste im Umhang (3,15) – die Gabe wird im folgenden Abschnitt gezeigt, wo Rut sie Noomi bringt (3,17); Zahl"
   ],
   "persons": [
    "FIG-RUT",
@@ -451,13 +1262,187 @@
   "places": [
    "FIG-ORT-TENNE"
   ],
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "sequence",
+     "subtype": "Nacht auf der Tenne",
+     "range": "RUT.3.6-RUT.3.15",
+     "elements": [
+      {
+       "label": "Rut tut alles, wie Noomi es ihr aufgetragen hat: Sie deckt seine Füsse auf und legt sich hin",
+       "ref": "RUT.3.6-RUT.3.7",
+       "role": "Ausführung",
+       "links": [
+        "RUT.3.3-RUT.3.4"
+       ]
+      },
+      {
+       "label": "Um Mitternacht schrickt Boas auf: «Wer bist du?»",
+       "ref": "RUT.3.8-RUT.3.9",
+       "role": "Frage"
+      },
+      {
+       "label": "Ruts Bitte",
+       "ref": "RUT.3.9",
+       "role": "Bitte",
+       "child": "s2"
+      },
+      {
+       "label": "Boas segnet Rut: Ihre Treue ist jetzt noch schöner als am Anfang, sie ist nicht den jungen Männern nachgegangen",
+       "ref": "RUT.3.10",
+       "role": "Segen mit Begründung"
+      },
+      {
+       "label": "«Fürchte dich nicht! Alles, was du sagst, werde ich für dich tun; denn alle wissen: Du bist eine tüchtige Frau»",
+       "ref": "RUT.3.11",
+       "role": "Zusage mit Begründung"
+      },
+      {
+       "label": "«Ich bin ein Löser, aber es gibt einen Löser, der näher verwandt ist als ich»",
+       "ref": "RUT.3.12",
+       "role": "Vorbehalt"
+      },
+      {
+       "label": "Boas' Schwur",
+       "ref": "RUT.3.13",
+       "role": "Entscheidung offen",
+       "child": "s3"
+      },
+      {
+       "label": "Sie liegt bis zum Morgen zu seinen Füssen und geht vor Tagesanbruch; es soll nicht bekannt werden",
+       "ref": "RUT.3.14",
+       "role": "Aufbruch"
+      },
+      {
+       "label": "Boas misst ihr sechs Mass Gerste in den Umhang",
+       "ref": "RUT.3.15",
+       "role": "Gabe"
+      }
+     ],
+     "features": {
+      "speakers": [
+       {
+        "who": "Boas",
+        "to": "Rut",
+        "refs": [
+         "RUT.3.9",
+         "RUT.3.10-RUT.3.13",
+         "RUT.3.15"
+        ]
+       },
+       {
+        "who": "Rut",
+        "to": "Boas",
+        "refs": [
+         "RUT.3.9"
+        ]
+       }
+      ],
+      "leitwort": [
+       {
+        "word": "lösen / Löser",
+        "refs": [
+         "RUT.3.9",
+         "RUT.3.12",
+         "RUT.3.13"
+        ],
+        "role": "Leitwort"
+       },
+       {
+        "word": "Treue",
+        "refs": [
+         "RUT.3.10"
+        ],
+        "role": "deutend"
+       }
+      ],
+      "numbers": [
+       {
+        "ref": "RUT.3.15",
+        "note": "«sechs Mass Gerste»; Mass nicht angegeben, nicht umrechnen"
+       }
+      ]
+     },
+     "visual": "scenes",
+     "basis": "text"
+    },
+    {
+     "id": "s2",
+     "pattern": "cause",
+     "subtype": "Bitte mit Begründung",
+     "range": "RUT.3.9",
+     "elements": [
+      {
+       "label": "«Breite den Zipfel deines Gewandes über deine Dienerin aus»",
+       "ref": "RUT.3.9",
+       "role": "Bitte"
+      },
+      {
+       "label": "denn du bist ein Löser",
+       "ref": "RUT.3.9",
+       "role": "Begründung"
+      }
+     ],
+     "features": {
+      "modality": [
+       {
+        "ref": "RUT.3.9",
+        "kind": "Bitte",
+        "note": "Bitte, noch keine Zusage."
+       }
+      ]
+     },
+     "visual": "arrows",
+     "basis": "text"
+    },
+    {
+     "id": "s3",
+     "pattern": "condition",
+     "subtype": "Weiche mit Schwur",
+     "range": "RUT.3.13",
+     "elements": [
+      {
+       "label": "Wenn der nähere Löser dich lösen will → gut, soll er lösen",
+       "ref": "RUT.3.13",
+       "role": "Zweig 1"
+      },
+      {
+       "label": "Wenn er nicht willens ist → dann löse ich dich, ich selbst – so wahr JHWH lebt",
+       "ref": "RUT.3.13",
+       "role": "Zweig 2"
+      }
+     ],
+     "features": {
+      "modality": [
+       {
+        "ref": "RUT.3.13",
+        "kind": "Schwur",
+        "note": "Boas bindet sich mit «so wahr JHWH lebt»; welcher Zweig gilt, ist noch offen."
+       }
+      ],
+      "open_end": [
+       {
+        "ref": "RUT.3.13",
+        "note": "Die Entscheidung fällt erst am Morgen im Tor ([[RUT.4.6]])."
+       }
+      ]
+     },
+     "visual": "switch",
+     "basis": "text"
+    }
+   ]
+  },
+  "date": "2026-10-24",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
   "review": {
-   "date": "2026-10-23",
-   "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-   "summary_de": "Drei im Bild kaum unterscheidbare Nachtszenen; zusammengelegt.",
+   "date": "2026-10-24",
+   "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+   "summary_de": "Ablauf mit Bitte und Begründung und Weiche mit beiden Zweigen (3,13) richtig; nur eine Wortwahl im Erkennungsmoment.",
    "changes_de": [
-    "Momente 3,10–11 und 3,12–13 zu einem Moment 3,10–13 (Segen, tüchtige Frau, Vorbehalt, Schwur) zusammengelegt – sonst drei fast gleiche Felder",
-    "Schlüsselwort «ich selbst» ersetzt durch «werde ich dich lösen» und «so wahr JHWH lebt» – allein verständlich"
+    "Erkennungsmoment: «Saum» → «Zipfel» (Wortlaut 3,9)."
    ]
   }
  },
@@ -474,7 +1459,7 @@
   "moments": [
    {
     "reference": "RUT.3.16-RUT.3.17",
-    "text_de": "Rut erzählt Noomi alles und zeigt die Gerste, die Boas ihr gab, damit sie nicht mit leeren Händen zur Schwiegermutter komme.",
+    "text_de": "Auf Noomis Frage erzählt Rut alles und zeigt die Gerste, die Boas ihr gab, damit sie nicht mit leeren Händen zur Schwiegermutter komme.",
     "reason_de": "Erkennungsmoment (Kriterium 4) und Wiederholung des Leitworts (Kriterium 2); Deutung: Gegenstück zu Noomis «leer» in 1,21.",
     "recognition_de": "Rut öffnet vor Noomi ihren Umhang voller Gerste.",
     "keywords": [
@@ -494,18 +1479,97 @@
    }
   ],
   "omitted_de": [
-   "Noomis Frage «Wie steht es um dich?» – Übergang",
-   "«sechs Mass» – Zahl"
+   "«sechs Mass» (3,17) – Zahl"
   ],
   "persons": [
    "FIG-RUT",
    "FIG-NOOMI"
   ],
   "places": [],
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "dialogue",
+     "subtype": "Bericht und Rat",
+     "range": "RUT.3.16-RUT.3.18",
+     "elements": [
+      {
+       "label": "Noomi: «Wie steht es um dich, meine Tochter?» – Rut erzählt alles, was Boas für sie getan hat",
+       "ref": "RUT.3.16",
+       "role": "Frage und Bericht"
+      },
+      {
+       "label": "Rut zeigt die Gerste: Boas sagte: «Komm nicht mit leeren Händen zu deiner Schwiegermutter!»",
+       "ref": "RUT.3.17",
+       "role": "Gabe mit Begründung"
+      },
+      {
+       "label": "Noomi: «Bleib sitzen, bis du weisst, wie die Sache ausgeht; denn der Mann wird nicht ruhen, bis er sie heute zu Ende gebracht hat»",
+       "ref": "RUT.3.18",
+       "role": "Rat mit Begründung"
+      }
+     ],
+     "features": {
+      "speakers": [
+       {
+        "who": "Noomi",
+        "to": "Rut",
+        "refs": [
+         "RUT.3.16",
+         "RUT.3.18"
+        ]
+       },
+       {
+        "who": "Rut",
+        "to": "Noomi",
+        "refs": [
+         "RUT.3.16-RUT.3.17"
+        ]
+       },
+       {
+        "who": "Boas (zitiert von Rut)",
+        "to": "Rut",
+        "refs": [
+         "RUT.3.17"
+        ]
+       }
+      ],
+      "modality": [
+       {
+        "ref": "RUT.3.18",
+        "kind": "Erwartung",
+        "note": "Noomis Gewissheit über Boas, noch kein Bericht."
+       }
+      ],
+      "open_end": [
+       {
+        "ref": "RUT.3.18",
+        "note": "«wie die Sache ausgeht» bleibt am Kapitelende offen."
+       }
+      ],
+      "leitwort": [
+       {
+        "word": "leer",
+        "refs": [
+         "RUT.3.17"
+        ],
+        "role": "deutend; vgl. [[RUT.1.21]]"
+       }
+      ]
+     },
+     "visual": "dialogue",
+     "basis": "text"
+    }
+   ]
+  },
+  "date": "2026-10-24",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
   "review": {
-   "date": "2026-10-23",
-   "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-   "summary_de": "Ohne Befund.",
+   "date": "2026-10-24",
+   "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+   "summary_de": "Bericht und Rat mit Begründungen richtig, offenes Ende vermerkt, Deutung «leer» gekennzeichnet; keine Änderung.",
    "changes_de": []
   }
  },
@@ -514,7 +1578,7 @@
   "level": "section",
   "target": "TU-RUT-004-001-012",
   "reference": "RUT.4.1-RUT.4.12",
-  "core_de": "Im Stadttor verzichtet der nähere Löser, und Boas erwirbt vor Zeugen Elimelechs Besitz und Rut zur Frau, damit der Name des Verstorbenen bleibt.",
+  "core_de": "Im Stadttor bietet Boas dem näheren Löser vor Zeugen das Löserecht an; der verzichtet, als dazu Rut gehört, und Boas erwirbt Elimelechs Besitz und Rut zur Frau, damit der Name des Verstorbenen bleibt.",
   "mode": "narrative",
   "voice": {
    "speaker": "narrator"
@@ -531,31 +1595,32 @@
     ]
    },
    {
-    "reference": "RUT.4.6-RUT.4.8",
-    "text_de": "Als mit dem Feld auch Rut zu erwerben ist, verzichtet der Löser, überlässt Boas das Löserecht und zieht zur Beglaubigung seinen Schuh aus.",
-    "reason_de": "Wendepunkt (Kriterium 2) und Erkennungsmoment (Kriterium 4): der ausgezogene Schuh.",
-    "recognition_de": "Der andere Löser zieht vor den Ältesten seinen Schuh aus, Boas steht ihm gegenüber.",
+    "reference": "RUT.4.3-RUT.4.8",
+    "text_de": "Boas bietet dem Löser Elimelechs Feld an: Will er lösen, soll er lösen, sonst komme Boas nach ihm. Der Löser will zuerst lösen; als mit dem Feld auch Rut zu erwerben ist, verzichtet er, überlässt Boas das Löserecht und zieht zur Beglaubigung seinen Schuh aus.",
+    "reason_de": "Wendepunkt (Kriterium 2) mit beiden Zweigen der Bedingung aus 4,4 und Erkennungsmoment (Kriterium 4): der ausgezogene Schuh.",
+    "recognition_de": "Eine Weiche im Tor: Der Zweig «Ich will lösen» endet, als Rut dazugehört; der andere Löser zieht vor den Ältesten seinen Schuh aus, Boas steht ihm gegenüber.",
     "keywords": [
+     "Ich will lösen",
      "nicht lösen",
      "Schuh aus"
     ]
    },
    {
-    "reference": "RUT.4.9-RUT.4.11",
-    "text_de": "Boas erklärt vor Ältesten und Volk, er habe Elimelechs Besitz und Rut zur Frau erworben, um den Namen des Verstorbenen zu erhalten, und alle bezeugen und segnen es.",
+    "reference": "RUT.4.9-RUT.4.12",
+    "text_de": "Boas erklärt vor Ältesten und Volk, er habe Elimelechs Besitz und Rut zur Frau erworben, um den Namen des Verstorbenen zu erhalten; alle bezeugen es und wünschen, sein Haus werde wie das Haus des Perez.",
     "reason_de": "Trägt die Kernaussage (Kriterium 1) und ist der Höhepunkt in wörtlicher Rede mit Wiederholung «Zeugen» (Kriterium 2).",
     "recognition_de": "Boas spricht im Tor zu den Ältesten und dem Volk, die antworten: «Wir sind Zeugen!»",
     "keywords": [
      "Zeugen seid ihr heute",
      "zur Frau erworben",
-     "Wir sind Zeugen"
+     "Wir sind Zeugen",
+     "Haus des Perez"
     ]
    }
   ],
   "omitted_de": [
-   "Erläuterung des alten Schuhbrauchs (4,7) – Hintergrund damals",
-   "Erstes Angebot und Zusage des Lösers (4,3–4) – Vorstufe des Verzichts",
-   "Segenswunsch mit Rahel, Lea, Perez, Tamar und Juda (4,11b–12) – Nebenfiguren"
+   "Erläuterung des alten Schuhbrauchs (4,7) – Erzählerkommentar, Hintergrund damals",
+   "Namen im Segenswunsch (Rahel, Lea, Tamar, Juda; 4,11b–12) – Nebenfiguren; der Wunsch selbst und das Haus des Perez stehen im Moment 4,9–12"
   ],
   "persons": [
    "FIG-BOAS",
@@ -567,13 +1632,246 @@
    "FIG-ORT-STADTTOR",
    "FIG-ORT-BETLEHEM"
   ],
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "form",
+     "subtype": "Löserverfahren im Tor",
+     "form_type": "lawsuit",
+     "range": "RUT.4.1-RUT.4.12",
+     "elements": [
+      {
+       "label": "Vorladung: Boas setzt sich ins Tor und ruft den Löser herbei: «Komm herüber, setz dich hierher!»",
+       "ref": "RUT.4.1",
+       "role": "Vorladung"
+      },
+      {
+       "label": "Zeugen: Zehn Älteste der Stadt setzen sich dazu",
+       "ref": "RUT.4.2",
+       "role": "Zeugen"
+      },
+      {
+       "label": "Sache: Noomi verkauft das Feldstück Elimelechs",
+       "ref": "RUT.4.3",
+       "role": "Sache"
+      },
+      {
+       "label": "Angebot an den Löser",
+       "ref": "RUT.4.4",
+       "role": "Angebot mit Bedingung",
+       "child": "s2"
+      },
+      {
+       "label": "Der Löser: «Ich will lösen.»",
+       "ref": "RUT.4.4",
+       "role": "erste Antwort"
+      },
+      {
+       "label": "Boas: Mit dem Feld erwirbst du auch Rut, die Moabiterin, um den Namen des Verstorbenen auf seinem Erbteil zu erhalten",
+       "ref": "RUT.4.5",
+       "role": "Zusatz"
+      },
+      {
+       "label": "Der Löser verzichtet: «Ich kann nicht lösen, sonst schädige ich mein eigenes Erbteil. Löse du!»",
+       "ref": "RUT.4.6",
+       "role": "Wende: Verzicht"
+      },
+      {
+       "label": "Der Erzähler erklärt den alten Brauch: Wer löst oder tauscht, zieht seinen Schuh aus und gibt ihn dem anderen",
+       "ref": "RUT.4.7",
+       "role": "Erzählerkommentar"
+      },
+      {
+       "label": "Beglaubigung: «Erwirb es für dich!» – der Löser zieht seinen Schuh aus",
+       "ref": "RUT.4.8",
+       "role": "Beglaubigung"
+      },
+      {
+       "label": "Erklärung des Boas vor Zeugen",
+       "ref": "RUT.4.9-RUT.4.10",
+       "role": "Rechtsakt",
+       "child": "s3"
+      },
+      {
+       "label": "Volk und Älteste: «Wir sind Zeugen!»",
+       "ref": "RUT.4.11",
+       "role": "Bestätigung"
+      },
+      {
+       "label": "Segenswunsch: JHWH mache die Frau wie Rahel und Lea; bring es zu Vermögen in Efrata; dein Haus werde wie das Haus des Perez durch die Nachkommen, die JHWH dir von dieser jungen Frau geben wird",
+       "ref": "RUT.4.11-RUT.4.12",
+       "role": "Segen"
+      }
+     ],
+     "features": {
+      "speakers": [
+       {
+        "who": "Boas",
+        "to": "den Löser",
+        "refs": [
+         "RUT.4.1",
+         "RUT.4.3-RUT.4.5"
+        ]
+       },
+       {
+        "who": "Boas",
+        "to": "die Ältesten",
+        "refs": [
+         "RUT.4.2"
+        ]
+       },
+       {
+        "who": "der Löser",
+        "to": "Boas",
+        "refs": [
+         "RUT.4.4",
+         "RUT.4.6",
+         "RUT.4.8"
+        ]
+       },
+       {
+        "who": "Erzähler",
+        "to": "Leser",
+        "refs": [
+         "RUT.4.7"
+        ]
+       },
+       {
+        "who": "Boas",
+        "to": "die Ältesten und das ganze Volk",
+        "refs": [
+         "RUT.4.9-RUT.4.10"
+        ]
+       },
+       {
+        "who": "Volk und Älteste",
+        "to": "Boas",
+        "refs": [
+         "RUT.4.11-RUT.4.12"
+        ]
+       }
+      ],
+      "genre": [
+       {
+        "note": "«Rechtsverfahren» (lawsuit) ist eine Einordnung als Gattungsbegriff, keine Angabe des Textes."
+       }
+      ],
+      "leitwort": [
+       {
+        "word": "lösen / Löser",
+        "refs": [
+         "RUT.4.1",
+         "RUT.4.3-RUT.4.4",
+         "RUT.4.6",
+         "RUT.4.8"
+        ],
+        "role": "Leitwort"
+       },
+       {
+        "word": "Zeugen",
+        "refs": [
+         "RUT.4.9",
+         "RUT.4.10",
+         "RUT.4.11"
+        ],
+        "role": "Wiederholung am Höhepunkt"
+       },
+       {
+        "word": "Name des Verstorbenen",
+        "refs": [
+         "RUT.4.5",
+         "RUT.4.10"
+        ],
+        "role": "Zweck"
+       }
+      ],
+      "modality": [
+       {
+        "ref": "RUT.4.11-RUT.4.12",
+        "kind": "Segenswunsch",
+        "note": "Wunsch, keine Zusage."
+       }
+      ],
+      "pattern_break": [
+       {
+        "ref": "RUT.4.1-RUT.4.12",
+        "note": "Kein Streitfall: Anklage, Beweis und Urteil des Formulars fehlen; an ihre Stelle treten Sache und Angebot (4,3–4), Verzicht (4,6), Beglaubigung (4,8) und Bezeugung durch Älteste und Volk (4,9–11)."
+       }
+      ],
+      "crossref": [
+       {
+        "ref": "RUT.4.11",
+        "kind": "Bezug im Text",
+        "note": "Rahel und Lea, «die beide das Haus Israel gebaut haben»: [[GEN.29.31-GEN.30.24]]."
+       },
+       {
+        "ref": "RUT.4.12",
+        "kind": "Bezug im Text",
+        "note": "«Perez, den Tamar dem Juda geboren hat»: [[GEN.38]], Geburt des Perez [[GEN.38.29]]."
+       }
+      ]
+     },
+     "visual": "outline",
+     "basis": "text"
+    },
+    {
+     "id": "s2",
+     "pattern": "condition",
+     "subtype": "Weiche",
+     "range": "RUT.4.4",
+     "elements": [
+      {
+       "label": "Wenn du lösen willst → dann löse!",
+       "ref": "RUT.4.4",
+       "role": "Zweig 1"
+      },
+      {
+       "label": "Wenn nicht → sag es mir; ausser dir kann keiner lösen, und ich komme nach dir",
+       "ref": "RUT.4.4",
+       "role": "Zweig 2"
+      }
+     ],
+     "visual": "switch",
+     "basis": "text"
+    },
+    {
+     "id": "s3",
+     "pattern": "cause",
+     "subtype": "Zweck",
+     "range": "RUT.4.9-RUT.4.10",
+     "elements": [
+      {
+       "label": "Boas hat alles, was Elimelech, Kiljon und Machlon gehörte, aus der Hand Noomis erworben",
+       "ref": "RUT.4.9",
+       "role": "Handlung"
+      },
+      {
+       "label": "und Rut, die Moabiterin, die Frau Machlons, zur Frau",
+       "ref": "RUT.4.10",
+       "role": "Handlung"
+      },
+      {
+       "label": "damit der Name des Verstorbenen auf seinem Erbteil bleibt und nicht ausgelöscht wird",
+       "ref": "RUT.4.10",
+       "role": "Zweck"
+      }
+     ],
+     "visual": "arrows",
+     "basis": "text"
+    }
+   ]
+  },
+  "date": "2026-10-24",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
   "review": {
-   "date": "2026-10-23",
-   "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-   "summary_de": "Auswahl belegt; Erkennungsmoment und omitted_de angeglichen.",
+   "date": "2026-10-24",
+   "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+   "summary_de": "Verfahren im Tor mit Weiche (4,4) und Zweck (4,10) richtig; fehlende Pflichtglieder des Formulars lawsuit waren nicht vermerkt, der Segenswunsch unvollständig.",
    "changes_de": [
-    "Erkennungsmoment 4,6–8: Übergabe des Schuhs an Boas gestrichen – 4,8 sagt nur «er zog seinen Schuh aus»",
-    "omitted_de: «4,3–5» auf «4,3–4» beschränkt, da der Moment 4,6–8 den Inhalt von 4,5 verwendet"
+    "form lawsuit: fehlende Pflichtglieder (Anklage, Beweis, Urteil) als pattern_break vermerkt (Prüffrage 3.22).",
+    "Glied Segenswunsch: JHWH als Handelnder und «Nachkommen, die JHWH dir … geben wird» ergänzt (bereitet 4,13 vor); crossref auf Gen 29–30 und Gen 38 (vom Text selbst genannt, OpenBible bestätigt)."
    ]
   }
  },
@@ -599,8 +1897,8 @@
    },
    {
     "reference": "RUT.4.14-RUT.4.15",
-    "text_de": "Die Frauen preisen JHWH, der Noomi nicht ohne Löser gelassen hat, und nennen Rut besser für sie als sieben Söhne.",
-    "reason_de": "Trägt die Kernaussage (Kriterium 1): Die Frauen aus 1,19 deuten jetzt die Wende; Rut wird ausdrücklich gewürdigt.",
+    "text_de": "Die Frauen preisen JHWH, der Noomi nicht ohne Löser gelassen hat: Das Kind werde ihr das Leben zurückbringen und sie im Alter versorgen, denn Rut, die sie liebt, hat es geboren, besser für sie als sieben Söhne.",
+    "reason_de": "Trägt die Kernaussage (Kriterium 1): Die Frauen aus 1,19 deuten jetzt die Wende; Rut wird ausdrücklich gewürdigt. Lob, Ankündigung und Begründung stehen als Kette in structure.",
     "recognition_de": "Die Frauen von Betlehem stehen jubelnd um Noomi.",
     "keywords": [
      "nicht an einem Löser",
@@ -610,7 +1908,7 @@
    {
     "reference": "RUT.4.16-RUT.4.17",
     "text_de": "Noomi nimmt das Kind auf ihren Schoss; die Nachbarinnen rufen «Ein Sohn ist Noomi geboren!» und nennen ihn Obed, den Grossvater Davids.",
-    "reason_de": "Höhepunkt und Rahmen (Kriterium 2): Die leer gewordene Noomi hält ein Kind; Erkennungsmoment des Schlusses (Kriterium 4).",
+    "reason_de": "Höhepunkt und Rahmen (Kriterium 2): Noomi, die ohne Kinder zurückblieb (1,5), hält ein Kind (Deutung: Gegenbild zu «leer», 1,21); Erkennungsmoment des Schlusses (Kriterium 4).",
     "recognition_de": "Noomi sitzt mit dem kleinen Obed auf dem Schoss, umringt von Nachbarinnen.",
     "keywords": [
      "Sohn ist Noomi geboren",
@@ -620,8 +1918,8 @@
    }
   ],
   "omitted_de": [
-   "Wunsch, dass sein Name in Israel bekannt werde (4,14b) – Wiederholung",
-   "Noomi als Pflegerin (4,16b) – im Bild der Schoss enthalten"
+   "Wunsch, dass sein Name in Israel bekannt werde (4,14b) – Nebenaussage des Lobs",
+   "Noomi als Pflegerin (4,16b) – im Bild des Schosses enthalten"
   ],
   "persons": [
    "FIG-RUT",
@@ -634,12 +1932,125 @@
   "places": [
    "FIG-ORT-BETLEHEM"
   ],
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "sequence",
+     "subtype": "Geburt und Lob",
+     "range": "RUT.4.13-RUT.4.17",
+     "elements": [
+      {
+       "label": "Boas nimmt Rut zur Frau; JHWH lässt sie schwanger werden, und sie gebiert einen Sohn",
+       "ref": "RUT.4.13",
+       "role": "Ausgang"
+      },
+      {
+       "label": "Lob der Frauen",
+       "ref": "RUT.4.14-RUT.4.15",
+       "role": "Deutung durch die Frauen",
+       "child": "s2"
+      },
+      {
+       "label": "Noomi legt das Kind auf ihren Schoss und wird ihm zur Pflegerin",
+       "ref": "RUT.4.16",
+       "role": "Bild der Wende"
+      },
+      {
+       "label": "Die Nachbarinnen: «Ein Sohn ist Noomi geboren!» – sie nennen ihn Obed; Erzähler: Er ist der Vater Isais, des Vaters Davids",
+       "ref": "RUT.4.17",
+       "role": "Name und Ausblick"
+      }
+     ],
+     "features": {
+      "speakers": [
+       {
+        "who": "die Frauen",
+        "to": "Noomi",
+        "refs": [
+         "RUT.4.14-RUT.4.15"
+        ]
+       },
+       {
+        "who": "die Nachbarinnen",
+        "to": "nicht angegeben (Ausruf bei der Namengebung)",
+        "refs": [
+         "RUT.4.17"
+        ]
+       },
+       {
+        "who": "Erzähler",
+        "to": "Leser",
+        "refs": [
+         "RUT.4.17"
+        ],
+        "note": "«Er ist der Vater Isais, des Vaters Davids»"
+       }
+      ],
+      "leitwort": [
+       {
+        "word": "Löser",
+        "refs": [
+         "RUT.4.14"
+        ],
+        "role": "Abschluss des Leitworts"
+       }
+      ]
+     },
+     "visual": "scenes",
+     "basis": "text"
+    },
+    {
+     "id": "s2",
+     "pattern": "cause",
+     "subtype": "Lob → Ankündigung → Begründung",
+     "range": "RUT.4.14-RUT.4.15",
+     "elements": [
+      {
+       "label": "Gepriesen sei JHWH, der es dir heute nicht an einem Löser hat fehlen lassen",
+       "ref": "RUT.4.14",
+       "role": "Lob"
+      },
+      {
+       "label": "Sein Name werde bekannt in Israel",
+       "ref": "RUT.4.14",
+       "role": "Wunsch"
+      },
+      {
+       "label": "Er wird dir das Leben zurückbringen und dich in deinem Alter versorgen",
+       "ref": "RUT.4.15",
+       "role": "Folge (Ankündigung)"
+      },
+      {
+       "label": "denn deine Schwiegertochter, die dich liebt und für dich besser ist als sieben Söhne, hat ihn geboren",
+       "ref": "RUT.4.15",
+       "role": "Begründung"
+      }
+     ],
+     "features": {
+      "modality": [
+       {
+        "ref": "RUT.4.15",
+        "kind": "Ankündigung",
+        "note": "«er wird …» – Erwartung der Frauen, kein Bericht."
+       }
+      ]
+     },
+     "visual": "arrows",
+     "basis": "text"
+    }
+   ]
+  },
+  "date": "2026-10-24",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
   "review": {
-   "date": "2026-10-23",
-   "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-   "summary_de": "Ohne Befund in diesem Abschnitt; Schlüsselwort auf Wunsch der Buchprüfung angepasst.",
+   "date": "2026-10-24",
+   "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+   "summary_de": "Geburt, Lob mit Ankündigung und Begründung, Namengebung richtig; der Ausblick auf David war den Nachbarinnen statt dem Erzähler zugeordnet.",
    "changes_de": [
-    "Moment 4,16–17: Schlüsselwort «auf ihren Schoss» ersetzt durch «Vaters Davids», damit die Station David nennt (der Schoss bleibt im Erkennungsmoment)"
+    "Glied 4,17: Ausblick auf Isai und David dem Erzähler zugeordnet, nicht den Nachbarinnen; Adressat der Nachbarinnen nicht erfunden («einander» → nicht angegeben).",
+    "reason_de Moment 3: Bezug auf «leer» als Deutung gekennzeichnet."
    ]
   }
  },
@@ -648,28 +2059,19 @@
   "level": "section",
   "target": "TU-RUT-004-018-022",
   "reference": "RUT.4.18-RUT.4.22",
-  "core_de": "Ein Stammbaum führt von Perez über Boas und Obed zu König David.",
+  "core_de": "Ein Stammbaum führt von Perez über Boas und Obed zu David.",
   "mode": "list",
   "voice": {
    "speaker": "narrator"
   },
   "moments": [
    {
-    "reference": "RUT.4.18",
-    "text_de": "Es folgt der Stammbaum des Perez.",
-    "reason_de": "Rahmen (Kriterium 2): Die Überschrift ordnet die Geschichte in eine Geschlechterfolge ein.",
-    "recognition_de": "Eine Ahnenreihe als Stammbaum, an der Wurzel der Name Perez.",
+    "reference": "RUT.4.18-RUT.4.22",
+    "text_de": "Der Stammbaum des Perez führt von Perez über Hezron, Ram, Amminadab, Nachschon und Salma zu Boas und weiter über Obed und Isai zu David.",
+    "reason_de": "Ein Stammbaum ist ein Baum und zählt als ein Moment mit allen Gliedern; er ordnet die Geschichte in die Geschlechterfolge ein (Kriterium 2) und läuft auf David zu, den Zielpunkt des Buches (Kriterium 1).",
+    "recognition_de": "Ein Stammbaum als Kette von Perez bis David mit allen zehn Namen; Boas, Obed und David hervorgehoben.",
     "keywords": [
-     "Stammbaum des Perez"
-    ],
-    "mode": "list"
-   },
-   {
-    "reference": "RUT.4.21-RUT.4.22",
-    "text_de": "Boas zeugt Obed, Obed zeugt Isai, und Isai zeugt David.",
-    "reason_de": "Trägt den Zielpunkt des Buches (Kriterium 1) und ist das Ende der Liste, auf das sie zuläuft (Kriterium 2).",
-    "recognition_de": "Der Stammbaum endet bei David; davor Boas, Obed und Isai.",
-    "keywords": [
+     "Stammbaum des Perez",
      "Boas zeugte Obed",
      "Isai zeugte David"
     ],
@@ -677,7 +2079,7 @@
    }
   ],
   "omitted_de": [
-   "Hezron, Ram, Amminadab, Nachschon, Salma (4,19–20) – Zwischenglieder der Liste ohne eigene Rolle"
+   "Keine Glieder weggelassen; nur die Formel «zeugte» wird in der Zusammenfassung nicht bei jedem Glied wiederholt (Wiederholung)"
   ],
   "persons": [
    "FIG-BOAS",
@@ -686,10 +2088,94 @@
    "FIG-DAVID"
   ],
   "places": [],
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "tree",
+     "subtype": "Stammbaum, absteigend, eine Linie",
+     "range": "RUT.4.18-RUT.4.22",
+     "elements": [
+      {
+       "label": "Perez",
+       "ref": "RUT.4.18",
+       "role": "Wurzel"
+      },
+      {
+       "label": "Hezron",
+       "ref": "RUT.4.18",
+       "role": "Glied"
+      },
+      {
+       "label": "Ram",
+       "ref": "RUT.4.19",
+       "role": "Glied"
+      },
+      {
+       "label": "Amminadab",
+       "ref": "RUT.4.19",
+       "role": "Glied"
+      },
+      {
+       "label": "Nachschon",
+       "ref": "RUT.4.20",
+       "role": "Glied"
+      },
+      {
+       "label": "Salma (in 4,21 Salmon)",
+       "ref": "RUT.4.20-RUT.4.21",
+       "role": "Glied"
+      },
+      {
+       "label": "Boas",
+       "ref": "RUT.4.21",
+       "role": "Glied"
+      },
+      {
+       "label": "Obed",
+       "ref": "RUT.4.21",
+       "role": "Glied"
+      },
+      {
+       "label": "Isai",
+       "ref": "RUT.4.22",
+       "role": "Glied"
+      },
+      {
+       "label": "David",
+       "ref": "RUT.4.22",
+       "role": "Ziel"
+      }
+     ],
+     "features": {
+      "leitwort": [
+       {
+        "word": "zeugte",
+        "refs": [
+         "RUT.4.18-RUT.4.22"
+        ],
+        "role": "Formel je Glied"
+       }
+      ],
+      "text_forms": [
+       {
+        "ref": "RUT.4.20-RUT.4.21",
+        "note": "Der Name lautet in 4,20 «Salma», in 4,21 «Salmon»; beide Formen stehen im Text und werden nicht angeglichen."
+       }
+      ]
+     },
+     "visual": "tree",
+     "basis": "text"
+    }
+   ]
+  },
+  "date": "2026-10-24",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
   "review": {
-   "date": "2026-10-23",
-   "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-   "summary_de": "Ohne Befund.",
+   "date": "2026-10-24",
+   "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+   "summary_de": "Stammbaum mit allen zehn Gliedern, Richtung absteigend, Salma/Salmon nicht angeglichen; keine Änderung.",
    "changes_de": []
   }
  },
@@ -710,31 +2196,32 @@
   },
   "moments": [
    {
-    "reference": "RUT.1.5",
-    "text_de": "Nach Elimelech sterben auch beide Söhne, und Noomi bleibt ohne Mann und Kinder zurück.",
-    "reason_de": "Trägt die Kernaussage (Kriterium 1) und ist der Tiefpunkt, den der Text betont: «ohne ihre beiden Kinder und ohne ihren Mann».",
-    "recognition_de": "Noomi steht allein da, ohne Mann und Söhne, nur mit den beiden moabitischen Schwiegertöchtern.",
+    "reference": "RUT.1.1-RUT.1.5",
+    "text_de": "Wegen einer Hungersnot zieht Elimelech mit Noomi und den Söhnen nach Moab; dort sterben Elimelech und beide Söhne, und Noomi bleibt ohne Mann und Kinder zurück.",
+    "reason_de": "Anfang und Tiefpunkt (Kriterien 1 und 3): die Stufen des Verlusts als ein Moment; der Text betont «ohne ihre beiden Kinder und ohne ihren Mann».",
+    "recognition_de": "Szene 1: Noomi allein in Moab, ohne Mann und Söhne, nur mit den Schwiegertöchtern Orpa und Rut.",
     "keywords": [
+     "Hungersnot",
      "ohne ihre beiden Kinder",
      "ohne ihren Mann"
     ]
    },
    {
-    "reference": "RUT.1.16-RUT.1.17",
-    "text_de": "Rut schwört, mit Noomi zu gehen, ihr Volk und ihren Gott zu teilen und sich nur durch den Tod von ihr trennen zu lassen.",
-    "reason_de": "Trägt die Kernaussage (Kriterium 1), Höhepunkt in wörtlicher Rede (Kriterium 2) und der bekannteste Satz des Buches (Kriterium 4).",
-    "recognition_de": "Rut steht auf dem Weg nach Juda vor Noomi und spricht ihr Treuewort, während Orpa zurückgeht.",
+    "reference": "RUT.1.14-RUT.1.17",
+    "text_de": "Noomi drängt ihre Schwiegertöchter umzukehren; Orpa küsst sie zum Abschied, Rut aber hält sich an ihr fest und schwört, mit Noomi zu gehen, ihr Volk und ihren Gott zu teilen und sich nur durch den Tod von ihr trennen zu lassen.",
+    "reason_de": "Trägt die Kernaussage (Kriterium 1), Höhepunkt der Wechselrede in wörtlicher Rede (Kriterium 2) und der bekannteste Satz des Buches (Kriterium 4); die drei Runden und alle Paare des Schwurs stehen in structure.",
+    "recognition_de": "Szene 2: Orpa geht zurück, Rut hält sich an Noomi fest und spricht ihren Schwur: wohin du gehst – dahin gehe ich; dein Volk – mein Volk; dein Gott – mein Gott; nur der Tod trennt.",
     "keywords": [
+     "Orpa küsste ihre Schwiegermutter",
      "Wohin du gehst",
-     "dahin gehe ich",
      "nur der Tod"
     ]
    },
    {
     "reference": "RUT.1.19-RUT.1.21",
-    "text_de": "In Betlehem fragen die Frauen «Ist das Noomi?», und sie antwortet, man solle sie Mara nennen, denn voll sei sie weggegangen und leer habe JHWH sie zurückgebracht.",
-    "reason_de": "Trägt die Kernaussage des Kapitels (Kriterium 1) und benennt mit «voll – leer» das Thema, das das Buch bis zum Schluss trägt (Kriterium 2).",
-    "recognition_de": "In Betlehem umringen die Frauen Noomi und fragen «Ist das Noomi?»; sie antwortet «Nennt mich Mara», Rut neben ihr.",
+    "text_de": "In Betlehem fragen die Frauen «Ist das Noomi?», und sie antwortet, man solle sie nicht Noomi, sondern Mara nennen, denn der Allmächtige habe es ihr bitter gemacht: Voll sei sie weggegangen, leer habe JHWH sie zurückgebracht.",
+    "reason_de": "Trägt die Kernaussage des Kapitels (Kriterium 1) und benennt mit «voll – leer» das Thema, das das Buch bis zum Schluss trägt (Kriterium 2); beide Gegenüberstellungen und ihre Begründung stehen in structure.",
+    "recognition_de": "Szene 3: In Betlehem fragen die Frauen «Ist das Noomi?»; Noomi antwortet «nicht Noomi – Mara» und «voll weggegangen – leer zurückgebracht»; Rut steht neben ihr.",
     "keywords": [
      "Ist das Noomi",
      "Nennt mich Mara",
@@ -743,9 +2230,9 @@
    }
   ],
   "omitted_de": [
-   "Auszug wegen Hungersnot (1,1) – Vorgeschichte, im Tiefpunkt 1,5 enthalten",
-   "Orpas Abschied (1,14) – Gegenfigur, in Ruts Schwur mitgesagt",
-   "Ankunft zur Gerstenernte (1,22) – Übergang zu Kapitel 2"
+   "Zeitangabe und Namen (1,1–2) – Nebenangaben",
+   "Noomis ausgemalter Gedanke an neue Söhne (1,12b–13a) – Ausschmückung der Begründung in Runde 2",
+   "Ankunft zu Beginn der Gerstenernte (1,22) – Übergang zu Kapitel 2; dass Rut mitkommt, zeigt die Szene 1,19–21"
   ],
   "persons": [
    "FIG-NOOMI",
@@ -757,11 +2244,255 @@
    "FIG-ORT-MOAB",
    "FIG-ORT-BETLEHEM"
   ],
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "sequence",
+     "subtype": "Wegzug – Scheideweg – Ankunft",
+     "range": "RUT.1.1-RUT.1.22",
+     "elements": [
+      {
+       "label": "Verlust in Stufen: Auszug nach Moab, Tod Elimelechs, Heirat der Söhne, Tod der Söhne; Noomi bleibt allein zurück",
+       "ref": "RUT.1.1-RUT.1.5",
+       "role": "Abschnitt: Ablauf"
+      },
+      {
+       "label": "Wechselrede in drei Runden auf dem Rückweg",
+       "ref": "RUT.1.6-RUT.1.18",
+       "role": "Abschnitt: Wechselrede",
+       "child": "s2"
+      },
+      {
+       "label": "Ankunft in Betlehem: «Ist das Noomi?» – Noomis Antwort",
+       "ref": "RUT.1.19-RUT.1.21",
+       "role": "Abschnitt: Ankunft",
+       "child": "s4"
+      },
+      {
+       "label": "Noomi kehrt mit Rut, der Moabiterin, zurück, zu Beginn der Gerstenernte",
+       "ref": "RUT.1.22",
+       "role": "Schlussnotiz"
+      }
+     ],
+     "features": {
+      "leitwort": [
+       {
+        "word": "umkehren / zurückkehren",
+        "refs": [
+         "RUT.1.6-RUT.1.16",
+         "RUT.1.21",
+         "RUT.1.22"
+        ],
+        "role": "gliedernd"
+       },
+       {
+        "word": "blieb zurück",
+        "refs": [
+         "RUT.1.3",
+         "RUT.1.5"
+        ],
+        "role": "gliedernd"
+       }
+      ],
+      "speakers": [
+       {
+        "who": "Erzähler",
+        "to": "Leser",
+        "refs": [
+         "RUT.1.1-RUT.1.22"
+        ]
+       }
+      ]
+     },
+     "visual": "scenes",
+     "basis": "text"
+    },
+    {
+     "id": "s2",
+     "pattern": "dialogue",
+     "subtype": "drei Runden: Aufforderung → Antwort",
+     "range": "RUT.1.6-RUT.1.18",
+     "elements": [
+      {
+       "label": "Anlass: JHWH hat seinem Volk Brot gegeben; Noomi bricht mit beiden Schwiegertöchtern auf",
+       "ref": "RUT.1.6-RUT.1.7",
+       "role": "Anlass"
+      },
+      {
+       "label": "Runde 1 – Noomi: «Kehrt um!» – beide: «Nein, mit dir wollen wir zurückkehren!»",
+       "ref": "RUT.1.8-RUT.1.10",
+       "role": "Runde 1"
+      },
+      {
+       "label": "Runde 2 – Noomi: «Kehrt um, meine Töchter!» – Orpa küsst sie zum Abschied, Rut hält sich an ihr fest",
+       "ref": "RUT.1.11-RUT.1.14",
+       "role": "Runde 2"
+      },
+      {
+       "label": "Runde 3 – Noomi: «Kehr um, deiner Schwägerin nach!» – Rut schwört",
+       "ref": "RUT.1.15-RUT.1.17",
+       "role": "Runde 3",
+       "child": "s3"
+      },
+      {
+       "label": "Noomi hört auf, auf sie einzureden",
+       "ref": "RUT.1.18",
+       "role": "Schluss"
+      }
+     ],
+     "features": {
+      "speakers": [
+       {
+        "who": "Noomi",
+        "to": "Orpa und Rut",
+        "refs": [
+         "RUT.1.8-RUT.1.13"
+        ]
+       },
+       {
+        "who": "Orpa und Rut",
+        "to": "Noomi",
+        "refs": [
+         "RUT.1.10"
+        ]
+       },
+       {
+        "who": "Noomi",
+        "to": "Rut",
+        "refs": [
+         "RUT.1.15"
+        ]
+       },
+       {
+        "who": "Rut",
+        "to": "Noomi",
+        "refs": [
+         "RUT.1.16-RUT.1.17"
+        ]
+       }
+      ],
+      "pattern_break": [
+       {
+        "ref": "RUT.1.14",
+        "note": "Ab Runde 2 trennen sich die Antworten: Orpa geht, Rut bleibt."
+       }
+      ]
+     },
+     "visual": "dialogue",
+     "basis": "text"
+    },
+    {
+     "id": "s3",
+     "pattern": "series",
+     "subtype": "Treueschwur in Paaren «du → ich»",
+     "range": "RUT.1.16-RUT.1.17",
+     "elements": [
+      {
+       "label": "Abweisung: «Dräng mich nicht, dich zu verlassen!»",
+       "ref": "RUT.1.16",
+       "role": "Einleitung"
+      },
+      {
+       "label": "Wohin du gehst → dahin gehe ich",
+       "ref": "RUT.1.16",
+       "role": "du → ich"
+      },
+      {
+       "label": "Wo du übernachtest → da übernachte ich",
+       "ref": "RUT.1.16",
+       "role": "du → ich"
+      },
+      {
+       "label": "Dein Volk → ist mein Volk",
+       "ref": "RUT.1.16",
+       "role": "du → ich"
+      },
+      {
+       "label": "Dein Gott → ist mein Gott",
+       "ref": "RUT.1.16",
+       "role": "du → ich"
+      },
+      {
+       "label": "Wo du stirbst → da sterbe ich und will dort begraben werden",
+       "ref": "RUT.1.17",
+       "role": "du → ich"
+      },
+      {
+       "label": "Schwur bei JHWH: «So soll JHWH mir tun … nur der Tod wird mich und dich trennen!»",
+       "ref": "RUT.1.17",
+       "role": "Schwurformel"
+      }
+     ],
+     "features": {
+      "pattern_break": [
+       {
+        "ref": "RUT.1.17",
+        "note": "Die Reihe endet mit der Schwurformel «So soll JHWH mir tun …» als Pointe."
+       }
+      ],
+      "modality": [
+       {
+        "ref": "RUT.1.17",
+        "kind": "Schwur",
+        "note": "Selbstverfluchung, mit der sich Rut bindet; kein Wunsch, sondern Verpflichtung."
+       }
+      ]
+     },
+     "visual": "grid",
+     "basis": "text"
+    },
+    {
+     "id": "s4",
+     "pattern": "contrast",
+     "subtype": "nicht – sondern; vorher ↔ nachher",
+     "range": "RUT.1.20-RUT.1.21",
+     "elements": [
+      {
+       "label": "Nicht Noomi → sondern Mara",
+       "ref": "RUT.1.20",
+       "role": "Name: nicht – sondern"
+      },
+      {
+       "label": "Voll bin ich weggegangen → leer hat mich JHWH zurückgebracht",
+       "ref": "RUT.1.21",
+       "role": "vorher → nachher"
+      },
+      {
+       "label": "Begründung: Der Allmächtige hat es mir sehr bitter gemacht; JHWH hat gegen mich ausgesagt, der Allmächtige hat mir Böses angetan",
+       "ref": "RUT.1.20-RUT.1.21",
+       "role": "denn",
+       "links": [
+        "RUT.1.20",
+        "RUT.1.21"
+       ]
+      }
+     ],
+     "features": {
+      "wordplay": [
+       {
+        "ref": "RUT.1.20",
+        "note": "«Mara» hängt am Wort «bitter» («der Allmächtige hat es mir sehr bitter gemacht»); was «Noomi» bedeutet, sagt der Text nicht."
+       }
+      ]
+     },
+     "visual": "columns",
+     "basis": "text"
+    }
+   ]
+  },
+  "date": "2026-10-24",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
   "review": {
-   "date": "2026-10-23",
-   "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-   "summary_de": "Ohne Befund.",
-   "changes_de": []
+   "date": "2026-10-24",
+   "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+   "summary_de": "Kapitel übernimmt die Struktur der drei Abschnitte (Ablauf, Wechselrede mit Schwur, Gegenüberstellung); Sprecherzuordnung 1,15 und zwei Labels berichtigt.",
+   "changes_de": [
+    "subtype «Weg weg – …» sprachlich berichtigt («Wegzug – Scheideweg – Ankunft»).",
+    "s2 speakers: 1,15 spricht Noomi nur zu Rut (vorher «zu Orpa und Rut» bis 1,15).",
+    "s3 Schwurformel und s4 Begründung wie im Abschnitt vervollständigt."
+   ]
   }
  },
  {
@@ -792,9 +2523,9 @@
    },
    {
     "reference": "RUT.2.10-RUT.2.12",
-    "text_de": "Rut fällt vor Boas nieder und fragt, warum er sie, eine Fremde, beachte; Boas antwortet mit ihrer Treue zu Noomi und wünscht ihr Lohn von JHWH, unter dessen Flügeln sie Zuflucht sucht.",
-    "reason_de": "Trägt die Kernaussage (Kriterium 1) und ist der Höhepunkt in wörtlicher Rede (Kriterium 2): Ruts Treue wird erkannt und vor Gott gesegnet.",
-    "recognition_de": "Rut liegt mit dem Gesicht zur Erde vor Boas auf dem Feld, Boas spricht zu ihr.",
+    "text_de": "Rut fällt vor Boas nieder und fragt, warum er sie, eine Fremde, beachte; Boas nennt als Grund, was sie an ihrer Schwiegermutter getan hat und dass sie Eltern und Heimat verlassen hat, und wünscht ihr Lohn von JHWH, unter dessen Flügeln sie Zuflucht sucht.",
+    "reason_de": "Trägt die Kernaussage (Kriterium 1) und ist der Höhepunkt in wörtlicher Rede (Kriterium 2): Ruts Treue wird erkannt und vor Gott gesegnet. Frage, beide Gründe und Segenswunsch stehen als Kette in structure.",
+    "recognition_de": "Rut liegt mit dem Gesicht zur Erde vor Boas auf dem Feld; Boas antwortet ihr – ein Pfeil führt von ihrer Treue zu Noomi zum Segenswunsch «JHWH vergelte dein Tun».",
     "keywords": [
      "auf ihr Gesicht",
      "eine Fremde",
@@ -802,9 +2533,20 @@
     ]
    },
    {
-    "reference": "RUT.2.20",
-    "text_de": "Als Noomi den Namen Boas hört, segnet sie ihn im Namen JHWHs, der seine Treue nicht entzogen hat, und sagt: Er ist einer unserer Löser.",
-    "reason_de": "Trägt die Kernaussage (Kriterium 1) und ist der Wendepunkt (Kriterium 2): Noomi spricht zum ersten Mal wieder von JHWHs Treue, und das Stichwort «Löser» fällt.",
+    "reference": "RUT.2.14-RUT.2.17",
+    "text_de": "Beim Essen ruft Boas Rut herbei, sie setzt sich neben die Schnitter, er reicht ihr geröstetes Korn, und sie isst sich satt und behält noch übrig; danach weist er die Knechte an, eigens Ähren für sie aus den Bündeln zu ziehen und liegen zu lassen, und am Abend hat sie etwa ein Efa Gerste.",
+    "reason_de": "Zeigt den Ausgang (Kriterium 3) und sichtbare Fülle in drei Gliedern: satt, Anweisung, eigens Ähren liegen zu lassen, Ertrag des Tages (Kriterium 4); Deutung: erster Gegenpol zum «leer» aus 1,21.",
+    "recognition_de": "Rut sitzt neben den Schnittern, Boas reicht ihr eine Handvoll geröstetes Korn; daneben Boas, der den Knechten aufträgt, eigens Ähren liegen zu lassen, und am Abend ihr Ertrag an Gerste.",
+    "keywords": [
+     "iss vom Brot",
+     "geröstetes Korn",
+     "satt"
+    ]
+   },
+   {
+    "reference": "RUT.2.19-RUT.2.20",
+    "text_de": "Auf Noomis Frage nennt Rut den Namen Boas; Noomi segnet ihn: «Gesegnet sei er von JHWH, der seine Treue den Lebenden und den Toten nicht entzogen hat!», und sagt: Er ist einer unserer Löser.",
+    "reason_de": "Trägt die Kernaussage (Kriterium 1) und ist der Wendepunkt (Kriterium 2): Noomi spricht nach ihrer Klage (1,20–21) wieder von Treue (ob JHWHs oder Boas', lässt der Text offen), und das Stichwort «Löser» fällt.",
     "recognition_de": "Noomi spricht einen Segen über Boas, als Rut ihr seinen Namen nennt.",
     "keywords": [
      "Treue",
@@ -814,8 +2556,8 @@
   ],
   "omitted_de": [
    "Ruts Bitte an Noomi (2,2) – Vorbereitung",
-   "Schutzanweisung und Mahlzeit (2,8–9.14) – vertiefen die Zuwendung des Boas, Kern in 2,10–12",
-   "Heimkehr mit der Gerste (2,18) – Übergang zu Noomis Erkenntnis"
+   "Schutzanweisung (2,8–9) – vertieft die Zuwendung des Boas, Kern in 2,10–12",
+   "Heimkehr mit der Gerste (2,18) und Schluss (2,21–23) – Übergang und Wiederholung"
   ],
   "persons": [
    "FIG-RUT",
@@ -826,13 +2568,147 @@
   "places": [
    "FIG-ORT-FELD"
   ],
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "sequence",
+     "subtype": "daheim – auf dem Feld – daheim",
+     "range": "RUT.2.1-RUT.2.23",
+     "elements": [
+      {
+       "label": "Rut geht Ähren auflesen und kommt «zufällig» auf das Feldstück des Boas aus der Sippe Elimelechs",
+       "ref": "RUT.2.1-RUT.2.3",
+       "role": "Abschnitt: Ausgangslage"
+      },
+      {
+       "label": "Schutz: Boas hält Rut auf seinem Feld bei seinen Arbeiterinnen; er hat den Knechten geboten, sie nicht anzurühren",
+       "ref": "RUT.2.4-RUT.2.9",
+       "role": "Abschnitt: Begegnung"
+      },
+      {
+       "label": "Ruts Frage und Boas' Antwort",
+       "ref": "RUT.2.10-RUT.2.12",
+       "role": "Mitte",
+       "child": "s2"
+      },
+      {
+       "label": "Fülle: satt vom gerösteten Korn; Boas gebietet den Knechten, eigens Ähren für sie liegen zu lassen; am Abend etwa ein Efa Gerste",
+       "ref": "RUT.2.14-RUT.2.17",
+       "role": "Fülle"
+      },
+      {
+       "label": "Heimkehr: Noomi segnet Boas im Namen JHWHs – «Er ist einer von unseren Lösern»",
+       "ref": "RUT.2.18-RUT.2.23",
+       "role": "Abschnitt: Heimkehr"
+      }
+     ],
+     "features": {
+      "leitwort": [
+       {
+        "word": "Gunst",
+        "refs": [
+         "RUT.2.2",
+         "RUT.2.10",
+         "RUT.2.13"
+        ],
+        "role": "verklammernd"
+       },
+       {
+        "word": "auflesen",
+        "refs": [
+         "RUT.2.2-RUT.2.23"
+        ],
+        "role": "Motiv"
+       },
+       {
+        "word": "Löser",
+        "refs": [
+         "RUT.2.20"
+        ],
+        "role": "Stichwort, erstmals im Buch"
+       }
+      ],
+      "interpretation": [
+       {
+        "ref": "RUT.2.3",
+        "note": "Deutung: «zufällig» lässt Gottes verborgene Führung anklingen."
+       },
+       {
+        "ref": "RUT.2.20",
+        "note": "Ob «der seine Treue … nicht entzogen hat» JHWH oder Boas meint, lässt der Text offen."
+       }
+      ]
+     },
+     "visual": "scenes",
+     "basis": "text"
+    },
+    {
+     "id": "s2",
+     "pattern": "cause",
+     "subtype": "Frage → Grund → Segenswunsch",
+     "range": "RUT.2.10-RUT.2.12",
+     "elements": [
+      {
+       "label": "Rut: «Warum beachtest du mich, wo ich doch eine Fremde bin?»",
+       "ref": "RUT.2.10",
+       "role": "Frage"
+      },
+      {
+       "label": "Grund: alles, was du an deiner Schwiegermutter getan hast nach dem Tod deines Mannes",
+       "ref": "RUT.2.11",
+       "role": "Ursache"
+      },
+      {
+       "label": "Grund: Du hast Vater, Mutter und das Land deiner Herkunft verlassen und bist zu einem Volk gegangen, das du nicht kanntest",
+       "ref": "RUT.2.11",
+       "role": "Ursache"
+      },
+      {
+       "label": "Wunsch: JHWH vergelte dein Tun; dein Lohn sei voll von JHWH, unter dessen Flügeln du Zuflucht suchst",
+       "ref": "RUT.2.12",
+       "role": "Folge (Wunsch)"
+      }
+     ],
+     "features": {
+      "speakers": [
+       {
+        "who": "Rut",
+        "to": "Boas",
+        "refs": [
+         "RUT.2.10"
+        ]
+       },
+       {
+        "who": "Boas",
+        "to": "Rut",
+        "refs": [
+         "RUT.2.11-RUT.2.12"
+        ]
+       }
+      ],
+      "modality": [
+       {
+        "ref": "RUT.2.12",
+        "kind": "Segenswunsch",
+        "note": "Wunsch an JHWH, keine Zusage."
+       }
+      ]
+     },
+     "visual": "arrows",
+     "basis": "text"
+    }
+   ]
+  },
+  "date": "2026-10-24",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
   "review": {
-   "date": "2026-10-23",
-   "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-   "summary_de": "Auswahl belegt; Kernaussage legte den offenen Bezug von «Treue» in 2,20 fest.",
+   "date": "2026-10-24",
+   "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+   "summary_de": "Kapitel übernimmt Ablauf und Kette 2,10–12; Korrekturen wie im Abschnitt 2,4–17 und 2,18–23.",
    "changes_de": [
-    "core_de: «erkennt … JHWHs Treue» ersetzt durch «segnet ihn im Namen JHWHs und erkennt in ihm einen Löser»",
-    "Erkennungsmoment 2,20 wie im Abschnitt korrigiert (Segen statt Überraschung)"
+    "Wie im Abschnitt: Schutz und liegengelassene Ähren als Anweisungen des Boas (Auftrag ≠ Tatsache); Moment 4 lässt den Bezug von «der seine Treue … nicht entzogen hat» offen."
    ]
   }
  },
@@ -846,17 +2722,28 @@
    "RUT-003-006-015",
    "RUT-003-016-018"
   ],
-  "core_de": "Nachts auf der Tenne bittet Rut Boas, als Löser für sie einzustehen; Boas segnet ihre Treue, schwört, sie zu lösen, falls der nähere Löser es nicht tut, und schickt sie nicht mit leeren Händen heim.",
+  "core_de": "Nachts auf der Tenne bittet Rut Boas, als Löser für sie einzustehen; Boas segnet ihre Treue, schwört: Will der nähere Löser sie lösen, soll er es tun, will er nicht, löst Boas sie selbst; und schickt sie nicht mit leeren Händen heim.",
   "mode": "narrative",
   "voice": {
    "speaker": "narrator"
   },
   "moments": [
    {
+    "reference": "RUT.3.1-RUT.3.4",
+    "text_de": "Noomi will Rut einen Ort der Ruhe suchen und schickt sie nachts zur Tenne, wo sie Boas die Füsse aufdecken und sich hinlegen soll.",
+    "reason_de": "Anfang des Bogens (Kriterium 3): Noomi ergreift nun selbst die Initiative; als Zweck nennt sie einen Ort der Ruhe für Rut (das Wort «Löser» fällt hier nicht).",
+    "recognition_de": "Noomi gibt Rut Anweisungen für die Nacht auf der Tenne, wo Boas Gerste worfelt; als Plan in Schritten gezeigt, noch nicht ausgeführt.",
+    "keywords": [
+     "Ort der Ruhe",
+     "Tenne",
+     "deck seine Füsse auf"
+    ]
+   },
+   {
     "reference": "RUT.3.8-RUT.3.9",
     "text_de": "Um Mitternacht findet Boas eine Frau zu seinen Füssen; Rut nennt sich und bittet ihn, den Zipfel seines Gewandes über sie zu breiten, denn er sei ein Löser.",
     "reason_de": "Trägt die Kernaussage (Kriterium 1), Höhepunkt der Nacht in wörtlicher Rede (Kriterium 2) und Erkennungsmoment (Kriterium 4).",
-    "recognition_de": "Nacht auf der Tenne neben dem Getreidehaufen: Boas fährt hoch, Rut liegt zu seinen Füssen und zeigt auf den Saum seines Gewandes.",
+    "recognition_de": "Nacht auf der Tenne neben dem Getreidehaufen: Boas fährt hoch, Rut liegt zu seinen Füssen und zeigt auf den Zipfel seines Gewandes.",
     "keywords": [
      "zu seinen Füssen",
      "Zipfel deines Gewandes",
@@ -865,9 +2752,9 @@
    },
    {
     "reference": "RUT.3.10-RUT.3.13",
-    "text_de": "Boas segnet Rut für ihre Treue, nennt sie eine tüchtige Frau und schwört, sie selbst zu lösen, falls der näher verwandte Löser es nicht tut.",
-    "reason_de": "Antwort auf den Höhepunkt und Wendepunkt zu Kapitel 4 (Kriterium 1 und 2): Boas bestätigt Ruts Treue und bindet sich mit einem Schwur; die Spannung um den näheren Löser trägt in Kapitel 4 hinüber (Kriterium 3).",
-    "recognition_de": "Boas antwortet in der Nacht auf der Tenne der zu seinen Füssen liegenden Rut mit dem Schwur «so wahr JHWH lebt».",
+    "text_de": "Boas segnet Rut für ihre Treue, nennt sie eine tüchtige Frau, verweist auf einen näher verwandten Löser und schwört: Will dieser sie lösen, soll er lösen; will er nicht, löst Boas sie selbst.",
+    "reason_de": "Antwort auf den Höhepunkt und Wendepunkt zu Kapitel 4 (Kriterium 1 und 2): Boas bestätigt Ruts Treue und bindet sich mit einem Schwur; die Spannung um den näheren Löser trägt in Kapitel 4 hinüber (Kriterium 3). Beide Zweige der Bedingung stehen in structure.",
+    "recognition_de": "Boas antwortet in der Nacht auf der Tenne der zu seinen Füssen liegenden Rut; eine Weiche zeigt beide Wege: der nähere Löser löst – oder Boas löst sie selbst, «so wahr JHWH lebt».",
     "keywords": [
      "tüchtige Frau",
      "werde ich dich lösen",
@@ -876,7 +2763,7 @@
    },
    {
     "reference": "RUT.3.16-RUT.3.17",
-    "text_de": "Rut erzählt Noomi alles und zeigt die Gerste, die Boas ihr gab, damit sie nicht mit leeren Händen zur Schwiegermutter komme.",
+    "text_de": "Auf Noomis Frage erzählt Rut alles und zeigt die Gerste, die Boas ihr gab, damit sie nicht mit leeren Händen zur Schwiegermutter komme.",
     "reason_de": "Erkennungsmoment (Kriterium 4) und Wiederholung des Leitworts (Kriterium 2); Deutung: Gegenstück zu Noomis «leer» in 1,21.",
     "recognition_de": "Rut öffnet vor Noomi ihren Umhang voller Gerste.",
     "keywords": [
@@ -886,8 +2773,10 @@
    }
   ],
   "omitted_de": [
-   "Noomis Plan (3,1–4) und Ruts Zusage (3,5) – Vorbereitung; die Bitte auf der Tenne zeigt die Ausführung",
-   "Noomis Rat zu warten (3,18) – Übergang"
+   "Vorbereitung (waschen, salben, Kleider, 3,3) – Ausschmückung",
+   "Ausführung im Einzelnen (3,6–7) – Wiederholung des Plans; als Paare Anweisung ↔ Ausführung in structure",
+   "Aufbruch vor Tagesanbruch (3,14) – Übergang",
+   "Noomis Rat zu warten (3,18) – Ausblick, Übergang zu Kapitel 4"
   ],
   "persons": [
    "FIG-NOOMI",
@@ -897,13 +2786,195 @@
   "places": [
    "FIG-ORT-TENNE"
   ],
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "sequence",
+     "subtype": "daheim – auf der Tenne – daheim",
+     "range": "RUT.3.1-RUT.3.18",
+     "elements": [
+      {
+       "label": "Noomis Plan: Rut soll nachts zur Tenne gehen, Boas die Füsse aufdecken und sich hinlegen; Rut sagt zu",
+       "ref": "RUT.3.1-RUT.3.5",
+       "role": "Abschnitt: Auftrag"
+      },
+      {
+       "label": "Ausführung genau nach Auftrag",
+       "ref": "RUT.3.6-RUT.3.7",
+       "role": "Ausführung",
+       "child": "s2"
+      },
+      {
+       "label": "Ruts Bitte: «Breite den Zipfel deines Gewandes über deine Dienerin aus, denn du bist ein Löser»",
+       "ref": "RUT.3.8-RUT.3.9",
+       "role": "Bitte mit Begründung"
+      },
+      {
+       "label": "Boas segnet ihre Treue, nennt sie eine tüchtige Frau und verweist auf den näheren Löser",
+       "ref": "RUT.3.10-RUT.3.12",
+       "role": "Segen und Vorbehalt"
+      },
+      {
+       "label": "Boas' Schwur",
+       "ref": "RUT.3.13",
+       "role": "Entscheidung offen",
+       "child": "s3"
+      },
+      {
+       "label": "Gabe: sechs Mass Gerste – «Komm nicht mit leeren Händen zu deiner Schwiegermutter!»",
+       "ref": "RUT.3.15-RUT.3.17",
+       "role": "Gabe"
+      },
+      {
+       "label": "Noomi: «Der Mann wird nicht ruhen, bis er die Sache heute zu Ende gebracht hat»",
+       "ref": "RUT.3.18",
+       "role": "Ausblick"
+      }
+     ],
+     "features": {
+      "leitwort": [
+       {
+        "word": "Ruhe",
+        "refs": [
+         "RUT.3.1"
+        ],
+        "role": "Zweck des Plans; nimmt [[RUT.1.9]] auf"
+       },
+       {
+        "word": "lösen / Löser",
+        "refs": [
+         "RUT.3.9",
+         "RUT.3.12",
+         "RUT.3.13"
+        ],
+        "role": "Leitwort"
+       }
+      ],
+      "open_end": [
+       {
+        "ref": "RUT.3.18",
+        "note": "«wie die Sache ausgeht» bleibt am Kapitelende offen."
+       }
+      ],
+      "modality": [
+       {
+        "ref": "RUT.3.1-RUT.3.4",
+        "kind": "Auftrag",
+        "note": "Plan, ausgeführt erst ab 3,6."
+       }
+      ],
+      "interpretation": [
+       {
+        "refs": [
+         "RUT.3.1",
+         "RUT.3.18"
+        ],
+        "note": "«Ort der Ruhe» (3,1) und «nicht ruhen» (3,18) klingen nur in der deutschen Übersetzung an; im Hebräischen stehen verschiedene Wörter. Keine Klammer des Textes."
+       }
+      ]
+     },
+     "visual": "scenes",
+     "basis": "text"
+    },
+    {
+     "id": "s2",
+     "pattern": "parallel",
+     "subtype": "Anweisung ↔ Ausführung",
+     "range": "RUT.3.3-RUT.3.11",
+     "elements": [
+      {
+       "label": "«Geh hinab zur Tenne» → Sie ging hinab zur Tenne und tat ganz nach allem",
+       "ref": "RUT.3.3",
+       "role": "Anweisung → Ausführung",
+       "links": [
+        "RUT.3.6"
+       ]
+      },
+      {
+       "label": "«Deck seine Füsse auf und leg dich hin» → Sie deckte seine Füsse auf und legte sich hin",
+       "ref": "RUT.3.4",
+       "role": "Anweisung → Ausführung",
+       "links": [
+        "RUT.3.7"
+       ]
+      },
+      {
+       "label": "«Er wird dir sagen, was du tun sollst» → Rut sagt Boas, was er tun soll: «Breite den Zipfel deines Gewandes aus»",
+       "ref": "RUT.3.4",
+       "role": "Abweichung",
+       "links": [
+        "RUT.3.9"
+       ]
+      },
+      {
+       "label": "Rut zu Noomi: «Alles, was du mir sagst, werde ich tun» → Boas zu Rut: «Alles, was du sagst, werde ich für dich tun»",
+       "ref": "RUT.3.5",
+       "role": "Wortgleiche Zusage",
+       "links": [
+        "RUT.3.11"
+       ]
+      }
+     ],
+     "features": {
+      "pattern_break": [
+       {
+        "ref": "RUT.3.9",
+        "note": "Statt dass Boas sagt, was Rut tun soll (3,4), sagt Rut ihm, was er tun soll."
+       }
+      ]
+     },
+     "visual": "columns",
+     "basis": "text"
+    },
+    {
+     "id": "s3",
+     "pattern": "condition",
+     "subtype": "Weiche mit Schwur",
+     "range": "RUT.3.13",
+     "elements": [
+      {
+       "label": "Wenn der nähere Löser dich lösen will → gut, soll er lösen",
+       "ref": "RUT.3.13",
+       "role": "Zweig 1"
+      },
+      {
+       "label": "Wenn er nicht willens ist → dann löse ich dich, ich selbst – so wahr JHWH lebt",
+       "ref": "RUT.3.13",
+       "role": "Zweig 2"
+      }
+     ],
+     "features": {
+      "modality": [
+       {
+        "ref": "RUT.3.13",
+        "kind": "Schwur",
+        "note": "Boas bindet sich mit «so wahr JHWH lebt»; welcher Zweig gilt, ist noch offen."
+       }
+      ],
+      "open_end": [
+       {
+        "ref": "RUT.3.13",
+        "note": "Die Entscheidung fällt erst am Morgen im Tor ([[RUT.4.6]])."
+       }
+      ]
+     },
+     "visual": "switch",
+     "basis": "text"
+    }
+   ]
+  },
+  "date": "2026-10-24",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
   "review": {
-   "date": "2026-10-23",
-   "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-   "summary_de": "Boas' Zusage (3,10–13), die die Kernaussage nennt, war durch keinen Moment vertreten.",
+   "date": "2026-10-24",
+   "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+   "summary_de": "Kapitel mit Anweisung ↔ Ausführung und Weiche 3,13 gut gebaut; core_de nannte nur einen Zweig der Bedingung; Leitwort-Klammer «Ruhe/ruhen» beruhte auf der Übersetzung.",
    "changes_de": [
-    "Moment 3,10–13 (Segen und Schwur) aufgenommen, Noomis Plan 3,1–4 zurückgestellt (nur Kriterium 3) und in omitted_de begründet; der Abschnitt 3,1–5 ist damit im Kapitel nicht vertreten",
-    "core_de an die neue Auswahl angepasst"
+    "core_de: beide Zweige der Bedingung aus 3,13 (vorher nur der zweite; Regel 1).",
+    "Moment 1 reason_de ohne den nicht belegten Zweck «damit Boas als Löser handelt»; Moment 2 «Saum» → «Zipfel».",
+    "Leitwort «Ruhe / ruhen» als Klammer 3,1 ↔ 3,18 zurückgenommen (Anklang nur der Übersetzung), als interpretation vermerkt."
    ]
   }
  },
@@ -924,33 +2995,35 @@
   },
   "moments": [
    {
-    "reference": "RUT.4.9-RUT.4.11",
-    "text_de": "Boas erklärt vor Ältesten und Volk, er habe Elimelechs Besitz und Rut zur Frau erworben, um den Namen des Verstorbenen zu erhalten, und alle bezeugen und segnen es.",
-    "reason_de": "Trägt die Kernaussage (Kriterium 1) und ist der Höhepunkt in wörtlicher Rede mit Wiederholung «Zeugen» (Kriterium 2).",
-    "recognition_de": "Boas spricht im Tor zu den Ältesten und dem Volk, die antworten: «Wir sind Zeugen!»",
+    "reference": "RUT.4.1-RUT.4.12",
+    "text_de": "Im Tor bietet Boas vor zehn Ältesten dem näheren Löser das Feld an: Will er lösen, soll er lösen. Der Löser will zuerst, verzichtet aber, als dazu Rut gehört, und zieht seinen Schuh aus; Boas erwirbt vor Zeugen Elimelechs Besitz und Rut zur Frau, damit der Name des Verstorbenen bleibt, und alle segnen es.",
+    "reason_de": "Das Verfahren im Tor ist eine Gattungsform und zählt als ein Moment mit allen Gliedern (in structure); es trägt die Kernaussage (Kriterium 1) und gipfelt in wörtlicher Rede mit der Wiederholung «Zeugen» (Kriterium 2).",
+    "recognition_de": "Szene 1 im Tor: Der andere Löser zieht seinen Schuh aus; Boas spricht zu Ältesten und Volk, die antworten: «Wir sind Zeugen!»",
     "keywords": [
+     "nicht lösen",
+     "Schuh aus",
      "Zeugen seid ihr heute",
-     "zur Frau erworben",
      "Wir sind Zeugen"
     ]
    },
    {
-    "reference": "RUT.4.16-RUT.4.17",
-    "text_de": "Noomi nimmt das Kind auf ihren Schoss; die Nachbarinnen rufen «Ein Sohn ist Noomi geboren!» und nennen ihn Obed, den Grossvater Davids.",
-    "reason_de": "Höhepunkt und Rahmen (Kriterium 2): Die leer gewordene Noomi hält ein Kind; Erkennungsmoment des Schlusses (Kriterium 4).",
-    "recognition_de": "Noomi sitzt mit dem kleinen Obed auf dem Schoss, umringt von Nachbarinnen.",
+    "reference": "RUT.4.13-RUT.4.17",
+    "text_de": "JHWH lässt Rut einen Sohn gebären; die Frauen preisen JHWH, der Noomi nicht ohne Löser gelassen hat, Noomi nimmt das Kind auf ihren Schoss, und die Nachbarinnen nennen es Obed, den Grossvater Davids.",
+    "reason_de": "Ausgang und Höhepunkt (Kriterien 1 und 2): Noomi, die ohne Kinder zurückblieb, hält ein Kind (Deutung: Gegenbild zu «leer», 1,21); die Frauen deuten die Wende; Erkennungsmoment des Schlusses (Kriterium 4).",
+    "recognition_de": "Szene 2: Noomi mit dem kleinen Obed auf dem Schoss, umringt von den Frauen, die JHWH preisen.",
     "keywords": [
+     "nicht an einem Löser",
      "Sohn ist Noomi geboren",
-     "Obed",
      "Vaters Davids"
     ]
    },
    {
-    "reference": "RUT.4.21-RUT.4.22",
-    "text_de": "Boas zeugt Obed, Obed zeugt Isai, und Isai zeugt David.",
-    "reason_de": "Trägt den Zielpunkt des Buches (Kriterium 1) und ist das Ende der Liste, auf das sie zuläuft (Kriterium 2).",
-    "recognition_de": "Der Stammbaum endet bei David; davor Boas, Obed und Isai.",
+    "reference": "RUT.4.18-RUT.4.22",
+    "text_de": "Der Stammbaum des Perez führt von Perez über Hezron, Ram, Amminadab, Nachschon und Salma zu Boas und weiter über Obed und Isai zu David.",
+    "reason_de": "Ein Stammbaum ist ein Baum und zählt als ein Moment mit allen Gliedern; er ordnet die Geschichte in die Geschlechterfolge ein (Kriterium 2) und läuft auf David zu, den Zielpunkt des Buches (Kriterium 1).",
+    "recognition_de": "Ein Stammbaum als Kette von Perez bis David mit allen zehn Namen; Boas, Obed und David hervorgehoben.",
     "keywords": [
+     "Stammbaum des Perez",
      "Boas zeugte Obed",
      "Isai zeugte David"
     ],
@@ -958,28 +3031,242 @@
    }
   ],
   "omitted_de": [
-   "Verzicht des näheren Lösers mit dem Schuh (4,6–8) – Vorstufe, Kern im Erwerb 4,9–11",
-   "Geburt und Lob der Frauen (4,13–15) – im Bild Noomis mit dem Kind enthalten",
-   "Stammbaum vor Boas (4,18–20) – Zwischenglieder"
+   "Erläuterung des Schuhbrauchs (4,7) – Hintergrund damals",
+   "Namen im Segenswunsch (Rahel, Lea, Tamar, Juda; 4,11b–12) – Nebenfiguren",
+   "Noomi als Pflegerin (4,16b) – im Bild des Schosses enthalten"
   ],
   "persons": [
    "FIG-BOAS",
    "FIG-RUT",
    "FIG-NOOMI",
    "FIG-OBED",
+   "FIG-LOESER",
    "FIG-GRUPPE-AELTESTE",
+   "FIG-GRUPPE-FRAUEN",
+   "FIG-ISAI",
    "FIG-DAVID"
   ],
   "places": [
    "FIG-ORT-STADTTOR",
    "FIG-ORT-BETLEHEM"
   ],
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "sequence",
+     "subtype": "Tor – Geburt – Stammbaum",
+     "range": "RUT.4.1-RUT.4.22",
+     "elements": [
+      {
+       "label": "Löserverfahren im Tor",
+       "ref": "RUT.4.1-RUT.4.12",
+       "role": "Abschnitt: Verfahren",
+       "child": "s2"
+      },
+      {
+       "label": "Geburt Obeds und Lob der Frauen: JHWH hat es Noomi nicht an einem Löser fehlen lassen; «Ein Sohn ist Noomi geboren!»",
+       "ref": "RUT.4.13-RUT.4.17",
+       "role": "Abschnitt: Geburt"
+      },
+      {
+       "label": "Stammbaum des Perez",
+       "ref": "RUT.4.18-RUT.4.22",
+       "role": "Abschnitt: Stammbaum",
+       "child": "s4"
+      }
+     ],
+     "features": {
+      "leitwort": [
+       {
+        "word": "lösen / Löser",
+        "refs": [
+         "RUT.4.1-RUT.4.8",
+         "RUT.4.14"
+        ],
+        "role": "Leitwort"
+       },
+       {
+        "word": "Perez",
+        "refs": [
+         "RUT.4.12",
+         "RUT.4.18"
+        ],
+        "role": "verklammernd: Segenswunsch und Stammbaum"
+       }
+      ]
+     },
+     "visual": "scenes",
+     "basis": "text"
+    },
+    {
+     "id": "s2",
+     "pattern": "form",
+     "subtype": "Löserverfahren im Tor",
+     "form_type": "lawsuit",
+     "range": "RUT.4.1-RUT.4.12",
+     "elements": [
+      {
+       "label": "Vorladung und Zeugen: der Löser und zehn Älteste im Tor",
+       "ref": "RUT.4.1-RUT.4.2",
+       "role": "Vorladung, Zeugen"
+      },
+      {
+       "label": "Sache und Angebot",
+       "ref": "RUT.4.3-RUT.4.4",
+       "role": "Angebot mit Bedingung",
+       "child": "s3"
+      },
+      {
+       "label": "Zusatz: Mit dem Feld erwirbst du auch Rut, um den Namen des Verstorbenen zu erhalten",
+       "ref": "RUT.4.5",
+       "role": "Zusatz"
+      },
+      {
+       "label": "Verzicht: «Ich kann nicht lösen, sonst schädige ich mein eigenes Erbteil»",
+       "ref": "RUT.4.6",
+       "role": "Wende"
+      },
+      {
+       "label": "Beglaubigung: Der Löser zieht seinen Schuh aus (mit Erklärung des Brauchs durch den Erzähler)",
+       "ref": "RUT.4.7-RUT.4.8",
+       "role": "Beglaubigung"
+      },
+      {
+       "label": "Boas vor Zeugen: Besitz Elimelechs und Rut zur Frau erworben, damit der Name des Verstorbenen nicht ausgelöscht wird",
+       "ref": "RUT.4.9-RUT.4.10",
+       "role": "Rechtsakt mit Zweck"
+      },
+      {
+       "label": "«Wir sind Zeugen!» – Segenswunsch: JHWH mache die Frau wie Rahel und Lea; dein Haus werde wie das Haus des Perez durch die Nachkommen, die JHWH dir geben wird",
+       "ref": "RUT.4.11-RUT.4.12",
+       "role": "Bestätigung, Segen"
+      }
+     ],
+     "features": {
+      "genre": [
+       {
+        "note": "«Rechtsverfahren» ist Einordnung (Gattungsbegriff), keine Angabe des Textes."
+       }
+      ],
+      "pattern_break": [
+       {
+        "ref": "RUT.4.1-RUT.4.12",
+        "note": "Kein Streitfall: Anklage, Beweis und Urteil des Formulars fehlen; an ihre Stelle treten Sache und Angebot, Verzicht, Beglaubigung und Bezeugung."
+       }
+      ]
+     },
+     "visual": "outline",
+     "basis": "text"
+    },
+    {
+     "id": "s3",
+     "pattern": "condition",
+     "subtype": "Weiche",
+     "range": "RUT.4.4",
+     "elements": [
+      {
+       "label": "Wenn du lösen willst → dann löse!",
+       "ref": "RUT.4.4",
+       "role": "Zweig 1"
+      },
+      {
+       "label": "Wenn nicht → sag es mir; ausser dir kann keiner lösen, und ich komme nach dir",
+       "ref": "RUT.4.4",
+       "role": "Zweig 2"
+      }
+     ],
+     "visual": "switch",
+     "basis": "text"
+    },
+    {
+     "id": "s4",
+     "pattern": "tree",
+     "subtype": "Stammbaum, absteigend, eine Linie",
+     "range": "RUT.4.18-RUT.4.22",
+     "elements": [
+      {
+       "label": "Perez",
+       "ref": "RUT.4.18",
+       "role": "Wurzel"
+      },
+      {
+       "label": "Hezron",
+       "ref": "RUT.4.18",
+       "role": "Glied"
+      },
+      {
+       "label": "Ram",
+       "ref": "RUT.4.19",
+       "role": "Glied"
+      },
+      {
+       "label": "Amminadab",
+       "ref": "RUT.4.19",
+       "role": "Glied"
+      },
+      {
+       "label": "Nachschon",
+       "ref": "RUT.4.20",
+       "role": "Glied"
+      },
+      {
+       "label": "Salma (in 4,21 Salmon)",
+       "ref": "RUT.4.20-RUT.4.21",
+       "role": "Glied"
+      },
+      {
+       "label": "Boas",
+       "ref": "RUT.4.21",
+       "role": "Glied"
+      },
+      {
+       "label": "Obed",
+       "ref": "RUT.4.21",
+       "role": "Glied"
+      },
+      {
+       "label": "Isai",
+       "ref": "RUT.4.22",
+       "role": "Glied"
+      },
+      {
+       "label": "David",
+       "ref": "RUT.4.22",
+       "role": "Ziel"
+      }
+     ],
+     "features": {
+      "leitwort": [
+       {
+        "word": "zeugte",
+        "refs": [
+         "RUT.4.18-RUT.4.22"
+        ],
+        "role": "Formel je Glied"
+       }
+      ],
+      "text_forms": [
+       {
+        "ref": "RUT.4.20-RUT.4.21",
+        "note": "Der Name lautet in 4,20 «Salma», in 4,21 «Salmon»; beide Formen stehen im Text und werden nicht angeglichen."
+       }
+      ]
+     },
+     "visual": "tree",
+     "basis": "text"
+    }
+   ]
+  },
+  "date": "2026-10-24",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
   "review": {
-   "date": "2026-10-23",
-   "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-   "summary_de": "Auswahl bestätigt; Kernaussage enthielt eine nicht gekennzeichnete Deutung.",
+   "date": "2026-10-24",
+   "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+   "summary_de": "Kapitel mit Verfahren, Weiche und Stammbaum vollständig; Formular-Lücken und Segenswunsch wie im Abschnitt ergänzt.",
    "changes_de": [
-    "core_de: «füllt Noomis Leere» ersetzt durch die Aussage der Frauen aus 4,15 («bringe Noomi das Leben zurück»)"
+    "s2 form lawsuit: fehlende Pflichtglieder als pattern_break; Segenswunsch mit JHWH und den verheissenen Nachkommen; reason_de Moment 2: «leer» als Deutung gekennzeichnet."
    ]
   }
  },
@@ -995,28 +3282,28 @@
    "RUT-004"
   ],
   "core_de": "Durch Ruts Treue und Boas' Eintreten als Löser lässt JHWH es der leer heimgekehrten Noomi nicht an einem Löser fehlen – an einem Sohn, aus dessen Linie David kommt.",
-  "purpose_de": "Das Buch erzählt Israel, wie in der Richterzeit eine verarmte Familie aus Betlehem durch die Treue einer moabitischen Fremden und das Lösungsrecht wieder Zukunft bekommt, und führt diese Geschichte bis zu David (4,17–22). Deutung: Es zeigt Gottes verborgenes Wirken durch alltägliche Treue und hält fest, dass zu Davids Vorfahren eine Moabiterin gehört; Verfasser und Abfassungszeit nennt der Text nicht.",
+  "purpose_de": "Das Buch erzählt, wie in der Richterzeit eine Familie aus Betlehem, deren Männer gestorben sind, durch die Treue einer moabitischen Fremden und das Löserecht wieder Zukunft bekommt, und führt diese Geschichte bis zu David (4,17–22). Deutung: Es zeigt Gottes verborgenes Wirken durch alltägliche Treue und hält fest, dass zu Davids Vorfahren eine Moabiterin gehört; Adressaten, Verfasser und Abfassungszeit nennt der Text nicht.",
   "mode": "narrative",
   "voice": {
    "speaker": "narrator"
   },
   "moments": [
    {
-    "reference": "RUT.1.16-RUT.1.17",
-    "text_de": "Rut schwört, mit Noomi zu gehen, ihr Volk und ihren Gott zu teilen und sich nur durch den Tod von ihr trennen zu lassen.",
-    "reason_de": "Trägt die Kernaussage (Kriterium 1), Höhepunkt in wörtlicher Rede (Kriterium 2) und der bekannteste Satz des Buches (Kriterium 4).",
-    "recognition_de": "Rut steht auf dem Weg nach Juda vor Noomi und spricht ihr Treuewort, während Orpa zurückgeht.",
+    "reference": "RUT.1.14-RUT.1.17",
+    "text_de": "Noomi drängt ihre Schwiegertöchter umzukehren; Orpa küsst sie zum Abschied, Rut aber hält sich an ihr fest und schwört, mit Noomi zu gehen, ihr Volk und ihren Gott zu teilen und sich nur durch den Tod von ihr trennen zu lassen.",
+    "reason_de": "Trägt die Kernaussage (Kriterium 1), Höhepunkt der Wechselrede in wörtlicher Rede (Kriterium 2) und der bekannteste Satz des Buches (Kriterium 4); die drei Runden und alle Paare des Schwurs stehen in der Struktur von Kapitel 1 und Abschnitt [[RUT.1.6-RUT.1.18]].",
+    "recognition_de": "Station 1 auf dem Weg nach Juda: Orpa geht zurück, Rut hält sich an Noomi fest und spricht ihr Treuewort.",
     "keywords": [
+     "Orpa küsste ihre Schwiegermutter",
      "Wohin du gehst",
-     "dahin gehe ich",
      "nur der Tod"
     ]
    },
    {
     "reference": "RUT.1.19-RUT.1.21",
-    "text_de": "In Betlehem fragen die Frauen «Ist das Noomi?», und sie antwortet, man solle sie Mara nennen, denn voll sei sie weggegangen und leer habe JHWH sie zurückgebracht.",
-    "reason_de": "Trägt die Kernaussage des Kapitels (Kriterium 1) und benennt mit «voll – leer» das Thema, das das Buch bis zum Schluss trägt (Kriterium 2).",
-    "recognition_de": "In Betlehem umringen die Frauen Noomi und fragen «Ist das Noomi?»; sie antwortet «Nennt mich Mara», Rut neben ihr.",
+    "text_de": "In Betlehem fragen die Frauen «Ist das Noomi?», und sie antwortet, man solle sie nicht Noomi, sondern Mara nennen, denn der Allmächtige habe es ihr bitter gemacht: Voll sei sie weggegangen, leer habe JHWH sie zurückgebracht.",
+    "reason_de": "Trägt die Kernaussage des Kapitels (Kriterium 1) und benennt mit «voll – leer» das Thema, das das Buch bis zum Schluss trägt (Kriterium 2); hier im Bogen leer → voll (structure s2), beide Gegenüberstellungen mit Begründung in der Struktur von Kapitel 1.",
+    "recognition_de": "Station 2 in Betlehem: Die Frauen fragen «Ist das Noomi?»; Noomi: «voll weggegangen – leer zurückgebracht», Rut neben ihr.",
     "keywords": [
      "Ist das Noomi",
      "Nennt mich Mara",
@@ -1025,9 +3312,9 @@
    },
    {
     "reference": "RUT.2.10-RUT.2.12",
-    "text_de": "Rut fällt vor Boas nieder und fragt, warum er sie, eine Fremde, beachte; Boas antwortet mit ihrer Treue zu Noomi und wünscht ihr Lohn von JHWH, unter dessen Flügeln sie Zuflucht sucht.",
-    "reason_de": "Trägt die Kernaussage (Kriterium 1) und ist der Höhepunkt in wörtlicher Rede (Kriterium 2): Ruts Treue wird erkannt und vor Gott gesegnet.",
-    "recognition_de": "Rut liegt mit dem Gesicht zur Erde vor Boas auf dem Feld, Boas spricht zu ihr.",
+    "text_de": "Rut fällt vor Boas nieder und fragt, warum er sie, eine Fremde, beachte; Boas nennt als Grund, was sie an ihrer Schwiegermutter getan hat und dass sie Eltern und Heimat verlassen hat, und wünscht ihr Lohn von JHWH, unter dessen Flügeln sie Zuflucht sucht.",
+    "reason_de": "Trägt die Kernaussage (Kriterium 1) und ist der Höhepunkt in wörtlicher Rede (Kriterium 2): Ruts Treue wird erkannt und vor Gott gesegnet. Frage, beide Gründe und Segenswunsch stehen als Kette in der Struktur von Kapitel 2.",
+    "recognition_de": "Station 3 auf dem Feld: Rut liegt mit dem Gesicht zur Erde vor Boas, Boas spricht ihr den Segen zu.",
     "keywords": [
      "auf ihr Gesicht",
      "eine Fremde",
@@ -1038,7 +3325,7 @@
     "reference": "RUT.3.8-RUT.3.9",
     "text_de": "Um Mitternacht findet Boas eine Frau zu seinen Füssen; Rut nennt sich und bittet ihn, den Zipfel seines Gewandes über sie zu breiten, denn er sei ein Löser.",
     "reason_de": "Trägt die Kernaussage (Kriterium 1), Höhepunkt der Nacht in wörtlicher Rede (Kriterium 2) und Erkennungsmoment (Kriterium 4).",
-    "recognition_de": "Nacht auf der Tenne neben dem Getreidehaufen: Boas fährt hoch, Rut liegt zu seinen Füssen und zeigt auf den Saum seines Gewandes.",
+    "recognition_de": "Station 4 auf der Tenne bei Nacht: Rut liegt zu Boas' Füssen und bittet, den Zipfel seines Gewandes über sie zu breiten.",
     "keywords": [
      "zu seinen Füssen",
      "Zipfel deines Gewandes",
@@ -1046,33 +3333,33 @@
     ]
    },
    {
-    "reference": "RUT.4.9-RUT.4.11",
-    "text_de": "Boas erklärt vor Ältesten und Volk, er habe Elimelechs Besitz und Rut zur Frau erworben, um den Namen des Verstorbenen zu erhalten, und alle bezeugen und segnen es.",
-    "reason_de": "Trägt die Kernaussage (Kriterium 1) und ist der Höhepunkt in wörtlicher Rede mit Wiederholung «Zeugen» (Kriterium 2).",
-    "recognition_de": "Boas spricht im Tor zu den Ältesten und dem Volk, die antworten: «Wir sind Zeugen!»",
+    "reference": "RUT.4.1-RUT.4.12",
+    "text_de": "Im Tor bietet Boas vor zehn Ältesten dem näheren Löser das Feld an: Will er lösen, soll er lösen. Der Löser will zuerst, verzichtet aber, als dazu Rut gehört, und zieht seinen Schuh aus; Boas erwirbt vor Zeugen Elimelechs Besitz und Rut zur Frau, damit der Name des Verstorbenen bleibt, und alle segnen es.",
+    "reason_de": "Das Verfahren im Tor ist eine Gattungsform und zählt als ein Moment mit allen Gliedern (in der Struktur von Kapitel 4 und Abschnitt [[RUT.4.1-RUT.4.12]]); es trägt die Kernaussage (Kriterium 1) und gipfelt in wörtlicher Rede mit der Wiederholung «Zeugen» (Kriterium 2).",
+    "recognition_de": "Station 5 im Tor: Der andere Löser zieht seinen Schuh aus; Ältesten und Volk rufen «Wir sind Zeugen!»",
     "keywords": [
+     "nicht lösen",
+     "Schuh aus",
      "Zeugen seid ihr heute",
-     "zur Frau erworben",
      "Wir sind Zeugen"
     ]
    },
    {
-    "reference": "RUT.4.16-RUT.4.17",
-    "text_de": "Noomi nimmt das Kind auf ihren Schoss; die Nachbarinnen rufen «Ein Sohn ist Noomi geboren!» und nennen ihn Obed, den Grossvater Davids.",
-    "reason_de": "Höhepunkt und Rahmen (Kriterium 2): Die leer gewordene Noomi hält ein Kind; Erkennungsmoment des Schlusses (Kriterium 4).",
-    "recognition_de": "Noomi sitzt mit dem kleinen Obed auf dem Schoss, umringt von Nachbarinnen.",
+    "reference": "RUT.4.13-RUT.4.17",
+    "text_de": "JHWH lässt Rut einen Sohn gebären; die Frauen preisen JHWH, der Noomi nicht ohne Löser gelassen hat, Noomi nimmt das Kind auf ihren Schoss, und die Nachbarinnen nennen es Obed, den Grossvater Davids.",
+    "reason_de": "Ausgang und Höhepunkt (Kriterien 1 und 2): Noomi, die ohne Kinder zurückblieb, hält ein Kind (Deutung: Gegenbild zu «leer», 1,21); die Frauen deuten die Wende; Erkennungsmoment des Schlusses (Kriterium 4).",
+    "recognition_de": "Station 6 in Betlehem: Noomi mit dem kleinen Obed auf dem Schoss, umringt von den Frauen; ein Pfeil weist zu David.",
     "keywords": [
+     "nicht an einem Löser",
      "Sohn ist Noomi geboren",
-     "Obed",
      "Vaters Davids"
     ]
    }
   ],
   "omitted_de": [
-   "Hungersnot und Tod der Männer (1,1–5) – Vorgeschichte, im «leer» Noomis enthalten",
-   "Noomis Plan und Gerste als Geschenk (Kap. 3) – Zwischenschritte zur Lösung",
-   "Verzicht des näheren Lösers mit dem Schuh (4,6–8) – Detail der Verhandlung",
-   "Stammbaum im Einzelnen (4,18–22) – Ziel David ist in der letzten Station genannt"
+   "Hungersnot und Tod der Männer (1,1–5) – Vorgeschichte; als erstes Paar der Umkehrung und als Hinweg in structure",
+   "Noomis Plan und die Gerste als Geschenk (Kap. 3) – Zwischenschritte; als Paare Kapitel 2 ↔ 3 in structure",
+   "Glieder des Stammbaums zwischen Perez und Boas (4,18–21) – nicht als Station; vollständig im Baum in structure"
   ],
   "persons": [
    "FIG-RUT",
@@ -1090,13 +3377,376 @@
    "FIG-ORT-TENNE",
    "FIG-ORT-STADTTOR"
   ],
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "sequence",
+     "subtype": "vier Akte",
+     "elements": [
+      {
+       "label": "Moab und Rückweg: Noomi verliert Mann und Söhne; Rut schwört ihr Treue; Noomi kommt «leer» zurück",
+       "ref": "RUT.1.1-RUT.1.22",
+       "role": "Akt 1"
+      },
+      {
+       "label": "Auf dem Feld: Rut liest «zufällig» bei Boas auf; er segnet ihre Treue; Noomi: «einer von unseren Lösern»",
+       "ref": "RUT.2.1-RUT.2.23",
+       "role": "Akt 2"
+      },
+      {
+       "label": "Auf der Tenne: Rut bittet Boas, als Löser einzustehen; er schwört: Will der nähere Löser sie lösen, soll er es tun, sonst löst er sie selbst",
+       "ref": "RUT.3.1-RUT.3.18",
+       "role": "Akt 3"
+      },
+      {
+       "label": "Im Tor und danach: Boas löst vor Zeugen, Obed wird geboren, der Stammbaum führt zu David",
+       "ref": "RUT.4.1-RUT.4.22",
+       "role": "Akt 4"
+      },
+      {
+       "label": "Querstruktur: von leer zu voll",
+       "ref": "RUT.1.1-RUT.4.17",
+       "role": "Bogen",
+       "child": "s2"
+      },
+      {
+       "label": "Querstruktur: Wegzug und Rückkehr",
+       "ref": "RUT.1.1-RUT.4.1",
+       "role": "Weg",
+       "child": "s3"
+      },
+      {
+       "label": "Querstruktur: Kapitel 2 und 3 gleich gebaut",
+       "ref": "RUT.2.1-RUT.3.18",
+       "role": "Spiegelung",
+       "child": "s4"
+      },
+      {
+       "label": "Ziel: Stammbaum von Perez bis David",
+       "ref": "RUT.4.18-RUT.4.22",
+       "role": "Ziel",
+       "child": "s5"
+      }
+     ],
+     "features": {
+      "speakers": [
+       {
+        "who": "Erzähler",
+        "to": "Leser",
+        "refs": [
+         "RUT.1.1-RUT.4.22"
+        ]
+       }
+      ],
+      "chronology": [
+       {
+        "ref": "RUT.1.1",
+        "note": "«in den Tagen, als die Richter richteten» – Zeitrahmen ohne Jahreszahl"
+       }
+      ],
+      "leitwort": [
+       {
+        "word": "lösen / Löser",
+        "refs": [
+         "RUT.2.20",
+         "RUT.3.9",
+         "RUT.3.12-RUT.3.13",
+         "RUT.4.1-RUT.4.10",
+         "RUT.4.14"
+        ],
+        "role": "Leitwort des Buches"
+       },
+       {
+        "word": "Treue",
+        "refs": [
+         "RUT.1.8",
+         "RUT.2.20",
+         "RUT.3.10"
+        ],
+        "role": "deutend"
+       },
+       {
+        "word": "umkehren / zurückkehren",
+        "refs": [
+         "RUT.1.6-RUT.1.22"
+        ],
+        "role": "gliedernd in Kapitel 1"
+       },
+       {
+        "word": "Ruhe",
+        "refs": [
+         "RUT.1.9",
+         "RUT.3.1"
+        ],
+        "role": "Motiv: Noomis Wunsch (1,9) und Plan (3,1); «nicht ruhen» (3,18) klingt nur in der Übersetzung an"
+       }
+      ],
+      "crossref": [
+       {
+        "ref": "RUT.4.11",
+        "kind": "Bezug im Text",
+        "note": "Rahel und Lea, «die beide das Haus Israel gebaut haben»: [[GEN.29.31-GEN.30.24]]."
+       },
+       {
+        "ref": "RUT.4.12",
+        "kind": "Bezug im Text",
+        "note": "«Perez, den Tamar dem Juda geboren hat» verweist auf [[GEN.38]], Geburt des Perez [[GEN.38.29]]."
+       }
+      ],
+      "interpretation": [
+       {
+        "note": "Die Erzählerstimme nennt JHWH nur zweimal als Handelnden: Er gibt seinem Volk Brot (1,6) und lässt Rut schwanger werden (4,13). Dass das Buch so Gottes verborgenes Wirken in alltäglicher Treue zeigt, etwa im «zufällig» (2,3), ist Deutung."
+       }
+      ]
+     },
+     "visual": "timeline",
+     "basis": "text"
+    },
+    {
+     "id": "s2",
+     "pattern": "reversal",
+     "subtype": "Vorher – Nachher (leer → voll)",
+     "range": "RUT.1.1-RUT.4.17",
+     "elements": [
+      {
+       "label": "Hungersnot im Land → JHWH gibt seinem Volk Brot; Gerstenernte",
+       "ref": "RUT.1.1",
+       "role": "vorher → nachher",
+       "links": [
+        "RUT.1.6",
+        "RUT.1.22"
+       ]
+      },
+      {
+       "label": "Noomi ohne ihre beiden Kinder und ohne ihren Mann → das Kind auf Noomis Schoss",
+       "ref": "RUT.1.5",
+       "role": "vorher → nachher",
+       "links": [
+        "RUT.4.16"
+       ]
+      },
+      {
+       "label": "Die Frauen fragen: «Ist das Noomi?» → Die Frauen preisen JHWH, der es ihr nicht an einem Löser hat fehlen lassen",
+       "ref": "RUT.1.19",
+       "role": "vorher → nachher",
+       "links": [
+        "RUT.4.14"
+       ]
+      },
+      {
+       "label": "«Voll bin ich weggegangen, leer hat mich JHWH zurückgebracht» → «Ein Sohn ist Noomi geboren!»",
+       "ref": "RUT.1.21",
+       "role": "vorher → nachher",
+       "links": [
+        "RUT.4.17"
+       ]
+      },
+      {
+       "label": "Zwischenstufe: Rut soll «nicht mit leeren Händen» zu ihrer Schwiegermutter kommen",
+       "ref": "RUT.3.17",
+       "role": "Zwischenstufe"
+      }
+     ],
+     "features": {
+      "interpretation": [
+       {
+        "ref": "RUT.3.17",
+        "note": "Deutung: «nicht mit leeren Händen» (3,17) und «dein Lohn möge voll sein» (2,12) als Gegenwörter zu Noomis «leer» (1,21) – Verbindung über das gemeinsame Wortfeld."
+       },
+       {
+        "note": "Die Paare vorher → nachher stellt der Text nicht ausdrücklich gegenüber; jede Seite ist belegt, die Zuordnung ist Lesart der Kernanalyse (vgl. [[RUT.1.21]] ↔ [[RUT.4.14-RUT.4.17]] im Strukturkatalog)."
+       }
+      ]
+     },
+     "visual": "mirror",
+     "basis": "text"
+    },
+    {
+     "id": "s3",
+     "pattern": "route",
+     "subtype": "Wegzug und Rückkehr",
+     "range": "RUT.1.1-RUT.4.1",
+     "elements": [
+      {
+       "label": "Betlehem in Juda → Gebiet von Moab, wegen der Hungersnot",
+       "ref": "RUT.1.1-RUT.1.2",
+       "role": "Hinweg"
+      },
+      {
+       "label": "Moab → auf dem Weg ins Land Juda: Orpa kehrt um, Rut geht mit",
+       "ref": "RUT.1.7-RUT.1.18",
+       "role": "Scheideweg"
+      },
+      {
+       "label": "Ankunft in Betlehem",
+       "ref": "RUT.1.19-RUT.1.22",
+       "role": "Rückkehr"
+      },
+      {
+       "label": "Schauplätze bei Betlehem: Feld → Tenne → Stadttor",
+       "ref": "RUT.2.3",
+       "role": "Schauplätze",
+       "links": [
+        "RUT.3.6",
+        "RUT.4.1"
+       ]
+      }
+     ],
+     "visual": "map",
+     "basis": "text"
+    },
+    {
+     "id": "s4",
+     "pattern": "parallel",
+     "subtype": "Parallelszenen (Kapitel 2 ↔ 3)",
+     "range": "RUT.2.1-RUT.3.18",
+     "elements": [
+      {
+       "label": "Rut will Ähren auflesen → Noomi will Rut einen Ort der Ruhe suchen",
+       "ref": "RUT.2.2",
+       "role": "Anfang daheim",
+       "links": [
+        "RUT.3.1"
+       ]
+      },
+      {
+       "label": "Begegnung mit Boas auf dem Feld → auf der Tenne in der Nacht",
+       "ref": "RUT.2.8-RUT.2.16",
+       "role": "Begegnung",
+       "links": [
+        "RUT.3.8-RUT.3.13"
+       ]
+      },
+      {
+       "label": "Boas segnet Rut wegen ihrer Treue zu Noomi → Boas segnet Rut: Ihre Treue ist jetzt noch schöner",
+       "ref": "RUT.2.11-RUT.2.12",
+       "role": "Segen",
+       "links": [
+        "RUT.3.10"
+       ]
+      },
+      {
+       "label": "Rut bringt Noomi die Gerste vom Feld → Rut bringt Noomi sechs Mass Gerste von Boas",
+       "ref": "RUT.2.17-RUT.2.18",
+       "role": "Gabe",
+       "links": [
+        "RUT.3.15-RUT.3.17"
+       ]
+      },
+      {
+       "label": "Noomi: «Er ist einer von unseren Lösern» → Noomi: «Der Mann wird nicht ruhen»",
+       "ref": "RUT.2.20",
+       "role": "Schluss daheim",
+       "links": [
+        "RUT.3.18"
+       ]
+      }
+     ],
+     "visual": "columns",
+     "basis": "text",
+     "features": {
+      "interpretation": [
+       {
+        "note": "Die Parallelführung von Kapitel 2 und 3 ist eine Beobachtung der Auslegung; die einzelnen Entsprechungen sind mit Stellen belegt, die Gegenüberstellung selbst nennt der Text nicht."
+       }
+      ]
+     }
+    },
+    {
+     "id": "s5",
+     "pattern": "tree",
+     "subtype": "Stammbaum, absteigend, eine Linie",
+     "range": "RUT.4.18-RUT.4.22",
+     "elements": [
+      {
+       "label": "Perez",
+       "ref": "RUT.4.18",
+       "role": "Wurzel"
+      },
+      {
+       "label": "Hezron",
+       "ref": "RUT.4.18",
+       "role": "Glied"
+      },
+      {
+       "label": "Ram",
+       "ref": "RUT.4.19",
+       "role": "Glied"
+      },
+      {
+       "label": "Amminadab",
+       "ref": "RUT.4.19",
+       "role": "Glied"
+      },
+      {
+       "label": "Nachschon",
+       "ref": "RUT.4.20",
+       "role": "Glied"
+      },
+      {
+       "label": "Salma (in 4,21 Salmon)",
+       "ref": "RUT.4.20-RUT.4.21",
+       "role": "Glied"
+      },
+      {
+       "label": "Boas",
+       "ref": "RUT.4.21",
+       "role": "Glied"
+      },
+      {
+       "label": "Obed",
+       "ref": "RUT.4.21",
+       "role": "Glied"
+      },
+      {
+       "label": "Isai",
+       "ref": "RUT.4.22",
+       "role": "Glied"
+      },
+      {
+       "label": "David",
+       "ref": "RUT.4.22",
+       "role": "Ziel"
+      }
+     ],
+     "features": {
+      "leitwort": [
+       {
+        "word": "zeugte",
+        "refs": [
+         "RUT.4.18-RUT.4.22"
+        ],
+        "role": "Formel je Glied"
+       }
+      ],
+      "text_forms": [
+       {
+        "ref": "RUT.4.20-RUT.4.21",
+        "note": "Der Name lautet in 4,20 «Salma», in 4,21 «Salmon»; beide Formen stehen im Text und werden nicht angeglichen."
+       }
+      ]
+     },
+     "visual": "tree",
+     "basis": "text"
+    }
+   ]
+  },
+  "date": "2026-10-24",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
   "review": {
-   "date": "2026-10-23",
-   "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-   "summary_de": "Stationen und Zweck bestätigt; Kernaussage enthielt eine nicht gekennzeichnete Deutung.",
+   "date": "2026-10-24",
+   "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+   "summary_de": "Vier Akte mit Querstrukturen (Umkehrung leer → voll, Weg, Kapitel 2 ↔ 3, Stammbaum) tragen; Akt 3 nannte nur einen Zweig der Bedingung, mehrere Begründungen verwiesen auf Struktur, die im Buch nicht steht; Paarzuordnungen als Deutung gekennzeichnet.",
    "changes_de": [
-    "core_de: «macht Noomi wieder voll» ersetzt durch die Textaussage aus 4,14 («nicht an einem Löser fehlen»)",
-    "Station 4,16–17: Schlüsselwort «Vaters Davids» aufgenommen, damit das Ziel David im Wortband steht"
+    "purpose_de: «verarmte Familie» und Adressat «Israel» stehen nicht im Text (→ «deren Männer gestorben sind», Adressaten als nicht genannt); «Lösungsrecht» → «Löserecht» (Wortlaut 4,6).",
+    "reason_de der Momente 1, 2, 3, 5: Verweis «steht in structure» stimmte nicht (die Buch-Struktur enthält Schwur, Kette 2,10–12 und Verfahren nicht) – auf die Struktur der Kapitel/Abschnitte umgestellt; Moment 6: «leer» als Deutung gekennzeichnet.",
+    "Akt 3: beide Zweige der Bedingung 3,13 (vorher nur einer; Regel 1 und 4).",
+    "«Weg weg und zurück» sprachlich berichtigt («Wegzug und Rückkehr»).",
+    "Leitwort «Ruhe»: 3,18 entfernt (Anklang nur der deutschen Übersetzung).",
+    "crossref: Perez präzisiert ([[GEN.38.29]], OpenBible), Rahel und Lea ([[GEN.29.31-GEN.30.24]]) ergänzt – beide vom Text selbst genannt.",
+    "s2 (Umkehrung) und s4 (Kapitel 2 ↔ 3): Zuordnung der Paare als Deutung gekennzeichnet; die Einzelglieder bleiben textbelegt."
    ]
   }
  }

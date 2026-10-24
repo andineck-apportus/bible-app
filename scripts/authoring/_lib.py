@@ -13,6 +13,7 @@ Der Übersetzungstext entsteht aus der Auszeichnung; so stimmen Text und Wortzuo
 """
 import hashlib
 import json
+import os
 import pathlib
 import re
 import sys
@@ -95,7 +96,7 @@ def alignment_entries(ref, markup, tokens, tokid):
     return text, out
 
 
-SUMMARY_SRC = ROOT / "scripts/authoring/zusammenfassungen_daten"
+SUMMARY_SRC = pathlib.Path(os.environ.get("BIBLE_SUMMARY_SRC") or ROOT / "scripts/authoring/zusammenfassungen_daten")  # Entwürfe: anderer Ordner
 _OVERRIDES = None
 
 

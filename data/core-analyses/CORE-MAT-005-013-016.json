@@ -6,35 +6,152 @@
  "level": "section",
  "reference": "MAT.5.13-MAT.5.16",
  "target": "TU-MAT-005-013-016",
- "core_de": "Die Jünger sind Salz der Erde und Licht der Welt; ihr Licht soll leuchten, damit die Menschen ihre guten Werke sehen und den Vater preisen.",
+ "core_de": "Jesus sagt den Jüngern zu: Ihr seid das Salz der Erde – fades Salz taugt zu nichts mehr – und das Licht der Welt; ihr Licht soll vor den Menschen leuchten, damit sie ihre guten Werke sehen und den Vater in den Himmeln preisen.",
  "mode": "speech",
  "voice": {
   "speaker": "FIG-JESUS",
   "addressee": "FIG-GRUPPE-JUENGER"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "parallel",
+    "subtype": "parallele Hälften: zwei Bildworte «Ihr seid …»",
+    "range": "MAT.5.13-MAT.5.16",
+    "elements": [
+     {
+      "label": "Ihr seid das Salz der Erde",
+      "ref": "MAT.5.13",
+      "role": "Bildwort 1",
+      "child": "s2"
+     },
+     {
+      "label": "Ihr seid das Licht der Welt",
+      "ref": "MAT.5.14-MAT.5.16",
+      "role": "Bildwort 2",
+      "child": "s3"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Jesus",
+       "to": "seine Jünger, vor den Menschenmengen (5,1–2)"
+      }
+     ],
+     "modality": [
+      {
+       "note": "Zuspruch als Feststellung («Ihr seid»), beim Salz eine Warnung für einen Fall («wenn»), beim Licht ein Auftrag («so soll euer Licht leuchten»)."
+      }
+     ]
+    },
+    "visual": "columns",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "parable",
+    "subtype": "Bildwort mit Warnung",
+    "range": "MAT.5.13",
+    "elements": [
+     {
+      "label": "Ihr seid das Salz der Erde",
+      "ref": "MAT.5.13",
+      "role": "Zuspruch (Sache: ihr)"
+     },
+     {
+      "label": "Wenn das Salz fad wird → es taugt zu nichts mehr, ausser hinausgeworfen und zertreten zu werden",
+      "ref": "MAT.5.13",
+      "role": "Bild: Bedingung → Folge (Warnung)"
+     }
+    ],
+    "visual": "levels",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "parable",
+    "subtype": "Bildwort mit zwei Bildern und Anwendung",
+    "range": "MAT.5.14-MAT.5.16",
+    "elements": [
+     {
+      "label": "Ihr seid das Licht der Welt",
+      "ref": "MAT.5.14",
+      "role": "Zuspruch (Sache: ihr)"
+     },
+     {
+      "label": "Eine Stadt auf einem Berg kann nicht verborgen bleiben",
+      "ref": "MAT.5.14",
+      "role": "Bild 1"
+     },
+     {
+      "label": "Eine Lampe stellt man nicht unter den Scheffel, sondern auf den Leuchter, und sie leuchtet allen im Haus",
+      "ref": "MAT.5.15",
+      "role": "Bild 2 («nicht … sondern»)"
+     },
+     {
+      "label": "Anwendung: euer Licht soll leuchten",
+      "ref": "MAT.5.16",
+      "role": "Anwendung («so»)",
+      "child": "s4"
+     }
+    ],
+    "visual": "levels",
+    "basis": "text"
+   },
+   {
+    "id": "s4",
+    "pattern": "cause",
+    "subtype": "Zweck",
+    "range": "MAT.5.16",
+    "elements": [
+     {
+      "label": "Euer Licht soll vor den Menschen leuchten",
+      "ref": "MAT.5.16",
+      "role": "Auftrag"
+     },
+     {
+      "label": "damit sie eure guten Werke sehen",
+      "ref": "MAT.5.16",
+      "role": "Zweck («damit»)"
+     },
+     {
+      "label": "und euren Vater in den Himmeln preisen",
+      "ref": "MAT.5.16",
+      "role": "Ziel"
+     }
+    ],
+    "visual": "arrows",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
    "reference": "MAT.5.13",
-   "text_de": "Jesus nennt die Jünger das Salz der Erde und warnt: fades Salz taugt zu nichts mehr.",
-   "reason_de": "Erstes der beiden Bildworte, das die Rolle der Jünger in der Welt benennt (Kriterium 1 und 4).",
-   "recognition_de": "Jesus zeigt auf Salz; daneben wird fades Salz hinausgeworfen und zertreten.",
+   "text_de": "Jesus nennt die Jünger das Salz der Erde und warnt: Wenn das Salz fad wird, taugt es zu nichts mehr, als hinausgeworfen und zertreten zu werden.",
+   "reason_de": "Erstes der beiden parallelen Bildworte; benennt die Rolle der Jünger samt Warnung (Kriterium 1 und 4).",
+   "recognition_de": "Linke Spalte: Salz mit Beschriftung «Salz der Erde»; darunter fades Salz, das hinausgeworfen und zertreten wird.",
    "keywords": [
     "Salz der Erde"
    ]
   },
   {
    "reference": "MAT.5.14-MAT.5.16",
-   "text_de": "Jesus nennt die Jünger das Licht der Welt: Eine Lampe stellt man nicht unter den Scheffel, sondern auf den Leuchter, damit sie allen leuchtet; so sollen die Menschen ihre guten Werke sehen und den Vater preisen.",
-   "reason_de": "Trägt die Kernaussage samt Ziel «euren Vater preisen» (Kriterium 1); bekanntes Bild von Lampe und Scheffel (Kriterium 4).",
-   "recognition_de": "Eine brennende Lampe steht auf dem Leuchter statt unter dem Scheffel; im Hintergrund eine Stadt auf dem Berg.",
+   "text_de": "Jesus nennt die Jünger das Licht der Welt: Eine Stadt auf dem Berg bleibt nicht verborgen, eine Lampe gehört nicht unter den Scheffel, sondern auf den Leuchter; so soll ihr Licht vor den Menschen leuchten, damit sie ihre guten Werke sehen und den Vater in den Himmeln preisen.",
+   "reason_de": "Zweites Bildwort, trägt die Kernaussage samt Ziel «euren Vater preisen» (Kriterium 1); bekanntes Bild von Lampe und Scheffel (Kriterium 4).",
+   "recognition_de": "Rechte Spalte: brennende Lampe auf dem Leuchter statt unter dem Scheffel, dahinter die Stadt auf dem Berg; darunter Pfeilkette Licht → gute Werke sehen → Vater preisen.",
    "keywords": [
     "Licht der Welt",
-    "Leuchter"
+    "Leuchter",
+    "euren Vater in den Himmeln preisen"
    ]
   }
  ],
  "omitted_de": [
-  "Stadt auf dem Berg als eigenes Bild – nur Hintergrund zum Lichtwort"
+  "Frage «womit soll es wieder salzig werden?» (5,13) – rhetorische Frage, in der Warnung enthalten"
  ],
  "persons": [
   "FIG-JESUS",
@@ -50,17 +167,18 @@
    "fingerprint": "1164240452f8e53d"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Gegen den Text geprüft; Abweichungen vom Wortlaut bzw. ungekennzeichnete Deutungen wurden korrigiert.",
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Zwei parallele Bildworte «Ihr seid …» mit Bildhälfte, Warnung (Salz) und Anwendung mit Zweck (Licht) richtig erkannt; nichts Tragendes fehlt.",
   "changes_de": [
-   "Moment 5,14–16, text_de: Zielsatz von 5,16 (gute Werke sehen, den Vater preisen) ergänzt, da er als tragend begründet ist."
+   "Salz-Glied näher am Wortlaut: «taugt zu nichts mehr, ausser hinausgeworfen und zertreten zu werden» statt einer Feststellung «es wird hinausgeworfen»",
+   "Selbstverweis links [MAT.5.16] im Auftragsglied von s4 entfernt (verband nichts)"
   ]
  }
 }

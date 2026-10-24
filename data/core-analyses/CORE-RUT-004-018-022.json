@@ -6,28 +6,101 @@
  "level": "section",
  "reference": "RUT.4.18-RUT.4.22",
  "target": "TU-RUT-004-018-022",
- "core_de": "Ein Stammbaum führt von Perez über Boas und Obed zu König David.",
+ "core_de": "Ein Stammbaum führt von Perez über Boas und Obed zu David.",
  "mode": "list",
  "voice": {
   "speaker": "narrator"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "tree",
+    "subtype": "Stammbaum, absteigend, eine Linie",
+    "range": "RUT.4.18-RUT.4.22",
+    "elements": [
+     {
+      "label": "Perez",
+      "ref": "RUT.4.18",
+      "role": "Wurzel"
+     },
+     {
+      "label": "Hezron",
+      "ref": "RUT.4.18",
+      "role": "Glied"
+     },
+     {
+      "label": "Ram",
+      "ref": "RUT.4.19",
+      "role": "Glied"
+     },
+     {
+      "label": "Amminadab",
+      "ref": "RUT.4.19",
+      "role": "Glied"
+     },
+     {
+      "label": "Nachschon",
+      "ref": "RUT.4.20",
+      "role": "Glied"
+     },
+     {
+      "label": "Salma (in 4,21 Salmon)",
+      "ref": "RUT.4.20-RUT.4.21",
+      "role": "Glied"
+     },
+     {
+      "label": "Boas",
+      "ref": "RUT.4.21",
+      "role": "Glied"
+     },
+     {
+      "label": "Obed",
+      "ref": "RUT.4.21",
+      "role": "Glied"
+     },
+     {
+      "label": "Isai",
+      "ref": "RUT.4.22",
+      "role": "Glied"
+     },
+     {
+      "label": "David",
+      "ref": "RUT.4.22",
+      "role": "Ziel"
+     }
+    ],
+    "features": {
+     "leitwort": [
+      {
+       "word": "zeugte",
+       "refs": [
+        "RUT.4.18-RUT.4.22"
+       ],
+       "role": "Formel je Glied"
+      }
+     ],
+     "text_forms": [
+      {
+       "ref": "RUT.4.20-RUT.4.21",
+       "note": "Der Name lautet in 4,20 «Salma», in 4,21 «Salmon»; beide Formen stehen im Text und werden nicht angeglichen."
+      }
+     ]
+    },
+    "visual": "tree",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
-   "reference": "RUT.4.18",
-   "text_de": "Es folgt der Stammbaum des Perez.",
-   "reason_de": "Rahmen (Kriterium 2): Die Überschrift ordnet die Geschichte in eine Geschlechterfolge ein.",
-   "recognition_de": "Eine Ahnenreihe als Stammbaum, an der Wurzel der Name Perez.",
+   "reference": "RUT.4.18-RUT.4.22",
+   "text_de": "Der Stammbaum des Perez führt von Perez über Hezron, Ram, Amminadab, Nachschon und Salma zu Boas und weiter über Obed und Isai zu David.",
+   "reason_de": "Ein Stammbaum ist ein Baum und zählt als ein Moment mit allen Gliedern; er ordnet die Geschichte in die Geschlechterfolge ein (Kriterium 2) und läuft auf David zu, den Zielpunkt des Buches (Kriterium 1).",
+   "recognition_de": "Ein Stammbaum als Kette von Perez bis David mit allen zehn Namen; Boas, Obed und David hervorgehoben.",
    "keywords": [
-    "Stammbaum des Perez"
-   ],
-   "mode": "list"
-  },
-  {
-   "reference": "RUT.4.21-RUT.4.22",
-   "text_de": "Boas zeugt Obed, Obed zeugt Isai, und Isai zeugt David.",
-   "reason_de": "Trägt den Zielpunkt des Buches (Kriterium 1) und ist das Ende der Liste, auf das sie zuläuft (Kriterium 2).",
-   "recognition_de": "Der Stammbaum endet bei David; davor Boas, Obed und Isai.",
-   "keywords": [
+    "Stammbaum des Perez",
     "Boas zeugte Obed",
     "Isai zeugte David"
    ],
@@ -35,7 +108,7 @@
   }
  ],
  "omitted_de": [
-  "Hezron, Ram, Amminadab, Nachschon, Salma (4,19–20) – Zwischenglieder der Liste ohne eigene Rolle"
+  "Keine Glieder weggelassen; nur die Formel «zeugte» wird in der Zusammenfassung nicht bei jedem Glied wiederholt (Wiederholung)"
  ],
  "persons": [
   "FIG-BOAS",
@@ -51,15 +124,15 @@
    "fingerprint": "f1b646bf30df2119"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Ohne Befund.",
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Stammbaum mit allen zehn Gliedern, Richtung absteigend, Salma/Salmon nicht angeglichen; keine Änderung.",
   "changes_de": []
  }
 }

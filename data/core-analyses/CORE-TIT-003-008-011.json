@@ -12,43 +12,128 @@
   "speaker": "FIG-PAULUS",
   "addressee": "FIG-TITUS"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "contrast",
+    "subtype": "gut und nützlich ↔ nutzlos und leer",
+    "range": "TIT.3.8-TIT.3.11",
+    "elements": [
+     {
+      "label": "Zuverlässig ist das Wort: Titus soll darin fest auftreten",
+      "ref": "TIT.3.8",
+      "role": "Bekräftigung",
+      "links": [
+       "TIT.3.3-TIT.3.7"
+      ]
+     },
+     {
+      "label": "damit die Glaubenden sich für gute Werke einsetzen – das ist gut und nützlich für die Menschen",
+      "ref": "TIT.3.8",
+      "role": "nützlich"
+     },
+     {
+      "label": "Törichte Streitfragen, Geschlechtsregister, Zank und Streit um das Gesetz meide – denn sie sind nutzlos und leer",
+      "ref": "TIT.3.9",
+      "role": "nutzlos"
+     },
+     {
+      "label": "Umgang mit einem, der Spaltungen verursacht",
+      "ref": "TIT.3.10-TIT.3.11",
+      "role": "Anwendung",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Paulus",
+       "to": "Titus"
+      }
+     ],
+     "modality": [
+      {
+       "note": "Fest auftreten, meiden, abweisen: Aufträge an Titus selbst; das Einsetzen für gute Werke betrifft die Glaubenden."
+      }
+     ],
+     "leitwort": [
+      {
+       "note": "«gute Werke» (3,8); Gegenwort «nutzlos» zu «nützlich»"
+      }
+     ]
+    },
+    "visual": "columns",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "sequence",
+    "subtype": "Verfahren in Stufen",
+    "range": "TIT.3.10-TIT.3.11",
+    "elements": [
+     {
+      "label": "erste Ermahnung",
+      "ref": "TIT.3.10",
+      "role": "Stufe 1"
+     },
+     {
+      "label": "zweite Ermahnung",
+      "ref": "TIT.3.10",
+      "role": "Stufe 2"
+     },
+     {
+      "label": "dann weise ihn ab",
+      "ref": "TIT.3.10",
+      "role": "Folge"
+     },
+     {
+      "label": "da du weisst: Ein solcher ist verdreht und sündigt; er hat sich selbst das Urteil gesprochen",
+      "ref": "TIT.3.11",
+      "role": "Begründung («da du weisst»)"
+     }
+    ],
+    "features": {
+     "open_end": [
+      {
+       "note": "Der Text nennt keinen Zweig für den Fall, dass er auf die Ermahnung hört; nicht ergänzen."
+      }
+     ]
+    },
+    "visual": "timeline",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
-   "reference": "TIT.3.8",
-   "text_de": "Paulus bekräftigt das zuverlässige Wort und will, dass Titus fest auftritt, damit die Glaubenden sich für gute Werke einsetzen.",
-   "reason_de": "Bekräftigt das Vorangehende und nennt das Ziel des ganzen Briefes; Leitwort «gute Werke» (Kriterien 1–2).",
-   "recognition_de": "Paulus an Titus: Titus soll fest vor der Gemeinde auftreten, damit die Glaubenden sich für gute Werke einsetzen (verlangte Handlung; Deutung für das Bild: Mithelfen für «gute Werke»).",
+   "reference": "TIT.3.8-TIT.3.9",
+   "text_de": "Das Wort ist zuverlässig: Titus soll fest auftreten, damit die Glaubenden sich für gute Werke einsetzen – das ist gut und nützlich; törichte Streitfragen, Geschlechtsregister und Streit um das Gesetz soll er meiden, denn sie sind nutzlos und leer.",
+   "reason_de": "Gegensatz nützlich ↔ nutzlos als ein Moment; bekräftigt das Vorangehende und nennt das Ziel des Briefes mit dem Leitwort «gute Werke» (Kriterien 1–2).",
+   "recognition_de": "Paulus an Titus: zwei Spalten – links Glaubende, die mit anpacken und helfen («gut und nützlich»), rechts zwei Männer, die über einer langen Ahnenliste streiten («nutzlos und leer»), von denen Titus sich abwendet (verlangte Handlungen; Deutung für das Bild: Mithelfen für «gute Werke», Ahnenliste nach «Geschlechtsregister»).",
    "keywords": [
     "Zuverlässig ist das Wort",
-    "gute Werke"
-   ],
-   "mode": "instruction"
-  },
-  {
-   "reference": "TIT.3.9",
-   "text_de": "Törichte Streitfragen, Geschlechtsregister und Streit um das Gesetz soll Titus meiden, denn sie sind nutzlos und leer.",
-   "reason_de": "Gegenstück zu den guten Werken: was nicht nützt (Kriterien 1 und 4).",
-   "recognition_de": "Paulus an Titus: Zwei Männer streiten über einer langen Ahnenliste, und Titus soll sich davon abwenden (verlangte Handlung; Ahnenliste nach «Geschlechtsregister»).",
-   "keywords": [
-    "Törichte Streitfragen",
+    "gute Werke",
     "nutzlos und leer"
    ],
    "mode": "instruction"
   },
   {
    "reference": "TIT.3.10-TIT.3.11",
-   "text_de": "Einen Menschen, der Spaltungen verursacht, soll Titus nach einer ersten und zweiten Ermahnung abweisen.",
+   "text_de": "Einen Menschen, der Spaltungen verursacht, soll Titus nach einer ersten und zweiten Ermahnung abweisen, da er weiss, dass ein solcher verdreht ist und sündigt; er hat sich selbst das Urteil gesprochen.",
    "reason_de": "Schluss des Abschnitts und konkrete Anweisung zur Gemeindeordnung (Kriterien 2–3).",
-   "recognition_de": "Paulus an Titus: Titus soll einen Spalter zweimal ermahnen und ihn dann abweisen (verlangte Handlung).",
+   "recognition_de": "Paulus an Titus: drei Stufen auf einer Leiste – erste Ermahnung, zweite Ermahnung, Abweisen eines Spalters (verlangte Handlung).",
    "keywords": [
     "Spaltungen verursacht",
-    "zweiten Ermahnung"
+    "zweiten Ermahnung",
+    "selbst das Urteil gesprochen"
    ],
    "mode": "instruction"
   }
  ],
  "omitted_de": [
-  "Die Begründung «er hat sich selbst das Urteil gesprochen» (Tit 3,11) – im dritten Moment mitgemeint"
+  "Umschreibung «die, die zum Glauben an Gott gekommen sind» (Tit 3,8) – im Moment kurz «die Glaubenden»"
  ],
  "persons": [
   "FIG-PAULUS",
@@ -64,19 +149,17 @@
    "fingerprint": "29d50c0159141043"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Auswahl stimmt; in der Kernaussage war falsch zugeordnet, wer handeln soll.",
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Gegensatz gut und nützlich ↔ nutzlos und leer mit Bekräftigung und gestuftem Verfahren richtig; fehlender Zweig (Spalter hört) zu Recht als offen vermerkt, nicht ergänzt.",
   "changes_de": [
-   "core_de: Streitfragen meiden und Spalter abweisen sind Aufträge an Titus selbst, nicht an die Glaubenden",
-   "3,10–11: «aus der Gemeinde» gestrichen (steht nicht im Text)",
-   "alle Erkennungsmomente als verlangte Handlung im Briefrahmen «Paulus an Titus»"
+   "Begründung 3,11 näher am Wortlaut: «da du weisst: …» statt «denn …» (Label s2/4 und Moment 2)."
   ]
  }
 }

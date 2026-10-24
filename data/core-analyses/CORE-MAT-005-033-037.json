@@ -6,27 +6,128 @@
  "level": "section",
  "reference": "MAT.5.33-MAT.5.37",
  "target": "TU-MAT-005-033-037",
- "core_de": "Statt bei Himmel, Erde, Jerusalem oder dem eigenen Kopf zu schwören, soll die Rede der Jünger schlicht «Ja, ja» und «nein, nein» sein.",
+ "core_de": "Statt nur keinen Meineid zu schwören, sollen die Jünger überhaupt nicht schwören, weder beim Himmel noch bei der Erde, bei Jerusalem oder beim eigenen Kopf; ihre Rede soll schlicht «Ja, ja» und «nein, nein» sein.",
  "mode": "instruction",
  "voice": {
   "speaker": "FIG-JESUS",
   "addressee": "FIG-GRUPPE-JUENGER"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "contrast",
+    "subtype": "Antithese «Ihr habt gehört … Ich aber sage euch»",
+    "range": "MAT.5.33-MAT.5.37",
+    "elements": [
+     {
+      "label": "Ihr habt weiter gehört, dass zu den Alten gesagt worden ist: Du sollst keinen Meineid schwören; du sollst aber dem Herrn deine Eide halten",
+      "ref": "MAT.5.33",
+      "role": "«Ihr habt gehört …»",
+      "links": [
+       "MAT.5.34"
+      ]
+     },
+     {
+      "label": "Ich aber sage euch: Ihr sollt überhaupt nicht schwören",
+      "ref": "MAT.5.34-MAT.5.36",
+      "role": "«Ich aber sage euch …»",
+      "links": [
+       "MAT.5.33"
+      ],
+      "child": "s2"
+     },
+     {
+      "label": "Eure Rede sei «Ja, ja», «nein, nein»; was darüber hinausgeht, ist vom Bösen",
+      "ref": "MAT.5.37",
+      "role": "«Ich aber sage euch …», Fortsetzung: Weisung statt Schwur"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Jesus",
+       "to": "seine Jünger, vor den Menschenmengen (5,1–2)"
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "Ihr habt gehört … Ich aber sage euch",
+       "role": "gliedernd (4. Gegensatz)"
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "LEV.19.12",
+       "kind": "Bezug des Meineid-Verbots; Zuordnung als Deutung"
+      },
+      {
+       "ref": "DEU.23.21",
+       "kind": "Bezug von «dem Herrn deine Eide halten» (Gelübde erfüllen); Zuordnung als Deutung"
+      }
+     ]
+    },
+    "visual": "columns",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "series",
+    "subtype": "Schwurformeln, je mit «denn»: drei mit «weder … noch» (Gott zugeordnet), dazu eine mit «du» (eigener Kopf)",
+    "range": "MAT.5.34-MAT.5.36",
+    "elements": [
+     {
+      "label": "Nicht beim Himmel → denn er ist der Thron Gottes",
+      "ref": "MAT.5.34",
+      "role": "Schwurformel → Begründung"
+     },
+     {
+      "label": "Nicht bei der Erde → denn sie ist der Schemel seiner Füsse",
+      "ref": "MAT.5.35",
+      "role": "Schwurformel → Begründung"
+     },
+     {
+      "label": "Nicht bei Jerusalem → denn es ist die Stadt des grossen Königs",
+      "ref": "MAT.5.35",
+      "role": "Schwurformel → Begründung"
+     },
+     {
+      "label": "Nicht bei deinem Kopf → denn du kannst nicht ein einziges Haar weiss oder schwarz machen",
+      "ref": "MAT.5.36",
+      "role": "Schwurformel → Begründung"
+     }
+    ],
+    "visual": "grid",
+    "basis": "text",
+    "features": {
+     "pattern_break": [
+      {
+       "ref": "MAT.5.36",
+       "kind": "3 + 1: neuer Satz «Schwöre auch nicht», Wechsel von «ihr» zu «du»; Begründung nicht aus Gottes Bereich, sondern aus der Ohnmacht des Menschen"
+      }
+     ]
+    }
+   }
+  ]
+ },
  "moments": [
   {
-   "reference": "MAT.5.33-MAT.5.34",
-   "text_de": "Jesus stellt dem Gebot, keinen Meineid zu schwören, entgegen: Ihr sollt überhaupt nicht schwören.",
-   "reason_de": "Gegenüberstellung mit der Hauptforderung (Kriterium 1 und 2).",
-   "recognition_de": "Jesus wehrt mit erhobener Hand eine zum Schwur erhobene Hand ab.",
+   "reference": "MAT.5.33-MAT.5.36",
+   "text_de": "Jesus stellt dem Gebot, keinen Meineid zu schwören, entgegen: Ihr sollt überhaupt nicht schwören, weder beim Himmel, dem Thron Gottes, noch bei der Erde, dem Schemel seiner Füsse, noch bei Jerusalem, der Stadt des grossen Königs, noch beim eigenen Kopf, an dem man kein Haar weiss oder schwarz machen kann.",
+   "reason_de": "Gegenüberstellung mit der Hauptforderung (Kriterium 1 und 2); die vier Schwurformeln sind ihre Glieder und zählen mit ihr als ein Moment.",
+   "recognition_de": "Zwei Spalten: links eine zum Schwur erhobene Hand mit «kein Meineid», rechts Jesus wehrt ab; darunter vier kleine Felder Himmel (Thron), Erde (Schemel), Jerusalem (Stadt), Kopf (Haar), je durchgestrichen.",
    "keywords": [
-    "überhaupt nicht schwören"
+    "überhaupt nicht schwören",
+    "Thron Gottes",
+    "Schemel seiner Füsse"
    ]
   },
   {
    "reference": "MAT.5.37",
    "text_de": "Eure Rede sei «Ja, ja», «nein, nein»; was darüber hinausgeht, ist vom Bösen.",
    "reason_de": "Positive Schlussformel, an der man die Stelle erkennt (Kriterium 2 und 4).",
-   "recognition_de": "Ein Jünger antwortet schlicht mit einem Ja oder Nein, ohne Schwurgeste.",
+   "recognition_de": "Unter den Spalten: ein Jünger antwortet schlicht mit «Ja» oder «Nein», ohne Schwurgeste.",
    "keywords": [
     "Ja, ja",
     "nein, nein"
@@ -34,7 +135,7 @@
   }
  ],
  "omitted_de": [
-  "Himmel als Thron, Erde als Schemel, Jerusalem, Kopf und Haar (5,34–36) – Aufzählung der Schwurformeln, durch die Hauptforderung getragen"
+  "Nichts Tragendes; der Wechsel von «ihr» zu «du» in 5,36 ist als Musterbruch in structure vermerkt, im Moment nicht eigens genannt"
  ],
  "persons": [
   "FIG-JESUS",
@@ -50,15 +151,19 @@
    "fingerprint": "8ba3c306b5a1fb6d"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Gegen den Text geprüft; Kernaussage, Momente, Textart und Sprecher stimmen, keine Änderung.",
-  "changes_de": []
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Gegensatz mit Reihe der Schwurformeln und positiver Schlussweisung richtig erkannt. Der Wechsel zu «du» in 5,36 war als bedeutungslos weggelassen; er markiert ein 3 + 1 (drei Formeln mit Gottesbezug, dann der eigene Kopf) und wurde als Musterbruch aufgenommen.",
+  "changes_de": [
+   "Seiten mit den Textformeln statt «damals/jetzt»; Zitat 5,33 wortgetreu («du sollst aber dem Herrn deine Eide halten» statt «sondern»)",
+   "Musterbruch 3 + 1 in 5,36 (neuer Satz mit «du», andere Art der Begründung) als pattern_break ergänzt und aus omitted_de genommen (Katalog: Musterbruch nie glätten)",
+   "Querverweis DEU.23.21 ergänzt"
+  ]
  }
 }

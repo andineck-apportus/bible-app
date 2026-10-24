@@ -16,35 +16,246 @@
  "voice": {
   "speaker": "narrator"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Tor – Geburt – Stammbaum",
+    "range": "RUT.4.1-RUT.4.22",
+    "elements": [
+     {
+      "label": "Löserverfahren im Tor",
+      "ref": "RUT.4.1-RUT.4.12",
+      "role": "Abschnitt: Verfahren",
+      "child": "s2"
+     },
+     {
+      "label": "Geburt Obeds und Lob der Frauen: JHWH hat es Noomi nicht an einem Löser fehlen lassen; «Ein Sohn ist Noomi geboren!»",
+      "ref": "RUT.4.13-RUT.4.17",
+      "role": "Abschnitt: Geburt"
+     },
+     {
+      "label": "Stammbaum des Perez",
+      "ref": "RUT.4.18-RUT.4.22",
+      "role": "Abschnitt: Stammbaum",
+      "child": "s4"
+     }
+    ],
+    "features": {
+     "leitwort": [
+      {
+       "word": "lösen / Löser",
+       "refs": [
+        "RUT.4.1-RUT.4.8",
+        "RUT.4.14"
+       ],
+       "role": "Leitwort"
+      },
+      {
+       "word": "Perez",
+       "refs": [
+        "RUT.4.12",
+        "RUT.4.18"
+       ],
+       "role": "verklammernd: Segenswunsch und Stammbaum"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "form",
+    "subtype": "Löserverfahren im Tor",
+    "form_type": "lawsuit",
+    "range": "RUT.4.1-RUT.4.12",
+    "elements": [
+     {
+      "label": "Vorladung und Zeugen: der Löser und zehn Älteste im Tor",
+      "ref": "RUT.4.1-RUT.4.2",
+      "role": "Vorladung, Zeugen"
+     },
+     {
+      "label": "Sache und Angebot",
+      "ref": "RUT.4.3-RUT.4.4",
+      "role": "Angebot mit Bedingung",
+      "child": "s3"
+     },
+     {
+      "label": "Zusatz: Mit dem Feld erwirbst du auch Rut, um den Namen des Verstorbenen zu erhalten",
+      "ref": "RUT.4.5",
+      "role": "Zusatz"
+     },
+     {
+      "label": "Verzicht: «Ich kann nicht lösen, sonst schädige ich mein eigenes Erbteil»",
+      "ref": "RUT.4.6",
+      "role": "Wende"
+     },
+     {
+      "label": "Beglaubigung: Der Löser zieht seinen Schuh aus (mit Erklärung des Brauchs durch den Erzähler)",
+      "ref": "RUT.4.7-RUT.4.8",
+      "role": "Beglaubigung"
+     },
+     {
+      "label": "Boas vor Zeugen: Besitz Elimelechs und Rut zur Frau erworben, damit der Name des Verstorbenen nicht ausgelöscht wird",
+      "ref": "RUT.4.9-RUT.4.10",
+      "role": "Rechtsakt mit Zweck"
+     },
+     {
+      "label": "«Wir sind Zeugen!» – Segenswunsch: JHWH mache die Frau wie Rahel und Lea; dein Haus werde wie das Haus des Perez durch die Nachkommen, die JHWH dir geben wird",
+      "ref": "RUT.4.11-RUT.4.12",
+      "role": "Bestätigung, Segen"
+     }
+    ],
+    "features": {
+     "genre": [
+      {
+       "note": "«Rechtsverfahren» ist Einordnung (Gattungsbegriff), keine Angabe des Textes."
+      }
+     ],
+     "pattern_break": [
+      {
+       "ref": "RUT.4.1-RUT.4.12",
+       "note": "Kein Streitfall: Anklage, Beweis und Urteil des Formulars fehlen; an ihre Stelle treten Sache und Angebot, Verzicht, Beglaubigung und Bezeugung."
+      }
+     ]
+    },
+    "visual": "outline",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "condition",
+    "subtype": "Weiche",
+    "range": "RUT.4.4",
+    "elements": [
+     {
+      "label": "Wenn du lösen willst → dann löse!",
+      "ref": "RUT.4.4",
+      "role": "Zweig 1"
+     },
+     {
+      "label": "Wenn nicht → sag es mir; ausser dir kann keiner lösen, und ich komme nach dir",
+      "ref": "RUT.4.4",
+      "role": "Zweig 2"
+     }
+    ],
+    "visual": "switch",
+    "basis": "text"
+   },
+   {
+    "id": "s4",
+    "pattern": "tree",
+    "subtype": "Stammbaum, absteigend, eine Linie",
+    "range": "RUT.4.18-RUT.4.22",
+    "elements": [
+     {
+      "label": "Perez",
+      "ref": "RUT.4.18",
+      "role": "Wurzel"
+     },
+     {
+      "label": "Hezron",
+      "ref": "RUT.4.18",
+      "role": "Glied"
+     },
+     {
+      "label": "Ram",
+      "ref": "RUT.4.19",
+      "role": "Glied"
+     },
+     {
+      "label": "Amminadab",
+      "ref": "RUT.4.19",
+      "role": "Glied"
+     },
+     {
+      "label": "Nachschon",
+      "ref": "RUT.4.20",
+      "role": "Glied"
+     },
+     {
+      "label": "Salma (in 4,21 Salmon)",
+      "ref": "RUT.4.20-RUT.4.21",
+      "role": "Glied"
+     },
+     {
+      "label": "Boas",
+      "ref": "RUT.4.21",
+      "role": "Glied"
+     },
+     {
+      "label": "Obed",
+      "ref": "RUT.4.21",
+      "role": "Glied"
+     },
+     {
+      "label": "Isai",
+      "ref": "RUT.4.22",
+      "role": "Glied"
+     },
+     {
+      "label": "David",
+      "ref": "RUT.4.22",
+      "role": "Ziel"
+     }
+    ],
+    "features": {
+     "leitwort": [
+      {
+       "word": "zeugte",
+       "refs": [
+        "RUT.4.18-RUT.4.22"
+       ],
+       "role": "Formel je Glied"
+      }
+     ],
+     "text_forms": [
+      {
+       "ref": "RUT.4.20-RUT.4.21",
+       "note": "Der Name lautet in 4,20 «Salma», in 4,21 «Salmon»; beide Formen stehen im Text und werden nicht angeglichen."
+      }
+     ]
+    },
+    "visual": "tree",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
-   "reference": "RUT.4.9-RUT.4.11",
-   "text_de": "Boas erklärt vor Ältesten und Volk, er habe Elimelechs Besitz und Rut zur Frau erworben, um den Namen des Verstorbenen zu erhalten, und alle bezeugen und segnen es.",
-   "reason_de": "Trägt die Kernaussage (Kriterium 1) und ist der Höhepunkt in wörtlicher Rede mit Wiederholung «Zeugen» (Kriterium 2).",
-   "recognition_de": "Boas spricht im Tor zu den Ältesten und dem Volk, die antworten: «Wir sind Zeugen!»",
+   "reference": "RUT.4.1-RUT.4.12",
+   "text_de": "Im Tor bietet Boas vor zehn Ältesten dem näheren Löser das Feld an: Will er lösen, soll er lösen. Der Löser will zuerst, verzichtet aber, als dazu Rut gehört, und zieht seinen Schuh aus; Boas erwirbt vor Zeugen Elimelechs Besitz und Rut zur Frau, damit der Name des Verstorbenen bleibt, und alle segnen es.",
+   "reason_de": "Das Verfahren im Tor ist eine Gattungsform und zählt als ein Moment mit allen Gliedern (in structure); es trägt die Kernaussage (Kriterium 1) und gipfelt in wörtlicher Rede mit der Wiederholung «Zeugen» (Kriterium 2).",
+   "recognition_de": "Szene 1 im Tor: Der andere Löser zieht seinen Schuh aus; Boas spricht zu Ältesten und Volk, die antworten: «Wir sind Zeugen!»",
    "keywords": [
+    "nicht lösen",
+    "Schuh aus",
     "Zeugen seid ihr heute",
-    "zur Frau erworben",
     "Wir sind Zeugen"
    ]
   },
   {
-   "reference": "RUT.4.16-RUT.4.17",
-   "text_de": "Noomi nimmt das Kind auf ihren Schoss; die Nachbarinnen rufen «Ein Sohn ist Noomi geboren!» und nennen ihn Obed, den Grossvater Davids.",
-   "reason_de": "Höhepunkt und Rahmen (Kriterium 2): Die leer gewordene Noomi hält ein Kind; Erkennungsmoment des Schlusses (Kriterium 4).",
-   "recognition_de": "Noomi sitzt mit dem kleinen Obed auf dem Schoss, umringt von Nachbarinnen.",
+   "reference": "RUT.4.13-RUT.4.17",
+   "text_de": "JHWH lässt Rut einen Sohn gebären; die Frauen preisen JHWH, der Noomi nicht ohne Löser gelassen hat, Noomi nimmt das Kind auf ihren Schoss, und die Nachbarinnen nennen es Obed, den Grossvater Davids.",
+   "reason_de": "Ausgang und Höhepunkt (Kriterien 1 und 2): Noomi, die ohne Kinder zurückblieb, hält ein Kind (Deutung: Gegenbild zu «leer», 1,21); die Frauen deuten die Wende; Erkennungsmoment des Schlusses (Kriterium 4).",
+   "recognition_de": "Szene 2: Noomi mit dem kleinen Obed auf dem Schoss, umringt von den Frauen, die JHWH preisen.",
    "keywords": [
+    "nicht an einem Löser",
     "Sohn ist Noomi geboren",
-    "Obed",
     "Vaters Davids"
    ]
   },
   {
-   "reference": "RUT.4.21-RUT.4.22",
-   "text_de": "Boas zeugt Obed, Obed zeugt Isai, und Isai zeugt David.",
-   "reason_de": "Trägt den Zielpunkt des Buches (Kriterium 1) und ist das Ende der Liste, auf das sie zuläuft (Kriterium 2).",
-   "recognition_de": "Der Stammbaum endet bei David; davor Boas, Obed und Isai.",
+   "reference": "RUT.4.18-RUT.4.22",
+   "text_de": "Der Stammbaum des Perez führt von Perez über Hezron, Ram, Amminadab, Nachschon und Salma zu Boas und weiter über Obed und Isai zu David.",
+   "reason_de": "Ein Stammbaum ist ein Baum und zählt als ein Moment mit allen Gliedern; er ordnet die Geschichte in die Geschlechterfolge ein (Kriterium 2) und läuft auf David zu, den Zielpunkt des Buches (Kriterium 1).",
+   "recognition_de": "Ein Stammbaum als Kette von Perez bis David mit allen zehn Namen; Boas, Obed und David hervorgehoben.",
    "keywords": [
+    "Stammbaum des Perez",
     "Boas zeugte Obed",
     "Isai zeugte David"
    ],
@@ -52,16 +263,19 @@
   }
  ],
  "omitted_de": [
-  "Verzicht des näheren Lösers mit dem Schuh (4,6–8) – Vorstufe, Kern im Erwerb 4,9–11",
-  "Geburt und Lob der Frauen (4,13–15) – im Bild Noomis mit dem Kind enthalten",
-  "Stammbaum vor Boas (4,18–20) – Zwischenglieder"
+  "Erläuterung des Schuhbrauchs (4,7) – Hintergrund damals",
+  "Namen im Segenswunsch (Rahel, Lea, Tamar, Juda; 4,11b–12) – Nebenfiguren",
+  "Noomi als Pflegerin (4,16b) – im Bild des Schosses enthalten"
  ],
  "persons": [
   "FIG-BOAS",
   "FIG-RUT",
   "FIG-NOOMI",
   "FIG-OBED",
+  "FIG-LOESER",
   "FIG-GRUPPE-AELTESTE",
+  "FIG-GRUPPE-FRAUEN",
+  "FIG-ISAI",
   "FIG-DAVID"
  ],
  "places": [
@@ -71,28 +285,28 @@
  "basis": [
   {
    "record": "CORE-RUT-004-001-012",
-   "fingerprint": "37bbbfbd9c2ae003"
+   "fingerprint": "c9854e2f7b29314d"
   },
   {
    "record": "CORE-RUT-004-013-017",
-   "fingerprint": "71e3bcbf8bc71082"
+   "fingerprint": "2be831d18c4206a0"
   },
   {
    "record": "CORE-RUT-004-018-022",
-   "fingerprint": "aa5035fe97e45028"
+   "fingerprint": "a566b0aeaec763c2"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Auswahl bestätigt; Kernaussage enthielt eine nicht gekennzeichnete Deutung.",
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Kapitel mit Verfahren, Weiche und Stammbaum vollständig; Formular-Lücken und Segenswunsch wie im Abschnitt ergänzt.",
   "changes_de": [
-   "core_de: «füllt Noomis Leere» ersetzt durch die Aussage der Frauen aus 4,15 («bringe Noomi das Leben zurück»)"
+   "s2 form lawsuit: fehlende Pflichtglieder als pattern_break; Segenswunsch mit JHWH und den verheissenen Nachkommen; reason_de Moment 2: «leer» als Deutung gekennzeichnet."
   ]
  }
 }

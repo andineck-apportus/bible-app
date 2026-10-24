@@ -113,6 +113,9 @@ def run(books):
     if errs:
         print("\n".join("FEHLER: " + x for x in errs))
         sys.exit(1)
+    if "--check" in sys.argv:
+        print(f"PASS: {len(cores)} Zusammenfassungen geprüft (nur Prüfung)")
+        return
     n = 0
     for rid, e in sel.items():
         core = cores[e["core"]]
@@ -155,4 +158,4 @@ def run(books):
 
 
 if __name__ == "__main__":
-    run(sys.argv[1:])
+    run([a for a in sys.argv[1:] if a != "--check"])

@@ -11,6 +11,90 @@
  "voice": {
   "speaker": "narrator"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Heimkehr und Gespräch",
+    "range": "RUT.2.18-RUT.2.23",
+    "elements": [
+     {
+      "label": "Rut bringt die aufgelesene Gerste in die Stadt und gibt Noomi, was sie vom Essen übrig gelassen hat",
+      "ref": "RUT.2.18",
+      "role": "Ankunft"
+     },
+     {
+      "label": "Noomi fragt: «Wo hast du heute aufgelesen? Gesegnet sei, der dich beachtet hat!» – Rut nennt den Namen Boas",
+      "ref": "RUT.2.19",
+      "role": "Frage und Antwort"
+     },
+     {
+      "label": "Noomi: «Gesegnet sei er von JHWH, der seine Treue den Lebenden und den Toten nicht entzogen hat! Er ist einer von unseren Lösern.»",
+      "ref": "RUT.2.20",
+      "role": "Wende"
+     },
+     {
+      "label": "Rut berichtet Boas' Wort, sie solle bei seinen Leuten bleiben bis zum Ende der Ernte; Noomi rät dazu",
+      "ref": "RUT.2.21-RUT.2.22",
+      "role": "Bestätigung"
+     },
+     {
+      "label": "Rut liest bei den Arbeiterinnen des Boas bis zum Ende der Gersten- und Weizenernte und wohnt bei Noomi",
+      "ref": "RUT.2.23",
+      "role": "Schlussnotiz"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Noomi",
+       "to": "Rut",
+       "refs": [
+        "RUT.2.19",
+        "RUT.2.20",
+        "RUT.2.22"
+       ]
+      },
+      {
+       "who": "Rut",
+       "to": "Noomi",
+       "refs": [
+        "RUT.2.19",
+        "RUT.2.21"
+       ]
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "Löser",
+       "refs": [
+        "RUT.2.20"
+       ],
+       "role": "Stichwort, erstmals im Buch"
+      },
+      {
+       "word": "gesegnet",
+       "refs": [
+        "RUT.2.19",
+        "RUT.2.20"
+       ],
+       "role": "Steigerung: erst allgemein («der dich beachtet hat»), dann «von JHWH», nachdem Rut den Namen Boas genannt hat"
+      }
+     ],
+     "interpretation": [
+      {
+       "ref": "RUT.2.20",
+       "note": "Ob sich «der seine Treue … nicht entzogen hat» auf JHWH oder auf Boas bezieht, lässt der Text offen."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
    "reference": "RUT.2.18",
@@ -23,9 +107,9 @@
    ]
   },
   {
-   "reference": "RUT.2.20",
-   "text_de": "Als Noomi den Namen Boas hört, segnet sie ihn im Namen JHWHs, der seine Treue nicht entzogen hat, und sagt: Er ist einer unserer Löser.",
-   "reason_de": "Trägt die Kernaussage (Kriterium 1) und ist der Wendepunkt (Kriterium 2): Noomi spricht zum ersten Mal wieder von JHWHs Treue, und das Stichwort «Löser» fällt.",
+   "reference": "RUT.2.19-RUT.2.20",
+   "text_de": "Auf Noomis Frage nennt Rut den Namen Boas; Noomi segnet ihn: «Gesegnet sei er von JHWH, der seine Treue den Lebenden und den Toten nicht entzogen hat!», und sagt: Er ist einer unserer Löser.",
+   "reason_de": "Trägt die Kernaussage (Kriterium 1) und ist der Wendepunkt (Kriterium 2): Noomi spricht nach ihrer Klage (1,20–21) wieder von Treue (ob JHWHs oder Boas', lässt der Text offen), und das Stichwort «Löser» fällt.",
    "recognition_de": "Noomi spricht einen Segen über Boas, als Rut ihr seinen Namen nennt.",
    "keywords": [
     "Treue",
@@ -34,8 +118,8 @@
   }
  ],
  "omitted_de": [
-  "Ruts Bericht über Boas' Anweisung (2,21) und Noomis Rat (2,22) – Wiederholung",
-  "Dauer bis Ende der Gersten- und Weizenernte (2,23) – Übergang"
+  "Ruts Bericht über Boas' Anweisung (2,21) und Noomis Rat (2,22) – Wiederholung von 2,8–9",
+  "Schlussnotiz bis zum Ende der Gersten- und Weizenernte (2,23) – Übergang"
  ],
  "persons": [
   "FIG-RUT",
@@ -51,20 +135,18 @@
    "fingerprint": "c4fa179b6f6a14ca"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Auswahl belegt; Kernaussage legte den offenen Bezug von «Treue» in 2,20 fest.",
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Ablauf mit Wende «Löser» richtig; der im Merkmal als offen bezeichnete Bezug von «der seine Treue … nicht entzogen hat» war im Moment festgelegt.",
   "changes_de": [
-   "core_de: «lobt JHWHs Treue» ersetzt durch das wörtliche Zitat aus 2,20 – der Bezug (JHWH oder Boas) bleibt offen",
-   "Erkennungsmoment 2,20: «hebt überrascht die Hände» ersetzt durch den Segen, den der Text nennt",
-   "Schlüsselwort 2,18: «ihre Schwiegermutter sah» ersetzt durch «aufgelesen» – kennzeichnender",
-   "2026-10-23: Kernaussage ohne 2,23 («liest bis zum Ende der Ernte»), weil omitted_de diesen Übergang weglässt (Hinweis der Prüfung der Zusammenfassungen)."
+   "Moment 2: Bezug von «der seine Treue … nicht entzogen hat» offen gelassen wie im Text (vorher auf JHWH festgelegt, im Widerspruch zum eigenen Merkmal interpretation).",
+   "Leitwort «gesegnet»: Rolle verständlich formuliert."
   ]
  }
 }

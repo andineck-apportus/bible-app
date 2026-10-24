@@ -11,131 +11,115 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.6.1",
+      "reference": "MAT.6.1-MAT.6.4",
       "figures": [
         "FIG-JESUS",
-        "FIG-ROLLE-MENSCH",
-        "FIG-GRUPPE-MENGE"
-      ],
-      "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-GUTE-WERKE",
-        "FIG-ZEICHEN-SEHEN"
-      ],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-MENSCH",
-          "icons": [],
-          "word": {
-            "de": "Tut es nicht zur Schau!",
-            "gsw": "Mached s nöd zum Aagää!"
-          }
-        }
-      ],
-      "action_de": "Jesus warnt: Achtet darauf, eure Gerechtigkeit nicht vor den Menschen zu üben, um von ihnen gesehen zu werden; sonst habt ihr keinen Lohn bei eurem Vater in den Himmeln.",
-      "keywords": {
-        "de": "Sonst habt ihr keinen Lohn",
-        "gsw": "Suscht händ ir kei Loon"
-      },
-      "stage": {
-        "x": {
-          "FIG-JESUS": 26,
-          "FIG-ROLLE-MENSCH": 92,
-          "FIG-GRUPPE-MENGE": 156
-        },
-        "at": {
-          "FIG-ZEICHEN-GUTE-WERKE": "FIG-ROLLE-MENSCH",
-          "FIG-ZEICHEN-SEHEN": "FIG-GRUPPE-MENGE"
-        },
-        "pose": {
-          "FIG-ROLLE-MENSCH": "away"
-        },
-        "mood": {
-          "FIG-JESUS": "earnest",
-          "FIG-ROLLE-MENSCH": "smile",
-          "FIG-GRUPPE-MENGE": "surprised"
-        },
-        "size": {
-          "FIG-JESUS": 0.7
-        }
-      }
-    },
-    {
-      "n": 2,
-      "reference": "MAT.6.2-MAT.6.4",
-      "figures": [
         "FIG-ROLLE-HEUCHLER",
-        "FIG-ROLLE-ARMER",
-        "FIG-ROLLE-JUENGER"
+        "FIG-ROLLE-JUENGER",
+        "FIG-GOTT"
       ],
       "objects": [
-        "FIG-OBJ-POSAUNE",
-        "FIG-OBJ-MUENZEN"
+        "FIG-OBJ-POSAUNE"
       ],
-      "signs": [
-        "FIG-ZEICHEN-NEIN"
-      ],
+      "signs": [],
       "speech": [],
-      "action_de": "Wer Almosen gibt, soll nicht die Posaune vor sich her blasen wie die Heuchler, damit sie von den Menschen gerühmt werden; die linke Hand soll nicht wissen, was die rechte tut, damit das Almosen im Verborgenen bleibt, und der Vater, der ins Verborgene sieht, wird es vergelten.",
+      "action_de": "Jesus warnt, die Gerechtigkeit nicht vor den Menschen zu üben, um gesehen zu werden; beim Almosengeben stellt er die Heuchler, die die Posaune blasen und ihren Lohn schon haben, dem gegenüber, der im Verborgenen gibt und dem der Vater vergelten wird.",
       "keywords": {
-        "de": "Blas nicht die Posaune",
-        "gsw": "Blaas nöd d Posuune"
+        "de": "Wenn du nun Almosen gibst",
+        "gsw": "Wänn du also Almose gisch"
       },
-      "stage": {
-        "x": {
-          "FIG-ROLLE-HEUCHLER": 34,
-          "FIG-ROLLE-ARMER": 100,
-          "FIG-ROLLE-JUENGER": 156
+      "diagram": {
+        "visual": "columns",
+        "speaker": "FIG-JESUS",
+        "span": 2,
+        "arrow": false,
+        "title": {
+          "de": "Übt eure Gerechtigkeit nicht vor den Menschen, um gesehen zu werden! Sonst habt ihr keinen Lohn beim Vater.",
+          "gsw": "Üebed eui Grächtigkeit nöd vor de Lüüt, damit si eu gsehnd! Suscht händ ir kei Loon bim Vatter."
         },
-        "hold": {
-          "FIG-ROLLE-HEUCHLER": "FIG-OBJ-POSAUNE",
-          "FIG-ROLLE-JUENGER": "FIG-OBJ-MUENZEN"
-        },
-        "at": {
-          "FIG-ZEICHEN-NEIN": "FIG-ROLLE-HEUCHLER"
-        },
-        "arrows": [
-          [
-            "FIG-OBJ-MUENZEN",
-            "FIG-ROLLE-ARMER",
-            "act"
-          ]
+        "head": [
+          {
+            "de": "die Heuchler",
+            "gsw": "d Hüüchler"
+          },
+          {
+            "de": "du aber",
+            "gsw": "du aber"
+          }
         ],
-        "mood": {
-          "FIG-ROLLE-HEUCHLER": "smile",
-          "FIG-ROLLE-ARMER": "smile",
-          "FIG-ROLLE-JUENGER": "calm"
-        }
+        "rows": [
+          [
+            {
+              "a": {
+                "de": "Sie blasen die Posaune vor sich her",
+                "gsw": "Si blaased d Posuune vor sich här"
+              },
+              "icons": [
+                "FIG-OBJ-POSAUNE"
+              ],
+              "who": "FIG-ROLLE-HEUCHLER"
+            },
+            {
+              "a": {
+                "de": "Deine linke Hand soll nicht wissen, was die rechte tut",
+                "gsw": "Dini linggi Hand söll nöd wüsse, was dini rächti macht"
+              },
+              "who": "FIG-ROLLE-JUENGER"
+            }
+          ],
+          [
+            {
+              "a": {
+                "de": "Sie wollen von den Menschen gerühmt werden",
+                "gsw": "Si wänd vo de Lüüt grüemt wärde"
+              }
+            },
+            {
+              "a": {
+                "de": "Dein Almosen bleibt im Verborgenen",
+                "gsw": "Diis Almose bliibt im Verborgne"
+              }
+            }
+          ],
+          [
+            {
+              "a": {
+                "de": "Sie haben ihren Lohn schon erhalten",
+                "gsw": "Si händ ire Loon scho übercho"
+              }
+            },
+            {
+              "a": {
+                "de": "Dein Vater, der ins Verborgene sieht, wird es dir vergelten",
+                "gsw": "Diin Vatter, wo is Verborgne gseht, wird s dir vergälte"
+              },
+              "icons": [
+                "FIG-GOTT"
+              ]
+            }
+          ]
+        ]
       }
     }
   ],
   "actions_de": [
-    "Jesus warnt: Achtet darauf, eure Gerechtigkeit nicht vor den Menschen zu üben, um von ihnen gesehen zu werden; sonst habt ihr keinen Lohn bei eurem Vater in den Himmeln.",
-    "Wer Almosen gibt, soll nicht die Posaune vor sich her blasen wie die Heuchler, damit sie von den Menschen gerühmt werden; die linke Hand soll nicht wissen, was die rechte tut, damit das Almosen im Verborgenen bleibt, und der Vater, der ins Verborgene sieht, wird es vergelten."
+    "Jesus warnt, die Gerechtigkeit nicht vor den Menschen zu üben, um gesehen zu werden; beim Almosengeben stellt er die Heuchler, die die Posaune blasen und ihren Lohn schon haben, dem gegenüber, der im Verborgenen gibt und dem der Vater vergelten wird."
   ],
   "captions_de": [
-    "Um gesehen zu werden: Ein Mann tut Gutes (Hand reicht ein Brot, Herz) und schaut zu den Leuten, die ihm zusehen (Auge); Jesus (links) warnt: Tut es nicht zur Schau!",
-    "Nicht mit Posaune: Links bläst ein Heuchler die Posaune (goldgelbes Blasrohr; rotes X); rechts gibt ein Jünger einem Armen still Geld (Münzen in seiner Hand, Pfeil zum Armen)."
+    "Almosen im Verborgenen: Jesus spricht (Blase oben); zwei Spalten «die Heuchler» (grau, Posaune) ↔ «du aber» (gelb), Zeile für Zeile: Tun, Ziel, Lohn; der Strahlenkranz steht für den Vater."
   ],
-  "interpretation_note_de": "Bild einer Rede: Jesus spricht, das Gesagte ist gross daneben gezeigt. Feld 1 zeigt die Warnung ([[MAT.6.1]]), Feld 2 Jesu Beispiel: den Heuchler mit der Posaune und den Jünger, der still gibt ([[MAT.6.2-MAT.6.4]]). Synagogen und Gassen sind nicht im Bild. Das rote X beim Heuchler bedeutet «nicht so» und richtet sich gegen das Tun, nicht gegen die Person.",
+  "interpretation_note_de": "Strukturbild einer Rede (Gegensatz in Paaren, Kernanalyse): Die Überschrift [[MAT.6.1]] steht in Jesu Sprechblase, darunter je Zeile ein Paar aus [[MAT.6.2-MAT.6.4]]: Tun, Ziel und Lohn. «Wird vergelten» ist eine Zusage, kein Bericht. Dasselbe Schema kehrt beim Beten ([[MAT.6.5-MAT.6.6]]) und Fasten ([[MAT.6.16-MAT.6.18]]) wieder.",
   "basis": [
     {
       "record": "TU-MAT-006-001-004",
       "field": "summary",
-      "fingerprint": "90e0bdc8af565141"
+      "fingerprint": "abacad6381bbae9b"
     },
     {
       "record": "TRANS-MAT-006-001-004-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.6.1",
-      "fingerprint": "4e9002c4ab5c3866"
-    },
-    {
-      "record": "TRANS-MAT-006-001-004-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.6.2-MAT.6.4",
-      "fingerprint": "7168b65dbda01f1d"
+      "reference": "MAT.6.1-MAT.6.4",
+      "fingerprint": "af0459ca6f2892e1"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
@@ -728,6 +712,161 @@
         "captions_de": [
           "Um gesehen zu werden: Ein Mann tut Gutes (Hand reicht ein Brot, Herz) und schaut zu den Leuten, die ihm zusehen (Auge); Jesus (links) warnt: Achtet darauf!",
           "Nicht mit Posaune: Links bläst ein Heuchler die Posaune (goldgelbes Blasrohr; rotes X); rechts gibt ein Jünger einem Armen still Geld (Münzen in seiner Hand, Pfeil zum Armen)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-24",
+      "change_de": "Struktur zuerst: Zusammenfassung aus der Strukturanalyse neu (alle Glieder, Liste wo der Text so gebaut ist)",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.6.1",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-MENSCH",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-GUTE-WERKE",
+              "FIG-ZEICHEN-SEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-MENSCH",
+                "icons": [],
+                "word": {
+                  "de": "Tut es nicht zur Schau!",
+                  "gsw": "Mached s nöd zum Aagää!"
+                }
+              }
+            ],
+            "action_de": "Jesus warnt: Achtet darauf, eure Gerechtigkeit nicht vor den Menschen zu üben, um von ihnen gesehen zu werden; sonst habt ihr keinen Lohn bei eurem Vater in den Himmeln.",
+            "keywords": {
+              "de": "Sonst habt ihr keinen Lohn",
+              "gsw": "Suscht händ ir kei Loon"
+            },
+            "stage": {
+              "x": {
+                "FIG-JESUS": 26,
+                "FIG-ROLLE-MENSCH": 92,
+                "FIG-GRUPPE-MENGE": 156
+              },
+              "at": {
+                "FIG-ZEICHEN-GUTE-WERKE": "FIG-ROLLE-MENSCH",
+                "FIG-ZEICHEN-SEHEN": "FIG-GRUPPE-MENGE"
+              },
+              "pose": {
+                "FIG-ROLLE-MENSCH": "away"
+              },
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-ROLLE-MENSCH": "smile",
+                "FIG-GRUPPE-MENGE": "surprised"
+              },
+              "size": {
+                "FIG-JESUS": 0.7
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.6.2-MAT.6.4",
+            "figures": [
+              "FIG-ROLLE-HEUCHLER",
+              "FIG-ROLLE-ARMER",
+              "FIG-ROLLE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-POSAUNE",
+              "FIG-OBJ-MUENZEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NEIN"
+            ],
+            "speech": [],
+            "action_de": "Wer Almosen gibt, soll nicht die Posaune vor sich her blasen wie die Heuchler, damit sie von den Menschen gerühmt werden; die linke Hand soll nicht wissen, was die rechte tut, damit das Almosen im Verborgenen bleibt, und der Vater, der ins Verborgene sieht, wird es vergelten.",
+            "keywords": {
+              "de": "Blas nicht die Posaune",
+              "gsw": "Blaas nöd d Posuune"
+            },
+            "stage": {
+              "x": {
+                "FIG-ROLLE-HEUCHLER": 34,
+                "FIG-ROLLE-ARMER": 100,
+                "FIG-ROLLE-JUENGER": 156
+              },
+              "hold": {
+                "FIG-ROLLE-HEUCHLER": "FIG-OBJ-POSAUNE",
+                "FIG-ROLLE-JUENGER": "FIG-OBJ-MUENZEN"
+              },
+              "at": {
+                "FIG-ZEICHEN-NEIN": "FIG-ROLLE-HEUCHLER"
+              },
+              "arrows": [
+                [
+                  "FIG-OBJ-MUENZEN",
+                  "FIG-ROLLE-ARMER",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-HEUCHLER": "smile",
+                "FIG-ROLLE-ARMER": "smile",
+                "FIG-ROLLE-JUENGER": "calm"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus warnt: Achtet darauf, eure Gerechtigkeit nicht vor den Menschen zu üben, um von ihnen gesehen zu werden; sonst habt ihr keinen Lohn bei eurem Vater in den Himmeln.",
+          "Wer Almosen gibt, soll nicht die Posaune vor sich her blasen wie die Heuchler, damit sie von den Menschen gerühmt werden; die linke Hand soll nicht wissen, was die rechte tut, damit das Almosen im Verborgenen bleibt, und der Vater, der ins Verborgene sieht, wird es vergelten."
+        ],
+        "captions_de": [
+          "Um gesehen zu werden: Ein Mann tut Gutes (Hand reicht ein Brot, Herz) und schaut zu den Leuten, die ihm zusehen (Auge); Jesus (links) warnt: Tut es nicht zur Schau!",
+          "Nicht mit Posaune: Links bläst ein Heuchler die Posaune (goldgelbes Blasrohr; rotes X); rechts gibt ein Jünger einem Armen still Geld (Münzen in seiner Hand, Pfeil zum Armen)."
+        ],
+        "interpretation_note_de": "Bild einer Rede: Jesus spricht, das Gesagte ist gross daneben gezeigt. Feld 1 zeigt die Warnung ([[MAT.6.1]]), Feld 2 Jesu Beispiel: den Heuchler mit der Posaune und den Jünger, der still gibt ([[MAT.6.2-MAT.6.4]]). Synagogen und Gassen sind nicht im Bild. Das rote X beim Heuchler bedeutet «nicht so» und richtet sich gegen das Tun, nicht gegen die Person.",
+        "basis": [
+          {
+            "record": "TU-MAT-006-001-004",
+            "field": "summary",
+            "fingerprint": "90e0bdc8af565141"
+          },
+          {
+            "record": "TRANS-MAT-006-001-004-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.6.1",
+            "fingerprint": "4e9002c4ab5c3866"
+          },
+          {
+            "record": "TRANS-MAT-006-001-004-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.6.2-MAT.6.4",
+            "fingerprint": "7168b65dbda01f1d"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-006-001-004",
+            "field": "summary",
+            "fingerprint": "90e0bdc8af565141"
+          },
+          {
+            "record": "TRANS-MAT-006-001-004-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.6.1-MAT.6.4",
+            "fingerprint": "af0459ca6f2892e1"
+          }
         ]
       }
     }

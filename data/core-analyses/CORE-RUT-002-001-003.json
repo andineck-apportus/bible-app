@@ -11,15 +11,95 @@
  "voice": {
   "speaker": "narrator"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Ausgangslage → Bitte → «Zufall»",
+    "range": "RUT.2.1-RUT.2.3",
+    "elements": [
+     {
+      "label": "Der Erzähler stellt Boas vor: ein Verwandter Noomis aus der Sippe Elimelechs, ein Mann von Vermögen",
+      "ref": "RUT.2.1",
+      "role": "Vorwissen des Lesers"
+     },
+     {
+      "label": "Rut zu Noomi: «Lass mich aufs Feld gehen und Ähren auflesen!» – Noomi: «Geh, meine Tochter!»",
+      "ref": "RUT.2.2",
+      "role": "Bitte und Zustimmung"
+     },
+     {
+      "label": "Rut liest auf dem Feld hinter den Schnittern Ähren auf",
+      "ref": "RUT.2.3",
+      "role": "Ausführung"
+     },
+     {
+      "label": "Es trifft sich zufällig: Sie kommt auf das Feldstück des Boas aus der Sippe Elimelechs",
+      "ref": "RUT.2.3",
+      "role": "Wende",
+      "links": [
+       "RUT.2.1"
+      ]
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Rut",
+       "to": "Noomi",
+       "refs": [
+        "RUT.2.2"
+       ]
+      },
+      {
+       "who": "Noomi",
+       "to": "Rut",
+       "refs": [
+        "RUT.2.2"
+       ]
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "aus der Sippe Elimelechs",
+       "refs": [
+        "RUT.2.1",
+        "RUT.2.3"
+       ],
+       "role": "verklammernd"
+      }
+     ],
+     "modality": [
+      {
+       "ref": "RUT.2.2",
+       "kind": "Bitte",
+       "note": "Rut sucht jemanden, «in dessen Augen ich Gunst finde» – Hoffnung, noch keine Zusage."
+      }
+     ],
+     "interpretation": [
+      {
+       "ref": "RUT.2.3",
+       "note": "Deutung: Mit «zufällig» lässt der Erzähler Gottes verborgene Führung anklingen; der Text nennt Gott hier nicht."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
    "reference": "RUT.2.2",
-   "text_de": "Rut bittet Noomi, aufs Feld gehen und Ähren auflesen zu dürfen, wo man ihr Gunst erweist.",
+   "text_de": "Rut bittet Noomi, aufs Feld gehen und Ähren auflesen zu dürfen, wo man ihr Gunst erweist, und Noomi lässt sie gehen.",
    "reason_de": "Anfang des Bogens (Kriterium 3): Rut ergreift selbst die Initiative, um für beide zu sorgen.",
-   "recognition_de": "Rut steht vor Noomi und bittet, auf die Felder hinausgehen zu dürfen.",
+   "recognition_de": "Rut steht vor Noomi und bittet, auf die Felder hinausgehen zu dürfen; Noomi antwortet: «Geh, meine Tochter!»",
    "keywords": [
     "Ähren auflesen",
-    "Gunst"
+    "Gunst",
+    "Geh, meine Tochter"
    ]
   },
   {
@@ -34,8 +114,7 @@
   }
  ],
  "omitted_de": [
-  "Einführung des Boas als Mann von Vermögen (2,1) – Hintergrund, im Moment 2.3 mitgenannt",
-  "Noomis knappe Zustimmung «Geh, meine Tochter!» – Übergang"
+  "Vermögen des Boas (2,1) – Nebenangabe; dass er ein Verwandter aus der Sippe Elimelechs ist, steht im Moment 2,3"
  ],
  "persons": [
   "FIG-RUT",
@@ -53,17 +132,15 @@
    "fingerprint": "8f1a6ffb7c68dccb"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Auswahl belegt; Widerspruch zwischen Erkennungsmoment und omitted_de.",
-  "changes_de": [
-   "Erkennungsmoment 2,2: Noomis «Geh, meine Tochter!» gestrichen, da in omitted_de als weggelassen geführt"
-  ]
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Ablauf Vorwissen → Bitte → «Zufall» stimmt; Deutung der verborgenen Führung gekennzeichnet; keine Änderung.",
+  "changes_de": []
  }
 }

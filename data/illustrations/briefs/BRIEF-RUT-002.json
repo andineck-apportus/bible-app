@@ -22,10 +22,10 @@
       ],
       "signs": [],
       "speech": [],
-      "action_de": "Rut liest auf dem Feld hinter den Schnittern Ähren auf; zufällig kommt sie auf das Feldstück des Boas aus der Sippe Elimelechs.",
+      "action_de": "Rut liest auf dem Feld hinter den Schnittern Ähren auf; es trifft sich zufällig, dass sie auf das Feldstück des Boas aus der Sippe Elimelechs kommt.",
       "keywords": {
-        "de": "Feldstück des Boas",
-        "gsw": "Fäldstück vom Boas"
+        "de": "Sie kam auf das Feldstück des Boas",
+        "gsw": "Si isch uf s Fäldstück vom Boas cho"
       },
       "names": {
         "FIG-RUT": {
@@ -36,9 +36,6 @@
       "stage": {
         "pose": {
           "FIG-RUT": "kneel"
-        },
-        "size": {
-          "FIG-RUT": 1.25
         },
         "mood": {
           "FIG-RUT": "calm"
@@ -55,9 +52,78 @@
     {
       "n": 2,
       "reference": "RUT.2.10-RUT.2.12",
+      "figures": [],
+      "objects": [],
+      "signs": [],
+      "speech": [],
+      "action_de": "Rut fällt vor Boas nieder und fragt, warum er sie beachtet, wo sie doch eine Fremde ist. Boas nennt den Grund: alles, was sie an ihrer Schwiegermutter getan hat, und dass sie Vater, Mutter und Heimat verlassen hat; und er wünscht: JHWH vergelte dein Tun, unter dessen Flügeln du Zuflucht suchst.",
+      "keywords": {
+        "de": "Ich bin doch eine Fremde",
+        "gsw": "Ich bi doch e Frömdi"
+      },
+      "diagram": {
+        "visual": "arrows",
+        "span": 1,
+        "cols": 1,
+        "cells": [
+          {
+            "a": {
+              "de": "Warum beachtest du mich?",
+              "gsw": "Werum beachtisch du mich?"
+            },
+            "b": {
+              "de": "Ich bin doch eine Fremde.",
+              "gsw": "Ich bi doch e Frömdi."
+            },
+            "who": "FIG-RUT",
+            "role": {
+              "de": "Rut fragt",
+              "gsw": "D Rut fröget"
+            }
+          },
+          {
+            "a": {
+              "de": "Alles, was du an deiner Schwiegermutter getan hast",
+              "gsw": "Alles, wo du für dini Schwigermueter gmacht häsch"
+            },
+            "b": {
+              "de": "und Vater, Mutter und deine Heimat verlassen.",
+              "gsw": "und Vatter, Mueter und dini Heimet verlaa."
+            },
+            "who": "FIG-BOAS",
+            "role": {
+              "de": "Boas: der Grund",
+              "gsw": "De Boas: de Grund"
+            }
+          },
+          {
+            "a": {
+              "de": "JHWH vergelte dein Tun!",
+              "gsw": "JHWH söll dis Tue vergälte!"
+            },
+            "b": {
+              "de": "Unter seinen Flügeln suchst du Zuflucht.",
+              "gsw": "Under sine Flügel suechsch du Schutz."
+            },
+            "icons": [
+              "FIG-GOTT"
+            ],
+            "role": {
+              "de": "Boas: der Wunsch",
+              "gsw": "De Boas: de Wunsch"
+            },
+            "tone": "new"
+          }
+        ]
+      }
+    },
+    {
+      "n": 3,
+      "reference": "RUT.2.14-RUT.2.17",
       "figures": [
-        "FIG-BOAS",
-        "FIG-RUT"
+        "FIG-GRUPPE-SCHNITTER",
+        "FIG-RUT",
+        "FIG-BOAS"
       ],
       "objects": [
         "FIG-ORT-FELD"
@@ -68,19 +134,18 @@
           "from": "FIG-BOAS",
           "to": "FIG-RUT",
           "icons": [
-            "FIG-GOTT",
-            "FIG-ZEICHEN-ZUFLUCHT"
+            "FIG-OBJ-BROT"
           ],
           "word": {
-            "de": "Zuflucht bei JHWH",
-            "gsw": "Schutz bi JHWH"
+            "de": "Iss vom Brot!",
+            "gsw": "Iss vom Broot!"
           }
         }
       ],
-      "action_de": "Rut fällt vor Boas auf ihr Gesicht und fragt, warum er sie beachte, wo sie doch eine Fremde sei; Boas nennt ihre Treue zu Noomi und wünscht ihr Lohn von JHWH, unter dessen Flügeln sie Zuflucht sucht.",
+      "action_de": "Beim Essen ruft Boas Rut herbei und reicht ihr geröstetes Korn; sie isst sich satt und lässt noch übrig. Danach gebietet er den Knechten, eigens Ähren für sie aus den Bündeln zu ziehen; am Abend hat sie etwa ein Efa Gerste.",
       "keywords": {
-        "de": "Da fiel sie auf ihr Gesicht",
-        "gsw": "Da isch si uf ires Gsicht gfalle"
+        "de": "Sie ass und wurde satt",
+        "gsw": "Si hät gässe und isch satt worde"
       },
       "names": {
         "FIG-BOAS": {
@@ -90,20 +155,29 @@
       },
       "stage": {
         "pose": {
-          "FIG-RUT": "kneel"
+          "FIG-RUT": "sit"
         },
+        "arrows": [
+          [
+            "FIG-BOAS",
+            "FIG-RUT",
+            "act"
+          ]
+        ],
         "mood": {
-          "FIG-RUT": "surprised",
-          "FIG-BOAS": "smile"
+          "FIG-RUT": "delight",
+          "FIG-BOAS": "smile",
+          "FIG-GRUPPE-SCHNITTER": "smile"
         },
         "x": {
-          "FIG-BOAS": 56,
-          "FIG-RUT": 132
+          "FIG-GRUPPE-SCHNITTER": 34,
+          "FIG-RUT": 96,
+          "FIG-BOAS": 150
         }
       }
     },
     {
-      "n": 3,
+      "n": 4,
       "reference": "RUT.2.19-RUT.2.20",
       "figures": [
         "FIG-RUT",
@@ -119,12 +193,12 @@
             "FIG-BOAS"
           ],
           "word": {
-            "de": "Er ist einer unserer Löser",
-            "gsw": "Er isch eine vo öisne Löser"
+            "de": "Er ist einer von unseren Lösern!",
+            "gsw": "Er isch eine vo öisne Löser!"
           }
         }
       ],
-      "action_de": "Rut nennt den Namen Boas; Noomi segnet ihn im Namen JHWHs, der seine Treue den Lebenden und den Toten nicht entzogen hat, und sagt: Er ist einer von unseren Lösern.",
+      "action_de": "Noomi fragt, wo Rut aufgelesen hat; Rut nennt den Namen Boas. Noomi sagt: «Gesegnet sei er von JHWH, der seine Treue den Lebenden und den Toten nicht entzogen hat! Er ist einer von unseren Lösern.»",
       "keywords": {
         "de": "Gesegnet sei er von JHWH",
         "gsw": "Gsägnet sig er vo JHWH"
@@ -144,21 +218,23 @@
     }
   ],
   "actions_de": [
-    "Rut liest auf dem Feld hinter den Schnittern Ähren auf; zufällig kommt sie auf das Feldstück des Boas aus der Sippe Elimelechs.",
-    "Rut fällt vor Boas auf ihr Gesicht und fragt, warum er sie beachte, wo sie doch eine Fremde sei; Boas nennt ihre Treue zu Noomi und wünscht ihr Lohn von JHWH, unter dessen Flügeln sie Zuflucht sucht.",
-    "Rut nennt den Namen Boas; Noomi segnet ihn im Namen JHWHs, der seine Treue den Lebenden und den Toten nicht entzogen hat, und sagt: Er ist einer von unseren Lösern."
+    "Rut liest auf dem Feld hinter den Schnittern Ähren auf; es trifft sich zufällig, dass sie auf das Feldstück des Boas aus der Sippe Elimelechs kommt.",
+    "Rut fällt vor Boas nieder und fragt, warum er sie beachtet, wo sie doch eine Fremde ist. Boas nennt den Grund: alles, was sie an ihrer Schwiegermutter getan hat, und dass sie Vater, Mutter und Heimat verlassen hat; und er wünscht: JHWH vergelte dein Tun, unter dessen Flügeln du Zuflucht suchst.",
+    "Beim Essen ruft Boas Rut herbei und reicht ihr geröstetes Korn; sie isst sich satt und lässt noch übrig. Danach gebietet er den Knechten, eigens Ähren für sie aus den Bündeln zu ziehen; am Abend hat sie etwa ein Efa Gerste.",
+    "Noomi fragt, wo Rut aufgelesen hat; Rut nennt den Namen Boas. Noomi sagt: «Gesegnet sei er von JHWH, der seine Treue den Lebenden und den Toten nicht entzogen hat! Er ist einer von unseren Lösern.»"
   ],
   "captions_de": [
-    "Ährenlesen: Rut bückt sich hinter den Schnittern (Sicheln) nach Ähren (Garbe) – auf dem Feld des Boas.",
-    "Unter seinen Flügeln: Rut kniet vor Boas; Boas sagt: unter Gottes Flügeln (Strahlenkranz, Flügel).",
-    "Ein Löser: Noomi sagt froh zu Rut über Boas (Bild in der Blase): einer von unseren Lösern."
+    "Ähren auflesen: Rut kniet hinter den Schnittern (Sicheln) und sammelt liegengebliebene Ähren neben einer Garbe.",
+    "Pfeilkette: Ruts Frage «Warum beachtest du mich?» → Boas nennt den Grund (ihre Treue zu Noomi, die verlassene Heimat) → sein Wunsch: JHWH vergelte dein Tun (Strahlenkranz).",
+    "Satt und mehr: Rut sitzt bei den Schnittern; Boas reicht ihr zu essen (Brot, Pfeil).",
+    "Einer unserer Löser: Noomi freut sich und spricht über Boas (Bild in der Sprechblase); Rut hört zu."
   ],
-  "interpretation_note_de": "Je ein Feld aus den tragenden Momenten der Kernanalyse des Kapitels ([[RUT.2]]); Einzelheiten in den Abschnittsbildern. Ruts Bitte, Schutz und Mahlzeit und die Heimkehr mit der Gerste fehlen hier (Kernanalyse).",
+  "interpretation_note_de": "Ein Feld je Hauptabschnitt: Auflesen auf dem Feldstück des Boas ([[RUT.2.3]]); Frage → Grund → Segenswunsch als Pfeilkette ([[RUT.2.10-RUT.2.12]]); Fülle beim Essen ([[RUT.2.14-RUT.2.17]]); Noomi nennt Boas einen Löser ([[RUT.2.19-RUT.2.20]]). Ruts Bitte ([[RUT.2.2]]), die Schutzanweisung ([[RUT.2.8-RUT.2.9]]) und der Schluss ([[RUT.2.21-RUT.2.23]]) fehlen.",
   "basis": [
     {
       "record": "SUM-CH-RUT-002",
       "field": "summary",
-      "fingerprint": "1cb465ce53e691e3"
+      "fingerprint": "b47bad4168b0ea68"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
@@ -696,6 +772,386 @@
             "keywords": {
               "de": "seine Treue",
               "gsw": "sini Tröii"
+            },
+            "names": {
+              "FIG-NOOMI": {
+                "de": "Noomi",
+                "gsw": "Noomi"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-NOOMI": "delight",
+                "FIG-RUT": "smile"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-24",
+      "change_de": "Struktur zuerst: Zusammenfassung aus der Strukturanalyse neu (alle Glieder, Liste wo der Text so gebaut ist)",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "RUT.2.3",
+            "figures": [
+              "FIG-GRUPPE-SCHNITTER",
+              "FIG-RUT"
+            ],
+            "objects": [
+              "FIG-ORT-FELD",
+              "FIG-OBJ-GARBE"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Rut liest auf dem Feld hinter den Schnittern Ähren auf; zufällig kommt sie auf das Feldstück des Boas aus der Sippe Elimelechs.",
+            "keywords": {
+              "de": "Feldstück des Boas",
+              "gsw": "Fäldstück vom Boas"
+            },
+            "names": {
+              "FIG-RUT": {
+                "de": "Rut",
+                "gsw": "Rut"
+              }
+            },
+            "stage": {
+              "pose": {
+                "FIG-RUT": "kneel"
+              },
+              "size": {
+                "FIG-RUT": 1.25
+              },
+              "mood": {
+                "FIG-RUT": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-SCHNITTER": 50,
+                "FIG-RUT": 126
+              },
+              "floor_x": {
+                "FIG-OBJ-GARBE": 166
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "RUT.2.10-RUT.2.12",
+            "figures": [
+              "FIG-BOAS",
+              "FIG-RUT"
+            ],
+            "objects": [
+              "FIG-ORT-FELD"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-BOAS",
+                "to": "FIG-RUT",
+                "icons": [
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-ZUFLUCHT"
+                ],
+                "word": {
+                  "de": "Zuflucht bei JHWH",
+                  "gsw": "Schutz bi JHWH"
+                }
+              }
+            ],
+            "action_de": "Rut fällt vor Boas auf ihr Gesicht und fragt, warum er sie beachte, wo sie doch eine Fremde sei; Boas nennt ihre Treue zu Noomi und wünscht ihr Lohn von JHWH, unter dessen Flügeln sie Zuflucht sucht.",
+            "keywords": {
+              "de": "Da fiel sie auf ihr Gesicht",
+              "gsw": "Da isch si uf ires Gsicht gfalle"
+            },
+            "names": {
+              "FIG-BOAS": {
+                "de": "Boas",
+                "gsw": "Boas"
+              }
+            },
+            "stage": {
+              "pose": {
+                "FIG-RUT": "kneel"
+              },
+              "mood": {
+                "FIG-RUT": "surprised",
+                "FIG-BOAS": "smile"
+              },
+              "x": {
+                "FIG-BOAS": 56,
+                "FIG-RUT": 132
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "RUT.2.19-RUT.2.20",
+            "figures": [
+              "FIG-RUT",
+              "FIG-NOOMI"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-NOOMI",
+                "to": "FIG-RUT",
+                "icons": [
+                  "FIG-BOAS"
+                ],
+                "word": {
+                  "de": "Er ist einer unserer Löser",
+                  "gsw": "Er isch eine vo öisne Löser"
+                }
+              }
+            ],
+            "action_de": "Rut nennt den Namen Boas; Noomi segnet ihn im Namen JHWHs, der seine Treue den Lebenden und den Toten nicht entzogen hat, und sagt: Er ist einer von unseren Lösern.",
+            "keywords": {
+              "de": "Gesegnet sei er von JHWH",
+              "gsw": "Gsägnet sig er vo JHWH"
+            },
+            "names": {
+              "FIG-NOOMI": {
+                "de": "Noomi",
+                "gsw": "Noomi"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-NOOMI": "delight",
+                "FIG-RUT": "smile"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Rut liest auf dem Feld hinter den Schnittern Ähren auf; zufällig kommt sie auf das Feldstück des Boas aus der Sippe Elimelechs.",
+          "Rut fällt vor Boas auf ihr Gesicht und fragt, warum er sie beachte, wo sie doch eine Fremde sei; Boas nennt ihre Treue zu Noomi und wünscht ihr Lohn von JHWH, unter dessen Flügeln sie Zuflucht sucht.",
+          "Rut nennt den Namen Boas; Noomi segnet ihn im Namen JHWHs, der seine Treue den Lebenden und den Toten nicht entzogen hat, und sagt: Er ist einer von unseren Lösern."
+        ],
+        "captions_de": [
+          "Ährenlesen: Rut bückt sich hinter den Schnittern (Sicheln) nach Ähren (Garbe) – auf dem Feld des Boas.",
+          "Unter seinen Flügeln: Rut kniet vor Boas; Boas sagt: unter Gottes Flügeln (Strahlenkranz, Flügel).",
+          "Ein Löser: Noomi sagt froh zu Rut über Boas (Bild in der Blase): einer von unseren Lösern."
+        ],
+        "interpretation_note_de": "Je ein Feld aus den tragenden Momenten der Kernanalyse des Kapitels ([[RUT.2]]); Einzelheiten in den Abschnittsbildern. Ruts Bitte, Schutz und Mahlzeit und die Heimkehr mit der Gerste fehlen hier (Kernanalyse)."
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-RUT-002",
+            "field": "summary",
+            "fingerprint": "1cb465ce53e691e3"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "RUT.2.3",
+            "figures": [
+              "FIG-GRUPPE-SCHNITTER",
+              "FIG-RUT"
+            ],
+            "objects": [
+              "FIG-ORT-FELD",
+              "FIG-OBJ-GARBE"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Rut liest auf dem Feld hinter den Schnittern Ähren auf; es trifft sich zufällig, dass sie auf das Feldstück des Boas aus der Sippe Elimelechs kommt.",
+            "keywords": {
+              "de": "Auf das Feldstück des Boas",
+              "gsw": "Uf s Fäldstück vom Boas"
+            },
+            "names": {
+              "FIG-RUT": {
+                "de": "Rut",
+                "gsw": "Rut"
+              }
+            },
+            "stage": {
+              "pose": {
+                "FIG-RUT": "kneel"
+              },
+              "mood": {
+                "FIG-RUT": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-SCHNITTER": 50,
+                "FIG-RUT": 126
+              },
+              "floor_x": {
+                "FIG-OBJ-GARBE": 166
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "RUT.2.10-RUT.2.12",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Rut fällt vor Boas nieder und fragt, warum er sie beachtet, wo sie doch eine Fremde ist. Boas nennt den Grund: alles, was sie an ihrer Schwiegermutter getan hat, und dass sie Vater, Mutter und Heimat verlassen hat; und er wünscht: JHWH vergelte dein Tun, unter dessen Flügeln du Zuflucht suchst.",
+            "keywords": {
+              "de": "Wo ich doch eine Fremde bin",
+              "gsw": "Wo ich doch e Frömdi bi"
+            },
+            "diagram": {
+              "visual": "arrows",
+              "span": 1,
+              "cols": 1,
+              "cells": [
+                {
+                  "a": {
+                    "de": "Warum beachtest du mich?",
+                    "gsw": "Werum beachtisch du mich?"
+                  },
+                  "b": {
+                    "de": "Ich bin doch eine Fremde.",
+                    "gsw": "Ich bi doch e Frömdi."
+                  },
+                  "who": "FIG-RUT",
+                  "role": {
+                    "de": "Rut fragt",
+                    "gsw": "D Rut fröget"
+                  }
+                },
+                {
+                  "a": {
+                    "de": "Du hast deiner Schwiegermutter Gutes getan",
+                    "gsw": "Du häsch für dini Schwigermueter vil gmacht"
+                  },
+                  "b": {
+                    "de": "und Vater, Mutter und deine Heimat verlassen.",
+                    "gsw": "und Vatter, Mueter und dini Heimet verlaa."
+                  },
+                  "who": "FIG-BOAS",
+                  "role": {
+                    "de": "Boas: der Grund",
+                    "gsw": "De Boas: de Grund"
+                  }
+                },
+                {
+                  "a": {
+                    "de": "JHWH vergelte dein Tun!",
+                    "gsw": "JHWH söll dis Tue vergälte!"
+                  },
+                  "b": {
+                    "de": "Unter seinen Flügeln suchst du Zuflucht.",
+                    "gsw": "Under sine Flügel suechsch du Schutz."
+                  },
+                  "icons": [
+                    "FIG-GOTT"
+                  ],
+                  "role": {
+                    "de": "Boas: der Wunsch",
+                    "gsw": "De Boas: de Wunsch"
+                  },
+                  "tone": "new"
+                }
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "RUT.2.14-RUT.2.17",
+            "figures": [
+              "FIG-GRUPPE-SCHNITTER",
+              "FIG-RUT",
+              "FIG-BOAS"
+            ],
+            "objects": [
+              "FIG-ORT-FELD"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-BOAS",
+                "to": "FIG-RUT",
+                "icons": [
+                  "FIG-OBJ-BROT"
+                ],
+                "word": {
+                  "de": "Iss vom Brot!",
+                  "gsw": "Iss vom Broot!"
+                }
+              }
+            ],
+            "action_de": "Beim Essen ruft Boas Rut herbei und reicht ihr geröstetes Korn; sie isst sich satt und lässt noch übrig. Danach gebietet er den Knechten, eigens Ähren für sie aus den Bündeln zu ziehen; am Abend hat sie etwa ein Efa Gerste.",
+            "keywords": {
+              "de": "Sie ass und wurde satt",
+              "gsw": "Si hät gässe und isch satt worde"
+            },
+            "names": {
+              "FIG-BOAS": {
+                "de": "Boas",
+                "gsw": "Boas"
+              }
+            },
+            "stage": {
+              "pose": {
+                "FIG-RUT": "sit"
+              },
+              "arrows": [
+                [
+                  "FIG-BOAS",
+                  "FIG-RUT",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-RUT": "delight",
+                "FIG-BOAS": "smile",
+                "FIG-GRUPPE-SCHNITTER": "smile"
+              },
+              "x": {
+                "FIG-GRUPPE-SCHNITTER": 34,
+                "FIG-RUT": 96,
+                "FIG-BOAS": 150
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "RUT.2.19-RUT.2.20",
+            "figures": [
+              "FIG-RUT",
+              "FIG-NOOMI"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-NOOMI",
+                "to": "FIG-RUT",
+                "icons": [
+                  "FIG-BOAS"
+                ],
+                "word": {
+                  "de": "Er ist einer von unseren Lösern!",
+                  "gsw": "Er isch eine vo öisne Löser!"
+                }
+              }
+            ],
+            "action_de": "Noomi fragt, wo Rut aufgelesen hat; Rut nennt den Namen Boas. Noomi sagt: «Gesegnet sei er von JHWH, der seine Treue den Lebenden und den Toten nicht entzogen hat! Er ist einer von unseren Lösern.»",
+            "keywords": {
+              "de": "Gesegnet sei er von JHWH",
+              "gsw": "Gsägnet sig er vo JHWH"
             },
             "names": {
               "FIG-NOOMI": {

@@ -18,6 +18,14 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     await p.click('.sheet [data-close]');await p.waitForTimeout(300);await p.click('[data-action=menu]');await p.click('[data-figindex]');await p.waitForTimeout(300);
     const nAni=await p.$$eval('.sheet .legend-fig',x=>x.length);assert(nAni>300,'Bildlexikon Anime ('+nAni+')');
     assert(await p.$('.sheet .legend-fig use[href^="#an-"]'),'Anime-Darstellungen im Bildlexikon');
+    // Struktur zuerst: Seligpreisungen mit Liste aller acht Glieder und Strukturbild in einzelnen Kacheln
+    await p.click('.sheet [data-close]');await p.waitForTimeout(300);
+    await p.click('[data-action=index]');await p.fill('input[type=search]','Mt 5,3');await p.waitForTimeout(300);await p.click('.results button');await p.waitForTimeout(900);
+    while(+await p.evaluate(()=>document.querySelector('.app').dataset.level)>5){await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));await p.click('[data-action=up]');await p.waitForTimeout(500);}
+    await p.evaluate(()=>{const b=document.querySelector('.has-ill [data-view=text]');b&&b.click();});
+    const nLi=await p.evaluate(()=>{const e=[...document.querySelectorAll('.stream-entry')].find(x=>/Seligpreisungen/.test(x.querySelector('h2')?.textContent||''));return e?e.querySelectorAll('.sum-list li').length:0;});
+    assert(nLi>=8,'Seligpreisungen als Liste aller Glieder ('+nLi+')');
+    assert(await p.$('.ill-tiles svg.ill-tile'),'Bilder als einzelne Kacheln');
     assert.deepEqual(errs,[],'keine Skriptfehler');
-    console.log('PASS: Bilder auf allen Ebenen im Stil Anime, Legende, Bildlexikon.');
+    console.log('PASS: Bilder auf allen Ebenen im Stil Anime, Legende, Bildlexikon, Kacheln, strukturierte Zusammenfassung.');
   }finally{await b.close();}})().catch(e=>{console.error(e);process.exit(1);});

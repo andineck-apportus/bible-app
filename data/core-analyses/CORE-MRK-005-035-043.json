@@ -6,17 +6,154 @@
  "level": "section",
  "reference": "MRK.5.35-MRK.5.43",
  "target": "TU-MRK-005-035-043",
- "core_de": "Als die Nachricht vom Tod des Mädchens kommt, ruft Jesus Jairus zum Glauben statt zur Furcht und erweckt das Kind mit «Talita kum!» vom Tod.",
+ "core_de": "Gegen die Nachricht «Deine Tochter ist gestorben» ruft Jesus Jairus zum Glauben statt zur Furcht, nennt das Kind schlafend und weckt es mit «Talita kum!» auf: Das Mädchen steht auf und geht umher.",
  "mode": "narrative",
  "voice": {
   "speaker": "narrator"
  },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Rahmen A' der Schachtelung [[MRK.5.21-MRK.5.43]]",
+    "range": "MRK.5.35-MRK.5.43",
+    "elements": [
+     {
+      "label": "Während Jesus noch redet, melden Leute des Synagogenvorstehers: «Deine Tochter ist gestorben; was bemühst du den Lehrer noch?»",
+      "ref": "MRK.5.35",
+      "role": "Anfang"
+     },
+     {
+      "label": "Jesus überhört es und sagt zu Jairus: «Fürchte dich nicht, glaube nur!»",
+      "ref": "MRK.5.36",
+      "role": "Wendepunkt"
+     },
+     {
+      "label": "Jesus lässt nur drei Jünger mit sich gehen.",
+      "ref": "MRK.5.37",
+      "role": "Übergang"
+     },
+     {
+      "label": "Im Haus weinen und klagen die Leute; Jesus sagt: «Das Kind ist nicht gestorben, sondern schläft.»",
+      "ref": "MRK.5.38-MRK.5.39",
+      "role": "Wort Jesu"
+     },
+     {
+      "label": "Sie lachen ihn aus; er wirft alle hinaus und geht mit Vater, Mutter und seinen Begleitern zum Kind.",
+      "ref": "MRK.5.40",
+      "role": "Spott und Trennung"
+     },
+     {
+      "label": "Er fasst die Hand des Kindes und sagt: «Talita kum!», das heisst: «Mädchen, ich sage dir: Steh auf!»",
+      "ref": "MRK.5.41",
+      "role": "Höhepunkt"
+     },
+     {
+      "label": "Sogleich steht das Mädchen auf und geht umher; alle geraten ausser sich vor Staunen.",
+      "ref": "MRK.5.42",
+      "role": "Ausgang"
+     },
+     {
+      "label": "Jesus gebietet, niemand solle es erfahren, und sagt, man solle ihr zu essen geben.",
+      "ref": "MRK.5.43",
+      "role": "Schluss"
+     },
+     {
+      "label": "Stimmen des Todes und Jesu Wort",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Erzähler",
+       "to": "Leser"
+      },
+      {
+       "who": "Leute des Synagogenvorstehers",
+       "to": "Jairus",
+       "ref": "MRK.5.35"
+      },
+      {
+       "who": "Jesus",
+       "to": "Jairus",
+       "ref": "MRK.5.36"
+      },
+      {
+       "who": "Jesus",
+       "to": "die Klagenden",
+       "ref": "MRK.5.39"
+      },
+      {
+       "who": "Jesus",
+       "to": "das Mädchen",
+       "ref": "MRK.5.41"
+      },
+      {
+       "who": "Jesus",
+       "to": "die Anwesenden",
+       "ref": "MRK.5.43"
+      }
+     ],
+     "modality": [
+      {
+       "ref": "MRK.5.35",
+       "kind": "Meldung der Boten: «gestorben»"
+      },
+      {
+       "ref": "MRK.5.39",
+       "kind": "Wort Jesu: «nicht gestorben, sondern schläft»; der Erzähler stellt den Tod nicht selbst fest – beide Aussagen stehen lassen"
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "MAT.9.23-MAT.9.26",
+       "kind": "Parallelfassung (nicht angleichen)"
+      },
+      {
+       "ref": "LUK.8.49-LUK.8.56",
+       "kind": "Parallelfassung (nicht angleichen)"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "Paarreihe («Jesus aber», «Er aber»)",
+    "range": "MRK.5.35-MRK.5.41",
+    "elements": [
+     {
+      "label": "Boten: «Deine Tochter ist gestorben» ↔ Jesus: «Fürchte dich nicht, glaube nur!»",
+      "ref": "MRK.5.35-MRK.5.36",
+      "role": "Paar 1"
+     },
+     {
+      "label": "Die Leute weinen und klagen ↔ Jesus: «Das Kind ist nicht gestorben, sondern schläft.»",
+      "ref": "MRK.5.38-MRK.5.39",
+      "role": "Paar 2"
+     },
+     {
+      "label": "Sie lachen ihn aus ↔ Jesus wirft alle hinaus und sagt zum Kind: «Talita kum!»",
+      "ref": "MRK.5.40-MRK.5.41",
+      "role": "Paar 3"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
  "moments": [
   {
    "reference": "MRK.5.35-MRK.5.36",
-   "text_de": "Boten melden: «Deine Tochter ist gestorben»; Jesus sagt zu Jairus: «Fürchte dich nicht, glaube nur!»",
-   "reason_de": "Wendepunkt in wörtlicher Rede und Kern des Abschnitts: der Glaube wird gegen die Todesnachricht gestellt.",
-   "recognition_de": "Boten überbringen Jairus die Todesnachricht, Jesus legt ihm die Hand auf die Schulter und spricht ihn an.",
+   "text_de": "Leute melden: «Deine Tochter ist gestorben; was bemühst du den Lehrer noch?»; Jesus überhört es und sagt zu Jairus: «Fürchte dich nicht, glaube nur!»",
+   "reason_de": "Wendepunkt in wörtlicher Rede und Kern des Abschnitts: der Glaube wird gegen die Todesnachricht gestellt; erstes Paar des Gegensatzes «Stimmen des Todes ↔ Jesu Wort».",
+   "recognition_de": "Boten überbringen Jairus die Todesnachricht, Jesus wendet sich ihm zu und spricht ihn an.",
    "keywords": [
     "Fürchte dich nicht",
     "glaube nur"
@@ -25,7 +162,7 @@
   {
    "reference": "MRK.5.38-MRK.5.40",
    "text_de": "Im Haus sagt Jesus den Klagenden, das Kind schlafe nur; sie lachen ihn aus, er wirft alle hinaus und geht mit den Eltern und den drei Jüngern hinein.",
-   "reason_de": "Vom Text betont (Gegensatz Klage und Spott gegen Jesu Wort); zeigt den Bogen zwischen Todesnachricht und Auferweckung.",
+   "reason_de": "Vom Text betont: zweites und drittes Paar des Gegensatzes (Klage und Spott ↔ Jesu Wort und Handeln); zeigt den Bogen zwischen Todesnachricht und Aufstehen.",
    "recognition_de": "Weinende und spottende Leute im Haus; Jesus weist sie hinaus und geht mit Vater und Mutter zum Kind.",
    "keywords": [
     "nicht gestorben, sondern schläft",
@@ -35,8 +172,8 @@
   {
    "reference": "MRK.5.41-MRK.5.42",
    "text_de": "Jesus fasst die Hand des Kindes und sagt: «Talita kum!», und sogleich steht das Mädchen auf und geht umher.",
-   "reason_de": "Höhepunkt und Erkennungsmoment: das aramäische Wort, die Hand und das Aufstehen; Ausgang der Rahmengeschichte.",
-   "recognition_de": "Jesus hält die Hand des Mädchens auf dem Bett, das Mädchen richtet sich auf, die Eltern stehen staunend daneben.",
+   "reason_de": "Höhepunkt und Erkennungsmoment: das aramäische Wort mit Übersetzung, die Hand und das Aufstehen; Ausgang der Rahmengeschichte.",
+   "recognition_de": "Jesus hält die Hand des Mädchens, das Mädchen richtet sich auf, die Eltern stehen staunend daneben.",
    "keywords": [
     "Talita kum",
     "Steh auf",
@@ -45,9 +182,9 @@
   }
  ],
  "omitted_de": [
-  "Namen Petrus, Jakobus und Johannes (5.37) – Nebenfiguren",
-  "Alter des Mädchens (zwölf Jahre) – Zahl",
-  "Schweigegebot und Anweisung, ihr zu essen zu geben (5.43) – Schluss nach dem Höhepunkt, trägt die Kernaussage nicht"
+  "Namen Petrus, Jakobus und Johannes (5.37) – Nebenfiguren; im Ablauf als «drei Jünger» enthalten",
+  "Alter des Mädchens (zwölf Jahre, 5.42) – als Zahl nicht im Bild; als Klammer zu den zwölf Jahren der Frau (5.25) in der Struktur des Kapitels (leitwort) erfasst",
+  "Staunen der Anwesenden (5.42) im Einzelnen – Reaktion, im Erkennungsmoment durch die staunenden Eltern angedeutet"
  ],
  "persons": [
   "FIG-JESUS",
@@ -65,17 +202,17 @@
    "fingerprint": "4e2e2d014a2b2734"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Kernaussage und Momente sind belegt; der Schauplatz im Erkennungsmoment wurde berichtigt.",
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Rahmen A' als Ablauf mit Paarreihe «Stimmen des Todes ↔ Jesu Wort» richtig; Todesmeldung und Wort Jesu nebeneinander stehen gelassen; Schlussglied 5,43 erhalten.",
   "changes_de": [
-   "Moment 2 recognition_de: Klagende sind im Haus, nicht davor (5.39–40)"
+   "Erkennungsmomente: nicht im Text stehende Einzelheiten entfernt («legt ihm die Hand auf die Schulter», «auf dem Bett»)."
   ]
  }
 }

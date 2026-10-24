@@ -11,11 +11,110 @@
   "CORE-TIT-001-005-009",
   "CORE-TIT-001-010-016"
  ],
- "core_de": "Paulus beauftragt Titus, die Gemeinden auf Kreta zu ordnen und Älteste einzusetzen, die an der gesunden Lehre festhalten – gegen Verführer, die Gott mit Worten bekennen und mit ihren Werken verleugnen.",
+ "core_de": "Paulus beauftragt Titus, die Gemeinden auf Kreta zu ordnen und Älteste einzusetzen, die an der gesunden Lehre festhalten – gegen Verführer, die behaupten, Gott zu kennen, ihn aber mit ihren Werken verleugnen.",
  "mode": "instruction",
  "voice": {
   "speaker": "FIG-PAULUS",
   "addressee": "FIG-TITUS"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "cause",
+    "subtype": "Briefkopf → Auftrag → «denn» Gefahr",
+    "range": "TIT.1.1-TIT.1.16",
+    "elements": [
+     {
+      "label": "Briefkopf: Paulus, Apostel, an Titus, sein echtes Kind, in der Hoffnung auf ewiges Leben",
+      "ref": "TIT.1.1-TIT.1.4",
+      "role": "Präskript",
+      "links": [
+       "TIT.3.7"
+      ]
+     },
+     {
+      "label": "Auftrag: in jeder Stadt Älteste einsetzen",
+      "ref": "TIT.1.5",
+      "role": "Auftrag"
+     },
+     {
+      "label": "Ältestenspiegel: untadelig; nicht so – sondern so; am zuverlässigen Wort festhalten",
+      "ref": "TIT.1.6-TIT.1.9",
+      "role": "Voraussetzung"
+     },
+     {
+      "label": "Denn es gibt viele Verführer: Mund stopfen, scharf zurechtweisen (bestätigt durch das Zeugnis eines kretischen Propheten)",
+      "ref": "TIT.1.10-TIT.1.14",
+      "role": "Begründung («denn»)"
+     },
+     {
+      "label": "Urteil: Sie behaupten, Gott zu kennen, mit den Werken aber verleugnen sie ihn",
+      "ref": "TIT.1.15-TIT.1.16",
+      "role": "Urteil"
+     },
+     {
+      "label": "Ältester ↔ Verführer",
+      "ref": "TIT.1.6-TIT.1.16",
+      "role": "Gegenüberstellung",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Paulus",
+       "to": "Titus"
+      }
+     ],
+     "modality": [
+      {
+       "note": "Einsetzen, Mund stopfen, zurechtweisen: Aufträge, nicht Bericht."
+      }
+     ]
+    },
+    "visual": "arrows",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "Wortechos zwischen Ältestenspiegel und Gegnerbild",
+    "range": "TIT.1.6-TIT.1.16",
+    "elements": [
+     {
+      "label": "Ältester: nicht auf schändlichen Gewinn aus ↔ Verführer: lehren um schändlichen Gewinns willen",
+      "ref": "TIT.1.7-TIT.1.11",
+      "role": "Paar"
+     },
+     {
+      "label": "Ältester: Kinder nicht widerspenstig ↔ Verführer: viele Widerspenstige",
+      "ref": "TIT.1.6-TIT.1.10",
+      "role": "Paar"
+     },
+     {
+      "label": "Ältester: hält sich an das Wort, das der Lehre entspricht ↔ Verführer: lehren, was nicht sein darf",
+      "ref": "TIT.1.9-TIT.1.11",
+      "role": "Paar"
+     },
+     {
+      "label": "Ältester: dem Guten zugetan ↔ Verführer: für jedes gute Werk untauglich",
+      "ref": "TIT.1.8-TIT.1.16",
+      "role": "Paar"
+     }
+    ],
+    "features": {
+     "interpretation": [
+      {
+       "note": "Die Paare beruhen auf gleichen Wörtern im Text (schändlicher Gewinn, widerspenstig, Lehre, gut); die Gegenüberstellung als Ganzes ist Analyse, der Text stellt sie nicht ausdrücklich auf."
+      }
+     ]
+    },
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
  },
  "moments": [
   {
@@ -42,10 +141,22 @@
    "mode": "instruction"
   },
   {
-   "reference": "TIT.1.16",
-   "text_de": "Sie behaupten, Gott zu kennen, verleugnen ihn aber mit ihren Werken und sind für jedes gute Werk untauglich.",
-   "reason_de": "Aus dem Abschnitt gegen die Verführer: der Schlusssatz trägt die Kernaussage und führt das Leitwort «gute Werke» ein; vor dem bekannteren Kreter-Spruch gewählt, weil die Kernaussage vor der Bekanntheit geht (Kriterium 1).",
-   "recognition_de": "Ein Mann zeigt mit dem Finger nach oben zu Gott, während seine Hände Schlechtes tun (Deutung für das Bild: Zeigefinger für «behaupten, Gott zu kennen», Hände für «mit den Werken verleugnen»).",
+   "reference": "TIT.1.6-TIT.1.8",
+   "text_de": "Der Älteste muss untadelig sein: Mann einer einzigen Frau, mit gläubigen Kindern; der Aufseher als Verwalter Gottes nicht eigenmächtig, nicht jähzornig, kein Trinker, kein Schläger, nicht auf schändlichen Gewinn aus, sondern gastfreundlich, dem Guten zugetan, besonnen, gerecht, fromm und beherrscht.",
+   "reason_de": "Aus dem Abschnitt über die Ältesten: die tragende Reihe, wer leiten soll; als ein Moment mit allen Gliedern (Kriterien 1–2, Regel 4).",
+   "recognition_de": "Paulus an Titus, wie ein Ältester sein muss: Raster mit allen Gliedern – oben Ruf und Familie (untadelig, eine Frau, gläubige Kinder), darunter zwei Spalten: fünf durchgestrichene Felder (eigenmächtig, jähzornig, Trinker, Schläger, schändlicher Gewinn) gegenüber sechs Feldern «sondern» (gastfreundlich, dem Guten zugetan, besonnen, gerecht, fromm, beherrscht).",
+   "keywords": [
+    "untadelig",
+    "Verwalter Gottes",
+    "gastfreundlich"
+   ],
+   "mode": "list"
+  },
+  {
+   "reference": "TIT.1.15-TIT.1.16",
+   "text_de": "Für die Reinen ist alles rein, für die Befleckten nichts; die Verführer behaupten, Gott zu kennen, verleugnen ihn aber mit ihren Werken und sind für jedes gute Werk untauglich.",
+   "reason_de": "Aus dem Abschnitt gegen die Verführer: der Schluss trägt die Kernaussage und führt das Leitwort «gute Werke» ein; vor dem bekannteren Kreter-Spruch gewählt, weil die Kernaussage vor der Bekanntheit geht (Kriterium 1).",
+   "recognition_de": "Zwei Spalten: links ein Mann, der mit dem Finger nach oben zu Gott zeigt («behaupten, Gott zu kennen»), rechts dieselben Hände bei schlechten Taten («mit den Werken verleugnen»); darüber klein «rein ↔ befleckt» (Deutung für das Bild: Zeigefinger und Hände).",
    "keywords": [
     "Gott zu kennen",
     "verleugnen sie ihn"
@@ -54,9 +165,8 @@
   }
  ],
  "omitted_de": [
-  "Hoffnung auf ewiges Leben (Tit 1,2) – auf Buchebene über Tit 3,7 vertreten",
-  "Eigenschaften der Ältesten im Einzelnen – Teil des Auftrags",
-  "Der Spruch über die Kreter (Tit 1,12) – Erkennungsmoment des Abschnitts, trägt aber die Kernaussage weniger"
+  "Der Spruch über die Kreter (Tit 1,12) als eigener Moment – Beleg innerhalb der Begründung, steht in der Struktur; bekannt, trägt aber die Kernaussage weniger",
+  "«besonders die aus der Beschneidung» und jüdische Mythen im Einzelnen (Tit 1,10.14) – Erklärung der Gegner, gehört in «Hintergrund damals»"
  ],
  "persons": [
   "FIG-PAULUS",
@@ -68,28 +178,29 @@
  "basis": [
   {
    "record": "CORE-TIT-001-001-004",
-   "fingerprint": "ddf96563bcfedbcf"
+   "fingerprint": "ee87ee49156f5c34"
   },
   {
    "record": "CORE-TIT-001-005-009",
-   "fingerprint": "38a6d2e49d281b05"
+   "fingerprint": "ca810a28d70d7774"
   },
   {
    "record": "CORE-TIT-001-010-016",
-   "fingerprint": "7961957ca7ab38fe"
+   "fingerprint": "eb73fc85892c7c0b"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23 nach docs/VERDICHTUNG.md; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-23, Strukturanalyse 2026-10-24 nach docs/STRUKTURKATALOG.md; keine fachliche Prüfung.",
  "knowledge": {
-  "asserted_at": "2026-10-23",
+  "asserted_at": "2026-10-24",
   "supersedes": null
  },
  "review": {
-  "date": "2026-10-23",
-  "by_de": "getrennte KI-Instanz (Claude), gegen die hochdeutsche Arbeitsübersetzung",
-  "summary_de": "Auswahl und Kernaussage stimmen; übernommene Momente nach den Abschnitten korrigiert.",
+  "date": "2026-10-24",
+  "by_de": "getrennte KI-Instanz (Claude), Prüfung Strukturtreue gegen die hochdeutsche Arbeitsübersetzung",
+  "summary_de": "Kapitel fügt die drei Abschnitte (Präskript, Auftrag mit Ältestenspiegel, «denn» Verführer) richtig zusammen; Gegenüberstellung Ältester ↔ Verführer als Wortechos korrekt als Analyse gekennzeichnet; Momente aus den Abschnitten, Kreter-Spruch begründet weggelassen.",
   "changes_de": [
-   "Momente 1,4 und 1,5 aus den korrigierten Abschnitten übernommen (keine Übergabe; Auftrag als verlangte Handlung)"
+   "core_de und Label s1/5: «mit Worten bekennen» durch den Wortlaut «behaupten, Gott zu kennen» ersetzt.",
+   "Moment 3 an Abschnitt angeglichen («der Aufseher als Verwalter Gottes»)."
   ]
  }
 }
