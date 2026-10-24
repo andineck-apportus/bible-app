@@ -1397,9 +1397,11 @@ class AniComposer(_auto.Composer):
         sc = {1: 1.5, 2: 1.4, 3: 1.22, 4: 1.06, 5: .94}.get(n, .84)
         if any(_auto.meta(t, self.lex, EXTRA_META)[0] == "big" for t in p["objects"] + p["signs"]):
             sc = min(sc, 1.0)
-        if s["group"]:
-            sc *= .92
-        sc *= (st.get("size") or {}).get(fid, 1)  # z. B. Redner klein am Rand (Bildtyp Rede/Lehre)
+        # Ein Massstab für alle Erwachsenen im Feld (Hinweis Andi Neck 2026-10-24: Jesus wirkte als Redner am Rand wie ein Kind,
+        # Gruppen übergross). stage.size verkleinert nur noch Kinder; der Redner steht am Rand, nicht kleiner.
+        fac = (st.get("size") or {}).get(fid, 1)
+        if fac < 1 and CHAR.get(KEY.get(fid, ""), {}).get("child"):
+            sc *= fac
         self._hr = 12 * sc
         y = 140 - 34 * sc + 4 + POSE_SHIFT.get(pose, 0) * sc
         half = (17 + (11 if fid.startswith("FIG-GRUPPE-") else 0)) * sc + 3

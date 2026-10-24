@@ -2,6 +2,12 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.85 — 2026-10-24 — Gleicher Massstab für alle Personen
+
+Hinweis Andi Neck: Jesus wirkte als Redner am Rand teilweise wie ein Kind, andere übergross.
+- Alle Erwachsenen eines Felds werden im gleichen Massstab gezeichnet; Gruppen sind nicht mehr grösser als Einzelne. Die Angabe `stage.size` verkleinert nur noch Kinder; der Redner steht am Rand, nicht kleiner (BILDPROZESS.md, Leitlinie 9).
+- Alle 537 Bilder neu gezeichnet.
+
 ## v0.84 — 2026-10-24 — Bildanordnung: nichts verdecken, Kacheln in lesbarer Grösse
 
 Hinweise Andi Neck:
