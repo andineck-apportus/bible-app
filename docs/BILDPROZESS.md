@@ -69,6 +69,8 @@ Was gut funktioniert: die festen Erkennungszeichen (Gott, Jesus, Geist) und der 
      und verkleinert sonst die Blase.
    - Handlungspfeile führen nicht über fremde Köpfe, Zeichen oder Blasen; wo möglich weichen sie aus (stärkerer Bogen,
      seitlicher Ansatz am Kopf).
+   - Alle Erwachsenen eines Felds im gleichen Massstab, Gruppen nicht grösser als Einzelne; der Redner steht am Rand, wird
+     aber nicht verkleinert (sonst wirkt er wie ein Kind). Kleiner sind nur Kinder.
    - Gedanken stehen in einer deutlichen Gedankenwolke (Bögen rundum, kleiner werdende Kreise zur Figur), damit sie nicht
      als Rede gelesen werden.
 10. **Die Bildaussage trifft das Thema.** Wer das Bild sieht, erkennt im Kern, worum es geht: Das Thema der Stelle steht im
