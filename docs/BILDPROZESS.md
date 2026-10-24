@@ -90,6 +90,12 @@ Was gut funktioniert: die festen Erkennungszeichen (Gott, Jesus, Geist) und der 
    - bei `mode: Auftrag` Briefrahmen und Legende «Auftrag an …»;
    - höchstens zwei abstrakte Zeichen je Feld, nur aus dem getesteten Grundbestand;
    - jede Figur der Legende ist im Bild mit Gesicht zu sehen.
+   - **Struktur zuerst** (`bildauftraege.py`): Jedes Bild mit Kernanalyse nutzt nur Darstellungen, die deren
+     Strukturanalyse vorsieht (obere Ebenen auch die ihrer Abschnitte); Kapitelbilder zeigen jeden Abschnitt. Bilder ohne
+     Strukturanalyse (noch alte Verdichtung) werden als «offen» gemeldet und beim Ausrollen neu gemacht; neue Bilder
+     entstehen nur noch nach der Strukturanalyse.
+   - **Anordnung im Browser** (`scripts/authoring/pruefe_bilder.py`, de und gsw): Text ragt nicht über die Zellen der
+     Strukturbilder, Beschriftungen von Pfeilen und Zweigen überdecken nichts (Hinweis Andi Neck 2026-10-24).
    - **Sichtprüfung der Anordnung** (Leitlinie 9 und 10): keine Blase und kein Pfeil über Gesicht, Zeichen oder Gegenstand;
      Thema der Stelle im Bild genannt; Gedanken als Wolke erkennbar.
    - **Worte im Bild sprachlich prüfen** (Hinweis Andi Neck 2026-10-23): Stichwortband und Sprechblasen, in allen Sprachen,

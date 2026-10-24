@@ -57,6 +57,7 @@ FEATURES = {"speakers", "stance", "authority", "genre", "leitwort", "pattern_bre
 FEATURE_KEYS = {"ref", "refs", "note", "word", "role", "who", "to", "kind"}  # Merkmal: Liste solcher Objekte
 VISUALS = {"scenes", "timeline", "lanes", "grid", "columns", "mirror", "switch", "arrows", "tree", "rings", "circle", "stairs",
            "map", "model", "figure", "levels", "dialogue", "balance", "outline", "network"}
+CHILDREN = {}
 LEX = {p.stem for p in (D / "illustrations/lexicon").glob("FIG-*.json")}
 
 
@@ -198,6 +199,17 @@ def check_structure(u, errs):
     for k in units:
         if k != st.get("root") and k not in used:
             errs.append(f"{sid}/{k}: Struktureinheit hängt nirgends (child)")
+    if u["level"] == "chapter" and CHILDREN.get(sid):
+        # Kapitel: die Kernaussage jedes Abschnitts ist enthalten (Hinweis Andi Neck 2026-10-24) – jeder Abschnitt
+        # kommt in der Struktur vor (ein Glied, dessen Stelle in ihm liegt)
+        covered = set()
+        for x in st.get("units", []):
+            for e in x.get("elements") or []:
+                if e.get("ref"):
+                    covered |= set(verses(e["ref"]))
+        for c, cref in CHILDREN[sid]:
+            if not set(verses(cref)) & covered:
+                errs.append(f"{sid}: Abschnitt {c} ({cref}) fehlt in der Struktur des Kapitels (Kernaussage jedes Abschnitts)")
 
 
 def run(books):
@@ -208,6 +220,9 @@ def run(books):
             units[u["suffix"]] = u
     sel = [u for u in units.values() if not books or u["suffix"].split("-")[0] in books]
     errs = []
+    CHILDREN.clear()
+    CHILDREN.update({sid: [(c, units[c]["reference"]) for c in u.get("children", []) if c in units]
+                     for sid, u in units.items() if u["level"] == "chapter"})
     for u in sel:
         check_unit(u, units, errs)
         if u.get("structure") or os.environ.get("BIBLE_STRUCTURE_REQUIRED", "1") == "1":

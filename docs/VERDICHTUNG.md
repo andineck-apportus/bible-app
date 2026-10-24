@@ -72,6 +72,11 @@ Musterbruch, offenes Ende, Textfassungen, Deutung statt Text) und 20 Darstellung
 8. **Eine Textfassung je Verdichtung.** Verdichtet wird die Grundlage der Arbeitsübersetzung. Abweichende Fassungen (Ester
    hebräisch ↔ griechisch, Jeremia MT ↔ LXX, Zusätze zu Daniel, Markus-Schluss) werden in Zusammenfassung und Kernanalyse als
    Hinweis genannt, im Bild nicht gezeigt: Varianten gehören ins vertiefte Studium auf Versebene.
+9. **Kapitel enthalten die Kernaussage jedes Abschnitts** (Hinweis Andi Neck 2026-10-24). Die Kapitel-Zusammenfassung
+   nennt jeden Abschnitt mit seiner Kernaussage (ein Satz oder ein Listenpunkt; gleich gebaute Abschnitte dürfen in einem
+   Punkt stehen, wenn jeder darin erkennbar bleibt). Die Struktur des Kapitels hat für jeden Abschnitt ein Glied, und das
+   Kapitelbild zeigt jeden Abschnitt in einem seiner Felder (höchstens 4 Felder, ein Feld darf mehrere Abschnitte bündeln,
+   z. B. als Raster oder Gliederungsbild). Geprüft von `kernanalyse.py`, `zusammenfassungen.py` und `bildauftraege.py`.
 
 ## Die Kernanalyse
 
@@ -109,7 +114,7 @@ sagt; eine Deutung wird als Deutung gekennzeichnet.
 | Ebene | Momente | Zusammenfassung | Bild |
 |---|---|---|---|
 | Abschnitt | 1–3; eine Reihe, ein Gegensatz oder ein Baum zählt als ein Moment mit allen Gliedern | 2–4 Sätze oder eine kurze Liste | 1–3 Szenen oder eine Übersicht (Raster bis 8 Felder, bei tragenden Reihen alle Glieder, gruppiert; Spalten, Baum, Modell) |
-| Kapitel | ein Moment je Hauptabschnitt, höchstens 4 | 3–5 Sätze | höchstens 4 Felder |
+| Kapitel | ein Moment je Hauptabschnitt, höchstens 4; jeder Abschnitt in der Struktur | 3–5 Sätze oder Liste; jeder Abschnitt mit seiner Kernaussage | höchstens 4 Felder, zusammen alle Abschnitte |
 | Buch | 4–6 Stationen | 4–6 Sätze | Zeitleiste oder Karte mit den Stationen |
 | Buchgruppe, Testament, Bibel | 4–6 Stationen | 4–6 Sätze | Stationen mit Beschriftung |
 | Merkvers | 1 | – (der Vers selbst) | ein Bild mit dem Verswort |

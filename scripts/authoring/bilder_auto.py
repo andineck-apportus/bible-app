@@ -437,14 +437,24 @@ class Composer:
     def panel(self, p):
         if p.get("diagram"):  # Strukturbild (bilder_diagramm.py): Kachel nach Inhalt, Stichwortband wie bei Szenen
             import bilder_diagramm
-            body, w, h = bilder_diagramm.diagram(self, p["diagram"])
+            dg = p["diagram"]
+            if "span" not in dg:  # hohe schmale Kachel wird breit (weniger Leerfläche neben ihr, Hinweis Andi Neck 2026-10-24)
+                b1 = bilder_diagramm.diagram(self, dict(dg, span=1))
+                if b1[2] > 175 and dg["visual"] != "dialogue":
+                    dw = dict(dg, span=2)
+                    if dw.get("cols"):
+                        dw["cols"] = min(4, dw["cols"] * 2)
+                    dg = dw
+            body, w, h = bilder_diagramm.diagram(self, dg)
             self.sizes = getattr(self, "sizes", []) + [(w, h)]
             # breite Kachel: zusätzlich eine schmale Fassung fürs Handy (gleicher Inhalt, weniger Spalten)
             alt = None
-            if p["diagram"].get("span") == 2:
-                dn = dict(p["diagram"], span=1)
+            if dg.get("span") == 2:
+                dn = dict(dg, span=1)
                 if dn.get("cols"):
                     dn["cols"] = min(2, dn["cols"])
+                if p["diagram"].get("cols"):
+                    dn["cols"] = min(2, p["diagram"]["cols"])
                 alt = bilder_diagramm.diagram(self, dn)
             self.alts = getattr(self, "alts", []) + [alt]
             self.bands = getattr(self, "bands", [])

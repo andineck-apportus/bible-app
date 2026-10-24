@@ -205,6 +205,34 @@ Offen nach Runde 4:
 Im fertigen Bild helfen Namensschild, Stichwortband und Szene. Der Blindtest der ganzen Bilder ohne Legende
 (BILDPROZESS.md) misst, ob das reicht.
 
+### Runde 5 (Strukturbilder, 2026-10-24)
+
+Für die Strukturbilder der Bergpredigt (Raster, Spalten mit Textzellen) braucht es mehr Bildzeichen, damit man Inhalte
+schneller erfasst. Neu: 16 Zeichen (Daten `scripts/authoring/bildlexikon_daten/STRUKTUR.json`, Zeichnungen
+`scripts/authoring/bildsymbole_daten/STRUKTUR.json`). Neu gezeichnet: das Untergewand (`FIG-OBJ-GEWAND`), das wie ein
+heutiges T-Shirt aussah; jetzt eine lange Tunika mit Gürtel.
+
+Gemessen wie Runde 3/4: allein und ohne Legende, je vier blinde Instanzen bei 160 px und zwei bei 48 px, eine weitere
+Instanz bewertet. Fünf Zeichen wurden nach der ersten Messung nachgebessert und mit neuen Instanzen erneut gemessen.
+Daten: `reports/zeichen-blindtest-2026-10-24-runde5.json`.
+
+| Zeichen | Klasse | erste Messung (160 px) | nach Nachbesserung | 48 px | Urteil |
+|---|---|---|---|---|---|
+| Auge, Hand, Sonne, Regen, Meilenstein, Mantel (Obergewand), Untergewand, guter Baum, Axt an der Wurzel | Gegenstand | 4 von 4 | – | 2 von 2 | behalten |
+| Ohrfeige | Handlung | 4 von 4 | – | 2 von 2 | behalten |
+| Mammon | Begriff | 4 von 4 («Reichtum, Geldsack») | – | 2 von 2 | behalten |
+| Almosen geben | Handlung | 3 von 4 | – | 0 von 2 («bezahlen») | behalten |
+| Weites Tor | Ort | 4 von 4 («Stadttor») | 4 von 4 | 0 von 2 («Grab») | behalten, Weite nur im Paar mit dem engen Tor |
+| Kopf mit Haar | Gegenstand | 0 von 4 («Heiliger») | 3 von 4 (vergrössertes Haar) | 0 von 2 | behalten |
+| Trost | Handlung | 0 von 4 («Trauer») | 4 von 4 («Tränen abwischen») | 2 von 2 | behalten |
+| Fauler Baum | Gegenstand | 0 von 4 («verdorrter Baum») | 4 von 4 (dritte Fassung: Krone, faule Früchte, Würmer, Fliegen) | 0 von 2 | behalten |
+| Jota | Begriff | 0 von 4 («Schriftrolle») | 0 von 4 («Buchstabe», Jod nicht erkannt) | 0 von 2 | Wortzeichen mit «Jota» |
+
+Lehren: Ein Funkeln am Kopf liest sich als Heiligkeit. Kahle Äste lesen sich als «verdorrt», dunkle Früchte als Feigen;
+«faul» braucht Würmer und Fliegen. Trost wird erst erkannt, wenn die Träne schon weggewischt ist und das Gesicht lächelt.
+Der kleinste Buchstabe bleibt ohne Wort ein Begriff. Bei 48 px tragen feine Merkmale (Fliegen, Haar in der Lupe) nicht;
+in Strukturbildern stehen die Zeichen deshalb neben ihrem Stichwort. Der Test der ganzen Strukturbilder steht noch aus.
+
 ### Reihenfolge der Überarbeitung
 
 1. Die 20 meistverwendeten schwachen Zeichen (rund die Hälfte aller schwachen Verwendungen).
