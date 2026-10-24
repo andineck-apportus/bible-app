@@ -2,6 +2,13 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.89 — 2026-10-24 — Zeichen «Zuflucht» neu, Test fragt zuerst nach dem Abbild
+
+Rückmeldung Andi Neck: die Henne mit Küken (Rut 2,12 «unter seinen Flügeln») sah aus wie eine Fruchtplatte.
+- **Neues Zeichen:** ein grosser Vogel breitet den Flügel wie ein Dach über eine kniende Frau (Rut); bei 32 px von allen Testpersonen als «Vogel über Person» und «Schutz unter Flügeln» erkannt, auch als reiner Umriss.
+- **Test verbessert:** Die KI-Testpersonen hatten die alte Henne in Farbe fast immer erkannt, ein Mensch nicht. Der Zeichentest fragt jetzt zuerst offen nach dem Abgebildeten, dann nach der Bedeutung, und prüft zusätzlich den schwarzen Umriss (`zeichen_test.py --frage abbild --silhouette`); erkannt gilt nur, wenn das Abbild richtig benannt wird (SYMBOLPROZESS.md).
+- Entscheide: Detail und Merkmale eines Zeichens entscheidet der Test, nicht eine Einzelvorgabe; die Regel «Tore ohne Zinnen» entfällt.
+
 ## v0.88 — 2026-10-24 — Zeichen in Einsatzgrösse geprüft, Kästen füllen die Zeile
 
 Hinweise Andi Neck:

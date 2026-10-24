@@ -1,0 +1,716 @@
+{
+ "datum": "2026-10-24",
+ "runde": "Runde 6c (Zuflucht unter Flügeln neu gezeichnet)",
+ "anlass_de": "Rückmeldung Andi Neck 2026-10-24 zum Zeichen FIG-ZEICHEN-ZUFLUCHT (Henne mit Küken, Runde 6): «Das sieht für mich aus wie eine Fruchtplatte.» Bei 32 px ein brauner Hügel mit gelben Kugeln darunter, keine Henne. KI-Testpersonen hatten dieselbe Zeichnung in Runde 6 als «Henne mit Küken» benannt.",
+ "methode_de": "scripts/authoring/zeichen_test.py mit neuer Frage --frage abbild: zuerst offen «Was ist abgebildet?» (Gegenstand, Lebewesen, Szene; ohne Deutung und ohne Hinweis auf die Bibel), dann «Was könnte es bedeuten?». Bewertung durch eine weitere Instanz: «Abbild erkannt» nur, wenn die Antwort auf die erste Frage das Gezeichnete richtig benennt (Formen wie «Hügel mit Kugeln» oder andere Dinge zählen nicht); «Bedeutung getroffen» = Wert 2. Neu ausserdem --silhouette: dieselben Zeichen einfarbig schwarz (nur der Umriss). Detailstufen verteilt (--verteilen), 32 px bei Pixeldichte 2 je Stufe vier Instanzen (Farbe und Umriss), 32 px in der Zelle und 160 px je zwei. Auf jedem Blatt vier bekannte Füllzeichen (Brot, Öllampe, Schaf, Gewandzipfel), damit das Blatt nicht nur Vögel zeigt. claude -p, Claude Opus 5.5, nur Lesezugriff.",
+ "ausgangsmessung_alt": {
+  "zeichnung": "Henne mit Küken (Runde 6, Stufe 3)",
+  "32 px allein, Farbe": {
+   "abbild_erkannt": 12,
+   "bedeutung_getroffen": 9,
+   "n": 12,
+   "antworten": [
+    "Henne mit Küken → Gottes Fürsorge",
+    "Henne mit Küken → Mütterliche Fürsorge Gottes",
+    "brütende Henne, Küken → Behütung, Fürsorge",
+    "Henne mit Küken → Geborgenheit, Sammlung",
+    "Brütende Henne, Küken → Unter seinen Flügeln",
+    "Brütende Henne mit Küken → Schutz, Sammeln",
+    "Brütende Henne mit Küken → Schutz unter Flügeln",
+    "Glucke mit Küken → Behütung, Fürsorge",
+    "brütende Henne, Küken → Schutz, Geborgenheit",
+    "Glucke mit Küken → Gottes Fürsorge",
+    "Glucke mit Küken → Fürsorge, Schutz",
+    "brütende Henne, Küken → Geborgenheit"
+   ],
+   "note": "Teils nur als «Fürsorge» statt als Schutz/Zuflucht gedeutet"
+  },
+  "32 px allein, nur Umriss (--silhouette)": {
+   "abbild_erkannt": 7,
+   "bedeutung_getroffen": 3,
+   "n": 12,
+   "antworten": [
+    "Busch mit Flamme → brennender Dornbusch",
+    "Sitzender Vogel → Henne, Schutz",
+    "Kniende Gestalt → Gebet",
+    "Vogel auf Nest → Schutz, Geborgenheit",
+    "Sitzender Vogel → Taube",
+    "Kniende Person → Gebet",
+    "Vogel auf Nest → Taube",
+    "kniende Person → Gebet",
+    "Henne auf Nest → Schutz",
+    "Vogel auf Nest → Taube",
+    "Vogel auf Nest → Fürsorge",
+    "Hügel mit Vogel → Opfer"
+   ],
+   "note": "Vogel auf Nest wird oft erkannt, aber als Taube gedeutet; ein Teil sieht eine kniende Person, die betet"
+  },
+  "32 px in der Zelle (Rut 2,12)": {
+   "abbild_erkannt": 6,
+   "bedeutung_getroffen": 5,
+   "n": 6,
+   "antworten": [
+    "Henne mit Küken → Geborgenheit",
+    "Henne mit Küken → Zuflucht, Geborgenheit",
+    "Henne deckt Küken → Zuflucht, Geborgenheit",
+    "Brütende Henne mit Küken → Geborgenheit, Zuflucht",
+    "Brütende Henne, Küken → Schutz, Zuflucht",
+    "Henne mit Küken → Zuflucht, Geborgenheit"
+   ],
+   "note": "Nur «Geborgenheit» ohne Schutz/Zuflucht"
+  },
+  "160 px": {
+   "abbild_erkannt": 6,
+   "bedeutung_getroffen": 6,
+   "n": 6,
+   "antworten": [
+    "Henne mit Küken → Behütung, Fürsorge",
+    "Henne mit Küken → Sammeln, Geborgenheit",
+    "Henne deckt Küken zu → Schutz unter Flügeln",
+    "Vogel deckt Küken → Schutz unter Flügeln",
+    "Brütende Henne mit Küken → Behütung",
+    "Henne über Küken → Schutz unter Flügeln"
+   ],
+   "note": "Durchweg getroffen, teils nur als Behütung/Fürsorge"
+  }
+ },
+ "runde_1": {
+  "entwuerfe": {
+   "E1": "Weisse Henne im Profil (Kamm, Schnabel, Auge), Flügel flach nach hinten über drei Küken, die unter dem Flügelrand hervorschauen",
+   "E2": "Brauner Vogel von vorn mit beiden Flügeln wie ein Dach, darunter eine sitzende Frau; Stufe 3 mit Regen"
+  },
+  "messungen": {
+   "32 px allein, Farbe": {
+    "ALT": {
+     "abbild_erkannt": 12,
+     "bedeutung_getroffen": 9,
+     "n": 12,
+     "antworten": [
+      "Henne mit Küken → Gottes Fürsorge",
+      "Henne mit Küken → Mütterliche Fürsorge Gottes",
+      "brütende Henne, Küken → Behütung, Fürsorge",
+      "Henne mit Küken → Geborgenheit, Sammlung",
+      "Brütende Henne, Küken → Unter seinen Flügeln",
+      "Brütende Henne mit Küken → Schutz, Sammeln",
+      "Brütende Henne mit Küken → Schutz unter Flügeln",
+      "Glucke mit Küken → Behütung, Fürsorge",
+      "brütende Henne, Küken → Schutz, Geborgenheit",
+      "Glucke mit Küken → Gottes Fürsorge",
+      "Glucke mit Küken → Fürsorge, Schutz",
+      "brütende Henne, Küken → Geborgenheit"
+     ],
+     "note": "Teils nur als «Fürsorge» statt als Schutz/Zuflucht gedeutet"
+    },
+    "E1@1": {
+     "abbild_erkannt": 4,
+     "bedeutung_getroffen": 4,
+     "n": 4,
+     "antworten": [
+      "Vogel mit Küken unter Flügel → Geborgenheit",
+      "Vogel mit Küken unter Flügel → Schutz Gottes",
+      "Henne mit Küken → Geborgenheit, Schutz",
+      "Vogel mit Küken unter Flügel → Gottes Schutz"
+     ],
+     "note": "Keine Fehldeutung"
+    },
+    "E1@2": {
+     "abbild_erkannt": 4,
+     "bedeutung_getroffen": 2,
+     "n": 4,
+     "antworten": [
+      "Henne mit Küken → Schutz, Geborgenheit",
+      "Henne mit Küken → Gottes Fürsorge",
+      "Henne mit Küken → Gottes Fürsorge",
+      "Henne mit Küken → Schutz, Geborgenheit"
+     ],
+     "note": "Teils nur als «Gottes Fürsorge» gedeutet"
+    },
+    "E1@3": {
+     "abbild_erkannt": 4,
+     "bedeutung_getroffen": 2,
+     "n": 4,
+     "antworten": [
+      "Henne mit Küken → Gottes Fürsorge",
+      "Henne mit Küken → Geborgenheit, Sammeln",
+      "Henne mit Küken → Schutz, Geborgenheit",
+      "Henne mit Küken → Gottes Fürsorge"
+     ],
+     "note": "Teils nur als «Gottes Fürsorge» gedeutet"
+    },
+    "E2@1": {
+     "abbild_erkannt": 4,
+     "bedeutung_getroffen": 4,
+     "n": 4,
+     "antworten": [
+      "Adler über Mensch → Gottes Schutz",
+      "Adler über Mensch → Gottes Schutz",
+      "Adler über Mensch → Schutz Gottes",
+      "Adler über Mensch → Gottes Schutz"
+     ],
+     "note": "Keine Fehldeutung"
+    },
+    "E2@2": {
+     "abbild_erkannt": 4,
+     "bedeutung_getroffen": 1,
+     "n": 4,
+     "antworten": [
+      "Adler über Person → Auf Adlersflügeln",
+      "Adler über Person → Getragen von Gott",
+      "Adler über Person → Bewahrung, Kraft",
+      "Adler über Person → Behütung, Bewahrung"
+     ],
+     "note": "Vogel wird als Adler gesehen, daher die Deutung «Auf Adlersflügeln / getragen» statt Zuflucht"
+    },
+    "E2@3": {
+     "abbild_erkannt": 4,
+     "bedeutung_getroffen": 4,
+     "n": 4,
+     "antworten": [
+      "Adler schützt Mensch → Gottes Schutz",
+      "Adler über Mensch, Regen → Schutz unter Flügeln",
+      "Adler über Mensch, Regen → Gottes Schutz",
+      "Adler über Mensch, Regen → Gottes Schutz"
+     ],
+     "note": "Keine Fehldeutung; der Vogel wird als Adler gesehen, dazu zusätzlich Regen"
+    }
+   },
+   "32 px allein, nur Umriss (--silhouette)": {
+    "ALT": {
+     "abbild_erkannt": 7,
+     "bedeutung_getroffen": 3,
+     "n": 12,
+     "antworten": [
+      "Busch mit Flamme → brennender Dornbusch",
+      "Sitzender Vogel → Henne, Schutz",
+      "Kniende Gestalt → Gebet",
+      "Vogel auf Nest → Schutz, Geborgenheit",
+      "Sitzender Vogel → Taube",
+      "Kniende Person → Gebet",
+      "Vogel auf Nest → Taube",
+      "kniende Person → Gebet",
+      "Henne auf Nest → Schutz",
+      "Vogel auf Nest → Taube",
+      "Vogel auf Nest → Fürsorge",
+      "Hügel mit Vogel → Opfer"
+     ],
+     "note": "Vogel auf Nest wird oft erkannt, aber als Taube gedeutet; ein Teil sieht eine kniende Person, die betet"
+    },
+    "E1@1": {
+     "abbild_erkannt": 0,
+     "bedeutung_getroffen": 0,
+     "n": 4,
+     "antworten": [
+      "Schaf mit Last → Opfer, Sündenbock",
+      "Schaf auf Steinen → Opfer",
+      "Schaf auf Holzstapel → Opfer",
+      "Schaf mit Last → Opfergabe"
+     ],
+     "note": "Henne mit Küken wird als Schaf auf Holzstapel gesehen und als Opfer gedeutet"
+    },
+    "E1@2": {
+     "abbild_erkannt": 0,
+     "bedeutung_getroffen": 0,
+     "n": 4,
+     "antworten": [
+      "Wagen mit Zugtier → Reise",
+      "Pferd mit Wagen → Streitwagen",
+      "Wagen mit Zugtier → Reise",
+      "Wagen mit Tier → Reise"
+     ],
+     "note": "Wird als Wagen mit Zugtier gesehen und als Reise gedeutet"
+    },
+    "E1@3": {
+     "abbild_erkannt": 0,
+     "bedeutung_getroffen": 0,
+     "n": 4,
+     "antworten": [
+      "Wagen mit Zugtier → Reise",
+      "Pferd mit Wagen → Reise",
+      "Tier zieht Karren → Reise",
+      "Wagen mit Zugtier → Reise"
+     ],
+     "note": "Wird als Tier gesehen, das einen Wagen zieht, und als Reise gedeutet"
+    },
+    "E2@1": {
+     "abbild_erkannt": 3,
+     "bedeutung_getroffen": 0,
+     "n": 4,
+     "antworten": [
+      "Vogel mit ausgebreiteten Flügeln → Heiliger Geist",
+      "Engel mit Flügeln → Engel",
+      "Vogel mit ausgebreiteten Flügeln → Heiliger Geist",
+      "Vogel mit ausgebreiteten Flügeln → Heiliger Geist"
+     ],
+     "note": "Vogel mit ausgebreiteten Flügeln wird erkannt, die Frau darunter nicht; gedeutet als Heiliger Geist"
+    },
+    "E2@2": {
+     "abbild_erkannt": 0,
+     "bedeutung_getroffen": 0,
+     "n": 4,
+     "antworten": [
+      "Engel mit Flügeln → Engel, Bote",
+      "Geflügelte Gestalt → Engel",
+      "Geflügelte Gestalt → Engel",
+      "Geflügelte Gestalt → Engel, Botschaft"
+     ],
+     "note": "Vogel und Frau verschmelzen zu einer geflügelten Gestalt, gedeutet als Engel"
+    },
+    "E2@3": {
+     "abbild_erkannt": 0,
+     "bedeutung_getroffen": 0,
+     "n": 4,
+     "antworten": [
+      "Gestalt mit ausgebreiteten Flügeln → Engel",
+      "Person zwischen Säulen → Simson",
+      "Person mit Flügeln, Strahlen → Engel",
+      "Person mit erhobenen Armen → Lobpreis"
+     ],
+     "note": "Wird als geflügelte Person gesehen und als Engel gedeutet, sonst Simson oder Lobpreis"
+    }
+   },
+   "32 px in der Zelle (Rut 2,12)": {
+    "ALT": {
+     "abbild_erkannt": 6,
+     "bedeutung_getroffen": 5,
+     "n": 6,
+     "antworten": [
+      "Henne mit Küken → Geborgenheit",
+      "Henne mit Küken → Zuflucht, Geborgenheit",
+      "Henne deckt Küken → Zuflucht, Geborgenheit",
+      "Brütende Henne mit Küken → Geborgenheit, Zuflucht",
+      "Brütende Henne, Küken → Schutz, Zuflucht",
+      "Henne mit Küken → Zuflucht, Geborgenheit"
+     ],
+     "note": "Nur «Geborgenheit» ohne Schutz/Zuflucht"
+    },
+    "E1@1": {
+     "abbild_erkannt": 0,
+     "bedeutung_getroffen": 2,
+     "n": 2,
+     "antworten": [
+      "Gans mit Küken → Schutz",
+      "Gans mit Küken → Schutz unter Flügeln"
+     ],
+     "note": "Henne wird als Gans gelesen"
+    },
+    "E1@2": {
+     "abbild_erkannt": 2,
+     "bedeutung_getroffen": 2,
+     "n": 2,
+     "antworten": [
+      "Henne mit Küken → Schutz, Zuflucht",
+      "Henne mit Küken → Schutz, Zuflucht"
+     ],
+     "note": "keine Fehldeutung"
+    },
+    "E1@3": {
+     "abbild_erkannt": 2,
+     "bedeutung_getroffen": 2,
+     "n": 2,
+     "antworten": [
+      "Henne mit Küken → Geborgenheit, Schutz",
+      "Henne mit Küken → Schutz, Zuflucht"
+     ],
+     "note": "keine Fehldeutung"
+    },
+    "E2@1": {
+     "abbild_erkannt": 2,
+     "bedeutung_getroffen": 2,
+     "n": 2,
+     "antworten": [
+      "Adler über Person → Gottes Schutz",
+      "Adler über Mensch → Schutz, Geborgenheit"
+     ],
+     "note": "Vogel wird als Adler gelesen, Bedeutung getroffen"
+    },
+    "E2@2": {
+     "abbild_erkannt": 2,
+     "bedeutung_getroffen": 2,
+     "n": 2,
+     "antworten": [
+      "Adler über Mensch → Göttlicher Schutz",
+      "Adler über Mensch → Gottes Schutz"
+     ],
+     "note": "Vogel wird als Adler gelesen, Bedeutung getroffen"
+    },
+    "E2@3": {
+     "abbild_erkannt": 2,
+     "bedeutung_getroffen": 2,
+     "n": 2,
+     "antworten": [
+      "Adler schützt Person, Regen → Schutz, Zuflucht",
+      "Adler über Mensch, Regen → Schutz, Bewahrung"
+     ],
+     "note": "Regen wird ins Bild hineingelesen, Bedeutung getroffen"
+    }
+   },
+   "160 px": {
+    "ALT": {
+     "abbild_erkannt": 6,
+     "bedeutung_getroffen": 6,
+     "n": 6,
+     "antworten": [
+      "Henne mit Küken → Behütung, Fürsorge",
+      "Henne mit Küken → Sammeln, Geborgenheit",
+      "Henne deckt Küken zu → Schutz unter Flügeln",
+      "Vogel deckt Küken → Schutz unter Flügeln",
+      "Brütende Henne mit Küken → Behütung",
+      "Henne über Küken → Schutz unter Flügeln"
+     ],
+     "note": "Durchweg getroffen, teils nur als Behütung/Fürsorge"
+    },
+    "E1@1": {
+     "abbild_erkannt": 1,
+     "bedeutung_getroffen": 2,
+     "n": 2,
+     "antworten": [
+      "Vogel mit Küken unter Flügel → Geborgenheit",
+      "Gans mit Küken → Schutz, Fürsorge"
+     ],
+     "note": "Henne einmal als Gans gesehen"
+    },
+    "E1@2": {
+     "abbild_erkannt": 2,
+     "bedeutung_getroffen": 1,
+     "n": 2,
+     "antworten": [
+      "Henne mit Küken → Fürsorge, Geborgenheit",
+      "Henne mit Küken → Gottes Fürsorge"
+     ],
+     "note": "Einmal nur als Fürsorge statt Schutz gedeutet"
+    },
+    "E1@3": {
+     "abbild_erkannt": 2,
+     "bedeutung_getroffen": 2,
+     "n": 2,
+     "antworten": [
+      "Henne mit Küken → Geborgenheit",
+      "Henne mit Küken → Geborgenheit"
+     ],
+     "note": "Getroffen, als Geborgenheit gedeutet"
+    },
+    "E2@1": {
+     "abbild_erkannt": 2,
+     "bedeutung_getroffen": 2,
+     "n": 2,
+     "antworten": [
+      "Adler über Mensch → Gottes Schutz",
+      "Adler über Mensch → Gottes Schutz"
+     ],
+     "note": "Getroffen, Vogel als Adler gesehen"
+    },
+    "E2@2": {
+     "abbild_erkannt": 2,
+     "bedeutung_getroffen": 2,
+     "n": 2,
+     "antworten": [
+      "Adler über Mensch → Gottes Schutz",
+      "Adler über Mensch → Gottes Schutz"
+     ],
+     "note": "Vogel als Adler gesehen, Bedeutung getroffen"
+    },
+    "E2@3": {
+     "abbild_erkannt": 2,
+     "bedeutung_getroffen": 2,
+     "n": 2,
+     "antworten": [
+      "Adler über Mensch, Regen → Gottes Schutz",
+      "Adler über Mensch, Regen → Schutz, Bewahrung"
+     ],
+     "note": "Getroffen; Regen als zusätzliches Element gesehen"
+    }
+   }
+  }
+ },
+ "runde_2": {
+  "entwuerfe": {
+   "E1": "Weisse Henne im Profil, Flügel angehoben mit getrennten Schwungfedern (Finger), darunter drei frei stehende Küken mit Kopf, Auge, Schnabel und Beinchen, mit Abstand zu Flügel und Nachbarn",
+   "E2": "Grosser brauner Vogel im Profil (Hakenschnabel, Auge), derselbe angehobene Flügel wie ein Dach über einer kleinen knienden Frau mit Kopftuch (Rut); Stufe 3 mit Regen auf dem Flügel"
+  },
+  "messungen": {
+   "32 px allein, Farbe": {
+    "E1@1": {
+     "abbild_erkannt": 4,
+     "bedeutung_getroffen": 2,
+     "n": 4,
+     "antworten": [
+      "Henne mit Küken → Gottes Fürsorge",
+      "Henne mit Küken → Geborgenheit, Fürsorge",
+      "Henne mit Küken → Geborgenheit, Schutz",
+      "Henne mit Küken → Schutz, Fürsorge"
+     ],
+     "note": "Fürsorge statt Schutz/Zuflucht"
+    },
+    "E1@2": {
+     "abbild_erkannt": 4,
+     "bedeutung_getroffen": 2,
+     "n": 4,
+     "antworten": [
+      "Henne mit Küken → Behütende Fürsorge",
+      "Henne mit Küken → Schutz, Geborgenheit",
+      "Henne mit Küken → Gottes Fürsorge",
+      "Henne mit Küken → Jesu Fürsorge"
+     ],
+     "note": "Fürsorge statt Schutz/Zuflucht"
+    },
+    "E1@3": {
+     "abbild_erkannt": 4,
+     "bedeutung_getroffen": 3,
+     "n": 4,
+     "antworten": [
+      "Henne mit Küken → Schutz, Geborgenheit",
+      "Henne mit Küken → Gottes Schutz",
+      "Henne mit Küken → Gottes Fürsorge",
+      "Henne mit Küken → Schutz"
+     ],
+     "note": "Einmal Fürsorge statt Schutz"
+    },
+    "E2@1": {
+     "abbild_erkannt": 4,
+     "bedeutung_getroffen": 4,
+     "n": 4,
+     "antworten": [
+      "Adler mit kleiner Person → Schutz unter Flügeln",
+      "Adler mit Person → Unter seinen Flügeln",
+      "Adler mit Mensch → Schutz unter Flügeln",
+      "Adler über Mensch → Behütung"
+     ],
+     "note": "Keine; Vogel wird als Adler gesehen"
+    },
+    "E2@2": {
+     "abbild_erkannt": 4,
+     "bedeutung_getroffen": 4,
+     "n": 4,
+     "antworten": [
+      "Adler über Person → Schutz unter Flügeln",
+      "Adler schützt Person → Schutz unter Flügeln",
+      "Adler über Person → Bewahrung, Schutz",
+      "Adler über Mensch → Schutz unter Flügeln"
+     ],
+     "note": "Keine; Vogel wird als Adler gesehen"
+    },
+    "E2@3": {
+     "abbild_erkannt": 4,
+     "bedeutung_getroffen": 4,
+     "n": 4,
+     "antworten": [
+      "Adler schützt Mensch, Regen → Schutz unter Flügeln",
+      "Adler schützt Mensch im Regen → Schutz unter Flügeln",
+      "Adler schützt Mensch → Schutz unter Flügeln",
+      "Adler schützt Mensch → Gottes Schutz"
+     ],
+     "note": "Keine; Regen als Zusatz wahrgenommen"
+    }
+   },
+   "32 px allein, nur Umriss (--silhouette)": {
+    "E1@1": {
+     "abbild_erkannt": 4,
+     "bedeutung_getroffen": 3,
+     "n": 4,
+     "antworten": [
+      "Henne mit Küken → Schutz, Geborgenheit",
+      "Henne mit Küken → Schutz, Geborgenheit",
+      "Henne mit Küken → Gottes Fürsorge",
+      "Henne mit Küken → Schutz, Geborgenheit"
+     ],
+     "note": "Wird gut erkannt; einmal nur allgemein als Gottes Fürsorge gedeutet"
+    },
+    "E1@2": {
+     "abbild_erkannt": 4,
+     "bedeutung_getroffen": 4,
+     "n": 4,
+     "antworten": [
+      "Henne mit Küken → Schutz, Geborgenheit",
+      "Henne mit Küken → Schutz, Geborgenheit",
+      "Henne mit Küken → Schutz, Geborgenheit",
+      "Henne mit Küken → Schutz, Geborgenheit"
+     ],
+     "note": "Keine Fehldeutung"
+    },
+    "E1@3": {
+     "abbild_erkannt": 4,
+     "bedeutung_getroffen": 4,
+     "n": 4,
+     "antworten": [
+      "Henne mit Küken → Schutz, Geborgenheit",
+      "Henne mit Küken → Schutz, Geborgenheit",
+      "Henne mit Küken → Schutz, Sammeln",
+      "Henne mit Küken → Schutz, Geborgenheit"
+     ],
+     "note": "Keine Fehldeutung"
+    },
+    "E2@1": {
+     "abbild_erkannt": 4,
+     "bedeutung_getroffen": 4,
+     "n": 4,
+     "antworten": [
+      "Vogel mit Mensch unter Flügel → Schutz Gottes",
+      "Vogel mit Mensch unter Flügel → Schutz Gottes",
+      "Vogel, Mensch unter Flügel → Schutz Gottes",
+      "Vogel mit Mensch → Schutz unter Flügeln"
+     ],
+     "note": "Keine Fehldeutung"
+    },
+    "E2@2": {
+     "abbild_erkannt": 4,
+     "bedeutung_getroffen": 4,
+     "n": 4,
+     "antworten": [
+      "Vogel schützt Mensch → Gottes Schutz",
+      "Vogel breitet Flügel über Mensch → Schutz unter Flügeln",
+      "Vogel mit Flügel über Figur → Schutz unter Flügeln",
+      "Vogel schützt Person → Unter seinen Flügeln"
+     ],
+     "note": "Keine Fehldeutung"
+    },
+    "E2@3": {
+     "abbild_erkannt": 4,
+     "bedeutung_getroffen": 4,
+     "n": 4,
+     "antworten": [
+      "Vogel schützt Mensch → Unter Gottes Flügeln",
+      "Vogel schützt Mensch → Schutz unter Flügeln",
+      "Vogel schützt Mensch → Zuflucht, Schutz",
+      "Vogel schützt Mensch → Zuflucht unter Flügeln"
+     ],
+     "note": "Keine Fehldeutung"
+    }
+   },
+   "32 px in der Zelle (Rut 2,12)": {
+    "E1@1": {
+     "abbild_erkannt": 2,
+     "bedeutung_getroffen": 2,
+     "n": 2,
+     "antworten": [
+      "Vogel mit Küken unter Flügel → Zuflucht, Schutz",
+      "Henne mit Küken → Schutz, Zuflucht"
+     ],
+     "note": "Keine Fehldeutung"
+    },
+    "E1@2": {
+     "abbild_erkannt": 2,
+     "bedeutung_getroffen": 2,
+     "n": 2,
+     "antworten": [
+      "Henne mit Küken → Zuflucht, Geborgenheit",
+      "Henne mit Küken → Zuflucht, Geborgenheit"
+     ],
+     "note": "Keine Fehldeutung"
+    },
+    "E1@3": {
+     "abbild_erkannt": 2,
+     "bedeutung_getroffen": 2,
+     "n": 2,
+     "antworten": [
+      "Henne mit Küken → Schutz, Geborgenheit",
+      "Henne mit Küken → Schutz, Geborgenheit"
+     ],
+     "note": "Keine Fehldeutung"
+    },
+    "E2@1": {
+     "abbild_erkannt": 2,
+     "bedeutung_getroffen": 2,
+     "n": 2,
+     "antworten": [
+      "Adler schützt Person → Gottes Schutz",
+      "Adler über kleiner Person → Schutz, Zuflucht"
+     ],
+     "note": "Vogel als Adler gelesen, passt aber; Bedeutung getroffen"
+    },
+    "E2@2": {
+     "abbild_erkannt": 2,
+     "bedeutung_getroffen": 2,
+     "n": 2,
+     "antworten": [
+      "Adler schützt kleine Person → Gottes Schutz",
+      "Adler über kleiner Person → Schutz, Zuflucht"
+     ],
+     "note": "Vogel als Adler gelesen, passt aber; Bedeutung getroffen"
+    },
+    "E2@3": {
+     "abbild_erkannt": 2,
+     "bedeutung_getroffen": 0,
+     "n": 2,
+     "antworten": [
+      "Adler schützt Person → Schutz im Sturm",
+      "Adler schützt Person → Schutz vor Unwetter"
+     ],
+     "note": "Wörtlich als Schutz vor Sturm bzw. Unwetter gelesen statt als Zuflucht bei Gott"
+    }
+   },
+   "160 px": {
+    "E1@1": {
+     "abbild_erkannt": 2,
+     "bedeutung_getroffen": 2,
+     "n": 2,
+     "antworten": [
+      "Henne mit Küken → Schutz, Geborgenheit",
+      "Henne mit Küken → Schutz, Geborgenheit"
+     ],
+     "note": "keine Fehldeutung"
+    },
+    "E1@2": {
+     "abbild_erkannt": 2,
+     "bedeutung_getroffen": 2,
+     "n": 2,
+     "antworten": [
+      "Henne mit Küken → Schutz, Geborgenheit",
+      "Henne mit Küken → Schutz, Geborgenheit"
+     ],
+     "note": "keine Fehldeutung"
+    },
+    "E1@3": {
+     "abbild_erkannt": 2,
+     "bedeutung_getroffen": 0,
+     "n": 2,
+     "antworten": [
+      "Henne mit Küken → Gottes Fürsorge",
+      "Henne mit Küken → Gottes Fürsorge"
+     ],
+     "note": "als Gottes Fürsorge statt als Schutz und Zuflucht gedeutet"
+    },
+    "E2@1": {
+     "abbild_erkannt": 2,
+     "bedeutung_getroffen": 2,
+     "n": 2,
+     "antworten": [
+      "Adler schützt Menschen → Gottes Schutz",
+      "Adler schützt Menschen → Gottes Schutz"
+     ],
+     "note": "keine Fehldeutung"
+    },
+    "E2@2": {
+     "abbild_erkannt": 2,
+     "bedeutung_getroffen": 2,
+     "n": 2,
+     "antworten": [
+      "Großer Vogel, kleine Person → Schutz unter Flügeln",
+      "Adler über Mensch → Schutz unter Flügeln"
+     ],
+     "note": "keine Fehldeutung"
+    },
+    "E2@3": {
+     "abbild_erkannt": 2,
+     "bedeutung_getroffen": 2,
+     "n": 2,
+     "antworten": [
+      "Adler schützt Person → Schutz unter Flügeln",
+      "Adler schützt Mensch → Schutz unter Flügeln"
+     ],
+     "note": "keine Fehldeutung"
+    }
+   }
+  }
+ },
+ "stufen_de": "1 Silhouette (Vogel, Flügel, Junge bzw. Figur, Schnabel); 2 dazu Auge, bei der Henne Kamm und Kehllappen, Gesicht der Figur, Boden; 3 dazu Federlinien, Glanzlicht im Auge, Zehen, Flügelchen der Küken bzw. Regen.",
+ "gewaehlt": {
+  "entwurf": "Runde 2, E2, Stufe 2",
+  "zeichnung": "Grosser brauner Vogel im Profil breitet den Flügel wie ein Dach über eine kleine kniende Frau",
+  "ergebnis_32px": "Abbild 4/4 («Adler über Person»), Bedeutung 4/4 («Schutz unter Flügeln»); als Umriss Abbild 4/4 («Vogel breitet Flügel über Mensch»), Bedeutung 4/4; in der Zelle 2/2; 160 px 2/2",
+  "begruendung_de": "Beide Entwürfe der Runde 2 erreichen das Ziel (Abbild bei 32 px 4/4, auch als Umriss; keine Lesung als Essen oder Gegenstand). E2 trifft die Bedeutung häufiger (32 px: 12 von 12 gegenüber 7 von 12 bei der Henne, die oft nur als «Fürsorge, Geborgenheit» gedeutet wurde), zeigt das Bildwort von Rut 2,12 direkt (Rut sucht Zuflucht unter den Flügeln) und bleibt von FIG-OBJ-HENNE (Mt 23,37) unterscheidbar, die sonst dasselbe Bild hätte. Stufe: alle drei Stufen gleich (4/4); nach der Regel wäre die einfachste zu wählen, gewählt ist Stufe 2, weil das Auge zu den geforderten tragenden Merkmalen gehört und Stufe 3 (Regen) in der Zelle als «Schutz im Sturm» gelesen wurde.",
+  "alternative_de": "E1 Stufe 2 (Henne mit Küken, Runde 2) ist gleich gut als Abbild erkannt (32 px 4/4, Umriss 4/4) und liegt in scratchpad/r6c/zuflucht.py bereit, falls die Henne bevorzugt wird."
+ },
+ "lehre_de": "KI-Testpersonen erkennen manche Zeichen, Menschen nicht: Die alte Henne wurde in Farbe von 12 von 12 Instanzen als «Henne mit Küken» benannt, Andi Neck sah eine Fruchtplatte. Die Instanzen schliessen aus wenigen Merkmalen (roter Fleck, gelbe Punkte) und aus dem Zusammenhang auf das Gemeinte. Strenger und menschennäher sind die offene Frage nach dem Abbild ohne Bedeutung und der Umriss: Als Umriss wurde die alte Henne als «Busch mit Flamme», «kniende Person», «Vogel auf Nest» gelesen, der erste Entwurf der neuen Henne als «Wagen mit Zugtier» (Küken als Räder unter einem Kasten) und der Vogel von vorn über der Frau als «Engel» (Figur berührt den Vogel). Erst getrennte, frei stehende Teile mit eigenem Umriss (Junge mit Kopf und Schnabel, Flügel mit Federfingern, Abstand zwischen Vogel und Figur) bestanden auch den Umriss.",
+ "grenzen_de": "KI-Instanzen statt Leserinnen und Leser; der Umrisstest ist eine Annäherung an den ersten Blick eines Menschen, kein Ersatz. Vier Antworten je Stufe. Die Zelle enthält das Wort «Flügeln» und hilft bei der Bedeutung. Eine Rückmeldung von Andi Neck zum neuen Zeichen steht aus.",
+ "geaendert_de": "scripts/authoring/bildsymbole_daten/RUT.json (Zeichnung), bildlexikon_daten/RUT.json (Merkmale, Regeln, distinct FIG-SYMBOL-ADLER), _legende.json (de/gsw), bildlexikon_daten/MAT-6.json (FIG-OBJ-HENNE: Abgrenzung nachgeführt), zeichen_test.py (--frage abbild, --silhouette); erzeugt: Lexikon, Symbol- und Anime-Bibliothek, Anime-Bilder RUT (3 Dateien). Bildaufträge unverändert."
+}
