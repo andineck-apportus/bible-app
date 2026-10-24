@@ -2,6 +2,18 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.84 — 2026-10-24 — Bildanordnung: nichts verdecken, Kacheln in lesbarer Grösse
+
+Hinweise Andi Neck:
+- **Sprechblasen verdecken nichts Wesentliches:** Der Zeichner merkt sich Zeichen, Gegenstände und Gesichter und sucht für die Blase eine freie Lage nahe beim Sprecher, sonst wird sie etwas kleiner (z. B. das Licht-Zeichen in Mt 5,14–16 ist wieder sichtbar).
+- **Pfeile weichen aus:** Handlungspfeile führen nicht mehr über fremde Köpfe, Zeichen oder Sprechblasen; sie wölben sich stärker oder setzen seitlich am Kopf an (z. B. Scheidebrief Mt 5,31, Mantel Mt 5,40, Krone Mt 6,33).
+- **Gedankenwolke deutlich:** Denkblasen sind jetzt eine Wolke mit Bögen rundum und drei kleiner werdenden Kreisen zur Figur.
+- **Kacheln in lesbarer Grösse:** Jede Kachel wird höchstens etwa 340 px breit gezeigt; Bilder mit mehreren Kacheln werden breiter und stehen auf breiten Bildschirmen unter dem Text statt gequetscht in der halben Spalte.
+- **Durchsichtiger Hintergrund** zwischen den Kacheln statt Weiss.
+- Regeln ergänzt: BILDPROZESS.md (Leitlinien 9 «nichts verdecken» und 10 «Bildaussage trifft das Thema», Sichtprüfung), BILDAUFTRAEGE-ANLEITUNG.md («Thema benennen», «Nichts verdecken»).
+- Vorbereitung «Struktur zuerst»: Kernanalysen können ein Feld `structure` tragen (Prüfung in `kernanalyse.py`); Zusammenfassungen dürfen eine Liste aller Glieder enthalten (Zeilen mit «– »), die App zeigt sie als Liste und liest sie als Sätze vor. Strukturkatalog aus der Analyse aller 66 Bücher (docs/STRUKTURKATALOG.md) mit den Entscheiden vom 2026-10-24.
+- Alle 537 Bilder neu gezeichnet.
+
 ## v0.83 — 2026-10-23 — Sprechblasen und Worte besser gesetzt
 
 Hinweise Andi Neck:

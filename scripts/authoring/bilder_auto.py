@@ -186,7 +186,25 @@ def look_dir(slots, i, speaker_idx, addr_idx):
     return 1 if me < W / 2 else -1
 
 
-def arrow_svg(x1, y1, x2, y2, kind="act", divine=True):
+def arrow_ctrl(x1, y1, x2, y2, kind="act", bulge=None):
+    """Kontrollpunkt der Handlungslinie (Bogen nach oben); bulge überschreibt die Wölbung (Ausweichen)."""
+    dx, dy = x2 - x1, y2 - y1
+    d = math.hypot(dx, dy) or 1
+    nx, ny = -dy / d, dx / d
+    if ny > 0:
+        nx, ny = -nx, -ny
+    if bulge is None:
+        bulge = 0 if kind == "go" else min(26 if kind == "throw" else 14, d * .22)
+    return (x1 + x2) / 2 + nx * bulge, (y1 + y2) / 2 + ny * bulge
+
+
+def arrow_pts(x1, y1, x2, y2, kind="act", bulge=None, n=24):
+    mx, my = arrow_ctrl(x1, y1, x2, y2, kind, bulge)
+    return [((1 - t) ** 2 * x1 + 2 * (1 - t) * t * mx + t * t * x2, (1 - t) ** 2 * y1 + 2 * (1 - t) * t * my + t * t * y2)
+            for t in (i / n for i in range(n + 1))]
+
+
+def arrow_svg(x1, y1, x2, y2, kind="act", divine=True, bulge=None):
     """Handlungslinie: act (Gott sendet, sieht, bestimmt), throw (werfen, speien), go (gehen, dem Boden entlang)."""
     # Bogen quer zur Verbindungslinie (nach oben gewölbt), nicht über den höheren Punkt hinaus: so geht eine Linie von Gott
     # direkt nach unten ab, statt zuerst nach oben (Hinweis Andi Neck 2026-10-18)
@@ -203,11 +221,7 @@ def arrow_svg(x1, y1, x2, y2, kind="act", divine=True):
         path = "M" + "L".join(f"{px:.1f} {py:.1f}" for px, py in pts)
         return (f'<path d="{path}" fill="none" stroke="#FFFDF6" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round" opacity=".85"/>'
                 f'<path d="{path}" fill="none" stroke="{col}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>')
-    nx, ny = -dy / d, dx / d
-    if ny > 0:
-        nx, ny = -nx, -ny
-    bulge = 0 if kind == "go" else min(26 if kind == "throw" else 14, d * .22)
-    mx, my = (x1 + x2) / 2 + nx * bulge, (y1 + y2) / 2 + ny * bulge
+    mx, my = arrow_ctrl(x1, y1, x2, y2, kind, bulge)
     ang = math.atan2(y2 - my, x2 - mx)
     hx1, hy1 = x2 - 7 * math.cos(ang - .45), y2 - 7 * math.sin(ang - .45)
     hx2, hy2 = x2 - 7 * math.cos(ang + .45), y2 - 7 * math.sin(ang + .45)
@@ -315,18 +329,28 @@ def name_tag(x, y, v):
 
 
 def think_bubble(x, y, w, h, tx, ty, inner):
-    """Denkblase: Wolke mit kleinen Kreisen zur denkenden Figur (stilunabhängig)."""
-    ox, oy = x + w / 2, y + h
-    pts = [(ox + (tx - ox) * f, oy + (ty - oy) * f) for f in (.3, .55, .78)]
-    dots = "".join(f'<circle cx="{px:.1f}" cy="{py:.1f}" r="{r}" fill="#FFFFFF" stroke="#3B3226" stroke-width="1.2"/>'
-                   for (px, py), r in zip(pts, (3.2, 2.3, 1.5)))
-    bumps = "".join(f'<circle cx="{x + 6 + i * (w - 12) / max(1, int(w // 14)):.1f}" cy="{y + 1:.1f}" r="5" fill="#FFFFFF" stroke="#3B3226" stroke-width="1.2"/>'
-                    for i in range(int(w // 14) + 1))
-    bumps += "".join(f'<circle cx="{x + 6 + i * (w - 12) / max(1, int(w // 14)):.1f}" cy="{y + h - 1:.1f}" r="5" fill="#FFFFFF" stroke="#3B3226" stroke-width="1.2"/>'
-                     for i in range(int(w // 14) + 1))
-    body = f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h:.1f}" rx="{min(h / 2, 12):.1f}" fill="#FFFFFF" stroke="#3B3226" stroke-width="1.2"/>'
-    cover = f'<rect x="{x + 1:.1f}" y="{y + 1:.1f}" width="{w - 2:.1f}" height="{h - 2:.1f}" rx="{min(h / 2, 11):.1f}" fill="#FFFFFF"/>'
-    return f'<g>{dots}{bumps}{body}{cover}{inner}</g>'
+    """Denkblase als deutliche Wolke: Bögen rundum und drei kleiner werdende Kreise zur denkenden Figur (Hinweis Andi Neck
+    2026-10-24: als Gedankenwolke erkennbar, nicht wie eine Sprechblase mit Rand)."""
+    sw, col = 2.0, "#3B3226"
+    r = max(5.5, min(9.0, h * .26))
+    # Bogenmittelpunkte auf dem Rand eines abgerundeten Rechtecks, etwas nach innen
+    pts = []
+    nx = max(2, int(round((w - 2 * r) / (r * 1.45))))
+    ny = max(1, int(round((h - 2 * r) / (r * 1.45))))
+    for k in range(nx + 1):
+        px = x + r * .7 + k * (w - 1.4 * r) / nx
+        pts += [(px, y + r * .55), (px, y + h - r * .55)]
+    for k in range(1, ny):
+        py = y + r * .55 + k * (h - 1.1 * r) / ny
+        pts += [(x + r * .55, py), (x + w - r * .55, py)]
+    ring = "".join(f'<circle cx="{px:.1f}" cy="{py:.1f}" r="{r:.1f}" fill="#FFFFFF" stroke="{col}" stroke-width="{sw}"/>' for px, py in pts)
+    fill = "".join(f'<circle cx="{px:.1f}" cy="{py:.1f}" r="{r - sw / 2:.1f}" fill="#FFFFFF"/>' for px, py in pts)
+    core = f'<rect x="{x + r * .55:.1f}" y="{y + r * .55:.1f}" width="{w - r * 1.1:.1f}" height="{h - r * 1.1:.1f}" fill="#FFFFFF"/>'
+    # Kreise zur Figur: vom unteren Wolkenrand Richtung Kopf, enden knapp über dem Kopf
+    ox, oy = min(max(tx, x + w * .25), x + w * .75), y + h + r * .3
+    dots = "".join(f'<circle cx="{ox + (tx - ox) * f:.1f}" cy="{oy + (ty - 4 - oy) * f:.1f}" r="{rr}" fill="#FFFFFF" stroke="{col}" stroke-width="1.6"/>'
+                   for f, rr in ((.22, 4.6), (.55, 3.2), (.85, 2.0)))
+    return f'<g>{dots}{ring}{fill}{core}{inner}</g>'
 
 
 # ------------------------------------------------------------------ gemeinsame Zeichner-Logik
@@ -360,6 +384,51 @@ class Composer:
             pos[t] = (x + w / 2, FLOOR_Y - h / 2)
         self._zx = zx
 
+    def covers(self, x, y, w, h, speaker, heads):
+        """Verdeckt das Rechteck ein wesentliches Teil (Zeichen, Gegenstand) oder ein fremdes Gesicht?"""
+        r = self.head_r()
+        boxes = list(getattr(self, "ess", [])) + [(hx - r, hy - r * 1.2, 2 * r, r * 2.2) for f, (hx, hy) in heads.items() if f != speaker]
+        return any(x < ex + ew - 1 and x + w > ex + 1 and y < ey + eh - 1 and y + h > ey + 1 for ex, ey, ew, eh in boxes)
+
+    def clear_bulge(self, x1, y1, x2, y2, kind, f, t, heads, pos, bubbles):
+        """Lage einer Handlungslinie, die keine fremden Köpfe, Zeichen oder Blasen schneidet (Hinweis Andi Neck 2026-10-24:
+        Pfeile verdecken nichts Wesentliches, wenn sie ausweichen können). Versucht stärkere Wölbung und, bei Personen, einen
+        seitlichen Ansatz am Kopf. Endpunkte und ihre eigenen Zeichen zählen nicht. Gibt (x1, y1, x2, y2, bulge) zurück."""
+        r = self.head_r()
+        ends = [(x1, y1), (x2, y2)] + [pos[k] for k in (f, t) if k in pos]
+        near_end = lambda cx, cy: any(math.hypot(cx - ex, cy - ey) < r * 1.6 for ex, ey in ends)  # noqa: E731
+        obst = [(hx - r * 1.05, hy - r * 1.35, r * 2.1, r * 2.4) for k, (hx, hy) in heads.items() if k not in (f, t)]
+        obst += [b for b in getattr(self, "ess", []) if not near_end(b[0] + b[2] / 2, b[1] + b[3] / 2)]
+        bub = [(bx - 2, by - 2, bw + 4, bh + 4) for bx, by, bw, bh in bubbles]
+
+        def bad(a, b, c, d, bulge):
+            pts = arrow_pts(a, b, c, d, kind, bulge)
+            if any(py < 3 or not 2 <= px <= 184 for px, py in pts):
+                return 99
+            n = sum(1 for px, py in pts[2:-2] for ox, oy, ow, oh in obst if ox <= px <= ox + ow and oy <= py <= oy + oh)
+            return n + 3 * sum(1 for px, py in pts for ox, oy, ow, oh in bub if ox <= px <= ox + ow and oy <= py <= oy + oh)
+
+        base = None if kind != "go" else 0
+        b0 = bad(x1, y1, x2, y2, base)
+        if b0 == 0 or kind == "go":
+            return x1, y1, x2, y2, base
+        starts = [(x1, y1)]
+        if f in heads:  # seitlich am Kopf ansetzen (Schulterhöhe), Richtung Ziel zuerst
+            hx, hy = heads[f]
+            sd = 1 if x2 > hx else -1
+            starts += [(hx + sd * r * 1.5, hy - r * .2), (hx + sd * r * 1.7, hy + r * 1.1)]
+        best = (b0, 0, (x1, y1, base))
+        for k, (sx, sy) in enumerate(starts):
+            d = math.hypot(x2 - sx, y2 - sy)
+            for bulge in [base, 20, 28, 36, 46, 58, 72, -14, -24]:
+                if bulge is not None and abs(bulge) >= d * 1.1:
+                    continue
+                sc = (bad(sx, sy, x2, y2, bulge), k, (sx, sy, bulge))
+                if sc[:2] < best[:2]:
+                    best = sc
+        sx, sy, bulge = best[2]
+        return sx, sy, x2, y2, bulge
+
     def m(self, t):
         if t.startswith("_"):
             return ("band", (186, 70))
@@ -371,6 +440,8 @@ class Composer:
         L = plan(p, self.lex, self.extra)
         st = L["st"]
         out = []
+        self.ess = []  # wesentliche Teile (Zeichen, Gegenstände, Köpfe): Sprechblasen und Pfeile verdecken sie nicht
+        self._rec = True
         pos = {}  # Mittelpunkte für Handlungslinien
         # 1. Hintergrund (bei Nacht dunkler Himmel mit Sternen)
         night = st.get("night") or "FIG-ZEICHEN-NACHT" in p["signs"]
@@ -623,8 +694,11 @@ class Composer:
                 d = math.hypot(x2 - x1, y2 - y1) or 1
                 sh1 = 0 if (f in people or f == "FIG-OBJ-GROSSER-FISCH") else (min(sky[f][2], sky[f][3]) * .4 if f in sky else 12)
                 sh2 = 0 if t in people else (14 if t in bigpos or t in pos else 10)
-                out.append(arrow_svg(x1 + (x2 - x1) * sh1 / d, y1 + (y2 - y1) * sh1 / d, x2 - (x2 - x1) * sh2 / d, y2 - (y2 - y1) * sh2 / d, kind, f in sky or t in sky))
-        arrows(False)
+                ax1, ay1 = x1 + (x2 - x1) * sh1 / d, y1 + (y2 - y1) * sh1 / d
+                ax2, ay2 = x2 - (x2 - x1) * sh2 / d, y2 - (y2 - y1) * sh2 / d
+                cx1, cy1, cx2, cy2, bul = self.clear_bulge(ax1, ay1, ax2, ay2, kind, f, t, heads, pos, placed_now)
+                out.append(arrow_svg(cx1, cy1, cx2, cy2, kind, f in sky or t in sky, bul))
+        self._rec = False
         # 10. Sprechblasen
         bubbles = []
         # Blindtest Matthäus: Folgeblasen derselben Figur wurden als «Blase an Blase» gelesen. Darum alles, was eine Figur sagt,
@@ -711,6 +785,23 @@ class Composer:
                     bw = sum(ws) + 5 * (len(ws) - 1) + 12
                     bh = ih + 12
                     bx = 28 if gx - 32 >= W - (gx + gw) - 10 else gx + gw + 6
+            if not god and self.covers(bx, by, bw, bh, sp["from"], heads):
+                # Sprechblase verdeckt nichts Wesentliches (Zeichen, Gegenstand, Gesicht; Hinweis Andi Neck 2026-10-24): andere
+                # Lage nahe beim Sprecher suchen, sonst etwas kleiner
+                for sc in (1, .88, .76):
+                    bw2, bh2 = (bw - 12) * sc + 12, (bh - 12) * sc + 12
+                    xs = [tx - bw2 / 2, tx - bw2 + 18, tx - 18, 28, W - 4 - bw2] + [ex - bw2 - 4 for ex, ey, ew, eh in self.ess] + [ex + ew + 4 for ex, ey, ew, eh in self.ess]
+                    ys = sorted({by, 6, 4} | {ey - bh2 - 3 for ex, ey, ew, eh in self.ess})
+                    cands = [(abs(cx + bw2 / 2 - tx) + abs(cy - by) * .3, cx, cy) for cx in xs for cy in ys
+                             if (28 if cy < 24 else 4) <= cx <= W - 4 - bw2 and 2 <= cy and cy + bh2 <= ty - 6
+                             and not hit(cx, cy) and not self.covers(cx, cy, bw2, bh2, sp["from"], heads)]
+                    if cands:
+                        _, bx, by = min(cands)
+                        if sc < 1:
+                            ws = [w * sc for w in ws]
+                            ih *= sc
+                            bw, bh = bw2, bh2
+                        break
             same = [j for j, (sp0, _, _) in enumerate(bubbles[:len(placed)]) if sp0["from"] == sp["from"]]
             link = None
             if same:
@@ -777,6 +868,8 @@ class Composer:
                 drawn[link] = (lb[0], lb[1], lb[2], lb[3], bx + bw / 2, by + 3, lb[6], lb[7])
             drawn.append((bx, by, bw, bh, tx, ty, "".join(inner), bool(sp.get("think"))))
             placed.append((bx, bw, by + bh, bh))
+        placed_now = [(px, pb - ph, pw, ph) for px, pw, pb, ph in placed]
+        arrows(False)  # nach der Lage der Blasen berechnet (weichen ihnen aus), aber unter ihnen gezeichnet
         for d_ in drawn:
             if d_[7]:
                 out.append(think_bubble(*d_[:7]))
@@ -820,6 +913,7 @@ class Composer:
                     out.append(self.r_sym(t, x, y, w, h))
                     x += w + 3 * k
                 x += 6 * k
+        placed_now = [(px, pb - ph, pw, ph) for px, pw, pb, ph in placed]
         arrows(True)  # Handlungslinien zu freien Zeichen erst, wenn deren Lage feststeht
         # 12. Worte im Bild: Namensschilder (erstes Auftreten) und Stichwortband
         for fid, v in (p.get("names") or {}).items():

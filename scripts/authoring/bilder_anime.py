@@ -819,7 +819,7 @@ def kana():
           + use("an-zeichen", 252, 314, 24, 24) + person("jesus", 264, 386, 1.7, "smile", .2)
           + person("juenger", 318, 392, 1.5, "delight", -.4) + person("juenger2", 356, 396, 1.4, "delight", -.6)
           + use("an-z-glauben", 307, 340, 20, 22) + use("an-z-glauben", 346, 346, 18, 20) + b5)
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}"><rect width="{W}" height="{H}" fill="#FFFDF6"/>'
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}">'
             + frame(1, p1, s1) + frame(2, p2, s2) + frame(3, p3, s3, num=(218, 174)) + frame(4, p4, s4) + "</svg>")
 
 
@@ -846,7 +846,7 @@ def tempel():
     s2 = ('<path d="M4 290h372v22H4z" fill="#E7D3B0"/>'
           + person("menge2", 30, 282, 1.45, "determined", .8) + person("menge", 66, 274, 1.6, "determined", 1.0)
           + person("menge3", 104, 286, 1.4, "calm", 1.0) + person("jesus", 314, 278, 1.8, "earnest", -1.2, arm=(196, 14)) + b2 + b3)
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}"><rect width="{W}" height="{H}" fill="#FFFDF6"/>'
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}">'
             + frame(1, p1, s1) + frame(2, p2, s2) + "</svg>")
 
 
@@ -861,7 +861,7 @@ def glaube():
     s1 = ('<path d="M4 184h372v22H4z" fill="#E7D3B0"/>' + use("an-tempel", 226, 14, 150, 112, ' opacity=".45"')
           + stars + hearts + crowd + use("an-z-abstand", 210, 78, 12, 120)
           + person("jesus", 296, 148, 1.9, "pensive", 2.6))
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}"><rect width="{W}" height="{H}" fill="#FFFDF6"/>' + frame(1, p1, s1) + "</svg>")
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}">' + frame(1, p1, s1) + "</svg>")
 
 
 
@@ -1067,7 +1067,7 @@ def alayout(bodies, bands=None):
         step = 140 + bh + 4
         cell = lambda i, b, x, y: (f'<g transform="translate({x} {y})">' + apanel(i, i + 1, b, num=n > 1)  # noqa: E731
                                    + (f'<g transform="translate(0 {140 + 2})">{bands[i]}</g>' if bands[i] else "") + "</g>")
-        head = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}"><rect width="{w}" height="{h}" fill="#FFFDF6"/>'
+        head = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}">'
         if n == 1:
             return head.format(w=194, h=step + 4) + cell(0, bodies[0], 4, 4) + "</svg>"
         if n == 2:
@@ -1077,7 +1077,7 @@ def alayout(bodies, bands=None):
             return head.format(w=380, h=2 * step + 4) + "".join(cell(i, b, x, y) for i, (b, (x, y)) in enumerate(zip(bodies, pos))) + "</svg>"
         rows = (n + 1) // 2
         return head.format(w=380, h=rows * step + 4) + "".join(cell(i, b, 4 + (i % 2) * 188, 4 + (i // 2) * step) for i, b in enumerate(bodies)) + "</svg>"
-    head = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}"><rect width="{w}" height="{h}" fill="#FFFDF6"/>'
+    head = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}">'
     # höchstens zwei Spalten, alle Felder gleich gross (lesbar auf dem Handy); ein Feld allein in Feldgrösse (die App zeigt es halb breit)
     if n == 1:
         return head.format(w=194, h=148) + '<g transform="translate(4 4)">' + apanel(0, 1, bodies[0], num=False) + "</g></svg>"
@@ -1091,7 +1091,7 @@ def alayout(bodies, bands=None):
 
 def a_buch():
     rays = "".join(f'<path d="M190 40L{x} {y}"/>' for x, y in ((0, 0), (380, 0), (0, 140), (380, 140), (100, 0), (280, 0), (0, 70), (380, 70)))
-    return ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 250"><rect width="380" height="250" fill="#FFFDF6"/>'
+    return ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 250">'
             f'<clipPath id="an-cp-{CUR[0]}-1"><polygon points="4,4 376,4 376,246 4,240"/></clipPath><g clip-path="url(#an-cp-{CUR[0]}-1)">'
             '<rect width="380" height="250" fill="#1F2A44"/>'
             f'<g stroke="#F2C76E" stroke-width="2" opacity=".12">{rays}</g>'
@@ -1283,6 +1283,8 @@ class AniComposer(_auto.Composer):
         return use(OBJ[t], round(x, 1), round(y, 1), w, h, '' if t == "FIG-GRUPPE-GEMEINDE" else ' opacity=".6"')
 
     def r_sym(self, t, x, y, w, h, flip=False):
+        if getattr(self, "_rec", False) and hasattr(self, "ess") and w < 100:
+            self.ess.append((x, y, w, h))
         sym = OBJ.get(t) or self.vbmap[t][0]
         if flip:
             return f'<g transform="translate({x + w:.1f} {y:.1f}) scale(-1 1)">{use(sym, 0, 0, w, h)}</g>'

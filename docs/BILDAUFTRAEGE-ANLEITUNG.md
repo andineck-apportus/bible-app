@@ -67,6 +67,11 @@ alle Übersetzungen; jedes Wort steht je Sprache im Auftrag, die App zeigt die g
   das Verlangte als Zeichen in der Sprechblase, nicht als geschehene Szene; Aufzählung als wenige Zeichen nebeneinander.
 - **Namensschild** nur beim ersten Auftreten einer benannten Hauptfigur im Bild (nicht bei Gott, Jesus, Gruppen und Rollen).
 - Höchstens zwei abstrakte Zeichen je Feld; Wörter statt Zeichenketten.
+- **Thema benennen** (Hinweis Andi Neck 2026-10-24): Band oder Sprechblase nennen das Thema der Stelle mit Worten aus dem Text
+  (z. B. «Wenn ihr fastet», nicht nur «Wasche dein Gesicht»). Zeichen, die man ohne Legende nicht versteht, ersetzt ein Wort
+  oder die Szene.
+- **Nichts verdecken:** Blasen und Pfeile über Gesichtern, Zeichen oder Gegenständen sind ein Fehler (der Zeichner weicht aus;
+  bleibt es, Bühne mit `stage.x` oder weniger Zeichen lösen). Gedanken als Denkblase (`think: true`), nicht als Rede.
 - **Verständlich und grammatisch richtig** (Hinweis Andi Neck 2026-10-23): Jedes Band und jede Sprechblase muss für sich
   allein verständlich und in der jeweiligen Sprache grammatisch richtig sein, auch ohne den Vers daneben. Gemeint ist ein
   kurzer ganzer Satz oder ein klarer Begriff, keine abgehackten Satzteile (schlecht: «hört und sie tut», «nicht tut»,
