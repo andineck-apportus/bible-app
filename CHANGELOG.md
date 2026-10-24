@@ -2,6 +2,16 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.87 — 2026-10-24 — Mehr Zeichen, saubere Strukturbilder, Kapitel mit allen Abschnitten
+
+Hinweise Andi Neck:
+- **Mehr Zeichen:** 16 neue Bildzeichen für die Strukturbilder (Auge, Hand, Ohrfeige, Kopf mit Haar, Obergewand, guter und fauler Baum, Axt an der Wurzel, Almosen, weites Tor, Sonne, Regen, Meilenstein, Trost, Mammon, Jota als Wortzeichen), Untergewand als antike Tunika statt T-Shirt; Blindtest Runde 5 (SYMBOLPROZESS.md). In den Zellen der Pilotbilder rund 240 Zeichen ergänzt.
+- **Text bleibt in den Kästen, Beschriftungen überdecken nichts:** neue Prüfung im Browser (`pruefe_bilder.py`, de und gsw); lange Wörter werden getrennt, Zeitleisten auf dem Handy senkrecht, Mindestbreite der Zellen, Pfeilbeschriftungen auf einem Schild mit passendem Abstand.
+- **Gott oder Mammon** (Mt 6,24) als Verzweigung «entweder – oder» statt beides in einem Kasten.
+- **Weniger Leerfläche:** hohe schmale Strukturbilder werden breit (mit schmaler Fassung fürs Handy).
+- **Kapitel enthalten jeden Abschnitt** (VERDICHTUNG.md, Regel 9): geprüft in Struktur, Zusammenfassung und Kapitelbild; Zusammenfassungen von Rut 1–2, Titus 1, Mt 5–7 und Bilder von Rut 3, Titus 3, Mk 5, Mt 6–7 ergänzt.
+- **Struktur zuerst auch beim Bild:** Ein Bild mit Kernanalyse darf nur Darstellungen nutzen, die deren Strukturanalyse vorsieht; Bilder ohne Strukturanalyse werden als offen gemeldet (`bildauftraege.py`).
+
 ## v0.86 — 2026-10-24 — Pilot «Struktur zuerst»: Zusammenfassungen und Strukturbilder
 
 Entscheide Andi Neck vom 2026-10-24 (Verdichtung: Struktur zuerst, Strukturkatalog):
