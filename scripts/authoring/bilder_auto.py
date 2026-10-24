@@ -769,11 +769,11 @@ class Composer:
                 ih *= sc
                 bw = avail
             bh = ih + 12
-            by = st.get("bubble_y", 6)
+            by = st.get("bubble_y", 8)  # Abstand zum Rahmen
             if god:
                 gx, gy, gw, gh = sky[sp["from"]]
                 bx = gx + gw + 8 if gx + gw + 8 + bw <= W - 4 else gx - bw - 8
-                by = 6
+                by = 8
             else:
                 bx = tx - bw / 2
             bx = max(28 if by < 24 else 4, min(W - 4 - bw, bx))

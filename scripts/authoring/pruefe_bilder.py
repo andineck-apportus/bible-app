@@ -2,6 +2,7 @@
 """Anordnung der Bilder im Browser prüfen (BILDPROZESS.md, Leitlinie 9; Hinweis Andi Neck 2026-10-24):
 - Text in einer Zelle eines Strukturbilds ragt nicht über die Zelle hinaus;
 - Beschriftungen von Pfeilen und Zweigen überdecken keine Zelle und keine andere Beschriftung;
+- Inhalt der Strukturbilder hält Abstand zum Kachelrahmen;
 - Pfeile zwischen Zellen beginnen und enden an einer Zelle (nicht daneben, nicht darin);
 - keine Zeile eines Rasters oder einer Pfeilkette lässt grossen Leerraum (eine Zelle ohne Nachbarn füllt die Breite);
 Geprüft wird je Sprache (de, gsw), mit der echten Schrift im Browser.
@@ -54,6 +55,11 @@ for(const lang of ['de','gsw']){
         tile.querySelectorAll('g.dg-link').forEach(L=>{for(const k of ['a','b']){const [x,y]=L.dataset[k].split(',').map(Number);
           const dmin=Math.min(...crs.map(R=>dist(x,y,R)));if(!(dmin<=3))res.push(`${id} ${nm} [${lang}]: Pfeil-${k==='a'?'Anfang':'Ende'} nicht an einer Zelle (Abstand ${dmin.toFixed(1)})`);
           if(crs.some(R=>x>R.x+2&&x<R.x+R.width-2&&y>R.y+2&&y<R.y+R.height-2))res.push(`${id} ${nm} [${lang}]: Pfeil-${k==='a'?'Anfang':'Ende'} liegt in einer Zelle`);}});
+        // Abstand zum Rahmen: Inhalt hält mindestens 3 Einheiten Abstand zur Innenkante des Kachelrahmens
+        const fr=tile.querySelector('polygon.pn-frame');
+        if(fr){const F=fr.getBoundingClientRect(),sc=tile.getBoundingClientRect().width/tile.viewBox.baseVal.width,m=(1.1+2.5)*sc;
+          tile.querySelectorAll('g.dg-cell>rect, g.dg-label>rect, rect[rx="7"]').forEach(r=>{const B=r.getBoundingClientRect();
+            if(B.left<F.left+m||B.top<F.top+m||B.right>F.right-m||B.bottom>F.bottom-m)res.push(`${id} ${nm} [${lang}]: Inhalt zu nahe am Rahmen («${r.parentNode.textContent.slice(0,25)}»)`);});}
         // Beschriftungen
         const cells=[...tile.querySelectorAll('g.dg-cell>rect')].map(r=>r.getBBox());
         const labs=[...tile.querySelectorAll('g.dg-label')].map(g=>({g,B:g.querySelector('rect').getBBox()}));

@@ -33,6 +33,21 @@ Bilder ohne Text taugen vorerst für alle Sprachen. Später soll es Bildsprachen
   - Kreuzigung (bestätigt von Andi Neck 2026-10-23): Jesus am Kreuz in einfacher Form (Kopf geneigt, aus mittlerer Entfernung; `stage.pose` «cross»), ohne Wunden im Detail; kein Blut
     ausser als Zeichen (Tropfen).
   - Täter nicht dämonisieren und keiner Gruppe zuschreiben, was der Text nicht sagt.
+- **Tod und Böses nicht ausblenden** (Andi Neck, 2026-10-24): Tod, Sterben, Trauer, das Böse, Sünde, Gericht und Gewalt
+  gehören zum Leben und zur Bibel. Wo der Text sie nennt, zeigt das Bild sie, wie bei «Gewalt und starke Gefühle» oben:
+  - **nicht weglassen:** Wer im Text stirbt, getötet, verfolgt, gerichtet oder betrauert wird, ist im Bild zu sehen
+    (Figur, Haltung, Zeichen oder Wort), nicht nur in der Legende; der Tod Jesu wird gezeigt, nicht nur das leere Kreuz;
+  - **nicht beschönigen:** ein gestorbenes Kind wird nicht stehend und gesund gezeichnet, Trauernde weinen, «töten» ist
+    eine Tat und nicht nur ein Paragraf (Waage);
+  - **nicht ausmalen:** keine Wunden, kein Blut im Detail (höchstens als Zeichen), keine Verherrlichung, keine Schockbilder,
+    keine Qualen von Menschen im Feuer; das Gericht zeigt Feuer und Ort, keine leidenden Figuren;
+  - **Zeichen dafür** (Lexikon, Runde 7 in [SYMBOLPROZESS.md](SYMBOLPROZESS.md)): Verstorbener auf der Bahre, Totenklage,
+    Trauer, töten, Feuer der Hölle (Gehenna), verfolgen, Hass, dazu Grab, Gericht (Waage), Richterstuhl, Gefängnis,
+    Wolf, krank; in Szenen eine liegende Figur mit Ausdruck «tot» und Leinentuch (`stage.pose` «lie», `mood` «dead»,
+    `wear` «binden») und Trauernde mit Tränen;
+  - **Weglassen nur mit Grund:** Fehlt eines davon im Bild, steht der Grund in der Kernanalyse (`omitted_de`) oder im
+    Bildauftrag (`note_de`), z. B. wenn eine Aussage über eine Volksgruppe sonst als Urteil über sie gelesen würde
+    ([[TIT.1.12]]). «Vorgeschichte», «Ausschmückung» oder «unangenehm» sind kein Grund.
 - **Personen** im Stil «Symbol» ohne ausgeführtes Gesicht (im Stil «Anime» mit Gesicht und Ausdruck, siehe oben), erkennbar an Farbe, Kleidung und Zeichen. Keine Karikatur, keine «typisierten» Merkmale einer Volksgruppe; «die Juden» im Johannesevangelium als neutrale Menge, nie eingefärbt oder vereinheitlicht.
 - Was der Text offenlässt (z. B. ob die Geissel Menschen traf, [[JHN.2.15]]), bleibt im Bild offen oder wird im Auftrag (`interpretation_note_de`) als Deutung benannt. Nicht erzählte Vorgänge (der Wechsel von Wasser zu Wein) werden nicht als Vorgang gezeigt.
 - Symbole, die an nationale, politische oder kirchliche Sonderzeichen erinnern, vermeiden (z. B. Adler nicht mit weissem Kopf und Schwanz).

@@ -2,6 +2,14 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.91 — 2026-10-24 — Tod und Böses nicht ausblenden; Abstand zum Rahmen
+
+Hinweise Andi Neck:
+- **Tod und Böses nicht ausblenden** (BILDSPRACHE.md, BILDPROZESS.md Leitlinie 11, Entscheid): Wer stirbt, getötet, verfolgt, gerichtet oder betrauert wird, ist im Bild zu sehen – nicht weggelassen, nicht beschönigt, nicht ausgemalt (keine Wunden, kein Blut im Detail, keine Verherrlichung). Weglassen nur mit Grund.
+- **Neue Zeichen** (Runde 7, bei 32 px geprüft): Verstorbener auf der Bahre, Totenklage, töten (Schwert, ohne Blut), Feuer der Hölle (Gehenna), verfolgen; Hass neu (Rücken an Rücken).
+- **Pilotbilder ergänzt:** Tod von Elimelech, Machlon und Kiljon (Rut 1, auch in der Kernanalyse des Buches nicht mehr «Vorgeschichte»), das gestorbene Mädchen und die Totenklage (Mk 5, Augen geschlossen), «töten» und «Feuer der Hölle» (Mt 5), «verfolgt» (Seligpreisungen), Kreuz bei «hingegeben» (Tit 2,14); im Buchbild Matthäus Jesus am Kreuz statt nur des leeren Kreuzes.
+- **Abstand zum Rahmen:** Titelblase, Sprecherbild und Sprechblasen haben Luft zum Kachelrahmen; `pruefe_bilder.py` prüft das.
+
 ## v0.90 — 2026-10-24 — Pfeile genau von Zelle zu Zelle
 
 Hinweis Andi Neck: Pfeile in den Strukturbildern waren leicht verschoben.

@@ -214,30 +214,30 @@ def diagram(comp, d):
     if d.get("speaker") or d.get("title"):
         x0 = 28
         if d.get("speaker"):
-            out.append(C.portrait(d["speaker"], x0, 5, 20))
+            out.append(C.portrait(d["speaker"], x0, 8, 20))
             x0 += 26
         tw = w - x0 - 8
         th = block_h(d.get("title"), 8.6, tw - 8) if d.get("title") else 0
         if d.get("title"):
             bh = max(20, th + 8)
-            out.append(f'<rect x="{x0:.1f}" y="4" width="{tw:.1f}" height="{bh:.1f}" rx="7" fill="#FFFFFF" stroke="{INK}" stroke-width="1.1"/>')
+            out.append(f'<rect x="{x0:.1f}" y="8" width="{tw:.1f}" height="{bh:.1f}" rx="7" fill="#FFFFFF" stroke="{INK}" stroke-width="1.1"/>')
             if d.get("speaker"):
-                out.append(f'<path d="M{x0 + 1:.1f} 11L{x0 - 5:.1f} 14L{x0 + 1:.1f} 17" fill="#FFFFFF" stroke="{INK}" stroke-width="1.1" stroke-linejoin="round"/>'
-                           f'<path d="M{x0 + 1.2:.1f} 11.6V16.4" stroke="#FFFFFF" stroke-width="1.4"/>')
-            s, _ = block(x0 + tw / 2, 4 + (bh - th) / 2, d["title"], 8.6, tw - 8)
+                out.append(f'<path d="M{x0 + 1:.1f} 15L{x0 - 5:.1f} 18L{x0 + 1:.1f} 21" fill="#FFFFFF" stroke="{INK}" stroke-width="1.1" stroke-linejoin="round"/>'
+                           f'<path d="M{x0 + 1.2:.1f} 15.6V20.4" stroke="#FFFFFF" stroke-width="1.4"/>')
+            s, _ = block(x0 + tw / 2, 8 + (bh - th) / 2, d["title"], 8.6, tw - 8)
             out.append(s)
-            y = 4 + bh + 6
+            y = 8 + bh + 6
         else:
-            y = 30
+            y = 34
     else:
-        y = 26
+        y = 28
     v = d["visual"]
     fn = VISUALS.get(v)
     if fn is None:
         raise SystemExit(f"FEHLER: Darstellung {v} im Zeichner noch nicht umgesetzt")
     s, y = fn(C, d, w, y)
     out.append(f'<g class="dg-vis" data-visual="{v}">{s}</g>')
-    return "".join(out), w, max(56, y + 8)
+    return "".join(out), w, max(56, y + 10)  # Abstand zum Rahmen (Hinweis Andi Neck 2026-10-24)
 
 
 def _grid(C, d, w, y, cells=None, cols=None, tone=None):
