@@ -495,7 +495,7 @@ def _circle(C, d, w, y):
     if n <= 2:  # zwei Glieder nebeneinander, oben Pfeil hin, unten Pfeil zurück
         h = max(hs)
         x1, x2 = 8, w - 8 - cw
-        y0 = y + 6
+        y0 = y + (14 if d.get("there") else 6)
         out.append(C.draw(cells[0], x1, y0, cw, h))
         if n == 2:
             out.append(C.draw(cells[1], x2, y0, cw, h, "new"))
@@ -506,8 +506,8 @@ def _circle(C, d, w, y):
                    + arrow(a1 + 3, y0 + h * .7 + 2.5, a1, y0 + h * .7))
         for k, lk in ((0, "there"), (1, "back")):
             if d.get(lk):
-                out.append(small_label(w / 2, (y0 + 1) if k == 0 else (y0 + h + 9), d[lk], 6.4))
-        return "".join(out), y0 + h + 12
+                out.append(small_label(w / 2, (y0 - 4) if k == 0 else (y0 + h + 10), d[lk], 6.4))
+        return "".join(out), y0 + h + (16 if d.get("back") else 12)
     out.append(f'<ellipse cx="{cx:.1f}" cy="{cy:.1f}" rx="{rx:.1f}" ry="{ry:.1f}" fill="none" stroke="{INK}" stroke-width="1.3" stroke-dasharray="4 3"/>')
     for i in range(n):  # Pfeilspitze auf dem Kreis zwischen zwei Gliedern
         a = -math.pi / 2 + 2 * math.pi * (i + .5) / n
