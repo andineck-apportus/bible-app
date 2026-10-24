@@ -390,6 +390,50 @@ def check_chapters():
         sys.exit(1)
 
 
+def check_structure():
+    """Struktur zuerst (VERDICHTUNG.md): Jedes Bild mit Kernanalyse folgt deren Strukturanalyse – ein Strukturbild nutzt eine
+    Darstellung, die die Struktur vorsieht. Bilder ohne Kernanalyse mit Struktur werden als offen gemeldet (noch alte
+    Verdichtung, beim Ausrollen neu zu machen)."""
+    root = pathlib.Path(__file__).resolve().parents[2]
+    errs, open_ = [], []
+    for b in BRIEFS:
+        if b["level"] not in ("section", "chapter", "book"):
+            continue
+        cp = root / "data/core-analyses" / f"CORE-{b['suffix']}.json"
+        core = json.loads(cp.read_text(encoding="utf-8")) if cp.exists() else {}
+        st = core.get("structure")
+        if not st:
+            open_.append(b["suffix"])
+            continue
+        vis = {x.get("visual") for x in st.get("units", [])}
+        for c in core.get("children", []):  # obere Ebene übernimmt die Strukturen der Ebene darunter (Regel 4)
+            cc = root / "data/core-analyses" / f"{c}.json"
+            if cc.exists():
+                ccore = json.loads(cc.read_text(encoding="utf-8"))
+                vis |= {x.get("visual") for x in (ccore.get("structure") or {}).get("units", [])}
+                for g in ccore.get("children", []):
+                    gc = root / "data/core-analyses" / f"{g}.json"
+                    if gc.exists():
+                        vis |= {x.get("visual") for x in (json.loads(gc.read_text(encoding="utf-8")).get("structure") or {}).get("units", [])}
+        if "columns" in vis:
+            vis |= {"mirror"}
+        if "mirror" in vis:
+            vis |= {"columns"}
+        if vis & {"arrows", "tree", "timeline"}:
+            vis |= {"arrows", "tree", "timeline"}
+        for pnl in b["panels"]:
+            d = pnl.get("diagram")
+            if d and d.get("visual") not in vis:
+                errs.append(f"{b['suffix']} Feld {pnl['n']}: Darstellung {d.get('visual')} nicht in der Strukturanalyse ({', '.join(sorted(v for v in vis if v))})")
+    for e in errs:
+        print("FEHLER:", e)
+    if open_:
+        print(f"OFFEN: {len(open_)} Bilder ohne Strukturanalyse (alte Verdichtung, beim Ausrollen neu): " + ", ".join(sorted(open_)[:8]) + (" …" if len(open_) > 8 else ""))
+    if errs:
+        sys.exit(1)
+
+
 if __name__ == "__main__":
     run()
     check_chapters()
+    check_structure()

@@ -164,49 +164,50 @@
         "gsw": "Niemer cha zwei Herre diene"
       },
       "diagram": {
-        "visual": "arrows",
+        "visual": "switch",
         "speaker": "FIG-JESUS",
-        "span": 2,
-        "cols": 3,
         "title": {
-          "de": "Zwei Herren: Gott und der Mammon",
-          "gsw": "Zwei Herre: Gott und de Mammon"
+          "de": "Ihr könnt nicht Gott dienen und dem Mammon.",
+          "gsw": "Ir chönd nöd Gott diene und em Mammon."
         },
-        "cells": [
-          {
-            "a": {
-              "de": "Niemand kann zwei Herren dienen",
-              "gsw": "Niemer cha zwei Herre diene"
-            },
-            "icons": [
-              "FIG-GOTT",
-              "FIG-OBJ-MUENZEN"
-            ]
+        "cond": {
+          "a": {
+            "de": "Niemand kann zwei Herren dienen",
+            "gsw": "Niemer cha zwei Herre diene"
           },
-          {
-            "a": {
-              "de": "Den einen wird er hassen und den anderen lieben",
-              "gsw": "De eint hasst er und de ander liebt er"
-            },
-            "b": {
-              "de": "oder dem einen anhängen und den anderen verachten",
-              "gsw": "oder er hanget am eint aa und verachtet de ander"
-            }
-          },
-          {
-            "a": {
-              "de": "Ihr könnt nicht Gott dienen und dem Mammon",
-              "gsw": "Ir chönd nöd Gott diene und em Mammon"
-            }
+          "b": {
+            "de": "denn den einen wird er hassen und den anderen lieben, oder dem einen anhängen und den anderen verachten",
+            "gsw": "dänn de eint hasst er und de ander liebt er, oder er hanget am eint aa und verachtet de ander"
           }
-        ],
-        "links": [
-          {
-            "de": "denn",
-            "gsw": "dänn"
+        },
+        "yes_label": {
+          "de": "entweder",
+          "gsw": "entweder"
+        },
+        "no_label": {
+          "de": "oder",
+          "gsw": "oder"
+        },
+        "yes": {
+          "a": {
+            "de": "Gott dienen",
+            "gsw": "Gott diene"
           },
-          null
-        ]
+          "icons": [
+            "FIG-GOTT"
+          ],
+          "tone": "new"
+        },
+        "no": {
+          "a": {
+            "de": "dem Mammon dienen",
+            "gsw": "em Mammon diene"
+          },
+          "icons": [
+            "FIG-OBJ-MUENZEN"
+          ],
+          "tone": "old"
+        }
       }
     }
   ],
@@ -218,7 +219,7 @@
   "captions_de": [
     "Schätze: Jesus spricht (Blase: wo dein Schatz ist, ist dein Herz); zwei Spalten «nicht auf der Erde» (Truhe, grau) ↔ «sondern im Himmel» (Schatz, gelb).",
     "Das Auge: Weiche «Wie ist dein Auge?» – Zweig «klar» → der Leib hell (Licht), Zweig «schlecht» → der Leib finster; in der Blase Jesu der Ausruf über die Finsternis.",
-    "Zwei Herren: Pfeilkette von «Niemand kann zwei Herren dienen» (Strahlenkranz für Gott, Münzen für den Mammon) über «denn» – hassen und lieben – zu «Ihr könnt nicht Gott dienen und dem Mammon»."
+    "Zwei Herren: «Niemand kann zwei Herren dienen» verzweigt in «entweder» Gott dienen (Strahlenkranz) «oder» dem Mammon dienen (Münzen); darüber: «Ihr könnt nicht Gott dienen und dem Mammon.»"
   ],
   "interpretation_note_de": "Strukturbilder einer Rede (Reihe von drei Bildworten mit je zwei Möglichkeiten, Kernanalyse): ein Feld je Bildwort mit seinem eigenen Bau – Gegensatz mit Begründung ([[MAT.6.19-MAT.6.21]]), Bedingung mit zwei Zweigen und Ausruf ([[MAT.6.22-MAT.6.23]]), Grundsatz mit Begründung ([[MAT.6.24]]). Dass die drei ein gemeinsames Thema haben, ist Auslegung. Münzen stehen für den Mammon (Besitz).",
   "basis": [
@@ -992,6 +993,219 @@
             "reference": "MAT.6.24",
             "fingerprint": "5d7aa90d4eac53aa"
           }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.6.19-MAT.6.21",
+            "figures": [
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-SCHATZ-ERDE",
+              "FIG-ZEICHEN-SCHATZ"
+            ],
+            "speech": [],
+            "action_de": "Sammelt keine Schätze auf der Erde, wo Motte, Frass und Diebe sie nehmen, sondern im Himmel, wo nichts sie zerstört; denn wo dein Schatz ist, dort wird auch dein Herz sein.",
+            "keywords": {
+              "de": "Schätze im Himmel",
+              "gsw": "Schätz im Himel"
+            },
+            "diagram": {
+              "visual": "columns",
+              "speaker": "FIG-JESUS",
+              "span": 2,
+              "arrow": false,
+              "title": {
+                "de": "Denn wo dein Schatz ist, dort wird auch dein Herz sein.",
+                "gsw": "Dänn wo diin Schatz isch, dört wird au diis Härz sii."
+              },
+              "head": [
+                {
+                  "de": "nicht auf der Erde",
+                  "gsw": "nöd uf de Ärde"
+                },
+                {
+                  "de": "sondern im Himmel",
+                  "gsw": "sondern im Himel"
+                }
+              ],
+              "rows": [
+                [
+                  {
+                    "a": {
+                      "de": "Sammelt euch keine Schätze auf der Erde",
+                      "gsw": "Sammled eu kei Schätz uf de Ärde"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-SCHATZ-ERDE"
+                    ]
+                  },
+                  {
+                    "a": {
+                      "de": "Sammelt euch Schätze im Himmel",
+                      "gsw": "Sammled eu Schätz im Himel"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-SCHATZ"
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "a": {
+                      "de": "Motte und Frass zerstören, Diebe brechen ein und stehlen",
+                      "gsw": "Schabe und Frass mached alles kaputt, Dieb bräched ii und stääled"
+                    }
+                  },
+                  {
+                    "a": {
+                      "de": "Weder Motte noch Frass zerstören, und Diebe stehlen nicht",
+                      "gsw": "Weder Schabe no Frass mached öppis kaputt, und Dieb stääled nöd"
+                    }
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.6.22-MAT.6.23",
+            "figures": [
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-SEHEN",
+              "FIG-ZEICHEN-LICHT",
+              "FIG-ZEICHEN-FINSTERNIS"
+            ],
+            "speech": [],
+            "action_de": "Das Auge ist die Lampe des Leibes: Ist es klar, wird der ganze Leib hell; ist es schlecht, wird er finster – und wie gross ist dann die Finsternis!",
+            "keywords": {
+              "de": "Die Lampe des Leibes ist das Auge",
+              "gsw": "D Lampe vom Liib isch s Aug"
+            },
+            "diagram": {
+              "visual": "switch",
+              "speaker": "FIG-JESUS",
+              "span": 2,
+              "title": {
+                "de": "Wenn das Licht in dir Finsternis ist, wie gross ist dann die Finsternis!",
+                "gsw": "Wänn s Liecht i dir Fiischteri isch, wie gross isch dänn d Fiischteri!"
+              },
+              "cond": {
+                "a": {
+                  "de": "Wie ist dein Auge?",
+                  "gsw": "Wie isch diis Aug?"
+                },
+                "icons": [
+                  "FIG-ZEICHEN-SEHEN"
+                ]
+              },
+              "yes_label": {
+                "de": "klar",
+                "gsw": "klar"
+              },
+              "no_label": {
+                "de": "schlecht",
+                "gsw": "schlächt"
+              },
+              "yes": {
+                "a": {
+                  "de": "Dein ganzer Leib wird hell sein",
+                  "gsw": "Diin ganz Liib wird hell sii"
+                },
+                "icons": [
+                  "FIG-ZEICHEN-LICHT"
+                ]
+              },
+              "no": {
+                "a": {
+                  "de": "Dein ganzer Leib wird finster sein",
+                  "gsw": "Diin ganz Liib wird fiischter sii"
+                },
+                "icons": [
+                  "FIG-ZEICHEN-FINSTERNIS"
+                ]
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.6.24",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GOTT"
+            ],
+            "objects": [
+              "FIG-OBJ-MUENZEN"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Niemand kann zwei Herren dienen, denn er wird den einen hassen und den anderen lieben; ihr könnt nicht Gott dienen und dem Mammon.",
+            "keywords": {
+              "de": "Niemand kann zwei Herren dienen",
+              "gsw": "Niemer cha zwei Herre diene"
+            },
+            "diagram": {
+              "visual": "arrows",
+              "speaker": "FIG-JESUS",
+              "span": 2,
+              "cols": 3,
+              "title": {
+                "de": "Zwei Herren: Gott und der Mammon",
+                "gsw": "Zwei Herre: Gott und de Mammon"
+              },
+              "cells": [
+                {
+                  "a": {
+                    "de": "Niemand kann zwei Herren dienen",
+                    "gsw": "Niemer cha zwei Herre diene"
+                  },
+                  "icons": [
+                    "FIG-GOTT",
+                    "FIG-OBJ-MUENZEN"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Den einen wird er hassen und den anderen lieben",
+                    "gsw": "De eint hasst er und de ander liebt er"
+                  },
+                  "b": {
+                    "de": "oder dem einen anhängen und den anderen verachten",
+                    "gsw": "oder er hanget am eint aa und verachtet de ander"
+                  }
+                },
+                {
+                  "a": {
+                    "de": "Ihr könnt nicht Gott dienen und dem Mammon",
+                    "gsw": "Ir chönd nöd Gott diene und em Mammon"
+                  }
+                }
+              ],
+              "links": [
+                {
+                  "de": "denn",
+                  "gsw": "dänn"
+                },
+                null
+              ]
+            }
+          }
+        ],
+        "captions_de": [
+          "Schätze: Jesus spricht (Blase: wo dein Schatz ist, ist dein Herz); zwei Spalten «nicht auf der Erde» (Truhe, grau) ↔ «sondern im Himmel» (Schatz, gelb).",
+          "Das Auge: Weiche «Wie ist dein Auge?» – Zweig «klar» → der Leib hell (Licht), Zweig «schlecht» → der Leib finster; in der Blase Jesu der Ausruf über die Finsternis.",
+          "Zwei Herren: Pfeilkette von «Niemand kann zwei Herren dienen» (Strahlenkranz für Gott, Münzen für den Mammon) über «denn» – hassen und lieben – zu «Ihr könnt nicht Gott dienen und dem Mammon»."
         ]
       }
     }
