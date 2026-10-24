@@ -2,6 +2,15 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.88 — 2026-10-24 — Zeichen in Einsatzgrösse geprüft, Kästen füllen die Zeile
+
+Hinweise Andi Neck:
+- **Kasten ohne Nachbarn füllt die Breite:** jede Zeile in Rastern und Pfeilketten füllt die Breite, auch eine kürzere letzte; die Prüfung `pruefe_bilder.py` meldet Leerraum.
+- **Erkennbarkeit in Einsatzgrösse:** Zeichen werden bei 32 px im Kasten geprüft, nicht nur gross (`zeichen_test.py`, SYMBOLPROZESS.md «Prüfung in Einsatzgrösse», Runde 6). Bestand der Pilotbilder: 127 Zeichen gemessen; 24 neu gezeichnet (Erkennung bei 32 px vorher 3, nachher 18), darunter alle mit Händen: Hände mit Ärmel und abgesetztem Daumen, Almosen als Münze in der Bettlerschale.
+- **Detailstufen:** je Zeichen drei Stufen blind getestet; mittel (Umriss + 1–2 Merkmale) erkennt man bei 32 px am besten (47 % gegenüber 32 % einfach, 46 % detailliert); Detailregeln und tragende Merkmale je Zeichen im Lexikon. Münzen mit Prägung, wo sie hilft (Denar, Mammon, Gewinn).
+- **Zeichen für schwierige Begriffe:** 17 neue, erkannt u. a. gerecht, suchen und finden, auf Sand bauen, bitter, Lohn schon erhalten, Ruhe, Streit; als Wortzeichen (nur mit Wort) u. a. besonnen, fromm, freundlich, Sanftmut, verleumden, sich unterordnen.
+- Grössere Zeichen in den Kästen; Zeichen in den Pilotbildern ergänzt (u. a. klug/töricht, Haus auf Sand/Felsen).
+
 ## v0.87 — 2026-10-24 — Mehr Zeichen, saubere Strukturbilder, Kapitel mit allen Abschnitten
 
 Hinweise Andi Neck:
