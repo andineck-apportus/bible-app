@@ -2,6 +2,13 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.98 — 2026-10-25 — Zeichen-Durchsicht Runde 11
+
+Hinweis Andi Neck: Hände teils unverständlich, Almosen wie Schüssel, Prozess verbessern.
+- **Gestaltungskritik** aller 421 Zeichen ohne Personen (drei getrennte Instanzen): 139 ok, 241 überarbeiten, 41 neu. Neue Prüfstufe `zeichen_test.py --frage kritik` (beurteilt die Zeichnung statt die Bedeutung zu raten); Gestaltungsregeln in SYMBOLPROZESS.md (Hände aus einer gemeinsamen Handbibliothek `haende.py`, Handlungen nicht als blosse Pfeile, keine Bedien-Symbole, keine Doppelten, Gefühle als Gesichter, Orte mit Kontur).
+- **127 Zeichen neu gezeichnet** (fünf Instanzen), davon 41 mit bestandener Kritik und Blindtest übernommen; dazu die Auswahl von Andi Neck auf der Auswahlseite (25 neue Fassungen, 6 bisherige behalten). Ersetzungen liegen in `bildsymbole_daten/ueberarbeitet/`; `bilder_anime.library()` übernimmt sie unter derselben Lexikon-ID.
+- Befund: Von Hand gezeichnete SVG-Piktogramme erreichen die Qualität bewährter Sätze nicht zuverlässig, und die KI-Kritik schwankt; nächster Schritt ist ein offener, professionell gezeichneter Grundsatz (Emoji) als Basis.
+
 ## v0.97 — 2026-10-25 — Ohne Worte: ganzes Feld antippen, leere Glieder benannt
 
 Hinweise Andi Neck:
