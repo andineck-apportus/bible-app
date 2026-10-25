@@ -196,7 +196,12 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .scrim{position:absolute;inset:0;background:var(--scrim);z-index:8}
 #bible-stream .sheet{position:absolute;left:0;right:0;bottom:0;z-index:9;max-height:88%;overflow-y:auto;background:var(--sheet);border-top:1px solid var(--rule);padding:8px 22px calc(28px + env(safe-area-inset-bottom,0px))}
 #bible-stream .sheet .column{display:flex;flex-direction:column;gap:14px}
-#bible-stream .grab{width:36px;height:4px;background:var(--rule);margin:6px auto 4px}
+/* Griff und Kopf bleiben oben stehen; nach unten wischen schliesst (Hinweis Andi Neck 2026-10-25) */
+#bible-stream .grab{position:sticky;top:-8px;z-index:3;margin:-8px -22px 0;padding:12px 0 10px;background:var(--sheet);touch-action:none;cursor:grab}
+#bible-stream .grab::after{content:"";display:block;width:40px;height:5px;border-radius:3px;background:var(--rule);margin:0 auto}
+#bible-stream .sheet .grab+.sheet-head{position:sticky;top:19px;z-index:3;background:var(--sheet);margin:-14px -22px 0;padding:6px 22px 8px}
+#bible-stream .sheet.dragging{transition:none}
+#bible-stream .sheet.settle{transition:transform .2s ease}
 #bible-stream .sheet-head{display:flex;justify-content:space-between;align-items:center;gap:12px}
 #bible-stream .sheet-head h3{font:400 24px/1.2 var(--ui);margin:0}
 #bible-stream .app .close{display:inline-flex!important;align-items:center;gap:6px;flex:none;min-height:38px;padding:0 12px 0 9px!important;color:var(--muted);font:500 14px/1 var(--ui);border-radius:var(--r)!important;transition:background .15s,color .15s}
@@ -405,11 +410,15 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 @media (min-width:760px){
   #bible-stream .app[data-ill]:not([data-level="6"]) .reader .column{max-width:calc(100% - 48px)}
   #bible-stream .app[data-ill]:not([data-level="6"]) .stream-entry:not(.has-ill){max-width:36em}
-  #bible-stream .ill-wrap{display:grid;grid-template-columns:minmax(16em,36em) minmax(0,1fr);gap:32px;align-items:start}
-  #bible-stream .app[data-vill][data-level="6"] .reader .column{--vg:clamp(300px,44vw,700px);max-width:calc(36em + var(--vg) + 28px);padding-right:calc(var(--vg) + 28px)}
-  #bible-stream .app[data-vill] .verse-ill{float:right;clear:right;width:var(--vg);margin:4px calc(-1 * var(--vg) - 28px) 10px 0}
   #bible-stream .ill-toggle{display:none!important}
   #bible-stream .app .ill,#bible-stream .app .ill-text{display:block!important}
+}
+/* Bild neben dem Text erst, wenn es mindestens 460 px breit bleibt (Hinweis Andi Neck 2026-10-25: Bilder wurden zu klein
+   zum Lesen); darunter steht es in voller Breite unter dem Text */
+@media (min-width:1000px){
+  #bible-stream .ill-wrap{display:grid;grid-template-columns:minmax(16em,36em) minmax(460px,1fr);gap:32px;align-items:start}
+  #bible-stream .app[data-vill][data-level="6"] .reader .column{--vg:clamp(400px,44vw,700px);max-width:calc(36em + var(--vg) + 28px);padding-right:calc(var(--vg) + 28px)}
+  #bible-stream .app[data-vill] .verse-ill{float:right;clear:right;width:var(--vg);margin:4px calc(-1 * var(--vg) - 28px) 10px 0}
 }
 @media (prefers-reduced-motion:reduce){#bible-stream .bar,#bible-stream .logo-wrap .logo{transition:none}}
 </style></head><body>
@@ -526,7 +535,14 @@ function sibling(id,delta){const n=nodes.get(id);const s=streams[n.level];return
 let partTitle=p=>p.title||'';
 // Suche: Bibelstelle («Mt 5», «Mt 5,3», «1 Joh 2,1–5») ergibt Vers, Abschnitt, Kapitel und Buch (je nach Eingabe);
 // Text ergibt Bücher und Abschnitte, deren Titel alle Wörter enthalten (in allen Sprachen der Titel).
-function bookIdx(name){const n=norm(name);return DATA.map((b,i)=>({b,i})).filter(({b})=>[b.de,b.en,b.abbr,...b.alias].some(x=>norm(x)===n)).map(x=>x.i);}
+function bookIdx(name){const n=norm(name);const names=b=>[b.de,b.en,b.abbr,SHORT[b.code]||'',...b.alias].filter(Boolean);const exact=DATA.map((b,i)=>({b,i})).filter(({b})=>names(b).some(x=>norm(x)===n)).map(x=>x.i);
+  if(exact.length||!n)return exact;
+  // Anfang eines Buchnamens («matt» → Matthäus), nur wenn eindeutig (Hinweis Andi Neck 2026-10-25)
+  const pre=DATA.map((b,i)=>({b,i})).filter(({b})=>names(b).some(x=>norm(x).startsWith(n))).map(x=>x.i);return pre.length===1?pre:[];}
+// Eingabe mit eindeutigem Buchanfang und Leerzeichen oder Zahl dahinter: Buch als Kürzel übernehmen («matt 5» → «Mt 5»),
+// damit Kapitel und Vers gleich weiter getippt werden können
+function bookShort(q){const m=q.match(/^(\d?\s*[^\d\s][^\d]*?)(\s+|(?=\d))(.*)$/);if(!m)return null;if(m[3]&&!/^\d/.test(m[3].trim()))return null;const i=bookIdx(m[1]);if(i.length!==1)return null;
+  const bk=DATA[i[0]],ab=(typeof lang==='undefined'||lang==='de')&&SHORT[bk.code]||bk.abbr;if(m[1].trim()===ab)return null;return ab+' '+m[3].replace(/^\s+/,'');}
 function search(q){q=q.trim();if(!q)return[];const out=[],add=n=>{if(n&&!out.includes(n))out.push(n);};
   const m=q.match(/^(.+?)\s*(\d+)(?:\s*[:,.]\s*(\d+)(?:\s*[-–]\s*\d+)?)?$/);
   if(m)for(const i of bookIdx(m[1])){const c=Number(m[2]),v=m[3]?Number(m[3]):null,ch=nodes.get(`c${i}-${c}`);if(!ch)continue;
@@ -1496,7 +1512,19 @@ app.addEventListener('click',e=>{
   else if(a==='up')go(n.parent);else if(a==='down')pickSheet();
   else if(a==='load-next')loadMore();else if(a==='load-prev')loadMore(true);
 });
-app.addEventListener('input',e=>{if(e.target.type==='search'){query=e.target.value;renderResults();}});
+/* Blatt nach unten wischen zum Schliessen: am Griff oder Kopf immer, sonst wenn ganz oben gescrollt (Hinweis Andi Neck 2026-10-25) */
+{let sw=null;
+  root.addEventListener('touchstart',e=>{const sh=e.target.closest&&e.target.closest('#bible-stream .sheet');if(!sh||e.touches.length!==1)return;
+    const top=e.target.closest('.grab,.sheet-head');if(!top&&sh.scrollTop>0)return;if(e.target.closest('input,textarea,select,[contenteditable]'))return;
+    sw={sh,y:e.touches[0].clientY,x:e.touches[0].clientX,t:Date.now(),dy:0,top:!!top,on:false};},{passive:true});
+  root.addEventListener('touchmove',e=>{if(!sw)return;const dy=e.touches[0].clientY-sw.y,dx=e.touches[0].clientX-sw.x;
+    if(!sw.on){if(Math.abs(dx)>Math.abs(dy)||dy<6){if(dy<-6||Math.abs(dx)>10)sw=null;return;}if(!sw.top&&sw.sh.scrollTop>0){sw=null;return;}sw.on=true;sw.sh.classList.add('dragging');}
+    sw.dy=Math.max(0,dy);sw.sh.style.transform=`translateY(${sw.dy}px)`;if(e.cancelable)e.preventDefault();},{passive:false});
+  const end=()=>{if(!sw)return;const {sh,dy,t,on}=sw;sw=null;if(!on)return;sh.classList.remove('dragging');
+    const fast=dy/(Date.now()-t)>.6;if(dy>Math.min(120,sh.offsetHeight*.25)||(fast&&dy>40)){sh.classList.add('settle');sh.style.transform=`translateY(${sh.offsetHeight}px)`;setTimeout(()=>{if(host.contains(sh))closeSheet();},180);}
+    else{sh.classList.add('settle');sh.style.transform='';setTimeout(()=>sh.classList.remove('settle'),220);}};
+  root.addEventListener('touchend',end);root.addEventListener('touchcancel',end);}
+app.addEventListener('input',e=>{if(e.target.type==='search'){const sh=e.inputType&&e.inputType.startsWith('delete')?null:bookShort(e.target.value);if(sh!==null&&sh!==e.target.value){e.target.value=sh;e.target.setSelectionRange(sh.length,sh.length);}query=e.target.value;renderResults();}});
 app.addEventListener('keydown',e=>{if(e.key==='Escape'&&sheet){closeSheet();reader.focus({preventScroll:true});}
   // Markierte Übersetzungsentscheidungen sind Textstellen (span), damit lange Markierungen normal umbrechen; per Tastatur bedienbar
   if((e.key==='Enter'||e.key===' ')&&e.target.matches&&e.target.matches('[role=button].dec')){e.preventDefault();e.target.click();}});

@@ -229,6 +229,9 @@ assert(model.STUDY.layers.gsw.text['TIT.3.15'].startsWith('Es grüessed dich all
 assert(model.STUDY&&dom.window.document.querySelector('#bible-stream'));
 // Wörterbuch (UBS/STEPBible), Ketiv/Qere (TAHOT), Ausgaben je Wort (TAGNT); Urtext-Modus ist an
 const goto=q=>{click('[data-action=index]');const i=sheetHost.querySelector('input[type=search]');i.value=q;i.dispatchEvent(new dom.window.Event('input',{bubbles:true}));sheetHost.querySelector('.results [data-go]').click();};
+{click('[data-action=index]');const i=sheetHost.querySelector('input[type=search]');i.value='matt 5';i.dispatchEvent(new dom.window.Event('input',{bubbles:true}));
+  if(i.value!=='Mt 5')throw new Error('Suche: eindeutiger Buchanfang wird nicht als Kürzel übernommen: '+i.value);
+  i.value='ma 5';i.dispatchEvent(new dom.window.Event('input',{bubbles:true}));if(i.value!=='ma 5')throw new Error('Suche: mehrdeutiger Buchanfang verändert');}
 goto('Obadja 1,11');click('[data-more="v30-1-11"]');
 let ltx=sheetHost.textContent;
 const hc=x=>x.replace(/[^\u05D0-\u05EA ]/g,'');
