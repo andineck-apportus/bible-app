@@ -438,12 +438,25 @@ def word_band(v, letter=False, comp=None, cands=()):
     """Stichwortband unter dem Feld: wenige Wörter aus dem Wortlaut; lieber zwei Zeilen als kleine Schrift (Hinweis Andi Neck).
     Ergebnis: (SVG, Höhe)."""
     extra = 16 + (14 if letter else 0)
-    maxw = W - 12 - extra
+    # Zeichen vor den Worten (Hinweis Andi Neck 2026-10-25): ihr Platz geht vom Text ab, bevor die Schrift bemessen wird
+    # (sonst ragte der Text über das Band, Hinweis Andi Neck 2026-10-25)
+    shown = zeichen(comp, "band", v, cands, auto=False) if comp is not None and not letter else None
+    iw = 0
+    if shown:
+        import bilder_diagramm as _bd
+        iw = _bd.Cells(comp).icon_row_w(shown, 12)
+    maxw = W - 12 - extra - (iw + 4 if shown else 0)
     fs = 10
     lines, lw, n = lwrap(v, fs, maxw)
     while lw > maxw and fs > 7:
         fs -= .5
         lines, lw, n = lwrap(v, fs, maxw)
+    if shown and lw > maxw:  # passt auch klein nicht: ohne Zeichen, die Worte gehen vor
+        shown, iw, maxw, fs = None, 0, W - 12 - extra, 10
+        lines, lw, n = lwrap(v, fs, maxw)
+        while lw > maxw and fs > 7:
+            fs -= .5
+            lines, lw, n = lwrap(v, fs, maxw)
     h = 16 if n == 1 else 28
     w = min(W - 12, lw + extra)
     x = (W - w) / 2
@@ -456,14 +469,11 @@ def word_band(v, letter=False, comp=None, cands=()):
     if comp is None:
         frame = f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h}" rx="3" fill="#FFF4D6" stroke="#3B3226" stroke-width="1"/>'
         return (f'<g class="ill-words">{frame}' + icon + ltext_ml(tx, y + h / 2, v, fs, maxw) + "</g>", h)
-    shown = zeichen(comp, "band", v, cands, auto=False)  # neben den Worten nur geprüfte Zuordnungen
-    if shown and not letter:  # Zeichen vor den Worten (Hinweis Andi Neck 2026-10-25)
-        import bilder_diagramm as _bd
-        ih = h - 4
-        iw = _bd.Cells(comp).icon_row_w(shown, ih)
-        w2 = min(W - 12, w + iw + 4)
+    if shown:
+        ih = 12  # gleiche Höhe wie bei der Bemessung oben, damit der reservierte Platz stimmt
+        w2 = min(W - 12, lw + extra + iw + 4)
         x = (W - w2) / 2
-        icon = _bd.Cells(comp).icons(shown, x + 4 + iw / 2, y + 2, ih, iw)
+        icon = _bd.Cells(comp).icons(shown, x + 4 + iw / 2, y + (h - ih) / 2, ih, iw)
         tx = x + 4 + iw + 3 + (w2 - iw - 7) / 2
         w = w2
     frame = f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h}" rx="3" fill="#FFF4D6" stroke="#3B3226" stroke-width="1"/>'

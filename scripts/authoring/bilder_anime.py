@@ -14,6 +14,7 @@ Aufruf: python3 scripts/authoring/bilder_anime.py
 KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; eigene Zeichnungen (CC0), keine fachliche Prüfung.
 """
 import json
+import os
 import math
 import pathlib
 import re
@@ -1662,6 +1663,12 @@ def run():
         n += write(old, rec, "Bild im Stil Anime nach Bildauftrag gezeichnet")
         n += localize(rid, rec, {"alt_de": alt_g}, "gsw-u-sd-chzh", "GSW-ZH", "CTX-CH-ZH-GSW-2026", AUTH_GSW, DATE)
     print(f"PASS: Bildstil Anime – {len(vb)} Darstellungen, {len(ILL)} Bilder; {n} Dateien geschrieben")
+    # Anordnung immer gleich mitprüfen (Hinweis Andi Neck 2026-10-25: Text ragte über einen Kasten, ohne dass es auffiel)
+    if n and os.environ.get("BIBLE_SKIP_LAYOUT_CHECK") != "1":
+        import subprocess
+        r = subprocess.run([sys.executable, str(pathlib.Path(__file__).resolve().parent / "pruefe_bilder.py")])
+        if r.returncode:
+            raise SystemExit("FEHLER: Anordnung der Bilder (pruefe_bilder.py) – siehe Befunde oben")
 
 
 if __name__ == "__main__":
