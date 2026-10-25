@@ -175,6 +175,9 @@ def main():
     lib, vb = A.library()
     extra = []
     for n, (k, v) in enumerate(ent.items()):  # Entwürfe als eigene Symbole (ohne Namen im Symbol)
+        if not v.get("svg") and base(k) in vb:  # Entwurf ohne Zeichnung = bisheriges Bibliothekszeichen (Vergleich, Runde 12)
+            vb[k] = vb[base(k)]
+            continue
         sid = f"tst-{n:03d}"
         extra.append(f'<symbol id="{sid}" viewBox="{v["vb"]}">{v["svg"]}</symbol>')
         vb[k] = (sid, v["vb"])
