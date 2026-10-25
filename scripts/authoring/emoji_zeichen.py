@@ -48,6 +48,35 @@ def paket():
     return json.loads(f.read_text(encoding="utf-8"))
 
 
+INK = "#2B211A"
+# Hautton der Figuren statt des Twemoji-Tons (medium-light): Grundton, Schatten, dunkler Schatten
+SKIN = {"#f3d2a2": "#DDA57A", "#e2c196": "#C98E62", "#d2a077": "#A8714A"}
+
+
+def _soft(hexcol):
+    """Farbe etwas gedämpft (Sättigung 85 %), damit die Emoji zu den Figuren passen."""
+    import colorsys
+    h = hexcol.lstrip("#")
+    if len(h) == 3:
+        h = "".join(c * 2 for c in h)
+    r, g, b = (int(h[i:i + 2], 16) / 255 for i in (0, 2, 4))
+    hh, ll, ss = colorsys.rgb_to_hls(r, g, b)
+    r, g, b = colorsys.hls_to_rgb(hh, ll, ss * .85)
+    return "#%02X%02X%02X" % (round(r * 255), round(g * 255), round(b * 255))
+
+
+def stil(b):
+    """Twemoji im Stil der Bilder (Hinweis Andi Neck 2026-10-25: «es fehlt die Konsistenz»): dunkle Kontur aussen wie bei
+    den Figuren (Teile dick in Tinte darunter), Hautton der Figuren, Farben leicht gedämpft."""
+    import re as _re
+    col = _re.sub(r'(fill|stroke)="(#[0-9a-fA-F]{3,6})"',
+                  lambda m: f'{m.group(1)}="{SKIN.get(m.group(2).lower(), _soft(m.group(2)))}"', b)
+    ink = _re.sub(r'(fill|stroke)="#[0-9a-fA-F]{3,6}"', lambda m: f'{m.group(1)}="{INK}"', b)
+    ink = _re.sub(r'fill="(?:#fff|#ffffff|white)"', f'fill="{INK}"', ink, flags=_re.I)
+    return (f'<g fill="{INK}" stroke="{INK}" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round">{ink}</g>'
+            f'<g>{col}</g>')
+
+
 def body(icons, name):
     """Inhalt eines Emoji (36×36); Hände und Gesichter mit Hautton, wenn es ihn gibt."""
     ic = icons["icons"]
@@ -67,9 +96,15 @@ NEIN = ('<g transform="translate(25 25)"><circle r="9" fill="#FFFFFF" stroke="#D
 
 
 def zeichen(icons, e):
-    """(viewBox, svg) eines Zeichens aus der Zuordnung."""
+    """(viewBox, svg) eines Zeichens aus der Zuordnung, im Stil der Bilder (Kontur, Hautton, gedämpft)."""
+    vb, svg = _zeichen(icons, e)
+    x, y, w, h = (float(v) for v in vb.split())
+    return f"{x - 1.6:g} {y - 1.6:g} {w + 3.2:g} {h + 3.2:g}", svg
+
+
+def _zeichen(icons, e):
     names, an = e["emoji"], e.get("anordnung", "einzeln")
-    bs = [body(icons, n)[1] for n in names]
+    bs = [stil(body(icons, n)[1]) for n in names]
     if an == "einzeln" or len(bs) == 1 and an not in ("verbot", "nein"):
         return "0 0 36 36", bs[0]
     if an == "paar":  # Hauptmotiv gross, zweites etwas kleiner und tiefer, leicht überlappend
