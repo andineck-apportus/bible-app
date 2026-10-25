@@ -948,6 +948,7 @@ const METHODS=[
  ['letters','Anfangsbuchstaben','Nur der erste Buchstabe jedes Wortes steht da; den Vers dazu laut sagen. Hilft beim wörtlichen Einprägen.','First letters','Only the first letter of each word is shown; say the verse aloud. Helps word-for-word memorising.'],
  ['cloze','Lückentext stufenweise','Erst fehlen wenige Wörter, dann immer mehr, bis der ganze Vers aus dem Gedächtnis kommt. Lücke antippen zeigt das Wort.','Fading cloze','First a few words are missing, then more, until the whole verse comes from memory. Tap a gap to show the word.'],
  ['order','Wörter ordnen','Die Wörter des Verses in die richtige Reihenfolge tippen.','Word order','Tap the words of the verse in the right order.'],
+ ['pics','Bildkarten ohne Worte','Ein Abschnittsbild nur mit Zeichen: erzähle, was geschieht, tippe Felder an, um die Worte zu sehen, dann aufdecken (Titel und Zusammenfassung) und bewerten. Wiederholung nach dem Leitner-System.','Picture cards without words','A section picture with signs only: tell what happens, tap fields to see the words, then reveal title and summary and rate yourself. Repeats by the Leitner system.'],
  ['quiz','Wo steht das?','Zum Vers die richtige Stelle wählen – oder zum Bild. Übt die Verbindung von Wortlaut, Bild und Stelle.','Where is it?','Pick the right reference for the verse or the picture. Links wording, picture and reference.']];
 const shuffle=(a,seed)=>{a=[...a];let x=seed||1;for(let i=a.length-1;i>0;i--){x=(x*9301+49297)%233280;const j=Math.floor(x/233280*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
 const hashStr=s=>{let h=7;for(const c of s)h=(h*31+c.charCodeAt(0))%100003;return h;};
@@ -968,17 +969,32 @@ function learnSheet(){const L_=lang==='de',all=MERK(),n=nodes.get(current),code=
   <h4 class="set-group">${L_?'Wie lernen':'How to learn'}</h4>${METHODS.map(m=>`<button type="button" class="row" data-learn="start:${m[0]}"><span>${L_?m[1]:m[3]}<span class="sub">${L_?m[2]:m[4]}</span></span>${icon('chevron-right')}</button>`).join('')}
   <p class="note">${L_?'Tipps: kurz und oft üben (wenige Minuten am Tag), laut sprechen, erst selbst abrufen, dann nachsehen; Methoden abwechseln. Der Lernstand bleibt nur auf diesem Gerät.':'Tips: short and often, say it aloud, recall before checking, vary the methods. Progress stays on this device only.'}</p>
   <button type="button" class="link soft" data-learn="reset">${L_?'Lernstand zurücksetzen':'Reset progress'}</button>`:`<p class="note">${L_?'Noch keine Merkverse vorhanden.':'No memory verses yet.'}</p>`}`);}
-function learnStart(method){const sc=(LN&&LN.pickScope)||'all';let refs=scopeRefs(sc);if(!refs.length)return;
+// Bildkarten (Hinweis Andi Neck 2026-10-25): Abschnitte mit Bild «ohne Worte» im gewählten Umfang; Lernstand unter «img:<Abschnitt>»
+function picNodes(sc){const out=[],chap=(bi,c)=>{const ch=nodes.get(`c${bi}-${c}`);if(ch)for(const id of ch.children){const x=nodes.get(id);if(x&&x.part)out.push(x);}};
+  const book=code=>{const bi=CODE_IDX[code];if(bi===undefined)return;DATA[bi].counts.forEach((_,c0)=>chap(bi,c0+1));};
+  if(sc.startsWith('ch:')){const [b,c]=sc.slice(3).split('.');if(CODE_IDX[b]!==undefined)chap(CODE_IDX[b],+c);}
+  else if(sc.startsWith('bk:'))book(sc.slice(3));else [...new Set(MERK().map(merkCode))].forEach(book);
+  return out;}
+const picCodes=sc=>sc.startsWith('ch:')||sc.startsWith('bk:')?[sc.slice(3).split('.')[0]]:[...new Set(MERK().map(merkCode))];
+function picStart(sc){withData(picCodes(sc),()=>{let refs=picNodes(sc).filter(x=>{const il=illFor(x);return il&&/dg-nw/.test(il.svg);}).map(x=>'img:'+x.id);
+  if(!refs.length){openSheet('learn',head(lang==='de'?'Lernen':'Learn')+`<p class="note">${lang==='de'?'In diesem Umfang gibt es noch keine Abschnittsbilder.':'No section pictures in this scope yet.'}</p><button type="button" class="learn-main" data-learn="menu">${lang==='de'?'Zur Auswahl':'Back to choice'}</button>`);return;}
+  const d=refs.filter(isDue);refs=shuffle(d.length?d:refs,Date.now()%997+1);
+  LN={pickScope:sc,method:'pics',refs,i:0,step:0,stage:1,shown:new Set(),placed:[],wrong:0,score:0,done:0};learnRender();});}
+function learnStart(method){const sc=(LN&&LN.pickScope)||'all';if(method==='pics'){picStart(sc==='due'?'all':sc);return;}let refs=scopeRefs(sc);if(!refs.length)return;
   if(method==='cards'){const d=refs.filter(isDue);refs=(d.length?d:refs);}
   refs=shuffle(refs,Date.now()%997+1);LN={pickScope:sc,method,refs,i:0,step:0,stage:1,shown:new Set(),placed:[],wrong:0,score:0,done:0};
   withData([...new Set(refs.map(merkCode))],learnRender);}
 const vtext=r=>LAYER().text[r]||STUDY.layers.de.text[r]||'';
 function learnRender(){const L_=lang==='de',m=LN.method,r=LN.refs[LN.i],tx=vtext(r),ws=words(tx),it=illItem(r),img=it?`<div class="ill-img learn-img" role="img" aria-label="${esc(LOC(it).alt)}">${LOC(it).svg}</div>`:'';
-  const name=METHODS.find(x=>x[0]===m),prog=`<p class="note">${L_?name[1]:name[3]} · ${LN.i+1}/${LN.refs.length} · ${esc(scopeLabel(LN.pickScope))}</p>`;
+  const name=METHODS.find(x=>x[0]===m),prog=`<p class="note">${L_?name[1]:name[3]} · ${LN.i+1}/${LN.refs.length} · ${esc(m==='pics'&&LN.pickScope==='all'?(L_?'Alle Abschnittsbilder':'All section pictures'):scopeLabel(LN.pickScope))}</p>`;
   const say=synth?`<button type="button" class="link soft" data-learn="say">${icon('speak')}<span>${L_?'Vorlesen':'Read aloud'}</span></button>`:'';
   let body='';
   if(m==='cards'){body=img+`<p class="merk-ref learn-ref">${esc(refDe(r))}</p>`+(LN.step?`<p class="merk-text">«${esc(tx)}»</p>${say}<div class="learn-rate">${[['again',L_?'Nochmal':'Again'],['hard',L_?'Schwer':'Hard'],['good',L_?'Gut':'Good'],['easy',L_?'Leicht':'Easy']].map(([k,l])=>`<button type="button" data-learn="rate:${k}">${l}</button>`).join('')}</div><p class="note">${L_?'Kasten':'Box'} ${(LS[r]||{}).box||0}</p>`
     :`<p class="note">${L_?'Sag den Vers aus dem Gedächtnis.':'Recall the verse.'}</p><button type="button" class="learn-main" data-learn="reveal">${L_?'Aufdecken':'Reveal'}</button>`);}
+  else if(m==='pics'){const n=nodes.get(r.slice(4)),il=n&&illFor(n),rate=[['again',L_?'Nochmal':'Again'],['hard',L_?'Schwer':'Hard'],['good',L_?'Gut':'Good'],['easy',L_?'Leicht':'Easy']];
+    const fig=il?`<figure class="ill nowords learn-pic"><div class="ill-img" role="img" aria-label="${esc(il.alt)}">${illTileBoxes(il,false)||illSvg(il.svg)}</div></figure>`:'';
+    body=fig+`<p class="merk-ref learn-ref">${esc(refDe(n.part.range))}</p>`+(LN.step?`<h4>${esc(pTitle(n.part))}</h4><div class="body">${sumHtml(summary(n)||'')}</div><div class="learn-rate">${rate.map(([k,l])=>`<button type="button" data-learn="rate:${k}">${l}</button>`).join('')}</div><p class="note">${L_?'Kasten':'Box'} ${(LS[r]||{}).box||0}</p>`
+      :`<p class="note">${L_?'Was geschieht hier? Erzähle den Abschnitt aus dem Gedächtnis; ein Feld antippen zeigt seine Worte.':'What happens here? Tell the section from memory; tap a field to see its words.'}</p><button type="button" class="learn-main" data-learn="reveal">${L_?'Aufdecken':'Reveal'}</button>`);}
   else if(m==='letters'){const fl=ws.map(w=>w.replace(/^([«‹(„"']*)(\p{L})[\p{L}\p{M}'’-]*/u,'$1$2')).join(' ');
     body=img+`<p class="merk-ref learn-ref">${esc(refDe(r))}</p><p class="merk-text learn-letters">${esc(LN.step?tx:fl)}</p>${LN.step?say:`<button type="button" class="learn-main" data-learn="reveal">${L_?'Ganzen Vers zeigen':'Show full verse'}</button>`}`;}
   else if(m==='cloze'){const frac=[0,.25,.5,.75,1][LN.stage],idx=ws.map((w,i)=>i).filter(i=>core(ws[i]).length>1),hide=new Set(shuffle(idx,hashStr(r)).slice(0,Math.round(idx.length*frac)));
@@ -990,7 +1006,7 @@ function learnRender(){const L_=lang==='de',m=LN.method,r=LN.refs[LN.i],tx=vtext
     ${done?`<p class="note">${L_?'Richtig geordnet':'Correct order'}${LN.wrong?` · ${LN.wrong} ${L_?'Fehlgriffe':'misses'}`:''}</p>${say}`:`<div class="chips order-pool">${LN.pool.filter(i=>!LN.placed.includes(i)).map(i=>`<button type="button" class="chip" data-learn="pick-word:${i}">${esc(core(ws[i])||ws[i])}</button>`).join('')}</div>`}`;}
   else if(m==='quiz'){if(!LN.opts){const pool=MERK().filter(x=>x!==r);LN.opts=shuffle([r,...shuffle(pool,hashStr(r)).slice(0,3)],LN.i+7);LN.pick=null;LN.asImg=(LN.i%2===1)&&!!it;}
     body=(LN.asImg?img:`<p class="merk-text">«${esc(tx)}»</p>`)+`<p class="note">${L_?'Wo steht das?':'Where is this?'}</p><div class="learn-opts">${LN.opts.map(o=>`<button type="button" class="row${LN.pick?(o===r?' ok':o===LN.pick?' bad':''):''}" data-learn="answer:${o}" ${LN.pick?'disabled':''}><span>${esc(refDe(o))}</span>${LN.pick&&o===r?icon('check'):''}</button>`).join('')}</div>${LN.pick&&LN.asImg?`<p class="merk-text">«${esc(tx)}»</p>`:''}`;}
-  const last=LN.i>=LN.refs.length-1,canNext=m!=='cards';
+  const last=LN.i>=LN.refs.length-1,canNext=m!=='cards'&&m!=='pics';
   openSheet('learn',head(L_?'Lernen':'Learn')+`<button type="button" class="link soft back-menu" data-learn="menu">${icon('arrow-up')}<span>${L_?'Zur Auswahl':'Back to choice'}</span></button>`+prog+body+
     (canNext?`<div class="learn-nav">${LN.i?`<button type="button" class="link soft" data-learn="prev">${icon('prev')}<span>${L_?'Zurück':'Back'}</span></button>`:'<span></span>'}<button type="button" class="learn-main" data-learn="${last?'finish':'next'}">${last?(L_?'Fertig':'Done'):(L_?'Weiter':'Next')}${icon('next')}</button></div>`:''));}
 function learnRate(k){const r=LN.refs[LN.i],o=LS[r]||{box:0};o.box=k==='again'?0:k==='hard'?Math.max(1,o.box):k==='good'?Math.min(6,o.box+1):Math.min(6,o.box+2);

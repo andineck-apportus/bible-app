@@ -19,7 +19,7 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     assert(!await p.$('.reader .merk')&&!await p.$('[data-merk]'),'Einstellung «Aus»');
     // Lernen
     await p.click('[data-action=menu]');await p.click('[data-learn=menu]');await p.waitForTimeout(300);
-    assert.equal(await p.$$eval('.sheet [data-learn^="start:"]',x=>x.length),5,'fünf Lernmethoden');
+    assert.equal(await p.$$eval('.sheet [data-learn^="start:"]',x=>x.length),6,'sechs Lernmethoden');
     await p.click('[data-learn="start:cards"]');await p.waitForTimeout(600);
     assert(await p.$('.sheet .learn-img svg'),'Karteikarte mit Bild');await p.click('[data-learn=reveal]');await p.click('[data-learn="rate:good"]');
     const st=await p.evaluate(()=>JSON.parse(localStorage.getItem('bible:learn')||'{}'));assert(Object.values(st).some(x=>x.box===1&&x.due>Date.now()),'Leitner: Kasten 1, nächste Wiederholung gesetzt');
@@ -35,7 +35,13 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     await p.click('[data-learn=menu]');await p.click('[data-learn="start:quiz"]');await p.waitForTimeout(400);
     assert(await p.$$eval('.sheet [data-learn^="answer:"]',x=>x.length)>=2,'Quiz mit Auswahl');await p.click('.sheet [data-learn^="answer:"]');
     assert(await p.$('.sheet .learn-opts .row.ok'),'Quiz zeigt die richtige Stelle');
+    // Bildkarten ohne Worte: Abschnittsbild nur mit Zeichen, aufdecken zeigt Titel und Zusammenfassung, Bewertung nach Leitner
+    await p.click('[data-learn=menu]');await p.waitForTimeout(300);await p.click('[data-learn="start:pics"]');await p.waitForTimeout(800);
+    assert(await p.$('.sheet .learn-pic.nowords'),'Bildkarte ohne Worte');
+    assert(!await p.evaluate(()=>[...document.querySelectorAll('.sheet .learn-pic text')].some(t=>t.getBoundingClientRect().width>0&&!t.classList.contains('pn-n'))),'Bildkarte: kein Text sichtbar');
+    await p.click('[data-learn=reveal]');await p.waitForTimeout(300);assert(await p.$('.sheet .body'),'Bildkarte: Zusammenfassung nach dem Aufdecken');
+    await p.click('[data-learn="rate:good"]');await p.waitForTimeout(300);assert(await p.evaluate(()=>Object.keys(JSON.parse(localStorage.getItem('bible:learn')||'{}')).some(k=>k.startsWith('img:'))),'Bildkarte: Lernstand gespeichert');
     assert.deepEqual(errs,[],'keine Fehler: '+errs.join('; '));
-    console.log('PASS: Merkverse als Zeichen/Karte/aus; Lernen mit Karteikarten (Leitner), Anfangsbuchstaben, Lückentext, Wörter ordnen, Stellen zuordnen.');
+    console.log('PASS: Merkverse als Zeichen/Karte/aus; Lernen mit Karteikarten (Leitner), Anfangsbuchstaben, Lückentext, Wörter ordnen, Stellen zuordnen, Bildkarten ohne Worte.');
   }finally{await b.close();}
 })().catch(e=>{console.error(e);process.exit(1);});
