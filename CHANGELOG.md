@@ -2,6 +2,11 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.112 — 2026-10-26 — Neue Zeichen für «ohne Worte»
+
+- **Vier neue Zeichen** statt Behelfslösungen: «bleiben, warten» (stehende Person mit Stecknadel), «mehr» (Pluszeichen), «einsetzen» in ein Amt (Hand über einer älteren Person), «gesund» auch im Glauben (angespannter Oberarm). Eingesetzt bei «Bleib sitzen, meine Tochter!», «Bleib auf meinem Feld!», «Wie viel mehr!», «Setze Älteste ein!» und «Sie sollen gesund im Glauben sein».
+- «Der Mann wird nicht ruhen» bleibt bei Boas + schlafen + nicht (passt zum Sinn).
+
 ## v0.111 — 2026-10-26 — «Ohne Worte» nur mit Zeichen
 
 Hinweis Andi Neck: Anfangsbuchstaben sind zu schwer zu erraten; im Fragezeichen-Modus braucht es 100 % Symbole, keinen Text.
