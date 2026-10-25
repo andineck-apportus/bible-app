@@ -2,6 +2,11 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.110 — 2026-10-25 — «Ohne Worte» auf allen Bildern
+
+Hinweis Andi Neck: hilft beim Lernen und später für die Lernkarten.
+- Der Knopf «Ohne Worte» steht jetzt bei jedem Bild mit Worten, auf allen Ebenen (Bibel bis Abschnitt): Sprechblasen zeigen die Anfangsbuchstaben, Stichwortbänder und Kästchen ihre Zeichen, Namensschilder verschwinden; Antippen deckt stufenweise auf. `pruefe_bilder.py` prüft «ohne Worte» entsprechend für alle 537 Bilder (kein Wort ohne Ersatz, kein leeres Feld): bestanden.
+
 ## v0.109 — 2026-10-25 — Legende je Bild einblendbar, «ohne Worte» startet aus
 
 Hinweise Andi Neck:

@@ -907,7 +907,7 @@ function entry(id){
   const il=illFor(n);
   const tg=il?`<span class="ill-toggle" role="group" aria-label="${t.viewText} / ${t.viewImage}">${['text','image'].map(v=>`<button type="button" data-view="${v}" aria-label="${v==='text'?t.viewText:t.viewImage}" title="${v==='text'?t.viewText:t.viewImage}" aria-pressed="${(S.view==='image'?'image':'text')===v}">${icon(v)}</button>`).join('')}</span>`:'';
   const tl=tools(id);
-  const nw=il&&n.level===5&&/dg-nw/.test(il.svg);  // «ohne Worte» auf der Abschnittsebene (Hinweis Andi Neck 2026-10-25)
+  const nw=il&&/dg-nw/.test(il.svg);  // «ohne Worte» auf allen Bildern mit Worten (Hinweis Andi Neck 2026-10-25: hilft beim Lernen)
   const body=il?`<div class="ill-wrap${illWide(il)?' wide':''}${nw&&S.nowords?' nowords':''}"><div class="ill-text">${copy}${deep?`<div class="actions actions-side">${deep}</div>`:''}</div>${illFigure(il,nw)}</div>`:copy;
   return `<article class="stream-entry${il?' has-ill':''}" data-stream="${id}">${eyebrow(n)?`<p class="eyebrow">${esc(eyebrow(n))}</p>`:''}<h2>${esc(heading)}${readBtn(id)}</h2>${tg?`<div class="entry-tools">${tl}<span class="view-tools">${nw?nwBtn():''}${tg}</span></div>`:tl}${body}<div class="actions${il?' actions-under':''}">${deep}</div></article>`;
 }
