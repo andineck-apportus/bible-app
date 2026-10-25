@@ -365,6 +365,31 @@ def nw_icons(comp, v, cands=(), n=2):
     return out
 
 
+_WZ = None
+
+
+def zeichen(comp, wo, v, cands=(), auto=True):
+    """Zeichen für ein Wortfeld (wo: zelle, titel, kopf, band, sprechblase): zuerst die geprüfte Zuordnung
+    (bildauftraege_daten/_wortzeichen.json, je Bild und Text, sonst je Text), sonst – wenn auto – der Automat nw_icons.
+    Zeichen erscheinen auch neben den Worten (Hinweis Andi Neck 2026-10-25), in der Ansicht «ohne Worte» statt ihrer."""
+    global _WZ
+    if _WZ is None:
+        f = pathlib.Path(__file__).resolve().parent / "bildauftraege_daten/_wortzeichen.json"
+        _WZ = {}
+        if f.exists():
+            for e in json.loads(f.read_text(encoding="utf-8")):
+                ids = [i for i in e.get("zeichen") or [] if i in (getattr(comp, "vbmap", {}) or {})]
+                _WZ[(e["bild"].upper(), e["wo"], e["text"])] = ids
+                _WZ.setdefault((None, e["wo"], e["text"]), ids)
+    txt = v.get("de") if isinstance(v, dict) else v
+    import sys as _s
+    cur = (getattr(_s.modules.get("bilder_anime"), "CUR", [None])[0] or "").upper()
+    for k in ((cur, wo, txt), (None, wo, txt)):
+        if k in _WZ:
+            return list(_WZ[k])
+    return nw_icons(comp, v, cands) if auto else []
+
+
 def nw_fill(comp, x, y, w, h, icons, v, fill="#3B3226"):
     """Inhalt «ohne Worte» für ein Feld (x, y, w, h): Zeichen gross und mittig, sonst die Anfangsbuchstaben."""
     import bilder_diagramm as _bd
@@ -425,10 +450,21 @@ def word_band(v, letter=False, comp=None, cands=()):
         icon = (f'<rect x="{x + 6:.1f}" y="{y + h / 2 - 4:.1f}" width="11" height="8" rx="1" fill="#FFFDF6" stroke="#3B3226" stroke-width=".8"/>'
                 f'<path d="M{x + 6:.1f} {y + h / 2 - 4:.1f}l5.5 4.4 5.5-4.4" fill="none" stroke="#3B3226" stroke-width=".8"/>')
     tx = x + w / 2 + (7 if letter else 0)
-    frame = f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h}" rx="3" fill="#FFF4D6" stroke="#3B3226" stroke-width="1"/>'
     if comp is None:
+        frame = f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h}" rx="3" fill="#FFF4D6" stroke="#3B3226" stroke-width="1"/>'
         return (f'<g class="ill-words">{frame}' + icon + ltext_ml(tx, y + h / 2, v, fs, maxw) + "</g>", h)
-    alt = frame + nw_fill(comp, x + 2, y + 1, w - 4, h - 2, nw_icons(comp, v, cands), v)
+    shown = zeichen(comp, "band", v, cands, auto=False)  # neben den Worten nur geprüfte Zuordnungen
+    if shown and not letter:  # Zeichen vor den Worten (Hinweis Andi Neck 2026-10-25)
+        import bilder_diagramm as _bd
+        ih = h - 4
+        iw = _bd.Cells(comp).icon_row_w(shown, ih)
+        w2 = min(W - 12, w + iw + 4)
+        x = (W - w2) / 2
+        icon = _bd.Cells(comp).icons(shown, x + 4 + iw / 2, y + 2, ih, iw)
+        tx = x + 4 + iw + 3 + (w2 - iw - 7) / 2
+        w = w2
+    frame = f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h}" rx="3" fill="#FFF4D6" stroke="#3B3226" stroke-width="1"/>'
+    alt = frame + nw_fill(comp, x + 2, y + 1, w - 4, h - 2, shown or zeichen(comp, "band", v, cands), v)
     return (f'<g class="ill-words">' + sw(frame + icon + ltext_ml(tx, y + h / 2, v, fs, maxw), alt) + "</g>", h)
 
 
@@ -1000,7 +1036,7 @@ class Composer:
                 elif i == "§W":
                     fs_ = min(10, 10 * w / max(1, lwrap(sp["word"], 10, WMAX)[1]))
                     own = [j for j in sp["icons"] if j not in ("|", "§W")]
-                    mi = [j for j in nw_icons(self, sp["word"], panel_icons(p), 2) if j not in own]
+                    mi = [j for j in zeichen(self, "sprechblase", sp["word"], panel_icons(p)) if j not in own]
                     inner.append(sw(ltext_ml(x + w / 2, by + 6 + ih / 2, sp["word"], fs_, WMAX * fs_ / 10),
                                     nw_fill(self, x, by + 5, w, ih + 2, mi, sp["word"])))
                 else:

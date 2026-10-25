@@ -257,6 +257,19 @@ def diagram(comp, d):
         w = 2 * W1 + 2
     C = Cells(comp)
     C.cands = _auto.panel_icons({"diagram": d})
+    # Kästchen ohne eigenes Zeichen bekommen eines (geprüfte Zuordnung, sonst über die Worte), auch neben den Worten
+    # (Hinweis Andi Neck 2026-10-25); Porträt-Zellen und leere Zellen bleiben, wie sie sind
+    def _fill(o):
+        if isinstance(o, dict):
+            if (o.get("a") or o.get("b")) and not o.get("icons") and not o.get("who") and not o.get("empty"):
+                ic = _auto.zeichen(comp, "zelle", o.get("a") or o.get("b"), C.cands)
+                if ic:
+                    o = dict(o, icons=ic)
+            return {k: _fill(v) for k, v in o.items()}
+        if isinstance(o, list):
+            return [_fill(v) for v in o]
+        return o
+    d = _fill(d)
     out, y = [], 6
     # Kopf: Sprecher (Porträt) mit Titel in einer Sprechblase, sonst Titel als Zeile; Feldnummer oben links bleibt frei
     if d.get("speaker") or d.get("title"):
@@ -265,16 +278,20 @@ def diagram(comp, d):
             out.append(C.portrait(d["speaker"], x0, 8, 20))
             x0 += 26
         tw = w - x0 - 8
-        th = block_h(d.get("title"), 8.6, tw - 8) if d.get("title") else 0
+        ti = _auto.zeichen(comp, "titel", d["title"], C.cands) if d.get("title") else []
+        tiw = C.icon_row_w(ti, 14) + 4 if ti else 0
+        th = block_h(d.get("title"), 8.6, tw - 8 - tiw) if d.get("title") else 0
         if d.get("title"):
             bh = max(20, th + 8)
             out.append(f'<rect x="{x0:.1f}" y="8" width="{tw:.1f}" height="{bh:.1f}" rx="7" fill="#FFFFFF" stroke="{INK}" stroke-width="1.1"/>')
             if d.get("speaker"):
                 out.append(f'<path d="M{x0 + 1:.1f} 15L{x0 - 5:.1f} 18L{x0 + 1:.1f} 21" fill="#FFFFFF" stroke="{INK}" stroke-width="1.1" stroke-linejoin="round"/>'
                            f'<path d="M{x0 + 1.2:.1f} 15.6V20.4" stroke="#FFFFFF" stroke-width="1.4"/>')
-            s, _ = block(x0 + tw / 2, 8 + (bh - th) / 2, d["title"], 8.6, tw - 8)
+            s, _ = block(x0 + tiw + (tw - tiw) / 2, 8 + (bh - th) / 2, d["title"], 8.6, tw - 8 - tiw)
+            if ti:  # Zeichen links in der Blase, neben den Worten
+                s = C.icons(ti, x0 + 4 + (tiw - 4) / 2, 8 + (bh - 14) / 2, 14, tiw - 4) + s
             # ohne Worte: die Blase zeigt passende Zeichen (sonst die Anfangsbuchstaben), nie leer (Hinweis Andi Neck 2026-10-25)
-            out.append(_auto.sw(s, _auto.nw_fill(comp, x0 + 4, 10, tw - 8, bh - 4, _auto.nw_icons(comp, d["title"], C.cands), d["title"])))
+            out.append(_auto.sw(s, _auto.nw_fill(comp, x0 + 4, 10, tw - 8, bh - 4, ti, d["title"])))
             y = 8 + bh + 6
         else:
             y = 34
@@ -315,14 +332,19 @@ def _columns(C, d, w, y, mirror=False):
     cw = (w - 16 - GAP * (ncol - 1) - mid * (ncol - 1)) / ncol
     xs = [8 + i * (cw + GAP + mid) for i in range(ncol)]
     if head:
-        hh = max(block_h(hd, 7.6, cw - 6) for hd in head) + 6
+        hic = [_auto.zeichen(C.c, "kopf", hd, C.cands)[:1] for hd in head]
+        hiw = [C.icon_row_w(ic, 12) + 3 if ic else 0 for ic in hic]
+        hh = max(max(block_h(hd, 7.6, cw - 6 - hiw[i]) for i, hd in enumerate(head)) + 6, 16 if any(hic) else 0)
         for i, hd in enumerate(head):
             ht = (d.get("head_tones") or [])[i] if i < len(d.get("head_tones") or []) else (
                 ("old" if i == 0 else "new") if ncol == 2 and d.get("tones", True) and not mirror else "plain")
             hf = {"old": "#E3D4BA", "new": "#F2D9A0", "plain": "#EADFC8"}.get(ht, "#EADFC8")
             out.append(f'<rect x="{xs[i]:.1f}" y="{y:.1f}" width="{cw:.1f}" height="{hh:.1f}" rx="3" fill="{hf}" stroke="{INK}" stroke-width=".9"/>')
-            s, _ = block(xs[i] + cw / 2, y + 3, hd, 7.6, cw - 6)
-            out.append(_auto.sw(s, _auto.nw_fill(C.c, xs[i] + 2, y + 1.5, cw - 4, hh - 3, _auto.nw_icons(C.c, hd, C.cands, 1), hd)))
+            th_ = block_h(hd, 7.6, cw - 6 - hiw[i])
+            s, _ = block(xs[i] + hiw[i] + (cw - hiw[i]) / 2, y + (hh - th_) / 2, hd, 7.6, cw - 6 - hiw[i])
+            if hic[i]:  # Zeichen links im Kopf, neben den Worten
+                s = C.icons(hic[i], xs[i] + 3 + (hiw[i] - 3) / 2, y + (hh - 12) / 2, 12, hiw[i] - 3) + s
+            out.append(_auto.sw(s, _auto.nw_fill(C.c, xs[i] + 2, y + 1.5, cw - 4, hh - 3, hic[i], hd)))
         y += hh + 4
     if mirror:  # Spiegelachse
         top = y
