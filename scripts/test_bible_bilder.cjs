@@ -42,6 +42,7 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
       assert(await p.evaluate(()=>{const g=document.querySelector('[data-t="1"]');const ok=g.classList.contains('r1')||g.classList.contains('r2');delete g.dataset.t;return ok;}),'Antippen der Feldecke deckt auf: '+sel);}
     await p.locator('[data-nowords]:visible').first().click();await p.waitForTimeout(300);assert(!await p.$('.ill.nowords'),'wieder mit Worten');
     // Bilder bei den Versen: je Abschnitt ein- und ausblendbar (Schalter beim Abschnittstitel)
+    await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));
     await p.click('[data-action=index]');await p.fill('input[type=search]','Mt 5,33');await p.waitForTimeout(300);await p.click('.results button');await p.waitForTimeout(900);
     assert(!await p.$('.verse-ill'),'ohne Schalter keine Bilder bei den Versen');
     await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));
