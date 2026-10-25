@@ -2,6 +2,11 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.105 — 2026-10-25 — Blatt mit Maus und Finger nach unten ziehen
+
+Hinweis Andi Neck: Wischen ging nicht (mit der Maus); erwartet: Das Blatt geht mit nach unten und verschwindet kurz vor unten ganz.
+- Griff und Kopf reagieren jetzt auf Maus und Finger (Pointer-Ereignisse statt nur Touch): Das Blatt folgt der Bewegung, der Hintergrund hellt dabei auf. Bei 80 % der Höhe verschwindet es sofort; beim Loslassen nach mehr als einem Drittel (oder nach schnellem Zug) ebenfalls, sonst federt es zurück. Nach einem Zug löst das Loslassen keinen Klick aus.
+
 ## v0.104 — 2026-10-25 — Suche mit Buchanfang, Bilder nicht zu klein, Blatt wegwischen
 
 Hinweise Andi Neck:
