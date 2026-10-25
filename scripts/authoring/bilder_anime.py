@@ -1290,7 +1290,51 @@ def library():
             lib, n = re.subn(r'<symbol id="%s"[^>]*>.*?</symbol>' % re.escape(sid), lambda _m: new, lib, count=1, flags=re.S)
             if n:
                 vb[fid] = (sid, e["vb"])
+    lib = einheitlich(lib, vb)
     return lib, vb
+
+
+EMOJI_IDS = None
+
+
+def einheitlich(lib, vb):
+    """Ein Stil für alle Zeichen (Hinweis Andi Neck 2026-10-25: «es wäre schön, wenn alles einheitlich ist»): eigene Zeichen
+    (Gegenstände, Orte, Handlungen, Begriffe) bekommen dieselbe Behandlung wie die Twemoji-Zeichen – eine gleich starke dunkle
+    Kontur aussen (Teile in Tinte darunter, Strichstärke relativ zur Grösse) und leicht gedämpfte Farben. Personen, Rollen,
+    Gruppen und Gott (Porträts) bleiben, wie sie sind; die Emoji-Zeichen sind schon so gesetzt (emoji_zeichen.stil)."""
+    global EMOJI_IDS
+    import bilder_auto as _a
+    import emoji_zeichen as _ez
+    if EMOJI_IDS is None:
+        f = pathlib.Path(__file__).resolve().parent / "bildsymbole_daten/ueberarbeitet/zzz-emoji.json"
+        EMOJI_IDS = set(json.loads(f.read_text(encoding="utf-8"))) if f.exists() else set()
+    lex = _a.gather_lex()
+    done = set()
+    for fid, (sid, box) in list(vb.items()):
+        k = (lex.get(fid) or {}).get("kind")
+        if k not in ("sign", "object", "place", "action") or fid in EMOJI_IDS or sid in done:
+            continue
+        m = re.search(r'(<symbol id="%s"[^>]*>)(.*?)(</symbol>)' % re.escape(sid), lib, re.S)
+        if not m or "einheitlich" in m.group(1):
+            continue
+        done.add(sid)
+        x, y, w, h = (float(v) for v in box.split())
+        if k == "place" and w / h > 1.6:  # breite Landschaften stehen als Hintergrund im Bild: ohne Rahmen
+            continue
+        sw = max(w, h) * .062
+        body = m.group(2)
+        ink = re.sub(r"<(text|clipPath|defs|filter|mask|linearGradient|radialGradient)\b.*?</\1>", "", body, flags=re.S)
+        ink = re.sub(r'\s(?:id|clip-path|filter|mask|opacity|fill-opacity|stroke-opacity)="[^"]*"', "", ink)
+        ink = re.sub(r'(fill|stroke)="(?!none)[^"]*"', lambda mm: f'{mm.group(1)}="{_ez.INK}"', ink)
+        col = re.sub(r'(fill|stroke)="(#[0-9a-fA-F]{3,6})"', lambda mm: f'{mm.group(1)}="{_ez._soft(mm.group(2))}"', body)
+        pad = sw / 2
+        new = (f'<symbol id="{sid}" class="einheitlich" viewBox="{x - pad:g} {y - pad:g} {w + 2 * pad:g} {h + 2 * pad:g}">'
+               f'<g fill="{_ez.INK}" stroke="{_ez.INK}" stroke-width="{sw:.2f}" stroke-linejoin="round" stroke-linecap="round">{ink}</g>{col}</symbol>')
+        lib = lib[:m.start()] + new + lib[m.end():]
+        for f2, (s2, b2) in list(vb.items()):
+            if s2 == sid:
+                vb[f2] = (sid, f"{x - pad:g} {y - pad:g} {w + 2 * pad:g} {h + 2 * pad:g}")
+    return lib
 
 
 # ---------------------------------------------------------------- Automatisch gesetzte Bilder (bilder_auto.py)
