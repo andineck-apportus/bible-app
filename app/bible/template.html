@@ -996,7 +996,7 @@ function learnRender(){const L_=lang==='de',m=LN.method,r=LN.refs[LN.i],tx=vtext
   if(m==='cards'){body=img+`<p class="merk-ref learn-ref">${esc(refDe(r))}</p>`+(LN.step?`<p class="merk-text">«${esc(tx)}»</p>${say}${rateBtns(r)}<p class="note">${L_?'Kasten':'Box'} ${(LS[r]||{}).box||0}</p>`
     :`<p class="note">${L_?'Sag den Vers aus dem Gedächtnis.':'Recall the verse.'}</p><button type="button" class="learn-main" data-learn="reveal">${L_?'Aufdecken':'Reveal'}</button>`);}
   else if(m==='pics'){const n=nodes.get(r.slice(4)),il=n&&illFor(n);
-    const fig=il?`<figure class="ill nowords learn-pic"><div class="ill-img" role="img" aria-label="${esc(il.alt)}">${illTileBoxes(il,false)||illSvg(il.svg)}</div></figure>`:'';
+    const fig=il?`<figure class="ill${LN.step?'':' nowords'} learn-pic"><div class="ill-img" role="img" aria-label="${esc(il.alt)}">${illTileBoxes(il,false)||illSvg(il.svg)}</div></figure>`:'';
     body=fig+`<p class="merk-ref learn-ref">${esc(refDe(n.part.range))}</p>`+(LN.step?`<h4>${esc(pTitle(n.part))}</h4><div class="body">${sumHtml(summary(n)||'')}</div>${rateBtns(r)}<p class="note">${L_?'Kasten':'Box'} ${(LS[r]||{}).box||0}</p>`
       :`<p class="note">${L_?'Was geschieht hier? Erzähle den Abschnitt aus dem Gedächtnis; ein Feld antippen zeigt seine Worte.':'What happens here? Tell the section from memory; tap a field to see its words.'}</p><button type="button" class="learn-main" data-learn="reveal">${L_?'Aufdecken':'Reveal'}</button>`);}
   else if(m==='letters'){const fl=ws.map(w=>w.replace(/^([«‹(„"']*)(\p{L})[\p{L}\p{M}'’-]*/u,'$1$2')).join(' ');

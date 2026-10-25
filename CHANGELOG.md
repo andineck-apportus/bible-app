@@ -2,6 +2,10 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.115 — 2026-10-26 — Bildkarten: Aufdecken zeigt auch die Worte im Bild
+
+Hinweis Andi Neck: «Aufdecken» deckt jetzt zusätzlich zu Titel und Zusammenfassung alle Worte im Bild auf (Sprechblasen, Stichwortbänder, Kästchen).
+
 ## v0.114 — 2026-10-26 — Lernen: klare Selbstbewertung mit Symbolen
 
 Hinweis Andi Neck: «Nochmal / Schwer / Gut / Leicht» war nicht verständlich.
