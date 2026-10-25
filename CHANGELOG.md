@@ -2,6 +2,13 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.111 — 2026-10-26 — «Ohne Worte» nur mit Zeichen
+
+Hinweis Andi Neck: Anfangsbuchstaben sind zu schwer zu erraten; im Fragezeichen-Modus braucht es 100 % Symbole, keinen Text.
+- **Keine Anfangsbuchstaben mehr:** Sprechblasen, Stichwortbänder, Kästchen, Köpfe und Titel zeigen ohne Worte nur noch Zeichen; Antippen zeigt gleich die Worte.
+- **Jedes Wortfeld hat ein Zeichen:** Die 44 Sätze, die noch keins hatten (50 Felder, meist Sprechblasen der Comic-Bilder), bekamen eine geprüfte Zuordnung in `_wortzeichen.json` (z. B. «Talita kum!» → Mädchen + aufstehen). Fehlt künftig eines, meldet `bilder_anime.py` es in `reports/ohne-worte-fehlt.json`; `pruefe_bilder.py` schlägt fehl, wenn ohne Worte irgendein Text sichtbar ist oder ein Feld leer bleibt.
+- Noch behelfsmässig (eigene Zeichen fehlen): «bleiben/warten», «nicht ruhen», «mehr», «einsetzen», «gesund im Glauben».
+
 ## v0.110 — 2026-10-25 — «Ohne Worte» auf allen Bildern
 
 Hinweis Andi Neck: hilft beim Lernen und später für die Lernkarten.
