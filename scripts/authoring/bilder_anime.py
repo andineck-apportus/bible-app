@@ -1676,6 +1676,7 @@ def run():
     svgs, used = {}, set()
     for rid, (brief_id, gen, alt, alt_g) in ILL.items():
         CUR[0] = rid.replace("ILL-ANI-", "").lower()
+        _auto.CUR_ID[0] = rid
         svgs[rid] = gross_setzen(gen(), used)
     lib = duenn(lib, used)
     f = OUT / "_bibliothek.svg"
@@ -1705,6 +1706,13 @@ def run():
         n += write(old, rec, "Bild im Stil Anime nach Bildauftrag gezeichnet")
         n += localize(rid, rec, {"alt_de": alt_g}, "gsw-u-sd-chzh", "GSW-ZH", "CTX-CH-ZH-GSW-2026", AUTH_GSW, DATE)
     print(f"PASS: Bildstil Anime – {len(vb)} Darstellungen, {len(ILL)} Bilder; {n} Dateien geschrieben")
+    if _auto.NW_FEHLT:  # Wortfelder ohne Zeichen im Modus «ohne Worte» (Liste für die Zuordnung in _wortzeichen.json)
+        rep = D.parent / "reports/ohne-worte-fehlt.json"
+        import collections as _c
+        cnt = _c.Counter(w for _, w in _auto.NW_FEHLT)
+        rep.write_text(json.dumps({"anzahl": len(_auto.NW_FEHLT), "worte": [{"worte": w, "n": k, "bilder": sorted({b for b, x in _auto.NW_FEHLT if x == w})} for w, k in cnt.most_common()]},
+                                  ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+        print(f"OFFEN: {len(_auto.NW_FEHLT)} Wortfelder ohne Zeichen («ohne Worte»), {len(cnt)} verschiedene; reports/ohne-worte-fehlt.json")
     # Anordnung immer gleich mitprüfen (Hinweis Andi Neck 2026-10-25: Text ragte über einen Kasten, ohne dass es auffiel)
     if n and os.environ.get("BIBLE_SKIP_LAYOUT_CHECK") != "1":
         import subprocess

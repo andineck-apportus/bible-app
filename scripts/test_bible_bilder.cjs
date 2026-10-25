@@ -34,9 +34,9 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     await p.locator('[data-nowords]:visible').first().click();await p.waitForTimeout(400);
     assert(await p.$('.ill.nowords'),'Abschnittsbild ohne Worte');
     const nw=await p.evaluate(()=>{const c=document.querySelector('.ill.nowords g.dg-cell');return {full:getComputedStyle(c.querySelector('.dg-full')).display,nw:getComputedStyle(c.querySelector('.dg-nw')).display};});
-    assert.equal(nw.full,'none','ganze Worte verdeckt');assert.equal(nw.nw,'inline','Zeichen gross');
-    const cell=p.locator('.ill.nowords g.dg-cell:visible').first();await cell.click();await cell.click();
-    assert.equal(await p.evaluate(()=>getComputedStyle(document.querySelector('.ill.nowords g.dg-cell.r2 .dg-full')).display),'inline','zweimal Antippen zeigt die Worte');
+    assert.equal(nw.full,'none','ganze Worte verdeckt');assert(!await p.evaluate(()=>[...document.querySelectorAll('.ill.nowords .dg-nw text')].some(t=>t.getBoundingClientRect().width>0)),'ohne Worte: kein Text, nur Zeichen');assert.equal(nw.nw,'inline','Zeichen gross');
+    const cell=p.locator('.ill.nowords g.dg-cell:visible').first();await cell.click();  // nur Zeichen, Antippen zeigt gleich die Worte (keine Anfangsbuchstaben mehr)
+    assert.equal(await p.evaluate(()=>getComputedStyle(document.querySelector('.ill.nowords g.dg-cell.r2 .dg-full')).display),'inline','Antippen zeigt die Worte');
     // Antippen wirkt auf dem ganzen Feld (Ecke des Rahmens), nicht nur auf dem Zeichen – für Kästchen und Köpfe/Blasen
     for(const sel of ['.ill.nowords g.dg-cell','.ill.nowords g.dg-sw']){
       const box=await p.evaluate(s=>{const g=[...document.querySelectorAll(s)].find(x=>x.getBoundingClientRect().width>0&&!x.classList.contains('r1')&&!x.classList.contains('r2'));if(!g)return null;g.scrollIntoView({block:'center'});const r=[...g.querySelectorAll('rect')].map(x=>x.getBoundingClientRect()).find(x=>x.width>0);g.dataset.t='1';return {x:r.left+4,y:r.top+r.height-4};},sel);

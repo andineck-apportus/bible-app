@@ -61,6 +61,7 @@ for(const mode of ['','nw'])for(const lang of ['de','gsw']){
           // ohne Worte: kein Feld bleibt leer – jede umschaltbare Gruppe hat Zeichen oder Anfangsbuchstaben, und kein Wort
           // steht ohne Ersatz (es würde verdeckt und hinterliesse eine leere Fläche)
           tile.querySelectorAll('g.dg-sw > g.dg-nw').forEach(g=>{if(!g.querySelector('use,text'))res.push(`${id} ${nm} [${L}]: leeres Feld ohne Worte («${g.parentNode.querySelector('.dg-full').textContent.slice(0,30)}»)`);});
+          tile.querySelectorAll('.dg-nw text').forEach(t=>{if(t.getBoundingClientRect().width)res.push(`${id} ${nm} [${L}]: Text in der Fassung ohne Worte «${t.textContent.slice(0,30)}» (nur Zeichen erlaubt)`);});
           tile.querySelectorAll('text').forEach(t=>{if(t.classList.contains("pn-n")||t.closest(".dg-nw,.dg-keep")||!t.getBoundingClientRect().width)return;
             res.push(`${id} ${nm} [${L}]: Wort ohne Ersatz «${t.textContent.slice(0,30)}» <${(t.parentNode.getAttribute("class")||t.parentNode.tagName)}|${t.closest("g.dg-vis")?.dataset.visual||"-"}|${t.getAttribute("font-size")}>`);});
           return;}
