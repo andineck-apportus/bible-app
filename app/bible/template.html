@@ -299,7 +299,8 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream details.about div{display:flex;flex-direction:column;gap:8px;font-size:13.5px;color:var(--muted);padding-bottom:10px}
 #bible-stream .live{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 
-@media (min-width:900px){
+/* Seitenleiste erst ab 1200 px (Hinweis Andi Neck 2026-10-25: darunter fehlte ihr Platz den Bildern); sonst über das Menü */
+@media (min-width:1200px){
   #bible-stream aside{display:block;position:absolute;left:0;top:57px;bottom:57px;width:250px;overflow:auto;padding:18px 14px 24px;border-right:1px solid var(--rule)}
   #bible-stream aside .eyebrow{margin:0 10px 8px}
   #bible-stream .app aside button{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;padding:8px 10px!important;margin-bottom:2px;font:400 13.5px/1.35 var(--ui);color:var(--muted);border-radius:var(--r)!important}
@@ -363,10 +364,14 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .ill-img svg svg{border-radius:0}
 #bible-stream .ill-img.tiles{margin:0 auto;width:100%}
 #bible-stream .ill-tiles{display:flex;flex-wrap:wrap;justify-content:center;gap:4px;max-width:684px;margin:0 auto}
-#bible-stream .ill-tiles>svg.ill-tile{flex:1 1 300px;width:100%!important;max-width:340px;height:auto!important;border-radius:0}
+#bible-stream .ill-tiles>svg.ill-tile{flex:1 1 220px;width:100%!important;max-width:340px;height:auto!important;border-radius:0}
 #bible-stream .ill-tiles>svg.ill-tile[data-span="2"]{flex-basis:100%;max-width:680px}
 #bible-stream .ill-tiles>svg.ill-narrow{display:none}
-@media (max-width:600px){#bible-stream .ill-tiles>svg.ill-tile[data-span="2"]:has(+ svg.ill-narrow){display:none}#bible-stream .ill-tiles>svg.ill-narrow{display:block}}
+@media (max-width:600px){#bible-stream .ill-tiles>svg.ill-tile[data-span="2"]:has(+ svg.ill-narrow){display:none}#bible-stream .ill-tiles>svg.ill-narrow{display:block}
+  /* Handy: Kacheln einzeln zum seitlichen Wischen wie ein Comic, die nächste schaut am Rand hervor (Versuch, Hinweis Andi Neck 2026-10-25) */
+  #bible-stream .ill-tiles{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;gap:8px;padding-bottom:6px;scrollbar-width:thin;overscroll-behavior-x:contain}
+  #bible-stream .ill-tiles>svg.ill-tile{flex:0 0 86%;max-width:none;scroll-snap-align:center}
+  #bible-stream .ill-tiles>svg.ill-tile:only-of-type,#bible-stream .ill-tiles>svg.ill-tile[data-span="2"]{flex-basis:100%}}
 #bible-stream .ill figcaption{max-width:684px;margin:6px auto 0;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px}
 #bible-stream .ill-styles{display:inline-flex;border:1px solid var(--rule);border-radius:999px;padding:2px;gap:2px}
 #bible-stream .app .ill-styles button{padding:4px 10px!important;border-radius:999px!important;font:500 12px/1.2 var(--ui);color:var(--muted)}
@@ -426,7 +431,6 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
   #bible-stream .stream-entry.has-ill:has(.ill-wrap.nowords)>.actions-under{display:flex}
   #bible-stream .ill-wrap .ill-tiles,#bible-stream .ill-wrap .ill figcaption{margin-left:0}
   #bible-stream .ill-wrap .ill-tiles{justify-content:flex-start}
-  #bible-stream .ill-wrap .ill-tiles>svg.ill-tile{flex-basis:220px}
   #bible-stream .ill-wrap{display:grid;grid-template-columns:minmax(16em,36em) minmax(460px,1fr);gap:32px;align-items:start}
 }
 /* Versbilder rechts neben den Versen: Lesebereich (ohne Seitenleiste) braucht Platz für 36em Text und 400 px Bild */
@@ -1544,7 +1548,8 @@ app.addEventListener('click',e=>{
     else{sh.classList.add('settle');sh.style.transform='';if(sc){sc.style.transition='opacity .2s';sc.style.opacity='';}setTimeout(()=>sh.classList.remove('settle'),220);}};
   // Griff und Kopf: Maus und Finger
   root.addEventListener('pointerdown',e=>{const sh=e.target.closest&&e.target.closest('#bible-stream .sheet');if(!sh||!e.isPrimary||e.button>0)return;
-    if(!e.target.closest('.grab,.sheet-head'))return;start(sh,e.clientY,e.clientX,true,e.pointerId);});
+    if(!e.target.closest('.grab,.sheet-head'))return;if(e.pointerType==='mouse'&&!e.target.closest('button,a'))e.preventDefault();start(sh,e.clientY,e.clientX,true,e.pointerId);});
+  root.addEventListener('dragstart',e=>{if(e.target.closest&&e.target.closest('#bible-stream .sheet .grab,#bible-stream .sheet .sheet-head'))e.preventDefault();});
   root.addEventListener('pointermove',e=>{if(sw&&sw.id===e.pointerId)move(e.clientY,e.clientX,e);});
   root.addEventListener('pointerup',e=>{if(sw&&sw.id===e.pointerId)end();});
   root.addEventListener('pointercancel',e=>{if(sw&&sw.id===e.pointerId)end();});

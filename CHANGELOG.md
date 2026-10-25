@@ -2,6 +2,14 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.107 — 2026-10-25 — Drei feste Ansichten, Seitenleiste ab 1200 px, Handy: Bilder wischen
+
+Hinweise Andi Neck (Ideen 1, 3 und 4 aus der Besprechung der Anordnung):
+- **Drei Stufen statt fliessender Zwischengrössen:** Handy – Kacheln einzeln zum seitlichen Wischen (Versuch; die nächste schaut am Rand hervor); mittel – Bild in voller Breite unter dem Text, zwei Kacheln nebeneinander; breit – Text links, Bild rechts, sobald der Lesebereich Platz hat. Keine Kachel wird schmaler als 220 px.
+- **Seitenleiste erst ab 1200 px** (vorher 900 px); darunter bleibt sie über das Menü erreichbar und ihr Platz geht an die Bilder.
+- **Neuer Test** `test_bible_layout.cjs`: prüft im Browser bei sieben Breiten Stufe, Mindestbreiten, dass kein Bild aus dem Fenster ragt, Legende bündig und Seitenleiste.
+- **Blatt ziehen in Chrome:** Mit der Maus am Kopf startete Chrome teils eine Textauswahl oder ein natives Ziehen und brach die Geste ab; das wird jetzt unterbunden.
+
 ## v0.106 — 2026-10-25 — «Eine Ebene tiefer» unter dem Text, Legende links unter dem Bild
 
 Hinweise Andi Neck:
