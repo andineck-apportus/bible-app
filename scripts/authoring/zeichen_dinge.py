@@ -134,22 +134,20 @@ def chest_body(x0, y0, x1, y1, wood=WOOD, band=GOLD2, sw=1.1):
 
 
 def schatz(v):
-    """Vorbild: offene Schatztruhe (Spielsymbol) mit Lichtschein von oben bzw. auf einer Wolke – Schatz «im Himmel»."""
+    """Vorbild: offene Schatztruhe (Spielsymbol) im Wolkenbett mit Lichtstrahlen von oben – Schatz «im Himmel»."""
     if v not in (1, 2):
         return None
     lid = (P("M4.4 13.4L4.6 6.4Q4.8 2.2 15 2.2Q25.2 2.2 25.4 6.4L25.6 13.4Z", WOOD, 1.1)
            + P("M6.4 13L6.6 7Q7 4.4 15 4.4Q23 4.4 23.4 7L23.6 13Z", "#5A3A1C", .7))
-    coins = "".join(f'<ellipse cx="{x}" cy="{y}" rx="2.3" ry="1.3" fill="{GOLD}" stroke="{INK}" stroke-width=".6"/>'
-                    for x, y in [(7.6, 13.4), (11.2, 12.6), (18.8, 12.6), (22.4, 13.4), (9.4, 10.8), (20.6, 10.8), (15, 9.8)])
-    gem = P("M13 10.2l2-2.4 2 2.4-2 2.6z", "#C0392B", .6)
-    body = chest_body(3.4, 14, 26.6, 24) + P("M13.2 14h3.6v4.6q-1.8 1.4-3.6 0z", GOLD, .7)
-    chest = lid + coins + gem + P("M3 12.6Q15 11 27 12.6V14.4H3Z", GOLD, 1) + body
-    if v == 1:  # auf einer Wolke
-        cloud = P("M2 26.4Q.6 23 4 22.4Q4.6 19.6 8 20.4Q10 18.6 13 20Q16 18.4 19 20Q22 18.6 23.6 20.6Q27 20 27.4 22.6Q30 23.4 28.4 26.4Z", "#FFFFFF", 1)
-        return G(chest, "translate(3 -1.2) scale(.8)") + cloud
-    rays = L("M15 .2V-1.6M8 1.6L6.8.2M22 1.6L23.2.2M3.6 5L2 4.2M26.4 5L28 4.2", 1.1, GOLD2)
-    glow = E(15, 9, 10, 4.6, "#FFF3C4", 0)
-    return G(glow + chest, "translate(0 3) scale(1 .96)") + G(rays, "translate(0 1.8)")
+    coins = "".join(f'<ellipse cx="{x}" cy="{y}" rx="2.6" ry="1.5" fill="{GOLD}" stroke="{INK}" stroke-width=".6"/>'
+                    for x, y in [(9, 12.4), (15, 11.4), (21, 12.4), (12, 10), (18, 10)])
+    body = chest_body(3.4, 14, 26.6, 25) + P("M13.2 14h3.6v4.6q-1.8 1.4-3.6 0z", GOLD, .7)
+    chest = lid + coins + P("M3 12.6Q15 11 27 12.6V14.4H3Z", GOLD, 1) + body
+    rays = L("M15 -1.4V-3.4M7.6 .2L6.2-1.4M22.4 .2L23.8-1.4", 1.2, GOLD2)
+    if v == 1:
+        cloud = P("M.8 27Q-.4 23.6 3 23Q3.4 20.6 6.4 21.2Q8 19.4 10.6 20.8Q13.4 19.2 15.6 21Q18.4 19.4 20.8 21.2Q23.6 19.8 25 21.8Q28.4 21.4 28.8 24Q30.8 25.4 29.2 27.4Z", "#FFFFFF", 1)
+        return G(rays + chest, "translate(3.4 1.6) scale(.78)") + cloud
+    return G(E(15, 13, 13, 9, "#FFF3C4", 0) + rays + chest, "translate(.6 3.2) scale(.96)")
 
 
 def motte(cx, cy, s=1.0):
@@ -166,60 +164,69 @@ def motte(cx, cy, s=1.0):
 
 
 def schatz_erde(v):
-    """Vorbild: dieselbe Truhe wie «Schatz», aber stumpf und rostig: Beschläge rostbraun und zerfressen, Münzen angelaufen,
-    eine Motte (kleiner Nachtfalter, graubraun) fliegt heraus, Löcher im Holz (Mt 6,19)."""
+    """Vorbild: geschlossene Truhe (wie «Schatz»), aber zerfressen: Löcher im Holz, rostbraune, abgeplatzte Beschläge,
+    ein graubrauner Nachtfalter fliegt mit Flugspur davon (Mt 6,19); @2 dazu aufgebrochenes Schloss (Diebe)."""
     if v not in (1, 2):
         return None
-    rust, dull = "#A0522D", "#A99A64"
-    lid = (P("M4.4 13.4L4.6 6.4Q4.8 2.2 15 2.2Q25.2 2.2 25.4 6.4L25.6 13.4Z", "#8C7258", 1.1)
-           + P("M6.4 13L6.6 7Q7 4.4 15 4.4Q23 4.4 23.4 7L23.6 13Z", "#4E3A26", .7))
-    coins = "".join(f'<ellipse cx="{x}" cy="{y}" rx="2.3" ry="1.3" fill="{dull}" stroke="{INK}" stroke-width=".6"/>'
-                    for x, y in [(7.6, 13.4), (11.2, 12.6), (18.8, 12.6), (22.4, 13.4), (15, 10.8)])
-    body = chest_body(3.4, 14, 26.6, 26, "#8C7258", rust) + P("M13.2 14h3.6v4.6q-1.8 1.4-3.6 0z", rust, .7)
-    holes = E(10.2, 19.4, .9, .7, INK, 0) + E(20.4, 22, .8, .6, INK, 0) + E(11.4, 23.2, .6, .5, INK, 0) + E(19, 18, .6, .5, INK, 0)
-    rust_marks = L("M5.4 14.2v3M24.6 14.2v2.4M9.8 2.8l.4 2M4 13.4h3", .9, rust)
-    t = lid + coins + P("M3 12.6Q15 11 27 12.6V14.4H3Z", "#8E8676", 1) + body + holes + rust_marks
-    m = motte(23.6, 4.4, .55) if v == 1 else motte(15, 3.6, .6)
-    if v == 2:  # zusätzlich Dieb-Hand greift eine Münze? – nein: zweite Motte
-        m += motte(25.4, 9, .4)
-    return t + m + L("M19.6 7.6q-1.6 1-1.2 2.6", .5, "#8C8070", ' stroke-dasharray="1 .8"')
+    rust = "#9A4E26"
+    t = P("M3.8 15L4 10.8Q4.4 6.4 15 6.4Q25.6 6.4 26 10.8L26.2 15Z", "#8C7258", 1.1)
+    t += chest_body(3.4, 15, 26.6, 27, "#8C7258", rust)
+    t += L("M4 15h22.6", 1.2)
+    t += E(10, 21, 1.1, .9, INK, 0) + E(20, 23.4, .9, .7, INK, 0) + E(12.6, 10, .9, .7, INK, 0) + E(19.6, 9.4, .7, .6, INK, 0) + E(11.6, 24.6, .6, .5, INK, 0)
+    if v == 1:
+        t += P("M13.2 15h3.6v4.6q-1.8 1.4-3.6 0z", rust, .7)
+    else:
+        t += P("M15.6 16.6h3.6v4.6q-1.8 1.4-3.6 0z", rust, .7, ' transform="rotate(35 17.4 18)"')
+    m = G(P("M0 0Q-3.6 -3.8 -6.8 -2.2Q-6.6 1.4 -3 2.2Q-1 2 0 .8Z", "#9E8E74", .7) + P("M0 0Q3.6 -3.8 6.8 -2.2Q6.6 1.4 3 2.2Q1 2 0 .8Z", "#B8A88E", .7)
+          + E(0, .6, .9, 2.4, "#6F624E", .5) + L("M-.3 -1.6Q-1.2 -3.4 -2.4 -4M.3 -1.6Q1.2 -3.4 2.4 -4", .5), "translate(24 3.4) rotate(20) scale(.72)")
+    trail = L("M14 6Q16.6 2.4 20.2 3.4", .55, "#8C8070", ' stroke-dasharray=".9 .8"')
+    return t + trail + m
 
 
 def weg(v):
-    """Vorbild: Wegweiser-/Wanderweg-Piktogramm – geschwungener Weg mit Fussspuren führt zu einem Ziel (Stadttor) am Horizont."""
+    """Vorbild: Wanderweg-Piktogramm – Weg in Perspektive zwischen grünen Rändern, Fussabdrücke (Sohle + Ferse), am Ende ein
+    Stadttor auf dem Horizont (Ziel)."""
     if v not in (1, 2):
         return None
-    s = P("M3 19.6Q7 15 13.4 13.4Q18.6 12 16 9.4Q14.6 8 17.6 6.8L19.6 6.8Q17.6 8.4 19.4 9.6Q22.6 12.4 17.4 14.8Q12.4 17 13 19.6Z", SAND, .8)
-    gate = (P("M20.4 7V1.6H27.6V7Z", "#D6CCB6", .8) + P("M19.8 1.6h8.4V.4h-8.4z", "#B9AC92", .6)
-            + P("M22.6 7V4.6Q24 3.2 25.4 4.6V7Z", "#5A4632", .5))
-    s += gate if v == 1 else C(24, 3.6, 2.6, GOLD, .7) + L("M24 .2v-.8M27.4 3.6h.8M20.6 3.6h-.8", .6, GOLD2)
-    s += L("M14.8 7.2H29.4", .7, "#8C7A60")
+    s = P("M1 19.6Q2 9.8 15 8.6Q28 9.8 29 19.6Z", GREEN, .9)  # Boden
+    if v == 1:
+        s += P("M7.4 19.6L13.8 9.2H16.2L22.6 19.6Z", SAND, .8)
+    else:
+        s += P("M5.4 19.6Q10 15.4 16 13.6Q19.4 12.4 14.6 9.4L16.4 9Q22.6 11.6 19.6 14.4Q15.6 16.8 18.8 19.6Z", SAND, .8)
+    gate = (P("M11.4 9.2V3.2H18.6V9.2Z", "#D6CCB6", .8) + P("M10.8 3.4h8.4V1.8h-8.4z", "#B9AC92", .6)
+            + P("M13.6 9.2V6.4Q15 5 16.4 6.4V9.2Z", "#5A4632", .5))
+    s += gate
 
     def foot(x, y, sc, r):
-        return G(F("M0 -1.6Q1 -1.6 1 -.1Q1 1.4 .2 1.7Q-.4 1.9 -.7 1.2L-1 -.2Q-1 -1.6 0 -1.6Z", "#5E4428")
-                 + F("M-.7 -2.4a.5 .5 0 1 0 .01 0ZM.1 -2.7a.42 .42 0 1 0 .01 0ZM.8 -2.5a.36 .36 0 1 0 .01 0Z", "#5E4428"),
+        return G(F("M-.9 -1Q-.9 -2.6 0 -2.6Q.9 -2.6 .9 -1Q.9 .2 0 .4Q-.9 .2 -.9 -1Z", "#6A4A2A") + F("M-.7 1.1Q0 .7 .7 1.1V1.8Q0 2.4 -.7 1.8Z", "#6A4A2A"),
                  f"translate({x} {y}) rotate({r}) scale({sc})")
-    s += foot(8.4, 17.6, 1.15, 55) + foot(10.4, 15.2, 1.05, 60) + foot(14.6, 14.2, .85, 70) + foot(16.4, 11.8, .7, -20) + foot(17.4, 9.4, .55, -40)
+    steps = [(13.4, 17.4, 1.15, -8), (16.6, 15.2, 1, 8), (14.2, 12.8, .8, -6), (15.8, 10.8, .62, 6)] if v == 1 else \
+        [(10.6, 17.6, 1.1, 50), (14.6, 15.2, .95, 65), (17.2, 13, .8, -30), (16, 10.8, .6, -50)]
+    s += "".join(foot(*a) for a in steps)
     return s
 
 
 def tempel(v):
-    """Vorbild: Modell des herodianischen Tempels (Israel-Museum): hoher weisser Kubus mit breiterer Fassade, flaches Dach
-    mit Goldkante, hohes Portal mit Vorhang, Vorhofmauern, Plattform mit Stufen – kein Giebel, wenige grosse Formen."""
+    """Vorbild: Modell des herodianischen Tempels (Israel-Museum) auf dem Tempelberg: hoher weisser Bau mit Goldkante und
+    Vorhang-Portal auf einer mächtigen Quadermauer-Plattform (wie die Westmauer); @2 mit Brandopferaltar und Rauch."""
     if v not in (1, 2):
         return None
     sw = 3
-    s = P("M8 126H192V142H8Z", STONE, sw)
-    s += P("M66 142H134L130 148H70Z", STONE2, sw * .7)
-    for x0, x1 in [(16, 60), (140, 184)]:  # Vorhofmauern mit Säulenhalle (wenige grosse Pfeiler)
-        s += P(f"M{x0} 96H{x1}V126H{x0}Z", "#E6DCC6", sw * .8) + P(f"M{x0 - 3} 90H{x1 + 3}V98H{x0 - 3}Z", GOLD2, sw * .7)
-        s += "".join(P(f"M{x} 126V108Q{x + 5} 102 {x + 10} 108V126Z", "#8C7A60", 1.6) for x in (x0 + 6, x0 + 26))
-    if v == 1:
-        s += P("M74 20H126V126H74Z", "#EDE6D6", sw * .8) + P("M70 14H130V22H70Z", GOLD, sw * .7)
-    s += P("M50 40H150V126H50Z", "#F6F1E6", sw)
-    s += P("M46 32H154V42H46Z", GOLD, sw * .8)
-    s += P("M80 126V58H120V126Z", GOLD, sw * .8) + P("M87 126V65H113V126Z", "#7A2E3A", 1.8)
-    s += L("M95 68V124M100 68V124M105 68V124", 1.4, "#A8495A")
+    s = P("M4 98H196V148H4Z", "#D8C9A6", sw)  # Plattform aus grossen Quadern
+    for y in (108, 118, 128, 138):
+        s += L(f"M6 {y}H194", 1.4, "#A8956E")
+    for i, y in enumerate((98, 108, 118, 128, 138)):
+        off = 0 if i % 2 else 14
+        s += "".join(L(f"M{x} {y}v10", 1.4, "#A8956E") for x in range(18 + off, 194, 28))
+    for x0, x1 in [(14, 58), (142, 186)]:
+        s += P(f"M{x0} 74H{x1}V98H{x0}Z", "#E6DCC6", sw * .8) + P(f"M{x0 - 3} 68H{x1 + 3}V76H{x0 - 3}Z", GOLD2, sw * .7)
+    s += P("M74 6H126V98H74Z", "#EDE6D6", sw * .8) + P("M70 2H130V9H70Z", GOLD, sw * .6)
+    s += P("M52 26H148V98H52Z", "#F6F1E6", sw) + P("M48 18H152V28H48Z", GOLD, sw * .8)
+    s += P("M80 98V40H120V98Z", GOLD, sw * .8) + P("M87 98V47H113V98Z", "#7A2E3A", 1.8)
+    s += L("M95 50V96M100 50V96M105 50V96", 1.4, "#A8495A")
+    if v == 2:
+        s += P("M22 74V62H44V74Z", STONE2, 2) + P("M26 62Q28 56 33 58Q36 52 40 58Z", "#E8862A", 1.4)
+        s += P("M32 54Q26 44 34 36Q42 28 34 18Q46 26 40 38Q36 46 38 54Z", "#C9C3B8", 1.4)
     return s
 
 
@@ -290,52 +297,48 @@ def becher_voll(v):
 
 
 def becher_leer(v):
-    """Vorbild: Kelch wie beim vollen Becher, geneigt, sodass man hineinsieht: innen nur blankes Gold und der Boden, kein
-    Inhalt (keine helle oder dunkle Fläche, die als Flüssigkeit gelesen wird)."""
+    """Vorbild: Kelch wie beim vollen Becher, aber ausgegossen: gekippt, nur ein letzter Tropfen fällt (@1), bzw. umgedreht
+    abgestellt (@2: ausgetrunken)."""
     if v not in (1, 2):
         return None
     cup = (P("M6 9.2V11.6", "none", 1.4) + L("M6 9.2V11.6", .6, GOLD2)
            + P("M2.4 13.4Q2.6 11.6 6 11.6Q9.4 11.6 9.6 13.4Z", GOLD2, .9)
-           + P("M1.2 2.8Q1.4 8.8 6 9.4Q10.6 8.8 10.8 2.8Z", GOLD, 1)
-           + E(6, 2.8, 4.8, 2.2, GOLD2, .9)  # Innenwand
-           + F("M1.6 3.2Q6 6.6 10.4 3.2Q10 4.4 6 5Q2 4.4 1.6 3.2Z", "#B8891A")  # Schatten der Innenwand
-           + E(6, 3.9, 1.6, .55, "#C99A22", .4)  # Boden der Schale
-           + L("M2.4 2.1Q4 1.2 6 1.1", .45, "#FFF1B8"))
-    if v == 1:  # geneigt, Öffnung zum Betrachter, auf dem Fuss stehend gekippt
-        return G(cup, "translate(6.8 8) rotate(-22) scale(.9) translate(-6 -8)")
-    return cup
+           + P("M1.2 2.8Q1.4 8.8 6 9.4Q10.6 8.8 10.8 2.8Z", GOLD, 1) + L("M8.8 4Q8.6 7 6.8 8.2", .55, "#B8891A"))
+    drop = P("M0 -1.4Q1 0 1 .6A1 1 0 0 1 -1 .6Q-1 0 0 -1.4Z", "#8E1F2A", .45)
+    if v == 1:
+        rim = E(6, 2.8, 4.8, 1.5, "#B8891A", .9)
+        return G(cup + rim, "translate(8.4 5.6) rotate(-128) scale(.82) translate(-6 -8)") + G(drop, "translate(3 11.6)")
+    rim = E(6, 2.8, 4.8, 1.5, GOLD2, .9)
+    return G(cup + rim, "translate(6 7.6) rotate(180) translate(-6 -8)") + L("M.6 13.6H11.4", .8, "#8C7A60")
 
 
 def splitter(v):
-    """Vorbild 👁 frontal; ein feiner dunkler Holzsplitter steckt im Augenweiss (ganz innerhalb der Kontur), keine Träne."""
+    """Vorbild 👁 frontal; ein Holzsplitter (helles Holz, dunkle Kontur, ausgefranstes Ende) steckt schräg im Augenweiss;
+    @2 dazu der Zeigefinger (haende.hand_zeigend), der darauf weist (Mt 7,4: «lass mich den Splitter herausziehen»)."""
     if v not in (1, 2):
         return None
-    s = P("M2.4 9.4Q16 -1.6 29.6 9.4Q16 20.4 2.4 9.4Z", "#FFFFFF", 1.4)
-    s += C(14, 9.4, 4.4, "#8A5A2E", .9) + C(14, 9.4, 2.1, INK, 0) + C(15.4, 8, 1, "#FFFFFF", 0)
-    s += L("M2.4 9.4Q16 -1.6 29.6 9.4", 1.9)
-    s += L("M5 1.4Q12 -1.4 19 .4", 1.6) if v == 2 else ""
-    s += P("M19.8 7.8L26.6 11.4L25.4 12.8Z", "#5A3818", .7)  # Splitter, schmal
+    eye = P("M2.4 9.4Q16 -1.6 29.6 9.4Q16 20.4 2.4 9.4Z", "#FFFFFF", 1.4)
+    eye += C(13.4, 9.4, 4.2, "#8A5A2E", .9) + C(13.4, 9.4, 2, INK, 0) + C(14.8, 8, .9, "#FFFFFF", 0)
+    eye += L("M2.4 9.4Q16 -1.6 29.6 9.4", 1.9)
+    sp = P("M19.6 9.6L25.4 6.2L25.8 7.2L26.8 6.6L26.4 8L27.4 8.2L26.2 8.8Z", "#C99A5A", .6) + L("M21 9L25.4 7.2", .35, "#8A5A2E")
     if v == 1:
-            return s
+        return eye + sp
+    return G(eye + sp, "translate(0 1) scale(.86)") + H.place(H.hand_zeigend(), 30.6, 15.6, 200, .42)
 
 
 def salz(v):
-    """Vorbild 🧂 bzw. Salzgefäss: Gefäss mit Löchern, aus dem weisse Körner rieseln; Häufchen grober Körner (keine Würfel)."""
+    """Vorbild 🧂: Salzgefäss mit Löchern, aus dem weisse Körner rieseln (eindeutig «Salz»); @2 würzt ein Brot."""
+    if v not in (1, 2):
+        return None
+    s = P("M6 4.6Q6 2 10 2Q14 2 14 4.6V6H6Z", "#C9CED2", .9)
+    s += C(8.6, 3.6, .45, INK, 0) + C(10, 3.1, .45, INK, 0) + C(11.4, 3.6, .45, INK, 0)
+    s += P("M5.6 6H14.4L15.6 14.4Q10 15.6 4.4 14.4Z", "#F4F1EA", 1) + L("M7.6 8.6V12.4", .8, "#D9D2C4")
+    grains = "".join(f'<rect x="{x}" y="{y}" width="1" height="1" fill="#FFFFFF" stroke="{INK}" stroke-width=".35" transform="rotate(20 {x} {y})"/>'
+                     for x, y in [(16.6, 2.2), (17.8, 4.2), (16.2, 5.6), (18.6, 6.6), (17.2, 8)])
     if v == 1:
-        s = P("M6 4.6Q6 2 10 2Q14 2 14 4.6V6H6Z", "#C9CED2", .9)  # Deckel
-        s += C(8.6, 3.6, .45, INK, 0) + C(10, 3.1, .45, INK, 0) + C(11.4, 3.6, .45, INK, 0)
-        s += P("M5.6 6H14.4L15.6 14.4Q10 15.6 4.4 14.4Z", "#F4F1EA", 1)
-        s += L("M7.6 8.6V12.4", .8, "#D9D2C4")
-        s += "".join(f'<rect x="{x}" y="{y}" width=".9" height=".9" fill="#FFFFFF" stroke="{INK}" stroke-width=".3" transform="rotate(25 {x} {y})"/>'
-                     for x, y in [(16.4, 2.4), (17.6, 4.4), (16.2, 6.2), (18.4, 7.4)])
-        return G(s, "rotate(-14 10 9)")
-    if v == 2:  # Häufchen grober weisser Körner in Tonschale, einzelne Körner glitzern
-        heap = P("M3.6 9Q5 3.4 10 3Q15 3.4 16.4 9Z", "#FFFFFF", .9)
-        heap += "".join(f'<path d="M{x} {y}l.8-.6.8.6-.8.6z" fill="#C9DCEB"/>' for x, y in [(7, 7), (9.6, 5.4), (12, 7.4), (10.4, 8), (8, 4.8), (13.4, 6)])
-        b = P("M1.6 8.6H18.4Q17.8 14.6 10 14.8Q2.2 14.6 1.6 8.6Z", "#B5714A", 1) + L("M4.4 11.4Q10 13 15.6 11.4", .5, "#8A4F30")
-        sp = L("M15.6 2.2l.8 1.4M17.2 3.2l-1.6.4M3.4 3.4l.6 1.2M4.6 4l-1.4.2", .5, "#7FA7C6")
-        return heap + b + sp
-    return None
+        return G(s + grains, "rotate(-14 10 9)")
+    return G(s + grains, "translate(-1 -1) scale(.8) rotate(-30 10 9)") + P("M10 15Q10 11 15 10.8Q19.6 11 19.6 15Z", "#D9A05A", .8) \
+        + L("M13 12.6l1 1.4M16 12.2l1 1.6", .5, "#9A6A30")
 
 
 def synagoge(v):
@@ -373,119 +376,114 @@ def vogel(v):
 
 
 def samen(v):
-    """Vorbild: Sämann-Geste (haende.hand_gebend, wie 🫳) bzw. Saatkorn mit Keim."""
+    """Vorbild: Sämann-Geste (haende.hand_gebend, wie 🫳) bzw. offene Hand voller Saatkörner (haende.hand_empfangend, wie 🫴)."""
+    def korn(x, y, r, sc=1.0):
+        return G(P("M0 -1.5Q1.1 -1.2 1.1 0Q1.1 1.3 0 1.5Q-1.1 1.3 -1.1 0Q-1.1 -1.2 0 -1.5Z", "#D9A441", .4) + L("M0 -1V1", .3, "#9A7420"),
+                 f"translate({x} {y}) rotate({r}) scale({sc})")
     if v == 1:
         hand = H.place(H.hand_gebend(), 2.6, 4.2, 10, .74)
-        seeds = "".join(G(P("M0 -1.3Q.95 -.2 0 1.3Q-.95 -.2 0 -1.3Z", GOLD2, .45), f"translate({x} {y}) rotate({r})")
-                        for x, y, r in [(16.4, 11, 20), (18.6, 12.6, -15), (14.8, 13.2, 30), (17.2, 15, 0), (19.8, 15.4, 25)])
+        seeds = "".join(korn(x, y, r) for x, y, r in [(16.4, 11, 20), (18.6, 12.8, -15), (14.8, 13.4, 30), (17.4, 15, 0)])
         soil = P("M1 21.4Q2 17.4 12 17.2Q22 17.4 23 21.4Z", "#8B5E3C", .9) + L("M4 19.6q3-1 6-.4M13 19.4q3-.6 6 .2", .5, "#6A4428")
         return soil + hand + seeds
-    if v == 2:  # drei grosse Saatkörner, eines keimt, über der Erde
-        def korn(x, y, r):
-            return G(P("M0 -3.4Q2.6 -2.6 2.4 .6Q2 3.4 0 3.6Q-2 3.4 -2.4 .6Q-2.6 -2.6 0 -3.4Z", "#D9A441", .8)
-                     + L("M0 -2.6Q.6 0 0 2.8", .5, "#9A7420"), f"translate({x} {y}) rotate({r})")
-        soil = P("M1 21.4Q2 16.4 12 16.2Q22 16.4 23 21.4Z", "#8B5E3C", .9)
-        return (soil + korn(5.6, 13.4, -20) + korn(18.4, 13.2, 25)
-                + L("M12 15V8.4", .9, LEAF) + P("M12 10Q9 7.4 8.2 9.6Q10 11.4 12 10Z", "#8DB25A", .6)
-                + P("M12 8.6Q15 5.8 16 8Q14.2 10 12 8.6Z", "#8DB25A", .6) + korn(12, 16.2, 90).replace("rotate(90)", "rotate(90) scale(.9)"))
+    if v == 2:
+        hand = H.place(H.hand_empfangend(), 3.4, 14, -6, .92)
+        heap = "".join(korn(x, y, r, 1.05) for x, y, r in [(9.4, 11.2, 20), (12, 11.6, -30), (14.6, 11.2, 10), (10.8, 9.2, -10), (13.4, 9.2, 40), (12.2, 7.2, 0)])
+        fall = korn(19.4, 15, 30) + korn(21, 18.6, -20)
+        return hand + heap + fall
     return None
 
 
 def fessel(v):
-    """Vorbild: gefesselte Hände eines Gefangenen – Fäuste hängen nach unten, Handgelenke gekreuzt, Strick gewickelt,
-    das Ende führt weg (abgeführt)."""
-    if v not in (1, 2):
-        return None
-
-    def arm(t):
-        return G(P("M-2.6 0H2.6V-9H-2.6Z", H.SKIN, 1) + P("M-3.4 -8H3.4V-19H-3.4Z", H.SLEEVE, 1), t)
-    s = arm("translate(11 20) rotate(30)") + arm("translate(19 20) rotate(-30)")
-    s += H.place(H.hand_faust(cuff_on=False), 19, 20, 60, .62) + H.place(H.hand_faust(cuff_on=False), 11, 20, -60, .62, True)
-    rope, rope2 = "#C8A36A", "#8C6A38"
-    for dy in (0, 2.6):
-        s += P(f"M10.2 {11.4 + dy}Q15 {9.6 + dy} 19.8 {11.4 + dy}L19.8 {13.4 + dy}Q15 {11.6 + dy} 10.2 {13.4 + dy}Z", rope, .7)
-        s += L(f"M12.6 {10.8 + dy}l.8 2M15 {10.5 + dy}v2M17.4 {10.8 + dy}l-.8 2", .45, rope2)
-    d = "M19.6 13Q24 12 26 8Q27.4 5 29 4.4" if v == 1 else "M19.6 13Q25 14 27.4 18Q28.6 20 29 22"
-    s += P(d, "none", 2.2) + L(d, 1.2, rope)
-    return s
-
-
-def matte(v):
-    """Vorbild: Schlafmatte/Bettrolle in Aufsicht mit Kissen (Liegeplatz des Kranken), leicht perspektivisch, Rand gesäumt."""
-    straw, straw2 = "#E3C27A", "#C9A35A"
-    if v not in (1, 2):
-        return None
-    s = P("M2 4.4L27 2.6L30.6 9.6L3.4 11.2Z", straw, 1)
-    s += L("M3.6 5.8L27.6 4M4.2 8.2L29.2 6.6", .5, straw2) + L("M8 4.1L9 10.9M13 3.7L14 10.6M18 3.4L19.2 10.3M23 3L24.4 10", .5, straw2)
-    s += P("M3.4 5.2L9 4.8L9.6 10.4L4.2 10.8Z", "#F4F1EA", .8) + L("M4.6 7.6q2 .4 4 0", .5, "#C9BFAA") if v == 1 else ""
-    if v == 2:  # mit Kissen und zurückgeschlagener Decke
-        s += P("M3.4 5.2L9 4.8L9.6 10.4L4.2 10.8Z", "#F4F1EA", .8)
-        s += P("M17 3.5L27 2.6L30.6 9.6L18.4 10.4Z", "#B5714A", .9) + L("M17.6 6.4L29 5.6", .6, "#8A4F30")
-    return s
-
-
-def sandale(v):
-    """Vorbild 👡 von der Seite: Ledersohle mit Ferse und Zehenteil, Riemen über dem Rist und um die Ferse; ein Riemen gelöst
-    (Joh 1,27: den Riemen lösen)."""
-    sole_c, strap = "#B9783F", "#5E3518"
-    if v == 1:  # Seitenansicht, Fersenriemen offen, hängendes Riemenende
-        s = P("M2 15.6Q2 13.2 4.6 13.2H28Q32.6 13.4 32.6 15.4Q32.6 17.4 29 17.4H4.4Q2 17.4 2 15.6Z", sole_c, 1.1)
-        s += L("M3.4 15.2H30.6", .5, "#E2B27A")
-        s += P("M14 13.4Q17 4.4 22 6.6Q25 8.4 26.4 13.4H24.2Q22.8 9.6 21 9Q17.6 8.4 16.4 13.4Z", strap, .7)
-        s += P("M18.4 12.8Q19.6 6.6 22.6 7.6", "none", 0) + P("M9.6 13.4Q9.4 7.6 14.6 7.4L15.4 9.4Q11.6 9.6 11.8 13.4Z", strap, .7)
-        s += P("M4.6 13.2Q3.6 7.2 7.4 6L8.2 7.8Q5.6 8.8 6.6 13.2Z", strap, .7)  # Fersenriemen
-        s += P("M7.8 6.8Q11 5.8 12.4 3.4Q13.6 2 14.4 3.2Q13.4 6.6 8.6 8.6Z", strap, .6)  # gelöstes Ende
+    """Vorbild: gefesselte Hände – zwei offene Hände (haende.hand_offen, wie ✋), Handgelenke übereinander gekreuzt, mehrfach
+    mit Strick umwickelt (@1); bzw. Strick als Schlinge mit Knoten (@2, ohne Hände)."""
+    if v == 1:
+        s = H.place(H.hand_offen(cuff_on=True, lang=6), 12.6, 21.4, -24, .72) + H.place(H.hand_offen(cuff_on=True, lang=6), 17.4, 21.4, 24, .72, True)
+        rope, rope2 = "#C8A36A", "#8C6A38"
+        for dy in (0, 2.4):
+            s += P(f"M9.4 {19.6 + dy}Q15 {17.8 + dy} 20.6 {19.6 + dy}L20.6 {21.6 + dy}Q15 {19.8 + dy} 9.4 {21.6 + dy}Z", rope, .7)
+            s += L(f"M12 {19 + dy}l.8 2M15 {18.7 + dy}v2M18 {19 + dy}l-.8 2", .45, rope2)
+        d = "M20.4 23Q25 24 26.6 27.6"
+        return s + P(d, "none", 2.2) + L(d, 1.2, rope)
+    if v == 2:
+        rope, rope2 = "#C8A36A", "#8C6A38"
+        d1 = "M15 4Q7 4 7 11Q7 18 15 18Q23 18 23 11Q23 6 18 4.6"
+        s = P(d1, "none", 3.4) + L(d1, 2, rope)
+        s += P("M15 18Q14 22 11 25Q9 27 10 28.6", "none", 3.4) + L("M15 18Q14 22 11 25Q9 27 10 28.6", 2, rope)
+        s += P("M15 18Q17 22 19.6 24.6Q21.6 26.6 20.6 28.6", "none", 3.4) + L("M15 18Q17 22 19.6 24.6Q21.6 26.6 20.6 28.6", 2, rope)
+        s += E(15, 18, 2.6, 2, rope, .8) + L("M13.4 17.2q1.6 1.6 3.2 0", .5, rope2)
+        s += L("M9 8l1.2 1M8.2 13l1.4.4M21.2 13.4l-1.4.4", .5, rope2)
         return s
-    if v == 2:  # Paar in Aufsicht, ganz im Bild
-        def one(t):
-            g = P("M5 1C8.2 1 9.4 3.4 9.4 6C9.4 8.6 8 10 7.8 12.2C7.6 14.4 8.4 15.6 8.2 17.2A3.2 3.2 0 0 1 1.8 17.2C1.6 15.6 2.4 14.4 2.2 12.2C2 10 .6 8.6 .6 6C.6 3.4 1.8 1 5 1Z", sole_c, 1)
-            g += P("M5 2.4C7.4 2.4 8 4.2 8 6C8 8 6.8 9.6 6.6 12C6.4 14 7 15.4 6.8 16.8A1.8 1.8 0 0 1 3.2 16.8C3 15.4 3.6 14 3.4 12C3.2 9.6 2 8 2 6C2 4.2 2.6 2.4 5 2.4Z", "#E2B27A", .4)
-            g += P("M-.2 5.6Q5 7 10.2 5.6L10.2 8Q5 9.4 -.2 8Z", strap, .7) + P("M1 10.8Q5 12 9 10.8L8.8 13Q5 14.2 1.2 13Z", strap, .7)
-            return G(g, t)
-        return one("translate(6.6 .2) scale(.94)") + one("translate(18 .2) scale(.94)")
     return None
 
 
-def leinenbinden(v):
-    """Vorbild: Verbandsrolle (Piktogramm Erste Hilfe) + leeres Grab (Joh 20,5-7): aufgerollte Leinenbinden mit Spirale und
-    lose liegendem Band, daneben gefaltetes Tuch, auf einer Steinbank; dahinter die dunkle Grabkammer."""
+def matte(v):
+    """Vorbild: Schlafmatte/Bettrolle von der Seite (wie ein flaches Polster mit Kissen und gefalteter Decke); @2 an vier
+    Seilen herabgelassen (Mk 2,4)."""
+    if v == 1:
+        s = P("M1.6 8.6Q1.6 6.4 4 6.4H28Q30.4 6.4 30.4 8.6V9.2Q30.4 11 28 11H4Q1.6 11 1.6 9.2Z", "#E3C27A", 1)
+        s += L("M3 8.8H29", .5, "#C9A35A") + L("M7 6.6v4.2M12 6.6v4.2M17 6.6v4.2M22 6.6v4.2", .4, "#C9A35A")
+        s += P("M3 6.6Q3 3.4 6.4 3.6Q9.4 3.6 9.4 6.6Z", "#F4F1EA", .8)
+        s += P("M19 6.6Q19.4 4.6 22 4.6H28.4Q30 4.6 30 6.6Z", "#B5714A", .8)
+        return s
+    if v == 2:
+        s = L("M8 0.6L4 7.4M8 .6L12 7.4M24 .6L20 7.4M24 .6L28 7.4", .6, "#8C6A38")
+        s += P("M2 8.6Q2 7.4 3.6 7.4H28.4Q30 7.4 30 8.6V9.6Q30 11 28.4 11H3.6Q2 11 2 9.6Z", "#E3C27A", .9)
+        s += L("M3.4 9.2H28.6", .45, "#C9A35A") + P("M3.4 7.6Q3.4 5.6 6 5.8Q8.4 5.8 8.4 7.6Z", "#F4F1EA", .7)
+        return s
+    return None
+
+
+def sandale(v):
+    """Vorbild 👡 in Schrägaufsicht: Sohle in Fussform mit Zehenschlaufe und zwei Riemen, der Fersenriemen ist gelöst und hängt
+    mit Schnalle seitlich heraus (Joh 1,27: den Riemen lösen)."""
     if v not in (1, 2):
         return None
-    linen, sh = "#FBF8EF", "#B9C3C8"
-    s = P("M2 30V12Q2 3 18 3H42Q58 3 58 12V30Z", "#8C8070", 1.3) + P("M8 30V15Q8 8 18 8H42Q52 8 52 15V30Z", "#3E3428", 1)
-    s += P("M2 22L5 19H55L58 22Z", "#D6CCB6", 1.1) + P("M2 22H58V31H2Z", STONE, 1.2)
+    sole_c, top_c, strap = "#B9783F", "#E2B27A", "#5E3518"
+    s = P("M6.8 6.4C10 6.4 12 7.4 15 7.3C19 7.1 21 4.4 26 4.4C30.6 4.4 32.9 7 32.9 10C32.9 13 30.6 15.6 26 15.6C21 15.6 19 12.9 15 12.7C12 12.6 10 13.6 6.8 13.6A3.6 3.6 0 0 1 6.8 6.4Z", sole_c, 1.3)
+    s += P("M7 8C10 8 12.4 8.8 15 8.8C19 8.6 21.4 6 26 6C29.6 6 31.3 8 31.3 10C31.3 12 29.6 14 26 14C21.4 14 19 11.4 15 11.2C12.4 11.2 10 12 7 12A2 2 0 0 1 7 8Z", top_c, .5)
+    s += P("M27.4 10L21 7.2V8.8ZM27.4 10L21 12.8V11.2Z", strap, .6) + C(27.4, 10, 1, strap, .6)  # Zehenschlaufe
+    s += P("M17 6.4Q18.4 10 17 13.6L19.6 13.4Q21 10 19.6 6.6Z", strap, .8)  # Riststrap
+    if v == 1:  # Fersenriemen offen, hängt heraus
+        s += P("M8.6 6.6L10.6 6.4L11 3.2Q10.6 1.2 8.4 1.4L5.4 2Q4.4 2.4 4.8 3.4L8.4 3.2Z", strap, .7)
+        s += P("M8.6 13.4L10.6 13.6L10.8 16.6Q10.4 18.6 8 18.4L3 18Q2.2 17.6 2.8 16.8L8.2 16.4Z", strap, .7) + P("M2.2 15.8h1.8v2.8H2.2Z", GOLD, .5)
+    else:  # Fersenriemen geschlossen um die Ferse
+        s += P("M10.6 6.6Q4 4.6 2.6 10Q4 15.4 10.6 13.4L10.6 11.8Q5.6 13 4.6 10Q5.6 7 10.6 8.2Z", strap, .7)
+    return s
 
-    def roll(x, y, r, ln):
-        return (P(f"M{x} {y - r}H{x + ln}A{r * .55:g} {r} 0 0 1 {x + ln} {y + r}H{x}Z", linen, .9)
-                + E(x, y, r * .55, r, linen, .9) + L(f"M{x} {y - r * .45:g}A{r * .25:g} {r * .45:g} 0 1 0 {x + .01} {y - r * .45:g}", .5, sh))
-    if v == 1:
-        s += L("M14 20.4Q20 22.4 26 19.8Q30 18.4 36 20.2", 3, INK) + L("M14 20.4Q20 22.4 26 19.8Q30 18.4 36 20.2", 1.6, linen)
-        s += roll(8, 16.4, 3.6, 6) + roll(20, 15.6, 3, 5)
-        s += P("M40 20.4L42 15.2H52L50 20.4Z", linen, .9) + L("M41.2 18H51M47 15.4L45 20.4", .5, sh)
-    else:
-        s += roll(7, 16.2, 3.6, 7) + roll(20, 16.2, 3.6, 7) + roll(33, 16.2, 3.6, 7)
-        s += P("M44 20.4L45.6 15.6H54L52.4 20.4Z", linen, .9) + L("M45 18H53.2", .5, sh)
+
+def leinenbinden(v):
+    """Vorbild: Bild vom leeren Grab (Joh 20,5-7). @1: Felsengrab offen, Stein beiseite; in der dunklen Kammer leuchten
+    die weissen, liegengelassenen Tücher. @2: Nahansicht: weisse Leinenbänder lose gefaltet und das zusammengelegte
+    Schweisstuch auf der Steinbank."""
+    if v not in (1, 2):
+        return None
+    linen, sh = "#FFFFFF", "#AEB8BE"
+    s = ""
+    if v == 1:  # Felswand mit dunkler Grabkammer dahinter
+        s += P("M2 22V8Q2 3 10 3H50Q58 3 58 8V22Z", "#A79A80", 1.2) + P("M38 22V12Q38 7 46 7Q54 7 54 12V22Z", "#3B3226", .9)
+    s += P("M3 22L6 19H54L57 22Z", "#D6CCB6", 1.1) + P("M3 22H57V31H3Z", STONE, 1.2)
+    for y0 in (17.6, 13.8, 10):
+        s += P(f"M7 {y0 + 2}Q8 {y0 - .6} 12 {y0}Q20 {y0 + 1.2} 26 {y0 - .4}Q32 {y0 - 1.4} 36 {y0 + .6}L36 {y0 + 3}Q30 {y0 + 1.4} 24 {y0 + 2.6}Q16 {y0 + 3.6} 7 {y0 + 3.6}Z", linen, .8)
+    s += P("M41 20.6L43 14.8H53L51 20.6Z", linen, .9) + L("M42.2 17.6H52M47.6 15L45.8 20.6", .55, sh)
     return s
 
 
 def perle(v):
-    """Vorbild: Perlenkette (Schmuck-Piktogramm) – geschlossener Ring grosser, schimmernder Perlen, eine Perle grösser."""
-    pearl, ps = "#FBF7F2", "#D2C2D6"
-
-    def pe(x, y, r):
-        return (C(x, y, r, "#F1E9E2", .55, "#5E5060") + F(f"M{x - r * .15:.2f} {y + r * .98:.2f}A{r} {r} 0 0 0 {x + r * .98:.2f} {y + r * .15:.2f}A{r * 1.25:.2f} {r * 1.25:.2f} 0 0 1 {x - r * .15:.2f} {y + r * .98:.2f}Z", ps)
-                + C(x - r * .35, y - r * .35, r * .3, "#FFFFFF", 0))
+    """Vorbild: Perlenkette mit grosser Anhänger-Perle und Glanzstern (Schmuck-Piktogramm, «kostbar»)."""
     if v not in (1, 2):
         return None
-    n = 12 if v == 1 else 10
-    rx, ry, cx, cy = (11, 6.2, 15, 8.6)
-    s = E(cx, cy, rx, ry, "none", .8, ' stroke-dasharray="0"')
-    pts = [(cx + rx * math.cos(2 * math.pi * i / n + math.pi / 2), cy + ry * math.sin(2 * math.pi * i / n + math.pi / 2)) for i in range(n)]
-    pts.sort(key=lambda p: p[1])
-    for i, (x, y) in enumerate(pts):
-        s += pe(round(x, 1), round(y, 1), 2.3 if v == 1 else 2.6)
-    if v == 2:
-        s += pe(15, 8.6, 3)
+
+    def pe(x, y, r):
+        return (C(x, y, r, "#F1E9E2", .6, "#5E5060") + F(f"M{x - r * .15:.2f} {y + r * .98:.2f}A{r} {r} 0 0 0 {x + r * .98:.2f} {y + r * .15:.2f}A{r * 1.25:.2f} {r * 1.25:.2f} 0 0 1 {x - r * .15:.2f} {y + r * .98:.2f}Z", "#D2C2D6")
+                + C(x - r * .35, y - r * .35, r * .3, "#FFFFFF", 0))
+    star = lambda x, y, r: P(f"M{x} {y - r}Q{x + r * .2} {y - r * .2} {x + r} {y}Q{x + r * .2} {y + r * .2} {x} {y + r}Q{x - r * .2} {y + r * .2} {x - r} {y}Q{x - r * .2} {y - r * .2} {x} {y - r}Z", GOLD, .5)
+    s = L("M4 2.4Q3.4 11 15 11.4Q26.6 11 26 2.4", .8, "#9A8670")
+    pts = [(4.4, 3.4), (5.2, 6.4), (7.2, 8.8), (10, 10.4), (20, 10.4), (22.8, 8.8), (24.8, 6.4), (25.6, 3.4)]
+    s += "".join(pe(x, y, 1.7) for x, y in pts)
+    if v == 1:
+        s += L("M15 11.4V12.4", .8, "#9A8670") + pe(15, 14.2, 3.2) + star(20.6, 14.6, 2)
+    else:
+        s += pe(13, 11.4, 1.7) + pe(17, 11.4, 1.7) + star(15, 4.6, 2.6)
     return s
 
 
@@ -515,35 +513,33 @@ def schlange(v):
 
 
 def wurm(v):
-    """Vorbild: Regenwurm-Piktogramm – schlanker rosa Leib mit Ringen, rundes Ende, ohne Auge, ragt aus einem Erdloch."""
+    """Vorbild: Regenwurm-Piktogramm – schlanker rosa Leib mit regelmässigen Ringen, rundes Ende, ohne Auge, aus einem Erdloch."""
     if v not in (1, 2):
         return None
     d = "M7.4 10.6Q6.4 5 10 3.2Q13.4 1.8 15 4.6Q16.4 7 19.6 6" if v == 1 else "M7.4 10.6Q6.8 6 9.6 4.4Q12.4 3 14 5.4Q15.6 7.6 18.4 6.4Q20.4 5.4 20.8 3.6"
-    s = P("M.8 11.6Q2 8.8 12 8.6Q22 8.8 23.2 11.6Z", "#8B5E3C", .9) + E(7.4, 9.9, 2.8, .9, "#4E3420", .6)
+    s = P("M2.6 11.6Q4 9.4 12 9.2Q20 9.4 21.4 11.6Z", "#8B5E3C", .9) + E(7.4, 10, 2.6, .8, "#4E3420", .6)
     s += worm_line(d, 1.9, "#D98A86", .7)
-    rings = [(7.2, 7.4, 0), (8, 5.4, 30), (9.6, 3.9, 70), (12, 3, 95), (14.2, 3.8, 140), (15.6, 5.8, 150), (17.6, 6.2, 85)] if v == 1 else \
-        [(7.1, 7.6, 5), (8.2, 5.4, 45), (10.4, 4.1, 80), (12.6, 4.2, 120), (14.2, 5.8, 140), (16.4, 7, 95), (18.8, 6.1, 60)]
-    for x, y, r in rings:
-        s += G(L("M-1 0H1", .45, "#A85E5A"), f"translate({x} {y}) rotate({r})")
-    s += G(F("M-1.2 -.8H1.4V.8H-1.2Z", "#C46E6A"), "translate(11 3.1) rotate(5)") if v == 1 else ""
-    s += P("M4.2 10.4Q7.4 11.4 10.6 10.4Q10.2 11.6 7.4 11.8Q4.6 11.6 4.2 10.4Z", "#8B5E3C", .6)
+    s += f'<path d="{d}" fill="none" stroke="#B5706C" stroke-width="1.9" stroke-dasharray=".3 1.2" stroke-dashoffset="-.6"/>'
+    s += P("M4.6 10.5Q7.4 11.3 10.2 10.5Q9.8 11.5 7.4 11.6Q5 11.5 4.6 10.5Z", "#8B5E3C", .5)
     return s
 
 
 def grab_zu(v):
-    """Vorbild: Felsengrab im Hang (wie FIG-ORT-GRAB), Rollstein ganz vor der Öffnung; Siegel: Schnur vom Fels über den Stein
-    mit rotem Siegelklumpen an der Fuge (Mt 27,66)."""
+    """Vorbild: Felsengrab im Hang (wie FIG-ORT-GRAB), Rollstein ganz vor der Öffnung; an der Fuge zwischen Stein und Fels
+    ein rotes Wachssiegel mit kurzer Schnur (Mt 27,66)."""
     if v not in (1, 2):
         return None
-    s = P("M1 40Q3 18 14 10Q26 2 40 4Q54 6 60 18Q63 28 63 40Z", "#A79A80", 1.6)
-    s += P("M14 10Q26 2 40 4Q54 6 60 18Q56 12 46 9Q32 6 20 10Z", "#8FA672", 1)  # Grasnarbe
-    s += L("M48 16q5 3 7 9M8 26q1-5 4-8", .8, "#8C8070")
+    s = P("M2 40Q3 22 12 12Q24 2 40 4Q54 6 60 18Q63 28 62 40Z", "#A79A80", 1.6)
+    s += P("M12 12Q24 2 40 4Q54 6 60 18Q56 12 46 9Q32 6 20 11Z", "#8FA672", 1)
+    s += L("M48 16q5 3 7 9", .8, "#8C8070")
     s += P("M15 40V28Q15 18 27 18Q39 18 39 28V40Z", "#3B3226", 1)
-    s += C(28, 27.4, 12.6, "#C9BFAA", 1.6) + L("M20 21q7-4 14 1M19 31q3 4 8 5", .8, "#8C8070")
+    s += C(28, 27.4, 12.6, "#C9BFAA", 1.6) + L("M20 21q7-4 14 1", .8, "#8C8070")
     if v == 1:
-        s += L("M8 22Q20 24 40 26Q46 26.6 48 22", 1.2, RED) + C(40.6, 26, 2.6, RED, .7, DRED) + C(8, 22, 1.8, RED, .6, DRED)
+        s += L("M37 24.4L46 22.6", 1.1, RED) + P("M38.6 21.2Q42.6 20.4 43.4 23.6Q43 27 39.4 27Q36.6 26.2 37 23.6Q37.4 21.6 38.6 21.2Z", RED, .8) + L("M39 23.8q1.2 1.2 2.6 0", .5, DRED)
     else:
-        s += L("M10 27.4H46", 1.2, RED) + C(10, 27.4, 2, RED, .6, DRED) + C(40.6, 27.4, 2.6, RED, .7, DRED) + C(46, 27.4, 2, RED, .6, DRED)
+        s += L("M14 22L22 24M34 24L42 22", 1.1, RED)
+        for x, y in [(15, 22), (41, 22)]:
+            s += P(f"M{x - 2.2} {y}Q{x - 2.2} {y - 2.4} {x} {y - 2.4}Q{x + 2.4} {y - 2.4} {x + 2.4} {y}Q{x + 2.4} {y + 2.4} {x} {y + 2.4}Q{x - 2.2} {y + 2.4} {x - 2.2} {y}Z", RED, .8)
     s += L("M1 40.6H63", 1.4, "#8C7A60")
     return s
 
@@ -593,44 +589,39 @@ def meer_offen(v):
 
 
 def jordan(v):
-    """Vorbild: Flusspiktogramm in Perspektive (🏞️) – breiter gewundener Fluss vom Vordergrund zum Horizont, Schilf;
-    @2 mit Taube darüber (Taufe Jesu am Jordan)."""
+    """Vorbild: Jordantal – grünes Flussband mit Bäumen und Schilf mitten in kahlen Wüstenhügeln (so unterscheidet sich der
+    Jordan von See und Meer); Fluss gewunden vom Vordergrund zum Horizont."""
     if v not in (1, 2):
         return None
-    s = ground("M3 26Q24 14 46 20Q70 10 96 18Q124 8 150 18Q170 14 183 22", "#C9BC90")
-    s += ground("M3 30Q50 22 93 25Q136 22 183 30", GREEN)
-    s += P("M48 67Q62 52 98 47Q126 42 108 35Q92 30 102 25L112 24Q126 27 118 31Q136 38 146 43Q154 56 118 60Q100 63 114 67Z", WATER, 2)
-    s += L("M70 61q8-4 16 0M106 51q6-3 12 0M112 32q3-2 6 0", 1.4, FOAM)
-    for x, y in [(30, 56), (38, 62), (154, 52), (162, 58)]:
-        s += L(f"M{x} {y}q-1-8 1-14M{x + 4} {y}q1-9-1-14M{x + 8} {y}q0-7 2-11", 1.6, GREEN3)
-        s += E(x + 1, y - 14, 1.3, 3, "#8A6A3A", 0) + E(x + 3, y - 14, 1.3, 3, "#8A6A3A", 0)
+    s = ground("M3 24Q20 12 40 18Q60 8 84 16Q110 6 136 15Q160 8 183 18", "#D9C18E")
+    s += ground("M3 34Q50 26 93 28Q136 26 183 34", SAND)
+    s += P("M30 67Q48 50 84 44Q110 38 100 30L108 28Q128 34 130 42Q136 54 150 67Z", "#8FB45E", 1.6)  # grünes Ufer
+    s += P("M66 67Q74 54 100 48Q120 43 106 35Q98 31 104 29L108 28.6Q118 32 116 36Q132 44 124 54Q114 60 120 67Z", WATER, 1.8)
+    s += L("M84 61q6-3 12 0M106 50q5-3 10 0", 1.4, FOAM)
+    trees = [(46, 54), (58, 48), (134, 50), (144, 58)] if v == 1 else [(48, 54), (140, 54)]
+    for x, y in trees:
+        s += L(f"M{x} {y + 6}v-6", 1.6, "#7A5A36") + E(x, y - 2, 6, 4.4, GREEN3, 1.2)
     if v == 2:
-        dove = (P("M-8 0Q-2 -2 4 -1Q7 -1 9 1Q7 3 2 3Q-4 3 -8 0Z", "#FFFFFF", 1.2)
-                + P("M-2 -1Q-6 -8 -12 -9Q-6 -3 -3 1Z", "#FFFFFF", 1.2) + P("M2 -1Q4 -9 10 -11Q8 -4 4 0Z", "#FFFFFF", 1.2))
-        s += G(dove, "translate(56 16)")
-    return frame_land(s)
+        for x, y in [(56, 60), (130, 62)]:
+            s += L(f"M{x} {y}q-1-8 1-13M{x + 4} {y}q1-9-1-13", 1.6, GREEN3) + E(x + 1, y - 13, 1.3, 3, "#8A6A3A", 0)
+    return frame_land(s, "#EEF2EC")
 
 
 def feld(v):
-    """Vorbild: 🏞️ mit Ackerreihen – weites helles reifes Feld («weiss zur Ernte») mit Reihen in Perspektive bis zum
-    Horizont, Baum am Rand. Unterschied zu Kornfeld: Landschaft aus der Ferne, keine grossen Ähren vorn."""
+    """Vorbild: Feldflur von oben schräg (🏞️ mit Äckern): Felder in verschiedenen Farben (gepflügt braun, grün, reif hell)
+    mit Furchen, getrennt durch Raine – «Feld» als Landschaft; Kornfeld zeigt dagegen grosse Ähren."""
     if v not in (1, 2):
         return None
     s = ground("M3 22Q30 14 60 18Q100 10 140 17Q166 14 183 20", GREEN2)
-    ripe = "#F3E4A8" if v == 1 else "#F3E4A8"
-    s += ground("M3 27Q93 21 183 27", ripe)
-    for xb in (-120, -60, -10, 34, 72, 93, 114, 152, 196, 246, 306):
-        sx = 93 + (xb - 93) * .15
-        ex, ey = xb, 67.0
-        if xb < 3 or xb > 183:
-            edge = 3 if xb < 3 else 183
-            t = (edge - sx) / (xb - sx)
-            ex, ey = edge, 25 + t * 42
-        s += L(f"M{sx:.1f} 25L{ex:.1f} {ey:.1f}", 1.3, "#C9A35A")
-    if v == 2:  # vorn ein gepflügter Streifen, darauf die Saat
-        s += ground("M3 56Q93 50 183 56", "#A8794A")
-        s += L("M30 60l-4 7M70 58l-2 9M116 58l2 9M156 60l4 7", 1.2, "#7A5230")
-    s += L("M160 22v4", 1.6) + E(160, 17, 6, 5, LEAF, 1.2)
+    s += ground("M3 26Q93 20 183 26", "#F3E4A8")
+    s += P("M3 34L93 26L183 34V46H3Z", "#9DB874", 1.2)
+    s += P("M93 26L183 34V58Q140 44 93 26Z", "#F3E4A8", 1.2)
+    s += P("M3 46H183V59Q183 67 175 67H11Q3 67 3 59Z", "#A8794A", 1.4)
+    s += L("M20 46l-8 21M50 46l-6 21M80 46l-2 21M110 46l2 21M140 46l6 21M170 46l8 21", 1.2, "#7A5230")
+    s += L("M10 38l60-6M10 42l70-6", .9, "#7FA05A") + L("M110 34l60 14M100 30l78 20", .9, "#C9A35A")
+    s += L("M93 26L3 46", 1.2)
+    if v == 2:
+        s += L("M150 22v3", 1.6) + E(150, 17, 6, 5, LEAF, 1.2) + L("M30 22v3", 1.6) + E(30, 18, 5, 4, LEAF, 1.2)
     return frame_land(s)
 
 
@@ -647,15 +638,15 @@ def ahre(x, y, h, lean=0, col=GOLD2, k=1.0):
 
 
 def kornfeld(v):
-    """Vorbild 🌾 (Ährenbündel) gross vor goldenem Feld bis zur Horizontlinie, gerahmt wie 🏞️."""
+    """Vorbild 🌾: dichte Reihe grosser reifer Ähren über die ganze Breite vor dem Horizont (Nahansicht ins Kornfeld)."""
     if v not in (1, 2):
         return None
-    s = ground("M3 24Q30 16 60 20Q100 12 140 19Q166 16 183 22", GREEN2)
-    s += ground("M3 28Q93 22 183 28", "#F3E3A6")
-    s += ground("M3 58Q93 52 183 58", "#E8CF80", 1.2)
-    xs = [(56, -6), (74, -3), (93, 0), (112, 3), (130, 6)] if v == 1 else [(70, -6), (93, 0), (116, 6)]
-    for i, (x, lean) in enumerate(xs):
-        s += ahre(x, 66, 31 + (4 if i == len(xs) // 2 else 0), lean, "#E8B931" if i % 2 else "#D99A2B", 2.2 if v == 1 else 2.8)
+    s = ground("M3 30Q30 22 60 26Q100 18 140 25Q166 22 183 28", GREEN2)
+    s += ground("M3 40Q93 34 183 40", "#F3E3A6")
+    xs = range(16, 180, 14) if v == 1 else range(22, 176, 22)
+    for i, x in enumerate(xs):
+        lean = ((i * 7) % 5 - 2) * 1.5
+        s += ahre(x, 67, 30 + (i % 2) * 4, lean, "#E8B931" if i % 2 else "#D99A2B", 1.9 if v == 1 else 2.4)
     return frame_land(s)
 
 
@@ -673,23 +664,21 @@ def wueste(v):
 
 
 def land(v):
-    """Vorbild: Kundschafter-Traube (4 Mo 13,23) – ein Weinstock wächst vorn aus dem Boden und trägt eine grosse Traube;
-    dahinter sanfte grüne Hügel mit Ölbäumen und Feld («gutes Land»)."""
+    """Vorbild: Blick vom Berg Nebo ins verheissene Land (5 Mo 34,1-4): vorn ein brauner Felsvorsprung, unten das grüne,
+    fruchtbare Land mit Feldern und Fluss, Sonne geht auf; @2 dazu die Kundschafter-Traube vorn auf dem Fels."""
     if v not in (1, 2):
         return None
-    s = ground("M3 24Q24 12 50 18Q76 8 102 16Q130 6 156 16Q172 12 183 18", GREEN2)
-    s += ground("M3 34Q50 24 93 30Q136 24 183 32", GREEN)
-    s += P("M100 46Q130 38 160 42Q176 44 183 42V52Q140 50 100 54Z", "#E3C26A", 1.4)
-    for x, y, r in [(112, 34, 6), (136, 30, 7), (164, 32, 6)]:
-        s += L(f"M{x} {y + r * .6}v{r * .9:.1f}", 2, "#7A5A36") + E(x, y, r, r * .66, "#7F9A5E", 1.4)
-    # Weinstock mit Pfahl
-    s += L("M44 67V14", 2.6, "#7A5A36") + L("M44 66Q40 50 46 40Q52 30 46 20", 4.4, INK) + L("M44 66Q40 50 46 40Q52 30 46 20", 2.6, "#8A6236")
-    s += P("M46 22Q34 10 26 18Q34 28 46 24Z", LEAF, 1.4) + P("M46 20Q58 8 66 16Q58 26 46 22Z", LEAF, 1.4)
-    grape = "#6B3A6E"
-    t = ""
-    for x, y in [(52, 26), (61, 26), (70, 26), (56.5, 33.5), (65.5, 33.5), (52, 41), (61, 41), (70, 41), (56.5, 48.5), (65.5, 48.5), (61, 56)]:
-        t += C(x, y, 4.8, grape, 1.2) + C(x - 1.4, y - 1.6, 1.2, "#A77AAA", 0)
-    s += L("M48 22Q56 20 61 22", 1.8, "#6A4428") + (t if v == 1 else G(t, "translate(-2 0)"))
+    s = C(150, 20, 9, GOLD, 1.6) + L("M150 6v3M136 20h3M161 20h3M140 10l2 2M160 10l-2 2", 1.6, GOLD2)
+    s += ground("M3 26Q30 18 60 22Q100 14 140 22Q166 18 183 24", GREEN2)
+    s += ground("M3 34Q93 28 183 34", GREEN)
+    s += P("M70 40Q100 34 130 38L140 48Q100 46 76 50Z", "#E3C26A", 1.2) + P("M120 52Q150 46 180 50V58Q150 56 124 60Z", "#E3C26A", 1.2)
+    s += P("M100 67Q110 54 128 46Q150 38 183 36V40Q156 42 136 50Q118 58 112 67Z", WATER, 1.4)
+    s += P("M3 40Q20 36 34 44Q48 52 56 67H11Q3 67 3 59Z", "#9C7A52", 1.6) + L("M14 50l6 4M24 46l4 6", .9, "#7A5A36")
+    if v == 2:
+        t = L("M30 34Q32 30 36 29", 1.6, "#6A4428") + P("M32 36Q24 30 20 36Q24 40 32 38Z", LEAF, 1.2)
+        for x, y in [(30, 40), (37, 40), (44, 40), (33.5, 46), (40.5, 46), (37, 52)]:
+            t += C(x, y, 3.8, "#6B3A6E", 1.1) + C(x - 1.2, y - 1.3, 1, "#A77AAA", 0)
+        s += t
     return frame_land(s)
 
 
@@ -706,34 +695,34 @@ def worm_line(d, w, fill, ow=.8):
 
 SPEC = {  # Lexikon-ID: (Funktion, viewBox, Bedeutung kurz, gezeichnet je Fassung)
     "FIG-OBJ-BRIEF": (brief, "0 0 24 18", "Brief (an eine Gemeinde oder Person)", {1: "geschlossener Briefumschlag mit rotem Wachssiegel", 2: "beschriebenes Blatt mit Band und rotem Siegel"}),
-    "FIG-ZEICHEN-SCHATZ": (schatz, "0 0 30 28", "Schatz / Lohn bei Gott", {1: "offene Schatztruhe auf einer Wolke", 2: "offene Schatztruhe mit Lichtschein und Strahlen"}),
-    "FIG-ZEICHEN-SCHATZ-ERDE": (schatz_erde, "0 0 30 28", "Schatz auf der Erde (vergänglich: Motte und Rost zerstören ihn)", {1: "rostige, löchrige Truhe mit angelaufenen Münzen, Motte fliegt heraus", 2: "rostige, löchrige Truhe mit zwei Motten"}),
-    "FIG-ZEICHEN-WEG": (weg, "0 0 30 20", "Weg / hingehen zu einem Ziel", {1: "geschwungener Weg mit Fussspuren zu einem Stadttor am Horizont", 2: "geschwungener Weg mit Fussspuren zur Sonne am Horizont"}),
-    "FIG-ORT-TEMPEL": (tempel, "0 0 200 150", "Tempel in Jerusalem", {1: "herodianischer Tempel: hoher weisser Bau mit Goldkante, Portal mit Vorhang, Vorhofmauern, Plattform", 2: "herodianischer Tempel ohne Aufbau: weisser Bau, Goldkante, Portal, Vorhofmauern"}),
+    "FIG-ZEICHEN-SCHATZ": (schatz, "0 0 30 28", "Schatz / Lohn bei Gott", {1: "offene Schatztruhe mit Goldmünzen auf Wolke, Strahlen", 2: "offene Schatztruhe mit Goldmünzen im Lichtschein, Strahlen"}),
+    "FIG-ZEICHEN-SCHATZ-ERDE": (schatz_erde, "0 0 30 28", "Schatz auf der Erde (vergänglich: Motte und Rost zerstören ihn)", {1: "geschlossene Truhe mit Löchern und Rost, Motte fliegt davon", 2: "zerfressene Truhe, Schloss aufgebrochen, Motte fliegt davon"}),
+    "FIG-ZEICHEN-WEG": (weg, "0 0 30 20", "Weg / hingehen zu einem Ziel", {1: "Weg mit Fussabdrücken führt geradeaus zu einem Stadttor", 2: "geschwungener Weg mit Fussabdrücken zu einem Stadttor"}),
+    "FIG-ORT-TEMPEL": (tempel, "0 0 200 150", "Tempel in Jerusalem", {1: "herodianischer Tempel auf Plattform aus grossen Quadern (Tempelberg), Goldkante, Vorhang-Portal", 2: "dasselbe mit Brandopferaltar und Rauch im Vorhof"}),
     "FIG-OBJ-MUENZEN": (muenzen, "0 0 24 14", "Münzen, Geld", {1: "Münzstapel und eine Münze mit Prägung", 2: "zwei Münzstapel und eine Münze mit Prägung"}),
     "FIG-OBJ-SCHWEIN": (schwein, "0 0 34 22", "Schwein (Herde)", {1: "Schwein von der Seite", 2: "drei Schweine einer Herde"}),
     "FIG-OBJ-BECHER-VOLL": (becher_voll, "0 0 12 14", "voller Becher (Wein)", {1: "goldener Kelch mit Rotwein", 2: "goldener Kelch randvoll mit Rotwein, Tropfen läuft über"}),
-    "FIG-OBJ-BECHER-LEER": (becher_leer, "0 0 14 14", "leerer Becher", {1: "goldener Kelch, geneigt: innen blankes Gold, kein Inhalt", 2: "goldener Kelch von schräg oben: innen blankes Gold, kein Inhalt"}),
+    "FIG-OBJ-BECHER-LEER": (becher_leer, "0 0 14 14", "leerer Becher", {1: "goldener Kelch ausgegossen, nur ein letzter Tropfen fällt", 2: "goldener Kelch umgedreht abgestellt"}),
     "FIG-ORT-SEE": (see, "0 0 186 70", "See (See von Galiläa)", {1: "ovaler See von Hügeln umgeben, Fischerboot mit Segel", 2: "ovaler See, Fischerboot und Fischer mit Netz"}),
-    "FIG-ORT-FELD": (feld, "0 0 186 70", "Feld (Acker, Felder reif zur Ernte)", {1: "weites helles reifes Feld mit Reihen bis zum Horizont", 2: "reifes Feld, vorn gepflügter Streifen"}),
-    "FIG-OBJ-SPLITTER": (splitter, "0 0 32 18", "Splitter (im Auge des Bruders)", {1: "Auge, feiner dunkler Holzsplitter im Augenweiss, gerötet", 2: "Auge mit Braue, feiner dunkler Holzsplitter im Augenweiss"}),
-    "FIG-OBJ-SALZ": (salz, "0 0 20 16", "Salz", {1: "Salzstreuer, aus dem Körner rieseln", 2: "Häufchen weisser Salzkörner in Tonschale"}),
+    "FIG-ORT-FELD": (feld, "0 0 186 70", "Feld (Acker, Felder reif zur Ernte)", {1: "Feldflur: gepflügter, grüner und reifer Acker mit Furchen", 2: "Feldflur mit Furchen und Bäumen"}),
+    "FIG-OBJ-SPLITTER": (splitter, "0 0 32 18", "Splitter (im Auge des Bruders)", {1: "Auge mit Holzsplitter im Augenweiss", 2: "Auge mit Holzsplitter, Zeigefinger weist darauf"}),
+    "FIG-OBJ-SALZ": (salz, "0 0 20 16", "Salz", {1: "Salzstreuer, aus dem weisse Körner rieseln", 2: "Salzstreuer würzt ein Brot"}),
     "FIG-ORT-SYNAGOGE": (synagoge, "0 0 90 64", "Synagoge (Versammlungshaus)", {1: "Steinbau mit Giebel, grosse Torarolle im Giebel", 2: "Steinbau mit Giebel, Davidstern im Giebel"}),
-    "FIG-ORT-JORDAN": (jordan, "0 0 186 70", "Jordan (Fluss)", {1: "breiter gewundener Fluss zum Horizont, Schilf", 2: "gewundener Fluss mit Schilf, weisse Taube darüber"}),
+    "FIG-ORT-JORDAN": (jordan, "0 0 186 70", "Jordan (Fluss)", {1: "grünes Flussband mit Bäumen, gewunden durch Wüstenhügel zum Horizont", 2: "Fluss mit grünem Ufer, Bäumen und Schilf in Wüstenhügeln"}),
     "FIG-OBJ-VOGEL": (vogel, "0 0 24 16", "Vogel (Vögel des Himmels)", {1: "fliegender Vogel", 2: "drei fliegende Vögel"}),
-    "FIG-OBJ-SAMEN": (samen, "0 0 24 22", "Samen / Saat (säen)", {1: "Hand von oben streut Körner auf Erde", 2: "drei grosse Saatkörner, eines keimt"}),
-    "FIG-OBJ-FESSEL": (fessel, "0 0 30 30", "Fessel (Strick, gebunden)", {1: "gekreuzte Handgelenke, Fäuste hängen nach unten, Strick gewickelt, Ende führt weg", 2: "gekreuzte Handgelenke, Fäuste nach unten, Strick mit hängendem Ende"}),
-    "FIG-OBJ-MATTE": (matte, "0 0 32 12", "Liegematte (eines Kranken)", {1: "ausgebreitete Strohmatte mit Kissen", 2: "ausgebreitete Strohmatte mit Kissen und Decke"}),
-    "FIG-OBJ-SANDALE": (sandale, "0 0 34 20", "Sandale (Riemen lösen)", {1: "Sandale von der Seite, Fersenriemen gelöst", 2: "Paar Sandalen von oben"}),
-    "FIG-ORT-LAND": (land, "0 0 186 70", "Land (verheissenes Land)", {1: "Weinstock mit grosser Traube vor grünen Hügeln mit Ölbäumen und Feld", 2: "Weinstock mit grosser Traube vor grünen Hügeln"}),
+    "FIG-OBJ-SAMEN": (samen, "0 0 24 22", "Samen / Saat (säen)", {1: "Hand von oben streut Körner auf Erde", 2: "offene Hand voller Saatkörner, Körner fallen"}),
+    "FIG-OBJ-FESSEL": (fessel, "0 0 30 30", "Fessel (Strick, gebunden)", {1: "zwei offene Hände, Handgelenke gekreuzt und mit Strick umwickelt", 2: "Strick als Schlinge mit Knoten"}),
+    "FIG-OBJ-MATTE": (matte, "0 0 32 12", "Liegematte (eines Kranken)", {1: "flache Strohmatte von der Seite mit Kissen und Decke", 2: "Matte mit Kissen an vier Seilen herabgelassen"}),
+    "FIG-OBJ-SANDALE": (sandale, "0 0 34 20", "Sandale (Riemen lösen)", {1: "Sandale von oben, Fersenriemen gelöst mit Schnalle", 2: "Sandale von oben mit Zehenschlaufe und Riemen"}),
+    "FIG-ORT-LAND": (land, "0 0 186 70", "Land (verheissenes Land)", {1: "Blick vom Felsvorsprung auf grünes fruchtbares Land mit Feldern, Fluss und aufgehender Sonne", 2: "dasselbe mit grosser Traube vorn"}),
     "FIG-ORT-MEER-OFFEN": (meer_offen, "0 0 186 70", "offenes Meer mit Wellen (Sturm)", {1: "drei grosse brechende Wellen", 2: "Wellenreihen mit Gischt"}),
     "FIG-ORT-WUESTE": (wueste, "0 0 186 70", "Wüste", {1: "Felsen, Sanddünen, Sonne, dürrer Busch", 2: "Felsen, Dünen, Sonne, Busch, Steine"}),
-    "FIG-ORT-GRAB-VERSCHLOSSEN": (grab_zu, "0 0 64 44", "Grab (verschlossen, versiegelt)", {1: "Felsengrab im Hang, Rollstein vor der Öffnung, Siegelschnur mit rotem Siegel", 2: "Felsengrab, Rollstein, waagrechte Siegelschnur mit Siegeln"}),
-    "FIG-OBJ-LEINENBINDEN": (leinenbinden, "0 0 60 34", "Leinenbinden und Schweisstuch im leeren Grab", {1: "aufgerollte Leinenbinden, loses Band und gefaltetes Tuch auf Steinbank vor dunkler Grabkammer", 2: "drei aufgerollte Leinenbinden und gefaltetes Tuch auf Steinbank vor Grabkammer"}),
-    "FIG-OBJ-PERLE": (perle, "0 0 30 18", "Perlen (kostbar)", {1: "Perlenkette als geschlossener Ring", 2: "Perlenkette als Ring mit grosser Perle in der Mitte"}),
+    "FIG-ORT-GRAB-VERSCHLOSSEN": (grab_zu, "0 0 64 44", "Grab (verschlossen, versiegelt)", {1: "Felsengrab, Rollstein vor der Öffnung, rotes Wachssiegel an der Fuge", 2: "Felsengrab, Rollstein, zwei rote Siegel an den Fugen"}),
+    "FIG-OBJ-LEINENBINDEN": (leinenbinden, "0 0 60 34", "Leinenbinden und Schweisstuch im leeren Grab", {1: "weisse Leinenbänder und gefaltetes Tuch auf Steinbank vor Felswand mit dunkler Grabkammer", 2: "weisse Leinenbänder und gefaltetes Tuch auf Steinbank"}),
+    "FIG-OBJ-PERLE": (perle, "0 0 30 18", "Perlen (kostbar)", {1: "Perlenkette mit grosser Anhänger-Perle und Glanzstern", 2: "Perlenkette mit Glanzstern"}),
     "FIG-OBJ-SCHLANGE": (schlange, "0 0 30 16", "Schlange", {1: "Schlange in S-Kurve mit Zunge", 2: "Schlange in S-Kurve mit Zunge"}),
-    "FIG-OBJ-WURM": (wurm, "0 0 24 12", "Wurm", {1: "schlanker Regenwurm ragt aus Erdloch", 2: "schlanker Regenwurm ragt aus Erdloch"}),
-    "FIG-ORT-KORNFELD": (kornfeld, "0 0 186 70", "Kornfeld (reifes Getreide)", {1: "fünf grosse goldene Ähren vor goldenem Feld", 2: "drei grosse Ähren vor goldenem Feld"}),
+    "FIG-OBJ-WURM": (wurm, "0 0 24 12", "Wurm", {1: "schlanker rosa Regenwurm mit Ringen ragt aus Erdloch", 2: "schlanker rosa Regenwurm mit Ringen ragt aus Erdloch"}),
+    "FIG-ORT-KORNFELD": (kornfeld, "0 0 186 70", "Kornfeld (reifes Getreide)", {1: "dichte Reihe grosser reifer Ähren vor dem Horizont", 2: "Reihe grosser reifer Ähren vor dem Horizont"}),
 }
 
 

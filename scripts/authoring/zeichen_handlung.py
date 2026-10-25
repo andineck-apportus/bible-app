@@ -1004,8 +1004,214 @@ def verstorben3():
     return "0 0 46 38", bier + body + neck + head + bands
 
 
+# ------------------------------------------------------------------------------------------------ Runde 3 (nach Kritik 2)
+# Kritik 2: Arme mit Kontur quer über dem Rumpf; neu: Arme in derselben Silhouette wie der Rumpf (merge), wie
+# Leitsystem-Piktogramme. Gegenstände ohne schwebende Teile; Hände nur, wo sie die Geste tragen.
+def M(hip, **kw):
+    kw.setdefault("merge", True)
+    return P(hip, **kw)
+
+
+@zeichen("BRINGEN@5", "bringen: eine Figur trägt etwas zu jemandem hin",
+         "Figur im Schritt trägt einen grossen Korb vor sich, Bewegungsstriche dahinter; mit Abstand vorn wartet eine zweite Figur mit offenen Händen")
+def bringen5():
+    a = M((12, 22), lean=6, an=(60, 100), af=None, ln_=(28, 6), lf=(-26, -8)).ground(37.4)
+    h = a.arm_n[2]
+    k = korb(h[0] + 2.6, h[1] - 1.4, 10.4, 7)
+    b = M((47, 22), n=-1, col=RED, an=(40, 75), af=None, ln_=(4, 0), lf=(-4, 0)).ground(37.4)
+    return "0 0 54 38", motion(4.6, a.hip[1] - 7, 1, 3, 3.2, 3.6) + a.svg(face=a.eye(), front_extra=k) + b.svg(face=b.eye() + laecheln(b))
+
+
+@zeichen("FLIEHEN@5", "fliehen / weggehen: jemand flieht oder läuft davon",
+         "Rennende Figur als geschlossene Silhouette (wie Notausgang-Piktogramm), blickt erschrocken zurück, Bewegungsstriche dahinter")
+def fliehen5():
+    a = M((20, 22), lean=20, an=(75, 140), af=(-50, -95), ln_=(75, 10), lf=(-40, -90), head=6).ground(37.4)
+    hx, hy = a.head
+    face = circ((hx - 1.9, hy - .7), .7, INK) + circ((hx + .5, hy - .7), .7, INK) + ln(f"M{f(hx - 3)} {f(hy - 2)}l1.6-.6M{f(hx + 1.6)} {f(hy - 2)}l-1.6-.6", .7) + \
+        circ((hx - .6, hy + 1.9), 1.3, INK) + circ((hx - .6, hy + 1.9), .85, "#7A3A2A")
+    return "0 0 40 38", motion(7.4, a.hip[1] - 8, 1, 3, 3.6, 5.5) + a.svg(face=face)
+
+
+@zeichen("NACHFOLGEN@5", "nachfolgen: jemandem nachfolgen, mit ihm gehen («Folge mir!»)",
+         "Vordere Figur geht voran, blickt lächelnd zurück und winkt mit offener Hand nach hinten («komm!»); die hintere Figur geht im gleichen Schritt hinterher")
+def nachfolgen5():
+    b = M((9, 22), col=RED, lean=6, an=(40, 25), af=None, ln_=(30, 4), lf=(-28, -8), s=.86).ground(37.4)
+    a = M((38, 22), lean=2, an=(-75, -100), af=None, ln_=(30, 4), lf=(-28, -8)).ground(37.4)
+    ha = H.place(H.hand_empfangend(BLUE, cuff_on=False), a.arm_n[2][0], a.arm_n[2][1], 0, .42, True)
+    return "0 0 48 38", b.svg(face=b.eye()) + a.svg(face=a.eye(dx=-1.8) + laecheln(a, dx=-.9), hand_n=ha)
+
+
+@zeichen("ABSTAND@5", "Abstand / vertraut sich nicht an: zwischen Personen besteht innerer Abstand",
+         "Zwei Figuren weit auseinander; die linke wendet sich der rechten mit offener Hand zu, die rechte hat sich abgewandt und blickt weg, verschlossen")
+def abstand5():
+    a = M((9, 22), col=RED, an=(70, 85), af=None, ln_=(4, 0), lf=(-4, 0)).ground(37.4)
+    ha = a.hand_at(H.hand_empfangend(RED, cuff_on=False), s=.4)
+    b = M((47, 22), col=BLUE, an=None, af=None, ln_=(4, 0), lf=(-4, 0), head=-4).ground(37.4)
+    mouth = ln(f"M{f(b.head[0] + .6)} {f(b.head[1] + 1.9)}h2", .9)
+    gap = ln("M27 33h8M27 33l2-1.6M27 33l2 1.6M35 33l-2-1.6M35 33l-2 1.6", 1, STONE_D)
+    return "0 0 56 38", a.svg(face=a.eye(), hand_n=ha) + gap + b.svg(face=b.eye() + mouth)
+
+
+@zeichen("RETTUNG@5", "retten / heraufholen: Gott holt jemanden aus der Not herauf",
+         "Figur bis zur Brust in den Wellen reckt beide Arme hoch; eine Hand von oben aus der Wolke packt sie am Handgelenk")
+def rettung5():
+    a = M((16, 34), an=(150, 168), af=(140, 160), ln_=None, lf=None, col=BLUE, front=True, legs=False)
+    hand = a.arm_n[2]
+    cloud = shape("M30 8Q28 2 34 2.6Q37 0 41 3Q46 2 46 7Q48 10 44 11H32Q28 11 30 8Z", "#FFFDF6", 1)
+    hx, hy = a.head
+    face = a.eye(dx=-1.4, dy=-.6) + a.eye(dx=1.4, dy=-.6) + circ((hx, hy + 1.9), 1.2, INK) + circ((hx, hy + 1.9), .8, "#7A3A2A")
+    h = rettende_hand(hand[0] - .2, hand[1] + 1.4, 45, .56, a.A, a.col, lang=15)
+    return "0 0 48 40", a.svg(face=face, hand_n=False) + wasser(0, 48, 29, 11, 6) + h + cloud
+
+
+@zeichen("VERFOLGEN@5", "verfolgen / Verfolgung: jemand wird verfolgt",
+         "Zwei rennende Figuren als geschlossene Silhouetten mit Abstand: vorn eine kleinere, die erschrocken zurückblickt, hinten eine grössere mit ausgestrecktem Arm")
+def verfolgen5():
+    v = M((44, 24), lean=20, an=(75, 140), af=None, ln_=(75, 10), lf=(-40, -90), col=BLUE, s=.76, head=6).ground(37.4)
+    hx, hy = v.head
+    vf = circ((hx - 1.4, hy - .6), .6, INK) + circ((hx - .2, hy + 1.6), .9, INK)
+    p = M((17, 22), lean=22, an=(88, 96), af=None, ln_=(75, 10), lf=(-40, -90), col=RED).ground(37.4)
+    pf = p.eye() + ln(f"M{f(p.head[0] + .4)} {f(p.head[1] - 1.8)}l2.2 .9", .8)
+    return "0 0 56 38", motion(35, v.hip[1] - 6, 1, 3, 3, 4, 1.2) + v.svg(face=vf) + motion(5, p.hip[1] - 8, 1, 3, 3.4, 3.6) + p.svg(face=pf)
+
+
+@zeichen("STOLPERN@5", "zu Fall bringen / Anstoss: jemand stolpert über ein Hindernis und fällt",
+         "Gehende Figur bleibt mit dem Fuss an einem grossen Stein hängen und kippt nach vorn, Arme nach vorn ausgestreckt (Warnschild «Stolpergefahr»)")
+def stolpern5():
+    a = M((14, 23), lean=40, an=(95, 100), af=None, ln_=(10, -6), lf=(-55, -95), head=45).ground(37.4)
+    foot = a.leg_n[2]
+    st = stein(foot[0] + 6, 37.6, 10, 6.6)
+    hx, hy = a.head
+    face = circ((hx + 1.4, hy - .4), .7, INK) + circ((hx + 1.4, hy + 2), .9, INK)
+    star = shape(f"M{f(foot[0] + 6)} 26.4l.7 1.6 1.7.2-1.3 1.1.4 1.7-1.5-.9-1.5.9.4-1.7-1.3-1.1 1.7-.2z", GOLD, .6)
+    return "0 0 44 38", ln("M1 37.6H43", 1, STONE_D) + a.svg(face=face) + st + star
+
+
+@zeichen("SCHWEIGEN@5", "schweigen: nicht reden, verstummen",
+         "Gesicht im Emoji-Stil mit geschlossenen Augen, ein schlanker Zeigefinger senkrecht über den Lippen wie 🤫, Hand unter dem Kinn")
+def schweigen5():
+    cx, cy, r = 16, 14.6, 13
+    o = gesicht(cx, cy, r, augen="zu")
+    o += ln(f"M{f(cx - 5)} {f(cy + 7)}h3.4M{f(cx + 1.6)} {f(cy + 7)}h3.4", 1.2)
+    o += H.place(H.hand_zeigend(cuff_on=False), cx + 1.3, cy + 20.4, -90, .56)
+    return "0 0 32 34", o
+
+
+@zeichen("UNTERORDNEN@5", "sich unterordnen: sich einer Ordnung oder Autorität fügen",
+         "Figur verneigt sich mit geradem Rücken und gefalteten Händen vor einer Figur mit Krone und Stab, die erhöht auf einer Stufe steht")
+def unterordnen5():
+    step = shape("M27 37.6V32H47V37.6Z", STONE, 1.1)
+    b = M((37, 17), n=-1, col=RED, an=(40, 70), af=None, ln_=(3, 0), lf=(-3, 0), s=.74).ground(32.2)
+    hx, hy, r = b.head[0], b.head[1], b.R
+    crown = shape(f"M{f(hx - 3.2)} {f(hy - r + .8)}l-.6-3.8 2 1.8 1.8-2.8 1.8 2.8 2-1.8-.6 3.8z", GOLD, .8)
+    hb = b.arm_n[2]
+    staff = ln(f"M{f(hb[0])} 32V{f(hy - 4)}", 3.4) + ln(f"M{f(hb[0])} 32V{f(hy - 4)}", 1.5, BROWN)
+    a = M((10, 24), lean=50, head=62, an=(80, 110), af=None, ln_=(0, 0), lf=(-2, 0)).ground(37.4)
+    return "0 0 48 38", ln("M0 37.6H27", 1, STONE_D) + step + a.svg(face=a.eye(dx=1.6, dy=.4)) + b.svg(face=b.eye(), behind=staff) + crown
+
+
+@zeichen("TOETEN@5", "töten / Mord: einen Menschen töten",
+         "Grosse Figur steht mit erhobenem Schwert hinter einer leblos am Boden liegenden Figur mit Kreuzaugen")
+def toeten5():
+    v = M((21, 34.2), lean=90, an=None, af=None, ln_=(-90, -90), lf=(-88, -92), col=BLUE, s=.9, n=-1)
+    vx, vy = v.head
+    xe = ln(f"M{f(vx - .8)} {f(vy - 2)}l1.6 1.6m0-1.6l-1.6 1.6M{f(vx - .8)} {f(vy + .6)}l1.6 1.6m0-1.6l-1.6 1.6", .8)
+    a = M((40, 21), lean=4, an=(70, 140), af=None, ln_=(16, 0), lf=(-14, 0), col=RED, n=-1, s=.9).ground(37.4)
+    hnd = a.arm_n[2]
+    sw = schwert(hnd[0], hnd[1], -15, 9.5)
+    return "0 0 50 38", ln("M1 37.6H49", 1, STONE_D) + v.svg(face=xe) + sw + a.svg(face=a.eye() + ln(f"M{f(a.head[0] - .6)} {f(a.head[1] - 1.9)}l-2.2 .9", .8))
+
+
+@zeichen("TAUFE@5", "taufen: mit Wasser taufen",
+         "Zwei Figuren stehen im Fluss; der Täufling faltet die Hände und neigt den Kopf, der Täufer giesst aus der Hand Wasser über seinen Kopf")
+def taufe5():
+    a = M((12, 28.6), col=GREEN, s=.84, lean=12, head=26, an=(60, 150), af=None, ln_=(4, 0), lf=(-4, 0))
+    b = M((33, 24), n=-1, col=BROWN, an=(120, 120), af=None, ln_=(4, 0), lf=(-4, 0))
+    hb = b.arm_n[2]
+    drops = "".join(shape(f"M{f(x)} {f(y)}q1.6 2.3 0 3.3q-1.6-1 0-3.3z", WATER, .7) for x, y in ((hb[0] - 2.2, hb[1] + 2.2), (hb[0] + .6, hb[1] + 3.2)))
+    return "0 0 42 38", a.svg(face=a.eye(dy=.6)) + b.svg(face=b.eye() + laecheln(b)) + drops + wasser(0, 42, 28.4, 9.6, 5.25)
+
+
+@zeichen("GASTFREUNDSCHAFT@5", "Gastfreundschaft / aufnehmen: Gäste aufnehmen, Reisende beherbergen",
+         "Haus mit Dach und offener, hell erleuchteter Tür; der Gastgeber steht daneben und weist mit offener Hand hinein; ein Wanderer mit Stab kommt heran")
+def gast5():
+    house = shape("M28 37.6V17L38 8.6 48 17V37.6Z", "#D8B48A", 1.1) + shape("M26.4 18L38 7.4 49.6 18", "none", 1.6) + \
+        shape("M33.6 37.6V25Q33.6 22.4 36.2 22.4H39.8Q42.4 22.4 42.4 25V37.6Z", "#F6DE8C", 1) + shape("M33.6 37.6V23.2L30.6 25V37.6Z", "#A97C4A", .9)
+    h = M((23, 22), n=1, col=GREEN, an=(60, 80), af=None, ln_=(4, 0), lf=(-4, 0), s=.84, head=-6).ground(37.4)
+    hh = h.hand_at(H.hand_empfangend(GREEN, cuff_on=False), s=.36)
+    g = M((7, 22), lean=4, an=(25, 15), af=None, ln_=(26, 4), lf=(-24, -6), col=BLUE, s=.8).ground(37.4)
+    hg = g.arm_n[2]
+    staff = ln(f"M{f(hg[0])} {f(hg[1] - 10)}L{f(hg[0] + 1.2)} 37.4", 3.4) + ln(f"M{f(hg[0])} {f(hg[1] - 10)}L{f(hg[0] + 1.2)} 37.4", 1.6, BROWN)
+    return "0 0 50 38", house + g.svg(face=g.eye()) + staff + h.svg(face=h.eye(dx=-1.7) + laecheln(h, dx=-.9), hand_n=hh)
+
+
+@zeichen("UMSTURZ@5", "umstürzen / zugrunde gehen: eine Stadt wird umgestürzt, geht unter",
+         "Ganze Stadt (Mauer mit Tor, zwei Türme, Häuser) kippt schräg um, Risse, Sturzbögen, Trümmer am Boden")
+def umsturz5():
+    city = (shape("M4 37.6V20H6.6V17.6H9V20H11.4V17.6H13.8V20H16.4V37.6Z", "#C9A574", 1)
+            + shape("M28 37.6V14H30.4V11.6H32.8V14H35.2V11.6H37.6V14H40V37.6Z", "#C9A574", 1)
+            + shape("M16.4 37.6V25L19.6 22 22.8 25 26 22 28 24V37.6Z", "#D8B48A", 1)
+            + shape("M18.6 37.6V32Q21.2 29.4 23.8 32V37.6Z", "#4A3828", .8)
+            + ln("M9.6 22l1.6 3-1.2 2.6 1.6 3M33 17l-1.6 3 1.4 3-1.6 3", .9))
+    o = f'<g transform="translate(-4 0) rotate(22 40 37.6)">{city}</g>'
+    arcs = ln("M2 16q2-6 8-9M7 21q1-5 5-8", 1.2, STONE_D)
+    rubble = shape("M2 37.6l1-2.6 2.8.4.4 2.2z", "#C9A574", .9) + shape("M8 37.6l.8-2 2.4.2.4 1.8z", "#B89868", .8) + shape("M40.4 37.6l1-2.4 2.6.6v1.8z", "#C9A574", .9)
+    return "0 0 46 38", o + arcs + rubble + ln("M0 37.6H46", 1, STONE_D)
+
+
+@zeichen("LOESEN@5", "loskaufen / befreien: jemand wird gegen Lösegeld freigekauft",
+         "Befreite Figur reckt froh die Arme hoch; vor ihren Füssen liegt eine gesprengte Kette und daneben ein Stapel Goldmünzen als Lösegeld")
+def loesen5():
+    a = M((22, 22), an=(140, 160), af=(140, 160), ln_=(6, 4), lf=(6, 4), col=BLUE, s=.8, front=True).ground(37.4)
+    face = a.eye(dx=-1.4, dy=-.6) + a.eye(dx=1.4, dy=-.6) + ln(f"M{f(a.head[0] - 1.8)} {f(a.head[1] + 1.3)}q1.8 1.8 3.6 0", .9)
+    chain = kette(4, 34.6, 0, 2) + kette(29.6, 34.6, 0, 2)
+    burst = ln("M18.4 31.4l-1-1.6M21.6 30.6v-1.8M24.8 31.4l1-1.6", 1.2, GOLD)
+    coins = "".join(H.muenze(x, y, 2.5) for x, y in ((39.4, 35), (44.4, 35), (41.9, 30.8)))
+    return "0 0 48 38", ln("M0 37.6H48", 1, STONE_D) + chain + burst + coins + a.svg(face=face)
+
+
+@zeichen("SANFTMUT@5", "Sanftmut / sanftmütig: sanft, ohne Gewalt und Härte",
+         "Eine Figur streichelt behutsam ein kleines Lamm mit vier Beinen (wie 🐑)")
+def sanftmut5():
+    lamb = (ln("M27 31v6M30 31.6v5.4M37 31.6v5.4M40 31v6", 2.6) + ln("M27 31v6M30 31.6v5.4M37 31.6v5.4M40 31v6", 1, "#4A3828")
+            + shape("M25 27Q24 22 28.6 21.6Q30.6 18.6 34 20Q37.6 18.6 39.6 21.4Q44 22 42.6 26.6Q43.6 31 39 32Q35 34.4 31 32.4Q25.4 33 25 27Z", "#FFFDF6", 1.1)
+            + shape("M42 22.6Q46.4 21 47.6 24.8Q48 28 45 28.6Q42 28.4 41.6 25.6Z", "#4A3828", .8) + circ((45.6, 24.4), .55, "#FFFDF6")
+            + shape("M42.6 22.4l-1.8-1.6 2.6-.4z", "#4A3828", .6))
+    a = M((11, 22), lean=10, an=(70, 105), af=None, ln_=(4, 0), lf=(-4, 0), col=BLUE, s=.9).ground(37.4)
+    a.arm_n[2] = (31, 20.6)
+    return "0 0 50 38", ln("M0 37.6H50", 1, STONE_D) + lamb + a.svg(face=a.eye(dy=.4) + laecheln(a))
+
+
+@zeichen("FREUNDLICH@5", "freundlich / gütig: freundlich und gütig mit anderen umgehen",
+         "Zwei Personen lächeln sich an; die linke wendet sich der rechten zu und legt ihr freundlich die Hand auf die Schulter")
+def freundlich5():
+    b = M((34, 22), n=-1, col=RED, an=None, af=None, ln_=(4, 0), lf=(-4, 0), s=.88).ground(37.4)
+    a = M((14, 22), lean=6, an=(75, 92), af=None, ln_=(4, 0), lf=(-4, 0), col=BLUE).ground(37.4)
+    a.arm_n[2] = (b.sh[0] - .4, b.sh[1] - .4)
+    a.arm_n[1] = (a.sh[0] + 6, a.sh[1] + 1)
+    fa = a.eye(dx=1.8, dy=-1.1) + laecheln(a, .9, 3.6)
+    fb = b.eye(dx=1.8, dy=-1.1) + laecheln(b, .9, 3.6)
+    return "0 0 46 38", b.svg(face=fb) + a.svg(face=fa)
+
+
+@zeichen("VERSTORBEN@5", "gestorben / Verstorbener: jemand ist gestorben, ein Leichnam",
+         "Ganz in Leinentücher gewickelter Körper mit verhülltem Kopf und Binden auf einer Totenbahre mit Tragstangen")
+def verstorben5():
+    bier = ln("M0.6 29.6H45.4", 2.6) + ln("M0.6 29.6H45.4", 1, BROWN) + shape("M5 29H41V31.4H5Z", BROWN, 1) + ln("M8 31.4V36.6M38 31.4V36.6", 2.6) + ln("M8 31.4V36.6M38 31.4V36.6", 1.1, BROWN)
+    body = shape("M13 29Q12 24.4 15 23.6Q24 22 34 23.6Q41 24.6 41.6 26.6Q42 29 40.2 29Z", "#EDE6D6", 1.1)
+    head = f'<ellipse cx="10" cy="24.8" rx="4.6" ry="4.2" fill="{INK}"/><rect x="11.6" y="22.6" width="4" height="6.4" fill="{INK}"/>' + \
+        f'<ellipse cx="10" cy="24.8" rx="3.5" ry="3.1" fill="#EDE6D6"/><rect x="11.6" y="23.6" width="4.2" height="4.4" fill="#EDE6D6"/>'
+    bands = ln("M7.4 23.4q2.6 1 5.4 0M7 26.4q3 1 6 0M19 23V29M25 22.6V29M31 22.8V29M37 23.6V29", .8, "#A89C84")
+    return "0 0 46 38", bier + body + head + bands
+
+
 # ------------------------------------------------------------------------------------------------ Auswahl
-FINAL = {}  # Name ohne @ → Fassung, wird nach den Tests gesetzt
+# Bestanden (Gestaltungskritik: Mehrheit «ok», Mittel ≥ 4; drei Runden 2026-10-25). Nicht bestandene Zeichen behalten ihre
+# bisherige Zeichnung; ihre besten Fassungen stehen oben als Entwürfe (OFFEN).
+FINAL = {"AUFERSTEHUNG": 1, "SCHLAFEN": 2, "SPRECHEN": 1, "STREIT": 3, "VERKUENDIGEN": 3, "TOETEN": 5, "VERSTORBEN": 5}
+OFFEN = {"BRINGEN": 5, "FLIEHEN": 5, "VERFOLGEN": 5, "SCHWEIGEN": 5, "UMSTURZ": 5, "NACHFOLGEN": 3, "ABSTAND": 3, "RETTUNG": 4,
+         "STOLPERN": 3, "UNTERORDNEN": 3, "TAUFE": 3, "GASTFREUNDSCHAFT": 3, "LOESEN": 2, "BESONNEN": 1, "SANFTMUT": 5,
+         "FREUNDLICH": 3}
 
 
 def build(name):

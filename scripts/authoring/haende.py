@@ -176,15 +176,15 @@ def hand_auf_schulter(sleeve=SLEEVE, cuff_on=True):
 
 
 def hand_verdorrt(sleeve=SLEEVE, cuff_on=True, haut="#B7A58C"):
-    """Verdorrte, gelähmte Hand (Mt 12,10), von der Seite: das Handgelenk knickt kraftlos nach unten, die dünnen Finger
-    sind steif zur Handfläche eingekrümmt; fahle Haut. Handgelenk (0,0) links (Unterarm waagrecht), Hand hängt bis y≈11."""
-    palm = [("f", "M-.4-2.6Q3.6-3.2 5.2-.4L5.6 6.2Q3 7.6.4 6.4L-.4 2.4Z")]
-    fing = [[("s", f"M{_f(x0)} 5.6Q{_f(x0 + .4)} {_f(yb)} {_f(x0 - 2.2)} {_f(yb + .2)}Q{_f(x0 - 3.6)} {_f(yb)} {_f(x0 - 3.2)} {_f(yb - 1.8)}", 1.9)]
-            for x0, yb in ((4.6, 10.6), (3.4, 11.2), (2.0, 10.4))]
-    thumb = [("s", "M.6 4.4Q-.6 6.6.4 8.2", 2)]
-    s = schichten(*[(f, O_INNEN) for f in fing], (palm, 0), (thumb, O_INNEN), fill=haut)
-    s += line("M1.4 1Q2.8 1.8 4.2 1", .5) + line("M1.6 3.2Q3 4 4.4 3.2", .5)  # Falten
-    return (cuff("M.6-3.6H-6V3.6H.6Z", sleeve) if cuff_on else "") + s
+    """Verdorrte, gelähmte Hand (Mt 12,10): schmale Hand von vorn, die dünnen Finger steif zu Haken gekrümmt (Spitzen
+    zeigen nach unten), Daumen angelegt, fahle Haut. Handgelenk (0,0), Finger bis y≈-18."""
+    palm = [("f", "M-4.2 0L-4.6-8Q-4.6-10.4-2.4-10.6L2.4-10.6Q4.6-10.4 4.4-8L4 0Z")]
+    fing = [[("s", f"M{_f(x0)} -9.6L{_f(x0)} {_f(top + 2.4)}Q{_f(x0)} {_f(top)} {_f(x0 + 1.6)} {_f(top)}Q{_f(x0 + 2.8)} {_f(top + .2)} {_f(x0 + 2.6)} {_f(top + 2.8)}", 1.85)]
+            for x0, top in ((-3.4, -16.4), (-1.2, -18.2), (1, -17.6), (3.1, -15.2))]
+    thumb = [("s", "M-3.6-2.6Q-5.8-4.6-5.4-8.2", 2.2)]
+    s = schichten(*[(f, O_INNEN) for f in fing], (thumb, 0), (palm, 0), fill=haut)
+    s += line("M-2-3.4Q-.6-5-1.4-7.6", .5) + line("M1.4-2.4Q2.4-4.6 1.6-6.6", .5)  # Falten
+    return (manschette(10.4, 4.4, 0, sleeve) if cuff_on else "") + s
 
 
 def arm_kraft(sleeve=SLEEVE):
