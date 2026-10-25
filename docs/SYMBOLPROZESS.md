@@ -178,6 +178,28 @@ Personen (drei getrennte Instanzen, Massstab Piktogramm-Designer) ergab: 139 ok,
 Überarbeitete Zeichen liegen in `scripts/authoring/bildsymbole_daten/ueberarbeitet/<thema>.json` ({Lexikon-ID: {vb, svg}});
 `bilder_anime.library()` ersetzt damit die bisherige Zeichnung unter derselben ID.
 
+## Runde 12: Emoji zuerst, prägnant (Entscheid Andi Neck 2026-10-25)
+
+Befund aus Runde 11 (Andi Neck): «Wenn du versuchst, Körperteile detailliert zu malen, wird es unverständlicher.» Von Hand
+gezeichnete SVG-Piktogramme erreichen die Qualität bewährter Sätze nicht zuverlässig, und die KI-Gestaltungskritik schwankt
+von Runde zu Runde. Darum:
+
+- **Emoji, wo es geht:** Grundlage ist Twemoji (Twitter, Inc. und Mitwirkende, CC BY 4.0, [LIZENZEN.md](../LIZENZEN.md)).
+  Ein Zeichen ist ein Emoji, höchstens zwei, in fester Anordnung (`einzeln`, `paar`, `abzeichen`, `verbot` = «nicht tun»,
+  `nein` = «falsch»); Hände und Gesichter im Hautton der Figuren. Werkzeug: `scripts/authoring/emoji_zeichen.py`,
+  Zuordnung `scripts/authoring/bildsymbole_daten/emoji_zuordnung.json` (je Zeichen mit Grund).
+- **Sonst prägnant:** Eigene Zeichnungen nur für Biblisches ohne Emoji (Tempel, Gesetzestafeln, Personen der Bibel …), im
+  Stil der Emoji: wenige grosse Formen, keine feinen Körperdetails, höchstens drei Elemente.
+- **Ideenfindung:** je Zeichen bis drei Vorschläge (Emoji-Namen, Anordnung, Grund), zuerst das eine Emoji, das den Begriff
+  im Alltag schon trägt; dazu vier naheliegende, aber verschiedene Begriffe als Ablenker (keine Synonyme).
+- **Kontrolle der Verständlichkeit:** Unterscheidungstest `zeichen_test.py --frage auswahl` (vier Instanzen wählen unter
+  der Bedeutung und den Ablenkern; bestanden ab drei Vierteln). Er prüft, ob ein Zeichen sich von verwandten Begriffen
+  abhebt – strenger und fairer als freies Benennen, das eine KI auch bei schwachen Zeichen errät. Fällt Vorschlag 1 durch,
+  wird Vorschlag 2 geprüft usw.
+- **Kontrolle der Umsetzung:** Gestaltungskritik (`--frage kritik`) nur noch für Zusammensetzungen und eigene Zeichnungen;
+  einzelne Emoji sind professionell gezeichnet.
+- **Mensch zuletzt:** Andi Neck sieht nur noch die Grenzfälle (kein Vorschlag bestanden) und eine Übersicht.
+
 ## Bestand prüfen
 
 Alle bestehenden Zeichen durchlaufen Schritt 4 als Ausgangsmessung. Ergebnis je Zeichen: behalten, neu entwerfen oder

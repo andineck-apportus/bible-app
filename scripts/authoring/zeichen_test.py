@@ -19,6 +19,9 @@ Optionen:
   --verteilen        Detailstufen (…@1, …@2, …@3) auf getrennte Sätze verteilen: jeder Satz (und damit jede Instanz)
                      sieht ein Zeichen nur in einer Stufe, alle Stufen kommen gleich oft vor
   --frage detail     zusätzlich je Zeichen: «Würde mehr Detail helfen, ist es egal, oder stört es?» und «Womit verwechselbar?»
+  --frage auswahl    Unterscheidungstest (seit 2026-10-25, Runde 12): je Zeichen fünf Bedeutungen zur Wahl, die richtige und vier
+                     naheliegende Ablenker aus dem Entwurf («ablenker»); bestanden, wenn mindestens drei Viertel der Instanzen richtig
+                     wählen (AUSGABE/auswahl.json). Prüft, ob das Zeichen sich von verwandten Begriffen abhebt
   --frage kritik     Gestaltungskritik statt Benennen (seit 2026-10-25, Runde 11): Instanzen sehen Bedeutung, Zeichen gross und
                      klein und beurteilen die Zeichnung (abbild, zeichnung, sinn 1–5, verwechselbar, urteil ok|überarbeiten|neu);
                      bestanden nur mit Mehrheitsurteil ok und allen Mittelwerten ≥ 4 (AUSGABE/kritik.json). Grund: der Blindtest
@@ -80,6 +83,10 @@ FRAGE_KRITIK = ("Auf dem Bild {blatt} siehst du nummerierte Bildzeichen einer Bi
                 "wenn ein Designer es so abgeben würde. Bedeutungen: {liste} ")
 ANTWORT_KRITIK = ("Antworte nur mit einem JSON-Objekt {{\"N01\": {{\"abbild\": 4, \"zeichnung\": 4, \"sinn\": 4, \"verwechselbar\": \"\", "
                   "\"urteil\": \"ok\", \"mangel\": \"\"}}, …}}, ohne weiteren Text.")
+FRAGE_AUSWAHL = ("Auf dem Bild {blatt} siehst du nummerierte kleine Bildzeichen aus einer Bilderbibel. Lies die Bilddatei mit dem "
+                 "Read-Werkzeug. Zu jeder Nummer stehen unten fünf mögliche Bedeutungen (A–E); wähle für jede Nummer die eine, die das "
+                 "Zeichen am besten trifft – nur nach dem Bild, ohne zu raten, was der Zeichner wohl wollte. Auswahl: {liste} ")
+ANTWORT_AUSWAHL = "Antworte nur mit einem JSON-Objekt {{\"N01\": \"C\", …}}, ohne weiteren Text."
 ANTWORT = "Antworte nur mit einem JSON-Objekt {{\"N01\": \"…\", …}}, ohne weiteren Text."
 ANTWORT_DETAIL = ("Beantworte je Nummer zusätzlich: Würde mehr Detail helfen, das Zeichen zu erkennen, ist es egal, oder würde es "
                   "stören (\"mehr\", \"egal\" oder \"stört\")? Womit könntest du es verwechseln (ein bis drei Wörter)? Antworte nur "
@@ -197,7 +204,10 @@ def main():
         cells = DG.Cells(comp)
         k_scale = px / cells.ICON_H
     kritik = opts["--frage"] == "kritik"
-    if kritik:
+    auswahl = opts["--frage"] == "auswahl"
+    if auswahl:
+        frage = FRAGE_AUSWAHL + ANTWORT_AUSWAHL
+    elif kritik:
         frage = FRAGE_KRITIK + ANTWORT_KRITIK
     elif opts["--frage"] == "abbild":
         frage = (FRAGE_ABBILD_ZELLE if zelle else FRAGE_ABBILD) + ANTWORT_ABBILD
@@ -253,9 +263,22 @@ def main():
     n = int(opts["--befragen"])
     if n:
         from concurrent.futures import ThreadPoolExecutor
+        auswahl_key = {}
         jobs = [(pgn, r) for pgn in pages for r in range(n)]
         with ThreadPoolExecutor(8) as ex:
             def liste(pgn):
+                if auswahl:  # je Zeichen die richtige Bedeutung und vier Ablenker (aus «ablenker» im Entwurf), gemischt
+                    parts = []
+                    for no, k in key[pgn].items():
+                        e = ent.get(k) or {}
+                        opts_ = [e.get("bedeutung") or base(k)] + list(e.get("ablenker") or [])[:4]
+                        rnd = random.Random(hash(k) % 10000)
+                        order = list(range(len(opts_)))
+                        rnd.shuffle(order)
+                        letters = "ABCDE"
+                        auswahl_key.setdefault(k, letters[order.index(0)])
+                        parts.append(f"{no}: " + "; ".join(f"{letters[i]}) {opts_[j]}" for i, j in enumerate(order)))
+                    return " | ".join(parts)
                 if not kritik:
                     return ""
                 lex_ = {p_.stem: json.loads(p_.read_text(encoding="utf-8")) for p_ in (ROOT / "data/illustrations/lexicon").glob("FIG-*.json")} if not hasattr(liste, "lx") else liste.lx
@@ -271,6 +294,14 @@ def main():
                 ans.setdefault(k, []).append(v)
         (out / "antworten.json").write_text(json.dumps(ans, indent=1, ensure_ascii=False), encoding="utf-8")
         print(f"PASS: {n} Instanzen je Blatt, Antworten in {out / 'antworten.json'}")
+        if auswahl:  # Unterscheidungstest: Anteil richtiger Wahl; bestanden mit mindestens drei Vierteln
+            summ = {}
+            for k, v in ans.items():
+                got = [str(x.get("antwort", "")).strip()[:1].upper() for x in v]
+                ok = sum(1 for g in got if g == auswahl_key.get(k))
+                summ[k] = {"richtig": ok, "von": len(got), "antworten": got, "loesung": auswahl_key.get(k), "bestanden": ok * 4 >= 3 * len(got)}
+            (out / "auswahl.json").write_text(json.dumps(summ, indent=1, ensure_ascii=False), encoding="utf-8")
+            print(f"PASS: Unterscheidungstest – bestanden {sum(1 for x in summ.values() if x['bestanden'])} von {len(summ)}; {out / 'auswahl.json'}")
         if kritik:  # Zusammenfassung: Mehrheitsurteil und Mittelwerte; bestanden nur mit Urteil ok und allen Mitteln ≥ 4
             summ = {}
             for k, v in ans.items():
