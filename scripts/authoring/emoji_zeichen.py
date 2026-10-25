@@ -65,12 +65,18 @@ def _soft(hexcol):
     return "#%02X%02X%02X" % (round(r * 255), round(g * 255), round(b * 255))
 
 
-def stil(b):
+# Personen-Emoji: Haar dunkel statt Emoji-Gelb, Jeans in Erdtönen wie die Gewänder der Figuren (Sichtprüfung 2026-10-25)
+PERSON = {"#ffe51e": "#4A3326", "#4289c1": "#9C7B55", "#2a6797": "#7A5C3E"}
+PERSON_RE = r"^(person|people|man|woman|child|baby|couple|family)"
+
+
+def stil(b, person=False):
     """Twemoji im Stil der Bilder (Hinweis Andi Neck 2026-10-25: «es fehlt die Konsistenz»): dunkle Kontur aussen wie bei
     den Figuren (Teile dick in Tinte darunter), Hautton der Figuren, Farben leicht gedämpft."""
     import re as _re
+    cmap = {**SKIN, **(PERSON if person else {})}
     col = _re.sub(r'(fill|stroke)="(#[0-9a-fA-F]{3,6})"',
-                  lambda m: f'{m.group(1)}="{SKIN.get(m.group(2).lower(), _soft(m.group(2)))}"', b)
+                  lambda m: f'{m.group(1)}="{cmap.get(m.group(2).lower(), _soft(m.group(2)))}"', b)
     ink = _re.sub(r'(fill|stroke)="#[0-9a-fA-F]{3,6}"', lambda m: f'{m.group(1)}="{INK}"', b)
     ink = _re.sub(r'fill="(?:#fff|#ffffff|white)"', f'fill="{INK}"', ink, flags=_re.I)
     return (f'<g fill="{INK}" stroke="{INK}" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round">{ink}</g>'
@@ -104,7 +110,8 @@ def zeichen(icons, e):
 
 def _zeichen(icons, e):
     names, an = e["emoji"], e.get("anordnung", "einzeln")
-    bs = [stil(body(icons, n)[1]) for n in names]
+    import re as _re
+    bs = [stil(body(icons, n)[1], bool(_re.match(PERSON_RE, n))) for n in names]
     if an == "einzeln" or len(bs) == 1 and an not in ("verbot", "nein"):
         return "0 0 36 36", bs[0]
     if an == "paar":  # Hauptmotiv gross, zweites etwas kleiner und tiefer, leicht überlappend

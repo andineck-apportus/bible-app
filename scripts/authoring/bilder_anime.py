@@ -1293,8 +1293,30 @@ def library():
             lib, n = re.subn(r'<symbol id="%s"[^>]*>.*?</symbol>' % re.escape(sid), lambda _m: new, lib, count=1, flags=re.S)
             if n:
                 vb[fid] = (sid, e["vb"])
+    lib = austreiben(lib, vb)
     lib = einheitlich(lib, vb)
     return lib, vb
+
+
+def austreiben(lib, vb):
+    """FIG-ZEICHEN-AUSTREIBEN aus dem Dämon-Zeichen (dunkler Schatten ohne Gesicht) und einem Pfeil hinaus
+    (Sichtprüfung 2026-10-25: Emoji-Teufel brach die Regel «keine Fratze», Verbotsring hiess «nicht tun»)."""
+    if "FIG-ZEICHEN-DAEMON" not in vb:
+        return lib
+    sid_d, box = vb["FIG-ZEICHEN-DAEMON"]
+    m = re.search(r'<symbol id="%s"[^>]*>(.*?)</symbol>' % re.escape(sid_d), lib, re.S)
+    if not m:
+        return lib
+    inner = (f'<svg x="0" y="2" width="30" height="30" viewBox="{box}">{m.group(1)}</svg>'
+             '<path d="M30 17H45" stroke="#2B211A" stroke-width="4.2" stroke-linecap="round" fill="none"/>'
+             '<path d="M39 10.5L46.5 17L39 23.5" stroke="#2B211A" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>')
+    sid = vb.get("FIG-ZEICHEN-AUSTREIBEN", ("an-e-zeichen-austreiben",))[0]
+    new = f'<symbol id="{sid}" viewBox="-1 0 50 34">{inner}</symbol>'
+    lib, n = re.subn(r'<symbol id="%s"[^>]*>.*?</symbol>' % re.escape(sid), lambda _m: new, lib, count=1, flags=re.S)
+    if not n:
+        lib = lib.replace("\n</defs></svg>", "\n" + new + "\n</defs></svg>", 1)
+    vb["FIG-ZEICHEN-AUSTREIBEN"] = (sid, "-1 0 50 34")
+    return lib
 
 
 EMOJI_IDS = None
