@@ -1323,6 +1323,43 @@ def austreiben(lib, vb):
 EMOJI_IDS = None
 
 
+EINHEIT = {}  # sid -> (x, y, w, h, Tinte, Farbe) der einheitlich gesetzten Zeichen
+
+
+def duenn(lib, sids):
+    """Dünnere Kontur für gross gesetzte Zeichen (Hinweis Andi Neck 2026-10-25: «komischer fetter Rand um Wasser und Baum»):
+    die Kontur ist relativ zur Zeichengrösse; gross in einer Szene wurde sie viel dicker als die Umrisse der Figuren.
+    Variante «<sid>-d» mit etwa einem Drittel der Strichstärke (bei rund 90 Einheiten Bildgrösse so stark wie bei den Figuren)."""
+    import emoji_zeichen as _ez
+    add = []
+    for sid in sorted(sids):
+        x, y, w, h, ink, col = EINHEIT[sid]
+        sw = max(w, h) * .024
+        pad = sw / 2
+        add.append(f'<symbol id="{sid}-d" class="einheitlich" viewBox="{x - pad:g} {y - pad:g} {w + 2 * pad:g} {h + 2 * pad:g}">'
+                   f'<g fill="{_ez.INK}" stroke="{_ez.INK}" stroke-width="{sw:.2f}" stroke-linejoin="round" stroke-linecap="round">{ink}</g>{col}</symbol>')
+    return lib.replace("\n</defs></svg>", "\n" + "\n".join(add) + "\n</defs></svg>", 1) if add else lib
+
+
+GROSS = 44  # ab dieser Grösse (Einheiten im Bild) gilt ein Zeichen als gross gesetzt
+
+
+def gross_setzen(svg, used):
+    """Verweise auf gross gesetzte einheitliche Zeichen auf die dünnere Variante umstellen."""
+    def rep(m):
+        tag = m.group(0)
+        sid = m.group(1)
+        if sid not in EINHEIT:
+            return tag
+        ww = re.search(r'\swidth="([\d.]+)"', tag)
+        hh = re.search(r'\sheight="([\d.]+)"', tag)
+        if max(float(ww.group(1)) if ww else 0, float(hh.group(1)) if hh else 0) < GROSS:
+            return tag
+        used.add(sid)
+        return tag.replace(f'href="#{sid}"', f'href="#{sid}-d"', 1)
+    return re.sub(r'<use href="#([^"]+)"[^>]*>', rep, svg)
+
+
 def einheitlich(lib, vb):
     """Ein Stil für alle Zeichen (Hinweis Andi Neck 2026-10-25: «es wäre schön, wenn alles einheitlich ist»): eigene Zeichen
     (Gegenstände, Orte, Handlungen, Begriffe) bekommen dieselbe Behandlung wie die Twemoji-Zeichen – eine gleich starke dunkle
@@ -1357,6 +1394,7 @@ def einheitlich(lib, vb):
         new = (f'<symbol id="{sid}" class="einheitlich" viewBox="{x - pad:g} {y - pad:g} {w + 2 * pad:g} {h + 2 * pad:g}">'
                f'<g fill="{_ez.INK}" stroke="{_ez.INK}" stroke-width="{sw:.2f}" stroke-linejoin="round" stroke-linecap="round">{ink}</g>{col}</symbol>')
         lib = lib[:m.start()] + new + lib[m.end():]
+        EINHEIT[sid] = (x, y, w, h, ink, col)
         for f2, (s2, b2) in list(vb.items()):
             if s2 == sid:
                 vb[f2] = (sid, f"{x - pad:g} {y - pad:g} {w + 2 * pad:g} {h + 2 * pad:g}")
@@ -1624,10 +1662,6 @@ def run():
     lib, vb = library()
     _VB.update(vb)
     n = 0
-    f = OUT / "_bibliothek.svg"
-    if not f.exists() or f.read_text(encoding="utf-8") != lib:
-        f.write_text(lib, encoding="utf-8")
-        n += 1
     for k in vb:
         if k not in lex:
             raise SystemExit(f"{k} nicht im Bildlexikon")
@@ -1639,9 +1673,17 @@ def run():
              "renderings": {k: {"symbol": v[0], "viewbox": v[1]} for k, v in sorted(vb.items())},
              "license": LIC, "authorship_de": AUTH, "knowledge": {"asserted_at": DATE, "supersedes": None}}
     n += write(D / "illustrations/styles/ILLSTYLE-ANIME.json", style, "Stil «Anime» (Pilot) angelegt")
+    svgs, used = {}, set()
     for rid, (brief_id, gen, alt, alt_g) in ILL.items():
         CUR[0] = rid.replace("ILL-ANI-", "").lower()
-        svg = gen()
+        svgs[rid] = gross_setzen(gen(), used)
+    lib = duenn(lib, used)
+    f = OUT / "_bibliothek.svg"
+    if not f.exists() or f.read_text(encoding="utf-8") != lib:
+        f.write_text(lib, encoding="utf-8")
+        n += 1
+    for rid, (brief_id, gen, alt, alt_g) in ILL.items():
+        svg = svgs[rid]
         f = OUT / f"{rid}.svg"
         if not f.exists() or f.read_text(encoding="utf-8").strip() != svg:
             f.write_text(svg + "\n", encoding="utf-8")

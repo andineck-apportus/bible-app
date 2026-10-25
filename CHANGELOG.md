@@ -2,6 +2,18 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.104 — 2026-10-25 — Suche mit Buchanfang, Bilder nicht zu klein, Blatt wegwischen
+
+Hinweise Andi Neck:
+- **Suche:** Ein eindeutiger Buchanfang genügt («matt 5» findet Matthäus 5) und wird beim Weitertippen gleich als Kürzel übernommen («Mt 5»), damit Kapitel und Vers direkt folgen können. Mehrdeutige Anfänge («ma») bleiben, wie sie sind; Textsuche unverändert.
+- **Bilder nicht zu klein:** Neben dem Text steht ein Bild erst ab 1000 px Fensterbreite und bleibt dort mindestens 460 px breit; schmaler steht es in voller Breite unter dem Text (vorher ab 760 px, die Bilder schrumpften bis zur Unlesbarkeit). Versbilder ebenso, mindestens 400 px.
+- **Blatt unten wegwischen:** Griff und Kopf mit «Schliessen» bleiben beim Scrollen oben stehen; nach unten wischen am Griff oder Kopf schliesst das Blatt (wie in mobilen Apps), im Inhalt ebenfalls, wenn ganz nach oben gescrollt ist.
+
+## v0.103 — 2026-10-25 — Gross gesetzte Zeichen mit feiner Kontur
+
+Hinweis Andi Neck: «komischer fetter Rand um das Wasser und den Baum» (Bild «Die Bibel»).
+- Die einheitliche Kontur wächst mit der Zeichengrösse; gross in einer Szene (Berg, Grab, neue Schöpfung) wurde sie viel dicker als die Umrisse der Figuren. Zeichen ab 44 Einheiten Bildgrösse verweisen jetzt auf eine Variante mit etwa einem Drittel der Strichstärke (`bilder_anime.duenn`, `gross_setzen`); klein (Stichwortband, Zellen) bleibt die Kontur, wie sie war.
+
 ## v0.102 — 2026-10-25 — Text bleibt im Kasten, Prüfung immer dabei
 
 Hinweis Andi Neck: Einige Texte ragten über ihren Kasten (z. B. «Plappert nicht wie die Heiden»).
