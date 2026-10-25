@@ -22,7 +22,7 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     assert.equal(await p.$$eval('.sheet [data-learn^="start:"]',x=>x.length),6,'sechs Lernmethoden');
     await p.click('[data-learn="start:cards"]');await p.waitForTimeout(600);
     assert(await p.$('.sheet .learn-img svg'),'Karteikarte mit Bild');await p.click('[data-learn=reveal]');await p.click('[data-learn="rate:good"]');
-    const st=await p.evaluate(()=>JSON.parse(localStorage.getItem('bible:learn')||'{}'));assert(Object.values(st).some(x=>x.box===1&&x.due>Date.now()),'Leitner: Kasten 1, nächste Wiederholung gesetzt');
+    const st=await p.evaluate(()=>JSON.parse(localStorage.getItem('bible:learn')||'{}'));assert(Object.values(st).some(x=>x.box===2&&x.due>Date.now()+2*864e5),'Leitner: «Gewusst» → Kasten 2, nächste Wiederholung in 3 Tagen');
     await p.click('[data-learn=menu]');await p.click('[data-learn="start:letters"]');await p.waitForTimeout(400);
     const fl=await p.$eval('.sheet .learn-letters',e=>e.textContent);assert(fl.split(' ').every(w=>w.replace(/[^\p{L}]/gu,'').length<=1),'Anfangsbuchstaben');
     await p.click('[data-learn=menu]');await p.click('[data-learn="start:cloze"]');await p.waitForTimeout(400);
@@ -40,6 +40,7 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     assert(await p.$('.sheet .learn-pic.nowords'),'Bildkarte ohne Worte');
     assert(!await p.evaluate(()=>[...document.querySelectorAll('.sheet .learn-pic text')].some(t=>t.getBoundingClientRect().width>0&&!t.classList.contains('pn-n'))),'Bildkarte: kein Text sichtbar');
     await p.click('[data-learn=reveal]');await p.waitForTimeout(300);assert(await p.$('.sheet .body'),'Bildkarte: Zusammenfassung nach dem Aufdecken');
+    assert.equal(await p.$$eval('.sheet .rate3 button',x=>x.length),3,'drei Bewertungen: nicht gewusst, teilweise, gewusst');
     await p.click('[data-learn="rate:good"]');await p.waitForTimeout(300);assert(await p.evaluate(()=>Object.keys(JSON.parse(localStorage.getItem('bible:learn')||'{}')).some(k=>k.startsWith('img:'))),'Bildkarte: Lernstand gespeichert');
     assert.deepEqual(errs,[],'keine Fehler: '+errs.join('; '));
     console.log('PASS: Merkverse als Zeichen/Karte/aus; Lernen mit Karteikarten (Leitner), Anfangsbuchstaben, Lückentext, Wörter ordnen, Stellen zuordnen, Bildkarten ohne Worte.');
