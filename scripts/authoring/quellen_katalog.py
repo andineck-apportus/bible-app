@@ -192,7 +192,7 @@ C = [
   ["https://github.com/STEPBible/STEPBible-Data"], "https://github.com/STEPBible/STEPBible-Data", "Umrechnung der Verszählungen."),
  ("SRC-OPENBIBLE-XREF", "OpenBible.info Querverweise", "all", "aux", "free", "BY", "used", ["data/crossrefs/XREF-OPENBIBLE-*.json"],
   ["https://www.openbible.info/labs/cross-references/", "https://github.com/scrollmapper/bible_databases"], "https://www.openbible.info/labs/cross-references/", "344 799 Querverweise (Kopie über scrollmapper/bible_databases)."),
- ("SRC-TWEMOJI", "Twemoji (Twitter, Inc. und Mitwirkende)", "all", "aux", "free", "BY", "used", ["data/illustrations/emoji/twemoji-auszug.json"],
+ ("SRC-TWEMOJI", "Twemoji (Twitter, Inc. und Mitwirkende)", "all", "aux", "free", "BY", "used", ["vendor/twemoji/twemoji-auszug.json"],
   ["https://github.com/jdecked/twemoji", "https://www.npmjs.com/package/@iconify-json/twemoji"], "https://github.com/jdecked/twemoji",
   "Grundlage der Bildzeichen seit 2026-10-25 (Entscheid Andi Neck: Emoji, wo es geht); nur benutzte Emoji als Auszug, Hautton gewählt, teils kombiniert."),
 ]

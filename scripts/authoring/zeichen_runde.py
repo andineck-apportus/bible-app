@@ -10,7 +10,7 @@ Ablauf:
   3. Wahl je Zeichen: der erste bestandene Vorschlag; sonst das Zeichen mit den meisten richtigen Antworten (bei Gleichstand
      das Emoji, weil professionell gezeichnet). Ohne Emoji-Vorschlag («eigen») bleibt das bisherige Zeichen und wird als
      offen gemeldet.
-Ausgabe: scripts/authoring/bildsymbole_daten/emoji_zuordnung.json (gewählte Emoji, mit Ergebnis) und ein Bericht
+Ausgabe: scripts/authoring/emoji_zuordnung.json (gewählte Emoji, mit Ergebnis) und ein Bericht
 reports/zeichen-runde12-<datum>.json; danach emoji_zeichen.py ausführen.
 
     python3 scripts/authoring/zeichen_runde.py VORSCHLAEGE.json ARBEITSORDNER [--instanzen 4]
@@ -98,7 +98,7 @@ def main():
                        "test": f"{best['richtig']}/{best['von']} (bisher {alt_r if alt_r >= 0 else '–'})", "bestanden": bool(ok)}
         bericht[fid] = {"name": lex_name(fid), "gewaehlt": "emoji" if fid in zu else "bisher", "bisher": e["bisher"],
                         "versuche": e["versuche"], "eigen": vor[fid].get("eigen", False), "eigen_idee": vor[fid].get("eigen_idee", "")}
-    (ROOT / "scripts/authoring/bildsymbole_daten/emoji_zuordnung.json").write_text(json.dumps(zu, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    (ROOT / "scripts/authoring/emoji_zuordnung.json").write_text(json.dumps(zu, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     rep = ROOT / f"reports/zeichen-runde12-{datetime.date.today().isoformat()}.json"
     rep.write_text(json.dumps({"datum": datetime.date.today().isoformat(), "instanzen": n, "methode": "zeichen_test.py --frage auswahl",
                                "zeichen": bericht}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")

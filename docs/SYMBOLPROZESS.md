@@ -187,7 +187,7 @@ von Runde zu Runde. Darum:
 - **Emoji, wo es geht:** Grundlage ist Twemoji (Twitter, Inc. und Mitwirkende, CC BY 4.0, [LIZENZEN.md](../LIZENZEN.md)).
   Ein Zeichen ist ein Emoji, höchstens zwei, in fester Anordnung (`einzeln`, `paar`, `abzeichen`, `verbot` = «nicht tun»,
   `nein` = «falsch»); Hände und Gesichter im Hautton der Figuren. Werkzeug: `scripts/authoring/emoji_zeichen.py`,
-  Zuordnung `scripts/authoring/bildsymbole_daten/emoji_zuordnung.json` (je Zeichen mit Grund).
+  Zuordnung `scripts/authoring/emoji_zuordnung.json` (je Zeichen mit Grund).
 - **Sonst prägnant:** Eigene Zeichnungen nur für Biblisches ohne Emoji (Tempel, Gesetzestafeln, Personen der Bibel …), im
   Stil der Emoji: wenige grosse Formen, keine feinen Körperdetails, höchstens drei Elemente.
 - **Ideenfindung:** je Zeichen bis drei Vorschläge (Emoji-Namen, Anordnung, Grund), zuerst das eine Emoji, das den Begriff
@@ -199,6 +199,12 @@ von Runde zu Runde. Darum:
 - **Kontrolle der Umsetzung:** Gestaltungskritik (`--frage kritik`) nur noch für Zusammensetzungen und eigene Zeichnungen;
   einzelne Emoji sind professionell gezeichnet.
 - **Mensch zuletzt:** Andi Neck sieht nur noch die Grenzfälle (kein Vorschlag bestanden) und eine Übersicht.
+
+Ergebnis Runde 12 (2026-10-25): 421 Zeichen geprüft; bisherige Zeichen bestanden den Unterscheidungstest zu 376, Vorschlag 1
+zu 348 von 416, Vorschlag 2 zu 22 von 45, Vorschlag 3 zu 3 von 10. Übernommen: 333 Emoji-Zeichen; bisher behalten: 48
+«eigen» (kein passendes Emoji) und 2 Doppelte (Licht, vollbracht). Lehre: Der Unterscheidungstest mit fünf Antworten ist für
+eine KI leicht; er taugt als Sicherung gegen Fehlgriffe, nicht als Qualitätsmass. Nächster Schritt: prägnante eigene Zeichen
+für die 48 «eigen» nach den Regeln oben; schwerere Ablenker (engste Nachbarbegriffe im Lexikon) für eine strengere Prüfung.
 
 ## Bestand prüfen
 

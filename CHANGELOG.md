@@ -2,6 +2,14 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.99 — 2026-10-25 — Bildzeichen aus Twemoji
+
+Entscheid Andi Neck: «Emoji, wo es geht; sonst prägnant» (detailliert gemalte Körperteile wurden unverständlicher).
+- **333 Bildzeichen aus Twemoji** (CC BY 4.0, Twitter, Inc. und Mitwirkende): ein Emoji oder zwei in fester Anordnung (nebeneinander, Zusatzzeichen, Verbotskreis «nicht tun», rotes X «falsch»), Hände und Gesichter im Hautton der Figuren. Werkzeug `emoji_zeichen.py`, Auszug `vendor/twemoji/twemoji-auszug.json`, Lizenz in LIZENZEN.md, Quellenkatalog (SRC-TWEMOJI) und Bildlegende.
+- **Automatische Wahl** (`zeichen_runde.py`): vier Instanzen schlugen je Zeichen bis drei Emoji und vier Ablenker vor; neuer Unterscheidungstest `zeichen_test.py --frage auswahl` (richtige Bedeutung unter fünf wählen, vier Instanzen) prüfte das bisherige Zeichen und die Vorschläge nacheinander. Gewählt wurde der erste bestandene Vorschlag, sonst das bessere Zeichen.
+- **Bisher behalten:** 48 biblische Besonderheiten ohne passendes Emoji (Tempel, Gesetzestafeln, Altar, Thron, Golgota …), Licht und vollbracht (sonst doppelt), Personen und Rollen (Porträts).
+- Grenze: Der Unterscheidungstest ist nachsichtig (auch die bisherigen Zeichen bestanden 376 von 421); er fängt grobe Fehldeutungen und Verwechslungen ab, die Qualität der Zeichnung kommt von Twemoji. Bericht `reports/zeichen-runde12-2026-10-25.json`.
+
 ## v0.98 — 2026-10-25 — Zeichen-Durchsicht Runde 11
 
 Hinweis Andi Neck: Hände teils unverständlich, Almosen wie Schüssel, Prozess verbessern.

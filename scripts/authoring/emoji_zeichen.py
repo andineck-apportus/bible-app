@@ -5,7 +5,7 @@ Von Hand gezeichnete Piktogramme, besonders Körperteile, wurden mit mehr Detail
 Zeichen deshalb aus Twemoji (Twitter, Inc. und Mitwirkende, https://github.com/jdecked/twemoji, CC BY 4.0): ein Emoji,
 höchstens zwei, nach einer festen Anordnung. Hände und Gesichter in einem Hautton, der zu den Figuren passt.
 
-Zuordnung: scripts/authoring/bildsymbole_daten/emoji_zuordnung.json
+Zuordnung: scripts/authoring/emoji_zuordnung.json
     {"FIG-…": {"emoji": ["palm-up-hand", "coin"], "anordnung": "paar", "grund_de": "…"}, …}
 Anordnungen:
     einzeln   ein Emoji
@@ -18,7 +18,7 @@ Anordnungen:
     python3 scripts/authoring/emoji_zeichen.py --namen D  # Liste aller Emoji-Namen nach D (für die Zuordnung)
     python3 scripts/authoring/emoji_zeichen.py --entwuerfe E.json Z.json   # Zuordnungsvorschläge Z als Entwürfe für zeichen_test.py
 
-Schreibt data/illustrations/emoji/twemoji-auszug.json (nur benutzte Emoji, mit Herkunft und Lizenz) und
+Schreibt vendor/twemoji/twemoji-auszug.json (nur benutzte Emoji, mit Herkunft und Lizenz) und
 scripts/authoring/bildsymbole_daten/ueberarbeitet/zzz-emoji.json (wird von bilder_anime.library() übernommen).
 Das vollständige Paket @iconify-json/twemoji wird bei Bedarf mit npm in ~/.cache/atmo-emoji geholt (nicht im Repository).
 """
@@ -30,8 +30,8 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 CACHE = pathlib.Path.home() / ".cache/atmo-emoji"
 PKG = "@iconify-json/twemoji@1.2.5"
-ZUORDNUNG = ROOT / "scripts/authoring/bildsymbole_daten/emoji_zuordnung.json"
-AUSZUG = ROOT / "data/illustrations/emoji/twemoji-auszug.json"
+ZUORDNUNG = ROOT / "scripts/authoring/emoji_zuordnung.json"
+AUSZUG = ROOT / "vendor/twemoji/twemoji-auszug.json"
 OUT = ROOT / "scripts/authoring/bildsymbole_daten/ueberarbeitet/zzz-emoji.json"
 TON = "medium-light-skin-tone"  # passt zu den Figuren (Haut #E2AE80)
 HERKUNFT = {"quelle": "Twemoji (Twitter, Inc. und Mitwirkende), https://github.com/jdecked/twemoji, über " + PKG,
