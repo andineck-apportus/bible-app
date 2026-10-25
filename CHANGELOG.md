@@ -2,6 +2,11 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.103 — 2026-10-25 — Gross gesetzte Zeichen mit feiner Kontur
+
+Hinweis Andi Neck: «komischer fetter Rand um das Wasser und den Baum» (Bild «Die Bibel»).
+- Die einheitliche Kontur wächst mit der Zeichengrösse; gross in einer Szene (Berg, Grab, neue Schöpfung) wurde sie viel dicker als die Umrisse der Figuren. Zeichen ab 44 Einheiten Bildgrösse verweisen jetzt auf eine Variante mit etwa einem Drittel der Strichstärke (`bilder_anime.duenn`, `gross_setzen`); klein (Stichwortband, Zellen) bleibt die Kontur, wie sie war.
+
 ## v0.102 — 2026-10-25 — Text bleibt im Kasten, Prüfung immer dabei
 
 Hinweis Andi Neck: Einige Texte ragten über ihren Kasten (z. B. «Plappert nicht wie die Heiden»).
