@@ -95,6 +95,9 @@ def block_h(v, fs, maxw, weight="700", maxlines=14):
     return n * fs * 1.18
 
 
+EMPTY_NOTE = {"de": "im Text nicht genannt", "gsw": "im Text nöd gnännt"}
+
+
 def initials(v):
     """Anfangsbuchstaben je Sprache («Selig sind die Armen» → «S. s. d. A.») für die Fassung «ohne Worte»."""
     if not v:
@@ -141,7 +144,7 @@ class Cells:
     def height(self, z, w):
         """Höhe einer Zelle bei Breite w."""
         if z.get("empty") and not (z.get("a") or z.get("b")):
-            return 18
+            return max(18, block_h(EMPTY_NOTE, 6.8, w - 8, "400", 3) + 8)
         tw = w - 2 * self.PAD - (20 if z.get("who") else 0)
         h = self.PAD * 2
         if z.get("role"):
@@ -183,7 +186,11 @@ class Cells:
             s, hh = block(tx, yy, z["b"], 7.6, tw, weight="400", fill=col)
             out.append(s)
         if z.get("empty") and not (z.get("a") or z.get("b")):
-            out.append(f'<text x="{x + w / 2:.1f}" y="{y + h / 2 + 3:.1f}" text-anchor="middle" font-family="sans-serif" font-size="8" fill="{MUTED}">–</text>')
+            # leeres Glied: sagen, dass der Text hier nichts nennt (Hinweis Andi Neck 2026-10-25: ein Strich wirkte wie ein Fehler);
+            # bleibt auch ohne Worte sichtbar (class dg-keep), weil es nichts aufzudecken gibt
+            nh = block_h(EMPTY_NOTE, 6.8, w - 8, "400", 3)
+            s, _ = block(x + w / 2, y + (h - nh) / 2, EMPTY_NOTE, 6.8, w - 8, weight="400", fill=MUTED, maxlines=3)
+            out.append(f'<g class="dg-keep">{s}</g>')
         full = "".join(out[1:])
         out = [out[0], f'<g class="dg-full">{full}</g>', self.nowords(z, x, y, w, h, col)]
         if z.get("strike"):
@@ -283,15 +290,15 @@ def diagram(comp, d):
         th = block_h(d.get("title"), 8.6, tw - 8 - tiw) if d.get("title") else 0
         if d.get("title"):
             bh = max(20, th + 8)
-            out.append(f'<rect x="{x0:.1f}" y="8" width="{tw:.1f}" height="{bh:.1f}" rx="7" fill="#FFFFFF" stroke="{INK}" stroke-width="1.1"/>')
+            frame = f'<rect x="{x0:.1f}" y="8" width="{tw:.1f}" height="{bh:.1f}" rx="7" fill="#FFFFFF" stroke="{INK}" stroke-width="1.1"/>'
             if d.get("speaker"):
-                out.append(f'<path d="M{x0 + 1:.1f} 15L{x0 - 5:.1f} 18L{x0 + 1:.1f} 21" fill="#FFFFFF" stroke="{INK}" stroke-width="1.1" stroke-linejoin="round"/>'
-                           f'<path d="M{x0 + 1.2:.1f} 15.6V20.4" stroke="#FFFFFF" stroke-width="1.4"/>')
+                frame += (f'<path d="M{x0 + 1:.1f} 15L{x0 - 5:.1f} 18L{x0 + 1:.1f} 21" fill="#FFFFFF" stroke="{INK}" stroke-width="1.1" stroke-linejoin="round"/>'
+                          f'<path d="M{x0 + 1.2:.1f} 15.6V20.4" stroke="#FFFFFF" stroke-width="1.4"/>')
             s, _ = block(x0 + tiw + (tw - tiw) / 2, 8 + (bh - th) / 2, d["title"], 8.6, tw - 8 - tiw)
             if ti:  # Zeichen links in der Blase, neben den Worten
                 s = C.icons(ti, x0 + 4 + (tiw - 4) / 2, 8 + (bh - 14) / 2, 14, tiw - 4) + s
             # ohne Worte: die Blase zeigt passende Zeichen (sonst die Anfangsbuchstaben), nie leer (Hinweis Andi Neck 2026-10-25)
-            out.append(_auto.sw(s, _auto.nw_fill(comp, x0 + 4, 10, tw - 8, bh - 4, ti, d["title"])))
+            out.append(_auto.sw(s, _auto.nw_fill(comp, x0 + 4, 10, tw - 8, bh - 4, ti, d["title"]), frame))
             y = 8 + bh + 6
         else:
             y = 34
@@ -339,12 +346,12 @@ def _columns(C, d, w, y, mirror=False):
             ht = (d.get("head_tones") or [])[i] if i < len(d.get("head_tones") or []) else (
                 ("old" if i == 0 else "new") if ncol == 2 and d.get("tones", True) and not mirror else "plain")
             hf = {"old": "#E3D4BA", "new": "#F2D9A0", "plain": "#EADFC8"}.get(ht, "#EADFC8")
-            out.append(f'<rect x="{xs[i]:.1f}" y="{y:.1f}" width="{cw:.1f}" height="{hh:.1f}" rx="3" fill="{hf}" stroke="{INK}" stroke-width=".9"/>')
+            frame = f'<rect x="{xs[i]:.1f}" y="{y:.1f}" width="{cw:.1f}" height="{hh:.1f}" rx="3" fill="{hf}" stroke="{INK}" stroke-width=".9"/>'
             th_ = block_h(hd, 7.6, cw - 6 - hiw[i])
             s, _ = block(xs[i] + hiw[i] + (cw - hiw[i]) / 2, y + (hh - th_) / 2, hd, 7.6, cw - 6 - hiw[i])
             if hic[i]:  # Zeichen links im Kopf, neben den Worten
                 s = C.icons(hic[i], xs[i] + 3 + (hiw[i] - 3) / 2, y + (hh - 12) / 2, 12, hiw[i] - 3) + s
-            out.append(_auto.sw(s, _auto.nw_fill(C.c, xs[i] + 2, y + 1.5, cw - 4, hh - 3, hic[i], hd)))
+            out.append(_auto.sw(s, _auto.nw_fill(C.c, xs[i] + 2, y + 1.5, cw - 4, hh - 3, hic[i], hd), frame))
         y += hh + 4
     if mirror:  # Spiegelachse
         top = y

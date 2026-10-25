@@ -428,9 +428,10 @@ def panel_icons(p):
     return [x for x in out if x]
 
 
-def sw(full, alt):
-    """Umschaltbare Gruppe: Worte (dg-full) und Fassung «ohne Worte» (dg-nw, nur im Modus «ohne Worte» sichtbar)."""
-    return f'<g class="dg-sw"><g class="dg-full">{full}</g><g class="dg-nw" display="none">{alt}</g></g>'
+def sw(full, alt, frame=""):
+    """Umschaltbare Gruppe: Worte (dg-full) und Fassung «ohne Worte» (dg-nw, nur im Modus «ohne Worte» sichtbar). Der Rahmen
+    (frame) gehört mit in die Gruppe, damit Antippen auf dem ganzen Feld wirkt, nicht nur auf dem Zeichen (Hinweis 2026-10-25)."""
+    return f'<g class="dg-sw">{frame}<g class="dg-full">{full}</g><g class="dg-nw" display="none">{alt}</g></g>'
 
 
 def word_band(v, letter=False, comp=None, cands=()):

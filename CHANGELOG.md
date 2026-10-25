@@ -2,6 +2,12 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.97 — 2026-10-25 — Ohne Worte: ganzes Feld antippen, leere Glieder benannt
+
+Hinweise Andi Neck:
+- **Ganzes Feld antippen:** Ohne Worte deckt das Antippen jetzt auf dem ganzen Feld auf, auch bei Spaltenköpfen und Titelblase (der Rahmen gehört zur umschaltbaren Gruppe), nicht nur auf dem Zeichen. Die App-Prüfung tippt dafür die Ecke eines Feldes an.
+- **Leere Glieder:** Wo der Text ein Glied nicht nennt (z. B. Tit 2: kein «damit» bei den älteren Männern), steht statt eines Strichs «im Text nicht genannt» – auch ohne Worte sichtbar, weil es nichts aufzudecken gibt.
+
 ## v0.96 — 2026-10-25 — Betende Hände wie das Emoji
 
 Hinweis Andi Neck: die betenden Hände sahen aus wie Füsse. Neu nach dem Vorbild des Emojis «gefaltete Hände»: zwei Handflächen, Fingerspitzen oben zusammen, Finger geschlossen. Drei Fassungen geprüft (auch ineinander gefaltete Hände), alle im Blindtest 4/4; gewählt die Emoji-Fassung.

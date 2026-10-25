@@ -35,6 +35,11 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     assert.equal(nw.full,'none','ganze Worte verdeckt');assert.equal(nw.nw,'inline','Zeichen gross');
     const cell=p.locator('.ill.nowords g.dg-cell:visible').first();await cell.click();await cell.click();
     assert.equal(await p.evaluate(()=>getComputedStyle(document.querySelector('.ill.nowords g.dg-cell.r2 .dg-full')).display),'inline','zweimal Antippen zeigt die Worte');
+    // Antippen wirkt auf dem ganzen Feld (Ecke des Rahmens), nicht nur auf dem Zeichen – für Kästchen und Köpfe/Blasen
+    for(const sel of ['.ill.nowords g.dg-cell','.ill.nowords g.dg-sw']){
+      const box=await p.evaluate(s=>{const g=[...document.querySelectorAll(s)].find(x=>x.getBoundingClientRect().width>0&&!x.classList.contains('r1')&&!x.classList.contains('r2'));if(!g)return null;g.scrollIntoView({block:'center'});const r=g.querySelector('rect').getBoundingClientRect();g.dataset.t='1';return {x:r.left+4,y:r.top+r.height-4};},sel);
+      assert(box,'Feld vorhanden: '+sel);await p.mouse.click(box.x,box.y);
+      assert(await p.evaluate(()=>{const g=document.querySelector('[data-t="1"]');const ok=g.classList.contains('r1')||g.classList.contains('r2');delete g.dataset.t;return ok;}),'Antippen der Feldecke deckt auf: '+sel);}
     await p.locator('[data-nowords]:visible').first().click();await p.waitForTimeout(300);assert(!await p.$('.ill.nowords'),'wieder mit Worten');
     // Bilder bei den Versen: je Abschnitt ein- und ausblendbar (Schalter beim Abschnittstitel)
     await p.click('[data-action=index]');await p.fill('input[type=search]','Mt 5,33');await p.waitForTimeout(300);await p.click('.results button');await p.waitForTimeout(900);
