@@ -57,14 +57,14 @@ def shape(d, fill, w=1.1):
     return f'<path d="{d}" fill="{fill}" stroke="{INK}" stroke-width="{f(w)}" stroke-linejoin="round"/>'
 
 
-def limb(p, w, col, hand=True):
-    """Glied mit eigener Kontur; Hand als runder Abschluss in Hautfarbe."""
+def limb(p, w, col, hand=True, hr=.45):
+    """Glied mit eigener Kontur; Hand als runder Abschluss in Hautfarbe (hr: wie viel breiter als das Glied)."""
     s = stroke(p, w + 2 * O, INK)
     if hand:
-        s += circ(p[-1], w / 2 + .45 + O, INK)
+        s += circ(p[-1], w / 2 + hr + O, INK)
     s += stroke(p, w, col)
     if hand:
-        s += circ(p[-1], w / 2 + .45, SKIN)
+        s += circ(p[-1], w / 2 + hr, SKIN)
     return s
 
 
@@ -83,9 +83,9 @@ class Fig:
     absolut ab senkrecht unten, + nach vorn. s = Massstab (1 = etwa 36 Einheiten hoch)."""
 
     def __init__(self, hip, lean=0, an=(10, 10), af=(-10, -10), ln_=(6, 0), lf=(-6, 0), n=1, s=1, col=BLUE,
-                 head=None, legs=True, front=False):
+                 head=None, legs=True, front=False, hr=.45):
         """front=True: Vorderansicht (Arme an beiden Schultern, Winkel des fernen Arms und Beins gespiegelt)."""
-        self.n, self.s, self.col, self.front = n, s, col, front
+        self.n, self.s, self.col, self.front, self.hr = n, s, col, front, hr
         T, self.A, self.L, self.R = 11 * s, 3.1 * s, 3.5 * s, 4.4 * s
         self.TW = 6.8 * s
         self.hip = hip
@@ -137,6 +137,8 @@ class Fig:
         p = self.arm_n if arm == "n" else self.arm_f
         (x0, y0), (x1, y1) = p[-2], p[-1]
         a = math.degrees(math.atan2(y1 - y0, x1 - x0)) + da
+        if x1 < x0 - .01:  # nach links: spiegeln statt auf den Kopf drehen
+            return H.place(svg, x1, y1, a - 180, s, True)
         return H.place(svg, x1, y1, a, s, False)
 
     def svg(self, face="", front_extra="", behind="", hand_n=True, hand_f=True):
@@ -145,7 +147,7 @@ class Fig:
             fc = c
         o = behind
         if self.arm_f:
-            o += limb(self.arm_f, self.A, fc, hand_f is True) + (hand_f if isinstance(hand_f, str) else "")
+            o += limb(self.arm_f, self.A, fc, hand_f is True, self.hr) + (hand_f if isinstance(hand_f, str) else "")
         if self.legs and self.leg_f:
             o += limb(self.leg_f, self.L, fc, False)
         # Rumpf und nahes Bein als eine Silhouette
@@ -157,7 +159,7 @@ class Fig:
         o += ink + col
         o += circ(self.head, self.R + O, INK) + circ(self.head, self.R, SKIN) + face
         if self.arm_n:
-            o += limb(self.arm_n, self.A, c, hand_n is True) + (hand_n if isinstance(hand_n, str) else "")
+            o += limb(self.arm_n, self.A, c, hand_n is True, self.hr) + (hand_n if isinstance(hand_n, str) else "")
         return o + front_extra
 
     def eye(self, dx=1.7, dy=-.4, r=.62):
@@ -734,6 +736,262 @@ def freundlich1():
     sb = ln(f"M{f(b.head[0] - .2)} {f(b.head[1] + 1.4)}q-1.6 1.6 -3.4 .2", .9) + b.eye(dx=1.9, dy=-1.2)
     hand = a.hand_at(H.hand_empfangend(BLUE, cuff_on=False), s=.42)
     return "0 0 48 38", a.svg(face=sa, hand_n=hand) + b.svg(face=sb)
+
+
+# ------------------------------------------------------------------------------------------------ Runde 2 (nach Kritik 1)
+# Kritik: Arme mit Kontur quer über dem Rumpf, Hände als Kugeln, Figuren verknäuelt. Neu: nahe Arme nur ausserhalb des
+# Rumpfs (sonst weggelassen), Hände als schlanker Abschluss oder aus haende.py, Figuren mit Abstand, Gesichter mit Ausdruck.
+def P(hip, **kw):
+    kw.setdefault("hr", .1)
+    kw.setdefault("s", .94)
+    return Fig(hip, **kw)
+
+
+def mund_o(F, dx=1.6, dy=1.9, r=.9):
+    return circ((F.head[0] + dx * F.n * F.s, F.head[1] + dy * F.s), r * F.s + .4, INK) + circ((F.head[0] + dx * F.n * F.s, F.head[1] + dy * F.s), r * F.s, "#7A3A2A")
+
+
+def laecheln(F, dx=.9, w=3.2):
+    x, y = F.head[0] + dx * F.n * F.s, F.head[1] + 1.5 * F.s
+    return ln(f"M{f(x - w / 2)} {f(y)}q{f(w / 2)} {f(w * .5)} {f(w)} 0", .9)
+
+
+@zeichen("BRINGEN@3", "bringen: eine Figur trägt etwas zu jemandem hin",
+         "Figur im Schritt trägt einen Korb mit beiden Händen vor sich, Bewegungsstriche dahinter; vorn wartet eine zweite Figur mit offener Hand")
+def bringen3():
+    a = P((12, 22), lean=6, an=(55, 100), af=(45, 95), ln_=(28, 6), lf=(-26, -8)).ground(37.4)
+    h = a.arm_n[2]
+    k = korb(h[0] + 2.4, h[1] - 1.2, 10, 6.5)
+    b = P((42, 22), n=-1, col=RED, an=(55, 85), af=None, ln_=(4, 0), lf=(-4, 0)).ground(37.4)
+    hb = b.hand_at(H.hand_empfangend(RED, cuff_on=False), s=.4)
+    return "0 0 50 38", motion(4.6, a.hip[1] - 7, 1, 3, 3.2, 3.6) + a.svg(face=a.eye(), front_extra=k) + b.svg(face=b.eye() + laecheln(b), hand_n=hb)
+
+
+@zeichen("FLIEHEN@3", "fliehen / weggehen: jemand flieht oder läuft davon",
+         "Rennende Figur (wie Notausgang-Piktogramm) blickt mit erschrockenem Gesicht zurück, Bewegungsstriche dahinter")
+def fliehen3():
+    a = P((20, 22), lean=20, an=(72, 150), af=(-50, -95), ln_=(75, 10), lf=(-40, -90), head=6).ground(37.4)
+    hx, hy = a.head
+    face = circ((hx - 1.9, hy - .7), .7, INK) + circ((hx + .5, hy - .7), .7, INK) + ln(f"M{f(hx - 3)} {f(hy - 2.4)}l1.6.5M{f(hx + 1.6)} {f(hy - 2.4)}l-1.6.5", .7) + \
+        circ((hx - .6, hy + 1.9), 1.3, INK) + circ((hx - .6, hy + 1.9), .85, "#7A3A2A")
+    return "0 0 40 38", motion(7.4, a.hip[1] - 8, 1, 3, 3.6, 5.5) + a.svg(face=face)
+
+
+@zeichen("NACHFOLGEN@3", "nachfolgen: jemandem nachfolgen, mit ihm gehen («Folge mir!»)",
+         "Vordere Figur geht voran, zeigt mit der Hand nach vorn und blickt zurück; die hintere Figur geht im gleichen Schritt hinterher")
+def nachfolgen3():
+    b = P((12, 22), col=RED, lean=4, an=(30, 20), af=None, ln_=(28, 4), lf=(-26, -8), s=.88).ground(37.4)
+    a = P((34, 22), lean=2, an=(82, 88), af=None, ln_=(28, 4), lf=(-26, -8)).ground(37.4)
+    ha = a.hand_at(H.hand_zeigend(BLUE, cuff_on=False), s=.36)
+    return "0 0 48 38", b.svg(face=b.eye()) + a.svg(face=a.eye(dx=-1.8) + laecheln(a, dx=-.9), hand_n=ha)
+
+
+@zeichen("ABSTAND@3", "Abstand / vertraut sich nicht an: zwischen Personen besteht innerer Abstand",
+         "Links streckt eine Figur die offene Hand aus; rechts steht eine Figur mit Abstand abgewandt und hält die Hand abwehrend zurück (✋)")
+def abstand3():
+    a = P((9, 22), col=RED, an=(70, 85), af=None, ln_=(4, 0), lf=(-4, 0)).ground(37.4)
+    ha = a.hand_at(H.hand_empfangend(RED, cuff_on=False), s=.4)
+    b = P((39, 22), col=BLUE, an=(-60, -100), af=None, ln_=(4, 0), lf=(-4, 0)).ground(37.4)
+    hb = H.place(H.hand_offen(BLUE, cuff_on=False), b.arm_n[2][0], b.arm_n[2][1] + 1, -10, .34)
+    mouth = ln(f"M{f(b.head[0] + .6)} {f(b.head[1] + 1.9)}h2", .9)
+    return "0 0 48 38", a.svg(face=a.eye() + laecheln(a)) + b.svg(face=b.eye() + mouth, hand_n=hb)
+
+
+@zeichen("RETTUNG@3", "retten / heraufholen: Gott holt jemanden aus der Not herauf",
+         "Eine grosse offene Hand hebt eine kleine Figur mit erhobenen Armen aus den Wellen empor; Bewegungsstriche nach oben")
+def rettung3():
+    water = wasser(0, 44, 29, 9, 5.5)
+    hand = H.place(H.hand_empfangend(WHITE), 6, 27.6, -6, 1.32)
+    a = P((19, 14), an=(140, 160), af=(140, 160), ln_=(4, 2), lf=(4, 2), col=BLUE, s=.52, front=True).ground(24.6)
+    face = a.eye(dx=-1.3, dy=-.5) + a.eye(dx=1.3, dy=-.5) + ln(f"M{f(a.head[0] - 1.1)} {f(a.head[1] + 1.2)}q1.1 1 2.2 0", .7)
+    up = ln("M33 18v-7M30.6 13.4l2.4-2.4 2.4 2.4M37.6 22v-6", 1.3)
+    return "0 0 44 38", water + hand + a.svg(face=face) + up
+
+
+@zeichen("RETTUNG@4", "retten / heraufholen: Gott holt jemanden aus der Not herauf",
+         "Eine grosse offene Hand kommt aus dem Wasser und trägt eine kleine Figur mit erhobenen Armen über die Wellen")
+def rettung4():
+    water = wasser(0, 44, 27, 11, 5.5)
+    hand = H.place(H.hand_empfangend(WHITE), 6, 26.6, -6, 1.32)
+    a = P((19, 14), an=(140, 160), af=(140, 160), ln_=(4, 2), lf=(4, 2), col=BLUE, s=.52, front=True).ground(23.6)
+    face = a.eye(dx=-1.3, dy=-.5) + a.eye(dx=1.3, dy=-.5) + ln(f"M{f(a.head[0] - 1.1)} {f(a.head[1] + 1.2)}q1.1 1 2.2 0", .7)
+    return "0 0 44 38", water + hand + a.svg(face=face)
+
+
+@zeichen("VERFOLGEN@3", "verfolgen / Verfolgung: jemand wird verfolgt",
+         "Zwei rennende Figuren mit Abstand: vorn eine kleinere, die erschrocken zurückblickt, hinten eine grössere, die mit ausgestrecktem Arm nach ihr greift")
+def verfolgen3():
+    v = P((40, 24), lean=20, an=(72, 150), af=(-50, -95), ln_=(75, 10), lf=(-40, -90), col=BLUE, s=.76, head=6).ground(37.4)
+    hx, hy = v.head
+    vf = circ((hx - 1.4, hy - .6), .6, INK) + circ((hx - .2, hy + 1.6), .9, INK)
+    p = P((13, 22), lean=22, an=(88, 96), af=(-50, -95), ln_=(75, 10), lf=(-40, -90), col=RED).ground(37.4)
+    pf = p.eye() + ln(f"M{f(p.head[0] + .4)} {f(p.head[1] - 1.8)}l2.2 .9", .8)
+    return "0 0 52 38", motion(31, v.hip[1] - 6, 1, 3, 3, 4, 1.2) + v.svg(face=vf) + motion(4, p.hip[1] - 8, 1, 3, 3.4, 3.6) + p.svg(face=pf)
+
+
+@zeichen("STOLPERN@3", "zu Fall bringen / Anstoss: jemand stolpert über ein Hindernis und fällt",
+         "Figur stösst mit dem Fuss an einen grossen Stein und kippt nach vorn; das hintere Bein fliegt hoch, die Arme fangen nach vorn unten ab")
+def stolpern3():
+    a = P((14, 24), lean=52, an=(62, 70), af=(48, 58), ln_=(12, -4), lf=(-80, -118), head=58).ground(37.4)
+    foot = a.leg_n[2]
+    st = stein(foot[0] + 6.6, 37.6, 10, 6.4)
+    hx, hy = a.head
+    face = circ((hx + 1.4, hy - .2), .65, INK) + circ((hx + 1.6, hy + 2), .8, INK)
+    hit = ln(f"M{f(foot[0] + 2.6)} {f(29.4)}l-.8-1.8M{f(foot[0] + 5.2)} {f(28.4)}v-2", 1.1, "#C0463A")
+    return "0 0 42 38", ln("M1 37.6H41", 1, STONE_D) + a.svg(face=face) + st + hit
+
+
+@zeichen("SCHWEIGEN@3", "schweigen: nicht reden, verstummen",
+         "Gesicht im Emoji-Stil mit geschlossenen Augen, Zeigefinger senkrecht über den Lippen wie 🤫")
+def schweigen3():
+    cx, cy, r = 16, 15.4, 13.4
+    o = gesicht(cx, cy, r, augen="zu")
+    o += ln(f"M{f(cx - 5)} {f(cy + 7)}h3.2M{f(cx + 1.8)} {f(cy + 7)}h3.2", 1.2)
+    o += zeigefinger_lippen(cx, cy + 5.4, .66)
+    return "0 0 32 34", o
+
+
+@zeichen("UNTERORDNEN@3", "sich unterordnen: sich einer Ordnung oder Autorität fügen",
+         "Figur verneigt sich tief, die Arme hängen; vor ihr steht erhöht auf einer Stufe eine Figur mit Krone")
+def unterordnen3():
+    step = shape("M28 37.6V30.4H47V37.6Z", STONE, 1.1)
+    b = P((38, 17), n=-1, col=RED, an=None, af=None, ln_=(3, 0), lf=(-3, 0), s=.84).ground(30.6)
+    hx, hy, r = b.head[0], b.head[1], b.R
+    crown = shape(f"M{f(hx - 3.6)} {f(hy - r + .8)}l-.6-4.2 2.2 2 2-3 2 3 2.2-2-.6 4.2z", GOLD, .8)
+    a = P((8, 24), lean=72, head=82, an=(4, 4), af=None, ln_=(2, 0), lf=(-2, 0)).ground(37.4)
+    return "0 0 48 38", ln("M0 37.6H28", 1, STONE_D) + step + a.svg(face=a.eye(dx=1.6, dy=.4)) + b.svg(face=b.eye()) + crown
+
+
+@zeichen("STREIT@3", "streiten / Streit: miteinander streiten, Zank",
+         "Zwei Köpfe im Profil gegeneinander, zornige Brauen und offener Mund, dazwischen oben eine gezackte Blase mit rotem Zornzeichen 💢")
+def streit3():
+    o = profilkopf(9.5, 19, 7.4, 1, col=BLUE) + profilkopf(38.5, 19, 7.4, -1, col=RED)
+    o += ln("M10.6 13.6l3.6 1.6M37.4 13.6l-3.6 1.6", 1.2)
+    o += sprechblase(24, 9, 19, 16, zack=True, fill="#FFF3C4")
+    z = "M19.6 5.4q2.6.4 2.8 2.6M28.4 5.4q-2.6.4-2.8 2.6M19.6 12.6q2.6-.4 2.8-2.6M28.4 12.6q-2.6-.4-2.8-2.6"
+    o += ln(z, 2.2, "#C0463A")
+    return "0 0 48 38", o
+
+
+@zeichen("TOETEN@3", "töten / Mord: einen Menschen töten",
+         "Grosse Figur hebt das Schwert über eine leblos am Boden liegende Figur mit Kreuzaugen")
+def toeten3():
+    v = P((20, 34.8), lean=90, an=None, af=None, ln_=(-90, -90), lf=(-88, -92), col=BLUE, s=.8, n=-1)
+    vx, vy = v.head
+    xe = ln(f"M{f(vx - .6)} {f(vy - 1.8)}l1.4 1.4m0-1.4l-1.4 1.4M{f(vx - .6)} {f(vy + .6)}l1.4 1.4m0-1.4l-1.4 1.4", .7)
+    a = P((37, 21), lean=4, an=(115, 145), af=None, ln_=(18, 0), lf=(-16, 0), col=RED, n=-1).ground(37.4)
+    hnd = a.arm_n[2]
+    sw = schwert(hnd[0], hnd[1], -10, 10)
+    return "0 0 48 38", ln("M1 37.6H47", 1, STONE_D) + v.svg(face=xe) + sw + a.svg(face=a.eye() + ln(f"M{f(a.head[0] - .6)} {f(a.head[1] - 1.9)}l-2.2 .9", .8))
+
+
+@zeichen("TAUFE@3", "taufen: mit Wasser taufen",
+         "Zwei Figuren stehen im Wasser; die rechte hält die Hand über den gesenkten Kopf der linken, Wassertropfen fallen darauf")
+def taufe3():
+    a = P((11, 29), col=WHITE, s=.8, lean=24, head=34, an=None, af=None, ln_=(4, 0), lf=(-4, 0))
+    b = P((32, 24), n=-1, col=BROWN, an=(108, 122), af=None, ln_=(4, 0), lf=(-4, 0))
+    hb = b.arm_n[2]
+    drops = "".join(shape(f"M{f(x)} {f(y)}q1.3 1.9 0 2.7q-1.3-.8 0-2.7z", WATER, .6) for x, y in ((hb[0] - 1.6, hb[1] + 2.4), (hb[0] + .8, hb[1] + 3)))
+    return "0 0 42 38", a.svg(face=a.eye(dy=.6)) + b.svg(face=b.eye() + laecheln(b)) + drops + wasser(0, 42, 28, 10, 5.25)
+
+
+@zeichen("GASTFREUNDSCHAFT@3", "Gastfreundschaft / aufnehmen: Gäste aufnehmen, Reisende beherbergen",
+         "Haus mit offener, hell erleuchteter Tür; davor lädt der Gastgeber mit offener Hand ein; ein Gast mit Wanderstab kommt heran")
+def gast3():
+    house = shape("M33 37.6V14L40.5 7 48 14V37.6Z", "#D8B48A", 1.1) + shape("M36.4 37.6V22.6Q36.4 20 39 20H42Q44.6 20 44.6 22.6V37.6Z", "#F6DE8C", 1) + \
+        shape("M36.4 37.6V20.6L33.6 22.4V37.6Z", "#A97C4A", .9)
+    h = P((27, 22), n=-1, col=GREEN, an=(55, 82), af=None, ln_=(4, 0), lf=(-4, 0), s=.86).ground(37.4)
+    hh = h.hand_at(H.hand_empfangend(GREEN, cuff_on=False), s=.38)
+    g = P((7, 22), lean=4, an=None, af=(30, 20), ln_=(26, 4), lf=(-24, -6), col=BLUE, s=.88).ground(37.4)
+    hg = g.arm_f[2]
+    staff = ln(f"M{f(hg[0] + .4)} {f(hg[1] - 9)}L{f(hg[0] + 2)} 37.4", 3.4) + ln(f"M{f(hg[0] + .4)} {f(hg[1] - 9)}L{f(hg[0] + 2)} 37.4", 1.6, BROWN)
+    return "0 0 48 38", house + h.svg(face=h.eye() + laecheln(h), hand_n=hh) + g.svg(face=g.eye(), behind=staff)
+
+
+@zeichen("UMSTURZ@3", "umstürzen / zugrunde gehen: eine Stadt wird umgestürzt, geht unter",
+         "Stadtmauer mit Tor und Turm; der zweite Turm bricht ab und stürzt um (Sturzbögen), Trümmer liegen am Boden, Staub")
+def umsturz3():
+    wall = shape("M2 37.6V24H5V21.6H8V24H11V21.6H14V24H17V37.6Z", "#D8B48A", 1.1) + shape("M7 37.6V31Q9.5 28.6 12 31V37.6Z", "#4A3828", .8)
+    tower1 = shape("M2 24V11H3.8V8.6H6V11H8V8.6H10.2V11H12V24Z", "#C9A574", 1)
+    stump = shape("M19 37.6V27L21.6 25.4 23.4 27.4 25.6 25.6 27 27V37.6Z", "#D8B48A", 1.1)
+    top = f'<g transform="rotate(48 26 26)">' + shape("M19.6 26V9H21.4V6.6H23.6V9H25.6V6.6H27.8V9H29.6V26L27.4 24.6 25.4 26.4 23 24.8 21 26.4Z", "#D8B48A", 1.1) + \
+        shape("M22.8 18V14.6Q24.6 13 26.4 14.6V18Z", "#4A3828", .7) + "</g>"
+    arcs = ln("M30 9q6 1 9 6M33 5.6q6 1.4 9 7", 1.2, STONE_D)
+    rubble = shape("M29 37.6l1-3 3 .6.4 2.4z", "#C9A574", .9) + shape("M39 37.6l.6-2.6 3-.2.6 2.8z", "#C9A574", .9) + shape("M34 37.6l1.4-2 2 .8v1.2z", "#B89868", .8)
+    dust = shape("M17 37.6Q16 34.6 19.4 34.6Q21 32 24.4 34Q27.6 32.6 28.6 35.4Q31 35 31 37.6Z", "#E4DCCB", .9)
+    return "0 0 46 38", tower1 + wall + stump + top + arcs + rubble + dust
+
+
+@zeichen("LOESEN@3", "loskaufen / befreien: jemand wird gegen Lösegeld freigekauft",
+         "Eine Hand legt Münzen auf einen Stapel; daneben reckt eine befreite Figur froh die Arme hoch, an den Handgelenken offene Ringe mit gesprengter Kette")
+def loesen3():
+    a = P((33, 22), an=(140, 160), af=(140, 160), ln_=(6, 4), lf=(6, 4), col=BLUE, s=.88, front=True).ground(37.4)
+    o = ""
+    for arm, k in ((a.arm_n, 1), (a.arm_f, -1)):
+        p = add(arm[1], (arm[2][0] - arm[1][0], arm[2][1] - arm[1][1]), .5)
+        o += f'<circle cx="{f(p[0])}" cy="{f(p[1])}" r="2.2" fill="none" stroke="{INK}" stroke-width="2.8"/><circle cx="{f(p[0])}" cy="{f(p[1])}" r="2.2" fill="none" stroke="#9AA0A8" stroke-width="1.2"/>'
+        o += kette(p[0] + k * .6, p[1] + 4, 90, 1) + ln(f"M{f(p[0] + k * 1.4)} {f(p[1] + 7.6)}l{f(k * 1.2)} 1.4M{f(p[0] - k * .6)} {f(p[1] + 8)}v1.6", .8, GOLD)
+    face = a.eye(dx=-1.4, dy=-.6) + a.eye(dx=1.4, dy=-.6) + ln(f"M{f(a.head[0] - 1.8)} {f(a.head[1] + 1.3)}q1.8 1.8 3.6 0", .9)
+    coins = "".join(H.muenze(x, y, 2.6) for x, y in ((6, 35), (11.4, 35), (8.7, 30.8)))
+    hand = H.place(H.hand_gebend(), 1.4, 17, 18, .62) + H.fallstriche(11.6, 23.4, 2, 1.4) + H.muenze(11.6, 27, 2.2)
+    return "0 0 44 38", coins + hand + a.svg(face=face) + o
+
+
+@zeichen("BESONNEN@3", "besonnen / beherrscht: sich selbst im Griff haben, massvoll und überlegt",
+         "Ruhiges Gesicht im Emoji-Stil (😌) mit geschlossenen Augen und leichtem Lächeln, eine Hand liegt ruhig auf der Brust")
+def besonnen3():
+    cx, cy, r = 17, 14, 12
+    sh = shape(f"M{f(cx - 14)} 38Q{f(cx - 14)} 27 {f(cx)} 26.4Q{f(cx + 14)} 27 {f(cx + 14)} 38Z", BLUE, 1.1)
+    o = sh + gesicht(cx, cy, r, augen="zu") + ln(f"M{f(cx - 3.4)} {f(cy + 5.6)}q3.4 2.4 6.8 0", 1.1)
+    o += H.place(H.hand_offen(BLUE, cuff_on=False), cx + 4, 37, -70, .5)
+    return "0 0 34 38", o
+
+
+@zeichen("SANFTMUT@3", "Sanftmut / sanftmütig: sanft, ohne Gewalt und Härte",
+         "Zwei hohle Hände (wie 🤲) halten behutsam eine kleine weisse Taube")
+def sanftmut3():
+    dove = (shape("M14 18.6Q13 12.6 18.6 11.4Q20.4 6.6 24.6 7.8Q27.4 8.8 26.6 11.6L29.4 12.4L26.4 13.4Q26.4 19 20 20.4Q16 20.8 14 18.6Z", "#FFFDF6", 1.1)
+            + shape("M12 15.4Q8.6 13 6 13.6Q9 17.4 14.4 18Z", "#FFFDF6", 1)
+            + shape("M17.4 14.6Q20.6 11.4 24 14.8Q22 18.4 17.4 14.6Z", "#E6E0D2", .8)
+            + circ((24.4, 10.6), .8, INK))
+    return "0 0 40 38", f'<g transform="translate(-.5 3.6)">{dove}</g>' + H.place(H.haende_schale(), 20, 36.4, 0, 1.06)
+
+
+@zeichen("FREUNDLICH@3", "freundlich / gütig: freundlich und gütig mit anderen umgehen",
+         "Zwei Personen lächeln sich an; die linke reicht der rechten einladend die offene Hand")
+def freundlich3():
+    a = P((11, 22), lean=6, an=(52, 80), af=None, ln_=(4, 0), lf=(-4, 0), col=BLUE).ground(37.4)
+    b = P((38, 22), n=-1, col=RED, an=None, af=None, ln_=(4, 0), lf=(-4, 0)).ground(37.4)
+    ha = a.hand_at(H.hand_empfangend(BLUE, cuff_on=False), s=.52)
+    fa = a.eye(dx=1.8, dy=-1.1) + laecheln(a, .9, 3.6)
+    fb = b.eye(dx=1.8, dy=-1.1) + laecheln(b, .9, 3.6)
+    heart = shape("M24.6 9.4q-1.6-2.6-3.4-1.2-1.6 1.6.6 3.6l2.8 2.4 2.8-2.4q2.2-2-.6-3.6-1.8-1.4-3.4 1.2z", "#E07A6A", .7)
+    return "0 0 48 38", a.svg(face=fa, hand_n=ha) + b.svg(face=fb) + heart
+
+
+@zeichen("VERKUENDIGEN@3", "verkündigen: eine Botschaft wird öffentlich vielen gesagt",
+         "Figur steht erhöht auf einem Felsen, ruft mit offenem Mund und streckt den Arm über die Menge aus; Schallbögen zu drei Zuhörern unten")
+def verkuendigen3():
+    rock = shape("M1 37.6V30.4Q4 28 10.5 28.2Q17 28 20 30.4V37.6Z", STONE, 1.1)
+    a = P((10.5, 16), lean=2, an=(118, 132), af=None, ln_=(5, 0), lf=(-5, 0), col=BLUE, s=.68).ground(28.6)
+    hx, hy = a.head
+    arcs = "".join(ln(f"M{f(hx + 5.6 + i * 3.2)} {f(hy - 1.6 - i * 1.4)}Q{f(hx + 8 + i * 3.8)} {f(hy + 2.4)} {f(hx + 5.6 + i * 3.2)} {f(hy + 6.4 + i * 1.4)}", 1.3) for i in range(2))
+    crowd = ""
+    for x, y, col in ((28.4, 31.2, RED), (38, 31.2, GREEN), (33.2, 33.6, "#C9963E")):
+        crowd += shape(f"M{f(x - 4.4)} 37.6Q{f(x - 4.4)} {f(y)} {f(x)} {f(y)}Q{f(x + 4.4)} {f(y)} {f(x + 4.4)} 37.6Z", col, 1) + \
+            circ((x, y - 3.4), 3.3 + O, INK) + circ((x, y - 3.4), 3.3, SKIN) + circ((x - 1.2, y - 4), .5, INK)
+    return "0 0 43 38", rock + a.svg(face=a.eye(dy=-.8) + mund_o(a, 1.7, 1.6, .8)) + arcs + crowd
+
+
+@zeichen("VERSTORBEN@3", "gestorben / Verstorbener: jemand ist gestorben, ein Leichnam",
+         "Ganz in Leinentücher gewickelter Körper mit erkennbarem verhülltem Kopf und Binden, auf einer Bahre ohne Kissen")
+def verstorben3():
+    bier = shape("M2 29H44V31.4H2Z", BROWN, 1) + ln("M6 31.4V36.8M40 31.4V36.8", 2.6) + ln("M6 31.4V36.8M40 31.4V36.8", 1.1, BROWN)
+    body = shape("M11 29Q10 24.4 13 23.6Q22 22 33 23.6Q41 24.6 42 26.6Q42.4 29 40.4 29Z", "#EDE6D6", 1.1)
+    head = circ((7.6, 24.6), 4.4 + O, INK) + circ((7.6, 24.6), 4.4, "#EDE6D6")
+    neck = f'<rect x="9.6" y="23.4" width="3.4" height="5" fill="#EDE6D6"/>'
+    bands = ln("M5 21.2L9.4 28M8.6 20.4L11 23.6M17 23V29M23 22.6V29M29 22.8V29M35 23.4V29", .8, "#A89C84")
+    return "0 0 46 38", bier + body + neck + head + bands
 
 
 # ------------------------------------------------------------------------------------------------ Auswahl

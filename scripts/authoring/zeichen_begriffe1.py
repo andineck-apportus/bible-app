@@ -219,14 +219,12 @@ def hass(v):
 
 def herz(v):
     body = "#C3CEDB"
+    s = path("M2.4 32Q2.8 17.8 16 17.8T29.6 32z", body, 1.3) + circ(16, 8.4, 6.2, body, 1.3)
     if v == 1:
-        s = path("M3 32Q3.4 19.4 16 19.4T29 32z", body, 1.3) + circ(16, 9.4, 6.6, body, 1.3)
-        s += path("M16 30.4C11.2 27.6 9.6 25.2 9.6 23.2a3.2 3.2 0 0 1 6.4-1.2 3.2 3.2 0 0 1 6.4 1.2c0 2-1.6 4.4-6.4 7.2z", "#C2414E", 1.1)
+        s += path("M16 30.2C12.2 28 10.8 26.2 10.8 24.6a2.6 2.6 0 0 1 5.2-1 2.6 2.6 0 0 1 5.2 1c0 1.6-1.4 3.4-5.2 5.6z", "#C2414E", 1.1)
         return "0 0 32 33", s
-    # Profil nach rechts, Herz in der Brust
-    s = path("M5 32Q5 21 13 19.6L14.4 16.6Q9.4 15.4 9.4 9.6Q9.4 3 16 3Q22.4 3 22.6 9Q23.6 10.6 24.6 12.2Q23.6 12.8 22.8 13Q22.6 16.4 19.6 16.8L19.2 19.4Q27.6 20.6 28 32z",
-             body, 1.3)
-    s += path("M18 30C13.6 27.4 12.2 25.2 12.2 23.4a2.9 2.9 0 0 1 5.8-1.1 2.9 2.9 0 0 1 5.8 1.1c0 1.8-1.4 4-5.8 6.6z", "#C2414E", 1.1)
+    s += circ(16, 25.4, 5.6, "#E3E9F0", .8, "#9AA8B8")
+    s += path("M16 29.4C12.6 27.4 11.4 25.8 11.4 24.4a2.3 2.3 0 0 1 4.6-.9 2.3 2.3 0 0 1 4.6.9c0 1.4-1.2 3-4.6 5z", "#C2414E", 1.0)
     return "0 0 32 33", s
 
 
@@ -247,18 +245,20 @@ def reich_gottes(v):
 
 
 def koenigsherrschaft(v):
-    if v == 1:  # Zepter mit Krone als Knauf
-        s = rays(16, 9, 9.6, 12.6, 7, GOLD, 1.6, -170, 160)
-        s += path("M16 15.6V31", "none", 4.4) + path("M16 15.6V31", "none", 2.6, "#C08A2A")
-        s += circ(16, 22, 2.0, GOLD, 1.0) + circ(16, 30.6, 1.6, GOLD, 1.0)
-        s += crown(16, 16.6, 13, 10.4)
-        return "0 0 32 32", s
-    # Krone links, Zepter senkrecht daneben
-    s = rays(13, 16, 11.6, 14.4, 5, GOLD, 1.6, -160, 140)
-    s += crown(13, 28.6, 17, 13)
-    s += path("M28.4 9V31", "none", 4.0) + path("M28.4 9V31", "none", 2.2, "#C08A2A")
-    s += circ(28.4, 6.6, 3.0, GOLD, 1.2) + sparkle(28.4, 6.6, 1.6, "#FFF6DC", "#C08A2A", .4)
-    return "0 0 32 32", s
+    import haende as H
+    if v == 1:  # Thron, Krone oben auf der Lehne, Strahlen
+        s = rays(16, 12, 12.4, 15, 7, GOLD, 1.6, -170, 160)
+        s += path("M8.4 30.6V13.4Q8.4 9.6 16 9.6T23.6 13.4V30.6", "#D9A441", 1.3)
+        s += path("M11.4 22V14.4Q11.4 12.4 16 12.4T20.6 14.4V22z", "#8E2F4E", 1.0)
+        s += path("M5.6 30.6V22.6H26.4V30.6z", "#D9A441", 1.3) + path("M5.6 25.8H26.4", "none", .9)
+        s += crown(16, 9.8, 10, 7.6)
+        return "0 -3.6 32 35.6", s
+    # Faust hält Zepter senkrecht, Strahlen um den Knauf
+    zep = path("M8.6 -16V13", "none", 4.0) + path("M8.6 -16V13", "none", 2.2, "#C08A2A")
+    s = rays(12.6, 6.4, 5.2, 8, 8, GOLD, 1.5)
+    s += circ(12.6, 6.4, 3.6, GOLD, 1.2) + sparkle(12.6, 6.4, 2, "#FFF6DC", "#C08A2A", .4)
+    s += H.place(H.hand_faust(griff=zep), 4, 23.6, 0, 1.0)
+    return "-2.4 0 28.4 32", s
 
 
 # ---------------------------------------------------------------- Licht, Zeichen, Zeit
@@ -283,35 +283,25 @@ def licht(v):
 
 
 def stern_zeichen(v):
-    import haende as H
-    if v == 1:  # zeigende Hand weist auf strahlendes Funkeln
-        s = H.place(H.hand_zeigend(), 4.6, 22, -28, 1.0)
-        s += rays(27, 8.4, 6.2, 8.6, 8, GOLD, 1.4)
-        s += sparkle(27, 8.4, 6)
-        return "0 0 36 32", s
-    # offene Hand, darüber Funkeln mit Strahlen (Tat, die auf Herrlichkeit weist)
-    s = H.place(H.hand_empfangend(), 5, 25.6, -8, 1.1)
-    s += rays(17, 9.6, 6.4, 9.2, 8, GOLD, 1.5)
-    s += sparkle(17, 9.6, 6.2)
-    return "0 0 32 32", s
+    if v == 1:  # Krug mit Wein, Funkeln: Wunderzeichen
+        s = path("M9 6H21L19.6 10Q25 14 24.4 21.6Q23.8 28.4 19.6 30.4H10.4Q6.2 28.4 5.6 21.6Q5 14 10.4 10z", "#C9A27A", 1.4)
+        s += '<ellipse cx="15" cy="6" rx="6" ry="1.9" fill="#7A1F3A" stroke="#3B3226" stroke-width="1.2"/>'
+        s += path("M5.8 19.6Q15 22 24.2 19.6", "none", .9, "#8A6A44")
+        s += sparkle(27.4, 6, 4.4) + sparkle(4.4, 4.6, 2.6) + sparkle(28.6, 17.4, 2.4)
+        return "0 0 32 32", s
+    import haende as H  # zeigende Hand weist nach oben auf Strahlen
+    s = rays(16, 4, 4.4, 7.2, 9, GOLD, 1.5, 0, 180) + sparkle(16, 4, 4.2)
+    s += H.place(H.hand_zeigend(), 13.6, 31.6, -90, 1.0)
+    return "0 0 32 33", s
 
 
 def tage(v):
-    def sheet(x, y, top=True):
+    def sheet(x, y):
         o = path(f"M{f(x)} {f(y + 2)}Q{f(x)} {f(y)} {f(x + 2)} {f(y)}H{f(x + 18)}Q{f(x + 20)} {f(y)} {f(x + 20)} {f(y + 2)}V{f(y + 19)}Q{f(x + 20)} {f(y + 21)} {f(x + 18)} {f(y + 21)}H{f(x + 2)}Q{f(x)} {f(y + 21)} {f(x)} {f(y + 19)}z", "#FFFFFF", 1.3)
         o += path(f"M{f(x)} {f(y + 6)}V{f(y + 2)}Q{f(x)} {f(y)} {f(x + 2)} {f(y)}H{f(x + 18)}Q{f(x + 20)} {f(y)} {f(x + 20)} {f(y + 2)}V{f(y + 6)}z", RED, 1.3)
         return o
-    if v == 1:  # drei gestapelte Kalenderblätter, vorn eine Sonne
-        s = sheet(10.4, 2) + sheet(7.2, 5.4) + sheet(4, 8.8)
-        s += sun(14, 21, 3.6, "#F2C76E", "#D9A441", 8, 2.2, 1.4, "#C9902E")
-        return "0 0 32 32", s
-    s = sheet(1.6, 6.4).replace("20", "20")
-    s = path("M1.6 9Q1.6 6.6 4 6.6H28Q30.4 6.6 30.4 9V27.6Q30.4 30 28 30H4Q1.6 30 1.6 27.6z", "#FFFFFF", 1.4)
-    s += path("M1.6 12.6V9Q1.6 6.6 4 6.6H28Q30.4 6.6 30.4 9V12.6z", RED, 1.4)
-    s += path("M11.2 12.6V30M20.8 12.6V30", "none", 1.0, "#B9AE9C")
-    for cx in (6.4, 16, 25.6):
-        s += circ(cx, 21.4, 3.0, "#F2C76E", 1.1, "#C9902E") + rays(cx, 21.4, 3.9, 4.4, 8, "#D9A441", .9)
-    s += path("M9 3.4V8.8M23 3.4V8.8", "none", 3.0) + path("M9 3.4V8.8M23 3.4V8.8", "none", 1.4, "#CFC6B6")
+    s = sheet(10.4, 2) + sheet(7.2, 5.4) + sheet(4, 8.8)
+    s += sun(14, 21, 3.6, "#F2C76E", "#D9A441", 8, 2.2, 1.4, "#C9902E")
     return "0 0 32 32", s
 
 
@@ -334,33 +324,40 @@ def hitze(v):
 # ---------------------------------------------------------------- Wahrheit, vollbracht, Tod
 
 def wahrheit(v):
+    s = path("M3 9Q3 5.8 6.4 5.8H26.6Q30 5.8 30 9V21.6Q30 24.8 26.6 24.8H12.6L6.6 30.6L7.6 24.8H6.4Q3 24.8 3 21.6z", "#FFF6DC", 1.4, "#C08A2A")
+    s += path("M9.4 15.6L14.4 20.2L23.6 10.4", "none", 4.0, "#2F8A3E")
     if v == 1:
-        s = path("M3 6Q3 2.8 6.4 2.8H26.6Q30 2.8 30 6V18.6Q30 21.8 26.6 21.8H12.6L6.6 27.6L7.6 21.8H6.4Q3 21.8 3 18.6z", "#FFF6DC", 1.4, "#C08A2A")
-        s += path("M9.4 12.6L14.4 17.2L23.6 7.4", "none", 4.0, "#2F8A3E")
-        return "0 0 33 29", s
-    # aus einem Mund (Profil) kommt ein Wort mit Haken
-    s = path("M2 31V22Q1 19 3.2 17.6L2.4 15.4Q3 14 4.4 13.6Q4 11.4 4.6 9.4Q5.6 4 11 4Q12.6 4 13 4.6V31z", SKIN, 1.3)
-    s += path("M4.4 4.6Q8 1.4 12.6 3V12Q9.6 9.6 7.6 9.8z", "#3A2A1E", .8)
-    s += path("M16 6Q16 3.6 18.4 3.6H29.6Q32 3.6 32 6V15Q32 17.4 29.6 17.4H20L15.4 21.4L16.6 17.2Q16 16.6 16 15z", "#FFF6DC", 1.3, "#C08A2A")
-    s += path("M19.6 10.6L22.8 13.6L28.6 7.4", "none", 2.8, "#2F8A3E")
+        s = rays(16.5, 6.4, 3.2, 7.4, 5, GOLD, 1.7, -150, 120) + s
+        return "0 -2 33 34", s
+    # Wort aus dem Mund eines Menschen (Profil)
+    s = (path("M1 32Q1.2 24 7 23V20.6Q3.4 19.8 3.4 15.2Q3.4 10 8.4 10Q12.6 10 13 13.6L14.2 15.6L13 16.2Q13 19.6 10.4 20.4V23Q13.6 23.6 14.2 32z", SKIN, 1.2)
+         + path("M3.4 15.6Q2.6 9.6 8.4 9.4Q12.4 9.4 13 12.4Q9.6 11.6 7.4 13.2L6.6 16z", "#3A2A1E", .8))
+    s += path("M14 6Q14 3.2 17 3.2H29Q32 3.2 32 6V15.4Q32 18.2 29 18.2H20.2L15.4 22.6L16.6 18.2Q14 17.8 14 15.4z", "#FFF6DC", 1.3, "#C08A2A")
+    s += path("M18 10.6L21.6 14L28.2 7.2", "none", 3.0, "#2F8A3E")
     return "0 0 33 32", s
 
 
 def vollbracht(v):
-    stone, gold = "#C9BFAA", GOLD
-    if v == 1:  # ganz entrollte Schriftrolle mit Siegel: abgeschlossen
-        s = path("M6 4H26V27H6z", "#F4EAD2", 1.3)
-        s += path("M4 2.4H8V6.4H4zM24 2.4H28V6.4H24z".replace("z", "z"), "none", 0, None)
-        s += path("M3.4 4.4Q3.4 2 6 2H26Q28.6 2 28.6 4.4Q28.6 6.6 26 6.6H6Q3.4 6.6 3.4 4.4z", "#D9C29A", 1.3)
-        s += path("M3.4 27.4Q3.4 25 6 25H26Q28.6 25 28.6 27.4Q28.6 29.6 26 29.6H6Q3.4 29.6 3.4 27.4z", "#D9C29A", 1.3)
-        s += path("M9.4 10.4H22.6M9.4 14H22.6M9.4 17.6H16", "none", 1.1, "#8C8070")
-        s += path("M19.4 21.4L18 27.2L20.4 26L22 28.2L22.6 22.4z", RED, .8) + circ(22, 20.4, 3.6, RED, 1.1)
-        s += circ(22, 20.4, 2, "none", .7, "#F2A0A0")
-        return "0 0 32 32", s
-    # Fahne auf dem Gipfel: am Ziel
-    s = path("M1 31L13 9.4L18 17L21.4 13L31 31z", "#A69580", 1.4)
-    s += path("M13 9.4L10.6 13.8L13 13L15.2 14.4z", "#FFFFFF", .9)
-    s += path("M13 9.6V1.6", "none", 1.4) + path("M13.4 2L21 4.4L13.4 6.8z", GOLD, 1.0)
+    if v == 1:  # Ring aus acht Teilen, das letzte wird eingesetzt
+        s = ""
+        for i in range(8):
+            a0, a1 = math.radians(-90 + i * 45 + 2), math.radians(-90 + (i + 1) * 45 - 2)
+            ro, ri = 13.4, 8.4
+            dx = dy = 0
+            if i == 7:
+                am = (a0 + a1) / 2
+                dx, dy = 2.6 * math.cos(am), 2.6 * math.sin(am)
+            cx, cy = 16 + dx, 16 + dy
+            d = (f"M{f(cx + ro * math.cos(a0))} {f(cy + ro * math.sin(a0))}A{ro} {ro} 0 0 1 {f(cx + ro * math.cos(a1))} {f(cy + ro * math.sin(a1))}"
+                 f"L{f(cx + ri * math.cos(a1))} {f(cy + ri * math.sin(a1))}A{ri} {ri} 0 0 0 {f(cx + ri * math.cos(a0))} {f(cy + ri * math.sin(a0))}z")
+            s += path(d, GOLD if i == 7 else "#E9C870", 1.2)
+        return "-1.6 -1.6 35 35", s
+    # Zielband gerissen: zwei Pfosten, Band hängt zu beiden Seiten
+    s = path("M4 31V6M28 31V6", "none", 3.4) + path("M4 31V6M28 31V6", "none", 1.8, "#9A6A3A")
+    s += path("M4 8.4Q9 10.6 13.6 14.4L12 16.4Q8 12.6 4 11.4z", RED, 1.0)
+    s += path("M28 8.4Q23 10.6 18.4 14.4L20 16.4Q24 12.6 28 11.4z", RED, 1.0)
+    s += sparkle(16, 6.4, 3.6)
+    s += path("M1.6 31H30.4", "none", 1.3)
     return "0 0 32 32", s
 
 
@@ -390,22 +387,35 @@ def robe(fill):
 
 
 def rein(v):
+    if v == 1:  # Mensch im weissen Gewand, Funkeln
+        s = path("M5 32Q5.4 19 16 19T27 32z", "#FFFFFF", 1.3) + path("M13 19.4L16 23.6L19 19.4", "none", 1.0)
+        s += circ(16, 11, 6.2, SKIN, 1.3)
+        s += path("M9.8 10.4q0-6.2 6.2-6.2t6.2 6.2q-1.6-2.8-6.2-3-4.6.2-6.2 3z", "#3A2A1E", .8)
+        s += path("M13.4 11.6q.8-.8 1.6 0M17 11.6q.8-.8 1.6 0", "none", 1.0) + path("M14.2 14q1.8 1.4 3.6 0", "none", 1.0)
+        s += sparkle(28, 18.6, 3.6, "#9CCBEB", "#3B6E9E") + sparkle(4, 17.4, 3, "#9CCBEB", "#3B6E9E") + sparkle(26.6, 5, 2.6, GOLD)
+        return "0 0 32 32", s
     s = robe("#FFFFFF")
     s += sparkle(28.4, 21, 3.8, "#9CCBEB", "#3B6E9E") + sparkle(3.6, 21.6, 3, "#9CCBEB", "#3B6E9E") + sparkle(27.6, 3.2, 2.8, GOLD)
-    if v == 2:
-        s = circ(16, 17, 15.4, "#E4F1FA", 0, "none") + s
     return "0 0 32 32", s
 
 
 def unrein(v):
-    s = robe("#D9D2C0")
     st = "#6A4A26"
+    if v == 1:  # Mensch im fleckigen Gewand
+        s = path("M5 32Q5.4 19 16 19T27 32z", "#D9D2C0", 1.3) + path("M13 19.4L16 23.6L19 19.4", "none", 1.0)
+        s += path("M9 25q2-1.6 3.4.2 1.8-.6 1.4 1.6 1 1.8-1.2 2.2-1.2 1.8-2.6.2-2.2.2-1.8-1.8-1.2-1.4.8-2.4z", st, 0, None)
+        s += path("M19.4 25.4q1.6-1 2.6.6 1.4.2.6 1.6.4 1.6-1.4 1.4-1.2.8-2-.6-1.4-.6-.6-1.6-.6-1 .8-1.4z", st, 0, None)
+        s += circ(16.4, 28.6, 1, st, 0, "none")
+        s += circ(16, 11, 6.2, SKIN, 1.3)
+        s += path("M9.8 10.4q0-6.2 6.2-6.2t6.2 6.2q-1.6-2.8-6.2-3-4.6.2-6.2 3z", "#3A2A1E", .8)
+        s += dot(13.8, 11.6, .9) + dot(18.2, 11.6, .9) + path("M14.2 15q1.8-1.2 3.6 0", "none", 1.0)
+        s += circ(12.4, 14, .9, st, 0, "none") + circ(19.8, 9.4, .7, st, 0, "none")
+        return "0 0 32 32", s
+    s = robe("#D9D2C0")
     s += path("M10.6 15q2.4-2 4 .2 2.2-.8 1.8 2 1.2 2.2-1.4 2.6-1.4 2.2-3.2.2-2.6.2-2.2-2.2-1.4-1.8 1-2.8z", st, 0, None)
     s += path("M17.8 22q2.2-1.6 3.4.6 2 .2 1 2.2.6 2.2-2 2-1.6 1.2-2.6-.8-2-.8-.8-2.2-.8-1.4 1-1.8z", st, 0, None)
     s += path("M17.2 9.2q1.6-1 2.4.4 1.4.6.4 1.8-.4 1.4-2 1-1.6.2-1.6-1.2.2-1.6.8-2z", st, 0, None)
     s += circ(12, 26.4, 1.3, st, 0, "none") + circ(21.8, 14.8, 1, st, 0, "none")
-    if v == 1:
-        s += path("M26.4 18.6q-1.4 1.4 0 2.8t0 2.8M29.6 17.6q-1.4 1.4 0 2.8t0 2.8", "none", 1.3, "#7E8A54")
     return "0 0 32 32", s
 
 
@@ -413,27 +423,26 @@ def suende(v):
     def target(cx, cy, r):
         return (circ(cx, cy, r, "#FFFFFF", 1.5) + circ(cx, cy, r * .7, RED, 0, "none") + circ(cx, cy, r * .44, "#FFFFFF", 0, "none")
                 + circ(cx, cy, r * .2, RED, 0, "none") + circ(cx, cy, r, "none", 1.5))
-    def arrow(x0, y0, x1, y1, head=True):
+    def arrow(x0, y0, x1, y1):
         a = math.atan2(y1 - y0, x1 - x0)
         ux, uy = math.cos(a), math.sin(a)
         px, py = -uy, ux
-        o = path(f"M{f(x0)} {f(y0)}L{f(x1)} {f(y1)}", "none", 4.2) + path(f"M{f(x0)} {f(y0)}L{f(x1)} {f(y1)}", "none", 2.4, "#A0703E")
-        if head:
-            hx, hy = x1 + ux * 4.4, y1 + uy * 4.4
-            o += path(f"M{f(hx)} {f(hy)}L{f(x1 + px * 3)} {f(y1 + py * 3)}L{f(x1 - px * 3)} {f(y1 - py * 3)}z", "#9AA0A8", 1.2)
-        for k in (0, 2.4):
+        o = path(f"M{f(x0)} {f(y0)}L{f(x1)} {f(y1)}", "none", 3.6) + path(f"M{f(x0)} {f(y0)}L{f(x1)} {f(y1)}", "none", 1.8, "#A0703E")
+        hx, hy = x1 + ux * 4.4, y1 + uy * 4.4
+        o += path(f"M{f(hx)} {f(hy)}L{f(x1 + px * 2.8)} {f(y1 + py * 2.8)}L{f(x1 - px * 2.8)} {f(y1 - py * 2.8)}z", "#9AA0A8", 1.2)
+        for k in (0, 2.2):
             bx, by = x0 + ux * k, y0 + uy * k
-            o += path(f"M{f(bx)} {f(by)}L{f(bx - ux * 3 + px * 2.8)} {f(by - uy * 3 + py * 2.8)}M{f(bx)} {f(by)}L{f(bx - ux * 3 - px * 2.8)} {f(by - uy * 3 - py * 2.8)}",
-                      "none", 1.8, RED)
+            o += path(f"M{f(bx)} {f(by)}L{f(bx - ux * 2.6 + px * 2.6)} {f(by - uy * 2.6 + py * 2.6)}M{f(bx)} {f(by)}L{f(bx - ux * 2.6 - px * 2.6)} {f(by - uy * 2.6 - py * 2.6)}",
+                      "none", 1.7, RED)
         return o
-    if v == 1:  # Pfeil steckt neben der Scheibe
-        s = target(12, 13.6, 10.4) + path("M9.4 23.6L7 30.6M14.6 23.6L17 30.6", "none", 1.8, "#8C6A44")
-        s += path("M1 31H34", "none", 1.4)
-        s += arrow(32.4, 13, 28.6, 26.4, head=False) + path("M25 31Q28.4 27.4 31.8 31z", "#8C6A44", 1.1)
-        return "0 0 35 32", s
-    s = target(13, 17.6, 11.4)
-    s += arrow(4.4, 3.6, 29.6, 4.6)
-    s += path("M24 9.4l3 .6M21 11.6l2.6.4", "none", 1.0, "#8A7A6A")
+    s = target(12, 20, 10.4)
+    if v == 1:
+        s += path("M2 4.4H8M1 8H5", "none", 1.3, "#8A7A6A")
+        s += arrow(10.4, 4.4, 29, 4.4)
+        return "0 0 35 31", s
+    s += path("M3 6.4Q14 0 26 3.6", "none", 1.1, "#8A7A6A", ' stroke-dasharray="1.8 1.4"')
+    s += arrow(25.4, 3.4, 29.2, 5.6)
+    s += path("M24 31.4", "none", 0, None)
     return "0 0 35 31", s
 
 
@@ -444,46 +453,42 @@ def fehlt(v):
     jug = (path("M6.6 4.4H15.4L14.2 8.4Q19.6 11.6 19.4 19.6Q19 26.8 15.2 29.4H6.8Q3 26.8 2.6 19.6Q2.4 11.6 7.8 8.4z", clay, 1.4)
            + path("M18.4 12.6Q23.6 12.6 23.2 17.6Q22.8 21.6 18.6 22.4", "none", 3.6) + path("M18.4 12.6Q23.6 12.6 23.2 17.6Q22.8 21.6 18.6 22.4", "none", 1.8, clay)
            + '<ellipse cx="11" cy="4.4" rx="5.2" ry="1.7" fill="#2A221A" stroke="#3B3226" stroke-width="1.2"/>')
-    if v == 1:  # Krug ausgeschüttet, nur ein letzter Tropfen
-        s = f'<g transform="translate(17.4 15.6) rotate(-125) translate(-12 -17)">{jug}</g>'
-        s += drop(4.6, 26, 4.8)
-        return "0 0 34 32", s
-    # Krug liegt umgekippt, Öffnung zum Betrachter: innen leer
-    s = path("M2 29.4H31", "none", 1.3)
-    s += f'<g transform="translate(16 20) rotate(-90) translate(-11 -17)">{jug.replace("ry=\"1.7\"", "ry=\"1.7\"")}</g>'
-    s += path("M3.6 27.6q1.4-1 2.8 0", "none", 1.0, "#3B6E9E")
-    return "0 0 32 30", s
+    if v == 1:  # Krug kopfüber, nichts kommt heraus
+        s = f'<g transform="translate(16 15) rotate(180) translate(-12 -16.8)">{jug}</g>'
+        s += path("M3.6 9.6l-2.4-1M3.6 14l-2.6 0M27.4 9.6l2.4-1M27.4 14l2.6 0", "none", 1.2, "#8A7A6A")
+        s += dot(13, 31, .9, "#8A7A6A") + dot(16, 31, .9, "#8A7A6A") + dot(19, 31, .9, "#8A7A6A")
+        return "0 0 32 33", s
+    s = f'<g transform="translate(17.4 15.6) rotate(-125) translate(-12 -17)">{jug}</g>'
+    s += dot(5.4, 26.4, .9, "#8A7A6A") + dot(4.4, 29.6, .9, "#8A7A6A")
+    return "0 0 34 32", s
 
 
 def sturm(v):
-    boat = (path("M-7 0H7L4.8 3.8H-4.8z", "#9A6A3A", 1.2) + path("M0 0V-11", "none", 1.3)
-            + path("M.6 -10.4L6.4 -1.4H.6z", "#F2EBDD", 1.0) + path("M-.6 -9.4L-5.4 -1.4H-.6z", "#F2EBDD", 1.0))
-    if v == 1:  # dunkle Wolke, Wind, Boot zwischen hohen Wellen
-        s = path("M2 12.6H24A4.4 4.4 0 0 0 23.4 4 6 6 0 0 0 12.4 3.6 4.4 4.4 0 0 0 4.8 7.4 3 3 0 0 0 2 12.6z", "#5A6272", 1.3)
-        s += path("M26 6.4H33M27.6 10.6H34", "none", 1.6, "#8A8478")
-        s += f'<g transform="translate(17 22.6) rotate(-16)">{boat}</g>'
-        s += path("M1 31V25Q4.4 18.6 8.8 21Q6.4 22.6 7.4 25.4Q10 24.4 12.6 26.6Q17 24 21.4 26.6Q24.6 22 27 24.6Q25 19 30 18.6Q34 18.6 35 22V31z",
-                  "#4C86C6", 1.3)
-        s += path("M27.4 20.6Q29.4 19.4 31.6 20.4M3.6 23Q5 21.4 7 21.6", "none", 1.0, "#FFFFFF")
+    boat = (path("M-7 0H7L4.8 3.8H-4.8z", "#9A6A3A", 1.2) + path("M0 0V-10", "none", 1.3)
+            + path("M.6 -9.4L6 -1.4H.6z", "#F2EBDD", 1.0))
+    wave = "#4C86C6"
+    if v == 1:  # Boot zwischen zwei hohen, überschlagenden Wellen, Regen
+        s = path("M2.6 9.4H22.6A3.8 3.8 0 0 0 22 2 5.4 5.4 0 0 0 12 1.8 4 4 0 0 0 5 4.8 2.4 2.4 0 0 0 2.6 9.4z", "#5A6272", 1.3)
+        s += path("M6 12.6l-1 2.4M11 12.6l-1 2.4M16 12.6l-1 2.4M21 12.6l-1 2.4", "none", 1.1, wave)
+        s += f'<g transform="translate(18.6 23.8) rotate(-18)">{boat}</g>'
+        s += path("M1 32V20Q4 14.6 9.6 15.4Q13 16 12.6 19.4Q10.6 17.6 9 19.4Q10.6 21 12.6 25Q15.6 28.8 21 28Q24.6 27.4 26 23.4Q25.6 17.2 30 16.4Q34.4 16 35 21V32z",
+                  wave, 1.3)
+        s += path("M2.8 19.4Q5 16.4 8.8 16.6M27.4 19Q29.6 17.4 32.4 18.6", "none", 1.0, "#FFFFFF")
         return "0 0 36 32", s
-    s = f'<g transform="translate(16 15.4) rotate(14)">{boat}</g>'
-    s += path("M1 31V20.6Q5 13 11 16.4Q8.4 18 9.4 20.6Q12.6 19 15.2 21.2Q19.8 18.4 23.4 21.6Q22.4 14.8 28.4 14Q33.6 14 35 18.6V31z", "#4C86C6", 1.3)
-    s += path("M24.4 17Q26.6 15.4 30 16.4M3 19.6Q5.4 16.6 8.6 17", "none", 1.0, "#FFFFFF")
-    s += path("M1.6 3.4H13Q16 3.4 16 1.2M3 7.4H20Q23 7.4 23 9.6", "none", 1.6, "#8A8478")
+    # grosse überschlagende Welle über kleinem Boot, Wind
+    s = path("M1 32V24Q6 12 16 6.6Q24.6 2.4 30.6 6.6Q34.6 10 32 14.6Q30 11 26.4 11.6Q23 12.4 23.6 15.6Q20 16 18.6 20Q17 25 19.6 32z", wave, 1.3)
+    s += path("M18.6 8.6Q24.4 5 29.6 8", "none", 1.1, "#FFFFFF")
+    s += f'<g transform="translate(27.6 26.4) rotate(12)">{boat}</g>'
+    s += path("M19.6 31.4H35", "none", 1.3, wave)
+    s += path("M2 4H10M3.6 8.2H8.6", "none", 1.6, "#8A8478")
     return "0 0 36 32", s
 
 
 def finsternis(v):
-    if v == 1:  # nur zwei Augen im Dunkeln
-        s = path("M16 1.6C26 1.6 31 8 31 16S26 30.4 16 30.4 1 24 1 16 6 1.6 16 1.6z", "#1F2433", 1.4)
-        s += '<ellipse cx="11.6" cy="15.4" rx="3" ry="3.8" fill="#FFFFFF"/><ellipse cx="20.4" cy="15.4" rx="3" ry="3.8" fill="#FFFFFF"/>'
-        s += dot(12.4, 16.2, 1.5) + dot(21.2, 16.2, 1.5)
-        return "0 0 32 32", s
-    # erloschene Kerze mit Rauchfaden im Dunkeln
     s = path("M16 1.6C26 1.6 31 8 31 16S26 30.4 16 30.4 1 24 1 16 6 1.6 16 1.6z", "#1F2433", 1.4)
-    s += path("M12.4 26.4V15.4H19.6V26.4z", "#D8D2C4", 1.0, "#F2EEE4") + path("M9.6 26.4H22.4", "none", 1.6, "#8A8E9A")
-    s += path("M16 15.4V13.2", "none", 1.2, "#0E1118")
-    s += path("M16 12.6Q14.2 10.6 16 8.6T15.6 4.2", "none", 1.4, "#9AA0B2")
+    s += path("M11.6 26V13.6H20.4V26z", "#E2DCCD", 1.1, "#F6F2E8") + path("M8 26.4H24", "none", 2.0, "#9AA0B2")
+    s += path("M16 13.6V11", "none", 1.6, "#0E1118")
+    s += path("M16 10.4Q13.6 8.2 16 6.2T15.4 2.4", "none", 2.0, "#B4BACB")
     return "0 0 32 32", s
 
 
@@ -501,7 +506,7 @@ ZEICHEN = {
     "FIG-ZEICHEN-KOENIGSHERRSCHAFT": (koenigsherrschaft, 2, "Königsherrschaft (Gottes), Gott regiert", "Krone mit Zepter bzw. Thron mit Krone, Strahlen"),
     "FIG-ZEICHEN-LICHT": (licht, 2, "Licht, Herrlichkeit", "Strahlenkranz: heller Kern, lange und kurze Strahlen, Schein"),
     "FIG-ZEICHEN-STERN": (stern_zeichen, 2, "Zeichen (Tat, die auf Gottes Herrlichkeit hinweist)", "Wegweiser zeigt auf ein Funkeln bzw. Pfeil weist auf Funkeln"),
-    "FIG-ZEICHEN-TAGE": (tage, 2, "Tage (eine Zahl von Tagen, z. B. in drei Tagen)", "Kalenderblatt mit Sonne bzw. drei Sonnen"),
+    "FIG-ZEICHEN-TAGE": (tage, 1, "Tage (eine Zahl von Tagen, z. B. in drei Tagen)", "Kalenderblatt mit Sonne bzw. drei Sonnen"),
     "FIG-ZEICHEN-HITZE": (hitze, 2, "Hitze, stechende Sonne", "stechende Sonne und schwitzendes Gesicht bzw. Hitzeflimmern über Boden"),
     "FIG-ZEICHEN-WAHRHEIT": (wahrheit, 2, "Wahrheit, wahr", "Sprechblase mit grünem Haken (wahres Wort)"),
     "FIG-ZEICHEN-VOLLBRACHT": (vollbracht, 2, "vollbracht, vollendet («Es ist vollbracht»)", "Puzzle, das letzte Stück wird eingesetzt"),
@@ -511,11 +516,17 @@ ZEICHEN = {
     "FIG-ZEICHEN-SUENDE": (suende, 2, "Sünde (das Ziel verfehlen)", "Pfeil verfehlt die Zielscheibe"),
     "FIG-ZEICHEN-FEHLT": (fehlt, 2, "fehlt, leer, aufgebraucht", "leerer gekippter Krug bzw. leerer offener Krug"),
     "FIG-ZEICHEN-STURM": (sturm, 2, "Sturm (Seesturm)", "hohe Welle, kleines Boot, Windlinien"),
-    "FIG-ZEICHEN-FINSTERNIS": (finsternis, 2, "Finsternis, Dunkelheit", "dunkle Fläche mit erloschener Lampe bzw. verfinsterter Sonne"),
+    "FIG-ZEICHEN-FINSTERNIS": (finsternis, 1, "Finsternis, Dunkelheit", "dunkle Fläche mit erloschener Lampe bzw. verfinsterter Sonne"),
 }
 
-# gewählte Fassung je Zeichen (nach Gestaltungskritik und Blindtest); fehlt ein Zeichen, bleibt die alte Zeichnung
-WAHL = {}
+# gewählte Fassung je Zeichen (Gestaltungskritik bestanden und Blindtest ≥ 2 Treffer, 2026-10-25); fehlt ein Zeichen,
+# bleibt die alte Zeichnung. Offen: HASS@1 und HERZ@2 bestanden die Kritik, im Blindtest aber als «Streit» bzw. «Liebe»
+# gelesen; KOENIGSHERRSCHAFT, STERN, WAHRHEIT, VOLLBRACHT, SUENDE, UNREIN, FEHLT, STURM, FINSTERNIS nach drei Runden nicht bestanden.
+WAHL = {
+    "FIG-ZEICHEN-FREUDE": 1, "FIG-ZEICHEN-TRAUER": 1, "FIG-ZEICHEN-ZORN": 1, "FIG-ZEICHEN-LUEGE": 1,
+    "FIG-ZEICHEN-UNGLAUBE": 2, "FIG-ZEICHEN-REICH-GOTTES": 1,
+    "FIG-ZEICHEN-LICHT": 1, "FIG-ZEICHEN-TAGE": 1, "FIG-ZEICHEN-HITZE": 2, "FIG-ZEICHEN-TOD": 2, "FIG-ZEICHEN-REIN": 2,
+}
 
 
 def entwurf(k, v):
