@@ -12,7 +12,7 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     while(+await p.evaluate(()=>document.querySelector('.app').dataset.level)>5){await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));await p.click('[data-action=up]');await p.waitForTimeout(800);}
     assert(await p.$$eval('.has-ill',x=>x.length)>=3,'Bilder bei den Abschnitten von Johannes 2 (und den geladenen Nachbarn)');
     await p.evaluate(()=>{const b=document.querySelector('.has-ill [data-view=image]');b&&b.click();});
-    await p.click('.has-ill [data-legend]');await p.waitForTimeout(400);
+    await p.locator('.has-ill [data-explain]:visible').first().click();await p.waitForTimeout(400);  // Antippen des Bildes zeigt die Erklärung (Hinweis Andi Neck 2026-10-25)
     assert(await p.evaluate(()=>!!document.querySelector('.sheet .legend-img use[href^="#an-"]')),'Legende im Stil Anime');
     assert(!await p.$('[data-settings]'),'Legende öffnet nicht das Menü');
     await p.click('.sheet [data-close]');await p.waitForTimeout(300);await p.click('[data-action=menu]');await p.click('[data-figindex]');await p.waitForTimeout(300);
@@ -26,18 +26,17 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     const nLi=await p.evaluate(()=>{const e=[...document.querySelectorAll('.stream-entry')].find(x=>/Seligpreisungen/.test(x.querySelector('h2')?.textContent||''));return e?e.querySelectorAll('.sum-list li').length:0;});
     assert(nLi>=8,'Seligpreisungen als Liste aller Glieder ('+nLi+')');
     assert(await p.$('.ill-tiles svg.ill-tile'),'Bilder als einzelne Kacheln');
-    // Kapitel ohne Worte: Worte verdeckt, Zellen zeigen Zeichen gross; Antippen deckt stufenweise auf (Hinweis Andi Neck 2026-10-25)
-    while(+await p.evaluate(()=>document.querySelector('.app').dataset.level)>4){await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));await p.click('[data-action=up]');await p.waitForTimeout(500);}
+    // Abschnitt ohne Worte (Knopf oben beim Umschalter): Worte verdeckt, Zellen zeigen Zeichen gross; Antippen deckt stufenweise auf
     await p.evaluate(()=>{const b=document.querySelector('.has-ill [data-view=image]');b&&b.click();});
     await p.locator('[data-nowords]:visible').first().click();await p.waitForTimeout(400);
-    assert(await p.$('.ill.nowords'),'Kapitelbild ohne Worte');
+    assert(await p.$('.ill.nowords'),'Abschnittsbild ohne Worte');
     const nw=await p.evaluate(()=>{const c=document.querySelector('.ill.nowords g.dg-cell');return {full:getComputedStyle(c.querySelector('.dg-full')).display,nw:getComputedStyle(c.querySelector('.dg-nw')).display};});
     assert.equal(nw.full,'none','ganze Worte verdeckt');assert.equal(nw.nw,'inline','Zeichen gross');
     const cell=p.locator('.ill.nowords g.dg-cell:visible').first();await cell.click();await cell.click();
     assert.equal(await p.evaluate(()=>getComputedStyle(document.querySelector('.ill.nowords g.dg-cell.r2 .dg-full')).display),'inline','zweimal Antippen zeigt die Worte');
     // Antippen wirkt auf dem ganzen Feld (Ecke des Rahmens), nicht nur auf dem Zeichen – für Kästchen und Köpfe/Blasen
     for(const sel of ['.ill.nowords g.dg-cell','.ill.nowords g.dg-sw']){
-      const box=await p.evaluate(s=>{const g=[...document.querySelectorAll(s)].find(x=>x.getBoundingClientRect().width>0&&!x.classList.contains('r1')&&!x.classList.contains('r2'));if(!g)return null;g.scrollIntoView({block:'center'});const r=g.querySelector('rect').getBoundingClientRect();g.dataset.t='1';return {x:r.left+4,y:r.top+r.height-4};},sel);
+      const box=await p.evaluate(s=>{const g=[...document.querySelectorAll(s)].find(x=>x.getBoundingClientRect().width>0&&!x.classList.contains('r1')&&!x.classList.contains('r2'));if(!g)return null;g.scrollIntoView({block:'center'});const r=[...g.querySelectorAll('rect')].map(x=>x.getBoundingClientRect()).find(x=>x.width>0);g.dataset.t='1';return {x:r.left+4,y:r.top+r.height-4};},sel);
       assert(box,'Feld vorhanden: '+sel);await p.mouse.click(box.x,box.y);
       assert(await p.evaluate(()=>{const g=document.querySelector('[data-t="1"]');const ok=g.classList.contains('r1')||g.classList.contains('r2');delete g.dataset.t;return ok;}),'Antippen der Feldecke deckt auf: '+sel);}
     await p.locator('[data-nowords]:visible').first().click();await p.waitForTimeout(300);assert(!await p.$('.ill.nowords'),'wieder mit Worten');

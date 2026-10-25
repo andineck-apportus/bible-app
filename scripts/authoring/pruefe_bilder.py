@@ -57,7 +57,7 @@ for(const mode of ['','nw'])for(const lang of ['de','gsw']){
             res.push(`${id} ${nm} [${L}]: ${e.tagName==='use'?'Zeichen':'Text'} ragt über den Kasten «${(e.textContent||e.getAttribute('href')).slice(0,40)}»`);
           for(const [t,B] of ts)for(const [u,U] of us)if(B.left<U.right-tp&&B.right>U.left+tp&&B.top<U.bottom-tp&&B.bottom>U.top+tp)
             res.push(`${id} ${nm} [${L}]: Text überdeckt ein Zeichen «${t.textContent.slice(0,40)}» / ${u.getAttribute('href')}`);});
-        if(mode){if(!/^[0-9A-Z]+-\d{3}$/.test(id))return;  // «ohne Worte» gibt es auf der Kapitelebene
+        if(mode){if(!/^[0-9A-Z]+-\d{3}-\d{3}-\d{3}$/.test(id))return;  // «ohne Worte» gibt es auf der Abschnittsebene (seit 2026-10-25)
           // ohne Worte: kein Feld bleibt leer – jede umschaltbare Gruppe hat Zeichen oder Anfangsbuchstaben, und kein Wort
           // steht ohne Ersatz (es würde verdeckt und hinterliesse eine leere Fläche)
           tile.querySelectorAll('g.dg-sw > g.dg-nw').forEach(g=>{if(!g.querySelector('use,text'))res.push(`${id} ${nm} [${L}]: leeres Feld ohne Worte («${g.parentNode.querySelector('.dg-full').textContent.slice(0,30)}»)`);});

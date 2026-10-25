@@ -511,7 +511,8 @@ def _balance(C, d, w, y):
     y2 = beam_y + 8 + max(hl, hr) + abs(tilt) + 4
     if d.get("verdict"):
         s, hh = block(w / 2, y2 + 2, d["verdict"], 8.4, w - 30)
-        out.append(s)
+        # ohne Worte: Zeichen oder Anfangsbuchstaben statt des Urteils (Abschnittsebene, 2026-10-25)
+        out.append(_auto.sw(s, _auto.nw_fill(C.c, 15, y2 + 1, w - 30, max(hh, 12), _auto.zeichen(C.c, "kopf", d["verdict"], ()), d["verdict"])))
         y2 += hh + 4
     return "".join(out), y2
 

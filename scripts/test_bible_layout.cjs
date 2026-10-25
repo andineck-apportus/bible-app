@@ -4,7 +4,7 @@
 //   Handy (< 600 px)   Kacheln einzeln zum Wischen, jede mindestens 280 px breit
 //   mittel             Bild in voller Breite unter dem Text
 //   breit              Text links, Bild rechts, sobald der Lesebereich (ohne Seitenleiste) 770 px hat; Seitenleiste ab 1200 px
-// Überall: kein Bild ragt aus dem Fenster, keine Kachel unter 220 px, «Legende» bündig unter der ersten Kachel.
+// Überall: kein Bild ragt aus dem Fenster, keine Kachel unter 220 px.
 //   node scripts/test_bible_layout.cjs
 const http = require('http'), fs = require('fs'), path = require('path');
 const {chromium} = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
@@ -24,18 +24,18 @@ const srv = http.createServer((q, r) => {const f = path.join(ROOT, decodeURIComp
       const R = e => e.getBoundingClientRect(), txt = R(wrap.querySelector('.ill-text')), t0 = R(tiles[0]);
       return {side: getComputedStyle(wrap).display === 'grid', aside: getComputedStyle(document.querySelector('aside')).display !== 'none',
         minTile: Math.min(...tiles.map(t => R(t).width)), right: Math.max(...tiles.map(t => R(t).right)), vw: innerWidth,
-        scroller: getComputedStyle(wrap.querySelector('.ill-tiles')).overflowX, t0left: t0.left, legLeft: R(wrap.querySelector('[data-legend]')).left,
-        imgLeft: t0.left, txtRight: txt.right};});
+        scroller: getComputedStyle(wrap.querySelector('.ill-tiles')).overflowX, t0left: t0.left,
+        imgLeft: t0.left, txtRight: txt.right, perRow: Math.max(...Object.values(tiles.reduce((a, t) => {const k = Math.round(R(t).top); a[k] = (a[k] || 0) + 1; return a;}, {})))};});
     const f = m => fails.push(`${w}px (${stage}): ${m}`);
     if (stage === 'handy') {if (r.scroller !== 'auto') f('Kacheln nicht zum Wischen'); if (r.minTile < 280) f(`Kachel nur ${Math.round(r.minTile)} px`);}
-    else {if (r.right > r.vw + 1) f(`Bild ragt ${Math.round(r.right - r.vw)} px aus dem Fenster`); if (r.minTile < 220) f(`Kachel nur ${Math.round(r.minTile)} px`);
+    else {if (r.right > r.vw + 1) f(`Bild ragt ${Math.round(r.right - r.vw)} px aus dem Fenster`); if (r.minTile < 220) f(`Kachel nur ${Math.round(r.minTile)} px`); if (r.perRow > 2) f(`${r.perRow} Kacheln nebeneinander (höchstens 2)`);
       if ((stage === 'breit') !== r.side) f(r.side ? 'Bild neben dem Text, erwartet darunter' : 'Bild unter dem Text, erwartet daneben');
       if (r.side && r.imgLeft < r.txtRight) f('Bild überdeckt den Text');
-      if (Math.abs(r.legLeft - r.t0left) > 8) f(`Legende nicht bündig unter dem Bild (${Math.round(r.legLeft - r.t0left)} px)`);}
+}
     if (r.aside !== (w >= 1200)) f(r.aside ? 'Seitenleiste unter 1200 px sichtbar' : 'Seitenleiste fehlt ab 1200 px');
     await p.close();
   }
   await b.close(); srv.close();
   if (fails.length) {console.log(fails.map(x => 'FEHLER: ' + x).join('\n')); process.exit(1);}
-  console.log('PASS: Anordnung Text/Bild in drei Stufen (Handy wischen, mittel darunter, breit daneben), Mindestbreiten, Legende bündig, Seitenleiste ab 1200 px.');
+  console.log('PASS: Anordnung Text/Bild in drei Stufen (Handy wischen, mittel darunter, breit daneben), Mindestbreiten, höchstens zwei Kacheln nebeneinander, Seitenleiste ab 1200 px.');
 })();
