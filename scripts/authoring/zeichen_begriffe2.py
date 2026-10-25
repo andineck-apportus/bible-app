@@ -1268,7 +1268,20 @@ def vollmacht3b():
 
 
 # ---------------------------------------------------------------- Wahl nach Gestaltungskritik und Blindtest
-WAHL = {}  # {"FIG-ZEICHEN-…": "@1"} – nach den Tests eingetragen
+# Bestanden (Gestaltungskritik: Mehrheit «ok», alle Mittel ≥ 4; drei Instanzen) und im Blindtest geprüft, 2026-10-25.
+WAHL = {
+    "FIG-ZEICHEN-BOESES": "@6",
+    "FIG-ZEICHEN-DAEMON": "@1",
+    "FIG-ZEICHEN-GEBOT": "@2",
+    "FIG-ZEICHEN-HOFFNUNG": "@2",
+    "FIG-ZEICHEN-RANG": "@5",
+    "FIG-ZEICHEN-SABBAT": "@5",
+    "FIG-ZEICHEN-VERGEBUNG": "@6",
+}
+# Kritik bestanden, Blindtest nicht (Sinn kommt ohne Namen nicht an): SORGE @4 (gelesen «Angst/Furcht», 1 von 4),
+# NICHT-VERSTEHEN @1 (gelesen «Zweifel», 0 von 4).
+# Blindtest bestanden, Kritik knapp nicht: HOCHZEIT @6, TOERICHT @6, VOLLMACHT @7, FRIEDE @6.
+# Offen nach drei Runden: FRIEDEN, WILLE-GOTTES, SATT, KIND, BITTER, NICHT-RICHTEN, MAMMON, GERECHT, VERBORGEN, STAMMBAUM, LOESERECHT.
 
 LEX = pathlib.Path(__file__).resolve().parents[2] / "data/illustrations/lexicon"
 OUT = pathlib.Path(__file__).resolve().parent / "bildsymbole_daten/ueberarbeitet/begriffe2.json"
