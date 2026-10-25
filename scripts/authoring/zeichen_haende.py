@@ -524,7 +524,11 @@ ZEICHEN = {
 GLEICH = {"FIG-ZEICHEN-HAENDE-WASCHEN": "FIG-ZEICHEN-WASCHEN"}
 
 # Fassungen, die die Gestaltungskritik bestanden haben (Mehrheit «ok», alle Mittel ≥ 4); nur diese werden geschrieben
-GEWAEHLT = {}
+GEWAEHLT = {"FIG-ZEICHEN-EHE": "@1", "FIG-ZEICHEN-GRUESSEN": "@1", "FIG-ZEICHEN-HAND": "@2"}
+# Knapp: in einer Kritikrunde bestanden, in der Bestätigungsrunde (2026-10-25) nicht; über alle Runden gemittelt unter 4 oder
+# ohne Mehrheit «ok». Nicht geschrieben; Entscheid durch Andi Neck (Blindtest jeweils 4 von 4 bzw. 3 von 4 getroffen).
+KNAPP = {"FIG-ZEICHEN-BETEN": "@1", "FIG-ZEICHEN-ABLEHNEN": "@1", "FIG-ZEICHEN-KRAFT": "@2", "FIG-ZEICHEN-PREISEN": "@1",
+         "FIG-ZEICHEN-ZEIGEN": "@2", "FIG-ZEICHEN-WUNDMALE": "@2"}
 
 
 # AUTO_VB: Bildausschnitt aus dem Umriss (Playwright getBBox mit Strichbreite, Rand .6), erzeugt mit dem Arbeitswerkzeug bbox.py
