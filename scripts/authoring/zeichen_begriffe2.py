@@ -1102,7 +1102,7 @@ def hochzeit3():
 @runde3("FIG-ZEICHEN-NICHT-RICHTEN")
 def nicht_richten3():
     block = P("M14 24.6h14v3.6H14z", "#8A5A30", INK, 1.2)
-    s6 = block + gavel2(19.4, 19, -128, 13) + verbot(16, 16, 14.4, 2.6)
+    s6 = P("M13 24.4h16v3.6H13z", "#8A5A30", INK, 1.2) + gavel2(21, 16.6, -165, 14) + verbot(16, 16, 14.4, 2.6)
     s7 = scale_drawing(16, 4.4, 7.4, pw=4.4) + gavel2(22.8, 22.6, -150, 9) + verbot(16, 16, 14.4, 2.6)
     return {"@6": ("0 0 32 32", s6, "Klassischer Richterhammer (Walzenkopf mit goldenen Bändern) schlägt auf einen Holzblock; darüber roter Verbotskreis mit Schrägstrich quer zum Stiel"),
             "@7": ("0 0 32 32", s7, "Waage und kleiner Richterhammer, darüber roter Verbotskreis mit Schrägstrich")}
@@ -1241,9 +1241,9 @@ def loeserecht3():
               + P("M2.4 12.6Q1.6 9.4 5.6 9.4 12 10 18 9 26 7.6 31 9.6 34 11 33 12.6 31 15 27 15H5.4Q2.6 15 2.4 12.6z", "#B07E44", INK, 1.2)
               + thick("M14 13.2Q15.6 5.2 21 5.8 25.6 6.6 28.4 11.8", "#8A5E36", 1.6, .9)
               + thick("M4.6 13Q3.8 6.4 8.8 5.8 12.2 5.6 13.4 12.8", "#8A5E36", 1.6, .9) + "</g>")
-    sandal = sandal.replace('translate(5 11.6) rotate(-6 17 10) scale(.66)', 'translate(4.4 9.6) rotate(-4 17 10) scale(.62)')
-    give = H.place(H.hand_gebend("#7E5A8E"), 33.4, 6.2, 0, 1.0, True)
-    take = H.place(H.hand_empfangend("#5E7FA8"), 4.6, 22.6, 0, 1.15)
+    sandal = sandal.replace('translate(5 11.6) rotate(-6 17 10) scale(.66)', 'translate(1.6 8.2) rotate(-4 17 10) scale(.76)')
+    give = H.place(H.hand_gebend("#7E5A8E"), 33, 6.6, 0, .85, True)
+    take = H.place(H.hand_empfangend("#5E7FA8"), 4.4, 24.6, 0, .9)
     return {"@6": ("0 0 34 32", take + sandal + give, "Eine Hand von oben übergibt eine Sandale (Seitenansicht, Riemen) in eine offene Hand darunter")}
 
 
@@ -1252,7 +1252,7 @@ def frieden3():
     """🫂 mit Händen aus der Handbibliothek: zwei Menschen Seite an Seite, je eine Hand (hand_auf_schulter) liegt auf der
     fernen Schulter des anderen; die Arme liegen hinter den Rücken."""
     g = person(9.8, 31, 1.08, "#6E8EAE", "#3A2A1E", "happy") + person(22.2, 31, 1.08, "#B0704A", "#5A3A22", "happy")
-    g += H.place(H.hand_auf_schulter("#B0704A"), 9.2, 18.6, 0, .6, True) + H.place(H.hand_auf_schulter("#6E8EAE"), 22.8, 18.6, 0, .6)
+    g += H.place(H.hand_auf_schulter("#B0704A", cuff_on=False), 7.4, 18.9, 0, .48, True) + H.place(H.hand_auf_schulter("#6E8EAE", cuff_on=False), 24.6, 18.9, 0, .48)
     return {"@7": ("0 0 32 32", g, "Zwei Menschen Seite an Seite, lächelnd mit geschlossenen Augen, jeder legt eine Hand auf die ferne Schulter des anderen (Arme hinter dem Rücken)")}
 
 
