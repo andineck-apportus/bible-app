@@ -386,26 +386,31 @@ def zeichen(comp, wo, v, cands=(), auto=True):
     txt = v.get("de") if isinstance(v, dict) else v
     import sys as _s
     cur = (getattr(_s.modules.get("bilder_anime"), "CUR", [None])[0] or "").upper()
-    for k in ((cur, wo, txt), (None, wo, txt)):
+    for k in ((cur, wo, txt), (cur, "alle", txt), (None, wo, txt), (None, "alle", txt)):  # «alle»: gilt für jede Stelle im Bild
         if k in _WZ:
             return list(_WZ[k])
     return nw_icons(comp, v, cands) if auto else []
 
 
+NW_FEHLT = []  # (Bild, Worte) ohne Zeichen im Modus «ohne Worte»
+CUR_ID = [""]
+
+
+def _plain(v):
+    return v.get("de") if isinstance(v, dict) else str(v)
+
+
 def nw_fill(comp, x, y, w, h, icons, v, fill="#3B3226"):
-    """Inhalt «ohne Worte» für ein Feld (x, y, w, h): Zeichen gross und mittig, sonst die Anfangsbuchstaben."""
+    """Inhalt «ohne Worte» für ein Feld (x, y, w, h): nur Zeichen, gross und mittig (keine Worte, keine Anfangsbuchstaben)."""
     import bilder_diagramm as _bd
     if icons:
         C = _bd.Cells(comp)
         ih = max(8, h - 4)
         return C.icons(icons, x + w / 2, y + (h - ih) / 2, ih, w * .85)
-    ini = _bd.initials(v)
-    if not ini:
-        return ""
-    fs = min(9.0, max(6.5, h * .5))
-    th = _bd.block_h(ini, fs, w - 6, "700", 2)
-    s_, _ = _bd.block(x + w / 2, y + (h - th) / 2, ini, fs, w - 6, fill=fill, maxlines=2)
-    return s_
+    # keine Anfangsbuchstaben mehr (Hinweis Andi Neck 2026-10-25: «zu schwer zu erraten; 100 % ohne Text»): ohne Zeichen bleibt
+    # das Feld leer und wird gemeldet (NW_FEHLT), damit jedes Wortfeld ein Zeichen bekommt
+    NW_FEHLT.append((CUR_ID[0], _plain(v)))
+    return ""
 
 
 def panel_icons(p):

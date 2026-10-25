@@ -199,34 +199,25 @@ class Cells:
 
     def nowords(self, z, x, y, w, h, col):
         """Fassung «ohne Worte» (Hinweise Andi Neck 2026-10-25). Stufe 0 (nw0): Zeichen gross und mittig im ganzen Kästchen;
-        Stufe 1 (nw1, auf Antippen): Zeichen kleiner, darunter die Anfangsbuchstaben; Stufe 2 zeigt die App mit dg-full.
+        Antippen zeigt die Worte (dg-full); keine Anfangsbuchstaben mehr.
         Hat die Zelle kein eigenes Zeichen, wird eines über die Worte gesucht (nw_icons), sonst das Porträt; ohne Treffer
         stehen gleich die Anfangsbuchstaben (nie ein leeres Feld). Die App blendet die Gruppe nur «ohne Worte» ein."""
         if z.get("empty") and not (z.get("a") or z.get("b")):
             return ""
-        icons = list(z.get("icons") or []) or _auto.nw_icons(self.c, z.get("a") or z.get("b"), getattr(self, "cands", ()))
+        icons = list(z.get("icons") or []) or _auto.zeichen(self.c, "zelle", z.get("a") or z.get("b"), getattr(self, "cands", ()))
         if not icons and z.get("who"):
             icons = [z["who"]]
-        ini = initials(z.get("a") or z.get("b"))
         tw = w - 2 * self.PAD
-        if not icons:
-            th = block_h(ini, 8.2, tw, "700", 4)
-            s0, _ = block(x + w / 2, y + max(self.PAD, (h - th) / 2), ini, 8.2, tw, fill=col, maxlines=4)
-            return f'<g class="dg-nw" display="none"><g class="nw0">{s0}</g></g>'
+        if not icons:  # kein Zeichen: leer lassen und melden (keine Anfangsbuchstaben mehr, Hinweis Andi Neck 2026-10-25)
+            _auto.NW_FEHLT.append((_auto.CUR_ID[0], _auto._plain(z.get("a") or z.get("b"))))
+            return ""
         big = max(12, (h - 2 * self.PAD) * .88)  # etwas Luft: manche Zeichen reichen über ihre Box
-        s0 = self.icons(icons, x + w / 2, y + (h - big) / 2, big, tw * .85)  # Rand: manche Zeichen reichen etwas über ihre Box
+        s0 = self.icons(icons, x + w / 2, y + (h - big) / 2, big, tw * .85)
         if self.icon_row_w(icons, big) > tw * .85:  # durch die Breite begrenzt: senkrecht mitten
             hh = big * tw * .85 / self.icon_row_w(icons, big)
             s0 = self.icons(icons, x + w / 2, y + (h - hh) / 2, hh, tw * .85)
-        ih_txt = block_h(ini, 7.6, tw, "700", 3) if ini else 0
-        ih = max(12, min(h - 2 * self.PAD - ih_txt - 3, 36))
-        tot = ih + (ih_txt + 2 if ini else 0)
-        yy = y + max(self.PAD, (h - tot) / 2)
-        s1 = self.icons(icons, x + w / 2, yy, ih, tw * .85)
-        if ini:
-            t1, _ = block(x + w / 2, yy + ih + 2, ini, 7.6, tw, fill=col, maxlines=3)
-            s1 += t1
-        return f'<g class="dg-nw" display="none"><g class="nw0">{s0}</g><g class="nw1">{s1}</g></g>'
+        return f'<g class="dg-nw" display="none"><g class="nw0">{s0}</g></g>'
+
 
 
 def arrow(x1, y1, x2, y2, col=INK, head=True, dash=False, sw=1.4):
