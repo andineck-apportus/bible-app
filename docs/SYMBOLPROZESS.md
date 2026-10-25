@@ -138,6 +138,12 @@ Handflächen mit gestuften Fingerspitzen, Daumen vorn, Ärmel. Blindtest Runde 8
 Schwur je 4 von 4 mit voller Bedeutung; Hand als Hand erkannt, aber als Geste gelesen
 ([Bericht](../reports/zeichen-blindtest-2026-10-25-runde8-haende.json)).
 
+Nachtrag Runde 10: Die gestuften Fingerspitzen der betenden Hände wirkten auf Andi Neck wie Füsse, obwohl der Blindtest
+bestand. Neu nach dem Vorbild des Emojis «gefaltete Hände»: zwei Handflächen, Fingerspitzen oben spitz zusammen, Finger
+geschlossen (nur feine Längslinien), ohne Daumen. Lehre: Bei Händen und anderen Körperteilen entscheidet der menschliche
+Eindruck; bekannte Vorbilder (Emoji, Piktogramme) zuerst ansehen
+([Bericht](../reports/zeichen-blindtest-2026-10-25-runde10-beten.json)).
+
 ## Bestand prüfen
 
 Alle bestehenden Zeichen durchlaufen Schritt 4 als Ausgangsmessung. Ergebnis je Zeichen: behalten, neu entwerfen oder

@@ -1231,7 +1231,7 @@ E("FIG-ZEICHEN-GLAUBEN", "sign", "glauben", "believe",
 E("FIG-ZEICHEN-BETEN", "action", "beten", "pray",
   "Bedeutung: Eine Figur wendet sich an Gott (z. B. [[LUK.11.1]], [[JON.2.1]]).",
   "Bedüütig: E Figur wändet sich a Gott (z. B. [[LUK.11.1]], [[JON.2.1]]).",
-  [T("Zwei aneinandergelegte Handflächen, Finger nach oben (gestufte Fingerspitzen), Daumen vorn", "tradition"), T("Ärmel unten und feine Strahlen seitlich oben", "design")],
+  [T("Zwei aneinandergelegte Handflächen wie das bekannte Emoji: Fingerspitzen oben zusammen, Finger geschlossen", "tradition"), T("Ärmel unten und feine Strahlen seitlich oben", "design")],
   ("#3B3226", "#F7DB9A"),
   ["Nicht verwechseln mit «Freude» (Arme hoch mit Funken) und «segnen» (Hand über anderer Person)"],
   distinct=["FIG-ZEICHEN-FREUDE", "FIG-ZEICHEN-SEGNEN"])
