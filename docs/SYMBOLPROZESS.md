@@ -213,6 +213,13 @@ ersetzen / eigen nach Sinn an jeder Stelle, Ton und Würde (nichts Niedliches, A
 in einer Szene und Verwechslung. Ergebnis: 161 ok, 54 ersetzt, 118 zurück auf eigene Zeichnung; gemeldete Fehlzuordnungen in
 Bildaufträgen (z. B. «lösen» beim Losbinden der Eselin) stehen im Bericht und werden an der Quelle korrigiert.
 
+## Runde 13: einheitlich und passend zum Text (2026-10-25)
+
+- Stil: `einheitlich()` gibt allen eigenen Zeichen (sign, object, place, action; nicht Personen, nicht breite Landschaften) dieselbe Kontur wie den Emoji. Personen-Emoji werden umgefärbt (Haar dunkel, Jeans in Erdtönen).
+- Verwendungsprüfung: Die Verwendungen je Zeichen und Feld (mit Text des Feldes) werden auf getrennte Instanzen verteilt; sie melden {datei, bild, feld, wo, alt, neu|null, fehlt}. Korrekturen werden per Skript eingespielt; was mehrfach als «fehlt» gemeldet wird, bekommt ein neues Lexikon-Zeichen.
+- Sichtprüfung danach durch eine weitere Instanz auf gerenderten Bildern und einer Tafel aller Zeichen: Stilbrüche, Verwechslungen, Verstösse gegen Lexikonregeln, Fehlgriffe je Feld.
+- Lehre: Bei jedem Zeichenwechsel Legende, Merkmale und Bildbeschreibungen (caption, daraus Alt-Text) mit nachführen; sonst widerspricht der Alt-Text dem Bild.
+
 ## Bestand prüfen
 
 Alle bestehenden Zeichen durchlaufen Schritt 4 als Ausgangsmessung. Ergebnis je Zeichen: behalten, neu entwerfen oder
