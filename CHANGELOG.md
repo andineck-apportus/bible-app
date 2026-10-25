@@ -2,6 +2,14 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.108 — 2026-10-25 — Kapitel und Buch wieder als Comic, Bild antippen für die Erklärung, «ohne Worte» beim Abschnitt
+
+Hinweise Andi Neck:
+- **Kapitel- und Buchbilder wieder als Comic-Szenen** (Mt 5–7, Rut 1–4 und Rut, Titus 1–3 und Titus; 31 Strukturfelder umgebaut): Figuren, Sprechblasen und Zeichen statt Strukturbild; jedes Kapitelbild deckt weiterhin jeden Abschnitt ab, was in einem Feld nicht zu sehen ist, nennt die Bildhilfe. Die Abschnittsebene behält die Strukturbilder. Offen: Blindtest ohne Legende durch eine getrennte Instanz.
+- **Bild antippen zeigt die Erklärung** (statt Link «Legende und Hinweise»): zuerst die Erklärung je Feld, dann Bild, Figuren und Zeichen; auch bei den Versbildern.
+- **«Ohne Worte» auf der Abschnittsebene,** als Knopf mit Fragezeichen oben beim Umschalter Text/Bild (auf dem Handy nur das Symbol). Prüfung «ohne Worte» in `pruefe_bilder.py` entsprechend auf die Abschnittsbilder umgestellt; das Urteil der Waage hat jetzt auch eine Fassung ohne Worte.
+- **Höchstens zwei Kacheln nebeneinander** (Raster mit zwei Spalten, jede mindestens 220 px); im Layout-Test geprüft.
+
 ## v0.107 — 2026-10-25 — Drei feste Ansichten, Seitenleiste ab 1200 px, Handy: Bilder wischen
 
 Hinweise Andi Neck (Ideen 1, 3 und 4 aus der Besprechung der Anordnung):
