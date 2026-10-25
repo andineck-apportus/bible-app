@@ -2,6 +2,13 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.106 — 2026-10-25 — «Eine Ebene tiefer» unter dem Text, Legende links unter dem Bild
+
+Hinweise Andi Neck:
+- **«Zu den Testamenten» usw.** steht neben dem Bild gleich am Ende des Texts (vorher unter dem ganzen Eintrag, weit unten); in schmaler Ansicht und «ohne Worte» weiterhin unten.
+- **«Legende und Hinweise»** steht linksbündig direkt unter den Bildern (Bildkacheln und Legende gleich breit, höchstens 684 px).
+- **Bild neben dem Text** richtet sich jetzt nach dem Lesebereich ohne Seitenleiste (Container-Abfrage, ab 770 px), damit das Bild nicht abgeschnitten wird; zwei Kacheln nebeneinander ab 460 px. Versbilder rechts erst ab 1300 px Fensterbreite.
+
 ## v0.105 — 2026-10-25 — Blatt mit Maus und Finger nach unten ziehen
 
 Hinweis Andi Neck: Wischen ging nicht (mit der Maus); erwartet: Das Blatt geht mit nach unten und verschwindet kurz vor unten ganz.

@@ -362,12 +362,12 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .ill-img svg{display:block;width:100%!important;height:auto!important;flex:none;border-radius:12px}
 #bible-stream .ill-img svg svg{border-radius:0}
 #bible-stream .ill-img.tiles{margin:0 auto;width:100%}
-#bible-stream .ill-tiles{display:flex;flex-wrap:wrap;justify-content:center;gap:4px}
+#bible-stream .ill-tiles{display:flex;flex-wrap:wrap;justify-content:center;gap:4px;max-width:684px;margin:0 auto}
 #bible-stream .ill-tiles>svg.ill-tile{flex:1 1 300px;width:100%!important;max-width:340px;height:auto!important;border-radius:0}
 #bible-stream .ill-tiles>svg.ill-tile[data-span="2"]{flex-basis:100%;max-width:680px}
 #bible-stream .ill-tiles>svg.ill-narrow{display:none}
 @media (max-width:600px){#bible-stream .ill-tiles>svg.ill-tile[data-span="2"]:has(+ svg.ill-narrow){display:none}#bible-stream .ill-tiles>svg.ill-narrow{display:block}}
-#bible-stream .ill figcaption{margin-top:6px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px}
+#bible-stream .ill figcaption{max-width:684px;margin:6px auto 0;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px}
 #bible-stream .ill-styles{display:inline-flex;border:1px solid var(--rule);border-radius:999px;padding:2px;gap:2px}
 #bible-stream .app .ill-styles button{padding:4px 10px!important;border-radius:999px!important;font:500 12px/1.2 var(--ui);color:var(--muted)}
 #bible-stream .app .ill-styles button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
@@ -415,8 +415,22 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 }
 /* Bild neben dem Text erst, wenn es mindestens 460 px breit bleibt (Hinweis Andi Neck 2026-10-25: Bilder wurden zu klein
    zum Lesen); darunter steht es in voller Breite unter dem Text */
-@media (min-width:1000px){
+#bible-stream .actions-side{display:none}
+/* Bild neben dem Text nur, wenn im Lesebereich (ohne Seitenleiste) Platz für Text und mindestens 460 px Bild ist */
+#bible-stream .reader .column{container-type:inline-size}
+@container (min-width:770px){
+  /* «eine Ebene tiefer» gleich unter dem Text statt unter dem Bild (Hinweis Andi Neck 2026-10-25) */
+  #bible-stream .actions-side{display:flex}
+  #bible-stream .stream-entry.has-ill>.actions-under{display:none}
+  #bible-stream .ill-wrap.nowords .actions-side{display:none}
+  #bible-stream .stream-entry.has-ill:has(.ill-wrap.nowords)>.actions-under{display:flex}
+  #bible-stream .ill-wrap .ill-tiles,#bible-stream .ill-wrap .ill figcaption{margin-left:0}
+  #bible-stream .ill-wrap .ill-tiles{justify-content:flex-start}
+  #bible-stream .ill-wrap .ill-tiles>svg.ill-tile{flex-basis:220px}
   #bible-stream .ill-wrap{display:grid;grid-template-columns:minmax(16em,36em) minmax(460px,1fr);gap:32px;align-items:start}
+}
+/* Versbilder rechts neben den Versen: Lesebereich (ohne Seitenleiste) braucht Platz für 36em Text und 400 px Bild */
+@media (min-width:1300px){
   #bible-stream .app[data-vill][data-level="6"] .reader .column{--vg:clamp(400px,44vw,700px);max-width:calc(36em + var(--vg) + 28px);padding-right:calc(var(--vg) + 28px)}
   #bible-stream .app[data-vill] .verse-ill{float:right;clear:right;width:var(--vg);margin:4px calc(-1 * var(--vg) - 28px) 10px 0}
 }
@@ -876,8 +890,8 @@ function entry(id){
   const tg=il?`<span class="ill-toggle" role="group" aria-label="${t.viewText} / ${t.viewImage}">${['text','image'].map(v=>`<button type="button" data-view="${v}" aria-label="${v==='text'?t.viewText:t.viewImage}" title="${v==='text'?t.viewText:t.viewImage}" aria-pressed="${(S.view==='image'?'image':'text')===v}">${icon(v)}</button>`).join('')}</span>`:'';
   const tl=tools(id);
   const nw=il&&n.level===4;
-  const body=il?`<div class="ill-wrap${illWide(il)?' wide':''}${nw&&S.nowords?' nowords':''}"><div class="ill-text">${copy}</div>${illFigure(il,nw)}</div>`:copy;
-  return `<article class="stream-entry${il?' has-ill':''}" data-stream="${id}">${eyebrow(n)?`<p class="eyebrow">${esc(eyebrow(n))}</p>`:''}<h2>${esc(heading)}${readBtn(id)}</h2>${tg?`<div class="entry-tools">${tl}${tg}</div>`:tl}${body}<div class="actions">${deep}</div></article>`;
+  const body=il?`<div class="ill-wrap${illWide(il)?' wide':''}${nw&&S.nowords?' nowords':''}"><div class="ill-text">${copy}${deep?`<div class="actions actions-side">${deep}</div>`:''}</div>${illFigure(il,nw)}</div>`:copy;
+  return `<article class="stream-entry${il?' has-ill':''}" data-stream="${id}">${eyebrow(n)?`<p class="eyebrow">${esc(eyebrow(n))}</p>`:''}<h2>${esc(heading)}${readBtn(id)}</h2>${tg?`<div class="entry-tools">${tl}${tg}</div>`:tl}${body}<div class="actions${il?' actions-under':''}">${deep}</div></article>`;
 }
 function tools(id,which='uh'){const t=T();return `<span class="part-tools">${which.includes('u')?`<button type="button" class="tool" data-study="${id}" aria-label="${t.understand}">${icon('understand')}<span>${t.toolUnderstand}</span></button>`:''}${which.includes('h')?`<button type="button" class="tool" data-background="${id}" aria-label="${t.dph}">${icon('history')}<span>${t.toolHistory}</span></button>`:''}</span>`;}
 const sheetTools=(id,which)=>{const n=nodes.get(id);return `<div class="sheet-tools"><span class="note">${LEVEL_NAME()[n.level]}: ${esc(nodeTitle(n))}</span>${tools(id,which)}</div>`;};
