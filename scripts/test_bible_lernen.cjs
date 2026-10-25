@@ -41,6 +41,7 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     assert(!await p.evaluate(()=>[...document.querySelectorAll('.sheet .learn-pic text')].some(t=>t.getBoundingClientRect().width>0&&!t.classList.contains('pn-n'))),'Bildkarte: kein Text sichtbar');
     await p.click('[data-learn=reveal]');await p.waitForTimeout(300);assert(await p.$('.sheet .body'),'Bildkarte: Zusammenfassung nach dem Aufdecken');
     assert.equal(await p.$$eval('.sheet .rate3 button',x=>x.length),3,'drei Bewertungen: nicht gewusst, teilweise, gewusst');
+    assert(await p.$('.sheet .learn-pic:not(.nowords)'),'Aufdecken zeigt auch die Worte im Bild');
     await p.click('[data-learn="rate:good"]');await p.waitForTimeout(300);assert(await p.evaluate(()=>Object.keys(JSON.parse(localStorage.getItem('bible:learn')||'{}')).some(k=>k.startsWith('img:'))),'Bildkarte: Lernstand gespeichert');
     assert.deepEqual(errs,[],'keine Fehler: '+errs.join('; '));
     console.log('PASS: Merkverse als Zeichen/Karte/aus; Lernen mit Karteikarten (Leitner), Anfangsbuchstaben, Lückentext, Wörter ordnen, Stellen zuordnen, Bildkarten ohne Worte.');
