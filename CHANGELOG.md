@@ -2,6 +2,13 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.100 — 2026-10-25 — Emoji im Stil der Bilder, im Kontext geprüft
+
+Hinweise Andi Neck: Emoji und Eigenes wirkten nebeneinander uneinheitlich; ein Küken für «geboren werden», ein Honigtopf als «Land».
+- **Stil angeglichen:** Emoji bekommen automatisch die dunkle Kontur der Figuren, deren Hautton und leicht gedämpfte Farben (`emoji_zeichen.py`, Funktion `stil`).
+- **Kontextprüfung** (drei getrennte Instanzen, alle 333 Emoji-Zeichen mit ihren echten Verwendungen): Sinn an jeder Stelle, Ton und Würde (nichts Niedliches, Albernes, Modernes), Tauglichkeit als Gegenstand in Szenen. Ergebnis: 161 ok, 54 durch ein besseres Emoji ersetzt (z. B. Baby statt Küken, Schatztruhe, Anker für Ausdauer), 118 zurück auf die eigene Zeichnung (u. a. Kreuz, Grab, Schiff, Weg, Land, Kuss, Schwamm, Salböl, Gewänder, Stadt); 14 weitere Emoji entfernt, weil sonst verschiedene Begriffe dasselbe Zeichen hätten. Jetzt 201 Emoji-Zeichen. Bericht `reports/zeichen-runde12-kontext-2026-10-25.json`.
+- Lehre (SYMBOLPROZESS.md): Ein Auswahltest ohne Kontext lässt sinnwidrige und unwürdige Zeichen durch; die Prüfung im echten Bild gehört fest in den Ablauf.
+
 ## v0.99 — 2026-10-25 — Bildzeichen aus Twemoji
 
 Entscheid Andi Neck: «Emoji, wo es geht; sonst prägnant» (detailliert gemalte Körperteile wurden unverständlicher).

@@ -206,6 +206,13 @@ zu 348 von 416, Vorschlag 2 zu 22 von 45, Vorschlag 3 zu 3 von 10. Übernommen: 
 eine KI leicht; er taugt als Sicherung gegen Fehlgriffe, nicht als Qualitätsmass. Nächster Schritt: prägnante eigene Zeichen
 für die 48 «eigen» nach den Regeln oben; schwerere Ablenker (engste Nachbarbegriffe im Lexikon) für eine strengere Prüfung.
 
+Nachtrag (2026-10-25, Hinweise Andi Neck: uneinheitlich; Küken für «geboren werden», Honigtopf als «Land»): Emoji werden im
+Stil der Figuren gesetzt (dunkle Kontur, Hautton, gedämpfte Farben). Neu fest im Ablauf ist die **Kontextprüfung**: getrennte
+Instanzen sehen jedes Zeichen mit seinen echten Verwendungen (Bild, Szene/Kästchen/Sprechblase, Handlung) und urteilen ok /
+ersetzen / eigen nach Sinn an jeder Stelle, Ton und Würde (nichts Niedliches, Albernes, Modernes), Tauglichkeit als Gegenstand
+in einer Szene und Verwechslung. Ergebnis: 161 ok, 54 ersetzt, 118 zurück auf eigene Zeichnung; gemeldete Fehlzuordnungen in
+Bildaufträgen (z. B. «lösen» beim Losbinden der Eselin) stehen im Bericht und werden an der Quelle korrigiert.
+
 ## Bestand prüfen
 
 Alle bestehenden Zeichen durchlaufen Schritt 4 als Ausgangsmessung. Ergebnis je Zeichen: behalten, neu entwerfen oder
