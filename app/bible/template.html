@@ -368,6 +368,22 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .app .ill-styles button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
 #bible-stream .sheet .ill-styles{margin:10px 0 0}
 #bible-stream .app[data-view=text] .ill{display:none}
+#bible-stream .verse-ill{display:block;margin:8px 0 12px;font:400 14px/1.3 var(--ui)}
+#bible-stream .app.flow .verse-ill{display:block}
+#bible-stream .verse-ill .ill-tiles{justify-content:flex-start}
+#bible-stream .verse-ill figcaption{margin-top:2px}
+#bible-stream .ill.nowords text:not(.pn-n){visibility:hidden}
+#bible-stream .ill.nowords .dg-full{display:none}
+#bible-stream .ill.nowords .dg-nw{display:inline}
+#bible-stream .ill.nowords .dg-nw .nwi text{visibility:visible}
+#bible-stream .ill.nowords .dg-nw .nwi.hint text{visibility:hidden}
+#bible-stream .ill.nowords .dg-cell.r1 .nwi.hint text{visibility:visible}
+#bible-stream .ill.nowords .dg-cell.r2 .dg-full{display:inline}
+#bible-stream .ill.nowords .dg-cell.r2 .dg-nw{display:none}
+#bible-stream .ill.nowords .dg-cell.r2 text,#bible-stream .ill.nowords .reveal text{visibility:visible}
+#bible-stream .ill.nowords .ill-img{cursor:pointer}
+#bible-stream .ill-wrap.nowords .ill-text:not(.shown){filter:blur(6px);cursor:pointer;user-select:none}
+#bible-stream .app .nowords-btn[aria-pressed=true]{background:var(--ink);color:var(--bg);border-radius:999px;padding:4px 10px!important}
 #bible-stream .app[data-view=image] .ill-text{display:none}
 #bible-stream .legend-figs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
 #bible-stream .legend-fig{display:flex;align-items:center;gap:10px;font-size:14px}
@@ -384,9 +400,11 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .ref-small{font:500 12px/1 var(--ui);color:var(--muted)}
 #bible-stream .legend-fig .sub{display:block;font-size:12px;color:var(--muted)}
 @media (min-width:760px){
-  #bible-stream .app[data-ill]:not([data-level="6"]) .reader .column{max-width:min(64em,calc(100% - 32px))}
-  #bible-stream .ill-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start}
-  #bible-stream .ill-wrap.wide{grid-template-columns:minmax(0,1fr);gap:16px}
+  #bible-stream .app[data-ill]:not([data-level="6"]) .reader .column{max-width:calc(100% - 48px)}
+  #bible-stream .app[data-ill]:not([data-level="6"]) .stream-entry:not(.has-ill){max-width:36em}
+  #bible-stream .ill-wrap{display:grid;grid-template-columns:minmax(16em,36em) minmax(0,1fr);gap:32px;align-items:start}
+  #bible-stream .app[data-vill][data-level="6"] .reader .column{--vg:clamp(300px,44vw,700px);max-width:calc(36em + var(--vg) + 28px);padding-right:calc(var(--vg) + 28px)}
+  #bible-stream .app[data-vill] .verse-ill{float:right;clear:right;width:var(--vg);margin:4px calc(-1 * var(--vg) - 28px) 10px 0}
   #bible-stream .ill-toggle{display:none!important}
   #bible-stream .app .ill,#bible-stream .app .ill-text{display:block!important}
 }
@@ -555,7 +573,7 @@ const CONF={high:'gut begründet',probable:'wahrscheinlich',possible:'möglich'}
 
 root.querySelectorAll('.app').forEach((app,appIndex)=>{
 let current='all',lang='de',sheet=null,query='';
-let S={v:3,text:'de',flow:true,theme:'auto',read:19,advanced:true,inline:true,bgInline:true,translit:true,pron:'modern',rate:0.85,voice:{},readVoice:'',readRate:1,godName:'Jahwe',ill:'anime',view:'text',merk:'mark'};
+let S={v:3,text:'de',flow:true,theme:'auto',read:19,advanced:true,inline:true,bgInline:true,translit:true,pron:'modern',rate:0.85,voice:{},readVoice:'',readRate:1,godName:'Jahwe',ill:'anime',view:'text',merk:'mark',vill:'off',nowords:false};
 try{const s=JSON.parse(localStorage.getItem('bible:settings')||localStorage.getItem('lesestrom')||'null');if(s){const keep={...s};if(!(s.v>=2)){delete keep.advanced;delete keep.inline;delete keep.bgInline;}if(!(s.v>=3))delete keep.flow;S={...S,...keep,v:3};}}catch(e){}
 /* Feste Darstellung (Andi Neck, 2026-10-23; docs/LESEN-UND-VERTIEFEN.md): Verse fortlaufend, Urtext und Details, Umschrift an;
    keine Lesarten- und Hintergrundzeilen im Text. Nicht einstellbar, damit die Regeln eindeutig und testbar sind. */
@@ -642,7 +660,7 @@ const GRUN=/[\u0370-\u03ff\u1f00-\u1fff][\u0370-\u03ff\u1f00-\u1fff\s\u02bc\u201
 const rich=text=>linkRefs(esc(String(text??'')),refCtx).replace(HEB,h=>`<span class="heb" lang="he" dir="rtl">${h}</span>${S.translit?` <i class="tr-inline">${esc(heTr(h))}</i>`:''}${playHe(h)}`).replace(GRUN,g=>S.advanced?`<span class="grc">${g}</span>${S.translit?` <i class="tr-inline">${esc(translit(g))}</i>`:''}${play(g)}`:`<i class="tr-inline">${esc(translit(g))}</i>${play(g)}`);
 const termsLine=terms=>(terms&&terms.length)?`<p class="terms">${terms.map(tm=>{const tl=tm.translit||translit(tm.word),kind=tm.lang==='grc'?'el':(tm.lang==='arc'?'arc':'he');return `<span class="term"><span class="lang">${LANGNAME[tm.lang]?LANGNAME[tm.lang][lang==='de'?0:1]:tm.lang}</span> ${S.advanced?`<span class="${tm.lang==='grc'?'grc':'heb'}" lang="${tm.lang==='grc'?'grc':'he'}">${esc(tm.word)}</span> `:''}${!S.advanced||S.translit||tm.lang!=='grc'?`<i class="tr-inline">${esc(tl)}</i>`:''}<button type="button" class="play" data-speak="${esc(tm.word)}" data-speak-lang="${kind}" data-speak-tr="${esc(tl)}" aria-label="${lang==='de'?'Anhören':'Listen'}">${icon('speak')}</button> «${esc(tm.de)}»</span>`;}).join('')}</p>`:'';
 if(synth&&synth.addEventListener)synth.addEventListener('voiceschanged',()=>{if(sheet==='settings')settingsSheet();});
-function applyPrefs(){app.classList.toggle('flow',!!S.flow);if(S.ill!=='off'&&!(ILL.styles||{})[S.ill])S.ill=Object.keys(ILL.styles||{})[0]||'off';app.dataset.view=S.view==='image'?'image':'text';app.dataset.tl=S.text||'de';if(S.ill!=='off')app.dataset.ill='1';else delete app.dataset.ill;app.dataset.theme=S.theme==='auto'?(mq&&mq.matches?'dark':'light'):S.theme;app.style.setProperty('--read',S.read+'px');}
+function applyPrefs(){app.classList.toggle('flow',!!S.flow);if(S.ill!=='off'&&!(ILL.styles||{})[S.ill])S.ill=Object.keys(ILL.styles||{})[0]||'off';app.dataset.view=S.view==='image'?'image':'text';app.dataset.tl=S.text||'de';if(S.ill!=='off')app.dataset.ill='1';else delete app.dataset.ill;if(S.ill!=='off'&&S.vill==='on')app.dataset.vill='1';else delete app.dataset.vill;app.dataset.theme=S.theme==='auto'?(mq&&mq.matches?'dark':'light'):S.theme;app.style.setProperty('--read',S.read+'px');}
 mq&&mq.addEventListener&&mq.addEventListener('change',applyPrefs);
 const remembered=new Map(),savedStreams=new Map();let readerStart=0,readerEnd=0;
 app.innerHTML=`<header class="bar top"><button type="button" class="icon-btn" data-action="home" aria-label="">${logo}</button><button type="button" class="location" data-action="index"></button><button type="button" class="icon-btn" data-action="menu"></button></header><div class="jump"></div><aside aria-label="Navigation"></aside><main class="reader" tabindex="0" role="region"></main><nav class="bar dock"><div class="path"></div><button type="button" data-action="down" class="pick"></button></nav><div class="sheet-host"></div><span class="live" aria-live="polite"></span>`;
@@ -803,7 +821,16 @@ const illTiles=svg=>{const t=String(svg||'').match(TILE_RE);if(!t)return null;re
 const illSvg=svg=>{const t=illTiles(svg);return t?`<div class="ill-tiles">${t.join('')}</div>`:svg;};
 const illNarrow=svg=>illTiles(svg)?'':` tiles" style="max-width:${Math.round(illVbW(svg)*1.8)}px`;
 const illWide=il=>{const t=illTiles(il&&il.svg);return t?(t.filter(x=>!x.includes('ill-narrow')).length>1||t.some(x=>x.includes('data-span="2"'))):illVbW(il&&il.svg)>=300;};
-const illFigure=il=>`<figure class="ill"><div class="ill-img${illNarrow(il.svg)}" role="img" aria-label="${esc(il.alt)}">${illSvg(il.svg)}</div><figcaption><button type="button" class="link soft" data-legend="${esc(il.key)}">${T().legend}</button>${illStyles(il.key,il.style)}</figcaption></figure>`;
+// Bilder ohne Worte (Kapitelebene, Hinweis Andi Neck 2026-10-25): zum Abrufen nach dem Lernen. Die Worte im Bild und die
+// Zusammenfassung daneben sind verdeckt; Antippen eines Feldes oder Kästchens zeigt dessen Worte, Antippen des Textes den Text.
+const nwBtn=()=>`<button type="button" class="link soft nowords-btn" data-nowords="1" aria-pressed="${!!S.nowords}" title="${lang==='de'?'Bild ohne Worte: Inhalt aus dem Gedächtnis zusammenbringen':'Picture without words: recall the content'}">${lang==='de'?'Ohne Worte':'No words'}</button>`;
+const illFigure=(il,nw)=>`<figure class="ill${nw&&S.nowords?' nowords':''}"><div class="ill-img${illNarrow(il.svg)}" role="img" aria-label="${esc(il.alt)}">${illSvg(il.svg)}</div><figcaption><button type="button" class="link soft" data-legend="${esc(il.key)}">${T().legend}</button>${nw?nwBtn():''}${illStyles(il.key,il.style)}</figcaption></figure>`;
+// Bilder auf Versebene (optional, S.vill): zum ersten Vers eines Feldes das Feld des Abschnittsbilds (mit schmaler Fassung fürs Handy)
+const refV=r=>{const a=String(r||'').split('-')[0].split('.');return {c:+a[1],v:+a[2]};};
+function verseIll(n){if(!ILL||S.ill==='off'||S.vill!=='on')return '';const p=nodes.get(n.parent);if(!p||p.level!==5)return '';const il=illFor(p);if(!il||!il.panels)return '';
+  const tiles=illTiles(il.svg);if(!tiles)return '';const groups=[];tiles.forEach(t=>{if(t.includes('ill-narrow')&&groups.length)groups[groups.length-1].push(t);else groups.push([t]);});
+  const out=[];il.panels.forEach((pn,i)=>{const r=refV(pn.ref);if(r.c===n.c&&r.v===n.v&&groups[i])out.push(groups[i].join(''));});
+  if(!out.length)return '';return `<figure class="ill verse-ill" role="img" aria-label="${esc(il.alt)}"><div class="ill-tiles">${out.join('')}</div><figcaption><button type="button" class="link soft" data-legend="${esc(il.key)}">${T().legend}</button></figcaption></figure>`;}
 function legendSheet(key){const it0=illItem(key),st=it0&&ILL.styles[it0.style];if(!st||!it0)return;const it=LOC(it0),t=T(),L=lang==='de';
   const acts=it.actions||it.panels.map(p=>p.action),ORDER=['divine','people','thing','place','action','concept'],grp=l=>l.group||l.kind;
   // Bildhilfe je Feld: Nummer wie im Bild, Kurztitel fett, was man sieht und wofür die Zeichen stehen, Stelle klein dahinter
@@ -826,7 +853,8 @@ function entry(id){
   const il=illFor(n);
   const tg=il?`<span class="ill-toggle" role="group" aria-label="${t.viewText} / ${t.viewImage}">${['text','image'].map(v=>`<button type="button" data-view="${v}" aria-label="${v==='text'?t.viewText:t.viewImage}" title="${v==='text'?t.viewText:t.viewImage}" aria-pressed="${(S.view==='image'?'image':'text')===v}">${icon(v)}</button>`).join('')}</span>`:'';
   const tl=tools(id);
-  const body=il?`<div class="ill-wrap${illWide(il)?' wide':''}"><div class="ill-text">${copy}</div>${illFigure(il)}</div>`:copy;
+  const nw=il&&n.level===4;
+  const body=il?`<div class="ill-wrap${illWide(il)?' wide':''}${nw&&S.nowords?' nowords':''}"><div class="ill-text">${copy}</div>${illFigure(il,nw)}</div>`:copy;
   return `<article class="stream-entry${il?' has-ill':''}" data-stream="${id}">${eyebrow(n)?`<p class="eyebrow">${esc(eyebrow(n))}</p>`:''}<h2>${esc(heading)}${readBtn(id)}</h2>${tg?`<div class="entry-tools">${tl}${tg}</div>`:tl}${body}<div class="actions">${deep}</div></article>`;
 }
 function tools(id,which='uh'){const t=T();return `<span class="part-tools">${which.includes('u')?`<button type="button" class="tool" data-study="${id}" aria-label="${t.understand}">${icon('understand')}<span>${t.toolUnderstand}</span></button>`:''}${which.includes('h')?`<button type="button" class="tool" data-background="${id}" aria-label="${t.dph}">${icon('history')}<span>${t.toolHistory}</span></button>`:''}</span>`;}
@@ -840,7 +868,7 @@ function verseEntry(n){
   const bgs=bgFor(n);
   const has=worked(n);
   const vno=`<button type="button" class="vno${has?' more':' plain'}" data-more="${n.id}" aria-label="${t.more} ${n.v}">${n.v}</button>`;
-  return `<article class="stream-entry verse" data-stream="${n.id}">${lead}<p class="verse-line">${vno}<span class="stream-copy" data-ref="${n.canonicalRef}">${decorate(text,LAYER().decisions[n.canonicalRef],alts,n.id)}</span>${merkMark(n)}</p>${merkCard(n,text)}</article>`;
+  return `<article class="stream-entry verse" data-stream="${n.id}">${lead}${verseIll(n)}<p class="verse-line">${vno}<span class="stream-copy" data-ref="${n.canonicalRef}">${decorate(text,LAYER().decisions[n.canonicalRef],alts,n.id)}</span>${merkMark(n)}</p>${merkCard(n,text)}</article>`;
 }
 // ---------- Merkverse und Lernen ----------
 // Merkverse: Bilder der Ebene «verse» (ILL.merk). Anzeige im Lesetext nach Einstellung S.merk: 'mark' (kleines Zeichen am Vers,
@@ -1262,6 +1290,7 @@ function settingsSheet(){
   <div class="set"><span>${t.colors}</span>${seg('theme',[['auto',t.auto],['light',t.light],['dark',t.dark]],S.theme)}</div>
   <div class="set"><span>${t.size}</span>${seg('read',[[17,'A−'],[19,'A'],[22,'A+']],S.read)}</div>
   ${Object.keys(ILL.styles||{}).length?`<div class="set"><span>${t.ill}<span class="sub">${t.illSub}</span></span>${seg('ill',[['off',t.illOff],...Object.entries(ILL.styles).map(([k,st])=>[k,lang==='de'?st.label.de:st.label.en])],S.ill)}</div>`:''}
+  ${Object.keys(ILL.styles||{}).length?`<div class="set"><span>${lang==='de'?'Bilder bei den Versen':'Pictures at verses'}<span class="sub">${lang==='de'?'Auf der Versebene zum ersten Vers eines Bildfeldes das passende Feld aus dem Abschnittsbild.':'At verse level, the matching field of the section picture next to its first verse.'}</span></span>${seg('vill',[['off',t.illOff],['on',lang==='de'?'Ein':'On']],S.vill||'off')}</div>`:''}
   ${MERK().length?`<div class="set"><span>${lang==='de'?'Merkverse':'Memory verses'}<span class="sub">${lang==='de'?'Bild und Wortlaut ausgewählter Kernverse. «Zeichen»: kleines Lesezeichen am Vers, Karte auf Antippen – stört den Lesefluss nicht.':'Picture and wording of selected key verses. «Mark»: small bookmark at the verse, card on tap.'}</span></span>${seg('merk',[['off',t.illOff],['mark',lang==='de'?'Zeichen':'Mark'],['card',lang==='de'?'Karte':'Card']],S.merk||'mark')}</div>`:''}
   <h4 class="set-group">${t.grpOrig}</h4>
   <div class="set"><span>${t.pron}<span class="sub">${t.pronSub}</span></span>${seg('pron',[['modern',t.pronModern],['school',t.pronSchool]],S.pron)}</div>
@@ -1409,13 +1438,19 @@ for(const st of Object.values(ILL.styles||{}))app.insertAdjacentHTML('beforeend'
 app.insertAdjacentHTML('beforeend',`<div class="player" role="region" hidden><span class="player-label" aria-live="polite"></span><button type="button" class="icon-btn" data-ra="prev">${icon('prev')}</button><button type="button" class="icon-btn" data-ra="toggle">${icon('pause')}</button><button type="button" class="icon-btn" data-ra="next">${icon('next')}</button><button type="button" class="icon-btn" data-ra="close">${icon('x')}</button></div>`);
 app.addEventListener('click',e=>{
   const b=e.target.closest('button,[data-close],[role=button]');
-  if(!b){if(e.target.closest('.reader'))app.classList.toggle('immersed');return;}
+  if(!b){const nwi=e.target.closest('.ill.nowords .ill-img');if(nwi){const c=e.target.closest('g.dg-cell');
+      // Zelle stufenweise: Zeichen → Anfangsbuchstaben → ganze Worte → wieder zu (ohne Zeichen gleich zu den Worten)
+      if(c){const st=c.classList.contains('r2')?0:c.classList.contains('r1')||!c.querySelector('.nwi.hint')?2:1;c.classList.remove('r1','r2');if(st)c.classList.add('r'+st);return;}
+      const g=e.target.closest('g.dg-label,g.ill-words')||e.target.closest('svg.ill-tile');if(g)g.classList.toggle('reveal');return;}
+    const nwt=e.target.closest('.ill-wrap.nowords .ill-text');if(nwt){nwt.classList.toggle('shown');return;}
+    if(e.target.closest('.reader'))app.classList.toggle('immersed');return;}
   if(b.dataset.altOpen){verseSheet(b.dataset.altVerse);const x=host.querySelector(`.sheet [data-alternative="${b.dataset.altOpen}"]`);if(x&&x.scrollIntoView)x.scrollIntoView({block:'center'});return;}
   if(b.dataset.dec!==undefined){const c=b.closest('[data-ref]');if(c){decisionSheet(c.dataset.ref,Number(b.dataset.dec));return;}}
   if(b.dataset.read){e.stopPropagation();if(RA.on&&RA.activeBtn===b.dataset.read)raControl('toggle');else readStart(b.dataset.read);return;}
   if(b.dataset.ra){raControl(b.dataset.ra);return;}
   if(b.dataset.view){S.view=b.dataset.view;save();applyPrefs();app.querySelectorAll('[data-view]').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.view===S.view)));return;}
   if(b.dataset.legend){legendSheet(b.dataset.legend);return;}
+  if(b.dataset.nowords){S.nowords=!S.nowords;save();rerenderKeep();return;}
   if(b.dataset.illStyle){S.ill=b.dataset.illStyle;save();rerenderKeep();if(sheet==='legend')legendSheet(b.dataset.illKey);return;}
   if(b.hasAttribute('data-ra-sample')){if(speakToggle(b))return;if(synth){synth.cancel();synth.speak(readUtter(T().readSampleText));speakWatch(b);}return;}
   if(b.dataset.speak!==undefined){e.preventDefault();e.stopPropagation();if(speakToggle(b))return;speak(b.dataset.speak,b.dataset.speakLang,b.dataset.speakTr);speakWatch(b);return;}

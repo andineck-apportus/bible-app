@@ -95,6 +95,20 @@ def block_h(v, fs, maxw, weight="700", maxlines=14):
     return n * fs * 1.18
 
 
+def initials(v):
+    """Anfangsbuchstaben je Sprache («Selig sind die Armen» → «S. s. d. A.») für die Fassung «ohne Worte»."""
+    if not v:
+        return None
+    def one(t):
+        out = []
+        for w in str(t).replace("–", " ").replace("→", " ").split():
+            c = next((ch for ch in w if ch.isalnum()), "")
+            if c:
+                out.append(c + ".")
+        return " ".join(out)
+    return {k: one(t) for k, t in v.items()} if isinstance(v, dict) else one(v)
+
+
 # ------------------------------------------------------------------ Zellen
 class Cells:
     def __init__(self, comp):
@@ -170,9 +184,40 @@ class Cells:
             out.append(s)
         if z.get("empty") and not (z.get("a") or z.get("b")):
             out.append(f'<text x="{x + w / 2:.1f}" y="{y + h / 2 + 3:.1f}" text-anchor="middle" font-family="sans-serif" font-size="8" fill="{MUTED}">–</text>')
+        full = "".join(out[1:])
+        out = [out[0], f'<g class="dg-full">{full}</g>', self.nowords(z, x, y, w, h, col)]
         if z.get("strike"):
             out.append(f'<path d="M{x + 4:.1f} {y + h - 4:.1f}L{x + w - 4:.1f} {y + 4:.1f}" stroke="#B0413E" stroke-width="1.3" stroke-linecap="round" opacity=".5"/>')
         return "".join(out) + "</g>"
+
+    def nowords(self, z, x, y, w, h, col):
+        """Fassung «ohne Worte» (Hinweis Andi Neck 2026-10-25): Zeichen gross und mittig, darunter die Anfangsbuchstaben – bei
+        Zellen mit Zeichen als Hinweis erst auf Antippen (class hint), bei Zellen ohne Zeichen gleich sichtbar. Die App blendet
+        diese Gruppe nur im Modus «ohne Worte» ein (sonst display:none)."""
+        if z.get("empty") and not (z.get("a") or z.get("b")):
+            return ""
+        tx, tw = x + w / 2, w - 2 * self.PAD
+        out = []
+        if z.get("who"):
+            out.append(self.portrait(z["who"], x + 3, y + (h - 18) / 2, 18))
+            tx, tw = x + 22 + (w - 22) / 2 - 1, w - 22 - self.PAD - 1
+        ini = initials(z.get("a") or z.get("b"))
+        ih_txt = block_h(ini, 7.6, tw, "700", 3) if ini else 0
+        icons = z.get("icons") or []
+        if icons:
+            ih = max(12, min(44, h - 2 * self.PAD - ih_txt - 3))
+            tot = ih + (ih_txt + 2 if ini else 0)
+            yy = y + max(self.PAD, (h - tot) / 2)
+            out.append(self.icons(icons, tx, yy, ih, tw * .85))  # Rand: manche Zeichen reichen etwas über ihre Box
+            yy += ih + 2
+            hint = " hint"
+        else:
+            yy = y + max(self.PAD, (h - ih_txt) / 2)
+            hint = ""
+        if ini:
+            s, _ = block(tx, yy, ini, 7.6, tw, fill=col, maxlines=3)
+            out.append(f'<g class="nwi{hint}">{s}</g>')
+        return f'<g class="dg-nw" display="none">{"".join(out)}</g>'
 
 
 def arrow(x1, y1, x2, y2, col=INK, head=True, dash=False, sw=1.4):

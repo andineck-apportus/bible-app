@@ -2,6 +2,14 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.93 — 2026-10-25 — Bild neben dem Text, Bilder bei den Versen, Kapitel ohne Worte
+
+Hinweise Andi Neck:
+- **Bild rechts neben dem Text** auf breiten Bildschirmen, auch bei breiten Strukturbildern; mit Bildern nutzt die Ansicht die ganze Breite (Text in Lesebreite links).
+- **Bilder bei den Versen** (Einstellung, Standard aus): auf der Versebene beim ersten Vers eines Feldes das passende Feld des Abschnittsbilds, auf dem Desktop rechts daneben.
+- **Kapitelbild ohne Worte** (Schalter beim Bild): Worte verdeckt, Kästchen der Strukturbilder mit grossem Zeichen bzw. Anfangsbuchstaben; Antippen zeigt erst die Anfangsbuchstaben, dann die Worte; die Zusammenfassung daneben ist verdeckt, bis man sie antippt. Die Fassung ohne Worte ist im Bild hinterlegt; `pruefe_bilder.py` prüft auch sie.
+- **Verdichtung geschärft:** Abschnitt ohne Verlust relevanter Information (bis 6 Sätze; fehlender Moment ist ein Fehler), Kapitel mit der Kernaussage jedes Abschnitts und der Hauptaussage des Kapitels (geprüft).
+
 ## v0.92 — 2026-10-24 — Mt 5,37 «Euer Ja sei ein Ja»
 
 Hinweis Andi Neck:

@@ -10,7 +10,7 @@ gleich lauten.
 Prüft:
 - Kernanalyse vorhanden;
 - Kapitel: jeder Abschnitt mit seiner Kernaussage erkennbar (Schlüsselwort oder Wort der Kernaussage);
-- Umfang je Ebene (Abschnitt 2–4, Kapitel 3–5, Buch 4–6 Sätze; Mundart gleich viele Sätze ±1); strukturierte Zusammenfassung:
+- Umfang je Ebene (Abschnitt 2–6, so lang wie nötig, ohne relevanten Verlust; Kapitel 3–5, Buch 4–6 Sätze; Mundart gleich viele Sätze ±1); strukturierte Zusammenfassung:
   Zeilen mit «– » sind eine Liste aller Glieder (zählt als ein Satz, beliebig viele Punkte, Mundart gleich viele);
 - kein «ß»;
 - keine Stellen-Marken (Zusammenfassungen werden als reiner Text gezeigt);
@@ -37,7 +37,8 @@ import localizations  # noqa: E402
 from _lib import SUMMARY_SRC, load_summary_overrides  # noqa: E402
 
 LANG = "gsw-u-sd-chzh"
-BUDGET = {"section": (2, 4), "chapter": (3, 5), "book": (4, 6)}
+# Abschnitt: so lang wie nötig, damit keine relevante Information verloren geht (Hinweis Andi Neck 2026-10-25), daher bis 6
+BUDGET = {"section": (2, 6), "chapter": (3, 5), "book": (4, 6)}
 DATE = os.environ.get("BIBLE_REVISION_DATE", "2026-10-23")
 AUTH = "KI-Entwurf (Claude) vom {d} aus der Kernanalyse {c} (docs/VERDICHTUNG.md); von einer getrennten KI-Instanz gegen Text und Kernanalyse geprüft; keine fachliche Prüfung."
 AUTH_GSW = "KI-Entwurf (Claude) vom {d}; Mundartfassung der neuen Zusammenfassung; Mundart noch nicht muttersprachlich geprüft."
@@ -106,10 +107,15 @@ def check(e, errs, warns):
                 if not any(w in low_ for w in words):
                     errs.append(f"{e['core']}: Kernaussage von {c} in der Kapitel-Zusammenfassung nicht erkennbar")
     low = e["de"].lower()
+    if core["level"] == "chapter":
+        # Kapitel: zusätzlich die Hauptaussage des Kapitels (Hinweis Andi Neck 2026-10-25)
+        if not any(w.lower() in low for w in re.findall(r"\w{6,}", core.get("core_de", ""))):
+            errs.append(f"{e['core']}: Hauptaussage des Kapitels (core_de) in der Zusammenfassung nicht erkennbar")
     for i, m in enumerate(core["moments"], 1):
         words = [w.lower() for w in m.get("keywords", [])] + [w.lower() for w in re.findall(r"\w{6,}", m["text_de"])]
         if not any(w in low for w in words):
-            warns.append(f"{e['core']}: Moment {i} ({m['reference']}) in der Zusammenfassung nicht erkennbar")
+            # Abschnitt: keine relevante Information verlieren – fehlt ein tragender Moment, ist das ein Fehler
+            (errs if core["level"] == "section" else warns).append(f"{e['core']}: Moment {i} ({m['reference']}) in der Zusammenfassung nicht erkennbar")
     return core
 
 

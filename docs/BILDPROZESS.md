@@ -61,8 +61,9 @@ Was gut funktioniert: die festen Erkennungszeichen (Gott, Jesus, Geist) und der 
    (Hinweis Andi Neck, 2026-10-23).
 7. **Auf dem Handy lesbar.** Höchstens zwei Felder nebeneinander, Mindestgrösse für Zeichen und Schrift, im Abschnitt
    höchstens drei Felder (Ausnahme: tragende Reihen, VERDICHTUNG.md Regel 6). Die App zeigt jede Kachel in gleicher,
-   lesbarer Grösse (höchstens etwa 340 px breit); Bilder mit mehreren Kacheln werden breiter und stehen auf breiten
-   Bildschirmen unter dem Text, statt in die halbe Spalte gequetscht zu werden. Hintergrund zwischen den Kacheln
+   lesbarer Grösse (höchstens etwa 340 px breit); auf breiten Bildschirmen steht das Bild rechts neben dem Text, und die
+   Ansicht nutzt mit Bildern die ganze Breite (Hinweis Andi Neck 2026-10-25). Jedes Strukturbild-Kästchen trägt zusätzlich
+   eine Fassung «ohne Worte» (`g.dg-nw`: Zeichen gross, Anfangsbuchstaben), die die App beim Kapitelbild einblendet. Hintergrund zwischen den Kacheln
    durchsichtig (Hinweise Andi Neck 2026-10-24). Jede Kachel ist ein eigenes SVG (`ill-tile`); die App ordnet die Kacheln
    nach Bildschirmbreite (Handy untereinander in voller Breite, sonst bis zwei nebeneinander). Breite Strukturbilder haben
    zusätzlich eine schmale Fassung fürs Handy, damit die Schrift lesbar bleibt.

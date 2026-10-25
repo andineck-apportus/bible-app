@@ -774,7 +774,7 @@ def frame(n, pts, body, bg="#F6EAD7", num=None):
     nx, ny = num or (pts[0][0] + 13, pts[0][1] + 13)
     return (f'<clipPath id="{pid}"><polygon points="{poly}"/></clipPath><g clip-path="url(#{pid})"><polygon points="{poly}" fill="{bg}"/>{body}</g>'
             f'<polygon points="{poly}" fill="none" stroke="{INK}" stroke-width="2.2" stroke-linejoin="round"/>'
-            f'<circle cx="{nx}" cy="{ny}" r="8.5" fill="#FFFDF6" stroke="{INK}" stroke-width="1.2"/><text x="{nx}" y="{ny + 4}" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="{INK}">{n}</text>')
+            f'<circle cx="{nx}" cy="{ny}" r="8.5" fill="#FFFDF6" stroke="{INK}" stroke-width="1.2"/><text class="pn-n" x="{nx}" y="{ny + 4}" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="{INK}">{n}</text>')
 
 
 # ---------------------------------------------------------------- Johannes 2,1–12 (Kana), vier Panels ohne Text
@@ -1054,7 +1054,7 @@ def apanel(i, n, body, num=True, size=(186, 140)):
     poly = " ".join(f"{x if x < 93 else w_ - (186 - x):g},{y if y < 70 else h_ - (140 - y):g}" for x, y in PANEL_SHAPES[i % 4])
     return (f'<clipPath id="{pid}"><polygon points="{poly}"/></clipPath><g clip-path="url(#{pid})"><polygon points="{poly}" fill="#F6EAD7"/>{body}</g>'
             f'<polygon class="pn-frame" points="{poly}" fill="none" stroke="{INK}" stroke-width="2.2" stroke-linejoin="round"/>'
-            + (f'<circle cx="14" cy="14" r="8.5" fill="#FFFDF6" stroke="{INK}" stroke-width="1.2"/><text x="14" y="18" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="{INK}">{n}</text>' if num else ''))
+            + (f'<circle cx="14" cy="14" r="8.5" fill="#FFFDF6" stroke="{INK}" stroke-width="1.2"/><text class="pn-n" x="14" y="18" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="{INK}">{n}</text>' if num else ''))
 
 
 BAND_H = 20  # Höhe des Stichwortbands unter einem Feld

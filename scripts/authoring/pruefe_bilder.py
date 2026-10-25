@@ -25,11 +25,11 @@ JS = r"""
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 (async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:900,height:900}});
 const out=[];
-for(const lang of ['de','gsw']){
+for(const mode of ['','nw'])for(const lang of ['de','gsw']){
   await p.goto('file://'+process.argv[2]+'?'+lang);
-  await p.addStyleTag({content:`.lw{display:none}.lw-${lang}{display:inline}`});
+  await p.addStyleTag({content:`.lw{display:none}.lw-${lang}{display:inline}`+(mode?'.dg-full{display:none}.dg-nw{display:inline}':'')});
   await p.waitForTimeout(200);
-  const r=await p.evaluate((lang)=>{
+  const r=await p.evaluate(([lang,mode])=>{
     const res=[];const tol=.8;
     const inter=(a,b)=>a.x<b.x+b.width-tol&&a.x+a.width>b.x+tol&&a.y<b.y+b.height-tol&&a.y+a.height>b.y+tol;
     const vis=t=>{const cs=getComputedStyle(t);return cs.display!=='none'&&t.getBBox().width>0;};
@@ -38,10 +38,12 @@ for(const lang of ['de','gsw']){
       fig.querySelectorAll('svg.ill-tile').forEach((tile,ti)=>{
         const nm=tile.classList.contains('ill-narrow')?'schmal':'Kachel '+(ti+1);
         // Text in Zellen
+        const L=lang+(mode?', ohne Worte':'');
         tile.querySelectorAll('g.dg-cell').forEach(c=>{const R=c.querySelector('rect').getBBox();
-          c.querySelectorAll('text').forEach(t=>{if(!vis(t))return;const B=t.getBBox();
+          c.querySelectorAll(mode?'.dg-nw text, .dg-nw use':'.dg-full text, :scope > text').forEach(t=>{if(!vis(t))return;const B=t.getBBox();
             if(B.x<R.x-tol||B.y<R.y-tol||B.x+B.width>R.x+R.width+tol||B.y+B.height>R.y+R.height+tol)
-              res.push(`${id} ${nm} [${lang}]: Text ragt über die Zelle: «${t.textContent.slice(0,50)}»`);});});
+              res.push(`${id} ${nm} [${L}]: ${t.tagName==='use'?'Zeichen':'Text'} ragt über die Zelle: «${t.textContent.slice(0,50)}»${mode?` (${[B.x,B.y,B.width,B.height,R.x,R.y,R.width,R.height].map(v=>v.toFixed(1))})`:""}`);});});
+        if(mode)return;
         // Leerraum: in Raster, Pfeilkette, Kette und Spalten füllt jede Zeile die Breite (Hinweis Andi Neck 2026-10-24)
         tile.querySelectorAll('g.dg-vis').forEach(g=>{if(!['grid','arrows','tree','columns'].includes(g.dataset.visual))return;
           const rs=[...g.querySelectorAll(':scope > g.dg-cell > rect, :scope g.dg-cell > rect')].map(r=>r.getBBox());if(!rs.length)return;
@@ -68,7 +70,7 @@ for(const lang of ['de','gsw']){
           L.g.querySelectorAll('text').forEach(t=>{if(!vis(t))return;const B=t.getBBox();if(B.width>L.B.width+tol)res.push(`${id} ${nm} [${lang}]: Beschriftung breiter als ihr Schild «${t.textContent}»`);});});
       });
     }
-    return res;},lang);
+    return res;},[lang,mode]);
   out.push(...r);
 }
 console.log(JSON.stringify(out));await b.close();})();
@@ -94,7 +96,7 @@ def main():
     if res:
         print(f"FEHLER: {len(res)} Befunde in {len(sel)} Bildern")
         sys.exit(1)
-    print(f"PASS: Anordnung von {len(sel)} Bildern geprüft (Text in Zellen, Beschriftungen; de und gsw)")
+    print(f"PASS: Anordnung von {len(sel)} Bildern geprüft (Text in Zellen, auch ohne Worte; Beschriftungen; de und gsw)")
 
 
 if __name__ == "__main__":

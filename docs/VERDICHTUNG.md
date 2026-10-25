@@ -113,8 +113,8 @@ sagt; eine Deutung wird als Deutung gekennzeichnet.
 
 | Ebene | Momente | Zusammenfassung | Bild |
 |---|---|---|---|
-| Abschnitt | 1–3; eine Reihe, ein Gegensatz oder ein Baum zählt als ein Moment mit allen Gliedern | 2–4 Sätze oder eine kurze Liste | 1–3 Szenen oder eine Übersicht (Raster bis 8 Felder, bei tragenden Reihen alle Glieder, gruppiert; Spalten, Baum, Modell) |
-| Kapitel | ein Moment je Hauptabschnitt, höchstens 4; jeder Abschnitt in der Struktur | 3–5 Sätze oder Liste; jeder Abschnitt mit seiner Kernaussage | höchstens 4 Felder, zusammen alle Abschnitte |
+| Abschnitt | 1–3; eine Reihe, ein Gegensatz oder ein Baum zählt als ein Moment mit allen Gliedern | **keine relevante Information geht verloren** (wesentlich); so lang wie nötig, meist 2–4, höchstens 6 Sätze oder eine Liste; jeder tragende Moment erkennbar (Fehler, nicht Hinweis) | 1–3 Szenen oder eine Übersicht (Raster bis 8 Felder, bei tragenden Reihen alle Glieder, gruppiert; Spalten, Baum, Modell) |
+| Kapitel | ein Moment je Hauptabschnitt, höchstens 4; jeder Abschnitt in der Struktur | 3–5 Sätze oder Liste; **mindestens die Kernaussage jedes Abschnitts, dazu die Hauptaussage des Kapitels** (beides geprüft) | höchstens 4 Felder, zusammen alle Abschnitte |
 | Buch | 4–6 Stationen | 4–6 Sätze | Zeitleiste oder Karte mit den Stationen |
 | Buchgruppe, Testament, Bibel | 4–6 Stationen | 4–6 Sätze | Stationen mit Beschriftung |
 | Merkvers | 1 | – (der Vers selbst) | ein Bild mit dem Verswort |
