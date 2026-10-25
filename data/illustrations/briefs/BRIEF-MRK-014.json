@@ -73,7 +73,7 @@
             "FIG-OBJ-BROT",
             "FIG-OBJ-BECHER-VOLL",
             "FIG-JESUS",
-            "FIG-GRUPPE-MENGE"
+            "FIG-ZEICHEN-VIELE"
           ]
         }
       ],
@@ -343,6 +343,166 @@
           "Mahl: Brot und Becher = Jesus, für viele (Brot, Becher, Jesus, Menge).",
           "Getsemani: Judas küsst Jesus (Lippen); die Menge ergreift ihn (Bogen, gefesselte Hände).",
           "Verleugnung: Am Feuer streitet Petrus ab, Jesus zu kennen (durchgekreuzte Verbindung); der Hahn."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-25",
+      "change_de": "Zeichen gegen den Text geprüft und korrigiert; neue Zeichen Furcht und Austreiben",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.14.1-MRK.14.11",
+            "figures": [
+              "FIG-ROLLE-FRAU",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS",
+              "FIG-OBJ-SALBGEFAESS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SALBUNG"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-FRAU",
+                "icons": [
+                  "FIG-OBJ-SALBGEFAESS",
+                  "FIG-ZEICHEN-TOD"
+                ]
+              }
+            ],
+            "action_de": "In Betanien salbt eine Frau Jesus mit kostbarem Öl; er sagt, sie habe ihn für das Begräbnis gesalbt.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-FRAU": "FIG-OBJ-SALBGEFAESS"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-FRAU",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-SALBUNG": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-ROLLE-FRAU": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.14.12-MRK.14.31",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT",
+              "FIG-OBJ-BECHER-VOLL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-OBJ-BROT",
+                  "FIG-OBJ-BECHER-VOLL",
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-MENGE"
+                ]
+              }
+            ],
+            "action_de": "Beim Passamahl deutet Jesus Brot und Becher auf seinen Leib und sein Blut des Bundes für viele.",
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROT"
+              },
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "pensive"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.14.32-MRK.14.52",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS",
+              "FIG-JUDAS-ISKARIOT"
+            ],
+            "objects": [
+              "FIG-ORT-GARTEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-KUSS",
+              "FIG-ZEICHEN-AUSLIEFERN"
+            ],
+            "speech": [],
+            "action_de": "In Getsemani betet Jesus, die Jünger schlafen; Judas liefert ihn mit einem Kuss aus.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-JUDAS-ISKARIOT": "earnest",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 40,
+                "FIG-JESUS": 104,
+                "FIG-JUDAS-ISKARIOT": 146
+              },
+              "back_side": "left",
+              "before": true,
+              "beside": {
+                "FIG-ZEICHEN-KUSS": "FIG-JUDAS-ISKARIOT"
+              },
+              "at": {
+                "FIG-ZEICHEN-AUSLIEFERN": "FIG-JESUS"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.14.53-MRK.14.72",
+            "figures": [
+              "FIG-ROLLE-MAGD",
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-OBJ-FEUER",
+              "FIG-OBJ-HAHN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-ROLLE-MAGD",
+                "icons": [
+                  "FIG-ZEICHEN-VERLEUGNEN"
+                ]
+              }
+            ],
+            "action_de": "Vor dem Hohen Rat bekennt Jesus, der Christus zu sein; im Hof verleugnet ihn Petrus dreimal.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-MAGD": "earnest",
+                "FIG-PETRUS": "worried"
+              }
+            }
+          }
         ]
       }
     }

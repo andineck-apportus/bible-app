@@ -56,7 +56,7 @@
       ],
       "objects": [],
       "signs": [
-        "FIG-ZEICHEN-NICHT-VERSTEHEN"
+        "FIG-ZEICHEN-FURCHT"
       ],
       "speech": [
         {
@@ -75,9 +75,7 @@
           "FIG-JESUS": 50,
           "FIG-GRUPPE-JUENGER": 130
         },
-        "at": {
-          "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-GRUPPE-JUENGER"
-        },
+        "at": {},
         "mood": {
           "FIG-JESUS": "calm",
           "FIG-GRUPPE-JUENGER": "surprised"
@@ -286,6 +284,135 @@
           "Galiläa: Jesus verkündet: Gottes Reich ist nahe (Krone), kehrt um (Pfeil), glaubt (Herz); er heilt einen Kranken (Hand mit Licht).",
           "Leidensankündigung: Unterwegs sagt Jesus den Jüngern: Kreuz, Tod (verschlossenes Grab) und Auferstehung (offenes Grab, Pfeil nach oben); die Jünger verstehen nicht (Nebel).",
           "Kreuz und leeres Grab: Beim offenen Grab sagt ein junger Mann in Weiss den drei Frauen: Jesus ist auferweckt (Jesus, offenes Grab mit Pfeil nach oben); die Frauen erschrecken."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-25",
+      "change_de": "Zeichen gegen den Text geprüft und korrigiert; neue Zeichen Furcht und Austreiben",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.1.14-MRK.1.39",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-KRANKER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-REICH-GOTTES",
+                  "FIG-ZEICHEN-UMKEHR",
+                  "FIG-ZEICHEN-GLAUBEN"
+                ]
+              }
+            ],
+            "action_de": "In Galiläa verkündet Jesus: Das Reich Gottes ist nahe, kehrt um und glaubt; er heilt Kranke und treibt Dämonen aus.",
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-KRANKER": "lie"
+              },
+              "at": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
+              },
+              "mood": {
+                "FIG-JESUS": "smile",
+                "FIG-ROLLE-KRANKER": "surprised",
+                "FIG-GRUPPE-MENGE": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.10.32-MRK.10.34",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-NICHT-VERSTEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-KREUZ",
+                  "FIG-ZEICHEN-TOD",
+                  "FIG-ZEICHEN-AUFERSTEHEN"
+                ]
+              }
+            ],
+            "action_de": "Auf dem Weg hinauf nach Jerusalem kündigt Jesus den Zwölf an, dass er ausgeliefert, getötet wird und nach drei Tagen aufersteht; sie verstehen es nicht.",
+            "stage": {
+              "x": {
+                "FIG-JESUS": 50,
+                "FIG-GRUPPE-JUENGER": 130
+              },
+              "at": {
+                "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-GRUPPE-JUENGER"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "surprised"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.15.22-MRK.16.8",
+            "figures": [
+              "FIG-MARIA-MAGDALA",
+              "FIG-MARIA-MUTTER-JAKOBUS",
+              "FIG-SALOME",
+              "FIG-ROLLE-JUENGLING"
+            ],
+            "objects": [
+              "FIG-OBJ-KREUZ",
+              "FIG-ORT-GRAB"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-JUENGLING",
+                "to": "FIG-SALOME",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-AUFERSTEHEN"
+                ]
+              }
+            ],
+            "action_de": "In Jerusalem wird Jesus gekreuzigt. Am Grab hören die Frauen von einem jungen Mann im weissen Gewand: Er ist auferweckt worden, er ist nicht hier; voll Furcht fliehen sie.",
+            "stage": {
+              "floor_side": "left",
+              "back_side": "right",
+              "before": true,
+              "floor_x": {
+                "FIG-OBJ-KREUZ": 4
+              },
+              "x": {
+                "FIG-MARIA-MAGDALA": 40,
+                "FIG-MARIA-MUTTER-JAKOBUS": 64,
+                "FIG-SALOME": 88,
+                "FIG-ROLLE-JUENGLING": 120
+              },
+              "mood": {
+                "FIG-MARIA-MAGDALA": "surprised",
+                "FIG-MARIA-MUTTER-JAKOBUS": "surprised",
+                "FIG-SALOME": "surprised",
+                "FIG-ROLLE-JUENGLING": "calm"
+              }
+            }
+          }
         ]
       }
     }

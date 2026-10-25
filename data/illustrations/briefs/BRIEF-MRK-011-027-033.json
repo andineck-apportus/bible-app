@@ -82,9 +82,7 @@
         "FIG-ROLLE-SCHRIFTGELEHRTER",
         "FIG-JESUS"
       ],
-      "objects": [
-        "FIG-ZEICHEN-ABSTAND"
-      ],
+      "objects": [],
       "signs": [],
       "speech": [
         {
@@ -270,6 +268,118 @@
           "Die Frage nach der Vollmacht: Hohepriester, Schriftgelehrte und Älteste fragen Jesus, in welcher Vollmacht er handelt (Zepter, Fragezeichen).",
           "Die Gegenfrage: Die Taufe des Johannes (Taufe) – vom Himmel oder von Menschen? (Strahlenkranz, Menschen, Fragezeichen)",
           "Keine Antwort: Aus Furcht vor der Menge (gestrichelte Linie) sagen sie: Wir wissen es nicht (Nebel mit Fragezeichen); Jesus: Dann sage ich euch meine Vollmacht auch nicht (Zepter, Finger am Mund)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-25",
+      "change_de": "Zeichen gegen den Text geprüft und korrigiert; neue Zeichen Furcht und Austreiben",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.11.27-MRK.11.28",
+            "figures": [
+              "FIG-ROLLE-HOHEPRIESTER",
+              "FIG-ROLLE-SCHRIFTGELEHRTER",
+              "FIG-ROLLE-AELTESTER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-HOHEPRIESTER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-VOLLMACHT",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Im Tempel kommen die Hohepriester, Schriftgelehrten und Ältesten zu Jesus: In welcher Vollmacht tust du das? Wer hat sie dir gegeben?",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-HOHEPRIESTER": "earnest",
+                "FIG-ROLLE-SCHRIFTGELEHRTER": "earnest",
+                "FIG-ROLLE-AELTESTER": "earnest"
+              },
+              "back_side": "left",
+              "before": true
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.11.29-MRK.11.30",
+            "figures": [
+              "FIG-ROLLE-HOHEPRIESTER",
+              "FIG-ROLLE-SCHRIFTGELEHRTER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-HOHEPRIESTER",
+                "icons": [
+                  "FIG-ZEICHEN-TAUFE",
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-VIELE",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus: Ich will euch eine Frage stellen: Die Taufe des Johannes – war sie vom Himmel oder von Menschen? Antwortet mir!",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-HOHEPRIESTER": "pensive",
+                "FIG-ROLLE-SCHRIFTGELEHRTER": "pensive"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.11.31-MRK.11.33",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-ROLLE-HOHEPRIESTER",
+              "FIG-ROLLE-SCHRIFTGELEHRTER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-HOHEPRIESTER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-NICHT-VERSTEHEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-HOHEPRIESTER",
+                "icons": [
+                  "FIG-ZEICHEN-VOLLMACHT",
+                  "FIG-ZEICHEN-SCHWEIGEN"
+                ]
+              }
+            ],
+            "action_de": "Sie überlegen und fürchten die Menge, denn alle halten Johannes für einen Propheten. So antworten sie: Wir wissen es nicht. Jesus: Dann sage auch ich euch nicht, in welcher Vollmacht ich das tue.",
+            "stage": {
+              "split": 1,
+              "mood": {
+                "FIG-ROLLE-HOHEPRIESTER": "pensive",
+                "FIG-ROLLE-SCHRIFTGELEHRTER": "pensive",
+                "FIG-GRUPPE-MENGE": "calm"
+              }
+            }
+          }
         ]
       }
     }

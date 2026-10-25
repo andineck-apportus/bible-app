@@ -19,7 +19,7 @@
       ],
       "objects": [
         "FIG-OBJ-KREUZ",
-        "FIG-ORT-BERG"
+        "FIG-ORT-GOLGOTA"
       ],
       "signs": [],
       "speech": [],
@@ -52,7 +52,7 @@
           "FIG-JESUS": 98
         },
         "floor_x": {
-          "FIG-ORT-BERG": 158
+          "FIG-ORT-GOLGOTA": 158
         }
       }
     },
@@ -722,6 +722,166 @@
                 "FIG-ROLLE-SOLDAT": 20,
                 "FIG-SIMON-KYRENE": 62,
                 "FIG-JESUS": 118
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.27.34-MAT.27.38",
+            "figures": [
+              "FIG-GRUPPE-SOLDATEN"
+            ],
+            "objects": [
+              "FIG-ORT-GOLGOTA",
+              "FIG-OBJ-KLEIDER-VERLOST"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Sie geben Jesus mit Galle vermischten Wein, den er nicht trinken will, kreuzigen ihn, verteilen seine Kleider durch das Los und bewachen ihn; über seinem Kopf steht die Anklage, und mit ihm werden zwei Räuber gekreuzigt.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-SOLDATEN": "calm"
+              },
+              "back_side": "right",
+              "x": {
+                "FIG-GRUPPE-SOLDATEN": 44
+              },
+              "floor_x": {
+                "FIG-OBJ-KLEIDER-VERLOST": 90
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-SOLDATEN",
+                  "FIG-OBJ-KLEIDER-VERLOST",
+                  "throw"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.27.39-MAT.27.40",
+            "figures": [
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-KREUZ"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-NIEDERREISSEN",
+                  "FIG-ZEICHEN-TAGE",
+                  "FIG-ZEICHEN-TAGE",
+                  "FIG-ZEICHEN-TAGE"
+                ]
+              }
+            ],
+            "action_de": "Die Vorübergehenden lästern ihn und schütteln die Köpfe: Du, der du den Tempel niederreisst und in drei Tagen aufbaust, rette dich selbst! Wenn du Gottes Sohn bist, steig herab vom Kreuz!",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 60
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.27.41-MAT.27.44",
+            "figures": [
+              "FIG-GRUPPE-HOHER-RAT"
+            ],
+            "objects": [
+              "FIG-OBJ-KREUZ"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-HOHER-RAT",
+                "to": "FIG-GRUPPE-HOHER-RAT",
+                "icons": [
+                  "FIG-OBJ-KREUZ",
+                  "FIG-ZEICHEN-HINAB",
+                  "FIG-ZEICHEN-GLAUBEN"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-HOHER-RAT",
+                "to": "FIG-GRUPPE-HOHER-RAT",
+                "icons": [
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-RETTUNG",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Ebenso spotten die Hohepriester mit den Schriftgelehrten und Ältesten: Andere hat er gerettet, sich selbst kann er nicht retten; er steige jetzt vom Kreuz herab, dann glauben wir an ihn; er hat auf Gott vertraut, der soll ihn jetzt retten. Auch die Räuber beschimpfen ihn.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-HOHER-RAT": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-HOHER-RAT": 60
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-25",
+      "change_de": "Zeichen gegen den Text geprüft und korrigiert; neue Zeichen Furcht und Austreiben",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.27.32-MAT.27.33",
+            "figures": [
+              "FIG-ROLLE-SOLDAT",
+              "FIG-SIMON-KYRENE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KREUZ",
+              "FIG-ORT-BERG"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Unterwegs zwingen die Soldaten einen Mann aus Kyrene namens Simon, das Kreuz Jesu zu tragen; sie kommen an den Ort Golgota, die Schädelstätte.",
+            "stage": {
+              "hold": {
+                "FIG-SIMON-KYRENE": "FIG-OBJ-KREUZ"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-SOLDAT",
+                  "FIG-SIMON-KYRENE",
+                  "act"
+                ],
+                [
+                  "FIG-JESUS",
+                  "FIG-ORT-BERG",
+                  "go"
+                ]
+              ],
+              "mood": {
+                "FIG-SIMON-KYRENE": "worried",
+                "FIG-ROLLE-SOLDAT": "earnest",
+                "FIG-JESUS": "calm"
+              },
+              "back_side": "right",
+              "x": {
+                "FIG-ROLLE-SOLDAT": 18,
+                "FIG-SIMON-KYRENE": 58,
+                "FIG-JESUS": 98
+              },
+              "floor_x": {
+                "FIG-ORT-BERG": 158
               }
             }
           },

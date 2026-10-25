@@ -26,7 +26,7 @@
           "to": "FIG-ROLLE-PROPHET",
           "icons": [
             "FIG-ROLLE-BOTE",
-            "FIG-ZEICHEN-BRINGEN",
+            "FIG-ZEICHEN-WEG",
             "FIG-ORT-WUESTE"
           ]
         }
@@ -62,7 +62,7 @@
           "icons": [
             "FIG-ZEICHEN-UMKEHR",
             "FIG-ZEICHEN-TAUFE",
-            "FIG-ZEICHEN-BRINGEN",
+            "FIG-ZEICHEN-DARAUS",
             "FIG-ZEICHEN-VERGEBUNG"
           ]
         }
@@ -92,7 +92,7 @@
           "to": "FIG-GRUPPE-MENGE",
           "icons": [
             "FIG-ZEICHEN-TAUFE",
-            "FIG-ZEICHEN-BRINGEN",
+            "FIG-ZEICHEN-DARAUS",
             "FIG-JESUS",
             "FIG-HEILIGER-GEIST"
           ]
@@ -361,6 +361,112 @@
           "Schriftwort: Der Prophet (Schriftrolle) kündigt einen Boten an, der in der Wüste den Weg bereitet (Bote, Pfeil, Wüste).",
           "Am Jordan: Johannes im Kamelhaar ruft zur Umkehr, zur Taufe und zur Vergebung (Umkehr-Pfeil, Taufe, Fleck mit Lichtstreifen); die Menge steht im Fluss.",
           "Ankündigung: Johannes tauft mit Wasser (Taufe); nach ihm kommt einer (Pfeil, Jesus), der mit dem Geist tauft (Taube)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-25",
+      "change_de": "Zeichen gegen den Text geprüft und korrigiert; neue Zeichen Furcht und Austreiben",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.1.2-MRK.1.3",
+            "figures": [
+              "FIG-ROLLE-PROPHET"
+            ],
+            "objects": [
+              "FIG-ORT-WUESTE",
+              "FIG-OBJ-SCHRIFTROLLE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-PROPHET",
+                "to": "FIG-ROLLE-PROPHET",
+                "icons": [
+                  "FIG-ROLLE-BOTE",
+                  "FIG-ZEICHEN-BRINGEN",
+                  "FIG-ORT-WUESTE"
+                ]
+              }
+            ],
+            "action_de": "Wie beim Propheten Jesaja geschrieben steht: Gott sendet einen Boten voraus, eine Stimme ruft in der Wüste: Bereitet den Weg des Herrn.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-PROPHET": "earnest"
+              },
+              "x": {
+                "FIG-ROLLE-PROPHET": 60
+              },
+              "hold": {
+                "FIG-ROLLE-PROPHET": "FIG-OBJ-SCHRIFTROLLE"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.1.4-MRK.1.6",
+            "figures": [
+              "FIG-JOHANNES-TAEUFER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-JORDAN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JOHANNES-TAEUFER",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-UMKEHR",
+                  "FIG-ZEICHEN-TAUFE",
+                  "FIG-ZEICHEN-BRINGEN",
+                  "FIG-ZEICHEN-VERGEBUNG"
+                ]
+              }
+            ],
+            "action_de": "Johannes tritt in der Wüste auf und verkündet eine Taufe der Umkehr zur Vergebung der Sünden; die Leute aus Judäa und Jerusalem lassen sich im Jordan taufen und bekennen ihre Sünden.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest"
+              },
+              "in_water": true
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.1.7-MRK.1.8",
+            "figures": [
+              "FIG-JOHANNES-TAEUFER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-JORDAN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JOHANNES-TAEUFER",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-TAUFE",
+                  "FIG-ZEICHEN-BRINGEN",
+                  "FIG-JESUS",
+                  "FIG-HEILIGER-GEIST"
+                ]
+              }
+            ],
+            "action_de": "Johannes kündigt an: Nach mir kommt der Stärkere; ich habe mit Wasser getauft, er wird mit heiligem Geist taufen.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "surprised",
+                "FIG-JOHANNES-TAEUFER": "earnest"
+              },
+              "in_water": true
+            }
+          }
         ]
       }
     }

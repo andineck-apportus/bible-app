@@ -1283,7 +1283,10 @@ def library():
     # Lexikon-ID, gleich woher das Zeichen bisher kam (Symbol-Bibliothek, Bauteile, Figuren); Datei je Thema
     for f in sorted((pathlib.Path(__file__).resolve().parent / "bildsymbole_daten/ueberarbeitet").glob("*.json")):
         for fid, e in json.loads(f.read_text(encoding="utf-8")).items():
-            if fid not in vb:
+            if fid not in vb:  # neues Zeichen nur aus Emoji (ohne frühere Zeichnung): anhängen
+                sid = "an-e-" + fid[4:].lower()
+                lib = lib.replace("\n</defs></svg>", f'\n<symbol id="{sid}" viewBox="{e["vb"]}">{e["svg"]}</symbol>\n</defs></svg>', 1)
+                vb[fid] = (sid, e["vb"])
                 continue
             sid = vb[fid][0]
             new = f'<symbol id="{sid}" viewBox="{e["vb"]}">{e["svg"]}</symbol>'

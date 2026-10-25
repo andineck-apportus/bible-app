@@ -82,9 +82,7 @@
         "FIG-JESUS"
       ],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-FREUDE"
-      ],
+      "signs": [],
       "speech": [
         {
           "from": "FIG-GRUPPE-ZWOELF",
@@ -266,6 +264,115 @@
           "Warnung: Jesus warnt vor dem Sauerteig der Pharisäer und Sadduzäer (erhobener Zeigefinger, Teigtrog, Pharisäer, Sadduzäer).",
           "Missverstanden: Die Jünger denken an fehlendes Brot (Denkblase: Brot, leerer Kreis mit Schrägstrich); Jesus erinnert an die Brote und Körbe (Brot, Korb, Fragezeichen).",
           "Verstanden: Die Jünger begreifen, dass der Sauerteig die Lehre der Pharisäer meint (Denkblase: Teigtrog, dicker Pfeil, Pharisäer, Schriftrolle; Funken)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-25",
+      "change_de": "Zeichen gegen den Text geprüft und korrigiert; neue Zeichen Furcht und Austreiben",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.16.5-MAT.16.6",
+            "figures": [
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-WARNEN",
+                  "FIG-OBJ-SAUERTEIG",
+                  "FIG-GRUPPE-PHARISAEER",
+                  "FIG-GRUPPE-SADDUZAEER"
+                ]
+              }
+            ],
+            "action_de": "Am anderen Ufer haben die Jünger vergessen, Brote mitzunehmen. Jesus sagt: Hütet euch vor dem Sauerteig der Pharisäer und Sadduzäer!",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-ZWOELF": "pensive"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.16.7-MAT.16.11",
+            "figures": [
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-ZWOELF",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-FEHLT-BROT"
+                ],
+                "think": true
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-OBJ-BROT",
+                  "FIG-OBJ-KORB",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Die Jünger überlegen untereinander: Wir haben keine Brote mitgenommen. Jesus nennt sie Kleingläubige und erinnert sie an die Brote für die Fünftausend und die Viertausend und an die Körbe, die sie aufgehoben haben.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "worried",
+                "FIG-JESUS": "earnest"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.16.12",
+            "figures": [
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-ZWOELF",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-OBJ-SAUERTEIG",
+                  "FIG-ZEICHEN-DARAUS",
+                  "FIG-GRUPPE-PHARISAEER",
+                  "FIG-OBJ-SCHRIFTROLLE"
+                ],
+                "think": true
+              }
+            ],
+            "action_de": "Da verstehen sie: Er hat nicht vor dem Sauerteig der Brote gewarnt, sondern vor der Lehre der Pharisäer und Sadduzäer.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "smile"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-GRUPPE-ZWOELF"
+                ]
+              }
+            }
+          }
         ]
       }
     }
