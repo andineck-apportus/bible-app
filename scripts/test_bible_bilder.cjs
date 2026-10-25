@@ -36,11 +36,14 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     const cell=p.locator('.ill.nowords g.dg-cell:visible').first();await cell.click();await cell.click();
     assert.equal(await p.evaluate(()=>getComputedStyle(document.querySelector('.ill.nowords g.dg-cell.r2 .dg-full')).display),'inline','zweimal Antippen zeigt die Worte');
     await p.locator('[data-nowords]:visible').first().click();await p.waitForTimeout(300);assert(!await p.$('.ill.nowords'),'wieder mit Worten');
-    // Bilder bei den Versen (Einstellung)
-    await p.evaluate(()=>{const s=JSON.parse(localStorage.getItem('bible:settings')||'{}');s.vill='on';localStorage.setItem('bible:settings',JSON.stringify(s));});
-    await p.reload();await p.waitForTimeout(800);
+    // Bilder bei den Versen: je Abschnitt ein- und ausblendbar (Schalter beim Abschnittstitel)
     await p.click('[data-action=index]');await p.fill('input[type=search]','Mt 5,33');await p.waitForTimeout(300);await p.click('.results button');await p.waitForTimeout(900);
-    assert(await p.$('[data-stream$="MAT.5.33"] .verse-ill svg.ill-tile, .verse-ill svg.ill-tile'),'Feld des Abschnittsbilds beim Vers');
+    assert(!await p.$('.verse-ill'),'ohne Schalter keine Bilder bei den Versen');
+    await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));
+    await p.locator('[data-vill]:visible').first().click();await p.waitForTimeout(500);
+    assert(await p.$('.verse-ill svg.ill-tile'),'Feld des Abschnittsbilds beim Vers');
+    await p.locator('[data-vill][aria-pressed=true]:visible').first().click();await p.waitForTimeout(500);
+    assert(!await p.$('.verse-ill'),'wieder ausgeblendet');
     assert.deepEqual(errs,[],'keine Skriptfehler');
     console.log('PASS: Bilder auf allen Ebenen im Stil Anime, Legende, Bildlexikon, Kacheln, strukturierte Zusammenfassung, Kapitel ohne Worte, Bilder bei den Versen.');
   }finally{await b.close();}})().catch(e=>{console.error(e);process.exit(1);});

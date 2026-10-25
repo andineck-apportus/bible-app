@@ -2,6 +2,14 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.94 — 2026-10-25 — Ohne Worte ohne leere Felder, Bilder je Abschnitt, Hände
+
+Hinweise Andi Neck:
+- **Ohne Worte – keine leeren Felder:** Titelblase, Spaltenköpfe, Stichwortband, Worte in Sprechblasen und Kästchen ohne eigenes Zeichen zeigen automatisch passende Zeichen (über die Worte gesucht: alle Wörter eines Lexikonnamens müssen vorkommen, zuerst Zeichen aus demselben Feld), sonst die Anfangsbuchstaben. Pfeilbeschriftungen und Namensschilder fallen weg. `pruefe_bilder.py` prüft, dass kein Feld leer bleibt und kein Wort ohne Ersatz steht.
+- **Zeichen gross und mittig:** Ohne Worte füllt das Zeichen das ganze Kästchen; erst beim Antippen rückt es kleiner nach oben, darunter die Anfangsbuchstaben; beim zweiten Antippen die Worte. Gilt auch für Köpfe, Blase und Band.
+- **Bilder bei den Versen je Abschnitt:** Schalter «Bilder» beim Abschnittstitel auf der Versebene statt einer Einstellung.
+- **Hände:** eine Kontur nur aussen (keine Linie mehr zwischen Fingern und Handfläche) bei Hand, Schwur und Grüssen; betende Hände neu gezeichnet (zwei Handflächen, gestufte Fingerspitzen, Daumen vorn). Blindtest Runde 8 bei 32 px: beten, grüssen, Schwur je 4 von 4.
+
 ## v0.93 — 2026-10-25 — Bild neben dem Text, Bilder bei den Versen, Kapitel ohne Worte
 
 Hinweise Andi Neck:

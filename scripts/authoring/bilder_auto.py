@@ -15,6 +15,7 @@ Handgezeichnete Bilder (Johannes 2, obere Ebenen) bleiben in bilder_symbol.py un
 KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.
 """
 import json
+import re
 import math
 import pathlib
 
@@ -296,7 +297,116 @@ def ltext_ml(x, yc, v, fs, maxw, weight="700", fill="#3B3226"):
     return "".join(out)
 
 
-def word_band(v, letter=False):
+# ------------------------------------------------------------------ Zeichen zu Worten (Fassung «ohne Worte»)
+NW_STOP = {"nicht", "keine", "keinen", "einen", "einem", "einer", "eines", "sein", "seine", "seiner", "seinen", "ihre", "ihren",
+           "euer", "eure", "euch", "aber", "denn", "dass", "wenn", "wird", "werden", "sind", "sollt", "soll", "selig", "alle",
+           "über", "unter", "durch", "gegen", "ohne", "oder", "noch", "auch", "schon", "jetzt", "sagt", "sage", "gesagt",
+           "zeichen", "bild", "gruppe", "person", "mensch", "menschen", "dein", "deine", "deinem", "mein", "meine", "kein",
+           "allgemein", "wie", "damit", "kommt", "kommen", "fest", "dort", "hier", "diese", "dieser", "dieses"}
+
+
+def _nw_tokens(t):
+    return [w for w in re.findall(r"[a-zäöüA-ZÄÖÜ]{4,}", str(t or "").lower()) if w not in NW_STOP]
+
+
+def _nw_match(w, t):
+    """Wort des Textes w passt zum Namenswort t: gleich, oder bei mindestens 5 Buchstaben eines Vorsilbe des anderen mit
+    höchstens 3 Buchstaben Unterschied («Lichter»/«Licht», «Händen»/«Hände»)."""
+    if w == t:
+        return True
+    return min(len(w), len(t)) >= 5 and abs(len(w) - len(t)) <= 3 and (w.startswith(t) or t.startswith(w))
+
+
+NW_GLOBAL_KINDS = {"sign", "object", "place", "action", "divine"}
+
+
+def nw_icons(comp, v, cands=(), n=2):
+    """Zeichen zu einem Text für die Fassung «ohne Worte» (Hinweis Andi Neck 2026-10-25: keine leeren Felder).
+    Ein Lexikon-Eintrag passt, wenn ALLE Wörter einer Namensfassung (Name vor einer Klammer, Fassungen durch «/» getrennt)
+    im Text vorkommen. Zuerst unter den Zeichen, die im selben Feld schon vorkommen; sonst unter allen Zeichen,
+    Gegenständen, Orten und Handlungen mit Darstellung (Personen und Rollen nur aus dem Feld selbst). Ergebnis: Liste von
+    Lexikon-IDs (höchstens n), leer, wenn nichts passt – dann stehen die Anfangsbuchstaben."""
+    txt = v.get("de") if isinstance(v, dict) else v
+    words = _nw_tokens(txt)
+    if not words:
+        return []
+    vbm = getattr(comp, "vbmap", {}) or {}
+    idx = getattr(comp, "_nw_idx", None)
+    if idx is None:
+        idx = {}
+        for fid, lx in comp.lex.items():
+            if fid not in vbm:
+                continue
+            names = re.sub(r"\(.*?\)", " ", (lx.get("names") or {}).get("de", ""))
+            alts = [set(_nw_tokens(a)) for a in re.split(r"[/,]", names)]
+            idx[fid] = ([a for a in alts if a], lx.get("kind"))
+        comp._nw_idx = idx
+
+    def score(fid):
+        best = ()
+        for a in idx[fid][0]:
+            if all(any(_nw_match(w, t) for w in words) for t in a) and len(a) > len(best):
+                best = tuple(sorted(a))
+        return best
+
+    out, used = [], set()
+    local = list(dict.fromkeys(c for c in cands if c in idx))
+    glob_ = sorted(f for f in idx if idx[f][1] in NW_GLOBAL_KINDS)
+    for pool in (local, glob_):
+        best = sorted(((score(f), f) for f in pool if f not in out), key=lambda x: (-len(x[0]), x[1]))
+        for sc, f in best:
+            if sc and not set(sc) <= used:
+                out.append(f)
+                used |= set(sc)
+            if len(out) >= n:
+                return out
+        if out:
+            return out
+    return out
+
+
+def nw_fill(comp, x, y, w, h, icons, v, fill="#3B3226"):
+    """Inhalt «ohne Worte» für ein Feld (x, y, w, h): Zeichen gross und mittig, sonst die Anfangsbuchstaben."""
+    import bilder_diagramm as _bd
+    if icons:
+        C = _bd.Cells(comp)
+        ih = max(8, h - 4)
+        return C.icons(icons, x + w / 2, y + (h - ih) / 2, ih, w * .85)
+    ini = _bd.initials(v)
+    if not ini:
+        return ""
+    fs = min(9.0, max(6.5, h * .5))
+    th = _bd.block_h(ini, fs, w - 6, "700", 2)
+    s_, _ = _bd.block(x + w / 2, y + (h - th) / 2, ini, fs, w - 6, fill=fill, maxlines=2)
+    return s_
+
+
+def panel_icons(p):
+    """Alle Lexikon-IDs, die in einem Feld vorkommen (Figuren, Gegenstände, Zeichen, Zellen eines Strukturbilds)."""
+    out = list(p.get("figures") or []) + list(p.get("objects") or []) + list(p.get("signs") or [])
+    out = [x if isinstance(x, str) else (x.get("id") or x.get("figure") or "") for x in out]
+    for s_ in p.get("speech") or []:
+        out += list(s_.get("icons") or [])
+    dg = p.get("diagram") or {}
+    cells = list(dg.get("cells") or []) + [c for r in dg.get("rows") or [] for c in r]
+    for k in ("cond", "yes", "no", "left", "right", "verdict", "top", "bottom", "core"):
+        if isinstance(dg.get(k), dict):
+            cells.append(dg[k])
+        elif isinstance(dg.get(k), list):
+            cells += [c for c in dg[k] if isinstance(c, dict)]
+    for c in cells:
+        out += list(c.get("icons") or []) + ([c["who"]] if c.get("who") else [])
+    if dg.get("speaker"):
+        out.append(dg["speaker"])
+    return [x for x in out if x]
+
+
+def sw(full, alt):
+    """Umschaltbare Gruppe: Worte (dg-full) und Fassung «ohne Worte» (dg-nw, nur im Modus «ohne Worte» sichtbar)."""
+    return f'<g class="dg-sw"><g class="dg-full">{full}</g><g class="dg-nw" display="none">{alt}</g></g>'
+
+
+def word_band(v, letter=False, comp=None, cands=()):
     """Stichwortband unter dem Feld: wenige Wörter aus dem Wortlaut; lieber zwei Zeilen als kleine Schrift (Hinweis Andi Neck).
     Ergebnis: (SVG, Höhe)."""
     extra = 16 + (14 if letter else 0)
@@ -315,8 +425,11 @@ def word_band(v, letter=False):
         icon = (f'<rect x="{x + 6:.1f}" y="{y + h / 2 - 4:.1f}" width="11" height="8" rx="1" fill="#FFFDF6" stroke="#3B3226" stroke-width=".8"/>'
                 f'<path d="M{x + 6:.1f} {y + h / 2 - 4:.1f}l5.5 4.4 5.5-4.4" fill="none" stroke="#3B3226" stroke-width=".8"/>')
     tx = x + w / 2 + (7 if letter else 0)
-    return (f'<g class="ill-words"><rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h}" rx="3" fill="#FFF4D6" stroke="#3B3226" stroke-width="1"/>'
-            + icon + ltext_ml(tx, y + h / 2, v, fs, maxw) + "</g>", h)
+    frame = f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h}" rx="3" fill="#FFF4D6" stroke="#3B3226" stroke-width="1"/>'
+    if comp is None:
+        return (f'<g class="ill-words">{frame}' + icon + ltext_ml(tx, y + h / 2, v, fs, maxw) + "</g>", h)
+    alt = frame + nw_fill(comp, x + 2, y + 1, w - 4, h - 2, nw_icons(comp, v, cands), v)
+    return (f'<g class="ill-words">' + sw(frame + icon + ltext_ml(tx, y + h / 2, v, fs, maxw), alt) + "</g>", h)
 
 
 def name_tag(x, y, v):
@@ -458,7 +571,7 @@ class Composer:
                 alt = bilder_diagramm.diagram(self, dn)
             self.alts = getattr(self, "alts", []) + [alt]
             self.bands = getattr(self, "bands", [])
-            self.bands.append(word_band(p["keywords"], letter=bool(p.get("letter"))) if p.get("keywords") else "")
+            self.bands.append(word_band(p["keywords"], letter=bool(p.get("letter")), comp=self, cands=panel_icons(p)) if p.get("keywords") else "")
             return body
         self.sizes = getattr(self, "sizes", []) + [(W, H)]
         self.alts = getattr(self, "alts", []) + [None]
@@ -886,7 +999,10 @@ class Composer:
                     inner.append(f'<line x1="{x + w / 2:.1f}" y1="{by + 8:.1f}" x2="{x + w / 2:.1f}" y2="{by + 4 + ih:.1f}" stroke="#3B3226" stroke-width=".7" stroke-dasharray="2 2"/>')
                 elif i == "§W":
                     fs_ = min(10, 10 * w / max(1, lwrap(sp["word"], 10, WMAX)[1]))
-                    inner.append(ltext_ml(x + w / 2, by + 6 + ih / 2, sp["word"], fs_, WMAX * fs_ / 10))
+                    own = [j for j in sp["icons"] if j not in ("|", "§W")]
+                    mi = [j for j in nw_icons(self, sp["word"], panel_icons(p), 2) if j not in own]
+                    inner.append(sw(ltext_ml(x + w / 2, by + 6 + ih / 2, sp["word"], fs_, WMAX * fs_ / 10),
+                                    nw_fill(self, x, by + 5, w, ih + 2, mi, sp["word"])))
                 else:
                     inner.append(self.r_icon(i, x, by + 6, w, ih))
                 x += w + 5
@@ -949,7 +1065,7 @@ class Composer:
                 out.append(name_tag(hx, H - 7, v))  # am unteren Rand: verdeckt weder Gesicht noch das Zeichen auf der Brust
         # Stichwortband unter dem Feld (nicht im Bild: es verdeckte Hände, Gegenstände und Kniende; Pilot 2026-10-23)
         self.bands = getattr(self, "bands", [])
-        self.bands.append(word_band(p["keywords"], letter=bool(p.get("letter"))) if p.get("keywords") else "")
+        self.bands.append(word_band(p["keywords"], letter=bool(p.get("letter")), comp=self, cands=panel_icons(p)) if p.get("keywords") else "")
         return "".join(out)
 
 

@@ -27,7 +27,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 const out=[];
 for(const mode of ['','nw'])for(const lang of ['de','gsw']){
   await p.goto('file://'+process.argv[2]+'?'+lang);
-  await p.addStyleTag({content:`.lw{display:none}.lw-${lang}{display:inline}`+(mode?'.dg-full{display:none}.dg-nw{display:inline}':'')});
+  await p.addStyleTag({content:`.lw{display:none}.lw-${lang}{display:inline}`+(mode?'.dg-full{display:none}.dg-nw{display:inline}g.dg-label,g.ill-name{display:none}':'')});
   await p.waitForTimeout(200);
   const r=await p.evaluate(([lang,mode])=>{
     const res=[];const tol=.8;
@@ -43,7 +43,13 @@ for(const mode of ['','nw'])for(const lang of ['de','gsw']){
           c.querySelectorAll(mode?'.dg-nw text, .dg-nw use':'.dg-full text, :scope > text').forEach(t=>{if(!vis(t))return;const B=t.getBBox();
             if(B.x<R.x-tol||B.y<R.y-tol||B.x+B.width>R.x+R.width+tol||B.y+B.height>R.y+R.height+tol)
               res.push(`${id} ${nm} [${L}]: ${t.tagName==='use'?'Zeichen':'Text'} ragt über die Zelle: «${t.textContent.slice(0,50)}»${mode?` (${[B.x,B.y,B.width,B.height,R.x,R.y,R.width,R.height].map(v=>v.toFixed(1))})`:""}`);});});
-        if(mode)return;
+        if(mode){if(!/^[0-9A-Z]+-\d{3}$/.test(id))return;  // «ohne Worte» gibt es auf der Kapitelebene
+          // ohne Worte: kein Feld bleibt leer – jede umschaltbare Gruppe hat Zeichen oder Anfangsbuchstaben, und kein Wort
+          // steht ohne Ersatz (es würde verdeckt und hinterliesse eine leere Fläche)
+          tile.querySelectorAll('g.dg-sw > g.dg-nw').forEach(g=>{if(!g.querySelector('use,text'))res.push(`${id} ${nm} [${L}]: leeres Feld ohne Worte («${g.parentNode.querySelector('.dg-full').textContent.slice(0,30)}»)`);});
+          tile.querySelectorAll('text').forEach(t=>{if(t.classList.contains("pn-n")||t.closest(".dg-nw")||!t.getBoundingClientRect().width)return;
+            res.push(`${id} ${nm} [${L}]: Wort ohne Ersatz «${t.textContent.slice(0,30)}» <${(t.parentNode.getAttribute("class")||t.parentNode.tagName)}|${t.closest("g.dg-vis")?.dataset.visual||"-"}|${t.getAttribute("font-size")}>`);});
+          return;}
         // Leerraum: in Raster, Pfeilkette, Kette und Spalten füllt jede Zeile die Breite (Hinweis Andi Neck 2026-10-24)
         tile.querySelectorAll('g.dg-vis').forEach(g=>{if(!['grid','arrows','tree','columns'].includes(g.dataset.visual))return;
           const rs=[...g.querySelectorAll(':scope > g.dg-cell > rect, :scope g.dg-cell > rect')].map(r=>r.getBBox());if(!rs.length)return;

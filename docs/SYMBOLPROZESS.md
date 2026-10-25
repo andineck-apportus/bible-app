@@ -128,6 +128,16 @@ neue oder neu gezeichnete Zeichen:
 - **Selbsteinschätzung nicht verwenden:** Die Instanzen wünschten in allen Stufen etwa gleich oft «mehr Detail» und fanden es
   fast nie störend; entschieden wird nach der Messung.
 
+### Hände als eine Silhouette (Runde 8, 2026-10-25)
+
+Hinweis Andi Neck: Finger wirkten «draufgeklatscht», weil jede Fingerform und die Handfläche ihre eigene Kontur hatten
+(Rand quer über die Innenseite der Hand); die betenden Hände waren kaum als Handflächen erkennbar. Regel: Hände (und
+andere aus Teilen gebaute Formen) haben **eine Kontur nur aussen** – Teile zuerst dick in Tinte, darüber dieselben Teile
+hautfarben ohne Strich; die Fugen zwischen den Fingern bleiben als Linien bis zur Handfläche. Betende Hände: zwei
+Handflächen mit gestuften Fingerspitzen, Daumen vorn, Ärmel. Blindtest Runde 8 (32 px, 4 Instanzen): beten, grüssen,
+Schwur je 4 von 4 mit voller Bedeutung; Hand als Hand erkannt, aber als Geste gelesen
+([Bericht](../reports/zeichen-blindtest-2026-10-25-runde8-haende.json)).
+
 ## Bestand prüfen
 
 Alle bestehenden Zeichen durchlaufen Schritt 4 als Ausgangsmessung. Ergebnis je Zeichen: behalten, neu entwerfen oder
