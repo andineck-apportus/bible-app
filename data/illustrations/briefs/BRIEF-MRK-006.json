@@ -54,7 +54,7 @@
           "icons": [
             "FIG-ZEICHEN-VOLLMACHT",
             "FIG-ZEICHEN-DAEMON",
-            "FIG-ZEICHEN-FLIEHEN"
+            "FIG-ZEICHEN-AUSTREIBEN"
           ]
         }
       ],
@@ -154,7 +154,7 @@
   ],
   "captions_de": [
     "Heimat: In der Synagoge fragen die Leute: Ist das nicht der Sohn der Maria (Maria, Jesus, Fragezeichen)?",
-    "Aussendung: Jesus sendet die Zwölf aus (Pfeil) und gibt ihnen Vollmacht über die Geister (Zepter, Schatten, Pfeil weg).",
+    "Aussendung: Jesus sendet die Zwölf aus (Pfeil) und gibt ihnen Vollmacht über die Geister (Schriftrolle mit Krone, Schatten, Pfeil weg).",
     "Speisung: Fünf Brote und zwei Fische reichen für die Menge; alle werden satt (volle Schale).",
     "Auf dem Wasser: Jesus geht auf dem See zum Boot und sagt: Ich bin es (Jesus); die Jünger erschrecken."
   ],
@@ -308,6 +308,162 @@
         "captions_de": [
           "Heimat: In der Synagoge fragen die Leute: Ist das nicht der Sohn der Maria (Maria, Fragezeichen)?",
           "Aussendung: Jesus gibt den Zwölf Vollmacht über die Geister (Schatten, Pfeil weg).",
+          "Speisung: Fünf Brote und zwei Fische reichen für die Menge; alle werden satt (volle Schale).",
+          "Auf dem Wasser: Jesus geht auf dem See zum Boot und sagt: Ich bin es (Jesus); die Jünger erschrecken."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-25",
+      "change_de": "Zeichen gegen den Text geprüft und korrigiert; neue Zeichen Furcht und Austreiben",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.6.1-MRK.6.6",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-SYNAGOGE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-MARIA-MUTTER-JESU",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "In seiner Heimat staunen die Leute über Jesus, nehmen aber Anstoss an ihm; er wundert sich über ihren Unglauben.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.6.7-MRK.6.13",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-VOLLMACHT",
+                  "FIG-ZEICHEN-DAEMON",
+                  "FIG-ZEICHEN-FLIEHEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus sendet die Zwölf aus und gibt ihnen Vollmacht über die unreinen Geister.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "earnest"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-ZWOELF",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.6.30-MRK.6.44",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT",
+              "FIG-OBJ-FISCH"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SATT"
+            ],
+            "speech": [],
+            "action_de": "Mit fünf Broten und zwei Fischen speist Jesus fünftausend Männer; alle werden satt.",
+            "stage": {
+              "count": {
+                "FIG-OBJ-BROT": 5,
+                "FIG-OBJ-FISCH": 2
+              },
+              "at": {
+                "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "smile"
+              },
+              "floor_side": "left"
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.6.45-MRK.6.52",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NACHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Nachts kommt Jesus auf dem See zu den Jüngern und sagt: Ich bin es; fürchtet euch nicht!",
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-ZWOELF": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-ZWOELF": [
+                  0.3,
+                  0.45
+                ]
+              },
+              "big_side": "right",
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "surprised",
+                "FIG-JESUS": "smile"
+              },
+              "in_water": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-25",
+      "change_de": "Sichtprüfung: Feldkorrekturen; Bildbeschreibungen an die heutigen Zeichen angepasst",
+      "previous": {
+        "captions_de": [
+          "Heimat: In der Synagoge fragen die Leute: Ist das nicht der Sohn der Maria (Maria, Jesus, Fragezeichen)?",
+          "Aussendung: Jesus sendet die Zwölf aus (Pfeil) und gibt ihnen Vollmacht über die Geister (Zepter, Schatten, Pfeil weg).",
           "Speisung: Fünf Brote und zwei Fische reichen für die Menge; alle werden satt (volle Schale).",
           "Auf dem Wasser: Jesus geht auf dem See zum Boot und sagt: Ich bin es (Jesus); die Jünger erschrecken."
         ]

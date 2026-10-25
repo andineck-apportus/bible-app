@@ -28,7 +28,7 @@
           "to": "FIG-ROLLE-BESESSENER",
           "icons": [
             "FIG-ZEICHEN-DAEMON",
-            "FIG-ZEICHEN-FLIEHEN"
+            "FIG-ZEICHEN-AUSTREIBEN"
           ]
         }
       ],
@@ -108,15 +108,15 @@
           "icons": [
             "FIG-SATAN",
             "FIG-ZEICHEN-DARAUS",
-            "FIG-JESUS"
+            "FIG-JESUS",
+            "FIG-ZEICHEN-AUSTREIBEN"
           ]
         },
         {
           "from": "FIG-GRUPPE-PHARISAEER",
           "to": "FIG-GRUPPE-MENGE",
           "icons": [
-            "FIG-ZEICHEN-DAEMON",
-            "FIG-ZEICHEN-FLIEHEN"
+            "FIG-ZEICHEN-DAEMON"
           ]
         }
       ],
@@ -135,8 +135,8 @@
     "Die Pharisäer aber sagen: Durch den Herrscher der Dämonen treibt er die Dämonen aus."
   ],
   "captions_de": [
-    "Jesus → Dämon hinaus: Man bringt einen Stummen (durchgestrichene Sprechblase über ihm) mit einem Dämon (dunkler Wirbel bei ihm); der Pfeil führt von Jesus zu ihm: Jesus treibt den Dämon aus (Pfeil mit Bewegungsstrichen).",
-    "Er redet: Der Mann redet (Schallwellen); die Menschenmengen staunen: So etwas in Israel! (drei Figuren in hellem Gewand mit blauem Mantel, goldener Stern).",
+    "Jesus → Dämon hinaus: Man bringt einen Stummen (Gesicht mit Finger vor dem Mund über ihm) mit einem Dämon (dunkler Wirbel bei ihm); der Pfeil führt von Jesus zu ihm: Jesus treibt den Dämon aus (Pfeil mit Bewegungsstrichen).",
+    "Er redet: Der Mann redet (Sprechblase); die Menschenmengen staunen: So etwas in Israel! (drei Figuren in hellem Gewand mit blauem Mantel, goldener Stern).",
     "Der Vorwurf: Die Pharisäer sagen: Durch den Herrscher der Dämonen (dunkler Schatten, dicker Pfeil, Jesus) treibt er die Dämonen aus (dunkler Wirbel, Pfeil mit Bewegungsstrichen)."
   ],
   "interpretation_note_de": "Der Herrscher der Dämonen ([[MAT.9.34]]) erscheint wie Satan als dunkler Schatten ohne Gestalt. Was der Geheilte sagt, berichtet der Text nicht; die Schallwellen zeigen nur, dass er redet.",
@@ -406,6 +406,144 @@
         ],
         "captions_de": [
           "Ausgetrieben: Man bringt einen Stummen (durchgestrichene Sprechblase über ihm) mit einem Dämon (dunkler Wirbel bei ihm); Jesus treibt den Dämon aus (Pfeil mit Bewegungsstrichen).",
+          "Er redet: Der Mann redet (Schallwellen); die Menschenmengen staunen: So etwas in Israel! (drei Figuren in hellem Gewand mit blauem Mantel, goldener Stern).",
+          "Der Vorwurf: Die Pharisäer sagen: Durch den Herrscher der Dämonen (dunkler Schatten, dicker Pfeil, Jesus) treibt er die Dämonen aus (dunkler Wirbel, Pfeil mit Bewegungsstrichen)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-25",
+      "change_de": "Zeichen gegen den Text geprüft und korrigiert; neue Zeichen Furcht und Austreiben",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.9.32-MAT.9.33",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-ROLLE-BESESSENER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-DAEMON",
+              "FIG-ZEICHEN-SCHWEIGEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-BESESSENER",
+                "icons": [
+                  "FIG-ZEICHEN-DAEMON",
+                  "FIG-ZEICHEN-FLIEHEN"
+                ]
+              }
+            ],
+            "action_de": "Man bringt einen stummen Menschen zu Jesus, der besessen ist. Der Dämon wird ausgetrieben.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-SCHWEIGEN": "FIG-ROLLE-BESESSENER"
+              },
+              "beside": {
+                "FIG-ZEICHEN-DAEMON": "FIG-ROLLE-BESESSENER"
+              },
+              "mood": {
+                "FIG-ROLLE-BESESSENER": "worried",
+                "FIG-GRUPPE-MENGE": "calm"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-BESESSENER",
+                  "act"
+                ]
+              ],
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-ROLLE-BESESSENER": 84,
+                "FIG-GRUPPE-MENGE": 150
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.9.33",
+            "figures": [
+              "FIG-ROLLE-BESESSENER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-BESESSENER",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-SPRECHEN"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-GRUPPE-ISRAEL",
+                  "FIG-ZEICHEN-STERN"
+                ]
+              }
+            ],
+            "action_de": "Der Stumme redet. Die Menschenmengen staunen und sagen: Noch nie hat sich so etwas in Israel gezeigt!",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-BESESSENER": "delight",
+                "FIG-GRUPPE-MENGE": "surprised"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.9.34",
+            "figures": [
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-PHARISAEER",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-SATAN",
+                  "FIG-ZEICHEN-DARAUS",
+                  "FIG-JESUS"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-PHARISAEER",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-DAEMON",
+                  "FIG-ZEICHEN-FLIEHEN"
+                ]
+              }
+            ],
+            "action_de": "Die Pharisäer aber sagen: Durch den Herrscher der Dämonen treibt er die Dämonen aus.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-PHARISAEER": "pensive",
+                "FIG-GRUPPE-MENGE": "worried"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-25",
+      "change_de": "Sichtprüfung: Feldkorrekturen; Bildbeschreibungen an die heutigen Zeichen angepasst",
+      "previous": {
+        "captions_de": [
+          "Jesus → Dämon hinaus: Man bringt einen Stummen (durchgestrichene Sprechblase über ihm) mit einem Dämon (dunkler Wirbel bei ihm); der Pfeil führt von Jesus zu ihm: Jesus treibt den Dämon aus (Pfeil mit Bewegungsstrichen).",
           "Er redet: Der Mann redet (Schallwellen); die Menschenmengen staunen: So etwas in Israel! (drei Figuren in hellem Gewand mit blauem Mantel, goldener Stern).",
           "Der Vorwurf: Die Pharisäer sagen: Durch den Herrscher der Dämonen (dunkler Schatten, dicker Pfeil, Jesus) treibt er die Dämonen aus (dunkler Wirbel, Pfeil mit Bewegungsstrichen)."
         ]

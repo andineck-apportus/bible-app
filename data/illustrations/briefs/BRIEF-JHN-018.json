@@ -116,7 +116,7 @@
           "icons": [
             "FIG-OBJ-KRONE",
             "FIG-ZEICHEN-WELT",
-            "FIG-ZEICHEN-FEHLT"
+            "FIG-ZEICHEN-NEIN"
           ]
         }
       ],
@@ -184,9 +184,9 @@
   ],
   "captions_de": [
     "«Ich bin es» → sie fallen: Jesus sagt «Ich bin es» (Jesus in der Blase); Soldaten und Tempeldiener fallen zu Boden (Pfeil zu ihnen).",
-    "Verleugnung: Am Feuer bei den Dienern leugnet Petrus dreimal (drei getrennte Kettenglieder), der Hahn kräht (Schallstriche).",
+    "Verleugnung: Am Feuer bei den Dienern leugnet Petrus dreimal (dreimal sprechender Kopf und Nein-Geste), der Hahn kräht (Schallstriche).",
     "Vor Pilatus: Jesus sagt Pilatus: Mein Reich ist nicht aus der Welt (Krone, Erdkugel, leer).",
-    "Barabbas: Die Menge verlangt nicht Jesus (Jesus, abwehrende Hand), sondern den gefesselten Barabbas frei (Barabbas, offene Fessel)."
+    "Barabbas: Die Menge verlangt nicht Jesus (Jesus, Person mit gekreuzten Armen), sondern den gefesselten Barabbas frei (Barabbas, gesprengte Kette)."
   ],
   "interpretation_note_de": "Je ein Feld zu Gefangennahme, Verleugnung, Verhör vor Pilatus und Barabbas; Einzelheiten in den Abschnitten. «Die Juden» und die Hohepriester sind als neutrale Figuren gezeichnet (Menge bzw. Amtskleid), nicht verzerrt oder eingefärbt.",
   "basis": [
@@ -540,6 +540,192 @@
         ],
         "captions_de": [
           "Gefangennahme: Jesus sagt «Ich bin es» (Jesus); Soldaten und Tempeldiener fallen zu Boden.",
+          "Verleugnung: Am Feuer bei den Dienern leugnet Petrus dreimal (drei getrennte Kettenglieder), der Hahn kräht (Schallstriche).",
+          "Vor Pilatus: Jesus sagt Pilatus: Mein Reich ist nicht aus der Welt (Krone, Erdkugel, leer).",
+          "Barabbas: Die Menge verlangt nicht Jesus (Jesus, abwehrende Hand), sondern den gefesselten Barabbas frei (Barabbas, offene Fessel)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-25",
+      "change_de": "Zeichen gegen den Text geprüft und korrigiert; neue Zeichen Furcht und Austreiben",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.18.4-JHN.18.6",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-JUDAS-ISKARIOT",
+              "FIG-GRUPPE-SOLDATEN",
+              "FIG-ROLLE-TEMPELWACHE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-SOLDATEN",
+                "icons": [
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Im Garten sagt Jesus zu denen, die ihn suchen: «Ich bin es»; sie weichen zurück und fallen zu Boden.",
+            "stage": {
+              "pose": {
+                "FIG-GRUPPE-SOLDATEN": "fall",
+                "FIG-ROLLE-TEMPELWACHE": "fall"
+              },
+              "mood": {
+                "FIG-GRUPPE-SOLDATEN": "surprised",
+                "FIG-ROLLE-TEMPELWACHE": "surprised",
+                "FIG-JUDAS-ISKARIOT": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-JUDAS-ISKARIOT": 72,
+                "FIG-GRUPPE-SOLDATEN": 110,
+                "FIG-ROLLE-TEMPELWACHE": 146
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-SOLDATEN",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.18.15-JHN.18.27",
+            "figures": [
+              "FIG-GRUPPE-DIENER",
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KOHLENFEUER",
+              "FIG-OBJ-HAHN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SPRECHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-GRUPPE-DIENER",
+                "icons": [
+                  "FIG-ZEICHEN-VERLEUGNEN",
+                  "FIG-ZEICHEN-VERLEUGNEN",
+                  "FIG-ZEICHEN-VERLEUGNEN"
+                ]
+              }
+            ],
+            "action_de": "Im Hof des Hohepriesters verleugnet Petrus Jesus dreimal; da kräht ein Hahn.",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KOHLENFEUER": 74,
+                "FIG-OBJ-HAHN": 158
+              },
+              "x": {
+                "FIG-GRUPPE-DIENER": 40,
+                "FIG-PETRUS": 126
+              },
+              "mood": {
+                "FIG-PETRUS": "worried"
+              },
+              "at": {
+                "FIG-ZEICHEN-SPRECHEN": "FIG-OBJ-HAHN"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.18.33-JHN.18.38",
+            "figures": [
+              "FIG-PILATUS",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-PRAETORIUM"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-OBJ-KRONE",
+                  "FIG-ZEICHEN-WELT",
+                  "FIG-ZEICHEN-FEHLT"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt Pilatus, sein Reich sei nicht aus dieser Welt und er bezeuge die Wahrheit; Pilatus fragt: «Was ist Wahrheit?»",
+            "stage": {
+              "back_side": "right",
+              "before": true,
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-PILATUS": 150
+              },
+              "mood": {
+                "FIG-PILATUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.18.39-JHN.18.40",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-PILATUS",
+              "FIG-JESUS",
+              "FIG-BARABBAS"
+            ],
+            "objects": [
+              "FIG-OBJ-FESSEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-ABLEHNEN"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-BARABBAS",
+                  "FIG-ZEICHEN-FREILASSEN"
+                ]
+              }
+            ],
+            "action_de": "Pilatus bietet an, Jesus freizulassen; sie schreien nach Barabbas.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-PILATUS": "worried"
+              },
+              "hold": {
+                "FIG-BARABBAS": "FIG-OBJ-FESSEL"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-25",
+      "change_de": "Sichtprüfung: Feldkorrekturen; Bildbeschreibungen an die heutigen Zeichen angepasst",
+      "previous": {
+        "captions_de": [
+          "«Ich bin es» → sie fallen: Jesus sagt «Ich bin es» (Jesus in der Blase); Soldaten und Tempeldiener fallen zu Boden (Pfeil zu ihnen).",
           "Verleugnung: Am Feuer bei den Dienern leugnet Petrus dreimal (drei getrennte Kettenglieder), der Hahn kräht (Schallstriche).",
           "Vor Pilatus: Jesus sagt Pilatus: Mein Reich ist nicht aus der Welt (Krone, Erdkugel, leer).",
           "Barabbas: Die Menge verlangt nicht Jesus (Jesus, abwehrende Hand), sondern den gefesselten Barabbas frei (Barabbas, offene Fessel)."

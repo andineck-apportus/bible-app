@@ -2,6 +2,16 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.101 — 2026-10-25 — Ein Stil für alle Zeichen, jedes Zeichen gegen den Text geprüft
+
+Hinweis Andi Neck: «alles kritisch prüfen … einheitlich und passend zum Text».
+- **Ein Stil:** Auch die eigenen Zeichnungen (Zeichen, Gegenstände, Orte, Handlungen) bekommen die dunkle Aussenkontur und die gedämpften Farben der Emoji (`bilder_anime.einheitlich`); Personen-Emoji mit dunklem Haar und Erdtönen statt Jeans-Blau.
+- **Verwendungsprüfung:** Sechs getrennte Instanzen prüften jede Verwendung eines Zeichens in allen 537 Bildern gegen den Bibeltext des Feldes: 217 Korrekturen, z. B. «fliehen» bei Dämonenaustreibungen, «Sorge» bei Furcht, «Stern» für die Vorzeichen der Endzeit, «Gericht Gottes» für menschliche Gerichte, «ablehnen» statt «verleugnen».
+- **Neue Zeichen:** «sich fürchten» (erschrockenes Gesicht) und «austreiben» (Dämon-Schatten mit Pfeil hinaus).
+- **Sichtprüfung** der gerenderten Bilder durch eine weitere Instanz: Dämon wieder als Schatten ohne Fratze (Lexikonregel), Friede als Olivenzweig statt Taube (Verwechslung mit dem Geist), «freundlich» unterscheidbar von «Erbarmen», «rein» ohne modernes T-Shirt; neun Emoji zurück auf die eigene Zeichnung (u. a. Herz, Stroh, Scheffel, Vergebung); fehlende Verneinungen ergänzt («Sorgt euch um nichts», «ich verurteile dich nicht»).
+- **Legenden und Bildbeschreibungen** an die heutigen Zeichen angepasst (beschrieben noch alte Zeichnungen, z. B. «verschlossenes Grab»); schweizerdeutsche Texte sind KI-Entwurf ohne Muttersprachler-Prüfung.
+- Offen: kleine Strichzeichnung «Stammbaum», einige weitere Feinheiten der Sichtprüfung (`reports/zeichen-sichtpruefung-2026-10-25.json`).
+
 ## v0.100 — 2026-10-25 — Emoji im Stil der Bilder, im Kontext geprüft
 
 Hinweise Andi Neck: Emoji und Eigenes wirkten nebeneinander uneinheitlich; ein Küken für «geboren werden», ein Honigtopf als «Land».

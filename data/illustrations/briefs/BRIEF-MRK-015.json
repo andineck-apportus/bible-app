@@ -81,7 +81,7 @@
       "n": 3,
       "reference": "MRK.15.33-MRK.15.41",
       "figures": [
-        "FIG-ROLLE-SOLDAT"
+        "FIG-ROLLE-HAUPTMANN"
       ],
       "objects": [
         "FIG-OBJ-KREUZ",
@@ -92,8 +92,8 @@
       ],
       "speech": [
         {
-          "from": "FIG-ROLLE-SOLDAT",
-          "to": "FIG-ROLLE-SOLDAT",
+          "from": "FIG-ROLLE-HAUPTMANN",
+          "to": "FIG-ROLLE-HAUPTMANN",
           "icons": [
             "FIG-JESUS",
             "FIG-GOTT"
@@ -103,11 +103,11 @@
       "action_de": "Nach der Finsternis stirbt Jesus; der Tempelvorhang reisst, der Hauptmann nennt ihn Gottes Sohn.",
       "stage": {
         "mood": {
-          "FIG-ROLLE-SOLDAT": "surprised"
+          "FIG-ROLLE-HAUPTMANN": "surprised"
         },
         "back_side": "left",
         "x": {
-          "FIG-ROLLE-SOLDAT": 152
+          "FIG-ROLLE-HAUPTMANN": 152
         },
         "floor_x": {
           "FIG-OBJ-KREUZ": 80
@@ -491,6 +491,166 @@
           "Kreuzigung: Golgota, der Hügel mit drei Kreuzen (ohne Körper); Soldaten losen um die Kleider (Gewand mit Losen).",
           "Tod: leeres Kreuz, daneben das Grab-Zeichen; Vorhang zerrissen; der Hauptmann: Gottes Sohn (Jesus, Strahlenkranz).",
           "Begräbnis: Josef hat das Grab mit dem Stein verschlossen; zwei Frauen schauen zu."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-25",
+      "change_de": "Zeichen gegen den Text geprüft und korrigiert; neue Zeichen Furcht und Austreiben",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.15.1-MRK.15.15",
+            "figures": [
+              "FIG-PILATUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PILATUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-OBJ-KREUZ"
+                ]
+              }
+            ],
+            "action_de": "Pilatus verhört Jesus; die Menge verlangt Barabbas und schreit: Kreuzige ihn!",
+            "stage": {
+              "mood": {
+                "FIG-PILATUS": "worried",
+                "FIG-GRUPPE-MENGE": "earnest"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.15.16-MRK.15.32",
+            "figures": [
+              "FIG-GRUPPE-SOLDATEN"
+            ],
+            "objects": [
+              "FIG-ORT-GOLGOTA",
+              "FIG-OBJ-KLEIDER-VERLOST"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Die Soldaten verspotten Jesus und kreuzigen ihn auf Golgota zwischen zwei Räubern; sie losen um seine Kleider.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-SOLDATEN": "calm"
+              },
+              "back_side": "right",
+              "x": {
+                "FIG-GRUPPE-SOLDATEN": 44
+              },
+              "floor_x": {
+                "FIG-OBJ-KLEIDER-VERLOST": 90
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-SOLDATEN",
+                  "FIG-OBJ-KLEIDER-VERLOST",
+                  "throw"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.15.33-MRK.15.41",
+            "figures": [
+              "FIG-ROLLE-SOLDAT"
+            ],
+            "objects": [
+              "FIG-OBJ-KREUZ",
+              "FIG-OBJ-TEMPELVORHANG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TOD"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-SOLDAT",
+                "to": "FIG-ROLLE-SOLDAT",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-GOTT"
+                ]
+              }
+            ],
+            "action_de": "Nach der Finsternis stirbt Jesus; der Tempelvorhang reisst, der Hauptmann nennt ihn Gottes Sohn.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-SOLDAT": "surprised"
+              },
+              "back_side": "left",
+              "x": {
+                "FIG-ROLLE-SOLDAT": 152
+              },
+              "floor_x": {
+                "FIG-OBJ-KREUZ": 80
+              },
+              "air_x": 54,
+              "air_y": 94,
+              "arrows": [
+                [
+                  "FIG-OBJ-KREUZ",
+                  "FIG-ROLLE-SOLDAT",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.15.42-MRK.15.47",
+            "figures": [
+              "FIG-JOSEF-ARIMATAEA",
+              "FIG-MARIA-MAGDALA",
+              "FIG-MARIA-MUTTER-JAKOBUS"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB-VERSCHLOSSEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER"
+            ],
+            "speech": [],
+            "action_de": "Josef von Arimatäa legt den Leib Jesu in ein Felsengrab; zwei Frauen sehen, wo er liegt.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-JOSEF-ARIMATAEA",
+                  "FIG-ORT-GRAB-VERSCHLOSSEN",
+                  "act"
+                ]
+              ],
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-MARIA-MAGDALA",
+                  "FIG-MARIA-MUTTER-JAKOBUS"
+                ]
+              },
+              "back_side": "left",
+              "x": {
+                "FIG-JOSEF-ARIMATAEA": 96,
+                "FIG-MARIA-MAGDALA": 136,
+                "FIG-MARIA-MUTTER-JAKOBUS": 166
+              }
+            }
+          }
         ]
       }
     }

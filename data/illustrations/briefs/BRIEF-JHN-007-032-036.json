@@ -63,7 +63,7 @@
           "to": "FIG-GRUPPE-MENGE",
           "icons": [
             "FIG-ZEICHEN-STUNDE",
-            "FIG-ZEICHEN-FLIEHEN",
+            "FIG-ZEICHEN-WEG",
             "FIG-GOTT",
             "FIG-ZEICHEN-FRAGEN",
             "FIG-JESUS",
@@ -197,6 +197,87 @@
         "captions_de": [
           "Diener ausgesandt: Hohepriester und Pharisäer schicken die Tempeldiener, um Jesus zu holen (Jesus, Pfeil).",
           "Noch eine kleine Zeit: Jesus geht bald zu Gott (Sanduhr, Strahlenkranz); sie werden ihn suchen und nicht finden (Fragezeichen, leer); sie verstehen es nicht."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-25",
+      "change_de": "Zeichen gegen den Text geprüft und korrigiert; neue Zeichen Furcht und Austreiben",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.7.32",
+            "figures": [
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-ROLLE-HOHEPRIESTER",
+              "FIG-ROLLE-TEMPELWACHE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-HOHEPRIESTER",
+                "to": "FIG-ROLLE-TEMPELWACHE",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-BRINGEN",
+                  "FIG-ROLLE-HOHEPRIESTER"
+                ]
+              }
+            ],
+            "action_de": "Als die Pharisäer das Gemurmel der Menge hören, senden sie und die Hohepriester Diener aus, um Jesus festzunehmen.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-HOHEPRIESTER": "calm",
+                "FIG-GRUPPE-PHARISAEER": "calm",
+                "FIG-ROLLE-TEMPELWACHE": "calm"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-PHARISAEER",
+                  "FIG-ROLLE-TEMPELWACHE",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.7.33-JHN.7.36",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-NICHT-VERSTEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-STUNDE",
+                  "FIG-ZEICHEN-FLIEHEN",
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-FRAGEN",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FEHLT"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: Noch eine kleine Zeit bin ich bei euch, dann gehe ich zu dem, der mich gesandt hat. Ihr werdet mich suchen und nicht finden. Die Juden fragen sich, wohin er gehen will.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-MENGE": "surprised"
+              },
+              "at": {
+                "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-GRUPPE-MENGE"
+              }
+            }
+          }
         ]
       }
     }

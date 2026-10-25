@@ -86,7 +86,7 @@
       ],
       "signs": [
         "FIG-ZEICHEN-DAEMON",
-        "FIG-ZEICHEN-FLIEHEN"
+        "FIG-ZEICHEN-AUSTREIBEN"
       ],
       "speech": [
         {
@@ -165,9 +165,9 @@
   ],
   "captions_de": [
     "Taufe → Geist: Johannes tauft Jesus im Jordan (Taufe, Bogen von Johannes zu Jesus); der Geist kommt wie eine Taube auf ihn herab (goldener Pfeil von der Taube).",
-    "Berufung: Jesus ruft die Fischer am See: Kommt mir nach (Fussspuren).",
+    "Berufung: Jesus ruft die Fischer am See: Kommt mir nach (zwei gehende Personen).",
     "Befehl → Ausfahren: In der Synagoge gebietet Jesus dem unreinen Geist zu schweigen und auszufahren (Schatten); der Pfeil von Jesus führt zum Zeichen «fährt aus» (Pfeil weg).",
-    "Berührung → rein: Jesus streckt die Hand nach dem knienden Aussätzigen aus (Bogen), und er wird rein (Stern mit Tropfen)."
+    "Berührung → rein: Jesus streckt die Hand nach dem knienden Aussätzigen aus (Bogen), und er wird rein (Seifenblasen mit Funkeln)."
   ],
   "interpretation_note_de": "Vier Stationen aus zehn Abschnitten: Taufe (mit Wüste), Berufung (mit der Verkündigung), Vollmacht in Kafarnaum (Synagoge, Heilungen, Gebet) und Reinigung des Aussätzigen.",
   "basis": [
@@ -473,6 +473,173 @@
           "Berufung: Jesus ruft die Fischer am See: Kommt mir nach (Fussspuren).",
           "Vollmacht: In der Synagoge gebietet Jesus dem unreinen Geist zu schweigen und auszufahren (Schatten, Pfeil).",
           "Rein: Jesus streckt die Hand nach dem knienden Aussätzigen aus (Bogen), und er wird rein (Stern mit Tropfen)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-25",
+      "change_de": "Zeichen gegen den Text geprüft und korrigiert; neue Zeichen Furcht und Austreiben",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.1.1-MRK.1.13",
+            "figures": [
+              "FIG-HEILIGER-GEIST",
+              "FIG-JOHANNES-TAEUFER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-JORDAN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TAUFE"
+            ],
+            "speech": [],
+            "action_de": "Johannes tauft Jesus im Jordan; der Geist kommt wie eine Taube herab, und Gott nennt ihn seinen geliebten Sohn.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-TAUFE": "FIG-JESUS"
+              },
+              "arrows": [
+                [
+                  "FIG-JOHANNES-TAEUFER",
+                  "FIG-JESUS",
+                  "act"
+                ],
+                [
+                  "FIG-HEILIGER-GEIST",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "in_water": true
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.1.14-MRK.1.20",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-PETRUS",
+              "FIG-ANDREAS"
+            ],
+            "objects": [
+              "FIG-ORT-SEE",
+              "FIG-OBJ-NETZ"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-ZEICHEN-NACHFOLGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus verkündet in Galiläa das nahe Reich Gottes und ruft am See die ersten Jünger, die ihm folgen.",
+            "stage": {
+              "mood": {
+                "FIG-PETRUS": "surprised",
+                "FIG-ANDREAS": "surprised"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.1.21-MRK.1.39",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-BESESSENER"
+            ],
+            "objects": [
+              "FIG-ORT-SYNAGOGE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-DAEMON",
+              "FIG-ZEICHEN-FLIEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-BESESSENER",
+                "icons": [
+                  "FIG-ZEICHEN-SCHWEIGEN",
+                  "FIG-ZEICHEN-DAEMON"
+                ]
+              }
+            ],
+            "action_de": "In Kafarnaum lehrt Jesus mit Vollmacht, treibt unreine Geister aus und heilt viele.",
+            "stage": {
+              "back_side": "left",
+              "at": {
+                "FIG-ZEICHEN-DAEMON": "FIG-ROLLE-BESESSENER"
+              },
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-ROLLE-BESESSENER": "surprised"
+              },
+              "air_x": 150,
+              "air_y": 28,
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FLIEHEN",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.1.40-MRK.1.45",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-AUSSAETZIGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-REIN"
+            ],
+            "speech": [],
+            "action_de": "Jesus berührt einen Aussätzigen und macht ihn rein; der Mann erzählt es überall.",
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-AUSSAETZIGER": "kneel"
+              },
+              "at": {
+                "FIG-ZEICHEN-REIN": "FIG-ROLLE-AUSSAETZIGER"
+              },
+              "mood": {
+                "FIG-ROLLE-AUSSAETZIGER": "delight",
+                "FIG-JESUS": "calm"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-AUSSAETZIGER",
+                  "act"
+                ]
+              ],
+              "x": {
+                "FIG-JESUS": 70,
+                "FIG-ROLLE-AUSSAETZIGER": 118
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-25",
+      "change_de": "Sichtprüfung: Feldkorrekturen; Bildbeschreibungen an die heutigen Zeichen angepasst",
+      "previous": {
+        "captions_de": [
+          "Taufe → Geist: Johannes tauft Jesus im Jordan (Taufe, Bogen von Johannes zu Jesus); der Geist kommt wie eine Taube auf ihn herab (goldener Pfeil von der Taube).",
+          "Berufung: Jesus ruft die Fischer am See: Kommt mir nach (Fussspuren).",
+          "Befehl → Ausfahren: In der Synagoge gebietet Jesus dem unreinen Geist zu schweigen und auszufahren (Schatten); der Pfeil von Jesus führt zum Zeichen «fährt aus» (Pfeil weg).",
+          "Berührung → rein: Jesus streckt die Hand nach dem knienden Aussätzigen aus (Bogen), und er wird rein (Stern mit Tropfen)."
         ]
       }
     }

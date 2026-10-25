@@ -1283,14 +1283,83 @@ def library():
     # Lexikon-ID, gleich woher das Zeichen bisher kam (Symbol-Bibliothek, Bauteile, Figuren); Datei je Thema
     for f in sorted((pathlib.Path(__file__).resolve().parent / "bildsymbole_daten/ueberarbeitet").glob("*.json")):
         for fid, e in json.loads(f.read_text(encoding="utf-8")).items():
-            if fid not in vb:
+            if fid not in vb:  # neues Zeichen nur aus Emoji (ohne frühere Zeichnung): anhängen
+                sid = "an-e-" + fid[4:].lower()
+                lib = lib.replace("\n</defs></svg>", f'\n<symbol id="{sid}" viewBox="{e["vb"]}">{e["svg"]}</symbol>\n</defs></svg>', 1)
+                vb[fid] = (sid, e["vb"])
                 continue
             sid = vb[fid][0]
             new = f'<symbol id="{sid}" viewBox="{e["vb"]}">{e["svg"]}</symbol>'
             lib, n = re.subn(r'<symbol id="%s"[^>]*>.*?</symbol>' % re.escape(sid), lambda _m: new, lib, count=1, flags=re.S)
             if n:
                 vb[fid] = (sid, e["vb"])
+    lib = austreiben(lib, vb)
+    lib = einheitlich(lib, vb)
     return lib, vb
+
+
+def austreiben(lib, vb):
+    """FIG-ZEICHEN-AUSTREIBEN aus dem Dämon-Zeichen (dunkler Schatten ohne Gesicht) und einem Pfeil hinaus
+    (Sichtprüfung 2026-10-25: Emoji-Teufel brach die Regel «keine Fratze», Verbotsring hiess «nicht tun»)."""
+    if "FIG-ZEICHEN-DAEMON" not in vb:
+        return lib
+    sid_d, box = vb["FIG-ZEICHEN-DAEMON"]
+    m = re.search(r'<symbol id="%s"[^>]*>(.*?)</symbol>' % re.escape(sid_d), lib, re.S)
+    if not m:
+        return lib
+    inner = (f'<svg x="0" y="2" width="30" height="30" viewBox="{box}">{m.group(1)}</svg>'
+             '<path d="M30 17H45" stroke="#2B211A" stroke-width="4.2" stroke-linecap="round" fill="none"/>'
+             '<path d="M39 10.5L46.5 17L39 23.5" stroke="#2B211A" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>')
+    sid = vb.get("FIG-ZEICHEN-AUSTREIBEN", ("an-e-zeichen-austreiben",))[0]
+    new = f'<symbol id="{sid}" viewBox="-1 0 50 34">{inner}</symbol>'
+    lib, n = re.subn(r'<symbol id="%s"[^>]*>.*?</symbol>' % re.escape(sid), lambda _m: new, lib, count=1, flags=re.S)
+    if not n:
+        lib = lib.replace("\n</defs></svg>", "\n" + new + "\n</defs></svg>", 1)
+    vb["FIG-ZEICHEN-AUSTREIBEN"] = (sid, "-1 0 50 34")
+    return lib
+
+
+EMOJI_IDS = None
+
+
+def einheitlich(lib, vb):
+    """Ein Stil für alle Zeichen (Hinweis Andi Neck 2026-10-25: «es wäre schön, wenn alles einheitlich ist»): eigene Zeichen
+    (Gegenstände, Orte, Handlungen, Begriffe) bekommen dieselbe Behandlung wie die Twemoji-Zeichen – eine gleich starke dunkle
+    Kontur aussen (Teile in Tinte darunter, Strichstärke relativ zur Grösse) und leicht gedämpfte Farben. Personen, Rollen,
+    Gruppen und Gott (Porträts) bleiben, wie sie sind; die Emoji-Zeichen sind schon so gesetzt (emoji_zeichen.stil)."""
+    global EMOJI_IDS
+    import bilder_auto as _a
+    import emoji_zeichen as _ez
+    if EMOJI_IDS is None:
+        f = pathlib.Path(__file__).resolve().parent / "bildsymbole_daten/ueberarbeitet/zzz-emoji.json"
+        EMOJI_IDS = set(json.loads(f.read_text(encoding="utf-8"))) if f.exists() else set()
+    lex = _a.gather_lex()
+    done = set()
+    for fid, (sid, box) in list(vb.items()):
+        k = (lex.get(fid) or {}).get("kind")
+        if k not in ("sign", "object", "place", "action") or fid in EMOJI_IDS or sid in done:
+            continue
+        m = re.search(r'(<symbol id="%s"[^>]*>)(.*?)(</symbol>)' % re.escape(sid), lib, re.S)
+        if not m or "einheitlich" in m.group(1):
+            continue
+        done.add(sid)
+        x, y, w, h = (float(v) for v in box.split())
+        if k == "place" and w / h > 1.6:  # breite Landschaften stehen als Hintergrund im Bild: ohne Rahmen
+            continue
+        sw = max(w, h) * .062
+        body = m.group(2)
+        ink = re.sub(r"<(text|clipPath|defs|filter|mask|linearGradient|radialGradient)\b.*?</\1>", "", body, flags=re.S)
+        ink = re.sub(r'\s(?:id|clip-path|filter|mask|opacity|fill-opacity|stroke-opacity)="[^"]*"', "", ink)
+        ink = re.sub(r'(fill|stroke)="(?!none)[^"]*"', lambda mm: f'{mm.group(1)}="{_ez.INK}"', ink)
+        col = re.sub(r'(fill|stroke)="(#[0-9a-fA-F]{3,6})"', lambda mm: f'{mm.group(1)}="{_ez._soft(mm.group(2))}"', body)
+        pad = sw / 2
+        new = (f'<symbol id="{sid}" class="einheitlich" viewBox="{x - pad:g} {y - pad:g} {w + 2 * pad:g} {h + 2 * pad:g}">'
+               f'<g fill="{_ez.INK}" stroke="{_ez.INK}" stroke-width="{sw:.2f}" stroke-linejoin="round" stroke-linecap="round">{ink}</g>{col}</symbol>')
+        lib = lib[:m.start()] + new + lib[m.end():]
+        for f2, (s2, b2) in list(vb.items()):
+            if s2 == sid:
+                vb[f2] = (sid, f"{x - pad:g} {y - pad:g} {w + 2 * pad:g} {h + 2 * pad:g}")
+    return lib
 
 
 # ---------------------------------------------------------------- Automatisch gesetzte Bilder (bilder_auto.py)
