@@ -144,6 +144,40 @@ geschlossen (nur feine Längslinien), ohne Daumen. Lehre: Bei Händen und andere
 Eindruck; bekannte Vorbilder (Emoji, Piktogramme) zuerst ansehen
 ([Bericht](../reports/zeichen-blindtest-2026-10-25-runde10-beten.json)).
 
+## Durchsicht und Gestaltungsregeln (Runde 11, 2026-10-25)
+
+Anlass (Andi Neck): Hände teils gut, teils unverständlich oder schlecht gezeichnet; Almosen wirkt wie eine Schüssel; «der
+Prozess muss besser werden». Befund: Der Blindtest («was bedeutet das?») ist zu nachsichtig – eine KI errät die Bedeutung
+auch aus schlechten Zeichnungen (betende Hände wie Füsse bestanden 4/4). Eine Gestaltungskritik aller 421 Zeichen ohne
+Personen (drei getrennte Instanzen, Massstab Piktogramm-Designer) ergab: 139 ok, 241 überarbeiten, 41 neu.
+
+**Ablauf für jedes neue oder überarbeitete Zeichen (verbindlich):**
+1. **Vorbild zuerst:** bewährte Lösung suchen und benennen (Emoji, Leitsystem-/Verkehrspiktogramm, Symbole der unterstützten
+   Kommunikation) – beschreiben, nicht kopieren. Hauptmotiv vor Detail: Was muss man auf einen Blick sehen?
+2. **Zwei bis drei Fassungen** zeichnen, gross und in 32 px ansehen (Read), selbst verwerfen, was ein Designer nicht abgäbe.
+3. **Gestaltungskritik:** `zeichen_test.py … --frage kritik --befragen 3` – bestanden nur mit Mehrheitsurteil «ok» und
+   Mittelwerten ≥ 4 in Abbild, Zeichnung und Sinn. Sonst überarbeiten (höchstens drei Runden, dann als offen melden).
+4. **Blindtest** wie bisher (`--frage abbild --befragen 4 --bewerten`): Sinn muss ohne Namen ankommen.
+5. **Menschliches Urteil zuletzt:** Andi Neck sieht die Übersicht; sein Eindruck geht jedem Test vor.
+
+**Gestaltungsregeln (aus der Durchsicht):**
+- **Hände** nur aus der gemeinsamen Handbibliothek (offen, empfangend wie 🫴, gebend von oben wie 🫳, zeigend, haltend,
+  Faust, betend wie 🙏, zwei Hände wie 🤲 / 🙌): eine Silhouette mit Kontur nur aussen, Daumen klar abgesetzt, Finger
+  verschieden lang, Ärmel als Manschette. Keine Fäustlinge, Keile, Balken oder «Wurst-Arme» quer über Körper.
+- **Handlungen nicht als blosse Pfeile** (bringen, fliehen, erhöhen …): Figur oder Gegenstand in Handlung zeigen
+  (🏃 fliehen, Figur trägt etwas = bringen); Pfeile nur als Zusatz.
+- **Keine Bedien-Symbole** (Lautsprecher, WLAN-Bögen, Häkchen-Boxen, Download-Pfeile) für biblische Begriffe.
+- **Jeder Begriff sein eigenes Bild:** keine Doppelten (Licht ≠ Stern/Zeichen, Reich Gottes ≠ Königsherrschaft, Tage ≠
+  Sonne ≠ Hitze, Wahrheit ≠ vollbracht, Sünde ≠ unrein).
+- **Verneinung einheitlich:** roter Kreis mit Schrägstrich = «nicht tun / verboten» (über dem Motiv); rotes X = «falsch,
+  Nein»; leer = leerer Gegenstand, kein Verbotsschild.
+- **Gefühle und Zustände** als Gesicht im Emoji-Stil (Freude, Trauer, Zorn, Sorge, Hass), nicht als Wolke oder Klecks.
+- **Landschaften und Orte** mit Kontur und klarer Form (Ufer, Wasserlinie, Furchen), nicht als blasse Streifen.
+- Nichts am Rand abschneiden; Teile verbunden (keine schwebenden Einzelteile ohne Bezug).
+
+Überarbeitete Zeichen liegen in `scripts/authoring/bildsymbole_daten/ueberarbeitet/<thema>.json` ({Lexikon-ID: {vb, svg}});
+`bilder_anime.library()` ersetzt damit die bisherige Zeichnung unter derselben ID.
+
 ## Bestand prüfen
 
 Alle bestehenden Zeichen durchlaufen Schritt 4 als Ausgangsmessung. Ergebnis je Zeichen: behalten, neu entwerfen oder

@@ -19,6 +19,10 @@ Optionen:
   --verteilen        Detailstufen (…@1, …@2, …@3) auf getrennte Sätze verteilen: jeder Satz (und damit jede Instanz)
                      sieht ein Zeichen nur in einer Stufe, alle Stufen kommen gleich oft vor
   --frage detail     zusätzlich je Zeichen: «Würde mehr Detail helfen, ist es egal, oder stört es?» und «Womit verwechselbar?»
+  --frage kritik     Gestaltungskritik statt Benennen (seit 2026-10-25, Runde 11): Instanzen sehen Bedeutung, Zeichen gross und
+                     klein und beurteilen die Zeichnung (abbild, zeichnung, sinn 1–5, verwechselbar, urteil ok|überarbeiten|neu);
+                     bestanden nur mit Mehrheitsurteil ok und allen Mittelwerten ≥ 4 (AUSGABE/kritik.json). Grund: der Blindtest
+                     liess Zeichnungen durch, die Menschen falsch lesen (betende Hände wie Füsse, Almosen wie Schüssel)
   --frage abbild     zuerst offen «Was ist abgebildet?» (Gegenstand, Lebewesen; ohne Bedeutung), dann «Was könnte es
                      bedeuten?»; «Bild erkannt» wird dann nur an der Antwort zum Abbild bewertet (seit 2026-10-24, Runde 6c)
   --silhouette       nur der Umriss: alle Flächen und Linien einfarbig dunkel (prüft, ob die Silhouette allein trägt; bei
@@ -66,6 +70,16 @@ FRAGE_ABBILD_ZELLE = ("Auf dem Bild {blatt} siehst du nummerierte Zellen aus ein
                       "bedeuten?»: ein bis drei Wörter. Rate, wenn du unsicher bist. ")
 ANTWORT_ABBILD = ("Antworte nur mit einem JSON-Objekt {{\"N01\": {{\"abbild\": \"…\", \"bedeutung\": \"…\"}}, …}}, "
                   "ohne weiteren Text.")
+FRAGE_KRITIK = ("Auf dem Bild {blatt} siehst du nummerierte Bildzeichen einer Bilderbibel, je gross und in Einsatzgrösse (klein). "
+                "Lies die Bilddatei mit dem Read-Werkzeug. Du bist ein strenger Piktogramm-Designer (Massstab: gute Emoji-Sätze, "
+                "Leitsystem-Piktogramme). Nicht raten, was gemeint ist – die Bedeutung steht unten –, sondern die ZEICHNUNG beurteilen: "
+                "«abbild» 1–5 (ist das Gezeigte als Gegenstand, Körperteil, Handlung überzeugend gezeichnet; Hand wie Hand, Münze wie "
+                "Münze), «zeichnung» 1–5 (saubere ruhige Silhouette, keine aufgeklatschten Teile mit Konturen quer über Flächen, klein "
+                "noch klar), «sinn» 1–5 (trägt das Bild die Bedeutung ohne Namen), «verwechselbar» (womit verwechselbar, z. B. «Füsse», "
+                "«Schüssel»; sonst leer), «urteil» ok|überarbeiten|neu, «mangel» (kurz). Hände und Gesten besonders streng; «ok» nur, "
+                "wenn ein Designer es so abgeben würde. Bedeutungen: {liste} ")
+ANTWORT_KRITIK = ("Antworte nur mit einem JSON-Objekt {{\"N01\": {{\"abbild\": 4, \"zeichnung\": 4, \"sinn\": 4, \"verwechselbar\": \"\", "
+                  "\"urteil\": \"ok\", \"mangel\": \"\"}}, …}}, ohne weiteren Text.")
 ANTWORT = "Antworte nur mit einem JSON-Objekt {{\"N01\": \"…\", …}}, ohne weiteren Text."
 ANTWORT_DETAIL = ("Beantworte je Nummer zusätzlich: Würde mehr Detail helfen, das Zeichen zu erkennen, ist es egal, oder würde es "
                   "stören (\"mehr\", \"egal\" oder \"stört\")? Womit könntest du es verwechseln (ein bis drei Wörter)? Antworte nur "
@@ -182,7 +196,10 @@ def main():
         comp.vbmap = vb
         cells = DG.Cells(comp)
         k_scale = px / cells.ICON_H
-    if opts["--frage"] == "abbild":
+    kritik = opts["--frage"] == "kritik"
+    if kritik:
+        frage = FRAGE_KRITIK + ANTWORT_KRITIK
+    elif opts["--frage"] == "abbild":
         frage = (FRAGE_ABBILD_ZELLE if zelle else FRAGE_ABBILD) + ANTWORT_ABBILD
     else:
         frage = (FRAGE_ZELLE if zelle else FRAGE) + (ANTWORT_DETAIL if opts["--frage"] == "detail" else ANTWORT)
@@ -212,9 +229,12 @@ def main():
                 else:
                     iw = _auto.icon_w(box, px)
                     svg = f'<svg viewBox="{box}" width="{iw:.1f}" height="{px:.1f}" preserveAspectRatio="xMidYMid meet"><use href="#{sym}"/></svg>'
+                    if kritik:  # Gestaltungskritik: gross und in Einsatzgrösse nebeneinander
+                        svg = (f'<span style="display:flex;align-items:center;justify-content:center;gap:10px"><svg viewBox="{box}" width="{iw * 4:.1f}" height="{px * 4:.1f}"><use href="#{sym}"/></svg>'
+                               + svg.replace('style="display:block;margin:auto"', '') + '</span>')
                 items.append(f'<div class="c"><b>{no}</b>{svg}</div>')
-            colw = int((92 * k_scale) if zelle else max(px * 1.9, 60)) + 20
-            cols = 4 if zelle else 5
+            colw = int((92 * k_scale) if zelle else max(px * (7.5 if kritik else 1.9), 60)) + 20
+            cols = 4 if zelle else (3 if kritik else 5)
             (blind / f"{name}.html").write_text(
                 f'<html><head><meta charset="utf-8"><style>.lw{{display:none}}.lw-de{{display:inline}}</style></head><body style="margin:0;background:#fff;font:13px sans-serif">'
                 f'<div style="display:none">{lib}</div>'
@@ -224,7 +244,7 @@ def main():
                 encoding="utf-8")
             pages.append(name)
     render(blind, pages, cols * (colw + 14) + 20, dpr)
-    (blind / "frage.txt").write_text(frage.format(blatt="blatt-NN.png") + "\n", encoding="utf-8")
+    (blind / "frage.txt").write_text(frage.format(blatt="blatt-NN.png", liste="(je Blatt)") + "\n", encoding="utf-8")
     meta = {"px": px, "dpr": dpr, "zelle": zelle, "silhouette": "--silhouette" in flags, "frage": opts["--frage"] or "benennen", "saetze": len(sets), "blaetter": key}
     (out / "schluessel.json").write_text(json.dumps(meta, indent=1, ensure_ascii=False), encoding="utf-8")
     print(f"PASS: {sum(len(s) for s in sets)} Zeichen in {len(sets)} Satz/Sätzen, {len(pages)} Blätter in {blind} "
@@ -235,7 +255,13 @@ def main():
         from concurrent.futures import ThreadPoolExecutor
         jobs = [(pgn, r) for pgn in pages for r in range(n)]
         with ThreadPoolExecutor(8) as ex:
-            res = list(ex.map(lambda j: ask(blind / os.path.dirname(j[0]), frage.format(blatt=f"{blind}/{j[0]}.png"), opts["--modell"]), jobs))
+            def liste(pgn):
+                if not kritik:
+                    return ""
+                lex_ = {p_.stem: json.loads(p_.read_text(encoding="utf-8")) for p_ in (ROOT / "data/illustrations/lexicon").glob("FIG-*.json")} if not hasattr(liste, "lx") else liste.lx
+                liste.lx = lex_
+                return "; ".join(f"{no} = {(ent.get(k) or {}).get('bedeutung') or (lex_.get(base(k)) or {}).get('names', {}).get('de', base(k))}" for no, k in key[pgn].items())
+            res = list(ex.map(lambda j: ask(blind / os.path.dirname(j[0]), frage.format(blatt=f"{blind}/{j[0]}.png", liste=liste(j[0])), opts["--modell"]), jobs))
         ans = {}
         for (pgn, r), a in zip(jobs, res):
             for no, k in key[pgn].items():
@@ -245,6 +271,17 @@ def main():
                 ans.setdefault(k, []).append(v)
         (out / "antworten.json").write_text(json.dumps(ans, indent=1, ensure_ascii=False), encoding="utf-8")
         print(f"PASS: {n} Instanzen je Blatt, Antworten in {out / 'antworten.json'}")
+        if kritik:  # Zusammenfassung: Mehrheitsurteil und Mittelwerte; bestanden nur mit Urteil ok und allen Mitteln ≥ 4
+            summ = {}
+            for k, v in ans.items():
+                urt = [x.get("urteil", "") for x in v]
+                mean = {f: round(sum(float(x.get(f) or 0) for x in v) / max(1, len(v)), 1) for f in ("abbild", "zeichnung", "sinn")}
+                top = max(set(urt), key=urt.count) if urt else ""
+                summ[k] = {**mean, "urteile": urt, "urteil": top, "bestanden": top == "ok" and min(mean.values()) >= 4,
+                           "verwechselbar": [x.get("verwechselbar") for x in v if x.get("verwechselbar")],
+                           "mangel": [x.get("mangel") for x in v if x.get("mangel")]}
+            (out / "kritik.json").write_text(json.dumps(summ, indent=1, ensure_ascii=False), encoding="utf-8")
+            print(f"PASS: Gestaltungskritik – bestanden {sum(1 for x in summ.values() if x['bestanden'])} von {len(summ)}; {out / 'kritik.json'}")
     if "--bewerten" in flags:
         ans = json.loads((out / "antworten.json").read_text(encoding="utf-8"))
         lex = {p.stem: json.loads(p.read_text(encoding="utf-8")) for p in (ROOT / "data/illustrations/lexicon").glob("FIG-*.json")}

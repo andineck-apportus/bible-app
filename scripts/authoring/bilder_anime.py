@@ -1279,6 +1279,17 @@ def library():
             continue
         m = re.search(r'<symbol id="%s" viewBox="([^"]+)"' % re.escape(sid), lib)
         vb[fid] = (sid, m.group(1))
+    # Überarbeitete Zeichen (Durchsicht 2026-10-25, docs/SYMBOLPROZESS.md «Runde 11»): ersetzen die Zeichnung unter derselben
+    # Lexikon-ID, gleich woher das Zeichen bisher kam (Symbol-Bibliothek, Bauteile, Figuren); Datei je Thema
+    for f in sorted((pathlib.Path(__file__).resolve().parent / "bildsymbole_daten/ueberarbeitet").glob("*.json")):
+        for fid, e in json.loads(f.read_text(encoding="utf-8")).items():
+            if fid not in vb:
+                continue
+            sid = vb[fid][0]
+            new = f'<symbol id="{sid}" viewBox="{e["vb"]}">{e["svg"]}</symbol>'
+            lib, n = re.subn(r'<symbol id="%s"[^>]*>.*?</symbol>' % re.escape(sid), lambda _m: new, lib, count=1, flags=re.S)
+            if n:
+                vb[fid] = (sid, e["vb"])
     return lib, vb
 
 
