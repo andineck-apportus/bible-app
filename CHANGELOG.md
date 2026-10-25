@@ -2,6 +2,12 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.109 — 2026-10-25 — Legende je Bild einblendbar, «ohne Worte» startet aus
+
+Hinweise Andi Neck:
+- **Legende je Kachel:** Ein Bild (eine Kachel) antippen blendet seine eigene Legende direkt darunter ein, nochmals antippen blendet sie aus; auch per Tastatur. Die ganze Erklärung zum Bild öffnet der Link «Erklärung zum Bild» unter den Bildern.
+- **«Ohne Worte» ist beim Öffnen der App immer ausgeschaltet** (wird nicht mehr gespeichert).
+
 ## v0.108 — 2026-10-25 — Kapitel und Buch wieder als Comic, Bild antippen für die Erklärung, «ohne Worte» beim Abschnitt
 
 Hinweise Andi Neck:
