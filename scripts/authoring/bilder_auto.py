@@ -29,6 +29,8 @@ def load_briefs():
     """Bildaufträge aus bildauftraege_daten/*.json (eine Datei je Buch), in Dateireihenfolge."""
     out = []
     for f in sorted(DATA.glob("*.json")):
+        if f.name.startswith("_"):  # Hilfsdateien (z. B. _wortzeichen.json)
+            continue
         for b in json.loads(f.read_text(encoding="utf-8")):
             b["_file"] = f.name
             out.append(b)

@@ -432,6 +432,35 @@ mit bösem Blick. Die Rauchwolke über der Gehenna machte den Umriss zur brennen
 künftig der Verstorbene auf der Bahre, das Grab für «begraben» und «Grab». Offen: die Trauer als Tropfen (in Zellen nicht als
 Trauer gesehen; in Szenen bleiben es Tränen im Gesicht), Hass als Umriss, ein Test der ganzen Bilder ohne Legende.
 
+### Runde 9 (Wortzeichen für «ohne Worte», 2026-10-25)
+
+Anlass: Titelblasen, Spaltenköpfe, Stichwortbänder, leere Zellen und Sprechblasen der Pilotbilder (Mt 5–7, Rut, Titus)
+sollen ein Zeichen tragen, in der Ansicht «ohne Worte» statt der Worte und neu auch neben ihnen. Der Automat (`nw_icons`)
+fand für 211 von 351 Stellen nichts. Zuordnung von Hand für alle 351 Stellen
+(`scripts/authoring/bildauftraege_daten/_wortzeichen.json`, je Stelle ein bis zwei Zeichen und ein kurzer Grund): Der
+Auto-Treffer bleibt 79-mal, wird 38-mal ergänzt und 23-mal ersetzt, z. B. Waage «Gericht» → «gerecht» bei
+«Gerechtigkeit», «fehlt» → «geben, Weg» bei «damit ihnen nichts fehlt», «klug, zeigen» → «Spalter, ablehnen».
+Vorhandene Zeichen tragen die meisten Stellen: «Ihr habt gehört …» = Ohr und Gesetzestafeln, «Ich aber sage euch …» =
+Jesus und sprechen, «nicht … / sondern …» = Kreuz und Haken, Vorfahren ohne Porträt = Vater.
+
+Neu sind nur vier Zeichen, eines ist neu gezeichnet (Detailstufe 2 nach «Mittlere Stufe zuerst»). Gemessen mit
+`zeichen_test.py --frage abbild --befragen 4 --bewerten`, 32 px allein. Daten:
+`reports/zeichen-blindtest-2026-10-25-runde9.json`.
+
+| Zeichen | Stellen | gezeichnet | 32 px allein | gelesen als | Urteil |
+|---|---|---|---|---|---|
+| lehren (neu) | 13 | Lehrer mit Bart hebt den Finger, offene Schriftrolle, kleiner Zuhörer | 4/4 | «Mann mit Schriftrolle, Kind → lehren» | erkannt |
+| im Verborgenen (neu) | 8 | Haus im Schnitt, verriegelte Tür, darin kniet jemand und betet | 3/4 | «betender Mensch im Haus → Gebet im Verborgenen» | erkannt |
+| erinnern (neu) | 2 | Zeigefinger mit roter Fadenschleife | 4/4 | «Finger mit roter Schleife → erinnern» | erkannt |
+| sich sorgen (neu gezeichnet) | 6 | besorgtes Gesicht, Schweisstropfen, Knäuel darüber (vorher nur Tropfen) | 4/4 | «besorgter Mann → Sorge» | erkannt |
+| vollkommen (neu) | 3 | 9a dicker Ring mit Füllung; 9b dünner Ring ohne Füllung | 0/4 · 0/4 | 9a «goldene Münze → Schatz»; 9b «goldener Ring → Bund» | Wortzeichen |
+
+Vorhandene Zeichen, auf die sich die Zuordnung stützt (gleiche Messung): hören, Gesetzestafeln, gerecht je 4/4; Haken
+(Wahrheit) als «richtig», gute Werke als «Barmherzigkeit», bewahren als «Schutz» (Hände nicht gesehen); segnen 2/4
+(zweimal «zeigt auf Kind → zurechtweisen»), es trägt «selig»; «nicht richten» 0/4 («durchgestrichene Waage →
+Ungerechtigkeit»). Offen: «nicht richten» (vier Stellen) und «selig» brauchen ein besseres Zeichen; die Zeichen in der
+Zelle, als Umriss und im ganzen Bild ohne Legende sind noch nicht geprüft.
+
 ### Reihenfolge der Überarbeitung
 
 1. Die 20 meistverwendeten schwachen Zeichen (rund die Hälfte aller schwachen Verwendungen).

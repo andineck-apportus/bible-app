@@ -2,6 +2,13 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.95 — 2026-10-25 — Zeichen auch neben den Worten
+
+Hinweis Andi Neck: die Zeichen der Ansicht «ohne Worte» auch mit Worten einblenden.
+- **Zeichen neben den Worten:** Titelblase (Zeichen links), Spaltenköpfe, Kästchen ohne eigenes Zeichen und – wo zugeordnet – das Stichwortband zeigen jetzt ein Zeichen, auch in der normalen Ansicht.
+- **Geprüfte Zuordnung** für alle 351 Wortfelder der Pilotbilder (`bildauftraege_daten/_wortzeichen.json`, getrennte Instanz): 79 Auto-Treffer bestätigt, 38 ergänzt, 23 ersetzt (z. B. «Gerechtigkeit» → gerecht statt Gericht), 211 neu belegt. Der Automat bleibt nur Rückfall.
+- **Neue Zeichen** (Runde 9, 32 px, 4 Instanzen): lehren 4/4, im Verborgenen 3/4, erinnern 4/4; «sich sorgen» neu gezeichnet (besorgtes Gesicht, 4/4); «vollkommen» nur als Wortzeichen erkannt. Offen: «nicht richten» (0/4) und «selig» (segnen, 2/4) brauchen bessere Zeichen.
+
 ## v0.94 — 2026-10-25 — Ohne Worte ohne leere Felder, Bilder je Abschnitt, Hände
 
 Hinweise Andi Neck:
