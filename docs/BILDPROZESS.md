@@ -194,3 +194,6 @@ Grenzen der Messung:
 3. Zielwerte wie oben, vorerst zum Ausprobieren; nach dem Pilot überprüfen (2026-10-23).
 4. Namensschilder für Hauptfiguren beim ersten Auftreten in einem Bild: ja (2026-10-23).
 5. Legende: kurzer, gleichmässiger Erkennungstext je Figur und Zeichen (2026-10-23).
+
+
+**Anordnung immer geprüft (2026-10-25):** `bilder_anime.py` ruft nach dem Zeichnen `pruefe_bilder.py` auf (Zellen und alle Kästen: Stichwortband, Titelblase, Köpfe, Namensschild; Text und Zeichen im Rahmen, ohne Überdeckung) und bricht bei Befunden ab. Überspringen nur bewusst mit `BIBLE_SKIP_LAYOUT_CHECK=1`.

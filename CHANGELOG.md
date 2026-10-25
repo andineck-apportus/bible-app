@@ -2,6 +2,13 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.102 — 2026-10-25 — Text bleibt im Kasten, Prüfung immer dabei
+
+Hinweis Andi Neck: Einige Texte ragten über ihren Kasten (z. B. «Plappert nicht wie die Heiden»).
+- **Ursache:** Im Stichwortband unter den Feldern wurde die Schriftgrösse bemessen, bevor die Zeichen davor ihren Platz bekamen. Jetzt geht der Platz der Zeichen zuerst ab; passt der Text auch klein nicht, entfällt das Zeichen und die Worte gehen vor.
+- **Prüfung erweitert:** `pruefe_bilder.py` prüfte nur Text in den Zellen der Strukturbilder. Neu auch alle anderen Kästen (Stichwortband, Titelblase, Spaltenköpfe, Namensschild): Text und Zeichen bleiben im Rahmen und überdecken sich nicht, in beiden Sprachen und ohne Worte.
+- **Fest eingebaut:** `bilder_anime.py` führt die Prüfung nach jedem Zeichnen selbst aus und bricht bei Befunden ab.
+
 ## v0.101 — 2026-10-25 — Ein Stil für alle Zeichen, jedes Zeichen gegen den Text geprüft
 
 Hinweis Andi Neck: «alles kritisch prüfen … einheitlich und passend zum Text».

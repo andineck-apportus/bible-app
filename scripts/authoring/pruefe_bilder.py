@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Anordnung der Bilder im Browser prüfen (BILDPROZESS.md, Leitlinie 9; Hinweis Andi Neck 2026-10-24):
 - Text in einer Zelle eines Strukturbilds ragt nicht über die Zelle hinaus;
+- Text und Zeichen in Kästen (Stichwortband, Titelblase, Köpfe, Namensschild) bleiben im Rahmen und überdecken sich nicht;
 - Beschriftungen von Pfeilen und Zweigen überdecken keine Zelle und keine andere Beschriftung;
 - Inhalt der Strukturbilder hält Abstand zum Kachelrahmen;
 - Pfeile zwischen Zellen beginnen und enden an einer Zelle (nicht daneben, nicht darin);
@@ -43,6 +44,19 @@ for(const mode of ['','nw'])for(const lang of ['de','gsw']){
           c.querySelectorAll(mode?'.dg-nw text, .dg-nw use':'.dg-full text, :scope > text').forEach(t=>{if(!vis(t))return;const B=t.getBBox();
             if(B.x<R.x-tol||B.y<R.y-tol||B.x+B.width>R.x+R.width+tol||B.y+B.height>R.y+R.height+tol)
               res.push(`${id} ${nm} [${L}]: ${t.tagName==='use'?'Zeichen':'Text'} ragt über die Zelle: «${t.textContent.slice(0,50)}»${mode?` (${[B.x,B.y,B.width,B.height,R.x,R.y,R.width,R.height].map(v=>v.toFixed(1))})`:""}`);});});
+        // Kästen mit Rahmen (Stichwortband, Titelblase, Spaltenköpfe, Namensschild): Text und Zeichen bleiben im Rahmen und
+        // überdecken sich nicht (Hinweis Andi Neck 2026-10-25: Text ragte über das Stichwortband)
+        const sv=e=>{const B=e.getBoundingClientRect();return B.width>0&&B.height>0?B:null;};
+        const tp=1.5;
+        tile.querySelectorAll('g.ill-words, g.dg-sw > g.dg-full, g.dg-sw > g.dg-nw, g.ill-name').forEach(c=>{
+          if(c.closest('g.dg-cell'))return;
+          const fr=[...c.querySelectorAll(':scope > rect'),...c.parentNode.querySelectorAll(':scope > rect')].map(sv).find(Boolean);if(!fr)return;
+          const ts=[...c.querySelectorAll('text')].map(t=>[t,sv(t)]).filter(x=>x[1]);
+          const us=[...c.querySelectorAll('use')].map(u=>[u,sv(u)]).filter(x=>x[1]);
+          for(const [e,B] of [...ts,...us])if(B.left<fr.left-tp||B.top<fr.top-tp||B.right>fr.right+tp||B.bottom>fr.bottom+tp)
+            res.push(`${id} ${nm} [${L}]: ${e.tagName==='use'?'Zeichen':'Text'} ragt über den Kasten «${(e.textContent||e.getAttribute('href')).slice(0,40)}»`);
+          for(const [t,B] of ts)for(const [u,U] of us)if(B.left<U.right-tp&&B.right>U.left+tp&&B.top<U.bottom-tp&&B.bottom>U.top+tp)
+            res.push(`${id} ${nm} [${L}]: Text überdeckt ein Zeichen «${t.textContent.slice(0,40)}» / ${u.getAttribute('href')}`);});
         if(mode){if(!/^[0-9A-Z]+-\d{3}$/.test(id))return;  // «ohne Worte» gibt es auf der Kapitelebene
           // ohne Worte: kein Feld bleibt leer – jede umschaltbare Gruppe hat Zeichen oder Anfangsbuchstaben, und kein Wort
           // steht ohne Ersatz (es würde verdeckt und hinterliesse eine leere Fläche)
