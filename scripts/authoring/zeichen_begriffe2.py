@@ -618,6 +618,405 @@ def loeserecht():
             "@2": ("0 0 35 33", s2, "Sandale vor einem gepflügten Acker mit kleinem Haus, daneben zwei Münzen")}
 
 
+# ---------------------------------------------------------------- Runde 2 (nach der Gestaltungskritik der Fassungen @1–@3)
+Z2 = {}
+
+
+def runde2(fid):
+    def deco(fn):
+        Z2[fid] = fn
+        return fn
+    return deco
+
+
+def kneel(x, g, body="#6E8EAE", hair="#3A2A1E", bow=False):
+    """Kniende Figur im Profil, Blick nach rechts (x = Rücken, g = Boden); bow: tief verneigt."""
+    if bow:  # 🙇 im Profil: Beine gefaltet am Boden, Rumpf schräg nach vorn, Arme zum Boden, Kopf tief
+        return (thick(f"M{x + 1.4} {g - 1.8}H{x + 8.4}", body, 3.2, 1.1)
+                + thick(f"M{x + 2} {g - 3.6}L{x + 9.6} {g - 8}", body, 4.8, 1.1)
+                + thick(f"M{x + 9.4} {g - 7.4}L{x + 13.8} {g - 1.8}", body, 2.2, 1)
+                + E(x + 14.8, g - 1.4, 1.5, .9, SKIN, INK, .8)
+                + C(x + 13, g - 9.6, 2.9, SKIN, INK, 1.1)
+                + P(f"M{x + 10.4} {g - 10.6}q1-2.8 3.6-2.2 2 .6 1.8 2.6-2.6-1.8-5.4-.4z", hair, INK, .6))
+    b = P(f"M{x} {g}H{x + 10}Q{x + 10.6} {g - 3} {x + 7.6} {g - 3.6}L{x + 7.4} {g - 11.6}Q{x + 6.6} {g - 14} {x + 3.6} {g - 14}"
+          f"Q{x + .2} {g - 14} {x - .4} {g - 10}Q{x - 1} {g - 3} {x} {g}Z", body, INK, 1.2)
+    h = C(x + 4.6, g - 18, 3.4, SKIN, INK, 1.1) + P(f"M{x + 1.2} {g - 18.2}q0-3.4 3.4-3.4 3 0 3.4 2.4-2-1.2-3.4-.4-.6 1.6-3.4 1.4z", hair, INK, .6)
+    return b + h
+
+
+@runde2("FIG-ZEICHEN-BOESES")
+def boeses2():
+    body = "#2E2A33"
+    aura = P("M15 2.4L18.4 5.6 22.6 1.4 24.4 6.4 30 5 28.6 10 32.4 13.4 27.4 15.6 29 20.6 23.6 19.8 22.4 25 18.8 21 14.6 24.6"
+             " 14 19.4 9 20.6 11 15.6 6.4 12.8 11.6 10.4 9.6 5.4 14.4 7.2Z", "#7A2E3A", None)
+    snake = (thick("M5.4 30.6Q1.6 30.4 4 27.8 7.6 24.6 14.6 25.8 22.4 27.2 24.8 23.4 26.2 20.2 21.2 18.4 14 16 16.2 11.8 17.8 9.6 20 9", "#4A4452", 3.8, 1.2)
+             + P("M3 31.2Q1 31 2 29.6", "none", INK, 1.4)
+             + P("M19.4 6.4Q23.4 4.2 27.4 6.2Q29.4 7.6 27.8 9.6Q25.6 11.8 21 12Q18 11.6 18.2 9Q18.4 7.2 19.4 6.4Z", body, INK, 1.2)
+             + P("M22.2 6.6l3.8 1.4", "none", "#F04A2E", 1.2) + C(24.4, 8.4, 1, "#F04A2E", None)
+             + P("M23 11.6l.4 1.6.6-1.6M25.4 11.2l.3 1.4.6-1.5", WHITE, INK, .4)
+             + P("M28.2 8.2l2.4-.4M30.6 7.8l1.2-1.1M30.6 7.8l1.1 1.1", "none", RED, 1))
+    snake2 = snake.replace(P("M22.2 6.6l3.8 1.4", "none", "#F04A2E", 1.2), P("M21.6 6.4l4.6 1.8", "none", INK, 1.4))
+    return {"@4": ("0 0 33 32", aura + snake, "Schwarze aufgerichtete Schlange mit böse zusammengezogener roter Braue, rotem Auge, Giftzähnen und gespaltener Zunge vor einem dunkelroten Zackenschein"),
+            "@5": ("0 0 33 32", snake2, "Schwarze aufgerichtete Schlange mit böse gesenkter Braue, rotem Auge, Giftzähnen und gespaltener Zunge")}
+
+
+@runde2("FIG-ZEICHEN-SORGE")
+def sorge2():
+    def face(cx=16, cy=17.6, r=12):
+        return (emoji(cx, cy, r)
+                + P(f"M{cx - 7.6} {cy - 5}Q{cx - 5.4} {cy - 7.6} {cx - 2.6} {cy - 6.8}M{cx + 7.6} {cy - 5}Q{cx + 5.4} {cy - 7.6} {cx + 2.6} {cy - 6.8}", "none", INK, 1.4)
+                + E(cx - 4, cy - 2, 1.1, 1.5, INK, None) + E(cx + 4, cy - 2, 1.1, 1.5, INK, None)
+                + P(f"M{cx - 5} {cy + 6.6}Q{cx - 3} {cy + 3.6} {cx} {cy + 4.4}T{cx + 5} {cy + 6.2}", "none", INK, 1.5))
+    # @4 😰: blaue Stirn (flach), Schweisstropfen am Rand
+    cx, cy, r = 16, 17.6, 12
+    blue = P(f"M{cx - 11.4} {cy - 3.6}A{r} {r} 0 0 1 {cx + 11.4} {cy - 3.6}Q{cx} {cy - 7.4} {cx - 11.4} {cy - 3.6}Z", "#9CC0E6", None)
+    s4 = (emoji(cx, cy, r) + blue + C(cx, cy, r, "none", INK, 1.6)
+          + P(f"M{cx - 7.6} {cy - 4}Q{cx - 5.4} {cy - 6.6} {cx - 2.6} {cy - 5.8}M{cx + 7.6} {cy - 4}Q{cx + 5.4} {cy - 6.6} {cx + 2.6} {cy - 5.8}", "none", INK, 1.4)
+          + E(cx - 4, cy - 1, 1.1, 1.5, INK, None) + E(cx + 4, cy - 1, 1.1, 1.5, INK, None)
+          + P(f"M{cx - 5} {cy + 7}Q{cx - 3} {cy + 4} {cx} {cy + 4.8}T{cx + 5} {cy + 6.6}", "none", INK, 1.5)
+          + tear(cx + 12.6, cy - 4.6, 1.15))
+    knot = P(scribble(16, 3.4, 4.2, 1.7, 1.3, -4.4, 1.6, seed=.8), "none", INK, .9)
+    s5 = face(16, 19.4, 11.4) + knot + tear(28.4, 15.6, 1.1)
+    return {"@4": ("0 0 32 32", s4, "Gelbes besorgtes Emoji-Gesicht (😰): Stirn blau, hochgezogene Brauen, zittriger Mund, Schweisstropfen an der Schläfe"),
+            "@5": ("0 0 32 32", s5, "Gelbes besorgtes Emoji-Gesicht mit hochgezogenen Brauen und Schweisstropfen, darüber ein kleiner feiner Kritzel-Knäuel")}
+
+
+@runde2("FIG-ZEICHEN-FRIEDEN")
+def frieden2():
+    """🫂 ohne Knubbelhände: eine gemeinsame Silhouette, Köpfe aneinander gelehnt; Fassung 5 mit Ölzweig darüber."""
+    bodies = (P("M2.4 31.4L4.6 22Q6 17.6 10.4 17.4H16V31.4Z", "#6E8EAE", INK, 1.3)
+              + P("M29.6 31.4L27.4 22Q26 17.6 21.6 17.4H16V31.4Z", "#B0704A", INK, 1.3)
+              + P("M16 18.6V31", "none", INK, .7))
+    arms = (P("M16 22.4Q22 21.8 26.6 19.4L27.6 22.6Q22 25.4 16 25.6Z", "#6E8EAE", None)
+            + P("M16 22.4Q22 21.8 26.6 19.4M27.6 22.6Q22 25.4 16 25.6", "none", INK, .9))
+    heads = (person(11.6, 31.4, 1.1, "#6E8EAE", "#3A2A1E", "happy", 9).split('<circle', 1)[0] and "")
+    def head(cx, cy, hair, tilt):
+        g = (C(cx, cy, 5.6, SKIN, INK, 1.2)
+             + P(f"M{cx - 5.6} {cy - .2}q0-5.6 5.6-5.6t5.6 5.6q-5.6-2.8-11.2 0z", hair, INK, .8)
+             + P(f"M{cx - 3.1} {cy + .6}q.9-1.1 1.8 0M{cx + 1.3} {cy + .6}q.9-1.1 1.8 0", "none", INK, .8)
+             + P(f"M{cx - 1.6} {cy + 2.6}q1.6 1.6 3.2 0", "none", INK, .7)
+             + C(cx - 3.4, cy + 2.2, .8, "#F09A8A", None) + C(cx + 3.4, cy + 2.2, .8, "#F09A8A", None))
+        return f'<g transform="rotate({tilt} {cx} {cy + 5})">{g}</g>'
+    hh = head(11.4, 11.4, "#3A2A1E", 14) + head(20.6, 11.4, "#5A3A22", -14)
+    twig = (P("M10.6 3Q16 .6 21.4 3", "none", "#5B7A2E", 1) + E(12.8, 1.8, 1.8, .75, LEAF, INK, .5) + E(16.4, 1.2, 1.8, .75, LEAF, INK, .5)
+            + E(19.8, 1.8, 1.8, .75, LEAF, INK, .5))
+    s4 = bodies + hh
+    return {"@4": ("0 0 32 32", s4, "Zwei Menschen ganz nah beieinander, Schultern aneinander, Köpfe zueinander geneigt, lächelnd mit geschlossenen Augen"),
+            "@5": ("0 0 32 32", twig + bodies + hh, "Zwei Menschen ganz nah beieinander, Köpfe zueinander geneigt, lächelnd, darüber ein kleiner Ölzweig")}
+
+
+@runde2("FIG-ZEICHEN-FRIEDE")
+def friede2():
+    def leaf(x, y, rot, l=2.3):
+        return f'<ellipse cx="{x}" cy="{y}" rx="{l}" ry="{l * .42:.2f}" transform="rotate({rot} {x} {y})" fill="{LEAF}" stroke="{INK}" stroke-width=".55"/>'
+    tail = P("M9.4 19.2Q3.4 16.2 1.4 18.4Q.2 21.2 1.4 24.2Q3.8 25.8 9.6 22.6Z", WHITE, INK, 1.3) + P("M3 21.2l5 .4M3.4 23.4l4.8-.8", "none", "#9AA8B8", .8)
+    body = P("M6.4 21Q8.4 16 13.6 15.6L20.4 15.2Q23.2 12.8 26 13.4Q28.2 14 28.6 15.6L26.8 16.4Q25.6 21.2 18.8 22.6Q12 23.8 6.4 21Z", WHITE, INK, 1.4)
+    wing = (P("M11.6 16.8Q10.4 8.4 15.4 2.4Q16.4 7.2 20 8.2Q22.6 9.2 21.8 12.6Q20.6 15.8 15.4 17.2Z", WHITE, INK, 1.4)
+            + P("M14 9.8q1.6 1.4 4.2 1.4M13.8 13q2 1 4.6.8", "none", "#9AA8B8", .9))
+    head = C(25.2, 14.6, .8, INK, None) + P("M28.4 14.6l2.4 1-2.2 1z", "#E8A33A", INK, .6)
+    twig = (P("M29.4 16.2Q31 19.6 29.2 24.4", "none", "#5B7A2E", 1.3)
+            + leaf(31.6, 18.2, -30) + leaf(28, 20.4, 30) + leaf(31.2, 22.6, -20) + C(28.8, 25.2, 1.1, "#5B7A2E", INK, .5))
+    s4 = tail + body + wing + head + twig
+    return {"@4": ("0 0 33 27", s4, "Weisse fliegende Taube mit erhobenem Flügel und rundem Schwanz, im Schnabel ein grüner Ölzweig mit drei Blättern und Olive")}
+
+
+@runde2("FIG-ZEICHEN-WILLE-GOTTES")
+def wille2():
+    """Mt 6,10 «Dein Wille geschehe»: Fassung 4 – eine Schriftrolle (Gottes Weisung) entrollt sich aus der Wolke bis auf die Erde;
+    Fassung 5 – ein Mensch kniet unter der Wolke im goldenen Licht (Hingabe an Gottes Willen)."""
+    earth = (P("M2 32Q2 22.4 16 22.4T30 32Z", SKY, INK, 1.4)
+             + P("M5.6 28.6Q8.6 25.4 12.6 26.4 13.6 28.8 10.4 29.6 7.4 30.6 5.6 28.6ZM19.6 25.2Q24 24.6 26.4 27.6 24.4 29.4 21.6 28.2 18.8 27.4 19.6 25.2Z", "#7BAE5A", INK, .8))
+    scroll = (P("M11 8.8H21V22.6Q16 24.6 11 22.6Z", "#F4ECD8", INK, 1.2)
+              + P("M13.2 12h5.6M13.2 14.6h5.6M13.2 17.2h5.6M13.2 19.8h3.6", "none", "#8A6A3A", .9)
+              + E(16, 23.4, 5.6, 1.4, "#E3D3AE", INK, 1))
+    s4 = earth + scroll + cloud(1.4, .6, 1.0) + sparkle(16, 7, 2.6)
+    light = P("M10.6 11.6L4 29.4H28L21.4 11.6Z", "#FBE7A0", None)
+    ground = P("M1 30.4H31", "none", "#8A7A5A", 1.4)
+    s5 = light + ground + cloud(1.4, .4, 1.0) + sparkle(16, 7, 2.6) + kneel(10.6, 30.2, "#6E8EAE", "#3A2A1E", True)
+    return {"@4": ("0 0 32 32", s4, "Aus einer weissen Wolke mit goldenem Stern entrollt sich eine beschriebene Schriftrolle bis hinunter auf die Erde"),
+            "@5": ("0 0 32 32", s5, "Unter einer Wolke mit goldenem Stern kniet ein Mensch tief verneigt im goldenen Lichtkegel")}
+
+
+@runde2("FIG-ZEICHEN-SATT")
+def satt2():
+    """😮‍💨 + leerer Teller mit abgelegtem Löffel: genug gegessen (nicht «lecker»)."""
+    face = (emoji(13, 13, 10.6)
+            + P("M7.6 11q1.6 1.4 3.2 0M15.2 11q1.6 1.4 3.2 0", "none", INK, 1.4)
+            + C(13, 17.6, 1.6, "#7A2E2A", INK, 1)
+            + C(7.4, 15.4, 2.6, "#F4B0A0", None) + C(18.6, 15.4, 2.6, "#F4B0A0", None)
+            + P("M24.6 15.6q2.4-.6 3.6.8-1.2 1.6-3.2 1.2M25.4 18.6q2.6 0 4 1.6", "none", "#9AA8B8", 1.2))
+    plate = (E(16, 28.4, 13.6, 3.2, WHITE, INK, 1.4) + E(16, 27.9, 8.6, 1.7, "#EFE6D2", "#B9AD94", .7)
+             + C(12, 27.8, .7, "#C99A62", None) + C(18.6, 27.4, .6, "#C99A62", None)
+             + thick("M21.6 26.6L29.6 23.8", "#B9B4A8", .9, .7) + E(20.4, 27, 1.8, 1.1, "#B9B4A8", INK, .8))
+    s4 = face + plate
+    face5 = (emoji(16, 12.6, 10.6)
+             + P("M10.6 11.4q1.6-1.8 3.2 0M18.2 11.4q1.6-1.8 3.2 0", "none", INK, 1.4)
+             + P("M12.4 16.4q3.6 2.6 7.2 0", "none", INK, 1.4)
+             + C(9.4, 15.2, 2, "#F4B0A0", None) + C(22.6, 15.2, 2, "#F4B0A0", None))
+    return {"@4": ("0 0 32 32", s4, "Gelbes Emoji-Gesicht mit geschlossenen Augen und runden Pausbacken, das ausatmet (😮‍💨, genug gegessen), darunter ein leerer Teller mit Krümeln und abgelegtem Löffel"),
+            "@5": ("0 0 32 32", face5 + plate, "Gelbes zufriedenes Gesicht mit geschlossenen Augen und Pausbacken, darunter ein leerer Teller mit Krümeln und abgelegtem Löffel")}
+
+
+@runde2("FIG-ZEICHEN-KIND")
+def kind2():
+    """Kind als Hauptmotiv: Kinderproportionen (grosser Kopf, kurzer Körper) neben den Beinen eines Erwachsenen (Grössenmass,
+    angeschnitten); Fassung 5: zwei Kinder."""
+    def child(cx, foot, body, hair, pig=False, s=1.0):
+        hr = 5.6 * s
+        hy = foot - 15.6 * s
+        g = (P(f"M{cx - 2.4 * s} {foot - 9 * s}Q{cx - 5.4 * s} {foot - 8.6 * s} {cx - 5.8 * s} {foot - 1.6 * s}H{cx + 5.8 * s}Q{cx + 5.4 * s} {foot - 8.6 * s} {cx + 2.4 * s} {foot - 9 * s}Z", body, INK, 1.2)
+             + P(f"M{cx - 2.2 * s} {foot - 1.8 * s}v{1.6 * s}M{cx + 2.2 * s} {foot - 1.8 * s}v{1.6 * s}", "none", INK, 2 * s))
+        if pig:
+            g += C(cx - hr - .6 * s, hy + .6 * s, 1.6 * s, hair, INK, .8) + C(cx + hr + .6 * s, hy + .6 * s, 1.6 * s, hair, INK, .8)
+        g += (C(cx, hy, hr, SKIN, INK, 1.2)
+              + P(f"M{cx - hr:.2f} {hy - .4 * s:.2f}q0-{hr:.2f} {hr:.2f}-{hr:.2f}t{hr:.2f} {hr:.2f}q-{hr * .7:.2f}-{hr * .9:.2f}-{hr:.2f}-{hr * .3:.2f}q-{hr * .3:.2f} {hr * .6:.2f}-{hr:.2f} {hr * .3:.2f}z", hair, INK, .8)
+              + C(cx - 2.1 * s, hy + .8 * s, .75 * s, INK, None) + C(cx + 2.1 * s, hy + .8 * s, .75 * s, INK, None)
+              + C(cx - 3.4 * s, hy + 2.6 * s, 1 * s, "#F09A8A", None) + C(cx + 3.4 * s, hy + 2.6 * s, 1 * s, "#F09A8A", None)
+              + P(f"M{cx - 1.6 * s} {hy + 2.8 * s}q{1.6 * s} {1.8 * s} {3.2 * s} 0", "none", INK, .8))
+        return g
+    legs = (P("M2 4.4H11.6L12.2 30.4H8.4L7 12.6 5.8 30.4H2Z", "#6E8EAE", INK, 1.2)
+            + P("M1.6 31.4h4.6v-1.4H1.6zM7.8 31.4h4.8v-1.4H7.8z", "#5A3A22", INK, .8))
+    s4 = legs + child(21, 31.4, GOLD, "#5A3A22", False, 1.08)
+    s5 = child(9.6, 31.4, GOLD, "#5A3A22", False, .98) + child(22.6, 31.4, "#D9534F", "#3A2A1E", True, .98)
+    return {"@4": ("0 0 32 32", s4, "Kleines Kind mit grossem Kopf und rosigen Wangen steht neben den Beinen eines Erwachsenen (angeschnitten); das Kind reicht bis zur Hüfte"),
+            "@5": ("0 0 32 32", s5, "Zwei kleine Kinder mit grossen Köpfen nebeneinander, ein Junge und ein Mädchen mit Zöpfen")}
+
+
+@runde2("FIG-ZEICHEN-BITTER")
+def bitter2():
+    """Saures/bitteres Gesicht (zugekniffen, zusammengezogener Mund, Schüttellinien) neben einem freistehenden Becher mit
+    Bitterkraut – ohne Zunge, damit es nicht «eklig» heisst."""
+    face = (emoji(12.4, 14.4, 10.6)
+            + P("M6.2 10.6l3.6 1.6-3.6 1.6M18.6 10.6l-3.6 1.6 3.6 1.6", "none", INK, 1.4)
+            + P("M5.6 8q2-1.6 4-1M19.2 8q-2-1.6-4-1", "none", INK, 1.2)
+            + P("M9.4 20.6q1.4-2 3-.6 1.6-1.4 3 .6-1.4 1.6-3 .4-1.6 1.2-3-.4z", "#B84A54", INK, 1)
+            + P("M.8 9.4q-1 2.6 0 5M.8 16q-1 2.4 0 4.6", "none", INK, .9))
+    cup = (P("M22.8 18.4h8.4l-1.2 10.6q-.2 1.4-1.6 1.4h-2.8q-1.4 0-1.6-1.4z", STONE, INK, 1.2)
+           + P("M23 20.2h8l.2-1.8h-8.4z", "#4E6A2E", INK, .6)
+           + P("M26 18.6Q25.4 13.6 27.6 11.4M25.8 15.4q-2.6-.6-3.2-2.8 2.6-.2 3.2 2.8zM26.6 13.2q.6-2.6 3.2-3-.2 2.6-3.2 3zM26.4 17q2.4-1.2 4 0-1.8 1.8-4 0z", LEAF, INK, .7))
+    s4 = face + cup
+    face5 = face.replace(P("M9.4 20.6q1.4-2 3-.6 1.6-1.4 3 .6-1.4 1.6-3 .4-1.6 1.2-3-.4z", "#B84A54", INK, 1),
+                         P("M8.4 20.4Q10 18.8 11.4 20.4T14.4 20.4 16.6 20", "none", INK, 1.4))
+    return {"@4": ("0 0 32 32", s4, "Gelbes Gesicht mit zugekniffenen Augen und sauer zusammengezogenem Mund, Schüttellinien; daneben ein Becher mit dunkelgrünem Trank und Bitterkraut"),
+            "@5": ("0 0 32 32", face5 + cup, "Gelbes Gesicht mit zugekniffenen Augen und welligem Mund, Schüttellinien; daneben ein Becher mit Bitterkraut")}
+
+
+@runde2("FIG-ZEICHEN-GERECHT")
+def gerecht2():
+    """Ein Mensch (gerecht = Eigenschaft eines Menschen): aufrechte Figur, auf der Brust die Waage im Gleichgewicht, grünes Häkchen."""
+    fig = person(16, 31.6, 1.36, "#F4ECD8", "#3A2A1E")
+    emb = ('<g transform="translate(16 20.2) scale(.34) translate(-16 -6)">' + scale_drawing(16, 0, 9.6, pw=5.2) + "</g>")
+    check = C(27, 7, 4.2, GREEN, INK, 1.2) + P("M24.8 7l1.6 1.7 3-3.4", "none", WHITE, 1.6)
+    return {"@4": ("0 0 32 32", fig + emb + check, "Aufrecht stehender Mensch, auf seiner Brust eine Waage im Gleichgewicht; oben rechts ein grünes Häkchen im Kreis")}
+
+
+@runde2("FIG-ZEICHEN-HOCHZEIT")
+def hochzeit2():
+    def bride(cx, foot, s):
+        hr = 5.2 * s
+        hy = foot - 17.6 * s
+        veil = P(f"M{cx - hr - .8 * s} {hy - 1 * s}Q{cx} {hy - hr * 1.9} {cx + hr + .8 * s} {hy - 1 * s}L{cx + hr * 1.7} {foot - 4 * s}H{cx - hr * 1.7}Z", "#F4F4F8", INK, 1)
+        body = P(f"M{cx - 3 * s} {foot - 12 * s}L{cx - 8 * s} {foot}H{cx + 8 * s}L{cx + 3 * s} {foot - 12 * s}Z", WHITE, INK, 1.2)
+        face = (C(cx, hy, hr, SKIN, INK, 1.2) + P(f"M{cx - hr} {hy - .2 * s}q0-{hr} {hr}-{hr}t{hr} {hr}q-{hr}-{hr / 2}-{2 * hr} 0z", "#7A4A22", INK, .8)
+                + P(f"M{cx - 2.9 * s} {hy + .5 * s}q.9-1.1 1.8 0M{cx + 1.1 * s} {hy + .5 * s}q.9-1.1 1.8 0", "none", INK, .7)
+                + P(f"M{cx - 1.6 * s} {hy + 2.3 * s}q1.6 1.8 3.2 0", "none", INK, .7)
+                + C(cx - 2.6 * s, hy - hr * .9, 1 * s, "#E86A8A", INK, .5) + C(cx + 2.6 * s, hy - hr * .9, 1 * s, "#E86A8A", INK, .5) + C(cx, hy - hr * 1.05, 1 * s, "#F2C04A", INK, .5))
+        return veil + body + face
+    arch = (P("M3 31.6V14Q3 2 16 2T29 14V31.6", "none", INK, 3.4) + P("M3 31.6V14Q3 2 16 2T29 14V31.6", "none", "#7DB04A", 2)
+            + "".join(C(x, y, 1.4, "#E86A8A", INK, .5) for x, y in ((3.4, 22), (3.6, 12.6), (7.4, 5.4), (16, 2), (24.6, 5.4), (28.4, 12.6), (28.6, 22))))
+    groom = person(11.4, 31.6, .9, "#3E4E6E", "#3A2A1E", "happy")
+    s4 = arch + groom + bride(21, 31.6, .9) + P("M16 23.2q-1.6-1.6-.2-2.6 1-.6 1.6.4.6-1 1.6-.4 1.4 1-.2 2.6l-1.4 1.2z", "#E8434A", INK, .5)
+    # @5 anstossende Becher unter Blumengirlande
+    def goblet(rot, cx):
+        g = (P("M-5 -9h10q0 7-5 8-5-1-5-8z", "#F2D78A", INK, 1.2) + P("M-4.6 -6.4h9.2q-.6 4.6-4.6 5.2-4-.6-4.6-5.2z", "#9A2A4A", None)
+             + P("M0 -1v7M-3.6 6.4h7.2", "none", INK, 1.8))
+        return f'<g transform="translate({cx} 23) rotate({rot})">{g}</g>'
+    gar = (P("M1 3Q16 12 31 3", "none", "#5B8A2E", 1.6) + "".join(C(x, y, 1.6, c, INK, .5) for x, y, c in
+           ((5, 5.4, "#E86A8A"), (10.4, 7.6, "#F2C04A"), (16, 8.2, "#E86A8A"), (21.6, 7.6, "#F2C04A"), (27, 5.4, "#E86A8A"))))
+    s5 = gar + goblet(16, 10.6) + goblet(-16, 21.4) + sparkle(16, 13.4, 2.4)
+    return {"@4": ("0 0 32 32", s4, "Brautpaar unter einem grünen Blumenbogen: Bräutigam im dunklen Gewand, Braut in Weiss mit Schleier und Blumenkranz, ein rotes Herz zwischen ihnen"),
+            "@5": ("0 0 32 32", s5, "Zwei Becher mit Rotwein stossen an, darüber eine Blumengirlande")}
+
+
+@runde2("FIG-ZEICHEN-MAMMON")
+def mammon2():
+    ped = P("M15.6 31.6V22.6H31.4V31.6Z", STONE, INK, 1.3) + P("M14.4 22.6h18.2", "none", INK, 1.6) + P("M17.6 25.4h12", "none", "#A89E88", .8)
+    bag = (P("M20 11.6Q16.4 15.2 16.8 18.6 17.4 22.4 23.6 22.4 29.8 22.4 30.4 18.6 30.8 15.2 27.2 11.6Z", "#C9A15A", INK, 1.3)
+           + P("M19.8 11.6Q23.6 12.8 27.4 11.6L26 9.6H21.2Z", "#A6803A", INK, 1)
+           + C(23.6, 17.4, 2.8, GOLD, INK, 1) + C(23.6, 17.4, 1.6, "none", "#B8891A", .7)
+           + P("M18 9.6L18.6 2.4 21.2 5.6 23.6 1.4 26 5.6 28.6 2.4 29.2 9.6Z", GOLD, INK, 1.1) + C(23.6, 7.4, .9, RED, None))
+    s4 = ped + bag + kneel(1.2, 31.6, "#6E8EAE", "#3A2A1E", True)
+    s5 = ped + bag + '<g transform="translate(14.6 0) scale(-1 1)">' + kneel(1.2, 31.6, "#6E8EAE", "#3A2A1E", True) + "</g>"
+    return {"@4": ("0 0 32 32", s4, "Geldsack mit Goldmünze und grosser goldener Krone auf einem Steinsockel; davor kniet ein Mensch und verneigt sich tief zum Geldsack hin")}
+
+
+@runde2("FIG-ZEICHEN-NICHT-RICHTEN")
+def nicht_richten2():
+    block = P("M6.6 25h17v3.4h-17z", "#8A5A30", INK, 1.2)
+    # Hammerstiel quer zum Verbotsbalken (Balken von links unten nach rechts oben)
+    s4 = block + gavel(6.2, 5.6, 1.05, 52) + P("M7.4 20.6l-2.4-1.4M8.6 17.6l-1.6-2.4M11 23.4l-3-.4", "none", INK, 1.1) + verbot(16, 16, 14.2, 2.6)
+    fig = person(16, 29.4, .82, "#B0704A", "#3A2A1E")
+    s5 = fig + gavel(5.4, 4.6, .8, 40) + verbot(16, 16, 14.6, 2.6)
+    return {"@4": ("0 0 32 32", s4, "Richterhammer schlägt auf einen Holzblock (Stiel von rechts oben), darüber roter Verbotskreis mit Schrägstrich"),
+            "@5": ("0 0 32 32", s5, "Ein Richterhammer über einem Menschen, darüber roter Verbotskreis mit Schrägstrich")}
+
+
+@runde2("FIG-ZEICHEN-RANG")
+def rang2():
+    """Mk 10,37; 12,39: Sitzplätze nach Rang – drei Stühle, der mittlere golden, erhöht auf einer Stufe; Fassung 5: Podest mit
+    Menschen auf allen Stufen, der oberste grösser."""
+    def chair(x, base, h, col, back=10):
+        return (P(f"M{x} {base}V{base - h}M{x + 6} {base}V{base - h * .55}", "none", INK, 1.4)
+                + P(f"M{x - .6} {base - h * .55}h7.2v1.6h-7.2z", col, INK, 1.1)
+                + P(f"M{x} {base - h * .55}V{base - h * .55 - back}Q{x + 3} {base - h * .55 - back - 2.4} {x + 6} {base - h * .55 - back}V{base - h * .55}", col, INK, 1.2))
+    step = P("M10 31.6V26.4H22V31.6Z", "#B5553A", INK, 1.3)
+    s4 = (step + chair(1.6, 31.6, 9, STONE, 7) + chair(24.4, 31.6, 9, STONE, 7)
+          + chair(13, 26.4, 10, GOLD, 12) + P("M13.4 4.4l1.2-2.6 1.4 1.6 1-2.2 1 2.2 1.4-1.6 1.2 2.6z", GOLD, INK, .7))
+    pod = (P("M1 31.6V24.4H10.6V31.6ZM21.4 31.6V26.6H31V31.6Z", "#C9BFAA", INK, 1.3) + P("M10.6 31.6V19H21.4V31.6Z", GOLD, INK, 1.4))
+    s5 = pod + person(16, 19, .74, "#B5553A", "#3A2A1E", "happy") + person(5.8, 24.4, .52, "#6E8EAE", "#5A3A22") + person(26.2, 26.6, .5, "#7E8E5A", "#3A2A1E")
+    return {"@4": ("0 0 32 32", s4, "Drei Stühle: zwei einfache graue links und rechts, in der Mitte erhöht auf einer Stufe ein hoher goldener Ehrenstuhl mit kleiner Krone"),
+            "@5": ("0 0 32 32", s5, "Treppchen mit drei Stufen, auf jeder steht ein Mensch, auf der höchsten goldenen Stufe der grösste")}
+
+
+@runde2("FIG-ZEICHEN-SABBAT")
+def sabbat2():
+    """Sabbat = Ruhetag: die zwei Sabbatkerzen; Fassung 4 mit ruhendem Menschen (liegend, Zzz) neben den Kerzen;
+    Fassung 5: Kalenderblatt mit grosser «7» und zwei Kerzen."""
+    def candles(x0, y0, s=1.0):
+        g = ""
+        for dx in (0, 6.4):
+            x = x0 + dx * s
+            g += (P(f"M{x - 1.4 * s} {y0}h{2.8 * s}v{9 * s}h-{2.8 * s}z", WHITE, INK, .9)
+                  + P(f"M{x} {y0 - 5.4 * s}q-{1.8 * s} {2.4 * s}-{1.6 * s} {3.8 * s} .2 {1.4 * s} {1.6 * s} {1.4 * s}t{1.6 * s}-{1.4 * s}q.2-{1.4 * s}-{1.6 * s}-{3.8 * s}z", "#F08A2A", "#B8501A", .6)
+                  + P(f"M{x - 3.2 * s} {y0 + 9 * s}h{6.4 * s}l-{1.4 * s} {2.4 * s}h-{3.6 * s}z", GOLD, INK, .9))
+        return g
+    rest = (P("M1 31.4h18", "none", INK, 1.4) + P("M2 30.6V27.6Q2 25.6 4 25.6H17.6Q19 25.6 19 27.2V30.6Z", "#6E8EAE", INK, 1.2)
+            + C(5.4, 23.2, 3, SKIN, INK, 1.1) + P("M2.4 23q0-3 3-3t3 3q-3-1.4-6 0z", "#3A2A1E", INK, .6)
+            + P("M4 23.6q.7.6 1.4 0M6 23.6q.7.6 1.4 0", "none", INK, .6)
+            + f'<text x="10.4" y="21" font-family="sans-serif" font-size="5" font-weight="bold" fill="#5E7FA8">z</text>'
+            + f'<text x="13.4" y="17" font-family="sans-serif" font-size="6.4" font-weight="bold" fill="#5E7FA8">Z</text>')
+    s4 = rest + candles(23, 13.6, 1.0)
+    cal = (P("M1 6.4h20v25H1z", WHITE, INK, 1.4) + P("M1 6.4h20v5H1z", "#B5553A", INK, 1.4)
+           + f'<text x="11" y="28.6" font-family="Georgia,serif" font-size="16" font-weight="bold" text-anchor="middle" fill="{INK}">7</text>')
+    s5 = cal + candles(24.6, 15.6, .95)
+    return {"@4": ("0 0 32 32", s4, "Ein Mensch liegt ausgestreckt und schläft (Zz), daneben zwei brennende Kerzen in goldenen Leuchtern"),
+            "@5": ("0 0 32 32", s5, "Kalenderblatt mit grosser «7», daneben zwei brennende Kerzen in goldenen Leuchtern")}
+
+
+@runde2("FIG-ZEICHEN-STAMMBAUM")
+def stammbaum2():
+    """Stammbaum als Ahnentafel: drei Köpfe senkrecht, verbunden durch einen Stamm, Blätter am Stamm (Baum); Fassung 5:
+    Baum, dessen drei Äste in Köpfen enden (ohne Medaillons)."""
+    def head(cx, cy, r, hair, beard=None):
+        g = C(cx, cy, r, SKIN, INK, 1.1)
+        g += P(f"M{cx - r:.2f} {cy - .1:.2f}q0-{r:.2f} {r:.2f}-{r:.2f}t{r:.2f} {r:.2f}q-{r:.2f}-{r / 2:.2f}-{2 * r:.2f} 0z", hair, INK, .7)
+        if beard:
+            g += P(f"M{cx - r * .85:.2f} {cy + .4:.2f}Q{cx:.2f} {cy + r * 1.9:.2f} {cx + r * .85:.2f} {cy + .4:.2f}Q{cx:.2f} {cy + r * .8:.2f} {cx - r * .85:.2f} {cy + .4:.2f}Z", beard, INK, .6)
+        g += C(cx - r * .38, cy + .1, .5, INK, None) + C(cx + r * .38, cy + .1, .5, INK, None)
+        return g
+    trunk = thick("M16 30.6V4", "#8A5E36", 3.2, 1.1) + P("M11 31.4h10", "none", INK, 1.6)
+    leaves = "".join(f'<ellipse cx="{x}" cy="{y}" rx="2.4" ry="1.1" transform="rotate({a} {x} {y})" fill="{LEAF}" stroke="{INK}" stroke-width=".55"/>'
+                     for x, y, a in ((20.2, 11.6, -25), (11.8, 11.6, 25), (20.2, 22.4, -25), (11.8, 22.4, 25)))
+    s4 = trunk + leaves + head(16, 5.2, 3.8, "#8A8A8A", "#E6E2DA") + head(16, 17, 3.8, "#5A3A22", "#5A3A22") + head(16, 27.4, 3.4, "#3A2A1E")
+    br = (thick("M16 31Q16.6 24 16 19 15.4 14 9 10.8M16.2 21Q18 15.6 23.6 12.4M16 16Q16.4 10 16 6.4", "#8A5E36", 2.8, 1.1) + P("M10.4 31.4h11.6", "none", INK, 1.6)
+          + "".join(f'<ellipse cx="{x}" cy="{y}" rx="2.2" ry="1" transform="rotate({a} {x} {y})" fill="{LEAF}" stroke="{INK}" stroke-width=".5"/>'
+                    for x, y, a in ((12.2, 16.4, 30), (20.4, 19.4, -30), (18.6, 11, -40))))
+    s5 = br + head(16, 5.6, 4.2, "#8A8A8A", "#E6E2DA") + head(7.6, 11.4, 4, "#5A3A22", "#5A3A22") + head(25, 12, 3.8, "#3A2A1E")
+    return {"@4": ("0 0 32 32", s4, "Ein senkrechter brauner Stamm mit Blättern verbindet drei Köpfe übereinander: oben alter Mann mit weissem Bart, Mitte Mann mit braunem Bart, unten junger Mann"),
+            "@5": ("0 0 32 32", s5, "Kleiner Baum, dessen drei Äste in drei Köpfen enden: alter Mann mit weissem Bart, Mann mit Bart, junger Mann")}
+
+
+@runde2("FIG-ZEICHEN-TOERICHT")
+def toericht2():
+    """🤦 (sich an den Kopf fassen über eine Dummheit): Gesicht, die Hand aus der Handbibliothek (gebend, gedreht) über den Augen;
+    Fassung 5: Eselsmütze? nein – Haus auf Sand stürzt, ruhiger gezeichnet."""
+    face = (emoji(15, 17, 12)
+            + P("M9.6 25.4q5.4-3.4 10.8 0", "none", INK, 1.5)
+            + P("M5 9.4q2-2.6 4.8-2.6", "none", INK, 1.3))
+    hand = f'<g transform="translate(5.4 5.2) rotate(6) scale(.82)">{H.hand_gebend()}</g>'
+    s4 = face + hand
+    house = ('<g transform="rotate(18 21 26)">'
+             + P("M9 26V13.4H25V26Z", "#E9DDBF", INK, 1.4) + P("M7.4 13.6L17 5.6 26.6 13.6Z", "#B5553A", INK, 1.3)
+             + P("M15 26v-6h4v6z", "#8A6A3A", INK, 1) + P("M12.4 14.6l1.8 3.6-1.6 2.4 1.4 3.2", "none", INK, 1.1) + "</g>")
+    sand = P("M0 32V28.4Q8 25.6 16 27.2T32 26.4V32Z", "#EBCB8A", INK, 1.2) + P("M1 31.6Q4 29.8 8 31", "none", "#3B6E9E", 1.4)
+    s5 = sand + house
+    return {"@4": ("0 0 32 32", s4, "Gelbes Emoji-Gesicht mit verzogenem Mund schlägt sich die Hand vor die Augen (🤦, «wie dumm»)"),
+            "@5": ("0 0 32 32", s5, "Ein Haus auf Sand kippt schräg und reisst ein")}
+
+
+@runde2("FIG-ZEICHEN-VERBORGEN")
+def verborgen2():
+    """Mt 6,6: allein in der Kammer bei geschlossener Tür beten – Schnitt durch ein kleines Haus, innen kniet ein Mensch, die Tür
+    ist zu (Riegel); kein Auge (las sich als «Überwachung»)."""
+    house = (P("M2.6 31.4V13.6L16 3.4 29.4 13.6V31.4Z", "#F4ECD8", INK, 1.6)
+             + P("M1 14.6L16 3 31 14.6", "none", "#B5553A", 2.6)
+             + P("M21.6 31.4V18.6H27.4V31.4Z", "#9A6A3A", INK, 1.2) + P("M20.6 23.6h7.8", "none", INK, 1.8)
+             + P("M1.6 31.6h28.8", "none", INK, 1.6))
+    s4 = house + kneel(5.4, 31.4, "#6E8EAE", "#3A2A1E")
+    house5 = house.replace(P("M2.6 31.4V13.6L16 3.4 29.4 13.6V31.4Z", "#F4ECD8", INK, 1.6), P("M2.6 31.4V13.6L16 3.4 29.4 13.6V31.4Z", "#C9BFAA", INK, 1.6))
+    s5 = house5 + kneel(5.4, 31.4, "#6E8EAE", "#3A2A1E") + P("M8.6 6.6l-1.6-1.6M11 4.4l-.8-2M6.6 9.4l-2-.8", "none", GOLD, 0)
+    return {"@4": ("0 0 32 32", s4, "Schnitt durch ein kleines Haus: innen kniet ein Mensch allein im Gebet, rechts die geschlossene, verriegelte Tür")}
+
+
+@runde2("FIG-ZEICHEN-VERGEBUNG")
+def vergebung2():
+    """Kol 2,14: der Schuldschein ist ans Kreuz genagelt (getilgt) – nicht der zerrissene Schuldschein («vergeben»);
+    Fassung 5: Herz, dessen dunkler Fleck abgewaschen wird."""
+    cross = P("M13.6 1h4.8v8.6h8.6v4.8h-8.6V31.6h-4.8V14.4H5V9.6h8.6z", "#B07E44", INK, 1.4)
+    note = (P("M10 12.6h12v13H10z", "#F4F1EA", INK, 1.2) + P("M12.4 16.6h7.2M12.4 19.4h7.2M12.4 22.2h4.6", "none", "#5B4630", .9)
+            + C(16, 14.4, 1, "#8A8A8A", INK, .6)
+            + P("M11.4 25.4L21 15", "none", "#4E8A3A", 0))
+    glow = C(16, 13, 13.6, "#FBEFC0", None)
+    s4 = glow + cross + note + sparkle(26, 22, 2.6) + sparkle(6, 21, 1.8)
+    heart = P("M16 30Q2 20.6 2.6 11.2 3.4 4.4 9.4 4.2 13.6 4.2 16 8.4 18.4 4.2 22.6 4.2 28.6 4.4 29.4 11.2 30 20.6 16 30Z", "#F4F1EA", INK, 1.5)
+    half = P("M16 8.4Q13.6 4.2 9.4 4.2 3.4 4.4 2.6 11.2 2 20.6 16 30Z", "#5A2E3A", None)
+    s5 = heart + half + P("M16 8.4V30", "none", INK, 0) + C(16, 17, 0, "none", None) + heart.replace('fill="#F4F1EA"', 'fill="none"') + \
+        tear(10, 1.4, .8) + tear(5, 3.6, .7) + sparkle(22, 14.6, 3.2)
+    return {"@4": ("0 0 32 32", s4, "Holzkreuz vor hellem Licht, daran ein Schuldschein angenagelt; goldenes Funkeln"),
+            "@5": ("0 0 32 32", s5, "Herz: linke Hälfte dunkel befleckt, Wassertropfen fallen darauf, rechte Hälfte weiss und glänzend")}
+
+
+@runde2("FIG-ZEICHEN-VOLLMACHT")
+def vollmacht2():
+    """Vollmacht = Befugnis: gesiegelte Urkunde mit Krone im Siegel; Fassung 5: thronende Figur mit Krone und Zepter."""
+    doc = (P("M3 3h18v24H3z", "#F4F1EA", INK, 1.3) + P("M6 8h12M6 11.4h12M6 14.8h12M6 18.2h7", "none", "#5B4630", 1.1))
+    seal = (P("M19 27.6l-2 4.2 3.4-1.6 2.4 2.6.4-4.4", "#C8323C", "#7A1E22", .7) + P("M23.6 27.6l2 4.2-3.4-1.6", "#C8323C", "#7A1E22", .7)
+            + C(21.6, 23, 6.4, "#C8323C", "#7A1E22", 1) + C(21.6, 23, 4.6, "none", "#E07A7A", .7)
+            + P("M18.4 25.2l.8-4 1.4 1.6 1-2.4 1 2.4 1.4-1.6.8 4z", GOLD, "#7A1E22", .6))
+    s4 = doc + seal
+    throne = (P("M5 31.6V8.4Q5 5 8 5H24Q27 5 27 8.4V31.6", GOLD, INK, 1.4) + P("M3 31.6h26", "none", INK, 1.6))
+    king = person(16, 30.6, 1.02, "#8E3A4A", "#3A2A1E") + P("M11.6 7.2l1-3 1.6 1.8 1.8-2.6 1.8 2.6 1.6-1.8 1 3z", GOLD, INK, .8)
+    sc = thick("M25.6 30.6L25.6 13", GOLD, 1.8, 1) + C(25.6, 11.4, 2.4, GOLD, INK, 1.1) + C(25.6, 11.4, 1, RED, None)
+    s5 = throne + king + sc
+    return {"@4": ("0 0 32 32", s4, "Beschriebene Urkunde mit grossem rotem Wachssiegel, im Siegel eine goldene Krone, Siegelbänder"),
+            "@5": ("0 0 32 32", s5, "Gekrönte Figur auf goldenem Thron, neben ihr ein aufgestelltes goldenes Zepter")}
+
+
+@runde2("FIG-ZEICHEN-LOESERECHT")
+def loeserecht2():
+    """Rut 4,7: zwei Männer am Tor, der eine reicht dem anderen seine Sandale (Zeichen der Übergabe des Löserechts); dahinter der
+    Acker mit Haus. Die Arme reichen bis zur Sandale, die Sandale verdeckt die Hände."""
+    def sandal_top(x, y, s=1.0, rot=0):
+        """Sandale von oben: Sohle in Fussform, zwei Riemen."""
+        g = (P("M.4 -8.6Q4.6 -8.6 4.6 -3.4 4.6 1 3.4 4.6 2.6 8.8 0 8.8-2.6 8.8-3.2 4.6-4 1-3.8-3.4-3.8-8.6.4-8.6Z", "#C99A62", INK, 1.2)
+             + P("M.2 -8.6Q2.6 -8.4 3.4 -6.4 1.6 -6 .2 -6.6Z", "#B07E44", None)
+             + P("M-3.6 -.4L.2 -5.4 3.8 -.4", "none", INK, 2.4) + P("M-3.6 -.4L.2 -5.4 3.8 -.4", "none", "#6E4A26", 1.2)
+             + C(.2, -5.4, .9, "#6E4A26", INK, .5))
+        return f'<g transform="translate({x} {y}) rotate({rot}) scale({s})">{g}</g>'
+    field = (P("M0 31.6V25Q16 21.6 34 25V31.6Z", "#B07E44", INK, 1.2)
+             + P("M3 31.4L5 25.6M9.6 31.4L10.6 24.6M16.4 31.4L16.6 24M23.2 31.4L22.6 24.2M30 31.4L28.6 24.8", "none", "#7A5430", .9))
+    m1 = person(6.6, 27.6, .78, "#6E8EAE", "#3A2A1E", beard="#3A2A1E")
+    m2 = person(27.4, 27.6, .78, "#7E5A8E", "#5A3A22", beard="#5A3A22")
+    arms = thick("M10.6 19.4Q13.4 18.6 14.6 16.4", "#6E8EAE", 2, 1) + thick("M23.4 19.4Q20.6 18.6 19.4 16.4", "#7E5A8E", 2, 1)
+    s4 = field + m1 + m2 + arms + sandal_top(17, 13.6, 1.0, 0)
+    house = P("M26 23.4V18.6L29.4 15.6 32.8 18.6V23.4Z", "#E9DDBF", INK, 1) + P("M25.4 19l4-3.6 4 3.6", "none", "#B5553A", 1.4)
+    s5 = (P("M0 31.6V22Q17 18.6 34 22V31.6Z", "#B07E44", INK, 1.2)
+          + P("M3 31.4L5 22.6M9.6 31.4L10.6 21.6M16.4 31.4L16.6 21M23.2 31.4L22.6 21.2M30 31.4L28.6 21.8", "none", "#7A5430", .9)
+          + house + f'<g transform="translate(14.4 -1.2) scale(.6)">{H.hand_gebend("#7E5A8E")}</g>' + sandal_top(15.4, 14.4, .95, -25))
+    return {"@4": ("0 0 34 32", s4, "Zwei bärtige Männer stehen einander gegenüber auf einem gepflügten Acker; zwischen ihnen wird eine Sandale (von oben gesehen: Sohle mit zwei Riemen) übergeben"),
+            "@5": ("0 0 34 32", s5, "Eine Hand von oben lässt eine Sandale (Sohle mit Riemen) auf einen gepflügten Acker mit kleinem Haus fallen")}
+
+
 # ---------------------------------------------------------------- Wahl nach Gestaltungskritik und Blindtest
 WAHL = {}  # {"FIG-ZEICHEN-…": "@1"} – nach den Tests eingetragen
 
@@ -664,7 +1063,10 @@ def alle(ids=None):
             continue
         lx = json.loads((LEX / f"{fid}.json").read_text(encoding="utf-8"))
         bed = lx["names"]["de"] + " – " + lx.get("identity_de", "").replace("Bedeutung: ", "")[:200]
-        for v, (vb, svg, gez) in fn().items():
+        var = dict(fn())
+        if fid in Z2:
+            var.update(Z2[fid]())
+        for v, (vb, svg, gez) in var.items():
             res[fid + v] = {"vb": vb, "svg": svg, "bedeutung": bed, "gezeichnet": gez}
     return res
 

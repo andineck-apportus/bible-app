@@ -87,13 +87,20 @@ def _finger(x0, y0, x1, y1, w=2.4, cx=None, cy=None):
     return [("s", d, w)]
 
 
-def hand_offen(sleeve=SLEEVE, cuff_on=True, lang=0, spreiz=1.0):
+def hand_offen(sleeve=SLEEVE, cuff_on=True, lang=0, spreiz=1.0, geschlossen=False):
     """Offene Hand, Handfläche zum Betrachter, Finger nach oben (wie ✋); Daumen links. Handgelenk (0,0), Finger bis y≈-23.
-    spreiz: Fächerung der Finger (1 normal, 1.5 gespreizt wie 🙌/👋)."""
+    spreiz: Fächerung der Finger (1 normal, 1.5 gespreizt wie 🙌/👋); geschlossen: Finger parallel aneinander, Daumen
+    angelegt (Schwurhand)."""
+    if geschlossen:
+        palm = [("f", "M-5.6 0L-6-8.6Q-6.1-12.2-3-12.4L3.2-12.4Q6.1-12.2 5.9-9L5.4 0Z")]
+        fing = [_finger(x0, -10.5, x0, tip, 2.75) for x0, tip in ((-4.3, -21.2), (-1.4, -22.9), (1.5, -22.1), (4.3, -19.2))]
+        thumb = [("s", "M-4.4-3.2Q-7-5.4-7.4-9.6", 2.8)]
+        s = schichten(*[(f, O_INNEN) for f in fing], (thumb, 0), (palm, 0))
+        return (manschette(13, 4.8, 0, sleeve, lang) if cuff_on else "") + s
     palm = [("f", "M-5.8 0L-6.4-8.6Q-6.5-12.2-3.2-12.4L3.4-12.4Q6.5-12.2 6.3-9L5.6 0Z")]
     fing = [_finger(x0, -10.5, x0 + dx * spreiz, tip, 2.6) for x0, tip, dx in
             ((-4.7, -21.2, -1.1), (-1.55, -22.9, -.35), (1.6, -22.1, .45), (4.6, -19.0, 1.2))]
-    thumb = [("s", f"M-4.2-3.4Q-7.6-5-{_f(9.7 + .6 * (spreiz - 1))} {_f(-10.2 - .8 * (spreiz - 1))}", 3.0)]
+    thumb = [("s", f"M-4.2-3.4Q-7.6-5-{_f(9.7 + .6 * (spreiz - 1))} {_f(-10.2 - .8 * (spreiz - 1))}", 2.75)]
     s = schichten(*[(f, O_INNEN) for f in fing], (thumb, 0), (palm, 0))
     s += line("M-3.4-3.6Q-1.8-7.2-3.6-9.8", .55)  # Daumenballen (fein, nur gross sichtbar)
     return (manschette(13.6, 4.8, 0, sleeve, lang) if cuff_on else "") + s
@@ -127,7 +134,7 @@ def hand_daumen(sleeve=SLEEVE, cuff_on=True):
     (Fingerknöchel), Daumen oben bis y≈-13. Für 👎 um 180° drehen."""
     palm = ("f", "M0-5Q3-6 6-5.6L11.2-4.6L11.6 6.4Q6 8 0 6.6Z")
     curled = [("s", f"M5.2 {_f(y)}H{_f(x1)}", 2.5) for y, x1 in ((-3.1, 12.2), (-.4, 12.8), (2.3, 12.5), (5.0, 11.4))]
-    thumb = ("s", "M3.4-4.4Q4-9 3.6-12.6", 3.1)
+    thumb = ("s", "M3.4-4.4Q4-8 3.8-10.6", 3.3)
     s = sil([palm, thumb], curled)
     return (cuff("M.6-6.2H-4.6V7.2H.6Z", sleeve) if cuff_on else "") + s
 
@@ -145,16 +152,16 @@ def hand_empfangend(sleeve=SLEEVE, cuff_on=True):
 
 
 def hand_gebend(sleeve=SLEEVE, cuff_on=True):
-    """Hand von oben, Handrücken oben, Finger nach rechts unten geöffnet (wie 🫳, lässt etwas fallen oder legt etwas hin):
-    Handgelenk (0,0) links, Finger nach rechts; Fingerspitzen bei etwa (18.4, 3.6), Daumen darunter bei (8.6, 7)."""
-    palm = [("f", "M0-3.2Q5-3.8 9.4-2.8L9.8 2.6Q5 3.6 0 2.8Z")]
-    f1 = [("s", "M8.4-1.8Q14.6-2.2 17.4.6Q18.2 1.8 18.4 3.4", 2.5)]
-    f2 = [("s", "M8.4.6Q13.4.4 15.8 2.8Q16.5 3.8 16.6 5", 2.5)]
-    f3 = [("s", "M8.2 2.6Q11.8 2.8 13.4 4.6Q14 5.4 14.1 6.2", 2.4)]
-    thumb = [("s", "M6.2 2Q7.8 3.6 8.6 5.6", 2.8)]
-    s = schichten((f1, 0), (f2, O_INNEN), (f3, O_INNEN), (palm, 0), (thumb, O_INNEN))
-    s += line("M3.4-1.4Q6.2-.8 8.6-1.6", .55)  # Knöchel (fein)
-    return (cuff("M.6-4.2H-4.6V3.8H.6Z", sleeve) if cuff_on else "") + s
+    """Flache Hand von der Seite, Handrücken oben, Finger gestreckt nach rechts und leicht abwärts (wie 🫳: legt etwas hin,
+    lässt etwas fallen): Handgelenk (0,0) links; Fingerspitzen bei etwa (19, 3), Daumen unten bei (11, 5.6)."""
+    palm = [("f", "M0-3.2Q5-3.8 9.2-2.8L9.4 3.2Q5 4 0 3Z")]
+    f1 = [("s", "M8-1.6Q14.6-1.6 18.6 1.4", 2.5)]
+    f2 = [("s", "M8 .8Q14 1 17.6 3.6", 2.4)]
+    f3 = [("s", "M7.8 2.6Q12.4 3.2 15.2 5.2", 2.3)]
+    thumb = [("s", "M4.6 2.4Q8 4.4 11 5.4", 2.6)]
+    s = schichten((f3, 0), (f2, O_INNEN), (f1, O_INNEN), (palm, 0), (thumb, O_INNEN))
+    s += line("M3.4-1.2Q6.2-.6 8.2-1.4", .55)  # Knöchel (fein)
+    return (cuff("M.6-4.2H-4.6V4H.6Z", sleeve) if cuff_on else "") + s
 
 
 def hand_auf_schulter(sleeve=SLEEVE, cuff_on=True):
@@ -169,27 +176,25 @@ def hand_auf_schulter(sleeve=SLEEVE, cuff_on=True):
 
 
 def hand_verdorrt(sleeve=SLEEVE, cuff_on=True, haut="#B7A58C"):
-    """Verdorrte, gelähmte Hand (Mt 12,10): schmale Hand, Finger steif nach vorn eingekrümmt wie ein Haken, Daumen
-    angelegt, fahle Haut mit Falten. Handgelenk (0,0), Finger bis y≈-16."""
-    palm = [("f", "M-4.4 0L-4.8-8Q-4.8-10.6-2.4-10.8L2.2-10.8Q4.6-10.4 4.4-8L4 0Z")]
-    fing = [[("s", f"M{_f(x0)} -9.4Q{_f(x0 - .3)} {_f(top)} {_f(x0 + 2)} {_f(top - .2)}Q{_f(x0 + 3.4)} {_f(top)} {_f(x0 + 3)} {_f(top + 3)}", 2.1)]
-            for x0, top in ((-3.3, -15), (-1.1, -16.2), (1.1, -15.8), (3.1, -14.2))]
-    thumb = [("s", "M-3.8-2.6Q-6.2-5.4-5-8.8", 2.3)]
-    s = schichten(*[(f, O_INNEN) for f in fing], (thumb, 0), (palm, 0), fill=haut)
-    s += line("M-2.2-3.6Q-.6-5.2-1.4-7.6", .5) + line("M1.4-2.6Q2.4-4.8 1.6-6.8", .5)  # Falten
-    return (manschette(10.6, 4.4, 0, sleeve) if cuff_on else "") + s
+    """Verdorrte, gelähmte Hand (Mt 12,10), von der Seite: das Handgelenk knickt kraftlos nach unten, die dünnen Finger
+    sind steif zur Handfläche eingekrümmt; fahle Haut. Handgelenk (0,0) links (Unterarm waagrecht), Hand hängt bis y≈11."""
+    palm = [("f", "M-.4-2.6Q3.6-3.2 5.2-.4L5.6 6.2Q3 7.6.4 6.4L-.4 2.4Z")]
+    fing = [[("s", f"M{_f(x0)} 5.6Q{_f(x0 + .4)} {_f(yb)} {_f(x0 - 2.2)} {_f(yb + .2)}Q{_f(x0 - 3.6)} {_f(yb)} {_f(x0 - 3.2)} {_f(yb - 1.8)}", 1.9)]
+            for x0, yb in ((4.6, 10.6), (3.4, 11.2), (2.0, 10.4))]
+    thumb = [("s", "M.6 4.4Q-.6 6.6.4 8.2", 2)]
+    s = schichten(*[(f, O_INNEN) for f in fing], (palm, 0), (thumb, O_INNEN), fill=haut)
+    s += line("M1.4 1Q2.8 1.8 4.2 1", .5) + line("M1.6 3.2Q3 4 4.4 3.2", .5)  # Falten
+    return (cuff("M.6-3.6H-6V3.6H.6Z", sleeve) if cuff_on else "") + s
 
 
 def arm_kraft(sleeve=SLEEVE):
-    """Angespannter Arm (wie 💪): Ärmel links, Oberarm waagrecht mit Bizeps, Unterarm senkrecht, Faust oben.
-    Box etwa -4 -31 32 42 (Ellbogen unten rechts bei (21, 8))."""
-    arm = ("f", "M2-1.6Q7-10.4 12.6-9.6Q16.4-9 17.4-5.8L17.2-17L25.6-17.6L26.2 2.6Q26.2 9.8 19 10L2 9.4Z")
-    fist = ("f", "M15-26.6Q15.4-30.2 19.2-30.2L24-29.8Q27.2-29.2 26.8-25L26.2-17L16.2-16.4Q14.6-20.4 15-26.6Z")
-    curled = [("s", f"M15.6 {_f(y)}H{_f(x1)}", 2.4) for y, x1 in ((-27.4, 20.4), (-24.8, 20.8), (-22.2, 20.6))]
-    thumb = ("s", "M16.2-19.4Q19.6-19.2 22.6-21.6", 2.5)
-    s = sil([arm, fist], curled, [thumb])
-    s += line("M9.4-2.6Q12.4-4.4 15.4-3", .75)  # Bizepsfalte
-    return cuff("M2.6-3.4H-3V10.6H2.6Z", sleeve) + s
+    """Angespannter Arm (wie 💪): Ärmel links, Oberarm waagrecht mit hohem Bizeps, Ellbogen unten rechts, Unterarm
+    aufrecht, Faust oben (Finger zum Kopf hin). Box etwa -4 -33 32 44."""
+    arm = ("f", "M2-.6Q5-13.4 12.6-11.6Q16.6-10.4 16.8-6.8L16.4-17.2L24.8-18.6L26 2Q26 9.8 19 10L2 9.4Z")
+    s = place(hand_faust(cuff_on=False), 20.4, -16.4, -100, 1.05)
+    s = sil([arm]) + s
+    s += line("M10-2.8Q13-4.6 15.8-3", .75)  # Bizepsfalte
+    return cuff("M2.6-2.6H-3V10.6H2.6Z", sleeve) + s
 
 
 # ------------------------------------------------------------------ Zwei Hände

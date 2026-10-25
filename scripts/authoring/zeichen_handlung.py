@@ -83,9 +83,9 @@ class Fig:
     absolut ab senkrecht unten, + nach vorn. s = Massstab (1 = etwa 36 Einheiten hoch)."""
 
     def __init__(self, hip, lean=0, an=(10, 10), af=(-10, -10), ln_=(6, 0), lf=(-6, 0), n=1, s=1, col=BLUE,
-                 head=None, legs=True, front=False, hr=.45):
+                 head=None, legs=True, front=False, hr=.45, merge=False):
         """front=True: Vorderansicht (Arme an beiden Schultern, Winkel des fernen Arms und Beins gespiegelt)."""
-        self.n, self.s, self.col, self.front, self.hr = n, s, col, front, hr
+        self.n, self.s, self.col, self.front, self.hr, self.merge = n, s, col, front, hr, merge
         T, self.A, self.L, self.R = 11 * s, 3.1 * s, 3.5 * s, 4.4 * s
         self.TW = 6.8 * s
         self.hip = hip
@@ -146,7 +146,8 @@ class Fig:
         if self.front:
             fc = c
         o = behind
-        if self.arm_f:
+        mf = self.merge and self.front
+        if self.arm_f and not mf:
             o += limb(self.arm_f, self.A, fc, hand_f is True, self.hr) + (hand_f if isinstance(hand_f, str) else "")
         if self.legs and self.leg_f:
             o += limb(self.leg_f, self.L, fc, False)
@@ -156,9 +157,18 @@ class Fig:
         if self.legs and self.leg_n:
             ink += stroke(self.leg_n, self.L + 2 * O, INK)
             col += stroke(self.leg_n, self.L, c)
+        ends = []
+        if self.merge:  # Arme in derselben Silhouette wie der Rumpf: Kontur nur aussen, keine Linie quer über den Rumpf
+            for arm, hd in ((self.arm_n, hand_n), (self.arm_f, hand_f) if mf else (None, None)):
+                if arm:
+                    ink += stroke(arm, self.A + 2 * O, INK)
+                    col += stroke(arm, self.A, c)
+                    ends.append((arm[-1], hd))
         o += ink + col
+        for e, hd in ends:
+            o += circ(e, self.A / 2, SKIN) if hd is True else (hd if isinstance(hd, str) else "")
         o += circ(self.head, self.R + O, INK) + circ(self.head, self.R, SKIN) + face
-        if self.arm_n:
+        if self.arm_n and not self.merge:
             o += limb(self.arm_n, self.A, c, hand_n is True, self.hr) + (hand_n if isinstance(hand_n, str) else "")
         return o + front_extra
 
@@ -762,9 +772,9 @@ def bringen3():
     a = P((12, 22), lean=6, an=(55, 100), af=(45, 95), ln_=(28, 6), lf=(-26, -8)).ground(37.4)
     h = a.arm_n[2]
     k = korb(h[0] + 2.4, h[1] - 1.2, 10, 6.5)
-    b = P((42, 22), n=-1, col=RED, an=(55, 85), af=None, ln_=(4, 0), lf=(-4, 0)).ground(37.4)
+    b = P((48, 22), n=-1, col=RED, an=(55, 85), af=None, ln_=(4, 0), lf=(-4, 0)).ground(37.4)
     hb = b.hand_at(H.hand_empfangend(RED, cuff_on=False), s=.4)
-    return "0 0 50 38", motion(4.6, a.hip[1] - 7, 1, 3, 3.2, 3.6) + a.svg(face=a.eye(), front_extra=k) + b.svg(face=b.eye() + laecheln(b), hand_n=hb)
+    return "0 0 55 38", motion(4.6, a.hip[1] - 7, 1, 3, 3.2, 3.6) + a.svg(face=a.eye(), front_extra=k) + b.svg(face=b.eye() + laecheln(b), hand_n=hb)
 
 
 @zeichen("FLIEHEN@3", "fliehen / weggehen: jemand flieht oder läuft davon",
@@ -772,7 +782,7 @@ def bringen3():
 def fliehen3():
     a = P((20, 22), lean=20, an=(72, 150), af=(-50, -95), ln_=(75, 10), lf=(-40, -90), head=6).ground(37.4)
     hx, hy = a.head
-    face = circ((hx - 1.9, hy - .7), .7, INK) + circ((hx + .5, hy - .7), .7, INK) + ln(f"M{f(hx - 3)} {f(hy - 2.4)}l1.6.5M{f(hx + 1.6)} {f(hy - 2.4)}l-1.6.5", .7) + \
+    face = circ((hx - 1.9, hy - .7), .7, INK) + circ((hx + .5, hy - .7), .7, INK) + ln(f"M{f(hx - 3)} {f(hy - 2)}l1.6-.6M{f(hx + 1.6)} {f(hy - 2)}l-1.6-.6", .7) + \
         circ((hx - .6, hy + 1.9), 1.3, INK) + circ((hx - .6, hy + 1.9), .85, "#7A3A2A")
     return "0 0 40 38", motion(7.4, a.hip[1] - 8, 1, 3, 3.6, 5.5) + a.svg(face=face)
 
@@ -781,7 +791,7 @@ def fliehen3():
          "Vordere Figur geht voran, zeigt mit der Hand nach vorn und blickt zurück; die hintere Figur geht im gleichen Schritt hinterher")
 def nachfolgen3():
     b = P((12, 22), col=RED, lean=4, an=(30, 20), af=None, ln_=(28, 4), lf=(-26, -8), s=.88).ground(37.4)
-    a = P((34, 22), lean=2, an=(82, 88), af=None, ln_=(28, 4), lf=(-26, -8)).ground(37.4)
+    a = P((32, 22), lean=2, an=(82, 88), af=None, ln_=(28, 4), lf=(-26, -8)).ground(37.4)
     ha = a.hand_at(H.hand_zeigend(BLUE, cuff_on=False), s=.36)
     return "0 0 48 38", b.svg(face=b.eye()) + a.svg(face=a.eye(dx=-1.8) + laecheln(a, dx=-.9), hand_n=ha)
 
@@ -801,7 +811,7 @@ def abstand3():
          "Eine grosse offene Hand hebt eine kleine Figur mit erhobenen Armen aus den Wellen empor; Bewegungsstriche nach oben")
 def rettung3():
     water = wasser(0, 44, 29, 9, 5.5)
-    hand = H.place(H.hand_empfangend(WHITE), 6, 27.6, -6, 1.32)
+    hand = H.place(H.hand_empfangend(WHITE), 8, 27.6, -6, 1.26)
     a = P((19, 14), an=(140, 160), af=(140, 160), ln_=(4, 2), lf=(4, 2), col=BLUE, s=.52, front=True).ground(24.6)
     face = a.eye(dx=-1.3, dy=-.5) + a.eye(dx=1.3, dy=-.5) + ln(f"M{f(a.head[0] - 1.1)} {f(a.head[1] + 1.2)}q1.1 1 2.2 0", .7)
     up = ln("M33 18v-7M30.6 13.4l2.4-2.4 2.4 2.4M37.6 22v-6", 1.3)
@@ -812,7 +822,7 @@ def rettung3():
          "Eine grosse offene Hand kommt aus dem Wasser und trägt eine kleine Figur mit erhobenen Armen über die Wellen")
 def rettung4():
     water = wasser(0, 44, 27, 11, 5.5)
-    hand = H.place(H.hand_empfangend(WHITE), 6, 26.6, -6, 1.32)
+    hand = H.place(H.hand_empfangend(WHITE), 8, 26.6, -6, 1.26)
     a = P((19, 14), an=(140, 160), af=(140, 160), ln_=(4, 2), lf=(4, 2), col=BLUE, s=.52, front=True).ground(23.6)
     face = a.eye(dx=-1.3, dy=-.5) + a.eye(dx=1.3, dy=-.5) + ln(f"M{f(a.head[0] - 1.1)} {f(a.head[1] + 1.2)}q1.1 1 2.2 0", .7)
     return "0 0 44 38", water + hand + a.svg(face=face)
@@ -854,8 +864,8 @@ def schweigen3():
 @zeichen("UNTERORDNEN@3", "sich unterordnen: sich einer Ordnung oder Autorität fügen",
          "Figur verneigt sich tief, die Arme hängen; vor ihr steht erhöht auf einer Stufe eine Figur mit Krone")
 def unterordnen3():
-    step = shape("M28 37.6V30.4H47V37.6Z", STONE, 1.1)
-    b = P((38, 17), n=-1, col=RED, an=None, af=None, ln_=(3, 0), lf=(-3, 0), s=.84).ground(30.6)
+    step = shape("M28 37.6V33H47V37.6Z", STONE, 1.1)
+    b = P((38, 17), n=-1, col=RED, an=None, af=None, ln_=(3, 0), lf=(-3, 0), s=.72).ground(33.2)
     hx, hy, r = b.head[0], b.head[1], b.R
     crown = shape(f"M{f(hx - 3.6)} {f(hy - r + .8)}l-.6-4.2 2.2 2 2-3 2 3 2.2-2-.6 4.2z", GOLD, .8)
     a = P((8, 24), lean=72, head=82, an=(4, 4), af=None, ln_=(2, 0), lf=(-2, 0)).ground(37.4)
@@ -879,9 +889,9 @@ def toeten3():
     v = P((20, 34.8), lean=90, an=None, af=None, ln_=(-90, -90), lf=(-88, -92), col=BLUE, s=.8, n=-1)
     vx, vy = v.head
     xe = ln(f"M{f(vx - .6)} {f(vy - 1.8)}l1.4 1.4m0-1.4l-1.4 1.4M{f(vx - .6)} {f(vy + .6)}l1.4 1.4m0-1.4l-1.4 1.4", .7)
-    a = P((37, 21), lean=4, an=(115, 145), af=None, ln_=(18, 0), lf=(-16, 0), col=RED, n=-1).ground(37.4)
+    a = P((37, 21), lean=4, an=(95, 125), af=None, ln_=(18, 0), lf=(-16, 0), col=RED, n=-1, s=.9).ground(37.4)
     hnd = a.arm_n[2]
-    sw = schwert(hnd[0], hnd[1], -10, 10)
+    sw = schwert(hnd[0], hnd[1], -20, 9)
     return "0 0 48 38", ln("M1 37.6H47", 1, STONE_D) + v.svg(face=xe) + sw + a.svg(face=a.eye() + ln(f"M{f(a.head[0] - .6)} {f(a.head[1] - 1.9)}l-2.2 .9", .8))
 
 
@@ -929,11 +939,11 @@ def loesen3():
     o = ""
     for arm, k in ((a.arm_n, 1), (a.arm_f, -1)):
         p = add(arm[1], (arm[2][0] - arm[1][0], arm[2][1] - arm[1][1]), .5)
-        o += f'<circle cx="{f(p[0])}" cy="{f(p[1])}" r="2.2" fill="none" stroke="{INK}" stroke-width="2.8"/><circle cx="{f(p[0])}" cy="{f(p[1])}" r="2.2" fill="none" stroke="#9AA0A8" stroke-width="1.2"/>'
-        o += kette(p[0] + k * .6, p[1] + 4, 90, 1) + ln(f"M{f(p[0] + k * 1.4)} {f(p[1] + 7.6)}l{f(k * 1.2)} 1.4M{f(p[0] - k * .6)} {f(p[1] + 8)}v1.6", .8, GOLD)
+        o += f'<rect x="{f(p[0] - 2.2)}" y="{f(p[1] - 1.1)}" width="4.4" height="2.2" rx=".7" fill="#9AA0A8" stroke="{INK}" stroke-width=".8"/>'
+        o += ln(f"M{f(p[0] + k * 2.4)} {f(p[1] + 1.4)}l{f(k * 1.6)} 1.2M{f(p[0] + k * 2.6)} {f(p[1] - 1)}l{f(k * 1.8)} -.6", .9, GOLD)
     face = a.eye(dx=-1.4, dy=-.6) + a.eye(dx=1.4, dy=-.6) + ln(f"M{f(a.head[0] - 1.8)} {f(a.head[1] + 1.3)}q1.8 1.8 3.6 0", .9)
     coins = "".join(H.muenze(x, y, 2.6) for x, y in ((6, 35), (11.4, 35), (8.7, 30.8)))
-    hand = H.place(H.hand_gebend(), 1.4, 17, 18, .62) + H.fallstriche(11.6, 23.4, 2, 1.4) + H.muenze(11.6, 27, 2.2)
+    hand = H.place(H.hand_gebend(), 3.4, 17, 18, .62) + H.fallstriche(13.2, 23.6, 2, 1.4) + H.muenze(13.2, 27.2, 2.2)
     return "0 0 44 38", coins + hand + a.svg(face=face) + o
 
 
@@ -954,7 +964,7 @@ def sanftmut3():
             + shape("M12 15.4Q8.6 13 6 13.6Q9 17.4 14.4 18Z", "#FFFDF6", 1)
             + shape("M17.4 14.6Q20.6 11.4 24 14.8Q22 18.4 17.4 14.6Z", "#E6E0D2", .8)
             + circ((24.4, 10.6), .8, INK))
-    return "0 0 40 38", f'<g transform="translate(-.5 3.6)">{dove}</g>' + H.place(H.haende_schale(), 20, 36.4, 0, 1.06)
+    return "0 0 40 38", f'<g transform="translate(-.5 -.6)">{dove}</g>' + H.place(H.haende_schale(), 20, 37, 0, .98)
 
 
 @zeichen("FREUNDLICH@3", "freundlich / gütig: freundlich und gütig mit anderen umgehen",
@@ -973,9 +983,9 @@ def freundlich3():
          "Figur steht erhöht auf einem Felsen, ruft mit offenem Mund und streckt den Arm über die Menge aus; Schallbögen zu drei Zuhörern unten")
 def verkuendigen3():
     rock = shape("M1 37.6V30.4Q4 28 10.5 28.2Q17 28 20 30.4V37.6Z", STONE, 1.1)
-    a = P((10.5, 16), lean=2, an=(118, 132), af=None, ln_=(5, 0), lf=(-5, 0), col=BLUE, s=.68).ground(28.6)
+    a = P((10.5, 16), lean=2, an=(92, 108), af=None, ln_=(5, 0), lf=(-5, 0), col=BLUE, s=.68).ground(28.6)
     hx, hy = a.head
-    arcs = "".join(ln(f"M{f(hx + 5.6 + i * 3.2)} {f(hy - 1.6 - i * 1.4)}Q{f(hx + 8 + i * 3.8)} {f(hy + 2.4)} {f(hx + 5.6 + i * 3.2)} {f(hy + 6.4 + i * 1.4)}", 1.3) for i in range(2))
+    arcs = "".join(ln(f"M{f(hx + 12 + i * 3.2)} {f(hy - 1 - i * 1.4)}Q{f(hx + 14.4 + i * 3.8)} {f(hy + 3)} {f(hx + 12 + i * 3.2)} {f(hy + 7 + i * 1.4)}", 1.3) for i in range(3))
     crowd = ""
     for x, y, col in ((28.4, 31.2, RED), (38, 31.2, GREEN), (33.2, 33.6, "#C9963E")):
         crowd += shape(f"M{f(x - 4.4)} 37.6Q{f(x - 4.4)} {f(y)} {f(x)} {f(y)}Q{f(x + 4.4)} {f(y)} {f(x + 4.4)} 37.6Z", col, 1) + \
