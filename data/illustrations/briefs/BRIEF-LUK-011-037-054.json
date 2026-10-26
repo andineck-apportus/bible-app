@@ -178,21 +178,10 @@
       ],
       "objects": [],
       "signs": [
-        "FIG-ZEICHEN-FALLE"
+        "FIG-ZEICHEN-FALLE",
+        "FIG-ZEICHEN-FRAGEN"
       ],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-PHARISAEER",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-ZEICHEN-FRAGEN"
-          ],
-          "word": {
-            "de": "Was sagst du dazu?",
-            "gsw": "Was seisch du derzue?"
-          }
-        }
-      ],
+      "speech": [],
       "action_de": "Als Jesus hinausgeht, bedrängen ihn die Schriftgelehrten und Pharisäer heftig, fragen ihn aus und lauern ihm auf.",
       "keywords": {
         "de": "und lauerten ihm auf",
@@ -200,7 +189,8 @@
       },
       "stage": {
         "at": {
-          "FIG-ZEICHEN-FALLE": "FIG-GRUPPE-SCHRIFTGELEHRTE"
+          "FIG-ZEICHEN-FALLE": "FIG-GRUPPE-SCHRIFTGELEHRTE",
+          "FIG-ZEICHEN-FRAGEN": "FIG-GRUPPE-PHARISAEER"
         },
         "mood": {
           "FIG-GRUPPE-SCHRIFTGELEHRTE": "angry",
@@ -210,6 +200,9 @@
         "signs_who": {
           "FIG-ZEICHEN-FALLE": [
             "FIG-GRUPPE-SCHRIFTGELEHRTE"
+          ],
+          "FIG-ZEICHEN-FRAGEN": [
+            "FIG-GRUPPE-PHARISAEER"
           ]
         }
       }
@@ -223,9 +216,9 @@
   "captions_de": [
     "Aussen und innen: Der Pharisäer wundert sich (Wolke: Hände waschen?); Jesus: «Ihr reinigt das Äussere des Bechers – euer Inneres ist voll von Raub und Bosheit.» (Becher aussen rein, innen schmutzig); im Band: Ihr Pharisäer reinigt das Äussere des Bechers und der Schüssel.",
     "Sechs Weh (Raster, Bild Jesus): Pharisäer – Zehnten von Kräutern, aber Recht und Liebe Gottes übergangen (Kräuter); Ehrenplatz und Grüsse (Rang); wie unkenntliche Gräber (Grab); Gesetzeslehrer – Lasten auferlegt, selbst nicht angerührt (Last); Grabmäler der Propheten, die eure Väter getötet haben (töten); den Schlüssel der Erkenntnis weggenommen (Schlüssel); im Band: Aber weh euch Pharisäern!",
-    "Sie lauern ihm auf: Schriftgelehrte und Pharisäer bedrängen Jesus mit Fragen (fragen, Falle); im Band: und lauerten ihm auf."
+    "Sie lauern ihm auf: Schriftgelehrte und Pharisäer bedrängen Jesus und fragen ihn aus (Fragezeichen, Falle); im Band: und lauerten ihm auf."
   ],
-  "interpretation_note_de": "Drei Felder ([[LUK.11.37-LUK.11.54]]): der Anlass beim Mahl mit dem Wort vom Becher, die sechs Weherufe als Raster (drei an die Pharisäer, drei an die Gesetzeslehrer), das Auflauern. Pharisäer und Gesetzeslehrer erscheinen als neutrale Figuren; die Weherufe treffen ihr Tun, das Bild verzerrt sie nicht. Die getöteten Propheten stehen als Zeichen im Raster, nicht als Szene. Die Frage in Feld 3 fasst «ihn über vieles auszufragen» ([[LUK.11.53]]) in eigene Worte. Der Schlüssel ist hier der «Schlüssel der Erkenntnis» ([[LUK.11.52]]), nicht der Schlüssel des Petrus.",
+  "interpretation_note_de": "Drei Felder ([[LUK.11.37-LUK.11.54]]): der Anlass beim Mahl mit dem Wort vom Becher, die sechs Weherufe als Raster (drei an die Pharisäer, drei an die Gesetzeslehrer), das Auflauern. Pharisäer und Gesetzeslehrer erscheinen als neutrale Figuren; die Weherufe treffen ihr Tun, das Bild verzerrt sie nicht. Die getöteten Propheten stehen als Zeichen im Raster, nicht als Szene. Feld 3 zeigt das Ausfragen ([[LUK.11.53]]) nur mit Zeichen (Fragezeichen, Falle), weil der Text keine Frage im Wortlaut nennt. Der Schlüssel ist hier der «Schlüssel der Erkenntnis» ([[LUK.11.52]]), nicht der Schlüssel des Petrus.",
   "basis": [
     {
       "record": "TU-LUK-011-037-054",
@@ -464,6 +457,225 @@
             }
           }
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Prüfung: Lk 9–16 gegen den Text (getrennte Instanz)",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "LUK.11.37-LUK.11.41",
+            "figures": [
+              "FIG-ROLLE-PHARISAEER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-PHARISAEER",
+                "to": "FIG-ROLLE-PHARISAEER",
+                "icons": [
+                  "FIG-ZEICHEN-HAENDE-WASCHEN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ],
+                "think": true,
+                "word": {
+                  "de": "Er wäscht sich nicht vor dem Essen?",
+                  "gsw": "Er wäscht sich nöd vor em Ässe?"
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-PHARISAEER",
+                "icons": [
+                  "FIG-OBJ-BECHER-SCHMUTZIG"
+                ],
+                "word": {
+                  "de": "Euer Inneres ist voll von Raub und Bosheit.",
+                  "gsw": "Eues Inner isch voll vo Raub und Bosheit."
+                }
+              }
+            ],
+            "action_de": "Beim Mahl wundert sich der Pharisäer, dass Jesus sich nicht wäscht; Jesus: «Ihr Pharisäer reinigt das Äussere des Bechers und der Schüssel, euer Inneres aber ist voll von Raub und Bosheit.»",
+            "keywords": {
+              "de": "Ihr Pharisäer reinigt das Äussere des Bechers und der Schüssel",
+              "gsw": "Ir Pharisäer putzed s Üsser vom Bächer und vo de Schüssle"
+            },
+            "names": {
+              "FIG-ROLLE-PHARISAEER": {
+                "de": "Pharisäer",
+                "gsw": "Pharisäer"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-PHARISAEER": "question",
+                "FIG-JESUS": "earnest"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "LUK.11.42-LUK.11.52",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Dreimal Weh über die Pharisäer, dreimal über die Gesetzeslehrer.",
+            "keywords": {
+              "de": "Aber weh euch Pharisäern!",
+              "gsw": "Aber weh eu Pharisäer!"
+            },
+            "diagram": {
+              "visual": "grid",
+              "span": 2,
+              "cols": 3,
+              "speaker": "FIG-JESUS",
+              "cells": [
+                {
+                  "a": {
+                    "de": "Weh euch Pharisäern:",
+                    "gsw": "Weh eu Pharisäer:"
+                  },
+                  "b": {
+                    "de": "Zehnten von Minze und Raute – Recht und Liebe Gottes übergangen",
+                    "gsw": "Zäänte vo de Minze und de Raute – Rächt und Liebi vo Gott übergange"
+                  },
+                  "icons": [
+                    "FIG-OBJ-KRAEUTER"
+                  ],
+                  "tone": "old"
+                },
+                {
+                  "a": {
+                    "de": "Weh euch Pharisäern:",
+                    "gsw": "Weh eu Pharisäer:"
+                  },
+                  "b": {
+                    "de": "Ehrenplatz in den Synagogen, Begrüssungen auf den Marktplätzen",
+                    "gsw": "vorderscht Platz i de Synagoge, Grüess uf de Märt"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-RANG"
+                  ],
+                  "tone": "old"
+                },
+                {
+                  "a": {
+                    "de": "Weh euch:",
+                    "gsw": "Weh eu:"
+                  },
+                  "b": {
+                    "de": "ihr seid wie die unkenntlichen Gräber",
+                    "gsw": "ir sind wie d unkenntliche Greber"
+                  },
+                  "icons": [
+                    "FIG-ORT-GRAB"
+                  ],
+                  "tone": "old"
+                },
+                {
+                  "a": {
+                    "de": "Weh euch Gesetzeslehrern:",
+                    "gsw": "Weh eu Gsetzeslehrer:"
+                  },
+                  "b": {
+                    "de": "Lasten, die kaum zu tragen sind – selbst nicht mit einem Finger angerührt",
+                    "gsw": "Laschte, wo me chuum träge cha – sälber nöd mit eim Finger aagrüert"
+                  },
+                  "icons": [
+                    "FIG-OBJ-LAST"
+                  ],
+                  "tone": "old"
+                },
+                {
+                  "a": {
+                    "de": "Weh euch:",
+                    "gsw": "Weh eu:"
+                  },
+                  "b": {
+                    "de": "Grabmäler der Propheten – eure Väter haben sie getötet",
+                    "gsw": "Grabmäler vo de Prophete – eui Vätter händ si umbracht"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-TOETEN",
+                    "FIG-ROLLE-PROPHET"
+                  ],
+                  "tone": "old"
+                },
+                {
+                  "a": {
+                    "de": "Weh euch Gesetzeslehrern:",
+                    "gsw": "Weh eu Gsetzeslehrer:"
+                  },
+                  "b": {
+                    "de": "den Schlüssel der Erkenntnis weggenommen",
+                    "gsw": "de Schlüssel vo de Erchänntnis wäggnoo"
+                  },
+                  "icons": [
+                    "FIG-OBJ-SCHLUESSEL"
+                  ],
+                  "tone": "old"
+                }
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "LUK.11.53-LUK.11.54",
+            "figures": [
+              "FIG-GRUPPE-SCHRIFTGELEHRTE",
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-FALLE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-PHARISAEER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-FRAGEN"
+                ],
+                "word": {
+                  "de": "Was sagst du dazu?",
+                  "gsw": "Was seisch du derzue?"
+                }
+              }
+            ],
+            "action_de": "Als Jesus hinausgeht, bedrängen ihn die Schriftgelehrten und Pharisäer heftig, fragen ihn aus und lauern ihm auf.",
+            "keywords": {
+              "de": "und lauerten ihm auf",
+              "gsw": "und händ ihm ufglauert"
+            },
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-FALLE": "FIG-GRUPPE-SCHRIFTGELEHRTE"
+              },
+              "mood": {
+                "FIG-GRUPPE-SCHRIFTGELEHRTE": "angry",
+                "FIG-GRUPPE-PHARISAEER": "angry",
+                "FIG-JESUS": "calm"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-FALLE": [
+                  "FIG-GRUPPE-SCHRIFTGELEHRTE"
+                ]
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Aussen und innen: Der Pharisäer wundert sich (Wolke: Hände waschen?); Jesus: «Ihr reinigt das Äussere des Bechers – euer Inneres ist voll von Raub und Bosheit.» (Becher aussen rein, innen schmutzig); im Band: Ihr Pharisäer reinigt das Äussere des Bechers und der Schüssel.",
+          "Sechs Weh (Raster, Bild Jesus): Pharisäer – Zehnten von Kräutern, aber Recht und Liebe Gottes übergangen (Kräuter); Ehrenplatz und Grüsse (Rang); wie unkenntliche Gräber (Grab); Gesetzeslehrer – Lasten auferlegt, selbst nicht angerührt (Last); Grabmäler der Propheten, die eure Väter getötet haben (töten); den Schlüssel der Erkenntnis weggenommen (Schlüssel); im Band: Aber weh euch Pharisäern!",
+          "Sie lauern ihm auf: Schriftgelehrte und Pharisäer bedrängen Jesus mit Fragen (fragen, Falle); im Band: und lauerten ihm auf."
+        ],
+        "interpretation_note_de": "Drei Felder ([[LUK.11.37-LUK.11.54]]): der Anlass beim Mahl mit dem Wort vom Becher, die sechs Weherufe als Raster (drei an die Pharisäer, drei an die Gesetzeslehrer), das Auflauern. Pharisäer und Gesetzeslehrer erscheinen als neutrale Figuren; die Weherufe treffen ihr Tun, das Bild verzerrt sie nicht. Die getöteten Propheten stehen als Zeichen im Raster, nicht als Szene. Die Frage in Feld 3 fasst «ihn über vieles auszufragen» ([[LUK.11.53]]) in eigene Worte. Der Schlüssel ist hier der «Schlüssel der Erkenntnis» ([[LUK.11.52]]), nicht der Schlüssel des Petrus."
       }
     }
   ]
