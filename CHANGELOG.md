@@ -2,6 +2,11 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.118 — 2026-10-26 — Matthäus 1–4 und 8–10 nach «Struktur zuerst»
+
+- **30 Abschnitte und 7 Kapitel neu** (Kernanalysen mit Struktur, unabhängig geprüft mit `review`; Zusammenfassungen Hochdeutsch und Züridüütsch; Bilder): Stammbaum 3×14 (dritte Reihe mit 13 Namen vermerkt), drei Versuchungen mit «Es steht geschrieben», Zwölferliste, Erfüllungszitate. Korrigiert u. a.: Rahel allein (keine erfundenen Mütter), keine Soldaten beim Hauptmann, keine «vier Männer» bei Matthäus, Sprechblasen als ganze Sätze, «begraben» mit Grab statt «verstorben».
+- Offen zum Entscheid: Vorsteher in Mt 9,18 (Legende zeigt «Jairus», Matthäus nennt keinen Namen); Kreuz als Erkennungszeichen bei Johannes dem Täufer (anachronistisch). Noch 348 Bilder in alter Verdichtung.
+
 ## v0.117 — 2026-10-26 — Philipper und 1.–3. Johannes nach «Struktur zuerst»; Sprechblasen verdecken nichts
 
 - **Philipper, 1., 2. und 3. Johannes neu** wie der Pilot: 52 Kernanalysen mit Strukturanalyse, von einer getrennten Instanz gegen den Text geprüft (Feld `review`; u. a. vollständige Reihen Phil 2,6–11, 3,5–6, 4,8 und 1 Joh 2,12–14; «hofft zu kommen» statt angekündigtem Besuch; Diotrephes stösst die hinaus, die aufnehmen wollen; 1 Joh 5,20 wörtlich), Zusammenfassungen (Hochdeutsch und Züridüütsch) und alle Bilder neu daraus; Gegensätze mit der positiven Seite hervorgehoben.
