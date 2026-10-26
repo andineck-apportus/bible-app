@@ -16,22 +16,42 @@
         "FIG-GOTT",
         "FIG-JONA"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-ORT-NINIVE"
+      ],
       "signs": [],
       "speech": [
         {
           "from": "FIG-GOTT",
           "to": "FIG-JONA",
           "icons": [
-            "FIG-ORT-NINIVE",
-            "FIG-ZEICHEN-VERKUENDIGEN"
-          ]
+            "FIG-ORT-NINIVE"
+          ],
+          "word": {
+            "de": "Ruf gegen sie aus!",
+            "gsw": "Rüef gäge si us!"
+          }
         }
       ],
-      "action_de": "JHWH spricht zu Jona: Geh nach Ninive, der grossen Stadt, und ruf gegen sie aus.",
+      "action_de": "JHWH spricht zu Jona: Steh auf, geh nach Ninive, der grossen Stadt, und ruf gegen sie aus, denn ihre Bosheit ist vor mich heraufgestiegen.",
+      "keywords": {
+        "de": "Steh auf, geh nach Ninive",
+        "gsw": "Stand uf, gang uf Ninive"
+      },
+      "names": {
+        "FIG-JONA": {
+          "de": "Jona",
+          "gsw": "Jona"
+        }
+      },
       "stage": {
         "mood": {
           "FIG-JONA": "surprised"
+        },
+        "god_side": "left",
+        "back_side": "right",
+        "x": {
+          "FIG-JONA": 70
         },
         "arrows": [
           [
@@ -56,7 +76,11 @@
         "FIG-ZEICHEN-FLIEHEN"
       ],
       "speech": [],
-      "action_de": "Jona flieht in die Gegenrichtung: Er steigt hinab nach Jafo und nimmt ein Schiff nach Tarschisch, weg vom Angesicht JHWHs.",
+      "action_de": "Jona macht sich auf, aber um nach Tarschisch zu fliehen, weg vom Angesicht JHWHs: Er steigt hinab nach Jafo und nimmt ein Schiff in die Gegenrichtung.",
+      "keywords": {
+        "de": "Weg vom Angesicht JHWHs",
+        "gsw": "Wäg vom Aagsicht vo JHWH"
+      },
       "stage": {
         "pose": {
           "FIG-JONA": "away"
@@ -84,19 +108,19 @@
     }
   ],
   "actions_de": [
-    "JHWH spricht zu Jona: Geh nach Ninive, der grossen Stadt, und ruf gegen sie aus.",
-    "Jona flieht in die Gegenrichtung: Er steigt hinab nach Jafo und nimmt ein Schiff nach Tarschisch, weg vom Angesicht JHWHs."
+    "JHWH spricht zu Jona: Steh auf, geh nach Ninive, der grossen Stadt, und ruf gegen sie aus, denn ihre Bosheit ist vor mich heraufgestiegen.",
+    "Jona macht sich auf, aber um nach Tarschisch zu fliehen, weg vom Angesicht JHWHs: Er steigt hinab nach Jafo und nimmt ein Schiff in die Gegenrichtung."
   ],
   "captions_de": [
-    "Auftrag: Gott (Strahlenkranz) sendet Jona (Linie) nach Ninive, um gegen die Stadt auszurufen (Stadt, Lautsprecher).",
-    "Flucht: Jona kehrt Ninive (links) den Rücken und läuft zum Schiff nach Tarschisch (Pfeil), in die Gegenrichtung."
+    "Auftrag: Gott (Strahlenkranz) sendet Jona (goldener Pfeil) nach Ninive (Stadt im Hintergrund): «Ruf gegen sie aus!»",
+    "Flucht: Jona kehrt Ninive (links) den Rücken und läuft zum Schiff nach Tarschisch, in die Gegenrichtung (Pfeil)."
   ],
-  "interpretation_note_de": "Gott erscheint als Strahlenkranz mit dem Gottesnamen; der Text nennt ihn JHWH. Dass Jona «hinabsteigt» (nach Jafo, ins Schiff, [[JON.1.3]]), deutet das Bild nur mit dem Weg zum Schiff an.",
+  "interpretation_note_de": "Zwei Szenen nach dem Ablauf «Auftrag – Flucht» ([[JON.1.1-JON.1.3]]): Gott sendet Jona gegen Ninive ([[JON.1.2]]), Jona flieht in die Gegenrichtung ([[JON.1.3]]). Gott erscheint als Strahlenkranz mit dem Gottesnamen, nie als Mensch. Die Begründung «denn ihre Bosheit …» nennt die Bildhilfe; das «Hinabsteigen» nach Jafo und ins Schiff deutet das Bild nur mit dem Weg zum Schiff an.",
   "basis": [
     {
       "record": "TU-JON-001-001-003",
       "field": "summary",
-      "fingerprint": "77e5e40198054605"
+      "fingerprint": "c53674ad8e9bfeed"
     },
     {
       "record": "TRANS-JON-001-001-017-DE-WORKING",
@@ -112,7 +136,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -257,6 +281,141 @@
         "captions_de": [
           "Auftrag: Gott (Strahlenkranz) sendet Jona nach Ninive, um gegen die Stadt auszurufen (Stadt, Rufer).",
           "Flucht: Jona kehrt Ninive (links) den Rücken und läuft zum Schiff nach Tarschisch (Pfeil), in die Gegenrichtung."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: Jona und Obadja neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JON.1.1-JON.1.2",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JONA"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GOTT",
+                "to": "FIG-JONA",
+                "icons": [
+                  "FIG-ORT-NINIVE",
+                  "FIG-ZEICHEN-VERKUENDIGEN"
+                ]
+              }
+            ],
+            "action_de": "JHWH spricht zu Jona: Geh nach Ninive, der grossen Stadt, und ruf gegen sie aus.",
+            "stage": {
+              "mood": {
+                "FIG-JONA": "surprised"
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-JONA",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JON.1.3",
+            "figures": [
+              "FIG-JONA"
+            ],
+            "objects": [
+              "FIG-ORT-NINIVE",
+              "FIG-OBJ-SCHIFF"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FLIEHEN"
+            ],
+            "speech": [],
+            "action_de": "Jona flieht in die Gegenrichtung: Er steigt hinab nach Jafo und nimmt ein Schiff nach Tarschisch, weg vom Angesicht JHWHs.",
+            "stage": {
+              "pose": {
+                "FIG-JONA": "away"
+              },
+              "mood": {
+                "FIG-JONA": "worried"
+              },
+              "back_side": "left",
+              "big_side": "right",
+              "before": true,
+              "x": {
+                "FIG-JONA": 118
+              },
+              "arrows": [
+                [
+                  "FIG-JONA",
+                  "FIG-OBJ-SCHIFF",
+                  "go"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-FLIEHEN": "FIG-JONA"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "JHWH spricht zu Jona: Geh nach Ninive, der grossen Stadt, und ruf gegen sie aus.",
+          "Jona flieht in die Gegenrichtung: Er steigt hinab nach Jafo und nimmt ein Schiff nach Tarschisch, weg vom Angesicht JHWHs."
+        ],
+        "captions_de": [
+          "Auftrag: Gott (Strahlenkranz) sendet Jona (Linie) nach Ninive, um gegen die Stadt auszurufen (Stadt, Lautsprecher).",
+          "Flucht: Jona kehrt Ninive (links) den Rücken und läuft zum Schiff nach Tarschisch (Pfeil), in die Gegenrichtung."
+        ],
+        "interpretation_note_de": "Gott erscheint als Strahlenkranz mit dem Gottesnamen; der Text nennt ihn JHWH. Dass Jona «hinabsteigt» (nach Jafo, ins Schiff, [[JON.1.3]]), deutet das Bild nur mit dem Weg zum Schiff an.",
+        "basis": [
+          {
+            "record": "TU-JON-001-001-003",
+            "field": "summary",
+            "fingerprint": "77e5e40198054605"
+          },
+          {
+            "record": "TRANS-JON-001-001-017-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JON.1.1-JON.1.2",
+            "fingerprint": "dcfeca806dfb19af"
+          },
+          {
+            "record": "TRANS-JON-001-001-017-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JON.1.3",
+            "fingerprint": "ca6cb513229a425f"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Prüfung Struktur zuerst Jona/Obadja",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-JON-001-001-003",
+            "field": "summary",
+            "fingerprint": "01923ed94a10affe"
+          },
+          {
+            "record": "TRANS-JON-001-001-017-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JON.1.1-JON.1.2",
+            "fingerprint": "dcfeca806dfb19af"
+          },
+          {
+            "record": "TRANS-JON-001-001-017-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JON.1.3",
+            "fingerprint": "ca6cb513229a425f"
+          }
         ]
       }
     }

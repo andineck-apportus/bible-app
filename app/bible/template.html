@@ -313,7 +313,7 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
   #bible-stream .app aside .side-step[data-step=prev]{margin-bottom:8px;border-bottom:1px solid var(--rule);border-radius:var(--r) var(--r) 0 0!important}
   #bible-stream .app aside .side-step[data-step=next]{margin-top:8px;border-top:1px solid var(--rule);border-radius:0 0 var(--r) var(--r)!important}
   #bible-stream aside button .dot{width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.55;flex:none}
-  #bible-stream .reader{left:230px}
+  #bible-stream .reader{left:250px}  /* Seitenleiste ist 250 px breit: Text klebte an ihrer Linie (Hinweis Andi Neck 2026-10-26) */
   #bible-stream .immersed aside{opacity:.25}
 }
 #bible-stream .player{position:absolute;left:50%;transform:translateX(-50%);bottom:calc(64px + env(safe-area-inset-bottom,0px));z-index:5;width:min(560px,calc(100% - 16px));display:flex;align-items:center;gap:2px;padding:3px 3px 3px 16px;border:1px solid var(--rule);border-radius:999px;background:color-mix(in srgb,var(--bg) 94%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:bottom .25s ease}
@@ -621,7 +621,7 @@ const CONF={high:'gut begründet',probable:'wahrscheinlich',possible:'möglich'}
 
 root.querySelectorAll('.app').forEach((app,appIndex)=>{
 let current='all',lang='de',sheet=null,query='';
-let S={v:3,text:'de',flow:true,theme:'auto',read:19,advanced:true,inline:true,bgInline:true,translit:true,pron:'modern',rate:0.85,voice:{},readVoice:'',readRate:1,godName:'Jahwe',ill:'anime',view:'text',merk:'mark',vill:{},nowords:false};
+let S={v:3,text:'de',flow:true,theme:'auto',read:19,advanced:true,inline:true,bgInline:true,translit:true,pron:'modern',rate:0.85,voice:{},readVoice:'',readRate:1,godName:'Jahwe',ill:'anime',view:'text',merk:'mark',villOn:false,nowords:false};
 try{const s=JSON.parse(localStorage.getItem('bible:settings')||localStorage.getItem('lesestrom')||'null');if(s){const keep={...s};if(!(s.v>=2)){delete keep.advanced;delete keep.inline;delete keep.bgInline;}if(!(s.v>=3))delete keep.flow;S={...S,...keep,v:3};}}catch(e){}
 S.nowords=false;  // «ohne Worte» startet immer ausgeschaltet (Hinweis Andi Neck 2026-10-25)
 /* Feste Darstellung (Andi Neck, 2026-10-23; docs/LESEN-UND-VERTIEFEN.md): Verse fortlaufend, Urtext und Details, Umschrift an;
@@ -709,7 +709,7 @@ const GRUN=/[\u0370-\u03ff\u1f00-\u1fff][\u0370-\u03ff\u1f00-\u1fff\s\u02bc\u201
 const rich=text=>linkRefs(esc(String(text??'')),refCtx).replace(HEB,h=>`<span class="heb" lang="he" dir="rtl">${h}</span>${S.translit?` <i class="tr-inline">${esc(heTr(h))}</i>`:''}${playHe(h)}`).replace(GRUN,g=>S.advanced?`<span class="grc">${g}</span>${S.translit?` <i class="tr-inline">${esc(translit(g))}</i>`:''}${play(g)}`:`<i class="tr-inline">${esc(translit(g))}</i>${play(g)}`);
 const termsLine=terms=>(terms&&terms.length)?`<p class="terms">${terms.map(tm=>{const tl=tm.translit||translit(tm.word),kind=tm.lang==='grc'?'el':(tm.lang==='arc'?'arc':'he');return `<span class="term"><span class="lang">${LANGNAME[tm.lang]?LANGNAME[tm.lang][lang==='de'?0:1]:tm.lang}</span> ${S.advanced?`<span class="${tm.lang==='grc'?'grc':'heb'}" lang="${tm.lang==='grc'?'grc':'he'}">${esc(tm.word)}</span> `:''}${!S.advanced||S.translit||tm.lang!=='grc'?`<i class="tr-inline">${esc(tl)}</i>`:''}<button type="button" class="play" data-speak="${esc(tm.word)}" data-speak-lang="${kind}" data-speak-tr="${esc(tl)}" aria-label="${lang==='de'?'Anhören':'Listen'}">${icon('speak')}</button> «${esc(tm.de)}»</span>`;}).join('')}</p>`:'';
 if(synth&&synth.addEventListener)synth.addEventListener('voiceschanged',()=>{if(sheet==='settings')settingsSheet();});
-function applyPrefs(){app.classList.toggle('flow',!!S.flow);if(S.ill!=='off'&&!(ILL.styles||{})[S.ill])S.ill=Object.keys(ILL.styles||{})[0]||'off';app.dataset.view=S.view==='image'?'image':'text';app.dataset.tl=S.text||'de';if(S.ill!=='off')app.dataset.ill='1';else delete app.dataset.ill;if(typeof S.vill!=='object'||!S.vill)S.vill={};if(S.ill!=='off'&&Object.values(S.vill).some(Boolean))app.dataset.vill='1';else delete app.dataset.vill;app.dataset.theme=S.theme==='auto'?(mq&&mq.matches?'dark':'light'):S.theme;app.style.setProperty('--read',S.read+'px');}
+function applyPrefs(){app.classList.toggle('flow',!!S.flow);if(S.ill!=='off'&&!(ILL.styles||{})[S.ill])S.ill=Object.keys(ILL.styles||{})[0]||'off';app.dataset.view=S.view==='image'?'image':'text';app.dataset.tl=S.text||'de';if(S.ill!=='off')app.dataset.ill='1';else delete app.dataset.ill;if(S.ill!=='off'&&S.villOn)app.dataset.vill='1';else delete app.dataset.vill;app.dataset.theme=S.theme==='auto'?(mq&&mq.matches?'dark':'light'):S.theme;app.style.setProperty('--read',S.read+'px');}
 mq&&mq.addEventListener&&mq.addEventListener('change',applyPrefs);
 const remembered=new Map(),savedStreams=new Map();let readerStart=0,readerEnd=0;
 app.innerHTML=`<header class="bar top"><button type="button" class="icon-btn" data-action="home" aria-label="">${logo}</button><button type="button" class="location" data-action="index"></button><button type="button" class="icon-btn" data-action="menu"></button></header><div class="jump"></div><aside aria-label="Navigation"></aside><main class="reader" tabindex="0" role="region"></main><nav class="bar dock"><div class="path"></div><button type="button" data-action="down" class="pick"></button></nav><div class="sheet-host"></div><span class="live" aria-live="polite"></span>`;
@@ -880,12 +880,12 @@ function illTileBoxes(il,tap){const tiles=illTiles(il.svg);if(!tiles)return null
     return `<div class="tile-box${narrow?' narrow':''}" data-span="${span}"${tap&&c?` role="button" tabindex="0" data-tilecap aria-expanded="false" title="${T().tileHint}"`:''}>${t}${c?`<div class="tile-cap" hidden>${tt?`<b>${esc(tt)}</b> `:''}${rich(tx)}</div>`:''}</div>`;}).join('')}</div>`;}
 const illFigure=(il,nw)=>{const off=nw&&S.nowords,boxes=illTileBoxes(il,!off);if(boxes)return `<figure class="ill${off?' nowords':''}"><div class="ill-img" role="img" aria-label="${esc(il.alt)}">${boxes}</div><figcaption><button type="button" class="link soft" data-legend="${esc(il.key)}">${T().legendTitle}</button>${illStyles(il.key,il.style)}</figcaption></figure>`;
   return `<figure class="ill${off?' nowords':''}"><div class="ill-img${illNarrow(il.svg)}" ${off?`role="img" aria-label="${esc(il.alt)}"`:`role="button" tabindex="0" data-explain="${esc(il.key)}" aria-label="${esc(il.alt)} – ${T().explainHint}" title="${T().explainHint}"`}>${illSvg(il.svg)}</div>${illStyles(il.key,il.style)?`<figcaption>${illStyles(il.key,il.style)}</figcaption>`:''}</figure>`;};
-// Bilder auf Versebene (Hinweis Andi Neck 2026-10-25: je Abschnitt ein- und ausblendbar, Schalter beim Abschnittstitel; S.vill[Abschnitt]):
+// Bilder auf Versebene (Hinweis Andi Neck 2026-10-26: für alle Abschnitte zusammen ein- und ausblendbar, Schalter bei jedem Abschnittstitel; S.villOn):
 // zum ersten Vers eines Feldes das Feld des Abschnittsbilds (mit schmaler Fassung fürs Handy)
 const refV=r=>{const a=String(r||'').split('-')[0].split('.');return {c:+a[1],v:+a[2]};};
-const villBtn=p=>{if(!ILL||S.ill==='off'||!p.part||!illFor(p))return '';const on=!!(S.vill||{})[p.part.id],L=lang==='de';
-  return `<button type="button" class="tool vill-btn" data-vill="${esc(p.part.id)}" aria-pressed="${on}" title="${L?'Bilder bei den Versen dieses Abschnitts':'Pictures at the verses of this section'}">${icon('image')}<span>${on?(L?'Bilder aus':'Hide pictures'):(L?'Bilder':'Pictures')}</span></button>`;};
-function verseIll(n){if(!ILL||S.ill==='off')return '';const p=nodes.get(n.parent);if(!p||p.level!==5||!p.part||!(S.vill||{})[p.part.id])return '';const il=illFor(p);if(!il||!il.panels)return '';
+const villBtn=p=>{if(!ILL||S.ill==='off'||!p.part||!illFor(p))return '';const on=!!S.villOn,L=lang==='de';
+  return `<button type="button" class="tool vill-btn" data-vill="1" aria-pressed="${on}" title="${L?'Bilder bei den Versen (alle Abschnitte)':'Pictures at the verses (all sections)'}">${icon('image')}<span>${on?(L?'Bilder aus':'Hide pictures'):(L?'Bilder':'Pictures')}</span></button>`;};
+function verseIll(n){if(!ILL||S.ill==='off')return '';const p=nodes.get(n.parent);if(!p||p.level!==5||!p.part||!S.villOn)return '';const il=illFor(p);if(!il||!il.panels)return '';
   const tiles=illTiles(il.svg);if(!tiles)return '';const groups=[];tiles.forEach(t=>{if(t.includes('ill-narrow')&&groups.length)groups[groups.length-1].push(t);else groups.push([t]);});
   const out=[];il.panels.forEach((pn,i)=>{const r=refV(pn.ref);if(r.c===n.c&&r.v===n.v&&groups[i])out.push(groups[i].join(''));});
   if(!out.length)return '';return `<figure class="ill verse-ill"><div class="ill-tiles" role="button" tabindex="0" data-explain="${esc(il.key)}" aria-label="${esc(il.alt)} – ${T().explainHint}" title="${T().explainHint}">${out.join('')}</div></figure>`;}
@@ -1532,7 +1532,7 @@ app.addEventListener('click',e=>{
   if(b.dataset.nowords){S.nowords=!S.nowords;save();rerenderKeep();return;}
   if(b.dataset.explain){legendSheet(b.dataset.explain);return;}
   if(b.hasAttribute('data-tilecap')){if(e.target.closest('.tile-cap'))return;const c=b.querySelector('.tile-cap');if(c){c.hidden=!c.hidden;b.setAttribute('aria-expanded',String(!c.hidden));}return;}
-  if(b.dataset.vill){S.vill={...(S.vill||{}),[b.dataset.vill]:!(S.vill||{})[b.dataset.vill]};save();applyPrefs();rerenderKeep();return;}
+  if(b.dataset.vill){S.villOn=!S.villOn;save();applyPrefs();rerenderKeep();return;}  // für alle Abschnitte zusammen (Hinweis Andi Neck 2026-10-26)
   if(b.dataset.illStyle){S.ill=b.dataset.illStyle;save();rerenderKeep();if(sheet==='legend')legendSheet(b.dataset.illKey);return;}
   if(b.hasAttribute('data-ra-sample')){if(speakToggle(b))return;if(synth){synth.cancel();synth.speak(readUtter(T().readSampleText));speakWatch(b);}return;}
   if(b.dataset.speak!==undefined){e.preventDefault();e.stopPropagation();if(speakToggle(b))return;speak(b.dataset.speak,b.dataset.speakLang,b.dataset.speakTr);speakWatch(b);return;}

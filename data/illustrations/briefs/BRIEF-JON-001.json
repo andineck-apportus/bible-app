@@ -23,16 +23,18 @@
       "signs": [
         "FIG-ZEICHEN-FLIEHEN"
       ],
-      "speech": [
-        {
-          "from": "FIG-GOTT",
-          "to": "FIG-JONA",
-          "icons": [
-            "FIG-ORT-NINIVE"
-          ]
+      "speech": [],
+      "action_de": "Jona macht sich auf, aber um nach Tarschisch zu fliehen, weg vom Angesicht JHWHs: Er steigt hinab nach Jafo und nimmt ein Schiff in die Gegenrichtung.",
+      "keywords": {
+        "de": "Weg vom Angesicht JHWHs",
+        "gsw": "Wäg vom Aagsicht vo JHWH"
+      },
+      "names": {
+        "FIG-JONA": {
+          "de": "Jona",
+          "gsw": "Jona"
         }
-      ],
-      "action_de": "JHWH sendet Jona nach Ninive; Jona flieht mit einem Schiff in die Gegenrichtung.",
+      },
       "stage": {
         "pose": {
           "FIG-JONA": "away"
@@ -40,8 +42,8 @@
         "mood": {
           "FIG-JONA": "worried"
         },
-        "god_side": "center",
         "back_side": "left",
+        "big_side": "right",
         "before": true,
         "x": {
           "FIG-JONA": 118
@@ -55,25 +57,30 @@
         ],
         "at": {
           "FIG-ZEICHEN-FLIEHEN": "FIG-JONA"
-        }
+        },
+        "god_side": "center"
       }
     },
     {
       "n": 2,
       "reference": "JON.1.4-JON.1.16",
       "figures": [
-        "FIG-JONA",
-        "FIG-GRUPPE-SEELEUTE"
+        "FIG-GOTT",
+        "FIG-GRUPPE-SEELEUTE",
+        "FIG-JONA"
       ],
       "objects": [
         "FIG-OBJ-SCHIFF",
-        "FIG-ORT-MEER-OFFEN"
+        "FIG-ORT-MEER-OFFEN",
+        "FIG-OBJ-ALTAR"
       ],
-      "signs": [
-        "FIG-ZEICHEN-STURM"
-      ],
+      "signs": [],
       "speech": [],
-      "action_de": "Im Sturm werfen die Seeleute Jona auf sein Wort hin ins Meer; das Meer wird still.",
+      "action_de": "Auf Jonas eigenes Wort hin werfen die Seeleute ihn ins Meer, nachdem sie JHWH angefleht haben; da hört das Meer auf zu toben, und die Männer fürchten JHWH, opfern ihm und geloben Gelübde.",
+      "keywords": {
+        "de": "Werft mich ins Meer",
+        "gsw": "Rüered mich is Meer"
+      },
       "stage": {
         "in": {
           "FIG-GRUPPE-SEELEUTE": "FIG-OBJ-SCHIFF"
@@ -88,10 +95,10 @@
           "FIG-JONA": "fall"
         },
         "mood": {
+          "FIG-JONA": "calm",
           "FIG-GRUPPE-SEELEUTE": "worried"
         },
-        "air_x": 100,
-        "air_y": 6,
+        "big_side": "right",
         "arrows": [
           [
             "FIG-GRUPPE-SEELEUTE",
@@ -99,13 +106,19 @@
             "throw"
           ]
         ],
-        "in_water": true
+        "sea": "calm",
+        "in_water": true,
+        "god_side": "left",
+        "at": {
+          "FIG-OBJ-ALTAR": "FIG-GRUPPE-SEELEUTE"
+        }
       }
     },
     {
       "n": 3,
       "reference": "JON.1.17",
       "figures": [
+        "FIG-GOTT",
         "FIG-JONA"
       ],
       "objects": [
@@ -117,14 +130,18 @@
         "FIG-ZEICHEN-NACHT"
       ],
       "speech": [],
-      "action_de": "Ein grosser Fisch verschlingt Jona; drei Tage und Nächte ist er in seinem Bauch.",
+      "action_de": "JHWH bestimmt einen grossen Fisch, der Jona verschlingt; drei Tage und drei Nächte ist Jona im Bauch des Fisches.",
+      "keywords": {
+        "de": "Drei Tage und drei Nächte",
+        "gsw": "Drei Täg und drei Nächt"
+      },
       "stage": {
         "in": {
           "FIG-JONA": "FIG-OBJ-GROSSER-FISCH"
         },
         "in_pos": {
           "FIG-JONA": [
-            0.55,
+            0.72,
             0.5
           ]
         },
@@ -135,32 +152,41 @@
         "mood": {
           "FIG-JONA": "worried"
         },
-        "air_x": 60,
-        "air_y": 12,
-        "big_y": 72
+        "air_x": 96,
+        "air_y": 10,
+        "big_y": 72,
+        "sea": "calm",
+        "god_side": "left",
+        "arrows": [
+          [
+            "FIG-GOTT",
+            "FIG-OBJ-GROSSER-FISCH",
+            "act"
+          ]
+        ]
       }
     }
   ],
   "actions_de": [
-    "JHWH sendet Jona nach Ninive; Jona flieht mit einem Schiff in die Gegenrichtung.",
-    "Im Sturm werfen die Seeleute Jona auf sein Wort hin ins Meer; das Meer wird still.",
-    "Ein grosser Fisch verschlingt Jona; drei Tage und Nächte ist er in seinem Bauch."
+    "Jona macht sich auf, aber um nach Tarschisch zu fliehen, weg vom Angesicht JHWHs: Er steigt hinab nach Jafo und nimmt ein Schiff in die Gegenrichtung.",
+    "Auf Jonas eigenes Wort hin werfen die Seeleute ihn ins Meer, nachdem sie JHWH angefleht haben; da hört das Meer auf zu toben, und die Männer fürchten JHWH, opfern ihm und geloben Gelübde.",
+    "JHWH bestimmt einen grossen Fisch, der Jona verschlingt; drei Tage und drei Nächte ist Jona im Bauch des Fisches."
   ],
   "captions_de": [
-    "Flucht: Gott sendet Jona nach Ninive (links); Jona läuft zum Schiff, in die Gegenrichtung (Pfeil).",
-    "Sturm: Im Sturm (Wolke, Blitz) werfen die Seeleute Jona ins Meer (Bogen).",
-    "Der grosse Fisch: Jona im Bauch des Fisches, drei Tage und drei Nächte (Sonnen, Monde)."
+    "Flucht: Jona kehrt Ninive (links) den Rücken und läuft zum Schiff nach Tarschisch, in die Gegenrichtung (Pfeil). Oben Gott (Strahlenkranz), der ihn gesandt hat.",
+    "Ins Meer → Stille: Die Seeleute im Schiff werfen Jona ins Meer (Bogen); danach opfern sie (Altar mit Flamme auf dem Schiff). Das Meer ist still.",
+    "Gott → Fisch: Gott bestimmt einen grossen Fisch (goldener Pfeil); Jona ist drei Tage und drei Nächte in seinem Bauch (drei Sonnen, drei Monde)."
   ],
-  "interpretation_note_de": "Je ein Feld aus den drei Abschnitten des Kapitels; Einzelheiten dort.",
+  "interpretation_note_de": "Drei Szenen, ein Feld je Abschnitt: Flucht vor dem Auftrag ([[JON.1.1-JON.1.3]]), Jona im Meer, das still wird, und das Opfer der Seeleute ([[JON.1.4-JON.1.16]]), der grosse Fisch ([[JON.1.17]]). Sturm, Los und Bekenntnis zeigt das Bild zum Abschnitt [[JON.1.4-JON.1.16]]. Comic-Szenen statt Strukturbilder nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-JON-001",
       "field": "summary",
-      "fingerprint": "0ebf4ccf8e2b8361"
+      "fingerprint": "d677af5015ed4a9d"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -424,6 +450,328 @@
           "Flucht: Gott sendet Jona nach Ninive (links); Jona läuft zum Schiff, in die Gegenrichtung (Pfeil).",
           "Sturm: Die Seeleute werfen Jona ins Meer (Wolke, Blitz).",
           "Der grosse Fisch: Jona im Bauch des Fisches, drei Tage und drei Nächte (Sonnen, Monde)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: Jona und Obadja neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JON.1.1-JON.1.3",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JONA"
+            ],
+            "objects": [
+              "FIG-ORT-NINIVE",
+              "FIG-OBJ-SCHIFF"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FLIEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GOTT",
+                "to": "FIG-JONA",
+                "icons": [
+                  "FIG-ORT-NINIVE"
+                ]
+              }
+            ],
+            "action_de": "JHWH sendet Jona nach Ninive; Jona flieht mit einem Schiff in die Gegenrichtung.",
+            "stage": {
+              "pose": {
+                "FIG-JONA": "away"
+              },
+              "mood": {
+                "FIG-JONA": "worried"
+              },
+              "god_side": "center",
+              "back_side": "left",
+              "before": true,
+              "x": {
+                "FIG-JONA": 118
+              },
+              "arrows": [
+                [
+                  "FIG-JONA",
+                  "FIG-OBJ-SCHIFF",
+                  "go"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-FLIEHEN": "FIG-JONA"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JON.1.4-JON.1.16",
+            "figures": [
+              "FIG-JONA",
+              "FIG-GRUPPE-SEELEUTE"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHIFF",
+              "FIG-ORT-MEER-OFFEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-STURM"
+            ],
+            "speech": [],
+            "action_de": "Im Sturm werfen die Seeleute Jona auf sein Wort hin ins Meer; das Meer wird still.",
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-SEELEUTE": "FIG-OBJ-SCHIFF"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-SEELEUTE": [
+                  0.4,
+                  0.42
+                ]
+              },
+              "pose": {
+                "FIG-JONA": "fall"
+              },
+              "mood": {
+                "FIG-GRUPPE-SEELEUTE": "worried"
+              },
+              "air_x": 100,
+              "air_y": 6,
+              "arrows": [
+                [
+                  "FIG-GRUPPE-SEELEUTE",
+                  "FIG-JONA",
+                  "throw"
+                ]
+              ],
+              "in_water": true
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JON.1.17",
+            "figures": [
+              "FIG-JONA"
+            ],
+            "objects": [
+              "FIG-OBJ-GROSSER-FISCH",
+              "FIG-ORT-MEER-OFFEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TAGE",
+              "FIG-ZEICHEN-NACHT"
+            ],
+            "speech": [],
+            "action_de": "Ein grosser Fisch verschlingt Jona; drei Tage und Nächte ist er in seinem Bauch.",
+            "stage": {
+              "in": {
+                "FIG-JONA": "FIG-OBJ-GROSSER-FISCH"
+              },
+              "in_pos": {
+                "FIG-JONA": [
+                  0.55,
+                  0.5
+                ]
+              },
+              "count": {
+                "FIG-ZEICHEN-TAGE": 3,
+                "FIG-ZEICHEN-NACHT": 3
+              },
+              "mood": {
+                "FIG-JONA": "worried"
+              },
+              "air_x": 60,
+              "air_y": 12,
+              "big_y": 72
+            }
+          }
+        ],
+        "actions_de": [
+          "JHWH sendet Jona nach Ninive; Jona flieht mit einem Schiff in die Gegenrichtung.",
+          "Im Sturm werfen die Seeleute Jona auf sein Wort hin ins Meer; das Meer wird still.",
+          "Ein grosser Fisch verschlingt Jona; drei Tage und Nächte ist er in seinem Bauch."
+        ],
+        "captions_de": [
+          "Flucht: Gott sendet Jona nach Ninive (links); Jona läuft zum Schiff, in die Gegenrichtung (Pfeil).",
+          "Sturm: Im Sturm (Wolke, Blitz) werfen die Seeleute Jona ins Meer (Bogen).",
+          "Der grosse Fisch: Jona im Bauch des Fisches, drei Tage und drei Nächte (Sonnen, Monde)."
+        ],
+        "interpretation_note_de": "Je ein Feld aus den drei Abschnitten des Kapitels; Einzelheiten dort.",
+        "basis": [
+          {
+            "record": "SUM-CH-JON-001",
+            "field": "summary",
+            "fingerprint": "0ebf4ccf8e2b8361"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JON.1.1-JON.1.3",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JONA"
+            ],
+            "objects": [
+              "FIG-ORT-NINIVE",
+              "FIG-OBJ-SCHIFF"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FLIEHEN"
+            ],
+            "speech": [],
+            "action_de": "Jona macht sich auf, aber um nach Tarschisch zu fliehen, weg vom Angesicht JHWHs: Er steigt hinab nach Jafo und nimmt ein Schiff in die Gegenrichtung.",
+            "keywords": {
+              "de": "Weg vom Angesicht JHWHs",
+              "gsw": "Wäg vom Aagsicht vo JHWH"
+            },
+            "names": {
+              "FIG-JONA": {
+                "de": "Jona",
+                "gsw": "Jona"
+              }
+            },
+            "stage": {
+              "pose": {
+                "FIG-JONA": "away"
+              },
+              "mood": {
+                "FIG-JONA": "worried"
+              },
+              "back_side": "left",
+              "big_side": "right",
+              "before": true,
+              "x": {
+                "FIG-JONA": 118
+              },
+              "arrows": [
+                [
+                  "FIG-JONA",
+                  "FIG-OBJ-SCHIFF",
+                  "go"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-FLIEHEN": "FIG-JONA"
+              },
+              "god_side": "center"
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JON.1.4-JON.1.16",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-SEELEUTE",
+              "FIG-JONA"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHIFF",
+              "FIG-ORT-MEER-OFFEN",
+              "FIG-OBJ-ALTAR"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Auf Jonas eigenes Wort hin werfen die Seeleute ihn ins Meer, nachdem sie JHWH angefleht haben; da hört das Meer auf zu toben, und die Männer fürchten JHWH, opfern ihm und geloben Gelübde.",
+            "keywords": {
+              "de": "Werft mich ins Meer",
+              "gsw": "Rüered mich is Meer"
+            },
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-SEELEUTE": "FIG-OBJ-SCHIFF"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-SEELEUTE": [
+                  0.4,
+                  0.42
+                ]
+              },
+              "pose": {
+                "FIG-JONA": "fall"
+              },
+              "mood": {
+                "FIG-JONA": "calm",
+                "FIG-GRUPPE-SEELEUTE": "worried"
+              },
+              "big_side": "right",
+              "arrows": [
+                [
+                  "FIG-GRUPPE-SEELEUTE",
+                  "FIG-JONA",
+                  "throw"
+                ]
+              ],
+              "sea": "calm",
+              "in_water": true,
+              "god_side": "left",
+              "at": {
+                "FIG-OBJ-ALTAR": "FIG-GRUPPE-SEELEUTE"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JON.1.17",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JONA"
+            ],
+            "objects": [
+              "FIG-OBJ-GROSSER-FISCH",
+              "FIG-ORT-MEER-OFFEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TAGE",
+              "FIG-ZEICHEN-NACHT"
+            ],
+            "speech": [],
+            "action_de": "JHWH bestimmt einen grossen Fisch, der Jona verschlingt; drei Tage und drei Nächte ist Jona im Bauch des Fisches.",
+            "keywords": {
+              "de": "Drei Tage und drei Nächte",
+              "gsw": "Drei Täg und drei Nächt"
+            },
+            "stage": {
+              "in": {
+                "FIG-JONA": "FIG-OBJ-GROSSER-FISCH"
+              },
+              "in_pos": {
+                "FIG-JONA": [
+                  0.72,
+                  0.5
+                ]
+              },
+              "count": {
+                "FIG-ZEICHEN-TAGE": 3,
+                "FIG-ZEICHEN-NACHT": 3
+              },
+              "mood": {
+                "FIG-JONA": "worried"
+              },
+              "air_x": 96,
+              "air_y": 10,
+              "big_y": 72,
+              "god_side": "left",
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-OBJ-GROSSER-FISCH",
+                  "act"
+                ]
+              ]
+            }
+          }
         ]
       }
     }

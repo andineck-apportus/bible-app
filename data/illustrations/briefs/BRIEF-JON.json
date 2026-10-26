@@ -11,20 +11,28 @@
   "panels": [
     {
       "n": 1,
-      "reference": "JON.1",
+      "reference": "JON.1.1-JON.1.16",
       "figures": [
-        "FIG-JONA",
-        "FIG-GRUPPE-SEELEUTE"
+        "FIG-GRUPPE-SEELEUTE",
+        "FIG-JONA"
       ],
       "objects": [
         "FIG-OBJ-SCHIFF",
         "FIG-ORT-MEER-OFFEN"
       ],
-      "signs": [
-        "FIG-ZEICHEN-STURM"
-      ],
+      "signs": [],
       "speech": [],
-      "action_de": "Jona flieht vor JHWHs Auftrag aufs Meer; im Sturm wird er ins Meer geworfen.",
+      "action_de": "Auf Jonas eigenes Wort hin werfen die Seeleute ihn ins Meer, nachdem sie JHWH angefleht haben; da hört das Meer auf zu toben, und die Männer fürchten JHWH, opfern ihm und geloben Gelübde.",
+      "keywords": {
+        "de": "Werft mich ins Meer",
+        "gsw": "Rüered mich is Meer"
+      },
+      "names": {
+        "FIG-JONA": {
+          "de": "Jona",
+          "gsw": "Jona"
+        }
+      },
       "stage": {
         "in": {
           "FIG-GRUPPE-SEELEUTE": "FIG-OBJ-SCHIFF"
@@ -39,10 +47,10 @@
           "FIG-JONA": "fall"
         },
         "mood": {
+          "FIG-JONA": "calm",
           "FIG-GRUPPE-SEELEUTE": "worried"
         },
-        "air_x": 100,
-        "air_y": 6,
+        "big_side": "right",
         "arrows": [
           [
             "FIG-GRUPPE-SEELEUTE",
@@ -50,12 +58,13 @@
             "throw"
           ]
         ],
+        "sea": "calm",
         "in_water": true
       }
     },
     {
       "n": 2,
-      "reference": "JON.2",
+      "reference": "JON.1.17-JON.2.10",
       "figures": [
         "FIG-GOTT",
         "FIG-JONA"
@@ -65,17 +74,12 @@
         "FIG-ORT-TIEFE"
       ],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JONA",
-          "to": "FIG-GOTT",
-          "icons": [
-            "FIG-ORT-TIEFE",
-            "FIG-ZEICHEN-RETTUNG"
-          ]
-        }
-      ],
-      "action_de": "Im Bauch des grossen Fisches betet Jona; Gott rettet ihn.",
+      "speech": [],
+      "action_de": "Ein grosser Fisch verschlingt Jona; in seinem Bauch dankt Jona JHWH für die Rettung, und der Fisch speit ihn ans trockene Land.",
+      "keywords": {
+        "de": "Die Rettung gehört JHWH",
+        "gsw": "D Rettig ghört JHWH"
+      },
       "stage": {
         "in": {
           "FIG-JONA": "FIG-OBJ-GROSSER-FISCH"
@@ -87,7 +91,7 @@
           ]
         },
         "mood": {
-          "FIG-JONA": "calm"
+          "FIG-JONA": "smile"
         },
         "god_side": "right",
         "big_y": 66
@@ -95,7 +99,7 @@
     },
     {
       "n": 3,
-      "reference": "JON.3",
+      "reference": "JON.3.1-JON.3.10",
       "figures": [
         "FIG-JONA",
         "FIG-GRUPPE-MENGE"
@@ -111,16 +115,23 @@
           "from": "FIG-JONA",
           "to": "FIG-GRUPPE-MENGE",
           "icons": [
-            "FIG-ZEICHEN-STUNDE",
             "FIG-ZEICHEN-UMSTURZ"
-          ]
+          ],
+          "word": {
+            "de": "Noch vierzig Tage!",
+            "gsw": "No vierzg Täg!"
+          }
         }
       ],
-      "action_de": "Jona ruft in Ninive den Untergang aus; die Stadt kehrt um, und Gott verschont sie.",
+      "action_de": "Jona ruft in Ninive: Noch vierzig Tage, und Ninive wird umgestürzt; die Leute glauben an Gott, tun Busse und kehren um, und Gott verschont die Stadt.",
+      "keywords": {
+        "de": "Da glaubten die Leute von Ninive an Gott",
+        "gsw": "Da händ d Lüüt vo Ninive a Gott glaubt"
+      },
       "stage": {
         "mood": {
-          "FIG-JONA": "calm",
-          "FIG-GRUPPE-MENGE": "calm"
+          "FIG-JONA": "earnest",
+          "FIG-GRUPPE-MENGE": "pensive"
         },
         "wear": {
           "FIG-GRUPPE-MENGE": "sack"
@@ -130,20 +141,14 @@
         },
         "x": {
           "FIG-JONA": 36,
-          "FIG-GRUPPE-MENGE": 112
+          "FIG-GRUPPE-MENGE": 120
         },
-        "arrows": [
-          [
-            "FIG-JONA",
-            "FIG-GRUPPE-MENGE",
-            "act"
-          ]
-        ]
+        "back_side": "right"
       }
     },
     {
       "n": 4,
-      "reference": "JON.4",
+      "reference": "JON.4.1-JON.4.11",
       "figures": [
         "FIG-GOTT",
         "FIG-JONA"
@@ -157,13 +162,19 @@
           "from": "FIG-GOTT",
           "to": "FIG-JONA",
           "icons": [
-            "FIG-ZEICHEN-ERBARMEN",
-            "FIG-ORT-NINIVE",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
+            "FIG-ORT-NINIVE"
+          ],
+          "word": {
+            "de": "Sollte ich nicht Mitleid haben mit Ninive?",
+            "gsw": "Sött ich nöd Mitleid ha mit Ninive?"
+          }
         }
       ],
-      "action_de": "Jona ist zornig über Gottes Gnade; Gott fragt ihn, ob er nicht Mitleid haben soll mit Ninive.",
+      "action_de": "Gott fragt Jona: Du hast Mitleid mit dem Rizinus – sollte ich nicht Mitleid haben mit Ninive, der grossen Stadt, mit ihren Menschen und dem vielen Vieh?",
+      "keywords": {
+        "de": "Du hast Mitleid mit dem Rizinus",
+        "gsw": "Du häsch Mitleid mit em Rizinus"
+      },
       "stage": {
         "pose": {
           "FIG-JONA": "sit"
@@ -182,27 +193,27 @@
     }
   ],
   "actions_de": [
-    "Jona flieht vor JHWHs Auftrag aufs Meer; im Sturm wird er ins Meer geworfen.",
-    "Im Bauch des grossen Fisches betet Jona; Gott rettet ihn.",
-    "Jona ruft in Ninive den Untergang aus; die Stadt kehrt um, und Gott verschont sie.",
-    "Jona ist zornig über Gottes Gnade; Gott fragt ihn, ob er nicht Mitleid haben soll mit Ninive."
+    "Auf Jonas eigenes Wort hin werfen die Seeleute ihn ins Meer, nachdem sie JHWH angefleht haben; da hört das Meer auf zu toben, und die Männer fürchten JHWH, opfern ihm und geloben Gelübde.",
+    "Ein grosser Fisch verschlingt Jona; in seinem Bauch dankt Jona JHWH für die Rettung, und der Fisch speit ihn ans trockene Land.",
+    "Jona ruft in Ninive: Noch vierzig Tage, und Ninive wird umgestürzt; die Leute glauben an Gott, tun Busse und kehren um, und Gott verschont die Stadt.",
+    "Gott fragt Jona: Du hast Mitleid mit dem Rizinus – sollte ich nicht Mitleid haben mit Ninive, der grossen Stadt, mit ihren Menschen und dem vielen Vieh?"
   ],
   "captions_de": [
-    "Flucht und Sturm: Jona flieht aufs Meer; im Sturm werfen ihn die Seeleute ins Meer (Bogen).",
-    "Im Fisch: Jona betet zu Gott (Sprechblase): aus der Tiefe (dunkles Wasser) gerettet (Pfeil nach oben).",
-    "Botschaft → Umkehr: Jona kündigt den Untergang an (Sanduhr, Mauern); darauf (Pfeil) tut die Stadt Busse in Sacktuch (dunkle Kleider) und kehrt um (Pfeil über ihnen).",
-    "Gottes Frage: Bei der verdorrten Staude fragt Gott Jona: Sollte ich nicht Mitleid haben mit Ninive?"
+    "Ins Meer → Stille: Die Seeleute im Schiff werfen Jona ins Meer (Bogen). Das Meer ist still.",
+    "Im Fisch: Jona im Bauch des grossen Fisches betet zu Gott (Strahlenkranz).",
+    "Botschaft → Umkehr: Jona ruft «Noch vierzig Tage!»; die Leute von Ninive tragen Sacktuch (dunkle Kleider) und kehren um (Pfeil über ihnen).",
+    "Gottes letzte Frage: Bei der verdorrten Staude fragt Gott (Strahlenkranz) Jona: «Sollte ich nicht Mitleid haben mit Ninive?» (Stadt); Jona sitzt nachdenklich da. Das Buch endet mit der Frage."
   ],
-  "interpretation_note_de": "Ein Feld je Kapitel. Das Buch endet mit Gottes Frage an Jona ([[JON.4.11]]).",
+  "interpretation_note_de": "Vier Szenen zu den Stationen der Kernanalyse: Flucht und Sturm (Jona wird ins Meer geworfen, [[JON.1.1-JON.1.16]]), Rettung im Fisch ([[JON.1.17-JON.2.10]]), Ninives Umkehr ([[JON.3.1-JON.3.10]]) und Gottes Frage an den zornigen Jona ([[JON.4.1-JON.4.11]]). Dass die beiden Hälften des Buches parallel gebaut sind, ist Lesart der Auslegung und im Bild nicht gezeigt. Das Buch endet mit Gottes Frage ([[JON.4.11]]). Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-BOOK-JON",
       "field": "summary",
-      "fingerprint": "1ffd71cd5f88758c"
+      "fingerprint": "4811752768ac01d5"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -707,6 +718,219 @@
           "Im Fisch: Jona betet zu Gott (Sprechblase): aus der Tiefe (dunkles Wasser) gerettet (Pfeil nach oben).",
           "Ninive kehrt um: Jona kündigt den Untergang an (Sanduhr, Mauern); die Stadt tut Busse in Sacktuch (dunkle Kleider) und kehrt um (Pfeil).",
           "Gottes Frage: Bei der verdorrten Staude fragt Gott Jona: Sollte ich nicht Mitleid haben mit Ninive?"
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: Jona und Obadja neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JON.1",
+            "figures": [
+              "FIG-JONA",
+              "FIG-GRUPPE-SEELEUTE"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHIFF",
+              "FIG-ORT-MEER-OFFEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-STURM"
+            ],
+            "speech": [],
+            "action_de": "Jona flieht vor JHWHs Auftrag aufs Meer; im Sturm wird er ins Meer geworfen.",
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-SEELEUTE": "FIG-OBJ-SCHIFF"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-SEELEUTE": [
+                  0.4,
+                  0.42
+                ]
+              },
+              "pose": {
+                "FIG-JONA": "fall"
+              },
+              "mood": {
+                "FIG-GRUPPE-SEELEUTE": "worried"
+              },
+              "air_x": 100,
+              "air_y": 6,
+              "arrows": [
+                [
+                  "FIG-GRUPPE-SEELEUTE",
+                  "FIG-JONA",
+                  "throw"
+                ]
+              ],
+              "in_water": true
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JON.2",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JONA"
+            ],
+            "objects": [
+              "FIG-OBJ-GROSSER-FISCH",
+              "FIG-ORT-TIEFE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JONA",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ORT-TIEFE",
+                  "FIG-ZEICHEN-RETTUNG"
+                ]
+              }
+            ],
+            "action_de": "Im Bauch des grossen Fisches betet Jona; Gott rettet ihn.",
+            "stage": {
+              "in": {
+                "FIG-JONA": "FIG-OBJ-GROSSER-FISCH"
+              },
+              "in_pos": {
+                "FIG-JONA": [
+                  0.55,
+                  0.5
+                ]
+              },
+              "mood": {
+                "FIG-JONA": "calm"
+              },
+              "god_side": "right",
+              "big_y": 66
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JON.3",
+            "figures": [
+              "FIG-JONA",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-NINIVE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-UMKEHR"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JONA",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-STUNDE",
+                  "FIG-ZEICHEN-UMSTURZ"
+                ]
+              }
+            ],
+            "action_de": "Jona ruft in Ninive den Untergang aus; die Stadt kehrt um, und Gott verschont sie.",
+            "stage": {
+              "mood": {
+                "FIG-JONA": "calm",
+                "FIG-GRUPPE-MENGE": "calm"
+              },
+              "wear": {
+                "FIG-GRUPPE-MENGE": "sack"
+              },
+              "at": {
+                "FIG-ZEICHEN-UMKEHR": "FIG-GRUPPE-MENGE"
+              },
+              "x": {
+                "FIG-JONA": 36,
+                "FIG-GRUPPE-MENGE": 112
+              },
+              "arrows": [
+                [
+                  "FIG-JONA",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JON.4",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JONA"
+            ],
+            "objects": [
+              "FIG-OBJ-RIZINUS-VERDORRT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GOTT",
+                "to": "FIG-JONA",
+                "icons": [
+                  "FIG-ZEICHEN-ERBARMEN",
+                  "FIG-ORT-NINIVE",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Jona ist zornig über Gottes Gnade; Gott fragt ihn, ob er nicht Mitleid haben soll mit Ninive.",
+            "stage": {
+              "pose": {
+                "FIG-JONA": "sit"
+              },
+              "mood": {
+                "FIG-JONA": "pensive"
+              },
+              "god_side": "right",
+              "x": {
+                "FIG-JONA": 84
+              },
+              "floor_x": {
+                "FIG-OBJ-RIZINUS-VERDORRT": 8
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jona flieht vor JHWHs Auftrag aufs Meer; im Sturm wird er ins Meer geworfen.",
+          "Im Bauch des grossen Fisches betet Jona; Gott rettet ihn.",
+          "Jona ruft in Ninive den Untergang aus; die Stadt kehrt um, und Gott verschont sie.",
+          "Jona ist zornig über Gottes Gnade; Gott fragt ihn, ob er nicht Mitleid haben soll mit Ninive."
+        ],
+        "captions_de": [
+          "Flucht und Sturm: Jona flieht aufs Meer; im Sturm werfen ihn die Seeleute ins Meer (Bogen).",
+          "Im Fisch: Jona betet zu Gott (Sprechblase): aus der Tiefe (dunkles Wasser) gerettet (Pfeil nach oben).",
+          "Botschaft → Umkehr: Jona kündigt den Untergang an (Sanduhr, Mauern); darauf (Pfeil) tut die Stadt Busse in Sacktuch (dunkle Kleider) und kehrt um (Pfeil über ihnen).",
+          "Gottes Frage: Bei der verdorrten Staude fragt Gott Jona: Sollte ich nicht Mitleid haben mit Ninive?"
+        ],
+        "interpretation_note_de": "Ein Feld je Kapitel. Das Buch endet mit Gottes Frage an Jona ([[JON.4.11]]).",
+        "basis": [
+          {
+            "record": "SUM-BOOK-JON",
+            "field": "summary",
+            "fingerprint": "1ffd71cd5f88758c"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Prüfung Struktur zuerst Jona/Obadja",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-BOOK-JON",
+            "field": "summary",
+            "fingerprint": "77725e105547d0ee"
+          }
         ]
       }
     }
