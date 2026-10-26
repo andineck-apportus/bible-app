@@ -11,87 +11,73 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.2.1-MAT.2.2",
-      "figures": [
-        "FIG-GRUPPE-STERNDEUTER",
-        "FIG-GRUPPE-MENGE"
-      ],
-      "objects": [
-        "FIG-ORT-JERUSALEM"
-      ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-STERNDEUTER",
-          "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-ZEICHEN-GEBURT",
-            "FIG-OBJ-KRONE",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
-        },
-        {
-          "from": "FIG-GRUPPE-STERNDEUTER",
-          "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-OBJ-STERN",
-            "FIG-ZEICHEN-KNIEN"
-          ]
-        }
-      ],
-      "action_de": "Nach der Geburt Jesu in Betlehem kommen Sterndeuter aus dem Osten nach Jerusalem und fragen: Wo ist der neugeborene König der Juden? Wir haben seinen Stern aufgehen sehen und sind gekommen, um uns vor ihm niederzuwerfen.",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-STERNDEUTER": "earnest",
-          "FIG-GRUPPE-MENGE": "surprised"
-        },
-        "back_side": "right"
-      }
-    },
-    {
-      "n": 2,
-      "reference": "MAT.2.3-MAT.2.8",
+      "reference": "MAT.2.1-MAT.2.6",
       "figures": [
         "FIG-GRUPPE-SCHRIFTGELEHRTE",
         "FIG-HERODES-DER-GROSSE",
         "FIG-GRUPPE-STERNDEUTER"
       ],
-      "objects": [],
-      "signs": [],
+      "objects": [
+        "FIG-ORT-JERUSALEM"
+      ],
+      "signs": [
+        "FIG-ZEICHEN-FURCHT"
+      ],
       "speech": [
+        {
+          "from": "FIG-GRUPPE-STERNDEUTER",
+          "to": "FIG-HERODES-DER-GROSSE",
+          "icons": [
+            "FIG-OBJ-STERN"
+          ],
+          "word": {
+            "de": "Wo ist der neugeborene König?",
+            "gsw": "Wo isch de neugebore König?"
+          }
+        },
         {
           "from": "FIG-GRUPPE-SCHRIFTGELEHRTE",
           "to": "FIG-HERODES-DER-GROSSE",
           "icons": [
             "FIG-ORT-BETLEHEM"
-          ]
-        },
-        {
-          "from": "FIG-HERODES-DER-GROSSE",
-          "to": "FIG-GRUPPE-STERNDEUTER",
-          "icons": [
-            "FIG-ZEICHEN-GEBURT",
-            "FIG-ZEICHEN-SUCHEN-FINDEN"
-          ]
+          ],
+          "word": {
+            "de": "In Betlehem in Judäa",
+            "gsw": "Z Betlehem in Judäa"
+          }
         }
       ],
-      "action_de": "Herodes erschrickt und erfährt von den Hohepriestern und Schriftgelehrten, dass der Christus nach dem Propheten in Betlehem geboren wird. Heimlich schickt er die Sterndeuter dorthin: Forscht nach dem Kind und meldet es mir, damit auch ich mich vor ihm niederwerfe.",
+      "action_de": "Sterndeuter aus dem Osten kommen nach Jerusalem und fragen: Wo ist der neugeborene König der Juden? Herodes erschrickt; die Hohepriester und Schriftgelehrten sagen ihm nach dem Propheten: in Betlehem in Judäa.",
+      "keywords": {
+        "de": "Sterndeuter aus dem Osten",
+        "gsw": "Stärndüüter us em Oste"
+      },
+      "names": {
+        "FIG-HERODES-DER-GROSSE": {
+          "de": "Herodes",
+          "gsw": "Herodes"
+        }
+      },
       "stage": {
+        "at": {
+          "FIG-ZEICHEN-FURCHT": "FIG-HERODES-DER-GROSSE"
+        },
         "mood": {
           "FIG-GRUPPE-SCHRIFTGELEHRTE": "calm",
-          "FIG-HERODES-DER-GROSSE": "worried",
-          "FIG-GRUPPE-STERNDEUTER": "calm"
+          "FIG-HERODES-DER-GROSSE": "fear",
+          "FIG-GRUPPE-STERNDEUTER": "earnest"
         },
         "x": {
           "FIG-GRUPPE-SCHRIFTGELEHRTE": 28,
-          "FIG-HERODES-DER-GROSSE": 108,
-          "FIG-GRUPPE-STERNDEUTER": 160
-        }
+          "FIG-HERODES-DER-GROSSE": 100,
+          "FIG-GRUPPE-STERNDEUTER": 158
+        },
+        "back_side": "left"
       }
     },
     {
-      "n": 3,
-      "reference": "MAT.2.9-MAT.2.11",
+      "n": 2,
+      "reference": "MAT.2.7-MAT.2.11",
       "figures": [
         "FIG-GRUPPE-STERNDEUTER",
         "FIG-MARIA-MUTTER-JESU"
@@ -106,7 +92,17 @@
         "FIG-ZEICHEN-FREUDE"
       ],
       "speech": [],
-      "action_de": "Der Stern bleibt über dem Ort stehen, wo das Kind ist; voller Freude gehen die Sterndeuter ins Haus, werfen sich vor dem Kind bei Maria, seiner Mutter, nieder und bringen Gold, Weihrauch und Myrrhe dar.",
+      "action_de": "Der Stern bleibt über dem Ort stehen, wo das Kind ist; die Sterndeuter freuen sich sehr, sehen das Kind mit Maria, seiner Mutter, fallen auf die Knie, werfen sich vor ihm nieder und bringen ihm Gold, Weihrauch und Myrrhe.",
+      "keywords": {
+        "de": "Gold und Weihrauch und Myrrhe",
+        "gsw": "Gold und Wiirauch und Myrrhe"
+      },
+      "names": {
+        "FIG-MARIA-MUTTER-JESU": {
+          "de": "Maria",
+          "gsw": "Maria"
+        }
+      },
       "stage": {
         "hold": {
           "FIG-MARIA-MUTTER-JESU": "FIG-JESUS-KIND"
@@ -137,35 +133,42 @@
       }
     },
     {
-      "n": 4,
+      "n": 3,
       "reference": "MAT.2.12",
       "figures": [
         "FIG-HERODES-DER-GROSSE",
         "FIG-GRUPPE-STERNDEUTER"
       ],
-      "objects": [
-        "FIG-ORT-LAND"
-      ],
+      "objects": [],
       "signs": [
-        "FIG-ZEICHEN-NACHT",
-        "FIG-ZEICHEN-ABSTAND"
+        "FIG-ZEICHEN-WEG"
       ],
       "speech": [
         {
           "from": "FIG-GRUPPE-STERNDEUTER",
           "to": "FIG-GRUPPE-STERNDEUTER",
           "icons": [
-            "FIG-HERODES-DER-GROSSE",
-            "FIG-ZEICHEN-NEIN"
+            "FIG-ZEICHEN-NICHT"
           ],
-          "think": true
+          "think": true,
+          "word": {
+            "de": "Nicht zu Herodes!",
+            "gsw": "Nöd zum Herodes!"
+          }
         }
       ],
-      "action_de": "Weil sie im Traum die Weisung erhalten haben, nicht zu Herodes zurückzukehren, ziehen die Sterndeuter auf einem anderen Weg in ihr Land zurück.",
+      "action_de": "Im Traum erhalten die Sterndeuter die Weisung, nicht zu Herodes zurückzukehren, und ziehen auf einem anderen Weg in ihr Land.",
+      "keywords": {
+        "de": "auf einem anderen Weg",
+        "gsw": "uf eme andere Wäg"
+      },
       "stage": {
         "split": 1,
         "pose": {
           "FIG-GRUPPE-STERNDEUTER": "away"
+        },
+        "at": {
+          "FIG-ZEICHEN-WEG": "FIG-GRUPPE-STERNDEUTER"
         },
         "mood": {
           "FIG-HERODES-DER-GROSSE": "calm",
@@ -179,41 +182,33 @@
     }
   ],
   "actions_de": [
-    "Nach der Geburt Jesu in Betlehem kommen Sterndeuter aus dem Osten nach Jerusalem und fragen: Wo ist der neugeborene König der Juden? Wir haben seinen Stern aufgehen sehen und sind gekommen, um uns vor ihm niederzuwerfen.",
-    "Herodes erschrickt und erfährt von den Hohepriestern und Schriftgelehrten, dass der Christus nach dem Propheten in Betlehem geboren wird. Heimlich schickt er die Sterndeuter dorthin: Forscht nach dem Kind und meldet es mir, damit auch ich mich vor ihm niederwerfe.",
-    "Der Stern bleibt über dem Ort stehen, wo das Kind ist; voller Freude gehen die Sterndeuter ins Haus, werfen sich vor dem Kind bei Maria, seiner Mutter, nieder und bringen Gold, Weihrauch und Myrrhe dar.",
-    "Weil sie im Traum die Weisung erhalten haben, nicht zu Herodes zurückzukehren, ziehen die Sterndeuter auf einem anderen Weg in ihr Land zurück."
+    "Sterndeuter aus dem Osten kommen nach Jerusalem und fragen: Wo ist der neugeborene König der Juden? Herodes erschrickt; die Hohepriester und Schriftgelehrten sagen ihm nach dem Propheten: in Betlehem in Judäa.",
+    "Der Stern bleibt über dem Ort stehen, wo das Kind ist; die Sterndeuter freuen sich sehr, sehen das Kind mit Maria, seiner Mutter, fallen auf die Knie, werfen sich vor ihm nieder und bringen ihm Gold, Weihrauch und Myrrhe.",
+    "Im Traum erhalten die Sterndeuter die Weisung, nicht zu Herodes zurückzukehren, und ziehen auf einem anderen Weg in ihr Land."
   ],
   "captions_de": [
-    "In Jerusalem: Die Sterndeuter (pflaumenfarbener Kopfbund) fragen: Wo ist der neugeborene König (Säugling, Krone, Fragezeichen)? Wir sahen seinen Stern und wollen uns vor ihm niederwerfen (gelber Stern, kniende Figur).",
-    "Nach Betlehem: Die Schriftgelehrten (Schriftrolle) nennen König Herodes (Krone, dunkelrotes Gewand) Betlehem (Häuser auf dem Hügel); der erschrockene Herodes schickt die Sterndeuter dorthin, das Kind zu suchen (Säugling, Auge).",
-    "Vor dem Kind: Der Stern (gelber Stern) steht über dem Haus; voller Freude (strahlendes Gesicht) knien die Sterndeuter vor dem Kind (Kreuznimbus) bei Maria nieder und bringen ihm Gold, Weihrauch und Myrrhe (Truhe, Schale mit Rauch, Krug).",
-    "Warnung im Traum → ein anderer Weg: In der Nacht (dunkler Himmel, Mond) werden die Sterndeuter im Traum gewarnt (Denkblase: Herodes, rotes X); darum kehren sie nicht zu Herodes zurück (gestrichelte Linie) und ziehen, von ihm abgewandt, auf einem anderen Weg heim in ihr Land (grüne Hügel)."
+    "In Jerusalem: Die Sterndeuter (indigoblau, Geschenkgefäss) fragen König Herodes (Krone, dunkelrotes Gewand): «Wo ist der neugeborene König?» (Stern); Herodes erschrickt (erschrockenes Gesicht); die Schriftgelehrten (Schriftrolle) antworten: «In Betlehem» (Würfelhäuser auf dem Hügel).",
+    "Anbetung: Die Sterndeuter (indigoblau, Geschenkgefäss) knien vor dem Kind (Säugling mit Kreuznimbus) bei Maria (blauer Schleier) und freuen sich (lachendes Gesicht); vor ihnen die Gaben (Truhe mit Gold, Weihrauchschale, Krug), darüber der Stern, dahinter das Haus.",
+    "Ein anderer Weg: Die Sterndeuter gehen weg (Fussspuren), weg von Herodes (gestrichelte Linie dazwischen); sie denken: «Nicht zu Herodes!» (Gedankenwolke, Verbotsring)."
   ],
-  "interpretation_note_de": "Die Sterndeuter sind als Gruppe gezeichnet; der Text nennt weder ihre Zahl noch Namen und macht sie nicht zu Königen. Die Hohepriester im zweiten Feld ([[MAT.2.4]]) sind nicht eigens gezeichnet; das Prophetenwort ([[MIC.5.2]]) steht als Schriftrolle. Dass Herodes sich angeblich auch niederwerfen will ([[MAT.2.8]]), zeigt das Bild nicht. Die Weisung im Traum ([[MAT.2.12]]) ist als Denkblase gezeichnet.",
+  "interpretation_note_de": "Drei Felder nach dem Ablauf «Suche – Anbetung – anderer Weg» ([[MAT.2.1-MAT.2.12]]). Feld 1 fasst die Frage der Sterndeuter, das Erschrecken des Herodes und die Auskunft nach dem Prophetenwort ([[MIC.5.2]]) zusammen; dass Herodes sie heimlich nach Betlehem schickt ([[MAT.2.7-MAT.2.8]]), steht nur in der Bildhilfe. Erkennungsmoment ist die Anbetung mit den drei Gaben (Feld 2). Der Text sagt «Sterndeuter» ohne Zahl; die Gruppe zeigt drei Figuren, weil eine Gruppe so gezeichnet wird, nicht wegen der späteren «drei Könige». Dass die Weisung im Traum kommt, nennt die Bildhilfe.",
   "basis": [
     {
       "record": "TU-MAT-002-001-012",
       "field": "summary",
-      "fingerprint": "598ceefff6b794ff"
+      "fingerprint": "1975e8df2b7caed2"
     },
     {
       "record": "TRANS-MAT-002-001-023-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.2.1-MAT.2.2",
-      "fingerprint": "132ffb56e65c25a3"
+      "reference": "MAT.2.1-MAT.2.6",
+      "fingerprint": "a7aa60ed47b2e1ae"
     },
     {
       "record": "TRANS-MAT-002-001-023-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.2.3-MAT.2.8",
-      "fingerprint": "5ef6393e66d1edaf"
-    },
-    {
-      "record": "TRANS-MAT-002-001-023-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.2.9-MAT.2.11",
-      "fingerprint": "13662ab9a5fec569"
+      "reference": "MAT.2.7-MAT.2.11",
+      "fingerprint": "575ace1e6855546e"
     },
     {
       "record": "TRANS-MAT-002-001-023-DE-WORKING",
@@ -223,7 +218,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -612,6 +607,227 @@
           "Vor dem Kind: Der Stern (heller Stern mit langem Strahl) steht über dem Haus; voller Freude (Funken) knien die Sterndeuter vor dem Kind (Kreuznimbus) bei Maria nieder und bringen ihm Gold, Weihrauch und Myrrhe (Truhe, Schale mit Rauch, Krug).",
           "Warnung im Traum → ein anderer Weg: In der Nacht (dunkler Himmel, Mond) werden die Sterndeuter im Traum gewarnt (Denkblase: Herodes, rotes X); darum kehren sie nicht zu Herodes zurück (gestrichelte Linie) und ziehen, von ihm abgewandt, auf einem anderen Weg heim in ihr Land (grüne Hügel)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.2.1-MAT.2.2",
+            "figures": [
+              "FIG-GRUPPE-STERNDEUTER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-JERUSALEM"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-STERNDEUTER",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-GEBURT",
+                  "FIG-OBJ-KRONE",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-STERNDEUTER",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-OBJ-STERN",
+                  "FIG-ZEICHEN-KNIEN"
+                ]
+              }
+            ],
+            "action_de": "Nach der Geburt Jesu in Betlehem kommen Sterndeuter aus dem Osten nach Jerusalem und fragen: Wo ist der neugeborene König der Juden? Wir haben seinen Stern aufgehen sehen und sind gekommen, um uns vor ihm niederzuwerfen.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-STERNDEUTER": "earnest",
+                "FIG-GRUPPE-MENGE": "surprised"
+              },
+              "back_side": "right"
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.2.3-MAT.2.8",
+            "figures": [
+              "FIG-GRUPPE-SCHRIFTGELEHRTE",
+              "FIG-HERODES-DER-GROSSE",
+              "FIG-GRUPPE-STERNDEUTER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-SCHRIFTGELEHRTE",
+                "to": "FIG-HERODES-DER-GROSSE",
+                "icons": [
+                  "FIG-ORT-BETLEHEM"
+                ]
+              },
+              {
+                "from": "FIG-HERODES-DER-GROSSE",
+                "to": "FIG-GRUPPE-STERNDEUTER",
+                "icons": [
+                  "FIG-ZEICHEN-GEBURT",
+                  "FIG-ZEICHEN-SUCHEN-FINDEN"
+                ]
+              }
+            ],
+            "action_de": "Herodes erschrickt und erfährt von den Hohepriestern und Schriftgelehrten, dass der Christus nach dem Propheten in Betlehem geboren wird. Heimlich schickt er die Sterndeuter dorthin: Forscht nach dem Kind und meldet es mir, damit auch ich mich vor ihm niederwerfe.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-SCHRIFTGELEHRTE": "calm",
+                "FIG-HERODES-DER-GROSSE": "worried",
+                "FIG-GRUPPE-STERNDEUTER": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-SCHRIFTGELEHRTE": 28,
+                "FIG-HERODES-DER-GROSSE": 108,
+                "FIG-GRUPPE-STERNDEUTER": 160
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.2.9-MAT.2.11",
+            "figures": [
+              "FIG-GRUPPE-STERNDEUTER",
+              "FIG-MARIA-MUTTER-JESU"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS",
+              "FIG-OBJ-STERN",
+              "FIG-OBJ-GOLD-WEIHRAUCH-MYRRHE",
+              "FIG-JESUS-KIND"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [],
+            "action_de": "Der Stern bleibt über dem Ort stehen, wo das Kind ist; voller Freude gehen die Sterndeuter ins Haus, werfen sich vor dem Kind bei Maria, seiner Mutter, nieder und bringen Gold, Weihrauch und Myrrhe dar.",
+            "stage": {
+              "hold": {
+                "FIG-MARIA-MUTTER-JESU": "FIG-JESUS-KIND"
+              },
+              "pose": {
+                "FIG-GRUPPE-STERNDEUTER": "kneel"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-GRUPPE-STERNDEUTER"
+                ]
+              },
+              "mood": {
+                "FIG-GRUPPE-STERNDEUTER": "delight",
+                "FIG-MARIA-MUTTER-JESU": "smile"
+              },
+              "x": {
+                "FIG-GRUPPE-STERNDEUTER": 46,
+                "FIG-MARIA-MUTTER-JESU": 126
+              },
+              "air_x": 144,
+              "air_y": 30,
+              "floor_x": {
+                "FIG-OBJ-GOLD-WEIHRAUCH-MYRRHE": 84
+              },
+              "back_side": "right",
+              "before": true
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.2.12",
+            "figures": [
+              "FIG-HERODES-DER-GROSSE",
+              "FIG-GRUPPE-STERNDEUTER"
+            ],
+            "objects": [
+              "FIG-ORT-LAND"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NACHT",
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-STERNDEUTER",
+                "to": "FIG-GRUPPE-STERNDEUTER",
+                "icons": [
+                  "FIG-HERODES-DER-GROSSE",
+                  "FIG-ZEICHEN-NEIN"
+                ],
+                "think": true
+              }
+            ],
+            "action_de": "Weil sie im Traum die Weisung erhalten haben, nicht zu Herodes zurückzukehren, ziehen die Sterndeuter auf einem anderen Weg in ihr Land zurück.",
+            "stage": {
+              "split": 1,
+              "pose": {
+                "FIG-GRUPPE-STERNDEUTER": "away"
+              },
+              "mood": {
+                "FIG-HERODES-DER-GROSSE": "calm",
+                "FIG-GRUPPE-STERNDEUTER": "calm"
+              },
+              "x": {
+                "FIG-HERODES-DER-GROSSE": 28,
+                "FIG-GRUPPE-STERNDEUTER": 124
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Nach der Geburt Jesu in Betlehem kommen Sterndeuter aus dem Osten nach Jerusalem und fragen: Wo ist der neugeborene König der Juden? Wir haben seinen Stern aufgehen sehen und sind gekommen, um uns vor ihm niederzuwerfen.",
+          "Herodes erschrickt und erfährt von den Hohepriestern und Schriftgelehrten, dass der Christus nach dem Propheten in Betlehem geboren wird. Heimlich schickt er die Sterndeuter dorthin: Forscht nach dem Kind und meldet es mir, damit auch ich mich vor ihm niederwerfe.",
+          "Der Stern bleibt über dem Ort stehen, wo das Kind ist; voller Freude gehen die Sterndeuter ins Haus, werfen sich vor dem Kind bei Maria, seiner Mutter, nieder und bringen Gold, Weihrauch und Myrrhe dar.",
+          "Weil sie im Traum die Weisung erhalten haben, nicht zu Herodes zurückzukehren, ziehen die Sterndeuter auf einem anderen Weg in ihr Land zurück."
+        ],
+        "captions_de": [
+          "In Jerusalem: Die Sterndeuter (pflaumenfarbener Kopfbund) fragen: Wo ist der neugeborene König (Säugling, Krone, Fragezeichen)? Wir sahen seinen Stern und wollen uns vor ihm niederwerfen (gelber Stern, kniende Figur).",
+          "Nach Betlehem: Die Schriftgelehrten (Schriftrolle) nennen König Herodes (Krone, dunkelrotes Gewand) Betlehem (Häuser auf dem Hügel); der erschrockene Herodes schickt die Sterndeuter dorthin, das Kind zu suchen (Säugling, Auge).",
+          "Vor dem Kind: Der Stern (gelber Stern) steht über dem Haus; voller Freude (strahlendes Gesicht) knien die Sterndeuter vor dem Kind (Kreuznimbus) bei Maria nieder und bringen ihm Gold, Weihrauch und Myrrhe (Truhe, Schale mit Rauch, Krug).",
+          "Warnung im Traum → ein anderer Weg: In der Nacht (dunkler Himmel, Mond) werden die Sterndeuter im Traum gewarnt (Denkblase: Herodes, rotes X); darum kehren sie nicht zu Herodes zurück (gestrichelte Linie) und ziehen, von ihm abgewandt, auf einem anderen Weg heim in ihr Land (grüne Hügel)."
+        ],
+        "interpretation_note_de": "Die Sterndeuter sind als Gruppe gezeichnet; der Text nennt weder ihre Zahl noch Namen und macht sie nicht zu Königen. Die Hohepriester im zweiten Feld ([[MAT.2.4]]) sind nicht eigens gezeichnet; das Prophetenwort ([[MIC.5.2]]) steht als Schriftrolle. Dass Herodes sich angeblich auch niederwerfen will ([[MAT.2.8]]), zeigt das Bild nicht. Die Weisung im Traum ([[MAT.2.12]]) ist als Denkblase gezeichnet.",
+        "basis": [
+          {
+            "record": "TU-MAT-002-001-012",
+            "field": "summary",
+            "fingerprint": "598ceefff6b794ff"
+          },
+          {
+            "record": "TRANS-MAT-002-001-023-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.2.1-MAT.2.2",
+            "fingerprint": "132ffb56e65c25a3"
+          },
+          {
+            "record": "TRANS-MAT-002-001-023-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.2.3-MAT.2.8",
+            "fingerprint": "5ef6393e66d1edaf"
+          },
+          {
+            "record": "TRANS-MAT-002-001-023-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.2.9-MAT.2.11",
+            "fingerprint": "13662ab9a5fec569"
+          },
+          {
+            "record": "TRANS-MAT-002-001-023-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.2.12",
+            "fingerprint": "3dbcdadcdcbaa1ad"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

@@ -1,0 +1,121 @@
+{
+ "id": "CORE-MAT-003",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "chapter",
+ "reference": "MAT.3.1-MAT.3.17",
+ "target": "SUM-CH-MAT-003",
+ "children": [
+  "CORE-MAT-003-001-012",
+  "CORE-MAT-003-013-017"
+ ],
+ "core_de": "Johannes der Täufer ruft in der Wüste zur Umkehr, weil das Reich der Himmel nahe gekommen ist, tauft im Jordan, fordert Frucht der Umkehr und kündigt den Stärkeren an, der mit heiligem Geist und Feuer tauft; Jesus lässt sich von ihm taufen, und der Geist kommt auf ihn, während die Stimme aus den Himmeln ihn als geliebten Sohn bezeugt.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Wegbereiter – der Kommende",
+    "range": "MAT.3.1-MAT.3.17",
+    "elements": [
+     {
+      "label": "Johannes der Täufer: Ruf zur Umkehr, Taufe, Ankündigung des Stärkeren",
+      "ref": "MAT.3.1-MAT.3.12",
+      "role": "Abschnitt 1"
+     },
+     {
+      "label": "Die Taufe Jesu: Geist und Stimme aus den Himmeln",
+      "ref": "MAT.3.13-MAT.3.17",
+      "role": "Abschnitt 2"
+     }
+    ],
+    "features": {
+     "leitwort": [
+      {
+       "word": "taufen",
+       "refs": [
+        "MAT.3.6",
+        "MAT.3.11",
+        "MAT.3.13",
+        "MAT.3.16"
+       ],
+       "role": "verbindet beide Abschnitte"
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "MAT.3.11",
+       "kind": "Ankündigung → Auftritt",
+       "note": "Der angekündigte Stärkere kommt in [[MAT.3.13]]"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.3.1-MAT.3.12",
+   "text_de": "Johannes ruft: «Kehrt um, denn das Reich der Himmel ist nahe gekommen!», tauft im Jordan, verlangt Frucht der Umkehr und kündigt den Stärkeren an, der mit heiligem Geist und Feuer taufen wird.",
+   "reason_de": "Erster Abschnitt (Kriterium 1).",
+   "recognition_de": "Feld 1: Johannes tauft im Jordan, Ruf «Kehrt um!».",
+   "keywords": [
+    "Kehrt um, denn das Reich der Himmel ist nahe gekommen!",
+    "mit heiligem Geist und Feuer taufen"
+   ]
+  },
+  {
+   "reference": "MAT.3.13-MAT.3.17",
+   "text_de": "Jesus lässt sich von Johannes taufen; die Himmel öffnen sich, der Geist kommt wie eine Taube auf ihn, und die Stimme sagt: «Dieser ist mein geliebter Sohn.»",
+   "reason_de": "Zweiter Abschnitt, Höhepunkt des Kapitels (Kriterien 1 und 2).",
+   "recognition_de": "Feld 2: Taufe Jesu, Taube, offener Himmel.",
+   "keywords": [
+    "wie eine Taube",
+    "Dieser ist mein geliebter Sohn"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Strafrede an Pharisäer und Sadduzäer im Einzelnen – im Abschnitt vollständig"
+ ],
+ "persons": [
+  "FIG-JOHANNES-TAEUFER",
+  "FIG-JESUS",
+  "FIG-HEILIGER-GEIST",
+  "FIG-GOTT",
+  "FIG-GRUPPE-MENGE"
+ ],
+ "places": [
+  "FIG-ORT-JORDAN",
+  "FIG-ORT-WUESTE"
+ ],
+ "basis": [
+  {
+   "record": "CORE-MAT-003-001-012",
+   "fingerprint": "8c53408a11caf17f"
+  },
+  {
+   "record": "CORE-MAT-003-013-017",
+   "fingerprint": "72968996d9292456"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; keine fachliche Prüfung durch eine Person",
+  "summary_de": "Beide Abschnitte mit Kernaussage; Ankündigung (3,11) → Auftritt (3,13) als Bezug, nicht als Deutung über den Text hinaus.",
+  "changes_de": []
+ }
+}

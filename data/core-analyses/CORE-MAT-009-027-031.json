@@ -1,0 +1,156 @@
+{
+ "id": "CORE-MAT-009-027-031",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.9.27-MAT.9.31",
+ "target": "TU-MAT-009-027-031",
+ "core_de": "Zwei Blinde folgen Jesus und schreien: «Erbarme dich unser, Sohn Davids!»; im Haus fragt er sie: «Glaubt ihr, dass ich das tun kann?» – «Ja, Herr» –, berührt ihre Augen mit den Worten «Nach eurem Glauben soll euch geschehen», und ihre Augen werden geöffnet; obwohl er ihnen streng verbietet, es jemandem zu sagen, machen sie ihn in der ganzen Gegend bekannt.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Ruf – Frage – Heilung – Verbot – Verbreitung",
+    "range": "MAT.9.27-MAT.9.31",
+    "elements": [
+     {
+      "label": "Zwei Blinde folgen und schreien: «Erbarme dich unser, Sohn Davids!»",
+      "ref": "MAT.9.27",
+      "role": "Ruf"
+     },
+     {
+      "label": "Wortwechsel im Haus",
+      "ref": "MAT.9.28-MAT.9.29",
+      "role": "Gespräch",
+      "child": "s2"
+     },
+     {
+      "label": "Ihre Augen werden geöffnet",
+      "ref": "MAT.9.30",
+      "role": "Heilung"
+     },
+     {
+      "label": "Verbot ↔ Verbreitung",
+      "ref": "MAT.9.30-MAT.9.31",
+      "role": "Ausgang",
+      "child": "s3"
+     }
+    ],
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "dialogue",
+    "subtype": "Frage nach dem Glauben",
+    "range": "MAT.9.28-MAT.9.29",
+    "elements": [
+     {
+      "label": "Jesus: «Glaubt ihr, dass ich das tun kann?»",
+      "ref": "MAT.9.28",
+      "role": "Frage"
+     },
+     {
+      "label": "Die Blinden: «Ja, Herr.»",
+      "ref": "MAT.9.28",
+      "role": "Antwort"
+     },
+     {
+      "label": "Jesus berührt ihre Augen: «Nach eurem Glauben soll euch geschehen.»",
+      "ref": "MAT.9.29",
+      "role": "Wort"
+     }
+    ],
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "contrast",
+    "subtype": "Verbot ↔ Verbreitung",
+    "range": "MAT.9.30-MAT.9.31",
+    "elements": [
+     {
+      "label": "«Seht zu, dass niemand es erfährt!»",
+      "ref": "MAT.9.30",
+      "role": "Verbot"
+     },
+     {
+      "label": "Sie aber machten ihn in jener ganzen Gegend bekannt",
+      "ref": "MAT.9.31",
+      "role": "Tat"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.9.27-MAT.9.28",
+   "text_de": "Zwei Blinde folgen Jesus und schreien: «Erbarme dich unser, Sohn Davids!»; im Haus fragt Jesus: «Glaubt ihr, dass ich das tun kann?»; sie sagen: «Ja, Herr.»",
+   "reason_de": "Ruf und Glaubensfrage (Kriterien 1 und 2).",
+   "recognition_de": "Zwei Blinde rufen hinter Jesus her.",
+   "keywords": [
+    "Erbarme dich unser, Sohn Davids!",
+    "Glaubt ihr, dass ich das tun kann?"
+   ]
+  },
+  {
+   "reference": "MAT.9.29-MAT.9.30",
+   "text_de": "Jesus berührt ihre Augen: «Nach eurem Glauben soll euch geschehen», und ihre Augen werden geöffnet; er verbietet ihnen streng: «Seht zu, dass niemand es erfährt!»",
+   "reason_de": "Heilung durch Berührung und Wort (Kriterium 4).",
+   "recognition_de": "Jesus berührt die Augen der Blinden; sie sehen.",
+   "keywords": [
+    "Nach eurem Glauben soll euch geschehen",
+    "ihre Augen wurden geöffnet"
+   ]
+  },
+  {
+   "reference": "MAT.9.31",
+   "text_de": "Sie aber gehen hinaus und machen ihn in der ganzen Gegend bekannt.",
+   "reason_de": "Ausgang gegen das Verbot (Kriterium 3).",
+   "recognition_de": "Die Geheilten erzählen es überall.",
+   "keywords": [
+    "machten ihn in jener ganzen Gegend bekannt"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Welches Haus es ist – nicht gesagt"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-ROLLE-BLINDER",
+  "FIG-ROLLE-ZWEITER-BLINDER"
+ ],
+ "places": [
+  "FIG-ORT-HAUS"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.9.27-MAT.9.31",
+   "fingerprint": "10b7cf6571d1cf51"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; keine fachliche Prüfung durch eine Person",
+  "summary_de": "Ruf, Glaubensfrage, Heilung und Verbot ↔ Verbreitung vollständig.",
+  "changes_de": []
+ }
+}

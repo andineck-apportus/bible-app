@@ -26,59 +26,64 @@
           "icons": [
             "FIG-TOCHTER-JAIRUS",
             "FIG-ZEICHEN-VERSTORBEN"
-          ]
-        },
-        {
-          "from": "FIG-JAIRUS",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-ZEICHEN-HEILEN",
-            "FIG-ZEICHEN-LEBEN"
-          ]
+          ],
+          "word": {
+            "de": "Leg deine Hand auf sie, und sie wird leben!",
+            "gsw": "Leg dini Hand uf si, und si wird läbe!"
+          }
         }
       ],
       "action_de": "Ein Vorsteher wirft sich vor Jesus nieder: Meine Tochter ist eben gestorben; aber komm, leg deine Hand auf sie, und sie wird leben. Jesus steht auf und folgt ihm mit seinen Jüngern.",
+      "keywords": {
+        "de": "Meine Tochter ist eben gestorben",
+        "gsw": "Mini Tochter isch äbe gstorbe"
+      },
       "stage": {
         "pose": {
           "FIG-JAIRUS": "kneel"
         },
         "mood": {
-          "FIG-JAIRUS": "worried",
-          "FIG-GRUPPE-JUENGER": "calm"
+          "FIG-JAIRUS": "pain",
+          "FIG-GRUPPE-JUENGER": "calm",
+          "FIG-JESUS": "calm"
         },
         "x": {
           "FIG-JAIRUS": 44,
           "FIG-JESUS": 100,
-          "FIG-GRUPPE-JUENGER": 152
+          "FIG-GRUPPE-JUENGER": 156
         }
       }
     },
     {
       "n": 2,
-      "reference": "MAT.9.20-MAT.9.21",
+      "reference": "MAT.9.20-MAT.9.22",
       "figures": [
         "FIG-ROLLE-FRAU-BLUTFLUSS",
-        "FIG-JESUS",
-        "FIG-GRUPPE-JUENGER"
+        "FIG-JESUS"
       ],
       "objects": [],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-BERUEHREN"
+      ],
       "speech": [
         {
-          "from": "FIG-ROLLE-FRAU-BLUTFLUSS",
+          "from": "FIG-JESUS",
           "to": "FIG-ROLLE-FRAU-BLUTFLUSS",
           "icons": [
-            "FIG-ZEICHEN-BERUEHREN",
-            "FIG-ZEICHEN-RETTUNG"
+            "FIG-ZEICHEN-GLAUBEN"
           ],
-          "think": true
+          "word": {
+            "de": "Dein Glaube hat dich gerettet.",
+            "gsw": "Din Glaube hät dich grettet."
+          }
         }
       ],
-      "action_de": "Eine Frau, die seit zwölf Jahren an Blutfluss leidet, berührt von hinten den Saum seines Mantels, denn sie sagt sich: Wenn ich nur seinen Mantel berühre, werde ich gerettet.",
+      "action_de": "Eine Frau, die seit zwölf Jahren an Blutfluss leidet, berührt von hinten den Saum seines Mantels; Jesus wendet sich um: Sei getrost, Tochter! Dein Glaube hat dich gerettet.",
+      "keywords": {
+        "de": "berührte den Saum seines Mantels",
+        "gsw": "hät de Saum vo sim Mantel aagrüert"
+      },
       "stage": {
-        "pose": {
-          "FIG-JESUS": "away"
-        },
         "arrows": [
           [
             "FIG-ROLLE-FRAU-BLUTFLUSS",
@@ -86,41 +91,21 @@
             "act"
           ]
         ],
-        "mood": {
-          "FIG-ROLLE-FRAU-BLUTFLUSS": "pensive"
+        "beside": {
+          "FIG-ZEICHEN-BERUEHREN": "FIG-ROLLE-FRAU-BLUTFLUSS"
         },
-        "bubble_y": 12
+        "mood": {
+          "FIG-ROLLE-FRAU-BLUTFLUSS": "delight",
+          "FIG-JESUS": "smile"
+        },
+        "x": {
+          "FIG-ROLLE-FRAU-BLUTFLUSS": 54,
+          "FIG-JESUS": 128
+        }
       }
     },
     {
       "n": 3,
-      "reference": "MAT.9.22",
-      "figures": [
-        "FIG-ROLLE-FRAU-BLUTFLUSS",
-        "FIG-JESUS"
-      ],
-      "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-FRAU-BLUTFLUSS",
-          "icons": [
-            "FIG-ZEICHEN-GLAUBEN",
-            "FIG-ZEICHEN-RETTUNG"
-          ]
-        }
-      ],
-      "action_de": "Jesus wendet sich um, sieht sie und sagt: Sei getrost, Tochter! Dein Glaube hat dich gerettet. Von jener Stunde an ist die Frau gerettet.",
-      "stage": {
-        "mood": {
-          "FIG-ROLLE-FRAU-BLUTFLUSS": "delight",
-          "FIG-JESUS": "smile"
-        }
-      }
-    },
-    {
-      "n": 4,
       "reference": "MAT.9.23-MAT.9.26",
       "figures": [
         "FIG-GRUPPE-MENGE",
@@ -138,12 +123,19 @@
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-MENGE",
           "icons": [
-            "FIG-TOCHTER-JAIRUS",
             "FIG-ZEICHEN-SCHLAFEN"
-          ]
+          ],
+          "word": {
+            "de": "Das Mädchen schläft.",
+            "gsw": "S Meitli schlaft."
+          }
         }
       ],
-      "action_de": "Im Haus des Vorstehers sagt Jesus zu den Flötenspielern und der lärmenden Menge: Das Mädchen ist nicht gestorben, sondern es schläft; sie lachen ihn aus. Als die Menge draussen ist, ergreift er die Hand des Mädchens, und es steht auf.",
+      "action_de": "Im Haus sagt Jesus zur lärmenden Menge: Geht weg! Das Mädchen ist nicht gestorben, sondern es schläft – und sie lachen ihn aus; als die Menge draussen ist, ergreift er die Hand des Mädchens, und es steht auf.",
+      "keywords": {
+        "de": "das Mädchen stand auf",
+        "gsw": "s Meitli isch ufgstande"
+      },
       "stage": {
         "back_side": "right",
         "beside": {
@@ -158,11 +150,11 @@
         ],
         "x": {
           "FIG-GRUPPE-MENGE": 30,
-          "FIG-JESUS": 82,
-          "FIG-TOCHTER-JAIRUS": 124
+          "FIG-JESUS": 84,
+          "FIG-TOCHTER-JAIRUS": 132
         },
         "mood": {
-          "FIG-GRUPPE-MENGE": "calm",
+          "FIG-GRUPPE-MENGE": "smile",
           "FIG-TOCHTER-JAIRUS": "smile",
           "FIG-JESUS": "calm"
         }
@@ -171,22 +163,20 @@
   ],
   "actions_de": [
     "Ein Vorsteher wirft sich vor Jesus nieder: Meine Tochter ist eben gestorben; aber komm, leg deine Hand auf sie, und sie wird leben. Jesus steht auf und folgt ihm mit seinen Jüngern.",
-    "Eine Frau, die seit zwölf Jahren an Blutfluss leidet, berührt von hinten den Saum seines Mantels, denn sie sagt sich: Wenn ich nur seinen Mantel berühre, werde ich gerettet.",
-    "Jesus wendet sich um, sieht sie und sagt: Sei getrost, Tochter! Dein Glaube hat dich gerettet. Von jener Stunde an ist die Frau gerettet.",
-    "Im Haus des Vorstehers sagt Jesus zu den Flötenspielern und der lärmenden Menge: Das Mädchen ist nicht gestorben, sondern es schläft; sie lachen ihn aus. Als die Menge draussen ist, ergreift er die Hand des Mädchens, und es steht auf."
+    "Eine Frau, die seit zwölf Jahren an Blutfluss leidet, berührt von hinten den Saum seines Mantels; Jesus wendet sich um: Sei getrost, Tochter! Dein Glaube hat dich gerettet.",
+    "Im Haus sagt Jesus zur lärmenden Menge: Geht weg! Das Mädchen ist nicht gestorben, sondern es schläft – und sie lachen ihn aus; als die Menge draussen ist, ergreift er die Hand des Mädchens, und es steht auf."
   ],
   "captions_de": [
-    "Die Bitte: Ein Vorsteher (heller Gebetsmantel über dem Kopf) kniet nieder: Meine Tochter ist tot (Mädchen, verschlossenes Felsengrab) – leg die Hand auf sie, und sie lebt (berührende Hand, Keimling mit Unendlichzeichen).",
-    "Berühren → gerettet: Eine Frau (Kopftuch in gedecktem Violett) berührt von hinten seinen Mantel (Pfeil zu ihm) und denkt: Dann werde ich gerettet (Denkblase: Hand am roten Saum, Pfeil nach oben aus den Wellen).",
-    "Glaube → gerettet: Jesus wendet sich um und sagt: Dein Glaube hat dich gerettet (Herz mit Lichtstrahl, Pfeil nach oben aus den Wellen).",
-    "Jesu Hand → das Mädchen lebt: Jesus sagt zur Menge: Das Mädchen schläft (Mädchen, Zzz); dann nimmt er es bei der Hand (Pfeil zu ihm), und es lebt (grüner Baum im goldenen Ring)."
+    "Die Bitte: Der Vorsteher (Gebetsmantel über dem Kopf) kniet vor Jesus: «Leg deine Hand auf sie!» (Mädchen, Gestalt auf der Bahre); die Jünger stehen dabei.",
+    "Die Berührung: Die Frau (violettes Kopftuch) berührt den Mantelsaum (Pfeil, Hand am roten Saum); Jesus wendet sich um: «Dein Glaube hat dich gerettet.» (Herz mit Lichtstrahl).",
+    "Das Mädchen steht auf: Jesus hat zur Menge gesagt: «Das Mädchen schläft» (Zzz); er nimmt die Hand des Mädchens (Pfeil), und es steht auf (Figur über der Matte, goldener Pfeil)."
   ],
-  "interpretation_note_de": "Matthäus nennt den Vorsteher nicht mit Namen; das Bild verwendet die Figur des Jairus aus der Parallele ([[MRK.5.22]]) und die seiner Tochter. Bei Matthäus ist die Tochter schon gestorben, als der Vater kommt ([[MAT.9.18]]). Dass die Menge Jesus auslacht ([[MAT.9.24]]), ist nur im Ausdruck angedeutet.",
+  "interpretation_note_de": "Drei Felder nach der Schachtelung «Bitte – eingeschobene Heilung – Erweckung» ([[MAT.9.18-MAT.9.26]]). Matthäus nennt den Vorsteher nicht mit Namen; gezeichnet ist er mit der Figur des Vorstehers aus [[MRK.5.22]] (im Bildlexikon «Jairus», so heisst er nur bei Markus und Lukas), im Bild ohne Namensschild. Bei Matthäus ist die Tochter schon gestorben, als der Vater kommt; das Zeichen in der Blase zeigt das (Gestalt auf der Bahre). Das Lachen der Menge steht in der Bildhilfe; das Lächeln der Figuren meint kein Spotten im Bild.",
   "basis": [
     {
       "record": "TU-MAT-009-018-026",
       "field": "summary",
-      "fingerprint": "3f0a94b56aecb71d"
+      "fingerprint": "d8f3817845876326"
     },
     {
       "record": "TRANS-MAT-009-001-038-DE-WORKING",
@@ -197,14 +187,8 @@
     {
       "record": "TRANS-MAT-009-001-038-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.9.20-MAT.9.21",
-      "fingerprint": "8d1544c97e2c605e"
-    },
-    {
-      "record": "TRANS-MAT-009-001-038-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.9.22",
-      "fingerprint": "98913a149e18f1cc"
+      "reference": "MAT.9.20-MAT.9.22",
+      "fingerprint": "58e13f22c80474f8"
     },
     {
       "record": "TRANS-MAT-009-001-038-DE-WORKING",
@@ -214,7 +198,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -582,6 +566,225 @@
           "Glaube → gerettet: Jesus wendet sich um und sagt: Dein Glaube hat dich gerettet (Herz mit Lichtstrahl, Pfeil nach oben aus den Wellen).",
           "Jesu Hand → das Mädchen lebt: Jesus sagt zur Menge: Das Mädchen schläft (Mädchen, Mondsichel mit Punkten); dann nimmt er es bei der Hand (Pfeil zu ihm), und es lebt (grüner Baum im goldenen Ring)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.9.18-MAT.9.19",
+            "figures": [
+              "FIG-JAIRUS",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JAIRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-TOCHTER-JAIRUS",
+                  "FIG-ZEICHEN-VERSTORBEN"
+                ]
+              },
+              {
+                "from": "FIG-JAIRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-HEILEN",
+                  "FIG-ZEICHEN-LEBEN"
+                ]
+              }
+            ],
+            "action_de": "Ein Vorsteher wirft sich vor Jesus nieder: Meine Tochter ist eben gestorben; aber komm, leg deine Hand auf sie, und sie wird leben. Jesus steht auf und folgt ihm mit seinen Jüngern.",
+            "stage": {
+              "pose": {
+                "FIG-JAIRUS": "kneel"
+              },
+              "mood": {
+                "FIG-JAIRUS": "worried",
+                "FIG-GRUPPE-JUENGER": "calm"
+              },
+              "x": {
+                "FIG-JAIRUS": 44,
+                "FIG-JESUS": 100,
+                "FIG-GRUPPE-JUENGER": 152
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.9.20-MAT.9.21",
+            "figures": [
+              "FIG-ROLLE-FRAU-BLUTFLUSS",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-FRAU-BLUTFLUSS",
+                "to": "FIG-ROLLE-FRAU-BLUTFLUSS",
+                "icons": [
+                  "FIG-ZEICHEN-BERUEHREN",
+                  "FIG-ZEICHEN-RETTUNG"
+                ],
+                "think": true
+              }
+            ],
+            "action_de": "Eine Frau, die seit zwölf Jahren an Blutfluss leidet, berührt von hinten den Saum seines Mantels, denn sie sagt sich: Wenn ich nur seinen Mantel berühre, werde ich gerettet.",
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "away"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-FRAU-BLUTFLUSS",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-FRAU-BLUTFLUSS": "pensive"
+              },
+              "bubble_y": 12
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.9.22",
+            "figures": [
+              "FIG-ROLLE-FRAU-BLUTFLUSS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-FRAU-BLUTFLUSS",
+                "icons": [
+                  "FIG-ZEICHEN-GLAUBEN",
+                  "FIG-ZEICHEN-RETTUNG"
+                ]
+              }
+            ],
+            "action_de": "Jesus wendet sich um, sieht sie und sagt: Sei getrost, Tochter! Dein Glaube hat dich gerettet. Von jener Stunde an ist die Frau gerettet.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-FRAU-BLUTFLUSS": "delight",
+                "FIG-JESUS": "smile"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.9.23-MAT.9.26",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS",
+              "FIG-TOCHTER-JAIRUS"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-AUFSTEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-TOCHTER-JAIRUS",
+                  "FIG-ZEICHEN-SCHLAFEN"
+                ]
+              }
+            ],
+            "action_de": "Im Haus des Vorstehers sagt Jesus zu den Flötenspielern und der lärmenden Menge: Das Mädchen ist nicht gestorben, sondern es schläft; sie lachen ihn aus. Als die Menge draussen ist, ergreift er die Hand des Mädchens, und es steht auf.",
+            "stage": {
+              "back_side": "right",
+              "beside": {
+                "FIG-ZEICHEN-AUFSTEHEN": "FIG-TOCHTER-JAIRUS"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-TOCHTER-JAIRUS",
+                  "act"
+                ]
+              ],
+              "x": {
+                "FIG-GRUPPE-MENGE": 30,
+                "FIG-JESUS": 82,
+                "FIG-TOCHTER-JAIRUS": 124
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "calm",
+                "FIG-TOCHTER-JAIRUS": "smile",
+                "FIG-JESUS": "calm"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Ein Vorsteher wirft sich vor Jesus nieder: Meine Tochter ist eben gestorben; aber komm, leg deine Hand auf sie, und sie wird leben. Jesus steht auf und folgt ihm mit seinen Jüngern.",
+          "Eine Frau, die seit zwölf Jahren an Blutfluss leidet, berührt von hinten den Saum seines Mantels, denn sie sagt sich: Wenn ich nur seinen Mantel berühre, werde ich gerettet.",
+          "Jesus wendet sich um, sieht sie und sagt: Sei getrost, Tochter! Dein Glaube hat dich gerettet. Von jener Stunde an ist die Frau gerettet.",
+          "Im Haus des Vorstehers sagt Jesus zu den Flötenspielern und der lärmenden Menge: Das Mädchen ist nicht gestorben, sondern es schläft; sie lachen ihn aus. Als die Menge draussen ist, ergreift er die Hand des Mädchens, und es steht auf."
+        ],
+        "captions_de": [
+          "Die Bitte: Ein Vorsteher (heller Gebetsmantel über dem Kopf) kniet nieder: Meine Tochter ist tot (Mädchen, verschlossenes Felsengrab) – leg die Hand auf sie, und sie lebt (berührende Hand, Keimling mit Unendlichzeichen).",
+          "Berühren → gerettet: Eine Frau (Kopftuch in gedecktem Violett) berührt von hinten seinen Mantel (Pfeil zu ihm) und denkt: Dann werde ich gerettet (Denkblase: Hand am roten Saum, Pfeil nach oben aus den Wellen).",
+          "Glaube → gerettet: Jesus wendet sich um und sagt: Dein Glaube hat dich gerettet (Herz mit Lichtstrahl, Pfeil nach oben aus den Wellen).",
+          "Jesu Hand → das Mädchen lebt: Jesus sagt zur Menge: Das Mädchen schläft (Mädchen, Zzz); dann nimmt er es bei der Hand (Pfeil zu ihm), und es lebt (grüner Baum im goldenen Ring)."
+        ],
+        "interpretation_note_de": "Matthäus nennt den Vorsteher nicht mit Namen; das Bild verwendet die Figur des Jairus aus der Parallele ([[MRK.5.22]]) und die seiner Tochter. Bei Matthäus ist die Tochter schon gestorben, als der Vater kommt ([[MAT.9.18]]). Dass die Menge Jesus auslacht ([[MAT.9.24]]), ist nur im Ausdruck angedeutet.",
+        "basis": [
+          {
+            "record": "TU-MAT-009-018-026",
+            "field": "summary",
+            "fingerprint": "3f0a94b56aecb71d"
+          },
+          {
+            "record": "TRANS-MAT-009-001-038-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.9.18-MAT.9.19",
+            "fingerprint": "798f5e11a6849cff"
+          },
+          {
+            "record": "TRANS-MAT-009-001-038-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.9.20-MAT.9.21",
+            "fingerprint": "8d1544c97e2c605e"
+          },
+          {
+            "record": "TRANS-MAT-009-001-038-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.9.22",
+            "fingerprint": "98913a149e18f1cc"
+          },
+          {
+            "record": "TRANS-MAT-009-001-038-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.9.23-MAT.9.26",
+            "fingerprint": "c48ef36ac024c3b3"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Prüfung Struktur zuerst",
+      "previous": {
+        "interpretation_note_de": "Drei Felder nach der Schachtelung «Bitte – eingeschobene Heilung – Erweckung» ([[MAT.9.18-MAT.9.26]]). Matthäus nennt den Vorsteher nicht mit Namen; die Figur ist die des Vorstehers aus [[MRK.5.22]], ohne Namensschild. Bei Matthäus ist die Tochter schon gestorben, als der Vater kommt; das Zeichen in der Blase zeigt das (Gestalt auf der Bahre). Das Lachen der Menge steht in der Bildhilfe; das Lächeln der Figuren meint kein Spotten im Bild."
       }
     }
   ]

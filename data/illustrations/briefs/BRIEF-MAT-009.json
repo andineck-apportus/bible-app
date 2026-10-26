@@ -17,8 +17,7 @@
         "FIG-ROLLE-KRANKER"
       ],
       "objects": [
-        "FIG-OBJ-MATTE",
-        "FIG-ORT-HAUS"
+        "FIG-OBJ-MATTE"
       ],
       "signs": [
         "FIG-ZEICHEN-VOLLMACHT"
@@ -28,11 +27,19 @@
           "from": "FIG-JESUS",
           "to": "FIG-ROLLE-KRANKER",
           "icons": [
-            "FIG-ZEICHEN-VERGEBUNG"
-          ]
+            "FIG-ZEICHEN-AUFSTEHEN"
+          ],
+          "word": {
+            "de": "Steh auf und geh in dein Haus!",
+            "gsw": "Stand uf und gang hei!"
+          }
         }
       ],
-      "action_de": "Jesus sagt einem Gelähmten die Vergebung der Sünden zu und heilt ihn.",
+      "action_de": "Jesus sagt einem Gelähmten: Deine Sünden sind vergeben, und heisst ihn aufstehen und heimgehen; er steht auf und trägt sein Bett.",
+      "keywords": {
+        "de": "Deine Sünden sind vergeben",
+        "gsw": "Dini Sünde sind vergää"
+      },
       "stage": {
         "hold": {
           "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
@@ -40,9 +47,9 @@
         "beside": {
           "FIG-ZEICHEN-VOLLMACHT": "FIG-JESUS"
         },
-        "back_side": "right",
         "mood": {
-          "FIG-ROLLE-KRANKER": "delight"
+          "FIG-ROLLE-KRANKER": "delight",
+          "FIG-JESUS": "calm"
         },
         "arrows": [
           [
@@ -55,34 +62,61 @@
     },
     {
       "n": 2,
-      "reference": "MAT.9.9-MAT.9.13",
+      "reference": "MAT.9.9-MAT.9.17",
       "figures": [
+        "FIG-MATTHAEUS",
         "FIG-JESUS",
-        "FIG-MATTHAEUS"
+        "FIG-GRUPPE-PHARISAEER",
+        "FIG-GRUPPE-JOHANNES-JUENGER"
       ],
       "objects": [
-        "FIG-OBJ-MUENZEN"
+        "FIG-OBJ-BROT"
       ],
       "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
-          "to": "FIG-MATTHAEUS",
+          "to": "FIG-GRUPPE-PHARISAEER",
           "icons": [
-            "FIG-ZEICHEN-NACHFOLGEN"
-          ]
+            "FIG-ZEICHEN-KRANK",
+            "FIG-ZEICHEN-HEILEN"
+          ],
+          "word": {
+            "de": "Die Kranken brauchen den Arzt!",
+            "gsw": "D Chranke bruuched de Dokter!"
+          }
         }
       ],
-      "action_de": "Er ruft den Zöllner Matthäus und isst mit Zöllnern und Sündern.",
+      "action_de": "Jesus ruft Matthäus und isst mit Zöllnern und Sündern: Nicht die Gesunden brauchen einen Arzt, sondern die Kranken; die Jünger des Johannes fragen, warum seine Jünger nicht fasten.",
+      "keywords": {
+        "de": "viele Zöllner und Sünder",
+        "gsw": "vil Zöllner und Sünder"
+      },
+      "names": {
+        "FIG-MATTHAEUS": {
+          "de": "Matthäus",
+          "gsw": "Matthäus"
+        }
+      },
       "stage": {
         "pose": {
-          "FIG-MATTHAEUS": "sit"
-        },
-        "mood": {
-          "FIG-MATTHAEUS": "surprised"
+          "FIG-MATTHAEUS": "sit",
+          "FIG-JESUS": "sit"
         },
         "hold": {
-          "FIG-MATTHAEUS": "FIG-OBJ-MUENZEN"
+          "FIG-JESUS": "FIG-OBJ-BROT"
+        },
+        "mood": {
+          "FIG-MATTHAEUS": "smile",
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-PHARISAEER": "pensive",
+          "FIG-GRUPPE-JOHANNES-JUENGER": "pensive"
+        },
+        "x": {
+          "FIG-MATTHAEUS": 24,
+          "FIG-JESUS": 66,
+          "FIG-GRUPPE-PHARISAEER": 116,
+          "FIG-GRUPPE-JOHANNES-JUENGER": 162
         }
       }
     },
@@ -90,97 +124,118 @@
       "n": 3,
       "reference": "MAT.9.18-MAT.9.26",
       "figures": [
-        "FIG-JAIRUS",
+        "FIG-ROLLE-FRAU-BLUTFLUSS",
         "FIG-JESUS",
-        "FIG-TOCHTER-JAIRUS"
+        "FIG-TOCHTER-JAIRUS",
+        "FIG-JAIRUS"
       ],
       "objects": [],
       "signs": [
         "FIG-ZEICHEN-AUFSTEHEN"
       ],
       "speech": [],
-      "action_de": "Er sagt einer Frau, die seinen Mantel berührt: Dein Glaube hat dich gerettet; dann weckt er die tote Tochter eines Vorstehers auf.",
+      "action_de": "Die Frau mit dem Blutfluss berührt den Saum seines Mantels und wird durch ihren Glauben gerettet; Jesus ergreift die Hand der gestorbenen Tochter des Vorstehers, und sie steht auf.",
+      "keywords": {
+        "de": "Dein Glaube hat dich gerettet",
+        "gsw": "Din Glaube hät dich grettet"
+      },
       "stage": {
-        "beside": {
-          "FIG-ZEICHEN-AUFSTEHEN": "FIG-TOCHTER-JAIRUS"
-        },
         "arrows": [
+          [
+            "FIG-ROLLE-FRAU-BLUTFLUSS",
+            "FIG-JESUS",
+            "act"
+          ],
           [
             "FIG-JESUS",
             "FIG-TOCHTER-JAIRUS",
             "act"
           ]
         ],
+        "beside": {
+          "FIG-ZEICHEN-AUFSTEHEN": "FIG-TOCHTER-JAIRUS"
+        },
         "x": {
-          "FIG-JAIRUS": 28,
-          "FIG-JESUS": 78,
-          "FIG-TOCHTER-JAIRUS": 122
+          "FIG-ROLLE-FRAU-BLUTFLUSS": 24,
+          "FIG-JESUS": 72,
+          "FIG-TOCHTER-JAIRUS": 118,
+          "FIG-JAIRUS": 162
         },
         "mood": {
-          "FIG-JAIRUS": "surprised",
+          "FIG-ROLLE-FRAU-BLUTFLUSS": "delight",
           "FIG-TOCHTER-JAIRUS": "smile",
+          "FIG-JAIRUS": "surprised",
           "FIG-JESUS": "calm"
         }
       }
     },
     {
       "n": 4,
-      "reference": "MAT.9.35-MAT.9.38",
+      "reference": "MAT.9.27-MAT.9.38",
       "figures": [
+        "FIG-ROLLE-BLINDER",
+        "FIG-ROLLE-ZWEITER-BLINDER",
         "FIG-JESUS",
-        "FIG-GRUPPE-JUENGER"
+        "FIG-ROLLE-BESESSENER"
       ],
       "objects": [
         "FIG-ORT-KORNFELD"
       ],
       "signs": [
-        "FIG-ZEICHEN-ERBARMEN"
+        "FIG-ZEICHEN-SEHEN",
+        "FIG-ZEICHEN-AUSTREIBEN"
       ],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-ZEICHEN-BETEN",
-            "FIG-GOTT",
-            "FIG-ZEICHEN-DARAUS",
-            "FIG-GRUPPE-SCHNITTER"
-          ]
-        }
-      ],
-      "action_de": "Voll Erbarmen mit den Menschenmengen heisst er die Jünger, um Arbeiter für die Ernte zu bitten.",
+      "speech": [],
+      "action_de": "Zwei Blinde sehen nach ihrem Glauben, ein Stummer redet, nachdem der Dämon ausgetrieben ist; Jesus hat Erbarmen mit den Mengen: Die Ernte ist gross, die Arbeiter sind wenige.",
+      "keywords": {
+        "de": "Die Ernte ist zwar gross",
+        "gsw": "D Ärn isch zwar gross"
+      },
       "stage": {
         "at": {
-          "FIG-ZEICHEN-ERBARMEN": "FIG-JESUS"
+          "FIG-ZEICHEN-SEHEN": [
+            "FIG-ROLLE-BLINDER",
+            "FIG-ROLLE-ZWEITER-BLINDER"
+          ],
+          "FIG-ZEICHEN-AUSTREIBEN": "FIG-ROLLE-BESESSENER"
         },
         "mood": {
-          "FIG-GRUPPE-JUENGER": "pensive"
+          "FIG-ROLLE-BLINDER": "delight",
+          "FIG-ROLLE-ZWEITER-BLINDER": "delight",
+          "FIG-ROLLE-BESESSENER": "delight",
+          "FIG-JESUS": "calm"
+        },
+        "x": {
+          "FIG-ROLLE-BLINDER": 24,
+          "FIG-ROLLE-ZWEITER-BLINDER": 66,
+          "FIG-JESUS": 112,
+          "FIG-ROLLE-BESESSENER": 160
         }
       }
     }
   ],
   "actions_de": [
-    "Jesus sagt einem Gelähmten die Vergebung der Sünden zu und heilt ihn.",
-    "Er ruft den Zöllner Matthäus und isst mit Zöllnern und Sündern.",
-    "Er sagt einer Frau, die seinen Mantel berührt: Dein Glaube hat dich gerettet; dann weckt er die tote Tochter eines Vorstehers auf.",
-    "Voll Erbarmen mit den Menschenmengen heisst er die Jünger, um Arbeiter für die Ernte zu bitten."
+    "Jesus sagt einem Gelähmten: Deine Sünden sind vergeben, und heisst ihn aufstehen und heimgehen; er steht auf und trägt sein Bett.",
+    "Jesus ruft Matthäus und isst mit Zöllnern und Sündern: Nicht die Gesunden brauchen einen Arzt, sondern die Kranken; die Jünger des Johannes fragen, warum seine Jünger nicht fasten.",
+    "Die Frau mit dem Blutfluss berührt den Saum seines Mantels und wird durch ihren Glauben gerettet; Jesus ergreift die Hand der gestorbenen Tochter des Vorstehers, und sie steht auf.",
+    "Zwei Blinde sehen nach ihrem Glauben, ein Stummer redet, nachdem der Dämon ausgetrieben ist; Jesus hat Erbarmen mit den Mengen: Die Ernte ist gross, die Arbeiter sind wenige."
   ],
   "captions_de": [
-    "Vollmacht → vergeben und geheilt: Jesus vergibt dem Gelähmten mit Vollmacht (Schriftrolle mit Krone; Blase: Tuch mit Funken); der Pfeil führt zum Mann: er steht mit seiner Matte in der Hand und geht heim (Haus).",
-    "Folge mir: Jesus ruft Matthäus beim Zoll (Münzen in der Hand): Folge mir (zwei gehende Personen).",
-    "Jesu Hand → das Mädchen lebt: Jesus nimmt das Mädchen bei der Hand (Pfeil zu ihm), und es lebt (grüner Baum im goldenen Ring); der Vater staunt.",
-    "Die Ernte: Voll Erbarmen (offene Hände mit rotem Herz) sagt Jesus vor dem Kornfeld: Bittet Gott um Arbeiter (gefaltete Hände, Strahlenkranz, dicker Pfeil, Arbeiter)."
+    "Vollmacht: Jesus sagt zum Gelähmten: «Steh auf und geh in dein Haus!» (Figur über der Matte); der Mann trägt seine Matte (Schriftrolle mit Krone bei Jesus).",
+    "Mahl und Fragen: Matthäus (stahlblauer Mantel) sitzt mit Jesus beim Brot; Jesus sagt den Pharisäern: «Die Kranken brauchen den Arzt!» (liegende Figur, heilende Hand); daneben die Jünger des Johannes (Fellkragen) mit ihrer Frage nach dem Fasten.",
+    "Glaube und Leben: Hinter Jesus berührt die Frau (violettes Kopftuch) den Saum (Pfeil); Jesus nimmt die Hand des Mädchens (Pfeil), es steht auf (Figur über der Matte); der Vorsteher staunt.",
+    "Sehen, reden, ernten: Vor einem reifen Kornfeld sehen die beiden Blinden (zwei offene Augen), und der Stumme redet, sein Dämon ist ausgetrieben (Schatten mit Pfeil hinaus)."
   ],
-  "interpretation_note_de": "Das Kapitel hat sieben Abschnitte; die Frage nach dem Fasten ([[MAT.9.14-MAT.9.17]]) und die Heilungen der zwei Blinden und des Stummen ([[MAT.9.27-MAT.9.34]]) sind im Kapitelbild nicht eigens gezeigt. Feld 3 zeigt die Figuren Jairus und seiner Tochter aus [[MRK.5.22]]; Matthäus nennt keinen Namen.",
+  "interpretation_note_de": "Vier Comic-Szenen für sieben Abschnitte: Feld 1 die Vollmacht, Sünden zu vergeben ([[MAT.9.1-MAT.9.8]]); Feld 2 bündelt die Berufung des Matthäus mit dem Mahl und die Fastenfrage ([[MAT.9.9-MAT.9.17]]); Feld 3 die Frau mit dem Blutfluss und die Tochter des Vorstehers ([[MAT.9.18-MAT.9.26]]); Feld 4 bündelt die zwei Blinden, den Stummen und das Wort von der Ernte ([[MAT.9.27-MAT.9.38]]). Der Vorwurf der Pharisäer ([[MAT.9.34]]) und die Bildworte von Flicken und Wein stehen in den Abschnittsbildern. Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-MAT-009",
       "field": "summary",
-      "fingerprint": "234656473ccbba36"
+      "fingerprint": "37c89e0636af6e7e"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -662,6 +717,413 @@
           "Folge mir: Jesus ruft Matthäus beim Zoll (Münzen in der Hand): Folge mir (Fussspuren).",
           "Jesu Hand → das Mädchen lebt: Jesus nimmt das Mädchen bei der Hand (Pfeil zu ihm), und es lebt (grüner Baum im goldenen Ring); der Vater staunt.",
           "Die Ernte: Voll Erbarmen (rosa Herz in zwei Händen) sagt Jesus vor dem Kornfeld: Bittet Gott um Arbeiter (gefaltete Hände, Strahlenkranz, dicker Pfeil, Arbeiter)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.9.1-MAT.9.8",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-KRANKER"
+            ],
+            "objects": [
+              "FIG-OBJ-MATTE",
+              "FIG-ORT-HAUS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-VOLLMACHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-KRANKER",
+                "icons": [
+                  "FIG-ZEICHEN-VERGEBUNG"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt einem Gelähmten die Vergebung der Sünden zu und heilt ihn.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
+              },
+              "beside": {
+                "FIG-ZEICHEN-VOLLMACHT": "FIG-JESUS"
+              },
+              "back_side": "right",
+              "mood": {
+                "FIG-ROLLE-KRANKER": "delight"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-KRANKER",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.9.9-MAT.9.13",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-MATTHAEUS"
+            ],
+            "objects": [
+              "FIG-OBJ-MUENZEN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-MATTHAEUS",
+                "icons": [
+                  "FIG-ZEICHEN-NACHFOLGEN"
+                ]
+              }
+            ],
+            "action_de": "Er ruft den Zöllner Matthäus und isst mit Zöllnern und Sündern.",
+            "stage": {
+              "pose": {
+                "FIG-MATTHAEUS": "sit"
+              },
+              "mood": {
+                "FIG-MATTHAEUS": "surprised"
+              },
+              "hold": {
+                "FIG-MATTHAEUS": "FIG-OBJ-MUENZEN"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.9.18-MAT.9.26",
+            "figures": [
+              "FIG-JAIRUS",
+              "FIG-JESUS",
+              "FIG-TOCHTER-JAIRUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-AUFSTEHEN"
+            ],
+            "speech": [],
+            "action_de": "Er sagt einer Frau, die seinen Mantel berührt: Dein Glaube hat dich gerettet; dann weckt er die tote Tochter eines Vorstehers auf.",
+            "stage": {
+              "beside": {
+                "FIG-ZEICHEN-AUFSTEHEN": "FIG-TOCHTER-JAIRUS"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-TOCHTER-JAIRUS",
+                  "act"
+                ]
+              ],
+              "x": {
+                "FIG-JAIRUS": 28,
+                "FIG-JESUS": 78,
+                "FIG-TOCHTER-JAIRUS": 122
+              },
+              "mood": {
+                "FIG-JAIRUS": "surprised",
+                "FIG-TOCHTER-JAIRUS": "smile",
+                "FIG-JESUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.9.35-MAT.9.38",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-ORT-KORNFELD"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ERBARMEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-BETEN",
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-DARAUS",
+                  "FIG-GRUPPE-SCHNITTER"
+                ]
+              }
+            ],
+            "action_de": "Voll Erbarmen mit den Menschenmengen heisst er die Jünger, um Arbeiter für die Ernte zu bitten.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-ERBARMEN": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "pensive"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus sagt einem Gelähmten die Vergebung der Sünden zu und heilt ihn.",
+          "Er ruft den Zöllner Matthäus und isst mit Zöllnern und Sündern.",
+          "Er sagt einer Frau, die seinen Mantel berührt: Dein Glaube hat dich gerettet; dann weckt er die tote Tochter eines Vorstehers auf.",
+          "Voll Erbarmen mit den Menschenmengen heisst er die Jünger, um Arbeiter für die Ernte zu bitten."
+        ],
+        "captions_de": [
+          "Vollmacht → vergeben und geheilt: Jesus vergibt dem Gelähmten mit Vollmacht (Schriftrolle mit Krone; Blase: Tuch mit Funken); der Pfeil führt zum Mann: er steht mit seiner Matte in der Hand und geht heim (Haus).",
+          "Folge mir: Jesus ruft Matthäus beim Zoll (Münzen in der Hand): Folge mir (zwei gehende Personen).",
+          "Jesu Hand → das Mädchen lebt: Jesus nimmt das Mädchen bei der Hand (Pfeil zu ihm), und es lebt (grüner Baum im goldenen Ring); der Vater staunt.",
+          "Die Ernte: Voll Erbarmen (offene Hände mit rotem Herz) sagt Jesus vor dem Kornfeld: Bittet Gott um Arbeiter (gefaltete Hände, Strahlenkranz, dicker Pfeil, Arbeiter)."
+        ],
+        "interpretation_note_de": "Das Kapitel hat sieben Abschnitte; die Frage nach dem Fasten ([[MAT.9.14-MAT.9.17]]) und die Heilungen der zwei Blinden und des Stummen ([[MAT.9.27-MAT.9.34]]) sind im Kapitelbild nicht eigens gezeigt. Feld 3 zeigt die Figuren Jairus und seiner Tochter aus [[MRK.5.22]]; Matthäus nennt keinen Namen.",
+        "basis": [
+          {
+            "record": "SUM-CH-MAT-009",
+            "field": "summary",
+            "fingerprint": "234656473ccbba36"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.9.1-MAT.9.8",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-KRANKER"
+            ],
+            "objects": [
+              "FIG-OBJ-MATTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-VOLLMACHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-KRANKER",
+                "icons": [
+                  "FIG-ZEICHEN-AUFSTEHEN"
+                ],
+                "word": {
+                  "de": "Steh auf und geh in dein Haus!",
+                  "gsw": "Stand uf und gang hei!"
+                }
+              }
+            ],
+            "action_de": "Jesus sagt einem Gelähmten: Deine Sünden sind vergeben, und heisst ihn aufstehen und heimgehen; er steht auf und trägt sein Bett.",
+            "keywords": {
+              "de": "Deine Sünden sind vergeben",
+              "gsw": "Dini Sünde sind vergää"
+            },
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
+              },
+              "beside": {
+                "FIG-ZEICHEN-VOLLMACHT": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-ROLLE-KRANKER": "delight",
+                "FIG-JESUS": "calm"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-KRANKER",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.9.9-MAT.9.17",
+            "figures": [
+              "FIG-MATTHAEUS",
+              "FIG-JESUS",
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-GRUPPE-JOHANNES-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-ZEICHEN-KRANK",
+                  "FIG-ZEICHEN-HEILEN"
+                ],
+                "word": {
+                  "de": "Die Kranken brauchen den Arzt!",
+                  "gsw": "D Chranke bruuched de Dokter!"
+                }
+              },
+              {
+                "from": "FIG-GRUPPE-JOHANNES-JUENGER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-FASTEN"
+                ],
+                "word": {
+                  "de": "Warum fastet ihr nicht?",
+                  "gsw": "Werum faschted ir nöd?"
+                }
+              }
+            ],
+            "action_de": "Jesus ruft Matthäus und isst mit Zöllnern und Sündern: Nicht die Gesunden brauchen einen Arzt, sondern die Kranken; die Jünger des Johannes fragen, warum seine Jünger nicht fasten.",
+            "keywords": {
+              "de": "viele Zöllner und Sünder",
+              "gsw": "vil Zöllner und Sünder"
+            },
+            "names": {
+              "FIG-MATTHAEUS": {
+                "de": "Matthäus",
+                "gsw": "Matthäus"
+              }
+            },
+            "stage": {
+              "pose": {
+                "FIG-MATTHAEUS": "sit",
+                "FIG-JESUS": "sit"
+              },
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROT"
+              },
+              "mood": {
+                "FIG-MATTHAEUS": "smile",
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-PHARISAEER": "pensive",
+                "FIG-GRUPPE-JOHANNES-JUENGER": "pensive"
+              },
+              "x": {
+                "FIG-MATTHAEUS": 24,
+                "FIG-JESUS": 66,
+                "FIG-GRUPPE-PHARISAEER": 116,
+                "FIG-GRUPPE-JOHANNES-JUENGER": 162
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.9.18-MAT.9.26",
+            "figures": [
+              "FIG-ROLLE-FRAU-BLUTFLUSS",
+              "FIG-JESUS",
+              "FIG-TOCHTER-JAIRUS",
+              "FIG-JAIRUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-AUFSTEHEN"
+            ],
+            "speech": [],
+            "action_de": "Die Frau mit dem Blutfluss berührt den Saum seines Mantels und wird durch ihren Glauben gerettet; Jesus ergreift die Hand der gestorbenen Tochter des Vorstehers, und sie steht auf.",
+            "keywords": {
+              "de": "Dein Glaube hat dich gerettet",
+              "gsw": "Din Glaube hät dich grettet"
+            },
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-ROLLE-FRAU-BLUTFLUSS",
+                  "FIG-JESUS",
+                  "act"
+                ],
+                [
+                  "FIG-JESUS",
+                  "FIG-TOCHTER-JAIRUS",
+                  "act"
+                ]
+              ],
+              "beside": {
+                "FIG-ZEICHEN-AUFSTEHEN": "FIG-TOCHTER-JAIRUS"
+              },
+              "x": {
+                "FIG-ROLLE-FRAU-BLUTFLUSS": 24,
+                "FIG-JESUS": 72,
+                "FIG-TOCHTER-JAIRUS": 118,
+                "FIG-JAIRUS": 162
+              },
+              "mood": {
+                "FIG-ROLLE-FRAU-BLUTFLUSS": "delight",
+                "FIG-TOCHTER-JAIRUS": "smile",
+                "FIG-JAIRUS": "surprised",
+                "FIG-JESUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.9.27-MAT.9.38",
+            "figures": [
+              "FIG-ROLLE-BLINDER",
+              "FIG-ROLLE-ZWEITER-BLINDER",
+              "FIG-JESUS",
+              "FIG-ROLLE-BESESSENER"
+            ],
+            "objects": [
+              "FIG-ORT-KORNFELD"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SEHEN",
+              "FIG-ZEICHEN-AUSTREIBEN"
+            ],
+            "speech": [],
+            "action_de": "Zwei Blinde sehen nach ihrem Glauben, ein Stummer redet, nachdem der Dämon ausgetrieben ist; Jesus hat Erbarmen mit den Mengen: Die Ernte ist gross, die Arbeiter sind wenige.",
+            "keywords": {
+              "de": "Die Ernte ist zwar gross",
+              "gsw": "D Ärn isch zwar gross"
+            },
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-SEHEN": [
+                  "FIG-ROLLE-BLINDER",
+                  "FIG-ROLLE-ZWEITER-BLINDER"
+                ],
+                "FIG-ZEICHEN-AUSTREIBEN": "FIG-ROLLE-BESESSENER"
+              },
+              "mood": {
+                "FIG-ROLLE-BLINDER": "delight",
+                "FIG-ROLLE-ZWEITER-BLINDER": "delight",
+                "FIG-ROLLE-BESESSENER": "delight",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-ROLLE-BLINDER": 24,
+                "FIG-ROLLE-ZWEITER-BLINDER": 66,
+                "FIG-JESUS": 112,
+                "FIG-ROLLE-BESESSENER": 160
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Vollmacht: Jesus sagt zum Gelähmten: «Steh auf und geh in dein Haus!» (Figur über der Matte); der Mann trägt seine Matte (Schriftrolle mit Krone bei Jesus).",
+          "Mahl und Fragen: Matthäus (stahlblauer Mantel) sitzt mit Jesus beim Brot; Jesus sagt den Pharisäern: «Die Kranken brauchen den Arzt!» (liegende Figur, heilende Hand); ein Johannesjünger fragt: «Warum fastet ihr nicht?» (Brot im Verbotskreis).",
+          "Glaube und Leben: Hinter Jesus berührt die Frau (violettes Kopftuch) den Saum (Pfeil); Jesus nimmt die Hand des Mädchens (Pfeil), es steht auf (Figur über der Matte); der Vorsteher staunt.",
+          "Sehen, reden, ernten: Vor einem reifen Kornfeld sehen die beiden Blinden (zwei offene Augen), und der Stumme redet, sein Dämon ist ausgetrieben (Schatten mit Pfeil hinaus)."
         ]
       }
     }

@@ -1,0 +1,123 @@
+{
+ "id": "CORE-MAT-009-032-034",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.9.32-MAT.9.34",
+ "target": "TU-MAT-009-032-034",
+ "core_de": "Man bringt einen stummen Besessenen zu Jesus; als der Dämon ausgetrieben ist, redet der Stumme; die Menge staunt: «Noch nie hat sich so etwas in Israel gezeigt!», die Pharisäer aber sagen: «Durch den Herrscher der Dämonen treibt er die Dämonen aus.»",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Heilung – zwei Antworten",
+    "range": "MAT.9.32-MAT.9.34",
+    "elements": [
+     {
+      "label": "Man bringt einen stummen Besessenen",
+      "ref": "MAT.9.32",
+      "role": "Anfang"
+     },
+     {
+      "label": "Der Dämon wird ausgetrieben, der Stumme redet",
+      "ref": "MAT.9.33",
+      "role": "Heilung"
+     },
+     {
+      "label": "Mengen ↔ Pharisäer",
+      "ref": "MAT.9.33-MAT.9.34",
+      "role": "Antworten",
+      "child": "s2"
+     }
+    ],
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "Mengen ↔ Pharisäer",
+    "range": "MAT.9.33-MAT.9.34",
+    "elements": [
+     {
+      "label": "Die Mengen staunten: «Noch nie hat sich so etwas in Israel gezeigt!»",
+      "ref": "MAT.9.33",
+      "role": "Staunen"
+     },
+     {
+      "label": "Die Pharisäer: «Durch den Herrscher der Dämonen treibt er die Dämonen aus.»",
+      "ref": "MAT.9.34",
+      "role": "Verdacht"
+     }
+    ],
+    "features": {
+     "crossref": [
+      {
+       "ref": "MAT.12.24",
+       "kind": "Wiederaufnahme",
+       "note": "derselbe Vorwurf, ausgeführt in Kap. 12"
+      }
+     ]
+    },
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.9.32-MAT.9.33",
+   "text_de": "Man bringt einen stummen Menschen, der besessen ist; als der Dämon ausgetrieben ist, redet der Stumme.",
+   "reason_de": "Heilung (Kriterium 4).",
+   "recognition_de": "Der Dämon fährt aus, der Stumme spricht.",
+   "keywords": [
+    "als der Dämon ausgetrieben war, redete der Stumme"
+   ]
+  },
+  {
+   "reference": "MAT.9.33-MAT.9.34",
+   "text_de": "Die Mengen staunen: «Noch nie hat sich so etwas in Israel gezeigt!»; die Pharisäer aber sagen: «Durch den Herrscher der Dämonen treibt er die Dämonen aus.»",
+   "reason_de": "Geteilte Antwort, Gegensatz (Kriterien 1 und 2).",
+   "recognition_de": "Zwei Spalten: Menge staunt ↔ Pharisäer verdächtigen.",
+   "keywords": [
+    "Noch nie hat sich so etwas in Israel gezeigt!",
+    "Durch den Herrscher der Dämonen treibt er die Dämonen aus"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Wer ihn bringt – nicht genannt"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-ROLLE-BESESSENER",
+  "FIG-GRUPPE-MENGE",
+  "FIG-GRUPPE-PHARISAEER"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.9.32-MAT.9.34",
+   "fingerprint": "eab6ba8c40122464"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; keine fachliche Prüfung durch eine Person",
+  "summary_de": "Heilung und zwei Antworten (Mengen ↔ Pharisäer) richtig; Wiederaufnahme in 12,24 vermerkt.",
+  "changes_de": []
+ }
+}

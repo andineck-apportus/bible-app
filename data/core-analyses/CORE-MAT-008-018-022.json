@@ -1,0 +1,165 @@
+{
+ "id": "CORE-MAT-008-018-022",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.8.18-MAT.8.22",
+ "target": "TU-MAT-008-018-022",
+ "core_de": "Als Jesus ans andere Ufer aufbrechen will, sprechen ihn zwei auf die Nachfolge an: Einem Schriftgelehrten, der ihm folgen will, wohin er auch geht, sagt er, die Füchse hätten Höhlen und die Vögel Nester, der Menschensohn aber keinen Ort, wo er den Kopf hinlegen kann; einem Jünger, der zuerst seinen Vater begraben will, sagt er: «Folge mir, und lass die Toten ihre Toten begraben!»",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "dialogue",
+    "subtype": "zwei Gespräche: Angebot – Antwort",
+    "range": "MAT.8.18-MAT.8.22",
+    "elements": [
+     {
+      "label": "Anlass: Jesus befiehlt, ans andere Ufer aufzubrechen",
+      "ref": "MAT.8.18",
+      "role": "Anlass"
+     },
+     {
+      "label": "Schriftgelehrter: «Lehrer, ich werde dir folgen, wohin du auch gehst»",
+      "ref": "MAT.8.19",
+      "role": "Angebot 1"
+     },
+     {
+      "label": "Jesus: Füchse und Vögel ↔ der Menschensohn",
+      "ref": "MAT.8.20",
+      "role": "Antwort 1",
+      "child": "s2"
+     },
+     {
+      "label": "Ein Jünger: «Herr, erlaube mir, zuerst wegzugehen und meinen Vater zu begraben»",
+      "ref": "MAT.8.21",
+      "role": "Bitte 2"
+     },
+     {
+      "label": "Jesus: «Folge mir, und lass die Toten ihre Toten begraben!»",
+      "ref": "MAT.8.22",
+      "role": "Antwort 2"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-ROLLE-SCHRIFTGELEHRTER",
+       "to": "FIG-JESUS",
+       "ref": "MAT.8.19"
+      },
+      {
+       "who": "FIG-ROLLE-JUENGER",
+       "to": "FIG-JESUS",
+       "ref": "MAT.8.21"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "beide",
+       "refs": [
+        "MAT.8.20",
+        "MAT.8.22"
+       ]
+      }
+     ],
+     "open_end": [
+      {
+       "ref": "MAT.8.22",
+       "note": "Ob die beiden mitgehen, sagt der Text nicht."
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "folgen",
+       "refs": [
+        "MAT.8.19",
+        "MAT.8.22",
+        "MAT.8.23"
+       ],
+       "role": "Thema; in 8,23 folgen die Jünger ins Boot"
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "Füchse und Vögel ↔ der Menschensohn",
+    "range": "MAT.8.20",
+    "elements": [
+     {
+      "label": "Die Füchse haben Höhlen, und die Vögel des Himmels Nester",
+      "ref": "MAT.8.20",
+      "role": "Tiere"
+     },
+     {
+      "label": "der Menschensohn aber hat keinen Ort, wo er den Kopf hinlegen kann",
+      "ref": "MAT.8.20",
+      "role": "Menschensohn"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.8.19-MAT.8.20",
+   "text_de": "Ein Schriftgelehrter sagt: «Lehrer, ich werde dir folgen, wohin du auch gehst»; Jesus antwortet: «Die Füchse haben Höhlen und die Vögel des Himmels Nester, der Menschensohn aber hat keinen Ort, wo er den Kopf hinlegen kann.»",
+   "reason_de": "Erstes Gespräch über die Nachfolge (Kriterien 1 und 4).",
+   "recognition_de": "Schriftgelehrter vor Jesus; Fuchs mit Höhle und Vogelnest.",
+   "keywords": [
+    "ich werde dir folgen, wohin du auch gehst",
+    "der Menschensohn aber hat keinen Ort, wo er den Kopf hinlegen kann"
+   ]
+  },
+  {
+   "reference": "MAT.8.21-MAT.8.22",
+   "text_de": "Ein anderer von den Jüngern sagt: «Herr, erlaube mir, zuerst wegzugehen und meinen Vater zu begraben»; Jesus sagt: «Folge mir, und lass die Toten ihre Toten begraben!»",
+   "reason_de": "Zweites Gespräch, Pointe (Kriterien 1 und 2).",
+   "recognition_de": "Ein Jünger will zum Grab des Vaters; Jesus: «Folge mir!».",
+   "keywords": [
+    "erlaube mir, zuerst wegzugehen und meinen Vater zu begraben",
+    "Folge mir, und lass die Toten ihre Toten begraben!"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Ob die beiden mitgehen, sagt der Text nicht (offenes Ende, in structure)"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-ROLLE-SCHRIFTGELEHRTER",
+  "FIG-ROLLE-JUENGER"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.8.18-MAT.8.22",
+   "fingerprint": "6b1b343bc4a75bae"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; keine fachliche Prüfung durch eine Person",
+  "summary_de": "Zwei Gespräche mit offenem Ausgang richtig; Sprecher getrennt.",
+  "changes_de": [
+   "core_de: «zwei sagen, sie wollen ihm folgen» → «zwei sprechen ihn auf die Nachfolge an»; der zweite bittet zuerst um Aufschub."
+  ]
+ }
+}

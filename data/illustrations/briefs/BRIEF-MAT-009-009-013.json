@@ -26,16 +26,31 @@
           "to": "FIG-MATTHAEUS",
           "icons": [
             "FIG-ZEICHEN-NACHFOLGEN"
-          ]
+          ],
+          "word": {
+            "de": "Folge mir!",
+            "gsw": "Chumm mir nache!"
+          }
         }
       ],
-      "action_de": "Jesus sieht Matthäus an der Zollstelle sitzen und sagt zu ihm: Folge mir! Der steht auf und folgt ihm.",
+      "action_de": "Jesus sieht Matthäus an der Zollstelle sitzen und sagt zu ihm: Folge mir! Und er steht auf und folgt ihm.",
+      "keywords": {
+        "de": "er stand auf und folgte ihm",
+        "gsw": "er isch ufgstande und isch ihm nachegange"
+      },
+      "names": {
+        "FIG-MATTHAEUS": {
+          "de": "Matthäus",
+          "gsw": "Matthäus"
+        }
+      },
       "stage": {
         "pose": {
           "FIG-MATTHAEUS": "sit"
         },
         "mood": {
-          "FIG-MATTHAEUS": "surprised"
+          "FIG-MATTHAEUS": "surprised",
+          "FIG-JESUS": "calm"
         },
         "hold": {
           "FIG-MATTHAEUS": "FIG-OBJ-MUENZEN"
@@ -44,126 +59,172 @@
     },
     {
       "n": 2,
-      "reference": "MAT.9.10",
+      "reference": "MAT.9.10-MAT.9.11",
       "figures": [
-        "FIG-GRUPPE-JUENGER",
+        "FIG-GRUPPE-ZOELLNER",
         "FIG-JESUS",
-        "FIG-GRUPPE-ZOELLNER"
+        "FIG-GRUPPE-JUENGER",
+        "FIG-GRUPPE-PHARISAEER"
       ],
       "objects": [
         "FIG-OBJ-BROT"
       ],
-      "signs": [
-        "FIG-ZEICHEN-FREUDE"
-      ],
-      "speech": [],
-      "action_de": "Als Jesus im Haus zu Tisch liegt, kommen viele Zöllner und Sünder und liegen mit ihm und seinen Jüngern zu Tisch.",
-      "stage": {
-        "pose": {
-          "FIG-GRUPPE-JUENGER": "sit",
-          "FIG-JESUS": "sit",
-          "FIG-GRUPPE-ZOELLNER": "sit"
-        },
-        "hold": {
-          "FIG-JESUS": "FIG-OBJ-BROT",
-          "FIG-GRUPPE-ZOELLNER": "FIG-OBJ-BROT"
-        },
-        "signs_who": {
-          "FIG-ZEICHEN-FREUDE": [
-            "FIG-GRUPPE-ZOELLNER"
-          ]
-        },
-        "mood": {
-          "FIG-JESUS": "smile",
-          "FIG-GRUPPE-JUENGER": "calm"
-        }
-      }
-    },
-    {
-      "n": 3,
-      "reference": "MAT.9.11-MAT.9.12",
-      "figures": [
-        "FIG-GRUPPE-PHARISAEER",
-        "FIG-GRUPPE-JUENGER",
-        "FIG-JESUS"
-      ],
-      "objects": [],
       "signs": [],
       "speech": [
         {
           "from": "FIG-GRUPPE-PHARISAEER",
           "to": "FIG-GRUPPE-JUENGER",
           "icons": [
-            "FIG-JESUS",
-            "FIG-GRUPPE-ZOELLNER",
             "FIG-ZEICHEN-FRAGEN"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-PHARISAEER",
-          "icons": [
-            "FIG-ZEICHEN-KRANK",
-            "FIG-ZEICHEN-HEILEN"
-          ]
+          ],
+          "word": {
+            "de": "Warum isst euer Lehrer mit den Zöllnern?",
+            "gsw": "Werum isst eue Lehrer mit de Zöllner?"
+          }
         }
       ],
-      "action_de": "Die Pharisäer fragen seine Jünger, warum ihr Lehrer mit den Zöllnern und Sündern esse. Jesus hört es und sagt: Nicht die Gesunden brauchen einen Arzt, sondern die Kranken.",
+      "action_de": "Viele Zöllner und Sünder liegen mit Jesus und seinen Jüngern zu Tisch; die Pharisäer fragen die Jünger: Warum isst euer Lehrer mit den Zöllnern und Sündern?",
+      "keywords": {
+        "de": "viele Zöllner und Sünder",
+        "gsw": "vil Zöllner und Sünder"
+      },
       "stage": {
+        "pose": {
+          "FIG-GRUPPE-ZOELLNER": "sit",
+          "FIG-JESUS": "sit"
+        },
+        "hold": {
+          "FIG-JESUS": "FIG-OBJ-BROT"
+        },
         "mood": {
-          "FIG-GRUPPE-PHARISAEER": "pensive",
+          "FIG-JESUS": "smile",
+          "FIG-GRUPPE-ZOELLNER": "smile",
           "FIG-GRUPPE-JUENGER": "worried",
-          "FIG-JESUS": "calm"
+          "FIG-GRUPPE-PHARISAEER": "pensive"
+        },
+        "x": {
+          "FIG-GRUPPE-ZOELLNER": 24,
+          "FIG-JESUS": 66,
+          "FIG-GRUPPE-JUENGER": 112,
+          "FIG-GRUPPE-PHARISAEER": 162
         }
       }
     },
     {
-      "n": 4,
-      "reference": "MAT.9.13",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-PHARISAEER"
-      ],
+      "n": 3,
+      "reference": "MAT.9.12-MAT.9.13",
+      "figures": [],
       "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-PHARISAEER",
-          "icons": [
-            "FIG-ZEICHEN-ERBARMEN",
-            "FIG-ZEICHEN-OPFER",
-            "FIG-ZEICHEN-NEIN"
+      "speech": [],
+      "action_de": "Jesus antwortet: Nicht die Gesunden brauchen einen Arzt, sondern die Kranken; Barmherzigkeit will ich und nicht Opfer; ich bin nicht gekommen, Gerechte zu rufen, sondern Sünder.",
+      "keywords": {
+        "de": "Barmherzigkeit will ich und nicht Opfer",
+        "gsw": "Barmhärzigkeit wott ich und nöd Opfer"
+      },
+      "diagram": {
+        "visual": "columns",
+        "span": 2,
+        "arrow": false,
+        "speaker": "FIG-JESUS",
+        "title": {
+          "de": "Barmherzigkeit will ich!",
+          "gsw": "Barmhärzigkeit wott ich!"
+        },
+        "head": [
+          {
+            "de": "nicht …",
+            "gsw": "nöd …"
+          },
+          {
+            "de": "sondern …",
+            "gsw": "sondern …"
+          }
+        ],
+        "rows": [
+          [
+            {
+              "a": {
+                "de": "die Gesunden brauchen einen Arzt",
+                "gsw": "di Gsunde bruuched en Dokter"
+              },
+              "icons": [
+                "FIG-ZEICHEN-GESUND"
+              ],
+              "strike": true
+            },
+            {
+              "a": {
+                "de": "die Kranken",
+                "gsw": "di Chranke"
+              },
+              "icons": [
+                "FIG-ZEICHEN-KRANK"
+              ]
+            }
+          ],
+          [
+            {
+              "a": {
+                "de": "Opfer",
+                "gsw": "Opfer"
+              },
+              "icons": [
+                "FIG-ZEICHEN-OPFER"
+              ],
+              "strike": true
+            },
+            {
+              "a": {
+                "de": "Barmherzigkeit will ich",
+                "gsw": "Barmhärzigkeit wott ich"
+              },
+              "icons": [
+                "FIG-ZEICHEN-ERBARMEN"
+              ]
+            }
+          ],
+          [
+            {
+              "a": {
+                "de": "Ich bin gekommen, Gerechte zu rufen",
+                "gsw": "Ich bi choo, für Grächti z rüefe"
+              },
+              "icons": [
+                "FIG-ZEICHEN-GERECHT"
+              ],
+              "strike": true
+            },
+            {
+              "a": {
+                "de": "Sünder zu rufen",
+                "gsw": "Sünder z rüefe"
+              },
+              "icons": [
+                "FIG-GRUPPE-ZOELLNER"
+              ]
+            }
           ]
-        }
-      ],
-      "action_de": "Sie sollen lernen, was es heisst: Barmherzigkeit will ich und nicht Opfer. Er ist nicht gekommen, Gerechte zu rufen, sondern Sünder.",
-      "stage": {
-        "mood": {
-          "FIG-JESUS": "calm",
-          "FIG-GRUPPE-PHARISAEER": "pensive"
-        }
+        ]
       }
     }
   ],
   "actions_de": [
-    "Jesus sieht Matthäus an der Zollstelle sitzen und sagt zu ihm: Folge mir! Der steht auf und folgt ihm.",
-    "Als Jesus im Haus zu Tisch liegt, kommen viele Zöllner und Sünder und liegen mit ihm und seinen Jüngern zu Tisch.",
-    "Die Pharisäer fragen seine Jünger, warum ihr Lehrer mit den Zöllnern und Sündern esse. Jesus hört es und sagt: Nicht die Gesunden brauchen einen Arzt, sondern die Kranken.",
-    "Sie sollen lernen, was es heisst: Barmherzigkeit will ich und nicht Opfer. Er ist nicht gekommen, Gerechte zu rufen, sondern Sünder."
+    "Jesus sieht Matthäus an der Zollstelle sitzen und sagt zu ihm: Folge mir! Und er steht auf und folgt ihm.",
+    "Viele Zöllner und Sünder liegen mit Jesus und seinen Jüngern zu Tisch; die Pharisäer fragen die Jünger: Warum isst euer Lehrer mit den Zöllnern und Sündern?",
+    "Jesus antwortet: Nicht die Gesunden brauchen einen Arzt, sondern die Kranken; Barmherzigkeit will ich und nicht Opfer; ich bin nicht gekommen, Gerechte zu rufen, sondern Sünder."
   ],
   "captions_de": [
-    "Folge mir: Matthäus (stahlblauer Mantel) sitzt beim Zoll (Münzen in der Hand); Jesus sagt: Folge mir (zwei gehende Personen).",
-    "Mahl: Jesus isst mit seinen Jüngern und mit Zöllnern und Sündern (graugrüne Gewänder); Jesus und die Zöllner halten Brot; Freude bei den Zöllnern (strahlendes Gesicht).",
-    "Die Frage: Pharisäer (grau-blaues Gewand) fragen die Jünger: Jesus mit Zöllnern? (Jesus, Zöllner, Fragezeichen); Jesus: Der Kranke braucht Heilung (liegende Figur auf einer Matte, berührende Hand).",
-    "Barmherzigkeit: Jesus sagt: Erbarmen will Gott, nicht Opfer (offene Hände mit rotem Herz; Widder mit Flamme, rotes X)."
+    "Berufung: Matthäus (stahlblauer Mantel, Münzen) sitzt am Zoll; Jesus sagt: «Folge mir!» (zwei gehende Personen).",
+    "Mahl: Jesus sitzt mit Zöllnern (graugrün, Geldbeutel) beim Brot; die Pharisäer (gestreifter Gebetsmantel) fragen die Jünger: «Warum isst euer Lehrer mit den Zöllnern?» (Fragezeichen).",
+    "Zwei Spalten «nicht … – sondern …» (Bild Jesus): Gesunde ↔ Kranke (Oberarm; liegende Figur), Opfer ↔ Barmherzigkeit (Widder mit Flamme; Hände mit Herz), Gerechte ↔ Sünder (Person mit Waage; Zöllner); hervorgehoben die Seite «sondern»."
   ],
-  "interpretation_note_de": "Matthäus heisst hier der Zöllner, den Markus und Lukas Levi nennen ([[MRK.2.14]]); das Bild verwendet die Figur des Apostels Matthäus. Wessen Haus es ist ([[MAT.9.10]]), lässt der Text offen. Das Wort aus [[HOS.6.6]] ist als Gegenüber von Erbarmen und Opfer gezeichnet.",
+  "interpretation_note_de": "Drei Felder nach «Berufung – Mahl – Anstoss – Antwort» ([[MAT.9.9-MAT.9.13]]). Die Antwort Jesu steht als dreimal «nicht … sondern» in zwei Spalten; links durchgestrichen, was verneint ist, rechts hervorgehoben. Im Zitat aus [[HOS.6.6]] steht das Bejahte zuerst; die Spalten ordnen es nach der Verneinung. «Sünder» ist das Wort des Textes, kein Urteil des Bildes über die Zöllner-Figuren.",
   "basis": [
     {
       "record": "TU-MAT-009-009-013",
       "field": "summary",
-      "fingerprint": "60912ccbbe6f656c"
+      "fingerprint": "3b21aac856eacb1a"
     },
     {
       "record": "TRANS-MAT-009-001-038-DE-WORKING",
@@ -174,24 +235,18 @@
     {
       "record": "TRANS-MAT-009-001-038-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.9.10",
-      "fingerprint": "80c3be552e9b2bb8"
+      "reference": "MAT.9.10-MAT.9.11",
+      "fingerprint": "09a58c3241596b76"
     },
     {
       "record": "TRANS-MAT-009-001-038-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.9.11-MAT.9.12",
-      "fingerprint": "2974b4122ef43f16"
-    },
-    {
-      "record": "TRANS-MAT-009-001-038-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.9.13",
-      "fingerprint": "e6a7f15636eed39e"
+      "reference": "MAT.9.12-MAT.9.13",
+      "fingerprint": "4bb95480a59b2335"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -355,6 +410,195 @@
           "Die Frage: Pharisäer (grau-blaues Gewand) fragen die Jünger: Jesus mit Zöllnern? (Jesus, Zöllner, Fragezeichen); Jesus: Der Kranke braucht Heilung (liegende Figur auf einer Matte, berührende Hand).",
           "Barmherzigkeit: Jesus sagt: Erbarmen will Gott, nicht Opfer (rosa Herz in zwei Händen; kleiner Altar mit Flamme, rotes X)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.9.9",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-MATTHAEUS"
+            ],
+            "objects": [
+              "FIG-OBJ-MUENZEN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-MATTHAEUS",
+                "icons": [
+                  "FIG-ZEICHEN-NACHFOLGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus sieht Matthäus an der Zollstelle sitzen und sagt zu ihm: Folge mir! Der steht auf und folgt ihm.",
+            "stage": {
+              "pose": {
+                "FIG-MATTHAEUS": "sit"
+              },
+              "mood": {
+                "FIG-MATTHAEUS": "surprised"
+              },
+              "hold": {
+                "FIG-MATTHAEUS": "FIG-OBJ-MUENZEN"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.9.10",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZOELLNER"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [],
+            "action_de": "Als Jesus im Haus zu Tisch liegt, kommen viele Zöllner und Sünder und liegen mit ihm und seinen Jüngern zu Tisch.",
+            "stage": {
+              "pose": {
+                "FIG-GRUPPE-JUENGER": "sit",
+                "FIG-JESUS": "sit",
+                "FIG-GRUPPE-ZOELLNER": "sit"
+              },
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROT",
+                "FIG-GRUPPE-ZOELLNER": "FIG-OBJ-BROT"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-GRUPPE-ZOELLNER"
+                ]
+              },
+              "mood": {
+                "FIG-JESUS": "smile",
+                "FIG-GRUPPE-JUENGER": "calm"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.9.11-MAT.9.12",
+            "figures": [
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-PHARISAEER",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-ZOELLNER",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-ZEICHEN-KRANK",
+                  "FIG-ZEICHEN-HEILEN"
+                ]
+              }
+            ],
+            "action_de": "Die Pharisäer fragen seine Jünger, warum ihr Lehrer mit den Zöllnern und Sündern esse. Jesus hört es und sagt: Nicht die Gesunden brauchen einen Arzt, sondern die Kranken.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-PHARISAEER": "pensive",
+                "FIG-GRUPPE-JUENGER": "worried",
+                "FIG-JESUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.9.13",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-PHARISAEER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-ZEICHEN-ERBARMEN",
+                  "FIG-ZEICHEN-OPFER",
+                  "FIG-ZEICHEN-NEIN"
+                ]
+              }
+            ],
+            "action_de": "Sie sollen lernen, was es heisst: Barmherzigkeit will ich und nicht Opfer. Er ist nicht gekommen, Gerechte zu rufen, sondern Sünder.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-PHARISAEER": "pensive"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus sieht Matthäus an der Zollstelle sitzen und sagt zu ihm: Folge mir! Der steht auf und folgt ihm.",
+          "Als Jesus im Haus zu Tisch liegt, kommen viele Zöllner und Sünder und liegen mit ihm und seinen Jüngern zu Tisch.",
+          "Die Pharisäer fragen seine Jünger, warum ihr Lehrer mit den Zöllnern und Sündern esse. Jesus hört es und sagt: Nicht die Gesunden brauchen einen Arzt, sondern die Kranken.",
+          "Sie sollen lernen, was es heisst: Barmherzigkeit will ich und nicht Opfer. Er ist nicht gekommen, Gerechte zu rufen, sondern Sünder."
+        ],
+        "captions_de": [
+          "Folge mir: Matthäus (stahlblauer Mantel) sitzt beim Zoll (Münzen in der Hand); Jesus sagt: Folge mir (zwei gehende Personen).",
+          "Mahl: Jesus isst mit seinen Jüngern und mit Zöllnern und Sündern (graugrüne Gewänder); Jesus und die Zöllner halten Brot; Freude bei den Zöllnern (strahlendes Gesicht).",
+          "Die Frage: Pharisäer (grau-blaues Gewand) fragen die Jünger: Jesus mit Zöllnern? (Jesus, Zöllner, Fragezeichen); Jesus: Der Kranke braucht Heilung (liegende Figur auf einer Matte, berührende Hand).",
+          "Barmherzigkeit: Jesus sagt: Erbarmen will Gott, nicht Opfer (offene Hände mit rotem Herz; Widder mit Flamme, rotes X)."
+        ],
+        "interpretation_note_de": "Matthäus heisst hier der Zöllner, den Markus und Lukas Levi nennen ([[MRK.2.14]]); das Bild verwendet die Figur des Apostels Matthäus. Wessen Haus es ist ([[MAT.9.10]]), lässt der Text offen. Das Wort aus [[HOS.6.6]] ist als Gegenüber von Erbarmen und Opfer gezeichnet.",
+        "basis": [
+          {
+            "record": "TU-MAT-009-009-013",
+            "field": "summary",
+            "fingerprint": "60912ccbbe6f656c"
+          },
+          {
+            "record": "TRANS-MAT-009-001-038-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.9.9",
+            "fingerprint": "5ae0a787b46cd113"
+          },
+          {
+            "record": "TRANS-MAT-009-001-038-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.9.10",
+            "fingerprint": "80c3be552e9b2bb8"
+          },
+          {
+            "record": "TRANS-MAT-009-001-038-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.9.11-MAT.9.12",
+            "fingerprint": "2974b4122ef43f16"
+          },
+          {
+            "record": "TRANS-MAT-009-001-038-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.9.13",
+            "fingerprint": "e6a7f15636eed39e"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

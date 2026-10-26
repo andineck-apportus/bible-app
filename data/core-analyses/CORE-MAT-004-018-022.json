@@ -1,0 +1,159 @@
+{
+ "id": "CORE-MAT-004-018-022",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.4.18-MAT.4.22",
+ "target": "TU-MAT-004-018-022",
+ "core_de": "Am See von Galiläa ruft Jesus zwei Brüderpaare, die Fischer Simon Petrus und Andreas sowie Jakobus und Johannes, die Söhne des Zebedäus: «Kommt mir nach, und ich werde euch zu Menschenfischern machen!» – sogleich lassen sie Netze, Boot und Vater zurück und folgen ihm.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "zwei Berufungen",
+    "range": "MAT.4.18-MAT.4.22",
+    "elements": [
+     {
+      "label": "Simon Petrus und Andreas werden gerufen und folgen",
+      "ref": "MAT.4.18-MAT.4.20",
+      "role": "Szene 1"
+     },
+     {
+      "label": "Jakobus und Johannes werden gerufen und folgen",
+      "ref": "MAT.4.21-MAT.4.22",
+      "role": "Szene 2"
+     },
+     {
+      "label": "Gleich gebaute Szenen",
+      "ref": "MAT.4.18-MAT.4.22",
+      "role": "Bau",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "leitwort": [
+      {
+       "word": "sogleich … folgten ihm",
+       "refs": [
+        "MAT.4.20",
+        "MAT.4.22"
+       ],
+       "role": "Ausgang beider Szenen"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "parallel",
+    "subtype": "Parallelszenen",
+    "range": "MAT.4.18-MAT.4.22",
+    "elements": [
+     {
+      "label": "sah zwei Brüder: Simon Petrus und Andreas ↔ zwei andere Brüder: Jakobus und Johannes",
+      "ref": "MAT.4.18-MAT.4.21",
+      "role": "wer"
+     },
+     {
+      "label": "warfen ein Wurfnetz in den See (Fischer) ↔ richteten im Boot mit Zebedäus die Netze her",
+      "ref": "MAT.4.18-MAT.4.21",
+      "role": "Arbeit"
+     },
+     {
+      "label": "«Kommt mir nach, und ich werde euch zu Menschenfischern machen!» ↔ er rief sie",
+      "ref": "MAT.4.19-MAT.4.21",
+      "role": "Ruf"
+     },
+     {
+      "label": "liessen sogleich die Netze liegen ↔ liessen sogleich das Boot und ihren Vater zurück",
+      "ref": "MAT.4.20-MAT.4.22",
+      "role": "Zurückgelassenes"
+     },
+     {
+      "label": "folgten ihm ↔ folgten ihm",
+      "ref": "MAT.4.20-MAT.4.22",
+      "role": "Ausgang"
+     }
+    ],
+    "features": {
+     "pattern_break": [
+      {
+       "ref": "MAT.4.21-MAT.4.22",
+       "note": "In der zweiten Szene steht der Ruf ohne Wortlaut; zurückgelassen wird mehr: Boot und Vater."
+      }
+     ],
+     "wordplay": [
+      {
+       "ref": "MAT.4.19",
+       "note": "Fischer → Menschenfischer"
+      }
+     ]
+    },
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.4.18-MAT.4.20",
+   "text_de": "Am See sieht Jesus Simon, genannt Petrus, und Andreas, seinen Bruder, wie sie als Fischer ein Wurfnetz auswerfen, und sagt: «Kommt mir nach, und ich werde euch zu Menschenfischern machen!»; sogleich lassen sie die Netze liegen und folgen ihm.",
+   "reason_de": "Erste Berufung mit dem Ruf im Wortlaut (Kriterien 1 und 4).",
+   "recognition_de": "Jesus am Ufer ruft Petrus und Andreas mit dem Netz.",
+   "keywords": [
+    "Kommt mir nach, und ich werde euch zu Menschenfischern machen!",
+    "liessen sogleich die Netze liegen und folgten ihm"
+   ]
+  },
+  {
+   "reference": "MAT.4.21-MAT.4.22",
+   "text_de": "Weiter sieht er Jakobus und Johannes, die Söhne des Zebedäus, im Boot mit ihrem Vater beim Herrichten der Netze und ruft sie; sogleich lassen sie das Boot und ihren Vater zurück und folgen ihm.",
+   "reason_de": "Zweite, gleich gebaute Berufung (Kriterium 2).",
+   "recognition_de": "Jakobus und Johannes verlassen Boot und Vater Zebedäus.",
+   "keywords": [
+    "liessen sogleich das Boot und ihren Vater zurück und folgten ihm"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Wie die Fischer Jesus schon kannten – nicht erzählt"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-PETRUS",
+  "FIG-ANDREAS",
+  "FIG-JAKOBUS-ZEBEDAEUS",
+  "FIG-JOHANNES-ZEBEDAEUS",
+  "FIG-ZEBEDAEUS"
+ ],
+ "places": [
+  "FIG-ORT-SEE"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.4.18-MAT.4.22",
+   "fingerprint": "b626567e517117ca"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; keine fachliche Prüfung durch eine Person",
+  "summary_de": "Zwei gleich gebaute Berufungen mit Musterbruch (Ruf ohne Wortlaut, mehr zurückgelassen) vollständig.",
+  "changes_de": []
+ }
+}

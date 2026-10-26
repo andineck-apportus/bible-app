@@ -17,14 +17,17 @@
         "FIG-SCHWIEGERMUTTER-PETRUS"
       ],
       "objects": [
-        "FIG-ORT-HAUS",
-        "FIG-OBJ-MATTE"
+        "FIG-ORT-HAUS"
       ],
       "signs": [
         "FIG-ZEICHEN-HEILEN"
       ],
       "speech": [],
-      "action_de": "Im Haus des Petrus sieht Jesus dessen Schwiegermutter mit Fieber im Bett liegen; er berührt ihre Hand, das Fieber verlässt sie, und sie steht auf und dient ihm.",
+      "action_de": "Im Haus des Petrus berührt Jesus die Hand der fiebernden Schwiegermutter; das Fieber verlässt sie, und sie steht auf und dient ihm.",
+      "keywords": {
+        "de": "sie stand auf und diente ihm",
+        "gsw": "si isch ufgstande und hät ihm dienet"
+      },
       "stage": {
         "back_side": "left",
         "before": true,
@@ -33,14 +36,11 @@
         },
         "x": {
           "FIG-JESUS": 66,
-          "FIG-SCHWIEGERMUTTER-PETRUS": 108
+          "FIG-SCHWIEGERMUTTER-PETRUS": 116
         },
         "mood": {
           "FIG-SCHWIEGERMUTTER-PETRUS": "smile",
           "FIG-JESUS": "calm"
-        },
-        "hold": {
-          "FIG-SCHWIEGERMUTTER-PETRUS": "FIG-OBJ-MATTE"
         },
         "arrows": [
           [
@@ -53,7 +53,7 @@
     },
     {
       "n": 2,
-      "reference": "MAT.8.16",
+      "reference": "MAT.8.16-MAT.8.17",
       "figures": [
         "FIG-JESUS",
         "FIG-ROLLE-BESESSENER",
@@ -63,39 +63,31 @@
       "objects": [],
       "signs": [
         "FIG-ZEICHEN-ABEND",
-        "FIG-ZEICHEN-DAEMON",
-        "FIG-ZEICHEN-HEILEN"
+        "FIG-ZEICHEN-AUSTREIBEN"
       ],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-BESESSENER",
-          "icons": [
-            "FIG-ZEICHEN-DAEMON",
-            "FIG-ZEICHEN-AUSTREIBEN"
-          ]
-        }
-      ],
-      "action_de": "Am Abend bringt man viele Besessene zu ihm; er treibt die Geister mit einem Wort aus und heilt alle Kranken.",
+      "speech": [],
+      "action_de": "Am Abend bringt man viele Besessene; Jesus treibt die Geister mit einem Wort aus und heilt alle Kranken – damit erfüllt würde: Er selbst hat unsere Schwächen genommen und die Krankheiten getragen.",
+      "keywords": {
+        "de": "Er selbst hat unsere Schwächen genommen",
+        "gsw": "Er sälber hät öisi Schwäche gnoo"
+      },
       "stage": {
         "at": {
-          "FIG-ZEICHEN-DAEMON": "FIG-ROLLE-BESESSENER"
+          "FIG-ZEICHEN-AUSTREIBEN": "FIG-ROLLE-BESESSENER"
         },
         "pose": {
           "FIG-ROLLE-KRANKER": "sit"
         },
         "mood": {
           "FIG-GRUPPE-MENGE": "worried",
-          "FIG-ROLLE-BESESSENER": "worried"
-        },
-        "beside": {
-          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
+          "FIG-ROLLE-BESESSENER": "worried",
+          "FIG-ROLLE-KRANKER": "smile"
         },
         "x": {
           "FIG-JESUS": 26,
-          "FIG-ROLLE-BESESSENER": 62,
-          "FIG-ROLLE-KRANKER": 96,
-          "FIG-GRUPPE-MENGE": 158
+          "FIG-ROLLE-BESESSENER": 64,
+          "FIG-ROLLE-KRANKER": 102,
+          "FIG-GRUPPE-MENGE": 160
         },
         "arrows": [
           [
@@ -105,64 +97,22 @@
           ]
         ]
       }
-    },
-    {
-      "n": 3,
-      "reference": "MAT.8.17",
-      "figures": [
-        "FIG-ROLLE-PROPHET",
-        "FIG-JESUS"
-      ],
-      "objects": [
-        "FIG-OBJ-SCHRIFTROLLE"
-      ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-ROLLE-PROPHET",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-OBJ-LAST",
-            "FIG-ZEICHEN-KRANK"
-          ]
-        }
-      ],
-      "action_de": "Damit erfüllt sich, was durch den Propheten Jesaja gesagt ist: Er selbst hat unsere Schwächen genommen und die Krankheiten getragen.",
-      "stage": {
-        "hold": {
-          "FIG-ROLLE-PROPHET": "FIG-OBJ-SCHRIFTROLLE"
-        },
-        "mood": {
-          "FIG-JESUS": "calm",
-          "FIG-ROLLE-PROPHET": "calm"
-        },
-        "arrows": [
-          [
-            "FIG-ROLLE-PROPHET",
-            "FIG-JESUS",
-            "act"
-          ]
-        ]
-      }
     }
   ],
   "actions_de": [
-    "Im Haus des Petrus sieht Jesus dessen Schwiegermutter mit Fieber im Bett liegen; er berührt ihre Hand, das Fieber verlässt sie, und sie steht auf und dient ihm.",
-    "Am Abend bringt man viele Besessene zu ihm; er treibt die Geister mit einem Wort aus und heilt alle Kranken.",
-    "Damit erfüllt sich, was durch den Propheten Jesaja gesagt ist: Er selbst hat unsere Schwächen genommen und die Krankheiten getragen."
+    "Im Haus des Petrus berührt Jesus die Hand der fiebernden Schwiegermutter; das Fieber verlässt sie, und sie steht auf und dient ihm.",
+    "Am Abend bringt man viele Besessene; Jesus treibt die Geister mit einem Wort aus und heilt alle Kranken – damit erfüllt würde: Er selbst hat unsere Schwächen genommen und die Krankheiten getragen."
   ],
   "captions_de": [
-    "Berührung → aufgerichtet: Jesus berührt die Hand der fiebernden Schwiegermutter des Petrus (Pfeil zu ihr; berührende Hand mit grünem Lichtpunkt); sie steht auf (ihre Matte gerollt in der Hand) und dient ihm.",
-    "Ein Wort → frei und gesund: Am Abend (Sonne über Bergen) bringt man Besessene und Kranke; Jesus treibt mit einem Wort die Geister aus (dunkler Wirbel, Pfeil weg), und der Pfeil führt von ihm zum Kranken: er wird gesund (berührende Hand mit grünem Lichtpunkt).",
-    "Jesaja → erfüllt in Jesus: Der Prophet Jesaja (Schriftrolle) hat gesagt: Er trägt unsere Krankheiten (Jesus, verschnürtes Tuchbündel als Last, liegende Figur auf einer Matte); der Pfeil führt vom Propheten zu Jesus."
+    "Im Haus des Petrus: Jesus berührt die Hand der Schwiegermutter (Pfeil); sie steht auf und dient ihm (Schale mit Brot).",
+    "Am Abend (Sonne über den Bergen): Jesus treibt dem Besessenen den Geist aus (Schatten mit Pfeil hinaus) und heilt den Kranken (Strohmatte, Kopfverband; Pfeil); die Menge wartet."
   ],
-  "interpretation_note_de": "Feld 3 ist eine Deutung des Erzählers ([[ISA.53.4]]): Jesaja tritt in der Szene nicht auf; die gestrichelte Linie trennt das Prophetenwort von Jesus. Das Wort von der Erfüllung gehört Matthäus, nicht den Personen der Szene.",
+  "interpretation_note_de": "Zwei Szenen ([[MAT.8.14-MAT.8.17]]): eine Heilung im Haus und viele am Abend. Die Austreibung zeigt das Zeichen «austreiben» (Schatten mit Pfeil hinaus), nicht «fliehen». Das Erfüllungswort ([[ISA.53.4]]) steht im Stichwortband; das Bild deutet es nicht weiter.",
   "basis": [
     {
       "record": "TU-MAT-008-014-017",
       "field": "summary",
-      "fingerprint": "9d87eb4145872072"
+      "fingerprint": "4311d4b56d0ed50f"
     },
     {
       "record": "TRANS-MAT-008-001-034-DE-WORKING",
@@ -173,18 +123,12 @@
     {
       "record": "TRANS-MAT-008-001-034-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.8.16",
-      "fingerprint": "4d7bea0d4b9a0f36"
-    },
-    {
-      "record": "TRANS-MAT-008-001-034-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.8.17",
-      "fingerprint": "2a701307f1513914"
+      "reference": "MAT.8.16-MAT.8.17",
+      "fingerprint": "a6ac229161a149f6"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -598,6 +542,188 @@
           "Ein Wort → frei und gesund: Am Abend (halbe rote Sonne) bringt man Besessene und Kranke; Jesus treibt mit einem Wort die Geister aus (dunkler Wirbel, Pfeil weg), und der Pfeil führt von ihm zum Kranken: er wird gesund (berührende Hand mit grünem Lichtpunkt).",
           "Jesaja → erfüllt in Jesus: Der Prophet Jesaja (Schriftrolle) hat gesagt: Er trägt unsere Krankheiten (Jesus, verschnürtes Tuchbündel als Last, liegende Figur auf einer Matte); der Pfeil führt vom Propheten zu Jesus."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.8.14-MAT.8.15",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-SCHWIEGERMUTTER-PETRUS"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS",
+              "FIG-OBJ-MATTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [],
+            "action_de": "Im Haus des Petrus sieht Jesus dessen Schwiegermutter mit Fieber im Bett liegen; er berührt ihre Hand, das Fieber verlässt sie, und sie steht auf und dient ihm.",
+            "stage": {
+              "back_side": "left",
+              "before": true,
+              "beside": {
+                "FIG-ZEICHEN-HEILEN": "FIG-SCHWIEGERMUTTER-PETRUS"
+              },
+              "x": {
+                "FIG-JESUS": 66,
+                "FIG-SCHWIEGERMUTTER-PETRUS": 108
+              },
+              "mood": {
+                "FIG-SCHWIEGERMUTTER-PETRUS": "smile",
+                "FIG-JESUS": "calm"
+              },
+              "hold": {
+                "FIG-SCHWIEGERMUTTER-PETRUS": "FIG-OBJ-MATTE"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-SCHWIEGERMUTTER-PETRUS",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.8.16",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-BESESSENER",
+              "FIG-ROLLE-KRANKER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-ABEND",
+              "FIG-ZEICHEN-DAEMON",
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-BESESSENER",
+                "icons": [
+                  "FIG-ZEICHEN-DAEMON",
+                  "FIG-ZEICHEN-AUSTREIBEN"
+                ]
+              }
+            ],
+            "action_de": "Am Abend bringt man viele Besessene zu ihm; er treibt die Geister mit einem Wort aus und heilt alle Kranken.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-DAEMON": "FIG-ROLLE-BESESSENER"
+              },
+              "pose": {
+                "FIG-ROLLE-KRANKER": "sit"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "worried",
+                "FIG-ROLLE-BESESSENER": "worried"
+              },
+              "beside": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
+              },
+              "x": {
+                "FIG-JESUS": 26,
+                "FIG-ROLLE-BESESSENER": 62,
+                "FIG-ROLLE-KRANKER": 96,
+                "FIG-GRUPPE-MENGE": 158
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-KRANKER",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.8.17",
+            "figures": [
+              "FIG-ROLLE-PROPHET",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHRIFTROLLE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-PROPHET",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-OBJ-LAST",
+                  "FIG-ZEICHEN-KRANK"
+                ]
+              }
+            ],
+            "action_de": "Damit erfüllt sich, was durch den Propheten Jesaja gesagt ist: Er selbst hat unsere Schwächen genommen und die Krankheiten getragen.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-PROPHET": "FIG-OBJ-SCHRIFTROLLE"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-ROLLE-PROPHET": "calm"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-PROPHET",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ]
+            }
+          }
+        ],
+        "actions_de": [
+          "Im Haus des Petrus sieht Jesus dessen Schwiegermutter mit Fieber im Bett liegen; er berührt ihre Hand, das Fieber verlässt sie, und sie steht auf und dient ihm.",
+          "Am Abend bringt man viele Besessene zu ihm; er treibt die Geister mit einem Wort aus und heilt alle Kranken.",
+          "Damit erfüllt sich, was durch den Propheten Jesaja gesagt ist: Er selbst hat unsere Schwächen genommen und die Krankheiten getragen."
+        ],
+        "captions_de": [
+          "Berührung → aufgerichtet: Jesus berührt die Hand der fiebernden Schwiegermutter des Petrus (Pfeil zu ihr; berührende Hand mit grünem Lichtpunkt); sie steht auf (ihre Matte gerollt in der Hand) und dient ihm.",
+          "Ein Wort → frei und gesund: Am Abend (Sonne über Bergen) bringt man Besessene und Kranke; Jesus treibt mit einem Wort die Geister aus (dunkler Wirbel, Pfeil weg), und der Pfeil führt von ihm zum Kranken: er wird gesund (berührende Hand mit grünem Lichtpunkt).",
+          "Jesaja → erfüllt in Jesus: Der Prophet Jesaja (Schriftrolle) hat gesagt: Er trägt unsere Krankheiten (Jesus, verschnürtes Tuchbündel als Last, liegende Figur auf einer Matte); der Pfeil führt vom Propheten zu Jesus."
+        ],
+        "interpretation_note_de": "Feld 3 ist eine Deutung des Erzählers ([[ISA.53.4]]): Jesaja tritt in der Szene nicht auf; die gestrichelte Linie trennt das Prophetenwort von Jesus. Das Wort von der Erfüllung gehört Matthäus, nicht den Personen der Szene.",
+        "basis": [
+          {
+            "record": "TU-MAT-008-014-017",
+            "field": "summary",
+            "fingerprint": "9d87eb4145872072"
+          },
+          {
+            "record": "TRANS-MAT-008-001-034-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.8.14-MAT.8.15",
+            "fingerprint": "7f872f25920d6f3d"
+          },
+          {
+            "record": "TRANS-MAT-008-001-034-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.8.16",
+            "fingerprint": "4d7bea0d4b9a0f36"
+          },
+          {
+            "record": "TRANS-MAT-008-001-034-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.8.17",
+            "fingerprint": "2a701307f1513914"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

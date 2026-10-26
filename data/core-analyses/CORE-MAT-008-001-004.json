@@ -1,0 +1,161 @@
+{
+ "id": "CORE-MAT-008-001-004",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.8.1-MAT.8.4",
+ "target": "TU-MAT-008-001-004",
+ "core_de": "Als Jesus vom Berg herabsteigt, wirft sich ein Aussätziger vor ihm nieder: «Herr, wenn du willst, kannst du mich rein machen»; Jesus streckt die Hand aus, berührt ihn – «Ich will; werde rein!» –, und er wird sogleich rein; Jesus heisst ihn, niemandem davon zu sagen, sondern sich dem Priester zu zeigen und die Gabe darzubringen, die Mose angeordnet hat, ihnen zum Zeugnis.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Bitte – Berührung und Wort – Auftrag",
+    "range": "MAT.8.1-MAT.8.4",
+    "elements": [
+     {
+      "label": "Vom Berg herab; grosse Mengen folgen ihm",
+      "ref": "MAT.8.1",
+      "role": "Übergang"
+     },
+     {
+      "label": "Bitte und Antwort",
+      "ref": "MAT.8.2-MAT.8.3",
+      "role": "Heilung",
+      "child": "s2"
+     },
+     {
+      "label": "Auftrag: nicht sagen, sondern dem Priester zeigen",
+      "ref": "MAT.8.4",
+      "role": "Auftrag",
+      "child": "s3"
+     }
+    ],
+    "features": {
+     "crossref": [
+      {
+       "ref": "LEV.14.2-LEV.14.32",
+       "kind": "Bezug",
+       "note": "die Gabe, die Mose angeordnet hat"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "dialogue",
+    "subtype": "Bitte ↔ Antwort (gespiegelt)",
+    "range": "MAT.8.2-MAT.8.3",
+    "elements": [
+     {
+      "label": "«Herr, wenn du willst,» ↔ «Ich will;»",
+      "ref": "MAT.8.2-MAT.8.3",
+      "role": "Wille"
+     },
+     {
+      "label": "«kannst du mich rein machen» ↔ «werde rein!» – und sogleich wurde er rein",
+      "ref": "MAT.8.2-MAT.8.3",
+      "role": "rein"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-ROLLE-AUSSAETZIGER",
+       "to": "FIG-JESUS",
+       "ref": "MAT.8.2"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-ROLLE-AUSSAETZIGER",
+       "ref": "MAT.8.3"
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "contrast",
+    "subtype": "«nicht … sondern»",
+    "range": "MAT.8.4",
+    "elements": [
+     {
+      "label": "Sieh zu, dass du es niemandem sagst",
+      "ref": "MAT.8.4",
+      "role": "nicht"
+     },
+     {
+      "label": "sondern geh, zeig dich dem Priester und bring die Gabe dar, die Mose angeordnet hat, ihnen zum Zeugnis",
+      "ref": "MAT.8.4",
+      "role": "sondern"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.8.1-MAT.8.3",
+   "text_de": "Grosse Mengen folgen Jesus vom Berg; ein Aussätziger wirft sich vor ihm nieder und sagt: «Herr, wenn du willst, kannst du mich rein machen»; Jesus streckt die Hand aus, berührt ihn und sagt: «Ich will; werde rein!», und sogleich wird er rein.",
+   "reason_de": "Bitte und Antwort spiegeln sich, Heilung durch Berührung (Kriterien 1, 2 und 4).",
+   "recognition_de": "Jesus berührt den knienden Aussätzigen.",
+   "keywords": [
+    "Herr, wenn du willst, kannst du mich rein machen",
+    "Ich will; werde rein!"
+   ]
+  },
+  {
+   "reference": "MAT.8.4",
+   "text_de": "Jesus sagt ihm: «Sieh zu, dass du es niemandem sagst; sondern geh, zeig dich dem Priester und bring die Gabe dar, die Mose angeordnet hat, ihnen zum Zeugnis.»",
+   "reason_de": "Auftrag nach der Heilung (Kriterium 3).",
+   "recognition_de": "Jesus schickt den Geheilten zum Priester.",
+   "keywords": [
+    "Sieh zu, dass du es niemandem sagst",
+    "zeig dich dem Priester"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Die Reinigungsvorschriften im Einzelnen – Hintergrund damals"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-ROLLE-AUSSAETZIGER",
+  "FIG-GRUPPE-MENGE",
+  "FIG-ROLLE-PRIESTER"
+ ],
+ "places": [
+  "FIG-ORT-BERG"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.8.1-MAT.8.4",
+   "fingerprint": "5f543fd950d0268b"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; keine fachliche Prüfung durch eine Person",
+  "summary_de": "Gespiegelte Bitte ↔ Antwort und Auftrag «nicht … sondern» richtig; Priester nur genannt, nicht anwesend.",
+  "changes_de": []
+ }
+}

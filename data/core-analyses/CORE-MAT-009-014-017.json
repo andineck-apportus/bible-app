@@ -1,0 +1,174 @@
+{
+ "id": "CORE-MAT-009-014-017",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.9.14-MAT.9.17",
+ "target": "TU-MAT-009-014-017",
+ "core_de": "Die Jünger des Johannes fragen, warum Jesu Jünger nicht fasten; Jesus antwortet mit Bildern: Hochzeitsgäste trauern nicht, solange der Bräutigam bei ihnen ist – wenn er weggenommen wird, werden sie fasten; niemand setzt einen Flicken aus neuem Stoff auf ein altes Kleid, und man füllt jungen Wein nicht in alte Schläuche, sondern in neue, und beide bleiben erhalten.",
+ "mode": "speech",
+ "voice": {
+  "speaker": "FIG-JESUS",
+  "addressee": "FIG-GRUPPE-JOHANNES-JUENGER"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "dialogue",
+    "subtype": "Frage → Antwort in Bildworten",
+    "range": "MAT.9.14-MAT.9.17",
+    "elements": [
+     {
+      "label": "Jünger des Johannes: «Warum fasten wir und die Pharisäer oft, deine Jünger aber fasten nicht?»",
+      "ref": "MAT.9.14",
+      "role": "Frage"
+     },
+     {
+      "label": "Bildwort Bräutigam: jetzt ↔ es werden Tage kommen",
+      "ref": "MAT.9.15",
+      "role": "Antwort 1",
+      "child": "s2"
+     },
+     {
+      "label": "Zwei Bildworte: Flicken und Wein",
+      "ref": "MAT.9.16-MAT.9.17",
+      "role": "Antwort 2",
+      "child": "s3"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-GRUPPE-JOHANNES-JUENGER",
+       "to": "FIG-JESUS",
+       "ref": "MAT.9.14"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JOHANNES-JUENGER",
+       "ref": "MAT.9.15-MAT.9.17"
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "solange der Bräutigam da ist ↔ wenn er weggenommen wird",
+    "range": "MAT.9.15",
+    "elements": [
+     {
+      "label": "Können die Hochzeitsgäste trauern, solange der Bräutigam bei ihnen ist?",
+      "ref": "MAT.9.15",
+      "role": "jetzt"
+     },
+     {
+      "label": "Es werden Tage kommen, wenn der Bräutigam von ihnen weggenommen wird, und dann werden sie fasten",
+      "ref": "MAT.9.15",
+      "role": "dann"
+     }
+    ],
+    "features": {
+     "modality": [
+      {
+       "ref": "MAT.9.15",
+       "kind": "Ankündigung",
+       "note": "«es werden Tage kommen» – Zukunft"
+      }
+     ]
+    },
+    "visual": "columns",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "parable",
+    "subtype": "Bildworte: altes ↔ neues",
+    "range": "MAT.9.16-MAT.9.17",
+    "elements": [
+     {
+      "label": "Flicken aus ungewalktem Stoff auf altem Kleid → das Flickstück reisst ab, der Riss wird schlimmer",
+      "ref": "MAT.9.16",
+      "role": "Bild 1"
+     },
+     {
+      "label": "Junger Wein in alten Schläuchen → die Schläuche reissen, der Wein läuft aus, die Schläuche gehen verloren",
+      "ref": "MAT.9.17",
+      "role": "Bild 2"
+     },
+     {
+      "label": "sondern junger Wein in neuen Schläuchen → beide bleiben erhalten",
+      "ref": "MAT.9.17",
+      "role": "Gegenbild"
+     }
+    ],
+    "features": {
+     "interpretation": [
+      {
+       "ref": "MAT.9.16-MAT.9.17",
+       "note": "Eine Sachhälfte gibt der Text nicht; Deutungen (Altes und Neues, Gesetz und Evangelium) bleiben Auslegung."
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.9.14-MAT.9.15",
+   "text_de": "Die Jünger des Johannes fragen: «Warum fasten wir und die Pharisäer oft, deine Jünger aber fasten nicht?»; Jesus: Die Hochzeitsgäste können nicht trauern, solange der Bräutigam bei ihnen ist; es werden aber Tage kommen, wenn der Bräutigam von ihnen weggenommen wird, und dann werden sie fasten.",
+   "reason_de": "Frage und erste Antwort mit Zeitwende (Kriterien 1 und 2).",
+   "recognition_de": "Hochzeitsgäste mit dem Bräutigam ↔ Tage ohne ihn: Fasten.",
+   "keywords": [
+    "Warum fasten wir und die Pharisäer oft, deine Jünger aber fasten nicht?",
+    "solange der Bräutigam bei ihnen ist",
+    "dann werden sie fasten"
+   ]
+  },
+  {
+   "reference": "MAT.9.16-MAT.9.17",
+   "text_de": "Niemand setzt einen Flicken aus ungewalktem Stoff auf ein altes Kleid, sonst wird der Riss schlimmer; man füllt jungen Wein nicht in alte Schläuche, sonst reissen sie, und der Wein läuft aus; sondern man füllt jungen Wein in neue Schläuche, und beide bleiben erhalten.",
+   "reason_de": "Zwei Bildworte mit Folge (Kriterien 2 und 4).",
+   "recognition_de": "Altes Kleid mit Riss; geplatzter alter Schlauch ↔ neuer Schlauch.",
+   "keywords": [
+    "auf ein altes Kleid",
+    "jungen Wein in neue Schläuche"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Die Fastenpraxis der Johannesjünger und Pharisäer – Hintergrund"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-JOHANNES-JUENGER",
+  "FIG-ROLLE-BRAEUTIGAM",
+  "FIG-GRUPPE-GAESTE"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.9.14-MAT.9.17",
+   "fingerprint": "23920ffcc9cd7513"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; keine fachliche Prüfung durch eine Person",
+  "summary_de": "Frage → Bildwort Bräutigam (jetzt ↔ künftige Tage, Ankündigung) und zwei Bildworte mit Gegenbild vollständig; keine Sachhälfte im Text, Deutungen gekennzeichnet.",
+  "changes_de": []
+ }
+}

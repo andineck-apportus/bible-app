@@ -26,19 +26,25 @@
           "from": "FIG-JESUS",
           "to": "FIG-ROLLE-KRANKER",
           "icons": [
-            "FIG-ZEICHEN-VERGEBUNG"
-          ]
+            "FIG-ZEICHEN-VERGEBEN"
+          ],
+          "word": {
+            "de": "Deine Sünden sind vergeben.",
+            "gsw": "Dini Sünde sind vergää."
+          }
         }
       ],
-      "action_de": "In seiner Stadt bringt man einen Gelähmten auf einem Bett zu Jesus. Als er ihren Glauben sieht, sagt er zum Gelähmten: Sei getrost, Kind! Deine Sünden sind vergeben.",
+      "action_de": "Man bringt Jesus einen Gelähmten auf einem Bett; als Jesus ihren Glauben sieht, sagt er: Sei getrost, Kind! Deine Sünden sind vergeben.",
+      "keywords": {
+        "de": "als Jesus ihren Glauben sah",
+        "gsw": "wo de Jesus ire Glaube gseh hät"
+      },
       "stage": {
         "pose": {
           "FIG-ROLLE-KRANKER": "lie"
         },
-        "signs_who": {
-          "FIG-ZEICHEN-GLAUBEN": [
-            "FIG-GRUPPE-TRAEGER"
-          ]
+        "at": {
+          "FIG-ZEICHEN-GLAUBEN": "FIG-GRUPPE-TRAEGER"
         },
         "mood": {
           "FIG-GRUPPE-TRAEGER": "calm",
@@ -54,136 +60,126 @@
     },
     {
       "n": 2,
-      "reference": "MAT.9.3-MAT.9.5",
-      "figures": [
-        "FIG-GRUPPE-SCHRIFTGELEHRTE",
-        "FIG-JESUS"
-      ],
+      "reference": "MAT.9.3-MAT.9.6",
+      "figures": [],
       "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-SCHRIFTGELEHRTE",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-GOTT",
-            "FIG-ZEICHEN-NEIN"
-          ],
-          "think": true
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-SCHRIFTGELEHRTE",
-          "icons": [
-            "FIG-ZEICHEN-VERGEBUNG",
-            "FIG-ZEICHEN-AUFSTEHEN",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
-        }
-      ],
-      "action_de": "Einige Schriftgelehrte sagen bei sich: Der lästert! Jesus kennt ihre Gedanken und fragt: Was ist leichter zu sagen: Deine Sünden sind vergeben, oder: Steh auf und geh umher?",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-SCHRIFTGELEHRTE": "pensive",
-          "FIG-JESUS": "calm"
-        },
-        "bubble_y": 12
-      }
-    },
-    {
-      "n": 3,
-      "reference": "MAT.9.6-MAT.9.7",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-ROLLE-KRANKER"
-      ],
-      "objects": [
-        "FIG-OBJ-MATTE",
-        "FIG-ORT-HAUS"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-VOLLMACHT"
-      ],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-KRANKER",
-          "icons": [
-            "FIG-ZEICHEN-AUFSTEHEN",
-            "FIG-OBJ-MATTE",
-            "FIG-ORT-HAUS"
-          ]
-        }
-      ],
-      "action_de": "Damit sie wissen, dass der Menschensohn Vollmacht hat, auf der Erde Sünden zu vergeben, sagt er zum Gelähmten: Steh auf, nimm dein Bett und geh in dein Haus! Der steht auf und geht in sein Haus.",
-      "stage": {
-        "hold": {
-          "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
-        },
-        "beside": {
-          "FIG-ZEICHEN-VOLLMACHT": "FIG-JESUS"
-        },
-        "back_side": "right",
-        "mood": {
-          "FIG-ROLLE-KRANKER": "delight",
-          "FIG-JESUS": "calm"
-        },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-ROLLE-KRANKER",
-            "act"
-          ]
+      "speech": [],
+      "action_de": "Einige Schriftgelehrte denken: Der lästert! Jesus fragt, was leichter sei; damit sie wissen, dass der Menschensohn Vollmacht hat, auf der Erde Sünden zu vergeben, sagt er zum Gelähmten: Steh auf, nimm dein Bett und geh in dein Haus!",
+      "keywords": {
+        "de": "Vollmacht hat, auf der Erde Sünden zu vergeben",
+        "gsw": "Vollmacht hät, uf de Ärde Sünde z vergää"
+      },
+      "diagram": {
+        "visual": "arrows",
+        "span": 2,
+        "cols": 4,
+        "cells": [
+          {
+            "a": {
+              "de": "«Der lästert!»",
+              "gsw": "«Dä läschteret!»"
+            },
+            "b": {
+              "de": "denken einige Schriftgelehrte",
+              "gsw": "dänked es paar Schriftgelehrti"
+            },
+            "tone": "old",
+            "who": "FIG-GRUPPE-SCHRIFTGELEHRTE"
+          },
+          {
+            "a": {
+              "de": "Was ist leichter: «Deine Sünden sind vergeben» oder «Steh auf und geh umher»?",
+              "gsw": "Was isch liechter: «Dini Sünde sind vergää» oder «Stand uf und lauf umenand»?"
+            },
+            "icons": [
+              "FIG-ZEICHEN-VERGEBEN",
+              "FIG-ZEICHEN-AUFSTEHEN"
+            ]
+          },
+          {
+            "a": {
+              "de": "Damit ihr wisst: Der Menschensohn hat Vollmacht, auf der Erde Sünden zu vergeben.",
+              "gsw": "Damit ir wüssed: De Mänschesohn hät Vollmacht, uf de Ärde Sünde z vergää."
+            },
+            "icons": [
+              "FIG-ZEICHEN-VOLLMACHT"
+            ]
+          },
+          {
+            "a": {
+              "de": "«Steh auf, nimm dein Bett und geh in dein Haus!»",
+              "gsw": "«Stand uf, nimm dis Bett und gang hei!»"
+            },
+            "icons": [
+              "FIG-ZEICHEN-AUFSTEHEN",
+              "FIG-OBJ-MATTE"
+            ],
+            "tone": "new",
+            "who": "FIG-JESUS"
+          }
         ]
       }
     },
     {
-      "n": 4,
-      "reference": "MAT.9.8",
+      "n": 3,
+      "reference": "MAT.9.7-MAT.9.8",
       "figures": [
         "FIG-GOTT",
+        "FIG-ROLLE-KRANKER",
         "FIG-GRUPPE-MENGE"
       ],
-      "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-MENGE",
-          "to": "FIG-GOTT",
-          "icons": [
-            "FIG-ZEICHEN-VOLLMACHT",
-            "FIG-ZEICHEN-MENSCHEN"
-          ]
-        }
+      "objects": [
+        "FIG-OBJ-MATTE"
       ],
-      "action_de": "Die Menschenmengen fürchten sich und preisen Gott, der den Menschen solche Vollmacht gegeben hat.",
+      "signs": [
+        "FIG-ZEICHEN-FURCHT",
+        "FIG-ZEICHEN-PREISEN"
+      ],
+      "speech": [],
+      "action_de": "Der Mann steht auf und geht in sein Haus; die Mengen fürchten sich und preisen Gott, der den Menschen solche Vollmacht gegeben hat.",
+      "keywords": {
+        "de": "fürchteten sie sich und priesen Gott",
+        "gsw": "händ Angscht übercho und händ Gott priise"
+      },
       "stage": {
         "god_side": "right",
+        "hold": {
+          "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
+        },
+        "at": {
+          "FIG-ZEICHEN-PREISEN": "FIG-GRUPPE-MENGE"
+        },
+        "beside": {
+          "FIG-ZEICHEN-FURCHT": "FIG-GRUPPE-MENGE"
+        },
         "mood": {
-          "FIG-GRUPPE-MENGE": "delight"
+          "FIG-ROLLE-KRANKER": "delight",
+          "FIG-GRUPPE-MENGE": "surprised"
+        },
+        "x": {
+          "FIG-ROLLE-KRANKER": 44,
+          "FIG-GRUPPE-MENGE": 124
         }
       }
     }
   ],
   "actions_de": [
-    "In seiner Stadt bringt man einen Gelähmten auf einem Bett zu Jesus. Als er ihren Glauben sieht, sagt er zum Gelähmten: Sei getrost, Kind! Deine Sünden sind vergeben.",
-    "Einige Schriftgelehrte sagen bei sich: Der lästert! Jesus kennt ihre Gedanken und fragt: Was ist leichter zu sagen: Deine Sünden sind vergeben, oder: Steh auf und geh umher?",
-    "Damit sie wissen, dass der Menschensohn Vollmacht hat, auf der Erde Sünden zu vergeben, sagt er zum Gelähmten: Steh auf, nimm dein Bett und geh in dein Haus! Der steht auf und geht in sein Haus.",
-    "Die Menschenmengen fürchten sich und preisen Gott, der den Menschen solche Vollmacht gegeben hat."
+    "Man bringt Jesus einen Gelähmten auf einem Bett; als Jesus ihren Glauben sieht, sagt er: Sei getrost, Kind! Deine Sünden sind vergeben.",
+    "Einige Schriftgelehrte denken: Der lästert! Jesus fragt, was leichter sei; damit sie wissen, dass der Menschensohn Vollmacht hat, auf der Erde Sünden zu vergeben, sagt er zum Gelähmten: Steh auf, nimm dein Bett und geh in dein Haus!",
+    "Der Mann steht auf und geht in sein Haus; die Mengen fürchten sich und preisen Gott, der den Menschen solche Vollmacht gegeben hat."
   ],
   "captions_de": [
-    "Ihr Glaube → Vergebung: Träger bringen einen Gelähmten auf seiner Matte (Herz mit Lichtstrahl: ihr Glaube); Jesus sagt: Deine Sünden sind vergeben (helles Tuch mit gestricheltem Fleck und goldenen Funken).",
-    "Gedanken: Die Schriftgelehrten denken: Er lästert Gott (Denkblase: Jesus, Strahlenkranz, rotes X); Jesus fragt: Vergeben oder aufstehen – was ist leichter? (Tuch mit Funken, Figur über der Matte, Fragezeichen).",
-    "Vollmacht → steh auf: Jesus hat Vollmacht (Schriftrolle mit Krone) und sagt: Steh auf, nimm die Matte, geh heim (Figur über der Matte, Matte, Haus); der Pfeil führt zum Mann: er steht mit seiner Matte in der Hand und geht heim (Haus).",
-    "Gesehen → Gott preisen: Die Menschenmengen preisen Gott (Strahlenkranz) für solche Vollmacht bei Menschen (Schriftrolle mit Krone, Brustbilder im Schattenriss)."
+    "Glaube: Träger bringen den Gelähmten auf der Matte (Herz mit Lichtstrahl); Jesus sagt: «Deine Sünden sind vergeben» (zerrissener Schuldschein).",
+    "Pfeilkette: Schriftgelehrte: «Der lästert!» (Bild) → Jesus fragt: «Was ist leichter?» (zerrissener Schuldschein, aufstehen) → «Damit ihr wisst: Der Menschensohn hat Vollmacht, Sünden zu vergeben» (Schriftrolle mit Krone) → «Steh auf, nimm dein Bett!» (hervorgehoben).",
+    "Lob Gottes: Der Geheilte trägt seine Matte heim; die Menge erschrickt (erschrockenes Gesicht) und preist Gott (Strahlenkranz; zwei erhobene Hände)."
   ],
-  "interpretation_note_de": "Matthäus erzählt nicht, dass das Dach abgedeckt wurde (vgl. [[MRK.2.4]]); der Gelähmte wird auf dem Bett gebracht, im Bild auf einer Matte. Den Vorwurf «Der lästert!» ([[MAT.9.3]]) zeigt die Denkblase mit Jesus, Strahlenkranz und rotem X (Deutung: er rede gegen Gott).",
+  "interpretation_note_de": "Drei Felder nach «Glaube – Streit und Beweis – Lob» ([[MAT.9.1-MAT.9.8]]). Der Streit ist als Pfeilkette gezeigt: Einwand im Herzen, Gegenfrage, Zweck «damit ihr wisst», Heilung als Beweis der Vollmacht. «Fürchteten sich» zeigt das Zeichen «sich fürchten» (Lesart «staunten» in der Kernanalyse). Gott nur als Strahlenkranz.",
   "basis": [
     {
       "record": "TU-MAT-009-001-008",
       "field": "summary",
-      "fingerprint": "8612f0ddcf51386b"
+      "fingerprint": "93c4eeb3bd9c4710"
     },
     {
       "record": "TRANS-MAT-009-001-038-DE-WORKING",
@@ -194,24 +190,18 @@
     {
       "record": "TRANS-MAT-009-001-038-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.9.3-MAT.9.5",
-      "fingerprint": "6562fcd899681de5"
+      "reference": "MAT.9.3-MAT.9.6",
+      "fingerprint": "313ab76fb089cb5f"
     },
     {
       "record": "TRANS-MAT-009-001-038-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.9.6-MAT.9.7",
-      "fingerprint": "77e5131542e0e23c"
-    },
-    {
-      "record": "TRANS-MAT-009-001-038-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.9.8",
-      "fingerprint": "c526bd2df62a4da6"
+      "reference": "MAT.9.7-MAT.9.8",
+      "fingerprint": "5879f44ff164d600"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -553,6 +543,386 @@
           "Gedanken: Die Schriftgelehrten denken: Er lästert Gott (Denkblase: Jesus, Strahlenkranz, rotes X); Jesus fragt: Vergeben oder aufstehen – was ist leichter? (Tuch mit Funken, Figur über der Matte, Fragezeichen).",
           "Vollmacht → steh auf: Jesus hat Vollmacht (goldenes Zepter mit Strahlen) und sagt: Steh auf, nimm die Matte, geh heim (Figur über der Matte, Matte, Haus); der Pfeil führt zum Mann: er steht mit seiner Matte in der Hand und geht heim (Haus).",
           "Gesehen → Gott preisen: Die Menschenmengen preisen Gott (Strahlenkranz) für solche Vollmacht bei Menschen (goldenes Zepter mit Strahlen, drei kleine Figuren)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.9.1-MAT.9.2",
+            "figures": [
+              "FIG-GRUPPE-TRAEGER",
+              "FIG-ROLLE-KRANKER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-GLAUBEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-KRANKER",
+                "icons": [
+                  "FIG-ZEICHEN-VERGEBUNG"
+                ]
+              }
+            ],
+            "action_de": "In seiner Stadt bringt man einen Gelähmten auf einem Bett zu Jesus. Als er ihren Glauben sieht, sagt er zum Gelähmten: Sei getrost, Kind! Deine Sünden sind vergeben.",
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-KRANKER": "lie"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-GLAUBEN": [
+                  "FIG-GRUPPE-TRAEGER"
+                ]
+              },
+              "mood": {
+                "FIG-GRUPPE-TRAEGER": "calm",
+                "FIG-ROLLE-KRANKER": "worried",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-TRAEGER": 34,
+                "FIG-ROLLE-KRANKER": 84,
+                "FIG-JESUS": 150
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.9.3-MAT.9.5",
+            "figures": [
+              "FIG-GRUPPE-SCHRIFTGELEHRTE",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-SCHRIFTGELEHRTE",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-NEIN"
+                ],
+                "think": true
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-SCHRIFTGELEHRTE",
+                "icons": [
+                  "FIG-ZEICHEN-VERGEBUNG",
+                  "FIG-ZEICHEN-AUFSTEHEN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Einige Schriftgelehrte sagen bei sich: Der lästert! Jesus kennt ihre Gedanken und fragt: Was ist leichter zu sagen: Deine Sünden sind vergeben, oder: Steh auf und geh umher?",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-SCHRIFTGELEHRTE": "pensive",
+                "FIG-JESUS": "calm"
+              },
+              "bubble_y": 12
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.9.6-MAT.9.7",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-KRANKER"
+            ],
+            "objects": [
+              "FIG-OBJ-MATTE",
+              "FIG-ORT-HAUS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-VOLLMACHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-KRANKER",
+                "icons": [
+                  "FIG-ZEICHEN-AUFSTEHEN",
+                  "FIG-OBJ-MATTE",
+                  "FIG-ORT-HAUS"
+                ]
+              }
+            ],
+            "action_de": "Damit sie wissen, dass der Menschensohn Vollmacht hat, auf der Erde Sünden zu vergeben, sagt er zum Gelähmten: Steh auf, nimm dein Bett und geh in dein Haus! Der steht auf und geht in sein Haus.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
+              },
+              "beside": {
+                "FIG-ZEICHEN-VOLLMACHT": "FIG-JESUS"
+              },
+              "back_side": "right",
+              "mood": {
+                "FIG-ROLLE-KRANKER": "delight",
+                "FIG-JESUS": "calm"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-KRANKER",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.9.8",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-VOLLMACHT",
+                  "FIG-ZEICHEN-MENSCHEN"
+                ]
+              }
+            ],
+            "action_de": "Die Menschenmengen fürchten sich und preisen Gott, der den Menschen solche Vollmacht gegeben hat.",
+            "stage": {
+              "god_side": "right",
+              "mood": {
+                "FIG-GRUPPE-MENGE": "delight"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "In seiner Stadt bringt man einen Gelähmten auf einem Bett zu Jesus. Als er ihren Glauben sieht, sagt er zum Gelähmten: Sei getrost, Kind! Deine Sünden sind vergeben.",
+          "Einige Schriftgelehrte sagen bei sich: Der lästert! Jesus kennt ihre Gedanken und fragt: Was ist leichter zu sagen: Deine Sünden sind vergeben, oder: Steh auf und geh umher?",
+          "Damit sie wissen, dass der Menschensohn Vollmacht hat, auf der Erde Sünden zu vergeben, sagt er zum Gelähmten: Steh auf, nimm dein Bett und geh in dein Haus! Der steht auf und geht in sein Haus.",
+          "Die Menschenmengen fürchten sich und preisen Gott, der den Menschen solche Vollmacht gegeben hat."
+        ],
+        "captions_de": [
+          "Ihr Glaube → Vergebung: Träger bringen einen Gelähmten auf seiner Matte (Herz mit Lichtstrahl: ihr Glaube); Jesus sagt: Deine Sünden sind vergeben (helles Tuch mit gestricheltem Fleck und goldenen Funken).",
+          "Gedanken: Die Schriftgelehrten denken: Er lästert Gott (Denkblase: Jesus, Strahlenkranz, rotes X); Jesus fragt: Vergeben oder aufstehen – was ist leichter? (Tuch mit Funken, Figur über der Matte, Fragezeichen).",
+          "Vollmacht → steh auf: Jesus hat Vollmacht (Schriftrolle mit Krone) und sagt: Steh auf, nimm die Matte, geh heim (Figur über der Matte, Matte, Haus); der Pfeil führt zum Mann: er steht mit seiner Matte in der Hand und geht heim (Haus).",
+          "Gesehen → Gott preisen: Die Menschenmengen preisen Gott (Strahlenkranz) für solche Vollmacht bei Menschen (Schriftrolle mit Krone, Brustbilder im Schattenriss)."
+        ],
+        "interpretation_note_de": "Matthäus erzählt nicht, dass das Dach abgedeckt wurde (vgl. [[MRK.2.4]]); der Gelähmte wird auf dem Bett gebracht, im Bild auf einer Matte. Den Vorwurf «Der lästert!» ([[MAT.9.3]]) zeigt die Denkblase mit Jesus, Strahlenkranz und rotem X (Deutung: er rede gegen Gott).",
+        "basis": [
+          {
+            "record": "TU-MAT-009-001-008",
+            "field": "summary",
+            "fingerprint": "8612f0ddcf51386b"
+          },
+          {
+            "record": "TRANS-MAT-009-001-038-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.9.1-MAT.9.2",
+            "fingerprint": "ecdd53ae82fd3a02"
+          },
+          {
+            "record": "TRANS-MAT-009-001-038-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.9.3-MAT.9.5",
+            "fingerprint": "6562fcd899681de5"
+          },
+          {
+            "record": "TRANS-MAT-009-001-038-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.9.6-MAT.9.7",
+            "fingerprint": "77e5131542e0e23c"
+          },
+          {
+            "record": "TRANS-MAT-009-001-038-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.9.8",
+            "fingerprint": "c526bd2df62a4da6"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.9.1-MAT.9.2",
+            "figures": [
+              "FIG-GRUPPE-TRAEGER",
+              "FIG-ROLLE-KRANKER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-GLAUBEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-KRANKER",
+                "icons": [
+                  "FIG-ZEICHEN-VERGEBEN"
+                ],
+                "word": {
+                  "de": "Deine Sünden sind vergeben.",
+                  "gsw": "Dini Sünde sind vergää."
+                }
+              }
+            ],
+            "action_de": "Man bringt Jesus einen Gelähmten auf einem Bett; als Jesus ihren Glauben sieht, sagt er: Sei getrost, Kind! Deine Sünden sind vergeben.",
+            "keywords": {
+              "de": "als Jesus ihren Glauben sah",
+              "gsw": "wo de Jesus ire Glaube gseh hät"
+            },
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-KRANKER": "lie"
+              },
+              "at": {
+                "FIG-ZEICHEN-GLAUBEN": "FIG-GRUPPE-TRAEGER"
+              },
+              "mood": {
+                "FIG-GRUPPE-TRAEGER": "calm",
+                "FIG-ROLLE-KRANKER": "worried",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-TRAEGER": 34,
+                "FIG-ROLLE-KRANKER": 84,
+                "FIG-JESUS": 150
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.9.3-MAT.9.6",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Einige Schriftgelehrte denken: Der lästert! Jesus fragt, was leichter sei; damit sie wissen, dass der Menschensohn Vollmacht hat, auf der Erde Sünden zu vergeben, sagt er zum Gelähmten: Steh auf, nimm dein Bett und geh in dein Haus!",
+            "keywords": {
+              "de": "Vollmacht hat, auf der Erde Sünden zu vergeben",
+              "gsw": "Vollmacht hät, uf de Ärde Sünde z vergää"
+            },
+            "diagram": {
+              "visual": "arrows",
+              "span": 2,
+              "cols": 4,
+              "cells": [
+                {
+                  "a": {
+                    "de": "«Der lästert!»",
+                    "gsw": "«Dä läschteret!»"
+                  },
+                  "b": {
+                    "de": "denken einige Schriftgelehrte",
+                    "gsw": "dänked es paar Schriftgelehrti"
+                  },
+                  "tone": "old",
+                  "who": "FIG-GRUPPE-SCHRIFTGELEHRTE"
+                },
+                {
+                  "a": {
+                    "de": "Was ist leichter: «Deine Sünden sind vergeben» oder «Steh auf und geh umher»?",
+                    "gsw": "Was isch liechter: «Dini Sünde sind vergää» oder «Stand uf und lauf umenand»?"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-VERGEBEN",
+                    "FIG-ZEICHEN-AUFSTEHEN"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Damit ihr wisst: Der Menschensohn hat Vollmacht, auf der Erde Sünden zu vergeben.",
+                    "gsw": "Damit ir wüssed: De Mänschesohn hät Vollmacht, uf de Ärde Sünde z vergää."
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-VOLLMACHT"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "«Steh auf, nimm dein Bett und geh in dein Haus!»",
+                    "gsw": "«Stand uf, nimm dis Bett und gang hei!»"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-AUFSTEHEN",
+                    "FIG-OBJ-MATTE"
+                  ],
+                  "tone": "new",
+                  "who": "FIG-JESUS"
+                }
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.9.7-MAT.9.8",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-ROLLE-KRANKER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-MATTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FURCHT",
+              "FIG-ZEICHEN-PREISEN"
+            ],
+            "speech": [],
+            "action_de": "Der Mann steht auf und geht in sein Haus; die Mengen fürchten sich und preisen Gott, der den Menschen solche Vollmacht gegeben hat.",
+            "keywords": {
+              "de": "fürchteten sie sich und priesen Gott",
+              "gsw": "händ Angscht übercho und händ Gott priise"
+            },
+            "stage": {
+              "god_side": "right",
+              "hold": {
+                "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
+              },
+              "at": {
+                "FIG-ZEICHEN-FURCHT": "FIG-GRUPPE-MENGE",
+                "FIG-ZEICHEN-PREISEN": "FIG-GRUPPE-MENGE"
+              },
+              "mood": {
+                "FIG-ROLLE-KRANKER": "delight",
+                "FIG-GRUPPE-MENGE": "surprised"
+              },
+              "x": {
+                "FIG-ROLLE-KRANKER": 44,
+                "FIG-GRUPPE-MENGE": 124
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Prüfung Struktur zuerst",
+      "previous": {
+        "captions_de": [
+          "Glaube: Träger (vier Männer) bringen den Gelähmten auf der Matte (Herz mit Lichtstrahl); Jesus sagt: «Deine Sünden sind vergeben» (zerrissener Schuldschein).",
+          "Pfeilkette: Schriftgelehrte: «Der lästert!» (Bild) → Jesus fragt: «Was ist leichter?» (zerrissener Schuldschein, aufstehen) → «Damit ihr wisst: Der Menschensohn hat Vollmacht, Sünden zu vergeben» (Schriftrolle mit Krone) → «Steh auf, nimm dein Bett!» (hervorgehoben).",
+          "Lob Gottes: Der Geheilte trägt seine Matte heim; die Menge erschrickt (erschrockenes Gesicht) und preist Gott (Strahlenkranz; zwei erhobene Hände)."
         ]
       }
     }

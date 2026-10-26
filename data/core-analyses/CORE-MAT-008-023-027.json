@@ -1,0 +1,154 @@
+{
+ "id": "CORE-MAT-008-023-027",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.8.23-MAT.8.27",
+ "target": "TU-MAT-008-023-027",
+ "core_de": "Jesus steigt ins Boot, seine Jünger folgen ihm; ein grosses Beben erhebt sich auf dem See, die Wellen bedecken das Boot, er aber schläft; sie wecken ihn: «Herr, rette! Wir gehen zugrunde!»; er tadelt ihre Furcht und Kleingläubigkeit, gebietet Winden und See, und es wird eine grosse Stille, sodass die Menschen staunend fragen: «Was für einer ist dieser, dass ihm sogar die Winde und der See gehorchen?»",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Not – Wort – Stille – Frage",
+    "range": "MAT.8.23-MAT.8.27",
+    "elements": [
+     {
+      "label": "Jesus steigt ins Boot, die Jünger folgen ihm",
+      "ref": "MAT.8.23",
+      "role": "Anfang"
+     },
+     {
+      "label": "Ein grosses Beben, die Wellen bedecken das Boot; er schläft",
+      "ref": "MAT.8.24",
+      "role": "Not"
+     },
+     {
+      "label": "«Herr, rette! Wir gehen zugrunde!»",
+      "ref": "MAT.8.25",
+      "role": "Hilferuf"
+     },
+     {
+      "label": "Zuerst das Wort an die Jünger, dann das Wort an Winde und See: Umschlag",
+      "ref": "MAT.8.26",
+      "role": "Wendepunkt",
+      "child": "s2"
+     },
+     {
+      "label": "«Was für einer ist dieser …?»",
+      "ref": "MAT.8.27",
+      "role": "Schlussfrage"
+     }
+    ],
+    "features": {
+     "open_end": [
+      {
+       "ref": "MAT.8.27",
+       "note": "Die Frage bleibt im Text ohne Antwort."
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "MRK.4.35-MRK.4.41",
+       "kind": "Parallelfassung",
+       "note": "bei Matthäus tadelt Jesus die Jünger vor dem Wort an den See; nicht angleichen"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "reversal",
+    "subtype": "grosses Beben → grosse Stille",
+    "range": "MAT.8.24-MAT.8.26",
+    "elements": [
+     {
+      "label": "es entstand ein grosses Beben auf dem See",
+      "ref": "MAT.8.24",
+      "role": "vorher"
+     },
+     {
+      "label": "er fuhr die Winde und den See an",
+      "ref": "MAT.8.26",
+      "role": "Umschlagpunkt"
+     },
+     {
+      "label": "es wurde eine grosse Stille",
+      "ref": "MAT.8.26",
+      "role": "nachher"
+     }
+    ],
+    "visual": "mirror",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.8.23-MAT.8.25",
+   "text_de": "Jesus steigt ins Boot, die Jünger folgen ihm; ein grosses Beben entsteht auf dem See, die Wellen bedecken das Boot, er aber schläft; sie wecken ihn: «Herr, rette! Wir gehen zugrunde!»",
+   "reason_de": "Not und Hilferuf (Kriterien 3 und 4).",
+   "recognition_de": "Boot in hohen Wellen, Jesus schläft, die Jünger in Angst.",
+   "keywords": [
+    "er aber schlief",
+    "Herr, rette! Wir gehen zugrunde!"
+   ]
+  },
+  {
+   "reference": "MAT.8.26",
+   "text_de": "Jesus sagt: «Warum seid ihr so furchtsam, ihr Kleingläubigen?», steht auf, fährt die Winde und den See an, und es wird eine grosse Stille.",
+   "reason_de": "Wendepunkt (Kriterium 2).",
+   "recognition_de": "Jesus steht im Boot und gebietet dem Sturm; der See wird still.",
+   "keywords": [
+    "Warum seid ihr so furchtsam, ihr Kleingläubigen?",
+    "es wurde eine grosse Stille"
+   ]
+  },
+  {
+   "reference": "MAT.8.27",
+   "text_de": "Die Menschen staunen: «Was für einer ist dieser, dass ihm sogar die Winde und der See gehorchen?»",
+   "reason_de": "Schlussfrage, auf die die Erzählung zuläuft (Kriterium 2).",
+   "recognition_de": "Staunende Jünger im stillen Boot; Fragezeichen.",
+   "keywords": [
+    "Was für einer ist dieser, dass ihm sogar die Winde und der See gehorchen?"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Die Grösse des Bootes, die Tageszeit – nicht erzählt"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-JUENGER"
+ ],
+ "places": [
+  "FIG-ORT-SEE"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.8.23-MAT.8.27",
+   "fingerprint": "09084845b5893eaa"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; keine fachliche Prüfung durch eine Person",
+  "summary_de": "Not – Wort – Stille – Frage mit Umschlag «grosses Beben → grosse Stille»; Reihenfolge nach Matthäus (Tadel vor dem Wort an den See) vermerkt; offene Schlussfrage.",
+  "changes_de": []
+ }
+}

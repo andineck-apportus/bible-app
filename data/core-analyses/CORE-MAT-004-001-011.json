@@ -1,0 +1,238 @@
+{
+ "id": "CORE-MAT-004-001-011",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.4.1-MAT.4.11",
+ "target": "TU-MAT-004-001-011",
+ "core_de": "Vom Geist in die Wüste geführt, wird Jesus nach vierzig Tagen Fasten vom Teufel dreimal versucht – Steine zu Brot machen, sich von der Zinne des Tempels stürzen, alle Reiche der Welt für eine Anbetung – und antwortet jedes Mal mit «Es steht geschrieben», zuletzt: «Geh weg, Satan!»; da verlässt ihn der Teufel, und Engel dienen ihm.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Wüste – drei Versuchungen – Engel",
+    "range": "MAT.4.1-MAT.4.11",
+    "elements": [
+     {
+      "label": "Vom Geist in die Wüste geführt; vierzig Tage Fasten; Hunger",
+      "ref": "MAT.4.1-MAT.4.2",
+      "role": "Anfang"
+     },
+     {
+      "label": "Drei Versuchungen, je mit Antwort aus der Schrift",
+      "ref": "MAT.4.3-MAT.4.10",
+      "role": "Reihe",
+      "child": "s2"
+     },
+     {
+      "label": "Der Teufel verlässt ihn; Engel dienen ihm",
+      "ref": "MAT.4.11",
+      "role": "Ausgang"
+     }
+    ],
+    "features": {
+     "crossref": [
+      {
+       "ref": "LUK.4.1-LUK.4.13",
+       "kind": "Parallelfassung",
+       "note": "zweite und dritte Versuchung in umgekehrter Reihenfolge; nicht angleichen"
+      }
+     ],
+     "text_forms": [
+      {
+       "ref": "MAT.4.10",
+       "note": "Lesart «Geh hinter mich, Satan»; die Arbeitsübersetzung folgt dem SBLGNT."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "matrix",
+    "subtype": "3 Versuchungen × (Ort, Versuchung, Antwort)",
+    "range": "MAT.4.3-MAT.4.10",
+    "elements": [
+     {
+      "label": "Wüste – «Wenn du Gottes Sohn bist, dann sag, dass diese Steine zu Broten werden!»",
+      "ref": "MAT.4.3",
+      "role": "Versuchung 1",
+      "row": "1",
+      "col": "Versuchung"
+     },
+     {
+      "label": "«Es steht geschrieben: Der Mensch lebt nicht vom Brot allein, sondern von jedem Wort, das aus dem Mund Gottes kommt.»",
+      "ref": "MAT.4.4",
+      "role": "Antwort 1",
+      "row": "1",
+      "col": "Antwort"
+     },
+     {
+      "label": "Zinne des Tempels in der heiligen Stadt – «Wenn du Gottes Sohn bist, dann wirf dich hinab!», mit einem Schriftwort: Seine Engel werden dich auf Händen tragen",
+      "ref": "MAT.4.5-MAT.4.6",
+      "role": "Versuchung 2",
+      "row": "2",
+      "col": "Versuchung"
+     },
+     {
+      "label": "«Es steht auch geschrieben: Du sollst den Herrn, deinen Gott, nicht auf die Probe stellen.»",
+      "ref": "MAT.4.7",
+      "role": "Antwort 2",
+      "row": "2",
+      "col": "Antwort"
+     },
+     {
+      "label": "Sehr hoher Berg – alle Reiche der Welt: «Das alles werde ich dir geben, wenn du niederfällst und mich anbetest.»",
+      "ref": "MAT.4.8-MAT.4.9",
+      "role": "Versuchung 3",
+      "row": "3",
+      "col": "Versuchung"
+     },
+     {
+      "label": "«Geh weg, Satan! Denn es steht geschrieben: Den Herrn, deinen Gott, sollst du anbeten und ihm allein dienen.»",
+      "ref": "MAT.4.10",
+      "role": "Antwort 3",
+      "row": "3",
+      "col": "Antwort"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-SATAN",
+       "to": "FIG-JESUS",
+       "refs": [
+        "MAT.4.3",
+        "MAT.4.6",
+        "MAT.4.9"
+       ]
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-SATAN",
+       "refs": [
+        "MAT.4.4",
+        "MAT.4.7",
+        "MAT.4.10"
+       ]
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "Es steht geschrieben",
+       "refs": [
+        "MAT.4.4",
+        "MAT.4.6",
+        "MAT.4.7",
+        "MAT.4.10"
+       ],
+       "role": "jede Antwort; einmal zitiert auch der Teufel"
+      }
+     ],
+     "pattern_break": [
+      {
+       "ref": "MAT.4.6",
+       "note": "Der Teufel zitiert selbst die Schrift ([[PSA.91.11-PSA.91.12]])."
+      },
+      {
+       "ref": "MAT.4.9",
+       "note": "Die dritte Versuchung beginnt nicht mit «Wenn du Gottes Sohn bist»; Jesus weist den Satan mit Namen ab."
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "DEU.8.3",
+       "kind": "Zitat"
+      },
+      {
+       "ref": "DEU.6.16",
+       "kind": "Zitat"
+      },
+      {
+       "ref": "DEU.6.13",
+       "kind": "Zitat"
+      },
+      {
+       "ref": "PSA.91.11-PSA.91.12",
+       "kind": "Zitat des Teufels"
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.4.1-MAT.4.2",
+   "text_de": "Jesus wird vom Geist in die Wüste hinaufgeführt, um vom Teufel versucht zu werden; nach vierzig Tagen und vierzig Nächten Fasten hat er Hunger.",
+   "reason_de": "Anfang und Lage (Kriterium 3).",
+   "recognition_de": "Jesus allein in der Wüste, hungrig; der Teufel als dunkler Schatten.",
+   "keywords": [
+    "vom Geist in die Wüste hinaufgeführt",
+    "vierzig Tage und vierzig Nächte"
+   ]
+  },
+  {
+   "reference": "MAT.4.3-MAT.4.10",
+   "text_de": "Der Teufel versucht Jesus dreimal: «Wenn du Gottes Sohn bist, sag, dass diese Steine zu Broten werden» – «Der Mensch lebt nicht vom Brot allein, sondern von jedem Wort aus dem Mund Gottes»; auf der Zinne des Tempels: «wirf dich hinab», mit einem Schriftwort von den Engeln – «Du sollst den Herrn, deinen Gott, nicht auf die Probe stellen»; auf einem sehr hohen Berg alle Reiche der Welt, wenn Jesus ihn anbetet – «Geh weg, Satan! Den Herrn, deinen Gott, sollst du anbeten und ihm allein dienen.»",
+   "reason_de": "Die Reihe der drei Versuchungen zählt als ein Moment mit allen Gliedern (Kriterien 1, 2 und 4).",
+   "recognition_de": "Raster: drei Orte, je Versuchung und Antwort «Es steht geschrieben».",
+   "keywords": [
+    "Wenn du Gottes Sohn bist",
+    "Es steht geschrieben",
+    "Geh weg, Satan!"
+   ]
+  },
+  {
+   "reference": "MAT.4.11",
+   "text_de": "Da verlässt ihn der Teufel, und Engel treten heran und dienen ihm.",
+   "reason_de": "Ausgang (Kriterium 3).",
+   "recognition_de": "Der Schatten weicht; Engel bei Jesus.",
+   "keywords": [
+    "Engel traten heran und dienten ihm"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Die Frage, wie die Versuchung «geschah» (Vision oder Weg) – nicht erklärt"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-SATAN",
+  "FIG-HEILIGER-GEIST",
+  "FIG-GRUPPE-ENGEL"
+ ],
+ "places": [
+  "FIG-ORT-WUESTE",
+  "FIG-ORT-TEMPEL",
+  "FIG-ORT-BERG"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.4.1-MAT.4.11",
+   "fingerprint": "998e5e6ab0c77cd7"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; keine fachliche Prüfung durch eine Person",
+  "summary_de": "Drei Versuchungen als Raster mit Ort, Forderung und Antwort vollständig, «Es steht geschrieben» bei jeder Antwort (7: «auch»), Schriftzitat des Teufels (Ps 91) und fehlendes «Wenn du Gottes Sohn bist» in der dritten als Musterbruch; Reihenfolge nach Matthäus, Lukas nicht angeglichen.",
+  "changes_de": []
+ }
+}

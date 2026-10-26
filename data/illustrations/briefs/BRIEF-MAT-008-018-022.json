@@ -11,99 +11,63 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.8.18",
-      "figures": [
-        "FIG-GRUPPE-MENGE",
-        "FIG-JESUS",
-        "FIG-GRUPPE-JUENGER"
-      ],
-      "objects": [
-        "FIG-ORT-SEE"
-      ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-OBJ-BOOT",
-            "FIG-ZEICHEN-DARAUS",
-            "FIG-ORT-UFER"
-          ]
-        }
-      ],
-      "action_de": "Als Jesus die vielen Menschenmengen um sich sieht, befiehlt er, ans andere Ufer aufzubrechen.",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-MENGE": "calm",
-          "FIG-GRUPPE-JUENGER": "calm"
-        }
-      }
-    },
-    {
-      "n": 2,
-      "reference": "MAT.8.19",
+      "reference": "MAT.8.18-MAT.8.20",
       "figures": [
         "FIG-ROLLE-SCHRIFTGELEHRTER",
         "FIG-JESUS"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-OBJ-FUCHS",
+        "FIG-OBJ-NEST"
+      ],
       "signs": [],
       "speech": [
         {
           "from": "FIG-ROLLE-SCHRIFTGELEHRTER",
           "to": "FIG-JESUS",
           "icons": [
-            "FIG-ZEICHEN-NACHFOLGEN",
-            "FIG-JESUS"
-          ]
-        }
-      ],
-      "action_de": "Ein Schriftgelehrter tritt heran und sagt: Lehrer, ich werde dir folgen, wohin du auch gehst.",
-      "stage": {
-        "mood": {
-          "FIG-ROLLE-SCHRIFTGELEHRTER": "determined",
-          "FIG-JESUS": "calm"
-        }
-      }
-    },
-    {
-      "n": 3,
-      "reference": "MAT.8.20",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-ROLLE-SCHRIFTGELEHRTER"
-      ],
-      "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-SCHRIFTGELEHRTER",
-          "icons": [
-            "FIG-OBJ-FUCHS",
-            "FIG-OBJ-NEST"
-          ]
+            "FIG-ZEICHEN-NACHFOLGEN"
+          ],
+          "word": {
+            "de": "Ich folge dir, wohin du gehst!",
+            "gsw": "Ich gang dir nache, wo du hiigaasch!"
+          }
         },
         {
           "from": "FIG-JESUS",
           "to": "FIG-ROLLE-SCHRIFTGELEHRTER",
           "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-NEIN"
-          ]
+            "FIG-ZEICHEN-RUHE",
+            "FIG-ZEICHEN-NICHT"
+          ],
+          "word": {
+            "de": "Der Menschensohn hat keinen Ort.",
+            "gsw": "De Mänschesohn hät kein Ort."
+          }
         }
       ],
-      "action_de": "Jesus antwortet: Die Füchse haben Höhlen und die Vögel des Himmels Nester; der Menschensohn aber hat keinen Ort, wo er den Kopf hinlegen kann.",
+      "action_de": "Ein Schriftgelehrter will Jesus folgen, wohin er auch geht; Jesus antwortet: Die Füchse haben Höhlen und die Vögel Nester, der Menschensohn aber hat keinen Ort, wo er den Kopf hinlegen kann.",
+      "keywords": {
+        "de": "Die Füchse haben Höhlen",
+        "gsw": "D Füchs händ Hööline"
+      },
       "stage": {
         "mood": {
-          "FIG-ROLLE-SCHRIFTGELEHRTER": "pensive",
+          "FIG-ROLLE-SCHRIFTGELEHRTER": "determined",
           "FIG-JESUS": "earnest"
+        },
+        "x": {
+          "FIG-ROLLE-SCHRIFTGELEHRTER": 40,
+          "FIG-JESUS": 146
+        },
+        "floor_x": {
+          "FIG-OBJ-FUCHS": 84,
+          "FIG-OBJ-NEST": 104
         }
       }
     },
     {
-      "n": 4,
+      "n": 2,
       "reference": "MAT.8.21-MAT.8.22",
       "figures": [
         "FIG-ROLLE-JUENGER",
@@ -116,19 +80,30 @@
           "from": "FIG-ROLLE-JUENGER",
           "to": "FIG-JESUS",
           "icons": [
-            "FIG-ROLLE-VATER",
-            "FIG-ZEICHEN-TOD"
-          ]
+            "FIG-ZEICHEN-VERSTORBEN"
+          ],
+          "word": {
+            "de": "Lass mich zuerst meinen Vater begraben!",
+            "gsw": "Lass mich zerscht min Vatter go beerdige!"
+          }
         },
         {
           "from": "FIG-JESUS",
           "to": "FIG-ROLLE-JUENGER",
           "icons": [
             "FIG-ZEICHEN-NACHFOLGEN"
-          ]
+          ],
+          "word": {
+            "de": "Folge mir!",
+            "gsw": "Chumm mir nache!"
+          }
         }
       ],
-      "action_de": "Ein anderer Jünger bittet, zuerst seinen Vater begraben zu dürfen. Jesus sagt: Folge mir, und lass die Toten ihre Toten begraben!",
+      "action_de": "Ein anderer von den Jüngern bittet: Erlaube mir, zuerst wegzugehen und meinen Vater zu begraben; Jesus sagt: Folge mir, und lass die Toten ihre Toten begraben!",
+      "keywords": {
+        "de": "lass die Toten ihre Toten begraben",
+        "gsw": "la d Tote iri Tote beerdige"
+      },
       "stage": {
         "mood": {
           "FIG-ROLLE-JUENGER": "worried",
@@ -138,41 +113,25 @@
     }
   ],
   "actions_de": [
-    "Als Jesus die vielen Menschenmengen um sich sieht, befiehlt er, ans andere Ufer aufzubrechen.",
-    "Ein Schriftgelehrter tritt heran und sagt: Lehrer, ich werde dir folgen, wohin du auch gehst.",
-    "Jesus antwortet: Die Füchse haben Höhlen und die Vögel des Himmels Nester; der Menschensohn aber hat keinen Ort, wo er den Kopf hinlegen kann.",
-    "Ein anderer Jünger bittet, zuerst seinen Vater begraben zu dürfen. Jesus sagt: Folge mir, und lass die Toten ihre Toten begraben!"
+    "Ein Schriftgelehrter will Jesus folgen, wohin er auch geht; Jesus antwortet: Die Füchse haben Höhlen und die Vögel Nester, der Menschensohn aber hat keinen Ort, wo er den Kopf hinlegen kann.",
+    "Ein anderer von den Jüngern bittet: Erlaube mir, zuerst wegzugehen und meinen Vater zu begraben; Jesus sagt: Folge mir, und lass die Toten ihre Toten begraben!"
   ],
   "captions_de": [
-    "Aufbruch: Um Jesus sind viele Menschen; er sagt den Jüngern: Mit dem Boot ans andere Ufer (Boot, dicker Pfeil, sandiger Strand).",
-    "Wohin du gehst: Ein Schriftgelehrter (Schriftrolle, braunes Gewand) sagt zu Jesus: Ich folge dir (zwei gehende Personen, Jesus).",
-    "Kein Ort: Jesus sagt: Der Fuchs hat seine Höhle, der Vogel sein Nest (Fuchskopf mit Erdloch, Vogelnest) – der Menschensohn hat keinen Ort (Jesus, rotes X).",
-    "Folge mir: Ein Jünger bittet: Zuerst meinen Vater begraben (Vater, Totenkopf); Jesus sagt: Folge mir (zwei gehende Personen)."
+    "Erstes Gespräch: Der Schriftgelehrte (offene Schriftrolle) sagt: «Ich folge dir, wohin du gehst!» (zwei gehende Personen); Jesus: «Der Menschensohn hat keinen Ort» (Haus mit Licht im Verbotsring); am Boden Fuchs mit Höhle und Vogelnest.",
+    "Zweites Gespräch: Ein Jünger (Wanderstab) bittet: «Lass mich zuerst meinen Vater begraben!» (Gestalt auf der Bahre); Jesus: «Folge mir!» (zwei gehende Personen)."
   ],
-  "interpretation_note_de": "Das rote X beim Menschensohn deutet das Bildwort vom Ort, wo der Menschensohn den Kopf hinlegen kann ([[MAT.8.20]]). Ob der Vater des Jüngers schon gestorben ist, sagt der Text nicht; das Grab steht für das Begraben.",
+  "interpretation_note_de": "Zwei gleich gebaute Gespräche ([[MAT.8.18-MAT.8.22]]): Angebot bzw. Bitte – Antwort Jesu. Ob die beiden mitgehen, sagt der Text nicht; das Bild lässt es offen. «Menschensohn» und «die Toten ihre Toten begraben lassen» bleiben Wortlaut ohne Deutung im Bild.",
   "basis": [
     {
       "record": "TU-MAT-008-018-022",
       "field": "summary",
-      "fingerprint": "b069f19966a725af"
+      "fingerprint": "d05ccc04b5ac2034"
     },
     {
       "record": "TRANS-MAT-008-001-034-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.8.18",
-      "fingerprint": "5e034389d2b040ff"
-    },
-    {
-      "record": "TRANS-MAT-008-001-034-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.8.19",
-      "fingerprint": "07e420429de54c03"
-    },
-    {
-      "record": "TRANS-MAT-008-001-034-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.8.20",
-      "fingerprint": "7f420c1743b61806"
+      "reference": "MAT.8.18-MAT.8.20",
+      "fingerprint": "43e21d08e73e9b6c"
     },
     {
       "record": "TRANS-MAT-008-001-034-DE-WORKING",
@@ -182,7 +141,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -197,6 +156,300 @@
           "Wohin du gehst: Ein Schriftgelehrter (Schriftrolle, braunes Gewand) sagt zu Jesus: Ich folge dir (Fussspuren, Jesus).",
           "Kein Ort: Jesus sagt: Der Fuchs hat seine Höhle, der Vogel sein Nest (rotbrauner Fuchs vor einer dunklen Erdhöhle, Vogelnest) – der Menschensohn hat keinen Ort (Jesus, rotes X).",
           "Folge mir: Ein Jünger bittet: Zuerst meinen Vater begraben (Vater, verschlossenes Felsengrab); Jesus sagt: Folge mir (Fussspuren)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.8.18",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-ORT-SEE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-BOOT",
+                  "FIG-ZEICHEN-DARAUS",
+                  "FIG-ORT-UFER"
+                ]
+              }
+            ],
+            "action_de": "Als Jesus die vielen Menschenmengen um sich sieht, befiehlt er, ans andere Ufer aufzubrechen.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "calm",
+                "FIG-GRUPPE-JUENGER": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.8.19",
+            "figures": [
+              "FIG-ROLLE-SCHRIFTGELEHRTER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-SCHRIFTGELEHRTER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-NACHFOLGEN",
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Ein Schriftgelehrter tritt heran und sagt: Lehrer, ich werde dir folgen, wohin du auch gehst.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-SCHRIFTGELEHRTER": "determined",
+                "FIG-JESUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.8.20",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-SCHRIFTGELEHRTER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-SCHRIFTGELEHRTER",
+                "icons": [
+                  "FIG-OBJ-FUCHS",
+                  "FIG-OBJ-NEST"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-SCHRIFTGELEHRTER",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-NEIN"
+                ]
+              }
+            ],
+            "action_de": "Jesus antwortet: Die Füchse haben Höhlen und die Vögel des Himmels Nester; der Menschensohn aber hat keinen Ort, wo er den Kopf hinlegen kann.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-SCHRIFTGELEHRTER": "pensive",
+                "FIG-JESUS": "earnest"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.8.21-MAT.8.22",
+            "figures": [
+              "FIG-ROLLE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-JUENGER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ROLLE-VATER",
+                  "FIG-ZEICHEN-TOD"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-NACHFOLGEN"
+                ]
+              }
+            ],
+            "action_de": "Ein anderer Jünger bittet, zuerst seinen Vater begraben zu dürfen. Jesus sagt: Folge mir, und lass die Toten ihre Toten begraben!",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-JUENGER": "worried",
+                "FIG-JESUS": "earnest"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Als Jesus die vielen Menschenmengen um sich sieht, befiehlt er, ans andere Ufer aufzubrechen.",
+          "Ein Schriftgelehrter tritt heran und sagt: Lehrer, ich werde dir folgen, wohin du auch gehst.",
+          "Jesus antwortet: Die Füchse haben Höhlen und die Vögel des Himmels Nester; der Menschensohn aber hat keinen Ort, wo er den Kopf hinlegen kann.",
+          "Ein anderer Jünger bittet, zuerst seinen Vater begraben zu dürfen. Jesus sagt: Folge mir, und lass die Toten ihre Toten begraben!"
+        ],
+        "captions_de": [
+          "Aufbruch: Um Jesus sind viele Menschen; er sagt den Jüngern: Mit dem Boot ans andere Ufer (Boot, dicker Pfeil, sandiger Strand).",
+          "Wohin du gehst: Ein Schriftgelehrter (Schriftrolle, braunes Gewand) sagt zu Jesus: Ich folge dir (zwei gehende Personen, Jesus).",
+          "Kein Ort: Jesus sagt: Der Fuchs hat seine Höhle, der Vogel sein Nest (Fuchskopf mit Erdloch, Vogelnest) – der Menschensohn hat keinen Ort (Jesus, rotes X).",
+          "Folge mir: Ein Jünger bittet: Zuerst meinen Vater begraben (Vater, Totenkopf); Jesus sagt: Folge mir (zwei gehende Personen)."
+        ],
+        "interpretation_note_de": "Das rote X beim Menschensohn deutet das Bildwort vom Ort, wo der Menschensohn den Kopf hinlegen kann ([[MAT.8.20]]). Ob der Vater des Jüngers schon gestorben ist, sagt der Text nicht; das Grab steht für das Begraben.",
+        "basis": [
+          {
+            "record": "TU-MAT-008-018-022",
+            "field": "summary",
+            "fingerprint": "b069f19966a725af"
+          },
+          {
+            "record": "TRANS-MAT-008-001-034-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.8.18",
+            "fingerprint": "5e034389d2b040ff"
+          },
+          {
+            "record": "TRANS-MAT-008-001-034-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.8.19",
+            "fingerprint": "07e420429de54c03"
+          },
+          {
+            "record": "TRANS-MAT-008-001-034-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.8.20",
+            "fingerprint": "7f420c1743b61806"
+          },
+          {
+            "record": "TRANS-MAT-008-001-034-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.8.21-MAT.8.22",
+            "fingerprint": "a1d011b281d1c949"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Prüfung Struktur zuerst",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.8.18-MAT.8.20",
+            "figures": [
+              "FIG-ROLLE-SCHRIFTGELEHRTER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-FUCHS",
+              "FIG-OBJ-NEST"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-SCHRIFTGELEHRTER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-NACHFOLGEN"
+                ],
+                "word": {
+                  "de": "Ich folge dir, wohin du gehst!",
+                  "gsw": "Ich gang dir nache, wo du hiigaasch!"
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-SCHRIFTGELEHRTER",
+                "icons": [
+                  "FIG-ZEICHEN-RUHE",
+                  "FIG-ZEICHEN-NICHT"
+                ],
+                "word": {
+                  "de": "Der Menschensohn hat keinen Ort.",
+                  "gsw": "De Mänschesohn hät kein Ort."
+                }
+              }
+            ],
+            "action_de": "Ein Schriftgelehrter will Jesus folgen, wohin er auch geht; Jesus antwortet: Die Füchse haben Höhlen und die Vögel Nester, der Menschensohn aber hat keinen Ort, wo er den Kopf hinlegen kann.",
+            "keywords": {
+              "de": "Die Füchse haben Höhlen",
+              "gsw": "D Füchs händ Hööline"
+            },
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-SCHRIFTGELEHRTER": "determined",
+                "FIG-JESUS": "earnest"
+              },
+              "x": {
+                "FIG-ROLLE-SCHRIFTGELEHRTER": 40,
+                "FIG-JESUS": 146
+              },
+              "floor_x": {
+                "FIG-OBJ-FUCHS": 84,
+                "FIG-OBJ-NEST": 104
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.8.21-MAT.8.22",
+            "figures": [
+              "FIG-ROLLE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-JUENGER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-VERSTORBEN"
+                ],
+                "word": {
+                  "de": "Zuerst meinen Vater begraben!",
+                  "gsw": "Zerscht min Vatter beerdige!"
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-NACHFOLGEN"
+                ],
+                "word": {
+                  "de": "Folge mir!",
+                  "gsw": "Chumm mir nache!"
+                }
+              }
+            ],
+            "action_de": "Ein anderer von den Jüngern bittet: Erlaube mir, zuerst wegzugehen und meinen Vater zu begraben; Jesus sagt: Folge mir, und lass die Toten ihre Toten begraben!",
+            "keywords": {
+              "de": "lass die Toten ihre Toten begraben",
+              "gsw": "la d Tote iri Tote beerdige"
+            },
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-JUENGER": "worried",
+                "FIG-JESUS": "earnest"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Erstes Gespräch: Der Schriftgelehrte (offene Schriftrolle) sagt: «Ich folge dir, wohin du gehst!» (zwei gehende Personen); Jesus: «Der Menschensohn hat keinen Ort» (Haus mit Licht im Verbotsring); am Boden Fuchs mit Höhle und Vogelnest.",
+          "Zweites Gespräch: Ein Jünger (Wanderstab) bittet: «Zuerst meinen Vater begraben!» (Gestalt auf der Bahre); Jesus: «Folge mir!» (zwei gehende Personen)."
         ]
       }
     }

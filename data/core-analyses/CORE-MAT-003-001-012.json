@@ -1,0 +1,296 @@
+{
+ "id": "CORE-MAT-003-001-012",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.3.1-MAT.3.12",
+ "target": "TU-MAT-003-001-012",
+ "core_de": "Johannes der Täufer verkündigt in der Wüste Judäas: «Kehrt um, denn das Reich der Himmel ist nahe gekommen!» – er ist die Stimme, die nach Jesaja den Weg des Herrn bereitet; die Leute lassen sich im Jordan taufen und bekennen ihre Sünden; den Pharisäern und Sadduzäern sagt er, sie sollen Frucht der Umkehr bringen, denn die Axt liegt schon an der Wurzel; nach ihm kommt ein Stärkerer, der mit heiligem Geist und Feuer taufen und den Weizen von der Spreu scheiden wird.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Auftreten – Taufe – Strafrede – Ankündigung",
+    "range": "MAT.3.1-MAT.3.12",
+    "elements": [
+     {
+      "label": "Johannes tritt in der Wüste auf: «Kehrt um, denn das Reich der Himmel ist nahe gekommen!»",
+      "ref": "MAT.3.1-MAT.3.2",
+      "role": "Ruf"
+     },
+     {
+      "label": "Schriftwort: die Stimme eines Rufenden in der Wüste",
+      "ref": "MAT.3.3",
+      "role": "Deutung durch den Erzähler",
+      "child": "s2"
+     },
+     {
+      "label": "Kleidung und Nahrung: Kamelhaar, Ledergurt, Heuschrecken, wilder Honig",
+      "ref": "MAT.3.4",
+      "role": "Gestalt"
+     },
+     {
+      "label": "Jerusalem und ganz Judäa ziehen hinaus, lassen sich im Jordan taufen und bekennen ihre Sünden",
+      "ref": "MAT.3.5-MAT.3.6",
+      "role": "Wirkung"
+     },
+     {
+      "label": "Rede an die Pharisäer und Sadduzäer",
+      "ref": "MAT.3.7-MAT.3.10",
+      "role": "Mahnung",
+      "child": "s3"
+     },
+     {
+      "label": "Ankündigung des Stärkeren",
+      "ref": "MAT.3.11-MAT.3.12",
+      "role": "Ankündigung",
+      "child": "s4"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JOHANNES-TAEUFER",
+       "to": "das Volk",
+       "ref": "MAT.3.2"
+      },
+      {
+       "who": "FIG-JOHANNES-TAEUFER",
+       "to": "FIG-GRUPPE-PHARISAEER",
+       "ref": "MAT.3.7-MAT.3.12",
+       "note": "auch Sadduzäer"
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "MAT.4.17",
+       "kind": "gleicher Ruf",
+       "note": "Jesus beginnt mit denselben Worten"
+      }
+     ],
+     "text_forms": [
+      {
+       "ref": "MAT.3.11",
+       "note": "Lesart ohne «und Feuer»; die Arbeitsübersetzung folgt dem SBLGNT."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "fulfilment",
+    "subtype": "Schriftwort zu Johannes",
+    "range": "MAT.3.3",
+    "elements": [
+     {
+      "label": "Denn dieser ist es, von dem durch Jesaja, den Propheten, gesagt ist",
+      "ref": "MAT.3.3",
+      "role": "Vermerk"
+     },
+     {
+      "label": "Stimme eines Rufenden in der Wüste: Bereitet den Weg des Herrn, macht seine Pfade gerade!",
+      "ref": "MAT.3.3",
+      "role": "Zitat"
+     }
+    ],
+    "features": {
+     "crossref": [
+      {
+       "ref": "ISA.40.3",
+       "kind": "Zitat"
+      }
+     ]
+    },
+    "visual": "levels",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "cause",
+    "subtype": "Mahnung → Begründung → Drohung",
+    "range": "MAT.3.7-MAT.3.10",
+    "elements": [
+     {
+      "label": "Ihr Vipernbrut! Wer hat euch darauf gebracht, vor dem kommenden Zorn zu fliehen?",
+      "ref": "MAT.3.7",
+      "role": "Anrede"
+     },
+     {
+      "label": "Bringt also Frucht, die der Umkehr würdig ist!",
+      "ref": "MAT.3.8",
+      "role": "Mahnung"
+     },
+     {
+      "label": "Falsche Sicherheit: Abraham ↔ Steine",
+      "ref": "MAT.3.9",
+      "role": "Einwand abgewiesen",
+      "child": "s5"
+     },
+     {
+      "label": "Die Axt liegt schon an der Wurzel der Bäume",
+      "ref": "MAT.3.10",
+      "role": "Begründung"
+     },
+     {
+      "label": "Jeder Baum, der keine gute Frucht bringt, wird umgehauen und ins Feuer geworfen",
+      "ref": "MAT.3.10",
+      "role": "Folge"
+     }
+    ],
+    "visual": "arrows",
+    "basis": "text"
+   },
+   {
+    "id": "s5",
+    "pattern": "contrast",
+    "subtype": "«Meint nicht …» ↔ «Gott kann …»",
+    "range": "MAT.3.9",
+    "elements": [
+     {
+      "label": "Meint nicht, ihr könntet sagen: «Wir haben Abraham zum Vater»",
+      "ref": "MAT.3.9",
+      "role": "nicht"
+     },
+     {
+      "label": "Denn ich sage euch: Gott kann aus diesen Steinen dem Abraham Kinder erwecken",
+      "ref": "MAT.3.9",
+      "role": "sondern"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   },
+   {
+    "id": "s4",
+    "pattern": "contrast",
+    "subtype": "ich ↔ er (der Stärkere)",
+    "range": "MAT.3.11-MAT.3.12",
+    "elements": [
+     {
+      "label": "Ich taufe euch mit Wasser zur Umkehr ↔ Er wird euch mit heiligem Geist und Feuer taufen",
+      "ref": "MAT.3.11",
+      "role": "Paar 1"
+     },
+     {
+      "label": "Ich bin nicht wert, seine Sandalen zu tragen ↔ der nach mir kommt, ist stärker als ich",
+      "ref": "MAT.3.11",
+      "role": "Paar 2"
+     },
+     {
+      "label": "Er scheidet: Weizen in die Scheune ↔ Spreu ins unauslöschliche Feuer",
+      "ref": "MAT.3.12",
+      "role": "Bild",
+      "child": "s6"
+     }
+    ],
+    "features": {
+     "modality": [
+      {
+       "ref": "MAT.3.11-MAT.3.12",
+       "kind": "Ankündigung",
+       "note": "Zukunft («wird taufen», «wird reinigen»), kein Bericht"
+      }
+     ]
+    },
+    "visual": "columns",
+    "basis": "text"
+   },
+   {
+    "id": "s6",
+    "pattern": "contrast",
+    "subtype": "Weizen ↔ Spreu (Bildwort)",
+    "range": "MAT.3.12",
+    "elements": [
+     {
+      "label": "Er hat die Worfschaufel in der Hand und sammelt seinen Weizen in die Scheune",
+      "ref": "MAT.3.12",
+      "role": "Weizen"
+     },
+     {
+      "label": "die Spreu aber verbrennt er mit unauslöschlichem Feuer",
+      "ref": "MAT.3.12",
+      "role": "Spreu"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.3.1-MAT.3.6",
+   "text_de": "In jenen Tagen tritt Johannes der Täufer in der Wüste Judäas auf und ruft: «Kehrt um, denn das Reich der Himmel ist nahe gekommen!»; er ist die Stimme, von der Jesaja sagt: «Bereitet den Weg des Herrn»; er trägt Kamelhaar und isst Heuschrecken und wilden Honig; Jerusalem, Judäa und die Umgebung des Jordan ziehen zu ihm hinaus, lassen sich im Jordan taufen und bekennen ihre Sünden.",
+   "reason_de": "Anfang und Ruf, der die Einheit trägt (Kriterien 1 und 4).",
+   "recognition_de": "Johannes im Kamelhaar tauft im Jordan; die Menge bekennt; Band «Kehrt um!».",
+   "keywords": [
+    "Kehrt um, denn das Reich der Himmel ist nahe gekommen!",
+    "Bereitet den Weg des Herrn",
+    "liessen sich im Fluss Jordan von ihm taufen"
+   ]
+  },
+  {
+   "reference": "MAT.3.7-MAT.3.10",
+   "text_de": "Vielen Pharisäern und Sadduzäern, die zur Taufe kommen, sagt Johannes: «Ihr Vipernbrut! Bringt also Frucht, die der Umkehr würdig ist!»; sie sollen sich nicht auf Abraham als Vater berufen, denn Gott kann aus diesen Steinen Kinder erwecken; die Axt liegt schon an der Wurzel: Jeder Baum ohne gute Frucht wird umgehauen und ins Feuer geworfen.",
+   "reason_de": "Die Mahnung mit Begründung und Drohung (Kriterium 2).",
+   "recognition_de": "Johannes zu den Pharisäern und Sadduzäern; Axt an der Wurzel eines Baums.",
+   "keywords": [
+    "Bringt also Frucht, die der Umkehr würdig ist!",
+    "Die Axt liegt aber schon an der Wurzel der Bäume"
+   ],
+   "mode": "speech"
+  },
+  {
+   "reference": "MAT.3.11-MAT.3.12",
+   "text_de": "Johannes tauft mit Wasser zur Umkehr; der nach ihm kommt, ist stärker – er ist nicht wert, seine Sandalen zu tragen –, er wird mit heiligem Geist und Feuer taufen, den Weizen in die Scheune sammeln und die Spreu mit unauslöschlichem Feuer verbrennen.",
+   "reason_de": "Ankündigung des Kommenden, Ziel der Rede (Kriterien 1 und 2).",
+   "recognition_de": "Gegenüberstellung: Wasser ↔ heiliger Geist und Feuer; Weizen in die Scheune, Spreu ins Feuer.",
+   "keywords": [
+    "der aber nach mir kommt, ist stärker als ich",
+    "mit heiligem Geist und Feuer taufen",
+    "die Spreu"
+   ],
+   "mode": "speech"
+  }
+ ],
+ "omitted_de": [
+  "Kamelhaar, Heuschrecken und Honig (3,4) – Erkennungszeichen der Figur, kein eigener Moment"
+ ],
+ "persons": [
+  "FIG-JOHANNES-TAEUFER",
+  "FIG-GRUPPE-MENGE",
+  "FIG-GRUPPE-PHARISAEER",
+  "FIG-GRUPPE-SADDUZAEER"
+ ],
+ "places": [
+  "FIG-ORT-WUESTE",
+  "FIG-ORT-JORDAN"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.3.1-MAT.3.12",
+   "fingerprint": "d20a3e847ca5b8fc"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; keine fachliche Prüfung durch eine Person",
+  "summary_de": "Ruf, Schriftwort (Jes 40,3), Taufe, Strafrede mit Abraham-Einwand und Drohung sowie Ankündigung des Stärkeren als Gegensatz ich ↔ er mit Zukunftsform richtig; Sprecher Johannes → Pharisäer und Sadduzäer.",
+  "changes_de": []
+ }
+}

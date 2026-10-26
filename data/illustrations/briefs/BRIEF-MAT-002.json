@@ -26,7 +26,17 @@
         "FIG-ZEICHEN-FREUDE"
       ],
       "speech": [],
-      "action_de": "Der Stern bleibt über dem Ort stehen, wo das Kind ist; voller Freude gehen die Sterndeuter ins Haus, werfen sich vor dem Kind bei Maria, seiner Mutter, nieder und bringen Gold, Weihrauch und Myrrhe dar.",
+      "action_de": "Der Stern bleibt über dem Ort stehen, wo das Kind ist; die Sterndeuter freuen sich sehr, sehen das Kind mit Maria, seiner Mutter, fallen auf die Knie, werfen sich vor ihm nieder und bringen ihm Gold, Weihrauch und Myrrhe.",
+      "keywords": {
+        "de": "Gold und Weihrauch und Myrrhe",
+        "gsw": "Gold und Wiirauch und Myrrhe"
+      },
+      "names": {
+        "FIG-MARIA-MUTTER-JESU": {
+          "de": "Maria",
+          "gsw": "Maria"
+        }
+      },
       "stage": {
         "hold": {
           "FIG-MARIA-MUTTER-JESU": "FIG-JESUS-KIND"
@@ -60,8 +70,8 @@
       "n": 2,
       "reference": "MAT.2.13-MAT.2.15",
       "figures": [
-        "FIG-JOSEF-NAZARET",
-        "FIG-MARIA-MUTTER-JESU"
+        "FIG-MARIA-MUTTER-JESU",
+        "FIG-JOSEF-NAZARET"
       ],
       "objects": [
         "FIG-ORT-AEGYPTEN",
@@ -72,7 +82,17 @@
         "FIG-ZEICHEN-FLIEHEN"
       ],
       "speech": [],
-      "action_de": "Josef steht auf, nimmt das Kind und seine Mutter bei Nacht zu sich und zieht sich nach Ägypten zurück; dort bleibt er bis zum Tod des Herodes.",
+      "action_de": "Josef steht auf, nimmt das Kind und seine Mutter bei Nacht zu sich und zieht nach Ägypten; dort bleibt er bis zum Tod des Herodes.",
+      "keywords": {
+        "de": "Flieh nach Ägypten",
+        "gsw": "Flüch uf Ägypte"
+      },
+      "names": {
+        "FIG-JOSEF-NAZARET": {
+          "de": "Josef",
+          "gsw": "Josef"
+        }
+      },
       "stage": {
         "hold": {
           "FIG-MARIA-MUTTER-JESU": "FIG-JESUS-KIND"
@@ -94,30 +114,36 @@
       "n": 3,
       "reference": "MAT.2.16-MAT.2.18",
       "figures": [
-        "FIG-ROLLE-PROPHET",
+        "FIG-HERODES-DER-GROSSE",
         "FIG-RAHEL"
       ],
       "objects": [
-        "FIG-OBJ-SCHRIFTROLLE"
+        "FIG-ORT-BETLEHEM"
       ],
       "signs": [
+        "FIG-ZEICHEN-ZORN",
         "FIG-ZEICHEN-TOTENKLAGE"
       ],
-      "speech": [
-        {
-          "from": "FIG-ROLLE-PROPHET",
-          "to": "FIG-RAHEL",
-          "icons": [
-            "FIG-RAHEL",
-            "FIG-GRUPPE-KINDER",
-            "FIG-ZEICHEN-FEHLT"
-          ]
+      "speech": [],
+      "action_de": "Herodes lässt im Zorn alle Knaben in Betlehem töten; Rahel beweint ihre Kinder, denn sie sind nicht mehr.",
+      "keywords": {
+        "de": "Rahel beweinte ihre Kinder",
+        "gsw": "D Rahel hät um iri Chind briegget"
+      },
+      "names": {
+        "FIG-HERODES-DER-GROSSE": {
+          "de": "Herodes",
+          "gsw": "Herodes"
+        },
+        "FIG-RAHEL": {
+          "de": "Rahel",
+          "gsw": "Rahel"
         }
-      ],
-      "action_de": "Da erfüllt sich das Wort des Propheten Jeremia: In Rama hört man Weinen und viel Wehklagen; Rahel beweint ihre Kinder und will sich nicht trösten lassen, denn sie sind nicht mehr.",
+      },
       "stage": {
-        "hold": {
-          "FIG-ROLLE-PROPHET": "FIG-OBJ-SCHRIFTROLLE"
+        "split": 1,
+        "at": {
+          "FIG-ZEICHEN-ZORN": "FIG-HERODES-DER-GROSSE"
         },
         "signs_who": {
           "FIG-ZEICHEN-TOTENKLAGE": [
@@ -125,21 +151,22 @@
           ]
         },
         "mood": {
-          "FIG-ROLLE-PROPHET": "pensive",
-          "FIG-RAHEL": "worried"
+          "FIG-HERODES-DER-GROSSE": "angry",
+          "FIG-RAHEL": "pain"
         },
         "x": {
-          "FIG-ROLLE-PROPHET": 44,
-          "FIG-RAHEL": 120
-        }
+          "FIG-HERODES-DER-GROSSE": 36,
+          "FIG-RAHEL": 124
+        },
+        "back_side": "right"
       }
     },
     {
       "n": 4,
       "reference": "MAT.2.19-MAT.2.23",
       "figures": [
-        "FIG-JOSEF-NAZARET",
-        "FIG-MARIA-MUTTER-JESU"
+        "FIG-MARIA-MUTTER-JESU",
+        "FIG-JOSEF-NAZARET"
       ],
       "objects": [
         "FIG-ORT-STADT",
@@ -149,7 +176,11 @@
         "FIG-ZEICHEN-WEG"
       ],
       "speech": [],
-      "action_de": "Nach einer Weisung im Traum zieht sich Josef nach Galiläa zurück und lässt sich in einer Stadt nieder, die Nazaret heisst; so wird Jesus Nazoräer genannt.",
+      "action_de": "Weil Archelaus über Judäa herrscht, fürchtet sich Josef, dorthin zu gehen; auf eine Weisung im Traum zieht er nach Galiläa und lässt sich in Nazaret nieder: Er wird Nazoräer genannt werden.",
+      "keywords": {
+        "de": "Er wird Nazoräer genannt werden",
+        "gsw": "Er wird Nazoräer gnännt wärde"
+      },
       "stage": {
         "hold": {
           "FIG-MARIA-MUTTER-JESU": "FIG-JESUS-KIND"
@@ -164,32 +195,33 @@
         },
         "beside": {
           "FIG-ZEICHEN-WEG": "FIG-JOSEF-NAZARET"
-        }
+        },
+        "back_side": "right"
       }
     }
   ],
   "actions_de": [
-    "Der Stern bleibt über dem Ort stehen, wo das Kind ist; voller Freude gehen die Sterndeuter ins Haus, werfen sich vor dem Kind bei Maria, seiner Mutter, nieder und bringen Gold, Weihrauch und Myrrhe dar.",
-    "Josef steht auf, nimmt das Kind und seine Mutter bei Nacht zu sich und zieht sich nach Ägypten zurück; dort bleibt er bis zum Tod des Herodes.",
-    "Da erfüllt sich das Wort des Propheten Jeremia: In Rama hört man Weinen und viel Wehklagen; Rahel beweint ihre Kinder und will sich nicht trösten lassen, denn sie sind nicht mehr.",
-    "Nach einer Weisung im Traum zieht sich Josef nach Galiläa zurück und lässt sich in einer Stadt nieder, die Nazaret heisst; so wird Jesus Nazoräer genannt."
+    "Der Stern bleibt über dem Ort stehen, wo das Kind ist; die Sterndeuter freuen sich sehr, sehen das Kind mit Maria, seiner Mutter, fallen auf die Knie, werfen sich vor ihm nieder und bringen ihm Gold, Weihrauch und Myrrhe.",
+    "Josef steht auf, nimmt das Kind und seine Mutter bei Nacht zu sich und zieht nach Ägypten; dort bleibt er bis zum Tod des Herodes.",
+    "Herodes lässt im Zorn alle Knaben in Betlehem töten; Rahel beweint ihre Kinder, denn sie sind nicht mehr.",
+    "Weil Archelaus über Judäa herrscht, fürchtet sich Josef, dorthin zu gehen; auf eine Weisung im Traum zieht er nach Galiläa und lässt sich in Nazaret nieder: Er wird Nazoräer genannt werden."
   ],
   "captions_de": [
-    "Vor dem Kind: Der Stern (gelber Stern) steht über dem Haus; voller Freude (strahlendes Gesicht) knien die Sterndeuter vor dem Kind (Kreuznimbus) bei Maria nieder und bringen ihm Gold, Weihrauch und Myrrhe (Truhe, Schale mit Rauch, Krug).",
-    "Nach Ägypten: Bei Nacht (dunkler Himmel, Mond) flieht Josef (rostbrauner Mantel) mit Maria und dem Kind (Kreuznimbus) nach Ägypten (Pyramiden, Palme, Fluss; rennende Person).",
-    "Rahel weint: Der Prophet Jeremia (Schriftrolle) sagt: Rahel (dunkelviolettes Kopftuch, Tränen) weint um ihre Kinder, denn sie sind nicht mehr (Rahel, Kinder, leerer Kreis mit Schrägstrich).",
-    "Nazaret: Josef zieht mit Maria und dem Kind (Kreuznimbus) in die Stadt Nazaret in Galiläa (Mauer mit Tor und Häusern; Fussspuren)."
+    "Anbetung: Die Sterndeuter (indigoblau, Geschenkgefäss) knien vor dem Kind (Säugling mit Kreuznimbus) bei Maria (blauer Schleier) und freuen sich (lachendes Gesicht); vor ihnen die Gaben (Truhe mit Gold, Weihrauchschale, Krug), darüber der Stern, dahinter das Haus.",
+    "Flucht bei Nacht: Josef (Hammer und Brett, rostbrauner Mantel) geht voran (rennende Person), Maria trägt das Kind; Mondsichel am Himmel; vorn Ägypten (Pyramiden, Palme, Nil).",
+    "Zorn und Klage: links Herodes (Krone) im Zorn (zorniges Gesicht), rechts, getrennt (gestrichelte Linie), Rahel in Tränen (weinende Frau, Hände über dem Kopf) vor Betlehem.",
+    "Nach Nazaret: Josef kommt mit Maria und dem Kind zur Stadt (Mauer mit Tor, Würfelhäuser) Nazaret (Fussspuren)."
   ],
-  "interpretation_note_de": "Vier Felder für die vier Abschnitte: die Sterndeuter beim Kind, die Flucht nach Ägypten, die Klage Rahels (statt des Kindermords, der nicht gezeichnet wird) und die Rückkehr nach Nazaret.",
+  "interpretation_note_de": "Vier Comic-Szenen, ein Feld je Abschnitt: die Anbetung der Sterndeuter ([[MAT.2.1-MAT.2.12]]), die Flucht nach Ägypten ([[MAT.2.13-MAT.2.15]]), Zorn des Herodes und Klage um die getöteten Kinder ([[MAT.2.16-MAT.2.18]]) und die Ankunft in Nazaret ([[MAT.2.19-MAT.2.23]]). Die Erfüllungsworte stehen in den Abschnittsbildern. Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-MAT-002",
       "field": "summary",
-      "fingerprint": "97d44828e84ff715"
+      "fingerprint": "4224efca33cdc4b5"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -546,6 +578,212 @@
           "Nach Ägypten: Bei Nacht (dunkler Himmel, Mond) flieht Josef (rostbrauner Mantel) mit Maria und dem Kind (Kreuznimbus) nach Ägypten (Pyramiden, Palme, Fluss; Pfeil mit Bewegungsstrichen).",
           "Rahel weint: Der Prophet Jeremia (Schriftrolle) sagt: Rahel (dunkelviolettes Kopftuch, Tränen) weint um ihre Kinder, denn sie sind nicht mehr (Rahel, Kinder, leerer Kreis mit Schrägstrich).",
           "Nazaret: Josef zieht mit Maria und dem Kind (Kreuznimbus) in die Stadt Nazaret in Galiläa (Mauer mit Tor und Häusern; heller Pfad mit Pfeilspitze)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.2.1-MAT.2.12",
+            "figures": [
+              "FIG-GRUPPE-STERNDEUTER",
+              "FIG-MARIA-MUTTER-JESU"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS",
+              "FIG-OBJ-STERN",
+              "FIG-OBJ-GOLD-WEIHRAUCH-MYRRHE",
+              "FIG-JESUS-KIND"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [],
+            "action_de": "Der Stern bleibt über dem Ort stehen, wo das Kind ist; voller Freude gehen die Sterndeuter ins Haus, werfen sich vor dem Kind bei Maria, seiner Mutter, nieder und bringen Gold, Weihrauch und Myrrhe dar.",
+            "stage": {
+              "hold": {
+                "FIG-MARIA-MUTTER-JESU": "FIG-JESUS-KIND"
+              },
+              "pose": {
+                "FIG-GRUPPE-STERNDEUTER": "kneel"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-GRUPPE-STERNDEUTER"
+                ]
+              },
+              "mood": {
+                "FIG-GRUPPE-STERNDEUTER": "delight",
+                "FIG-MARIA-MUTTER-JESU": "smile"
+              },
+              "x": {
+                "FIG-GRUPPE-STERNDEUTER": 46,
+                "FIG-MARIA-MUTTER-JESU": 126
+              },
+              "air_x": 144,
+              "air_y": 30,
+              "floor_x": {
+                "FIG-OBJ-GOLD-WEIHRAUCH-MYRRHE": 84
+              },
+              "back_side": "right",
+              "before": true
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.2.13-MAT.2.15",
+            "figures": [
+              "FIG-JOSEF-NAZARET",
+              "FIG-MARIA-MUTTER-JESU"
+            ],
+            "objects": [
+              "FIG-ORT-AEGYPTEN",
+              "FIG-JESUS-KIND"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NACHT",
+              "FIG-ZEICHEN-FLIEHEN"
+            ],
+            "speech": [],
+            "action_de": "Josef steht auf, nimmt das Kind und seine Mutter bei Nacht zu sich und zieht sich nach Ägypten zurück; dort bleibt er bis zum Tod des Herodes.",
+            "stage": {
+              "hold": {
+                "FIG-MARIA-MUTTER-JESU": "FIG-JESUS-KIND"
+              },
+              "x": {
+                "FIG-JOSEF-NAZARET": 62,
+                "FIG-MARIA-MUTTER-JESU": 30
+              },
+              "mood": {
+                "FIG-JOSEF-NAZARET": "determined",
+                "FIG-MARIA-MUTTER-JESU": "worried"
+              },
+              "beside": {
+                "FIG-ZEICHEN-FLIEHEN": "FIG-JOSEF-NAZARET"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.2.16-MAT.2.18",
+            "figures": [
+              "FIG-ROLLE-PROPHET",
+              "FIG-RAHEL"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHRIFTROLLE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TOTENKLAGE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-PROPHET",
+                "to": "FIG-RAHEL",
+                "icons": [
+                  "FIG-RAHEL",
+                  "FIG-GRUPPE-KINDER",
+                  "FIG-ZEICHEN-FEHLT"
+                ]
+              }
+            ],
+            "action_de": "Da erfüllt sich das Wort des Propheten Jeremia: In Rama hört man Weinen und viel Wehklagen; Rahel beweint ihre Kinder und will sich nicht trösten lassen, denn sie sind nicht mehr.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-PROPHET": "FIG-OBJ-SCHRIFTROLLE"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-TOTENKLAGE": [
+                  "FIG-RAHEL"
+                ]
+              },
+              "mood": {
+                "FIG-ROLLE-PROPHET": "pensive",
+                "FIG-RAHEL": "worried"
+              },
+              "x": {
+                "FIG-ROLLE-PROPHET": 44,
+                "FIG-RAHEL": 120
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.2.19-MAT.2.23",
+            "figures": [
+              "FIG-JOSEF-NAZARET",
+              "FIG-MARIA-MUTTER-JESU"
+            ],
+            "objects": [
+              "FIG-ORT-STADT",
+              "FIG-JESUS-KIND"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-WEG"
+            ],
+            "speech": [],
+            "action_de": "Nach einer Weisung im Traum zieht sich Josef nach Galiläa zurück und lässt sich in einer Stadt nieder, die Nazaret heisst; so wird Jesus Nazoräer genannt.",
+            "stage": {
+              "hold": {
+                "FIG-MARIA-MUTTER-JESU": "FIG-JESUS-KIND"
+              },
+              "x": {
+                "FIG-JOSEF-NAZARET": 62,
+                "FIG-MARIA-MUTTER-JESU": 30
+              },
+              "mood": {
+                "FIG-JOSEF-NAZARET": "calm",
+                "FIG-MARIA-MUTTER-JESU": "smile"
+              },
+              "beside": {
+                "FIG-ZEICHEN-WEG": "FIG-JOSEF-NAZARET"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Der Stern bleibt über dem Ort stehen, wo das Kind ist; voller Freude gehen die Sterndeuter ins Haus, werfen sich vor dem Kind bei Maria, seiner Mutter, nieder und bringen Gold, Weihrauch und Myrrhe dar.",
+          "Josef steht auf, nimmt das Kind und seine Mutter bei Nacht zu sich und zieht sich nach Ägypten zurück; dort bleibt er bis zum Tod des Herodes.",
+          "Da erfüllt sich das Wort des Propheten Jeremia: In Rama hört man Weinen und viel Wehklagen; Rahel beweint ihre Kinder und will sich nicht trösten lassen, denn sie sind nicht mehr.",
+          "Nach einer Weisung im Traum zieht sich Josef nach Galiläa zurück und lässt sich in einer Stadt nieder, die Nazaret heisst; so wird Jesus Nazoräer genannt."
+        ],
+        "captions_de": [
+          "Vor dem Kind: Der Stern (gelber Stern) steht über dem Haus; voller Freude (strahlendes Gesicht) knien die Sterndeuter vor dem Kind (Kreuznimbus) bei Maria nieder und bringen ihm Gold, Weihrauch und Myrrhe (Truhe, Schale mit Rauch, Krug).",
+          "Nach Ägypten: Bei Nacht (dunkler Himmel, Mond) flieht Josef (rostbrauner Mantel) mit Maria und dem Kind (Kreuznimbus) nach Ägypten (Pyramiden, Palme, Fluss; rennende Person).",
+          "Rahel weint: Der Prophet Jeremia (Schriftrolle) sagt: Rahel (dunkelviolettes Kopftuch, Tränen) weint um ihre Kinder, denn sie sind nicht mehr (Rahel, Kinder, leerer Kreis mit Schrägstrich).",
+          "Nazaret: Josef zieht mit Maria und dem Kind (Kreuznimbus) in die Stadt Nazaret in Galiläa (Mauer mit Tor und Häusern; Fussspuren)."
+        ],
+        "interpretation_note_de": "Vier Felder für die vier Abschnitte: die Sterndeuter beim Kind, die Flucht nach Ägypten, die Klage Rahels (statt des Kindermords, der nicht gezeichnet wird) und die Rückkehr nach Nazaret.",
+        "basis": [
+          {
+            "record": "SUM-CH-MAT-002",
+            "field": "summary",
+            "fingerprint": "97d44828e84ff715"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Prüfung Struktur zuerst",
+      "previous": {
+        "captions_de": [
+          "Anbetung: Die Sterndeuter (indigoblau, Geschenkgefäss) knien vor dem Kind (Säugling mit Kreuznimbus) bei Maria (blauer Schleier) und freuen sich (lachendes Gesicht); vor ihnen die Gaben (Truhe mit Gold, Weihrauchschale, Krug), darüber der Stern, dahinter das Haus.",
+          "Flucht bei Nacht: Josef (Hammer und Brett, rostbrauner Mantel) geht voran (rennende Person), Maria trägt das Kind; Mondsichel am Himmel; vorn Ägypten (Pyramiden, Palme, Nil).",
+          "Zorn und Klage: links Herodes (Krone) im Zorn (zorniges Gesicht), rechts, getrennt (gestrichelte Linie), Rahel in Tränen (weinende Frau, Hände über dem Kopf) vor Betlehem.",
+          "Nach Nazaret: mit Maria und dem Kind kommt er zur Stadt (Mauer mit Tor, Würfelhäuser) Nazaret (Fussspuren)."
+        ],
+        "basis": [
+          {
+            "record": "SUM-CH-MAT-002",
+            "field": "summary",
+            "fingerprint": "b3afd3904251a6df"
+          }
         ]
       }
     }
