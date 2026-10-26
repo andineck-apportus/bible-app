@@ -375,6 +375,11 @@ ATTR.update({
                     '<path d="M3 9.4L13 .6" stroke="#A33A2E" stroke-width="1.7" stroke-linecap="round"/>'
                     '<path d="M1.4 11h13.2q-.6 4.6-6.6 4.8-6-.2-6.6-4.8z" fill="#B4643A" stroke="#3B3226" stroke-width=".8"/><ellipse cx="8" cy="11" rx="6.6" ry="1.2" fill="#8A4A2A" stroke="#3B3226" stroke-width=".6"/>'
                     '<circle cx="9.6" cy="10.8" r="1.2" fill="#C9C2B4" stroke="#6E6A60" stroke-width=".45"/>',
+    # Geheilter Blindgeborener: offenes Auge (Zeichen «sehen») über derselben Bettelschale, ohne Durchstreichung (Joh 9,7: kam sehend
+    # zurück); Prüfung 2026-10-26: Der Geheilte trug sonst weiter das Zeichen «blind»
+    "sehend-schale": '<path d="M2 5Q8-.8 14 5 8 10.8 2 5z" fill="#FFFDF6" stroke="#3B3226" stroke-width=".9"/><circle cx="8" cy="5" r="2" fill="#3B3226"/>'
+                     '<path d="M1.4 11h13.2q-.6 4.6-6.6 4.8-6-.2-6.6-4.8z" fill="#B4643A" stroke="#3B3226" stroke-width=".8"/><ellipse cx="8" cy="11" rx="6.6" ry="1.2" fill="#8A4A2A" stroke="#3B3226" stroke-width=".6"/>'
+                     '<circle cx="9.6" cy="10.8" r="1.2" fill="#C9C2B4" stroke="#6E6A60" stroke-width=".45"/>',
     # Epaphroditus: Korb mit Gaben (Brot, Krug, Tuch mit Band), keine Münzen (Phil 4,18); der Gabenbeutel las sich als Geldbeutel (Judas)
     "gabenkorb": '<path d="M2.6 8.6Q8-.4 13.4 8.6" fill="none" stroke="#3B3226" stroke-width="1.8"/><path d="M2.6 8.6Q8-.4 13.4 8.6" fill="none" stroke="#B48A54" stroke-width=".9"/>'
                  '<ellipse cx="5.4" cy="8.2" rx="3" ry="1.8" fill="#D9A060" stroke="#3B3226" stroke-width=".6"/>'

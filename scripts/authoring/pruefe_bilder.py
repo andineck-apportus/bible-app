@@ -52,7 +52,11 @@ for(const mode of ['','nw'])for(const lang of ['de','gsw']){
           const others=[...tile.querySelectorAll('use')].filter(e=>!e.closest('.ill-words,.dg-nw,.dg-vis,g.ill-name')&&!bubs.some(x=>x.g.contains(e)));
           for(const {B} of bubs)for(const e of others){const E=local(e);if(!E||E.width*E.height>B.width*B.height)continue;  // grosse Hintergründe dürfen dahinter liegen
             const o=ov(B,E);if(o>0.18*E.width*E.height)res.push(`${id} ${nm} [${lang}]: Sprechblase überdeckt ${e.getAttribute('href')} (${Math.round(100*o/(E.width*E.height))} %)`);}
-          for(let i=0;i<bubs.length;i++)for(let j=i+1;j<bubs.length;j++)if(ov(bubs[i].B,bubs[j].B)>4)res.push(`${id} ${nm} [${lang}]: Sprechblasen überlappen`);}
+          for(let i=0;i<bubs.length;i++)for(let j=i+1;j<bubs.length;j++)if(ov(bubs[i].B,bubs[j].B)>4)res.push(`${id} ${nm} [${lang}]: Sprechblasen überlappen`);
+          // Spitze einer Blase verläuft nicht hinter einer anderen Blase (Hinweis Prüfung 2026-10-26)
+          const seg=(x1,y1,x2,y2,R)=>{for(let k=1;k<20;k++){const t=k/20,x=x1+(x2-x1)*t,y=y1+(y2-y1)*t;if(x>R.left+2&&x<R.right-2&&y>R.top+2&&y<R.bottom-2)return true;}return false;};
+          for(const a of bubs){const tl=a.b.dataset.tail;if(!tl)continue;const [tx,ty]=tl.split(',').map(Number);const cx=Math.max(a.B.left,Math.min(a.B.right,tx)),cy=Math.max(a.B.top,Math.min(a.B.bottom,ty));
+            for(const c of bubs)if(c!==a&&seg(cx,cy,tx,ty,c.B))res.push(`${id} ${nm} [${lang}]: Spitze einer Sprechblase läuft hinter einer anderen Blase`);}}
         // Kästen mit Rahmen (Stichwortband, Titelblase, Spaltenköpfe, Namensschild): Text und Zeichen bleiben im Rahmen und
         // überdecken sich nicht (Hinweis Andi Neck 2026-10-25: Text ragte über das Stichwortband)
         const sv=e=>{const B=e.getBoundingClientRect();return B.width>0&&B.height>0?B:null;};

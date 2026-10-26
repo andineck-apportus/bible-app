@@ -1010,10 +1010,20 @@ class Composer:
             # ein Zeichen, einen Gegenstand, ein fremdes Gesicht, eine andere Blase oder den Strahlenkranz Gottes, wird auf einem
             # feinen Raster nahe beim Sprecher weitergesucht, nötigenfalls etwas kleiner
             own = [sky[sp["from"]]] if god else []
+            def _through(x1, y1, x2, y2, bx_, by_, bw_, bh_):  # Strecke durch das Innere eines Rechtecks?
+                return any(bx_ + 2 < x1 + (x2 - x1) * k / 20 < bx_ + bw_ - 2 and by_ + 2 < y1 + (y2 - y1) * k / 20 < by_ + bh_ - 2 for k in range(1, 20))
+            def _tail_from(x_, y_, w_, h_, tx_, ty_):
+                return max(x_, min(x_ + w_, tx_)), max(y_, min(y_ + h_, ty_))
             def _bad(x_, y_, w_, h_):
                 obs = own + [b for k2, b in sky.items() if k2 != sp["from"]] + [(px, pyb - ph, pw, ph) for px, pw, pyb, ph in placed]
-                return self.covers(x_, y_, w_, h_, sp["from"], heads) or any(
-                    x_ < ox + ow + 3 and x_ + w_ > ox - 3 and y_ < oy + oh + 2 and y_ + h_ > oy - 2 for ox, oy, ow, oh in obs)
+                if self.covers(x_, y_, w_, h_, sp["from"], heads) or any(
+                        x_ < ox + ow + 3 and x_ + w_ > ox - 3 and y_ < oy + oh + 2 and y_ + h_ > oy - 2 for ox, oy, ow, oh in obs):
+                    return True
+                # Spitzen laufen nicht hinter einer anderen Blase durch (Prüfung 2026-10-26): weder die eigene noch frühere
+                sx, sy = _tail_from(x_, y_, w_, h_, tx, ty)
+                if any(_through(sx, sy, tx, ty, px, pyb - ph, pw, ph) for px, pw, pyb, ph in placed):
+                    return True
+                return any(_through(*_tail_from(d0[0], d0[1], d0[2], d0[3], d0[4], d0[5]), d0[4], d0[5], x_, y_, w_, h_) for d0 in drawn)
             if not any(sp0["from"] == sp["from"] for sp0, _, _ in bubbles[:len(placed)]) and _bad(bx, by, bw, bh):
                 best = None
                 for sc in (1, .9, .8, .7, .6):
@@ -1070,6 +1080,7 @@ class Composer:
                         bh = ih + 12
                     bx = max(28 if by < 24 else 4, min(W - 4 - bw, px))
                     link = same[0]
+            _pre = (bx, by, bw, bh, list(ws), ih)
             if not god and not same and ty - (by + bh) < 6:
                 nb = max(2, ty - bh - 8)
                 if not hit(bx, nb):
@@ -1085,6 +1096,9 @@ class Composer:
                         ih *= sc
                         bw = sum(ws) + 5 * (len(ws) - 1) + 12
                         bh = ih + 12
+            # Nachschieben darf keine Spitze hinter eine andere Blase legen: sonst die geprüfte Lage behalten
+            if not god and not same and (bx, by, bw, bh) != _pre[:4] and _bad(bx, by, bw, bh) and not _bad(*_pre[:4]):
+                bx, by, bw, bh, ws, ih = _pre
             inner, x = [], bx + 6
             for i, w in zip(sp["icons"], ws):
                 if i == "|":

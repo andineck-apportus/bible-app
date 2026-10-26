@@ -2,6 +2,12 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.124 — 2026-10-26 — Johannes 7,53–14 nach «Struktur zuerst»; Prüfung der Sprechblasen-Spitzen
+
+- **Joh 7,53–14 neu** (Kernanalysen mit Struktur, von einer getrennten Instanz geprüft; Zusammenfassungen Hochdeutsch und Züridüütsch; Bilder): Ehebrecherin 7,53–8,11 als später eingefügter Abschnitt gekennzeichnet, Streitgespräche Joh 8, Blindgeborener mit Verhören in Stufen, Hirtenrede, Lazarus, Salbung und Einzug, Fusswaschung, Abschiedsrede Joh 14. Neues Bildzeichen «geheilter Blinder».
+- **Neue Bildprüfung (Hinweis Andi Neck):** Die Spitze einer Sprechblase darf nicht hinter einer anderen Blase durchlaufen. Die Platzierung sucht jetzt solche Lagen ab und behält beim Nachschieben die geprüfte Lage; wo zwei Sprecher eng beieinander stehen (Mt 20,20–23; Mk 4,35–41; Mk 8,1–10), stehen Sprechblasen nur mit Zeichen und der Wortlaut in der Legende.
+- Noch 48 Bilder in alter Verdichtung (Johannes 15–21, Buch Johannes, Lk 11).
+
 ## v0.123 — 2026-10-26 — Johannes 1–7 nach «Struktur zuerst»; veraltete Blindtests ehrlich markiert
 
 - **35 Abschnitte und 7 Kapitel neu** (Kernanalysen mit Struktur, unabhängig geprüft; Zusammenfassungen Hochdeutsch und Züridüütsch; Bilder): Prolog, Zeugenreihe 5,31–47, Ich-bin-Worte, Brotrede mit ihren drei Missverständnissen; Zeichen nur gezählt, wo der Text zählt (Kana «Anfang der Zeichen», Beamtensohn «zweites Zeichen»); Kana mit sechs Krügen; nichts aus den anderen Evangelien. Sprecherfrage 3,16–21 und 3,31–36 als Deutung vermerkt.

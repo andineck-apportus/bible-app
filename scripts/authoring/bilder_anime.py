@@ -762,7 +762,7 @@ def use(sym, x, y, w, h, extra=""):
 
 def bubble(x, y, w, h, tx, ty, inner):
     """Sprechblase als eine Form mit eingebauter Spitze zur sprechenden Figur (tx, ty), siehe _bubble.py."""
-    return f'<g><path d="{bubble_path(x, y, w, h, tx, ty, 12, 5)}" data-box="{x:g},{y:g},{w:g},{h:g}" fill="{BUBBLE}" stroke="{INK}" stroke-width="1.6" stroke-linejoin="round"/>{inner}</g>'
+    return f'<g><path d="{bubble_path(x, y, w, h, tx, ty, 12, 5)}" data-box="{x:g},{y:g},{w:g},{h:g}" data-tail="{tx:g},{ty:g}" fill="{BUBBLE}" stroke="{INK}" stroke-width="1.6" stroke-linejoin="round"/>{inner}</g>'
 
 
 CUR = ["x"]  # Kennung des Bildes, das gerade gezeichnet wird (für eindeutige Clip-IDs, wenn mehrere Bilder auf einer Seite stehen)
