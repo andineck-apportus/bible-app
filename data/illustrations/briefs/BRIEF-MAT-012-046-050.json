@@ -11,7 +11,7 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.12.46-MAT.12.47",
+      "reference": "MAT.12.46-MAT.12.48",
       "figures": [
         "FIG-MARIA-MUTTER-JESU",
         "FIG-GRUPPE-BRUEDER-JESU",
@@ -19,55 +19,65 @@
         "FIG-JESUS"
       ],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-ABSTAND"
-      ],
+      "signs": [],
       "speech": [
         {
-          "from": "FIG-ROLLE-MENSCH",
-          "to": "FIG-JESUS",
+          "from": "FIG-JESUS",
+          "to": "FIG-ROLLE-MENSCH",
           "icons": [
-            "FIG-MARIA-MUTTER-JESU",
-            "FIG-GRUPPE-BRUEDER-JESU"
-          ]
+            "FIG-ZEICHEN-FRAGEN"
+          ],
+          "word": {
+            "de": "Wer ist meine Mutter, und wer sind meine Brüder?",
+            "gsw": "Wer isch mini Mueter, und wer sind mini Brüeder?"
+          }
         }
       ],
-      "action_de": "Während Jesus zu den Menschenmengen redet, stehen seine Mutter und seine Brüder draussen und wollen ihn sprechen; jemand sagt es ihm.",
+      "action_de": "Während Jesus zu den Mengen redet, stehen seine Mutter und seine Brüder draussen und wollen ihn sprechen; jemand sagt es ihm, und er fragt: Wer ist meine Mutter, und wer sind meine Brüder?",
+      "keywords": {
+        "de": "standen seine Mutter und seine Brüder draussen",
+        "gsw": "sind sini Mueter und sini Brüeder dusse gstande"
+      },
       "stage": {
         "split": 2,
         "mood": {
-          "FIG-MARIA-MUTTER-JESU": "calm"
+          "FIG-MARIA-MUTTER-JESU": "calm",
+          "FIG-GRUPPE-BRUEDER-JESU": "calm",
+          "FIG-ROLLE-MENSCH": "earnest",
+          "FIG-JESUS": "pensive"
         }
       }
     },
     {
       "n": 2,
-      "reference": "MAT.12.48-MAT.12.50",
+      "reference": "MAT.12.49-MAT.12.50",
       "figures": [
         "FIG-JESUS",
         "FIG-GRUPPE-JUENGER"
       ],
       "objects": [],
       "signs": [
-        "FIG-ZEICHEN-LIEBE"
+        "FIG-ZEICHEN-WILLE-GOTTES"
       ],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-JUENGER",
           "icons": [
-            "FIG-ZEICHEN-WILLE-GOTTES",
-            "FIG-ZEICHEN-DARAUS",
-            "FIG-MARIA-MUTTER-JESU",
-            "FIG-GRUPPE-BRUEDER-JESU"
-          ]
+            "FIG-ZEICHEN-ZEIGEN"
+          ],
+          "word": {
+            "de": "Siehe, meine Mutter und meine Brüder!",
+            "gsw": "Lueg, mini Mueter und mini Brüeder!"
+          }
         }
       ],
-      "action_de": "Jesus fragt, wer seine Mutter und seine Brüder seien, streckt die Hand über seine Jünger aus und sagt: «Siehe, meine Mutter und meine Brüder!» Denn wer den Willen seines Vaters in den Himmeln tut, ist sein Bruder, seine Schwester und seine Mutter.",
+      "action_de": "Er streckt seine Hand über seine Jünger aus und sagt: Siehe, meine Mutter und meine Brüder! Denn wer den Willen meines Vaters in den Himmeln tut, der ist mein Bruder und meine Schwester und meine Mutter.",
+      "keywords": {
+        "de": "wer den Willen meines Vaters in den Himmeln tut",
+        "gsw": "wer de Wile vo mim Vatter i de Himel tuet"
+      },
       "stage": {
-        "at": {
-          "FIG-ZEICHEN-LIEBE": "FIG-GRUPPE-JUENGER"
-        },
         "arrows": [
           [
             "FIG-JESUS",
@@ -75,43 +85,50 @@
             "act"
           ]
         ],
+        "at": {
+          "FIG-ZEICHEN-WILLE-GOTTES": "FIG-GRUPPE-JUENGER"
+        },
         "mood": {
-          "FIG-GRUPPE-JUENGER": "smile",
-          "FIG-JESUS": "smile"
+          "FIG-JESUS": "smile",
+          "FIG-GRUPPE-JUENGER": "delight"
+        },
+        "x": {
+          "FIG-JESUS": 54,
+          "FIG-GRUPPE-JUENGER": 134
         }
       }
     }
   ],
   "actions_de": [
-    "Während Jesus zu den Menschenmengen redet, stehen seine Mutter und seine Brüder draussen und wollen ihn sprechen; jemand sagt es ihm.",
-    "Jesus fragt, wer seine Mutter und seine Brüder seien, streckt die Hand über seine Jünger aus und sagt: «Siehe, meine Mutter und meine Brüder!» Denn wer den Willen seines Vaters in den Himmeln tut, ist sein Bruder, seine Schwester und seine Mutter."
+    "Während Jesus zu den Mengen redet, stehen seine Mutter und seine Brüder draussen und wollen ihn sprechen; jemand sagt es ihm, und er fragt: Wer ist meine Mutter, und wer sind meine Brüder?",
+    "Er streckt seine Hand über seine Jünger aus und sagt: Siehe, meine Mutter und meine Brüder! Denn wer den Willen meines Vaters in den Himmeln tut, der ist mein Bruder und meine Schwester und meine Mutter."
   ],
   "captions_de": [
-    "Draussen: Mutter und Brüder stehen draussen (gestrichelte Linie); jemand sagt es Jesus (Maria mit blauem Schleier, Brüder).",
-    "Neue Familie: Jesus streckt die Hand über seine Jünger aus (Pfeil): Wer Gottes Willen tut (Wolke, Pfeil nach unten, Erde), ist ihm Mutter und Brüder (dicker Pfeil, Maria, Brüder); rotes Herz über den Jüngern."
+    "Draussen: Seine Mutter (blauer Schleier) und seine Brüder (sandfarben, grüne Schärpe) stehen draussen (gestrichelte Linie); jemand meldet es; Jesus fragt: «Wer ist meine Mutter, und wer sind meine Brüder?» (Fragezeichen).",
+    "Meine Familie: Jesus zeigt auf seine Jünger (Zeigefinger, Pfeil): «Siehe, meine Mutter und meine Brüder!»; der Wille des Vaters (goldener Pfeil von der Wolke zur Erde)."
   ],
-  "interpretation_note_de": "Wer Jesus Bescheid sagt, nennt der Text nur «jemand» ([[MAT.12.47]]). Der Vater in den Himmeln ([[MAT.12.50]]) erscheint im Zeichen «Gottes Wille geschieht» (Wolke mit Goldrand, Pfeil zur Erde; Deutung). Die Schwester nennt nur die Legende.",
+  "interpretation_note_de": "Zwei Felder nach «draussen ↔ um ihn» ([[MAT.12.46-MAT.12.50]]). Die gestrichelte Linie trennt die Familie draussen von Jesus drinnen. Die Mutter erscheint mit der Lexikonfigur der Mutter Jesu ohne Namensschild, weil der Abschnitt sie nur «seine Mutter» nennt. Ob Jesus danach mit ihnen spricht, sagt der Text nicht; das Bild zeigt es nicht.",
   "basis": [
     {
       "record": "TU-MAT-012-046-050",
       "field": "summary",
-      "fingerprint": "fbfd93bae2678d6f"
+      "fingerprint": "3977da25a474aa17"
     },
     {
       "record": "TRANS-MAT-012-001-050-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.12.46-MAT.12.47",
-      "fingerprint": "bf82410443d33ec4"
+      "reference": "MAT.12.46-MAT.12.48",
+      "fingerprint": "88e072882806bc45"
     },
     {
       "record": "TRANS-MAT-012-001-050-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.12.48-MAT.12.50",
-      "fingerprint": "427db2f7f319ee7c"
+      "reference": "MAT.12.49-MAT.12.50",
+      "fingerprint": "eca6b88ff348867e"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -124,6 +141,243 @@
         "captions_de": [
           "Draussen: Mutter und Brüder stehen draussen (gestrichelte Linie); jemand sagt es Jesus (Maria mit blauem Schleier, Brüder).",
           "Neue Familie: Jesus streckt die Hand über seine Jünger aus (Pfeil): Wer Gottes Willen tut (Wolke, Pfeil nach unten, Erde), ist ihm Mutter und Brüder (dicker Pfeil, Maria, Brüder); zwei Herzen über den Jüngern."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.12.46-MAT.12.47",
+            "figures": [
+              "FIG-MARIA-MUTTER-JESU",
+              "FIG-GRUPPE-BRUEDER-JESU",
+              "FIG-ROLLE-MENSCH",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-MENSCH",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-MARIA-MUTTER-JESU",
+                  "FIG-GRUPPE-BRUEDER-JESU"
+                ]
+              }
+            ],
+            "action_de": "Während Jesus zu den Menschenmengen redet, stehen seine Mutter und seine Brüder draussen und wollen ihn sprechen; jemand sagt es ihm.",
+            "stage": {
+              "split": 2,
+              "mood": {
+                "FIG-MARIA-MUTTER-JESU": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.12.48-MAT.12.50",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-LIEBE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-WILLE-GOTTES",
+                  "FIG-ZEICHEN-DARAUS",
+                  "FIG-MARIA-MUTTER-JESU",
+                  "FIG-GRUPPE-BRUEDER-JESU"
+                ]
+              }
+            ],
+            "action_de": "Jesus fragt, wer seine Mutter und seine Brüder seien, streckt die Hand über seine Jünger aus und sagt: «Siehe, meine Mutter und meine Brüder!» Denn wer den Willen seines Vaters in den Himmeln tut, ist sein Bruder, seine Schwester und seine Mutter.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-LIEBE": "FIG-GRUPPE-JUENGER"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-JUENGER",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "smile",
+                "FIG-JESUS": "smile"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Während Jesus zu den Menschenmengen redet, stehen seine Mutter und seine Brüder draussen und wollen ihn sprechen; jemand sagt es ihm.",
+          "Jesus fragt, wer seine Mutter und seine Brüder seien, streckt die Hand über seine Jünger aus und sagt: «Siehe, meine Mutter und meine Brüder!» Denn wer den Willen seines Vaters in den Himmeln tut, ist sein Bruder, seine Schwester und seine Mutter."
+        ],
+        "captions_de": [
+          "Draussen: Mutter und Brüder stehen draussen (gestrichelte Linie); jemand sagt es Jesus (Maria mit blauem Schleier, Brüder).",
+          "Neue Familie: Jesus streckt die Hand über seine Jünger aus (Pfeil): Wer Gottes Willen tut (Wolke, Pfeil nach unten, Erde), ist ihm Mutter und Brüder (dicker Pfeil, Maria, Brüder); rotes Herz über den Jüngern."
+        ],
+        "interpretation_note_de": "Wer Jesus Bescheid sagt, nennt der Text nur «jemand» ([[MAT.12.47]]). Der Vater in den Himmeln ([[MAT.12.50]]) erscheint im Zeichen «Gottes Wille geschieht» (Wolke mit Goldrand, Pfeil zur Erde; Deutung). Die Schwester nennt nur die Legende.",
+        "basis": [
+          {
+            "record": "TU-MAT-012-046-050",
+            "field": "summary",
+            "fingerprint": "fbfd93bae2678d6f"
+          },
+          {
+            "record": "TRANS-MAT-012-001-050-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.12.46-MAT.12.47",
+            "fingerprint": "bf82410443d33ec4"
+          },
+          {
+            "record": "TRANS-MAT-012-001-050-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.12.48-MAT.12.50",
+            "fingerprint": "427db2f7f319ee7c"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-012-046-050",
+            "field": "summary",
+            "fingerprint": "fbfd93bae2678d6f"
+          },
+          {
+            "record": "TRANS-MAT-012-001-050-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.12.46-MAT.12.48",
+            "fingerprint": "88e072882806bc45"
+          },
+          {
+            "record": "TRANS-MAT-012-001-050-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.12.49-MAT.12.50",
+            "fingerprint": "eca6b88ff348867e"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.12.46-MAT.12.48",
+            "figures": [
+              "FIG-MARIA-MUTTER-JESU",
+              "FIG-GRUPPE-BRUEDER-JESU",
+              "FIG-ROLLE-MENSCH",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-MENSCH",
+                "icons": [
+                  "FIG-ZEICHEN-FRAGEN"
+                ],
+                "word": {
+                  "de": "Wer ist meine Mutter, und wer sind meine Brüder?",
+                  "gsw": "Wer isch mini Mueter, und wer sind mini Brüeder?"
+                }
+              }
+            ],
+            "action_de": "Während Jesus zu den Mengen redet, stehen seine Mutter und seine Brüder draussen und wollen ihn sprechen; jemand sagt es ihm, und er fragt: Wer ist meine Mutter, und wer sind meine Brüder?",
+            "keywords": {
+              "de": "standen seine Mutter und seine Brüder draussen",
+              "gsw": "sind sini Mueter und sini Brüeder dusse gstande"
+            },
+            "stage": {
+              "split": 2,
+              "mood": {
+                "FIG-MARIA-MUTTER-JESU": "calm",
+                "FIG-GRUPPE-BRUEDER-JESU": "calm",
+                "FIG-ROLLE-MENSCH": "earnest",
+                "FIG-JESUS": "pensive"
+              },
+              "x": {
+                "FIG-MARIA-MUTTER-JESU": 22,
+                "FIG-GRUPPE-BRUEDER-JESU": 62,
+                "FIG-ROLLE-MENSCH": 112,
+                "FIG-JESUS": 160
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.12.49-MAT.12.50",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-WILLE-GOTTES"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-ZEIGEN"
+                ],
+                "word": {
+                  "de": "Siehe, meine Mutter und meine Brüder!",
+                  "gsw": "Lueg, mini Mueter und mini Brüeder!"
+                }
+              }
+            ],
+            "action_de": "Er streckt seine Hand über seine Jünger aus und sagt: Siehe, meine Mutter und meine Brüder! Denn wer den Willen meines Vaters in den Himmeln tut, der ist mein Bruder und meine Schwester und meine Mutter.",
+            "keywords": {
+              "de": "wer den Willen meines Vaters in den Himmeln tut",
+              "gsw": "wer de Wile vo mim Vatter i de Himel tuet"
+            },
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-JUENGER",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-WILLE-GOTTES": "FIG-GRUPPE-JUENGER"
+              },
+              "mood": {
+                "FIG-JESUS": "smile",
+                "FIG-GRUPPE-JUENGER": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 54,
+                "FIG-GRUPPE-JUENGER": 134
+              }
+            }
+          }
         ]
       }
     }

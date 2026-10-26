@@ -1,0 +1,140 @@
+{
+ "id": "CORE-MAT-018-001-005",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.18.1-MAT.18.5",
+ "target": "TU-MAT-018-001-005",
+ "core_de": "Auf die Frage der Jünger, wer der Grösste im Reich der Himmel sei, stellt Jesus ein Kind in ihre Mitte: Wer nicht umkehrt und wie die Kinder wird, kommt gewiss nicht ins Reich der Himmel; wer sich klein macht wie dieses Kind, ist der Grösste; und wer ein solches Kind in seinem Namen aufnimmt, nimmt ihn auf.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Frage – Zeichenhandlung – drei Worte",
+    "range": "MAT.18.1-MAT.18.5",
+    "elements": [
+     {
+      "label": "«Wer ist denn der Grösste im Reich der Himmel?»",
+      "ref": "MAT.18.1",
+      "role": "Frage"
+     },
+     {
+      "label": "Er ruft ein Kind herbei und stellt es in ihre Mitte",
+      "ref": "MAT.18.2",
+      "role": "Zeichenhandlung"
+     },
+     {
+      "label": "Drei Worte zum Kind",
+      "ref": "MAT.18.3-MAT.18.5",
+      "role": "Antwort",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-GRUPPE-JUENGER",
+       "to": "FIG-JESUS",
+       "ref": "MAT.18.1"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "MAT.18.3-MAT.18.5"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "series",
+    "subtype": "Wenn/Wer … → Folge",
+    "range": "MAT.18.3-MAT.18.5",
+    "elements": [
+     {
+      "label": "Wenn ihr euch nicht umwendet und wie die Kinder werdet → gewiss nicht ins Reich der Himmel",
+      "ref": "MAT.18.3"
+     },
+     {
+      "label": "Wer sich klein macht wie dieses Kind → der Grösste im Reich der Himmel",
+      "ref": "MAT.18.4"
+     },
+     {
+      "label": "Wer ein solches Kind in meinem Namen aufnimmt → nimmt mich auf",
+      "ref": "MAT.18.5"
+     }
+    ],
+    "features": {
+     "pattern_break": [
+      {
+       "ref": "MAT.18.3",
+       "note": "Das erste Wort nennt nur den verneinten Fall; der Gegenfall wird nicht ausgesprochen."
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.18.1-MAT.18.3",
+   "text_de": "Die Jünger fragen: «Wer ist denn der Grösste im Reich der Himmel?»; Jesus ruft ein Kind herbei, stellt es in ihre Mitte und sagt: «Wenn ihr euch nicht umwendet und wie die Kinder werdet, werdet ihr gewiss nicht in das Reich der Himmel hineinkommen.»",
+   "reason_de": "Frage und Zeichenhandlung mit Bedingung (Kriterien 1, 2 und 4).",
+   "recognition_de": "Jesus stellt ein Kind in die Mitte der Jünger.",
+   "keywords": [
+    "Wer ist denn der Grösste im Reich der Himmel?",
+    "stellte es in ihre Mitte",
+    "wie die Kinder werdet"
+   ]
+  },
+  {
+   "reference": "MAT.18.4-MAT.18.5",
+   "text_de": "«Wer sich nun klein macht wie dieses Kind, der ist der Grösste im Reich der Himmel. Und wer ein solches Kind in meinem Namen aufnimmt, nimmt mich auf.»",
+   "reason_de": "Antwort auf die Frage (Kriterium 1).",
+   "recognition_de": "Raster: sich klein machen → der Grösste; ein Kind aufnehmen → mich aufnehmen.",
+   "keywords": [
+    "Wer sich nun klein macht wie dieses Kind, der ist der Grösste",
+    "nimmt mich auf"
+   ],
+   "mode": "speech"
+  }
+ ],
+ "omitted_de": [
+  "Wie Kinder damals gesehen wurden – Hintergrund, nicht im Text"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-ROLLE-KIND"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.18.1-MAT.18.5",
+   "fingerprint": "3e96a255542c45d9"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mt 11–18 nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; keine fachliche Prüfung durch eine Person",
+  "summary_de": "Frage, Zeichenhandlung mit dem Kind und drei Worte; verneinter Fall in 18,3 ohne erfundenen Gegenfall.",
+  "changes_de": []
+ }
+}

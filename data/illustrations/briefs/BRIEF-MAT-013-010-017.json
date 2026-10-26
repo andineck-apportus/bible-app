@@ -23,104 +23,154 @@
           "from": "FIG-GRUPPE-JUENGER",
           "to": "FIG-JESUS",
           "icons": [
-            "FIG-ROLLE-SAEMANN",
             "FIG-ZEICHEN-FRAGEN"
-          ]
+          ],
+          "word": {
+            "de": "Warum redest du in Gleichnissen zu ihnen?",
+            "gsw": "Werum redsch i Gliichnis zu ine?"
+          }
         }
       ],
-      "action_de": "Die Jünger treten heran und fragen Jesus: «Warum redest du in Gleichnissen zu ihnen?»",
+      "action_de": "Die Jünger treten heran und fragen Jesus: Warum redest du in Gleichnissen zu ihnen?",
+      "keywords": {
+        "de": "Warum redest du in Gleichnissen zu ihnen?",
+        "gsw": "Werum redsch i Gliichnis zu ine?"
+      },
       "stage": {
         "mood": {
-          "FIG-GRUPPE-JUENGER": "pensive"
+          "FIG-GRUPPE-JUENGER": "question",
+          "FIG-JESUS": "calm"
+        },
+        "x": {
+          "FIG-GRUPPE-JUENGER": 56,
+          "FIG-JESUS": 136
         }
       }
     },
     {
       "n": 2,
-      "reference": "MAT.13.11-MAT.13.15",
-      "figures": [
-        "FIG-GRUPPE-MENGE",
-        "FIG-JESUS",
-        "FIG-GRUPPE-JUENGER"
-      ],
+      "reference": "MAT.13.11-MAT.13.17",
+      "figures": [],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-ABSTAND",
-        "FIG-ZEICHEN-NICHT-VERSTEHEN"
-      ],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-ZEICHEN-REICH-GOTTES",
-            "FIG-ZEICHEN-GEBEN",
-            "FIG-ZEICHEN-MENSCHEN"
-          ]
-        }
-      ],
-      "action_de": "Den Jüngern ist gegeben, die Geheimnisse des Reiches der Himmel zu erkennen, jenen nicht; an ihnen erfüllt sich Jesajas Wort: Sehend sehen sie nicht, hörend hören sie nicht und verstehen nicht.",
-      "stage": {
-        "split": 1,
-        "at": {
-          "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-GRUPPE-MENGE"
+      "signs": [],
+      "speech": [],
+      "action_de": "Jesus antwortet: Euch ist es gegeben, die Geheimnisse des Reiches der Himmel zu erkennen, jenen nicht; wer hat, dem wird gegeben, wer nicht hat, dem wird genommen; sie sehen und sehen nicht, hören und verstehen nicht, und an ihnen erfüllt sich Jesaja; selig aber sind eure Augen und Ohren.",
+      "keywords": {
+        "de": "Euch ist es gegeben, die Geheimnisse des Reiches der Himmel zu erkennen",
+        "gsw": "Eu isch es ggää, d Gheimnis vom Riich vo de Himel z erchänne"
+      },
+      "diagram": {
+        "visual": "columns",
+        "span": 2,
+        "arrow": false,
+        "speaker": "FIG-JESUS",
+        "head_tones": [
+          "new",
+          "old"
+        ],
+        "title": {
+          "de": "Euch ist es gegeben, die Geheimnisse des Reiches der Himmel zu erkennen, jenen aber ist es nicht gegeben.",
+          "gsw": "Eu isch es ggää, d Gheimnis vom Riich vo de Himel z erchänne, dene aber isch es nöd ggää."
         },
-        "mood": {
-          "FIG-GRUPPE-MENGE": "pensive",
-          "FIG-GRUPPE-JUENGER": "calm"
-        }
-      }
-    },
-    {
-      "n": 3,
-      "reference": "MAT.13.16-MAT.13.17",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-JUENGER"
-      ],
-      "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-FREUDE"
-      ],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-ZEICHEN-SEHEN",
-            "FIG-ZEICHEN-HOEREN"
+        "head": [
+          {
+            "de": "ihr",
+            "gsw": "ir"
+          },
+          {
+            "de": "jene",
+            "gsw": "die"
+          }
+        ],
+        "rows": [
+          [
+            {
+              "a": {
+                "de": "Euch ist es gegeben.",
+                "gsw": "Eu isch es ggää."
+              },
+              "icons": [
+                "FIG-ZEICHEN-REICH-GOTTES"
+              ],
+              "tone": "new",
+              "who": "FIG-GRUPPE-JUENGER"
+            },
+            {
+              "a": {
+                "de": "Jenen ist es nicht gegeben.",
+                "gsw": "Dene isch es nöd ggää."
+              },
+              "tone": "old",
+              "who": "FIG-GRUPPE-MENGE"
+            }
+          ],
+          [
+            {
+              "a": {
+                "de": "Selig sind eure Augen, weil sie sehen, und eure Ohren, weil sie hören.",
+                "gsw": "Sälig sind eui Auge, wil si gsehnd, und eui Ohre, wil si ghöred."
+              },
+              "icons": [
+                "FIG-ZEICHEN-SEHEN",
+                "FIG-ZEICHEN-HOEREN"
+              ],
+              "tone": "new"
+            },
+            {
+              "a": {
+                "de": "Sehend sehen sie nicht, und hörend hören sie nicht und verstehen nicht.",
+                "gsw": "Mit offne Auge gsehnd si nöd, und mit offne Ohre ghöred si nöd und verstönd nöd."
+              },
+              "b": {
+                "de": "An ihnen erfüllt sich die Prophetie des Jesaja.",
+                "gsw": "A ine erfüllt sich d Prophezeiig vom Jesaja."
+              },
+              "icons": [
+                "FIG-ZEICHEN-NICHT-VERSTEHEN"
+              ],
+              "tone": "old"
+            }
+          ],
+          [
+            {
+              "a": {
+                "de": "Wer hat, dem wird gegeben werden.",
+                "gsw": "Wer hät, däm wird ggää."
+              },
+              "icons": [
+                "FIG-ZEICHEN-GEBEN"
+              ],
+              "tone": "new"
+            },
+            {
+              "a": {
+                "de": "Wer nicht hat, dem wird auch das genommen, was er hat.",
+                "gsw": "Wer nöd hät, däm wird sogar das gnoo, won er hät."
+              },
+              "icons": [
+                "FIG-ZEICHEN-VERLUST"
+              ],
+              "tone": "old"
+            }
           ]
-        }
-      ],
-      "action_de": "Selig sind die Augen der Jünger, weil sie sehen, und ihre Ohren, weil sie hören; viele Propheten und Gerechte haben sich danach gesehnt und es nicht gesehen und gehört.",
-      "stage": {
-        "signs_who": {
-          "FIG-ZEICHEN-FREUDE": [
-            "FIG-GRUPPE-JUENGER"
-          ]
-        },
-        "mood": {
-          "FIG-GRUPPE-JUENGER": "delight"
-        }
+        ]
       }
     }
   ],
   "actions_de": [
-    "Die Jünger treten heran und fragen Jesus: «Warum redest du in Gleichnissen zu ihnen?»",
-    "Den Jüngern ist gegeben, die Geheimnisse des Reiches der Himmel zu erkennen, jenen nicht; an ihnen erfüllt sich Jesajas Wort: Sehend sehen sie nicht, hörend hören sie nicht und verstehen nicht.",
-    "Selig sind die Augen der Jünger, weil sie sehen, und ihre Ohren, weil sie hören; viele Propheten und Gerechte haben sich danach gesehnt und es nicht gesehen und gehört."
+    "Die Jünger treten heran und fragen Jesus: Warum redest du in Gleichnissen zu ihnen?",
+    "Jesus antwortet: Euch ist es gegeben, die Geheimnisse des Reiches der Himmel zu erkennen, jenen nicht; wer hat, dem wird gegeben, wer nicht hat, dem wird genommen; sie sehen und sehen nicht, hören und verstehen nicht, und an ihnen erfüllt sich Jesaja; selig aber sind eure Augen und Ohren."
   ],
   "captions_de": [
-    "Die Frage: Die Jünger fragen Jesus nach den Gleichnissen (Sämann mit Saatbeutel, Fragezeichen).",
-    "Geheimnis: Jesus sagt den Jüngern: Euch ist das Reich der Himmel gegeben (Krone mit Wolke, Pfeil, Menschen); die Menschenmengen jenseits der Linie verstehen nicht (graue Nebelwolke mit Fragezeichen).",
-    "Selig: Jesus sagt: Eure Augen sehen, eure Ohren hören (offene Augen, Ohr); die Jünger freuen sich (strahlendes Gesicht)."
+    "Die Frage: Die Jünger (erdfarbene Gewänder) fragen Jesus: «Warum redest du in Gleichnissen zu ihnen?» (rotes Fragezeichen).",
+    "Zwei Spalten (Bild Jesus, Blase «Euch ist es gegeben, die Geheimnisse des Reiches der Himmel zu erkennen»): links, hervorgehoben, ihr – gegeben (Jünger, Krone mit Wolke), «Selig sind eure Augen, weil sie sehen, und eure Ohren, weil sie hören» (zwei Augen, Ohr), wer hat, dem wird gegeben (offene Hände); rechts jene – nicht gegeben (Menge), sehend nicht sehen, hörend nicht verstehen (Nebelwolke mit Fragezeichen; erfüllt an ihnen: Jesaja), wer nicht hat, dem wird genommen (fallende Münzen)."
   ],
-  "interpretation_note_de": "Das Reich der Himmel erscheint als goldene Krone mit Strahlen; die Nebelwolke steht für «sehend sehen sie nicht und verstehen nicht» ([[MAT.13.13-MAT.13.15]], aus [[ISA.6.9-ISA.6.10]]). «Wer hat, dem wird gegeben» ([[MAT.13.12]]) und die Propheten und Gerechten ([[MAT.13.17]]) sind nicht gezeichnet.",
+  "interpretation_note_de": "Zwei Felder nach «euch ↔ jenen» ([[MAT.13.10-MAT.13.17]]): die Frage der Jünger, dann der Gegensatz Zeile für Zeile; hervorgehoben ist die Seite der Jünger. «An ihnen erfüllt sich die Prophetie des Jesaja» sagt der Text selbst. Wer «jene» sind, ist die Menge, zu der Jesus in Gleichnissen redet; das Bild urteilt nicht über andere Gruppen.",
   "basis": [
     {
       "record": "TU-MAT-013-010-017",
       "field": "summary",
-      "fingerprint": "9fb83066419d1a5b"
+      "fingerprint": "bb89b2d0e1910729"
     },
     {
       "record": "TRANS-MAT-013-001-058-DE-WORKING",
@@ -131,18 +181,12 @@
     {
       "record": "TRANS-MAT-013-001-058-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.13.11-MAT.13.15",
-      "fingerprint": "a30abd8b14a9648e"
-    },
-    {
-      "record": "TRANS-MAT-013-001-058-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.13.16-MAT.13.17",
-      "fingerprint": "575e9014d352f6d8"
+      "reference": "MAT.13.11-MAT.13.17",
+      "fingerprint": "d008c947d53a8240"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -259,6 +303,171 @@
           "Die Frage: Die Jünger fragen Jesus nach den Gleichnissen (Sämann mit Saatbeutel, Fragezeichen).",
           "Geheimnis: Jesus sagt den Jüngern: Euch ist das Reich der Himmel gegeben (goldene Krone mit Strahlen, Pfeil, Menschen); die Menschenmengen jenseits der Linie verstehen nicht (graue Nebelwolke mit Fragezeichen).",
           "Selig: Jesus sagt: Eure Augen sehen, eure Ohren hören (offenes Auge, Ohr); die Jünger freuen sich (goldene Funken)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.13.10",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ROLLE-SAEMANN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Die Jünger treten heran und fragen Jesus: «Warum redest du in Gleichnissen zu ihnen?»",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "pensive"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.13.11-MAT.13.15",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-ABSTAND",
+              "FIG-ZEICHEN-NICHT-VERSTEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-REICH-GOTTES",
+                  "FIG-ZEICHEN-GEBEN",
+                  "FIG-ZEICHEN-MENSCHEN"
+                ]
+              }
+            ],
+            "action_de": "Den Jüngern ist gegeben, die Geheimnisse des Reiches der Himmel zu erkennen, jenen nicht; an ihnen erfüllt sich Jesajas Wort: Sehend sehen sie nicht, hörend hören sie nicht und verstehen nicht.",
+            "stage": {
+              "split": 1,
+              "at": {
+                "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-GRUPPE-MENGE"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "pensive",
+                "FIG-GRUPPE-JUENGER": "calm"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.13.16-MAT.13.17",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-SEHEN",
+                  "FIG-ZEICHEN-HOEREN"
+                ]
+              }
+            ],
+            "action_de": "Selig sind die Augen der Jünger, weil sie sehen, und ihre Ohren, weil sie hören; viele Propheten und Gerechte haben sich danach gesehnt und es nicht gesehen und gehört.",
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-GRUPPE-JUENGER"
+                ]
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "delight"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Die Jünger treten heran und fragen Jesus: «Warum redest du in Gleichnissen zu ihnen?»",
+          "Den Jüngern ist gegeben, die Geheimnisse des Reiches der Himmel zu erkennen, jenen nicht; an ihnen erfüllt sich Jesajas Wort: Sehend sehen sie nicht, hörend hören sie nicht und verstehen nicht.",
+          "Selig sind die Augen der Jünger, weil sie sehen, und ihre Ohren, weil sie hören; viele Propheten und Gerechte haben sich danach gesehnt und es nicht gesehen und gehört."
+        ],
+        "captions_de": [
+          "Die Frage: Die Jünger fragen Jesus nach den Gleichnissen (Sämann mit Saatbeutel, Fragezeichen).",
+          "Geheimnis: Jesus sagt den Jüngern: Euch ist das Reich der Himmel gegeben (Krone mit Wolke, Pfeil, Menschen); die Menschenmengen jenseits der Linie verstehen nicht (graue Nebelwolke mit Fragezeichen).",
+          "Selig: Jesus sagt: Eure Augen sehen, eure Ohren hören (offene Augen, Ohr); die Jünger freuen sich (strahlendes Gesicht)."
+        ],
+        "interpretation_note_de": "Das Reich der Himmel erscheint als goldene Krone mit Strahlen; die Nebelwolke steht für «sehend sehen sie nicht und verstehen nicht» ([[MAT.13.13-MAT.13.15]], aus [[ISA.6.9-ISA.6.10]]). «Wer hat, dem wird gegeben» ([[MAT.13.12]]) und die Propheten und Gerechten ([[MAT.13.17]]) sind nicht gezeichnet.",
+        "basis": [
+          {
+            "record": "TU-MAT-013-010-017",
+            "field": "summary",
+            "fingerprint": "9fb83066419d1a5b"
+          },
+          {
+            "record": "TRANS-MAT-013-001-058-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.13.10",
+            "fingerprint": "ca598576dcdfa7a6"
+          },
+          {
+            "record": "TRANS-MAT-013-001-058-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.13.11-MAT.13.15",
+            "fingerprint": "a30abd8b14a9648e"
+          },
+          {
+            "record": "TRANS-MAT-013-001-058-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.13.16-MAT.13.17",
+            "fingerprint": "575e9014d352f6d8"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-013-010-017",
+            "field": "summary",
+            "fingerprint": "9fb83066419d1a5b"
+          },
+          {
+            "record": "TRANS-MAT-013-001-058-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.13.10",
+            "fingerprint": "ca598576dcdfa7a6"
+          },
+          {
+            "record": "TRANS-MAT-013-001-058-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.13.11-MAT.13.17",
+            "fingerprint": "d008c947d53a8240"
+          }
         ]
       }
     }

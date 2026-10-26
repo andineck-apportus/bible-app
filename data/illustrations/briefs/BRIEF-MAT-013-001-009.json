@@ -17,20 +17,16 @@
         "FIG-JESUS"
       ],
       "objects": [
-        "FIG-ORT-SEE",
-        "FIG-OBJ-BOOT"
+        "FIG-OBJ-BOOT",
+        "FIG-ORT-SEE"
       ],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-ZEICHEN-HOEREN"
-          ]
-        }
-      ],
-      "action_de": "Jesus sitzt am See; weil sich grosse Menschenmengen bei ihm versammeln, steigt er in ein Boot und setzt sich, während die Menge am Ufer steht, und redet zu ihnen vieles in Gleichnissen.",
+      "speech": [],
+      "action_de": "Jesus sitzt wegen der grossen Menge in einem Boot, die Menge steht am Ufer, und er redet vieles in Gleichnissen.",
+      "keywords": {
+        "de": "er redete zu ihnen vieles in Gleichnissen",
+        "gsw": "er hät vil i Gliichnis zu ine gredt"
+      },
       "stage": {
         "big_side": "right",
         "in": {
@@ -38,103 +34,118 @@
         },
         "in_pos": {
           "FIG-JESUS": [
-            0.3,
-            0.42
+            0.5,
+            0.4
           ]
         },
+        "sea": "calm",
         "x": {
           "FIG-GRUPPE-MENGE": 50
         },
         "mood": {
-          "FIG-GRUPPE-MENGE": "calm"
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-MENGE": "pensive"
         }
       }
     },
     {
       "n": 2,
-      "reference": "MAT.13.3-MAT.13.7",
-      "figures": [
-        "FIG-ROLLE-SAEMANN"
-      ],
-      "objects": [
-        "FIG-OBJ-SAMEN",
-        "FIG-OBJ-FELSBODEN",
-        "FIG-OBJ-DORNEN"
-      ],
-      "signs": [
-        "FIG-OBJ-VOGEL",
-        "FIG-ZEICHEN-HITZE"
-      ],
-      "speech": [],
-      "action_de": "Ein Sämann geht hinaus zu säen: Einiges fällt an den Weg, und die Vögel fressen es; anderes fällt auf felsigen Boden und verdorrt in der Sonne; anderes fällt unter die Dornen, die es ersticken.",
-      "stage": {
-        "hold": {
-          "FIG-ROLLE-SAEMANN": "FIG-OBJ-SAMEN"
-        },
-        "x": {
-          "FIG-ROLLE-SAEMANN": 28
-        },
-        "count": {
-          "FIG-OBJ-VOGEL": 2
-        },
-        "at": {
-          "FIG-ZEICHEN-HITZE": "FIG-OBJ-FELSBODEN"
-        },
-        "air_x": 64,
-        "air_y": 100,
-        "arrows": [
-          [
-            "FIG-ROLLE-SAEMANN",
-            "FIG-OBJ-DORNEN",
-            "throw"
-          ]
-        ]
-      }
-    },
-    {
-      "n": 3,
-      "reference": "MAT.13.8-MAT.13.9",
-      "figures": [
-        "FIG-ROLLE-SAEMANN",
-        "FIG-JESUS"
-      ],
-      "objects": [
-        "FIG-ORT-KORNFELD"
-      ],
+      "reference": "MAT.13.3-MAT.13.9",
+      "figures": [],
+      "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-ZEICHEN-HOEREN"
-          ]
-        }
-      ],
-      "action_de": "Anderes fällt auf die gute Erde und bringt Frucht, hundert-, sechzig- oder dreissigfach. Wer Ohren hat, der höre!",
-      "stage": {
-        "mood": {
-          "FIG-ROLLE-SAEMANN": "delight"
-        }
+      "speech": [],
+      "action_de": "Der Sämann geht hinaus, um zu säen: Einiges fällt an den Weg, und die Vögel fressen es; anderes auf felsigen Boden und verdorrt; anderes unter die Dornen, die es ersticken; anderes auf die gute Erde und bringt Frucht, hundertfach, sechzigfach, dreissigfach. Wer Ohren hat, der höre!",
+      "keywords": {
+        "de": "Wer Ohren hat, der höre!",
+        "gsw": "Wer Ohre hät, dä söll lose!"
+      },
+      "diagram": {
+        "visual": "grid",
+        "span": 2,
+        "cols": 4,
+        "speaker": "FIG-JESUS",
+        "title": {
+          "de": "Siehe, der Sämann ging hinaus, um zu säen.",
+          "gsw": "Lueg, de Sämaa isch usegange, go sääje."
+        },
+        "cells": [
+          {
+            "a": {
+              "de": "an den Weg",
+              "gsw": "a de Wäg"
+            },
+            "b": {
+              "de": "Die Vögel kamen und frassen es auf.",
+              "gsw": "D Vögel sind choo und händ s ufgfrässe."
+            },
+            "icons": [
+              "FIG-ORT-WEG",
+              "FIG-OBJ-VOGEL"
+            ],
+            "tone": "old"
+          },
+          {
+            "a": {
+              "de": "auf den felsigen Boden",
+              "gsw": "uf de Felsbode"
+            },
+            "b": {
+              "de": "Es ging sogleich auf und verdorrte, weil es keine Wurzel hatte.",
+              "gsw": "Es isch grad ufgange und verdorret, wil s kei Wurzle gha hät."
+            },
+            "icons": [
+              "FIG-OBJ-FELSBODEN",
+              "FIG-ZEICHEN-HITZE"
+            ],
+            "tone": "old"
+          },
+          {
+            "a": {
+              "de": "unter die Dornen",
+              "gsw": "i d Dörn"
+            },
+            "b": {
+              "de": "Die Dornen wuchsen hoch und erstickten es.",
+              "gsw": "D Dörn sind ufgschosse und händ s verstickt."
+            },
+            "icons": [
+              "FIG-OBJ-DORNEN"
+            ],
+            "tone": "old"
+          },
+          {
+            "a": {
+              "de": "auf die gute Erde",
+              "gsw": "uf di guet Ärde"
+            },
+            "b": {
+              "de": "Es brachte Frucht: teils hundertfach, teils sechzigfach, teils dreissigfach.",
+              "gsw": "Es hät Frucht bracht: teils hundertfach, teils sächzgfach, teils drüssgfach."
+            },
+            "icons": [
+              "FIG-OBJ-AEHREN"
+            ],
+            "tone": "new"
+          }
+        ]
       }
     }
   ],
   "actions_de": [
-    "Jesus sitzt am See; weil sich grosse Menschenmengen bei ihm versammeln, steigt er in ein Boot und setzt sich, während die Menge am Ufer steht, und redet zu ihnen vieles in Gleichnissen.",
-    "Ein Sämann geht hinaus zu säen: Einiges fällt an den Weg, und die Vögel fressen es; anderes fällt auf felsigen Boden und verdorrt in der Sonne; anderes fällt unter die Dornen, die es ersticken.",
-    "Anderes fällt auf die gute Erde und bringt Frucht, hundert-, sechzig- oder dreissigfach. Wer Ohren hat, der höre!"
+    "Jesus sitzt wegen der grossen Menge in einem Boot, die Menge steht am Ufer, und er redet vieles in Gleichnissen.",
+    "Der Sämann geht hinaus, um zu säen: Einiges fällt an den Weg, und die Vögel fressen es; anderes auf felsigen Boden und verdorrt; anderes unter die Dornen, die es ersticken; anderes auf die gute Erde und bringt Frucht, hundertfach, sechzigfach, dreissigfach. Wer Ohren hat, der höre!"
   ],
   "captions_de": [
-    "Im Boot: Jesus sitzt im Boot und lehrt die Menschenmengen am Ufer in Gleichnissen: Hört! (Ohr).",
-    "Verlorene Saat: Der Sämann wirft die Saat aus (Hand und Keimling, gepunktete Bogen); am Weg fressen sie die Vögel, auf dem felsigen Boden verdorrt sie in der Sonne, die Dornen (dunkler Strauch) ersticken sie.",
-    "Gute Erde: Auf guter Erde wächst reiche Frucht (Kornfeld); Jesus: Wer Ohren hat, der höre (Ohr)."
+    "Gleichnisse vom Boot aus: Jesus sitzt im Boot auf dem See, die Menge steht am Ufer.",
+    "Vier Böden als Raster (Bild Jesus, Blase «Siehe, der Sämann ging hinaus, um zu säen»): an den Weg – die Vögel fressen es (Pfad, roter Vogel); auf felsigen Boden – verdorrt (graue Steine mit welkem Spross, stechende Sonne); unter die Dornen – erstickt (stacheliger Strauch); hervorgehoben: auf die gute Erde – Frucht, hundertfach, sechzigfach, dreissigfach (drei reife Ähren)."
   ],
-  "interpretation_note_de": "Das Gleichnis wird im Bild gezeigt, als geschehe es; der Text erzählt es als Rede Jesu vom Boot aus ([[MAT.13.3]]). Die Mengen hundert-, sechzig- und dreissigfach stehen nicht als Zahlen im Bild. Die Sonne steht für das Versengen ([[MAT.13.6]]).",
+  "interpretation_note_de": "Zwei Felder nach «Rahmen – Bild – vier Böden – Ruf» ([[MAT.13.1-MAT.13.9]]): erst Jesus im Boot vor der Menge, dann die vier Böden als Reihe 3 + 1, das Gelingen hervorgehoben. Die Deutung gibt erst [[MAT.13.18-MAT.13.23]]; hier bleibt die Bildhälfte ohne Deutung.",
   "basis": [
     {
       "record": "TU-MAT-013-001-009",
       "field": "summary",
-      "fingerprint": "bd2f64c1842b1efd"
+      "fingerprint": "0b4b07d7b202bbd9"
     },
     {
       "record": "TRANS-MAT-013-001-058-DE-WORKING",
@@ -145,18 +156,12 @@
     {
       "record": "TRANS-MAT-013-001-058-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.13.3-MAT.13.7",
-      "fingerprint": "c8e2645d50cb63c5"
-    },
-    {
-      "record": "TRANS-MAT-013-001-058-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.13.8-MAT.13.9",
-      "fingerprint": "fa41f9cade72e416"
+      "reference": "MAT.13.3-MAT.13.9",
+      "fingerprint": "bb95551a45ee8c45"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -287,6 +292,448 @@
           "Im Boot: Jesus sitzt im Boot und lehrt die Menschenmengen am Ufer in Gleichnissen: Hört! (Ohr).",
           "Verlorene Saat: Der Sämann wirft die Saat aus (Hand mit Körnern, gepunktete Bogen); am Weg fressen sie die Vögel, auf dem felsigen Boden verdorrt sie in der Sonne, die Dornen (dunkler Strauch) ersticken sie.",
           "Gute Erde: Auf guter Erde wächst reiche Frucht (Kornfeld); Jesus: Wer Ohren hat, der höre (Ohr)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.13.1-MAT.13.3",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-SEE",
+              "FIG-OBJ-BOOT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-HOEREN"
+                ]
+              }
+            ],
+            "action_de": "Jesus sitzt am See; weil sich grosse Menschenmengen bei ihm versammeln, steigt er in ein Boot und setzt sich, während die Menge am Ufer steht, und redet zu ihnen vieles in Gleichnissen.",
+            "stage": {
+              "big_side": "right",
+              "in": {
+                "FIG-JESUS": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.3,
+                  0.42
+                ]
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 50
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.13.3-MAT.13.7",
+            "figures": [
+              "FIG-ROLLE-SAEMANN"
+            ],
+            "objects": [
+              "FIG-OBJ-SAMEN",
+              "FIG-OBJ-FELSBODEN",
+              "FIG-OBJ-DORNEN"
+            ],
+            "signs": [
+              "FIG-OBJ-VOGEL",
+              "FIG-ZEICHEN-HITZE"
+            ],
+            "speech": [],
+            "action_de": "Ein Sämann geht hinaus zu säen: Einiges fällt an den Weg, und die Vögel fressen es; anderes fällt auf felsigen Boden und verdorrt in der Sonne; anderes fällt unter die Dornen, die es ersticken.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-SAEMANN": "FIG-OBJ-SAMEN"
+              },
+              "x": {
+                "FIG-ROLLE-SAEMANN": 28
+              },
+              "count": {
+                "FIG-OBJ-VOGEL": 2
+              },
+              "at": {
+                "FIG-ZEICHEN-HITZE": "FIG-OBJ-FELSBODEN"
+              },
+              "air_x": 64,
+              "air_y": 100,
+              "arrows": [
+                [
+                  "FIG-ROLLE-SAEMANN",
+                  "FIG-OBJ-DORNEN",
+                  "throw"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.13.8-MAT.13.9",
+            "figures": [
+              "FIG-ROLLE-SAEMANN",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-KORNFELD"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-HOEREN"
+                ]
+              }
+            ],
+            "action_de": "Anderes fällt auf die gute Erde und bringt Frucht, hundert-, sechzig- oder dreissigfach. Wer Ohren hat, der höre!",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-SAEMANN": "delight"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus sitzt am See; weil sich grosse Menschenmengen bei ihm versammeln, steigt er in ein Boot und setzt sich, während die Menge am Ufer steht, und redet zu ihnen vieles in Gleichnissen.",
+          "Ein Sämann geht hinaus zu säen: Einiges fällt an den Weg, und die Vögel fressen es; anderes fällt auf felsigen Boden und verdorrt in der Sonne; anderes fällt unter die Dornen, die es ersticken.",
+          "Anderes fällt auf die gute Erde und bringt Frucht, hundert-, sechzig- oder dreissigfach. Wer Ohren hat, der höre!"
+        ],
+        "captions_de": [
+          "Im Boot: Jesus sitzt im Boot und lehrt die Menschenmengen am Ufer in Gleichnissen: Hört! (Ohr).",
+          "Verlorene Saat: Der Sämann wirft die Saat aus (Hand und Keimling, gepunktete Bogen); am Weg fressen sie die Vögel, auf dem felsigen Boden verdorrt sie in der Sonne, die Dornen (dunkler Strauch) ersticken sie.",
+          "Gute Erde: Auf guter Erde wächst reiche Frucht (Kornfeld); Jesus: Wer Ohren hat, der höre (Ohr)."
+        ],
+        "interpretation_note_de": "Das Gleichnis wird im Bild gezeigt, als geschehe es; der Text erzählt es als Rede Jesu vom Boot aus ([[MAT.13.3]]). Die Mengen hundert-, sechzig- und dreissigfach stehen nicht als Zahlen im Bild. Die Sonne steht für das Versengen ([[MAT.13.6]]).",
+        "basis": [
+          {
+            "record": "TU-MAT-013-001-009",
+            "field": "summary",
+            "fingerprint": "bd2f64c1842b1efd"
+          },
+          {
+            "record": "TRANS-MAT-013-001-058-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.13.1-MAT.13.3",
+            "fingerprint": "07761658cd7ab20b"
+          },
+          {
+            "record": "TRANS-MAT-013-001-058-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.13.3-MAT.13.7",
+            "fingerprint": "c8e2645d50cb63c5"
+          },
+          {
+            "record": "TRANS-MAT-013-001-058-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.13.8-MAT.13.9",
+            "fingerprint": "fa41f9cade72e416"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-013-001-009",
+            "field": "summary",
+            "fingerprint": "bd2f64c1842b1efd"
+          },
+          {
+            "record": "TRANS-MAT-013-001-058-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.13.1-MAT.13.3",
+            "fingerprint": "07761658cd7ab20b"
+          },
+          {
+            "record": "TRANS-MAT-013-001-058-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.13.3-MAT.13.9",
+            "fingerprint": "bb95551a45ee8c45"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.13.1-MAT.13.3",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Jesus sitzt wegen der grossen Menge in einem Boot, die Menge steht am Ufer, und er redet vieles in Gleichnissen.",
+            "keywords": {
+              "de": "er redete zu ihnen vieles in Gleichnissen",
+              "gsw": "er hät vil i Gliichnis zu ine gredt"
+            },
+            "stage": {
+              "in": {
+                "FIG-JESUS": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.3,
+                  0.42
+                ]
+              },
+              "sea": "calm",
+              "x": {
+                "FIG-GRUPPE-MENGE": 142
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-MENGE": "pensive"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.13.3-MAT.13.9",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Der Sämann geht hinaus, um zu säen: Einiges fällt an den Weg, und die Vögel fressen es; anderes auf felsigen Boden und verdorrt; anderes unter die Dornen, die es ersticken; anderes auf die gute Erde und bringt Frucht, hundertfach, sechzigfach, dreissigfach. Wer Ohren hat, der höre!",
+            "keywords": {
+              "de": "Wer Ohren hat, der höre!",
+              "gsw": "Wer Ohre hät, dä söll lose!"
+            },
+            "diagram": {
+              "visual": "grid",
+              "span": 2,
+              "cols": 4,
+              "speaker": "FIG-ROLLE-SAEMANN",
+              "title": {
+                "de": "Siehe, der Sämann ging hinaus, um zu säen.",
+                "gsw": "Lueg, de Sämaa isch usegange, go sääje."
+              },
+              "cells": [
+                {
+                  "a": {
+                    "de": "an den Weg",
+                    "gsw": "a de Wäg"
+                  },
+                  "b": {
+                    "de": "Die Vögel kamen und frassen es auf.",
+                    "gsw": "D Vögel sind choo und händ s ufgfrässe."
+                  },
+                  "icons": [
+                    "FIG-ORT-WEG",
+                    "FIG-OBJ-VOGEL"
+                  ],
+                  "tone": "old"
+                },
+                {
+                  "a": {
+                    "de": "auf den felsigen Boden",
+                    "gsw": "uf de Felsbode"
+                  },
+                  "b": {
+                    "de": "Es ging sogleich auf und verdorrte, weil es keine Wurzel hatte.",
+                    "gsw": "Es isch grad ufgange und verdorret, wil s kei Wurzle gha hät."
+                  },
+                  "icons": [
+                    "FIG-OBJ-FELSBODEN",
+                    "FIG-ZEICHEN-HITZE"
+                  ],
+                  "tone": "old"
+                },
+                {
+                  "a": {
+                    "de": "unter die Dornen",
+                    "gsw": "i d Dörn"
+                  },
+                  "b": {
+                    "de": "Die Dornen wuchsen hoch und erstickten es.",
+                    "gsw": "D Dörn sind ufgschosse und händ s verstickt."
+                  },
+                  "icons": [
+                    "FIG-OBJ-DORNEN"
+                  ],
+                  "tone": "old"
+                },
+                {
+                  "a": {
+                    "de": "auf die gute Erde",
+                    "gsw": "uf di guet Ärde"
+                  },
+                  "b": {
+                    "de": "Es brachte Frucht: teils hundertfach, teils sechzigfach, teils dreissigfach.",
+                    "gsw": "Es hät Frucht bracht: teils hundertfach, teils sächzgfach, teils drüssgfach."
+                  },
+                  "icons": [
+                    "FIG-OBJ-AEHREN"
+                  ],
+                  "tone": "new"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.13.1-MAT.13.3",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Jesus sitzt wegen der grossen Menge in einem Boot, die Menge steht am Ufer, und er redet vieles in Gleichnissen.",
+            "keywords": {
+              "de": "er redete zu ihnen vieles in Gleichnissen",
+              "gsw": "er hät vil i Gliichnis zu ine gredt"
+            },
+            "stage": {
+              "big_side": "right",
+              "in": {
+                "FIG-JESUS": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.5,
+                  0.4
+                ]
+              },
+              "sea": "calm",
+              "x": {
+                "FIG-GRUPPE-MENGE": 50
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-MENGE": "pensive"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.13.3-MAT.13.9",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Der Sämann geht hinaus, um zu säen: Einiges fällt an den Weg, und die Vögel fressen es; anderes auf felsigen Boden und verdorrt; anderes unter die Dornen, die es ersticken; anderes auf die gute Erde und bringt Frucht, hundertfach, sechzigfach, dreissigfach. Wer Ohren hat, der höre!",
+            "keywords": {
+              "de": "Wer Ohren hat, der höre!",
+              "gsw": "Wer Ohre hät, dä söll lose!"
+            },
+            "diagram": {
+              "visual": "grid",
+              "span": 2,
+              "cols": 4,
+              "speaker": "FIG-ROLLE-SAEMANN",
+              "title": {
+                "de": "Siehe, der Sämann ging hinaus, um zu säen.",
+                "gsw": "Lueg, de Sämaa isch usegange, go sääje."
+              },
+              "cells": [
+                {
+                  "a": {
+                    "de": "an den Weg",
+                    "gsw": "a de Wäg"
+                  },
+                  "b": {
+                    "de": "Die Vögel kamen und frassen es auf.",
+                    "gsw": "D Vögel sind choo und händ s ufgfrässe."
+                  },
+                  "icons": [
+                    "FIG-ORT-WEG",
+                    "FIG-OBJ-VOGEL"
+                  ],
+                  "tone": "old"
+                },
+                {
+                  "a": {
+                    "de": "auf den felsigen Boden",
+                    "gsw": "uf de Felsbode"
+                  },
+                  "b": {
+                    "de": "Es ging sogleich auf und verdorrte, weil es keine Wurzel hatte.",
+                    "gsw": "Es isch grad ufgange und verdorret, wil s kei Wurzle gha hät."
+                  },
+                  "icons": [
+                    "FIG-OBJ-FELSBODEN",
+                    "FIG-ZEICHEN-HITZE"
+                  ],
+                  "tone": "old"
+                },
+                {
+                  "a": {
+                    "de": "unter die Dornen",
+                    "gsw": "i d Dörn"
+                  },
+                  "b": {
+                    "de": "Die Dornen wuchsen hoch und erstickten es.",
+                    "gsw": "D Dörn sind ufgschosse und händ s verstickt."
+                  },
+                  "icons": [
+                    "FIG-OBJ-DORNEN"
+                  ],
+                  "tone": "old"
+                },
+                {
+                  "a": {
+                    "de": "auf die gute Erde",
+                    "gsw": "uf di guet Ärde"
+                  },
+                  "b": {
+                    "de": "Es brachte Frucht: teils hundertfach, teils sechzigfach, teils dreissigfach.",
+                    "gsw": "Es hät Frucht bracht: teils hundertfach, teils sächzgfach, teils drüssgfach."
+                  },
+                  "icons": [
+                    "FIG-OBJ-AEHREN"
+                  ],
+                  "tone": "new"
+                }
+              ]
+            }
+          }
+        ],
+        "captions_de": [
+          "Gleichnisse vom Boot aus: Jesus sitzt im Boot auf dem See, die Menge steht am Ufer.",
+          "Vier Böden als Raster (Bild Sämann mit Saatbeutel, Blase «Siehe, der Sämann ging hinaus, um zu säen»): an den Weg – die Vögel fressen es (Pfad, roter Vogel); auf felsigen Boden – verdorrt (graue Steine mit welkem Spross, stechende Sonne); unter die Dornen – erstickt (stacheliger Strauch); hervorgehoben: auf die gute Erde – Frucht, hundertfach, sechzigfach, dreissigfach (drei reife Ähren)."
         ]
       }
     }

@@ -11,18 +11,21 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.17.1-MAT.17.8",
+      "reference": "MAT.17.1-MAT.17.13",
       "figures": [
         "FIG-GOTT",
-        "FIG-PETRUS",
-        "FIG-JAKOBUS-ZEBEDAEUS",
-        "FIG-JOHANNES-ZEBEDAEUS",
-        "FIG-JESUS"
+        "FIG-MOSE",
+        "FIG-JESUS",
+        "FIG-ELIJA",
+        "FIG-PETRUS"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-ORT-BERG",
+        "FIG-ORT-WOLKE"
+      ],
       "signs": [
-        "FIG-ZEICHEN-WOLKE",
-        "FIG-ZEICHEN-STRAHLEN"
+        "FIG-ZEICHEN-STRAHLEN",
+        "FIG-ZEICHEN-FURCHT"
       ],
       "speech": [
         {
@@ -35,64 +38,82 @@
           ]
         }
       ],
-      "action_de": "Auf einem hohen Berg wird Jesus vor Petrus, Jakobus und Johannes verwandelt; eine Stimme aus der Wolke sagt: Dieser ist mein geliebter Sohn; hört auf ihn!",
+      "action_de": "Auf dem hohen Berg wird Jesus vor Petrus, Jakobus und Johannes verwandelt: Sein Gesicht leuchtet wie die Sonne; Mose und Elija reden mit ihm; aus der lichten Wolke sagt eine Stimme: Dieser ist mein geliebter Sohn, an dem ich Gefallen gefunden habe; hört auf ihn!",
+      "keywords": {
+        "de": "Dieser ist mein geliebter Sohn",
+        "gsw": "Dä isch min liebe Sohn"
+      },
+      "names": {
+        "FIG-MOSE": {
+          "de": "Mose",
+          "gsw": "Mose"
+        },
+        "FIG-ELIJA": {
+          "de": "Elija",
+          "gsw": "Elija"
+        },
+        "FIG-PETRUS": {
+          "de": "Petrus",
+          "gsw": "Petrus"
+        }
+      },
       "stage": {
-        "god_side": "left",
-        "air_x": 14,
-        "air_y": 34,
+        "god_side": "center",
+        "at": {
+          "FIG-ZEICHEN-STRAHLEN": "FIG-JESUS",
+          "FIG-ZEICHEN-FURCHT": "FIG-PETRUS"
+        },
         "pose": {
-          "FIG-PETRUS": "fall",
-          "FIG-JAKOBUS-ZEBEDAEUS": "fall",
-          "FIG-JOHANNES-ZEBEDAEUS": "fall"
+          "FIG-PETRUS": "kneel"
         },
         "mood": {
-          "FIG-PETRUS": "worried",
-          "FIG-JAKOBUS-ZEBEDAEUS": "worried",
-          "FIG-JOHANNES-ZEBEDAEUS": "worried"
+          "FIG-MOSE": "calm",
+          "FIG-JESUS": "calm",
+          "FIG-ELIJA": "calm",
+          "FIG-PETRUS": "fear"
         },
-        "wear": {
-          "FIG-JESUS": "#FFFFFF"
-        },
-        "signs_who": {
-          "FIG-ZEICHEN-STRAHLEN": [
-            "FIG-JESUS"
-          ]
+        "x": {
+          "FIG-MOSE": 26,
+          "FIG-JESUS": 76,
+          "FIG-ELIJA": 124,
+          "FIG-PETRUS": 168
         }
       }
     },
     {
       "n": 2,
-      "reference": "MAT.17.14-MAT.17.20",
+      "reference": "MAT.17.14-MAT.17.21",
       "figures": [
-        "FIG-JESUS",
-        "FIG-ROLLE-JUNGE"
+        "FIG-ROLLE-VATER",
+        "FIG-ROLLE-JUNGE",
+        "FIG-JESUS"
       ],
       "objects": [],
       "signs": [
-        "FIG-ZEICHEN-DAEMON"
+        "FIG-ZEICHEN-AUSTREIBEN",
+        "FIG-ZEICHEN-HEILEN"
       ],
       "speech": [
         {
-          "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-JUNGE",
+          "from": "FIG-ROLLE-VATER",
+          "to": "FIG-JESUS",
           "icons": [
-            "FIG-ZEICHEN-DAEMON",
-            "FIG-ZEICHEN-AUSTREIBEN"
+            "FIG-ZEICHEN-ERBARMEN"
           ]
         }
       ],
-      "action_de": "Jesus heilt einen mondsüchtigen Jungen, den die Jünger wegen ihres Kleinglaubens nicht heilen konnten.",
+      "action_de": "Jesus heilt den mondsüchtigen Jungen, den die Jünger nicht heilen konnten, und sagt: wegen eures Kleinglaubens.",
+      "keywords": {
+        "de": "Wegen eures Kleinglaubens",
+        "gsw": "Wäge eurem Chliiglaube"
+      },
       "stage": {
-        "x": {
-          "FIG-JESUS": 62,
-          "FIG-ROLLE-JUNGE": 124
+        "pose": {
+          "FIG-ROLLE-VATER": "kneel"
         },
-        "mood": {
-          "FIG-JESUS": "earnest",
-          "FIG-ROLLE-JUNGE": "calm"
-        },
-        "beside": {
-          "FIG-ZEICHEN-DAEMON": "FIG-ROLLE-JUNGE"
+        "at": {
+          "FIG-ZEICHEN-AUSTREIBEN": "FIG-ROLLE-JUNGE",
+          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-JUNGE"
         },
         "arrows": [
           [
@@ -100,7 +121,17 @@
             "FIG-ROLLE-JUNGE",
             "act"
           ]
-        ]
+        ],
+        "mood": {
+          "FIG-ROLLE-VATER": "worried",
+          "FIG-ROLLE-JUNGE": "smile",
+          "FIG-JESUS": "determined"
+        },
+        "x": {
+          "FIG-ROLLE-VATER": 30,
+          "FIG-ROLLE-JUNGE": 88,
+          "FIG-JESUS": 154
+        }
       }
     },
     {
@@ -108,7 +139,7 @@
       "reference": "MAT.17.22-MAT.17.23",
       "figures": [
         "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF"
+        "FIG-GRUPPE-JUENGER"
       ],
       "objects": [],
       "signs": [
@@ -117,7 +148,7 @@
       "speech": [
         {
           "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
+          "to": "FIG-GRUPPE-JUENGER",
           "icons": [
             "FIG-ZEICHEN-AUSLIEFERN",
             "FIG-ZEICHEN-TOD",
@@ -125,16 +156,24 @@
           ]
         }
       ],
-      "action_de": "Jesus kündigt erneut an, dass er ausgeliefert, getötet und am dritten Tag auferweckt wird; die Jünger werden sehr traurig.",
+      "action_de": "Jesus kündigt an: Der Menschensohn wird ausgeliefert, getötet und am dritten Tag auferweckt werden; die Jünger werden sehr traurig.",
+      "keywords": {
+        "de": "sie wurden sehr traurig",
+        "gsw": "si sind fescht truurig worde"
+      },
       "stage": {
-        "mood": {
-          "FIG-JESUS": "earnest",
-          "FIG-GRUPPE-ZWOELF": "worried"
-        },
         "signs_who": {
           "FIG-ZEICHEN-TRAUER": [
-            "FIG-GRUPPE-ZWOELF"
+            "FIG-GRUPPE-JUENGER"
           ]
+        },
+        "mood": {
+          "FIG-JESUS": "earnest",
+          "FIG-GRUPPE-JUENGER": "worried"
+        },
+        "x": {
+          "FIG-JESUS": 56,
+          "FIG-GRUPPE-JUENGER": 136
         }
       }
     },
@@ -142,62 +181,67 @@
       "n": 4,
       "reference": "MAT.17.24-MAT.17.27",
       "figures": [
-        "FIG-JESUS",
-        "FIG-PETRUS"
+        "FIG-GRUPPE-EINNEHMER",
+        "FIG-PETRUS",
+        "FIG-JESUS"
       ],
-      "objects": [
-        "FIG-ORT-SEE"
-      ],
+      "objects": [],
       "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-PETRUS",
           "icons": [
-            "FIG-OBJ-ANGEL",
-            "FIG-OBJ-FISCH",
-            "FIG-OBJ-MUENZEN"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-PETRUS",
-          "icons": [
-            "FIG-ZEICHEN-GEBEN",
-            "FIG-GRUPPE-EINNEHMER"
-          ]
+            "FIG-ZEICHEN-FREIHEIT",
+            "FIG-OBJ-ANGEL"
+          ],
+          "word": {
+            "de": "Also sind die Söhne doch frei.",
+            "gsw": "Also sind d Söön doch frei."
+          }
         }
       ],
-      "action_de": "In Kafarnaum trägt Jesus Petrus auf, die Doppeldrachme für sie beide mit einem Stater zu bezahlen, den er im Maul eines Fisches finden werde.",
+      "action_de": "Nach der Doppeldrachme gefragt, sagt Jesus: Also sind die Söhne doch frei, und schickt Petrus an den See, um keinen Anstoss zu geben.",
+      "keywords": {
+        "de": "Also sind die Söhne doch frei",
+        "gsw": "Also sind d Söön doch frei"
+      },
       "stage": {
         "mood": {
-          "FIG-PETRUS": "calm"
+          "FIG-GRUPPE-EINNEHMER": "earnest",
+          "FIG-PETRUS": "calm",
+          "FIG-JESUS": "smile"
+        },
+        "x": {
+          "FIG-GRUPPE-EINNEHMER": 30,
+          "FIG-PETRUS": 96,
+          "FIG-JESUS": 156
         }
       }
     }
   ],
   "actions_de": [
-    "Auf einem hohen Berg wird Jesus vor Petrus, Jakobus und Johannes verwandelt; eine Stimme aus der Wolke sagt: Dieser ist mein geliebter Sohn; hört auf ihn!",
-    "Jesus heilt einen mondsüchtigen Jungen, den die Jünger wegen ihres Kleinglaubens nicht heilen konnten.",
-    "Jesus kündigt erneut an, dass er ausgeliefert, getötet und am dritten Tag auferweckt wird; die Jünger werden sehr traurig.",
-    "In Kafarnaum trägt Jesus Petrus auf, die Doppeldrachme für sie beide mit einem Stater zu bezahlen, den er im Maul eines Fisches finden werde."
+    "Auf dem hohen Berg wird Jesus vor Petrus, Jakobus und Johannes verwandelt: Sein Gesicht leuchtet wie die Sonne; Mose und Elija reden mit ihm; aus der lichten Wolke sagt eine Stimme: Dieser ist mein geliebter Sohn, an dem ich Gefallen gefunden habe; hört auf ihn!",
+    "Jesus heilt den mondsüchtigen Jungen, den die Jünger nicht heilen konnten, und sagt: wegen eures Kleinglaubens.",
+    "Jesus kündigt an: Der Menschensohn wird ausgeliefert, getötet und am dritten Tag auferweckt werden; die Jünger werden sehr traurig.",
+    "Nach der Doppeldrachme gefragt, sagt Jesus: Also sind die Söhne doch frei, und schickt Petrus an den See, um keinen Anstoss zu geben."
   ],
   "captions_de": [
-    "Verwandlung: Jesus leuchtet (Strahlen über dem Kopf); Gott (Strahlenkranz über der hellen Wolke) sagt: Dies ist mein geliebter Sohn, hört auf ihn (Jesus, rotes Herz, Ohr); die Jünger werfen sich nieder (vorgebeugt) und fürchten sich.",
-    "Jesu Wort → der Junge ist frei: Jesus gebietet dem Dämon (kleiner dunkler Wirbel) auszufahren (Pfeil von Jesus zum Jungen; Pfeil mit Bewegungsstrichen); der Wirbel ist neben dem Jungen, nicht mehr in ihm.",
-    "Zweite Ankündigung: Jesus sagt, er werde ausgeliefert und getötet und auferweckt (Hand und Kette, Totenkopf, offenes Grab mit goldenem Pfeil); die Jünger sind traurig (Träne).",
-    "Der Auftrag: Jesus sagt Petrus am See: Wirf die Angel aus, beim Fisch findest du die Münze (Angelrute, Fisch, Münzen), und gib sie den Einnehmern (offene Hände, Einnehmer)."
+    "Verwandlung: Jesus leuchtet (weisse und goldene Strahlen über dem Kopf) zwischen Mose (Gesetzestafeln, weisser Bart) und Elija (Fellmantel); über ihnen Gott (goldener Strahlenkranz in der Wolke): «Dieser ist mein geliebter Sohn …; hört auf ihn!» (als Zeichen in der Blase: Jesus, Herz, Ohr); Petrus (Schlüssel) ist niedergefallen.",
+    "Heilung: Der Vater (grauer Bart) kniet; Jesus treibt den Dämon aus (dunkler Schatten mit Pfeil hinaus), der Junge ist geheilt (berührende Hand mit grünem Lichtpunkt).",
+    "Ankündigung: Jesus spricht vom Ausliefern, vom Tod und von der Auferweckung (offene Hand und Kette, Totenkopf, offenes Grab mit Pfeil nach oben); die Jünger sind traurig (Träne).",
+    "Doppeldrachme: Die Einnehmer (grüner Beutel) haben Petrus gefragt; Jesus sagt zu Petrus: «Also sind die Söhne doch frei» (Vogel mit gesprengter Kette) und schickt ihn mit dem Auftrag an den See (Angelrute in der Blase)."
   ],
-  "interpretation_note_de": "Je ein Feld zur Verwandlung, zur Heilung des Jungen, zur zweiten Leidensankündigung und zur Doppeldrachme; das Gespräch über Elija beim Abstieg ([[MAT.17.9-MAT.17.13]]) ist nur im Abschnittsbild gezeichnet. Gott erscheint als Strahlenkranz über der Wolke.",
+  "interpretation_note_de": "Vier Comic-Szenen für fünf Abschnitte: Feld 1 bündelt Verwandlung und Elija-Frage ([[MAT.17.1-MAT.17.13]]), Feld 2 die Heilung des Jungen ([[MAT.17.14-MAT.17.21]]), Feld 3 die zweite Leidensankündigung ([[MAT.17.22-MAT.17.23]]), Feld 4 die Doppeldrachme ([[MAT.17.24-MAT.17.27]]). Gott nur als Strahlenkranz; die Blase in Feld 3 zeigt die Ankündigung als Zeichen (Ausliefern, Tod, Auferweckung), den Wortlaut gibt das Abschnittsbild. Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-MAT-017",
       "field": "summary",
-      "fingerprint": "1a7deee9a8b038b6"
+      "fingerprint": "e3c11b3dceaebae2"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -737,6 +781,894 @@
           "Zweite Ankündigung: Jesus sagt, er werde ausgeliefert und getötet und auferweckt (gefesselte Hände, verschlossenes Grab, offenes Grab mit goldenem Pfeil); die Jünger sind traurig (Träne).",
           "Der Auftrag: Jesus sagt Petrus am See: Wirf die Angel aus, beim Fisch findest du die Münze (Angelrute, Fisch, Münzen), und gib sie den Einnehmern (gebende Hand, Einnehmer)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.17.1-MAT.17.8",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-PETRUS",
+              "FIG-JAKOBUS-ZEBEDAEUS",
+              "FIG-JOHANNES-ZEBEDAEUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-WOLKE",
+              "FIG-ZEICHEN-STRAHLEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GOTT",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-LIEBE",
+                  "FIG-ZEICHEN-HOEREN"
+                ]
+              }
+            ],
+            "action_de": "Auf einem hohen Berg wird Jesus vor Petrus, Jakobus und Johannes verwandelt; eine Stimme aus der Wolke sagt: Dieser ist mein geliebter Sohn; hört auf ihn!",
+            "stage": {
+              "god_side": "left",
+              "air_x": 14,
+              "air_y": 34,
+              "pose": {
+                "FIG-PETRUS": "fall",
+                "FIG-JAKOBUS-ZEBEDAEUS": "fall",
+                "FIG-JOHANNES-ZEBEDAEUS": "fall"
+              },
+              "mood": {
+                "FIG-PETRUS": "worried",
+                "FIG-JAKOBUS-ZEBEDAEUS": "worried",
+                "FIG-JOHANNES-ZEBEDAEUS": "worried"
+              },
+              "wear": {
+                "FIG-JESUS": "#FFFFFF"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-STRAHLEN": [
+                  "FIG-JESUS"
+                ]
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.17.14-MAT.17.20",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-JUNGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-DAEMON"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-JUNGE",
+                "icons": [
+                  "FIG-ZEICHEN-DAEMON",
+                  "FIG-ZEICHEN-AUSTREIBEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus heilt einen mondsüchtigen Jungen, den die Jünger wegen ihres Kleinglaubens nicht heilen konnten.",
+            "stage": {
+              "x": {
+                "FIG-JESUS": 62,
+                "FIG-ROLLE-JUNGE": 124
+              },
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-ROLLE-JUNGE": "calm"
+              },
+              "beside": {
+                "FIG-ZEICHEN-DAEMON": "FIG-ROLLE-JUNGE"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-JUNGE",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.17.22-MAT.17.23",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-AUSLIEFERN",
+                  "FIG-ZEICHEN-TOD",
+                  "FIG-ZEICHEN-AUFERWECKEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus kündigt erneut an, dass er ausgeliefert, getötet und am dritten Tag auferweckt wird; die Jünger werden sehr traurig.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-ZWOELF": "worried"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-GRUPPE-ZWOELF"
+                ]
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.17.24-MAT.17.27",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-ORT-SEE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-OBJ-ANGEL",
+                  "FIG-OBJ-FISCH",
+                  "FIG-OBJ-MUENZEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-ZEICHEN-GEBEN",
+                  "FIG-GRUPPE-EINNEHMER"
+                ]
+              }
+            ],
+            "action_de": "In Kafarnaum trägt Jesus Petrus auf, die Doppeldrachme für sie beide mit einem Stater zu bezahlen, den er im Maul eines Fisches finden werde.",
+            "stage": {
+              "mood": {
+                "FIG-PETRUS": "calm"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Auf einem hohen Berg wird Jesus vor Petrus, Jakobus und Johannes verwandelt; eine Stimme aus der Wolke sagt: Dieser ist mein geliebter Sohn; hört auf ihn!",
+          "Jesus heilt einen mondsüchtigen Jungen, den die Jünger wegen ihres Kleinglaubens nicht heilen konnten.",
+          "Jesus kündigt erneut an, dass er ausgeliefert, getötet und am dritten Tag auferweckt wird; die Jünger werden sehr traurig.",
+          "In Kafarnaum trägt Jesus Petrus auf, die Doppeldrachme für sie beide mit einem Stater zu bezahlen, den er im Maul eines Fisches finden werde."
+        ],
+        "captions_de": [
+          "Verwandlung: Jesus leuchtet (Strahlen über dem Kopf); Gott (Strahlenkranz über der hellen Wolke) sagt: Dies ist mein geliebter Sohn, hört auf ihn (Jesus, rotes Herz, Ohr); die Jünger werfen sich nieder (vorgebeugt) und fürchten sich.",
+          "Jesu Wort → der Junge ist frei: Jesus gebietet dem Dämon (kleiner dunkler Wirbel) auszufahren (Pfeil von Jesus zum Jungen; Pfeil mit Bewegungsstrichen); der Wirbel ist neben dem Jungen, nicht mehr in ihm.",
+          "Zweite Ankündigung: Jesus sagt, er werde ausgeliefert und getötet und auferweckt (Hand und Kette, Totenkopf, offenes Grab mit goldenem Pfeil); die Jünger sind traurig (Träne).",
+          "Der Auftrag: Jesus sagt Petrus am See: Wirf die Angel aus, beim Fisch findest du die Münze (Angelrute, Fisch, Münzen), und gib sie den Einnehmern (offene Hände, Einnehmer)."
+        ],
+        "interpretation_note_de": "Je ein Feld zur Verwandlung, zur Heilung des Jungen, zur zweiten Leidensankündigung und zur Doppeldrachme; das Gespräch über Elija beim Abstieg ([[MAT.17.9-MAT.17.13]]) ist nur im Abschnittsbild gezeichnet. Gott erscheint als Strahlenkranz über der Wolke.",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-MAT-017",
+            "field": "summary",
+            "fingerprint": "1a7deee9a8b038b6"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.17.1-MAT.17.13",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-MOSE",
+              "FIG-JESUS",
+              "FIG-ELIJA",
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-ORT-BERG",
+              "FIG-ORT-WOLKE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-STRAHLEN",
+              "FIG-ZEICHEN-FURCHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GOTT",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-ZEICHEN-HOEREN"
+                ],
+                "word": {
+                  "de": "Dieser ist mein geliebter Sohn, an dem ich Gefallen gefunden habe; hört auf ihn!",
+                  "gsw": "Dä isch min liebe Sohn, a däm han ich Gfalle gfunde; losed uf en!"
+                }
+              }
+            ],
+            "action_de": "Auf dem hohen Berg wird Jesus vor Petrus, Jakobus und Johannes verwandelt: Sein Gesicht leuchtet wie die Sonne; Mose und Elija reden mit ihm; aus der lichten Wolke sagt eine Stimme: Dieser ist mein geliebter Sohn, an dem ich Gefallen gefunden habe; hört auf ihn!",
+            "keywords": {
+              "de": "Dieser ist mein geliebter Sohn",
+              "gsw": "Dä isch min liebe Sohn"
+            },
+            "names": {
+              "FIG-MOSE": {
+                "de": "Mose",
+                "gsw": "Mose"
+              },
+              "FIG-ELIJA": {
+                "de": "Elija",
+                "gsw": "Elija"
+              },
+              "FIG-PETRUS": {
+                "de": "Petrus",
+                "gsw": "Petrus"
+              }
+            },
+            "stage": {
+              "god_side": "center",
+              "at": {
+                "FIG-ZEICHEN-STRAHLEN": "FIG-JESUS",
+                "FIG-ZEICHEN-FURCHT": "FIG-PETRUS"
+              },
+              "pose": {
+                "FIG-PETRUS": "kneel"
+              },
+              "mood": {
+                "FIG-MOSE": "calm",
+                "FIG-JESUS": "calm",
+                "FIG-ELIJA": "calm",
+                "FIG-PETRUS": "fear"
+              },
+              "x": {
+                "FIG-MOSE": 26,
+                "FIG-JESUS": 76,
+                "FIG-ELIJA": 124,
+                "FIG-PETRUS": 168
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.17.14-MAT.17.21",
+            "figures": [
+              "FIG-ROLLE-VATER",
+              "FIG-ROLLE-JUNGE",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-AUSTREIBEN",
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-VATER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-ERBARMEN"
+                ],
+                "word": {
+                  "de": "Herr, erbarme dich meines Sohnes!",
+                  "gsw": "Herr, häb Erbarme mit mim Sohn!"
+                }
+              }
+            ],
+            "action_de": "Jesus heilt den mondsüchtigen Jungen, den die Jünger nicht heilen konnten, und sagt: wegen eures Kleinglaubens.",
+            "keywords": {
+              "de": "Wegen eures Kleinglaubens",
+              "gsw": "Wäge eurem Chliiglaube"
+            },
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-VATER": "kneel"
+              },
+              "at": {
+                "FIG-ZEICHEN-AUSTREIBEN": "FIG-ROLLE-JUNGE",
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-JUNGE"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-JUNGE",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-VATER": "worried",
+                "FIG-ROLLE-JUNGE": "smile",
+                "FIG-JESUS": "determined"
+              },
+              "x": {
+                "FIG-ROLLE-VATER": 30,
+                "FIG-ROLLE-JUNGE": 88,
+                "FIG-JESUS": 154
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.17.22-MAT.17.23",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-TOD",
+                  "FIG-ZEICHEN-AUFERWECKEN"
+                ],
+                "word": {
+                  "de": "Am dritten Tag wird er auferweckt werden.",
+                  "gsw": "Am dritte Tag wird er uferweckt wärde."
+                }
+              }
+            ],
+            "action_de": "Jesus kündigt an: Der Menschensohn wird ausgeliefert, getötet und am dritten Tag auferweckt werden; die Jünger werden sehr traurig.",
+            "keywords": {
+              "de": "sie wurden sehr traurig",
+              "gsw": "si sind fescht truurig worde"
+            },
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-GRUPPE-JUENGER"
+                ]
+              },
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-JUENGER": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 56,
+                "FIG-GRUPPE-JUENGER": 136
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.17.24-MAT.17.27",
+            "figures": [
+              "FIG-GRUPPE-EINNEHMER",
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-ZEICHEN-FREIHEIT",
+                  "FIG-OBJ-ANGEL"
+                ],
+                "word": {
+                  "de": "Also sind die Söhne doch frei.",
+                  "gsw": "Also sind d Söön doch frei."
+                }
+              }
+            ],
+            "action_de": "Nach der Doppeldrachme gefragt, sagt Jesus: Also sind die Söhne doch frei, und schickt Petrus an den See, um keinen Anstoss zu geben.",
+            "keywords": {
+              "de": "Also sind die Söhne doch frei",
+              "gsw": "Also sind d Söön doch frei"
+            },
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-EINNEHMER": "earnest",
+                "FIG-PETRUS": "calm",
+                "FIG-JESUS": "smile"
+              },
+              "x": {
+                "FIG-GRUPPE-EINNEHMER": 30,
+                "FIG-PETRUS": 96,
+                "FIG-JESUS": 156
+              }
+            }
+          }
+        ],
+        "interpretation_note_de": "Vier Comic-Szenen für fünf Abschnitte: Feld 1 bündelt Verwandlung und Elija-Frage ([[MAT.17.1-MAT.17.13]]), Feld 2 die Heilung des Jungen ([[MAT.17.14-MAT.17.21]]), Feld 3 die zweite Leidensankündigung ([[MAT.17.22-MAT.17.23]]), Feld 4 die Doppeldrachme ([[MAT.17.24-MAT.17.27]]). Gott nur als Strahlenkranz; die Blase in Feld 3 fasst die Ankündigung in der dritten Person. Comic-Szenen nach dem Entscheid vom 2026-10-25."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.17.1-MAT.17.13",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-MOSE",
+              "FIG-JESUS",
+              "FIG-ELIJA",
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-ORT-BERG",
+              "FIG-ORT-WOLKE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-STRAHLEN",
+              "FIG-ZEICHEN-FURCHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GOTT",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-ZEICHEN-HOEREN"
+                ],
+                "word": {
+                  "de": "Dieser ist mein geliebter Sohn, an dem ich Gefallen gefunden habe; hört auf ihn!",
+                  "gsw": "Dä isch min liebe Sohn, a däm han ich Gfalle gfunde; losed uf en!"
+                }
+              }
+            ],
+            "action_de": "Auf dem hohen Berg wird Jesus vor Petrus, Jakobus und Johannes verwandelt: Sein Gesicht leuchtet wie die Sonne; Mose und Elija reden mit ihm; aus der lichten Wolke sagt eine Stimme: Dieser ist mein geliebter Sohn, an dem ich Gefallen gefunden habe; hört auf ihn!",
+            "keywords": {
+              "de": "Dieser ist mein geliebter Sohn",
+              "gsw": "Dä isch min liebe Sohn"
+            },
+            "names": {
+              "FIG-MOSE": {
+                "de": "Mose",
+                "gsw": "Mose"
+              },
+              "FIG-ELIJA": {
+                "de": "Elija",
+                "gsw": "Elija"
+              },
+              "FIG-PETRUS": {
+                "de": "Petrus",
+                "gsw": "Petrus"
+              }
+            },
+            "stage": {
+              "god_side": "center",
+              "at": {
+                "FIG-ZEICHEN-STRAHLEN": "FIG-JESUS",
+                "FIG-ZEICHEN-FURCHT": "FIG-PETRUS"
+              },
+              "pose": {
+                "FIG-PETRUS": "kneel"
+              },
+              "mood": {
+                "FIG-MOSE": "calm",
+                "FIG-JESUS": "calm",
+                "FIG-ELIJA": "calm",
+                "FIG-PETRUS": "fear"
+              },
+              "x": {
+                "FIG-MOSE": 26,
+                "FIG-JESUS": 76,
+                "FIG-ELIJA": 124,
+                "FIG-PETRUS": 168
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.17.14-MAT.17.21",
+            "figures": [
+              "FIG-ROLLE-VATER",
+              "FIG-ROLLE-JUNGE",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-AUSTREIBEN",
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-VATER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-ERBARMEN"
+                ],
+                "word": {
+                  "de": "Herr, erbarme dich meines Sohnes, denn er ist mondsüchtig und leidet schwer; oft fällt er nämlich ins Feuer und oft ins Wasser.",
+                  "gsw": "Herr, häb Erbarme mit mim Sohn, wil er mondsüchtig isch und schlimm liidet; er gheit nämli vil Mal is Füür und vil Mal is Wasser."
+                }
+              }
+            ],
+            "action_de": "Jesus heilt den mondsüchtigen Jungen, den die Jünger nicht heilen konnten, und sagt: wegen eures Kleinglaubens.",
+            "keywords": {
+              "de": "Wegen eures Kleinglaubens",
+              "gsw": "Wäge eurem Chliiglaube"
+            },
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-VATER": "kneel"
+              },
+              "at": {
+                "FIG-ZEICHEN-AUSTREIBEN": "FIG-ROLLE-JUNGE",
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-JUNGE"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-JUNGE",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-VATER": "worried",
+                "FIG-ROLLE-JUNGE": "smile",
+                "FIG-JESUS": "determined"
+              },
+              "x": {
+                "FIG-ROLLE-VATER": 30,
+                "FIG-ROLLE-JUNGE": 88,
+                "FIG-JESUS": 154
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.17.22-MAT.17.23",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-AUSLIEFERN",
+                  "FIG-ZEICHEN-TOD",
+                  "FIG-ZEICHEN-AUFERWECKEN"
+                ],
+                "word": {
+                  "de": "Der Menschensohn wird in die Hände von Menschen ausgeliefert werden, und sie werden ihn töten, und am dritten Tag wird er auferweckt werden.",
+                  "gsw": "De Mänschesohn wird i d Händ vo Mänsche usgliferet wärde, und si wärded en umbringe, und am dritte Tag wird er uferweckt wärde."
+                }
+              }
+            ],
+            "action_de": "Jesus kündigt an: Der Menschensohn wird ausgeliefert, getötet und am dritten Tag auferweckt werden; die Jünger werden sehr traurig.",
+            "keywords": {
+              "de": "sie wurden sehr traurig",
+              "gsw": "si sind fescht truurig worde"
+            },
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-GRUPPE-JUENGER"
+                ]
+              },
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-JUENGER": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 56,
+                "FIG-GRUPPE-JUENGER": 136
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.17.24-MAT.17.27",
+            "figures": [
+              "FIG-GRUPPE-EINNEHMER",
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-ZEICHEN-FREIHEIT",
+                  "FIG-OBJ-ANGEL"
+                ],
+                "word": {
+                  "de": "Also sind die Söhne doch frei.",
+                  "gsw": "Also sind d Söön doch frei."
+                }
+              }
+            ],
+            "action_de": "Nach der Doppeldrachme gefragt, sagt Jesus: Also sind die Söhne doch frei, und schickt Petrus an den See, um keinen Anstoss zu geben.",
+            "keywords": {
+              "de": "Also sind die Söhne doch frei",
+              "gsw": "Also sind d Söön doch frei"
+            },
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-EINNEHMER": "earnest",
+                "FIG-PETRUS": "calm",
+                "FIG-JESUS": "smile"
+              },
+              "x": {
+                "FIG-GRUPPE-EINNEHMER": 30,
+                "FIG-PETRUS": 96,
+                "FIG-JESUS": 156
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.17.1-MAT.17.13",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-MOSE",
+              "FIG-JESUS",
+              "FIG-ELIJA",
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-ORT-BERG",
+              "FIG-ORT-WOLKE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-STRAHLEN",
+              "FIG-ZEICHEN-FURCHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GOTT",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-ZEICHEN-HOEREN"
+                ],
+                "word": {
+                  "de": "Dieser ist mein geliebter Sohn, an dem ich Gefallen gefunden habe; hört auf ihn!",
+                  "gsw": "Dä isch min liebe Sohn, a däm han ich Gfalle gfunde; losed uf en!"
+                }
+              }
+            ],
+            "action_de": "Auf dem hohen Berg wird Jesus vor Petrus, Jakobus und Johannes verwandelt: Sein Gesicht leuchtet wie die Sonne; Mose und Elija reden mit ihm; aus der lichten Wolke sagt eine Stimme: Dieser ist mein geliebter Sohn, an dem ich Gefallen gefunden habe; hört auf ihn!",
+            "keywords": {
+              "de": "Dieser ist mein geliebter Sohn",
+              "gsw": "Dä isch min liebe Sohn"
+            },
+            "names": {
+              "FIG-MOSE": {
+                "de": "Mose",
+                "gsw": "Mose"
+              },
+              "FIG-ELIJA": {
+                "de": "Elija",
+                "gsw": "Elija"
+              },
+              "FIG-PETRUS": {
+                "de": "Petrus",
+                "gsw": "Petrus"
+              }
+            },
+            "stage": {
+              "god_side": "center",
+              "at": {
+                "FIG-ZEICHEN-STRAHLEN": "FIG-JESUS",
+                "FIG-ZEICHEN-FURCHT": "FIG-PETRUS"
+              },
+              "pose": {
+                "FIG-PETRUS": "kneel"
+              },
+              "mood": {
+                "FIG-MOSE": "calm",
+                "FIG-JESUS": "calm",
+                "FIG-ELIJA": "calm",
+                "FIG-PETRUS": "fear"
+              },
+              "x": {
+                "FIG-MOSE": 26,
+                "FIG-JESUS": 76,
+                "FIG-ELIJA": 124,
+                "FIG-PETRUS": 168
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.17.14-MAT.17.21",
+            "figures": [
+              "FIG-ROLLE-VATER",
+              "FIG-ROLLE-JUNGE",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-AUSTREIBEN",
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-VATER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-ERBARMEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus heilt den mondsüchtigen Jungen, den die Jünger nicht heilen konnten, und sagt: wegen eures Kleinglaubens.",
+            "keywords": {
+              "de": "Wegen eures Kleinglaubens",
+              "gsw": "Wäge eurem Chliiglaube"
+            },
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-VATER": "kneel"
+              },
+              "at": {
+                "FIG-ZEICHEN-AUSTREIBEN": "FIG-ROLLE-JUNGE",
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-JUNGE"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-JUNGE",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-VATER": "worried",
+                "FIG-ROLLE-JUNGE": "smile",
+                "FIG-JESUS": "determined"
+              },
+              "x": {
+                "FIG-ROLLE-VATER": 30,
+                "FIG-ROLLE-JUNGE": 88,
+                "FIG-JESUS": 154
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.17.22-MAT.17.23",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-AUSLIEFERN",
+                  "FIG-ZEICHEN-TOD",
+                  "FIG-ZEICHEN-AUFERWECKEN"
+                ],
+                "word": {
+                  "de": "Der Menschensohn wird in die Hände von Menschen ausgeliefert werden, und sie werden ihn töten, und am dritten Tag wird er auferweckt werden.",
+                  "gsw": "De Mänschesohn wird i d Händ vo Mänsche usgliferet wärde, und si wärded en umbringe, und am dritte Tag wird er uferweckt wärde."
+                }
+              }
+            ],
+            "action_de": "Jesus kündigt an: Der Menschensohn wird ausgeliefert, getötet und am dritten Tag auferweckt werden; die Jünger werden sehr traurig.",
+            "keywords": {
+              "de": "sie wurden sehr traurig",
+              "gsw": "si sind fescht truurig worde"
+            },
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-GRUPPE-JUENGER"
+                ]
+              },
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-JUENGER": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 56,
+                "FIG-GRUPPE-JUENGER": 136
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.17.24-MAT.17.27",
+            "figures": [
+              "FIG-GRUPPE-EINNEHMER",
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-ZEICHEN-FREIHEIT",
+                  "FIG-OBJ-ANGEL"
+                ],
+                "word": {
+                  "de": "Also sind die Söhne doch frei.",
+                  "gsw": "Also sind d Söön doch frei."
+                }
+              }
+            ],
+            "action_de": "Nach der Doppeldrachme gefragt, sagt Jesus: Also sind die Söhne doch frei, und schickt Petrus an den See, um keinen Anstoss zu geben.",
+            "keywords": {
+              "de": "Also sind die Söhne doch frei",
+              "gsw": "Also sind d Söön doch frei"
+            },
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-EINNEHMER": "earnest",
+                "FIG-PETRUS": "calm",
+                "FIG-JESUS": "smile"
+              },
+              "x": {
+                "FIG-GRUPPE-EINNEHMER": 30,
+                "FIG-PETRUS": 96,
+                "FIG-JESUS": 156
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Verwandlung: Jesus leuchtet (weisse und goldene Strahlen über dem Kopf) zwischen Mose (Gesetzestafeln, weisser Bart) und Elija (Fellmantel); über ihnen Gott (goldener Strahlenkranz in der Wolke): «Dieser ist mein geliebter Sohn …; hört auf ihn!» (Ohr); Petrus (Schlüssel) ist niedergefallen.",
+          "Heilung: Der Vater (grauer Bart) kniet; Jesus treibt den Dämon aus (dunkler Schatten mit Pfeil hinaus), der Junge ist geheilt (berührende Hand mit grünem Lichtpunkt).",
+          "Ankündigung: Jesus spricht vom Ausliefern, vom Tod und von der Auferweckung (offene Hand und Kette, Totenkopf, offenes Grab mit Pfeil nach oben); die Jünger sind traurig (Träne).",
+          "Doppeldrachme: Die Einnehmer (grüner Beutel) haben Petrus gefragt; Jesus sagt zu Petrus: «Also sind die Söhne doch frei» (Vogel mit gesprengter Kette) und schickt ihn mit dem Auftrag an den See (Angelrute in der Blase)."
+        ],
+        "interpretation_note_de": "Vier Comic-Szenen für fünf Abschnitte: Feld 1 bündelt Verwandlung und Elija-Frage ([[MAT.17.1-MAT.17.13]]), Feld 2 die Heilung des Jungen ([[MAT.17.14-MAT.17.21]]), Feld 3 die zweite Leidensankündigung ([[MAT.17.22-MAT.17.23]]), Feld 4 die Doppeldrachme ([[MAT.17.24-MAT.17.27]]). Gott nur als Strahlenkranz; die Blase in Feld 3 gibt die Ankündigung wörtlich. Comic-Szenen nach dem Entscheid vom 2026-10-25."
       }
     }
   ]

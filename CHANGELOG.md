@@ -2,6 +2,12 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.119 — 2026-10-26 — Matthäus 11–18 nach «Struktur zuerst»
+
+- **43 Abschnitte und 7 Kapitel neu** (Kernanalysen mit Struktur, unabhängig geprüft; Zusammenfassungen Hochdeutsch und Züridüütsch; Bilder): alle sieben Gleichnisse in Mt 13 mit ihren Deutungen, Wehe-Reihe 11,20–24 (über Kafarnaum kein «Wehe», als Musterbruch vermerkt), Stufenverfahren 18,15–17 vollständig, siebenundsiebzigmal; Sprechblasen im Wortlaut. Kapitelbild 13 zeigt jetzt Senfstaude und Sauerteig, Kapitelbild 18 den Mühlstein.
+- **Werkzeuge:** Wortzeichen für ein bestimmtes Bild griffen nicht, wenn `bilder_anime.py` als Skript lief (behoben); Spaltenköpfe behalten eine Verneinung; der Vermerk «von einer getrennten Instanz geprüft» bei Zusammenfassungen erscheint nur noch, wenn die Kernanalyse tatsächlich ein `review` hat.
+- Noch 298 Bilder in alter Verdichtung (Mt 19–28, Markus, Johannes, Lk 11).
+
 ## v0.118 — 2026-10-26 — Matthäus 1–4 und 8–10 nach «Struktur zuerst»
 
 - **30 Abschnitte und 7 Kapitel neu** (Kernanalysen mit Struktur, unabhängig geprüft mit `review`; Zusammenfassungen Hochdeutsch und Züridüütsch; Bilder): Stammbaum 3×14 (dritte Reihe mit 13 Namen vermerkt), drei Versuchungen mit «Es steht geschrieben», Zwölferliste, Erfüllungszitate. Korrigiert u. a.: Rahel allein (keine erfundenen Mütter), keine Soldaten beim Hauptmann, keine «vier Männer» bei Matthäus, Sprechblasen als ganze Sätze, «begraben» mit Grab statt «verstorben».

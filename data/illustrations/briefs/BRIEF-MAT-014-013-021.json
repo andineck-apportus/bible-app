@@ -11,109 +11,80 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.14.13-MAT.14.14",
+      "reference": "MAT.14.13-MAT.14.17",
       "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-MENGE"
-      ],
-      "objects": [
-        "FIG-OBJ-BOOT",
-        "FIG-ORT-SEE"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-ERBARMEN"
-      ],
-      "speech": [],
-      "action_de": "Jesus zieht sich im Boot an einen einsamen Ort zurück; die Menschenmengen folgen ihm zu Fuss. Als er aussteigt, sieht er die grosse Menge, hat Erbarmen mit ihnen und heilt ihre Kranken.",
-      "stage": {
-        "big_side": "left",
-        "at": {
-          "FIG-ZEICHEN-ERBARMEN": "FIG-JESUS"
-        },
-        "mood": {
-          "FIG-GRUPPE-MENGE": "worried"
-        },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-GRUPPE-MENGE",
-            "act"
-          ]
-        ]
-      }
-    },
-    {
-      "n": 2,
-      "reference": "MAT.14.15-MAT.14.18",
-      "figures": [
+        "FIG-GRUPPE-MENGE",
         "FIG-GRUPPE-JUENGER",
         "FIG-JESUS"
       ],
       "objects": [
-        "FIG-OBJ-BROT",
-        "FIG-OBJ-FISCH"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-ABEND"
-      ],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-OBJ-BROT",
-            "FIG-GRUPPE-MENGE"
-          ]
-        }
-      ],
-      "action_de": "Am Abend wollen die Jünger die Menschenmengen in die Dörfer schicken; Jesus sagt: «Gebt ihr ihnen zu essen!» Sie haben nur fünf Brote und zwei Fische.",
-      "stage": {
-        "count": {
-          "FIG-OBJ-BROT": 5,
-          "FIG-OBJ-FISCH": 2
-        },
-        "mood": {
-          "FIG-GRUPPE-JUENGER": "worried",
-          "FIG-JESUS": "calm"
-        },
-        "x": {
-          "FIG-GRUPPE-JUENGER": 30,
-          "FIG-JESUS": 76
-        },
-        "floor_x": {
-          "FIG-OBJ-BROT": 100,
-          "FIG-OBJ-FISCH": 104
-        },
-        "air_x": 156,
-        "air_y": 100
-      }
-    },
-    {
-      "n": 3,
-      "reference": "MAT.14.19",
-      "figures": [
-        "FIG-GOTT",
-        "FIG-JESUS",
-        "FIG-GRUPPE-JUENGER",
-        "FIG-GRUPPE-MENGE"
-      ],
-      "objects": [
-        "FIG-OBJ-BROT"
+        "FIG-OBJ-BROTE-FISCHE"
       ],
       "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
-          "to": "FIG-GOTT",
+          "to": "FIG-GRUPPE-JUENGER",
           "icons": [
-            "FIG-ZEICHEN-BETEN",
-            "FIG-OBJ-BROT"
-          ]
+            "FIG-ZEICHEN-GEBEN"
+          ],
+          "word": {
+            "de": "Sie haben es nicht nötig, wegzugehen; gebt ihr ihnen zu essen!",
+            "gsw": "Si händ s nöd nötig, furtzgaa; gänd ir ine z ässe!"
+          }
         }
       ],
-      "action_de": "Jesus lässt die Menschenmengen sich auf dem Gras lagern, nimmt die Brote und Fische, blickt zum Himmel auf, spricht den Segen, bricht die Brote und gibt sie den Jüngern, die Jünger aber den Menschenmengen.",
+      "action_de": "Die Mengen folgen Jesus an den einsamen Ort; er hat Erbarmen und heilt ihre Kranken. Am Abend sagen die Jünger: Schick die Menschenmengen weg; Jesus antwortet: Gebt ihr ihnen zu essen! Sie haben nur fünf Brote und zwei Fische.",
+      "keywords": {
+        "de": "Wir haben hier nichts ausser fünf Broten und zwei Fischen",
+        "gsw": "Mir händ da nüüt als föif Broot und zwee Fisch"
+      },
       "stage": {
-        "god_side": "right",
+        "hold": {
+          "FIG-GRUPPE-JUENGER": "FIG-OBJ-BROTE-FISCHE"
+        },
+        "mood": {
+          "FIG-GRUPPE-MENGE": "calm",
+          "FIG-GRUPPE-JUENGER": "worried",
+          "FIG-JESUS": "calm"
+        },
+        "x": {
+          "FIG-GRUPPE-MENGE": 26,
+          "FIG-GRUPPE-JUENGER": 88,
+          "FIG-JESUS": 154
+        }
+      }
+    },
+    {
+      "n": 2,
+      "reference": "MAT.14.18-MAT.14.21",
+      "figures": [
+        "FIG-JESUS",
+        "FIG-GRUPPE-JUENGER",
+        "FIG-GRUPPE-MENGE"
+      ],
+      "objects": [
+        "FIG-OBJ-BROTE-FISCHE",
+        "FIG-OBJ-KORB"
+      ],
+      "signs": [
+        "FIG-ZEICHEN-SEGNEN",
+        "FIG-ZEICHEN-SATT"
+      ],
+      "speech": [],
+      "action_de": "Jesus nimmt die fünf Brote und zwei Fische, blickt zum Himmel auf, spricht den Segen, bricht sie und gibt sie den Jüngern, die Jünger aber der Menge; alle essen und werden satt.",
+      "keywords": {
+        "de": "alle assen und wurden satt",
+        "gsw": "alli händ ggässe und sind satt worde"
+      },
+      "stage": {
+        "hold": {
+          "FIG-JESUS": "FIG-OBJ-BROTE-FISCHE"
+        },
+        "at": {
+          "FIG-ZEICHEN-SEGNEN": "FIG-JESUS",
+          "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
+        },
         "arrows": [
           [
             "FIG-JESUS",
@@ -127,102 +98,51 @@
           ]
         ],
         "mood": {
-          "FIG-GRUPPE-MENGE": "smile"
-        },
-        "hold": {
-          "FIG-JESUS": "FIG-OBJ-BROT"
-        }
-      }
-    },
-    {
-      "n": 4,
-      "reference": "MAT.14.20-MAT.14.21",
-      "figures": [
-        "FIG-GRUPPE-JUENGER",
-        "FIG-GRUPPE-MENGE"
-      ],
-      "objects": [
-        "FIG-OBJ-KORB"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-SATT"
-      ],
-      "speech": [],
-      "action_de": "Alle essen und werden satt, und sie sammeln zwölf Körbe voll übrig gebliebener Brocken. Es sind etwa fünftausend Männer, ohne Frauen und Kinder.",
-      "stage": {
-        "count": {
-          "FIG-OBJ-KORB": 12
-        },
-        "at": {
-          "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
-        },
-        "mood": {
-          "FIG-GRUPPE-MENGE": "smile",
-          "FIG-GRUPPE-JUENGER": "smile"
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-JUENGER": "smile",
+          "FIG-GRUPPE-MENGE": "delight"
         },
         "x": {
-          "FIG-GRUPPE-JUENGER": 112,
-          "FIG-GRUPPE-MENGE": 160
+          "FIG-JESUS": 30,
+          "FIG-GRUPPE-JUENGER": 92,
+          "FIG-GRUPPE-MENGE": 154
         },
         "floor_x": {
-          "FIG-OBJ-KORB": 4
-        },
-        "arrows": [
-          [
-            "FIG-GRUPPE-JUENGER",
-            "FIG-OBJ-KORB",
-            "act"
-          ]
-        ]
+          "FIG-OBJ-KORB": 120
+        }
       }
     }
   ],
   "actions_de": [
-    "Jesus zieht sich im Boot an einen einsamen Ort zurück; die Menschenmengen folgen ihm zu Fuss. Als er aussteigt, sieht er die grosse Menge, hat Erbarmen mit ihnen und heilt ihre Kranken.",
-    "Am Abend wollen die Jünger die Menschenmengen in die Dörfer schicken; Jesus sagt: «Gebt ihr ihnen zu essen!» Sie haben nur fünf Brote und zwei Fische.",
-    "Jesus lässt die Menschenmengen sich auf dem Gras lagern, nimmt die Brote und Fische, blickt zum Himmel auf, spricht den Segen, bricht die Brote und gibt sie den Jüngern, die Jünger aber den Menschenmengen.",
-    "Alle essen und werden satt, und sie sammeln zwölf Körbe voll übrig gebliebener Brocken. Es sind etwa fünftausend Männer, ohne Frauen und Kinder."
+    "Die Mengen folgen Jesus an den einsamen Ort; er hat Erbarmen und heilt ihre Kranken. Am Abend sagen die Jünger: Schick die Menschenmengen weg; Jesus antwortet: Gebt ihr ihnen zu essen! Sie haben nur fünf Brote und zwei Fische.",
+    "Jesus nimmt die fünf Brote und zwei Fische, blickt zum Himmel auf, spricht den Segen, bricht sie und gibt sie den Jüngern, die Jünger aber der Menge; alle essen und werden satt."
   ],
   "captions_de": [
-    "Gesehen → Erbarmen: Jesus kommt mit dem Boot an und sieht die Menschenmengen am Ufer (Pfeil zu ihnen); er hat Erbarmen (offene Hände mit rotem Herz).",
-    "Zu wenig: Am Abend (Sonne über Bergen) sagt Jesus den besorgten Jüngern: Gebt ihr der Menge Brot (Brot, Menge). Am Boden fünf Brote und zwei Fische.",
-    "Jesus → Jünger → Menschenmengen: Jesus hält das Brot und spricht den Segen zu Gott (Strahlenkranz; Blase: betende Hände, Brot); er gibt es den Jüngern, sie geben es den Menschenmengen (zwei Pfeile).",
-    "Satt: Die Menschenmengen sind satt (Schale mit Brot und grünem Haken); die Jünger sammeln die übrigen Brocken in Körbe (geflochtene Körbe mit Brot, Pfeil; im Text zwölf)."
+    "Gebt ihr ihnen zu essen: Am Abend wollen die Jünger die Menge wegschicken; Jesus antwortet: «Sie haben es nicht nötig, wegzugehen; gebt ihr ihnen zu essen!» (offene Hände); die Jünger: «Wir haben hier nichts ausser fünf Broten und zwei Fischen» (Fladenbrot und Fisch; Merkwort).",
+    "Speisung: Jesus hält die Brote und Fische (Fladenbrot und Fisch) und segnet sie (erhobene Hand mit Funkeln); die Jünger geben sie weiter (Pfeile), die Menge wird satt (Schale mit Brot und grünem Haken); am Boden ein Korb für die übrigen Brocken."
   ],
-  "interpretation_note_de": "Dass die Jünger die Menge wegschicken wollen ([[MAT.14.15]]), zeigt nur ihr besorgter Ausdruck. Die Zahlen (fünf Brote, zwei Fische, zwölf Körbe) zeigt das Bild als Anzahl Gegenstände, nicht als Ziffern; die fünftausend Männer ([[MAT.14.21]]) nennt nur die Legende. Gott erscheint als Strahlenkranz; der Text sagt, Jesus «blickte zum Himmel auf» und «sprach den Segen» ([[MAT.14.19]]). Die Fische beim Segnen und das Brechen der Brote sind nicht eigens gezeichnet.",
+  "interpretation_note_de": "Zwei Felder nach «Erbarmen – Not – Auftrag – Speisung – Überfluss» ([[MAT.14.13-MAT.14.21]]): der Gegensatz «Schick sie weg» ↔ «Gebt ihr ihnen zu essen», dann die Kette des Gebens (Jesus → Jünger → Menge). Die Zahlen (fünf Brote, zwei Fische, zwölf Körbe, etwa fünftausend Männer ohne Frauen und Kinder) stehen im Text und in der Zusammenfassung; das Bild zeigt sie nicht gezählt.",
   "basis": [
     {
       "record": "TU-MAT-014-013-021",
       "field": "summary",
-      "fingerprint": "a46daa85157f431e"
+      "fingerprint": "c702f5c65b06255b"
     },
     {
       "record": "TRANS-MAT-014-001-036-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.14.13-MAT.14.14",
-      "fingerprint": "0286b95c2da74a67"
+      "reference": "MAT.14.13-MAT.14.17",
+      "fingerprint": "842787034c39300a"
     },
     {
       "record": "TRANS-MAT-014-001-036-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.14.15-MAT.14.18",
-      "fingerprint": "425dcf556ac90299"
-    },
-    {
-      "record": "TRANS-MAT-014-001-036-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.14.19",
-      "fingerprint": "2dec219867bb7798"
-    },
-    {
-      "record": "TRANS-MAT-014-001-036-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.14.20-MAT.14.21",
-      "fingerprint": "f748b851f77f541a"
+      "reference": "MAT.14.18-MAT.14.21",
+      "fingerprint": "915114f1bfa21549"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -564,6 +484,505 @@
           "Zu wenig: Am Abend (halbe rote Sonne) sagt Jesus den besorgten Jüngern: Gebt ihr der Menge Brot (Brot, Menge). Am Boden fünf Brote und zwei Fische.",
           "Jesus → Jünger → Menschenmengen: Jesus hält das Brot und spricht den Segen zu Gott (Strahlenkranz; Blase: betende Hände, Brot); er gibt es den Jüngern, sie geben es den Menschenmengen (zwei Pfeile).",
           "Satt: Die Menschenmengen sind satt (Schale mit Brot und grünem Haken); die Jünger sammeln die übrigen Brocken in Körbe (geflochtene Körbe mit Brot, Pfeil; im Text zwölf)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.14.13-MAT.14.14",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ERBARMEN"
+            ],
+            "speech": [],
+            "action_de": "Jesus zieht sich im Boot an einen einsamen Ort zurück; die Menschenmengen folgen ihm zu Fuss. Als er aussteigt, sieht er die grosse Menge, hat Erbarmen mit ihnen und heilt ihre Kranken.",
+            "stage": {
+              "big_side": "left",
+              "at": {
+                "FIG-ZEICHEN-ERBARMEN": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "worried"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.14.15-MAT.14.18",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT",
+              "FIG-OBJ-FISCH"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ABEND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-BROT",
+                  "FIG-GRUPPE-MENGE"
+                ]
+              }
+            ],
+            "action_de": "Am Abend wollen die Jünger die Menschenmengen in die Dörfer schicken; Jesus sagt: «Gebt ihr ihnen zu essen!» Sie haben nur fünf Brote und zwei Fische.",
+            "stage": {
+              "count": {
+                "FIG-OBJ-BROT": 5,
+                "FIG-OBJ-FISCH": 2
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "worried",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-JUENGER": 30,
+                "FIG-JESUS": 76
+              },
+              "floor_x": {
+                "FIG-OBJ-BROT": 100,
+                "FIG-OBJ-FISCH": 104
+              },
+              "air_x": 156,
+              "air_y": 100
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.14.19",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-BETEN",
+                  "FIG-OBJ-BROT"
+                ]
+              }
+            ],
+            "action_de": "Jesus lässt die Menschenmengen sich auf dem Gras lagern, nimmt die Brote und Fische, blickt zum Himmel auf, spricht den Segen, bricht die Brote und gibt sie den Jüngern, die Jünger aber den Menschenmengen.",
+            "stage": {
+              "god_side": "right",
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-JUENGER",
+                  "act"
+                ],
+                [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-MENGE": "smile"
+              },
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROT"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.14.20-MAT.14.21",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-KORB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SATT"
+            ],
+            "speech": [],
+            "action_de": "Alle essen und werden satt, und sie sammeln zwölf Körbe voll übrig gebliebener Brocken. Es sind etwa fünftausend Männer, ohne Frauen und Kinder.",
+            "stage": {
+              "count": {
+                "FIG-OBJ-KORB": 12
+              },
+              "at": {
+                "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "smile",
+                "FIG-GRUPPE-JUENGER": "smile"
+              },
+              "x": {
+                "FIG-GRUPPE-JUENGER": 112,
+                "FIG-GRUPPE-MENGE": 160
+              },
+              "floor_x": {
+                "FIG-OBJ-KORB": 4
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-OBJ-KORB",
+                  "act"
+                ]
+              ]
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus zieht sich im Boot an einen einsamen Ort zurück; die Menschenmengen folgen ihm zu Fuss. Als er aussteigt, sieht er die grosse Menge, hat Erbarmen mit ihnen und heilt ihre Kranken.",
+          "Am Abend wollen die Jünger die Menschenmengen in die Dörfer schicken; Jesus sagt: «Gebt ihr ihnen zu essen!» Sie haben nur fünf Brote und zwei Fische.",
+          "Jesus lässt die Menschenmengen sich auf dem Gras lagern, nimmt die Brote und Fische, blickt zum Himmel auf, spricht den Segen, bricht die Brote und gibt sie den Jüngern, die Jünger aber den Menschenmengen.",
+          "Alle essen und werden satt, und sie sammeln zwölf Körbe voll übrig gebliebener Brocken. Es sind etwa fünftausend Männer, ohne Frauen und Kinder."
+        ],
+        "captions_de": [
+          "Gesehen → Erbarmen: Jesus kommt mit dem Boot an und sieht die Menschenmengen am Ufer (Pfeil zu ihnen); er hat Erbarmen (offene Hände mit rotem Herz).",
+          "Zu wenig: Am Abend (Sonne über Bergen) sagt Jesus den besorgten Jüngern: Gebt ihr der Menge Brot (Brot, Menge). Am Boden fünf Brote und zwei Fische.",
+          "Jesus → Jünger → Menschenmengen: Jesus hält das Brot und spricht den Segen zu Gott (Strahlenkranz; Blase: betende Hände, Brot); er gibt es den Jüngern, sie geben es den Menschenmengen (zwei Pfeile).",
+          "Satt: Die Menschenmengen sind satt (Schale mit Brot und grünem Haken); die Jünger sammeln die übrigen Brocken in Körbe (geflochtene Körbe mit Brot, Pfeil; im Text zwölf)."
+        ],
+        "interpretation_note_de": "Dass die Jünger die Menge wegschicken wollen ([[MAT.14.15]]), zeigt nur ihr besorgter Ausdruck. Die Zahlen (fünf Brote, zwei Fische, zwölf Körbe) zeigt das Bild als Anzahl Gegenstände, nicht als Ziffern; die fünftausend Männer ([[MAT.14.21]]) nennt nur die Legende. Gott erscheint als Strahlenkranz; der Text sagt, Jesus «blickte zum Himmel auf» und «sprach den Segen» ([[MAT.14.19]]). Die Fische beim Segnen und das Brechen der Brote sind nicht eigens gezeichnet.",
+        "basis": [
+          {
+            "record": "TU-MAT-014-013-021",
+            "field": "summary",
+            "fingerprint": "a46daa85157f431e"
+          },
+          {
+            "record": "TRANS-MAT-014-001-036-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.14.13-MAT.14.14",
+            "fingerprint": "0286b95c2da74a67"
+          },
+          {
+            "record": "TRANS-MAT-014-001-036-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.14.15-MAT.14.18",
+            "fingerprint": "425dcf556ac90299"
+          },
+          {
+            "record": "TRANS-MAT-014-001-036-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.14.19",
+            "fingerprint": "2dec219867bb7798"
+          },
+          {
+            "record": "TRANS-MAT-014-001-036-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.14.20-MAT.14.21",
+            "fingerprint": "f748b851f77f541a"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-014-013-021",
+            "field": "summary",
+            "fingerprint": "a46daa85157f431e"
+          },
+          {
+            "record": "TRANS-MAT-014-001-036-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.14.13-MAT.14.17",
+            "fingerprint": "842787034c39300a"
+          },
+          {
+            "record": "TRANS-MAT-014-001-036-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.14.18-MAT.14.21",
+            "fingerprint": "915114f1bfa21549"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.14.13-MAT.14.17",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BROTE-FISCHE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ABEND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-GRUPPE-MENGE"
+                ],
+                "word": {
+                  "de": "Schick die Menschenmengen weg!",
+                  "gsw": "Schick d Lüüt furt!"
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-GEBEN"
+                ],
+                "word": {
+                  "de": "Gebt ihr ihnen zu essen!",
+                  "gsw": "Gänd ir ine z ässe!"
+                }
+              }
+            ],
+            "action_de": "Die Mengen folgen Jesus an den einsamen Ort; er hat Erbarmen und heilt ihre Kranken. Am Abend sagen die Jünger: Schick die Menschenmengen weg; Jesus antwortet: Gebt ihr ihnen zu essen! Sie haben nur fünf Brote und zwei Fische.",
+            "keywords": {
+              "de": "gebt ihr ihnen zu essen",
+              "gsw": "gänd ir ine z ässe"
+            },
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BROTE-FISCHE"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "calm",
+                "FIG-GRUPPE-JUENGER": "worried",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 26,
+                "FIG-GRUPPE-JUENGER": 88,
+                "FIG-JESUS": 154
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.14.18-MAT.14.21",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROTE-FISCHE",
+              "FIG-OBJ-KORB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SEGNEN",
+              "FIG-ZEICHEN-SATT"
+            ],
+            "speech": [],
+            "action_de": "Jesus nimmt die fünf Brote und zwei Fische, blickt zum Himmel auf, spricht den Segen, bricht sie und gibt sie den Jüngern, die Jünger aber der Menge; alle essen und werden satt.",
+            "keywords": {
+              "de": "alle assen und wurden satt",
+              "gsw": "alli händ ggässe und sind satt worde"
+            },
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROTE-FISCHE"
+              },
+              "at": {
+                "FIG-ZEICHEN-SEGNEN": "FIG-JESUS",
+                "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-JUENGER",
+                  "act"
+                ],
+                [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "smile",
+                "FIG-GRUPPE-MENGE": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-JUENGER": 92,
+                "FIG-GRUPPE-MENGE": 154
+              },
+              "floor_x": {
+                "FIG-OBJ-KORB": 120
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Gebt ihr ihnen zu essen: Am Abend (Sonne über Bergen) sagen die Jünger: «Schick die Menschenmengen weg!»; Jesus antwortet: «Gebt ihr ihnen zu essen!» (offene Hände); die Jünger haben nur fünf Brote und zwei Fische (Fladenbrot und Fisch).",
+          "Speisung: Jesus hält die Brote und Fische (Fladenbrot und Fisch) und segnet sie (erhobene Hand mit Funkeln); die Jünger geben sie weiter (Pfeile), die Menge wird satt (Schale mit Brot und grünem Haken); am Boden ein Korb für die übrigen Brocken."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.14.13-MAT.14.17",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BROTE-FISCHE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-GRUPPE-MENGE"
+                ],
+                "word": {
+                  "de": "Schick die Menschenmengen weg!",
+                  "gsw": "Schick d Lüüt furt!"
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-GEBEN"
+                ],
+                "word": {
+                  "de": "Gebt ihr ihnen zu essen!",
+                  "gsw": "Gänd ir ine z ässe!"
+                }
+              }
+            ],
+            "action_de": "Die Mengen folgen Jesus an den einsamen Ort; er hat Erbarmen und heilt ihre Kranken. Am Abend sagen die Jünger: Schick die Menschenmengen weg; Jesus antwortet: Gebt ihr ihnen zu essen! Sie haben nur fünf Brote und zwei Fische.",
+            "keywords": {
+              "de": "gebt ihr ihnen zu essen",
+              "gsw": "gänd ir ine z ässe"
+            },
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BROTE-FISCHE"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "calm",
+                "FIG-GRUPPE-JUENGER": "worried",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 26,
+                "FIG-GRUPPE-JUENGER": 88,
+                "FIG-JESUS": 154
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.14.18-MAT.14.21",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROTE-FISCHE",
+              "FIG-OBJ-KORB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SEGNEN",
+              "FIG-ZEICHEN-SATT"
+            ],
+            "speech": [],
+            "action_de": "Jesus nimmt die fünf Brote und zwei Fische, blickt zum Himmel auf, spricht den Segen, bricht sie und gibt sie den Jüngern, die Jünger aber der Menge; alle essen und werden satt.",
+            "keywords": {
+              "de": "alle assen und wurden satt",
+              "gsw": "alli händ ggässe und sind satt worde"
+            },
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROTE-FISCHE"
+              },
+              "at": {
+                "FIG-ZEICHEN-SEGNEN": "FIG-JESUS",
+                "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-JUENGER",
+                  "act"
+                ],
+                [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "smile",
+                "FIG-GRUPPE-MENGE": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-JUENGER": 92,
+                "FIG-GRUPPE-MENGE": 154
+              },
+              "floor_x": {
+                "FIG-OBJ-KORB": 120
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Gebt ihr ihnen zu essen: Am Abend sagen die Jünger: «Schick die Menschenmengen weg!»; Jesus antwortet: «Gebt ihr ihnen zu essen!» (offene Hände); die Jünger haben nur fünf Brote und zwei Fische (Fladenbrot und Fisch).",
+          "Speisung: Jesus hält die Brote und Fische (Fladenbrot und Fisch) und segnet sie (erhobene Hand mit Funkeln); die Jünger geben sie weiter (Pfeile), die Menge wird satt (Schale mit Brot und grünem Haken); am Boden ein Korb für die übrigen Brocken."
         ]
       }
     }

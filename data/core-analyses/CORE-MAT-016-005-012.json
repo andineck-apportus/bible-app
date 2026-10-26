@@ -1,0 +1,152 @@
+{
+ "id": "CORE-MAT-016-005-012",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.16.5-MAT.16.12",
+ "target": "TU-MAT-016-005-012",
+ "core_de": "Als die Jünger vergessen haben, Brote mitzunehmen, warnt Jesus sie vor dem Sauerteig der Pharisäer und Sadduzäer; sie denken an die fehlenden Brote, er erinnert sie an die fünf Brote für die Fünftausend und die sieben für die Viertausend, und da verstehen sie, dass er nicht vom Sauerteig der Brote spricht, sondern von der Lehre der Pharisäer und Sadduzäer.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "dialogue",
+    "subtype": "Missverständnis: Wort – wörtlich – Klärung",
+    "range": "MAT.16.5-MAT.16.12",
+    "elements": [
+     {
+      "label": "Die Jünger haben vergessen, Brote mitzunehmen",
+      "ref": "MAT.16.5",
+      "role": "Anlass"
+     },
+     {
+      "label": "«Hütet euch vor dem Sauerteig der Pharisäer und Sadduzäer!»",
+      "ref": "MAT.16.6",
+      "role": "doppeldeutiges Wort"
+     },
+     {
+      "label": "Sie überlegen: «Wir haben keine Brote mitgenommen»",
+      "ref": "MAT.16.7",
+      "role": "wörtlich verstanden"
+     },
+     {
+      "label": "Erinnerung: fünf Brote für die Fünftausend, sieben Brote für die Viertausend",
+      "ref": "MAT.16.8-MAT.16.11",
+      "role": "Zurechtweisung"
+     },
+     {
+      "label": "Sauerteig der Brote ↔ Lehre",
+      "ref": "MAT.16.12",
+      "role": "Klärung",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JUENGER",
+       "refs": [
+        "MAT.16.6",
+        "MAT.16.8-MAT.16.11"
+       ]
+      },
+      {
+       "who": "FIG-GRUPPE-JUENGER",
+       "ref": "MAT.16.7",
+       "note": "untereinander"
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "wörtlich ↔ gemeint",
+    "range": "MAT.16.12",
+    "elements": [
+     {
+      "label": "nicht vor dem Sauerteig der Brote",
+      "ref": "MAT.16.12",
+      "role": "wörtlich"
+     },
+     {
+      "label": "sondern vor der Lehre der Pharisäer und Sadduzäer",
+      "ref": "MAT.16.12",
+      "role": "gemeint"
+     }
+    ],
+    "visual": "levels",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.16.5-MAT.16.7",
+   "text_de": "Die Jünger haben vergessen, Brote mitzunehmen; Jesus: «Seht zu und hütet euch vor dem Sauerteig der Pharisäer und Sadduzäer!»; sie überlegen: «Wir haben keine Brote mitgenommen.»",
+   "reason_de": "Missverständnis: Wort ↔ wörtlich verstanden (Kriterien 1 und 4).",
+   "recognition_de": "Jünger mit leerem Korb; Jesus warnt.",
+   "keywords": [
+    "hütet euch vor dem Sauerteig der Pharisäer und Sadduzäer!",
+    "Wir haben keine Brote mitgenommen"
+   ]
+  },
+  {
+   "reference": "MAT.16.8-MAT.16.11",
+   "text_de": "Jesus: «Ihr Kleingläubigen … Erinnert ihr euch nicht an die fünf Brote für die Fünftausend … auch nicht an die sieben Brote für die Viertausend?» Er hat nicht von Broten gesprochen.",
+   "reason_de": "Erinnerung an beide Speisungen (Kriterium 2).",
+   "recognition_de": "Zwei Körbe: fünf Brote/Fünftausend, sieben Brote/Viertausend.",
+   "keywords": [
+    "die fünf Brote für die Fünftausend",
+    "die sieben Brote für die Viertausend"
+   ],
+   "mode": "speech"
+  },
+  {
+   "reference": "MAT.16.12",
+   "text_de": "Da verstehen sie, dass er nicht gesagt hat, sie sollten sich vor dem Sauerteig der Brote hüten, sondern vor der Lehre der Pharisäer und Sadduzäer.",
+   "reason_de": "Klärung in «nicht … sondern» (Kriterien 1 und 3).",
+   "recognition_de": "Zwei Ebenen: Sauerteig der Brote ↔ Lehre.",
+   "keywords": [
+    "sondern vor der Lehre der Pharisäer und Sadduzäer"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Was die «Lehre» der beiden Gruppen inhaltlich ist, sagt der Text nicht"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-GRUPPE-PHARISAEER",
+  "FIG-GRUPPE-SADDUZAEER"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.16.5-MAT.16.12",
+   "fingerprint": "bda225c18bb50a84"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mt 11–18 nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; keine fachliche Prüfung durch eine Person",
+  "summary_de": "Missverständnis Wort – wörtlich – Klärung mit beiden Speisungen; Klärung «nicht … sondern» vom Text selbst gegeben.",
+  "changes_de": []
+ }
+}

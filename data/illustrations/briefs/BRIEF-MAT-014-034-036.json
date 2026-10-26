@@ -14,41 +14,43 @@
       "reference": "MAT.14.34-MAT.14.35",
       "figures": [
         "FIG-GRUPPE-MENGE",
+        "FIG-GRUPPE-KRANKE",
         "FIG-JESUS"
       ],
-      "objects": [
-        "FIG-OBJ-KRANKENMATTE"
+      "objects": [],
+      "signs": [
+        "FIG-ZEICHEN-BRINGEN"
       ],
-      "signs": [],
       "speech": [],
-      "action_de": "Sie kommen in Gennesaret an Land. Die Männer des Ortes erkennen Jesus, schicken Boten in die ganze Umgebung und bringen alle Kranken zu ihm.",
+      "action_de": "In Gennesaret erkennen die Männer jenes Ortes Jesus, schicken Boten in die ganze Umgebung und bringen ihm alle Kranken.",
+      "keywords": {
+        "de": "sie brachten ihm alle Kranken",
+        "gsw": "si händ ihm alli Chranke brocht"
+      },
       "stage": {
-        "mood": {
-          "FIG-GRUPPE-MENGE": "earnest"
-        },
-        "x": {
-          "FIG-GRUPPE-MENGE": 40,
-          "FIG-JESUS": 150
-        },
-        "floor_x": {
-          "FIG-OBJ-KRANKENMATTE": 76
+        "at": {
+          "FIG-ZEICHEN-BRINGEN": "FIG-GRUPPE-MENGE"
         },
         "arrows": [
           [
-            "FIG-GRUPPE-MENGE",
+            "FIG-GRUPPE-KRANKE",
             "FIG-JESUS",
             "go"
           ]
-        ]
+        ],
+        "mood": {
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-KRANKE": "worried",
+          "FIG-GRUPPE-MENGE": "earnest"
+        }
       }
     },
     {
       "n": 2,
       "reference": "MAT.14.36",
       "figures": [
-        "FIG-JESUS",
-        "FIG-ROLLE-KRANKER",
-        "FIG-GRUPPE-MENGE"
+        "FIG-GRUPPE-KRANKE",
+        "FIG-JESUS"
       ],
       "objects": [],
       "signs": [
@@ -56,43 +58,50 @@
         "FIG-ZEICHEN-HEILEN"
       ],
       "speech": [],
-      "action_de": "Sie bitten ihn, nur den Saum seines Mantels berühren zu dürfen; und alle, die ihn berühren, werden gerettet.",
+      "action_de": "Sie bitten, nur den Saum seines Mantels berühren zu dürfen, und alle, die ihn berühren, werden gerettet.",
+      "keywords": {
+        "de": "alle, die ihn berührten, wurden gerettet",
+        "gsw": "alli, wo en aagrüert händ, sind grettet worde"
+      },
       "stage": {
-        "pose": {
-          "FIG-ROLLE-KRANKER": "kneel"
+        "beside": {
+          "FIG-ZEICHEN-BERUEHREN": "FIG-GRUPPE-KRANKE"
         },
+        "at": {
+          "FIG-ZEICHEN-HEILEN": "FIG-GRUPPE-KRANKE"
+        },
+        "arrows": [
+          [
+            "FIG-GRUPPE-KRANKE",
+            "FIG-JESUS",
+            "act"
+          ]
+        ],
         "mood": {
-          "FIG-GRUPPE-MENGE": "smile",
-          "FIG-ROLLE-KRANKER": "delight",
+          "FIG-GRUPPE-KRANKE": "delight",
           "FIG-JESUS": "calm"
         },
         "x": {
-          "FIG-JESUS": 46,
-          "FIG-ROLLE-KRANKER": 110,
-          "FIG-GRUPPE-MENGE": 162
-        },
-        "air_x": 56,
-        "air_y": 104,
-        "at": {
-          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
+          "FIG-GRUPPE-KRANKE": 60,
+          "FIG-JESUS": 132
         }
       }
     }
   ],
   "actions_de": [
-    "Sie kommen in Gennesaret an Land. Die Männer des Ortes erkennen Jesus, schicken Boten in die ganze Umgebung und bringen alle Kranken zu ihm.",
-    "Sie bitten ihn, nur den Saum seines Mantels berühren zu dürfen; und alle, die ihn berühren, werden gerettet."
+    "In Gennesaret erkennen die Männer jenes Ortes Jesus, schicken Boten in die ganze Umgebung und bringen ihm alle Kranken.",
+    "Sie bitten, nur den Saum seines Mantels berühren zu dürfen, und alle, die ihn berühren, werden gerettet."
   ],
   "captions_de": [
-    "Gennesaret: Die Leute bringen Kranke zu Jesus (Kranker auf einer Matte am Boden, gestrichelter Weg zu Jesus).",
-    "Saum berührt → gesund: Ein Kranker kniet vor Jesus und berührt den Saum seines Mantels (Hand am Saum eines roten Mantels); alle, die ihn berühren, werden gesund (berührende Hand mit grünem Lichtpunkt beim Kranken)."
+    "Sie bringen alle Kranken: Die Leute bringen die Kranken (Kopfverband) zu Jesus (gehende Person mit Korb; Pfeil).",
+    "Den Saum berühren: Die Kranken berühren den Saum seines Mantels (Hand am roten Mantelsaum) und werden gerettet (berührende Hand mit grünem Lichtpunkt)."
   ],
-  "interpretation_note_de": "«Gerettet» ([[MAT.14.36]]) meint hier geheilt; das Bild zeigt das Zeichen für heilen. Die Boten ([[MAT.14.35]]) sind nicht gezeichnet.",
+  "interpretation_note_de": "Zwei Felder nach «Ankunft – Bringen – Berühren – gerettet» ([[MAT.14.34-MAT.14.36]]). «Gerettet» meint hier die Heilung der Kranken; das Bild zeigt sie mit dem Zeichen «heilen».",
   "basis": [
     {
       "record": "TU-MAT-014-034-036",
       "field": "summary",
-      "fingerprint": "ac18c4b11179c337"
+      "fingerprint": "a333e4160657eb8e"
     },
     {
       "record": "TRANS-MAT-014-001-036-DE-WORKING",
@@ -108,7 +117,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -199,6 +208,216 @@
         "captions_de": [
           "Gennesaret: Die Leute bringen Kranke zu Jesus (Kranker auf einer Matte am Boden, gestrichelter Weg zu Jesus).",
           "Der Saum: Ein Kranker kniet vor Jesus und berührt den Saum seines Mantels (Hand am Saum eines roten Mantels); alle, die ihn berühren, werden gesund (berührende Hand mit grünem Lichtpunkt beim Kranken)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.14.34-MAT.14.35",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KRANKENMATTE"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Sie kommen in Gennesaret an Land. Die Männer des Ortes erkennen Jesus, schicken Boten in die ganze Umgebung und bringen alle Kranken zu ihm.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 40,
+                "FIG-JESUS": 150
+              },
+              "floor_x": {
+                "FIG-OBJ-KRANKENMATTE": 76
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-JESUS",
+                  "go"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.14.36",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-KRANKER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-BERUEHREN",
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [],
+            "action_de": "Sie bitten ihn, nur den Saum seines Mantels berühren zu dürfen; und alle, die ihn berühren, werden gerettet.",
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-KRANKER": "kneel"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "smile",
+                "FIG-ROLLE-KRANKER": "delight",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-JESUS": 46,
+                "FIG-ROLLE-KRANKER": 110,
+                "FIG-GRUPPE-MENGE": 162
+              },
+              "air_x": 56,
+              "air_y": 104,
+              "at": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Sie kommen in Gennesaret an Land. Die Männer des Ortes erkennen Jesus, schicken Boten in die ganze Umgebung und bringen alle Kranken zu ihm.",
+          "Sie bitten ihn, nur den Saum seines Mantels berühren zu dürfen; und alle, die ihn berühren, werden gerettet."
+        ],
+        "captions_de": [
+          "Gennesaret: Die Leute bringen Kranke zu Jesus (Kranker auf einer Matte am Boden, gestrichelter Weg zu Jesus).",
+          "Saum berührt → gesund: Ein Kranker kniet vor Jesus und berührt den Saum seines Mantels (Hand am Saum eines roten Mantels); alle, die ihn berühren, werden gesund (berührende Hand mit grünem Lichtpunkt beim Kranken)."
+        ],
+        "interpretation_note_de": "«Gerettet» ([[MAT.14.36]]) meint hier geheilt; das Bild zeigt das Zeichen für heilen. Die Boten ([[MAT.14.35]]) sind nicht gezeichnet.",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-014-034-036",
+            "field": "summary",
+            "fingerprint": "ac18c4b11179c337"
+          },
+          {
+            "record": "TRANS-MAT-014-001-036-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.14.34-MAT.14.35",
+            "fingerprint": "d099aa3ebb7a7fef"
+          },
+          {
+            "record": "TRANS-MAT-014-001-036-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.14.36",
+            "fingerprint": "fec46a551d9abdae"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.14.34-MAT.14.35",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-KRANKE",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-UFER",
+              "FIG-OBJ-BOOT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-BRINGEN"
+            ],
+            "speech": [],
+            "action_de": "In Gennesaret erkennen die Männer jenes Ortes Jesus, schicken Boten in die ganze Umgebung und bringen ihm alle Kranken.",
+            "keywords": {
+              "de": "sie brachten ihm alle Kranken",
+              "gsw": "si händ ihm alli Chranke brocht"
+            },
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-BRINGEN": "FIG-GRUPPE-MENGE"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-KRANKE",
+                  "FIG-JESUS",
+                  "go"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-KRANKE": "worried",
+                "FIG-GRUPPE-MENGE": "earnest"
+              },
+              "x": {
+                "FIG-JESUS": 36,
+                "FIG-GRUPPE-KRANKE": 100,
+                "FIG-GRUPPE-MENGE": 156
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.14.36",
+            "figures": [
+              "FIG-GRUPPE-KRANKE",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-BERUEHREN",
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [],
+            "action_de": "Sie bitten, nur den Saum seines Mantels berühren zu dürfen, und alle, die ihn berühren, werden gerettet.",
+            "keywords": {
+              "de": "alle, die ihn berührten, wurden gerettet",
+              "gsw": "alli, wo en aagrüert händ, sind grettet worde"
+            },
+            "stage": {
+              "beside": {
+                "FIG-ZEICHEN-BERUEHREN": "FIG-GRUPPE-KRANKE"
+              },
+              "at": {
+                "FIG-ZEICHEN-HEILEN": "FIG-GRUPPE-KRANKE"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-KRANKE",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-KRANKE": "delight",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-KRANKE": 60,
+                "FIG-JESUS": 132
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Sie bringen alle Kranken: Am Ufer (Sandstrand, Boot) bringen die Leute die Kranken (Kopfverband) zu Jesus (gehende Person mit Korb; Pfeil).",
+          "Den Saum berühren: Die Kranken berühren den Saum seines Mantels (Hand am roten Mantelsaum) und werden gerettet (berührende Hand mit grünem Lichtpunkt)."
         ]
       }
     }

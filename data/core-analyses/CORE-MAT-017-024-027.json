@@ -1,0 +1,138 @@
+{
+ "id": "CORE-MAT-017-024-027",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.17.24-MAT.17.27",
+ "target": "TU-MAT-017-024-027",
+ "core_de": "Die Einnehmer der Doppeldrachme fragen Petrus, ob sein Lehrer sie zahle, und er bejaht; Jesus fragt ihn, von wem die Könige Steuer nehmen, von den Söhnen oder von den Fremden, und folgert: «Also sind die Söhne doch frei»; damit sie aber keinen Anstoss nehmen, soll Petrus am See den ersten Fisch fangen, in dessen Maul er einen Stater finden wird, und ihn für beide geben.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "dialogue",
+    "subtype": "Frage – Gegenfrage – Schluss – Auftrag",
+    "range": "MAT.17.24-MAT.17.27",
+    "elements": [
+     {
+      "label": "Einnehmer: «Zahlt euer Lehrer die Doppeldrachme nicht?» – Petrus: «Doch»",
+      "ref": "MAT.17.24-MAT.17.25",
+      "role": "Frage"
+     },
+     {
+      "label": "Schluss: Söhne ↔ Fremde",
+      "ref": "MAT.17.25-MAT.17.26",
+      "role": "Gegenfrage",
+      "child": "s2"
+     },
+     {
+      "label": "«Damit wir sie aber nicht zu Fall bringen»: Angel, erster Fisch, Stater – «gib ihnen für mich und dich»",
+      "ref": "MAT.17.27",
+      "role": "Auftrag"
+     }
+    ],
+    "features": {
+     "open_end": [
+      {
+       "ref": "MAT.17.27",
+       "note": "Ob Petrus den Fisch fängt und den Stater findet, erzählt der Text nicht; Auftrag, kein Bericht."
+      }
+     ],
+     "modality": [
+      {
+       "ref": "MAT.17.27",
+       "kind": "Auftrag",
+       "note": "«wirst du finden» – Ankündigung"
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "argument",
+    "subtype": "Frage → Antwort → Schluss",
+    "range": "MAT.17.25-MAT.17.26",
+    "elements": [
+     {
+      "label": "Von wem nehmen die Könige der Erde Zoll oder Steuer? Von ihren Söhnen oder von den Fremden?",
+      "ref": "MAT.17.25",
+      "role": "Frage"
+     },
+     {
+      "label": "«Von den Fremden»",
+      "ref": "MAT.17.26",
+      "role": "Antwort"
+     },
+     {
+      "label": "Also sind die Söhne doch frei",
+      "ref": "MAT.17.26",
+      "role": "Schluss"
+     }
+    ],
+    "visual": "arrows",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.17.24-MAT.17.26",
+   "text_de": "Die Einnehmer der Doppeldrachme fragen Petrus: «Zahlt euer Lehrer die Doppeldrachme nicht?» – «Doch.»; Jesus: «Von wem nehmen die Könige der Erde Zoll oder Steuer? Von ihren Söhnen oder von den Fremden?» – «Von den Fremden.» – «Also sind die Söhne doch frei.»",
+   "reason_de": "Frage und Schluss (Kriterien 1 und 2).",
+   "recognition_de": "Pfeilkette: Könige nehmen Steuer von Fremden → die Söhne sind frei.",
+   "keywords": [
+    "Zahlt euer Lehrer die Doppeldrachme nicht?",
+    "Also sind die Söhne doch frei"
+   ]
+  },
+  {
+   "reference": "MAT.17.27",
+   "text_de": "«Damit wir sie aber nicht zu Fall bringen, geh an den See, wirf eine Angel aus, und den ersten Fisch, der heraufkommt, zieh heraus; und wenn du sein Maul öffnest, wirst du einen Stater finden. Den nimm und gib ihnen für mich und dich.»",
+   "reason_de": "Auftrag mit Ankündigung; die Ausführung erzählt der Text nicht (Kriterien 3 und 4).",
+   "recognition_de": "Jesus schickt Petrus mit der Angel an den See (Auftrag, nicht Ausführung).",
+   "keywords": [
+    "Damit wir sie aber nicht zu Fall bringen",
+    "wirst du einen Stater finden"
+   ],
+   "mode": "instruction"
+  }
+ ],
+ "omitted_de": [
+  "Die Tempelsteuer im Einzelnen – Hintergrund damals"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-PETRUS",
+  "FIG-GRUPPE-EINNEHMER"
+ ],
+ "places": [
+  "FIG-ORT-HAUS",
+  "FIG-ORT-SEE"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.17.24-MAT.17.27",
+   "fingerprint": "0b93a227581498e7"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mt 11–18 nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; keine fachliche Prüfung durch eine Person",
+  "summary_de": "Frage, Gegenfrage, Schluss «die Söhne sind frei» und Auftrag mit offenem Ende (keine Ausführung erzählt).",
+  "changes_de": []
+ }
+}

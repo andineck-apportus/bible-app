@@ -1,0 +1,142 @@
+{
+ "id": "CORE-MAT-017-009-013",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.17.9-MAT.17.13",
+ "target": "TU-MAT-017-009-013",
+ "core_de": "Beim Abstieg verbietet Jesus, von der Erscheinung zu erzählen, bis der Menschensohn auferweckt ist; auf die Frage, warum Elija zuerst kommen müsse, sagt er: Elija ist schon gekommen, und sie haben mit ihm gemacht, was sie wollten – so wird auch der Menschensohn durch sie leiden; da verstehen die Jünger, dass er von Johannes dem Täufer spricht.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "dialogue",
+    "subtype": "Gebot – Frage – Antwort – Verstehen",
+    "range": "MAT.17.9-MAT.17.13",
+    "elements": [
+     {
+      "label": "«Erzählt niemandem von der Erscheinung, bis der Menschensohn von den Toten auferweckt ist!»",
+      "ref": "MAT.17.9",
+      "role": "Schweigegebot"
+     },
+     {
+      "label": "«Warum sagen dann die Schriftgelehrten, dass Elija zuerst kommen muss?»",
+      "ref": "MAT.17.10",
+      "role": "Frage"
+     },
+     {
+      "label": "Elija ↔ der Menschensohn",
+      "ref": "MAT.17.11-MAT.17.12",
+      "role": "Antwort",
+      "child": "s2"
+     },
+     {
+      "label": "Da verstanden die Jünger, dass er von Johannes dem Täufer gesprochen hatte",
+      "ref": "MAT.17.13",
+      "role": "Verstehen"
+     }
+    ],
+    "features": {
+     "modality": [
+      {
+       "ref": "MAT.17.9",
+       "kind": "Ankündigung",
+       "note": "Auferweckung angekündigt"
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "parallel",
+    "subtype": "so wie Elija – so auch der Menschensohn",
+    "range": "MAT.17.11-MAT.17.12",
+    "elements": [
+     {
+      "label": "Elija ist schon gekommen, sie haben ihn nicht erkannt und mit ihm gemacht, was sie wollten",
+      "ref": "MAT.17.12",
+      "role": "Elija (= Johannes)"
+     },
+     {
+      "label": "So wird auch der Menschensohn durch sie leiden",
+      "ref": "MAT.17.12",
+      "role": "Menschensohn"
+     }
+    ],
+    "features": {
+     "crossref": [
+      {
+       "ref": "MAL.4.5-MAL.4.6",
+       "kind": "Bezug"
+      }
+     ]
+    },
+    "visual": "levels",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.17.9-MAT.17.10",
+   "text_de": "Beim Abstieg gebietet Jesus: «Erzählt niemandem von der Erscheinung, bis der Menschensohn von den Toten auferweckt ist!»; die Jünger fragen: «Warum sagen dann die Schriftgelehrten, dass Elija zuerst kommen muss?»",
+   "reason_de": "Schweigegebot und Frage (Kriterium 3).",
+   "recognition_de": "Abstieg vom Berg; Finger vor dem Mund; Frage.",
+   "keywords": [
+    "Erzählt niemandem von der Erscheinung",
+    "dass Elija zuerst kommen muss"
+   ]
+  },
+  {
+   "reference": "MAT.17.11-MAT.17.13",
+   "text_de": "«Elija kommt zwar und wird alles wiederherstellen. Ich sage euch aber: Elija ist schon gekommen, und sie haben ihn nicht erkannt … So wird auch der Menschensohn durch sie leiden.» Da verstehen sie: Er spricht von Johannes dem Täufer.",
+   "reason_de": "Antwort mit «so wird auch» (Kriterien 1 und 2).",
+   "recognition_de": "Zwei Ebenen: Elija = Johannes, abgelehnt ↔ der Menschensohn wird leiden.",
+   "keywords": [
+    "Elija ist schon gekommen, und sie haben ihn nicht erkannt",
+    "So wird auch der Menschensohn durch sie leiden",
+    "von Johannes dem Täufer gesprochen hatte"
+   ],
+   "mode": "speech"
+  }
+ ],
+ "omitted_de": [
+  "Die jüdische Elija-Erwartung im Einzelnen – Hintergrund damals"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-PETRUS",
+  "FIG-JAKOBUS-ZEBEDAEUS",
+  "FIG-JOHANNES-ZEBEDAEUS",
+  "FIG-JOHANNES-TAEUFER"
+ ],
+ "places": [
+  "FIG-ORT-BERG"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.17.9-MAT.17.13",
+   "fingerprint": "44dd4924ee876205"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mt 11–18 nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; keine fachliche Prüfung durch eine Person",
+  "summary_de": "Schweigegebot, Elija-Frage und Entsprechung Elija ↔ Menschensohn; Gleichsetzung mit Johannes erst durch das Verstehen der Jünger (17,13), so erfasst.",
+  "changes_de": []
+ }
+}

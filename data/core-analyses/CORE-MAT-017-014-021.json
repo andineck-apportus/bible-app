@@ -1,0 +1,154 @@
+{
+ "id": "CORE-MAT-017-014-021",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.17.14-MAT.17.21",
+ "target": "TU-MAT-017-014-021",
+ "core_de": "Ein Vater kniet vor Jesus und bittet für seinen mondsüchtigen Sohn, den die Jünger nicht heilen konnten; Jesus klagt über das ungläubige Geschlecht, lässt den Jungen bringen, droht dem Dämon, und der Junge ist geheilt; den Jüngern, die fragen, warum sie ihn nicht austreiben konnten, sagt er: wegen eures Kleinglaubens – mit Glauben wie ein Senfkorn werdet ihr Berge versetzen, und nichts wird euch unmöglich sein.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Bitte – Klage – Heilung – Belehrung",
+    "range": "MAT.17.14-MAT.17.21",
+    "elements": [
+     {
+      "label": "Ein Mensch kniet: «Herr, erbarme dich meines Sohnes»; die Jünger konnten ihn nicht heilen",
+      "ref": "MAT.17.14-MAT.17.16",
+      "role": "Bitte"
+     },
+     {
+      "label": "«O ungläubiges und verkehrtes Geschlecht … Bringt ihn mir hierher!»",
+      "ref": "MAT.17.17",
+      "role": "Klage"
+     },
+     {
+      "label": "Jesus droht, der Dämon fährt aus, der Junge ist geheilt",
+      "ref": "MAT.17.18",
+      "role": "Heilung"
+     },
+     {
+      "label": "«Warum konnten wir ihn nicht austreiben?» – «Wegen eures Kleinglaubens»",
+      "ref": "MAT.17.19-MAT.17.20",
+      "role": "Frage und Antwort"
+     },
+     {
+      "label": "Senfkorn-Glaube → Berg versetzen",
+      "ref": "MAT.17.20",
+      "role": "Verheissung",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "text_forms": [
+      {
+       "ref": "MAT.17.20",
+       "note": "[[MAT.17.21]] («Diese Art fährt nur durch Gebet und Fasten aus») fehlt im SBLGNT und in wichtigen Handschriften; die Arbeitsübersetzung hat den Vers nicht."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "cause",
+    "subtype": "Bedingung → Folge",
+    "range": "MAT.17.20",
+    "elements": [
+     {
+      "label": "Wenn ihr Glauben habt wie ein Senfkorn",
+      "ref": "MAT.17.20",
+      "role": "Bedingung"
+     },
+     {
+      "label": "werdet ihr zu diesem Berg sagen: ‹Geh von hier nach dort!›, und er wird hinübergehen",
+      "ref": "MAT.17.20",
+      "role": "Folge"
+     },
+     {
+      "label": "und nichts wird euch unmöglich sein",
+      "ref": "MAT.17.20",
+      "role": "Folge"
+     }
+    ],
+    "visual": "arrows",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.17.14-MAT.17.16",
+   "text_de": "Ein Mensch fällt vor ihm auf die Knie: «Herr, erbarme dich meines Sohnes, denn er ist mondsüchtig und leidet schwer … Ich habe ihn zu deinen Jüngern gebracht, und sie konnten ihn nicht heilen.»",
+   "reason_de": "Bitte und Versagen der Jünger (Kriterien 2 und 4).",
+   "recognition_de": "Der Vater kniet; der Junge leidet; die Jünger ratlos.",
+   "keywords": [
+    "Herr, erbarme dich meines Sohnes",
+    "sie konnten ihn nicht heilen"
+   ]
+  },
+  {
+   "reference": "MAT.17.17-MAT.17.18",
+   "text_de": "Jesus: «O ungläubiges und verkehrtes Geschlecht … Bringt ihn mir hierher!»; er droht ihm, der Dämon fährt aus, und der Junge ist von jener Stunde an geheilt.",
+   "reason_de": "Heilung (Kriterien 1 und 4).",
+   "recognition_de": "Jesus treibt den Dämon aus; der Junge ist gesund.",
+   "keywords": [
+    "O ungläubiges und verkehrtes Geschlecht",
+    "der Dämon fuhr von ihm aus"
+   ]
+  },
+  {
+   "reference": "MAT.17.19-MAT.17.20",
+   "text_de": "Die Jünger fragen: «Warum konnten wir ihn nicht austreiben?» – «Wegen eures Kleinglaubens»; «Wenn ihr Glauben habt wie ein Senfkorn, werdet ihr zu diesem Berg sagen: ‹Geh von hier nach dort!›, und er wird hinübergehen; und nichts wird euch unmöglich sein.»",
+   "reason_de": "Belehrung mit Bedingung → Folge (Kriterien 1 und 2).",
+   "recognition_de": "Senfkorn → der Berg geht hinüber.",
+   "keywords": [
+    "Warum konnten wir ihn nicht austreiben?",
+    "Wegen eures Kleinglaubens",
+    "Wenn ihr Glauben habt wie ein Senfkorn"
+   ],
+   "mode": "speech"
+  }
+ ],
+ "omitted_de": [
+  "[[MAT.17.21]] fehlt im Grundtext (Textfassungen, in structure)",
+  "Die medizinische Deutung von «mondsüchtig» – Hintergrund"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-ROLLE-VATER",
+  "FIG-ROLLE-JUNGE",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-GRUPPE-MENGE"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.17.14-MAT.17.21",
+   "fingerprint": "594e588d4f578d8e"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mt 11–18 nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; keine fachliche Prüfung durch eine Person",
+  "summary_de": "Bitte, Klage, Heilung und Belehrung (Kleinglaube; Senfkorn-Glaube → Berg) belegt; 17,21 als fehlend im Grundtext vermerkt.",
+  "changes_de": [
+   "places: FIG-ORT-BERG entfernt (17,14: «als sie zu der Menge kamen», nach dem Abstieg)."
+  ]
+ }
+}

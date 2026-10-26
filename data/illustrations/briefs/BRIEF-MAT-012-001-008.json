@@ -27,127 +27,132 @@
           "from": "FIG-GRUPPE-PHARISAEER",
           "to": "FIG-JESUS",
           "icons": [
-            "FIG-GRUPPE-JUENGER",
             "FIG-ZEICHEN-SABBAT",
             "FIG-ZEICHEN-NICHT"
-          ]
+          ],
+          "word": {
+            "de": "Siehe, deine Jünger tun, was am Sabbat zu tun nicht erlaubt ist.",
+            "gsw": "Lueg, dini Jünger mached, was am Sabbat z mache nöd erlaubt isch."
+          }
         }
       ],
-      "action_de": "Am Sabbat gehen Jesus und seine hungrigen Jünger durch die Kornfelder; die Jünger rupfen Ähren ab und essen. Die Pharisäer sagen zu Jesus, seine Jünger täten, was am Sabbat nicht erlaubt sei.",
+      "action_de": "Am Sabbat rupfen die hungrigen Jünger in den Kornfeldern Ähren ab und essen; die Pharisäer sagen zu Jesus: Siehe, deine Jünger tun, was am Sabbat zu tun nicht erlaubt ist.",
+      "keywords": {
+        "de": "fingen an, Ähren abzurupfen und zu essen",
+        "gsw": "händ aagfange, Ähre abzrupfe und z ässe"
+      },
       "stage": {
-        "mood": {
-          "FIG-GRUPPE-PHARISAEER": "earnest",
-          "FIG-GRUPPE-JUENGER": "calm"
-        },
         "hold": {
           "FIG-GRUPPE-JUENGER": "FIG-OBJ-AEHREN"
+        },
+        "mood": {
+          "FIG-GRUPPE-JUENGER": "calm",
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-PHARISAEER": "angry"
+        },
+        "x": {
+          "FIG-GRUPPE-JUENGER": 32,
+          "FIG-JESUS": 92,
+          "FIG-GRUPPE-PHARISAEER": 156
         }
       }
     },
     {
       "n": 2,
-      "reference": "MAT.12.3-MAT.12.5",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-PHARISAEER"
-      ],
+      "reference": "MAT.12.3-MAT.12.8",
+      "figures": [],
       "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-PHARISAEER",
-          "icons": [
-            "FIG-DAVID",
-            "FIG-ORT-TEMPEL",
-            "FIG-OBJ-BROT"
-          ]
-        }
-      ],
-      "action_de": "Jesus erinnert an David, der mit seinen Begleitern im Haus Gottes die Schaubrote ass, und an die Priester, die am Sabbat im Tempel den Sabbat entweihen und doch schuldlos sind.",
-      "stage": {
-        "mood": {
-          "FIG-JESUS": "calm",
-          "FIG-GRUPPE-PHARISAEER": "pensive"
-        }
-      }
-    },
-    {
-      "n": 3,
-      "reference": "MAT.12.6-MAT.12.7",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-PHARISAEER"
-      ],
-      "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-PHARISAEER",
-          "icons": [
-            "FIG-ZEICHEN-ERBARMEN",
-            "FIG-ZEICHEN-WAHRHEIT",
-            "FIG-ZEICHEN-OPFER",
-            "FIG-ZEICHEN-NEIN"
-          ]
-        }
-      ],
-      "action_de": "Hier ist Grösseres als der Tempel: Hätten sie verstanden, was «Barmherzigkeit will ich und nicht Opfer» heisst, hätten sie die Schuldlosen nicht verurteilt.",
-      "stage": {
-        "mood": {
-          "FIG-JESUS": "earnest",
-          "FIG-GRUPPE-PHARISAEER": "pensive"
-        }
-      }
-    },
-    {
-      "n": 4,
-      "reference": "MAT.12.8",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-PHARISAEER"
-      ],
-      "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-PHARISAEER",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-VOLLMACHT",
-            "FIG-ZEICHEN-SABBAT"
-          ]
-        }
-      ],
-      "action_de": "Denn der Menschensohn ist Herr über den Sabbat.",
-      "stage": {
-        "mood": {
-          "FIG-JESUS": "calm",
-          "FIG-GRUPPE-PHARISAEER": "surprised"
-        }
+      "speech": [],
+      "action_de": "Jesus antwortet mit David und den Schaubroten, mit den Priestern, die am Sabbat im Tempel schuldlos sind, mit Hier ist Grösseres als der Tempel und mit dem Wort Barmherzigkeit will ich und nicht Opfer: Denn der Menschensohn ist Herr über den Sabbat.",
+      "keywords": {
+        "de": "Barmherzigkeit will ich und nicht Opfer",
+        "gsw": "Barmhärzigkeit wott ich und nöd Opfer"
+      },
+      "diagram": {
+        "visual": "arrows",
+        "span": 2,
+        "cols": 3,
+        "speaker": "FIG-JESUS",
+        "title": {
+          "de": "Habt ihr nicht gelesen?",
+          "gsw": "Händ er nöd gläse?"
+        },
+        "cells": [
+          {
+            "a": {
+              "de": "David und seine Begleiter assen die Schaubrote, die nur den Priestern erlaubt waren.",
+              "gsw": "De David und sini Begleiter händ d Schaubrot ggässe, wo nu de Prieschter erlaubt gsii sind."
+            },
+            "icons": [
+              "FIG-DAVID",
+              "FIG-OBJ-BROT"
+            ]
+          },
+          {
+            "a": {
+              "de": "Die Priester entweihen am Sabbat im Tempel den Sabbat und sind schuldlos.",
+              "gsw": "D Prieschter entheiliged am Sabbat im Tämpel de Sabbat und sind ohni Schuld."
+            },
+            "icons": [
+              "FIG-ORT-TEMPEL",
+              "FIG-ZEICHEN-SABBAT"
+            ]
+          },
+          {
+            "a": {
+              "de": "Hier ist Grösseres als der Tempel.",
+              "gsw": "Da isch öppis Grössers als de Tämpel."
+            },
+            "icons": [
+              "FIG-ZEICHEN-MEHR",
+              "FIG-ORT-TEMPEL"
+            ],
+            "who": "FIG-JESUS"
+          },
+          {
+            "a": {
+              "de": "«Barmherzigkeit will ich und nicht Opfer.»",
+              "gsw": "«Barmhärzigkeit wott ich und nöd Opfer.»"
+            },
+            "b": {
+              "de": "Dann hättet ihr die Schuldlosen nicht verurteilt.",
+              "gsw": "Dänn hetted ir di Schuldlose nöd verurteilt."
+            },
+            "icons": [
+              "FIG-ZEICHEN-ERBARMEN",
+              "FIG-ZEICHEN-OPFER"
+            ]
+          },
+          {
+            "a": {
+              "de": "Denn der Menschensohn ist Herr über den Sabbat.",
+              "gsw": "Dänn de Mänschesohn isch Herr über de Sabbat."
+            },
+            "icons": [
+              "FIG-ZEICHEN-SABBAT",
+              "FIG-OBJ-KRONE"
+            ],
+            "tone": "new"
+          }
+        ]
       }
     }
   ],
   "actions_de": [
-    "Am Sabbat gehen Jesus und seine hungrigen Jünger durch die Kornfelder; die Jünger rupfen Ähren ab und essen. Die Pharisäer sagen zu Jesus, seine Jünger täten, was am Sabbat nicht erlaubt sei.",
-    "Jesus erinnert an David, der mit seinen Begleitern im Haus Gottes die Schaubrote ass, und an die Priester, die am Sabbat im Tempel den Sabbat entweihen und doch schuldlos sind.",
-    "Hier ist Grösseres als der Tempel: Hätten sie verstanden, was «Barmherzigkeit will ich und nicht Opfer» heisst, hätten sie die Schuldlosen nicht verurteilt.",
-    "Denn der Menschensohn ist Herr über den Sabbat."
+    "Am Sabbat rupfen die hungrigen Jünger in den Kornfeldern Ähren ab und essen; die Pharisäer sagen zu Jesus: Siehe, deine Jünger tun, was am Sabbat zu tun nicht erlaubt ist.",
+    "Jesus antwortet mit David und den Schaubroten, mit den Priestern, die am Sabbat im Tempel schuldlos sind, mit Hier ist Grösseres als der Tempel und mit dem Wort Barmherzigkeit will ich und nicht Opfer: Denn der Menschensohn ist Herr über den Sabbat."
   ],
   "captions_de": [
-    "Ähren am Sabbat: Die Jünger rupfen im Kornfeld Ähren (Ähren in der Hand); die Pharisäer sagen zu Jesus: Deine Jünger – am Sabbat – verboten (Jünger, Sabbat-Zeichen: sechs graue und ein goldener Kreis, roter Kreis mit Schrägbalken).",
-    "David: Jesus erinnert an David, der im Haus Gottes das Brot ass (David mit Königsreif, Tempel, Brot).",
-    "Barmherzigkeit: Jesus sagt: Barmherzigkeit ja, Opfer nein (offene Hände mit rotem Herz, grünes Häkchen, Widder mit Flamme, rotes X).",
-    "Herr über den Sabbat: Jesus sagt: Der Menschensohn hat Vollmacht über den Sabbat (Jesus, Schriftrolle mit Krone, Sabbat-Zeichen)."
+    "Der Vorwurf: Im Kornfeld (goldgelbe Ähren) halten die Jünger Ähren; die Pharisäer (gestreifter Gebetsmantel) sagen zu Jesus: «Deine Jünger tun, was am Sabbat nicht erlaubt ist» (Sabbatzeichen: sechs graue und ein goldener Kreis; Verbotskreis).",
+    "Pfeilkette (Bild Jesus, Blase «Habt ihr nicht gelesen?»): David (Königsreif) ass mit seinen Begleitern die Schaubrote (Brot) → die Priester sind am Sabbat im Tempel schuldlos (Tempel) → «Hier ist Grösseres als der Tempel» (Jesus) → «Barmherzigkeit will ich und nicht Opfer» (Hände mit Herz; Widder) → hervorgehoben: «Der Menschensohn ist Herr über den Sabbat.»"
   ],
-  "interpretation_note_de": "Die Priester, die am Sabbat im Tempel arbeiten ([[MAT.12.5]]), sind nicht gezeichnet. Haus Gottes zeigt das Zeichen Tempel; [[MAT.12.4]] meint das Heiligtum zur Zeit Davids ([[1SA.21.1-1SA.21.6]]). «Barmherzigkeit will ich und nicht Opfer» zitiert [[HOS.6.6]]; Häkchen und X sind Deutung für «will ich» und «nicht». Das goldene Zepter (Vollmacht) steht für «Herr über den Sabbat» ([[MAT.12.8]]); dass Jesus sich selbst Menschensohn nennt, ist Deutung der Selbstbezeichnung. «Hier ist Grösseres als der Tempel» ([[MAT.12.6]]) nennt nur die Legende.",
+  "interpretation_note_de": "Zwei Felder nach «Einwand – Antwort als Beweisgang» ([[MAT.12.1-MAT.12.8]]). Die Antwort ist eine Pfeilkette: zwei Schriftbelege, die Steigerung, das Hosea-Wort und der Schluss. David erscheint nur als Beleg aus der Schrift, nicht als Anwesender. Die Pharisäer sind neutral gezeichnet.",
   "basis": [
     {
       "record": "TU-MAT-012-001-008",
       "field": "summary",
-      "fingerprint": "c60fe88f00a7cc8f"
+      "fingerprint": "54d8071a27004760"
     },
     {
       "record": "TRANS-MAT-012-001-050-DE-WORKING",
@@ -158,24 +163,12 @@
     {
       "record": "TRANS-MAT-012-001-050-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.12.3-MAT.12.5",
-      "fingerprint": "d34a9fc5489b7b46"
-    },
-    {
-      "record": "TRANS-MAT-012-001-050-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.12.6-MAT.12.7",
-      "fingerprint": "77b73d87bf6b8a76"
-    },
-    {
-      "record": "TRANS-MAT-012-001-050-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.12.8",
-      "fingerprint": "6bf6772d85571419"
+      "reference": "MAT.12.3-MAT.12.8",
+      "fingerprint": "118a133480048a48"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -324,6 +317,337 @@
           "David: Jesus erinnert an David, der im Haus Gottes das Brot ass (David mit Königsreif, Tempel, Brot).",
           "Barmherzigkeit: Jesus sagt: Barmherzigkeit ja, Opfer nein (rosa Herz mit Händen, grünes Häkchen, Altar mit Flamme, rotes X).",
           "Herr über den Sabbat: Jesus sagt: Der Menschensohn hat Vollmacht über den Sabbat (Jesus, goldenes Zepter, Sabbat-Zeichen)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.12.1-MAT.12.2",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS",
+              "FIG-GRUPPE-PHARISAEER"
+            ],
+            "objects": [
+              "FIG-ORT-KORNFELD",
+              "FIG-OBJ-AEHREN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-PHARISAEER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-ZEICHEN-SABBAT",
+                  "FIG-ZEICHEN-NICHT"
+                ]
+              }
+            ],
+            "action_de": "Am Sabbat gehen Jesus und seine hungrigen Jünger durch die Kornfelder; die Jünger rupfen Ähren ab und essen. Die Pharisäer sagen zu Jesus, seine Jünger täten, was am Sabbat nicht erlaubt sei.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-PHARISAEER": "earnest",
+                "FIG-GRUPPE-JUENGER": "calm"
+              },
+              "hold": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-AEHREN"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.12.3-MAT.12.5",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-PHARISAEER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-DAVID",
+                  "FIG-ORT-TEMPEL",
+                  "FIG-OBJ-BROT"
+                ]
+              }
+            ],
+            "action_de": "Jesus erinnert an David, der mit seinen Begleitern im Haus Gottes die Schaubrote ass, und an die Priester, die am Sabbat im Tempel den Sabbat entweihen und doch schuldlos sind.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-PHARISAEER": "pensive"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.12.6-MAT.12.7",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-PHARISAEER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-ZEICHEN-ERBARMEN",
+                  "FIG-ZEICHEN-WAHRHEIT",
+                  "FIG-ZEICHEN-OPFER",
+                  "FIG-ZEICHEN-NEIN"
+                ]
+              }
+            ],
+            "action_de": "Hier ist Grösseres als der Tempel: Hätten sie verstanden, was «Barmherzigkeit will ich und nicht Opfer» heisst, hätten sie die Schuldlosen nicht verurteilt.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-PHARISAEER": "pensive"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.12.8",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-PHARISAEER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-VOLLMACHT",
+                  "FIG-ZEICHEN-SABBAT"
+                ]
+              }
+            ],
+            "action_de": "Denn der Menschensohn ist Herr über den Sabbat.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-PHARISAEER": "surprised"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Am Sabbat gehen Jesus und seine hungrigen Jünger durch die Kornfelder; die Jünger rupfen Ähren ab und essen. Die Pharisäer sagen zu Jesus, seine Jünger täten, was am Sabbat nicht erlaubt sei.",
+          "Jesus erinnert an David, der mit seinen Begleitern im Haus Gottes die Schaubrote ass, und an die Priester, die am Sabbat im Tempel den Sabbat entweihen und doch schuldlos sind.",
+          "Hier ist Grösseres als der Tempel: Hätten sie verstanden, was «Barmherzigkeit will ich und nicht Opfer» heisst, hätten sie die Schuldlosen nicht verurteilt.",
+          "Denn der Menschensohn ist Herr über den Sabbat."
+        ],
+        "captions_de": [
+          "Ähren am Sabbat: Die Jünger rupfen im Kornfeld Ähren (Ähren in der Hand); die Pharisäer sagen zu Jesus: Deine Jünger – am Sabbat – verboten (Jünger, Sabbat-Zeichen: sechs graue und ein goldener Kreis, roter Kreis mit Schrägbalken).",
+          "David: Jesus erinnert an David, der im Haus Gottes das Brot ass (David mit Königsreif, Tempel, Brot).",
+          "Barmherzigkeit: Jesus sagt: Barmherzigkeit ja, Opfer nein (offene Hände mit rotem Herz, grünes Häkchen, Widder mit Flamme, rotes X).",
+          "Herr über den Sabbat: Jesus sagt: Der Menschensohn hat Vollmacht über den Sabbat (Jesus, Schriftrolle mit Krone, Sabbat-Zeichen)."
+        ],
+        "interpretation_note_de": "Die Priester, die am Sabbat im Tempel arbeiten ([[MAT.12.5]]), sind nicht gezeichnet. Haus Gottes zeigt das Zeichen Tempel; [[MAT.12.4]] meint das Heiligtum zur Zeit Davids ([[1SA.21.1-1SA.21.6]]). «Barmherzigkeit will ich und nicht Opfer» zitiert [[HOS.6.6]]; Häkchen und X sind Deutung für «will ich» und «nicht». Das goldene Zepter (Vollmacht) steht für «Herr über den Sabbat» ([[MAT.12.8]]); dass Jesus sich selbst Menschensohn nennt, ist Deutung der Selbstbezeichnung. «Hier ist Grösseres als der Tempel» ([[MAT.12.6]]) nennt nur die Legende.",
+        "basis": [
+          {
+            "record": "TU-MAT-012-001-008",
+            "field": "summary",
+            "fingerprint": "c60fe88f00a7cc8f"
+          },
+          {
+            "record": "TRANS-MAT-012-001-050-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.12.1-MAT.12.2",
+            "fingerprint": "c8dd712c9da3646b"
+          },
+          {
+            "record": "TRANS-MAT-012-001-050-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.12.3-MAT.12.5",
+            "fingerprint": "d34a9fc5489b7b46"
+          },
+          {
+            "record": "TRANS-MAT-012-001-050-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.12.6-MAT.12.7",
+            "fingerprint": "77b73d87bf6b8a76"
+          },
+          {
+            "record": "TRANS-MAT-012-001-050-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.12.8",
+            "fingerprint": "6bf6772d85571419"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-012-001-008",
+            "field": "summary",
+            "fingerprint": "c60fe88f00a7cc8f"
+          },
+          {
+            "record": "TRANS-MAT-012-001-050-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.12.1-MAT.12.2",
+            "fingerprint": "c8dd712c9da3646b"
+          },
+          {
+            "record": "TRANS-MAT-012-001-050-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.12.3-MAT.12.8",
+            "fingerprint": "118a133480048a48"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.12.1-MAT.12.2",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS",
+              "FIG-GRUPPE-PHARISAEER"
+            ],
+            "objects": [
+              "FIG-ORT-KORNFELD",
+              "FIG-OBJ-AEHREN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-PHARISAEER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-SABBAT",
+                  "FIG-ZEICHEN-NICHT"
+                ],
+                "word": {
+                  "de": "Deine Jünger tun, was am Sabbat zu tun nicht erlaubt ist.",
+                  "gsw": "Dini Jünger mached, was am Sabbat z mache nöd erlaubt isch."
+                }
+              }
+            ],
+            "action_de": "Am Sabbat rupfen die hungrigen Jünger in den Kornfeldern Ähren ab und essen; die Pharisäer sagen zu Jesus: Siehe, deine Jünger tun, was am Sabbat zu tun nicht erlaubt ist.",
+            "keywords": {
+              "de": "fingen an, Ähren abzurupfen und zu essen",
+              "gsw": "händ aagfange, Ähre abzrupfe und z ässe"
+            },
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-AEHREN"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "calm",
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-PHARISAEER": "angry"
+              },
+              "x": {
+                "FIG-GRUPPE-JUENGER": 32,
+                "FIG-JESUS": 92,
+                "FIG-GRUPPE-PHARISAEER": 156
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.12.3-MAT.12.8",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Jesus antwortet mit David und den Schaubroten, mit den Priestern, die am Sabbat im Tempel schuldlos sind, mit Hier ist Grösseres als der Tempel und mit dem Wort Barmherzigkeit will ich und nicht Opfer: Denn der Menschensohn ist Herr über den Sabbat.",
+            "keywords": {
+              "de": "Barmherzigkeit will ich und nicht Opfer",
+              "gsw": "Barmhärzigkeit wott ich und nöd Opfer"
+            },
+            "diagram": {
+              "visual": "arrows",
+              "span": 2,
+              "cols": 3,
+              "speaker": "FIG-JESUS",
+              "title": {
+                "de": "Habt ihr nicht gelesen?",
+                "gsw": "Händ er nöd gläse?"
+              },
+              "cells": [
+                {
+                  "a": {
+                    "de": "David und seine Begleiter assen die Schaubrote, die nur den Priestern erlaubt waren.",
+                    "gsw": "De David und sini Begleiter händ d Schaubrot ggässe, wo nu de Prieschter erlaubt gsii sind."
+                  },
+                  "icons": [
+                    "FIG-DAVID",
+                    "FIG-OBJ-BROT"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Die Priester entweihen am Sabbat im Tempel den Sabbat und sind schuldlos.",
+                    "gsw": "D Prieschter entheiliged am Sabbat im Tämpel de Sabbat und sind ohni Schuld."
+                  },
+                  "icons": [
+                    "FIG-ORT-TEMPEL",
+                    "FIG-ZEICHEN-SABBAT"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Hier ist Grösseres als der Tempel.",
+                    "gsw": "Da isch öppis Grössers als de Tämpel."
+                  },
+                  "who": "FIG-JESUS"
+                },
+                {
+                  "a": {
+                    "de": "«Barmherzigkeit will ich und nicht Opfer.»",
+                    "gsw": "«Barmhärzigkeit wott ich und nöd Opfer.»"
+                  },
+                  "b": {
+                    "de": "Dann hättet ihr die Schuldlosen nicht verurteilt.",
+                    "gsw": "Dänn hetted ir di Schuldlose nöd verurteilt."
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-ERBARMEN",
+                    "FIG-ZEICHEN-OPFER"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Denn der Menschensohn ist Herr über den Sabbat.",
+                    "gsw": "Dänn de Mänschesohn isch Herr über de Sabbat."
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-SABBAT",
+                    "FIG-OBJ-KRONE"
+                  ],
+                  "tone": "new"
+                }
+              ]
+            }
+          }
         ]
       }
     }

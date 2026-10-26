@@ -13,94 +13,78 @@
       "n": 1,
       "reference": "MAT.15.32-MAT.15.34",
       "figures": [
-        "FIG-GRUPPE-JUENGER",
-        "FIG-JESUS"
-      ],
-      "objects": [
-        "FIG-ORT-WUESTE",
-        "FIG-OBJ-BROT"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-ERBARMEN"
-      ],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-GRUPPE-MENGE",
-            "FIG-ZEICHEN-TAGE",
-            "FIG-ZEICHEN-TAGE",
-            "FIG-ZEICHEN-TAGE"
-          ]
-        }
-      ],
-      "action_de": "Jesus sagt seinen Jüngern, er habe Erbarmen mit der Menge, die schon drei Tage bei ihm sei und nichts zu essen habe. Die Jünger fragen, woher sie in der Einöde so viele Brote nehmen sollen; sie haben sieben Brote und ein paar Fischlein.",
-      "stage": {
-        "count": {
-          "FIG-OBJ-BROT": 7
-        },
-        "at": {
-          "FIG-ZEICHEN-ERBARMEN": "FIG-JESUS"
-        },
-        "mood": {
-          "FIG-GRUPPE-JUENGER": "worried"
-        },
-        "floor_side": "right",
-        "x": {
-          "FIG-GRUPPE-JUENGER": 32,
-          "FIG-JESUS": 92
-        },
-        "floor_x": {
-          "FIG-OBJ-BROT": 118
-        }
-      }
-    },
-    {
-      "n": 2,
-      "reference": "MAT.15.35-MAT.15.38",
-      "figures": [
-        "FIG-GOTT",
         "FIG-JESUS",
         "FIG-GRUPPE-JUENGER",
         "FIG-GRUPPE-MENGE"
       ],
       "objects": [
-        "FIG-OBJ-BROT",
+        "FIG-ORT-WUESTE"
+      ],
+      "signs": [],
+      "speech": [
+        {
+          "from": "FIG-GRUPPE-JUENGER",
+          "to": "FIG-JESUS",
+          "icons": [
+            "FIG-ZEICHEN-FEHLT-BROT"
+          ],
+          "word": {
+            "de": "Woher sollen wir in der Einöde so viele Brote nehmen, um eine so grosse Menge satt zu machen?",
+            "gsw": "Vo wo söled mir i de Wüeschti so vil Broot nää, für e so grossi Mängi satt z mache?"
+          }
+        }
+      ],
+      "action_de": "Jesus sagt seinen Jüngern: Ich habe Erbarmen mit der Menge, denn schon drei Tage bleiben sie bei mir und haben nichts zu essen; die Jünger fragen: Woher sollen wir in der Einöde so viele Brote nehmen? – Sieben, und ein paar Fischlein.",
+      "keywords": {
+        "de": "Ich habe Erbarmen mit der Menge",
+        "gsw": "Ich ha Erbarme mit de Mängi"
+      },
+      "stage": {
+        "mood": {
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-JUENGER": "worried",
+          "FIG-GRUPPE-MENGE": "worried"
+        },
+        "x": {
+          "FIG-JESUS": 30,
+          "FIG-GRUPPE-JUENGER": 96,
+          "FIG-GRUPPE-MENGE": 158
+        }
+      }
+    },
+    {
+      "n": 2,
+      "reference": "MAT.15.35-MAT.15.39",
+      "figures": [
+        "FIG-JESUS",
+        "FIG-GRUPPE-JUENGER",
+        "FIG-GRUPPE-MENGE"
+      ],
+      "objects": [
+        "FIG-OBJ-BROTE-FISCHE",
         "FIG-OBJ-KORB"
       ],
       "signs": [
+        "FIG-ZEICHEN-BETEN",
         "FIG-ZEICHEN-SATT"
       ],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GOTT",
-          "icons": [
-            "FIG-ZEICHEN-BETEN",
-            "FIG-OBJ-BROT"
-          ]
-        }
-      ],
-      "action_de": "Jesus lässt die Menge sich lagern, nimmt die sieben Brote und die Fische, spricht das Dankgebet, bricht sie und gibt sie den Jüngern, die sie den Menschenmengen geben. Alle werden satt; sieben Körbe bleiben übrig. Es sind viertausend Männer, ohne Frauen und Kinder.",
+      "speech": [],
+      "action_de": "Er nimmt die sieben Brote und die Fische, spricht das Dankgebet, bricht sie und gibt sie den Jüngern, die Jünger aber der Menge; alle werden satt, sieben Körbe bleiben übrig, viertausend Männer ohne Frauen und Kinder; dann fährt er nach Magadan.",
+      "keywords": {
+        "de": "sieben Körbe voll",
+        "gsw": "sibe Chörb voll"
+      },
       "stage": {
-        "god_side": "right",
-        "floor_side": "left",
-        "count": {
-          "FIG-OBJ-KORB": 7
+        "hold": {
+          "FIG-JESUS": "FIG-OBJ-BROTE-FISCHE"
+        },
+        "signs_who": {
+          "FIG-ZEICHEN-BETEN": [
+            "FIG-JESUS"
+          ]
         },
         "at": {
           "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
-        },
-        "mood": {
-          "FIG-GRUPPE-MENGE": "smile"
-        },
-        "hold": {
-          "FIG-JESUS": "FIG-OBJ-BROT",
-          "FIG-GRUPPE-JUENGER": "FIG-OBJ-BROT"
-        },
-        "floor_x": {
-          "FIG-OBJ-KORB": 22
         },
         "arrows": [
           [
@@ -113,62 +97,37 @@
             "FIG-GRUPPE-MENGE",
             "act"
           ]
-        ]
-      }
-    },
-    {
-      "n": 3,
-      "reference": "MAT.15.39",
-      "figures": [
-        "FIG-GRUPPE-MENGE",
-        "FIG-JESUS"
-      ],
-      "objects": [
-        "FIG-OBJ-BOOT",
-        "FIG-ORT-SEE"
-      ],
-      "signs": [],
-      "speech": [],
-      "action_de": "Jesus entlässt die Menschenmengen, steigt ins Boot und kommt in das Gebiet von Magadan.",
-      "stage": {
-        "big_side": "right",
-        "in": {
-          "FIG-JESUS": "FIG-OBJ-BOOT"
-        },
-        "in_pos": {
-          "FIG-JESUS": [
-            0.5,
-            0.4
-          ]
+        ],
+        "mood": {
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-JUENGER": "smile",
+          "FIG-GRUPPE-MENGE": "delight"
         },
         "x": {
-          "FIG-GRUPPE-MENGE": 60
+          "FIG-JESUS": 30,
+          "FIG-GRUPPE-JUENGER": 92,
+          "FIG-GRUPPE-MENGE": 154
         },
-        "pose": {
-          "FIG-GRUPPE-MENGE": "away"
-        },
-        "mood": {
-          "FIG-GRUPPE-MENGE": "smile"
+        "floor_x": {
+          "FIG-OBJ-KORB": 124
         }
       }
     }
   ],
   "actions_de": [
-    "Jesus sagt seinen Jüngern, er habe Erbarmen mit der Menge, die schon drei Tage bei ihm sei und nichts zu essen habe. Die Jünger fragen, woher sie in der Einöde so viele Brote nehmen sollen; sie haben sieben Brote und ein paar Fischlein.",
-    "Jesus lässt die Menge sich lagern, nimmt die sieben Brote und die Fische, spricht das Dankgebet, bricht sie und gibt sie den Jüngern, die sie den Menschenmengen geben. Alle werden satt; sieben Körbe bleiben übrig. Es sind viertausend Männer, ohne Frauen und Kinder.",
-    "Jesus entlässt die Menschenmengen, steigt ins Boot und kommt in das Gebiet von Magadan."
+    "Jesus sagt seinen Jüngern: Ich habe Erbarmen mit der Menge, denn schon drei Tage bleiben sie bei mir und haben nichts zu essen; die Jünger fragen: Woher sollen wir in der Einöde so viele Brote nehmen? – Sieben, und ein paar Fischlein.",
+    "Er nimmt die sieben Brote und die Fische, spricht das Dankgebet, bricht sie und gibt sie den Jüngern, die Jünger aber der Menge; alle werden satt, sieben Körbe bleiben übrig, viertausend Männer ohne Frauen und Kinder; dann fährt er nach Magadan."
   ],
   "captions_de": [
-    "Erbarmen: Jesus hat Erbarmen (offene Hände mit rotem Herz) und sagt den Jüngern, die Menge sei seit drei Tagen da (Menge, drei kleine Sonnen). Am Boden sieben Brote.",
-    "Jesus → Jünger → Menge: Jesus hält das Brot und dankt Gott (Strahlenkranz; Blase: betende Hände, Brot); er gibt es den Jüngern, sie teilen es der Menge aus (zwei Pfeile; Brot in der Hand); alle werden satt (Schale mit Brot und grünem Haken); sieben Körbe bleiben übrig.",
-    "Weiter: Die Menschenmengen wenden sich zum Heimweg (Hinterkopf); Jesus fährt im Boot weiter."
+    "Erbarmen: Jesus hat Erbarmen mit der Menge (Merkwort); die Jünger fragen: «Woher sollen wir in der Einöde so viele Brote nehmen, um eine so grosse Menge satt zu machen?» (Fladenbrot mit rotem X).",
+    "Sieben Brote: Jesus dankt (gefaltete Hände) und gibt die Brote und Fische (Fladenbrot und Fisch, nicht gezählt) den Jüngern, die Jünger der Menge (Pfeile); alle werden satt (Schale mit Brot und grünem Haken); am Boden ein Korb für die Brocken."
   ],
-  "interpretation_note_de": "Die Einöde ([[MAT.15.33]]) zeigt das Zeichen Wüste. Die Zahlen (drei Tage, sieben Brote, sieben Körbe) erscheinen als Anzahl Zeichen, nicht als Ziffern; die viertausend Männer ([[MAT.15.38]]) nennt nur die Legende. Gott erscheint als Strahlenkranz; der Text sagt, Jesus «sprach das Dankgebet» ([[MAT.15.36]]). Magadan ([[MAT.15.39]]) ist nicht gezeichnet.",
+  "interpretation_note_de": "Zwei Felder nach «Erbarmen – Frage – Speisung – Überfluss» ([[MAT.15.32-MAT.15.39]]). Die Zahlen dieser zweiten Speisung (sieben Brote, sieben Körbe, viertausend Männer) bleiben getrennt von der ersten ([[MAT.14.13-MAT.14.21]]); das Bild zählt sie nicht.",
   "basis": [
     {
       "record": "TU-MAT-015-032-039",
       "field": "summary",
-      "fingerprint": "1f4ba869d52865a3"
+      "fingerprint": "e3b2feb6f56d1295"
     },
     {
       "record": "TRANS-MAT-015-001-039-DE-WORKING",
@@ -179,18 +138,12 @@
     {
       "record": "TRANS-MAT-015-001-039-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.15.35-MAT.15.38",
-      "fingerprint": "a02577aadecdbb44"
-    },
-    {
-      "record": "TRANS-MAT-015-001-039-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.15.39",
-      "fingerprint": "0f584d032ca096a3"
+      "reference": "MAT.15.35-MAT.15.39",
+      "fingerprint": "312609ef0bf682b8"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -490,6 +443,452 @@
           "Erbarmen: Jesus hat Erbarmen (rosa Herz mit Händen) und sagt den Jüngern, die Menge sei seit drei Tagen da (Menge, drei kleine Sonnen). Am Boden sieben Brote.",
           "Jesus → Jünger → Menge: Jesus hält das Brot und dankt Gott (Strahlenkranz; Blase: betende Hände, Brot); er gibt es den Jüngern, sie teilen es der Menge aus (zwei Pfeile; Brot in der Hand); alle werden satt (Schale mit Brot und grünem Haken); sieben Körbe bleiben übrig.",
           "Weiter: Die Menschenmengen wenden sich zum Heimweg (Hinterkopf); Jesus fährt im Boot weiter."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.15.32-MAT.15.34",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-WUESTE",
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ERBARMEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-ZEICHEN-TAGE",
+                  "FIG-ZEICHEN-TAGE",
+                  "FIG-ZEICHEN-TAGE"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt seinen Jüngern, er habe Erbarmen mit der Menge, die schon drei Tage bei ihm sei und nichts zu essen habe. Die Jünger fragen, woher sie in der Einöde so viele Brote nehmen sollen; sie haben sieben Brote und ein paar Fischlein.",
+            "stage": {
+              "count": {
+                "FIG-OBJ-BROT": 7
+              },
+              "at": {
+                "FIG-ZEICHEN-ERBARMEN": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "worried"
+              },
+              "floor_side": "right",
+              "x": {
+                "FIG-GRUPPE-JUENGER": 32,
+                "FIG-JESUS": 92
+              },
+              "floor_x": {
+                "FIG-OBJ-BROT": 118
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.15.35-MAT.15.38",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT",
+              "FIG-OBJ-KORB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SATT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-BETEN",
+                  "FIG-OBJ-BROT"
+                ]
+              }
+            ],
+            "action_de": "Jesus lässt die Menge sich lagern, nimmt die sieben Brote und die Fische, spricht das Dankgebet, bricht sie und gibt sie den Jüngern, die sie den Menschenmengen geben. Alle werden satt; sieben Körbe bleiben übrig. Es sind viertausend Männer, ohne Frauen und Kinder.",
+            "stage": {
+              "god_side": "right",
+              "floor_side": "left",
+              "count": {
+                "FIG-OBJ-KORB": 7
+              },
+              "at": {
+                "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "smile"
+              },
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROT",
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BROT"
+              },
+              "floor_x": {
+                "FIG-OBJ-KORB": 22
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-JUENGER",
+                  "act"
+                ],
+                [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.15.39",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Jesus entlässt die Menschenmengen, steigt ins Boot und kommt in das Gebiet von Magadan.",
+            "stage": {
+              "big_side": "right",
+              "in": {
+                "FIG-JESUS": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.5,
+                  0.4
+                ]
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 60
+              },
+              "pose": {
+                "FIG-GRUPPE-MENGE": "away"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "smile"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus sagt seinen Jüngern, er habe Erbarmen mit der Menge, die schon drei Tage bei ihm sei und nichts zu essen habe. Die Jünger fragen, woher sie in der Einöde so viele Brote nehmen sollen; sie haben sieben Brote und ein paar Fischlein.",
+          "Jesus lässt die Menge sich lagern, nimmt die sieben Brote und die Fische, spricht das Dankgebet, bricht sie und gibt sie den Jüngern, die sie den Menschenmengen geben. Alle werden satt; sieben Körbe bleiben übrig. Es sind viertausend Männer, ohne Frauen und Kinder.",
+          "Jesus entlässt die Menschenmengen, steigt ins Boot und kommt in das Gebiet von Magadan."
+        ],
+        "captions_de": [
+          "Erbarmen: Jesus hat Erbarmen (offene Hände mit rotem Herz) und sagt den Jüngern, die Menge sei seit drei Tagen da (Menge, drei kleine Sonnen). Am Boden sieben Brote.",
+          "Jesus → Jünger → Menge: Jesus hält das Brot und dankt Gott (Strahlenkranz; Blase: betende Hände, Brot); er gibt es den Jüngern, sie teilen es der Menge aus (zwei Pfeile; Brot in der Hand); alle werden satt (Schale mit Brot und grünem Haken); sieben Körbe bleiben übrig.",
+          "Weiter: Die Menschenmengen wenden sich zum Heimweg (Hinterkopf); Jesus fährt im Boot weiter."
+        ],
+        "interpretation_note_de": "Die Einöde ([[MAT.15.33]]) zeigt das Zeichen Wüste. Die Zahlen (drei Tage, sieben Brote, sieben Körbe) erscheinen als Anzahl Zeichen, nicht als Ziffern; die viertausend Männer ([[MAT.15.38]]) nennt nur die Legende. Gott erscheint als Strahlenkranz; der Text sagt, Jesus «sprach das Dankgebet» ([[MAT.15.36]]). Magadan ([[MAT.15.39]]) ist nicht gezeichnet.",
+        "basis": [
+          {
+            "record": "TU-MAT-015-032-039",
+            "field": "summary",
+            "fingerprint": "1f4ba869d52865a3"
+          },
+          {
+            "record": "TRANS-MAT-015-001-039-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.15.32-MAT.15.34",
+            "fingerprint": "0692572331e72836"
+          },
+          {
+            "record": "TRANS-MAT-015-001-039-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.15.35-MAT.15.38",
+            "fingerprint": "a02577aadecdbb44"
+          },
+          {
+            "record": "TRANS-MAT-015-001-039-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.15.39",
+            "fingerprint": "0f584d032ca096a3"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-015-032-039",
+            "field": "summary",
+            "fingerprint": "1f4ba869d52865a3"
+          },
+          {
+            "record": "TRANS-MAT-015-001-039-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.15.32-MAT.15.34",
+            "fingerprint": "0692572331e72836"
+          },
+          {
+            "record": "TRANS-MAT-015-001-039-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.15.35-MAT.15.39",
+            "fingerprint": "312609ef0bf682b8"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.15.32-MAT.15.34",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-WUESTE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-ERBARMEN",
+                  "FIG-ZEICHEN-TAGE"
+                ],
+                "word": {
+                  "de": "Ich habe Erbarmen mit der Menge.",
+                  "gsw": "Ich ha Erbarme mit de Mängi."
+                }
+              },
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-FEHLT-BROT"
+                ],
+                "word": {
+                  "de": "Woher sollen wir in der Einöde so viele Brote nehmen?",
+                  "gsw": "Vo wo söled mir i de Wüeschti so vil Broot nää?"
+                }
+              }
+            ],
+            "action_de": "Jesus sagt seinen Jüngern: Ich habe Erbarmen mit der Menge, denn schon drei Tage bleiben sie bei mir und haben nichts zu essen; die Jünger fragen: Woher sollen wir in der Einöde so viele Brote nehmen? – Sieben, und ein paar Fischlein.",
+            "keywords": {
+              "de": "Ich habe Erbarmen mit der Menge",
+              "gsw": "Ich ha Erbarme mit de Mängi"
+            },
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "worried",
+                "FIG-GRUPPE-MENGE": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-JUENGER": 96,
+                "FIG-GRUPPE-MENGE": 158
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.15.35-MAT.15.39",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT",
+              "FIG-OBJ-KORB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-BETEN",
+              "FIG-ZEICHEN-SATT"
+            ],
+            "speech": [],
+            "action_de": "Er nimmt die sieben Brote und die Fische, spricht das Dankgebet, bricht sie und gibt sie den Jüngern, die Jünger aber der Menge; alle werden satt, sieben Körbe bleiben übrig, viertausend Männer ohne Frauen und Kinder; dann fährt er nach Magadan.",
+            "keywords": {
+              "de": "sieben Körbe voll",
+              "gsw": "sibe Chörb voll"
+            },
+            "stage": {
+              "count": {
+                "FIG-OBJ-BROT": 7
+              },
+              "at": {
+                "FIG-ZEICHEN-BETEN": "FIG-JESUS",
+                "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-JUENGER",
+                  "act"
+                ],
+                [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "smile",
+                "FIG-GRUPPE-MENGE": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-JUENGER": 92,
+                "FIG-GRUPPE-MENGE": 154
+              },
+              "floor_x": {
+                "FIG-OBJ-KORB": 124
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Erbarmen: Jesus sagt: «Ich habe Erbarmen mit der Menge» (offene Hände mit Herz; kleine Sonnen für drei Tage); die Jünger fragen: «Woher sollen wir in der Einöde so viele Brote nehmen?» (Fladenbrot mit rotem X).",
+          "Sieben Brote: Jesus dankt (gefaltete Hände) und gibt die sieben Brote (sieben Fladenbrote) den Jüngern, die Jünger der Menge (Pfeile); alle werden satt (Schale mit Brot und grünem Haken); am Boden ein Korb für die Brocken."
+        ],
+        "interpretation_note_de": "Zwei Felder nach «Erbarmen – Frage – Speisung – Überfluss» ([[MAT.15.32-MAT.15.39]]). Die Zahlen dieser zweiten Speisung (sieben Brote, sieben Körbe, viertausend Männer) bleiben getrennt von der ersten ([[MAT.14.13-MAT.14.21]]); das Bild zählt nur die sieben Brote."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.15.32-MAT.15.34",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-WUESTE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-FEHLT-BROT"
+                ],
+                "word": {
+                  "de": "Woher sollen wir in der Einöde so viele Brote nehmen, um eine so grosse Menge satt zu machen?",
+                  "gsw": "Vo wo söled mir i de Wüeschti so vil Broot nää, für e so grossi Mängi satt z mache?"
+                }
+              }
+            ],
+            "action_de": "Jesus sagt seinen Jüngern: Ich habe Erbarmen mit der Menge, denn schon drei Tage bleiben sie bei mir und haben nichts zu essen; die Jünger fragen: Woher sollen wir in der Einöde so viele Brote nehmen? – Sieben, und ein paar Fischlein.",
+            "keywords": {
+              "de": "Ich habe Erbarmen mit der Menge",
+              "gsw": "Ich ha Erbarme mit de Mängi"
+            },
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "worried",
+                "FIG-GRUPPE-MENGE": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-JUENGER": 96,
+                "FIG-GRUPPE-MENGE": 158
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.15.35-MAT.15.39",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROTE-FISCHE",
+              "FIG-OBJ-KORB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-BETEN",
+              "FIG-ZEICHEN-SATT"
+            ],
+            "speech": [],
+            "action_de": "Er nimmt die sieben Brote und die Fische, spricht das Dankgebet, bricht sie und gibt sie den Jüngern, die Jünger aber der Menge; alle werden satt, sieben Körbe bleiben übrig, viertausend Männer ohne Frauen und Kinder; dann fährt er nach Magadan.",
+            "keywords": {
+              "de": "sieben Körbe voll",
+              "gsw": "sibe Chörb voll"
+            },
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROTE-FISCHE"
+              },
+              "at": {
+                "FIG-ZEICHEN-BETEN": "FIG-JESUS",
+                "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-JUENGER",
+                  "act"
+                ],
+                [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "smile",
+                "FIG-GRUPPE-MENGE": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-JUENGER": 92,
+                "FIG-GRUPPE-MENGE": 154
+              },
+              "floor_x": {
+                "FIG-OBJ-KORB": 124
+              }
+            }
+          }
         ]
       }
     }
