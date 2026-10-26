@@ -242,6 +242,7 @@ CAPTIONS = {'BIBLE': [('Sinai: Gott (Strahlenkranz) spricht und gibt die Tafeln;
 # Bildaufträge aus bildauftraege_daten/*.json (alle übersetzten Bücher, ab 2026-10-17; Aufbau siehe bilder_auto.py)
 from bilder_auto import load_briefs as _load_json  # noqa: E402
 
+_N_HARD = len(BRIEFS)  # Aufträge oben im Werkzeug (Pilot Joh 2, obere Ebenen)
 for _b in _load_json():
     _panels = []
     for _p in _b["panels"]:
@@ -261,6 +262,10 @@ for _b in _load_json():
     BRIEFS.append({"suffix": _b["suffix"], "level": _b["level"], "reference": _b["reference"], "target": _b["target"],
                    "translation": _b.get("translation"), "panels": _panels, "note": _b["note_de"], "note_gsw": _b["note_gsw"],
                    "tags": _b.get("tags", []), "date": _b.get("date", "2026-10-17")})
+# Ein Auftrag in bildauftraege_daten ersetzt den gleichnamigen älteren Auftrag oben (z. B. Joh 2 nach «Struktur zuerst»,
+# 2026-10-26); CAPTIONS und ACTIONS_GSW hat die Schleife bereits überschrieben bzw. ergänzt.
+_JSON_SFX = {_b["suffix"] for _b in BRIEFS[_N_HARD:]}
+BRIEFS[:] = [_b for _i, _b in enumerate(BRIEFS) if _i >= _N_HARD or _b["suffix"] not in _JSON_SFX]
 
 
 # Überarbeitung der oberen Ebenen (2026-10-17): Erzeltern, Landnahme und Rückkehr, Feuerzungen und Rom, weitere Briefe, Propheten im Auftrag Gottes

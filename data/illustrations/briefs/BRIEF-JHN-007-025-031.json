@@ -23,27 +23,95 @@
       "speech": [
         {
           "from": "FIG-GRUPPE-MENGE",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
+          "to": "FIG-GRUPPE-MENGE",
+          "icons": [],
+          "word": {
+            "de": "Von diesem wissen wir, woher er ist; wenn aber der Christus kommt, weiss niemand, woher er ist.",
+            "gsw": "Vo däm wüssed mer, wohär er isch; wänn aber de Christus chunnt, weiss niemer, wohär er isch."
+          }
         }
       ],
-      "action_de": "Leute aus Jerusalem wundern sich, dass Jesus offen redet, und fragen, ob er der Christus sei; doch von ihm wisse man, woher er sei.",
+      "action_de": "Leute aus Jerusalem sagen: «Ist das nicht der, den sie zu töten suchen? … Aber von diesem wissen wir, woher er ist; wenn aber der Christus kommt, weiss niemand, woher er ist.»",
+      "keywords": {
+        "de": "Und siehe, er redet offen",
+        "gsw": "Und lueg, er redt offe"
+      },
       "stage": {
+        "before": true,
+        "back_side": "right",
         "mood": {
-          "FIG-GRUPPE-MENGE": "calm"
+          "FIG-GRUPPE-MENGE": "question",
+          "FIG-JESUS": "calm"
+        },
+        "x": {
+          "FIG-GRUPPE-MENGE": 50,
+          "FIG-JESUS": 140
         }
       }
     },
     {
       "n": 2,
-      "reference": "JHN.7.28-JHN.7.31",
+      "reference": "JHN.7.28-JHN.7.29",
+      "figures": [],
+      "objects": [],
+      "signs": [],
+      "speech": [],
+      "action_de": "Jesus ruft im Tempel: «Mich kennt ihr, und ihr wisst, woher ich bin! … der mich gesandt hat, ist wahrhaftig; ihn kennt ihr nicht. Ich kenne ihn, denn ich bin von ihm, und er hat mich gesandt.»",
+      "keywords": {
+        "de": "Ich kenne ihn, denn ich bin von ihm",
+        "gsw": "Ich känne en, dänn ich bi vo ihm"
+      },
+      "diagram": {
+        "visual": "columns",
+        "span": 2,
+        "speaker": "FIG-JESUS",
+        "arrow": false,
+        "title": {
+          "de": "Mich kennt ihr, und ihr wisst, woher ich bin!",
+          "gsw": "Mich känned ir, und ir wüssed, wohär ich bi!"
+        },
+        "head": [
+          {
+            "de": "ihr",
+            "gsw": "ir"
+          },
+          {
+            "de": "ich",
+            "gsw": "ich"
+          }
+        ],
+        "rows": [
+          [
+            {
+              "a": {
+                "de": "Von mir selbst aus bin ich nicht gekommen, sondern der mich gesandt hat, ist wahrhaftig; ihn kennt ihr nicht.",
+                "gsw": "Vo mir sälber uus bin ich nöd choo, sondern dä, wo mich gschickt hät, isch wahrhaftig; dä känned ir nöd."
+              },
+              "icons": [
+                "FIG-GOTT",
+                "FIG-ZEICHEN-NICHT"
+              ]
+            },
+            {
+              "a": {
+                "de": "Ich kenne ihn, denn ich bin von ihm, und er hat mich gesandt.",
+                "gsw": "Ich känne en, dänn ich bi vo ihm, und er hät mich gschickt."
+              },
+              "icons": [
+                "FIG-GOTT",
+                "FIG-JESUS"
+              ]
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "n": 3,
+      "reference": "JHN.7.30-JHN.7.31",
       "figures": [
-        "FIG-GOTT",
-        "FIG-JESUS",
-        "FIG-GRUPPE-MENGE"
+        "FIG-GRUPPE-MENGE",
+        "FIG-JESUS"
       ],
       "objects": [],
       "signs": [
@@ -52,62 +120,54 @@
       ],
       "speech": [
         {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-GOTT",
-            "FIG-JESUS"
-          ]
+          "from": "FIG-GRUPPE-MENGE",
+          "to": "FIG-JESUS",
+          "icons": [],
+          "word": {
+            "de": "Wird der Christus, wenn er kommt, etwa mehr Zeichen tun, als dieser getan hat?",
+            "gsw": "Wird de Christus, wänn er chunnt, öppe meh Zeiche mache, als dä gmacht hät?"
+          }
         }
       ],
-      "action_de": "Jesus ruft im Tempel: Der mich gesandt hat, ist wahrhaftig; ich kenne ihn, denn ich bin von ihm. Niemand legt Hand an ihn, denn seine Stunde ist noch nicht gekommen; viele aus der Menge glauben an ihn.",
+      "action_de": "Sie suchen ihn festzunehmen, doch niemand legt die Hand an ihn, weil seine Stunde noch nicht gekommen war; viele aus der Menge aber glauben an ihn: «Wird der Christus, wenn er kommt, etwa mehr Zeichen tun, als dieser getan hat?»",
+      "keywords": {
+        "de": "weil seine Stunde noch nicht gekommen war",
+        "gsw": "wil sini Stund no nöd choo isch"
+      },
       "stage": {
-        "god_side": "right",
-        "arrows": [
-          [
-            "FIG-GOTT",
-            "FIG-JESUS",
-            "act"
-          ],
-          [
-            "FIG-JESUS",
-            "FIG-GRUPPE-MENGE",
-            "act"
-          ]
-        ],
-        "at": {
+        "beside": {
           "FIG-ZEICHEN-STUNDE": "FIG-JESUS"
         },
+        "at": {
+          "FIG-ZEICHEN-GLAUBEN": "FIG-GRUPPE-MENGE"
+        },
         "mood": {
-          "FIG-GRUPPE-MENGE": "smile",
+          "FIG-GRUPPE-MENGE": "delight",
           "FIG-JESUS": "calm"
         },
-        "signs_who": {
-          "FIG-ZEICHEN-GLAUBEN": [
-            "FIG-GRUPPE-MENGE"
-          ]
-        },
         "x": {
-          "FIG-JESUS": 52,
-          "FIG-GRUPPE-MENGE": 140
+          "FIG-GRUPPE-MENGE": 50,
+          "FIG-JESUS": 140
         }
       }
     }
   ],
   "actions_de": [
-    "Leute aus Jerusalem wundern sich, dass Jesus offen redet, und fragen, ob er der Christus sei; doch von ihm wisse man, woher er sei.",
-    "Jesus ruft im Tempel: Der mich gesandt hat, ist wahrhaftig; ich kenne ihn, denn ich bin von ihm. Niemand legt Hand an ihn, denn seine Stunde ist noch nicht gekommen; viele aus der Menge glauben an ihn."
+    "Leute aus Jerusalem sagen: «Ist das nicht der, den sie zu töten suchen? … Aber von diesem wissen wir, woher er ist; wenn aber der Christus kommt, weiss niemand, woher er ist.»",
+    "Jesus ruft im Tempel: «Mich kennt ihr, und ihr wisst, woher ich bin! … der mich gesandt hat, ist wahrhaftig; ihn kennt ihr nicht. Ich kenne ihn, denn ich bin von ihm, und er hat mich gesandt.»",
+    "Sie suchen ihn festzunehmen, doch niemand legt die Hand an ihn, weil seine Stunde noch nicht gekommen war; viele aus der Menge aber glauben an ihn: «Wird der Christus, wenn er kommt, etwa mehr Zeichen tun, als dieser getan hat?»"
   ],
   "captions_de": [
-    "Ist er der Christus? Leute aus Jerusalem fragen sich, wer Jesus ist (Jesus, Fragezeichen).",
-    "Gott → Jesus → Glaube: Jesus ruft, Gott habe ihn gesandt (Strahlenkranz, Pfeil); niemand ergreift ihn, denn seine Stunde ist noch nicht da (Sanduhr); viele glauben an ihn (Pfeil zu den Leuten, Herz)."
+    "Woher? Leute aus Jerusalem sagen untereinander: «Von diesem wissen wir, woher er ist; wenn aber der Christus kommt, weiss niemand, woher er ist.» (Christus, fragen); Jesus redet offen im Tempel.",
+    "Kennen ↔ nicht kennen (Spalten, Bild Jesus, Titel «Mich kennt ihr …»): links: der mich gesandt hat, ist wahrhaftig; ihn kennt ihr nicht (Strahlenkranz, Verbotszeichen); rechts, hervorgehoben: Ich kenne ihn, denn ich bin von ihm, und er hat mich gesandt (Strahlenkranz, Jesus).",
+    "Noch nicht seine Stunde: Niemand legt Hand an Jesus (Stunde); viele aus der Menge glauben (glauben) und fragen: «Wird der Christus, wenn er kommt, etwa mehr Zeichen tun, als dieser getan hat?» (Christus, Stern)."
   ],
-  "interpretation_note_de": "Dass einige Jesus festnehmen wollen ([[JHN.7.30]]), zeigt das Bild nicht als Handlung, nur mit der Sanduhr: Seine Stunde ist noch nicht gekommen. Das Herz steht für die vielen, die glauben ([[JHN.7.31]]), nicht für die ganze Menge.",
+  "interpretation_note_de": "Drei Felder nach dem Ablauf «Rätseln über die Herkunft – Ruf Jesu – kein Zugriff, Glaube vieler» ([[JHN.7.25-JHN.7.31]]); in der Mitte der Gegensatz «ihr kennt ihn nicht ↔ ich kenne ihn» (Jesu Seite hervorgehoben). Wer ihn festnehmen will, sagt der Text nicht genauer («sie»); das Bild zeigt nur, dass niemand Hand an ihn legt (Band). Der Gesandte Gottes: Gott als Strahlenkranz (Deutung).",
   "basis": [
     {
       "record": "TU-JHN-007-025-031",
       "field": "summary",
-      "fingerprint": "8fb310fb9388d76c"
+      "fingerprint": "2b45311e5521aaa5"
     },
     {
       "record": "TRANS-JHN-007-001-053-DE-WORKING",
@@ -118,12 +178,18 @@
     {
       "record": "TRANS-JHN-007-001-053-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.7.28-JHN.7.31",
-      "fingerprint": "1c8bb73ceeb45cf9"
+      "reference": "JHN.7.28-JHN.7.29",
+      "fingerprint": "598503ca38d68545"
+    },
+    {
+      "record": "TRANS-JHN-007-001-053-DE-WORKING",
+      "field": "text_by_reference",
+      "reference": "JHN.7.30-JHN.7.31",
+      "fingerprint": "cf1b6ff426ff1c4d"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -287,6 +353,152 @@
           "Ist er der Christus? Leute aus Jerusalem fragen sich, wer Jesus ist (Jesus, Fragezeichen).",
           "Seine Stunde ist noch nicht da: Jesus ruft, Gott habe ihn gesandt (Strahlenkranz); niemand ergreift ihn (Sanduhr); viele glauben (Herz)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-JHN-007-025-031",
+            "field": "summary",
+            "fingerprint": "8fb310fb9388d76c"
+          },
+          {
+            "record": "TRANS-JHN-007-001-053-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.7.25-JHN.7.27",
+            "fingerprint": "8c424f32eef7db06"
+          },
+          {
+            "record": "TRANS-JHN-007-001-053-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.7.28-JHN.7.31",
+            "fingerprint": "1c8bb73ceeb45cf9"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.7.25-JHN.7.27",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Leute aus Jerusalem wundern sich, dass Jesus offen redet, und fragen, ob er der Christus sei; doch von ihm wisse man, woher er sei.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.7.28-JHN.7.31",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-STUNDE",
+              "FIG-ZEICHEN-GLAUBEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-GOTT",
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Jesus ruft im Tempel: Der mich gesandt hat, ist wahrhaftig; ich kenne ihn, denn ich bin von ihm. Niemand legt Hand an ihn, denn seine Stunde ist noch nicht gekommen; viele aus der Menge glauben an ihn.",
+            "stage": {
+              "god_side": "right",
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-JESUS",
+                  "act"
+                ],
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-STUNDE": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "smile",
+                "FIG-JESUS": "calm"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-GLAUBEN": [
+                  "FIG-GRUPPE-MENGE"
+                ]
+              },
+              "x": {
+                "FIG-JESUS": 52,
+                "FIG-GRUPPE-MENGE": 140
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Leute aus Jerusalem wundern sich, dass Jesus offen redet, und fragen, ob er der Christus sei; doch von ihm wisse man, woher er sei.",
+          "Jesus ruft im Tempel: Der mich gesandt hat, ist wahrhaftig; ich kenne ihn, denn ich bin von ihm. Niemand legt Hand an ihn, denn seine Stunde ist noch nicht gekommen; viele aus der Menge glauben an ihn."
+        ],
+        "captions_de": [
+          "Ist er der Christus? Leute aus Jerusalem fragen sich, wer Jesus ist (Jesus, Fragezeichen).",
+          "Gott → Jesus → Glaube: Jesus ruft, Gott habe ihn gesandt (Strahlenkranz, Pfeil); niemand ergreift ihn, denn seine Stunde ist noch nicht da (Sanduhr); viele glauben an ihn (Pfeil zu den Leuten, Herz)."
+        ],
+        "interpretation_note_de": "Dass einige Jesus festnehmen wollen ([[JHN.7.30]]), zeigt das Bild nicht als Handlung, nur mit der Sanduhr: Seine Stunde ist noch nicht gekommen. Das Herz steht für die vielen, die glauben ([[JHN.7.31]]), nicht für die ganze Menge.",
+        "basis": [
+          {
+            "record": "TU-JHN-007-025-031",
+            "field": "summary",
+            "fingerprint": "2b45311e5521aaa5"
+          },
+          {
+            "record": "TRANS-JHN-007-001-053-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.7.25-JHN.7.27",
+            "fingerprint": "8c424f32eef7db06"
+          },
+          {
+            "record": "TRANS-JHN-007-001-053-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.7.28-JHN.7.31",
+            "fingerprint": "1c8bb73ceeb45cf9"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

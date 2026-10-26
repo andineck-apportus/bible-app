@@ -21,36 +21,32 @@
         "FIG-OBJ-MATTE"
       ],
       "signs": [
-        "FIG-ZEICHEN-HEILEN"
+        "FIG-ZEICHEN-SABBAT"
       ],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-ROLLE-KRANKER",
-          "icons": [
-            "FIG-OBJ-MATTE",
-            "FIG-ZEICHEN-BRINGEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Steh auf, nimm deine Matte und geh umher!",
+            "gsw": "Stand uf, nimm dini Matte und lauf umenand!"
+          }
         }
       ],
-      "action_de": "Am Teich Betesda heilt Jesus einen Mann, der achtunddreissig Jahre krank war: Steh auf, nimm deine Matte und geh umher!",
+      "action_de": "Jesus sagt zu dem Kranken: «Steh auf, nimm deine Matte und geh umher!» Sofort wird der Mensch gesund, nimmt seine Matte und geht umher; es ist Sabbat.",
+      "keywords": {
+        "de": "Es war aber Sabbat an jenem Tag",
+        "gsw": "Es isch aber Sabbat gsii a däm Tag"
+      },
       "stage": {
         "hold": {
           "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
         },
         "mood": {
+          "FIG-JESUS": "calm",
           "FIG-ROLLE-KRANKER": "delight"
         },
-        "beside": {
-          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
-        },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-ROLLE-KRANKER",
-            "act"
-          ]
-        ],
         "x": {
           "FIG-JESUS": 50,
           "FIG-ROLLE-KRANKER": 136
@@ -61,32 +57,35 @@
       "n": 2,
       "reference": "JHN.5.10-JHN.5.18",
       "figures": [
-        "FIG-GRUPPE-MENGE",
-        "FIG-ROLLE-KRANKER"
+        "FIG-JESUS",
+        "FIG-GRUPPE-MENGE"
       ],
-      "objects": [
-        "FIG-OBJ-MATTE"
-      ],
+      "objects": [],
       "signs": [],
       "speech": [
         {
-          "from": "FIG-GRUPPE-MENGE",
-          "to": "FIG-ROLLE-KRANKER",
-          "icons": [
-            "FIG-ZEICHEN-SABBAT",
-            "FIG-OBJ-MATTE",
-            "FIG-ZEICHEN-NEIN"
-          ]
+          "from": "FIG-JESUS",
+          "to": "FIG-GRUPPE-MENGE",
+          "icons": [],
+          "word": {
+            "de": "Mein Vater wirkt bis jetzt, und auch ich wirke.",
+            "gsw": "Min Vatter wirkt bis jetzt, und au ich wirke."
+          }
         }
       ],
-      "action_de": "Weil Sabbat ist, werfen die Juden dem Geheilten vor, dass er die Matte trägt, und verfolgen Jesus.",
+      "action_de": "Die Juden verfolgen Jesus, weil er dies am Sabbat tat; er antwortet: «Mein Vater wirkt bis jetzt, und auch ich wirke.» Darum suchen sie umso mehr, ihn zu töten.",
+      "keywords": {
+        "de": "Deshalb nun suchten die Juden umso mehr, ihn zu töten",
+        "gsw": "Drum händ d Jude dänn no meh gsuecht, en z töte"
+      },
       "stage": {
-        "hold": {
-          "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
-        },
         "mood": {
-          "FIG-GRUPPE-MENGE": "earnest",
-          "FIG-ROLLE-KRANKER": "worried"
+          "FIG-JESUS": "earnest",
+          "FIG-GRUPPE-MENGE": "angry"
+        },
+        "x": {
+          "FIG-JESUS": 50,
+          "FIG-GRUPPE-MENGE": 136
         }
       }
     },
@@ -94,47 +93,35 @@
       "n": 3,
       "reference": "JHN.5.19-JHN.5.30",
       "figures": [
-        "FIG-GOTT",
-        "FIG-GRUPPE-MENGE",
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-GRUPPE-MENGE"
       ],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-LIEBE"
-      ],
+      "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-ZEICHEN-HOEREN",
-            "FIG-ZEICHEN-GLAUBEN",
-            "FIG-ZEICHEN-LEBEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Wer mein Wort hört und dem glaubt, der mich gesandt hat, hat ewiges Leben.",
+            "gsw": "Wer mis Wort ghört und däm glaubt, wo mich gschickt hät, hät ewigs Läbe."
+          }
         }
       ],
-      "action_de": "Der Sohn tut, was er den Vater tun sieht; der Vater liebt ihn. Wer sein Wort hört und glaubt, hat ewiges Leben.",
+      "action_de": "Jesus sagt: «Wer mein Wort hört und dem glaubt, der mich gesandt hat, hat ewiges Leben … er ist aus dem Tod in das Leben hinübergegangen.»",
+      "keywords": {
+        "de": "aus dem Tod in das Leben hinübergegangen",
+        "gsw": "vom Tod is Läbe übere gange"
+      },
       "stage": {
-        "god_side": "left",
-        "at": {
-          "FIG-ZEICHEN-LIEBE": "FIG-GOTT"
-        },
-        "arrows": [
-          [
-            "FIG-GOTT",
-            "FIG-JESUS",
-            "act"
-          ]
-        ],
         "mood": {
+          "FIG-JESUS": "calm",
           "FIG-GRUPPE-MENGE": "pensive"
         },
         "x": {
-          "FIG-GRUPPE-MENGE": 50,
-          "FIG-JESUS": 140
-        },
-        "signs_who": {
-          "FIG-ZEICHEN-LIEBE": []
+          "FIG-JESUS": 50,
+          "FIG-GRUPPE-MENGE": 136
         }
       }
     },
@@ -151,44 +138,52 @@
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-JOHANNES-TAEUFER",
-            "FIG-ZEICHEN-STERN",
-            "FIG-MOSE",
-            "FIG-OBJ-SCHRIFTROLLE"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Ihr erforscht die Schriften; und gerade sie sind es, die über mich Zeugnis ablegen.",
+            "gsw": "Ir erforsched d Schrifte; und grad si sind s, wo über mich Zügnis ablegged."
+          }
         }
       ],
-      "action_de": "Für Jesus zeugen Johannes, die Werke, der Vater und die Schriften; Mose hat über ihn geschrieben.",
+      "action_de": "Jesus nennt seine Zeugen – Johannes, die Werke, den Vater und die Schriften – und sagt: «Wenn ihr Mose glauben würdet, würdet ihr mir glauben; denn über mich hat jener geschrieben.»",
+      "keywords": {
+        "de": "denn über mich hat jener geschrieben",
+        "gsw": "dänn über mich hät dä gschribe"
+      },
       "stage": {
         "mood": {
+          "FIG-JESUS": "earnest",
           "FIG-GRUPPE-MENGE": "pensive"
+        },
+        "x": {
+          "FIG-JESUS": 50,
+          "FIG-GRUPPE-MENGE": 136
         }
       }
     }
   ],
   "actions_de": [
-    "Am Teich Betesda heilt Jesus einen Mann, der achtunddreissig Jahre krank war: Steh auf, nimm deine Matte und geh umher!",
-    "Weil Sabbat ist, werfen die Juden dem Geheilten vor, dass er die Matte trägt, und verfolgen Jesus.",
-    "Der Sohn tut, was er den Vater tun sieht; der Vater liebt ihn. Wer sein Wort hört und glaubt, hat ewiges Leben.",
-    "Für Jesus zeugen Johannes, die Werke, der Vater und die Schriften; Mose hat über ihn geschrieben."
+    "Jesus sagt zu dem Kranken: «Steh auf, nimm deine Matte und geh umher!» Sofort wird der Mensch gesund, nimmt seine Matte und geht umher; es ist Sabbat.",
+    "Die Juden verfolgen Jesus, weil er dies am Sabbat tat; er antwortet: «Mein Vater wirkt bis jetzt, und auch ich wirke.» Darum suchen sie umso mehr, ihn zu töten.",
+    "Jesus sagt: «Wer mein Wort hört und dem glaubt, der mich gesandt hat, hat ewiges Leben … er ist aus dem Tod in das Leben hinübergegangen.»",
+    "Jesus nennt seine Zeugen – Johannes, die Werke, den Vater und die Schriften – und sagt: «Wenn ihr Mose glauben würdet, würdet ihr mir glauben; denn über mich hat jener geschrieben.»"
   ],
   "captions_de": [
-    "Wort Jesu → Heilung: Jesus heilt den Kranken (Pfeil zu ihm, Hand mit Licht); er nimmt die Matte und geht (Matte, Pfeil).",
-    "Sabbat: Die Leute sagen: Am Sabbat keine Matte tragen (Sabbat, Matte, rotes X).",
-    "Vater und Sohn: Gott (Strahlenkranz, Herz) zeigt dem Sohn alles (Pfeil); wer hört und glaubt (Ohr, Herz), lebt (Keimling mit Unendlichzeichen).",
-    "Zeugen: Johannes und die Werke (Johannes, Stern), Mose und die Schrift (Mose, Rolle) bezeugen Jesus."
+    "Geheilt: Am Teich mit den Säulenhallen sagt Jesus: «Steh auf, nimm deine Matte und geh umher!»; der Geheilte steht mit seiner Matte (gesund); Sabbat (Sabbat).",
+    "Mein Vater wirkt: Jesus sagt zu den Juden: «Mein Vater wirkt bis jetzt, und auch ich wirke.» (Strahlenkranz, Kraft); die Juden sind zornig; das Band sagt, dass sie ihn töten wollen (töten).",
+    "Ewiges Leben: Jesus spricht zur Menge: «Wer mein Wort hört und dem glaubt, der mich gesandt hat, hat ewiges Leben.» (hören, Leben).",
+    "Die Zeugen: Jesus spricht zur Menge: «Ihr erforscht die Schriften; und gerade sie sind es, die über mich Zeugnis ablegen.» (Schriftrolle, zeigen); im Band: Mose hat über mich geschrieben."
   ],
-  "interpretation_note_de": "Je ein Feld aus den vier Abschnitten des Kapitels; Einzelheiten dort. «Die Juden» erscheinen als neutrale Menge.",
+  "interpretation_note_de": "Vier Comic-Szenen, eine je Abschnitt ([[JHN.5.1-JHN.5.47]]): die Heilung am Sabbat, der Konflikt «Mein Vater wirkt bis jetzt» mit der Tötungsabsicht, das Wort vom ewigen Leben, die Zeugen (im Band: Mose hat über mich geschrieben). Der Vater ist als Strahlenkranz gezeichnet. «Die Juden» sind als neutrale Gruppe ohne Merkmale einer Volksgruppe gezeichnet.",
   "basis": [
     {
       "record": "SUM-CH-JHN-005",
       "field": "summary",
-      "fingerprint": "e06ad50aea092fd1"
+      "fingerprint": "55ab1a11bc059610"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -520,6 +515,378 @@
           "Sabbat: Die Leute sagen: Am Sabbat keine Matte tragen (Sabbat, Matte, rotes X).",
           "Vater und Sohn: Gott (Strahlenkranz, Herzen) zeigt dem Sohn alles (Pfeil); wer hört und glaubt (Ohr, Herz), lebt (Baum im Ring).",
           "Zeugen: Johannes und die Werke (Johannes, Stern), Mose und die Schrift (Mose, Rolle) bezeugen Jesus."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-JHN-005",
+            "field": "summary",
+            "fingerprint": "e06ad50aea092fd1"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.5.1-JHN.5.9",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-KRANKER"
+            ],
+            "objects": [
+              "FIG-ORT-TEICH",
+              "FIG-OBJ-MATTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-KRANKER",
+                "icons": [
+                  "FIG-OBJ-MATTE",
+                  "FIG-ZEICHEN-BRINGEN"
+                ]
+              }
+            ],
+            "action_de": "Am Teich Betesda heilt Jesus einen Mann, der achtunddreissig Jahre krank war: Steh auf, nimm deine Matte und geh umher!",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
+              },
+              "mood": {
+                "FIG-ROLLE-KRANKER": "delight"
+              },
+              "beside": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-KRANKER",
+                  "act"
+                ]
+              ],
+              "x": {
+                "FIG-JESUS": 50,
+                "FIG-ROLLE-KRANKER": 136
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.5.10-JHN.5.18",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-ROLLE-KRANKER"
+            ],
+            "objects": [
+              "FIG-OBJ-MATTE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-ROLLE-KRANKER",
+                "icons": [
+                  "FIG-ZEICHEN-SABBAT",
+                  "FIG-OBJ-MATTE",
+                  "FIG-ZEICHEN-NEIN"
+                ]
+              }
+            ],
+            "action_de": "Weil Sabbat ist, werfen die Juden dem Geheilten vor, dass er die Matte trägt, und verfolgen Jesus.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-ROLLE-KRANKER": "worried"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.5.19-JHN.5.30",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-LIEBE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-HOEREN",
+                  "FIG-ZEICHEN-GLAUBEN",
+                  "FIG-ZEICHEN-LEBEN"
+                ]
+              }
+            ],
+            "action_de": "Der Sohn tut, was er den Vater tun sieht; der Vater liebt ihn. Wer sein Wort hört und glaubt, hat ewiges Leben.",
+            "stage": {
+              "god_side": "left",
+              "at": {
+                "FIG-ZEICHEN-LIEBE": "FIG-GOTT"
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-MENGE": "pensive"
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 50,
+                "FIG-JESUS": 140
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-LIEBE": []
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.5.31-JHN.5.47",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-JOHANNES-TAEUFER",
+                  "FIG-ZEICHEN-STERN",
+                  "FIG-MOSE",
+                  "FIG-OBJ-SCHRIFTROLLE"
+                ]
+              }
+            ],
+            "action_de": "Für Jesus zeugen Johannes, die Werke, der Vater und die Schriften; Mose hat über ihn geschrieben.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "pensive"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Am Teich Betesda heilt Jesus einen Mann, der achtunddreissig Jahre krank war: Steh auf, nimm deine Matte und geh umher!",
+          "Weil Sabbat ist, werfen die Juden dem Geheilten vor, dass er die Matte trägt, und verfolgen Jesus.",
+          "Der Sohn tut, was er den Vater tun sieht; der Vater liebt ihn. Wer sein Wort hört und glaubt, hat ewiges Leben.",
+          "Für Jesus zeugen Johannes, die Werke, der Vater und die Schriften; Mose hat über ihn geschrieben."
+        ],
+        "captions_de": [
+          "Wort Jesu → Heilung: Jesus heilt den Kranken (Pfeil zu ihm, Hand mit Licht); er nimmt die Matte und geht (Matte, Pfeil).",
+          "Sabbat: Die Leute sagen: Am Sabbat keine Matte tragen (Sabbat, Matte, rotes X).",
+          "Vater und Sohn: Gott (Strahlenkranz, Herz) zeigt dem Sohn alles (Pfeil); wer hört und glaubt (Ohr, Herz), lebt (Keimling mit Unendlichzeichen).",
+          "Zeugen: Johannes und die Werke (Johannes, Stern), Mose und die Schrift (Mose, Rolle) bezeugen Jesus."
+        ],
+        "interpretation_note_de": "Je ein Feld aus den vier Abschnitten des Kapitels; Einzelheiten dort. «Die Juden» erscheinen als neutrale Menge.",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.5.1-JHN.5.9",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-KRANKER"
+            ],
+            "objects": [
+              "FIG-ORT-TEICH",
+              "FIG-OBJ-MATTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SABBAT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-KRANKER",
+                "icons": [],
+                "word": {
+                  "de": "Steh auf, nimm deine Matte und geh umher!",
+                  "gsw": "Stand uf, nimm dini Matte und lauf umenand!"
+                }
+              }
+            ],
+            "action_de": "Jesus sagt zu dem Kranken: «Steh auf, nimm deine Matte und geh umher!» Sofort wird der Mensch gesund, nimmt seine Matte und geht umher; es ist Sabbat.",
+            "keywords": {
+              "de": "Es war aber Sabbat an jenem Tag",
+              "gsw": "Es isch aber Sabbat gsii a däm Tag"
+            },
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-ROLLE-KRANKER": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 50,
+                "FIG-ROLLE-KRANKER": 136
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.5.10-JHN.5.18",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-TOETEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [],
+                "word": {
+                  "de": "Mein Vater wirkt bis jetzt, und auch ich wirke.",
+                  "gsw": "Min Vatter wirkt bis jetzt, und au ich wirke."
+                }
+              }
+            ],
+            "action_de": "Die Juden verfolgen Jesus, weil er dies am Sabbat tat; er antwortet: «Mein Vater wirkt bis jetzt, und auch ich wirke.» Darum suchen sie umso mehr, ihn zu töten.",
+            "keywords": {
+              "de": "Deshalb nun suchten die Juden umso mehr, ihn zu töten",
+              "gsw": "Drum händ d Jude dänn no meh gsuecht, en z töte"
+            },
+            "stage": {
+              "god_side": "left",
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-TOETEN": "FIG-GRUPPE-MENGE"
+              },
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-MENGE": "angry"
+              },
+              "x": {
+                "FIG-JESUS": 50,
+                "FIG-GRUPPE-MENGE": 136
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.5.19-JHN.5.30",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [],
+                "word": {
+                  "de": "Wer mein Wort hört und dem glaubt, der mich gesandt hat, hat ewiges Leben.",
+                  "gsw": "Wer mis Wort ghört und däm glaubt, wo mich gschickt hät, hät ewigs Läbe."
+                }
+              }
+            ],
+            "action_de": "Jesus sagt: «Wer mein Wort hört und dem glaubt, der mich gesandt hat, hat ewiges Leben … er ist aus dem Tod in das Leben hinübergegangen.»",
+            "keywords": {
+              "de": "aus dem Tod in das Leben hinübergegangen",
+              "gsw": "vom Tod is Läbe übere gange"
+            },
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-MENGE": "pensive"
+              },
+              "x": {
+                "FIG-JESUS": 50,
+                "FIG-GRUPPE-MENGE": 136
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.5.31-JHN.5.47",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [],
+                "word": {
+                  "de": "Ihr erforscht die Schriften; und gerade sie sind es, die über mich Zeugnis ablegen.",
+                  "gsw": "Ir erforsched d Schrifte; und grad si sind s, wo über mich Zügnis ablegged."
+                }
+              }
+            ],
+            "action_de": "Jesus nennt seine Zeugen – Johannes, die Werke, den Vater und die Schriften – und sagt: «Wenn ihr Mose glauben würdet, würdet ihr mir glauben; denn über mich hat jener geschrieben.»",
+            "keywords": {
+              "de": "denn über mich hat jener geschrieben",
+              "gsw": "dänn über mich hät dä gschribe"
+            },
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-MENGE": "pensive"
+              },
+              "x": {
+                "FIG-JESUS": 50,
+                "FIG-GRUPPE-MENGE": 136
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Geheilt: Am Teich mit den Säulenhallen sagt Jesus: «Steh auf, nimm deine Matte und geh umher!»; der Geheilte steht mit seiner Matte (gesund); Sabbat (Sabbat).",
+          "Mein Vater wirkt: Jesus sagt zu den Juden: «Mein Vater wirkt bis jetzt, und auch ich wirke.» (Strahlenkranz, Jesus); goldener Pfeil vom Strahlenkranz zu Jesus; die Juden zornig, sie wollen ihn töten (töten).",
+          "Ewiges Leben: Jesus spricht zur Menge: «Wer mein Wort hört und dem glaubt, der mich gesandt hat, hat ewiges Leben.» (hören, Leben).",
+          "Die Zeugen: Jesus spricht zur Menge: «Ihr erforscht die Schriften; und gerade sie sind es, die über mich Zeugnis ablegen.» (Schriftrolle, zeigen); im Band: Mose hat über mich geschrieben."
         ]
       }
     }

@@ -1,0 +1,189 @@
+{
+ "id": "CORE-JHN-004-027-038",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "JHN.4.27-JHN.4.38",
+ "target": "TU-JHN-004-027-038",
+ "core_de": "Die Jünger kommen zurück und wundern sich, dass er mit einer Frau redet; die Frau lässt ihren Wasserkrug stehen und sagt den Leuten in der Stadt: «Kommt, seht einen Menschen, der mir alles gesagt hat, was ich getan habe! Ist das etwa der Christus?»; die Jünger drängen: «Rabbi, iss!», und Jesus sagt: «Meine Speise ist, dass ich den Willen dessen tue, der mich gesandt hat», und weist auf die Felder, die weiss sind zur Ernte.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "interleave",
+    "subtype": "Frau in der Stadt ↔ Jünger bei Jesus",
+    "range": "JHN.4.27-JHN.4.38",
+    "elements": [
+     {
+      "label": "Die Jünger kommen und wundern sich",
+      "ref": "JHN.4.27",
+      "role": "Jünger"
+     },
+     {
+      "label": "Die Frau lässt den Krug stehen: «Kommt, seht … Ist das etwa der Christus?»; die Leute kommen",
+      "ref": "JHN.4.28-JHN.4.30",
+      "role": "Stadt"
+     },
+     {
+      "label": "Missverständnis Speise",
+      "ref": "JHN.4.31-JHN.4.34",
+      "role": "Jünger",
+      "child": "s2"
+     },
+     {
+      "label": "Bildwort Ernte",
+      "ref": "JHN.4.35-JHN.4.38",
+      "role": "Jünger",
+      "child": "s3"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-ROLLE-SAMARITANERIN",
+       "to": "Leute der Stadt",
+       "ref": "JHN.4.28-JHN.4.29"
+      },
+      {
+       "who": "FIG-GRUPPE-JUENGER",
+       "to": "FIG-JESUS",
+       "ref": "JHN.4.31"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "JHN.4.32-JHN.4.38"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "dialogue",
+    "subtype": "Missverständnis: «Rabbi, iss!» – Speise – wörtlich – Klärung",
+    "range": "JHN.4.31-JHN.4.34",
+    "elements": [
+     {
+      "label": "«Rabbi, iss!»",
+      "ref": "JHN.4.31",
+      "role": "Bitte"
+     },
+     {
+      "label": "«Ich habe eine Speise zu essen, die ihr nicht kennt.»",
+      "ref": "JHN.4.32",
+      "role": "doppeldeutiges Wort"
+     },
+     {
+      "label": "«Hat ihm etwa jemand etwas zu essen gebracht?»",
+      "ref": "JHN.4.33",
+      "role": "wörtlich verstanden"
+     },
+     {
+      "label": "«Meine Speise ist, dass ich den Willen dessen tue, der mich gesandt hat, und sein Werk vollende.»",
+      "ref": "JHN.4.34",
+      "role": "Klärung"
+     }
+    ],
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "parable",
+    "subtype": "Bildwort Ernte: Felder weiss – Sämann und Schnitter – Sendung",
+    "range": "JHN.4.35-JHN.4.38",
+    "elements": [
+     {
+      "label": "«Noch vier Monate … dann kommt die Ernte» – «Hebt eure Augen auf … Sie sind weiss zur Ernte»",
+      "ref": "JHN.4.35",
+      "role": "Bild"
+     },
+     {
+      "label": "Der Schnitter empfängt Lohn und sammelt Frucht zum ewigen Leben; Sämann und Schnitter freuen sich miteinander",
+      "ref": "JHN.4.36-JHN.4.37",
+      "role": "Bild"
+     },
+     {
+      "label": "«Ich habe euch gesandt, zu ernten, wofür ihr euch nicht abgemüht habt»",
+      "ref": "JHN.4.38",
+      "role": "Sache"
+     }
+    ],
+    "visual": "scenes",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "JHN.4.28-JHN.4.30",
+   "text_de": "Die Frau lässt ihren Wasserkrug stehen und ruft in der Stadt: «Kommt, seht einen Menschen, der mir alles gesagt hat, was ich getan habe! Ist das etwa der Christus?»; die Leute machen sich auf den Weg.",
+   "reason_de": "Die Frau wird Botin (Kriterien 1 und 4).",
+   "recognition_de": "Der stehen gelassene Krug; die Frau ruft die Leute.",
+   "keywords": [
+    "Die Frau liess nun ihren Wasserkrug stehen",
+    "Ist das etwa der Christus?"
+   ]
+  },
+  {
+   "reference": "JHN.4.31-JHN.4.34",
+   "text_de": "«Rabbi, iss!» – «Ich habe eine Speise zu essen, die ihr nicht kennt.» – «Hat ihm etwa jemand etwas zu essen gebracht?» – «Meine Speise ist, dass ich den Willen dessen tue, der mich gesandt hat, und sein Werk vollende.»",
+   "reason_de": "Missverständnis und Klärung (Kriterium 1).",
+   "recognition_de": "Die Jünger mit Essen; Jesus spricht vom Willen Gottes.",
+   "keywords": [
+    "Meine Speise ist, dass ich den Willen dessen tue, der mich gesandt hat"
+   ]
+  },
+  {
+   "reference": "JHN.4.35-JHN.4.38",
+   "text_de": "«Hebt eure Augen auf und seht die Felder an: Sie sind weiss zur Ernte»; Sämann und Schnitter freuen sich miteinander; «Ich habe euch gesandt, zu ernten.»",
+   "reason_de": "Bildwort und Sendung (Kriterien 1 und 3).",
+   "recognition_de": "Jesus zeigt auf die erntereifen Felder.",
+   "keywords": [
+    "Sie sind weiss zur Ernte",
+    "Ich habe euch gesandt, zu ernten"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Das Staunen der Jünger ohne Frage ([[JHN.4.27]]) – Übergang"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-ROLLE-SAMARITANERIN",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-GRUPPE-MENGE"
+ ],
+ "places": [
+  "FIG-ORT-STADT",
+  "FIG-ORT-FELD",
+  "FIG-OBJ-KRUG-WASSER"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "JHN.4.27-JHN.4.38",
+   "fingerprint": "8bb31122dc77dd2b"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Joh 1–7 nach Matthäus und Markus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung, wo nötig gegen den griechischen Text; Zusammenfassungen und Bildaufträge mitgeprüft; keine fachliche Prüfung durch eine Person",
+  "result": "bestanden",
+  "summary_de": "Wechsel Stadt ↔ Jünger, Missverständnis Speise und Bildwort Ernte mit Sache ([[JHN.4.38]]) richtig; Krug stehen gelassen.",
+  "changes_de": []
+ }
+}

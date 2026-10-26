@@ -2,6 +2,12 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.123 — 2026-10-26 — Johannes 1–7 nach «Struktur zuerst»; veraltete Blindtests ehrlich markiert
+
+- **35 Abschnitte und 7 Kapitel neu** (Kernanalysen mit Struktur, unabhängig geprüft; Zusammenfassungen Hochdeutsch und Züridüütsch; Bilder): Prolog, Zeugenreihe 5,31–47, Ich-bin-Worte, Brotrede mit ihren drei Missverständnissen; Zeichen nur gezählt, wo der Text zählt (Kana «Anfang der Zeichen», Beamtensohn «zweites Zeichen»); Kana mit sechs Krügen; nichts aus den anderen Evangelien. Sprecherfrage 3,16–21 und 3,31–36 als Deutung vermerkt.
+- **Blindtests:** Ein Blindtest gilt nur für die geprüfte Fassung eines Bildes. Ist der Bildauftrag seither geändert, steht der alte Befund jetzt als `check_previous` und wird nicht mehr als Prüfung des heutigen Bildes ausgegeben (494 Bilder betroffen; neue Blindtests stehen aus).
+- Noch 88 Bilder in alter Verdichtung (Johannes 8–21, Lk 11).
+
 ## v0.122 — 2026-10-26 — Markus vollständig nach «Struktur zuerst»
 
 - **Mk 9–16 und das Buch Markus neu** (Kernanalysen mit Struktur, unabhängig geprüft; Zusammenfassungen Hochdeutsch und Züridüütsch; Bilder): drei Leidensankündigungen als Steigerung, Getsemani dreimal, Verleugnung als Treppe, dreifacher Spott am Kreuz, Markusschluss 16,8 als ursprüngliches offenes Ende und 16,9–20 als späterer Schluss gekennzeichnet; keine Details aus den anderen Evangelien (junger Mann statt Engel, keine Handwaschung, keine Grabwache; Simon trägt nicht «hinter Jesus»). Korrigiert u. a.: «den Becher trinken, mit der Taufe getauft werden» im Wortlaut, «Du sagst es» ohne Bejahung, Schrei 15,34 an Gott.

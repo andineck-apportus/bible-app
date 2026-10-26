@@ -13,94 +13,177 @@
       "n": 1,
       "reference": "JHN.6.52",
       "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-MENGE"
+        "FIG-GRUPPE-MENGE",
+        "FIG-JESUS"
       ],
       "objects": [
         "FIG-ORT-SYNAGOGE"
       ],
       "signs": [
-        "FIG-ZEICHEN-NICHT-VERSTEHEN"
+        "FIG-ZEICHEN-STREIT"
       ],
       "speech": [
         {
           "from": "FIG-GRUPPE-MENGE",
           "to": "FIG-JESUS",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-OBJ-BROT",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Wie kann dieser uns sein Fleisch zu essen geben?",
+            "gsw": "Wie cha dä üs sis Fleisch z ässe gää?"
+          }
         }
       ],
-      "action_de": "Die Juden streiten untereinander: Wie kann dieser uns sein Fleisch zu essen geben?",
+      "action_de": "Die Juden streiten untereinander: «Wie kann dieser uns sein Fleisch zu essen geben?»",
+      "keywords": {
+        "de": "Da stritten die Juden untereinander",
+        "gsw": "Da händ d Jude undereinand gstritte"
+      },
       "stage": {
-        "mood": {
-          "FIG-GRUPPE-MENGE": "worried"
-        },
-        "at": {
-          "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-GRUPPE-MENGE"
-        },
-        "back_side": "right",
         "before": true,
+        "at": {
+          "FIG-ZEICHEN-STREIT": "FIG-GRUPPE-MENGE"
+        },
+        "mood": {
+          "FIG-GRUPPE-MENGE": "angry",
+          "FIG-JESUS": "calm"
+        },
         "x": {
-          "FIG-JESUS": 28,
-          "FIG-GRUPPE-MENGE": 76
+          "FIG-GRUPPE-MENGE": 54,
+          "FIG-JESUS": 140
         }
       }
     },
     {
       "n": 2,
-      "reference": "JHN.6.53-JHN.6.59",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-MENGE"
-      ],
-      "objects": [
-        "FIG-ORT-SYNAGOGE"
-      ],
+      "reference": "JHN.6.53-JHN.6.55",
+      "figures": [],
+      "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-MENGE",
+      "speech": [],
+      "action_de": "Jesus antwortet: Wenn ihr das Fleisch des Menschensohnes nicht esst und sein Blut nicht trinkt, habt ihr kein Leben in euch; wer sein Fleisch isst und sein Blut trinkt, hat ewiges Leben, und er wird ihn auferwecken am letzten Tag.",
+      "keywords": {
+        "de": "Denn mein Fleisch ist wahre Speise",
+        "gsw": "Dänn mis Fleisch isch wahrs Ässe"
+      },
+      "diagram": {
+        "visual": "switch",
+        "span": 2,
+        "speaker": "FIG-JESUS",
+        "title": {
+          "de": "Amen, amen, ich sage euch:",
+          "gsw": "Amen, amen, ich säge eu:"
+        },
+        "cond": {
+          "a": {
+            "de": "das Fleisch des Menschensohnes essen und sein Blut trinken",
+            "gsw": "s Fleisch vom Mänschesohn ässe und sis Bluet trinke"
+          },
           "icons": [
-            "FIG-JESUS",
-            "FIG-OBJ-BROT",
-            "FIG-OBJ-BECHER-VOLL",
-            "FIG-ZEICHEN-LEBEN"
+            "FIG-JESUS"
+          ]
+        },
+        "yes_label": {
+          "de": "isst",
+          "gsw": "isst"
+        },
+        "yes": {
+          "a": {
+            "de": "Wer mein Fleisch isst und mein Blut trinkt, hat ewiges Leben, und ich werde ihn auferwecken am letzten Tag.",
+            "gsw": "Wer mis Fleisch isst und mis Bluet trinkt, hät ewigs Läbe, und ich wirde en uferwecke am letschte Tag."
+          },
+          "icons": [
+            "FIG-ZEICHEN-LEBEN",
+            "FIG-ZEICHEN-AUFERWECKEN"
+          ],
+          "tone": "new"
+        },
+        "no_label": {
+          "de": "isst nicht",
+          "gsw": "isst nöd"
+        },
+        "no": {
+          "a": {
+            "de": "Wenn ihr das Fleisch des Menschensohnes nicht esst und sein Blut nicht trinkt, habt ihr kein Leben in euch.",
+            "gsw": "Wänn ir s Fleisch vom Mänschesohn nöd ässed und sis Bluet nöd trinked, händ ir kei Läbe i eu."
+          },
+          "icons": [
+            "FIG-ZEICHEN-LEBEN",
+            "FIG-ZEICHEN-NICHT"
           ]
         }
-      ],
-      "action_de": "Jesus lehrt in der Synagoge in Kafarnaum: Wer sein Fleisch isst und sein Blut trinkt, hat ewiges Leben, bleibt in ihm, und er wird ihn am letzten Tag auferwecken.",
-      "stage": {
-        "mood": {
-          "FIG-JESUS": "calm",
-          "FIG-GRUPPE-MENGE": "surprised"
+      }
+    },
+    {
+      "n": 3,
+      "reference": "JHN.6.56-JHN.6.59",
+      "figures": [],
+      "objects": [],
+      "signs": [],
+      "speech": [],
+      "action_de": "Wer sein Fleisch isst und sein Blut trinkt, bleibt in ihm und er in ihm; wie Jesus durch den lebendigen Vater lebt, so wird der, der ihn isst, durch ihn leben; wer dieses Brot isst, wird in Ewigkeit leben. Das sagt er in der Synagoge in Kafarnaum.",
+      "keywords": {
+        "de": "Wer dieses Brot isst, wird in Ewigkeit leben",
+        "gsw": "Wer das Broot isst, wird für immer läbe"
+      },
+      "diagram": {
+        "visual": "arrows",
+        "span": 2,
+        "speaker": "FIG-JESUS",
+        "title": {
+          "de": "Wer mein Fleisch isst und mein Blut trinkt, bleibt in mir und ich in ihm.",
+          "gsw": "Wer mis Fleisch isst und mis Bluet trinkt, bliibt i mir und ich i ihm."
         },
-        "back_side": "left",
-        "before": true,
-        "x": {
-          "FIG-JESUS": 104,
-          "FIG-GRUPPE-MENGE": 156
-        }
+        "cells": [
+          {
+            "a": {
+              "de": "Wie mich der lebendige Vater gesandt hat",
+              "gsw": "Wie mich de läbig Vatter gschickt hät"
+            },
+            "icons": [
+              "FIG-GOTT"
+            ]
+          },
+          {
+            "a": {
+              "de": "und ich durch den Vater lebe,",
+              "gsw": "und ich dur de Vatter läbe,"
+            },
+            "icons": [
+              "FIG-JESUS",
+              "FIG-ZEICHEN-LEBEN"
+            ]
+          },
+          {
+            "a": {
+              "de": "so wird auch der, der mich isst, durch mich leben.",
+              "gsw": "so wird au dä, wo mich isst, dur mich läbe."
+            },
+            "icons": [
+              "FIG-ZEICHEN-MENSCHEN",
+              "FIG-ZEICHEN-LEBEN"
+            ],
+            "tone": "new"
+          }
+        ]
       }
     }
   ],
   "actions_de": [
-    "Die Juden streiten untereinander: Wie kann dieser uns sein Fleisch zu essen geben?",
-    "Jesus lehrt in der Synagoge in Kafarnaum: Wer sein Fleisch isst und sein Blut trinkt, hat ewiges Leben, bleibt in ihm, und er wird ihn am letzten Tag auferwecken."
+    "Die Juden streiten untereinander: «Wie kann dieser uns sein Fleisch zu essen geben?»",
+    "Jesus antwortet: Wenn ihr das Fleisch des Menschensohnes nicht esst und sein Blut nicht trinkt, habt ihr kein Leben in euch; wer sein Fleisch isst und sein Blut trinkt, hat ewiges Leben, und er wird ihn auferwecken am letzten Tag.",
+    "Wer sein Fleisch isst und sein Blut trinkt, bleibt in ihm und er in ihm; wie Jesus durch den lebendigen Vater lebt, so wird der, der ihn isst, durch ihn leben; wer dieses Brot isst, wird in Ewigkeit leben. Das sagt er in der Synagoge in Kafarnaum."
   ],
   "captions_de": [
-    "Streit: In der Synagoge fragt die Menge, wie Jesus sich selbst zu essen geben kann (Jesus, Brot, Fragezeichen); sie versteht es nicht (graues Fragezeichen über den Köpfen).",
-    "Lehre in der Synagoge: Jesus spricht von sich als Speise und Trank (Brot, Becher), die Leben geben (Keimling mit Unendlichzeichen)."
+    "Streit in der Synagoge: Die Juden streiten (Streit): «Wie kann dieser uns sein Fleisch zu essen geben?» (fragen); Jesus vor der Synagoge.",
+    "Weiche (Bild Jesus): wer isst und trinkt – ewiges Leben, auferweckt am letzten Tag (Leben, auferwecken) | wer nicht isst und nicht trinkt – kein Leben in euch (Leben, Verbotszeichen).",
+    "Kette des Lebens (Pfeilkette, Bild Jesus): der lebendige Vater hat mich gesandt (Strahlenkranz) → ich lebe durch den Vater (Jesus, Leben) → hervorgehoben: wer mich isst, wird durch mich leben (Menschen, Leben)."
   ],
-  "interpretation_note_de": "Fleisch und Blut ([[JHN.6.53]]–[[JHN.6.56]]) sind als Brot und Becher gezeichnet. Das ist eine Deutung: Viele Auslegungen beziehen die Rede auf das Abendmahl, andere auf den Glauben an Jesus; der Text nennt Brot und Becher hier nicht.",
+  "interpretation_note_de": "Drei Felder nach «Einwand – Weiche – Kette» ([[JHN.6.52-JHN.6.59]]): der Streit in der Synagoge, beide Zweige (der Lebenszweig hervorgehoben) und die Kette Vater → Sohn → wer ihn isst. Ob und wie die Rede auf das Abendmahl zu beziehen ist, sagt der Text nicht; das Bild zeigt keinen Kelch und kein Mahl. «Die Juden» sind als neutrale Gruppe ohne Merkmale einer Volksgruppe gezeichnet. «Menschensohn» versteht das Bild als Jesus (Deutung).",
   "basis": [
     {
       "record": "TU-JHN-006-052-059",
       "field": "summary",
-      "fingerprint": "48ff0b31e67a88fc"
+      "fingerprint": "4551b503af0e4ba1"
     },
     {
       "record": "TRANS-JHN-006-001-071-DE-WORKING",
@@ -111,12 +194,18 @@
     {
       "record": "TRANS-JHN-006-001-071-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.6.53-JHN.6.59",
-      "fingerprint": "941ac30ff241e48d"
+      "reference": "JHN.6.53-JHN.6.55",
+      "fingerprint": "47e728c9a2a3ba56"
+    },
+    {
+      "record": "TRANS-JHN-006-001-071-DE-WORKING",
+      "field": "text_by_reference",
+      "reference": "JHN.6.56-JHN.6.59",
+      "fingerprint": "10a03de6e662a36c"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -209,6 +298,145 @@
           "Streit: In der Synagoge fragt die Menge, wie Jesus sich selbst zu essen geben kann (Jesus, Brot, Fragezeichen); sie versteht es nicht (graues Fragezeichen über den Köpfen).",
           "Lehre in der Synagoge: Jesus spricht von sich als Speise und Trank (Brot, Becher), die Leben geben (Spross im Ring)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-JHN-006-052-059",
+            "field": "summary",
+            "fingerprint": "48ff0b31e67a88fc"
+          },
+          {
+            "record": "TRANS-JHN-006-001-071-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.6.52",
+            "fingerprint": "07b48c7ef53a1ffb"
+          },
+          {
+            "record": "TRANS-JHN-006-001-071-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.6.53-JHN.6.59",
+            "fingerprint": "941ac30ff241e48d"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.6.52",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-SYNAGOGE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NICHT-VERSTEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-OBJ-BROT",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Die Juden streiten untereinander: Wie kann dieser uns sein Fleisch zu essen geben?",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "worried"
+              },
+              "at": {
+                "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-GRUPPE-MENGE"
+              },
+              "back_side": "right",
+              "before": true,
+              "x": {
+                "FIG-JESUS": 28,
+                "FIG-GRUPPE-MENGE": 76
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.6.53-JHN.6.59",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-SYNAGOGE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-OBJ-BROT",
+                  "FIG-OBJ-BECHER-VOLL",
+                  "FIG-ZEICHEN-LEBEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus lehrt in der Synagoge in Kafarnaum: Wer sein Fleisch isst und sein Blut trinkt, hat ewiges Leben, bleibt in ihm, und er wird ihn am letzten Tag auferwecken.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-MENGE": "surprised"
+              },
+              "back_side": "left",
+              "before": true,
+              "x": {
+                "FIG-JESUS": 104,
+                "FIG-GRUPPE-MENGE": 156
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Die Juden streiten untereinander: Wie kann dieser uns sein Fleisch zu essen geben?",
+          "Jesus lehrt in der Synagoge in Kafarnaum: Wer sein Fleisch isst und sein Blut trinkt, hat ewiges Leben, bleibt in ihm, und er wird ihn am letzten Tag auferwecken."
+        ],
+        "captions_de": [
+          "Streit: In der Synagoge fragt die Menge, wie Jesus sich selbst zu essen geben kann (Jesus, Brot, Fragezeichen); sie versteht es nicht (graues Fragezeichen über den Köpfen).",
+          "Lehre in der Synagoge: Jesus spricht von sich als Speise und Trank (Brot, Becher), die Leben geben (Keimling mit Unendlichzeichen)."
+        ],
+        "interpretation_note_de": "Fleisch und Blut ([[JHN.6.53]]–[[JHN.6.56]]) sind als Brot und Becher gezeichnet. Das ist eine Deutung: Viele Auslegungen beziehen die Rede auf das Abendmahl, andere auf den Glauben an Jesus; der Text nennt Brot und Becher hier nicht.",
+        "basis": [
+          {
+            "record": "TU-JHN-006-052-059",
+            "field": "summary",
+            "fingerprint": "4551b503af0e4ba1"
+          },
+          {
+            "record": "TRANS-JHN-006-001-071-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.6.52",
+            "fingerprint": "07b48c7ef53a1ffb"
+          },
+          {
+            "record": "TRANS-JHN-006-001-071-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.6.53-JHN.6.59",
+            "fingerprint": "941ac30ff241e48d"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

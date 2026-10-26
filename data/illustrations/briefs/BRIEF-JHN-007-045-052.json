@@ -11,48 +11,95 @@
   "panels": [
     {
       "n": 1,
-      "reference": "JHN.7.45-JHN.7.49",
-      "figures": [
-        "FIG-GRUPPE-PHARISAEER",
-        "FIG-ROLLE-HOHEPRIESTER",
-        "FIG-ROLLE-TEMPELWACHE"
-      ],
+      "reference": "JHN.7.45-JHN.7.52",
+      "figures": [],
       "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-PHARISAEER",
-          "to": "FIG-ROLLE-TEMPELWACHE",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-FEHLT",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
-        },
-        {
-          "from": "FIG-ROLLE-TEMPELWACHE",
-          "to": "FIG-GRUPPE-PHARISAEER",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-SPRECHEN"
-          ]
-        }
-      ],
-      "action_de": "Die Diener kehren ohne Jesus zurück und sagen: Noch nie hat ein Mensch so geredet. Die Pharisäer fragen: Habt etwa auch ihr euch verführen lassen?",
-      "stage": {
-        "mood": {
-          "FIG-ROLLE-TEMPELWACHE": "surprised",
-          "FIG-GRUPPE-PHARISAEER": "calm",
-          "FIG-ROLLE-HOHEPRIESTER": "calm"
-        }
+      "speech": [],
+      "action_de": "«Warum habt ihr ihn nicht gebracht?» – «Noch nie hat ein Mensch so geredet.» – «Habt etwa auch ihr euch verführen lassen? … dieses Volk, das das Gesetz nicht kennt – verflucht sind sie!» – Nikodemus: «Richtet etwa unser Gesetz einen Menschen, ohne ihn zuerst angehört … zu haben?» – «Bist etwa auch du aus Galiläa? … aus Galiläa steht kein Prophet auf.»",
+      "keywords": {
+        "de": "Noch nie hat ein Mensch so geredet",
+        "gsw": "No nie hät en Mänsch eso gredt"
+      },
+      "diagram": {
+        "visual": "dialogue",
+        "span": 2,
+        "turns": [
+          {
+            "who": "FIG-GRUPPE-HOHEPRIESTER",
+            "cell": {
+              "a": {
+                "de": "«Warum habt ihr ihn nicht gebracht?»",
+                "gsw": "«Werum händ ir en nöd brocht?»"
+              },
+              "icons": [
+                "FIG-JESUS",
+                "FIG-ZEICHEN-FRAGEN"
+              ]
+            }
+          },
+          {
+            "who": "FIG-ROLLE-TEMPELWACHE",
+            "cell": {
+              "a": {
+                "de": "«Noch nie hat ein Mensch so geredet.»",
+                "gsw": "«No nie hät en Mänsch eso gredt.»"
+              },
+              "icons": [
+                "FIG-JESUS",
+                "FIG-ZEICHEN-SPRECHEN"
+              ],
+              "tone": "new"
+            }
+          },
+          {
+            "who": "FIG-GRUPPE-PHARISAEER",
+            "cell": {
+              "a": {
+                "de": "«Habt etwa auch ihr euch verführen lassen? Hat etwa einer von den Oberen an ihn geglaubt? … Dieses Volk, das das Gesetz nicht kennt – verflucht sind sie!»",
+                "gsw": "«Händ öppe au ir eu verfüere laa? Hät öppe eine vo de Obere a en glaubt? … Das Volk da, wo s Gsetz nöd kännt – verfluecht sind si!»"
+              },
+              "icons": [
+                "FIG-ZEICHEN-ZORN",
+                "FIG-GRUPPE-OBERE"
+              ]
+            }
+          },
+          {
+            "who": "FIG-NIKODEMUS",
+            "cell": {
+              "a": {
+                "de": "«Richtet etwa unser Gesetz einen Menschen, ohne ihn zuerst angehört und erkannt zu haben, was er tut?»",
+                "gsw": "«Richtet öppe üses Gsetz en Mänsch, ohni en zerscht aaghört und erchännt z ha, was er macht?»"
+              },
+              "icons": [
+                "FIG-OBJ-GESETZESTAFELN",
+                "FIG-ZEICHEN-HOEREN"
+              ]
+            }
+          },
+          {
+            "who": "FIG-GRUPPE-PHARISAEER",
+            "cell": {
+              "a": {
+                "de": "«Bist etwa auch du aus Galiläa? Forsche nach und sieh, dass aus Galiläa kein Prophet aufsteht.»",
+                "gsw": "«Bisch du öppe au us Galiläa? Forsch nache und lueg, dass us Galiläa kei Prophet ufstaat.»"
+              },
+              "icons": [
+                "FIG-ROLLE-PROPHET",
+                "FIG-ZEICHEN-NICHT"
+              ]
+            }
+          }
+        ]
       }
     },
     {
       "n": 2,
       "reference": "JHN.7.50-JHN.7.52",
       "figures": [
-        "FIG-NIKODEMUS",
-        "FIG-GRUPPE-PHARISAEER"
+        "FIG-GRUPPE-PHARISAEER",
+        "FIG-NIKODEMUS"
       ],
       "objects": [],
       "signs": [],
@@ -60,50 +107,56 @@
         {
           "from": "FIG-NIKODEMUS",
           "to": "FIG-GRUPPE-PHARISAEER",
-          "icons": [
-            "FIG-OBJ-GESETZESTAFELN",
-            "FIG-ZEICHEN-HOEREN",
-            "FIG-ZEICHEN-GERICHT"
-          ]
-        },
-        {
-          "from": "FIG-GRUPPE-PHARISAEER",
-          "to": "FIG-NIKODEMUS",
-          "icons": [
-            "FIG-ROLLE-PROPHET",
-            "FIG-ZEICHEN-FEHLT"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Richtet etwa unser Gesetz einen Menschen, ohne ihn zuerst angehört und erkannt zu haben, was er tut?",
+            "gsw": "Richtet öppe üses Gsetz en Mänsch, ohni en zerscht aaghört und erchännt z ha, was er macht?"
+          }
         }
       ],
-      "action_de": "Nikodemus, einer von ihnen, fragt: Richtet unser Gesetz einen Menschen, ohne ihn zuerst anzuhören? Sie antworten: Aus Galiläa steht kein Prophet auf.",
+      "action_de": "Nikodemus fragt die Pharisäer: «Richtet etwa unser Gesetz einen Menschen, ohne ihn zuerst angehört und erkannt zu haben, was er tut?»",
+      "keywords": {
+        "de": "Nikodemus, der früher zu ihm gekommen war",
+        "gsw": "De Nikodemus, wo früener zu ihm choo isch"
+      },
+      "names": {
+        "FIG-NIKODEMUS": {
+          "de": "Nikodemus",
+          "gsw": "Nikodemus"
+        }
+      },
       "stage": {
         "mood": {
-          "FIG-NIKODEMUS": "calm",
-          "FIG-GRUPPE-PHARISAEER": "calm"
+          "FIG-GRUPPE-PHARISAEER": "angry",
+          "FIG-NIKODEMUS": "earnest"
+        },
+        "x": {
+          "FIG-GRUPPE-PHARISAEER": 50,
+          "FIG-NIKODEMUS": 140
         }
       }
     }
   ],
   "actions_de": [
-    "Die Diener kehren ohne Jesus zurück und sagen: Noch nie hat ein Mensch so geredet. Die Pharisäer fragen: Habt etwa auch ihr euch verführen lassen?",
-    "Nikodemus, einer von ihnen, fragt: Richtet unser Gesetz einen Menschen, ohne ihn zuerst anzuhören? Sie antworten: Aus Galiläa steht kein Prophet auf."
+    "«Warum habt ihr ihn nicht gebracht?» – «Noch nie hat ein Mensch so geredet.» – «Habt etwa auch ihr euch verführen lassen? … dieses Volk, das das Gesetz nicht kennt – verflucht sind sie!» – Nikodemus: «Richtet etwa unser Gesetz einen Menschen, ohne ihn zuerst angehört … zu haben?» – «Bist etwa auch du aus Galiläa? … aus Galiläa steht kein Prophet auf.»",
+    "Nikodemus fragt die Pharisäer: «Richtet etwa unser Gesetz einen Menschen, ohne ihn zuerst angehört und erkannt zu haben, was er tut?»"
   ],
   "captions_de": [
-    "Ohne Jesus zurück: Die Pharisäer fragen, warum Jesus nicht mitkommt (Jesus, leer, Fragezeichen); die Diener (hier einer) antworten, so habe noch nie jemand geredet (Jesus, Sprechblase, Stern).",
-    "Nikodemus widerspricht: Das Gesetz verlangt, zuerst anzuhören und dann zu richten (Tafeln, Ohr, Waage); die Pharisäer: kein Prophet (Prophet, leer) – aus Galiläa komme keiner."
+    "Sitzung (Dialog): Hohepriester: «Warum habt ihr ihn nicht gebracht?» (fragen) – Diener, hervorgehoben: «Noch nie hat ein Mensch so geredet.» (Jesus, sprechen) – Pharisäer: «Habt etwa auch ihr euch verführen lassen? …» (Zorn) – Nikodemus: «Richtet etwa unser Gesetz einen Menschen, ohne ihn zuerst angehört … zu haben?» (Gesetzestafeln, hören) – Pharisäer: «Bist etwa auch du aus Galiläa? …» (Prophet, Verbotszeichen).",
+    "Einspruch: Nikodemus (Name) fragt die Pharisäer: «Richtet etwa unser Gesetz einen Menschen, ohne ihn zuerst angehört … zu haben?» (Gesetzestafeln, hören)."
   ],
-  "interpretation_note_de": "Die Pharisäer und der Hohepriester erscheinen neutral, ohne finstere Züge. Den harten Satz über das Volk ([[JHN.7.49]]) zeigt das Bild nicht. Galiläa ist nicht eigens gezeichnet; «leer» bedeutet hier: kein Prophet.",
+  "interpretation_note_de": "Zwei Felder nach der Sitzung der Oberen ([[JHN.7.45-JHN.7.52]]): alle fünf Redezüge als Dialog (das Wort der Diener hervorgehoben), dann der Einspruch des Nikodemus als Szene. Die Diener sind als Tempeldiener gezeichnet; ihre Hände sind leer, Jesus ist nicht da. [[JHN.7.53]] gehört zum Abschnitt [[JHN.7.53-JHN.8.11]] und wird mit Kapitel 8 bearbeitet.",
   "basis": [
     {
       "record": "TU-JHN-007-045-052",
       "field": "summary",
-      "fingerprint": "2f96319b5be7d75e"
+      "fingerprint": "ed862a8e302e5676"
     },
     {
       "record": "TRANS-JHN-007-001-053-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.7.45-JHN.7.49",
-      "fingerprint": "f9303e0fd4b69098"
+      "reference": "JHN.7.45-JHN.7.52",
+      "fingerprint": "c229b79cbaa2df02"
     },
     {
       "record": "TRANS-JHN-007-001-053-DE-WORKING",
@@ -113,7 +166,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -296,6 +349,142 @@
           "Ohne Jesus zurück: Die Pharisäer fragen, warum Jesus nicht mitkommt (Jesus, leer, Fragezeichen); die Diener (hier einer) antworten, so habe noch nie jemand geredet (Jesus, Schallbogen, Stern).",
           "Nikodemus widerspricht: Das Gesetz verlangt, zuerst anzuhören und dann zu richten (Tafeln, Ohr, Waage); die Pharisäer: kein Prophet (Prophet, leer) – aus Galiläa komme keiner."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-JHN-007-045-052",
+            "field": "summary",
+            "fingerprint": "2f96319b5be7d75e"
+          },
+          {
+            "record": "TRANS-JHN-007-001-053-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.7.45-JHN.7.49",
+            "fingerprint": "f9303e0fd4b69098"
+          },
+          {
+            "record": "TRANS-JHN-007-001-053-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.7.50-JHN.7.52",
+            "fingerprint": "5c06c3076b6ae07b"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.7.45-JHN.7.49",
+            "figures": [
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-ROLLE-HOHEPRIESTER",
+              "FIG-ROLLE-TEMPELWACHE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-PHARISAEER",
+                "to": "FIG-ROLLE-TEMPELWACHE",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FEHLT",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-ROLLE-TEMPELWACHE",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-SPRECHEN"
+                ]
+              }
+            ],
+            "action_de": "Die Diener kehren ohne Jesus zurück und sagen: Noch nie hat ein Mensch so geredet. Die Pharisäer fragen: Habt etwa auch ihr euch verführen lassen?",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-TEMPELWACHE": "surprised",
+                "FIG-GRUPPE-PHARISAEER": "calm",
+                "FIG-ROLLE-HOHEPRIESTER": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.7.50-JHN.7.52",
+            "figures": [
+              "FIG-NIKODEMUS",
+              "FIG-GRUPPE-PHARISAEER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-NIKODEMUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-OBJ-GESETZESTAFELN",
+                  "FIG-ZEICHEN-HOEREN",
+                  "FIG-ZEICHEN-GERICHT"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-PHARISAEER",
+                "to": "FIG-NIKODEMUS",
+                "icons": [
+                  "FIG-ROLLE-PROPHET",
+                  "FIG-ZEICHEN-FEHLT"
+                ]
+              }
+            ],
+            "action_de": "Nikodemus, einer von ihnen, fragt: Richtet unser Gesetz einen Menschen, ohne ihn zuerst anzuhören? Sie antworten: Aus Galiläa steht kein Prophet auf.",
+            "stage": {
+              "mood": {
+                "FIG-NIKODEMUS": "calm",
+                "FIG-GRUPPE-PHARISAEER": "calm"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Die Diener kehren ohne Jesus zurück und sagen: Noch nie hat ein Mensch so geredet. Die Pharisäer fragen: Habt etwa auch ihr euch verführen lassen?",
+          "Nikodemus, einer von ihnen, fragt: Richtet unser Gesetz einen Menschen, ohne ihn zuerst anzuhören? Sie antworten: Aus Galiläa steht kein Prophet auf."
+        ],
+        "captions_de": [
+          "Ohne Jesus zurück: Die Pharisäer fragen, warum Jesus nicht mitkommt (Jesus, leer, Fragezeichen); die Diener (hier einer) antworten, so habe noch nie jemand geredet (Jesus, Sprechblase, Stern).",
+          "Nikodemus widerspricht: Das Gesetz verlangt, zuerst anzuhören und dann zu richten (Tafeln, Ohr, Waage); die Pharisäer: kein Prophet (Prophet, leer) – aus Galiläa komme keiner."
+        ],
+        "interpretation_note_de": "Die Pharisäer und der Hohepriester erscheinen neutral, ohne finstere Züge. Den harten Satz über das Volk ([[JHN.7.49]]) zeigt das Bild nicht. Galiläa ist nicht eigens gezeichnet; «leer» bedeutet hier: kein Prophet.",
+        "basis": [
+          {
+            "record": "TU-JHN-007-045-052",
+            "field": "summary",
+            "fingerprint": "ed862a8e302e5676"
+          },
+          {
+            "record": "TRANS-JHN-007-001-053-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.7.45-JHN.7.49",
+            "fingerprint": "f9303e0fd4b69098"
+          },
+          {
+            "record": "TRANS-JHN-007-001-053-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.7.50-JHN.7.52",
+            "fingerprint": "5c06c3076b6ae07b"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

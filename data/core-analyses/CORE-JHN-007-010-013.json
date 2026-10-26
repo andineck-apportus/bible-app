@@ -1,0 +1,141 @@
+{
+ "id": "CORE-JHN-007-010-013",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "JHN.7.10-JHN.7.13",
+ "target": "TU-JHN-007-010-013",
+ "core_de": "Nachdem die Brüder hinaufgegangen sind, geht auch Jesus zum Fest hinauf, nicht öffentlich, sondern gleichsam im Verborgenen; die Juden suchen ihn: «Wo ist er?»; in der Menge wird über ihn gemurmelt – die einen sagen: «Er ist gut», andere: «Nein, sondern er verführt das Volk» –, doch niemand redet offen über ihn, aus Furcht vor den Juden.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Hinaufgehen im Verborgenen – Suche – geteilte Meinung – Furcht",
+    "range": "JHN.7.10-JHN.7.13",
+    "elements": [
+     {
+      "label": "Er geht hinauf, nicht öffentlich, sondern gleichsam im Verborgenen",
+      "ref": "JHN.7.10",
+      "role": "Weg"
+     },
+     {
+      "label": "Die Juden suchen ihn: «Wo ist er?»",
+      "ref": "JHN.7.11",
+      "role": "Suche"
+     },
+     {
+      "label": "Zwei Meinungen",
+      "ref": "JHN.7.12",
+      "role": "Gemurmel",
+      "child": "s2"
+     },
+     {
+      "label": "Niemand redet offen über ihn, aus Furcht vor den Juden",
+      "ref": "JHN.7.13",
+      "role": "Furcht"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "die Juden",
+       "to": "einander",
+       "ref": "JHN.7.11"
+      },
+      {
+       "who": "Leute in der Menge",
+       "to": "einander",
+       "ref": "JHN.7.12"
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "«Die Juden» meint bei Johannes oft die führenden Kreise; im Bild als neutrale Gruppe ohne Merkmale einer Volksgruppe."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "«Er ist gut» ↔ «er verführt das Volk»",
+    "range": "JHN.7.12",
+    "elements": [
+     {
+      "label": "Die einen: «Er ist gut.»",
+      "ref": "JHN.7.12",
+      "role": "für ihn"
+     },
+     {
+      "label": "Andere: «Nein, sondern er verführt das Volk.»",
+      "ref": "JHN.7.12",
+      "role": "gegen ihn"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "JHN.7.10-JHN.7.11",
+   "text_de": "Jesus geht im Verborgenen hinauf; die Juden suchen ihn am Fest: «Wo ist er?»",
+   "reason_de": "Verborgen ↔ gesucht (Kriterium 2).",
+   "recognition_de": "Jesus unterwegs im Verborgenen; Suchende.",
+   "keywords": [
+    "gleichsam im Verborgenen",
+    "Wo ist er?"
+   ]
+  },
+  {
+   "reference": "JHN.7.12-JHN.7.13",
+   "text_de": "Gemurmel: «Er ist gut.» – «Nein, sondern er verführt das Volk.»; niemand redet offen über ihn, aus Furcht vor den Juden.",
+   "reason_de": "Gespaltene Menge (Kriterien 1 und 3).",
+   "recognition_de": "Zwei Meinungen in der Menge; Furcht.",
+   "keywords": [
+    "Er ist gut",
+    "Nein, sondern er verführt das Volk",
+    "aus Furcht vor den Juden"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Keine weiteren Einzelheiten"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-MENGE"
+ ],
+ "places": [
+  "FIG-ORT-HUETTE"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "JHN.7.10-JHN.7.13",
+   "fingerprint": "820db14c03cdf093"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Joh 1–7 nach Matthäus und Markus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung, wo nötig gegen den griechischen Text; Zusammenfassungen und Bildaufträge mitgeprüft; keine fachliche Prüfung durch eine Person",
+  "result": "bestanden",
+  "summary_de": "Hinaufgehen im Verborgenen, Suche, zwei Meinungen und Furcht richtig.",
+  "changes_de": []
+ }
+}

@@ -14,89 +14,126 @@
       "reference": "JHN.7.32",
       "figures": [
         "FIG-GRUPPE-PHARISAEER",
-        "FIG-ROLLE-HOHEPRIESTER",
+        "FIG-GRUPPE-HOHEPRIESTER",
         "FIG-ROLLE-TEMPELWACHE"
       ],
       "objects": [],
       "signs": [],
       "speech": [
         {
-          "from": "FIG-ROLLE-HOHEPRIESTER",
+          "from": "FIG-GRUPPE-HOHEPRIESTER",
           "to": "FIG-ROLLE-TEMPELWACHE",
           "icons": [
             "FIG-JESUS",
-            "FIG-ZEICHEN-BRINGEN",
-            "FIG-ROLLE-HOHEPRIESTER"
+            "FIG-ZEICHEN-AUSLIEFERN"
           ]
         }
       ],
-      "action_de": "Als die Pharisäer das Gemurmel der Menge hören, senden sie und die Hohepriester Diener aus, um Jesus festzunehmen.",
+      "action_de": "Als die Pharisäer das Gemurmel der Menge hören, senden die Hohepriester und die Pharisäer Diener aus, um Jesus festzunehmen.",
+      "keywords": {
+        "de": "sandten Diener aus, um ihn festzunehmen",
+        "gsw": "händ Diener gschickt, zum en verhafte"
+      },
       "stage": {
-        "mood": {
-          "FIG-ROLLE-HOHEPRIESTER": "calm",
-          "FIG-GRUPPE-PHARISAEER": "calm",
-          "FIG-ROLLE-TEMPELWACHE": "calm"
-        },
         "arrows": [
           [
-            "FIG-GRUPPE-PHARISAEER",
+            "FIG-GRUPPE-HOHEPRIESTER",
             "FIG-ROLLE-TEMPELWACHE",
-            "act"
+            "go"
           ]
-        ]
+        ],
+        "mood": {
+          "FIG-GRUPPE-PHARISAEER": "angry",
+          "FIG-GRUPPE-HOHEPRIESTER": "angry",
+          "FIG-ROLLE-TEMPELWACHE": "determined"
+        },
+        "x": {
+          "FIG-GRUPPE-PHARISAEER": 30,
+          "FIG-GRUPPE-HOHEPRIESTER": 92,
+          "FIG-ROLLE-TEMPELWACHE": 156
+        }
       }
     },
     {
       "n": 2,
       "reference": "JHN.7.33-JHN.7.36",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-MENGE"
-      ],
+      "figures": [],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-NICHT-VERSTEHEN"
-      ],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-ZEICHEN-STUNDE",
-            "FIG-ZEICHEN-WEG",
-            "FIG-GOTT",
-            "FIG-ZEICHEN-FRAGEN",
-            "FIG-JESUS",
-            "FIG-ZEICHEN-FEHLT"
-          ]
-        }
-      ],
-      "action_de": "Jesus sagt: Noch eine kleine Zeit bin ich bei euch, dann gehe ich zu dem, der mich gesandt hat. Ihr werdet mich suchen und nicht finden. Die Juden fragen sich, wohin er gehen will.",
-      "stage": {
-        "mood": {
-          "FIG-JESUS": "calm",
-          "FIG-GRUPPE-MENGE": "surprised"
+      "signs": [],
+      "speech": [],
+      "action_de": "Jesus sagt: «Noch eine kleine Zeit bin ich bei euch, und dann gehe ich zu dem, der mich gesandt hat. Ihr werdet mich suchen und nicht finden»; die Juden fragen einander, ob er zu den Griechen in die Diaspora gehen wolle.",
+      "keywords": {
+        "de": "Ihr werdet mich suchen und nicht finden",
+        "gsw": "Ir wärded mich sueche und nöd finde"
+      },
+      "diagram": {
+        "visual": "levels",
+        "span": 2,
+        "speaker": "FIG-JESUS",
+        "title": {
+          "de": "Was ist das für ein Wort, das er gesagt hat?",
+          "gsw": "Was isch das für es Wort, wo er gseit hät?"
         },
-        "at": {
-          "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-GRUPPE-MENGE"
-        }
+        "top_label": {
+          "de": "Die Juden fragen:",
+          "gsw": "D Jude fröged:"
+        },
+        "top": [
+          {
+            "a": {
+              "de": "«Will er etwa in die Diaspora unter den Griechen gehen und die Griechen lehren?»",
+              "gsw": "«Wott er öppe i d Diaspora under de Grieche gaa und d Grieche lehre?»"
+            },
+            "icons": [
+              "FIG-GRUPPE-GRIECHEN",
+              "FIG-ZEICHEN-FRAGEN"
+            ],
+            "who": "FIG-GRUPPE-MENGE"
+          }
+        ],
+        "bottom_label": {
+          "de": "Jesus hat gesagt:",
+          "gsw": "De Jesus hät gseit:"
+        },
+        "bottom": [
+          {
+            "a": {
+              "de": "«Noch eine kleine Zeit bin ich bei euch, und dann gehe ich zu dem, der mich gesandt hat.»",
+              "gsw": "«No es chliises Wiili bin ich bi eu, und dänn gang ich zu däm, wo mich gschickt hät.»"
+            },
+            "icons": [
+              "FIG-GOTT",
+              "FIG-ZEICHEN-WEG"
+            ]
+          },
+          {
+            "a": {
+              "de": "«Ihr werdet mich suchen und nicht finden, und wo ich bin, dahin könnt ihr nicht kommen.»",
+              "gsw": "«Ir wärded mich sueche und nöd finde, und wo ich bi, dört chönd ir nöd häre choo.»"
+            },
+            "icons": [
+              "FIG-ZEICHEN-SUCHEN-FINDEN",
+              "FIG-ZEICHEN-NICHT"
+            ]
+          }
+        ]
       }
     }
   ],
   "actions_de": [
-    "Als die Pharisäer das Gemurmel der Menge hören, senden sie und die Hohepriester Diener aus, um Jesus festzunehmen.",
-    "Jesus sagt: Noch eine kleine Zeit bin ich bei euch, dann gehe ich zu dem, der mich gesandt hat. Ihr werdet mich suchen und nicht finden. Die Juden fragen sich, wohin er gehen will."
+    "Als die Pharisäer das Gemurmel der Menge hören, senden die Hohepriester und die Pharisäer Diener aus, um Jesus festzunehmen.",
+    "Jesus sagt: «Noch eine kleine Zeit bin ich bei euch, und dann gehe ich zu dem, der mich gesandt hat. Ihr werdet mich suchen und nicht finden»; die Juden fragen einander, ob er zu den Griechen in die Diaspora gehen wolle."
   ],
   "captions_de": [
-    "Diener ausgesandt: Der Hohepriester und die Pharisäer (Pfeil) schicken den Tempeldiener, um Jesus zu ihnen zu holen (Jesus, Pfeil, Hohepriester).",
-    "Noch eine kleine Zeit: Jesus geht bald zu Gott (Sanduhr, Pfeil, Strahlenkranz); sie werden ihn suchen und nicht finden (Fragezeichen, Jesus, leer); sie verstehen es nicht (graues Fragezeichen über den Köpfen)."
+    "Ausgesandt: Die Pharisäer und die Hohepriester schicken Diener los (ein Tempeldiener steht für sie) (Sprechblase: Jesus, festnehmen).",
+    "Missverständnis (zwei Ebenen, Bild Jesus): oben, wie sie es verstehen: «Will er etwa in die Diaspora unter den Griechen gehen …?» (Griechen, fragen); unten, hervorgehoben, was er gesagt hat: «Ihr werdet mich suchen und nicht finden» (suchen, Verbotszeichen); «dann gehe ich zu dem, der mich gesandt hat» (Strahlenkranz, Weg)."
   ],
-  "interpretation_note_de": "Die Diener (ὑπηρέται, [[JHN.7.32]]) sind als Tempeldiener gezeichnet, der Hohepriester steht für «die Hohepriester». Die Frage nach der Diaspora und den Griechen ([[JHN.7.35]]) ist mit dem Zeichen «nicht verstehen» zusammengefasst.",
+  "interpretation_note_de": "Zwei Felder nach dem Ablauf «Auftrag zur Festnahme – Wort vom Weggehen – Missverständnis» ([[JHN.7.32-JHN.7.36]]). Der Auftrag der Hohepriester und Pharisäer wird nicht ausgeführt (siehe [[JHN.7.45-JHN.7.46]]); die Sprechblase zeigt nur Zeichen, weil der Text ihre Worte nicht anführt. Der Text löst das Missverständnis hier nicht auf; das Bild stellt die Frage der Juden neben das, was Jesus gesagt hat. «Die Juden» sind als neutrale Gruppe ohne Merkmale einer Volksgruppe gezeichnet.",
   "basis": [
     {
       "record": "TU-JHN-007-032-036",
       "field": "summary",
-      "fingerprint": "4fedeff9a9bf3e29"
+      "fingerprint": "b68b87a1de9389c6"
     },
     {
       "record": "TRANS-JHN-007-001-053-DE-WORKING",
@@ -112,7 +149,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -278,6 +315,132 @@
               }
             }
           }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-JHN-007-032-036",
+            "field": "summary",
+            "fingerprint": "4fedeff9a9bf3e29"
+          },
+          {
+            "record": "TRANS-JHN-007-001-053-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.7.32",
+            "fingerprint": "63eed72b513e0fe6"
+          },
+          {
+            "record": "TRANS-JHN-007-001-053-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.7.33-JHN.7.36",
+            "fingerprint": "376d6210cbf2c96e"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.7.32",
+            "figures": [
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-ROLLE-HOHEPRIESTER",
+              "FIG-ROLLE-TEMPELWACHE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-HOHEPRIESTER",
+                "to": "FIG-ROLLE-TEMPELWACHE",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-BRINGEN",
+                  "FIG-ROLLE-HOHEPRIESTER"
+                ]
+              }
+            ],
+            "action_de": "Als die Pharisäer das Gemurmel der Menge hören, senden sie und die Hohepriester Diener aus, um Jesus festzunehmen.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-HOHEPRIESTER": "calm",
+                "FIG-GRUPPE-PHARISAEER": "calm",
+                "FIG-ROLLE-TEMPELWACHE": "calm"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-PHARISAEER",
+                  "FIG-ROLLE-TEMPELWACHE",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.7.33-JHN.7.36",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-NICHT-VERSTEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-STUNDE",
+                  "FIG-ZEICHEN-WEG",
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-FRAGEN",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FEHLT"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: Noch eine kleine Zeit bin ich bei euch, dann gehe ich zu dem, der mich gesandt hat. Ihr werdet mich suchen und nicht finden. Die Juden fragen sich, wohin er gehen will.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-MENGE": "surprised"
+              },
+              "at": {
+                "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-GRUPPE-MENGE"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Als die Pharisäer das Gemurmel der Menge hören, senden sie und die Hohepriester Diener aus, um Jesus festzunehmen.",
+          "Jesus sagt: Noch eine kleine Zeit bin ich bei euch, dann gehe ich zu dem, der mich gesandt hat. Ihr werdet mich suchen und nicht finden. Die Juden fragen sich, wohin er gehen will."
+        ],
+        "captions_de": [
+          "Diener ausgesandt: Der Hohepriester und die Pharisäer (Pfeil) schicken den Tempeldiener, um Jesus zu ihnen zu holen (Jesus, Pfeil, Hohepriester).",
+          "Noch eine kleine Zeit: Jesus geht bald zu Gott (Sanduhr, Pfeil, Strahlenkranz); sie werden ihn suchen und nicht finden (Fragezeichen, Jesus, leer); sie verstehen es nicht (graues Fragezeichen über den Köpfen)."
+        ],
+        "interpretation_note_de": "Die Diener (ὑπηρέται, [[JHN.7.32]]) sind als Tempeldiener gezeichnet, der Hohepriester steht für «die Hohepriester». Die Frage nach der Diaspora und den Griechen ([[JHN.7.35]]) ist mit dem Zeichen «nicht verstehen» zusammengefasst.",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Prüfung Struktur zuerst",
+      "previous": {
+        "captions_de": [
+          "Ausgesandt: Die Pharisäer und die Hohepriester schicken einen Tempeldiener los (Sprechblase: Jesus, festnehmen).",
+          "Missverständnis (zwei Ebenen, Bild Jesus): oben, wie sie es verstehen: «Will er etwa in die Diaspora unter den Griechen gehen …?» (Griechen, fragen); unten, hervorgehoben, was er gesagt hat: «Ihr werdet mich suchen und nicht finden» (suchen, Verbotszeichen); «dann gehe ich zu dem, der mich gesandt hat» (Strahlenkranz, Weg)."
         ]
       }
     }

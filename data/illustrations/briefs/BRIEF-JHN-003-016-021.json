@@ -11,149 +11,204 @@
   "panels": [
     {
       "n": 1,
-      "reference": "JHN.3.16",
-      "figures": [
-        "FIG-GOTT",
-        "FIG-JESUS",
-        "FIG-GRUPPE-MENGE"
-      ],
+      "reference": "JHN.3.16-JHN.3.17",
+      "figures": [],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-LIEBE",
-        "FIG-ZEICHEN-WELT",
-        "FIG-ZEICHEN-GLAUBEN",
-        "FIG-ZEICHEN-LEBEN"
-      ],
+      "signs": [],
       "speech": [],
-      "action_de": "So hat Gott die Welt geliebt, dass er den einzigen Sohn gab, damit jeder, der an ihn glaubt, nicht verloren geht, sondern ewiges Leben hat.",
-      "stage": {
-        "god_side": "left",
-        "at": {
-          "FIG-ZEICHEN-LIEBE": "FIG-GOTT"
-        },
-        "arrows": [
-          [
-            "FIG-GOTT",
-            "FIG-JESUS",
-            "act"
-          ],
-          [
-            "FIG-JESUS",
-            "FIG-GRUPPE-MENGE",
-            "act"
-          ]
-        ],
-        "signs_who": {
-          "FIG-ZEICHEN-GLAUBEN": [
-            "FIG-GRUPPE-MENGE"
-          ],
-          "FIG-ZEICHEN-LIEBE": []
-        },
-        "mood": {
-          "FIG-GRUPPE-MENGE": "delight"
-        },
-        "air_x": 90,
-        "air_y": 24,
-        "beside": {
-          "FIG-ZEICHEN-LEBEN": "FIG-GRUPPE-MENGE"
-        }
+      "action_de": "«Denn so hat Gott die Welt geliebt, dass er den einzigen Sohn gab, damit jeder, der an ihn glaubt, nicht verloren geht, sondern ewiges Leben hat.» Gott hat den Sohn nicht gesandt, damit er die Welt richtet, sondern damit die Welt durch ihn gerettet wird.",
+      "keywords": {
+        "de": "damit die Welt durch ihn gerettet wird",
+        "gsw": "demit d Wält dur ihn grettet wird"
+      },
+      "diagram": {
+        "visual": "arrows",
+        "span": 2,
+        "speaker": "FIG-JESUS",
+        "cells": [
+          {
+            "a": {
+              "de": "Denn so hat Gott die Welt geliebt,",
+              "gsw": "Dänn so hät Gott d Wält gliebt,"
+            },
+            "icons": [
+              "FIG-GOTT",
+              "FIG-ZEICHEN-LIEBE"
+            ]
+          },
+          {
+            "a": {
+              "de": "dass er den einzigen Sohn gab,",
+              "gsw": "dass er de einzig Sohn gää hät,"
+            },
+            "icons": [
+              "FIG-JESUS",
+              "FIG-ZEICHEN-GEBEN"
+            ]
+          },
+          {
+            "a": {
+              "de": "damit jeder, der an ihn glaubt, nicht verloren geht, sondern ewiges Leben hat.",
+              "gsw": "demit jede, wo a ihn glaubt, nöd verlore gaat, sondern ewigs Läbe hät."
+            },
+            "icons": [
+              "FIG-ZEICHEN-GLAUBEN",
+              "FIG-ZEICHEN-LEBEN"
+            ]
+          },
+          {
+            "a": {
+              "de": "Gott hat den Sohn nicht in die Welt gesandt, damit er die Welt richtet, sondern damit die Welt durch ihn gerettet wird.",
+              "gsw": "Gott hät de Sohn nöd i d Wält gschickt, demit er d Wält richtet, sondern demit d Wält dur ihn grettet wird."
+            },
+            "icons": [
+              "FIG-ZEICHEN-WELT",
+              "FIG-ZEICHEN-RETTUNG"
+            ],
+            "tone": "new"
+          }
+        ]
       }
     },
     {
       "n": 2,
-      "reference": "JHN.3.17-JHN.3.18",
-      "figures": [
-        "FIG-GOTT",
-        "FIG-JESUS"
-      ],
+      "reference": "JHN.3.18",
+      "figures": [],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-WELT",
-        "FIG-ZEICHEN-RETTUNG",
-        "FIG-ZEICHEN-NICHT-RICHTEN"
-      ],
+      "signs": [],
       "speech": [],
-      "action_de": "Gott hat den Sohn nicht in die Welt gesandt, damit er die Welt richtet, sondern damit die Welt durch ihn gerettet wird. Wer an ihn glaubt, wird nicht gerichtet.",
-      "stage": {
-        "god_side": "left",
-        "arrows": [
-          [
-            "FIG-GOTT",
-            "FIG-JESUS",
-            "act"
-          ],
-          [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-WELT",
-            "act"
+      "action_de": "Wer an ihn glaubt, wird nicht gerichtet; wer aber nicht glaubt, ist schon gerichtet, weil er nicht an den Namen des einzigen Sohnes Gottes geglaubt hat.",
+      "keywords": {
+        "de": "Wer an ihn glaubt, wird nicht gerichtet",
+        "gsw": "Wer a ihn glaubt, wird nöd grichtet"
+      },
+      "diagram": {
+        "visual": "switch",
+        "span": 2,
+        "speaker": "FIG-JESUS",
+        "cond": {
+          "a": {
+            "de": "der einzige Sohn Gottes",
+            "gsw": "de einzig Sohn vo Gott"
+          },
+          "icons": [
+            "FIG-JESUS"
           ]
-        ],
-        "x": {
-          "FIG-JESUS": 60
         },
-        "air_x": 108,
-        "air_y": 50
+        "yes_label": {
+          "de": "glaubt",
+          "gsw": "glaubt"
+        },
+        "yes": {
+          "a": {
+            "de": "Wer an ihn glaubt, wird nicht gerichtet;",
+            "gsw": "Wer a ihn glaubt, wird nöd grichtet;"
+          },
+          "icons": [
+            "FIG-ZEICHEN-NICHT-RICHTEN"
+          ],
+          "tone": "new"
+        },
+        "no_label": {
+          "de": "glaubt nicht",
+          "gsw": "glaubt nöd"
+        },
+        "no": {
+          "a": {
+            "de": "wer aber nicht glaubt, ist schon gerichtet.",
+            "gsw": "wer aber nöd glaubt, isch scho grichtet."
+          },
+          "icons": [
+            "FIG-ZEICHEN-GERICHT"
+          ]
+        }
       }
     },
     {
       "n": 3,
       "reference": "JHN.3.19-JHN.3.21",
-      "figures": [
-        "FIG-GRUPPE-MENGE"
-      ],
+      "figures": [],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-FINSTERNIS",
-        "FIG-ZEICHEN-LICHT"
-      ],
+      "signs": [],
       "speech": [],
-      "action_de": "Das ist das Gericht: Das Licht ist in die Welt gekommen, und die Menschen liebten die Finsternis mehr als das Licht. Wer aber die Wahrheit tut, kommt zum Licht.",
-      "stage": {
-        "at": {
-          "FIG-ZEICHEN-FINSTERNIS": "FIG-GRUPPE-MENGE"
+      "action_de": "Das Gericht: Das Licht ist in die Welt gekommen, und die Menschen liebten die Finsternis mehr als das Licht; wer Schlechtes tut, hasst das Licht, wer aber die Wahrheit tut, kommt zum Licht.",
+      "keywords": {
+        "de": "Wer aber die Wahrheit tut, kommt zum Licht",
+        "gsw": "Wer aber d Wahrheit tuet, chunnt zum Liecht"
+      },
+      "diagram": {
+        "visual": "columns",
+        "span": 2,
+        "arrow": false,
+        "title": {
+          "de": "Das Licht ist in die Welt gekommen, und die Menschen liebten die Finsternis mehr als das Licht.",
+          "gsw": "S Liecht isch i d Wält choo, und d Mänsche händ d Fiischteri meh gliebt als s Liecht."
         },
-        "pose": {
-          "FIG-GRUPPE-MENGE": "away"
-        },
-        "x": {
-          "FIG-GRUPPE-MENGE": 62
-        },
-        "air_x": 128,
-        "air_y": 26,
-        "mood": {
-          "FIG-GRUPPE-MENGE": "pensive"
-        }
+        "head": [
+          {
+            "de": "Finsternis",
+            "gsw": "Fiischteri"
+          },
+          {
+            "de": "Licht",
+            "gsw": "Liecht"
+          }
+        ],
+        "rows": [
+          [
+            {
+              "a": {
+                "de": "Jeder, der Schlechtes tut, hasst das Licht und kommt nicht zum Licht, damit seine Werke nicht aufgedeckt werden.",
+                "gsw": "Jede, wo Schlächts tuet, hasst s Liecht und chunnt nöd zum Liecht, demit sini Wärch nöd ufdeckt wärded."
+              },
+              "icons": [
+                "FIG-ZEICHEN-BOESES",
+                "FIG-ZEICHEN-HASS"
+              ]
+            },
+            {
+              "a": {
+                "de": "Wer aber die Wahrheit tut, kommt zum Licht, damit offenbar wird, dass seine Werke in Gott getan sind.",
+                "gsw": "Wer aber d Wahrheit tuet, chunnt zum Liecht, demit sichtbar wird, dass sini Wärch in Gott taa sind."
+              },
+              "icons": [
+                "FIG-ZEICHEN-WAHRHEIT",
+                "FIG-ZEICHEN-LICHT"
+              ]
+            }
+          ]
+        ]
       }
     }
   ],
   "actions_de": [
-    "So hat Gott die Welt geliebt, dass er den einzigen Sohn gab, damit jeder, der an ihn glaubt, nicht verloren geht, sondern ewiges Leben hat.",
-    "Gott hat den Sohn nicht in die Welt gesandt, damit er die Welt richtet, sondern damit die Welt durch ihn gerettet wird. Wer an ihn glaubt, wird nicht gerichtet.",
-    "Das ist das Gericht: Das Licht ist in die Welt gekommen, und die Menschen liebten die Finsternis mehr als das Licht. Wer aber die Wahrheit tut, kommt zum Licht."
+    "«Denn so hat Gott die Welt geliebt, dass er den einzigen Sohn gab, damit jeder, der an ihn glaubt, nicht verloren geht, sondern ewiges Leben hat.» Gott hat den Sohn nicht gesandt, damit er die Welt richtet, sondern damit die Welt durch ihn gerettet wird.",
+    "Wer an ihn glaubt, wird nicht gerichtet; wer aber nicht glaubt, ist schon gerichtet, weil er nicht an den Namen des einzigen Sohnes Gottes geglaubt hat.",
+    "Das Gericht: Das Licht ist in die Welt gekommen, und die Menschen liebten die Finsternis mehr als das Licht; wer Schlechtes tut, hasst das Licht, wer aber die Wahrheit tut, kommt zum Licht."
   ],
   "captions_de": [
-    "Gott → Sohn → Leben: Gott (Strahlenkranz, Herz) liebt die Welt (Erdkugel) und gibt den Sohn (Pfeil zu Jesus); von Jesus führt der Pfeil zu den Menschen: wer an ihn glaubt (Herz), hat ewiges Leben (Keimling mit Unendlichzeichen).",
-    "Sohn → Welt gerettet: Gott sendet den Sohn (Pfeil zu Jesus); von Jesus führt der Pfeil zur Welt (Erdkugel): sie wird durch ihn gerettet (Pfeil nach oben aus den Wellen), nicht gerichtet (Waage im roten Verbotskreis).",
-    "Licht und Finsternis: Das Licht (goldener Schein) ist gekommen; die Menschen lieben die Finsternis mehr als das Licht (dunkle Wolke über ihnen)."
+    "Gottes Liebe (Pfeilkette, Bild Jesus): so hat Gott die Welt geliebt (Strahlenkranz, Liebe) → dass er den einzigen Sohn gab (Jesus) → damit jeder, der an ihn glaubt, ewiges Leben hat (glauben, Leben) → hervorgehoben: nicht richten, sondern retten (Welt, retten).",
+    "Weiche: der einzige Sohn Gottes (Jesus) – wer an ihn glaubt, wird nicht gerichtet (glauben, nicht richten) | wer nicht glaubt, ist schon gerichtet (nicht glauben, Gericht).",
+    "Finsternis ↔ Licht (Spalten, Titel «Das Licht ist in die Welt gekommen …»): links: wer Schlechtes tut, hasst das Licht (Böses, hassen); rechts, hervorgehoben: wer die Wahrheit tut, kommt zum Licht (Wahrheit, Licht)."
   ],
-  "interpretation_note_de": "Ob diese Verse noch Rede Jesu oder Erläuterung des Evangelisten sind, lässt der Text offen; darum spricht im Bild niemand. Gott ist ohne Sprechblase gezeichnet; die Herzen und der Pfeil zum Sohn zeigen, dass er handelt. Feld 3 zeigt nur, dass Menschen die Finsternis wählen ([[JHN.3.19]]); dass, wer die Wahrheit tut, zum Licht kommt ([[JHN.3.21]]), steht in der Legende.",
+  "interpretation_note_de": "Drei Felder nach «Liebe Gottes → Gabe des Sohnes → Zweck», der Weiche glauben ↔ nicht glauben und dem Gegensatz Finsternis ↔ Licht ([[JHN.3.16-JHN.3.21]]); die Lichtseite ist hervorgehoben. Ob die Verse noch Rede Jesu oder Kommentar des Evangelisten sind, ist umstritten; das Bild folgt der Arbeitsübersetzung (Jesus spricht). Gott ist als Strahlenkranz gezeigt, nicht als Mensch.",
   "basis": [
     {
       "record": "TU-JHN-003-016-021",
       "field": "summary",
-      "fingerprint": "3fb85a9505a856d5"
+      "fingerprint": "1afea7e570b4756b"
     },
     {
       "record": "TRANS-JHN-003-001-036-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.3.16",
-      "fingerprint": "f5f6678ace910604"
+      "reference": "JHN.3.16-JHN.3.17",
+      "fingerprint": "b28d870e96c428de"
     },
     {
       "record": "TRANS-JHN-003-001-036-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.3.17-JHN.3.18",
-      "fingerprint": "3b04a0b71a76814d"
+      "reference": "JHN.3.18",
+      "fingerprint": "7ca8c2fb05f93993"
     },
     {
       "record": "TRANS-JHN-003-001-036-DE-WORKING",
@@ -163,7 +218,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -405,6 +460,198 @@
           "Sohn → Welt gerettet: Gott sendet den Sohn (Pfeil zu Jesus); von Jesus führt der Pfeil zur Welt (Erdscheibe): sie wird durch ihn gerettet (Pfeil nach oben aus den Wellen), nicht gerichtet (durchgestrichene Waage).",
           "Licht und Finsternis: Das Licht (goldener Schein) ist gekommen; die Menschen lieben die Finsternis mehr als das Licht (dunkle Wolke über ihnen)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-JHN-003-016-021",
+            "field": "summary",
+            "fingerprint": "3fb85a9505a856d5"
+          },
+          {
+            "record": "TRANS-JHN-003-001-036-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.3.16",
+            "fingerprint": "f5f6678ace910604"
+          },
+          {
+            "record": "TRANS-JHN-003-001-036-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.3.17-JHN.3.18",
+            "fingerprint": "3b04a0b71a76814d"
+          },
+          {
+            "record": "TRANS-JHN-003-001-036-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.3.19-JHN.3.21",
+            "fingerprint": "186d66cecf0cbac7"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.3.16",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-LIEBE",
+              "FIG-ZEICHEN-WELT",
+              "FIG-ZEICHEN-GLAUBEN",
+              "FIG-ZEICHEN-LEBEN"
+            ],
+            "speech": [],
+            "action_de": "So hat Gott die Welt geliebt, dass er den einzigen Sohn gab, damit jeder, der an ihn glaubt, nicht verloren geht, sondern ewiges Leben hat.",
+            "stage": {
+              "god_side": "left",
+              "at": {
+                "FIG-ZEICHEN-LIEBE": "FIG-GOTT"
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-JESUS",
+                  "act"
+                ],
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ],
+              "signs_who": {
+                "FIG-ZEICHEN-GLAUBEN": [
+                  "FIG-GRUPPE-MENGE"
+                ],
+                "FIG-ZEICHEN-LIEBE": []
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "delight"
+              },
+              "air_x": 90,
+              "air_y": 24,
+              "beside": {
+                "FIG-ZEICHEN-LEBEN": "FIG-GRUPPE-MENGE"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.3.17-JHN.3.18",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-WELT",
+              "FIG-ZEICHEN-RETTUNG",
+              "FIG-ZEICHEN-NICHT-RICHTEN"
+            ],
+            "speech": [],
+            "action_de": "Gott hat den Sohn nicht in die Welt gesandt, damit er die Welt richtet, sondern damit die Welt durch ihn gerettet wird. Wer an ihn glaubt, wird nicht gerichtet.",
+            "stage": {
+              "god_side": "left",
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-JESUS",
+                  "act"
+                ],
+                [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-WELT",
+                  "act"
+                ]
+              ],
+              "x": {
+                "FIG-JESUS": 60
+              },
+              "air_x": 108,
+              "air_y": 50
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.3.19-JHN.3.21",
+            "figures": [
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-FINSTERNIS",
+              "FIG-ZEICHEN-LICHT"
+            ],
+            "speech": [],
+            "action_de": "Das ist das Gericht: Das Licht ist in die Welt gekommen, und die Menschen liebten die Finsternis mehr als das Licht. Wer aber die Wahrheit tut, kommt zum Licht.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-FINSTERNIS": "FIG-GRUPPE-MENGE"
+              },
+              "pose": {
+                "FIG-GRUPPE-MENGE": "away"
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 62
+              },
+              "air_x": 128,
+              "air_y": 26,
+              "mood": {
+                "FIG-GRUPPE-MENGE": "pensive"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "So hat Gott die Welt geliebt, dass er den einzigen Sohn gab, damit jeder, der an ihn glaubt, nicht verloren geht, sondern ewiges Leben hat.",
+          "Gott hat den Sohn nicht in die Welt gesandt, damit er die Welt richtet, sondern damit die Welt durch ihn gerettet wird. Wer an ihn glaubt, wird nicht gerichtet.",
+          "Das ist das Gericht: Das Licht ist in die Welt gekommen, und die Menschen liebten die Finsternis mehr als das Licht. Wer aber die Wahrheit tut, kommt zum Licht."
+        ],
+        "captions_de": [
+          "Gott → Sohn → Leben: Gott (Strahlenkranz, Herz) liebt die Welt (Erdkugel) und gibt den Sohn (Pfeil zu Jesus); von Jesus führt der Pfeil zu den Menschen: wer an ihn glaubt (Herz), hat ewiges Leben (Keimling mit Unendlichzeichen).",
+          "Sohn → Welt gerettet: Gott sendet den Sohn (Pfeil zu Jesus); von Jesus führt der Pfeil zur Welt (Erdkugel): sie wird durch ihn gerettet (Pfeil nach oben aus den Wellen), nicht gerichtet (Waage im roten Verbotskreis).",
+          "Licht und Finsternis: Das Licht (goldener Schein) ist gekommen; die Menschen lieben die Finsternis mehr als das Licht (dunkle Wolke über ihnen)."
+        ],
+        "interpretation_note_de": "Ob diese Verse noch Rede Jesu oder Erläuterung des Evangelisten sind, lässt der Text offen; darum spricht im Bild niemand. Gott ist ohne Sprechblase gezeichnet; die Herzen und der Pfeil zum Sohn zeigen, dass er handelt. Feld 3 zeigt nur, dass Menschen die Finsternis wählen ([[JHN.3.19]]); dass, wer die Wahrheit tut, zum Licht kommt ([[JHN.3.21]]), steht in der Legende.",
+        "basis": [
+          {
+            "record": "TU-JHN-003-016-021",
+            "field": "summary",
+            "fingerprint": "1afea7e570b4756b"
+          },
+          {
+            "record": "TRANS-JHN-003-001-036-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.3.16",
+            "fingerprint": "f5f6678ace910604"
+          },
+          {
+            "record": "TRANS-JHN-003-001-036-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.3.17-JHN.3.18",
+            "fingerprint": "3b04a0b71a76814d"
+          },
+          {
+            "record": "TRANS-JHN-003-001-036-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.3.19-JHN.3.21",
+            "fingerprint": "186d66cecf0cbac7"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

@@ -12,24 +12,49 @@
     {
       "n": 1,
       "reference": "JHN.1.1-JHN.1.18",
-      "figures": [],
+      "figures": [
+        "FIG-GOTT",
+        "FIG-JESUS",
+        "FIG-GRUPPE-MENGE"
+      ],
       "objects": [],
       "signs": [
-        "FIG-ZEICHEN-LICHT-IN-FINSTERNIS"
+        "FIG-ZEICHEN-WORT"
       ],
       "speech": [],
-      "action_de": "In dem Wort war Leben, und das Leben war das Licht der Menschen; das Licht scheint in der Finsternis, und die Finsternis hat es nicht erfasst.",
+      "action_de": "Das Wort, das im Anfang bei Gott war, wurde Fleisch und wohnte unter uns; das Licht scheint in der Finsternis.",
+      "keywords": {
+        "de": "Und das Wort wurde Fleisch und wohnte unter uns",
+        "gsw": "Und s Wort isch Fleisch worde und hät under üs gwohnt"
+      },
       "stage": {
-        "big_y": 32
+        "god_side": "left",
+        "at": {
+          "FIG-ZEICHEN-WORT": "FIG-JESUS"
+        },
+        "arrows": [
+          [
+            "FIG-GOTT",
+            "FIG-JESUS",
+            "act"
+          ]
+        ],
+        "mood": {
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-MENGE": "delight"
+        },
+        "x": {
+          "FIG-JESUS": 70,
+          "FIG-GRUPPE-MENGE": 140
+        }
       }
     },
     {
       "n": 2,
       "reference": "JHN.1.19-JHN.1.34",
       "figures": [
-        "FIG-HEILIGER-GEIST",
-        "FIG-JESUS",
-        "FIG-JOHANNES-TAEUFER"
+        "FIG-JOHANNES-TAEUFER",
+        "FIG-JESUS"
       ],
       "objects": [
         "FIG-ORT-JORDAN"
@@ -39,24 +64,39 @@
         {
           "from": "FIG-JOHANNES-TAEUFER",
           "to": "FIG-JESUS",
-          "icons": [
-            "FIG-OBJ-LAMM",
-            "FIG-GOTT"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Siehe, das Lamm Gottes, das die Sünde der Welt wegnimmt!",
+            "gsw": "Lueg, s Lamm vo Gott, wo d Sünd vo de Wält wägnimmt!"
+          }
         }
       ],
-      "action_de": "Johannes bezeugt Jesus als das Lamm Gottes, auf den er den Geist hat herabkommen sehen.",
+      "action_de": "Johannes sieht Jesus kommen und sagt: «Siehe, das Lamm Gottes, das die Sünde der Welt wegnimmt!»",
+      "keywords": {
+        "de": "Ich bin nicht der Christus",
+        "gsw": "Ich bi nöd de Christus"
+      },
+      "names": {
+        "FIG-JOHANNES-TAEUFER": {
+          "de": "Johannes",
+          "gsw": "Johannes"
+        }
+      },
       "stage": {
         "arrows": [
           [
-            "FIG-HEILIGER-GEIST",
+            "FIG-JOHANNES-TAEUFER",
             "FIG-JESUS",
             "act"
           ]
         ],
+        "mood": {
+          "FIG-JOHANNES-TAEUFER": "earnest",
+          "FIG-JESUS": "calm"
+        },
         "x": {
-          "FIG-JESUS": 66,
-          "FIG-JOHANNES-TAEUFER": 140
+          "FIG-JOHANNES-TAEUFER": 50,
+          "FIG-JESUS": 136
         }
       }
     },
@@ -72,27 +112,47 @@
       "signs": [],
       "speech": [
         {
-          "from": "FIG-ANDREAS",
-          "to": "FIG-PETRUS",
-          "icons": [
-            "FIG-ZEICHEN-MESSIAS",
-            "FIG-ZEICHEN-SEHEN"
-          ]
-        },
-        {
           "from": "FIG-JESUS",
           "to": "FIG-PETRUS",
-          "icons": [
-            "FIG-PETRUS",
-            "FIG-OBJ-FELS"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Du bist Simon, der Sohn des Johannes; du wirst Kephas heissen.",
+            "gsw": "Du bisch de Simon, de Sohn vom Johannes; du wirsch Kephas heisse."
+          }
         }
       ],
-      "action_de": "Andreas sagt seinem Bruder Simon, sie hätten den Messias gefunden, und führt ihn zu Jesus; Jesus sagt, er werde Kephas heissen.",
+      "action_de": "Andreas findet seinen Bruder Simon und sagt: «Wir haben den Messias gefunden»; er führt ihn zu Jesus, und Jesus sagt: «Du bist Simon, der Sohn des Johannes; du wirst Kephas heissen.»",
+      "keywords": {
+        "de": "Wir haben den Messias gefunden",
+        "gsw": "Mir händ de Messias gfunde"
+      },
+      "names": {
+        "FIG-ANDREAS": {
+          "de": "Andreas",
+          "gsw": "Andreas"
+        },
+        "FIG-PETRUS": {
+          "de": "Simon",
+          "gsw": "Simon"
+        }
+      },
       "stage": {
+        "arrows": [
+          [
+            "FIG-ANDREAS",
+            "FIG-JESUS",
+            "go"
+          ]
+        ],
         "mood": {
-          "FIG-PETRUS": "surprised",
-          "FIG-ANDREAS": "delight"
+          "FIG-ANDREAS": "delight",
+          "FIG-PETRUS": "calm",
+          "FIG-JESUS": "calm"
+        },
+        "x": {
+          "FIG-ANDREAS": 30,
+          "FIG-PETRUS": 84,
+          "FIG-JESUS": 150
         }
       }
     },
@@ -100,8 +160,8 @@
       "n": 4,
       "reference": "JHN.1.43-JHN.1.51",
       "figures": [
-        "FIG-NATANAEL",
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-NATANAEL"
       ],
       "objects": [
         "FIG-OBJ-FEIGENBAUM"
@@ -109,48 +169,61 @@
       "signs": [],
       "speech": [
         {
-          "from": "FIG-JESUS",
-          "to": "FIG-NATANAEL",
-          "icons": [
-            "FIG-ZEICHEN-HIMMEL-OFFEN",
-            "FIG-ROLLE-ENGEL",
-            "FIG-ZEICHEN-HINAUF",
-            "FIG-ZEICHEN-HINAB",
-            "FIG-JESUS"
-          ]
+          "from": "FIG-NATANAEL",
+          "to": "FIG-JESUS",
+          "icons": [],
+          "word": {
+            "de": "Rabbi, du bist der Sohn Gottes, du bist der König Israels!",
+            "gsw": "Rabbi, du bisch de Sohn vo Gott, du bisch de König vo Israel!"
+          }
         }
       ],
-      "action_de": "Natanaël, den Jesus unter dem Feigenbaum gesehen hat, bekennt ihn als Sohn Gottes; Jesus kündigt an, sie würden den Himmel geöffnet und die Engel auf den Menschensohn steigen sehen.",
+      "action_de": "Jesus sagt Natanaël, er habe ihn unter dem Feigenbaum gesehen; Natanaël bekennt: «Rabbi, du bist der Sohn Gottes, du bist der König Israels!»",
+      "keywords": {
+        "de": "Komm und sieh!",
+        "gsw": "Chumm und lueg!"
+      },
+      "names": {
+        "FIG-NATANAEL": {
+          "de": "Natanaël",
+          "gsw": "Natanaël"
+        }
+      },
       "stage": {
-        "floor_side": "left",
+        "back_side": "right",
         "mood": {
+          "FIG-JESUS": "smile",
           "FIG-NATANAEL": "surprised"
+        },
+        "x": {
+          "FIG-JESUS": 50,
+          "FIG-NATANAEL": 128
         }
       }
     }
   ],
   "actions_de": [
-    "In dem Wort war Leben, und das Leben war das Licht der Menschen; das Licht scheint in der Finsternis, und die Finsternis hat es nicht erfasst.",
-    "Johannes bezeugt Jesus als das Lamm Gottes, auf den er den Geist hat herabkommen sehen.",
-    "Andreas sagt seinem Bruder Simon, sie hätten den Messias gefunden, und führt ihn zu Jesus; Jesus sagt, er werde Kephas heissen.",
-    "Natanaël, den Jesus unter dem Feigenbaum gesehen hat, bekennt ihn als Sohn Gottes; Jesus kündigt an, sie würden den Himmel geöffnet und die Engel auf den Menschensohn steigen sehen."
+    "Das Wort, das im Anfang bei Gott war, wurde Fleisch und wohnte unter uns; das Licht scheint in der Finsternis.",
+    "Johannes sieht Jesus kommen und sagt: «Siehe, das Lamm Gottes, das die Sünde der Welt wegnimmt!»",
+    "Andreas findet seinen Bruder Simon und sagt: «Wir haben den Messias gefunden»; er führt ihn zu Jesus, und Jesus sagt: «Du bist Simon, der Sohn des Johannes; du wirst Kephas heissen.»",
+    "Jesus sagt Natanaël, er habe ihn unter dem Feigenbaum gesehen; Natanaël bekennt: «Rabbi, du bist der Sohn Gottes, du bist der König Israels!»"
   ],
   "captions_de": [
-    "Licht in der Finsternis: Das Licht (goldener Schein) scheint mitten in der Finsternis (grosse dunkle Wolke); sie hat es nicht erfasst.",
-    "Zeuge: Johannes am Jordan zeigt auf Jesus: das Lamm Gottes (Lamm, Strahlenkranz); der Geist (Taube) kommt auf ihn herab.",
-    "Die ersten Jünger: Andreas: Messias gefunden (Salbhorn, Krone, Augen); Jesus zu Simon: Du wirst Fels heissen (Fels).",
-    "Natanaël: Jesus kündigt dem Mann vom Feigenbaum an: offener Himmel (Wolken mit Licht), Engel steigen hinauf und hinab (Engel, Pfeil nach oben, Pfeil nach unten) auf den Menschensohn (Jesus)."
+    "Das Wort: Jesus unter Menschen, über ihm das Wort (Wort); goldener Pfeil vom Strahlenkranz (Gott).",
+    "Das Lamm Gottes: Johannes (Name) zeigt auf Jesus und ruft: «Siehe, das Lamm Gottes, das die Sünde der Welt wegnimmt!» (Lamm, Sünde).",
+    "Der neue Name: Andreas (Name) bringt Simon (Name) zu Jesus; Jesus sagt: «Du bist Simon, der Sohn des Johannes; du wirst Kephas heissen.» (Fels).",
+    "Bekenntnis: Natanaël (Name) beim Feigenbaum bekennt Jesus: «Rabbi, du bist der Sohn Gottes, du bist der König Israels!» (Krone)."
   ],
-  "interpretation_note_de": "Je ein Feld zum Prolog, zum Zeugnis des Johannes ([[JHN.1.19-JHN.1.34]]), zu den ersten Jüngern und zu Philippus und Natanaël; Einzelheiten in den Abschnitten.",
+  "interpretation_note_de": "Vier Comic-Szenen für fünf Abschnitte ([[JHN.1.1-JHN.1.51]]): Feld 1 der Prolog (das Wort unter den Menschen; Deutung des Wortes als Jesus wie im Abschnitt); Feld 2 bündelt das Verhör (im Band: «Ich bin nicht der Christus») und das Zeugnis vom Lamm Gottes (die Taube steht im Abschnittsbild) – keine Taufszene; Feld 3 Andreas bringt Simon zu Jesus; Feld 4 bündelt Philippus (im Band: «Komm und sieh!») und das Bekenntnis Natanaëls. Gott ist als Strahlenkranz gezeichnet.",
   "basis": [
     {
       "record": "SUM-CH-JHN-001",
       "field": "summary",
-      "fingerprint": "d019bcfe53a51fa3"
+      "fingerprint": "72a3b95f77c04b36"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -299,6 +372,569 @@
           "Zeuge: Johannes am Jordan zeigt auf Jesus: das Lamm Gottes (Lamm, Strahlenkranz); der Geist (Taube) kommt auf ihn herab.",
           "Die ersten Jünger: Andreas: Messias gefunden (Salbhorn, Krone, Auge); Jesus zu Simon: Du wirst Fels heissen (Fels).",
           "Natanaël: Jesus kündigt dem Mann vom Feigenbaum an: offener Himmel (Wolken mit Licht), Engel steigen hinauf und hinab (Engel, Pfeil nach oben, Pfeil nach unten) auf den Menschensohn (Jesus)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.1.1-JHN.1.18",
+            "figures": [],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-LICHT-IN-FINSTERNIS"
+            ],
+            "speech": [],
+            "action_de": "In dem Wort war Leben, und das Leben war das Licht der Menschen; das Licht scheint in der Finsternis, und die Finsternis hat es nicht erfasst.",
+            "stage": {
+              "big_y": 32
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.1.19-JHN.1.34",
+            "figures": [
+              "FIG-HEILIGER-GEIST",
+              "FIG-JESUS",
+              "FIG-JOHANNES-TAEUFER"
+            ],
+            "objects": [
+              "FIG-ORT-JORDAN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JOHANNES-TAEUFER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-OBJ-LAMM",
+                  "FIG-GOTT"
+                ]
+              }
+            ],
+            "action_de": "Johannes bezeugt Jesus als das Lamm Gottes, auf den er den Geist hat herabkommen sehen.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-HEILIGER-GEIST",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "x": {
+                "FIG-JESUS": 66,
+                "FIG-JOHANNES-TAEUFER": 140
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.1.35-JHN.1.42",
+            "figures": [
+              "FIG-ANDREAS",
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ANDREAS",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-ZEICHEN-MESSIAS",
+                  "FIG-ZEICHEN-SEHEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-PETRUS",
+                  "FIG-OBJ-FELS"
+                ]
+              }
+            ],
+            "action_de": "Andreas sagt seinem Bruder Simon, sie hätten den Messias gefunden, und führt ihn zu Jesus; Jesus sagt, er werde Kephas heissen.",
+            "stage": {
+              "mood": {
+                "FIG-PETRUS": "surprised",
+                "FIG-ANDREAS": "delight"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.1.43-JHN.1.51",
+            "figures": [
+              "FIG-NATANAEL",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-FEIGENBAUM"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-NATANAEL",
+                "icons": [
+                  "FIG-ZEICHEN-HIMMEL-OFFEN",
+                  "FIG-ROLLE-ENGEL",
+                  "FIG-ZEICHEN-HINAUF",
+                  "FIG-ZEICHEN-HINAB",
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Natanaël, den Jesus unter dem Feigenbaum gesehen hat, bekennt ihn als Sohn Gottes; Jesus kündigt an, sie würden den Himmel geöffnet und die Engel auf den Menschensohn steigen sehen.",
+            "stage": {
+              "floor_side": "left",
+              "mood": {
+                "FIG-NATANAEL": "surprised"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "In dem Wort war Leben, und das Leben war das Licht der Menschen; das Licht scheint in der Finsternis, und die Finsternis hat es nicht erfasst.",
+          "Johannes bezeugt Jesus als das Lamm Gottes, auf den er den Geist hat herabkommen sehen.",
+          "Andreas sagt seinem Bruder Simon, sie hätten den Messias gefunden, und führt ihn zu Jesus; Jesus sagt, er werde Kephas heissen.",
+          "Natanaël, den Jesus unter dem Feigenbaum gesehen hat, bekennt ihn als Sohn Gottes; Jesus kündigt an, sie würden den Himmel geöffnet und die Engel auf den Menschensohn steigen sehen."
+        ],
+        "captions_de": [
+          "Licht in der Finsternis: Das Licht (goldener Schein) scheint mitten in der Finsternis (grosse dunkle Wolke); sie hat es nicht erfasst.",
+          "Zeuge: Johannes am Jordan zeigt auf Jesus: das Lamm Gottes (Lamm, Strahlenkranz); der Geist (Taube) kommt auf ihn herab.",
+          "Die ersten Jünger: Andreas: Messias gefunden (Salbhorn, Krone, Augen); Jesus zu Simon: Du wirst Fels heissen (Fels).",
+          "Natanaël: Jesus kündigt dem Mann vom Feigenbaum an: offener Himmel (Wolken mit Licht), Engel steigen hinauf und hinab (Engel, Pfeil nach oben, Pfeil nach unten) auf den Menschensohn (Jesus)."
+        ],
+        "interpretation_note_de": "Je ein Feld zum Prolog, zum Zeugnis des Johannes ([[JHN.1.19-JHN.1.34]]), zu den ersten Jüngern und zu Philippus und Natanaël; Einzelheiten in den Abschnitten.",
+        "basis": [
+          {
+            "record": "SUM-CH-JHN-001",
+            "field": "summary",
+            "fingerprint": "d019bcfe53a51fa3"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.1.1-JHN.1.18",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-WORT",
+              "FIG-ZEICHEN-LICHT-IN-FINSTERNIS"
+            ],
+            "speech": [],
+            "action_de": "Das Wort, das im Anfang bei Gott war, wurde Fleisch und wohnte unter uns; das Licht scheint in der Finsternis.",
+            "keywords": {
+              "de": "Und das Wort wurde Fleisch und wohnte unter uns",
+              "gsw": "Und s Wort isch Fleisch worde und hät under üs gwohnt"
+            },
+            "stage": {
+              "god_side": "left",
+              "at": {
+                "FIG-ZEICHEN-WORT": "FIG-JESUS"
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-MENGE": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 70,
+                "FIG-GRUPPE-MENGE": 140
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.1.19-JHN.1.34",
+            "figures": [
+              "FIG-HEILIGER-GEIST",
+              "FIG-JOHANNES-TAEUFER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-JORDAN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JOHANNES-TAEUFER",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Siehe, das Lamm Gottes, das die Sünde der Welt wegnimmt!",
+                  "gsw": "Lueg, s Lamm vo Gott, wo d Sünd vo de Wält wägnimmt!"
+                }
+              }
+            ],
+            "action_de": "Johannes sieht Jesus kommen und sagt: «Siehe, das Lamm Gottes, das die Sünde der Welt wegnimmt!» Er bezeugt, dass der Geist wie eine Taube vom Himmel herabkam und auf ihm blieb.",
+            "keywords": {
+              "de": "Ich bin nicht der Christus",
+              "gsw": "Ich bi nöd de Christus"
+            },
+            "names": {
+              "FIG-JOHANNES-TAEUFER": {
+                "de": "Johannes",
+                "gsw": "Johannes"
+              }
+            },
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-JOHANNES-TAEUFER",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JOHANNES-TAEUFER": "earnest",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-JOHANNES-TAEUFER": 50,
+                "FIG-JESUS": 136
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.1.35-JHN.1.42",
+            "figures": [
+              "FIG-ANDREAS",
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [],
+                "word": {
+                  "de": "Du bist Simon, der Sohn des Johannes; du wirst Kephas heissen.",
+                  "gsw": "Du bisch de Simon, de Sohn vom Johannes; du wirsch Kephas heisse."
+                }
+              }
+            ],
+            "action_de": "Andreas findet seinen Bruder Simon und sagt: «Wir haben den Messias gefunden»; er führt ihn zu Jesus, und Jesus sagt: «Du bist Simon, der Sohn des Johannes; du wirst Kephas heissen.»",
+            "keywords": {
+              "de": "Wir haben den Messias gefunden",
+              "gsw": "Mir händ de Messias gfunde"
+            },
+            "names": {
+              "FIG-ANDREAS": {
+                "de": "Andreas",
+                "gsw": "Andreas"
+              },
+              "FIG-PETRUS": {
+                "de": "Simon",
+                "gsw": "Simon"
+              }
+            },
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-ANDREAS",
+                  "FIG-JESUS",
+                  "go"
+                ]
+              ],
+              "mood": {
+                "FIG-ANDREAS": "delight",
+                "FIG-PETRUS": "surprised",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-ANDREAS": 30,
+                "FIG-PETRUS": 84,
+                "FIG-JESUS": 150
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.1.43-JHN.1.51",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-NATANAEL"
+            ],
+            "objects": [
+              "FIG-OBJ-FEIGENBAUM"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-NATANAEL",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Rabbi, du bist der Sohn Gottes, du bist der König Israels!",
+                  "gsw": "Rabbi, du bisch de Sohn vo Gott, du bisch de König vo Israel!"
+                }
+              }
+            ],
+            "action_de": "Jesus sagt Natanaël, er habe ihn unter dem Feigenbaum gesehen; Natanaël bekennt: «Rabbi, du bist der Sohn Gottes, du bist der König Israels!»",
+            "keywords": {
+              "de": "Komm und sieh!",
+              "gsw": "Chumm und lueg!"
+            },
+            "names": {
+              "FIG-NATANAEL": {
+                "de": "Natanaël",
+                "gsw": "Natanaël"
+              }
+            },
+            "stage": {
+              "back_side": "right",
+              "mood": {
+                "FIG-JESUS": "smile",
+                "FIG-NATANAEL": "surprised"
+              },
+              "x": {
+                "FIG-JESUS": 50,
+                "FIG-NATANAEL": 128
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Das Wort, das im Anfang bei Gott war, wurde Fleisch und wohnte unter uns; das Licht scheint in der Finsternis.",
+          "Johannes sieht Jesus kommen und sagt: «Siehe, das Lamm Gottes, das die Sünde der Welt wegnimmt!» Er bezeugt, dass der Geist wie eine Taube vom Himmel herabkam und auf ihm blieb.",
+          "Andreas findet seinen Bruder Simon und sagt: «Wir haben den Messias gefunden»; er führt ihn zu Jesus, und Jesus sagt: «Du bist Simon, der Sohn des Johannes; du wirst Kephas heissen.»",
+          "Jesus sagt Natanaël, er habe ihn unter dem Feigenbaum gesehen; Natanaël bekennt: «Rabbi, du bist der Sohn Gottes, du bist der König Israels!»"
+        ],
+        "captions_de": [
+          "Das Wort: Jesus unter Menschen, über ihm das Wort (Wort) und das Licht in der Finsternis (Licht in der Finsternis); goldener Pfeil vom Strahlenkranz (Gott).",
+          "Das Lamm Gottes: Johannes (Name) zeigt auf Jesus und ruft: «Siehe, das Lamm Gottes, das die Sünde der Welt wegnimmt!» (Lamm, Sünde); über Jesus die Taube (Geist).",
+          "Der neue Name: Andreas (Name) bringt Simon (Name) zu Jesus; Jesus sagt: «Du bist Simon, der Sohn des Johannes; du wirst Kephas heissen.» (Fels).",
+          "Bekenntnis: Natanaël (Name) beim Feigenbaum bekennt Jesus: «Rabbi, du bist der Sohn Gottes, du bist der König Israels!» (Krone)."
+        ],
+        "interpretation_note_de": "Vier Comic-Szenen für fünf Abschnitte ([[JHN.1.1-JHN.1.51]]): Feld 1 der Prolog (das Wort unter den Menschen; Deutung des Wortes als Jesus wie im Abschnitt); Feld 2 bündelt das Verhör (im Band: «Ich bin nicht der Christus») und das Zeugnis vom Lamm Gottes mit der Taube über Jesus – keine Taufszene; Feld 3 Andreas bringt Simon zu Jesus; Feld 4 bündelt Philippus (im Band: «Komm und sieh!») und das Bekenntnis Natanaëls. Gott ist als Strahlenkranz gezeichnet."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Prüfung Struktur zuerst",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.1.1-JHN.1.18",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-WORT"
+            ],
+            "speech": [],
+            "action_de": "Das Wort, das im Anfang bei Gott war, wurde Fleisch und wohnte unter uns; das Licht scheint in der Finsternis.",
+            "keywords": {
+              "de": "Und das Wort wurde Fleisch und wohnte unter uns",
+              "gsw": "Und s Wort isch Fleisch worde und hät under üs gwohnt"
+            },
+            "stage": {
+              "god_side": "left",
+              "at": {
+                "FIG-ZEICHEN-WORT": "FIG-JESUS"
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-MENGE": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 70,
+                "FIG-GRUPPE-MENGE": 140
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.1.19-JHN.1.34",
+            "figures": [
+              "FIG-JOHANNES-TAEUFER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-JORDAN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JOHANNES-TAEUFER",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Siehe, das Lamm Gottes, das die Sünde der Welt wegnimmt!",
+                  "gsw": "Lueg, s Lamm vo Gott, wo d Sünd vo de Wält wägnimmt!"
+                }
+              }
+            ],
+            "action_de": "Johannes sieht Jesus kommen und sagt: «Siehe, das Lamm Gottes, das die Sünde der Welt wegnimmt!»",
+            "keywords": {
+              "de": "Ich bin nicht der Christus",
+              "gsw": "Ich bi nöd de Christus"
+            },
+            "names": {
+              "FIG-JOHANNES-TAEUFER": {
+                "de": "Johannes",
+                "gsw": "Johannes"
+              }
+            },
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-JOHANNES-TAEUFER",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JOHANNES-TAEUFER": "earnest",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-JOHANNES-TAEUFER": 50,
+                "FIG-JESUS": 136
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.1.35-JHN.1.42",
+            "figures": [
+              "FIG-ANDREAS",
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [],
+                "word": {
+                  "de": "Du bist Simon, der Sohn des Johannes; du wirst Kephas heissen.",
+                  "gsw": "Du bisch de Simon, de Sohn vom Johannes; du wirsch Kephas heisse."
+                }
+              }
+            ],
+            "action_de": "Andreas findet seinen Bruder Simon und sagt: «Wir haben den Messias gefunden»; er führt ihn zu Jesus, und Jesus sagt: «Du bist Simon, der Sohn des Johannes; du wirst Kephas heissen.»",
+            "keywords": {
+              "de": "Wir haben den Messias gefunden",
+              "gsw": "Mir händ de Messias gfunde"
+            },
+            "names": {
+              "FIG-ANDREAS": {
+                "de": "Andreas",
+                "gsw": "Andreas"
+              },
+              "FIG-PETRUS": {
+                "de": "Simon",
+                "gsw": "Simon"
+              }
+            },
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-ANDREAS",
+                  "FIG-JESUS",
+                  "go"
+                ]
+              ],
+              "mood": {
+                "FIG-ANDREAS": "delight",
+                "FIG-PETRUS": "surprised",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-ANDREAS": 30,
+                "FIG-PETRUS": 84,
+                "FIG-JESUS": 150
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.1.43-JHN.1.51",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-NATANAEL"
+            ],
+            "objects": [
+              "FIG-OBJ-FEIGENBAUM"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-NATANAEL",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Rabbi, du bist der Sohn Gottes, du bist der König Israels!",
+                  "gsw": "Rabbi, du bisch de Sohn vo Gott, du bisch de König vo Israel!"
+                }
+              }
+            ],
+            "action_de": "Jesus sagt Natanaël, er habe ihn unter dem Feigenbaum gesehen; Natanaël bekennt: «Rabbi, du bist der Sohn Gottes, du bist der König Israels!»",
+            "keywords": {
+              "de": "Komm und sieh!",
+              "gsw": "Chumm und lueg!"
+            },
+            "names": {
+              "FIG-NATANAEL": {
+                "de": "Natanaël",
+                "gsw": "Natanaël"
+              }
+            },
+            "stage": {
+              "back_side": "right",
+              "mood": {
+                "FIG-JESUS": "smile",
+                "FIG-NATANAEL": "surprised"
+              },
+              "x": {
+                "FIG-JESUS": 50,
+                "FIG-NATANAEL": 128
+              }
+            }
+          }
         ]
       }
     }

@@ -19,31 +19,43 @@
       "objects": [
         "FIG-OBJ-MATTE"
       ],
-      "signs": [
-        "FIG-ZEICHEN-NICHT-VERSTEHEN"
-      ],
+      "signs": [],
       "speech": [
         {
           "from": "FIG-GRUPPE-MENGE",
           "to": "FIG-ROLLE-KRANKER",
-          "icons": [
-            "FIG-ZEICHEN-SABBAT",
-            "FIG-OBJ-MATTE",
-            "FIG-ZEICHEN-NEIN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Es ist Sabbat, und es ist dir nicht erlaubt, die Matte zu tragen.",
+            "gsw": "Es isch Sabbat, und es isch dir nöd erlaubt, d Matte z träge."
+          }
+        },
+        {
+          "from": "FIG-ROLLE-KRANKER",
+          "to": "FIG-GRUPPE-MENGE",
+          "icons": [],
+          "word": {
+            "de": "Der mich gesund gemacht hat, der hat zu mir gesagt: ‹Nimm deine Matte und geh umher!›",
+            "gsw": "Dä, wo mich gsund gmacht hät, dä hät mer gseit: ‹Nimm dini Matte und lauf umenand!›"
+          }
         }
       ],
-      "action_de": "Die Juden sagen zum Geheilten: Es ist Sabbat; du darfst die Matte nicht tragen. Er beruft sich auf den, der ihn gesund gemacht hat; sie fragen, wer das sei, doch er weiss es nicht.",
+      "action_de": "Die Juden sagen zu dem Geheilten: «Es ist Sabbat, und es ist dir nicht erlaubt, die Matte zu tragen.» Er antwortet: «Der mich gesund gemacht hat, der hat zu mir gesagt: ‹Nimm deine Matte und geh umher!›» Wer es war, weiss er nicht.",
+      "keywords": {
+        "de": "Der Geheilte aber wusste nicht, wer es war",
+        "gsw": "De Gheilt aber hät nöd gwüsst, wer es isch"
+      },
       "stage": {
         "hold": {
           "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
         },
-        "at": {
-          "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-ROLLE-KRANKER"
-        },
         "mood": {
-          "FIG-GRUPPE-MENGE": "earnest",
+          "FIG-GRUPPE-MENGE": "angry",
           "FIG-ROLLE-KRANKER": "worried"
+        },
+        "x": {
+          "FIG-GRUPPE-MENGE": 54,
+          "FIG-ROLLE-KRANKER": 140
         }
       }
     },
@@ -62,80 +74,96 @@
         {
           "from": "FIG-JESUS",
           "to": "FIG-ROLLE-KRANKER",
-          "icons": [
-            "FIG-ZEICHEN-SUENDE",
-            "FIG-ZEICHEN-NEIN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Sieh, du bist gesund geworden. Sündige nicht mehr, damit dir nicht etwas Schlimmeres geschieht!",
+            "gsw": "Lueg, du bisch gsund worde. Sündig nüme, demit dir nöd öppis Schlimmers passiert!"
+          }
         }
       ],
-      "action_de": "Jesus findet ihn im Tempel und sagt: Du bist gesund geworden; sündige nicht mehr, damit dir nichts Schlimmeres geschieht. Der Mann geht weg und meldet den Juden, dass es Jesus war.",
+      "action_de": "Jesus findet ihn im Tempel: «Sieh, du bist gesund geworden. Sündige nicht mehr, damit dir nicht etwas Schlimmeres geschieht!» Der Mann meldet den Juden, dass es Jesus war.",
+      "keywords": {
+        "de": "Danach findet ihn Jesus im Tempel",
+        "gsw": "Dänn findt en de Jesus im Tämpel"
+      },
       "stage": {
+        "before": true,
         "mood": {
+          "FIG-JESUS": "earnest",
           "FIG-ROLLE-KRANKER": "pensive"
         },
         "x": {
-          "FIG-JESUS": 30,
-          "FIG-ROLLE-KRANKER": 76
+          "FIG-JESUS": 50,
+          "FIG-ROLLE-KRANKER": 136
         }
       }
     },
     {
       "n": 3,
       "reference": "JHN.5.16-JHN.5.18",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-MENGE"
-      ],
+      "figures": [],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-ZORN"
-      ],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-GOTT",
-            "FIG-ZEICHEN-STERN",
-            "FIG-JESUS",
-            "FIG-ZEICHEN-STERN"
-          ]
-        }
-      ],
-      "action_de": "Die Juden verfolgen Jesus, weil er dies am Sabbat tat. Er antwortet: Mein Vater wirkt bis jetzt, und auch ich wirke. Da suchen sie umso mehr, ihn zu töten, weil er Gott seinen eigenen Vater nennt.",
-      "stage": {
-        "at": {
-          "FIG-ZEICHEN-ZORN": "FIG-GRUPPE-MENGE"
-        },
-        "mood": {
-          "FIG-GRUPPE-MENGE": "earnest"
-        },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-GRUPPE-MENGE",
-            "act"
-          ]
+      "signs": [],
+      "speech": [],
+      "action_de": "Die Juden verfolgen Jesus, weil er dies am Sabbat tat; er antwortet: «Mein Vater wirkt bis jetzt, und auch ich wirke»; darum suchen sie umso mehr, ihn zu töten, weil er Gott seinen eigenen Vater nennt und sich selbst Gott gleich macht.",
+      "keywords": {
+        "de": "Mein Vater wirkt bis jetzt, und auch ich wirke",
+        "gsw": "Min Vatter wirkt bis jetzt, und au ich wirke"
+      },
+      "diagram": {
+        "visual": "arrows",
+        "span": 2,
+        "cells": [
+          {
+            "a": {
+              "de": "Deswegen verfolgten die Juden Jesus, weil er dies am Sabbat tat.",
+              "gsw": "Drum händ d Jude de Jesus verfolgt, wil er das am Sabbat gmacht hät."
+            },
+            "icons": [
+              "FIG-ZEICHEN-SABBAT",
+              "FIG-ZEICHEN-VERFOLGEN"
+            ]
+          },
+          {
+            "a": {
+              "de": "Er aber antwortete ihnen: «Mein Vater wirkt bis jetzt, und auch ich wirke.»",
+              "gsw": "Er aber hät ine gantwortet: «Min Vatter wirkt bis jetzt, und au ich wirke.»"
+            },
+            "icons": [
+              "FIG-GOTT",
+              "FIG-JESUS"
+            ]
+          },
+          {
+            "a": {
+              "de": "Deshalb suchten die Juden umso mehr, ihn zu töten, weil er Gott seinen eigenen Vater nannte und sich selbst Gott gleich machte.",
+              "gsw": "Drum händ d Jude no meh gsuecht, en z töte, wil er Gott sin eigete Vatter gnännt und sich sälber Gott gliich gmacht hät."
+            },
+            "icons": [
+              "FIG-ZEICHEN-TOETEN",
+              "FIG-ZEICHEN-MEHR"
+            ]
+          }
         ]
       }
     }
   ],
   "actions_de": [
-    "Die Juden sagen zum Geheilten: Es ist Sabbat; du darfst die Matte nicht tragen. Er beruft sich auf den, der ihn gesund gemacht hat; sie fragen, wer das sei, doch er weiss es nicht.",
-    "Jesus findet ihn im Tempel und sagt: Du bist gesund geworden; sündige nicht mehr, damit dir nichts Schlimmeres geschieht. Der Mann geht weg und meldet den Juden, dass es Jesus war.",
-    "Die Juden verfolgen Jesus, weil er dies am Sabbat tat. Er antwortet: Mein Vater wirkt bis jetzt, und auch ich wirke. Da suchen sie umso mehr, ihn zu töten, weil er Gott seinen eigenen Vater nennt."
+    "Die Juden sagen zu dem Geheilten: «Es ist Sabbat, und es ist dir nicht erlaubt, die Matte zu tragen.» Er antwortet: «Der mich gesund gemacht hat, der hat zu mir gesagt: ‹Nimm deine Matte und geh umher!›» Wer es war, weiss er nicht.",
+    "Jesus findet ihn im Tempel: «Sieh, du bist gesund geworden. Sündige nicht mehr, damit dir nicht etwas Schlimmeres geschieht!» Der Mann meldet den Juden, dass es Jesus war.",
+    "Die Juden verfolgen Jesus, weil er dies am Sabbat tat; er antwortet: «Mein Vater wirkt bis jetzt, und auch ich wirke»; darum suchen sie umso mehr, ihn zu töten, weil er Gott seinen eigenen Vater nennt und sich selbst Gott gleich macht."
   ],
   "captions_de": [
-    "Sabbat: Die Leute sagen: Am Sabbat keine Matte tragen (Sabbat, Matte, rotes X). Wer ihn geheilt hat, weiss der Mann nicht (Nebel mit Fragezeichen).",
-    "Im Tempel: Jesus sagt dem Geheilten: Sündige nicht mehr (schwarzes Herz, rotes X).",
-    "Wort → Zorn: Jesus sagt: Mein Vater (Strahlenkranz) wirkt (Stern), und ich (Jesus) wirke (Stern); darum werden die Leute zornig (Pfeil zu ihnen, zorniges Gesicht)."
+    "Am Sabbat: Die Juden halten dem Geheilten mit der Matte vor: «Es ist Sabbat, und es ist dir nicht erlaubt, die Matte zu tragen.» (Sabbat, Verbotszeichen); er antwortet: «Der mich gesund gemacht hat, der hat zu mir gesagt: ‹Nimm deine Matte und geh umher!›»",
+    "Im Tempel: Jesus sagt zu dem Geheilten: «Sieh, du bist gesund geworden. Sündige nicht mehr, damit dir nicht etwas Schlimmeres geschieht!» (Sünde, Verbotszeichen).",
+    "Zuspitzung (Pfeilkette): verfolgt wegen des Sabbats (Sabbat, verfolgen) → «Mein Vater wirkt bis jetzt, und auch ich wirke.» (Strahlenkranz, Jesus) → umso mehr wollen sie ihn töten: er nennt Gott seinen eigenen Vater (töten, mehr)."
   ],
-  "interpretation_note_de": "«Die Juden» meint hier die Verantwortlichen in Jerusalem; sie erscheinen als neutrale Menge ohne Merkmale einer Volksgruppe. Dass sie Jesus töten wollen ([[JHN.5.18]]), deutet nur das Zeichen für Zorn an; Gewalt ist nicht gezeichnet. Der dunkle Fleck steht für Sünde; das Bild sagt nicht, dass die Krankheit eine Strafe war.",
+  "interpretation_note_de": "Drei Felder nach dem Ablauf «Vorwurf – Begegnung im Tempel – Verfolgung und Wort» ([[JHN.5.10-JHN.5.18]]): der Streit um die Matte am Sabbat, Jesu Wort an den Geheilten im Tempel und die Zuspitzung als Pfeilkette, mit der Tötungsabsicht, die der Text nennt. «Die Juden» sind als neutrale Gruppe ohne Merkmale einer Volksgruppe gezeichnet. «Der Vater» ist Gott und als Strahlenkranz gezeichnet, nie als Mensch.",
   "basis": [
     {
       "record": "TU-JHN-005-010-018",
       "field": "summary",
-      "fingerprint": "50109bd64799a513"
+      "fingerprint": "ccc129a861b9f8dc"
     },
     {
       "record": "TRANS-JHN-005-001-047-DE-WORKING",
@@ -157,7 +185,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -402,6 +430,167 @@
           "Im Tempel: Jesus sagt dem Geheilten: Sündige nicht mehr (dunkler Fleck, rotes X).",
           "Wort → Zorn: Jesus sagt: Mein Vater (Strahlenkranz) wirkt (Stern), und ich (Jesus) wirke (Stern); darum werden die Leute zornig (Pfeil zu ihnen, dunkle Wolke)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-JHN-005-010-018",
+            "field": "summary",
+            "fingerprint": "50109bd64799a513"
+          },
+          {
+            "record": "TRANS-JHN-005-001-047-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.5.10-JHN.5.13",
+            "fingerprint": "a6276e2d9bfa5a69"
+          },
+          {
+            "record": "TRANS-JHN-005-001-047-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.5.14-JHN.5.15",
+            "fingerprint": "093c3b93c70b53e1"
+          },
+          {
+            "record": "TRANS-JHN-005-001-047-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.5.16-JHN.5.18",
+            "fingerprint": "0ffe0a6462311885"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.5.10-JHN.5.13",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-ROLLE-KRANKER"
+            ],
+            "objects": [
+              "FIG-OBJ-MATTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NICHT-VERSTEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-ROLLE-KRANKER",
+                "icons": [
+                  "FIG-ZEICHEN-SABBAT",
+                  "FIG-OBJ-MATTE",
+                  "FIG-ZEICHEN-NEIN"
+                ]
+              }
+            ],
+            "action_de": "Die Juden sagen zum Geheilten: Es ist Sabbat; du darfst die Matte nicht tragen. Er beruft sich auf den, der ihn gesund gemacht hat; sie fragen, wer das sei, doch er weiss es nicht.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
+              },
+              "at": {
+                "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-ROLLE-KRANKER"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-ROLLE-KRANKER": "worried"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.5.14-JHN.5.15",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-KRANKER"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-KRANKER",
+                "icons": [
+                  "FIG-ZEICHEN-SUENDE",
+                  "FIG-ZEICHEN-NEIN"
+                ]
+              }
+            ],
+            "action_de": "Jesus findet ihn im Tempel und sagt: Du bist gesund geworden; sündige nicht mehr, damit dir nichts Schlimmeres geschieht. Der Mann geht weg und meldet den Juden, dass es Jesus war.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-KRANKER": "pensive"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-ROLLE-KRANKER": 76
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.5.16-JHN.5.18",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-ZORN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-STERN",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-STERN"
+                ]
+              }
+            ],
+            "action_de": "Die Juden verfolgen Jesus, weil er dies am Sabbat tat. Er antwortet: Mein Vater wirkt bis jetzt, und auch ich wirke. Da suchen sie umso mehr, ihn zu töten, weil er Gott seinen eigenen Vater nennt.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-ZORN": "FIG-GRUPPE-MENGE"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ]
+            }
+          }
+        ],
+        "actions_de": [
+          "Die Juden sagen zum Geheilten: Es ist Sabbat; du darfst die Matte nicht tragen. Er beruft sich auf den, der ihn gesund gemacht hat; sie fragen, wer das sei, doch er weiss es nicht.",
+          "Jesus findet ihn im Tempel und sagt: Du bist gesund geworden; sündige nicht mehr, damit dir nichts Schlimmeres geschieht. Der Mann geht weg und meldet den Juden, dass es Jesus war.",
+          "Die Juden verfolgen Jesus, weil er dies am Sabbat tat. Er antwortet: Mein Vater wirkt bis jetzt, und auch ich wirke. Da suchen sie umso mehr, ihn zu töten, weil er Gott seinen eigenen Vater nennt."
+        ],
+        "captions_de": [
+          "Sabbat: Die Leute sagen: Am Sabbat keine Matte tragen (Sabbat, Matte, rotes X). Wer ihn geheilt hat, weiss der Mann nicht (Nebel mit Fragezeichen).",
+          "Im Tempel: Jesus sagt dem Geheilten: Sündige nicht mehr (schwarzes Herz, rotes X).",
+          "Wort → Zorn: Jesus sagt: Mein Vater (Strahlenkranz) wirkt (Stern), und ich (Jesus) wirke (Stern); darum werden die Leute zornig (Pfeil zu ihnen, zorniges Gesicht)."
+        ],
+        "interpretation_note_de": "«Die Juden» meint hier die Verantwortlichen in Jerusalem; sie erscheinen als neutrale Menge ohne Merkmale einer Volksgruppe. Dass sie Jesus töten wollen ([[JHN.5.18]]), deutet nur das Zeichen für Zorn an; Gewalt ist nicht gezeichnet. Der dunkle Fleck steht für Sünde; das Bild sagt nicht, dass die Krankheit eine Strafe war.",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

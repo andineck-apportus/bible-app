@@ -1,0 +1,201 @@
+{
+ "id": "CORE-JHN-006-022-034",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "JHN.6.22-JHN.6.34",
+ "target": "TU-JHN-006-022-034",
+ "core_de": "Die Menge sucht Jesus und findet ihn in Kafarnaum; er sagt: «Ihr sucht mich nicht, weil ihr Zeichen gesehen habt, sondern weil ihr von den Broten gegessen habt», und fordert sie auf, nicht für die Speise zu arbeiten, die vergeht, sondern für die, die bleibt zum ewigen Leben; das Werk Gottes sei, an den zu glauben, den Gott gesandt hat; sie verlangen ein Zeichen wie das Manna, und Jesus sagt: Nicht Mose, sondern sein Vater gibt das wahre Brot vom Himmel, das der Welt Leben gibt; sie bitten: «Herr, gib uns immer dieses Brot!»",
+ "mode": "speech",
+ "voice": {
+  "speaker": "FIG-JESUS",
+  "addressee": "FIG-GRUPPE-MENGE"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "dialogue",
+    "subtype": "Suche – Vorwurf – Weisung – Frage nach dem Werk – Zeichenforderung – Brot vom Himmel – Bitte; Missverständnis: Brot vom Himmel → «Herr, gib uns immer dieses Brot!»",
+    "range": "JHN.6.22-JHN.6.34",
+    "elements": [
+     {
+      "label": "Die Menge sucht Jesus und findet ihn: «Rabbi, wann bist du hierher gekommen?»",
+      "ref": "JHN.6.22-JHN.6.25",
+      "role": "Suche"
+     },
+     {
+      "label": "Zwei Speisen",
+      "ref": "JHN.6.26-JHN.6.27",
+      "role": "Weisung",
+      "child": "s2"
+     },
+     {
+      "label": "«Was sollen wir tun, damit wir die Werke Gottes wirken?» – «Das ist das Werk Gottes, dass ihr an den glaubt, den jener gesandt hat.»",
+      "ref": "JHN.6.28-JHN.6.29",
+      "role": "Werk"
+     },
+     {
+      "label": "«Was tust du denn für ein Zeichen …? Unsere Väter haben das Manna in der Wüste gegessen …»",
+      "ref": "JHN.6.30-JHN.6.31",
+      "role": "Zeichenforderung"
+     },
+     {
+      "label": "Mose ↔ mein Vater",
+      "ref": "JHN.6.32-JHN.6.33",
+      "role": "Antwort",
+      "child": "s3"
+     },
+     {
+      "label": "«Herr, gib uns immer dieses Brot!»",
+      "ref": "JHN.6.34",
+      "role": "Bitte (Missverständnis: denkt an Brot zum Essen)"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-GRUPPE-MENGE",
+       "to": "FIG-JESUS",
+       "ref": "JHN.6.25-JHN.6.34"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-MENGE",
+       "ref": "JHN.6.26-JHN.6.33"
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "EXO.16.4",
+       "kind": "Bezug im Text («Brot vom Himmel»)"
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "«Der Vater» ist Gott; im Bild als Strahlenkranz, nie als Mensch."
+      },
+      {
+       "note": "«Menschensohn»: Jesus spricht so von sich; im Bild als Jesus gezeichnet (Deutung)."
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "nicht – sondern: Speise, die vergeht ↔ Speise, die bleibt",
+    "range": "JHN.6.26-JHN.6.27",
+    "elements": [
+     {
+      "label": "Ihr sucht mich nicht, weil ihr Zeichen gesehen habt, sondern weil ihr von den Broten gegessen habt",
+      "ref": "JHN.6.26",
+      "role": "Vorwurf"
+     },
+     {
+      "label": "Arbeitet nicht für die Speise, die vergeht",
+      "ref": "JHN.6.27",
+      "role": "nicht"
+     },
+     {
+      "label": "sondern für die Speise, die bleibt zum ewigen Leben, die der Menschensohn euch geben wird",
+      "ref": "JHN.6.27",
+      "role": "sondern"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "contrast",
+    "subtype": "nicht Mose – sondern mein Vater gibt das wahre Brot vom Himmel",
+    "range": "JHN.6.32-JHN.6.33",
+    "elements": [
+     {
+      "label": "Nicht Mose hat euch das Brot vom Himmel gegeben",
+      "ref": "JHN.6.32",
+      "role": "nicht"
+     },
+     {
+      "label": "sondern mein Vater gibt euch das wahre Brot vom Himmel; es kommt vom Himmel herab und gibt der Welt Leben",
+      "ref": "JHN.6.32-JHN.6.33",
+      "role": "sondern"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "JHN.6.26-JHN.6.27",
+   "text_de": "«Ihr sucht mich nicht, weil ihr Zeichen gesehen habt, sondern weil ihr von den Broten gegessen habt … Arbeitet nicht für die Speise, die vergeht, sondern für die Speise, die bleibt zum ewigen Leben.»",
+   "reason_de": "Gegensatz zwei Speisen (Kriterien 1 und 2).",
+   "recognition_de": "Speise, die vergeht ↔ Speise, die bleibt.",
+   "keywords": [
+    "Arbeitet nicht für die Speise, die vergeht",
+    "für die Speise, die bleibt zum ewigen Leben"
+   ]
+  },
+  {
+   "reference": "JHN.6.28-JHN.6.31",
+   "text_de": "«Was sollen wir tun …?» – «Das ist das Werk Gottes, dass ihr an den glaubt, den jener gesandt hat.» – «Was tust du denn für ein Zeichen …? Unsere Väter haben das Manna in der Wüste gegessen.»",
+   "reason_de": "Werk und Zeichen (Kriterium 1).",
+   "recognition_de": "Die Menge fordert ein Zeichen; Manna.",
+   "keywords": [
+    "Das ist das Werk Gottes, dass ihr an den glaubt, den jener gesandt hat",
+    "Unsere Väter haben das Manna in der Wüste gegessen"
+   ]
+  },
+  {
+   "reference": "JHN.6.32-JHN.6.34",
+   "text_de": "«Nicht Mose hat euch das Brot vom Himmel gegeben, sondern mein Vater gibt euch das wahre Brot vom Himmel» – «Herr, gib uns immer dieses Brot!»",
+   "reason_de": "Wende und Bitte (Kriterien 1 und 3).",
+   "recognition_de": "Brot vom Himmel.",
+   "keywords": [
+    "mein Vater gibt euch das wahre Brot vom Himmel",
+    "Herr, gib uns immer dieses Brot!"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Die Boote aus Tiberias und die Suche der Menge ([[JHN.6.22-JHN.6.25]]) – Rahmen"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-MENGE",
+  "FIG-GOTT",
+  "FIG-MOSE"
+ ],
+ "places": [
+  "FIG-OBJ-BROT",
+  "FIG-OBJ-MANNA"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "JHN.6.22-JHN.6.34",
+   "fingerprint": "11670b277b631feb"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Joh 1–7 nach Matthäus und Markus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung, wo nötig gegen den griechischen Text; Zusammenfassungen und Bildaufträge mitgeprüft; keine fachliche Prüfung durch eine Person",
+  "result": "bestanden nach Korrektur",
+  "summary_de": "Zwei Speisen, Werk Gottes, Zeichenforderung mit Manna und «nicht Mose, sondern mein Vater» richtig.",
+  "changes_de": [
+   "Struktur: Missverständnis «Brot vom Himmel» → «Herr, gib uns immer dieses Brot!» ([[JHN.6.34]]) als solches benannt."
+  ]
+ }
+}
