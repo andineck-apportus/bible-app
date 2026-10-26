@@ -2,6 +2,11 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.128 — 2026-10-26 — Lukas: Studieninhalte, Quellen nachgeschlagen
+
+- **Studieninhalte zu Lk 1–24** (`lukas_study_a.py`, `lukas_study_b.py`): 61 Befunde, 35 Deutungen mit Gegenargumenten, 30 Grundsätze und 30 Anwendungen (Damals → Prinzip → Heute, mit Zielgruppe und Grenze), 16 offene Fragen, 47 Hintergrundnotizen, 160 Beziehungen; je mit Züridüütsch. Wortzahlen per Skript gegen MACULA geprüft.
+- **Von einer getrennten KI-Instanz geprüft:** antike Quellen in 34 Hintergrundnotizen am Text nachgeschlagen (`source_check`: 29 bestätigt, 5 berichtigt, u. a. Res gestae 8, Lysanias, Julia Severa, Mischna Demai 2,2); Stellenmarke in FIND-LUK-0009 korrigiert; 4Q521 und LXX 1 Kön 17,23 nachgeschlagen; Mundart nach `lukas_einheitlich.py` angeglichen. Keine fachliche und keine muttersprachliche Prüfung; einzelne Quellen nur über Übersetzungen geprüft (in STUDY-LUK-0001/0500 vermerkt).
+
 ## v0.127 — 2026-10-26 — Lukasevangelium ganz übersetzt
 
 - **Lk 1–24** (1151 Verse) neu aus dem SBLGNT übersetzt, Hochdeutsch und Züridüütsch, mit vollständiger Wortzuordnung, Abschnitten mit Titeln und Zusammenfassungen, rund 750 Übersetzungsentscheidungen und gut 100 Lesarten-Alternativen; Handschriften-Zuordnung (CNTR) für alle Kapitel. Lk 11,1–4 (Vaterunser) unverändert. Fehlende Verse im SBLGNT (17,36; 23,17) ohne Text, Zusatz als Alternative.
