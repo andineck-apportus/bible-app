@@ -11,7 +11,7 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.25.1-MAT.25.5",
+      "reference": "MAT.25.1-MAT.25.13",
       "figures": [],
       "objects": [],
       "signs": [],
@@ -111,7 +111,7 @@
           "to": "FIG-GRUPPE-JUNGFRAUEN-KLUG",
           "icons": [
             "FIG-OBJ-OELGEFAESS",
-            "FIG-ZEICHEN-BETEN"
+            "FIG-ZEICHEN-GEBEN"
           ],
           "word": {
             "de": "Gebt uns von eurem Öl, denn unsere Lampen gehen aus!",
@@ -164,16 +164,14 @@
         "FIG-OBJ-LAMPE-AUS"
       ],
       "signs": [
-        "FIG-ZEICHEN-VERSCHLOSSEN",
-        "FIG-ZEICHEN-ABSTAND"
+        "FIG-ZEICHEN-VERSCHLOSSEN"
       ],
       "speech": [
         {
           "from": "FIG-GRUPPE-JUNGFRAUEN-TOERICHT",
           "to": "FIG-ROLLE-BRAEUTIGAM",
           "icons": [
-            "FIG-OBJ-TUER",
-            "FIG-ZEICHEN-BETEN"
+            "FIG-ORT-TUER-OFFEN"
           ],
           "word": {
             "de": "Herr, Herr, mach uns auf!",
@@ -216,7 +214,8 @@
           "FIG-GRUPPE-JUNGFRAUEN-KLUG": 30,
           "FIG-ROLLE-BRAEUTIGAM": 80,
           "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": 150
-        }
+        },
+        "trenner": true
       }
     }
   ],
@@ -227,7 +226,7 @@
   ],
   "captions_de": [
     "Zwei Spalten (Bild Jesus, Blase «Wacht also, denn ihr kennt weder den Tag noch die Stunde.»): links, hervorgehoben, fünf kluge – Lampen und Öl in Gefässen (Lampe, Ölgefäss) – gehen mit hinein zur Hochzeit (Hochzeit); rechts fünf törichte – Lampen ohne Öl (erloschene Lampe) – die Tür ist verschlossen: «Ich kenne euch nicht.» (verschlossen).",
-    "Um Mitternacht: Die törichten Jungfrauen mit erlöschenden Lampen bitten die klugen: «Gebt uns von eurem Öl, denn unsere Lampen gehen aus!» (Ölgefäss, bitten); die klugen: «Geht lieber zu den Händlern und kauft für euch selbst!» (Händler).",
+    "Um Mitternacht: Die törichten Jungfrauen mit erlöschenden Lampen bitten die klugen: «Gebt uns von eurem Öl, denn unsere Lampen gehen aus!» (Ölgefäss, geben); die klugen: «Geht lieber zu den Händlern und kauft für euch selbst!» (Händler).",
     "Verschlossene Tür: Die klugen Jungfrauen mit brennenden Lampen sind beim Bräutigam (Lampe); vor der verschlossenen Tür rufen die törichten mit erloschenen Lampen: «Herr, Herr, mach uns auf!» (verschlossene Tür); der Bräutigam: «Amen, ich sage euch: Ich kenne euch nicht.»"
   ],
   "interpretation_note_de": "Drei Felder ([[MAT.25.1-MAT.25.13]]): klug ↔ töricht als Gegenüberstellung (hervorgehoben die klugen), die Bitte um Öl um Mitternacht, die verschlossene Tür. Das Gleichnis vergleicht das Reich der Himmel; den Bräutigam deutet der Text nicht ausdrücklich, darum ist er als Rolle gezeichnet. Die Zahl zehn (fünf und fünf) steht in den Worten, nicht als Zahl der Figuren.",
@@ -240,8 +239,8 @@
     {
       "record": "TRANS-MAT-025-001-046-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.25.1-MAT.25.5",
-      "fingerprint": "0a2ccb35d47d543e"
+      "reference": "MAT.25.1-MAT.25.13",
+      "fingerprint": "94e6207163f5bd2f"
     },
     {
       "record": "TRANS-MAT-025-001-046-DE-WORKING",
@@ -1082,6 +1081,471 @@
                 "icons": [
                   "FIG-OBJ-TUER",
                   "FIG-ZEICHEN-BETEN"
+                ],
+                "word": {
+                  "de": "Herr, Herr, mach uns auf!",
+                  "gsw": "Herr, Herr, mach üs uf!"
+                }
+              },
+              {
+                "from": "FIG-ROLLE-BRAEUTIGAM",
+                "to": "FIG-GRUPPE-JUNGFRAUEN-TOERICHT",
+                "icons": [
+                  "FIG-ZEICHEN-NEIN"
+                ],
+                "word": {
+                  "de": "Amen, ich sage euch: Ich kenne euch nicht.",
+                  "gsw": "Amen, ich säg eu: Ich kenn eu nöd."
+                }
+              }
+            ],
+            "action_de": "Während die törichten Jungfrauen Öl kaufen, kommt der Bräutigam; die bereit waren, gehen mit ihm hinein zur Hochzeit, und die Tür wird verschlossen; die übrigen rufen: Herr, Herr, mach uns auf! Er antwortet: Ich kenne euch nicht.",
+            "keywords": {
+              "de": "und die Tür wurde verschlossen",
+              "gsw": "und d Tür isch zuegschlosse worde"
+            },
+            "stage": {
+              "split": 2,
+              "hold": {
+                "FIG-GRUPPE-JUNGFRAUEN-KLUG": "FIG-OBJ-LAMPE",
+                "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": "FIG-OBJ-LAMPE-AUS"
+              },
+              "at": {
+                "FIG-ZEICHEN-VERSCHLOSSEN": "FIG-GRUPPE-JUNGFRAUEN-TOERICHT"
+              },
+              "night": true,
+              "mood": {
+                "FIG-GRUPPE-JUNGFRAUEN-KLUG": "delight",
+                "FIG-ROLLE-BRAEUTIGAM": "earnest",
+                "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": "worried"
+              },
+              "x": {
+                "FIG-GRUPPE-JUNGFRAUEN-KLUG": 30,
+                "FIG-ROLLE-BRAEUTIGAM": 80,
+                "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": 150
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Prüfung Struktur zuerst",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.25.1-MAT.25.5",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Zehn Jungfrauen gehen mit ihren Lampen dem Bräutigam entgegen; fünf sind klug und nehmen Öl in Gefässen mit, fünf sind töricht und nehmen kein Öl mit; als der Bräutigam auf sich warten lässt, schlafen alle.",
+            "keywords": {
+              "de": "Fünf aber von ihnen waren töricht und fünf klug",
+              "gsw": "Föif aber vo ine sind tumm gsii und föif gschiid"
+            },
+            "diagram": {
+              "visual": "columns",
+              "span": 2,
+              "speaker": "FIG-JESUS",
+              "head_tones": [
+                "new",
+                "old"
+              ],
+              "arrow": false,
+              "title": {
+                "de": "Wacht also, denn ihr kennt weder den Tag noch die Stunde.",
+                "gsw": "Bliibed also wach, dänn ir wüssed wäder de Tag no d Stund."
+              },
+              "head": [
+                {
+                  "de": "fünf kluge",
+                  "gsw": "föif gschiidi"
+                },
+                {
+                  "de": "fünf törichte",
+                  "gsw": "föif tummi"
+                }
+              ],
+              "rows": [
+                [
+                  {
+                    "a": {
+                      "de": "Die klugen nahmen zu ihren Lampen Öl in den Gefässen mit.",
+                      "gsw": "Di gschiide händ zu ire Lampe Öl i de Gfäss mitgnoo."
+                    },
+                    "icons": [
+                      "FIG-OBJ-LAMPE",
+                      "FIG-OBJ-OELGEFAESS"
+                    ],
+                    "tone": "new"
+                  },
+                  {
+                    "a": {
+                      "de": "Die törichten nahmen ihre Lampen, nahmen aber kein Öl mit sich.",
+                      "gsw": "Di tumme händ iri Lampe gnoo, händ aber kei Öl mit sich gnoo."
+                    },
+                    "icons": [
+                      "FIG-OBJ-LAMPE-AUS"
+                    ],
+                    "tone": "old"
+                  }
+                ],
+                [
+                  {
+                    "a": {
+                      "de": "Die bereit waren, gingen mit ihm hinein zur Hochzeit.",
+                      "gsw": "Die, wo parat gsii sind, sind mit ihm a d Hochziit inegange."
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-HOCHZEIT"
+                    ],
+                    "tone": "new"
+                  },
+                  {
+                    "a": {
+                      "de": "Die Tür wurde verschlossen: «Ich kenne euch nicht.»",
+                      "gsw": "D Tür isch zuegschlosse worde: «Ich kenn eu nöd.»"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-VERSCHLOSSEN"
+                    ],
+                    "tone": "old"
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.25.6-MAT.25.9",
+            "figures": [
+              "FIG-GRUPPE-JUNGFRAUEN-TOERICHT",
+              "FIG-GRUPPE-JUNGFRAUEN-KLUG"
+            ],
+            "objects": [
+              "FIG-OBJ-LAMPE-AUS",
+              "FIG-OBJ-LAMPE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUNGFRAUEN-TOERICHT",
+                "to": "FIG-GRUPPE-JUNGFRAUEN-KLUG",
+                "icons": [
+                  "FIG-OBJ-OELGEFAESS",
+                  "FIG-ZEICHEN-BETEN"
+                ],
+                "word": {
+                  "de": "Gebt uns von eurem Öl, denn unsere Lampen gehen aus!",
+                  "gsw": "Gänd üs vo euem Öl, dänn öisi Lampe gönd us!"
+                }
+              },
+              {
+                "from": "FIG-GRUPPE-JUNGFRAUEN-KLUG",
+                "to": "FIG-GRUPPE-JUNGFRAUEN-TOERICHT",
+                "icons": [
+                  "FIG-ROLLE-HAENDLER"
+                ],
+                "word": {
+                  "de": "Geht lieber zu den Händlern und kauft für euch selbst!",
+                  "gsw": "Gönd lieber zu de Händler und chaufed für eu sälber!"
+                }
+              }
+            ],
+            "action_de": "Um Mitternacht ruft es: Siehe, der Bräutigam! Die törichten bitten die klugen: Gebt uns von eurem Öl, denn unsere Lampen gehen aus! Die klugen antworten: Es könnte für uns und für euch nicht reichen; geht lieber zu den Händlern.",
+            "keywords": {
+              "de": "Siehe, der Bräutigam!",
+              "gsw": "Lueg, de Brüütigam!"
+            },
+            "stage": {
+              "night": true,
+              "hold": {
+                "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": "FIG-OBJ-LAMPE-AUS",
+                "FIG-GRUPPE-JUNGFRAUEN-KLUG": "FIG-OBJ-LAMPE"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": "worried",
+                "FIG-GRUPPE-JUNGFRAUEN-KLUG": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": 50,
+                "FIG-GRUPPE-JUNGFRAUEN-KLUG": 136
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.25.10-MAT.25.13",
+            "figures": [
+              "FIG-GRUPPE-JUNGFRAUEN-KLUG",
+              "FIG-ROLLE-BRAEUTIGAM",
+              "FIG-GRUPPE-JUNGFRAUEN-TOERICHT"
+            ],
+            "objects": [
+              "FIG-OBJ-LAMPE",
+              "FIG-OBJ-LAMPE-AUS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-VERSCHLOSSEN",
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUNGFRAUEN-TOERICHT",
+                "to": "FIG-ROLLE-BRAEUTIGAM",
+                "icons": [
+                  "FIG-OBJ-TUER",
+                  "FIG-ZEICHEN-BETEN"
+                ],
+                "word": {
+                  "de": "Herr, Herr, mach uns auf!",
+                  "gsw": "Herr, Herr, mach üs uf!"
+                }
+              },
+              {
+                "from": "FIG-ROLLE-BRAEUTIGAM",
+                "to": "FIG-GRUPPE-JUNGFRAUEN-TOERICHT",
+                "icons": [
+                  "FIG-ZEICHEN-NEIN"
+                ],
+                "word": {
+                  "de": "Amen, ich sage euch: Ich kenne euch nicht.",
+                  "gsw": "Amen, ich säg eu: Ich kenn eu nöd."
+                }
+              }
+            ],
+            "action_de": "Während die törichten Jungfrauen Öl kaufen, kommt der Bräutigam; die bereit waren, gehen mit ihm hinein zur Hochzeit, und die Tür wird verschlossen; die übrigen rufen: Herr, Herr, mach uns auf! Er antwortet: Ich kenne euch nicht.",
+            "keywords": {
+              "de": "und die Tür wurde verschlossen",
+              "gsw": "und d Tür isch zuegschlosse worde"
+            },
+            "stage": {
+              "split": 2,
+              "hold": {
+                "FIG-GRUPPE-JUNGFRAUEN-KLUG": "FIG-OBJ-LAMPE",
+                "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": "FIG-OBJ-LAMPE-AUS"
+              },
+              "at": {
+                "FIG-ZEICHEN-VERSCHLOSSEN": "FIG-GRUPPE-JUNGFRAUEN-TOERICHT"
+              },
+              "night": true,
+              "mood": {
+                "FIG-GRUPPE-JUNGFRAUEN-KLUG": "delight",
+                "FIG-ROLLE-BRAEUTIGAM": "earnest",
+                "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": "worried"
+              },
+              "x": {
+                "FIG-GRUPPE-JUNGFRAUEN-KLUG": 30,
+                "FIG-ROLLE-BRAEUTIGAM": 80,
+                "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": 150
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Zwei Spalten (Bild Jesus, Blase «Wacht also, denn ihr kennt weder den Tag noch die Stunde.»): links, hervorgehoben, fünf kluge – Lampen und Öl in Gefässen (Lampe, Ölgefäss) – gehen mit hinein zur Hochzeit (Hochzeit); rechts fünf törichte – Lampen ohne Öl (erloschene Lampe) – die Tür ist verschlossen: «Ich kenne euch nicht.» (verschlossen).",
+          "Um Mitternacht: Die törichten Jungfrauen mit erlöschenden Lampen bitten die klugen: «Gebt uns von eurem Öl, denn unsere Lampen gehen aus!» (Ölgefäss, bitten); die klugen: «Geht lieber zu den Händlern und kauft für euch selbst!» (Händler).",
+          "Verschlossene Tür: Die klugen Jungfrauen mit brennenden Lampen sind beim Bräutigam (Lampe); vor der verschlossenen Tür rufen die törichten mit erloschenen Lampen: «Herr, Herr, mach uns auf!» (verschlossene Tür); der Bräutigam: «Amen, ich sage euch: Ich kenne euch nicht.»"
+        ],
+        "basis": [
+          {
+            "record": "TU-MAT-025-001-013",
+            "field": "summary",
+            "fingerprint": "b69b76145bfd4d58"
+          },
+          {
+            "record": "TRANS-MAT-025-001-046-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.25.1-MAT.25.5",
+            "fingerprint": "0a2ccb35d47d543e"
+          },
+          {
+            "record": "TRANS-MAT-025-001-046-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.25.6-MAT.25.9",
+            "fingerprint": "c5e5a5b8c58f03ff"
+          },
+          {
+            "record": "TRANS-MAT-025-001-046-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.25.10-MAT.25.13",
+            "fingerprint": "36f77ed3c4f7d586"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Trennlinie ohne Bedeutung statt Zeichen Abstand",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.25.1-MAT.25.13",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Zehn Jungfrauen gehen mit ihren Lampen dem Bräutigam entgegen; fünf sind klug und nehmen Öl in Gefässen mit, fünf sind töricht und nehmen kein Öl mit; als der Bräutigam auf sich warten lässt, schlafen alle.",
+            "keywords": {
+              "de": "Fünf aber von ihnen waren töricht und fünf klug",
+              "gsw": "Föif aber vo ine sind tumm gsii und föif gschiid"
+            },
+            "diagram": {
+              "visual": "columns",
+              "span": 2,
+              "speaker": "FIG-JESUS",
+              "head_tones": [
+                "new",
+                "old"
+              ],
+              "arrow": false,
+              "title": {
+                "de": "Wacht also, denn ihr kennt weder den Tag noch die Stunde.",
+                "gsw": "Bliibed also wach, dänn ir wüssed wäder de Tag no d Stund."
+              },
+              "head": [
+                {
+                  "de": "fünf kluge",
+                  "gsw": "föif gschiidi"
+                },
+                {
+                  "de": "fünf törichte",
+                  "gsw": "föif tummi"
+                }
+              ],
+              "rows": [
+                [
+                  {
+                    "a": {
+                      "de": "Die klugen nahmen zu ihren Lampen Öl in den Gefässen mit.",
+                      "gsw": "Di gschiide händ zu ire Lampe Öl i de Gfäss mitgnoo."
+                    },
+                    "icons": [
+                      "FIG-OBJ-LAMPE",
+                      "FIG-OBJ-OELGEFAESS"
+                    ],
+                    "tone": "new"
+                  },
+                  {
+                    "a": {
+                      "de": "Die törichten nahmen ihre Lampen, nahmen aber kein Öl mit sich.",
+                      "gsw": "Di tumme händ iri Lampe gnoo, händ aber kei Öl mit sich gnoo."
+                    },
+                    "icons": [
+                      "FIG-OBJ-LAMPE-AUS"
+                    ],
+                    "tone": "old"
+                  }
+                ],
+                [
+                  {
+                    "a": {
+                      "de": "Die bereit waren, gingen mit ihm hinein zur Hochzeit.",
+                      "gsw": "Die, wo parat gsii sind, sind mit ihm a d Hochziit inegange."
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-HOCHZEIT"
+                    ],
+                    "tone": "new"
+                  },
+                  {
+                    "a": {
+                      "de": "Die Tür wurde verschlossen: «Ich kenne euch nicht.»",
+                      "gsw": "D Tür isch zuegschlosse worde: «Ich kenn eu nöd.»"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-VERSCHLOSSEN"
+                    ],
+                    "tone": "old"
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.25.6-MAT.25.9",
+            "figures": [
+              "FIG-GRUPPE-JUNGFRAUEN-TOERICHT",
+              "FIG-GRUPPE-JUNGFRAUEN-KLUG"
+            ],
+            "objects": [
+              "FIG-OBJ-LAMPE-AUS",
+              "FIG-OBJ-LAMPE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUNGFRAUEN-TOERICHT",
+                "to": "FIG-GRUPPE-JUNGFRAUEN-KLUG",
+                "icons": [
+                  "FIG-OBJ-OELGEFAESS",
+                  "FIG-ZEICHEN-GEBEN"
+                ],
+                "word": {
+                  "de": "Gebt uns von eurem Öl, denn unsere Lampen gehen aus!",
+                  "gsw": "Gänd üs vo euem Öl, dänn öisi Lampe gönd us!"
+                }
+              },
+              {
+                "from": "FIG-GRUPPE-JUNGFRAUEN-KLUG",
+                "to": "FIG-GRUPPE-JUNGFRAUEN-TOERICHT",
+                "icons": [
+                  "FIG-ROLLE-HAENDLER"
+                ],
+                "word": {
+                  "de": "Geht lieber zu den Händlern und kauft für euch selbst!",
+                  "gsw": "Gönd lieber zu de Händler und chaufed für eu sälber!"
+                }
+              }
+            ],
+            "action_de": "Um Mitternacht ruft es: Siehe, der Bräutigam! Die törichten bitten die klugen: Gebt uns von eurem Öl, denn unsere Lampen gehen aus! Die klugen antworten: Es könnte für uns und für euch nicht reichen; geht lieber zu den Händlern.",
+            "keywords": {
+              "de": "Siehe, der Bräutigam!",
+              "gsw": "Lueg, de Brüütigam!"
+            },
+            "stage": {
+              "night": true,
+              "hold": {
+                "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": "FIG-OBJ-LAMPE-AUS",
+                "FIG-GRUPPE-JUNGFRAUEN-KLUG": "FIG-OBJ-LAMPE"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": "worried",
+                "FIG-GRUPPE-JUNGFRAUEN-KLUG": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": 50,
+                "FIG-GRUPPE-JUNGFRAUEN-KLUG": 136
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.25.10-MAT.25.13",
+            "figures": [
+              "FIG-GRUPPE-JUNGFRAUEN-KLUG",
+              "FIG-ROLLE-BRAEUTIGAM",
+              "FIG-GRUPPE-JUNGFRAUEN-TOERICHT"
+            ],
+            "objects": [
+              "FIG-OBJ-LAMPE",
+              "FIG-OBJ-LAMPE-AUS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-VERSCHLOSSEN",
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUNGFRAUEN-TOERICHT",
+                "to": "FIG-ROLLE-BRAEUTIGAM",
+                "icons": [
+                  "FIG-ORT-TUER-OFFEN"
                 ],
                 "word": {
                   "de": "Herr, Herr, mach uns auf!",

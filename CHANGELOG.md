@@ -2,6 +2,12 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.120 — 2026-10-26 — Matthäus vollständig nach «Struktur zuerst»
+
+- **Mt 19–28 und das Buch Matthäus neu** (Kernanalysen mit Struktur, unabhängig geprüft; Zusammenfassungen Hochdeutsch und Züridüütsch; Bilder): sieben Weherufe vollständig, Gleichnisse Mt 24–25, Weltgericht mit den sechs Werken zweimal, dreifache Verleugnung als Steigerung, drei Gruppen von Spöttern, Taufbefehl als Auftrag und Zusage; Buch mit Zweck («Gott mit uns») und Klammer 1,23 ↔ 28,20 als Deutung. Korrigiert u. a.: Hohepriester und Pharisäer versiegeln das Grab selbst (27,66), keine erfundene Trauer der Frauen, Immanuel als Prophetenwort, Menschensohn = Jesus als Deutung gekennzeichnet; Züridüütsch vereinheitlicht («Hoheprieschter», «Ee», «Lehrer»).
+- **Neutrale Trennlinie** (`stage.trenner`) zwischen Erzähler und Gleichnis oder zwei Orten im selben Feld; vorher stand dafür das Zeichen «Abstand» mit irreführender Legende.
+- Damit ist Matthäus ganz fertig (176 Einheiten). Noch 233 Bilder in alter Verdichtung (Markus ausser Kap. 5, Johannes, Lk 11).
+
 ## v0.119 — 2026-10-26 — Matthäus 11–18 nach «Struktur zuerst»
 
 - **43 Abschnitte und 7 Kapitel neu** (Kernanalysen mit Struktur, unabhängig geprüft; Zusammenfassungen Hochdeutsch und Züridüütsch; Bilder): alle sieben Gleichnisse in Mt 13 mit ihren Deutungen, Wehe-Reihe 11,20–24 (über Kafarnaum kein «Wehe», als Musterbruch vermerkt), Stufenverfahren 18,15–17 vollständig, siebenundsiebzigmal; Sprechblasen im Wortlaut. Kapitelbild 13 zeigt jetzt Senfstaude und Sauerteig, Kapitelbild 18 den Mühlstein.

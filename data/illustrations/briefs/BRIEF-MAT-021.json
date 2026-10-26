@@ -188,13 +188,12 @@
         "FIG-ORT-WEINBERG"
       ],
       "signs": [
-        "FIG-ZEICHEN-TOETEN",
-        "FIG-ZEICHEN-ABSTAND"
+        "FIG-ZEICHEN-TOETEN"
       ],
       "speech": [
         {
           "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-WEINBAUERN",
+          "to": "FIG-GRUPPE-HOHEPRIESTER",
           "icons": [
             "FIG-ZEICHEN-ECKSTEIN"
           ],
@@ -232,7 +231,8 @@
           "FIG-JESUS": 30,
           "FIG-GRUPPE-WEINBAUERN": 96,
           "FIG-ROLLE-SOHN": 156
-        }
+        },
+        "trenner": true
       }
     }
   ],
@@ -1058,6 +1058,474 @@
               {
                 "from": "FIG-JESUS",
                 "to": "FIG-GRUPPE-WEINBAUERN",
+                "icons": [
+                  "FIG-ZEICHEN-ECKSTEIN"
+                ],
+                "word": {
+                  "de": "Der Stein, den die Bauleute verworfen haben, der ist zum Eckstein geworden.",
+                  "gsw": "De Stei, wo d Buulüüt verworfe händ, dä isch zum Eckstei worde."
+                }
+              }
+            ],
+            "action_de": "Im Gleichnis werfen die Weinbauern den Sohn des Hausherrn aus dem Weinberg und töten ihn; Jesus sagt: Der Stein, den die Bauleute verworfen haben, ist zum Eckstein geworden.",
+            "keywords": {
+              "de": "Zuletzt aber sandte er seinen Sohn zu ihnen",
+              "gsw": "Zletscht aber hät er sin Sohn zu ine gschickt"
+            },
+            "stage": {
+              "split": 1,
+              "back_side": "right",
+              "before": true,
+              "at": {
+                "FIG-ZEICHEN-TOETEN": "FIG-ROLLE-SOHN"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-WEINBAUERN",
+                  "FIG-ROLLE-SOHN",
+                  "throw"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-WEINBAUERN": "angry",
+                "FIG-ROLLE-SOHN": "fear"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-WEINBAUERN": 96,
+                "FIG-ROLLE-SOHN": 156
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Prüfung Struktur zuerst",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.21.1-MAT.21.11",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-ESEL",
+              "FIG-OBJ-ZWEIG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-PREISEN"
+                ],
+                "word": {
+                  "de": "Hosanna dem Sohn Davids! Gesegnet sei, der kommt im Namen des Herrn!",
+                  "gsw": "Hosanna em Sohn vom David! Gsägnet sig dä, wo chunnt im Name vom Herr!"
+                }
+              }
+            ],
+            "action_de": "Jesus sitzt auf der Eselin und dem Fohlen; die Menge breitet Mäntel und Zweige auf dem Weg aus und ruft: Hosanna dem Sohn Davids! Gesegnet sei, der kommt im Namen des Herrn!",
+            "keywords": {
+              "de": "Hosanna dem Sohn Davids!",
+              "gsw": "Hosanna em Sohn vom David!"
+            },
+            "stage": {
+              "in": {
+                "FIG-JESUS": "FIG-OBJ-ESEL"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.44,
+                  0.1
+                ]
+              },
+              "big_side": "left",
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-GRUPPE-MENGE"
+                ]
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "delight",
+                "FIG-JESUS": "smile"
+              },
+              "behind": [
+                "FIG-OBJ-ZWEIG"
+              ],
+              "floor_x": {
+                "FIG-OBJ-ZWEIG": 74
+              },
+              "count": {
+                "FIG-OBJ-ZWEIG": 2
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.21.12-MAT.21.22",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-HAENDLER"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL",
+              "FIG-OBJ-TISCH-UMGESTOSSEN",
+              "FIG-OBJ-FEIGENBAUM-VERDORRT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-HAENDLER",
+                "icons": [
+                  "FIG-ZEICHEN-BETEN",
+                  "FIG-ORT-RAEUBERHOEHLE"
+                ],
+                "word": {
+                  "de": "Mein Haus soll ein Haus des Gebets heissen. Ihr aber macht es zu einer Räuberhöhle.",
+                  "gsw": "Mis Huus söll es Huus zum Bätte heisse. Ir aber mached e Röiberhöli drus."
+                }
+              }
+            ],
+            "action_de": "Im Tempel stösst Jesus die Tische der Geldwechsler um: Ihr macht das Haus des Gebets zu einer Räuberhöhle; am nächsten Morgen verdorrt der Feigenbaum auf sein Wort.",
+            "keywords": {
+              "de": "Ihr aber macht es zu einer Räuberhöhle",
+              "gsw": "Ir aber mached e Röiberhöli drus"
+            },
+            "stage": {
+              "back_side": "left",
+              "before": true,
+              "mood": {
+                "FIG-JESUS": "angry",
+                "FIG-ROLLE-HAENDLER": "fear"
+              },
+              "x": {
+                "FIG-JESUS": 60,
+                "FIG-ROLLE-HAENDLER": 120
+              },
+              "floor_x": {
+                "FIG-OBJ-TISCH-UMGESTOSSEN": 92,
+                "FIG-OBJ-FEIGENBAUM-VERDORRT": 166
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.21.23-MAT.21.32",
+            "figures": [
+              "FIG-GRUPPE-HOHEPRIESTER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-HOHEPRIESTER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-VOLLMACHT",
+                  "FIG-ZEICHEN-FRAGEN"
+                ],
+                "word": {
+                  "de": "In welcher Vollmacht tust du das?",
+                  "gsw": "Mit was für ere Vollmacht machsch du das?"
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-HOHEPRIESTER",
+                "icons": [
+                  "FIG-GRUPPE-ZOELLNER",
+                  "FIG-ZEICHEN-REICH-GOTTES"
+                ],
+                "word": {
+                  "de": "Die Zöllner und die Prostituierten gehen euch voran in das Reich Gottes.",
+                  "gsw": "D Zöllner und d Prostituierte gönd eu voraa is Riich vo Gott."
+                }
+              }
+            ],
+            "action_de": "Die Hohepriester und Ältesten fragen nach Jesu Vollmacht; er stellt die Gegenfrage nach der Taufe des Johannes und erzählt das Gleichnis von den zwei Söhnen: Die Zöllner und Prostituierten gehen euch voran in das Reich Gottes.",
+            "keywords": {
+              "de": "In welcher Vollmacht tust du das?",
+              "gsw": "Mit was für ere Vollmacht machsch du das?"
+            },
+            "stage": {
+              "back_side": "left",
+              "before": true,
+              "mood": {
+                "FIG-GRUPPE-HOHEPRIESTER": "earnest",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-HOHEPRIESTER": 54,
+                "FIG-JESUS": 140
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.21.33-MAT.21.46",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-WEINBAUERN",
+              "FIG-ROLLE-SOHN"
+            ],
+            "objects": [
+              "FIG-ORT-WEINBERG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TOETEN",
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-WEINBAUERN",
+                "icons": [
+                  "FIG-ZEICHEN-ECKSTEIN"
+                ],
+                "word": {
+                  "de": "Der Stein, den die Bauleute verworfen haben, der ist zum Eckstein geworden.",
+                  "gsw": "De Stei, wo d Buulüüt verworfe händ, dä isch zum Eckstei worde."
+                }
+              }
+            ],
+            "action_de": "Im Gleichnis werfen die Weinbauern den Sohn des Hausherrn aus dem Weinberg und töten ihn; Jesus sagt: Der Stein, den die Bauleute verworfen haben, ist zum Eckstein geworden.",
+            "keywords": {
+              "de": "Zuletzt aber sandte er seinen Sohn zu ihnen",
+              "gsw": "Zletscht aber hät er sin Sohn zu ine gschickt"
+            },
+            "stage": {
+              "split": 1,
+              "back_side": "right",
+              "before": true,
+              "at": {
+                "FIG-ZEICHEN-TOETEN": "FIG-ROLLE-SOHN"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-WEINBAUERN",
+                  "FIG-ROLLE-SOHN",
+                  "throw"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-WEINBAUERN": "angry",
+                "FIG-ROLLE-SOHN": "fear"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-WEINBAUERN": 96,
+                "FIG-ROLLE-SOHN": 156
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Trennlinie ohne Bedeutung statt Zeichen Abstand",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.21.1-MAT.21.11",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-ESEL",
+              "FIG-OBJ-ZWEIG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-PREISEN"
+                ],
+                "word": {
+                  "de": "Hosanna dem Sohn Davids! Gesegnet sei, der kommt im Namen des Herrn!",
+                  "gsw": "Hosanna em Sohn vom David! Gsägnet sig dä, wo chunnt im Name vom Herr!"
+                }
+              }
+            ],
+            "action_de": "Jesus sitzt auf der Eselin und dem Fohlen; die Menge breitet Mäntel und Zweige auf dem Weg aus und ruft: Hosanna dem Sohn Davids! Gesegnet sei, der kommt im Namen des Herrn!",
+            "keywords": {
+              "de": "Hosanna dem Sohn Davids!",
+              "gsw": "Hosanna em Sohn vom David!"
+            },
+            "stage": {
+              "in": {
+                "FIG-JESUS": "FIG-OBJ-ESEL"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.44,
+                  0.1
+                ]
+              },
+              "big_side": "left",
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-GRUPPE-MENGE"
+                ]
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "delight",
+                "FIG-JESUS": "smile"
+              },
+              "behind": [
+                "FIG-OBJ-ZWEIG"
+              ],
+              "floor_x": {
+                "FIG-OBJ-ZWEIG": 74
+              },
+              "count": {
+                "FIG-OBJ-ZWEIG": 2
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.21.12-MAT.21.22",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-HAENDLER"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL",
+              "FIG-OBJ-TISCH-UMGESTOSSEN",
+              "FIG-OBJ-FEIGENBAUM-VERDORRT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-HAENDLER",
+                "icons": [
+                  "FIG-ZEICHEN-BETEN",
+                  "FIG-ORT-RAEUBERHOEHLE"
+                ],
+                "word": {
+                  "de": "Mein Haus soll ein Haus des Gebets heissen. Ihr aber macht es zu einer Räuberhöhle.",
+                  "gsw": "Mis Huus söll es Huus zum Bätte heisse. Ir aber mached e Röiberhöli drus."
+                }
+              }
+            ],
+            "action_de": "Im Tempel stösst Jesus die Tische der Geldwechsler um: Ihr macht das Haus des Gebets zu einer Räuberhöhle; am nächsten Morgen verdorrt der Feigenbaum auf sein Wort.",
+            "keywords": {
+              "de": "Ihr aber macht es zu einer Räuberhöhle",
+              "gsw": "Ir aber mached e Röiberhöli drus"
+            },
+            "stage": {
+              "back_side": "left",
+              "before": true,
+              "mood": {
+                "FIG-JESUS": "angry",
+                "FIG-ROLLE-HAENDLER": "fear"
+              },
+              "x": {
+                "FIG-JESUS": 60,
+                "FIG-ROLLE-HAENDLER": 120
+              },
+              "floor_x": {
+                "FIG-OBJ-TISCH-UMGESTOSSEN": 92,
+                "FIG-OBJ-FEIGENBAUM-VERDORRT": 166
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.21.23-MAT.21.32",
+            "figures": [
+              "FIG-GRUPPE-HOHEPRIESTER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-HOHEPRIESTER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-VOLLMACHT",
+                  "FIG-ZEICHEN-FRAGEN"
+                ],
+                "word": {
+                  "de": "In welcher Vollmacht tust du das?",
+                  "gsw": "Mit was für ere Vollmacht machsch du das?"
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-HOHEPRIESTER",
+                "icons": [
+                  "FIG-GRUPPE-ZOELLNER",
+                  "FIG-ZEICHEN-REICH-GOTTES"
+                ],
+                "word": {
+                  "de": "Die Zöllner und die Prostituierten gehen euch voran in das Reich Gottes.",
+                  "gsw": "D Zöllner und d Prostituierte gönd eu voraa is Riich vo Gott."
+                }
+              }
+            ],
+            "action_de": "Die Hohepriester und Ältesten fragen nach Jesu Vollmacht; er stellt die Gegenfrage nach der Taufe des Johannes und erzählt das Gleichnis von den zwei Söhnen: Die Zöllner und Prostituierten gehen euch voran in das Reich Gottes.",
+            "keywords": {
+              "de": "In welcher Vollmacht tust du das?",
+              "gsw": "Mit was für ere Vollmacht machsch du das?"
+            },
+            "stage": {
+              "back_side": "left",
+              "before": true,
+              "mood": {
+                "FIG-GRUPPE-HOHEPRIESTER": "earnest",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-HOHEPRIESTER": 54,
+                "FIG-JESUS": 140
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.21.33-MAT.21.46",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-WEINBAUERN",
+              "FIG-ROLLE-SOHN"
+            ],
+            "objects": [
+              "FIG-ORT-WEINBERG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TOETEN",
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-HOHEPRIESTER",
                 "icons": [
                   "FIG-ZEICHEN-ECKSTEIN"
                 ],

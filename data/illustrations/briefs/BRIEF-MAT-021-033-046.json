@@ -127,8 +127,7 @@
       ],
       "objects": [],
       "signs": [
-        "FIG-ZEICHEN-FURCHT",
-        "FIG-ZEICHEN-ABSTAND"
+        "FIG-ZEICHEN-FURCHT"
       ],
       "speech": [
         {
@@ -160,7 +159,8 @@
           "FIG-GRUPPE-HOHEPRIESTER": 34,
           "FIG-GRUPPE-PHARISAEER": 80,
           "FIG-GRUPPE-MENGE": 150
-        }
+        },
+        "trenner": true
       }
     }
   ],
@@ -895,6 +895,168 @@
             "objects": [],
             "signs": [
               "FIG-ZEICHEN-FURCHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-HOHEPRIESTER",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-AUSLIEFERN"
+                ],
+                "think": true
+              }
+            ],
+            "action_de": "Die Hohepriester und Pharisäer erkennen, dass Jesus von ihnen redet; sie suchen ihn festzunehmen, fürchten aber die Mengen, die ihn für einen Propheten halten.",
+            "keywords": {
+              "de": "erkannten sie, dass er von ihnen redete",
+              "gsw": "händ si gmerkt, dass er vo ine redt"
+            },
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-FURCHT": "FIG-GRUPPE-HOHEPRIESTER"
+              },
+              "split": 2,
+              "mood": {
+                "FIG-GRUPPE-HOHEPRIESTER": "angry",
+                "FIG-GRUPPE-PHARISAEER": "worried",
+                "FIG-GRUPPE-MENGE": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-HOHEPRIESTER": 34,
+                "FIG-GRUPPE-PHARISAEER": 80,
+                "FIG-GRUPPE-MENGE": 150
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Trennlinie ohne Bedeutung statt Zeichen Abstand",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.21.33-MAT.21.39",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Ein Hausherr verpachtet seinen Weinberg an Weinbauern; die Knechte, die er nach den Früchten schickt, verprügeln, töten und steinigen sie, ebenso die zweiten; zuletzt sendet er seinen Sohn, doch sie werfen ihn aus dem Weinberg hinaus und töten ihn.",
+            "keywords": {
+              "de": "Zuletzt aber sandte er seinen Sohn zu ihnen",
+              "gsw": "Zletscht aber hät er sin Sohn zu ine gschickt"
+            },
+            "diagram": {
+              "visual": "stairs",
+              "span": 2,
+              "speaker": "FIG-ROLLE-GUTSHERR",
+              "title": {
+                "de": "Vor meinem Sohn werden sie Achtung haben.",
+                "gsw": "Vor mim Sohn händ si dänn Respekt."
+              },
+              "cells": [
+                {
+                  "a": {
+                    "de": "Er sandte seine Knechte: den einen verprügelten sie, einen anderen töteten sie, einen anderen steinigten sie.",
+                    "gsw": "Er hät sini Chnächt gschickt: de eint händ si verprüglet, en andere umbracht, en andere gsteiniget."
+                  },
+                  "icons": [
+                    "FIG-GRUPPE-DIENER",
+                    "FIG-OBJ-STEINE"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Wieder sandte er andere Knechte, mehr als die ersten; sie machten es ebenso.",
+                    "gsw": "Wider hät er anderi Chnächt gschickt, meh als di erschte; si händ s gliich gmacht."
+                  },
+                  "icons": [
+                    "FIG-GRUPPE-DIENER",
+                    "FIG-ZEICHEN-MEHR"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Zuletzt sandte er seinen Sohn: «Das ist der Erbe; kommt, lasst uns ihn töten!»",
+                    "gsw": "Zletscht hät er sin Sohn gschickt: «Das isch de Erb; chömed, mir bringed en um!»"
+                  },
+                  "icons": [
+                    "FIG-ROLLE-SOHN",
+                    "FIG-ZEICHEN-TOETEN"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.21.40-MAT.21.44",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Jesus fragt, was der Herr des Weinbergs mit jenen Weinbauern tun wird; die Hörer antworten: Er wird die Übeltäter umbringen und den Weinberg anderen verpachten. Jesus sagt: Der Stein, den die Bauleute verworfen haben, ist zum Eckstein geworden; darum wird das Reich Gottes von euch weggenommen und einem Volk gegeben, das seine Früchte bringt.",
+            "keywords": {
+              "de": "Das Reich Gottes wird von euch weggenommen",
+              "gsw": "S Riich vo Gott wird eu wäggnoo"
+            },
+            "diagram": {
+              "visual": "levels",
+              "span": 2,
+              "speaker": "FIG-JESUS",
+              "title": {
+                "de": "Der Stein, den die Bauleute verworfen haben, der ist zum Eckstein geworden.",
+                "gsw": "De Stei, wo d Buulüüt verworfe händ, dä isch zum Eckstei worde."
+              },
+              "top_label": {
+                "de": "Die Hörer sagen:",
+                "gsw": "D Zuelosende säged:"
+              },
+              "bottom_label": {
+                "de": "Jesus sagt:",
+                "gsw": "De Jesus seit:"
+              },
+              "top": [
+                {
+                  "a": {
+                    "de": "Den Weinberg wird er an andere Weinbauern verpachten, die ihm die Früchte zu ihrer Zeit abgeben werden.",
+                    "gsw": "De Wiibärg wird er a anderi Wiibuure verpachte, wo ihm d Frücht zu irer Ziit abgänd."
+                  },
+                  "icons": [
+                    "FIG-ORT-WEINBERG",
+                    "FIG-GRUPPE-WEINBAUERN"
+                  ]
+                }
+              ],
+              "bottom": [
+                {
+                  "a": {
+                    "de": "Das Reich Gottes wird von euch weggenommen und einem Volk gegeben werden, das seine Früchte bringt.",
+                    "gsw": "S Riich vo Gott wird eu wäggnoo und eme Volk gää, wo sini Frücht bringt."
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-REICH-GOTTES",
+                    "FIG-ZEICHEN-ECKSTEIN"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.21.45-MAT.21.46",
+            "figures": [
+              "FIG-GRUPPE-HOHEPRIESTER",
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-FURCHT",
+              "FIG-ZEICHEN-ABSTAND"
             ],
             "speech": [
               {
