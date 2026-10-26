@@ -2,6 +2,12 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.129 — 2026-10-26 — Lukas 1–8 nach «Struktur zuerst»
+
+- **Lk 1–8 mit Kapiteln** (41 Abschnitte, 8 Kapitel): Kernanalysen mit Struktur, Zusammenfassungen Hochdeutsch und Züridüütsch, Bildaufträge und Bilder; von einer getrennten KI-Instanz gegen die Arbeitsübersetzung geprüft (Feld `review`, 27 Einheiten nach Korrektur). Kindheitsgeschichte mit beiden Ankündigungen in gleicher Form («Diptychon» als Gliederung der Forschung gekennzeichnet), Lobgesänge mit allen Gliedern, Stammbaum mit allen 76 Namen, Versuchungen in der Reihenfolge des Lukas, Feldrede mit allen Seligpreisungen und Weherufen. Zacharias, Elisabet, Gabriel, Simeon und Hanna als Rollenfiguren mit Namensschild, Jesus in Lk 2,41–52 als Junge ohne Kreuznimbus.
+- **Prüfung:** Johannes spricht in Lk 3,16 sichtbar zur Menge statt zu Herodes; Lk 4,13 «bis zu gegebener Zeit» im Bild; Sonne neben dem Strahlenkranz entfernt (Lk 5,16); die Frau in Lk 7,36–50 bleibt namenlos, Maria Magdalena erscheint in Lk 8,2 ohne Alabastergefäss, damit keine Gleichsetzung entsteht; Kapitelzusammenfassungen berichtigt (Lk 5 «Männer» statt «Freunde», Lk 6 keine falsche Begründung «richtet nicht, denn …», Lk 7 «als Sünderin lebt», Lk 8 «sie» unterstützen); Deutungen gekennzeichnet (Schwert in Lk 2,35); Legenden an die Bilder angepasst; Mundart-Schreibung nach `lukas_einheitlich.py`.
+- Keine fachliche und keine muttersprachliche Prüfung durch eine Person; kein Blindtest ohne Legende. Offen: Erkennungszeichen aus der Tradition (Schlüssel des Petrus, Kreuzstab des Johannes) auch in Szenen, die sie nicht nennen.
+
 ## v0.127 — 2026-10-26 — Lukasevangelium ganz übersetzt
 
 - **Lk 1–24** (1151 Verse) neu aus dem SBLGNT übersetzt, Hochdeutsch und Züridüütsch, mit vollständiger Wortzuordnung, Abschnitten mit Titeln und Zusammenfassungen, rund 750 Übersetzungsentscheidungen und gut 100 Lesarten-Alternativen; Handschriften-Zuordnung (CNTR) für alle Kapitel. Lk 11,1–4 (Vaterunser) unverändert. Fehlende Verse im SBLGNT (17,36; 23,17) ohne Text, Zusatz als Alternative.
