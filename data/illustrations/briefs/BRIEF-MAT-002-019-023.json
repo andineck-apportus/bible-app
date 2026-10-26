@@ -11,12 +11,14 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.2.19-MAT.2.20",
+      "reference": "MAT.2.19-MAT.2.21",
       "figures": [
         "FIG-ROLLE-ENGEL",
         "FIG-JOSEF-NAZARET"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-ORT-AEGYPTEN"
+      ],
       "signs": [
         "FIG-ZEICHEN-NACHT",
         "FIG-ZEICHEN-SCHLAFEN"
@@ -26,20 +28,25 @@
           "from": "FIG-ROLLE-ENGEL",
           "to": "FIG-JOSEF-NAZARET",
           "icons": [
-            "FIG-ZEICHEN-WEG",
             "FIG-ORT-LAND"
-          ]
-        },
-        {
-          "from": "FIG-ROLLE-ENGEL",
-          "to": "FIG-JOSEF-NAZARET",
-          "icons": [
-            "FIG-HERODES-DER-GROSSE",
-            "FIG-ZEICHEN-TOD"
-          ]
+          ],
+          "word": {
+            "de": "Zieh in das Land Israel!",
+            "gsw": "Gang is Land Israel!"
+          }
         }
       ],
-      "action_de": "Nach dem Tod des Herodes erscheint Josef in Ägypten ein Engel des Herrn im Traum: Steh auf, nimm das Kind und seine Mutter und zieh in das Land Israel; denn gestorben sind die, die dem Kind nach dem Leben trachteten.",
+      "action_de": "Als Herodes gestorben ist, sagt ein Engel des Herrn Josef in Ägypten im Traum: Steh auf, nimm das Kind und seine Mutter und zieh in das Land Israel, denn die dem Kind nach dem Leben trachteten, sind gestorben; Josef zieht in das Land Israel.",
+      "keywords": {
+        "de": "Als Herodes aber gestorben war",
+        "gsw": "Wo de Herodes aber gstorbe isch"
+      },
+      "names": {
+        "FIG-JOSEF-NAZARET": {
+          "de": "Josef",
+          "gsw": "Josef"
+        }
+      },
       "stage": {
         "pose": {
           "FIG-JOSEF-NAZARET": "sleep"
@@ -54,58 +61,16 @@
         "x": {
           "FIG-ROLLE-ENGEL": 50,
           "FIG-JOSEF-NAZARET": 130
-        }
+        },
+        "back_side": "right"
       }
     },
     {
       "n": 2,
-      "reference": "MAT.2.21-MAT.2.22",
-      "figures": [
-        "FIG-JOSEF-NAZARET",
-        "FIG-MARIA-MUTTER-JESU"
-      ],
-      "objects": [
-        "FIG-ORT-LAND",
-        "FIG-JESUS-KIND"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-FURCHT"
-      ],
-      "speech": [
-        {
-          "from": "FIG-JOSEF-NAZARET",
-          "to": "FIG-JOSEF-NAZARET",
-          "icons": [
-            "FIG-ORT-JERUSALEM",
-            "FIG-ROLLE-KOENIG"
-          ],
-          "think": true
-        }
-      ],
-      "action_de": "Josef kommt mit dem Kind und seiner Mutter in das Land Israel. Als er hört, dass Archelaus anstelle seines Vaters Herodes über Judäa herrscht, fürchtet er sich, dorthin zu gehen.",
-      "stage": {
-        "hold": {
-          "FIG-MARIA-MUTTER-JESU": "FIG-JESUS-KIND"
-        },
-        "at": {
-          "FIG-ZEICHEN-FURCHT": "FIG-JOSEF-NAZARET"
-        },
-        "mood": {
-          "FIG-JOSEF-NAZARET": "worried",
-          "FIG-MARIA-MUTTER-JESU": "calm"
-        },
-        "x": {
-          "FIG-MARIA-MUTTER-JESU": 30,
-          "FIG-JOSEF-NAZARET": 72
-        }
-      }
-    },
-    {
-      "n": 3,
       "reference": "MAT.2.22-MAT.2.23",
       "figures": [
-        "FIG-JOSEF-NAZARET",
-        "FIG-MARIA-MUTTER-JESU"
+        "FIG-MARIA-MUTTER-JESU",
+        "FIG-JOSEF-NAZARET"
       ],
       "objects": [
         "FIG-ORT-STADT",
@@ -114,8 +79,31 @@
       "signs": [
         "FIG-ZEICHEN-WEG"
       ],
-      "speech": [],
-      "action_de": "Nach einer Weisung im Traum zieht sich Josef nach Galiläa zurück und lässt sich in einer Stadt nieder, die Nazaret heisst; so wird Jesus Nazoräer genannt.",
+      "speech": [
+        {
+          "from": "FIG-JOSEF-NAZARET",
+          "to": "FIG-JOSEF-NAZARET",
+          "icons": [
+            "FIG-ZEICHEN-NICHT"
+          ],
+          "think": true,
+          "word": {
+            "de": "Nicht nach Judäa!",
+            "gsw": "Nöd uf Judäa!"
+          }
+        }
+      ],
+      "action_de": "Weil Archelaus über Judäa herrscht, fürchtet sich Josef, dorthin zu gehen; auf eine Weisung im Traum zieht er nach Galiläa und lässt sich in Nazaret nieder: Er wird Nazoräer genannt werden.",
+      "keywords": {
+        "de": "Er wird Nazoräer genannt werden",
+        "gsw": "Er wird Nazoräer gnännt wärde"
+      },
+      "names": {
+        "FIG-MARIA-MUTTER-JESU": {
+          "de": "Maria",
+          "gsw": "Maria"
+        }
+      },
       "stage": {
         "hold": {
           "FIG-MARIA-MUTTER-JESU": "FIG-JESUS-KIND"
@@ -125,43 +113,36 @@
           "FIG-MARIA-MUTTER-JESU": 30
         },
         "mood": {
-          "FIG-JOSEF-NAZARET": "calm",
+          "FIG-JOSEF-NAZARET": "pensive",
           "FIG-MARIA-MUTTER-JESU": "smile"
         },
         "beside": {
           "FIG-ZEICHEN-WEG": "FIG-JOSEF-NAZARET"
-        }
+        },
+        "back_side": "right"
       }
     }
   ],
   "actions_de": [
-    "Nach dem Tod des Herodes erscheint Josef in Ägypten ein Engel des Herrn im Traum: Steh auf, nimm das Kind und seine Mutter und zieh in das Land Israel; denn gestorben sind die, die dem Kind nach dem Leben trachteten.",
-    "Josef kommt mit dem Kind und seiner Mutter in das Land Israel. Als er hört, dass Archelaus anstelle seines Vaters Herodes über Judäa herrscht, fürchtet er sich, dorthin zu gehen.",
-    "Nach einer Weisung im Traum zieht sich Josef nach Galiläa zurück und lässt sich in einer Stadt nieder, die Nazaret heisst; so wird Jesus Nazoräer genannt."
+    "Als Herodes gestorben ist, sagt ein Engel des Herrn Josef in Ägypten im Traum: Steh auf, nimm das Kind und seine Mutter und zieh in das Land Israel, denn die dem Kind nach dem Leben trachteten, sind gestorben; Josef zieht in das Land Israel.",
+    "Weil Archelaus über Judäa herrscht, fürchtet sich Josef, dorthin zu gehen; auf eine Weisung im Traum zieht er nach Galiläa und lässt sich in Nazaret nieder: Er wird Nazoräer genannt werden."
   ],
   "captions_de": [
-    "Zurück: In der Nacht (Mond) sagt ein Engel (Flügel) dem schlafenden Josef: Zieh ins Land Israel (Fussspuren, grüne Hügel); Herodes ist tot (Herodes, Totenkopf).",
-    "Furcht: Im Land Israel (grüne Hügel, Fluss) denkt Josef an den neuen König in Judäa (Denkblase: Jerusalem, König) und fürchtet sich (erschrockenes Gesicht).",
-    "Nazaret: Josef zieht mit Maria und dem Kind (Kreuznimbus) in die Stadt Nazaret in Galiläa (Mauer mit Tor und Häusern; Fussspuren)."
+    "Im Traum in Ägypten (Pyramiden, Palme): Der Engel (weisses Gewand, Flügel) spricht zum schlafenden Josef (Zzz, Mondsichel): «Zieh in das Land Israel!» (grüne Hügel mit Feldern).",
+    "Nach Nazaret: Josef denkt «Nicht nach Judäa!» (Gedankenwolke, Verbotsring); mit Maria und dem Kind kommt er zur Stadt (Mauer mit Tor, Würfelhäuser) Nazaret (Fussspuren)."
   ],
-  "interpretation_note_de": "Archelaus ist als allgemeine Königsfigur gezeichnet, Judäa als Jerusalem. Die zweite Weisung im Traum ([[MAT.2.22]]) und das Prophetenwort «Er wird Nazoräer genannt werden» ([[MAT.2.23]]) sind nicht gezeichnet; Nazaret erscheint als Stadt.",
+  "interpretation_note_de": "Zwei Szenen nach «Weisung – Rückkehr – Furcht – Nazaret» ([[MAT.2.19-MAT.2.23]]). Feld 1 zeigt die Weisung in Ägypten; die Ankunft im Land Israel ([[MAT.2.21]]) nennt die Bildhilfe. Feld 2 zeigt die Furcht vor Archelaus als Gedanke «Nicht nach Judäa!» und die Ankunft in Nazaret; die zweite Weisung im Traum ([[MAT.2.22]]) steht nur in der Bildhilfe. Welches Prophetenwort «Nazoräer» meint, sagt der Text nicht; das Bild deutet es nicht.",
   "basis": [
     {
       "record": "TU-MAT-002-019-023",
       "field": "summary",
-      "fingerprint": "9a83f7473ab4ea40"
+      "fingerprint": "a58f00f8f373fc77"
     },
     {
       "record": "TRANS-MAT-002-001-023-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.2.19-MAT.2.20",
-      "fingerprint": "e33acafdc194fbdc"
-    },
-    {
-      "record": "TRANS-MAT-002-001-023-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.2.21-MAT.2.22",
-      "fingerprint": "b46adbe0383e9c79"
+      "reference": "MAT.2.19-MAT.2.21",
+      "fingerprint": "0309e291f065e1d9"
     },
     {
       "record": "TRANS-MAT-002-001-023-DE-WORKING",
@@ -171,7 +152,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -456,6 +437,175 @@
           "Furcht: Im Land Israel (grüne Hügel, Fluss) denkt Josef an den neuen König in Judäa (Denkblase: Jerusalem, König) und fürchtet sich (blauer Schweisstropfen).",
           "Nazaret: Josef zieht mit Maria und dem Kind (Kreuznimbus) in die Stadt Nazaret in Galiläa (Mauer mit Tor und Häusern; heller Pfad mit Pfeilspitze)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.2.19-MAT.2.20",
+            "figures": [
+              "FIG-ROLLE-ENGEL",
+              "FIG-JOSEF-NAZARET"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-NACHT",
+              "FIG-ZEICHEN-SCHLAFEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-ENGEL",
+                "to": "FIG-JOSEF-NAZARET",
+                "icons": [
+                  "FIG-ZEICHEN-WEG",
+                  "FIG-ORT-LAND"
+                ]
+              },
+              {
+                "from": "FIG-ROLLE-ENGEL",
+                "to": "FIG-JOSEF-NAZARET",
+                "icons": [
+                  "FIG-HERODES-DER-GROSSE",
+                  "FIG-ZEICHEN-TOD"
+                ]
+              }
+            ],
+            "action_de": "Nach dem Tod des Herodes erscheint Josef in Ägypten ein Engel des Herrn im Traum: Steh auf, nimm das Kind und seine Mutter und zieh in das Land Israel; denn gestorben sind die, die dem Kind nach dem Leben trachteten.",
+            "stage": {
+              "pose": {
+                "FIG-JOSEF-NAZARET": "sleep"
+              },
+              "at": {
+                "FIG-ZEICHEN-SCHLAFEN": "FIG-JOSEF-NAZARET"
+              },
+              "mood": {
+                "FIG-ROLLE-ENGEL": "calm",
+                "FIG-JOSEF-NAZARET": "sleep"
+              },
+              "x": {
+                "FIG-ROLLE-ENGEL": 50,
+                "FIG-JOSEF-NAZARET": 130
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.2.21-MAT.2.22",
+            "figures": [
+              "FIG-JOSEF-NAZARET",
+              "FIG-MARIA-MUTTER-JESU"
+            ],
+            "objects": [
+              "FIG-ORT-LAND",
+              "FIG-JESUS-KIND"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FURCHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JOSEF-NAZARET",
+                "to": "FIG-JOSEF-NAZARET",
+                "icons": [
+                  "FIG-ORT-JERUSALEM",
+                  "FIG-ROLLE-KOENIG"
+                ],
+                "think": true
+              }
+            ],
+            "action_de": "Josef kommt mit dem Kind und seiner Mutter in das Land Israel. Als er hört, dass Archelaus anstelle seines Vaters Herodes über Judäa herrscht, fürchtet er sich, dorthin zu gehen.",
+            "stage": {
+              "hold": {
+                "FIG-MARIA-MUTTER-JESU": "FIG-JESUS-KIND"
+              },
+              "at": {
+                "FIG-ZEICHEN-FURCHT": "FIG-JOSEF-NAZARET"
+              },
+              "mood": {
+                "FIG-JOSEF-NAZARET": "worried",
+                "FIG-MARIA-MUTTER-JESU": "calm"
+              },
+              "x": {
+                "FIG-MARIA-MUTTER-JESU": 30,
+                "FIG-JOSEF-NAZARET": 72
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.2.22-MAT.2.23",
+            "figures": [
+              "FIG-JOSEF-NAZARET",
+              "FIG-MARIA-MUTTER-JESU"
+            ],
+            "objects": [
+              "FIG-ORT-STADT",
+              "FIG-JESUS-KIND"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-WEG"
+            ],
+            "speech": [],
+            "action_de": "Nach einer Weisung im Traum zieht sich Josef nach Galiläa zurück und lässt sich in einer Stadt nieder, die Nazaret heisst; so wird Jesus Nazoräer genannt.",
+            "stage": {
+              "hold": {
+                "FIG-MARIA-MUTTER-JESU": "FIG-JESUS-KIND"
+              },
+              "x": {
+                "FIG-JOSEF-NAZARET": 62,
+                "FIG-MARIA-MUTTER-JESU": 30
+              },
+              "mood": {
+                "FIG-JOSEF-NAZARET": "calm",
+                "FIG-MARIA-MUTTER-JESU": "smile"
+              },
+              "beside": {
+                "FIG-ZEICHEN-WEG": "FIG-JOSEF-NAZARET"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Nach dem Tod des Herodes erscheint Josef in Ägypten ein Engel des Herrn im Traum: Steh auf, nimm das Kind und seine Mutter und zieh in das Land Israel; denn gestorben sind die, die dem Kind nach dem Leben trachteten.",
+          "Josef kommt mit dem Kind und seiner Mutter in das Land Israel. Als er hört, dass Archelaus anstelle seines Vaters Herodes über Judäa herrscht, fürchtet er sich, dorthin zu gehen.",
+          "Nach einer Weisung im Traum zieht sich Josef nach Galiläa zurück und lässt sich in einer Stadt nieder, die Nazaret heisst; so wird Jesus Nazoräer genannt."
+        ],
+        "captions_de": [
+          "Zurück: In der Nacht (Mond) sagt ein Engel (Flügel) dem schlafenden Josef: Zieh ins Land Israel (Fussspuren, grüne Hügel); Herodes ist tot (Herodes, Totenkopf).",
+          "Furcht: Im Land Israel (grüne Hügel, Fluss) denkt Josef an den neuen König in Judäa (Denkblase: Jerusalem, König) und fürchtet sich (erschrockenes Gesicht).",
+          "Nazaret: Josef zieht mit Maria und dem Kind (Kreuznimbus) in die Stadt Nazaret in Galiläa (Mauer mit Tor und Häusern; Fussspuren)."
+        ],
+        "interpretation_note_de": "Archelaus ist als allgemeine Königsfigur gezeichnet, Judäa als Jerusalem. Die zweite Weisung im Traum ([[MAT.2.22]]) und das Prophetenwort «Er wird Nazoräer genannt werden» ([[MAT.2.23]]) sind nicht gezeichnet; Nazaret erscheint als Stadt.",
+        "basis": [
+          {
+            "record": "TU-MAT-002-019-023",
+            "field": "summary",
+            "fingerprint": "9a83f7473ab4ea40"
+          },
+          {
+            "record": "TRANS-MAT-002-001-023-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.2.19-MAT.2.20",
+            "fingerprint": "e33acafdc194fbdc"
+          },
+          {
+            "record": "TRANS-MAT-002-001-023-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.2.21-MAT.2.22",
+            "fingerprint": "b46adbe0383e9c79"
+          },
+          {
+            "record": "TRANS-MAT-002-001-023-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.2.22-MAT.2.23",
+            "fingerprint": "b2f47a4c681f57d1"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

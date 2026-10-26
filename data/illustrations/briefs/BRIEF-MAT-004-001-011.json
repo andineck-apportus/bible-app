@@ -11,8 +11,9 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.4.1-MAT.4.4",
+      "reference": "MAT.4.1-MAT.4.2",
       "figures": [
+        "FIG-HEILIGER-GEIST",
         "FIG-JESUS"
       ],
       "objects": [
@@ -20,199 +21,222 @@
         "FIG-SATAN"
       ],
       "signs": [
-        "FIG-ZEICHEN-TAGE"
+        "FIG-ZEICHEN-FASTEN"
       ],
-      "speech": [
-        {
-          "from": "FIG-SATAN",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-OBJ-STEIN",
-            "FIG-OBJ-BROT"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-SATAN",
-          "icons": [
-            "FIG-OBJ-SCHRIFTROLLE",
-            "FIG-GOTT"
-          ]
-        }
-      ],
-      "action_de": "Der Geist führt Jesus in die Wüste; nach vierzig Tagen und Nächten Fasten hat er Hunger. Der Versucher sagt: Wenn du Gottes Sohn bist, sag, dass diese Steine zu Broten werden! Jesus antwortet: Es steht geschrieben: Der Mensch lebt nicht vom Brot allein, sondern von jedem Wort aus dem Mund Gottes.",
-      "stage": {
-        "count": {
-          "FIG-ZEICHEN-TAGE": 5
-        },
-        "back_side": "right",
-        "mood": {
-          "FIG-JESUS": "calm"
-        },
-        "x": {
-          "FIG-JESUS": 30
-        },
-        "air_y": 84,
-        "air_x": 60
-      }
-    },
-    {
-      "n": 2,
-      "reference": "MAT.4.5-MAT.4.7",
-      "figures": [
-        "FIG-JESUS"
-      ],
-      "objects": [
-        "FIG-ORT-TEMPEL",
-        "FIG-SATAN"
-      ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-SATAN",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-ZEICHEN-HINAB"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-SATAN",
-          "icons": [
-            "FIG-ZEICHEN-NICHT",
-            "FIG-ZEICHEN-VERSUCHUNG",
-            "FIG-GOTT"
-          ]
-        }
-      ],
-      "action_de": "Der Teufel stellt Jesus auf die Zinne des Tempels: Wenn du Gottes Sohn bist, wirf dich hinab, denn seine Engel werden dich tragen! Jesus sagt: Es steht auch geschrieben: Du sollst den Herrn, deinen Gott, nicht auf die Probe stellen.",
-      "stage": {
-        "back_side": "right",
-        "before": true,
-        "x": {
-          "FIG-JESUS": 110
-        },
-        "mood": {
-          "FIG-JESUS": "calm"
-        }
-      }
-    },
-    {
-      "n": 3,
-      "reference": "MAT.4.8-MAT.4.10",
-      "figures": [
-        "FIG-JESUS"
-      ],
-      "objects": [
-        "FIG-ORT-BERG",
-        "FIG-SATAN"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-WELT"
-      ],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-SATAN",
-          "icons": [
-            "FIG-SATAN",
-            "FIG-ZEICHEN-FLIEHEN"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-SATAN",
-          "icons": [
-            "FIG-GOTT",
-            "FIG-ZEICHEN-BETEN"
-          ]
-        }
-      ],
-      "action_de": "Auf einem sehr hohen Berg zeigt der Teufel Jesus alle Reiche der Welt und ihre Herrlichkeit und verspricht sie ihm, wenn er ihn anbetet. Jesus sagt: Geh weg, Satan! Denn es steht geschrieben: Den Herrn, deinen Gott, sollst du anbeten und ihm allein dienen.",
-      "stage": {
-        "back_side": "right",
-        "before": true,
-        "x": {
-          "FIG-JESUS": 124
-        },
-        "mood": {
-          "FIG-JESUS": "calm"
-        },
-        "arrows": [
-          [
-            "FIG-SATAN",
-            "FIG-ZEICHEN-WELT",
-            "act"
-          ]
-        ],
-        "air_x": 52,
-        "air_y": 50
-      }
-    },
-    {
-      "n": 4,
-      "reference": "MAT.4.11",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-ROLLE-ENGEL"
-      ],
-      "objects": [
-        "FIG-ORT-WUESTE"
-      ],
-      "signs": [],
       "speech": [],
-      "action_de": "Da verlässt ihn der Teufel, und Engel treten heran und dienen ihm.",
+      "action_de": "Jesus wird vom Geist in die Wüste hinaufgeführt, um vom Teufel versucht zu werden; nach vierzig Tagen und vierzig Nächten Fasten hat er Hunger.",
+      "keywords": {
+        "de": "vierzig Tage und vierzig Nächte",
+        "gsw": "vierzg Täg und vierzg Nächt"
+      },
       "stage": {
         "arrows": [
           [
-            "FIG-ROLLE-ENGEL",
+            "FIG-HEILIGER-GEIST",
             "FIG-JESUS",
             "act"
           ]
         ],
+        "at": {
+          "FIG-ZEICHEN-FASTEN": "FIG-JESUS"
+        },
+        "x": {
+          "FIG-JESUS": 64
+        },
+        "mood": {
+          "FIG-JESUS": "pensive"
+        },
+        "back_side": "right"
+      }
+    },
+    {
+      "n": 2,
+      "reference": "MAT.4.3-MAT.4.10",
+      "figures": [],
+      "objects": [],
+      "signs": [],
+      "speech": [],
+      "action_de": "Der Teufel versucht Jesus dreimal – Steine zu Brot, Sprung von der Zinne des Tempels, alle Reiche der Welt für eine Anbetung –, und Jesus antwortet jedes Mal mit einem Wort der Schrift, zuletzt: Geh weg, Satan!",
+      "keywords": {
+        "de": "Es steht geschrieben",
+        "gsw": "Es staat gschribe"
+      },
+      "diagram": {
+        "visual": "grid",
+        "span": 2,
+        "cols": 2,
+        "title": {
+          "de": "Wenn du Gottes Sohn bist …",
+          "gsw": "Wänn du de Sohn vo Gott bisch …"
+        },
+        "cells": [
+          {
+            "a": {
+              "de": "«Sag, dass diese Steine zu Broten werden!»",
+              "gsw": "«Säg, dass die Stei zu Broot wärded!»"
+            },
+            "b": {
+              "de": "in der Wüste",
+              "gsw": "i de Wüeschti"
+            },
+            "icons": [
+              "FIG-OBJ-STEIN",
+              "FIG-OBJ-BROT"
+            ],
+            "tone": "old",
+            "who": "FIG-SATAN"
+          },
+          {
+            "a": {
+              "de": "«Der Mensch lebt nicht vom Brot allein, sondern von jedem Wort aus dem Mund Gottes.»",
+              "gsw": "«De Mänsch läbt nöd vom Broot ellei, sondern vo jedem Wort us em Mund vo Gott.»"
+            },
+            "b": {
+              "de": "Es steht geschrieben",
+              "gsw": "Es staat gschribe"
+            },
+            "icons": [
+              "FIG-OBJ-SCHRIFTROLLE"
+            ],
+            "tone": "new",
+            "who": "FIG-JESUS"
+          },
+          {
+            "a": {
+              "de": "«Wirf dich hinab!»",
+              "gsw": "«Rüer dich abe!»"
+            },
+            "b": {
+              "de": "auf der Zinne des Tempels",
+              "gsw": "uf de Zinne vom Tämpel"
+            },
+            "icons": [
+              "FIG-ORT-TEMPEL",
+              "FIG-ZEICHEN-HINAB"
+            ],
+            "tone": "old",
+            "who": "FIG-SATAN"
+          },
+          {
+            "a": {
+              "de": "«Du sollst den Herrn, deinen Gott, nicht auf die Probe stellen.»",
+              "gsw": "«Du söllsch de Herr, din Gott, nöd uf d Prob stelle.»"
+            },
+            "b": {
+              "de": "Es steht auch geschrieben",
+              "gsw": "Es staat au gschribe"
+            },
+            "icons": [
+              "FIG-OBJ-SCHRIFTROLLE"
+            ],
+            "tone": "new",
+            "who": "FIG-JESUS"
+          },
+          {
+            "a": {
+              "de": "«Das alles werde ich dir geben, wenn du mich anbetest.»",
+              "gsw": "«Das alles gib ich dir, wänn du mich aabättisch.»"
+            },
+            "b": {
+              "de": "auf einem sehr hohen Berg: alle Reiche der Welt",
+              "gsw": "uf eme ganz hööche Bärg: alli Riich vo de Wält"
+            },
+            "icons": [
+              "FIG-ORT-BERG",
+              "FIG-ZEICHEN-WELT"
+            ],
+            "tone": "old",
+            "who": "FIG-SATAN"
+          },
+          {
+            "a": {
+              "de": "«Geh weg, Satan! Den Herrn, deinen Gott, sollst du anbeten und ihm allein dienen.»",
+              "gsw": "«Gang wäg, Satan! De Herr, din Gott, söllsch du aabätte und em ellei diene.»"
+            },
+            "b": {
+              "de": "Es steht geschrieben",
+              "gsw": "Es staat gschribe"
+            },
+            "icons": [
+              "FIG-GOTT",
+              "FIG-ZEICHEN-BETEN"
+            ],
+            "tone": "new",
+            "who": "FIG-JESUS"
+          }
+        ]
+      }
+    },
+    {
+      "n": 3,
+      "reference": "MAT.4.11",
+      "figures": [
+        "FIG-JESUS",
+        "FIG-GRUPPE-ENGEL"
+      ],
+      "objects": [
+        "FIG-ORT-WUESTE",
+        "FIG-SATAN"
+      ],
+      "signs": [
+        "FIG-ZEICHEN-FLIEHEN"
+      ],
+      "speech": [],
+      "action_de": "Da verlässt ihn der Teufel, und Engel treten heran und dienen ihm.",
+      "keywords": {
+        "de": "Engel traten heran und dienten ihm",
+        "gsw": "Ängel sind härechoo und händ ihm dienet"
+      },
+      "stage": {
+        "arrows": [
+          [
+            "FIG-GRUPPE-ENGEL",
+            "FIG-JESUS",
+            "act"
+          ]
+        ],
+        "at": {
+          "FIG-ZEICHEN-FLIEHEN": "FIG-SATAN"
+        },
         "mood": {
           "FIG-JESUS": "calm",
-          "FIG-ROLLE-ENGEL": "smile"
+          "FIG-GRUPPE-ENGEL": "smile"
+        },
+        "x": {
+          "FIG-JESUS": 64,
+          "FIG-GRUPPE-ENGEL": 138
         }
       }
     }
   ],
   "actions_de": [
-    "Der Geist führt Jesus in die Wüste; nach vierzig Tagen und Nächten Fasten hat er Hunger. Der Versucher sagt: Wenn du Gottes Sohn bist, sag, dass diese Steine zu Broten werden! Jesus antwortet: Es steht geschrieben: Der Mensch lebt nicht vom Brot allein, sondern von jedem Wort aus dem Mund Gottes.",
-    "Der Teufel stellt Jesus auf die Zinne des Tempels: Wenn du Gottes Sohn bist, wirf dich hinab, denn seine Engel werden dich tragen! Jesus sagt: Es steht auch geschrieben: Du sollst den Herrn, deinen Gott, nicht auf die Probe stellen.",
-    "Auf einem sehr hohen Berg zeigt der Teufel Jesus alle Reiche der Welt und ihre Herrlichkeit und verspricht sie ihm, wenn er ihn anbetet. Jesus sagt: Geh weg, Satan! Denn es steht geschrieben: Den Herrn, deinen Gott, sollst du anbeten und ihm allein dienen.",
+    "Jesus wird vom Geist in die Wüste hinaufgeführt, um vom Teufel versucht zu werden; nach vierzig Tagen und vierzig Nächten Fasten hat er Hunger.",
+    "Der Teufel versucht Jesus dreimal – Steine zu Brot, Sprung von der Zinne des Tempels, alle Reiche der Welt für eine Anbetung –, und Jesus antwortet jedes Mal mit einem Wort der Schrift, zuletzt: Geh weg, Satan!",
     "Da verlässt ihn der Teufel, und Engel treten heran und dienen ihm."
   ],
   "captions_de": [
-    "Steine zu Brot: Nach vielen Tagen in der Wüste (Sonnen) fordert der Teufel (dunkler Schatten): Mach Steine zu Brot (Steine, Brot); Jesus antwortet: Es steht geschrieben (Schriftrolle): Vom Wort Gottes lebt der Mensch (Strahlenkranz).",
-    "Beim Tempel: Jesus steht beim Tempel in der heiligen Stadt; der Teufel (dunkler Schatten) fordert: Spring hinab (Pfeil nach unten); Jesus antwortet: Gott nicht auf die Probe stellen (roter Kreis mit Schrägbalken, Angelhaken mit Köder, Strahlenkranz).",
-    "Auf dem Berg: Der Teufel (dunkler Schatten) zeigt Jesus die Welt (Erdkugel, Bogen); Jesus sagt: Geh weg, Satan (Schatten, Pfeil)! Gott allein sollst du anbeten (Strahlenkranz, betende Hände).",
-    "Engel dienen ihm: Der Teufel ist fort; ein Engel (Flügel) tritt heran und dient Jesus (Bogen vom Engel zu Jesus)."
+    "In der Wüste: Die Geist-Taube führt Jesus (Pfeil); er fastet (Fladenbrot im Verbotskreis); am Rand wartet der Teufel (dunkler Schatten mit hellen Augen).",
+    "Drei Versuchungen als Raster: links je der Teufel (Bild) mit seiner Forderung und dem Ort (Steine und Brot; Tempel und Pfeil hinab; Berg und Erdkugel), rechts je Jesus (Bild, hervorgehoben) mit «Es steht geschrieben» (Schriftrolle).",
+    "Engel dienen ihm: Der Teufel (dunkler Schatten) geht weg (rennende Person); Engel (Weiss mit Flügeln) kommen zu Jesus (Pfeil)."
   ],
-  "interpretation_note_de": "Der Teufel ist ohne Gestalt als dunkler Schatten gezeichnet; seine Forderungen zeigt das Bild mit Zeichen (Steine und Brot, Pfeil nach unten, die Welt), weil der Schatten keine Sprechblase trägt. Die vierzig Tage stehen als Reihe von Sonnen (keine Zahlen). Die Schriftworte stammen aus [[DEU.8.3]], [[DEU.6.16]] und [[DEU.6.13]]; «auf die Probe stellen» ist mit dem Zeichen Versuchung gezeichnet. Mehrere Engel ([[MAT.4.11]]) erscheinen als einer. Jesus steht vor dem Tempel bzw. vor dem Berg; Zinne und Gipfel sind nicht eigens gezeichnet, damit die Sprechblase Platz hat.",
+  "interpretation_note_de": "Drei Felder nach «Wüste – drei Versuchungen – Engel» ([[MAT.4.1-MAT.4.11]]). Die Reihe der drei Versuchungen steht vollständig als Raster: Ort, Forderung des Teufels und Antwort Jesu mit dem Schriftwort ([[DEU.8.3]], [[DEU.6.16]], [[DEU.6.13]]); hervorgehoben ist die Antwort. Dass der Teufel selbst die Schrift zitiert ([[MAT.4.6]], Ps 91) und die dritte Forderung ohne «Wenn du Gottes Sohn bist» kommt, steht in den Zellen bzw. der Bildhilfe. Der Teufel nur als dunkler Schatten, nie als Mensch. Bei Lukas stehen Versuchung 2 und 3 umgekehrt; das Bild folgt Matthäus.",
   "basis": [
     {
       "record": "TU-MAT-004-001-011",
       "field": "summary",
-      "fingerprint": "5006fdc5e5ee056c"
+      "fingerprint": "1457c34615c05257"
     },
     {
       "record": "TRANS-MAT-004-001-025-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.4.1-MAT.4.4",
-      "fingerprint": "b66f7489b8ab2f47"
+      "reference": "MAT.4.1-MAT.4.2",
+      "fingerprint": "5015e0d533c39835"
     },
     {
       "record": "TRANS-MAT-004-001-025-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.4.5-MAT.4.7",
-      "fingerprint": "61a3422ad624784e"
-    },
-    {
-      "record": "TRANS-MAT-004-001-025-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.4.8-MAT.4.10",
-      "fingerprint": "50608a687960718f"
+      "reference": "MAT.4.3-MAT.4.10",
+      "fingerprint": "83442e91c82af958"
     },
     {
       "record": "TRANS-MAT-004-001-025-DE-WORKING",
@@ -222,7 +246,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -425,6 +449,442 @@
           "Beim Tempel: Jesus steht beim Tempel in der heiligen Stadt; der Teufel (dunkler Schatten) fordert: Spring hinab (Pfeil nach unten); Jesus antwortet: Gott nicht auf die Probe stellen (roter Kreis mit Schrägbalken, Angelhaken mit Köder, Strahlenkranz).",
           "Auf dem Berg: Der Teufel (dunkler Schatten) zeigt Jesus die Welt (Scheibe mit Meer und Land, Bogen); Jesus sagt: Geh weg, Satan (Schatten, Pfeil)! Gott allein sollst du anbeten (Strahlenkranz, betende Hände).",
           "Engel dienen ihm: Der Teufel ist fort; ein Engel (Flügel) tritt heran und dient Jesus (Bogen vom Engel zu Jesus)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.4.1-MAT.4.4",
+            "figures": [
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-WUESTE",
+              "FIG-SATAN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TAGE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-SATAN",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-OBJ-STEIN",
+                  "FIG-OBJ-BROT"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-SATAN",
+                "icons": [
+                  "FIG-OBJ-SCHRIFTROLLE",
+                  "FIG-GOTT"
+                ]
+              }
+            ],
+            "action_de": "Der Geist führt Jesus in die Wüste; nach vierzig Tagen und Nächten Fasten hat er Hunger. Der Versucher sagt: Wenn du Gottes Sohn bist, sag, dass diese Steine zu Broten werden! Jesus antwortet: Es steht geschrieben: Der Mensch lebt nicht vom Brot allein, sondern von jedem Wort aus dem Mund Gottes.",
+            "stage": {
+              "count": {
+                "FIG-ZEICHEN-TAGE": 5
+              },
+              "back_side": "right",
+              "mood": {
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-JESUS": 30
+              },
+              "air_y": 84,
+              "air_x": 60
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.4.5-MAT.4.7",
+            "figures": [
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL",
+              "FIG-SATAN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-SATAN",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-HINAB"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-SATAN",
+                "icons": [
+                  "FIG-ZEICHEN-NICHT",
+                  "FIG-ZEICHEN-VERSUCHUNG",
+                  "FIG-GOTT"
+                ]
+              }
+            ],
+            "action_de": "Der Teufel stellt Jesus auf die Zinne des Tempels: Wenn du Gottes Sohn bist, wirf dich hinab, denn seine Engel werden dich tragen! Jesus sagt: Es steht auch geschrieben: Du sollst den Herrn, deinen Gott, nicht auf die Probe stellen.",
+            "stage": {
+              "back_side": "right",
+              "before": true,
+              "x": {
+                "FIG-JESUS": 110
+              },
+              "mood": {
+                "FIG-JESUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.4.8-MAT.4.10",
+            "figures": [
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-BERG",
+              "FIG-SATAN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-WELT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-SATAN",
+                "icons": [
+                  "FIG-SATAN",
+                  "FIG-ZEICHEN-FLIEHEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-SATAN",
+                "icons": [
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-BETEN"
+                ]
+              }
+            ],
+            "action_de": "Auf einem sehr hohen Berg zeigt der Teufel Jesus alle Reiche der Welt und ihre Herrlichkeit und verspricht sie ihm, wenn er ihn anbetet. Jesus sagt: Geh weg, Satan! Denn es steht geschrieben: Den Herrn, deinen Gott, sollst du anbeten und ihm allein dienen.",
+            "stage": {
+              "back_side": "right",
+              "before": true,
+              "x": {
+                "FIG-JESUS": 124
+              },
+              "mood": {
+                "FIG-JESUS": "calm"
+              },
+              "arrows": [
+                [
+                  "FIG-SATAN",
+                  "FIG-ZEICHEN-WELT",
+                  "act"
+                ]
+              ],
+              "air_x": 52,
+              "air_y": 50
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.4.11",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-ENGEL"
+            ],
+            "objects": [
+              "FIG-ORT-WUESTE"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Da verlässt ihn der Teufel, und Engel treten heran und dienen ihm.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-ROLLE-ENGEL",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-ROLLE-ENGEL": "smile"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Der Geist führt Jesus in die Wüste; nach vierzig Tagen und Nächten Fasten hat er Hunger. Der Versucher sagt: Wenn du Gottes Sohn bist, sag, dass diese Steine zu Broten werden! Jesus antwortet: Es steht geschrieben: Der Mensch lebt nicht vom Brot allein, sondern von jedem Wort aus dem Mund Gottes.",
+          "Der Teufel stellt Jesus auf die Zinne des Tempels: Wenn du Gottes Sohn bist, wirf dich hinab, denn seine Engel werden dich tragen! Jesus sagt: Es steht auch geschrieben: Du sollst den Herrn, deinen Gott, nicht auf die Probe stellen.",
+          "Auf einem sehr hohen Berg zeigt der Teufel Jesus alle Reiche der Welt und ihre Herrlichkeit und verspricht sie ihm, wenn er ihn anbetet. Jesus sagt: Geh weg, Satan! Denn es steht geschrieben: Den Herrn, deinen Gott, sollst du anbeten und ihm allein dienen.",
+          "Da verlässt ihn der Teufel, und Engel treten heran und dienen ihm."
+        ],
+        "captions_de": [
+          "Steine zu Brot: Nach vielen Tagen in der Wüste (Sonnen) fordert der Teufel (dunkler Schatten): Mach Steine zu Brot (Steine, Brot); Jesus antwortet: Es steht geschrieben (Schriftrolle): Vom Wort Gottes lebt der Mensch (Strahlenkranz).",
+          "Beim Tempel: Jesus steht beim Tempel in der heiligen Stadt; der Teufel (dunkler Schatten) fordert: Spring hinab (Pfeil nach unten); Jesus antwortet: Gott nicht auf die Probe stellen (roter Kreis mit Schrägbalken, Angelhaken mit Köder, Strahlenkranz).",
+          "Auf dem Berg: Der Teufel (dunkler Schatten) zeigt Jesus die Welt (Erdkugel, Bogen); Jesus sagt: Geh weg, Satan (Schatten, Pfeil)! Gott allein sollst du anbeten (Strahlenkranz, betende Hände).",
+          "Engel dienen ihm: Der Teufel ist fort; ein Engel (Flügel) tritt heran und dient Jesus (Bogen vom Engel zu Jesus)."
+        ],
+        "interpretation_note_de": "Der Teufel ist ohne Gestalt als dunkler Schatten gezeichnet; seine Forderungen zeigt das Bild mit Zeichen (Steine und Brot, Pfeil nach unten, die Welt), weil der Schatten keine Sprechblase trägt. Die vierzig Tage stehen als Reihe von Sonnen (keine Zahlen). Die Schriftworte stammen aus [[DEU.8.3]], [[DEU.6.16]] und [[DEU.6.13]]; «auf die Probe stellen» ist mit dem Zeichen Versuchung gezeichnet. Mehrere Engel ([[MAT.4.11]]) erscheinen als einer. Jesus steht vor dem Tempel bzw. vor dem Berg; Zinne und Gipfel sind nicht eigens gezeichnet, damit die Sprechblase Platz hat.",
+        "basis": [
+          {
+            "record": "TU-MAT-004-001-011",
+            "field": "summary",
+            "fingerprint": "5006fdc5e5ee056c"
+          },
+          {
+            "record": "TRANS-MAT-004-001-025-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.4.1-MAT.4.4",
+            "fingerprint": "b66f7489b8ab2f47"
+          },
+          {
+            "record": "TRANS-MAT-004-001-025-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.4.5-MAT.4.7",
+            "fingerprint": "61a3422ad624784e"
+          },
+          {
+            "record": "TRANS-MAT-004-001-025-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.4.8-MAT.4.10",
+            "fingerprint": "50608a687960718f"
+          },
+          {
+            "record": "TRANS-MAT-004-001-025-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.4.11",
+            "fingerprint": "b74c292005514ac5"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.4.1-MAT.4.2",
+            "figures": [
+              "FIG-HEILIGER-GEIST",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-WUESTE",
+              "FIG-SATAN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FASTEN",
+              "FIG-ZEICHEN-TAGE"
+            ],
+            "speech": [],
+            "action_de": "Jesus wird vom Geist in die Wüste hinaufgeführt, um vom Teufel versucht zu werden; nach vierzig Tagen und vierzig Nächten Fasten hat er Hunger.",
+            "keywords": {
+              "de": "vierzig Tage und vierzig Nächte",
+              "gsw": "vierzg Täg und vierzg Nächt"
+            },
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-HEILIGER-GEIST",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "count": {
+                "FIG-ZEICHEN-TAGE": 5
+              },
+              "at": {
+                "FIG-ZEICHEN-FASTEN": "FIG-JESUS"
+              },
+              "x": {
+                "FIG-JESUS": 64
+              },
+              "mood": {
+                "FIG-JESUS": "pensive"
+              },
+              "back_side": "right"
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.4.3-MAT.4.10",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Der Teufel versucht Jesus dreimal – Steine zu Brot, Sprung von der Zinne des Tempels, alle Reiche der Welt für eine Anbetung –, und Jesus antwortet jedes Mal mit einem Wort der Schrift, zuletzt: Geh weg, Satan!",
+            "keywords": {
+              "de": "Es steht geschrieben",
+              "gsw": "Es staat gschribe"
+            },
+            "diagram": {
+              "visual": "grid",
+              "span": 2,
+              "cols": 2,
+              "title": {
+                "de": "Wenn du Gottes Sohn bist …",
+                "gsw": "Wänn du de Sohn vo Gott bisch …"
+              },
+              "cells": [
+                {
+                  "a": {
+                    "de": "«Sag, dass diese Steine zu Broten werden!»",
+                    "gsw": "«Säg, dass die Stei zu Broot wärded!»"
+                  },
+                  "b": {
+                    "de": "in der Wüste",
+                    "gsw": "i de Wüeschti"
+                  },
+                  "icons": [
+                    "FIG-OBJ-STEIN",
+                    "FIG-OBJ-BROT"
+                  ],
+                  "tone": "old",
+                  "who": "FIG-SATAN"
+                },
+                {
+                  "a": {
+                    "de": "«Der Mensch lebt nicht vom Brot allein, sondern von jedem Wort aus dem Mund Gottes.»",
+                    "gsw": "«De Mänsch läbt nöd vom Broot ellei, sondern vo jedem Wort us em Mund vo Gott.»"
+                  },
+                  "b": {
+                    "de": "Es steht geschrieben",
+                    "gsw": "Es staat gschribe"
+                  },
+                  "icons": [
+                    "FIG-OBJ-SCHRIFTROLLE"
+                  ],
+                  "tone": "new",
+                  "who": "FIG-JESUS"
+                },
+                {
+                  "a": {
+                    "de": "«Wirf dich hinab!»",
+                    "gsw": "«Rüer dich abe!»"
+                  },
+                  "b": {
+                    "de": "auf der Zinne des Tempels",
+                    "gsw": "uf de Zinne vom Tämpel"
+                  },
+                  "icons": [
+                    "FIG-ORT-TEMPEL",
+                    "FIG-ZEICHEN-HINAB"
+                  ],
+                  "tone": "old",
+                  "who": "FIG-SATAN"
+                },
+                {
+                  "a": {
+                    "de": "«Du sollst den Herrn, deinen Gott, nicht auf die Probe stellen.»",
+                    "gsw": "«Du söllsch de Herr, din Gott, nöd uf d Prob stelle.»"
+                  },
+                  "b": {
+                    "de": "Es steht auch geschrieben",
+                    "gsw": "Es staat au gschribe"
+                  },
+                  "icons": [
+                    "FIG-OBJ-SCHRIFTROLLE"
+                  ],
+                  "tone": "new",
+                  "who": "FIG-JESUS"
+                },
+                {
+                  "a": {
+                    "de": "«Das alles werde ich dir geben, wenn du mich anbetest.»",
+                    "gsw": "«Das alles gib ich dir, wänn du mich aabättisch.»"
+                  },
+                  "b": {
+                    "de": "auf einem sehr hohen Berg: alle Reiche der Welt",
+                    "gsw": "uf eme ganz hööche Bärg: alli Riich vo de Wält"
+                  },
+                  "icons": [
+                    "FIG-ORT-BERG",
+                    "FIG-ZEICHEN-WELT"
+                  ],
+                  "tone": "old",
+                  "who": "FIG-SATAN"
+                },
+                {
+                  "a": {
+                    "de": "«Geh weg, Satan! Den Herrn, deinen Gott, sollst du anbeten und ihm allein dienen.»",
+                    "gsw": "«Gang wäg, Satan! De Herr, din Gott, söllsch du aabätte und em ellei diene.»"
+                  },
+                  "b": {
+                    "de": "Es steht geschrieben",
+                    "gsw": "Es staat gschribe"
+                  },
+                  "icons": [
+                    "FIG-GOTT",
+                    "FIG-ZEICHEN-BETEN"
+                  ],
+                  "tone": "new",
+                  "who": "FIG-JESUS"
+                }
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.4.11",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ENGEL"
+            ],
+            "objects": [
+              "FIG-ORT-WUESTE",
+              "FIG-SATAN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FLIEHEN"
+            ],
+            "speech": [],
+            "action_de": "Da verlässt ihn der Teufel, und Engel treten heran und dienen ihm.",
+            "keywords": {
+              "de": "Engel traten heran und dienten ihm",
+              "gsw": "Ängel sind härechoo und händ ihm dienet"
+            },
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-GRUPPE-ENGEL",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-FLIEHEN": "FIG-SATAN"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-ENGEL": "smile"
+              },
+              "x": {
+                "FIG-JESUS": 64,
+                "FIG-GRUPPE-ENGEL": 138
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "In der Wüste: Die Geist-Taube führt Jesus (Pfeil); er fastet (Fladenbrot im Verbotskreis), viele Tage (Reihe kleiner Sonnen); am Rand wartet der Teufel (dunkler Schatten mit hellen Augen).",
+          "Drei Versuchungen als Raster: links je der Teufel (Bild) mit seiner Forderung und dem Ort (Steine und Brot; Tempel und Pfeil hinab; Berg und Erdkugel), rechts je Jesus (Bild, hervorgehoben) mit «Es steht geschrieben» (Schriftrolle).",
+          "Engel dienen ihm: Der Teufel (dunkler Schatten) geht weg (rennende Person); Engel (Weiss mit Flügeln) kommen zu Jesus (Pfeil)."
         ]
       }
     }

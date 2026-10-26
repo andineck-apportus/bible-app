@@ -1,0 +1,167 @@
+{
+ "id": "CORE-MAT-003-013-017",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.3.13-MAT.3.17",
+ "target": "TU-MAT-003-013-017",
+ "core_de": "Jesus kommt aus Galiläa zu Johannes an den Jordan, um sich taufen zu lassen; Johannes will ihn hindern, doch Jesus sagt, so gehöre es sich, alle Gerechtigkeit zu erfüllen; nach der Taufe öffnen sich die Himmel, der Geist Gottes kommt wie eine Taube auf ihn, und eine Stimme aus den Himmeln sagt: «Dieser ist mein geliebter Sohn, an dem ich Gefallen gefunden habe.»",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Kommen – Einwand – Taufe – Offenbarung",
+    "range": "MAT.3.13-MAT.3.17",
+    "elements": [
+     {
+      "label": "Jesus kommt an den Jordan zu Johannes, um sich taufen zu lassen",
+      "ref": "MAT.3.13",
+      "role": "Anfang"
+     },
+     {
+      "label": "Wortwechsel Johannes ↔ Jesus",
+      "ref": "MAT.3.14-MAT.3.15",
+      "role": "Einwand und Antwort",
+      "child": "s2"
+     },
+     {
+      "label": "Taufe und Offenbarung: Himmel ↔ Erde",
+      "ref": "MAT.3.16-MAT.3.17",
+      "role": "Höhepunkt",
+      "child": "s3"
+     }
+    ],
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "dialogue",
+    "subtype": "Einwand und Antwort",
+    "range": "MAT.3.14-MAT.3.15",
+    "elements": [
+     {
+      "label": "Johannes: «Ich habe es nötig, von dir getauft zu werden, und du kommst zu mir?»",
+      "ref": "MAT.3.14",
+      "role": "Einwand"
+     },
+     {
+      "label": "Jesus: «Lass es jetzt zu! Denn so gehört es sich für uns, alle Gerechtigkeit zu erfüllen.»",
+      "ref": "MAT.3.15",
+      "role": "Antwort"
+     },
+     {
+      "label": "Da lässt er ihn gewähren",
+      "ref": "MAT.3.15",
+      "role": "Ausgang"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JOHANNES-TAEUFER",
+       "to": "FIG-JESUS",
+       "ref": "MAT.3.14"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-JOHANNES-TAEUFER",
+       "ref": "MAT.3.15"
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "realms",
+    "subtype": "Himmel ↔ Erde",
+    "range": "MAT.3.16-MAT.3.17",
+    "elements": [
+     {
+      "label": "Erde: Jesus steigt nach der Taufe aus dem Wasser",
+      "ref": "MAT.3.16",
+      "role": "unten"
+     },
+     {
+      "label": "Himmel: Die Himmel öffnen sich; der Geist Gottes kommt wie eine Taube auf ihn",
+      "ref": "MAT.3.16",
+      "role": "oben → unten"
+     },
+     {
+      "label": "Stimme aus den Himmeln: «Dieser ist mein geliebter Sohn, an dem ich Gefallen gefunden habe.»",
+      "ref": "MAT.3.17",
+      "role": "oben"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Stimme aus den Himmeln",
+       "to": "die Anwesenden (Er-Form: «Dieser ist …»)",
+       "ref": "MAT.3.17",
+       "note": "Wer spricht, nennt der Text als Stimme aus den Himmeln; «mein Sohn» weist auf Gott, der nicht als Mensch gezeigt wird."
+      }
+     ]
+    },
+    "visual": "levels",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.3.13-MAT.3.15",
+   "text_de": "Jesus kommt aus Galiläa an den Jordan zu Johannes, um sich taufen zu lassen; Johannes will ihn hindern: «Ich habe es nötig, von dir getauft zu werden, und du kommst zu mir?»; Jesus antwortet: «Lass es jetzt zu! Denn so gehört es sich für uns, alle Gerechtigkeit zu erfüllen.»",
+   "reason_de": "Wortwechsel, der die Taufe begründet (Kriterium 2).",
+   "recognition_de": "Johannes und Jesus im Jordan, Johannes wehrt ab.",
+   "keywords": [
+    "Ich habe es nötig, von dir getauft zu werden, und du kommst zu mir?",
+    "alle Gerechtigkeit zu erfüllen"
+   ]
+  },
+  {
+   "reference": "MAT.3.16-MAT.3.17",
+   "text_de": "Als Jesus getauft ist und aus dem Wasser steigt, öffnen sich die Himmel; er sieht den Geist Gottes wie eine Taube auf sich herabkommen, und eine Stimme aus den Himmeln sagt: «Dieser ist mein geliebter Sohn, an dem ich Gefallen gefunden habe.»",
+   "reason_de": "Höhepunkt mit Gottesstimme (Kriterien 1, 2 und 4).",
+   "recognition_de": "Offener Himmel, Geist-Taube über Jesus im Jordan, Stimme von oben.",
+   "keywords": [
+    "die Himmel öffneten sich",
+    "wie eine Taube",
+    "Dieser ist mein geliebter Sohn"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Weg von Galiläa an den Jordan – Übergang"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-JOHANNES-TAEUFER",
+  "FIG-HEILIGER-GEIST",
+  "FIG-GOTT"
+ ],
+ "places": [
+  "FIG-ORT-JORDAN"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.3.13-MAT.3.17",
+   "fingerprint": "790d8b629140e9f1"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

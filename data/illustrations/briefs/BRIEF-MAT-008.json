@@ -11,10 +11,11 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.8.1-MAT.8.4",
+      "reference": "MAT.8.1-MAT.8.13",
       "figures": [
+        "FIG-ROLLE-AUSSAETZIGER",
         "FIG-JESUS",
-        "FIG-ROLLE-AUSSAETZIGER"
+        "FIG-ROLLE-HAUPTMANN"
       ],
       "objects": [],
       "signs": [
@@ -22,23 +23,29 @@
       ],
       "speech": [
         {
-          "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-AUSSAETZIGER",
+          "from": "FIG-ROLLE-HAUPTMANN",
+          "to": "FIG-JESUS",
           "icons": [
-            "FIG-ZEICHEN-REIN"
-          ]
+            "FIG-ZEICHEN-SPRECHEN",
+            "FIG-ROLLE-DIENER"
+          ],
+          "word": {
+            "de": "Sprich nur ein Wort!",
+            "gsw": "Säg nu es Wort!"
+          }
         }
       ],
-      "action_de": "Vom Berg herabgestiegen, macht Jesus einen Aussätzigen rein.",
+      "action_de": "Jesus berührt einen Aussätzigen, der rein wird, und ein Hauptmann bittet ihn um ein Wort für seinen gelähmten Diener; wie er geglaubt hat, geschieht ihm.",
+      "keywords": {
+        "de": "Ich will; werde rein!",
+        "gsw": "Ich wott; wird rein!"
+      },
       "stage": {
         "pose": {
           "FIG-ROLLE-AUSSAETZIGER": "kneel"
         },
         "at": {
           "FIG-ZEICHEN-REIN": "FIG-ROLLE-AUSSAETZIGER"
-        },
-        "mood": {
-          "FIG-ROLLE-AUSSAETZIGER": "delight"
         },
         "arrows": [
           [
@@ -47,60 +54,64 @@
             "act"
           ]
         ],
+        "mood": {
+          "FIG-ROLLE-AUSSAETZIGER": "delight",
+          "FIG-JESUS": "calm",
+          "FIG-ROLLE-HAUPTMANN": "earnest"
+        },
         "x": {
-          "FIG-JESUS": 70,
-          "FIG-ROLLE-AUSSAETZIGER": 118
+          "FIG-ROLLE-AUSSAETZIGER": 30,
+          "FIG-JESUS": 90,
+          "FIG-ROLLE-HAUPTMANN": 156
         }
       }
     },
     {
       "n": 2,
-      "reference": "MAT.8.5-MAT.8.13",
+      "reference": "MAT.8.14-MAT.8.22",
       "figures": [
-        "FIG-ROLLE-HAUPTMANN",
+        "FIG-SCHWIEGERMUTTER-PETRUS",
         "FIG-JESUS",
-        "FIG-ROLLE-DIENER"
+        "FIG-ROLLE-JUENGER"
       ],
-      "objects": [
-        "FIG-ORT-HAUS"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-HEILEN"
-      ],
+      "objects": [],
+      "signs": [],
       "speech": [
         {
-          "from": "FIG-ROLLE-HAUPTMANN",
-          "to": "FIG-JESUS",
+          "from": "FIG-JESUS",
+          "to": "FIG-ROLLE-JUENGER",
           "icons": [
-            "FIG-ZEICHEN-SPRECHEN",
-            "FIG-ROLLE-DIENER",
-            "FIG-ZEICHEN-HEILEN"
-          ]
+            "FIG-ZEICHEN-NACHFOLGEN"
+          ],
+          "word": {
+            "de": "Folge mir!",
+            "gsw": "Chumm mir nache!"
+          }
         }
       ],
-      "action_de": "In Kafarnaum heilt Jesus auf ein Wort hin den Diener eines Hauptmanns; einen so grossen Glauben habe er in Israel bei niemandem gefunden.",
+      "action_de": "Jesus heilt die Schwiegermutter des Petrus, die aufsteht und ihm dient, und sagt einem, der zuerst seinen Vater begraben will: Folge mir!",
+      "keywords": {
+        "de": "sie stand auf und diente ihm",
+        "gsw": "si isch ufgstande und hät ihm dienet"
+      },
       "stage": {
-        "back_side": "right",
-        "at": {
-          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-DIENER"
-        },
-        "x": {
-          "FIG-ROLLE-HAUPTMANN": 26,
-          "FIG-JESUS": 64,
-          "FIG-ROLLE-DIENER": 124
-        },
-        "mood": {
-          "FIG-ROLLE-HAUPTMANN": "earnest",
-          "FIG-ROLLE-DIENER": "delight",
-          "FIG-JESUS": "calm"
-        },
         "arrows": [
           [
             "FIG-JESUS",
-            "FIG-ROLLE-DIENER",
+            "FIG-SCHWIEGERMUTTER-PETRUS",
             "act"
           ]
-        ]
+        ],
+        "mood": {
+          "FIG-SCHWIEGERMUTTER-PETRUS": "smile",
+          "FIG-JESUS": "earnest",
+          "FIG-ROLLE-JUENGER": "worried"
+        },
+        "x": {
+          "FIG-SCHWIEGERMUTTER-PETRUS": 30,
+          "FIG-JESUS": 92,
+          "FIG-ROLLE-JUENGER": 156
+        }
       }
     },
     {
@@ -117,15 +128,22 @@
       "signs": [],
       "speech": [
         {
-          "from": "FIG-JESUS",
-          "to": "FIG-ORT-SEE",
+          "from": "FIG-GRUPPE-JUENGER",
+          "to": "FIG-GRUPPE-JUENGER",
           "icons": [
-            "FIG-ZEICHEN-WIND",
-            "FIG-ZEICHEN-SCHWEIGEN"
-          ]
+            "FIG-ZEICHEN-FRAGEN"
+          ],
+          "word": {
+            "de": "Was für einer ist dieser?",
+            "gsw": "Was isch dä für eine?"
+          }
         }
       ],
-      "action_de": "Im Sturm wecken ihn die Jünger; er nennt sie kleingläubig und stillt Wind und See.",
+      "action_de": "Jesus fährt die Winde und den See an, und es wird eine grosse Stille; die Menschen staunen: Was für einer ist dieser, dass ihm sogar die Winde und der See gehorchen?",
+      "keywords": {
+        "de": "es wurde eine grosse Stille",
+        "gsw": "es isch ganz still worde"
+      },
       "stage": {
         "in": {
           "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT",
@@ -133,16 +151,17 @@
         },
         "in_pos": {
           "FIG-JESUS": [
-            0.66,
+            0.3,
             0.42
           ],
           "FIG-GRUPPE-JUENGER": [
-            0.28,
+            0.7,
             0.42
           ]
         },
         "sea": "calm",
         "mood": {
+          "FIG-JESUS": "calm",
           "FIG-GRUPPE-JUENGER": "surprised"
         }
       }
@@ -168,11 +187,19 @@
           "from": "FIG-JESUS",
           "to": "FIG-ROLLE-BESESSENER",
           "icons": [
-            "FIG-ZEICHEN-FLIEHEN"
-          ]
+            "FIG-ZEICHEN-AUSTREIBEN"
+          ],
+          "word": {
+            "de": "Geht!",
+            "gsw": "Gönd!"
+          }
         }
       ],
-      "action_de": "Im Gebiet der Gadarener fahren die Dämonen aus zwei Besessenen in eine Schweineherde, die im See umkommt.",
+      "action_de": "Die Dämonen bitten Jesus, in die Schweineherde geschickt zu werden; er sagt: Geht! Sie fahren in die Schweine, die ganze Herde stürmt den Abhang hinunter in den See, und sie sterben im Wasser.",
+      "keywords": {
+        "de": "sie starben im Wasser",
+        "gsw": "si sind im Wasser gstorbe"
+      },
       "stage": {
         "count": {
           "FIG-OBJ-SCHWEIN": 3
@@ -180,8 +207,8 @@
         "floor_side": "right",
         "x": {
           "FIG-JESUS": 22,
-          "FIG-ROLLE-BESESSENER": 56,
-          "FIG-ROLLE-ZWEITER-BESESSENER": 88
+          "FIG-ROLLE-BESESSENER": 60,
+          "FIG-ROLLE-ZWEITER-BESESSENER": 96
         },
         "at": {
           "FIG-ZEICHEN-DAEMON": "FIG-OBJ-SCHWEIN",
@@ -197,33 +224,33 @@
         "mood": {
           "FIG-ROLLE-BESESSENER": "calm",
           "FIG-ROLLE-ZWEITER-BESESSENER": "calm",
-          "FIG-JESUS": "calm"
+          "FIG-JESUS": "determined"
         }
       }
     }
   ],
   "actions_de": [
-    "Vom Berg herabgestiegen, macht Jesus einen Aussätzigen rein.",
-    "In Kafarnaum heilt Jesus auf ein Wort hin den Diener eines Hauptmanns; einen so grossen Glauben habe er in Israel bei niemandem gefunden.",
-    "Im Sturm wecken ihn die Jünger; er nennt sie kleingläubig und stillt Wind und See.",
-    "Im Gebiet der Gadarener fahren die Dämonen aus zwei Besessenen in eine Schweineherde, die im See umkommt."
+    "Jesus berührt einen Aussätzigen, der rein wird, und ein Hauptmann bittet ihn um ein Wort für seinen gelähmten Diener; wie er geglaubt hat, geschieht ihm.",
+    "Jesus heilt die Schwiegermutter des Petrus, die aufsteht und ihm dient, und sagt einem, der zuerst seinen Vater begraben will: Folge mir!",
+    "Jesus fährt die Winde und den See an, und es wird eine grosse Stille; die Menschen staunen: Was für einer ist dieser, dass ihm sogar die Winde und der See gehorchen?",
+    "Die Dämonen bitten Jesus, in die Schweineherde geschickt zu werden; er sagt: Geht! Sie fahren in die Schweine, die ganze Herde stürmt den Abhang hinunter in den See, und sie sterben im Wasser."
   ],
   "captions_de": [
-    "Berührung → rein: Jesus berührt einen Aussätzigen (Pfeil zu ihm) und sagt: Werde rein (Seifenblasen mit Funkeln bei ihm).",
-    "Ein Wort → gesund: Der Hauptmann (Helm, rostroter Umhang mit goldenem Kragen) bittet: Sprich nur ein Wort, und mein Diener wird gesund (Sprechblase, Diener, berührende Hand); der Pfeil führt von Jesus zum Diener daheim: er wird gesund (berührende Hand mit grünem Lichtpunkt über ihm, Haus).",
-    "Stille: Jesus gebietet Wind und See (blasendes Wolkengesicht, Gesicht mit Finger vor dem Mund); die Jünger im Boot staunen.",
-    "Jesu Wort → Dämonen in die Schweine → in den See: Die Dämonen (dunkler Wirbel) fahren aus zwei Besessenen in die Schweine (gepunkteter Bogen), und die Herde stürzt in den See (Pfeil nach unten)."
+    "Rein und gesund: Jesus berührt den knienden Aussätzigen (Pfeil, Seifenblasen); daneben bittet der Hauptmann (Helm mit Querbusch): «Sprich nur ein Wort!» (Sprechblase, Diener).",
+    "Heilung und Ruf: Jesus hat die Schwiegermutter berührt (Pfeil), sie dient ihm (Schale mit Brot); zum Jünger (Wanderstab) sagt er: «Folge mir!» (zwei gehende Personen).",
+    "Stille: Im Boot auf dem ruhigen See steht Jesus; die Jünger staunen und fragen: «Was für einer ist dieser?» (Fragezeichen).",
+    "Austreibung: Jesus sagt: «Geht!» (Schatten mit Pfeil hinaus); die Schweine stürzen in den See (Pfeil hinab)."
   ],
-  "interpretation_note_de": "Das Kapitel hat sechs Abschnitte; die Heilung der Schwiegermutter des Petrus mit den Heilungen am Abend ([[MAT.8.14-MAT.8.17]]) und die Worte über die Nachfolge ([[MAT.8.18-MAT.8.22]]) sind im Kapitelbild nicht eigens gezeigt.",
+  "interpretation_note_de": "Vier Comic-Szenen für sechs Abschnitte: Feld 1 bündelt den Aussätzigen und den Hauptmann ([[MAT.8.1-MAT.8.13]]), Feld 2 die Schwiegermutter des Petrus und den Ruf in die Nachfolge ([[MAT.8.14-MAT.8.22]]), Feld 3 die Stillung des Sturms ([[MAT.8.23-MAT.8.27]]), Feld 4 die Austreibung bei den Gadarenern ([[MAT.8.28-MAT.8.34]]). Die Abendheilungen, das Gespräch mit dem Schriftgelehrten und die Bitte der Stadt zeigen die Abschnittsbilder. Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-MAT-008",
       "field": "summary",
-      "fingerprint": "dc515d1d7187bbc0"
+      "fingerprint": "8640c1aec15a6321"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -626,6 +653,227 @@
           "Stille: Jesus gebietet Wind und See (Windlinien, durchgestrichene Sprechblase); die Jünger im Boot staunen.",
           "Jesu Wort → Dämonen in die Schweine → in den See: Die Dämonen (dunkler Wirbel) fahren aus zwei Besessenen in die Schweine (gepunkteter Bogen), und die Herde stürzt in den See (Pfeil nach unten)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.8.1-MAT.8.4",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-AUSSAETZIGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-REIN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-AUSSAETZIGER",
+                "icons": [
+                  "FIG-ZEICHEN-REIN"
+                ]
+              }
+            ],
+            "action_de": "Vom Berg herabgestiegen, macht Jesus einen Aussätzigen rein.",
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-AUSSAETZIGER": "kneel"
+              },
+              "at": {
+                "FIG-ZEICHEN-REIN": "FIG-ROLLE-AUSSAETZIGER"
+              },
+              "mood": {
+                "FIG-ROLLE-AUSSAETZIGER": "delight"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-AUSSAETZIGER",
+                  "act"
+                ]
+              ],
+              "x": {
+                "FIG-JESUS": 70,
+                "FIG-ROLLE-AUSSAETZIGER": 118
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.8.5-MAT.8.13",
+            "figures": [
+              "FIG-ROLLE-HAUPTMANN",
+              "FIG-JESUS",
+              "FIG-ROLLE-DIENER"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-HAUPTMANN",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-SPRECHEN",
+                  "FIG-ROLLE-DIENER",
+                  "FIG-ZEICHEN-HEILEN"
+                ]
+              }
+            ],
+            "action_de": "In Kafarnaum heilt Jesus auf ein Wort hin den Diener eines Hauptmanns; einen so grossen Glauben habe er in Israel bei niemandem gefunden.",
+            "stage": {
+              "back_side": "right",
+              "at": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-DIENER"
+              },
+              "x": {
+                "FIG-ROLLE-HAUPTMANN": 26,
+                "FIG-JESUS": 64,
+                "FIG-ROLLE-DIENER": 124
+              },
+              "mood": {
+                "FIG-ROLLE-HAUPTMANN": "earnest",
+                "FIG-ROLLE-DIENER": "delight",
+                "FIG-JESUS": "calm"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-DIENER",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.8.23-MAT.8.27",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ORT-SEE",
+                "icons": [
+                  "FIG-ZEICHEN-WIND",
+                  "FIG-ZEICHEN-SCHWEIGEN"
+                ]
+              }
+            ],
+            "action_de": "Im Sturm wecken ihn die Jünger; er nennt sie kleingläubig und stillt Wind und See.",
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT",
+                "FIG-JESUS": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.66,
+                  0.42
+                ],
+                "FIG-GRUPPE-JUENGER": [
+                  0.28,
+                  0.42
+                ]
+              },
+              "sea": "calm",
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "surprised"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.8.28-MAT.8.34",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-BESESSENER",
+              "FIG-ROLLE-ZWEITER-BESESSENER"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHWEIN",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-DAEMON",
+              "FIG-ZEICHEN-HINAB"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-BESESSENER",
+                "icons": [
+                  "FIG-ZEICHEN-FLIEHEN"
+                ]
+              }
+            ],
+            "action_de": "Im Gebiet der Gadarener fahren die Dämonen aus zwei Besessenen in eine Schweineherde, die im See umkommt.",
+            "stage": {
+              "count": {
+                "FIG-OBJ-SCHWEIN": 3
+              },
+              "floor_side": "right",
+              "x": {
+                "FIG-JESUS": 22,
+                "FIG-ROLLE-BESESSENER": 56,
+                "FIG-ROLLE-ZWEITER-BESESSENER": 88
+              },
+              "at": {
+                "FIG-ZEICHEN-DAEMON": "FIG-OBJ-SCHWEIN",
+                "FIG-ZEICHEN-HINAB": "FIG-ORT-SEE"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-BESESSENER",
+                  "FIG-OBJ-SCHWEIN",
+                  "throw"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-BESESSENER": "calm",
+                "FIG-ROLLE-ZWEITER-BESESSENER": "calm",
+                "FIG-JESUS": "calm"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Vom Berg herabgestiegen, macht Jesus einen Aussätzigen rein.",
+          "In Kafarnaum heilt Jesus auf ein Wort hin den Diener eines Hauptmanns; einen so grossen Glauben habe er in Israel bei niemandem gefunden.",
+          "Im Sturm wecken ihn die Jünger; er nennt sie kleingläubig und stillt Wind und See.",
+          "Im Gebiet der Gadarener fahren die Dämonen aus zwei Besessenen in eine Schweineherde, die im See umkommt."
+        ],
+        "captions_de": [
+          "Berührung → rein: Jesus berührt einen Aussätzigen (Pfeil zu ihm) und sagt: Werde rein (Seifenblasen mit Funkeln bei ihm).",
+          "Ein Wort → gesund: Der Hauptmann (Helm, rostroter Umhang mit goldenem Kragen) bittet: Sprich nur ein Wort, und mein Diener wird gesund (Sprechblase, Diener, berührende Hand); der Pfeil führt von Jesus zum Diener daheim: er wird gesund (berührende Hand mit grünem Lichtpunkt über ihm, Haus).",
+          "Stille: Jesus gebietet Wind und See (blasendes Wolkengesicht, Gesicht mit Finger vor dem Mund); die Jünger im Boot staunen.",
+          "Jesu Wort → Dämonen in die Schweine → in den See: Die Dämonen (dunkler Wirbel) fahren aus zwei Besessenen in die Schweine (gepunkteter Bogen), und die Herde stürzt in den See (Pfeil nach unten)."
+        ],
+        "interpretation_note_de": "Das Kapitel hat sechs Abschnitte; die Heilung der Schwiegermutter des Petrus mit den Heilungen am Abend ([[MAT.8.14-MAT.8.17]]) und die Worte über die Nachfolge ([[MAT.8.18-MAT.8.22]]) sind im Kapitelbild nicht eigens gezeigt.",
+        "basis": [
+          {
+            "record": "SUM-CH-MAT-008",
+            "field": "summary",
+            "fingerprint": "dc515d1d7187bbc0"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

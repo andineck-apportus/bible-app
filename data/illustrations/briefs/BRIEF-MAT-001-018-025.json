@@ -26,10 +26,28 @@
           "icons": [
             "FIG-ZEICHEN-TRENNEN"
           ],
-          "think": true
+          "think": true,
+          "word": {
+            "de": "Heimlich trennen?",
+            "gsw": "Heimlich trenne?"
+          }
         }
       ],
-      "action_de": "Maria ist mit Josef verlobt; noch bevor sie zusammenkommen, zeigt sich, dass sie schwanger ist – vom heiligen Geist. Josef, der gerecht ist und sie nicht blossstellen will, beschliesst, sich heimlich von ihr zu trennen.",
+      "action_de": "Maria ist mit Josef verlobt und, noch bevor sie zusammenkommen, vom heiligen Geist schwanger; Josef, der gerecht ist, beschliesst, sich heimlich von ihr zu trennen.",
+      "keywords": {
+        "de": "vom heiligen Geist",
+        "gsw": "vom heilige Geischt"
+      },
+      "names": {
+        "FIG-MARIA-MUTTER-JESU": {
+          "de": "Maria",
+          "gsw": "Maria"
+        },
+        "FIG-JOSEF-NAZARET": {
+          "de": "Josef",
+          "gsw": "Josef"
+        }
+      },
       "stage": {
         "arrows": [
           [
@@ -43,14 +61,14 @@
           "FIG-JOSEF-NAZARET": "worried"
         },
         "x": {
-          "FIG-JOSEF-NAZARET": 124,
-          "FIG-MARIA-MUTTER-JESU": 46
+          "FIG-MARIA-MUTTER-JESU": 46,
+          "FIG-JOSEF-NAZARET": 124
         }
       }
     },
     {
       "n": 2,
-      "reference": "MAT.1.20-MAT.1.21",
+      "reference": "MAT.1.20-MAT.1.23",
       "figures": [
         "FIG-ROLLE-ENGEL",
         "FIG-JOSEF-NAZARET"
@@ -65,21 +83,19 @@
           "from": "FIG-ROLLE-ENGEL",
           "to": "FIG-JOSEF-NAZARET",
           "icons": [
-            "FIG-MARIA-MUTTER-JESU",
-            "FIG-HEILIGER-GEIST"
-          ]
-        },
-        {
-          "from": "FIG-ROLLE-ENGEL",
-          "to": "FIG-JOSEF-NAZARET",
-          "icons": [
-            "FIG-ZEICHEN-GEBURT",
-            "FIG-JESUS",
-            "FIG-ZEICHEN-VERGEBUNG"
-          ]
+            "FIG-JESUS-KIND"
+          ],
+          "word": {
+            "de": "Gib ihm den Namen Jesus!",
+            "gsw": "Gib em de Name Jesus!"
+          }
         }
       ],
-      "action_de": "Während Josef darüber nachdenkt, erscheint ihm ein Engel des Herrn im Traum: Fürchte dich nicht, Maria zu dir zu nehmen, denn was in ihr gezeugt ist, ist vom heiligen Geist; sie wird einen Sohn gebären, dem du den Namen Jesus geben sollst, denn er wird sein Volk von ihren Sünden retten.",
+      "action_de": "Ein Engel des Herrn sagt Josef im Traum: Fürchte dich nicht, Maria zu dir zu nehmen, denn das Kind ist vom heiligen Geist; gib ihm den Namen Jesus, denn er wird sein Volk von ihren Sünden retten. So erfüllt sich das Wort vom Immanuel: Gott mit uns.",
+      "keywords": {
+        "de": "Gott mit uns",
+        "gsw": "Gott mit üs"
+      },
       "stage": {
         "pose": {
           "FIG-JOSEF-NAZARET": "sleep"
@@ -99,41 +115,6 @@
     },
     {
       "n": 3,
-      "reference": "MAT.1.22-MAT.1.23",
-      "figures": [
-        "FIG-ROLLE-PROPHET"
-      ],
-      "objects": [
-        "FIG-OBJ-SCHRIFTROLLE"
-      ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-ROLLE-PROPHET",
-          "to": "FIG-ROLLE-PROPHET",
-          "icons": [
-            "FIG-ROLLE-JUNGE-FRAU",
-            "FIG-ZEICHEN-GEBURT",
-            "FIG-GOTT",
-            "FIG-ZEICHEN-MENSCHEN"
-          ]
-        }
-      ],
-      "action_de": "Das alles ist geschehen, damit sich erfüllt, was der Herr durch den Propheten gesagt hat: Die Jungfrau wird einen Sohn gebären, und man wird ihm den Namen Immanuel geben – Gott mit uns.",
-      "stage": {
-        "hold": {
-          "FIG-ROLLE-PROPHET": "FIG-OBJ-SCHRIFTROLLE"
-        },
-        "mood": {
-          "FIG-ROLLE-PROPHET": "calm"
-        },
-        "x": {
-          "FIG-ROLLE-PROPHET": 93
-        }
-      }
-    },
-    {
-      "n": 4,
       "reference": "MAT.1.24-MAT.1.25",
       "figures": [
         "FIG-JOSEF-NAZARET",
@@ -147,12 +128,18 @@
         {
           "from": "FIG-JOSEF-NAZARET",
           "to": "FIG-MARIA-MUTTER-JESU",
-          "icons": [
-            "FIG-JESUS"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Sein Name ist Jesus.",
+            "gsw": "Sin Name isch Jesus."
+          }
         }
       ],
-      "action_de": "Josef erwacht, tut, wie ihm der Engel befohlen hat, und nimmt Maria zu sich; als sie einen Sohn geboren hat, gibt er ihm den Namen Jesus.",
+      "action_de": "Josef erwacht, tut, wie ihm der Engel des Herrn befohlen hat, nimmt Maria zu sich und gibt dem Sohn, den sie gebiert, den Namen Jesus.",
+      "keywords": {
+        "de": "er gab ihm den Namen Jesus",
+        "gsw": "er hät ihm de Name Jesus gää"
+      },
       "stage": {
         "hold": {
           "FIG-MARIA-MUTTER-JESU": "FIG-JESUS-KIND"
@@ -165,23 +152,21 @@
     }
   ],
   "actions_de": [
-    "Maria ist mit Josef verlobt; noch bevor sie zusammenkommen, zeigt sich, dass sie schwanger ist – vom heiligen Geist. Josef, der gerecht ist und sie nicht blossstellen will, beschliesst, sich heimlich von ihr zu trennen.",
-    "Während Josef darüber nachdenkt, erscheint ihm ein Engel des Herrn im Traum: Fürchte dich nicht, Maria zu dir zu nehmen, denn was in ihr gezeugt ist, ist vom heiligen Geist; sie wird einen Sohn gebären, dem du den Namen Jesus geben sollst, denn er wird sein Volk von ihren Sünden retten.",
-    "Das alles ist geschehen, damit sich erfüllt, was der Herr durch den Propheten gesagt hat: Die Jungfrau wird einen Sohn gebären, und man wird ihm den Namen Immanuel geben – Gott mit uns.",
-    "Josef erwacht, tut, wie ihm der Engel befohlen hat, und nimmt Maria zu sich; als sie einen Sohn geboren hat, gibt er ihm den Namen Jesus."
+    "Maria ist mit Josef verlobt und, noch bevor sie zusammenkommen, vom heiligen Geist schwanger; Josef, der gerecht ist, beschliesst, sich heimlich von ihr zu trennen.",
+    "Ein Engel des Herrn sagt Josef im Traum: Fürchte dich nicht, Maria zu dir zu nehmen, denn das Kind ist vom heiligen Geist; gib ihm den Namen Jesus, denn er wird sein Volk von ihren Sünden retten. So erfüllt sich das Wort vom Immanuel: Gott mit uns.",
+    "Josef erwacht, tut, wie ihm der Engel des Herrn befohlen hat, nimmt Maria zu sich und gibt dem Sohn, den sie gebiert, den Namen Jesus."
   ],
   "captions_de": [
-    "Vom Geist schwanger → Josef will sich trennen: Der Geist (Taube) wirkt an Maria (goldener Bogen von der Taube zu Maria); darum überlegt Josef, sich heimlich von ihr zu trennen (Denkblase: Bruch mit zwei Pfeilen).",
-    "Im Traum: In der Nacht (dunkler Himmel, Mond) schläft Josef; ein Engel (Flügel) sagt ihm: Maria – vom Geist (Taube); sie bekommt einen Sohn (Säugling), Jesus, der von den Sünden rettet (helles Tuch, der Fleck nur noch gestrichelt, Funken).",
-    "Prophetenwort: Der Prophet (Schriftrolle) sagt: Die Jungfrau (junge Frau, gelbes Kopftuch) bekommt einen Sohn (Säugling); sein Name heisst: Gott mit uns (Strahlenkranz, Menschen).",
-    "Der Name: Josef hat Maria zu sich genommen; sie hält ihren Sohn (Kind mit Kreuznimbus), und Josef gibt ihm den Namen Jesus (Sprechblase mit Jesus)."
+    "Schwanger vom heiligen Geist: über Maria (blauer Schleier) die Geist-Taube (weiss, goldener Schein, Pfeil zu ihr); Josef (Hammer und Brett) denkt besorgt: «Heimlich trennen?» (Gedankenwolke, Bruch mit zwei Pfeilen).",
+    "Im Traum: Der Engel (weisses Gewand, Flügel) spricht zum schlafenden Josef (Zzz, Mondsichel): «Gib ihm den Namen Jesus!» (Säugling mit Kreuznimbus).",
+    "Der Name Jesus: Josef steht bei Maria, die das Kind (Säugling mit Kreuznimbus) hält, und sagt: «Sein Name ist Jesus.»"
   ],
-  "interpretation_note_de": "Die Schwangerschaft ist nicht gezeichnet; der goldene Bogen von der Taube zu Maria steht für «vom heiligen Geist» ([[MAT.1.18]]). Das Retten von den Sünden ([[MAT.1.21]]) zeigt das Zeichen Vergebung. Der Engel erscheint im Traum; das Bild zeigt ihn neben dem schlafenden Josef. Das Prophetenwort stammt aus [[ISA.7.14]]; «Gott mit uns» ist als Strahlenkranz und Menschen gezeichnet.",
+  "interpretation_note_de": "Drei Szenen nach dem Ablauf «Problem – Weisung im Traum – Gehorsam» ([[MAT.1.18-MAT.1.25]]). Feld 2 fasst die Weisung mit beiden Begründungen und das Erfüllungszitat in einer Szene; das Zitat steht im Stichwortband («Gott mit uns», [[MAT.1.23]]), die Begründung «denn er wird sein Volk von ihren Sünden retten» nur in der Bildhilfe. Die Geist-Taube über Maria deutet «vom heiligen Geist» an, ohne den Vorgang zu zeigen. Ob «Jungfrau» oder «junge Frau» ([[ISA.7.14]]) steht im vertieften Studium, nicht im Bild.",
   "basis": [
     {
       "record": "TU-MAT-001-018-025",
       "field": "summary",
-      "fingerprint": "ab49eab6a6ca144b"
+      "fingerprint": "14f3c2097a3f273f"
     },
     {
       "record": "TRANS-MAT-001-001-025-DE-WORKING",
@@ -192,14 +177,8 @@
     {
       "record": "TRANS-MAT-001-001-025-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.1.20-MAT.1.21",
-      "fingerprint": "7b2725b5db2ccc86"
-    },
-    {
-      "record": "TRANS-MAT-001-001-025-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.1.22-MAT.1.23",
-      "fingerprint": "d0da2c22291ea89b"
+      "reference": "MAT.1.20-MAT.1.23",
+      "fingerprint": "11b230315f6cd50a"
     },
     {
       "record": "TRANS-MAT-001-001-025-DE-WORKING",
@@ -209,7 +188,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -382,6 +361,379 @@
           "Im Traum: In der Nacht (dunkler Himmel, Mond) schläft Josef; ein Engel (Flügel) sagt ihm: Maria – vom Geist (Taube); sie bekommt einen Sohn (Säugling), Jesus, der von den Sünden rettet (helles Tuch, der Fleck nur noch gestrichelt, Funken).",
           "Prophetenwort: Der Prophet (Schriftrolle) sagt: Die Jungfrau (junge Frau, gelbes Kopftuch) bekommt einen Sohn (Säugling); sein Name heisst: Gott mit uns (Strahlenkranz, Menschen).",
           "Der Name: Josef hat Maria zu sich genommen; sie hält ihren Sohn (Kind mit Kreuznimbus), und Josef gibt ihm den Namen Jesus (Sprechblase mit Jesus)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.1.18-MAT.1.19",
+            "figures": [
+              "FIG-HEILIGER-GEIST",
+              "FIG-MARIA-MUTTER-JESU",
+              "FIG-JOSEF-NAZARET"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JOSEF-NAZARET",
+                "to": "FIG-JOSEF-NAZARET",
+                "icons": [
+                  "FIG-ZEICHEN-TRENNEN"
+                ],
+                "think": true
+              }
+            ],
+            "action_de": "Maria ist mit Josef verlobt; noch bevor sie zusammenkommen, zeigt sich, dass sie schwanger ist – vom heiligen Geist. Josef, der gerecht ist und sie nicht blossstellen will, beschliesst, sich heimlich von ihr zu trennen.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-HEILIGER-GEIST",
+                  "FIG-MARIA-MUTTER-JESU",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-MARIA-MUTTER-JESU": "calm",
+                "FIG-JOSEF-NAZARET": "worried"
+              },
+              "x": {
+                "FIG-JOSEF-NAZARET": 124,
+                "FIG-MARIA-MUTTER-JESU": 46
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.1.20-MAT.1.21",
+            "figures": [
+              "FIG-ROLLE-ENGEL",
+              "FIG-JOSEF-NAZARET"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-NACHT",
+              "FIG-ZEICHEN-SCHLAFEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-ENGEL",
+                "to": "FIG-JOSEF-NAZARET",
+                "icons": [
+                  "FIG-MARIA-MUTTER-JESU",
+                  "FIG-HEILIGER-GEIST"
+                ]
+              },
+              {
+                "from": "FIG-ROLLE-ENGEL",
+                "to": "FIG-JOSEF-NAZARET",
+                "icons": [
+                  "FIG-ZEICHEN-GEBURT",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-VERGEBUNG"
+                ]
+              }
+            ],
+            "action_de": "Während Josef darüber nachdenkt, erscheint ihm ein Engel des Herrn im Traum: Fürchte dich nicht, Maria zu dir zu nehmen, denn was in ihr gezeugt ist, ist vom heiligen Geist; sie wird einen Sohn gebären, dem du den Namen Jesus geben sollst, denn er wird sein Volk von ihren Sünden retten.",
+            "stage": {
+              "pose": {
+                "FIG-JOSEF-NAZARET": "sleep"
+              },
+              "at": {
+                "FIG-ZEICHEN-SCHLAFEN": "FIG-JOSEF-NAZARET"
+              },
+              "mood": {
+                "FIG-ROLLE-ENGEL": "calm",
+                "FIG-JOSEF-NAZARET": "sleep"
+              },
+              "x": {
+                "FIG-ROLLE-ENGEL": 50,
+                "FIG-JOSEF-NAZARET": 130
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.1.22-MAT.1.23",
+            "figures": [
+              "FIG-ROLLE-PROPHET"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHRIFTROLLE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-PROPHET",
+                "to": "FIG-ROLLE-PROPHET",
+                "icons": [
+                  "FIG-ROLLE-JUNGE-FRAU",
+                  "FIG-ZEICHEN-GEBURT",
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-MENSCHEN"
+                ]
+              }
+            ],
+            "action_de": "Das alles ist geschehen, damit sich erfüllt, was der Herr durch den Propheten gesagt hat: Die Jungfrau wird einen Sohn gebären, und man wird ihm den Namen Immanuel geben – Gott mit uns.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-PROPHET": "FIG-OBJ-SCHRIFTROLLE"
+              },
+              "mood": {
+                "FIG-ROLLE-PROPHET": "calm"
+              },
+              "x": {
+                "FIG-ROLLE-PROPHET": 93
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.1.24-MAT.1.25",
+            "figures": [
+              "FIG-JOSEF-NAZARET",
+              "FIG-MARIA-MUTTER-JESU"
+            ],
+            "objects": [
+              "FIG-JESUS-KIND"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JOSEF-NAZARET",
+                "to": "FIG-MARIA-MUTTER-JESU",
+                "icons": [
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Josef erwacht, tut, wie ihm der Engel befohlen hat, und nimmt Maria zu sich; als sie einen Sohn geboren hat, gibt er ihm den Namen Jesus.",
+            "stage": {
+              "hold": {
+                "FIG-MARIA-MUTTER-JESU": "FIG-JESUS-KIND"
+              },
+              "mood": {
+                "FIG-JOSEF-NAZARET": "smile",
+                "FIG-MARIA-MUTTER-JESU": "smile"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Maria ist mit Josef verlobt; noch bevor sie zusammenkommen, zeigt sich, dass sie schwanger ist – vom heiligen Geist. Josef, der gerecht ist und sie nicht blossstellen will, beschliesst, sich heimlich von ihr zu trennen.",
+          "Während Josef darüber nachdenkt, erscheint ihm ein Engel des Herrn im Traum: Fürchte dich nicht, Maria zu dir zu nehmen, denn was in ihr gezeugt ist, ist vom heiligen Geist; sie wird einen Sohn gebären, dem du den Namen Jesus geben sollst, denn er wird sein Volk von ihren Sünden retten.",
+          "Das alles ist geschehen, damit sich erfüllt, was der Herr durch den Propheten gesagt hat: Die Jungfrau wird einen Sohn gebären, und man wird ihm den Namen Immanuel geben – Gott mit uns.",
+          "Josef erwacht, tut, wie ihm der Engel befohlen hat, und nimmt Maria zu sich; als sie einen Sohn geboren hat, gibt er ihm den Namen Jesus."
+        ],
+        "captions_de": [
+          "Vom Geist schwanger → Josef will sich trennen: Der Geist (Taube) wirkt an Maria (goldener Bogen von der Taube zu Maria); darum überlegt Josef, sich heimlich von ihr zu trennen (Denkblase: Bruch mit zwei Pfeilen).",
+          "Im Traum: In der Nacht (dunkler Himmel, Mond) schläft Josef; ein Engel (Flügel) sagt ihm: Maria – vom Geist (Taube); sie bekommt einen Sohn (Säugling), Jesus, der von den Sünden rettet (helles Tuch, der Fleck nur noch gestrichelt, Funken).",
+          "Prophetenwort: Der Prophet (Schriftrolle) sagt: Die Jungfrau (junge Frau, gelbes Kopftuch) bekommt einen Sohn (Säugling); sein Name heisst: Gott mit uns (Strahlenkranz, Menschen).",
+          "Der Name: Josef hat Maria zu sich genommen; sie hält ihren Sohn (Kind mit Kreuznimbus), und Josef gibt ihm den Namen Jesus (Sprechblase mit Jesus)."
+        ],
+        "interpretation_note_de": "Die Schwangerschaft ist nicht gezeichnet; der goldene Bogen von der Taube zu Maria steht für «vom heiligen Geist» ([[MAT.1.18]]). Das Retten von den Sünden ([[MAT.1.21]]) zeigt das Zeichen Vergebung. Der Engel erscheint im Traum; das Bild zeigt ihn neben dem schlafenden Josef. Das Prophetenwort stammt aus [[ISA.7.14]]; «Gott mit uns» ist als Strahlenkranz und Menschen gezeichnet.",
+        "basis": [
+          {
+            "record": "TU-MAT-001-018-025",
+            "field": "summary",
+            "fingerprint": "ab49eab6a6ca144b"
+          },
+          {
+            "record": "TRANS-MAT-001-001-025-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.1.18-MAT.1.19",
+            "fingerprint": "060315d4846ff1e0"
+          },
+          {
+            "record": "TRANS-MAT-001-001-025-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.1.20-MAT.1.21",
+            "fingerprint": "7b2725b5db2ccc86"
+          },
+          {
+            "record": "TRANS-MAT-001-001-025-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.1.22-MAT.1.23",
+            "fingerprint": "d0da2c22291ea89b"
+          },
+          {
+            "record": "TRANS-MAT-001-001-025-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.1.24-MAT.1.25",
+            "fingerprint": "3c49d7bbda3deacb"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.1.18-MAT.1.19",
+            "figures": [
+              "FIG-HEILIGER-GEIST",
+              "FIG-MARIA-MUTTER-JESU",
+              "FIG-JOSEF-NAZARET"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JOSEF-NAZARET",
+                "to": "FIG-JOSEF-NAZARET",
+                "icons": [
+                  "FIG-ZEICHEN-TRENNEN"
+                ],
+                "think": true,
+                "word": {
+                  "de": "Ich trenne mich heimlich.",
+                  "gsw": "Ich trenn mich heimlich."
+                }
+              }
+            ],
+            "action_de": "Maria ist mit Josef verlobt und, noch bevor sie zusammenkommen, vom heiligen Geist schwanger; Josef, der gerecht ist, beschliesst, sich heimlich von ihr zu trennen.",
+            "keywords": {
+              "de": "vom heiligen Geist",
+              "gsw": "vom heilige Geischt"
+            },
+            "names": {
+              "FIG-MARIA-MUTTER-JESU": {
+                "de": "Maria",
+                "gsw": "Maria"
+              },
+              "FIG-JOSEF-NAZARET": {
+                "de": "Josef",
+                "gsw": "Josef"
+              }
+            },
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-HEILIGER-GEIST",
+                  "FIG-MARIA-MUTTER-JESU",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-MARIA-MUTTER-JESU": "calm",
+                "FIG-JOSEF-NAZARET": "worried"
+              },
+              "x": {
+                "FIG-MARIA-MUTTER-JESU": 46,
+                "FIG-JOSEF-NAZARET": 124
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.1.20-MAT.1.23",
+            "figures": [
+              "FIG-ROLLE-ENGEL",
+              "FIG-JOSEF-NAZARET"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-NACHT",
+              "FIG-ZEICHEN-SCHLAFEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-ENGEL",
+                "to": "FIG-JOSEF-NAZARET",
+                "icons": [
+                  "FIG-ZEICHEN-FURCHT",
+                  "FIG-ZEICHEN-NICHT"
+                ],
+                "word": {
+                  "de": "Fürchte dich nicht!",
+                  "gsw": "Heb kei Angscht!"
+                }
+              },
+              {
+                "from": "FIG-ROLLE-ENGEL",
+                "to": "FIG-JOSEF-NAZARET",
+                "icons": [
+                  "FIG-JESUS-KIND"
+                ],
+                "word": {
+                  "de": "Gib ihm den Namen Jesus!",
+                  "gsw": "Gib em de Name Jesus!"
+                }
+              }
+            ],
+            "action_de": "Ein Engel des Herrn sagt Josef im Traum: Fürchte dich nicht, Maria zu dir zu nehmen, denn das Kind ist vom heiligen Geist; gib ihm den Namen Jesus, denn er wird sein Volk von ihren Sünden retten. So erfüllt sich das Wort vom Immanuel: Gott mit uns.",
+            "keywords": {
+              "de": "Gott mit uns",
+              "gsw": "Gott mit üs"
+            },
+            "stage": {
+              "pose": {
+                "FIG-JOSEF-NAZARET": "sleep"
+              },
+              "at": {
+                "FIG-ZEICHEN-SCHLAFEN": "FIG-JOSEF-NAZARET"
+              },
+              "mood": {
+                "FIG-ROLLE-ENGEL": "calm",
+                "FIG-JOSEF-NAZARET": "sleep"
+              },
+              "x": {
+                "FIG-ROLLE-ENGEL": 50,
+                "FIG-JOSEF-NAZARET": 130
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.1.24-MAT.1.25",
+            "figures": [
+              "FIG-JOSEF-NAZARET",
+              "FIG-MARIA-MUTTER-JESU"
+            ],
+            "objects": [
+              "FIG-JESUS-KIND"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JOSEF-NAZARET",
+                "to": "FIG-MARIA-MUTTER-JESU",
+                "icons": [],
+                "word": {
+                  "de": "Sein Name ist Jesus.",
+                  "gsw": "Sin Name isch Jesus."
+                }
+              }
+            ],
+            "action_de": "Josef erwacht, tut, wie ihm der Engel des Herrn befohlen hat, nimmt Maria zu sich und gibt dem Sohn, den sie gebiert, den Namen Jesus.",
+            "keywords": {
+              "de": "er gab ihm den Namen Jesus",
+              "gsw": "er hät ihm de Name Jesus gää"
+            },
+            "stage": {
+              "hold": {
+                "FIG-MARIA-MUTTER-JESU": "FIG-JESUS-KIND"
+              },
+              "mood": {
+                "FIG-JOSEF-NAZARET": "smile",
+                "FIG-MARIA-MUTTER-JESU": "smile"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Schwanger vom heiligen Geist: über Maria (blauer Schleier) die Geist-Taube (weiss, goldener Schein, Pfeil zu ihr); Josef (Hammer und Brett) denkt besorgt: «Ich trenne mich heimlich» (Gedankenwolke, Bruch mit zwei Pfeilen).",
+          "Im Traum: Der Engel (weisses Gewand, Flügel) spricht zum schlafenden Josef (Zzz, Mondsichel): «Fürchte dich nicht!» (erschrockenes Gesicht im Verbotsring) und «Gib ihm den Namen Jesus!» (Säugling mit Kreuznimbus).",
+          "Der Name Jesus: Josef steht bei Maria, die das Kind (Säugling mit Kreuznimbus) hält, und sagt: «Sein Name ist Jesus.»"
         ]
       }
     }

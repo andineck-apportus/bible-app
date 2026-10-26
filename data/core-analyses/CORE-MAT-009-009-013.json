@@ -1,0 +1,156 @@
+{
+ "id": "CORE-MAT-009-009-013",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.9.9-MAT.9.13",
+ "target": "TU-MAT-009-009-013",
+ "core_de": "Jesus ruft Matthäus von der Zollstelle – «Folge mir!» –, und er folgt ihm; beim Mahl liegen viele Zöllner und Sünder mit Jesus zu Tisch; den Pharisäern, die fragen, warum er mit ihnen isst, antwortet er: Nicht die Gesunden brauchen einen Arzt, sondern die Kranken; «Barmherzigkeit will ich und nicht Opfer»; er ist nicht gekommen, Gerechte zu rufen, sondern Sünder.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Berufung – Mahl – Anstoss – Antwort",
+    "range": "MAT.9.9-MAT.9.13",
+    "elements": [
+     {
+      "label": "Jesus ruft Matthäus von der Zollstelle; er folgt",
+      "ref": "MAT.9.9",
+      "role": "Berufung"
+     },
+     {
+      "label": "Mahl mit vielen Zöllnern und Sündern",
+      "ref": "MAT.9.10",
+      "role": "Mahl"
+     },
+     {
+      "label": "Pharisäer: «Warum isst euer Lehrer mit den Zöllnern und Sündern?»",
+      "ref": "MAT.9.11",
+      "role": "Anstoss"
+     },
+     {
+      "label": "Antwort Jesu",
+      "ref": "MAT.9.12-MAT.9.13",
+      "role": "Antwort",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "text_forms": [
+      {
+       "ref": "MAT.9.13",
+       "note": "Lesart «sondern Sünder zur Umkehr»."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "dreimal «nicht … sondern»",
+    "range": "MAT.9.12-MAT.9.13",
+    "elements": [
+     {
+      "label": "Nicht die Gesunden brauchen einen Arzt ↔ sondern die Kranken",
+      "ref": "MAT.9.12",
+      "role": "Paar 1"
+     },
+     {
+      "label": "Barmherzigkeit will ich ↔ und nicht Opfer",
+      "ref": "MAT.9.13",
+      "role": "Paar 2"
+     },
+     {
+      "label": "Ich bin nicht gekommen, Gerechte zu rufen ↔ sondern Sünder",
+      "ref": "MAT.9.13",
+      "role": "Paar 3"
+     }
+    ],
+    "features": {
+     "crossref": [
+      {
+       "ref": "HOS.6.6",
+       "kind": "Zitat"
+      }
+     ],
+     "pattern_break": [
+      {
+       "ref": "MAT.9.13",
+       "note": "Im Zitat steht das Bejahte zuerst («Barmherzigkeit will ich und nicht Opfer»)."
+      }
+     ]
+    },
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.9.9",
+   "text_de": "Jesus sieht Matthäus an der Zollstelle sitzen und sagt: «Folge mir!»; er steht auf und folgt ihm.",
+   "reason_de": "Berufung (Kriterium 4).",
+   "recognition_de": "Matthäus steht vom Zolltisch auf.",
+   "keywords": [
+    "Folge mir!",
+    "er stand auf und folgte ihm"
+   ]
+  },
+  {
+   "reference": "MAT.9.10-MAT.9.11",
+   "text_de": "Im Haus liegen viele Zöllner und Sünder mit Jesus und seinen Jüngern zu Tisch; die Pharisäer fragen die Jünger: «Warum isst euer Lehrer mit den Zöllnern und Sündern?»",
+   "reason_de": "Anstoss (Kriterium 2).",
+   "recognition_de": "Mahl mit Zöllnern; Pharisäer fragen.",
+   "keywords": [
+    "viele Zöllner und Sünder",
+    "Warum isst euer Lehrer mit den Zöllnern und Sündern?"
+   ]
+  },
+  {
+   "reference": "MAT.9.12-MAT.9.13",
+   "text_de": "Jesus antwortet: «Nicht die Gesunden brauchen einen Arzt, sondern die Kranken»; sie sollen lernen, was es heisst: «Barmherzigkeit will ich und nicht Opfer»; denn er ist nicht gekommen, Gerechte zu rufen, sondern Sünder.",
+   "reason_de": "Antwort in drei «nicht … sondern» (Kriterien 1 und 2).",
+   "recognition_de": "Spalten «nicht» ↔ «sondern»: Gesunde ↔ Kranke, Opfer ↔ Barmherzigkeit, Gerechte ↔ Sünder.",
+   "keywords": [
+    "Nicht die Gesunden brauchen einen Arzt, sondern die Kranken",
+    "Barmherzigkeit will ich und nicht Opfer",
+    "nicht gekommen, Gerechte zu rufen, sondern Sünder"
+   ],
+   "mode": "speech"
+  }
+ ],
+ "omitted_de": [
+  "Wessen Haus es ist – nicht gesagt"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-MATTHAEUS",
+  "FIG-GRUPPE-ZOELLNER",
+  "FIG-GRUPPE-PHARISAEER",
+  "FIG-GRUPPE-JUENGER"
+ ],
+ "places": [
+  "FIG-ORT-HAUS"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.9.9-MAT.9.13",
+   "fingerprint": "3df7186002e844bf"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

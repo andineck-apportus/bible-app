@@ -1,0 +1,187 @@
+{
+ "id": "CORE-MAT-002-019-023",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.2.19-MAT.2.23",
+ "target": "TU-MAT-002-019-023",
+ "core_de": "Nach dem Tod des Herodes befiehlt ein Engel Josef im Traum, mit dem Kind und seiner Mutter ins Land Israel zu ziehen; weil Archelaus in Judäa herrscht, fürchtet sich Josef, zieht auf eine Weisung im Traum nach Galiläa und lässt sich in Nazaret nieder – damit erfüllt würde: Er wird Nazoräer genannt werden.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Weisung – Rückkehr – Furcht – Weisung – Nazaret",
+    "range": "MAT.2.19-MAT.2.23",
+    "elements": [
+     {
+      "label": "Nach dem Tod des Herodes: Weisung im Traum, ins Land Israel zu ziehen",
+      "ref": "MAT.2.19-MAT.2.20",
+      "role": "Weisung 1",
+      "child": "s2"
+     },
+     {
+      "label": "Josef kommt in das Land Israel",
+      "ref": "MAT.2.21",
+      "role": "Ausführung"
+     },
+     {
+      "label": "Archelaus herrscht in Judäa: Josef fürchtet sich; Weisung im Traum",
+      "ref": "MAT.2.22",
+      "role": "Hindernis und Weisung 2"
+     },
+     {
+      "label": "Weg nach Galiläa, Niederlassung in Nazaret",
+      "ref": "MAT.2.22-MAT.2.23",
+      "role": "Ziel",
+      "child": "s3"
+     },
+     {
+      "label": "Erfüllung: Er wird Nazoräer genannt werden",
+      "ref": "MAT.2.23",
+      "role": "Deutung durch den Erzähler",
+      "child": "s4"
+     }
+    ],
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "parallel",
+    "subtype": "Anweisung ↔ Ausführung (wie [[MAT.2.13-MAT.2.14]])",
+    "range": "MAT.2.20-MAT.2.21",
+    "elements": [
+     {
+      "label": "«Steh auf, nimm das Kind und seine Mutter zu dir» ↔ Er aber stand auf, nahm das Kind und seine Mutter zu sich",
+      "ref": "MAT.2.20-MAT.2.21",
+      "role": "Zeile 1"
+     },
+     {
+      "label": "«zieh in das Land Israel» ↔ und kam in das Land Israel",
+      "ref": "MAT.2.20-MAT.2.21",
+      "role": "Zeile 2"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "route",
+    "subtype": "Weg der Familie",
+    "range": "MAT.2.19-MAT.2.23",
+    "elements": [
+     {
+      "label": "Ägypten",
+      "ref": "MAT.2.19",
+      "role": "Ausgang"
+     },
+     {
+      "label": "Land Israel",
+      "ref": "MAT.2.21",
+      "role": "Station"
+     },
+     {
+      "label": "nicht nach Judäa (Archelaus)",
+      "ref": "MAT.2.22",
+      "role": "Weiche"
+     },
+     {
+      "label": "Gegend von Galiläa",
+      "ref": "MAT.2.22",
+      "role": "Station"
+     },
+     {
+      "label": "Nazaret",
+      "ref": "MAT.2.23",
+      "role": "Ziel"
+     }
+    ],
+    "visual": "map",
+    "basis": "text"
+   },
+   {
+    "id": "s4",
+    "pattern": "fulfilment",
+    "subtype": "Erfüllungswort",
+    "range": "MAT.2.23",
+    "elements": [
+     {
+      "label": "damit erfüllt würde, was durch die Propheten gesagt ist",
+      "ref": "MAT.2.23",
+      "role": "Erfüllungsvermerk"
+     },
+     {
+      "label": "Er wird Nazoräer genannt werden",
+      "ref": "MAT.2.23",
+      "role": "Wort"
+     }
+    ],
+    "features": {
+     "interpretation": [
+      {
+       "ref": "MAT.2.23",
+       "note": "Welches Prophetenwort gemeint ist, sagt der Text nicht («durch die Propheten»); Bezüge auf [[ISA.11.1]] (Spross, hebräisch nezer) oder [[JDG.13.5]] (Nasiräer) sind Deutungen."
+      }
+     ]
+    },
+    "visual": "levels",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.2.19-MAT.2.21",
+   "text_de": "Als Herodes gestorben ist, sagt ein Engel des Herrn Josef in Ägypten im Traum: «Steh auf, nimm das Kind und seine Mutter zu dir und zieh in das Land Israel», denn gestorben sind die, die dem Kind nach dem Leben trachteten; Josef steht auf und kommt in das Land Israel.",
+   "reason_de": "Weisung und Ausführung, Gegenstück zu [[MAT.2.13-MAT.2.14]] (Kriterien 2 und 3).",
+   "recognition_de": "Der Engel bei Josef in Ägypten; Rückkehr ins Land Israel.",
+   "keywords": [
+    "zieh in das Land Israel",
+    "gestorben sind die, die dem Kind nach dem Leben trachteten"
+   ]
+  },
+  {
+   "reference": "MAT.2.22-MAT.2.23",
+   "text_de": "Weil Archelaus anstelle seines Vaters Herodes über Judäa herrscht, fürchtet sich Josef, dorthin zu gehen; auf eine Weisung im Traum zieht er nach Galiläa und lässt sich in einer Stadt nieder, die Nazaret heisst, damit erfüllt würde, was durch die Propheten gesagt ist: Er wird Nazoräer genannt werden.",
+   "reason_de": "Ausgang und Ziel des Weges, Name Nazoräer (Kriterien 3 und 4).",
+   "recognition_de": "Josef mit Maria und dem Kind vor Nazaret.",
+   "keywords": [
+    "fürchtete er sich",
+    "Nazaret",
+    "Er wird Nazoräer genannt werden"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Archelaus' Herrschaft im Einzelnen – Hintergrund"
+ ],
+ "persons": [
+  "FIG-ROLLE-ENGEL",
+  "FIG-JOSEF-NAZARET",
+  "FIG-MARIA-MUTTER-JESU",
+  "FIG-JESUS-KIND"
+ ],
+ "places": [
+  "FIG-ORT-AEGYPTEN"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.2.19-MAT.2.23",
+   "fingerprint": "aed9fe2c23034f30"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

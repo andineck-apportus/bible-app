@@ -1,0 +1,119 @@
+{
+ "id": "CORE-MAT-008-014-017",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.8.14-MAT.8.17",
+ "target": "TU-MAT-008-014-017",
+ "core_de": "Im Haus des Petrus berührt Jesus die Hand der fiebernden Schwiegermutter, das Fieber verlässt sie, und sie steht auf und dient ihm; am Abend bringt man viele Besessene, er treibt die Geister mit einem Wort aus und heilt alle Kranken – damit erfüllt würde, was Jesaja sagt: «Er selbst hat unsere Schwächen genommen und die Krankheiten getragen.»",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "eine Heilung – viele Heilungen – Erfüllung",
+    "range": "MAT.8.14-MAT.8.17",
+    "elements": [
+     {
+      "label": "Die Schwiegermutter des Petrus: Berührung → Fieber weicht → sie steht auf und dient ihm",
+      "ref": "MAT.8.14-MAT.8.15",
+      "role": "eine"
+     },
+     {
+      "label": "Am Abend viele Besessene: mit einem Wort ausgetrieben, alle Kranken geheilt",
+      "ref": "MAT.8.16",
+      "role": "viele"
+     },
+     {
+      "label": "Erfüllungszitat",
+      "ref": "MAT.8.17",
+      "role": "Deutung durch den Erzähler",
+      "child": "s2"
+     }
+    ],
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "fulfilment",
+    "subtype": "Erfüllungszitat",
+    "range": "MAT.8.17",
+    "elements": [
+     {
+      "label": "damit erfüllt würde, was durch den Propheten Jesaja gesagt ist",
+      "ref": "MAT.8.17",
+      "role": "Erfüllungsvermerk"
+     },
+     {
+      "label": "Er selbst hat unsere Schwächen genommen und die Krankheiten getragen",
+      "ref": "MAT.8.17",
+      "role": "Zitat"
+     }
+    ],
+    "features": {
+     "crossref": [
+      {
+       "ref": "ISA.53.4",
+       "kind": "Zitat"
+      }
+     ]
+    },
+    "visual": "levels",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.8.14-MAT.8.15",
+   "text_de": "Im Haus des Petrus sieht Jesus dessen Schwiegermutter mit Fieber liegen; er berührt ihre Hand, das Fieber verlässt sie, und sie steht auf und dient ihm.",
+   "reason_de": "Einzelne Heilung mit Erkennungsmoment (Kriterium 4).",
+   "recognition_de": "Jesus nimmt die Hand der liegenden Frau; sie steht auf und dient.",
+   "keywords": [
+    "berührte ihre Hand",
+    "sie stand auf und diente ihm"
+   ]
+  },
+  {
+   "reference": "MAT.8.16-MAT.8.17",
+   "text_de": "Am Abend bringt man viele Besessene; er treibt die Geister mit einem Wort aus und heilt alle Kranken, damit erfüllt würde, was Jesaja sagt: «Er selbst hat unsere Schwächen genommen und die Krankheiten getragen.»",
+   "reason_de": "Ausweitung auf viele und Deutung durch das Prophetenwort (Kriterien 1 und 2).",
+   "recognition_de": "Abend: viele Kranke vor dem Haus, Jesus treibt Geister aus.",
+   "keywords": [
+    "trieb die Geister mit einem Wort aus",
+    "Er selbst hat unsere Schwächen genommen und die Krankheiten getragen"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Lage des Hauses in Kafarnaum – Hintergrund"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-SCHWIEGERMUTTER-PETRUS",
+  "FIG-ROLLE-BESESSENER",
+  "FIG-GRUPPE-KRANKE"
+ ],
+ "places": [
+  "FIG-ORT-HAUS"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.8.14-MAT.8.17",
+   "fingerprint": "e6aa645d50670865"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

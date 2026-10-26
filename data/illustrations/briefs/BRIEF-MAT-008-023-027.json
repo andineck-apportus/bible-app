@@ -11,7 +11,7 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.8.23-MAT.8.24",
+      "reference": "MAT.8.23-MAT.8.25",
       "figures": [
         "FIG-GRUPPE-JUENGER",
         "FIG-JESUS"
@@ -22,11 +22,26 @@
       ],
       "signs": [
         "FIG-ZEICHEN-STURM",
-        "FIG-ZEICHEN-WIND",
         "FIG-ZEICHEN-FURCHT"
       ],
-      "speech": [],
-      "action_de": "Jesus steigt in ein Boot, seine Jünger folgen ihm. Auf dem See entsteht ein grosses Beben, sodass die Wellen das Boot bedecken; er aber schläft.",
+      "speech": [
+        {
+          "from": "FIG-GRUPPE-JUENGER",
+          "to": "FIG-JESUS",
+          "icons": [
+            "FIG-ZEICHEN-RETTUNG"
+          ],
+          "word": {
+            "de": "Herr, rette! Wir gehen zugrunde!",
+            "gsw": "Herr, rett! Mir gönd under!"
+          }
+        }
+      ],
+      "action_de": "Jesus steigt ins Boot, die Jünger folgen ihm; ein grosses Beben entsteht auf dem See, die Wellen bedecken das Boot, er aber schläft; sie wecken ihn: Herr, rette! Wir gehen zugrunde!",
+      "keywords": {
+        "de": "ein grosses Beben auf dem See",
+        "gsw": "es grosses Bebe uf em See"
+      },
       "stage": {
         "in": {
           "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT",
@@ -46,9 +61,9 @@
           "FIG-JESUS": "sleep"
         },
         "mood": {
-          "FIG-GRUPPE-JUENGER": "worried"
+          "FIG-GRUPPE-JUENGER": "fear"
         },
-        "air_x": 70,
+        "air_x": 150,
         "air_y": 6,
         "at": {
           "FIG-ZEICHEN-FURCHT": "FIG-GRUPPE-JUENGER"
@@ -58,116 +73,7 @@
     },
     {
       "n": 2,
-      "reference": "MAT.8.25",
-      "figures": [
-        "FIG-GRUPPE-JUENGER",
-        "FIG-JESUS"
-      ],
-      "objects": [
-        "FIG-OBJ-BOOT",
-        "FIG-ORT-MEER-OFFEN"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-STURM"
-      ],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-JUENGER",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-ZEICHEN-RETTUNG",
-            "FIG-ZEICHEN-TOD"
-          ]
-        }
-      ],
-      "action_de": "Die Jünger wecken ihn: Herr, rette! Wir gehen zugrunde!",
-      "stage": {
-        "in": {
-          "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT",
-          "FIG-JESUS": "FIG-OBJ-BOOT"
-        },
-        "in_pos": {
-          "FIG-GRUPPE-JUENGER": [
-            0.24,
-            0.4
-          ],
-          "FIG-JESUS": [
-            0.8,
-            0.55
-          ]
-        },
-        "pose": {
-          "FIG-JESUS": "sleep"
-        },
-        "mood": {
-          "FIG-GRUPPE-JUENGER": "worried"
-        },
-        "arrows": [
-          [
-            "FIG-GRUPPE-JUENGER",
-            "FIG-JESUS",
-            "act"
-          ]
-        ],
-        "air_x": 128,
-        "air_y": 44
-      }
-    },
-    {
-      "n": 3,
       "reference": "MAT.8.26",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-JUENGER"
-      ],
-      "objects": [
-        "FIG-OBJ-BOOT",
-        "FIG-ORT-MEER-OFFEN"
-      ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-ZEICHEN-FURCHT",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-ZEICHEN-GLAUBEN",
-            "FIG-ZEICHEN-ABNEHMEN"
-          ]
-        }
-      ],
-      "action_de": "Jesus fragt sie, warum sie so furchtsam seien, und nennt sie Kleingläubige.",
-      "stage": {
-        "in": {
-          "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT",
-          "FIG-JESUS": "FIG-OBJ-BOOT"
-        },
-        "in_pos": {
-          "FIG-JESUS": [
-            0.62,
-            0.42
-          ],
-          "FIG-GRUPPE-JUENGER": [
-            0.28,
-            0.42
-          ]
-        },
-        "mood": {
-          "FIG-JESUS": "calm",
-          "FIG-GRUPPE-JUENGER": "worried"
-        }
-      }
-    },
-    {
-      "n": 4,
-      "reference": "MAT.8.26-MAT.8.27",
       "figures": [
         "FIG-JESUS",
         "FIG-GRUPPE-JUENGER"
@@ -180,22 +86,74 @@
       "speech": [
         {
           "from": "FIG-JESUS",
-          "to": "FIG-ORT-SEE",
+          "to": "FIG-GRUPPE-JUENGER",
           "icons": [
-            "FIG-ZEICHEN-WIND",
-            "FIG-ZEICHEN-SCHWEIGEN"
+            "FIG-ZEICHEN-FURCHT",
+            "FIG-ZEICHEN-FRAGEN"
+          ],
+          "word": {
+            "de": "Warum seid ihr so furchtsam?",
+            "gsw": "Werum sind er so ängschtlich?"
+          }
+        }
+      ],
+      "action_de": "Jesus sagt: Warum seid ihr so furchtsam, ihr Kleingläubigen? Er steht auf und fährt die Winde und den See an, und es wird eine grosse Stille.",
+      "keywords": {
+        "de": "es wurde eine grosse Stille",
+        "gsw": "es isch ganz still worde"
+      },
+      "stage": {
+        "in": {
+          "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT",
+          "FIG-JESUS": "FIG-OBJ-BOOT"
+        },
+        "in_pos": {
+          "FIG-JESUS": [
+            0.3,
+            0.42
+          ],
+          "FIG-GRUPPE-JUENGER": [
+            0.7,
+            0.42
           ]
         },
+        "sea": "calm",
+        "mood": {
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-JUENGER": "worried"
+        }
+      }
+    },
+    {
+      "n": 3,
+      "reference": "MAT.8.27",
+      "figures": [
+        "FIG-JESUS",
+        "FIG-GRUPPE-JUENGER"
+      ],
+      "objects": [
+        "FIG-OBJ-BOOT",
+        "FIG-ORT-SEE"
+      ],
+      "signs": [],
+      "speech": [
         {
           "from": "FIG-GRUPPE-JUENGER",
           "to": "FIG-GRUPPE-JUENGER",
           "icons": [
-            "FIG-JESUS",
             "FIG-ZEICHEN-FRAGEN"
-          ]
+          ],
+          "word": {
+            "de": "Was für einer ist dieser?",
+            "gsw": "Was isch dä für eine?"
+          }
         }
       ],
-      "action_de": "Dann steht er auf, fährt die Winde und den See an, und es wird eine grosse Stille. Die Menschen staunen: Was für einer ist dieser, dass ihm sogar die Winde und der See gehorchen?",
+      "action_de": "Jesus fährt die Winde und den See an, und es wird eine grosse Stille; die Menschen staunen: Was für einer ist dieser, dass ihm sogar die Winde und der See gehorchen?",
+      "keywords": {
+        "de": "sogar die Winde und der See gehorchen",
+        "gsw": "sogar d Wind und de See folged"
+      },
       "stage": {
         "in": {
           "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT",
@@ -220,35 +178,27 @@
     }
   ],
   "actions_de": [
-    "Jesus steigt in ein Boot, seine Jünger folgen ihm. Auf dem See entsteht ein grosses Beben, sodass die Wellen das Boot bedecken; er aber schläft.",
-    "Die Jünger wecken ihn: Herr, rette! Wir gehen zugrunde!",
-    "Jesus fragt sie, warum sie so furchtsam seien, und nennt sie Kleingläubige.",
-    "Dann steht er auf, fährt die Winde und den See an, und es wird eine grosse Stille. Die Menschen staunen: Was für einer ist dieser, dass ihm sogar die Winde und der See gehorchen?"
+    "Jesus steigt ins Boot, die Jünger folgen ihm; ein grosses Beben entsteht auf dem See, die Wellen bedecken das Boot, er aber schläft; sie wecken ihn: Herr, rette! Wir gehen zugrunde!",
+    "Jesus sagt: Warum seid ihr so furchtsam, ihr Kleingläubigen? Er steht auf und fährt die Winde und den See an, und es wird eine grosse Stille.",
+    "Jesus fährt die Winde und den See an, und es wird eine grosse Stille; die Menschen staunen: Was für einer ist dieser, dass ihm sogar die Winde und der See gehorchen?"
   ],
   "captions_de": [
-    "Sturm: Auf dem See kommt ein Sturm (dunkle Wolke mit Blitz, blasendes Wolkengesicht, hohe Wellen); die Jünger fürchten sich (erschrockenes Gesicht), Jesus schläft im Boot.",
-    "Geweckt: Die Jünger wecken Jesus (Bogen zu ihm): Rette! (Pfeil nach oben aus den Wellen) – wir sterben (Totenkopf); noch tobt der Sturm (dunkle Wolke, hohe Wellen).",
-    "Kleingläubig: Noch auf den hohen Wellen fragt Jesus: Warum habt ihr Angst? (erschrockenes Gesicht, Fragezeichen) – so kleiner Glaube (Herz mit Lichtstrahl, Stufen nach unten).",
-    "Jesu Wort → Stille → Staunen: Jesus gebietet Wind und See (blasendes Wolkengesicht, Gesicht mit Finger vor dem Mund), der See wird still; die Jünger staunen: Wer ist er? (Jesus, Fragezeichen)."
+    "Sturm: Das Boot in hohen Wellen, Wolke mit Blitz; Jesus schläft (Zzz); die Jünger rufen voller Angst (erschrockenes Gesicht): «Herr, rette!» (Pfeil aus den Wellen).",
+    "Stille: Jesus steht im Boot und fragt die Jünger: «Warum seid ihr so furchtsam?» (erschrockenes Gesicht, Fragezeichen); der See wird ruhig.",
+    "Stille: Im Boot auf dem ruhigen See steht Jesus; die Jünger staunen und fragen: «Was für einer ist dieser?» (Fragezeichen)."
   ],
-  "interpretation_note_de": "Matthäus erzählt die Frage nach dem Kleinglauben vor der Stillung (anders als [[MRK.4.39-MRK.4.40]]); Feld 3 zeigt sie deshalb noch im Sturm. «Die Menschen», die staunen ([[MAT.8.27]]), sind im Bild die Jünger im Boot (Deutung).",
+  "interpretation_note_de": "Drei Felder nach «Not – Wort – Frage» ([[MAT.8.23-MAT.8.27]]). Bei Matthäus spricht Jesus zuerst zu den Jüngern, dann zu Winden und See; das Bild folgt dieser Reihenfolge (nicht [[MRK.4.35-MRK.4.41]]). Furcht zeigt das Zeichen «sich fürchten». Die Schlussfrage bleibt offen; das Bild beantwortet sie nicht.",
   "basis": [
     {
       "record": "TU-MAT-008-023-027",
       "field": "summary",
-      "fingerprint": "8ae75bf41aab6d1c"
+      "fingerprint": "bea766b9c363e6f8"
     },
     {
       "record": "TRANS-MAT-008-001-034-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.8.23-MAT.8.24",
-      "fingerprint": "fcb387fd2ac2ae56"
-    },
-    {
-      "record": "TRANS-MAT-008-001-034-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.8.25",
-      "fingerprint": "af5281f49249b3a1"
+      "reference": "MAT.8.23-MAT.8.25",
+      "fingerprint": "1f2e4f23d222aae5"
     },
     {
       "record": "TRANS-MAT-008-001-034-DE-WORKING",
@@ -259,12 +209,12 @@
     {
       "record": "TRANS-MAT-008-001-034-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.8.26-MAT.8.27",
-      "fingerprint": "418d114e074db16f"
+      "reference": "MAT.8.27",
+      "fingerprint": "7938232f5cbff507"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -731,6 +681,268 @@
           "Kleingläubig: Noch auf den hohen Wellen fragt Jesus: Warum habt ihr Angst? (blauer Schweisstropfen, Fragezeichen) – so kleiner Glaube (Herz mit Lichtstrahl, Stufen nach unten).",
           "Jesu Wort → Stille → Staunen: Jesus gebietet Wind und See (Windlinien, durchgestrichene Sprechblase), der See wird still; die Jünger staunen: Wer ist er? (Jesus, Fragezeichen)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.8.23-MAT.8.24",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-MEER-OFFEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-STURM",
+              "FIG-ZEICHEN-WIND",
+              "FIG-ZEICHEN-FURCHT"
+            ],
+            "speech": [],
+            "action_de": "Jesus steigt in ein Boot, seine Jünger folgen ihm. Auf dem See entsteht ein grosses Beben, sodass die Wellen das Boot bedecken; er aber schläft.",
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT",
+                "FIG-JESUS": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-JUENGER": [
+                  0.24,
+                  0.4
+                ],
+                "FIG-JESUS": [
+                  0.8,
+                  0.55
+                ]
+              },
+              "pose": {
+                "FIG-JESUS": "sleep"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "worried"
+              },
+              "air_x": 70,
+              "air_y": 6,
+              "at": {
+                "FIG-ZEICHEN-FURCHT": "FIG-GRUPPE-JUENGER"
+              },
+              "at_top": true
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.8.25",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-MEER-OFFEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-STURM"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-RETTUNG",
+                  "FIG-ZEICHEN-TOD"
+                ]
+              }
+            ],
+            "action_de": "Die Jünger wecken ihn: Herr, rette! Wir gehen zugrunde!",
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT",
+                "FIG-JESUS": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-JUENGER": [
+                  0.24,
+                  0.4
+                ],
+                "FIG-JESUS": [
+                  0.8,
+                  0.55
+                ]
+              },
+              "pose": {
+                "FIG-JESUS": "sleep"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "worried"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "air_x": 128,
+              "air_y": 44
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.8.26",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-MEER-OFFEN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-FURCHT",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-GLAUBEN",
+                  "FIG-ZEICHEN-ABNEHMEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus fragt sie, warum sie so furchtsam seien, und nennt sie Kleingläubige.",
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT",
+                "FIG-JESUS": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.62,
+                  0.42
+                ],
+                "FIG-GRUPPE-JUENGER": [
+                  0.28,
+                  0.42
+                ]
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "worried"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.8.26-MAT.8.27",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ORT-SEE",
+                "icons": [
+                  "FIG-ZEICHEN-WIND",
+                  "FIG-ZEICHEN-SCHWEIGEN"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Dann steht er auf, fährt die Winde und den See an, und es wird eine grosse Stille. Die Menschen staunen: Was für einer ist dieser, dass ihm sogar die Winde und der See gehorchen?",
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT",
+                "FIG-JESUS": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.3,
+                  0.42
+                ],
+                "FIG-GRUPPE-JUENGER": [
+                  0.7,
+                  0.42
+                ]
+              },
+              "sea": "calm",
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "surprised"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus steigt in ein Boot, seine Jünger folgen ihm. Auf dem See entsteht ein grosses Beben, sodass die Wellen das Boot bedecken; er aber schläft.",
+          "Die Jünger wecken ihn: Herr, rette! Wir gehen zugrunde!",
+          "Jesus fragt sie, warum sie so furchtsam seien, und nennt sie Kleingläubige.",
+          "Dann steht er auf, fährt die Winde und den See an, und es wird eine grosse Stille. Die Menschen staunen: Was für einer ist dieser, dass ihm sogar die Winde und der See gehorchen?"
+        ],
+        "captions_de": [
+          "Sturm: Auf dem See kommt ein Sturm (dunkle Wolke mit Blitz, blasendes Wolkengesicht, hohe Wellen); die Jünger fürchten sich (erschrockenes Gesicht), Jesus schläft im Boot.",
+          "Geweckt: Die Jünger wecken Jesus (Bogen zu ihm): Rette! (Pfeil nach oben aus den Wellen) – wir sterben (Totenkopf); noch tobt der Sturm (dunkle Wolke, hohe Wellen).",
+          "Kleingläubig: Noch auf den hohen Wellen fragt Jesus: Warum habt ihr Angst? (erschrockenes Gesicht, Fragezeichen) – so kleiner Glaube (Herz mit Lichtstrahl, Stufen nach unten).",
+          "Jesu Wort → Stille → Staunen: Jesus gebietet Wind und See (blasendes Wolkengesicht, Gesicht mit Finger vor dem Mund), der See wird still; die Jünger staunen: Wer ist er? (Jesus, Fragezeichen)."
+        ],
+        "interpretation_note_de": "Matthäus erzählt die Frage nach dem Kleinglauben vor der Stillung (anders als [[MRK.4.39-MRK.4.40]]); Feld 3 zeigt sie deshalb noch im Sturm. «Die Menschen», die staunen ([[MAT.8.27]]), sind im Bild die Jünger im Boot (Deutung).",
+        "basis": [
+          {
+            "record": "TU-MAT-008-023-027",
+            "field": "summary",
+            "fingerprint": "8ae75bf41aab6d1c"
+          },
+          {
+            "record": "TRANS-MAT-008-001-034-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.8.23-MAT.8.24",
+            "fingerprint": "fcb387fd2ac2ae56"
+          },
+          {
+            "record": "TRANS-MAT-008-001-034-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.8.25",
+            "fingerprint": "af5281f49249b3a1"
+          },
+          {
+            "record": "TRANS-MAT-008-001-034-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.8.26",
+            "fingerprint": "d33d7ffab16a6660"
+          },
+          {
+            "record": "TRANS-MAT-008-001-034-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.8.26-MAT.8.27",
+            "fingerprint": "418d114e074db16f"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

@@ -17,26 +17,16 @@
         "FIG-GRUPPE-ZWOELF"
       ],
       "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-ZEICHEN-VOLLMACHT",
-            "FIG-ZEICHEN-DAEMON",
-            "FIG-ZEICHEN-AUSTREIBEN"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-ZEICHEN-HEILEN"
-          ]
-        }
+      "signs": [
+        "FIG-ZEICHEN-VOLLMACHT",
+        "FIG-ZEICHEN-AUSTREIBEN"
       ],
-      "action_de": "Jesus gibt seinen zwölf Jüngern Vollmacht über unreine Geister und Krankheiten.",
+      "speech": [],
+      "action_de": "Jesus ruft seine zwölf Jünger zu sich und gibt ihnen Vollmacht über unreine Geister, um sie auszutreiben und jede Krankheit zu heilen.",
+      "keywords": {
+        "de": "Die Namen der zwölf Apostel",
+        "gsw": "D Näme vo de zwölf Apostel"
+      },
       "stage": {
         "arrows": [
           [
@@ -45,8 +35,13 @@
             "act"
           ]
         ],
+        "at": {
+          "FIG-ZEICHEN-VOLLMACHT": "FIG-GRUPPE-ZWOELF",
+          "FIG-ZEICHEN-AUSTREIBEN": "FIG-GRUPPE-ZWOELF"
+        },
         "mood": {
-          "FIG-GRUPPE-ZWOELF": "determined"
+          "FIG-GRUPPE-ZWOELF": "determined",
+          "FIG-JESUS": "calm"
         }
       }
     },
@@ -55,40 +50,52 @@
       "reference": "MAT.10.5-MAT.10.15",
       "figures": [
         "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF"
+        "FIG-GRUPPE-ZWOELF",
+        "FIG-ROLLE-JUENGER"
       ],
-      "objects": [],
-      "signs": [],
+      "objects": [
+        "FIG-ORT-STADT"
+      ],
+      "signs": [
+        "FIG-ZEICHEN-STAUB-ABSCHUETTELN"
+      ],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-ZWOELF",
           "icons": [
             "FIG-OBJ-SCHAF",
-            "FIG-GRUPPE-ISRAEL"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-ZEICHEN-REICH-GOTTES",
             "FIG-ZEICHEN-VERKUENDIGEN"
-          ]
+          ],
+          "word": {
+            "de": "Geht zu den verlorenen Schafen Israels!",
+            "gsw": "Gönd zu de verlorene Schaf vo Israel!"
+          }
         }
       ],
-      "action_de": "Er sendet sie zu den verlorenen Schafen Israels, um die Nähe des Reiches der Himmel zu verkünden und zu heilen, ohne Geld und Vorrat.",
+      "action_de": "Jesus sendet die Zwölf zu den verlorenen Schafen Israels; sie sollen verkündigen, heilen und umsonst geben; wer sie nicht aufnimmt, von dem schütteln sie den Staub ab.",
+      "keywords": {
+        "de": "Umsonst habt ihr empfangen, umsonst gebt!",
+        "gsw": "Umesuscht händ ir übercho, umesuscht gänd!"
+      },
       "stage": {
-        "mood": {
-          "FIG-GRUPPE-ZWOELF": "earnest"
+        "at": {
+          "FIG-ZEICHEN-STAUB-ABSCHUETTELN": "FIG-ROLLE-JUENGER"
         },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-GRUPPE-ZWOELF",
-            "act"
-          ]
-        ]
+        "pose": {
+          "FIG-ROLLE-JUENGER": "away"
+        },
+        "back_side": "right",
+        "mood": {
+          "FIG-GRUPPE-ZWOELF": "determined",
+          "FIG-JESUS": "earnest",
+          "FIG-ROLLE-JUENGER": "calm"
+        },
+        "x": {
+          "FIG-JESUS": 30,
+          "FIG-GRUPPE-ZWOELF": 88,
+          "FIG-ROLLE-JUENGER": 156
+        }
       }
     },
     {
@@ -98,30 +105,42 @@
         "FIG-JESUS",
         "FIG-GRUPPE-ZWOELF"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-OBJ-SCHAF",
+        "FIG-OBJ-WOLF"
+      ],
       "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-ZWOELF",
           "icons": [
-            "FIG-OBJ-SCHAF",
-            "FIG-OBJ-WOLF"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
             "FIG-ZEICHEN-FURCHT",
-            "FIG-ZEICHEN-NEIN"
-          ]
+            "FIG-ZEICHEN-NICHT"
+          ],
+          "word": {
+            "de": "Fürchtet euch nicht!",
+            "gsw": "Förchted eu nöd!"
+          }
         }
       ],
-      "action_de": "Er kündigt ihnen Verfolgung an; sie sollen sich aber nicht fürchten, denn der Vater sorgt für sie.",
+      "action_de": "Jesus sendet sie wie Schafe unter Wölfe und kündigt Verfolgung an; doch sie sollen sich nicht fürchten, denn sie sind mehr wert als viele Spatzen.",
+      "keywords": {
+        "de": "wie Schafe mitten unter Wölfe",
+        "gsw": "wie Schaf mitten under Wölf"
+      },
       "stage": {
         "mood": {
-          "FIG-GRUPPE-ZWOELF": "worried"
+          "FIG-GRUPPE-ZWOELF": "worried",
+          "FIG-JESUS": "earnest"
+        },
+        "x": {
+          "FIG-JESUS": 30,
+          "FIG-GRUPPE-ZWOELF": 140
+        },
+        "floor_x": {
+          "FIG-OBJ-SCHAF": 74,
+          "FIG-OBJ-WOLF": 96
         }
       }
     },
@@ -129,61 +148,68 @@
       "n": 4,
       "reference": "MAT.10.34-MAT.10.42",
       "figures": [
+        "FIG-ROLLE-MENSCH",
         "FIG-ROLLE-JUENGER",
         "FIG-JESUS"
       ],
       "objects": [
+        "FIG-OBJ-BECHER-WASSER",
         "FIG-OBJ-KREUZ"
       ],
       "signs": [],
       "speech": [],
-      "action_de": "Wer ihm folgt, muss ihn mehr lieben als die eigene Familie und sein Kreuz auf sich nehmen.",
+      "action_de": "Wer Jesus nicht über alles liebt und sein Kreuz nicht auf sich nimmt, ist seiner nicht würdig; wer die Jünger aufnimmt, nimmt ihn auf, und schon ein Becher kaltes Wasser bleibt nicht ohne Lohn.",
+      "keywords": {
+        "de": "Wer euch aufnimmt, nimmt mich auf",
+        "gsw": "Wer eu ufnimmt, nimmt mich uf"
+      },
       "stage": {
         "hold": {
+          "FIG-ROLLE-MENSCH": "FIG-OBJ-BECHER-WASSER",
           "FIG-ROLLE-JUENGER": "FIG-OBJ-KREUZ"
         },
         "arrows": [
           [
+            "FIG-ROLLE-MENSCH",
             "FIG-ROLLE-JUENGER",
-            "FIG-JESUS",
-            "go"
+            "act"
           ]
         ],
-        "pose": {
-          "FIG-JESUS": "away"
+        "mood": {
+          "FIG-ROLLE-MENSCH": "smile",
+          "FIG-ROLLE-JUENGER": "calm",
+          "FIG-JESUS": "calm"
         },
         "x": {
-          "FIG-ROLLE-JUENGER": 40,
-          "FIG-JESUS": 140
-        },
-        "mood": {
-          "FIG-ROLLE-JUENGER": "calm"
+          "FIG-ROLLE-MENSCH": 30,
+          "FIG-ROLLE-JUENGER": 90,
+          "FIG-JESUS": 156
         }
       }
     }
   ],
   "actions_de": [
-    "Jesus gibt seinen zwölf Jüngern Vollmacht über unreine Geister und Krankheiten.",
-    "Er sendet sie zu den verlorenen Schafen Israels, um die Nähe des Reiches der Himmel zu verkünden und zu heilen, ohne Geld und Vorrat.",
-    "Er kündigt ihnen Verfolgung an; sie sollen sich aber nicht fürchten, denn der Vater sorgt für sie.",
-    "Wer ihm folgt, muss ihn mehr lieben als die eigene Familie und sein Kreuz auf sich nehmen."
+    "Jesus ruft seine zwölf Jünger zu sich und gibt ihnen Vollmacht über unreine Geister, um sie auszutreiben und jede Krankheit zu heilen.",
+    "Jesus sendet die Zwölf zu den verlorenen Schafen Israels; sie sollen verkündigen, heilen und umsonst geben; wer sie nicht aufnimmt, von dem schütteln sie den Staub ab.",
+    "Jesus sendet sie wie Schafe unter Wölfe und kündigt Verfolgung an; doch sie sollen sich nicht fürchten, denn sie sind mehr wert als viele Spatzen.",
+    "Wer Jesus nicht über alles liebt und sein Kreuz nicht auf sich nimmt, ist seiner nicht würdig; wer die Jünger aufnimmt, nimmt ihn auf, und schon ein Becher kaltes Wasser bleibt nicht ohne Lohn."
   ],
   "captions_de": [
-    "Jesus → die Zwölf: Jesus gibt den Zwölf Vollmacht (Pfeil zu ihnen; Schriftrolle mit Krone) über die Geister (dunkler Wirbel, Pfeil weg) und zu heilen (berührende Hand).",
-    "Gesandt: Jesus sendet die Zwölf (Bogen zu ihnen) zu den verlorenen Schafen Israels (Schaf; Figuren mit blauem Mantel): Verkündet das Reich der Himmel (Krone mit Wolke, goldener Rufer).",
-    "Wie Schafe unter Wölfen: Jesus sagt: Ich sende euch wie Schafe unter Wölfe (Schaf, grauer Wolf) – habt keine Angst (erschrockenes Gesicht, rotes X).",
-    "Das Kreuz: Ein Jünger nimmt sein Kreuz (dunkles Holz) und folgt Jesus nach (gestrichelter Weg zu ihm)."
+    "Vollmacht: Jesus wendet sich den Zwölf zu (Pfeil) und gibt ihnen Vollmacht (Schriftrolle mit Krone), Geister auszutreiben (Schatten mit Pfeil hinaus).",
+    "Aussendung: Jesus sagt zu den Zwölf: «Geht zu den verlorenen Schafen Israels!» (Schaf, goldener Rufer); ein Jünger schüttelt vor der Stadt den Staub von den Füssen (Fuss und Staubwolke).",
+    "Fürchtet euch nicht: Jesus spricht zu den Zwölf: «Fürchtet euch nicht!» (erschrockenes Gesicht im Verbotsring, Vogel); am Boden ein Schaf und ein Wolf.",
+    "Kreuz und Becher: Ein Jünger trägt das Kreuz und folgt Jesus; ein Mensch reicht dem Jünger einen Becher kaltes Wasser (Pfeil)."
   ],
-  "interpretation_note_de": "Kapitel 10 ist eine Rede; die Felder zeigen ihre Hauptgedanken als Worte Jesu an die Zwölf. Feld 3 fasst die Abschnitte über Verfolgung und Furchtlosigkeit ([[MAT.10.16-MAT.10.33]]) zusammen.",
+  "interpretation_note_de": "Vier Comic-Szenen für fünf Abschnitte: die Zwölf mit Vollmacht ([[MAT.10.1-MAT.10.4]]), die Aussendung mit dem Staub-Abschütteln ([[MAT.10.5-MAT.10.15]]), Feld 3 bündelt Verfolgung und «Fürchtet euch nicht» ([[MAT.10.16-MAT.10.33]]), Feld 4 Kreuz und Becher Wasser ([[MAT.10.34-MAT.10.42]]). Die Namen der Zwölf, die Verzichtsliste und die Glieder der Verfolgung zeigen die Abschnittsbilder. Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-MAT-010",
       "field": "summary",
-      "fingerprint": "f3cb90058f2ae165"
+      "fingerprint": "9e3ccf579e61c0f7"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -674,6 +700,369 @@
           "Gesandt: Jesus sendet die Zwölf (Bogen zu ihnen) zu den verlorenen Schafen Israels (Schaf; Figuren mit blauem Mantel): Verkündet das Reich der Himmel (goldene Krone mit Lichtstrahlen, goldener Rufer).",
           "Wie Schafe unter Wölfen: Jesus sagt: Ich sende euch wie Schafe unter Wölfe (Schaf, grauer Wolf) – habt keine Angst (blauer Schweisstropfen, rotes X).",
           "Das Kreuz: Ein Jünger nimmt sein Kreuz (dunkles Holz) und folgt Jesus nach (gestrichelter Weg zu ihm)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.10.1-MAT.10.4",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-VOLLMACHT",
+                  "FIG-ZEICHEN-DAEMON",
+                  "FIG-ZEICHEN-AUSTREIBEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-HEILEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus gibt seinen zwölf Jüngern Vollmacht über unreine Geister und Krankheiten.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-ZWOELF",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "determined"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.10.5-MAT.10.15",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-OBJ-SCHAF",
+                  "FIG-GRUPPE-ISRAEL"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-REICH-GOTTES",
+                  "FIG-ZEICHEN-VERKUENDIGEN"
+                ]
+              }
+            ],
+            "action_de": "Er sendet sie zu den verlorenen Schafen Israels, um die Nähe des Reiches der Himmel zu verkünden und zu heilen, ohne Geld und Vorrat.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "earnest"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-ZWOELF",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.10.16-MAT.10.33",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-OBJ-SCHAF",
+                  "FIG-OBJ-WOLF"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-FURCHT",
+                  "FIG-ZEICHEN-NEIN"
+                ]
+              }
+            ],
+            "action_de": "Er kündigt ihnen Verfolgung an; sie sollen sich aber nicht fürchten, denn der Vater sorgt für sie.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "worried"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.10.34-MAT.10.42",
+            "figures": [
+              "FIG-ROLLE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KREUZ"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Wer ihm folgt, muss ihn mehr lieben als die eigene Familie und sein Kreuz auf sich nehmen.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-JUENGER": "FIG-OBJ-KREUZ"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-JUENGER",
+                  "FIG-JESUS",
+                  "go"
+                ]
+              ],
+              "pose": {
+                "FIG-JESUS": "away"
+              },
+              "x": {
+                "FIG-ROLLE-JUENGER": 40,
+                "FIG-JESUS": 140
+              },
+              "mood": {
+                "FIG-ROLLE-JUENGER": "calm"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus gibt seinen zwölf Jüngern Vollmacht über unreine Geister und Krankheiten.",
+          "Er sendet sie zu den verlorenen Schafen Israels, um die Nähe des Reiches der Himmel zu verkünden und zu heilen, ohne Geld und Vorrat.",
+          "Er kündigt ihnen Verfolgung an; sie sollen sich aber nicht fürchten, denn der Vater sorgt für sie.",
+          "Wer ihm folgt, muss ihn mehr lieben als die eigene Familie und sein Kreuz auf sich nehmen."
+        ],
+        "captions_de": [
+          "Jesus → die Zwölf: Jesus gibt den Zwölf Vollmacht (Pfeil zu ihnen; Schriftrolle mit Krone) über die Geister (dunkler Wirbel, Pfeil weg) und zu heilen (berührende Hand).",
+          "Gesandt: Jesus sendet die Zwölf (Bogen zu ihnen) zu den verlorenen Schafen Israels (Schaf; Figuren mit blauem Mantel): Verkündet das Reich der Himmel (Krone mit Wolke, goldener Rufer).",
+          "Wie Schafe unter Wölfen: Jesus sagt: Ich sende euch wie Schafe unter Wölfe (Schaf, grauer Wolf) – habt keine Angst (erschrockenes Gesicht, rotes X).",
+          "Das Kreuz: Ein Jünger nimmt sein Kreuz (dunkles Holz) und folgt Jesus nach (gestrichelter Weg zu ihm)."
+        ],
+        "interpretation_note_de": "Kapitel 10 ist eine Rede; die Felder zeigen ihre Hauptgedanken als Worte Jesu an die Zwölf. Feld 3 fasst die Abschnitte über Verfolgung und Furchtlosigkeit ([[MAT.10.16-MAT.10.33]]) zusammen.",
+        "basis": [
+          {
+            "record": "SUM-CH-MAT-010",
+            "field": "summary",
+            "fingerprint": "f3cb90058f2ae165"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.10.1-MAT.10.4",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-VOLLMACHT",
+              "FIG-ZEICHEN-AUSTREIBEN"
+            ],
+            "speech": [],
+            "action_de": "Jesus ruft seine zwölf Jünger zu sich und gibt ihnen Vollmacht über unreine Geister, um sie auszutreiben und jede Krankheit zu heilen.",
+            "keywords": {
+              "de": "Die Namen der zwölf Apostel",
+              "gsw": "D Näme vo de zwölf Apostel"
+            },
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-ZWOELF",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-VOLLMACHT": "FIG-GRUPPE-ZWOELF",
+                "FIG-ZEICHEN-AUSTREIBEN": "FIG-GRUPPE-ZWOELF"
+              },
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "determined",
+                "FIG-JESUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.10.5-MAT.10.15",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-ROLLE-JUENGER"
+            ],
+            "objects": [
+              "FIG-ORT-STADT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-STAUB-ABSCHUETTELN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-OBJ-SCHAF",
+                  "FIG-ZEICHEN-VERKUENDIGEN"
+                ],
+                "word": {
+                  "de": "Geht zu den verlorenen Schafen Israels!",
+                  "gsw": "Gönd zu de verlorene Schaf vo Israel!"
+                }
+              }
+            ],
+            "action_de": "Jesus sendet die Zwölf zu den verlorenen Schafen Israels; sie sollen verkündigen, heilen und umsonst geben; wer sie nicht aufnimmt, von dem schütteln sie den Staub ab.",
+            "keywords": {
+              "de": "Umsonst habt ihr empfangen, umsonst gebt!",
+              "gsw": "Umesuscht händ ir übercho, umesuscht gänd!"
+            },
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-STAUB-ABSCHUETTELN": "FIG-ROLLE-JUENGER"
+              },
+              "pose": {
+                "FIG-ROLLE-JUENGER": "away"
+              },
+              "back_side": "right",
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "determined",
+                "FIG-JESUS": "earnest",
+                "FIG-ROLLE-JUENGER": "calm"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-ZWOELF": 88,
+                "FIG-ROLLE-JUENGER": 156
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.10.16-MAT.10.33",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHAF",
+              "FIG-OBJ-WOLF"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-FURCHT",
+                  "FIG-ZEICHEN-NICHT"
+                ],
+                "word": {
+                  "de": "Fürchtet euch nicht!",
+                  "gsw": "Förchted eu nöd!"
+                }
+              }
+            ],
+            "action_de": "Jesus sendet sie wie Schafe unter Wölfe und kündigt Verfolgung an; doch sie sollen sich nicht fürchten, denn sie sind mehr wert als viele Spatzen.",
+            "keywords": {
+              "de": "wie Schafe mitten unter Wölfe",
+              "gsw": "wie Schaf mitten under Wölf"
+            },
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "worried",
+                "FIG-JESUS": "earnest"
+              },
+              "floor_x": {
+                "FIG-OBJ-SCHAF": 112,
+                "FIG-OBJ-WOLF": 150
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.10.34-MAT.10.42",
+            "figures": [
+              "FIG-ROLLE-MENSCH",
+              "FIG-ROLLE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BECHER-WASSER",
+              "FIG-OBJ-KREUZ"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Wer Jesus nicht über alles liebt und sein Kreuz nicht auf sich nimmt, ist seiner nicht würdig; wer die Jünger aufnimmt, nimmt ihn auf, und schon ein Becher kaltes Wasser bleibt nicht ohne Lohn.",
+            "keywords": {
+              "de": "Wer euch aufnimmt, nimmt mich auf",
+              "gsw": "Wer eu ufnimmt, nimmt mich uf"
+            },
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-MENSCH": "FIG-OBJ-BECHER-WASSER",
+                "FIG-ROLLE-JUENGER": "FIG-OBJ-KREUZ"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-MENSCH",
+                  "FIG-ROLLE-JUENGER",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-MENSCH": "smile",
+                "FIG-ROLLE-JUENGER": "calm",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-ROLLE-MENSCH": 30,
+                "FIG-ROLLE-JUENGER": 90,
+                "FIG-JESUS": 156
+              }
+            }
+          }
         ]
       }
     }

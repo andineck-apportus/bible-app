@@ -1,0 +1,197 @@
+{
+ "id": "CORE-MAT-004-023-025",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.4.23-MAT.4.25",
+ "target": "TU-MAT-004-023-025",
+ "core_de": "Jesus zieht in ganz Galiläa umher, lehrt in den Synagogen, verkündigt das Evangelium vom Reich und heilt jede Krankheit; die Kunde von ihm verbreitet sich in ganz Syrien, man bringt ihm alle Kranken – Besessene, Mondsüchtige und Gelähmte –, er heilt sie, und viele Menschenmengen aus Galiläa, der Dekapolis, Jerusalem, Judäa und von jenseits des Jordan folgen ihm.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "cause",
+    "subtype": "Wirken → Kunde → Kranke → Heilung → Nachfolge",
+    "range": "MAT.4.23-MAT.4.25",
+    "elements": [
+     {
+      "label": "Er zieht in ganz Galiläa umher: lehren, verkündigen, heilen",
+      "ref": "MAT.4.23",
+      "role": "Wirken",
+      "child": "s2"
+     },
+     {
+      "label": "→ die Kunde von ihm verbreitet sich in ganz Syrien",
+      "ref": "MAT.4.24",
+      "role": "Folge 1"
+     },
+     {
+      "label": "→ man bringt ihm alle Kranken",
+      "ref": "MAT.4.24",
+      "role": "Folge 2",
+      "child": "s3"
+     },
+     {
+      "label": "→ und er heilt sie",
+      "ref": "MAT.4.24",
+      "role": "Folge 3"
+     },
+     {
+      "label": "→ es folgen ihm viele Menschenmengen",
+      "ref": "MAT.4.25",
+      "role": "Folge 4",
+      "child": "s4"
+     }
+    ],
+    "features": {
+     "crossref": [
+      {
+       "ref": "MAT.9.35",
+       "kind": "Rahmen",
+       "note": "fast gleicher Satz; umschliesst Bergpredigt und Taten (Kap. 5–9)"
+      }
+     ]
+    },
+    "visual": "arrows",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "series",
+    "subtype": "drei Tätigkeiten",
+    "range": "MAT.4.23",
+    "elements": [
+     {
+      "label": "lehrte in ihren Synagogen",
+      "ref": "MAT.4.23",
+      "role": "1"
+     },
+     {
+      "label": "verkündigte das Evangelium vom Reich",
+      "ref": "MAT.4.23",
+      "role": "2"
+     },
+     {
+      "label": "heilte jede Krankheit und jedes Leiden im Volk",
+      "ref": "MAT.4.23",
+      "role": "3"
+     }
+    ],
+    "visual": "grid",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "series",
+    "subtype": "Kranke",
+    "range": "MAT.4.24",
+    "elements": [
+     {
+      "label": "von mancherlei Krankheiten und Qualen geplagt",
+      "ref": "MAT.4.24",
+      "role": "allgemein"
+     },
+     {
+      "label": "Besessene",
+      "ref": "MAT.4.24",
+      "role": "1"
+     },
+     {
+      "label": "Mondsüchtige",
+      "ref": "MAT.4.24",
+      "role": "2"
+     },
+     {
+      "label": "Gelähmte",
+      "ref": "MAT.4.24",
+      "role": "3"
+     }
+    ],
+    "visual": "grid",
+    "basis": "text"
+   },
+   {
+    "id": "s4",
+    "pattern": "register",
+    "subtype": "Herkunft der Menge",
+    "range": "MAT.4.25",
+    "elements": [
+     {
+      "label": "Galiläa",
+      "ref": "MAT.4.25"
+     },
+     {
+      "label": "Dekapolis",
+      "ref": "MAT.4.25"
+     },
+     {
+      "label": "Jerusalem",
+      "ref": "MAT.4.25"
+     },
+     {
+      "label": "Judäa",
+      "ref": "MAT.4.25"
+     },
+     {
+      "label": "jenseits des Jordan",
+      "ref": "MAT.4.25"
+     }
+    ],
+    "visual": "map",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.4.23",
+   "text_de": "Jesus zieht in ganz Galiläa umher, lehrt in ihren Synagogen, verkündigt das Evangelium vom Reich und heilt jede Krankheit und jedes Leiden im Volk.",
+   "reason_de": "Die drei Tätigkeiten fassen sein Wirken zusammen (Kriterium 1); Rahmen mit [[MAT.9.35]].",
+   "recognition_de": "Drei Felder: lehren, verkündigen, heilen.",
+   "keywords": [
+    "lehrte in ihren Synagogen",
+    "verkündigte das Evangelium vom Reich",
+    "heilte jede Krankheit und jedes Leiden im Volk"
+   ]
+  },
+  {
+   "reference": "MAT.4.24-MAT.4.25",
+   "text_de": "Die Kunde von ihm verbreitet sich in ganz Syrien; man bringt ihm alle Kranken, Besessene, Mondsüchtige und Gelähmte, und er heilt sie; viele Menschenmengen aus Galiläa, der Dekapolis, Jerusalem, Judäa und von jenseits des Jordan folgen ihm.",
+   "reason_de": "Wirkung und Ausweitung (Kriterium 3).",
+   "recognition_de": "Kranke werden zu Jesus gebracht; eine grosse Menge folgt.",
+   "keywords": [
+    "Besessene und Mondsüchtige und Gelähmte",
+    "es folgten ihm viele Menschenmengen"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Ausdruck «mondsüchtig» – Krankheitsbild der Zeit, Hintergrund"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-KRANKE",
+  "FIG-GRUPPE-MENGE"
+ ],
+ "places": [
+  "FIG-ORT-SYNAGOGE"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.4.23-MAT.4.25",
+   "fingerprint": "5b61bafdb3c2014d"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

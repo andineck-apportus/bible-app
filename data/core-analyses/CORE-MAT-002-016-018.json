@@ -1,0 +1,139 @@
+{
+ "id": "CORE-MAT-002-016-018",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.2.16-MAT.2.18",
+ "target": "TU-MAT-002-016-018",
+ "core_de": "Herodes sieht sich von den Sterndeutern hintergangen, wird sehr zornig und lässt in Betlehem und Umgebung alle Knaben von zwei Jahren und darunter töten; da erfüllt sich das Wort Jeremias von Rahel, die in Rama um ihre Kinder weint und sich nicht trösten lassen will, denn sie sind nicht mehr.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "cause",
+    "subtype": "hintergangen → Zorn → Mordbefehl → Klage",
+    "range": "MAT.2.16-MAT.2.18",
+    "elements": [
+     {
+      "label": "Herodes sieht, dass er von den Sterndeutern hintergangen worden ist",
+      "ref": "MAT.2.16",
+      "role": "Ursache"
+     },
+     {
+      "label": "→ er wird sehr zornig",
+      "ref": "MAT.2.16",
+      "role": "Folge 1"
+     },
+     {
+      "label": "→ er lässt alle Knaben in Betlehem und Umgebung töten, von zwei Jahren an und darunter, nach der erfragten Zeit",
+      "ref": "MAT.2.16",
+      "role": "Folge 2"
+     },
+     {
+      "label": "Klage nach dem Prophetenwort",
+      "ref": "MAT.2.17-MAT.2.18",
+      "role": "Erfüllung",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "numbers": [
+      {
+       "ref": "MAT.2.16",
+       "note": "«von zwei Jahren an und darunter» nach der von den Sterndeutern erfragten Zeit ([[MAT.2.7]])"
+      }
+     ]
+    },
+    "visual": "arrows",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "fulfilment",
+    "subtype": "Erfüllungszitat",
+    "range": "MAT.2.17-MAT.2.18",
+    "elements": [
+     {
+      "label": "Da wurde erfüllt, was durch Jeremia, den Propheten, gesagt ist",
+      "ref": "MAT.2.17",
+      "role": "Erfüllungsvermerk"
+     },
+     {
+      "label": "Eine Stimme in Rama, Weinen und viel Wehklagen: Rahel beweinte ihre Kinder und wollte sich nicht trösten lassen, denn sie sind nicht mehr",
+      "ref": "MAT.2.18",
+      "role": "Zitat"
+     }
+    ],
+    "features": {
+     "crossref": [
+      {
+       "ref": "JER.31.15",
+       "kind": "Zitat",
+       "note": "deutsche Zählung Jer 31,15; Rahel, die Stammmutter, klagt über ihre Nachkommen"
+      }
+     ],
+     "modality": [
+      {
+       "ref": "MAT.2.17",
+       "note": "«Da wurde erfüllt» – anders als in [[MAT.1.22]] und [[MAT.2.15]] ohne «damit»."
+      }
+     ]
+    },
+    "visual": "levels",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.2.16",
+   "text_de": "Herodes sieht, dass er von den Sterndeutern hintergangen worden ist, wird sehr zornig und lässt alle Knaben in Betlehem und Umgebung töten, von zwei Jahren an und darunter, nach der Zeit, die er von den Sterndeutern erfragt hatte.",
+   "reason_de": "Tat und Folge (Kriterien 1 und 2); Tod nicht ausblenden (BILDPROZESS Leitlinie 11).",
+   "recognition_de": "Herodes im Zorn gibt den Befehl; Mütter trauern um die getöteten Kinder.",
+   "keywords": [
+    "wurde sehr zornig",
+    "liess alle Knaben in Betlehem"
+   ]
+  },
+  {
+   "reference": "MAT.2.17-MAT.2.18",
+   "text_de": "Da wird erfüllt, was durch Jeremia gesagt ist: Eine Stimme wird in Rama gehört, Weinen und viel Wehklagen: Rahel beweint ihre Kinder und will sich nicht trösten lassen, denn sie sind nicht mehr.",
+   "reason_de": "Deutung der Klage durch das Prophetenwort (Kriterium 2).",
+   "recognition_de": "Rahel weint um ihre Kinder; Band «Rahel beweinte ihre Kinder».",
+   "keywords": [
+    "Rahel beweinte ihre Kinder",
+    "denn sie sind nicht mehr"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Zahl der getöteten Kinder – nicht genannt"
+ ],
+ "persons": [
+  "FIG-HERODES-DER-GROSSE",
+  "FIG-RAHEL",
+  "FIG-GRUPPE-SOLDATEN",
+  "FIG-GRUPPE-FRAUEN"
+ ],
+ "places": [
+  "FIG-ORT-BETLEHEM"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.2.16-MAT.2.18",
+   "fingerprint": "940cd7f9bd1a9cac"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

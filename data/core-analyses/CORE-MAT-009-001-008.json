@@ -1,0 +1,169 @@
+{
+ "id": "CORE-MAT-009-001-008",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.9.1-MAT.9.8",
+ "target": "TU-MAT-009-001-008",
+ "core_de": "In seiner Stadt bringt man Jesus einen Gelähmten auf einem Bett; als er ihren Glauben sieht, sagt er: «Deine Sünden sind vergeben»; einige Schriftgelehrte denken: «Der lästert!»; damit sie wissen, dass der Menschensohn Vollmacht hat, auf der Erde Sünden zu vergeben, heisst er den Gelähmten aufstehen, sein Bett nehmen und heimgehen – und die Menge fürchtet sich und preist Gott, der den Menschen solche Vollmacht gegeben hat.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Glaube – Vergebung – Einwand – Beweis – Lob",
+    "range": "MAT.9.1-MAT.9.8",
+    "elements": [
+     {
+      "label": "Man bringt einen Gelähmten; Jesus sieht ihren Glauben",
+      "ref": "MAT.9.1-MAT.9.2",
+      "role": "Anfang"
+     },
+     {
+      "label": "«Sei getrost, Kind! Deine Sünden sind vergeben.»",
+      "ref": "MAT.9.2",
+      "role": "Wort"
+     },
+     {
+      "label": "Einwand im Herzen und Beweis",
+      "ref": "MAT.9.3-MAT.9.6",
+      "role": "Streit",
+      "child": "s2"
+     },
+     {
+      "label": "Er steht auf und geht in sein Haus",
+      "ref": "MAT.9.7",
+      "role": "Heilung"
+     },
+     {
+      "label": "Reaktion: Schriftgelehrte ↔ Mengen",
+      "ref": "MAT.9.3-MAT.9.8",
+      "role": "Echo",
+      "child": "s3"
+     }
+    ],
+    "features": {
+     "text_forms": [
+      {
+       "ref": "MAT.9.8",
+       "note": "Lesart «staunten sie» statt «fürchteten sie sich»."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "argument",
+    "subtype": "Frage – «damit ihr wisst» – Beweis",
+    "range": "MAT.9.4-MAT.9.6",
+    "elements": [
+     {
+      "label": "Warum denkt ihr Böses in euren Herzen?",
+      "ref": "MAT.9.4",
+      "role": "Frage"
+     },
+     {
+      "label": "Was ist leichter: «Deine Sünden sind vergeben» oder «Steh auf und geh umher»?",
+      "ref": "MAT.9.5",
+      "role": "Gegenfrage"
+     },
+     {
+      "label": "Damit ihr aber wisst, dass der Menschensohn Vollmacht hat, auf der Erde Sünden zu vergeben",
+      "ref": "MAT.9.6",
+      "role": "Zweck"
+     },
+     {
+      "label": "«Steh auf, nimm dein Bett und geh in dein Haus!»",
+      "ref": "MAT.9.6",
+      "role": "Beweis"
+     }
+    ],
+    "visual": "arrows",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "contrast",
+    "subtype": "Schriftgelehrte ↔ Mengen",
+    "range": "MAT.9.3-MAT.9.8",
+    "elements": [
+     {
+      "label": "Einige Schriftgelehrte sagten bei sich: «Der lästert!»",
+      "ref": "MAT.9.3",
+      "role": "Einwand"
+     },
+     {
+      "label": "Die Mengen fürchteten sich und priesen Gott, der den Menschen solche Vollmacht gegeben hat",
+      "ref": "MAT.9.8",
+      "role": "Lob"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.9.1-MAT.9.2",
+   "text_de": "In seiner Stadt bringt man Jesus einen Gelähmten auf einem Bett; als Jesus ihren Glauben sieht, sagt er: «Sei getrost, Kind! Deine Sünden sind vergeben.»",
+   "reason_de": "Anfang mit dem überraschenden Wort (Kriterien 1 und 2).",
+   "recognition_de": "Träger bringen den Gelähmten auf dem Bett zu Jesus.",
+   "keywords": [
+    "als Jesus ihren Glauben sah",
+    "Deine Sünden sind vergeben"
+   ]
+  },
+  {
+   "reference": "MAT.9.3-MAT.9.6",
+   "text_de": "Einige Schriftgelehrte sagen bei sich: «Der lästert!»; Jesus kennt ihre Gedanken und fragt, was leichter sei; damit sie wissen, dass der Menschensohn Vollmacht hat, auf der Erde Sünden zu vergeben, sagt er zum Gelähmten: «Steh auf, nimm dein Bett und geh in dein Haus!»",
+   "reason_de": "Streit und Beweis (Kriterium 2).",
+   "recognition_de": "Schriftgelehrte denken «Der lästert!»; Jesus spricht zum Gelähmten.",
+   "keywords": [
+    "Der lästert!",
+    "Vollmacht hat, auf der Erde Sünden zu vergeben",
+    "Steh auf, nimm dein Bett und geh in dein Haus!"
+   ]
+  },
+  {
+   "reference": "MAT.9.7-MAT.9.8",
+   "text_de": "Er steht auf und geht in sein Haus; die Mengen fürchten sich und preisen Gott, der den Menschen solche Vollmacht gegeben hat.",
+   "reason_de": "Ausgang (Kriterium 3).",
+   "recognition_de": "Der Geheilte trägt sein Bett; die Menge preist Gott.",
+   "keywords": [
+    "fürchteten sie sich und priesen Gott"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Wer die Träger sind – nicht genannt"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-ROLLE-KRANKER",
+  "FIG-GRUPPE-TRAEGER",
+  "FIG-GRUPPE-SCHRIFTGELEHRTE",
+  "FIG-GRUPPE-MENGE"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.9.1-MAT.9.8",
+   "fingerprint": "de76f31b0505bb92"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

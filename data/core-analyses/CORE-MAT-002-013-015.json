@@ -1,0 +1,165 @@
+{
+ "id": "CORE-MAT-002-013-015",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.2.13-MAT.2.15",
+ "target": "TU-MAT-002-013-015",
+ "core_de": "Ein Engel des Herrn befiehlt Josef im Traum, mit dem Kind und seiner Mutter nach Ägypten zu fliehen, weil Herodes das Kind umbringen will; Josef gehorcht noch in der Nacht und bleibt dort bis zum Tod des Herodes – damit erfüllt würde: «Aus Ägypten habe ich meinen Sohn gerufen.»",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Weisung – Ausführung – Erfüllung",
+    "range": "MAT.2.13-MAT.2.15",
+    "elements": [
+     {
+      "label": "Weisung im Traum mit Begründung",
+      "ref": "MAT.2.13",
+      "role": "Weisung",
+      "child": "s2"
+     },
+     {
+      "label": "Ausführung bei Nacht, Aufenthalt bis zum Tod des Herodes",
+      "ref": "MAT.2.14-MAT.2.15",
+      "role": "Ausführung"
+     },
+     {
+      "label": "Erfüllungszitat: Aus Ägypten habe ich meinen Sohn gerufen",
+      "ref": "MAT.2.15",
+      "role": "Deutung durch den Erzähler",
+      "child": "s3"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-ROLLE-ENGEL",
+       "to": "FIG-JOSEF-NAZARET",
+       "ref": "MAT.2.13"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "parallel",
+    "subtype": "Anweisung ↔ Ausführung",
+    "range": "MAT.2.13-MAT.2.15",
+    "elements": [
+     {
+      "label": "«Steh auf» ↔ Er aber stand auf",
+      "ref": "MAT.2.13-MAT.2.14",
+      "role": "Zeile 1"
+     },
+     {
+      "label": "«nimm das Kind und seine Mutter zu dir» ↔ nahm das Kind und seine Mutter bei Nacht zu sich",
+      "ref": "MAT.2.13-MAT.2.14",
+      "role": "Zeile 2"
+     },
+     {
+      "label": "«flieh nach Ägypten» ↔ zog sich nach Ägypten zurück",
+      "ref": "MAT.2.13-MAT.2.14",
+      "role": "Zeile 3"
+     },
+     {
+      "label": "«bleib dort, bis ich es dir sage» ↔ blieb dort bis zum Tod des Herodes",
+      "ref": "MAT.2.13-MAT.2.15",
+      "role": "Zeile 4"
+     },
+     {
+      "label": "Begründung: denn Herodes wird das Kind suchen, um es umzubringen",
+      "ref": "MAT.2.13",
+      "role": "Begründung"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "fulfilment",
+    "subtype": "Erfüllungszitat",
+    "range": "MAT.2.15",
+    "elements": [
+     {
+      "label": "damit erfüllt würde, was vom Herrn durch den Propheten gesagt ist",
+      "ref": "MAT.2.15",
+      "role": "Erfüllungsvermerk"
+     },
+     {
+      "label": "Aus Ägypten habe ich meinen Sohn gerufen",
+      "ref": "MAT.2.15",
+      "role": "Zitat"
+     }
+    ],
+    "features": {
+     "crossref": [
+      {
+       "ref": "HOS.11.1",
+       "kind": "Zitat",
+       "note": "bei Hosea über Israel; Matthäus bezieht es auf Jesus"
+      }
+     ]
+    },
+    "visual": "levels",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.2.13",
+   "text_de": "Ein Engel des Herrn erscheint Josef im Traum: «Steh auf, nimm das Kind und seine Mutter zu dir und flieh nach Ägypten, und bleib dort, bis ich es dir sage», denn Herodes wird das Kind suchen, um es umzubringen.",
+   "reason_de": "Weisung mit Begründung (Kriterien 1 und 2).",
+   "recognition_de": "Der Engel bei Josef im Traum, Kind und Maria daneben.",
+   "keywords": [
+    "flieh nach Ägypten",
+    "Herodes wird das Kind suchen, um es umzubringen"
+   ]
+  },
+  {
+   "reference": "MAT.2.14-MAT.2.15",
+   "text_de": "Josef steht auf, nimmt das Kind und seine Mutter bei Nacht und zieht nach Ägypten; dort bleibt er bis zum Tod des Herodes, damit erfüllt würde: «Aus Ägypten habe ich meinen Sohn gerufen.»",
+   "reason_de": "Ausführung Wort für Wort und Erfüllungswort (Kriterien 2 und 4).",
+   "recognition_de": "Nachtszene: Josef zieht mit Maria und dem Kind nach Ägypten.",
+   "keywords": [
+    "bei Nacht",
+    "Aus Ägypten habe ich meinen Sohn gerufen"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Weg und Dauer des Aufenthalts in Ägypten – nicht erzählt"
+ ],
+ "persons": [
+  "FIG-ROLLE-ENGEL",
+  "FIG-JOSEF-NAZARET",
+  "FIG-MARIA-MUTTER-JESU",
+  "FIG-JESUS-KIND"
+ ],
+ "places": [
+  "FIG-ORT-AEGYPTEN"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.2.13-MAT.2.15",
+   "fingerprint": "47a375569d337998"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

@@ -17,26 +17,16 @@
         "FIG-GRUPPE-ZWOELF"
       ],
       "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-ZEICHEN-VOLLMACHT",
-            "FIG-ZEICHEN-DAEMON",
-            "FIG-ZEICHEN-AUSTREIBEN"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-ZEICHEN-HEILEN"
-          ]
-        }
+      "signs": [
+        "FIG-ZEICHEN-VOLLMACHT",
+        "FIG-ZEICHEN-AUSTREIBEN"
       ],
-      "action_de": "Jesus ruft seine zwölf Jünger zu sich und gibt ihnen Vollmacht über unreine Geister, sie auszutreiben und jede Krankheit und jedes Leiden zu heilen.",
+      "speech": [],
+      "action_de": "Jesus ruft seine zwölf Jünger zu sich und gibt ihnen Vollmacht über unreine Geister, um sie auszutreiben und jede Krankheit zu heilen.",
+      "keywords": {
+        "de": "gab ihnen Vollmacht über unreine Geister",
+        "gsw": "hät ine Vollmacht über unreini Geischter ggää"
+      },
       "stage": {
         "arrows": [
           [
@@ -45,50 +35,170 @@
             "act"
           ]
         ],
+        "at": {
+          "FIG-ZEICHEN-VOLLMACHT": "FIG-GRUPPE-ZWOELF",
+          "FIG-ZEICHEN-AUSTREIBEN": "FIG-GRUPPE-ZWOELF"
+        },
         "mood": {
-          "FIG-GRUPPE-ZWOELF": "determined"
+          "FIG-GRUPPE-ZWOELF": "determined",
+          "FIG-JESUS": "calm"
         }
       }
     },
     {
       "n": 2,
       "reference": "MAT.10.2-MAT.10.4",
-      "figures": [
-        "FIG-PETRUS",
-        "FIG-JOHANNES-ZEBEDAEUS",
-        "FIG-MATTHAEUS",
-        "FIG-JUDAS-ISKARIOT"
-      ],
+      "figures": [],
       "objects": [],
       "signs": [],
       "speech": [],
-      "action_de": "Es folgen die Namen der zwölf Apostel, zuerst Simon, der Petrus genannt wird, und sein Bruder Andreas, zuletzt Judas Iskariot, der Jesus auch auslieferte.",
-      "stage": {
-        "pose": {
-          "FIG-JUDAS-ISKARIOT": "away"
-        },
-        "mood": {
-          "FIG-PETRUS": "calm",
-          "FIG-JOHANNES-ZEBEDAEUS": "calm",
-          "FIG-MATTHAEUS": "calm"
-        }
+      "action_de": "Die Namen der zwölf Apostel: Simon Petrus und Andreas, Jakobus und Johannes, Philippus und Bartholomäus, Thomas und Matthäus, Jakobus, der Sohn des Alphäus, und Thaddäus, Simon der Kananäer und Judas Iskariot, der ihn auslieferte.",
+      "keywords": {
+        "de": "Die Namen der zwölf Apostel",
+        "gsw": "D Näme vo de zwölf Apostel"
+      },
+      "diagram": {
+        "visual": "grid",
+        "span": 2,
+        "cols": 4,
+        "cells": [
+          {
+            "a": {
+              "de": "Simon Petrus",
+              "gsw": "Simon Petrus"
+            },
+            "b": {
+              "de": "zuerst",
+              "gsw": "zerscht"
+            },
+            "who": "FIG-PETRUS"
+          },
+          {
+            "a": {
+              "de": "Andreas",
+              "gsw": "Andreas"
+            },
+            "b": {
+              "de": "sein Bruder",
+              "gsw": "sin Brueder"
+            },
+            "who": "FIG-ANDREAS"
+          },
+          {
+            "a": {
+              "de": "Jakobus",
+              "gsw": "Jakobus"
+            },
+            "b": {
+              "de": "Sohn des Zebedäus",
+              "gsw": "Sohn vom Zebedäus"
+            },
+            "who": "FIG-JAKOBUS-ZEBEDAEUS"
+          },
+          {
+            "a": {
+              "de": "Johannes",
+              "gsw": "Johannes"
+            },
+            "b": {
+              "de": "sein Bruder",
+              "gsw": "sin Brueder"
+            },
+            "who": "FIG-JOHANNES-ZEBEDAEUS"
+          },
+          {
+            "a": {
+              "de": "Philippus",
+              "gsw": "Philippus"
+            },
+            "who": "FIG-PHILIPPUS"
+          },
+          {
+            "a": {
+              "de": "Bartholomäus",
+              "gsw": "Bartholomäus"
+            },
+            "who": "FIG-BARTHOLOMAEUS"
+          },
+          {
+            "a": {
+              "de": "Thomas",
+              "gsw": "Thomas"
+            },
+            "who": "FIG-THOMAS"
+          },
+          {
+            "a": {
+              "de": "Matthäus",
+              "gsw": "Matthäus"
+            },
+            "b": {
+              "de": "der Zöllner",
+              "gsw": "de Zöllner"
+            },
+            "who": "FIG-MATTHAEUS"
+          },
+          {
+            "a": {
+              "de": "Jakobus",
+              "gsw": "Jakobus"
+            },
+            "b": {
+              "de": "Sohn des Alphäus",
+              "gsw": "Sohn vom Alphäus"
+            },
+            "who": "FIG-JAKOBUS-ALPHAEUS"
+          },
+          {
+            "a": {
+              "de": "Thaddäus",
+              "gsw": "Thaddäus"
+            },
+            "who": "FIG-THADDAEUS"
+          },
+          {
+            "a": {
+              "de": "Simon",
+              "gsw": "Simon"
+            },
+            "b": {
+              "de": "der Kananäer",
+              "gsw": "de Kananäer"
+            },
+            "who": "FIG-SIMON-KANANAEUS"
+          },
+          {
+            "a": {
+              "de": "Judas Iskariot",
+              "gsw": "Judas Iskariot"
+            },
+            "b": {
+              "de": "der ihn auch auslieferte",
+              "gsw": "wo en au usgliferet hät"
+            },
+            "icons": [
+              "FIG-ZEICHEN-AUSLIEFERN"
+            ],
+            "who": "FIG-JUDAS-ISKARIOT"
+          }
+        ]
       }
     }
   ],
   "actions_de": [
-    "Jesus ruft seine zwölf Jünger zu sich und gibt ihnen Vollmacht über unreine Geister, sie auszutreiben und jede Krankheit und jedes Leiden zu heilen.",
-    "Es folgen die Namen der zwölf Apostel, zuerst Simon, der Petrus genannt wird, und sein Bruder Andreas, zuletzt Judas Iskariot, der Jesus auch auslieferte."
+    "Jesus ruft seine zwölf Jünger zu sich und gibt ihnen Vollmacht über unreine Geister, um sie auszutreiben und jede Krankheit zu heilen.",
+    "Die Namen der zwölf Apostel: Simon Petrus und Andreas, Jakobus und Johannes, Philippus und Bartholomäus, Thomas und Matthäus, Jakobus, der Sohn des Alphäus, und Thaddäus, Simon der Kananäer und Judas Iskariot, der ihn auslieferte."
   ],
   "captions_de": [
-    "Jesus → die Zwölf: Jesus gibt den Zwölf Vollmacht (Pfeil zu ihnen; Schriftrolle mit Krone), Geister auszutreiben (dunkler Wirbel, Pfeil weg) und zu heilen (berührende Hand).",
-    "Die Namen: Petrus (Schlüssel), Johannes (Kelch) und Matthäus, der Zöllner (Buch), stehen für die Zwölf; Judas Iskariot (Kästchen), der Jesus ausliefert, wendet sich ab."
+    "Vollmacht: Jesus wendet sich den Zwölf zu (Pfeil) und gibt ihnen Vollmacht (Schriftrolle mit Krone), Geister auszutreiben (Schatten mit Pfeil hinaus).",
+    "Raster der zwölf Apostel in der Reihenfolge des Textes, je mit Bild und Namen; bei Judas Iskariot «der ihn auch auslieferte» (offene Hand und Kette)."
   ],
-  "interpretation_note_de": "Feld 2 zeigt nur sechs der zwölf Namen; die übrigen ([[MAT.10.3-MAT.10.4]]) sind mitgemeint. Matthäus ist hervorgehoben, weil ihn nur dieses Evangelium «den Zöllner» nennt ([[MAT.10.3]]). Die Attribute der Apostel sind spätere Tradition.",
+  "interpretation_note_de": "Zwei Felder ([[MAT.10.1-MAT.10.4]]): die Übertragung der Vollmacht als Szene und die zwölf Namen als Raster, vollständig und in der Reihenfolge des Textes (paarweise). Judas steht wie im Text mit dem Zusatz, dass er Jesus auslieferte; er ist nicht verzerrt gezeichnet. Lesart «Lebbäus, genannt Thaddäus» und die abweichende Liste bei Lukas stehen in der Kernanalyse.",
   "basis": [
     {
       "record": "TU-MAT-010-001-004",
       "field": "summary",
-      "fingerprint": "6413a31605fe2e48"
+      "fingerprint": "b6631157cd0f1236"
     },
     {
       "record": "TRANS-MAT-010-001-042-DE-WORKING",
@@ -104,7 +214,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -275,6 +385,108 @@
           "Jesus → die Zwölf: Jesus gibt den Zwölf Vollmacht (Pfeil zu ihnen; goldenes Zepter mit Strahlen), Geister auszutreiben (dunkler Wirbel, Pfeil weg) und zu heilen (berührende Hand).",
           "Die Namen: Petrus (Schlüssel), Johannes (Kelch) und Matthäus, der Zöllner (Buch), stehen für die Zwölf; Judas Iskariot (Kästchen), der Jesus ausliefert, wendet sich ab."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.10.1",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-VOLLMACHT",
+                  "FIG-ZEICHEN-DAEMON",
+                  "FIG-ZEICHEN-AUSTREIBEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-HEILEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus ruft seine zwölf Jünger zu sich und gibt ihnen Vollmacht über unreine Geister, sie auszutreiben und jede Krankheit und jedes Leiden zu heilen.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-ZWOELF",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "determined"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.10.2-MAT.10.4",
+            "figures": [
+              "FIG-PETRUS",
+              "FIG-JOHANNES-ZEBEDAEUS",
+              "FIG-MATTHAEUS",
+              "FIG-JUDAS-ISKARIOT"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Es folgen die Namen der zwölf Apostel, zuerst Simon, der Petrus genannt wird, und sein Bruder Andreas, zuletzt Judas Iskariot, der Jesus auch auslieferte.",
+            "stage": {
+              "pose": {
+                "FIG-JUDAS-ISKARIOT": "away"
+              },
+              "mood": {
+                "FIG-PETRUS": "calm",
+                "FIG-JOHANNES-ZEBEDAEUS": "calm",
+                "FIG-MATTHAEUS": "calm"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus ruft seine zwölf Jünger zu sich und gibt ihnen Vollmacht über unreine Geister, sie auszutreiben und jede Krankheit und jedes Leiden zu heilen.",
+          "Es folgen die Namen der zwölf Apostel, zuerst Simon, der Petrus genannt wird, und sein Bruder Andreas, zuletzt Judas Iskariot, der Jesus auch auslieferte."
+        ],
+        "captions_de": [
+          "Jesus → die Zwölf: Jesus gibt den Zwölf Vollmacht (Pfeil zu ihnen; Schriftrolle mit Krone), Geister auszutreiben (dunkler Wirbel, Pfeil weg) und zu heilen (berührende Hand).",
+          "Die Namen: Petrus (Schlüssel), Johannes (Kelch) und Matthäus, der Zöllner (Buch), stehen für die Zwölf; Judas Iskariot (Kästchen), der Jesus ausliefert, wendet sich ab."
+        ],
+        "interpretation_note_de": "Feld 2 zeigt nur sechs der zwölf Namen; die übrigen ([[MAT.10.3-MAT.10.4]]) sind mitgemeint. Matthäus ist hervorgehoben, weil ihn nur dieses Evangelium «den Zöllner» nennt ([[MAT.10.3]]). Die Attribute der Apostel sind spätere Tradition.",
+        "basis": [
+          {
+            "record": "TU-MAT-010-001-004",
+            "field": "summary",
+            "fingerprint": "6413a31605fe2e48"
+          },
+          {
+            "record": "TRANS-MAT-010-001-042-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.10.1",
+            "fingerprint": "6b22959d7ffa580f"
+          },
+          {
+            "record": "TRANS-MAT-010-001-042-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.10.2-MAT.10.4",
+            "fingerprint": "07f507462c226d4b"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]
