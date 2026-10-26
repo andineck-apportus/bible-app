@@ -249,6 +249,13 @@ ATTR = {
                   '<path d="M1 11.6h14v1.8H1z" fill="#B07A3E" stroke="#3B3226" stroke-width=".6"/>'
                   '<path d="M3 11.6q-.6-2.4 1.4-2.6 2 .2 1.4 2.6z" fill="#C2884A" stroke="#3B3226" stroke-width=".5"/><circle cx="8.4" cy="10.4" r="1.3" fill="#D9A441" stroke="#3B3226" stroke-width=".4"/>'
                   '<circle cx="10.4" cy="10.6" r="1.1" fill="#6E8B3D" stroke="#3B3226" stroke-width=".4"/><path d="M11.6 11.6l.8-2.4h1.4l.6 2.4z" fill="#8E6A9A" stroke="#3B3226" stroke-width=".4"/>',
+    # Zacharias: kleiner goldener Räucheraltar mit Hörnern und aufsteigendem Rauch (Lk 1,9.11; Runde 15, 2026-10-26)
+    "raeucheraltar": '<g fill="none" stroke="#8A847A" stroke-width="1.3" stroke-linecap="round"><path d="M6.6 6.2Q4.8 4.6 6.6 3.2T6.4 .4"/><path d="M9.6 6.2q1.6-1.4 0-2.8t.2-2.6"/></g>'
+                     '<path d="M4.2 8.8h7.6v6.4H4.2z" fill="#D9A441" stroke="#3B3226" stroke-width=".8"/><path d="M2.8 7.2h10.4v2H2.8z" fill="#E8B84A" stroke="#3B3226" stroke-width=".7"/>'
+                     '<path d="M2.8 7.2V5.6h1.8v1.6M11.4 7.2V5.6h1.8v1.6" fill="#E8B84A" stroke="#3B3226" stroke-width=".6"/><path d="M3.4 15.2h9.2v.8H3.4z" fill="#9C6F1C"/>'
+                     '<path d="M6 11.6h4" stroke="#9C6F1C" stroke-width=".8"/>',
+    # Simeon nimmt das Kind Jesus auf die Arme (Lk 2,28): gewickeltes Kind mit Kreuznimbus wie FIG-JESUS-KIND (Runde 15)
+    "jesuskind": '<svg x="0" y="2.6" width="16" height="10.8" viewBox="0 0 32 20"><circle cx="8.5" cy="8" r="7.4" fill="#F2C76E" stroke="#C08A2A" stroke-width=".9"/><path d="M8.5 .8v14.4M1.1 8h14.8" stroke="#C08A2A" stroke-width="1.3"/><path d="M9 13q0-6 8-6h9q5 0 5 5.6 0 5.4-5 5.4h-9q-8 0-8-5z" fill="#F6EBD9" stroke="#3B3226" stroke-width="1"/><path d="M16 7.6q1 5 0 10M21 7v11M26 7.4q1 5 0 10" stroke="#D8CBB0" stroke-width="1"/><circle cx="8.5" cy="9" r="4.6" fill="#C89B72" stroke="#3B3226" stroke-width="1"/></svg>',
     "unkraut": '<g stroke="#3E4A2A" stroke-width="1" stroke-linecap="round" fill="none"><path d="M6 16Q6 8 3 2M8 16V1.4M10 16q0-8 3-14"/></g><g fill="#2E3420"><ellipse cx="3.4" cy="3" rx=".9" ry="1.5"/><ellipse cx="4.6" cy="5.4" rx=".9" ry="1.5"/><ellipse cx="8" cy="2.4" rx=".9" ry="1.5"/><ellipse cx="8" cy="5" rx=".9" ry="1.5"/><ellipse cx="12.6" cy="3" rx=".9" ry="1.5"/><ellipse cx="11.4" cy="5.4" rx=".9" ry="1.5"/></g>',
 }
 
@@ -729,7 +736,7 @@ def anime_char(fid):
     for k in ("belt", "sash", "trim", "wings", "chains", "bound", "fur", "breast", "plate", "toga", "tassels",
               "tallit", "tefillin", "bandage", "crossed", "rope", "patches", "sword", "staff", "rough",
               "jewels", "necklace", "diadem", "muffle", "shadow", "glow", "wrapped", "linen", "weeping", "backdrop", "attr_box",
-              "jstaff", "beam", "cloak_off", "crest"):  # Schalter des Zeichners (bilder_anime.head_inner/body_inner)
+              "jstaff", "beam", "cloak_off", "crest", "halo"):  # Schalter des Zeichners (halo: Kreuznimbus, nur Jesus als Junge, Runde 15) (bilder_anime.head_inner/body_inner)
         if p.get(k):
             c[k] = p[k]
     if p["age"] in ("young", "child"):

@@ -100,7 +100,7 @@ def plan(p, lex, extra):
     """Ordnet die Bestandteile eines Felds an; Ergebnis in Feldeinheiten, von beiden Stilen gezeichnet."""
     st = p.get("stage") or {}
     as_place = [f for f in p["figures"] if f in META and META[f][0] == "back"]  # z. B. Gemeinde (Haus mit Menschen)
-    humans = [f for f in p["figures"] if (lex[f]["kind"] in HUMAN_KINDS or f == "FIG-JESUS") and f not in as_place]
+    humans = [f for f in p["figures"] if (lex[f]["kind"] in HUMAN_KINDS or f in ("FIG-JESUS", "FIG-JESUS-JUNGE")) and f not in as_place]
     divine = [f for f in p["figures"] if f in ("FIG-GOTT", "FIG-HEILIGER-GEIST")]
     things = as_place + list(p["objects"]) + list(p["signs"])
     if "cross" in (st.get("pose") or {}).values():  # Jesus am Kreuz: das Kreuz zeichnet die Figur selbst
@@ -1228,7 +1228,7 @@ class Composer:
         for t in L["head"]:
             who = (st.get("signs_who") or {}).get(t)
             if who is None:
-                who = [s["fid"] for s in slots if s["fid"] not in ("FIG-JESUS",)] + [f for f in L["inside"]]
+                who = [s["fid"] for s in slots if s["fid"] not in ("FIG-JESUS", "FIG-JESUS-JUNGE")] + [f for f in L["inside"]]
             for f in who:
                 if f in heads and not self.r_head_sign_native(t):
                     hx, hy = heads[f]
