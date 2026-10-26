@@ -118,11 +118,15 @@ alle Übersetzungen; jedes Wort steht je Sprache im Auftrag, die App zeigt die g
 | `at_top: true` | Zeichen bei einer Figur im Gegenstand oben statt seitlich |
 | `on_water: [FIG]` | Figur geht auf dem Wasser (steht über den Wellen, z. B. Jesus); andere Figuren mit `in_water` stehen im Wasser |
 | `on: {FIG: ORT}` | Figur steht auf einem Ort im Hintergrund (z. B. Jesus auf dem Berg) |
+| `twin: {FIG: x}` | zweite gleiche Figur bei x (z. B. die zwei Mitgekreuzigten links und rechts von Jesus, [[JHN.19.18]]); sie spricht nicht und trägt Pose und Ausdruck der ersten (seit 2026-10-26) |
+| `far: [FIG]` | Figur weiter hinten: etwas kleiner und höher (z. B. die Mitgekreuzigten neben Jesus am Kreuz) |
 | `night: true` | dunkler Himmel mit Sternen (automatisch, wenn das Zeichen Nacht im Feld steht) |
 | Sprechblase `"think": true` | Denkblase (Wolke mit kleinen Kreisen) statt Sprechblase: «sagt sich im Herzen», überlegt |
 
 Automatisch (seit dem Blindtest vom 2026-10-17): Wer zuerst spricht, steht links vom zweiten Sprecher (ausser `x`, `split` oder
-«links/rechts» in der Legende); eine zweite Sprechblase derselben Figur steht neben der ersten und ist mit ihr verbunden;
+«links/rechts» in der Legende); eine zweite Sprechblase derselben Figur steht neben der ersten oder darunter und ist mit ihr verbunden (seit 2026-10-26 hat jede
+Sprech-Angabe ihre eigene Blase; vorher fasste der Zeichner sie zusammen und das Wort der zweiten fiel weg; Regeln für die Lage
+in [BILDPROZESS.md](BILDPROZESS.md), «Sprechblasen: feste Prüfungen»);
 Gruppen erscheinen als Menge (drei Figuren vorn, zwei dahinter). Die Legende (`caption_de`) muss beschreiben, was das Zeichen im
 Bild tatsächlich zeigt (gleiche Wörter wie das Merkmal im Bildlexikon), sonst sucht man vergeblich.
 

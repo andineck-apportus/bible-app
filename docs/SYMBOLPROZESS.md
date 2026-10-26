@@ -1,7 +1,7 @@
 # Zeichen, die man erraten kann – Erstellung und Prüfung
 
 Stand 2026-10-23 (Auftrag Andi Neck). Gegenstück zu [BILDPROZESS.md](BILDPROZESS.md) für die Bildzeichen im Lexikon
-(`data/illustrations/lexicon/FIG-ZEICHEN-*`, heute 191). Personen, Orte und Gegenstände folgen denselben Schritten,
+(`data/illustrations/lexicon/FIG-ZEICHEN-*`, heute 191; Stand der Einleitung 2026-10-23, neue Zeichen in den Runden unten). Personen, Orte und Gegenstände folgen denselben Schritten,
 mit strengeren Zielwerten (siehe unten).
 
 ## Ausgangslage
@@ -542,6 +542,40 @@ Vorhandene Zeichen, auf die sich die Zuordnung stützt (gleiche Messung): hören
 (zweimal «zeigt auf Kind → zurechtweisen»), es trägt «selig»; «nicht richten» 0/4 («durchgestrichene Waage →
 Ungerechtigkeit»). Offen: «nicht richten» (vier Stellen) und «selig» brauchen ein besseres Zeichen; die Zeichen in der
 Zelle, als Umriss und im ganzen Bild ohne Legende sind noch nicht geprüft.
+
+### Runde 14 (Ersatzzeichen in Johannes, 2026-10-26)
+
+Anlass (Andi Neck): In den Johannes-Bildern standen Ersatzzeichen – «verkündigen» (Rufer) für «Zeugnis ablegen»,
+«sich ausbreiten / hinausgehen» (Erdkugel mit Fussspuren) für «senden», die Taube bei «Er hauchte sie an» ([[JHN.20.22]]),
+der Keimling für «die Reben» ([[JHN.15.5]]); die zwei Mitgekreuzigten ([[JHN.19.18]], [[JHN.19.32]]) fehlten, weil das
+Lexikon keine Figur für sie hatte. Neu nach «Runde 12: Emoji zuerst» und Stil «einheitlich». Gemessen wie Runde 6c
+(`zeichen_test.py --frage abbild --verteilen --befragen 4 --bewerten`, 32 px, je Fassung vier Instanzen, die Fassungen auf
+getrennte Sätze verteilt). Daten: `reports/zeichen-blindtest-2026-10-26-runde14.json`.
+
+| Zeichen | Fassungen (gezeichnet) | Abbild erkannt | Bedeutung getroffen | gewählt | Urteil |
+|---|---|---|---|---|---|
+| Zeugnis ablegen (`FIG-ZEICHEN-ZEUGNIS`) | 1 Auge + sprechender Kopf · 2 Kopf mit Auge · 3 Auge + erhobene Hand · 4 Hand mit Auge | 8/8 · 4/4 · 4/4 · 4/4 | 0/8 «Prophet, Seher» · 1/4 «sehen» · 0/4 «siehe» · 0/4 «nicht sehen» | 1 | Wortzeichen |
+| senden (`FIG-ZEICHEN-SENDEN`) | 1 Zeigehand + gehende Person · 2 gehende Person mit Zeigehand | 4/4 · 8/8 | 0/4 «du gehst» · 3/8 «senden, gesandt» | 2 | knapp (sonst «hingehen») |
+| anhauchen (`FIG-ZEICHEN-ANHAUCHEN`) | 1 ausatmendes Gesicht · 2 blasende Wolke · 3 Person mit Atemwolke · 4/5 ausatmendes Gesicht + Person(en) | je alle | 0 («seufzen», «Wind, Geist», «Geist, Atem», «Klage», «Trost») | 3 | Wortzeichen |
+| Rebe (`FIG-OBJ-REBE`, eigene Zeichnung) | 1 Zweig mit Weinblatt, Ranke und Traube · 2 Stamm mit abzweigender Rebe | 4/4 · 8/8 | 4/4 · 4/8 (sonst «Weinberg») | 1 | erkannt |
+
+Lehren: Abstrakte Handlungen ohne eigenes Emoji (bezeugen, anhauchen) zerfallen in ihre Teile: Auge + Kopf wird
+«Prophet, Seher», ein ausatmendes Gesicht «seufzen», eine Atemwolke «Geist, Atem». Sie bleiben Wortzeichen und stehen bei den
+Worten (im ganzen Bild Joh 20,19–23 las eine Instanz das Anhauchen-Zeichen neben «Empfangt heiligen Geist!» richtig). Die
+Rebe ist als Zweig mit Blatt erkennbar; ein Stamm daneben macht sie zum «Weinberg».
+
+**Figur «Mitgekreuzigter»** (`FIG-ROLLE-MITGEKREUZIGTER`): neutraler Mann in graubraunem Gewand, ohne Erkennungszeichen und
+ohne Tat (Johannes nennt sie nicht «Räuber»); in Szenen am Kreuz in einfacher Form wie Jesus, aber ohne Tafel und Nimbus,
+mit `twin` zweimal (links und rechts) und mit `far` kleiner im Hintergrund. Blindtest: Das Feld Joh 19,18 ohne Stichwortband
+lasen 3 von 3 Instanzen als «Jesus zwischen den zwei Mitgekreuzigten»; das Porträt allein als «allgemeine männliche Figur»
+(gewollt: keine Merkmale, die eine Tat oder Gruppe zuschreiben). Die Instanzen nannten sie aus der Überlieferung
+«Schächer, Verbrecher».
+
+Ersetzt in den Johannes-Bildaufträgen (Zellen und `_wortzeichen.json`, Legenden nachgeführt): «verkündigen» und «zeigen», wo
+Zeugnis gemeint ist (u. a. [[JHN.1.7]], [[JHN.5.31-JHN.5.39]], [[JHN.8.13]], [[JHN.15.26-JHN.15.27]], [[JHN.19.35]],
+[[JHN.21.24]]); «hinausgehen» bei «so sende auch ich euch» ([[JHN.20.21]]); Taube → anhauchen ([[JHN.20.22]]); Keimling →
+Rebe ([[JHN.15.5]]). Die Mitgekreuzigten stehen in [[JHN.19.18]] (Feld 2), [[JHN.19.31-JHN.19.34]] und im Kapitelbild
+Joh 19 (Feld 3) im Bild.
 
 ### Reihenfolge der Überarbeitung
 

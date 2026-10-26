@@ -101,7 +101,9 @@ Was gut funktioniert: die festen Erkennungszeichen (Gott, Jesus, Geist) und der 
      Strukturanalyse (noch alte Verdichtung) werden als «offen» gemeldet und beim Ausrollen neu gemacht; neue Bilder
      entstehen nur noch nach der Strukturanalyse.
    - **Anordnung im Browser** (`scripts/authoring/pruefe_bilder.py`, de und gsw): Text ragt nicht über die Zellen der
-     Strukturbilder, Beschriftungen von Pfeilen und Zweigen überdecken nichts (Hinweis Andi Neck 2026-10-24).
+     Strukturbilder, Beschriftungen von Pfeilen und Zweigen überdecken nichts (Hinweis Andi Neck 2026-10-24); Sprechblasen
+     mit kurzer, steiler Spitze, nicht über wichtigen Teilen, jede Sprech-Angabe als Blase (seit 2026-10-26, siehe
+     «Sprechblasen: feste Prüfungen» unten).
    - **Sichtprüfung der Anordnung** (Leitlinie 9 bis 11): keine Blase und kein Pfeil über Gesicht, Zeichen oder Gegenstand;
      Thema der Stelle im Bild genannt; Gedanken als Wolke erkennbar; Tod, Trauer, Gewalt, Böses und Gericht, die der Text
      nennt, sind zu sehen oder ihr Fehlen ist begründet.
@@ -197,3 +199,44 @@ Grenzen der Messung:
 
 
 **Anordnung immer geprüft (2026-10-25):** `bilder_anime.py` ruft nach dem Zeichnen `pruefe_bilder.py` auf (Zellen und alle Kästen: Stichwortband, Titelblase, Köpfe, Namensschild; Text und Zeichen im Rahmen, ohne Überdeckung) und bricht bei Befunden ab. Überspringen nur bewusst mit `BIBLE_SKIP_LAYOUT_CHECK=1`.
+
+## Sprechblasen: feste Prüfungen (seit 2026-10-26, Hinweis Andi Neck)
+
+Anlass: lange, schräge Spitzen quer durchs Bild (Joh 17,1–5; 18,39–40; 19,4–7; 19,13–16; 21,20–23), Blasen auf der
+Kreuzestafel (Joh 19,25–30, Kapitel Joh 19) und eine fehlende zweite Blase derselben Figur (Kapitelbild Mt 22, Feld 3).
+`pruefe_bilder.py` prüft für alle Bilder, de und gsw, zusätzlich zu den bisherigen Regeln (Blase über Zeichen, Gesicht oder
+Gegenstand; Blasen überlappen; Spitze hinter einer anderen Blase):
+
+| Prüfung | Regel | Messung |
+|---|---|---|
+| Spitze zu lang | höchstens 36 Feldeinheiten (Feld 186 × 140; in der App etwa 1,8 px je Einheit, also rund 65 px) | Ansatz der Spitze wie in `_bubble.bubble_path` bis zur Spitze (`data-box`, `data-tail`) |
+| Spitze zu flach | ab 25 Einheiten Länge nicht flacher als 35° zur Waagrechten | wie oben; kurze Spitzen zur Seite (z. B. in den Strahlenkranz) bleiben erlaubt |
+| Wichtige Teile | keine Blase und keine Spitze über der Kreuzestafel und anderen Teilen mit `class="ill-wichtig"`; keine Spitze über Zeichen und Gegenständen (ausser dem, an dem sie endet) | Rechtecke im Feld |
+| Jede Sprech-Angabe gezeichnet | Zahl der Blasen je Feld = Zahl der `speech`-Einträge im Bildauftrag | `<g class="ill-sp" data-n>` je Feld, `data-speech` (Index) an jeder Blase; auch Denkblasen |
+
+Die Schwellen sind nach Ansicht gerenderter Beispiele gesetzt: Vorher massen 90 % der Spitzen höchstens 44 Einheiten,
+die bemängelten 41–62 Einheiten; 36 lässt kurze Spitzen über dem Kopf zu.
+
+**Zeichner (`bilder_auto.Composer.place_bubbles`):** Die Lage jeder Blase wird gesucht, nicht nachgeschoben. Jede
+Sprech-Angabe wird eine eigene Blase (früher fasste der Zeichner zwei Angaben derselben Figur in eine Blase, das Wort der
+zweiten fiel weg); zwei Angaben derselben Figur bilden ein verbundenes Paar (nebeneinander, die zweite rechts, oder
+untereinander, die obere zeigt auf die untere). Feste Regeln: keine Blase über einem Gesicht (auch dem eigenen; bei Gruppen
+mit den hinteren Köpfen), Zeichen, Gegenstand, der Kreuzestafel, dem Strahlenkranz oder einer anderen Blase, Orte im
+Hintergrund höchstens zu 15 % verdeckt; Spitze höchstens 33 Einheiten, ab 22 Einheiten mindestens 38° steil, nicht durch
+Gesichter, Zeichen oder die Tafel, Spitzen kreuzen sich nicht. Die Spitze setzt am Scheitel oder seitlich am Kopf an (am
+Kreuz steht die Tafel über dem Kopf). Unter den gültigen Lagen gewinnt die kürzeste Spitze nahe beim Sprecher, in Leserichtung
+(spätere Blase nicht links über einer früheren). Ist kein Platz, wird das Wort schmaler umbrochen (zwei oder drei Zeilen),
+die Blase kleiner (bis 54 %) oder die Blasen stehen nebeneinander statt übereinander. Felder mit zwei Sprech-Angaben zeichnen
+die Personen etwas kleiner (wie bei drei Personen), damit über den Köpfen Platz bleibt. Reicht das nicht, gelten zwei
+Ausweichstufen: Gruppen nur mit dem vorderen Kopf und Spitzen bis knapp unter die Prüfgrenze; zuletzt Wortblasen ohne die
+Zeichen daneben (Kernwort genügt), bis 50 % und vier Zeilen. Freie Zeichen (z. B. Wolken der Finsternis) weichen den
+Spitzen aus. Stand 2026-10-26: alle Felder finden eine regelgerechte Lage, 13 Felder in Matthäus nur auf der letzten Stufe
+(Zeichen neben dem Wort entfallen dort). Befunde vorher 146 je Sprache (126 zu lange Spitzen, 2 zu flache, 9 Blasen und
+3 Spitzen über der Kreuzestafel, 4 Spitzen über Zeichen, 1 hinter einer Blase, 1 fehlende Blase), nachher 0.
+
+Neue Hinweise an den Zeichner: `twin: {FIG: x}` zeichnet eine zweite gleiche Figur (die zwei Mitgekreuzigten, [[JHN.19.18]]),
+`far: [FIG]` stellt eine Figur kleiner in den Hintergrund ([BILDAUFTRAEGE-ANLEITUNG.md](BILDAUFTRAEGE-ANLEITUNG.md)).
+
+Grenzen: Die Prüfung misst Rechtecke und gerade Strecken, nicht den Eindruck; ob eine Blase gut zum Sprecher gehört, zeigt
+nur die Sichtprüfung. Die von Hand gezeichneten Bilder (Kana, obere Ebenen) haben keine Zählmarke; dort prüft nur die
+Länge und Lage der Spitzen.

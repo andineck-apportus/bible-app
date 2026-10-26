@@ -15,6 +15,7 @@ Handgezeichnete Bilder (Johannes 2, obere Ebenen) bleiben in bilder_symbol.py un
 KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.
 """
 import json
+import os
 import re
 import math
 import pathlib
@@ -279,15 +280,35 @@ def split2(s, fs, maxw):
     return [" ".join(ws[:best]), " ".join(ws[best:])]
 
 
-def lwrap(v, fs, maxw):
-    """Zeilen je Sprache, Breite der breitesten Zeile und grösste Zeilenzahl."""
-    lines = {k: split2(s, fs, maxw) for k, s in _lab(v).items()}
+def splitn(s, fs, maxw, n):
+    """Wie split2, aber bis n Zeilen: so wenige Zeilen wie möglich, sonst n möglichst gleich lange (Sprechblasen, 2026-10-26)."""
+    if n <= 2:
+        return split2(s, fs, maxw)
+    ws = s.split(" ")
+    best = None
+    for k in range(1, min(n, len(ws)) + 1):
+        import itertools
+        for cuts in itertools.combinations(range(1, len(ws)), k - 1):
+            b = [0, *cuts, len(ws)]
+            ls = [" ".join(ws[b[i]:b[i + 1]]) for i in range(k)]
+            m = max(text_w(x, fs) for x in ls)
+            if best is None or (m <= maxw and (best[0] > maxw or len(ls) < len(best[1]) or (len(ls) == len(best[1]) and m < best[0]))) \
+                    or (best[0] > maxw and m < best[0]):
+                best = (m, ls)
+        if best[0] <= maxw:
+            break
+    return best[1]
+
+
+def lwrap(v, fs, maxw, n=2):
+    """Zeilen je Sprache, Breite der breitesten Zeile und grösste Zeilenzahl (höchstens n Zeilen)."""
+    lines = {k: splitn(s, fs, maxw, n) for k, s in _lab(v).items()}
     return lines, max(text_w(x, fs) for ls in lines.values() for x in ls), max(len(ls) for ls in lines.values())
 
 
-def ltext_ml(x, yc, v, fs, maxw, weight="700", fill="#3B3226"):
-    """Text um die Mitte yc, bei Bedarf auf zwei Zeilen umbrochen (je Sprache)."""
-    lines, _, _ = lwrap(v, fs, maxw)
+def ltext_ml(x, yc, v, fs, maxw, weight="700", fill="#3B3226", n=2):
+    """Text um die Mitte yc, bei Bedarf auf zwei (bis n) Zeilen umbrochen (je Sprache)."""
+    lines, _, _ = lwrap(v, fs, maxw, n)
     lh = fs * 1.15
     out = []
     same = len({tuple(ls) for ls in lines.values()}) == 1
@@ -397,6 +418,7 @@ def zeichen(comp, wo, v, cands=(), auto=True):
 
 NW_FEHLT = []  # (Bild, Worte) ohne Zeichen im Modus «ohne Worte»
 CUR_ID = [""]
+BUBBLE_FAIL = []  # Felder, in denen keine Blasenlage alle Regeln erfüllt (Ausgabe in bilder_anime.run)
 
 
 def _plain(v):
@@ -498,7 +520,7 @@ def name_tag(x, y, v):
             + ltext(x, y, v, fs) + "</g>")
 
 
-def think_bubble(x, y, w, h, tx, ty, inner):
+def think_bubble(x, y, w, h, tx, ty, inner, attrs=""):
     """Denkblase als deutliche Wolke: Bögen rundum und drei kleiner werdende Kreise zur denkenden Figur (Hinweis Andi Neck
     2026-10-24: als Gedankenwolke erkennbar, nicht wie eine Sprechblase mit Rand)."""
     sw, col = 2.0, "#3B3226"
@@ -515,7 +537,8 @@ def think_bubble(x, y, w, h, tx, ty, inner):
         pts += [(x + r * .55, py), (x + w - r * .55, py)]
     ring = "".join(f'<circle cx="{px:.1f}" cy="{py:.1f}" r="{r:.1f}" fill="#FFFFFF" stroke="{col}" stroke-width="{sw}"/>' for px, py in pts)
     fill = "".join(f'<circle cx="{px:.1f}" cy="{py:.1f}" r="{r - sw / 2:.1f}" fill="#FFFFFF"/>' for px, py in pts)
-    core = f'<rect x="{x + r * .55:.1f}" y="{y + r * .55:.1f}" width="{w - r * 1.1:.1f}" height="{h - r * 1.1:.1f}" fill="#FFFFFF"/>'
+    core = (f'<rect x="{x + r * .55:.1f}" y="{y + r * .55:.1f}" width="{w - r * 1.1:.1f}" height="{h - r * 1.1:.1f}" fill="#FFFFFF" '
+            f'data-box="{x:.1f},{y:.1f},{w:.1f},{h:.1f}" data-tail="{tx:.1f},{ty:.1f}" data-think="1"{attrs}/>')
     # Kreise zur Figur: vom unteren Wolkenrand Richtung Kopf, enden knapp über dem Kopf
     ox, oy = min(max(tx, x + w * .25), x + w * .75), y + h + r * .3
     dots = "".join(f'<circle cx="{ox + (tx - ox) * f:.1f}" cy="{oy + (ty - 4 - oy) * f:.1f}" r="{rr}" fill="#FFFFFF" stroke="{col}" stroke-width="1.6"/>'
@@ -599,6 +622,397 @@ class Composer:
         sx, sy, bulge = best[2]
         return sx, sy, x2, y2, bulge
 
+    # Grenzen für Spitzen (Feldeinheiten; pruefe_bilder.py meldet ab 36 bzw. ab 25 Einheiten flacher als 35°): der Zeichner hält
+    # etwas Abstand zu den Prüfgrenzen
+    TAIL_MAX, TAIL_FLAT, TAIL_ANG = 33, 22, 38
+    BUB_SCALES = (1, .92, .84, .76, .68, .6, .54)
+
+    def _tail(self, x, y, w, h, tx, ty):
+        """Ansatz und Masse der Spitze wie in _bubble.bubble_path: (Ansatz x, Ansatz y, Länge, Winkel zur Waagrechten)."""
+        R, HALF = getattr(self, "bub_r", (12, 5))
+        dx = tx - min(max(tx, x), x + w)
+        dy = ty - min(max(ty, y), y + h)
+        side = ("b" if dy > 0 else "t") if abs(dy) >= abs(dx) else ("r" if dx > 0 else "l")
+        bx = min(max(tx, x + R + HALF), x + w - R - HALF)
+        by = min(max(ty, y + R + HALF), y + h - R - HALF)
+        px, py = {"b": (bx, y + h), "t": (bx, y), "l": (x, by), "r": (x + w, by)}[side]
+        L_ = math.hypot(tx - px, ty - py)
+        return px, py, L_, math.degrees(math.atan2(abs(ty - py), abs(tx - px) or 1e-9))
+
+    @staticmethod
+    def _seg_hits(x1, y1, x2, y2, box, m=0.0, n=24):
+        bx, by, bw, bh = box
+        return any(bx + m < x1 + (x2 - x1) * k / n < bx + bw - m and by + m < y1 + (y2 - y1) * k / n < by + bh - m for k in range(1, n))
+
+    @staticmethod
+    def _cross(a, b):
+        """Schneiden sich die Strecken a und b (je x1, y1, x2, y2)?"""
+        def o(p, q, r):
+            return (q[0] - p[0]) * (r[1] - p[1]) - (q[1] - p[1]) * (r[0] - p[0])
+        p1, p2, p3, p4 = a[:2], a[2:], b[:2], b[2:]
+        return o(p1, p2, p3) * o(p1, p2, p4) < 0 and o(p3, p4, p1) * o(p3, p4, p2) < 0
+
+    def place_bubbles(self, L, st, heads, sky, pos, p):
+        """Lage aller Sprech- und Denkblasen eines Felds (Abschnitt 10 in panel). Gibt (placed, drawn) zurück:
+        placed = [(x, Breite, Unterkante, Höhe)], drawn = [(x, y, w, h, Spitze x, Spitze y, Inhalt, Denkblase, Index[, Folgeblase])].
+
+        Ablauf: Jede Sprech-Angabe wird eine Blase; zwei Angaben derselben Figur bilden ein verbundenes Paar (nebeneinander
+        oder untereinander). Für alle Einheiten eines Felds wird je Grösse (gross zuerst, alle gleich gross) die Lage gesucht,
+        die alle Regeln erfüllt und die kürzesten Spitzen nahe beim Sprecher hat:
+        - keine Blase über einem Gesicht (auch dem eigenen, bei Gruppen mit den hinteren Köpfen), Zeichen, Gegenstand, der
+          Kreuzestafel, dem Strahlenkranz oder einer anderen Blase; die Feldnummer bleibt frei;
+        - Spitze höchstens TAIL_MAX lang, ab TAIL_FLAT nicht flacher als TAIL_ANG; nicht hinter einer Blase, nicht durch
+          Gesichter, Zeichen oder die Tafel, keine zwei Spitzen kreuzen sich."""
+        r = self.head_r()
+        ih0 = self.icon_h()
+        WMAX = 104  # breiter: zweizeilig statt kleiner (Hinweis Andi Neck 2026-10-23)
+        VARIANTS = [(WMAX, 2), (66, 2), (84, 3)]
+        V4 = (88, 4)  # nur auf der letzten Stufe: vier Zeilen
+        group = lambda f: f.startswith("FIG-GRUPPE-") or f in GROUPS  # noqa: E731
+        ess = list(getattr(self, "ess", []))
+
+        def face(f, relax):
+            hx, hy = heads[f]
+            if group(f) and f not in L["inside"] and not relax:  # Gruppe mit den hinteren Köpfen (Hinweis Andi Neck 2026-10-26)
+                return (hx - r * 2.05, hy - r * 2.1, r * 4.1, r * 3.15)
+            return (hx - r * 1.1, hy - r * 1.3, r * 2.2, r * 2.4)
+
+        # Einheiten: (Liste der Angaben, Ziele der Spitze); Ziele: Scheitel oder seitlich am Kopf (am Kreuz steht die Tafel darüber)
+        def build(strip):
+          items = []
+          for si, sp in enumerate(L["speech"]):
+            sp = dict(sp)
+            if sp.get("word") and "§W" not in sp["icons"]:  # Kernwort in der Sprechblase, vor höchstens zwei Zeichen
+                sp["icons"] = ["§W"] + list(sp["icons"])
+            if strip and sp.get("word"):  # letzte Stufe: nur das Wort, ohne Zeichen daneben
+                sp["icons"] = ["§W"]
+            # Fassungen des Worts: Zeilenbreite und höchstens 2 oder 3 Zeilen (schmaler und höher statt kleiner)
+            ws, hb = {}, {}
+            for V in VARIANTS + [V4]:
+                ws[V] = [lwrap(sp["word"], 10, V[0], V[1])[1] if i == "§W" else icon_w(self.vb(i), ih0) for i in sp["icons"]]
+                nl = lwrap(sp["word"], 10, V[0], V[1])[2] if sp.get("word") else 1
+                hb[V] = max(ih0, nl * 11.5 + 1)
+            f = sp["from"]
+            if f in sky:
+                tg = None
+            elif f in heads:
+                hx, hy = heads[f]
+                tg = [(hx, hy - r, 0), (hx - r * 1.08, hy - r * .35, 4), (hx + r * 1.08, hy - r * .35, 4)]
+            elif f in pos:  # sprechendes Bauteil (z. B. Satan als Schatten): Spitze an den oberen Rand
+                tx, ty = pos[f]
+                tg = [(tx, ty - self.m(f)[1][1] * .4, 0)]
+            else:
+                continue
+            items.append(dict(sp=sp, si=si, ws=ws, hb=hb, tg=tg, f=f))
+          units, used = [], set()
+          for k, it in enumerate(items):
+            if k in used:
+                continue
+            mate = next((j for j in range(k + 1, len(items)) if j not in used and items[j]["f"] == it["f"] and it["tg"] is not None
+                         and bool(items[j]["sp"].get("think")) == bool(it["sp"].get("think"))), None)
+            if mate is not None:
+                used.add(mate)
+                units.append([it, items[mate]])
+            else:
+                units.append([it])
+          return items, units
+        items, units = build(False)
+
+        def dims(it, V, sc):
+            return sum(it["ws"][V]) * sc + 5 * (len(it["ws"][V]) - 1) + 12, it["hb"][V] * sc + 12
+
+        # Grössen: Massstab und Zeilenbreite des Worts (schmaler umbrochen, zweizeilig, statt kleiner)
+        LEVELS = [(sc, V) for sc in self.BUB_SCALES for V in VARIANTS]
+
+        def box_ok(x, y, w, h, statics, relax):
+            if x < 5 or x + w > W - 5 or y < 5 or y + h > H - 15:
+                return False
+            if y < 25 and x < 27:  # Feldnummer oben links frei lassen
+                return False
+            for f in heads:
+                ex, ey, ew, eh = face(f, relax)
+                if x < ex + ew and x + w > ex and y < ey + eh and y + h > ey:
+                    return False
+            for ex, ey, ew, eh in ess:
+                if x < ex + ew - 1 and x + w > ex + 1 and y < ey + eh - 1 and y + h > ey + 1:
+                    return False
+            for ex, ey, ew, eh in getattr(self, "soft", []):  # wie pruefe_bilder.py: höchstens 15 % eines kleineren Teils
+                if ew * eh <= w * h and max(0, min(x + w, ex + ew) - max(x, ex)) * max(0, min(y + h, ey + eh) - max(y, ey)) > .15 * ew * eh:
+                    return False
+            for gx, gy, gw, gh in list(sky.values()):
+                if x < gx + gw + 4 and x + w > gx - 4 and y < gy + gh + 2 and y + h > gy - 2:
+                    return False
+            for b in statics:  # Blasen Gottes (fest gesetzt)
+                if x < b["x"] + b["w"] + 4 and x + w > b["x"] - 4 and y < b["y"] + b["h"] + 3 and y + h > b["y"] - 3:
+                    return False
+                if self._seg_hits(b["bx"], b["by"], b["tip"][0], b["tip"][1], (x, y, w, h), 1):
+                    return False
+            return True
+
+        def tail_ok(x, y, w, h, tx, ty, own, statics, relax):
+            px, py, L_, ang = self._tail(x, y, w, h, tx, ty)
+            tmax, tflat, tang = (self.TAIL_MAX, self.TAIL_FLAT, self.TAIL_ANG) if not relax else (35, 24, 36)  # knapp unter den Prüfgrenzen
+            if L_ < 5 or L_ > tmax or (L_ > tflat and ang < tang):
+                return None
+            if x - 1 < tx < x + w + 1 and y - 1 < ty < y + h + 1:
+                return None
+            for b in statics:
+                if self._seg_hits(px, py, tx, ty, (b["x"], b["y"], b["w"], b["h"]), 1) or self._cross((px, py, tx, ty), (b["bx"], b["by"], *b["tip"])):
+                    return None
+            for f, (hx, hy) in heads.items():  # nicht durch fremde Gesichter
+                if f != own and self._seg_hits(px, py, tx, ty, (hx - r * .95, hy - r * 1.1, r * 1.9, r * 2.1)):
+                    return None
+            for e in ess:  # nicht über Zeichen, Gegenstände und die Kreuzestafel (ausser dem, an dem sie endet)
+                ex, ey, ew, eh = e
+                if ex - 3 < tx < ex + ew + 3 and ey - 3 < ty < ey + eh + 3:
+                    continue
+                if self._seg_hits(px, py, tx, ty, e, min(ew, eh) * .15):
+                    return None
+            return px, py, L_, ang
+
+        def god(it):
+            """Blase Gottes nahe beim Strahlenkranz, Spitze reicht hinein; nicht über anderen Zeichen am Himmel (z. B. der Taube),
+            Gesichtern oder Zeichen; Spitze kurz und nicht flach (wie bei Menschen)."""
+            gx, gy, gw, gh = sky[it["f"]]
+            ws = it["ws"][VARIANTS[0]]
+            others = [b for k2, b in sky.items() if k2 != it["f"]]
+            best = None
+            for sc in (1, .9, .8, .7, .6, .5):
+                w, h = dims(it, VARIANTS[0], sc)
+                for y in range(5, 76, 3):
+                    for x in range(5, int(W - 5 - w) + 1, 3):
+                        if y < 25 and x < 27:
+                            continue
+                        if x < gx + gw + 2 and x + w > gx - 2 and y < gy + gh + 2 and y + h > gy - 2:
+                            continue
+                        tx, ty = (gx + gw * .78, gy + gh / 2) if x + w / 2 > gx + gw / 2 else (gx + gw * .22, gy + gh / 2)  # Spitze reicht in den Strahlenkranz
+                        px, py, L_, ang = self._tail(x, y, w, h, tx, ty)
+                        if L_ > self.TAIL_MAX or (L_ > self.TAIL_FLAT and ang < self.TAIL_ANG):
+                            continue
+                        if any(x < ox + ow + 3 and x + w > ox - 3 and y < oy + oh + 2 and y + h > oy - 2 or self._seg_hits(px, py, tx, ty, (ox, oy, ow, oh))
+                               for ox, oy, ow, oh in others):
+                            continue
+                        if any(x < ex + ew - 1 and x + w > ex + 1 and y < ey + eh - 1 and y + h > ey + 1 for ex, ey, ew, eh in ess if (ex, ey, ew, eh) != (gx, gy, gw, gh)):
+                            continue
+                        if any(x < fx + fw and x + w > fx and y < fy + fh and y + h > fy for fx, fy, fw, fh in (face(f, 0) for f in heads)):
+                            continue
+                        c = (1 - sc) * 50 + abs(L_ - 18) + (y - 5) * .2
+                        if best is None or c < best[0]:
+                            best = (c, dict(it=it, x=x, y=y, w=w, h=h, sc=sc, V=VARIANTS[0], tip=(tx, ty), bx=px, by=py))
+                if best is not None:
+                    break
+            if best is None:  # wie früher: rechts bzw. links neben dem Strahlenkranz (pruefe_bilder.py meldet Befunde)
+                w, h = dims(it, VARIANTS[0], .6)
+                x = max(28, min(W - 5 - w, gx + gw + 14 if gx < W / 2 else gx - w - 14))
+                tx, ty = (gx + gw * .78, gy + gh / 2) if gx < W / 2 else (gx + gw * .22, gy + gh / 2)
+                px, py, _, _ = self._tail(x, 8, w, h, tx, ty)
+                BUBBLE_FAIL.append((CUR_ID[0], "Gott"))
+                return dict(it=it, x=x, y=8, w=w, h=h, sc=.6, V=VARIANTS[0], tip=(tx, ty), bx=px, by=py)
+            return best[1]
+
+        statics = [god(u[0]) for u in units if u[0]["tg"] is None]
+        free_units = [u for u in units if u[0]["tg"] is not None]
+
+        def cands(u, lv, relax):
+            """Gültige Lagen einer Einheit gegen das Feste (Gesichter, Zeichen, Gott), beste zuerst: [(Kosten, [Blasen])]."""
+            out_ = []
+            pref_y = st.get("bubble_y")
+            own = u[0]["f"]
+            hy_own = heads[own][1] if own in heads else H
+            sc, V = lv
+            if V != VARIANTS[0] and not any(it["sp"].get("word") for it in u):
+                return []  # ohne Wort keine andere Fassung
+            sz = [dims(it, V, sc) for it in u]
+            # Anordnungen: einzeln; Paar nebeneinander (Spitze an der linken oder rechten Blase) oder untereinander
+            if len(u) == 1:
+                lays = [((0, 0),)]
+            else:
+                (w1, h1), (w2, h2) = sz
+                hh = max(h1, h2)
+                lays = [((0, (hh - h1) / 2), (w1 + 6, (hh - h2) / 2), 0), ((0, (hh - h1) / 2), (w1 + 6, (hh - h2) / 2), 1)]
+                for dx2 in {0, (w1 - w2) / 2, w1 - w2}:
+                    lays.append(((max(0, -dx2), 0), (max(0, dx2), h1 + 6), 1))
+            for lay in lays:
+                offs = lay[:len(u)]
+                ti = lay[len(u)] if len(u) > 1 else 0  # Blase mit der Spitze zum Sprecher
+                bw_ = max(o[0] + s_[0] for o, s_ in zip(offs, sz))
+                bh_ = max(o[1] + s_[1] for o, s_ in zip(offs, sz))
+                tw, th = sz[ti]
+                for tx, ty, pen in u[0]["tg"]:
+                    ox, oy = offs[ti]
+                    x0, x1 = max(5, int(tx - self.TAIL_MAX - tw - ox)), min(int(W - 5 - bw_), int(tx + self.TAIL_MAX - ox))
+                    y0, y1 = max(5, int(ty - self.TAIL_MAX - th - oy)), min(int(H - 15 - bh_), int(ty + self.TAIL_MAX - oy))
+                    for y in range(y0, y1 + 1, 2):
+                        if y + bh_ > hy_own + r * .5:
+                            continue  # nicht tiefer als der Kopf des Sprechers
+                        for x in range(x0, x1 + 1, 2):
+                            bs = [(x + o[0], y + o[1], s_[0], s_[1]) for o, s_ in zip(offs, sz)]
+                            if not all(box_ok(*b_, statics, relax) for b_ in bs):
+                                continue
+                            t = tail_ok(*bs[ti], tx, ty, own, statics, relax)
+                            if not t:
+                                continue
+                            c = abs(t[2] - 15) + .12 * abs(bs[ti][0] + bs[ti][2] / 2 - tx) + pen + (1 - sc) * 50 + (VARIANTS + [V4]).index(V) * 2
+                            # zur angesprochenen Person hin (Blindtest 2026-10-26: «Frau, siehe, dein Sohn!» stand beim Jünger)
+                            for it_, b_ in zip(u, bs):
+                                to_ = it_["sp"].get("to")
+                                if to_ in heads and to_ != own:
+                                    c += .06 * abs(b_[0] + b_[2] / 2 - heads[to_][0])
+                            if pref_y is not None:
+                                c += abs(y - pref_y) * .3
+                            if len(u) > 1:
+                                c += 0 if lay[1][1] == lay[0][1] or lay[1][0] > 0 else 2  # nebeneinander leicht bevorzugt
+                            blist = []
+                            for j, (it, b_) in enumerate(zip(u, bs)):
+                                d = dict(it=it, x=b_[0], y=b_[1], w=b_[2], h=b_[3], sc=sc, V=V)
+                                if j == ti:
+                                    d.update(tip=(tx, ty), bx=t[0], by=t[1])
+                                blist.append(d)
+                            if len(u) > 1:  # verbundene Blase: kurze Spitze an den Rand der Blase mit der Spitze
+                                a, o_ = blist[ti], blist[1 - ti]
+                                if abs(o_["y"] - a["y"]) < 1e-6 or o_["y"] < a["y"] + a["h"] / 2 and o_["y"] + o_["h"] > a["y"]:
+                                    ex_ = a["x"] + .5 if o_["x"] + o_["w"] <= a["x"] + 1 else a["x"] + a["w"] - .5
+                                    my = max(a["y"], o_["y"]) + (min(a["y"] + a["h"], o_["y"] + o_["h"]) - max(a["y"], o_["y"])) / 2
+                                    o_.update(tip=(ex_, my), link=True)
+                                else:  # untereinander: obere Blase zeigt auf die untere
+                                    o_.update(tip=(a["x"] + a["w"] / 2 if abs(a["x"] + a["w"] / 2 - (o_["x"] + o_["w"] / 2)) < o_["w"] / 2 - 14 else o_["x"] + o_["w"] / 2, a["y"] + .5), link=True)
+                                o_["bx"], o_["by"] = self._tail(o_["x"], o_["y"], o_["w"], o_["h"], *o_["tip"])[:2]
+                            out_.append((c, blist))
+            out_.sort(key=lambda z: z[0])
+            res, seen = [], []
+            for c, bl in out_:  # verschiedene Lagen (sonst nur Nachbarn derselben Lage)
+                b0 = bl[0]
+                if any(abs(b0["x"] - s_["x"]) < 5 and abs(b0["y"] - s_["y"]) < 5 for s_ in seen):
+                    continue
+                seen.append(b0)
+                res.append((c, bl))
+                if len(res) >= 90:
+                    break
+            return res
+
+        def compatible(A, B):
+            for a in A:
+                for b in B:
+                    if a["x"] < b["x"] + b["w"] + 4 and a["x"] + a["w"] > b["x"] - 4 and a["y"] < b["y"] + b["h"] + 3 and a["y"] + a["h"] > b["y"] - 3:
+                        return False
+            for P, Q in ((A, B), (B, A)):
+                for a in P:
+                    if not a.get("tip") or a.get("link"):
+                        continue
+                    for b in Q:
+                        if self._seg_hits(a["bx"], a["by"], a["tip"][0], a["tip"][1], (b["x"], b["y"], b["w"], b["h"]), 1):
+                            return False
+                        if b.get("tip") and not b.get("link") and self._cross((a["bx"], a["by"], *a["tip"]), (b["bx"], b["by"], *b["tip"])):
+                            return False
+            return True
+
+        def order_pen(A, B):
+            """Leserichtung: eine spätere Einheit steht nicht links über einer früheren."""
+            a, b = A[0], B[0]
+            if b["x"] + b["w"] / 2 < a["x"] + a["w"] / 2 - 4:
+                return 25 if b["y"] + b["h"] < a["y"] + a["h"] / 2 else 10
+            return 15 if b["y"] + b["h"] < a["y"] + a["h"] / 2 else 0  # spätere ganz über der früheren
+
+        def search(lists):
+            best = [None, 1e9]
+            mins = [min((c for c, _ in l_), default=1e9) for l_ in lists]
+
+            def rec(k, chosen, cost):
+                if cost + sum(mins[k:]) >= best[1]:
+                    return
+                if k == len(lists):
+                    best[:] = [list(chosen), cost]
+                    return
+                for c, bl in lists[k]:
+                    if cost + c + sum(mins[k + 1:]) >= best[1]:
+                        break
+                    if all(compatible(bl, ch) for ch in chosen):
+                        rec(k + 1, chosen + [bl], cost + c + sum(order_pen(ch, bl) for ch in chosen))
+            rec(0, [], 0)
+            return best[0]
+
+        sol, how = None, ""
+        if free_units:
+            cache = {}
+
+            def cl(i, lv, relax):
+                if (i, lv, relax) not in cache:
+                    cache[(i, lv, relax)] = cands(free_units[i], lv, relax)
+                return cache[(i, lv, relax)]
+            # Stufen: 0 streng; 1 Gruppen nur mit dem vorderen Kopf, Spitzen bis knapp unter die Prüfgrenze; 2 dazu Wortblasen
+            # ohne die Zeichen daneben (Kernwort genügt, BILDPROZESS.md)
+            for relax in (0, 1, 2):
+                if relax == 2:
+                    items, units = build(True)
+                    statics = [god(u[0]) for u in units if u[0]["tg"] is None]
+                    free_units = [u for u in units if u[0]["tg"] is not None]
+                    cache.clear()
+                found = None
+                levels = LEVELS + ([(sc, V4) for sc in self.BUB_SCALES] + [(.5, V) for V in VARIANTS + [V4]] if relax == 2 else [])
+                for n_, lv in enumerate(levels):
+                    if found is not None and n_ > found + 3:
+                        break  # nach der ersten Lösung noch drei kleinere Stufen vergleichen (kürzere Spitze kann besser sein)
+                    lists = []
+                    for i in range(len(free_units)):  # jede Einheit wählt ihre Grösse selbst (bis zu dieser Stufe)
+                        m_ = sorted((c for l2 in levels[:n_ + 1] for c in cl(i, l2, relax)[:30]), key=lambda z: z[0])
+                        lists.append(m_)
+                    if os.environ.get("BIBLE_BUBBLE_DEBUG") == "3":
+                        print("  Stufe", lv, relax, [[(round(c), [(round(b["x"]), round(b["y"]), round(b["w"]), round(b["h"])) for b in bl]) for c, bl in cl(i, lv, relax)[:6]] for i in range(len(free_units))])
+                    if os.environ.get("BIBLE_BUBBLE_DEBUG") == "2":
+                        print("  Stufe", lv, relax, [len(l_) for l_ in lists], [[(round(c), [(round(b["x"]), round(b["y"]), round(b["w"]), round(b["h"]), b.get("tip")) for b in bl]) for c, bl in l_[:4]] for l_ in lists])
+                    if all(lists):
+                        s_ = search(lists)
+                        if s_ is not None:
+                            cost = sum(c for i, bl in enumerate(s_) for c, b2 in lists[i] if b2 is bl)
+                            if sol is None or cost < sol[1]:
+                                sol, how = (s_, cost), f"{lv} Stufe {relax}"
+                            if found is None:
+                                found = n_
+                if sol is not None:
+                    sol = sol[0]
+                    break
+            if sol is None:  # keine Lage erfüllt alle Regeln: über dem Sprecher (pruefe_bilder.py meldet den Befund)
+                how = "ohne Lösung"
+                sol = []
+                for u in free_units:
+                    bl, y = [], None
+                    for it in u:
+                        w, h = dims(it, VARIANTS[0], .6)
+                        tx, ty, _ = it["tg"][0]
+                        y = max(5, ty - h - 16) if y is None else y - h - 6
+                        bl.append(dict(it=it, x=max(28, min(W - 5 - w, tx - w / 2)), y=y, w=w, h=h, sc=.6, V=VARIANTS[0], tip=(tx, ty)))
+                    sol.append(bl)
+        if items and os.environ.get("BIBLE_BUBBLE_DEBUG"):
+            print("BLASEN", CUR_ID[0], how, [[(round(b["x"]), round(b["y"]), round(b["w"]), round(b["h"]), b["sc"], b["V"], b.get("tip"), b.get("bx"), b.get("by")) for b in bl] for bl in (sol or [])])
+        if how == "ohne Lösung":
+            BUBBLE_FAIL.append((CUR_ID[0], len(items)))
+        allb = statics + [b for bl in (sol or []) for b in bl]
+        allb.sort(key=lambda b: b["it"]["si"])
+        placed, drawn = [], []
+        for b in allb:
+            sp, si = b["it"]["sp"], b["it"]["si"]
+            sc, V = b["sc"], b["V"]
+            wm, nl = V
+            ws = [w * sc for w in b["it"]["ws"][V]]
+            ih = ih0 * sc  # Zeichen
+            th = b["it"]["hb"][V] * sc  # Textfeld (bis drei Zeilen)
+            bx, by, bw, bh = b["x"], b["y"], b["w"], b["h"]
+            inner, x = [], bx + 6
+            for i, w in zip(sp["icons"], ws):
+                if i == "§W":
+                    fs_ = min(10, 10 * w / max(1, lwrap(sp["word"], 10, wm, nl)[1]))
+                    own = [j for j in sp["icons"] if j != "§W"]
+                    mi = [j for j in zeichen(self, "sprechblase", sp["word"], panel_icons(p)) if j not in own]
+                    inner.append(sw(ltext_ml(x + w / 2, by + 6 + th / 2, sp["word"], fs_, wm * fs_ / 10, n=nl),
+                                    nw_fill(self, x, by + 5 + (th - ih) / 2, w, ih + 2, mi, sp["word"])))
+                else:
+                    inner.append(self.r_icon(i, x, by + 6 + (th - ih) / 2, w, ih))
+                x += w + 5
+            tx, ty = b["tip"]
+            drawn.append((bx, by, bw, bh, tx, ty, "".join(inner), bool(sp.get("think")), si) + ((True,) if b.get("link") else ()))
+            placed.append((bx, bw, by + bh, bh))
+        return placed, drawn
+
     def m(self, t):
         if t.startswith("_"):
             return ("band", (186, 70))
@@ -638,6 +1052,7 @@ class Composer:
         st = L["st"]
         out = []
         self.ess = []  # wesentliche Teile (Zeichen, Gegenstände, Köpfe): Sprechblasen und Pfeile verdecken sie nicht
+        self.soft = []  # grosse Teile (Orte im Hintergrund, grosse Gegenstände): Blasen verdecken höchstens einen kleinen Teil
         self._rec = True
         pos = {}  # Mittelpunkte für Handlungslinien
         # 1. Hintergrund (bei Nacht dunkler Himmel mit Sternen)
@@ -750,6 +1165,15 @@ class Composer:
                 sp_idx = names.index(s["from"])
                 ad_idx = names.index(s["to"]) if s["to"] in names else None
                 break
+        # Zweite gleiche Figur (stage.twin {FIG: x}, z. B. die zwei Mitgekreuzigten links und rechts von Jesus, Joh 19,18):
+        # zuerst gezeichnet (hinter den anderen), Kopf unter «FIG#2» für Blasen und Pfeile
+        twins = [(f_, x_) for f_, x_ in (st.get("twin") or {}).items() if f_ in names]
+        n_all = len(slots) + len(twins)
+        for f_, x_ in twins:
+            s2 = dict(slots[names.index(f_)], x=x_)
+            hk = f_ + "#2"
+            heads[hk] = self.r_person(s2, n_all, -1 if x_ > W / 2 else 1, None, None, p, out)
+            pos[hk] = (heads[hk][0], heads[hk][1] + self.head_r() * 1.9)
         for i, s in enumerate(slots):
             look = look_dir(slots, i, sp_idx, ad_idx)
             to_god = any(sp["from"] == s["fid"] and sp["to"] in sky for sp in L["speech"])
@@ -765,7 +1189,7 @@ class Composer:
             if to_god and hold is None:
                 hold = "PRAY"
             n0 = len(out)
-            heads[s["fid"]] = self.r_person(s, len(slots), look, arm, hold, p, out)
+            heads[s["fid"]] = self.r_person(s, n_all, look, arm, hold, p, out)
             lift = self._lift.get(s["fid"], 0)
             if lift:
                 out[n0:] = [f'<g transform="translate(0 {-lift:.1f})">{"".join(out[n0:])}</g>']
@@ -903,227 +1327,22 @@ class Composer:
                 cx1, cy1, cx2, cy2, bul = self.clear_bulge(ax1, ay1, ax2, ay2, kind, f, t, heads, pos, placed_now)
                 out.append(arrow_svg(cx1, cy1, cx2, cy2, kind, f in sky or t in sky, bul))
         self._rec = False
-        # 10. Sprechblasen
-        bubbles = []
-        # Blindtest Matthäus: Folgeblasen derselben Figur wurden als «Blase an Blase» gelesen. Darum alles, was eine Figur sagt,
-        # in eine Blase (Teile durch einen feinen Strich getrennt); so bleibt auch Platz für einen zweiten Sprecher.
-        merged = []
-        for sp in L["speech"]:
-            prev = next((m for m in merged if m["from"] == sp["from"] and bool(m.get("think")) == bool(sp.get("think"))), None)
-            if prev is not None:
-                prev["icons"] = list(prev["icons"]) + ["|"] + list(sp["icons"])
-            else:
-                merged.append(dict(sp))
-        for sp in merged[:2]:
-            if sp["from"] in heads:
-                tx, ty = heads[sp["from"]]
-                ty -= self.head_r()
-            elif sp["from"] in sky:
-                x, y, w0, h0 = sky[sp["from"]]
-                tx, ty = (x + w0 * .78, y + h0 / 2) if x < W / 2 else (x + w0 * .22, y + h0 / 2)  # Spitze reicht in den Strahlenkranz
-            elif sp["from"] in pos:  # sprechendes Bauteil (z. B. Satan als Schatten): Spitze an den oberen Rand
-                tx, ty = pos[sp["from"]]
-                ty -= self.m(sp["from"])[1][1] * .4
-            else:
-                continue
-            bubbles.append((sp, tx, ty))
-        placed, drawn = [], []
-        for k, (sp, tx, ty) in enumerate(bubbles):
-            ih = self.icon_h()
-            if sp.get("word") and "§W" not in sp["icons"]:  # Kernwort in der Sprechblase, vor höchstens zwei Zeichen
-                sp["icons"] = ["§W"] + list(sp["icons"])
-            WMAX = 104  # breiter: zweizeilig statt kleiner (Hinweis Andi Neck 2026-10-23)
-            ws = [4.0 if i == "|" else (lwrap(sp["word"], 10, WMAX)[1] if i == "§W" else icon_w(self.vb(i), ih)) for i in sp["icons"]]
-            bw = sum(ws) + 5 * (len(ws) - 1) + 12
-            avail = W - 32
-            god = sp["from"] in sky
-            if god:
-                gx, gy, gw, gh = sky[sp["from"]]
-                avail = max(W - (gx + gw + 14) - 4, gx - 14 - 28)  # links bleibt die Feldnummer frei (sonst rückte die Blase auf den Strahlenkranz)
-            if bw > avail:
-                sc = (avail - 12 - 5 * (len(ws) - 1)) / sum(ws)
-                ws = [w * sc for w in ws]
-                ih *= sc
-                bw = avail
-            bh = ih + 12
-            by = st.get("bubble_y", 8)  # Abstand zum Rahmen
-            if god:
-                gx, gy, gw, gh = sky[sp["from"]]
-                bx = gx + gw + 14 if gx + gw + 14 + bw <= W - 4 else gx - bw - 14  # Abstand, damit die Spitze sichtbar ist
-                by = 8
-            else:
-                bx = tx - bw / 2
-            bx = max(28 if by < 24 else 4, min(W - 4 - bw, bx))
-            boxes = [b for k2, b in sky.items() if k2 != sp["from"]] + [(px, pyb - ph, pw, ph) for px, pw, pyb, ph in placed]
-            hit = lambda x_, y_: any(x_ < gx + gw + 4 and x_ + bw > gx - 4 and y_ < gy + gh + 2 and y_ + bh > gy - 2 for gx, gy, gw, gh in boxes)  # noqa: E731
-            if not god and "bubble_y" not in st and len(bubbles) == 1:  # nur bei einer Blase (zwei Sprecher brauchen den Platz oben)
-                # Blase tiefer, nahe über dem Sprecher, wenn dort kein anderes Gesicht ist (kürzere Spitze; Hinweis Andi Neck)
-                faces = [(hx - 15, hy - 16, 30, 32) for o_, (hx, hy) in heads.items() if o_ != sp["from"]]
-                low = ty - bh - 22
-                if low > by and not hit(bx, low) and not any(bx < fx + fw and bx + bw > fx and low < fy + fh and low + bh > fy for fx, fy, fw, fh in faces):
-                    by = low
-            if hit(bx, by) and not god:
-                # Blase nahe beim Sprecher halten (Hinweis Andi Neck: lange schräge Spitzen quer durchs Bild); auch unter eine
-                # Gottes-Darstellung ausweichen statt ans andere Ende des Felds
-                xs = [tx - bw / 2, tx - bw + 18, tx - 18, 28, W - 4 - bw] + [gx - bw - 6 for gx, gy, gw, gh in boxes] + [gx + gw + 6 for gx, gy, gw, gh in boxes]
-                ys = [by] + [gy + gh + 4 for gx, gy, gw, gh in boxes]
-                cands = [(abs(cx + bw / 2 - tx) + (cy - by) * .4, cx, cy) for cx in xs for cy in ys
-                         if (28 if cy < 24 else 4) <= cx <= W - 4 - bw and cy + bh <= ty - 6 and not hit(cx, cy)]
-                if cands:
-                    _, bx, by = min(cands)
-            if hit(bx, by):
-                done = False
-                for cand in (bx, 28, W - 4 - bw) + tuple(gx - bw - 6 for gx, gy, gw, gh in boxes) + tuple(gx + gw + 6 for gx, gy, gw, gh in boxes):
-                    if 4 <= cand <= W - 4 - bw and not hit(cand, by):
-                        bx, done = cand, True
-                        break
-                if not done and placed:
-                    by = max(b[2] for b in placed) + 4
-                    done = not hit(bx, by)
-                if not done and boxes:
-                    gx, gy, gw, gh = boxes[0]
-                    room = max(gx - 32, W - (gx + gw) - 10)
-                    sc = max(.5, (room - 12 - 5 * (len(ws) - 1)) / sum(ws))
-                    ws = [w * sc for w in ws]
-                    ih *= sc
-                    bw = sum(ws) + 5 * (len(ws) - 1) + 12
-                    bh = ih + 12
-                    bx = 28 if gx - 32 >= W - (gx + gw) - 10 else gx + gw + 6
-            if not god and self.covers(bx, by, bw, bh, sp["from"], heads):
-                # Sprechblase verdeckt nichts Wesentliches (Zeichen, Gegenstand, Gesicht; Hinweis Andi Neck 2026-10-24): andere
-                # Lage nahe beim Sprecher suchen, sonst etwas kleiner
-                for sc in (1, .88, .76):
-                    bw2, bh2 = (bw - 12) * sc + 12, (bh - 12) * sc + 12
-                    xs = [tx - bw2 / 2, tx - bw2 + 18, tx - 18, 28, W - 4 - bw2] + [ex - bw2 - 4 for ex, ey, ew, eh in self.ess] + [ex + ew + 4 for ex, ey, ew, eh in self.ess]
-                    ys = sorted({by, 6, 4} | {ey - bh2 - 3 for ex, ey, ew, eh in self.ess})
-                    cands = [(abs(cx + bw2 / 2 - tx) + abs(cy - by) * .3, cx, cy) for cx in xs for cy in ys
-                             if (28 if cy < 24 else 4) <= cx <= W - 4 - bw2 and 2 <= cy and cy + bh2 <= ty - 6
-                             and not hit(cx, cy) and not self.covers(cx, cy, bw2, bh2, sp["from"], heads)]
-                    if cands:
-                        _, bx, by = min(cands)
-                        if sc < 1:
-                            ws = [w * sc for w in ws]
-                            ih *= sc
-                            bw, bh = bw2, bh2
-                        break
-            # Schlussprüfung (Hinweis Andi Neck 2026-10-26: Blase lag über dem Strahlenkranz bzw. über Zeichen): verdeckt die Blase
-            # ein Zeichen, einen Gegenstand, ein fremdes Gesicht, eine andere Blase oder den Strahlenkranz Gottes, wird auf einem
-            # feinen Raster nahe beim Sprecher weitergesucht, nötigenfalls etwas kleiner
-            own = [sky[sp["from"]]] if god else []
-            def _through(x1, y1, x2, y2, bx_, by_, bw_, bh_):  # Strecke durch das Innere eines Rechtecks?
-                return any(bx_ + 2 < x1 + (x2 - x1) * k / 20 < bx_ + bw_ - 2 and by_ + 2 < y1 + (y2 - y1) * k / 20 < by_ + bh_ - 2 for k in range(1, 20))
-            def _tail_from(x_, y_, w_, h_, tx_, ty_):
-                return max(x_, min(x_ + w_, tx_)), max(y_, min(y_ + h_, ty_))
-            def _bad(x_, y_, w_, h_):
-                obs = own + [b for k2, b in sky.items() if k2 != sp["from"]] + [(px, pyb - ph, pw, ph) for px, pw, pyb, ph in placed]
-                if self.covers(x_, y_, w_, h_, sp["from"], heads) or any(
-                        x_ < ox + ow + 3 and x_ + w_ > ox - 3 and y_ < oy + oh + 2 and y_ + h_ > oy - 2 for ox, oy, ow, oh in obs):
-                    return True
-                # Spitzen laufen nicht hinter einer anderen Blase durch (Prüfung 2026-10-26): weder die eigene noch frühere
-                sx, sy = _tail_from(x_, y_, w_, h_, tx, ty)
-                if any(_through(sx, sy, tx, ty, px, pyb - ph, pw, ph) for px, pw, pyb, ph in placed):
-                    return True
-                return any(_through(*_tail_from(d0[0], d0[1], d0[2], d0[3], d0[4], d0[5]), d0[4], d0[5], x_, y_, w_, h_) for d0 in drawn)
-            if not any(sp0["from"] == sp["from"] for sp0, _, _ in bubbles[:len(placed)]) and _bad(bx, by, bw, bh):
-                best = None
-                for sc in (1, .9, .8, .7, .6):
-                    bw2, bh2 = (bw - 12) * sc + 12, (bh - 12) * sc + 12
-                    for cy in range(2, int(max(3, ty - 6 - bh2)) + 1, 3):
-                        for cx in range(4, int(W - 4 - bw2) + 1, 4):
-                            if cy < 24 and cx < 28:
-                                continue
-                            if not _bad(cx, cy, bw2, bh2):
-                                d = abs(cx + bw2 / 2 - tx) + abs(cy + bh2 - ty) * .5 + (1 - sc) * 60
-                                if best is None or d < best[0]:
-                                    best = (d, cx, cy, sc, bw2, bh2)
-                    if best and best[3] == sc:
-                        break
-                if best:
-                    _, bx, by, sc, bw2, bh2 = best
-                    if sc < 1:
-                        ws = [w * sc for w in ws]
-                        ih *= sc
-                        bw, bh = bw2, bh2
-            same = [j for j, (sp0, _, _) in enumerate(bubbles[:len(placed)]) if sp0["from"] == sp["from"]]
-            link = None
-            if same:
-                # zweite Blase derselben Figur: neben die erste, sonst darunter und mit ihr verbunden (keine Spitze durch die Blase)
-                px, pw, pbot, ph = placed[same[0]]
-                ptop = pbot - ph
-                lo_x = 28 if ptop < 24 else 4  # Feldnummer oben links frei lassen
-                besides = [c for c in (px + pw + 5,) if lo_x <= c <= W - 4 - bw]  # nur rechts daneben (Leserichtung)
-                besides = [c for c in besides if not any(c < gx + gw + 4 and c + bw > gx - 4 and ptop < gy + gh + 2 and ptop + bh > gy - 2
-                                                         for gx, gy, gw, gh in list(sky.values()))]
-                if not besides:  # zu breit: Zeichen etwas verkleinern, damit die Blase neben die erste passt (statt den Kopf zu verdecken)
-                    room = W - 4 - (px + pw + 5)
-                    if room >= bw * .72:
-                        sc = (room - 12 - 5 * (len(ws) - 1)) / sum(ws)
-                        ws = [w * sc for w in ws]
-                        ih *= sc
-                        bw = sum(ws) + 5 * (len(ws) - 1) + 12
-                        bh = ih + 12
-                        cand = px + pw + 5
-                        if not any(cand < gx + gw + 4 and cand + bw > gx - 4 and ptop < gy + gh + 2 and ptop + bh > gy - 2 for gx, gy, gw, gh in sky.values()):
-                            besides = [cand]
-                if besides:
-                    bx, by = besides[0], ptop + (ph - bh) / 2
-                    # verbundene Blase: kurze Spitze zur ersten Blase statt zweiter Spitze quer zum Sprecher
-                    tx, ty = (px + pw - 3, ptop + ph / 2) if bx > px else (px + 3, ptop + ph / 2)
-                else:
-                    by = pbot + 5
-                    room_h = ty - 6 - by
-                    if bh > room_h and not god:
-                        sc = max(.55, (room_h - 12) / ih)
-                        ws = [w * sc for w in ws]
-                        ih *= sc
-                        bw = sum(ws) + 5 * (len(ws) - 1) + 12
-                        bh = ih + 12
-                    bx = max(28 if by < 24 else 4, min(W - 4 - bw, px))
-                    link = same[0]
-            _pre = (bx, by, bw, bh, list(ws), ih)
-            if not god and not same and ty - (by + bh) < 6:
-                nb = max(2, ty - bh - 8)
-                if not hit(bx, nb):
-                    by = nb
-                else:  # nicht wieder in eine andere Blase schieben: seitlich ausweichen, sonst kleiner
-                    alt = [c for c in (28, W - 4 - bw) + tuple(px - bw - 6 for px, pw, pb, ph in placed) + tuple(px + pw + 6 for px, pw, pb, ph in placed)
-                           if 4 <= c <= W - 4 - bw and not hit(c, nb)]
-                    if alt:
-                        bx, by = min(alt, key=lambda c: abs(c + bw / 2 - tx)), nb
-                    else:
-                        sc = max(.6, (ty - 8 - by - 12) / ih) if ty - 8 - by - 12 > 0 else .6
-                        ws = [w * sc for w in ws]
-                        ih *= sc
-                        bw = sum(ws) + 5 * (len(ws) - 1) + 12
-                        bh = ih + 12
-            # Nachschieben darf keine Spitze hinter eine andere Blase legen: sonst die geprüfte Lage behalten
-            if not god and not same and (bx, by, bw, bh) != _pre[:4] and _bad(bx, by, bw, bh) and not _bad(*_pre[:4]):
-                bx, by, bw, bh, ws, ih = _pre
-            inner, x = [], bx + 6
-            for i, w in zip(sp["icons"], ws):
-                if i == "|":
-                    inner.append(f'<line x1="{x + w / 2:.1f}" y1="{by + 8:.1f}" x2="{x + w / 2:.1f}" y2="{by + 4 + ih:.1f}" stroke="#3B3226" stroke-width=".7" stroke-dasharray="2 2"/>')
-                elif i == "§W":
-                    fs_ = min(10, 10 * w / max(1, lwrap(sp["word"], 10, WMAX)[1]))
-                    own = [j for j in sp["icons"] if j not in ("|", "§W")]
-                    mi = [j for j in zeichen(self, "sprechblase", sp["word"], panel_icons(p)) if j not in own]
-                    inner.append(sw(ltext_ml(x + w / 2, by + 6 + ih / 2, sp["word"], fs_, WMAX * fs_ / 10),
-                                    nw_fill(self, x, by + 5, w, ih + 2, mi, sp["word"])))
-                else:
-                    inner.append(self.r_icon(i, x, by + 6, w, ih))
-                x += w + 5
-            if link is not None:  # obere Blase zeigt auf die untere (verbundene Blasen)
-                lb = drawn[link]
-                drawn[link] = (lb[0], lb[1], lb[2], lb[3], bx + bw / 2, by + 3, lb[6], lb[7])
-            drawn.append((bx, by, bw, bh, tx, ty, "".join(inner), bool(sp.get("think"))))
-            placed.append((bx, bw, by + bh, bh))
+        # 10. Sprechblasen (Neufassung 2026-10-26, Hinweise Andi Neck): jede Sprech-Angabe des Bildauftrags wird eine eigene Blase
+        # (früher wurden Folgeblasen derselben Figur in eine Blase gefasst, das Wort der zweiten fiel weg). Die Lage wird gesucht,
+        # nicht geschoben: feste Regeln (keine Blase über Gesicht, Zeichen, Gegenstand, Kreuzestafel oder anderer Blase; Spitze
+        # kurz und steil, nicht hinter einer Blase und nicht über Gesichter oder Zeichen), dann die kürzeste Spitze nahe beim
+        # Sprecher; nötigenfalls kleiner, nebeneinander statt übereinander. Eine zweite Blase derselben Figur hängt an der ersten.
+        placed, drawn = self.place_bubbles(L, st, heads, sky, pos, p)
         placed_now = [(px, pb - ph, pw, ph) for px, pw, pb, ph in placed]
         arrows(False)  # nach der Lage der Blasen berechnet (weichen ihnen aus), aber unter ihnen gezeichnet
+        if L["speech"]:  # Prüfung: Zahl der Sprech-Angaben im Feld (pruefe_bilder.py vergleicht mit data-speech der Blasen)
+            out.append(f'<g class="ill-sp" data-n="{len(L["speech"])}"/>')
         for d_ in drawn:
+            at_ = f' data-speech="{d_[8]}"' + (' data-link="1"' if len(d_) > 9 else "")
             if d_[7]:
-                out.append(think_bubble(*d_[:7]))
+                out.append(think_bubble(*d_[:7], at_))
             else:
-                out.append(self.r_bubble(*d_[:7]))
+                out.append(self.r_bubble(*d_[:7], at_))
         # 11. freie Zeichen oben (unter den Blasen)
         top = max([b[2] for b in placed] + [6]) + 4
         free = list(L["air"])
@@ -1146,6 +1365,7 @@ class Composer:
                 k = min(k, (min(px for px, pw, pb, ph in placed) - 6 - x) / tot)
             hmax = max(self.m(t)[1][1] * k for t in free)
             over = lambda yy: any(x < px + pw and x + tot * k > px and yy < pb and yy + hmax > pb - ph for px, pw, pb, ph in placed)  # noqa: E731
+            over2 = lambda xx, yy: any(xx < px + pw and xx + tot * k > px and yy < pb and yy + hmax > pb - ph for px, pw, pb, ph in placed)  # noqa: E731
             if over(y):  # freie Zeichen nie über oder in eine Sprechblase (Hinweis Andi Neck: Krone über der Blase)
                 y2 = max(pb for px, pw, pb, ph in placed) + 3
                 if y2 + hmax < FLOOR_Y - 30:
@@ -1154,6 +1374,28 @@ class Composer:
                     right = max(px + pw for px, pw, pb, ph in placed) + 4
                     if right + tot * k <= W - 4:
                         x = right
+            # Spitzen der Blasen laufen nicht über freie Zeichen (Prüfung 2026-10-26: Spitze über den Wolken der Finsternis)
+            tails = [(self._tail(d_[0], d_[1], d_[2], d_[3], d_[4], d_[5])[:2], d_[4:6]) for d_ in drawn if len(d_) < 10 and not d_[7]]
+
+            def row(x0, y0):
+                bx_, out_ = x0, []
+                for t in free:
+                    w, h = self.m(t)[1]
+                    for q in range(min(int(cnt.get(t, 1)), 6)):
+                        out_.append((bx_, y0, w * k, h * k))
+                        bx_ += w * k + 3 * k
+                    bx_ += 6 * k
+                return out_
+
+            def tail_hit(x0, y0):
+                return any(self._seg_hits(a_[0], a_[1], b_[0], b_[1], r_, min(r_[2], r_[3]) * .1) for (a_, b_) in tails for r_ in row(x0, y0))
+            if tails and tail_hit(x, y):
+                bot = max(pb for px, pw, pb, ph in placed) + 3
+                alts = [(x2, y2) for y2 in (y, 10, top, bot, 70) for x2 in (x, 28, W - 6 - tot * k, max(px + pw for px, pw, pb, ph in placed) + 4)
+                        if 4 <= x2 and x2 + tot * k <= W - 4 and 3 <= y2 and y2 + hmax <= FLOOR_Y - 10 and not over2(x2, y2)]
+                ok_ = [a_ for a_ in alts if not tail_hit(*a_)]
+                if ok_:
+                    x, y = ok_[0]
             for t in free:
                 w, h = self.m(t)[1]
                 w, h = w * k, h * k

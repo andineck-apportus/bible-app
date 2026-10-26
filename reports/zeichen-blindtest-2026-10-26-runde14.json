@@ -1,0 +1,561 @@
+{
+ "titel": "Runde 14: Zeichen Zeugnis, senden, anhauchen, Rebe und Figur Mitgekreuzigter (2026-10-26)",
+ "methode_de": "Zeichen: scripts/authoring/zeichen_test.py --entwuerfe … --verteilen --frage abbild --befragen 4 --bewerten (32 px, Pixeldichte 2; jede Instanz sieht ein Zeichen nur in einer Fassung; zuerst «Was ist abgebildet?», dann «Was könnte es bedeuten?»; eine weitere Instanz bewertet 0/1/2). Getrennte Instanzen über die Befehlszeile (claude -p, Modell claude-opus-5-5 nach Vorgabe von zeichen_test.py, nur Lesezugriff auf das Blatt), ohne Auftrag und ohne Namen. Figur (claude -p mit dem Standardmodell der Befehlszeile, nur Lesezugriff): drei Instanzen beschreiben das Feld Joh 19,18 (ohne Stichwortband) und drei das Porträt aus dem Bildlexikon, ohne Namen. Ganze Bilder: je eine Instanz beschreibt fünf geänderte Bilder ohne Legende.",
+ "grenzen_de": "Beschreibungen einzelner KI-Instanzen; kein Test mit Menschen, keine fachliche Prüfung. KI-Testpersonen kennen die Bibel gut und schliessen aus wenigen Merkmalen.",
+ "entwuerfe": {
+  "FIG-OBJ-REBE@2": {
+   "gezeichnet": "Stamm mit abzweigender Rebe, Blatt und Traube",
+   "bedeutung": "Rebe (Zweig eines Weinstocks mit Blatt und Trauben)",
+   "antworten": [
+    {
+     "abbild": "Weinstock mit Trauben",
+     "bedeutung": "Weinberg"
+    },
+    {
+     "abbild": "Weinstock mit Trauben",
+     "bedeutung": "Weinstock"
+    },
+    {
+     "abbild": "Weinstock mit Trauben",
+     "bedeutung": "Weinberg"
+    },
+    {
+     "abbild": "Weinstock mit Trauben",
+     "bedeutung": "Weinberg"
+    },
+    {
+     "abbild": "Weinrebe mit Trauben",
+     "bedeutung": "Weinstock, Weinberg"
+    },
+    {
+     "abbild": "Weinstock mit Trauben",
+     "bedeutung": "Weinberg"
+    },
+    {
+     "abbild": "Weinrebe mit Trauben",
+     "bedeutung": "Weinstock"
+    },
+    {
+     "abbild": "Weinstock mit Trauben",
+     "bedeutung": "Weinberg / Weinstock"
+    }
+   ],
+   "bewertung_bedeutung": [
+    1,
+    2,
+    1,
+    1,
+    2,
+    1,
+    2,
+    2
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "Weinberg statt Rebe/Weinstock"
+  },
+  "FIG-ZEICHEN-SENDEN@2": {
+   "gezeichnet": "person-walking-facing-right + backhand-index-pointing-right (abzeichen)",
+   "bedeutung": "senden / aussenden (jemanden mit einem Auftrag losschicken)",
+   "antworten": [
+    {
+     "abbild": "gehende Person, Zeigehand",
+     "bedeutung": "hingehen"
+    },
+    {
+     "abbild": "Gehender Mensch, Zeigefinger",
+     "bedeutung": "Weg, gehen"
+    },
+    {
+     "abbild": "Gehende Person, Zeigehand",
+     "bedeutung": "hingehen"
+    },
+    {
+     "abbild": "gehende Person, Zeigehand",
+     "bedeutung": "hingehen"
+    },
+    {
+     "abbild": "Gehender Mensch, Zeigehand",
+     "bedeutung": "Geh hin, senden"
+    },
+    {
+     "abbild": "Gehender Mensch, Zeigehand",
+     "bedeutung": "gehen, senden"
+    },
+    {
+     "abbild": "Gehender Mann, Zeigehand",
+     "bedeutung": "gehen, gesandt"
+    },
+    {
+     "abbild": "Gehende Person, Zeigehand",
+     "bedeutung": "gehen / hingehen"
+    }
+   ],
+   "bewertung_bedeutung": [
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    1
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "hingehen statt senden"
+  },
+  "FIG-ZEICHEN-ZEUGNIS@1": {
+   "gezeichnet": "eye + speaking-head (paar)",
+   "bedeutung": "Zeugnis ablegen / bezeugen (sagen, was man gesehen hat)",
+   "antworten": [
+    {
+     "abbild": "Auge und sprechender Kopf",
+     "bedeutung": "Prophet"
+    },
+    {
+     "abbild": "Auge, sprechender Kopf",
+     "bedeutung": "Prophet, Seher"
+    },
+    {
+     "abbild": "Auge und sprechender Kopf",
+     "bedeutung": "Prophet, Seher"
+    },
+    {
+     "abbild": "Auge, sprechender Kopf",
+     "bedeutung": "Prophet"
+    },
+    {
+     "abbild": "Auge und sprechender Kopf",
+     "bedeutung": "Seher, Prophet"
+    },
+    {
+     "abbild": "Auge und sprechender Kopf",
+     "bedeutung": "Prophet, Seher"
+    },
+    {
+     "abbild": "Auge und sprechender Kopf",
+     "bedeutung": "Prophet"
+    },
+    {
+     "abbild": "Auge und sprechender Kopf",
+     "bedeutung": "Prophet / Seher"
+    }
+   ],
+   "bewertung_bedeutung": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "Prophet/Seher statt bezeugen"
+  },
+  "FIG-ZEICHEN-ANHAUCHEN@3": {
+   "gezeichnet": "bust-in-silhouette + dashing-away (paar)",
+   "bedeutung": "anhauchen (jemanden mit dem Atem anblasen)",
+   "antworten": [
+    {
+     "abbild": "Person mit Atemwolke",
+     "bedeutung": "Geist"
+    },
+    {
+     "abbild": "Person, Wolke, Atem",
+     "bedeutung": "Geist, Atem"
+    },
+    {
+     "abbild": "Person mit Atemwolke",
+     "bedeutung": "Geist, Atem"
+    },
+    {
+     "abbild": "Person mit Atemwolke",
+     "bedeutung": "Geist"
+    }
+   ],
+   "bewertung_bedeutung": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "Geist statt anhauchen"
+  },
+  "FIG-ZEICHEN-ZEUGNIS@2": {
+   "gezeichnet": "speaking-head + eye (abzeichen)",
+   "bedeutung": "Zeugnis ablegen / bezeugen (sagen, was man gesehen hat)",
+   "antworten": [
+    {
+     "abbild": "Kopfsilhouette mit Auge",
+     "bedeutung": "sehen, erkennen"
+    },
+    {
+     "abbild": "Kopfsilhouette mit Auge",
+     "bedeutung": "sehen, erkennen"
+    },
+    {
+     "abbild": "Sprechender Kopf mit Auge",
+     "bedeutung": "sagen und sehen"
+    },
+    {
+     "abbild": "Kopf mit Auge",
+     "bedeutung": "sehen, erkennen"
+    }
+   ],
+   "bewertung_bedeutung": [
+    1,
+    1,
+    2,
+    1
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "sehen/erkennen, das Sprechen fehlt"
+  },
+  "FIG-ZEICHEN-ANHAUCHEN@1": {
+   "gezeichnet": "face-exhaling (einzeln)",
+   "bedeutung": "anhauchen (jemanden mit dem Atem anblasen)",
+   "antworten": [
+    {
+     "abbild": "Gesicht mit Atemwolke",
+     "bedeutung": "seufzen, aufatmen"
+    },
+    {
+     "abbild": "Gesicht mit Atemwolke",
+     "bedeutung": "seufzen, aufatmen"
+    },
+    {
+     "abbild": "Gesicht mit Atemwolke",
+     "bedeutung": "seufzen, erleichtert"
+    },
+    {
+     "abbild": "seufzendes Gesicht",
+     "bedeutung": "seufzen, aufatmen"
+    }
+   ],
+   "bewertung_bedeutung": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "seufzen/aufatmen statt anhauchen"
+  },
+  "FIG-OBJ-REBE@1": {
+   "gezeichnet": "Zweig mit Weinblatt, Ranke und Traube",
+   "bedeutung": "Rebe (Zweig eines Weinstocks mit Blatt und Trauben)",
+   "antworten": [
+    {
+     "abbild": "Weinrebe mit Trauben",
+     "bedeutung": "Weinstock"
+    },
+    {
+     "abbild": "Weinrebe mit Trauben",
+     "bedeutung": "Weinstock"
+    },
+    {
+     "abbild": "Weinrebe mit Trauben",
+     "bedeutung": "Weinstock"
+    },
+    {
+     "abbild": "Weinrebe mit Trauben",
+     "bedeutung": "Weinstock"
+    }
+   ],
+   "bewertung_bedeutung": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "keine, Weinstock gleichwertig"
+  },
+  "FIG-ZEICHEN-SENDEN@1": {
+   "gezeichnet": "backhand-index-pointing-right + person-walking-facing-right (paar)",
+   "bedeutung": "senden / aussenden (jemanden mit einem Auftrag losschicken)",
+   "antworten": [
+    {
+     "abbild": "Zeigefinger, gehender Mensch",
+     "bedeutung": "du gehst"
+    },
+    {
+     "abbild": "Zeigefinger, gehende Person",
+     "bedeutung": "du gehst"
+    },
+    {
+     "abbild": "Zeigefinger, gehende Person",
+     "bedeutung": "jener, hingehen"
+    },
+    {
+     "abbild": "Zeigefinger, gehender Mensch",
+     "bedeutung": "du gehst"
+    }
+   ],
+   "bewertung_bedeutung": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "du gehst statt senden"
+  },
+  "FIG-ZEICHEN-ANHAUCHEN@2": {
+   "gezeichnet": "wind-face (einzeln)",
+   "bedeutung": "anhauchen (jemanden mit dem Atem anblasen)",
+   "antworten": [
+    {
+     "abbild": "Blasende Wolke",
+     "bedeutung": "Wind, Geist"
+    },
+    {
+     "abbild": "Wolke, die bläst",
+     "bedeutung": "Wind, Geist"
+    },
+    {
+     "abbild": "Wolke mit Windhauch",
+     "bedeutung": "Geist, Wind"
+    },
+    {
+     "abbild": "Wolke mit Luftstoß",
+     "bedeutung": "Wind / Geist"
+    }
+   ],
+   "bewertung_bedeutung": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "Wind/Geist statt anhauchen"
+  },
+  "FIG-ZEICHEN-ZEUGNIS@3": {
+   "gezeichnet": "eye + raised-hand (paar)",
+   "bedeutung": "Zeugnis ablegen / bezeugen (sagen, was man gesehen hat)",
+   "antworten": [
+    {
+     "abbild": "Auge und erhobene Hand",
+     "bedeutung": "siehe"
+    },
+    {
+     "abbild": "Auge und erhobene Hand",
+     "bedeutung": "siehe"
+    },
+    {
+     "abbild": "Auge und erhobene Hand",
+     "bedeutung": "siehe"
+    },
+    {
+     "abbild": "Auge und erhobene Hand",
+     "bedeutung": "Siehe"
+    }
+   ],
+   "bewertung_bedeutung": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "Bild wird erkannt, aber als «siehe» gedeutet; das Sagen/Bezeugen fehlt"
+  },
+  "FIG-ZEICHEN-ANHAUCHEN@5": {
+   "gezeichnet": "face-exhaling + busts-in-silhouette (paar)",
+   "bedeutung": "anhauchen (jemanden mit dem Atem anblasen)",
+   "antworten": [
+    {
+     "abbild": "seufzendes Gesicht, Menschengruppe",
+     "bedeutung": "Erbarmen mit Volk"
+    },
+    {
+     "abbild": "erleichtertes Gesicht, Menschengruppe",
+     "bedeutung": "Trost für Menschen"
+    },
+    {
+     "abbild": "Seufzendes Gesicht, Personen",
+     "bedeutung": "Seufzen der Menschen"
+    },
+    {
+     "abbild": "Seufzendes Gesicht, Personen",
+     "bedeutung": "Volk trösten"
+    }
+   ],
+   "bewertung_bedeutung": [
+    0,
+    0,
+    1,
+    0
+   ],
+   "bild_erkannt": [
+    1,
+    0,
+    1,
+    1
+   ],
+   "bewerter_notiz": "Als Erbarmen/Trost für das Volk gedeutet; das Anblasen mit Atem wird nicht erkannt"
+  },
+  "FIG-ZEICHEN-ANHAUCHEN@4": {
+   "gezeichnet": "face-exhaling + bust-in-silhouette (paar)",
+   "bedeutung": "anhauchen (jemanden mit dem Atem anblasen)",
+   "antworten": [
+    {
+     "abbild": "Ausatmendes Gesicht, Person",
+     "bedeutung": "Seufzen, Klage"
+    },
+    {
+     "abbild": "ausatmendes Gesicht, Person",
+     "bedeutung": "Seufzen"
+    },
+    {
+     "abbild": "ausatmendes Gesicht, Personensilhouette",
+     "bedeutung": "Seele"
+    },
+    {
+     "abbild": "Ausatmendes Gesicht, Person",
+     "bedeutung": "Seufzen, Klage"
+    }
+   ],
+   "bewertung_bedeutung": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "Ausatmen wird erkannt, aber als Seufzen/Klage gedeutet statt jemanden anhauchen"
+  },
+  "FIG-ZEICHEN-ZEUGNIS@4": {
+   "gezeichnet": "raised-hand + eye (abzeichen)",
+   "bedeutung": "Zeugnis ablegen / bezeugen (sagen, was man gesehen hat)",
+   "antworten": [
+    {
+     "abbild": "Erhobene Hand, Auge",
+     "bedeutung": "Nicht sehen, Verbergen"
+    },
+    {
+     "abbild": "erhobene Hand, Auge",
+     "bedeutung": "Siehe!"
+    },
+    {
+     "abbild": "erhobene Hand, Auge",
+     "bedeutung": "Siehe!"
+    },
+    {
+     "abbild": "Erhobene Hand, Auge",
+     "bedeutung": "Nicht sehen"
+    }
+   ],
+   "bewertung_bedeutung": [
+    0,
+    1,
+    1,
+    0
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "Hand vor Auge als «nicht sehen/verbergen» oder «siehe!» gedeutet; Bezeugen fehlt"
+  }
+ },
+ "gewaehlt": {
+  "FIG-ZEICHEN-ZEUGNIS": "@1 Auge + sprechender Kopf (Abbild 8/8 erkannt, Bedeutung «Prophet, Seher» 0/8 getroffen: Wortzeichen)",
+  "FIG-ZEICHEN-SENDEN": "@2 gehende Person mit Zeigehand (Abbild 8/8, Bedeutung 3/8 «senden, gesandt», sonst «hingehen»: knapp)",
+  "FIG-ZEICHEN-ANHAUCHEN": "@3 Person mit Atemwolke (Abbild 4/4 «Person mit Atemwolke», Bedeutung «Geist, Atem» 0/4 getroffen: Wortzeichen; im ganzen Bild Joh 20,19–23 als «Kopf mit Atemhauch … für das Anhauchen» gelesen)",
+  "FIG-OBJ-REBE": "@1 Zweig mit Weinblatt, Ranke und Traube (Abbild 4/4 «Weinrebe mit Trauben», Bedeutung 4/4)",
+  "FIG-ROLLE-MITGEKREUZIGTER": "neutral, graubraunes Gewand, am Kreuz kleiner im Hintergrund, ohne Tafel und Nimbus (Feld: 3/3 «die zwei Mitgekreuzigten»; Porträt allein: «allgemeine männliche Figur», wie erwartet ohne Erkennungszeichen)"
+ },
+ "figur_beschreibungen": {
+  "portraet-1": "```json\n{\n  \"abbild\": \"Brustbild einer männlichen Comicfigur im flachen Vektorstil: dunkelbraunes kurzes Haar, Vollbart, braune Augen, mittelbrauner Hautton, freundliches leichtes Lächeln. Er trägt ein schlichtes graubeiges Gewand oder Oberteil mit rundem Ausschnitt. Der Hintergrund ist weiß.\",\n  \"wer\": \"Nicht eindeutig bestimmbar. Es ist vermutlich eine generische männliche Figur, etwa ein Mann aus biblischer Zeit wie ein Jünger, ein Hirte oder ein Zeitgenosse Jesu. Eine bestimmte Person kann ich nicht festlegen.\",\n  \"merkmale\": \"Das schlichte, ungemusterte Gewand in Erdtönen und der Bart passen zu einer Darstellung biblischer Männerfiguren. Es fehlen aber individuelle Attribute wie ein Heiligenschein, ein Stab, eine Krone, eine Schriftrolle oder besondere Kleidung, ebenso Beschriftung oder Kontext. Dadurch gibt es keinen konkreten Hinweis auf eine bestimmte Gestalt.\",\n  \"sicherheit\": \"Niedrig (ca. 10–15 %) für eine konkrete Person. Etwas höher (ca. 60 %) für die allgemeine Einordnung als männliche Nebenfigur oder Jünger. Ohne Bildunterschrift oder Zusammenhang ist keine genauere Zuordnung seriös möglich.\"\n}\n```",
+  "portraet-2": "```json\n{\n  \"abbild\": \"Brustbild eines jungen Mannes im flachen Comic-/Vektorstil. Er hat kurzes dunkelbraunes Haar, einen dunklen Vollbart, braune Augen und mittelbraune Haut. Er lächelt leicht und trägt ein schlichtes graubeiges Gewand oder Oberteil. Der Hintergrund ist weiß.\",\n  \"wer\": \"Vermutlich eine allgemeine männliche Figur oder Nebenfigur, etwa ein Jünger, Hirte, Bauer oder Zeitgenosse in einer biblischen Szene. Eine bestimmte Person lässt sich nicht benennen.\",\n  \"merkmale\": \"Das schlichte, erdfarbene Gewand ohne Schmuck, Insignien, Heiligenschein, Attribute oder Beschriftung deutet auf eine gewöhnliche Rolle hin. Der Bart und die Hautfarbe passen zu einer Darstellung im Vorderen Orient. Es gibt keine Merkmale wie Stab, Krone, Schriftrolle oder Schiff, die eine konkrete biblische Gestalt wie Mose, David oder Petrus belegen würden.\",\n  \"sicherheit\": \"Gering für eine bestimmte Person (unter 10 %). Mittel bis hoch (ca. 70 %) dafür, dass es eine allgemeine männliche Figur oder ein Jünger bzw. Zeitgenosse ist.\"\n}\n```",
+  "portraet-3": "```json\n{\n  \"abbild\": \"Brustbild einer männlichen Comicfigur im flachen Vektorstil mit dunklen Konturen. Sie hat kurzes dunkles Haar, einen dunklen Vollbart, braune Haut, große dunkelbraune Augen und ein leichtes Lächeln. Sie trägt ein schlichtes graubraunes Gewand oder Oberteil und steht vor weißem Hintergrund.\",\n  \"wer\": \"Nicht eindeutig bestimmbar. Es ist eine generische männliche Figur, vermutlich eine Nebenfigur, ein Jünger oder ein Mann aus dem Volk. Sie könnte eine biblische Person im Nahen Osten darstellen, etwa einen Jünger, einen Hirten oder einen Handwerker.\",\n  \"merkmale\": \"Es gibt keine eindeutigen Attribute wie einen Heiligenschein, Hirtenstab, Schriftrolle, Krone oder Waffe. Anhaltspunkte sind nur der Vollbart, der bräunliche Hautton, das schlichte, einfarbige Gewand und der freundliche Ausdruck. Diese Merkmale passen zu vielen männlichen Figuren einer Bilderbibel.\",\n  \"sicherheit\": \"Gering (ca. 10–15 %) für eine konkrete Person. Dass es ein erwachsener Mann in einer männlichen Rolle der biblischen Erzählwelt ist, halte ich für wahrscheinlich. Für eine genauere Zuordnung bräuchte ich die Bildunterschrift oder das Verzeichnis.\"\n}\n```",
+  "szene-1": "```json\n{\n  \"figuren\": [\n    \"Mitte: Jesus. Er hat langes dunkles Haar und einen Bart, einen Heiligenschein mit Kreuzmuster, ein weißes Gewand mit rotem Umhang oder Schärpe und ausgebreitete Arme am Kreuz. Über seinem Kopf hängt ein Titulus, die Inschriftentafel.\",\n    \"Links: einer der beiden Mitgekreuzigten (Schächer, Verbrecher). Er hat kurzes dunkles Haar, einen Bart und ein graues Gewand und hängt an einem eigenen Kreuz.\",\n    \"Rechts: der andere Mitgekreuzigte (Schächer). Er sieht fast gleich aus: kurzes dunkles Haar, Bart, graues Gewand, eigenes Kreuz.\"\n  ],\n  \"geschehen\": \"Die Kreuzigung auf Golgatha (Bild Nr. 2 einer Bildfolge). Drei Männer hängen nebeneinander an Kreuzen, Jesus in der Mitte und je ein Mann links und rechts. Alle drei haben die Augen geschlossen oder zusammengekniffen und das Gesicht schmerzverzerrt.\",\n  \"unterschiede\": \"Nur Jesus hat einen Heiligenschein. Er steht in der Mitte, ist größer und näher im Bild, und sein Kreuz trägt eine Inschrift. Er trägt Weiß und Rot, die beiden anderen tragen schlichtes Grau. Er hat langes Haar, die beiden anderen kurzes. Die Gesichtszüge der beiden Mitgekreuzigten sind kaum unterscheidbar. Man erkennt nicht, wer der reumütige und wer der spottende ist.\",\n  \"unklar\": \"Welcher Mitgekreuzigte welcher ist, lässt sich aus dem Bild nicht ableiten. Die Inschrift auf dem Titulus ist nicht lesbar. Der Bildausschnitt ist am unteren Rand abgeschnitten. Weitere Personen wie Maria, Johannes oder Soldaten sind nicht zu sehen.\"\n}\n```",
+  "szene-2": "```json\n{\n  \"figuren\": [\n    \"Mitte: Jesus. Er hat langes dunkles Haar und einen Bart und trägt einen Heiligenschein mit Kreuzmuster. Er trägt ein weißes Gewand mit rotem Umhang oder Schärpe. Seine Arme sind waagerecht ausgestreckt, und er hängt am Kreuz. Über seinem Kopf ist die Titulus-Tafel (INRI) angebracht.\",\n    \"Links: einer der beiden mit Jesus gekreuzigten Verbrecher (Schächer). Er hat kurzes dunkles Haar und einen Bart und trägt ein graues Gewand. Er ist an ein Kreuz gebunden oder genagelt.\",\n    \"Rechts: der andere gekreuzigte Verbrecher (Schächer). Er sieht fast genauso aus wie der linke und trägt ebenfalls ein graues Gewand.\"\n  ],\n  \"geschehen\": \"Die Kreuzigung auf Golgatha (Panel Nr. 2). Jesus hängt zwischen zwei Mitgekreuzigten, und alle drei haben die Augen schmerzvoll zusammengekniffen.\",\n  \"unterschiede\": \"Nur Jesus hat einen Heiligenschein, ein helles Gewand mit roter Schärpe und ein höher stehendes, größeres Kreuz mit Titulus. Er steht in der Bildmitte und ist größer dargestellt. Die beiden Schächer sind kleiner, tragen schlichte graue Kleidung und haben kein Nimbus-Zeichen. Sie sehen einander sehr ähnlich, und im Bild gibt es nichts, woran man den reumütigen vom spottenden unterscheiden könnte.\",\n  \"unklar\": \"Welcher Schächer der reumütige und welcher der spottende ist, lässt sich aus dem Bild nicht erkennen. Der Titulus ist leer oder unleserlich, sodass die Beschriftung nicht bestätigt werden kann. Das Bild ist am unteren Rand angeschnitten, deshalb sind Körper, Nägel und Umgebung nicht sichtbar.\"\n}\n```",
+  "szene-3": "```json\n{\n  \"figuren\": [\n    \"Mitte: Jesus. Er hat langes dunkles Haar, einen Bart und einen goldenen Heiligenschein mit Kreuzmuster. Er trägt ein weißes Gewand mit rotem Umhang oder Schärpe. Er ist an ein Kreuz mit Titulus-Schild (INRI) genäht, die Arme sind ausgebreitet.\",\n    \"Links: einer der beiden Mitgekreuzigten (Schächer), ein bärtiger Mann mit kurzem dunklem Haar und grauem Gewand, vor einem Holzkreuz.\",\n    \"Rechts: der andere Mitgekreuzigte (Schächer), ebenfalls bärtig, kurzes dunkles Haar, graues Gewand, vor einem Holzkreuz.\"\n  ],\n  \"geschehen\": \"Die Kreuzigung auf Golgatha (Panel 2): Jesus hängt zwischen zwei Verbrechern am Kreuz. Alle drei haben die Augen geschlossen oder zusammengekniffen und das Gesicht schmerzverzerrt.\",\n  \"unterschiede\": \"Jesus ist zentral und größer dargestellt, hat den Heiligenschein, längeres Haar und helle Kleidung mit Rot. Die beiden Schächer sind kleiner, schlichter in Grau gekleidet, haben kurzes Haar und keinen Heiligenschein. Ihre Kreuze stehen etwas weiter hinten und niedriger. Die Gesichtsausdrücke sind ähnlich leidend. Bei dem rechten Schächer wirkt der Ausdruck etwas verkniffener.\",\n  \"unklar\": \"Welcher Schächer der reumütige und welcher der spottende ist, lässt sich aus dem Bildausschnitt nicht erkennen. Der Titulus ist leer oder unleserlich, die Zuordnung zu Jesus ergibt sich aus Heiligenschein und Position. Das Bild ist unten abgeschnitten, weitere Figuren (Soldaten, Maria, Johannes) sind nicht sichtbar.\"\n}\n```\n\nIch habe einen Fehler gemacht: Ich habe „genäht\" statt „genagelt\" geschrieben und den Titulus als „INRI\" bezeichnet, obwohl im Bild keine Schrift zu erkennen ist. Richtig ist: Jesus ist an ein Kreuz genagelt, und das Schild darüber ist leer."
+ },
+ "bilder_ohne_legende": {
+  "JHN-019-017-022": "```json\n{\n  \"stelle\": \"Johannes 19,17–22 (Kreuztragung, Kreuzigung, Inschrift am Kreuz). Das passt zur Bilddatei JHN-019-017-022.\",\n  \"felder\": [\n    \"Feld 1: Jesus mit Heiligenschein trägt sein Kreuz selbst. Ein gestrichelter Pfeil zeigt auf den Hügel Golgatha mit drei Kreuzen, auf dem mittleren hängt ein Schild. Bildunterschrift: «Und er trug das Kreuz selbst». Das Kreuz-Symbol links davon ist ein Icon.\",\n    \"Feld 2: Kreuzigung. Jesus hängt in der Mitte, an den Seiten je ein Gekreuzigter, also zwei andere. Über Jesus ist die Tafel (Titulus) zu sehen. Bildunterschrift: «Jesus, der Nazaräer, der König der Juden». Das Schild-Symbol links davon ist ein Icon.\",\n    \"Feld 3: Streit um die Inschrift. Links drei Männer mit weißen Turbanen (Hohepriester) in blauen Gewändern. Der mittlere spricht: «Schreib nicht: ‹Der König der Juden›!». Rechts Pilatus (beschriftet), der antwortet: «Was ich geschrieben habe, habe ich geschrieben.»\"\n  ],\n  \"wer\": \"Jesus: Heiligenschein, rotes Obergewand über weißem Gewand. Die zwei anderen Gekreuzigten: graue Gewänder, ohne Heiligenschein. Hohepriester/Juden: die drei Männer links in Feld 3, der mittlere mit grauem Bart spricht zu Pilatus. Pilatus: der Mann rechts mit grauem Haar, per Namensschild bezeichnet. Er antwortet den Hohepriestern.\",\n  \"unklar\": [\n    \"In Feld 1 ist Jesu Kreuz nur teilweise sichtbar. Der Querbalken trägt ein kleines Schild, sein Arm überdeckt Teile davon.\",\n    \"In Feld 2 sind die Querbalken der Seitenkreuze abgeschnitten, die Arme der Seitengekreuzigten sind kaum zu sehen. Die Tafel über Jesus ist leer, der Text steht nur in der Bildunterschrift.\",\n    \"In Feld 3 sind die Hohepriester teils überlappend und unten abgeschnitten. Der Sprecher ist nur über die Spitze der Sprechblase auf den mittleren Mann zuzuordnen. Pilatus ist unten beschnitten, das Namensschild verdeckt seinen Körper.\",\n    \"Die Spitzen der Sprechblasen sind in Feld 3 kurz und eindeutig, nichts Störendes.\",\n    \"Die kleinen Icons (Kreuz, Schild) neben den Bildunterschriften sind klar, aber ohne Legende nur zu erraten.\",\n    \"Die beiden anderen Gekreuzigten sind nicht benannt, in Joh 19 heißt es nur «zwei andere».\"\n  ]\n}\n```",
+  "JHN-019-025-027": "```json\n{\n  \"stelle\": \"Johannes 19,25–27: Jesus am Kreuz vertraut seine Mutter dem Lieblingsjünger an. Die Bildunterschrift entspricht Joh 19,27b: „Von jener Stunde an nahm der Jünger sie zu sich.“\",\n  \"felder\": [\n    \"Ein einziges Hauptfeld: Jesus hängt mit ausgebreiteten Armen am Kreuz. Er trägt einen Heiligenschein und ein rot-weißes Gewand. Links steht eine Frau mit blauem Kopftuch, die Beschriftung lautet „Mutter Jesu“. Rechts steht ein junger Mann mit Lockenhaar, einem Stab und einem roten Herz auf der Brust. Jesus sagt zwei Dinge: „Frau, siehe, dein Sohn!“ (Joh 19,26) und „Siehe, deine Mutter!“ (Joh 19,27).\",\n    \"Bildunterschrift unten: „Von jener Stunde an nahm der Jünger sie zu sich“ (Joh 19,27b). Links daneben stehen zwei Mini-Icons: der Jünger mit Herz und die Frau in Blau. Sie zeigen, wer in diesem Satz gemeint ist (er und sie).\"\n  ],\n  \"wer\": \"Jesus ist der Sprecher beider Blasen. Die Spitze der unteren Blase zeigt auf ihn, und die obere Blase hängt an der unteren. Die Mutter Jesu (Maria, links) wird mit „Frau, siehe, dein Sohn!“ angesprochen. Der Jünger (rechts, Herz-Symbol, vermutlich der Lieblingsjünger/Johannes) wird mit „Siehe, deine Mutter!“ angesprochen. Die Bildunterschrift ist Erzählertext: Der Jünger nimmt Maria zu sich.\",\n  \"unklar\": [\n    \"Die obere Blase („Frau, siehe, dein Sohn!“) hat keine eigene Spitze zu Jesus. Ihre Spitze zeigt nach unten auf die zweite Blase und wird von ihr verdeckt. Der Sprecher ist nur aus der Verkettung zu erschließen.\",\n    \"Die Reihenfolge der Blasen ist missverständlich. Inhaltlich spricht Jesus zuerst zur Mutter („dein Sohn“) und dann zum Jünger („deine Mutter“). Die Blase „Frau, siehe, dein Sohn!“ steht aber oben und ist nach rechts gerückt. Die Adressaten sind dadurch vertauscht oder unklar. „Frau, siehe, dein Sohn!“ steht näher am Jünger, gemeint ist aber Maria.\",\n    \"Die lange, spitze Zunge der unteren Blase reicht quer über das Kreuz und den Heiligenschein zu Jesu Kopf und stört das Bild.\",\n    \"Das Herz-Symbol auf der Brust des Jüngers ist ein Zeichen, das ich nur als Hinweis auf den „geliebten Jünger“ deute. Es ist nicht eindeutig.\",\n    \"Der Jünger hält einen Stab. Er ist unten angeschnitten und seine Bedeutung ist unklar.\",\n    \"Das Namensschild „Mutter Jesu“ verdeckt die untere Körperpartie von Maria. Der Jünger ist ohne Namensschild und nur über das Icon und das Herz erkennbar.\",\n    \"Die Gesichter von Maria und dem Jünger wirken ähnlich ratlos oder besorgt. Jesu Gesicht mit den geschlossenen Augen ist stilisiert.\",\n    \"Das Kreuz hat einen leeren Titulus (Schildchen) ohne Inschrift.\",\n    \"Das Bild zeigt die weiteren Frauen unter dem Kreuz aus Joh 19,25 nicht (Schwester der Mutter, Maria von Klopas, Maria Magdalena). Das Feld deckt also nur V. 26–27 ab.\"\n  ]\n}\n```",
+  "JHN-019-031-037": "```json\n{\n  \"stelle\": \"Johannes 19,31–37: Jesus am Kreuz ist schon tot, ihm werden die Beine nicht gebrochen, ein Soldat durchbohrt seine Seite, und es kommen Blut und Wasser heraus. Dazu gehören das Zeugnis des Augenzeugen (V. 35) und die beiden Schriftzitate (V. 36–37, vermutlich Ps 34,21 / Ex 12,46 und Sach 12,10).\",\n  \"felder\": [\n    \"Feld 1: Drei Kreuze. Jesus hängt in der Mitte, mit Heiligenschein, Kreuztitel und geschlossenen Augen. Neben ihm hängen zwei Männer, die Mitgekreuzigten. Links steht ein römischer Soldat mit Helmbusch, der eine Lanze hält, von der nur die Spitze am Rand zu sehen ist. Neben Jesu Brust schweben ein roter und ein blauer Tropfen. Die Bildunterschrift lautet: «und sogleich kam Blut und Wasser heraus».\",\n    \"Feld 2, oben (Banner): Auge, Figur in Blau und Häkchen: «Sein Zeugnis ist wahr, damit auch ihr glaubt.» Gemeint ist der Augenzeuge, der bezeugt, dass es wahr ist.\",\n    \"Feld 2, «Die Schrift sagt» links: Schriftrolle. «Kein Knochen von ihm wird zerbrochen werden.»\",\n    \"Feld 2, «Die Schrift sagt» rechts: Schriftrolle und Augenpaar. «Sie werden auf den blicken, den sie durchbohrt haben.»\",\n    \"Feld 2, «Das geschah» links: Verbotszeichen. «Sie brachen ihm die Beine nicht – er war schon tot.»\",\n    \"Feld 2, «Das geschah» rechts: Lanze, roter und blauer Tropfen. «Ein Soldat stiess ihm die Lanze in die Seite.»\"\n  ],\n  \"wer\": \"Mitte: Jesus. Links und rechts: die beiden Mitgekreuzigten. Ganz links: ein römischer Soldat, vermutlich der mit der Lanze. Es gibt keine Sprechblasen. Der gesamte Text steht in Bildunterschriften und Bannern, also als Erzählung bzw. Schriftzitat, und niemand spricht im Bild. Die Figur in Blau neben dem Auge im Banner ist wohl der Augenzeuge (der Jünger) und wird nicht eindeutig benannt.\",\n  \"unklar\": [\n    \"Die Lanze des Soldaten ist in Feld 1 nur als kleine Spitze am Rand zu sehen. Es ist nicht klar, ob er gerade zusticht, und die Seitenwunde ist nicht erkennbar. Die Tropfen schweben neben Jesu Kopf und Arm statt an der Seite.\",\n    \"Das blaue Symbol im Banner (Figur mit rötlichen Flecken?) ist schwer zu deuten. Es könnte der Augenzeuge sein, vielleicht mit Blut und Wasser. Das Häkchen bedeutet wohl «wahr».\",\n    \"Die Beschriftungen bei den Schriftrollen verraten nicht, welche Stelle zitiert wird. Das muss man selbst zuordnen.\",\n    \"Die Beine der Gekreuzigten sind in Feld 1 nicht sichtbar. Das Brechen der Beine wird nur im Text und durch das Verbotszeichen gezeigt.\",\n    \"Die Reihenfolge in Feld 2 ist nicht eindeutig. Man liest wohl zeilenweise (Schrift links/rechts, dann Geschehen links/rechts), und die Zuordnung Schrift ↔ Geschehen ist kreuzweise (links ↔ links, rechts ↔ rechts).\"\n  ]\n}\n```",
+  "JHN-019": "```json\n{\n  \"stelle\": \"Johannes 19,1–42 (Passion): Verurteilung durch Pilatus (19,5.15), Jesus und seine Mutter unter dem Kreuz (19,26–27), „Es ist vollbracht“ (19,30), Grablegung (19,38–42).\",\n  \"felder\": [\n    \"1: Pilatus (links, Hand auf Jesus zeigend) sagt „Seht, der Mensch!“ (19,5). Jesus mit Dornenkrone und purpurnem Gewand steht in der Mitte. Rechts sagt ein Oberster oder Hohepriester mit weissem Turban „Kreuzige, kreuzige!“ (19,6). Im Beschreibungskasten steht dazu: „Wir haben keinen König ausser dem Kaiser“ (19,15). Das Symbol ist ein Dornenkranz.\",\n    \"2: Jesus hängt am Kreuz. Über ihm ist die Tafel zu sehen, im Kasten steht „Jesus, der Nazoräer, der König der Juden“ (19,19). Die Sprechblase „Frau, siehe, dein Sohn!“ (19,26) stammt von Jesus. Links steht die Mutter Jesu (blauer Schleier), rechts der Lieblingsjünger (lockig, mit Stab und rotem Herz).\",\n    \"3: Drei Kreuze: Jesus in der Mitte, links und rechts die beiden anderen Gekreuzigten. Aus Jesu Seite fallen Blut und Wasser (19,34). Links steht ein römischer Soldat mit rotem Helmbusch. Im Kasten steht „Es ist vollbracht“ (19,30).\",\n    \"4: Josef von Arimatäa und Nikodemus legen den Leichnam Jesu in das Felsengrab (19,38–42). Im Hintergrund sind Grabhöhle und Rollstein zu sehen, daneben ein Salbengefäss. Im Kasten steht „Dort nun legten sie Jesus hin“ (19,42).\"\n  ],\n  \"wer\": \"Feld 1: Pilatus (beschriftet) spricht zur Menge und zeigt auf Jesus. Ein Anführer der Juden (weisser Turban, rechts) ruft „Kreuzige!“. Feld 2: Jesus (Heiligenschein) spricht zur Mutter Jesu (beschriftet), und zwar über den Jünger rechts (Lieblingsjünger, nicht beschriftet). Feld 3: Jesus am mittleren Kreuz, flankiert von zwei Mitgekreuzigten und einem römischen Soldaten. Feld 4: Josef von Arimatäa und Nikodemus (beide beschriftet) tragen Jesus. Die Kästen unten sind Bibeltext-Zitate, keine Rede der Figuren.\",\n  \"unklar\": [\n    \"Feld 1: Die Spitze der Pilatus-Blase zeigt nach unten auf Pilatus, passt aber gut. Die Spitze der Blase „Kreuzige, kreuzige!“ zeigt auf den weiss Behaubten in der Mitte, hinter dem weitere Figuren teils verdeckt sind. Der Sprecher bleibt daher etwas unsicher.\",\n    \"Feld 1: Jesus ist teilweise von Figuren verdeckt. Dass er als „der Mensch“ gemeint ist, erschliesst sich nur aus dem Text.\",\n    \"Feld 2: Die Blase „Frau, siehe, dein Sohn!“ zeigt auf Jesus. Der Jünger rechts hat keine Beschriftung (vermutlich Johannes). Die Spitze der Blase ist recht lang und kreuzt das Kreuz.\",\n    \"Feld 3: Die Wassertropfen und Bluttropfen sind nur symbolisch. Eine Lanze oder ein Stich in die Seite fehlen. Der Soldat hält etwas Kleines (Schwamm?) in der Hand, das nicht klar erkennbar ist.\",\n    \"Feld 4: Der Leichnam Jesu ist stark verdeckt und überlappt mit der Beschriftung. Die Überlagerung der Figuren macht es schwer zu sehen, wer wen trägt. Das Kästchen-Symbol (Grab mit Stein) ist klein, aber verständlich.\",\n    \"Die Kästen mit Symbolen (Dornenkranz, Tafel, Haken, Grab) sind nicht erklärt, bei Kasten 3 passt der Haken-Kreis nur bedingt als Symbol.\"\n  ]\n}\n```",
+  "JHN-020-019-023": "```json\n{\n  \"stelle\": \"Johannes 20,19–23: Jesus erscheint den Jüngern am Abend des Ostertages bei verschlossenen Türen, gibt ihnen den Friedensgruß, sendet sie und teilt den Heiligen Geist mit. Der Dateiname JHN-020-019-023 passt dazu.\",\n  \"felder\": [\n    \"Feld 1: Jesus mit Heiligenschein steht links und streckt den Arm zu den Jüngern aus. Seine Sprechblase sagt: „Friede euch! Wie der Vater mich gesandt hat, so sende auch ich euch.“ Daneben schwebt eine erhobene Hand mit Wundmal (Hinweis auf die Nägelmale, V. 20). Dahinter hängt ein kleines Bild einer verschlossenen Tür (V. 19). Drei Jünger rechts im Bild lachen. Die Textbox darunter lautet: „Da freuten sich die Jünger“ (V. 20).\",\n    \"Feld 2: Eine Sprechzeile von Jesus (Porträt-Icon links) sagt: „Empfangt heiligen Geist!“ (V. 22). Das Symbol Kopf mit Atemhauch steht für das Anhauchen. Darunter stehen zwei Kästen. Links: „Wem ihr die Sünden vergebt, dem sind sie vergeben.“ Rechts: „Wem ihr sie behaltet, dem sind sie behalten.“ (V. 23). Die Symbole zeigen ein zerrissenes Dokument (vergeben) und ein Dokument mit Siegel (behalten).\"\n  ],\n  \"wer\": \"Jesus ist links mit Heiligenschein, rotem Gewand und Bart. Er spricht zu den drei Jüngern rechts: einer mit dunklem Haar (teils verdeckt), einer in der Mitte mit lockigem Haar und Bart und einer mit grauem Haar und weißem Bart. Alle drei lachen. Die Spitze der Sprechblase in Feld 1 zeigt auf Jesus. Die Sprechzeile in Feld 2 gehört ebenfalls Jesus (sein Porträt-Icon steht links davon).\",\n  \"unklar\": [\n    \"Die erhobene Hand mit Wundmal in Feld 1 schwebt frei ohne Körper. Man erkennt nicht sofort, dass es Jesu Hand ist, denn sein Arm zeigt nach rechts.\",\n    \"Das kleine Türbild mit Riegel hängt wie ein Objekt im Raum und überdeckt teilweise den dunkelhaarigen Jünger. Es ist nicht klar als Hinweis auf die verschlossene Tür (V. 19) erkennbar.\",\n    \"Der erste Jünger (dunkles Haar) ist durch Tür und Mitteljünger fast ganz verdeckt.\",\n    \"Die Spitze der Sprechblase in Feld 1 ist recht lang und zeigt nach unten auf Jesus. Sie ist aber noch eindeutig.\",\n    \"Das Symbol Kopf mit Atemhauch (Anhauchen) und die Dokument-Symbole (zerrissen mit Funken = vergeben, mit Siegel = behalten) sind ohne Legende nur zu erraten.\",\n    \"Die Gesichter lachen in Feld 1 schon beim Friedensgruß. Das Bild vermischt Gruß und Freude, es fehlt der Schrecken aus V. 19.\",\n    \"Die Reihenfolge ist ungewöhnlich: Das Anhauchen (V. 22) steht zusammen mit dem Sendungswort in Feld 2, und die Textbox „Da freuten sich die Jünger“ liegt zwischen den Feldern statt in einem Feld.\"\n  ]\n}\n```"
+ },
+ "folgen_de": [
+  "Joh 19,25–27: Die Blase «Frau, siehe, dein Sohn!» stand beim Jünger (Blindtest); seither zieht der Zeichner jede Blase zur angesprochenen Person: links zur Mutter, rechts verbunden zum Jünger.",
+  "Joh 19,31–37 und Kapitel 19: Die Lanze war verdeckt; der Soldat steht jetzt vorn, die Mitgekreuzigten zählen beim Massstab nicht mit. Die Lanze bleibt klein (wie vorher; offen).",
+  "Die Instanzen nennen die Mitgekreuzigten «Schächer, Verbrecher» aus der Überlieferung; das Bild schreibt ihnen keine Tat zu."
+ ]
+}

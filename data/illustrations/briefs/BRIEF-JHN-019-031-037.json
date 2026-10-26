@@ -13,8 +13,9 @@
       "n": 1,
       "reference": "JHN.19.31-JHN.19.34",
       "figures": [
-        "FIG-ROLLE-SOLDAT",
-        "FIG-JESUS"
+        "FIG-ROLLE-MITGEKREUZIGTER",
+        "FIG-JESUS",
+        "FIG-ROLLE-SOLDAT"
       ],
       "objects": [
         "FIG-OBJ-LANZE"
@@ -23,13 +24,14 @@
         "FIG-ZEICHEN-BLUT-UND-WASSER"
       ],
       "speech": [],
-      "action_de": "Jesus ist schon tot; darum brechen ihm die Soldaten die Beine nicht. Einer stösst ihm eine Lanze in die Seite, und sogleich kommt Blut und Wasser heraus.",
+      "action_de": "Den beiden anderen, die mit ihm gekreuzigt sind, brechen die Soldaten die Beine; Jesus ist schon tot, darum brechen sie ihm die Beine nicht. Einer stösst ihm eine Lanze in die Seite, und sogleich kommt Blut und Wasser heraus.",
       "keywords": {
         "de": "und sogleich kam Blut und Wasser heraus",
         "gsw": "und grad isch Bluet und Wasser usechoo"
       },
       "stage": {
         "pose": {
+          "FIG-ROLLE-MITGEKREUZIGTER": "cross",
           "FIG-JESUS": "cross"
         },
         "hold": {
@@ -40,14 +42,22 @@
         },
         "mood": {
           "FIG-JESUS": "dead",
-          "FIG-ROLLE-SOLDAT": "earnest"
+          "FIG-ROLLE-SOLDAT": "earnest",
+          "FIG-ROLLE-MITGEKREUZIGTER": "pain"
         },
         "x": {
-          "FIG-ROLLE-SOLDAT": 40,
-          "FIG-JESUS": 124
+          "FIG-ROLLE-MITGEKREUZIGTER": 66,
+          "FIG-JESUS": 128,
+          "FIG-ROLLE-SOLDAT": 24
         },
         "air_x": 20,
-        "air_y": 104
+        "air_y": 104,
+        "twin": {
+          "FIG-ROLLE-MITGEKREUZIGTER": 180
+        },
+        "far": [
+          "FIG-ROLLE-MITGEKREUZIGTER"
+        ]
       }
     },
     {
@@ -123,14 +133,14 @@
     }
   ],
   "actions_de": [
-    "Jesus ist schon tot; darum brechen ihm die Soldaten die Beine nicht. Einer stösst ihm eine Lanze in die Seite, und sogleich kommt Blut und Wasser heraus.",
+    "Den beiden anderen, die mit ihm gekreuzigt sind, brechen die Soldaten die Beine; Jesus ist schon tot, darum brechen sie ihm die Beine nicht. Einer stösst ihm eine Lanze in die Seite, und sogleich kommt Blut und Wasser heraus.",
     "Der es gesehen hat, bezeugt es, und sein Zeugnis ist wahr, damit auch ihr glaubt. So erfüllt sich die Schrift: «Kein Knochen von ihm wird zerbrochen werden» und «Sie werden auf den blicken, den sie durchbohrt haben»."
   ],
   "captions_de": [
-    "Die Lanze: Ein Soldat mit der Lanze beim toten Jesus am Kreuz; bei Jesus zwei Tropfen, rot und blau (Blut und Wasser); im Band: und sogleich kam Blut und Wasser heraus (Blut und Wasser).",
+    "Die Lanze: Ein Soldat mit der Lanze beim toten Jesus am Kreuz; links und rechts im Hintergrund die zwei Mitgekreuzigten an ihren Kreuzen (das Brechen der Beine ist nicht gezeigt); bei Jesus zwei Tropfen, rot und blau (Blut und Wasser); im Band: und sogleich kam Blut und Wasser heraus (Blut und Wasser).",
     "Schrift und Ereignis (zwei Ebenen, Titel «Sein Zeugnis ist wahr, damit auch ihr glaubt.»): oben die Schrift – «Kein Knochen von ihm wird zerbrochen werden» (Schriftrolle), «Sie werden auf den blicken, den sie durchbohrt haben» (Schriftrolle, Augen); unten, hervorgehoben, was geschah – sie brachen ihm die Beine nicht, er war schon tot (nicht), die Lanze in die Seite (Lanze, Blut und Wasser)."
   ],
-  "interpretation_note_de": "Zwei Felder ([[JHN.19.31-JHN.19.37]]): der Lanzenstich beim toten Jesus mit Blut und Wasser als Zeichen (ohne Wunde im Detail), dann die zwei Schriftworte über dem Ereignis (zwei Ebenen, Zitat oben, Ereignis unten) mit dem Zeugnis des Augenzeugen als Titel. Die zwei Mitgekreuzigten, denen die Beine gebrochen werden, sind nicht gezeichnet, weil das Bildlexikon für sie keine Figur hat. Wer der Zeuge ist, sagt der Text hier nicht.",
+  "interpretation_note_de": "Zwei Felder ([[JHN.19.31-JHN.19.37]]): der Lanzenstich beim toten Jesus mit Blut und Wasser als Zeichen (ohne Wunde im Detail), dann die zwei Schriftworte über dem Ereignis (zwei Ebenen, Zitat oben, Ereignis unten) mit dem Zeugnis des Augenzeugen als Titel. Die zwei Mitgekreuzigten hängen seit 2026-10-26 links und rechts im Hintergrund an ihren Kreuzen; dass ihnen die Beine gebrochen werden ([[JHN.19.32]]), ist nicht als Vorgang gezeigt (Gewalt nicht ausmalen), es steht in Legende und Zusammenfassung. Wer der Zeuge ist, sagt der Text hier nicht.",
   "basis": [
     {
       "record": "TU-JHN-019-031-037",
@@ -508,6 +518,265 @@
           }
         ],
         "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Sprechblasen-Prüfung und neue Bildzeichen (Runde 14): Joh 19,25–27 zwei Blasen Jesu; die zwei Mitgekreuzigten in Joh 19 im Bild; Zeugnis, senden, anhauchen und Rebe statt Ersatzzeichen; Mt 26,1–5 Figuren verschoben, damit die Sprechblasen Platz haben",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.19.31-JHN.19.34",
+            "figures": [
+              "FIG-ROLLE-SOLDAT",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-LANZE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-BLUT-UND-WASSER"
+            ],
+            "speech": [],
+            "action_de": "Jesus ist schon tot; darum brechen ihm die Soldaten die Beine nicht. Einer stösst ihm eine Lanze in die Seite, und sogleich kommt Blut und Wasser heraus.",
+            "keywords": {
+              "de": "und sogleich kam Blut und Wasser heraus",
+              "gsw": "und grad isch Bluet und Wasser usechoo"
+            },
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "cross"
+              },
+              "hold": {
+                "FIG-ROLLE-SOLDAT": "FIG-OBJ-LANZE"
+              },
+              "beside": {
+                "FIG-ZEICHEN-BLUT-UND-WASSER": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-JESUS": "dead",
+                "FIG-ROLLE-SOLDAT": "earnest"
+              },
+              "x": {
+                "FIG-ROLLE-SOLDAT": 40,
+                "FIG-JESUS": 124
+              },
+              "air_x": 20,
+              "air_y": 104
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.19.35-JHN.19.37",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Der es gesehen hat, bezeugt es, und sein Zeugnis ist wahr, damit auch ihr glaubt. So erfüllt sich die Schrift: «Kein Knochen von ihm wird zerbrochen werden» und «Sie werden auf den blicken, den sie durchbohrt haben».",
+            "diagram": {
+              "visual": "levels",
+              "span": 2,
+              "title": {
+                "de": "Sein Zeugnis ist wahr, damit auch ihr glaubt.",
+                "gsw": "Sis Zügnis isch wahr, demit au ir glaubed."
+              },
+              "top_label": {
+                "de": "Die Schrift sagt:",
+                "gsw": "D Schrift seit:"
+              },
+              "top": [
+                {
+                  "a": {
+                    "de": "«Kein Knochen von ihm wird zerbrochen werden.»",
+                    "gsw": "«Kei Chnoche vo ihm wird broche.»"
+                  },
+                  "icons": [
+                    "FIG-OBJ-SCHRIFTROLLE"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "«Sie werden auf den blicken, den sie durchbohrt haben.»",
+                    "gsw": "«Si wärded uf dä luege, wo si durchbohrt händ.»"
+                  },
+                  "icons": [
+                    "FIG-OBJ-SCHRIFTROLLE",
+                    "FIG-ZEICHEN-SEHEN"
+                  ]
+                }
+              ],
+              "bottom_label": {
+                "de": "Das geschah:",
+                "gsw": "Das isch passiert:"
+              },
+              "bottom": [
+                {
+                  "a": {
+                    "de": "Sie brachen ihm die Beine nicht",
+                    "gsw": "Si händ ihm d Bei nöd broche"
+                  },
+                  "b": {
+                    "de": "er war schon tot",
+                    "gsw": "er isch scho tot gsii"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-NICHT"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Ein Soldat stiess ihm die Lanze in die Seite",
+                    "gsw": "En Soldat hät ihm d Lanze i d Siite gstoche"
+                  },
+                  "icons": [
+                    "FIG-OBJ-LANZE",
+                    "FIG-ZEICHEN-BLUT-UND-WASSER"
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus ist schon tot; darum brechen ihm die Soldaten die Beine nicht. Einer stösst ihm eine Lanze in die Seite, und sogleich kommt Blut und Wasser heraus.",
+          "Der es gesehen hat, bezeugt es, und sein Zeugnis ist wahr, damit auch ihr glaubt. So erfüllt sich die Schrift: «Kein Knochen von ihm wird zerbrochen werden» und «Sie werden auf den blicken, den sie durchbohrt haben»."
+        ],
+        "captions_de": [
+          "Die Lanze: Ein Soldat mit der Lanze beim toten Jesus am Kreuz; bei Jesus zwei Tropfen, rot und blau (Blut und Wasser); im Band: und sogleich kam Blut und Wasser heraus (Blut und Wasser).",
+          "Schrift und Ereignis (zwei Ebenen, Titel «Sein Zeugnis ist wahr, damit auch ihr glaubt.»): oben die Schrift – «Kein Knochen von ihm wird zerbrochen werden» (Schriftrolle), «Sie werden auf den blicken, den sie durchbohrt haben» (Schriftrolle, Augen); unten, hervorgehoben, was geschah – sie brachen ihm die Beine nicht, er war schon tot (nicht), die Lanze in die Seite (Lanze, Blut und Wasser)."
+        ],
+        "interpretation_note_de": "Zwei Felder ([[JHN.19.31-JHN.19.37]]): der Lanzenstich beim toten Jesus mit Blut und Wasser als Zeichen (ohne Wunde im Detail), dann die zwei Schriftworte über dem Ereignis (zwei Ebenen, Zitat oben, Ereignis unten) mit dem Zeugnis des Augenzeugen als Titel. Die zwei Mitgekreuzigten, denen die Beine gebrochen werden, sind nicht gezeichnet, weil das Bildlexikon für sie keine Figur hat. Wer der Zeuge ist, sagt der Text hier nicht."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Lage der Figuren nach dem Blindtest 2026-10-26 angepasst: Soldat vorn (Lanze sichtbar), Mitgekreuzigte im Hintergrund",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.19.31-JHN.19.34",
+            "figures": [
+              "FIG-ROLLE-SOLDAT",
+              "FIG-ROLLE-MITGEKREUZIGTER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-LANZE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-BLUT-UND-WASSER"
+            ],
+            "speech": [],
+            "action_de": "Den beiden anderen, die mit ihm gekreuzigt sind, brechen die Soldaten die Beine; Jesus ist schon tot, darum brechen sie ihm die Beine nicht. Einer stösst ihm eine Lanze in die Seite, und sogleich kommt Blut und Wasser heraus.",
+            "keywords": {
+              "de": "und sogleich kam Blut und Wasser heraus",
+              "gsw": "und grad isch Bluet und Wasser usechoo"
+            },
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-MITGEKREUZIGTER": "cross",
+                "FIG-JESUS": "cross"
+              },
+              "hold": {
+                "FIG-ROLLE-SOLDAT": "FIG-OBJ-LANZE"
+              },
+              "beside": {
+                "FIG-ZEICHEN-BLUT-UND-WASSER": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-JESUS": "dead",
+                "FIG-ROLLE-SOLDAT": "earnest",
+                "FIG-ROLLE-MITGEKREUZIGTER": "pain"
+              },
+              "x": {
+                "FIG-ROLLE-SOLDAT": 26,
+                "FIG-ROLLE-MITGEKREUZIGTER": 72,
+                "FIG-JESUS": 128
+              },
+              "air_x": 20,
+              "air_y": 104,
+              "twin": {
+                "FIG-ROLLE-MITGEKREUZIGTER": 178
+              },
+              "far": [
+                "FIG-ROLLE-MITGEKREUZIGTER"
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.19.35-JHN.19.37",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Der es gesehen hat, bezeugt es, und sein Zeugnis ist wahr, damit auch ihr glaubt. So erfüllt sich die Schrift: «Kein Knochen von ihm wird zerbrochen werden» und «Sie werden auf den blicken, den sie durchbohrt haben».",
+            "diagram": {
+              "visual": "levels",
+              "span": 2,
+              "title": {
+                "de": "Sein Zeugnis ist wahr, damit auch ihr glaubt.",
+                "gsw": "Sis Zügnis isch wahr, demit au ir glaubed."
+              },
+              "top_label": {
+                "de": "Die Schrift sagt:",
+                "gsw": "D Schrift seit:"
+              },
+              "top": [
+                {
+                  "a": {
+                    "de": "«Kein Knochen von ihm wird zerbrochen werden.»",
+                    "gsw": "«Kei Chnoche vo ihm wird broche.»"
+                  },
+                  "icons": [
+                    "FIG-OBJ-SCHRIFTROLLE"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "«Sie werden auf den blicken, den sie durchbohrt haben.»",
+                    "gsw": "«Si wärded uf dä luege, wo si durchbohrt händ.»"
+                  },
+                  "icons": [
+                    "FIG-OBJ-SCHRIFTROLLE",
+                    "FIG-ZEICHEN-SEHEN"
+                  ]
+                }
+              ],
+              "bottom_label": {
+                "de": "Das geschah:",
+                "gsw": "Das isch passiert:"
+              },
+              "bottom": [
+                {
+                  "a": {
+                    "de": "Sie brachen ihm die Beine nicht",
+                    "gsw": "Si händ ihm d Bei nöd broche"
+                  },
+                  "b": {
+                    "de": "er war schon tot",
+                    "gsw": "er isch scho tot gsii"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-NICHT"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Ein Soldat stiess ihm die Lanze in die Seite",
+                    "gsw": "En Soldat hät ihm d Lanze i d Siite gstoche"
+                  },
+                  "icons": [
+                    "FIG-OBJ-LANZE",
+                    "FIG-ZEICHEN-BLUT-UND-WASSER"
+                  ]
+                }
+              ]
+            }
+          }
+        ]
       }
     }
   ]

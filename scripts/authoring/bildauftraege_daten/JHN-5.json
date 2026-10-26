@@ -1457,6 +1457,7 @@
     "n": 2,
     "reference": "JHN.19.18-JHN.19.20",
     "figures": [
+     "FIG-ROLLE-MITGEKREUZIGTER",
      "FIG-JESUS"
     ],
     "objects": [],
@@ -1468,20 +1469,29 @@
     },
     "action_de": "Dort kreuzigen sie ihn und mit ihm zwei andere, Jesus in der Mitte. Pilatus lässt die Tafel anbringen: «Jesus, der Nazoräer, der König der Juden».",
     "action_gsw": "Dört chrüüziged si en und mit ihm zwei anderi, de Jesus i de Mitti. De Pilatus laat d Tafele aamache: «Jesus, de Nazoräer, de König vo de Jude».",
-    "caption_de": "Gekreuzigt: Jesus am Kreuz, darüber die Tafel; im Band die Aufschrift: Jesus, der Nazoräer, der König der Juden (Tafel).",
-    "caption_gsw": "Gchrüüziget: De Jesus am Chrüüz, drüber d Tafele; im Band d Ufschrift: Jesus, de Nazoräer, de König vo de Jude (Tafele).",
+    "caption_de": "Gekreuzigt: Jesus am Kreuz in der Mitte, darüber die Tafel; links und rechts, kleiner im Hintergrund, die zwei Mitgekreuzigten an ihren Kreuzen (ohne Tafel); im Band die Aufschrift: Jesus, der Nazoräer, der König der Juden (Tafel).",
+    "caption_gsw": "Gchrüüziget: De Jesus am Chrüüz i de Mitti, drüber d Tafele; links und rächts, chliiner im Hindergrund, di zwei Mitgchrüüzigte a irne Chrüüz (ohni Tafele); im Band d Ufschrift: Jesus, de Nazoräer, de König vo de Jude (Tafele).",
     "stage": {
      "pose": {
+      "FIG-ROLLE-MITGEKREUZIGTER": "cross",
       "FIG-JESUS": "cross"
      },
      "mood": {
+      "FIG-ROLLE-MITGEKREUZIGTER": "pain",
       "FIG-JESUS": "pain"
      },
      "x": {
+      "FIG-ROLLE-MITGEKREUZIGTER": 30,
       "FIG-JESUS": 96
      },
      "air_x": 20,
-     "air_y": 104
+     "air_y": 104,
+     "twin": {
+      "FIG-ROLLE-MITGEKREUZIGTER": 162
+     },
+     "far": [
+      "FIG-ROLLE-MITGEKREUZIGTER"
+     ]
     }
    },
    {
@@ -1535,8 +1545,8 @@
     }
    }
   ],
-  "note_de": "Drei Felder nach dem Ablauf ([[JHN.19.17-JHN.19.22]]): Jesus trägt das Kreuz selbst (kein Simon von Kyrene: Johannes erzählt ihn nicht), die Kreuzigung mit der Tafel, der Streit um die Aufschrift. Jesus am Kreuz ist einfach und aus mittlerer Entfernung gezeichnet, ohne Wunden (Bildregel Kreuzigung). Die zwei anderen, die mit ihm gekreuzigt werden ([[JHN.19.18]]), sind nicht gezeichnet, weil das Bildlexikon für sie keine Figur hat; die Zusammenfassung nennt sie. Die drei Sprachen der Tafel sind nicht dargestellt.",
-  "note_gsw": "Drüü Fälder nach em Ablauf ([[JHN.19.17-JHN.19.22]]): De Jesus treit s Chrüüz sälber (kein Simon vo Kyrene: de Johannes verzellt nöd vo ihm), d Chrüüzigung mit de Tafele, de Striit um d Ufschrift. De Jesus am Chrüüz isch eifach und us mittlerer Entfernig zeichnet, ohni Wunde (Bildregle Chrüüzigung). Di zwei andere, wo mit ihm gchrüüziget wärded ([[JHN.19.18]]), sind nöd zeichnet, wil s Bildlexikon für si kei Figur hät; d Zämefassig nännt si. Di drüü Sprache vo de Tafele sind nöd dargstellt."
+  "note_de": "Drei Felder nach dem Ablauf ([[JHN.19.17-JHN.19.22]]): Jesus trägt das Kreuz selbst (kein Simon von Kyrene: Johannes erzählt ihn nicht), die Kreuzigung mit der Tafel, der Streit um die Aufschrift. Jesus am Kreuz ist einfach und aus mittlerer Entfernung gezeichnet, ohne Wunden (Bildregel Kreuzigung). Die zwei anderen, die mit ihm gekreuzigt werden ([[JHN.19.18]]), stehen seit 2026-10-26 links und rechts im Hintergrund, kleiner und ohne Tafel; der Text nennt weder Namen noch Tat, darum sind sie neutral gezeichnet. Die drei Sprachen der Tafel sind nicht dargestellt.",
+  "note_gsw": "Drüü Fälder nach em Ablauf ([[JHN.19.17-JHN.19.22]]): De Jesus treit s Chrüüz sälber (kein Simon vo Kyrene: de Johannes verzellt nöd vo ihm), d Chrüüzigung mit de Tafele, de Striit um d Ufschrift. De Jesus am Chrüüz isch eifach und us mittlerer Entfernig zeichnet, ohni Wunde (Bildregle Chrüüzigung). Di zwei andere, wo mit ihm gchrüüziget wärded ([[JHN.19.18]]), staand sit em 2026-10-26 links und rächts im Hindergrund, chliiner und ohni Tafele; de Text nännt weder Name no Tat, drum sind si neutral zeichnet. Di drüü Sprache vo de Tafele sind nöd dargstellt."
  },
  {
   "suffix": "JHN-019-023-024",
@@ -1642,8 +1652,17 @@
       "to": "FIG-MARIA-MUTTER-JESU",
       "icons": [],
       "word": {
-       "de": "Frau, siehe, dein Sohn! – Siehe, deine Mutter!",
-       "gsw": "Frau, lueg, din Sohn! – Lueg, dini Mueter!"
+       "de": "Frau, siehe, dein Sohn!",
+       "gsw": "Frau, lueg, din Sohn!"
+      }
+     },
+     {
+      "from": "FIG-JESUS",
+      "to": "FIG-LIEBLINGSJUENGER",
+      "icons": [],
+      "word": {
+       "de": "Siehe, deine Mutter!",
+       "gsw": "Lueg, dini Mueter!"
       }
      }
     ],
@@ -1659,8 +1678,8 @@
     },
     "action_de": "Beim Kreuz stehen seine Mutter und der Jünger, den er liebte. Jesus sagt zu seiner Mutter: «Frau, siehe, dein Sohn!» und zum Jünger: «Siehe, deine Mutter!» Von jener Stunde an nimmt der Jünger sie zu sich.",
     "action_gsw": "Bim Chrüüz staand sini Mueter und de Jünger, won er gliebt hät. De Jesus seit zu sinere Mueter: «Frau, lueg, din Sohn!» und zum Jünger: «Lueg, dini Mueter!» Vo säbere Stund aa nimmt de Jünger si zu sich.",
-    "caption_de": "Mutter und Jünger: Beim Kreuz die Mutter Jesu (Name, Blau) und der Jünger, den Jesus liebte (Herz); Jesus sagt zur Mutter und zum Jünger: «Frau, siehe, dein Sohn! – Siehe, deine Mutter!» (Jünger, den Jesus liebte, Mutter); im Band: Von jener Stunde an nahm der Jünger sie zu sich (Jünger, den Jesus liebte, Mutter).",
-    "caption_gsw": "Mueter und Jünger: Bim Chrüüz d Mueter vom Jesus (Name, Blau) und de Jünger, wo de Jesus gliebt hät (Härz); de Jesus seit zur Mueter und zum Jünger: «Frau, lueg, din Sohn! – Lueg, dini Mueter!» (Jünger, wo de Jesus gliebt hät, Mueter); im Band: Vo säbere Stund aa hät de Jünger si zu sich gnoo (Jünger, wo de Jesus gliebt hät, Mueter).",
+    "caption_de": "Mutter und Jünger: Beim Kreuz die Mutter Jesu (Name, Blau) und der Jünger, den Jesus liebte (Herz); Jesus sagt zur Mutter: «Frau, siehe, dein Sohn!» (Jünger, den Jesus liebte), daran angehängt zum Jünger: «Siehe, deine Mutter!» (Mutter); im Band: Von jener Stunde an nahm der Jünger sie zu sich (Jünger, den Jesus liebte, Mutter).",
+    "caption_gsw": "Mueter und Jünger: Bim Chrüüz d Mueter vom Jesus (Name, Blau) und de Jünger, wo de Jesus gliebt hät (Härz); de Jesus seit zur Mueter: «Frau, lueg, din Sohn!» (Jünger, wo de Jesus gliebt hät), draa ghänkt zum Jünger: «Lueg, dini Mueter!» (Mueter); im Band: Vo säbere Stund aa hät de Jünger si zu sich gnoo (Jünger, wo de Jesus gliebt hät, Mueter).",
     "stage": {
      "pose": {
       "FIG-JESUS": "cross"
@@ -1787,8 +1806,9 @@
     "n": 1,
     "reference": "JHN.19.31-JHN.19.34",
     "figures": [
-     "FIG-ROLLE-SOLDAT",
-     "FIG-JESUS"
+     "FIG-ROLLE-MITGEKREUZIGTER",
+     "FIG-JESUS",
+     "FIG-ROLLE-SOLDAT"
     ],
     "objects": [
      "FIG-OBJ-LANZE"
@@ -1801,12 +1821,13 @@
      "de": "und sogleich kam Blut und Wasser heraus",
      "gsw": "und grad isch Bluet und Wasser usechoo"
     },
-    "action_de": "Jesus ist schon tot; darum brechen ihm die Soldaten die Beine nicht. Einer stösst ihm eine Lanze in die Seite, und sogleich kommt Blut und Wasser heraus.",
-    "action_gsw": "De Jesus isch scho tot; drum bräched ihm d Soldate d Bei nöd. Eine sticht ihm mit ere Lanze i d Siite, und grad chunnt Bluet und Wasser use.",
-    "caption_de": "Die Lanze: Ein Soldat mit der Lanze beim toten Jesus am Kreuz; bei Jesus zwei Tropfen, rot und blau (Blut und Wasser); im Band: und sogleich kam Blut und Wasser heraus (Blut und Wasser).",
-    "caption_gsw": "D Lanze: En Soldat mit de Lanze bim tote Jesus am Chrüüz; bim Jesus zwei Tröpfli, rot und blau (Bluet und Wasser); im Band: und grad isch Bluet und Wasser usechoo (Bluet und Wasser).",
+    "action_de": "Den beiden anderen, die mit ihm gekreuzigt sind, brechen die Soldaten die Beine; Jesus ist schon tot, darum brechen sie ihm die Beine nicht. Einer stösst ihm eine Lanze in die Seite, und sogleich kommt Blut und Wasser heraus.",
+    "action_gsw": "De beide andere, wo mit ihm gchrüüziget sind, bräched d Soldate d Bei; de Jesus isch scho tot, drum bräched si ihm d Bei nöd. Eine sticht ihm mit ere Lanze i d Siite, und grad chunnt Bluet und Wasser use.",
+    "caption_de": "Die Lanze: Ein Soldat mit der Lanze beim toten Jesus am Kreuz; links und rechts im Hintergrund die zwei Mitgekreuzigten an ihren Kreuzen (das Brechen der Beine ist nicht gezeigt); bei Jesus zwei Tropfen, rot und blau (Blut und Wasser); im Band: und sogleich kam Blut und Wasser heraus (Blut und Wasser).",
+    "caption_gsw": "D Lanze: En Soldat mit de Lanze bim tote Jesus am Chrüüz; links und rächts im Hindergrund di zwei Mitgchrüüzigte a irne Chrüüz (s Bräche vo de Bei isch nöd zeigt); bim Jesus zwei Tröpfli, rot und blau (Bluet und Wasser); im Band: und grad isch Bluet und Wasser usechoo (Bluet und Wasser).",
     "stage": {
      "pose": {
+      "FIG-ROLLE-MITGEKREUZIGTER": "cross",
       "FIG-JESUS": "cross"
      },
      "hold": {
@@ -1817,14 +1838,22 @@
      },
      "mood": {
       "FIG-JESUS": "dead",
-      "FIG-ROLLE-SOLDAT": "earnest"
+      "FIG-ROLLE-SOLDAT": "earnest",
+      "FIG-ROLLE-MITGEKREUZIGTER": "pain"
      },
      "x": {
-      "FIG-ROLLE-SOLDAT": 40,
-      "FIG-JESUS": 124
+      "FIG-ROLLE-MITGEKREUZIGTER": 66,
+      "FIG-JESUS": 128,
+      "FIG-ROLLE-SOLDAT": 24
      },
      "air_x": 20,
-     "air_y": 104
+     "air_y": 104,
+     "twin": {
+      "FIG-ROLLE-MITGEKREUZIGTER": 180
+     },
+     "far": [
+      "FIG-ROLLE-MITGEKREUZIGTER"
+     ]
     }
    },
    {
@@ -1902,8 +1931,8 @@
     }
    }
   ],
-  "note_de": "Zwei Felder ([[JHN.19.31-JHN.19.37]]): der Lanzenstich beim toten Jesus mit Blut und Wasser als Zeichen (ohne Wunde im Detail), dann die zwei Schriftworte über dem Ereignis (zwei Ebenen, Zitat oben, Ereignis unten) mit dem Zeugnis des Augenzeugen als Titel. Die zwei Mitgekreuzigten, denen die Beine gebrochen werden, sind nicht gezeichnet, weil das Bildlexikon für sie keine Figur hat. Wer der Zeuge ist, sagt der Text hier nicht.",
-  "note_gsw": "Zwei Fälder ([[JHN.19.31-JHN.19.37]]): de Lanzestich bim tote Jesus mit Bluet und Wasser als Zeiche (ohni Wunde im Detail), dänn di zwei Schriftwort über em Ereignis (zwei Ebene, Zitat obe, Ereignis unde) mit em Zügnis vom Augezüüg als Titel. Di zwei Mitgchrüüzigte, wo mer d Bei bricht, sind nöd zeichnet, wil s Bildlexikon für si kei Figur hät. Wer de Züüg isch, seit de Text da nöd."
+  "note_de": "Zwei Felder ([[JHN.19.31-JHN.19.37]]): der Lanzenstich beim toten Jesus mit Blut und Wasser als Zeichen (ohne Wunde im Detail), dann die zwei Schriftworte über dem Ereignis (zwei Ebenen, Zitat oben, Ereignis unten) mit dem Zeugnis des Augenzeugen als Titel. Die zwei Mitgekreuzigten hängen seit 2026-10-26 links und rechts im Hintergrund an ihren Kreuzen; dass ihnen die Beine gebrochen werden ([[JHN.19.32]]), ist nicht als Vorgang gezeigt (Gewalt nicht ausmalen), es steht in Legende und Zusammenfassung. Wer der Zeuge ist, sagt der Text hier nicht.",
+  "note_gsw": "Zwei Fälder ([[JHN.19.31-JHN.19.37]]): de Lanzestich bim tote Jesus mit Bluet und Wasser als Zeiche (ohni Wunde im Detail), dänn di zwei Schriftwort über em Ereignis (zwei Ebene, Zitat obe, Ereignis unde) mit em Zügnis vom Augezüüg als Titel. Di zwei Mitgchrüüzigte hanged sit em 2026-10-26 links und rächts im Hindergrund a irne Chrüüz; dass mer ine d Bei bricht ([[JHN.19.32]]), isch nöd als Vorgang zeigt (Gwalt nöd uusmale), es staat i de Legände und i de Zämefassig. Wer de Züüg isch, seit de Text da nöd."
  },
  {
   "suffix": "JHN-019-038-042",
@@ -2150,8 +2179,9 @@
     "n": 3,
     "reference": "JHN.19.28-JHN.19.37",
     "figures": [
-     "FIG-ROLLE-SOLDAT",
-     "FIG-JESUS"
+     "FIG-ROLLE-MITGEKREUZIGTER",
+     "FIG-JESUS",
+     "FIG-ROLLE-SOLDAT"
     ],
     "objects": [
      "FIG-OBJ-LANZE"
@@ -2166,10 +2196,11 @@
     },
     "action_de": "Jesus sagt: «Es ist vollbracht», neigt das Haupt und übergibt den Geist; ein Soldat stösst ihm eine Lanze in die Seite, und Blut und Wasser kommen heraus.",
     "action_gsw": "De Jesus seit: «Es isch vollbracht», neigt de Chopf und git de Geischt uf; en Soldat sticht ihm mit ere Lanze i d Siite, und Bluet und Wasser chömed use.",
-    "caption_de": "Vollbracht: Jesus ist am Kreuz gestorben (Kopf geneigt, Augen zu); ein Soldat mit der Lanze, bei Jesus Blut und Wasser (zwei Tropfen); im Band: Es ist vollbracht (vollbracht).",
-    "caption_gsw": "Vollbracht: De Jesus isch am Chrüüz gstorbe (Chopf gneigt, Auge zue); en Soldat mit de Lanze, bim Jesus Bluet und Wasser (zwei Tröpfli); im Band: Es isch vollbracht (vollbracht).",
+    "caption_de": "Vollbracht: Jesus ist am Kreuz gestorben (Kopf geneigt, Augen zu); ein Soldat mit der Lanze; links und rechts im Hintergrund die zwei Mitgekreuzigten an ihren Kreuzen; bei Jesus Blut und Wasser (zwei Tropfen); im Band: Es ist vollbracht (vollbracht).",
+    "caption_gsw": "Vollbracht: De Jesus isch am Chrüüz gstorbe (Chopf gneigt, Auge zue); en Soldat mit de Lanze; links und rächts im Hindergrund di zwei Mitgchrüüzigte a irne Chrüüz; bim Jesus Bluet und Wasser (zwei Tröpfli); im Band: Es isch vollbracht (vollbracht).",
     "stage": {
      "pose": {
+      "FIG-ROLLE-MITGEKREUZIGTER": "cross",
       "FIG-JESUS": "cross"
      },
      "hold": {
@@ -2180,14 +2211,22 @@
      },
      "mood": {
       "FIG-JESUS": "dead",
-      "FIG-ROLLE-SOLDAT": "earnest"
+      "FIG-ROLLE-SOLDAT": "earnest",
+      "FIG-ROLLE-MITGEKREUZIGTER": "pain"
      },
      "x": {
-      "FIG-ROLLE-SOLDAT": 40,
-      "FIG-JESUS": 124
+      "FIG-ROLLE-MITGEKREUZIGTER": 66,
+      "FIG-JESUS": 128,
+      "FIG-ROLLE-SOLDAT": 24
      },
      "air_x": 20,
-     "air_y": 104
+     "air_y": 104,
+     "twin": {
+      "FIG-ROLLE-MITGEKREUZIGTER": 180
+     },
+     "far": [
+      "FIG-ROLLE-MITGEKREUZIGTER"
+     ]
     }
    },
    {
@@ -2247,8 +2286,8 @@
     }
    }
   ],
-  "note_de": "Vier Szenen ([[JHN.19.1-JHN.19.42]]): Verurteilung («Seht, der Mensch!»), Kreuzigung mit Tafel und dem Wort an die Mutter, Tod mit Lanze, Blut und Wasser, Begräbnis. Jesus am Kreuz und im Grab ist ohne Wunden gezeichnet; sein Tod ist sichtbar (Kopf geneigt, Augen zu, liegend in Leinenbinden). Kein Simon von Kyrene, keine Finsternis, kein Hauptmann und kein Tempelvorhang: Das erzählt Johannes nicht. Die zwei Mitgekreuzigten fehlen, weil das Bildlexikon für sie keine Figur hat.",
-  "note_gsw": "Vier Szene ([[JHN.19.1-JHN.19.42]]): Verurteilig («Lueged, de Mänsch!»), Chrüüzigung mit Tafele und em Wort a d Mueter, Tod mit Lanze, Bluet und Wasser, Begräbnis. De Jesus am Chrüüz und im Grab isch ohni Wunde zeichnet; sin Tod isch z gseh (Chopf gneigt, Auge zue, liggend i Liinebinde). Kein Simon vo Kyrene, kei Fiischteri, kein Hauptmaa und kein Tämpelvorhang: Das verzellt de Johannes nöd. Di zwei Mitgchrüüzigte fehled, wil s Bildlexikon für si kei Figur hät."
+  "note_de": "Vier Szenen ([[JHN.19.1-JHN.19.42]]): Verurteilung («Seht, der Mensch!»), Kreuzigung mit Tafel und dem Wort an die Mutter, Tod mit Lanze, Blut und Wasser, Begräbnis. Jesus am Kreuz und im Grab ist ohne Wunden gezeichnet; sein Tod ist sichtbar (Kopf geneigt, Augen zu, liegend in Leinenbinden). Kein Simon von Kyrene, keine Finsternis, kein Hauptmann und kein Tempelvorhang: Das erzählt Johannes nicht. Die zwei Mitgekreuzigten stehen seit 2026-10-26 im Feld 3 links und rechts im Hintergrund an ihren Kreuzen; im Feld 2 (Mutter und Jünger) sind sie aus Platzgründen nicht gezeichnet.",
+  "note_gsw": "Vier Szene ([[JHN.19.1-JHN.19.42]]): Verurteilig («Lueged, de Mänsch!»), Chrüüzigung mit Tafele und em Wort a d Mueter, Tod mit Lanze, Bluet und Wasser, Begräbnis. De Jesus am Chrüüz und im Grab isch ohni Wunde zeichnet; sin Tod isch z gseh (Chopf gneigt, Auge zue, liggend i Liinebinde). Kein Simon vo Kyrene, kei Fiischteri, kein Hauptmaa und kein Tämpelvorhang: Das verzellt de Johannes nöd. Di zwei Mitgchrüüzigte staand sit em 2026-10-26 im Fäld 3 links und rächts im Hindergrund a irne Chrüüz; im Fäld 2 (Mueter und Jünger) sind si us Platzgründ nöd zeichnet."
  },
  {
   "suffix": "JHN-020-001-010",
@@ -2569,8 +2608,8 @@
     },
     "action_de": "Bei verschlossenen Türen tritt Jesus in die Mitte: «Friede euch!» Er zeigt ihnen die Hände und die Seite, und die Jünger freuen sich. «Wie der Vater mich gesandt hat, so sende auch ich euch.»",
     "action_gsw": "Bi bschlossne Tüüre staat de Jesus i d Mitti: «Fride mit eu!» Er zeigt ine d Händ und d Siite, und d Jünger fröied sich. «Wie de Vatter mich gschickt hät, so schick au ich eu.»",
-    "caption_de": "Friede euch: Hinter verschlossener Tür (Tür mit Riegel) zeigt Jesus die Hände (Hand mit Wundmal) und sagt: «Friede euch! Wie der Vater mich gesandt hat, so sende auch ich euch.» (Friede, hinausgehen); im Band: Da freuten sich die Jünger (Freude).",
-    "caption_gsw": "Fride mit eu: Hinder bschlossner Tüür (Tüür mit Riegel) zeigt de Jesus d Händ (Hand mit Wundmal) und seit: «Fride mit eu! Wie de Vatter mich gschickt hät, so schick au ich eu.» (Fride, usegaa); im Band: Da händ sich d Jünger gfröit (Fröid).",
+    "caption_de": "Friede euch: Hinter verschlossener Tür (Tür mit Riegel) zeigt Jesus die Hände (Hand mit Wundmal) und sagt: «Friede euch! Wie der Vater mich gesandt hat, so sende auch ich euch.» (Friede, senden); im Band: Da freuten sich die Jünger (Freude).",
+    "caption_gsw": "Fride mit eu: Hinder bschlossner Tüür (Tüür mit Riegel) zeigt de Jesus d Händ (Hand mit Wundmal) und seit: «Fride mit eu! Wie de Vatter mich gschickt hät, so schick au ich eu.» (Fride, schicke); im Band: Da händ sich d Jünger gfröit (Fröid).",
     "stage": {
      "at": {
       "FIG-ZEICHEN-WUNDMALE": "FIG-JESUS"
@@ -2597,8 +2636,8 @@
     "speech": [],
     "action_de": "Er haucht sie an und sagt: «Empfangt heiligen Geist! Wem ihr die Sünden vergebt, dem sind sie vergeben; wem ihr sie behaltet, dem sind sie behalten.»",
     "action_gsw": "Er huucht si aa und seit: «Nämed heilige Geischt! Wem ir d Sünde vergäbed, däm sind si vergää; wem ir si bhalted, däm sind si bhalte.»",
-    "caption_de": "Vergeben oder behalten (Spalten, Bild Jesus, Blase «Empfangt heiligen Geist!»): links wem ihr die Sünden vergebt – dem sind sie vergeben (zerrissener Schuldschein) ↔ rechts wem ihr sie behaltet – dem sind sie behalten (Schuldschein).",
-    "caption_gsw": "Vergää oder bhalte (Spalte, Bild Jesus, Blase «Nämed heilige Geischt!»): links wem ir d Sünde vergäbed – däm sind si vergää (verrissne Schuldschii) ↔ rächts wem ir si bhalted – däm sind si bhalte (Schuldschii).",
+    "caption_de": "Vergeben oder behalten (Spalten, Bild Jesus, Blase «Empfangt heiligen Geist!» mit dem Zeichen anhauchen): links wem ihr die Sünden vergebt – dem sind sie vergeben (zerrissener Schuldschein) ↔ rechts wem ihr sie behaltet – dem sind sie behalten (Schuldschein).",
+    "caption_gsw": "Vergää oder bhalte (Spalte, Bild Jesus, Blase «Nämed heilige Geischt!» mit em Zeiche aahuuche): links wem ir d Sünde vergäbed – däm sind si vergää (verrissne Schuldschii) ↔ rächts wem ir si bhalted – däm sind si bhalte (Schuldschii).",
     "diagram": {
      "visual": "columns",
      "arrow": false,
@@ -2642,8 +2681,8 @@
     }
    }
   ],
-  "note_de": "Zwei Felder nach dem Ablauf ([[JHN.20.19-JHN.20.23]]): der Auferstandene bei verschlossenen Türen mit «Friede euch!» und der Sendung, die Wundmale an der Hand; dann der Auftrag mit beiden Zweigen (vergeben und behalten). Das Anhauchen ([[JHN.20.22]]) ist nicht als Bewegung gezeichnet; der Geist steht als Taube bei den Worten. «Die Juden» sind nicht gezeichnet; die verschlossene Tür zeigt die Furcht.",
-  "note_gsw": "Zwei Fälder nach em Ablauf ([[JHN.20.19-JHN.20.23]]): de Uferstandnig bi bschlossne Tüüre mit «Fride mit eu!» und de Sändig, d Wundmal a de Hand; dänn de Uftrag mit beidne Zwiig (vergää und bhalte). S Aahuuche ([[JHN.20.22]]) isch nöd als Bewegig zeichnet; de Geischt staat als Tuube bi de Wort. «D Jude» sind nöd zeichnet; di bschlosse Tüür zeigt d Angscht."
+  "note_de": "Zwei Felder nach dem Ablauf ([[JHN.20.19-JHN.20.23]]): der Auferstandene bei verschlossenen Türen mit «Friede euch!» und der Sendung, die Wundmale an der Hand; dann der Auftrag mit beiden Zweigen (vergeben und behalten). Das Anhauchen ([[JHN.20.22]]) steht seit 2026-10-26 als Zeichen «anhauchen» (Person mit Atemwolke) bei den Worten «Empfangt heiligen Geist!»; vorher stand dort die Taube. «Die Juden» sind nicht gezeichnet; die verschlossene Tür zeigt die Furcht.",
+  "note_gsw": "Zwei Fälder nach em Ablauf ([[JHN.20.19-JHN.20.23]]): de Uferstandnig bi bschlossne Tüüre mit «Fride mit eu!» und de Sändig, d Wundmal a de Hand; dänn de Uftrag mit beidne Zwiig (vergää und bhalte). S Aahuuche ([[JHN.20.22]]) staat sit em 2026-10-26 als Zeiche «aahuuche» (Person mit Aatemwolke) bi de Wort «Nämed heilige Geischt!»; vorher isch det d Tuube gstande. «D Jude» sind nöd zeichnet; di bschlosse Tüür zeigt d Angscht."
  },
  {
   "suffix": "JHN-020-024-029",
@@ -2979,8 +3018,8 @@
     },
     "action_de": "Bei verschlossenen Türen tritt Jesus in die Mitte: «Friede euch! Wie der Vater mich gesandt hat, so sende auch ich euch.» Er gibt ihnen den heiligen Geist.",
     "action_gsw": "Bi bschlossne Tüüre staat de Jesus i d Mitti: «Fride mit eu! Wie de Vatter mich gschickt hät, so schick au ich eu.» Er git ine de Heilig Geischt.",
-    "caption_de": "Gesandt: Jesus mit den Wundmalen (Hand mit Wundmal) sagt zu den Jüngern: «Friede euch! So sende auch ich euch.» (Friede, hinausgehen); im Band: Empfangt heiligen Geist! (Taube).",
-    "caption_gsw": "Gschickt: De Jesus mit de Wundmal (Hand mit Wundmal) seit zu de Jünger: «Fride mit eu! So schick au ich eu.» (Fride, usegaa); im Band: Nämed heilige Geischt! (Tuube).",
+    "caption_de": "Gesandt: Jesus mit den Wundmalen (Hand mit Wundmal) sagt zu den Jüngern: «Friede euch! So sende auch ich euch.» (Friede, senden); im Band: Empfangt heiligen Geist! (anhauchen).",
+    "caption_gsw": "Gschickt: De Jesus mit de Wundmal (Hand mit Wundmal) seit zu de Jünger: «Fride mit eu! So schick au ich eu.» (Fride, schicke); im Band: Nämed heilige Geischt! (aahuuche).",
     "stage": {
      "at": {
       "FIG-ZEICHEN-WUNDMALE": "FIG-JESUS"
@@ -3438,8 +3477,8 @@
     },
     "action_de": "Das ist der Jünger, der von diesen Dingen Zeugnis ablegt und dies geschrieben hat, und wir wissen, dass sein Zeugnis wahr ist. Jesus hat noch vieles andere getan.",
     "action_gsw": "Das isch de Jünger, wo über das alles Zügnis ablegt und das gschribe hät, und mer wüssed, dass sis Zügnis wahr isch. De Jesus hät no vil anders gmacht.",
-    "caption_de": "Das wahre Zeugnis: Der Jünger, den Jesus liebte (Herz), mit der Schriftrolle; grüner Haken für «wahr»; im Band: wir wissen, dass sein Zeugnis wahr ist (Wahrheit).",
-    "caption_gsw": "S wahr Zügnis: De Jünger, wo de Jesus gliebt hät (Härz), mit de Schriftrolle; grüene Hake für «wahr»; im Band: mer wüssed, dass sis Zügnis wahr isch (Wahrheit).",
+    "caption_de": "Das wahre Zeugnis: Der Jünger, den Jesus liebte (Herz), mit der Schriftrolle; grüner Haken für «wahr»; im Band: wir wissen, dass sein Zeugnis wahr ist (bezeugen, Wahrheit).",
+    "caption_gsw": "S wahr Zügnis: De Jünger, wo de Jesus gliebt hät (Härz), mit de Schriftrolle; grüene Hake für «wahr»; im Band: mer wüssed, dass sis Zügnis wahr isch (bezüüge, Wahrheit).",
     "stage": {
      "beside": {
       "FIG-OBJ-SCHRIFTROLLE": "FIG-LIEBLINGSJUENGER"
@@ -3628,8 +3667,8 @@
     },
     "action_de": "Der Jünger, den Jesus liebte, hat dies geschrieben, und sein Zeugnis ist wahr.",
     "action_gsw": "De Jünger, wo de Jesus gliebt hät, hät das gschribe, und sis Zügnis isch wahr.",
-    "caption_de": "Das Zeugnis: Der Jünger, den Jesus liebte, mit der Schriftrolle; grüner Haken für «wahr»; im Band: wir wissen, dass sein Zeugnis wahr ist (Wahrheit).",
-    "caption_gsw": "S Zügnis: De Jünger, wo de Jesus gliebt hät, mit de Schriftrolle; grüene Hake für «wahr»; im Band: mer wüssed, dass sis Zügnis wahr isch (Wahrheit).",
+    "caption_de": "Das Zeugnis: Der Jünger, den Jesus liebte, mit der Schriftrolle; grüner Haken für «wahr»; im Band: wir wissen, dass sein Zeugnis wahr ist (bezeugen, Wahrheit).",
+    "caption_gsw": "S Zügnis: De Jünger, wo de Jesus gliebt hät, mit de Schriftrolle; grüene Hake für «wahr»; im Band: mer wüssed, dass sis Zügnis wahr isch (bezüüge, Wahrheit).",
     "stage": {
      "beside": {
       "FIG-OBJ-SCHRIFTROLLE": "FIG-LIEBLINGSJUENGER"

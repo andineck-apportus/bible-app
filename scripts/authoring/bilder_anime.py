@@ -760,9 +760,10 @@ def use(sym, x, y, w, h, extra=""):
     return f'<use href="#{sym}" x="{x}" y="{y}" width="{w}" height="{h}"{extra}/>'
 
 
-def bubble(x, y, w, h, tx, ty, inner):
-    """Sprechblase als eine Form mit eingebauter Spitze zur sprechenden Figur (tx, ty), siehe _bubble.py."""
-    return f'<g><path d="{bubble_path(x, y, w, h, tx, ty, 12, 5)}" data-box="{x:g},{y:g},{w:g},{h:g}" data-tail="{tx:g},{ty:g}" fill="{BUBBLE}" stroke="{INK}" stroke-width="1.6" stroke-linejoin="round"/>{inner}</g>'
+def bubble(x, y, w, h, tx, ty, inner, attrs=""):
+    """Sprechblase als eine Form mit eingebauter Spitze zur sprechenden Figur (tx, ty), siehe _bubble.py. attrs: weitere
+    data-Attribute für die Prüfung (data-speech = Index der Sprech-Angabe im Bildauftrag, data-link = Spitze zur Folgeblase)."""
+    return f'<g><path d="{bubble_path(x, y, w, h, tx, ty, 12, 5)}" data-box="{x:g},{y:g},{w:g},{h:g}" data-tail="{tx:g},{ty:g}"{attrs} fill="{BUBBLE}" stroke="{INK}" stroke-width="1.6" stroke-linejoin="round"/>{inner}</g>'
 
 
 CUR = ["x"]  # Kennung des Bildes, das gerade gezeichnet wird (für eindeutige Clip-IDs, wenn mehrere Bilder auf einer Seite stehen)
@@ -913,7 +914,8 @@ def god_to(x, y, tx, ty, s=26):
 
 
 def a_exil():
-    b = bubble(44, 18, 40, 34, 34, 68, use("an-z-hoffnung", 51, 22, 26, 26))
+    # rechts neben dem Propheten, kurze steile Spitze (Prüfung 2026-10-26: Spitze war 31 Einheiten lang und flach)
+    b = bubble(54, 32, 40, 34, 36, 68, use("an-z-hoffnung", 61, 36, 26, 26))
     return (use("an-jerusalem", 104, 12, 80, 56) + crack(150, 38) + crack(126, 46, .8) + FLOOR
             + '<g transform="translate(184 92) scale(-1 1)">' + use("an-z-exil", 0, 0, 64, 26) + "</g>"
             + person("menge2", 80, 100, 1.15, "worried", .6, tears=True) + person("menge3", 106, 106, 1.0, "worried", .6, tears=True)
@@ -1447,11 +1449,15 @@ class AniComposer(_auto.Composer):
         return use(OBJ[t], 0, 140 - h, w, h)
 
     def r_back(self, t, x, y, w, h):
+        if getattr(self, "_rec", False):  # Ort im Hintergrund: Blasen verdecken ihn nicht zu einem grossen Teil
+            self.soft = getattr(self, "soft", []) + [(x, y, w, h)]
         return use(OBJ[t], round(x, 1), round(y, 1), w, h, '' if t == "FIG-GRUPPE-GEMEINDE" else ' opacity=".6"')
 
     def r_sym(self, t, x, y, w, h, flip=False):
         if getattr(self, "_rec", False) and hasattr(self, "ess") and w < 100:
             self.ess.append((x, y, w, h))
+        elif getattr(self, "_rec", False):
+            self.soft = getattr(self, "soft", []) + [(x, y, w, h)]
         sym = OBJ.get(t) or self.vbmap[t][0]
         if flip:
             return f'<g transform="translate({x + w:.1f} {y:.1f}) scale(-1 1)">{use(sym, 0, 0, w, h)}</g>'
@@ -1460,8 +1466,8 @@ class AniComposer(_auto.Composer):
     def r_icon(self, t, x, y, w, h):
         return use(self.vbmap[t][0], round(x, 1), round(y, 1), round(w, 1), round(h, 1))
 
-    def r_bubble(self, x, y, w, h, tx, ty, inner):
-        return bubble(round(x, 1), round(y, 1), round(w, 1), round(h, 1), round(tx, 1), round(ty, 1), inner)
+    def r_bubble(self, x, y, w, h, tx, ty, inner, attrs=""):
+        return bubble(round(x, 1), round(y, 1), round(w, 1), round(h, 1), round(tx, 1), round(ty, 1), inner, attrs)
 
     def r_head_sign_native(self, t):
         return t in ("FIG-ZEICHEN-TRAUER", "FIG-ZEICHEN-FREUDE")
@@ -1529,9 +1535,15 @@ class AniComposer(_auto.Composer):
             # Kopf leicht geneigt; keine Wunden im Detail, kein Blut (BILDSPRACHE.md)
             wood, dark = "#8A6A3A", "#5B4630"
             by = y + 13 * s
+            # Kreuzestafel (Titulus, Joh 19,19) nur über Jesus; wichtiges Bildteil: keine Sprechblase und keine Spitze darüber
+            # (Hinweis Andi Neck 2026-10-26). Die Mitgekreuzigten hängen ohne Tafel.
+            tafel = fid == "FIG-JESUS"
+            if tafel and getattr(self, "_rec", False) and hasattr(self, "ess"):
+                self.ess.append((x - 9 * s - 1, y - 27 * s - 1, 18 * s + 2, 6 * s + 2))
             cross = (f'<rect x="{x - 3.4 * s:.1f}" y="{y - 30 * s:.1f}" width="{6.8 * s:.1f}" height="{_auto.FLOOR_Y + 22 - (y - 30 * s):.1f}" fill="{wood}" stroke="{INK}" stroke-width="{.8 * s:.2f}"/>'
                      f'<rect x="{x - 36 * s:.1f}" y="{by - 3.2 * s:.1f}" width="{72 * s:.1f}" height="{6.4 * s:.1f}" fill="{wood}" stroke="{INK}" stroke-width="{.8 * s:.2f}"/>'
-                     f'<rect x="{x - 9 * s:.1f}" y="{y - 27 * s:.1f}" width="{18 * s:.1f}" height="{6 * s:.1f}" fill="#F2E6CC" stroke="{dark}" stroke-width="{.6 * s:.2f}"/>')
+                     + (f'<rect class="ill-wichtig" data-name="die Kreuzestafel" x="{x - 9 * s:.1f}" y="{y - 27 * s:.1f}" width="{18 * s:.1f}" height="{6 * s:.1f}" fill="#F2E6CC" stroke="{dark}" stroke-width="{.6 * s:.2f}"/>'
+                        if tafel else ""))
             sleeve = CHAR[key].get("robe", "#E8DCC0")
             arms = "".join(f'<path d="M{x + d * 12 * s:.1f} {y + 18 * s:.1f}L{x + d * 31 * s:.1f} {by:.1f}" stroke="{INK}" stroke-width="{5.6 * s:.2f}" stroke-linecap="round"/>'
                            f'<path d="M{x + d * 12 * s:.1f} {y + 18 * s:.1f}L{x + d * 31 * s:.1f} {by:.1f}" stroke="{sleeve}" stroke-width="{4.2 * s:.2f}" stroke-linecap="round"/>'
@@ -1564,16 +1576,22 @@ class AniComposer(_auto.Composer):
         fid, x = s["fid"], s["x"]
         st = p.get("stage") or {}
         pose = (st.get("pose") or {}).get(fid)
-        sc = {1: 1.5, 2: 1.4, 3: 1.22, 4: 1.06, 5: .94}.get(n, .84)
+        n -= len([f for f in (st.get("far") or []) if f in p["figures"]]) + len([f for f in (st.get("twin") or {}) if f in (st.get("far") or [])])
+        sc = {1: 1.5, 2: 1.4, 3: 1.22, 4: 1.06, 5: .94}.get(max(1, n), .84)  # Figuren im Hintergrund (far) zählen nicht
         if any(_auto.meta(t, self.lex, EXTRA_META)[0] == "big" for t in p["objects"] + p["signs"]):
             sc = min(sc, 1.0)
+        if len(p.get("speech") or []) >= 2:  # zwei Blasen brauchen Platz über den Köpfen (kurze Spitzen, Hinweis Andi Neck 2026-10-26)
+            sc = min(sc, 1.22)
         # Ein Massstab für alle Erwachsenen im Feld (Hinweis Andi Neck 2026-10-24: Jesus wirkte als Redner am Rand wie ein Kind,
         # Gruppen übergross). stage.size verkleinert nur noch Kinder; der Redner steht am Rand, nicht kleiner.
         fac = (st.get("size") or {}).get(fid, 1)
         if fac < 1 and CHAR.get(KEY.get(fid, ""), {}).get("child"):
             sc *= fac
+        far = fid in (st.get("far") or [])  # weiter hinten: kleiner und etwas höher (z. B. die Mitgekreuzigten neben Jesus)
+        if far:
+            sc *= .8
         self._hr = 12 * sc
-        y = 140 - 34 * sc + 4 + POSE_SHIFT.get(pose, 0) * sc
+        y = 140 - 34 * sc + 4 + POSE_SHIFT.get(pose, 0) * sc - (6 if far else 0)
         half = (17 + (11 if fid.startswith("FIG-GRUPPE-") else 0)) * sc + 3
         if pose in ("lie", "sleep"):  # liegende Figur ganz ins Feld (Blindtest: rechts abgeschnitten)
             x = max(36 * sc, min(_auto.W - 26 * sc, x))
@@ -1712,6 +1730,8 @@ def run():
                 rec["check_previous" if newer else "check"] = ck
         n += write(old, rec, "Bild im Stil Anime nach Bildauftrag gezeichnet")
         n += localize(rid, rec, {"alt_de": alt_g}, "gsw-u-sd-chzh", "GSW-ZH", "CTX-CH-ZH-GSW-2026", AUTH_GSW, DATE)
+    if _auto.BUBBLE_FAIL:  # keine Blasenlage erfüllt alle Regeln (die Prüfung meldet die Befunde einzeln)
+        print("OFFEN: Sprechblasen ohne regelgerechte Lage:", ", ".join(sorted({str(f) for f, _ in _auto.BUBBLE_FAIL})))
     print(f"PASS: Bildstil Anime – {len(vb)} Darstellungen, {len(ILL)} Bilder; {n} Dateien geschrieben")
     if not _auto.NW_FEHLT and (D.parent / "reports/ohne-worte-fehlt.json").exists():
         (D.parent / "reports/ohne-worte-fehlt.json").unlink()  # nichts mehr offen

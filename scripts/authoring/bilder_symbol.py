@@ -466,7 +466,7 @@ class SymComposer(_auto.Composer):
                     + use("ill-p-menge", round(x + (w - fw) / 2, 1), round(y, 1), round(fw, 1), round(h, 1)))
         return use(RENDER[t], round(x, 1), round(y, 1), round(w, 1), round(h, 1))
 
-    def r_bubble(self, x, y, w, h, tx, ty, inner):
+    def r_bubble(self, x, y, w, h, tx, ty, inner, attrs=""):
         return bubble(round(x, 1), round(y, 1), round(w, 1), round(h, 1), round(tx, 1), round(ty, 1), inner)
 
     def r_head_sign_native(self, t):

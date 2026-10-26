@@ -46,7 +46,7 @@ for(const mode of ['','nw'])for(const lang of ['de','gsw']){
               res.push(`${id} ${nm} [${L}]: ${t.tagName==='use'?'Zeichen':'Text'} ragt über die Zelle: «${t.textContent.slice(0,50)}»${mode?` (${[B.x,B.y,B.width,B.height,R.x,R.y,R.width,R.height].map(v=>v.toFixed(1))})`:""}`);});});
         // Sprechblasen überdecken keine Figur, kein Gotteszeichen und keinen Gegenstand der Szene (Hinweis Andi Neck 2026-10-26:
         // Blase lag über dem Strahlenkranz). Blase = weisse Form mit Strich 1.6; verglichen mit Zeichen und Figuren ausserhalb der Blase.
-        if(!mode){const bubs=[...tile.querySelectorAll('path[data-box]')].map(b=>{const [x,y,w,h]=b.dataset.box.split(',').map(Number);return {b,g:b.parentNode,B:{left:x,top:y,right:x+w,bottom:y+h,width:w,height:h}};});
+        if(!mode){const bubs=[...tile.querySelectorAll('[data-box]')].map(b=>{const [x,y,w,h]=b.dataset.box.split(',').map(Number);return {b,g:b.parentNode,B:{left:x,top:y,right:x+w,bottom:y+h,width:w,height:h}};});
           const ov=(a,b)=>Math.max(0,Math.min(a.right,b.right)-Math.max(a.left,b.left))*Math.max(0,Math.min(a.bottom,b.bottom)-Math.max(a.top,b.top));
           const local=e=>{if(e.closest('g[transform]')!==bubs[0]?.b.closest('g[transform]'))return null;const x=+e.getAttribute('x'),y=+e.getAttribute('y'),w=+e.getAttribute('width'),h=+e.getAttribute('height');return w>0?{left:x,top:y,right:x+w,bottom:y+h,width:w,height:h}:null;};
           const others=[...tile.querySelectorAll('use')].filter(e=>!e.closest('.ill-words,.dg-nw,.dg-vis,g.ill-name')&&!bubs.some(x=>x.g.contains(e)));
@@ -56,7 +56,33 @@ for(const mode of ['','nw'])for(const lang of ['de','gsw']){
           // Spitze einer Blase verläuft nicht hinter einer anderen Blase (Hinweis Prüfung 2026-10-26)
           const seg=(x1,y1,x2,y2,R)=>{for(let k=1;k<20;k++){const t=k/20,x=x1+(x2-x1)*t,y=y1+(y2-y1)*t;if(x>R.left+2&&x<R.right-2&&y>R.top+2&&y<R.bottom-2)return true;}return false;};
           for(const a of bubs){const tl=a.b.dataset.tail;if(!tl)continue;const [tx,ty]=tl.split(',').map(Number);const cx=Math.max(a.B.left,Math.min(a.B.right,tx)),cy=Math.max(a.B.top,Math.min(a.B.bottom,ty));
-            for(const c of bubs)if(c!==a&&seg(cx,cy,tx,ty,c.B))res.push(`${id} ${nm} [${lang}]: Spitze einer Sprechblase läuft hinter einer anderen Blase`);}}
+            for(const c of bubs)if(c!==a&&seg(cx,cy,tx,ty,c.B))res.push(`${id} ${nm} [${lang}]: Spitze einer Sprechblase läuft hinter einer anderen Blase`);}
+          // Spitze kurz und steil (Hinweis Andi Neck 2026-10-26: lange, schräge Spitzen quer durchs Bild). Ansatz wie in
+          // _bubble.bubble_path (Eckradius 12, halbe Breite 5); Masse in Feldeinheiten (Feld 186 × 140, in der App etwa 1,8 px
+          // je Einheit): länger als 36 Einheiten oder, ab 25 Einheiten, flacher als 35° zur Waagrechten ist ein Befund.
+          const TMAX=36,TFLAT=25,AMIN=35;
+          const tailm=(B,tx,ty)=>{const x=B.left,y=B.top,w=B.width,h=B.height,R=12,H=5;const dx=tx-Math.min(Math.max(tx,x),x+w),dy=ty-Math.min(Math.max(ty,y),y+h);
+            const side=Math.abs(dy)>=Math.abs(dx)?(dy>0?'b':'t'):(dx>0?'r':'l');const bx=Math.min(Math.max(tx,x+R+H),x+w-R-H),by=Math.min(Math.max(ty,y+R+H),y+h-R-H);
+            const [px,py]={b:[bx,y+h],t:[bx,y],l:[x,by],r:[x+w,by]}[side];const L=Math.hypot(tx-px,ty-py);return {px,py,L,ang:Math.atan2(Math.abs(ty-py),Math.abs(tx-px))*180/Math.PI};};
+          for(const a of bubs){const tl=a.b.dataset.tail;if(!tl||a.b.dataset.link)continue;const [tx,ty]=tl.split(',').map(Number);const m=tailm(a.B,tx,ty);
+            if(m.L>TMAX)res.push(`${id} ${nm} [${lang}]: Spitze einer Sprechblase zu lang (${m.L.toFixed(0)} Einheiten, höchstens ${TMAX})`);
+            else if(m.L>TFLAT&&m.ang<AMIN)res.push(`${id} ${nm} [${lang}]: Spitze einer Sprechblase zu flach (${m.ang.toFixed(0)}° bei ${m.L.toFixed(0)} Einheiten)`);}
+          // Wichtige Teile ohne eigenes Zeichen (Kreuzestafel, Gegenstände über Köpfen: class ill-wichtig) verdeckt weder eine Blase
+          // noch ihre Spitze (Hinweis Andi Neck 2026-10-26: Blase und Spitze lagen auf der INRI-Tafel); Spitzen laufen auch nicht
+          // über Zeichen und Gegenstände (ausser dem, an dem sie enden)
+          const wich=[...tile.querySelectorAll('.ill-wichtig')].map(e=>{const E=local(e);return E&&{e,E};}).filter(Boolean);
+          for(const {B} of bubs)for(const {e,E} of wich)if(ov(B,E)>1)res.push(`${id} ${nm} [${lang}]: Sprechblase überdeckt ${e.dataset.name||'ein wichtiges Bildteil'}`);
+          const segR=(x1,y1,x2,y2,R,m)=>{for(let k=1;k<40;k++){const t=k/40,x=x1+(x2-x1)*t,y=y1+(y2-y1)*t;if(x>R.left+m&&x<R.right-m&&y>R.top+m&&y<R.bottom-m)return true;}return false;};
+          for(const a of bubs){const tl=a.b.dataset.tail;if(!tl||a.b.dataset.think)continue;const [tx,ty]=tl.split(',').map(Number);const m=tailm(a.B,tx,ty);
+            for(const {e,E} of wich)if(segR(m.px,m.py,tx,ty,E,.5))res.push(`${id} ${nm} [${lang}]: Spitze einer Sprechblase läuft über ${e.dataset.name||'ein wichtiges Bildteil'}`);
+            for(const e of others){const E=local(e);if(!E||E.width*E.height>a.B.width*a.B.height)continue;
+              if(tx>E.left-3&&tx<E.right+3&&ty>E.top-3&&ty<E.bottom+3)continue;  // Spitze endet an diesem Teil (z. B. Kopfbedeckung des Sprechers)
+              if(segR(m.px,m.py,tx,ty,E,Math.min(E.width,E.height)*.18))res.push(`${id} ${nm} [${lang}]: Spitze einer Sprechblase läuft über ${e.getAttribute('href')}`);}}
+          // Jede Sprech-Angabe des Bildauftrags ist als Blase gezeichnet (Hinweis Andi Neck 2026-10-26: zweite Blase derselben Figur
+          // fehlte). Der Zeichner setzt je Feld <g class="ill-sp" data-n="Anzahl"> und an jede Blase data-speech="Index".
+          const want=[...tile.querySelectorAll('g.ill-sp')].reduce((s,g)=>s+Number(g.dataset.n||0),0);
+          if(tile.querySelector('g.ill-sp')){const got=new Set([...tile.querySelectorAll('[data-speech]')].map(e=>e.dataset.speech));
+            if(got.size!==want)res.push(`${id} ${nm} [${lang}]: ${got.size} von ${want} Sprech-Angaben als Blase gezeichnet`);}}
         // Kästen mit Rahmen (Stichwortband, Titelblase, Spaltenköpfe, Namensschild): Text und Zeichen bleiben im Rahmen und
         // überdecken sich nicht (Hinweis Andi Neck 2026-10-25: Text ragte über das Stichwortband)
         const sv=e=>{const B=e.getBoundingClientRect();return B.width>0&&B.height>0?B:null;};
