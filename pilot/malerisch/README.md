@@ -33,9 +33,12 @@ Kosten: Abrechnung pro Bild nach Replicate-Preisliste; ein voller Lauf mit 15 Bi
 - Die Prompts nennen bewusst keine lebenden Künstler, sondern beschreiben Technik und Tradition.
 - Bilder bleiben bildliche Deutung und werden in der App so gekennzeichnet.
 
+## Entscheide
+
+- **Gesichter** (Andi Neck, 2026-10-27): Alle Menschen mit Gesicht und Ausdruck, auch Jesus – er ist Mensch geworden; ein verdecktes oder reduziertes Gesicht wirkt abstossend.
+
 ## Offene Entscheide
 
-- **Gesichter:** Im Pilot angenommen – Menschen mit Gesicht und Ausdruck, Jesus zurückhaltend (Halbschatten, Profil, abgewandt). Bisher gilt im Stil «Symbol» «ohne Gesicht».
 - **Steinkrüge:** Joh 2,6 nennt steinerne Krüge zu zwei bis drei Mass. Der Lexikon-Eintrag «Krug mit Wasser» zeigt einen verzierten Tonkrug. Die Regie folgt dem Text; das Lexikon sollte nachgezogen werden.
 - **Stil:** welche der drei Richtungen (oder eine Mischung) weiterverfolgt wird.
 
