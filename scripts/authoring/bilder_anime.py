@@ -555,6 +555,8 @@ GROUP_SPEC = {
     "FIG-GRUPPE-SCHNITTER": dict(mix="m", n=3, hold={0: "an-a-aehren"}),
     "FIG-GRUPPE-WEINBAUERN": dict(mix="m", n=3, hold={0: "an-a-traube"}),
     "FIG-GRUPPE-FISCHER": dict(mix="m", n=3, hold={0: "an-a-netz"}),
+    # Hirten (Lk 2,8-20): Hirtengewand und heller Mantel wie der einzelne Hirte, vorn das Schaf, die anderen mit Stab (Runde 15)
+    "FIG-GRUPPE-HIRTEN": dict(mix="m", n=3, color="#8A7A50", mantle="#F6EBD9", every={"staff": True}, hold={0: "an-a-hirte"}),
     "FIG-GRUPPE-SEELEUTE": dict(mix="m", n=3, color="#2F4F6F", mantle=None, every={"rope": True}),
     "FIG-GRUPPE-ZOELLNER": dict(mix="m", n=3, hold={0: "an-a-geldbeutel"}),
     "FIG-GRUPPE-EINNEHMER": dict(mix="m", n=3, hold={0: "an-a-beutel"}),
@@ -1207,6 +1209,12 @@ BACKDROP = {
     "grab": (f'<path d="M-18.6 40V-1Q-18.6-17.6 0-17.6Q18.6-17.6 18.6-1V40z" fill="#A89A84" stroke="{INK}" stroke-width=".7"/>'
              '<path d="M-14.6 40V0Q-14.6-14 0-14Q14.6-14 14.6 0V40z" fill="#2E2A24"/>'
              '<path d="M-17.4 6l1.6.4M-17 14l1.4-.2M16 4l1.6.6" stroke="#7A6E5E" stroke-width=".6"/>'),
+    # Simeon und Hanna im Tempel (Lk 2,27.37): Säulen mit Gebälk hinter der Figur, nur im Lexikon-Porträt (Runde 15)
+    "tempel": (f'<path d="M-15 40V-12H15V40z" fill="#DCCBA8"/>'
+               f'<path d="M-18.6 -13.2H18.6V-17.4H-18.6z" fill="#EDE2CA" stroke="{INK}" stroke-width=".6"/><path d="M-18.6 -15.3H18.6" stroke="#B9A684" stroke-width=".45"/>'
+               f'<path d="M-18.2 40V-13.2H-15V40zM15 40V-13.2H18.2V40z" fill="#EDE2CA" stroke="{INK}" stroke-width=".6"/>'
+               '<path d="M-16.6 -12V40M16.6 -12V40" stroke="#C9B590" stroke-width=".45"/>'
+               f'<path d="M-18.8 -12H-14.4M14.4 -12H18.8" stroke="{INK}" stroke-width=".8"/>'),
 }
 
 
@@ -1475,7 +1483,7 @@ class AniComposer(_auto.Composer):
     def _feel(self, fid, p, speaking):
         st = p.get("stage") or {}
         who = st.get("signs_who") or {}
-        humans = [f for f in p["figures"] if f not in ("FIG-GOTT", "FIG-HEILIGER-GEIST", "FIG-JESUS")]
+        humans = [f for f in p["figures"] if f not in ("FIG-GOTT", "FIG-HEILIGER-GEIST", "FIG-JESUS", "FIG-JESUS-JUNGE")]
         tears = "FIG-ZEICHEN-TRAUER" in p["signs"] and fid in who.get("FIG-ZEICHEN-TRAUER", humans)
         joy = "FIG-ZEICHEN-FREUDE" in p["signs"] and fid in who.get("FIG-ZEICHEN-FREUDE", humans)
         expr = (st.get("mood") or {}).get(fid)
