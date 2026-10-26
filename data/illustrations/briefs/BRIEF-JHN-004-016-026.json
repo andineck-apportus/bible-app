@@ -17,146 +17,145 @@
         "FIG-ROLLE-SAMARITANERIN"
       ],
       "objects": [
-        "FIG-OBJ-BRUNNEN",
-        "FIG-OBJ-KRUG-WASSER"
+        "FIG-OBJ-BRUNNEN"
       ],
       "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-ROLLE-SAMARITANERIN",
-          "icons": [
-            "FIG-ZEICHEN-SEHEN",
-            "FIG-ROLLE-SAMARITANERIN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Geh, ruf deinen Mann und komm hierher!",
+            "gsw": "Gang, rüef din Maa und chumm da ane!"
+          }
         },
         {
           "from": "FIG-ROLLE-SAMARITANERIN",
           "to": "FIG-JESUS",
-          "icons": [
-            "FIG-ROLLE-PROPHET"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Herr, ich sehe, dass du ein Prophet bist.",
+            "gsw": "Herr, ich gseh, dass du en Prophet bisch."
+          }
         }
       ],
-      "action_de": "Jesus sagt der Frau, was in ihrem Leben ist: Sie hat keinen Mann, sondern hatte fünf Männer. Die Frau sagt: Herr, ich sehe, dass du ein Prophet bist.",
+      "action_de": "Jesus sagt: «Geh, ruf deinen Mann»; sie: «Ich habe keinen Mann»; Jesus weiss, dass sie fünf Männer gehabt hat und der jetzige nicht ihr Mann ist. Sie sagt: «Herr, ich sehe, dass du ein Prophet bist.»",
+      "keywords": {
+        "de": "Das hast du wahrheitsgemäss gesagt",
+        "gsw": "Das häsch wahr gseit"
+      },
       "stage": {
         "pose": {
           "FIG-JESUS": "sit"
         },
         "mood": {
+          "FIG-JESUS": "calm",
           "FIG-ROLLE-SAMARITANERIN": "surprised"
         },
-        "floor_side": "left",
         "x": {
-          "FIG-JESUS": 72,
-          "FIG-ROLLE-SAMARITANERIN": 140
+          "FIG-JESUS": 36,
+          "FIG-ROLLE-SAMARITANERIN": 158
         },
-        "hold": {
-          "FIG-ROLLE-SAMARITANERIN": "FIG-OBJ-KRUG-WASSER"
+        "floor_x": {
+          "FIG-OBJ-BRUNNEN": 97
         }
       }
     },
     {
       "n": 2,
-      "reference": "JHN.4.20-JHN.4.24",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-ROLLE-SAMARITANERIN"
-      ],
+      "reference": "JHN.4.20-JHN.4.26",
+      "figures": [],
       "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-ROLLE-SAMARITANERIN",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-ORT-BERG",
-            "FIG-ORT-JERUSALEM",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
+      "speech": [],
+      "action_de": "Die Frau fragt nach dem Ort der Anbetung, diesem Berg oder Jerusalem; Jesus: Die Stunde kommt, da man weder auf diesem Berg noch in Jerusalem anbetet, die wahren Anbeter beten den Vater in Geist und Wahrheit an; sie: «Ich weiss, dass der Messias kommt»; Jesus: «Ich bin es, der mit dir redet.»",
+      "keywords": {
+        "de": "Ich bin es, der mit dir redet",
+        "gsw": "Ich bi s, wo mit dir redt"
+      },
+      "diagram": {
+        "visual": "dialogue",
+        "span": 2,
+        "title": {
+          "de": "Gott ist Geist.",
+          "gsw": "Gott isch Geischt."
         },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-SAMARITANERIN",
-          "icons": [
-            "FIG-ZEICHEN-STUNDE",
-            "FIG-HEILIGER-GEIST",
-            "FIG-ZEICHEN-BETEN"
-          ]
-        }
-      ],
-      "action_de": "Die Frau fragt nach dem Ort der Anbetung: auf diesem Berg oder in Jerusalem? Jesus: Die Stunde kommt und ist jetzt da, in der die wahren Anbeter den Vater in Geist und Wahrheit anbeten.",
-      "stage": {
-        "mood": {
-          "FIG-ROLLE-SAMARITANERIN": "pensive"
-        },
-        "x": {
-          "FIG-ROLLE-SAMARITANERIN": 36,
-          "FIG-JESUS": 150
-        }
-      }
-    },
-    {
-      "n": 3,
-      "reference": "JHN.4.25-JHN.4.26",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-ROLLE-SAMARITANERIN"
-      ],
-      "objects": [
-        "FIG-OBJ-BRUNNEN",
-        "FIG-OBJ-KRUG-WASSER"
-      ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-ROLLE-SAMARITANERIN",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-ZEICHEN-MESSIAS",
-            "FIG-ZEICHEN-STUNDE"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-SAMARITANERIN",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-MESSIAS"
-          ]
-        }
-      ],
-      "action_de": "Die Frau sagt: Ich weiss, dass der Messias kommt; wenn er kommt, wird er uns alles verkünden. Jesus sagt zu ihr: Ich bin es, der mit dir redet.",
-      "stage": {
-        "pose": {
-          "FIG-JESUS": "sit"
-        },
-        "mood": {
-          "FIG-ROLLE-SAMARITANERIN": "surprised"
-        },
-        "floor_side": "left",
-        "hold": {
-          "FIG-ROLLE-SAMARITANERIN": "FIG-OBJ-KRUG-WASSER"
-        }
+        "turns": [
+          {
+            "who": "FIG-ROLLE-SAMARITANERIN",
+            "cell": {
+              "a": {
+                "de": "«Unsere Väter haben auf diesem Berg angebetet, und ihr sagt, dass in Jerusalem der Ort ist, wo man anbeten muss.»",
+                "gsw": "«Üsi Vätter händ uf däm Bärg aabättet, und ir säged, dass z Jerusalem de Ort sig, wo mer aabätte mues.»"
+              },
+              "icons": [
+                "FIG-ORT-BERG",
+                "FIG-ORT-JERUSALEM"
+              ]
+            }
+          },
+          {
+            "who": "FIG-JESUS",
+            "cell": {
+              "a": {
+                "de": "«Es kommt die Stunde, da ihr weder auf diesem Berg noch in Jerusalem den Vater anbeten werdet.»",
+                "gsw": "«Es chunnt d Stund, wo ir weder uf däm Bärg no z Jerusalem de Vatter aabätte wärded.»"
+              },
+              "b": {
+                "de": "«Die wahren Anbeter werden den Vater in Geist und Wahrheit anbeten.»",
+                "gsw": "«Di wahre Aabätter wärded de Vatter i Geischt und Wahrheit aabätte.»"
+              },
+              "icons": [
+                "FIG-ZEICHEN-STUNDE",
+                "FIG-HEILIGER-GEIST"
+              ]
+            }
+          },
+          {
+            "who": "FIG-ROLLE-SAMARITANERIN",
+            "cell": {
+              "a": {
+                "de": "«Ich weiss, dass der Messias kommt, der Christus genannt wird.»",
+                "gsw": "«Ich weiss, dass de Messias chunnt, wo mer Christus nännt.»"
+              },
+              "icons": [
+                "FIG-ZEICHEN-MESSIAS"
+              ]
+            }
+          },
+          {
+            "who": "FIG-JESUS",
+            "cell": {
+              "a": {
+                "de": "«Ich bin es, der mit dir redet.»",
+                "gsw": "«Ich bi s, wo mit dir redt.»"
+              },
+              "icons": [
+                "FIG-JESUS",
+                "FIG-ZEICHEN-SPRECHEN"
+              ],
+              "tone": "new"
+            }
+          }
+        ]
       }
     }
   ],
   "actions_de": [
-    "Jesus sagt der Frau, was in ihrem Leben ist: Sie hat keinen Mann, sondern hatte fünf Männer. Die Frau sagt: Herr, ich sehe, dass du ein Prophet bist.",
-    "Die Frau fragt nach dem Ort der Anbetung: auf diesem Berg oder in Jerusalem? Jesus: Die Stunde kommt und ist jetzt da, in der die wahren Anbeter den Vater in Geist und Wahrheit anbeten.",
-    "Die Frau sagt: Ich weiss, dass der Messias kommt; wenn er kommt, wird er uns alles verkünden. Jesus sagt zu ihr: Ich bin es, der mit dir redet."
+    "Jesus sagt: «Geh, ruf deinen Mann»; sie: «Ich habe keinen Mann»; Jesus weiss, dass sie fünf Männer gehabt hat und der jetzige nicht ihr Mann ist. Sie sagt: «Herr, ich sehe, dass du ein Prophet bist.»",
+    "Die Frau fragt nach dem Ort der Anbetung, diesem Berg oder Jerusalem; Jesus: Die Stunde kommt, da man weder auf diesem Berg noch in Jerusalem anbetet, die wahren Anbeter beten den Vater in Geist und Wahrheit an; sie: «Ich weiss, dass der Messias kommt»; Jesus: «Ich bin es, der mit dir redet.»"
   ],
   "captions_de": [
-    "Du bist ein Prophet: Jesus kennt das Leben der Frau (Augen, Frau); sie sagt: Du bist ein Prophet (Prophet).",
-    "Wo beten? Die Frau fragt: auf diesem Berg oder in Jerusalem (Berg, Stadt, ?); Jesus: Die Stunde kommt (Sanduhr), Anbetung im Geist (Taube, Hände).",
-    "Ich bin es: Die Frau sagt, der Messias kommt (Salbhorn, Krone, Sanduhr); Jesus: Ich bin es (Jesus, Messias)."
+    "Ein Prophet: Die Frau am Brunnen sagt zu Jesus: «Herr, ich sehe, dass du ein Prophet bist.» (Prophet, sehen); Jesus hat ihr gesagt, was er von ihr weiss.",
+    "Gespräch (Dialog Frau ↔ Jesus): auf diesem Berg oder in Jerusalem anbeten? (Berg, Jerusalem) – weder auf diesem Berg noch in Jerusalem; die wahren Anbeter in Geist und Wahrheit (Stunde, Taube) – der Messias kommt (Messias) – hervorgehoben: «Ich bin es, der mit dir redet.» (Jesus, sprechen)."
   ],
-  "interpretation_note_de": "Was Jesus über die Männer der Frau sagt ([[JHN.4.17-JHN.4.18]]), fasst das Bild als «er kennt ihr Leben» (Auge) zusammen und bewertet die Frau nicht. Der Berg ist der Berg der Samariter (nach Überlieferung der Garizim; der Text nennt keinen Namen). In [[JHN.4.26]] sagt Jesus nur «Ich bin es»; dass er sich damit als Messias zu erkennen gibt, ergibt sich aus dem Zusammenhang ([[JHN.4.25]], [[JHN.4.29]]).",
+  "interpretation_note_de": "Zwei Felder nach dem Gespräch «Prophet – Ort der Anbetung – Messias – ‹Ich bin es›» ([[JHN.4.16-JHN.4.26]]): das Erkennen am Brunnen, dann der Dialog bis zur Selbstoffenbarung Jesu. Die Lebensgeschichte der Frau bewertet der Text nicht; auch das Bild nicht. «Anbeten» gilt dem Vater (Gott). Die Taube steht für «Geist» in «Geist und Wahrheit».",
   "basis": [
     {
       "record": "TU-JHN-004-016-026",
       "field": "summary",
-      "fingerprint": "e823e3d5db581bdc"
+      "fingerprint": "a1c1a0222a1bb41e"
     },
     {
       "record": "TRANS-JHN-004-001-054-DE-WORKING",
@@ -167,18 +166,12 @@
     {
       "record": "TRANS-JHN-004-001-054-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.4.20-JHN.4.24",
-      "fingerprint": "f6076312d9c79351"
-    },
-    {
-      "record": "TRANS-JHN-004-001-054-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "JHN.4.25-JHN.4.26",
-      "fingerprint": "fd2067defe4bdeec"
+      "reference": "JHN.4.20-JHN.4.26",
+      "fingerprint": "ff777266b9fe5536"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -327,6 +320,353 @@
           "Du bist ein Prophet: Jesus kennt das Leben der Frau (Auge, Frau); sie sagt: Du bist ein Prophet (Prophet).",
           "Wo beten? Die Frau fragt: auf diesem Berg oder in Jerusalem (Berg, Stadt, ?); Jesus: Die Stunde kommt (Sanduhr), Anbetung im Geist (Taube, Hände).",
           "Ich bin es: Die Frau sagt, der Messias kommt (Salbhorn, Krone, Sanduhr); Jesus: Ich bin es (Jesus, Messias)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-JHN-004-016-026",
+            "field": "summary",
+            "fingerprint": "e823e3d5db581bdc"
+          },
+          {
+            "record": "TRANS-JHN-004-001-054-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.4.16-JHN.4.19",
+            "fingerprint": "876a84bfa2f02c92"
+          },
+          {
+            "record": "TRANS-JHN-004-001-054-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.4.20-JHN.4.24",
+            "fingerprint": "f6076312d9c79351"
+          },
+          {
+            "record": "TRANS-JHN-004-001-054-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.4.25-JHN.4.26",
+            "fingerprint": "fd2067defe4bdeec"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.4.16-JHN.4.19",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-SAMARITANERIN"
+            ],
+            "objects": [
+              "FIG-OBJ-BRUNNEN",
+              "FIG-OBJ-KRUG-WASSER"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-SAMARITANERIN",
+                "icons": [
+                  "FIG-ZEICHEN-SEHEN",
+                  "FIG-ROLLE-SAMARITANERIN"
+                ]
+              },
+              {
+                "from": "FIG-ROLLE-SAMARITANERIN",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ROLLE-PROPHET"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt der Frau, was in ihrem Leben ist: Sie hat keinen Mann, sondern hatte fünf Männer. Die Frau sagt: Herr, ich sehe, dass du ein Prophet bist.",
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "sit"
+              },
+              "mood": {
+                "FIG-ROLLE-SAMARITANERIN": "surprised"
+              },
+              "floor_side": "left",
+              "x": {
+                "FIG-JESUS": 72,
+                "FIG-ROLLE-SAMARITANERIN": 140
+              },
+              "hold": {
+                "FIG-ROLLE-SAMARITANERIN": "FIG-OBJ-KRUG-WASSER"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.4.20-JHN.4.24",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-SAMARITANERIN"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-SAMARITANERIN",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ORT-BERG",
+                  "FIG-ORT-JERUSALEM",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-SAMARITANERIN",
+                "icons": [
+                  "FIG-ZEICHEN-STUNDE",
+                  "FIG-HEILIGER-GEIST",
+                  "FIG-ZEICHEN-BETEN"
+                ]
+              }
+            ],
+            "action_de": "Die Frau fragt nach dem Ort der Anbetung: auf diesem Berg oder in Jerusalem? Jesus: Die Stunde kommt und ist jetzt da, in der die wahren Anbeter den Vater in Geist und Wahrheit anbeten.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-SAMARITANERIN": "pensive"
+              },
+              "x": {
+                "FIG-ROLLE-SAMARITANERIN": 36,
+                "FIG-JESUS": 150
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.4.25-JHN.4.26",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-SAMARITANERIN"
+            ],
+            "objects": [
+              "FIG-OBJ-BRUNNEN",
+              "FIG-OBJ-KRUG-WASSER"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-SAMARITANERIN",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-MESSIAS",
+                  "FIG-ZEICHEN-STUNDE"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-SAMARITANERIN",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-MESSIAS"
+                ]
+              }
+            ],
+            "action_de": "Die Frau sagt: Ich weiss, dass der Messias kommt; wenn er kommt, wird er uns alles verkünden. Jesus sagt zu ihr: Ich bin es, der mit dir redet.",
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "sit"
+              },
+              "mood": {
+                "FIG-ROLLE-SAMARITANERIN": "surprised"
+              },
+              "floor_side": "left",
+              "hold": {
+                "FIG-ROLLE-SAMARITANERIN": "FIG-OBJ-KRUG-WASSER"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus sagt der Frau, was in ihrem Leben ist: Sie hat keinen Mann, sondern hatte fünf Männer. Die Frau sagt: Herr, ich sehe, dass du ein Prophet bist.",
+          "Die Frau fragt nach dem Ort der Anbetung: auf diesem Berg oder in Jerusalem? Jesus: Die Stunde kommt und ist jetzt da, in der die wahren Anbeter den Vater in Geist und Wahrheit anbeten.",
+          "Die Frau sagt: Ich weiss, dass der Messias kommt; wenn er kommt, wird er uns alles verkünden. Jesus sagt zu ihr: Ich bin es, der mit dir redet."
+        ],
+        "captions_de": [
+          "Du bist ein Prophet: Jesus kennt das Leben der Frau (Augen, Frau); sie sagt: Du bist ein Prophet (Prophet).",
+          "Wo beten? Die Frau fragt: auf diesem Berg oder in Jerusalem (Berg, Stadt, ?); Jesus: Die Stunde kommt (Sanduhr), Anbetung im Geist (Taube, Hände).",
+          "Ich bin es: Die Frau sagt, der Messias kommt (Salbhorn, Krone, Sanduhr); Jesus: Ich bin es (Jesus, Messias)."
+        ],
+        "interpretation_note_de": "Was Jesus über die Männer der Frau sagt ([[JHN.4.17-JHN.4.18]]), fasst das Bild als «er kennt ihr Leben» (Auge) zusammen und bewertet die Frau nicht. Der Berg ist der Berg der Samariter (nach Überlieferung der Garizim; der Text nennt keinen Namen). In [[JHN.4.26]] sagt Jesus nur «Ich bin es»; dass er sich damit als Messias zu erkennen gibt, ergibt sich aus dem Zusammenhang ([[JHN.4.25]], [[JHN.4.29]]).",
+        "basis": [
+          {
+            "record": "TU-JHN-004-016-026",
+            "field": "summary",
+            "fingerprint": "a1c1a0222a1bb41e"
+          },
+          {
+            "record": "TRANS-JHN-004-001-054-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.4.16-JHN.4.19",
+            "fingerprint": "876a84bfa2f02c92"
+          },
+          {
+            "record": "TRANS-JHN-004-001-054-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.4.20-JHN.4.24",
+            "fingerprint": "f6076312d9c79351"
+          },
+          {
+            "record": "TRANS-JHN-004-001-054-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.4.25-JHN.4.26",
+            "fingerprint": "fd2067defe4bdeec"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.4.16-JHN.4.19",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-SAMARITANERIN"
+            ],
+            "objects": [
+              "FIG-OBJ-BRUNNEN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-SAMARITANERIN",
+                "icons": [],
+                "word": {
+                  "de": "Geh, ruf deinen Mann und komm hierher!",
+                  "gsw": "Gang, rüef din Maa und chumm da ane!"
+                }
+              },
+              {
+                "from": "FIG-ROLLE-SAMARITANERIN",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Herr, ich sehe, dass du ein Prophet bist.",
+                  "gsw": "Herr, ich gseh, dass du en Prophet bisch."
+                }
+              }
+            ],
+            "action_de": "Jesus sagt: «Geh, ruf deinen Mann»; sie: «Ich habe keinen Mann»; Jesus weiss, dass sie fünf Männer gehabt hat und der jetzige nicht ihr Mann ist. Sie sagt: «Herr, ich sehe, dass du ein Prophet bist.»",
+            "keywords": {
+              "de": "Das hast du wahrheitsgemäss gesagt",
+              "gsw": "Das häsch wahr gseit"
+            },
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "sit"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-ROLLE-SAMARITANERIN": "surprised"
+              },
+              "x": {
+                "FIG-JESUS": 46,
+                "FIG-ROLLE-SAMARITANERIN": 140
+              },
+              "floor_x": {
+                "FIG-OBJ-BRUNNEN": 92
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.4.20-JHN.4.26",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Die Frau fragt nach dem Ort der Anbetung, diesem Berg oder Jerusalem; Jesus: Die Stunde kommt, da man weder auf diesem Berg noch in Jerusalem anbetet, die wahren Anbeter beten den Vater in Geist und Wahrheit an; sie: «Ich weiss, dass der Messias kommt»; Jesus: «Ich bin es, der mit dir redet.»",
+            "keywords": {
+              "de": "Ich bin es, der mit dir redet",
+              "gsw": "Ich bi s, wo mit dir redt"
+            },
+            "diagram": {
+              "visual": "dialogue",
+              "span": 2,
+              "title": {
+                "de": "Gott ist Geist.",
+                "gsw": "Gott isch Geischt."
+              },
+              "turns": [
+                {
+                  "who": "FIG-ROLLE-SAMARITANERIN",
+                  "cell": {
+                    "a": {
+                      "de": "«Unsere Väter haben auf diesem Berg angebetet, und ihr sagt, dass in Jerusalem der Ort ist, wo man anbeten muss.»",
+                      "gsw": "«Üsi Vätter händ uf däm Bärg aabättet, und ir säged, dass z Jerusalem de Ort sig, wo mer aabätte mues.»"
+                    },
+                    "icons": [
+                      "FIG-ORT-BERG",
+                      "FIG-ORT-JERUSALEM"
+                    ]
+                  }
+                },
+                {
+                  "who": "FIG-JESUS",
+                  "cell": {
+                    "a": {
+                      "de": "«Es kommt die Stunde, da ihr weder auf diesem Berg noch in Jerusalem den Vater anbeten werdet.»",
+                      "gsw": "«Es chunnt d Stund, wo ir weder uf däm Bärg no z Jerusalem de Vatter aabätte wärded.»"
+                    },
+                    "b": {
+                      "de": "«Die wahren Anbeter werden den Vater in Geist und Wahrheit anbeten.»",
+                      "gsw": "«Di wahre Aabätter wärded de Vatter i Geischt und Wahrheit aabätte.»"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-STUNDE",
+                      "FIG-HEILIGER-GEIST"
+                    ]
+                  }
+                },
+                {
+                  "who": "FIG-ROLLE-SAMARITANERIN",
+                  "cell": {
+                    "a": {
+                      "de": "«Ich weiss, dass der Messias kommt, der Christus genannt wird.»",
+                      "gsw": "«Ich weiss, dass de Messias chunnt, wo mer Christus nännt.»"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-MESSIAS"
+                    ]
+                  }
+                },
+                {
+                  "who": "FIG-JESUS",
+                  "cell": {
+                    "a": {
+                      "de": "«Ich bin es, der mit dir redet.»",
+                      "gsw": "«Ich bi s, wo mit dir redt.»"
+                    },
+                    "icons": [
+                      "FIG-JESUS",
+                      "FIG-ZEICHEN-SPRECHEN"
+                    ],
+                    "tone": "new"
+                  }
+                }
+              ]
+            }
+          }
         ]
       }
     }

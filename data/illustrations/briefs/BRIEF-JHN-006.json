@@ -11,29 +11,30 @@
   "panels": [
     {
       "n": 1,
-      "reference": "JHN.6.10-JHN.6.13",
+      "reference": "JHN.6.1-JHN.6.15",
       "figures": [
         "FIG-JESUS",
         "FIG-GRUPPE-MENGE"
       ],
       "objects": [
-        "FIG-OBJ-BROT",
+        "FIG-OBJ-BROTE-FISCHE",
         "FIG-OBJ-KORB"
       ],
       "signs": [
         "FIG-ZEICHEN-SATT"
       ],
       "speech": [],
-      "action_de": "Die Menschen lagern sich im Gras; Jesus dankt und teilt Brot und Fisch aus, so viel sie wollen. Alle werden satt, und die Jünger sammeln zwölf Körbe mit Brocken.",
+      "action_de": "Jesus lässt die Menschen sich lagern, nimmt die Brote, dankt und teilt aus, ebenso von den Fischen, so viel sie wollen; alle werden satt, und die Reste füllen zwölf Körbe.",
+      "keywords": {
+        "de": "Das ist wahrhaftig der Prophet",
+        "gsw": "Das isch würkli de Prophet"
+      },
       "stage": {
-        "mood": {
-          "FIG-GRUPPE-MENGE": "smile"
-        },
         "hold": {
-          "FIG-JESUS": "FIG-OBJ-BROT"
+          "FIG-JESUS": "FIG-OBJ-BROTE-FISCHE"
         },
-        "count": {
-          "FIG-OBJ-KORB": 3
+        "pose": {
+          "FIG-GRUPPE-MENGE": "sit"
         },
         "at": {
           "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
@@ -44,81 +45,120 @@
             "FIG-GRUPPE-MENGE",
             "act"
           ]
-        ]
+        ],
+        "floor_x": {
+          "FIG-OBJ-KORB": 96
+        },
+        "mood": {
+          "FIG-JESUS": "smile",
+          "FIG-GRUPPE-MENGE": "delight"
+        },
+        "x": {
+          "FIG-JESUS": 46,
+          "FIG-GRUPPE-MENGE": 140
+        }
       }
     },
     {
       "n": 2,
-      "reference": "JHN.6.16-JHN.6.19",
+      "reference": "JHN.6.16-JHN.6.21",
       "figures": [
-        "FIG-GRUPPE-ZWOELF",
+        "FIG-GRUPPE-JUENGER",
         "FIG-JESUS"
       ],
       "objects": [
-        "FIG-OBJ-BOOT",
-        "FIG-ORT-SEE"
+        "FIG-ORT-SEE",
+        "FIG-OBJ-BOOT"
       ],
       "signs": [
         "FIG-ZEICHEN-WIND",
-        "FIG-ZEICHEN-NACHT"
+        "FIG-ZEICHEN-FURCHT"
       ],
-      "speech": [],
-      "action_de": "Am Abend fahren die Jünger ohne Jesus über den See; ein starker Wind wühlt das Wasser auf. Sie sehen Jesus auf dem See gehen und nahe ans Boot kommen und fürchten sich.",
+      "speech": [
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-GRUPPE-JUENGER",
+          "icons": [],
+          "word": {
+            "de": "Ich bin es; fürchtet euch nicht!",
+            "gsw": "Ich bi s; händ kei Angscht!"
+          }
+        }
+      ],
+      "action_de": "Am Abend, im Dunkeln und bei starkem Wind, sehen die Jünger im Boot Jesus auf dem See gehen und fürchten sich; er sagt: «Ich bin es; fürchtet euch nicht!»",
+      "keywords": {
+        "de": "sehen sie Jesus auf dem See gehen",
+        "gsw": "gsehnd si de Jesus uf em See laufe"
+      },
       "stage": {
+        "night": true,
         "in": {
-          "FIG-GRUPPE-ZWOELF": "FIG-OBJ-BOOT"
+          "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT"
         },
         "in_pos": {
-          "FIG-GRUPPE-ZWOELF": [
+          "FIG-GRUPPE-JUENGER": [
             0.4,
             0.42
           ]
         },
-        "big_side": "right",
+        "big_side": "left",
+        "on_water": [
+          "FIG-JESUS"
+        ],
+        "at": {
+          "FIG-ZEICHEN-FURCHT": "FIG-GRUPPE-JUENGER"
+        },
         "mood": {
-          "FIG-GRUPPE-ZWOELF": "surprised",
+          "FIG-GRUPPE-JUENGER": "fear",
           "FIG-JESUS": "calm"
         },
         "x": {
-          "FIG-JESUS": 48
-        },
-        "air_x": 70,
-        "air_y": 8,
-        "in_water": true
+          "FIG-JESUS": 156
+        }
       }
     },
     {
       "n": 3,
-      "reference": "JHN.6.35-JHN.6.36",
+      "reference": "JHN.6.22-JHN.6.59",
       "figures": [
         "FIG-JESUS",
         "FIG-GRUPPE-MENGE"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-ORT-SYNAGOGE"
+      ],
       "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-OBJ-BROT",
-            "FIG-ZEICHEN-LEBEN",
-            "FIG-ZEICHEN-SATT"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Ich bin das Brot des Lebens.",
+            "gsw": "Ich bi s Broot vom Läbe."
+          }
         }
       ],
-      "action_de": "Jesus sagt: Ich bin das Brot des Lebens. Wer zu mir kommt, wird nicht hungern, und wer an mich glaubt, wird niemals Durst haben; doch ihr habt mich gesehen und glaubt nicht.",
+      "action_de": "Jesus sagt zur Menge: «Ich bin das Brot des Lebens. Wer zu mir kommt, wird gewiss nicht hungern, und wer an mich glaubt, wird niemals Durst haben.»",
+      "keywords": {
+        "de": "die Speise, die bleibt zum ewigen Leben",
+        "gsw": "s Ässe, wo bliibt bis is ewig Läbe"
+      },
       "stage": {
+        "before": true,
         "mood": {
-          "FIG-JESUS": "smile",
-          "FIG-GRUPPE-MENGE": "calm"
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-MENGE": "pensive"
+        },
+        "x": {
+          "FIG-JESUS": 50,
+          "FIG-GRUPPE-MENGE": 136
         }
       }
     },
     {
       "n": 4,
-      "reference": "JHN.6.67-JHN.6.69",
+      "reference": "JHN.6.60-JHN.6.71",
       "figures": [
         "FIG-GRUPPE-ZWOELF",
         "FIG-PETRUS",
@@ -130,53 +170,69 @@
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-GRUPPE-ZWOELF",
-            "FIG-ZEICHEN-FLIEHEN",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Wollt etwa auch ihr weggehen?",
+            "gsw": "Wänd öppe au ir gaa?"
+          }
         },
         {
           "from": "FIG-PETRUS",
           "to": "FIG-JESUS",
-          "icons": [
-            "FIG-ZEICHEN-LEBEN",
-            "FIG-ZEICHEN-GLAUBEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Herr, zu wem sollen wir gehen? Du hast Worte ewigen Lebens.",
+            "gsw": "Herr, zu wem söled mer gaa? Du häsch Wort vom ewige Läbe."
+          }
         }
       ],
-      "action_de": "Jesus fragt die Zwölf: Wollt auch ihr weggehen? Simon Petrus antwortet: Herr, zu wem sollen wir gehen? Du hast Worte ewigen Lebens; wir haben geglaubt, dass du der Heilige Gottes bist.",
+      "action_de": "Jesus fragt die Zwölf: «Wollt etwa auch ihr weggehen?» Simon Petrus antwortet: «Herr, zu wem sollen wir gehen? Du hast Worte ewigen Lebens.»",
+      "keywords": {
+        "de": "Daraufhin zogen sich viele seiner Jünger zurück",
+        "gsw": "Vo dänn aa sind vili vo sine Jünger zrugg gange"
+      },
+      "names": {
+        "FIG-PETRUS": {
+          "de": "Simon Petrus",
+          "gsw": "Simon Petrus"
+        }
+      },
       "stage": {
         "mood": {
-          "FIG-PETRUS": "calm",
-          "FIG-GRUPPE-ZWOELF": "calm",
+          "FIG-GRUPPE-ZWOELF": "pensive",
+          "FIG-PETRUS": "determined",
           "FIG-JESUS": "calm"
+        },
+        "x": {
+          "FIG-GRUPPE-ZWOELF": 30,
+          "FIG-PETRUS": 92,
+          "FIG-JESUS": 156
         }
       }
     }
   ],
   "actions_de": [
-    "Die Menschen lagern sich im Gras; Jesus dankt und teilt Brot und Fisch aus, so viel sie wollen. Alle werden satt, und die Jünger sammeln zwölf Körbe mit Brocken.",
-    "Am Abend fahren die Jünger ohne Jesus über den See; ein starker Wind wühlt das Wasser auf. Sie sehen Jesus auf dem See gehen und nahe ans Boot kommen und fürchten sich.",
-    "Jesus sagt: Ich bin das Brot des Lebens. Wer zu mir kommt, wird nicht hungern, und wer an mich glaubt, wird niemals Durst haben; doch ihr habt mich gesehen und glaubt nicht.",
-    "Jesus fragt die Zwölf: Wollt auch ihr weggehen? Simon Petrus antwortet: Herr, zu wem sollen wir gehen? Du hast Worte ewigen Lebens; wir haben geglaubt, dass du der Heilige Gottes bist."
+    "Jesus lässt die Menschen sich lagern, nimmt die Brote, dankt und teilt aus, ebenso von den Fischen, so viel sie wollen; alle werden satt, und die Reste füllen zwölf Körbe.",
+    "Am Abend, im Dunkeln und bei starkem Wind, sehen die Jünger im Boot Jesus auf dem See gehen und fürchten sich; er sagt: «Ich bin es; fürchtet euch nicht!»",
+    "Jesus sagt zur Menge: «Ich bin das Brot des Lebens. Wer zu mir kommt, wird gewiss nicht hungern, und wer an mich glaubt, wird niemals Durst haben.»",
+    "Jesus fragt die Zwölf: «Wollt etwa auch ihr weggehen?» Simon Petrus antwortet: «Herr, zu wem sollen wir gehen? Du hast Worte ewigen Lebens.»"
   ],
   "captions_de": [
-    "Alle werden satt: Jesus teilt das Brot an die Menge aus (Pfeil); sie sind satt (Schale mit Haken), Körbe mit Brocken bleiben übrig.",
-    "Auf dem See: Bei Nacht (Mond) und starkem Wind (Windstriche) kommt Jesus über das Wasser auf das Boot zu; die Jünger erschrecken.",
-    "«Ich bin das Brot des Lebens»: Jesus spricht von sich (Jesus in der Blase), dem Brot und dem Leben (Keimling mit Unendlichzeichen); wer zu ihm kommt, wird satt (Schale mit Haken).",
-    "Petrus bleibt: Jesus fragt die Zwölf, ob auch sie gehen wollen (Zwölf, Pfeil, Fragezeichen); Petrus antwortet: Du hast Worte des Lebens, wir glauben (Keimling mit Unendlichzeichen, Herz)."
+    "Alle werden satt: Jesus teilt Brote und Fische an die Menschen aus, die sich gelagert haben (geben); sie sind satt (satt); vorn ein Korb mit Brocken.",
+    "Auf dem See: Nacht und Wind (Wind); die Jünger im Boot fürchten sich (Furcht); Jesus geht auf dem Wasser und sagt: «Ich bin es; fürchtet euch nicht!»",
+    "Brot des Lebens: Jesus spricht in der Synagoge zur Menge: «Ich bin das Brot des Lebens.» (Brot, Leben).",
+    "Bekenntnis: Jesus fragt die Zwölf: «Wollt etwa auch ihr weggehen?» (weggehen, fragen); Simon Petrus (Name): «Herr, zu wem sollen wir gehen? Du hast Worte ewigen Lebens.» (Leben)."
   ],
-  "interpretation_note_de": "Je ein Feld zur Speisung, zum Gang auf dem See, zur Rede vom Brot des Lebens und zum Bekenntnis des Petrus; Einzelheiten in den Abschnitten.",
+  "interpretation_note_de": "Vier Comic-Szenen für sieben Abschnitte ([[JHN.6.1-JHN.6.71]]): Feld 1 die Speisung (im Band: «Das ist wahrhaftig der Prophet»); Feld 2 Jesus auf dem See, «Ich bin es; fürchtet euch nicht!»; Feld 3 bündelt die vier Gänge der Rede in der Synagoge von Kafarnaum in ihrem Kernwort «Ich bin das Brot des Lebens» (im Band: die Speise, die bleibt); Feld 4 bündelt den Rückzug vieler Jünger (im Band) und das Bekenntnis des Petrus.",
   "basis": [
     {
       "record": "SUM-CH-JHN-006",
       "field": "summary",
-      "fingerprint": "8bc93cf93f61be96"
+      "fingerprint": "0203420fae3cf07c"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -350,6 +406,389 @@
           "Auf dem See: Bei Nacht (Mond) und starkem Wind (Windstriche) kommt Jesus über das Wasser auf das Boot zu; die Jünger erschrecken.",
           "«Ich bin das Brot des Lebens»: Jesus spricht von sich (Jesus in der Blase), dem Brot und dem Leben (Spross im Ring); wer zu ihm kommt, wird satt (Schale mit Haken).",
           "Petrus bleibt: Jesus fragt die Zwölf, ob auch sie gehen wollen (Zwölf, Pfeil, Fragezeichen); Petrus antwortet: Du hast Worte des Lebens, wir glauben (Spross im Ring, Herz)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-JHN-006",
+            "field": "summary",
+            "fingerprint": "8bc93cf93f61be96"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.6.10-JHN.6.13",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT",
+              "FIG-OBJ-KORB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SATT"
+            ],
+            "speech": [],
+            "action_de": "Die Menschen lagern sich im Gras; Jesus dankt und teilt Brot und Fisch aus, so viel sie wollen. Alle werden satt, und die Jünger sammeln zwölf Körbe mit Brocken.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "smile"
+              },
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROT"
+              },
+              "count": {
+                "FIG-OBJ-KORB": 3
+              },
+              "at": {
+                "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.6.16-JHN.6.19",
+            "figures": [
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-WIND",
+              "FIG-ZEICHEN-NACHT"
+            ],
+            "speech": [],
+            "action_de": "Am Abend fahren die Jünger ohne Jesus über den See; ein starker Wind wühlt das Wasser auf. Sie sehen Jesus auf dem See gehen und nahe ans Boot kommen und fürchten sich.",
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-ZWOELF": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-ZWOELF": [
+                  0.4,
+                  0.42
+                ]
+              },
+              "big_side": "right",
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "surprised",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-JESUS": 48
+              },
+              "air_x": 70,
+              "air_y": 8,
+              "in_water": true
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.6.35-JHN.6.36",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-OBJ-BROT",
+                  "FIG-ZEICHEN-LEBEN",
+                  "FIG-ZEICHEN-SATT"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: Ich bin das Brot des Lebens. Wer zu mir kommt, wird nicht hungern, und wer an mich glaubt, wird niemals Durst haben; doch ihr habt mich gesehen und glaubt nicht.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "smile",
+                "FIG-GRUPPE-MENGE": "calm"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.6.67-JHN.6.69",
+            "figures": [
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-GRUPPE-ZWOELF",
+                  "FIG-ZEICHEN-FLIEHEN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-LEBEN",
+                  "FIG-ZEICHEN-GLAUBEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus fragt die Zwölf: Wollt auch ihr weggehen? Simon Petrus antwortet: Herr, zu wem sollen wir gehen? Du hast Worte ewigen Lebens; wir haben geglaubt, dass du der Heilige Gottes bist.",
+            "stage": {
+              "mood": {
+                "FIG-PETRUS": "calm",
+                "FIG-GRUPPE-ZWOELF": "calm",
+                "FIG-JESUS": "calm"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Die Menschen lagern sich im Gras; Jesus dankt und teilt Brot und Fisch aus, so viel sie wollen. Alle werden satt, und die Jünger sammeln zwölf Körbe mit Brocken.",
+          "Am Abend fahren die Jünger ohne Jesus über den See; ein starker Wind wühlt das Wasser auf. Sie sehen Jesus auf dem See gehen und nahe ans Boot kommen und fürchten sich.",
+          "Jesus sagt: Ich bin das Brot des Lebens. Wer zu mir kommt, wird nicht hungern, und wer an mich glaubt, wird niemals Durst haben; doch ihr habt mich gesehen und glaubt nicht.",
+          "Jesus fragt die Zwölf: Wollt auch ihr weggehen? Simon Petrus antwortet: Herr, zu wem sollen wir gehen? Du hast Worte ewigen Lebens; wir haben geglaubt, dass du der Heilige Gottes bist."
+        ],
+        "captions_de": [
+          "Alle werden satt: Jesus teilt das Brot an die Menge aus (Pfeil); sie sind satt (Schale mit Haken), Körbe mit Brocken bleiben übrig.",
+          "Auf dem See: Bei Nacht (Mond) und starkem Wind (Windstriche) kommt Jesus über das Wasser auf das Boot zu; die Jünger erschrecken.",
+          "«Ich bin das Brot des Lebens»: Jesus spricht von sich (Jesus in der Blase), dem Brot und dem Leben (Keimling mit Unendlichzeichen); wer zu ihm kommt, wird satt (Schale mit Haken).",
+          "Petrus bleibt: Jesus fragt die Zwölf, ob auch sie gehen wollen (Zwölf, Pfeil, Fragezeichen); Petrus antwortet: Du hast Worte des Lebens, wir glauben (Keimling mit Unendlichzeichen, Herz)."
+        ],
+        "interpretation_note_de": "Je ein Feld zur Speisung, zum Gang auf dem See, zur Rede vom Brot des Lebens und zum Bekenntnis des Petrus; Einzelheiten in den Abschnitten.",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.6.1-JHN.6.15",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROTE-FISCHE",
+              "FIG-OBJ-KORB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SATT"
+            ],
+            "speech": [],
+            "action_de": "Jesus lässt die Menschen sich lagern, nimmt die Brote, dankt und teilt aus, ebenso von den Fischen, so viel sie wollen; alle werden satt, und die Reste füllen zwölf Körbe.",
+            "keywords": {
+              "de": "Das ist wahrhaftig der Prophet",
+              "gsw": "Das isch würkli de Prophet"
+            },
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROTE-FISCHE"
+              },
+              "pose": {
+                "FIG-GRUPPE-MENGE": "sit"
+              },
+              "at": {
+                "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ],
+              "floor_x": {
+                "FIG-OBJ-KORB": 96
+              },
+              "mood": {
+                "FIG-JESUS": "smile",
+                "FIG-GRUPPE-MENGE": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 46,
+                "FIG-GRUPPE-MENGE": 140
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.6.16-JHN.6.21",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-SEE",
+              "FIG-OBJ-BOOT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-WIND",
+              "FIG-ZEICHEN-FURCHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [],
+                "word": {
+                  "de": "Ich bin es; fürchtet euch nicht!",
+                  "gsw": "Ich bi s; händ kei Angscht!"
+                }
+              }
+            ],
+            "action_de": "Am Abend, im Dunkeln und bei starkem Wind, sehen die Jünger im Boot Jesus auf dem See gehen und fürchten sich; er sagt: «Ich bin es; fürchtet euch nicht!»",
+            "keywords": {
+              "de": "sehen sie Jesus auf dem See gehen",
+              "gsw": "gsehnd si de Jesus uf em See laufe"
+            },
+            "stage": {
+              "night": true,
+              "in": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT"
+              },
+              "on_water": [
+                "FIG-JESUS"
+              ],
+              "at": {
+                "FIG-ZEICHEN-FURCHT": "FIG-GRUPPE-JUENGER"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "fear",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-JUENGER": 60,
+                "FIG-JESUS": 150
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.6.22-JHN.6.59",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-SYNAGOGE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [],
+                "word": {
+                  "de": "Ich bin das Brot des Lebens.",
+                  "gsw": "Ich bi s Broot vom Läbe."
+                }
+              }
+            ],
+            "action_de": "Jesus sagt zur Menge: «Ich bin das Brot des Lebens. Wer zu mir kommt, wird gewiss nicht hungern, und wer an mich glaubt, wird niemals Durst haben.»",
+            "keywords": {
+              "de": "die Speise, die bleibt zum ewigen Leben",
+              "gsw": "s Ässe, wo bliibt bis is ewig Läbe"
+            },
+            "stage": {
+              "before": true,
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-MENGE": "pensive"
+              },
+              "x": {
+                "FIG-JESUS": 50,
+                "FIG-GRUPPE-MENGE": 136
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.6.60-JHN.6.71",
+            "figures": [
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [],
+                "word": {
+                  "de": "Wollt etwa auch ihr weggehen?",
+                  "gsw": "Wänd öppe au ir gaa?"
+                }
+              },
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Herr, zu wem sollen wir gehen? Du hast Worte ewigen Lebens.",
+                  "gsw": "Herr, zu wem söled mer gaa? Du häsch Wort vom ewige Läbe."
+                }
+              }
+            ],
+            "action_de": "Jesus fragt die Zwölf: «Wollt etwa auch ihr weggehen?» Simon Petrus antwortet: «Herr, zu wem sollen wir gehen? Du hast Worte ewigen Lebens.»",
+            "keywords": {
+              "de": "Daraufhin zogen sich viele seiner Jünger zurück",
+              "gsw": "Vo dänn aa sind vili vo sine Jünger zrugg gange"
+            },
+            "names": {
+              "FIG-PETRUS": {
+                "de": "Simon Petrus",
+                "gsw": "Simon Petrus"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "pensive",
+                "FIG-PETRUS": "determined",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-ZWOELF": 30,
+                "FIG-PETRUS": 92,
+                "FIG-JESUS": 156
+              }
+            }
+          }
         ]
       }
     }

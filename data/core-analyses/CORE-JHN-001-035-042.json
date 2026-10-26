@@ -1,0 +1,165 @@
+{
+ "id": "CORE-JHN-001-035-042",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "JHN.1.35-JHN.1.42",
+ "target": "TU-JHN-001-035-042",
+ "core_de": "Als Johannes auf Jesus zeigt: «Siehe, das Lamm Gottes!», folgen zwei seiner Jünger Jesus; er fragt: «Was sucht ihr?», sie fragen nach seiner Bleibe, und er sagt: «Kommt, und ihr werdet sehen!»; einer von ihnen, Andreas, findet seinen Bruder Simon: «Wir haben den Messias gefunden», und Jesus sagt zu Simon: «Du wirst Kephas heissen» (übersetzt: Petrus).",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "tree",
+    "subtype": "Weitergabekette: Johannes → zwei Jünger → Andreas → Simon",
+    "range": "JHN.1.35-JHN.1.42",
+    "elements": [
+     {
+      "label": "Johannes: «Siehe, das Lamm Gottes!»",
+      "ref": "JHN.1.35-JHN.1.36",
+      "role": "Hinweis"
+     },
+     {
+      "label": "Zwei Jünger folgen Jesus",
+      "ref": "JHN.1.37-JHN.1.39",
+      "role": "Nachfolge",
+      "child": "s2"
+     },
+     {
+      "label": "Andreas zu Simon: «Wir haben den Messias gefunden»",
+      "ref": "JHN.1.40-JHN.1.41",
+      "role": "Weitergabe"
+     },
+     {
+      "label": "Er führt ihn zu Jesus: «Du wirst Kephas heissen»",
+      "ref": "JHN.1.42",
+      "role": "Name"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JOHANNES-TAEUFER",
+       "to": "zwei seiner Jünger",
+       "ref": "JHN.1.36"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "die zwei",
+       "ref": "JHN.1.38-JHN.1.39"
+      },
+      {
+       "who": "FIG-ANDREAS",
+       "to": "FIG-PETRUS",
+       "ref": "JHN.1.41"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-PETRUS",
+       "ref": "JHN.1.42"
+      }
+     ],
+     "wordplay": [
+      {
+       "word": "Kephas = Petrus (Fels)",
+       "ref": "JHN.1.42"
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "suchen, finden, sehen, bleiben",
+       "ref": "JHN.1.38-JHN.1.41"
+      }
+     ]
+    },
+    "visual": "arrows",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "dialogue",
+    "subtype": "«Was sucht ihr?» – «Wo ist deine Bleibe?» – «Kommt und seht»",
+    "range": "JHN.1.38-JHN.1.39",
+    "elements": [
+     {
+      "label": "«Was sucht ihr?»",
+      "ref": "JHN.1.38",
+      "role": "Jesus"
+     },
+     {
+      "label": "«Rabbi, wo ist deine Bleibe?»",
+      "ref": "JHN.1.38",
+      "role": "Jünger"
+     },
+     {
+      "label": "«Kommt, und ihr werdet sehen!» – sie bleiben jenen Tag bei ihm",
+      "ref": "JHN.1.39",
+      "role": "Jesus"
+     }
+    ],
+    "visual": "scenes",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "JHN.1.36-JHN.1.39",
+   "text_de": "«Siehe, das Lamm Gottes!» – zwei Jünger folgen Jesus; «Was sucht ihr?» – «Rabbi, wo ist deine Bleibe?» – «Kommt, und ihr werdet sehen!»; sie bleiben bei ihm.",
+   "reason_de": "Anfang der Nachfolge (Kriterien 1 und 2).",
+   "recognition_de": "Zwei Jünger folgen Jesus.",
+   "keywords": [
+    "Was sucht ihr?",
+    "Kommt, und ihr werdet sehen!"
+   ]
+  },
+  {
+   "reference": "JHN.1.40-JHN.1.41",
+   "text_de": "Andreas findet seinen Bruder Simon und sagt: «Wir haben den Messias gefunden.»",
+   "reason_de": "Weitergabe (Kriterium 1).",
+   "recognition_de": "Andreas spricht zu Simon.",
+   "keywords": [
+    "Wir haben den Messias gefunden"
+   ]
+  },
+  {
+   "reference": "JHN.1.42",
+   "text_de": "Andreas führt Simon zu Jesus; Jesus: «Du bist Simon, der Sohn des Johannes; du wirst Kephas heissen» (übersetzt: Petrus).",
+   "reason_de": "Ausgang mit neuem Namen (Kriterien 3 und 4).",
+   "recognition_de": "Jesus blickt Simon an und gibt ihm den Namen Kephas.",
+   "keywords": [
+    "du wirst Kephas heissen"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Die Uhrzeit «ungefähr die zehnte Stunde» – Detail",
+  "Der zweite der beiden Jünger bleibt im Text ohne Namen – nicht ergänzen"
+ ],
+ "persons": [
+  "FIG-JOHANNES-TAEUFER",
+  "FIG-JESUS",
+  "FIG-ANDREAS",
+  "FIG-ROLLE-JUENGER",
+  "FIG-PETRUS"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "JHN.1.35-JHN.1.42",
+   "fingerprint": "cc4d8c98e488e346"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Joh 1–7 nach Matthäus und Markus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

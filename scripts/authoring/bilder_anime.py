@@ -1491,9 +1491,12 @@ class AniComposer(_auto.Composer):
         wear = ((p_stage or {}).get("wear") or {}).get(fid)
         if wear:
             key = self._sackkey(key, wear)
-        if hold is None and pose == "kneel":  # Knien: gefaltete Hände machen die Haltung lesbar
+        leer = hold == "LEER"  # stage.hold {FIG: "LEER"}: leere Hände, ohne Erkennungszeichen (z. B. Joh 4,28 Krug stehen gelassen)
+        if leer:
+            hold = None
+        if hold is None and pose == "kneel" and not leer:  # Knien: gefaltete Hände machen die Haltung lesbar
             hold = "an-z-beten"
-        if hold is None and CHAR[key].get("attr") and CHAR[key]["attr"] not in SCENE_NO_ATTR:
+        if hold is None and not leer and CHAR[key].get("attr") and CHAR[key]["attr"] not in SCENE_NO_ATTR:
             hold = CHAR[key]["attr"]
         elif hold is not None and not hold.startswith("an-"):
             hw, hh = self.m(hold)[1]

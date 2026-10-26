@@ -11,11 +11,10 @@
   "panels": [
     {
       "n": 1,
-      "reference": "JHN.5.2-JHN.5.7",
+      "reference": "JHN.5.1-JHN.5.7",
       "figures": [
-        "FIG-GRUPPE-KRANKE",
-        "FIG-ROLLE-KRANKER",
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-ROLLE-KRANKER"
       ],
       "objects": [
         "FIG-ORT-TEICH"
@@ -25,35 +24,38 @@
         {
           "from": "FIG-JESUS",
           "to": "FIG-ROLLE-KRANKER",
-          "icons": [
-            "FIG-ZEICHEN-HEILEN",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Willst du gesund werden?",
+            "gsw": "Wotsch gsund wärde?"
+          }
         },
         {
           "from": "FIG-ROLLE-KRANKER",
           "to": "FIG-JESUS",
-          "icons": [
-            "FIG-ZEICHEN-WASSER",
-            "FIG-ZEICHEN-BRINGEN",
-            "FIG-ZEICHEN-FEHLT"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Herr, ich habe keinen Menschen, der mich in den Teich bringt.",
+            "gsw": "Herr, ich ha kei Mänsch, wo mich in de Teich bringt."
+          }
         }
       ],
-      "action_de": "Am Teich Betesda liegen viele Kranke. Jesus fragt einen Mann, der seit achtunddreissig Jahren krank ist: Willst du gesund werden? Er klagt: Ich habe niemanden, der mich in den Teich bringt.",
+      "action_de": "Am Teich Betesda liegt ein Mann, der seit achtunddreissig Jahren krank ist; Jesus fragt: «Willst du gesund werden?» – «Herr, ich habe keinen Menschen, der mich, wenn das Wasser aufgewühlt wird, in den Teich bringt.»",
+      "keywords": {
+        "de": "achtunddreissig Jahre in seiner Krankheit",
+        "gsw": "achtedriissg Jahr i sinere Chranket"
+      },
       "stage": {
         "pose": {
-          "FIG-GRUPPE-KRANKE": "sit",
           "FIG-ROLLE-KRANKER": "lie"
         },
         "mood": {
-          "FIG-ROLLE-KRANKER": "worried",
-          "FIG-GRUPPE-KRANKE": "worried"
+          "FIG-JESUS": "calm",
+          "FIG-ROLLE-KRANKER": "worried"
         },
         "x": {
-          "FIG-JESUS": 30,
-          "FIG-ROLLE-KRANKER": 100,
-          "FIG-GRUPPE-KRANKE": 160
+          "FIG-JESUS": 38,
+          "FIG-ROLLE-KRANKER": 150
         }
       }
     },
@@ -69,62 +71,59 @@
         "FIG-OBJ-MATTE"
       ],
       "signs": [
-        "FIG-ZEICHEN-HEILEN",
         "FIG-ZEICHEN-SABBAT"
       ],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-ROLLE-KRANKER",
-          "icons": [
-            "FIG-OBJ-MATTE",
-            "FIG-ZEICHEN-BRINGEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Steh auf, nimm deine Matte und geh umher!",
+            "gsw": "Stand uf, nimm dini Matte und lauf umenand!"
+          }
         }
       ],
-      "action_de": "Jesus sagt: Steh auf, nimm deine Matte und geh umher! Sofort wird der Mann gesund, nimmt seine Matte und geht umher. Es ist Sabbat.",
+      "action_de": "Jesus sagt zu dem Kranken: «Steh auf, nimm deine Matte und geh umher!» Sofort wird der Mensch gesund, nimmt seine Matte und geht umher; es ist Sabbat.",
+      "keywords": {
+        "de": "Es war aber Sabbat an jenem Tag",
+        "gsw": "Es isch aber Sabbat gsii a däm Tag"
+      },
       "stage": {
         "hold": {
           "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
         },
         "mood": {
+          "FIG-JESUS": "calm",
           "FIG-ROLLE-KRANKER": "delight"
         },
-        "air_x": 140,
-        "air_y": 10,
-        "beside": {
-          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
-        },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-ROLLE-KRANKER",
-            "act"
-          ]
-        ]
+        "x": {
+          "FIG-JESUS": 50,
+          "FIG-ROLLE-KRANKER": 136
+        }
       }
     }
   ],
   "actions_de": [
-    "Am Teich Betesda liegen viele Kranke. Jesus fragt einen Mann, der seit achtunddreissig Jahren krank ist: Willst du gesund werden? Er klagt: Ich habe niemanden, der mich in den Teich bringt.",
-    "Jesus sagt: Steh auf, nimm deine Matte und geh umher! Sofort wird der Mann gesund, nimmt seine Matte und geht umher. Es ist Sabbat."
+    "Am Teich Betesda liegt ein Mann, der seit achtunddreissig Jahren krank ist; Jesus fragt: «Willst du gesund werden?» – «Herr, ich habe keinen Menschen, der mich, wenn das Wasser aufgewühlt wird, in den Teich bringt.»",
+    "Jesus sagt zu dem Kranken: «Steh auf, nimm deine Matte und geh umher!» Sofort wird der Mensch gesund, nimmt seine Matte und geht umher; es ist Sabbat."
   ],
   "captions_de": [
-    "Willst du gesund werden? Am Teich mit Säulenhallen liegen Kranke; Jesus fragt (Hand mit Licht, ?); der Mann: Niemand bringt mich ins Wasser (Tropfen, Pfeil, fehlt).",
-    "Wort Jesu → Heilung: Jesus sagt: Nimm die Matte und geh (Matte, Pfeil); der Pfeil führt von Jesus zum Mann: er ist sofort geheilt (Hand mit Licht) und trägt sie; es ist Sabbat (siebter Kreis gold)."
+    "Am Teich: Der Kranke liegt beim Teich mit den Säulenhallen; Jesus fragt: «Willst du gesund werden?» (gesund, fragen); der Kranke: «Herr, ich habe keinen Menschen …» (fehlt).",
+    "Geheilt: Am Teich mit den Säulenhallen sagt Jesus: «Steh auf, nimm deine Matte und geh umher!»; der Geheilte steht mit seiner Matte (gesund); Sabbat (Sabbat)."
   ],
-  "interpretation_note_de": "Vers [[JHN.5.4]] (der Engel, der das Wasser aufwühlt) fehlt in der zugrunde gelegten Ausgabe und ist nicht gezeichnet. Die achtunddreissig Jahre sind nicht als Zahl dargestellt (keine Ziffern im Bild). Die Säulenhalle steht für die fünf Hallen des Teichs ([[JHN.5.2]]).",
+  "interpretation_note_de": "Zwei Felder nach dem Ablauf «Not – Frage – Wort – Heilung – Sabbat» ([[JHN.5.1-JHN.5.9]]). Spätere Handschriften ergänzen einen Engel, der das Wasser bewegt (Vers 5,4); die Arbeitsübersetzung folgt dem kürzeren Text, das Bild zeigt keinen Engel. Der Text nennt diese Heilung nicht «Zeichen»; darum kein Stern.",
   "basis": [
     {
       "record": "TU-JHN-005-001-009",
       "field": "summary",
-      "fingerprint": "19075b11dafb22c6"
+      "fingerprint": "93e7514d03ee3d4e"
     },
     {
       "record": "TRANS-JHN-005-001-047-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.5.2-JHN.5.7",
-      "fingerprint": "b62a1c5384f4206e"
+      "reference": "JHN.5.1-JHN.5.7",
+      "fingerprint": "6f975a89c47fa43a"
     },
     {
       "record": "TRANS-JHN-005-001-047-DE-WORKING",
@@ -134,7 +133,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -333,6 +332,372 @@
         "captions_de": [
           "Willst du gesund werden? Am Teich mit Säulenhallen liegen Kranke; Jesus fragt (Hand mit Licht, ?); der Mann: Niemand bringt mich ins Wasser (Tropfen, Pfeil, fehlt).",
           "Steh auf: Jesus sagt: Nimm die Matte und geh (Matte, Pfeil); der Mann ist geheilt (Hand mit Licht) und trägt sie; es ist Sabbat (siebter Kreis gold)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-JHN-005-001-009",
+            "field": "summary",
+            "fingerprint": "19075b11dafb22c6"
+          },
+          {
+            "record": "TRANS-JHN-005-001-047-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.5.2-JHN.5.7",
+            "fingerprint": "b62a1c5384f4206e"
+          },
+          {
+            "record": "TRANS-JHN-005-001-047-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.5.8-JHN.5.9",
+            "fingerprint": "20c17e40310b2351"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.5.2-JHN.5.7",
+            "figures": [
+              "FIG-GRUPPE-KRANKE",
+              "FIG-ROLLE-KRANKER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-TEICH"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-KRANKER",
+                "icons": [
+                  "FIG-ZEICHEN-HEILEN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-ROLLE-KRANKER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-WASSER",
+                  "FIG-ZEICHEN-BRINGEN",
+                  "FIG-ZEICHEN-FEHLT"
+                ]
+              }
+            ],
+            "action_de": "Am Teich Betesda liegen viele Kranke. Jesus fragt einen Mann, der seit achtunddreissig Jahren krank ist: Willst du gesund werden? Er klagt: Ich habe niemanden, der mich in den Teich bringt.",
+            "stage": {
+              "pose": {
+                "FIG-GRUPPE-KRANKE": "sit",
+                "FIG-ROLLE-KRANKER": "lie"
+              },
+              "mood": {
+                "FIG-ROLLE-KRANKER": "worried",
+                "FIG-GRUPPE-KRANKE": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-ROLLE-KRANKER": 100,
+                "FIG-GRUPPE-KRANKE": 160
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.5.8-JHN.5.9",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-KRANKER"
+            ],
+            "objects": [
+              "FIG-ORT-TEICH",
+              "FIG-OBJ-MATTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-HEILEN",
+              "FIG-ZEICHEN-SABBAT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-KRANKER",
+                "icons": [
+                  "FIG-OBJ-MATTE",
+                  "FIG-ZEICHEN-BRINGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: Steh auf, nimm deine Matte und geh umher! Sofort wird der Mann gesund, nimmt seine Matte und geht umher. Es ist Sabbat.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
+              },
+              "mood": {
+                "FIG-ROLLE-KRANKER": "delight"
+              },
+              "air_x": 140,
+              "air_y": 10,
+              "beside": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-KRANKER",
+                  "act"
+                ]
+              ]
+            }
+          }
+        ],
+        "actions_de": [
+          "Am Teich Betesda liegen viele Kranke. Jesus fragt einen Mann, der seit achtunddreissig Jahren krank ist: Willst du gesund werden? Er klagt: Ich habe niemanden, der mich in den Teich bringt.",
+          "Jesus sagt: Steh auf, nimm deine Matte und geh umher! Sofort wird der Mann gesund, nimmt seine Matte und geht umher. Es ist Sabbat."
+        ],
+        "captions_de": [
+          "Willst du gesund werden? Am Teich mit Säulenhallen liegen Kranke; Jesus fragt (Hand mit Licht, ?); der Mann: Niemand bringt mich ins Wasser (Tropfen, Pfeil, fehlt).",
+          "Wort Jesu → Heilung: Jesus sagt: Nimm die Matte und geh (Matte, Pfeil); der Pfeil führt von Jesus zum Mann: er ist sofort geheilt (Hand mit Licht) und trägt sie; es ist Sabbat (siebter Kreis gold)."
+        ],
+        "interpretation_note_de": "Vers [[JHN.5.4]] (der Engel, der das Wasser aufwühlt) fehlt in der zugrunde gelegten Ausgabe und ist nicht gezeichnet. Die achtunddreissig Jahre sind nicht als Zahl dargestellt (keine Ziffern im Bild). Die Säulenhalle steht für die fünf Hallen des Teichs ([[JHN.5.2]]).",
+        "basis": [
+          {
+            "record": "TU-JHN-005-001-009",
+            "field": "summary",
+            "fingerprint": "93e7514d03ee3d4e"
+          },
+          {
+            "record": "TRANS-JHN-005-001-047-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.5.2-JHN.5.7",
+            "fingerprint": "b62a1c5384f4206e"
+          },
+          {
+            "record": "TRANS-JHN-005-001-047-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.5.8-JHN.5.9",
+            "fingerprint": "20c17e40310b2351"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.5.1-JHN.5.7",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-KRANKER"
+            ],
+            "objects": [
+              "FIG-ORT-TEICH",
+              "FIG-OBJ-MATTE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-KRANKER",
+                "icons": [],
+                "word": {
+                  "de": "Willst du gesund werden?",
+                  "gsw": "Wotsch gsund wärde?"
+                }
+              },
+              {
+                "from": "FIG-ROLLE-KRANKER",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Herr, ich habe keinen Menschen, der mich in den Teich bringt.",
+                  "gsw": "Herr, ich ha kei Mänsch, wo mich in de Teich bringt."
+                }
+              }
+            ],
+            "action_de": "Am Teich Betesda liegt ein Mann, der seit achtunddreissig Jahren krank ist; Jesus fragt: «Willst du gesund werden?» – «Herr, ich habe keinen Menschen, der mich, wenn das Wasser aufgewühlt wird, in den Teich bringt.»",
+            "keywords": {
+              "de": "achtunddreissig Jahre in seiner Krankheit",
+              "gsw": "achtedriissg Jahr i sinere Chranket"
+            },
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-KRANKER": "lie"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-ROLLE-KRANKER": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 50,
+                "FIG-ROLLE-KRANKER": 130
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.5.8-JHN.5.9",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-KRANKER"
+            ],
+            "objects": [
+              "FIG-ORT-TEICH",
+              "FIG-OBJ-MATTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SABBAT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-KRANKER",
+                "icons": [],
+                "word": {
+                  "de": "Steh auf, nimm deine Matte und geh umher!",
+                  "gsw": "Stand uf, nimm dini Matte und lauf umenand!"
+                }
+              }
+            ],
+            "action_de": "Jesus sagt zu dem Kranken: «Steh auf, nimm deine Matte und geh umher!» Sofort wird der Mensch gesund, nimmt seine Matte und geht umher; es ist Sabbat.",
+            "keywords": {
+              "de": "Es war aber Sabbat an jenem Tag",
+              "gsw": "Es isch aber Sabbat gsii a däm Tag"
+            },
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-ROLLE-KRANKER": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 50,
+                "FIG-ROLLE-KRANKER": 136
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Am Teich: Der Kranke liegt auf seiner Matte beim Teich mit den Säulenhallen; Jesus fragt: «Willst du gesund werden?» (gesund, fragen); der Kranke: «Herr, ich habe keinen Menschen …» (fehlt).",
+          "Geheilt: Am Teich mit den Säulenhallen sagt Jesus: «Steh auf, nimm deine Matte und geh umher!»; der Geheilte steht mit seiner Matte (gesund); Sabbat (Sabbat)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.5.1-JHN.5.7",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-KRANKER"
+            ],
+            "objects": [
+              "FIG-ORT-TEICH"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-KRANKER",
+                "icons": [],
+                "word": {
+                  "de": "Willst du gesund werden?",
+                  "gsw": "Wotsch gsund wärde?"
+                }
+              },
+              {
+                "from": "FIG-ROLLE-KRANKER",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Herr, ich habe keinen Menschen, der mich in den Teich bringt.",
+                  "gsw": "Herr, ich ha kei Mänsch, wo mich in de Teich bringt."
+                }
+              }
+            ],
+            "action_de": "Am Teich Betesda liegt ein Mann, der seit achtunddreissig Jahren krank ist; Jesus fragt: «Willst du gesund werden?» – «Herr, ich habe keinen Menschen, der mich, wenn das Wasser aufgewühlt wird, in den Teich bringt.»",
+            "keywords": {
+              "de": "achtunddreissig Jahre in seiner Krankheit",
+              "gsw": "achtedriissg Jahr i sinere Chranket"
+            },
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-KRANKER": "lie"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-ROLLE-KRANKER": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 50,
+                "FIG-ROLLE-KRANKER": 130
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.5.8-JHN.5.9",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-KRANKER"
+            ],
+            "objects": [
+              "FIG-ORT-TEICH",
+              "FIG-OBJ-MATTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SABBAT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-KRANKER",
+                "icons": [],
+                "word": {
+                  "de": "Steh auf, nimm deine Matte und geh umher!",
+                  "gsw": "Stand uf, nimm dini Matte und lauf umenand!"
+                }
+              }
+            ],
+            "action_de": "Jesus sagt zu dem Kranken: «Steh auf, nimm deine Matte und geh umher!» Sofort wird der Mensch gesund, nimmt seine Matte und geht umher; es ist Sabbat.",
+            "keywords": {
+              "de": "Es war aber Sabbat an jenem Tag",
+              "gsw": "Es isch aber Sabbat gsii a däm Tag"
+            },
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-ROLLE-KRANKER": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 50,
+                "FIG-ROLLE-KRANKER": 136
+              }
+            }
+          }
         ]
       }
     }

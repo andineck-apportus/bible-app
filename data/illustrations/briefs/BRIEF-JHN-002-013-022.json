@@ -11,7 +11,7 @@
   "panels": [
     {
       "n": 1,
-      "reference": "JHN.2.14-JHN.2.16",
+      "reference": "JHN.2.13-JHN.2.17",
       "figures": [
         "FIG-JESUS",
         "FIG-ROLLE-HAENDLER"
@@ -19,89 +19,137 @@
       "objects": [
         "FIG-ORT-TEMPEL",
         "FIG-OBJ-PEITSCHE",
-        "FIG-OBJ-MUENZEN",
-        "FIG-OBJ-SCHAF",
-        "FIG-OBJ-TAUBE"
+        "FIG-OBJ-MUENZEN"
       ],
       "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-ROLLE-HAENDLER",
-          "icons": [
-            "FIG-ORT-TEMPEL",
-            "FIG-OBJ-MUENZEN",
-            "FIG-ZEICHEN-FEHLT"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Macht das Haus meines Vaters nicht zu einem Haus des Handels!",
+            "gsw": "Mached s Huus vo mim Vatter nöd zu me Handelshuus!"
+          }
         }
       ],
-      "action_de": "Jesus treibt mit einer Geissel die Händler, Schafe und Rinder aus dem Tempel, schüttet die Münzen aus und stösst die Tische um."
+      "action_de": "Jesus treibt mit einer Geissel alle aus dem Tempel, schüttet den Geldwechslern die Münzen aus, stösst die Tische um und sagt: «Macht das Haus meines Vaters nicht zu einem Haus des Handels!»",
+      "keywords": {
+        "de": "Der Eifer um dein Haus wird mich verzehren",
+        "gsw": "De Iifer für dis Huus wird mich uffrässe"
+      },
+      "stage": {
+        "hold": {
+          "FIG-JESUS": "FIG-OBJ-PEITSCHE"
+        },
+        "before": true,
+        "mood": {
+          "FIG-JESUS": "angry",
+          "FIG-ROLLE-HAENDLER": "fear"
+        },
+        "x": {
+          "FIG-JESUS": 60,
+          "FIG-ROLLE-HAENDLER": 150
+        }
+      }
     },
     {
       "n": 2,
-      "reference": "JHN.2.18-JHN.2.19",
-      "figures": [
-        "FIG-GRUPPE-MENGE",
-        "FIG-JESUS"
-      ],
-      "objects": [
-        "FIG-ORT-TEMPEL"
-      ],
+      "reference": "JHN.2.18-JHN.2.22",
+      "figures": [],
+      "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-MENGE",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-ZEICHEN-STERN",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
+      "speech": [],
+      "action_de": "Die Juden fragen: «Was für ein Zeichen zeigst du uns?» Jesus: «Reisst diesen Tempel nieder, und in drei Tagen werde ich ihn aufrichten.» Sie denken an das Gebäude, er aber sprach vom Tempel seines Leibes; nach seiner Auferweckung erinnern sich die Jünger und glauben.",
+      "keywords": {
+        "de": "Er aber sprach vom Tempel seines Leibes",
+        "gsw": "Er aber hät vom Tämpel vo sim Liib gredt"
+      },
+      "diagram": {
+        "visual": "levels",
+        "span": 2,
+        "speaker": "FIG-JESUS",
+        "title": {
+          "de": "Reisst diesen Tempel nieder, und in drei Tagen werde ich ihn aufrichten.",
+          "gsw": "Riissed dä Tämpel ab, und i drüü Täg stell ich en uf."
         },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-GRUPPE-MENGE",
-            "FIG-ZEICHEN-NIEDERREISSEN",
-            "FIG-ZEICHEN-TAGE",
-            "FIG-JESUS",
-            "FIG-ORT-TEMPEL"
-          ]
-        }
-      ],
-      "action_de": "Die Juden fragen nach einem Zeichen; Jesus antwortet: Reisst diesen Tempel nieder, in drei Tagen werde ich ihn aufrichten."
+        "top_label": {
+          "de": "Die Juden verstehen:",
+          "gsw": "D Jude verstönd:"
+        },
+        "top": [
+          {
+            "a": {
+              "de": "«Sechsundvierzig Jahre ist an diesem Tempel gebaut worden, und du wirst ihn in drei Tagen aufrichten?»",
+              "gsw": "«Sächsevierzg Jahr isch a däm Tämpel buut worde, und du wottsch en i drüü Täg ufstelle?»"
+            },
+            "icons": [
+              "FIG-ORT-TEMPEL",
+              "FIG-ZEICHEN-FRAGEN"
+            ],
+            "who": "FIG-GRUPPE-MENGE"
+          }
+        ],
+        "bottom_label": {
+          "de": "Gemeint ist:",
+          "gsw": "Gmeint isch:"
+        },
+        "bottom": [
+          {
+            "a": {
+              "de": "Er aber sprach vom Tempel seines Leibes.",
+              "gsw": "Er aber hät vom Tämpel vo sim Liib gredt."
+            },
+            "icons": [
+              "FIG-JESUS",
+              "FIG-ZEICHEN-AUFERSTEHEN"
+            ]
+          },
+          {
+            "a": {
+              "de": "Als er nun von den Toten auferweckt worden war, erinnerten sich seine Jünger … und sie glaubten.",
+              "gsw": "Wo er dänn vo de Tote uferweckt worde isch, händ sich sini Jünger erinneret … und si händ glaubt."
+            },
+            "icons": [
+              "FIG-ZEICHEN-ERINNERN",
+              "FIG-ZEICHEN-GLAUBEN"
+            ],
+            "who": "FIG-GRUPPE-JUENGER"
+          }
+        ]
+      }
     }
   ],
   "actions_de": [
-    "Jesus treibt mit einer Geissel die Händler, Schafe und Rinder aus dem Tempel, schüttet die Münzen aus und stösst die Tische um.",
-    "Die Juden fragen nach einem Zeichen; Jesus antwortet: Reisst diesen Tempel nieder, in drei Tagen werde ich ihn aufrichten."
+    "Jesus treibt mit einer Geissel alle aus dem Tempel, schüttet den Geldwechslern die Münzen aus, stösst die Tische um und sagt: «Macht das Haus meines Vaters nicht zu einem Haus des Handels!»",
+    "Die Juden fragen: «Was für ein Zeichen zeigst du uns?» Jesus: «Reisst diesen Tempel nieder, und in drei Tagen werde ich ihn aufrichten.» Sie denken an das Gebäude, er aber sprach vom Tempel seines Leibes; nach seiner Auferweckung erinnern sich die Jünger und glauben."
   ],
   "captions_de": [
-    "Tempelreinigung: Jesus mit erhobener Geissel, Tisch umgestossen, Münzen und Tiere; Sprechblase: kein Handel im Tempel.",
-    "Zeichenforderung: Die Menge fragt nach einem Zeichen (Stern, ?); Jesus: Ihr reisst den Tempel nieder (Menge, Riss), in drei Tagen (Sonnen) richte ich ihn auf (Jesus, Tempel)."
+    "Tempelreinigung: Jesus hält die Geissel erhoben, Münzen liegen am Boden, ein Händler weicht zurück; Jesus: «Macht das Haus meines Vaters nicht zu einem Haus des Handels!» (Haus, Verbotszeichen).",
+    "Doppelsinn (zwei Ebenen, Bild Jesus, Titel «Reisst diesen Tempel nieder, und in drei Tagen werde ich ihn aufrichten.»): oben, wie sie es verstehen: «Sechsundvierzig Jahre ist an diesem Tempel gebaut worden …» (Tempel, Tage); unten, hervorgehoben, wie es gemeint ist: «Er aber sprach vom Tempel seines Leibes.» (Jesus, auferstehen); nach der Auferweckung erinnern sich die Jünger (erinnern, glauben)."
   ],
-  "interpretation_note_de": "Ob Jesus die Geissel gegen Menschen oder nur gegen die Tiere gebraucht, lässt [[JHN.2.15]] offen; das Bild zeigt sie erhoben, ohne Schlag. Die Fragenden («die Juden», [[JHN.2.18]]) erscheinen als neutrale Menge, ohne Merkmale einer Volksgruppe. Dass Jesus vom Tempel seines Leibes spricht ([[JHN.2.21]]), sagt der Erzähler; das Bild deutet es nicht aus. Für «in drei Tagen» stehen drei Sonnen, für «niederreissen» der Tempel mit Riss; die kleine Menge vor dem Riss steht für «ihr», der Kopf Jesu vor dem heilen Tempel für «ich».",
+  "interpretation_note_de": "Zwei Felder nach «Austreibung – Missverständnis Tempel ↔ Leib» ([[JHN.2.13-JHN.2.22]]): die Tempelreinigung als Szene, dann der Doppelsinn als zwei Ebenen; die Klärung «vom Tempel seines Leibes» gibt der Erzähler ([[JHN.2.21]]). Ob Jesus die Geissel gegen Menschen oder nur gegen die Tiere gebraucht, lässt [[JHN.2.15]] offen; das Bild zeigt sie erhoben, ohne Schlag. «Die Juden» sind als neutrale Gruppe ohne Merkmale einer Volksgruppe gezeichnet.",
   "basis": [
     {
       "record": "TU-JHN-002-013-022",
       "field": "summary",
-      "fingerprint": "971d8ff5fb356c44"
+      "fingerprint": "540e7c5b2a8ad394"
     },
     {
       "record": "TRANS-JHN-002-001-025-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.2.14-JHN.2.16",
-      "fingerprint": "42210c112b29262b"
+      "reference": "JHN.2.13-JHN.2.17",
+      "fingerprint": "146324611be9aaed"
     },
     {
       "record": "TRANS-JHN-002-001-025-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.2.18-JHN.2.19",
-      "fingerprint": "9d30b8cd4f465eaf"
+      "reference": "JHN.2.18-JHN.2.22",
+      "fingerprint": "1c4680ea1d180440"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-14 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-14",
     "supersedes": null
@@ -263,6 +311,228 @@
         "captions_de": [
           "Tempelreinigung: Jesus mit erhobener Geissel, Tisch umgestossen, Münzen und Tiere; Sprechblase: kein Handel im Tempel.",
           "Zeichenforderung: Die Menge fragt nach einem Zeichen (Stern, ?); Jesus: Tempel niederreissen (Riss), in drei Tagen (Sonnen) aufrichten."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.2.14-JHN.2.16",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-HAENDLER"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL",
+              "FIG-OBJ-PEITSCHE",
+              "FIG-OBJ-MUENZEN",
+              "FIG-OBJ-SCHAF",
+              "FIG-OBJ-TAUBE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-HAENDLER",
+                "icons": [
+                  "FIG-ORT-TEMPEL",
+                  "FIG-OBJ-MUENZEN",
+                  "FIG-ZEICHEN-FEHLT"
+                ]
+              }
+            ],
+            "action_de": "Jesus treibt mit einer Geissel die Händler, Schafe und Rinder aus dem Tempel, schüttet die Münzen aus und stösst die Tische um."
+          },
+          {
+            "n": 2,
+            "reference": "JHN.2.18-JHN.2.19",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-STERN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-ZEICHEN-NIEDERREISSEN",
+                  "FIG-ZEICHEN-TAGE",
+                  "FIG-JESUS",
+                  "FIG-ORT-TEMPEL"
+                ]
+              }
+            ],
+            "action_de": "Die Juden fragen nach einem Zeichen; Jesus antwortet: Reisst diesen Tempel nieder, in drei Tagen werde ich ihn aufrichten."
+          }
+        ],
+        "actions_de": [
+          "Jesus treibt mit einer Geissel die Händler, Schafe und Rinder aus dem Tempel, schüttet die Münzen aus und stösst die Tische um.",
+          "Die Juden fragen nach einem Zeichen; Jesus antwortet: Reisst diesen Tempel nieder, in drei Tagen werde ich ihn aufrichten."
+        ],
+        "captions_de": [
+          "Tempelreinigung: Jesus mit erhobener Geissel, Tisch umgestossen, Münzen und Tiere; Sprechblase: kein Handel im Tempel.",
+          "Zeichenforderung: Die Menge fragt nach einem Zeichen (Stern, ?); Jesus: Ihr reisst den Tempel nieder (Menge, Riss), in drei Tagen (Sonnen) richte ich ihn auf (Jesus, Tempel)."
+        ],
+        "interpretation_note_de": "Ob Jesus die Geissel gegen Menschen oder nur gegen die Tiere gebraucht, lässt [[JHN.2.15]] offen; das Bild zeigt sie erhoben, ohne Schlag. Die Fragenden («die Juden», [[JHN.2.18]]) erscheinen als neutrale Menge, ohne Merkmale einer Volksgruppe. Dass Jesus vom Tempel seines Leibes spricht ([[JHN.2.21]]), sagt der Erzähler; das Bild deutet es nicht aus. Für «in drei Tagen» stehen drei Sonnen, für «niederreissen» der Tempel mit Riss; die kleine Menge vor dem Riss steht für «ihr», der Kopf Jesu vor dem heilen Tempel für «ich».",
+        "basis": [
+          {
+            "record": "TU-JHN-002-013-022",
+            "field": "summary",
+            "fingerprint": "971d8ff5fb356c44"
+          },
+          {
+            "record": "TRANS-JHN-002-001-025-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.2.14-JHN.2.16",
+            "fingerprint": "42210c112b29262b"
+          },
+          {
+            "record": "TRANS-JHN-002-001-025-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.2.18-JHN.2.19",
+            "fingerprint": "9d30b8cd4f465eaf"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-14 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.2.13-JHN.2.17",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-HAENDLER"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL",
+              "FIG-OBJ-PEITSCHE",
+              "FIG-OBJ-TISCH-UMGESTOSSEN",
+              "FIG-OBJ-MUENZEN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-HAENDLER",
+                "icons": [],
+                "word": {
+                  "de": "Macht das Haus meines Vaters nicht zu einem Haus des Handels!",
+                  "gsw": "Mached s Huus vo mim Vatter nöd zu me Handelshuus!"
+                }
+              }
+            ],
+            "action_de": "Jesus treibt mit einer Geissel alle aus dem Tempel, schüttet den Geldwechslern die Münzen aus, stösst die Tische um und sagt: «Macht das Haus meines Vaters nicht zu einem Haus des Handels!»",
+            "keywords": {
+              "de": "Der Eifer um dein Haus wird mich verzehren",
+              "gsw": "De Iifer für dis Huus wird mich uffrässe"
+            },
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-PEITSCHE"
+              },
+              "before": true,
+              "mood": {
+                "FIG-JESUS": "angry",
+                "FIG-ROLLE-HAENDLER": "fear"
+              },
+              "x": {
+                "FIG-JESUS": 54,
+                "FIG-ROLLE-HAENDLER": 140
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.2.18-JHN.2.22",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Die Juden fragen: «Was für ein Zeichen zeigst du uns?» Jesus: «Reisst diesen Tempel nieder, und in drei Tagen werde ich ihn aufrichten.» Sie denken an das Gebäude, er aber sprach vom Tempel seines Leibes; nach seiner Auferweckung erinnern sich die Jünger und glauben.",
+            "keywords": {
+              "de": "Er aber sprach vom Tempel seines Leibes",
+              "gsw": "Er aber hät vom Tämpel vo sim Liib gredt"
+            },
+            "diagram": {
+              "visual": "levels",
+              "span": 2,
+              "speaker": "FIG-JESUS",
+              "title": {
+                "de": "Reisst diesen Tempel nieder, und in drei Tagen werde ich ihn aufrichten.",
+                "gsw": "Riissed dä Tämpel ab, und i drüü Täg stell ich en uf."
+              },
+              "top_label": {
+                "de": "Die Juden verstehen:",
+                "gsw": "D Jude verstönd:"
+              },
+              "top": [
+                {
+                  "a": {
+                    "de": "«Sechsundvierzig Jahre ist an diesem Tempel gebaut worden, und du wirst ihn in drei Tagen aufrichten?»",
+                    "gsw": "«Sächsevierzg Jahr isch a däm Tämpel buut worde, und du wottsch en i drüü Täg ufstelle?»"
+                  },
+                  "icons": [
+                    "FIG-ORT-TEMPEL",
+                    "FIG-ZEICHEN-FRAGEN"
+                  ],
+                  "who": "FIG-GRUPPE-MENGE"
+                }
+              ],
+              "bottom_label": {
+                "de": "Gemeint ist:",
+                "gsw": "Gmeint isch:"
+              },
+              "bottom": [
+                {
+                  "a": {
+                    "de": "Er aber sprach vom Tempel seines Leibes.",
+                    "gsw": "Er aber hät vom Tämpel vo sim Liib gredt."
+                  },
+                  "icons": [
+                    "FIG-JESUS",
+                    "FIG-ZEICHEN-AUFERSTEHEN"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Als er nun von den Toten auferweckt worden war, erinnerten sich seine Jünger … und sie glaubten.",
+                    "gsw": "Wo er dänn vo de Tote uferweckt worde isch, händ sich sini Jünger erinneret … und si händ glaubt."
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-ERINNERN",
+                    "FIG-ZEICHEN-GLAUBEN"
+                  ],
+                  "who": "FIG-GRUPPE-JUENGER"
+                }
+              ]
+            }
+          }
+        ],
+        "captions_de": [
+          "Tempelreinigung: Jesus hält die Geissel erhoben, ein Tisch ist umgestossen, Münzen liegen am Boden, ein Händler weicht zurück; Jesus: «Macht das Haus meines Vaters nicht zu einem Haus des Handels!» (Haus, Verbotszeichen).",
+          "Doppelsinn (zwei Ebenen, Bild Jesus, Titel «Reisst diesen Tempel nieder, und in drei Tagen werde ich ihn aufrichten.»): oben, wie sie es verstehen: «Sechsundvierzig Jahre ist an diesem Tempel gebaut worden …» (Tempel, Tage); unten, hervorgehoben, wie es gemeint ist: «Er aber sprach vom Tempel seines Leibes.» (Jesus, auferstehen); nach der Auferweckung erinnern sich die Jünger (erinnern, glauben)."
         ]
       }
     }

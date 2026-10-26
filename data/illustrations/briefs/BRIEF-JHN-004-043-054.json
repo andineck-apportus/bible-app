@@ -11,7 +11,7 @@
   "panels": [
     {
       "n": 1,
-      "reference": "JHN.4.46-JHN.4.49",
+      "reference": "JHN.4.46-JHN.4.50",
       "figures": [
         "FIG-ROLLE-KOENIGLICHER-BEAMTER",
         "FIG-JESUS"
@@ -22,203 +22,118 @@
         {
           "from": "FIG-ROLLE-KOENIGLICHER-BEAMTER",
           "to": "FIG-JESUS",
-          "icons": [
-            "FIG-ROLLE-KIND",
-            "FIG-ZEICHEN-HEILEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Herr, komm hinab, bevor mein Kind stirbt!",
+            "gsw": "Herr, chumm abe, bevor mis Chind stirbt!"
+          }
         },
         {
           "from": "FIG-JESUS",
           "to": "FIG-ROLLE-KOENIGLICHER-BEAMTER",
-          "icons": [
-            "FIG-ZEICHEN-STERN",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Geh! Dein Sohn lebt.",
+            "gsw": "Gang! Din Sohn läbt."
+          }
         }
       ],
-      "action_de": "In Kana bittet ein königlicher Beamter Jesus, hinabzukommen und seinen Sohn zu heilen, der in Kafarnaum im Sterben liegt. Jesus sagt: Wenn ihr nicht Zeichen und Wunder seht, glaubt ihr nicht. Der Mann bittet erneut.",
+      "action_de": "Der königliche Beamte bittet: «Herr, komm hinab, bevor mein Kind stirbt!» Jesus sagt: «Geh! Dein Sohn lebt.» Der Mann glaubt dem Wort und macht sich auf den Weg.",
+      "keywords": {
+        "de": "Der Mann glaubte dem Wort",
+        "gsw": "De Maa hät em Wort glaubt"
+      },
       "stage": {
         "mood": {
-          "FIG-ROLLE-KOENIGLICHER-BEAMTER": "worried"
+          "FIG-ROLLE-KOENIGLICHER-BEAMTER": "worried",
+          "FIG-JESUS": "calm"
+        },
+        "x": {
+          "FIG-ROLLE-KOENIGLICHER-BEAMTER": 50,
+          "FIG-JESUS": 140
         }
       }
     },
     {
       "n": 2,
-      "reference": "JHN.4.50",
+      "reference": "JHN.4.51-JHN.4.54",
       "figures": [
         "FIG-ROLLE-KOENIGLICHER-BEAMTER",
-        "FIG-JESUS"
+        "FIG-GRUPPE-DIENER"
       ],
       "objects": [
-        "FIG-ORT-HAUS"
+        "FIG-ORT-WEG"
       ],
       "signs": [
+        "FIG-ZEICHEN-STERN",
         "FIG-ZEICHEN-GLAUBEN"
       ],
       "speech": [
         {
-          "from": "FIG-JESUS",
+          "from": "FIG-GRUPPE-DIENER",
           "to": "FIG-ROLLE-KOENIGLICHER-BEAMTER",
-          "icons": [
-            "FIG-ROLLE-KIND",
-            "FIG-ZEICHEN-LEBEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Gestern um die siebte Stunde hat ihn das Fieber verlassen.",
+            "gsw": "Geschter um di sibet Stund hät en s Fieber verlaa."
+          }
         }
       ],
-      "action_de": "Jesus sagt zu ihm: Geh! Dein Sohn lebt. Der Mann glaubt dem Wort, das Jesus gesagt hat, und macht sich auf den Weg.",
+      "action_de": "Unterwegs kommen ihm seine Knechte entgegen: Sein Junge lebt; «Gestern um die siebte Stunde hat ihn das Fieber verlassen» – die Stunde, in der Jesus sprach; er glaubt mit seinem ganzen Haus. Das ist das zweite Zeichen Jesu.",
+      "keywords": {
+        "de": "Dies aber tat Jesus wiederum als zweites Zeichen",
+        "gsw": "Das aber hät de Jesus wider als zweits Zeiche gmacht"
+      },
       "stage": {
+        "at": {
+          "FIG-ZEICHEN-GLAUBEN": "FIG-ROLLE-KOENIGLICHER-BEAMTER"
+        },
         "signs_who": {
           "FIG-ZEICHEN-GLAUBEN": [
             "FIG-ROLLE-KOENIGLICHER-BEAMTER"
           ]
         },
-        "pose": {
-          "FIG-ROLLE-KOENIGLICHER-BEAMTER": "away"
-        },
-        "mood": {
-          "FIG-ROLLE-KOENIGLICHER-BEAMTER": "calm"
-        },
-        "back_side": "right",
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-ROLLE-KOENIGLICHER-BEAMTER",
-            "act"
-          ],
-          [
-            "FIG-ROLLE-KOENIGLICHER-BEAMTER",
-            "FIG-ORT-HAUS",
-            "go"
-          ]
-        ],
-        "x": {
-          "FIG-JESUS": 40,
-          "FIG-ROLLE-KOENIGLICHER-BEAMTER": 104
-        }
-      }
-    },
-    {
-      "n": 3,
-      "reference": "JHN.4.51-JHN.4.53",
-      "figures": [
-        "FIG-ROLLE-KOENIGLICHER-BEAMTER",
-        "FIG-GRUPPE-DIENER"
-      ],
-      "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-DIENER",
-          "to": "FIG-ROLLE-KOENIGLICHER-BEAMTER",
-          "icons": [
-            "FIG-ROLLE-KIND",
-            "FIG-ZEICHEN-LEBEN"
-          ]
-        },
-        {
-          "from": "FIG-ROLLE-KOENIGLICHER-BEAMTER",
-          "to": "FIG-GRUPPE-DIENER",
-          "icons": [
-            "FIG-ZEICHEN-STUNDE",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
-        }
-      ],
-      "action_de": "Unterwegs kommen ihm seine Knechte entgegen und sagen, sein Junge lebe. Er fragt nach der Stunde; es war die Stunde, in der Jesus gesagt hatte: Dein Sohn lebt.",
-      "stage": {
-        "arrows": [
-          [
-            "FIG-GRUPPE-DIENER",
-            "FIG-ROLLE-KOENIGLICHER-BEAMTER",
-            "go"
-          ]
-        ],
         "mood": {
           "FIG-ROLLE-KOENIGLICHER-BEAMTER": "surprised",
           "FIG-GRUPPE-DIENER": "delight"
-        }
-      }
-    },
-    {
-      "n": 4,
-      "reference": "JHN.4.53-JHN.4.54",
-      "figures": [
-        "FIG-ROLLE-KOENIGLICHER-BEAMTER",
-        "FIG-ROLLE-KIND"
-      ],
-      "objects": [
-        "FIG-ORT-HAUS"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-GLAUBEN",
-        "FIG-ZEICHEN-STERN"
-      ],
-      "speech": [],
-      "action_de": "Der Vater erkennt, dass es jene Stunde war, und er glaubt, er und sein ganzes Haus. Dies ist das zweite Zeichen, das Jesus in Galiläa tut.",
-      "stage": {
-        "count": {
-          "FIG-ZEICHEN-STERN": 2
         },
-        "mood": {
-          "FIG-ROLLE-KOENIGLICHER-BEAMTER": "delight",
-          "FIG-ROLLE-KIND": "delight"
-        },
-        "back_side": "right",
-        "before": true,
         "x": {
-          "FIG-ROLLE-KOENIGLICHER-BEAMTER": 56,
-          "FIG-ROLLE-KIND": 132
+          "FIG-ROLLE-KOENIGLICHER-BEAMTER": 50,
+          "FIG-GRUPPE-DIENER": 136
         }
       }
     }
   ],
   "actions_de": [
-    "In Kana bittet ein königlicher Beamter Jesus, hinabzukommen und seinen Sohn zu heilen, der in Kafarnaum im Sterben liegt. Jesus sagt: Wenn ihr nicht Zeichen und Wunder seht, glaubt ihr nicht. Der Mann bittet erneut.",
-    "Jesus sagt zu ihm: Geh! Dein Sohn lebt. Der Mann glaubt dem Wort, das Jesus gesagt hat, und macht sich auf den Weg.",
-    "Unterwegs kommen ihm seine Knechte entgegen und sagen, sein Junge lebe. Er fragt nach der Stunde; es war die Stunde, in der Jesus gesagt hatte: Dein Sohn lebt.",
-    "Der Vater erkennt, dass es jene Stunde war, und er glaubt, er und sein ganzes Haus. Dies ist das zweite Zeichen, das Jesus in Galiläa tut."
+    "Der königliche Beamte bittet: «Herr, komm hinab, bevor mein Kind stirbt!» Jesus sagt: «Geh! Dein Sohn lebt.» Der Mann glaubt dem Wort und macht sich auf den Weg.",
+    "Unterwegs kommen ihm seine Knechte entgegen: Sein Junge lebt; «Gestern um die siebte Stunde hat ihn das Fieber verlassen» – die Stunde, in der Jesus sprach; er glaubt mit seinem ganzen Haus. Das ist das zweite Zeichen Jesu."
   ],
   "captions_de": [
-    "Bitte um Heilung: Der Beamte bittet: Heile mein Kind (Kind, Hand mit Licht); Jesus fragt nach dem Glauben ohne Zeichen (Stern, ?).",
-    "Wort → Glaube → Heimweg: Jesus sagt: Dein Kind lebt (Kind, Keimling mit Unendlichzeichen; Pfeil zum Mann); der Mann glaubt dem Wort (Herz) und macht sich auf den Heimweg (gestrichelter Pfeil zum Haus).",
-    "Unterwegs: Die Knechte melden: Das Kind lebt (Kind, Keimling mit Unendlichzeichen); der Vater fragt nach der Stunde (Sanduhr, ?).",
-    "Das zweite Zeichen: Vater und Kind zu Hause, gesund; sie glauben (Herzen); das zweite Zeichen (zwei Sterne)."
+    "Dein Sohn lebt: Der königliche Beamte bittet: «Herr, komm hinab, bevor mein Kind stirbt!» (Kind, Tod); Jesus: «Geh! Dein Sohn lebt.» (Leben, Weg).",
+    "Unterwegs: Die Knechte kommen dem Vater auf dem Weg entgegen: «Gestern um die siebte Stunde hat ihn das Fieber verlassen.» (Stunde, gesund); der Vater erkennt die Stunde und glaubt (glauben); Stern: das zweite Zeichen."
   ],
-  "interpretation_note_de": "Der Text nennt den Beamten nicht beim Namen; er dient wohl dem König Herodes Antipas. Das Kind wird erst gesund gezeigt, nachdem Jesus «Dein Sohn lebt» gesagt hat; die Heilung selbst geschieht fern in Kafarnaum und ist nicht gezeichnet. Zwei Sterne stehen für «das zweite Zeichen» ([[JHN.4.54]]), nicht für zwei Zeichen in dieser Szene.",
+  "interpretation_note_de": "Zwei Felder nach dem Ablauf «Bitte – Wort – Glaube – Bestätigung – zweites Zeichen» ([[JHN.4.43-JHN.4.54]]): der Beamte vor Jesus, dann die Knechte, die ihm unterwegs die Genesung melden. Der Junge selbst erscheint nicht, weil der Text nur die Meldung erzählt. Der Stern steht für «zweites Zeichen» ([[JHN.4.54]]). Das Wort vom Propheten in der Heimat ([[JHN.4.43-JHN.4.45]]) ist weggelassen.",
   "basis": [
     {
       "record": "TU-JHN-004-043-054",
       "field": "summary",
-      "fingerprint": "15a692761edf5945"
+      "fingerprint": "096da97c4c58602e"
     },
     {
       "record": "TRANS-JHN-004-001-054-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.4.46-JHN.4.49",
-      "fingerprint": "cd7f13ca0eb13bed"
+      "reference": "JHN.4.46-JHN.4.50",
+      "fingerprint": "d0467467a31dc0fe"
     },
     {
       "record": "TRANS-JHN-004-001-054-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.4.50",
-      "fingerprint": "6ab23963d06aea06"
-    },
-    {
-      "record": "TRANS-JHN-004-001-054-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "JHN.4.51-JHN.4.53",
-      "fingerprint": "9930845efe129687"
-    },
-    {
-      "record": "TRANS-JHN-004-001-054-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "JHN.4.53-JHN.4.54",
-      "fingerprint": "fada52e352e0372c"
+      "reference": "JHN.4.51-JHN.4.54",
+      "fingerprint": "8df3e14523e51efb"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -554,6 +469,356 @@
           "Wort → Glaube → Heimweg: Jesus sagt: Dein Kind lebt (Kind, Baum im Ring; Pfeil zum Mann); der Mann glaubt dem Wort (Herz) und macht sich auf den Heimweg (gestrichelter Pfeil zum Haus).",
           "Unterwegs: Die Knechte melden: Das Kind lebt (Kind, Baum im Ring); der Vater fragt nach der Stunde (Sanduhr, ?).",
           "Das zweite Zeichen: Vater und Kind zu Hause, gesund; sie glauben (Herzen); das zweite Zeichen (zwei Sterne)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-JHN-004-043-054",
+            "field": "summary",
+            "fingerprint": "15a692761edf5945"
+          },
+          {
+            "record": "TRANS-JHN-004-001-054-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.4.46-JHN.4.49",
+            "fingerprint": "cd7f13ca0eb13bed"
+          },
+          {
+            "record": "TRANS-JHN-004-001-054-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.4.50",
+            "fingerprint": "6ab23963d06aea06"
+          },
+          {
+            "record": "TRANS-JHN-004-001-054-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.4.51-JHN.4.53",
+            "fingerprint": "9930845efe129687"
+          },
+          {
+            "record": "TRANS-JHN-004-001-054-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.4.53-JHN.4.54",
+            "fingerprint": "fada52e352e0372c"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.4.46-JHN.4.49",
+            "figures": [
+              "FIG-ROLLE-KOENIGLICHER-BEAMTER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-KOENIGLICHER-BEAMTER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ROLLE-KIND",
+                  "FIG-ZEICHEN-HEILEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-KOENIGLICHER-BEAMTER",
+                "icons": [
+                  "FIG-ZEICHEN-STERN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "In Kana bittet ein königlicher Beamter Jesus, hinabzukommen und seinen Sohn zu heilen, der in Kafarnaum im Sterben liegt. Jesus sagt: Wenn ihr nicht Zeichen und Wunder seht, glaubt ihr nicht. Der Mann bittet erneut.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-KOENIGLICHER-BEAMTER": "worried"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.4.50",
+            "figures": [
+              "FIG-ROLLE-KOENIGLICHER-BEAMTER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-GLAUBEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-KOENIGLICHER-BEAMTER",
+                "icons": [
+                  "FIG-ROLLE-KIND",
+                  "FIG-ZEICHEN-LEBEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt zu ihm: Geh! Dein Sohn lebt. Der Mann glaubt dem Wort, das Jesus gesagt hat, und macht sich auf den Weg.",
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-GLAUBEN": [
+                  "FIG-ROLLE-KOENIGLICHER-BEAMTER"
+                ]
+              },
+              "pose": {
+                "FIG-ROLLE-KOENIGLICHER-BEAMTER": "away"
+              },
+              "mood": {
+                "FIG-ROLLE-KOENIGLICHER-BEAMTER": "calm"
+              },
+              "back_side": "right",
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-KOENIGLICHER-BEAMTER",
+                  "act"
+                ],
+                [
+                  "FIG-ROLLE-KOENIGLICHER-BEAMTER",
+                  "FIG-ORT-HAUS",
+                  "go"
+                ]
+              ],
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-ROLLE-KOENIGLICHER-BEAMTER": 104
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.4.51-JHN.4.53",
+            "figures": [
+              "FIG-ROLLE-KOENIGLICHER-BEAMTER",
+              "FIG-GRUPPE-DIENER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-DIENER",
+                "to": "FIG-ROLLE-KOENIGLICHER-BEAMTER",
+                "icons": [
+                  "FIG-ROLLE-KIND",
+                  "FIG-ZEICHEN-LEBEN"
+                ]
+              },
+              {
+                "from": "FIG-ROLLE-KOENIGLICHER-BEAMTER",
+                "to": "FIG-GRUPPE-DIENER",
+                "icons": [
+                  "FIG-ZEICHEN-STUNDE",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Unterwegs kommen ihm seine Knechte entgegen und sagen, sein Junge lebe. Er fragt nach der Stunde; es war die Stunde, in der Jesus gesagt hatte: Dein Sohn lebt.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-GRUPPE-DIENER",
+                  "FIG-ROLLE-KOENIGLICHER-BEAMTER",
+                  "go"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-KOENIGLICHER-BEAMTER": "surprised",
+                "FIG-GRUPPE-DIENER": "delight"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.4.53-JHN.4.54",
+            "figures": [
+              "FIG-ROLLE-KOENIGLICHER-BEAMTER",
+              "FIG-ROLLE-KIND"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-GLAUBEN",
+              "FIG-ZEICHEN-STERN"
+            ],
+            "speech": [],
+            "action_de": "Der Vater erkennt, dass es jene Stunde war, und er glaubt, er und sein ganzes Haus. Dies ist das zweite Zeichen, das Jesus in Galiläa tut.",
+            "stage": {
+              "count": {
+                "FIG-ZEICHEN-STERN": 2
+              },
+              "mood": {
+                "FIG-ROLLE-KOENIGLICHER-BEAMTER": "delight",
+                "FIG-ROLLE-KIND": "delight"
+              },
+              "back_side": "right",
+              "before": true,
+              "x": {
+                "FIG-ROLLE-KOENIGLICHER-BEAMTER": 56,
+                "FIG-ROLLE-KIND": 132
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "In Kana bittet ein königlicher Beamter Jesus, hinabzukommen und seinen Sohn zu heilen, der in Kafarnaum im Sterben liegt. Jesus sagt: Wenn ihr nicht Zeichen und Wunder seht, glaubt ihr nicht. Der Mann bittet erneut.",
+          "Jesus sagt zu ihm: Geh! Dein Sohn lebt. Der Mann glaubt dem Wort, das Jesus gesagt hat, und macht sich auf den Weg.",
+          "Unterwegs kommen ihm seine Knechte entgegen und sagen, sein Junge lebe. Er fragt nach der Stunde; es war die Stunde, in der Jesus gesagt hatte: Dein Sohn lebt.",
+          "Der Vater erkennt, dass es jene Stunde war, und er glaubt, er und sein ganzes Haus. Dies ist das zweite Zeichen, das Jesus in Galiläa tut."
+        ],
+        "captions_de": [
+          "Bitte um Heilung: Der Beamte bittet: Heile mein Kind (Kind, Hand mit Licht); Jesus fragt nach dem Glauben ohne Zeichen (Stern, ?).",
+          "Wort → Glaube → Heimweg: Jesus sagt: Dein Kind lebt (Kind, Keimling mit Unendlichzeichen; Pfeil zum Mann); der Mann glaubt dem Wort (Herz) und macht sich auf den Heimweg (gestrichelter Pfeil zum Haus).",
+          "Unterwegs: Die Knechte melden: Das Kind lebt (Kind, Keimling mit Unendlichzeichen); der Vater fragt nach der Stunde (Sanduhr, ?).",
+          "Das zweite Zeichen: Vater und Kind zu Hause, gesund; sie glauben (Herzen); das zweite Zeichen (zwei Sterne)."
+        ],
+        "interpretation_note_de": "Der Text nennt den Beamten nicht beim Namen; er dient wohl dem König Herodes Antipas. Das Kind wird erst gesund gezeigt, nachdem Jesus «Dein Sohn lebt» gesagt hat; die Heilung selbst geschieht fern in Kafarnaum und ist nicht gezeichnet. Zwei Sterne stehen für «das zweite Zeichen» ([[JHN.4.54]]), nicht für zwei Zeichen in dieser Szene.",
+        "basis": [
+          {
+            "record": "TU-JHN-004-043-054",
+            "field": "summary",
+            "fingerprint": "096da97c4c58602e"
+          },
+          {
+            "record": "TRANS-JHN-004-001-054-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.4.46-JHN.4.49",
+            "fingerprint": "cd7f13ca0eb13bed"
+          },
+          {
+            "record": "TRANS-JHN-004-001-054-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.4.50",
+            "fingerprint": "6ab23963d06aea06"
+          },
+          {
+            "record": "TRANS-JHN-004-001-054-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.4.51-JHN.4.53",
+            "fingerprint": "9930845efe129687"
+          },
+          {
+            "record": "TRANS-JHN-004-001-054-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.4.53-JHN.4.54",
+            "fingerprint": "fada52e352e0372c"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.4.46-JHN.4.50",
+            "figures": [
+              "FIG-ROLLE-KOENIGLICHER-BEAMTER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-KOENIGLICHER-BEAMTER",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Herr, komm hinab, bevor mein Kind stirbt!",
+                  "gsw": "Herr, chumm abe, bevor mis Chind stirbt!"
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-KOENIGLICHER-BEAMTER",
+                "icons": [],
+                "word": {
+                  "de": "Geh! Dein Sohn lebt.",
+                  "gsw": "Gang! Din Sohn läbt."
+                }
+              }
+            ],
+            "action_de": "Der königliche Beamte bittet: «Herr, komm hinab, bevor mein Kind stirbt!» Jesus sagt: «Geh! Dein Sohn lebt.» Der Mann glaubt dem Wort und macht sich auf den Weg.",
+            "keywords": {
+              "de": "Der Mann glaubte dem Wort",
+              "gsw": "De Maa hät em Wort glaubt"
+            },
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-KOENIGLICHER-BEAMTER": "worried",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-ROLLE-KOENIGLICHER-BEAMTER": 50,
+                "FIG-JESUS": 140
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.4.51-JHN.4.54",
+            "figures": [
+              "FIG-ROLLE-KOENIGLICHER-BEAMTER",
+              "FIG-GRUPPE-DIENER"
+            ],
+            "objects": [
+              "FIG-ORT-WEG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-STERN",
+              "FIG-ZEICHEN-GLAUBEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-DIENER",
+                "to": "FIG-ROLLE-KOENIGLICHER-BEAMTER",
+                "icons": [],
+                "word": {
+                  "de": "Gestern um die siebte Stunde hat ihn das Fieber verlassen.",
+                  "gsw": "Geschter um di sibet Stund hät en s Fieber verlaa."
+                }
+              }
+            ],
+            "action_de": "Unterwegs kommen ihm seine Knechte entgegen: Sein Junge lebt; «Gestern um die siebte Stunde hat ihn das Fieber verlassen» – die Stunde, in der Jesus sprach; er glaubt mit seinem ganzen Haus. Das ist das zweite Zeichen Jesu.",
+            "keywords": {
+              "de": "Dies aber tat Jesus wiederum als zweites Zeichen",
+              "gsw": "Das aber hät de Jesus wider als zweits Zeiche gmacht"
+            },
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-GLAUBEN": "FIG-ROLLE-KOENIGLICHER-BEAMTER"
+              },
+              "mood": {
+                "FIG-ROLLE-KOENIGLICHER-BEAMTER": "surprised",
+                "FIG-GRUPPE-DIENER": "delight"
+              },
+              "x": {
+                "FIG-ROLLE-KOENIGLICHER-BEAMTER": 50,
+                "FIG-GRUPPE-DIENER": 136
+              }
+            }
+          }
         ]
       }
     }

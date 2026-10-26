@@ -11,77 +11,56 @@
   "panels": [
     {
       "n": 1,
-      "reference": "JHN.1.35-JHN.1.37",
+      "reference": "JHN.1.35-JHN.1.39",
       "figures": [
-        "FIG-JOHANNES-TAEUFER",
         "FIG-ANDREAS",
         "FIG-ROLLE-JUENGER",
         "FIG-JESUS"
       ],
       "objects": [],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-NACHFOLGEN"
+      ],
       "speech": [
         {
-          "from": "FIG-JOHANNES-TAEUFER",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-OBJ-LAMM",
-            "FIG-GOTT"
-          ]
+          "from": "FIG-JESUS",
+          "to": "FIG-ANDREAS",
+          "icons": [],
+          "word": {
+            "de": "Kommt, und ihr werdet sehen!",
+            "gsw": "Chömed, und ir wärded s gseh!"
+          }
         }
       ],
-      "action_de": "Johannes steht mit zwei seiner Jünger da, sieht Jesus vorübergehen und sagt: Siehe, das Lamm Gottes! Die zwei Jünger hören es und folgen Jesus.",
+      "action_de": "Johannes blickt auf Jesus und sagt: «Siehe, das Lamm Gottes!»; zwei seiner Jünger folgen Jesus. Jesus fragt: «Was sucht ihr?» – «Rabbi, wo ist deine Bleibe?» – «Kommt, und ihr werdet sehen!»",
+      "keywords": {
+        "de": "Was sucht ihr?",
+        "gsw": "Was sueched ir?"
+      },
+      "names": {
+        "FIG-ANDREAS": {
+          "de": "Andreas",
+          "gsw": "Andreas"
+        }
+      },
       "stage": {
-        "arrows": [
-          [
-            "FIG-ANDREAS",
-            "FIG-JESUS",
-            "go"
-          ]
-        ],
-        "pose": {
-          "FIG-JESUS": "away"
+        "at": {
+          "FIG-ZEICHEN-NACHFOLGEN": "FIG-ROLLE-JUENGER"
+        },
+        "mood": {
+          "FIG-ANDREAS": "question",
+          "FIG-ROLLE-JUENGER": "question",
+          "FIG-JESUS": "smile"
+        },
+        "x": {
+          "FIG-ANDREAS": 34,
+          "FIG-ROLLE-JUENGER": 70,
+          "FIG-JESUS": 150
         }
       }
     },
     {
       "n": 2,
-      "reference": "JHN.1.38-JHN.1.39",
-      "figures": [
-        "FIG-ANDREAS",
-        "FIG-ROLLE-JUENGER",
-        "FIG-JESUS"
-      ],
-      "objects": [
-        "FIG-ORT-HAUS"
-      ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-ANDREAS",
-          "icons": [
-            "FIG-ZEICHEN-FRAGEN"
-          ]
-        },
-        {
-          "from": "FIG-ANDREAS",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-ORT-HAUS",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
-        }
-      ],
-      "action_de": "Jesus wendet sich um und fragt: Was sucht ihr? Sie fragen: Rabbi, wo ist deine Bleibe? Er sagt: Kommt und seht! Sie bleiben jenen Tag bei ihm.",
-      "stage": {
-        "mood": {
-          "FIG-ANDREAS": "surprised"
-        }
-      }
-    },
-    {
-      "n": 3,
       "reference": "JHN.1.40-JHN.1.41",
       "figures": [
         "FIG-ANDREAS",
@@ -93,22 +72,37 @@
         {
           "from": "FIG-ANDREAS",
           "to": "FIG-PETRUS",
-          "icons": [
-            "FIG-ZEICHEN-MESSIAS",
-            "FIG-ZEICHEN-SEHEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Wir haben den Messias gefunden.",
+            "gsw": "Mir händ de Messias gfunde."
+          }
         }
       ],
-      "action_de": "Andreas, einer der beiden, findet seinen Bruder Simon und sagt zu ihm: Wir haben den Messias gefunden.",
+      "action_de": "Andreas findet zuerst seinen Bruder Simon und sagt zu ihm: «Wir haben den Messias gefunden.»",
+      "keywords": {
+        "de": "Er findet zuerst seinen eigenen Bruder Simon",
+        "gsw": "Dä findt zerscht sin eigete Brüeder, de Simon"
+      },
+      "names": {
+        "FIG-PETRUS": {
+          "de": "Simon",
+          "gsw": "Simon"
+        }
+      },
       "stage": {
         "mood": {
           "FIG-ANDREAS": "delight",
           "FIG-PETRUS": "surprised"
+        },
+        "x": {
+          "FIG-ANDREAS": 54,
+          "FIG-PETRUS": 134
         }
       }
     },
     {
-      "n": 4,
+      "n": 3,
       "reference": "JHN.1.42",
       "figures": [
         "FIG-ANDREAS",
@@ -121,13 +115,18 @@
         {
           "from": "FIG-JESUS",
           "to": "FIG-PETRUS",
-          "icons": [
-            "FIG-PETRUS",
-            "FIG-OBJ-FELS"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Du bist Simon, der Sohn des Johannes; du wirst Kephas heissen.",
+            "gsw": "Du bisch de Simon, de Sohn vom Johannes; du wirsch Kephas heisse."
+          }
         }
       ],
-      "action_de": "Andreas führt Simon zu Jesus. Jesus blickt ihn an und sagt: Du bist Simon, der Sohn des Johannes; du wirst Kephas heissen (das heisst: Petrus, Fels).",
+      "action_de": "Andreas findet seinen Bruder Simon und sagt: «Wir haben den Messias gefunden»; er führt ihn zu Jesus, und Jesus sagt: «Du bist Simon, der Sohn des Johannes; du wirst Kephas heissen.»",
+      "keywords": {
+        "de": "du wirst Kephas heissen",
+        "gsw": "du wirsch Kephas heisse"
+      },
       "stage": {
         "arrows": [
           [
@@ -137,41 +136,40 @@
           ]
         ],
         "mood": {
-          "FIG-PETRUS": "surprised"
+          "FIG-ANDREAS": "delight",
+          "FIG-PETRUS": "surprised",
+          "FIG-JESUS": "calm"
+        },
+        "x": {
+          "FIG-ANDREAS": 30,
+          "FIG-PETRUS": 84,
+          "FIG-JESUS": 150
         }
       }
     }
   ],
   "actions_de": [
-    "Johannes steht mit zwei seiner Jünger da, sieht Jesus vorübergehen und sagt: Siehe, das Lamm Gottes! Die zwei Jünger hören es und folgen Jesus.",
-    "Jesus wendet sich um und fragt: Was sucht ihr? Sie fragen: Rabbi, wo ist deine Bleibe? Er sagt: Kommt und seht! Sie bleiben jenen Tag bei ihm.",
-    "Andreas, einer der beiden, findet seinen Bruder Simon und sagt zu ihm: Wir haben den Messias gefunden.",
-    "Andreas führt Simon zu Jesus. Jesus blickt ihn an und sagt: Du bist Simon, der Sohn des Johannes; du wirst Kephas heissen (das heisst: Petrus, Fels)."
+    "Johannes blickt auf Jesus und sagt: «Siehe, das Lamm Gottes!»; zwei seiner Jünger folgen Jesus. Jesus fragt: «Was sucht ihr?» – «Rabbi, wo ist deine Bleibe?» – «Kommt, und ihr werdet sehen!»",
+    "Andreas findet zuerst seinen Bruder Simon und sagt zu ihm: «Wir haben den Messias gefunden.»",
+    "Andreas findet seinen Bruder Simon und sagt: «Wir haben den Messias gefunden»; er führt ihn zu Jesus, und Jesus sagt: «Du bist Simon, der Sohn des Johannes; du wirst Kephas heissen.»"
   ],
   "captions_de": [
-    "Sie folgen ihm: Johannes sagt «Lamm Gottes» (Lamm, Strahlenkranz); zwei seiner Jünger gehen Jesus nach (Pfeil).",
-    "Wo wohnst du? Jesus fragt, was sie suchen (?); sie fragen nach seiner Bleibe (Haus, ?).",
-    "Gefunden: Andreas sagt seinem Bruder Simon: Wir haben den Messias (Salbhorn, Krone) gefunden (Augen).",
-    "Kephas: Andreas bringt Simon zu Jesus (Pfeil zu Jesus); Jesus sagt: Du (Simon) wirst Fels heissen (Fels)."
+    "Nachfolge: Zwei Jünger (einer ist Andreas, Name) folgen Jesus (nachfolgen); Jesus wendet sich um: «Was sucht ihr?» und lädt sie ein: «Kommt, und ihr werdet sehen!».",
+    "Gefunden: Andreas (Name) sagt seinem Bruder Simon (Name): «Wir haben den Messias gefunden.» (Messias, finden).",
+    "Der neue Name: Andreas (Name) bringt Simon (Name) zu Jesus; Jesus sagt: «Du bist Simon, der Sohn des Johannes; du wirst Kephas heissen.» (Fels)."
   ],
-  "interpretation_note_de": "Der zweite Jünger neben Andreas bleibt im Text ohne Namen ([[JHN.1.40]]); er erscheint als allgemeiner Jünger. Simon trägt schon die Merkmale des Petrus (Schlüssel, ockerfarbener Mantel), damit man ihn wiedererkennt; den Namen Kephas bekommt er erst hier ([[JHN.1.42]]). Das Auge steht für «gefunden», Salbhorn und Krone für «Messias», der Fels für «Kephas/Petrus».",
+  "interpretation_note_de": "Drei Felder nach der Weitergabekette ([[JHN.1.35-JHN.1.42]]): Johannes weist auf Jesus, zwei Jünger folgen; Andreas findet Simon; Jesus gibt Simon den Namen Kephas (übersetzt: Petrus, «Fels»). Der zweite Jünger bleibt im Text ohne Namen und ist im Bild als unbenannter Jünger gezeichnet. Die Uhrzeit ist weggelassen.",
   "basis": [
     {
       "record": "TU-JHN-001-035-042",
       "field": "summary",
-      "fingerprint": "f887037aade01176"
+      "fingerprint": "921b06b31274808d"
     },
     {
       "record": "TRANS-JHN-001-001-051-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.1.35-JHN.1.37",
-      "fingerprint": "09e195ac8eb56ace"
-    },
-    {
-      "record": "TRANS-JHN-001-001-051-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "JHN.1.38-JHN.1.39",
-      "fingerprint": "3337c456c36b8851"
+      "reference": "JHN.1.35-JHN.1.39",
+      "fingerprint": "b5b9157e8ebc4dc9"
     },
     {
       "record": "TRANS-JHN-001-001-051-DE-WORKING",
@@ -187,7 +185,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -349,6 +347,191 @@
           "Gefunden: Andreas sagt seinem Bruder Simon: Wir haben den Messias (Salbhorn, Krone) gefunden (Auge).",
           "Kephas: Andreas bringt Simon zu Jesus (Pfeil zu Jesus); Jesus sagt: Du (Simon) wirst Fels heissen (Fels)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.1.35-JHN.1.37",
+            "figures": [
+              "FIG-JOHANNES-TAEUFER",
+              "FIG-ANDREAS",
+              "FIG-ROLLE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JOHANNES-TAEUFER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-OBJ-LAMM",
+                  "FIG-GOTT"
+                ]
+              }
+            ],
+            "action_de": "Johannes steht mit zwei seiner Jünger da, sieht Jesus vorübergehen und sagt: Siehe, das Lamm Gottes! Die zwei Jünger hören es und folgen Jesus.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-ANDREAS",
+                  "FIG-JESUS",
+                  "go"
+                ]
+              ],
+              "pose": {
+                "FIG-JESUS": "away"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.1.38-JHN.1.39",
+            "figures": [
+              "FIG-ANDREAS",
+              "FIG-ROLLE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ANDREAS",
+                "icons": [
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-ANDREAS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ORT-HAUS",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus wendet sich um und fragt: Was sucht ihr? Sie fragen: Rabbi, wo ist deine Bleibe? Er sagt: Kommt und seht! Sie bleiben jenen Tag bei ihm.",
+            "stage": {
+              "mood": {
+                "FIG-ANDREAS": "surprised"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.1.40-JHN.1.41",
+            "figures": [
+              "FIG-ANDREAS",
+              "FIG-PETRUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ANDREAS",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-ZEICHEN-MESSIAS",
+                  "FIG-ZEICHEN-SEHEN"
+                ]
+              }
+            ],
+            "action_de": "Andreas, einer der beiden, findet seinen Bruder Simon und sagt zu ihm: Wir haben den Messias gefunden.",
+            "stage": {
+              "mood": {
+                "FIG-ANDREAS": "delight",
+                "FIG-PETRUS": "surprised"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.1.42",
+            "figures": [
+              "FIG-ANDREAS",
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-PETRUS",
+                  "FIG-OBJ-FELS"
+                ]
+              }
+            ],
+            "action_de": "Andreas führt Simon zu Jesus. Jesus blickt ihn an und sagt: Du bist Simon, der Sohn des Johannes; du wirst Kephas heissen (das heisst: Petrus, Fels).",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-ANDREAS",
+                  "FIG-JESUS",
+                  "go"
+                ]
+              ],
+              "mood": {
+                "FIG-PETRUS": "surprised"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Johannes steht mit zwei seiner Jünger da, sieht Jesus vorübergehen und sagt: Siehe, das Lamm Gottes! Die zwei Jünger hören es und folgen Jesus.",
+          "Jesus wendet sich um und fragt: Was sucht ihr? Sie fragen: Rabbi, wo ist deine Bleibe? Er sagt: Kommt und seht! Sie bleiben jenen Tag bei ihm.",
+          "Andreas, einer der beiden, findet seinen Bruder Simon und sagt zu ihm: Wir haben den Messias gefunden.",
+          "Andreas führt Simon zu Jesus. Jesus blickt ihn an und sagt: Du bist Simon, der Sohn des Johannes; du wirst Kephas heissen (das heisst: Petrus, Fels)."
+        ],
+        "captions_de": [
+          "Sie folgen ihm: Johannes sagt «Lamm Gottes» (Lamm, Strahlenkranz); zwei seiner Jünger gehen Jesus nach (Pfeil).",
+          "Wo wohnst du? Jesus fragt, was sie suchen (?); sie fragen nach seiner Bleibe (Haus, ?).",
+          "Gefunden: Andreas sagt seinem Bruder Simon: Wir haben den Messias (Salbhorn, Krone) gefunden (Augen).",
+          "Kephas: Andreas bringt Simon zu Jesus (Pfeil zu Jesus); Jesus sagt: Du (Simon) wirst Fels heissen (Fels)."
+        ],
+        "interpretation_note_de": "Der zweite Jünger neben Andreas bleibt im Text ohne Namen ([[JHN.1.40]]); er erscheint als allgemeiner Jünger. Simon trägt schon die Merkmale des Petrus (Schlüssel, ockerfarbener Mantel), damit man ihn wiedererkennt; den Namen Kephas bekommt er erst hier ([[JHN.1.42]]). Das Auge steht für «gefunden», Salbhorn und Krone für «Messias», der Fels für «Kephas/Petrus».",
+        "basis": [
+          {
+            "record": "TU-JHN-001-035-042",
+            "field": "summary",
+            "fingerprint": "f887037aade01176"
+          },
+          {
+            "record": "TRANS-JHN-001-001-051-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.1.35-JHN.1.37",
+            "fingerprint": "09e195ac8eb56ace"
+          },
+          {
+            "record": "TRANS-JHN-001-001-051-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.1.38-JHN.1.39",
+            "fingerprint": "3337c456c36b8851"
+          },
+          {
+            "record": "TRANS-JHN-001-001-051-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.1.40-JHN.1.41",
+            "fingerprint": "b553168044f74f1e"
+          },
+          {
+            "record": "TRANS-JHN-001-001-051-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.1.42",
+            "fingerprint": "c137e1b31686384f"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

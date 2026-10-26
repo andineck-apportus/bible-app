@@ -11,93 +11,133 @@
   "panels": [
     {
       "n": 1,
-      "reference": "JHN.7.10",
+      "reference": "JHN.7.10-JHN.7.11",
       "figures": [
-        "FIG-JESUS"
-      ],
-      "objects": [
-        "FIG-ORT-WEG",
-        "FIG-ORT-JERUSALEM"
-      ],
-      "signs": [],
-      "speech": [],
-      "action_de": "Nachdem seine Brüder hinaufgegangen sind, geht auch Jesus zum Fest hinauf, nicht öffentlich, sondern gleichsam im Verborgenen.",
-      "stage": {
-        "x": {
-          "FIG-JESUS": 40
-        },
-        "mood": {
-          "FIG-JESUS": "calm"
-        },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-ORT-JERUSALEM",
-            "go"
-          ]
-        ]
-      }
-    },
-    {
-      "n": 2,
-      "reference": "JHN.7.11-JHN.7.13",
-      "figures": [
+        "FIG-JESUS",
         "FIG-GRUPPE-MENGE"
       ],
       "objects": [
-        "FIG-ORT-HUETTE"
+        "FIG-ORT-WEG"
       ],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-VERBORGEN"
+      ],
       "speech": [
         {
           "from": "FIG-GRUPPE-MENGE",
           "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-FRAGEN",
-            "FIG-ZEICHEN-SPRECHEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Wo ist er?",
+            "gsw": "Wo isch er?"
+          }
         }
       ],
-      "action_de": "Die Juden suchen Jesus am Fest: Wo ist er? In der Menge wird über ihn gemurmelt; die einen sagen, er sei gut, andere, er verführe das Volk. Offen redet niemand über ihn.",
+      "action_de": "Nachdem seine Brüder hinaufgegangen sind, geht auch Jesus zum Fest hinauf, nicht öffentlich, sondern gleichsam im Verborgenen; die Juden suchen ihn: «Wo ist er?»",
+      "keywords": {
+        "de": "gleichsam im Verborgenen",
+        "gsw": "wie im Verborgne"
+      },
       "stage": {
-        "mood": {
-          "FIG-GRUPPE-MENGE": "calm"
+        "trenner": true,
+        "split": 1,
+        "beside": {
+          "FIG-ZEICHEN-VERBORGEN": "FIG-JESUS"
         },
-        "back_side": "right"
+        "mood": {
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-MENGE": "question"
+        },
+        "x": {
+          "FIG-JESUS": 46,
+          "FIG-GRUPPE-MENGE": 140
+        }
+      }
+    },
+    {
+      "n": 2,
+      "reference": "JHN.7.12-JHN.7.13",
+      "figures": [
+        "FIG-GRUPPE-MENGE",
+        "FIG-GRUPPE-VOLK"
+      ],
+      "objects": [
+        "FIG-ORT-HUETTE"
+      ],
+      "signs": [
+        "FIG-ZEICHEN-FURCHT"
+      ],
+      "speech": [
+        {
+          "from": "FIG-GRUPPE-MENGE",
+          "to": "FIG-GRUPPE-VOLK",
+          "icons": [],
+          "word": {
+            "de": "Er ist gut.",
+            "gsw": "Er isch guet."
+          }
+        },
+        {
+          "from": "FIG-GRUPPE-VOLK",
+          "to": "FIG-GRUPPE-MENGE",
+          "icons": [],
+          "word": {
+            "de": "Nein, sondern er verführt das Volk.",
+            "gsw": "Nei, sondern er verfüert s Volk."
+          }
+        }
+      ],
+      "action_de": "In der Menge wird über ihn gemurmelt: «Er ist gut.» – «Nein, sondern er verführt das Volk.» Niemand redet offen über ihn, aus Furcht vor den Juden.",
+      "keywords": {
+        "de": "aus Furcht vor den Juden",
+        "gsw": "us Angscht vor de Jude"
+      },
+      "stage": {
+        "at": {
+          "FIG-ZEICHEN-FURCHT": "FIG-GRUPPE-VOLK"
+        },
+        "back_side": "right",
+        "mood": {
+          "FIG-GRUPPE-MENGE": "smile",
+          "FIG-GRUPPE-VOLK": "worried"
+        },
+        "x": {
+          "FIG-GRUPPE-MENGE": 50,
+          "FIG-GRUPPE-VOLK": 136
+        }
       }
     }
   ],
   "actions_de": [
-    "Nachdem seine Brüder hinaufgegangen sind, geht auch Jesus zum Fest hinauf, nicht öffentlich, sondern gleichsam im Verborgenen.",
-    "Die Juden suchen Jesus am Fest: Wo ist er? In der Menge wird über ihn gemurmelt; die einen sagen, er sei gut, andere, er verführe das Volk. Offen redet niemand über ihn."
+    "Nachdem seine Brüder hinaufgegangen sind, geht auch Jesus zum Fest hinauf, nicht öffentlich, sondern gleichsam im Verborgenen; die Juden suchen ihn: «Wo ist er?»",
+    "In der Menge wird über ihn gemurmelt: «Er ist gut.» – «Nein, sondern er verführt das Volk.» Niemand redet offen über ihn, aus Furcht vor den Juden."
   ],
   "captions_de": [
-    "Im Verborgenen: Jesus geht allein, ohne Aufsehen, auf dem Weg (heller Pfad) nach Jerusalem hinauf (gestrichelter Pfeil).",
-    "Wo ist er? Am Fest fragen die Leute nach Jesus (Jesus, Fragezeichen) und murmeln über ihn (Sprechblase)."
+    "Im Verborgenen: Jesus geht allein auf dem Weg (im Verborgenen); hinter der gestrichelten Linie fragen die Juden am Fest: «Wo ist er?» (suchen).",
+    "Gemurmel: Die einen sagen: «Er ist gut.» (gut); andere: «Nein, sondern er verführt das Volk.» (Lüge); alle reden leise, aus Furcht (Furcht); im Hintergrund eine Laubhütte."
   ],
-  "interpretation_note_de": "«Im Verborgenen» ([[JHN.7.10]]) zeigt das Bild nur damit, dass Jesus allein unterwegs ist. Die Meinungen in der Menge ([[JHN.7.12]]) sind als Gemurmel mit Fragezeichen zusammengefasst; «die Juden» und die Menge erscheinen als neutrale Menge.",
+  "interpretation_note_de": "Zwei Felder nach dem Ablauf «im Verborgenen hinauf – Suche – geteilte Meinung – Furcht» ([[JHN.7.10-JHN.7.13]]). Die gestrichelte Linie trennt Jesus auf dem Weg von der Menge am Fest (zwei Orte). Die zwei Meinungen sind zwei Gruppen in der Menge. «Die Juden» sind als neutrale Gruppe ohne Merkmale einer Volksgruppe gezeichnet.",
   "basis": [
     {
       "record": "TU-JHN-007-010-013",
       "field": "summary",
-      "fingerprint": "af160bcd60438a95"
+      "fingerprint": "55a3e7872ebe6623"
     },
     {
       "record": "TRANS-JHN-007-001-053-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.7.10",
-      "fingerprint": "9c321eee31a8e544"
+      "reference": "JHN.7.10-JHN.7.11",
+      "fingerprint": "3bad80ad9c5eda5e"
     },
     {
       "record": "TRANS-JHN-007-001-053-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.7.11-JHN.7.13",
-      "fingerprint": "a23718ba33fff865"
+      "reference": "JHN.7.12-JHN.7.13",
+      "fingerprint": "723620ba4fa2ab68"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -180,6 +220,126 @@
           "Im Verborgenen: Jesus geht allein, ohne Aufsehen, auf dem Weg (heller Pfad) nach Jerusalem hinauf (gestrichelter Pfeil).",
           "Wo ist er? Am Fest fragen die Leute nach Jesus (Jesus, Fragezeichen) und murmeln über ihn (Schallbogen)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-JHN-007-010-013",
+            "field": "summary",
+            "fingerprint": "af160bcd60438a95"
+          },
+          {
+            "record": "TRANS-JHN-007-001-053-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.7.10",
+            "fingerprint": "9c321eee31a8e544"
+          },
+          {
+            "record": "TRANS-JHN-007-001-053-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.7.11-JHN.7.13",
+            "fingerprint": "a23718ba33fff865"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.7.10",
+            "figures": [
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-WEG",
+              "FIG-ORT-JERUSALEM"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Nachdem seine Brüder hinaufgegangen sind, geht auch Jesus zum Fest hinauf, nicht öffentlich, sondern gleichsam im Verborgenen.",
+            "stage": {
+              "x": {
+                "FIG-JESUS": 40
+              },
+              "mood": {
+                "FIG-JESUS": "calm"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ORT-JERUSALEM",
+                  "go"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.7.11-JHN.7.13",
+            "figures": [
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-HUETTE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FRAGEN",
+                  "FIG-ZEICHEN-SPRECHEN"
+                ]
+              }
+            ],
+            "action_de": "Die Juden suchen Jesus am Fest: Wo ist er? In der Menge wird über ihn gemurmelt; die einen sagen, er sei gut, andere, er verführe das Volk. Offen redet niemand über ihn.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "calm"
+              },
+              "back_side": "right"
+            }
+          }
+        ],
+        "actions_de": [
+          "Nachdem seine Brüder hinaufgegangen sind, geht auch Jesus zum Fest hinauf, nicht öffentlich, sondern gleichsam im Verborgenen.",
+          "Die Juden suchen Jesus am Fest: Wo ist er? In der Menge wird über ihn gemurmelt; die einen sagen, er sei gut, andere, er verführe das Volk. Offen redet niemand über ihn."
+        ],
+        "captions_de": [
+          "Im Verborgenen: Jesus geht allein, ohne Aufsehen, auf dem Weg (heller Pfad) nach Jerusalem hinauf (gestrichelter Pfeil).",
+          "Wo ist er? Am Fest fragen die Leute nach Jesus (Jesus, Fragezeichen) und murmeln über ihn (Sprechblase)."
+        ],
+        "interpretation_note_de": "«Im Verborgenen» ([[JHN.7.10]]) zeigt das Bild nur damit, dass Jesus allein unterwegs ist. Die Meinungen in der Menge ([[JHN.7.12]]) sind als Gemurmel mit Fragezeichen zusammengefasst; «die Juden» und die Menge erscheinen als neutrale Menge.",
+        "basis": [
+          {
+            "record": "TU-JHN-007-010-013",
+            "field": "summary",
+            "fingerprint": "55a3e7872ebe6623"
+          },
+          {
+            "record": "TRANS-JHN-007-001-053-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.7.10",
+            "fingerprint": "9c321eee31a8e544"
+          },
+          {
+            "record": "TRANS-JHN-007-001-053-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.7.11-JHN.7.13",
+            "fingerprint": "a23718ba33fff865"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

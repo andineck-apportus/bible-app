@@ -11,75 +11,52 @@
   "panels": [
     {
       "n": 1,
-      "reference": "JHN.4.27-JHN.4.28",
-      "figures": [
-        "FIG-GRUPPE-JUENGER",
-        "FIG-JESUS",
-        "FIG-ROLLE-SAMARITANERIN"
-      ],
-      "objects": [
-        "FIG-OBJ-KRUG-WASSER",
-        "FIG-ORT-STADT"
-      ],
-      "signs": [],
-      "speech": [],
-      "action_de": "Die Jünger kommen und wundern sich, dass Jesus mit einer Frau redet. Die Frau lässt ihren Wasserkrug stehen und geht in die Stadt.",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-JUENGER": "surprised"
-        },
-        "pose": {
-          "FIG-ROLLE-SAMARITANERIN": "away"
-        },
-        "arrows": [
-          [
-            "FIG-ROLLE-SAMARITANERIN",
-            "FIG-ORT-STADT",
-            "go"
-          ]
-        ],
-        "floor_x": {
-          "FIG-OBJ-KRUG-WASSER": 70
-        },
-        "x": {
-          "FIG-GRUPPE-JUENGER": 16,
-          "FIG-JESUS": 46,
-          "FIG-ROLLE-SAMARITANERIN": 104
-        }
-      }
-    },
-    {
-      "n": 2,
-      "reference": "JHN.4.28-JHN.4.30",
+      "reference": "JHN.4.27-JHN.4.30",
       "figures": [
         "FIG-ROLLE-SAMARITANERIN",
         "FIG-GRUPPE-MENGE"
       ],
       "objects": [
-        "FIG-ORT-STADT"
+        "FIG-ORT-STADT",
+        "FIG-OBJ-KRUG-WASSER"
       ],
       "signs": [],
       "speech": [
         {
           "from": "FIG-ROLLE-SAMARITANERIN",
           "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-MESSIAS",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Kommt, seht einen Menschen, der mir alles gesagt hat, was ich getan habe! Ist das etwa der Christus?",
+            "gsw": "Chömed, lueged en Mänsch, wo mer alles gseit hät, was ich gmacht ha! Isch das ächt de Christus?"
+          }
         }
       ],
-      "action_de": "Sie sagt zu den Leuten: Kommt, seht einen Menschen, der mir alles gesagt hat, was ich getan habe! Ist das etwa der Christus? Sie gehen aus der Stadt hinaus zu ihm.",
+      "action_de": "Die Frau lässt ihren Wasserkrug stehen, geht in die Stadt und sagt den Leuten: «Kommt, seht einen Menschen, der mir alles gesagt hat, was ich getan habe! Ist das etwa der Christus?»; sie machen sich auf den Weg zu Jesus.",
+      "keywords": {
+        "de": "Die Frau liess nun ihren Wasserkrug stehen",
+        "gsw": "D Frau hät dänn ire Wasserchrueg stoo laa"
+      },
       "stage": {
+        "hold": {
+          "FIG-ROLLE-SAMARITANERIN": "LEER"
+        },
+        "floor_x": {
+          "FIG-OBJ-KRUG-WASSER": 18
+        },
+        "before": true,
         "mood": {
-          "FIG-GRUPPE-MENGE": "surprised",
-          "FIG-ROLLE-SAMARITANERIN": "delight"
+          "FIG-ROLLE-SAMARITANERIN": "delight",
+          "FIG-GRUPPE-MENGE": "question"
+        },
+        "x": {
+          "FIG-ROLLE-SAMARITANERIN": 60,
+          "FIG-GRUPPE-MENGE": 140
         }
       }
     },
     {
-      "n": 3,
+      "n": 2,
       "reference": "JHN.4.31-JHN.4.34",
       "figures": [
         "FIG-GRUPPE-JUENGER",
@@ -91,35 +68,49 @@
       "signs": [],
       "speech": [
         {
+          "from": "FIG-GRUPPE-JUENGER",
+          "to": "FIG-JESUS",
+          "icons": [],
+          "word": {
+            "de": "Rabbi, iss!",
+            "gsw": "Rabbi, iss!"
+          }
+        },
+        {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-OBJ-BROT",
-            "FIG-GOTT",
-            "FIG-ZEICHEN-WILLE-GOTTES"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Meine Speise ist, dass ich den Willen dessen tue, der mich gesandt hat, und sein Werk vollende.",
+            "gsw": "Mini Spiis isch, dass ich de Wille vo däm tue, wo mich gschickt hät, und sis Wärch vollände."
+          }
         }
       ],
-      "action_de": "Die Jünger bitten: Rabbi, iss! Jesus sagt: Meine Speise ist, dass ich den Willen dessen tue, der mich gesandt hat, und sein Werk vollende.",
+      "action_de": "Die Jünger bitten: «Rabbi, iss!» Jesus: «Ich habe eine Speise zu essen, die ihr nicht kennt»; sie fragen sich, ob ihm jemand zu essen gebracht hat; Jesus: «Meine Speise ist, dass ich den Willen dessen tue, der mich gesandt hat, und sein Werk vollende.»",
+      "keywords": {
+        "de": "Ich habe eine Speise zu essen, die ihr nicht kennt",
+        "gsw": "Ich ha e Spiis z ässe, wo ir nöd känned"
+      },
       "stage": {
-        "mood": {
-          "FIG-GRUPPE-JUENGER": "worried"
-        },
-        "x": {
-          "FIG-GRUPPE-JUENGER": 34,
-          "FIG-JESUS": 152
-        },
         "hold": {
           "FIG-GRUPPE-JUENGER": "FIG-OBJ-BROT"
+        },
+        "mood": {
+          "FIG-GRUPPE-JUENGER": "question",
+          "FIG-JESUS": "calm"
+        },
+        "x": {
+          "FIG-GRUPPE-JUENGER": 50,
+          "FIG-JESUS": 140
         }
       }
     },
     {
-      "n": 4,
+      "n": 3,
       "reference": "JHN.4.35-JHN.4.38",
       "figures": [
-        "FIG-GRUPPE-JUENGER",
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-GRUPPE-JUENGER"
       ],
       "objects": [
         "FIG-ORT-FELD"
@@ -129,50 +120,52 @@
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-ZEICHEN-SEHEN",
-            "FIG-ORT-FELD"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Hebt eure Augen auf und seht die Felder an: Sie sind weiss zur Ernte.",
+            "gsw": "Hebed eui Auge uf und lueged d Fälder aa: Si sind wiiss für d Ärnt."
+          }
         }
       ],
-      "action_de": "Jesus sagt: Hebt eure Augen auf und seht die Felder an: Sie sind weiss zur Ernte. Ich habe euch gesandt, zu ernten, wofür andere sich abgemüht haben.",
+      "action_de": "Jesus sagt: «Hebt eure Augen auf und seht die Felder an: Sie sind weiss zur Ernte»; Sämann und Schnitter freuen sich miteinander; «Ich habe euch gesandt, zu ernten, wofür ihr euch nicht abgemüht habt.»",
+      "keywords": {
+        "de": "Ich habe euch gesandt, zu ernten",
+        "gsw": "Ich ha eu gschickt, go ärnte"
+      },
       "stage": {
         "mood": {
+          "FIG-JESUS": "smile",
           "FIG-GRUPPE-JUENGER": "surprised"
+        },
+        "x": {
+          "FIG-JESUS": 50,
+          "FIG-GRUPPE-JUENGER": 136
         }
       }
     }
   ],
   "actions_de": [
-    "Die Jünger kommen und wundern sich, dass Jesus mit einer Frau redet. Die Frau lässt ihren Wasserkrug stehen und geht in die Stadt.",
-    "Sie sagt zu den Leuten: Kommt, seht einen Menschen, der mir alles gesagt hat, was ich getan habe! Ist das etwa der Christus? Sie gehen aus der Stadt hinaus zu ihm.",
-    "Die Jünger bitten: Rabbi, iss! Jesus sagt: Meine Speise ist, dass ich den Willen dessen tue, der mich gesandt hat, und sein Werk vollende.",
-    "Jesus sagt: Hebt eure Augen auf und seht die Felder an: Sie sind weiss zur Ernte. Ich habe euch gesandt, zu ernten, wofür andere sich abgemüht haben."
+    "Die Frau lässt ihren Wasserkrug stehen, geht in die Stadt und sagt den Leuten: «Kommt, seht einen Menschen, der mir alles gesagt hat, was ich getan habe! Ist das etwa der Christus?»; sie machen sich auf den Weg zu Jesus.",
+    "Die Jünger bitten: «Rabbi, iss!» Jesus: «Ich habe eine Speise zu essen, die ihr nicht kennt»; sie fragen sich, ob ihm jemand zu essen gebracht hat; Jesus: «Meine Speise ist, dass ich den Willen dessen tue, der mich gesandt hat, und sein Werk vollende.»",
+    "Jesus sagt: «Hebt eure Augen auf und seht die Felder an: Sie sind weiss zur Ernte»; Sämann und Schnitter freuen sich miteinander; «Ich habe euch gesandt, zu ernten, wofür ihr euch nicht abgemüht habt.»"
   ],
   "captions_de": [
-    "Der Krug bleibt stehen: Die Jünger staunen; die Frau lässt den Krug stehen und läuft zur Stadt (Pfeil).",
-    "Kommt und seht: Die Frau ruft die Leute der Stadt: Ist dieser (Jesus) der Messias (Salbhorn, Krone, ?)",
-    "Meine Speise: Die Jünger bringen Brot (Brot in der Hand); Jesus: Meine Speise (Brot) ist, den Willen Gottes zu tun (Strahlenkranz; Wolke mit goldenem Pfeil zur Erde).",
-    "Reif zur Ernte: Jesus sagt den Jüngern: Seht die Felder (Augen, Feld) – sie sind reif zur Ernte."
+    "In der Stadt: Der Krug steht stehen gelassen am Boden; die Frau ruft den Leuten vor der Stadt: «Kommt, seht einen Menschen, der mir alles gesagt hat, was ich getan habe!» (Mensch, sehen).",
+    "Meine Speise: Die Jünger bieten Brot an: «Rabbi, iss!»; Jesus: «Meine Speise ist, dass ich den Willen dessen tue, der mich gesandt hat, und sein Werk vollende.» (Gottes Wille, vollbracht).",
+    "Erntereif: Jesus zeigt den Jüngern das Feld: «Hebt eure Augen auf und seht die Felder an: Sie sind weiss zur Ernte.» (Sichel, sehen)."
   ],
-  "interpretation_note_de": "Feld 2 zeigt die Frage der Frau als Frage (Fragezeichen), nicht als Bekenntnis ([[JHN.4.29]]). Das Ohr steht für «den Willen dessen tun, der mich gesandt hat» ([[JHN.4.34]]). Ob die «weissen Felder» auf die herankommenden Samariter deuten ([[JHN.4.30]]), lässt der Text offen; das Bild zeigt nur das Feld.",
+  "interpretation_note_de": "Drei Felder nach dem Wechsel «Frau in der Stadt ↔ Jünger bei Jesus» ([[JHN.4.27-JHN.4.38]]): die Frau lässt den Krug stehen und ruft die Stadt; das Missverständnis der Speise; das Bildwort von der Ernte. Wofür Sämann und Schnitter im Einzelnen stehen, deutet der Text nicht; das Bild zeigt nur das Feld.",
   "basis": [
     {
       "record": "TU-JHN-004-027-038",
       "field": "summary",
-      "fingerprint": "174c77806ea891e4"
+      "fingerprint": "b57051c936ab878f"
     },
     {
       "record": "TRANS-JHN-004-001-054-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.4.27-JHN.4.28",
-      "fingerprint": "a0ec87c61e0d3848"
-    },
-    {
-      "record": "TRANS-JHN-004-001-054-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "JHN.4.28-JHN.4.30",
-      "fingerprint": "e1beaa7c96fecada"
+      "reference": "JHN.4.27-JHN.4.30",
+      "fingerprint": "46c00e6791ada1c3"
     },
     {
       "record": "TRANS-JHN-004-001-054-DE-WORKING",
@@ -188,7 +181,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -352,6 +345,368 @@
           "Kommt und seht: Die Frau ruft die Leute der Stadt: Ist dieser (Jesus) der Messias (Salbhorn, Krone, ?)",
           "Meine Speise: Die Jünger bringen Brot (Brot in der Hand); Jesus: Meine Speise (Brot) ist, den Willen Gottes zu tun (Strahlenkranz; Wolke mit goldenem Pfeil zur Erde).",
           "Reif zur Ernte: Jesus sagt den Jüngern: Seht die Felder (Auge, Feld) – sie sind reif zur Ernte."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-JHN-004-027-038",
+            "field": "summary",
+            "fingerprint": "174c77806ea891e4"
+          },
+          {
+            "record": "TRANS-JHN-004-001-054-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.4.27-JHN.4.28",
+            "fingerprint": "a0ec87c61e0d3848"
+          },
+          {
+            "record": "TRANS-JHN-004-001-054-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.4.28-JHN.4.30",
+            "fingerprint": "e1beaa7c96fecada"
+          },
+          {
+            "record": "TRANS-JHN-004-001-054-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.4.31-JHN.4.34",
+            "fingerprint": "aa9f6440625aa447"
+          },
+          {
+            "record": "TRANS-JHN-004-001-054-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.4.35-JHN.4.38",
+            "fingerprint": "27ce18ff58c6f4bb"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.4.27-JHN.4.28",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS",
+              "FIG-ROLLE-SAMARITANERIN"
+            ],
+            "objects": [
+              "FIG-OBJ-KRUG-WASSER",
+              "FIG-ORT-STADT"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Die Jünger kommen und wundern sich, dass Jesus mit einer Frau redet. Die Frau lässt ihren Wasserkrug stehen und geht in die Stadt.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "surprised"
+              },
+              "pose": {
+                "FIG-ROLLE-SAMARITANERIN": "away"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-SAMARITANERIN",
+                  "FIG-ORT-STADT",
+                  "go"
+                ]
+              ],
+              "floor_x": {
+                "FIG-OBJ-KRUG-WASSER": 70
+              },
+              "x": {
+                "FIG-GRUPPE-JUENGER": 16,
+                "FIG-JESUS": 46,
+                "FIG-ROLLE-SAMARITANERIN": 104
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.4.28-JHN.4.30",
+            "figures": [
+              "FIG-ROLLE-SAMARITANERIN",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-STADT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-SAMARITANERIN",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-MESSIAS",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Sie sagt zu den Leuten: Kommt, seht einen Menschen, der mir alles gesagt hat, was ich getan habe! Ist das etwa der Christus? Sie gehen aus der Stadt hinaus zu ihm.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "surprised",
+                "FIG-ROLLE-SAMARITANERIN": "delight"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.4.31-JHN.4.34",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-BROT",
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-WILLE-GOTTES"
+                ]
+              }
+            ],
+            "action_de": "Die Jünger bitten: Rabbi, iss! Jesus sagt: Meine Speise ist, dass ich den Willen dessen tue, der mich gesandt hat, und sein Werk vollende.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "worried"
+              },
+              "x": {
+                "FIG-GRUPPE-JUENGER": 34,
+                "FIG-JESUS": 152
+              },
+              "hold": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BROT"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.4.35-JHN.4.38",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-FELD"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-SEHEN",
+                  "FIG-ORT-FELD"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: Hebt eure Augen auf und seht die Felder an: Sie sind weiss zur Ernte. Ich habe euch gesandt, zu ernten, wofür andere sich abgemüht haben.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "surprised"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Die Jünger kommen und wundern sich, dass Jesus mit einer Frau redet. Die Frau lässt ihren Wasserkrug stehen und geht in die Stadt.",
+          "Sie sagt zu den Leuten: Kommt, seht einen Menschen, der mir alles gesagt hat, was ich getan habe! Ist das etwa der Christus? Sie gehen aus der Stadt hinaus zu ihm.",
+          "Die Jünger bitten: Rabbi, iss! Jesus sagt: Meine Speise ist, dass ich den Willen dessen tue, der mich gesandt hat, und sein Werk vollende.",
+          "Jesus sagt: Hebt eure Augen auf und seht die Felder an: Sie sind weiss zur Ernte. Ich habe euch gesandt, zu ernten, wofür andere sich abgemüht haben."
+        ],
+        "captions_de": [
+          "Der Krug bleibt stehen: Die Jünger staunen; die Frau lässt den Krug stehen und läuft zur Stadt (Pfeil).",
+          "Kommt und seht: Die Frau ruft die Leute der Stadt: Ist dieser (Jesus) der Messias (Salbhorn, Krone, ?)",
+          "Meine Speise: Die Jünger bringen Brot (Brot in der Hand); Jesus: Meine Speise (Brot) ist, den Willen Gottes zu tun (Strahlenkranz; Wolke mit goldenem Pfeil zur Erde).",
+          "Reif zur Ernte: Jesus sagt den Jüngern: Seht die Felder (Augen, Feld) – sie sind reif zur Ernte."
+        ],
+        "interpretation_note_de": "Feld 2 zeigt die Frage der Frau als Frage (Fragezeichen), nicht als Bekenntnis ([[JHN.4.29]]). Das Ohr steht für «den Willen dessen tun, der mich gesandt hat» ([[JHN.4.34]]). Ob die «weissen Felder» auf die herankommenden Samariter deuten ([[JHN.4.30]]), lässt der Text offen; das Bild zeigt nur das Feld.",
+        "basis": [
+          {
+            "record": "TU-JHN-004-027-038",
+            "field": "summary",
+            "fingerprint": "b57051c936ab878f"
+          },
+          {
+            "record": "TRANS-JHN-004-001-054-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.4.27-JHN.4.28",
+            "fingerprint": "a0ec87c61e0d3848"
+          },
+          {
+            "record": "TRANS-JHN-004-001-054-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.4.28-JHN.4.30",
+            "fingerprint": "e1beaa7c96fecada"
+          },
+          {
+            "record": "TRANS-JHN-004-001-054-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.4.31-JHN.4.34",
+            "fingerprint": "aa9f6440625aa447"
+          },
+          {
+            "record": "TRANS-JHN-004-001-054-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.4.35-JHN.4.38",
+            "fingerprint": "27ce18ff58c6f4bb"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.4.27-JHN.4.30",
+            "figures": [
+              "FIG-ROLLE-SAMARITANERIN",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-STADT",
+              "FIG-OBJ-KRUG-WASSER"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-SAMARITANERIN",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [],
+                "word": {
+                  "de": "Kommt, seht einen Menschen, der mir alles gesagt hat, was ich getan habe! Ist das etwa der Christus?",
+                  "gsw": "Chömed, lueged en Mänsch, wo mer alles gseit hät, was ich gmacht ha! Isch das ächt de Christus?"
+                }
+              }
+            ],
+            "action_de": "Die Frau lässt ihren Wasserkrug stehen, geht in die Stadt und sagt den Leuten: «Kommt, seht einen Menschen, der mir alles gesagt hat, was ich getan habe! Ist das etwa der Christus?»; sie machen sich auf den Weg zu Jesus.",
+            "keywords": {
+              "de": "Die Frau liess nun ihren Wasserkrug stehen",
+              "gsw": "D Frau hät dänn ire Wasserchrueg stoo laa"
+            },
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KRUG-WASSER": 18
+              },
+              "before": true,
+              "mood": {
+                "FIG-ROLLE-SAMARITANERIN": "delight",
+                "FIG-GRUPPE-MENGE": "question"
+              },
+              "x": {
+                "FIG-ROLLE-SAMARITANERIN": 60,
+                "FIG-GRUPPE-MENGE": 140
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.4.31-JHN.4.34",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Rabbi, iss!",
+                  "gsw": "Rabbi, iss!"
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [],
+                "word": {
+                  "de": "Meine Speise ist, dass ich den Willen dessen tue, der mich gesandt hat, und sein Werk vollende.",
+                  "gsw": "Mini Spiis isch, dass ich de Wille vo däm tue, wo mich gschickt hät, und sis Wärch vollände."
+                }
+              }
+            ],
+            "action_de": "Die Jünger bitten: «Rabbi, iss!» Jesus: «Ich habe eine Speise zu essen, die ihr nicht kennt»; sie fragen sich, ob ihm jemand zu essen gebracht hat; Jesus: «Meine Speise ist, dass ich den Willen dessen tue, der mich gesandt hat, und sein Werk vollende.»",
+            "keywords": {
+              "de": "Ich habe eine Speise zu essen, die ihr nicht kennt",
+              "gsw": "Ich ha e Spiis z ässe, wo ir nöd känned"
+            },
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BROT"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "question",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-JUENGER": 50,
+                "FIG-JESUS": 140
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.4.35-JHN.4.38",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-ORT-FELD"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [],
+                "word": {
+                  "de": "Hebt eure Augen auf und seht die Felder an: Sie sind weiss zur Ernte.",
+                  "gsw": "Hebed eui Auge uf und lueged d Fälder aa: Si sind wiiss für d Ärnt."
+                }
+              }
+            ],
+            "action_de": "Jesus sagt: «Hebt eure Augen auf und seht die Felder an: Sie sind weiss zur Ernte»; Sämann und Schnitter freuen sich miteinander; «Ich habe euch gesandt, zu ernten, wofür ihr euch nicht abgemüht habt.»",
+            "keywords": {
+              "de": "Ich habe euch gesandt, zu ernten",
+              "gsw": "Ich ha eu gschickt, go ärnte"
+            },
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "smile",
+                "FIG-GRUPPE-JUENGER": "surprised"
+              },
+              "x": {
+                "FIG-JESUS": 50,
+                "FIG-GRUPPE-JUENGER": 136
+              }
+            }
+          }
         ]
       }
     }

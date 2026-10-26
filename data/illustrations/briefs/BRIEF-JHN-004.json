@@ -17,35 +17,39 @@
         "FIG-ROLLE-SAMARITANERIN"
       ],
       "objects": [
-        "FIG-OBJ-BRUNNEN",
-        "FIG-OBJ-KRUG-WASSER"
+        "FIG-OBJ-BRUNNEN"
       ],
       "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-ROLLE-SAMARITANERIN",
-          "icons": [
-            "FIG-ZEICHEN-WASSER",
-            "FIG-ZEICHEN-LEBEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Ich bin es, der mit dir redet.",
+            "gsw": "Ich bi s, wo mit dir redt."
+          }
         }
       ],
-      "action_de": "An der Jakobsquelle bittet Jesus eine samaritische Frau um Wasser und spricht vom lebendigen Wasser, das ins ewige Leben sprudelt.",
+      "action_de": "Am Brunnen spricht Jesus mit der samaritischen Frau vom lebendigen Wasser und von der Anbetung in Geist und Wahrheit; auf ihr Wort vom kommenden Messias sagt er: «Ich bin es, der mit dir redet.»",
+      "keywords": {
+        "de": "lebendiges Wasser",
+        "gsw": "läbigs Wasser"
+      },
       "stage": {
         "pose": {
           "FIG-JESUS": "sit"
         },
         "mood": {
+          "FIG-JESUS": "calm",
           "FIG-ROLLE-SAMARITANERIN": "surprised"
         },
-        "floor_side": "left",
         "x": {
-          "FIG-JESUS": 72,
-          "FIG-ROLLE-SAMARITANERIN": 140
+          "FIG-JESUS": 36,
+          "FIG-ROLLE-SAMARITANERIN": 158
         },
-        "hold": {
-          "FIG-ROLLE-SAMARITANERIN": "FIG-OBJ-KRUG-WASSER"
+        "floor_x": {
+          "FIG-OBJ-BRUNNEN": 97
         }
       }
     },
@@ -57,25 +61,41 @@
         "FIG-GRUPPE-MENGE"
       ],
       "objects": [
-        "FIG-ORT-STADT"
+        "FIG-ORT-STADT",
+        "FIG-OBJ-KRUG-WASSER"
       ],
       "signs": [],
       "speech": [
         {
           "from": "FIG-ROLLE-SAMARITANERIN",
           "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-MESSIAS",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Kommt, seht einen Menschen, der mir alles gesagt hat, was ich getan habe! Ist das etwa der Christus?",
+            "gsw": "Chömed, lueged en Mänsch, wo mer alles gseit hät, was ich gmacht ha! Isch das ächt de Christus?"
+          }
         }
       ],
-      "action_de": "Die Frau lässt ihren Krug stehen und ruft die Leute der Stadt: Ist das etwa der Christus?",
+      "action_de": "Die Frau lässt ihren Wasserkrug stehen, geht in die Stadt und sagt den Leuten: «Kommt, seht einen Menschen, der mir alles gesagt hat, was ich getan habe! Ist das etwa der Christus?»; sie machen sich auf den Weg zu Jesus.",
+      "keywords": {
+        "de": "Sie sind weiss zur Ernte",
+        "gsw": "Si sind wiiss für d Ärnt"
+      },
       "stage": {
+        "hold": {
+          "FIG-ROLLE-SAMARITANERIN": "LEER"
+        },
+        "floor_x": {
+          "FIG-OBJ-KRUG-WASSER": 18
+        },
+        "before": true,
         "mood": {
-          "FIG-GRUPPE-MENGE": "surprised",
-          "FIG-ROLLE-SAMARITANERIN": "delight"
+          "FIG-ROLLE-SAMARITANERIN": "delight",
+          "FIG-GRUPPE-MENGE": "question"
+        },
+        "x": {
+          "FIG-ROLLE-SAMARITANERIN": 60,
+          "FIG-GRUPPE-MENGE": 140
         }
       }
     },
@@ -83,48 +103,42 @@
       "n": 3,
       "reference": "JHN.4.39-JHN.4.42",
       "figures": [
-        "FIG-JESUS",
+        "FIG-ROLLE-SAMARITANERIN",
         "FIG-GRUPPE-MENGE",
-        "FIG-ROLLE-SAMARITANERIN"
+        "FIG-JESUS"
       ],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-GLAUBEN"
-      ],
+      "signs": [],
       "speech": [
         {
           "from": "FIG-GRUPPE-MENGE",
           "to": "FIG-ROLLE-SAMARITANERIN",
-          "icons": [
-            "FIG-ZEICHEN-HOEREN",
-            "FIG-ZEICHEN-WELT",
-            "FIG-ZEICHEN-RETTUNG"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Wir haben selbst gehört und wissen, dass dieser wirklich der Retter der Welt ist.",
+            "gsw": "Mir händ sälber ghört und wüssed, dass dä würkli de Retter vo de Wält isch."
+          }
         }
       ],
-      "action_de": "Viele Samariter glauben und sagen: Wir haben selbst gehört; er ist wirklich der Retter der Welt.",
+      "action_de": "Die Samariter sagen zur Frau: «Nicht mehr wegen deines Redens glauben wir; wir haben nämlich selbst gehört und wissen, dass dieser wirklich der Retter der Welt ist.»",
+      "keywords": {
+        "de": "Und noch viel mehr glaubten wegen seines Wortes",
+        "gsw": "Und no vil meh händ glaubt wäge sim Wort"
+      },
       "stage": {
-        "signs_who": {
-          "FIG-ZEICHEN-GLAUBEN": [
-            "FIG-GRUPPE-MENGE"
-          ]
+        "hold": {
+          "FIG-ROLLE-SAMARITANERIN": "LEER"
         },
         "mood": {
+          "FIG-ROLLE-SAMARITANERIN": "delight",
           "FIG-GRUPPE-MENGE": "delight",
-          "FIG-ROLLE-SAMARITANERIN": "smile"
+          "FIG-JESUS": "smile"
         },
         "x": {
-          "FIG-JESUS": 30,
-          "FIG-GRUPPE-MENGE": 96,
-          "FIG-ROLLE-SAMARITANERIN": 158
-        },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-GRUPPE-MENGE",
-            "act"
-          ]
-        ]
+          "FIG-ROLLE-SAMARITANERIN": 30,
+          "FIG-GRUPPE-MENGE": 92,
+          "FIG-JESUS": 156
+        }
       }
     },
     {
@@ -135,54 +149,66 @@
         "FIG-JESUS"
       ],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-GLAUBEN"
-      ],
+      "signs": [],
       "speech": [
+        {
+          "from": "FIG-ROLLE-KOENIGLICHER-BEAMTER",
+          "to": "FIG-JESUS",
+          "icons": [],
+          "word": {
+            "de": "Herr, komm hinab, bevor mein Kind stirbt!",
+            "gsw": "Herr, chumm abe, bevor mis Chind stirbt!"
+          }
+        },
         {
           "from": "FIG-JESUS",
           "to": "FIG-ROLLE-KOENIGLICHER-BEAMTER",
-          "icons": [
-            "FIG-ROLLE-KIND",
-            "FIG-ZEICHEN-LEBEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Geh! Dein Sohn lebt.",
+            "gsw": "Gang! Din Sohn läbt."
+          }
         }
       ],
-      "action_de": "In Kana sagt Jesus zum königlichen Beamten: Geh! Dein Sohn lebt. Der Mann glaubt dem Wort; das ist das zweite Zeichen.",
+      "action_de": "Der königliche Beamte bittet: «Herr, komm hinab, bevor mein Kind stirbt!» Jesus sagt: «Geh! Dein Sohn lebt.» Der Mann glaubt dem Wort und macht sich auf den Weg.",
+      "keywords": {
+        "de": "Dies aber tat Jesus wiederum als zweites Zeichen",
+        "gsw": "Das aber hät de Jesus wider als zweits Zeiche gmacht"
+      },
       "stage": {
-        "signs_who": {
-          "FIG-ZEICHEN-GLAUBEN": [
-            "FIG-ROLLE-KOENIGLICHER-BEAMTER"
-          ]
-        },
         "mood": {
-          "FIG-ROLLE-KOENIGLICHER-BEAMTER": "calm"
+          "FIG-ROLLE-KOENIGLICHER-BEAMTER": "worried",
+          "FIG-JESUS": "calm"
+        },
+        "x": {
+          "FIG-ROLLE-KOENIGLICHER-BEAMTER": 50,
+          "FIG-JESUS": 140
         }
       }
     }
   ],
   "actions_de": [
-    "An der Jakobsquelle bittet Jesus eine samaritische Frau um Wasser und spricht vom lebendigen Wasser, das ins ewige Leben sprudelt.",
-    "Die Frau lässt ihren Krug stehen und ruft die Leute der Stadt: Ist das etwa der Christus?",
-    "Viele Samariter glauben und sagen: Wir haben selbst gehört; er ist wirklich der Retter der Welt.",
-    "In Kana sagt Jesus zum königlichen Beamten: Geh! Dein Sohn lebt. Der Mann glaubt dem Wort; das ist das zweite Zeichen."
+    "Am Brunnen spricht Jesus mit der samaritischen Frau vom lebendigen Wasser und von der Anbetung in Geist und Wahrheit; auf ihr Wort vom kommenden Messias sagt er: «Ich bin es, der mit dir redet.»",
+    "Die Frau lässt ihren Wasserkrug stehen, geht in die Stadt und sagt den Leuten: «Kommt, seht einen Menschen, der mir alles gesagt hat, was ich getan habe! Ist das etwa der Christus?»; sie machen sich auf den Weg zu Jesus.",
+    "Die Samariter sagen zur Frau: «Nicht mehr wegen deines Redens glauben wir; wir haben nämlich selbst gehört und wissen, dass dieser wirklich der Retter der Welt ist.»",
+    "Der königliche Beamte bittet: «Herr, komm hinab, bevor mein Kind stirbt!» Jesus sagt: «Geh! Dein Sohn lebt.» Der Mann glaubt dem Wort und macht sich auf den Weg."
   ],
   "captions_de": [
-    "Am Brunnen: Jesus spricht mit der Frau aus Samarien vom lebendigen Wasser (Tropfen, Keimling mit Unendlichzeichen).",
-    "Kommt und seht: Die Frau ruft die Leute der Stadt (Jesus, Messias, ?).",
-    "Wort Jesu → Glaube: Wegen seines Wortes (Pfeil von Jesus) glauben die Samariter (Herzen): selbst gehört (Ohr), er rettet die Welt (Erdkugel, Pfeil nach oben).",
-    "Dein Sohn lebt: Jesus zum Beamten: Dein Kind lebt (Kind, Keimling mit Unendlichzeichen); er glaubt (Herz)."
+    "Am Brunnen: Jesus sitzt am Brunnen und sagt der Frau aus Samarien mit dem Krug: «Ich bin es, der mit dir redet.»",
+    "In der Stadt: Der Krug steht stehen gelassen am Boden; die Frau ruft den Leuten vor der Stadt: «Kommt, seht einen Menschen, der mir alles gesagt hat, was ich getan habe!» (Mensch, sehen).",
+    "Retter der Welt: Die Samariter sagen zur Frau: «Wir haben selbst gehört und wissen, dass dieser wirklich der Retter der Welt ist.» (Welt, retten); daneben Jesus.",
+    "Dein Sohn lebt: Der königliche Beamte bittet: «Herr, komm hinab, bevor mein Kind stirbt!» (Kind, Tod); Jesus: «Geh! Dein Sohn lebt.» (Leben, Weg)."
   ],
-  "interpretation_note_de": "Je ein Feld zum Gespräch am Brunnen, zum Ruf der Frau, zum Glauben der Samariter und zum zweiten Zeichen; das Gespräch über Speise und Ernte ([[JHN.4.31-JHN.4.38]]) steht nur im Abschnittsbild.",
+  "interpretation_note_de": "Vier Comic-Szenen für fünf Abschnitte ([[JHN.4.1-JHN.4.54]]): Feld 1 bündelt das Gespräch am Brunnen (im Band: lebendiges Wasser) bis «Ich bin es, der mit dir redet»; Feld 2 die Frau ruft die Stadt (im Band: die Felder weiss zur Ernte); Feld 3 das Bekenntnis der Samariter; Feld 4 der königliche Beamte – das zweite Zeichen (im Band).",
   "basis": [
     {
       "record": "SUM-CH-JHN-004",
       "field": "summary",
-      "fingerprint": "c649b3463b69844c"
+      "fingerprint": "f63bdcb50d6b5775"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -504,6 +530,557 @@
           "Kommt und seht: Die Frau ruft die Leute der Stadt (Jesus, Messias, ?).",
           "Wort Jesu → Glaube: Wegen seines Wortes (Pfeil von Jesus) glauben die Samariter (Herzen): selbst gehört (Ohr), er rettet die Welt (Erdscheibe, Pfeil nach oben).",
           "Dein Sohn lebt: Jesus zum Beamten: Dein Kind lebt (Kind, Baum im Ring); er glaubt (Herz)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-JHN-004",
+            "field": "summary",
+            "fingerprint": "c649b3463b69844c"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.4.1-JHN.4.26",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-SAMARITANERIN"
+            ],
+            "objects": [
+              "FIG-OBJ-BRUNNEN",
+              "FIG-OBJ-KRUG-WASSER"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-SAMARITANERIN",
+                "icons": [
+                  "FIG-ZEICHEN-WASSER",
+                  "FIG-ZEICHEN-LEBEN"
+                ]
+              }
+            ],
+            "action_de": "An der Jakobsquelle bittet Jesus eine samaritische Frau um Wasser und spricht vom lebendigen Wasser, das ins ewige Leben sprudelt.",
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "sit"
+              },
+              "mood": {
+                "FIG-ROLLE-SAMARITANERIN": "surprised"
+              },
+              "floor_side": "left",
+              "x": {
+                "FIG-JESUS": 72,
+                "FIG-ROLLE-SAMARITANERIN": 140
+              },
+              "hold": {
+                "FIG-ROLLE-SAMARITANERIN": "FIG-OBJ-KRUG-WASSER"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.4.27-JHN.4.38",
+            "figures": [
+              "FIG-ROLLE-SAMARITANERIN",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-STADT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-SAMARITANERIN",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-MESSIAS",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Die Frau lässt ihren Krug stehen und ruft die Leute der Stadt: Ist das etwa der Christus?",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "surprised",
+                "FIG-ROLLE-SAMARITANERIN": "delight"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.4.39-JHN.4.42",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE",
+              "FIG-ROLLE-SAMARITANERIN"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-GLAUBEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-ROLLE-SAMARITANERIN",
+                "icons": [
+                  "FIG-ZEICHEN-HOEREN",
+                  "FIG-ZEICHEN-WELT",
+                  "FIG-ZEICHEN-RETTUNG"
+                ]
+              }
+            ],
+            "action_de": "Viele Samariter glauben und sagen: Wir haben selbst gehört; er ist wirklich der Retter der Welt.",
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-GLAUBEN": [
+                  "FIG-GRUPPE-MENGE"
+                ]
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "delight",
+                "FIG-ROLLE-SAMARITANERIN": "smile"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-MENGE": 96,
+                "FIG-ROLLE-SAMARITANERIN": 158
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.4.43-JHN.4.54",
+            "figures": [
+              "FIG-ROLLE-KOENIGLICHER-BEAMTER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-GLAUBEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-KOENIGLICHER-BEAMTER",
+                "icons": [
+                  "FIG-ROLLE-KIND",
+                  "FIG-ZEICHEN-LEBEN"
+                ]
+              }
+            ],
+            "action_de": "In Kana sagt Jesus zum königlichen Beamten: Geh! Dein Sohn lebt. Der Mann glaubt dem Wort; das ist das zweite Zeichen.",
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-GLAUBEN": [
+                  "FIG-ROLLE-KOENIGLICHER-BEAMTER"
+                ]
+              },
+              "mood": {
+                "FIG-ROLLE-KOENIGLICHER-BEAMTER": "calm"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "An der Jakobsquelle bittet Jesus eine samaritische Frau um Wasser und spricht vom lebendigen Wasser, das ins ewige Leben sprudelt.",
+          "Die Frau lässt ihren Krug stehen und ruft die Leute der Stadt: Ist das etwa der Christus?",
+          "Viele Samariter glauben und sagen: Wir haben selbst gehört; er ist wirklich der Retter der Welt.",
+          "In Kana sagt Jesus zum königlichen Beamten: Geh! Dein Sohn lebt. Der Mann glaubt dem Wort; das ist das zweite Zeichen."
+        ],
+        "captions_de": [
+          "Am Brunnen: Jesus spricht mit der Frau aus Samarien vom lebendigen Wasser (Tropfen, Keimling mit Unendlichzeichen).",
+          "Kommt und seht: Die Frau ruft die Leute der Stadt (Jesus, Messias, ?).",
+          "Wort Jesu → Glaube: Wegen seines Wortes (Pfeil von Jesus) glauben die Samariter (Herzen): selbst gehört (Ohr), er rettet die Welt (Erdkugel, Pfeil nach oben).",
+          "Dein Sohn lebt: Jesus zum Beamten: Dein Kind lebt (Kind, Keimling mit Unendlichzeichen); er glaubt (Herz)."
+        ],
+        "interpretation_note_de": "Je ein Feld zum Gespräch am Brunnen, zum Ruf der Frau, zum Glauben der Samariter und zum zweiten Zeichen; das Gespräch über Speise und Ernte ([[JHN.4.31-JHN.4.38]]) steht nur im Abschnittsbild.",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.4.1-JHN.4.26",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-SAMARITANERIN"
+            ],
+            "objects": [
+              "FIG-OBJ-BRUNNEN",
+              "FIG-OBJ-KRUG-WASSER"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-SAMARITANERIN",
+                "icons": [],
+                "word": {
+                  "de": "Ich bin es, der mit dir redet.",
+                  "gsw": "Ich bi s, wo mit dir redt."
+                }
+              }
+            ],
+            "action_de": "Am Brunnen spricht Jesus mit der samaritischen Frau vom lebendigen Wasser und von der Anbetung in Geist und Wahrheit; auf ihr Wort vom kommenden Messias sagt er: «Ich bin es, der mit dir redet.»",
+            "keywords": {
+              "de": "lebendiges Wasser",
+              "gsw": "läbigs Wasser"
+            },
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "sit"
+              },
+              "hold": {
+                "FIG-ROLLE-SAMARITANERIN": "FIG-OBJ-KRUG-WASSER"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-ROLLE-SAMARITANERIN": "surprised"
+              },
+              "x": {
+                "FIG-JESUS": 46,
+                "FIG-ROLLE-SAMARITANERIN": 140
+              },
+              "floor_x": {
+                "FIG-OBJ-BRUNNEN": 92
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.4.27-JHN.4.38",
+            "figures": [
+              "FIG-ROLLE-SAMARITANERIN",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-STADT",
+              "FIG-OBJ-KRUG-WASSER"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-SAMARITANERIN",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [],
+                "word": {
+                  "de": "Kommt, seht einen Menschen, der mir alles gesagt hat, was ich getan habe! Ist das etwa der Christus?",
+                  "gsw": "Chömed, lueged en Mänsch, wo mer alles gseit hät, was ich gmacht ha! Isch das ächt de Christus?"
+                }
+              }
+            ],
+            "action_de": "Die Frau lässt ihren Wasserkrug stehen, geht in die Stadt und sagt den Leuten: «Kommt, seht einen Menschen, der mir alles gesagt hat, was ich getan habe! Ist das etwa der Christus?»; sie machen sich auf den Weg zu Jesus.",
+            "keywords": {
+              "de": "Sie sind weiss zur Ernte",
+              "gsw": "Si sind wiiss für d Ärnt"
+            },
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KRUG-WASSER": 18
+              },
+              "before": true,
+              "mood": {
+                "FIG-ROLLE-SAMARITANERIN": "delight",
+                "FIG-GRUPPE-MENGE": "question"
+              },
+              "x": {
+                "FIG-ROLLE-SAMARITANERIN": 60,
+                "FIG-GRUPPE-MENGE": 140
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.4.39-JHN.4.42",
+            "figures": [
+              "FIG-ROLLE-SAMARITANERIN",
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-ROLLE-SAMARITANERIN",
+                "icons": [],
+                "word": {
+                  "de": "Wir haben selbst gehört und wissen, dass dieser wirklich der Retter der Welt ist.",
+                  "gsw": "Mir händ sälber ghört und wüssed, dass dä würkli de Retter vo de Wält isch."
+                }
+              }
+            ],
+            "action_de": "Die Samariter sagen zur Frau: «Nicht mehr wegen deines Redens glauben wir; wir haben nämlich selbst gehört und wissen, dass dieser wirklich der Retter der Welt ist.»",
+            "keywords": {
+              "de": "Und noch viel mehr glaubten wegen seines Wortes",
+              "gsw": "Und no vil meh händ glaubt wäge sim Wort"
+            },
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-SAMARITANERIN": "delight",
+                "FIG-GRUPPE-MENGE": "delight",
+                "FIG-JESUS": "smile"
+              },
+              "x": {
+                "FIG-ROLLE-SAMARITANERIN": 30,
+                "FIG-GRUPPE-MENGE": 92,
+                "FIG-JESUS": 156
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.4.43-JHN.4.54",
+            "figures": [
+              "FIG-ROLLE-KOENIGLICHER-BEAMTER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-KOENIGLICHER-BEAMTER",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Herr, komm hinab, bevor mein Kind stirbt!",
+                  "gsw": "Herr, chumm abe, bevor mis Chind stirbt!"
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-KOENIGLICHER-BEAMTER",
+                "icons": [],
+                "word": {
+                  "de": "Geh! Dein Sohn lebt.",
+                  "gsw": "Gang! Din Sohn läbt."
+                }
+              }
+            ],
+            "action_de": "Der königliche Beamte bittet: «Herr, komm hinab, bevor mein Kind stirbt!» Jesus sagt: «Geh! Dein Sohn lebt.» Der Mann glaubt dem Wort und macht sich auf den Weg.",
+            "keywords": {
+              "de": "Dies aber tat Jesus wiederum als zweites Zeichen",
+              "gsw": "Das aber hät de Jesus wider als zweits Zeiche gmacht"
+            },
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-KOENIGLICHER-BEAMTER": "worried",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-ROLLE-KOENIGLICHER-BEAMTER": 50,
+                "FIG-JESUS": 140
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.4.1-JHN.4.26",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-SAMARITANERIN"
+            ],
+            "objects": [
+              "FIG-OBJ-BRUNNEN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-SAMARITANERIN",
+                "icons": [],
+                "word": {
+                  "de": "Ich bin es, der mit dir redet.",
+                  "gsw": "Ich bi s, wo mit dir redt."
+                }
+              }
+            ],
+            "action_de": "Am Brunnen spricht Jesus mit der samaritischen Frau vom lebendigen Wasser und von der Anbetung in Geist und Wahrheit; auf ihr Wort vom kommenden Messias sagt er: «Ich bin es, der mit dir redet.»",
+            "keywords": {
+              "de": "lebendiges Wasser",
+              "gsw": "läbigs Wasser"
+            },
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "sit"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-ROLLE-SAMARITANERIN": "surprised"
+              },
+              "x": {
+                "FIG-JESUS": 36,
+                "FIG-ROLLE-SAMARITANERIN": 158
+              },
+              "floor_x": {
+                "FIG-OBJ-BRUNNEN": 97
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.4.27-JHN.4.38",
+            "figures": [
+              "FIG-ROLLE-SAMARITANERIN",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-STADT",
+              "FIG-OBJ-KRUG-WASSER"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-SAMARITANERIN",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [],
+                "word": {
+                  "de": "Kommt, seht einen Menschen, der mir alles gesagt hat, was ich getan habe! Ist das etwa der Christus?",
+                  "gsw": "Chömed, lueged en Mänsch, wo mer alles gseit hät, was ich gmacht ha! Isch das ächt de Christus?"
+                }
+              }
+            ],
+            "action_de": "Die Frau lässt ihren Wasserkrug stehen, geht in die Stadt und sagt den Leuten: «Kommt, seht einen Menschen, der mir alles gesagt hat, was ich getan habe! Ist das etwa der Christus?»; sie machen sich auf den Weg zu Jesus.",
+            "keywords": {
+              "de": "Sie sind weiss zur Ernte",
+              "gsw": "Si sind wiiss für d Ärnt"
+            },
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-SAMARITANERIN": "LEER"
+              },
+              "floor_x": {
+                "FIG-OBJ-KRUG-WASSER": 18
+              },
+              "before": true,
+              "mood": {
+                "FIG-ROLLE-SAMARITANERIN": "delight",
+                "FIG-GRUPPE-MENGE": "question"
+              },
+              "x": {
+                "FIG-ROLLE-SAMARITANERIN": 60,
+                "FIG-GRUPPE-MENGE": 140
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.4.39-JHN.4.42",
+            "figures": [
+              "FIG-ROLLE-SAMARITANERIN",
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-ROLLE-SAMARITANERIN",
+                "icons": [],
+                "word": {
+                  "de": "Wir haben selbst gehört und wissen, dass dieser wirklich der Retter der Welt ist.",
+                  "gsw": "Mir händ sälber ghört und wüssed, dass dä würkli de Retter vo de Wält isch."
+                }
+              }
+            ],
+            "action_de": "Die Samariter sagen zur Frau: «Nicht mehr wegen deines Redens glauben wir; wir haben nämlich selbst gehört und wissen, dass dieser wirklich der Retter der Welt ist.»",
+            "keywords": {
+              "de": "Und noch viel mehr glaubten wegen seines Wortes",
+              "gsw": "Und no vil meh händ glaubt wäge sim Wort"
+            },
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-SAMARITANERIN": "delight",
+                "FIG-GRUPPE-MENGE": "delight",
+                "FIG-JESUS": "smile"
+              },
+              "x": {
+                "FIG-ROLLE-SAMARITANERIN": 30,
+                "FIG-GRUPPE-MENGE": 92,
+                "FIG-JESUS": 156
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.4.43-JHN.4.54",
+            "figures": [
+              "FIG-ROLLE-KOENIGLICHER-BEAMTER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-KOENIGLICHER-BEAMTER",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Herr, komm hinab, bevor mein Kind stirbt!",
+                  "gsw": "Herr, chumm abe, bevor mis Chind stirbt!"
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-KOENIGLICHER-BEAMTER",
+                "icons": [],
+                "word": {
+                  "de": "Geh! Dein Sohn lebt.",
+                  "gsw": "Gang! Din Sohn läbt."
+                }
+              }
+            ],
+            "action_de": "Der königliche Beamte bittet: «Herr, komm hinab, bevor mein Kind stirbt!» Jesus sagt: «Geh! Dein Sohn lebt.» Der Mann glaubt dem Wort und macht sich auf den Weg.",
+            "keywords": {
+              "de": "Dies aber tat Jesus wiederum als zweites Zeichen",
+              "gsw": "Das aber hät de Jesus wider als zweits Zeiche gmacht"
+            },
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-KOENIGLICHER-BEAMTER": "worried",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-ROLLE-KOENIGLICHER-BEAMTER": 50,
+                "FIG-JESUS": 140
+              }
+            }
+          }
         ]
       }
     }

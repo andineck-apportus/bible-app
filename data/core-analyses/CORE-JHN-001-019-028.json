@@ -1,0 +1,165 @@
+{
+ "id": "CORE-JHN-001-019-028",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "JHN.1.19-JHN.1.28",
+ "target": "TU-JHN-001-019-028",
+ "core_de": "Priester und Leviten aus Jerusalem fragen Johannes: «Wer bist du?»; er bekennt: «Ich bin nicht der Christus», er ist auch nicht Elija und nicht der Prophet, sondern «die Stimme eines Rufenden in der Wüste: ‹Macht den Weg des Herrn gerade!›»; auf die Frage, warum er dann taufe, sagt er: «Ich taufe mit Wasser; mitten unter euch steht einer, den ihr nicht kennt, der nach mir kommt.»",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "dialogue",
+    "subtype": "Verhör: Wer bist du? – dreifaches Nein – Selbstaussage – Warum taufst du? – Antwort",
+    "range": "JHN.1.19-JHN.1.28",
+    "elements": [
+     {
+      "label": "Gesandte: «Wer bist du?»",
+      "ref": "JHN.1.19",
+      "role": "Frage"
+     },
+     {
+      "label": "Drei Verneinungen",
+      "ref": "JHN.1.20-JHN.1.21",
+      "role": "Antwort",
+      "child": "s2"
+     },
+     {
+      "label": "«Wer bist du? … Was sagst du über dich selbst?»",
+      "ref": "JHN.1.22",
+      "role": "Frage"
+     },
+     {
+      "label": "«Ich bin die Stimme eines Rufenden in der Wüste: ‹Macht den Weg des Herrn gerade!›»",
+      "ref": "JHN.1.23",
+      "role": "Antwort"
+     },
+     {
+      "label": "«Warum taufst du dann, wenn du nicht der Christus bist, nicht Elija und nicht der Prophet?»",
+      "ref": "JHN.1.25",
+      "role": "Frage"
+     },
+     {
+      "label": "«Ich taufe mit Wasser; mitten unter euch steht einer, den ihr nicht kennt, der nach mir kommt … Riemen seiner Sandale»",
+      "ref": "JHN.1.26-JHN.1.27",
+      "role": "Antwort"
+     },
+     {
+      "label": "Dies geschah in Betanien jenseits des Jordan",
+      "ref": "JHN.1.28",
+      "role": "Ort"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Priester und Leviten (von den Pharisäern gesandt)",
+       "to": "FIG-JOHANNES-TAEUFER",
+       "ref": "JHN.1.19-JHN.1.25"
+      },
+      {
+       "who": "FIG-JOHANNES-TAEUFER",
+       "to": "Priester und Leviten",
+       "ref": "JHN.1.20-JHN.1.27"
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "ISA.40.3",
+       "kind": "Zitat"
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "«Die Juden» meint bei Johannes oft die führenden Kreise in Jerusalem; im Bild als neutrale Gruppe ohne Merkmale einer Volksgruppe."
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "series",
+    "subtype": "dreifaches Nein",
+    "range": "JHN.1.20-JHN.1.21",
+    "elements": [
+     {
+      "label": "«Ich bin nicht der Christus.»",
+      "ref": "JHN.1.20"
+     },
+     {
+      "label": "«Bist du Elija?» – «Ich bin es nicht.»",
+      "ref": "JHN.1.21"
+     },
+     {
+      "label": "«Bist du der Prophet?» – «Nein.»",
+      "ref": "JHN.1.21"
+     }
+    ],
+    "visual": "dialogue",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "JHN.1.19-JHN.1.21",
+   "text_de": "«Wer bist du?» – «Ich bin nicht der Christus.» – «Bist du Elija?» – «Ich bin es nicht.» – «Bist du der Prophet?» – «Nein.»",
+   "reason_de": "Dreifaches Nein: wer Johannes nicht ist (Kriterien 1 und 2).",
+   "recognition_de": "Gesandte fragen Johannes, er verneint dreimal.",
+   "keywords": [
+    "Wer bist du?",
+    "Ich bin nicht der Christus"
+   ]
+  },
+  {
+   "reference": "JHN.1.22-JHN.1.23",
+   "text_de": "Johannes sagt, wer er ist: «Ich bin die Stimme eines Rufenden in der Wüste: ‹Macht den Weg des Herrn gerade!›»",
+   "reason_de": "Selbstaussage mit Jesajawort (Kriterium 1).",
+   "recognition_de": "Johannes als rufende Stimme in der Wüste.",
+   "keywords": [
+    "Ich bin die Stimme eines Rufenden in der Wüste"
+   ]
+  },
+  {
+   "reference": "JHN.1.25-JHN.1.27",
+   "text_de": "«Warum taufst du dann?» – «Ich taufe mit Wasser; mitten unter euch steht einer, den ihr nicht kennt, der nach mir kommt; dessen bin ich nicht würdig, dass ich ihm den Riemen seiner Sandale löse.»",
+   "reason_de": "Hinweis auf den Kommenden (Kriterien 1 und 3).",
+   "recognition_de": "Johannes am Jordan, die Sandale als Bild.",
+   "keywords": [
+    "mitten unter euch steht einer, den ihr nicht kennt"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Dass die Gesandten «von den Pharisäern» kamen ([[JHN.1.24]]) und der Ort Betanien jenseits des Jordan ([[JHN.1.28]]) – Rahmen"
+ ],
+ "persons": [
+  "FIG-JOHANNES-TAEUFER",
+  "FIG-GRUPPE-PRIESTER"
+ ],
+ "places": [
+  "FIG-ORT-JORDAN",
+  "FIG-ORT-WUESTE"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "JHN.1.19-JHN.1.28",
+   "fingerprint": "d49c5bc2b3a1ef73"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Joh 1–7 nach Matthäus und Markus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

@@ -1,0 +1,165 @@
+{
+ "id": "CORE-JHN-007-001-009",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "JHN.7.1-JHN.7.9",
+ "target": "TU-JHN-007-001-009",
+ "core_de": "Weil die Juden ihn töten wollen, zieht Jesus in Galiläa umher; vor dem Laubhüttenfest drängen ihn seine Brüder, die nicht an ihn glauben: «Offenbare dich der Welt!»; er antwortet: «Meine Zeit ist noch nicht da; eure Zeit aber ist immer bereit»; die Welt hasst ihn, weil er bezeugt, dass ihre Werke böse sind; er schickt sie zum Fest und bleibt in Galiläa.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Lage – Fest naht – Drängen der Brüder – Antwort – Bleiben",
+    "range": "JHN.7.1-JHN.7.9",
+    "elements": [
+     {
+      "label": "Jesus zieht in Galiläa umher, weil die Juden ihn zu töten suchen",
+      "ref": "JHN.7.1",
+      "role": "Lage"
+     },
+     {
+      "label": "Das Laubhüttenfest ist nahe",
+      "ref": "JHN.7.2",
+      "role": "Zeit"
+     },
+     {
+      "label": "Die Brüder: «… offenbare dich der Welt!» – sie glaubten nicht an ihn",
+      "ref": "JHN.7.3-JHN.7.5",
+      "role": "Drängen"
+     },
+     {
+      "label": "Antwort",
+      "ref": "JHN.7.6-JHN.7.8",
+      "role": "Antwort",
+      "child": "s2"
+     },
+     {
+      "label": "Er bleibt in Galiläa",
+      "ref": "JHN.7.9",
+      "role": "Ausgang"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-GRUPPE-BRUEDER-JESU",
+       "to": "FIG-JESUS",
+       "ref": "JHN.7.3-JHN.7.4"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-BRUEDER-JESU",
+       "ref": "JHN.7.6-JHN.7.8"
+      }
+     ],
+     "chronology": [
+      {
+       "ref": "JHN.7.2",
+       "note": "Laubhüttenfest – drittes genanntes Fest"
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "«Die Juden» meint bei Johannes oft die führenden Kreise; im Bild als neutrale Gruppe ohne Merkmale einer Volksgruppe."
+      }
+     ],
+     "text_forms": [
+      {
+       "ref": "JHN.7.8",
+       "note": "Ein Teil der Überlieferung liest «noch nicht hinauf» statt «nicht hinauf»."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "meine Zeit ↔ eure Zeit; mich hasst die Welt ↔ euch nicht",
+    "range": "JHN.7.6-JHN.7.8",
+    "elements": [
+     {
+      "label": "Meine Zeit ist noch nicht da",
+      "ref": "JHN.7.6",
+      "role": "Jesus"
+     },
+     {
+      "label": "eure Zeit aber ist immer bereit",
+      "ref": "JHN.7.6",
+      "role": "Brüder"
+     },
+     {
+      "label": "mich aber hasst sie, weil ich über sie bezeuge, dass ihre Werke böse sind",
+      "ref": "JHN.7.7",
+      "role": "Jesus"
+     },
+     {
+      "label": "Die Welt kann euch nicht hassen",
+      "ref": "JHN.7.7",
+      "role": "Brüder"
+     },
+     {
+      "label": "«Geht ihr hinauf zum Fest! Ich gehe nicht hinauf … denn meine Zeit ist noch nicht erfüllt.»",
+      "ref": "JHN.7.8",
+      "role": "Weisung"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "JHN.7.3-JHN.7.5",
+   "text_de": "Die Brüder: «Geh weg von hier und zieh nach Judäa … offenbare dich der Welt!» – denn auch seine Brüder glaubten nicht an ihn.",
+   "reason_de": "Anlass (Kriterium 2).",
+   "recognition_de": "Die Brüder drängen Jesus.",
+   "keywords": [
+    "offenbare dich der Welt!",
+    "Denn auch seine Brüder glaubten nicht an ihn"
+   ]
+  },
+  {
+   "reference": "JHN.7.6-JHN.7.9",
+   "text_de": "«Meine Zeit ist noch nicht da; eure Zeit aber ist immer bereit. Die Welt kann euch nicht hassen; mich aber hasst sie …»; er bleibt in Galiläa.",
+   "reason_de": "Gegensatz meine Zeit ↔ eure Zeit (Kriterien 1 und 2).",
+   "recognition_de": "Jesus antwortet den Brüdern.",
+   "keywords": [
+    "Meine Zeit ist noch nicht da; eure Zeit aber ist immer bereit",
+    "mich aber hasst sie"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Dass er später doch hinaufgeht ([[JHN.7.10]]), gehört zum nächsten Abschnitt"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-BRUEDER-JESU"
+ ],
+ "places": [
+  "FIG-ORT-HUETTE"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "JHN.7.1-JHN.7.9",
+   "fingerprint": "6b985a4818f57450"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Joh 1–7 nach Matthäus und Markus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

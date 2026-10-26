@@ -24,23 +24,41 @@
         {
           "from": "FIG-GRUPPE-JUENGER",
           "to": "FIG-JESUS",
-          "icons": [
-            "FIG-ZEICHEN-HOEREN",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Hart ist dieses Wort; wer kann es hören?",
+            "gsw": "Hert isch das Wort; wer cha sich das aalose?"
+          }
+        },
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-GRUPPE-JUENGER",
+          "icons": [],
+          "word": {
+            "de": "Der Geist ist es, der lebendig macht.",
+            "gsw": "De Geischt isch s, wo läbig macht."
+          }
         }
       ],
-      "action_de": "Viele Jünger sagen: Hart ist dieses Wort; wer kann es hören? Jesus sagt, seine Worte seien Geist und Leben. Daraufhin ziehen sich viele seiner Jünger zurück.",
+      "action_de": "Viele Jünger sagen: «Hart ist dieses Wort; wer kann es hören?» Jesus: «Der Geist ist es, der lebendig macht; das Fleisch nützt nichts. Die Worte, die ich zu euch geredet habe, sind Geist und sind Leben.» Daraufhin ziehen sich viele seiner Jünger zurück.",
+      "keywords": {
+        "de": "Daraufhin zogen sich viele seiner Jünger zurück",
+        "gsw": "Vo dänn aa sind vili vo sine Jünger zrugg gange"
+      },
       "stage": {
         "pose": {
           "FIG-GRUPPE-JUENGER": "away"
         },
-        "mood": {
-          "FIG-GRUPPE-JUENGER": "worried",
-          "FIG-JESUS": "pensive"
-        },
-        "at": {
+        "beside": {
           "FIG-ZEICHEN-FLIEHEN": "FIG-GRUPPE-JUENGER"
+        },
+        "mood": {
+          "FIG-JESUS": "earnest",
+          "FIG-GRUPPE-JUENGER": "angry"
+        },
+        "x": {
+          "FIG-JESUS": 50,
+          "FIG-GRUPPE-JUENGER": 136
         }
       }
     },
@@ -58,27 +76,43 @@
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-GRUPPE-ZWOELF",
-            "FIG-ZEICHEN-FLIEHEN",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Wollt etwa auch ihr weggehen?",
+            "gsw": "Wänd öppe au ir gaa?"
+          }
         },
         {
           "from": "FIG-PETRUS",
           "to": "FIG-JESUS",
-          "icons": [
-            "FIG-ZEICHEN-LEBEN",
-            "FIG-ZEICHEN-GLAUBEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Herr, zu wem sollen wir gehen? Du hast Worte ewigen Lebens.",
+            "gsw": "Herr, zu wem söled mer gaa? Du häsch Wort vom ewige Läbe."
+          }
         }
       ],
-      "action_de": "Jesus fragt die Zwölf: Wollt auch ihr weggehen? Simon Petrus antwortet: Herr, zu wem sollen wir gehen? Du hast Worte ewigen Lebens; wir haben geglaubt, dass du der Heilige Gottes bist.",
+      "action_de": "Jesus fragt die Zwölf: «Wollt etwa auch ihr weggehen?» Simon Petrus antwortet: «Herr, zu wem sollen wir gehen? Du hast Worte ewigen Lebens.»",
+      "keywords": {
+        "de": "dass du der Heilige Gottes bist",
+        "gsw": "dass du de Heilig vo Gott bisch"
+      },
+      "names": {
+        "FIG-PETRUS": {
+          "de": "Simon Petrus",
+          "gsw": "Simon Petrus"
+        }
+      },
       "stage": {
         "mood": {
-          "FIG-PETRUS": "calm",
-          "FIG-GRUPPE-ZWOELF": "calm",
+          "FIG-GRUPPE-ZWOELF": "pensive",
+          "FIG-PETRUS": "determined",
           "FIG-JESUS": "calm"
+        },
+        "x": {
+          "FIG-GRUPPE-ZWOELF": 30,
+          "FIG-PETRUS": 92,
+          "FIG-JESUS": 156
         }
       }
     },
@@ -86,55 +120,69 @@
       "n": 3,
       "reference": "JHN.6.70-JHN.6.71",
       "figures": [
-        "FIG-JESUS",
         "FIG-GRUPPE-ZWOELF",
-        "FIG-JUDAS-ISKARIOT"
+        "FIG-JUDAS-ISKARIOT",
+        "FIG-JESUS"
       ],
       "objects": [],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-AUSLIEFERN"
+      ],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-GRUPPE-ZWOELF",
-            "FIG-SATAN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Habe nicht ich euch, die Zwölf, erwählt? Und einer von euch ist ein Teufel.",
+            "gsw": "Han nöd ich eu, di Zwölf, usgwählt? Und eine vo eu isch en Tüüfel."
+          }
         }
       ],
-      "action_de": "Jesus antwortet: Habe nicht ich euch, die Zwölf, erwählt? Und einer von euch ist ein Teufel. Er meint Judas Iskariot, der ihn ausliefern sollte.",
+      "action_de": "Jesus antwortet: «Habe nicht ich euch, die Zwölf, erwählt? Und einer von euch ist ein Teufel.» Er meinte Judas, den Sohn des Simon Iskariot; der sollte ihn ausliefern, einer von den Zwölf.",
+      "keywords": {
+        "de": "der sollte ihn nämlich ausliefern",
+        "gsw": "dä sött en nämli uslifere"
+      },
+      "names": {
+        "FIG-JUDAS-ISKARIOT": {
+          "de": "Judas",
+          "gsw": "Judas"
+        }
+      },
       "stage": {
-        "mood": {
-          "FIG-JESUS": "calm",
-          "FIG-GRUPPE-ZWOELF": "worried",
-          "FIG-JUDAS-ISKARIOT": "pensive"
+        "at": {
+          "FIG-ZEICHEN-AUSLIEFERN": "FIG-JUDAS-ISKARIOT"
         },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-JUDAS-ISKARIOT",
-            "act"
-          ]
-        ]
+        "mood": {
+          "FIG-GRUPPE-ZWOELF": "worried",
+          "FIG-JUDAS-ISKARIOT": "pensive",
+          "FIG-JESUS": "earnest"
+        },
+        "x": {
+          "FIG-GRUPPE-ZWOELF": 30,
+          "FIG-JUDAS-ISKARIOT": 92,
+          "FIG-JESUS": 156
+        }
       }
     }
   ],
   "actions_de": [
-    "Viele Jünger sagen: Hart ist dieses Wort; wer kann es hören? Jesus sagt, seine Worte seien Geist und Leben. Daraufhin ziehen sich viele seiner Jünger zurück.",
-    "Jesus fragt die Zwölf: Wollt auch ihr weggehen? Simon Petrus antwortet: Herr, zu wem sollen wir gehen? Du hast Worte ewigen Lebens; wir haben geglaubt, dass du der Heilige Gottes bist.",
-    "Jesus antwortet: Habe nicht ich euch, die Zwölf, erwählt? Und einer von euch ist ein Teufel. Er meint Judas Iskariot, der ihn ausliefern sollte."
+    "Viele Jünger sagen: «Hart ist dieses Wort; wer kann es hören?» Jesus: «Der Geist ist es, der lebendig macht; das Fleisch nützt nichts. Die Worte, die ich zu euch geredet habe, sind Geist und sind Leben.» Daraufhin ziehen sich viele seiner Jünger zurück.",
+    "Jesus fragt die Zwölf: «Wollt etwa auch ihr weggehen?» Simon Petrus antwortet: «Herr, zu wem sollen wir gehen? Du hast Worte ewigen Lebens.»",
+    "Jesus antwortet: «Habe nicht ich euch, die Zwölf, erwählt? Und einer von euch ist ein Teufel.» Er meinte Judas, den Sohn des Simon Iskariot; der sollte ihn ausliefern, einer von den Zwölf."
   ],
   "captions_de": [
-    "Viele gehen weg: Viele Jünger fragen, wer dieses Wort hören kann (Ohr, Fragezeichen), und ziehen sich zurück (Pfeil).",
-    "Petrus bleibt: Jesus fragt die Zwölf, ob auch sie gehen wollen (Zwölf, Pfeil, Fragezeichen); Petrus antwortet: Du hast Worte des Lebens, wir glauben (Keimling mit Unendlichzeichen, Herz).",
-    "Einer von euch: Jesus sagt den Zwölf, einer von ihnen sei ein Teufel (dunkler Schatten); er meint Judas (Pfeil zu Judas rechts, mit der Kasse)."
+    "Viele gehen: Jünger sagen: «Hart ist dieses Wort; wer kann es hören?» (hören, fragen) und wenden sich ab (weggehen); Jesus: «Der Geist ist es, der lebendig macht.» (Taube, Leben).",
+    "Bekenntnis: Jesus fragt die Zwölf: «Wollt etwa auch ihr weggehen?» (weggehen, fragen); Simon Petrus (Name): «Herr, zu wem sollen wir gehen? Du hast Worte ewigen Lebens.» (Leben).",
+    "Einer von euch: Jesus sagt zu den Zwölf: «Habe nicht ich euch, die Zwölf, erwählt? Und einer von euch ist ein Teufel.» (Böses); Judas (Name) steht bei ihnen – er sollte ihn ausliefern (ausliefern)."
   ],
-  "interpretation_note_de": "Die vielen Jünger, die gehen ([[JHN.6.66]]), sind eine eigene Gruppe, nicht die Zwölf. Den Teufel zeigt das Bild nur als dunklen Schatten in der Sprechblase, nicht an Judas selbst; dass Judas gemeint ist, sagt der Erzähler ([[JHN.6.71]]).",
+  "interpretation_note_de": "Drei Felder nach dem Ablauf «Anstoss – Rückzug vieler – Bekenntnis – Hinweis auf den Verräter» ([[JHN.6.60-JHN.6.71]]). Der Teufel wird nicht gezeichnet; dass Judas gemeint ist, sagt der Erzähler ([[JHN.6.71]]). Der unvollendete Satz vom Hinaufsteigen des Menschensohnes ([[JHN.6.62]]) ist weggelassen.",
   "basis": [
     {
       "record": "TU-JHN-006-060-071",
       "field": "summary",
-      "fingerprint": "8915006e8027cea4"
+      "fingerprint": "1b5ef98d8c31925d"
     },
     {
       "record": "TRANS-JHN-006-001-071-DE-WORKING",
@@ -156,7 +204,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -287,6 +335,166 @@
           "Petrus bleibt: Jesus fragt die Zwölf, ob auch sie gehen wollen (Zwölf, Pfeil, Fragezeichen); Petrus antwortet: Du hast Worte des Lebens, wir glauben (Spross im Ring, Herz).",
           "Einer von euch: Jesus sagt den Zwölf, einer von ihnen sei ein Teufel (dunkler Schatten); er meint Judas (Pfeil zu Judas rechts, mit der Kasse)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-JHN-006-060-071",
+            "field": "summary",
+            "fingerprint": "8915006e8027cea4"
+          },
+          {
+            "record": "TRANS-JHN-006-001-071-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.6.60-JHN.6.66",
+            "fingerprint": "e9469e8ef4c5e84e"
+          },
+          {
+            "record": "TRANS-JHN-006-001-071-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.6.67-JHN.6.69",
+            "fingerprint": "eb56c617793944a2"
+          },
+          {
+            "record": "TRANS-JHN-006-001-071-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.6.70-JHN.6.71",
+            "fingerprint": "41966705cbee46c8"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.6.60-JHN.6.66",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-FLIEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-HOEREN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Viele Jünger sagen: Hart ist dieses Wort; wer kann es hören? Jesus sagt, seine Worte seien Geist und Leben. Daraufhin ziehen sich viele seiner Jünger zurück.",
+            "stage": {
+              "pose": {
+                "FIG-GRUPPE-JUENGER": "away"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "worried",
+                "FIG-JESUS": "pensive"
+              },
+              "at": {
+                "FIG-ZEICHEN-FLIEHEN": "FIG-GRUPPE-JUENGER"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.6.67-JHN.6.69",
+            "figures": [
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-GRUPPE-ZWOELF",
+                  "FIG-ZEICHEN-FLIEHEN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-LEBEN",
+                  "FIG-ZEICHEN-GLAUBEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus fragt die Zwölf: Wollt auch ihr weggehen? Simon Petrus antwortet: Herr, zu wem sollen wir gehen? Du hast Worte ewigen Lebens; wir haben geglaubt, dass du der Heilige Gottes bist.",
+            "stage": {
+              "mood": {
+                "FIG-PETRUS": "calm",
+                "FIG-GRUPPE-ZWOELF": "calm",
+                "FIG-JESUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.6.70-JHN.6.71",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-JUDAS-ISKARIOT"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-GRUPPE-ZWOELF",
+                  "FIG-SATAN"
+                ]
+              }
+            ],
+            "action_de": "Jesus antwortet: Habe nicht ich euch, die Zwölf, erwählt? Und einer von euch ist ein Teufel. Er meint Judas Iskariot, der ihn ausliefern sollte.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-ZWOELF": "worried",
+                "FIG-JUDAS-ISKARIOT": "pensive"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-JUDAS-ISKARIOT",
+                  "act"
+                ]
+              ]
+            }
+          }
+        ],
+        "actions_de": [
+          "Viele Jünger sagen: Hart ist dieses Wort; wer kann es hören? Jesus sagt, seine Worte seien Geist und Leben. Daraufhin ziehen sich viele seiner Jünger zurück.",
+          "Jesus fragt die Zwölf: Wollt auch ihr weggehen? Simon Petrus antwortet: Herr, zu wem sollen wir gehen? Du hast Worte ewigen Lebens; wir haben geglaubt, dass du der Heilige Gottes bist.",
+          "Jesus antwortet: Habe nicht ich euch, die Zwölf, erwählt? Und einer von euch ist ein Teufel. Er meint Judas Iskariot, der ihn ausliefern sollte."
+        ],
+        "captions_de": [
+          "Viele gehen weg: Viele Jünger fragen, wer dieses Wort hören kann (Ohr, Fragezeichen), und ziehen sich zurück (Pfeil).",
+          "Petrus bleibt: Jesus fragt die Zwölf, ob auch sie gehen wollen (Zwölf, Pfeil, Fragezeichen); Petrus antwortet: Du hast Worte des Lebens, wir glauben (Keimling mit Unendlichzeichen, Herz).",
+          "Einer von euch: Jesus sagt den Zwölf, einer von ihnen sei ein Teufel (dunkler Schatten); er meint Judas (Pfeil zu Judas rechts, mit der Kasse)."
+        ],
+        "interpretation_note_de": "Die vielen Jünger, die gehen ([[JHN.6.66]]), sind eine eigene Gruppe, nicht die Zwölf. Den Teufel zeigt das Bild nur als dunklen Schatten in der Sprechblase, nicht an Judas selbst; dass Judas gemeint ist, sagt der Erzähler ([[JHN.6.71]]).",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

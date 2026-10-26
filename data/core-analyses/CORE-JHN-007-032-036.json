@@ -1,0 +1,143 @@
+{
+ "id": "CORE-JHN-007-032-036",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "JHN.7.32-JHN.7.36",
+ "target": "TU-JHN-007-032-036",
+ "core_de": "Als die Pharisäer hören, wie die Menge über Jesus murmelt, senden die Hohepriester und die Pharisäer Diener aus, um ihn festzunehmen; Jesus sagt: «Noch eine kleine Zeit bin ich bei euch, und dann gehe ich zu dem, der mich gesandt hat. Ihr werdet mich suchen und nicht finden»; die Juden rätseln, ob er zu den Griechen in die Diaspora gehen wolle.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Auftrag zur Festnahme – Wort vom Weggehen – Missverständnis",
+    "range": "JHN.7.32-JHN.7.36",
+    "elements": [
+     {
+      "label": "Die Hohepriester und die Pharisäer senden Diener aus, um ihn festzunehmen",
+      "ref": "JHN.7.32",
+      "role": "Auftrag"
+     },
+     {
+      "label": "Missverständnis «Wohin?»",
+      "ref": "JHN.7.33-JHN.7.36",
+      "role": "Wort",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "unbestimmt (die Anwesenden)",
+       "ref": "JHN.7.33-JHN.7.34"
+      },
+      {
+       "who": "die Juden",
+       "to": "einander",
+       "ref": "JHN.7.35-JHN.7.36"
+      }
+     ],
+     "modality": [
+      {
+       "kind": "Auftrag, noch nicht ausgeführt",
+       "ref": "JHN.7.32"
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "«Die Juden» meint bei Johannes oft die führenden Kreise; im Bild als neutrale Gruppe ohne Merkmale einer Volksgruppe."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "dialogue",
+    "subtype": "Missverständnis: Wort – falsch verstanden",
+    "range": "JHN.7.33-JHN.7.36",
+    "elements": [
+     {
+      "label": "«Noch eine kleine Zeit bin ich bei euch, und dann gehe ich zu dem, der mich gesandt hat.»",
+      "ref": "JHN.7.33",
+      "role": "Wort"
+     },
+     {
+      "label": "«Ihr werdet mich suchen und nicht finden, und wo ich bin, dahin könnt ihr nicht kommen.»",
+      "ref": "JHN.7.34",
+      "role": "Wort"
+     },
+     {
+      "label": "«Will er etwa in die Diaspora unter den Griechen gehen und die Griechen lehren?»",
+      "ref": "JHN.7.35-JHN.7.36",
+      "role": "missverstanden"
+     }
+    ],
+    "visual": "levels",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "JHN.7.32",
+   "text_de": "Die Hohepriester und die Pharisäer senden Diener aus, um ihn festzunehmen.",
+   "reason_de": "Anlass (Kriterium 2).",
+   "recognition_de": "Hohepriester und Pharisäer senden Diener.",
+   "keywords": [
+    "sandten Diener aus, um ihn festzunehmen"
+   ]
+  },
+  {
+   "reference": "JHN.7.33-JHN.7.34",
+   "text_de": "«Noch eine kleine Zeit bin ich bei euch, und dann gehe ich zu dem, der mich gesandt hat. Ihr werdet mich suchen und nicht finden …»",
+   "reason_de": "Wort Jesu (Kriterium 1).",
+   "recognition_de": "Jesus spricht vom Weggehen.",
+   "keywords": [
+    "dann gehe ich zu dem, der mich gesandt hat",
+    "Ihr werdet mich suchen und nicht finden"
+   ]
+  },
+  {
+   "reference": "JHN.7.35-JHN.7.36",
+   "text_de": "«Wohin will dieser gehen …? Will er etwa in die Diaspora unter den Griechen gehen und die Griechen lehren?»",
+   "reason_de": "Missverständnis (Kriterien 2 und 3).",
+   "recognition_de": "Die Juden rätseln.",
+   "keywords": [
+    "Will er etwa in die Diaspora unter den Griechen gehen"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Der Text löst das Missverständnis hier nicht auf; die Antwort steht schon in [[JHN.7.33]] («zu dem, der mich gesandt hat»)"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-PHARISAEER",
+  "FIG-GRUPPE-HOHEPRIESTER",
+  "FIG-ROLLE-TEMPELWACHE",
+  "FIG-GRUPPE-MENGE"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "JHN.7.32-JHN.7.36",
+   "fingerprint": "aae0c858a2abcceb"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Joh 1–7 nach Matthäus und Markus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

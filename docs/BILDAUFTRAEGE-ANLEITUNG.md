@@ -99,7 +99,7 @@ alle Übersetzungen; jedes Wort steht je Sprache im Auftrag, die App zeigt die g
 |---|---|
 | `mood: {FIG: expr}` | Ausdruck im Stil Anime: calm, smile, delight, worried, surprised, earnest, determined, pensive, question (fragend), sleep, angry (Zorn), fear (Angst), pain (Schmerz), dead (tot, fahle Haut) |
 | `pose: {FIG: p}` | lie, sleep, sit, kneel, fall, away (abgewandt: gespiegelt, Blick zur Seite, Gesicht bleibt sichtbar wie in der Legende) |
-| `hold: {FIG: OBJ}` | Figur hält Gegenstand (Gegenstand muss in `objects` stehen); lange Gegenstände (Schwert, Rohr, Kreuz) stehen seitlich mit sichtbarer Hand |
+| `hold: {FIG: OBJ}` | Figur hält Gegenstand (Gegenstand muss in `objects` stehen); lange Gegenstände (Schwert, Rohr, Kreuz) stehen seitlich mit sichtbarer Hand; `"LEER"` = leere Hände ohne das feste Erkennungszeichen der Figur (z. B. die Frau aus Samarien, nachdem sie den Krug stehen gelassen hat, [[JHN.4.28]]) |
 | `in: {FIG: OBJ}`, `in_pos: {FIG: [x, y]}` | Figur im Gegenstand (Boot, Fisch, Grab …), Lage relativ 0–1 |
 | `at: {ZEICHEN: FIG}` oder `{ZEICHEN: [FIG, …]}` | Zeichen bei einer oder mehreren Figuren (z. B. Zorn, Schlafen, Nebel); Krone und Dornenkrone sitzen auf dem Kopf |
 | `signs_who: {ZEICHEN: [FIG…]}` | wer Tränen/Freude/Herz trägt (Standard: alle Personen ausser Jesus) |
