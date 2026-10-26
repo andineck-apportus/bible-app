@@ -2,6 +2,13 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.127 — 2026-10-26 — Lukasevangelium ganz übersetzt
+
+- **Lk 1–24** (1151 Verse) neu aus dem SBLGNT übersetzt, Hochdeutsch und Züridüütsch, mit vollständiger Wortzuordnung, Abschnitten mit Titeln und Zusammenfassungen, rund 750 Übersetzungsentscheidungen und gut 100 Lesarten-Alternativen; Handschriften-Zuordnung (CNTR) für alle Kapitel. Lk 11,1–4 (Vaterunser) unverändert. Fehlende Verse im SBLGNT (17,36; 23,17) ohne Text, Zusatz als Alternative.
+- In sechs Teilen parallel entworfen, von drei getrennten KI-Instanzen gegen das Griechische gegengelesen (u. a. 9,10; 9,39; 20,41; Zusammenfassungen 2,41–52, 9,18–22, 18,18–30; Handschriftenangaben 4,41, 14,17, 15,22) und danach durchgehend vereinheitlicht (`lukas_einheitlich.py`: Erzählformel «Und es geschah» am Abschnittsbeginn, «siehe», «Fürchte dich nicht», «selig», «Geschlecht», Mundart-Schreibung nach Mehrheit in Markus/Johannes). KI-Entwurf: keine fachliche und keine muttersprachliche Prüfung.
+- Tests nachgeführt (Abschnitte, Verszahl); der Bedienungstest startet bei Bedarf mit grösserem Speicher.
+- Offen: Kernanalysen, Zusammenfassungen der Kapitel und Bücher sowie Bilder für Lukas («Struktur zuerst»); Studieninhalte.
+
 ## v0.126 — 2026-10-26 — Sprechblasen fest geprüft; neue Bildzeichen für Johannes
 
 - **Drei neue Prüfungen** in `pruefe_bilder.py` für alle Bilder, de und gsw (Hinweise Andi Neck): Spitze einer Sprechblase höchstens 36 Feldeinheiten lang und ab 25 Einheiten nicht flacher als 35°; keine Blase und keine Spitze über der Kreuzestafel (`ill-wichtig`) und keine Spitze über Zeichen und Gegenständen; jede Sprech-Angabe des Bildauftrags ist als Blase gezeichnet (Zählmarke je Feld, `data-speech` an der Blase, auch Denkblasen). Vorher 146 Befunde je Sprache (126 zu lange, 2 zu flache Spitzen, 12 an der Kreuzestafel, 4 Spitzen über Zeichen, 1 hinter einer Blase, 1 fehlende Blase), nachher 0; die bisherigen Prüfungen bestehen weiter.
