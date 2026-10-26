@@ -2,6 +2,11 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.121 — 2026-10-26 — Markus 1–4 und 6–8 nach «Struktur zuerst»
+
+- **41 Abschnitte und 7 Kapitel neu** (Kernanalysen mit Struktur, unabhängig geprüft; Zusammenfassungen Hochdeutsch und Züridüütsch; Bilder): Sandwich-Erzählungen 3,20–35 und 6,7–30 als Rahmen, Zwölferliste in der Reihenfolge des Markus, vier Böden in Gleichnis und Deutung, Lasterliste 7,21–22 vollständig, zweistufige Heilung 8,22–26; nichts aus Matthäus oder Lukas übernommen. Korrigiert u. a.: «beraten, wie sie ihn umbringen könnten» (3,6) statt Tötungsbeschluss, Herodes nicht erschrocken (6,14–16), kein Hochzeitszeichen beim Geburtstagsmahl, Schweigegebot an die Leute (7,36).
+- Noch 185 Bilder in alter Verdichtung (Markus 9–16, Johannes, Lk 11).
+
 ## v0.120 — 2026-10-26 — Matthäus vollständig nach «Struktur zuerst»
 
 - **Mt 19–28 und das Buch Matthäus neu** (Kernanalysen mit Struktur, unabhängig geprüft; Zusammenfassungen Hochdeutsch und Züridüütsch; Bilder): sieben Weherufe vollständig, Gleichnisse Mt 24–25, Weltgericht mit den sechs Werken zweimal, dreifache Verleugnung als Steigerung, drei Gruppen von Spöttern, Taufbefehl als Auftrag und Zusage; Buch mit Zweck («Gott mit uns») und Klammer 1,23 ↔ 28,20 als Deutung. Korrigiert u. a.: Hohepriester und Pharisäer versiegeln das Grab selbst (27,66), keine erfundene Trauer der Frauen, Immanuel als Prophetenwort, Menschensohn = Jesus als Deutung gekennzeichnet; Züridüütsch vereinheitlicht («Hoheprieschter», «Ee», «Lehrer»).
