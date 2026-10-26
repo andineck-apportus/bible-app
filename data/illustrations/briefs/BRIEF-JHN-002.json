@@ -49,7 +49,7 @@
         "mood": {
           "FIG-JESUS": "calm",
           "FIG-ROLLE-SPEISEMEISTER": "delight",
-          "FIG-ROLLE-BRAEUTIGAM": "surprised"
+          "FIG-ROLLE-BRAEUTIGAM": "calm"
         },
         "x": {
           "FIG-JESUS": 30,
@@ -454,6 +454,143 @@
           "Der gute Wein: Der Speisemeister kostet (Becher) und sagt zum Bräutigam: «Du hast den guten Wein bis jetzt aufbewahrt.»; über Jesus ein Stern (Zeichen).",
           "Tempelreinigung: Jesus hält die Geissel erhoben, Münzen liegen am Boden, ein Händler weicht zurück; Jesus: «Macht das Haus meines Vaters nicht zu einem Haus des Handels!» (Haus, Verbotszeichen).",
           "Glaube und Abstand: Menschen in Jerusalem sehen seine Zeichen (Stern) und glauben froh; Jesus wendet sich ernst ab (vertraut sich ihnen nicht an)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Prüfung Struktur zuerst",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.2.1-JHN.2.12",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-SPEISEMEISTER",
+              "FIG-ROLLE-BRAEUTIGAM"
+            ],
+            "objects": [
+              "FIG-OBJ-BECHER-VOLL"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-STERN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-SPEISEMEISTER",
+                "to": "FIG-ROLLE-BRAEUTIGAM",
+                "icons": [],
+                "word": {
+                  "de": "Du hast den guten Wein bis jetzt aufbewahrt.",
+                  "gsw": "Du häsch de guet Wii bis jetzt ufbhalte."
+                }
+              }
+            ],
+            "action_de": "Der Speisemeister kostet das Wasser, das zu Wein geworden war, und sagt zum Bräutigam: «Du hast den guten Wein bis jetzt aufbewahrt.» Diesen Anfang der Zeichen machte Jesus in Kana; seine Jünger glaubten an ihn.",
+            "keywords": {
+              "de": "Diesen Anfang der Zeichen machte Jesus",
+              "gsw": "Das hät de Jesus als Aafang vo de Zeiche gmacht"
+            },
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-SPEISEMEISTER": "FIG-OBJ-BECHER-VOLL"
+              },
+              "at": {
+                "FIG-ZEICHEN-STERN": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-ROLLE-SPEISEMEISTER": "delight",
+                "FIG-ROLLE-BRAEUTIGAM": "surprised"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-ROLLE-SPEISEMEISTER": 98,
+                "FIG-ROLLE-BRAEUTIGAM": 156
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.2.13-JHN.2.22",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-HAENDLER"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL",
+              "FIG-OBJ-PEITSCHE",
+              "FIG-OBJ-MUENZEN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-HAENDLER",
+                "icons": [],
+                "word": {
+                  "de": "Macht das Haus meines Vaters nicht zu einem Haus des Handels!",
+                  "gsw": "Mached s Huus vo mim Vatter nöd zu me Handelshuus!"
+                }
+              }
+            ],
+            "action_de": "Jesus treibt mit einer Geissel alle aus dem Tempel, schüttet den Geldwechslern die Münzen aus, stösst die Tische um und sagt: «Macht das Haus meines Vaters nicht zu einem Haus des Handels!»",
+            "keywords": {
+              "de": "Reisst diesen Tempel nieder, und in drei Tagen werde ich ihn aufrichten",
+              "gsw": "Riissed dä Tämpel ab, und i drüü Täg stell ich en uf"
+            },
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-PEITSCHE"
+              },
+              "before": true,
+              "mood": {
+                "FIG-JESUS": "angry",
+                "FIG-ROLLE-HAENDLER": "fear"
+              },
+              "x": {
+                "FIG-JESUS": 60,
+                "FIG-ROLLE-HAENDLER": 150
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.2.23-JHN.2.25",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-JERUSALEM"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-STERN"
+            ],
+            "speech": [],
+            "action_de": "Am Passa in Jerusalem glauben viele an seinen Namen, weil sie seine Zeichen sehen; Jesus aber vertraut sich ihnen nicht an, denn er weiss, was im Menschen ist.",
+            "keywords": {
+              "de": "Jesus selbst aber vertraute sich ihnen nicht an",
+              "gsw": "De Jesus sälber aber hät sich ine nöd aavertrout"
+            },
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-STERN": "FIG-GRUPPE-MENGE"
+              },
+              "pose": {
+                "FIG-JESUS": "away"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "delight",
+                "FIG-JESUS": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 60,
+                "FIG-JESUS": 150
+              }
+            }
+          }
         ]
       }
     }

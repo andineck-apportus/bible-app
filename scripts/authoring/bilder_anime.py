@@ -1704,8 +1704,12 @@ def run():
         old = OUT / f"{rid}.json"
         if old.exists():
             o = json.loads(old.read_text(encoding="utf-8"))
-            if "check" in o:
-                rec["check"] = o["check"]
+            ck = o.get("check") or o.get("check_previous")
+            if ck:
+                # Blindtest gilt nur für die Fassung, die geprüft wurde: ist der Bildauftrag seither geändert, bleibt der alte
+                # Befund als «check_previous» stehen und wird nicht mehr als Prüfung des heutigen Bildes ausgegeben (Prüfung 2026-10-26)
+                newer = any(r.get("date", "") > ck.get("date", "") for r in brief.get("revision_log", []))
+                rec["check_previous" if newer else "check"] = ck
         n += write(old, rec, "Bild im Stil Anime nach Bildauftrag gezeichnet")
         n += localize(rid, rec, {"alt_de": alt_g}, "gsw-u-sd-chzh", "GSW-ZH", "CTX-CH-ZH-GSW-2026", AUTH_GSW, DATE)
     print(f"PASS: Bildstil Anime – {len(vb)} Darstellungen, {len(ILL)} Bilder; {n} Dateien geschrieben")
