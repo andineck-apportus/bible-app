@@ -1,0 +1,109 @@
+{
+ "id": "CORE-JHN-010-040-042",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "JHN.10.40-JHN.10.42",
+ "target": "TU-JHN-010-040-042",
+ "core_de": "Jesus geht wieder auf die andere Seite des Jordan, an den Ort, wo Johannes zuerst getauft hatte, und bleibt dort; viele kommen zu ihm und sagen: «Johannes hat zwar kein Zeichen getan, aber alles, was Johannes über diesen gesagt hat, war wahr», und viele glauben dort an ihn.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Ortswechsel – Zeugnis – Glaube",
+    "range": "JHN.10.40-JHN.10.42",
+    "elements": [
+     {
+      "label": "Jesus geht auf die andere Seite des Jordan, wo Johannes zuerst getauft hatte, und bleibt dort",
+      "ref": "JHN.10.40",
+      "role": "Ort"
+     },
+     {
+      "label": "Zeugnis der vielen",
+      "ref": "JHN.10.41",
+      "role": "Zeugnis",
+      "child": "s2"
+     },
+     {
+      "label": "Und viele glaubten dort an ihn",
+      "ref": "JHN.10.42",
+      "role": "Glaube"
+     }
+    ],
+    "features": {
+     "crossref": [
+      {
+       "ref": "JHN.1.28",
+       "kind": "Rückbezug",
+       "note": "Der Ort, wo Johannes taufte: [[JHN.1.28]]."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "zwar – aber",
+    "range": "JHN.10.41",
+    "elements": [
+     {
+      "label": "Johannes hat zwar kein Zeichen getan,",
+      "ref": "JHN.10.41",
+      "role": "zwar"
+     },
+     {
+      "label": "aber alles, was Johannes über diesen gesagt hat, war wahr",
+      "ref": "JHN.10.41",
+      "role": "aber"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "JHN.10.40-JHN.10.42",
+   "text_de": "Jenseits des Jordan: «Johannes hat zwar kein Zeichen getan, aber alles, was Johannes über diesen gesagt hat, war wahr»; viele glauben dort an ihn.",
+   "reason_de": "Ortswechsel, Zeugnis und Glaube (Kriterien 1 und 3).",
+   "recognition_de": "Am Jordan, viele kommen.",
+   "keywords": [
+    "alles, was Johannes über diesen gesagt hat, war wahr",
+    "Und viele glaubten dort an ihn"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Johannes der Täufer erscheint nur im Wort der vielen, nicht als anwesende Person"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-MENGE",
+  "FIG-JOHANNES-TAEUFER"
+ ],
+ "places": [
+  "FIG-ORT-JORDAN"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "JHN.10.40-JHN.10.42",
+   "fingerprint": "967b42e442f532ba"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Joh 8–14 mit 7,53–8,11 nach Joh 1–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

@@ -1,0 +1,154 @@
+{
+ "id": "CORE-JHN-009-013-023",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "JHN.9.13-JHN.9.23",
+ "target": "TU-JHN-009-013-023",
+ "core_de": "Sie bringen den früher Blinden zu den Pharisäern; es war Sabbat, als Jesus ihm die Augen öffnete; einige sagen: «Dieser Mensch ist nicht von Gott, denn er hält den Sabbat nicht», andere: «Wie kann ein sündiger Mensch solche Zeichen tun?», und es gibt eine Spaltung; der Mann sagt: «Er ist ein Prophet»; die Juden rufen die Eltern, die bestätigen, dass er ihr Sohn ist und blind geboren wurde, aber aus Furcht, aus der Synagoge ausgeschlossen zu werden, sagen: «Er ist alt genug, fragt ihn!»",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Verhör – Spaltung – Bekenntnis – Eltern – Begründung",
+    "range": "JHN.9.13-JHN.9.23",
+    "elements": [
+     {
+      "label": "Sie bringen ihn zu den Pharisäern; es war Sabbat; «Einen Brei hat er mir auf die Augen gelegt, und ich wusch mich, und ich sehe»",
+      "ref": "JHN.9.13-JHN.9.15",
+      "role": "Verhör"
+     },
+     {
+      "label": "Zwei Stimmen der Pharisäer",
+      "ref": "JHN.9.16",
+      "role": "Spaltung",
+      "child": "s2"
+     },
+     {
+      "label": "«Was sagst du über ihn?» – «Er ist ein Prophet.»",
+      "ref": "JHN.9.17",
+      "role": "Bekenntnis"
+     },
+     {
+      "label": "Die Juden rufen die Eltern: «Ist das euer Sohn …?» – «Wir wissen, dass das unser Sohn ist … wie er aber jetzt sieht, wissen wir nicht … fragt ihn»",
+      "ref": "JHN.9.18-JHN.9.21",
+      "role": "Eltern"
+     },
+     {
+      "label": "Denn die Juden hatten schon beschlossen: Wer ihn als Christus bekennt, wird aus der Synagoge ausgeschlossen; darum «Er ist alt genug, fragt ihn!»",
+      "ref": "JHN.9.22-JHN.9.23",
+      "role": "Begründung (Erzähler)"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-GRUPPE-PHARISAEER",
+       "to": "FIG-ROLLE-BLINDER",
+       "ref": "JHN.9.15-JHN.9.17"
+      },
+      {
+       "who": "FIG-ROLLE-BLINDER",
+       "to": "FIG-GRUPPE-PHARISAEER",
+       "ref": "JHN.9.15-JHN.9.17"
+      },
+      {
+       "who": "die Juden",
+       "to": "die Eltern",
+       "ref": "JHN.9.19"
+      },
+      {
+       "who": "die Eltern",
+       "to": "die Juden",
+       "ref": "JHN.9.20-JHN.9.21"
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "«Die Juden» meint bei Johannes oft die führenden Kreise in Jerusalem; im Bild als neutrale Gruppe ohne Merkmale einer Volksgruppe."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "zwei Stimmen",
+    "range": "JHN.9.16",
+    "elements": [
+     {
+      "label": "«Dieser Mensch ist nicht von Gott, denn er hält den Sabbat nicht.»",
+      "ref": "JHN.9.16",
+      "role": "einige"
+     },
+     {
+      "label": "«Wie kann ein sündiger Mensch solche Zeichen tun?»",
+      "ref": "JHN.9.16",
+      "role": "andere"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "JHN.9.13-JHN.9.17",
+   "text_de": "Am Sabbat: «Dieser Mensch ist nicht von Gott, denn er hält den Sabbat nicht.» – «Wie kann ein sündiger Mensch solche Zeichen tun?» – Spaltung; der Mann: «Er ist ein Prophet.»",
+   "reason_de": "Verhör und Spaltung (Kriterien 1 und 2).",
+   "recognition_de": "Der Geheilte vor den Pharisäern.",
+   "keywords": [
+    "Es war aber Sabbat",
+    "Dieser Mensch ist nicht von Gott, denn er hält den Sabbat nicht",
+    "Wie kann ein sündiger Mensch solche Zeichen tun?",
+    "Er ist ein Prophet"
+   ]
+  },
+  {
+   "reference": "JHN.9.18-JHN.9.23",
+   "text_de": "Die Eltern: «Wir wissen, dass das unser Sohn ist und dass er blind geboren wurde … Er ist alt genug, fragt ihn!» – weil sie die Juden fürchten: Wer ihn als Christus bekennt, wird aus der Synagoge ausgeschlossen.",
+   "reason_de": "Zeugen und Furcht (Kriterium 3).",
+   "recognition_de": "Die Eltern vor den Juden.",
+   "keywords": [
+    "Wir wissen, dass das unser Sohn ist und dass er blind geboren wurde",
+    "Er ist alt genug, fragt ihn!",
+    "aus der Synagoge ausgeschlossen"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Die Wiederholung des Hergangs ([[JHN.9.15]]) – im Bild knapp"
+ ],
+ "persons": [
+  "FIG-ROLLE-BLINDER",
+  "FIG-GRUPPE-PHARISAEER",
+  "FIG-GRUPPE-MENGE",
+  "FIG-ROLLE-MUTTER",
+  "FIG-ROLLE-VATER"
+ ],
+ "places": [
+  "FIG-ORT-SYNAGOGE"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "JHN.9.13-JHN.9.23",
+   "fingerprint": "9566e9d38ea6ade5"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Joh 8–14 mit 7,53–8,11 nach Joh 1–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

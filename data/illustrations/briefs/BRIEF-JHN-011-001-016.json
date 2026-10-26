@@ -11,177 +11,196 @@
   "panels": [
     {
       "n": 1,
-      "reference": "JHN.11.1-JHN.11.4",
+      "reference": "JHN.11.1-JHN.11.6",
       "figures": [
-        "FIG-ROLLE-BOTE",
+        "FIG-LAZARUS",
+        "FIG-MARTA",
         "FIG-JESUS"
       ],
       "objects": [],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-KRANK"
+      ],
       "speech": [
         {
-          "from": "FIG-ROLLE-BOTE",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-LAZARUS",
-            "FIG-ZEICHEN-KRANK"
-          ]
-        },
-        {
           "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-BOTE",
-          "icons": [
-            "FIG-ZEICHEN-KRANK",
-            "FIG-ZEICHEN-LICHT"
-          ]
+          "to": "FIG-JESUS",
+          "icons": [],
+          "word": {
+            "de": "Diese Krankheit führt nicht zum Tod, sondern sie dient der Herrlichkeit Gottes.",
+            "gsw": "Die Chranket füert nöd zum Tod, sondern si dient de Herrlichkeit vo Gott."
+          }
         }
       ],
-      "action_de": "Lazarus aus Betanien ist krank. Seine Schwestern Marta und Maria lassen Jesus sagen: Der, den du lieb hast, ist krank. Jesus sagt: Diese Krankheit führt nicht zum Tod, sondern dient der Herrlichkeit Gottes.",
+      "action_de": "Lazarus aus Betanien ist krank; seine Schwestern lassen Jesus sagen: «Herr, sieh, der, den du lieb hast, ist krank.» Jesus sagt: «Diese Krankheit führt nicht zum Tod, sondern sie dient der Herrlichkeit Gottes»; er bleibt noch zwei Tage, wo er ist.",
+      "keywords": {
+        "de": "Herr, sieh, der, den du lieb hast, ist krank",
+        "gsw": "Herr, lueg, dä, won du gärn häsch, isch chrank"
+      },
+      "names": {
+        "FIG-LAZARUS": {
+          "de": "Lazarus",
+          "gsw": "Lazarus"
+        },
+        "FIG-MARTA": {
+          "de": "Marta",
+          "gsw": "Marta"
+        }
+      },
       "stage": {
+        "trenner": true,
+        "split": 2,
+        "pose": {
+          "FIG-LAZARUS": "lie"
+        },
+        "at": {
+          "FIG-ZEICHEN-KRANK": "FIG-LAZARUS"
+        },
         "mood": {
-          "FIG-ROLLE-BOTE": "worried"
+          "FIG-LAZARUS": "pain",
+          "FIG-MARTA": "worried",
+          "FIG-JESUS": "calm"
+        },
+        "x": {
+          "FIG-LAZARUS": 42,
+          "FIG-MARTA": 96,
+          "FIG-JESUS": 150
         }
       }
     },
     {
       "n": 2,
-      "reference": "JHN.11.5-JHN.11.10",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF"
-      ],
+      "reference": "JHN.11.11-JHN.11.15",
+      "figures": [],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-TAGE"
-      ],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-ZEICHEN-NACHFOLGEN",
-            "FIG-ZEICHEN-LICHT"
-          ]
+      "signs": [],
+      "speech": [],
+      "action_de": "«Lazarus, unser Freund, ist eingeschlafen; aber ich gehe hin, um ihn aufzuwecken.» Die Jünger: «Herr, wenn er eingeschlafen ist, wird er gesund werden.» Jesus hatte aber von seinem Tod gesprochen; da sagt er offen: «Lazarus ist gestorben.»",
+      "keywords": {
+        "de": "Lazarus ist gestorben",
+        "gsw": "De Lazarus isch gstorbe"
+      },
+      "diagram": {
+        "visual": "levels",
+        "span": 2,
+        "speaker": "FIG-JESUS",
+        "title": {
+          "de": "Lazarus, unser Freund, ist eingeschlafen; aber ich gehe hin, um ihn aufzuwecken.",
+          "gsw": "De Lazarus, üse Fründ, isch iigschlaafe; aber ich gaa, zum en ufwecke."
         },
-        {
-          "from": "FIG-GRUPPE-ZWOELF",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-OBJ-STEINE",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
-        }
-      ],
-      "action_de": "Jesus liebt Marta, Maria und Lazarus, bleibt aber noch zwei Tage. Dann sagt er: Lasst uns wieder nach Judäa gehen! Die Jünger: Eben noch wollten sie dich dort steinigen. Jesus: Wer am Tag umhergeht, stösst nicht an.",
-      "stage": {
-        "count": {
-          "FIG-ZEICHEN-TAGE": 2
+        "top_label": {
+          "de": "Die Jünger verstehen:",
+          "gsw": "D Jünger verstönd:"
         },
-        "mood": {
-          "FIG-GRUPPE-ZWOELF": "worried"
+        "top": [
+          {
+            "a": {
+              "de": "«Herr, wenn er eingeschlafen ist, wird er gesund werden.»",
+              "gsw": "«Herr, wänn er iigschlaafe isch, wird er gsund.»"
+            },
+            "icons": [
+              "FIG-ZEICHEN-SCHLAFEN",
+              "FIG-ZEICHEN-GESUND"
+            ],
+            "who": "FIG-GRUPPE-JUENGER"
+          }
+        ],
+        "bottom_label": {
+          "de": "Jesus hatte von seinem Tod gesprochen:",
+          "gsw": "De Jesus hät vo sim Tod gredt:"
         },
-        "air_x": 74,
-        "air_y": 84
+        "bottom": [
+          {
+            "a": {
+              "de": "«Lazarus ist gestorben,",
+              "gsw": "«De Lazarus isch gstorbe,"
+            },
+            "icons": [
+              "FIG-ZEICHEN-VERSTORBEN"
+            ],
+            "tone": "new"
+          },
+          {
+            "a": {
+              "de": "und ich freue mich euretwegen, dass ich nicht dort war, damit ihr glaubt.»",
+              "gsw": "und ich freu mich wäge eu, dass ich nöd dört gsii bi, demit ir glaubed.»"
+            },
+            "icons": [
+              "FIG-ZEICHEN-GLAUBEN",
+              "FIG-GRUPPE-JUENGER"
+            ]
+          }
+        ]
       }
     },
     {
       "n": 3,
-      "reference": "JHN.11.11-JHN.11.15",
+      "reference": "JHN.11.7-JHN.11.16",
       "figures": [
         "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF"
-      ],
-      "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-NICHT-VERSTEHEN"
-      ],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-LAZARUS",
-            "FIG-ZEICHEN-SCHLAFEN"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-LAZARUS",
-            "FIG-ZEICHEN-TOD"
-          ]
-        }
-      ],
-      "action_de": "Jesus sagt: Lazarus ist eingeschlafen; ich gehe, ihn aufzuwecken. Die Jünger verstehen es als Schlaf. Da sagt er offen: Lazarus ist gestorben.",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-ZWOELF": "pensive",
-          "FIG-JESUS": "earnest"
-        },
-        "at": {
-          "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-GRUPPE-ZWOELF"
-        }
-      }
-    },
-    {
-      "n": 4,
-      "reference": "JHN.11.16",
-      "figures": [
         "FIG-THOMAS",
-        "FIG-GRUPPE-ZWOELF"
+        "FIG-GRUPPE-JUENGER"
       ],
       "objects": [],
       "signs": [],
       "speech": [
         {
           "from": "FIG-THOMAS",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-ZEICHEN-NACHFOLGEN",
-            "FIG-ZEICHEN-TOD"
-          ]
+          "to": "FIG-GRUPPE-JUENGER",
+          "icons": [],
+          "word": {
+            "de": "Lasst auch uns gehen, damit wir mit ihm sterben!",
+            "gsw": "Mir gönd au, demit mir mit ihm stärbed!"
+          }
         }
       ],
-      "action_de": "Thomas sagt zu den anderen Jüngern: Lasst auch uns gehen, damit wir mit ihm sterben!",
+      "action_de": "Die Jünger erinnern Jesus daran, dass man ihn eben noch steinigen wollte; doch er will nach Judäa gehen. Thomas sagt zu den Mitjüngern: «Lasst auch uns gehen, damit wir mit ihm sterben!»",
+      "keywords": {
+        "de": "eben noch suchten die Juden dich zu steinigen",
+        "gsw": "grad no händ d Jude gsuecht, dich z steinige"
+      },
+      "names": {
+        "FIG-THOMAS": {
+          "de": "Thomas",
+          "gsw": "Thomas"
+        }
+      },
       "stage": {
         "mood": {
+          "FIG-JESUS": "calm",
           "FIG-THOMAS": "determined",
-          "FIG-GRUPPE-ZWOELF": "worried"
+          "FIG-GRUPPE-JUENGER": "worried"
+        },
+        "x": {
+          "FIG-JESUS": 30,
+          "FIG-THOMAS": 96,
+          "FIG-GRUPPE-JUENGER": 154
         }
       }
     }
   ],
   "actions_de": [
-    "Lazarus aus Betanien ist krank. Seine Schwestern Marta und Maria lassen Jesus sagen: Der, den du lieb hast, ist krank. Jesus sagt: Diese Krankheit führt nicht zum Tod, sondern dient der Herrlichkeit Gottes.",
-    "Jesus liebt Marta, Maria und Lazarus, bleibt aber noch zwei Tage. Dann sagt er: Lasst uns wieder nach Judäa gehen! Die Jünger: Eben noch wollten sie dich dort steinigen. Jesus: Wer am Tag umhergeht, stösst nicht an.",
-    "Jesus sagt: Lazarus ist eingeschlafen; ich gehe, ihn aufzuwecken. Die Jünger verstehen es als Schlaf. Da sagt er offen: Lazarus ist gestorben.",
-    "Thomas sagt zu den anderen Jüngern: Lasst auch uns gehen, damit wir mit ihm sterben!"
+    "Lazarus aus Betanien ist krank; seine Schwestern lassen Jesus sagen: «Herr, sieh, der, den du lieb hast, ist krank.» Jesus sagt: «Diese Krankheit führt nicht zum Tod, sondern sie dient der Herrlichkeit Gottes»; er bleibt noch zwei Tage, wo er ist.",
+    "«Lazarus, unser Freund, ist eingeschlafen; aber ich gehe hin, um ihn aufzuwecken.» Die Jünger: «Herr, wenn er eingeschlafen ist, wird er gesund werden.» Jesus hatte aber von seinem Tod gesprochen; da sagt er offen: «Lazarus ist gestorben.»",
+    "Die Jünger erinnern Jesus daran, dass man ihn eben noch steinigen wollte; doch er will nach Judäa gehen. Thomas sagt zu den Mitjüngern: «Lasst auch uns gehen, damit wir mit ihm sterben!»"
   ],
   "captions_de": [
-    "Die Nachricht: Ein Bote (Brief in der Hand) meldet: Lazarus ist krank (Liegender); Jesus antwortet: Die Krankheit dient der Herrlichkeit Gottes (Licht).",
-    "Zurück nach Judäa? Nach zwei Tagen (Sonnen) sagt Jesus: Lasst uns gehen – wer im Licht geht, stösst nicht an (zwei gehende Personen, Licht); die Jünger fragen: Und die Steine?",
-    "Eingeschlafen: Jesus sagt: Lazarus schläft (Mond); die Jünger verstehen nicht (Nebel mit Fragezeichen); dann offen (zweite Blase): Lazarus ist tot (Totenkopf).",
-    "Thomas: Lasst uns mitgehen (zwei gehende Personen) und mit ihm sterben (Totenkopf)."
+    "Zwei Orte (gestrichelte Trennlinie): links in Betanien Lazarus krank auf der Matte, seine Schwester Marta (Namen); rechts Jesus, wo er ist: «Diese Krankheit führt nicht zum Tod, sondern sie dient der Herrlichkeit Gottes.» (Totenkopf, Verbotszeichen); im Band die Botschaft der Schwestern.",
+    "Schlaf ↔ Tod (zwei Ebenen, Bild Jesus, Titel «Lazarus, unser Freund, ist eingeschlafen; aber ich gehe hin, um ihn aufzuwecken.»): oben, wie die Jünger verstehen: «Herr, wenn er eingeschlafen ist, wird er gesund werden.» (schlafen, gesund); unten, hervorgehoben, wie es gemeint ist: «Lazarus ist gestorben» (gestorben) – «damit ihr glaubt» (glauben).",
+    "Thomas: Thomas (Name) sagt zu den anderen Jüngern: «Lasst auch uns gehen, damit wir mit ihm sterben!» (Weg, Tod); im Band die Warnung der Jünger: Eben noch suchten die Juden dich zu steinigen."
   ],
-  "interpretation_note_de": "Den Boten nennt der Text nicht ausdrücklich: Die Schwestern «sandten» zu Jesus ([[JHN.11.3]]). Die Herrlichkeit Gottes ([[JHN.11.4]]) erscheint als Licht. Mit «ihm» meint Thomas wohl Jesus ([[JHN.11.16]]).",
+  "interpretation_note_de": "Drei Felder nach dem Ablauf ([[JHN.11.1-JHN.11.16]]): die Botschaft der Schwestern und Jesu Wort, getrennt durch eine Linie (Betanien ↔ der Ort, wo Jesus ist), das Missverständnis «eingeschlafen ↔ gestorben» als zwei Ebenen, dann Thomas; die Warnung der Jünger steht im Band. Wie die Botschaft überbracht wurde, sagt der Text nicht; es ist kein Bote gezeichnet, und von den Schwestern steht Marta für beide. Das Bildwort von Tag und Nacht ([[JHN.11.9-JHN.11.10]]) steht in der Struktur, nicht im Bild.",
   "basis": [
     {
       "record": "TU-JHN-011-001-016",
       "field": "summary",
-      "fingerprint": "3aea090262c5f15d"
+      "fingerprint": "cf273bf36a8bcba2"
     },
     {
       "record": "TRANS-JHN-011-001-057-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.11.1-JHN.11.4",
-      "fingerprint": "b19df5f3177eb4d5"
-    },
-    {
-      "record": "TRANS-JHN-011-001-057-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "JHN.11.5-JHN.11.10",
-      "fingerprint": "857475ba4fe0cbbd"
+      "reference": "JHN.11.1-JHN.11.6",
+      "fingerprint": "3543b6f763d1eb70"
     },
     {
       "record": "TRANS-JHN-011-001-057-DE-WORKING",
@@ -192,12 +211,12 @@
     {
       "record": "TRANS-JHN-011-001-057-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.11.16",
-      "fingerprint": "0e01c4bf091060a4"
+      "reference": "JHN.11.7-JHN.11.16",
+      "fingerprint": "239c5248e59092e3"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -361,6 +380,789 @@
           "Zurück nach Judäa? Nach zwei Tagen (Sonnen) sagt Jesus: Lasst uns gehen – wer im Licht geht, stösst nicht an (Fussspuren, Licht); die Jünger fragen: Und die Steine?",
           "Eingeschlafen: Jesus sagt: Lazarus schläft (Mond); die Jünger verstehen nicht (Nebel mit Fragezeichen); dann offen (zweite Blase): Lazarus ist tot (verschlossenes Grab).",
           "Thomas: Lasst uns mitgehen (Fussspuren) und mit ihm sterben (Grab)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-JHN-011-001-016",
+            "field": "summary",
+            "fingerprint": "3aea090262c5f15d"
+          },
+          {
+            "record": "TRANS-JHN-011-001-057-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.11.1-JHN.11.4",
+            "fingerprint": "b19df5f3177eb4d5"
+          },
+          {
+            "record": "TRANS-JHN-011-001-057-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.11.5-JHN.11.10",
+            "fingerprint": "857475ba4fe0cbbd"
+          },
+          {
+            "record": "TRANS-JHN-011-001-057-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.11.11-JHN.11.15",
+            "fingerprint": "f7e5a3833dea660b"
+          },
+          {
+            "record": "TRANS-JHN-011-001-057-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.11.16",
+            "fingerprint": "0e01c4bf091060a4"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.11.1-JHN.11.4",
+            "figures": [
+              "FIG-ROLLE-BOTE",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-BOTE",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-LAZARUS",
+                  "FIG-ZEICHEN-KRANK"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-BOTE",
+                "icons": [
+                  "FIG-ZEICHEN-KRANK",
+                  "FIG-ZEICHEN-LICHT"
+                ]
+              }
+            ],
+            "action_de": "Lazarus aus Betanien ist krank. Seine Schwestern Marta und Maria lassen Jesus sagen: Der, den du lieb hast, ist krank. Jesus sagt: Diese Krankheit führt nicht zum Tod, sondern dient der Herrlichkeit Gottes.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-BOTE": "worried"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.11.5-JHN.11.10",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-TAGE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-NACHFOLGEN",
+                  "FIG-ZEICHEN-LICHT"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-ZWOELF",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-OBJ-STEINE",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus liebt Marta, Maria und Lazarus, bleibt aber noch zwei Tage. Dann sagt er: Lasst uns wieder nach Judäa gehen! Die Jünger: Eben noch wollten sie dich dort steinigen. Jesus: Wer am Tag umhergeht, stösst nicht an.",
+            "stage": {
+              "count": {
+                "FIG-ZEICHEN-TAGE": 2
+              },
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "worried"
+              },
+              "air_x": 74,
+              "air_y": 84
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.11.11-JHN.11.15",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-NICHT-VERSTEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-LAZARUS",
+                  "FIG-ZEICHEN-SCHLAFEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-LAZARUS",
+                  "FIG-ZEICHEN-TOD"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: Lazarus ist eingeschlafen; ich gehe, ihn aufzuwecken. Die Jünger verstehen es als Schlaf. Da sagt er offen: Lazarus ist gestorben.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "pensive",
+                "FIG-JESUS": "earnest"
+              },
+              "at": {
+                "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-GRUPPE-ZWOELF"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.11.16",
+            "figures": [
+              "FIG-THOMAS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-THOMAS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-NACHFOLGEN",
+                  "FIG-ZEICHEN-TOD"
+                ]
+              }
+            ],
+            "action_de": "Thomas sagt zu den anderen Jüngern: Lasst auch uns gehen, damit wir mit ihm sterben!",
+            "stage": {
+              "mood": {
+                "FIG-THOMAS": "determined",
+                "FIG-GRUPPE-ZWOELF": "worried"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Lazarus aus Betanien ist krank. Seine Schwestern Marta und Maria lassen Jesus sagen: Der, den du lieb hast, ist krank. Jesus sagt: Diese Krankheit führt nicht zum Tod, sondern dient der Herrlichkeit Gottes.",
+          "Jesus liebt Marta, Maria und Lazarus, bleibt aber noch zwei Tage. Dann sagt er: Lasst uns wieder nach Judäa gehen! Die Jünger: Eben noch wollten sie dich dort steinigen. Jesus: Wer am Tag umhergeht, stösst nicht an.",
+          "Jesus sagt: Lazarus ist eingeschlafen; ich gehe, ihn aufzuwecken. Die Jünger verstehen es als Schlaf. Da sagt er offen: Lazarus ist gestorben.",
+          "Thomas sagt zu den anderen Jüngern: Lasst auch uns gehen, damit wir mit ihm sterben!"
+        ],
+        "captions_de": [
+          "Die Nachricht: Ein Bote (Brief in der Hand) meldet: Lazarus ist krank (Liegender); Jesus antwortet: Die Krankheit dient der Herrlichkeit Gottes (Licht).",
+          "Zurück nach Judäa? Nach zwei Tagen (Sonnen) sagt Jesus: Lasst uns gehen – wer im Licht geht, stösst nicht an (zwei gehende Personen, Licht); die Jünger fragen: Und die Steine?",
+          "Eingeschlafen: Jesus sagt: Lazarus schläft (Mond); die Jünger verstehen nicht (Nebel mit Fragezeichen); dann offen (zweite Blase): Lazarus ist tot (Totenkopf).",
+          "Thomas: Lasst uns mitgehen (zwei gehende Personen) und mit ihm sterben (Totenkopf)."
+        ],
+        "interpretation_note_de": "Den Boten nennt der Text nicht ausdrücklich: Die Schwestern «sandten» zu Jesus ([[JHN.11.3]]). Die Herrlichkeit Gottes ([[JHN.11.4]]) erscheint als Licht. Mit «ihm» meint Thomas wohl Jesus ([[JHN.11.16]]).",
+        "basis": [
+          {
+            "record": "TU-JHN-011-001-016",
+            "field": "summary",
+            "fingerprint": "cf273bf36a8bcba2"
+          },
+          {
+            "record": "TRANS-JHN-011-001-057-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.11.1-JHN.11.4",
+            "fingerprint": "b19df5f3177eb4d5"
+          },
+          {
+            "record": "TRANS-JHN-011-001-057-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.11.5-JHN.11.10",
+            "fingerprint": "857475ba4fe0cbbd"
+          },
+          {
+            "record": "TRANS-JHN-011-001-057-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.11.11-JHN.11.15",
+            "fingerprint": "f7e5a3833dea660b"
+          },
+          {
+            "record": "TRANS-JHN-011-001-057-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.11.16",
+            "fingerprint": "0e01c4bf091060a4"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.11.1-JHN.11.6",
+            "figures": [
+              "FIG-MARTA",
+              "FIG-LAZARUS",
+              "FIG-MARIA-BETANIEN",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-KRANK"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [],
+                "word": {
+                  "de": "Diese Krankheit führt nicht zum Tod, sondern sie dient der Herrlichkeit Gottes.",
+                  "gsw": "Die Chranket füert nöd zum Tod, sondern si dient de Herrlichkeit vo Gott."
+                }
+              }
+            ],
+            "action_de": "Lazarus aus Betanien ist krank; seine Schwestern lassen Jesus sagen: «Herr, sieh, der, den du lieb hast, ist krank.» Jesus sagt: «Diese Krankheit führt nicht zum Tod, sondern sie dient der Herrlichkeit Gottes»; er bleibt noch zwei Tage, wo er ist.",
+            "keywords": {
+              "de": "Herr, sieh, der, den du lieb hast, ist krank",
+              "gsw": "Herr, lueg, dä, won du gärn häsch, isch chrank"
+            },
+            "names": {
+              "FIG-LAZARUS": {
+                "de": "Lazarus",
+                "gsw": "Lazarus"
+              },
+              "FIG-MARTA": {
+                "de": "Marta",
+                "gsw": "Marta"
+              },
+              "FIG-MARIA-BETANIEN": {
+                "de": "Maria",
+                "gsw": "Maria"
+              }
+            },
+            "stage": {
+              "trenner": true,
+              "split": 3,
+              "pose": {
+                "FIG-LAZARUS": "lie"
+              },
+              "at": {
+                "FIG-ZEICHEN-KRANK": "FIG-LAZARUS"
+              },
+              "mood": {
+                "FIG-LAZARUS": "pain",
+                "FIG-MARTA": "worried",
+                "FIG-MARIA-BETANIEN": "worried",
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.11.11-JHN.11.15",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "«Lazarus, unser Freund, ist eingeschlafen; aber ich gehe hin, um ihn aufzuwecken.» Die Jünger: «Herr, wenn er eingeschlafen ist, wird er gesund werden.» Jesus hatte aber von seinem Tod gesprochen; da sagt er offen: «Lazarus ist gestorben.»",
+            "keywords": {
+              "de": "Lazarus ist gestorben",
+              "gsw": "De Lazarus isch gstorbe"
+            },
+            "diagram": {
+              "visual": "levels",
+              "span": 2,
+              "speaker": "FIG-JESUS",
+              "title": {
+                "de": "Lazarus, unser Freund, ist eingeschlafen; aber ich gehe hin, um ihn aufzuwecken.",
+                "gsw": "De Lazarus, üse Fründ, isch iigschlaafe; aber ich gaa, zum en ufwecke."
+              },
+              "top_label": {
+                "de": "Die Jünger verstehen:",
+                "gsw": "D Jünger verstönd:"
+              },
+              "top": [
+                {
+                  "a": {
+                    "de": "«Herr, wenn er eingeschlafen ist, wird er gesund werden.»",
+                    "gsw": "«Herr, wänn er iigschlaafe isch, wird er gsund.»"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-SCHLAFEN",
+                    "FIG-ZEICHEN-GESUND"
+                  ],
+                  "who": "FIG-GRUPPE-JUENGER"
+                }
+              ],
+              "bottom_label": {
+                "de": "Jesus hatte von seinem Tod gesprochen:",
+                "gsw": "De Jesus hät vo sim Tod gredt:"
+              },
+              "bottom": [
+                {
+                  "a": {
+                    "de": "«Lazarus ist gestorben,",
+                    "gsw": "«De Lazarus isch gstorbe,"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-VERSTORBEN"
+                  ],
+                  "tone": "new"
+                },
+                {
+                  "a": {
+                    "de": "und ich freue mich euretwegen, dass ich nicht dort war, damit ihr glaubt.»",
+                    "gsw": "und ich freu mich wäge eu, dass ich nöd dört gsii bi, demit ir glaubed.»"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-GLAUBEN",
+                    "FIG-GRUPPE-JUENGER"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.11.7-JHN.11.16",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-THOMAS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-THOMAS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [],
+                "word": {
+                  "de": "Lasst auch uns gehen, damit wir mit ihm sterben!",
+                  "gsw": "Mir gönd au, demit mir mit ihm stärbed!"
+                }
+              }
+            ],
+            "action_de": "Die Jünger erinnern Jesus daran, dass man ihn eben noch steinigen wollte; doch er will nach Judäa gehen. Thomas sagt zu den Mitjüngern: «Lasst auch uns gehen, damit wir mit ihm sterben!»",
+            "keywords": {
+              "de": "eben noch suchten die Juden dich zu steinigen",
+              "gsw": "grad no händ d Jude gsuecht, dich z steinige"
+            },
+            "names": {
+              "FIG-THOMAS": {
+                "de": "Thomas",
+                "gsw": "Thomas"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-THOMAS": "determined",
+                "FIG-GRUPPE-JUENGER": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-THOMAS": 96,
+                "FIG-GRUPPE-JUENGER": 154
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Zwei Orte (gestrichelte Trennlinie): links in Betanien Lazarus krank auf der Matte, seine Schwestern Marta und Maria (Namen); rechts Jesus mit den Jüngern: «Diese Krankheit führt nicht zum Tod, sondern sie dient der Herrlichkeit Gottes.» (Totenkopf, Verbotszeichen); im Band die Botschaft der Schwestern.",
+          "Schlaf ↔ Tod (zwei Ebenen, Bild Jesus, Titel «Lazarus, unser Freund, ist eingeschlafen; aber ich gehe hin, um ihn aufzuwecken.»): oben, wie die Jünger verstehen: «Herr, wenn er eingeschlafen ist, wird er gesund werden.» (schlafen, gesund); unten, hervorgehoben, wie es gemeint ist: «Lazarus ist gestorben» (gestorben) – «damit ihr glaubt» (glauben).",
+          "Thomas: Thomas (Name) sagt zu den anderen Jüngern: «Lasst auch uns gehen, damit wir mit ihm sterben!» (Weg, Tod); im Band die Warnung der Jünger: Eben noch suchten die Juden dich zu steinigen."
+        ],
+        "interpretation_note_de": "Drei Felder nach dem Ablauf ([[JHN.11.1-JHN.11.16]]): die Botschaft der Schwestern und Jesu Wort, getrennt durch eine Linie (Betanien ↔ der Ort, wo Jesus ist), das Missverständnis «eingeschlafen ↔ gestorben» als zwei Ebenen, dann Thomas; die Warnung der Jünger steht im Band. Wie die Botschaft überbracht wurde, sagt der Text nicht; es ist kein Bote gezeichnet. Das Bildwort von Tag und Nacht ([[JHN.11.9-JHN.11.10]]) steht in der Struktur, nicht im Bild."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.11.1-JHN.11.6",
+            "figures": [
+              "FIG-MARTA",
+              "FIG-LAZARUS",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-KRANK"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [],
+                "word": {
+                  "de": "Diese Krankheit führt nicht zum Tod, sondern sie dient der Herrlichkeit Gottes.",
+                  "gsw": "Die Chranket füert nöd zum Tod, sondern si dient de Herrlichkeit vo Gott."
+                }
+              }
+            ],
+            "action_de": "Lazarus aus Betanien ist krank; seine Schwestern lassen Jesus sagen: «Herr, sieh, der, den du lieb hast, ist krank.» Jesus sagt: «Diese Krankheit führt nicht zum Tod, sondern sie dient der Herrlichkeit Gottes»; er bleibt noch zwei Tage, wo er ist.",
+            "keywords": {
+              "de": "Herr, sieh, der, den du lieb hast, ist krank",
+              "gsw": "Herr, lueg, dä, won du gärn häsch, isch chrank"
+            },
+            "names": {
+              "FIG-LAZARUS": {
+                "de": "Lazarus",
+                "gsw": "Lazarus"
+              },
+              "FIG-MARTA": {
+                "de": "Marta",
+                "gsw": "Marta"
+              }
+            },
+            "stage": {
+              "trenner": true,
+              "split": 2,
+              "pose": {
+                "FIG-LAZARUS": "lie"
+              },
+              "at": {
+                "FIG-ZEICHEN-KRANK": "FIG-LAZARUS"
+              },
+              "mood": {
+                "FIG-LAZARUS": "pain",
+                "FIG-MARTA": "worried",
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "calm"
+              },
+              "x": {
+                "FIG-MARTA": 26,
+                "FIG-LAZARUS": 70,
+                "FIG-JESUS": 126,
+                "FIG-GRUPPE-JUENGER": 166
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.11.11-JHN.11.15",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "«Lazarus, unser Freund, ist eingeschlafen; aber ich gehe hin, um ihn aufzuwecken.» Die Jünger: «Herr, wenn er eingeschlafen ist, wird er gesund werden.» Jesus hatte aber von seinem Tod gesprochen; da sagt er offen: «Lazarus ist gestorben.»",
+            "keywords": {
+              "de": "Lazarus ist gestorben",
+              "gsw": "De Lazarus isch gstorbe"
+            },
+            "diagram": {
+              "visual": "levels",
+              "span": 2,
+              "speaker": "FIG-JESUS",
+              "title": {
+                "de": "Lazarus, unser Freund, ist eingeschlafen; aber ich gehe hin, um ihn aufzuwecken.",
+                "gsw": "De Lazarus, üse Fründ, isch iigschlaafe; aber ich gaa, zum en ufwecke."
+              },
+              "top_label": {
+                "de": "Die Jünger verstehen:",
+                "gsw": "D Jünger verstönd:"
+              },
+              "top": [
+                {
+                  "a": {
+                    "de": "«Herr, wenn er eingeschlafen ist, wird er gesund werden.»",
+                    "gsw": "«Herr, wänn er iigschlaafe isch, wird er gsund.»"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-SCHLAFEN",
+                    "FIG-ZEICHEN-GESUND"
+                  ],
+                  "who": "FIG-GRUPPE-JUENGER"
+                }
+              ],
+              "bottom_label": {
+                "de": "Jesus hatte von seinem Tod gesprochen:",
+                "gsw": "De Jesus hät vo sim Tod gredt:"
+              },
+              "bottom": [
+                {
+                  "a": {
+                    "de": "«Lazarus ist gestorben,",
+                    "gsw": "«De Lazarus isch gstorbe,"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-VERSTORBEN"
+                  ],
+                  "tone": "new"
+                },
+                {
+                  "a": {
+                    "de": "und ich freue mich euretwegen, dass ich nicht dort war, damit ihr glaubt.»",
+                    "gsw": "und ich freu mich wäge eu, dass ich nöd dört gsii bi, demit ir glaubed.»"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-GLAUBEN",
+                    "FIG-GRUPPE-JUENGER"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.11.7-JHN.11.16",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-THOMAS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-THOMAS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [],
+                "word": {
+                  "de": "Lasst auch uns gehen, damit wir mit ihm sterben!",
+                  "gsw": "Mir gönd au, demit mir mit ihm stärbed!"
+                }
+              }
+            ],
+            "action_de": "Die Jünger erinnern Jesus daran, dass man ihn eben noch steinigen wollte; doch er will nach Judäa gehen. Thomas sagt zu den Mitjüngern: «Lasst auch uns gehen, damit wir mit ihm sterben!»",
+            "keywords": {
+              "de": "eben noch suchten die Juden dich zu steinigen",
+              "gsw": "grad no händ d Jude gsuecht, dich z steinige"
+            },
+            "names": {
+              "FIG-THOMAS": {
+                "de": "Thomas",
+                "gsw": "Thomas"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-THOMAS": "determined",
+                "FIG-GRUPPE-JUENGER": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-THOMAS": 96,
+                "FIG-GRUPPE-JUENGER": 154
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.11.1-JHN.11.6",
+            "figures": [
+              "FIG-LAZARUS",
+              "FIG-MARTA",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-KRANK"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [],
+                "word": {
+                  "de": "Diese Krankheit führt nicht zum Tod, sondern sie dient der Herrlichkeit Gottes.",
+                  "gsw": "Die Chranket füert nöd zum Tod, sondern si dient de Herrlichkeit vo Gott."
+                }
+              }
+            ],
+            "action_de": "Lazarus aus Betanien ist krank; seine Schwestern lassen Jesus sagen: «Herr, sieh, der, den du lieb hast, ist krank.» Jesus sagt: «Diese Krankheit führt nicht zum Tod, sondern sie dient der Herrlichkeit Gottes»; er bleibt noch zwei Tage, wo er ist.",
+            "keywords": {
+              "de": "Herr, sieh, der, den du lieb hast, ist krank",
+              "gsw": "Herr, lueg, dä, won du gärn häsch, isch chrank"
+            },
+            "names": {
+              "FIG-LAZARUS": {
+                "de": "Lazarus",
+                "gsw": "Lazarus"
+              },
+              "FIG-MARTA": {
+                "de": "Marta",
+                "gsw": "Marta"
+              }
+            },
+            "stage": {
+              "trenner": true,
+              "split": 2,
+              "pose": {
+                "FIG-LAZARUS": "lie"
+              },
+              "at": {
+                "FIG-ZEICHEN-KRANK": "FIG-LAZARUS"
+              },
+              "mood": {
+                "FIG-LAZARUS": "pain",
+                "FIG-MARTA": "worried",
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "calm"
+              },
+              "x": {
+                "FIG-LAZARUS": 42,
+                "FIG-MARTA": 96,
+                "FIG-JESUS": 140,
+                "FIG-GRUPPE-JUENGER": 172
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.11.11-JHN.11.15",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "«Lazarus, unser Freund, ist eingeschlafen; aber ich gehe hin, um ihn aufzuwecken.» Die Jünger: «Herr, wenn er eingeschlafen ist, wird er gesund werden.» Jesus hatte aber von seinem Tod gesprochen; da sagt er offen: «Lazarus ist gestorben.»",
+            "keywords": {
+              "de": "Lazarus ist gestorben",
+              "gsw": "De Lazarus isch gstorbe"
+            },
+            "diagram": {
+              "visual": "levels",
+              "span": 2,
+              "speaker": "FIG-JESUS",
+              "title": {
+                "de": "Lazarus, unser Freund, ist eingeschlafen; aber ich gehe hin, um ihn aufzuwecken.",
+                "gsw": "De Lazarus, üse Fründ, isch iigschlaafe; aber ich gaa, zum en ufwecke."
+              },
+              "top_label": {
+                "de": "Die Jünger verstehen:",
+                "gsw": "D Jünger verstönd:"
+              },
+              "top": [
+                {
+                  "a": {
+                    "de": "«Herr, wenn er eingeschlafen ist, wird er gesund werden.»",
+                    "gsw": "«Herr, wänn er iigschlaafe isch, wird er gsund.»"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-SCHLAFEN",
+                    "FIG-ZEICHEN-GESUND"
+                  ],
+                  "who": "FIG-GRUPPE-JUENGER"
+                }
+              ],
+              "bottom_label": {
+                "de": "Jesus hatte von seinem Tod gesprochen:",
+                "gsw": "De Jesus hät vo sim Tod gredt:"
+              },
+              "bottom": [
+                {
+                  "a": {
+                    "de": "«Lazarus ist gestorben,",
+                    "gsw": "«De Lazarus isch gstorbe,"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-VERSTORBEN"
+                  ],
+                  "tone": "new"
+                },
+                {
+                  "a": {
+                    "de": "und ich freue mich euretwegen, dass ich nicht dort war, damit ihr glaubt.»",
+                    "gsw": "und ich freu mich wäge eu, dass ich nöd dört gsii bi, demit ir glaubed.»"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-GLAUBEN",
+                    "FIG-GRUPPE-JUENGER"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.11.7-JHN.11.16",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-THOMAS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-THOMAS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [],
+                "word": {
+                  "de": "Lasst auch uns gehen, damit wir mit ihm sterben!",
+                  "gsw": "Mir gönd au, demit mir mit ihm stärbed!"
+                }
+              }
+            ],
+            "action_de": "Die Jünger erinnern Jesus daran, dass man ihn eben noch steinigen wollte; doch er will nach Judäa gehen. Thomas sagt zu den Mitjüngern: «Lasst auch uns gehen, damit wir mit ihm sterben!»",
+            "keywords": {
+              "de": "eben noch suchten die Juden dich zu steinigen",
+              "gsw": "grad no händ d Jude gsuecht, dich z steinige"
+            },
+            "names": {
+              "FIG-THOMAS": {
+                "de": "Thomas",
+                "gsw": "Thomas"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-THOMAS": "determined",
+                "FIG-GRUPPE-JUENGER": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-THOMAS": 96,
+                "FIG-GRUPPE-JUENGER": 154
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Zwei Orte (gestrichelte Trennlinie): links in Betanien Lazarus krank auf der Matte, seine Schwester Marta (Namen); rechts Jesus mit den Jüngern: «Diese Krankheit führt nicht zum Tod, sondern sie dient der Herrlichkeit Gottes.» (Totenkopf, Verbotszeichen); im Band die Botschaft der Schwestern.",
+          "Schlaf ↔ Tod (zwei Ebenen, Bild Jesus, Titel «Lazarus, unser Freund, ist eingeschlafen; aber ich gehe hin, um ihn aufzuwecken.»): oben, wie die Jünger verstehen: «Herr, wenn er eingeschlafen ist, wird er gesund werden.» (schlafen, gesund); unten, hervorgehoben, wie es gemeint ist: «Lazarus ist gestorben» (gestorben) – «damit ihr glaubt» (glauben).",
+          "Thomas: Thomas (Name) sagt zu den anderen Jüngern: «Lasst auch uns gehen, damit wir mit ihm sterben!» (Weg, Tod); im Band die Warnung der Jünger: Eben noch suchten die Juden dich zu steinigen."
         ]
       }
     }

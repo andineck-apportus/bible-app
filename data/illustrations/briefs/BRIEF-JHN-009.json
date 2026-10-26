@@ -20,44 +20,39 @@
         "FIG-ORT-SILOAM"
       ],
       "signs": [
-        "FIG-ZEICHEN-HEILEN"
+        "FIG-ZEICHEN-SEHEN"
       ],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-ROLLE-BLINDER",
-          "icons": [
-            "FIG-ORT-SILOAM"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Geh, wasch dich im Teich Siloam.",
+            "gsw": "Gang, wäsch di im Teich Siloam."
+          }
         }
       ],
-      "action_de": "Jesus heilt einen blind geborenen Menschen: Er streicht ihm einen Brei auf die Augen und schickt ihn zum Teich Siloam; er wäscht sich und kommt sehend zurück.",
+      "action_de": "Jesus sagt zu dem Blindgeborenen: «Geh, wasch dich im Teich Siloam»; er wäscht sich und kommt sehend zurück.",
+      "keywords": {
+        "de": "wusch sich und kam sehend zurück",
+        "gsw": "hät sich gwäsche und isch sehend zruggchoo"
+      },
       "stage": {
+        "at": {
+          "FIG-ZEICHEN-SEHEN": "FIG-ROLLE-BLINDER"
+        },
         "mood": {
-          "FIG-ROLLE-BLINDER": "sleep"
+          "FIG-JESUS": "calm",
+          "FIG-ROLLE-BLINDER": "delight"
         },
         "x": {
-          "FIG-JESUS": 40,
-          "FIG-ROLLE-BLINDER": 92
+          "FIG-JESUS": 46,
+          "FIG-ROLLE-BLINDER": 140
         },
-        "floor_x": {
-          "FIG-ORT-SILOAM": 126
-        },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-ROLLE-BLINDER",
-            "act"
-          ],
-          [
-            "FIG-ROLLE-BLINDER",
-            "FIG-ORT-SILOAM",
-            "go"
-          ]
-        ],
-        "beside": {
-          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-BLINDER"
-        }
+        "behind": [
+          "FIG-ORT-SILOAM"
+        ]
       }
     },
     {
@@ -65,40 +60,37 @@
       "reference": "JHN.9.13-JHN.9.23",
       "figures": [
         "FIG-GRUPPE-PHARISAEER",
-        "FIG-ROLLE-BLINDER"
+        "FIG-ROLLE-VATER",
+        "FIG-ROLLE-MUTTER"
       ],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-SEHEN"
-      ],
+      "signs": [],
       "speech": [
         {
-          "from": "FIG-GRUPPE-PHARISAEER",
-          "to": "FIG-ROLLE-BLINDER",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-SABBAT",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
-        },
-        {
-          "from": "FIG-ROLLE-BLINDER",
+          "from": "FIG-ROLLE-MUTTER",
           "to": "FIG-GRUPPE-PHARISAEER",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ROLLE-PROPHET",
-            "FIG-OBJ-SCHRIFTROLLE"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Er ist alt genug, fragt ihn!",
+            "gsw": "Er isch alt gnueg, fröged en!"
+          }
         }
       ],
-      "action_de": "Weil Jesus am Sabbat geheilt hat, befragen die Pharisäer den Geheilten (und seine Eltern); er nennt Jesus einen Propheten.",
+      "action_de": "Die Pharisäer sind gespalten; die Eltern sagen aus Furcht: «Er ist alt genug, fragt ihn!»",
+      "keywords": {
+        "de": "Und es gab eine Spaltung unter ihnen",
+        "gsw": "Und es hät e Spaltig under ine gää"
+      },
       "stage": {
         "mood": {
           "FIG-GRUPPE-PHARISAEER": "earnest",
-          "FIG-ROLLE-BLINDER": "determined"
+          "FIG-ROLLE-VATER": "fear",
+          "FIG-ROLLE-MUTTER": "fear"
         },
-        "at": {
-          "FIG-ZEICHEN-SEHEN": "FIG-ROLLE-BLINDER"
+        "x": {
+          "FIG-GRUPPE-PHARISAEER": 40,
+          "FIG-ROLLE-VATER": 116,
+          "FIG-ROLLE-MUTTER": 156
         }
       }
     },
@@ -109,9 +101,7 @@
         "FIG-GRUPPE-PHARISAEER",
         "FIG-ROLLE-BLINDER"
       ],
-      "objects": [
-        "FIG-ORT-SYNAGOGE"
-      ],
+      "objects": [],
       "signs": [
         "FIG-ZEICHEN-AUSSCHLUSS"
       ],
@@ -119,36 +109,29 @@
         {
           "from": "FIG-ROLLE-BLINDER",
           "to": "FIG-GRUPPE-PHARISAEER",
-          "icons": [
-            "FIG-ZEICHEN-BLIND",
-            "FIG-ZEICHEN-SEHEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Eines weiss ich: dass ich blind war und jetzt sehe.",
+            "gsw": "Eis weiss ich: dass ich blind gsii bi und jetzt gsehne."
+          }
         }
       ],
-      "action_de": "Beim zweiten Verhör bleibt er dabei: Ich war blind und sehe jetzt; da werfen sie ihn hinaus.",
+      "action_de": "Der Geheilte sagt: «Eines weiss ich: dass ich blind war und jetzt sehe»; sie werfen ihn hinaus.",
+      "keywords": {
+        "de": "Und sie warfen ihn hinaus",
+        "gsw": "Und si händ en usegworfe"
+      },
       "stage": {
-        "mood": {
-          "FIG-GRUPPE-PHARISAEER": "earnest",
-          "FIG-ROLLE-BLINDER": "determined"
-        },
-        "back_side": "left",
-        "x": {
-          "FIG-GRUPPE-PHARISAEER": 104,
-          "FIG-ROLLE-BLINDER": 164
-        },
         "at": {
           "FIG-ZEICHEN-AUSSCHLUSS": "FIG-ROLLE-BLINDER"
         },
-        "arrows": [
-          [
-            "FIG-ORT-SYNAGOGE",
-            "FIG-ROLLE-BLINDER",
-            "throw"
-          ]
-        ],
-        "before": true,
-        "pose": {
-          "FIG-ROLLE-BLINDER": "away"
+        "mood": {
+          "FIG-GRUPPE-PHARISAEER": "angry",
+          "FIG-ROLLE-BLINDER": "earnest"
+        },
+        "x": {
+          "FIG-GRUPPE-PHARISAEER": 50,
+          "FIG-ROLLE-BLINDER": 146
         }
       }
     },
@@ -160,58 +143,60 @@
         "FIG-ROLLE-BLINDER"
       ],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-GLAUBEN"
-      ],
+      "signs": [],
       "speech": [
         {
-          "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-BLINDER",
-          "icons": [
-            "FIG-ZEICHEN-GLAUBEN",
-            "FIG-JESUS",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
+          "from": "FIG-ROLLE-BLINDER",
+          "to": "FIG-JESUS",
+          "icons": [],
+          "word": {
+            "de": "Ich glaube, Herr!",
+            "gsw": "Ich glaube, Herr!"
+          }
         }
       ],
-      "action_de": "Jesus findet ihn und fragt, ob er an den Menschensohn glaube; er glaubt und fällt vor ihm nieder.",
+      "action_de": "Jesus findet ihn: «Glaubst du an den Menschensohn?» – «Ich glaube, Herr!» Er fällt vor ihm nieder.",
+      "keywords": {
+        "de": "Glaubst du an den Menschensohn?",
+        "gsw": "Glaubsch du a de Mänschesohn?"
+      },
       "stage": {
-        "mood": {
-          "FIG-ROLLE-BLINDER": "delight"
-        },
         "pose": {
           "FIG-ROLLE-BLINDER": "kneel"
         },
-        "signs_who": {
-          "FIG-ZEICHEN-GLAUBEN": [
-            "FIG-ROLLE-BLINDER"
-          ]
+        "mood": {
+          "FIG-JESUS": "calm",
+          "FIG-ROLLE-BLINDER": "delight"
+        },
+        "x": {
+          "FIG-JESUS": 54,
+          "FIG-ROLLE-BLINDER": 138
         }
       }
     }
   ],
   "actions_de": [
-    "Jesus heilt einen blind geborenen Menschen: Er streicht ihm einen Brei auf die Augen und schickt ihn zum Teich Siloam; er wäscht sich und kommt sehend zurück.",
-    "Weil Jesus am Sabbat geheilt hat, befragen die Pharisäer den Geheilten (und seine Eltern); er nennt Jesus einen Propheten.",
-    "Beim zweiten Verhör bleibt er dabei: Ich war blind und sehe jetzt; da werfen sie ihn hinaus.",
-    "Jesus findet ihn und fragt, ob er an den Menschensohn glaube; er glaubt und fällt vor ihm nieder."
+    "Jesus sagt zu dem Blindgeborenen: «Geh, wasch dich im Teich Siloam»; er wäscht sich und kommt sehend zurück.",
+    "Die Pharisäer sind gespalten; die Eltern sagen aus Furcht: «Er ist alt genug, fragt ihn!»",
+    "Der Geheilte sagt: «Eines weiss ich: dass ich blind war und jetzt sehe»; sie werfen ihn hinaus.",
+    "Jesus findet ihn: «Glaubst du an den Menschensohn?» – «Ich glaube, Herr!» Er fällt vor ihm nieder."
   ],
   "captions_de": [
-    "Jesus → Blinder → Siloam: Jesus berührt die Augen des Blinden (Pfeil zu ihm, Hand mit Lichtstrahlen) und schickt ihn zum Teich Siloam (Becken mit Stufen, gestrichelter Pfeil); dort wird er sehend.",
-    "Verhör: Die Pharisäer fragen nach Jesus und dem Sabbat (Kreise, der siebte golden); der Geheilte sagt: Jesus ist ein Prophet (Figur, Schriftrolle).",
-    "Hinausgeworfen: «Ich war blind und sehe» (Augen); sie werfen ihn aus der Synagoge hinaus (Bogen aus dem Haus, Synagoge mit rotem Sperrzeichen).",
-    "Ich glaube: Jesus fragt nach dem Glauben; der Geheilte kniet nieder (Herz mit Licht)."
+    "Siloam: Jesus sagt zum Blinden: «Geh, wasch dich im Teich Siloam.» (Teich, Wasser); er kommt sehend zurück (offene Augen).",
+    "Verhör: Die Eltern sagen zu den Pharisäern: «Er ist alt genug, fragt ihn!» (fragen); erschrockene Gesichter; im Band: Und es gab eine Spaltung unter ihnen.",
+    "Hinausgeworfen: Der Geheilte sagt: «Eines weiss ich: dass ich blind war und jetzt sehe.» (blind, sehen); die Pharisäer werfen ihn hinaus (Synagoge mit Sperrzeichen).",
+    "Bekenntnis: Der Geheilte kniet vor Jesus: «Ich glaube, Herr!» (Herz mit Licht, knien); im Band Jesu Frage: Glaubst du an den Menschensohn?"
   ],
-  "interpretation_note_de": "Je ein Feld aus den vier Abschnitten des Kapitels; Einzelheiten dort.",
+  "interpretation_note_de": "Vier Comic-Szenen, eine je Abschnitt ([[JHN.9.1-JHN.9.41]]): Heilung am Teich Siloam, die Eltern im Verhör (Spaltung im Band), der Hinauswurf, das Bekenntnis. Die Umkehrung «die nicht Sehenden sehen, die Sehenden werden blind» ([[JHN.9.39]]) zeigt der Abschnitt; im Kapitelbild ergibt sie sich aus der Folge der Felder (Deutung).",
   "basis": [
     {
       "record": "SUM-CH-JHN-009",
       "field": "summary",
-      "fingerprint": "72af6e1fbd4c7702"
+      "fingerprint": "c6ec6d74bce69558"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -429,6 +414,400 @@
           "Verhör: Die Pharisäer fragen nach Jesus und dem Sabbat (Kreise, der siebte golden); der Geheilte sagt: Jesus ist ein Prophet (Figur, Schriftrolle).",
           "Hinausgeworfen: «Ich war blind und sehe» (Augen); sie werfen ihn aus der Synagoge hinaus (Bogen aus dem Haus, Haus mit Pfeil hinaus).",
           "Ich glaube: Jesus fragt nach dem Glauben; der Geheilte kniet nieder (Herz mit Licht)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.9.1-JHN.9.12",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-BLINDER"
+            ],
+            "objects": [
+              "FIG-ORT-SILOAM"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-BLINDER",
+                "icons": [
+                  "FIG-ORT-SILOAM"
+                ]
+              }
+            ],
+            "action_de": "Jesus heilt einen blind geborenen Menschen: Er streicht ihm einen Brei auf die Augen und schickt ihn zum Teich Siloam; er wäscht sich und kommt sehend zurück.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-BLINDER": "sleep"
+              },
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-ROLLE-BLINDER": 92
+              },
+              "floor_x": {
+                "FIG-ORT-SILOAM": 126
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-BLINDER",
+                  "act"
+                ],
+                [
+                  "FIG-ROLLE-BLINDER",
+                  "FIG-ORT-SILOAM",
+                  "go"
+                ]
+              ],
+              "beside": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-BLINDER"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.9.13-JHN.9.23",
+            "figures": [
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-ROLLE-BLINDER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-SEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-PHARISAEER",
+                "to": "FIG-ROLLE-BLINDER",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-SABBAT",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-ROLLE-BLINDER",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-PROPHET",
+                  "FIG-OBJ-SCHRIFTROLLE"
+                ]
+              }
+            ],
+            "action_de": "Weil Jesus am Sabbat geheilt hat, befragen die Pharisäer den Geheilten (und seine Eltern); er nennt Jesus einen Propheten.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-PHARISAEER": "earnest",
+                "FIG-ROLLE-BLINDER": "determined"
+              },
+              "at": {
+                "FIG-ZEICHEN-SEHEN": "FIG-ROLLE-BLINDER"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.9.24-JHN.9.34",
+            "figures": [
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-ROLLE-BLINDER"
+            ],
+            "objects": [
+              "FIG-ORT-SYNAGOGE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-AUSSCHLUSS"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-BLINDER",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-ZEICHEN-BLIND",
+                  "FIG-ZEICHEN-SEHEN"
+                ]
+              }
+            ],
+            "action_de": "Beim zweiten Verhör bleibt er dabei: Ich war blind und sehe jetzt; da werfen sie ihn hinaus.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-PHARISAEER": "earnest",
+                "FIG-ROLLE-BLINDER": "determined"
+              },
+              "back_side": "left",
+              "x": {
+                "FIG-GRUPPE-PHARISAEER": 104,
+                "FIG-ROLLE-BLINDER": 164
+              },
+              "at": {
+                "FIG-ZEICHEN-AUSSCHLUSS": "FIG-ROLLE-BLINDER"
+              },
+              "arrows": [
+                [
+                  "FIG-ORT-SYNAGOGE",
+                  "FIG-ROLLE-BLINDER",
+                  "throw"
+                ]
+              ],
+              "before": true,
+              "pose": {
+                "FIG-ROLLE-BLINDER": "away"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.9.35-JHN.9.41",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-BLINDER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-GLAUBEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-BLINDER",
+                "icons": [
+                  "FIG-ZEICHEN-GLAUBEN",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus findet ihn und fragt, ob er an den Menschensohn glaube; er glaubt und fällt vor ihm nieder.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-BLINDER": "delight"
+              },
+              "pose": {
+                "FIG-ROLLE-BLINDER": "kneel"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-GLAUBEN": [
+                  "FIG-ROLLE-BLINDER"
+                ]
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus heilt einen blind geborenen Menschen: Er streicht ihm einen Brei auf die Augen und schickt ihn zum Teich Siloam; er wäscht sich und kommt sehend zurück.",
+          "Weil Jesus am Sabbat geheilt hat, befragen die Pharisäer den Geheilten (und seine Eltern); er nennt Jesus einen Propheten.",
+          "Beim zweiten Verhör bleibt er dabei: Ich war blind und sehe jetzt; da werfen sie ihn hinaus.",
+          "Jesus findet ihn und fragt, ob er an den Menschensohn glaube; er glaubt und fällt vor ihm nieder."
+        ],
+        "captions_de": [
+          "Jesus → Blinder → Siloam: Jesus berührt die Augen des Blinden (Pfeil zu ihm, Hand mit Lichtstrahlen) und schickt ihn zum Teich Siloam (Becken mit Stufen, gestrichelter Pfeil); dort wird er sehend.",
+          "Verhör: Die Pharisäer fragen nach Jesus und dem Sabbat (Kreise, der siebte golden); der Geheilte sagt: Jesus ist ein Prophet (Figur, Schriftrolle).",
+          "Hinausgeworfen: «Ich war blind und sehe» (Augen); sie werfen ihn aus der Synagoge hinaus (Bogen aus dem Haus, Synagoge mit rotem Sperrzeichen).",
+          "Ich glaube: Jesus fragt nach dem Glauben; der Geheilte kniet nieder (Herz mit Licht)."
+        ],
+        "interpretation_note_de": "Je ein Feld aus den vier Abschnitten des Kapitels; Einzelheiten dort.",
+        "basis": [
+          {
+            "record": "SUM-CH-JHN-009",
+            "field": "summary",
+            "fingerprint": "72af6e1fbd4c7702"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.9.1-JHN.9.12",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-BLINDER"
+            ],
+            "objects": [
+              "FIG-ORT-SILOAM"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-BLINDER",
+                "icons": [],
+                "word": {
+                  "de": "Geh, wasch dich im Teich Siloam.",
+                  "gsw": "Gang, wäsch di im Teich Siloam."
+                }
+              }
+            ],
+            "action_de": "Jesus sagt zu dem Blindgeborenen: «Geh, wasch dich im Teich Siloam»; er wäscht sich und kommt sehend zurück.",
+            "keywords": {
+              "de": "wusch sich und kam sehend zurück",
+              "gsw": "hät sich gwäsche und isch sehend zruggchoo"
+            },
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-SEHEN": "FIG-ROLLE-BLINDER"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-ROLLE-BLINDER": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 46,
+                "FIG-ROLLE-BLINDER": 140
+              },
+              "back_side": "right"
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.9.13-JHN.9.23",
+            "figures": [
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-ROLLE-VATER",
+              "FIG-ROLLE-MUTTER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-FURCHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-MUTTER",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [],
+                "word": {
+                  "de": "Er ist alt genug, fragt ihn!",
+                  "gsw": "Er isch alt gnueg, fröged en!"
+                }
+              }
+            ],
+            "action_de": "Die Pharisäer sind gespalten; die Eltern sagen aus Furcht: «Er ist alt genug, fragt ihn!»",
+            "keywords": {
+              "de": "Und es gab eine Spaltung unter ihnen",
+              "gsw": "Und es hät e Spaltig under ine gää"
+            },
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-FURCHT": [
+                  "FIG-ROLLE-VATER",
+                  "FIG-ROLLE-MUTTER"
+                ]
+              },
+              "mood": {
+                "FIG-GRUPPE-PHARISAEER": "earnest",
+                "FIG-ROLLE-VATER": "fear",
+                "FIG-ROLLE-MUTTER": "fear"
+              },
+              "x": {
+                "FIG-GRUPPE-PHARISAEER": 40,
+                "FIG-ROLLE-VATER": 116,
+                "FIG-ROLLE-MUTTER": 156
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.9.24-JHN.9.34",
+            "figures": [
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-ROLLE-BLINDER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-AUSSCHLUSS"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-BLINDER",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [],
+                "word": {
+                  "de": "Eines weiss ich: dass ich blind war und jetzt sehe.",
+                  "gsw": "Eis weiss ich: dass ich blind gsii bi und jetzt gsehne."
+                }
+              }
+            ],
+            "action_de": "Der Geheilte sagt: «Eines weiss ich: dass ich blind war und jetzt sehe»; sie werfen ihn hinaus.",
+            "keywords": {
+              "de": "Und sie warfen ihn hinaus",
+              "gsw": "Und si händ en usegworfe"
+            },
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-AUSSCHLUSS": "FIG-ROLLE-BLINDER"
+              },
+              "mood": {
+                "FIG-GRUPPE-PHARISAEER": "angry",
+                "FIG-ROLLE-BLINDER": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-PHARISAEER": 50,
+                "FIG-ROLLE-BLINDER": 146
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.9.35-JHN.9.41",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-BLINDER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-BLINDER",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Ich glaube, Herr!",
+                  "gsw": "Ich glaube, Herr!"
+                }
+              }
+            ],
+            "action_de": "Jesus findet ihn: «Glaubst du an den Menschensohn?» – «Ich glaube, Herr!» Er fällt vor ihm nieder.",
+            "keywords": {
+              "de": "Glaubst du an den Menschensohn?",
+              "gsw": "Glaubsch du a de Mänschesohn?"
+            },
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-BLINDER": "kneel"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-ROLLE-BLINDER": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 54,
+                "FIG-ROLLE-BLINDER": 138
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Siloam: Jesus sagt zum Blinden: «Geh, wasch dich im Teich Siloam.» (Teich, Wasser); er kommt sehend zurück (offene Augen).",
+          "Verhör: Die Eltern sagen zu den Pharisäern: «Er ist alt genug, fragt ihn!» (fragen); erschrockene Gesichter (Furcht); im Band: Und es gab eine Spaltung unter ihnen.",
+          "Hinausgeworfen: Der Geheilte sagt: «Eines weiss ich: dass ich blind war und jetzt sehe.» (blind, sehen); die Pharisäer werfen ihn hinaus (Synagoge mit Sperrzeichen).",
+          "Bekenntnis: Der Geheilte kniet vor Jesus: «Ich glaube, Herr!» (Herz mit Licht, knien); im Band Jesu Frage: Glaubst du an den Menschensohn?"
         ]
       }
     }

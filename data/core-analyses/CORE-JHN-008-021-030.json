@@ -1,0 +1,235 @@
+{
+ "id": "CORE-JHN-008-021-030",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "JHN.8.21-JHN.8.30",
+ "target": "TU-JHN-008-021-030",
+ "core_de": "Jesus kündigt an: «Ich gehe weg … Wohin ich gehe, könnt ihr nicht kommen» – die Juden fragen, ob er sich selbst töten wolle; er stellt gegenüber: «Ihr seid von unten, ich bin von oben», und warnt: Wenn sie nicht glauben, «dass ich bin», werden sie in ihren Sünden sterben; wenn sie den Menschensohn erhöht haben, werden sie erkennen, dass er es ist und nichts von sich aus tut, und der ihn gesandt hat, ist mit ihm; als er das redet, glauben viele an ihn.",
+ "mode": "speech",
+ "voice": {
+  "speaker": "FIG-JESUS",
+  "addressee": "FIG-GRUPPE-MENGE"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "dialogue",
+    "subtype": "Ankündigung – Missverständnis – Gegensatz – Frage – Ankündigung – Glaube",
+    "range": "JHN.8.21-JHN.8.30",
+    "elements": [
+     {
+      "label": "«Ich gehe weg, und ihr werdet mich suchen, und ihr werdet in eurer Sünde sterben. Wohin ich gehe, könnt ihr nicht kommen.»",
+      "ref": "JHN.8.21",
+      "role": "Ankündigung"
+     },
+     {
+      "label": "Die Juden: «Er wird sich doch nicht selbst töten …?»",
+      "ref": "JHN.8.22",
+      "role": "Missverständnis"
+     },
+     {
+      "label": "Unten ↔ oben",
+      "ref": "JHN.8.23",
+      "role": "Gegensatz",
+      "child": "s2"
+     },
+     {
+      "label": "Bedingung",
+      "ref": "JHN.8.24",
+      "role": "Warnung",
+      "child": "s3"
+     },
+     {
+      "label": "«Wer bist du?» – «Der mich gesandt hat, ist wahrhaftig …»; sie erkennen nicht, dass er vom Vater sprach",
+      "ref": "JHN.8.25-JHN.8.27",
+      "role": "Frage"
+     },
+     {
+      "label": "Ankündigung",
+      "ref": "JHN.8.28-JHN.8.29",
+      "role": "Ankündigung",
+      "child": "s4"
+     },
+     {
+      "label": "Als er das redete, glaubten viele an ihn",
+      "ref": "JHN.8.30",
+      "role": "Ausgang"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "die Juden",
+       "ref": "JHN.8.21-JHN.8.29"
+      },
+      {
+       "who": "die Juden",
+       "to": "FIG-JESUS",
+       "ref": "JHN.8.22"
+      },
+      {
+       "who": "die Juden",
+       "to": "FIG-JESUS",
+       "ref": "JHN.8.25"
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "dass ich bin (ἐγώ εἰμι)",
+       "ref": "JHN.8.24",
+       "note": "auch [[JHN.8.28]], [[JHN.8.58]], [[JHN.13.19]]"
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "«Die Juden» meint bei Johannes oft die führenden Kreise in Jerusalem; im Bild als neutrale Gruppe ohne Merkmale einer Volksgruppe."
+      },
+      {
+       "note": "«Der Vater» ist Gott; im Bild als Strahlenkranz, nie als Mensch."
+      },
+      {
+       "note": "«Menschensohn»: Jesus spricht so von sich; im Bild als Jesus gezeichnet (Deutung)."
+      },
+      {
+       "note": "«Erhöhen» deutet der Erzähler in [[JHN.12.32-JHN.12.33]] auf den Tod Jesu; hier wird es nicht erklärt."
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "unten ↔ oben",
+    "range": "JHN.8.23",
+    "elements": [
+     {
+      "label": "Ihr seid von unten – ich bin von oben",
+      "ref": "JHN.8.23",
+      "role": "Paar 1"
+     },
+     {
+      "label": "ihr seid aus dieser Welt – ich bin nicht aus dieser Welt",
+      "ref": "JHN.8.23",
+      "role": "Paar 2"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "condition",
+    "subtype": "nicht glauben → in den Sünden sterben (nur dieser Zweig im Text)",
+    "range": "JHN.8.24",
+    "elements": [
+     {
+      "label": "wenn ihr nicht glaubt, dass ich bin,",
+      "ref": "JHN.8.24",
+      "role": "Bedingung"
+     },
+     {
+      "label": "werdet ihr in euren Sünden sterben",
+      "ref": "JHN.8.24",
+      "role": "Folge"
+     }
+    ],
+    "visual": "arrows",
+    "basis": "text"
+   },
+   {
+    "id": "s4",
+    "pattern": "condition",
+    "subtype": "wenn erhöht → dann erkennen",
+    "range": "JHN.8.28-JHN.8.29",
+    "elements": [
+     {
+      "label": "Wenn ihr den Menschensohn erhöht habt,",
+      "ref": "JHN.8.28",
+      "role": "Bedingung"
+     },
+     {
+      "label": "dann werdet ihr erkennen, dass ich bin und nichts von mir selbst aus tue",
+      "ref": "JHN.8.28",
+      "role": "Folge"
+     },
+     {
+      "label": "Der mich gesandt hat, ist mit mir; er hat mich nicht allein gelassen",
+      "ref": "JHN.8.29",
+      "role": "Begründung"
+     }
+    ],
+    "features": {
+     "modality": [
+      {
+       "kind": "Ankündigung",
+       "ref": "JHN.8.28"
+      }
+     ]
+    },
+    "visual": "arrows",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "JHN.8.21-JHN.8.22",
+   "text_de": "«Ich gehe weg, und ihr werdet mich suchen … Wohin ich gehe, könnt ihr nicht kommen.» – «Er wird sich doch nicht selbst töten?»",
+   "reason_de": "Ankündigung und Missverständnis (Kriterium 2).",
+   "recognition_de": "Jesus kündigt seinen Weggang an.",
+   "keywords": [
+    "Wohin ich gehe, könnt ihr nicht kommen"
+   ]
+  },
+  {
+   "reference": "JHN.8.23-JHN.8.24",
+   "text_de": "«Ihr seid von unten, ich bin von oben; ihr seid aus dieser Welt, ich bin nicht aus dieser Welt»; «wenn ihr nicht glaubt, dass ich bin, werdet ihr in euren Sünden sterben».",
+   "reason_de": "Gegensatz und Bedingung (Kriterium 1).",
+   "recognition_de": "Unten ↔ oben.",
+   "keywords": [
+    "Ihr seid von unten, ich bin von oben",
+    "wenn ihr nicht glaubt, dass ich bin, werdet ihr in euren Sünden sterben"
+   ]
+  },
+  {
+   "reference": "JHN.8.28-JHN.8.30",
+   "text_de": "«Wenn ihr den Menschensohn erhöht habt, dann werdet ihr erkennen, dass ich bin»; der ihn gesandt hat, ist mit ihm; viele glauben an ihn.",
+   "reason_de": "Ankündigung und Ausgang (Kriterien 1 und 3).",
+   "recognition_de": "Erhöhung → Erkenntnis; viele glauben.",
+   "keywords": [
+    "Wenn ihr den Menschensohn erhöht habt, dann werdet ihr erkennen, dass ich bin",
+    "glaubten viele an ihn"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Die Frage «Wer bist du?» und die Antwort ([[JHN.8.25-JHN.8.27]]) stehen in der Struktur, im Bild nur als Titel"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-MENGE",
+  "FIG-GOTT"
+ ],
+ "places": [
+  "FIG-ORT-TEMPEL"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "JHN.8.21-JHN.8.30",
+   "fingerprint": "b19d19d76e86acd2"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Joh 8–14 mit 7,53–8,11 nach Joh 1–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

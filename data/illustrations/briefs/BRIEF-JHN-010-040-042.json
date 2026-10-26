@@ -11,84 +11,62 @@
   "panels": [
     {
       "n": 1,
-      "reference": "JHN.10.40",
+      "reference": "JHN.10.40-JHN.10.42",
       "figures": [
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-GRUPPE-MENGE"
       ],
       "objects": [
         "FIG-ORT-JORDAN"
       ],
       "signs": [
-        "FIG-ZEICHEN-TAUFE"
+        "FIG-ZEICHEN-GLAUBEN"
       ],
-      "speech": [],
-      "action_de": "Jesus geht wieder weg, auf die andere Seite des Jordan, an den Ort, wo Johannes zuerst getauft hatte, und bleibt dort.",
-      "stage": {
-        "x": {
-          "FIG-JESUS": 44
-        },
-        "air_x": 132,
-        "air_y": 62,
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-ORT-JORDAN",
-            "go"
-          ]
-        ]
-      }
-    },
-    {
-      "n": 2,
-      "reference": "JHN.10.40-JHN.10.42",
-      "figures": [
-        "FIG-GRUPPE-MENGE",
-        "FIG-JESUS"
-      ],
-      "objects": [
-        "FIG-ORT-JORDAN"
-      ],
-      "signs": [],
       "speech": [
         {
           "from": "FIG-GRUPPE-MENGE",
           "to": "FIG-JESUS",
-          "icons": [
-            "FIG-JOHANNES-TAEUFER",
-            "FIG-JESUS",
-            "FIG-ZEICHEN-WAHRHEIT"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Johannes hat zwar kein Zeichen getan, aber alles, was Johannes über diesen gesagt hat, war wahr.",
+            "gsw": "De Johannes hät zwar kei Zeiche gmacht, aber alles, was de Johannes über dä gseit hät, isch wahr gsii."
+          }
         }
       ],
-      "action_de": "Jesus geht an den Jordan, wo Johannes zuerst getauft hatte. Viele kommen und sagen: Johannes hat kein Zeichen getan, aber was er über diesen sagte, war wahr. Viele glauben dort an ihn.",
+      "action_de": "Jesus geht auf die andere Seite des Jordan, wo Johannes zuerst getauft hatte. Viele kommen zu ihm und sagen: «Johannes hat zwar kein Zeichen getan, aber alles, was Johannes über diesen gesagt hat, war wahr.» Und viele glauben dort an ihn.",
+      "keywords": {
+        "de": "Und viele glaubten dort an ihn",
+        "gsw": "Und vili händ dört a ihn glaubt"
+      },
       "stage": {
+        "signs_who": {
+          "FIG-ZEICHEN-GLAUBEN": [
+            "FIG-GRUPPE-MENGE"
+          ]
+        },
         "mood": {
+          "FIG-JESUS": "calm",
           "FIG-GRUPPE-MENGE": "smile"
         },
-        "at": {}
+        "x": {
+          "FIG-JESUS": 46,
+          "FIG-GRUPPE-MENGE": 140
+        }
       }
     }
   ],
   "actions_de": [
-    "Jesus geht wieder weg, auf die andere Seite des Jordan, an den Ort, wo Johannes zuerst getauft hatte, und bleibt dort.",
-    "Jesus geht an den Jordan, wo Johannes zuerst getauft hatte. Viele kommen und sagen: Johannes hat kein Zeichen getan, aber was er über diesen sagte, war wahr. Viele glauben dort an ihn."
+    "Jesus geht auf die andere Seite des Jordan, wo Johannes zuerst getauft hatte. Viele kommen zu ihm und sagen: «Johannes hat zwar kein Zeichen getan, aber alles, was Johannes über diesen gesagt hat, war wahr.» Und viele glauben dort an ihn."
   ],
   "captions_de": [
-    "Jenseits des Jordan: Jesus geht (Pfeil) an den Fluss, wo Johannes getauft hatte (Muschel mit Wasser).",
-    "Am Jordan: Die Leute sagen: Was Johannes über Jesus sagte, ist wahr (Häkchen); viele glauben (Herz über der Menge)."
+    "Am Jordan: Viele kommen zu Jesus und sagen: «Johannes hat zwar kein Zeichen getan, aber alles, was Johannes über diesen gesagt hat, war wahr.» (Johannes, Wahrheit); Herzen mit Licht (glauben)."
   ],
-  "interpretation_note_de": "Johannes der Täufer ist nicht mehr dort; er erscheint nur in der Sprechblase der Leute ([[JHN.10.41]]).",
+  "interpretation_note_de": "Ein Feld ([[JHN.10.40-JHN.10.42]]): am Jordan, wo Johannes zuerst getauft hatte ([[JHN.1.28]]); das Wort der vielen «zwar – aber» und ihr Glaube. Wem sie es sagen, nennt der Text nicht genau («kamen zu ihm und sagten»). Johannes der Täufer erscheint nur als Zeichen in der Sprechblase.",
   "basis": [
     {
       "record": "TU-JHN-010-040-042",
       "field": "summary",
-      "fingerprint": "b918d96b2b2d5a37"
-    },
-    {
-      "record": "TRANS-JHN-010-001-042-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "JHN.10.40",
-      "fingerprint": "98c631afc6b91604"
+      "fingerprint": "0db72c7b35f22747"
     },
     {
       "record": "TRANS-JHN-010-001-042-DE-WORKING",
@@ -98,7 +76,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -236,6 +214,127 @@
             }
           }
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-JHN-010-040-042",
+            "field": "summary",
+            "fingerprint": "b918d96b2b2d5a37"
+          },
+          {
+            "record": "TRANS-JHN-010-001-042-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.10.40",
+            "fingerprint": "98c631afc6b91604"
+          },
+          {
+            "record": "TRANS-JHN-010-001-042-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.10.40-JHN.10.42",
+            "fingerprint": "967b42e442f532ba"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.10.40",
+            "figures": [
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-JORDAN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TAUFE"
+            ],
+            "speech": [],
+            "action_de": "Jesus geht wieder weg, auf die andere Seite des Jordan, an den Ort, wo Johannes zuerst getauft hatte, und bleibt dort.",
+            "stage": {
+              "x": {
+                "FIG-JESUS": 44
+              },
+              "air_x": 132,
+              "air_y": 62,
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ORT-JORDAN",
+                  "go"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.10.40-JHN.10.42",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-JORDAN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JOHANNES-TAEUFER",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-WAHRHEIT"
+                ]
+              }
+            ],
+            "action_de": "Jesus geht an den Jordan, wo Johannes zuerst getauft hatte. Viele kommen und sagen: Johannes hat kein Zeichen getan, aber was er über diesen sagte, war wahr. Viele glauben dort an ihn.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "smile"
+              },
+              "at": {}
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus geht wieder weg, auf die andere Seite des Jordan, an den Ort, wo Johannes zuerst getauft hatte, und bleibt dort.",
+          "Jesus geht an den Jordan, wo Johannes zuerst getauft hatte. Viele kommen und sagen: Johannes hat kein Zeichen getan, aber was er über diesen sagte, war wahr. Viele glauben dort an ihn."
+        ],
+        "captions_de": [
+          "Jenseits des Jordan: Jesus geht (Pfeil) an den Fluss, wo Johannes getauft hatte (Muschel mit Wasser).",
+          "Am Jordan: Die Leute sagen: Was Johannes über Jesus sagte, ist wahr (Häkchen); viele glauben (Herz über der Menge)."
+        ],
+        "interpretation_note_de": "Johannes der Täufer ist nicht mehr dort; er erscheint nur in der Sprechblase der Leute ([[JHN.10.41]]).",
+        "basis": [
+          {
+            "record": "TU-JHN-010-040-042",
+            "field": "summary",
+            "fingerprint": "0db72c7b35f22747"
+          },
+          {
+            "record": "TRANS-JHN-010-001-042-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.10.40",
+            "fingerprint": "98c631afc6b91604"
+          },
+          {
+            "record": "TRANS-JHN-010-001-042-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.10.40-JHN.10.42",
+            "fingerprint": "967b42e442f532ba"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

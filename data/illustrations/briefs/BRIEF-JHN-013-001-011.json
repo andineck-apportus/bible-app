@@ -14,110 +14,148 @@
       "reference": "JHN.13.1-JHN.13.5",
       "figures": [
         "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF"
-      ],
-      "objects": [
-        "FIG-OBJ-WASCHSCHUESSEL"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-LIEBE"
-      ],
-      "speech": [],
-      "action_de": "Beim Mahl steht Jesus auf, bindet sich ein Leinentuch um, giesst Wasser in das Becken und wäscht den Jüngern die Füsse; er liebt die Seinen bis zur Vollendung.",
-      "stage": {
-        "pose": {
-          "FIG-JESUS": "kneel"
-        },
-        "x": {
-          "FIG-JESUS": 78,
-          "FIG-GRUPPE-ZWOELF": 148
-        },
-        "floor_x": {
-          "FIG-OBJ-WASCHSCHUESSEL": 110
-        },
-        "mood": {
-          "FIG-GRUPPE-ZWOELF": "surprised",
-          "FIG-JESUS": "calm"
-        },
-        "signs_who": {
-          "FIG-ZEICHEN-LIEBE": [
-            "FIG-JESUS"
-          ]
-        },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-GRUPPE-ZWOELF",
-            "act"
-          ]
-        ]
-      }
-    },
-    {
-      "n": 2,
-      "reference": "JHN.13.6-JHN.13.10",
-      "figures": [
-        "FIG-PETRUS",
-        "FIG-JESUS"
+        "FIG-GRUPPE-JUENGER"
       ],
       "objects": [
         "FIG-OBJ-WASCHSCHUESSEL"
       ],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-PETRUS",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-OBJ-WASCHSCHUESSEL",
-            "FIG-ZEICHEN-ABLEHNEN"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-PETRUS",
-          "icons": [
-            "FIG-OBJ-WASCHSCHUESSEL",
-            "FIG-PETRUS",
-            "FIG-ZEICHEN-FEHLT",
-            "FIG-JESUS"
-          ]
-        }
-      ],
-      "action_de": "Petrus wehrt ab: Nie sollst du mir die Füsse waschen! Jesus antwortet: Wenn ich dich nicht wasche, hast du keinen Anteil an mir.",
+      "speech": [],
+      "action_de": "Vor dem Passafest weiss Jesus, dass seine Stunde gekommen ist; er liebt die Seinen bis zur Vollendung. Beim Mahl steht er auf, legt die Obergewänder ab, bindet ein Leinentuch um, giesst Wasser in das Waschbecken und fängt an, den Jüngern die Füsse zu waschen.",
+      "keywords": {
+        "de": "er liebte sie bis zur Vollendung",
+        "gsw": "er hät si bis zur Vollendig gliebt"
+      },
       "stage": {
         "pose": {
-          "FIG-JESUS": "kneel",
-          "FIG-PETRUS": "away"
+          "FIG-JESUS": "kneel"
+        },
+        "hold": {
+          "FIG-JESUS": "FIG-OBJ-WASCHSCHUESSEL"
         },
         "mood": {
-          "FIG-PETRUS": "surprised",
-          "FIG-JESUS": "calm"
-        },
-        "floor_x": {
-          "FIG-OBJ-WASCHSCHUESSEL": 92
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-JUENGER": "surprised"
         },
         "x": {
-          "FIG-PETRUS": 40,
-          "FIG-JESUS": 146
+          "FIG-JESUS": 64,
+          "FIG-GRUPPE-JUENGER": 142
         }
+      }
+    },
+    {
+      "n": 2,
+      "reference": "JHN.13.6-JHN.13.11",
+      "figures": [],
+      "objects": [],
+      "signs": [],
+      "speech": [],
+      "action_de": "Petrus: «Herr, du wäschst mir die Füsse?» – «Was ich tue, weisst du jetzt nicht.» – «Nie in Ewigkeit sollst du mir die Füsse waschen!» – «Wenn ich dich nicht wasche, hast du keinen Anteil an mir.» – «… auch die Hände und den Kopf!» – «Und ihr seid rein, aber nicht alle.» Er kannte den, der ihn ausliefert.",
+      "keywords": {
+        "de": "Und ihr seid rein, aber nicht alle",
+        "gsw": "Und ir sind rein, aber nöd alli"
+      },
+      "diagram": {
+        "visual": "dialogue",
+        "span": 2,
+        "turns": [
+          {
+            "who": "FIG-PETRUS",
+            "cell": {
+              "a": {
+                "de": "«Herr, du wäschst mir die Füsse?»",
+                "gsw": "«Herr, du wäschisch mir d Füess?»"
+              },
+              "icons": [
+                "FIG-OBJ-WASCHSCHUESSEL",
+                "FIG-ZEICHEN-FRAGEN"
+              ]
+            }
+          },
+          {
+            "who": "FIG-JESUS",
+            "cell": {
+              "a": {
+                "de": "«Was ich tue, weisst du jetzt nicht; du wirst es aber danach erkennen.»",
+                "gsw": "«Was ich mache, weisch du jetzt nöd; du wirsch es aber spööter verstaa.»"
+              },
+              "icons": [
+                "FIG-ZEICHEN-NICHT-VERSTEHEN",
+                "FIG-ZEICHEN-STUNDE"
+              ]
+            }
+          },
+          {
+            "who": "FIG-PETRUS",
+            "cell": {
+              "a": {
+                "de": "«Nie in Ewigkeit sollst du mir die Füsse waschen!»",
+                "gsw": "«Nie im Läbe wäschisch du mir d Füess!»"
+              },
+              "icons": [
+                "FIG-OBJ-WASCHSCHUESSEL",
+                "FIG-ZEICHEN-NICHT"
+              ]
+            }
+          },
+          {
+            "who": "FIG-JESUS",
+            "cell": {
+              "a": {
+                "de": "«Wenn ich dich nicht wasche, hast du keinen Anteil an mir.»",
+                "gsw": "«Wänn ich dich nöd wäsche, häsch kei Teil a mir.»"
+              },
+              "icons": [
+                "FIG-OBJ-WASCHSCHUESSEL",
+                "FIG-ZEICHEN-EINHEIT"
+              ],
+              "tone": "new"
+            }
+          },
+          {
+            "who": "FIG-PETRUS",
+            "cell": {
+              "a": {
+                "de": "«Herr, nicht nur meine Füsse, sondern auch die Hände und den Kopf!»",
+                "gsw": "«Herr, nöd nu mini Füess, sondern au d Händ und de Chopf!»"
+              },
+              "icons": [
+                "FIG-ZEICHEN-WASCHEN",
+                "FIG-ZEICHEN-KOPF-HAAR"
+              ]
+            }
+          },
+          {
+            "who": "FIG-JESUS",
+            "cell": {
+              "a": {
+                "de": "«Wer gebadet ist, … ist ganz rein. Und ihr seid rein, aber nicht alle.»",
+                "gsw": "«Wer badet hät, … isch ganz rein. Und ir sind rein, aber nöd alli.»"
+              },
+              "icons": [
+                "FIG-ZEICHEN-REIN",
+                "FIG-ZEICHEN-NICHT"
+              ]
+            }
+          }
+        ]
       }
     }
   ],
   "actions_de": [
-    "Beim Mahl steht Jesus auf, bindet sich ein Leinentuch um, giesst Wasser in das Becken und wäscht den Jüngern die Füsse; er liebt die Seinen bis zur Vollendung.",
-    "Petrus wehrt ab: Nie sollst du mir die Füsse waschen! Jesus antwortet: Wenn ich dich nicht wasche, hast du keinen Anteil an mir."
+    "Vor dem Passafest weiss Jesus, dass seine Stunde gekommen ist; er liebt die Seinen bis zur Vollendung. Beim Mahl steht er auf, legt die Obergewänder ab, bindet ein Leinentuch um, giesst Wasser in das Waschbecken und fängt an, den Jüngern die Füsse zu waschen.",
+    "Petrus: «Herr, du wäschst mir die Füsse?» – «Was ich tue, weisst du jetzt nicht.» – «Nie in Ewigkeit sollst du mir die Füsse waschen!» – «Wenn ich dich nicht wasche, hast du keinen Anteil an mir.» – «… auch die Hände und den Kopf!» – «Und ihr seid rein, aber nicht alle.» Er kannte den, der ihn ausliefert."
   ],
   "captions_de": [
-    "Liebe → Fusswaschung: Jesus liebt die Seinen (rotes Herz bei Jesus); er kniet nieder und wäscht ihnen die Füsse (Waschbecken, Pfeil von Jesus zu den Jüngern).",
-    "Petrus wehrt ab: Petrus wendet sich ab und will sich nicht waschen lassen (Becken, Person mit gekreuzten Armen); Jesus: Ohne Waschen hast du keinen Anteil an mir (Becken, Petrus, durchgestrichener Kreis, Jesus)."
+    "Fusswaschung: Jesus kniet mit dem Waschbecken und dem Leinentuch vor den Jüngern und wäscht ihnen die Füsse; im Band: Er liebte sie bis zur Vollendung (Liebe, vollendet).",
+    "Petrus wehrt ab (Dialog Petrus ↔ Jesus): «Herr, du wäschst mir die Füsse?» (Waschbecken, fragen) – «Was ich tue, weisst du jetzt nicht …» (nicht verstehen, Sanduhr) – «Nie in Ewigkeit …!» (Waschbecken, Verbotszeichen) – hervorgehoben: «Wenn ich dich nicht wasche, hast du keinen Anteil an mir.» (Waschbecken, eins) – «… auch die Hände und den Kopf!» (Hände waschen, Kopf) – «Und ihr seid rein, aber nicht alle.» (rein, Verbotszeichen)."
   ],
-  "interpretation_note_de": "Dass Jesus das Obergewand ablegt und sich das Leinentuch umbindet ([[JHN.13.4]]), zeigt das Bild nur mit dem Tuch am Becken. Petrus' Bitte um Hände und Kopf und das Wort «nicht alle seid ihr rein» ([[JHN.13.9-JHN.13.11]]) zeigt das Bild nicht.",
+  "interpretation_note_de": "Zwei Felder nach dem Ablauf ([[JHN.13.1-JHN.13.11]]): die Fusswaschung als Szene (die Liebe «bis zur Vollendung» im Band), dann das Gespräch mit Petrus als Dialog. «Nicht alle» bezieht der Erzähler auf den, der ihn ausliefert ([[JHN.13.11]]); das Zeichen im Band (Judas) folgt dieser Deutung des Erzählers. Dass der Teufel Judas den Verrat ins Herz gegeben hat ([[JHN.13.2]]), steht in Kernanalyse und Zusammenfassung. Kein Festzeichen: Das Passa nennt der Text nur als Zeitangabe.",
   "basis": [
     {
       "record": "TU-JHN-013-001-011",
       "field": "summary",
-      "fingerprint": "d4848b6ee0ec9ae3"
+      "fingerprint": "69a0813fbe0ec166"
     },
     {
       "record": "TRANS-JHN-013-001-038-DE-WORKING",
@@ -128,12 +166,12 @@
     {
       "record": "TRANS-JHN-013-001-038-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.13.6-JHN.13.10",
-      "fingerprint": "e38d06dbc338e954"
+      "reference": "JHN.13.6-JHN.13.11",
+      "fingerprint": "45ab6a63abcab380"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -250,6 +288,302 @@
         "captions_de": [
           "Liebe → Fusswaschung: Jesus liebt die Seinen (zwei Herzen bei Jesus); er kniet nieder und wäscht ihnen die Füsse (Waschbecken, Pfeil von Jesus zu den Jüngern).",
           "Petrus wehrt ab: Petrus wendet sich ab und will sich nicht waschen lassen (Becken, abwehrende Hand); Jesus: Ohne Waschen hast du keinen Anteil an mir (Becken, Petrus, durchgestrichener Kreis, Jesus)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-JHN-013-001-011",
+            "field": "summary",
+            "fingerprint": "d4848b6ee0ec9ae3"
+          },
+          {
+            "record": "TRANS-JHN-013-001-038-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.13.1-JHN.13.5",
+            "fingerprint": "52478cacba4c769a"
+          },
+          {
+            "record": "TRANS-JHN-013-001-038-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.13.6-JHN.13.10",
+            "fingerprint": "e38d06dbc338e954"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.13.1-JHN.13.5",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-OBJ-WASCHSCHUESSEL"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-LIEBE"
+            ],
+            "speech": [],
+            "action_de": "Beim Mahl steht Jesus auf, bindet sich ein Leinentuch um, giesst Wasser in das Becken und wäscht den Jüngern die Füsse; er liebt die Seinen bis zur Vollendung.",
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "kneel"
+              },
+              "x": {
+                "FIG-JESUS": 78,
+                "FIG-GRUPPE-ZWOELF": 148
+              },
+              "floor_x": {
+                "FIG-OBJ-WASCHSCHUESSEL": 110
+              },
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "surprised",
+                "FIG-JESUS": "calm"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-LIEBE": [
+                  "FIG-JESUS"
+                ]
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-ZWOELF",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.13.6-JHN.13.10",
+            "figures": [
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-WASCHSCHUESSEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-OBJ-WASCHSCHUESSEL",
+                  "FIG-ZEICHEN-ABLEHNEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-OBJ-WASCHSCHUESSEL",
+                  "FIG-PETRUS",
+                  "FIG-ZEICHEN-FEHLT",
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Petrus wehrt ab: Nie sollst du mir die Füsse waschen! Jesus antwortet: Wenn ich dich nicht wasche, hast du keinen Anteil an mir.",
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "kneel",
+                "FIG-PETRUS": "away"
+              },
+              "mood": {
+                "FIG-PETRUS": "surprised",
+                "FIG-JESUS": "calm"
+              },
+              "floor_x": {
+                "FIG-OBJ-WASCHSCHUESSEL": 92
+              },
+              "x": {
+                "FIG-PETRUS": 40,
+                "FIG-JESUS": 146
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Beim Mahl steht Jesus auf, bindet sich ein Leinentuch um, giesst Wasser in das Becken und wäscht den Jüngern die Füsse; er liebt die Seinen bis zur Vollendung.",
+          "Petrus wehrt ab: Nie sollst du mir die Füsse waschen! Jesus antwortet: Wenn ich dich nicht wasche, hast du keinen Anteil an mir."
+        ],
+        "captions_de": [
+          "Liebe → Fusswaschung: Jesus liebt die Seinen (rotes Herz bei Jesus); er kniet nieder und wäscht ihnen die Füsse (Waschbecken, Pfeil von Jesus zu den Jüngern).",
+          "Petrus wehrt ab: Petrus wendet sich ab und will sich nicht waschen lassen (Becken, Person mit gekreuzten Armen); Jesus: Ohne Waschen hast du keinen Anteil an mir (Becken, Petrus, durchgestrichener Kreis, Jesus)."
+        ],
+        "interpretation_note_de": "Dass Jesus das Obergewand ablegt und sich das Leinentuch umbindet ([[JHN.13.4]]), zeigt das Bild nur mit dem Tuch am Becken. Petrus' Bitte um Hände und Kopf und das Wort «nicht alle seid ihr rein» ([[JHN.13.9-JHN.13.11]]) zeigt das Bild nicht.",
+        "basis": [
+          {
+            "record": "TU-JHN-013-001-011",
+            "field": "summary",
+            "fingerprint": "69a0813fbe0ec166"
+          },
+          {
+            "record": "TRANS-JHN-013-001-038-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.13.1-JHN.13.5",
+            "fingerprint": "52478cacba4c769a"
+          },
+          {
+            "record": "TRANS-JHN-013-001-038-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.13.6-JHN.13.10",
+            "fingerprint": "e38d06dbc338e954"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.13.1-JHN.13.5",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-WASCHSCHUESSEL"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Vor dem Passafest weiss Jesus, dass seine Stunde gekommen ist; er liebt die Seinen bis zur Vollendung. Beim Mahl steht er auf, legt die Obergewänder ab, bindet ein Leinentuch um, giesst Wasser in das Waschbecken und fängt an, den Jüngern die Füsse zu waschen.",
+            "keywords": {
+              "de": "er liebte sie bis zur Vollendung",
+              "gsw": "er hät si bis zur Vollendig gliebt"
+            },
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "kneel"
+              },
+              "floor_x": {
+                "FIG-OBJ-WASCHSCHUESSEL": 96
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "surprised"
+              },
+              "x": {
+                "FIG-JESUS": 64,
+                "FIG-GRUPPE-JUENGER": 142
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.13.6-JHN.13.11",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Petrus: «Herr, du wäschst mir die Füsse?» – «Was ich tue, weisst du jetzt nicht.» – «Nie in Ewigkeit sollst du mir die Füsse waschen!» – «Wenn ich dich nicht wasche, hast du keinen Anteil an mir.» – «… auch die Hände und den Kopf!» – «Und ihr seid rein, aber nicht alle.» Er kannte den, der ihn ausliefert.",
+            "keywords": {
+              "de": "Und ihr seid rein, aber nicht alle",
+              "gsw": "Und ir sind rein, aber nöd alli"
+            },
+            "diagram": {
+              "visual": "dialogue",
+              "span": 2,
+              "turns": [
+                {
+                  "who": "FIG-PETRUS",
+                  "cell": {
+                    "a": {
+                      "de": "«Herr, du wäschst mir die Füsse?»",
+                      "gsw": "«Herr, du wäschisch mir d Füess?»"
+                    },
+                    "icons": [
+                      "FIG-OBJ-WASCHSCHUESSEL",
+                      "FIG-ZEICHEN-FRAGEN"
+                    ]
+                  }
+                },
+                {
+                  "who": "FIG-JESUS",
+                  "cell": {
+                    "a": {
+                      "de": "«Was ich tue, weisst du jetzt nicht; du wirst es aber danach erkennen.»",
+                      "gsw": "«Was ich mache, weisch du jetzt nöd; du wirsch es aber spööter verstaa.»"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-NICHT-VERSTEHEN",
+                      "FIG-ZEICHEN-STUNDE"
+                    ]
+                  }
+                },
+                {
+                  "who": "FIG-PETRUS",
+                  "cell": {
+                    "a": {
+                      "de": "«Nie in Ewigkeit sollst du mir die Füsse waschen!»",
+                      "gsw": "«Nie im Läbe wäschisch du mir d Füess!»"
+                    },
+                    "icons": [
+                      "FIG-OBJ-WASCHSCHUESSEL",
+                      "FIG-ZEICHEN-NICHT"
+                    ]
+                  }
+                },
+                {
+                  "who": "FIG-JESUS",
+                  "cell": {
+                    "a": {
+                      "de": "«Wenn ich dich nicht wasche, hast du keinen Anteil an mir.»",
+                      "gsw": "«Wänn ich dich nöd wäsche, häsch kei Teil a mir.»"
+                    },
+                    "icons": [
+                      "FIG-OBJ-WASCHSCHUESSEL",
+                      "FIG-ZEICHEN-EINHEIT"
+                    ],
+                    "tone": "new"
+                  }
+                },
+                {
+                  "who": "FIG-PETRUS",
+                  "cell": {
+                    "a": {
+                      "de": "«Herr, nicht nur meine Füsse, sondern auch die Hände und den Kopf!»",
+                      "gsw": "«Herr, nöd nu mini Füess, sondern au d Händ und de Chopf!»"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-WASCHEN",
+                      "FIG-ZEICHEN-KOPF-HAAR"
+                    ]
+                  }
+                },
+                {
+                  "who": "FIG-JESUS",
+                  "cell": {
+                    "a": {
+                      "de": "«Wer gebadet ist, … ist ganz rein. Und ihr seid rein, aber nicht alle.»",
+                      "gsw": "«Wer badet hät, … isch ganz rein. Und ir sind rein, aber nöd alli.»"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-REIN",
+                      "FIG-ZEICHEN-NICHT"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
         ]
       }
     }

@@ -1,0 +1,169 @@
+{
+ "id": "CORE-JHN-009-001-012",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "JHN.9.1-JHN.9.12",
+ "target": "TU-JHN-009-001-012",
+ "core_de": "Jesus sieht einen Menschen, der von Geburt an blind ist; auf die Frage der Jünger, wer gesündigt habe, antwortet er: «Weder dieser hat gesündigt noch seine Eltern, sondern es geschah, damit die Werke Gottes an ihm offenbar werden … Solange ich in der Welt bin, bin ich das Licht der Welt»; er streicht ihm einen Brei auf die Augen und sagt: «Geh, wasch dich im Teich Siloam», und der Mann kommt sehend zurück; den Nachbarn, die fragen, ob er der Bettler sei, sagt er: «Ich bin es», und erzählt, wie Jesus ihn geheilt hat.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Begegnung – Frage – Antwort – Handlung – Waschen – Nachbarn",
+    "range": "JHN.9.1-JHN.9.12",
+    "elements": [
+     {
+      "label": "Im Vorübergehen sieht Jesus einen Menschen, blind von Geburt an",
+      "ref": "JHN.9.1",
+      "role": "Begegnung"
+     },
+     {
+      "label": "Jünger: «Rabbi, wer hat gesündigt, dieser oder seine Eltern, sodass er blind geboren wurde?»",
+      "ref": "JHN.9.2",
+      "role": "Frage"
+     },
+     {
+      "label": "Antwort",
+      "ref": "JHN.9.3-JHN.9.5",
+      "role": "Antwort",
+      "child": "s2"
+     },
+     {
+      "label": "Brei auf die Augen; «Geh, wasch dich im Teich Siloam» – er kommt sehend zurück",
+      "ref": "JHN.9.6-JHN.9.7",
+      "role": "Heilung"
+     },
+     {
+      "label": "Nachbarn: «Ist das nicht der …?» – «Ich bin es»; «Wo ist er?» – «Ich weiss es nicht»",
+      "ref": "JHN.9.8-JHN.9.12",
+      "role": "Bestätigung"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-GRUPPE-JUENGER",
+       "to": "FIG-JESUS",
+       "ref": "JHN.9.2"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "JHN.9.3-JHN.9.5"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-ROLLE-BLINDER",
+       "ref": "JHN.9.7"
+      },
+      {
+       "who": "Nachbarn",
+       "to": "FIG-ROLLE-BLINDER",
+       "ref": "JHN.9.8-JHN.9.12"
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "Licht der Welt",
+       "ref": "JHN.9.5",
+       "note": "vgl. [[JHN.8.12]]"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "weder – noch – sondern",
+    "range": "JHN.9.3-JHN.9.5",
+    "elements": [
+     {
+      "label": "Weder dieser hat gesündigt noch seine Eltern,",
+      "ref": "JHN.9.3",
+      "role": "nicht"
+     },
+     {
+      "label": "sondern es geschah, damit die Werke Gottes an ihm offenbar werden",
+      "ref": "JHN.9.3",
+      "role": "sondern"
+     },
+     {
+      "label": "Wir müssen die Werke dessen wirken, der mich gesandt hat, solange es Tag ist … Solange ich in der Welt bin, bin ich das Licht der Welt",
+      "ref": "JHN.9.4-JHN.9.5",
+      "role": "Begründung"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "JHN.9.1-JHN.9.5",
+   "text_de": "«Rabbi, wer hat gesündigt, dieser oder seine Eltern …?» – «Weder dieser hat gesündigt noch seine Eltern, sondern … damit die Werke Gottes an ihm offenbar werden»; «Solange ich in der Welt bin, bin ich das Licht der Welt.»",
+   "reason_de": "Deutung vor der Tat (Kriterien 1 und 2).",
+   "recognition_de": "Der Blinde, Frage der Jünger.",
+   "keywords": [
+    "wer hat gesündigt, dieser oder seine Eltern",
+    "Weder dieser hat gesündigt noch seine Eltern",
+    "bin ich das Licht der Welt"
+   ]
+  },
+  {
+   "reference": "JHN.9.6-JHN.9.7",
+   "text_de": "Brei auf die Augen; «Geh, wasch dich im Teich Siloam» – er wäscht sich und kommt sehend zurück.",
+   "reason_de": "Heilung (Kriterien 3 und 4).",
+   "recognition_de": "Am Teich Siloam.",
+   "keywords": [
+    "Geh, wasch dich im Teich Siloam",
+    "kam sehend zurück"
+   ]
+  },
+  {
+   "reference": "JHN.9.8-JHN.9.12",
+   "text_de": "Nachbarn: «Ist das nicht der, der dasass und bettelte?» – «Ich bin es»; er erzählt, wie es geschah, weiss aber nicht, wo Jesus ist.",
+   "reason_de": "Bestätigung (Kriterium 3).",
+   "recognition_de": "Nachbarn fragen.",
+   "keywords": [
+    "Ist das nicht der, der dasass und bettelte?",
+    "Ich bin es"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Die Erklärung «Siloam» = «Gesandter» ([[JHN.9.7]]) – Detail",
+  "Der Brei aus Speichel wird nicht ausgemalt"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-ROLLE-BLINDER",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-GRUPPE-MENGE"
+ ],
+ "places": [
+  "FIG-ORT-SILOAM"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "JHN.9.1-JHN.9.12",
+   "fingerprint": "7d0c05d502371cfe"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Joh 8–14 mit 7,53–8,11 nach Joh 1–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

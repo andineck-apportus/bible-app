@@ -1,0 +1,168 @@
+{
+ "id": "CORE-JHN-009-024-034",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "JHN.9.24-JHN.9.34",
+ "target": "TU-JHN-009-024-034",
+ "core_de": "Beim zweiten Verhör sagen sie: «Gib Gott die Ehre! Wir wissen, dass dieser Mensch ein Sünder ist»; der Mann antwortet: «Ob er ein Sünder ist, weiss ich nicht; eines weiss ich: dass ich blind war und jetzt sehe», und fragt, ob auch sie seine Jünger werden wollen; sie beschimpfen ihn – sie seien Jünger des Mose –, er aber folgert: Gott hört nicht auf Sünder, und «wenn dieser nicht von Gott wäre, könnte er nichts tun»; da sagen sie: «Du bist ganz in Sünden geboren, und du belehrst uns?», und werfen ihn hinaus.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "dialogue",
+    "subtype": "Wir wissen – ich weiss; zweites Verhör bis zum Hinauswurf",
+    "range": "JHN.9.24-JHN.9.34",
+    "elements": [
+     {
+      "label": "«Gib Gott die Ehre! Wir wissen, dass dieser Mensch ein Sünder ist.»",
+      "ref": "JHN.9.24",
+      "role": "sie"
+     },
+     {
+      "label": "«Ob er ein Sünder ist, weiss ich nicht; eines weiss ich: dass ich blind war und jetzt sehe.»",
+      "ref": "JHN.9.25",
+      "role": "er"
+     },
+     {
+      "label": "«Was hat er mit dir gemacht?» – «Ich habe es euch schon gesagt … Wollt etwa auch ihr seine Jünger werden?»",
+      "ref": "JHN.9.26-JHN.9.27",
+      "role": "sie / er"
+     },
+     {
+      "label": "Sie beschimpfen ihn: «Du bist ein Jünger von jenem, wir aber sind Jünger des Mose … von diesem wissen wir nicht, woher er ist.»",
+      "ref": "JHN.9.28-JHN.9.29",
+      "role": "sie"
+     },
+     {
+      "label": "Beweisgang",
+      "ref": "JHN.9.30-JHN.9.33",
+      "role": "er",
+      "child": "s2"
+     },
+     {
+      "label": "«Du bist ganz in Sünden geboren, und du belehrst uns?» Und sie warfen ihn hinaus.",
+      "ref": "JHN.9.34",
+      "role": "Ausgang"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-GRUPPE-PHARISAEER",
+       "to": "FIG-ROLLE-BLINDER",
+       "ref": "JHN.9.24-JHN.9.34"
+      },
+      {
+       "who": "FIG-ROLLE-BLINDER",
+       "to": "FIG-GRUPPE-PHARISAEER",
+       "ref": "JHN.9.25-JHN.9.33"
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "wissen",
+       "ref": "JHN.9.24-JHN.9.31"
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "Die Sprecher heissen in [[JHN.9.24]] «sie»; nach [[JHN.9.13-JHN.9.18]] sind es die Pharisäer bzw. «die Juden»; im Bild als Pharisäer."
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "argument",
+    "subtype": "Beweisgang: Gott hört nicht auf Sünder → nie gehört → also von Gott",
+    "range": "JHN.9.30-JHN.9.33",
+    "elements": [
+     {
+      "label": "Darin liegt das Erstaunliche: Ihr wisst nicht, woher er ist, und er hat mir die Augen geöffnet",
+      "ref": "JHN.9.30",
+      "role": "Ausgang"
+     },
+     {
+      "label": "Wir wissen, dass Gott nicht auf Sünder hört; wer gottesfürchtig ist und seinen Willen tut, auf den hört er",
+      "ref": "JHN.9.31",
+      "role": "Grundsatz"
+     },
+     {
+      "label": "Seit Menschengedenken hat man nicht gehört, dass jemand die Augen eines von Geburt Blinden geöffnet hat",
+      "ref": "JHN.9.32",
+      "role": "Beleg"
+     },
+     {
+      "label": "Wenn dieser nicht von Gott wäre, könnte er nichts tun",
+      "ref": "JHN.9.33",
+      "role": "Folgerung"
+     }
+    ],
+    "visual": "arrows",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "JHN.9.24-JHN.9.25",
+   "text_de": "«Wir wissen, dass dieser Mensch ein Sünder ist.» – «Eines weiss ich: dass ich blind war und jetzt sehe.»",
+   "reason_de": "Gegenüber «wir wissen – ich weiss» (Kriterien 1 und 2).",
+   "recognition_de": "Der Geheilte vor den Pharisäern.",
+   "keywords": [
+    "Wir wissen, dass dieser Mensch ein Sünder ist",
+    "dass ich blind war und jetzt sehe"
+   ]
+  },
+  {
+   "reference": "JHN.9.28-JHN.9.33",
+   "text_de": "«Du bist ein Jünger von jenem, wir aber sind Jünger des Mose.» – «Wir wissen, dass Gott nicht auf Sünder hört … Wenn dieser nicht von Gott wäre, könnte er nichts tun.»",
+   "reason_de": "Beweisgang des Geheilten (Kriterium 1).",
+   "recognition_de": "Er argumentiert.",
+   "keywords": [
+    "wir aber sind Jünger des Mose",
+    "Wenn dieser nicht von Gott wäre, könnte er nichts tun"
+   ]
+  },
+  {
+   "reference": "JHN.9.34",
+   "text_de": "«Du bist ganz in Sünden geboren, und du belehrst uns?» – und sie warfen ihn hinaus.",
+   "reason_de": "Ausgang (Kriterium 3).",
+   "recognition_de": "Hinauswurf.",
+   "keywords": [
+    "Und sie warfen ihn hinaus"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Die Frage «Was hat er mit dir gemacht?» ([[JHN.9.26-JHN.9.27]]) steht in der Struktur"
+ ],
+ "persons": [
+  "FIG-ROLLE-BLINDER",
+  "FIG-GRUPPE-PHARISAEER",
+  "FIG-MOSE",
+  "FIG-GOTT"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "JHN.9.24-JHN.9.34",
+   "fingerprint": "be7e1cdc726d1122"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Joh 8–14 mit 7,53–8,11 nach Joh 1–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

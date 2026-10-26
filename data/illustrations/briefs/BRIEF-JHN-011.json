@@ -13,33 +13,58 @@
       "n": 1,
       "reference": "JHN.11.1-JHN.11.16",
       "figures": [
-        "FIG-ROLLE-BOTE",
+        "FIG-LAZARUS",
+        "FIG-MARTA",
         "FIG-JESUS"
       ],
       "objects": [],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-KRANK"
+      ],
       "speech": [
         {
-          "from": "FIG-ROLLE-BOTE",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-LAZARUS",
-            "FIG-ZEICHEN-KRANK"
-          ]
-        },
-        {
           "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-BOTE",
-          "icons": [
-            "FIG-ZEICHEN-KRANK",
-            "FIG-ZEICHEN-LICHT"
-          ]
+          "to": "FIG-JESUS",
+          "icons": [],
+          "word": {
+            "de": "Diese Krankheit führt nicht zum Tod, sondern sie dient der Herrlichkeit Gottes.",
+            "gsw": "Die Chranket füert nöd zum Tod, sondern si dient de Herrlichkeit vo Gott."
+          }
         }
       ],
-      "action_de": "Lazarus aus Betanien ist krank. Seine Schwestern Marta und Maria lassen Jesus sagen: Der, den du lieb hast, ist krank. Jesus sagt: Diese Krankheit führt nicht zum Tod, sondern dient der Herrlichkeit Gottes.",
+      "action_de": "Lazarus ist krank; Jesus sagt: «Diese Krankheit führt nicht zum Tod, sondern sie dient der Herrlichkeit Gottes»; später sagt er offen: «Lazarus ist gestorben.»",
+      "keywords": {
+        "de": "Lazarus ist gestorben",
+        "gsw": "De Lazarus isch gstorbe"
+      },
+      "names": {
+        "FIG-LAZARUS": {
+          "de": "Lazarus",
+          "gsw": "Lazarus"
+        },
+        "FIG-MARTA": {
+          "de": "Marta",
+          "gsw": "Marta"
+        }
+      },
       "stage": {
+        "trenner": true,
+        "split": 2,
+        "pose": {
+          "FIG-LAZARUS": "lie"
+        },
+        "at": {
+          "FIG-ZEICHEN-KRANK": "FIG-LAZARUS"
+        },
         "mood": {
-          "FIG-ROLLE-BOTE": "worried"
+          "FIG-LAZARUS": "pain",
+          "FIG-MARTA": "worried",
+          "FIG-JESUS": "calm"
+        },
+        "x": {
+          "FIG-LAZARUS": 42,
+          "FIG-MARTA": 96,
+          "FIG-JESUS": 150
         }
       }
     },
@@ -48,27 +73,58 @@
       "reference": "JHN.11.17-JHN.11.37",
       "figures": [
         "FIG-MARTA",
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-MARIA-BETANIEN"
       ],
       "objects": [],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-TRAUER"
+      ],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-MARTA",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-AUFERSTEHUNG",
-            "FIG-ZEICHEN-LEBEN",
-            "FIG-ZEICHEN-GLAUBEN",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Ich bin die Auferstehung und das Leben.",
+            "gsw": "Ich bi d Uferstehig und s Läbe."
+          }
         }
       ],
-      "action_de": "Jesus sagt zu Marta: Dein Bruder wird auferstehen. Ich bin die Auferstehung und das Leben; wer an mich glaubt, wird leben, auch wenn er stirbt. Glaubst du das?",
+      "action_de": "Jesus sagt zu Marta: «Ich bin die Auferstehung und das Leben»; bei Maria und den weinenden Juden weint auch Jesus.",
+      "keywords": {
+        "de": "Jesus weinte",
+        "gsw": "Em Jesus sind d Träne choo"
+      },
+      "names": {
+        "FIG-MARTA": {
+          "de": "Marta",
+          "gsw": "Marta"
+        },
+        "FIG-MARIA-BETANIEN": {
+          "de": "Maria",
+          "gsw": "Maria"
+        }
+      },
       "stage": {
+        "signs_who": {
+          "FIG-ZEICHEN-TRAUER": [
+            "FIG-JESUS",
+            "FIG-MARIA-BETANIEN"
+          ]
+        },
+        "pose": {
+          "FIG-MARIA-BETANIEN": "kneel"
+        },
         "mood": {
-          "FIG-MARTA": "pensive"
+          "FIG-MARTA": "pain",
+          "FIG-JESUS": "pain",
+          "FIG-MARIA-BETANIEN": "pain"
+        },
+        "x": {
+          "FIG-MARTA": 34,
+          "FIG-JESUS": 96,
+          "FIG-MARIA-BETANIEN": 156
         }
       }
     },
@@ -76,7 +132,6 @@
       "n": 3,
       "reference": "JHN.11.38-JHN.11.44",
       "figures": [
-        "FIG-GRUPPE-MENGE",
         "FIG-JESUS",
         "FIG-LAZARUS-BINDEN"
       ],
@@ -88,34 +143,33 @@
         {
           "from": "FIG-JESUS",
           "to": "FIG-LAZARUS-BINDEN",
-          "icons": [
-            "FIG-LAZARUS",
-            "FIG-ZEICHEN-AUFERSTEHUNG"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Lazarus, komm heraus!",
+            "gsw": "Lazarus, chumm use!"
+          }
         }
       ],
-      "action_de": "Jesus ruft mit lauter Stimme: Lazarus, komm heraus! Der Tote kommt heraus, an Füssen und Händen mit Binden umwickelt, das Gesicht mit einem Schweisstuch umbunden. Jesus sagt: Bindet ihn los und lasst ihn gehen!",
+      "action_de": "Jesus ruft mit lauter Stimme: «Lazarus, komm heraus!» Der Tote kommt heraus, an Füssen und Händen mit Binden umwickelt, das Gesicht mit einem Schweisstuch umbunden.",
+      "keywords": {
+        "de": "Der Tote kam heraus",
+        "gsw": "De Tot isch usechoo"
+      },
+      "names": {
+        "FIG-LAZARUS-BINDEN": {
+          "de": "Lazarus",
+          "gsw": "Lazarus"
+        }
+      },
       "stage": {
         "back_side": "right",
-        "x": {
-          "FIG-GRUPPE-MENGE": 26,
-          "FIG-JESUS": 80,
-          "FIG-LAZARUS-BINDEN": 150
-        },
         "mood": {
-          "FIG-GRUPPE-MENGE": "surprised",
-          "FIG-LAZARUS-BINDEN": "calm",
-          "FIG-JESUS": "determined"
+          "FIG-JESUS": "determined",
+          "FIG-LAZARUS-BINDEN": "calm"
         },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-LAZARUS-BINDEN",
-            "act"
-          ]
-        ],
-        "wear": {
-          "FIG-LAZARUS-BINDEN": "binden"
+        "x": {
+          "FIG-JESUS": 46,
+          "FIG-LAZARUS-BINDEN": 140
         }
       }
     },
@@ -123,69 +177,67 @@
       "n": 4,
       "reference": "JHN.11.45-JHN.11.57",
       "figures": [
-        "FIG-GRUPPE-HOHEPRIESTER",
-        "FIG-KAJAFAS",
-        "FIG-GRUPPE-PHARISAEER"
+        "FIG-GRUPPE-HOHER-RAT",
+        "FIG-KAJAFAS"
       ],
       "objects": [],
       "signs": [],
       "speech": [
         {
-          "from": "FIG-GRUPPE-HOHEPRIESTER",
-          "to": "FIG-GRUPPE-PHARISAEER",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-STERN"
-          ]
-        },
-        {
           "from": "FIG-KAJAFAS",
-          "to": "FIG-GRUPPE-PHARISAEER",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-TOD",
-            "FIG-ZEICHEN-RETTUNG",
-            "FIG-GRUPPE-MENGE"
-          ]
+          "to": "FIG-GRUPPE-HOHER-RAT",
+          "icons": [],
+          "word": {
+            "de": "Es ist besser für euch, dass ein Mensch für das Volk stirbt.",
+            "gsw": "Es isch besser für eu, dass ein Mänsch für s Volk stirbt."
+          }
         }
       ],
-      "action_de": "Die Hohepriester und Pharisäer beraten im Hohen Rat: Dieser Mensch tut viele Zeichen. Kajafas sagt, es sei besser, dass ein Mensch für das Volk sterbe; von da an planen sie, ihn zu töten.",
+      "action_de": "Kajafas sagt im Hohen Rat: «Es ist besser für euch, dass ein Mensch für das Volk stirbt»; von jenem Tag an planen sie, Jesus zu töten.",
+      "keywords": {
+        "de": "Von jenem Tag an planten sie nun, ihn zu töten",
+        "gsw": "Vo däm Tag aa händ si jetzt plant, en z töte"
+      },
+      "names": {
+        "FIG-KAJAFAS": {
+          "de": "Kajafas",
+          "gsw": "Kajafas"
+        }
+      },
       "stage": {
         "mood": {
-          "FIG-GRUPPE-HOHEPRIESTER": "earnest",
-          "FIG-KAJAFAS": "earnest",
-          "FIG-GRUPPE-PHARISAEER": "pensive"
+          "FIG-GRUPPE-HOHER-RAT": "earnest",
+          "FIG-KAJAFAS": "earnest"
         },
         "x": {
-          "FIG-GRUPPE-HOHEPRIESTER": 24,
-          "FIG-KAJAFAS": 106,
-          "FIG-GRUPPE-PHARISAEER": 164
+          "FIG-GRUPPE-HOHER-RAT": 54,
+          "FIG-KAJAFAS": 140
         }
       }
     }
   ],
   "actions_de": [
-    "Lazarus aus Betanien ist krank. Seine Schwestern Marta und Maria lassen Jesus sagen: Der, den du lieb hast, ist krank. Jesus sagt: Diese Krankheit führt nicht zum Tod, sondern dient der Herrlichkeit Gottes.",
-    "Jesus sagt zu Marta: Dein Bruder wird auferstehen. Ich bin die Auferstehung und das Leben; wer an mich glaubt, wird leben, auch wenn er stirbt. Glaubst du das?",
-    "Jesus ruft mit lauter Stimme: Lazarus, komm heraus! Der Tote kommt heraus, an Füssen und Händen mit Binden umwickelt, das Gesicht mit einem Schweisstuch umbunden. Jesus sagt: Bindet ihn los und lasst ihn gehen!",
-    "Die Hohepriester und Pharisäer beraten im Hohen Rat: Dieser Mensch tut viele Zeichen. Kajafas sagt, es sei besser, dass ein Mensch für das Volk sterbe; von da an planen sie, ihn zu töten."
+    "Lazarus ist krank; Jesus sagt: «Diese Krankheit führt nicht zum Tod, sondern sie dient der Herrlichkeit Gottes»; später sagt er offen: «Lazarus ist gestorben.»",
+    "Jesus sagt zu Marta: «Ich bin die Auferstehung und das Leben»; bei Maria und den weinenden Juden weint auch Jesus.",
+    "Jesus ruft mit lauter Stimme: «Lazarus, komm heraus!» Der Tote kommt heraus, an Füssen und Händen mit Binden umwickelt, das Gesicht mit einem Schweisstuch umbunden.",
+    "Kajafas sagt im Hohen Rat: «Es ist besser für euch, dass ein Mensch für das Volk stirbt»; von jenem Tag an planen sie, Jesus zu töten."
   ],
   "captions_de": [
-    "Die Nachricht: Ein Bote (Brief in der Hand) meldet: Lazarus ist krank (Liegender); Jesus antwortet: Die Krankheit dient der Herrlichkeit Gottes (Licht).",
-    "Ich (Jesus) bin die Auferstehung und das Leben (Grab mit Pfeil nach oben, Keimling mit Unendlichzeichen). Glaubst du das? (Herz, Fragezeichen)",
-    "Ruf → Lazarus kommt heraus: Jesus ruft: Lazarus, komm heraus! (Grab mit Pfeil nach oben; Pfeil von Jesus zu Lazarus) – Lazarus kommt mit Binden aus dem offenen Grab; die Leute staunen.",
-    "Der Hohe Rat: «Er tut viele Zeichen» (Stern); Kajafas sagt: Einer soll sterben (Jesus, Totenkopf), damit das Volk gerettet wird (Pfeil aus den Wellen, Menge)."
+    "Lazarus krank: Lazarus (Name) liegt krank auf der Matte, Marta bei ihm; Jesus sagt: «Diese Krankheit führt nicht zum Tod, sondern sie dient der Herrlichkeit Gottes.» (Totenkopf, Licht); gestrichelte Trennlinie zwischen den Orten.",
+    "Auferstehung und Trauer: Jesus sagt zu Marta: «Ich bin die Auferstehung und das Leben.» (Auferstehung, Leben); Maria kniet; Tränen bei Jesus und Maria (Trauer); im Band: Jesus weinte.",
+    "Komm heraus: Jesus ruft: «Lazarus, komm heraus!» (Lazarus, auferwecken); Lazarus (Name) kommt in Binden aus der Grabhöhle.",
+    "Hoher Rat: Kajafas (Name) sagt: «Es ist besser für euch, dass ein Mensch für das Volk stirbt.» (Mensch, Tod); im Band: Sie planten, ihn zu töten (töten)."
   ],
-  "interpretation_note_de": "Vier Felder: die Nachricht, Jesus und Marta, die Auferweckung, der Beschluss des Rates; Einzelheiten in den Abschnitten.",
+  "interpretation_note_de": "Vier Comic-Szenen ([[JHN.11.1-JHN.11.57]]): das erste Feld zeigt den Anfang ([[JHN.11.1-JHN.11.16]]), das zweite bündelt Marta ([[JHN.11.17-JHN.11.27]]) und Maria mit den Tränen ([[JHN.11.28-JHN.11.37]]), das dritte den Ruf am Grab ([[JHN.11.38-JHN.11.44]]), das vierte den Hohen Rat ([[JHN.11.45-JHN.11.53]]) mit dem Rückzug nach Efraim ([[JHN.11.54-JHN.11.57]]), der in der Zusammenfassung steht. Dass sie Jesus töten wollen, ist ein Plan (Band).",
   "basis": [
     {
       "record": "SUM-CH-JHN-011",
       "field": "summary",
-      "fingerprint": "555ff881f234173d"
+      "fingerprint": "68d9bbc6e0cc4f98"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -370,6 +422,866 @@
           "Ich (Jesus) bin die Auferstehung und das Leben (Grab mit Pfeil nach oben, Spross im Ring). Glaubst du das? (Herz, Fragezeichen)",
           "Ruf → Lazarus kommt heraus: Jesus ruft: Lazarus, komm heraus! (Grab mit Pfeil nach oben; Pfeil von Jesus zu Lazarus) – Lazarus kommt mit Binden aus dem offenen Grab; die Leute staunen.",
           "Der Hohe Rat: «Er tut viele Zeichen» (Stern); Kajafas sagt: Einer soll sterben (Jesus, Grab), damit das Volk gerettet wird (Pfeil aus den Wellen, Menge)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-JHN-011",
+            "field": "summary",
+            "fingerprint": "555ff881f234173d"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.11.1-JHN.11.16",
+            "figures": [
+              "FIG-ROLLE-BOTE",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-BOTE",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-LAZARUS",
+                  "FIG-ZEICHEN-KRANK"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-BOTE",
+                "icons": [
+                  "FIG-ZEICHEN-KRANK",
+                  "FIG-ZEICHEN-LICHT"
+                ]
+              }
+            ],
+            "action_de": "Lazarus aus Betanien ist krank. Seine Schwestern Marta und Maria lassen Jesus sagen: Der, den du lieb hast, ist krank. Jesus sagt: Diese Krankheit führt nicht zum Tod, sondern dient der Herrlichkeit Gottes.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-BOTE": "worried"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.11.17-JHN.11.37",
+            "figures": [
+              "FIG-MARTA",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-MARTA",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-AUFERSTEHUNG",
+                  "FIG-ZEICHEN-LEBEN",
+                  "FIG-ZEICHEN-GLAUBEN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt zu Marta: Dein Bruder wird auferstehen. Ich bin die Auferstehung und das Leben; wer an mich glaubt, wird leben, auch wenn er stirbt. Glaubst du das?",
+            "stage": {
+              "mood": {
+                "FIG-MARTA": "pensive"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.11.38-JHN.11.44",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS",
+              "FIG-LAZARUS-BINDEN"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-LAZARUS-BINDEN",
+                "icons": [
+                  "FIG-LAZARUS",
+                  "FIG-ZEICHEN-AUFERSTEHUNG"
+                ]
+              }
+            ],
+            "action_de": "Jesus ruft mit lauter Stimme: Lazarus, komm heraus! Der Tote kommt heraus, an Füssen und Händen mit Binden umwickelt, das Gesicht mit einem Schweisstuch umbunden. Jesus sagt: Bindet ihn los und lasst ihn gehen!",
+            "stage": {
+              "back_side": "right",
+              "x": {
+                "FIG-GRUPPE-MENGE": 26,
+                "FIG-JESUS": 80,
+                "FIG-LAZARUS-BINDEN": 150
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "surprised",
+                "FIG-LAZARUS-BINDEN": "calm",
+                "FIG-JESUS": "determined"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-LAZARUS-BINDEN",
+                  "act"
+                ]
+              ],
+              "wear": {
+                "FIG-LAZARUS-BINDEN": "binden"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.11.45-JHN.11.57",
+            "figures": [
+              "FIG-GRUPPE-HOHEPRIESTER",
+              "FIG-KAJAFAS",
+              "FIG-GRUPPE-PHARISAEER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-HOHEPRIESTER",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-STERN"
+                ]
+              },
+              {
+                "from": "FIG-KAJAFAS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-TOD",
+                  "FIG-ZEICHEN-RETTUNG",
+                  "FIG-GRUPPE-MENGE"
+                ]
+              }
+            ],
+            "action_de": "Die Hohepriester und Pharisäer beraten im Hohen Rat: Dieser Mensch tut viele Zeichen. Kajafas sagt, es sei besser, dass ein Mensch für das Volk sterbe; von da an planen sie, ihn zu töten.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-HOHEPRIESTER": "earnest",
+                "FIG-KAJAFAS": "earnest",
+                "FIG-GRUPPE-PHARISAEER": "pensive"
+              },
+              "x": {
+                "FIG-GRUPPE-HOHEPRIESTER": 24,
+                "FIG-KAJAFAS": 106,
+                "FIG-GRUPPE-PHARISAEER": 164
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Lazarus aus Betanien ist krank. Seine Schwestern Marta und Maria lassen Jesus sagen: Der, den du lieb hast, ist krank. Jesus sagt: Diese Krankheit führt nicht zum Tod, sondern dient der Herrlichkeit Gottes.",
+          "Jesus sagt zu Marta: Dein Bruder wird auferstehen. Ich bin die Auferstehung und das Leben; wer an mich glaubt, wird leben, auch wenn er stirbt. Glaubst du das?",
+          "Jesus ruft mit lauter Stimme: Lazarus, komm heraus! Der Tote kommt heraus, an Füssen und Händen mit Binden umwickelt, das Gesicht mit einem Schweisstuch umbunden. Jesus sagt: Bindet ihn los und lasst ihn gehen!",
+          "Die Hohepriester und Pharisäer beraten im Hohen Rat: Dieser Mensch tut viele Zeichen. Kajafas sagt, es sei besser, dass ein Mensch für das Volk sterbe; von da an planen sie, ihn zu töten."
+        ],
+        "captions_de": [
+          "Die Nachricht: Ein Bote (Brief in der Hand) meldet: Lazarus ist krank (Liegender); Jesus antwortet: Die Krankheit dient der Herrlichkeit Gottes (Licht).",
+          "Ich (Jesus) bin die Auferstehung und das Leben (Grab mit Pfeil nach oben, Keimling mit Unendlichzeichen). Glaubst du das? (Herz, Fragezeichen)",
+          "Ruf → Lazarus kommt heraus: Jesus ruft: Lazarus, komm heraus! (Grab mit Pfeil nach oben; Pfeil von Jesus zu Lazarus) – Lazarus kommt mit Binden aus dem offenen Grab; die Leute staunen.",
+          "Der Hohe Rat: «Er tut viele Zeichen» (Stern); Kajafas sagt: Einer soll sterben (Jesus, Totenkopf), damit das Volk gerettet wird (Pfeil aus den Wellen, Menge)."
+        ],
+        "interpretation_note_de": "Vier Felder: die Nachricht, Jesus und Marta, die Auferweckung, der Beschluss des Rates; Einzelheiten in den Abschnitten.",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.11.1-JHN.11.16",
+            "figures": [
+              "FIG-MARTA",
+              "FIG-LAZARUS",
+              "FIG-MARIA-BETANIEN",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-KRANK"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [],
+                "word": {
+                  "de": "Diese Krankheit führt nicht zum Tod, sondern sie dient der Herrlichkeit Gottes.",
+                  "gsw": "Die Chranket füert nöd zum Tod, sondern si dient de Herrlichkeit vo Gott."
+                }
+              }
+            ],
+            "action_de": "Lazarus ist krank; Jesus sagt: «Diese Krankheit führt nicht zum Tod, sondern sie dient der Herrlichkeit Gottes»; später sagt er offen: «Lazarus ist gestorben.»",
+            "keywords": {
+              "de": "Lazarus ist gestorben",
+              "gsw": "De Lazarus isch gstorbe"
+            },
+            "names": {
+              "FIG-LAZARUS": {
+                "de": "Lazarus",
+                "gsw": "Lazarus"
+              },
+              "FIG-MARTA": {
+                "de": "Marta",
+                "gsw": "Marta"
+              },
+              "FIG-MARIA-BETANIEN": {
+                "de": "Maria",
+                "gsw": "Maria"
+              }
+            },
+            "stage": {
+              "trenner": true,
+              "split": 3,
+              "pose": {
+                "FIG-LAZARUS": "lie"
+              },
+              "at": {
+                "FIG-ZEICHEN-KRANK": "FIG-LAZARUS"
+              },
+              "mood": {
+                "FIG-LAZARUS": "pain",
+                "FIG-MARTA": "worried",
+                "FIG-MARIA-BETANIEN": "worried",
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.11.17-JHN.11.37",
+            "figures": [
+              "FIG-MARTA",
+              "FIG-JESUS",
+              "FIG-MARIA-BETANIEN"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-MARTA",
+                "icons": [],
+                "word": {
+                  "de": "Ich bin die Auferstehung und das Leben.",
+                  "gsw": "Ich bi d Uferstehig und s Läbe."
+                }
+              }
+            ],
+            "action_de": "Jesus sagt zu Marta: «Ich bin die Auferstehung und das Leben»; bei Maria und den weinenden Juden weint auch Jesus.",
+            "keywords": {
+              "de": "Jesus weinte",
+              "gsw": "Em Jesus sind d Träne choo"
+            },
+            "names": {
+              "FIG-MARTA": {
+                "de": "Marta",
+                "gsw": "Marta"
+              },
+              "FIG-MARIA-BETANIEN": {
+                "de": "Maria",
+                "gsw": "Maria"
+              }
+            },
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-JESUS",
+                  "FIG-MARIA-BETANIEN"
+                ]
+              },
+              "pose": {
+                "FIG-MARIA-BETANIEN": "kneel"
+              },
+              "mood": {
+                "FIG-MARTA": "pain",
+                "FIG-JESUS": "pain",
+                "FIG-MARIA-BETANIEN": "pain"
+              },
+              "x": {
+                "FIG-MARTA": 34,
+                "FIG-JESUS": 96,
+                "FIG-MARIA-BETANIEN": 156
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.11.38-JHN.11.44",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-LAZARUS-BINDEN"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-LAZARUS-BINDEN",
+                "icons": [],
+                "word": {
+                  "de": "Lazarus, komm heraus!",
+                  "gsw": "Lazarus, chumm use!"
+                }
+              }
+            ],
+            "action_de": "Jesus ruft mit lauter Stimme: «Lazarus, komm heraus!» Der Tote kommt heraus, an Füssen und Händen mit Binden umwickelt, das Gesicht mit einem Schweisstuch umbunden.",
+            "keywords": {
+              "de": "Der Tote kam heraus",
+              "gsw": "De Tot isch usechoo"
+            },
+            "names": {
+              "FIG-LAZARUS-BINDEN": {
+                "de": "Lazarus",
+                "gsw": "Lazarus"
+              }
+            },
+            "stage": {
+              "in": {
+                "FIG-LAZARUS-BINDEN": "FIG-ORT-GRAB"
+              },
+              "in_pos": {
+                "FIG-LAZARUS-BINDEN": [
+                  0.5,
+                  0.2
+                ]
+              },
+              "big_side": "right",
+              "mood": {
+                "FIG-JESUS": "determined",
+                "FIG-LAZARUS-BINDEN": "calm"
+              },
+              "x": {
+                "FIG-JESUS": 46
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.11.45-JHN.11.57",
+            "figures": [
+              "FIG-GRUPPE-HOHER-RAT",
+              "FIG-KAJAFAS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-KAJAFAS",
+                "to": "FIG-GRUPPE-HOHER-RAT",
+                "icons": [],
+                "word": {
+                  "de": "Es ist besser für euch, dass ein Mensch für das Volk stirbt.",
+                  "gsw": "Es isch besser für eu, dass ein Mänsch für s Volk stirbt."
+                }
+              }
+            ],
+            "action_de": "Kajafas sagt im Hohen Rat: «Es ist besser für euch, dass ein Mensch für das Volk stirbt»; von jenem Tag an planen sie, Jesus zu töten.",
+            "keywords": {
+              "de": "Von jenem Tag an planten sie nun, ihn zu töten",
+              "gsw": "Vo däm Tag aa händ si jetzt plant, en z töte"
+            },
+            "names": {
+              "FIG-KAJAFAS": {
+                "de": "Kajafas",
+                "gsw": "Kajafas"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-HOHER-RAT": "earnest",
+                "FIG-KAJAFAS": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-HOHER-RAT": 54,
+                "FIG-KAJAFAS": 140
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Lazarus krank: Lazarus (Name) liegt krank auf der Matte, Marta und Maria bei ihm; Jesus sagt zu den Jüngern: «Diese Krankheit führt nicht zum Tod, sondern sie dient der Herrlichkeit Gottes.» (Totenkopf, Licht); gestrichelte Trennlinie zwischen den Orten.",
+          "Auferstehung und Trauer: Jesus sagt zu Marta: «Ich bin die Auferstehung und das Leben.» (Auferstehung, Leben); Maria kniet; Tränen bei Jesus und Maria (Trauer); im Band: Jesus weinte.",
+          "Komm heraus: Jesus ruft: «Lazarus, komm heraus!» (Lazarus, auferwecken); Lazarus (Name) kommt in Binden aus der Grabhöhle.",
+          "Hoher Rat: Kajafas (Name) sagt: «Es ist besser für euch, dass ein Mensch für das Volk stirbt.» (Mensch, Tod); im Band: Sie planten, ihn zu töten (töten)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.11.1-JHN.11.16",
+            "figures": [
+              "FIG-MARTA",
+              "FIG-LAZARUS",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-KRANK"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [],
+                "word": {
+                  "de": "Diese Krankheit führt nicht zum Tod, sondern sie dient der Herrlichkeit Gottes.",
+                  "gsw": "Die Chranket füert nöd zum Tod, sondern si dient de Herrlichkeit vo Gott."
+                }
+              }
+            ],
+            "action_de": "Lazarus ist krank; Jesus sagt: «Diese Krankheit führt nicht zum Tod, sondern sie dient der Herrlichkeit Gottes»; später sagt er offen: «Lazarus ist gestorben.»",
+            "keywords": {
+              "de": "Lazarus ist gestorben",
+              "gsw": "De Lazarus isch gstorbe"
+            },
+            "names": {
+              "FIG-LAZARUS": {
+                "de": "Lazarus",
+                "gsw": "Lazarus"
+              },
+              "FIG-MARTA": {
+                "de": "Marta",
+                "gsw": "Marta"
+              }
+            },
+            "stage": {
+              "trenner": true,
+              "split": 2,
+              "pose": {
+                "FIG-LAZARUS": "lie"
+              },
+              "at": {
+                "FIG-ZEICHEN-KRANK": "FIG-LAZARUS"
+              },
+              "mood": {
+                "FIG-LAZARUS": "pain",
+                "FIG-MARTA": "worried",
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "calm"
+              },
+              "x": {
+                "FIG-MARTA": 26,
+                "FIG-LAZARUS": 70,
+                "FIG-JESUS": 126,
+                "FIG-GRUPPE-JUENGER": 166
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.11.17-JHN.11.37",
+            "figures": [
+              "FIG-MARTA",
+              "FIG-JESUS",
+              "FIG-MARIA-BETANIEN"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-MARTA",
+                "icons": [],
+                "word": {
+                  "de": "Ich bin die Auferstehung und das Leben.",
+                  "gsw": "Ich bi d Uferstehig und s Läbe."
+                }
+              }
+            ],
+            "action_de": "Jesus sagt zu Marta: «Ich bin die Auferstehung und das Leben»; bei Maria und den weinenden Juden weint auch Jesus.",
+            "keywords": {
+              "de": "Jesus weinte",
+              "gsw": "Em Jesus sind d Träne choo"
+            },
+            "names": {
+              "FIG-MARTA": {
+                "de": "Marta",
+                "gsw": "Marta"
+              },
+              "FIG-MARIA-BETANIEN": {
+                "de": "Maria",
+                "gsw": "Maria"
+              }
+            },
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-JESUS",
+                  "FIG-MARIA-BETANIEN"
+                ]
+              },
+              "pose": {
+                "FIG-MARIA-BETANIEN": "kneel"
+              },
+              "mood": {
+                "FIG-MARTA": "pain",
+                "FIG-JESUS": "pain",
+                "FIG-MARIA-BETANIEN": "pain"
+              },
+              "x": {
+                "FIG-MARTA": 34,
+                "FIG-JESUS": 96,
+                "FIG-MARIA-BETANIEN": 156
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.11.38-JHN.11.44",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-LAZARUS-BINDEN"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-LAZARUS-BINDEN",
+                "icons": [],
+                "word": {
+                  "de": "Lazarus, komm heraus!",
+                  "gsw": "Lazarus, chumm use!"
+                }
+              }
+            ],
+            "action_de": "Jesus ruft mit lauter Stimme: «Lazarus, komm heraus!» Der Tote kommt heraus, an Füssen und Händen mit Binden umwickelt, das Gesicht mit einem Schweisstuch umbunden.",
+            "keywords": {
+              "de": "Der Tote kam heraus",
+              "gsw": "De Tot isch usechoo"
+            },
+            "names": {
+              "FIG-LAZARUS-BINDEN": {
+                "de": "Lazarus",
+                "gsw": "Lazarus"
+              }
+            },
+            "stage": {
+              "back_side": "right",
+              "mood": {
+                "FIG-JESUS": "determined",
+                "FIG-LAZARUS-BINDEN": "calm"
+              },
+              "x": {
+                "FIG-JESUS": 46,
+                "FIG-LAZARUS-BINDEN": 140
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.11.45-JHN.11.57",
+            "figures": [
+              "FIG-GRUPPE-HOHER-RAT",
+              "FIG-KAJAFAS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-KAJAFAS",
+                "to": "FIG-GRUPPE-HOHER-RAT",
+                "icons": [],
+                "word": {
+                  "de": "Es ist besser für euch, dass ein Mensch für das Volk stirbt.",
+                  "gsw": "Es isch besser für eu, dass ein Mänsch für s Volk stirbt."
+                }
+              }
+            ],
+            "action_de": "Kajafas sagt im Hohen Rat: «Es ist besser für euch, dass ein Mensch für das Volk stirbt»; von jenem Tag an planen sie, Jesus zu töten.",
+            "keywords": {
+              "de": "Von jenem Tag an planten sie nun, ihn zu töten",
+              "gsw": "Vo däm Tag aa händ si jetzt plant, en z töte"
+            },
+            "names": {
+              "FIG-KAJAFAS": {
+                "de": "Kajafas",
+                "gsw": "Kajafas"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-HOHER-RAT": "earnest",
+                "FIG-KAJAFAS": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-HOHER-RAT": 54,
+                "FIG-KAJAFAS": 140
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.11.1-JHN.11.16",
+            "figures": [
+              "FIG-LAZARUS",
+              "FIG-MARTA",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-KRANK"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [],
+                "word": {
+                  "de": "Diese Krankheit führt nicht zum Tod, sondern sie dient der Herrlichkeit Gottes.",
+                  "gsw": "Die Chranket füert nöd zum Tod, sondern si dient de Herrlichkeit vo Gott."
+                }
+              }
+            ],
+            "action_de": "Lazarus ist krank; Jesus sagt: «Diese Krankheit führt nicht zum Tod, sondern sie dient der Herrlichkeit Gottes»; später sagt er offen: «Lazarus ist gestorben.»",
+            "keywords": {
+              "de": "Lazarus ist gestorben",
+              "gsw": "De Lazarus isch gstorbe"
+            },
+            "names": {
+              "FIG-LAZARUS": {
+                "de": "Lazarus",
+                "gsw": "Lazarus"
+              },
+              "FIG-MARTA": {
+                "de": "Marta",
+                "gsw": "Marta"
+              }
+            },
+            "stage": {
+              "trenner": true,
+              "split": 2,
+              "pose": {
+                "FIG-LAZARUS": "lie"
+              },
+              "at": {
+                "FIG-ZEICHEN-KRANK": "FIG-LAZARUS"
+              },
+              "mood": {
+                "FIG-LAZARUS": "pain",
+                "FIG-MARTA": "worried",
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "calm"
+              },
+              "x": {
+                "FIG-LAZARUS": 42,
+                "FIG-MARTA": 96,
+                "FIG-JESUS": 140,
+                "FIG-GRUPPE-JUENGER": 172
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.11.17-JHN.11.37",
+            "figures": [
+              "FIG-MARTA",
+              "FIG-JESUS",
+              "FIG-MARIA-BETANIEN"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-MARTA",
+                "icons": [],
+                "word": {
+                  "de": "Ich bin die Auferstehung und das Leben.",
+                  "gsw": "Ich bi d Uferstehig und s Läbe."
+                }
+              }
+            ],
+            "action_de": "Jesus sagt zu Marta: «Ich bin die Auferstehung und das Leben»; bei Maria und den weinenden Juden weint auch Jesus.",
+            "keywords": {
+              "de": "Jesus weinte",
+              "gsw": "Em Jesus sind d Träne choo"
+            },
+            "names": {
+              "FIG-MARTA": {
+                "de": "Marta",
+                "gsw": "Marta"
+              },
+              "FIG-MARIA-BETANIEN": {
+                "de": "Maria",
+                "gsw": "Maria"
+              }
+            },
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-JESUS",
+                  "FIG-MARIA-BETANIEN"
+                ]
+              },
+              "pose": {
+                "FIG-MARIA-BETANIEN": "kneel"
+              },
+              "mood": {
+                "FIG-MARTA": "pain",
+                "FIG-JESUS": "pain",
+                "FIG-MARIA-BETANIEN": "pain"
+              },
+              "x": {
+                "FIG-MARTA": 34,
+                "FIG-JESUS": 96,
+                "FIG-MARIA-BETANIEN": 156
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.11.38-JHN.11.44",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-LAZARUS-BINDEN"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-LAZARUS-BINDEN",
+                "icons": [],
+                "word": {
+                  "de": "Lazarus, komm heraus!",
+                  "gsw": "Lazarus, chumm use!"
+                }
+              }
+            ],
+            "action_de": "Jesus ruft mit lauter Stimme: «Lazarus, komm heraus!» Der Tote kommt heraus, an Füssen und Händen mit Binden umwickelt, das Gesicht mit einem Schweisstuch umbunden.",
+            "keywords": {
+              "de": "Der Tote kam heraus",
+              "gsw": "De Tot isch usechoo"
+            },
+            "names": {
+              "FIG-LAZARUS-BINDEN": {
+                "de": "Lazarus",
+                "gsw": "Lazarus"
+              }
+            },
+            "stage": {
+              "back_side": "right",
+              "mood": {
+                "FIG-JESUS": "determined",
+                "FIG-LAZARUS-BINDEN": "calm"
+              },
+              "x": {
+                "FIG-JESUS": 46,
+                "FIG-LAZARUS-BINDEN": 140
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.11.45-JHN.11.57",
+            "figures": [
+              "FIG-GRUPPE-HOHER-RAT",
+              "FIG-KAJAFAS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-KAJAFAS",
+                "to": "FIG-GRUPPE-HOHER-RAT",
+                "icons": [],
+                "word": {
+                  "de": "Es ist besser für euch, dass ein Mensch für das Volk stirbt.",
+                  "gsw": "Es isch besser für eu, dass ein Mänsch für s Volk stirbt."
+                }
+              }
+            ],
+            "action_de": "Kajafas sagt im Hohen Rat: «Es ist besser für euch, dass ein Mensch für das Volk stirbt»; von jenem Tag an planen sie, Jesus zu töten.",
+            "keywords": {
+              "de": "Von jenem Tag an planten sie nun, ihn zu töten",
+              "gsw": "Vo däm Tag aa händ si jetzt plant, en z töte"
+            },
+            "names": {
+              "FIG-KAJAFAS": {
+                "de": "Kajafas",
+                "gsw": "Kajafas"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-HOHER-RAT": "earnest",
+                "FIG-KAJAFAS": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-HOHER-RAT": 54,
+                "FIG-KAJAFAS": 140
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Lazarus krank: Lazarus (Name) liegt krank auf der Matte, Marta bei ihm; Jesus sagt zu den Jüngern: «Diese Krankheit führt nicht zum Tod, sondern sie dient der Herrlichkeit Gottes.» (Totenkopf, Licht); gestrichelte Trennlinie zwischen den Orten.",
+          "Auferstehung und Trauer: Jesus sagt zu Marta: «Ich bin die Auferstehung und das Leben.» (Auferstehung, Leben); Maria kniet; Tränen bei Jesus und Maria (Trauer); im Band: Jesus weinte.",
+          "Komm heraus: Jesus ruft: «Lazarus, komm heraus!» (Lazarus, auferwecken); Lazarus (Name) kommt in Binden aus der Grabhöhle.",
+          "Hoher Rat: Kajafas (Name) sagt: «Es ist besser für euch, dass ein Mensch für das Volk stirbt.» (Mensch, Tod); im Band: Sie planten, ihn zu töten (töten)."
         ]
       }
     }

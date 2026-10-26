@@ -11,43 +11,82 @@
   "panels": [
     {
       "n": 1,
-      "reference": "JHN.8.6-JHN.8.8",
+      "reference": "JHN.8.1-JHN.8.11",
       "figures": [
-        "FIG-GRUPPE-PHARISAEER",
-        "FIG-ROLLE-FRAU",
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-ROLLE-FRAU"
       ],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-SCHREIBEN-ERDE"
-      ],
+      "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-PHARISAEER",
-          "icons": [
-            "FIG-ZEICHEN-SUENDE",
-            "FIG-ZEICHEN-FEHLT",
-            "FIG-OBJ-STEIN"
-          ]
+          "to": "FIG-ROLLE-FRAU",
+          "icons": [],
+          "word": {
+            "de": "Auch ich verurteile dich nicht. Geh, und sündige nicht mehr!",
+            "gsw": "Au ich verurteile di nöd. Gang, und sündig nüme!"
+          }
         }
       ],
-      "action_de": "Jesus bückt sich und schreibt mit dem Finger auf die Erde. Als sie weiter fragen, sagt er: Wer von euch ohne Sünde ist, werfe als Erster den Stein auf sie. Dann schreibt er wieder auf die Erde.",
+      "action_de": "Jesus sagt der Frau, die beim Ehebruch ergriffen wurde: «Auch ich verurteile dich nicht. Geh, und sündige nicht mehr!»",
+      "keywords": {
+        "de": "die beim Ehebruch ergriffen worden war",
+        "gsw": "wo mer bim Ehebruch verwütscht hät"
+      },
       "stage": {
-        "pose": {
-          "FIG-JESUS": "kneel"
-        },
         "mood": {
-          "FIG-ROLLE-FRAU": "worried",
-          "FIG-GRUPPE-PHARISAEER": "surprised",
-          "FIG-JESUS": "calm"
+          "FIG-JESUS": "calm",
+          "FIG-ROLLE-FRAU": "pensive"
         },
-        "floor_side": "right"
+        "x": {
+          "FIG-JESUS": 54,
+          "FIG-ROLLE-FRAU": 136
+        }
       }
     },
     {
       "n": 2,
-      "reference": "JHN.8.12",
+      "reference": "JHN.8.12-JHN.8.30",
+      "figures": [
+        "FIG-JESUS",
+        "FIG-GRUPPE-PHARISAEER"
+      ],
+      "objects": [
+        "FIG-ORT-TEMPEL"
+      ],
+      "signs": [],
+      "speech": [
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-GRUPPE-PHARISAEER",
+          "icons": [],
+          "word": {
+            "de": "Ich bin das Licht der Welt.",
+            "gsw": "Ich bi s Liecht vo de Wält."
+          }
+        }
+      ],
+      "action_de": "Jesus sagt: «Ich bin das Licht der Welt» und: «Wohin ich gehe, könnt ihr nicht kommen»; wer nicht glaubt, «dass ich bin», wird in seinen Sünden sterben.",
+      "keywords": {
+        "de": "Ihr seid von unten, ich bin von oben",
+        "gsw": "Ir sind vo unde, ich bi vo obe"
+      },
+      "stage": {
+        "before": true,
+        "mood": {
+          "FIG-JESUS": "earnest",
+          "FIG-GRUPPE-PHARISAEER": "question"
+        },
+        "x": {
+          "FIG-JESUS": 46,
+          "FIG-GRUPPE-PHARISAEER": 140
+        }
+      }
+    },
+    {
+      "n": 3,
+      "reference": "JHN.8.31-JHN.8.47",
       "figures": [
         "FIG-JESUS",
         "FIG-GRUPPE-MENGE"
@@ -58,113 +97,102 @@
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-LICHT",
-            "FIG-ZEICHEN-NACHFOLGEN",
-            "FIG-ZEICHEN-FINSTERNIS",
-            "FIG-ZEICHEN-FEHLT"
-          ]
-        }
-      ],
-      "action_de": "Jesus sagt: Ich bin das Licht der Welt. Wer mir nachfolgt, wird nicht in der Finsternis gehen, sondern das Licht des Lebens haben.",
-      "stage": {
-        "mood": {
-          "FIG-JESUS": "smile",
-          "FIG-GRUPPE-MENGE": "surprised"
-        }
-      }
-    },
-    {
-      "n": 3,
-      "reference": "JHN.8.31-JHN.8.32",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-MENGE"
-      ],
-      "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-GLAUBEN"
-      ],
-      "speech": [
+          "icons": [],
+          "word": {
+            "de": "Die Wahrheit wird euch frei machen.",
+            "gsw": "D Wahrheit wird eu frei mache."
+          }
+        },
         {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-ZEICHEN-HOEREN",
-            "FIG-ZEICHEN-FREIHEIT"
-          ]
+          "from": "FIG-GRUPPE-MENGE",
+          "to": "FIG-JESUS",
+          "icons": [],
+          "word": {
+            "de": "Unser Vater ist Abraham.",
+            "gsw": "Üse Vatter isch de Abraham."
+          }
         }
       ],
-      "action_de": "Zu den Juden, die ihm geglaubt hatten, sagt Jesus: Wenn ihr in meinem Wort bleibt, werdet ihr die Wahrheit erkennen, und die Wahrheit wird euch frei machen.",
+      "action_de": "Zu den Juden, die ihm geglaubt hatten, sagt Jesus: «Die Wahrheit wird euch frei machen»; im Streit sagen sie: «Unser Vater ist Abraham.»",
+      "keywords": {
+        "de": "zu den Juden, die ihm geglaubt hatten",
+        "gsw": "zu de Jude, wo ihm glaubt händ"
+      },
       "stage": {
         "mood": {
-          "FIG-JESUS": "smile",
-          "FIG-GRUPPE-MENGE": "calm"
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-MENGE": "earnest"
+        },
+        "x": {
+          "FIG-JESUS": 46,
+          "FIG-GRUPPE-MENGE": 140
         }
       }
     },
     {
       "n": 4,
-      "reference": "JHN.8.59",
+      "reference": "JHN.8.48-JHN.8.59",
       "figures": [
-        "FIG-GRUPPE-MENGE",
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-GRUPPE-MENGE"
       ],
       "objects": [
-        "FIG-ORT-TEMPEL",
         "FIG-OBJ-STEINE"
       ],
-      "signs": [
-        "FIG-ZEICHEN-FLIEHEN"
+      "signs": [],
+      "speech": [
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-GRUPPE-MENGE",
+          "icons": [],
+          "word": {
+            "de": "Bevor Abraham wurde, bin ich.",
+            "gsw": "Bevor de Abraham worde isch, bin ich."
+          }
+        }
       ],
-      "speech": [],
-      "action_de": "Da heben sie Steine auf, um sie auf ihn zu werfen. Jesus aber verbirgt sich und geht aus dem Tempel hinaus.",
+      "action_de": "Jesus sagt: «Bevor Abraham wurde, bin ich.» Da heben sie Steine auf, um sie auf ihn zu werfen; er verbirgt sich und geht aus dem Tempel hinaus.",
+      "keywords": {
+        "de": "Da hoben sie Steine auf",
+        "gsw": "Dänn händ si Stei ufghebt"
+      },
       "stage": {
-        "pose": {
-          "FIG-JESUS": "away"
-        },
-        "mood": {
-          "FIG-GRUPPE-MENGE": "worried",
-          "FIG-JESUS": "calm"
-        },
-        "at": {
-          "FIG-ZEICHEN-FLIEHEN": "FIG-JESUS"
-        },
-        "back_side": "left",
-        "before": true,
-        "x": {
-          "FIG-GRUPPE-MENGE": 102,
-          "FIG-JESUS": 150
-        },
         "hold": {
           "FIG-GRUPPE-MENGE": "FIG-OBJ-STEINE"
+        },
+        "mood": {
+          "FIG-JESUS": "earnest",
+          "FIG-GRUPPE-MENGE": "angry"
+        },
+        "x": {
+          "FIG-JESUS": 46,
+          "FIG-GRUPPE-MENGE": 140
         }
       }
     }
   ],
   "actions_de": [
-    "Jesus bückt sich und schreibt mit dem Finger auf die Erde. Als sie weiter fragen, sagt er: Wer von euch ohne Sünde ist, werfe als Erster den Stein auf sie. Dann schreibt er wieder auf die Erde.",
-    "Jesus sagt: Ich bin das Licht der Welt. Wer mir nachfolgt, wird nicht in der Finsternis gehen, sondern das Licht des Lebens haben.",
-    "Zu den Juden, die ihm geglaubt hatten, sagt Jesus: Wenn ihr in meinem Wort bleibt, werdet ihr die Wahrheit erkennen, und die Wahrheit wird euch frei machen.",
-    "Da heben sie Steine auf, um sie auf ihn zu werfen. Jesus aber verbirgt sich und geht aus dem Tempel hinaus."
+    "Jesus sagt der Frau, die beim Ehebruch ergriffen wurde: «Auch ich verurteile dich nicht. Geh, und sündige nicht mehr!»",
+    "Jesus sagt: «Ich bin das Licht der Welt» und: «Wohin ich gehe, könnt ihr nicht kommen»; wer nicht glaubt, «dass ich bin», wird in seinen Sünden sterben.",
+    "Zu den Juden, die ihm geglaubt hatten, sagt Jesus: «Die Wahrheit wird euch frei machen»; im Streit sagen sie: «Unser Vater ist Abraham.»",
+    "Jesus sagt: «Bevor Abraham wurde, bin ich.» Da heben sie Steine auf, um sie auf ihn zu werfen; er verbirgt sich und geht aus dem Tempel hinaus."
   ],
   "captions_de": [
-    "«Wer ohne Sünde ist»: Jesus bückt sich und schreibt auf die Erde (Linien im Sand) und sagt: Wer ohne Sünde ist (schwarzes Herz, leer), werfe als Erster einen Stein (Steine).",
-    "«Ich bin das Licht der Welt»: Jesus spricht von sich (Jesus in der Blase) als dem Licht (Strahlenscheibe); wer ihm nachfolgt (zwei gehende Personen), geht nicht im Dunkeln (Nacht, leer).",
-    "«Die Wahrheit wird euch frei machen»: Jesus sagt denen, die glauben (Herz): Wer auf sein Wort hört (Ohr), wird frei (Vogel mit gesprengter Kette).",
-    "Jesus geht hinaus: Die Leute heben Steine auf (graue Steine); Jesus wendet sich ab und verlässt den Tempel (Pfeil)."
+    "Die Frau: Jesus sagt zu ihr: «Auch ich verurteile dich nicht. Geh, und sündige nicht mehr!» (nicht richten, Sünde) – ein Abschnitt, der in den ältesten Handschriften fehlt (spätere Einfügung).",
+    "Licht der Welt: Jesus sagt zu den Pharisäern: «Ich bin das Licht der Welt.» (Licht, Welt); im Band: Ihr seid von unten, ich bin von oben (hinab, hinauf).",
+    "Frei: Jesus sagt zur Menge: «Die Wahrheit wird euch frei machen.» (Wahrheit, frei); sie antworten: «Unser Vater ist Abraham.» (Abraham).",
+    "Steine: Jesus sagt: «Bevor Abraham wurde, bin ich.» (Abraham, Jesus); die Juden heben Steine auf (Steine in der Hand, zornig)."
   ],
-  "interpretation_note_de": "Je ein Feld zur Frau vor Jesus (Abschnitt in Doppelklammern, siehe dort), zum Licht der Welt, zur Freiheit und zum Ende des Streits im Tempel; Einzelheiten in den Abschnitten.",
+  "interpretation_note_de": "Vier Comic-Szenen, eine je Abschnitt ([[JHN.8.1-JHN.8.59]]); das zweite Feld bündelt «Licht der Welt» ([[JHN.8.12-JHN.8.20]]) und «Wohin ich gehe …» ([[JHN.8.21-JHN.8.30]]). Der Abschnitt [[JHN.7.53-JHN.8.11]] ist in den ältesten Handschriften nicht enthalten und gilt in der Textforschung als spätere Einfügung (Kernanalyse, Zusammenfassung); das Bild zeigt nur, was erzählt wird (VERDICHTUNG.md, Regel 8). «Die Juden» sind als neutrale Gruppe ohne Merkmale einer Volksgruppe gezeichnet.",
   "basis": [
     {
       "record": "SUM-CH-JHN-008",
       "field": "summary",
-      "fingerprint": "5a97e20c1b7e0c49"
+      "fingerprint": "63c896edf7384368"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -466,6 +494,521 @@
           "«Ich bin das Licht der Welt»: Jesus spricht von sich (Jesus in der Blase) als dem Licht (Strahlenscheibe); wer ihm nachfolgt (Fussspuren), geht nicht im Dunkeln (Nacht, leer).",
           "«Die Wahrheit wird euch frei machen»: Jesus sagt denen, die glauben (Herz): Wer auf sein Wort hört (Ohr), wird frei (zerbrochene Kette).",
           "Jesus geht hinaus: Die Leute heben Steine auf (Steine in der Hand); Jesus wendet sich ab und verlässt den Tempel (Pfeil)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.8.6-JHN.8.8",
+            "figures": [
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-ROLLE-FRAU",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-SCHREIBEN-ERDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-ZEICHEN-SUENDE",
+                  "FIG-ZEICHEN-FEHLT",
+                  "FIG-OBJ-STEIN"
+                ]
+              }
+            ],
+            "action_de": "Jesus bückt sich und schreibt mit dem Finger auf die Erde. Als sie weiter fragen, sagt er: Wer von euch ohne Sünde ist, werfe als Erster den Stein auf sie. Dann schreibt er wieder auf die Erde.",
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "kneel"
+              },
+              "mood": {
+                "FIG-ROLLE-FRAU": "worried",
+                "FIG-GRUPPE-PHARISAEER": "surprised",
+                "FIG-JESUS": "calm"
+              },
+              "floor_side": "right"
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.8.12",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-LICHT",
+                  "FIG-ZEICHEN-NACHFOLGEN",
+                  "FIG-ZEICHEN-FINSTERNIS",
+                  "FIG-ZEICHEN-FEHLT"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: Ich bin das Licht der Welt. Wer mir nachfolgt, wird nicht in der Finsternis gehen, sondern das Licht des Lebens haben.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "smile",
+                "FIG-GRUPPE-MENGE": "surprised"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.8.31-JHN.8.32",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-GLAUBEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-HOEREN",
+                  "FIG-ZEICHEN-FREIHEIT"
+                ]
+              }
+            ],
+            "action_de": "Zu den Juden, die ihm geglaubt hatten, sagt Jesus: Wenn ihr in meinem Wort bleibt, werdet ihr die Wahrheit erkennen, und die Wahrheit wird euch frei machen.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "smile",
+                "FIG-GRUPPE-MENGE": "calm"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.8.59",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL",
+              "FIG-OBJ-STEINE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FLIEHEN"
+            ],
+            "speech": [],
+            "action_de": "Da heben sie Steine auf, um sie auf ihn zu werfen. Jesus aber verbirgt sich und geht aus dem Tempel hinaus.",
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "away"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "worried",
+                "FIG-JESUS": "calm"
+              },
+              "at": {
+                "FIG-ZEICHEN-FLIEHEN": "FIG-JESUS"
+              },
+              "back_side": "left",
+              "before": true,
+              "x": {
+                "FIG-GRUPPE-MENGE": 102,
+                "FIG-JESUS": 150
+              },
+              "hold": {
+                "FIG-GRUPPE-MENGE": "FIG-OBJ-STEINE"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus bückt sich und schreibt mit dem Finger auf die Erde. Als sie weiter fragen, sagt er: Wer von euch ohne Sünde ist, werfe als Erster den Stein auf sie. Dann schreibt er wieder auf die Erde.",
+          "Jesus sagt: Ich bin das Licht der Welt. Wer mir nachfolgt, wird nicht in der Finsternis gehen, sondern das Licht des Lebens haben.",
+          "Zu den Juden, die ihm geglaubt hatten, sagt Jesus: Wenn ihr in meinem Wort bleibt, werdet ihr die Wahrheit erkennen, und die Wahrheit wird euch frei machen.",
+          "Da heben sie Steine auf, um sie auf ihn zu werfen. Jesus aber verbirgt sich und geht aus dem Tempel hinaus."
+        ],
+        "captions_de": [
+          "«Wer ohne Sünde ist»: Jesus bückt sich und schreibt auf die Erde (Linien im Sand) und sagt: Wer ohne Sünde ist (schwarzes Herz, leer), werfe als Erster einen Stein (Steine).",
+          "«Ich bin das Licht der Welt»: Jesus spricht von sich (Jesus in der Blase) als dem Licht (Strahlenscheibe); wer ihm nachfolgt (zwei gehende Personen), geht nicht im Dunkeln (Nacht, leer).",
+          "«Die Wahrheit wird euch frei machen»: Jesus sagt denen, die glauben (Herz): Wer auf sein Wort hört (Ohr), wird frei (Vogel mit gesprengter Kette).",
+          "Jesus geht hinaus: Die Leute heben Steine auf (graue Steine); Jesus wendet sich ab und verlässt den Tempel (Pfeil)."
+        ],
+        "interpretation_note_de": "Je ein Feld zur Frau vor Jesus (Abschnitt in Doppelklammern, siehe dort), zum Licht der Welt, zur Freiheit und zum Ende des Streits im Tempel; Einzelheiten in den Abschnitten.",
+        "basis": [
+          {
+            "record": "SUM-CH-JHN-008",
+            "field": "summary",
+            "fingerprint": "5a97e20c1b7e0c49"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.8.1-JHN.8.11",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-FRAU"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-FRAU",
+                "icons": [],
+                "word": {
+                  "de": "Auch ich verurteile dich nicht. Geh, und sündige nicht mehr!",
+                  "gsw": "Au ich verurteile di nöd. Gang, und sündig nüme!"
+                }
+              }
+            ],
+            "action_de": "Jesus sagt der Frau, die beim Ehebruch ergriffen wurde: «Auch ich verurteile dich nicht. Geh, und sündige nicht mehr!»",
+            "keywords": {
+              "de": "eine Frau, die beim Ehebruch ergriffen worden war",
+              "gsw": "e Frau, wo mer bim Ehebruch verwütscht hät"
+            },
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-ROLLE-FRAU": "pensive"
+              },
+              "x": {
+                "FIG-JESUS": 54,
+                "FIG-ROLLE-FRAU": 136
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.8.12-JHN.8.30",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-PHARISAEER"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [],
+                "word": {
+                  "de": "Ich bin das Licht der Welt.",
+                  "gsw": "Ich bi s Liecht vo de Wält."
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [],
+                "word": {
+                  "de": "Wohin ich gehe, könnt ihr nicht kommen.",
+                  "gsw": "Wo ich hiigaa, chönd ir nöd härecho."
+                }
+              }
+            ],
+            "action_de": "Jesus sagt: «Ich bin das Licht der Welt» und: «Wohin ich gehe, könnt ihr nicht kommen»; wer nicht glaubt, «dass ich bin», wird in seinen Sünden sterben.",
+            "keywords": {
+              "de": "Ihr seid von unten, ich bin von oben",
+              "gsw": "Ir sind vo unde, ich bi vo obe"
+            },
+            "stage": {
+              "before": true,
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-PHARISAEER": "question"
+              },
+              "x": {
+                "FIG-JESUS": 46,
+                "FIG-GRUPPE-PHARISAEER": 140
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.8.31-JHN.8.47",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [],
+                "word": {
+                  "de": "Die Wahrheit wird euch frei machen.",
+                  "gsw": "D Wahrheit wird eu frei mache."
+                }
+              },
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Unser Vater ist Abraham.",
+                  "gsw": "Üse Vatter isch de Abraham."
+                }
+              }
+            ],
+            "action_de": "Zu den Juden, die ihm geglaubt hatten, sagt Jesus: «Die Wahrheit wird euch frei machen»; im Streit sagen sie: «Unser Vater ist Abraham.»",
+            "keywords": {
+              "de": "zu den Juden, die ihm geglaubt hatten",
+              "gsw": "zu de Jude, wo ihm glaubt händ"
+            },
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-MENGE": "earnest"
+              },
+              "x": {
+                "FIG-JESUS": 46,
+                "FIG-GRUPPE-MENGE": 140
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.8.48-JHN.8.59",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-STEINE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [],
+                "word": {
+                  "de": "Bevor Abraham wurde, bin ich.",
+                  "gsw": "Bevor de Abraham worde isch, bin ich."
+                }
+              }
+            ],
+            "action_de": "Jesus sagt: «Bevor Abraham wurde, bin ich.» Da heben sie Steine auf, um sie auf ihn zu werfen; er verbirgt sich und geht aus dem Tempel hinaus.",
+            "keywords": {
+              "de": "Da hoben sie Steine auf",
+              "gsw": "Dänn händ si Stei ufghebt"
+            },
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-MENGE": "FIG-OBJ-STEINE"
+              },
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-MENGE": "angry"
+              },
+              "x": {
+                "FIG-JESUS": 46,
+                "FIG-GRUPPE-MENGE": 140
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Die Frau: Jesus sagt zu ihr: «Auch ich verurteile dich nicht. Geh, und sündige nicht mehr!» (nicht richten, Sünde) – ein Abschnitt, der in den ältesten Handschriften fehlt (spätere Einfügung).",
+          "Licht der Welt: Jesus sagt zu den Pharisäern: «Ich bin das Licht der Welt.» (Licht, Welt) und: «Wohin ich gehe, könnt ihr nicht kommen.» (Weg, Verbotszeichen); im Band: von unten – von oben.",
+          "Frei: Jesus sagt zur Menge: «Die Wahrheit wird euch frei machen.» (Wahrheit, frei); sie antworten: «Unser Vater ist Abraham.» (Abraham).",
+          "Steine: Jesus sagt: «Bevor Abraham wurde, bin ich.» (Abraham, Jesus); die Juden heben Steine auf (Steine in der Hand, zornig)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.8.1-JHN.8.11",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-FRAU"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-FRAU",
+                "icons": [],
+                "word": {
+                  "de": "Auch ich verurteile dich nicht. Geh, und sündige nicht mehr!",
+                  "gsw": "Au ich verurteile di nöd. Gang, und sündig nüme!"
+                }
+              }
+            ],
+            "action_de": "Jesus sagt der Frau, die beim Ehebruch ergriffen wurde: «Auch ich verurteile dich nicht. Geh, und sündige nicht mehr!»",
+            "keywords": {
+              "de": "eine Frau, die beim Ehebruch ergriffen worden war",
+              "gsw": "e Frau, wo mer bim Ehebruch verwütscht hät"
+            },
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-ROLLE-FRAU": "pensive"
+              },
+              "x": {
+                "FIG-JESUS": 54,
+                "FIG-ROLLE-FRAU": 136
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.8.12-JHN.8.30",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-PHARISAEER"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [],
+                "word": {
+                  "de": "Ich bin das Licht der Welt.",
+                  "gsw": "Ich bi s Liecht vo de Wält."
+                }
+              }
+            ],
+            "action_de": "Jesus sagt: «Ich bin das Licht der Welt» und: «Wohin ich gehe, könnt ihr nicht kommen»; wer nicht glaubt, «dass ich bin», wird in seinen Sünden sterben.",
+            "keywords": {
+              "de": "Ihr seid von unten, ich bin von oben",
+              "gsw": "Ir sind vo unde, ich bi vo obe"
+            },
+            "stage": {
+              "before": true,
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-PHARISAEER": "question"
+              },
+              "x": {
+                "FIG-JESUS": 46,
+                "FIG-GRUPPE-PHARISAEER": 140
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.8.31-JHN.8.47",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [],
+                "word": {
+                  "de": "Die Wahrheit wird euch frei machen.",
+                  "gsw": "D Wahrheit wird eu frei mache."
+                }
+              },
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Unser Vater ist Abraham.",
+                  "gsw": "Üse Vatter isch de Abraham."
+                }
+              }
+            ],
+            "action_de": "Zu den Juden, die ihm geglaubt hatten, sagt Jesus: «Die Wahrheit wird euch frei machen»; im Streit sagen sie: «Unser Vater ist Abraham.»",
+            "keywords": {
+              "de": "zu den Juden, die ihm geglaubt hatten",
+              "gsw": "zu de Jude, wo ihm glaubt händ"
+            },
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-MENGE": "earnest"
+              },
+              "x": {
+                "FIG-JESUS": 46,
+                "FIG-GRUPPE-MENGE": 140
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.8.48-JHN.8.59",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-STEINE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [],
+                "word": {
+                  "de": "Bevor Abraham wurde, bin ich.",
+                  "gsw": "Bevor de Abraham worde isch, bin ich."
+                }
+              }
+            ],
+            "action_de": "Jesus sagt: «Bevor Abraham wurde, bin ich.» Da heben sie Steine auf, um sie auf ihn zu werfen; er verbirgt sich und geht aus dem Tempel hinaus.",
+            "keywords": {
+              "de": "Da hoben sie Steine auf",
+              "gsw": "Dänn händ si Stei ufghebt"
+            },
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-MENGE": "FIG-OBJ-STEINE"
+              },
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-MENGE": "angry"
+              },
+              "x": {
+                "FIG-JESUS": 46,
+                "FIG-GRUPPE-MENGE": 140
+              }
+            }
+          }
         ]
       }
     }

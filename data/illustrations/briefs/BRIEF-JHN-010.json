@@ -13,7 +13,6 @@
       "n": 1,
       "reference": "JHN.10.1-JHN.10.6",
       "figures": [
-        "FIG-ROLLE-DIEB",
         "FIG-ROLLE-HIRTE"
       ],
       "objects": [
@@ -22,32 +21,29 @@
       ],
       "signs": [],
       "speech": [],
-      "action_de": "Wer nicht durch die Tür in den Hof der Schafe hineingeht, sondern anderswo hinübersteigt, ist ein Dieb und Räuber; wer durch die Tür hineingeht, ist der Hirte, dem der Türhüter öffnet.",
+      "action_de": "Im Bildwort: Der Hirte ruft die eigenen Schafe mit Namen und führt sie hinaus; die Schafe folgen ihm, denn sie kennen seine Stimme.",
+      "keywords": {
+        "de": "die Schafe hören auf seine Stimme",
+        "gsw": "d Schaf losed uf sini Stimm"
+      },
       "stage": {
-        "back_side": "right",
-        "x": {
-          "FIG-ROLLE-DIEB": 26,
-          "FIG-ROLLE-HIRTE": 66
-        },
         "count": {
-          "FIG-OBJ-SCHAF": 2
+          "FIG-OBJ-SCHAF": 3
         },
-        "floor_x": {
-          "FIG-OBJ-SCHAF": 128
+        "x": {
+          "FIG-ROLLE-HIRTE": 120
         },
         "mood": {
-          "FIG-ROLLE-DIEB": "earnest"
+          "FIG-ROLLE-HIRTE": "smile"
         },
+        "behind": [
+          "FIG-ORT-SCHAFSTALL"
+        ],
         "arrows": [
           [
             "FIG-ROLLE-HIRTE",
-            "FIG-ORT-SCHAFSTALL",
-            "go"
-          ],
-          [
-            "FIG-ROLLE-DIEB",
             "FIG-OBJ-SCHAF",
-            "throw"
+            "go"
           ]
         ]
       }
@@ -57,47 +53,34 @@
       "reference": "JHN.10.7-JHN.10.21",
       "figures": [
         "FIG-JESUS",
-        "FIG-ROLLE-LOHNARBEITER"
+        "FIG-GRUPPE-MENGE"
       ],
-      "objects": [
-        "FIG-OBJ-SCHAF",
-        "FIG-OBJ-WOLF"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-FLIEHEN"
-      ],
+      "objects": [],
+      "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-LOHNARBEITER",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ROLLE-HIRTE"
-          ]
+          "to": "FIG-GRUPPE-MENGE",
+          "icons": [],
+          "word": {
+            "de": "Ich bin der gute Hirte.",
+            "gsw": "Ich bi de guet Hirt."
+          }
         }
       ],
-      "action_de": "Ich bin der gute Hirte; der gute Hirte gibt sein Leben hin für die Schafe. Der Lohnarbeiter dagegen sieht den Wolf kommen, lässt die Schafe im Stich und flieht.",
+      "action_de": "Jesus sagt: «Ich bin der gute Hirte. Der gute Hirte gibt sein Leben hin für die Schafe.» Wegen dieser Worte entsteht wieder eine Spaltung unter den Juden.",
+      "keywords": {
+        "de": "Wieder entstand eine Spaltung unter den Juden",
+        "gsw": "Wider isch e Spaltig under de Jude entstande"
+      },
       "stage": {
-        "x": {
-          "FIG-JESUS": 66,
-          "FIG-ROLLE-LOHNARBEITER": 150
-        },
-        "pose": {
-          "FIG-ROLLE-LOHNARBEITER": "away"
-        },
         "mood": {
-          "FIG-ROLLE-LOHNARBEITER": "worried",
-          "FIG-JESUS": "determined"
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-MENGE": "question"
         },
-        "count": {
-          "FIG-OBJ-SCHAF": 2
-        },
-        "floor_x": {
-          "FIG-OBJ-SCHAF": 4,
-          "FIG-OBJ-WOLF": 98
-        },
-        "beside": {
-          "FIG-ZEICHEN-FLIEHEN": "FIG-ROLLE-LOHNARBEITER"
+        "x": {
+          "FIG-JESUS": 46,
+          "FIG-GRUPPE-MENGE": 140
         }
       }
     },
@@ -105,10 +88,11 @@
       "n": 3,
       "reference": "JHN.10.22-JHN.10.39",
       "figures": [
-        "FIG-GRUPPE-MENGE",
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-GRUPPE-MENGE"
       ],
       "objects": [
+        "FIG-OBJ-STEINE",
         "FIG-ORT-TEMPEL"
       ],
       "signs": [],
@@ -116,74 +100,101 @@
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-EINHEIT",
-            "FIG-GOTT"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Ich und der Vater sind eins.",
+            "gsw": "Ich und de Vatter sind eis."
+          }
         }
       ],
-      "action_de": "Am Fest der Tempelweihe sagt Jesus: Ich und der Vater sind eins; da wollen sie ihn steinigen, aber er entkommt.",
+      "action_de": "Am Fest der Tempelweihe sagt Jesus: «Ich und der Vater sind eins.» Da heben die Juden wieder Steine auf; er entkommt aus ihrer Hand.",
+      "keywords": {
+        "de": "das Fest der Tempelweihe",
+        "gsw": "s Fäscht vo de Tämpelwiiig"
+      },
       "stage": {
-        "mood": {
-          "FIG-GRUPPE-MENGE": "earnest"
+        "hold": {
+          "FIG-GRUPPE-MENGE": "FIG-OBJ-STEINE"
         },
-        "back_side": "right"
+        "before": true,
+        "mood": {
+          "FIG-JESUS": "earnest",
+          "FIG-GRUPPE-MENGE": "angry"
+        },
+        "x": {
+          "FIG-JESUS": 46,
+          "FIG-GRUPPE-MENGE": 140
+        }
       }
     },
     {
       "n": 4,
       "reference": "JHN.10.40-JHN.10.42",
       "figures": [
-        "FIG-GRUPPE-MENGE",
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-GRUPPE-MENGE"
       ],
       "objects": [
         "FIG-ORT-JORDAN"
       ],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-GLAUBEN"
+      ],
       "speech": [
         {
           "from": "FIG-GRUPPE-MENGE",
           "to": "FIG-JESUS",
-          "icons": [
-            "FIG-JOHANNES-TAEUFER",
-            "FIG-JESUS",
-            "FIG-ZEICHEN-WAHRHEIT"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Johannes hat zwar kein Zeichen getan, aber alles, was Johannes über diesen gesagt hat, war wahr.",
+            "gsw": "De Johannes hät zwar kei Zeiche gmacht, aber alles, was de Johannes über dä gseit hät, isch wahr gsii."
+          }
         }
       ],
-      "action_de": "Jesus geht an den Jordan, wo Johannes zuerst getauft hatte. Viele kommen und sagen: Johannes hat kein Zeichen getan, aber was er über diesen sagte, war wahr. Viele glauben dort an ihn.",
+      "action_de": "Jenseits des Jordan sagen viele: «Alles, was Johannes über diesen gesagt hat, war wahr», und glauben an ihn.",
+      "keywords": {
+        "de": "Und viele glaubten dort an ihn",
+        "gsw": "Und vili händ dört a ihn glaubt"
+      },
       "stage": {
+        "signs_who": {
+          "FIG-ZEICHEN-GLAUBEN": [
+            "FIG-GRUPPE-MENGE"
+          ]
+        },
         "mood": {
+          "FIG-JESUS": "calm",
           "FIG-GRUPPE-MENGE": "smile"
         },
-        "at": {}
+        "x": {
+          "FIG-JESUS": 46,
+          "FIG-GRUPPE-MENGE": 140
+        }
       }
     }
   ],
   "actions_de": [
-    "Wer nicht durch die Tür in den Hof der Schafe hineingeht, sondern anderswo hinübersteigt, ist ein Dieb und Räuber; wer durch die Tür hineingeht, ist der Hirte, dem der Türhüter öffnet.",
-    "Ich bin der gute Hirte; der gute Hirte gibt sein Leben hin für die Schafe. Der Lohnarbeiter dagegen sieht den Wolf kommen, lässt die Schafe im Stich und flieht.",
-    "Am Fest der Tempelweihe sagt Jesus: Ich und der Vater sind eins; da wollen sie ihn steinigen, aber er entkommt.",
-    "Jesus geht an den Jordan, wo Johannes zuerst getauft hatte. Viele kommen und sagen: Johannes hat kein Zeichen getan, aber was er über diesen sagte, war wahr. Viele glauben dort an ihn."
+    "Im Bildwort: Der Hirte ruft die eigenen Schafe mit Namen und führt sie hinaus; die Schafe folgen ihm, denn sie kennen seine Stimme.",
+    "Jesus sagt: «Ich bin der gute Hirte. Der gute Hirte gibt sein Leben hin für die Schafe.» Wegen dieser Worte entsteht wieder eine Spaltung unter den Juden.",
+    "Am Fest der Tempelweihe sagt Jesus: «Ich und der Vater sind eins.» Da heben die Juden wieder Steine auf; er entkommt aus ihrer Hand.",
+    "Jenseits des Jordan sagen viele: «Alles, was Johannes über diesen gesagt hat, war wahr», und glauben an ihn."
   ],
   "captions_de": [
-    "Tür und Mauer: Der Hirte (Stab) geht durch die Tür (gestrichelter Pfeil zur Tür); der Dieb (Kapuze) steigt über die Mauer (Bogen über die Mauer).",
-    "Wolf → Flucht: Der Lohnarbeiter sieht den Wolf kommen, wendet sich ab und flieht (rennende Person); Jesus, der gute Hirte, bleibt vor den Schafen.",
-    "Ich und der Vater sind eins: Jesus und der Vater (Strahlenkranz) sind eins (zwei Ringe).",
-    "Am Jordan: Die Leute sagen: Was Johannes über Jesus sagte, ist wahr (Häkchen); viele glauben (Herz über der Menge)."
+    "Bildwort: Der Hirte (Schaf auf der Brust) vor dem Hof der Schafe; er ruft sie und führt sie hinaus (Schafe, Weg).",
+    "Der gute Hirte: Jesus sagt: «Ich bin der gute Hirte.» (Hirte, Schaf); die Menge ist gespalten (Band: Spaltung).",
+    "Tempelweihe: Jesus sagt: «Ich und der Vater sind eins.» (Jesus, Strahlenkranz); die Juden heben Steine auf (Steine in der Hand, zornig); im Band: das Fest der Tempelweihe (Tempel, Schneeflocke für Winter).",
+    "Am Jordan: Viele kommen zu Jesus und glauben (Herzen mit Licht); sie sagen: «Johannes hat zwar kein Zeichen getan, aber alles, was Johannes über diesen gesagt hat, war wahr.» (Johannes, Wahrheit)."
   ],
-  "interpretation_note_de": "Vier Felder: Bildwort, guter Hirte, Tempelweihe, Jordan. Die Spaltung ([[JHN.10.19-JHN.10.21]]) ist im zweiten Feld mitgemeint, aber nicht gezeigt; Einzelheiten in den Abschnitten.",
+  "interpretation_note_de": "Vier Comic-Szenen, eine je Abschnitt ([[JHN.10.1-JHN.10.42]]); das zweite Feld bündelt die Deutung «Ich bin der gute Hirte» ([[JHN.10.7-JHN.10.18]]) und die Spaltung ([[JHN.10.19-JHN.10.21]]). Der Hirte im ersten Feld ist die Gestalt des Bildworts; dass Jesus sich selbst so nennt, zeigt das zweite Feld. «Die Juden» sind als neutrale Gruppe ohne Merkmale einer Volksgruppe gezeichnet. «Der Vater» ist Gott und als Strahlenkranz gezeichnet, nie als Mensch.",
   "basis": [
     {
       "record": "SUM-CH-JHN-010",
       "field": "summary",
-      "fingerprint": "ee6aea0dbc0f3fe1"
+      "fingerprint": "e16182a538ae23f9"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -695,6 +706,369 @@
           "Wolf → Flucht: Der Lohnarbeiter sieht den Wolf kommen, wendet sich ab und flieht (Bewegungsstriche); Jesus, der gute Hirte, bleibt vor den Schafen.",
           "Ich und der Vater sind eins: Jesus und der Vater (Strahlenkranz) sind eins (zwei Ringe).",
           "Am Jordan: Die Leute sagen: Was Johannes über Jesus sagte, ist wahr (Häkchen); viele glauben (Herz über der Menge)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-JHN-010",
+            "field": "summary",
+            "fingerprint": "ee6aea0dbc0f3fe1"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.10.1-JHN.10.6",
+            "figures": [
+              "FIG-ROLLE-DIEB",
+              "FIG-ROLLE-HIRTE"
+            ],
+            "objects": [
+              "FIG-ORT-SCHAFSTALL",
+              "FIG-OBJ-SCHAF"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Wer nicht durch die Tür in den Hof der Schafe hineingeht, sondern anderswo hinübersteigt, ist ein Dieb und Räuber; wer durch die Tür hineingeht, ist der Hirte, dem der Türhüter öffnet.",
+            "stage": {
+              "back_side": "right",
+              "x": {
+                "FIG-ROLLE-DIEB": 26,
+                "FIG-ROLLE-HIRTE": 66
+              },
+              "count": {
+                "FIG-OBJ-SCHAF": 2
+              },
+              "floor_x": {
+                "FIG-OBJ-SCHAF": 128
+              },
+              "mood": {
+                "FIG-ROLLE-DIEB": "earnest"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-HIRTE",
+                  "FIG-ORT-SCHAFSTALL",
+                  "go"
+                ],
+                [
+                  "FIG-ROLLE-DIEB",
+                  "FIG-OBJ-SCHAF",
+                  "throw"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.10.7-JHN.10.21",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-LOHNARBEITER"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHAF",
+              "FIG-OBJ-WOLF"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FLIEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-LOHNARBEITER",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-HIRTE"
+                ]
+              }
+            ],
+            "action_de": "Ich bin der gute Hirte; der gute Hirte gibt sein Leben hin für die Schafe. Der Lohnarbeiter dagegen sieht den Wolf kommen, lässt die Schafe im Stich und flieht.",
+            "stage": {
+              "x": {
+                "FIG-JESUS": 66,
+                "FIG-ROLLE-LOHNARBEITER": 150
+              },
+              "pose": {
+                "FIG-ROLLE-LOHNARBEITER": "away"
+              },
+              "mood": {
+                "FIG-ROLLE-LOHNARBEITER": "worried",
+                "FIG-JESUS": "determined"
+              },
+              "count": {
+                "FIG-OBJ-SCHAF": 2
+              },
+              "floor_x": {
+                "FIG-OBJ-SCHAF": 4,
+                "FIG-OBJ-WOLF": 98
+              },
+              "beside": {
+                "FIG-ZEICHEN-FLIEHEN": "FIG-ROLLE-LOHNARBEITER"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.10.22-JHN.10.39",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-EINHEIT",
+                  "FIG-GOTT"
+                ]
+              }
+            ],
+            "action_de": "Am Fest der Tempelweihe sagt Jesus: Ich und der Vater sind eins; da wollen sie ihn steinigen, aber er entkommt.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest"
+              },
+              "back_side": "right"
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.10.40-JHN.10.42",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-JORDAN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JOHANNES-TAEUFER",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-WAHRHEIT"
+                ]
+              }
+            ],
+            "action_de": "Jesus geht an den Jordan, wo Johannes zuerst getauft hatte. Viele kommen und sagen: Johannes hat kein Zeichen getan, aber was er über diesen sagte, war wahr. Viele glauben dort an ihn.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "smile"
+              },
+              "at": {}
+            }
+          }
+        ],
+        "actions_de": [
+          "Wer nicht durch die Tür in den Hof der Schafe hineingeht, sondern anderswo hinübersteigt, ist ein Dieb und Räuber; wer durch die Tür hineingeht, ist der Hirte, dem der Türhüter öffnet.",
+          "Ich bin der gute Hirte; der gute Hirte gibt sein Leben hin für die Schafe. Der Lohnarbeiter dagegen sieht den Wolf kommen, lässt die Schafe im Stich und flieht.",
+          "Am Fest der Tempelweihe sagt Jesus: Ich und der Vater sind eins; da wollen sie ihn steinigen, aber er entkommt.",
+          "Jesus geht an den Jordan, wo Johannes zuerst getauft hatte. Viele kommen und sagen: Johannes hat kein Zeichen getan, aber was er über diesen sagte, war wahr. Viele glauben dort an ihn."
+        ],
+        "captions_de": [
+          "Tür und Mauer: Der Hirte (Stab) geht durch die Tür (gestrichelter Pfeil zur Tür); der Dieb (Kapuze) steigt über die Mauer (Bogen über die Mauer).",
+          "Wolf → Flucht: Der Lohnarbeiter sieht den Wolf kommen, wendet sich ab und flieht (rennende Person); Jesus, der gute Hirte, bleibt vor den Schafen.",
+          "Ich und der Vater sind eins: Jesus und der Vater (Strahlenkranz) sind eins (zwei Ringe).",
+          "Am Jordan: Die Leute sagen: Was Johannes über Jesus sagte, ist wahr (Häkchen); viele glauben (Herz über der Menge)."
+        ],
+        "interpretation_note_de": "Vier Felder: Bildwort, guter Hirte, Tempelweihe, Jordan. Die Spaltung ([[JHN.10.19-JHN.10.21]]) ist im zweiten Feld mitgemeint, aber nicht gezeigt; Einzelheiten in den Abschnitten.",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.10.1-JHN.10.6",
+            "figures": [
+              "FIG-ROLLE-HIRTE"
+            ],
+            "objects": [
+              "FIG-ORT-SCHAFSTALL",
+              "FIG-OBJ-SCHAF"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Im Bildwort: Der Hirte ruft die eigenen Schafe mit Namen und führt sie hinaus; die Schafe folgen ihm, denn sie kennen seine Stimme.",
+            "keywords": {
+              "de": "die Schafe hören auf seine Stimme",
+              "gsw": "d Schaf losed uf sini Stimm"
+            },
+            "stage": {
+              "count": {
+                "FIG-OBJ-SCHAF": 3
+              },
+              "x": {
+                "FIG-ROLLE-HIRTE": 120
+              },
+              "mood": {
+                "FIG-ROLLE-HIRTE": "smile"
+              },
+              "behind": [
+                "FIG-ORT-SCHAFSTALL"
+              ],
+              "arrows": [
+                [
+                  "FIG-ROLLE-HIRTE",
+                  "FIG-OBJ-SCHAF",
+                  "go"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.10.7-JHN.10.21",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHAF"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [],
+                "word": {
+                  "de": "Ich bin der gute Hirte.",
+                  "gsw": "Ich bi de guet Hirt."
+                }
+              }
+            ],
+            "action_de": "Jesus sagt: «Ich bin der gute Hirte. Der gute Hirte gibt sein Leben hin für die Schafe.» Wegen dieser Worte entsteht wieder eine Spaltung unter den Juden.",
+            "keywords": {
+              "de": "Wieder entstand eine Spaltung unter den Juden",
+              "gsw": "Wider isch e Spaltig under de Jude entstande"
+            },
+            "stage": {
+              "count": {
+                "FIG-OBJ-SCHAF": 2
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-MENGE": "question"
+              },
+              "x": {
+                "FIG-JESUS": 46,
+                "FIG-GRUPPE-MENGE": 140
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.10.22-JHN.10.39",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-STEINE",
+              "FIG-ORT-TEMPEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [],
+                "word": {
+                  "de": "Ich und der Vater sind eins.",
+                  "gsw": "Ich und de Vatter sind eis."
+                }
+              }
+            ],
+            "action_de": "Am Fest der Tempelweihe sagt Jesus: «Ich und der Vater sind eins.» Da heben die Juden wieder Steine auf; er entkommt aus ihrer Hand.",
+            "keywords": {
+              "de": "das Fest der Tempelweihe",
+              "gsw": "s Fäscht vo de Tämpelwiiig"
+            },
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-MENGE": "FIG-OBJ-STEINE"
+              },
+              "before": true,
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-MENGE": "angry"
+              },
+              "x": {
+                "FIG-JESUS": 46,
+                "FIG-GRUPPE-MENGE": 140
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.10.40-JHN.10.42",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-JORDAN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-GLAUBEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Johannes hat zwar kein Zeichen getan, aber alles, was Johannes über diesen gesagt hat, war wahr.",
+                  "gsw": "De Johannes hät zwar kei Zeiche gmacht, aber alles, was de Johannes über dä gseit hät, isch wahr gsii."
+                }
+              }
+            ],
+            "action_de": "Jenseits des Jordan sagen viele: «Alles, was Johannes über diesen gesagt hat, war wahr», und glauben an ihn.",
+            "keywords": {
+              "de": "Und viele glaubten dort an ihn",
+              "gsw": "Und vili händ dört a ihn glaubt"
+            },
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-GLAUBEN": [
+                  "FIG-GRUPPE-MENGE"
+                ]
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-MENGE": "smile"
+              },
+              "x": {
+                "FIG-JESUS": 46,
+                "FIG-GRUPPE-MENGE": 140
+              }
+            }
+          }
         ]
       }
     }

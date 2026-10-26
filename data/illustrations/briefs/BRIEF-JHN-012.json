@@ -13,19 +13,40 @@
       "n": 1,
       "reference": "JHN.12.1-JHN.12.11",
       "figures": [
-        "FIG-MARTA",
-        "FIG-LAZARUS",
+        "FIG-JUDAS-ISKARIOT",
         "FIG-JESUS",
         "FIG-MARIA-BETANIEN"
       ],
       "objects": [
         "FIG-OBJ-SALBOEL"
       ],
-      "signs": [
-        "FIG-ZEICHEN-SALBUNG"
+      "signs": [],
+      "speech": [
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-JUDAS-ISKARIOT",
+          "icons": [],
+          "word": {
+            "de": "Lass sie, damit sie es für den Tag meines Begräbnisses bewahre.",
+            "gsw": "Lass si, demit si s für de Tag vo mim Begräbnis ufbhaltet."
+          }
+        }
       ],
-      "speech": [],
-      "action_de": "Sechs Tage vor dem Passa ist Jesus in Betanien zu Gast; Marta bedient, Lazarus liegt mit zu Tisch. Maria salbt Jesu Füsse mit kostbarem Nardenöl und trocknet sie mit ihren Haaren; das Haus wird vom Duft erfüllt.",
+      "action_de": "Maria salbt die Füsse Jesu mit kostbarem Nardenöl und trocknet sie mit ihren Haaren; das Haus wird vom Duft erfüllt. Jesus sagt zu Judas: «Lass sie, damit sie es für den Tag meines Begräbnisses bewahre.»",
+      "keywords": {
+        "de": "das Haus aber wurde vom Duft des Salböls erfüllt",
+        "gsw": "s Huus aber isch vom Duft vom Salböl ganz erfüllt worde"
+      },
+      "names": {
+        "FIG-MARIA-BETANIEN": {
+          "de": "Maria",
+          "gsw": "Maria"
+        },
+        "FIG-JUDAS-ISKARIOT": {
+          "de": "Judas Iskariot",
+          "gsw": "Judas Iskariot"
+        }
+      },
       "stage": {
         "pose": {
           "FIG-MARIA-BETANIEN": "kneel"
@@ -34,17 +55,14 @@
           "FIG-MARIA-BETANIEN": "FIG-OBJ-SALBOEL"
         },
         "mood": {
+          "FIG-JESUS": "calm",
           "FIG-MARIA-BETANIEN": "calm",
-          "FIG-LAZARUS": "smile"
+          "FIG-JUDAS-ISKARIOT": "earnest"
         },
         "x": {
-          "FIG-MARTA": 20,
-          "FIG-LAZARUS": 58,
-          "FIG-JESUS": 104,
-          "FIG-MARIA-BETANIEN": 134
-        },
-        "beside": {
-          "FIG-ZEICHEN-SALBUNG": "FIG-MARIA-BETANIEN"
+          "FIG-JUDAS-ISKARIOT": 30,
+          "FIG-JESUS": 96,
+          "FIG-MARIA-BETANIEN": 152
         }
       }
     },
@@ -59,20 +77,23 @@
         "FIG-OBJ-ESEL",
         "FIG-OBJ-PALMZWEIG"
       ],
-      "signs": [
-        "FIG-ZEICHEN-FREUDE"
-      ],
+      "signs": [],
       "speech": [
         {
           "from": "FIG-GRUPPE-MENGE",
           "to": "FIG-JESUS",
-          "icons": [
-            "FIG-ZEICHEN-SEGNEN",
-            "FIG-ROLLE-KOENIG"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Hosanna! Gepriesen sei, der kommt im Namen des Herrn, und der König Israels!",
+            "gsw": "Hosanna! Globt sig, dä, wo chunnt im Name vom Herr, und de König vo Israel!"
+          }
         }
       ],
-      "action_de": "Die Festmenge zieht Jesus mit Palmzweigen entgegen und ruft: Hosanna! Gepriesen sei, der kommt im Namen des Herrn, der König Israels! Jesus setzt sich auf einen jungen Esel, wie geschrieben steht.",
+      "action_de": "Die Menge nimmt Palmzweige, zieht Jesus entgegen und ruft: «Hosanna! Gepriesen sei, der kommt im Namen des Herrn, und der König Israels!» Jesus sitzt auf einem jungen Esel.",
+      "keywords": {
+        "de": "Siehe, dein König kommt",
+        "gsw": "Lueg, din König chunnt"
+      },
       "stage": {
         "in": {
           "FIG-JESUS": "FIG-OBJ-ESEL"
@@ -84,21 +105,21 @@
           ]
         },
         "big_side": "right",
-        "mood": {
-          "FIG-GRUPPE-MENGE": "delight",
-          "FIG-JESUS": "calm"
+        "flip": [
+          "FIG-OBJ-ESEL"
+        ],
+        "hold": {
+          "FIG-GRUPPE-MENGE": "FIG-OBJ-PALMZWEIG"
         },
         "signs_who": {
           "FIG-ZEICHEN-FREUDE": [
             "FIG-GRUPPE-MENGE"
           ]
         },
-        "hold": {
-          "FIG-GRUPPE-MENGE": "FIG-OBJ-PALMZWEIG"
-        },
-        "flip": [
-          "FIG-OBJ-ESEL"
-        ]
+        "mood": {
+          "FIG-GRUPPE-MENGE": "delight",
+          "FIG-JESUS": "calm"
+        }
       }
     },
     {
@@ -109,26 +130,46 @@
         "FIG-ANDREAS",
         "FIG-JESUS"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-OBJ-WEIZENKORN"
+      ],
       "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
-          "to": "FIG-ANDREAS",
-          "icons": [
-            "FIG-ZEICHEN-STUNDE-GEKOMMEN",
-            "FIG-OBJ-WEIZENKORN",
-            "FIG-ZEICHEN-HINAB",
-            "FIG-OBJ-AEHREN"
-          ]
+          "to": "FIG-PHILIPPUS",
+          "icons": [],
+          "word": {
+            "de": "Gekommen ist die Stunde, dass der Menschensohn verherrlicht wird.",
+            "gsw": "D Stund isch choo, dass de Mänschesohn verherrlicht wird."
+          }
         }
       ],
-      "action_de": "Jesus antwortet: Gekommen ist die Stunde, dass der Menschensohn verherrlicht wird. Wenn das Weizenkorn nicht in die Erde fällt und stirbt, bleibt es allein; wenn es aber stirbt, bringt es viel Frucht.",
+      "action_de": "Als Philippus und Andreas Jesus sagen, dass Griechen ihn sehen wollen, antwortet er: «Gekommen ist die Stunde, dass der Menschensohn verherrlicht wird» – das Weizenkorn muss sterben, um viel Frucht zu bringen.",
+      "keywords": {
+        "de": "Herr, wir möchten Jesus sehen",
+        "gsw": "Herr, mir wetted de Jesus gseh"
+      },
+      "names": {
+        "FIG-PHILIPPUS": {
+          "de": "Philippus",
+          "gsw": "Philippus"
+        },
+        "FIG-ANDREAS": {
+          "de": "Andreas",
+          "gsw": "Andreas"
+        }
+      },
       "stage": {
         "mood": {
-          "FIG-PHILIPPUS": "pensive",
-          "FIG-ANDREAS": "pensive",
+          "FIG-PHILIPPUS": "calm",
+          "FIG-ANDREAS": "calm",
           "FIG-JESUS": "earnest"
+        },
+        "x": {
+          "FIG-PHILIPPUS": 34,
+          "FIG-ANDREAS": 82,
+          "FIG-JESUS": 148
         }
       }
     },
@@ -140,49 +181,62 @@
         "FIG-GRUPPE-MENGE"
       ],
       "objects": [],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-NICHT-GLAUBEN"
+      ],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-LICHT",
-            "FIG-ZEICHEN-RETTUNG"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Ich bin als Licht in die Welt gekommen.",
+            "gsw": "Ich bi als Liecht i d Wält choo."
+          }
         }
       ],
-      "action_de": "Viele glauben trotz der Zeichen nicht; Jesus ruft: Ich bin als Licht in die Welt gekommen, nicht um zu richten, sondern um zu retten.",
+      "action_de": "Obwohl Jesus so viele Zeichen getan hat, glauben viele nicht an ihn; Jesus aber ruft laut: «Ich bin als Licht in die Welt gekommen, damit jeder, der an mich glaubt, nicht in der Finsternis bleibt.»",
+      "keywords": {
+        "de": "Jesus aber rief laut",
+        "gsw": "De Jesus aber hät luut grüeft"
+      },
       "stage": {
+        "beside": {
+          "FIG-ZEICHEN-NICHT-GLAUBEN": "FIG-GRUPPE-MENGE"
+        },
         "mood": {
-          "FIG-JESUS": "determined",
-          "FIG-GRUPPE-MENGE": "calm"
+          "FIG-JESUS": "earnest",
+          "FIG-GRUPPE-MENGE": "pensive"
+        },
+        "x": {
+          "FIG-JESUS": 46,
+          "FIG-GRUPPE-MENGE": 140
         }
       }
     }
   ],
   "actions_de": [
-    "Sechs Tage vor dem Passa ist Jesus in Betanien zu Gast; Marta bedient, Lazarus liegt mit zu Tisch. Maria salbt Jesu Füsse mit kostbarem Nardenöl und trocknet sie mit ihren Haaren; das Haus wird vom Duft erfüllt.",
-    "Die Festmenge zieht Jesus mit Palmzweigen entgegen und ruft: Hosanna! Gepriesen sei, der kommt im Namen des Herrn, der König Israels! Jesus setzt sich auf einen jungen Esel, wie geschrieben steht.",
-    "Jesus antwortet: Gekommen ist die Stunde, dass der Menschensohn verherrlicht wird. Wenn das Weizenkorn nicht in die Erde fällt und stirbt, bleibt es allein; wenn es aber stirbt, bringt es viel Frucht.",
-    "Viele glauben trotz der Zeichen nicht; Jesus ruft: Ich bin als Licht in die Welt gekommen, nicht um zu richten, sondern um zu retten."
+    "Maria salbt die Füsse Jesu mit kostbarem Nardenöl und trocknet sie mit ihren Haaren; das Haus wird vom Duft erfüllt. Jesus sagt zu Judas: «Lass sie, damit sie es für den Tag meines Begräbnisses bewahre.»",
+    "Die Menge nimmt Palmzweige, zieht Jesus entgegen und ruft: «Hosanna! Gepriesen sei, der kommt im Namen des Herrn, und der König Israels!» Jesus sitzt auf einem jungen Esel.",
+    "Als Philippus und Andreas Jesus sagen, dass Griechen ihn sehen wollen, antwortet er: «Gekommen ist die Stunde, dass der Menschensohn verherrlicht wird» – das Weizenkorn muss sterben, um viel Frucht zu bringen.",
+    "Obwohl Jesus so viele Zeichen getan hat, glauben viele nicht an ihn; Jesus aber ruft laut: «Ich bin als Licht in die Welt gekommen, damit jeder, der an mich glaubt, nicht in der Finsternis bleibt.»"
   ],
   "captions_de": [
-    "Die Salbung: In Betanien kniet Maria vor Jesus und salbt seine Füsse (Ölgefäss; Ölhorn mit Tropfen: Salbung); Marta bedient (Kelle), Lazarus ist dabei.",
-    "Der Einzug: Die Menge jubelt mit Palmzweigen: Gepriesen (segnende Hand), der König (Krone)! Jesus kommt auf einem jungen Esel.",
-    "Korn stirbt → viel Frucht: Jesus sagt: Die Stunde ist da (Sanduhr); wenn das Weizenkorn in die Erde fällt (Korn, Pfeil nach unten) und stirbt, bringt es viel Frucht (Ähren).",
-    "Ich bin als Licht gekommen: Jesus kommt als Licht (Licht), um zu retten (Pfeil nach oben)."
+    "Salbung: Maria (Name) salbt kniend die Füsse Jesu (Salbgefäss); Jesus sagt zu Judas Iskariot (Name): «Lass sie, damit sie es für den Tag meines Begräbnisses bewahre.» (bewahren, Grab).",
+    "Einzug: Die Menge mit Palmzweigen ruft Jesus auf dem jungen Esel zu: «Hosanna! Gepriesen sei, der kommt im Namen des Herrn, und der König Israels!» (preisen, Krone).",
+    "Die Stunde: Philippus und Andreas (Namen) bei Jesus; er sagt: «Gekommen ist die Stunde, dass der Menschensohn verherrlicht wird.» (Stunde, Licht); am Boden das Weizenkorn; im Band die Bitte der Griechen.",
+    "Licht: Jesus ruft laut: «Ich bin als Licht in die Welt gekommen.» (Licht, Welt); die Menge glaubt nicht (skeptisches Gesicht)."
   ],
-  "interpretation_note_de": "Vier Felder: Salbung, Einzug, Weizenkorn und Stunde, Licht; Einzelheiten in den Abschnitten.",
+  "interpretation_note_de": "Vier Comic-Szenen, eine je Abschnitt ([[JHN.12.1-JHN.12.50]]); das vierte Feld bündelt den Unglauben trotz der Zeichen ([[JHN.12.37-JHN.12.43]]) und den letzten Ruf ([[JHN.12.44-JHN.12.50]]). Das Weizenkorn steht im dritten Feld nur als Gegenstand; das Bildwort zeigt der Abschnitt. Kein Festzeichen: Das nahe Passa nennt die Zusammenfassung. «Menschensohn» ist im Bild Jesus (Deutung).",
   "basis": [
     {
       "record": "SUM-CH-JHN-012",
       "field": "summary",
-      "fingerprint": "98c096de38caf3bf"
+      "fingerprint": "b005b8e7cf53ffb8"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -518,6 +572,192 @@
             }
           }
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-JHN-012",
+            "field": "summary",
+            "fingerprint": "98c096de38caf3bf"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.12.1-JHN.12.11",
+            "figures": [
+              "FIG-MARTA",
+              "FIG-LAZARUS",
+              "FIG-JESUS",
+              "FIG-MARIA-BETANIEN"
+            ],
+            "objects": [
+              "FIG-OBJ-SALBOEL"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SALBUNG"
+            ],
+            "speech": [],
+            "action_de": "Sechs Tage vor dem Passa ist Jesus in Betanien zu Gast; Marta bedient, Lazarus liegt mit zu Tisch. Maria salbt Jesu Füsse mit kostbarem Nardenöl und trocknet sie mit ihren Haaren; das Haus wird vom Duft erfüllt.",
+            "stage": {
+              "pose": {
+                "FIG-MARIA-BETANIEN": "kneel"
+              },
+              "hold": {
+                "FIG-MARIA-BETANIEN": "FIG-OBJ-SALBOEL"
+              },
+              "mood": {
+                "FIG-MARIA-BETANIEN": "calm",
+                "FIG-LAZARUS": "smile"
+              },
+              "x": {
+                "FIG-MARTA": 20,
+                "FIG-LAZARUS": 58,
+                "FIG-JESUS": 104,
+                "FIG-MARIA-BETANIEN": 134
+              },
+              "beside": {
+                "FIG-ZEICHEN-SALBUNG": "FIG-MARIA-BETANIEN"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.12.12-JHN.12.19",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-ESEL",
+              "FIG-OBJ-PALMZWEIG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-SEGNEN",
+                  "FIG-ROLLE-KOENIG"
+                ]
+              }
+            ],
+            "action_de": "Die Festmenge zieht Jesus mit Palmzweigen entgegen und ruft: Hosanna! Gepriesen sei, der kommt im Namen des Herrn, der König Israels! Jesus setzt sich auf einen jungen Esel, wie geschrieben steht.",
+            "stage": {
+              "in": {
+                "FIG-JESUS": "FIG-OBJ-ESEL"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.46,
+                  0.06
+                ]
+              },
+              "big_side": "right",
+              "mood": {
+                "FIG-GRUPPE-MENGE": "delight",
+                "FIG-JESUS": "calm"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-GRUPPE-MENGE"
+                ]
+              },
+              "hold": {
+                "FIG-GRUPPE-MENGE": "FIG-OBJ-PALMZWEIG"
+              },
+              "flip": [
+                "FIG-OBJ-ESEL"
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.12.20-JHN.12.36",
+            "figures": [
+              "FIG-PHILIPPUS",
+              "FIG-ANDREAS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ANDREAS",
+                "icons": [
+                  "FIG-ZEICHEN-STUNDE-GEKOMMEN",
+                  "FIG-OBJ-WEIZENKORN",
+                  "FIG-ZEICHEN-HINAB",
+                  "FIG-OBJ-AEHREN"
+                ]
+              }
+            ],
+            "action_de": "Jesus antwortet: Gekommen ist die Stunde, dass der Menschensohn verherrlicht wird. Wenn das Weizenkorn nicht in die Erde fällt und stirbt, bleibt es allein; wenn es aber stirbt, bringt es viel Frucht.",
+            "stage": {
+              "mood": {
+                "FIG-PHILIPPUS": "pensive",
+                "FIG-ANDREAS": "pensive",
+                "FIG-JESUS": "earnest"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.12.37-JHN.12.50",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-LICHT",
+                  "FIG-ZEICHEN-RETTUNG"
+                ]
+              }
+            ],
+            "action_de": "Viele glauben trotz der Zeichen nicht; Jesus ruft: Ich bin als Licht in die Welt gekommen, nicht um zu richten, sondern um zu retten.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "determined",
+                "FIG-GRUPPE-MENGE": "calm"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Sechs Tage vor dem Passa ist Jesus in Betanien zu Gast; Marta bedient, Lazarus liegt mit zu Tisch. Maria salbt Jesu Füsse mit kostbarem Nardenöl und trocknet sie mit ihren Haaren; das Haus wird vom Duft erfüllt.",
+          "Die Festmenge zieht Jesus mit Palmzweigen entgegen und ruft: Hosanna! Gepriesen sei, der kommt im Namen des Herrn, der König Israels! Jesus setzt sich auf einen jungen Esel, wie geschrieben steht.",
+          "Jesus antwortet: Gekommen ist die Stunde, dass der Menschensohn verherrlicht wird. Wenn das Weizenkorn nicht in die Erde fällt und stirbt, bleibt es allein; wenn es aber stirbt, bringt es viel Frucht.",
+          "Viele glauben trotz der Zeichen nicht; Jesus ruft: Ich bin als Licht in die Welt gekommen, nicht um zu richten, sondern um zu retten."
+        ],
+        "captions_de": [
+          "Die Salbung: In Betanien kniet Maria vor Jesus und salbt seine Füsse (Ölgefäss; Ölhorn mit Tropfen: Salbung); Marta bedient (Kelle), Lazarus ist dabei.",
+          "Der Einzug: Die Menge jubelt mit Palmzweigen: Gepriesen (segnende Hand), der König (Krone)! Jesus kommt auf einem jungen Esel.",
+          "Korn stirbt → viel Frucht: Jesus sagt: Die Stunde ist da (Sanduhr); wenn das Weizenkorn in die Erde fällt (Korn, Pfeil nach unten) und stirbt, bringt es viel Frucht (Ähren).",
+          "Ich bin als Licht gekommen: Jesus kommt als Licht (Licht), um zu retten (Pfeil nach oben)."
+        ],
+        "interpretation_note_de": "Vier Felder: Salbung, Einzug, Weizenkorn und Stunde, Licht; Einzelheiten in den Abschnitten.",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

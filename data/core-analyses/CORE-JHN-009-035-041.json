@@ -1,0 +1,179 @@
+{
+ "id": "CORE-JHN-009-035-041",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "JHN.9.35-JHN.9.41",
+ "target": "TU-JHN-009-035-041",
+ "core_de": "Jesus hört, dass sie ihn hinausgeworfen haben, findet ihn und fragt: «Glaubst du an den Menschensohn?»; als er sagt: «Du hast ihn ja gesehen, und der mit dir redet, der ist es», antwortet der Mann: «Ich glaube, Herr!» und fällt vor ihm nieder; Jesus sagt: «Zum Gericht bin ich in diese Welt gekommen, damit die nicht Sehenden sehen und die Sehenden blind werden»; den Pharisäern, die fragen: «Sind etwa auch wir blind?», antwortet er: «Wenn ihr blind wärt, hättet ihr keine Sünde; nun aber sagt ihr: ‹Wir sehen.› Eure Sünde bleibt.»",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Begegnung – Bekenntnis – Wort vom Gericht – Frage der Pharisäer – Antwort",
+    "range": "JHN.9.35-JHN.9.41",
+    "elements": [
+     {
+      "label": "Bekenntnis",
+      "ref": "JHN.9.35-JHN.9.38",
+      "role": "Begegnung",
+      "child": "s2"
+     },
+     {
+      "label": "Umkehrung",
+      "ref": "JHN.9.39",
+      "role": "Wort",
+      "child": "s3"
+     },
+     {
+      "label": "Pharisäer: «Sind etwa auch wir blind?» – «Wenn ihr blind wärt, hättet ihr keine Sünde; nun aber sagt ihr: ‹Wir sehen.› Eure Sünde bleibt.»",
+      "ref": "JHN.9.40-JHN.9.41",
+      "role": "Ausgang"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-ROLLE-BLINDER",
+       "ref": "JHN.9.35-JHN.9.37"
+      },
+      {
+       "who": "FIG-ROLLE-BLINDER",
+       "to": "FIG-JESUS",
+       "ref": "JHN.9.36-JHN.9.38"
+      },
+      {
+       "who": "FIG-GRUPPE-PHARISAEER",
+       "to": "FIG-JESUS",
+       "ref": "JHN.9.40"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-PHARISAEER",
+       "ref": "JHN.9.41"
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "«Menschensohn»: Jesus spricht so von sich; im Bild als Jesus gezeichnet (Deutung)."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "dialogue",
+    "subtype": "Frage – Gegenfrage – Selbstoffenbarung – Bekenntnis",
+    "range": "JHN.9.35-JHN.9.38",
+    "elements": [
+     {
+      "label": "«Glaubst du an den Menschensohn?»",
+      "ref": "JHN.9.35",
+      "role": "Jesus"
+     },
+     {
+      "label": "«Und wer ist es, Herr, damit ich an ihn glauben kann?»",
+      "ref": "JHN.9.36",
+      "role": "Mann"
+     },
+     {
+      "label": "«Du hast ihn ja gesehen, und der mit dir redet, der ist es.»",
+      "ref": "JHN.9.37",
+      "role": "Jesus"
+     },
+     {
+      "label": "«Ich glaube, Herr!» Und er fiel vor ihm nieder.",
+      "ref": "JHN.9.38",
+      "role": "Mann"
+     }
+    ],
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "reversal",
+    "subtype": "nicht Sehende → sehen; Sehende → blind",
+    "range": "JHN.9.39",
+    "elements": [
+     {
+      "label": "damit die nicht Sehenden sehen",
+      "ref": "JHN.9.39",
+      "role": "aufwärts"
+     },
+     {
+      "label": "und die Sehenden blind werden",
+      "ref": "JHN.9.39",
+      "role": "abwärts"
+     }
+    ],
+    "visual": "mirror",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "JHN.9.35-JHN.9.38",
+   "text_de": "«Glaubst du an den Menschensohn?» – «Und wer ist es, Herr?» – «Der mit dir redet, der ist es.» – «Ich glaube, Herr!» Und er fiel vor ihm nieder.",
+   "reason_de": "Bekenntnis (Kriterien 1 und 2).",
+   "recognition_de": "Der Geheilte kniet vor Jesus.",
+   "keywords": [
+    "Glaubst du an den Menschensohn?",
+    "Ich glaube, Herr!"
+   ]
+  },
+  {
+   "reference": "JHN.9.39",
+   "text_de": "«Zum Gericht bin ich in diese Welt gekommen, damit die nicht Sehenden sehen und die Sehenden blind werden.»",
+   "reason_de": "Deutung der Umkehrung (Kriterium 1).",
+   "recognition_de": "Sehen ↔ blind.",
+   "keywords": [
+    "damit die nicht Sehenden sehen und die Sehenden blind werden"
+   ],
+   "mode": "speech"
+  },
+  {
+   "reference": "JHN.9.40-JHN.9.41",
+   "text_de": "«Sind etwa auch wir blind?» – «Nun aber sagt ihr: ‹Wir sehen.› Eure Sünde bleibt.»",
+   "reason_de": "Ausgang (Kriterium 3).",
+   "recognition_de": "Die Pharisäer fragen.",
+   "keywords": [
+    "Sind etwa auch wir blind?",
+    "Eure Sünde bleibt"
+   ],
+   "mode": "speech"
+  }
+ ],
+ "omitted_de": [
+  "Die Gegenfrage «Und wer ist es, Herr?» ([[JHN.9.36]]) steht in der Struktur; im Bild das Bekenntnis"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-ROLLE-BLINDER",
+  "FIG-GRUPPE-PHARISAEER"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "JHN.9.35-JHN.9.41",
+   "fingerprint": "5ecedcc11e38b965"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Joh 8–14 mit 7,53–8,11 nach Joh 1–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

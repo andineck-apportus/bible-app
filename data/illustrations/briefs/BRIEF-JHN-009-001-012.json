@@ -12,46 +12,90 @@
     {
       "n": 1,
       "reference": "JHN.9.1-JHN.9.5",
-      "figures": [
-        "FIG-GRUPPE-ZWOELF",
-        "FIG-JESUS",
-        "FIG-ROLLE-BLINDER"
-      ],
+      "figures": [],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-BLIND"
-      ],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-ZWOELF",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-ZEICHEN-BLIND",
-            "FIG-ZEICHEN-SUENDE",
-            "FIG-ZEICHEN-FRAGEN"
+      "signs": [],
+      "speech": [],
+      "action_de": "Jesus sieht einen Menschen, blind von Geburt an. Die Jünger fragen: «Rabbi, wer hat gesündigt, dieser oder seine Eltern, sodass er blind geboren wurde?» Jesus: «Weder dieser hat gesündigt noch seine Eltern, sondern es geschah, damit die Werke Gottes an ihm offenbar werden … Solange ich in der Welt bin, bin ich das Licht der Welt.»",
+      "keywords": {
+        "de": "blind von Geburt an",
+        "gsw": "blind vo Geburt aa"
+      },
+      "diagram": {
+        "visual": "columns",
+        "span": 2,
+        "speaker": "FIG-GRUPPE-JUENGER",
+        "arrow": false,
+        "title": {
+          "de": "Rabbi, wer hat gesündigt, dieser oder seine Eltern, sodass er blind geboren wurde?",
+          "gsw": "Rabbi, wer hät gsündiget, dä oder sini Eltere, dass er blind gebore worde isch?"
+        },
+        "head": [
+          {
+            "de": "nicht",
+            "gsw": "nöd"
+          },
+          {
+            "de": "sondern",
+            "gsw": "sondern"
+          }
+        ],
+        "head_tones": [
+          "old",
+          "new"
+        ],
+        "rows": [
+          [
+            {
+              "a": {
+                "de": "Weder dieser hat gesündigt noch seine Eltern,",
+                "gsw": "Weder dä hät gsündiget no sini Eltere,"
+              },
+              "icons": [
+                "FIG-ZEICHEN-SUENDE",
+                "FIG-ZEICHEN-NICHT"
+              ],
+              "who": "FIG-JESUS",
+              "strike": true
+            },
+            {
+              "a": {
+                "de": "sondern es geschah, damit die Werke Gottes an ihm offenbar werden.",
+                "gsw": "sondern es isch gscheh, demit d Wärch vo Gott a ihm offebar wärded."
+              },
+              "icons": [
+                "FIG-GOTT",
+                "FIG-ZEICHEN-HEILEN"
+              ],
+              "tone": "new",
+              "who": "FIG-JESUS"
+            }
+          ],
+          [
+            {
+              "a": {
+                "de": "Wir müssen die Werke dessen wirken, der mich gesandt hat, solange es Tag ist.",
+                "gsw": "Mir müend d Wärch vo däm wirke, wo mich gschickt hät, solang es Tag isch."
+              },
+              "icons": [
+                "FIG-ZEICHEN-SONNE",
+                "FIG-GOTT"
+              ],
+              "who": "FIG-JESUS"
+            },
+            {
+              "a": {
+                "de": "Solange ich in der Welt bin, bin ich das Licht der Welt.",
+                "gsw": "Solang ich i de Wält bi, bin ich s Liecht vo de Wält."
+              },
+              "icons": [
+                "FIG-ZEICHEN-LICHT",
+                "FIG-ZEICHEN-WELT"
+              ],
+              "who": "FIG-JESUS"
+            }
           ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-LICHT"
-          ]
-        }
-      ],
-      "action_de": "Jesus sieht einen Menschen, der von Geburt an blind ist. Die Jünger fragen, wer gesündigt habe, er oder seine Eltern; Jesus sagt: keiner von beiden, an ihm sollen die Werke Gottes offenbar werden, und: Ich bin das Licht der Welt.",
-      "stage": {
-        "mood": {
-          "FIG-ROLLE-BLINDER": "sleep",
-          "FIG-GRUPPE-ZWOELF": "pensive"
-        },
-        "pose": {
-          "FIG-ROLLE-BLINDER": "sit"
-        },
-        "at": {
-          "FIG-ZEICHEN-BLIND": "FIG-ROLLE-BLINDER"
-        }
+        ]
       }
     },
     {
@@ -65,44 +109,39 @@
         "FIG-ORT-SILOAM"
       ],
       "signs": [
-        "FIG-ZEICHEN-HEILEN"
+        "FIG-ZEICHEN-SEHEN"
       ],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-ROLLE-BLINDER",
-          "icons": [
-            "FIG-ORT-SILOAM"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Geh, wasch dich im Teich Siloam.",
+            "gsw": "Gang, wäsch di im Teich Siloam."
+          }
         }
       ],
-      "action_de": "Jesus streicht dem Blinden einen Brei aus Speichel auf die Augen und schickt ihn: Geh, wasch dich im Teich Siloam. Er geht hin, wäscht sich und kommt sehend zurück.",
+      "action_de": "Jesus streicht ihm einen Brei auf die Augen und sagt: «Geh, wasch dich im Teich Siloam.» Er geht hin, wäscht sich und kommt sehend zurück.",
+      "keywords": {
+        "de": "wusch sich und kam sehend zurück",
+        "gsw": "hät sich gwäsche und isch sehend zruggchoo"
+      },
       "stage": {
+        "at": {
+          "FIG-ZEICHEN-SEHEN": "FIG-ROLLE-BLINDER"
+        },
         "mood": {
-          "FIG-ROLLE-BLINDER": "sleep"
+          "FIG-JESUS": "calm",
+          "FIG-ROLLE-BLINDER": "delight"
         },
         "x": {
-          "FIG-JESUS": 40,
-          "FIG-ROLLE-BLINDER": 92
+          "FIG-JESUS": 46,
+          "FIG-ROLLE-BLINDER": 140
         },
-        "floor_x": {
-          "FIG-ORT-SILOAM": 126
-        },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-ROLLE-BLINDER",
-            "act"
-          ],
-          [
-            "FIG-ROLLE-BLINDER",
-            "FIG-ORT-SILOAM",
-            "go"
-          ]
-        ],
-        "beside": {
-          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-BLINDER"
-        }
+        "behind": [
+          "FIG-ORT-SILOAM"
+        ]
       }
     },
     {
@@ -113,55 +152,60 @@
         "FIG-ROLLE-BLINDER"
       ],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-SEHEN"
-      ],
+      "signs": [],
       "speech": [
         {
           "from": "FIG-GRUPPE-MENGE",
-          "to": "FIG-ROLLE-BLINDER",
-          "icons": [
-            "FIG-ZEICHEN-FRAGEN"
-          ]
+          "to": "FIG-GRUPPE-MENGE",
+          "icons": [],
+          "word": {
+            "de": "Ist das nicht der, der dasass und bettelte?",
+            "gsw": "Isch das nöd dä, wo dört ghocket isch und bettlet hät?"
+          }
         },
         {
           "from": "FIG-ROLLE-BLINDER",
           "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ORT-SILOAM",
-            "FIG-ZEICHEN-SEHEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Ich bin es.",
+            "gsw": "Ich bi s."
+          }
         }
       ],
-      "action_de": "Die Nachbarn fragen, ob das der Bettler sei; er sagt: Ich bin es. Er erzählt, wie Jesus ihm den Brei auf die Augen strich und ihn zum Siloam schickte und er sehend wurde.",
+      "action_de": "Die Nachbarn fragen: «Ist das nicht der, der dasass und bettelte?» Er sagt: «Ich bin es» und erzählt, wie der Mensch, der Jesus heisst, ihm die Augen geöffnet hat.",
+      "keywords": {
+        "de": "Wie sind dir die Augen geöffnet worden?",
+        "gsw": "Wie sind dir d Auge ufgmacht worde?"
+      },
       "stage": {
         "mood": {
-          "FIG-ROLLE-BLINDER": "delight",
-          "FIG-GRUPPE-MENGE": "surprised"
+          "FIG-GRUPPE-MENGE": "question",
+          "FIG-ROLLE-BLINDER": "smile"
         },
-        "at": {
-          "FIG-ZEICHEN-SEHEN": "FIG-ROLLE-BLINDER"
+        "x": {
+          "FIG-GRUPPE-MENGE": 52,
+          "FIG-ROLLE-BLINDER": 144
         }
       }
     }
   ],
   "actions_de": [
-    "Jesus sieht einen Menschen, der von Geburt an blind ist. Die Jünger fragen, wer gesündigt habe, er oder seine Eltern; Jesus sagt: keiner von beiden, an ihm sollen die Werke Gottes offenbar werden, und: Ich bin das Licht der Welt.",
-    "Jesus streicht dem Blinden einen Brei aus Speichel auf die Augen und schickt ihn: Geh, wasch dich im Teich Siloam. Er geht hin, wäscht sich und kommt sehend zurück.",
-    "Die Nachbarn fragen, ob das der Bettler sei; er sagt: Ich bin es. Er erzählt, wie Jesus ihm den Brei auf die Augen strich und ihn zum Siloam schickte und er sehend wurde."
+    "Jesus sieht einen Menschen, blind von Geburt an. Die Jünger fragen: «Rabbi, wer hat gesündigt, dieser oder seine Eltern, sodass er blind geboren wurde?» Jesus: «Weder dieser hat gesündigt noch seine Eltern, sondern es geschah, damit die Werke Gottes an ihm offenbar werden … Solange ich in der Welt bin, bin ich das Licht der Welt.»",
+    "Jesus streicht ihm einen Brei auf die Augen und sagt: «Geh, wasch dich im Teich Siloam.» Er geht hin, wäscht sich und kommt sehend zurück.",
+    "Die Nachbarn fragen: «Ist das nicht der, der dasass und bettelte?» Er sagt: «Ich bin es» und erzählt, wie der Mensch, der Jesus heisst, ihm die Augen geöffnet hat."
   ],
   "captions_de": [
-    "Die Frage der Jünger: Blind (Auge mit rotem X) – wegen Sünde (schwarzes Herz)? Jesus antwortet: Ich bin das Licht.",
-    "Jesus → Blinder → Siloam: Jesus berührt die Augen des Blinden (Pfeil zu ihm, Hand mit Lichtstrahlen) und schickt ihn zum Teich Siloam (Becken mit Stufen, gestrichelter Pfeil); dort wird er sehend.",
-    "Er sieht: Die Nachbarn staunen und fragen; der Geheilte erzählt: Jesus, der Teich (Becken), und ich sehe (offene Augen)."
+    "Weder – noch – sondern (Spalten, Bild Jünger mit der Frage): links durchgestrichen: weder dieser hat gesündigt noch seine Eltern (Sünde, Verbotszeichen); rechts, hervorgehoben: damit die Werke Gottes an ihm offenbar werden (Strahlenkranz, heilen).",
+    "Siloam: Jesus sagt zu dem Blinden: «Geh, wasch dich im Teich Siloam.» (Teich, Wasser); der Mann kommt sehend zurück (offene Augen).",
+    "Die Nachbarn: Sie fragen einander: «Ist das nicht der, der dasass und bettelte?» (Bettler, fragen); er: «Ich bin es.» (zeigen); im Band: Wie sind dir die Augen geöffnet worden? (Auge, fragen)."
   ],
-  "interpretation_note_de": "«Die Jünger» als Gruppe (nicht nur die Zwölf). Ob der Mann vorher bettelnd sass, sagt erst [[JHN.9.8]]; im ersten Feld sitzt er deshalb am Weg. Dass Jesus die Augen «berührt», ist die Deutung von «er strich ihm den Brei auf die Augen» ([[JHN.9.6]]).",
+  "interpretation_note_de": "Drei Felder nach dem Ablauf «Frage – Antwort – Heilung – Nachbarn» ([[JHN.9.1-JHN.9.12]]): die Frage der Jünger und die Antwort «weder – noch – sondern» als Spalten, die Heilung am Teich Siloam (der Gang zum Teich ist mit Jesus in einem Feld zusammengezogen; der Brei aus Speichel ist nicht gezeichnet), die Nachbarn.",
   "basis": [
     {
       "record": "TU-JHN-009-001-012",
       "field": "summary",
-      "fingerprint": "f51262724e33f04e"
+      "fingerprint": "0469cf19746689e7"
     },
     {
       "record": "TRANS-JHN-009-001-041-DE-WORKING",
@@ -183,7 +227,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -357,6 +401,373 @@
           "Die Frage der Jünger: Blind (durchgestrichenes Auge) – wegen Sünde (dunkler Fleck)? Jesus antwortet: Ich bin das Licht.",
           "Jesus → Blinder → Siloam: Jesus berührt die Augen des Blinden (Pfeil zu ihm, Hand mit Lichtstrahlen) und schickt ihn zum Teich Siloam (Becken mit Stufen, gestrichelter Pfeil); dort wird er sehend.",
           "Er sieht: Die Nachbarn staunen und fragen; der Geheilte erzählt: Jesus, der Teich (Becken), und ich sehe (offenes Auge)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.9.1-JHN.9.5",
+            "figures": [
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-JESUS",
+              "FIG-ROLLE-BLINDER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-BLIND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-ZWOELF",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-BLIND",
+                  "FIG-ZEICHEN-SUENDE",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-LICHT"
+                ]
+              }
+            ],
+            "action_de": "Jesus sieht einen Menschen, der von Geburt an blind ist. Die Jünger fragen, wer gesündigt habe, er oder seine Eltern; Jesus sagt: keiner von beiden, an ihm sollen die Werke Gottes offenbar werden, und: Ich bin das Licht der Welt.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-BLINDER": "sleep",
+                "FIG-GRUPPE-ZWOELF": "pensive"
+              },
+              "pose": {
+                "FIG-ROLLE-BLINDER": "sit"
+              },
+              "at": {
+                "FIG-ZEICHEN-BLIND": "FIG-ROLLE-BLINDER"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.9.6-JHN.9.7",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-BLINDER"
+            ],
+            "objects": [
+              "FIG-ORT-SILOAM"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-BLINDER",
+                "icons": [
+                  "FIG-ORT-SILOAM"
+                ]
+              }
+            ],
+            "action_de": "Jesus streicht dem Blinden einen Brei aus Speichel auf die Augen und schickt ihn: Geh, wasch dich im Teich Siloam. Er geht hin, wäscht sich und kommt sehend zurück.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-BLINDER": "sleep"
+              },
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-ROLLE-BLINDER": 92
+              },
+              "floor_x": {
+                "FIG-ORT-SILOAM": 126
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-BLINDER",
+                  "act"
+                ],
+                [
+                  "FIG-ROLLE-BLINDER",
+                  "FIG-ORT-SILOAM",
+                  "go"
+                ]
+              ],
+              "beside": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-BLINDER"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.9.8-JHN.9.12",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-ROLLE-BLINDER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-SEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-ROLLE-BLINDER",
+                "icons": [
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-ROLLE-BLINDER",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ORT-SILOAM",
+                  "FIG-ZEICHEN-SEHEN"
+                ]
+              }
+            ],
+            "action_de": "Die Nachbarn fragen, ob das der Bettler sei; er sagt: Ich bin es. Er erzählt, wie Jesus ihm den Brei auf die Augen strich und ihn zum Siloam schickte und er sehend wurde.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-BLINDER": "delight",
+                "FIG-GRUPPE-MENGE": "surprised"
+              },
+              "at": {
+                "FIG-ZEICHEN-SEHEN": "FIG-ROLLE-BLINDER"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus sieht einen Menschen, der von Geburt an blind ist. Die Jünger fragen, wer gesündigt habe, er oder seine Eltern; Jesus sagt: keiner von beiden, an ihm sollen die Werke Gottes offenbar werden, und: Ich bin das Licht der Welt.",
+          "Jesus streicht dem Blinden einen Brei aus Speichel auf die Augen und schickt ihn: Geh, wasch dich im Teich Siloam. Er geht hin, wäscht sich und kommt sehend zurück.",
+          "Die Nachbarn fragen, ob das der Bettler sei; er sagt: Ich bin es. Er erzählt, wie Jesus ihm den Brei auf die Augen strich und ihn zum Siloam schickte und er sehend wurde."
+        ],
+        "captions_de": [
+          "Die Frage der Jünger: Blind (Auge mit rotem X) – wegen Sünde (schwarzes Herz)? Jesus antwortet: Ich bin das Licht.",
+          "Jesus → Blinder → Siloam: Jesus berührt die Augen des Blinden (Pfeil zu ihm, Hand mit Lichtstrahlen) und schickt ihn zum Teich Siloam (Becken mit Stufen, gestrichelter Pfeil); dort wird er sehend.",
+          "Er sieht: Die Nachbarn staunen und fragen; der Geheilte erzählt: Jesus, der Teich (Becken), und ich sehe (offene Augen)."
+        ],
+        "interpretation_note_de": "«Die Jünger» als Gruppe (nicht nur die Zwölf). Ob der Mann vorher bettelnd sass, sagt erst [[JHN.9.8]]; im ersten Feld sitzt er deshalb am Weg. Dass Jesus die Augen «berührt», ist die Deutung von «er strich ihm den Brei auf die Augen» ([[JHN.9.6]]).",
+        "basis": [
+          {
+            "record": "TU-JHN-009-001-012",
+            "field": "summary",
+            "fingerprint": "f51262724e33f04e"
+          },
+          {
+            "record": "TRANS-JHN-009-001-041-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.9.1-JHN.9.5",
+            "fingerprint": "c5a265d060ce1879"
+          },
+          {
+            "record": "TRANS-JHN-009-001-041-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.9.6-JHN.9.7",
+            "fingerprint": "103d84618e79f6c9"
+          },
+          {
+            "record": "TRANS-JHN-009-001-041-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.9.8-JHN.9.12",
+            "fingerprint": "0afbdb87fd3c0ea7"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.9.1-JHN.9.5",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Jesus sieht einen Menschen, blind von Geburt an. Die Jünger fragen: «Rabbi, wer hat gesündigt, dieser oder seine Eltern, sodass er blind geboren wurde?» Jesus: «Weder dieser hat gesündigt noch seine Eltern, sondern es geschah, damit die Werke Gottes an ihm offenbar werden … Solange ich in der Welt bin, bin ich das Licht der Welt.»",
+            "keywords": {
+              "de": "blind von Geburt an",
+              "gsw": "blind vo Geburt aa"
+            },
+            "diagram": {
+              "visual": "columns",
+              "span": 2,
+              "speaker": "FIG-GRUPPE-JUENGER",
+              "arrow": false,
+              "title": {
+                "de": "Rabbi, wer hat gesündigt, dieser oder seine Eltern, sodass er blind geboren wurde?",
+                "gsw": "Rabbi, wer hät gsündiget, dä oder sini Eltere, dass er blind gebore worde isch?"
+              },
+              "head": [
+                {
+                  "de": "nicht",
+                  "gsw": "nöd"
+                },
+                {
+                  "de": "sondern",
+                  "gsw": "sondern"
+                }
+              ],
+              "head_tones": [
+                "old",
+                "new"
+              ],
+              "rows": [
+                [
+                  {
+                    "a": {
+                      "de": "Weder dieser hat gesündigt noch seine Eltern,",
+                      "gsw": "Weder dä hät gsündiget no sini Eltere,"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-SUENDE",
+                      "FIG-ZEICHEN-NICHT"
+                    ],
+                    "who": "FIG-JESUS",
+                    "strike": true
+                  },
+                  {
+                    "a": {
+                      "de": "sondern es geschah, damit die Werke Gottes an ihm offenbar werden.",
+                      "gsw": "sondern es isch gscheh, demit d Wärch vo Gott a ihm offebar wärded."
+                    },
+                    "icons": [
+                      "FIG-GOTT",
+                      "FIG-ZEICHEN-HEILEN"
+                    ],
+                    "tone": "new",
+                    "who": "FIG-JESUS"
+                  }
+                ],
+                [
+                  {
+                    "a": {
+                      "de": "Wir müssen die Werke dessen wirken, der mich gesandt hat, solange es Tag ist.",
+                      "gsw": "Mir müend d Wärch vo däm wirke, wo mich gschickt hät, solang es Tag isch."
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-SONNE",
+                      "FIG-GOTT"
+                    ],
+                    "who": "FIG-JESUS"
+                  },
+                  {
+                    "a": {
+                      "de": "Solange ich in der Welt bin, bin ich das Licht der Welt.",
+                      "gsw": "Solang ich i de Wält bi, bin ich s Liecht vo de Wält."
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-LICHT",
+                      "FIG-ZEICHEN-WELT"
+                    ],
+                    "who": "FIG-JESUS"
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.9.6-JHN.9.7",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-BLINDER"
+            ],
+            "objects": [
+              "FIG-ORT-SILOAM"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-BLINDER",
+                "icons": [],
+                "word": {
+                  "de": "Geh, wasch dich im Teich Siloam.",
+                  "gsw": "Gang, wäsch di im Teich Siloam."
+                }
+              }
+            ],
+            "action_de": "Jesus streicht ihm einen Brei auf die Augen und sagt: «Geh, wasch dich im Teich Siloam.» Er geht hin, wäscht sich und kommt sehend zurück.",
+            "keywords": {
+              "de": "wusch sich und kam sehend zurück",
+              "gsw": "hät sich gwäsche und isch sehend zruggchoo"
+            },
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-SEHEN": "FIG-ROLLE-BLINDER"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-ROLLE-BLINDER": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 46,
+                "FIG-ROLLE-BLINDER": 140
+              },
+              "back_side": "right"
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.9.8-JHN.9.12",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-ROLLE-BLINDER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [],
+                "word": {
+                  "de": "Ist das nicht der, der dasass und bettelte?",
+                  "gsw": "Isch das nöd dä, wo dört ghocket isch und bettlet hät?"
+                }
+              },
+              {
+                "from": "FIG-ROLLE-BLINDER",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [],
+                "word": {
+                  "de": "Ich bin es.",
+                  "gsw": "Ich bi s."
+                }
+              }
+            ],
+            "action_de": "Die Nachbarn fragen: «Ist das nicht der, der dasass und bettelte?» Er sagt: «Ich bin es» und erzählt, wie der Mensch, der Jesus heisst, ihm die Augen geöffnet hat.",
+            "keywords": {
+              "de": "Wie sind dir die Augen geöffnet worden?",
+              "gsw": "Wie sind dir d Auge ufgmacht worde?"
+            },
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "question",
+                "FIG-ROLLE-BLINDER": "smile"
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 52,
+                "FIG-ROLLE-BLINDER": 144
+              }
+            }
+          }
         ]
       }
     }

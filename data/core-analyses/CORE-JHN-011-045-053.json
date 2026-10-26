@@ -1,0 +1,185 @@
+{
+ "id": "CORE-JHN-011-045-053",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "JHN.11.45-JHN.11.53",
+ "target": "TU-JHN-011-045-053",
+ "core_de": "Viele der Juden, die gesehen haben, was Jesus getan hat, glauben an ihn, einige aber melden es den Pharisäern; die Hohepriester und die Pharisäer berufen den Hohen Rat ein: «Was sollen wir tun? Denn dieser Mensch tut viele Zeichen»; sie fürchten, alle würden an ihn glauben und die Römer würden kommen; Kajafas, Hohepriester jenes Jahres, sagt: «Es ist besser für euch, dass ein Mensch für das Volk stirbt und nicht die ganze Nation zugrunde geht» – der Erzähler deutet das als Weissagung, dass Jesus für die Nation sterben werde, und nicht für sie allein, sondern um die zerstreuten Kinder Gottes zu einer Einheit zusammenzuführen; von jenem Tag an planen sie, ihn zu töten.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Glaube und Meldung – Sitzung – Befürchtung – Wort des Kajafas – Deutung – Plan",
+    "range": "JHN.11.45-JHN.11.53",
+    "elements": [
+     {
+      "label": "Viele Juden glauben an ihn; einige melden den Pharisäern, was Jesus getan hat",
+      "ref": "JHN.11.45-JHN.11.46",
+      "role": "Folge"
+     },
+     {
+      "label": "Befürchtung",
+      "ref": "JHN.11.47-JHN.11.48",
+      "role": "Sitzung",
+      "child": "s2"
+     },
+     {
+      "label": "Kajafas: «Ihr wisst gar nichts … es ist besser für euch, dass ein Mensch für das Volk stirbt und nicht die ganze Nation zugrunde geht.»",
+      "ref": "JHN.11.49-JHN.11.50",
+      "role": "Wort"
+     },
+     {
+      "label": "Gesagt ↔ geweissagt",
+      "ref": "JHN.11.51-JHN.11.52",
+      "role": "Deutung",
+      "child": "s3"
+     },
+     {
+      "label": "Von jenem Tag an planten sie, ihn zu töten",
+      "ref": "JHN.11.53",
+      "role": "Ausgang"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Hohepriester und Pharisäer",
+       "to": "einander (Sitzung)",
+       "ref": "JHN.11.47-JHN.11.48"
+      },
+      {
+       "who": "FIG-KAJAFAS",
+       "to": "die Sitzung",
+       "ref": "JHN.11.49-JHN.11.50"
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "«Die Juden» meint bei Johannes oft die führenden Kreise in Jerusalem; im Bild als neutrale Gruppe ohne Merkmale einer Volksgruppe."
+      },
+      {
+       "note": "«Planten» ([[JHN.11.53]]) ist eine Absicht, kein Urteil; das Bild zeigt sie als Absicht."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "cause",
+    "subtype": "Befürchtung: gewähren lassen → alle glauben → die Römer nehmen Ort und Nation",
+    "range": "JHN.11.47-JHN.11.48",
+    "elements": [
+     {
+      "label": "«Was sollen wir tun? Denn dieser Mensch tut viele Zeichen.»",
+      "ref": "JHN.11.47",
+      "role": "Anlass"
+     },
+     {
+      "label": "Wenn wir ihn so gewähren lassen, werden alle an ihn glauben,",
+      "ref": "JHN.11.48",
+      "role": "Bedingung"
+     },
+     {
+      "label": "und die Römer werden kommen und uns sowohl den Ort als auch die Nation wegnehmen",
+      "ref": "JHN.11.48",
+      "role": "befürchtete Folge"
+     }
+    ],
+    "features": {
+     "modality": [
+      {
+       "kind": "Befürchtung, nicht Bericht",
+       "ref": "JHN.11.48"
+      }
+     ]
+    },
+    "visual": "arrows",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "contrast",
+    "subtype": "gesagt ↔ geweissagt (Doppelsinn)",
+    "range": "JHN.11.50-JHN.11.52",
+    "elements": [
+     {
+      "label": "Kajafas sagt: ein Mensch soll für das Volk sterben, damit nicht die ganze Nation zugrunde geht",
+      "ref": "JHN.11.50",
+      "role": "gesagt"
+     },
+     {
+      "label": "Er weissagte als Hohepriester jenes Jahres, dass Jesus für die Nation sterben werde, und nicht für die Nation allein, sondern um die zerstreuten Kinder Gottes zu einer Einheit zusammenzuführen",
+      "ref": "JHN.11.51-JHN.11.52",
+      "role": "gemeint (Erzähler)"
+     }
+    ],
+    "visual": "levels",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "JHN.11.45-JHN.11.48",
+   "text_de": "Viele glauben, einige melden es den Pharisäern; im Hohen Rat: «Was sollen wir tun? Denn dieser Mensch tut viele Zeichen … die Römer werden kommen.»",
+   "reason_de": "Anlass und Befürchtung (Kriterium 2).",
+   "recognition_de": "Sitzung des Hohen Rates.",
+   "keywords": [
+    "Was sollen wir tun? Denn dieser Mensch tut viele Zeichen",
+    "die Römer werden kommen"
+   ]
+  },
+  {
+   "reference": "JHN.11.49-JHN.11.52",
+   "text_de": "Kajafas: «… dass ein Mensch für das Volk stirbt und nicht die ganze Nation zugrunde geht» – er weissagte, dass Jesus für die Nation sterben werde und um die zerstreuten Kinder Gottes zu einer Einheit zusammenzuführen.",
+   "reason_de": "Wort und Deutung des Erzählers (Kriterium 1).",
+   "recognition_de": "Kajafas spricht.",
+   "keywords": [
+    "dass ein Mensch für das Volk stirbt und nicht die ganze Nation zugrunde geht",
+    "die zerstreuten Kinder Gottes zu einer Einheit zusammenzuführen"
+   ]
+  },
+  {
+   "reference": "JHN.11.53",
+   "text_de": "Von jenem Tag an planen sie, ihn zu töten.",
+   "reason_de": "Ausgang (Kriterium 3; Tod nicht ausblenden).",
+   "recognition_de": "Der Rat plant.",
+   "keywords": [
+    "Von jenem Tag an planten sie nun, ihn zu töten"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Die Römer und «der Ort» ([[JHN.11.48]]) – im Bild nur als Wort der Befürchtung"
+ ],
+ "persons": [
+  "FIG-GRUPPE-MENGE",
+  "FIG-GRUPPE-PHARISAEER",
+  "FIG-GRUPPE-HOHER-RAT",
+  "FIG-KAJAFAS",
+  "FIG-JESUS"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "JHN.11.45-JHN.11.53",
+   "fingerprint": "7a10a6500e3b3b9c"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Joh 8–14 mit 7,53–8,11 nach Joh 1–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

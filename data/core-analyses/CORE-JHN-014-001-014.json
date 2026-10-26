@@ -1,0 +1,226 @@
+{
+ "id": "CORE-JHN-014-001-014",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "JHN.14.1-JHN.14.14",
+ "target": "TU-JHN-014-001-014",
+ "core_de": "Jesus sagt den Jüngern: «Euer Herz sei nicht erschüttert. Glaubt an Gott, und glaubt an mich!»; im Haus seines Vaters gibt es viele Wohnungen, er geht hin, ihnen einen Ort zu bereiten, und kommt wieder, um sie zu sich zu nehmen; auf die Frage des Thomas nach dem Weg antwortet er: «Ich bin der Weg und die Wahrheit und das Leben. Niemand kommt zum Vater ausser durch mich»; Philippus bittet: «Herr, zeig uns den Vater», und Jesus sagt: «Wer mich gesehen hat, hat den Vater gesehen», er ist im Vater und der Vater in ihm; wer an ihn glaubt, wird die Werke tun, die er tut, und grössere, und was sie in seinem Namen erbitten, wird er tun.",
+ "mode": "speech",
+ "voice": {
+  "speaker": "FIG-JESUS",
+  "addressee": "FIG-GRUPPE-JUENGER"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "dialogue",
+    "subtype": "Trost – Frage des Thomas – Ich-bin-Wort – Bitte des Philippus – Antwort – Zusagen",
+    "range": "JHN.14.1-JHN.14.14",
+    "elements": [
+     {
+      "label": "«Euer Herz sei nicht erschüttert. Glaubt an Gott, und glaubt an mich!»",
+      "ref": "JHN.14.1",
+      "role": "Jesus"
+     },
+     {
+      "label": "Weg und Wiederkommen",
+      "ref": "JHN.14.2-JHN.14.4",
+      "role": "Jesus",
+      "child": "s2"
+     },
+     {
+      "label": "Thomas: «Herr, wir wissen nicht, wohin du gehst. Wie können wir den Weg kennen?»",
+      "ref": "JHN.14.5",
+      "role": "Thomas"
+     },
+     {
+      "label": "«Ich bin der Weg und die Wahrheit und das Leben. Niemand kommt zum Vater ausser durch mich. … Von jetzt an kennt ihr ihn»",
+      "ref": "JHN.14.6-JHN.14.7",
+      "role": "Jesus"
+     },
+     {
+      "label": "Philippus: «Herr, zeig uns den Vater, und das genügt uns.»",
+      "ref": "JHN.14.8",
+      "role": "Philippus"
+     },
+     {
+      "label": "«Wer mich gesehen hat, hat den Vater gesehen … ich bin im Vater und der Vater in mir»; glaubt um der Werke willen",
+      "ref": "JHN.14.9-JHN.14.11",
+      "role": "Jesus"
+     },
+     {
+      "label": "Zusagen",
+      "ref": "JHN.14.12-JHN.14.14",
+      "role": "Jesus",
+      "child": "s3"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "JHN.14.1-JHN.14.4"
+      },
+      {
+       "who": "FIG-THOMAS",
+       "to": "FIG-JESUS",
+       "ref": "JHN.14.5"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-THOMAS",
+       "ref": "JHN.14.6-JHN.14.7"
+      },
+      {
+       "who": "FIG-PHILIPPUS",
+       "to": "FIG-JESUS",
+       "ref": "JHN.14.8"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-PHILIPPUS",
+       "ref": "JHN.14.9-JHN.14.14"
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "Ich bin …",
+       "ref": "JHN.14.6",
+       "note": "Ich-bin-Wort; vgl. [[JHN.8.12]], [[JHN.10.11]], [[JHN.11.25]]"
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "«Der Vater» ist Gott; im Bild als Strahlenkranz, nie als Mensch."
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "sequence",
+    "subtype": "hingehen – Ort bereiten – wiederkommen – zu sich nehmen",
+    "range": "JHN.14.2-JHN.14.4",
+    "elements": [
+     {
+      "label": "Im Haus meines Vaters gibt es viele Wohnungen",
+      "ref": "JHN.14.2",
+      "role": "Haus"
+     },
+     {
+      "label": "ich gehe hin, um euch einen Ort zu bereiten",
+      "ref": "JHN.14.2-JHN.14.3",
+      "role": "hingehen"
+     },
+     {
+      "label": "ich komme wieder und werde euch zu mir nehmen, damit auch ihr dort seid, wo ich bin",
+      "ref": "JHN.14.3",
+      "role": "wiederkommen"
+     },
+     {
+      "label": "Und wohin ich gehe, dahin kennt ihr den Weg",
+      "ref": "JHN.14.4",
+      "role": "Weg"
+     }
+    ],
+    "features": {
+     "modality": [
+      {
+       "kind": "Zusage, Zukunft",
+       "ref": "JHN.14.3"
+      }
+     ]
+    },
+    "visual": "timeline",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "condition",
+    "subtype": "glauben → grössere Werke; im Namen bitten → ich werde es tun",
+    "range": "JHN.14.12-JHN.14.14",
+    "elements": [
+     {
+      "label": "Wer an mich glaubt, der wird die Werke, die ich tue, auch tun, und grössere als diese, weil ich zum Vater gehe",
+      "ref": "JHN.14.12",
+      "role": "Zusage 1"
+     },
+     {
+      "label": "Was immer ihr in meinem Namen erbittet, das werde ich tun, damit der Vater im Sohn verherrlicht wird",
+      "ref": "JHN.14.13-JHN.14.14",
+      "role": "Zusage 2"
+     }
+    ],
+    "visual": "arrows",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "JHN.14.1-JHN.14.4",
+   "text_de": "«Euer Herz sei nicht erschüttert …» – im Haus des Vaters viele Wohnungen; er geht hin, einen Ort zu bereiten, und kommt wieder, sie zu sich zu nehmen.",
+   "reason_de": "Trost und Verheissung (Kriterien 1 und 2).",
+   "recognition_de": "Haus des Vaters.",
+   "keywords": [
+    "Euer Herz sei nicht erschüttert",
+    "Im Haus meines Vaters gibt es viele Wohnungen",
+    "komme ich wieder und werde euch zu mir nehmen"
+   ]
+  },
+  {
+   "reference": "JHN.14.5-JHN.14.7",
+   "text_de": "Thomas: «Herr, wir wissen nicht, wohin du gehst …» – «Ich bin der Weg und die Wahrheit und das Leben. Niemand kommt zum Vater ausser durch mich.»",
+   "reason_de": "Ich-bin-Wort (Kriterien 1 und 2).",
+   "recognition_de": "Thomas fragt; der Weg.",
+   "keywords": [
+    "Herr, wir wissen nicht, wohin du gehst",
+    "Ich bin der Weg und die Wahrheit und das Leben",
+    "Niemand kommt zum Vater ausser durch mich"
+   ]
+  },
+  {
+   "reference": "JHN.14.8-JHN.14.14",
+   "text_de": "Philippus: «Herr, zeig uns den Vater» – «Wer mich gesehen hat, hat den Vater gesehen»; ich im Vater, der Vater in mir; grössere Werke; «was immer ihr in meinem Namen erbittet, das werde ich tun».",
+   "reason_de": "Zweite Frage und Zusagen (Kriterien 1 und 3).",
+   "recognition_de": "Philippus fragt.",
+   "keywords": [
+    "Herr, zeig uns den Vater",
+    "Wer mich gesehen hat, hat den Vater gesehen",
+    "was immer ihr in meinem Namen erbittet, das werde ich tun"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "«Glaubt um der Werke selbst willen» ([[JHN.14.11]]) – steht in der Struktur"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-THOMAS",
+  "FIG-PHILIPPUS",
+  "FIG-GOTT"
+ ],
+ "places": [
+  "FIG-ORT-HAUS"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "JHN.14.1-JHN.14.14",
+   "fingerprint": "fffa3463c4df08e8"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Joh 8–14 mit 7,53–8,11 nach Joh 1–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

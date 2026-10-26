@@ -1,0 +1,185 @@
+{
+ "id": "CORE-JHN-009",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "chapter",
+ "reference": "JHN.9.1-JHN.9.41",
+ "target": "SUM-CH-JHN-009",
+ "children": [
+  "CORE-JHN-009-001-012",
+  "CORE-JHN-009-013-023",
+  "CORE-JHN-009-024-034",
+  "CORE-JHN-009-035-041"
+ ],
+ "core_de": "Jesus öffnet einem von Geburt an Blinden die Augen; die Pharisäer verhören den Geheilten und seine Eltern, streiten, ob Jesus von Gott ist, und werfen den Mann hinaus; Jesus findet ihn, und er bekennt: «Ich glaube, Herr!» – so werden, wie Jesus sagt, die nicht Sehenden sehend und die Sehenden blind.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Heilung – erstes Verhör und Eltern – zweites Verhör und Hinauswurf – Bekenntnis",
+    "range": "JHN.9.1-JHN.9.41",
+    "elements": [
+     {
+      "label": "«Weder dieser hat gesündigt noch seine Eltern …»; Siloam – er kommt sehend zurück",
+      "ref": "JHN.9.1-JHN.9.12",
+      "role": "Heilung"
+     },
+     {
+      "label": "Pharisäer gespalten; «Er ist ein Prophet»; die Eltern: «Er ist alt genug, fragt ihn!»",
+      "ref": "JHN.9.13-JHN.9.23",
+      "role": "erstes Verhör"
+     },
+     {
+      "label": "«Eines weiss ich: dass ich blind war und jetzt sehe» – sie werfen ihn hinaus",
+      "ref": "JHN.9.24-JHN.9.34",
+      "role": "zweites Verhör"
+     },
+     {
+      "label": "«Ich glaube, Herr!»; «damit die nicht Sehenden sehen und die Sehenden blind werden»",
+      "ref": "JHN.9.35-JHN.9.41",
+      "role": "Bekenntnis"
+     },
+     {
+      "label": "Umkehrung",
+      "ref": "JHN.9.39",
+      "role": "Deutung",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-ROLLE-BLINDER"
+      },
+      {
+       "who": "FIG-GRUPPE-PHARISAEER",
+       "to": "FIG-ROLLE-BLINDER"
+      },
+      {
+       "who": "FIG-ROLLE-BLINDER",
+       "to": "FIG-GRUPPE-PHARISAEER"
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "«Die Juden» meint bei Johannes oft die führenden Kreise in Jerusalem; im Bild als neutrale Gruppe ohne Merkmale einer Volksgruppe."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "reversal",
+    "subtype": "gegenläufige Bewegung (nach [[JHN.9.39]])",
+    "range": "JHN.9.1-JHN.9.41",
+    "elements": [
+     {
+      "label": "Der Blinde: blind geboren → sehend → «Er ist ein Prophet» → «von Gott» → «Ich glaube, Herr!»",
+      "ref": "JHN.9.1-JHN.9.38",
+      "role": "aufwärts"
+     },
+     {
+      "label": "Die Pharisäer: «Wir wissen» → gespalten → werfen ihn hinaus → «Wir sehen» – «Eure Sünde bleibt»",
+      "ref": "JHN.9.16-JHN.9.41",
+      "role": "abwärts"
+     }
+    ],
+    "features": {
+     "interpretation": [
+      {
+       "note": "Die Umkehrung selbst sagt [[JHN.9.39]]; die Stufen der Bekenntnisse sind eine Lesart (Strukturkatalog: gegenläufige Treppe)."
+      }
+     ]
+    },
+    "visual": "stairs",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "JHN.9.6-JHN.9.7",
+   "text_de": "«Geh, wasch dich im Teich Siloam» – er kommt sehend zurück.",
+   "reason_de": "Heilung (Kriterium 4).",
+   "recognition_de": "Feld 1: am Teich Siloam.",
+   "keywords": [
+    "kam sehend zurück"
+   ]
+  },
+  {
+   "reference": "JHN.9.16-JHN.9.23",
+   "text_de": "Spaltung der Pharisäer; die Eltern fürchten den Ausschluss aus der Synagoge.",
+   "reason_de": "Verhör (Kriterium 2).",
+   "recognition_de": "Feld 2: Verhör.",
+   "keywords": [
+    "Er ist alt genug, fragt ihn!"
+   ]
+  },
+  {
+   "reference": "JHN.9.25-JHN.9.34",
+   "text_de": "«Eines weiss ich: dass ich blind war und jetzt sehe» – sie werfen ihn hinaus.",
+   "reason_de": "Zuspitzung (Kriterien 1 und 2).",
+   "recognition_de": "Feld 3: Hinauswurf.",
+   "keywords": [
+    "dass ich blind war und jetzt sehe"
+   ]
+  },
+  {
+   "reference": "JHN.9.38-JHN.9.41",
+   "text_de": "«Ich glaube, Herr!» – «Eure Sünde bleibt.»",
+   "reason_de": "Ausgang (Kriterien 1 und 3).",
+   "recognition_de": "Feld 4: Bekenntnis.",
+   "keywords": [
+    "Ich glaube, Herr!"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Einzelheiten der Verhöre – stehen in den Abschnitten"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-ROLLE-BLINDER",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-GRUPPE-PHARISAEER",
+  "FIG-ROLLE-MUTTER",
+  "FIG-ROLLE-VATER"
+ ],
+ "places": [
+  "FIG-ORT-SILOAM",
+  "FIG-ORT-SYNAGOGE"
+ ],
+ "basis": [
+  {
+   "record": "CORE-JHN-009-001-012",
+   "fingerprint": "bcedbf00211a32c8"
+  },
+  {
+   "record": "CORE-JHN-009-013-023",
+   "fingerprint": "b2b0d914fdd1fee7"
+  },
+  {
+   "record": "CORE-JHN-009-024-034",
+   "fingerprint": "3f0e3f4fb39dcb2b"
+  },
+  {
+   "record": "CORE-JHN-009-035-041",
+   "fingerprint": "1d019f0924cfac2e"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Joh 8–14 mit 7,53–8,11 nach Joh 1–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

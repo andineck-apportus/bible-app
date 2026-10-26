@@ -1,0 +1,162 @@
+{
+ "id": "CORE-JHN-011-017-027",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "JHN.11.17-JHN.11.27",
+ "target": "TU-JHN-011-017-027",
+ "core_de": "Als Jesus ankommt, liegt Lazarus schon vier Tage im Grab, und viele Juden sind gekommen, um die Schwestern zu trösten; Marta geht ihm entgegen: «Herr, wenn du hier gewesen wärst, wäre mein Bruder nicht gestorben», und auch jetzt werde Gott ihm geben, was er erbittet; Jesus sagt: «Dein Bruder wird auferstehen», und als sie an die Auferstehung am letzten Tag denkt: «Ich bin die Auferstehung und das Leben. Wer an mich glaubt, wird leben, auch wenn er stirbt … Glaubst du das?»; sie bekennt: «Ja, Herr, ich glaube, dass du der Christus bist, der Sohn Gottes, der in die Welt kommt.»",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "dialogue",
+    "subtype": "Lage – Klage – Zusage – Missverständnis – Ich-bin-Wort – Bekenntnis",
+    "range": "JHN.11.17-JHN.11.27",
+    "elements": [
+     {
+      "label": "Lazarus liegt schon vier Tage im Grab; viele Juden trösten Marta und Maria; Marta geht Jesus entgegen, Maria bleibt im Haus",
+      "ref": "JHN.11.17-JHN.11.20",
+      "role": "Lage"
+     },
+     {
+      "label": "«Herr, wenn du hier gewesen wärst, wäre mein Bruder nicht gestorben. Und auch jetzt weiss ich, dass Gott dir geben wird, was immer du von Gott erbittest.»",
+      "ref": "JHN.11.21-JHN.11.22",
+      "role": "Marta"
+     },
+     {
+      "label": "«Dein Bruder wird auferstehen.»",
+      "ref": "JHN.11.23",
+      "role": "Jesus"
+     },
+     {
+      "label": "«Ich weiss, dass er auferstehen wird bei der Auferstehung am letzten Tag.»",
+      "ref": "JHN.11.24",
+      "role": "Marta"
+     },
+     {
+      "label": "Ich-bin-Wort",
+      "ref": "JHN.11.25-JHN.11.26",
+      "role": "Jesus",
+      "child": "s2"
+     },
+     {
+      "label": "«Ja, Herr, ich glaube, dass du der Christus bist, der Sohn Gottes, der in die Welt kommt.»",
+      "ref": "JHN.11.27",
+      "role": "Marta"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-MARTA",
+       "to": "FIG-JESUS",
+       "ref": "JHN.11.21-JHN.11.27"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-MARTA",
+       "ref": "JHN.11.23-JHN.11.26"
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "Ich bin …",
+       "ref": "JHN.11.25",
+       "note": "Ich-bin-Wort; vgl. [[JHN.8.12]], [[JHN.10.11]], [[JHN.14.6]]"
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "condition",
+    "subtype": "Ich bin die Auferstehung und das Leben: zwei Zusagen",
+    "range": "JHN.11.25-JHN.11.26",
+    "elements": [
+     {
+      "label": "Wer an mich glaubt, wird leben, auch wenn er stirbt",
+      "ref": "JHN.11.25",
+      "role": "Zusage 1"
+     },
+     {
+      "label": "jeder, der lebt und an mich glaubt, wird in Ewigkeit gewiss nicht sterben",
+      "ref": "JHN.11.26",
+      "role": "Zusage 2"
+     },
+     {
+      "label": "«Glaubst du das?»",
+      "ref": "JHN.11.26",
+      "role": "Frage"
+     }
+    ],
+    "visual": "arrows",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "JHN.11.17-JHN.11.22",
+   "text_de": "Vier Tage im Grab; Marta: «Herr, wenn du hier gewesen wärst, wäre mein Bruder nicht gestorben. Und auch jetzt weiss ich …»",
+   "reason_de": "Klage und Vertrauen (Kriterium 2).",
+   "recognition_de": "Marta geht Jesus entgegen.",
+   "keywords": [
+    "dass er schon vier Tage im Grab lag",
+    "Herr, wenn du hier gewesen wärst, wäre mein Bruder nicht gestorben"
+   ]
+  },
+  {
+   "reference": "JHN.11.23-JHN.11.26",
+   "text_de": "«Dein Bruder wird auferstehen» – «… bei der Auferstehung am letzten Tag» – «Ich bin die Auferstehung und das Leben. Wer an mich glaubt, wird leben, auch wenn er stirbt … Glaubst du das?»",
+   "reason_de": "Ich-bin-Wort (Kriterium 1).",
+   "recognition_de": "Jesus und Marta.",
+   "keywords": [
+    "Ich bin die Auferstehung und das Leben",
+    "Wer an mich glaubt, wird leben, auch wenn er stirbt",
+    "Glaubst du das?"
+   ],
+   "mode": "speech"
+  },
+  {
+   "reference": "JHN.11.27",
+   "text_de": "«Ja, Herr, ich glaube, dass du der Christus bist, der Sohn Gottes, der in die Welt kommt.»",
+   "reason_de": "Bekenntnis (Kriterien 1 und 3).",
+   "recognition_de": "Marta bekennt.",
+   "keywords": [
+    "ich glaube, dass du der Christus bist, der Sohn Gottes"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Entfernung Betaniens von Jerusalem ([[JHN.11.18]]) – Detail"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-MARTA",
+  "FIG-GRUPPE-MENGE"
+ ],
+ "places": [
+  "FIG-ORT-GRAB-VERSCHLOSSEN"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "JHN.11.17-JHN.11.27",
+   "fingerprint": "2f9261bf9680c861"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Joh 8–14 mit 7,53–8,11 nach Joh 1–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}
