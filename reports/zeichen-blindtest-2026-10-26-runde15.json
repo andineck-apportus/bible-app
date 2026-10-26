@@ -1,0 +1,1711 @@
+{
+ "titel": "Runde 15: neue Figuren und Zeichen für Lukas 1–2 und 8 (2026-10-26)",
+ "methode_de": "Gegenstände: scripts/authoring/zeichen_test.py --entwuerfe … --verteilen --frage abbild --befragen 4 --bewerten (32 px, Pixeldichte 2; jede Instanz sieht ein Zeichen nur in einer Fassung; zuerst «Was ist abgebildet?», dann «Was könnte es bedeuten?»; eine weitere Instanz bewertet 0/1/2). Getrennte Instanzen über die Befehlszeile (claude -p, Modell claude-opus-5-5, nur Lesezugriff auf das Blatt), ohne Auftrag und ohne Namen. Personen und Gruppe wie Runde 14: je Porträt aus dem Bildlexikon (300 px, ohne Namen, je Figur ein eigener Ordner) drei getrennte Instanzen (claude -p, claude-opus-5-5, nur Read) mit der Frage {abbild, wer, merkmale, sicherheit}; eine weitere Instanz bewertet gegen Name, Identität, Merkmale und Verwechslungen des Lexikons (typ 0/1, merkmale 0–1, name 0/1/2, falsch). Zusätzlich alle elf Einträge in Einsatzgrösse 32 px (zeichen_test.py mit den Bibliothekszeichen, --frage abbild --befragen 4 --bewerten), die nachgebesserten Frauen nochmals auf Blättern zusammen mit bestehenden Frauenfiguren. Rauchtest: die neuen Figuren in vier Probefeldern gezeichnet (nicht gespeichert).",
+ "grenzen_de": "Beschreibungen einzelner KI-Instanzen; kein Test mit Menschen, keine fachliche Prüfung. KI-Testpersonen kennen die Bibel gut und schliessen aus wenigen Merkmalen; auf einem Blatt mit lauter Figuren aus Lukas 1–2 nennen sie Namen aus diesem Zusammenhang. Johanna, Susanna (und weitgehend Elisabet) sind bewusst ohne Erkennungszeichen; sie werden nur über den Namen (Namensschild im Bild) unterschieden. Noch kein Bildauftrag verwendet die neuen Einträge; der Test im Gesamtbild (SYMBOLPROZESS Schritt 8) folgt mit den Lukas-Bildern.",
+ "entwuerfe_gegenstaende": {
+  "FIG-OBJ-KRIPPE@1": {
+   "gezeichnet": "Holzkrippe mit gekreuzten Beinen, Stroh, gewickeltes Kind darin",
+   "bedeutung": "Futterkrippe mit Kind in Windeln (Lk 2,7.12)",
+   "antworten": [
+    {
+     "abbild": "Säugling in Futterkrippe",
+     "bedeutung": "Geburt Jesu"
+    },
+    {
+     "abbild": "Gewickeltes Kind in Krippe",
+     "bedeutung": "Geburt Jesu"
+    },
+    {
+     "abbild": "Gewickeltes Kind in Krippe",
+     "bedeutung": "Geburt Jesu"
+    },
+    {
+     "abbild": "Gewickeltes Kind in Krippe",
+     "bedeutung": "Geburt Jesu"
+    }
+   ],
+   "bewertung_bedeutung": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "keine Fehldeutung; alle Antworten nennen Geburt Jesu statt des Gegenstands selbst"
+  },
+  "FIG-OBJ-SCHREIBTAFEL@2": {
+   "gezeichnet": "zwei aufgeklappte Wachstafeln mit Schriftzeilen, Griffel",
+   "bedeutung": "Schreibtafel / Täfelchen zum Schreiben (Lk 1,63)",
+   "antworten": [
+    {
+     "abbild": "Schreibtafel mit Griffel",
+     "bedeutung": "Namensgebung Johannes"
+    },
+    {
+     "abbild": "Schreibtafel mit Griffel",
+     "bedeutung": "Name aufgeschrieben"
+    },
+    {
+     "abbild": "Zwei Tafeln mit Griffel",
+     "bedeutung": "Zacharias schreibt Namen"
+    },
+    {
+     "abbild": "Zwei Schreibtafeln, Griffel",
+     "bedeutung": "Zacharias schreibt"
+    }
+   ],
+   "bewertung_bedeutung": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "keine Fehldeutung; Szene Lk 1,63 sicher erkannt"
+  },
+  "FIG-OBJ-SCHREIBTAFEL@3": {
+   "gezeichnet": "Holzrahmen mit heller Wachsfläche und Schriftzeilen, Griffel",
+   "bedeutung": "Schreibtafel / Täfelchen zum Schreiben (Lk 1,63)",
+   "antworten": [
+    {
+     "abbild": "Beschriebene Tafel mit Griffel",
+     "bedeutung": "Schrift, Gesetz"
+    },
+    {
+     "abbild": "Schreibtafel mit Griffel",
+     "bedeutung": "Schrift, Gesetz"
+    },
+    {
+     "abbild": "Schreibtafel mit Griffel",
+     "bedeutung": "Schrift, Gottes Wort"
+    },
+    {
+     "abbild": "Schreibtafel mit Griffel",
+     "bedeutung": "Schrift, Gesetz"
+    }
+   ],
+   "bewertung_bedeutung": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "als Gesetz/Gottes Wort (Gesetzestafeln) gelesen statt als Schreibtäfelchen"
+  },
+  "FIG-OBJ-KRIPPE@2": {
+   "gezeichnet": "Kastenkrippe aus Brettern mit Stroh, gewickeltes Kind darin",
+   "bedeutung": "Futterkrippe mit Kind in Windeln (Lk 2,7.12)",
+   "antworten": [
+    {
+     "abbild": "Gewickeltes Kind in Krippe",
+     "bedeutung": "Geburt Jesu"
+    },
+    {
+     "abbild": "Gewickeltes Kind in Krippe",
+     "bedeutung": "Geburt Jesu"
+    },
+    {
+     "abbild": "Gewickeltes Kind in Krippe",
+     "bedeutung": "Geburt Jesu"
+    },
+    {
+     "abbild": "Gewickeltes Kind in Krippe",
+     "bedeutung": "Jesu Geburt"
+    }
+   ],
+   "bewertung_bedeutung": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "keine Fehldeutung"
+  },
+  "FIG-OBJ-KRIPPE@3": {
+   "gezeichnet": "flache Holzkrippe mit gekreuzten Beinen, grosses gewickeltes Kind darin",
+   "bedeutung": "Futterkrippe mit Kind in Windeln (Lk 2,7.12)",
+   "antworten": [
+    {
+     "abbild": "Gewickeltes Kind in Krippe",
+     "bedeutung": "Geburt Jesu"
+    },
+    {
+     "abbild": "Gewickeltes Baby in Krippe",
+     "bedeutung": "Geburt Jesu"
+    },
+    {
+     "abbild": "Gewickeltes Kind in Krippe",
+     "bedeutung": "Geburt Jesu"
+    },
+    {
+     "abbild": "Gewickeltes Kind in Krippe",
+     "bedeutung": "Geburt Jesu"
+    }
+   ],
+   "bewertung_bedeutung": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "keine Fehldeutung"
+  },
+  "FIG-OBJ-SCHREIBTAFEL@1": {
+   "gezeichnet": "Holzrahmen mit dunkler Wachsfläche und Schriftzeilen, Griffel",
+   "bedeutung": "Schreibtafel / Täfelchen zum Schreiben (Lk 1,63)",
+   "antworten": [
+    {
+     "abbild": "Schreibtafel mit Griffel",
+     "bedeutung": "Schreiben, Name Johannes"
+    },
+    {
+     "abbild": "Schreibtafel mit Griffel",
+     "bedeutung": "schreiben, Schrift"
+    },
+    {
+     "abbild": "Schreibtafel mit Griffel",
+     "bedeutung": "Schreiben, Name Johannes"
+    },
+    {
+     "abbild": "Schreibtafel mit Griffel",
+     "bedeutung": "Schreiben, Schrift"
+    }
+   ],
+   "bewertung_bedeutung": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "keine Fehldeutung; z. T. allgemein als «Schrift» gelesen"
+  }
+ },
+ "portraets": {
+  "FIG-ZACHARIAS": {
+   "beschreibungen": [
+    {
+     "abbild": "Älterer Mann mit Stirnfalten, Krähenfüßen und langem weißem Bart. Er trägt einen hellen, cremeweißen Kopfbund oder Turban, ein helles, langes Gewand und eine blaue Schärpe quer über der Brust. Vor ihm steht ein kleiner goldener Altar, aus dem grauer Rauch aufsteigt. Das ist wohl ein Räucheraltar.",
+     "wer": "Am ehesten Zacharias, der Priester und Vater Johannes des Täufers, beim Räucheropfer im Tempel (Lukas 1,8–11). Möglich wäre auch ein anderer Priester des Alten Testaments, etwa Aaron.",
+     "merkmale": "Der goldene Altar mit aufsteigendem Rauch steht für das Räucheropfer im Heiligtum. Weißes Gewand, Kopfbund und Schärpe passen zur Kleidung eines Priesters. Das hohe Alter mit weißem Bart passt zu Zacharias, den Lukas als alt beschreibt. Gegen Aaron spricht, dass das Brustschild mit den zwölf Steinen und die prächtige Kleidung des Hohepriesters fehlen.",
+     "sicherheit": "Mittel. Dass ein Priester beim Räucheropfer gemeint ist, ist ziemlich sicher. Zacharias ist die wahrscheinlichste Deutung, aber Aaron oder ein anderer Priester sind nicht ausgeschlossen."
+    },
+    {
+     "abbild": "Ein alter Mann mit weißem Bart und Falten auf Stirn und Wangen. Er trägt einen hellen, cremefarbenen Turban und ein ebenso helles Gewand mit einer blauen Schärpe quer über der Brust. Vor ihm steht ein goldener, kastenförmiger Altar, aus dem grauer Rauch aufsteigt.",
+     "wer": "Zacharias, der Priester und Vater von Johannes dem Täufer, beim Räucheropfer im Tempel (Lukas 1,8–11). Möglich wäre auch Aaron oder allgemein ein Priester im Tempel.",
+     "merkmale": "Der goldene Altar mit Rauch ist der Räucheraltar, also eine priesterliche Aufgabe. Turban, weißes Gewand und Schärpe sind typische Priesterkleidung. Dass er so deutlich alt dargestellt ist, passt zu Zacharias, der laut Lukas 1,7 und 1,18 schon hochbetagt war. Gegen Aaron spricht, dass das Brustschild mit den zwölf Edelsteinen fehlt, an dem man den Hohepriester meist erkennt.",
+     "sicherheit": "Mittel. Dass es ein Priester beim Räucheropfer ist, ist sehr sicher. Dass es gerade Zacharias ist, halte ich für wahrscheinlich (etwa 60–70 %), denn auch Aaron oder ein namenloser Priester kämen in Frage."
+    },
+    {
+     "abbild": "Älterer Mann mit Falten auf der Stirn und an den Augen, langem weißem Vollbart und hellem, wulstigem Turban. Er trägt ein helles, cremefarbenes Gewand mit einer blauen Schärpe quer über der Brust. Vor ihm steht ein kleiner goldener, kastenförmiger Altar mit Ecken wie Hörnern, aus dem grauer Rauch aufsteigt (Räucheraltar).",
+     "wer": "Zacharias, der Priester und Vater von Johannes dem Täufer, beim Räucheropfer im Tempel (Lukas 1,8–11). Möglich wäre auch Aaron oder allgemein ein israelitischer Priester beim Rauchopfer.",
+     "merkmale": "Der goldene Räucheraltar mit Rauch zeigt den Priesterdienst im Heiligtum. Turban, weißes Leinengewand und Gürtel bzw. Schärpe sind typische Priesterkleidung. Das hohe Alter (weißer Bart, Falten) passt zu Zacharias, der laut Lukas 1,7.18 schon alt war. Es fehlen die Zeichen des Hohenpriesters (Brustschild mit zwölf Steinen, goldenes Stirnblatt), und das spricht eher gegen Aaron.",
+     "sicherheit": "mittel. Dass er ein Priester beim Räucheropfer ist, ist sehr sicher. Dass es Zacharias ist, ist wahrscheinlich (etwa 60 %). Aaron oder ein namenloser Priester sind nicht ausgeschlossen."
+    }
+   ],
+   "bewertung": {
+    "typ": [
+     1,
+     1,
+     1
+    ],
+    "merkmale": [
+     1,
+     1,
+     1
+    ],
+    "name": [
+     2,
+     2,
+     2
+    ],
+    "falsch": [
+     "",
+     "",
+     ""
+    ],
+    "note": "Alle drei erkennen das Priestergewand, das hohe Alter und den Räucheraltar. Zacharias wird jeweils zuerst genannt, Aaron nur als Alternative."
+   }
+  },
+  "FIG-ELISABET (meergrün)": {
+   "beschreibungen": [
+    {
+     "abbild": "Ältere Frau (Stirnfalten, Falten an Augen und Mund) mit langem grünem Kopftuch oder Schleier, das bis über die Schultern fällt, darunter ein schlichtes beigefarbenes Gewand; freundliches Lächeln, mittelbraune Haut; keine Attribute wie Gegenstände, Krone oder Heiligenschein.",
+     "wer": "Eine alte Frau der Bibel, am ehesten Sara (Abrahams Frau, die im hohen Alter Isaak bekommt) oder Elisabeth (Mutter Johannes des Täufers); möglich sind auch Hanna (die Prophetin im Tempel, Lk 2) oder Noomi. Allgemein: eine Figur in der Rolle einer alten Frau oder Mutter.",
+     "merkmale": "Die deutlichen Altersfalten zeigen, dass es eine ältere Frau ist. Kopftuch und einfaches Gewand sind die übliche Kleidung biblischer Frauen in Bilderbibeln. Das Lächeln passt zu Sara, die lacht, oder zur freudigen Elisabeth. Es fehlt aber ein eindeutiges Zeichen (z. B. ein Kind, ein Tempel oder Ähren), das eine bestimmte Person festlegen würde.",
+     "sicherheit": "Niedrig für eine bestimmte Person (Sara etwa 30 %, Elisabeth etwa 25 %, andere zusammen etwa 45 %); hoch (über 90 %) dafür, dass es eine ältere Frau ist."
+    },
+    {
+     "abbild": "Ältere Frau (Stirnfalten, Lachfältchen an Augen und Mund), mit langem graugrünem Kopftuch/Schleier, das bis auf die Schultern fällt, und schlichtem beigem Gewand; lächelnd; keine Attribute oder Symbole zu sehen",
+     "wer": "Eine betagte Frau der Bibel, am ehesten Sara (Frau Abrahams, im hohen Alter Mutter Isaaks); alternativ Elisabeth (Mutter Johannes des Täufers) oder die Prophetin Hanna im Tempel; möglicherweise auch eine allgemeine Rolle (alte Frau/Witwe)",
+     "merkmale": "Durch die Falten deutlich als alte Frau gezeigt, Kopftuch und schlichte Kleidung entsprechen der üblichen Darstellung biblischer Frauen; das freundliche Lächeln könnte auf Saras Lachen (Gen 18; 21) oder auf die Freude Elisabeths anspielen; Kennzeichen wie Kind, Krone oder Krug fehlen",
+     "sicherheit": "gering – sicher ist nur: ältere Frau aus biblischer Zeit; bei der Zuordnung zu einer bestimmten Person wird geraten (Sara etwa 30 %, Elisabeth etwa 25 %, Hanna etwa 15 %)"
+    },
+    {
+     "abbild": "Ältere Frau (Stirnfalten, Krähenfüße, Falten an Wangen und Mund), mittelbraune Haut, Wimpern, freundliches Lächeln; graugrünes Kopftuch bzw. Schleier, der bis auf die Schultern fällt; schlichtes beigefarbenes Gewand ohne Schmuck. Es gibt keine Gegenstände oder Attribute und keinen Heiligenschein.",
+     "wer": "Eine betagte Frau der Bibel, am ehesten Sara (die alte Frau Abrahams, die über die Verheißung eines Sohnes lacht) oder Elisabeth (die alte Mutter von Johannes dem Täufer). Möglich sind auch Hanna, die Prophetin im Tempel (Lk 2), oder Naomi. Ebenso kann es eine allgemeine Rolle sein wie 'alte Frau' oder 'Witwe'.",
+     "merkmale": "Die vielen Falten zeigen hohes Alter, Schleier und schlichte Kleidung passen zu einer verheirateten Frau oder Witwe aus dem Alten Orient. Das Lächeln könnte auf Saras Lachen (Gen 18,12) oder die Freude über eine späte Schwangerschaft anspielen. Weil kein Nimbus und kein blauer Mantel zu sehen sind, ist Maria eher unwahrscheinlich. Ohne Kontext oder Attribut lässt sich die Figur aber nicht eindeutig zuordnen.",
+     "sicherheit": "Gering (etwa 25–35 %). 'Ältere biblische Frau' ist sicher, die genaue Person ist geraten. Sara und Elisabeth sind am wahrscheinlichsten."
+    }
+   ],
+   "bewertung": {
+    "typ": [
+     1,
+     1,
+     1
+    ],
+    "merkmale": [
+     1,
+     1,
+     1
+    ],
+    "name": [
+     1,
+     1,
+     1
+    ],
+    "falsch": [
+     "Sara",
+     "Sara",
+     "Sara"
+    ],
+    "note": "Ältere Frau und grünes Kopftuch über hellem Gewand werden erkannt (graues Haar nicht ausdrücklich). Jedes Mal steht Sara vor Elisabet. Hanna (Prophetin) wird als Nebenoption genannt."
+   }
+  },
+  "FIG-ENGEL-GABRIEL": {
+   "beschreibungen": [
+    {
+     "abbild": "Jugendlich bis jung-erwachsen wirkende Figur, Geschlecht nicht eindeutig (eher neutral, bartlos), kurzes goldblondes Haar, mittelbraune Haut, freundliches Lächeln; weißes Gewand mit goldenem V-Ausschnitt; hinter den Schultern zwei große, helle, gold umrandete Flügel",
+     "wer": "Ein Engel, wahrscheinlich der Erzengel Gabriel (Verkündigung an Maria bzw. an Zacharias) oder allgemein der Engel bei der Hirtenverkündigung oder am leeren Grab",
+     "merkmale": "Flügel, strahlend weißes Gewand mit Goldbesatz, goldenes (lichtartiges) Haar, jugendliches, geschlechtsneutrales Aussehen – alles typische Engel-Ikonografie; ohne Beizeichen wie Lilie, Schwert oder Schriftrolle ist keine bestimmte Person sicher festzulegen",
+     "sicherheit": "Engel: sehr sicher (ca. 95 %); dass es konkret Gabriel ist: eher unsicher (ca. 40 %)"
+    },
+    {
+     "abbild": "Jugendlich wirkende, eher androgyne Figur ohne Bart, mittelbraune Haut, kurzes goldblondes Haar, freundliches Lächeln; weißes Gewand mit goldenem V-Ausschnitt; hinter den Schultern zwei große helle Flügel mit goldenem Rand",
+     "wer": "Ein Engel, am ehesten der Erzengel Gabriel (Verkündigung an Maria, Ankündigung an Zacharias) oder allgemein ein Engel Gottes, z. B. der Verkündigungsengel bei den Hirten",
+     "merkmale": "Die Flügel sind das eindeutige Engelsmerkmal; weißes, leuchtendes Gewand mit Gold steht für himmlische Herkunft und Reinheit; das jugendliche, bartlose und geschlechtsneutrale Aussehen entspricht der üblichen Darstellung von Engeln; für einen bestimmten Engel fehlen eigene Zeichen (kein Schwert wie bei Michael, keine Lilie oder Schriftrolle wie bei Gabriel)",
+     "sicherheit": "Engel: sehr sicher (ca. 95 %); dass es konkret Gabriel ist: eher unsicher (ca. 40 %), weil eindeutige Zeichen fehlen und Gabriel in Kinderbibeln nur der häufigste namentlich genannte Engel ist"
+    },
+    {
+     "abbild": "Jugendlich-zeitlos wirkende Figur ohne Bart, Geschlecht nicht eindeutig (eher androgyn), mit kurzem goldblondem Haar, mittelbrauner Haut und freundlichem Lächeln. Sie trägt ein schlichtes weißes Gewand mit goldenem V-Ausschnitt. Hinter den Schultern sind zwei große, helle Flügel mit goldenem Rand zu sehen.",
+     "wer": "Ein Engel, am ehesten der Erzengel Gabriel (Verkündigung an Maria, an Zacharias und an die Hirten). Es kann aber auch ein allgemeiner Engel als Bote Gottes sein.",
+     "merkmale": "Die Flügel sind das eindeutige Zeichen für einen Engel. Dazu passen das weiße Gewand mit Goldbesatz (Reinheit, himmlischer Glanz) sowie das zeitlose, bartlose und androgyne Aussehen, wie es für Engel in Kinderbibeln typisch ist. Einen Hinweis auf einen bestimmten Engel (Lilie, Schwert, Waage) gibt es nicht. Gabriel ist nur deshalb am wahrscheinlichsten, weil er in Bilderbibeln am häufigsten vorkommt.",
+     "sicherheit": "Engel: sehr sicher (ca. 95 %). Bestimmter Engel wie Gabriel: unsicher (ca. 30–40 %), weil eigene Attribute fehlen."
+    }
+   ],
+   "bewertung": {
+    "typ": [
+     1,
+     1,
+     1
+    ],
+    "merkmale": [
+     1,
+     1,
+     1
+    ],
+    "name": [
+     2,
+     2,
+     2
+    ],
+    "falsch": [
+     "",
+     "",
+     ""
+    ],
+    "note": "Engel mit weissem Gewand, Flügeln und goldenem Halsausschnitt wird erkannt. Gabriel wird als wahrscheinlichste Deutung genannt, aber nur mit etwa 30–40 % Sicherheit."
+   }
+  },
+  "FIG-SIMEON (ohne Kind)": {
+   "beschreibungen": [
+    {
+     "abbild": "Älterer Mann mit Stirnfalten, weißem Haar und langem weißem Bart; er trägt ein graublaues Gewand und darüber einen hellen, cremefarbenen Überwurf, der schräg über die Schulter gelegt ist. Er steht in einem Rahmen aus Säulen mit Querbalken, der wie ein Tempel- oder Toreingang aussieht. Er hält keine Gegenstände in der Hand.",
+     "wer": "Am ehesten Simeon im Tempel (Lk 2,25–35); möglich sind auch Zacharias oder Eli, der Priester in Schilo, oder allgemein ein alter Prophet bzw. Ältester.",
+     "merkmale": "Das hohe Alter (weißer Bart, Falten) und die Säulenarchitektur, die auf den Tempel deutet, passen zu einem alten Frommen im Tempel. Es fehlen Priesterzeichen wie Turban, Brustschild oder Räuchergefäß, deshalb eher Simeon als ein amtierender Priester. Es gibt auch keine Gesetzestafeln, keinen Stab und kein Schiff, die etwa Mose, Abraham oder Noah kennzeichnen würden.",
+     "sicherheit": "Gering (etwa 30 %). Die Figur ist allgemein gehalten und hat keine eindeutigen Erkennungszeichen; nur der Tempelrahmen grenzt die Möglichkeiten etwas ein."
+    },
+    {
+     "abbild": "Älterer bis alter Mann mit Stirnfalten und Krähenfüßen, weißem Haar und langem weißem Vollbart, freundlich lächelnd. Er trägt ein blaugraues Untergewand und einen hellen, cremefarbenen Mantel schräg über der Schulter. Er steht in einem Türrahmen oder Portal aus Pfosten und Sturz, der an einen Tempel- oder Hauseingang erinnert. Weitere Zeichen wie Stab, Schriftrolle, Kopfbedeckung oder Kind fehlen.",
+     "wer": "Am ehesten der Priester Eli, der am Türpfosten des Heiligtums in Silo sitzt (1 Sam 1,9). Möglich sind auch der greise Simeon im Tempel (Lk 2,25–35) oder allgemein ein weiser Alter oder Prophet, etwa Abraham vor seinem Zelt oder Zacharias.",
+     "merkmale": "Das hohe Alter zeigen die Falten und der weiße Bart. Die schlichte, würdige Kleidung mit Mantel passt zu einem Priester oder Weisen. Der Türrahmen mit Sturz deutet auf einen Eingang oder ein Heiligtum hin, und genau dort wird Eli in der Bibel beschrieben. Es fehlen eindeutige Kennzeichen wie das Jesuskind (Simeon), ein Rauchopfer (Zacharias) oder Gesetzestafeln (Mose). Deshalb lässt sich die Figur nicht sicher zuordnen.",
+     "sicherheit": "gering bis mittel: dass es ein alter, weiser Mann ist, ist sicher. Bei der konkreten Person (Eli) bin ich mir nur zu etwa 30–40 % sicher."
+    },
+    {
+     "abbild": "Älterer Mann mit Falten auf Stirn und Wangen, langem grauweißem Vollbart und grauweißem Haar oder Kopftuch; trägt ein blaugraues Gewand und darüber einen hellen, cremefarbenen Überwurf, der schräg über die Schulter fällt. Er steht vor einem Tor oder Türrahmen mit Säulen. Sonst sind keine Gegenstände oder Zeichen zu sehen.",
+     "wer": "Ein Ältester, Priester oder Prophet des Alten Testaments. Denkbar sind Eli (der Priester am Heiligtum in Silo, der oft am Türpfosten sitzt), Simeon im Tempel (Lk 2) oder allgemein ein Torältester (Rut 4).",
+     "merkmale": "Hohes Alter (Falten, weißer Bart) und schlichte, würdige Kleidung mit Überwurf deuten auf einen ehrwürdigen Alten, Priester oder Weisen. Der Säulenrahmen kann für ein Stadttor oder den Eingang eines Heiligtums oder Tempels stehen, was auf Eli oder Simeon hinweisen würde. Typische Zeichen fehlen jedoch: kein Stab, keine Gesetzestafeln, kein Brustschild, keine Krone, kein Kind im Arm.",
+     "sicherheit": "Gering. Dass es ein alter, ehrwürdiger Mann ist, ist sicher. Welche Person genau gemeint ist, bleibt ohne Zeichen oder Zusammenhang offen. Eli oder Simeon sind wegen des Tor- oder Tempelrahmens am wahrscheinlichsten, aber nur vermutet."
+    }
+   ],
+   "bewertung": {
+    "typ": [
+     1,
+     1,
+     1
+    ],
+    "merkmale": [
+     1,
+     1,
+     0.67
+    ],
+    "name": [
+     2,
+     1,
+     1
+    ],
+    "falsch": [
+     "",
+     "Eli",
+     "Eli"
+    ],
+    "note": "Antwort 1 nennt Simeon zuerst. Antworten 2 und 3 nennen Eli zuerst, Simeon nur als Alternative. Die Farben von Gewand und Mantel sind vertauscht beschrieben. Antwort 3 ist unsicher, ob er etwas auf dem Kopf trägt."
+   }
+  },
+  "FIG-HANNA-PROPHETIN": {
+   "beschreibungen": [
+    {
+     "abbild": "Ältere Frau (Stirnfalten, Falten um Augen und Mund) mit langem braunem Kopftuch bzw. Schleier, der Kopf und Schultern bedeckt, und schlichtem beigem Gewand. Sie lächelt freundlich. Hinter ihr stehen Säulen mit Gebälk, also ein Tempel- oder Säulenhallen-Rahmen. Sonst trägt sie keine Gegenstände oder Zeichen.",
+     "wer": "Am wahrscheinlichsten die Prophetin Hanna (Lk 2,36–38), die alte Witwe, die ständig im Tempel war und das Jesuskind erkannte. Möglich wären auch Elisabeth (Mutter Johannes des Täufers), Hanna (Mutter Samuels, betete im Heiligtum von Schilo) oder allgemein eine fromme alte Frau bzw. Witwe.",
+     "merkmale": "Das hohe Alter (deutliche Falten) und die Säulenarchitektur deuten auf eine alte Frau im Tempel hin, und genau das beschreibt Hanna, die 'nicht vom Tempel wich'. Das schlichte Gewand und der Schleier passen zu einer frommen Witwe. Es fehlen eindeutige Attribute wie ein Kind, ein Krug oder eine Krone.",
+     "sicherheit": "Mittel bis gering, etwa 45 % für die Prophetin Hanna. Ohne eindeutige Attribute kommen auch Elisabeth oder Samuels Mutter Hanna in Frage."
+    },
+    {
+     "abbild": "Ältere Frau mit Stirnfalten und Fältchen um Augen und Mund, langes braunes Kopftuch bzw. Schleier, schlichtes beigefarbenes Gewand ohne Schmuck. Sie steht zwischen zwei Säulen unter einem Gebälk, also in einem Tempel- oder Palasteingang. Sie lächelt freundlich.",
+     "wer": "Am ehesten die Prophetin Hanna (Anna) im Tempel von Jerusalem (Lukas 2,36–38). Möglich wären auch Elisabeth, die Mutter Johannes des Täufers, oder allgemein eine fromme alte Frau aus Israel.",
+     "merkmale": "Das hohe Alter (Falten) passt zu Hanna, einer 84-jährigen Witwe. Die Säulenarchitektur spricht für den Tempel, den Hanna nie verließ. Schleier und schlichte Kleidung passen zu einer frommen Witwe. Das freundliche Lächeln fügt sich zu ihrer Freude beim Anblick des Jesuskindes. Es gibt aber kein eindeutiges Attribut wie einen Namen, ein Kind oder einen Gegenstand.",
+     "sicherheit": "mittel bis gering (etwa 45 %). Die Kombination aus alter Frau und Tempel weist auf Hanna, doch ohne eindeutiges Attribut sind auch Elisabeth oder eine andere ältere Frau denkbar."
+    },
+    {
+     "abbild": "Eine ältere Frau mit Falten auf der Stirn und um Augen und Mund. Sie trägt ein braunes Kopftuch, das bis auf die Schultern fällt, und ein schlichtes, beigefarbenes Gewand. Sie hat keine besonderen Zeichen oder Gegenstände bei sich. Sie steht vor einem hellen Säulenportal mit zwei Säulen und einem Querbalken, also einem Tempel oder großen Gebäude. Sie lächelt leicht.",
+     "wer": "Am ehesten die Prophetin Hanna, die alte Witwe im Tempel (Lukas 2,36–38). Möglich wären auch Elisabeth, die Mutter von Johannes dem Täufer, oder allgemein eine alte Frau oder Witwe, zum Beispiel die Witwe mit dem Scherflein im Tempel.",
+     "merkmale": "Die Falten zeigen ein hohes Alter. Das Kopftuch und das schlichte Gewand passen zu einer frommen Frau oder Witwe. Die Säulen im Hintergrund deuten auf den Tempel in Jerusalem hin, und Hanna wird ausdrücklich als hochbetagte Frau beschrieben, die den Tempel nie verließ. Ein Kind, ein Scherflein oder andere eindeutige Zeichen fehlen.",
+     "sicherheit": "Gering bis mittel (etwa 40 %). Das Alter und der Tempel sprechen für Hanna, aber ohne eindeutige Zeichen sind Elisabeth oder die arme Witwe genauso denkbar."
+    }
+   ],
+   "bewertung": {
+    "typ": [
+     1,
+     1,
+     1
+    ],
+    "merkmale": [
+     1,
+     1,
+     1
+    ],
+    "name": [
+     2,
+     2,
+     2
+    ],
+    "falsch": [
+     "",
+     "",
+     ""
+    ],
+    "note": "Alte Frau, braunes Kopftuch und Tempelsäulen werden erkannt. Hanna (Prophetin) wird jeweils zuerst genannt, Elisabet nur als Alternative."
+   }
+  },
+  "FIG-JESUS-JUNGE (A, langes Haar)": {
+   "beschreibungen": [
+    {
+     "abbild": "Junge erwachsene Figur ohne Bart, mit langen dunklen, schulterlangen Haaren und Mittelscheitel; um den Kopf ein goldener Heiligenschein mit eingezeichnetem Kreuz (Kreuznimbus); rotes Gewand mit cremeweißem Überwurf (Mantel/Tuch über einer Schulter)",
+     "wer": "Jesus Christus (eher als Kind oder Jugendlicher, z. B. der zwölfjährige Jesus im Tempel)",
+     "merkmale": "Der Kreuznimbus ist in der christlichen Ikonografie Christus vorbehalten. Auch die Farben Rot (Gewand) und Weiß/Hell (Mantel) und die langen Haare mit Mittelscheitel passen zur üblichen Darstellung von Jesus. Weil der Bart fehlt und das Gesicht kindlich ist, wirkt die Figur eher jung.",
+     "sicherheit": "hoch (ca. 90 %) für Jesus wegen des Kreuznimbus; mittel für die genaue Altersstufe, weil die Figur auch nur im kindlichen Comicstil als bartloser erwachsener Jesus gezeichnet sein könnte"
+    },
+    {
+     "abbild": "Jugendliche bis junge erwachsene Figur im Cartoonstil, eher männlich (kein Bart, glattes Gesicht), mit langem dunkelbraunem, schulterlangem Haar mit Mittelscheitel, brauner Haut und rosigen Wangen, freundlich lächelnd. Sie trägt ein rotes Gewand und darüber einen weißen bzw. cremefarbenen Überwurf, der über eine Schulter fällt. Hinter dem Kopf ist ein goldener Heiligenschein mit eingezeichnetem Kreuz (Kreuznimbus) zu sehen.",
+     "wer": "Jesus Christus, wahrscheinlich als junger Jesus (z. B. der zwölfjährige Jesus im Tempel oder Jesus vor seinem öffentlichen Wirken)",
+     "merkmale": "Der Kreuznimbus ist in der christlichen Ikonografie Christus vorbehalten. Dazu passen das klassische Farbschema Christi mit rotem Gewand und hellem Mantel (in Ikonen sonst Rot und Blau), das lange Haar mit Mittelscheitel und die schlichte antike Kleidung. Das bartlose, sehr junge Gesicht spricht für Jesus als Kind oder Jugendlichen statt als erwachsenen Lehrer.",
+     "sicherheit": "Hoch, etwa 90 %, dass es Jesus ist, wegen des Kreuznimbus. Mittel, etwa 60 %, dass gezielt der junge Jesus gemeint ist, weil der kindliche Zeichenstil auch einen erwachsenen Jesus ohne Bart darstellen könnte."
+    },
+    {
+     "abbild": "Jugendliche bis junge erwachsene Figur, wohl männlich, ohne Bart, mit schulterlangem dunkelbraunem Haar und Mittelscheitel, Hautton mittelbraun. Trägt ein rotes Untergewand und einen weißen/cremefarbenen Überwurf, der über eine Schulter gelegt ist. Hinter dem Kopf ist ein goldener Heiligenschein mit eingeschriebenem Kreuz (Kreuznimbus) zu sehen. Lächelnder, freundlicher Ausdruck, kindlicher Comic-Stil.",
+     "wer": "Jesus Christus, wegen des fehlenden Bartes und des jugendlichen Aussehens möglicherweise der junge Jesus (z. B. der Zwölfjährige im Tempel) oder Jesus allgemein in kindgerechter Darstellung.",
+     "merkmale": "Der Kreuznimbus ist in der christlichen Ikonografie Christus vorbehalten. Hinzu kommt die klassische Farbkombination aus rotem Gewand und weißem bzw. hellem Mantel, wie sie für Christusdarstellungen typisch ist, sowie das lange dunkle Haar mit Mittelscheitel. Dass der Bart fehlt, spricht eher für eine jugendliche Version oder für die Vereinfachung im Kinderbibel-Stil.",
+     "sicherheit": "Hoch, dass es Jesus ist (etwa 90 %, wegen des Kreuznimbus). Ob er als Jugendlicher oder als Erwachsener gemeint ist, ist unsicher (etwa 50 %)."
+    }
+   ],
+   "bewertung": {
+    "typ": [
+     1,
+     1,
+     1
+    ],
+    "merkmale": [
+     0.83,
+     0.83,
+     0.83
+    ],
+    "name": [
+     2,
+     2,
+     1
+    ],
+    "falsch": [
+     "",
+     "",
+     ""
+    ],
+    "note": "Kreuznimbus, Bartlosigkeit und langes dunkles Haar werden erkannt. Die Farben sind vertauscht beschrieben (rotes Gewand, weisser Mantel). Antwort 3 lässt offen, ob er jung oder erwachsen ist."
+   }
+  },
+  "FIG-JESUS-JUNGE (B, kurzes Haar, gewählt)": {
+   "beschreibungen": [
+    {
+     "abbild": "Junge Figur ohne Bart, mit kurzem dunklem Haar und freundlichem Gesicht, im Kinderbuch-Stil gezeichnet. Hinter dem Kopf ist ein goldener Heiligenschein mit Kreuz zu sehen. Die Figur trägt ein rotes Gewand und darüber einen weißen bzw. cremefarbenen Überwurf über einer Schulter. Ein Geschlecht ist nicht ausdrücklich gekennzeichnet, die Figur wirkt aber männlich.",
+     "wer": "Jesus Christus; wegen des fehlenden Barts wahrscheinlich als Kind oder Jugendlicher, etwa als Zwölfjähriger im Tempel",
+     "merkmale": "Der Kreuznimbus ist in der christlichen Bildsprache Christus vorbehalten. Auch die Farben Rot (Gewand) und Weiß (Überwurf) sind typisch für Jesus-Darstellungen. Das junge, bartlose Gesicht spricht für eine Darstellung von Jesus in jungen Jahren oder für eine kindgerecht vereinfachte Figur.",
+     "sicherheit": "hoch für Jesus (ca. 90 %), weil der Kreuznimbus eindeutig ist; mittel für die Altersstufe (Kind oder Jugendlicher)"
+    },
+    {
+     "abbild": "Junge, bartlose männliche Figur (Kind bis Jugendlicher) mit kurzem dunklem Haar und mittelbraunem Hautton. Sie trägt ein rotes Gewand und einen weißen Umhang, der schräg über eine Schulter fällt. Hinter dem Kopf ist ein goldener Heiligenschein mit eingeschriebenem Kreuz (Kreuznimbus) zu sehen.",
+     "wer": "Jesus Christus, wegen des fehlenden Bartes und des kindlichen Gesichts wahrscheinlich als Kind oder Jugendlicher dargestellt (z. B. der zwölfjährige Jesus im Tempel, Lk 2,41–52)",
+     "merkmale": "Der Kreuznimbus ist in der christlichen Ikonografie Christus vorbehalten. Auch die Farben passen zur Christus-Darstellung: Rot steht für Menschsein und Liebe, Weiß für Göttlichkeit und Reinheit. Das bartlose, kindliche Gesicht weist auf ein junges Alter hin, wobei der Stil insgesamt sehr kindlich gezeichnet ist.",
+     "sicherheit": "Hoch, dass es Jesus ist (Kreuznimbus). Mittel, dass gezielt der junge Jesus gemeint ist, weil der Zeichenstil womöglich alle Figuren jung wirken lässt."
+    },
+    {
+     "abbild": "Kindlich-junge, bartlose Figur mit kurzem dunklem Haar und mittelbraunem Hautton. Das Geschlecht ist nicht eindeutig, wirkt aber eher männlich. Sie trägt ein helles, weißes Obergewand und darüber einen roten Überwurf bzw. Mantel, der von der Schulter fällt. Hinter dem Kopf ist ein goldener Heiligenschein mit eingezeichnetem Kreuz (Kreuznimbus) zu sehen.",
+     "wer": "Jesus Christus, wegen des fehlenden Bartes vermutlich als Kind oder Jugendlicher dargestellt, etwa der zwölfjährige Jesus im Tempel. Es kann aber auch eine allgemeine, kindgerecht vereinfachte Jesus-Figur sein.",
+     "merkmale": "Der Kreuznimbus ist in der christlichen Ikonographie Christus vorbehalten. Weißes Untergewand und roter Mantel sind die klassischen Christusfarben. Dass die Figur bartlos und jugendlich ist, spricht für den jungen Jesus. Andere Zeichen wie Wundmale, Buch oder Lamm fehlen.",
+     "sicherheit": "Hoch, dass es sich um Jesus handelt (ca. 85–90 %), weil der Kreuznimbus ein sehr eindeutiges Zeichen ist. Mittel bis gering bei der genauen Lebensphase bzw. Szene (Kind, Jugendlicher oder einfach vereinfachter Zeichenstil)."
+    }
+   ],
+   "bewertung": {
+    "typ": [
+     1,
+     1,
+     1
+    ],
+    "merkmale": [
+     0.67,
+     0.67,
+     0.83
+    ],
+    "name": [
+     2,
+     2,
+     2
+    ],
+    "falsch": [
+     "",
+     "",
+     ""
+    ],
+    "note": "Kreuznimbus und junges Alter werden erkannt, der zwölfjährige Jesus wird jeweils genannt. Das Haar ist als kurz beschrieben. In den Antworten 1 und 2 sind die Farben vertauscht, nur Antwort 3 trifft weisses Gewand und roten Mantel."
+   }
+  },
+  "FIG-JOHANNA (sandgelb)": {
+   "beschreibungen": [
+    {
+     "abbild": "Junge Frau (etwa jugendlich bis junge Erwachsene) mit mittelbrauner Haut, großen Augen mit Wimpern und leichtem Lächeln; sie trägt ein ockergelbes, hell senffarbenes Kopftuch bzw. einen Schleier bis zu den Schultern und ein schlichtes graubraunes Gewand. Es gibt keine Krone, keine Gegenstände und keine besonderen Zeichen.",
+     "wer": "Eine junge Frau aus der Bibel ohne bestimmte Rolle. Vorstellbar sind Rut, Rebekka, Rahel oder Maria als junges Mädchen; ebenso gut kann es eine allgemeine Nebenfigur sein (Dienerin, Frau aus dem Volk).",
+     "merkmale": "Ein Schleier und ein einfaches Gewand stehen für eine Frau aus der biblischen Zeit, das jugendliche Gesicht für ein junges Alter. Es fehlen Attribute wie eine Krone (Ester, Königin), ein blauer Mantel oder ein Heiligenschein (Maria), ein Krug (Rebekka, Samariterin) oder Ähren (Rut). Die gedeckten Erdfarben deuten eher auf eine einfache Frau aus dem Volk als auf eine Adlige hin.",
+     "sicherheit": "Gering. Dass es eine junge Frau aus der Bibel ist, ist sehr sicher. Eine bestimmte Person lässt sich aber ohne typische Zeichen oder Zusammenhang nicht festlegen."
+    },
+    {
+     "abbild": "Junge Frau (jugendlich bis junge Erwachsene) mit mittelbrauner Haut, langen Wimpern und freundlichem Lächeln; sie trägt ein senfgelbes/ockerfarbenes Kopftuch, das Haare und Ohren rahmt und bis über die Schultern fällt, dazu ein schlichtes graubraunes Gewand. Es gibt keine Attribute wie Krone, Krug, Kind, Heiligenschein oder Schmuck.",
+     "wer": "Eine junge Frau aus der Bibel, ohne eindeutige Zuordnung. Möglich sind Rut, Rebekka, Rahel, Mirjam, Maria Magdalena oder Maria, die Schwester Martas. Maria, die Mutter Jesu, ist weniger wahrscheinlich, weil sie meist mit blauem Schleier dargestellt wird. Ebenso möglich ist eine allgemeine Rollenfigur wie 'Frau aus dem Volk' oder 'junge Israelitin'.",
+     "merkmale": "Kopftuch und einfaches Gewand stehen für eine Frau aus biblischer Zeit. Das jugendliche Gesicht deutet auf eine junge Frau hin. Weil königliche oder sakrale Zeichen fehlen, ist sie eher keine Königin (Ester) und eher nicht Maria, die Mutter Jesu. Die warmen Erdtöne (Ocker, Graubraun) passen zum ländlichen Alltag, etwa zu Rut als Ährenleserin oder zu Rebekka/Rahel als Hirtinnen am Brunnen. Ein Attribut, das sie eindeutig kennzeichnet, gibt es nicht.",
+     "sicherheit": "Niedrig. Sicher ist nur, dass es eine junge Frau aus biblischer Zeit ist. Eine bestimmte Person lässt sich ohne Kontext (Szene, Beischrift, Attribut) nicht festlegen. Am ehesten passen Rut oder Rebekka/Rahel, mit etwa 15–25 % Wahrscheinlichkeit für jede einzelne Nennung."
+    },
+    {
+     "abbild": "Junge Frau (etwa jugendlich bis junge Erwachsene) mit langen Wimpern, mittelbrauner Haut und freundlichem Lächeln. Sie trägt ein ockergelbes bzw. sandfarbenes Kopftuch oder einen Schleier, der bis über die Schultern fällt, und ein schlichtes graubraunes Gewand. Es gibt keine Attribute wie Krone, Heiligenschein, Gefäß oder Kind auf dem Arm.",
+     "wer": "Eine generische junge Frau aus biblischer Zeit, zum Beispiel Rut, Rebekka, Rahel, Esther vor ihrer Krönung, Maria (Mutter Jesu, jung) oder Maria/Marta von Betanien. Sie könnte auch eine Nebenfigur wie eine Magd oder eine Frau aus dem Volk sein.",
+     "merkmale": "Die langen Wimpern und die weichen Gesichtszüge zeigen eine weibliche Figur, die fehlenden Falten eine junge. Das Kopftuch und das schlichte Gewand entsprechen der typischen Darstellung israelitischer Frauen in Kinderbibeln. Weil weder eine Krone noch Schmuck zu sehen ist, ist sie wohl keine Königin. Ohne blauen Mantel und Heiligenschein spricht wenig für eine klassische Mariendarstellung. Die warme, sandige Farbe könnte auf Feldarbeit oder ein ländliches Leben hindeuten, was zu Rut passen würde, aber das ist unsicher.",
+     "sicherheit": "Gering. Geschlecht und ungefähres Alter sind ziemlich sicher. Eine bestimmte Person lässt sich ohne Attribute oder Szenenkontext nicht festlegen. Rut oder eine junge Maria wären am ehesten denkbar."
+    }
+   ],
+   "bewertung": {
+    "typ": [
+     1,
+     1,
+     1
+    ],
+    "merkmale": [
+     1,
+     1,
+     1
+    ],
+    "name": [
+     0,
+     0,
+     0
+    ],
+    "falsch": [
+     "",
+     "",
+     ""
+    ],
+    "note": "Schlichte Frau ohne Zeichen wird richtig beschrieben, «Frau aus dem Volk» erkannt. Johanna wird nie genannt. Vermutet werden nur Rut, Rebekka oder Maria, ausdrücklich ohne feste Festlegung."
+   }
+  },
+  "FIG-SUSANNA (cremefarben)": {
+   "beschreibungen": [
+    {
+     "abbild": "Junge bis erwachsene Frau mit mittelbrauner Haut, langen Wimpern und leichtem Lächeln; sie trägt einen hellbeigen bzw. cremefarbenen Schleier, der Kopf und Schultern bis zum Oberkörper bedeckt, dazu ein schlichtes salbeigrünes Gewand. Keine weiteren Zeichen wie Heiligenschein, Krone, Krug oder Kind.",
+     "wer": "Allgemeine Figur einer biblischen Frau; denkbar sind z. B. Rut, Rebekka, Rahel, Maria von Betanien, Marta oder eine Frau aus dem Volk. Wegen des hellen, nicht blauen Schleiers ist es eher nicht Maria, die Mutter Jesu.",
+     "merkmale": "Schleier und schlichtes Gewand passen zu einer Frau im Alten Orient. Das Gesicht wirkt jung, ohne Falten. Es fehlen Kennzeichen wie Heiligenschein, Krone (Ester), Wasserkrug (Rebekka, Samariterin), Ähren (Rut), Salbgefäß (Maria Magdalena) oder Kind (Maria, Hanna). Die gedeckten Erdfarben deuten auf eine einfache, nicht königliche Person.",
+     "sicherheit": "Gering: Dass es eine biblische Frau ist, ist sehr sicher. Eine bestimmte Person lässt sich ohne Zeichen oder Zusammenhang nicht festlegen."
+    },
+    {
+     "abbild": "Junge bis mittelalte Frau mit mittelbrauner Haut, langen Wimpern und einem leichten Lächeln. Sie trägt ein helles, beiges bzw. cremefarbenes Kopftuch, das Haare und Schultern bedeckt, und ein schlichtes salbeigrünes Gewand. Es gibt keine besonderen Zeichen oder Gegenstände wie Krone, Krug, Kind oder Heiligenschein.",
+     "wer": "Eine allgemeine biblische Frauenfigur. In Frage kommen zum Beispiel Rut, Rebekka, Rahel, Hanna, Marta oder Maria von Betanien, eine Jüngerin oder einfach eine Frau aus dem Volk. Weniger wahrscheinlich ist Maria, die Mutter Jesu, die meist in Blau dargestellt wird.",
+     "merkmale": "Das Kopftuch und das einfache Gewand im Stil des Alten Orients zeigen eine Frau aus biblischer Zeit. Die Erdfarben Beige und Grün und das Fehlen von Schmuck oder Krone sprechen gegen eine Königin wie Ester und für eine einfache Frau. Das Blau, das man oft bei Maria sieht, fehlt. Weil es keine Attribute gibt, lässt sich die Figur keiner bestimmten Person zuordnen.",
+     "sicherheit": "Für 'biblische Frau, einfache Herkunft' hoch (ca. 85 %). Für eine bestimmte Person sehr gering (unter 20 %), weil es keine eindeutigen Attribute gibt. Die Zuordnung hängt vom Zusammenhang in der Geschichte ab."
+    },
+    {
+     "abbild": "Junge bis mittelalte Frau mit brauner Hautfarbe und langen Wimpern, freundlichem Lächeln. Sie trägt ein helles, beiges oder cremefarbenes Kopftuch, das bis zu den Schultern fällt, und ein schlichtes salbeigrünes Gewand. Weitere Zeichen wie Krone, Krug, Kind oder Heiligenschein fehlen.",
+     "wer": "Eine allgemeine Frau aus biblischer Zeit, etwa als Nebenfigur oder Frau aus dem Volk. Mögliche Personen sind Rut, Martha, Maria von Bethanien oder eine Jüngerin Jesu. Maria, die Mutter Jesu, ist weniger wahrscheinlich, weil das typische blaue Gewand fehlt.",
+     "merkmale": "Das Kopftuch und das einfache Gewand passen zur typischen Darstellung von Frauen in biblischer Zeit. Es gibt kein Zeichen von Würde wie Krone oder Schmuck, also eher keine Königin wie Ester. Die gedeckten Erdtöne zeigen eine einfache Frau aus dem Volk. Weil eindeutige Zeichen fehlen, lässt sich keine bestimmte Person festlegen.",
+     "sicherheit": "Gering. Dass es eine Frau aus biblischer Zeit ist, ist sehr sicher. Die genaue Person lässt sich ohne Zusammenhang oder Zeichen nicht bestimmen."
+    }
+   ],
+   "bewertung": {
+    "typ": [
+     1,
+     1,
+     1
+    ],
+    "merkmale": [
+     1,
+     1,
+     1
+    ],
+    "name": [
+     0,
+     0,
+     0
+    ],
+    "falsch": [
+     "",
+     "",
+     ""
+    ],
+    "note": "Salbeigrünes Gewand und cremefarbenes Kopftuch werden erkannt. Susanna wird nicht genannt. Antworten 2 und 3 vermuten allgemein «eine Jüngerin Jesu», was die Richtung trifft."
+   }
+  },
+  "FIG-GRUPPE-HIRTEN": {
+   "beschreibungen": [
+    {
+     "abbild": "Eine Gruppe aus drei Männern: links ein Mann mittleren Alters mit dunklem Vollbart, in der Mitte ein jüngerer Mann mit kurzem dunklem Bart, rechts ein alter Mann mit grauem Haar, langem grauem Bart und Falten. Alle tragen einfache Gewänder in Olivgrün und Beige. Zwei von ihnen haben einen Hirtenstab. Der mittlere Mann trägt ein Schaf bzw. hat eines vor sich.",
+     "wer": "Die Hirten auf dem Feld bei Bethlehem, denen die Engel die Geburt Jesu verkünden und die dann zur Krippe gehen (Lukas 2,8–20)",
+     "merkmale": "Das Schaf und die Hirtenstäbe zeigen, dass es Hirten sind. Die schlichte Kleidung passt dazu. Dass es eine Gruppe aus drei Männern unterschiedlichen Alters ist (jung, mittel, alt), entspricht der üblichen Darstellung der Hirten in Weihnachtsszenen. Kronen oder Geschenke, die auf die Weisen hindeuten würden, fehlen.",
+     "sicherheit": "Ziemlich sicher bei den Hirten von Bethlehem (etwa 80 %). Möglich, aber weniger wahrscheinlich ist eine allgemeine Hirtengruppe, etwa Jakobs Söhne als Hirten oder die Hirten im Gleichnis vom verlorenen Schaf."
+    },
+    {
+     "abbild": "Drei Männer in einfacher olivgrüner und cremefarbener Kleidung: links ein Mann mittleren Alters mit dunklem Bart, in der Mitte ein jüngerer Mann mit kurzem Bart, der ein Schaf im Arm hält, rechts ein alter Mann mit grauem Haar, grauem Bart und Falten. Zwei von ihnen tragen einen Hirtenstab.",
+     "wer": "Die Hirten auf dem Feld bei Bethlehem aus der Weihnachtsgeschichte (Lukas 2,8–20)",
+     "merkmale": "Es ist eine Gruppe von drei Männern unterschiedlichen Alters, wie man sie aus Krippendarstellungen kennt. Dazu kommen die Hirtenstäbe, das Schaf und die schlichte Kleidung. Könige, Weise oder Propheten wären mit Kronen, Geschenken oder prächtigen Gewändern gezeigt.",
+     "sicherheit": "hoch (ca. 85–90 %). Möglich, aber weniger wahrscheinlich, sind andere Hirtengruppen, zum Beispiel die Brüder Josefs als Hirten (Genesis 37)."
+    },
+    {
+     "abbild": "Drei Männer in einfacher Kleidung: hinten links ein Mann mittleren Alters mit dunklem Vollbart, vorne in der Mitte ein jüngerer Mann mit kurzem dunklem Bart und hinten rechts ein alter Mann mit grauem Haar, grauem Bart und Falten. Alle tragen schlichte Gewänder in Olivgrün und Beige. Die beiden hinteren Männer halten Hirtenstäbe, der vordere hält ein Schaf vor der Brust.",
+     "wer": "Die Hirten auf dem Feld bei Bethlehem, die von der Geburt Jesu erfahren (Lukas 2,8–20)",
+     "merkmale": "Man sieht eine Gruppe aus mehreren Männern verschiedenen Alters mit Hirtenstäben, einem Schaf und einfacher Arbeitskleidung. Auf Abbildungen zur Weihnachtsgeschichte werden die Hirten typischerweise so dargestellt, oft mit einem Schaf als Geschenk. Kronen, Geschenke oder ein Stern fehlen, deshalb sind es nicht die Weisen aus dem Morgenland. Weil es mehrere Männer und kein einzelner Hirte sind, passt das Bild eher zu den Hirten von Bethlehem als zu David oder Abel.",
+     "sicherheit": "Hoch, dass es Hirten sind (etwa 95 %). Recht hoch, dass die Hirten der Weihnachtsgeschichte gemeint sind (etwa 80 %). Möglich wären auch allgemein Hirten im Alten Testament, etwa die Söhne Jakobs als Hirten."
+    }
+   ],
+   "bewertung": {
+    "typ": [
+     1,
+     1,
+     1
+    ],
+    "merkmale": [
+     1,
+     1,
+     1
+    ],
+    "name": [
+     2,
+     2,
+     2
+    ],
+    "falsch": [
+     "",
+     "",
+     ""
+    ],
+    "note": "Gruppe mit Hirtenstäben, Schaf und olivgrünen Gewändern wird erkannt, die Hirten von Betlehem werden sicher benannt."
+   }
+  }
+ },
+ "portraets_nachbesserung": {
+  "FIG-SIMEON mit Kind (attr jesuskind)": {
+   "beschreibungen": [
+    {
+     "abbild": "Ein sehr alter Mann mit weißem Haar, langem weißem Bart und Falten auf der Stirn. Er trägt ein helles, cremefarbenes Gewand und darüber einen blaugrauen Umhang. Er lächelt und hält ein gewickeltes Neugeborenes im Arm, hinter dessen Kopf ein goldener Heiligenschein mit Kreuz zu sehen ist. Im Hintergrund stehen Säulen mit einem Gebälk, wie bei einem Tempel.",
+     "wer": "Simeon im Tempel von Jerusalem, der das Jesuskind in den Armen hält (Lukas 2,25–35, Darstellung des Herrn)",
+     "merkmale": "Der Heiligenschein mit Kreuz zeigt, dass das Baby Jesus ist. Ein sehr alter Mann hält das Kind im Arm, und die Säulen deuten auf den Tempel hin. Das passt genau zu Simeon, der laut Lukas nicht sterben sollte, bevor er den Messias gesehen hat. Josef kommt weniger in Frage, weil er meist jünger und ohne Tempel dargestellt wird.",
+     "sicherheit": "hoch (ca. 85 %)"
+    },
+    {
+     "abbild": "Sehr alter Mann mit langem weißem Haar und Vollbart und stark gefurchter Stirn. Er trägt ein helles Gewand mit blauem Überwurf und steht vor einem Säulenportal, wohl einem Tempel. Im Arm hält er ein gewickeltes Säugling mit goldenem Heiligenschein.",
+     "wer": "Simeon im Tempel, der das Jesuskind empfängt (Lukas 2,25–35)",
+     "merkmale": "Ein hochbetagter Mann trägt im Tempel ein Neugeborenes mit Heiligenschein auf dem Arm. Das passt zur Darstellung Jesu im Tempel, bei der der greise Simeon das Kind in die Arme nimmt (Nunc dimittis). Der Nimbus kennzeichnet das Kind als Jesus. Die Säulen deuten den Tempel an.",
+     "sicherheit": "hoch (ca. 80 %); weniger wahrscheinliche Alternativen: Josef mit dem Jesuskind oder ein Priester im Tempel"
+    },
+    {
+     "abbild": "Sehr alter Mann mit langem weißem Haar und Bart und faltigem Gesicht. Er trägt ein helles Gewand mit blauem Überwurf und steht zwischen Säulen unter einem Gebälk, also in einem Tempel. Im Arm hält er ein gewickeltes Säugling mit goldenem Heiligenschein.",
+     "wer": "Simeon im Tempel von Jerusalem mit dem Jesuskind (Darstellung des Herrn, Lukas 2,25–35). Möglich wäre auch der Prophet Hanna als Gegenstück, aber Hanna ist eine Frau, deshalb passt nur Simeon.",
+     "merkmale": "Das hohe Alter passt zu Simeon, dem verheißen war, dass er den Messias noch vor seinem Tod sieht. Das Kind ist in Windeln gewickelt und hat einen Heiligenschein, ist also das Jesuskind. Säulen und Gebälk stehen für den Tempel. Ein alter Mann, der das Jesuskind im Tempel auf dem Arm hält, ist die typische Darstellung Simeons.",
+     "sicherheit": "hoch (ca. 85 %); denkbar wäre allenfalls Josef, aber der wird meist jünger und ohne Tempel gezeigt"
+    }
+   ],
+   "bewertung": {
+    "typ": [
+     1,
+     1,
+     1
+    ],
+    "merkmale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "name": [
+     2,
+     2,
+     2
+    ],
+    "falsch": [
+     "",
+     "",
+     ""
+    ],
+    "note": "Alle drei sehen einen sehr alten Mann mit weissem Haar und Bart, hellem Gewand, blaugrauem Überwurf und Säulen des Tempels. Alle nennen Simeon klar und mit hoher Sicherheit. Josef und ein Priester werden nur als unwahrscheinliche Alternativen genannt, eine Verwechslung ist das nicht."
+   }
+  },
+  "FIG-ELISABET (olivgrün)": {
+   "beschreibungen": [
+    {
+     "abbild": "Ältere Frau mit Falten auf Stirn, um die Augen und um den Mund, graue Augenbrauen, lange Wimpern, freundliches leichtes Lächeln; olivgrünes Kopftuch bzw. Schleier, der bis über die Schultern fällt, darunter ein schlichtes, helles beigefarbenes Gewand; keine Attribute oder besonderen Zeichen",
+     "wer": "Eine betagte Frau der Bibel, am ehesten Sara (Frau Abrahams, die im hohen Alter Isaak bekommt), Elisabeth (Mutter Johannes des Täufers) oder die Prophetin Hanna im Tempel; denkbar auch Noomi (Schwiegermutter Ruts) oder ganz allgemein eine Witwe/alte Frau als Nebenfigur",
+     "merkmale": "Deutliche Altersfalten und graue Augenbrauen zeigen eine alte Frau; Schleier und schlichtes Gewand sind die übliche Darstellung frommer Frauen in Bilderbibeln; das freundliche Lächeln passt zu Erzählungen über späte Freude (Sara lacht, Elisabeth wird spät Mutter). Es fehlen jedoch eindeutige Attribute wie ein Kind, ein Tempel oder ein Ährenbündel",
+     "sicherheit": "Gering: Dass es eine ältere Frau ist, ist sicher. Welche Person genau gemeint ist, lässt sich ohne Attribute oder Zusammenhang nicht festlegen. Sara oder Elisabeth halte ich für am wahrscheinlichsten (je etwa 25–30 %)"
+    },
+    {
+     "abbild": "Ältere Frau mit Stirn- und Wangenfalten, grauen Augenbrauen und langen Wimpern; sie trägt ein olivgrünes Kopftuch, das bis über die Schultern fällt, und ein schlichtes cremefarbenes Gewand. Sie lächelt freundlich. Attribute wie ein Kind, ein Krug oder eine Krone fehlen.",
+     "wer": "Eine betagte Frau der Bibel, am ehesten Sara (Abrahams Frau, im hohen Alter Mutter Isaaks) oder Elisabeth (Mutter Johannes des Täufers). Möglich sind auch Hanna (die Prophetin im Tempel), Noomi oder allgemein eine alte Frau bzw. Großmutter.",
+     "merkmale": "Die Altersfalten und grauen Brauen zeigen eine alte Frau. Kopftuch und einfaches Gewand sind die übliche Darstellung biblischer Frauen. Das Lächeln passt zu Sara (deren Lachen in Gen 18 erzählt wird) oder zu Elisabeths Freude über die späte Schwangerschaft. Ein eindeutiges Attribut fehlt.",
+     "sicherheit": "Gering: Sicher ist nur, dass es eine ältere biblische Frau ist. Die Zuordnung zu Sara oder Elisabeth ist eine Vermutung, ohne Kontext etwa 30 %."
+    },
+    {
+     "abbild": "Ältere Frau mit Stirnfalten, Krähenfüßen und Falten um den Mund, grauen Augenbrauen und langen Wimpern; sie trägt ein olivgrünes Kopftuch, das bis über die Schultern fällt, und ein schlichtes beiges Gewand. Sie lächelt freundlich. Attribute oder Gegenstände sind nicht zu sehen.",
+     "wer": "Eine alte Frau der Bibel, am ehesten Sara (Frau Abrahams), die im hohen Alter Isaak bekommt. Möglich wären auch Elisabeth (Mutter von Johannes dem Täufer), die Prophetin Hanna im Tempel, Naomi oder Anna, die Mutter Marias (letztere nicht biblisch, sondern aus der Tradition).",
+     "merkmale": "Die deutlich gezeichneten Altersfalten zusammen mit den Wimpern zeigen eine alte Frau. Kopftuch und schlichtes Gewand sind übliche biblische Frauenkleidung. Das freundliche Lächeln passt zu Sara, die lacht, als ihr ein Sohn verheißen wird, oder zu Elisabeths Freude über ihr spätes Kind. Es gibt aber kein eindeutiges Attribut wie ein Kind, einen Krug oder ein Zelt.",
+     "sicherheit": "Gering. Dass es eine alte Frau ist, ist sehr sicher. Welche Person gemeint ist, bleibt offen, weil eindeutige Attribute fehlen. Sara und Elisabeth sind die wahrscheinlichsten Kandidatinnen, beide etwa gleich wahrscheinlich."
+    }
+   ],
+   "bewertung": {
+    "typ": [
+     1,
+     1,
+     1
+    ],
+    "merkmale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "name": [
+     1,
+     1,
+     1
+    ],
+    "falsch": [
+     "",
+     "",
+     ""
+    ],
+    "note": "Alle drei sehen eine alte Frau mit olivgrünem Kopftuch, hellem Gewand und ohne Attribute; das graue Haar wird über die grauen Brauen erfasst. Elisabet wird jedes Mal genannt, aber gleichauf mit Sara, die nicht in der Verwechslungsliste steht. Hanna erscheint nur als weitere Möglichkeit, deshalb keine Verwechslung."
+   }
+  },
+  "FIG-JOHANNA (lavendel)": {
+   "beschreibungen": [
+    {
+     "abbild": "Junge Frau (jugendlich bis junge Erwachsene) mit mittelbrauner Haut, großen dunklen Augen mit langen Wimpern und einem leichten Lächeln. Sie trägt ein langes violett-lila Kopftuch, das Haare und Schultern bedeckt und bis zum Oberkörper reicht, darunter ein schlichtes graubraunes Gewand. Es gibt keine Attribute wie Krone, Krug, Kind, Heiligenschein oder Schmuck.",
+     "wer": "Eine junge biblische Frau ohne bestimmte Zuordnung, am ehesten eine allgemeine Frauenfigur, z. B. Maria (Mutter Jesu) als junge Frau, Rut, Rebekka, Rahel, Maria aus Betanien oder eine namenlose Frau aus dem Volk",
+     "merkmale": "Der Schleier ist typisch für Frauen in biblischen Darstellungen. Das junge Gesicht spricht gegen ältere Figuren wie Sara oder Elisabet. Die schlichte, nicht königliche Kleidung spricht gegen Ester oder die Königin von Saba. Das Violett könnte auf Maria hindeuten, sie wird aber meist in Blau dargestellt. Weil Attribute wie ein Jesuskind, ein Wasserkrug oder Ähren fehlen, lässt sich die Figur keiner bestimmten Person zuordnen.",
+     "sicherheit": "Niedrig: Junge Frau aus biblischer Zeit ist sicher (ca. 90 %). Eine bestimmte Person lässt sich nicht festlegen; Maria ist die wahrscheinlichste Einzelperson, aber nur mit ca. 20–25 %."
+    },
+    {
+     "abbild": "Junge Frau (etwa 20–30 Jahre) mit mittelbrauner Haut, großen dunklen Augen mit langen Wimpern und leichtem Lächeln; sie trägt ein langes violettes/lila Kopftuch, das bis über die Schultern fällt, und ein schlichtes graubraunes Gewand. Ein Attribut oder Zeichen (Krone, Krug, Kind, Heiligenschein o. ä.) ist nicht zu sehen.",
+     "wer": "Eine allgemeine biblische Frauenfigur, z. B. Maria (Mutter Jesu), Rut, Rahel, Rebekka, Maria von Magdala oder Marta/Maria von Betanien; möglicherweise auch eine generische Frau aus dem Volk.",
+     "merkmale": "Das Kopftuch und das einfache Gewand entsprechen der typischen Darstellung von Frauen in Bilderbibeln. Die jugendlichen Züge sprechen für eine junge Frau. Es gibt keinen Heiligenschein, kein Blau als typische Marienfarbe und keine königlichen Zeichen (also eher nicht Ester). Das Lila könnte auf Lydia, die Purpurhändlerin, hinweisen, ist aber wahrscheinlich nur eine Gestaltungsfarbe. Eindeutige Erkennungszeichen fehlen.",
+     "sicherheit": "Gering: Dass es eine junge biblische Frau ist, ist sicher. Welche Person genau gemeint ist, lässt sich ohne Kontext oder Attribut nicht bestimmen; als Einzelname wäre Maria höchstens etwa 20–25 % wahrscheinlich."
+    },
+    {
+     "abbild": "Junge bis mittelalte Frau, die freundlich lächelt, mit bräunlichem Hautton. Sie trägt ein langes lila-violettes Kopftuch, das über die Schultern fällt, und ein schlichtes graubraunes Gewand. Weitere Zeichen wie Krug, Kind, Krone oder Heiligenschein sind nicht zu sehen.",
+     "wer": "Eine allgemeine biblische Frauenfigur. Am ehesten passt Maria, die Mutter Jesu. Ebenso möglich sind Maria Magdalena, Marta, Rut, Rahel oder Sara.",
+     "merkmale": "Das Kopftuch und das schlichte Gewand sind die übliche Darstellung biblischer Frauen. Ein blaues oder violettes Tuch wird oft mit Maria verbunden, aber hier ist es eher lila als marienblau. Weil weitere Zeichen fehlen, lässt sich die Figur keiner bestimmten Person sicher zuordnen. Das junge, freundliche Gesicht spricht eher für Maria oder Rut als für eine ältere Frau wie Sara oder Elisabet.",
+     "sicherheit": "Niedrig, etwa 25 % für Maria. Sicher ist nur, dass es eine biblische Frau ist."
+    }
+   ],
+   "bewertung": {
+    "typ": [
+     1,
+     1,
+     1
+    ],
+    "merkmale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "name": [
+     0,
+     0,
+     0
+    ],
+    "falsch": [
+     "Maria, Mutter Jesu",
+     "Maria, Mutter Jesu",
+     "Maria, Mutter Jesu"
+    ],
+    "note": "Typ ist richtig: eine schlichte junge Frau ohne Zeichen, zweimal ausdrücklich als mögliche Frau aus dem Volk. Taupe Gewand und lila Kopftuch werden erkannt. Johanna wird nie genannt. Alle drei bevorzugen schwach Maria, Mutter Jesu (20–25 %). Maria aus Magdala wird in Antwort 2 und 3 nur als eine von vielen Möglichkeiten erwähnt."
+   }
+  },
+  "FIG-SUSANNA (terrakotta)": {
+   "beschreibungen": [
+    {
+     "abbild": "Junge Frau (etwa jugendlich bis junge Erwachsene) mit langem, rotbraunem Haar und Mittelscheitel, das über die Schultern fällt (es könnte auch ein rotbraunes Kopftuch sein, die Ohren sind aber sichtbar). Sie trägt ein schlichtes salbeigrünes Gewand mit rundem Ausschnitt, hat betonte Wimpern und lächelt freundlich. Schmuck, Krone, Heiligenschein oder Gegenstände sind nicht zu sehen.",
+     "wer": "Eine junge Frau der Bibel ohne bestimmte Rolle. In Frage kommen zum Beispiel Rahel, Rebekka, Ruth, Mirjam oder auch Maria als junge Frau. Am ehesten eine allgemeine weibliche Nebenfigur.",
+     "merkmale": "Jugendliches Gesicht, lange Wimpern und lange Haare zeigen eine junge Frau. Das schlichte, farbige Gewand passt zu einer einfachen Frau aus dem Alltag, also nicht zu einer Königin (keine Krone wie bei Ester) und nicht zu einer Heiligen (kein Heiligenschein). Maria wird oft mit blauem oder weißem Schleier gezeigt, das fehlt hier. Es gibt keine Gegenstände wie Krug, Ähren, Tamburin oder Schafe, an denen man eine bestimmte Person erkennen könnte.",
+     "sicherheit": "Gering. Dass es eine junge Frau ist, ist sicher (ca. 90 %). Für eine bestimmte biblische Person gibt es keine Hinweise, daher liegt jeder einzelne Name unter 15 %."
+    },
+    {
+     "abbild": "Junge Frau (etwa Jugendliche bis junge Erwachsene) mit freundlichem Lächeln, betonten Wimpern und mittelbrauner Haut. Sie trägt einen terrakotta-/rostroten Schleier oder ein langes Kopftuch bis über die Schultern; es könnte auch langes rotbraunes Haar sein. Dazu ein schlichtes, salbeigrünes Gewand mit rundem Ausschnitt. Es gibt keine Zeichen oder Attribute wie Krug, Kind, Krone, Ähren oder Heiligenschein.",
+     "wer": "Eine junge Frau aus der Bibel ohne bestimmbare Identität. Möglich sind Maria (Mutter Jesu) als junge Frau, Rut, Rebekka, Rahel, Ester vor ihrer Krönung, Marta oder Maria von Betanien, oder einfach eine allgemeine Rollenfigur (Israelitin, Frau aus dem Volk, Jüngerin).",
+     "merkmale": "Schleier/Kopftuch und schlichtes, einfarbiges Gewand im Stil der biblischen Zeit, jugendliches Gesicht und weibliche Züge (Wimpern). Ein Heiligenschein und das typische Marienblau fehlen, darum spricht wenig gezielt für Maria. Es fehlen auch alle Attribute, die eine Person eindeutig machen würden (z. B. Krug bei Rebekka, Ähren bei Rut, Krone bei Ester). Die eher erdigen Farben passen zu einer einfachen Frau aus dem Volk.",
+     "sicherheit": "Gering. Sicher ist nur, dass es eine junge Frau in biblischer Kleidung ist. Eine bestimmte Person lässt sich ohne Zusammenhang (Szene, Beschriftung, Begleitfiguren) nicht festlegen; für jeden einzelnen Namen liegt die Wahrscheinlichkeit wohl unter 20 %."
+    },
+    {
+     "abbild": "Junge Frau (etwa 15–25 Jahre) mit freundlichem Lächeln, großen dunklen Augen und betonten Wimpern. Ein langes, rotbraunes bzw. terrakottafarbenes Tuch oder langes Haar in derselben Farbe rahmt das Gesicht und fällt bis über die Schultern. Sie trägt ein schlichtes, salbeigrünes Obergewand. Es gibt keine Attribute wie Krone, Krug, Kind, Ährengarbe oder Heiligenschein.",
+     "wer": "Eine junge Frau aus der Bibel, ohne eindeutige Zuordnung. Denkbar sind Rahel, Rebekka, Ruth, Mirjam (jung), Maria (Mutter Jesu, eher unwahrscheinlich ohne Blau oder Kind) oder Maria/Marta von Betanien. Ebenso möglich ist eine allgemeine Rolle wie »junge Israelitin« oder »Frau aus dem Volk«.",
+     "merkmale": "Ein Gesicht mit Wimpern und weichen Zügen sowie das lange Tuch bzw. die langen Haare sprechen für eine junge Frau. Die schlichte, erdfarbene Kleidung passt zu einer einfachen Person aus dem Volk und nicht zu einer Königin. Typische Erkennungszeichen fehlen: Blau und Kind bei Maria, Ähren bei Ruth, Schafe bei Rahel, Wasserkrug bei Rebekka, Pauke bei Mirjam. Die rötliche Farbe von Tuch bzw. Haar könnte als Hinweis auf eine bestimmte Figur gedacht sein, ist aber nicht eindeutig.",
+     "sicherheit": "Gering. Dass es eine junge Frau ist, ist sehr sicher (ca. 90 %). Für eine bestimmte biblische Person liegt die Sicherheit unter 20 %, weil keine Attribute zu sehen sind."
+    }
+   ],
+   "bewertung": {
+    "typ": [
+     1,
+     1,
+     1
+    ],
+    "merkmale": [
+     0.75,
+     1.0,
+     1.0
+    ],
+    "name": [
+     0,
+     0,
+     0
+    ],
+    "falsch": [
+     "",
+     "",
+     ""
+    ],
+    "note": "Alle sehen eine schlichte junge Frau aus dem Volk in salbeigrünem Gewand ohne Zeichen. Antwort 1 deutet das terrakottafarbene Kopftuch eher als rotbraunes Haar, daher Teilabzug; Antwort 2 und 3 nennen Tuch oder Haar. Susanna wird nie genannt. Keine Antwort bevorzugt eine bestimmte andere Person, jeder Name liegt unter 20 %."
+   }
+  },
+  "FIG-JOHANNA (altrosa, endgültig)": {
+   "beschreibungen": [
+    {
+     "abbild": "Junge Frau (etwa 20–30 Jahre) mit mittelbrauner Haut, großen dunklen Augen mit betonten Wimpern und einem leichten Lächeln. Sie trägt ein altrosa/mauvefarbenes Kopftuch bzw. einen Schleier, der Haare und Schultern bedeckt, und ein schlichtes graubraunes Gewand. Sie hat keine besonderen Attribute oder Zeichen wie Krone, Krug, Kind, Heiligenschein oder Gegenstände.",
+     "wer": "Eine allgemeine Frauenfigur, z. B. eine Frau aus dem Volk oder eine Jüngerin. In Frage kommen etwa Rut, Rebekka, Rahel, Lea, Martha, Maria von Betanien oder Maria Magdalena. Für Maria, die Mutter Jesu, wäre ein blauer Schleier typischer.",
+     "merkmale": "Das Kopftuch und das einfache Gewand passen zur Kleidung von Frauen im Alten Orient. Die Figur wirkt jung und freundlich. Es fehlen Kennzeichen von Rang (Krone, Schmuck wie bei Ester oder Königinnen), ein Alterszeichen (wie bei Sara, Elisabet oder Hanna) und typische Attribute (Krug wie bei Rebekka oder der Samariterin, Ähren wie bei Rut, Salbgefäß wie bei Maria Magdalena, Kind wie bei Maria). Die Altrosa-Farbe gehört nicht zur klassischen Marienikonografie mit Blau.",
+     "sicherheit": "Gering. Dass es eine junge Frau aus biblischer Zeit ist, ist sehr sicher (über 90 %). Für eine bestimmte Person gibt es keine eindeutigen Hinweise, jede Zuordnung bleibt unter 20 %. Wahrscheinlich ist es eine wiederverwendbare Standardfigur für verschiedene Frauen."
+    },
+    {
+     "abbild": "Junge Frau (etwa 18–30 Jahre) mit mittelbrauner Haut, großen Augen mit langen Wimpern und leichtem Lächeln. Sie trägt ein altrosa/mauvefarbenes Kopftuch, das Haar und Schultern bedeckt und bis über die Schultern fällt, dazu ein schlichtes graubraunes Gewand. Keine besonderen Zeichen oder Gegenstände (kein Heiligenschein, keine Krone, kein Krug, kein Kind).",
+     "wer": "Eine allgemeine biblische Frauenfigur, etwa eine junge Frau aus dem Volk (Dorfbewohnerin, Jüngerin, Magd). Möglich sind auch Maria Magdalena, Marta oder Maria von Betanien, Rut oder Rebekka; Maria, die Mutter Jesu, ist weniger wahrscheinlich, da das typische Blau fehlt.",
+     "merkmale": "Das Kopftuch und das einfache, schmucklose Gewand passen zur Kleidung einer Frau im alten Orient. Die Gesichtszüge sind jugendlich und es gibt keine grauen Haare oder Falten. Da Attribute fehlen (Blau und Heiligenschein bei Maria, Salbgefäß bei Maria Magdalena, Ähren bei Rut, Krone bei Ester), deutet alles eher auf eine allgemeine Figur hin, die für mehrere Rollen verwendet wird. Die gedeckten Erdtöne sprechen eher für eine einfache Frau als für eine Königin oder Adlige.",
+     "sicherheit": "Gering für eine bestimmte Person (unter 20 %). Hoch (etwa 85 %), dass es sich um eine junge biblische Frau aus dem einfachen Volk handelt."
+    },
+    {
+     "abbild": "Junge bis mittelalte Frau mit mittelbrauner Haut, großen Augen mit langen Wimpern und leichtem Lächeln. Sie trägt ein altrosa/mauvefarbenes Kopftuch bzw. einen Schleier, der über den Kopf bis auf die Schultern fällt und das Haar ganz bedeckt, dazu ein schlichtes graubraunes Gewand. Keine Attribute, keine Zeichen, kein Heiligenschein.",
+     "wer": "Eine allgemeine Frauenfigur aus der Bibel, etwa Maria Magdalena, Marta oder Maria von Betanien, Rut, Rebekka, Rahel oder eine Frau aus dem Volk. Weniger wahrscheinlich ist Maria, die Mutter Jesu, die meist in Blau/Weiß gezeigt wird.",
+     "merkmale": "Den Schleier und das einfache Gewand tragen in Kinderbibeln typischerweise Frauen in biblischer Zeit. Die Gesichtszüge wirken jugendlich. Das Bild hat keine eindeutigen Zeichen wie ein Kind im Arm, einen Krug, ein Salbgefäß, Ähren oder eine Krone. Die gedeckten Erdtöne statt Blau sprechen eher gegen Maria, die Mutter Jesu.",
+     "sicherheit": "Gering. Dass es eine Frau aus biblischer Zeit ist, ist sicher. Welche Person genau gemeint ist, lässt sich ohne Zusammenhang (Szene, andere Figuren) nicht sagen."
+    }
+   ],
+   "bewertung": {
+    "typ": [
+     1,
+     1,
+     1
+    ],
+    "merkmale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "name": [
+     0,
+     0,
+     0
+    ],
+    "falsch": [
+     "",
+     "",
+     ""
+    ],
+    "note": "Alle drei erkennen eine schlichte junge Frau aus dem Volk bzw. Jüngerin im taupefarbenen Gewand mit altrosa Kopftuch und ohne Zeichen. Johanna nennt keine. Maria aus Magdala steht jeweils nur als einer von vielen Vorschlägen (Sicherheit unter 20 %) dabei. Das wird nicht als Verwechslung gewertet."
+   }
+  }
+ },
+ "einsatzgroesse_32px": {
+  "FIG-ELISABET": {
+   "antworten": [
+    {
+     "abbild": "Frau mit türkisem Kopftuch",
+     "bedeutung": "Maria"
+    },
+    {
+     "abbild": "Frau mit grünem Kopftuch",
+     "bedeutung": "Maria"
+    },
+    {
+     "abbild": "Frau mit türkisem Kopftuch",
+     "bedeutung": "Maria"
+    },
+    {
+     "abbild": "Frau mit grünem Kopftuch",
+     "bedeutung": "Maria"
+    }
+   ],
+   "bewertung_bedeutung": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "Wird als Maria gedeutet; nichts im Bild zeigt das Alter oder Elisabet selbst."
+  },
+  "FIG-OBJ-SCHREIBTAFEL": {
+   "antworten": [
+    {
+     "abbild": "Schreibtafel mit Griffel",
+     "bedeutung": "Zacharias schreibt"
+    },
+    {
+     "abbild": "Schreibtafel mit Griffel",
+     "bedeutung": "Zacharias' Schreibtafel"
+    },
+    {
+     "abbild": "Schreibtafel mit Griffel",
+     "bedeutung": "Zacharias' Schreibtafel"
+    },
+    {
+     "abbild": "Schreibtafel mit Griffel",
+     "bedeutung": "Zacharias' Schreibtafel"
+    }
+   ],
+   "bewertung_bedeutung": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "Keine Fehldeutung."
+  },
+  "FIG-SIMEON": {
+   "antworten": [
+    {
+     "abbild": "Alter Mann mit Baby",
+     "bedeutung": "Simeon"
+    },
+    {
+     "abbild": "Alter Mann mit Säugling",
+     "bedeutung": "Simeon im Tempel"
+    },
+    {
+     "abbild": "alter Mann mit Säugling",
+     "bedeutung": "Simeon im Tempel"
+    },
+    {
+     "abbild": "alter Mann mit Säugling",
+     "bedeutung": "Simeon im Tempel"
+    }
+   ],
+   "bewertung_bedeutung": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "Keine Fehldeutung."
+  },
+  "FIG-OBJ-KRIPPE": {
+   "antworten": [
+    {
+     "abbild": "Baby in Futterkrippe",
+     "bedeutung": "Jesus in Krippe"
+    },
+    {
+     "abbild": "Gewickeltes Baby in Krippe",
+     "bedeutung": "Jesu Geburt"
+    },
+    {
+     "abbild": "Baby in Futterkrippe",
+     "bedeutung": "Jesus in Krippe"
+    },
+    {
+     "abbild": "Baby in Futterkrippe",
+     "bedeutung": "Jesus in Krippe"
+    }
+   ],
+   "bewertung_bedeutung": [
+    2,
+    1,
+    2,
+    2
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "Einmal allgemein als Geburt Jesu statt als Krippe gedeutet."
+  },
+  "FIG-GRUPPE-HIRTEN": {
+   "antworten": [
+    {
+     "abbild": "Drei Männer mit Schaf",
+     "bedeutung": "Hirten"
+    },
+    {
+     "abbild": "Drei Männer mit Lamm",
+     "bedeutung": "Hirten"
+    },
+    {
+     "abbild": "drei Männer mit Schaf",
+     "bedeutung": "Hirten"
+    },
+    {
+     "abbild": "drei Männer mit Lamm",
+     "bedeutung": "Hirten"
+    }
+   ],
+   "bewertung_bedeutung": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "Keine Fehldeutung."
+  },
+  "FIG-HANNA-PROPHETIN": {
+   "antworten": [
+    {
+     "abbild": "Frau im Torbogen",
+     "bedeutung": "Hanna im Tempel"
+    },
+    {
+     "abbild": "Frau im Torbogen",
+     "bedeutung": "Hanna im Tempel"
+    },
+    {
+     "abbild": "Frau im Torbogen",
+     "bedeutung": "Hanna im Tempel"
+    },
+    {
+     "abbild": "Frau im Torbogen",
+     "bedeutung": "Hanna, Prophetin"
+    }
+   ],
+   "bewertung_bedeutung": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "Die Säulen werden als Torbogen gesehen, das Alter fällt nicht auf; die Bedeutung stimmt trotzdem."
+  },
+  "FIG-SUSANNA": {
+   "antworten": [
+    {
+     "abbild": "Ältere Frau mit Kopftuch",
+     "bedeutung": "Elisabeth"
+    },
+    {
+     "abbild": "Frau mit weißem Kopftuch",
+     "bedeutung": "Elisabeth"
+    },
+    {
+     "abbild": "ältere Frau mit Kopftuch",
+     "bedeutung": "Elisabeth"
+    },
+    {
+     "abbild": "Frau mit hellem Kopftuch",
+     "bedeutung": "Elisabeth"
+    }
+   ],
+   "bewertung_bedeutung": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "Wird immer als Elisabeth gedeutet, weil die Frau mit Kopftuch alt wirkt; nichts zeigt die Jüngerin."
+  },
+  "FIG-ZACHARIAS": {
+   "antworten": [
+    {
+     "abbild": "Alter Mann mit Räuchergefäß",
+     "bedeutung": "Zacharias, Priester"
+    },
+    {
+     "abbild": "Alter Mann mit Räuchergefäß",
+     "bedeutung": "Zacharias, Priester"
+    },
+    {
+     "abbild": "alter Mann mit Brustschild",
+     "bedeutung": "Priester Zacharias"
+    },
+    {
+     "abbild": "alter Mann mit Brustschild",
+     "bedeutung": "Priester Zacharias"
+    }
+   ],
+   "bewertung_bedeutung": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "Der Räucheraltar wird als Räuchergefäss oder Brustschild gesehen; die Bedeutung stimmt."
+  },
+  "FIG-JOHANNA": {
+   "antworten": [
+    {
+     "abbild": "Frau mit blondem Haar",
+     "bedeutung": "Hanna"
+    },
+    {
+     "abbild": "Frau mit blondem Haar",
+     "bedeutung": "Hanna"
+    },
+    {
+     "abbild": "Frau mit goldenem Tuch",
+     "bedeutung": "Hanna, Prophetin"
+    },
+    {
+     "abbild": "blonde Frau",
+     "bedeutung": "Elisabeth"
+    }
+   ],
+   "bewertung_bedeutung": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "Das sandgelbe Kopftuch wird als blondes Haar gesehen; gedeutet als Hanna oder Elisabeth."
+  },
+  "FIG-ENGEL-GABRIEL": {
+   "antworten": [
+    {
+     "abbild": "Gestalt mit Flügeln",
+     "bedeutung": "Engel Gabriel"
+    },
+    {
+     "abbild": "Gestalt mit Lichtstrahlen",
+     "bedeutung": "Engel Gabriel"
+    },
+    {
+     "abbild": "Gestalt mit Flügeln",
+     "bedeutung": "Engel Gabriel"
+    },
+    {
+     "abbild": "Gestalt mit Flügeln",
+     "bedeutung": "Engel Gabriel"
+    }
+   ],
+   "bewertung_bedeutung": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "bild_erkannt": [
+    1,
+    0,
+    1,
+    1
+   ],
+   "bewerter_notiz": "Einmal nur als Gestalt mit Lichtstrahlen gesehen, die Flügel wurden nicht erkannt."
+  },
+  "FIG-JESUS-JUNGE": {
+   "antworten": [
+    {
+     "abbild": "Kind mit Heiligenschein",
+     "bedeutung": "Jesus als Kind"
+    },
+    {
+     "abbild": "Kind mit Heiligenschein",
+     "bedeutung": "Jesus als Kind"
+    },
+    {
+     "abbild": "Kind mit Heiligenschein",
+     "bedeutung": "Jesus als Kind"
+    },
+    {
+     "abbild": "Kind mit Heiligenschein",
+     "bedeutung": "Jesus als Kind"
+    }
+   ],
+   "bewertung_bedeutung": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "Wird als Kind gesehen; das Alter von zwölf und der Tempel sind nicht erkennbar."
+  }
+ },
+ "einsatzgroesse_32px_nachbesserung": {
+  "FIG-MARIA-MAGDALA (Blatt mit Maria, Magdalena, Rut)": {
+   "antworten": [
+    {
+     "abbild": "Frau mit Salbgefäß",
+     "bedeutung": "Maria Magdalena"
+    },
+    {
+     "abbild": "Frau mit Salbgefäß",
+     "bedeutung": "Maria Magdalena"
+    },
+    {
+     "abbild": "Frau mit Salbgefäß",
+     "bedeutung": "Maria Magdalena"
+    },
+    {
+     "abbild": "Frau mit Salbgefäß",
+     "bedeutung": "Maria Magdalena"
+    }
+   ],
+   "bewertung_bedeutung": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "Keine Fehldeutung; Salbgefäss wird zuverlässig als Maria Magdalena erkannt"
+  },
+  "FIG-ELISABET (Blatt mit Maria, Magdalena, Rut)": {
+   "antworten": [
+    {
+     "abbild": "Frau mit grünem Kopftuch",
+     "bedeutung": "Rut"
+    },
+    {
+     "abbild": "Frau mit grünem Kopftuch",
+     "bedeutung": "Ruth"
+    },
+    {
+     "abbild": "Frau mit grünem Schleier",
+     "bedeutung": "Martha"
+    },
+    {
+     "abbild": "Frau mit grünem Schleier",
+     "bedeutung": "Sara"
+    }
+   ],
+   "bewertung_bedeutung": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "Meist als Rut gedeutet (grünes Kopftuch ohne Zeichen); Sara als verwandte Gestalt (im Alter schwanger)"
+  },
+  "FIG-RUT (Blatt mit Maria, Magdalena, Rut)": {
+   "antworten": [
+    {
+     "abbild": "Frau mit gelbem Kopftuch, Ährenbündel",
+     "bedeutung": "Rut"
+    },
+    {
+     "abbild": "Frau mit Kornähren",
+     "bedeutung": "Ruth, Ährenleserin"
+    },
+    {
+     "abbild": "Frau mit Ährenbündel",
+     "bedeutung": "Ruth"
+    },
+    {
+     "abbild": "Frau mit Ähren",
+     "bedeutung": "Rut"
+    }
+   ],
+   "bewertung_bedeutung": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "Keine Fehldeutung; Ähren eindeutig"
+  },
+  "FIG-MARIA-MUTTER-JESU (Blatt mit Maria, Magdalena, Rut)": {
+   "antworten": [
+    {
+     "abbild": "Frau mit blauem Schleier",
+     "bedeutung": "Maria, Mutter Jesu"
+    },
+    {
+     "abbild": "Frau mit blauem Schleier",
+     "bedeutung": "Maria, Mutter Jesu"
+    },
+    {
+     "abbild": "Frau mit blauem Schleier",
+     "bedeutung": "Maria, Mutter Jesu"
+    },
+    {
+     "abbild": "Frau mit blauem Schleier",
+     "bedeutung": "Maria, Mutter Jesu"
+    }
+   ],
+   "bewertung_bedeutung": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "Keine Fehldeutung; blauer Schleier eindeutig"
+  },
+  "FIG-JOHANNA (Blatt mit Maria, Magdalena, Rut)": {
+   "antworten": [
+    {
+     "abbild": "Frau mit lila Kopftuch",
+     "bedeutung": "Lydia"
+    },
+    {
+     "abbild": "Frau mit violettem Kopftuch",
+     "bedeutung": "Lydia, Purpurhändlerin"
+    },
+    {
+     "abbild": "Frau mit lila Schleier",
+     "bedeutung": "Elisabeth"
+    },
+    {
+     "abbild": "Frau mit lila Schleier",
+     "bedeutung": "Marta"
+    }
+   ],
+   "bewertung_bedeutung": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "Meist als Lydia gedeutet (Lila wird als Purpur gelesen)"
+  },
+  "FIG-SUSANNA (Blatt mit Maria, Magdalena, Rut)": {
+   "antworten": [
+    {
+     "abbild": "Frau mit rotbraunem Kopftuch",
+     "bedeutung": "Martha"
+    },
+    {
+     "abbild": "Frau mit rötlichem Kopftuch",
+     "bedeutung": "Martha"
+    },
+    {
+     "abbild": "Frau mit rotem Haar",
+     "bedeutung": "Eva"
+    },
+    {
+     "abbild": "Frau mit rötlichem Kopftuch",
+     "bedeutung": "Rebekka"
+    }
+   ],
+   "bewertung_bedeutung": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "Meist als Martha gedeutet; ohne Zeichen nicht zu erkennen, Kopftuch einmal als rotes Haar gelesen"
+  },
+  "FIG-MARIA-MAGDALA (Blatt mit Marta, Maria von Betanien, Magdalena, Salome)": {
+   "antworten": [
+    {
+     "abbild": "Frau mit weißem Gefäß",
+     "bedeutung": "Maria Magdalena"
+    },
+    {
+     "abbild": "Frau mit weißem Gefäß",
+     "bedeutung": "Maria Magdalena"
+    },
+    {
+     "abbild": "Frau mit weißem Gefäß",
+     "bedeutung": "Maria Magdalena"
+    },
+    {
+     "abbild": "verschleierte Frau mit Gefäß",
+     "bedeutung": "Maria von Bethanien"
+    }
+   ],
+   "bewertung_bedeutung": [
+    2,
+    2,
+    2,
+    1
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "einmal Maria von Betanien (Verwechslung über die Salbung)"
+  },
+  "FIG-SALOME (Blatt mit Marta, Maria von Betanien, Magdalena, Salome)": {
+   "antworten": [
+    {
+     "abbild": "Frau mit Tonkrug",
+     "bedeutung": "Samariterin am Brunnen"
+    },
+    {
+     "abbild": "Frau mit Tonkrug",
+     "bedeutung": "Samariterin am Brunnen"
+    },
+    {
+     "abbild": "Frau mit Krug",
+     "bedeutung": "Rebekka"
+    },
+    {
+     "abbild": "Frau mit Tonkrug",
+     "bedeutung": "Rebekka"
+    }
+   ],
+   "bewertung_bedeutung": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "Krug wird als Wasserkrug gelesen → Samariterin am Brunnen / Rebekka"
+  },
+  "FIG-MARIA-BETANIEN (Blatt mit Marta, Maria von Betanien, Magdalena, Salome)": {
+   "antworten": [
+    {
+     "abbild": "Frau mit Säugling",
+     "bedeutung": "Maria, Mutter Jesu"
+    },
+    {
+     "abbild": "Frau mit weißem Gegenstand",
+     "bedeutung": "Ruth"
+    },
+    {
+     "abbild": "Frau mit Säugling",
+     "bedeutung": "Maria"
+    },
+    {
+     "abbild": "Frau hält weißen Gegenstand",
+     "bedeutung": "Hanna"
+    }
+   ],
+   "bewertung_bedeutung": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bild_erkannt": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bewerter_notiz": "Fläschchen wird als Säugling gelesen → Maria, Mutter Jesu"
+  },
+  "FIG-JOHANNA (Blatt mit Marta, Maria von Betanien, Magdalena, Salome)": {
+   "antworten": [
+    {
+     "abbild": "Frau mit rosa Schleier",
+     "bedeutung": "Martha"
+    },
+    {
+     "abbild": "Frau mit rosa Kopftuch",
+     "bedeutung": "Maria"
+    },
+    {
+     "abbild": "Frau mit rosa Schleier",
+     "bedeutung": "Sara"
+    },
+    {
+     "abbild": "Frau mit rosa Schleier",
+     "bedeutung": "Lea"
+    }
+   ],
+   "bewertung_bedeutung": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "kein Zeichen, daher Raten: Martha/Maria/Sara/Lea"
+  },
+  "FIG-MARTA (Blatt mit Marta, Maria von Betanien, Magdalena, Salome)": {
+   "antworten": [
+    {
+     "abbild": "Frau mit Werkzeug",
+     "bedeutung": "Dorkas (Tabita)"
+    },
+    {
+     "abbild": "Frau mit Werkzeug",
+     "bedeutung": "Martha"
+    },
+    {
+     "abbild": "Frau mit Werkzeug",
+     "bedeutung": "Jaël"
+    },
+    {
+     "abbild": "Frau mit Hammer",
+     "bedeutung": "Jaël"
+    }
+   ],
+   "bewertung_bedeutung": [
+    0,
+    2,
+    0,
+    0
+   ],
+   "bild_erkannt": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bewerter_notiz": "Kelle wird als Hammer/Werkzeug gelesen → Jaël"
+  },
+  "FIG-SUSANNA (Blatt mit Marta, Maria von Betanien, Magdalena, Salome)": {
+   "antworten": [
+    {
+     "abbild": "Frau mit rotem Schleier",
+     "bedeutung": "Ruth"
+    },
+    {
+     "abbild": "Frau mit rotem Kopftuch",
+     "bedeutung": "Rahel"
+    },
+    {
+     "abbild": "Frau mit rotem Schleier",
+     "bedeutung": "Rahel"
+    },
+    {
+     "abbild": "Frau mit rotem Schleier",
+     "bedeutung": "Rahel"
+    }
+   ],
+   "bewertung_bedeutung": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "kein Zeichen, rotes Kopftuch → Rahel"
+  },
+  "FIG-ELISABET (Blatt mit Marta, Maria von Betanien, Magdalena, Salome)": {
+   "antworten": [
+    {
+     "abbild": "Frau mit grünem Schleier",
+     "bedeutung": "Noomi"
+    },
+    {
+     "abbild": "Frau mit grünem Kopftuch",
+     "bedeutung": "Lea"
+    },
+    {
+     "abbild": "Frau mit grünem Schleier",
+     "bedeutung": "Ruth"
+    },
+    {
+     "abbild": "Frau mit grünem Schleier",
+     "bedeutung": "Ruth"
+    }
+   ],
+   "bewertung_bedeutung": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "kein Zeichen, grünes Kopftuch → Ruth"
+  }
+ },
+ "gewaehlt": {
+  "FIG-OBJ-KRIPPE": "@2 Kastenkrippe aus Brettern mit Stroh, gewickeltes Kind darin (alle drei Fassungen Abbild 4/4 und Bedeutung 4/4; bei Gleichstand die einfachere Form; Bibliothekszeichen in 32 px: Abbild 4/4 «Baby in Futterkrippe», Bedeutung 3/4, einmal «Jesu Geburt»)",
+  "FIG-OBJ-SCHREIBTAFEL": "@1 Holzrahmen mit dunkler Wachsfläche, Schriftzeilen und Griffel (Abbild 4/4, Bedeutung 4/4; @2 aufgeklappt ebenso 4/4, aber zwei Teile; @3 mit heller Fläche als «Gesetz, Gottes Wort» gelesen, 0/4); Bibliothekszeichen in 32 px 4/4",
+  "FIG-ZACHARIAS": "alter Priester (weisser Kopfbund, blaue Schärpe, langer weisser Bart) mit kleinem goldenem Räucheraltar; Porträt 3/3 «Zacharias» (Aaron nur als Alternative), 32 px 4/4 (Altar als «Räuchergefäss» bzw. «Brustschild» gesehen)",
+  "FIG-ELISABET": "ältere Frau mit olivgrünem Kopftuch, ohne Zeichen; Porträt 3/3 «alte Frau», Elisabet je unter den Vorschlägen, gleichauf mit Sara; 32 px: zuerst (meergrün) 4/4 als «Maria» gelesen, olivgrün nicht mehr",
+  "FIG-ENGEL-GABRIEL": "Engel wie FIG-ROLLE-ENGEL, Unterschied Name und schmaler Goldsaum; Porträt 3/3 «Engel, am ehesten Gabriel», 32 px Bild 3/4 (einmal «Gestalt mit Lichtstrahlen»), Bedeutung 4/4",
+  "FIG-SIMEON": "alter Mann vor Tempelsäulen, hält das gewickelte Kind mit Kreuznimbus (Lk 2,28); ohne Kind 1/3 «Simeon», 2/3 «Eli»; mit Kind 3/3 «Simeon», 32 px 4/4",
+  "FIG-HANNA-PROPHETIN": "sehr alte Frau mit dunkelbraunem Kopftuch vor Tempelsäulen; Porträt 3/3 «Prophetin Hanna», 32 px 4/4 (Säulen als «Torbogen», Alter klein nicht sichtbar)",
+  "FIG-JESUS-JUNGE": "Junge mit Kreuznimbus, weissem Gewand und rotem Mantel, kurzes Haar (Fassung B); Porträt mit langem Haar 3/3 Jesus, 2/3 «Zwölfjähriger» (einmal offen, ob jung oder erwachsen); mit kurzem Haar 3/3 «Zwölfjähriger im Tempel»; 32 px 4/4 «Jesus als Kind»",
+  "FIG-JOHANNA": "Frau ohne Zeichen, taupefarbenes Gewand, altrosa Kopftuch; nie als Maria aus Magdala bestimmt; sandgelb las sich in 32 px als blondes Haar, lavendel als Purpur («Lydia»), altrosa ohne gerichtete Deutung",
+  "FIG-SUSANNA": "Frau ohne Zeichen, salbeigrünes Gewand, terrakottafarbenes Kopftuch; nie als Maria aus Magdala bestimmt; cremefarben las sich in 32 px als ältere Frau («Elisabet»)",
+  "FIG-GRUPPE-HIRTEN": "Hirtengewand und heller Mantel, vorn Schaf, die anderen mit Stab; Porträt 3/3 «Hirten von Betlehem», 32 px 4/4"
+ },
+ "folgen_de": [
+  "Simeon trägt das Kind als Erkennungszeichen (Lk 2,28); hält er es in der Szene (stage.hold), ersetzt dieses das Zeichen.",
+  "Jesus als Junge mit kurzem Haar; Kreuznimbus nach der bestehenden Regel des Lexikons (nur und immer bei Jesus), basis «tradition».",
+  "Johanna, Susanna und Elisabet bleiben ohne Erkennungszeichen; in Bildern über das Namensschild beim ersten Auftreten benennen.",
+  "Nebenbefund (bestehende Figuren, nicht geändert): in 32 px las sich das Fläschchen von Maria von Betanien als Säugling, die Kelle der Marta als Hammer, der Ölkrug der Salome als Wasserkrug («Samariterin»)."
+ ]
+}

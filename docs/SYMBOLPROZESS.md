@@ -577,6 +577,39 @@ Zeugnis gemeint ist (u. a. [[JHN.1.7]], [[JHN.5.31-JHN.5.39]], [[JHN.8.13]], [[J
 Rebe ([[JHN.15.5]]). Die Mitgekreuzigten stehen in [[JHN.19.18]] (Feld 2), [[JHN.19.31-JHN.19.34]] und im Kapitelbild
 Joh 19 (Feld 3) im Bild.
 
+### Runde 15 (Figuren und Zeichen für Lukas 1–2 und 8, 2026-10-26)
+
+Anlass: Für die Lukas-Bilder fehlten Personen, die Hirten, die Krippe und das Schreibtäfelchen. Neu im Lexikon (Daten in
+`bildlexikon_daten/LUK.json`, `figuren_daten/LUK.json`, `bildsymbole_daten/LUK.json`): `FIG-ZACHARIAS`, `FIG-ELISABET`,
+`FIG-ENGEL-GABRIEL`, `FIG-SIMEON`, `FIG-HANNA-PROPHETIN`, `FIG-JESUS-JUNGE`, `FIG-JOHANNA`, `FIG-SUSANNA`, `FIG-GRUPPE-HIRTEN`,
+`FIG-OBJ-KRIPPE`, `FIG-OBJ-SCHREIBTAFEL`. Grundsatz: nichts über den Text hinaus (keine Heiligenattribute, kein Nimbus ausser bei
+Jesus nach der bestehenden Regel). Gemessen wie Runde 14: Gegenstände mit `zeichen_test.py --entwuerfe … --verteilen --frage abbild
+--befragen 4 --bewerten` (32 px, je Fassung vier Instanzen); Personen und Gruppe als Porträt ohne Namen, je drei getrennte Instanzen
+(`claude -p`, nur Lesezugriff) mit {abbild, wer, merkmale, sicherheit}, bewertet von einer weiteren Instanz gegen den Lexikon-Eintrag;
+dazu alle elf in Einsatzgrösse 32 px (vier Instanzen). Daten: `reports/zeichen-blindtest-2026-10-26-runde15.json`.
+
+| Eintrag | Gezeichnet | Porträt (3 Instanzen) | 32 px (4 Instanzen) | Nachbesserung |
+|---|---|---|---|---|
+| Zacharias | alter Priester, weisser Kopfbund, blaue Schärpe, goldener Räucheraltar ([[LUK.1.9]]) | 3/3 «Zacharias» | 4/4 | – |
+| Elisabet | ältere Frau, olivgrünes Kopftuch, kein Zeichen | 3/3 alte Frau, Elisabet neben Sara | Bild 4/4 | meergrün las sich in 32 px als «Maria» (Blau) |
+| Engel Gabriel | wie jeder Engel, schmaler Goldsaum, Name im Bild ([[LUK.1.19]]) | 3/3 «Engel, am ehesten Gabriel» | Bild 3/4, Bedeutung 4/4 | – |
+| Simeon | alter Mann vor Tempelsäulen, hält das Kind ([[LUK.2.28]]) | ohne Kind 1/3 (2/3 «Eli»), mit Kind 3/3 | 4/4 | Kind als Zeichen |
+| Hanna, Prophetin | sehr alte Frau, dunkelbraunes Kopftuch, Tempelsäulen | 3/3 «Prophetin Hanna» | 4/4 | – |
+| Jesus als Junge | Kreuznimbus, weisses Gewand, roter Mantel, Junge | langes Haar 3/3 Jesus (einmal offen, ob jung); kurzes Haar 3/3 «Zwölfjähriger» | 4/4 «Jesus als Kind» | kurzes Haar |
+| Johanna, Susanna | schlichte Frauen ohne Zeichen, nur durch den Namen unterschieden | je 3/3 «Frau aus dem Volk», nie Maria aus Magdala | Bild 4/4 | Kopftuchfarben (s. u.) |
+| Hirten | Hirtengewand, heller Mantel, Schaf vorn, Stäbe | 3/3 «Hirten von Betlehem» | 4/4 | – |
+| Futterkrippe mit Kind | 1 Holztrog mit Beinen · 2 Kastenkrippe · 3 flach, grosses Kind | – | je 4/4; gewählt 2 | – |
+| Schreibtafel | 1 dunkle Wachsfläche + Griffel · 2 aufgeklappt · 3 helle Fläche | – | 4/4 · 4/4 · 0/4 («Gesetz») ; gewählt 1 | – |
+
+Lehren: Farben ohne Zeichen tragen Bedeutung, auch wenn keine gemeint ist: ein sandgelbes Kopftuch wird in 32 px blondes Haar,
+ein cremefarbenes graues Haar (alte Frau), Lavendel wird Purpur («Lydia»), Meergrün wird Marias Blau. Für Figuren ohne
+Erkennungszeichen deshalb mittlere, eindeutig «textile» Töne wählen (olivgrün, altrosa, terrakotta). Eine Person, die nur in
+einer Szene vorkommt, wird am sichersten über ihre Handlung im Text erkannt (Simeon mit dem Kind); Säulen allein machen einen
+alten Mann zu «Eli am Heiligtum». Eine helle Schreibfläche liest sich als Gesetzestafel, eine dunkle Wachsfläche mit Griffel als
+Schreibtafel. Nebenbefund an bestehenden Figuren (nicht geändert): in 32 px las sich das Fläschchen der Maria von Betanien als
+Säugling, die Kelle der Marta als Hammer, der Ölkrug der Salome als Wasserkrug. Offen: Prüfung im Gesamtbild (Schritt 8), sobald
+die Lukas-Bildaufträge die neuen Einträge verwenden.
+
 ### Reihenfolge der Überarbeitung
 
 1. Die 20 meistverwendeten schwachen Zeichen (rund die Hälfte aller schwachen Verwendungen).
