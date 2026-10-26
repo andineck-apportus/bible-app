@@ -1,0 +1,451 @@
+[
+ {
+  "suffix": "LUK-011-001-004",
+  "level": "section",
+  "target": "TU-LUK-011-001-004",
+  "reference": "LUK.11.1-LUK.11.4",
+  "core_de": "Als Jesus an einem Ort gebetet hat, bittet ihn einer seiner Jünger: «Herr, lehre uns beten, wie auch Johannes seine Jünger gelehrt hat»; Jesus antwortet: «Wenn ihr betet, sprecht: Vater, dein Name werde geheiligt; dein Reich komme. Unser tägliches Brot gib uns Tag für Tag. Und vergib uns unsere Sünden, denn auch wir selbst vergeben jedem, der uns etwas schuldet; und führe uns nicht in Versuchung.»",
+  "mode": "prayer",
+  "voice": {
+   "speaker": "FIG-JESUS",
+   "addressee": "FIG-GRUPPE-JUENGER"
+  },
+  "moments": [
+   {
+    "reference": "LUK.11.1",
+    "text_de": "Nach Jesu Gebet bittet ein Jünger: «Herr, lehre uns beten, wie auch Johannes seine Jünger gelehrt hat.»",
+    "reason_de": "Anlass (Kriterien 2 und 3).",
+    "recognition_de": "Die Bitte des Jüngers.",
+    "keywords": [
+     "Herr, lehre uns beten"
+    ],
+    "mode": "narrative"
+   },
+   {
+    "reference": "LUK.11.2-LUK.11.4",
+    "text_de": "«Wenn ihr betet, sprecht: Vater …» – fünf Bitten: Name, Reich, Brot, Vergebung, Versuchung.",
+    "reason_de": "Reihe mit allen Gliedern (Kriterien 1 und 4; Regel 1).",
+    "recognition_de": "Das Vaterunser.",
+    "keywords": [
+     "Vater, dein Name werde geheiligt",
+     "dein Reich komme",
+     "Unser tägliches Brot gib uns Tag für Tag",
+     "Und vergib uns unsere Sünden",
+     "und führe uns nicht in Versuchung"
+    ]
+   }
+  ],
+  "omitted_de": [
+   "Johannes und seine Jünger ([[LUK.11.1]]) – nur genannt, im Bild nicht gezeigt"
+  ],
+  "persons": [
+   "FIG-JESUS",
+   "FIG-ROLLE-JUENGER",
+   "FIG-GRUPPE-JUENGER",
+   "FIG-GOTT"
+  ],
+  "places": [],
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "sequence",
+     "subtype": "Jesus betet – Bitte des Jüngers – Gebet",
+     "range": "LUK.11.1-LUK.11.4",
+     "elements": [
+      {
+       "label": "Jesus betet an einem Ort",
+       "ref": "LUK.11.1",
+       "role": "Anlass"
+      },
+      {
+       "label": "Ein Jünger: «Herr, lehre uns beten, wie auch Johannes seine Jünger gelehrt hat»",
+       "ref": "LUK.11.1",
+       "role": "Bitte"
+      },
+      {
+       "label": "«Wenn ihr betet, sprecht: Vater …» – fünf Bitten",
+       "ref": "LUK.11.2-LUK.11.4",
+       "role": "Antwort",
+       "child": "s2"
+      }
+     ],
+     "features": {
+      "speakers": [
+       {
+        "who": "FIG-ROLLE-JUENGER",
+        "to": "FIG-JESUS",
+        "ref": "LUK.11.1"
+       },
+       {
+        "who": "FIG-JESUS",
+        "to": "FIG-GRUPPE-JUENGER",
+        "ref": "LUK.11.2-LUK.11.4"
+       }
+      ],
+      "interpretation": [
+       {
+        "note": "«Vater» ist Gott; im Bild als Strahlenkranz, nie als Mensch."
+       }
+      ]
+     },
+     "visual": "scenes",
+     "basis": "text"
+    },
+    {
+     "id": "s2",
+     "pattern": "series",
+     "subtype": "Anrede «Vater» und fünf Bitten",
+     "range": "LUK.11.2-LUK.11.4",
+     "elements": [
+      {
+       "label": "Vater, dein Name werde geheiligt",
+       "ref": "LUK.11.2",
+       "role": "Du-Bitte 1"
+      },
+      {
+       "label": "dein Reich komme",
+       "ref": "LUK.11.2",
+       "role": "Du-Bitte 2"
+      },
+      {
+       "label": "Unser tägliches Brot gib uns Tag für Tag",
+       "ref": "LUK.11.3",
+       "role": "Wir-Bitte 1"
+      },
+      {
+       "label": "Vergib uns unsere Sünden, denn auch wir selbst vergeben jedem, der uns etwas schuldet",
+       "ref": "LUK.11.4",
+       "role": "Wir-Bitte 2 mit Begründung"
+      },
+      {
+       "label": "Führe uns nicht in Versuchung",
+       "ref": "LUK.11.4",
+       "role": "Wir-Bitte 3"
+      }
+     ],
+     "features": {
+      "crossref": [
+       {
+        "ref": "MAT.6.9-MAT.6.13",
+        "note": "längere Fassung bei Matthäus"
+       }
+      ],
+      "text_forms": [
+       {
+        "ref": "LUK.11.2-LUK.11.4",
+        "note": "Viele spätere Handschriften gleichen die Bitten an die längere Fassung bei Matthäus an; die Arbeitsübersetzung folgt der kürzeren Fassung."
+       }
+      ]
+     },
+     "visual": "grid",
+     "basis": "text"
+    }
+   ]
+  },
+  "date": "2026-10-26",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Joh 15–21, Buch Johannes und Lk 11 nach Joh 1–14; keine fachliche Prüfung.",
+  "tags": [
+   "TAG-LUKE"
+  ]
+ },
+ {
+  "suffix": "LUK-011",
+  "level": "chapter",
+  "target": "SUM-CH-LUK-011",
+  "reference": "LUK.11.1-LUK.11.54",
+  "children": [
+   "LUK-011-001-004"
+  ],
+  "core_de": "Lukas 11 beginnt damit, dass ein Jünger Jesus bittet: «Herr, lehre uns beten», und Jesus lehrt das Gebet zum Vater mit fünf Bitten: Name, Reich, tägliches Brot, Vergebung und Bewahrung vor der Versuchung; die übrigen Abschnitte des Kapitels sind noch nicht übersetzt.",
+  "mode": "prayer",
+  "voice": {
+   "speaker": "FIG-JESUS",
+   "addressee": "FIG-GRUPPE-JUENGER"
+  },
+  "moments": [
+   {
+    "reference": "LUK.11.1",
+    "text_de": "«Herr, lehre uns beten.»",
+    "reason_de": "Anlass (Kriterium 3).",
+    "recognition_de": "Feld 1: Bitte.",
+    "keywords": [
+     "Herr, lehre uns beten"
+    ],
+    "mode": "narrative"
+   },
+   {
+    "reference": "LUK.11.2-LUK.11.4",
+    "text_de": "«Vater, dein Name werde geheiligt; dein Reich komme …» – fünf Bitten.",
+    "reason_de": "Kern (Kriterien 1 und 4).",
+    "recognition_de": "Feld 2: Vaterunser.",
+    "keywords": [
+     "Vater, dein Name werde geheiligt"
+    ]
+   }
+  ],
+  "omitted_de": [
+   "Der übrige Text des Lukasevangeliums ist in der Arbeitsübersetzung noch nicht übersetzt; die Verdichtung beruht nur auf [[LUK.11.1-LUK.11.4]] (oben nichts, was unten fehlt)"
+  ],
+  "persons": [
+   "FIG-JESUS",
+   "FIG-ROLLE-JUENGER",
+   "FIG-GRUPPE-JUENGER",
+   "FIG-GOTT"
+  ],
+  "places": [],
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "sequence",
+     "subtype": "Bitte des Jüngers – Gebet (bisher übersetzt)",
+     "range": "LUK.11.1-LUK.11.4",
+     "elements": [
+      {
+       "label": "Ein Jünger: «Herr, lehre uns beten»",
+       "ref": "LUK.11.1",
+       "role": "Bitte"
+      },
+      {
+       "label": "Das Gebet zum Vater mit fünf Bitten",
+       "ref": "LUK.11.2-LUK.11.4",
+       "role": "Gebet",
+       "child": "s2"
+      },
+      {
+       "label": "Weitere Abschnitte des Kapitels (noch nicht übersetzt)",
+       "role": "offen",
+       "empty": true
+      }
+     ],
+     "features": {
+      "interpretation": [
+       {
+        "note": "Das Kapitel ist erst in [[LUK.11.1-LUK.11.4]] übersetzt; die Struktur des ganzen Kapitels folgt mit der Übersetzung."
+       }
+      ]
+     },
+     "visual": "scenes",
+     "basis": "text"
+    },
+    {
+     "id": "s2",
+     "pattern": "series",
+     "subtype": "Anrede «Vater» und fünf Bitten",
+     "range": "LUK.11.2-LUK.11.4",
+     "elements": [
+      {
+       "label": "Vater, dein Name werde geheiligt",
+       "ref": "LUK.11.2",
+       "role": "Du-Bitte 1"
+      },
+      {
+       "label": "dein Reich komme",
+       "ref": "LUK.11.2",
+       "role": "Du-Bitte 2"
+      },
+      {
+       "label": "Unser tägliches Brot gib uns Tag für Tag",
+       "ref": "LUK.11.3",
+       "role": "Wir-Bitte 1"
+      },
+      {
+       "label": "Vergib uns unsere Sünden, denn auch wir selbst vergeben jedem, der uns etwas schuldet",
+       "ref": "LUK.11.4",
+       "role": "Wir-Bitte 2 mit Begründung"
+      },
+      {
+       "label": "Führe uns nicht in Versuchung",
+       "ref": "LUK.11.4",
+       "role": "Wir-Bitte 3"
+      }
+     ],
+     "features": {
+      "crossref": [
+       {
+        "ref": "MAT.6.9-MAT.6.13",
+        "note": "längere Fassung bei Matthäus"
+       }
+      ],
+      "text_forms": [
+       {
+        "ref": "LUK.11.2-LUK.11.4",
+        "note": "Viele spätere Handschriften gleichen die Bitten an die längere Fassung bei Matthäus an; die Arbeitsübersetzung folgt der kürzeren Fassung."
+       }
+      ]
+     },
+     "visual": "grid",
+     "basis": "text"
+    }
+   ]
+  },
+  "date": "2026-10-26",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Joh 15–21, Buch Johannes und Lk 11 nach Joh 1–14; keine fachliche Prüfung.",
+  "tags": [
+   "TAG-LUKE"
+  ]
+ },
+ {
+  "suffix": "LUK",
+  "level": "book",
+  "target": "SUM-BOOK-LUK",
+  "reference": "LUK",
+  "children": [
+   "LUK-011"
+  ],
+  "core_de": "Vom Lukasevangelium ist bisher nur der Anfang von Kapitel 11 übersetzt: Ein Jünger bittet Jesus: «Herr, lehre uns beten», und Jesus lehrt das Gebet zum Vater – dein Name werde geheiligt, dein Reich komme, gib uns das tägliche Brot, vergib uns unsere Sünden, führe uns nicht in Versuchung.",
+  "purpose_de": "Lukas nennt den Zweck seines Buches im Vorwort ([[LUK.1.1-LUK.1.4]], in der Arbeitsübersetzung noch nicht übersetzt): ein geordneter Bericht für Theophilus, damit er die Zuverlässigkeit der Lehre erkennt, in der er unterwiesen wurde. Übersetzt ist bisher nur [[LUK.11.1-LUK.11.4]]; die Buchebene verdichtet deshalb nur diesen Abschnitt (redaktionelle Entscheidung beim Ausrollen 2026-10-26, offen für Andi Neck).",
+  "mode": "prayer",
+  "voice": {
+   "speaker": "FIG-JESUS",
+   "addressee": "FIG-GRUPPE-JUENGER"
+  },
+  "moments": [
+   {
+    "reference": "LUK.11.1",
+    "text_de": "«Herr, lehre uns beten.»",
+    "reason_de": "Anlass (Kriterium 3).",
+    "recognition_de": "Station 1: die Bitte.",
+    "keywords": [
+     "Herr, lehre uns beten"
+    ],
+    "mode": "narrative"
+   },
+   {
+    "reference": "LUK.11.2",
+    "text_de": "«Vater, dein Name werde geheiligt; dein Reich komme.»",
+    "reason_de": "Du-Bitten (Kriterium 1).",
+    "recognition_de": "Station 2: Name und Reich.",
+    "keywords": [
+     "Vater, dein Name werde geheiligt",
+     "dein Reich komme"
+    ]
+   },
+   {
+    "reference": "LUK.11.3",
+    "text_de": "«Unser tägliches Brot gib uns Tag für Tag.»",
+    "reason_de": "Wir-Bitte (Kriterium 1).",
+    "recognition_de": "Station 2: Brot.",
+    "keywords": [
+     "Unser tägliches Brot gib uns Tag für Tag"
+    ]
+   },
+   {
+    "reference": "LUK.11.4",
+    "text_de": "«Vergib uns unsere Sünden … und führe uns nicht in Versuchung.»",
+    "reason_de": "Wir-Bitten (Kriterium 1).",
+    "recognition_de": "Station 2: Vergebung und Versuchung.",
+    "keywords": [
+     "Und vergib uns unsere Sünden",
+     "und führe uns nicht in Versuchung"
+    ]
+   }
+  ],
+  "omitted_de": [
+   "Der übrige Text des Lukasevangeliums ist in der Arbeitsübersetzung noch nicht übersetzt; die Verdichtung beruht nur auf [[LUK.11.1-LUK.11.4]] (oben nichts, was unten fehlt)",
+   "Die Hauptstationen des ganzen Buches (Kindheit, Galiläa, Weg nach Jerusalem, Passion, Ostern) – erst nach der Übersetzung; bis dahin nicht verdichtet"
+  ],
+  "persons": [
+   "FIG-JESUS",
+   "FIG-ROLLE-JUENGER",
+   "FIG-GRUPPE-JUENGER",
+   "FIG-GOTT"
+  ],
+  "places": [],
+  "structure": {
+   "root": "s1",
+   "units": [
+    {
+     "id": "s1",
+     "pattern": "sequence",
+     "subtype": "Bisher übersetzt: Bitte und Gebet ([[LUK.11.1-LUK.11.4]])",
+     "range": "LUK",
+     "elements": [
+      {
+       "label": "Ein Jünger: «Herr, lehre uns beten»",
+       "ref": "LUK.11.1",
+       "role": "Bitte"
+      },
+      {
+       "label": "Das Gebet zum Vater mit fünf Bitten",
+       "ref": "LUK.11.2-LUK.11.4",
+       "role": "Gebet",
+       "child": "s2"
+      },
+      {
+       "label": "Übriges Buch (noch nicht übersetzt)",
+       "role": "offen",
+       "empty": true
+      }
+     ],
+     "features": {
+      "interpretation": [
+       {
+        "note": "Die Buchstruktur (z. B. Weg nach Jerusalem [[LUK.9.51]]) wird erst mit der Übersetzung bestimmt."
+       }
+      ]
+     },
+     "visual": "scenes",
+     "basis": "text"
+    },
+    {
+     "id": "s2",
+     "pattern": "series",
+     "subtype": "Anrede «Vater» und fünf Bitten",
+     "range": "LUK.11.2-LUK.11.4",
+     "elements": [
+      {
+       "label": "Vater, dein Name werde geheiligt",
+       "ref": "LUK.11.2",
+       "role": "Du-Bitte 1"
+      },
+      {
+       "label": "dein Reich komme",
+       "ref": "LUK.11.2",
+       "role": "Du-Bitte 2"
+      },
+      {
+       "label": "Unser tägliches Brot gib uns Tag für Tag",
+       "ref": "LUK.11.3",
+       "role": "Wir-Bitte 1"
+      },
+      {
+       "label": "Vergib uns unsere Sünden, denn auch wir selbst vergeben jedem, der uns etwas schuldet",
+       "ref": "LUK.11.4",
+       "role": "Wir-Bitte 2 mit Begründung"
+      },
+      {
+       "label": "Führe uns nicht in Versuchung",
+       "ref": "LUK.11.4",
+       "role": "Wir-Bitte 3"
+      }
+     ],
+     "features": {
+      "crossref": [
+       {
+        "ref": "MAT.6.9-MAT.6.13",
+        "note": "längere Fassung bei Matthäus"
+       }
+      ],
+      "text_forms": [
+       {
+        "ref": "LUK.11.2-LUK.11.4",
+        "note": "Viele spätere Handschriften gleichen die Bitten an die längere Fassung bei Matthäus an; die Arbeitsübersetzung folgt der kürzeren Fassung."
+       }
+      ]
+     },
+     "visual": "grid",
+     "basis": "text"
+    }
+   ]
+  },
+  "date": "2026-10-26",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Joh 15–21, Buch Johannes und Lk 11 nach Joh 1–14; keine fachliche Prüfung.",
+  "tags": [
+   "TAG-LUKE"
+  ]
+ }
+]

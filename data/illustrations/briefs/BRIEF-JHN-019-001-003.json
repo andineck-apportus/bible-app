@@ -11,119 +11,78 @@
   "panels": [
     {
       "n": 1,
-      "reference": "JHN.19.1",
+      "reference": "JHN.19.1-JHN.19.3",
       "figures": [
-        "FIG-PILATUS",
-        "FIG-JESUS",
-        "FIG-GRUPPE-SOLDATEN"
+        "FIG-GRUPPE-SOLDATEN",
+        "FIG-JESUS"
       ],
       "objects": [
-        "FIG-ORT-PRAETORIUM",
-        "FIG-OBJ-FESSEL"
-      ],
-      "signs": [],
-      "speech": [],
-      "action_de": "Pilatus nimmt Jesus und lässt ihn geisseln.",
-      "stage": {
-        "hold": {
-          "FIG-JESUS": "FIG-OBJ-FESSEL"
-        },
-        "back_side": "left",
-        "before": true,
-        "x": {
-          "FIG-PILATUS": 40,
-          "FIG-JESUS": 100,
-          "FIG-GRUPPE-SOLDATEN": 152
-        },
-        "mood": {
-          "FIG-PILATUS": "earnest",
-          "FIG-GRUPPE-SOLDATEN": "earnest"
-        },
-        "arrows": [
-          [
-            "FIG-PILATUS",
-            "FIG-GRUPPE-SOLDATEN",
-            "act"
-          ]
-        ]
-      }
-    },
-    {
-      "n": 2,
-      "reference": "JHN.19.2-JHN.19.3",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-SOLDATEN"
-      ],
-      "objects": [
-        "FIG-OBJ-DORNENKRONE"
+        "FIG-OBJ-DORNENKRONE",
+        "FIG-OBJ-PEITSCHE"
       ],
       "signs": [],
       "speech": [
         {
           "from": "FIG-GRUPPE-SOLDATEN",
           "to": "FIG-JESUS",
-          "icons": [
-            "FIG-OBJ-KRONE"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Sei gegrüsst, König der Juden!",
+            "gsw": "Sig gegrüesst, König vo de Jude!"
+          }
         }
       ],
-      "action_de": "Die Soldaten flechten einen Kranz aus Dornen, setzen ihn Jesus auf den Kopf, legen ihm einen purpurnen Mantel um, grüssen ihn spöttisch als König der Juden und schlagen ihn ins Gesicht.",
+      "action_de": "Pilatus lässt Jesus geisseln. Die Soldaten setzen ihm einen Kranz aus Dornen auf, legen ihm einen purpurnen Mantel um, sagen: «Sei gegrüsst, König der Juden!» und schlagen ihn ins Gesicht.",
+      "keywords": {
+        "de": "Und sie gaben ihm Schläge ins Gesicht",
+        "gsw": "Und si händ ihm Ohrfiige gää"
+      },
       "stage": {
         "at": {
           "FIG-OBJ-DORNENKRONE": "FIG-JESUS"
         },
+        "wear": {
+          "FIG-JESUS": "#7A2E6E"
+        },
+        "pose": {
+          "FIG-GRUPPE-SOLDATEN": "kneel"
+        },
         "mood": {
-          "FIG-JESUS": "calm",
-          "FIG-GRUPPE-SOLDATEN": "smile"
+          "FIG-GRUPPE-SOLDATEN": "smile",
+          "FIG-JESUS": "pain"
         },
         "x": {
-          "FIG-JESUS": 60,
-          "FIG-GRUPPE-SOLDATEN": 130
+          "FIG-GRUPPE-SOLDATEN": 56,
+          "FIG-JESUS": 136
         },
-        "arrows": [
-          [
-            "FIG-GRUPPE-SOLDATEN",
-            "FIG-JESUS",
-            "act"
-          ]
-        ],
-        "wear": {
-          "FIG-JESUS": "#6A2E5E"
+        "floor_x": {
+          "FIG-OBJ-PEITSCHE": 100
         }
       }
     }
   ],
   "actions_de": [
-    "Pilatus nimmt Jesus und lässt ihn geisseln.",
-    "Die Soldaten flechten einen Kranz aus Dornen, setzen ihn Jesus auf den Kopf, legen ihm einen purpurnen Mantel um, grüssen ihn spöttisch als König der Juden und schlagen ihn ins Gesicht."
+    "Pilatus lässt Jesus geisseln. Die Soldaten setzen ihm einen Kranz aus Dornen auf, legen ihm einen purpurnen Mantel um, sagen: «Sei gegrüsst, König der Juden!» und schlagen ihn ins Gesicht."
   ],
   "captions_de": [
-    "Geisselung befohlen: Pilatus übergibt Jesus den Soldaten zur Geisselung (Pfeil); die Geisselung selbst ist nicht gezeigt.",
-    "Verspottung: Die Soldaten setzen Jesus den Dornenkranz auf (Pfeil), legen ihm einen Purpurmantel um und rufen spöttisch «König» (Krone)."
+    "Verspottet: Soldaten vor Jesus mit Dornenkranz und purpurnem Mantel, die Geissel am Boden; sie sagen: «Sei gegrüsst, König der Juden!» (grüssen, Königsherrschaft); im Band: Und sie gaben ihm Schläge ins Gesicht (Schlag)."
   ],
-  "interpretation_note_de": "Der Purpurmantel ([[JHN.19.2]]) ist im Bild nicht gezeichnet (der Zeichner kann einer Figur noch keinen anderen Mantel geben). Der Dornenkranz schwebt über dem Kopf, damit der Kreuznimbus sichtbar bleibt. Gewalt wird nicht gezeigt: die Geisselung und die Schläge nicht, die Kreuzigung nur mit leeren Kreuzen auf Golgota.",
+  "interpretation_note_de": "Ein Feld ([[JHN.19.1-JHN.19.3]]): Spott der Soldaten mit Dornenkranz und Purpurmantel (Mantelfarbe). Die Geisselung zeigt die Geissel am Boden, die Schläge nennt das Band; keine Wunden (Bildregel «Gewalt erkennbar zeigen, nicht ausmalen»). Das Knien der Soldaten ist Spott, keine Verehrung.",
   "basis": [
     {
       "record": "TU-JHN-019-001-003",
       "field": "summary",
-      "fingerprint": "4e825ede6b5f2e16"
+      "fingerprint": "6c9002d6739abdda"
     },
     {
       "record": "TRANS-JHN-019-001-042-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.19.1",
-      "fingerprint": "f1ee035b217b0388"
-    },
-    {
-      "record": "TRANS-JHN-019-001-042-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "JHN.19.2-JHN.19.3",
-      "fingerprint": "6b040163316ad166"
+      "reference": "JHN.19.1-JHN.19.3",
+      "fingerprint": "2fe79b5e4164c04c"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -213,6 +172,127 @@
           "Geisselung befohlen: Pilatus übergibt Jesus den Soldaten zur Geisselung (Pfeil); die Geisselung selbst ist nicht gezeigt.",
           "Verspottung: Die Soldaten setzen Jesus den Dornenkranz auf und rufen spöttisch «König» (Krone)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.19.1",
+            "figures": [
+              "FIG-PILATUS",
+              "FIG-JESUS",
+              "FIG-GRUPPE-SOLDATEN"
+            ],
+            "objects": [
+              "FIG-ORT-PRAETORIUM",
+              "FIG-OBJ-FESSEL"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Pilatus nimmt Jesus und lässt ihn geisseln.",
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-FESSEL"
+              },
+              "back_side": "left",
+              "before": true,
+              "x": {
+                "FIG-PILATUS": 40,
+                "FIG-JESUS": 100,
+                "FIG-GRUPPE-SOLDATEN": 152
+              },
+              "mood": {
+                "FIG-PILATUS": "earnest",
+                "FIG-GRUPPE-SOLDATEN": "earnest"
+              },
+              "arrows": [
+                [
+                  "FIG-PILATUS",
+                  "FIG-GRUPPE-SOLDATEN",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.19.2-JHN.19.3",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-SOLDATEN"
+            ],
+            "objects": [
+              "FIG-OBJ-DORNENKRONE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-SOLDATEN",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-OBJ-KRONE"
+                ]
+              }
+            ],
+            "action_de": "Die Soldaten flechten einen Kranz aus Dornen, setzen ihn Jesus auf den Kopf, legen ihm einen purpurnen Mantel um, grüssen ihn spöttisch als König der Juden und schlagen ihn ins Gesicht.",
+            "stage": {
+              "at": {
+                "FIG-OBJ-DORNENKRONE": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-SOLDATEN": "smile"
+              },
+              "x": {
+                "FIG-JESUS": 60,
+                "FIG-GRUPPE-SOLDATEN": 130
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-SOLDATEN",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "wear": {
+                "FIG-JESUS": "#6A2E5E"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Pilatus nimmt Jesus und lässt ihn geisseln.",
+          "Die Soldaten flechten einen Kranz aus Dornen, setzen ihn Jesus auf den Kopf, legen ihm einen purpurnen Mantel um, grüssen ihn spöttisch als König der Juden und schlagen ihn ins Gesicht."
+        ],
+        "captions_de": [
+          "Geisselung befohlen: Pilatus übergibt Jesus den Soldaten zur Geisselung (Pfeil); die Geisselung selbst ist nicht gezeigt.",
+          "Verspottung: Die Soldaten setzen Jesus den Dornenkranz auf (Pfeil), legen ihm einen Purpurmantel um und rufen spöttisch «König» (Krone)."
+        ],
+        "interpretation_note_de": "Der Purpurmantel ([[JHN.19.2]]) ist im Bild nicht gezeichnet (der Zeichner kann einer Figur noch keinen anderen Mantel geben). Der Dornenkranz schwebt über dem Kopf, damit der Kreuznimbus sichtbar bleibt. Gewalt wird nicht gezeigt: die Geisselung und die Schläge nicht, die Kreuzigung nur mit leeren Kreuzen auf Golgota.",
+        "basis": [
+          {
+            "record": "TU-JHN-019-001-003",
+            "field": "summary",
+            "fingerprint": "4e825ede6b5f2e16"
+          },
+          {
+            "record": "TRANS-JHN-019-001-042-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.19.1",
+            "fingerprint": "f1ee035b217b0388"
+          },
+          {
+            "record": "TRANS-JHN-019-001-042-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.19.2-JHN.19.3",
+            "fingerprint": "6b040163316ad166"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

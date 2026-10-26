@@ -1,0 +1,239 @@
+{
+ "id": "CORE-JHN-018",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "chapter",
+ "reference": "JHN.18.1-JHN.18.40",
+ "target": "SUM-CH-JHN-018",
+ "children": [
+  "CORE-JHN-018-001-011",
+  "CORE-JHN-018-012-014",
+  "CORE-JHN-018-015-018",
+  "CORE-JHN-018-019-024",
+  "CORE-JHN-018-025-027",
+  "CORE-JHN-018-028-032",
+  "CORE-JHN-018-033-038",
+  "CORE-JHN-018-039-040"
+ ],
+ "core_de": "Im Garten geht Jesus den Häschern selbst entgegen: «Ich bin es», und sie fallen zu Boden; er wird gefesselt zu Hannas geführt, wo er bezeugt, offen geredet zu haben, und geschlagen wird, während Petrus draussen dreimal sagt: «Ich bin es nicht», bis der Hahn kräht; vor Pilatus sagt Jesus: «Mein Reich ist nicht aus dieser Welt», Pilatus findet keine Schuld an ihm, aber die Menge verlangt Barabbas.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Garten – Hannas (mit Petrus) – Pilatus",
+    "range": "JHN.18.1-JHN.18.40",
+    "elements": [
+     {
+      "label": "Gefangennahme im Garten: «Ich bin es»; Petrus und das Schwert",
+      "ref": "JHN.18.1-JHN.18.11",
+      "role": "Garten"
+     },
+     {
+      "label": "Gefesselt zu Hannas; Rat des Kajafas",
+      "ref": "JHN.18.12-JHN.18.14",
+      "role": "Übergabe"
+     },
+     {
+      "label": "Petrus an der Tür: «Ich bin es nicht»",
+      "ref": "JHN.18.15-JHN.18.18",
+      "role": "Petrus",
+      "child": "s2"
+     },
+     {
+      "label": "Verhör bei Hannas: «Ich habe offen zur Welt geredet»; der Schlag; zu Kajafas",
+      "ref": "JHN.18.19-JHN.18.24",
+      "role": "Verhör"
+     },
+     {
+      "label": "Petrus am Feuer: zweimal «Ich bin es nicht»; der Hahn kräht",
+      "ref": "JHN.18.25-JHN.18.27",
+      "role": "Petrus"
+     },
+     {
+      "label": "Pilatus draussen: Anklage; «Uns ist es nicht erlaubt, jemanden zu töten»",
+      "ref": "JHN.18.28-JHN.18.32",
+      "role": "draussen",
+      "child": "s3"
+     },
+     {
+      "label": "Pilatus drinnen: «Mein Reich ist nicht aus dieser Welt» – «Was ist Wahrheit?»",
+      "ref": "JHN.18.33-JHN.18.38",
+      "role": "drinnen"
+     },
+     {
+      "label": "Draussen: «Nicht diesen, sondern Barabbas!»",
+      "ref": "JHN.18.39-JHN.18.40",
+      "role": "draussen"
+     }
+    ],
+    "features": {
+     "leitwort": [
+      {
+       "word": "Ich bin es ↔ Ich bin es nicht",
+       "ref": "JHN.18.5-JHN.18.25"
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "«Die Juden» meint bei Johannes oft die führenden Kreise in Jerusalem; im Bild als neutrale Gruppe ohne Merkmale einer Volksgruppe."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "frame",
+    "subtype": "Schachtelung: Petrus – Verhör – Petrus",
+    "range": "JHN.18.15-JHN.18.27",
+    "elements": [
+     {
+      "label": "Petrus: «Ich bin es nicht» (erste Verneinung)",
+      "ref": "JHN.18.15-JHN.18.18",
+      "role": "A"
+     },
+     {
+      "label": "Verhör: Jesus bezeugt, offen geredet zu haben",
+      "ref": "JHN.18.19-JHN.18.24",
+      "role": "Mitte"
+     },
+     {
+      "label": "Petrus: «Ich bin es nicht» (zweite und dritte), der Hahn",
+      "ref": "JHN.18.25-JHN.18.27",
+      "role": "A'"
+     }
+    ],
+    "visual": "outline",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "interleave",
+    "subtype": "draussen – drinnen – draussen (Pilatus geht hin und her)",
+    "range": "JHN.18.28-JHN.18.40",
+    "elements": [
+     {
+      "label": "draussen: Anklage",
+      "ref": "JHN.18.28-JHN.18.32"
+     },
+     {
+      "label": "drinnen: Königsfrage",
+      "ref": "JHN.18.33-JHN.18.38"
+     },
+     {
+      "label": "draussen: keine Schuld; Barabbas",
+      "ref": "JHN.18.38-JHN.18.40"
+     }
+    ],
+    "visual": "lanes",
+    "basis": "proposal",
+    "source_de": "Strukturkatalog (2026-10-24), Bücherübersicht Joh: «Bühne drinnen ↔ draussen [[JHN.18.28-JHN.19.16]]» – verbreitete Beobachtung der Johannesforschung; der Wechsel steht im Text (hinein/hinaus), die Gliederung in Szenen ist ein Vorschlag"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "JHN.18.4-JHN.18.6",
+   "text_de": "«Wen sucht ihr?» – «Ich bin es» – sie fallen zu Boden.",
+   "reason_de": "Erster Abschnitt (Kriterien 1 und 4).",
+   "recognition_de": "Feld 1: Garten.",
+   "keywords": [
+    "Ich bin es"
+   ]
+  },
+  {
+   "reference": "JHN.18.20-JHN.18.23",
+   "text_de": "«Ich habe offen zur Welt geredet» – der Schlag ins Gesicht.",
+   "reason_de": "Verhör (Kriterium 2).",
+   "recognition_de": "Feld 2: bei Hannas.",
+   "keywords": [
+    "Ich habe offen zur Welt geredet"
+   ]
+  },
+  {
+   "reference": "JHN.18.25-JHN.18.27",
+   "text_de": "Petrus: «Ich bin es nicht» – der Hahn kräht.",
+   "reason_de": "Verleugnung (Kriterien 1 und 4).",
+   "recognition_de": "Feld 3: Hahn.",
+   "keywords": [
+    "und sogleich krähte ein Hahn"
+   ]
+  },
+  {
+   "reference": "JHN.18.36-JHN.18.40",
+   "text_de": "«Mein Reich ist nicht aus dieser Welt» – «Nicht diesen, sondern Barabbas!»",
+   "reason_de": "Vor Pilatus (Kriterien 1 und 3).",
+   "recognition_de": "Feld 4: Pilatus.",
+   "keywords": [
+    "Mein Reich ist nicht aus dieser Welt"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Einzelheiten – stehen in den Abschnitten",
+  "Kein Kuss des Judas, kein Gebetskampf im Garten und keine Flucht der Jünger: Das erzählt Johannes hier nicht; nichts davon ist eingetragen"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-JUDAS-ISKARIOT",
+  "FIG-GRUPPE-SOLDATEN",
+  "FIG-PETRUS",
+  "FIG-MALCHUS",
+  "FIG-HANNAS",
+  "FIG-KAJAFAS",
+  "FIG-PILATUS",
+  "FIG-GRUPPE-MENGE",
+  "FIG-BARABBAS"
+ ],
+ "places": [
+  "FIG-ORT-GARTEN",
+  "FIG-ORT-PRAETORIUM"
+ ],
+ "basis": [
+  {
+   "record": "CORE-JHN-018-001-011",
+   "fingerprint": "e0fd871e66af339f"
+  },
+  {
+   "record": "CORE-JHN-018-012-014",
+   "fingerprint": "7dd8a83461cf10da"
+  },
+  {
+   "record": "CORE-JHN-018-015-018",
+   "fingerprint": "f5af5bdd81feac48"
+  },
+  {
+   "record": "CORE-JHN-018-019-024",
+   "fingerprint": "b050d0ded28d9e9c"
+  },
+  {
+   "record": "CORE-JHN-018-025-027",
+   "fingerprint": "6004ec3bfa8372a0"
+  },
+  {
+   "record": "CORE-JHN-018-028-032",
+   "fingerprint": "c35bb2320a775551"
+  },
+  {
+   "record": "CORE-JHN-018-033-038",
+   "fingerprint": "401879cf78fe71aa"
+  },
+  {
+   "record": "CORE-JHN-018-039-040",
+   "fingerprint": "aed67121685b57bc"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Joh 15–21, Buch Johannes und Lk 11 nach Joh 1–14; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

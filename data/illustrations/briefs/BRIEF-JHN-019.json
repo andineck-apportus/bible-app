@@ -11,11 +11,11 @@
   "panels": [
     {
       "n": 1,
-      "reference": "JHN.19.1-JHN.19.5",
+      "reference": "JHN.19.1-JHN.19.16",
       "figures": [
         "FIG-PILATUS",
         "FIG-JESUS",
-        "FIG-GRUPPE-MENGE"
+        "FIG-GRUPPE-HOHEPRIESTER"
       ],
       "objects": [
         "FIG-OBJ-DORNENKRONE"
@@ -24,103 +24,142 @@
       "speech": [
         {
           "from": "FIG-PILATUS",
-          "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-ZEICHEN-SEHEN",
-            "FIG-JESUS"
-          ]
+          "to": "FIG-GRUPPE-HOHEPRIESTER",
+          "icons": [],
+          "word": {
+            "de": "Seht, der Mensch!",
+            "gsw": "Lueged, de Mänsch!"
+          }
+        },
+        {
+          "from": "FIG-GRUPPE-HOHEPRIESTER",
+          "to": "FIG-PILATUS",
+          "icons": [],
+          "word": {
+            "de": "Kreuzige, kreuzige!",
+            "gsw": "Chrüüzig, chrüüzig!"
+          }
         }
       ],
-      "action_de": "Die Soldaten setzen Jesus einen Dornenkranz auf; Pilatus führt ihn hinaus: «Seht, der Mensch!»",
+      "action_de": "Jesus mit Dornenkranz und Purpurmantel; Pilatus sagt: «Seht, der Mensch!» Die Hohepriester schreien: «Kreuzige, kreuzige!», und Pilatus liefert ihn aus.",
+      "keywords": {
+        "de": "Wir haben keinen König ausser dem Kaiser",
+        "gsw": "Mir händ kei König usser em Kaiser"
+      },
+      "names": {
+        "FIG-PILATUS": {
+          "de": "Pilatus",
+          "gsw": "Pilatus"
+        }
+      },
       "stage": {
         "at": {
           "FIG-OBJ-DORNENKRONE": "FIG-JESUS"
         },
-        "mood": {
-          "FIG-GRUPPE-MENGE": "earnest"
-        },
         "wear": {
-          "FIG-JESUS": "#6A2E5E"
+          "FIG-JESUS": "#7A2E6E"
+        },
+        "mood": {
+          "FIG-PILATUS": "worried",
+          "FIG-JESUS": "pain",
+          "FIG-GRUPPE-HOHEPRIESTER": "angry"
+        },
+        "x": {
+          "FIG-PILATUS": 30,
+          "FIG-JESUS": 94,
+          "FIG-GRUPPE-HOHEPRIESTER": 158
         }
       }
     },
     {
       "n": 2,
-      "reference": "JHN.19.16-JHN.19.18",
-      "figures": [
-        "FIG-JESUS"
-      ],
-      "objects": [
-        "FIG-ORT-GOLGOTA",
-        "FIG-OBJ-KREUZ"
-      ],
-      "signs": [],
-      "speech": [],
-      "action_de": "Jesus trägt sein Kreuz nach Golgota und wird dort zwischen zwei anderen gekreuzigt.",
-      "stage": {
-        "hold": {
-          "FIG-JESUS": "FIG-OBJ-KREUZ"
-        },
-        "x": {
-          "FIG-JESUS": 46
-        },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-ORT-GOLGOTA",
-            "go"
-          ]
-        ],
-        "mood": {
-          "FIG-JESUS": "earnest"
-        }
-      }
-    },
-    {
-      "n": 3,
-      "reference": "JHN.19.25-JHN.19.30",
+      "reference": "JHN.19.17-JHN.19.27",
       "figures": [
         "FIG-MARIA-MUTTER-JESU",
         "FIG-JESUS",
         "FIG-LIEBLINGSJUENGER"
       ],
-      "objects": [
-        "FIG-ORT-GOLGOTA"
-      ],
+      "objects": [],
       "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-MARIA-MUTTER-JESU",
-          "icons": [
-            "FIG-LIEBLINGSJUENGER"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-LIEBLINGSJUENGER",
-          "icons": [
-            "FIG-MARIA-MUTTER-JESU"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Frau, siehe, dein Sohn!",
+            "gsw": "Frau, lueg, din Sohn!"
+          }
         }
       ],
-      "action_de": "Beim Kreuz vertraut Jesus seine Mutter und den Jünger, den er liebte, einander an; dann sagt er: «Es ist vollbracht», und stirbt.",
+      "action_de": "Jesus wird gekreuzigt, über ihm die Tafel «Jesus, der Nazoräer, der König der Juden»; zu seiner Mutter sagt er: «Frau, siehe, dein Sohn!»",
+      "keywords": {
+        "de": "Jesus, der Nazoräer, der König der Juden",
+        "gsw": "Jesus, de Nazoräer, de König vo de Jude"
+      },
+      "names": {
+        "FIG-MARIA-MUTTER-JESU": {
+          "de": "Mutter Jesu",
+          "gsw": "Mueter vom Jesus"
+        }
+      },
       "stage": {
-        "back_side": "right",
-        "before": true,
-        "x": {
-          "FIG-MARIA-MUTTER-JESU": 34,
-          "FIG-JESUS": 96,
-          "FIG-LIEBLINGSJUENGER": 156
-        },
-        "mood": {
-          "FIG-MARIA-MUTTER-JESU": "worried",
-          "FIG-LIEBLINGSJUENGER": "worried",
-          "FIG-JESUS": "pain"
-        },
         "pose": {
           "FIG-JESUS": "cross"
-        }
+        },
+        "mood": {
+          "FIG-JESUS": "pain",
+          "FIG-MARIA-MUTTER-JESU": "worried",
+          "FIG-LIEBLINGSJUENGER": "worried"
+        },
+        "x": {
+          "FIG-MARIA-MUTTER-JESU": 30,
+          "FIG-JESUS": 96,
+          "FIG-LIEBLINGSJUENGER": 160
+        },
+        "air_x": 20,
+        "air_y": 104
+      }
+    },
+    {
+      "n": 3,
+      "reference": "JHN.19.28-JHN.19.37",
+      "figures": [
+        "FIG-ROLLE-SOLDAT",
+        "FIG-JESUS"
+      ],
+      "objects": [
+        "FIG-OBJ-LANZE"
+      ],
+      "signs": [
+        "FIG-ZEICHEN-BLUT-UND-WASSER"
+      ],
+      "speech": [],
+      "action_de": "Jesus sagt: «Es ist vollbracht», neigt das Haupt und übergibt den Geist; ein Soldat stösst ihm eine Lanze in die Seite, und Blut und Wasser kommen heraus.",
+      "keywords": {
+        "de": "Es ist vollbracht",
+        "gsw": "Es isch vollbracht"
+      },
+      "stage": {
+        "pose": {
+          "FIG-JESUS": "cross"
+        },
+        "hold": {
+          "FIG-ROLLE-SOLDAT": "FIG-OBJ-LANZE"
+        },
+        "beside": {
+          "FIG-ZEICHEN-BLUT-UND-WASSER": "FIG-JESUS"
+        },
+        "mood": {
+          "FIG-JESUS": "dead",
+          "FIG-ROLLE-SOLDAT": "earnest"
+        },
+        "x": {
+          "FIG-ROLLE-SOLDAT": 40,
+          "FIG-JESUS": 124
+        },
+        "air_x": 20,
+        "air_y": 104
       }
     },
     {
@@ -128,53 +167,77 @@
       "reference": "JHN.19.38-JHN.19.42",
       "figures": [
         "FIG-JOSEF-ARIMATAEA",
+        "FIG-JESUS",
         "FIG-NIKODEMUS"
       ],
       "objects": [
-        "FIG-ORT-GRAB-VERSCHLOSSEN",
-        "FIG-ORT-GARTEN",
+        "FIG-ORT-GRAB",
         "FIG-OBJ-MYRRHE"
       ],
       "signs": [],
       "speech": [],
-      "action_de": "Josef von Arimatäa und Nikodemus legen den Leib Jesu, in Leinen gebunden, in ein neues Grab im Garten.",
+      "action_de": "Josef von Arimatäa und Nikodemus binden den Leib Jesu in Leinenbinden und legen ihn im Garten in ein neues Grab.",
+      "keywords": {
+        "de": "Dort nun legten sie Jesus hin",
+        "gsw": "Dört also händ si de Jesus hiigleit"
+      },
+      "names": {
+        "FIG-JOSEF-ARIMATAEA": {
+          "de": "Josef von Arimatäa",
+          "gsw": "Josef vo Arimatäa"
+        },
+        "FIG-NIKODEMUS": {
+          "de": "Nikodemus",
+          "gsw": "Nikodemus"
+        }
+      },
       "stage": {
+        "pose": {
+          "FIG-JESUS": "lie"
+        },
+        "mood": {
+          "FIG-JESUS": "dead",
+          "FIG-JOSEF-ARIMATAEA": "pain",
+          "FIG-NIKODEMUS": "pain"
+        },
+        "wear": {
+          "FIG-JESUS": "binden"
+        },
         "hold": {
           "FIG-NIKODEMUS": "FIG-OBJ-MYRRHE"
         },
-        "back_side": "right",
-        "arrows": [
-          [
-            "FIG-JOSEF-ARIMATAEA",
-            "FIG-ORT-GRAB-VERSCHLOSSEN",
-            "go"
-          ]
-        ]
+        "back_side": "left",
+        "before": true,
+        "x": {
+          "FIG-JOSEF-ARIMATAEA": 40,
+          "FIG-JESUS": 96,
+          "FIG-NIKODEMUS": 156
+        }
       }
     }
   ],
   "actions_de": [
-    "Die Soldaten setzen Jesus einen Dornenkranz auf; Pilatus führt ihn hinaus: «Seht, der Mensch!»",
-    "Jesus trägt sein Kreuz nach Golgota und wird dort zwischen zwei anderen gekreuzigt.",
-    "Beim Kreuz vertraut Jesus seine Mutter und den Jünger, den er liebte, einander an; dann sagt er: «Es ist vollbracht», und stirbt.",
-    "Josef von Arimatäa und Nikodemus legen den Leib Jesu, in Leinen gebunden, in ein neues Grab im Garten."
+    "Jesus mit Dornenkranz und Purpurmantel; Pilatus sagt: «Seht, der Mensch!» Die Hohepriester schreien: «Kreuzige, kreuzige!», und Pilatus liefert ihn aus.",
+    "Jesus wird gekreuzigt, über ihm die Tafel «Jesus, der Nazoräer, der König der Juden»; zu seiner Mutter sagt er: «Frau, siehe, dein Sohn!»",
+    "Jesus sagt: «Es ist vollbracht», neigt das Haupt und übergibt den Geist; ein Soldat stösst ihm eine Lanze in die Seite, und Blut und Wasser kommen heraus.",
+    "Josef von Arimatäa und Nikodemus binden den Leib Jesu in Leinenbinden und legen ihn im Garten in ein neues Grab."
   ],
   "captions_de": [
-    "«Seht, der Mensch!»: Pilatus führt Jesus mit Dornenkranz und Purpurmantel vor die Menge (Augen, Jesus).",
-    "Kreuzweg: Jesus trägt sein Kreuz nach Golgota (Pfeil), wo drei Kreuze stehen.",
-    "Beim Kreuz: Jesus vertraut Mutter und Jünger einander an (Jünger; Mutter).",
-    "Begräbnis: Josef und Nikodemus bringen Jesus mit Duftstoffen (Krug mit Kräuterzweig) in das neue Felsengrab im Garten (Pfeil)."
+    "Verurteilt: Pilatus (Name) zeigt Jesus mit Dornenkranz und purpurnem Mantel: «Seht, der Mensch!» (zeigen, Jesus); die Hohepriester: «Kreuzige, kreuzige!» (Kreuz); im Band: Wir haben keinen König ausser dem Kaiser (Kaiser).",
+    "Am Kreuz: Jesus am Kreuz unter der Tafel; davor seine Mutter (Name) und der Jünger, den er liebte; Jesus sagt zur Mutter: «Frau, siehe, dein Sohn!» (Jünger, den Jesus liebte); im Band die Aufschrift: Jesus, der Nazoräer, der König der Juden (Tafel).",
+    "Vollbracht: Jesus ist am Kreuz gestorben (Kopf geneigt, Augen zu); ein Soldat mit der Lanze, bei Jesus Blut und Wasser (zwei Tropfen); im Band: Es ist vollbracht (vollbracht).",
+    "Begraben: Josef von Arimatäa (Name) und Nikodemus (Name) beim toten Jesus in Leinenbinden vor dem neuen Grab; im Band: Dort nun legten sie Jesus hin (Grab)."
   ],
-  "interpretation_note_de": "Je ein Feld zu Verspottung, Kreuzweg, Wort am Kreuz und Begräbnis; Einzelheiten in den Abschnitten. Gewalt wird nicht gezeigt: die Geisselung und die Schläge nicht, die Kreuzigung nur mit leeren Kreuzen auf Golgota. Das Grab ist mit dem Stein vor dem Eingang gezeichnet, wie ihn [[JHN.20.1]] voraussetzt; so wird es nicht mit dem leeren Grab verwechselt.",
+  "interpretation_note_de": "Vier Szenen ([[JHN.19.1-JHN.19.42]]): Verurteilung («Seht, der Mensch!»), Kreuzigung mit Tafel und dem Wort an die Mutter, Tod mit Lanze, Blut und Wasser, Begräbnis. Jesus am Kreuz und im Grab ist ohne Wunden gezeichnet; sein Tod ist sichtbar (Kopf geneigt, Augen zu, liegend in Leinenbinden). Kein Simon von Kyrene, keine Finsternis, kein Hauptmann und kein Tempelvorhang: Das erzählt Johannes nicht. Die zwei Mitgekreuzigten fehlen, weil das Bildlexikon für sie keine Figur hat.",
   "basis": [
     {
       "record": "SUM-CH-JHN-019",
       "field": "summary",
-      "fingerprint": "ed8e7030b34dfe13"
+      "fingerprint": "3996a4009c3ba4d3"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -790,6 +853,178 @@
           "Beim Kreuz: Jesus vertraut Mutter und Jünger einander an (Jünger; Mutter).",
           "Begräbnis: Josef und Nikodemus bringen Jesus mit Duftstoffen (Krug, Sack) in das neue Felsengrab im Garten (Pfeil)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.19.1-JHN.19.5",
+            "figures": [
+              "FIG-PILATUS",
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-DORNENKRONE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PILATUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-SEHEN",
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Die Soldaten setzen Jesus einen Dornenkranz auf; Pilatus führt ihn hinaus: «Seht, der Mensch!»",
+            "stage": {
+              "at": {
+                "FIG-OBJ-DORNENKRONE": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest"
+              },
+              "wear": {
+                "FIG-JESUS": "#6A2E5E"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.19.16-JHN.19.18",
+            "figures": [
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-GOLGOTA",
+              "FIG-OBJ-KREUZ"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Jesus trägt sein Kreuz nach Golgota und wird dort zwischen zwei anderen gekreuzigt.",
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-KREUZ"
+              },
+              "x": {
+                "FIG-JESUS": 46
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ORT-GOLGOTA",
+                  "go"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "earnest"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.19.25-JHN.19.30",
+            "figures": [
+              "FIG-MARIA-MUTTER-JESU",
+              "FIG-JESUS",
+              "FIG-LIEBLINGSJUENGER"
+            ],
+            "objects": [
+              "FIG-ORT-GOLGOTA"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-MARIA-MUTTER-JESU",
+                "icons": [
+                  "FIG-LIEBLINGSJUENGER"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-LIEBLINGSJUENGER",
+                "icons": [
+                  "FIG-MARIA-MUTTER-JESU"
+                ]
+              }
+            ],
+            "action_de": "Beim Kreuz vertraut Jesus seine Mutter und den Jünger, den er liebte, einander an; dann sagt er: «Es ist vollbracht», und stirbt.",
+            "stage": {
+              "back_side": "right",
+              "before": true,
+              "x": {
+                "FIG-MARIA-MUTTER-JESU": 34,
+                "FIG-JESUS": 96,
+                "FIG-LIEBLINGSJUENGER": 156
+              },
+              "mood": {
+                "FIG-MARIA-MUTTER-JESU": "worried",
+                "FIG-LIEBLINGSJUENGER": "worried",
+                "FIG-JESUS": "pain"
+              },
+              "pose": {
+                "FIG-JESUS": "cross"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.19.38-JHN.19.42",
+            "figures": [
+              "FIG-JOSEF-ARIMATAEA",
+              "FIG-NIKODEMUS"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB-VERSCHLOSSEN",
+              "FIG-ORT-GARTEN",
+              "FIG-OBJ-MYRRHE"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Josef von Arimatäa und Nikodemus legen den Leib Jesu, in Leinen gebunden, in ein neues Grab im Garten.",
+            "stage": {
+              "hold": {
+                "FIG-NIKODEMUS": "FIG-OBJ-MYRRHE"
+              },
+              "back_side": "right",
+              "arrows": [
+                [
+                  "FIG-JOSEF-ARIMATAEA",
+                  "FIG-ORT-GRAB-VERSCHLOSSEN",
+                  "go"
+                ]
+              ]
+            }
+          }
+        ],
+        "actions_de": [
+          "Die Soldaten setzen Jesus einen Dornenkranz auf; Pilatus führt ihn hinaus: «Seht, der Mensch!»",
+          "Jesus trägt sein Kreuz nach Golgota und wird dort zwischen zwei anderen gekreuzigt.",
+          "Beim Kreuz vertraut Jesus seine Mutter und den Jünger, den er liebte, einander an; dann sagt er: «Es ist vollbracht», und stirbt.",
+          "Josef von Arimatäa und Nikodemus legen den Leib Jesu, in Leinen gebunden, in ein neues Grab im Garten."
+        ],
+        "captions_de": [
+          "«Seht, der Mensch!»: Pilatus führt Jesus mit Dornenkranz und Purpurmantel vor die Menge (Augen, Jesus).",
+          "Kreuzweg: Jesus trägt sein Kreuz nach Golgota (Pfeil), wo drei Kreuze stehen.",
+          "Beim Kreuz: Jesus vertraut Mutter und Jünger einander an (Jünger; Mutter).",
+          "Begräbnis: Josef und Nikodemus bringen Jesus mit Duftstoffen (Krug mit Kräuterzweig) in das neue Felsengrab im Garten (Pfeil)."
+        ],
+        "interpretation_note_de": "Je ein Feld zu Verspottung, Kreuzweg, Wort am Kreuz und Begräbnis; Einzelheiten in den Abschnitten. Gewalt wird nicht gezeigt: die Geisselung und die Schläge nicht, die Kreuzigung nur mit leeren Kreuzen auf Golgota. Das Grab ist mit dem Stein vor dem Eingang gezeichnet, wie ihn [[JHN.20.1]] voraussetzt; so wird es nicht mit dem leeren Grab verwechselt.",
+        "basis": [
+          {
+            "record": "SUM-CH-JHN-019",
+            "field": "summary",
+            "fingerprint": "ed8e7030b34dfe13"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

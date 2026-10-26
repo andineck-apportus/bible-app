@@ -11,102 +11,185 @@
   "panels": [
     {
       "n": 1,
-      "reference": "JHN.15.1-JHN.15.5",
-      "figures": [
-        "FIG-GOTT",
-        "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF"
-      ],
-      "objects": [
-        "FIG-OBJ-WEINSTOCK"
-      ],
+      "reference": "JHN.15.1-JHN.15.3",
+      "figures": [],
+      "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-OBJ-WEINSTOCK",
-            "FIG-GRUPPE-ZWOELF"
-          ]
-        }
-      ],
-      "action_de": "Jesus sagt: Ich bin der wahre Weinstock, mein Vater ist der Weingärtner, ihr seid die Reben. Wer in mir bleibt, bringt viel Frucht.",
-      "stage": {
-        "god_side": "right",
-        "big_side": "right",
-        "arrows": [
-          [
-            "FIG-GOTT",
-            "FIG-OBJ-WEINSTOCK",
-            "act"
-          ]
-        ],
-        "mood": {
-          "FIG-GRUPPE-ZWOELF": "calm"
+      "speech": [],
+      "action_de": "Jesus sagt: «Ich bin der wahre Weinstock, und mein Vater ist der Weingärtner»; die Jünger sind die Reben.",
+      "diagram": {
+        "visual": "levels",
+        "span": 2,
+        "speaker": "FIG-JESUS",
+        "title": {
+          "de": "Ich bin der wahre Weinstock, und mein Vater ist der Weingärtner.",
+          "gsw": "Ich bi de wahr Wiistock, und min Vatter isch de Wiibuur."
         },
-        "big_y": 40
+        "top_label": {
+          "de": "Das Bild:",
+          "gsw": "S Bild:"
+        },
+        "top": [
+          {
+            "a": {
+              "de": "der Weinstock",
+              "gsw": "de Wiistock"
+            },
+            "icons": [
+              "FIG-OBJ-WEINSTOCK"
+            ]
+          },
+          {
+            "a": {
+              "de": "der Weingärtner",
+              "gsw": "de Wiibuur"
+            },
+            "icons": [
+              "FIG-ORT-WEINBERG"
+            ]
+          },
+          {
+            "a": {
+              "de": "die Reben",
+              "gsw": "d Schoss"
+            },
+            "icons": [
+              "FIG-ZEICHEN-WACHSEN"
+            ]
+          }
+        ],
+        "bottom_label": {
+          "de": "Gemeint ist:",
+          "gsw": "Gmeint isch:"
+        },
+        "bottom": [
+          {
+            "a": {
+              "de": "ich",
+              "gsw": "ich"
+            },
+            "who": "FIG-JESUS"
+          },
+          {
+            "a": {
+              "de": "mein Vater",
+              "gsw": "min Vatter"
+            },
+            "icons": [
+              "FIG-GOTT"
+            ]
+          },
+          {
+            "a": {
+              "de": "ihr",
+              "gsw": "ir"
+            },
+            "icons": [
+              "FIG-GRUPPE-JUENGER"
+            ]
+          }
+        ]
       }
     },
     {
       "n": 2,
-      "reference": "JHN.15.6-JHN.15.8",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF"
-      ],
+      "reference": "JHN.15.4-JHN.15.8",
+      "figures": [],
       "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
+      "speech": [],
+      "action_de": "«Bleibt in mir, und ich in euch»: Wer in ihm bleibt, bringt viel Frucht, denn ohne ihn können sie nichts tun; wer nicht in ihm bleibt, wird hinausgeworfen wie die Rebe, verdorrt und verbrennt. Wenn sie in ihm bleiben, wird ihnen geschehen, worum sie bitten.",
+      "keywords": {
+        "de": "Bittet, und es wird euch geschehen",
+        "gsw": "Bitted, und es wird eu gscheh"
+      },
+      "diagram": {
+        "visual": "switch",
+        "span": 2,
+        "speaker": "FIG-JESUS",
+        "title": {
+          "de": "Bleibt in mir, und ich in euch.",
+          "gsw": "Bliibed in mir, und ich in eu."
+        },
+        "cond": {
+          "a": {
+            "de": "Bleibt ihr in mir?",
+            "gsw": "Bliibed ir in mir?"
+          },
           "icons": [
-            "FIG-GRUPPE-ZWOELF",
-            "FIG-OBJ-WEINSTOCK",
-            "FIG-ZEICHEN-BETEN"
+            "FIG-ZEICHEN-BLEIBEN",
+            "FIG-ZEICHEN-FRAGEN"
           ]
-        }
-      ],
-      "action_de": "Wer nicht in Jesus bleibt, wird weggeworfen wie die Rebe und verdorrt. Wenn ihr in mir bleibt, bittet, und es wird euch geschehen; der Vater wird verherrlicht, wenn ihr viel Frucht bringt.",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-ZWOELF": "calm"
+        },
+        "yes": {
+          "a": {
+            "de": "Viel Frucht",
+            "gsw": "Vil Frucht"
+          },
+          "b": {
+            "de": "denn ohne mich könnt ihr nichts tun",
+            "gsw": "dänn ohni mich chönd ir nüüt mache"
+          },
+          "icons": [
+            "FIG-OBJ-WEINSTOCK"
+          ],
+          "tone": "new"
+        },
+        "no": {
+          "a": {
+            "de": "Hinausgeworfen wie die Rebe",
+            "gsw": "Usegworfe wie de Schoss"
+          },
+          "b": {
+            "de": "sie verdorrt und wird ins Feuer geworfen",
+            "gsw": "er verdoret und wird is Füür gworfe"
+          },
+          "icons": [
+            "FIG-ZEICHEN-FEUER"
+          ],
+          "tone": "old"
+        },
+        "yes_label": {
+          "de": "ja",
+          "gsw": "ja"
+        },
+        "no_label": {
+          "de": "nein",
+          "gsw": "nei"
         }
       }
     }
   ],
   "actions_de": [
-    "Jesus sagt: Ich bin der wahre Weinstock, mein Vater ist der Weingärtner, ihr seid die Reben. Wer in mir bleibt, bringt viel Frucht.",
-    "Wer nicht in Jesus bleibt, wird weggeworfen wie die Rebe und verdorrt. Wenn ihr in mir bleibt, bittet, und es wird euch geschehen; der Vater wird verherrlicht, wenn ihr viel Frucht bringt."
+    "Jesus sagt: «Ich bin der wahre Weinstock, und mein Vater ist der Weingärtner»; die Jünger sind die Reben.",
+    "«Bleibt in mir, und ich in euch»: Wer in ihm bleibt, bringt viel Frucht, denn ohne ihn können sie nichts tun; wer nicht in ihm bleibt, wird hinausgeworfen wie die Rebe, verdorrt und verbrennt. Wenn sie in ihm bleiben, wird ihnen geschehen, worum sie bitten."
   ],
   "captions_de": [
-    "Der Weinstock: Jesus: Ich bin der Weinstock, ihr die Reben (Jesus, Weinstock, Jünger); der Vater pflegt ihn (Linie vom Strahlenkranz).",
-    "Bleibt in mir: Jesus sagt: Bleibt am Weinstock und bittet (Jünger, Weinstock, betende Hände)."
+    "Bild und Sache (zwei Ebenen, Bild Jesus, Blase «Ich bin der wahre Weinstock, und mein Vater ist der Weingärtner.»): oben das Bild – Weinstock (Weintraube), Weingärtner (Weinberg), Reben (Keimling); unten, hervorgehoben, was gemeint ist – ich (Jesus), mein Vater (Strahlenkranz), ihr (Jünger).",
+    "Weiche (Bild Jesus, Blase «Bleibt in mir, und ich in euch.»): Bleibt ihr in mir? (bleiben) – ja → viel Frucht, denn ohne mich könnt ihr nichts tun (Weintraube); nein → hinausgeworfen wie die Rebe, verdorrt und ins Feuer geworfen (Flamme); im Band: Bittet, und es wird euch geschehen (beten)."
   ],
-  "interpretation_note_de": "Der Weinstock ist ein Bildwort Jesu ([[JHN.15.1-JHN.15.5]]); die Trauben stehen für die Frucht. Dass unfruchtbare Reben weggenommen und verbrannt werden ([[JHN.15.2]], [[JHN.15.6]]), zeigt das Bild nicht.",
+  "interpretation_note_de": "Zwei Strukturbilder nach dem Bildwort ([[JHN.15.1-JHN.15.8]]): Bild und Sache (Weinstock, Weingärtner, Reben = Jesus, der Vater, die Jünger), dann die Bedingung mit beiden Zweigen: Bleiben bringt Frucht, wer nicht bleibt, verdorrt und kommt ins Feuer ([[JHN.15.6]]; nach der Regel «Tod und Böses nicht ausblenden» gezeigt, als Feuer ohne Figuren). Für die Reben steht der Keimling, weil das Lexikon kein eigenes Zeichen für eine Rebe hat. «Der Vater» ist Gott und als Strahlenkranz gezeichnet, nie als Mensch.",
   "basis": [
     {
       "record": "TU-JHN-015-001-008",
       "field": "summary",
-      "fingerprint": "535802a5e08147a0"
+      "fingerprint": "a5ce894f3423026b"
     },
     {
       "record": "TRANS-JHN-015-001-027-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.15.1-JHN.15.5",
-      "fingerprint": "2224b2e00d43330a"
+      "reference": "JHN.15.1-JHN.15.3",
+      "fingerprint": "36173f2614d2c58d"
     },
     {
       "record": "TRANS-JHN-015-001-027-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.15.6-JHN.15.8",
-      "fingerprint": "ccf9222e11bd1dfb"
+      "reference": "JHN.15.4-JHN.15.8",
+      "fingerprint": "268506526bdbb690"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -183,6 +266,272 @@
               }
             }
           }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.15.1-JHN.15.5",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-OBJ-WEINSTOCK"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-OBJ-WEINSTOCK",
+                  "FIG-GRUPPE-ZWOELF"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: Ich bin der wahre Weinstock, mein Vater ist der Weingärtner, ihr seid die Reben. Wer in mir bleibt, bringt viel Frucht.",
+            "stage": {
+              "god_side": "right",
+              "big_side": "right",
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-OBJ-WEINSTOCK",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "calm"
+              },
+              "big_y": 40
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.15.6-JHN.15.8",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-GRUPPE-ZWOELF",
+                  "FIG-OBJ-WEINSTOCK",
+                  "FIG-ZEICHEN-BETEN"
+                ]
+              }
+            ],
+            "action_de": "Wer nicht in Jesus bleibt, wird weggeworfen wie die Rebe und verdorrt. Wenn ihr in mir bleibt, bittet, und es wird euch geschehen; der Vater wird verherrlicht, wenn ihr viel Frucht bringt.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "calm"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus sagt: Ich bin der wahre Weinstock, mein Vater ist der Weingärtner, ihr seid die Reben. Wer in mir bleibt, bringt viel Frucht.",
+          "Wer nicht in Jesus bleibt, wird weggeworfen wie die Rebe und verdorrt. Wenn ihr in mir bleibt, bittet, und es wird euch geschehen; der Vater wird verherrlicht, wenn ihr viel Frucht bringt."
+        ],
+        "captions_de": [
+          "Der Weinstock: Jesus: Ich bin der Weinstock, ihr die Reben (Jesus, Weinstock, Jünger); der Vater pflegt ihn (Linie vom Strahlenkranz).",
+          "Bleibt in mir: Jesus sagt: Bleibt am Weinstock und bittet (Jünger, Weinstock, betende Hände)."
+        ],
+        "interpretation_note_de": "Der Weinstock ist ein Bildwort Jesu ([[JHN.15.1-JHN.15.5]]); die Trauben stehen für die Frucht. Dass unfruchtbare Reben weggenommen und verbrannt werden ([[JHN.15.2]], [[JHN.15.6]]), zeigt das Bild nicht.",
+        "basis": [
+          {
+            "record": "TU-JHN-015-001-008",
+            "field": "summary",
+            "fingerprint": "535802a5e08147a0"
+          },
+          {
+            "record": "TRANS-JHN-015-001-027-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.15.1-JHN.15.5",
+            "fingerprint": "2224b2e00d43330a"
+          },
+          {
+            "record": "TRANS-JHN-015-001-027-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.15.6-JHN.15.8",
+            "fingerprint": "ccf9222e11bd1dfb"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.15.1-JHN.15.3",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Jesus sagt: «Ich bin der wahre Weinstock, und mein Vater ist der Weingärtner»; die Jünger sind die Reben.",
+            "diagram": {
+              "visual": "levels",
+              "span": 2,
+              "speaker": "FIG-JESUS",
+              "title": {
+                "de": "Ich bin der wahre Weinstock, und mein Vater ist der Weingärtner.",
+                "gsw": "Ich bi de wahr Wiistock, und min Vatter isch de Wiibuur."
+              },
+              "top_label": {
+                "de": "Das Bild:",
+                "gsw": "S Bild:"
+              },
+              "top": [
+                {
+                  "a": {
+                    "de": "der Weinstock",
+                    "gsw": "de Wiistock"
+                  },
+                  "icons": [
+                    "FIG-OBJ-WEINSTOCK"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "der Weingärtner",
+                    "gsw": "de Wiibuur"
+                  },
+                  "icons": [
+                    "FIG-ORT-WEINBERG"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "die Reben",
+                    "gsw": "d Schoss"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-WACHSEN"
+                  ]
+                }
+              ],
+              "bottom_label": {
+                "de": "Gemeint ist:",
+                "gsw": "Gmeint isch:"
+              },
+              "bottom": [
+                {
+                  "a": {
+                    "de": "ich",
+                    "gsw": "ich"
+                  },
+                  "who": "FIG-JESUS"
+                },
+                {
+                  "a": {
+                    "de": "mein Vater",
+                    "gsw": "min Vatter"
+                  },
+                  "icons": [
+                    "FIG-GOTT"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "ihr",
+                    "gsw": "ir"
+                  },
+                  "icons": [
+                    "FIG-GRUPPE-JUENGER"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.15.4-JHN.15.8",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "«Bleibt in mir, und ich in euch»: Wer in ihm bleibt, bringt viel Frucht, denn ohne ihn können sie nichts tun; wer nicht in ihm bleibt, wird hinausgeworfen wie die Rebe, verdorrt und verbrennt. Wenn sie in ihm bleiben, wird ihnen geschehen, worum sie bitten.",
+            "keywords": {
+              "de": "darum bittet, und es wird euch geschehen",
+              "gsw": "bitted drum, und es wird eu gscheh"
+            },
+            "diagram": {
+              "visual": "switch",
+              "span": 2,
+              "speaker": "FIG-JESUS",
+              "title": {
+                "de": "Bleibt in mir, und ich in euch.",
+                "gsw": "Bliibed in mir, und ich in eu."
+              },
+              "cond": {
+                "a": {
+                  "de": "Bleibt ihr in mir?",
+                  "gsw": "Bliibed ir in mir?"
+                },
+                "icons": [
+                  "FIG-ZEICHEN-BLEIBEN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              "yes": {
+                "a": {
+                  "de": "Viel Frucht",
+                  "gsw": "Vil Frucht"
+                },
+                "b": {
+                  "de": "denn ohne mich könnt ihr nichts tun",
+                  "gsw": "dänn ohni mich chönd ir nüüt mache"
+                },
+                "icons": [
+                  "FIG-OBJ-WEINSTOCK"
+                ],
+                "tone": "new"
+              },
+              "no": {
+                "a": {
+                  "de": "Hinausgeworfen wie die Rebe",
+                  "gsw": "Usegworfe wie de Schoss"
+                },
+                "b": {
+                  "de": "sie verdorrt und wird ins Feuer geworfen",
+                  "gsw": "er verdoret und wird is Füür gworfe"
+                },
+                "icons": [
+                  "FIG-ZEICHEN-FEUER"
+                ],
+                "tone": "old"
+              },
+              "yes_label": {
+                "de": "ja",
+                "gsw": "ja"
+              },
+              "no_label": {
+                "de": "nein",
+                "gsw": "nei"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Bild und Sache (zwei Ebenen, Bild Jesus, Blase «Ich bin der wahre Weinstock, und mein Vater ist der Weingärtner.»): oben das Bild – Weinstock (Weintraube), Weingärtner (Weinberg), Reben (Keimling); unten, hervorgehoben, was gemeint ist – ich (Jesus), mein Vater (Strahlenkranz), ihr (Jünger).",
+          "Weiche (Bild Jesus, Blase «Bleibt in mir, und ich in euch.»): Bleibt ihr in mir? (bleiben) – ja → viel Frucht, denn ohne mich könnt ihr nichts tun (Weintraube); nein → hinausgeworfen wie die Rebe, verdorrt und ins Feuer geworfen (Flamme); im Band: darum bittet, und es wird euch geschehen (beten)."
         ]
       }
     }

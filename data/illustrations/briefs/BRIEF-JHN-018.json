@@ -11,96 +11,152 @@
   "panels": [
     {
       "n": 1,
-      "reference": "JHN.18.4-JHN.18.6",
+      "reference": "JHN.18.1-JHN.18.11",
       "figures": [
         "FIG-JESUS",
-        "FIG-JUDAS-ISKARIOT",
-        "FIG-GRUPPE-SOLDATEN",
-        "FIG-ROLLE-TEMPELWACHE"
+        "FIG-GRUPPE-SOLDATEN"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-OBJ-LAMPE"
+      ],
       "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-SOLDATEN",
-          "icons": [
-            "FIG-JESUS"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Ich bin es.",
+            "gsw": "Ich bi s."
+          }
         }
       ],
-      "action_de": "Im Garten sagt Jesus zu denen, die ihn suchen: «Ich bin es»; sie weichen zurück und fallen zu Boden.",
+      "action_de": "Im Garten fragt Jesus die Häscher: «Wen sucht ihr?» und sagt: «Ich bin es»; da weichen sie zurück und fallen zu Boden.",
+      "keywords": {
+        "de": "Wen sucht ihr?",
+        "gsw": "Wän sueched ir?"
+      },
       "stage": {
+        "night": true,
         "pose": {
-          "FIG-GRUPPE-SOLDATEN": "fall",
-          "FIG-ROLLE-TEMPELWACHE": "fall"
+          "FIG-GRUPPE-SOLDATEN": "fall"
         },
         "mood": {
-          "FIG-GRUPPE-SOLDATEN": "surprised",
-          "FIG-ROLLE-TEMPELWACHE": "surprised",
-          "FIG-JUDAS-ISKARIOT": "worried"
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-SOLDATEN": "fear"
         },
         "x": {
-          "FIG-JESUS": 30,
-          "FIG-JUDAS-ISKARIOT": 72,
-          "FIG-GRUPPE-SOLDATEN": 110,
-          "FIG-ROLLE-TEMPELWACHE": 146
-        },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-GRUPPE-SOLDATEN",
-            "act"
-          ]
-        ]
+          "FIG-JESUS": 46,
+          "FIG-GRUPPE-SOLDATEN": 136
+        }
       }
     },
     {
       "n": 2,
+      "reference": "JHN.18.12-JHN.18.24",
+      "figures": [
+        "FIG-HANNAS",
+        "FIG-ROLLE-TEMPELWACHE",
+        "FIG-JESUS"
+      ],
+      "objects": [
+        "FIG-OBJ-FESSEL"
+      ],
+      "signs": [
+        "FIG-ZEICHEN-OHRFEIGE"
+      ],
+      "speech": [
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-HANNAS",
+          "icons": [],
+          "word": {
+            "de": "Ich habe offen zur Welt geredet.",
+            "gsw": "Ich han offe zur Wält gredt."
+          }
+        }
+      ],
+      "action_de": "Gefesselt vor Hannas sagt Jesus: «Ich habe offen zur Welt geredet»; ein Diener schlägt ihn ins Gesicht.",
+      "keywords": {
+        "de": "warum schlägst du mich?",
+        "gsw": "werum schlaasch mich?"
+      },
+      "names": {
+        "FIG-HANNAS": {
+          "de": "Hannas",
+          "gsw": "Hannas"
+        }
+      },
+      "stage": {
+        "hold": {
+          "FIG-JESUS": "FIG-OBJ-FESSEL"
+        },
+        "at": {
+          "FIG-ZEICHEN-OHRFEIGE": "FIG-JESUS"
+        },
+        "mood": {
+          "FIG-HANNAS": "earnest",
+          "FIG-ROLLE-TEMPELWACHE": "angry",
+          "FIG-JESUS": "pain"
+        },
+        "x": {
+          "FIG-HANNAS": 30,
+          "FIG-ROLLE-TEMPELWACHE": 94,
+          "FIG-JESUS": 156
+        }
+      }
+    },
+    {
+      "n": 3,
       "reference": "JHN.18.15-JHN.18.27",
       "figures": [
         "FIG-GRUPPE-DIENER",
         "FIG-PETRUS"
       ],
       "objects": [
-        "FIG-OBJ-KOHLENFEUER",
         "FIG-OBJ-HAHN"
       ],
-      "signs": [
-        "FIG-ZEICHEN-SPRECHEN"
-      ],
+      "signs": [],
       "speech": [
         {
           "from": "FIG-PETRUS",
           "to": "FIG-GRUPPE-DIENER",
-          "icons": [
-            "FIG-ZEICHEN-VERLEUGNEN",
-            "FIG-ZEICHEN-VERLEUGNEN",
-            "FIG-ZEICHEN-VERLEUGNEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Ich bin es nicht.",
+            "gsw": "Ich bi s nöd."
+          }
         }
       ],
-      "action_de": "Im Hof des Hohepriesters verleugnet Petrus Jesus dreimal; da kräht ein Hahn.",
+      "action_de": "Petrus sagt an der Tür und am Kohlenfeuer: «Ich bin es nicht»; beim dritten Mal kräht sogleich ein Hahn.",
+      "keywords": {
+        "de": "und sogleich krähte ein Hahn",
+        "gsw": "und grad hät en Güggel gchräit"
+      },
+      "names": {
+        "FIG-PETRUS": {
+          "de": "Petrus",
+          "gsw": "Petrus"
+        }
+      },
       "stage": {
-        "floor_x": {
-          "FIG-OBJ-KOHLENFEUER": 74,
-          "FIG-OBJ-HAHN": 158
+        "night": true,
+        "mood": {
+          "FIG-GRUPPE-DIENER": "question",
+          "FIG-PETRUS": "fear"
         },
         "x": {
           "FIG-GRUPPE-DIENER": 40,
-          "FIG-PETRUS": 126
+          "FIG-PETRUS": 116
         },
-        "mood": {
-          "FIG-PETRUS": "worried"
-        },
-        "at": {
-          "FIG-ZEICHEN-SPRECHEN": "FIG-OBJ-HAHN"
+        "floor_x": {
+          "FIG-OBJ-HAHN": 166
         }
       }
     },
     {
-      "n": 3,
-      "reference": "JHN.18.33-JHN.18.38",
+      "n": 4,
+      "reference": "JHN.18.28-JHN.18.40",
       "figures": [
         "FIG-PILATUS",
         "FIG-JESUS"
@@ -113,91 +169,60 @@
         {
           "from": "FIG-JESUS",
           "to": "FIG-PILATUS",
-          "icons": [
-            "FIG-OBJ-KRONE",
-            "FIG-ZEICHEN-WELT",
-            "FIG-ZEICHEN-NEIN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Mein Reich ist nicht aus dieser Welt.",
+            "gsw": "Mis Riich isch nöd us dere Wält."
+          }
         }
       ],
-      "action_de": "Jesus sagt Pilatus, sein Reich sei nicht aus dieser Welt und er bezeuge die Wahrheit; Pilatus fragt: «Was ist Wahrheit?»",
+      "action_de": "Vor Pilatus sagt Jesus: «Mein Reich ist nicht aus dieser Welt»; Pilatus findet keine Schuld an ihm, doch die Menge schreit: «Nicht diesen, sondern Barabbas!»",
+      "keywords": {
+        "de": "Nicht diesen, sondern Barabbas!",
+        "gsw": "Nöd dä, sondern de Barabbas!"
+      },
+      "names": {
+        "FIG-PILATUS": {
+          "de": "Pilatus",
+          "gsw": "Pilatus"
+        }
+      },
       "stage": {
         "back_side": "right",
         "before": true,
+        "mood": {
+          "FIG-PILATUS": "question",
+          "FIG-JESUS": "calm"
+        },
         "x": {
-          "FIG-JESUS": 40,
-          "FIG-PILATUS": 150
-        },
-        "mood": {
-          "FIG-PILATUS": "calm"
-        }
-      }
-    },
-    {
-      "n": 4,
-      "reference": "JHN.18.39-JHN.18.40",
-      "figures": [
-        "FIG-GRUPPE-MENGE",
-        "FIG-PILATUS",
-        "FIG-JESUS",
-        "FIG-BARABBAS"
-      ],
-      "objects": [
-        "FIG-OBJ-FESSEL"
-      ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-MENGE",
-          "to": "FIG-PILATUS",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-ABLEHNEN"
-          ]
-        },
-        {
-          "from": "FIG-GRUPPE-MENGE",
-          "to": "FIG-PILATUS",
-          "icons": [
-            "FIG-BARABBAS",
-            "FIG-ZEICHEN-FREILASSEN"
-          ]
-        }
-      ],
-      "action_de": "Pilatus bietet an, Jesus freizulassen; sie schreien nach Barabbas.",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-MENGE": "earnest",
-          "FIG-PILATUS": "worried"
-        },
-        "hold": {
-          "FIG-BARABBAS": "FIG-OBJ-FESSEL"
+          "FIG-PILATUS": 46,
+          "FIG-JESUS": 140
         }
       }
     }
   ],
   "actions_de": [
-    "Im Garten sagt Jesus zu denen, die ihn suchen: «Ich bin es»; sie weichen zurück und fallen zu Boden.",
-    "Im Hof des Hohepriesters verleugnet Petrus Jesus dreimal; da kräht ein Hahn.",
-    "Jesus sagt Pilatus, sein Reich sei nicht aus dieser Welt und er bezeuge die Wahrheit; Pilatus fragt: «Was ist Wahrheit?»",
-    "Pilatus bietet an, Jesus freizulassen; sie schreien nach Barabbas."
+    "Im Garten fragt Jesus die Häscher: «Wen sucht ihr?» und sagt: «Ich bin es»; da weichen sie zurück und fallen zu Boden.",
+    "Gefesselt vor Hannas sagt Jesus: «Ich habe offen zur Welt geredet»; ein Diener schlägt ihn ins Gesicht.",
+    "Petrus sagt an der Tür und am Kohlenfeuer: «Ich bin es nicht»; beim dritten Mal kräht sogleich ein Hahn.",
+    "Vor Pilatus sagt Jesus: «Mein Reich ist nicht aus dieser Welt»; Pilatus findet keine Schuld an ihm, doch die Menge schreit: «Nicht diesen, sondern Barabbas!»"
   ],
   "captions_de": [
-    "«Ich bin es» → sie fallen: Jesus sagt «Ich bin es» (Jesus in der Blase); Soldaten und Tempeldiener fallen zu Boden (Pfeil zu ihnen).",
-    "Verleugnung: Am Feuer bei den Dienern leugnet Petrus dreimal (dreimal sprechender Kopf und Nein-Geste), der Hahn kräht (Schallstriche).",
-    "Vor Pilatus: Jesus sagt Pilatus: Mein Reich ist nicht aus der Welt (Krone, Erdkugel, leer).",
-    "Barabbas: Die Menge verlangt nicht Jesus (Jesus, Person mit gekreuzten Armen), sondern den gefesselten Barabbas frei (Barabbas, gesprengte Kette)."
+    "Im Garten: Jesus sagt zu den Soldaten: «Ich bin es.» (Jesus); sie fallen zu Boden; im Band: Wen sucht ihr? (fragen).",
+    "Bei Hannas: Jesus gefesselt (Fessel) sagt zu Hannas (Name): «Ich habe offen zur Welt geredet.» (reden, Welt); ein Diener schlägt ihn (Hand an der Wange); im Band: warum schlägst du mich? (Schlag, fragen).",
+    "Petrus: Vor den Dienern sagt Petrus (Name): «Ich bin es nicht.» (verleugnen); der Hahn; im Band: und sogleich krähte ein Hahn (Hahn).",
+    "Vor Pilatus: Jesus sagt zu Pilatus (Name): «Mein Reich ist nicht aus dieser Welt.» (Reich, Welt); im Band der Ruf der Menge: Nicht diesen, sondern Barabbas! (nein, Barabbas)."
   ],
-  "interpretation_note_de": "Je ein Feld zu Gefangennahme, Verleugnung, Verhör vor Pilatus und Barabbas; Einzelheiten in den Abschnitten. «Die Juden» und die Hohepriester sind als neutrale Figuren gezeichnet (Menge bzw. Amtskleid), nicht verzerrt oder eingefärbt.",
+  "interpretation_note_de": "Vier Szenen ([[JHN.18.1-JHN.18.40]]): Garten, Verhör bei Hannas, Petrus und der Hahn, Pilatus. Feld 2 und 3 überlappen, weil der Text die Verleugnung des Petrus um das Verhör legt (Schachtelung [[JHN.18.15-JHN.18.27]]). Kein Kuss des Judas, kein Gebetskampf, keine Flucht der Jünger und keine Tränen des Petrus: Das erzählt Johannes nicht. «Die Juden» erscheinen als neutrale Menge.",
   "basis": [
     {
       "record": "SUM-CH-JHN-018",
       "field": "summary",
-      "fingerprint": "0dc6c609abea2a89"
+      "fingerprint": "d6ba2dba20a4d9bf"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -730,6 +755,409 @@
           "Vor Pilatus: Jesus sagt Pilatus: Mein Reich ist nicht aus der Welt (Krone, Erdkugel, leer).",
           "Barabbas: Die Menge verlangt nicht Jesus (Jesus, abwehrende Hand), sondern den gefesselten Barabbas frei (Barabbas, offene Fessel)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.18.4-JHN.18.6",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-JUDAS-ISKARIOT",
+              "FIG-GRUPPE-SOLDATEN",
+              "FIG-ROLLE-TEMPELWACHE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-SOLDATEN",
+                "icons": [
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Im Garten sagt Jesus zu denen, die ihn suchen: «Ich bin es»; sie weichen zurück und fallen zu Boden.",
+            "stage": {
+              "pose": {
+                "FIG-GRUPPE-SOLDATEN": "fall",
+                "FIG-ROLLE-TEMPELWACHE": "fall"
+              },
+              "mood": {
+                "FIG-GRUPPE-SOLDATEN": "surprised",
+                "FIG-ROLLE-TEMPELWACHE": "surprised",
+                "FIG-JUDAS-ISKARIOT": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-JUDAS-ISKARIOT": 72,
+                "FIG-GRUPPE-SOLDATEN": 110,
+                "FIG-ROLLE-TEMPELWACHE": 146
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-SOLDATEN",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.18.15-JHN.18.27",
+            "figures": [
+              "FIG-GRUPPE-DIENER",
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KOHLENFEUER",
+              "FIG-OBJ-HAHN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SPRECHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-GRUPPE-DIENER",
+                "icons": [
+                  "FIG-ZEICHEN-VERLEUGNEN",
+                  "FIG-ZEICHEN-VERLEUGNEN",
+                  "FIG-ZEICHEN-VERLEUGNEN"
+                ]
+              }
+            ],
+            "action_de": "Im Hof des Hohepriesters verleugnet Petrus Jesus dreimal; da kräht ein Hahn.",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KOHLENFEUER": 74,
+                "FIG-OBJ-HAHN": 158
+              },
+              "x": {
+                "FIG-GRUPPE-DIENER": 40,
+                "FIG-PETRUS": 126
+              },
+              "mood": {
+                "FIG-PETRUS": "worried"
+              },
+              "at": {
+                "FIG-ZEICHEN-SPRECHEN": "FIG-OBJ-HAHN"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.18.33-JHN.18.38",
+            "figures": [
+              "FIG-PILATUS",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-PRAETORIUM"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-OBJ-KRONE",
+                  "FIG-ZEICHEN-WELT",
+                  "FIG-ZEICHEN-NEIN"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt Pilatus, sein Reich sei nicht aus dieser Welt und er bezeuge die Wahrheit; Pilatus fragt: «Was ist Wahrheit?»",
+            "stage": {
+              "back_side": "right",
+              "before": true,
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-PILATUS": 150
+              },
+              "mood": {
+                "FIG-PILATUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.18.39-JHN.18.40",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-PILATUS",
+              "FIG-JESUS",
+              "FIG-BARABBAS"
+            ],
+            "objects": [
+              "FIG-OBJ-FESSEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-ABLEHNEN"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-BARABBAS",
+                  "FIG-ZEICHEN-FREILASSEN"
+                ]
+              }
+            ],
+            "action_de": "Pilatus bietet an, Jesus freizulassen; sie schreien nach Barabbas.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-PILATUS": "worried"
+              },
+              "hold": {
+                "FIG-BARABBAS": "FIG-OBJ-FESSEL"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Im Garten sagt Jesus zu denen, die ihn suchen: «Ich bin es»; sie weichen zurück und fallen zu Boden.",
+          "Im Hof des Hohepriesters verleugnet Petrus Jesus dreimal; da kräht ein Hahn.",
+          "Jesus sagt Pilatus, sein Reich sei nicht aus dieser Welt und er bezeuge die Wahrheit; Pilatus fragt: «Was ist Wahrheit?»",
+          "Pilatus bietet an, Jesus freizulassen; sie schreien nach Barabbas."
+        ],
+        "captions_de": [
+          "«Ich bin es» → sie fallen: Jesus sagt «Ich bin es» (Jesus in der Blase); Soldaten und Tempeldiener fallen zu Boden (Pfeil zu ihnen).",
+          "Verleugnung: Am Feuer bei den Dienern leugnet Petrus dreimal (dreimal sprechender Kopf und Nein-Geste), der Hahn kräht (Schallstriche).",
+          "Vor Pilatus: Jesus sagt Pilatus: Mein Reich ist nicht aus der Welt (Krone, Erdkugel, leer).",
+          "Barabbas: Die Menge verlangt nicht Jesus (Jesus, Person mit gekreuzten Armen), sondern den gefesselten Barabbas frei (Barabbas, gesprengte Kette)."
+        ],
+        "interpretation_note_de": "Je ein Feld zu Gefangennahme, Verleugnung, Verhör vor Pilatus und Barabbas; Einzelheiten in den Abschnitten. «Die Juden» und die Hohepriester sind als neutrale Figuren gezeichnet (Menge bzw. Amtskleid), nicht verzerrt oder eingefärbt.",
+        "basis": [
+          {
+            "record": "SUM-CH-JHN-018",
+            "field": "summary",
+            "fingerprint": "0dc6c609abea2a89"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.18.1-JHN.18.11",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-SOLDATEN"
+            ],
+            "objects": [
+              "FIG-OBJ-LAMPE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-SOLDATEN",
+                "icons": [],
+                "word": {
+                  "de": "Ich bin es.",
+                  "gsw": "Ich bi s."
+                }
+              }
+            ],
+            "action_de": "Im Garten fragt Jesus die Häscher: «Wen sucht ihr?» und sagt: «Ich bin es»; da weichen sie zurück und fallen zu Boden.",
+            "keywords": {
+              "de": "Wen sucht ihr?",
+              "gsw": "Wän sueched ir?"
+            },
+            "stage": {
+              "night": true,
+              "pose": {
+                "FIG-GRUPPE-SOLDATEN": "fall"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-SOLDATEN": "fear"
+              },
+              "x": {
+                "FIG-JESUS": 46,
+                "FIG-GRUPPE-SOLDATEN": 136
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.18.12-JHN.18.24",
+            "figures": [
+              "FIG-HANNAS",
+              "FIG-ROLLE-TEMPELWACHE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-FESSEL"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-OHRFEIGE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-HANNAS",
+                "icons": [],
+                "word": {
+                  "de": "Ich habe offen zur Welt geredet.",
+                  "gsw": "Ich han offe zur Wält gredt."
+                }
+              }
+            ],
+            "action_de": "Gefesselt vor Hannas sagt Jesus: «Ich habe offen zur Welt geredet»; ein Diener schlägt ihn ins Gesicht.",
+            "keywords": {
+              "de": "warum schlägst du mich?",
+              "gsw": "werum schlaasch mich?"
+            },
+            "names": {
+              "FIG-HANNAS": {
+                "de": "Hannas",
+                "gsw": "Hannas"
+              }
+            },
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-FESSEL"
+              },
+              "at": {
+                "FIG-ZEICHEN-OHRFEIGE": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-HANNAS": "earnest",
+                "FIG-ROLLE-TEMPELWACHE": "angry",
+                "FIG-JESUS": "pain"
+              },
+              "x": {
+                "FIG-HANNAS": 30,
+                "FIG-ROLLE-TEMPELWACHE": 94,
+                "FIG-JESUS": 156
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.18.15-JHN.18.27",
+            "figures": [
+              "FIG-GRUPPE-DIENER",
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-OBJ-HAHN",
+              "FIG-OBJ-KOHLENFEUER"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-GRUPPE-DIENER",
+                "icons": [],
+                "word": {
+                  "de": "Ich bin es nicht.",
+                  "gsw": "Ich bi s nöd."
+                }
+              }
+            ],
+            "action_de": "Petrus sagt an der Tür und am Kohlenfeuer: «Ich bin es nicht»; beim dritten Mal kräht sogleich ein Hahn.",
+            "keywords": {
+              "de": "und sogleich krähte ein Hahn",
+              "gsw": "und grad hät en Güggel gchräit"
+            },
+            "names": {
+              "FIG-PETRUS": {
+                "de": "Petrus",
+                "gsw": "Petrus"
+              }
+            },
+            "stage": {
+              "night": true,
+              "mood": {
+                "FIG-GRUPPE-DIENER": "question",
+                "FIG-PETRUS": "fear"
+              },
+              "x": {
+                "FIG-GRUPPE-DIENER": 40,
+                "FIG-PETRUS": 136
+              },
+              "floor_x": {
+                "FIG-OBJ-KOHLENFEUER": 92,
+                "FIG-OBJ-HAHN": 174
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.18.28-JHN.18.40",
+            "figures": [
+              "FIG-PILATUS",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-PRAETORIUM"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PILATUS",
+                "icons": [],
+                "word": {
+                  "de": "Mein Reich ist nicht aus dieser Welt.",
+                  "gsw": "Mis Riich isch nöd us dere Wält."
+                }
+              }
+            ],
+            "action_de": "Vor Pilatus sagt Jesus: «Mein Reich ist nicht aus dieser Welt»; Pilatus findet keine Schuld an ihm, doch die Menge schreit: «Nicht diesen, sondern Barabbas!»",
+            "keywords": {
+              "de": "Nicht diesen, sondern Barabbas!",
+              "gsw": "Nöd dä, sondern de Barabbas!"
+            },
+            "names": {
+              "FIG-PILATUS": {
+                "de": "Pilatus",
+                "gsw": "Pilatus"
+              }
+            },
+            "stage": {
+              "back_side": "right",
+              "before": true,
+              "mood": {
+                "FIG-PILATUS": "question",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-PILATUS": 46,
+                "FIG-JESUS": 140
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Im Garten: Jesus sagt zu den Soldaten: «Ich bin es.» (Jesus); sie fallen zu Boden; im Band: Wen sucht ihr? (fragen).",
+          "Bei Hannas: Jesus gefesselt (Fessel) sagt zu Hannas (Name): «Ich habe offen zur Welt geredet.» (reden, Welt); ein Diener schlägt ihn (Hand an der Wange); im Band: warum schlägst du mich? (Schlag, fragen).",
+          "Petrus: Am Kohlenfeuer sagt Petrus (Name): «Ich bin es nicht.» (verleugnen); der Hahn; im Band: und sogleich krähte ein Hahn (Hahn).",
+          "Vor Pilatus: Jesus sagt zu Pilatus (Name): «Mein Reich ist nicht aus dieser Welt.» (Reich, Welt); im Band der Ruf der Menge: Nicht diesen, sondern Barabbas! (nein, Barabbas)."
+        ],
+        "interpretation_note_de": "Vier Szenen ([[JHN.18.1-JHN.18.40]]): Garten, Verhör bei Hannas, Petrus am Kohlenfeuer, Pilatus. Feld 2 und 3 überlappen, weil der Text die Verleugnung des Petrus um das Verhör legt (Schachtelung [[JHN.18.15-JHN.18.27]]). Kein Kuss des Judas, kein Gebetskampf, keine Flucht der Jünger und keine Tränen des Petrus: Das erzählt Johannes nicht. «Die Juden» erscheinen als neutrale Menge."
       }
     }
   ]

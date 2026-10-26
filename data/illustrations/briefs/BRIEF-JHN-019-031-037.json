@@ -11,124 +11,137 @@
   "panels": [
     {
       "n": 1,
-      "reference": "JHN.19.31",
+      "reference": "JHN.19.31-JHN.19.34",
       "figures": [
-        "FIG-GRUPPE-MENGE",
-        "FIG-PILATUS"
-      ],
-      "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-MENGE",
-          "to": "FIG-PILATUS",
-          "icons": [
-            "FIG-ZEICHEN-SABBAT",
-            "FIG-OBJ-KREUZ",
-            "FIG-ZEICHEN-HINAB"
-          ]
-        }
-      ],
-      "action_de": "Weil Rüsttag ist und die Leiber am grossen Sabbat nicht am Kreuz bleiben sollen, bitten die Juden Pilatus, die Gekreuzigten abnehmen zu lassen.",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-MENGE": "earnest",
-          "FIG-PILATUS": "calm"
-        }
-      }
-    },
-    {
-      "n": 2,
-      "reference": "JHN.19.32-JHN.19.34",
-      "figures": [
-        "FIG-ROLLE-SOLDAT"
+        "FIG-ROLLE-SOLDAT",
+        "FIG-JESUS"
       ],
       "objects": [
-        "FIG-ORT-GOLGOTA",
         "FIG-OBJ-LANZE"
       ],
       "signs": [
         "FIG-ZEICHEN-BLUT-UND-WASSER"
       ],
       "speech": [],
-      "action_de": "Die Soldaten brechen den beiden anderen die Beine; bei Jesus sehen sie, dass er schon tot ist. Einer der Soldaten stösst ihm eine Lanze in die Seite, und sogleich kommen Blut und Wasser heraus.",
+      "action_de": "Jesus ist schon tot; darum brechen ihm die Soldaten die Beine nicht. Einer stösst ihm eine Lanze in die Seite, und sogleich kommt Blut und Wasser heraus.",
+      "keywords": {
+        "de": "und sogleich kam Blut und Wasser heraus",
+        "gsw": "und grad isch Bluet und Wasser usechoo"
+      },
       "stage": {
-        "back_side": "right",
-        "x": {
-          "FIG-ROLLE-SOLDAT": 50
+        "pose": {
+          "FIG-JESUS": "cross"
         },
-        "mood": {
-          "FIG-ROLLE-SOLDAT": "earnest"
-        },
-        "arrows": [
-          [
-            "FIG-ROLLE-SOLDAT",
-            "FIG-ZEICHEN-BLUT-UND-WASSER",
-            "act"
-          ]
-        ],
-        "air_x": 124,
-        "air_y": 62,
         "hold": {
           "FIG-ROLLE-SOLDAT": "FIG-OBJ-LANZE"
-        }
+        },
+        "beside": {
+          "FIG-ZEICHEN-BLUT-UND-WASSER": "FIG-JESUS"
+        },
+        "mood": {
+          "FIG-JESUS": "dead",
+          "FIG-ROLLE-SOLDAT": "earnest"
+        },
+        "x": {
+          "FIG-ROLLE-SOLDAT": 40,
+          "FIG-JESUS": 124
+        },
+        "air_x": 20,
+        "air_y": 104
       }
     },
     {
-      "n": 3,
+      "n": 2,
       "reference": "JHN.19.35-JHN.19.37",
-      "figures": [
-        "FIG-LIEBLINGSJUENGER"
-      ],
+      "figures": [],
       "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-LIEBLINGSJUENGER",
-          "to": "FIG-LIEBLINGSJUENGER",
-          "icons": [
-            "FIG-ZEICHEN-SEHEN",
-            "FIG-ZEICHEN-WAHRHEIT",
-            "FIG-ZEICHEN-GLAUBEN"
-          ]
-        }
-      ],
-      "action_de": "Der es gesehen hat, hat es bezeugt, und sein Zeugnis ist wahr, damit auch ihr glaubt. Es geschah, damit die Schrift erfüllt würde.",
-      "stage": {
-        "mood": {
-          "FIG-LIEBLINGSJUENGER": "calm"
-        }
+      "speech": [],
+      "action_de": "Der es gesehen hat, bezeugt es, und sein Zeugnis ist wahr, damit auch ihr glaubt. So erfüllt sich die Schrift: «Kein Knochen von ihm wird zerbrochen werden» und «Sie werden auf den blicken, den sie durchbohrt haben».",
+      "diagram": {
+        "visual": "levels",
+        "span": 2,
+        "title": {
+          "de": "Sein Zeugnis ist wahr, damit auch ihr glaubt.",
+          "gsw": "Sis Zügnis isch wahr, demit au ir glaubed."
+        },
+        "top_label": {
+          "de": "Die Schrift sagt:",
+          "gsw": "D Schrift seit:"
+        },
+        "top": [
+          {
+            "a": {
+              "de": "«Kein Knochen von ihm wird zerbrochen werden.»",
+              "gsw": "«Kei Chnoche vo ihm wird broche.»"
+            },
+            "icons": [
+              "FIG-OBJ-SCHRIFTROLLE"
+            ]
+          },
+          {
+            "a": {
+              "de": "«Sie werden auf den blicken, den sie durchbohrt haben.»",
+              "gsw": "«Si wärded uf dä luege, wo si durchbohrt händ.»"
+            },
+            "icons": [
+              "FIG-OBJ-SCHRIFTROLLE",
+              "FIG-ZEICHEN-SEHEN"
+            ]
+          }
+        ],
+        "bottom_label": {
+          "de": "Das geschah:",
+          "gsw": "Das isch passiert:"
+        },
+        "bottom": [
+          {
+            "a": {
+              "de": "Sie brachen ihm die Beine nicht",
+              "gsw": "Si händ ihm d Bei nöd broche"
+            },
+            "b": {
+              "de": "er war schon tot",
+              "gsw": "er isch scho tot gsii"
+            },
+            "icons": [
+              "FIG-ZEICHEN-NICHT"
+            ]
+          },
+          {
+            "a": {
+              "de": "Ein Soldat stiess ihm die Lanze in die Seite",
+              "gsw": "En Soldat hät ihm d Lanze i d Siite gstoche"
+            },
+            "icons": [
+              "FIG-OBJ-LANZE",
+              "FIG-ZEICHEN-BLUT-UND-WASSER"
+            ]
+          }
+        ]
       }
     }
   ],
   "actions_de": [
-    "Weil Rüsttag ist und die Leiber am grossen Sabbat nicht am Kreuz bleiben sollen, bitten die Juden Pilatus, die Gekreuzigten abnehmen zu lassen.",
-    "Die Soldaten brechen den beiden anderen die Beine; bei Jesus sehen sie, dass er schon tot ist. Einer der Soldaten stösst ihm eine Lanze in die Seite, und sogleich kommen Blut und Wasser heraus.",
-    "Der es gesehen hat, hat es bezeugt, und sein Zeugnis ist wahr, damit auch ihr glaubt. Es geschah, damit die Schrift erfüllt würde."
+    "Jesus ist schon tot; darum brechen ihm die Soldaten die Beine nicht. Einer stösst ihm eine Lanze in die Seite, und sogleich kommt Blut und Wasser heraus.",
+    "Der es gesehen hat, bezeugt es, und sein Zeugnis ist wahr, damit auch ihr glaubt. So erfüllt sich die Schrift: «Kein Knochen von ihm wird zerbrochen werden» und «Sie werden auf den blicken, den sie durchbohrt haben»."
   ],
   "captions_de": [
-    "Vor dem Sabbat: Die Menge bittet Pilatus: wegen des Sabbats (Lichter) die Gekreuzigten abnehmen (Kreuz, Pfeil nach unten).",
-    "Lanzenstich → Blut und Wasser: Ein Soldat mit Lanze sticht zum mittleren Kreuz hin (Pfeil); sogleich kommen Blut und Wasser heraus (roter und blauer Tropfen am Pfeilende).",
-    "Zeugnis: Der Augenzeuge wendet sich an die Lesenden: Ich habe es gesehen (Augen), es ist wahr (Häkchen), damit ihr glaubt (Herz)."
+    "Die Lanze: Ein Soldat mit der Lanze beim toten Jesus am Kreuz; bei Jesus zwei Tropfen, rot und blau (Blut und Wasser); im Band: und sogleich kam Blut und Wasser heraus (Blut und Wasser).",
+    "Schrift und Ereignis (zwei Ebenen, Titel «Sein Zeugnis ist wahr, damit auch ihr glaubt.»): oben die Schrift – «Kein Knochen von ihm wird zerbrochen werden» (Schriftrolle), «Sie werden auf den blicken, den sie durchbohrt haben» (Schriftrolle, Augen); unten, hervorgehoben, was geschah – sie brachen ihm die Beine nicht, er war schon tot (nicht), die Lanze in die Seite (Lanze, Blut und Wasser)."
   ],
-  "interpretation_note_de": "Das Brechen der Beine und der Lanzenstich werden nicht ausgemalt: nur die Lanze zum leeren mittleren Kreuz und zwei kleine Tropfen ([[JHN.19.34]]). Den Zeugen ([[JHN.19.35]]) nennt der Text nicht mit Namen; das Bild zeigt den Jünger, den Jesus liebte, der beim Kreuz stand ([[JHN.19.26]]; vgl. [[JHN.21.24]]) – das ist Deutung. Die Menge steht für «ihr», die Lesenden. Die beiden Schriftworte ([[JHN.19.36-JHN.19.37]]) zeigt das Bild nicht.",
+  "interpretation_note_de": "Zwei Felder ([[JHN.19.31-JHN.19.37]]): der Lanzenstich beim toten Jesus mit Blut und Wasser als Zeichen (ohne Wunde im Detail), dann die zwei Schriftworte über dem Ereignis (zwei Ebenen, Zitat oben, Ereignis unten) mit dem Zeugnis des Augenzeugen als Titel. Die zwei Mitgekreuzigten, denen die Beine gebrochen werden, sind nicht gezeichnet, weil das Bildlexikon für sie keine Figur hat. Wer der Zeuge ist, sagt der Text hier nicht.",
   "basis": [
     {
       "record": "TU-JHN-019-031-037",
       "field": "summary",
-      "fingerprint": "b534a453c2399ddc"
+      "fingerprint": "0330892f3d83161a"
     },
     {
       "record": "TRANS-JHN-019-001-042-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.19.31",
-      "fingerprint": "3e7fa7e0cad32280"
-    },
-    {
-      "record": "TRANS-JHN-019-001-042-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "JHN.19.32-JHN.19.34",
-      "fingerprint": "242650955528a122"
+      "reference": "JHN.19.31-JHN.19.34",
+      "fingerprint": "c32434040cf4f9d7"
     },
     {
       "record": "TRANS-JHN-019-001-042-DE-WORKING",
@@ -138,7 +151,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -359,6 +372,142 @@
           "Lanzenstich → Blut und Wasser: Ein Soldat mit Lanze sticht zum mittleren Kreuz hin (Pfeil); sogleich kommen Blut und Wasser heraus (roter und blauer Tropfen am Pfeilende).",
           "Zeugnis: Der Augenzeuge wendet sich an die Lesenden: Ich habe es gesehen (Auge), es ist wahr (Häkchen), damit ihr glaubt (Herz)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.19.31",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-PILATUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-ZEICHEN-SABBAT",
+                  "FIG-OBJ-KREUZ",
+                  "FIG-ZEICHEN-HINAB"
+                ]
+              }
+            ],
+            "action_de": "Weil Rüsttag ist und die Leiber am grossen Sabbat nicht am Kreuz bleiben sollen, bitten die Juden Pilatus, die Gekreuzigten abnehmen zu lassen.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-PILATUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.19.32-JHN.19.34",
+            "figures": [
+              "FIG-ROLLE-SOLDAT"
+            ],
+            "objects": [
+              "FIG-ORT-GOLGOTA",
+              "FIG-OBJ-LANZE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-BLUT-UND-WASSER"
+            ],
+            "speech": [],
+            "action_de": "Die Soldaten brechen den beiden anderen die Beine; bei Jesus sehen sie, dass er schon tot ist. Einer der Soldaten stösst ihm eine Lanze in die Seite, und sogleich kommen Blut und Wasser heraus.",
+            "stage": {
+              "back_side": "right",
+              "x": {
+                "FIG-ROLLE-SOLDAT": 50
+              },
+              "mood": {
+                "FIG-ROLLE-SOLDAT": "earnest"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-SOLDAT",
+                  "FIG-ZEICHEN-BLUT-UND-WASSER",
+                  "act"
+                ]
+              ],
+              "air_x": 124,
+              "air_y": 62,
+              "hold": {
+                "FIG-ROLLE-SOLDAT": "FIG-OBJ-LANZE"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.19.35-JHN.19.37",
+            "figures": [
+              "FIG-LIEBLINGSJUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-LIEBLINGSJUENGER",
+                "to": "FIG-LIEBLINGSJUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-SEHEN",
+                  "FIG-ZEICHEN-WAHRHEIT",
+                  "FIG-ZEICHEN-GLAUBEN"
+                ]
+              }
+            ],
+            "action_de": "Der es gesehen hat, hat es bezeugt, und sein Zeugnis ist wahr, damit auch ihr glaubt. Es geschah, damit die Schrift erfüllt würde.",
+            "stage": {
+              "mood": {
+                "FIG-LIEBLINGSJUENGER": "calm"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Weil Rüsttag ist und die Leiber am grossen Sabbat nicht am Kreuz bleiben sollen, bitten die Juden Pilatus, die Gekreuzigten abnehmen zu lassen.",
+          "Die Soldaten brechen den beiden anderen die Beine; bei Jesus sehen sie, dass er schon tot ist. Einer der Soldaten stösst ihm eine Lanze in die Seite, und sogleich kommen Blut und Wasser heraus.",
+          "Der es gesehen hat, hat es bezeugt, und sein Zeugnis ist wahr, damit auch ihr glaubt. Es geschah, damit die Schrift erfüllt würde."
+        ],
+        "captions_de": [
+          "Vor dem Sabbat: Die Menge bittet Pilatus: wegen des Sabbats (Lichter) die Gekreuzigten abnehmen (Kreuz, Pfeil nach unten).",
+          "Lanzenstich → Blut und Wasser: Ein Soldat mit Lanze sticht zum mittleren Kreuz hin (Pfeil); sogleich kommen Blut und Wasser heraus (roter und blauer Tropfen am Pfeilende).",
+          "Zeugnis: Der Augenzeuge wendet sich an die Lesenden: Ich habe es gesehen (Augen), es ist wahr (Häkchen), damit ihr glaubt (Herz)."
+        ],
+        "interpretation_note_de": "Das Brechen der Beine und der Lanzenstich werden nicht ausgemalt: nur die Lanze zum leeren mittleren Kreuz und zwei kleine Tropfen ([[JHN.19.34]]). Den Zeugen ([[JHN.19.35]]) nennt der Text nicht mit Namen; das Bild zeigt den Jünger, den Jesus liebte, der beim Kreuz stand ([[JHN.19.26]]; vgl. [[JHN.21.24]]) – das ist Deutung. Die Menge steht für «ihr», die Lesenden. Die beiden Schriftworte ([[JHN.19.36-JHN.19.37]]) zeigt das Bild nicht.",
+        "basis": [
+          {
+            "record": "TU-JHN-019-031-037",
+            "field": "summary",
+            "fingerprint": "b534a453c2399ddc"
+          },
+          {
+            "record": "TRANS-JHN-019-001-042-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.19.31",
+            "fingerprint": "3e7fa7e0cad32280"
+          },
+          {
+            "record": "TRANS-JHN-019-001-042-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.19.32-JHN.19.34",
+            "fingerprint": "242650955528a122"
+          },
+          {
+            "record": "TRANS-JHN-019-001-042-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.19.35-JHN.19.37",
+            "fingerprint": "f2822b1319722aeb"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

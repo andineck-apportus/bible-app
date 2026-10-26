@@ -1,0 +1,152 @@
+{
+ "id": "CORE-JHN-016-016-024",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "JHN.16.16-JHN.16.24",
+ "target": "TU-JHN-016-016-024",
+ "core_de": "Jesus sagt: «Eine kleine Weile, und ihr seht mich nicht mehr, und wieder eine kleine Weile, und ihr werdet mich sehen»; die Jünger verstehen es nicht; er antwortet: Sie werden weinen und klagen, die Welt aber wird sich freuen, doch ihre Trauer wird zur Freude werden – wie bei einer Frau, die gebiert, Schmerz und dann Freude ist; er wird sie wieder sehen, und ihre Freude nimmt niemand von ihnen; was sie den Vater in seinem Namen bitten, wird er ihnen geben, damit ihre Freude vollkommen ist.",
+ "mode": "speech",
+ "voice": {
+  "speaker": "FIG-JESUS",
+  "addressee": "FIG-GRUPPE-JUENGER"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Rätselwort – Unverständnis – Antwort – Bitten",
+    "range": "JHN.16.16-JHN.16.24",
+    "elements": [
+     {
+      "label": "«Eine kleine Weile, und ihr seht mich nicht mehr, und wieder eine kleine Weile, und ihr werdet mich sehen»",
+      "ref": "JHN.16.16",
+      "role": "Rätselwort"
+     },
+     {
+      "label": "Die Jünger fragen einander: «Wir wissen nicht, wovon er redet»",
+      "ref": "JHN.16.17-JHN.16.19",
+      "role": "Unverständnis"
+     },
+     {
+      "label": "Trauer → Freude",
+      "ref": "JHN.16.20-JHN.16.22",
+      "role": "Antwort",
+      "child": "s2"
+     },
+     {
+      "label": "«Bittet, und ihr werdet empfangen, damit eure Freude vollkommen ist»",
+      "ref": "JHN.16.23-JHN.16.24",
+      "role": "Bitten"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "JHN.16.16"
+      },
+      {
+       "who": "FIG-GRUPPE-JUENGER",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "JHN.16.17-JHN.16.18"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "JHN.16.19-JHN.16.24"
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "«Der Vater» ist Gott; im Bild als Strahlenkranz, nie als Mensch."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "reversal",
+    "subtype": "jetzt Trauer ↔ dann Freude, mit Bildwort von der Gebärenden",
+    "range": "JHN.16.20-JHN.16.22",
+    "elements": [
+     {
+      "label": "Ihr werdet weinen und klagen, die Welt aber wird sich freuen → eure Trauer wird zur Freude werden",
+      "ref": "JHN.16.20"
+     },
+     {
+      "label": "Die Frau hat Schmerz, weil ihre Stunde gekommen ist → Freude, dass ein Mensch in die Welt geboren ist",
+      "ref": "JHN.16.21",
+      "role": "Bildwort"
+     },
+     {
+      "label": "Jetzt habt ihr Trauer → ich werde euch wieder sehen, und eure Freude nimmt niemand von euch",
+      "ref": "JHN.16.22"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "JHN.16.16-JHN.16.19",
+   "text_de": "«Eine kleine Weile, und ihr seht mich nicht mehr …» – die Jünger fragen einander: «Wir wissen nicht, wovon er redet.»",
+   "reason_de": "Rätselwort und Unverständnis (Kriterien 2 und 4).",
+   "recognition_de": "Eine kleine Weile.",
+   "keywords": [
+    "Eine kleine Weile, und ihr seht mich nicht mehr",
+    "Wir wissen nicht, wovon er redet"
+   ]
+  },
+  {
+   "reference": "JHN.16.20-JHN.16.22",
+   "text_de": "Trauer wird zur Freude, wie bei der Frau, die gebiert; ihre Freude nimmt niemand von ihnen.",
+   "reason_de": "Umkehrung mit Bildwort (Kriterium 1).",
+   "recognition_de": "Die Gebärende.",
+   "keywords": [
+    "Ihr werdet traurig sein, aber eure Trauer wird zur Freude werden",
+    "Wenn eine Frau gebiert, hat sie Schmerz",
+    "eure Freude nimmt niemand von euch"
+   ]
+  },
+  {
+   "reference": "JHN.16.23-JHN.16.24",
+   "text_de": "Was sie den Vater in seinem Namen bitten, wird er geben: «Bittet, und ihr werdet empfangen, damit eure Freude vollkommen ist.»",
+   "reason_de": "Ausgang (Kriterium 3).",
+   "recognition_de": "Bitten und empfangen.",
+   "keywords": [
+    "Bittet, und ihr werdet empfangen, damit eure Freude vollkommen ist"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Worauf sich «eine kleine Weile» genau bezieht (Tod und Auferstehung oder Wiederkunft), sagt der Text hier nicht – Deutung, im Bild offen"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-ROLLE-FRAU",
+  "FIG-GOTT"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "JHN.16.16-JHN.16.24",
+   "fingerprint": "ca5d07dceaf21c29"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Joh 15–21, Buch Johannes und Lk 11 nach Joh 1–14; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

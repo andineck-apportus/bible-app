@@ -11,7 +11,7 @@
   "panels": [
     {
       "n": 1,
-      "reference": "JHN.18.25",
+      "reference": "JHN.18.25-JHN.18.26",
       "figures": [
         "FIG-GRUPPE-DIENER",
         "FIG-PETRUS"
@@ -24,136 +24,100 @@
         {
           "from": "FIG-GRUPPE-DIENER",
           "to": "FIG-PETRUS",
-          "icons": [
-            "FIG-GRUPPE-JUENGER",
-            "FIG-JESUS",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Bist du etwa auch einer seiner Jünger?",
+            "gsw": "Bisch du öppe au eine vo sine Jünger?"
+          }
         },
         {
           "from": "FIG-PETRUS",
           "to": "FIG-GRUPPE-DIENER",
-          "icons": [
-            "FIG-ZEICHEN-VERLEUGNEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Ich bin es nicht.",
+            "gsw": "Ich bi s nöd."
+          }
         }
       ],
-      "action_de": "Simon Petrus steht da und wärmt sich. Man fragt ihn: «Bist du etwa auch einer seiner Jünger?» Er leugnet: «Ich bin es nicht.»",
+      "action_de": "Am Feuer fragen sie Petrus: «Bist du etwa auch einer seiner Jünger?» Er leugnet: «Ich bin es nicht.» Ein Verwandter des Malchus fragt: «Habe ich dich nicht im Garten mit ihm gesehen?»",
+      "keywords": {
+        "de": "Habe ich dich nicht im Garten mit ihm gesehen?",
+        "gsw": "Han ich dich nöd im Garte mit ihm gseh?"
+      },
+      "names": {
+        "FIG-PETRUS": {
+          "de": "Petrus",
+          "gsw": "Petrus"
+        }
+      },
       "stage": {
-        "floor_x": {
-          "FIG-OBJ-KOHLENFEUER": 80
+        "night": true,
+        "mood": {
+          "FIG-GRUPPE-DIENER": "question",
+          "FIG-PETRUS": "fear"
         },
         "x": {
-          "FIG-GRUPPE-DIENER": 46,
-          "FIG-PETRUS": 138
+          "FIG-GRUPPE-DIENER": 34,
+          "FIG-PETRUS": 152
         },
-        "mood": {
-          "FIG-PETRUS": "worried"
+        "floor_x": {
+          "FIG-OBJ-KOHLENFEUER": 100
         }
       }
     },
     {
       "n": 2,
-      "reference": "JHN.18.26-JHN.18.27",
-      "figures": [
-        "FIG-ROLLE-DIENER",
-        "FIG-PETRUS"
-      ],
-      "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-ROLLE-DIENER",
-          "to": "FIG-PETRUS",
-          "icons": [
-            "FIG-ORT-GARTEN",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
-        },
-        {
-          "from": "FIG-PETRUS",
-          "to": "FIG-ROLLE-DIENER",
-          "icons": [
-            "FIG-ZEICHEN-VERLEUGNEN"
-          ]
-        }
-      ],
-      "action_de": "Ein Knecht des Hohepriesters, ein Verwandter des Malchus, fragt: «Habe ich dich nicht im Garten mit ihm gesehen?» Petrus leugnet wieder.",
-      "stage": {
-        "x": {
-          "FIG-ROLLE-DIENER": 40,
-          "FIG-PETRUS": 152
-        },
-        "mood": {
-          "FIG-PETRUS": "worried",
-          "FIG-ROLLE-DIENER": "earnest"
-        }
-      }
-    },
-    {
-      "n": 3,
       "reference": "JHN.18.27",
       "figures": [
         "FIG-PETRUS"
       ],
       "objects": [
-        "FIG-OBJ-HAHN"
+        "FIG-OBJ-HAHN",
+        "FIG-OBJ-KOHLENFEUER"
       ],
-      "signs": [
-        "FIG-ZEICHEN-VERLEUGNEN",
-        "FIG-ZEICHEN-SPRECHEN"
-      ],
+      "signs": [],
       "speech": [],
-      "action_de": "Sogleich kräht ein Hahn.",
+      "action_de": "Da leugnet Petrus wieder, und sogleich kräht ein Hahn.",
+      "keywords": {
+        "de": "und sogleich krähte ein Hahn",
+        "gsw": "und grad hät en Güggel gchräit"
+      },
       "stage": {
-        "count": {
-          "FIG-ZEICHEN-VERLEUGNEN": 3
-        },
-        "at": {
-          "FIG-ZEICHEN-SPRECHEN": "FIG-OBJ-HAHN"
-        },
-        "x": {
-          "FIG-PETRUS": 62
-        },
-        "floor_x": {
-          "FIG-OBJ-HAHN": 124
-        },
+        "night": true,
         "mood": {
           "FIG-PETRUS": "worried"
         },
-        "air_x": 18,
-        "air_y": 46
+        "x": {
+          "FIG-PETRUS": 90
+        },
+        "floor_x": {
+          "FIG-OBJ-HAHN": 34,
+          "FIG-OBJ-KOHLENFEUER": 150
+        }
       }
     }
   ],
   "actions_de": [
-    "Simon Petrus steht da und wärmt sich. Man fragt ihn: «Bist du etwa auch einer seiner Jünger?» Er leugnet: «Ich bin es nicht.»",
-    "Ein Knecht des Hohepriesters, ein Verwandter des Malchus, fragt: «Habe ich dich nicht im Garten mit ihm gesehen?» Petrus leugnet wieder.",
-    "Sogleich kräht ein Hahn."
+    "Am Feuer fragen sie Petrus: «Bist du etwa auch einer seiner Jünger?» Er leugnet: «Ich bin es nicht.» Ein Verwandter des Malchus fragt: «Habe ich dich nicht im Garten mit ihm gesehen?»",
+    "Da leugnet Petrus wieder, und sogleich kräht ein Hahn."
   ],
   "captions_de": [
-    "Zweite Verleugnung: Am Feuer fragen die Diener Petrus nach den Jüngern Jesu (Jünger, Jesus, ?); Petrus: nein (sprechender Kopf und Nein-Geste).",
-    "Dritte Frage: Ein Knecht fragt: Warst du im Garten? (Bäume, ?); Petrus: nein (sprechender Kopf und Nein-Geste).",
-    "Der Hahn kräht: Petrus hat dreimal geleugnet (drei Zeichen), da kräht ein Hahn (Schallstriche)."
+    "Wieder nein: Die Diener am Kohlenfeuer fragen Petrus (Name): «Bist du etwa auch einer seiner Jünger?» (fragen, Jünger); Petrus: «Ich bin es nicht.» (verleugnen); im Band: Habe ich dich nicht im Garten mit ihm gesehen? (sehen, fragen).",
+    "Der Hahn: Petrus am Kohlenfeuer, der Hahn kräht; im Band: und sogleich krähte ein Hahn (Hahn)."
   ],
-  "interpretation_note_de": "Der Knecht ist nach [[JHN.18.26]] ein Verwandter des Malchus; er ist als Diener gezeichnet. Die drei Zeichen «verleugnen» über Petrus fassen die drei Antworten zusammen ([[JHN.18.17]], [[JHN.18.25]], [[JHN.18.27]]); die Schallstriche beim Hahn stehen für das Krähen.",
+  "interpretation_note_de": "Zwei Felder ([[JHN.18.25-JHN.18.27]]): die zweite und dritte Verneinung am Kohlenfeuer, dann der Hahn (angekündigt in [[JHN.13.38]]). Johannes erzählt nicht, dass Petrus weint; das Bild fügt keine Tränen hinzu. Die Fragenden erscheinen als Diener; der Verwandte des Malchus spricht im Band.",
   "basis": [
     {
       "record": "TU-JHN-018-025-027",
       "field": "summary",
-      "fingerprint": "01c59c24ac071885"
+      "fingerprint": "0a90a61ee2fed29f"
     },
     {
       "record": "TRANS-JHN-018-001-040-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.18.25",
-      "fingerprint": "b7554630fb83c174"
-    },
-    {
-      "record": "TRANS-JHN-018-001-040-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "JHN.18.26-JHN.18.27",
-      "fingerprint": "ba000478c0b38b4b"
+      "reference": "JHN.18.25-JHN.18.26",
+      "fingerprint": "6b9e47db8578e592"
     },
     {
       "record": "TRANS-JHN-018-001-040-DE-WORKING",
@@ -163,7 +127,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -299,6 +263,263 @@
           "Zweite Verleugnung: Am Feuer fragen die Diener Petrus nach den Jüngern Jesu (Jünger, Jesus, ?); Petrus: nein (getrennte Kettenglieder).",
           "Dritte Frage: Ein Knecht fragt: Warst du im Garten? (Bäume, ?); Petrus: nein (getrennte Kettenglieder).",
           "Der Hahn kräht: Petrus hat dreimal geleugnet (drei Zeichen), da kräht ein Hahn (Schallstriche)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.18.25",
+            "figures": [
+              "FIG-GRUPPE-DIENER",
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KOHLENFEUER"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-DIENER",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-GRUPPE-DIENER",
+                "icons": [
+                  "FIG-ZEICHEN-VERLEUGNEN"
+                ]
+              }
+            ],
+            "action_de": "Simon Petrus steht da und wärmt sich. Man fragt ihn: «Bist du etwa auch einer seiner Jünger?» Er leugnet: «Ich bin es nicht.»",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KOHLENFEUER": 80
+              },
+              "x": {
+                "FIG-GRUPPE-DIENER": 46,
+                "FIG-PETRUS": 138
+              },
+              "mood": {
+                "FIG-PETRUS": "worried"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.18.26-JHN.18.27",
+            "figures": [
+              "FIG-ROLLE-DIENER",
+              "FIG-PETRUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-DIENER",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-ORT-GARTEN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-ROLLE-DIENER",
+                "icons": [
+                  "FIG-ZEICHEN-VERLEUGNEN"
+                ]
+              }
+            ],
+            "action_de": "Ein Knecht des Hohepriesters, ein Verwandter des Malchus, fragt: «Habe ich dich nicht im Garten mit ihm gesehen?» Petrus leugnet wieder.",
+            "stage": {
+              "x": {
+                "FIG-ROLLE-DIENER": 40,
+                "FIG-PETRUS": 152
+              },
+              "mood": {
+                "FIG-PETRUS": "worried",
+                "FIG-ROLLE-DIENER": "earnest"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.18.27",
+            "figures": [
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-OBJ-HAHN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-VERLEUGNEN",
+              "FIG-ZEICHEN-SPRECHEN"
+            ],
+            "speech": [],
+            "action_de": "Sogleich kräht ein Hahn.",
+            "stage": {
+              "count": {
+                "FIG-ZEICHEN-VERLEUGNEN": 3
+              },
+              "at": {
+                "FIG-ZEICHEN-SPRECHEN": "FIG-OBJ-HAHN"
+              },
+              "x": {
+                "FIG-PETRUS": 62
+              },
+              "floor_x": {
+                "FIG-OBJ-HAHN": 124
+              },
+              "mood": {
+                "FIG-PETRUS": "worried"
+              },
+              "air_x": 18,
+              "air_y": 46
+            }
+          }
+        ],
+        "actions_de": [
+          "Simon Petrus steht da und wärmt sich. Man fragt ihn: «Bist du etwa auch einer seiner Jünger?» Er leugnet: «Ich bin es nicht.»",
+          "Ein Knecht des Hohepriesters, ein Verwandter des Malchus, fragt: «Habe ich dich nicht im Garten mit ihm gesehen?» Petrus leugnet wieder.",
+          "Sogleich kräht ein Hahn."
+        ],
+        "captions_de": [
+          "Zweite Verleugnung: Am Feuer fragen die Diener Petrus nach den Jüngern Jesu (Jünger, Jesus, ?); Petrus: nein (sprechender Kopf und Nein-Geste).",
+          "Dritte Frage: Ein Knecht fragt: Warst du im Garten? (Bäume, ?); Petrus: nein (sprechender Kopf und Nein-Geste).",
+          "Der Hahn kräht: Petrus hat dreimal geleugnet (drei Zeichen), da kräht ein Hahn (Schallstriche)."
+        ],
+        "interpretation_note_de": "Der Knecht ist nach [[JHN.18.26]] ein Verwandter des Malchus; er ist als Diener gezeichnet. Die drei Zeichen «verleugnen» über Petrus fassen die drei Antworten zusammen ([[JHN.18.17]], [[JHN.18.25]], [[JHN.18.27]]); die Schallstriche beim Hahn stehen für das Krähen.",
+        "basis": [
+          {
+            "record": "TU-JHN-018-025-027",
+            "field": "summary",
+            "fingerprint": "01c59c24ac071885"
+          },
+          {
+            "record": "TRANS-JHN-018-001-040-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.18.25",
+            "fingerprint": "b7554630fb83c174"
+          },
+          {
+            "record": "TRANS-JHN-018-001-040-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.18.26-JHN.18.27",
+            "fingerprint": "ba000478c0b38b4b"
+          },
+          {
+            "record": "TRANS-JHN-018-001-040-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.18.27",
+            "fingerprint": "2d5078a438414fc7"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.18.25-JHN.18.26",
+            "figures": [
+              "FIG-GRUPPE-DIENER",
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KOHLENFEUER"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-DIENER",
+                "to": "FIG-PETRUS",
+                "icons": [],
+                "word": {
+                  "de": "Bist du etwa auch einer seiner Jünger?",
+                  "gsw": "Bisch du öppe au eine vo sine Jünger?"
+                }
+              },
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-GRUPPE-DIENER",
+                "icons": [],
+                "word": {
+                  "de": "Ich bin es nicht.",
+                  "gsw": "Ich bi s nöd."
+                }
+              }
+            ],
+            "action_de": "Am Feuer fragen sie Petrus: «Bist du etwa auch einer seiner Jünger?» Er leugnet: «Ich bin es nicht.» Ein Verwandter des Malchus fragt: «Habe ich dich nicht im Garten mit ihm gesehen?»",
+            "keywords": {
+              "de": "Habe ich dich nicht im Garten mit ihm gesehen?",
+              "gsw": "Han ich dich nöd im Garte mit ihm gseh?"
+            },
+            "names": {
+              "FIG-PETRUS": {
+                "de": "Petrus",
+                "gsw": "Petrus"
+              }
+            },
+            "stage": {
+              "night": true,
+              "mood": {
+                "FIG-GRUPPE-DIENER": "question",
+                "FIG-PETRUS": "fear"
+              },
+              "x": {
+                "FIG-GRUPPE-DIENER": 40,
+                "FIG-PETRUS": 136
+              },
+              "floor_x": {
+                "FIG-OBJ-KOHLENFEUER": 92
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.18.27",
+            "figures": [
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-OBJ-HAHN",
+              "FIG-OBJ-KOHLENFEUER"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Da leugnet Petrus wieder, und sogleich kräht ein Hahn.",
+            "keywords": {
+              "de": "und sogleich krähte ein Hahn",
+              "gsw": "und grad hät en Güggel gchräit"
+            },
+            "stage": {
+              "night": true,
+              "mood": {
+                "FIG-PETRUS": "worried"
+              },
+              "x": {
+                "FIG-PETRUS": 90
+              },
+              "floor_x": {
+                "FIG-OBJ-HAHN": 34,
+                "FIG-OBJ-KOHLENFEUER": 150
+              }
+            }
+          }
         ]
       }
     }

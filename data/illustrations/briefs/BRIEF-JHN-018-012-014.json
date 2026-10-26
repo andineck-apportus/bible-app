@@ -11,10 +11,9 @@
   "panels": [
     {
       "n": 1,
-      "reference": "JHN.18.12-JHN.18.13",
+      "reference": "JHN.18.12-JHN.18.14",
       "figures": [
         "FIG-GRUPPE-SOLDATEN",
-        "FIG-ROLLE-TEMPELWACHE",
         "FIG-JESUS",
         "FIG-HANNAS"
       ],
@@ -23,84 +22,64 @@
       ],
       "signs": [],
       "speech": [],
-      "action_de": "Die Kohorte, ihr Oberst und die Diener nehmen Jesus fest, fesseln ihn und führen ihn zuerst zu Hannas, dem Schwiegervater des Hohepriesters Kajafas.",
+      "action_de": "Die Kohorte und die Diener nehmen Jesus fest, fesseln ihn und führen ihn zuerst zu Hannas, dem Schwiegervater des Kajafas.",
+      "keywords": {
+        "de": "es sei besser, dass ein Mensch für das Volk sterbe",
+        "gsw": "es sig besser, wänn ein Mänsch für s Volk stirbt"
+      },
+      "names": {
+        "FIG-HANNAS": {
+          "de": "Hannas",
+          "gsw": "Hannas"
+        }
+      },
       "stage": {
+        "night": true,
         "hold": {
           "FIG-JESUS": "FIG-OBJ-FESSEL"
         },
-        "mood": {
-          "FIG-GRUPPE-SOLDATEN": "earnest",
-          "FIG-ROLLE-TEMPELWACHE": "earnest",
-          "FIG-HANNAS": "earnest"
-        },
         "arrows": [
           [
+            "FIG-GRUPPE-SOLDATEN",
             "FIG-JESUS",
-            "FIG-HANNAS",
-            "go"
+            "act"
           ]
-        ]
-      }
-    },
-    {
-      "n": 2,
-      "reference": "JHN.18.14",
-      "figures": [
-        "FIG-KAJAFAS",
-        "FIG-GRUPPE-HOHER-RAT"
-      ],
-      "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-KAJAFAS",
-          "to": "FIG-GRUPPE-HOHER-RAT",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-TOD",
-            "FIG-GRUPPE-VOLK"
-          ]
-        }
-      ],
-      "action_de": "Rückblick: Kajafas hatte den Juden geraten, es sei besser, dass ein Mensch für das Volk sterbe.",
-      "stage": {
+        ],
         "mood": {
-          "FIG-KAJAFAS": "earnest",
-          "FIG-GRUPPE-HOHER-RAT": "calm"
+          "FIG-GRUPPE-SOLDATEN": "earnest",
+          "FIG-JESUS": "calm",
+          "FIG-HANNAS": "pensive"
+        },
+        "x": {
+          "FIG-GRUPPE-SOLDATEN": 30,
+          "FIG-JESUS": 96,
+          "FIG-HANNAS": 158
         }
       }
     }
   ],
   "actions_de": [
-    "Die Kohorte, ihr Oberst und die Diener nehmen Jesus fest, fesseln ihn und führen ihn zuerst zu Hannas, dem Schwiegervater des Hohepriesters Kajafas.",
-    "Rückblick: Kajafas hatte den Juden geraten, es sei besser, dass ein Mensch für das Volk sterbe."
+    "Die Kohorte und die Diener nehmen Jesus fest, fesseln ihn und führen ihn zuerst zu Hannas, dem Schwiegervater des Kajafas."
   ],
   "captions_de": [
-    "Gefesselt: Soldaten und Tempeldiener führen Jesus mit gebundenen Händen (Strick) zu Hannas (Pfeil).",
-    "Früherer Rat: Kajafas sagt der Menge: einer (Jesus) stirbt (Totenkopf) für das Volk (Menge)."
+    "Gefesselt zu Hannas: Soldaten führen Jesus gefesselt (Fessel) zu Hannas (Name); im Band der frühere Rat des Kajafas: es sei besser, dass ein Mensch für das Volk sterbe (Kajafas, Tod)."
   ],
-  "interpretation_note_de": "Feld 2 ist ein Rückblick des Erzählers auf [[JHN.11.49-JHN.11.50]]; dass mit «ein Mensch» Jesus gemeint ist, sagt der Erzähler, deshalb steht in der Blase das Zeichen für Jesus. Die Fesseln sind als Strick in den Händen Jesu gezeichnet ([[JHN.18.12]]). «Die Juden» und die Hohepriester sind als neutrale Figuren gezeichnet (Menge bzw. Amtskleid), nicht verzerrt oder eingefärbt.",
+  "interpretation_note_de": "Ein Feld ([[JHN.18.12-JHN.18.14]]): Jesus gefesselt vor Hannas. Kajafas tritt hier nicht auf; sein früherer Rat ([[JHN.11.50]]) steht als Wort im Band, mit seinem Zeichen und dem Zeichen für den Tod, den er meinte. Die Kohorte erscheint als Soldaten.",
   "basis": [
     {
       "record": "TU-JHN-018-012-014",
       "field": "summary",
-      "fingerprint": "80a055525990d0e5"
+      "fingerprint": "f6d788207f0b6934"
     },
     {
       "record": "TRANS-JHN-018-001-040-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.18.12-JHN.18.13",
-      "fingerprint": "737c4ee2d9b7da17"
-    },
-    {
-      "record": "TRANS-JHN-018-001-040-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "JHN.18.14",
-      "fingerprint": "8372bbd3d8724e9b"
+      "reference": "JHN.18.12-JHN.18.14",
+      "fingerprint": "1093d378974b89e5"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -183,6 +162,104 @@
           "Gefesselt: Soldaten und Tempeldiener führen Jesus mit gebundenen Händen (Strick) zu Hannas (Pfeil).",
           "Früherer Rat: Kajafas sagt der Menge: einer (Jesus) stirbt (Grab) für das Volk (Menge)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.18.12-JHN.18.13",
+            "figures": [
+              "FIG-GRUPPE-SOLDATEN",
+              "FIG-ROLLE-TEMPELWACHE",
+              "FIG-JESUS",
+              "FIG-HANNAS"
+            ],
+            "objects": [
+              "FIG-OBJ-FESSEL"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Die Kohorte, ihr Oberst und die Diener nehmen Jesus fest, fesseln ihn und führen ihn zuerst zu Hannas, dem Schwiegervater des Hohepriesters Kajafas.",
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-FESSEL"
+              },
+              "mood": {
+                "FIG-GRUPPE-SOLDATEN": "earnest",
+                "FIG-ROLLE-TEMPELWACHE": "earnest",
+                "FIG-HANNAS": "earnest"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-HANNAS",
+                  "go"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.18.14",
+            "figures": [
+              "FIG-KAJAFAS",
+              "FIG-GRUPPE-HOHER-RAT"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-KAJAFAS",
+                "to": "FIG-GRUPPE-HOHER-RAT",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-TOD",
+                  "FIG-GRUPPE-VOLK"
+                ]
+              }
+            ],
+            "action_de": "Rückblick: Kajafas hatte den Juden geraten, es sei besser, dass ein Mensch für das Volk sterbe.",
+            "stage": {
+              "mood": {
+                "FIG-KAJAFAS": "earnest",
+                "FIG-GRUPPE-HOHER-RAT": "calm"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Die Kohorte, ihr Oberst und die Diener nehmen Jesus fest, fesseln ihn und führen ihn zuerst zu Hannas, dem Schwiegervater des Hohepriesters Kajafas.",
+          "Rückblick: Kajafas hatte den Juden geraten, es sei besser, dass ein Mensch für das Volk sterbe."
+        ],
+        "captions_de": [
+          "Gefesselt: Soldaten und Tempeldiener führen Jesus mit gebundenen Händen (Strick) zu Hannas (Pfeil).",
+          "Früherer Rat: Kajafas sagt der Menge: einer (Jesus) stirbt (Totenkopf) für das Volk (Menge)."
+        ],
+        "interpretation_note_de": "Feld 2 ist ein Rückblick des Erzählers auf [[JHN.11.49-JHN.11.50]]; dass mit «ein Mensch» Jesus gemeint ist, sagt der Erzähler, deshalb steht in der Blase das Zeichen für Jesus. Die Fesseln sind als Strick in den Händen Jesu gezeichnet ([[JHN.18.12]]). «Die Juden» und die Hohepriester sind als neutrale Figuren gezeichnet (Menge bzw. Amtskleid), nicht verzerrt oder eingefärbt.",
+        "basis": [
+          {
+            "record": "TU-JHN-018-012-014",
+            "field": "summary",
+            "fingerprint": "80a055525990d0e5"
+          },
+          {
+            "record": "TRANS-JHN-018-001-040-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.18.12-JHN.18.13",
+            "fingerprint": "737c4ee2d9b7da17"
+          },
+          {
+            "record": "TRANS-JHN-018-001-040-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.18.14",
+            "fingerprint": "8372bbd3d8724e9b"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

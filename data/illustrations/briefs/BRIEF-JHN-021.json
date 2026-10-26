@@ -13,54 +13,49 @@
       "n": 1,
       "reference": "JHN.21.1-JHN.21.14",
       "figures": [
-        "FIG-GRUPPE-JUENGER",
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-GRUPPE-JUENGER"
       ],
       "objects": [
-        "FIG-OBJ-BOOT",
-        "FIG-ORT-UFER",
-        "FIG-OBJ-NETZ"
+        "FIG-ORT-SEE",
+        "FIG-OBJ-BOOT"
       ],
       "signs": [],
       "speech": [
         {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-OBJ-NETZ",
-            "FIG-OBJ-FISCH"
-          ]
+          "from": "FIG-GRUPPE-JUENGER",
+          "to": "FIG-JESUS",
+          "icons": [],
+          "word": {
+            "de": "Es ist der Herr!",
+            "gsw": "Es isch de Herr!"
+          }
         }
       ],
-      "action_de": "Auf Jesu Wort fangen die Jünger am See so viele Fische, dass sie das Netz kaum einziehen können; am Ufer gibt er ihnen Brot und Fisch.",
+      "action_de": "Auf Jesu Wort fangen die Jünger eine Menge Fische; der Jünger, den Jesus liebte, sagt: «Es ist der Herr!»",
+      "keywords": {
+        "de": "sie vermochten es nicht mehr einzuziehen wegen der Menge der Fische",
+        "gsw": "si händ s nüme chöne iizie wäge de Mängi vo Fisch"
+      },
       "stage": {
         "in": {
           "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT"
         },
         "in_pos": {
           "FIG-GRUPPE-JUENGER": [
-            0.45,
-            0.52
+            0.4,
+            0.42
           ]
         },
-        "big_side": "left",
-        "x": {
-          "FIG-JESUS": 156
-        },
-        "floor_x": {
-          "FIG-OBJ-NETZ": 40
-        },
+        "big_side": "right",
+        "sea": "calm",
         "mood": {
-          "FIG-GRUPPE-JUENGER": "delight",
-          "FIG-JESUS": "calm"
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-JUENGER": "delight"
         },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-OBJ-NETZ",
-            "act"
-          ]
-        ]
+        "x": {
+          "FIG-JESUS": 34
+        }
       }
     },
     {
@@ -76,18 +71,32 @@
         {
           "from": "FIG-JESUS",
           "to": "FIG-PETRUS",
-          "icons": [
-            "FIG-ZEICHEN-LIEBE",
-            "FIG-ZEICHEN-FRAGEN",
-            "FIG-ZEICHEN-BEWAHREN",
-            "FIG-OBJ-SCHAF"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Liebst du mich? Weide meine Schafe!",
+            "gsw": "Liebsch mich? Weid mini Schaf!"
+          }
         }
       ],
-      "action_de": "Jesus fragt Petrus dreimal, ob er ihn liebe, und beauftragt ihn, seine Schafe zu weiden; dann sagt er: «Folge mir!»",
+      "action_de": "Dreimal fragt Jesus Petrus: «Liebst du mich?» und sagt: «Weide meine Schafe!» – «Folge mir!»",
+      "keywords": {
+        "de": "Folge mir!",
+        "gsw": "Chumm mir nache!"
+      },
+      "names": {
+        "FIG-PETRUS": {
+          "de": "Petrus",
+          "gsw": "Petrus"
+        }
+      },
       "stage": {
         "mood": {
-          "FIG-PETRUS": "earnest"
+          "FIG-JESUS": "earnest",
+          "FIG-PETRUS": "worried"
+        },
+        "x": {
+          "FIG-JESUS": 46,
+          "FIG-PETRUS": 140
         }
       }
     },
@@ -95,46 +104,39 @@
       "n": 3,
       "reference": "JHN.21.20-JHN.21.23",
       "figures": [
-        "FIG-JESUS",
+        "FIG-LIEBLINGSJUENGER",
         "FIG-PETRUS",
-        "FIG-LIEBLINGSJUENGER"
+        "FIG-JESUS"
       ],
       "objects": [],
       "signs": [],
       "speech": [
         {
-          "from": "FIG-PETRUS",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-LIEBLINGSJUENGER",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
-        },
-        {
           "from": "FIG-JESUS",
           "to": "FIG-PETRUS",
-          "icons": [
-            "FIG-ZEICHEN-NACHFOLGEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Was geht es dich an? Du, folge mir!",
+            "gsw": "Was gaat das dich aa? Du – chumm mir nache!"
+          }
         }
       ],
-      "action_de": "Petrus fragt nach dem Jünger, den Jesus liebte; Jesus antwortet: «Du, folge mir!»",
+      "action_de": "Petrus fragt nach dem Jünger, den Jesus liebte; Jesus sagt: «Was geht es dich an? Du, folge mir!»",
+      "keywords": {
+        "de": "Herr, was aber wird mit diesem?",
+        "gsw": "Herr, was isch aber mit däm?"
+      },
       "stage": {
-        "x": {
-          "FIG-LIEBLINGSJUENGER": 22,
-          "FIG-PETRUS": 72,
-          "FIG-JESUS": 150
-        },
         "mood": {
-          "FIG-PETRUS": "pensive"
+          "FIG-LIEBLINGSJUENGER": "calm",
+          "FIG-PETRUS": "question",
+          "FIG-JESUS": "earnest"
         },
-        "arrows": [
-          [
-            "FIG-LIEBLINGSJUENGER",
-            "FIG-PETRUS",
-            "go"
-          ]
-        ]
+        "x": {
+          "FIG-LIEBLINGSJUENGER": 30,
+          "FIG-PETRUS": 94,
+          "FIG-JESUS": 158
+        }
       }
     },
     {
@@ -144,53 +146,55 @@
         "FIG-LIEBLINGSJUENGER"
       ],
       "objects": [
-        "FIG-GRUPPE-GEMEINDE",
         "FIG-OBJ-SCHRIFTROLLE"
       ],
       "signs": [
         "FIG-ZEICHEN-WAHRHEIT"
       ],
       "speech": [],
-      "action_de": "Dieser Jünger bezeugt und hat dies geschrieben; die Welt könnte die Bücher nicht fassen, würde alles aufgeschrieben.",
+      "action_de": "Der Jünger, den Jesus liebte, hat dies geschrieben, und sein Zeugnis ist wahr.",
+      "keywords": {
+        "de": "wir wissen, dass sein Zeugnis wahr ist",
+        "gsw": "mer wüssed, dass sis Zügnis wahr isch"
+      },
       "stage": {
         "hold": {
           "FIG-LIEBLINGSJUENGER": "FIG-OBJ-SCHRIFTROLLE"
         },
-        "at": {
+        "beside": {
           "FIG-ZEICHEN-WAHRHEIT": "FIG-LIEBLINGSJUENGER"
         },
-        "back_side": "right",
-        "x": {
-          "FIG-LIEBLINGSJUENGER": 56
-        },
         "mood": {
-          "FIG-LIEBLINGSJUENGER": "smile"
+          "FIG-LIEBLINGSJUENGER": "calm"
+        },
+        "x": {
+          "FIG-LIEBLINGSJUENGER": 93
         }
       }
     }
   ],
   "actions_de": [
-    "Auf Jesu Wort fangen die Jünger am See so viele Fische, dass sie das Netz kaum einziehen können; am Ufer gibt er ihnen Brot und Fisch.",
-    "Jesus fragt Petrus dreimal, ob er ihn liebe, und beauftragt ihn, seine Schafe zu weiden; dann sagt er: «Folge mir!»",
-    "Petrus fragt nach dem Jünger, den Jesus liebte; Jesus antwortet: «Du, folge mir!»",
-    "Dieser Jünger bezeugt und hat dies geschrieben; die Welt könnte die Bücher nicht fassen, würde alles aufgeschrieben."
+    "Auf Jesu Wort fangen die Jünger eine Menge Fische; der Jünger, den Jesus liebte, sagt: «Es ist der Herr!»",
+    "Dreimal fragt Jesus Petrus: «Liebst du mich?» und sagt: «Weide meine Schafe!» – «Folge mir!»",
+    "Petrus fragt nach dem Jünger, den Jesus liebte; Jesus sagt: «Was geht es dich an? Du, folge mir!»",
+    "Der Jünger, den Jesus liebte, hat dies geschrieben, und sein Zeugnis ist wahr."
   ],
   "captions_de": [
-    "Jesu Wort → volles Netz: Jesus am Ufer (rechts) sagt: Werft das Netz aus (Netz, Fisch in der Blase); die Jünger im Boot, das Netz ist voll (Pfeil von Jesus zum Netz).",
-    "Weide meine Schafe: Jesus fragt Petrus (Herz, ?) und gibt ihm den Auftrag: Hüte meine Schafe (blauer Schild, Schaf).",
-    "Und er?: Petrus fragt nach dem Jünger (Jünger, ?); Jesus: Folge du mir (zwei gehende Personen).",
-    "Das Zeugnis: Der Jünger mit der Schriftrolle; sein Zeugnis ist wahr (Häkchen)."
+    "Am See: Jesus am Ufer, die Jünger im Boot; aus ihrer Mitte ruft der Jünger, den Jesus liebte: «Es ist der Herr!» (Jesus); im Band: sie vermochten es nicht mehr einzuziehen wegen der Menge der Fische (Netz, Fisch).",
+    "Liebst du mich: Jesus sagt zu Petrus (Name): «Liebst du mich? Weide meine Schafe!» (Liebe, Schaf); im Band: Folge mir! (nachfolgen).",
+    "Du, folge mir: Petrus fragt nach dem Jünger, den Jesus liebte; Jesus: «Was geht es dich an? Du, folge mir!» (nachfolgen); im Band: Herr, was aber wird mit diesem? (Jünger, den Jesus liebte, fragen).",
+    "Das Zeugnis: Der Jünger, den Jesus liebte, mit der Schriftrolle; grüner Haken für «wahr»; im Band: wir wissen, dass sein Zeugnis wahr ist (Wahrheit)."
   ],
-  "interpretation_note_de": "Je ein Feld zu Fischfang, Auftrag an Petrus, dem Jünger, den Jesus liebte, und dem Schluss; Einzelheiten in den Abschnitten.",
+  "interpretation_note_de": "Vier Szenen, eine je Abschnitt ([[JHN.21.1-JHN.21.25]]): der Fang und das Erkennen am See, die dreifache Frage an Petrus, die Frage nach dem anderen Jünger, das Zeugnis. In Feld 1 spricht der Jünger, den Jesus liebte, aus der Gruppe der Jünger. Kapitel 21 gilt in der Forschung vielfach als Nachtrag zum Buchschluss [[JHN.20.30-JHN.20.31]]; das ist Deutung und nicht im Bild.",
   "basis": [
     {
       "record": "SUM-CH-JHN-021",
       "field": "summary",
-      "fingerprint": "7c64bdff3eca2c6a"
+      "fingerprint": "235b6ebad23836de"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -534,6 +538,713 @@
           "Weide meine Schafe: Jesus fragt Petrus (Herzen, ?) und gibt ihm den Auftrag: Hüte meine Schafe (schützende Hände, Schaf).",
           "Und er?: Petrus fragt nach dem Jünger (Jünger, ?); Jesus: Folge du mir (Fussspuren).",
           "Das Zeugnis: Der Jünger mit der Schriftrolle; sein Zeugnis ist wahr (Häkchen)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.21.1-JHN.21.14",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-UFER",
+              "FIG-OBJ-NETZ"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-NETZ",
+                  "FIG-OBJ-FISCH"
+                ]
+              }
+            ],
+            "action_de": "Auf Jesu Wort fangen die Jünger am See so viele Fische, dass sie das Netz kaum einziehen können; am Ufer gibt er ihnen Brot und Fisch.",
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-JUENGER": [
+                  0.45,
+                  0.52
+                ]
+              },
+              "big_side": "left",
+              "x": {
+                "FIG-JESUS": 156
+              },
+              "floor_x": {
+                "FIG-OBJ-NETZ": 40
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "delight",
+                "FIG-JESUS": "calm"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-OBJ-NETZ",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.21.15-JHN.21.19",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-PETRUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-ZEICHEN-LIEBE",
+                  "FIG-ZEICHEN-FRAGEN",
+                  "FIG-ZEICHEN-BEWAHREN",
+                  "FIG-OBJ-SCHAF"
+                ]
+              }
+            ],
+            "action_de": "Jesus fragt Petrus dreimal, ob er ihn liebe, und beauftragt ihn, seine Schafe zu weiden; dann sagt er: «Folge mir!»",
+            "stage": {
+              "mood": {
+                "FIG-PETRUS": "earnest"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.21.20-JHN.21.23",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-PETRUS",
+              "FIG-LIEBLINGSJUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-LIEBLINGSJUENGER",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-ZEICHEN-NACHFOLGEN"
+                ]
+              }
+            ],
+            "action_de": "Petrus fragt nach dem Jünger, den Jesus liebte; Jesus antwortet: «Du, folge mir!»",
+            "stage": {
+              "x": {
+                "FIG-LIEBLINGSJUENGER": 22,
+                "FIG-PETRUS": 72,
+                "FIG-JESUS": 150
+              },
+              "mood": {
+                "FIG-PETRUS": "pensive"
+              },
+              "arrows": [
+                [
+                  "FIG-LIEBLINGSJUENGER",
+                  "FIG-PETRUS",
+                  "go"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.21.24-JHN.21.25",
+            "figures": [
+              "FIG-LIEBLINGSJUENGER"
+            ],
+            "objects": [
+              "FIG-GRUPPE-GEMEINDE",
+              "FIG-OBJ-SCHRIFTROLLE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-WAHRHEIT"
+            ],
+            "speech": [],
+            "action_de": "Dieser Jünger bezeugt und hat dies geschrieben; die Welt könnte die Bücher nicht fassen, würde alles aufgeschrieben.",
+            "stage": {
+              "hold": {
+                "FIG-LIEBLINGSJUENGER": "FIG-OBJ-SCHRIFTROLLE"
+              },
+              "at": {
+                "FIG-ZEICHEN-WAHRHEIT": "FIG-LIEBLINGSJUENGER"
+              },
+              "back_side": "right",
+              "x": {
+                "FIG-LIEBLINGSJUENGER": 56
+              },
+              "mood": {
+                "FIG-LIEBLINGSJUENGER": "smile"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Auf Jesu Wort fangen die Jünger am See so viele Fische, dass sie das Netz kaum einziehen können; am Ufer gibt er ihnen Brot und Fisch.",
+          "Jesus fragt Petrus dreimal, ob er ihn liebe, und beauftragt ihn, seine Schafe zu weiden; dann sagt er: «Folge mir!»",
+          "Petrus fragt nach dem Jünger, den Jesus liebte; Jesus antwortet: «Du, folge mir!»",
+          "Dieser Jünger bezeugt und hat dies geschrieben; die Welt könnte die Bücher nicht fassen, würde alles aufgeschrieben."
+        ],
+        "captions_de": [
+          "Jesu Wort → volles Netz: Jesus am Ufer (rechts) sagt: Werft das Netz aus (Netz, Fisch in der Blase); die Jünger im Boot, das Netz ist voll (Pfeil von Jesus zum Netz).",
+          "Weide meine Schafe: Jesus fragt Petrus (Herz, ?) und gibt ihm den Auftrag: Hüte meine Schafe (blauer Schild, Schaf).",
+          "Und er?: Petrus fragt nach dem Jünger (Jünger, ?); Jesus: Folge du mir (zwei gehende Personen).",
+          "Das Zeugnis: Der Jünger mit der Schriftrolle; sein Zeugnis ist wahr (Häkchen)."
+        ],
+        "interpretation_note_de": "Je ein Feld zu Fischfang, Auftrag an Petrus, dem Jünger, den Jesus liebte, und dem Schluss; Einzelheiten in den Abschnitten.",
+        "basis": [
+          {
+            "record": "SUM-CH-JHN-021",
+            "field": "summary",
+            "fingerprint": "7c64bdff3eca2c6a"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.21.1-JHN.21.14",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-ORT-SEE",
+              "FIG-OBJ-BOOT",
+              "FIG-OBJ-NETZ"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Es ist der Herr!",
+                  "gsw": "Es isch de Herr!"
+                }
+              }
+            ],
+            "action_de": "Auf Jesu Wort fangen die Jünger eine Menge Fische; der Jünger, den Jesus liebte, sagt: «Es ist der Herr!»",
+            "keywords": {
+              "de": "wegen der Menge der Fische",
+              "gsw": "wäge de Mängi vo Fisch"
+            },
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 40
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.21.15-JHN.21.19",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-PETRUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [],
+                "word": {
+                  "de": "Liebst du mich? Weide meine Schafe!",
+                  "gsw": "Liebsch mich? Weid mini Schaf!"
+                }
+              }
+            ],
+            "action_de": "Dreimal fragt Jesus Petrus: «Liebst du mich?» und sagt: «Weide meine Schafe!» – «Folge mir!»",
+            "keywords": {
+              "de": "Folge mir!",
+              "gsw": "Chumm mir nache!"
+            },
+            "names": {
+              "FIG-PETRUS": {
+                "de": "Petrus",
+                "gsw": "Petrus"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-PETRUS": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 46,
+                "FIG-PETRUS": 140
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.21.20-JHN.21.23",
+            "figures": [
+              "FIG-LIEBLINGSJUENGER",
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [],
+                "word": {
+                  "de": "Was geht es dich an? Du, folge mir!",
+                  "gsw": "Was gaat das dich aa? Du – chumm mir nache!"
+                }
+              }
+            ],
+            "action_de": "Petrus fragt nach dem Jünger, den Jesus liebte; Jesus sagt: «Was geht es dich an? Du, folge mir!»",
+            "keywords": {
+              "de": "Herr, was aber wird mit diesem?",
+              "gsw": "Herr, was isch aber mit däm?"
+            },
+            "stage": {
+              "mood": {
+                "FIG-LIEBLINGSJUENGER": "calm",
+                "FIG-PETRUS": "question",
+                "FIG-JESUS": "earnest"
+              },
+              "x": {
+                "FIG-LIEBLINGSJUENGER": 30,
+                "FIG-PETRUS": 94,
+                "FIG-JESUS": 158
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.21.24-JHN.21.25",
+            "figures": [
+              "FIG-LIEBLINGSJUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHRIFTROLLE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-WAHRHEIT"
+            ],
+            "speech": [],
+            "action_de": "Der Jünger, den Jesus liebte, hat dies geschrieben, und sein Zeugnis ist wahr.",
+            "keywords": {
+              "de": "wir wissen, dass sein Zeugnis wahr ist",
+              "gsw": "mer wüssed, dass sis Zügnis wahr isch"
+            },
+            "stage": {
+              "hold": {
+                "FIG-LIEBLINGSJUENGER": "FIG-OBJ-SCHRIFTROLLE"
+              },
+              "beside": {
+                "FIG-ZEICHEN-WAHRHEIT": "FIG-LIEBLINGSJUENGER"
+              },
+              "mood": {
+                "FIG-LIEBLINGSJUENGER": "calm"
+              },
+              "x": {
+                "FIG-LIEBLINGSJUENGER": 93
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.21.1-JHN.21.14",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-ORT-SEE",
+              "FIG-OBJ-BOOT",
+              "FIG-OBJ-NETZ"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Es ist der Herr!",
+                  "gsw": "Es isch de Herr!"
+                }
+              }
+            ],
+            "action_de": "Auf Jesu Wort fangen die Jünger eine Menge Fische; der Jünger, den Jesus liebte, sagt: «Es ist der Herr!»",
+            "keywords": {
+              "de": "wegen der Menge der Fische",
+              "gsw": "wäge de Mängi vo Fisch"
+            },
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-JUENGER": [
+                  0.4,
+                  0.42
+                ]
+              },
+              "big_side": "right",
+              "sea": "calm",
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 34
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.21.15-JHN.21.19",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-PETRUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [],
+                "word": {
+                  "de": "Liebst du mich? Weide meine Schafe!",
+                  "gsw": "Liebsch mich? Weid mini Schaf!"
+                }
+              }
+            ],
+            "action_de": "Dreimal fragt Jesus Petrus: «Liebst du mich?» und sagt: «Weide meine Schafe!» – «Folge mir!»",
+            "keywords": {
+              "de": "Folge mir!",
+              "gsw": "Chumm mir nache!"
+            },
+            "names": {
+              "FIG-PETRUS": {
+                "de": "Petrus",
+                "gsw": "Petrus"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-PETRUS": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 46,
+                "FIG-PETRUS": 140
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.21.20-JHN.21.23",
+            "figures": [
+              "FIG-LIEBLINGSJUENGER",
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [],
+                "word": {
+                  "de": "Was geht es dich an? Du, folge mir!",
+                  "gsw": "Was gaat das dich aa? Du – chumm mir nache!"
+                }
+              }
+            ],
+            "action_de": "Petrus fragt nach dem Jünger, den Jesus liebte; Jesus sagt: «Was geht es dich an? Du, folge mir!»",
+            "keywords": {
+              "de": "Herr, was aber wird mit diesem?",
+              "gsw": "Herr, was isch aber mit däm?"
+            },
+            "stage": {
+              "mood": {
+                "FIG-LIEBLINGSJUENGER": "calm",
+                "FIG-PETRUS": "question",
+                "FIG-JESUS": "earnest"
+              },
+              "x": {
+                "FIG-LIEBLINGSJUENGER": 30,
+                "FIG-PETRUS": 94,
+                "FIG-JESUS": 158
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.21.24-JHN.21.25",
+            "figures": [
+              "FIG-LIEBLINGSJUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHRIFTROLLE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-WAHRHEIT"
+            ],
+            "speech": [],
+            "action_de": "Der Jünger, den Jesus liebte, hat dies geschrieben, und sein Zeugnis ist wahr.",
+            "keywords": {
+              "de": "wir wissen, dass sein Zeugnis wahr ist",
+              "gsw": "mer wüssed, dass sis Zügnis wahr isch"
+            },
+            "stage": {
+              "hold": {
+                "FIG-LIEBLINGSJUENGER": "FIG-OBJ-SCHRIFTROLLE"
+              },
+              "beside": {
+                "FIG-ZEICHEN-WAHRHEIT": "FIG-LIEBLINGSJUENGER"
+              },
+              "mood": {
+                "FIG-LIEBLINGSJUENGER": "calm"
+              },
+              "x": {
+                "FIG-LIEBLINGSJUENGER": 93
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Am See: Jesus am Ufer, die Jünger im Boot mit dem vollen Netz; der Jünger, den Jesus liebte, ruft: «Es ist der Herr!» (Jesus); im Band: wegen der Menge der Fische (Netz, Fisch).",
+          "Liebst du mich: Jesus sagt zu Petrus (Name): «Liebst du mich? Weide meine Schafe!» (Liebe, Schaf); im Band: Folge mir! (nachfolgen).",
+          "Du, folge mir: Petrus fragt nach dem Jünger, den Jesus liebte; Jesus: «Was geht es dich an? Du, folge mir!» (nachfolgen); im Band: Herr, was aber wird mit diesem? (Jünger, den Jesus liebte, fragen).",
+          "Das Zeugnis: Der Jünger, den Jesus liebte, mit der Schriftrolle; grüner Haken für «wahr»; im Band: wir wissen, dass sein Zeugnis wahr ist (Wahrheit)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.21.1-JHN.21.14",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-ORT-SEE",
+              "FIG-OBJ-BOOT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Es ist der Herr!",
+                  "gsw": "Es isch de Herr!"
+                }
+              }
+            ],
+            "action_de": "Auf Jesu Wort fangen die Jünger eine Menge Fische; der Jünger, den Jesus liebte, sagt: «Es ist der Herr!»",
+            "keywords": {
+              "de": "wegen der Menge der Fische",
+              "gsw": "wäge de Mängi vo Fisch"
+            },
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-JUENGER": [
+                  0.4,
+                  0.42
+                ]
+              },
+              "big_side": "right",
+              "sea": "calm",
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 34
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.21.15-JHN.21.19",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-PETRUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [],
+                "word": {
+                  "de": "Liebst du mich? Weide meine Schafe!",
+                  "gsw": "Liebsch mich? Weid mini Schaf!"
+                }
+              }
+            ],
+            "action_de": "Dreimal fragt Jesus Petrus: «Liebst du mich?» und sagt: «Weide meine Schafe!» – «Folge mir!»",
+            "keywords": {
+              "de": "Folge mir!",
+              "gsw": "Chumm mir nache!"
+            },
+            "names": {
+              "FIG-PETRUS": {
+                "de": "Petrus",
+                "gsw": "Petrus"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-PETRUS": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 46,
+                "FIG-PETRUS": 140
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.21.20-JHN.21.23",
+            "figures": [
+              "FIG-LIEBLINGSJUENGER",
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [],
+                "word": {
+                  "de": "Was geht es dich an? Du, folge mir!",
+                  "gsw": "Was gaat das dich aa? Du – chumm mir nache!"
+                }
+              }
+            ],
+            "action_de": "Petrus fragt nach dem Jünger, den Jesus liebte; Jesus sagt: «Was geht es dich an? Du, folge mir!»",
+            "keywords": {
+              "de": "Herr, was aber wird mit diesem?",
+              "gsw": "Herr, was isch aber mit däm?"
+            },
+            "stage": {
+              "mood": {
+                "FIG-LIEBLINGSJUENGER": "calm",
+                "FIG-PETRUS": "question",
+                "FIG-JESUS": "earnest"
+              },
+              "x": {
+                "FIG-LIEBLINGSJUENGER": 30,
+                "FIG-PETRUS": 94,
+                "FIG-JESUS": 158
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.21.24-JHN.21.25",
+            "figures": [
+              "FIG-LIEBLINGSJUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHRIFTROLLE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-WAHRHEIT"
+            ],
+            "speech": [],
+            "action_de": "Der Jünger, den Jesus liebte, hat dies geschrieben, und sein Zeugnis ist wahr.",
+            "keywords": {
+              "de": "wir wissen, dass sein Zeugnis wahr ist",
+              "gsw": "mer wüssed, dass sis Zügnis wahr isch"
+            },
+            "stage": {
+              "hold": {
+                "FIG-LIEBLINGSJUENGER": "FIG-OBJ-SCHRIFTROLLE"
+              },
+              "beside": {
+                "FIG-ZEICHEN-WAHRHEIT": "FIG-LIEBLINGSJUENGER"
+              },
+              "mood": {
+                "FIG-LIEBLINGSJUENGER": "calm"
+              },
+              "x": {
+                "FIG-LIEBLINGSJUENGER": 93
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Am See: Jesus am Ufer, die Jünger im Boot; aus ihrer Mitte ruft der Jünger, den Jesus liebte: «Es ist der Herr!» (Jesus); im Band: wegen der Menge der Fische (Netz, Fisch).",
+          "Liebst du mich: Jesus sagt zu Petrus (Name): «Liebst du mich? Weide meine Schafe!» (Liebe, Schaf); im Band: Folge mir! (nachfolgen).",
+          "Du, folge mir: Petrus fragt nach dem Jünger, den Jesus liebte; Jesus: «Was geht es dich an? Du, folge mir!» (nachfolgen); im Band: Herr, was aber wird mit diesem? (Jünger, den Jesus liebte, fragen).",
+          "Das Zeugnis: Der Jünger, den Jesus liebte, mit der Schriftrolle; grüner Haken für «wahr»; im Band: wir wissen, dass sein Zeugnis wahr ist (Wahrheit)."
         ]
       }
     }

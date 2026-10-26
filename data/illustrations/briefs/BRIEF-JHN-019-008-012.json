@@ -11,7 +11,7 @@
   "panels": [
     {
       "n": 1,
-      "reference": "JHN.19.8-JHN.19.9",
+      "reference": "JHN.19.8-JHN.19.11",
       "figures": [
         "FIG-PILATUS",
         "FIG-JESUS"
@@ -24,132 +24,100 @@
         {
           "from": "FIG-PILATUS",
           "to": "FIG-JESUS",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Woher bist du?",
+            "gsw": "Vo wo bisch du?"
+          }
+        },
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-PILATUS",
+          "icons": [],
+          "word": {
+            "de": "Du hättest keine Vollmacht über mich, wenn es dir nicht von oben gegeben wäre.",
+            "gsw": "Du hettsch kei Vollmacht über mich, wänn s dir nöd vo obe gää worde wär."
+          }
         }
       ],
-      "action_de": "Pilatus fürchtet sich noch mehr, geht wieder ins Prätorium und fragt Jesus: «Woher bist du?» Jesus gibt ihm keine Antwort.",
+      "action_de": "Pilatus fürchtet sich und fragt Jesus: «Woher bist du?» Jesus gibt keine Antwort. Auf Pilatus' Drohung antwortet er: «Du hättest keine Vollmacht über mich, wenn es dir nicht von oben gegeben wäre.»",
+      "keywords": {
+        "de": "Jesus aber gab ihm keine Antwort",
+        "gsw": "De Jesus aber hät em kei Antwort gää"
+      },
       "stage": {
-        "back_side": "left",
+        "back_side": "right",
         "before": true,
-        "x": {
-          "FIG-PILATUS": 44,
-          "FIG-JESUS": 152
+        "wear": {
+          "FIG-JESUS": "#7A2E6E"
         },
         "mood": {
-          "FIG-PILATUS": "worried",
+          "FIG-PILATUS": "fear",
           "FIG-JESUS": "calm"
+        },
+        "x": {
+          "FIG-PILATUS": 46,
+          "FIG-JESUS": 140
         }
       }
     },
     {
       "n": 2,
-      "reference": "JHN.19.10-JHN.19.11",
-      "figures": [
-        "FIG-PILATUS",
-        "FIG-JESUS"
-      ],
-      "objects": [
-        "FIG-ORT-PRAETORIUM"
-      ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-PILATUS",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-ZEICHEN-FREILASSEN",
-            "FIG-OBJ-KREUZ"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-PILATUS",
-          "icons": [
-            "FIG-GOTT",
-            "FIG-ZEICHEN-HINAB",
-            "FIG-ZEICHEN-VOLLMACHT"
-          ]
-        }
-      ],
-      "action_de": "Pilatus: «Weisst du nicht, dass ich Vollmacht habe, dich freizulassen, und Vollmacht, dich zu kreuzigen?» Jesus: «Du hättest keine Vollmacht über mich, wenn es dir nicht von oben gegeben wäre.»",
-      "stage": {
-        "back_side": "left",
-        "before": true,
-        "x": {
-          "FIG-PILATUS": 44,
-          "FIG-JESUS": 152
-        },
-        "mood": {
-          "FIG-PILATUS": "earnest",
-          "FIG-JESUS": "calm"
-        }
-      }
-    },
-    {
-      "n": 3,
       "reference": "JHN.19.12",
       "figures": [
         "FIG-PILATUS",
         "FIG-GRUPPE-MENGE"
       ],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-FREILASSEN"
-      ],
+      "signs": [],
       "speech": [
         {
           "from": "FIG-GRUPPE-MENGE",
           "to": "FIG-PILATUS",
-          "icons": [
-            "FIG-ZEICHEN-FREILASSEN",
-            "FIG-ZEICHEN-KAISER",
-            "FIG-ZEICHEN-ABLEHNEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Wenn du diesen freilässt, bist du nicht Freund des Kaisers.",
+            "gsw": "Wänn du dä freilaasch, bisch nöd de Fründ vom Kaiser."
+          }
         }
       ],
-      "action_de": "Pilatus versucht, Jesus freizulassen. Die Juden aber schreien: «Wenn du diesen freilässt, bist du nicht Freund des Kaisers.»",
+      "action_de": "Pilatus versucht, ihn freizulassen. Die Juden aber schreien: «Wenn du diesen freilässt, bist du nicht Freund des Kaisers.»",
+      "keywords": {
+        "de": "Daraufhin versuchte Pilatus, ihn freizulassen",
+        "gsw": "Drufabe hät de Pilatus probiert, en freizlaa"
+      },
       "stage": {
         "mood": {
-          "FIG-GRUPPE-MENGE": "earnest",
-          "FIG-PILATUS": "worried"
+          "FIG-PILATUS": "worried",
+          "FIG-GRUPPE-MENGE": "angry"
         },
-        "at": {
-          "FIG-ZEICHEN-FREILASSEN": "FIG-PILATUS"
+        "x": {
+          "FIG-PILATUS": 46,
+          "FIG-GRUPPE-MENGE": 140
         }
       }
     }
   ],
   "actions_de": [
-    "Pilatus fürchtet sich noch mehr, geht wieder ins Prätorium und fragt Jesus: «Woher bist du?» Jesus gibt ihm keine Antwort.",
-    "Pilatus: «Weisst du nicht, dass ich Vollmacht habe, dich freizulassen, und Vollmacht, dich zu kreuzigen?» Jesus: «Du hättest keine Vollmacht über mich, wenn es dir nicht von oben gegeben wäre.»",
-    "Pilatus versucht, Jesus freizulassen. Die Juden aber schreien: «Wenn du diesen freilässt, bist du nicht Freund des Kaisers.»"
+    "Pilatus fürchtet sich und fragt Jesus: «Woher bist du?» Jesus gibt keine Antwort. Auf Pilatus' Drohung antwortet er: «Du hättest keine Vollmacht über mich, wenn es dir nicht von oben gegeben wäre.»",
+    "Pilatus versucht, ihn freizulassen. Die Juden aber schreien: «Wenn du diesen freilässt, bist du nicht Freund des Kaisers.»"
   ],
   "captions_de": [
-    "Woher bist du?: Pilatus fragt besorgt (?); Jesus schweigt.",
-    "Vollmacht: Pilatus: Ich kann freilassen oder kreuzigen (gesprengte Kette, Kreuz); Jesus: Deine Vollmacht ist dir von oben gegeben (Strahlenkranz, Pfeil nach unten, Schriftrolle mit Krone).",
-    "Freund des Kaisers?: Pilatus will ihn freilassen (gesprengte Kette über Pilatus); die Menge ruft: Freilassen (gesprengte Kette) heisst gegen den Kaiser (Lorbeerkranz, Person mit gekreuzten Armen)."
+    "Woher? Im Prätorium fragt Pilatus ängstlich: «Woher bist du?» (fragen); Jesus: «Du hättest keine Vollmacht über mich, wenn es dir nicht von oben gegeben wäre.» (Vollmacht, hinauf); im Band: Jesus aber gab ihm keine Antwort (schweigen).",
+    "Freund des Kaisers: Die Menge schreit Pilatus zu: «Wenn du diesen freilässt, bist du nicht Freund des Kaisers.» (Kaiser, nicht); im Band: Daraufhin versuchte Pilatus, ihn freizulassen (freilassen)."
   ],
-  "interpretation_note_de": "«Woher bist du?» ([[JHN.19.9]]) steht als Frage zu Jesus; Strahlenkranz, Pfeil nach unten und Zepter stehen für «die Vollmacht ist dir von oben gegeben» ([[JHN.19.11]]). Den Satz über die grössere Sünde dessen, der ihn ausgeliefert hat, zeigt das Bild nicht. Der Lorbeerkranz steht für den Kaiser ([[JHN.19.12]]). «Die Juden» und die Hohepriester sind als neutrale Figuren gezeichnet (Menge bzw. Amtskleid), nicht verzerrt oder eingefärbt.",
+  "interpretation_note_de": "Zwei Felder ([[JHN.19.8-JHN.19.12]]): drinnen die Frage «Woher bist du?», Jesu Schweigen und seine Antwort über die Vollmacht «von oben» (Pfeil nach oben; dass Gott gemeint ist, ist naheliegende Deutung), draussen der Druck mit dem Kaiser. «Die Juden» erscheinen als neutrale Menge. Wer Jesus an Pilatus ausgeliefert hat ([[JHN.19.11]]), zeigt das Bild nicht.",
   "basis": [
     {
       "record": "TU-JHN-019-008-012",
       "field": "summary",
-      "fingerprint": "af28595b618d301d"
+      "fingerprint": "f785b0df1a4d4c5c"
     },
     {
       "record": "TRANS-JHN-019-001-042-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.19.8-JHN.19.9",
-      "fingerprint": "8fddc77ad5a695eb"
-    },
-    {
-      "record": "TRANS-JHN-019-001-042-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "JHN.19.10-JHN.19.11",
-      "fingerprint": "84b3cff8a2e239d5"
+      "reference": "JHN.19.8-JHN.19.11",
+      "fingerprint": "a44021e85c5503de"
     },
     {
       "record": "TRANS-JHN-019-001-042-DE-WORKING",
@@ -159,7 +127,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -294,6 +262,163 @@
           "Vollmacht: Pilatus: Ich kann freilassen oder kreuzigen (offene Fessel, Kreuz); Jesus: Deine Vollmacht ist dir von oben gegeben (Strahlenkranz, Pfeil nach unten, Zepter).",
           "Freund des Kaisers?: Pilatus will ihn freilassen (offene Fessel über Pilatus); die Menge ruft: Freilassen (offene Fessel) heisst gegen den Kaiser (Lorbeerkranz, abwehrende Hand)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.19.8-JHN.19.9",
+            "figures": [
+              "FIG-PILATUS",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-PRAETORIUM"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PILATUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Pilatus fürchtet sich noch mehr, geht wieder ins Prätorium und fragt Jesus: «Woher bist du?» Jesus gibt ihm keine Antwort.",
+            "stage": {
+              "back_side": "left",
+              "before": true,
+              "x": {
+                "FIG-PILATUS": 44,
+                "FIG-JESUS": 152
+              },
+              "mood": {
+                "FIG-PILATUS": "worried",
+                "FIG-JESUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.19.10-JHN.19.11",
+            "figures": [
+              "FIG-PILATUS",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-PRAETORIUM"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PILATUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-FREILASSEN",
+                  "FIG-OBJ-KREUZ"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-HINAB",
+                  "FIG-ZEICHEN-VOLLMACHT"
+                ]
+              }
+            ],
+            "action_de": "Pilatus: «Weisst du nicht, dass ich Vollmacht habe, dich freizulassen, und Vollmacht, dich zu kreuzigen?» Jesus: «Du hättest keine Vollmacht über mich, wenn es dir nicht von oben gegeben wäre.»",
+            "stage": {
+              "back_side": "left",
+              "before": true,
+              "x": {
+                "FIG-PILATUS": 44,
+                "FIG-JESUS": 152
+              },
+              "mood": {
+                "FIG-PILATUS": "earnest",
+                "FIG-JESUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.19.12",
+            "figures": [
+              "FIG-PILATUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-FREILASSEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-ZEICHEN-FREILASSEN",
+                  "FIG-ZEICHEN-KAISER",
+                  "FIG-ZEICHEN-ABLEHNEN"
+                ]
+              }
+            ],
+            "action_de": "Pilatus versucht, Jesus freizulassen. Die Juden aber schreien: «Wenn du diesen freilässt, bist du nicht Freund des Kaisers.»",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-PILATUS": "worried"
+              },
+              "at": {
+                "FIG-ZEICHEN-FREILASSEN": "FIG-PILATUS"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Pilatus fürchtet sich noch mehr, geht wieder ins Prätorium und fragt Jesus: «Woher bist du?» Jesus gibt ihm keine Antwort.",
+          "Pilatus: «Weisst du nicht, dass ich Vollmacht habe, dich freizulassen, und Vollmacht, dich zu kreuzigen?» Jesus: «Du hättest keine Vollmacht über mich, wenn es dir nicht von oben gegeben wäre.»",
+          "Pilatus versucht, Jesus freizulassen. Die Juden aber schreien: «Wenn du diesen freilässt, bist du nicht Freund des Kaisers.»"
+        ],
+        "captions_de": [
+          "Woher bist du?: Pilatus fragt besorgt (?); Jesus schweigt.",
+          "Vollmacht: Pilatus: Ich kann freilassen oder kreuzigen (gesprengte Kette, Kreuz); Jesus: Deine Vollmacht ist dir von oben gegeben (Strahlenkranz, Pfeil nach unten, Schriftrolle mit Krone).",
+          "Freund des Kaisers?: Pilatus will ihn freilassen (gesprengte Kette über Pilatus); die Menge ruft: Freilassen (gesprengte Kette) heisst gegen den Kaiser (Lorbeerkranz, Person mit gekreuzten Armen)."
+        ],
+        "interpretation_note_de": "«Woher bist du?» ([[JHN.19.9]]) steht als Frage zu Jesus; Strahlenkranz, Pfeil nach unten und Zepter stehen für «die Vollmacht ist dir von oben gegeben» ([[JHN.19.11]]). Den Satz über die grössere Sünde dessen, der ihn ausgeliefert hat, zeigt das Bild nicht. Der Lorbeerkranz steht für den Kaiser ([[JHN.19.12]]). «Die Juden» und die Hohepriester sind als neutrale Figuren gezeichnet (Menge bzw. Amtskleid), nicht verzerrt oder eingefärbt.",
+        "basis": [
+          {
+            "record": "TU-JHN-019-008-012",
+            "field": "summary",
+            "fingerprint": "af28595b618d301d"
+          },
+          {
+            "record": "TRANS-JHN-019-001-042-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.19.8-JHN.19.9",
+            "fingerprint": "8fddc77ad5a695eb"
+          },
+          {
+            "record": "TRANS-JHN-019-001-042-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.19.10-JHN.19.11",
+            "fingerprint": "84b3cff8a2e239d5"
+          },
+          {
+            "record": "TRANS-JHN-019-001-042-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.19.12",
+            "fingerprint": "728631decc9adf27"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

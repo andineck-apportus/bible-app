@@ -16,21 +16,19 @@
         "FIG-JESUS"
       ],
       "objects": [
-        "FIG-ORT-GOLGOTA",
-        "FIG-OBJ-KREUZ"
+        "FIG-OBJ-KREUZ",
+        "FIG-ORT-GOLGOTA"
       ],
       "signs": [],
       "speech": [],
-      "action_de": "Jesus trägt das Kreuz selbst und geht hinaus zur Schädelstätte, auf Hebräisch Golgota.",
+      "action_de": "Jesus trägt das Kreuz selbst und geht hinaus zur Schädelstätte, Golgota.",
+      "keywords": {
+        "de": "Und er trug das Kreuz selbst",
+        "gsw": "Und er hät s Chrüüz sälber treit"
+      },
       "stage": {
         "hold": {
           "FIG-JESUS": "FIG-OBJ-KREUZ"
-        },
-        "x": {
-          "FIG-JESUS": 46
-        },
-        "mood": {
-          "FIG-JESUS": "earnest"
         },
         "arrows": [
           [
@@ -38,40 +36,42 @@
             "FIG-ORT-GOLGOTA",
             "go"
           ]
-        ]
+        ],
+        "back_side": "right",
+        "mood": {
+          "FIG-JESUS": "pain"
+        },
+        "x": {
+          "FIG-JESUS": 60
+        }
       }
     },
     {
       "n": 2,
       "reference": "JHN.19.18-JHN.19.20",
       "figures": [
-        "FIG-GRUPPE-MENGE"
+        "FIG-JESUS"
       ],
-      "objects": [
-        "FIG-ORT-GOLGOTA"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-SEHEN"
-      ],
+      "objects": [],
+      "signs": [],
       "speech": [],
-      "action_de": "Dort kreuzigen sie ihn und mit ihm zwei andere, Jesus in der Mitte. Pilatus lässt eine Tafel am Kreuz anbringen: «Jesus, der Nazoräer, der König der Juden», in drei Sprachen; viele lesen sie.",
+      "action_de": "Dort kreuzigen sie ihn und mit ihm zwei andere, Jesus in der Mitte. Pilatus lässt die Tafel anbringen: «Jesus, der Nazoräer, der König der Juden».",
+      "keywords": {
+        "de": "Jesus, der Nazoräer, der König der Juden",
+        "gsw": "Jesus, de Nazoräer, de König vo de Jude"
+      },
       "stage": {
-        "at": {
-          "FIG-ZEICHEN-SEHEN": "FIG-GRUPPE-MENGE"
-        },
-        "x": {
-          "FIG-GRUPPE-MENGE": 40
+        "pose": {
+          "FIG-JESUS": "cross"
         },
         "mood": {
-          "FIG-GRUPPE-MENGE": "pensive"
+          "FIG-JESUS": "pain"
         },
-        "arrows": [
-          [
-            "FIG-GRUPPE-MENGE",
-            "FIG-ORT-GOLGOTA",
-            "act"
-          ]
-        ]
+        "x": {
+          "FIG-JESUS": 96
+        },
+        "air_x": 20,
+        "air_y": 104
       }
     },
     {
@@ -87,49 +87,57 @@
         {
           "from": "FIG-GRUPPE-HOHEPRIESTER",
           "to": "FIG-PILATUS",
-          "icons": [
-            "FIG-OBJ-TAFEL",
-            "FIG-ZEICHEN-NICHT"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Schreib nicht: ‹Der König der Juden›!",
+            "gsw": "Schriib nöd: ‹De König vo de Jude›!"
+          }
         },
         {
           "from": "FIG-PILATUS",
           "to": "FIG-GRUPPE-HOHEPRIESTER",
-          "icons": [
-            "FIG-OBJ-TAFEL",
-            "FIG-ZEICHEN-ABLEHNEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Was ich geschrieben habe, habe ich geschrieben.",
+            "gsw": "Was ich gschribe han, han ich gschribe."
+          }
         }
       ],
-      "action_de": "Die Hohepriester verlangen von Pilatus, er solle nicht «Der König der Juden» schreiben, sondern: «Er hat gesagt: Ich bin König der Juden.» Pilatus antwortet: «Was ich geschrieben habe, habe ich geschrieben.»",
+      "action_de": "Die Hohepriester sagen zu Pilatus: «Schreib nicht: ‹Der König der Juden› …» Pilatus antwortet: «Was ich geschrieben habe, habe ich geschrieben.»",
+      "names": {
+        "FIG-PILATUS": {
+          "de": "Pilatus",
+          "gsw": "Pilatus"
+        }
+      },
       "stage": {
-        "x": {
-          "FIG-GRUPPE-HOHEPRIESTER": 28,
-          "FIG-PILATUS": 160
-        },
         "mood": {
-          "FIG-GRUPPE-HOHEPRIESTER": "earnest",
+          "FIG-GRUPPE-HOHEPRIESTER": "angry",
           "FIG-PILATUS": "determined"
+        },
+        "x": {
+          "FIG-GRUPPE-HOHEPRIESTER": 46,
+          "FIG-PILATUS": 140
         }
       }
     }
   ],
   "actions_de": [
-    "Jesus trägt das Kreuz selbst und geht hinaus zur Schädelstätte, auf Hebräisch Golgota.",
-    "Dort kreuzigen sie ihn und mit ihm zwei andere, Jesus in der Mitte. Pilatus lässt eine Tafel am Kreuz anbringen: «Jesus, der Nazoräer, der König der Juden», in drei Sprachen; viele lesen sie.",
-    "Die Hohepriester verlangen von Pilatus, er solle nicht «Der König der Juden» schreiben, sondern: «Er hat gesagt: Ich bin König der Juden.» Pilatus antwortet: «Was ich geschrieben habe, habe ich geschrieben.»"
+    "Jesus trägt das Kreuz selbst und geht hinaus zur Schädelstätte, Golgota.",
+    "Dort kreuzigen sie ihn und mit ihm zwei andere, Jesus in der Mitte. Pilatus lässt die Tafel anbringen: «Jesus, der Nazoräer, der König der Juden».",
+    "Die Hohepriester sagen zu Pilatus: «Schreib nicht: ‹Der König der Juden› …» Pilatus antwortet: «Was ich geschrieben habe, habe ich geschrieben.»"
   ],
   "captions_de": [
-    "Kreuzweg: Jesus trägt sein Kreuz selbst zum Hügel Golgota (Pfeil).",
-    "Golgota: drei Kreuze, Jesus in der Mitte (Tafel am mittleren Kreuz); viele sehen und lesen die Tafel (Augen).",
-    "Die Tafel: Die Hohepriester wollen die Tafel geändert haben (Tafel, Wendepfeil); Pilatus lehnt ab (Tafel, Person mit gekreuzten Armen)."
+    "Das Kreuz tragen: Jesus trägt das Kreuz und geht nach Golgota (Hügel, gestrichelter Weg); im Band: Und er trug das Kreuz selbst (Kreuz).",
+    "Gekreuzigt: Jesus am Kreuz, darüber die Tafel; im Band die Aufschrift: Jesus, der Nazoräer, der König der Juden (Tafel).",
+    "Die Tafel bleibt: Die Hohepriester sagen zu Pilatus (Name): «Schreib nicht: ‹Der König der Juden›!» (Tafel, nicht); Pilatus: «Was ich geschrieben habe, habe ich geschrieben.» (Tafel)."
   ],
-  "interpretation_note_de": "Die Kreuzigung ist nur mit den drei leeren Kreuzen auf Golgota gezeigt ([[JHN.19.18]]); die Tafel trägt Zeilenstriche statt Schrift (drei Sprachen, [[JHN.19.20]]). Die Menge steht für «viele der Juden», die die Tafel lesen. Der Wendepfeil steht für «ändern». Gewalt wird nicht gezeigt: die Geisselung und die Schläge nicht, die Kreuzigung nur mit leeren Kreuzen auf Golgota.",
+  "interpretation_note_de": "Drei Felder nach dem Ablauf ([[JHN.19.17-JHN.19.22]]): Jesus trägt das Kreuz selbst (kein Simon von Kyrene: Johannes erzählt ihn nicht), die Kreuzigung mit der Tafel, der Streit um die Aufschrift. Jesus am Kreuz ist einfach und aus mittlerer Entfernung gezeichnet, ohne Wunden (Bildregel Kreuzigung). Die zwei anderen, die mit ihm gekreuzigt werden ([[JHN.19.18]]), sind nicht gezeichnet, weil das Bildlexikon für sie keine Figur hat; die Zusammenfassung nennt sie. Die drei Sprachen der Tafel sind nicht dargestellt.",
   "basis": [
     {
       "record": "TU-JHN-019-017-022",
       "field": "summary",
-      "fingerprint": "94922df4261dfc93"
+      "fingerprint": "d7282daf076ac1f7"
     },
     {
       "record": "TRANS-JHN-019-001-042-DE-WORKING",
@@ -151,7 +159,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -390,6 +398,155 @@
           "Golgota: drei Kreuze, Jesus in der Mitte (Tafel am mittleren Kreuz); viele sehen und lesen die Tafel (Auge).",
           "Die Tafel: Die Hohepriester wollen die Tafel geändert haben (Tafel, Wendepfeil); Pilatus lehnt ab (Tafel, abwehrende Hand)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.19.17",
+            "figures": [
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-GOLGOTA",
+              "FIG-OBJ-KREUZ"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Jesus trägt das Kreuz selbst und geht hinaus zur Schädelstätte, auf Hebräisch Golgota.",
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-KREUZ"
+              },
+              "x": {
+                "FIG-JESUS": 46
+              },
+              "mood": {
+                "FIG-JESUS": "earnest"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ORT-GOLGOTA",
+                  "go"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.19.18-JHN.19.20",
+            "figures": [
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-GOLGOTA"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SEHEN"
+            ],
+            "speech": [],
+            "action_de": "Dort kreuzigen sie ihn und mit ihm zwei andere, Jesus in der Mitte. Pilatus lässt eine Tafel am Kreuz anbringen: «Jesus, der Nazoräer, der König der Juden», in drei Sprachen; viele lesen sie.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-SEHEN": "FIG-GRUPPE-MENGE"
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 40
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "pensive"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-ORT-GOLGOTA",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.19.21-JHN.19.22",
+            "figures": [
+              "FIG-GRUPPE-HOHEPRIESTER",
+              "FIG-PILATUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-HOHEPRIESTER",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-OBJ-TAFEL",
+                  "FIG-ZEICHEN-NICHT"
+                ]
+              },
+              {
+                "from": "FIG-PILATUS",
+                "to": "FIG-GRUPPE-HOHEPRIESTER",
+                "icons": [
+                  "FIG-OBJ-TAFEL",
+                  "FIG-ZEICHEN-ABLEHNEN"
+                ]
+              }
+            ],
+            "action_de": "Die Hohepriester verlangen von Pilatus, er solle nicht «Der König der Juden» schreiben, sondern: «Er hat gesagt: Ich bin König der Juden.» Pilatus antwortet: «Was ich geschrieben habe, habe ich geschrieben.»",
+            "stage": {
+              "x": {
+                "FIG-GRUPPE-HOHEPRIESTER": 28,
+                "FIG-PILATUS": 160
+              },
+              "mood": {
+                "FIG-GRUPPE-HOHEPRIESTER": "earnest",
+                "FIG-PILATUS": "determined"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus trägt das Kreuz selbst und geht hinaus zur Schädelstätte, auf Hebräisch Golgota.",
+          "Dort kreuzigen sie ihn und mit ihm zwei andere, Jesus in der Mitte. Pilatus lässt eine Tafel am Kreuz anbringen: «Jesus, der Nazoräer, der König der Juden», in drei Sprachen; viele lesen sie.",
+          "Die Hohepriester verlangen von Pilatus, er solle nicht «Der König der Juden» schreiben, sondern: «Er hat gesagt: Ich bin König der Juden.» Pilatus antwortet: «Was ich geschrieben habe, habe ich geschrieben.»"
+        ],
+        "captions_de": [
+          "Kreuzweg: Jesus trägt sein Kreuz selbst zum Hügel Golgota (Pfeil).",
+          "Golgota: drei Kreuze, Jesus in der Mitte (Tafel am mittleren Kreuz); viele sehen und lesen die Tafel (Augen).",
+          "Die Tafel: Die Hohepriester wollen die Tafel geändert haben (Tafel, Wendepfeil); Pilatus lehnt ab (Tafel, Person mit gekreuzten Armen)."
+        ],
+        "interpretation_note_de": "Die Kreuzigung ist nur mit den drei leeren Kreuzen auf Golgota gezeigt ([[JHN.19.18]]); die Tafel trägt Zeilenstriche statt Schrift (drei Sprachen, [[JHN.19.20]]). Die Menge steht für «viele der Juden», die die Tafel lesen. Der Wendepfeil steht für «ändern». Gewalt wird nicht gezeigt: die Geisselung und die Schläge nicht, die Kreuzigung nur mit leeren Kreuzen auf Golgota.",
+        "basis": [
+          {
+            "record": "TU-JHN-019-017-022",
+            "field": "summary",
+            "fingerprint": "94922df4261dfc93"
+          },
+          {
+            "record": "TRANS-JHN-019-001-042-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.19.17",
+            "fingerprint": "067c83f209881244"
+          },
+          {
+            "record": "TRANS-JHN-019-001-042-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.19.18-JHN.19.20",
+            "fingerprint": "0c7d72cd9ae3dc12"
+          },
+          {
+            "record": "TRANS-JHN-019-001-042-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.19.21-JHN.19.22",
+            "fingerprint": "9a165d207da8cbc2"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

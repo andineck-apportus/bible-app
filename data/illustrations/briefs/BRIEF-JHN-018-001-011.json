@@ -11,94 +11,71 @@
   "panels": [
     {
       "n": 1,
-      "reference": "JHN.18.1-JHN.18.3",
+      "reference": "JHN.18.1-JHN.18.5",
       "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-JUENGER",
-        "FIG-JUDAS-ISKARIOT",
         "FIG-GRUPPE-SOLDATEN",
-        "FIG-ROLLE-TEMPELWACHE"
+        "FIG-JUDAS-ISKARIOT",
+        "FIG-JESUS"
       ],
       "objects": [
-        "FIG-ORT-GARTEN"
+        "FIG-ORT-GARTEN",
+        "FIG-OBJ-LAMPE"
       ],
-      "signs": [],
-      "speech": [],
-      "action_de": "Jesus geht mit seinen Jüngern in einen Garten jenseits des Kidron. Judas, der ihn ausliefert, kommt mit der Kohorte und Dienern der Hohepriester und Pharisäer, mit Laternen, Fackeln und Waffen.",
-      "stage": {
-        "back_side": "left",
-        "before": true,
-        "x": {
-          "FIG-JESUS": 22,
-          "FIG-GRUPPE-JUENGER": 54,
-          "FIG-JUDAS-ISKARIOT": 98,
-          "FIG-GRUPPE-SOLDATEN": 134,
-          "FIG-ROLLE-TEMPELWACHE": 168
-        },
-        "mood": {
-          "FIG-JUDAS-ISKARIOT": "earnest",
-          "FIG-GRUPPE-JUENGER": "worried"
-        },
-        "arrows": [
-          [
-            "FIG-JUDAS-ISKARIOT",
-            "FIG-JESUS",
-            "go"
-          ]
-        ]
-      }
-    },
-    {
-      "n": 2,
-      "reference": "JHN.18.4-JHN.18.6",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-JUDAS-ISKARIOT",
-        "FIG-GRUPPE-SOLDATEN",
-        "FIG-ROLLE-TEMPELWACHE"
-      ],
-      "objects": [],
       "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-SOLDATEN",
-          "icons": [
-            "FIG-JESUS"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Wen sucht ihr?",
+            "gsw": "Wän sueched ir?"
+          }
+        },
+        {
+          "from": "FIG-GRUPPE-SOLDATEN",
+          "to": "FIG-JESUS",
+          "icons": [],
+          "word": {
+            "de": "Jesus, den Nazoräer.",
+            "gsw": "De Jesus, de Nazoräer."
+          }
         }
       ],
-      "action_de": "Jesus geht ihnen entgegen und fragt: «Wen sucht ihr?» Sie sagen: «Jesus, den Nazoräer.» Als er sagt: «Ich bin es», weichen sie zurück und fallen zu Boden; Judas steht bei ihnen.",
+      "action_de": "Im Garten: Judas kommt mit der Kohorte und Dienern, mit Laternen, Fackeln und Waffen. Jesus geht hinaus und fragt: «Wen sucht ihr?» Sie antworten: «Jesus, den Nazoräer.»",
+      "keywords": {
+        "de": "mit Laternen und Fackeln und Waffen",
+        "gsw": "mit Latärne und Fackle und Waffe"
+      },
+      "names": {
+        "FIG-JUDAS-ISKARIOT": {
+          "de": "Judas",
+          "gsw": "Judas"
+        }
+      },
       "stage": {
-        "pose": {
-          "FIG-GRUPPE-SOLDATEN": "fall",
-          "FIG-ROLLE-TEMPELWACHE": "fall"
+        "hold": {
+          "FIG-GRUPPE-SOLDATEN": "FIG-OBJ-LAMPE"
         },
+        "night": true,
+        "back_side": "left",
+        "before": true,
         "mood": {
-          "FIG-GRUPPE-SOLDATEN": "surprised",
-          "FIG-ROLLE-TEMPELWACHE": "surprised",
-          "FIG-JUDAS-ISKARIOT": "worried"
+          "FIG-GRUPPE-SOLDATEN": "earnest",
+          "FIG-JUDAS-ISKARIOT": "earnest",
+          "FIG-JESUS": "calm"
         },
         "x": {
-          "FIG-JESUS": 30,
-          "FIG-JUDAS-ISKARIOT": 72,
-          "FIG-GRUPPE-SOLDATEN": 110,
-          "FIG-ROLLE-TEMPELWACHE": 146
-        },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-GRUPPE-SOLDATEN",
-            "act"
-          ]
-        ]
+          "FIG-GRUPPE-SOLDATEN": 34,
+          "FIG-JUDAS-ISKARIOT": 96,
+          "FIG-JESUS": 156
+        }
       }
     },
     {
-      "n": 3,
-      "reference": "JHN.18.7-JHN.18.9",
+      "n": 2,
+      "reference": "JHN.18.5-JHN.18.9",
       "figures": [
-        "FIG-GRUPPE-JUENGER",
         "FIG-JESUS",
         "FIG-GRUPPE-SOLDATEN"
       ],
@@ -108,27 +85,40 @@
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-SOLDATEN",
-          "icons": [
-            "FIG-GRUPPE-JUENGER",
-            "FIG-ZEICHEN-FREILASSEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Ich bin es.",
+            "gsw": "Ich bi s."
+          }
         }
       ],
-      "action_de": "Jesus fragt noch einmal und sagt: «Wenn ihr mich sucht, dann lasst diese gehen!» So erfüllt sich sein Wort, dass er keinen von denen verloren hat, die ihm gegeben sind.",
+      "action_de": "Jesus sagt: «Ich bin es.» Da weichen sie zurück und fallen zu Boden. «Wenn ihr also mich sucht, dann lasst diese gehen!»",
+      "keywords": {
+        "de": "Wenn ihr also mich sucht, dann lasst diese gehen!",
+        "gsw": "Wänn ir also mich sueched, dänn lönd die gaa!"
+      },
       "stage": {
+        "night": true,
+        "pose": {
+          "FIG-GRUPPE-SOLDATEN": "fall"
+        },
         "mood": {
-          "FIG-GRUPPE-JUENGER": "worried",
-          "FIG-GRUPPE-SOLDATEN": "earnest"
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-SOLDATEN": "fear"
+        },
+        "x": {
+          "FIG-JESUS": 46,
+          "FIG-GRUPPE-SOLDATEN": 136
         }
       }
     },
     {
-      "n": 4,
+      "n": 3,
       "reference": "JHN.18.10-JHN.18.11",
       "figures": [
-        "FIG-JESUS",
+        "FIG-MALCHUS",
         "FIG-PETRUS",
-        "FIG-MALCHUS"
+        "FIG-JESUS"
       ],
       "objects": [
         "FIG-OBJ-SCHWERT"
@@ -138,68 +128,74 @@
         {
           "from": "FIG-JESUS",
           "to": "FIG-PETRUS",
-          "icons": [
-            "FIG-OBJ-SCHWERT"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-PETRUS",
-          "icons": [
-            "FIG-GOTT",
-            "FIG-OBJ-BECHER-VOLL"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Steck das Schwert in die Scheide!",
+            "gsw": "Steck s Schwärt i d Scheide!"
+          }
         }
       ],
-      "action_de": "Simon Petrus zieht sein Schwert und haut Malchus, dem Knecht des Hohepriesters, das rechte Ohr ab. Jesus sagt zu ihm: «Steck das Schwert ein! Soll ich den Becher nicht trinken, den mir der Vater gegeben hat?»",
+      "action_de": "Simon Petrus zieht ein Schwert und haut Malchus, dem Knecht des Hohepriesters, das rechte Ohr ab. Jesus sagt: «Steck das Schwert in die Scheide! Den Becher, den mir der Vater gegeben hat, soll ich ihn etwa nicht trinken?»",
+      "keywords": {
+        "de": "Den Becher, den mir der Vater gegeben hat, soll ich ihn etwa nicht trinken?",
+        "gsw": "De Bächer, wo mir de Vatter gää hät, sött ich dä öppe nöd trinke?"
+      },
+      "names": {
+        "FIG-PETRUS": {
+          "de": "Petrus",
+          "gsw": "Petrus"
+        },
+        "FIG-MALCHUS": {
+          "de": "Malchus",
+          "gsw": "Malchus"
+        }
+      },
       "stage": {
+        "night": true,
         "hold": {
           "FIG-PETRUS": "FIG-OBJ-SCHWERT"
         },
         "mood": {
-          "FIG-MALCHUS": "surprised",
-          "FIG-PETRUS": "determined",
+          "FIG-MALCHUS": "pain",
+          "FIG-PETRUS": "angry",
           "FIG-JESUS": "earnest"
+        },
+        "x": {
+          "FIG-MALCHUS": 30,
+          "FIG-PETRUS": 92,
+          "FIG-JESUS": 156
         }
       }
     }
   ],
   "actions_de": [
-    "Jesus geht mit seinen Jüngern in einen Garten jenseits des Kidron. Judas, der ihn ausliefert, kommt mit der Kohorte und Dienern der Hohepriester und Pharisäer, mit Laternen, Fackeln und Waffen.",
-    "Jesus geht ihnen entgegen und fragt: «Wen sucht ihr?» Sie sagen: «Jesus, den Nazoräer.» Als er sagt: «Ich bin es», weichen sie zurück und fallen zu Boden; Judas steht bei ihnen.",
-    "Jesus fragt noch einmal und sagt: «Wenn ihr mich sucht, dann lasst diese gehen!» So erfüllt sich sein Wort, dass er keinen von denen verloren hat, die ihm gegeben sind.",
-    "Simon Petrus zieht sein Schwert und haut Malchus, dem Knecht des Hohepriesters, das rechte Ohr ab. Jesus sagt zu ihm: «Steck das Schwert ein! Soll ich den Becher nicht trinken, den mir der Vater gegeben hat?»"
+    "Im Garten: Judas kommt mit der Kohorte und Dienern, mit Laternen, Fackeln und Waffen. Jesus geht hinaus und fragt: «Wen sucht ihr?» Sie antworten: «Jesus, den Nazoräer.»",
+    "Jesus sagt: «Ich bin es.» Da weichen sie zurück und fallen zu Boden. «Wenn ihr also mich sucht, dann lasst diese gehen!»",
+    "Simon Petrus zieht ein Schwert und haut Malchus, dem Knecht des Hohepriesters, das rechte Ohr ab. Jesus sagt: «Steck das Schwert in die Scheide! Den Becher, den mir der Vater gegeben hat, soll ich ihn etwa nicht trinken?»"
   ],
   "captions_de": [
-    "Im Garten: Jesus und die Jünger im Garten (Bäume); Judas führt Soldaten und Tempeldiener mit Laterne heran (Pfeil).",
-    "«Ich bin es» → sie fallen: Jesus sagt: «Ich bin es» (Jesus in der Blase); da weichen Soldaten und Tempeldiener zurück und fallen zu Boden (Pfeil zu ihnen); Judas steht dabei.",
-    "Lasst sie gehen: Jesus stellt sich vor die Jünger und sagt den Soldaten: die Jünger (Gruppe) freilassen (gesprengte Kette).",
-    "Das Schwert: Petrus hat ein Schwert gezogen, vor ihm Malchus, der Knecht des Hohepriesters; Jesus: Schwert weg (Schwert, abwehrende Hand); den Becher, den der Vater gibt, nimmt er an (Strahlenkranz, Becher)."
+    "Wen sucht ihr?: Nachts im Garten (Bäume, Mond) Soldaten mit Fackel, dabei Judas (Name); Jesus fragt: «Wen sucht ihr?» (fragen); die Soldaten: «Jesus, den Nazoräer.» (Jesus); im Band: mit Laternen und Fackeln und Waffen (Fackel, Schwert).",
+    "Ich bin es: Jesus sagt zu den Soldaten: «Ich bin es.» (Jesus); sie weichen zurück und fallen zu Boden; im Band sein Wort zum Schutz der Jünger: Wenn ihr also mich sucht, dann lasst diese gehen! (Jesus, Jünger).",
+    "Das Schwert: Petrus (Name) mit dem Schwert, Malchus (Name) mit verbundenem Ohr; Jesus sagt zu Petrus: «Steck das Schwert in die Scheide!» (Schwert, nicht); im Band: Den Becher, den mir der Vater gegeben hat, soll ich ihn etwa nicht trinken? (Becher, Strahlenkranz)."
   ],
-  "interpretation_note_de": "Die Kohorte ist als Gruppe römischer Soldaten, die Diener als Tempeldiener mit Laterne gezeichnet ([[JHN.18.3]]). Der Schlag gegen Malchus wird nicht gezeigt, nur das gezogene Schwert ([[JHN.18.10]]). Mit «Ich bin es» ([[JHN.18.5-JHN.18.6]]) steht in der Blase das Zeichen für Jesus selbst; der Anklang an Gottes Namen («Ich bin») bleibt im Bild offen. Der Becher steht für das, was der Vater ihm gibt ([[JHN.18.11]]).",
+  "interpretation_note_de": "Drei Felder nach dem Ablauf ([[JHN.18.1-JHN.18.11]]): die Häscher mit Fackeln und Judas, Jesu «Ich bin es» mit den zu Boden fallenden Häschern, Petrus' Schwertstreich und Jesu Wort vom Becher. Die Verletzung des Malchus zeigt sein Erkennungszeichen (verbundenes Ohr), ohne Wunde. Kein Kuss des Judas, kein Gebetskampf und keine Flucht der Jünger: Das erzählt Johannes nicht. Die Kohorte erscheint als Soldaten, die Diener der Hohepriester sind nicht eigens gezeichnet.",
   "basis": [
     {
       "record": "TU-JHN-018-001-011",
       "field": "summary",
-      "fingerprint": "1f6a880e75911867"
+      "fingerprint": "189e2e95b56ef974"
     },
     {
       "record": "TRANS-JHN-018-001-040-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.18.1-JHN.18.3",
-      "fingerprint": "3ccdb21f6a8410d6"
+      "reference": "JHN.18.1-JHN.18.5",
+      "fingerprint": "e9c73c0c28c84f25"
     },
     {
       "record": "TRANS-JHN-018-001-040-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.18.4-JHN.18.6",
-      "fingerprint": "b91e87d6e8ee252b"
-    },
-    {
-      "record": "TRANS-JHN-018-001-040-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "JHN.18.7-JHN.18.9",
-      "fingerprint": "c6892d7d58903910"
+      "reference": "JHN.18.5-JHN.18.9",
+      "fingerprint": "4011868c87d645c9"
     },
     {
       "record": "TRANS-JHN-018-001-040-DE-WORKING",
@@ -209,7 +205,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -705,6 +701,555 @@
           "«Ich bin es» → sie fallen: Jesus sagt: «Ich bin es» (Jesus in der Blase); da weichen Soldaten und Tempeldiener zurück und fallen zu Boden (Pfeil zu ihnen); Judas steht dabei.",
           "Lasst sie gehen: Jesus stellt sich vor die Jünger und sagt den Soldaten: die Jünger (Gruppe) freilassen (offene Fessel).",
           "Das Schwert: Petrus hat ein Schwert gezogen, vor ihm Malchus, der Knecht des Hohepriesters; Jesus: Schwert weg (Schwert, abwehrende Hand); den Becher, den der Vater gibt, nimmt er an (Strahlenkranz, Becher)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.18.1-JHN.18.3",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JUDAS-ISKARIOT",
+              "FIG-GRUPPE-SOLDATEN",
+              "FIG-ROLLE-TEMPELWACHE"
+            ],
+            "objects": [
+              "FIG-ORT-GARTEN"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Jesus geht mit seinen Jüngern in einen Garten jenseits des Kidron. Judas, der ihn ausliefert, kommt mit der Kohorte und Dienern der Hohepriester und Pharisäer, mit Laternen, Fackeln und Waffen.",
+            "stage": {
+              "back_side": "left",
+              "before": true,
+              "x": {
+                "FIG-JESUS": 22,
+                "FIG-GRUPPE-JUENGER": 54,
+                "FIG-JUDAS-ISKARIOT": 98,
+                "FIG-GRUPPE-SOLDATEN": 134,
+                "FIG-ROLLE-TEMPELWACHE": 168
+              },
+              "mood": {
+                "FIG-JUDAS-ISKARIOT": "earnest",
+                "FIG-GRUPPE-JUENGER": "worried"
+              },
+              "arrows": [
+                [
+                  "FIG-JUDAS-ISKARIOT",
+                  "FIG-JESUS",
+                  "go"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.18.4-JHN.18.6",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-JUDAS-ISKARIOT",
+              "FIG-GRUPPE-SOLDATEN",
+              "FIG-ROLLE-TEMPELWACHE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-SOLDATEN",
+                "icons": [
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Jesus geht ihnen entgegen und fragt: «Wen sucht ihr?» Sie sagen: «Jesus, den Nazoräer.» Als er sagt: «Ich bin es», weichen sie zurück und fallen zu Boden; Judas steht bei ihnen.",
+            "stage": {
+              "pose": {
+                "FIG-GRUPPE-SOLDATEN": "fall",
+                "FIG-ROLLE-TEMPELWACHE": "fall"
+              },
+              "mood": {
+                "FIG-GRUPPE-SOLDATEN": "surprised",
+                "FIG-ROLLE-TEMPELWACHE": "surprised",
+                "FIG-JUDAS-ISKARIOT": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-JUDAS-ISKARIOT": 72,
+                "FIG-GRUPPE-SOLDATEN": 110,
+                "FIG-ROLLE-TEMPELWACHE": 146
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-SOLDATEN",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.18.7-JHN.18.9",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS",
+              "FIG-GRUPPE-SOLDATEN"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-SOLDATEN",
+                "icons": [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-ZEICHEN-FREILASSEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus fragt noch einmal und sagt: «Wenn ihr mich sucht, dann lasst diese gehen!» So erfüllt sich sein Wort, dass er keinen von denen verloren hat, die ihm gegeben sind.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "worried",
+                "FIG-GRUPPE-SOLDATEN": "earnest"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "JHN.18.10-JHN.18.11",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-PETRUS",
+              "FIG-MALCHUS"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHWERT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-OBJ-SCHWERT"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-GOTT",
+                  "FIG-OBJ-BECHER-VOLL"
+                ]
+              }
+            ],
+            "action_de": "Simon Petrus zieht sein Schwert und haut Malchus, dem Knecht des Hohepriesters, das rechte Ohr ab. Jesus sagt zu ihm: «Steck das Schwert ein! Soll ich den Becher nicht trinken, den mir der Vater gegeben hat?»",
+            "stage": {
+              "hold": {
+                "FIG-PETRUS": "FIG-OBJ-SCHWERT"
+              },
+              "mood": {
+                "FIG-MALCHUS": "surprised",
+                "FIG-PETRUS": "determined",
+                "FIG-JESUS": "earnest"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus geht mit seinen Jüngern in einen Garten jenseits des Kidron. Judas, der ihn ausliefert, kommt mit der Kohorte und Dienern der Hohepriester und Pharisäer, mit Laternen, Fackeln und Waffen.",
+          "Jesus geht ihnen entgegen und fragt: «Wen sucht ihr?» Sie sagen: «Jesus, den Nazoräer.» Als er sagt: «Ich bin es», weichen sie zurück und fallen zu Boden; Judas steht bei ihnen.",
+          "Jesus fragt noch einmal und sagt: «Wenn ihr mich sucht, dann lasst diese gehen!» So erfüllt sich sein Wort, dass er keinen von denen verloren hat, die ihm gegeben sind.",
+          "Simon Petrus zieht sein Schwert und haut Malchus, dem Knecht des Hohepriesters, das rechte Ohr ab. Jesus sagt zu ihm: «Steck das Schwert ein! Soll ich den Becher nicht trinken, den mir der Vater gegeben hat?»"
+        ],
+        "captions_de": [
+          "Im Garten: Jesus und die Jünger im Garten (Bäume); Judas führt Soldaten und Tempeldiener mit Laterne heran (Pfeil).",
+          "«Ich bin es» → sie fallen: Jesus sagt: «Ich bin es» (Jesus in der Blase); da weichen Soldaten und Tempeldiener zurück und fallen zu Boden (Pfeil zu ihnen); Judas steht dabei.",
+          "Lasst sie gehen: Jesus stellt sich vor die Jünger und sagt den Soldaten: die Jünger (Gruppe) freilassen (gesprengte Kette).",
+          "Das Schwert: Petrus hat ein Schwert gezogen, vor ihm Malchus, der Knecht des Hohepriesters; Jesus: Schwert weg (Schwert, abwehrende Hand); den Becher, den der Vater gibt, nimmt er an (Strahlenkranz, Becher)."
+        ],
+        "interpretation_note_de": "Die Kohorte ist als Gruppe römischer Soldaten, die Diener als Tempeldiener mit Laterne gezeichnet ([[JHN.18.3]]). Der Schlag gegen Malchus wird nicht gezeigt, nur das gezogene Schwert ([[JHN.18.10]]). Mit «Ich bin es» ([[JHN.18.5-JHN.18.6]]) steht in der Blase das Zeichen für Jesus selbst; der Anklang an Gottes Namen («Ich bin») bleibt im Bild offen. Der Becher steht für das, was der Vater ihm gibt ([[JHN.18.11]]).",
+        "basis": [
+          {
+            "record": "TU-JHN-018-001-011",
+            "field": "summary",
+            "fingerprint": "1f6a880e75911867"
+          },
+          {
+            "record": "TRANS-JHN-018-001-040-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.18.1-JHN.18.3",
+            "fingerprint": "3ccdb21f6a8410d6"
+          },
+          {
+            "record": "TRANS-JHN-018-001-040-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.18.4-JHN.18.6",
+            "fingerprint": "b91e87d6e8ee252b"
+          },
+          {
+            "record": "TRANS-JHN-018-001-040-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.18.7-JHN.18.9",
+            "fingerprint": "c6892d7d58903910"
+          },
+          {
+            "record": "TRANS-JHN-018-001-040-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.18.10-JHN.18.11",
+            "fingerprint": "39709d662eb2595e"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.18.1-JHN.18.5",
+            "figures": [
+              "FIG-GRUPPE-SOLDATEN",
+              "FIG-JUDAS-ISKARIOT",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-GARTEN",
+              "FIG-OBJ-LAMPE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-SOLDATEN",
+                "icons": [],
+                "word": {
+                  "de": "Wen sucht ihr?",
+                  "gsw": "Wän sueched ir?"
+                }
+              },
+              {
+                "from": "FIG-GRUPPE-SOLDATEN",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Jesus, den Nazoräer.",
+                  "gsw": "De Jesus, de Nazoräer."
+                }
+              }
+            ],
+            "action_de": "Im Garten: Judas kommt mit der Kohorte und Dienern, mit Laternen, Fackeln und Waffen. Jesus geht hinaus und fragt: «Wen sucht ihr?» Sie antworten: «Jesus, den Nazoräer.»",
+            "keywords": {
+              "de": "mit Laternen und Fackeln und Waffen",
+              "gsw": "mit Latärne und Fackle und Waffe"
+            },
+            "names": {
+              "FIG-JUDAS-ISKARIOT": {
+                "de": "Judas",
+                "gsw": "Judas"
+              }
+            },
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-SOLDATEN": "FIG-OBJ-LAMPE"
+              },
+              "night": true,
+              "back_side": "left",
+              "before": true,
+              "mood": {
+                "FIG-GRUPPE-SOLDATEN": "earnest",
+                "FIG-JUDAS-ISKARIOT": "earnest",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-SOLDATEN": 34,
+                "FIG-JUDAS-ISKARIOT": 96,
+                "FIG-JESUS": 156
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.18.5-JHN.18.9",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-SOLDATEN"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-SOLDATEN",
+                "icons": [],
+                "word": {
+                  "de": "Ich bin es.",
+                  "gsw": "Ich bi s."
+                }
+              }
+            ],
+            "action_de": "Jesus sagt: «Ich bin es.» Da weichen sie zurück und fallen zu Boden. «Wenn ihr also mich sucht, dann lasst diese gehen!»",
+            "keywords": {
+              "de": "wichen sie zurück und fielen zu Boden",
+              "gsw": "sind si zrugg gwiche und sind a Bode gfalle"
+            },
+            "stage": {
+              "night": true,
+              "pose": {
+                "FIG-GRUPPE-SOLDATEN": "fall"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-SOLDATEN": "fear"
+              },
+              "x": {
+                "FIG-JESUS": 46,
+                "FIG-GRUPPE-SOLDATEN": 136
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.18.10-JHN.18.11",
+            "figures": [
+              "FIG-MALCHUS",
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHWERT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [],
+                "word": {
+                  "de": "Steck das Schwert in die Scheide!",
+                  "gsw": "Steck s Schwärt i d Scheide!"
+                }
+              }
+            ],
+            "action_de": "Simon Petrus zieht ein Schwert und haut Malchus, dem Knecht des Hohepriesters, das rechte Ohr ab. Jesus sagt: «Steck das Schwert in die Scheide! Den Becher, den mir der Vater gegeben hat, soll ich ihn etwa nicht trinken?»",
+            "keywords": {
+              "de": "Den Becher, den mir der Vater gegeben hat",
+              "gsw": "De Bächer, wo mir de Vatter gää hät"
+            },
+            "names": {
+              "FIG-PETRUS": {
+                "de": "Petrus",
+                "gsw": "Petrus"
+              },
+              "FIG-MALCHUS": {
+                "de": "Malchus",
+                "gsw": "Malchus"
+              }
+            },
+            "stage": {
+              "night": true,
+              "hold": {
+                "FIG-PETRUS": "FIG-OBJ-SCHWERT"
+              },
+              "mood": {
+                "FIG-MALCHUS": "pain",
+                "FIG-PETRUS": "angry",
+                "FIG-JESUS": "earnest"
+              },
+              "x": {
+                "FIG-MALCHUS": 30,
+                "FIG-PETRUS": 92,
+                "FIG-JESUS": 156
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Wen sucht ihr?: Nachts im Garten (Bäume, Mond) Soldaten mit Fackel, dabei Judas (Name); Jesus fragt: «Wen sucht ihr?» (fragen); die Soldaten: «Jesus, den Nazoräer.» (Jesus); im Band: mit Laternen und Fackeln und Waffen (Fackel, Schwert).",
+          "Ich bin es: Jesus sagt zu den Soldaten: «Ich bin es.» (Jesus); sie fallen zu Boden; im Band: wichen sie zurück und fielen zu Boden (Soldaten).",
+          "Das Schwert: Petrus (Name) mit dem Schwert, Malchus (Name) mit verbundenem Ohr; Jesus sagt zu Petrus: «Steck das Schwert in die Scheide!» (Schwert, nicht); im Band: Den Becher, den mir der Vater gegeben hat (Becher, Strahlenkranz)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.18.1-JHN.18.5",
+            "figures": [
+              "FIG-GRUPPE-SOLDATEN",
+              "FIG-JUDAS-ISKARIOT",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-GARTEN",
+              "FIG-OBJ-LAMPE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-SOLDATEN",
+                "icons": [],
+                "word": {
+                  "de": "Wen sucht ihr?",
+                  "gsw": "Wän sueched ir?"
+                }
+              },
+              {
+                "from": "FIG-GRUPPE-SOLDATEN",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Jesus, den Nazoräer.",
+                  "gsw": "De Jesus, de Nazoräer."
+                }
+              }
+            ],
+            "action_de": "Im Garten: Judas kommt mit der Kohorte und Dienern, mit Laternen, Fackeln und Waffen. Jesus geht hinaus und fragt: «Wen sucht ihr?» Sie antworten: «Jesus, den Nazoräer.»",
+            "keywords": {
+              "de": "mit Laternen und Fackeln und Waffen",
+              "gsw": "mit Latärne und Fackle und Waffe"
+            },
+            "names": {
+              "FIG-JUDAS-ISKARIOT": {
+                "de": "Judas",
+                "gsw": "Judas"
+              }
+            },
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-SOLDATEN": "FIG-OBJ-LAMPE"
+              },
+              "night": true,
+              "back_side": "left",
+              "before": true,
+              "mood": {
+                "FIG-GRUPPE-SOLDATEN": "earnest",
+                "FIG-JUDAS-ISKARIOT": "earnest",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-SOLDATEN": 34,
+                "FIG-JUDAS-ISKARIOT": 96,
+                "FIG-JESUS": 156
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.18.5-JHN.18.9",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-SOLDATEN"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-SOLDATEN",
+                "icons": [],
+                "word": {
+                  "de": "Ich bin es.",
+                  "gsw": "Ich bi s."
+                }
+              }
+            ],
+            "action_de": "Jesus sagt: «Ich bin es.» Da weichen sie zurück und fallen zu Boden. «Wenn ihr also mich sucht, dann lasst diese gehen!»",
+            "keywords": {
+              "de": "wichen sie zurück und fielen zu Boden",
+              "gsw": "sind si zrugg gwiche und sind a Bode gfalle"
+            },
+            "stage": {
+              "night": true,
+              "pose": {
+                "FIG-GRUPPE-SOLDATEN": "fall"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-SOLDATEN": "fear"
+              },
+              "x": {
+                "FIG-JESUS": 46,
+                "FIG-GRUPPE-SOLDATEN": 136
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.18.10-JHN.18.11",
+            "figures": [
+              "FIG-MALCHUS",
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHWERT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [],
+                "word": {
+                  "de": "Steck das Schwert in die Scheide!",
+                  "gsw": "Steck s Schwärt i d Scheide!"
+                }
+              }
+            ],
+            "action_de": "Simon Petrus zieht ein Schwert und haut Malchus, dem Knecht des Hohepriesters, das rechte Ohr ab. Jesus sagt: «Steck das Schwert in die Scheide! Den Becher, den mir der Vater gegeben hat, soll ich ihn etwa nicht trinken?»",
+            "keywords": {
+              "de": "Den Becher, den mir der Vater gegeben hat, soll ich ihn etwa nicht trinken?",
+              "gsw": "De Bächer, wo mir de Vatter gää hät, sött ich dä öppe nöd trinke?"
+            },
+            "names": {
+              "FIG-PETRUS": {
+                "de": "Petrus",
+                "gsw": "Petrus"
+              },
+              "FIG-MALCHUS": {
+                "de": "Malchus",
+                "gsw": "Malchus"
+              }
+            },
+            "stage": {
+              "night": true,
+              "hold": {
+                "FIG-PETRUS": "FIG-OBJ-SCHWERT"
+              },
+              "mood": {
+                "FIG-MALCHUS": "pain",
+                "FIG-PETRUS": "angry",
+                "FIG-JESUS": "earnest"
+              },
+              "x": {
+                "FIG-MALCHUS": 30,
+                "FIG-PETRUS": 92,
+                "FIG-JESUS": 156
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Wen sucht ihr?: Nachts im Garten (Bäume, Mond) Soldaten mit Fackel, dabei Judas (Name); Jesus fragt: «Wen sucht ihr?» (fragen); die Soldaten: «Jesus, den Nazoräer.» (Jesus); im Band: mit Laternen und Fackeln und Waffen (Fackel, Schwert).",
+          "Ich bin es: Jesus sagt zu den Soldaten: «Ich bin es.» (Jesus); sie fallen zu Boden; im Band: wichen sie zurück und fielen zu Boden (Soldaten).",
+          "Das Schwert: Petrus (Name) mit dem Schwert, Malchus (Name) mit verbundenem Ohr; Jesus sagt zu Petrus: «Steck das Schwert in die Scheide!» (Schwert, nicht); im Band: Den Becher, den mir der Vater gegeben hat, soll ich ihn etwa nicht trinken? (Becher, Strahlenkranz)."
         ]
       }
     }

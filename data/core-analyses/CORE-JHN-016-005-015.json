@@ -1,0 +1,142 @@
+{
+ "id": "CORE-JHN-016-005-015",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "JHN.16.5-JHN.16.15",
+ "target": "TU-JHN-016-005-015",
+ "core_de": "Jesus geht zu dem, der ihn gesandt hat, und Trauer erfüllt die Jünger; doch es ist gut für sie, dass er weggeht, denn sonst kommt der Beistand nicht; wenn er kommt, wird er die Welt überführen hinsichtlich der Sünde, weil sie nicht an Jesus glauben, der Gerechtigkeit, weil er zum Vater geht, und des Gerichts, weil der Herrscher dieser Welt gerichtet ist; der Geist der Wahrheit wird sie in der ganzen Wahrheit leiten, das Kommende verkünden und Jesus verherrlichen.",
+ "mode": "speech",
+ "voice": {
+  "speaker": "FIG-JESUS",
+  "addressee": "FIG-GRUPPE-JUENGER"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Weggehen – Trauer – gut für euch – der Beistand überführt – leitet in die Wahrheit",
+    "range": "JHN.16.5-JHN.16.15",
+    "elements": [
+     {
+      "label": "Jetzt gehe ich zu dem, der mich gesandt hat; Trauer hat euer Herz erfüllt",
+      "ref": "JHN.16.5-JHN.16.6",
+      "role": "Anlass"
+     },
+     {
+      "label": "«Es ist gut für euch, dass ich weggehe» – sonst kommt der Beistand nicht",
+      "ref": "JHN.16.7",
+      "role": "Wende"
+     },
+     {
+      "label": "Der Beistand überführt die Welt",
+      "ref": "JHN.16.8-JHN.16.11",
+      "role": "Reihe",
+      "child": "s2"
+     },
+     {
+      "label": "Der Geist der Wahrheit leitet euch in der ganzen Wahrheit, verkündet das Kommende, verherrlicht mich",
+      "ref": "JHN.16.12-JHN.16.15",
+      "role": "Zusage"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "JHN.16.5-JHN.16.15"
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "«Der Vater» ist Gott; im Bild als Strahlenkranz, nie als Mensch."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "series",
+    "subtype": "überführen hinsichtlich …",
+    "range": "JHN.16.8-JHN.16.11",
+    "elements": [
+     {
+      "label": "Sünde → weil sie nicht an mich glauben",
+      "ref": "JHN.16.9"
+     },
+     {
+      "label": "Gerechtigkeit → weil ich zum Vater gehe und ihr mich nicht mehr seht",
+      "ref": "JHN.16.10"
+     },
+     {
+      "label": "Gericht → weil der Herrscher dieser Welt gerichtet ist",
+      "ref": "JHN.16.11"
+     }
+    ],
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "JHN.16.5-JHN.16.7",
+   "text_de": "Trauer erfüllt ihr Herz, doch «es ist gut für euch, dass ich weggehe», denn sonst kommt der Beistand nicht.",
+   "reason_de": "Wende von Trauer zu Zusage (Kriterium 2).",
+   "recognition_de": "Gut, dass ich weggehe.",
+   "keywords": [
+    "Es ist gut für euch, dass ich weggehe",
+    "wenn ich aber gehe, werde ich ihn zu euch senden"
+   ]
+  },
+  {
+   "reference": "JHN.16.8-JHN.16.11",
+   "text_de": "Der Beistand überführt die Welt: Sünde – weil sie nicht an ihn glauben; Gerechtigkeit – weil er zum Vater geht; Gericht – weil der Herrscher dieser Welt gerichtet ist.",
+   "reason_de": "Reihe mit drei Gliedern, alle mit Begründung (Kriterium 1; Regel 1).",
+   "recognition_de": "Sünde, Gerechtigkeit, Gericht.",
+   "keywords": [
+    "hinsichtlich der Sünde, weil sie nicht an mich glauben",
+    "hinsichtlich der Gerechtigkeit, weil ich zum Vater gehe",
+    "hinsichtlich des Gerichts, weil der Herrscher dieser Welt gerichtet ist"
+   ]
+  },
+  {
+   "reference": "JHN.16.12-JHN.16.15",
+   "text_de": "Der Geist der Wahrheit wird sie in der ganzen Wahrheit leiten und das Kommende verkünden; er wird Jesus verherrlichen.",
+   "reason_de": "Ausgang (Kriterium 3).",
+   "recognition_de": "In die Wahrheit leiten.",
+   "keywords": [
+    "wird er euch in der ganzen Wahrheit leiten",
+    "Er wird mich verherrlichen"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Wer «der Herrscher dieser Welt» ist ([[JHN.16.11]]), sagt der Text hier nicht; im Bild nicht als Figur gezeichnet"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-HEILIGER-GEIST",
+  "FIG-GOTT"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "JHN.16.5-JHN.16.15",
+   "fingerprint": "df7844f1ac62fee4"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Joh 15–21, Buch Johannes und Lk 11 nach Joh 1–14; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

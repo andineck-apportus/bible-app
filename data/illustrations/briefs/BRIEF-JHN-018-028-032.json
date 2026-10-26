@@ -11,172 +11,97 @@
   "panels": [
     {
       "n": 1,
-      "reference": "JHN.18.28",
-      "figures": [
-        "FIG-GRUPPE-MENGE",
-        "FIG-JESUS"
-      ],
-      "objects": [
-        "FIG-ORT-PRAETORIUM",
-        "FIG-OBJ-FESSEL"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-ABSTAND"
-      ],
+      "reference": "JHN.18.28-JHN.18.32",
+      "figures": [],
+      "objects": [],
+      "signs": [],
       "speech": [],
-      "action_de": "Früh am Morgen führen sie Jesus von Kajafas ins Prätorium; sie selbst gehen nicht hinein, um nicht unrein zu werden und das Passa essen zu können.",
-      "stage": {
-        "hold": {
-          "FIG-JESUS": "FIG-OBJ-FESSEL"
+      "action_de": "Vor dem Prätorium: Pilatus kommt heraus und fragt nach der Anklage; sie antworten: «Wenn dieser nicht Böses täte, hätten wir ihn dir nicht ausgeliefert.» – «Nehmt ihr ihn und richtet ihn nach eurem Gesetz!» – «Uns ist es nicht erlaubt, jemanden zu töten.»",
+      "diagram": {
+        "visual": "dialogue",
+        "span": 2,
+        "title": {
+          "de": "Sie selbst gingen nicht ins Prätorium hinein",
+          "gsw": "Si sälber sind nöd is Prätorium ine gange"
         },
-        "split": 1,
-        "x": {
-          "FIG-GRUPPE-MENGE": 34,
-          "FIG-JESUS": 86
-        },
-        "before": true,
-        "mood": {
-          "FIG-GRUPPE-MENGE": "earnest"
-        },
-        "arrows": [
-          [
-            "FIG-GRUPPE-MENGE",
-            "FIG-JESUS",
-            "act"
-          ],
-          [
-            "FIG-JESUS",
-            "FIG-ORT-PRAETORIUM",
-            "go"
-          ]
+        "turns": [
+          {
+            "who": "FIG-PILATUS",
+            "cell": {
+              "a": {
+                "de": "«Was für eine Anklage bringt ihr gegen diesen Menschen vor?»",
+                "gsw": "«Was für e Aaklag bringed ir gäge dä Mänsch vor?»"
+              },
+              "icons": [
+                "FIG-ZEICHEN-FRAGEN"
+              ]
+            }
+          },
+          {
+            "who": "FIG-GRUPPE-MENGE",
+            "cell": {
+              "a": {
+                "de": "«Wenn dieser nicht Böses täte, hätten wir ihn dir nicht ausgeliefert.»",
+                "gsw": "«Wänn dä nöd Böses tät, hetted mir en dir nöd usgliferet.»"
+              },
+              "icons": [
+                "FIG-ZEICHEN-BOESES",
+                "FIG-ZEICHEN-AUSLIEFERN"
+              ]
+            }
+          },
+          {
+            "who": "FIG-PILATUS",
+            "cell": {
+              "a": {
+                "de": "«Nehmt ihr ihn und richtet ihn nach eurem Gesetz!»",
+                "gsw": "«Nämed ir en und richted en nach euem Gsetz!»"
+              },
+              "icons": [
+                "FIG-ZEICHEN-GERICHT"
+              ]
+            }
+          },
+          {
+            "who": "FIG-GRUPPE-MENGE",
+            "cell": {
+              "a": {
+                "de": "«Uns ist es nicht erlaubt, jemanden zu töten.»",
+                "gsw": "«Mir dörfed niemer töte.»"
+              },
+              "icons": [
+                "FIG-ZEICHEN-TOETEN",
+                "FIG-ZEICHEN-NICHT"
+              ],
+              "tone": "new"
+            }
+          }
         ]
-      }
-    },
-    {
-      "n": 2,
-      "reference": "JHN.18.29-JHN.18.30",
-      "figures": [
-        "FIG-PILATUS",
-        "FIG-GRUPPE-MENGE"
-      ],
-      "objects": [
-        "FIG-ORT-PRAETORIUM"
-      ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-PILATUS",
-          "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-ZEICHEN-GERICHT",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
-        },
-        {
-          "from": "FIG-GRUPPE-MENGE",
-          "to": "FIG-PILATUS",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-SUENDE"
-          ]
-        }
-      ],
-      "action_de": "Pilatus kommt zu ihnen heraus und fragt: «Was für eine Anklage bringt ihr gegen diesen Menschen vor?» Sie antworten: «Wenn er nicht Böses täte, hätten wir ihn dir nicht ausgeliefert.»",
-      "stage": {
-        "back_side": "left",
-        "before": true,
-        "x": {
-          "FIG-PILATUS": 56,
-          "FIG-GRUPPE-MENGE": 148
-        },
-        "mood": {
-          "FIG-GRUPPE-MENGE": "earnest",
-          "FIG-PILATUS": "calm"
-        }
-      }
-    },
-    {
-      "n": 3,
-      "reference": "JHN.18.31-JHN.18.32",
-      "figures": [
-        "FIG-PILATUS",
-        "FIG-GRUPPE-MENGE"
-      ],
-      "objects": [
-        "FIG-ORT-PRAETORIUM"
-      ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-PILATUS",
-          "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-OBJ-GESETZESTAFELN",
-            "FIG-ZEICHEN-GERICHT"
-          ]
-        },
-        {
-          "from": "FIG-GRUPPE-MENGE",
-          "to": "FIG-PILATUS",
-          "icons": [
-            "FIG-ZEICHEN-TOD",
-            "FIG-ZEICHEN-NEIN"
-          ]
-        }
-      ],
-      "action_de": "Pilatus sagt: «Nehmt ihr ihn und richtet ihn nach eurem Gesetz!» Die Juden sagen: «Uns ist es nicht erlaubt, jemanden zu töten.» So erfüllt sich Jesu Wort über die Art seines Todes.",
-      "stage": {
-        "back_side": "left",
-        "before": true,
-        "x": {
-          "FIG-PILATUS": 56,
-          "FIG-GRUPPE-MENGE": 148
-        },
-        "mood": {
-          "FIG-GRUPPE-MENGE": "earnest",
-          "FIG-PILATUS": "calm"
-        }
       }
     }
   ],
   "actions_de": [
-    "Früh am Morgen führen sie Jesus von Kajafas ins Prätorium; sie selbst gehen nicht hinein, um nicht unrein zu werden und das Passa essen zu können.",
-    "Pilatus kommt zu ihnen heraus und fragt: «Was für eine Anklage bringt ihr gegen diesen Menschen vor?» Sie antworten: «Wenn er nicht Böses täte, hätten wir ihn dir nicht ausgeliefert.»",
-    "Pilatus sagt: «Nehmt ihr ihn und richtet ihn nach eurem Gesetz!» Die Juden sagen: «Uns ist es nicht erlaubt, jemanden zu töten.» So erfüllt sich Jesu Wort über die Art seines Todes."
+    "Vor dem Prätorium: Pilatus kommt heraus und fragt nach der Anklage; sie antworten: «Wenn dieser nicht Böses täte, hätten wir ihn dir nicht ausgeliefert.» – «Nehmt ihr ihn und richtet ihn nach eurem Gesetz!» – «Uns ist es nicht erlaubt, jemanden zu töten.»"
   ],
   "captions_de": [
-    "Zum Prätorium: Die Ankläger führen den gefesselten Jesus (Strick) zum Amtssitz des Statthalters (Pfeile); sie selbst bleiben draussen (gestrichelte Linie).",
-    "Die Anklage: Pilatus fragt nach der Anklage (Waage, ?); die Ankläger: Er tut Böses (Jesus, schwarzes Herz).",
-    "Nach eurem Gesetz: Pilatus: Richtet ihn nach eurem Gesetz (Tafeln, Waage); die Ankläger: Töten dürfen wir nicht (Totenkopf, abwehrende Hand)."
+    "Draussen (Dialog Pilatus ↔ Menge, Zeile «Sie selbst gingen nicht ins Prätorium hinein»): «Was für eine Anklage bringt ihr gegen diesen Menschen vor?» (fragen) – «Wenn dieser nicht Böses täte, hätten wir ihn dir nicht ausgeliefert.» (das Böse, ausliefern) – «Nehmt ihr ihn und richtet ihn nach eurem Gesetz!» (Waage) – «Uns ist es nicht erlaubt, jemanden zu töten.» (töten, nicht)."
   ],
-  "interpretation_note_de": "Wer Jesus ins Prätorium führt, sagt [[JHN.18.28]] nur mit «sie»; nach [[JHN.18.31]] sind es «die Juden», nach [[JHN.18.35]] Jesu Volk und die Hohepriester. Sie sind als neutrale Menge gezeichnet. Die gestrichelte Linie zeigt, dass sie draussen bleiben (Reinheit vor dem Passa, [[JHN.18.28]]). Wie Jesu Wort über seinen Tod gemeint ist ([[JHN.18.32]], vgl. [[JHN.12.32-JHN.12.33]]), deutet das Bild nicht aus.",
+  "interpretation_note_de": "Ein Strukturbild nach dem Wortwechsel draussen vor dem Prätorium ([[JHN.18.28-JHN.18.32]]): Rede und Gegenrede zwischen Pilatus und denen, die Jesus gebracht haben. «Die Juden» ([[JHN.18.31]]) erscheinen als neutrale Menge, ohne Merkmale einer Volksgruppe. Hervorgehoben ist die letzte Antwort, weil der Erzähler daran Jesu Wort über seinen Tod anschliesst ([[JHN.18.32]]).",
   "basis": [
     {
       "record": "TU-JHN-018-028-032",
       "field": "summary",
-      "fingerprint": "65314ae17cd56416"
+      "fingerprint": "8ee1e08178020fe1"
     },
     {
       "record": "TRANS-JHN-018-001-040-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JHN.18.28",
-      "fingerprint": "bf6154e98066cc15"
-    },
-    {
-      "record": "TRANS-JHN-018-001-040-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "JHN.18.29-JHN.18.30",
-      "fingerprint": "72520b5dac921bb1"
-    },
-    {
-      "record": "TRANS-JHN-018-001-040-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "JHN.18.31-JHN.18.32",
-      "fingerprint": "c930ffdff962012e"
+      "reference": "JHN.18.28-JHN.18.32",
+      "fingerprint": "d2e113005167cfa7"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -465,6 +390,180 @@
           "Die Anklage: Pilatus fragt nach der Anklage (Waage, ?); die Ankläger: Er tut Böses (Jesus, dunkler Fleck).",
           "Nach eurem Gesetz: Pilatus: Richtet ihn nach eurem Gesetz (Tafeln, Waage); die Ankläger: Töten dürfen wir nicht (Grab, abwehrende Hand)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JHN.18.28",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-PRAETORIUM",
+              "FIG-OBJ-FESSEL"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [],
+            "action_de": "Früh am Morgen führen sie Jesus von Kajafas ins Prätorium; sie selbst gehen nicht hinein, um nicht unrein zu werden und das Passa essen zu können.",
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-FESSEL"
+              },
+              "split": 1,
+              "x": {
+                "FIG-GRUPPE-MENGE": 34,
+                "FIG-JESUS": 86
+              },
+              "before": true,
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-JESUS",
+                  "act"
+                ],
+                [
+                  "FIG-JESUS",
+                  "FIG-ORT-PRAETORIUM",
+                  "go"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JHN.18.29-JHN.18.30",
+            "figures": [
+              "FIG-PILATUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-PRAETORIUM"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PILATUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-GERICHT",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-SUENDE"
+                ]
+              }
+            ],
+            "action_de": "Pilatus kommt zu ihnen heraus und fragt: «Was für eine Anklage bringt ihr gegen diesen Menschen vor?» Sie antworten: «Wenn er nicht Böses täte, hätten wir ihn dir nicht ausgeliefert.»",
+            "stage": {
+              "back_side": "left",
+              "before": true,
+              "x": {
+                "FIG-PILATUS": 56,
+                "FIG-GRUPPE-MENGE": 148
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-PILATUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JHN.18.31-JHN.18.32",
+            "figures": [
+              "FIG-PILATUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-PRAETORIUM"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PILATUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-OBJ-GESETZESTAFELN",
+                  "FIG-ZEICHEN-GERICHT"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-ZEICHEN-TOD",
+                  "FIG-ZEICHEN-NEIN"
+                ]
+              }
+            ],
+            "action_de": "Pilatus sagt: «Nehmt ihr ihn und richtet ihn nach eurem Gesetz!» Die Juden sagen: «Uns ist es nicht erlaubt, jemanden zu töten.» So erfüllt sich Jesu Wort über die Art seines Todes.",
+            "stage": {
+              "back_side": "left",
+              "before": true,
+              "x": {
+                "FIG-PILATUS": 56,
+                "FIG-GRUPPE-MENGE": 148
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-PILATUS": "calm"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Früh am Morgen führen sie Jesus von Kajafas ins Prätorium; sie selbst gehen nicht hinein, um nicht unrein zu werden und das Passa essen zu können.",
+          "Pilatus kommt zu ihnen heraus und fragt: «Was für eine Anklage bringt ihr gegen diesen Menschen vor?» Sie antworten: «Wenn er nicht Böses täte, hätten wir ihn dir nicht ausgeliefert.»",
+          "Pilatus sagt: «Nehmt ihr ihn und richtet ihn nach eurem Gesetz!» Die Juden sagen: «Uns ist es nicht erlaubt, jemanden zu töten.» So erfüllt sich Jesu Wort über die Art seines Todes."
+        ],
+        "captions_de": [
+          "Zum Prätorium: Die Ankläger führen den gefesselten Jesus (Strick) zum Amtssitz des Statthalters (Pfeile); sie selbst bleiben draussen (gestrichelte Linie).",
+          "Die Anklage: Pilatus fragt nach der Anklage (Waage, ?); die Ankläger: Er tut Böses (Jesus, schwarzes Herz).",
+          "Nach eurem Gesetz: Pilatus: Richtet ihn nach eurem Gesetz (Tafeln, Waage); die Ankläger: Töten dürfen wir nicht (Totenkopf, abwehrende Hand)."
+        ],
+        "interpretation_note_de": "Wer Jesus ins Prätorium führt, sagt [[JHN.18.28]] nur mit «sie»; nach [[JHN.18.31]] sind es «die Juden», nach [[JHN.18.35]] Jesu Volk und die Hohepriester. Sie sind als neutrale Menge gezeichnet. Die gestrichelte Linie zeigt, dass sie draussen bleiben (Reinheit vor dem Passa, [[JHN.18.28]]). Wie Jesu Wort über seinen Tod gemeint ist ([[JHN.18.32]], vgl. [[JHN.12.32-JHN.12.33]]), deutet das Bild nicht aus.",
+        "basis": [
+          {
+            "record": "TU-JHN-018-028-032",
+            "field": "summary",
+            "fingerprint": "65314ae17cd56416"
+          },
+          {
+            "record": "TRANS-JHN-018-001-040-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.18.28",
+            "fingerprint": "bf6154e98066cc15"
+          },
+          {
+            "record": "TRANS-JHN-018-001-040-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.18.29-JHN.18.30",
+            "fingerprint": "72520b5dac921bb1"
+          },
+          {
+            "record": "TRANS-JHN-018-001-040-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JHN.18.31-JHN.18.32",
+            "fingerprint": "c930ffdff962012e"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

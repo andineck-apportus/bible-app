@@ -1,0 +1,152 @@
+{
+ "id": "CORE-JHN-020-019-023",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "JHN.20.19-JHN.20.23",
+ "target": "TU-JHN-020-019-023",
+ "core_de": "Am Abend des ersten Tages der Woche, bei verschlossenen Türen aus Furcht vor den Juden, tritt Jesus in die Mitte der Jünger: «Friede euch!», zeigt ihnen die Hände und die Seite, und sie freuen sich; er sagt: «Wie der Vater mich gesandt hat, so sende auch ich euch», haucht sie an: «Empfangt heiligen Geist!» und gibt ihnen Vollmacht: Wem sie die Sünden vergeben, dem sind sie vergeben, wem sie sie behalten, dem sind sie behalten.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "verschlossene Türen – «Friede euch!» – Hände und Seite – Freude – Sendung – Geist – Vollmacht",
+    "range": "JHN.20.19-JHN.20.23",
+    "elements": [
+     {
+      "label": "Abend des ersten Tages; Türen verschlossen aus Furcht vor den Juden",
+      "ref": "JHN.20.19",
+      "role": "Lage"
+     },
+     {
+      "label": "Jesus tritt in die Mitte: «Friede euch!»; er zeigt Hände und Seite; die Jünger freuen sich",
+      "ref": "JHN.20.19-JHN.20.20",
+      "role": "Erscheinung"
+     },
+     {
+      "label": "«Friede euch! Wie der Vater mich gesandt hat, so sende auch ich euch»",
+      "ref": "JHN.20.21",
+      "role": "Sendung"
+     },
+     {
+      "label": "Er haucht sie an: «Empfangt heiligen Geist!»",
+      "ref": "JHN.20.22",
+      "role": "Geist"
+     },
+     {
+      "label": "Vergeben ↔ behalten",
+      "ref": "JHN.20.23",
+      "role": "Vollmacht",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "JHN.20.19-JHN.20.23"
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "Friede euch!",
+       "ref": "JHN.20.19-JHN.20.21"
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "«Der Vater» ist Gott; im Bild als Strahlenkranz, nie als Mensch."
+      },
+      {
+       "note": "«Die Juden» meint bei Johannes oft die führenden Kreise in Jerusalem; im Bild als neutrale Gruppe ohne Merkmale einer Volksgruppe."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "condition",
+    "subtype": "vergeben → vergeben / behalten → behalten",
+    "range": "JHN.20.23",
+    "elements": [
+     {
+      "label": "Wem ihr die Sünden vergebt, dem sind sie vergeben",
+      "ref": "JHN.20.23",
+      "role": "wenn"
+     },
+     {
+      "label": "wem ihr sie behaltet, dem sind sie behalten",
+      "ref": "JHN.20.23",
+      "role": "wenn"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "JHN.20.19-JHN.20.20",
+   "text_de": "Verschlossene Türen; Jesus in der Mitte: «Friede euch!»; Hände und Seite; die Jünger freuen sich.",
+   "reason_de": "Erscheinung (Kriterien 1 und 4).",
+   "recognition_de": "Jesus in der Mitte.",
+   "keywords": [
+    "Friede euch!",
+    "Da freuten sich die Jünger, als sie den Herrn sahen"
+   ]
+  },
+  {
+   "reference": "JHN.20.21",
+   "text_de": "«Wie der Vater mich gesandt hat, so sende auch ich euch.»",
+   "reason_de": "Sendung (Kriterium 1).",
+   "recognition_de": "Gesandt.",
+   "keywords": [
+    "Wie der Vater mich gesandt hat, so sende auch ich euch"
+   ]
+  },
+  {
+   "reference": "JHN.20.22-JHN.20.23",
+   "text_de": "Er haucht sie an: «Empfangt heiligen Geist!» – vergeben oder behalten.",
+   "reason_de": "Geist und Vollmacht mit beiden Zweigen (Kriterium 1; Regel 1).",
+   "recognition_de": "Empfangt heiligen Geist.",
+   "keywords": [
+    "Empfangt heiligen Geist!",
+    "Wem ihr die Sünden vergebt, dem sind sie vergeben",
+    "wem ihr sie behaltet, dem sind sie behalten"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Wie Jesus durch verschlossene Türen kommt, sagt der Text nicht – im Bild nicht gedeutet"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-HEILIGER-GEIST",
+  "FIG-GOTT"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "JHN.20.19-JHN.20.23",
+   "fingerprint": "c8e11604eeec82fb"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Joh 15–21, Buch Johannes und Lk 11 nach Joh 1–14; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

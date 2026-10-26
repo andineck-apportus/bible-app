@@ -1,0 +1,163 @@
+{
+ "id": "CORE-LUK-011-001-004",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.11.1-LUK.11.4",
+ "target": "TU-LUK-011-001-004",
+ "core_de": "Als Jesus an einem Ort gebetet hat, bittet ihn einer seiner Jünger: «Herr, lehre uns beten, wie auch Johannes seine Jünger gelehrt hat»; Jesus antwortet: «Wenn ihr betet, sprecht: Vater, dein Name werde geheiligt; dein Reich komme. Unser tägliches Brot gib uns Tag für Tag. Und vergib uns unsere Sünden, denn auch wir selbst vergeben jedem, der uns etwas schuldet; und führe uns nicht in Versuchung.»",
+ "mode": "prayer",
+ "voice": {
+  "speaker": "FIG-JESUS",
+  "addressee": "FIG-GRUPPE-JUENGER"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Jesus betet – Bitte des Jüngers – Gebet",
+    "range": "LUK.11.1-LUK.11.4",
+    "elements": [
+     {
+      "label": "Jesus betet an einem Ort",
+      "ref": "LUK.11.1",
+      "role": "Anlass"
+     },
+     {
+      "label": "Ein Jünger: «Herr, lehre uns beten, wie auch Johannes seine Jünger gelehrt hat»",
+      "ref": "LUK.11.1",
+      "role": "Bitte"
+     },
+     {
+      "label": "«Wenn ihr betet, sprecht: Vater …» – fünf Bitten",
+      "ref": "LUK.11.2-LUK.11.4",
+      "role": "Antwort",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-ROLLE-JUENGER",
+       "to": "FIG-JESUS",
+       "ref": "LUK.11.1"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "LUK.11.2-LUK.11.4"
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "«Vater» ist Gott; im Bild als Strahlenkranz, nie als Mensch."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "series",
+    "subtype": "Anrede «Vater» und fünf Bitten",
+    "range": "LUK.11.2-LUK.11.4",
+    "elements": [
+     {
+      "label": "Vater, dein Name werde geheiligt",
+      "ref": "LUK.11.2",
+      "role": "Du-Bitte 1"
+     },
+     {
+      "label": "dein Reich komme",
+      "ref": "LUK.11.2",
+      "role": "Du-Bitte 2"
+     },
+     {
+      "label": "Unser tägliches Brot gib uns Tag für Tag",
+      "ref": "LUK.11.3",
+      "role": "Wir-Bitte 1"
+     },
+     {
+      "label": "Vergib uns unsere Sünden, denn auch wir selbst vergeben jedem, der uns etwas schuldet",
+      "ref": "LUK.11.4",
+      "role": "Wir-Bitte 2 mit Begründung"
+     },
+     {
+      "label": "Führe uns nicht in Versuchung",
+      "ref": "LUK.11.4",
+      "role": "Wir-Bitte 3"
+     }
+    ],
+    "features": {
+     "crossref": [
+      {
+       "ref": "MAT.6.9-MAT.6.13",
+       "note": "längere Fassung bei Matthäus"
+      }
+     ],
+     "text_forms": [
+      {
+       "ref": "LUK.11.2-LUK.11.4",
+       "note": "Viele spätere Handschriften gleichen die Bitten an die längere Fassung bei Matthäus an; die Arbeitsübersetzung folgt der kürzeren Fassung."
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.11.1",
+   "text_de": "Nach Jesu Gebet bittet ein Jünger: «Herr, lehre uns beten, wie auch Johannes seine Jünger gelehrt hat.»",
+   "reason_de": "Anlass (Kriterien 2 und 3).",
+   "recognition_de": "Die Bitte des Jüngers.",
+   "keywords": [
+    "Herr, lehre uns beten"
+   ],
+   "mode": "narrative"
+  },
+  {
+   "reference": "LUK.11.2-LUK.11.4",
+   "text_de": "«Wenn ihr betet, sprecht: Vater …» – fünf Bitten: Name, Reich, Brot, Vergebung, Versuchung.",
+   "reason_de": "Reihe mit allen Gliedern (Kriterien 1 und 4; Regel 1).",
+   "recognition_de": "Das Vaterunser.",
+   "keywords": [
+    "Vater, dein Name werde geheiligt",
+    "dein Reich komme",
+    "Unser tägliches Brot gib uns Tag für Tag",
+    "Und vergib uns unsere Sünden",
+    "und führe uns nicht in Versuchung"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Johannes und seine Jünger ([[LUK.11.1]]) – nur genannt, im Bild nicht gezeigt"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-ROLLE-JUENGER",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-GOTT"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.11.1-LUK.11.4",
+   "fingerprint": "eaca95dda98ccf4b"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Joh 15–21, Buch Johannes und Lk 11 nach Joh 1–14; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}
