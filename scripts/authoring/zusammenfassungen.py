@@ -40,7 +40,9 @@ LANG = "gsw-u-sd-chzh"
 # Abschnitt: so lang wie nötig, damit keine relevante Information verloren geht (Hinweis Andi Neck 2026-10-25), daher bis 6
 BUDGET = {"section": (2, 6), "chapter": (3, 5), "book": (4, 6)}
 DATE = os.environ.get("BIBLE_REVISION_DATE", "2026-10-23")
-AUTH = "KI-Entwurf (Claude) vom {d} aus der Kernanalyse {c} (docs/VERDICHTUNG.md); von einer getrennten KI-Instanz gegen Text und Kernanalyse geprüft; keine fachliche Prüfung."
+AUTH = "KI-Entwurf (Claude) vom {d} aus der Kernanalyse {c} (docs/VERDICHTUNG.md); {r}; keine fachliche Prüfung."
+REVIEWED = "von einer getrennten KI-Instanz gegen Text und Kernanalyse geprüft"
+UNREVIEWED = "noch nicht von einer getrennten Instanz geprüft"
 AUTH_GSW = "KI-Entwurf (Claude) vom {d}; Mundartfassung der neuen Zusammenfassung; Mundart noch nicht muttersprachlich geprüft."
 
 
@@ -142,7 +144,11 @@ def run(books):
         field = "summary_de" if rec["type"] == "text_unit" else "text_de"
         auth_field = "summary_authorship_de" if rec["type"] == "text_unit" else "authorship_de"
         basis = {"core": e["core"], "fingerprint": core_fp(core)}
-        if rec.get(field) != e["de"] or rec.get("core_basis") != basis:
+        # Prüfvermerk nur, wenn die Kernanalyse ein review der getrennten Instanz hat (keine Behauptung vor der Prüfung)
+        _cf = ROOT / f"data/core-analyses/{e['core']}.json"
+        _rev = _cf.exists() and bool(json.loads(_cf.read_text(encoding="utf-8")).get("review"))
+        auth = AUTH.format(d=DATE, c=e["core"], r=REVIEWED if _rev else UNREVIEWED)
+        if rec.get(field) != e["de"] or rec.get("core_basis") != basis or (rec.get(auth_field, "").startswith("KI-Entwurf (Claude) vom") and (REVIEWED in rec.get(auth_field, "")) != _rev):
             if rec.get(field) != e["de"]:
                 log = rec.setdefault("revision_log", [])
                 entry = {"date": DATE, "change_de": f"Neu aus der Kernanalyse {e['core']} (docs/VERDICHTUNG.md)", "previous": {field: rec.get(field)}}
@@ -150,7 +156,7 @@ def run(books):
                 if not (log and log[-1].get("date") == DATE and log[-1].get("change_de") == entry["change_de"]):
                     log.append(entry)
             rec[field] = e["de"]
-            rec[auth_field] = AUTH.format(d=DATE, c=e["core"])
+            rec[auth_field] = auth
             rec["core_basis"] = basis
             path.write_text(json.dumps(rec, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             n += 1

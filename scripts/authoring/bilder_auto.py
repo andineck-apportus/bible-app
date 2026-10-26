@@ -385,7 +385,10 @@ def zeichen(comp, wo, v, cands=(), auto=True):
                 _WZ.setdefault((None, e["wo"], e["text"]), ids)
     txt = v.get("de") if isinstance(v, dict) else v
     import sys as _s
-    cur = (getattr(_s.modules.get("bilder_anime"), "CUR", [None])[0] or "").upper()
+    # Kennung des laufenden Bildes: CUR_ID (gesetzt von bilder_anime.run); läuft bilder_anime als Skript, heisst das Modul
+    # «__main__», und das frühere Nachschlagen über sys.modules["bilder_anime"] fand das Bild nicht (Prüfung 2026-10-26)
+    cur = (CUR_ID[0] or "").replace("ILL-ANI-", "").upper() or (
+        getattr(_s.modules.get("bilder_anime"), "CUR", [None])[0] or "").upper()
     for k in ((cur, wo, txt), (cur, "alle", txt), (None, wo, txt), (None, "alle", txt)):  # «alle»: gilt für jede Stelle im Bild
         if k in _WZ:
             return list(_WZ[k])

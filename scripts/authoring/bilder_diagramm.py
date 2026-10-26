@@ -330,7 +330,9 @@ def _columns(C, d, w, y, mirror=False):
     cw = (w - 16 - GAP * (ncol - 1) - mid * (ncol - 1)) / ncol
     xs = [8 + i * (cw + GAP + mid) for i in range(ncol)]
     if head:
-        hic = [_auto.zeichen(C.c, "kopf", hd, C.cands)[:1] for hd in head]
+        # ein Zeichen je Kopf; eine Verneinung bleibt dabei sichtbar («wird nicht vergeben werden», Prüfung 2026-10-26)
+        hic = [(lambda z: z[:2] if len(z) > 1 and z[1] == "FIG-ZEICHEN-NICHT" else z[:1])(_auto.zeichen(C.c, "kopf", hd, C.cands))
+               for hd in head]
         hiw = [C.icon_row_w(ic, 12) + 3 if ic else 0 for ic in hic]
         hh = max(max(block_h(hd, 7.6, cw - 6 - hiw[i]) for i, hd in enumerate(head)) + 6, 16 if any(hic) else 0)
         for i, hd in enumerate(head):
