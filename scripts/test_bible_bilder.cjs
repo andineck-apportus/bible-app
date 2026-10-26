@@ -50,6 +50,7 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));
     await p.locator('[data-vill]:visible').first().click();await p.waitForTimeout(500);
     assert(await p.$('.verse-ill svg.ill-tile'),'Feld des Abschnittsbilds beim Vers');
+    assert(await p.$$eval('button[data-vill]',x=>x.length>0&&x.every(b=>b.getAttribute('aria-pressed')==='true')),'Schalter gilt für alle Abschnitte');
     await p.locator('[data-vill][aria-pressed=true]:visible').first().click();await p.waitForTimeout(500);
     assert(!await p.$('.verse-ill'),'wieder ausgeblendet');
     assert.deepEqual(errs,[],'keine Skriptfehler');

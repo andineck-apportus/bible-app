@@ -1706,6 +1706,8 @@ def run():
         n += write(old, rec, "Bild im Stil Anime nach Bildauftrag gezeichnet")
         n += localize(rid, rec, {"alt_de": alt_g}, "gsw-u-sd-chzh", "GSW-ZH", "CTX-CH-ZH-GSW-2026", AUTH_GSW, DATE)
     print(f"PASS: Bildstil Anime – {len(vb)} Darstellungen, {len(ILL)} Bilder; {n} Dateien geschrieben")
+    if not _auto.NW_FEHLT and (D.parent / "reports/ohne-worte-fehlt.json").exists():
+        (D.parent / "reports/ohne-worte-fehlt.json").unlink()  # nichts mehr offen
     if _auto.NW_FEHLT:  # Wortfelder ohne Zeichen im Modus «ohne Worte» (Liste für die Zuordnung in _wortzeichen.json)
         rep = D.parent / "reports/ohne-worte-fehlt.json"
         import collections as _c
