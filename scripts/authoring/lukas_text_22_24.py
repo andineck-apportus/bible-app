@@ -19,18 +19,54 @@ Besonderheiten:
   Klammern druckt, WH aber in Doppelklammern ⟦ ⟧. Die Apparateinträge zu diesen Stellen hat der Import nicht
   ausgewertet (reports/sblgntapp-LUK-nicht-zugeordnet.json); Handschriftenangaben dazu stammen aus den
   CNTR-Transkriptionen.
-- Die Erzählformel ἐγένετο («es geschah») ist in Kapitel 24 nicht eigens wiedergegeben (~n mit Hinweis).
+- Die Erzählformel ἐγένετο («es geschah») steht in Kapitel 24 nur innerhalb von Abschnitten und ist dort nach der
+  gemeinsamen Regel für ganz Lukas nicht eigens wiedergegeben (~n mit Hinweis; siehe decisions).
 
 KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt. Die Mundart ist noch
 nicht muttersprachlich geprüft. Handschriftenangaben stammen aus der maschinellen Zuordnung (METHOD-AUTO-COLLATION-V1,
 data/witness-readings/WREAD-CNTR-LUK-022…024) bzw. aus den CNTR-Transkriptionen (Sekundärtranskription), nicht aus
 eigener Prüfung der Handschriften.
+
+Vereinheitlichung 2026-10-26 (gemeinsam für alle sechs Lukas-Werkzeuge; Texte und Begründungen in
+scripts/authoring/lukas_einheitlich.py, Zählung dort):
+- ἐγένετο als Erzählformel am Abschnittsbeginn wiedergegeben (καὶ ἐγένετο «Und es geschah» / «Und es isch gsii»,
+  ἐγένετο δέ «Es geschah aber» / «Es isch aber gsii», wie [[LUK.11.1]]), innerhalb eines Abschnitts nicht eigens (~n).
+- ἰδού: Erzählung «siehe» / «lueg»; direkte Rede «sieh» / «seht» bzw. «lueg» / «lueged» nach Zahl der Angesprochenen.
+- μὴ φοβοῦ / μὴ φοβεῖσθε: Mundart «Häb kei Angscht» / «Händ kei Angscht».
+- οἱ ὄχλοι «die Menschenmengen» / «d Lüüt»; ὄχλος «die Menge» / «d Mängi»; νομικός «Gesetzeslehrer» / «Gsetzeslehrer».
+- οὐαί «Weh»; ἀληθῶς «Wahrhaftig»; ἀποκριθεὶς ohne Frage «ergriff das Wort» / «hät s Wort gnoo»; εὐθέως «sofort» /
+  «grad», παραχρῆμα «sofort» / «sofort»; πλήν Mundart «aber».
+- Mundart-Schreibung nach der Mehrheit in Markus und Johannes (run() prüft sie mit pruefe_mundart):
+  userwählt (statt uuserwäält/uuserwählt) · userwählte (statt uuserwäälte) · lehrt (statt leert) · glehrt (statt
+  gleert) · lehre (statt leere) · lehr (statt leer) · dört (statt det) · chnü (statt chnüü) · usggää (statt usgää) ·
+  gscheh (statt gschee) · mueterliib (statt muetterliib) · wiitergange (statt witergange) · fürchte (statt förchte) ·
+  fürchted (statt förchted) · fürcht (statt förcht) · gfürchtet (statt gförchtet) · elei (statt ellei) · frömde (statt
+  fremde) · ggässe (statt gässe) · ghöre (statt ghööre) · ghöred (statt ghööred) · ghüratet (statt ghüraatet) ·
+  hüratet (statt hüraatet) · verhüratet (statt verhüraatet) · glöst (statt glööst) · gmäldet (statt gmeldet) · mäldet
+  (statt meldet) · höchi (statt hööchi) · gröscht (statt grööscht) · grössi (statt gröössi) · herde (statt härde) ·
+  iigschlaafe (statt iigschlafe) · chöm (statt chömm) · chömende (statt chömmende) · chönt (statt chönnt) · chönted
+  (statt chönnted) · fälder (statt felder) · riitet (statt rittet) · schaf (statt schaaf) · städt (statt stedt) ·
+  stärbe (statt sterbe) · strited (statt striited) · tüüre (statt türe) · ufgläse (statt ufglääse) · uftrete (statt
+  ufträte) · umkehr (statt umchehr) · ungläubig (statt unglöubig) · ussendig (statt uussändig) · usfüerlich (statt
+  uusfüerlich) · usgaat (statt uusgaat) · usrichte (statt uusrichte) · ustriibed (statt uustriibed) · verdorret (statt
+  verdoret) · verdorreti (statt verdoreti) · verdorrete (statt verdorete) · verrisse (statt verriisse) · villicht
+  (statt vilicht) · wäggange (statt weggange) · wäg (statt wägg) · wem (statt wäm) · wän (statt wen) · wärdi (statt
+  werdi) · wärfed (statt werfed) · zrugggange (statt zruggange) · zruggchoo (statt zruggcho) · anechoo (statt anecho)
+  · choo (statt cho) · zügnis (statt züügnis) · böse (statt bööse) · böses (statt bööses) · greber (statt gräber) ·
+  schnell (statt schnäll) · jahr (statt jaar) · ohre (statt oore) · lohn (statt loon) · söhn (statt söön) · glähmt
+  (statt gläämt) · glähmte (statt gläämte) · zie (statt zieh) · ziend (statt ziehnd) · zieht (statt ziet) · wonige
+  (statt wohnige) · fahr (statt faar) · fahred (statt faared) · fahrt (statt faart) · gfahre (statt gfaare) · befole
+  (statt befohle) · fäält (statt fehlt) · nöi (statt nöii) · da (statt daa) · häre (statt here) · liide (statt lide) ·
+  legged (statt leged) · söle (statt sölle) · nöch (statt nööch) · nöchi (statt nööchi) · fäschtässe (statt
+  feschtässe)
 """
 import sys
 import pathlib
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from _lib import D, alignment_entries, load_tokens, write  # noqa: E402
+from lukas_einheitlich import (EGEN_DE, EGEN_GSW, EGEN_SKIP_DE, EGEN_SKIP_GSW, IDOU_DE, IDOU_GSW, FURCHT_GSW,  # noqa: E402,F401
+                              OCHLOI_DE, pruefe_mundart)
 
 DATE = "2026-10-26"
 AUTH = "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
@@ -61,7 +97,7 @@ DE = {
  "LUK.22.18": "[Denn]{2} [ich sage]{1} [euch]{3}: [Ich werde]{6} [von nun an]{7-9} [gewiss nicht]{4,5} [vom]{10,11} [Gewächs]{12} [des Weinstocks]{13,14} [trinken]{6}, [bis]{15,16} [das Reich]{17,18} [Gottes]{19,20} [kommt]{21}.»",
  "LUK.22.19": "Und{1} [er nahm]{2} [Brot]{3}, [sprach das Dankgebet]{4}, [brach es]{5} und{6} [gab es]{7} [ihnen]{8} [und sagte]{9}: «[Das]{10} [ist]{11} [mein]{14} [Leib]{12,13}, [der]{15} [für]{16} [euch]{17} [gegeben wird]{18}. [Das]{19} [tut]{20} [zur]{21,22} [Erinnerung]{24} [an mich]{23}!»",
  "LUK.22.20": "Und{1} [ebenso]{4} nahm er [nach]{5} [dem Mahl]{6,7} [den Becher]{2,3} [und sagte]{8}: «[Dieser]{9} [Becher]{10,11} ist [der neue]{12,13} [Bund]{14} [in]{15} [meinem]{16,18} [Blut]{17}, [das]{19} [für]{20} [euch]{21} [vergossen wird]{22}.",
- "LUK.22.21": "[Doch]{1} [siehe]{2}, [die Hand]{3,4} [dessen]{5}, der [mich]{7} [ausliefert]{6}, ist [mit]{8} [mir]{9} [auf]{10} [dem Tisch]{11,12}.",
+ "LUK.22.21": "[Doch]{1} [seht]{2}, [die Hand]{3,4} [dessen]{5}, der [mich]{7} [ausliefert]{6}, ist [mit]{8} [mir]{9} [auf]{10} [dem Tisch]{11,12}.",
  "LUK.22.22": "[Denn]{1} [der Menschensohn]{2,3,5,6} [geht]{10} [zwar]{4} [dahin]{10}, [wie]{7} [es]{8} [bestimmt ist]{9}; [doch]{11} [weh]{12} [jenem]{15} [Menschen]{13,14}, [durch]{16} [den]{17} [er ausgeliefert wird]{18}!»",
  "LUK.22.23": "Und{1} [sie]{2} [fingen an]{3}, [untereinander]{5,6} [zu fragen]{4}, [wer]{7,8} [von]{11} [ihnen]{12} es [wohl]{9} [sei]{10}, [der]{13} [das]{14} [tun werde]{15,16}.",
  "LUK.22.24": "[Es entstand]{1} [aber]{2} [auch]{3} [ein Streit]{4} [unter]{5} [ihnen]{6}, [wer]{7,8} [von ihnen]{9} [als der Grösste]{11,12} [gelte]{10}.",
@@ -71,7 +107,7 @@ DE = {
  "LUK.22.28": "[Ihr]{1} [aber]{2} [seid]{3} es, [die]{4} [mit]{6} [mir]{7} [ausgeharrt haben]{5} [in]{8} [meinen]{9,11} [Prüfungen]{10}.",
  "LUK.22.29": "[Und ich]{1} [übertrage]{2} [euch]{3} [die Königsherrschaft]{10}, [wie]{4} [mein]{7,9} [Vater]{8} sie [mir]{6} [übertragen hat]{5},",
  "LUK.22.30": "[damit]{1} [ihr]{2} [an]{5} [meinem]{6,8} [Tisch]{7} [esst]{2} und{3} [trinkt]{4} [in]{9} [meinem]{10,12} [Reich]{11}, und{13} [ihr werdet]{14} [auf]{15} [Thronen]{16} [sitzen]{14} und [die zwölf]{17,18} [Stämme]{19} [Israels]{21,22} [richten]{20}.",
- "LUK.22.31": "[Simon]{1}, [Simon]{2}, [siehe]{3}, [der Satan]{4,5} [hat]{6} [euch]{7} [für sich gefordert]{6}, [um]{8} euch [zu sieben]{9} [wie]{10} [den Weizen]{11,12}.",
+ "LUK.22.31": "[Simon]{1}, [Simon]{2}, [sieh]{3}, [der Satan]{4,5} [hat]{6} [euch]{7} [für sich gefordert]{6}, [um]{8} euch [zu sieben]{9} [wie]{10} [den Weizen]{11,12}.",
  "LUK.22.32": "[Ich]{1} [aber]{2} [habe]{3} [für]{4} [dich]{5} [gebetet]{3}, [dass]{6} [dein]{9,11} [Glaube]{10} [nicht]{7} [aufhört]{8}. Und{12} [du]{13}, [wenn du]{15} [einst]{14} [umgekehrt bist]{15}, [stärke]{16} [deine]{17,19} [Brüder]{18}!»",
  "LUK.22.33": "[Er]{1} [aber]{2} [sagte]{3} [zu ihm]{4}: «[Herr]{5}, [ich bin]{9} [bereit]{8}, [mit]{6} [dir]{7} [sowohl]{10} [ins]{11} [Gefängnis]{12} [als auch]{13} [in]{14} [den Tod]{15} [zu gehen]{16}.»",
  "LUK.22.34": "[Er]{1} [aber]{2} [sagte]{3}: «[Ich sage]{4} [dir]{5}, [Petrus]{6}: [Der Hahn]{10} [wird]{8} [heute]{9} [nicht]{7} [krähen]{8}, [bis]{11} [du]{14} [dreimal]{12} [geleugnet hast]{14}, [mich]{13} [zu kennen]{15}.»",
@@ -100,7 +136,7 @@ DE = {
  "LUK.22.57": "[Er]{1} [aber]{2} [leugnete]{3} [und sagte]{4}: «[Ich kenne]{6} [ihn]{7} [nicht]{5}, [Frau]{8}!»",
  "LUK.22.58": "Und{1} [nach]{2} [kurzer Zeit]{3} [sah]{5} [ihn]{6} [ein anderer]{4} und [sagte]{7}: «[Auch]{8} [du]{9} [bist]{12} [einer von]{10} [ihnen]{11}!» [Petrus]{13,15} [aber]{14} [sagte]{16}: «[Mensch]{17}, [ich bin es]{19} [nicht]{18}!»",
  "LUK.22.59": "Und{1} [als]{2} [etwa]{3} [eine]{5} [Stunde]{4} [vergangen war]{2}, [beteuerte]{8} [ein anderer]{6,7} [und sagte]{9}: «[Wirklich]{10,11}, [auch]{12} [der]{13} [war]{16} [mit]{14} [ihm]{15}; [er ist]{20} [ja]{18} [auch]{17} [ein Galiläer]{19}!»",
- "LUK.22.60": "[Petrus]{3,4} [aber]{2} [sagte]{1}: «[Mensch]{5}, [ich weiss]{7} [nicht]{6}, [was]{8} [du sagst]{9}!» Und{10} [sogleich]{11}, [noch]{12} [während er]{14} [redete]{13}, [krähte]{15} [ein Hahn]{16}.",
+ "LUK.22.60": "[Petrus]{3,4} [aber]{2} [sagte]{1}: «[Mensch]{5}, [ich weiss]{7} [nicht]{6}, [was]{8} [du sagst]{9}!» Und{10} [sofort]{11}, [noch]{12} [während er]{14} [redete]{13}, [krähte]{15} [ein Hahn]{16}.",
  "LUK.22.61": "Und{1} [der Herr]{3,4} [wandte sich um]{2} und [blickte]{5} [Petrus]{6,7} [an]{5}. Und{8} [Petrus]{10,11} [erinnerte sich]{9} [an das]{12} [Wort]{13} [des Herrn]{14,15}, [wie]{16} [er]{17} [zu ihm]{18} [gesagt hatte]{17}: «[Bevor]{20} [der Hahn]{21} [heute]{23} [kräht]{22}, [wirst du]{24} [mich]{25} [dreimal]{26} [verleugnen]{24}.» ~19(ὅτι leitet die direkte Rede ein)",
  "LUK.22.62": "Und{1} [er ging]{2} [hinaus]{3} und [weinte]{4} [bitterlich]{5}.",
  "LUK.22.63": "Und{1} [die Männer]{2,3}, [die]{4} [ihn]{6} [bewachten]{5}, [verspotteten]{7} [ihn]{8} und [schlugen ihn]{9};",
@@ -116,7 +152,7 @@ DE = {
  "LUK.23.1": "Und{1} [die ganze]{3,4} [Versammlung]{5,6} [stand auf]{2}, und [sie führten]{7} [ihn]{8} [vor]{9} [Pilatus]{10,11}.",
  "LUK.23.2": "[Sie fingen]{1} [aber]{2} [an]{1}, [ihn]{4} [anzuklagen]{3}, [und sagten]{5}: «[Diesen]{6} [haben wir]{7} [dabei ertappt]{7}, [wie er]{8} [unser]{9,11} [Volk]{10} [aufwiegelt]{8} und{12} [verbietet]{13}, [dem Kaiser]{15} [Steuern]{14} [zu zahlen]{16}, und{17} [sagt]{18}, [er]{19} [sei]{22} [Christus]{20}, [ein König]{21}.»",
  "LUK.23.3": "[Pilatus]{1,3} [aber]{2} [fragte]{4} [ihn]{5} [und sagte]{6}: «[Bist]{8} [du]{7} [der König]{9,10} [der Juden]{11,12}?» [Er]{13} [aber]{14} [antwortete]{15} [ihm]{16} [und sagte]{17}: «[Du]{18} [sagst es]{19}.»",
- "LUK.23.4": "[Pilatus]{1,3} [aber]{2} [sagte]{4} [zu]{5} [den Hohepriestern]{6,7} und{8} [der Menge]{9,10}: «[Ich finde]{12} [keine]{11} [Schuld]{13} [an]{14} [diesem]{15,17} [Menschen]{16}.»",
+ "LUK.23.4": "[Pilatus]{1,3} [aber]{2} [sagte]{4} [zu]{5} [den Hohepriestern]{6,7} und{8} [den Menschenmengen]{9,10}: «[Ich finde]{12} [keine]{11} [Schuld]{13} [an]{14} [diesem]{15,17} [Menschen]{16}.»",
  "LUK.23.5": "[Sie]{1} [aber]{2} [bestanden darauf]{3} [und sagten]{4}: «[Er wiegelt]{6} [das Volk]{7,8} [auf]{6}; [er lehrt]{9} [in]{10} [ganz]{11} [Judäa]{12,13}, und{14} das [von]{16} [Galiläa]{17,18} [an]{15} [bis]{19} [hierher]{20}!» ~5(ὅτι leitet die direkte Rede ein)",
  "LUK.23.6": "[Als]{3} [Pilatus]{1} [aber]{2} [das hörte]{3}, [fragte er]{4}, [ob]{5} [der Mann]{6,7} [ein Galiläer]{8} [sei]{9}.",
  "LUK.23.7": "Und{1} [als er erfuhr]{2}, [dass]{3} [er]{8} [aus]{4} [dem Herrschaftsgebiet]{5,6} [des Herodes]{7} [war]{8}, [schickte er]{9} [ihn]{10} [zu]{11} [Herodes]{12}, [der]{13} [in]{18} [diesen]{19} [Tagen]{20,21} [ebenfalls]{14,15} [in]{16} [Jerusalem]{17} [war]{13}.",
@@ -140,7 +176,7 @@ DE = {
  "LUK.23.26": "Und{1} [als]{2} [sie]{3} [ihn]{4} [abführten]{3}, [ergriffen sie]{5} [einen]{7} [Simon]{6} [aus Kyrene]{8}, der [vom]{10} [Feld]{11} [kam]{9}, und [legten]{12} [ihm]{13} [das Kreuz]{14,15} [auf]{12}, um es [hinter]{17} [Jesus]{18,19} [herzutragen]{16}.",
  "LUK.23.27": "[Es folgte]{1} [ihm]{3} [aber]{2} [eine grosse]{4} [Menge]{5} [Volk]{6,7} und{8} [Frauen]{9}, [die]{10} [sich an die Brust schlugen]{11} und{12} [um ihn]{14} [klagten]{13}.",
  "LUK.23.28": "[Jesus]{5,6} [aber]{2} [wandte sich]{1} [zu]{3} [ihnen]{4} [um]{1} und [sagte]{7}: «[Töchter]{8} [Jerusalems]{9}, [weint]{11} [nicht]{10} [über]{12} [mich]{13}! [Weint]{17} [vielmehr]{14} [über]{15} [euch selbst]{16} und{18} [über]{19} [eure]{20,22} [Kinder]{21}!",
- "LUK.23.29": "[Denn]{1} [siehe]{2}, [es kommen]{3} [Tage]{4}, [an]{5} [denen]{6} [man sagen wird]{7}: ‹[Selig]{8} [die Unfruchtbaren]{9,10} und{11} [die Mutterleiber]{12,13}, [die]{14} [nicht]{15} [geboren haben]{16}, und{17} [die Brüste]{18}, [die]{19} [nicht]{20} [gestillt haben]{21}!›",
+ "LUK.23.29": "[Denn]{1} [seht]{2}, [es kommen]{3} [Tage]{4}, [an]{5} [denen]{6} [man sagen wird]{7}: ‹[Selig]{8} [die Unfruchtbaren]{9,10} und{11} [die Mutterleiber]{12,13}, [die]{14} [nicht]{15} [geboren haben]{16}, und{17} [die Brüste]{18}, [die]{19} [nicht]{20} [gestillt haben]{21}!›",
  "LUK.23.30": "[Dann]{1} [werden sie anfangen]{2}, [zu den Bergen]{4,5} [zu sagen]{3}: ‹[Fallt]{6} [auf]{7} [uns]{8}!›, und{9} [zu den Hügeln]{10,11}: ‹[Bedeckt]{12} [uns]{13}!›",
  "LUK.23.31": "[Denn]{1} [wenn]{2} [sie]{8} [das]{7} [am]{3,4} [grünen]{5} [Holz]{6} [tun]{8}, [was]{12} [wird]{13} dann [am]{9,10} [dürren]{11} [geschehen]{13}?»",
  "LUK.23.32": "[Es wurden]{1} [aber]{2} [auch]{3} [zwei]{6} [andere]{4}, [Verbrecher]{5}, [mit]{7} [ihm]{8} [abgeführt]{1}, um [hingerichtet zu werden]{9}.",
@@ -159,7 +195,7 @@ DE = {
  "LUK.23.45": "weil [die Sonne]{1,2} [ihren Schein verlor]{3}. [Der Vorhang]{6,7} [des Tempels]{8,9} [aber]{5} [riss]{4} [mitten entzwei]{10}.",
  "LUK.23.46": "Und{1} [Jesus]{5,6} [rief]{2} [mit lauter]{4} [Stimme]{3} und [sagte]{7}: «[Vater]{8}, [in]{9} [deine]{11} [Hände]{10} [übergebe ich]{12} [meinen]{13,15} [Geist]{14}!» [Als er]{18} [das]{16} [aber]{17} [gesagt hatte]{18}, [verschied er]{19}.",
  "LUK.23.47": "[Als]{1} [der Hauptmann]{3,4} [aber]{2} [sah]{1}, [was]{5} [geschehen war]{6}, [pries er]{7} [Gott]{8,9} [und sagte]{10}: «[Dieser]{14} [Mensch]{12,13} [war]{16} [wirklich]{11} [gerecht]{15}!»",
- "LUK.23.48": "Und{1} [alle]{2} [Leute]{5}, [die]{3} [zu]{6} [diesem]{7,9} [Schauspiel]{8} [zusammengekommen waren]{4}, [sahen]{10}, [was]{11} [geschehen war]{12}, [schlugen sich]{13} [an die Brust]{14,15} und [kehrten zurück]{16}.",
+ "LUK.23.48": "Und{1} [alle]{2} [Menschenmengen]{5}, [die]{3} [zu]{6} [diesem]{7,9} [Schauspiel]{8} [zusammengekommen waren]{4}, [sahen]{10}, [was]{11} [geschehen war]{12}, [schlugen sich]{13} [an die Brust]{14,15} und [kehrten zurück]{16}.",
  "LUK.23.49": "[Alle]{3} [aber]{2}, [die]{4} [ihn]{6} [kannten]{5}, [standen]{1} [von ferne]{7}, [auch]{8} [Frauen]{9}, [die]{10} [ihm]{12} [von]{13} [Galiläa]{14,15} her [gefolgt waren]{11}, [und sahen]{16} [das]{17}.",
  "LUK.23.50": "Und{1} [siehe]{2}, da war [ein Mann]{3} [mit Namen]{4} [Josef]{5}, der [Ratsmitglied]{6} [war]{7}, [ein]{8} [guter]{9} und{10} [gerechter]{11} [Mann]{8} –",
  "LUK.23.51": "[der]{1} [hatte]{3} [ihrem]{5,10} [Beschluss]{6} und{7} [Vorgehen]{8,9} [nicht]{2} [zugestimmt]{4} –, [aus]{11} [Arimatäa]{12}, [einer Stadt]{13} [in Judäa]{14,15}, [der]{16} auf [das Reich]{18,19} [Gottes]{20,21} [wartete]{17}.",
@@ -172,7 +208,7 @@ DE = {
  "LUK.24.1": "[Am]{1} [ersten Tag]{3} [der Woche]{4,5} [aber]{2} [kamen sie]{11} [ganz]{7} [früh am Morgen]{6} [zum]{8,9} [Grab]{10} und [brachten]{12} [die Duftstoffe]{15} [mit]{12}, [die]{13} [sie vorbereitet hatten]{14}.",
  "LUK.24.2": "[Sie fanden]{1} [aber]{2} [den Stein]{3,4} [vom]{6,7} [Grab]{8} [weggewälzt]{5}.",
  "LUK.24.3": "[Als sie]{1} [aber]{2} [hineingingen]{1}, [fanden sie]{4} [den Leib]{5,6} [nicht]{3}.",
- "LUK.24.4": "Und{1} [während]{3,4} [sie]{6} [darüber]{7,8} [ratlos waren]{5}, [siehe]{10}, [da]{9} [traten]{13} [zwei]{12} [Männer]{11} [in]{15} [strahlendem]{17} [Gewand]{16} [zu ihnen]{14}. ~2(ἐγένετο «es geschah» leitet nach biblischem Erzählstil das Ereignis ein; nicht eigens wiedergegeben)",
+ "LUK.24.4": "Und{1} [während]{3,4} [sie]{6} [darüber]{7,8} [ratlos waren]{5}, [siehe]{10}, [da]{9} [traten]{13} [zwei]{12} [Männer]{11} [in]{15} [strahlendem]{17} [Gewand]{16} [zu ihnen]{14}. ~2(" + EGEN_SKIP_DE + ")",
  "LUK.24.5": "[Sie]{4} [aber]{2} [erschraken]{1,3} und{5} [neigten]{6} [das Gesicht]{7,8} [zur]{9,10} [Erde]{11}. [Da sagten]{12} die Männer [zu]{13} [ihnen]{14}: «[Warum]{15} [sucht ihr]{16} [den Lebenden]{17,18} [bei]{19} [den Toten]{20,21}?",
  "LUK.24.6": "[Er ist]{2} [nicht]{1} [hier]{3}, [sondern]{4} [er ist auferweckt worden]{5}. [Erinnert euch]{6}, [wie]{7} [er]{8} [zu euch]{9} [geredet hat]{8}, [als er]{11} [noch]{10} [in]{12} [Galiläa]{13,14} [war]{11}",
  "LUK.24.7": "[und sagte]{1}: ‹[Der Menschensohn]{2-5} [muss]{7} [in]{9} [die Hände]{10} [sündiger]{12} [Menschen]{11} [ausgeliefert werden]{8} und{13} [gekreuzigt werden]{14} und{15} [am dritten]{16,17} [Tag]{18} [auferstehen]{19}.›» ~6(ὅτι leitet die direkte Rede ein)",
@@ -183,7 +219,7 @@ DE = {
  "LUK.24.12": "[Petrus]{1,3} [aber]{2} [stand auf]{4} und [lief]{5} [zum]{6,7} [Grab]{8}; und{9} [er beugte sich vor]{10} und [sieht]{11} [nur]{14} [die Leinentücher]{12,13}; und{15} [er ging]{16} [nach Hause]{17,18}, [voll Staunen]{19} [über das]{20}, was [geschehen war]{21}.",
  "LUK.24.13": "Und{1} [siehe]{2}, [zwei]{3} [von]{4} [ihnen]{5} [waren]{10} [am selben]{6-8} [Tag]{9} [unterwegs]{11} [zu]{12} [einem Dorf]{13} [namens]{19,20} [Emmaus]{21}, [sechzig]{16} [Stadien]{15} [von]{17} [Jerusalem]{18} [entfernt]{14}.",
  "LUK.24.14": "Und{1} [sie]{2} [redeten]{3} [miteinander]{4,5} [über]{6} [all]{7} [das]{8,10}, was [geschehen war]{9}.",
- "LUK.24.15": "Und{1} [während]{3,4} [sie]{6} [so redeten]{5} und{7} [sich besprachen]{8}, [da]{9} [kam]{12} [Jesus]{11} [selbst]{10} [hinzu]{12} und [ging]{13} [mit ihnen]{14}. ~2(ἐγένετο «es geschah» leitet nach biblischem Erzählstil das Ereignis ein; nicht eigens wiedergegeben)",
+ "LUK.24.15": "Und{1} [während]{3,4} [sie]{6} [so redeten]{5} und{7} [sich besprachen]{8}, [da]{9} [kam]{12} [Jesus]{11} [selbst]{10} [hinzu]{12} und [ging]{13} [mit ihnen]{14}. ~2(" + EGEN_SKIP_DE + ")",
  "LUK.24.16": "[Ihre]{1,4} [Augen]{3} [aber]{2} [wurden gehalten]{5}, [sodass]{6} sie [ihn]{9} [nicht]{7} [erkannten]{8}.",
  "LUK.24.17": "[Er sagte]{1} [aber]{2} [zu]{3} [ihnen]{4}: «[Was]{5} [sind das]{6,8} [für Worte]{7}, [die]{9} ihr [unterwegs]{13} [miteinander]{11,12} [wechselt]{10}?» Und{14} [sie blieben]{15} [traurig]{16} [stehen]{15}.",
  "LUK.24.18": "[Einer]{3} [aber]{2}, [mit Namen]{4} [Kleopas]{5}, [antwortete]{1} und [sagte]{6} [zu]{7} [ihm]{8}: «[Bist du]{9} [als Einziger]{10} [fremd]{11} in [Jerusalem]{12} und{13} [hast]{15} [nicht]{14} [erfahren]{15}, [was]{16} [dort]{18,19} [in]{20} [diesen]{21,23} [Tagen]{22} [geschehen ist]{17}?»",
@@ -198,7 +234,7 @@ DE = {
  "LUK.24.27": "Und{1} [er begann]{2} [bei]{3} [Mose]{4} und{5} [bei]{6} [allen]{7} [Propheten]{8,9} und [legte]{10} [ihnen]{11} [aus]{10}, [was]{16} [in]{12} [allen]{13} [Schriften]{14,15} [über]{17} [ihn selbst]{18} steht.",
  "LUK.24.28": "Und{1} [sie näherten sich]{2} [dem]{3,4} [Dorf]{5}, [wohin]{6} [sie unterwegs waren]{7}, und{8} [er]{9} [tat so]{10}, [als ginge er]{12} [weiter]{11}.",
  "LUK.24.29": "Und{1} [sie drängten]{2} [ihn]{3} [und sagten]{4}: «[Bleib]{5} [bei]{6} [uns]{7}, [denn]{8} [es ist]{11} [gegen]{9} [Abend]{10}, und{12} [der Tag]{15,16} [hat sich]{13} [schon]{14} [geneigt]{13}!» Und{17} [er ging hinein]{18}, [um]{19} [bei]{21} [ihnen]{22} [zu bleiben]{20}.",
- "LUK.24.30": "Und{1} [als]{3,4} [er]{6} [mit]{7} [ihnen]{8} [zu Tisch lag]{5}, [nahm er]{9} [das Brot]{10,11}, [sprach den Lobpreis]{12}, [brach es]{14} und{13} [reichte es]{15} [ihnen]{16}. ~2(ἐγένετο «es geschah» leitet nach biblischem Erzählstil das Ereignis ein; nicht eigens wiedergegeben)",
+ "LUK.24.30": "Und{1} [als]{3,4} [er]{6} [mit]{7} [ihnen]{8} [zu Tisch lag]{5}, [nahm er]{9} [das Brot]{10,11}, [sprach den Lobpreis]{12}, [brach es]{14} und{13} [reichte es]{15} [ihnen]{16}. ~2(" + EGEN_SKIP_DE + ")",
  "LUK.24.31": "[Da]{2} [wurden]{3} [ihnen]{1} [die Augen]{4,5} [geöffnet]{3}, und{6} [sie erkannten]{7} [ihn]{8}; und{9} [er]{10} [wurde]{12} [für]{13} [sie]{14} [unsichtbar]{11}.",
  "LUK.24.32": "Und{1} [sie sagten]{2} [zueinander]{3,4}: «[Brannte]{9,10} [nicht]{5} [unser]{6,8} [Herz]{7} [in]{11} [uns]{12}, [als]{13} [er]{14} [auf]{16} [dem Weg]{17,18} [mit uns]{15} [redete]{14}, [als]{19} [er]{20} [uns]{21} [die Schriften]{22,23} [aufschloss]{20}?»",
  "LUK.24.33": "Und{1} [sie brachen]{2} [noch in derselben]{3,4} [Stunde]{5} [auf]{2} und [kehrten]{6} [nach]{7} [Jerusalem]{8} [zurück]{6}. Und{9} [sie fanden]{10} [die Elf]{12,13} und{14} [ihre Gefährten]{15-17} [versammelt]{11},",
@@ -217,9 +253,9 @@ DE = {
  "LUK.24.46": "Und{1} [er sagte]{2} [zu ihnen]{3}: «[So]{5} [steht es geschrieben]{6}: [Der Christus]{8,9} [wird leiden]{7} und{10} [am dritten]{14,15} [Tag]{16} [von]{12} [den Toten]{13} [auferstehen]{11}, ~4(ὅτι leitet die direkte Rede ein)",
  "LUK.24.47": "und{1} [in]{3} [seinem]{4,6} [Namen]{5} [wird]{2} [Umkehr]{7} und{8} [Vergebung]{9} [der Sünden]{10} [verkündigt werden]{2} [unter]{11} [allen]{12} [Völkern]{13,14} – [angefangen]{15} [in]{16} [Jerusalem]{17}.",
  "LUK.24.48": "[Ihr]{1} [seid]{2} [Zeugen]{3} [dafür]{4}.",
- "LUK.24.49": "Und{1} [siehe]{2}, [ich]{3} [sende]{4} [auf]{10} [euch]{11} [die Verheissung]{5,6} [meines]{7,9} [Vaters]{8}. [Ihr]{12} [aber]{13} [bleibt]{14} [in]{15} [der Stadt]{16,17}, [bis]{18,19} [ihr]{20} [mit Kraft]{23} [aus]{21} [der Höhe]{22} [bekleidet werdet]{20}.»",
+ "LUK.24.49": "Und{1} [seht]{2}, [ich]{3} [sende]{4} [auf]{10} [euch]{11} [die Verheissung]{5,6} [meines]{7,9} [Vaters]{8}. [Ihr]{12} [aber]{13} [bleibt]{14} [in]{15} [der Stadt]{16,17}, [bis]{18,19} [ihr]{20} [mit Kraft]{23} [aus]{21} [der Höhe]{22} [bekleidet werdet]{20}.»",
  "LUK.24.50": "[Er führte]{1} [sie]{3} [aber]{2} [hinaus]{1} [bis]{4} [in die Nähe von]{5} [Betanien]{6}; und{7} [er hob]{8} [seine]{9,11} [Hände]{10} und [segnete]{12} [sie]{13}.",
- "LUK.24.51": "Und{1} [während]{3,4} [er]{6} [sie]{7} [segnete]{5}, [schied er]{8} [von]{9} [ihnen]{10} und{11} [wurde]{12} [in]{13} [den Himmel]{14,15} [emporgehoben]{12}. ~2(ἐγένετο «es geschah» leitet nach biblischem Erzählstil das Ereignis ein; nicht eigens wiedergegeben)",
+ "LUK.24.51": "Und{1} [während]{3,4} [er]{6} [sie]{7} [segnete]{5}, [schied er]{8} [von]{9} [ihnen]{10} und{11} [wurde]{12} [in]{13} [den Himmel]{14,15} [emporgehoben]{12}. ~2(" + EGEN_SKIP_DE + ")",
  "LUK.24.52": "Und{1} [sie]{2} [fielen vor]{3} [ihm]{4} [nieder]{3} und [kehrten]{5} [mit]{8} [grosser]{10} [Freude]{9} [nach]{6} [Jerusalem]{7} [zurück]{5},",
  "LUK.24.53": "und{1} [sie waren]{2} [die ganze Zeit]{3,4} [im]{5,6} [Tempel]{7} und [priesen]{8} [Gott]{9,10}.",
 }
@@ -227,9 +263,9 @@ DE = {
 GSW = {
  # ------------------------------------------------------------ Kapitel 22
  "LUK.22.1": "[S Fäscht]{3,4} [vo de ungsüürete Broot]{5,6} [aber]{2}, [wo]{7} [mer]{8} [Passa]{9} [seit]{8}, [isch nöcher choo]{1}.",
- "LUK.22.2": "Und{1} [d Hoheprieschter]{3,4} und{5} [d Schriftgleerte]{6,7} [händ gsuecht]{2}, [wie]{8,9} [si]{10} [en]{11} [chönnted us em Wäg rume]{10}; [dänn]{13} [si händ]{12} [vor em Volk]{14,15} [Angscht gha]{12}.",
- "LUK.22.3": "[Dänn]{2} [isch]{1} [de Satan]{3} [in]{4} [de Judas]{5} [gfaare]{1}, [wo mer]{6} [Iskariot]{8} [gseit hät]{7} [und wo]{9} [zum]{10,11} [Chreis]{12} [vo de Zwölf]{13,14} [ghört hät]{9}.",
- "LUK.22.4": "Und{1} [er isch gange]{2} und [hät]{3} [mit de]{4} [Hoheprieschter]{5} und{6} [Hauptlüüt]{7} [bsproche]{3}, [wie]{8,9} [er]{11} [en]{12} [ine]{10} [chönnt uslifere]{11}.",
+ "LUK.22.2": "Und{1} [d Hoheprieschter]{3,4} und{5} [d Schriftgleerte]{6,7} [händ gsuecht]{2}, [wie]{8,9} [si]{10} [en]{11} [chönted us em Wäg rume]{10}; [dänn]{13} [si händ]{12} [vor em Volk]{14,15} [Angscht gha]{12}.",
+ "LUK.22.3": "[Dänn]{2} [isch]{1} [de Satan]{3} [in]{4} [de Judas]{5} [gfahre]{1}, [wo mer]{6} [Iskariot]{8} [gseit hät]{7} [und wo]{9} [zum]{10,11} [Chreis]{12} [vo de Zwölf]{13,14} [ghört hät]{9}.",
+ "LUK.22.4": "Und{1} [er isch gange]{2} und [hät]{3} [mit de]{4} [Hoheprieschter]{5} und{6} [Hauptlüüt]{7} [bsproche]{3}, [wie]{8,9} [er]{11} [en]{12} [ine]{10} [chönt uslifere]{11}.",
  "LUK.22.5": "Und{1} [si händ sich gfreut]{2} und{3} [sind überiicho]{4}, [ihm]{5} [Gäld]{6} [z gää]{7}.",
  "LUK.22.6": "Und{1} [er hät iigwilliget]{2} und{3} [hät]{4} [e gueti Glägeheit]{5} [gsuecht]{4}, [zum]{6} [en]{8} [ine]{11} [uszliefere]{7}, [ohni dass]{9} [d Mängi]{10} [debii isch]{9}.",
  "LUK.22.7": "[Es isch]{1} [aber]{2} [de Tag]{3,4} [vo de ungsüürete Broot]{5,6} [choo]{1}, [wo]{7} [mer]{9} [s Passalamm]{10,11} [hät müese]{8} [schlachte]{9}.",
@@ -240,14 +276,14 @@ GSW = {
  "LUK.22.12": "[Und dä]{1} [wird]{3} [eu]{2} [en grosse]{5} [Saal im obere Stock]{4} [zeige]{3}, [mit Polschter usgleit]{6}; [dört]{7} [mached s parat]{8}.»",
  "LUK.22.13": "[Dänn]{2} [sind s gange]{1} und [händ s eso gfunde]{3}, [wie]{4} [er]{5} [ine]{6} [gseit gha hät]{5}, und{7} [händ]{8} [s Passamaal]{9,10} [parat gmacht]{8}.",
  "LUK.22.14": "Und{1} [wo]{2} [d Stund]{4,5} [choo isch]{3}, [hät er sich a Tisch gleit]{6}, und{7} [d Aposchtel]{8,9} [mit]{10} [ihm]{11}.",
- "LUK.22.15": "Und{1} [er hät]{2} [zu]{3} [ine]{4} [gseit]{2}: «[Ich ha mich fescht dra gsehnt]{5,6}, [das]{7} [Passamaal]{8,9} [mit]{11} [eu]{12} [z ässe]{10}, [bevor]{13,14} [ich]{15} [lide]{16}.",
+ "LUK.22.15": "Und{1} [er hät]{2} [zu]{3} [ine]{4} [gseit]{2}: «[Ich ha mich fescht dra gsehnt]{5,6}, [das]{7} [Passamaal]{8,9} [mit]{11} [eu]{12} [z ässe]{10}, [bevor]{13,14} [ich]{15} [liide]{16}.",
  "LUK.22.16": "[Dänn]{2} [ich säg]{1} [eu]{3}: [Ich wirde]{7} [s]{8} [sicher nöd]{5,6} [ässe]{7}, [bis]{9,10} es [im]{12,13} [Riich]{14} [vo Gott]{15,16} [erfüllt wird]{11}.» ~4(ὅτι leitet di diräkt Red ii)",
  "LUK.22.17": "Und{1} [er hät]{2} [en Bächer]{3} [gnoo]{2}, [s Dankgebätt gsproche]{4} und [gseit]{5}: «[Nämed]{6} [dä]{7} und{8} [teiled en]{9} [under]{10} [eu]{11}!",
  "LUK.22.18": "[Dänn]{2} [ich säg]{1} [eu]{3}: [Ich wirde]{6} [vo jetzt aa]{7-9} [sicher nöd]{4,5} [vom]{10,11} [Gwächs]{12} [vom Wiistock]{13,14} [trinke]{6}, [bis]{15,16} [s Riich]{17,18} [vo Gott]{19,20} [chunnt]{21}.»",
  "LUK.22.19": "Und{1} [er hät]{2} [Broot]{3} [gnoo]{2}, [s Dankgebätt gsproche]{4}, [s broche]{5} und{6} [ine]{8} [ggää]{7} [und gseit]{9}: «[Das]{10} [isch]{11} [min]{14} [Liib]{12,13}, [wo]{15} [für]{16} [eu]{17} [ggää wird]{18}. [Das]{19} [tüend]{20} [zur]{21,22} [Erinnerig]{24} [a mich]{23}!»",
  "LUK.22.20": "Und{1} [gnauso]{4} hät er [nach]{5} [em Ässe]{6,7} [de Bächer]{2,3} gnoo [und gseit]{8}: «[Dä]{9} [Bächer]{10,11} isch [de nöi]{12,13} [Bund]{14} [i]{15} [mim]{16,18} [Bluet]{17}, [wo]{19} [für]{20} [eu]{21} [vergosse wird]{22}.",
  "LUK.22.21": "[Aber]{1} [lueged]{2}, [d Hand]{3,4} [vo däm]{5}, wo [mich]{7} [usliferet]{6}, isch [mit]{8} [mir]{9} [uf]{10} [em Tisch]{11,12}.",
- "LUK.22.22": "[Dänn]{1} [de Mänschesohn]{2,3,5,6} [gaat]{10} [zwar]{4} [sin Wäg]{10}, [wie]{7} [s]{8} [bestimmt isch]{9}; [aber]{11} [wehe]{12} [däm]{15} [Mänsch]{13,14}, [wo]{16,17} en [usliferet]{18}!»",
+ "LUK.22.22": "[Dänn]{1} [de Mänschesohn]{2,3,5,6} [gaat]{10} [zwar]{4} [sin Wäg]{10}, [wie]{7} [s]{8} [bestimmt isch]{9}; [aber]{11} [weh]{12} [däm]{15} [Mänsch]{13,14}, [wo]{16,17} en [usliferet]{18}!»",
  "LUK.22.23": "Und{1} [si]{2} [händ aagfange]{3}, [undereinand]{5,6} [z fröge]{4}, [wer]{7,8} [vo]{11} [ine]{12} s [ächt]{9} [sig]{10}, [wo]{13} [das]{14} [wird tue]{15,16}.",
  "LUK.22.24": "[Es isch]{1} [aber]{2} [au]{3} [en Striit]{4} [under]{5} [ine]{6} [entstande]{1}, [wer]{7,8} [vo ine]{9} [als de Gröscht]{11,12} [gälti]{10}.",
  "LUK.22.25": "[Er]{1} [aber]{2} [hät]{3} [zu ine]{4} [gseit]{3}: «[D Könige]{5,6} [vo de Völker]{7,8} [herrsched]{9} [über si]{10}, und{11} [die]{12}, wo [über si]{14} [Macht händ]{13}, [lönd sich]{16} [Wohltäter]{15} [nänne]{16}.",
@@ -267,16 +303,16 @@ GSW = {
  "LUK.22.39": "Und{1} [er isch usegange]{2} und [isch]{3}, [wie er s gwohnt gsii isch]{4-6}, [zum]{7,8} [Ölberg]{9-11} [gange]{3}; [es sind]{12} [em]{14} [aber]{13} [au]{15} [d Jünger]{16,17} [gfolgt]{12}.",
  "LUK.22.40": "[Wo er]{1} [aber]{2} [a]{3} [dä Ort]{4,5} [choo isch]{1}, [hät er]{6} [zu ine]{7} [gseit]{6}: «[Bätted]{8}, [dass ir]{10} [nöd]{9} [i]{11} [Versuechig]{12} [chömed]{10}!»",
  "LUK.22.41": "Und{1} [er]{2} [isch]{3} [öppe]{6} [en Steiwurf]{7,8} wiit [vo]{4} [ine]{5} [wäggange]{3} und{9} [isch abegchnüület]{10-12} und hät [bättet]{13}:",
- "LUK.22.42": "«[Vatter]{2}, [wänn]{3} [du wottsch]{4}, [nimm]{5} [dä]{6} [Bächer]{7,8} [vo]{9} [mir]{10} [wäg]{5}! [Aber]{11} [nöd]{12} [min]{13,15} [Wille]{14}, [sondern]{16} [dine]{17,18} [söll gschee]{19}!» ~1(λέγων leitet di diräkt Red ii)",
+ "LUK.22.42": "«[Vatter]{2}, [wänn]{3} [du wottsch]{4}, [nimm]{5} [dä]{6} [Bächer]{7,8} [vo]{9} [mir]{10} [wäg]{5}! [Aber]{11} [nöd]{12} [min]{13,15} [Wille]{14}, [sondern]{16} [dine]{17,18} [söll gscheh]{19}!» ~1(λέγων leitet di diräkt Red ii)",
  "LUK.22.43": "[Dänn]{2} [isch]{1} [em]{3} [en Ängel]{4} [vom]{5} [Himmel]{6} [erschine]{1} [und hät]{7} [en]{8} [gstärcht]{7}.",
  "LUK.22.44": "Und{1} [er isch]{2} [i]{3} [Todesangscht]{4} [choo]{2} und [hät]{6} [no inständiger]{5} [bättet]{6}; und{7} [sin]{9,11} [Schweiss]{10} [isch]{8} [wie]{12} [Bluetstropfe]{13,14} [worde]{8}, wo [uf]{16} [de Bode]{17,18} [gfalle sind]{15}.",
- "LUK.22.45": "Und{1} [er isch]{2} [vom]{3,4} [Gebätt]{5} [ufgstande]{2}, [isch]{6} [zu]{7} [de Jünger]{8,9} [choo]{6} und [hät]{10} [si]{12} [vor]{13} [Chummer]{14,15} [iigschlafe]{11} [gfunde]{10}.",
+ "LUK.22.45": "Und{1} [er isch]{2} [vom]{3,4} [Gebätt]{5} [ufgstande]{2}, [isch]{6} [zu]{7} [de Jünger]{8,9} [choo]{6} und [hät]{10} [si]{12} [vor]{13} [Chummer]{14,15} [iigschlaafe]{11} [gfunde]{10}.",
  "LUK.22.46": "Und{1} [er hät]{2} [zu ine]{3} [gseit]{2}: «[Werum]{4} [schlaafed ir]{5}? [Stönd uf]{6} und [bätted]{7}, [dass]{8} [ir]{10} [nöd]{9} [i]{11} [Versuechig]{12} [chömed]{10}!»",
  "LUK.22.47": "[No]{1} [während er]{2} [gredt hät]{3}, [lueg]{4}, da isch [e Mängi]{5} choo; und{6} [eine]{10} [vo de Zwölf]{11,12}, [wo]{7} [Judas]{9} [gheisse hät]{8}, [isch]{13} [ine]{14} [voruus gange]{13}. Und{15} [er isch]{16} [zum Jesus]{17,18} [härechoo]{16}, [zum]{19} [en]{20} [küsse]{19}.",
  "LUK.22.48": "[De Jesus]{1} [aber]{2} [hät]{3} [zu ihm]{4} [gseit]{3}: «[Judas]{5}, [mit eme Kuss]{6} [liferisch du]{11} [de Mänschesohn]{7-10} [us]{11}?»",
  "LUK.22.49": "[Wo]{1} [aber]{2} [sini Begleiter]{3-5} [gseh händ]{1}, [was]{6} [chunnt]{7}, [händ si gseit]{8}: «[Herr]{9}, [söled mer]{11} [mit]{12} [em Schwärt]{13} [dreischlaa]{11}?» ~10(εἰ leitet di diräkt Frag ii)",
  "LUK.22.50": "Und{1} [eine]{3,4} [vo]{5} [ine]{6} [hät]{2} [de Chnächt]{9,10} [vom Hoheprieschter]{7,8} [gschlage]{2} und{11} [em]{15} [s rächt]{16,17} [Ohr]{13,14} [abghaue]{12}.",
- "LUK.22.51": "[De Jesus]{3,4} [aber]{2} [hät s Wort ergriffe]{1} und [gseit]{5}: «[Hööred uf]{6}! [Nöd wiiter]{7,8}!» Und{9} [er hät]{10} [s]{11} [Ohr]{12} [aagrüert]{10} und [en]{14} [gheilt]{13}.",
+ "LUK.22.51": "[De Jesus]{3,4} [aber]{2} [hät s Wort gnoo]{1} und [gseit]{5}: «[Hööred uf]{6}! [Nöd wiiter]{7,8}!» Und{9} [er hät]{10} [s]{11} [Ohr]{12} [aagrüert]{10} und [en]{14} [gheilt]{13}.",
  "LUK.22.52": "[De Jesus]{3} [aber]{2} [hät]{1} [zu]{4} [de Hoheprieschter]{9} und{10} [Hauptlüüt]{11} [vom Tämpel]{12,13} und{14} [Ältischte]{15} [gseit]{1}, [wo]{5} [gäge]{7} [ihn]{8} [choo sind]{6}: «[Wie]{16} [gäge]{17} [en Röiber]{18} [sind ir uszoge]{19} [mit]{20} [Schwärter]{21} und{22} [Chnüppel]{23}?",
  "LUK.22.53": "[Wo]{3} [ich]{4} [all Tag]{1,2} [bi]{5} [eu]{6} [im]{7,8} [Tämpel]{9} [gsii bi]{3}, [händ ir]{11} [d Händ]{12,13} [nöd]{10} [nach]{14} [mir]{15} [usgstreckt]{11}. [Aber]{16} [das]{17} [isch]{18} [eui]{19} [Stund]{20,21} und{22} [d Macht]{23,24} [vo de Fischternis]{25,26}.»",
  "LUK.22.54": "[Dänn]{2} [händ s]{1} [en]{3} [feschtgnoo]{1}, [abgfüert]{4} und{5} [is]{7,8} [Huus]{9} [vom Hoheprieschter]{10,11} [bracht]{6}. [De Petrus]{12,14} [aber]{13} [isch]{15} [vo wiitem]{16} [nachegange]{15}.",
@@ -285,7 +321,7 @@ GSW = {
  "LUK.22.57": "[Er]{1} [aber]{2} [hät s abgstritte]{3} [und gseit]{4}: «[Ich känne]{6} [en]{7} [nöd]{5}, [Frau]{8}!»",
  "LUK.22.58": "Und{1} [churz]{3} [drufabe]{2} [hät]{5} [en]{6} [en andere]{4} [gseh]{5} und [gseit]{7}: «[Du]{9} [bisch]{12} [au]{8} [eine vo]{10} [ine]{11}!» [De Petrus]{13,15} [aber]{14} [hät gseit]{16}: «[Mänsch]{17}, [ich bi s]{19} [nöd]{18}!»",
  "LUK.22.59": "Und{1} [wo]{2} [öppe]{3} [e]{5} [Stund]{4} [verbii gsii isch]{2}, [hät]{8} [en andere]{6,7} [beteuret]{8} [und gseit]{9}: «[Würkli]{10,11}, [de da]{13} [isch]{16} [au]{12} [mit]{14} [ihm]{15} [gsii]{16}; [er isch]{20} [ja]{18} [au]{17} [en Galiläer]{19}!»",
- "LUK.22.60": "[De Petrus]{3,4} [aber]{2} [hät gseit]{1}: «[Mänsch]{5}, [ich weiss]{7} [nöd]{6}, [was]{8} [du seisch]{9}!» Und{10} [grad]{11}, [no]{12} [während er]{14} [gredt hät]{13}, [hät]{15} [en Güggel]{16} [gchräit]{15}.",
+ "LUK.22.60": "[De Petrus]{3,4} [aber]{2} [hät gseit]{1}: «[Mänsch]{5}, [ich weiss]{7} [nöd]{6}, [was]{8} [du seisch]{9}!» Und{10} [sofort]{11}, [no]{12} [während er]{14} [gredt hät]{13}, [hät]{15} [en Güggel]{16} [gchräit]{15}.",
  "LUK.22.61": "Und{1} [de Herr]{3,4} [hät sich umdräit]{2} und [hät]{5} [de Petrus]{6,7} [aagluegt]{5}. Und{8} [de Petrus]{10,11} [hät sich]{9} [as]{12} [Wort]{13} [vom Herr]{14,15} [erinneret]{9}, [wie]{16} [er]{17} [zu ihm]{18} [gseit hät]{17}: «[Bevor]{20} [de Güggel]{21} [hüt]{23} [chräit]{22}, [wirsch du]{24} [mich]{25} [drüümal]{26} [verleugne]{24}.» ~19(ὅτι leitet di diräkt Red ii)",
  "LUK.22.62": "Und{1} [er isch usegange]{2,3} und [hät]{4} [bitterli]{5} [briegget]{4}.",
  "LUK.22.63": "Und{1} [d Manne]{2,3}, [wo]{4} [en]{6} [bewacht händ]{5}, [händ]{7} [en]{8} [verspottet]{7} und [gschlage]{9};",
@@ -296,17 +332,17 @@ GSW = {
  "LUK.22.68": "[wänn]{1} [ich]{3} [aber]{2} [fröge]{3}, [wärded ir]{6} [sicher nöd]{4,5} [antworte]{6}.",
  "LUK.22.69": "[Vo jetzt aa]{1-3} [aber]{4} [wird]{5} [de Mänschesohn]{6-9} [zur]{11} [Rächte]{12} [vo de Macht]{13,14} [vo Gott]{15,16} [sitze]{10}.»",
  "LUK.22.70": "[Dänn]{2} [händ]{1} [alli]{3} [gseit]{1}: «[Du]{4} [bisch]{6} [also]{5} [de Sohn]{7,8} [vo Gott]{9,10}?» [Er]{11} [aber]{12} [hät]{15} [zu]{13} [ine]{14} [gseit]{15}: «[Ir]{16} [säged]{17}, [dass]{18} [ich]{19} [s bi]{20}.»",
- "LUK.22.71": "[Si]{1} [aber]{2} [händ gseit]{3}: «[Für was]{4} [bruuched mer]{6,8} [no]{5} [es Züügnis]{7}? [Mir händ s]{11} [ja]{10} [sälber]{9} [us]{12} [sim]{13,15} [Mund]{14} [ghört]{11}.»",
+ "LUK.22.71": "[Si]{1} [aber]{2} [händ gseit]{3}: «[Für was]{4} [bruuched mer]{6,8} [no]{5} [es Zügnis]{7}? [Mir händ s]{11} [ja]{10} [sälber]{9} [us]{12} [sim]{13,15} [Mund]{14} [ghört]{11}.»",
  # ------------------------------------------------------------ Kapitel 23 (23,17 fehlt im SBLGNT)
  "LUK.23.1": "Und{1} [di ganz]{3,4} [Versammlig]{5,6} [isch ufgstande]{2}, und [si händ]{7} [en]{8} [vor]{9} [de Pilatus]{10,11} [gfüert]{7}.",
  "LUK.23.2": "[Si händ]{1} [aber]{2} [aagfange]{1}, [en]{4} [aazchlage]{3}, [und händ gseit]{5}: «[Dä]{6} [händ mer]{7} [verwütscht]{7}, [wie er]{8} [öises]{9,11} [Volk]{10} [ufwieglet]{8} und{12} [verbüütet]{13}, [em Kaiser]{15} [Stüüre]{14} [z zale]{16}, und{17} [seit]{18}, [er]{19} [sig]{22} [Christus]{20}, [en König]{21}.»",
  "LUK.23.3": "[De Pilatus]{1,3} [aber]{2} [hät]{4} [en]{5} [gfröget]{4} [und gseit]{6}: «[Bisch]{8} [du]{7} [de König]{9,10} [vo de Jude]{11,12}?» [Er]{13} [aber]{14} [hät]{15} [em]{16} [gantwortet]{15} [und gseit]{17}: «[Du]{18} [seisch es]{19}.»",
- "LUK.23.4": "[De Pilatus]{1,3} [aber]{2} [hät]{4} [zu]{5} [de Hoheprieschter]{6,7} und{8} [zu de Mängi]{9,10} [gseit]{4}: «[Ich finde]{12} [kei]{11} [Schuld]{13} [a]{14} [däm]{15,17} [Mänsch]{16}.»",
- "LUK.23.5": "[Si]{1} [aber]{2} [händ druf bestande]{3} [und gseit]{4}: «[Er wieglet]{6} [s Volk]{7,8} [uf]{6}; [er leert]{9} [im]{10} [ganze]{11} [Judäa]{12,13}, und{14} das [vo]{16} [Galiläa]{17,18} [aa]{15} [bis]{19} [da here]{20}!» ~5(ὅτι leitet di diräkt Red ii)",
+ "LUK.23.4": "[De Pilatus]{1,3} [aber]{2} [hät]{4} [zu]{5} [de Hoheprieschter]{6,7} und{8} [zu de Lüüt]{9,10} [gseit]{4}: «[Ich finde]{12} [kei]{11} [Schuld]{13} [a]{14} [däm]{15,17} [Mänsch]{16}.»",
+ "LUK.23.5": "[Si]{1} [aber]{2} [händ druf bestande]{3} [und gseit]{4}: «[Er wieglet]{6} [s Volk]{7,8} [uf]{6}; [er lehrt]{9} [im]{10} [ganze]{11} [Judäa]{12,13}, und{14} das [vo]{16} [Galiläa]{17,18} [aa]{15} [bis]{19} [da häre]{20}!» ~5(ὅτι leitet di diräkt Red ii)",
  "LUK.23.6": "[Wo]{3} [de Pilatus]{1} [aber]{2} [das ghört hät]{3}, [hät er]{4} [gfröget]{4}, [öb]{5} [de Maa]{6,7} [en Galiläer]{8} [sig]{9}.",
  "LUK.23.7": "Und{1} [wo er erfaare hät]{2}, [dass]{3} [er]{8} [us]{4} [em Herrschaftsgebiet]{5,6} [vom Herodes]{7} [isch]{8}, [hät er]{9} [en]{10} [zum]{11} [Herodes]{12} [gschickt]{9}, [wo]{13} [i]{18} [dene]{19} [Täg]{20,21} [au]{14,15} [z]{16} [Jerusalem]{17} [gsii isch]{13}.",
  "LUK.23.8": "[Wo]{4} [de Herodes]{1,3} [aber]{2} [de Jesus]{5,6} [gseh hät]{4}, [hät er sich]{7} [fescht]{8} [gfreut]{7}; [dänn]{10} [er hät]{9} [en]{16} [scho]{11} [sit langer]{12} [Ziit]{13} [wele]{14} [gseh]{15}, [wil]{17,18} er [vo]{20} [ihm]{21} [ghört gha hät]{19}, und{22} [er hät ghofft]{23}, [es]{24} [Zeiche]{25} [z gseh]{26}, wo [dur]{27} [ihn]{28} [gschiet]{29}.",
- "LUK.23.9": "[Er hät]{1} [en]{3} [aber]{2} [uusfüerlich]{4-6} [usgfröget]{1}; [er]{7} [aber]{8} [hät]{10} [em]{11} [nüüt]{9} [gantwortet]{10}.",
+ "LUK.23.9": "[Er hät]{1} [en]{3} [aber]{2} [usfüerlich]{4-6} [usgfröget]{1}; [er]{7} [aber]{8} [hät]{10} [em]{11} [nüüt]{9} [gantwortet]{10}.",
  "LUK.23.10": "[D Hoheprieschter]{3,4} und{5} [d Schriftgleerte]{6,7} [aber]{2} [sind]{1} [debii gstande]{1} und [händ]{9} [en]{10} [heftig]{8} [aagchlagt]{9}.",
  "LUK.23.11": "[Dänn]{2} [hät]{1} [au]{4} [de Herodes]{5,6} [mit]{7} [sine]{8,10} [Soldate]{9} [en]{3} [verachtet]{1} und{11} [verspottet]{12}; [er hät]{13} em [es prächtigs]{15} [Gwand]{14} [umgleit]{13} und [hät]{16} [en]{17} [zum]{18} [Pilatus]{19} [zruggschickt]{16}.",
  "LUK.23.12": "[Am]{10} [gliiche]{11} [Tag]{12,13} [aber]{2} [sind]{1} [de Herodes]{4,6} [und]{5,7} [de Pilatus]{8,9} [mitenand]{14,15} [Fründe]{3} [worde]{1}; [dänn]{17} [vorher]{16} [sind si]{20} [enand]{21,22} [fiind]{18,19} [gsii]{20}.",
@@ -318,24 +354,24 @@ GSW = {
  "LUK.23.19": "[Dä]{1} [isch]{2} [wäge]{3} [eme]{5} [Ufruer]{4}, wo [i]{7} [de Stadt]{8,9} [gsii isch]{6}, und{10} [wäge Mord]{11} [is]{13,14} [Gfängnis]{15} [gworfe worde]{12}.",
  "LUK.23.20": "[De Pilatus]{3,4} [aber]{2} [hät]{5} ine [wider]{1} [zuegrüeft]{5}, [wil er]{6} [de Jesus]{8,9} [hät wele]{6} [freilaa]{7}.",
  "LUK.23.21": "[Si]{1} [aber]{2} [händ gschroue]{3}: «[Chrüüzig]{5}, [chrüüzig]{6} [en]{7}!» ~4(λέγοντες leitet di diräkt Red ii)",
- "LUK.23.22": "[Er]{1} [aber]{2} [hät]{4} [zum dritte Mal]{3} [zu]{5} [ine]{6} [gseit]{4}: «[Was]{7} [hät]{10} [dä]{11} [dänn]{8} [Bööses]{9} [gmacht]{10}? [Ich ha]{15} [a]{16} [ihm]{17} [kei]{12} [Schuld]{13} [gfunde]{15}, [wo de Tod verdient]{14}. [Ich wirde]{21} [en]{20} [also]{19} [la züchtige]{18} und [freilaa]{21}.»",
+ "LUK.23.22": "[Er]{1} [aber]{2} [hät]{4} [zum dritte Mal]{3} [zu]{5} [ine]{6} [gseit]{4}: «[Was]{7} [hät]{10} [dä]{11} [dänn]{8} [Böses]{9} [gmacht]{10}? [Ich ha]{15} [a]{16} [ihm]{17} [kei]{12} [Schuld]{13} [gfunde]{15}, [wo de Tod verdient]{14}. [Ich wirde]{21} [en]{20} [also]{19} [la züchtige]{18} und [freilaa]{21}.»",
  "LUK.23.23": "[Si]{1} [aber]{2} [händ em]{3} [mit luutem]{5} [Gschrei]{4} [zuegsetzt]{3} [und verlangt]{6}, [dass er]{7} [gchrüüziget wird]{8}; und{9} [ires]{11,13} [Gschrei]{12} [hät sich duregsetzt]{10}.",
  "LUK.23.24": "Und{1} [de Pilatus]{2} [hät entschide]{3}, [ire]{5,7} [Forderig]{6} [naazgää]{4}.",
  "LUK.23.25": "[Eso]{2} [hät er]{1} [dä]{3} [freiglaa]{1}, wo [wäge]{4} [Ufruer]{5} und{6} [Mord]{7} [is]{9} [Gfängnis]{10} [gworfe worde gsii isch]{8}, [dä]{11}, wo [s verlangt händ]{12}; [de Jesus]{13,15} [aber]{14} [hät er]{16} [irem]{17,19} [Wille]{18} [usgliferet]{16}.",
  "LUK.23.26": "Und{1} [wo]{2} [s]{3} [en]{4} [abgfüert händ]{3}, [händ s]{5} [en]{7} [Simon]{6} [vo Kyrene]{8} [packt]{5}, wo [vom]{10} [Fäld]{11} [choo isch]{9}, und [händ]{12} [em]{13} [s Chrüüz]{14,15} [ufgleit]{12}, zum s [hinder]{17} [em Jesus]{18,19} [härträge]{16}.",
  "LUK.23.27": "[Es isch]{1} [em]{3} [aber]{2} [e grossi]{4} [Mängi]{5} [Volk]{6,7} [gfolgt]{1} und{8} [Fraue]{9}, [wo]{10} [sich a d Bruscht gschlage]{11} und{12} [um ihn]{14} [klagt händ]{13}.",
  "LUK.23.28": "[De Jesus]{5,6} [aber]{2} [hät sich]{1} [zu]{3} [ine]{4} [umdräit]{1} und [gseit]{7}: «[Töchtere]{8} [vo Jerusalem]{9}, [briegged]{11} [nöd]{10} [über]{12} [mich]{13}! [Briegged]{17} [vilmeh]{14} [über]{15} [eu sälber]{16} und{18} [über]{19} [eui]{20,22} [Chind]{21}!",
- "LUK.23.29": "[Dänn]{1} [lueged]{2}, [es chömed]{3} [Täg]{4}, [wo]{5,6} [mer wird säge]{7}: ‹[Sälig]{8} [di Unfruchtbare]{9,10} und{11} [d Muetterliib]{12,13}, [wo]{14} [nöd]{15} [gebore händ]{16}, und{17} [d Brüscht]{18}, [wo]{19} [nöd]{20} [gstillt händ]{21}!›",
+ "LUK.23.29": "[Dänn]{1} [lueged]{2}, [es chömed]{3} [Täg]{4}, [wo]{5,6} [mer wird säge]{7}: ‹[Sälig]{8} [di Unfruchtbare]{9,10} und{11} [d Mueterliib]{12,13}, [wo]{14} [nöd]{15} [gebore händ]{16}, und{17} [d Brüscht]{18}, [wo]{19} [nöd]{20} [gstillt händ]{21}!›",
  "LUK.23.30": "[Dänn]{1} [wärded s aafange]{2}, [zu de Bärge]{4,5} [z säge]{3}: ‹[Fallet]{6} [uf]{7} [üs]{8}!›, und{9} [zu de Hügel]{10,11}: ‹[Decked]{12} [üs]{13} [zue]{12}!›",
  "LUK.23.31": "[Dänn]{1} [wänn]{2} [si]{8} [das]{7} [am]{3,4} [grüene]{5} [Holz]{6} [mached]{8}, [was]{12} [gschiet]{13} dänn [am]{9,10} [dürre]{11}?»",
  "LUK.23.32": "[Es sind]{1} [aber]{2} [au]{3} [zwei]{6} [anderi]{4}, [Verbrächer]{5}, [mit]{7} [ihm]{8} [abgfüert worde]{1}, zum [hiigrichtet wärde]{9}.",
  "LUK.23.33": "Und{1} [wo]{2} [s]{3} [a]{4} [dä Ort]{5,6} [choo sind]{3}, [wo]{7} «[Schädel]{9}» [heisst]{8}, [händ s]{11} [en]{12} [dört]{10} [gchrüüziget]{11} und{13} [d Verbrächer]{14,15}, [de eint]{16,17} [rächts]{18,19}, [de ander]{20,21} [linggs]{22,23}.",
  "LUK.23.34": "[De Jesus]{1,3} [aber]{2} [hät gseit]{4}: «[Vatter]{5}, [vergib]{6} [ine]{7}, [dänn]{9} [si wüssed]{10} [nöd]{8}, [was]{11} [si mached]{12}!» [Si händ]{13} [aber]{14} [sini]{15,17} [Chleider]{16} [verteilt]{13} und [Los]{19} [gworfe]{18}.",
- "LUK.23.35": "Und{1} [s Volk]{3,4} [isch dagstande]{2} und [hät zuegluegt]{5}. [Es händ]{6} [aber]{7} [au]{8} [di füerende Manne]{9,10} [gspottet]{6} [und gseit]{11}: «[Anderi]{12} [hät er grettet]{13}; [er söll]{14} [sich sälber]{15} [rette]{14}, [wänn]{16} [dä]{17} [de Christus]{19,20} [vo Gott]{21,22} [isch]{18}, [de Uuserwäält]{23,24}!»",
+ "LUK.23.35": "Und{1} [s Volk]{3,4} [isch dagstande]{2} und [hät zuegluegt]{5}. [Es händ]{6} [aber]{7} [au]{8} [di füerende Manne]{9,10} [gspottet]{6} [und gseit]{11}: «[Anderi]{12} [hät er grettet]{13}; [er söll]{14} [sich sälber]{15} [rette]{14}, [wänn]{16} [dä]{17} [de Christus]{19,20} [vo Gott]{21,22} [isch]{18}, [de Userwählt]{23,24}!»",
  "LUK.23.36": "[Au]{4} [d Soldate]{5,6} [aber]{2} [händ]{1} [en]{3} [verspottet]{1}; [si sind häregchoo]{7}, [händ]{9} [em]{10} [Essig]{8} [anegstreckt]{9}",
  "LUK.23.37": "und{1} [gseit]{2}: «[Wänn]{3} [du]{4} [de König]{6,7} [vo de Jude]{8,9} [bisch]{5}, [rett]{10} [dich sälber]{11}!»",
  "LUK.23.38": "[Über]{5} [ihm]{6} [isch]{1} [aber]{2} [au]{3} [e Ufschrift]{4} [gsii]{1}: «[Das]{11} isch [de König]{7,8} [vo de Jude]{9,10}.»",
- "LUK.23.39": "[Eine]{1} [vo de]{3} [Verbrächer]{5} [aber]{2}, wo [det ghanget sind]{4}, [hät]{6} [über en]{7} [gläschteret]{6} [und gseit]{8}: «[Bisch]{11} [du]{10} [nöd]{9} [de Christus]{12,13}? [Rett]{14} [dich sälber]{15} und{16} [üs]{17}!»",
+ "LUK.23.39": "[Eine]{1} [vo de]{3} [Verbrächer]{5} [aber]{2}, wo [dört ghanget sind]{4}, [hät]{6} [über en]{7} [gläschteret]{6} [und gseit]{8}: «[Bisch]{11} [du]{10} [nöd]{9} [de Christus]{12,13}? [Rett]{14} [dich sälber]{15} und{16} [üs]{17}!»",
  "LUK.23.40": "[De ander]{3,4} [aber]{2} [hät gantwortet]{1}, [hät]{5} [en]{6} [zrächtgwise]{5} und [gseit]{7}: «[Fürchtisch]{9} [du]{10} [nöd emal]{8} [Gott]{11,12}, [wo]{13} [du]{18} doch [under]{14} [em gliiche]{15,16} [Urteil]{17} [staasch]{18}?",
  "LUK.23.41": "Und{1} bi [üs]{2} gschiet s [zwar]{3} [zrächt]{4}, [dänn]{6} [mir überchömed]{9}, [was]{7} [öisi Taate]{8} [verdient händ]{5}; [dä da]{10} [aber]{11} [hät]{14} [nüüt]{12} [Unrächts]{13} [gmacht]{14}.»",
  "LUK.23.42": "Und{1} [er hät gseit]{2}: «[Jesus]{3}, [dänk]{4} [a mich]{5}, [wänn]{6} [du]{7} [mit]{8} [dinere]{9,11} [Königsherrschaft]{10} [chunnsch]{7}!»",
@@ -344,7 +380,7 @@ GSW = {
  "LUK.23.45": "wil [d Sunne]{1,2} [ire Schii verlore hät]{3}. [De Vorhang]{6,7} [vom Tämpel]{8,9} [aber]{5} [isch]{4} [mitten entzwei]{10} [verrisse]{4}.",
  "LUK.23.46": "Und{1} [de Jesus]{5,6} [hät]{2} [mit luuter]{4} [Stimm]{3} [grüeft]{2} und [gseit]{7}: «[Vatter]{8}, [i]{9} [dini]{11} [Händ]{10} [gib ich]{12} [min]{13,15} [Geischt]{14}!» [Wo er]{18} [das]{16} [aber]{17} [gseit hät]{18}, [isch er gstorbe]{19}.",
  "LUK.23.47": "[Wo]{1} [de Hauptmaa]{3,4} [aber]{2} [gseh hät]{1}, [was]{5} [gscheh isch]{6}, [hät er]{7} [Gott]{8,9} [priise]{7} [und gseit]{10}: «[Dä]{14} [Mänsch]{12,13} [isch]{16} [würkli]{11} [grächt]{15} [gsii]{16}!»",
- "LUK.23.48": "Und{1} [all]{2} [d Lüüt]{5}, [wo]{3} [zu]{6} [dem]{7,9} [Schauspiel]{8} [zämechoo sind]{4}, [händ gseh]{10}, [was]{11} [gscheh isch]{12}, [händ sich]{13} [a d Bruscht]{14,15} [gschlage]{13} und [sind zruggange]{16}.",
+ "LUK.23.48": "Und{1} [all]{2} [d Lüüt]{5}, [wo]{3} [zu]{6} [dem]{7,9} [Schauspiel]{8} [zämechoo sind]{4}, [händ gseh]{10}, [was]{11} [gscheh isch]{12}, [händ sich]{13} [a d Bruscht]{14,15} [gschlage]{13} und [sind zrugggange]{16}.",
  "LUK.23.49": "[Alli]{3} [aber]{2}, [wo]{4} [en]{6} [kännt händ]{5}, [sind]{1} [vo wiitem]{7} [gstande]{1}, [au]{8} [Fraue]{9}, [wo]{10} [em]{12} [vo]{13} [Galiläa]{14,15} här [gfolgt sind]{11}, [und händ]{16} [das]{17} [gseh]{16}.",
  "LUK.23.50": "Und{1} [lueg]{2}, da isch [en Maa]{3} [mit Name]{4} [Josef]{5} gsii, wo [Ratsmitglied]{6} [gsii isch]{7}, [en]{8} [guete]{9} und{10} [grächte]{11} [Maa]{8} –",
  "LUK.23.51": "[dä]{1} [hät]{3} [irem]{5,10} [Beschluss]{6} und{7} [Vorgaa]{8,9} [nöd]{2} [zuegstimmt gha]{4} –, [us]{11} [Arimatäa]{12}, [ere Stadt]{13} [z Judäa]{14,15}, [wo]{16} uf [s Riich]{18,19} [vo Gott]{20,21} [gwartet hät]{17}.",
@@ -352,12 +388,12 @@ GSW = {
  "LUK.23.53": "Und{1} [er hät en abegnoo]{2}, [hät]{3} [en]{4} [in es Liinetuech]{5} [iigwicklet]{3} und{6} [hät]{7} [en]{8} [in]{9} [es Grab]{10} [gleit]{7}, [wo in Fels ghaue gsii isch]{11}, [wo]{12} [no]{16} [niemer]{13,15} [drin gläge isch]{14,17}.",
  "LUK.23.54": "Und{1} [es isch]{3} [Rüschttag]{2,4} [gsii]{3}, und{5} [de Sabbat]{6} [isch aabroche]{7}.",
  "LUK.23.55": "[D Fraue]{3,4} [aber]{2}, [wo]{5} [mit ihm]{11} [us]{8} [Galiläa]{9,10} [choo sind]{6,7}, [sind nachegange]{1} und [händ]{12} [s Grab]{13,14} [gseh]{12} und{15} [wie]{16} [sin]{18,20} [Liib]{19} [drin gleit worde isch]{17}.",
- "LUK.23.56": "[Dänn]{2} [sind s zruggange]{1} und [händ]{3} [Duftstoff]{4} und{5} [Salböl]{6} [parat gmacht]{3}. Und{7} [am Sabbat]{8,10} [händ s]{11} [zwar]{9} [gruebet]{11}, [nach]{12} [em Gebot]{13,14}.",
+ "LUK.23.56": "[Dänn]{2} [sind s zrugggange]{1} und [händ]{3} [Duftstoff]{4} und{5} [Salböl]{6} [parat gmacht]{3}. Und{7} [am Sabbat]{8,10} [händ s]{11} [zwar]{9} [gruebet]{11}, [nach]{12} [em Gebot]{13,14}.",
  # ------------------------------------------------------------ Kapitel 24
  "LUK.24.1": "[Am]{1} [erschte Tag]{3} [vo de Wuche]{4,5} [aber]{2} [sind s]{11} [ganz]{7} [früe am Morge]{6} [zum]{8,9} [Grab]{10} [choo]{11} und [händ]{12} [d Duftstoff]{15} [mitbracht]{12}, [wo]{13} [s parat gmacht händ]{14}.",
  "LUK.24.2": "[Si händ]{1} [aber]{2} [de Stei]{3,4} [vom]{6,7} [Grab]{8} [wäggwälzt]{5} [gfunde]{1}.",
  "LUK.24.3": "[Wo s]{1} [aber]{2} [ine gange sind]{1}, [händ s]{4} [de Liib]{5,6} [nöd]{3} [gfunde]{4}.",
- "LUK.24.4": "Und{1} [während]{3,4} [si]{6} [drüber]{7,8} [ratlos gsii sind]{5}, [lueg]{10}, [da]{9} [sind]{13} [zwei]{12} [Manne]{11} [i]{15} [schiinigem]{17} [Gwand]{16} [zu ine]{14} [härechoo]{13}. ~2(ἐγένετο «es gschah» leitet nach em biblische Erzählstil s Ereignis ii; nöd eigens widergää)",
+ "LUK.24.4": "Und{1} [während]{3,4} [si]{6} [drüber]{7,8} [ratlos gsii sind]{5}, [lueg]{10}, [da]{9} [sind]{13} [zwei]{12} [Manne]{11} [i]{15} [schiinigem]{17} [Gwand]{16} [zu ine]{14} [härechoo]{13}. ~2(" + EGEN_SKIP_GSW + ")",
  "LUK.24.5": "[Si]{4} [aber]{2} [sind verschrocke]{1,3} und{5} [händ]{6} [s Gsicht]{7,8} [gäge]{9} [de Bode]{10,11} [gsänkt]{6}. [Dänn händ]{12} d Manne [zu]{13} [ine]{14} [gseit]{12}: «[Werum]{15} [sueched ir]{16} [dä, wo läbt]{17,18}, [bi]{19} [de Tote]{20,21}?",
  "LUK.24.6": "[Er isch]{2} [nöd]{1} [da]{3}, [sondern]{4} [er isch uferweckt worde]{5}. [Dänked dra]{6}, [wie]{7} [er]{8} [zu eu]{9} [gredt hät]{8}, [wo er]{11} [no]{10} [in]{12} [Galiläa]{13,14} [gsii isch]{11}",
  "LUK.24.7": "[und gseit hät]{1}: ‹[De Mänschesohn]{2-5} [mues]{7} [i]{9} [d Händ]{10} [vo sündige]{12} [Mänsche]{11} [usgliferet]{8} und{13} [gchrüüziget wärde]{14} und{15} [am dritte]{16,17} [Tag]{18} [uferstaa]{19}.›» ~6(ὅτι leitet di diräkt Red ii)",
@@ -368,22 +404,22 @@ GSW = {
  "LUK.24.12": "[De Petrus]{1,3} [aber]{2} [isch ufgstande]{4} und [isch]{5} [zum]{6,7} [Grab]{8} [grännt]{5}; und{9} [er hät sich vorebeugt]{10} und [gseht]{11} [nu]{14} [d Liinetüecher]{12,13}; und{15} [er isch]{16} [heigange]{17,18}, [voll Stuune]{19} [über das]{20}, wo [gscheh isch]{21}.",
  "LUK.24.13": "Und{1} [lueg]{2}, [zwei]{3} [vo]{4} [ine]{5} [sind]{10} [am gliiche]{6-8} [Tag]{9} [understwägs gsii]{11} [zu]{12} [eme Dorf]{13} [mit Name]{19,20} [Emmaus]{21}, [sächzg]{16} [Stadie]{15} [vo]{17} [Jerusalem]{18} [ewägg]{14}.",
  "LUK.24.14": "Und{1} [si]{2} [händ]{3} [mitenand]{4,5} [über]{6} [all]{7} [das]{8,10} [gredt]{3}, wo [gscheh isch]{9}.",
- "LUK.24.15": "Und{1} [während]{3,4} [si]{6} [eso gredt]{5} und{7} [sich bsproche händ]{8}, [da]{9} [isch]{12} [de Jesus]{11} [sälber]{10} [dezuechoo]{12} und [isch]{13} [mit ine]{14} [gange]{13}. ~2(ἐγένετο «es gschah» leitet nach em biblische Erzählstil s Ereignis ii; nöd eigens widergää)",
+ "LUK.24.15": "Und{1} [während]{3,4} [si]{6} [eso gredt]{5} und{7} [sich bsproche händ]{8}, [da]{9} [isch]{12} [de Jesus]{11} [sälber]{10} [dezuechoo]{12} und [isch]{13} [mit ine]{14} [gange]{13}. ~2(" + EGEN_SKIP_GSW + ")",
  "LUK.24.16": "[Iri]{1,4} [Auge]{3} [aber]{2} [sind ghalte worde]{5}, [eso dass]{6} si [en]{9} [nöd]{7} [erchännt händ]{8}.",
  "LUK.24.17": "[Er hät]{1} [aber]{2} [zu]{3} [ine]{4} [gseit]{1}: «[Was]{5} [sind das]{6,8} [für Wort]{7}, [wo]{9} ir [understwägs]{13} [mitenand]{11,12} [wächsled]{10}?» Und{14} [si sind]{15} [truurig]{16} [staa blibe]{15}.",
- "LUK.24.18": "[Eine]{3} [aber]{2}, [mit Name]{4} [Kleopas]{5}, [hät gantwortet]{1} und [zu]{7} [ihm]{8} [gseit]{6}: «[Bisch du]{9} [als einzige]{10} [frömd]{11} z [Jerusalem]{12} und{13} [häsch]{15} [nöd]{14} [erfaare]{15}, [was]{16} [det]{18,19} [i]{20} [dene]{21,23} [Täg]{22} [gscheh isch]{17}?»",
+ "LUK.24.18": "[Eine]{3} [aber]{2}, [mit Name]{4} [Kleopas]{5}, [hät gantwortet]{1} und [zu]{7} [ihm]{8} [gseit]{6}: «[Bisch du]{9} [als einzige]{10} [frömd]{11} z [Jerusalem]{12} und{13} [häsch]{15} [nöd]{14} [erfaare]{15}, [was]{16} [dört]{18,19} [i]{20} [dene]{21,23} [Täg]{22} [gscheh isch]{17}?»",
  "LUK.24.19": "Und{1} [er hät]{2} [zu ine]{3} [gseit]{2}: «[Was dänn]{4}?» [Si]{5} [aber]{6} [händ]{7} [zu ihm]{8} [gseit]{7}: «[Das]{9} [mit]{10} [em Jesus]{11} [vo Nazaret]{12,13}, [wo]{14} [en Prophet]{16,17} [gsii isch]{15}, [mächtig]{18} [i]{19} [Taat]{20} und{21} [Wort]{22} [vor]{23} [Gott]{24,25} und{26} [em ganze]{27,28} [Volk]{29},",
  "LUK.24.20": "[und]{2} [wie]{1} [en]{4} [d Hoheprieschter]{5,6} und{7} [öisi]{10} [füerende Manne]{8,9} [zum]{11} [Todesurteil]{12,13} [usgliferet]{3} und{14} [en]{16} [gchrüüziget händ]{15}.",
- "LUK.24.21": "[Mir]{1} [aber]{2} [händ ghofft]{3}, [dass]{4} [er]{5} [dä sig]{6}, [wo]{7} [Israel]{10,11} [erlöse]{9} [werdi]{8}. [Aber]{12} [zu]{15} [all däm]{16,17} [chunnt]{13} [no]{14} [dezue]{13}: [Es isch]{21} [hüt]{19} [scho de dritt]{18} [Tag]{20}, [sit]{22,23} [das]{24} [gscheh isch]{25}.",
+ "LUK.24.21": "[Mir]{1} [aber]{2} [händ ghofft]{3}, [dass]{4} [er]{5} [dä sig]{6}, [wo]{7} [Israel]{10,11} [erlöse]{9} [wärdi]{8}. [Aber]{12} [zu]{15} [all däm]{16,17} [chunnt]{13} [no]{14} [dezue]{13}: [Es isch]{21} [hüt]{19} [scho de dritt]{18} [Tag]{20}, [sit]{22,23} [das]{24} [gscheh isch]{25}.",
  "LUK.24.22": "[Zuedem]{1} [händ]{7} [üs]{8} [au]{2} [es paar]{4} [Fraue]{3} [us]{5} [öisem Chreis]{6} [in Ufregig versetzt]{7}; [si sind]{9} [früe am Morge]{10} [bim]{11,12} [Grab]{13} [gsii]{9}",
  "LUK.24.23": "und{1} [händ]{3} [sin]{4,6} [Liib]{5} [nöd]{2} [gfunde]{3}; [si sind choo]{7} und [händ gseit]{8}, [si heiged]{12} [sogar]{9} [e Erschiinig]{10} [vo Ängel]{11} [gseh]{12}, [wo]{13} [säged]{14}, [er]{15} [läbi]{16}.",
  "LUK.24.24": "Und{1} [es paar]{3} [vo de Öisne]{4-6} [sind]{2} [zum]{7,8} [Grab]{9} [gange]{2} und{10} [händ s]{11} [eso]{12} [gfunde]{11}, [wie]{13} [s au]{14} [d Fraue]{15,16} [gseit händ]{17}; [ihn]{18} [aber]{19} [händ s]{21} [nöd]{20} [gseh]{21}.»",
  "LUK.24.25": "Und{1} [er]{2} [hät]{3} [zu]{4} [ine]{5} [gseit]{3}: «[Wie unverständig]{6,7} sind ir und{8} [wie langsam]{9} [im]{10} [Härz]{11}, [a]{14} [all das]{15} [z glaube]{12,13}, [was]{16} [d Prophete]{18,19} [gseit händ]{17}!",
- "LUK.24.26": "[Hät]{3} [de Christus]{5,6} [das]{2} [nöd]{1} [müese]{3} [lide]{4} und{7} [i]{9} [sini]{10,12} [Herrlichkeit]{11} [iigaa]{8}?»",
+ "LUK.24.26": "[Hät]{3} [de Christus]{5,6} [das]{2} [nöd]{1} [müese]{3} [liide]{4} und{7} [i]{9} [sini]{10,12} [Herrlichkeit]{11} [iigaa]{8}?»",
  "LUK.24.27": "Und{1} [er hät]{2} [bim]{3} [Mose]{4} und{5} [bi]{6} [allne]{7} [Prophete]{8,9} [aagfange]{2} und [ine]{11} [usgleit]{10}, [was]{16} [i]{12} [allne]{13} [Schrifte]{14,15} [über]{17} [ihn sälber]{18} staat.",
  "LUK.24.28": "Und{1} [si sind]{2} [nöch]{3} [zum]{4} [Dorf]{5} [choo]{2}, [wo si häre]{6} [understwägs gsii sind]{7}, und{8} [er]{9} [hät tue]{10}, [wie wänn er]{12} [wiiter]{11} [wett gaa]{12}.",
  "LUK.24.29": "Und{1} [si händ]{2} [en]{3} [drängt]{2} [und gseit]{4}: «[Bliib]{5} [bi]{6} [üs]{7}, [dänn]{8} [es gaat]{11} [gäge]{9} [Aabig]{10}, und{12} [de Tag]{15,16} [hät sich]{13} [scho]{14} [gneigt]{13}!» Und{17} [er isch ine gange]{18}, [zum]{19} [bi]{21} [ine]{22} [z bliibe]{20}.",
- "LUK.24.30": "Und{1} [wo]{3,4} [er]{6} [mit]{7} [ine]{8} [am Tisch gläge isch]{5}, [hät er]{9} [s Broot]{10,11} [gnoo]{9}, [de Lobpriis gsproche]{12}, [s broche]{14} und{13} [ine]{16} [ggää]{15}. ~2(ἐγένετο «es gschah» leitet nach em biblische Erzählstil s Ereignis ii; nöd eigens widergää)",
+ "LUK.24.30": "Und{1} [wo]{3,4} [er]{6} [mit]{7} [ine]{8} [am Tisch gläge isch]{5}, [hät er]{9} [s Broot]{10,11} [gnoo]{9}, [de Lobpriis gsproche]{12}, [s broche]{14} und{13} [ine]{16} [ggää]{15}. ~2(" + EGEN_SKIP_GSW + ")",
  "LUK.24.31": "[Dänn]{2} [sind]{3} [ine]{1} [d Auge]{4,5} [ufgange]{3}, und{6} [si händ]{7} [en]{8} [erchännt]{7}; und{9} [er]{10} [isch]{12} [für]{13} [si]{14} [unsichtbar]{11} [worde]{12}.",
  "LUK.24.32": "Und{1} [si händ]{2} [zunenand]{3,4} [gseit]{2}: «[Hät]{9,10} [nöd]{5} [öises]{6,8} [Härz]{7} [i]{11} [üs]{12} [brännt]{9,10}, [wo]{13} [er]{14} [uf]{16} [em Wäg]{17,18} [mit üs]{15} [gredt hät]{14}, [wo]{19} [er]{20} [üs]{21} [d Schrifte]{22,23} [ufgschlosse hät]{20}?»",
  "LUK.24.33": "Und{1} [si sind]{2} [no i de gliiche]{3,4} [Stund]{5} [ufbroche]{2} und [sind]{6} [uf]{7} [Jerusalem]{8} [zruggchert]{6}. Und{9} [si händ]{10} [d Elf]{12,13} und{14} [iri Gfährte]{15-17} [versammlet]{11} [aatroffe]{10},",
@@ -399,12 +435,12 @@ GSW = {
  "LUK.24.43": "Und{1} [er hät s gnoo]{2} und [vor]{3} [ine]{4} [ggässe]{5}.",
  "LUK.24.44": "[Er hät]{1} [aber]{2} [zu]{3} [ine]{4} [gseit]{1}: «[Das]{5} sind [mini]{6,8} [Wort]{7}, [wo]{9} [ich]{10} [zu]{11} [eu]{12} [gseit ha]{10}, [wo ich]{14} [no]{13} [bi]{15} [eu]{16} [gsii bi]{14}: [Alles]{20} [mues]{18} [erfüllt wärde]{19}, [was]{21} [im]{23,24} [Gsetz]{25} [vom Mose]{26} und{27} [i de Prophete]{28} und{29} [i de Psalme]{30} [über]{31} [mich]{32} [gschribe staat]{22}.» ~17(ὅτι leitet de Inhalt vo de Wort ii)",
  "LUK.24.45": "[Dänn]{1} [hät er]{2} [ine]{3} [de Verstand]{4,5} [ufgmacht]{2}, [dass]{6} si [d Schrifte]{8,9} [verstönd]{7}.",
- "LUK.24.46": "Und{1} [er hät]{2} [zu ine]{3} [gseit]{2}: «[Eso]{5} [staat s gschribe]{6}: [De Christus]{8,9} [wird lide]{7} und{10} [am dritte]{14,15} [Tag]{16} [vo]{12} [de Tote]{13} [uferstaa]{11}, ~4(ὅτι leitet di diräkt Red ii)",
- "LUK.24.47": "und{1} [i]{3} [sim]{4,6} [Name]{5} [wird]{2} [Umchehr]{7} und{8} [Vergäbig]{9} [vo de Sünde]{10} [verchündet wärde]{2} [under]{11} [allne]{12} [Völker]{13,14} – [aagfange]{15} [z]{16} [Jerusalem]{17}.",
+ "LUK.24.46": "Und{1} [er hät]{2} [zu ine]{3} [gseit]{2}: «[Eso]{5} [staat s gschribe]{6}: [De Christus]{8,9} [wird liide]{7} und{10} [am dritte]{14,15} [Tag]{16} [vo]{12} [de Tote]{13} [uferstaa]{11}, ~4(ὅτι leitet di diräkt Red ii)",
+ "LUK.24.47": "und{1} [i]{3} [sim]{4,6} [Name]{5} [wird]{2} [Umkehr]{7} und{8} [Vergäbig]{9} [vo de Sünde]{10} [verchündet wärde]{2} [under]{11} [allne]{12} [Völker]{13,14} – [aagfange]{15} [z]{16} [Jerusalem]{17}.",
  "LUK.24.48": "[Ir]{1} [sind]{2} [Züüge]{3} [defür]{4}.",
- "LUK.24.49": "Und{1} [lueged]{2}, [ich]{3} [schicke]{4} [uf]{10} [eu]{11} [d Verheissig]{5,6} [vo mim]{7,9} [Vatter]{8}. [Ir]{12} [aber]{13} [bliibed]{14} [i]{15} [de Stadt]{16,17}, [bis]{18,19} [ir]{20} [mit Chraft]{23} [us]{21} [de Hööchi]{22} [aagleit wärded]{20}.»",
+ "LUK.24.49": "Und{1} [lueged]{2}, [ich]{3} [schicke]{4} [uf]{10} [eu]{11} [d Verheissig]{5,6} [vo mim]{7,9} [Vatter]{8}. [Ir]{12} [aber]{13} [bliibed]{14} [i]{15} [de Stadt]{16,17}, [bis]{18,19} [ir]{20} [mit Chraft]{23} [us]{21} [de Höchi]{22} [aagleit wärded]{20}.»",
  "LUK.24.50": "[Er hät]{1} [si]{3} [aber]{2} [usegfüert]{1} [bis]{4} [i d Nöchi vo]{5} [Betanie]{6}; und{7} [er hät]{8} [sini]{9,11} [Händ]{10} [ufghebt]{8} und [si]{13} [gsägnet]{12}.",
- "LUK.24.51": "Und{1} [während]{3,4} [er]{6} [si]{7} [gsägnet hät]{5}, [isch er]{8} [vo]{9} [ine]{10} [gschide]{8} und{11} [isch]{12} [in]{13} [Himmel]{14,15} [ufetreit worde]{12}. ~2(ἐγένετο «es gschah» leitet nach em biblische Erzählstil s Ereignis ii; nöd eigens widergää)",
+ "LUK.24.51": "Und{1} [während]{3,4} [er]{6} [si]{7} [gsägnet hät]{5}, [isch er]{8} [vo]{9} [ine]{10} [gschide]{8} und{11} [isch]{12} [in]{13} [Himmel]{14,15} [ufetreit worde]{12}. ~2(" + EGEN_SKIP_GSW + ")",
  "LUK.24.52": "Und{1} [si]{2} [sind]{3} vor [ihm]{4} [abegchnüület]{3} und [sind]{5} [mit]{8} [grosser]{10} [Fröid]{9} [uf]{6} [Jerusalem]{7} [zruggchert]{5},",
  "LUK.24.53": "und{1} [si sind]{2} [di ganz Ziit]{3,4} [im]{5,6} [Tämpel]{7} [gsii]{2} und [händ]{8} [Gott]{9,10} [globt]{8}.",
 }
@@ -488,8 +524,8 @@ DEC_DE = [
  ("LUK.23.2", "dem Kaiser", "traditional", "Καίσαρι", "Caesar", None, "Gemeint ist der römische Kaiser; vgl. [[LUK.20.22]]–[[LUK.20.25]]."),
  ("LUK.23.2", "Christus, ein König", "literal", "χριστὸν βασιλέα", None, ["der Christus, ein König", "ein gesalbter König"], "Die Ankläger übersetzen den Titel «Christus» für Pilatus in einen politischen Anspruch."),
  ("LUK.23.3", "Du sagst es", "literal", "Σὺ λέγεις", None, ["Das sagst du"], "Eine zurückhaltende Antwort; ob sie eher Zustimmung oder Abstand ausdrückt, wird verschieden gedeutet."),
- ("LUK.23.4", "der Menge", "adapted", "τοὺς ὄχλους", "den Volksmengen", None, None),
  ("LUK.23.4", "keine Schuld", "interpretive", "Οὐδὲν αἴτιον", None, ["keinen Grund zur Anklage"], "αἴτιον: Ursache, Grund zur Anklage. Ebenso [[LUK.23.14]] und [[LUK.23.22]]."),
+ ("LUK.23.4", "den Menschenmengen", "literal", "τοὺς ὄχλους", None, ["der Menge"], OCHLOI_DE + " Ebenso [[LUK.23.48]]."),
  ("LUK.23.7", "Herodes", "literal", "Ἡρῴδου", None, None, "Herodes Antipas, Landesfürst von Galiläa (vgl. [[LUK.3.1]], [[LUK.9.7]]–[[LUK.9.9]], [[LUK.13.31]]); er war zum Fest in Jerusalem."),
  ("LUK.23.7", "schickte er", "interpretive", "ἀνέπεμψεν", None, ["überstellte er"], "ἀναπέμπω: an die zuständige Stelle senden, auch «zurückschicken» ([[LUK.23.11]], [[LUK.23.15]])."),
  ("LUK.23.8", "Zeichen", "literal", "σημεῖον", None, ["Wunder"], None),
@@ -532,7 +568,7 @@ DEC_DE = [
  ("LUK.23.56", "Duftstoffe", "literal", "ἀρώματα", None, ["wohlriechende Kräuter", "Gewürze"], "Ebenso [[LUK.24.1]]."),
  ("LUK.23.56", "nach dem Gebot", "literal", "κατὰ τὴν ἐντολήν", None, None, "Vgl. [[EXO.20.10]]."),
  ("LUK.24.1", "Am ersten Tag der Woche", "literal", "τῇ μιᾷ τῶν σαββάτων", "am ersten der Sabbate", None, "σάββατα heisst auch «Woche»; gemeint ist der Tag nach dem Sabbat."),
- ("LUK.24.4", "Und während", "adapted", "καὶ ἐγένετο ἐν τῷ", "Und es geschah, während", None, "ἐγένετο «es geschah» ist eine Erzählformel nach dem Vorbild der griechischen Bibel; sie ist hier wie in [[LUK.24.15]], [[LUK.24.30]] und [[LUK.24.51]] nicht eigens wiedergegeben."),
+ ("LUK.24.4", "Und während", "adapted", "καὶ ἐγένετο ἐν τῷ", "Und es geschah, während", None, EGEN_DE),
  ("LUK.24.4", "zwei Männer", "literal", "ἄνδρες δύο", None, ["zwei Engel"], "Der Erzähler nennt sie Männer; in [[LUK.24.23]] heissen sie Engel."),
  ("LUK.24.5", "die Männer", "adapted", "εἶπαν", "sie sagten", None, "Das Subjekt ist ergänzt, damit klar ist, wer spricht."),
  ("LUK.24.5", "den Lebenden", "literal", "τὸν ζῶντα", None, None, None),
@@ -574,7 +610,7 @@ DEC_DE = [
 
 DEC_GSW = [
  ("LUK.22.1", "S Fäscht vo de ungsüürete Broot", "adapted", "ἡ ἑορτὴ τῶν ἀζύμων", "s Fäscht vo de Ungsüürete", None, "Name vom siebetägige Fäscht, wo as Passa aaschlüsst ([[LEV.23.5]]–[[LEV.23.6]]); de Lukas setzt beides gliich."),
- ("LUK.22.3", "isch de Satan in de Judas gfaare", "literal", "Εἰσῆλθεν δὲ Σατανᾶς εἰς Ἰούδαν", None, None, "Vgl. [[LUK.4.13]] und [[JHN.13.27]]."),
+ ("LUK.22.3", "isch de Satan in de Judas gfahre", "literal", "Εἰσῆλθεν δὲ Σατανᾶς εἰς Ἰούδαν", None, None, "Vgl. [[LUK.4.13]] und [[JHN.13.27]]."),
  ("LUK.22.4", "Hauptlüüt", "interpretive", "στρατηγοῖς", None, ["Kommandante vo de Tämpelwach"], "Wohl d Kommandante vo de Tämpelwach ([[LUK.22.52]])."),
  ("LUK.22.4", "uslifere", "literal", "παραδῷ", None, ["verrate"], "παραδίδωμι heisst «übergää, uslifere» und isch überall eso widerggää ([[LUK.22.48]], [[LUK.23.25]], [[LUK.24.7]], [[LUK.24.20]])."),
  ("LUK.22.8", "s Passamaal", "interpretive", "τὸ πάσχα", "s Passa", None, "πάσχα isch s Fäscht, s Maal und s Lamm; da s Maal."),
@@ -597,7 +633,7 @@ DEC_GSW = [
  ("LUK.22.40", "Versuechig", "interpretive", "πειρασμόν", None, ["Prüefig"], None),
  ("LUK.22.43", "Dänn isch em en Ängel vom Himmel erschine", "literal", "ὤφθη δὲ αὐτῷ ἄγγελος ἀπʼ οὐρανοῦ", None, None, "[[LUK.22.43]]–[[LUK.22.44]] stönd im SBLGNT ohni Klammere, bi Westcott-Hort i Doppelklammere ⟦ ⟧. Nach de CNTR-Transkriptione stönd d Vers in 01 und 05 und fääled in 02, 03, 032 und 𝔓75."),
  ("LUK.22.44", "wie Bluetstropfe", "literal", "ὡσεὶ θρόμβοι αἵματος", None, None, "En Vergliich: de Schweiss isch «wie» Bluetstropfe gfalle."),
- ("LUK.22.51", "Hööred uf! Nöd wiiter!", "interpretive", "Ἐᾶτε ἕως τούτου", "Lönd bis da here!", ["Lönd mich no so wiit mache!"], "Di churz Wändig cha de Jünger Halt gebiete oder d Häscher bitte, en no la z mache."),
+ ("LUK.22.51", "Hööred uf! Nöd wiiter!", "interpretive", "Ἐᾶτε ἕως τούτου", "Lönd bis da häre!", ["Lönd mich no so wiit mache!"], "Di churz Wändig cha de Jünger Halt gebiete oder d Häscher bitte, en no la z mache."),
  ("LUK.22.52", "en Röiber", "interpretive", "λῃστὴν", None, ["en Bandit", "en Ufständische"], None),
  ("LUK.22.56", "Füür", "adapted", "φῶς", "Liecht", None, None),
  ("LUK.22.63", "wo en bewacht händ", "interpretive", "οἱ συνέχοντες αὐτὸν", None, None, "Im Griechische staat nu «en»; gmeint isch de Jesus."),
@@ -615,17 +651,17 @@ DEC_GSW = [
  ("LUK.23.46", "isch er gstorbe", "adapted", "ἐξέπνευσεν", "hät er usghuucht", None, None),
  ("LUK.23.47", "grächt", "interpretive", "δίκαιος", None, ["unschuldig"], None),
  ("LUK.23.54", "Rüschttag", "literal", "ἡμέρα παρασκευῆς", "Tag vo de Vorbereitig", ["Friitig"], None),
- ("LUK.24.4", "Und während", "adapted", "καὶ ἐγένετο ἐν τῷ", "Und es isch gscheh, während", None, "Di Erzählformle ἐγένετο isch da wie i [[LUK.24.15]], [[LUK.24.30]] und [[LUK.24.51]] nöd eigens widerggää."),
+ ("LUK.24.4", "Und während", "adapted", "καὶ ἐγένετο ἐν τῷ", "Und es isch gsii, während", None, EGEN_GSW),
  ("LUK.24.6", "er isch uferweckt worde", "literal", "ἠγέρθη", None, ["er isch uferstande"], "Passiv: Gott weckt uf. Gliich i [[LUK.24.34]]."),
  ("LUK.24.10", "d Mueter vom Jakobus", "interpretive", "ἡ Ἰακώβου", "di vom Jakobus", None, "«Mueter» isch ergänzt."),
- ("LUK.24.12", "heigange", "interpretive", "ἀπῆλθεν πρὸς αὑτὸν", None, ["isch wäggange und hät bi sich gstuunet"], "πρὸς αὑτόν cha zu «isch gange» oder zu «stuune» ghööre."),
+ ("LUK.24.12", "heigange", "interpretive", "ἀπῆλθεν πρὸς αὑτὸν", None, ["isch wäggange und hät bi sich gstuunet"], "πρὸς αὑτόν cha zu «isch gange» oder zu «stuune» ghöre."),
  ("LUK.24.13", "sächzg Stadie", "literal", "σταδίους ἑξήκοντα", None, ["guet elf Kilometer"], "Es Stadion isch öppe 185 Meter. I de CNTR-Transkription vo 01 staat «hundertsächzg»."),
  ("LUK.24.30", "de Lobpriis gsproche", "interpretive", "εὐλόγησεν", "hät gsägnet", None, None),
  ("LUK.24.35", "wie si en erchännt händ", "adapted", "ὡς ἐγνώσθη αὐτοῖς", "wie er vo ine erchännt worde isch", None, "S Passiv isch i de Mundart aktiv widerggää."),
  ("LUK.24.37", "en Geischt", "interpretive", "πνεῦμα", None, ["es Gspängscht"], None),
  ("LUK.24.40", "Und wo er das gseit hät", "literal", "καὶ τοῦτο εἰπὼν", None, None, "De Vers staat im SBLGNT i eckige Klammere [ ], bi WH i Doppelklammere ⟦ ⟧; nach de CNTR-Transkriptione fäält er i 05."),
- ("LUK.24.46", "wird lide", "adapted", "παθεῖν", "dass de Christus lidet", None, None),
- ("LUK.24.47", "Umchehr", "literal", "μετάνοιαν", None, ["Buess"], None),
+ ("LUK.24.46", "wird liide", "adapted", "παθεῖν", "dass de Christus lidet", None, None),
+ ("LUK.24.47", "Umkehr", "literal", "μετάνοιαν", None, ["Buess"], None),
  ("LUK.24.51", "in Himmel ufetreit worde", "literal", "ἀνεφέρετο εἰς τὸν οὐρανόν", None, None, "Di Wort stönd im SBLGNT i eckige Klammere [ ], bi WH i Doppelklammere ⟦ ⟧; nach de CNTR-Transkriptione fääled si in 01 und 05."),
  ("LUK.24.52", "sind vor ihm abegchnüület", "interpretive", "προσκυνήσαντες αὐτὸν", None, ["händ en aabbättet"], "Di Wort stönd im SBLGNT i eckige Klammere [ ], bi WH i Doppelklammere ⟦ ⟧; nach de CNTR-Transkriptione fääled si in 05."),
 ]
@@ -744,7 +780,7 @@ ALTS = [
  ("VAR-SBLGNTAPP-LUK-024-003-02:R2", "LUK.24.3", "fanden sie den Leib nicht", "fanden sie den Leib des Herrn Jesus nicht",
   "händ s de Liib nöd gfunde", "händ s de Liib vom Herr Jesus nöd gfunde", "mittel",
   "Mit der Bezeichnung «der Herr Jesus». Hier folgt der SBLGNT-Text WH allein gegen Treg, NA28 und RP.",
-  "Mit de Bezeichnig «de Herr Jesus». Da folgt de SBLGNT-Text em WH ellei gäge Treg, NA28 und RP.",
+  "Mit de Bezeichnig «de Herr Jesus». Da folgt de SBLGNT-Text em WH elei gäge Treg, NA28 und RP.",
   {"R1": [("σῶμα", "den Leib", "SBLGNT, WH")], "R2": [("σῶμα τοῦ κυρίου Ἰησοῦ", "den Leib des Herrn Jesus", "Treg, NA28, RP")]},
   {"R1": [("σῶμα", "de Liib", "SBLGNT, WH")], "R2": [("σῶμα τοῦ κυρίου Ἰησοῦ", "de Liib vom Herr Jesus", "Treg, NA28, RP")]},
   ["Die Wendung «der Herr Jesus» steht in den Evangelien sonst kaum (vgl. aber [[MRK.16.19]]), häufig in der Apostelgeschichte; das spricht für manche gegen, für andere gerade für sie als lukanisch. Die kürzere Fassung ist eine der Stellen, an denen WH dem Codex Bezae (05) folgt.",
@@ -773,7 +809,7 @@ ALTS = [
  ("VAR-SBLGNTAPP-LUK-024-036-02:R2", "LUK.24.36", "stand er selbst mitten unter ihnen.", "stand er selbst mitten unter ihnen und sagt zu ihnen: «Friede sei mit euch!»",
   "isch er sälber mitten under ine gstande.", "isch er sälber mitten under ine gstande und seit zu ine: «Fride mit eu!»", "mittel",
   "Mit dem Friedensgruss. Hier folgt der SBLGNT-Text WH allein gegen Treg, NA28 und RP.",
-  "Mit em Friidensgruess. Da folgt de SBLGNT-Text em WH ellei gäge Treg, NA28 und RP.",
+  "Mit em Friidensgruess. Da folgt de SBLGNT-Text em WH elei gäge Treg, NA28 und RP.",
   {"R1": [("αὐτῶν", "unter ihnen", "SBLGNT, WH")], "R2": [("αὐτῶν καὶ λέγει αὐτοῖς· Εἰρήνη ὑμῖν", "unter ihnen und sagt zu ihnen: Friede euch", "Treg, NA28, RP")]},
   {"R1": [("αὐτῶν", "under ine", "SBLGNT, WH")], "R2": [("αὐτῶν καὶ λέγει αὐτοῖς· Εἰρήνη ὑμῖν", "under ine und seit zu ine: Fride mit eu", "Treg, NA28, RP")]},
   ["Der Gruss entspricht [[JHN.20.19]]; er kann von dort angeglichen oder in 05 ausgefallen sein.",
@@ -790,14 +826,14 @@ ALTS = [
   ["De Zuesatz cha us em spööte Bruuch iidrunge sii.",
    TRANS_G + " hät kei vo de erfasste Handschrifte de Zuesatz; nu di druckte Usgabe KJTR, RP und Stephanus."]),
  ("VAR-SBLGNTAPP-LUK-024-047-01:R2", "LUK.24.47", "Umkehr und Vergebung der Sünden", "Umkehr zur Vergebung der Sünden",
-  "Umchehr und Vergäbig vo de Sünde", "Umchehr zur Vergäbig vo de Sünde", "mittel",
+  "Umkehr und Vergäbig vo de Sünde", "Umkehr zur Vergäbig vo de Sünde", "mittel",
   "Die Umkehr führt zur Vergebung, statt neben ihr zu stehen. Hier folgt der SBLGNT-Text Treg und RP gegen WH und NA28.",
-  "D Umchehr füert zur Vergäbig, statt näbe ihre z staa. Da folgt de SBLGNT-Text em Treg und em RP gäge WH und NA28.",
+  "D Umkehr füert zur Vergäbig, statt näbe ihre z staa. Da folgt de SBLGNT-Text em Treg und em RP gäge WH und NA28.",
   {"R1": [("καὶ", "und", "SBLGNT, Treg, RP")], "R2": [("εἰς", "zur", "WH, NA28")]},
   {"R1": [("καὶ", "und", "SBLGNT, Treg, RP")], "R2": [("εἰς", "zur", "WH, NA28")]},
   ["«Umkehr zur Vergebung der Sünden» entspricht [[LUK.3.3]]; beide Fassungen sind sprachlich lukanisch.",
    AUTO + " lesen 02, 04, 05 und 032 καί, 01, 03 und 𝔓75 εἰς."],
-  ["«Umchehr zur Vergäbig vo de Sünde» entspricht [[LUK.3.3]].",
+  ["«Umkehr zur Vergäbig vo de Sünde» entspricht [[LUK.3.3]].",
    AUTO_G + " läsed 02, 04, 05 und 032 καί, 01, 03 und 𝔓75 εἰς."]),
  ("VAR-SBLGNTAPP-LUK-024-053-01:R2", "LUK.24.53", "und priesen Gott.", "und lobten und priesen Gott.",
   "und händ Gott globt.", "und händ Gott globt und priise.", "gering",
@@ -878,29 +914,29 @@ UNITS = [
   "Jesus führt die Jünger hinaus bis in die Nähe von Betanien, hebt die Hände und segnet sie. Während er sie segnet, scheidet er von ihnen und wird in den Himmel emporgehoben. Sie fallen vor ihm nieder, kehren mit grosser Freude nach Jerusalem zurück und preisen Gott die ganze Zeit im Tempel.", None),
 ]
 UNITS_GSW = {
- "TU-LUK-022-001-071": ("Passamaal, Ölberg, Gfangenaam und Verhör", "D Hoheprieschter und d Schriftgleerte sueched en Wäg, zum de Jesus us em Wäg z rume; de Judas, wo de Satan in en gfaare isch, bietet aa, en uszliefere. Bim Passamaal laat de Jesus en Bächer under de Aposchtel teile, git ine s Broot als sin Liib und seit, dass dä, wo en usliferet, mit ihm am Tisch isch. Er wiist de Striit, wer de Gröscht sig, zrugg, verspricht ine en Aateil a sim Riich und seit em Petrus d Verleugnig voruus. Am Ölberg bättet er i Todesangscht; de Judas chunnt mit ere Mängi, de Jesus wird feschtgnoo. Im Hof vom Hoheprieschter verleugnet en de Petrus drüümal. Am Morge fröget en de Raat, öb er de Christus und de Sohn vo Gott sig; sini Antwort gilt ine als Züügnis. D Wort [[LUK.22.19]]–[[LUK.22.20]] (ab «für eu») und [[LUK.22.43]]–[[LUK.22.44]] fääled i eme Teil vo de Überliferig."),
- "TU-LUK-022-001-006": ("De Plan gäge de Jesus und s Aagebot vom Judas", "S Fäscht vo de ungsüürete Broot chunnt nöcher. D Hoheprieschter und d Schriftgleerte sueched, wie si de Jesus chönnted us em Wäg rume, händ aber Angscht vor em Volk. De Satan faart in de Judas; dä macht mit de Hoheprieschter und de Hauptlüüt ab, de Jesus gäge Gäld uszliefere, ohni dass d Mängi debii isch."),
+ "TU-LUK-022-001-071": ("Passamaal, Ölberg, Gfangenaam und Verhör", "D Hoheprieschter und d Schriftgleerte sueched en Wäg, zum de Jesus us em Wäg z rume; de Judas, wo de Satan in en gfahre isch, bietet aa, en uszliefere. Bim Passamaal laat de Jesus en Bächer under de Aposchtel teile, git ine s Broot als sin Liib und seit, dass dä, wo en usliferet, mit ihm am Tisch isch. Er wiist de Striit, wer de Gröscht sig, zrugg, verspricht ine en Aateil a sim Riich und seit em Petrus d Verleugnig voruus. Am Ölberg bättet er i Todesangscht; de Judas chunnt mit ere Mängi, de Jesus wird feschtgnoo. Im Hof vom Hoheprieschter verleugnet en de Petrus drüümal. Am Morge fröget en de Raat, öb er de Christus und de Sohn vo Gott sig; sini Antwort gilt ine als Zügnis. D Wort [[LUK.22.19]]–[[LUK.22.20]] (ab «für eu») und [[LUK.22.43]]–[[LUK.22.44]] fääled i eme Teil vo de Überliferig."),
+ "TU-LUK-022-001-006": ("De Plan gäge de Jesus und s Aagebot vom Judas", "S Fäscht vo de ungsüürete Broot chunnt nöcher. D Hoheprieschter und d Schriftgleerte sueched, wie si de Jesus chönted us em Wäg rume, händ aber Angscht vor em Volk. De Satan fahrt in de Judas; dä macht mit de Hoheprieschter und de Hauptlüüt ab, de Jesus gäge Gäld uszliefere, ohni dass d Mängi debii isch."),
  "TU-LUK-022-007-013": ("Vorbereitig vom Passamaal", "Am Tag, wo mer s Passalamm mues schlachte, schickt de Jesus de Petrus und de Johannes voruus. Si gönd eme Maa mit eme Wasserchrueg naa, finded de Ruum, wie s de Jesus gseit hät, und mached s Passamaal parat."),
- "TU-LUK-022-014-023": ("S Passamaal", "De Jesus seit de Aposchtel, er heig sich gsehnt, das Passamaal vor sim Lide mit ine z ässe; erscht im Riich vo Gott wärdi s erfüllt. Er laat en Bächer under ine teile, git ine s Broot als sin Liib, wo für si ggää wird, und nach em Ässe de Bächer als de nöi Bund i sim Bluet. Dänn seit er, dass dä, wo en usliferet, mit ihm am Tisch isch; d Jünger fröged sich, wer s sig. D Wort vom Liib «für eu» bis zum Bächer nach em Ässe ([[LUK.22.19]]–[[LUK.22.20]]) fääled i eme Teil vo de Überliferig."),
- "TU-LUK-022-024-030": ("De Striit, wer de Gröscht isch", "D Jünger striited, wer als de Gröscht gälti. De Jesus stellt de Herrscher vo de Völker s Diene gägenüber: Er sälber isch under ine wie eine, wo dient. Wil si bi ihm usghalte händ, übergit er ine d Königsherrschaft: Si wärded a sim Tisch ässe und trinke und di zwölf Stämm vo Israel richte."),
- "TU-LUK-022-031-034": ("Aasag vo de Verleugnig", "De Jesus seit em Simon, de Satan heig d Jünger verlangt, zum si sibe; er heig für ihn bättet, dass sin Glaube nöd ufhöri, und nach sinere Umchehr söll er d Brüeder stärche. De Petrus beteuret, er sig parat, mit ihm is Gfängnis und in Tod z gaa; de Jesus seit em, dass er no hüt drüümal wird abstriite, dass er en kännt."),
+ "TU-LUK-022-014-023": ("S Passamaal", "De Jesus seit de Aposchtel, er heig sich gsehnt, das Passamaal vor sim Liide mit ine z ässe; erscht im Riich vo Gott wärdi s erfüllt. Er laat en Bächer under ine teile, git ine s Broot als sin Liib, wo für si ggää wird, und nach em Ässe de Bächer als de nöi Bund i sim Bluet. Dänn seit er, dass dä, wo en usliferet, mit ihm am Tisch isch; d Jünger fröged sich, wer s sig. D Wort vom Liib «für eu» bis zum Bächer nach em Ässe ([[LUK.22.19]]–[[LUK.22.20]]) fääled i eme Teil vo de Überliferig."),
+ "TU-LUK-022-024-030": ("De Striit, wer de Gröscht isch", "D Jünger strited, wer als de Gröscht gälti. De Jesus stellt de Herrscher vo de Völker s Diene gägenüber: Er sälber isch under ine wie eine, wo dient. Wil si bi ihm usghalte händ, übergit er ine d Königsherrschaft: Si wärded a sim Tisch ässe und trinke und di zwölf Stämm vo Israel richte."),
+ "TU-LUK-022-031-034": ("Aasag vo de Verleugnig", "De Jesus seit em Simon, de Satan heig d Jünger verlangt, zum si sibe; er heig für ihn bättet, dass sin Glaube nöd ufhöri, und nach sinere Umkehr söll er d Brüeder stärche. De Petrus beteuret, er sig parat, mit ihm is Gfängnis und in Tod z gaa; de Jesus seit em, dass er no hüt drüümal wird abstriite, dass er en kännt."),
  "TU-LUK-022-035-038": ("Gäldseckel, Täsche und Schwärt", "De Jesus erinneret dra, dass de Jünger, wo er si ohni Gäldseckel und Täsche usgschickt hät, nüüt gfäält hät. Jetzt aber söled si Seckel und Täsche mitnää und es Schwärt chaufe, dänn a ihm mües sich s Schriftwort erfülle: «Er isch zu de Gsetzlose zellt worde.» Wo d Jünger zwei Schwärter zeiged, seit er: «Es isch gnueg.»"),
- "TU-LUK-022-039-046": ("S Gebätt am Ölberg", "Am Ölberg mahnt de Jesus d Jünger, z bätte, dass si nöd i Versuechig chömed. Absiits chnüület er ab und bittet de Vatter, de Bächer wägznää, aber sin Wille söll gschee. En Ängel stärcht en; i Todesangscht bättet er no inständiger, sin Schweiss wird wie Bluetstropfe ([[LUK.22.43]]–[[LUK.22.44]] fääled i eme Teil vo de Überliferig). D Jünger findt er vor Chummer iigschlafe und forderet si nomal zum Bätte uf."),
+ "TU-LUK-022-039-046": ("S Gebätt am Ölberg", "Am Ölberg mahnt de Jesus d Jünger, z bätte, dass si nöd i Versuechig chömed. Absiits chnüület er ab und bittet de Vatter, de Bächer wägznää, aber sin Wille söll gscheh. En Ängel stärcht en; i Todesangscht bättet er no inständiger, sin Schweiss wird wie Bluetstropfe ([[LUK.22.43]]–[[LUK.22.44]] fääled i eme Teil vo de Überliferig). D Jünger findt er vor Chummer iigschlaafe und forderet si nomal zum Bätte uf."),
  "TU-LUK-022-047-053": ("D Gfangenaam", "De Judas chunnt mit ere Mängi und chunnt zum Jesus häre, zum en küsse; de Jesus fröget en, öb er de Mänschesohn mit eme Kuss usliferi. Eine vo de Jünger haut em Chnächt vom Hoheprieschter s rächt Ohr ab; de Jesus gebietet Halt und heilt en. De Hoheprieschter, Hauptlüüt und Ältischte seit er, jetzt sig iri Stund und d Macht vo de Fischternis."),
  "TU-LUK-022-054-062": ("De Petrus verleugnet de Jesus", "De Jesus wird is Huus vom Hoheprieschter bracht, de Petrus gaat vo wiitem naa. Im Hof wird er am Füür drüümal als Begleiter vom Jesus erchännt und strittet s ab. No während er redt, chräit en Güggel; de Herr dräit sich um und luegt de Petrus aa. De Petrus erinneret sich a sis Wort, gaat use und briegget bitterli."),
- "TU-LUK-022-063-071": ("Verspottig und Verhör vor em Raat", "D Wächter verspotted und schlönd de Jesus, verbinded em d Auge und forderet en uf z weissage. Am Morge füert de Ältischteraat en vor de Hohe Raat und fröget, öb er de Christus sig. De Jesus antwortet, si wärdid em nöd glaube; vo jetzt aa wärdi de Mänschesohn zur Rächte vo de Macht vo Gott sitze. Uf d Frag, öb er de Sohn vo Gott sig, seit er: «Ir säged, dass ich s bi.» Demit bruuched si keis wiiters Züügnis."),
+ "TU-LUK-022-063-071": ("Verspottig und Verhör vor em Raat", "D Wächter verspotted und schlönd de Jesus, verbinded em d Auge und forderet en uf z weissage. Am Morge füert de Ältischteraat en vor de Hohe Raat und fröget, öb er de Christus sig. De Jesus antwortet, si wärdid em nöd glaube; vo jetzt aa wärdi de Mänschesohn zur Rächte vo de Macht vo Gott sitze. Uf d Frag, öb er de Sohn vo Gott sig, seit er: «Ir säged, dass ich s bi.» Demit bruuched si keis wiiters Zügnis."),
  "TU-LUK-023-001-056": ("Verurteilig, Chrüüzigung und Begräbnis", "De Raat bringt de Jesus zum Pilatus und chlagt en aa, er wiegli s Volk uf und gäbi sich als Christus, als König, us. De Pilatus findt kei Schuld a ihm und schickt en zum Herodes, wo en verspottet und zruggschickt. Drüümal seit de Pilatus, er sig unschuldig, git aber em Gschrei naa: Er laat de Barabbas frei und liferet de Jesus irem Wille us. De Simon vo Kyrene treit s Chrüüz; de Jesus redt mit de Fraue, wo klaged. Zwüsche zwei Verbrächer gchrüüziget, bittet er um Vergäbig für die, wo en plaged, wird verspottet und verspricht eim vo de Mitgchrüüzigte s Paradies. I de Fischternis git er sin Geischt em Vatter und stirbt; de Hauptmaa nännt en grächt. De Josef vo Arimatäa leit en in es Felsegrab; d Fraue gsehnd s und halted d Sabbatrue. [[LUK.23.17]] staat nöd im SBLGNT; d Bitt um Vergäbig ([[LUK.23.34]]) fäält i eme Teil vo de Überliferig."),
- "TU-LUK-023-001-005": ("Vor em Pilatus", "Di ganz Versammlig füert de Jesus vor de Pilatus und chlagt en aa: Er wiegli s Volk uf, verbüüti, em Kaiser Stüüre z zale, und säg, er sig Christus, en König. Uf d Frag, öb er de König vo de Jude sig, antwortet de Jesus: «Du seisch es.» De Pilatus findt kei Schuld a ihm; d Ankläger bestönd druf, er wiegli mit sinere Leer s Volk uf, vo Galiläa bis da here."),
- "TU-LUK-023-006-012": ("Vor em Herodes", "Wo de Pilatus erfaart, dass de Jesus us em Gebiet vom Herodes chunnt, schickt er en zu däm, wo grad z Jerusalem isch. De Herodes hofft uf es Zeiche und fröget en uusfüerlich us, aber de Jesus antwortet nüüt, während d Hoheprieschter und d Schriftgleerte en heftig aachlaged. De Herodes verspottet en mit sine Soldate, leit em es prächtigs Gwand um und schickt en zrugg; a dem Tag wärded de Herodes und de Pilatus Fründe."),
+ "TU-LUK-023-001-005": ("Vor em Pilatus", "Di ganz Versammlig füert de Jesus vor de Pilatus und chlagt en aa: Er wiegli s Volk uf, verbüüti, em Kaiser Stüüre z zale, und säg, er sig Christus, en König. Uf d Frag, öb er de König vo de Jude sig, antwortet de Jesus: «Du seisch es.» De Pilatus findt kei Schuld a ihm; d Ankläger bestönd druf, er wiegli mit sinere Lehr s Volk uf, vo Galiläa bis da häre."),
+ "TU-LUK-023-006-012": ("Vor em Herodes", "Wo de Pilatus erfaart, dass de Jesus us em Gebiet vom Herodes chunnt, schickt er en zu däm, wo grad z Jerusalem isch. De Herodes hofft uf es Zeiche und fröget en usfüerlich us, aber de Jesus antwortet nüüt, während d Hoheprieschter und d Schriftgleerte en heftig aachlaged. De Herodes verspottet en mit sine Soldate, leit em es prächtigs Gwand um und schickt en zrugg; a dem Tag wärded de Herodes und de Pilatus Fründe."),
  "TU-LUK-023-013-025": ("D Verurteilig", "De Pilatus seit vor de Hoheprieschter, de füerende Manne und em Volk, weder er no de Herodes heig a ihm e Schuld gfunde, wo de Tod verdient; er well en la züchtige und freilaa. Si aber schreied, er söll de Barabbas freigää, wo wäge Ufruer und Mord im Gfängnis isch, und verlanged, dass de Jesus gchrüüziget wird. De Pilatus seit zum dritte Mal, er sig unschuldig, aber ires Gschrei setzt sich dure: Er laat de Barabbas frei und liferet de Jesus irem Wille us. [[LUK.23.17]] staat nöd im SBLGNT."),
  "TU-LUK-023-026-032": ("De Wäg zur Chrüüzigung", "De Simon vo Kyrene mues s Chrüüz hinder em Jesus härträge. E grossi Mängi folgt, dedrunder Fraue, wo um ihn klaged. De Jesus seit ine, si söled nöd über ihn, sondern über sich und iri Chind briegge, dänn es chömid schweri Täg; wänn mer das am grüene Holz machi, was gscheei dänn am dürre? Mit ihm wärded zwei Verbrächer zur Hiirichtig gfüert."),
  "TU-LUK-023-033-043": ("D Chrüüzigung", "Am Ort, wo «Schädel» heisst, wird de Jesus zwüsche zwei Verbrächer gchrüüziget. Er bittet: «Vatter, vergib ine, dänn si wüssed nöd, was si mached!» (di Wort fääled i eme Teil vo de Überliferig). Mer verlost sini Chleider; di füerende Manne, d Soldate und eine vo de Verbrächer verspotted en, er söll sich sälber rette, wänn er de Christus, de König vo de Jude sig. De ander Verbrächer wiist dä zrächt, nännt de Jesus unschuldig und bittet en, a ihn z dänke; de Jesus seit em: «Hüt wirsch du mit mir im Paradies sii.»"),
  "TU-LUK-023-044-049": ("De Tod vom Jesus", "Vo de sächste bis zur nüünte Stund liit Fischternis über em Land, d Sunne verlüürt ire Schii, de Vorhang vom Tämpel verriisst. De Jesus rüeft: «Vatter, i dini Händ gib ich min Geischt!», und stirbt. De Hauptmaa priist Gott und nännt en grächt; d Lüüt schlönd sich a d Bruscht, sini Bekannte und d Fraue us Galiläa lueged vo wiitem zue."),
  "TU-LUK-023-050-056": ("S Begräbnis", "De Josef vo Arimatäa, es Ratsmitglied, wo em Beschluss nöd zuegstimmt und uf s Riich vo Gott gwartet hät, bittet de Pilatus um de Liib vom Jesus, wicklet en in es Liinetuech und leit en in es nöis Felsegrab. Es isch Rüschttag, de Sabbat bricht aa. D Fraue us Galiläa gsehnd s Grab, mached Duftstoff und Salböl parat und halted am Sabbat Rue nach em Gebot."),
- "TU-LUK-024-001-053": ("Uferweckig, Erschiinige und Abschid", "Am erschte Tag vo de Wuche finded d Fraue s Grab läär; zwei Manne i schiinigem Gwand säged ine, de Jesus sig uferweckt worde. D Aposchtel halted ire Bricht für läärs Gschwätz; de Petrus rännt zum Grab und gseht nu d Liinetüecher. De Jesus begleitet zwei Jünger understwägs uf Emmaus, ohni dass si en erchänned, leit ine d Schrifte us und wird bim Broot-Bräche erchännt. Z Jerusalem staat er under de Jünger, zeigt ine Händ und Füess und isst vor ine. Er macht ine de Verstand für d Schrifte uf, nännt si Züüge und verspricht ine Chraft us de Hööchi. Bi Betanie sägnet er si und scheidet vo ine; si gönd voll Fröid uf Jerusalem zrugg und lobed Gott im Tämpel. Es paar Wort in [[LUK.24.6]], [[LUK.24.12]], [[LUK.24.40]], [[LUK.24.51]] und [[LUK.24.52]] fääled im Codex Bezae (05)."),
+ "TU-LUK-024-001-053": ("Uferweckig, Erschiinige und Abschid", "Am erschte Tag vo de Wuche finded d Fraue s Grab läär; zwei Manne i schiinigem Gwand säged ine, de Jesus sig uferweckt worde. D Aposchtel halted ire Bricht für läärs Gschwätz; de Petrus rännt zum Grab und gseht nu d Liinetüecher. De Jesus begleitet zwei Jünger understwägs uf Emmaus, ohni dass si en erchänned, leit ine d Schrifte us und wird bim Broot-Bräche erchännt. Z Jerusalem staat er under de Jünger, zeigt ine Händ und Füess und isst vor ine. Er macht ine de Verstand für d Schrifte uf, nännt si Züüge und verspricht ine Chraft us de Höchi. Bi Betanie sägnet er si und scheidet vo ine; si gönd voll Fröid uf Jerusalem zrugg und lobed Gott im Tämpel. Es paar Wort in [[LUK.24.6]], [[LUK.24.12]], [[LUK.24.40]], [[LUK.24.51]] und [[LUK.24.52]] fääled im Codex Bezae (05)."),
  "TU-LUK-024-001-012": ("S läär Grab", "Am erschte Tag vo de Wuche chömed d Fraue früe mit Duftstoff zum Grab, finded de Stei wäggwälzt und de Liib nöd. Zwei Manne i schiinigem Gwand fröged si, werum si dä, wo läbt, bi de Tote sueched: Er sig uferweckt worde, wie er s z Galiläa aagchündt heig. D Fraue, under ine d Maria vo Magdala, d Johanna und d Maria, d Mueter vom Jakobus, verzelled s de Aposchtel, und die glaubed ine nöd. De Petrus rännt zum Grab, gseht nu d Liinetüecher und gaat voll Stuune hei."),
- "TU-LUK-024-013-035": ("D Jünger uf em Wäg uf Emmaus", "Zwei Jünger sind uf em Wäg uf Emmaus. De Jesus gaat mit ine, aber si erchänned en nöd. Si verzelled vom Jesus vo Nazaret, vo sinere Chrüüzigung, vo irere enttüüschte Hoffnig und vom Bricht vo de Fraue. De Jesus nännt si langsam im Glaube und leit ine us, was i allne Schrifte über ihn staat. Wo er bim Ässe s Broot bricht, erchänned si en, und er wird unsichtbar. Si gönd sofort uf Jerusalem zrugg, ghööred det, de Herr sig em Simon erschine, und verzelled, wie si en bim Broot-Bräche erchännt händ."),
- "TU-LUK-024-036-049": ("De Uferstande bi de Jünger", "De Jesus staat mitten under de Jünger; si meined, si gsäched en Geischt. Er zeigt ine Händ und Füess, seit, si söled en aataste, und isst es Stuck brate Fisch. Er macht ine de Verstand für d Schrifte uf: De Christus wird lide und am dritte Tag uferstaa, und i sim Name wird allne Völker Umchehr und Vergäbig vo de Sünde verchündet, aagfange z Jerusalem. Si sind Züüge defür und söled i de Stadt bliibe, bis si mit Chraft us de Hööchi aagleit wärded."),
+ "TU-LUK-024-013-035": ("D Jünger uf em Wäg uf Emmaus", "Zwei Jünger sind uf em Wäg uf Emmaus. De Jesus gaat mit ine, aber si erchänned en nöd. Si verzelled vom Jesus vo Nazaret, vo sinere Chrüüzigung, vo irere enttüüschte Hoffnig und vom Bricht vo de Fraue. De Jesus nännt si langsam im Glaube und leit ine us, was i allne Schrifte über ihn staat. Wo er bim Ässe s Broot bricht, erchänned si en, und er wird unsichtbar. Si gönd sofort uf Jerusalem zrugg, ghöred dört, de Herr sig em Simon erschine, und verzelled, wie si en bim Broot-Bräche erchännt händ."),
+ "TU-LUK-024-036-049": ("De Uferstande bi de Jünger", "De Jesus staat mitten under de Jünger; si meined, si gsäched en Geischt. Er zeigt ine Händ und Füess, seit, si söled en aataste, und isst es Stuck brate Fisch. Er macht ine de Verstand für d Schrifte uf: De Christus wird liide und am dritte Tag uferstaa, und i sim Name wird allne Völker Umkehr und Vergäbig vo de Sünde verchündet, aagfange z Jerusalem. Si sind Züüge defür und söled i de Stadt bliibe, bis si mit Chraft us de Höchi aagleit wärded."),
  "TU-LUK-024-050-053": ("Säge und Abschid", "De Jesus füert d Jünger use bis i d Nöchi vo Betanie, hebt d Händ uf und sägnet si. Während er si sägnet, scheidet er vo ine und wird in Himmel ufetreit. Si chnüüled vor ihm ab, gönd mit grosser Fröid uf Jerusalem zrugg und lobed Gott di ganz Ziit im Tämpel."),
 }
 
@@ -926,7 +962,7 @@ NOTES_DE = [
  ("In [[LUK.23.42]] und [[LUK.24.47]] folgt der Token-Text des SBLGNT Treg und RP gegen WH und NA28, in [[LUK.24.3]] und "
   "[[LUK.24.36]] WH allein gegen Treg, NA28 und RP; die anderen Wortlaute stehen als Alternativen."),
  ("παραδίδωμι ist durchgehend mit «ausliefern» wiedergegeben. ὅτι vor direkter Rede ist nicht eigens übersetzt, ebenso die "
-  "Erzählformel ἐγένετο («es geschah») in Kapitel 24. Lukas nennt Jesus im Erzähltext öfter «der Herr» ([[LUK.22.61]]); "
+  "Erzählformel ἐγένετο («es geschah») innerhalb von Abschnitten ([[LUK.24.4]], [[LUK.24.15]], [[LUK.24.30]], [[LUK.24.51]]). Lukas nennt Jesus im Erzähltext öfter «der Herr» ([[LUK.22.61]]); "
   "das ist beibehalten. Das historische Präsens in [[LUK.24.12]] ist beibehalten."),
 ]
 NOTES_GSW = [
@@ -948,6 +984,9 @@ def run():
     sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
     from _lib import localize  # noqa: E402
     n = 0
+    pruefe_mundart(list(GSW.values()) + [x for t in UNITS_GSW.values() for x in t] + [str(d) for d in DEC_GSW]
+                   + [str(x) for x in NOTES_GSW] + [str(a[4:6] + a[8:9] + a[10:11] + a[12:]) for a in ALTS],
+                   pathlib.Path(__file__).name)
     if not (D / "works" / "WORK-LUK.json").exists():
         raise SystemExit("WORK-LUK fehlt")
     for uid, rng, kind, title, parts, summary, seg in UNITS:
@@ -1015,7 +1054,7 @@ def run():
                 rec["alternatives"] = alts
                 rec["alternatives_note_de"] = "Wiedergabe abweichender Lesarten, soweit sie die Übersetzung verändern. " + (AUTH if lang == "de" else AUTH_GSW)
                 rec["alternatives_origin_note"] = ("Mögliche Erklärungen, wie die Unterschiede entstanden sein könnten. Sie stehen nebeneinander; keine ist als richtig entschieden."
-                                                   if lang == "de" else "Möglichi Erkläärige, wie d Underschid entstande sii chönnted. Si stönd näbenand; keini isch als richtig entschide.")
+                                                   if lang == "de" else "Möglichi Erkläärige, wie d Underschid entstande sii chönted. Si stönd näbenand; keini isch als richtig entschide.")
             n += write(D / "translations" / f"{tid}.json", rec)
             aid = f"ALIGN-LUK-{c:03d}-001-{last:03d}-{code}-001"
             n += write(D / "alignments" / f"{aid}.json", {
