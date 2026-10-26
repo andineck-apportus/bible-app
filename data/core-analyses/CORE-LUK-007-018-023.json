@@ -1,0 +1,173 @@
+{
+ "id": "CORE-LUK-007-018-023",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.7.18-LUK.7.23",
+ "target": "TU-LUK-007-018-023",
+ "core_de": "Johannes schickt zwei seiner Jünger zu Jesus mit der Frage: «Bist du der Kommende, oder sollen wir auf einen anderen warten?»; in jener Stunde heilt Jesus viele, und er antwortet: «Geht hin und berichtet Johannes, was ihr gesehen und gehört habt: Blinde sehen wieder, Lahme gehen umher, Aussätzige werden rein, Taube hören, Tote werden auferweckt, den Armen wird das Evangelium verkündet. Und selig ist, wer an mir nicht Anstoss nimmt.»",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "dialogue",
+    "subtype": "Frage – Tat – Antwort aus dem Gesehenen und Gehörten",
+    "range": "LUK.7.18-LUK.7.23",
+    "elements": [
+     {
+      "label": "Johannes erfährt alles und schickt zwei Jünger: «Bist du der Kommende, oder sollen wir auf einen anderen warten?»",
+      "ref": "LUK.7.18-LUK.7.20",
+      "role": "Frage"
+     },
+     {
+      "label": "In jener Stunde heilt Jesus viele, Blinde sehen",
+      "ref": "LUK.7.21",
+      "role": "Tat"
+     },
+     {
+      "label": "Antwort",
+      "ref": "LUK.7.22",
+      "role": "Antwort",
+      "child": "s2"
+     },
+     {
+      "label": "«Und selig ist, wer an mir nicht Anstoss nimmt»",
+      "ref": "LUK.7.23",
+      "role": "Seligpreisung"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-GRUPPE-JOHANNES-JUENGER",
+       "to": "FIG-JESUS",
+       "ref": "LUK.7.20"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JOHANNES-JUENGER",
+       "ref": "LUK.7.22-LUK.7.23"
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "series",
+    "subtype": "Sechs Glieder: was ihr gesehen und gehört habt",
+    "range": "LUK.7.22",
+    "elements": [
+     {
+      "label": "Blinde sehen wieder",
+      "ref": "LUK.7.22",
+      "role": "1"
+     },
+     {
+      "label": "Lahme gehen umher",
+      "ref": "LUK.7.22",
+      "role": "2"
+     },
+     {
+      "label": "Aussätzige werden rein",
+      "ref": "LUK.7.22",
+      "role": "3"
+     },
+     {
+      "label": "Taube hören",
+      "ref": "LUK.7.22",
+      "role": "4"
+     },
+     {
+      "label": "Tote werden auferweckt",
+      "ref": "LUK.7.22",
+      "role": "5"
+     },
+     {
+      "label": "den Armen wird das Evangelium verkündet",
+      "ref": "LUK.7.22",
+      "role": "6"
+     }
+    ],
+    "features": {
+     "crossref": [
+      {
+       "ref": "ISA.35.5-ISA.35.6",
+       "kind": "Anklang"
+      },
+      {
+       "ref": "ISA.61.1",
+       "kind": "Anklang",
+       "note": "vgl. [[LUK.4.18]]"
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.7.19-LUK.7.20",
+   "text_de": "Johannes lässt durch zwei Jünger fragen: «Bist du der Kommende, oder sollen wir auf einen anderen warten?»",
+   "reason_de": "Frage (Kriterien 2 und 4).",
+   "recognition_de": "Zwei Johannesjünger vor Jesus.",
+   "keywords": [
+    "Bist du der Kommende, oder sollen wir auf einen anderen warten?"
+   ]
+  },
+  {
+   "reference": "LUK.7.21-LUK.7.23",
+   "text_de": "Jesus heilt viele und antwortet: Blinde sehen, Lahme gehen, Aussätzige werden rein, Taube hören, Tote werden auferweckt, den Armen wird das Evangelium verkündet; «selig ist, wer an mir nicht Anstoss nimmt».",
+   "reason_de": "Antwort als Reihe mit allen Gliedern (Kriterium 1; Regel 1).",
+   "recognition_de": "Die Antwort Jesu.",
+   "keywords": [
+    "Geht hin und berichtet Johannes, was ihr gesehen und gehört habt",
+    "Blinde sehen wieder",
+    "Tote werden auferweckt",
+    "den Armen wird das Evangelium verkündet",
+    "selig ist, wer an mir nicht Anstoss nimmt"
+   ],
+   "mode": "speech"
+  }
+ ],
+ "omitted_de": [
+  "Wo Johannes ist, sagt der Abschnitt nicht (gefangen seit [[LUK.3.20]]) – im Bild nicht gezeigt"
+ ],
+ "persons": [
+  "FIG-JOHANNES-TAEUFER",
+  "FIG-GRUPPE-JOHANNES-JUENGER",
+  "FIG-JESUS",
+  "FIG-GRUPPE-KRANKE"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.7.18-LUK.7.23",
+   "fingerprint": "f5adf481dc7758ca"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 1–8; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung, Züridüütsch gegen die Mundart-Übersetzungsschicht und die Schreibung nach scripts/authoring/lukas_einheitlich.py; Zusammenfassungen und Bildaufträge mitgeprüft, Bilder gerendert und angesehen; nicht gegen den griechischen Text geprüft, kein Blindtest ohne Legende; keine fachliche und keine muttersprachliche Prüfung durch eine Person",
+  "result": "bestanden",
+  "summary_de": "Frage des Johannes und alle sechs Glieder der Antwort; keine ergänzte Antwort «ja».",
+  "changes_de": []
+ }
+}

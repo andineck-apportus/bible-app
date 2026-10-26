@@ -1,0 +1,186 @@
+{
+ "id": "CORE-LUK-005-033-039",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.5.33-LUK.5.39",
+ "target": "TU-LUK-005-033-039",
+ "core_de": "Man hält Jesus vor, dass die Jünger des Johannes und der Pharisäer oft fasten, seine aber essen und trinken; Jesus antwortet: Die Hochzeitsgäste fasten nicht, solange der Bräutigam bei ihnen ist; es werden Tage kommen, wenn er weggenommen ist, dann werden sie fasten; im Gleichnis sagt er: Niemand setzt einen Flicken von einem neuen Kleid auf ein altes, niemand füllt jungen Wein in alte Schläuche, sondern in neue, und wer alten Wein getrunken hat, sagt: «Der alte ist gut.»",
+ "mode": "speech",
+ "voice": {
+  "speaker": "FIG-JESUS",
+  "addressee": "FIG-GRUPPE-PHARISAEER"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "dialogue",
+    "subtype": "Einwand – Antwort – Gleichnis",
+    "range": "LUK.5.33-LUK.5.39",
+    "elements": [
+     {
+      "label": "Einwand: «Die Jünger des Johannes fasten oft … ebenso die der Pharisäer; deine aber essen und trinken»",
+      "ref": "LUK.5.33",
+      "role": "Frage"
+     },
+     {
+      "label": "Antwort: Bräutigam jetzt ↔ später",
+      "ref": "LUK.5.34-LUK.5.35",
+      "role": "Antwort 1",
+      "child": "s2"
+     },
+     {
+      "label": "Gleichnis: drei Bildworte",
+      "ref": "LUK.5.36-LUK.5.39",
+      "role": "Antwort 2",
+      "child": "s3"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-GRUPPE-PHARISAEER",
+       "to": "FIG-JESUS",
+       "ref": "LUK.5.33"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-PHARISAEER",
+       "ref": "LUK.5.34-LUK.5.39"
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "jetzt ↔ es werden Tage kommen",
+    "range": "LUK.5.34-LUK.5.35",
+    "elements": [
+     {
+      "label": "Jetzt: solange der Bräutigam bei ihnen ist, fasten die Hochzeitsgäste nicht",
+      "ref": "LUK.5.34",
+      "role": "jetzt"
+     },
+     {
+      "label": "Später: wenn der Bräutigam weggenommen ist, werden sie fasten in jenen Tagen",
+      "ref": "LUK.5.35",
+      "role": "dann"
+     }
+    ],
+    "features": {
+     "modality": [
+      {
+       "kind": "Ankündigung",
+       "ref": "LUK.5.35",
+       "note": "«Es werden aber Tage kommen» – Zukunft, nicht Bericht"
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "Dass der Bräutigam Jesus meint und «weggenommen» seinen Tod, sagt der Text nicht ausdrücklich; Deutung."
+      }
+     ]
+    },
+    "visual": "timeline",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "parable",
+    "subtype": "Drei Bildworte; eine Sachhälfte gibt der Text nicht",
+    "range": "LUK.5.36-LUK.5.39",
+    "elements": [
+     {
+      "label": "Flicken vom neuen Kleid auf ein altes: das neue zerrissen, der Flicken passt nicht",
+      "ref": "LUK.5.36",
+      "role": "Bild 1"
+     },
+     {
+      "label": "Junger Wein in alte Schläuche: sie platzen, der Wein läuft aus → junger Wein in neue Schläuche",
+      "ref": "LUK.5.37-LUK.5.38",
+      "role": "Bild 2"
+     },
+     {
+      "label": "Wer alten Wein getrunken hat, will keinen jungen: «Der alte ist gut»",
+      "ref": "LUK.5.39",
+      "role": "Bild 3"
+     }
+    ],
+    "features": {
+     "open_end": [
+      {
+       "ref": "LUK.5.39",
+       "note": "Das dritte Bildwort deutet Jesus nicht"
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.5.33-LUK.5.35",
+   "text_de": "«Deine aber essen und trinken» – «Könnt ihr etwa die Hochzeitsgäste fasten lassen, solange der Bräutigam bei ihnen ist? … wenn der Bräutigam von ihnen weggenommen ist, dann werden sie fasten.»",
+   "reason_de": "Frage und Antwort mit beiden Zeiten (Kriterien 1 und 2; Regel 1).",
+   "recognition_de": "Der Bräutigam bei den Gästen.",
+   "keywords": [
+    "deine aber essen und trinken",
+    "solange der Bräutigam bei ihnen ist",
+    "dann werden sie fasten in jenen Tagen"
+   ]
+  },
+  {
+   "reference": "LUK.5.36-LUK.5.39",
+   "text_de": "Drei Bildworte: kein Flicken vom neuen Kleid auf ein altes; kein junger Wein in alte Schläuche, sondern in neue; wer alten Wein getrunken hat, sagt: «Der alte ist gut.»",
+   "reason_de": "Reihe mit allen Gliedern (Kriterien 1 und 4).",
+   "recognition_de": "Flicken und Weinschläuche.",
+   "keywords": [
+    "Niemand reisst einen Flicken von einem neuen Kleid ab",
+    "jungen Wein muss man in neue Schläuche füllen",
+    "Der alte ist gut"
+   ],
+   "mode": "parable"
+  }
+ ],
+ "omitted_de": [
+  "Wer die Fragenden sind, sagt [[LUK.5.33]] nur mit «sie» (im Zusammenhang die Pharisäer und Schriftgelehrten aus [[LUK.5.30]]) – im Bild als Pharisäer"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-PHARISAEER",
+  "FIG-GRUPPE-JOHANNES-JUENGER",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-ROLLE-BRAEUTIGAM",
+  "FIG-GRUPPE-GAESTE"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.5.33-LUK.5.39",
+   "fingerprint": "7c9852e5059e5834"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 1–8; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung, Züridüütsch gegen die Mundart-Übersetzungsschicht und die Schreibung nach scripts/authoring/lukas_einheitlich.py; Zusammenfassungen und Bildaufträge mitgeprüft, Bilder gerendert und angesehen; nicht gegen den griechischen Text geprüft, kein Blindtest ohne Legende; keine fachliche und keine muttersprachliche Prüfung durch eine Person",
+  "result": "bestanden",
+  "summary_de": "Jetzt ↔ es werden Tage kommen als Ankündigung; dass der Bräutigam Jesus meint und «weggenommen» seinen Tod, als Deutung vermerkt ([[LUK.5.35]]); drei Bildworte, das dritte ohne Deutung.",
+  "changes_de": []
+ }
+}

@@ -1,0 +1,227 @@
+{
+ "id": "CORE-LUK-008-040-056",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.8.40-LUK.8.56",
+ "target": "TU-LUK-008-040-056",
+ "core_de": "Der Synagogenvorsteher Jairus fällt Jesus zu Füssen, weil seine einzige zwölfjährige Tochter im Sterben liegt; unterwegs berührt eine Frau, die seit zwölf Jahren an Blutfluss leidet, die Quaste seines Mantels und ist sofort geheilt; Jesus fragt: «Wer ist es, der mich berührt hat?», die Frau bekennt zitternd, und er sagt: «Tochter, dein Glaube hat dich gerettet; geh in Frieden!»; da kommt die Nachricht: «Deine Tochter ist gestorben»; Jesus sagt: «Fürchte dich nicht! Glaube nur, und sie wird gerettet werden», sagt den Klagenden «sie ist nicht gestorben, sondern sie schläft», fasst ihre Hand und ruft: «Mädchen, steh auf!», und sie steht sofort auf.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "frame",
+    "subtype": "Schachtelung: Jairus – die Frau – Jairus",
+    "range": "LUK.8.40-LUK.8.56",
+    "elements": [
+     {
+      "label": "A: Jairus bittet für seine einzige Tochter, die im Sterben liegt",
+      "ref": "LUK.8.40-LUK.8.42",
+      "role": "A"
+     },
+     {
+      "label": "B: Die Frau mit dem Blutfluss",
+      "ref": "LUK.8.43-LUK.8.48",
+      "role": "Mitte",
+      "child": "s2"
+     },
+     {
+      "label": "A': «Deine Tochter ist gestorben» – «Glaube nur» – «Mädchen, steh auf!»",
+      "ref": "LUK.8.49-LUK.8.56",
+      "role": "A'",
+      "child": "s3"
+     }
+    ],
+    "features": {
+     "leitwort": [
+      {
+       "word": "zwölf Jahre",
+       "refs": [
+        "LUK.8.42",
+        "LUK.8.43"
+       ]
+      },
+      {
+       "word": "glauben – gerettet werden",
+       "refs": [
+        "LUK.8.48",
+        "LUK.8.50"
+       ]
+      },
+      {
+       "word": "Tochter",
+       "refs": [
+        "LUK.8.42",
+        "LUK.8.48",
+        "LUK.8.49"
+       ]
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "MRK.5.21-MRK.5.43",
+       "kind": "Parallelfassung"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "sequence",
+    "subtype": "Not – Berührung – Frage – Bekenntnis – Wort",
+    "range": "LUK.8.43-LUK.8.48",
+    "elements": [
+     {
+      "label": "Seit zwölf Jahren Blutfluss, von keinem geheilt",
+      "ref": "LUK.8.43",
+      "role": "Not"
+     },
+     {
+      "label": "Sie berührt von hinten die Quaste seines Mantels – sofort hört der Blutfluss auf",
+      "ref": "LUK.8.44",
+      "role": "Heilung"
+     },
+     {
+      "label": "«Wer ist es, der mich berührt hat?» – Petrus: die Menge drängt – «Kraft ist von mir ausgegangen»",
+      "ref": "LUK.8.45-LUK.8.46",
+      "role": "Frage"
+     },
+     {
+      "label": "Sie kommt zitternd, fällt nieder und erzählt vor allem Volk",
+      "ref": "LUK.8.47",
+      "role": "Bekenntnis"
+     },
+     {
+      "label": "«Tochter, dein Glaube hat dich gerettet; geh in Frieden!»",
+      "ref": "LUK.8.48",
+      "role": "Wort"
+     }
+    ],
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "sequence",
+    "subtype": "Nachricht – Zuspruch – Trauer – Wort – Leben",
+    "range": "LUK.8.49-LUK.8.56",
+    "elements": [
+     {
+      "label": "«Deine Tochter ist gestorben; bemüh den Lehrer nicht mehr!»",
+      "ref": "LUK.8.49",
+      "role": "Nachricht"
+     },
+     {
+      "label": "«Fürchte dich nicht! Glaube nur, und sie wird gerettet werden»",
+      "ref": "LUK.8.50",
+      "role": "Zuspruch"
+     },
+     {
+      "label": "Nur Petrus, Johannes, Jakobus und die Eltern; alle weinen: «Weint nicht! … sie schläft» – sie lachen ihn aus",
+      "ref": "LUK.8.51-LUK.8.53",
+      "role": "Trauer"
+     },
+     {
+      "label": "Er fasst ihre Hand: «Mädchen, steh auf!» – sie steht sofort auf; man soll ihr zu essen geben",
+      "ref": "LUK.8.54-LUK.8.55",
+      "role": "Wende"
+     },
+     {
+      "label": "Die Eltern fassungslos; Schweigegebot",
+      "ref": "LUK.8.56",
+      "role": "Ausgang"
+     }
+    ],
+    "features": {
+     "interpretation": [
+      {
+       "note": "«sie schläft» ([[LUK.8.52]]) steht gegen das Wissen der Anwesenden, «dass sie gestorben war» ([[LUK.8.53]]); der Text stellt den Tod fest, das Bild zeigt das Mädchen liegend."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.8.41-LUK.8.42",
+   "text_de": "Jairus fällt Jesus zu Füssen: seine einzige Tochter, etwa zwölf Jahre alt, liegt im Sterben.",
+   "reason_de": "Anfang des Rahmens (Kriterium 3).",
+   "recognition_de": "Jairus zu Jesu Füssen.",
+   "keywords": [
+    "ein Mann namens Jairus",
+    "sie lag im Sterben"
+   ]
+  },
+  {
+   "reference": "LUK.8.43-LUK.8.48",
+   "text_de": "Die Frau berührt die Quaste seines Mantels und ist sofort geheilt; «Wer ist es, der mich berührt hat?» – «Tochter, dein Glaube hat dich gerettet; geh in Frieden!»",
+   "reason_de": "Eingeschobene Mitte, Kernwort (Kriterien 1, 2 und 4).",
+   "recognition_de": "Die Hand am Mantelsaum.",
+   "keywords": [
+    "berührte die Quaste seines Mantels",
+    "Wer ist es, der mich berührt hat?",
+    "Tochter, dein Glaube hat dich gerettet; geh in Frieden!"
+   ]
+  },
+  {
+   "reference": "LUK.8.49-LUK.8.55",
+   "text_de": "«Deine Tochter ist gestorben» – «Fürchte dich nicht! Glaube nur» – «sie schläft», sie lachen ihn aus – «Mädchen, steh auf!» – sie steht auf.",
+   "reason_de": "Wende und Ausgang des Rahmens (Kriterien 1, 2 und 4).",
+   "recognition_de": "Jesus fasst die Hand des Mädchens.",
+   "keywords": [
+    "Deine Tochter ist gestorben",
+    "Fürchte dich nicht! Glaube nur",
+    "Mädchen, steh auf!"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Die Ärzte und das Vermögen der Frau ([[LUK.8.43]]) – Nebenangabe",
+  "Das Schweigegebot ([[LUK.8.56]]) – in der Zusammenfassung nicht"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-JAIRUS",
+  "FIG-TOCHTER-JAIRUS",
+  "FIG-ROLLE-FRAU-BLUTFLUSS",
+  "FIG-PETRUS",
+  "FIG-GRUPPE-MENGE",
+  "FIG-ROLLE-BOTE",
+  "FIG-ROLLE-MUTTER"
+ ],
+ "places": [
+  "FIG-ORT-HAUS"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.8.40-LUK.8.56",
+   "fingerprint": "0310bdea6b53e823"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 1–8; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung, Züridüütsch gegen die Mundart-Übersetzungsschicht und die Schreibung nach scripts/authoring/lukas_einheitlich.py; Zusammenfassungen und Bildaufträge mitgeprüft, Bilder gerendert und angesehen; nicht gegen den griechischen Text geprüft, kein Blindtest ohne Legende; keine fachliche und keine muttersprachliche Prüfung durch eine Person",
+  "result": "bestanden",
+  "summary_de": "Schachtelung Jairus – Frau – Jairus; der Tod des Mädchens gezeigt.",
+  "changes_de": []
+ }
+}

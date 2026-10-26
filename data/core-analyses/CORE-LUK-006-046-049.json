@@ -1,0 +1,109 @@
+{
+ "id": "CORE-LUK-006-046-049",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.6.46-LUK.6.49",
+ "target": "TU-LUK-006-046-049",
+ "core_de": "Jesus fragt: «Warum nennt ihr mich aber ‹Herr, Herr› und tut nicht, was ich sage?»; wer zu ihm kommt, seine Worte hört und tut, gleicht einem Menschen, der tief grub und das Fundament auf den Felsen legte – das Hochwasser konnte sein Haus nicht erschüttern; wer hört und nicht danach handelt, gleicht einem Menschen, der ohne Fundament baute – sein Haus stürzte sofort ein, und der Einsturz war gewaltig.",
+ "mode": "speech",
+ "voice": {
+  "speaker": "FIG-JESUS",
+  "addressee": "FIG-GRUPPE-JUENGER"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "contrast",
+    "subtype": "Frage – zwei Zweige: hören und tun ↔ hören und nicht tun",
+    "range": "LUK.6.46-LUK.6.49",
+    "elements": [
+     {
+      "label": "«Warum nennt ihr mich ‹Herr, Herr› und tut nicht, was ich sage?»",
+      "ref": "LUK.6.46",
+      "role": "Frage"
+     },
+     {
+      "label": "Wer kommt, hört und tut → gräbt tief, Fundament auf dem Felsen → Hochwasser kann das Haus nicht erschüttern",
+      "ref": "LUK.6.47-LUK.6.48",
+      "role": "Zweig 1",
+      "links": [
+       "Gegenstück: Zweig 2"
+      ]
+     },
+     {
+      "label": "Wer hört und nicht handelt → baut ohne Fundament auf die Erde → sofort eingestürzt, der Einsturz gewaltig",
+      "ref": "LUK.6.49",
+      "role": "Zweig 2"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JUENGER"
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "MAT.7.24-MAT.7.27",
+       "kind": "Parallelfassung",
+       "note": "bei Matthäus Fels ↔ Sand; bei Lukas Fundament auf dem Felsen ↔ ohne Fundament"
+      }
+     ]
+    },
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.6.46-LUK.6.49",
+   "text_de": "«Warum nennt ihr mich ‹Herr, Herr› und tut nicht, was ich sage?» – Hören und tun: Haus auf dem Felsen, nicht erschüttert ↔ hören und nicht handeln: Haus ohne Fundament, stürzt ein.",
+   "reason_de": "Gegensatz mit beiden Zweigen (Kriterien 1 und 4; Regel 1).",
+   "recognition_de": "Zwei Häuser in der Flut.",
+   "keywords": [
+    "Warum nennt ihr mich aber ‹Herr, Herr› und tut nicht, was ich sage?",
+    "legte das Fundament auf den Felsen",
+    "ein Haus ohne Fundament auf die Erde baute",
+    "der Einsturz jenes Hauses war gewaltig"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Nichts weggelassen; beide Zweige vollständig"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-JUENGER"
+ ],
+ "places": [
+  "FIG-ORT-HAUS-FELS",
+  "FIG-ORT-HAUS-SAND"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.6.46-LUK.6.49",
+   "fingerprint": "93b9fac226b0c90d"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 1–8; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung, Züridüütsch gegen die Mundart-Übersetzungsschicht und die Schreibung nach scripts/authoring/lukas_einheitlich.py; Zusammenfassungen und Bildaufträge mitgeprüft, Bilder gerendert und angesehen; nicht gegen den griechischen Text geprüft, kein Blindtest ohne Legende; keine fachliche und keine muttersprachliche Prüfung durch eine Person",
+  "result": "bestanden",
+  "summary_de": "Frage «Herr, Herr» und beide Zweige vollständig; Lukas' «ohne Fundament» statt Sand vermerkt.",
+  "changes_de": []
+ }
+}

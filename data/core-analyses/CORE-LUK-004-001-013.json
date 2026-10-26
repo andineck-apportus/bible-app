@@ -1,0 +1,180 @@
+{
+ "id": "CORE-LUK-004-001-013",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.4.1-LUK.4.13",
+ "target": "TU-LUK-004-001-013",
+ "core_de": "Erfüllt vom heiligen Geist wird Jesus vierzig Tage in der Wüste umhergeführt und vom Teufel versucht; er isst nichts und hat Hunger; dreimal fordert ihn der Teufel heraus – einen Stein zu Brot zu machen, ihn anzubeten, um alle Reiche der Welt zu bekommen, und sich von der Zinne des Tempels zu stürzen –, und dreimal antwortet Jesus mit der Schrift; danach lässt der Teufel von ihm ab bis zu gegebener Zeit.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "frame",
+    "subtype": "Wüste – drei Versuchungen – Abschied «bis zu gegebener Zeit»",
+    "range": "LUK.4.1-LUK.4.13",
+    "elements": [
+     {
+      "label": "Vom Geist erfüllt, vierzig Tage in der Wüste, vom Teufel versucht; er isst nichts und hat Hunger",
+      "ref": "LUK.4.1-LUK.4.2",
+      "role": "Anfang"
+     },
+     {
+      "label": "Drei Versuchungen",
+      "ref": "LUK.4.3-LUK.4.12",
+      "role": "Mitte",
+      "child": "s2"
+     },
+     {
+      "label": "Der Teufel lässt von ihm ab bis zu gegebener Zeit",
+      "ref": "LUK.4.13",
+      "role": "Schluss"
+     }
+    ],
+    "features": {
+     "open_end": [
+      {
+       "ref": "LUK.4.13",
+       "note": "«bis zu gegebener Zeit»: der Teufel kehrt im Text später zurück; hier nicht ausgedeutet"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "series",
+    "subtype": "Forderung → Schriftwort, dreimal; Reihenfolge des Lukas (Brot – Reiche – Tempel)",
+    "range": "LUK.4.3-LUK.4.12",
+    "elements": [
+     {
+      "label": "«Wenn du Gottes Sohn bist, sag diesem Stein, er soll zu Brot werden!» → «Es steht geschrieben: Der Mensch lebt nicht vom Brot allein.»",
+      "ref": "LUK.4.3-LUK.4.4",
+      "role": "Versuchung 1"
+     },
+     {
+      "label": "Alle Reiche der Welt: «Wenn du also vor mir niederfällst, wird dir alles gehören.» → «Es steht geschrieben: Den Herrn, deinen Gott, sollst du anbeten, und ihm allein sollst du dienen.»",
+      "ref": "LUK.4.5-LUK.4.8",
+      "role": "Versuchung 2"
+     },
+     {
+      "label": "Auf der Zinne des Tempels: «Wenn du Gottes Sohn bist, wirf dich von hier hinunter!» (mit Schriftzitat) → «Es ist gesagt: Du sollst den Herrn, deinen Gott, nicht auf die Probe stellen.»",
+      "ref": "LUK.4.9-LUK.4.12",
+      "role": "Versuchung 3"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-SATAN",
+       "to": "FIG-JESUS"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-SATAN"
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "MAT.4.1-MAT.4.11",
+       "kind": "Parallelfassung",
+       "note": "bei Matthäus andere Reihenfolge (Tempel vor den Reichen); nicht angeglichen"
+      },
+      {
+       "ref": "DEU.8.3",
+       "kind": "Zitat"
+      },
+      {
+       "ref": "DEU.6.13",
+       "kind": "Zitat"
+      },
+      {
+       "ref": "DEU.6.16",
+       "kind": "Zitat"
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.4.1-LUK.4.2",
+   "text_de": "Erfüllt vom Geist wird Jesus vierzig Tage in der Wüste umhergeführt und vom Teufel versucht; er isst nichts und hat Hunger.",
+   "reason_de": "Rahmen und Ausgangslage (Kriterium 3).",
+   "recognition_de": "Jesus allein in der Wüste.",
+   "keywords": [
+    "im Geist in der Wüste umhergeführt",
+    "vierzig Tage lang"
+   ]
+  },
+  {
+   "reference": "LUK.4.3-LUK.4.12",
+   "text_de": "Drei Versuchungen, drei Antworten: Stein zu Brot – «Der Mensch lebt nicht vom Brot allein»; alle Reiche der Welt für eine Anbetung – «Den Herrn, deinen Gott, sollst du anbeten»; von der Zinne des Tempels – «Du sollst den Herrn, deinen Gott, nicht auf die Probe stellen».",
+   "reason_de": "Reihe mit allen Gliedern (Kriterien 1 und 4; Regel 1).",
+   "recognition_de": "Der Teufel fordert, Jesus antwortet mit der Schrift.",
+   "keywords": [
+    "Wenn du Gottes Sohn bist",
+    "Es steht geschrieben",
+    "Der Mensch lebt nicht vom Brot allein",
+    "Den Herrn, deinen Gott, sollst du anbeten",
+    "Du sollst den Herrn, deinen Gott, nicht auf die Probe stellen"
+   ]
+  },
+  {
+   "reference": "LUK.4.13",
+   "text_de": "Als der Teufel jede Versuchung beendet hat, lässt er von ihm ab bis zu gegebener Zeit.",
+   "reason_de": "Ausgang mit offenem Ende (Kriterium 3).",
+   "recognition_de": "Der Teufel geht.",
+   "keywords": [
+    "liess er von ihm ab bis zu gegebener Zeit"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Das Zitat des Teufels aus Ps 91 ([[LUK.4.10-LUK.4.11]]) – in der Zusammenfassung nicht, im Bild als Teil der dritten Forderung"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-SATAN",
+  "FIG-HEILIGER-GEIST",
+  "FIG-GOTT"
+ ],
+ "places": [
+  "FIG-ORT-WUESTE",
+  "FIG-ORT-TEMPEL",
+  "FIG-ORT-JERUSALEM"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.4.1-LUK.4.13",
+   "fingerprint": "75a7e47b049a5f02"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 1–8; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung, Züridüütsch gegen die Mundart-Übersetzungsschicht und die Schreibung nach scripts/authoring/lukas_einheitlich.py; Zusammenfassungen und Bildaufträge mitgeprüft, Bilder gerendert und angesehen; nicht gegen den griechischen Text geprüft, kein Blindtest ohne Legende; keine fachliche und keine muttersprachliche Prüfung durch eine Person",
+  "result": "bestanden nach Korrektur",
+  "summary_de": "Drei Versuchungen in der Reihenfolge des Lukas, nicht an Matthäus angeglichen; Rahmen mit offenem Ende.",
+  "changes_de": [
+   "Bild Feld 3: Stichwortband «liess er von ihm ab bis zu gegebener Zeit» ergänzt; das offene Ende ([[LUK.4.13]]) war im Bild nicht zu sehen."
+  ]
+ }
+}

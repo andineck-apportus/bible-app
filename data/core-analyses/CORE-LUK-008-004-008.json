@@ -1,0 +1,139 @@
+{
+ "id": "CORE-LUK-008-004-008",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.8.4-LUK.8.8",
+ "target": "TU-LUK-008-004-008",
+ "core_de": "Vor einer grossen Menge erzählt Jesus das Gleichnis vom Sämann: Einiges fällt an den Weg und wird zertreten und von den Vögeln gefressen, anderes auf den Fels und verdorrt, anderes unter die Dornen und wird erstickt, anderes auf guten Boden und bringt hundertfach Frucht; und er ruft: «Wer Ohren hat zum Hören, der höre!»",
+ "mode": "parable",
+ "voice": {
+  "speaker": "FIG-JESUS",
+  "addressee": "FIG-GRUPPE-MENGE"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "parable",
+    "subtype": "Gleichnis (Bildhälfte; die Deutung folgt in [[LUK.8.11-LUK.8.15]])",
+    "range": "LUK.8.4-LUK.8.8",
+    "elements": [
+     {
+      "label": "Eine grosse Menge aus allen Städten; er spricht in einem Gleichnis",
+      "ref": "LUK.8.4",
+      "role": "Anlass"
+     },
+     {
+      "label": "Der Sämann sät – vier Böden",
+      "ref": "LUK.8.5-LUK.8.8",
+      "role": "Bild",
+      "child": "s2"
+     },
+     {
+      "label": "«Wer Ohren hat zum Hören, der höre!»",
+      "ref": "LUK.8.8",
+      "role": "Ruf"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-MENGE",
+       "ref": "LUK.8.4"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "series",
+    "subtype": "Vier Böden: wohin → was geschieht; drei ohne, einer mit Frucht",
+    "range": "LUK.8.5-LUK.8.8",
+    "elements": [
+     {
+      "label": "an den Weg → zertreten, die Vögel frassen es auf",
+      "ref": "LUK.8.5",
+      "role": "1"
+     },
+     {
+      "label": "auf den Fels → verdorrt, weil es keine Feuchtigkeit hatte",
+      "ref": "LUK.8.6",
+      "role": "2"
+     },
+     {
+      "label": "mitten unter die Dornen → die Dornen erstickten es",
+      "ref": "LUK.8.7",
+      "role": "3"
+     },
+     {
+      "label": "auf den guten Boden → brachte hundertfach Frucht",
+      "ref": "LUK.8.8",
+      "role": "4"
+     }
+    ],
+    "features": {
+     "crossref": [
+      {
+       "ref": "MRK.4.3-MRK.4.9",
+       "kind": "Parallelfassung"
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.8.5-LUK.8.8",
+   "text_de": "«Der Sämann ging hinaus, um seinen Samen zu säen»: Weg – zertreten und gefressen; Fels – verdorrt; Dornen – erstickt; guter Boden – hundertfach Frucht; «Wer Ohren hat zum Hören, der höre!»",
+   "reason_de": "Reihe mit allen vier Gliedern (Kriterien 1 und 4; Regel 1).",
+   "recognition_de": "Der Sämann und die vier Böden.",
+   "keywords": [
+    "Der Sämann ging hinaus, um seinen Samen zu säen",
+    "einiges an den Weg",
+    "anderes fiel auf den Fels",
+    "mitten unter die Dornen",
+    "brachte es hundertfach Frucht",
+    "Wer Ohren hat zum Hören, der höre!"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Nichts weggelassen; alle vier Böden"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-MENGE",
+  "FIG-ROLLE-SAEMANN"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.8.4-LUK.8.8",
+   "fingerprint": "9cc25e3a2771af56"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 1–8; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung, Züridüütsch gegen die Mundart-Übersetzungsschicht und die Schreibung nach scripts/authoring/lukas_einheitlich.py; Zusammenfassungen und Bildaufträge mitgeprüft, Bilder gerendert und angesehen; nicht gegen den griechischen Text geprüft, kein Blindtest ohne Legende; keine fachliche und keine muttersprachliche Prüfung durch eine Person",
+  "result": "bestanden",
+  "summary_de": "Alle vier Böden mit Folge; nur Bildhälfte, Deutung erst im nächsten Abschnitt.",
+  "changes_de": []
+ }
+}

@@ -1,0 +1,131 @@
+{
+ "id": "CORE-LUK-003",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "chapter",
+ "reference": "LUK.3.1-LUK.3.38",
+ "target": "TU-LUK-003-001-038",
+ "children": [
+  "CORE-LUK-003-001-020",
+  "CORE-LUK-003-021-022",
+  "CORE-LUK-003-023-038"
+ ],
+ "core_de": "Johannes verkündigt am Jordan eine Taufe der Umkehr, verlangt Früchte der Umkehr, antwortet auf «Was sollen wir tun?» und kündigt den Stärkeren an, bis Herodes ihn einsperrt; bei der Taufe Jesu kommt der Geist wie eine Taube auf ihn herab, und die Stimme aus dem Himmel sagt: «Du bist mein geliebter Sohn»; der Stammbaum führt Jesus, wie man meinte den Sohn Josefs, über David und Abraham bis zu Adam, «Gottes», zurück.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Johannes – Taufe – Stammbaum",
+    "range": "LUK.3.1-LUK.3.38",
+    "elements": [
+     {
+      "label": "Johannes: Taufe der Umkehr, Gerichtsrede, «Was sollen wir tun?», der Stärkere kommt; Herodes sperrt ihn ein",
+      "ref": "LUK.3.1-LUK.3.20",
+      "role": "Johannes"
+     },
+     {
+      "label": "Taufe Jesu: Geist wie eine Taube, «Du bist mein geliebter Sohn»",
+      "ref": "LUK.3.21-LUK.3.22",
+      "role": "Taufe"
+     },
+     {
+      "label": "Stammbaum von Jesus über David und Abraham bis Adam, «Gottes»",
+      "ref": "LUK.3.23-LUK.3.38",
+      "role": "Stammbaum"
+     }
+    ],
+    "features": {
+     "interpretation": [
+      {
+       "note": "Die Gefangennahme des Johannes ([[LUK.3.19-LUK.3.20]]) erzählt Lukas vor der Taufe Jesu; die Reihenfolge des Textes ist hier nicht die Zeitfolge – sie wird nicht umgestellt."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.3.8-LUK.3.16",
+   "text_de": "Johannes: «Bringt Früchte, die der Umkehr entsprechen!» – «es kommt aber der, der stärker ist als ich».",
+   "reason_de": "Erster Abschnitt (Kriterien 1 und 2).",
+   "recognition_de": "Feld 1: Johannes am Jordan.",
+   "keywords": [
+    "Bringt also Früchte, die der Umkehr entsprechen!",
+    "es kommt aber der, der stärker ist als ich"
+   ]
+  },
+  {
+   "reference": "LUK.3.22",
+   "text_de": "«Du bist mein geliebter Sohn; an dir habe ich Gefallen gefunden.»",
+   "reason_de": "Zweiter Abschnitt (Kriterien 1 und 4).",
+   "recognition_de": "Feld 2: Taube und Stimme.",
+   "keywords": [
+    "Du bist mein geliebter Sohn"
+   ]
+  },
+  {
+   "reference": "LUK.3.23-LUK.3.38",
+   "text_de": "Der Stammbaum: «wie man meinte, der Sohn des Josef» … «des Adam, Gottes».",
+   "reason_de": "Dritter Abschnitt (Kriterium 1).",
+   "recognition_de": "Feld 3: Stammbaum.",
+   "keywords": [
+    "des Adam, Gottes"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Einzelheiten – stehen in den Abschnitten"
+ ],
+ "persons": [
+  "FIG-JOHANNES-TAEUFER",
+  "FIG-GRUPPE-MENGE",
+  "FIG-HERODES-ANTIPAS",
+  "FIG-JESUS",
+  "FIG-HEILIGER-GEIST",
+  "FIG-GOTT",
+  "FIG-JOSEF-NAZARET",
+  "FIG-DAVID",
+  "FIG-ABRAHAM"
+ ],
+ "places": [
+  "FIG-ORT-JORDAN"
+ ],
+ "basis": [
+  {
+   "record": "CORE-LUK-003-001-020",
+   "fingerprint": "ae8756dac05df8ab"
+  },
+  {
+   "record": "CORE-LUK-003-021-022",
+   "fingerprint": "f5e00c686b36bb82"
+  },
+  {
+   "record": "CORE-LUK-003-023-038",
+   "fingerprint": "21acfed71fc8eba5"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 1–8; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung, Züridüütsch gegen die Mundart-Übersetzungsschicht und die Schreibung nach scripts/authoring/lukas_einheitlich.py; Zusammenfassungen und Bildaufträge mitgeprüft, Bilder gerendert und angesehen; nicht gegen den griechischen Text geprüft, kein Blindtest ohne Legende; keine fachliche und keine muttersprachliche Prüfung durch eine Person",
+  "result": "bestanden",
+  "summary_de": "Drei Abschnitte; Zahlen zwischen den Stationen des Stammbaums nachgezählt (40, 13, 19).",
+  "changes_de": []
+ }
+}

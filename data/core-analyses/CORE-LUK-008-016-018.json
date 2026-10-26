@@ -1,0 +1,121 @@
+{
+ "id": "CORE-LUK-008-016-018",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.8.16-LUK.8.18",
+ "target": "TU-LUK-008-016-018",
+ "core_de": "Niemand zündet eine Lampe an, um sie zuzudecken oder unter ein Bett zu stellen, sondern stellt sie auf einen Leuchter, damit die Hereinkommenden das Licht sehen; denn nichts Verborgenes bleibt verborgen; darum: «Achtet also darauf, wie ihr hört!», denn wer hat, dem wird gegeben, und wer nicht hat, dem wird auch genommen, was er zu haben meint.",
+ "mode": "speech",
+ "voice": {
+  "speaker": "FIG-JESUS",
+  "addressee": "FIG-GRUPPE-JUENGER"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "cause",
+    "subtype": "Bild → denn → also",
+    "range": "LUK.8.16-LUK.8.18",
+    "elements": [
+     {
+      "label": "Bild: Lampe nicht zudecken, nicht unter das Bett, sondern auf den Leuchter, damit die Hereinkommenden das Licht sehen",
+      "ref": "LUK.8.16",
+      "role": "Bild"
+     },
+     {
+      "label": "denn nichts Verborgenes, das nicht offenbar wird",
+      "ref": "LUK.8.17",
+      "role": "Begründung"
+     },
+     {
+      "label": "Achtet also darauf, wie ihr hört – wer hat ↔ wer nicht hat",
+      "ref": "LUK.8.18",
+      "role": "Folgerung",
+      "child": "s2"
+     }
+    ],
+    "visual": "arrows",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "condition",
+    "subtype": "Weiche: hat ↔ hat nicht",
+    "range": "LUK.8.18",
+    "elements": [
+     {
+      "label": "Wer hat → dem wird gegeben",
+      "ref": "LUK.8.18",
+      "role": "Zweig 1"
+     },
+     {
+      "label": "Wer nicht hat → dem wird auch genommen, was er zu haben meint",
+      "ref": "LUK.8.18",
+      "role": "Zweig 2"
+     }
+    ],
+    "visual": "switch",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.8.16-LUK.8.17",
+   "text_de": "Die Lampe kommt nicht unter ein Gefäss oder Bett, sondern auf den Leuchter; nichts Verborgenes bleibt verborgen.",
+   "reason_de": "Bildwort mit Begründung (Kriterien 1 und 4).",
+   "recognition_de": "Die Lampe auf dem Leuchter.",
+   "keywords": [
+    "sondern er stellt sie auf einen Leuchter",
+    "es gibt nichts Verborgenes, das nicht offenbar werden wird"
+   ],
+   "mode": "parable"
+  },
+  {
+   "reference": "LUK.8.18",
+   "text_de": "«Achtet also darauf, wie ihr hört! Denn wer hat, dem wird gegeben werden; und wer nicht hat, von dem wird auch das genommen werden, was er zu haben meint.»",
+   "reason_de": "Mahnung mit beiden Zweigen (Kriterium 1; Regel 1).",
+   "recognition_de": "Achtet darauf, wie ihr hört.",
+   "keywords": [
+    "Achtet also darauf, wie ihr hört!",
+    "wer hat, dem wird gegeben werden",
+    "von dem wird auch das genommen werden, was er zu haben meint"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Nichts weggelassen"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-JUENGER"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.8.16-LUK.8.18",
+   "fingerprint": "ac0b17646ff66b13"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 1–8; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung, Züridüütsch gegen die Mundart-Übersetzungsschicht und die Schreibung nach scripts/authoring/lukas_einheitlich.py; Zusammenfassungen und Bildaufträge mitgeprüft, Bilder gerendert und angesehen; nicht gegen den griechischen Text geprüft, kein Blindtest ohne Legende; keine fachliche und keine muttersprachliche Prüfung durch eine Person",
+  "result": "bestanden nach Korrektur",
+  "summary_de": "Bild – Begründung – Folgerung, beide Zweige «wer hat ↔ wer nicht hat».",
+  "changes_de": [
+   "Bildlegende Feld 1: Darstellung (Pfeilkette statt Spalten) und Titel richtig benannt."
+  ]
+ }
+}

@@ -1,0 +1,183 @@
+{
+ "id": "CORE-LUK-006-037-042",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.6.37-LUK.6.42",
+ "target": "TU-LUK-006-037-042",
+ "core_de": "Jesus sagt: Richtet nicht, verurteilt nicht, sprecht frei, gebt – und ihr werdet nicht gerichtet, nicht verurteilt, freigesprochen, und es wird euch ein gutes, überfliessendes Mass gegeben, denn mit dem Mass, mit dem ihr messt, wird euch zurückgemessen; im Gleichnis fragt er, ob ein Blinder einen Blinden führen kann, sagt, dass der Schüler nicht über dem Lehrer steht, und mahnt den Heuchler, zuerst den Balken aus dem eigenen Auge zu ziehen, bevor er den Splitter im Auge des Bruders herauszieht.",
+ "mode": "speech",
+ "voice": {
+  "speaker": "FIG-JESUS",
+  "addressee": "FIG-GRUPPE-JUENGER"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Weisungen – Bildworte",
+    "range": "LUK.6.37-LUK.6.42",
+    "elements": [
+     {
+      "label": "Bedingung → Folge",
+      "ref": "LUK.6.37-LUK.6.38",
+      "role": "Weisungen",
+      "child": "s2"
+     },
+     {
+      "label": "Gleichnis: Blinder führt Blinden – beide fallen in die Grube; Schüler und Lehrer",
+      "ref": "LUK.6.39-LUK.6.40",
+      "role": "Bildwort"
+     },
+     {
+      "label": "Splitter und Balken",
+      "ref": "LUK.6.41-LUK.6.42",
+      "role": "Bildwort",
+      "child": "s3"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "LUK.6.37"
+      }
+     ]
+    },
+    "visual": "outline",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "condition",
+    "subtype": "Vier Glieder Tun → Folge, dazu die Begründung",
+    "range": "LUK.6.37-LUK.6.38",
+    "elements": [
+     {
+      "label": "richtet nicht → ihr werdet nicht gerichtet",
+      "ref": "LUK.6.37",
+      "role": "1"
+     },
+     {
+      "label": "verurteilt nicht → ihr werdet nicht verurteilt",
+      "ref": "LUK.6.37",
+      "role": "2"
+     },
+     {
+      "label": "sprecht frei → ihr werdet freigesprochen",
+      "ref": "LUK.6.37",
+      "role": "3"
+     },
+     {
+      "label": "gebt → es wird euch gegeben, ein gutes, überfliessendes Mass",
+      "ref": "LUK.6.38",
+      "role": "4"
+     },
+     {
+      "label": "Begründung: mit dem Mass, mit dem ihr messt, wird euch zurückgemessen",
+      "ref": "LUK.6.38",
+      "role": "denn"
+     }
+    ],
+    "visual": "grid",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "cause",
+    "subtype": "zuerst → dann",
+    "range": "LUK.6.41-LUK.6.42",
+    "elements": [
+     {
+      "label": "Warum siehst du den Splitter im Auge deines Bruders, den Balken im eigenen aber nicht?",
+      "ref": "LUK.6.41",
+      "role": "Frage"
+     },
+     {
+      "label": "Du Heuchler, zieh zuerst den Balken aus deinem Auge",
+      "ref": "LUK.6.42",
+      "role": "zuerst"
+     },
+     {
+      "label": "dann wirst du klar sehen, um den Splitter herauszuziehen",
+      "ref": "LUK.6.42",
+      "role": "dann"
+     }
+    ],
+    "visual": "arrows",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.6.37-LUK.6.38",
+   "text_de": "Richtet nicht → nicht gerichtet; verurteilt nicht → nicht verurteilt; sprecht frei → freigesprochen; gebt → es wird euch gegeben; denn mit dem Mass, mit dem ihr messt, wird euch zurückgemessen.",
+   "reason_de": "Vier Bedingungen mit Folge (Kriterium 1; Regel 1).",
+   "recognition_de": "Richtet nicht.",
+   "keywords": [
+    "Und richtet nicht, und ihr werdet gewiss nicht gerichtet werden",
+    "Gebt, und es wird euch gegeben werden",
+    "denn mit dem Mass, mit dem ihr messt, wird euch zurückgemessen werden"
+   ]
+  },
+  {
+   "reference": "LUK.6.39-LUK.6.40",
+   "text_de": "«Kann etwa ein Blinder einen Blinden führen?»; der Schüler steht nicht über dem Lehrer.",
+   "reason_de": "Bildworte (Kriterium 4).",
+   "recognition_de": "Zwei Blinde.",
+   "keywords": [
+    "Kann etwa ein Blinder einen Blinden führen?",
+    "Ein Schüler steht nicht über dem Lehrer"
+   ],
+   "mode": "parable"
+  },
+  {
+   "reference": "LUK.6.41-LUK.6.42",
+   "text_de": "Splitter und Balken: «Du Heuchler, zieh zuerst den Balken aus deinem Auge heraus, und dann wirst du klar sehen».",
+   "reason_de": "Erkennungsmoment, Zuspitzung (Kriterien 2 und 4).",
+   "recognition_de": "Splitter und Balken.",
+   "keywords": [
+    "den Balken aber im eigenen Auge bemerkst du nicht",
+    "zieh zuerst den Balken aus deinem Auge heraus"
+   ],
+   "mode": "parable"
+  }
+ ],
+ "omitted_de": [
+  "Die einzelnen Bilder des Masses (festgedrückt, gerüttelt, [[LUK.6.38]]) – Ausschmückung"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-ROLLE-BLINDER"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.6.37-LUK.6.42",
+   "fingerprint": "5e610abb756094f7"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 1–8; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung, Züridüütsch gegen die Mundart-Übersetzungsschicht und die Schreibung nach scripts/authoring/lukas_einheitlich.py; Zusammenfassungen und Bildaufträge mitgeprüft, Bilder gerendert und angesehen; nicht gegen den griechischen Text geprüft, kein Blindtest ohne Legende; keine fachliche und keine muttersprachliche Prüfung durch eine Person",
+  "result": "bestanden nach Korrektur",
+  "summary_de": "Vier Glieder Tun → Folge mit Begründung, Bildwort der Blinden, Splitter und Balken als «zuerst → dann».",
+  "changes_de": [
+   "Zusammenfassung: die Frage «Werden nicht beide in eine Grube fallen?» als Frage wiedergegeben statt als Aussage ([[LUK.6.39]]), Hochdeutsch und Züridüütsch."
+  ]
+ }
+}

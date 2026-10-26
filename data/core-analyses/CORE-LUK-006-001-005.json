@@ -1,0 +1,141 @@
+{
+ "id": "CORE-LUK-006-001-005",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.6.1-LUK.6.5",
+ "target": "TU-LUK-006-001-005",
+ "core_de": "Als die Jünger an einem Sabbat Ähren abreissen und essen, fragen einige Pharisäer: «Warum tut ihr, was am Sabbat nicht erlaubt ist?»; Jesus erinnert daran, dass David, als er Hunger hatte, im Haus Gottes die Schaubrote ass, die nur die Priester essen dürfen, und sagt: «Herr über den Sabbat ist der Menschensohn.»",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "objection",
+    "subtype": "Tat – Einwand – Antwort",
+    "range": "LUK.6.1-LUK.6.5",
+    "elements": [
+     {
+      "label": "Am Sabbat reissen die Jünger Ähren ab und essen",
+      "ref": "LUK.6.1",
+      "role": "Anlass"
+     },
+     {
+      "label": "«Warum tut ihr, was am Sabbat nicht erlaubt ist?»",
+      "ref": "LUK.6.2",
+      "role": "Einwand"
+     },
+     {
+      "label": "Antwort",
+      "ref": "LUK.6.3-LUK.6.5",
+      "role": "Antwort",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-GRUPPE-PHARISAEER",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "LUK.6.2"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-PHARISAEER",
+       "ref": "LUK.6.3-LUK.6.5"
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "argument",
+    "subtype": "Beispiel → Schluss",
+    "range": "LUK.6.3-LUK.6.5",
+    "elements": [
+     {
+      "label": "Schriftbeispiel: David und seine Begleiter hatten Hunger, er ass die Schaubrote, die nur die Priester essen dürfen",
+      "ref": "LUK.6.3-LUK.6.4",
+      "role": "Beleg"
+     },
+     {
+      "label": "Schluss: «Herr über den Sabbat ist der Menschensohn»",
+      "ref": "LUK.6.5",
+      "role": "These"
+     }
+    ],
+    "features": {
+     "crossref": [
+      {
+       "ref": "1SA.21.1-1SA.21.6",
+       "kind": "Bezug"
+      }
+     ]
+    },
+    "visual": "arrows",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.6.1-LUK.6.2",
+   "text_de": "Die Jünger reissen am Sabbat Ähren ab; Pharisäer: «Warum tut ihr, was am Sabbat nicht erlaubt ist?»",
+   "reason_de": "Anlass und Vorwurf (Kriterien 2 und 4).",
+   "recognition_de": "Ähren im Kornfeld.",
+   "keywords": [
+    "Warum tut ihr, was am Sabbat nicht erlaubt ist?"
+   ]
+  },
+  {
+   "reference": "LUK.6.3-LUK.6.5",
+   "text_de": "David ass, als er Hunger hatte, die Schaubrote – «Herr über den Sabbat ist der Menschensohn.»",
+   "reason_de": "Antwort mit Beispiel und Schlusswort (Kriterium 1).",
+   "recognition_de": "Jesus antwortet.",
+   "keywords": [
+    "was David tat, als er und die, die bei ihm waren, Hunger hatten",
+    "Herr über den Sabbat ist der Menschensohn"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Die Einzelheiten des Ährenraufens (zerreiben, [[LUK.6.1]]) – Ausschmückung"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-GRUPPE-PHARISAEER",
+  "FIG-DAVID"
+ ],
+ "places": [
+  "FIG-ORT-KORNFELD"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.6.1-LUK.6.5",
+   "fingerprint": "2141154fc1bd0981"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 1–8; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung, Züridüütsch gegen die Mundart-Übersetzungsschicht und die Schreibung nach scripts/authoring/lukas_einheitlich.py; Zusammenfassungen und Bildaufträge mitgeprüft, Bilder gerendert und angesehen; nicht gegen den griechischen Text geprüft, kein Blindtest ohne Legende; keine fachliche und keine muttersprachliche Prüfung durch eine Person",
+  "result": "bestanden",
+  "summary_de": "Einwand – Schriftbeispiel – Schluss; dass mit dem Menschensohn Jesus selbst gemeint ist, als nicht ausdrücklich vermerkt.",
+  "changes_de": []
+ }
+}

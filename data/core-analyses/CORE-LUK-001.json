@@ -1,0 +1,178 @@
+{
+ "id": "CORE-LUK-001",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "chapter",
+ "reference": "LUK.1.1-LUK.1.80",
+ "target": "TU-LUK-001-001-080",
+ "children": [
+  "CORE-LUK-001-001-004",
+  "CORE-LUK-001-005-025",
+  "CORE-LUK-001-026-038",
+  "CORE-LUK-001-039-056",
+  "CORE-LUK-001-057-080"
+ ],
+ "core_de": "Nach dem Vorwort an Theophilus kündigt der Engel Gabriel zwei Geburten an: dem Priester Zacharias, der zweifelt und verstummt, den Sohn Johannes, und Maria, die einwilligt («Ich bin die Magd des Herrn»), den Sohn Jesus, Sohn des Höchsten; Maria besucht Elisabet und lobt Gott, der Niedrige erhöht; Johannes wird geboren und erhält seinen Namen, und Zacharias preist Gott und sagt dem Kind, es werde Prophet des Höchsten genannt werden.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Vorwort – Ankündigungen – Begegnung – Geburt des Johannes",
+    "range": "LUK.1.1-LUK.1.80",
+    "elements": [
+     {
+      "label": "Vorwort an Theophilus: der Reihe nach, damit er die Zuverlässigkeit erkennt",
+      "ref": "LUK.1.1-LUK.1.4",
+      "role": "Vorwort"
+     },
+     {
+      "label": "Zwei Ankündigungen",
+      "ref": "LUK.1.5-LUK.1.38",
+      "role": "Ankündigungen",
+      "child": "s2"
+     },
+     {
+      "label": "Maria bei Elisabet: «Gesegnet bist du unter den Frauen»; Lobgesang: Mächtige gestürzt, Niedrige erhöht",
+      "ref": "LUK.1.39-LUK.1.56",
+      "role": "Begegnung"
+     },
+     {
+      "label": "Geburt und Name des Johannes; Lobgesang des Zacharias: «Prophet des Höchsten»",
+      "ref": "LUK.1.57-LUK.1.80",
+      "role": "Geburt"
+     }
+    ],
+    "features": {
+     "interpretation": [
+      {
+       "note": "Die Gegenüberstellung der beiden Ankündigungen und Geburten (Johannes ↔ Jesus, Kap. 1–2) als «Diptychon» ist eine Gliederung der Forschung (STRUKTURKATALOG, Bücherübersicht), im Text durch die gleiche Form angelegt."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "parallel",
+    "subtype": "Gleiche Form, andere Antwort: Zweifel ↔ Einwilligung",
+    "range": "LUK.1.5-LUK.1.38",
+    "elements": [
+     {
+      "label": "Im Tempel an Zacharias: Sohn Johannes – «Woran werde ich das erkennen?» – stumm, weil er nicht geglaubt hat",
+      "ref": "LUK.1.5-LUK.1.25",
+      "role": "Ankündigung 1",
+      "links": [
+       "Gegenstück: Ankündigung 2"
+      ]
+     },
+     {
+      "label": "In Nazaret an Maria: Sohn Jesus, Sohn des Höchsten – «Wie wird das geschehen?» – «mir geschehe nach deinem Wort»",
+      "ref": "LUK.1.26-LUK.1.38",
+      "role": "Ankündigung 2"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.1.3-LUK.1.4",
+   "text_de": "Vorwort: der Reihe nach aufgeschrieben, damit Theophilus die Zuverlässigkeit erkennt.",
+   "reason_de": "Erster Abschnitt (Kriterium 1).",
+   "recognition_de": "Feld 1: Vorwort.",
+   "keywords": [
+    "damit du erkennst, wie zuverlässig die Worte sind"
+   ]
+  },
+  {
+   "reference": "LUK.1.13-LUK.1.38",
+   "text_de": "Zwei Ankündigungen: Zacharias zweifelt und verstummt – Maria: «mir geschehe nach deinem Wort».",
+   "reason_de": "Zweiter und dritter Abschnitt als Gegenstück (Kriterien 1 und 2).",
+   "recognition_de": "Feld 2: zwei Ankündigungen.",
+   "keywords": [
+    "du wirst stumm sein",
+    "ich bin die Magd des Herrn; mir geschehe nach deinem Wort"
+   ]
+  },
+  {
+   "reference": "LUK.1.42-LUK.1.52",
+   "text_de": "Elisabet: «Gesegnet bist du unter den Frauen»; Maria: «Er hat Mächtige von Thronen gestürzt und Niedrige erhöht.»",
+   "reason_de": "Vierter Abschnitt (Kriterium 1).",
+   "recognition_de": "Feld 3: Begegnung und Lobgesang.",
+   "keywords": [
+    "Gesegnet bist du unter den Frauen",
+    "Er hat Mächtige von Thronen gestürzt und Niedrige erhöht"
+   ]
+  },
+  {
+   "reference": "LUK.1.63-LUK.1.76",
+   "text_de": "«Johannes ist sein Name» – «Und du, Kind, wirst Prophet des Höchsten genannt werden».",
+   "reason_de": "Fünfter Abschnitt (Kriterien 1 und 3).",
+   "recognition_de": "Feld 4: Namengebung.",
+   "keywords": [
+    "Johannes ist sein Name",
+    "Und du, Kind, wirst Prophet des Höchsten genannt werden"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Einzelheiten – stehen in den Abschnitten"
+ ],
+ "persons": [
+  "FIG-ROLLE-PRIESTER",
+  "FIG-ROLLE-ALTE-FRAU",
+  "FIG-ROLLE-ENGEL",
+  "FIG-MARIA-MUTTER-JESU",
+  "FIG-HEILIGER-GEIST",
+  "FIG-GOTT"
+ ],
+ "places": [
+  "FIG-ORT-TEMPEL"
+ ],
+ "basis": [
+  {
+   "record": "CORE-LUK-001-001-004",
+   "fingerprint": "9e9e2bd02cc35a94"
+  },
+  {
+   "record": "CORE-LUK-001-005-025",
+   "fingerprint": "0a3c98fc12439b6d"
+  },
+  {
+   "record": "CORE-LUK-001-026-038",
+   "fingerprint": "3c3ec0441e2b4452"
+  },
+  {
+   "record": "CORE-LUK-001-039-056",
+   "fingerprint": "fe2c8257285ea831"
+  },
+  {
+   "record": "CORE-LUK-001-057-080",
+   "fingerprint": "3471cab732f289de"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 1–8; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung, Züridüütsch gegen die Mundart-Übersetzungsschicht und die Schreibung nach scripts/authoring/lukas_einheitlich.py; Zusammenfassungen und Bildaufträge mitgeprüft, Bilder gerendert und angesehen; nicht gegen den griechischen Text geprüft, kein Blindtest ohne Legende; keine fachliche und keine muttersprachliche Prüfung durch eine Person",
+  "result": "bestanden",
+  "summary_de": "Alle fünf Abschnitte in Struktur, Zusammenfassung und Bild; die Gegenüberstellung der Ankündigungen beruht auf der gleichen Form im Text, «Diptychon» als Gliederung der Forschung gekennzeichnet, im Bild nicht als Befund behauptet.",
+  "changes_de": []
+ }
+}

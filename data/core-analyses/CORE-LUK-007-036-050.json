@@ -1,0 +1,226 @@
+{
+ "id": "CORE-LUK-007-036-050",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.7.36-LUK.7.50",
+ "target": "TU-LUK-007-036-050",
+ "core_de": "Im Haus des Pharisäers Simon benetzt eine Frau, die in der Stadt als Sünderin lebt, weinend Jesu Füsse mit ihren Tränen, trocknet sie mit ihren Haaren, küsst und salbt sie; der Pharisäer denkt, ein Prophet würde wissen, wer sie ist; Jesus erzählt von zwei Schuldnern, denen beiden die Schuld erlassen wird, und Simon urteilt, der wird mehr lieben, dem mehr geschenkt wurde; Jesus stellt Simons fehlende Gastfreundschaft dem Tun der Frau gegenüber: «Ihre Sünden, die vielen, sind vergeben, denn sie hat viel geliebt; wem aber wenig vergeben wird, der liebt wenig»; zu ihr sagt er: «Deine Sünden sind vergeben … Dein Glaube hat dich gerettet; geh in Frieden!»",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Mahl – Tat – Gedanke – Gleichnis – Gegenüberstellung – Vergebung",
+    "range": "LUK.7.36-LUK.7.50",
+    "elements": [
+     {
+      "label": "Jesus liegt im Haus eines Pharisäers zu Tisch",
+      "ref": "LUK.7.36",
+      "role": "Ort"
+     },
+     {
+      "label": "Eine Frau, die als Sünderin lebt, weint zu seinen Füssen, trocknet, küsst und salbt sie",
+      "ref": "LUK.7.37-LUK.7.38",
+      "role": "Tat"
+     },
+     {
+      "label": "Der Pharisäer denkt: «Wenn dieser ein Prophet wäre …»",
+      "ref": "LUK.7.39",
+      "role": "Einwand"
+     },
+     {
+      "label": "Gleichnis von den zwei Schuldnern",
+      "ref": "LUK.7.40-LUK.7.43",
+      "role": "Gleichnis",
+      "child": "s2"
+     },
+     {
+      "label": "Gegenüberstellung: du – sie",
+      "ref": "LUK.7.44-LUK.7.47",
+      "role": "Deutung",
+      "child": "s3"
+     },
+     {
+      "label": "«Deine Sünden sind vergeben» – «Wer ist dieser?» – «Dein Glaube hat dich gerettet; geh in Frieden!»",
+      "ref": "LUK.7.48-LUK.7.50",
+      "role": "Ausgang"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-ROLLE-PHARISAEER",
+       "to": "FIG-ROLLE-PHARISAEER",
+       "ref": "LUK.7.39"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-ROLLE-PHARISAEER",
+       "ref": "LUK.7.40-LUK.7.47"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-ROLLE-FRAU",
+       "ref": "LUK.7.48-LUK.7.50"
+      },
+      {
+       "who": "FIG-GRUPPE-GAESTE",
+       "to": "FIG-GRUPPE-GAESTE",
+       "ref": "LUK.7.49"
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "MRK.14.3-MRK.14.9",
+       "kind": "ähnliche Erzählung",
+       "note": "andere Szene (Betanien); nicht angeglichen"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "balance",
+    "subtype": "500 ↔ 50, beide erlassen; wer liebt mehr?",
+    "range": "LUK.7.41-LUK.7.43",
+    "elements": [
+     {
+      "label": "Der eine schuldete fünfhundert Denare",
+      "ref": "LUK.7.41",
+      "role": "viel"
+     },
+     {
+      "label": "der andere fünfzig",
+      "ref": "LUK.7.41",
+      "role": "wenig"
+     },
+     {
+      "label": "Beiden geschenkt – «Wer wird ihn mehr lieben?» – «der, dem er das meiste geschenkt hat»",
+      "ref": "LUK.7.42-LUK.7.43",
+      "role": "Urteil"
+     }
+    ],
+    "visual": "balance",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "contrast",
+    "subtype": "Simon ↔ die Frau, dreimal; dann das Urteil",
+    "range": "LUK.7.44-LUK.7.47",
+    "elements": [
+     {
+      "label": "Wasser für die Füsse: du nicht ↔ sie mit Tränen benetzt, mit Haaren getrocknet",
+      "ref": "LUK.7.44",
+      "role": "1"
+     },
+     {
+      "label": "Kuss: du keinen ↔ sie hörte nicht auf, meine Füsse zu küssen",
+      "ref": "LUK.7.45",
+      "role": "2"
+     },
+     {
+      "label": "Öl: du nicht auf den Kopf ↔ sie Salböl auf die Füsse",
+      "ref": "LUK.7.46",
+      "role": "3"
+     },
+     {
+      "label": "«Ihre Sünden, die vielen, sind vergeben, denn sie hat viel geliebt; wem aber wenig vergeben wird, der liebt wenig»",
+      "ref": "LUK.7.47",
+      "role": "Schluss"
+     }
+    ],
+    "features": {
+     "interpretation": [
+      {
+       "note": "Ob das «denn» in [[LUK.7.47]] die Liebe als Grund oder als Zeichen der Vergebung nennt, ist in der Auslegung umstritten; das Gleichnis ([[LUK.7.41-LUK.7.43]]) legt die Vergebung vor die Liebe. Die Zusammenfassung gibt den Wortlaut."
+      }
+     ]
+    },
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.7.37-LUK.7.39",
+   "text_de": "Die Frau weint zu Jesu Füssen, trocknet sie mit ihren Haaren, küsst und salbt sie; der Pharisäer denkt: «Wenn dieser ein Prophet wäre, würde er erkennen, … dass sie eine Sünderin ist.»",
+   "reason_de": "Erkennungsmoment und Anlass (Kriterien 2 und 4).",
+   "recognition_de": "Die Frau zu Jesu Füssen.",
+   "keywords": [
+    "trat weinend von hinten zu seinen Füssen",
+    "salbte sie mit dem Salböl",
+    "Wenn dieser ein Prophet wäre"
+   ]
+  },
+  {
+   "reference": "LUK.7.40-LUK.7.47",
+   "text_de": "Zwei Schuldner, 500 und 50 Denare, beiden geschenkt – «Wer von ihnen wird ihn nun mehr lieben?»; du gabst kein Wasser, keinen Kuss, kein Öl – sie benetzte, küsste, salbte; «Ihre Sünden, die vielen, sind vergeben, denn sie hat viel geliebt».",
+   "reason_de": "Gleichnis und Gegenüberstellung, Kernaussage (Kriterium 1; Regel 1).",
+   "recognition_de": "Jesus spricht zu Simon.",
+   "keywords": [
+    "Ein Geldverleiher hatte zwei Schuldner",
+    "Wer von ihnen wird ihn nun mehr lieben?",
+    "Ihre Sünden, die vielen, sind vergeben, denn sie hat viel geliebt"
+   ],
+   "mode": "parable"
+  },
+  {
+   "reference": "LUK.7.48-LUK.7.50",
+   "text_de": "«Deine Sünden sind vergeben» – die Tischgenossen: «Wer ist dieser, der sogar Sünden vergibt?» – «Dein Glaube hat dich gerettet; geh in Frieden!»",
+   "reason_de": "Ausgang (Kriterien 1 und 3).",
+   "recognition_de": "Jesus zur Frau.",
+   "keywords": [
+    "Deine Sünden sind vergeben",
+    "Wer ist dieser, der sogar Sünden vergibt?",
+    "Dein Glaube hat dich gerettet; geh in Frieden!"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Welche Sünden die Frau begangen hat, sagt der Text nicht – nicht ergänzt",
+  "Die Gleichsetzung mit Maria aus Magdala oder Maria von Betanien ist spätere Überlieferung, nicht Text – nicht verwendet"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-ROLLE-PHARISAEER",
+  "FIG-ROLLE-FRAU",
+  "FIG-GRUPPE-GAESTE"
+ ],
+ "places": [
+  "FIG-ORT-HAUS"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.7.36-LUK.7.50",
+   "fingerprint": "ba5784f8d889af01"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 1–8; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung, Züridüütsch gegen die Mundart-Übersetzungsschicht und die Schreibung nach scripts/authoring/lukas_einheitlich.py; Zusammenfassungen und Bildaufträge mitgeprüft, Bilder gerendert und angesehen; nicht gegen den griechischen Text geprüft, kein Blindtest ohne Legende; keine fachliche und keine muttersprachliche Prüfung durch eine Person",
+  "result": "bestanden nach Korrektur",
+  "summary_de": "Die Frau erscheint als namenlose Frau, nicht als Maria aus Magdala; das Alabastergefäss nennt der Text. Gegenüberstellung Simon ↔ die Frau dreimal; Grund oder Zeichen in [[LUK.7.47]] als umstrittene Deutung vermerkt, die Zusammenfassung gibt den Wortlaut.",
+  "changes_de": [
+   "Geprüft: die Frau erscheint als namenlose Frau (nicht als Maria aus Magdala); das Alabastergefäss steht im Text. Hinweis im Bildauftrag ergänzt."
+  ]
+ }
+}
