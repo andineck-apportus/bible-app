@@ -154,10 +154,10 @@ FINDINGS = [
   "De Lukas stellt s Uftrete z Nazaret an Aafang vom Wirke vo Jesus ([[LUK.4.16-LUK.4.30]]), obwohl nach [[LUK.4.23]] scho Tate z Kafarnaum bekannt sind; bim Markus staat d Ablehnig i de Heimat erscht vil spööter (Vergliich mit [[MRK.6.1-MRK.6.6]]). De Jesus liist us em Jesaja: [[ISA.61.1-ISA.61.2]], ergänzt mit ere Ziile us [[ISA.58.6]] («Zerschlageni i d Freiheit laa»). D Läsig hört mitten im Satz vo [[ISA.61.2]] uf: Nach em «Gnadejahr vom Herr» chunnt bim Jesaja «und en Tag vo de Vergältig vo öisem Gott»; das liist de Jesus nöd. Sini Uslegig bestaat us eim Satz: «Hüt hät sich das Schriftwort erfüllt» ([[LUK.4.21]]). D Stimmig chippt, won er a de Elija und de Elischa erinneret, wo zu ere Witwe z Sarepta und zum Syrer Naaman gschickt worde sind, nöd zu Israelite ([[LUK.4.25-LUK.4.27]]); mer wott en vom Bärg abestürze ([[LUK.4.28-LUK.4.30]]).",
   "Vergliich mit em Jesajatext; d Ergänzig us [[ISA.58.6]] und s Änd vor em «Tag vo de Vergältig» gseht mer am Wortluut (lueg d Übersetzigsentscheidig zu [[LUK.4.18]]). D Ziile «zum die heile, wo es broches Härz händ» us [[ISA.61.1]] fäält im SBLGNT; mängi Handschrifte händ si (lueg d Alternative). Öb de Lukas s Uftrete bewusst vorezoge hät oder e eigeti Überliferig widergit, isch Düütig (INT-LUK-0005)."),
  ("FIND-LUK-0009", U(9, 28, 36), "key_terms",
-  "Das Verb «beten» (προσεύχομαι) steht im Lukasevangelium 19 Mal, bei Markus 10 und bei Matthäus 15 Mal. In den Kapiteln 1–12 betet Jesus an Wendepunkten: bei der Taufe, als sich der Himmel öffnet ([[LUK.3.21]]); immer wieder in einsamen Gegenden ([[LUK.5.16]]); eine ganze Nacht vor der Wahl der Zwölf ([[LUK.6.12-LUK.6.13]]); vor der Frage «Wer, sagt ihr, bin ich?» ([[LUK.9.18]]); auf dem Berg, wo sich während des Betens sein Aussehen verändert ([[LUK.9.28-LUK.9.29]]); und bevor ihn die Jünger bitten: «Herr, lehre uns beten» ([[LUK.11.1]]). In [[LUK.10.21]] jubelt er «im Heiligen Geist» und preist den Vater. Bei Taufe und Verklärung erwähnt Markus das Beten nicht (Vergleich mit [[MRK.1.9-MRK.1.11]] und [[MRK.9.2-MRK.9.8]]).",
+  "Das Verb «beten» (προσεύχομαι) steht im Lukasevangelium 19 Mal, bei Markus 10 und bei Matthäus 15 Mal. In den Kapiteln 1–12 betet Jesus an Wendepunkten: bei der Taufe, als sich der Himmel öffnet ([[LUK.3.21]]); immer wieder in einsamen Gegenden ([[LUK.5.16]]); eine ganze Nacht vor der Wahl der Zwölf ([[LUK.6.12-LUK.6.13]]); vor der Frage «Wer, sagt ihr, bin ich?» ([[LUK.9.18-LUK.9.20]]); auf dem Berg, wo sich während des Betens sein Aussehen verändert ([[LUK.9.28-LUK.9.29]]); und bevor ihn die Jünger bitten: «Herr, lehre uns beten» ([[LUK.11.1]]). In [[LUK.10.21]] jubelt er «im Heiligen Geist» und preist den Vater. Bei Taufe und Verklärung erwähnt Markus das Beten nicht (Vergleich mit [[MRK.1.9-MRK.1.11]] und [[MRK.9.2-MRK.9.8]]).",
   ["LUK.3.21", "LUK.5.16", "LUK.6.12", "LUK.9.18", "LUK.9.28-LUK.9.29", "LUK.11.1", "LUK.10.21"], "high",
   MAC + " Die 19 Belege schliessen das Beten anderer ein (etwa [[LUK.1.10]]; [[LUK.18.10-LUK.18.11]]) und die Aufforderung an die Jünger ([[LUK.6.28]]); [[LUK.11.1]] hat zwei Belege.",
-  "S Verb «bätte» (προσεύχομαι) staat im Lukasevangelium 19 Mal, bim Markus 10 und bim Matthäus 15 Mal. I de Kapitel 1–12 bättet de Jesus a Wändepünkt: bi de Taufi, wo sich de Himmel uftuet ([[LUK.3.21]]); immer wider i einsame Gägende ([[LUK.5.16]]); e ganzi Nacht vor de Waal vo de Zwölf ([[LUK.6.12-LUK.6.13]]); vor de Frag «Wär, säged ir, sig ich?» ([[LUK.9.18]]); uf em Bärg, wo sich bim Bätte sis Usgseh veränderet ([[LUK.9.28-LUK.9.29]]); und bevor en d Jünger bitted, er söll si s Bätte lehre ([[LUK.11.1]]). I [[LUK.10.21]] jublet er «im Heilige Geischt» und priist de Vatter. Bi de Taufi und bi de Verklärig erwäänt de Markus s Bätte nöd (Vergliich mit [[MRK.1.9-MRK.1.11]] und [[MRK.9.2-MRK.9.8]]).",
+  "S Verb «bätte» (προσεύχομαι) staat im Lukasevangelium 19 Mal, bim Markus 10 und bim Matthäus 15 Mal. I de Kapitel 1–12 bättet de Jesus a Wändepünkt: bi de Taufi, wo sich de Himmel uftuet ([[LUK.3.21]]); immer wider i einsame Gägende ([[LUK.5.16]]); e ganzi Nacht vor de Waal vo de Zwölf ([[LUK.6.12-LUK.6.13]]); vor de Frag «Wär, säged ir, sig ich?» ([[LUK.9.18-LUK.9.20]]); uf em Bärg, wo sich bim Bätte sis Usgseh veränderet ([[LUK.9.28-LUK.9.29]]); und bevor en d Jünger bitted, er söll si s Bätte lehre ([[LUK.11.1]]). I [[LUK.10.21]] jublet er «im Heilige Geischt» und priist de Vatter. Bi de Taufi und bi de Verklärig erwäänt de Markus s Bätte nöd (Vergliich mit [[MRK.1.9-MRK.1.11]] und [[MRK.9.2-MRK.9.8]]).",
   MAC_G + " Di 19 Beleg schlüüssed s Bätte vo andere ii (öppe [[LUK.1.10]]; [[LUK.18.10-LUK.18.11]]) und d Ufforderig a d Jünger ([[LUK.6.28]]); [[LUK.11.1]] hät zwei Beleg."),
  ("FIND-LUK-0010", U(5, 1, 11), "key_terms",
   "Mit «Meister» (ἐπιστάτα) reden nur bei Lukas Menschen Jesus an: sieben Mal, davon sechs Mal in den Kapiteln 5–9 ([[LUK.5.5]]; [[LUK.8.24]] zweimal; [[LUK.8.45]]; [[LUK.9.33]]; [[LUK.9.49]]), sonst nur die zehn Aussätzigen ([[LUK.17.13]]). Matthäus und Markus haben das Wort nicht. Fast immer sprechen Jünger, oft in Not oder Unverständnis. Simon redet Jesus vor dem Fischfang «Meister» an und danach «Herr» (κύριε, [[LUK.5.5]]; [[LUK.5.8]]). Der Erzähler selbst nennt Jesus wiederholt «der Herr» ([[LUK.7.13]]; [[LUK.7.19]]; [[LUK.10.1]]; [[LUK.10.41]]; [[LUK.11.39]]; [[LUK.12.42]]).",
@@ -186,9 +186,9 @@ FINDINGS = [
  ("FIND-LUK-0014", U(7, 11, 17), "allusion",
   "Elija (Ἠλίας) wird im Lukasevangelium sieben Mal genannt, alle Stellen in den Kapiteln 1–9. Johannes soll «im Geist und in der Kraft Elijas» vorangehen ([[LUK.1.17]]); in Nazaret beruft sich Jesus auf Elija und Elischa ([[LUK.4.25-LUK.4.27]]). Die Auferweckung in Nain erinnert an Elija in Sarepta ([[1KI.17.17-1KI.17.24]]): Eine Witwe verliert ihren einzigen Sohn, und der Satz «und er gab ihn seiner Mutter» ([[LUK.7.15]]) steht ebenso in [[1KI.17.23]]; die Leute rufen: «Ein grosser Prophet ist unter uns aufgestanden!» ([[LUK.7.16]]). Manche meinen, in Jesus sei Elija erschienen ([[LUK.9.8]]; [[LUK.9.19]]); bei der Verklärung reden Mose und Elija mit ihm ([[LUK.9.30-LUK.9.33]]). Am Beginn des Wegs nach Jerusalem wollen Jakobus und Johannes Feuer vom Himmel fallen lassen wie Elija ([[LUK.9.54]]; vgl. [[2KI.1.10-2KI.1.12]]), und die Bitte, sich zuerst zu verabschieden, erinnert an Elischas Berufung vom Pflug weg ([[LUK.9.61-LUK.9.62]]; [[1KI.19.19-1KI.19.21]]).",
   ["LUK.1.17", "LUK.4.25-LUK.4.27", "LUK.7.11-LUK.7.17", "1KI.17.17-1KI.17.24", "LUK.9.8", "LUK.9.19", "LUK.9.30-LUK.9.33", "LUK.9.54", "2KI.1.10-2KI.1.12", "LUK.9.61-LUK.9.62", "1KI.19.19-1KI.19.21"], "high",
-  MAC + " Dass [[LUK.7.15]] in der griechischen Bibel wörtlich mit [[1KI.17.23]] übereinstimmt, wird in der Auslegung oft angeführt; eine Ausgabe der Septuaginta ist hier nicht selbst verglichen.",
+  MAC + " Dass [[LUK.7.15]] in der griechischen Bibel wörtlich mit [[1KI.17.23]] übereinstimmt (καὶ ἔδωκεν αὐτὸν τῇ μητρὶ αὐτοῦ), ist an der Septuaginta-Ausgabe von Swete nachgeschlagen (KI-Prüfung vom 2026-10-26, keine fachliche Prüfung).",
   "De Elija (Ἠλίας) wird im Lukasevangelium sibe Mal gnännt, all Stelle i de Kapitel 1–9. De Johannes söll «im Geischt und i de Chraft vom Elija» vorusgaa ([[LUK.1.17]]); z Nazaret beruefft sich de Jesus uf de Elija und de Elischa ([[LUK.4.25-LUK.4.27]]). D Uferweckig z Nain erinneret a de Elija z Sarepta ([[1KI.17.17-1KI.17.24]]): E Witwe verlüürt iren einzige Sohn, und de Satz «und er hät en sinere Mueter ggää» ([[LUK.7.15]]) staat gnau eso i [[1KI.17.23]]; d Lüüt rüefed: «En grosse Prophet isch under üs ufgstande!» ([[LUK.7.16]]). Mängi meined, im Jesus sig de Elija erschine ([[LUK.9.8]]; [[LUK.9.19]]); bi de Verklärig reded de Mose und de Elija mit ihm ([[LUK.9.30-LUK.9.33]]). Am Aafang vom Wäg uf Jerusalem wänd de Jakobus und de Johannes Füür vom Himmel la abechoo wie de Elija ([[LUK.9.54]]; vgl. [[2KI.1.10-2KI.1.12]]), und d Bitt, sich zerscht z verabschiede, erinneret dra, wie de Elischa vom Pflueg wäg brüeft worde isch ([[LUK.9.61-LUK.9.62]]; [[1KI.19.19-1KI.19.21]]).",
-  MAC_G + " Dass [[LUK.7.15]] i de griechische Bible wörtlich mit [[1KI.17.23]] überiistimmt, wird i de Uslegig oft aagfüert; e Usgaab vo de Septuaginta isch da nöd sälber vergliche."),
+  MAC_G + " Dass [[LUK.7.15]] i de griechische Bible wörtlich mit [[1KI.17.23]] überiistimmt (καὶ ἔδωκεν αὐτὸν τῇ μητρὶ αὐτοῦ), isch i de Septuaginta-Usgaab vom Swete nachegluegt (KI-Prüefig vom 2026-10-26, kei fachlichi Prüefig)."),
  ("FIND-LUK-0015", U(9, 51, 56), "literary_structure",
   "Mit [[LUK.9.51]] beginnt ein neuer Teil: «Als sich die Tage seiner Aufnahme (ἀνάλημψις) erfüllten», fasst Jesus «den festen Entschluss, nach Jerusalem zu gehen» (wörtlich: er richtete sein Angesicht fest). Schon bei der Verklärung reden Mose und Elija von seinem «Weggang» (ἔξοδος), «den er in Jerusalem vollenden sollte» ([[LUK.9.31]]). Das Ziel wird danach immer wieder genannt ([[LUK.9.53]]; [[LUK.13.22]]; [[LUK.13.33]]; [[LUK.17.11]]; [[LUK.18.31]]; [[LUK.19.11]]; [[LUK.19.28]]). Jerusalem kommt im Lukasevangelium 31 Mal vor (in den beiden griechischen Namensformen Ἰερουσαλήμ und Ἱεροσόλυμα, 27 und vier Mal). Das Evangelium beginnt im Tempel von Jerusalem ([[LUK.1.9]]) und endet dort ([[LUK.24.52-LUK.24.53]]). Der Reisebericht nennt wenige Orte: ein Dorf der Samaritaner ([[LUK.9.52]]), ein Dorf, in dem Marta wohnt ([[LUK.10.38]]); viel Raum nehmen Reden, Gleichnisse und Gespräche ein.",
   ["LUK.9.31", "LUK.9.51-LUK.9.53", "LUK.13.22", "LUK.17.11", "LUK.19.28", "LUK.1.9", "LUK.24.52-LUK.24.53"], "high",
@@ -238,9 +238,9 @@ FINDINGS = [
  ("FIND-LUK-0023", U(7, 18, 23), "quotation",
   "Auf die Frage des Täufers «Bist du der Kommende?» ([[LUK.7.19-LUK.7.20]]) antwortet Jesus nicht mit Ja oder Nein, sondern lässt berichten, was die Boten sehen und hören; der Erzähler schiebt vorher ein, dass Jesus «in jener Stunde» viele heilte ([[LUK.7.21]]). Die Liste in [[LUK.7.22]] nimmt Worte aus Jesaja auf: Blinde sehen, Lahme gehen, Taube hören ([[ISA.35.5-ISA.35.6]]), Tote werden auferweckt ([[ISA.26.19]]), den Armen wird das Evangelium verkündet ([[ISA.61.1]]). Das letzte Glied wiederholt das Programm aus Nazaret ([[LUK.4.18]]). Die Reinigung von Aussätzigen steht in keiner dieser Jesajastellen; sie erinnert an Elischa und Naaman ([[LUK.4.27]]) und an die Heilung in [[LUK.5.12-LUK.5.14]]. Die Auferweckung in Nain ist unmittelbar vorher erzählt ([[LUK.7.11-LUK.7.17]]).",
   ["LUK.7.18-LUK.7.23", "ISA.35.5-ISA.35.6", "ISA.26.19", "ISA.61.1", "LUK.4.18"], "high",
-  "Anklänge am Wortlaut; die Zuordnung zu einzelnen Jesajastellen ist in der Auslegung verbreitet. Eine Schrift aus Qumran (4Q521) nennt ähnliche Taten für die Zeit des Gesalbten, darunter Tote beleben und Armen gute Botschaft bringen; sie ist hier nicht selbst geprüft.",
+  "Anklänge am Wortlaut; die Zuordnung zu einzelnen Jesajastellen ist in der Auslegung verbreitet. Eine Schrift aus Qumran (4Q521, Fragment 2, Kolumne II) nennt ähnliche Taten für die Zeit des Gesalbten: Gefangene befreien, Blinden die Augen öffnen, Verwundete heilen, Tote beleben und Armen gute Botschaft bringen; handeln wird dort Gott, der Herr. Nachgeschlagen in einer frei zugänglichen Übersetzung (KI-Prüfung vom 2026-10-26), nicht an der Handschrift.",
   "Uf d Frag vom Täufer «Bisch du dä, wo chunnt?» ([[LUK.7.19-LUK.7.20]]) antwortet de Jesus nöd mit Ja oder Nei, sondern laat brichte, was d Bote gsehnd und ghöred; de Erzähler schiebt vorher ii, dass de Jesus «i säbere Stund» vili gheilt hät ([[LUK.7.21]]). D Lischte i [[LUK.7.22]] nimmt Wort us em Jesaja uf: Blindi gsehnd, Lahmi laufed, Taubi ghöred ([[ISA.35.5-ISA.35.6]]), Toti wärded uferweckt ([[ISA.26.19]]), de Arme wird s Evangelium verchündet ([[ISA.61.1]]). S letscht Glid widerholt s Programm vo Nazaret ([[LUK.4.18]]). Dass Ussätzigi rein wärded, staat i keinere vo dene Jesajastelle; das erinneret a de Elischa und de Naaman ([[LUK.4.27]]) und a d Heilig i [[LUK.5.12-LUK.5.14]]. D Uferweckig z Nain isch grad vorher verzellt ([[LUK.7.11-LUK.7.17]]).",
-  "Aakläng am Wortluut; d Zueornig zu einzelne Jesajastelle isch i de Uslegig verbreitet. E Schrift us Qumran (4Q521) nännt ähnlichi Tate für d Ziit vom Gsalbte, dorunder Toti läbig mache und de Arme e gueti Botschaft bringe; si isch da nöd sälber prüeft."),
+  "Aakläng am Wortluut; d Zueornig zu einzelne Jesajastelle isch i de Uslegig verbreitet. E Schrift us Qumran (4Q521, Fragmänt 2, Kolumne II) nännt ähnlichi Tate für d Ziit vom Gsalbte: Gfangeni befreie, Blinde d Auge uftue, Verwundeti heile, Toti läbig mache und de Arme e gueti Botschaft bringe; handle wird dört Gott, de Herr. Nachegluegt i ere frei zuegängliche Übersetzig (KI-Prüefig vom 2026-10-26), nöd a de Handschrift."),
  ("FIND-LUK-0024", U(8, 16, 18), "key_terms",
   "In [[LUK.8.4-LUK.8.21]] ist «hören» (ἀκούω) das Leitwort: neun Mal in 18 Versen. Das Gleichnis vom Sämann endet mit dem Ruf «Wer Ohren hat zum Hören, der höre!» ([[LUK.8.8]]); die Deutung beschreibt vier Arten, das Wort zu hören ([[LUK.8.11-LUK.8.15]]); es folgt «Achtet also darauf, wie ihr hört!» ([[LUK.8.18]]). Der Abschnitt schliesst mit der Szene, in der Mutter und Brüder Jesu draussen stehen: «Meine Mutter und meine Brüder sind die, die das Wort Gottes hören und tun» ([[LUK.8.19-LUK.8.21]]). Ähnlich antwortet Jesus später auf die Seligpreisung seiner Mutter: «Vielmehr selig, die das Wort Gottes hören und bewahren!» ([[LUK.11.27-LUK.11.28]]). Bei Lukas steht die Szene mit der Familie nach den Gleichnissen, bei Markus davor, nachdem die Angehörigen ihn zuvor für «von Sinnen» gehalten haben (Vergleich mit [[MRK.3.21]] und [[MRK.3.31-MRK.3.35]]).",
   ["LUK.8.4-LUK.8.21", "LUK.11.27-LUK.11.28", "LUK.6.47-LUK.6.49"], "high", MAC,
@@ -573,9 +573,9 @@ QUESTIONS = [
   "D Handschrifte sind teilt; de SBLGNT liist mit WH und NA28 «zweiesibezg», Tregelles und RP «sibezg» (lueg d Alternative). D Völkertafle i [[GEN.10.1-GEN.10.32]] zellt im hebräische Text 70, i de griechische Bible 72 Völker; dänn stüend d Zaal für d Sändig a alli Völker. Möglich isch au en Aaklang a di sibezg Ältischte, wo em Mose hälfed ([[NUM.11.16-NUM.11.17]]; [[NUM.11.24-NUM.11.26]]; mit em Eldad und em Medad sind s 72). De Bruce M. Metzger hät d Frag i me eigete Ufsatz («Seventy or Seventy-Two Disciples?») für nöd sicher entscheidbar ghalte."),
  ("QUESTION-LUK-0003", U(11, 37, 54),
   "Was meint «Gebt als Almosen, was darin ist, und seht, alles ist für euch rein» ([[LUK.11.41]])?",
-  "Erwogen werden: Gebt den Inhalt von Becher und Schüssel den Armen, dann ist das Gefäss rein; gebt das Innere, euer Herz, hin; oder eine Fehlübersetzung eines aramäischen Wortes für «reinigen», das ähnlich klang wie «Almosen geben» (vorgeschlagen unter anderen von Julius Wellhausen). Bei Matthäus heisst es: «Reinige zuerst das Innere des Bechers» (Vergleich mit [[MAT.23.26]]). Siehe die Übersetzungsentscheidung zu [[LUK.11.41]].",
+  "Erwogen werden: Gebt den Inhalt von Becher und Schüssel den Armen, dann ist das Gefäss rein; gebt das Innere, euer Herz, hin; oder eine Fehlübersetzung eines aramäischen Wortes für «reinigen», das ähnlich klang wie «Almosen geben» (vorgeschlagen unter anderen von Julius Wellhausen; Werkangabe nicht bibliographisch geprüft). Bei Matthäus heisst es: «Reinige zuerst das Innere des Bechers» (Vergleich mit [[MAT.23.26]]). Siehe die Übersetzungsentscheidung zu [[LUK.11.41]].",
   "Was meint «Gänd als Almose, was drin isch, und lueged, alles isch für eu rein» ([[LUK.11.41]])?",
-  "Erwoge wärded: Gänd de Inhalt vo Bächer und Schüssle de Arme, dänn isch s Gfäss rein; gänd s Inner, eues Härz, häre; oder e falschi Übersetzig vo me aramäische Wort für «reinige», wo ähnlich tönt hät wie «Almose gää» (vorgschlage under anderem vom Julius Wellhausen). Bim Matthäus heisst s: «Putz zerscht s Inner vom Bächer» (Vergliich mit [[MAT.23.26]]). Lueg d Übersetzigsentscheidig zu [[LUK.11.41]]."),
+  "Erwoge wärded: Gänd de Inhalt vo Bächer und Schüssle de Arme, dänn isch s Gfäss rein; gänd s Inner, eues Härz, häre; oder e falschi Übersetzig vo me aramäische Wort für «reinige», wo ähnlich tönt hät wie «Almose gää» (vorgschlage under anderem vom Julius Wellhausen; Werkaagaab nöd bibliographisch prüeft). Bim Matthäus heisst s: «Putz zerscht s Inner vom Bächer» (Vergliich mit [[MAT.23.26]]). Lueg d Übersetzigsentscheidig zu [[LUK.11.41]]."),
  ("QUESTION-LUK-0004", U(11, 37, 54),
   "Wer ist «Secharja, der zwischen dem Altar und dem Haus umkam» ([[LUK.11.51]])?",
   "Am nächsten liegt der Priester Secharja, Sohn Jojadas, der im Vorhof des Tempels gesteinigt wurde ([[2CH.24.20-2CH.24.22]]). Da die Chronikbücher in der hebräischen Bibel am Schluss stehen, umfasste «von Abel bis Secharja» dann alle Morde der Schrift vom ersten bis zum letzten Buch; ob diese Reihenfolge der Bücher zur Zeit Jesu schon feststand, ist umstritten. Matthäus nennt ihn «Sohn des Barachias» wie den Propheten Sacharja (Vergleich mit [[MAT.23.35]] und [[ZEC.1.1]]). Siehe BG-MAT-4009.",
@@ -668,14 +668,14 @@ BACKGROUND = [
   "D Mischna isch um 200 n. Chr. ufgschribe worde und git d Praxis im Tämpel nöd i jedem Fall gnau wider. Wie vil Prieschter e Dienschtgruppe umfasst hät und wie lang en Dienscht duuret hät, weiss mer nöd sicher.",
   []),
  ("BG-LUK-0003", U(2, 1, 20), "LUK.2.1-LUK.2.5", TEMPEL, "possible", "Augustus, Quirinius und die Eintragung",
-  "Augustus war von 27 v. Chr. bis 14 n. Chr. Kaiser. Er liess die römischen Bürger mehrmals zählen und in den Provinzen Land und Bevölkerung für die Steuer erfassen; in Ägypten sind solche Eintragungen in regelmässigen Abständen durch erhaltene Papyri belegt. Josephus berichtet, dass Publius Sulpicius Quirinius nach der Absetzung des Archelaus (6 n. Chr.) als Statthalter Syriens Judäa schätzen liess und dass dagegen ein Aufstand unter Judas aus Galiläa entstand (vgl. [[ACT.5.37]]). Dass jeder in die Stadt seiner Vorfahren gehen musste ([[LUK.2.3]]), ist sonst nicht belegt; ein Erlass des Präfekten von Ägypten aus dem Jahr 104 n. Chr. ordnet jedoch an, dass Leute, die sich auswärts aufhielten, für die Eintragung an ihren Wohnort zurückkehren.",
+  "Augustus war von 27 v. Chr. bis 14 n. Chr. Kaiser. Nach seinem Tatenbericht liess er die römischen Bürger dreimal zählen (28 und 8 v. Chr. sowie 14 n. Chr.); in den Provinzen wurden Land und Bevölkerung für die Steuer erfasst, in Ägypten belegt durch erhaltene Papyri. Josephus berichtet, dass Publius Sulpicius Quirinius nach der Absetzung des Archelaus (6 n. Chr.) als Statthalter Syriens Judäa schätzen liess und dass dagegen ein Aufstand unter Judas aus Galiläa entstand (vgl. [[ACT.5.37]]). Dass jeder in die Stadt seiner Vorfahren gehen musste ([[LUK.2.3]]), ist sonst nicht belegt; ein Erlass des Präfekten von Ägypten aus dem Jahr 104 n. Chr. ordnet jedoch an, dass Leute, die sich auswärts aufhielten, für die Eintragung an ihren Wohnort zurückkehren.",
   "Wie die Eintragung unter Quirinius mit der Geburt Jesu unter Herodes dem Grossen zusammenpasst, ist ungelöst (QUESTION-LUK-0001). Eine einzige, reichsweite Schätzung unter Augustus ist ausserhalb des Lukasevangeliums nicht belegt. Ob der ägyptische Erlass mit der Herkunftsstadt oder nur mit dem Wohnort rechnet, ist für den Vergleich wichtig und wird verschieden beurteilt.",
   ["LUK.2.1-LUK.2.5", "ACT.5.37"],
-  ["Josephus, Jüdische Altertümer 17,355; 18,1–4; 18,26", "Augustus, Tatenbericht (Res gestae) 8",
+  ["Josephus, Jüdische Altertümer 17,355 (in der Ausgabe bei lexundria.com als 17,354 gezählt); 18,1–4; 18,26", "Augustus, Tatenbericht (Res gestae) 8 (Zählungen der römischen Bürger)",
    "Erlass des Präfekten Gaius Vibius Maximus (Papyrus London 904, 104 n. Chr.)"],
   [],
   "Augustus, Quirinius und d Iitragig",
-  "De Augustus isch vo 27 v. Chr. bis 14 n. Chr. Kaiser gsii. Er hät d römische Bürger meermaals la zelle und i de Provinze Land und Bevölkerig für d Stüür la erfasse; z Ägypte sind settigi Iitragige i regelmässige Abständ dur erhalteni Papyri belegt. De Josephus brichtet, dass de Publius Sulpicius Quirinius nach de Absetzig vom Archelaus (6 n. Chr.) als Statthalter vo Syrie Judäa hät la schätze und dass dergäge en Ufstand under em Judas us Galiläa uufchoo isch (vgl. [[ACT.5.37]]). Dass jede i d Stadt vo sine Vorfahre hät müese gaa ([[LUK.2.3]]), isch süscht nöd belegt; en Erlass vom Präfekt vo Ägypte us em Jahr 104 n. Chr. ordnet aber aa, dass Lüüt, wo sich uswärts ufghalte händ, für d Iitragig a iren Wonort zruggchered.",
+  "De Augustus isch vo 27 v. Chr. bis 14 n. Chr. Kaiser gsii. Nach sim Tatebricht hät er d römische Bürger drüü Mal la zelle (28 und 8 v. Chr. und 14 n. Chr.); i de Provinze sind Land und Bevölkerig für d Stüür erfasst worde, z Ägypte belegt dur erhalteni Papyri. De Josephus brichtet, dass de Publius Sulpicius Quirinius nach de Absetzig vom Archelaus (6 n. Chr.) als Statthalter vo Syrie Judäa hät la schätze und dass dergäge en Ufstand under em Judas us Galiläa uufchoo isch (vgl. [[ACT.5.37]]). Dass jede i d Stadt vo sine Vorfahre hät müese gaa ([[LUK.2.3]]), isch süscht nöd belegt; en Erlass vom Präfekt vo Ägypte us em Jahr 104 n. Chr. ordnet aber aa, dass Lüüt, wo sich uswärts ufghalte händ, für d Iitragig a iren Wonort zruggchered.",
   "Wie d Iitragig under em Quirinius zur Geburt vo Jesus under em Herodes em Grosse passt, isch unglöst (QUESTION-LUK-0001). E einzigi Schätzig fürs ganz Riich under em Augustus isch usserhalb vom Lukasevangelium nöd belegt. Öb de ägyptisch Erlass mit de Härkunftsstadt oder nu mit em Wonort rächnet, isch für de Vergliich wichtig und wird verschide beurteilt.",
   []),
  ("BG-LUK-0004", U(2, 1, 20), "LUK.2.7", TEMPEL, "possible", "Futterkrippe und «Unterkunft»",
@@ -725,12 +725,12 @@ BACKGROUND = [
   []),
  ("BG-LUK-0009", U(3, 1, 20), "LUK.3.1-LUK.3.2", GAL, "probable", "Die Herrscher im fünfzehnten Jahr des Tiberius",
   "Tiberius wurde 14 n. Chr. Nachfolger des Augustus. Sein fünfzehntes Jahr fällt je nach Zählung (ab dem Tod des Augustus oder ab einer früheren Mitregentschaft, nach römischem oder syrischem Kalender) auf etwa 27 bis 29 n. Chr. Pontius Pilatus war Statthalter von Judäa von etwa 26 bis 36 n. Chr. Zwei Söhne Herodes' des Grossen regierten als Tetrarchen: Herodes Antipas über Galiläa und Peräa (4 v. Chr. bis 39 n. Chr.), Philippus über die Gebiete nordöstlich des Sees (4 v. Chr. bis 34 n. Chr.). Abilene lag nordwestlich von Damaskus. Kajaphas war von etwa 18 bis 36 n. Chr. Hohepriester; sein Schwiegervater Hannas war es von 6 bis 15 n. Chr. gewesen und blieb einflussreich (vgl. BG-JHN-3004).",
-  "Josephus kennt einen Lysanias, der um 36 v. Chr. getötet wurde; ob es später einen Tetrarchen gleichen Namens gab, wie eine Weihinschrift aus Abila nahelegt, oder ob Lukas sich irrt, ist umstritten. Die genauen Amtsjahre sind teils erschlossen. Dass Lukas zwei Hohepriester nennt, obwohl das Wort in der Einzahl steht, spiegelt wohl den Einfluss des Hannas.",
-  ["LUK.3.1-LUK.3.2", "JHN.18.13", "ACT.4.6"], ["Josephus, Jüdische Altertümer 15,92; 18,26–35; 18,95", "Weihinschrift aus Abila (Lysanias als Tetrarch)"],
+  "Josephus kennt einen Lysanias, den Antonius in den 30er-Jahren v. Chr. töten liess; ob es später einen Tetrarchen gleichen Namens gab, wie eine Weihinschrift aus Abila nahelegt, oder ob Lukas sich irrt, ist umstritten. Die genauen Amtsjahre sind teils erschlossen. Dass Lukas zwei Hohepriester nennt, obwohl das Wort in der Einzahl steht, spiegelt wohl den Einfluss des Hannas.",
+  ["LUK.3.1-LUK.3.2", "JHN.18.13", "ACT.4.6"], ["Josephus, Jüdische Altertümer 15,92; 18,26–35; 18,95", "Weihinschrift aus Abila (Lysanias als Tetrarch; CIG 4521)"],
   [],
   "D Herrscher im füfzähte Jahr vom Tiberius",
   "De Tiberius isch 14 n. Chr. Nachfolger vom Augustus worde. Sis füfzäht Jahr fallt je nach Zellig (ab em Tod vom Augustus oder ab ere früenere Mitregentschaft, nach em römische oder em syrische Kaländer) uf öppe 27 bis 29 n. Chr. De Pontius Pilatus isch vo öppe 26 bis 36 n. Chr. Statthalter vo Judäa gsii. Zwee Söhn vom Herodes em Grosse händ als Tetrarche regiert: de Herodes Antipas über Galiläa und Peräa (4 v. Chr. bis 39 n. Chr.), de Philippus über d Gebiet nordöschtlich vom See (4 v. Chr. bis 34 n. Chr.). Abilene isch nordweschtlich vo Damaskus gläge. De Kajaphas isch vo öppe 18 bis 36 n. Chr. Hoheprieschter gsii; sin Schwigervatter Hannas isch es vo 6 bis 15 n. Chr. gsii und isch iiflussriich blibe (vgl. BG-JHN-3004).",
-  "De Josephus kännt en Lysanias, wo um 36 v. Chr. umbracht worde isch; öb s spööter en Tetrarch mit em gliiche Name ggää hät, wie s e Weihinschrift us Abila nahelegt, oder öb sich de Lukas irrt, isch umstritte. Di gnaue Amtsjahr sind zum Teil erschlosse. Dass de Lukas zwee Hoheprieschter nännt, obwohl s Wort i de Einzaal staat, spieglet wohl de Iifluss vom Hannas.",
+  "De Josephus kännt en Lysanias, wo de Antonius i de 30er-Jahr v. Chr. hät la umbringe; öb s spööter en Tetrarch mit em gliiche Name ggää hät, wie s e Weihinschrift us Abila nahelegt, oder öb sich de Lukas irrt, isch umstritte. Di gnaue Amtsjahr sind zum Teil erschlosse. Dass de Lukas zwee Hoheprieschter nännt, obwohl s Wort i de Einzaal staat, spieglet wohl de Iifluss vom Hannas.",
   []),
  ("BG-LUK-0010", U(4, 14, 30), "LUK.4.16-LUK.4.21", GAL, "probable", "Lesung aus den Propheten und das Erlassjahr",
   "Im Synagogengottesdienst wurde am Sabbat aus der Tora und danach aus den Propheten gelesen; anschliessend konnte ein Kundiger auslegen (vgl. [[ACT.13.15]]). Man stand zum Lesen auf und setzte sich zum Lehren ([[LUK.4.16]]; [[LUK.4.20]]). Die Schriften waren Buchrollen; eine vollständige Jesajarolle aus der Zeit vor Christus wurde bei Qumran gefunden. Die Rolle nahm ein Gehilfe (ὑπηρέτης, [[LUK.4.20]]) wieder entgegen, ein Synagogendiener. Das «Gnadenjahr» erinnert an das Erlassjahr: Alle 50 Jahre sollte «Freilassung» (hebräisch דְּרוֹר, griechisch ἄφεσις) ausgerufen werden; Land fiel an die Familien zurück, und verschuldete Israeliten wurden frei ([[LEV.25.8-LEV.25.17]]; [[LEV.25.39-LEV.25.41]]). Ein Text aus Qumran (11QMelchisedek) verbindet [[ISA.61.1-ISA.61.2]] mit dem Erlassjahr und mit einem endzeitlichen Befreier.",
@@ -743,18 +743,18 @@ BACKGROUND = [
   "Öb d Läsig us de Prophete zur Ziit vo Jesus scho fescht gordnet gsii isch oder frei gwählt worde isch, weiss mer nöd; [[LUK.4.17]] laat beides zue («hät er d Stell gfunde»). Öb s Erlassjahr je regelmässig ghalte worde isch, isch fraglich.",
   ["Gehilf, Diener; Synagogediener", "Freilassig (im Erlassjahr)", "Freilassig; Erlass, Vergäbig"]),
  ("BG-LUK-0011", U(7, 1, 10), "LUK.7.2-LUK.7.7", GAL, "possible", "Ein Hauptmann als Wohltäter",
-  "Ein Hauptmann (ἑκατοντάρχης) befehligte rund hundert Soldaten. In Kafarnaum, im Gebiet des Herodes Antipas, diente er wohl in dessen Truppen, die nach römischem Muster organisiert waren und auch Nichtjuden umfassten (vgl. BG-MAT-2001). In der antiken Welt stifteten reiche Leute öffentliche Bauten und wurden dafür geehrt; Inschriften belegen auch nichtjüdische Stifter von Synagogen, etwa Julia Severa in Akmonia (Kleinasien, 1. Jahrhundert). Dass jüdische Älteste sich bei Jesus für ihn einsetzen ([[LUK.7.3-LUK.7.5]]), entspricht dem Verhältnis von Gönner und Begünstigten: Wer gestiftet hatte, durfte auf Fürsprache zählen. Der Hauptmann schickt erst Älteste, dann Freunde und kommt nicht selbst, vielleicht auch, um Jesus nicht in das Haus eines Nichtjuden zu bitten ([[LUK.7.6-LUK.7.7]]; vgl. [[ACT.10.28]]).",
-  "Dass der Hauptmann Nichtjude war, sagt Lukas nur indirekt ([[LUK.7.9]]: «nicht einmal in Israel»). Eine Synagoge in Kafarnaum aus dem 1. Jahrhundert ist archäologisch nicht sicher nachgewiesen (vgl. BG-MRK-1003). Ob Rücksicht auf Reinheit der Grund für die Boten ist, sagt der Text nicht; er nennt die eigene Unwürdigkeit ([[LUK.7.6-LUK.7.7]]).",
-  ["LUK.7.2-LUK.7.10", "ACT.10.28"], ["Inschrift der Julia Severa aus Akmonia (1. Jahrhundert n. Chr.)"],
+  "Ein Hauptmann (ἑκατοντάρχης) befehligte rund hundert Soldaten. In Kafarnaum, im Gebiet des Herodes Antipas, diente er wohl in dessen Truppen, die nach römischem Muster organisiert waren und auch Nichtjuden umfassten (vgl. BG-MAT-2001). In der antiken Welt stifteten reiche Leute öffentliche Bauten und wurden dafür geehrt; auch Nichtjuden konnten Synagogen fördern: Eine Inschrift aus Akmonia (Kleinasien, um 100 n. Chr.) nennt einen Bau, den Julia Severa errichtet hatte und den die jüdische Gemeinde als Synagoge nutzte; Julia Severa war nach einer anderen Inschrift Priesterin im Kaiserkult, also wohl keine Jüdin. Dass jüdische Älteste sich bei Jesus für ihn einsetzen ([[LUK.7.3-LUK.7.5]]), entspricht dem Verhältnis von Gönner und Begünstigten: Wer gestiftet hatte, durfte auf Fürsprache zählen. Der Hauptmann schickt erst Älteste, dann Freunde und kommt nicht selbst, vielleicht auch, um Jesus nicht in das Haus eines Nichtjuden zu bitten ([[LUK.7.6-LUK.7.7]]; vgl. [[ACT.10.28]]).",
+  "Dass der Hauptmann Nichtjude war, sagt Lukas nur indirekt ([[LUK.7.9]]: «nicht einmal in Israel»). Eine Synagoge in Kafarnaum aus dem 1. Jahrhundert ist archäologisch nicht sicher nachgewiesen (vgl. BG-MRK-1003). Ob Rücksicht auf Reinheit der Grund für die Boten ist, sagt der Text nicht; er nennt die eigene Unwürdigkeit ([[LUK.7.6-LUK.7.7]]). Ob Julia Severa den Bau schon für die Synagoge errichtete oder ob die Gemeinde ihn später übernahm, sagt die Inschrift nicht.",
+  ["LUK.7.2-LUK.7.10", "ACT.10.28"], ["Synagogeninschrift aus Akmonia mit Julia Severa (MAMA VI 264, um 100 n. Chr.); Julia Severa als Priesterin im Kaiserkult: MAMA VI 263"],
   [("grc", "ἑκατοντάρχης", "Hauptmann, Befehlshaber über hundert")],
   "En Hauptmaa als Wohltäter",
-  "En Hauptmaa (ἑκατοντάρχης) hät öppe hundert Soldate befole. Z Kafarnaum, im Gebiet vom Herodes Antipas, hät er wohl i dem sine Truppe dienet, wo nach römischem Muschter organisiert gsii sind und au Nöd-Jude umfasst händ (vgl. BG-MAT-2001). I de antike Wält händ riichi Lüüt öffentlichi Baute gstiftet und sind defür gehrt worde; Inschrifte beleged au nöd-jüdischi Stifter vo Synagoge, öppe d Julia Severa z Akmonia (Chliiasie, 1. Jahrhundert). Dass sich jüdischi Ältischti bim Jesus für ihn iisetzed ([[LUK.7.3-LUK.7.5]]), entspricht em Verhältnis vo Gönner und Begünschtigte: Wär öppis gstiftet hät, hät uf Fürsprach dörfe zelle. De Hauptmaa schickt zerscht Ältischti, dänn Fründe und chunnt nöd sälber, villicht au, zum de Jesus nöd is Huus vo me Nöd-Jud z bitte ([[LUK.7.6-LUK.7.7]]; vgl. [[ACT.10.28]]).",
-  "Dass de Hauptmaa kei Jud gsii isch, seit de Lukas nu indiräkt ([[LUK.7.9]]: «nöd emal in Israel»). E Synagoge z Kafarnaum us em 1. Jahrhundert isch archäologisch nöd sicher nachgwise (vgl. BG-MRK-1003). Öb Rücksicht uf d Reinheit de Grund für d Bote isch, seit de Text nöd; er nännt di eige Unwürdigkeit ([[LUK.7.6-LUK.7.7]]).",
+  "En Hauptmaa (ἑκατοντάρχης) hät öppe hundert Soldate befole. Z Kafarnaum, im Gebiet vom Herodes Antipas, hät er wohl i dem sine Truppe dienet, wo nach römischem Muschter organisiert gsii sind und au Nöd-Jude umfasst händ (vgl. BG-MAT-2001). I de antike Wält händ riichi Lüüt öffentlichi Baute gstiftet und sind defür gehrt worde; au Nöd-Jude händ Synagoge chöne fördere: E Inschrift us Akmonia (Chliiasie, um 100 n. Chr.) nännt en Bau, wo d Julia Severa errichtet hät und wo d jüdisch Gmeind als Synagoge bruucht hät; d Julia Severa isch nach ere andere Inschrift Prieschterin im Kaiserkult gsii, also wohl kei Jüdin. Dass sich jüdischi Ältischti bim Jesus für ihn iisetzed ([[LUK.7.3-LUK.7.5]]), entspricht em Verhältnis vo Gönner und Begünschtigte: Wär öppis gstiftet hät, hät uf Fürsprach dörfe zelle. De Hauptmaa schickt zerscht Ältischti, dänn Fründe und chunnt nöd sälber, villicht au, zum de Jesus nöd is Huus vo me Nöd-Jud z bitte ([[LUK.7.6-LUK.7.7]]; vgl. [[ACT.10.28]]).",
+  "Dass de Hauptmaa kei Jud gsii isch, seit de Lukas nu indiräkt ([[LUK.7.9]]: «nöd emal in Israel»). E Synagoge z Kafarnaum us em 1. Jahrhundert isch archäologisch nöd sicher nachgwise (vgl. BG-MRK-1003). Öb Rücksicht uf d Reinheit de Grund für d Bote isch, seit de Text nöd; er nännt di eige Unwürdigkeit ([[LUK.7.6-LUK.7.7]]). Öb d Julia Severa de Bau scho für d Synagoge errichtet hät oder öb d Gmeind en spööter übernoo hät, seit d Inschrift nöd.",
   ["Hauptmaa, Befählshaber über hundert"]),
  ("BG-LUK-0012", U(7, 11, 17), "LUK.7.11-LUK.7.15", GAL, "probable", "Bestattung in Nain und eine Witwe ohne Sohn",
   "Nain lag im Süden Galiläas am Nordhang des Hügels More, etwa zehn Kilometer südöstlich von Nazaret; heute heisst das Dorf Nein. Tote wurden am Todestag ausserhalb der Siedlung bestattet; man trug sie auf einer offenen Bahre (σορός), begleitet von Angehörigen, Klagefrauen und Flötenspielern (vgl. BG-MAT-2006). Nach der Mischna soll selbst der Ärmste für die Bestattung seiner Frau mindestens zwei Flöten und eine Klagefrau stellen. Eine Witwe, die ihren einzigen Sohn verlor, war meist ohne Versorgung und ohne Beistand vor Gericht; die Schrift nennt Witwen und Waisen immer wieder als Schutzbedürftige ([[DEU.10.18]]; [[DEU.24.17]]). Wer einen Toten berührte, wurde nach dem Gesetz unrein ([[NUM.19.11-NUM.19.16]]).",
   "Die Lage von Nain ist durch die Überlieferung des Ortsnamens wahrscheinlich, aber nicht durch Funde aus dem 1. Jahrhundert gesichert. Ob die Regel der Mischna schon zur Zeit Jesu galt, ist offen. Ob das Berühren der Bahre ([[LUK.7.14]]) als Verunreinigung gemeint ist, sagt der Text nicht.",
-  ["LUK.7.11-LUK.7.15", "DEU.10.18", "NUM.19.11-NUM.19.16"], ["Mischna, Ketubbot 4,4"],
+  ["LUK.7.11-LUK.7.15", "DEU.10.18", "NUM.19.11-NUM.19.16"], ["Mischna, Ketubbot 4,4 (Ausspruch des Rabbi Jehuda)"],
   [("grc", "σορός", "Totenbahre; Sarg")],
   "Beerdigung z Nain und e Witwe ohni Sohn",
   "Nain isch im Süde vo Galiläa am Nordhang vom Hügel More gläge, öppe zää Kilometer südöschtlich vo Nazaret; hüt heisst s Dorf Nein. Toti sind am Tag, wo si gstorbe sind, usserhalb vo de Siedlig beerdiget worde; mer hät si uf ere offne Bahre (σορός) treit, begleitet vo Aaghörige, Klaagfraue und Flötespiler (vgl. BG-MAT-2006). Nach de Mischna söll sogar de Ärmscht für d Beerdigung vo sinere Frau mindeschtens zwei Flöte und e Klaagfrau stelle. E Witwe, wo iren einzige Sohn verlore hät, isch meischtens ohni Versorgig und ohni Biistand vor Gricht gsii; d Schrift nännt Witwe und Waise immer wider als Mänsche, wo Schutz bruuched ([[DEU.10.18]]; [[DEU.24.17]]). Wär en Tote aagrüert hät, isch nach em Gsetz unrein worde ([[NUM.19.11-NUM.19.16]]).",
@@ -782,7 +782,7 @@ BACKGROUND = [
   "Der kürzeste Weg von Galiläa nach Jerusalem führte durch Samarien; nach Josephus dauerte die Reise so drei Tage. Die Samaritaner verehrten Gott auf dem Berg Garizim, wo ihr Tempel stand, bis ihn der jüdische Herrscher Johannes Hyrkan im späten 2. Jahrhundert v. Chr. zerstörte (zu den Samaritanern allgemein BG-JHN-1005 und BG-MAT-2010). Wer zum Fest nach Jerusalem zog, bestritt damit den Anspruch des Garizim. Josephus berichtet, dass unter dem Statthalter Cumanus (um 50 n. Chr.) Festpilger aus Galiläa in einem samaritanischen Dorf getötet wurden, was blutige Vergeltung auslöste. Dass ein Dorf Jesus nicht aufnimmt, «weil er unterwegs nach Jerusalem war» ([[LUK.9.53]]), entspricht dieser Spannung.",
   "Josephus sagt, die Galiläer seien gewohnt gewesen, zu den Festen durch Samarien zu ziehen; wie oft sie dabei Feindseligkeit erlebten, ist nicht bekannt. Das Jahr der Zerstörung des Garizim-Tempels wird zwischen etwa 128 und 107 v. Chr. angesetzt.",
   ["LUK.9.51-LUK.9.56", "JHN.4.9", "JHN.4.20"],
-  ["Josephus, Leben (Vita) 269", "Josephus, Jüdische Altertümer 13,254–256; 20,118–136", "Josephus, Jüdischer Krieg 2,232–246"],
+  ["Josephus, Leben (Vita) 269", "Josephus, Jüdische Altertümer 13,255–256; 20,118–136", "Josephus, Jüdischer Krieg 2,232–246"],
   [],
   "Fäschtpilger us Galiläa in Samarie",
   "De chürzischt Wäg vo Galiläa uf Jerusalem hät dur Samarie gfüert; nach em Josephus hät d Reis eso drüü Täg duuret. D Samaritaner händ Gott uf em Bärg Garizim verehrt, wo ire Tämpel gstande isch, bis en de jüdisch Herrscher Johannes Hyrkan im spoote 2. Jahrhundert v. Chr. zerstört hät (zu de Samaritaner allgemein BG-JHN-1005 und BG-MAT-2010). Wär as Fäscht uf Jerusalem gange isch, hät demit em Garizim sin Aaspruch bestritte. De Josephus brichtet, dass under em Statthalter Cumanus (um 50 n. Chr.) Fäschtpilger us Galiläa i me samaritanische Dorf umbracht worde sind, was e bluetigi Vergältig usglöst hät. Dass es Dorf de Jesus nöd ufnimmt, «wil er understwägs uf Jerusalem gsii isch» ([[LUK.9.53]]), entspricht dere Spannig.",
@@ -790,12 +790,12 @@ BACKGROUND = [
   []),
  ("BG-LUK-0016", U(10, 25, 37), "LUK.10.30-LUK.10.35", GAL, "possible", "Priester, Levit und ein «Halbtoter»",
   "Der Weg von Jerusalem nach Jericho führt rund 25 Kilometer durch die Wüste Juda und fällt dabei um etwa 1000 Meter (zum Weg vgl. BG-MRK-2001). Priester und Leviten wohnten nicht alle in Jerusalem; sie kamen für ihren Dienst in den Tempel (vgl. BG-LUK-0002). Nach [[LEV.21.1-LEV.21.3]] durfte sich ein Priester ausser an nahen Angehörigen nicht an einem Toten verunreinigen; wer einen Toten berührte, war sieben Tage unrein ([[NUM.19.11]]). Der Überfallene lag «halbtot» da ([[LUK.10.30]]); ob er lebte, war von weitem nicht zu erkennen. Öl und Wein waren übliche Mittel zur Wundpflege: Wein reinigte, Öl linderte (vgl. [[ISA.1.6]]). Zwei Denare, zwei Tageslöhne, reichten für mehrere Tage Unterkunft und Kost.",
-  "Ob Lukas das Vorübergehen mit Reinheitsvorschriften erklären will, ist umstritten: Priester und Levit gehen «hinab», also von Jerusalem weg, und die spätere jüdische Überlieferung verpflichtet jeden, auch Priester, einen unbestatteten Toten zu begraben. Die Angabe zur Kaufkraft von zwei Denaren ist eine ungefähre Schätzung.",
-  ["LUK.10.30-LUK.10.35", "LEV.21.1-LEV.21.3", "NUM.19.11", "ISA.1.6"], [],
+  "Ob Lukas das Vorübergehen mit Reinheitsvorschriften erklären will, ist umstritten: Priester und Levit gehen «hinab», also von Jerusalem weg, und die spätere jüdische Überlieferung verpflichtet jeden, selbst den Hohepriester, einen Toten zu begraben, um den sich niemand kümmert. Die Angabe zur Kaufkraft von zwei Denaren ist eine ungefähre Schätzung.",
+  ["LUK.10.30-LUK.10.35", "LEV.21.1-LEV.21.3", "NUM.19.11", "ISA.1.6"], ["Mischna, Nazir 7,1 (Bestattung eines Toten, um den sich niemand kümmert)"],
   [],
   "Prieschter, Levit und en «Halbtote»",
   "De Wäg vo Jerusalem uf Jericho füert öppe 25 Kilometer dur d Wüeschti Juda und gaat debii um öppe 1000 Meter abe (zum Wäg vgl. BG-MRK-2001). Prieschter und Levite händ nöd alli z Jerusalem gwont; si sind für ire Dienscht in Tämpel choo (vgl. BG-LUK-0002). Nach [[LEV.21.1-LEV.21.3]] hät sich en Prieschter usser a nööche Aaghörige nöd a me Tote dörfe verunreinige; wär en Tote aagrüert hät, isch sibe Täg unrein gsii ([[NUM.19.11]]). De Überfallni isch «halbtot» dagläge ([[LUK.10.30]]); öb er no gläbt hät, hät me vo wiitem nöd chöne gseh. Öl und Wii sind üblichi Mittel für d Wundpfläg gsii: Wii hät greiniget, Öl hät glinderet (vgl. [[ISA.1.6]]). Zwee Denar, zwee Taglöhn, händ für meereri Täg Underkunft und Ässe glänget.",
-  "Öb de Lukas s Verbiigaa mit Reinheitsvorschrifte erkläre wott, isch umstritte: De Prieschter und de Levit gönd «abe», also vo Jerusalem wäg, und di spööter jüdisch Überliferig verpflichtet jede, au en Prieschter, en unbeerdigte Tote z begrabe. D Aagaab zur Chaufchraft vo zwee Denar isch e ungfääri Schätzig.",
+  "Öb de Lukas s Verbiigaa mit Reinheitsvorschrifte erkläre wott, isch umstritte: De Prieschter und de Levit gönd «abe», also vo Jerusalem wäg, und di spööter jüdisch Überliferig verpflichtet jede, sogar de Hoheprieschter, en Tote z begrabe, um dä sich niemer kümmeret. D Aagaab zur Chaufchraft vo zwee Denar isch e ungfääri Schätzig.",
   []),
  ("BG-LUK-0017", U(10, 38, 42), "LUK.10.39", GAL, "probable", "Zu den Füssen eines Lehrers sitzen",
   "Schüler sassen zu den Füssen ihres Lehrers; Paulus sagt von sich, er sei «zu den Füssen Gamaliels» erzogen worden ([[ACT.22.3]]). Ein Spruch in der Mischna rät: «Dein Haus sei ein Versammlungsort für die Weisen; setz dich in den Staub ihrer Füsse und trink ihre Worte mit Durst.» Dass eine Frau diesen Platz einnimmt, war ungewöhnlich; Frauen sind als Schülerinnen eines Lehrers selten belegt. Die Gastgeberin war für die Bewirtung zuständig; ein Gast mit seinen Begleitern bedeutete viel Arbeit ([[LUK.10.40]]).",
@@ -834,6 +834,107 @@ BACKGROUND = [
   "D Wätterregle gälted im Grosse; im Einzelne wächsled Wind und Rääge.",
   []),
 ]
+
+
+# Prüfung der antiken Quellenangaben am Text (docs/QUELLENPRUEFUNG.md): getrennte KI-Instanz, 2026-10-26.
+_SC_METHOD = ("KI-Prüfung (Claude, getrennte Prüf-Instanz): Stellen in frei zugänglichen Textausgaben bzw. Übersetzungen "
+              "nachgeschlagen; keine fachliche Prüfung, keine Prüfung an Handschriften oder kritischen Ausgaben.")
+_LEX = "Whiston-Übersetzung mit Niese-Zählung, lexundria.com"
+
+
+def _sc(result, *checked):
+    return {"date": "2026-10-26", "result": result, "method_de": _SC_METHOD,
+            "checked": [{"source": q, "found_at": u, "finding_de": f} for q, u, f in checked]}
+
+
+SOURCE_CHECKS = {
+ "BG-LUK-0001": _sc("confirmed",
+    ("Josephus, Gegen Apion 1,1; 2,1", f"https://ccel.org/ccel/josephus/complete.iv.i.html (Whiston); https://lexundria.com/j_ap/2.1/wst ({_LEX})",
+     "1,1 widmet die Schrift dem «hochverehrten» (most excellent) Epaphroditus; 2,1 redet ihn erneut an und knüpft an das erste Buch an."),
+    ("Dioskurides, Arzneimittellehre, Vorrede", "https://intertextual.bible/p/350 (Auszug in engl. Übersetzung)",
+     "Die Vorrede redet den Widmungsempfänger Areios an und beurteilt Vorgänger (unvollständig, nach Hörensagen); bestätigt.")),
+ "BG-LUK-0002": _sc("confirmed",
+    ("Mischna, Tamid 5,2", "https://www.mishnah.org/?p=2638 (Mischna, hebr. mit engl. Übersetzung)",
+     "Zum Los für das Räucheropfer werden nur Priester zugelassen, die es noch nie dargebracht haben.")),
+ "BG-LUK-0003": _sc("corrected",
+    ("Josephus, Jüdische Altertümer 17,355; 18,1–4; 18,26", f"https://lexundria.com/j_aj/17.354/wst; https://lexundria.com/j_aj/18/wst ({_LEX})",
+     "Archelaus' Gebiet kommt zu Syrien, Quirinius soll schätzen (bei lexundria als 17,354 gezählt, dort letzter Abschnitt des Buches; "
+     "Zählung in sources_de vermerkt); 18,1–4: Quirinius und Coponius, Schätzung, Aufstand des Judas; 18,26: Abschluss der Schätzung im "
+     "37. Jahr nach Actium. Bestätigt."),
+    ("Augustus, Tatenbericht (Res gestae) 8", "https://www.livius.org/sources/content/augustus-res-gestae (engl. Übersetzung)",
+     "Kapitel 8 nennt drei Zählungen der römischen Bürger (28 und 8 v. Chr., 14 n. Chr.), aber keine Schätzungen in den Provinzen. "
+     "Bisher stützte die Stelle den Satz «liess die römischen Bürger mehrmals zählen und in den Provinzen … erfassen; in Ägypten … "
+     "in regelmässigen Abständen …»; Text auf das Belegte berichtigt."),
+    ("Erlass des Präfekten Gaius Vibius Maximus (Papyrus London 904, 104 n. Chr.)", "https://cojs.org/Papyrus_Census_Order-_104_CE/ (engl. Übersetzung)",
+     "Der Präfekt befiehlt allen, die sich auswärts aufhalten, für die Eintragung in ihre eigenen Wohnstätten zurückzukehren; bestätigt.")),
+ "BG-LUK-0004": _sc("confirmed",
+    ("Justin, Dialog mit Tryphon 78", "https://logoslibrary.org/justin/trypho/078.html (engl. Übersetzung, ANF)",
+     "Josef findet in Betlehem keine Unterkunft und kehrt in einer Höhle nahe dem Dorf ein; dort wird Christus geboren und in eine Krippe gelegt."),
+    ("Protevangelium des Jakobus 18", "https://bkv.unifr.ch/works/x-82/versions/the-protevangelium-of-james/divisions/19 (engl. Übersetzung)",
+     "Josef findet eine Höhle und bringt Maria hinein; bestätigt.")),
+ "BG-LUK-0005": _sc("confirmed",
+    ("Mischna, Kidduschin 4,14", "https://www.mishnah.org/learn/kiddushin/4/14/ (Mischna, hebr. mit engl. Übersetzung)",
+     "Abba Gurion im Namen des Abba Guria: Man soll den Sohn nicht Eseltreiber, Kameltreiber, Töpfer, Seemann, Hirte oder Krämer "
+     "werden lassen, «denn ihr Handwerk ist das von Räubern». Bestätigt; es ist die Meinung eines einzelnen Lehrers.")),
+ "BG-LUK-0007": _sc("confirmed",
+    ("Psalmen Salomos 17–18", "https://ginoskos.com/davidic-messiah-psalms-of-solomon-17-1-51 (Ps Sal 17, engl.); https://ebible.org/engasvbt/PSS18.htm (Ps Sal 18, engl.)",
+     "17,23–36: Bitte um einen König aus Davids Haus, der Jerusalem von den Völkern reinigt und die Völker richtet, «Gesalbter des Herrn»; "
+     "18 spricht vom «Gesalbten» (18,5; 18,7). Bestätigt.")),
+ "BG-LUK-0008": _sc("confirmed",
+    ("Mischna, Avot 5,21", "https://cojs.org/mishnah_avot_5-21-_stages_of_life/ (engl. Übersetzung)",
+     "Mit dreizehn Jahren zu den Geboten; bestätigt."),
+    ("Josephus, Leben (Vita) 9", f"https://lexundria.com/j_vit/1-12/wst ({_LEX})",
+     "Mit etwa vierzehn Jahren kamen Hohepriester und Vornehme der Stadt, um ihn über das Gesetz zu befragen; bestätigt.")),
+ "BG-LUK-0009": _sc("corrected",
+    ("Josephus, Jüdische Altertümer 15,92", f"https://lexundria.com/j_aj/15.88-15.107/wst ({_LEX})",
+     "Antonius lässt Lysanias, den Sohn des Ptolemaios, töten (auf Betreiben Kleopatras). Josephus nennt kein Jahr; die bisherige Angabe "
+     "«um 36 v. Chr.» ist zu «in den 30er-Jahren v. Chr.» abgeschwächt."),
+    ("Josephus, Jüdische Altertümer 18,26–35; 18,95", f"https://lexundria.com/j_aj/18/wst ({_LEX})",
+     "18,26: Hannas (Ananus, Sohn des Seth) wird Hohepriester; 18,34: Gratus setzt ihn ab; 18,35: Josef Kajaphas wird Hohepriester; "
+     "18,95: Vitellius setzt Kajaphas ab. Bestätigt."),
+    ("Weihinschrift aus Abila (Lysanias als Tetrarch)", "https://en.wikipedia.org/wiki/Lysanias (Sekundärdarstellung, verweist auf CIG 4521)",
+     "Ein Freigelassener «des Tetrarchen Lysanias» weiht einen Bau; nur über die Sekundärdarstellung geprüft, nicht an einer Edition.")),
+ "BG-LUK-0010": _sc("confirmed",
+    ("Grosse Jesajarolle aus Qumran (1QIsaᵃ)", "https://en.wikipedia.org/wiki/Isaiah_Scroll (Sekundärdarstellung)",
+     "Enthält das ganze Jesajabuch; datiert in das 2. Jahrhundert v. Chr. (paläographisch etwa 150–100 v. Chr.). Bestätigt; nicht an der Rolle selbst geprüft."),
+    ("11QMelchisedek (11Q13)", "https://www.ldsscriptureteachings.org/2020/06/text-of-11q13-fragment-from-the-melchizedek-document-from-cave-11-written-in-hebrew-around-100-bce/ (engl. Übersetzung, Sekundärwiedergabe)",
+     "Verbindet das Erlassjahr ([[LEV.25.13]]; [[DEU.15.2]]) mit [[ISA.61.1]] und mit Melchisedek, der den Gefangenen Freilassung "
+     "ausruft; bestätigt. Kolumne und Zeile nicht geprüft.")),
+ "BG-LUK-0011": _sc("corrected",
+    ("Inschrift aus Akmonia mit Julia Severa (MAMA VI 264)", "https://philipharland.com/greco-roman-associations/145-honors-by-a-judean-synagogue-for-julia-severa-and-others/ (Associations in the Greco-Roman World, engl.)",
+     "Die Inschrift (um 100 n. Chr.) ehrt Synagogenvorsteher, die einen von Julia Severa errichteten Bau erneuerten; Julia Severa ist "
+     "nach MAMA VI 263 Priesterin im Kaiserkult. Bisher: «Inschriften belegen auch nichtjüdische Stifter von Synagogen, etwa Julia "
+     "Severa (1. Jahrhundert)»; die Inschrift sagt nicht ausdrücklich, dass sie den Bau für die Synagoge stiftete. Text, Datierung und uncertain_de berichtigt.")),
+ "BG-LUK-0012": _sc("confirmed",
+    ("Mischna, Ketubbot 4,4", "https://mattausterklein.substack.com/p/of-jewish-flutes-and-funerals; https://www.myjewishlearning.com/article/ketubot-48/ (Zitate in engl. Übersetzung)",
+     "Rabbi Jehuda: Selbst der Ärmste in Israel stellt für die Bestattung seiner Frau nicht weniger als zwei Flöten und eine Klagefrau. "
+     "Bestätigt (Zuschreibung an Rabbi Jehuda in sources_de ergänzt); der Mischnatext selbst nur über Zitate geprüft.")),
+ "BG-LUK-0014": _sc("confirmed",
+    ("Archiv der Babatha", "https://en.wikipedia.org/wiki/Babatha (Sekundärdarstellung)",
+     "Urkunden von 96 bis 134 n. Chr. aus der Höhle der Briefe (Nahal Hever): eine jüdische Frau mit Grundbesitz (Dattelpflanzungen) "
+     "und mehreren Rechtsstreiten. Bestätigt.")),
+ "BG-LUK-0015": _sc("confirmed",
+    ("Josephus, Leben (Vita) 269", f"https://lexundria.com/j_vit/266-275/wst ({_LEX})",
+     "Wer rasch von Galiläa nach Jerusalem wollte, musste durch Samarien; so dauerte die Reise drei Tage. Bestätigt."),
+    ("Josephus, Jüdische Altertümer 13,254–256", f"https://lexundria.com/j_aj/13.254-13.269/wst ({_LEX})",
+     "13,255: Hyrkan nimmt Sichem und den Garizim; 13,256: der Tempel auf dem Garizim wird verwüstet, rund 200 Jahre nach seiner Erbauung. "
+     "Bestätigt; Angabe in sources_de auf 13,255–256 präzisiert."),
+    ("Josephus, Jüdische Altertümer 20,118–136", f"https://lexundria.com/j_aj/20.118-20.136/wst ({_LEX})",
+     "20,118: Galiläer zogen zu den Festen durch Samarien; in Ginäa wurden viele getötet; unter Cumanus folgen Vergeltung und Strafen bis zum Urteil des Claudius (20,136). Bestätigt."),
+    ("Josephus, Jüdischer Krieg 2,232–246", f"https://lexundria.com/j_bj/2.223-2.249/wst ({_LEX})",
+     "Dieselbe Geschichte; sie endet mit der Hinrichtung Celers (2,246). Bestätigt.")),
+ "BG-LUK-0016": _sc("confirmed",
+    ("Mischna, Nazir 7,1", "https://www.mishnah.org/learn/nazir/7/1/ (Mischna, hebr. mit engl. Übersetzung)",
+     "Hohepriester und Nasiräer verunreinigen sich nicht an Angehörigen, wohl aber an einem Toten, den sonst niemand bestattet (met mizwa). "
+     "Die bisher quellenlose Aussage ist damit belegt und genauer gefasst.")),
+ "BG-LUK-0017": _sc("confirmed",
+    ("Mischna, Avot 1,4", "https://www.sefaria.org/api/texts/Pirkei_Avot.1 (Sefaria, hebr./engl.)",
+     "Jose ben Joëser: Dein Haus sei ein Versammlungsort für die Weisen, sitze im Staub ihrer Füsse und trinke mit Durst ihre Worte. Bestätigt.")),
+ "BG-LUK-0018": _sc("confirmed",
+    ("Mischna, Kelim 25,1–9", "https://www.mishnah.org/learn/keilim/25/1/; https://www.mishnah.org/?p=2906 (Kelim 25,6)",
+     "Kapitel 25 unterscheidet Aussenseite und Innenseite von Gefässen; nach 25,6 ist bei Verunreinigung der Aussenseite durch Flüssigkeit "
+     "nur diese unrein, die Innenseite bleibt rein. Bestätigt.")),
+}
 
 
 def _pruefe_zaehlungen():
@@ -944,17 +1045,23 @@ def run():
                    key=lambda x: ("-GSW-" in x, x))
     _study.write_study({"TAGS": TAGS, "CONTEXT": context, "FINDINGS": FINDINGS, "INTERPRETATIONS": INTERPRETATIONS,
                         "PRINCIPLES": PRINCIPLES, "APPLICATIONS": APPLICATIONS, "QUESTIONS": QUESTIONS, "RELATIONS": RELATIONS,
-                        "BACKGROUND": BACKGROUND, "SUMMARIES": [],
+                        "BACKGROUND": BACKGROUND, "SOURCE_CHECKS": SOURCE_CHECKS, "SUMMARIES": [],
                         "STUDY": ("STUDY-LUK-0001", "Lukas 1–12: Studieninhalte", CHAPTERS[1], extra,
-                                  ["Mundart muttersprachlich prüfen",
+                                  ["Geprüft am 2026-10-26 durch eine getrennte KI-Instanz (Claude), keine fachliche und keine muttersprachliche "
+                                   "Prüfung: antike Quellenangaben in BG-LUK-0001 bis BG-LUK-0018 in frei zugänglichen Ausgaben "
+                                   "nachgeschlagen (source_check; 13 bestätigt, 3 berichtigt: BG-LUK-0003 Res gestae, BG-LUK-0009 "
+                                   "Lysanias, BG-LUK-0011 Julia Severa); Septuaginta zu [[1KI.17.23]] (FIND-LUK-0014) und 4Q521 "
+                                   "(FIND-LUK-0023) nachgeschlagen; Zitate gegen die Arbeitsübersetzung abgeglichen; Mundart-Schreibung "
+                                   "nach lukas_einheitlich.py geprüft",
+                                   "Grenzen der Prüfung: Teile nur über Übersetzungen oder Sekundärdarstellungen geprüft (Abila-Inschrift, "
+                                   "Babatha, 1QIsaᵃ, 11Q13, Ketubbot 4,4), nicht an Handschriften oder kritischen Ausgaben",
+                                   "Mundart muttersprachlich prüfen",
                                    "Fachliche Prüfung der Befunde, Deutungen, Grundsätze, Anwendungen und des Hintergrunds",
-                                   "Antike Quellenangaben in BG-LUK-0001 bis BG-LUK-0018 am Text nachschlagen (docs/QUELLENPRUEFUNG.md); "
-                                   "bisher nur aus dem Gedächtnis genannt, insbesondere Mischna Tamid 5,2, Kidduschin 4,14, "
-                                   "Kelim 25, Josephus Altertümer 15,92 und die Weihinschrift aus Abila",
-                                   "Literaturangaben (Alexander 1993, Conzelmann 1954, Yoder 1972, Wink 1992, Bailey 1976 und 1980, "
-                                   "Jeremias, Metzger, Wellhausen, Schüssler Fiorenza, Meister Eckhart, Origenes, Augustinus, "
-                                   "Julius Africanus) bibliographisch prüfen",
-                                   "Septuaginta-Wortlaut zu [[1KI.17.23]] (FIND-LUK-0014) und Qumran-Text 4Q521 (FIND-LUK-0023) prüfen",
+                                   "Literaturangaben: bibliographisch bestätigt sind Alexander 1993, Bailey 1976, Jeremias (Jesu "
+                                   "Verheissung für die Völker; engl. 1958), Metzger («Seventy or Seventy-Two Disciples?», NTS); offen "
+                                   "bleiben Conzelmann 1954, Yoder 1972, Wink 1992, Bailey 1980, Wellhausen (Werk), Schüssler Fiorenza, "
+                                   "Meister Eckhart (Predigt 86 vermutet) sowie die genauen Stellen bei Origenes (Homilien zu Lukas 1 und "
+                                   "34; 34 bestätigt) und Augustinus (Quaestiones evangeliorum 2,19: Werk bestätigt, Zählung nicht)",
                                    "Zählungen beruhen auf MACULA-Lemmata zum SBLGNT; andere Editionen können abweichen",
                                    "Kapitel- und Buchzusammenfassungen entstehen aus den Kernanalysen (nicht Teil dieses Auftrags)"])},
                        "Lukas 1–12")
