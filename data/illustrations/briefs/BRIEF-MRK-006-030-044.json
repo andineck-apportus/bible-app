@@ -20,144 +20,186 @@
         "FIG-OBJ-BOOT"
       ],
       "signs": [
-        "FIG-ZEICHEN-ERBARMEN"
+        "FIG-ZEICHEN-ERBARMEN",
+        "FIG-ZEICHEN-LEHREN"
       ],
       "speech": [],
-      "action_de": "Die Apostel kehren zurück; Jesus fährt mit ihnen an einen einsamen Ort, doch die Menge kommt ihnen zuvor. Er hat Erbarmen mit ihnen, denn sie sind wie Schafe ohne Hirten, und lehrt sie lange.",
+      "action_de": "Die Apostel kehren zurück und berichten Jesus alles; sie wollen an einem einsamen Ort ausruhen, doch eine grosse Menge kommt ihnen zuvor. Jesus hat Erbarmen mit ihnen, denn sie sind wie Schafe, die keinen Hirten haben, und er lehrt sie vieles.",
+      "keywords": {
+        "de": "denn sie waren wie Schafe, die keinen Hirten haben",
+        "gsw": "wil si wie Schaf gsii sind, wo kein Hirt händ"
+      },
       "stage": {
-        "big_side": "left",
         "at": {
-          "FIG-ZEICHEN-ERBARMEN": "FIG-JESUS"
+          "FIG-ZEICHEN-ERBARMEN": "FIG-JESUS",
+          "FIG-ZEICHEN-LEHREN": "FIG-GRUPPE-MENGE"
+        },
+        "big_side": "left",
+        "mood": {
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-MENGE": "worried"
+        },
+        "x": {
+          "FIG-JESUS": 84,
+          "FIG-GRUPPE-MENGE": 152
         }
       }
     },
     {
       "n": 2,
       "reference": "MRK.6.35-MRK.6.38",
-      "figures": [
-        "FIG-GRUPPE-ZWOELF",
-        "FIG-JESUS"
-      ],
-      "objects": [
-        "FIG-OBJ-BROT",
-        "FIG-OBJ-FISCH"
-      ],
+      "figures": [],
+      "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-GRUPPE-MENGE",
-            "FIG-OBJ-BROT"
-          ]
-        }
-      ],
-      "action_de": "Am Abend sagen die Jünger: Schick die Leute weg, damit sie sich zu essen kaufen. Jesus antwortet: Gebt ihr ihnen zu essen! Sie haben nur fünf Brote und zwei Fische.",
-      "stage": {
-        "count": {
-          "FIG-OBJ-BROT": 5,
-          "FIG-OBJ-FISCH": 2
+      "speech": [],
+      "action_de": "Die Jünger wollen die Leute wegschicken; Jesus sagt: «Gebt ihr ihnen zu essen!» – «Sollen wir für zweihundert Denare Brot kaufen?» – «Wie viele Brote habt ihr? Geht, seht nach!» – «Fünf, und zwei Fische.»",
+      "keywords": {
+        "de": "Gebt ihr ihnen zu essen!",
+        "gsw": "Gänd ihr ine z ässe!"
+      },
+      "diagram": {
+        "visual": "dialogue",
+        "span": 2,
+        "title": {
+          "de": "Der Ort ist einsam, und es ist schon spät.",
+          "gsw": "De Ort isch einsam, und es isch scho spaat."
         },
-        "mood": {
-          "FIG-GRUPPE-ZWOELF": "worried"
-        }
+        "turns": [
+          {
+            "who": "FIG-GRUPPE-JUENGER",
+            "cell": {
+              "a": {
+                "de": "«Schick sie weg, damit sie in die umliegenden Gehöfte und Dörfer gehen und sich etwas zu essen kaufen.»",
+                "gsw": "«Schick si furt, demit si i d Höf und Dörfer rundume gönd und sich öppis z ässe chaufed.»"
+              },
+              "icons": [
+                "FIG-ZEICHEN-FLIEHEN"
+              ]
+            }
+          },
+          {
+            "who": "FIG-JESUS",
+            "cell": {
+              "a": {
+                "de": "«Gebt ihr ihnen zu essen!»",
+                "gsw": "«Gänd ihr ine z ässe!»"
+              },
+              "icons": [
+                "FIG-ZEICHEN-GEBEN",
+                "FIG-OBJ-BROT"
+              ]
+            }
+          },
+          {
+            "who": "FIG-GRUPPE-JUENGER",
+            "cell": {
+              "a": {
+                "de": "«Sollen wir hingehen und für zweihundert Denare Brot kaufen und ihnen zu essen geben?»",
+                "gsw": "«Söled mer go für zweihundert Denar Broot chaufe und ine z ässe gää?»"
+              },
+              "icons": [
+                "FIG-OBJ-DENAR",
+                "FIG-ZEICHEN-FRAGEN"
+              ]
+            }
+          },
+          {
+            "who": "FIG-JESUS",
+            "cell": {
+              "a": {
+                "de": "«Wie viele Brote habt ihr? Geht, seht nach!»",
+                "gsw": "«Wie vil Broot händ er? Gönd, lueged!»"
+              },
+              "icons": [
+                "FIG-OBJ-BROT",
+                "FIG-ZEICHEN-FRAGEN"
+              ]
+            }
+          },
+          {
+            "who": "FIG-GRUPPE-JUENGER",
+            "cell": {
+              "a": {
+                "de": "«Fünf, und zwei Fische.»",
+                "gsw": "«Föif, und zwee Fisch.»"
+              },
+              "icons": [
+                "FIG-OBJ-BROTE-FISCHE"
+              ]
+            }
+          }
+        ]
       }
     },
     {
       "n": 3,
-      "reference": "MRK.6.39-MRK.6.42",
+      "reference": "MRK.6.39-MRK.6.44",
       "figures": [
-        "FIG-GOTT",
         "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF",
+        "FIG-GRUPPE-JUENGER",
         "FIG-GRUPPE-MENGE"
       ],
       "objects": [
-        "FIG-OBJ-BROT"
+        "FIG-OBJ-BROTE-FISCHE",
+        "FIG-OBJ-KORB"
       ],
       "signs": [
+        "FIG-ZEICHEN-SEGNEN",
         "FIG-ZEICHEN-SATT"
       ],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GOTT",
-          "icons": [
-            "FIG-ZEICHEN-BETEN",
-            "FIG-OBJ-BROT"
-          ]
-        }
-      ],
-      "action_de": "Die Menge lagert sich in Gruppen auf dem grünen Gras. Jesus blickt zum Himmel auf, spricht den Segen, bricht die Brote und gibt sie den Jüngern zum Austeilen; alle essen und werden satt.",
+      "speech": [],
+      "action_de": "Jesus nimmt die fünf Brote und zwei Fische, blickt auf zum Himmel, spricht den Segen, bricht die Brote und gibt sie den Jüngern zum Austeilen; alle essen und werden satt, und zwölf Körbe voll Brocken bleiben übrig.",
+      "keywords": {
+        "de": "Und sie assen alle und wurden satt",
+        "gsw": "Und si händ alli ggässe und sind satt worde"
+      },
       "stage": {
-        "god_side": "right",
+        "hold": {
+          "FIG-JESUS": "FIG-OBJ-BROTE-FISCHE"
+        },
+        "count": {
+          "FIG-OBJ-KORB": 5
+        },
         "at": {
+          "FIG-ZEICHEN-SEGNEN": "FIG-JESUS",
           "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
         },
         "arrows": [
           [
-            "FIG-JESUS",
-            "FIG-GRUPPE-ZWOELF",
-            "act"
-          ],
-          [
-            "FIG-GRUPPE-ZWOELF",
+            "FIG-GRUPPE-JUENGER",
             "FIG-GRUPPE-MENGE",
             "act"
           ]
         ],
         "mood": {
-          "FIG-GRUPPE-MENGE": "smile"
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-JUENGER": "surprised",
+          "FIG-GRUPPE-MENGE": "delight"
         },
-        "hold": {
-          "FIG-JESUS": "FIG-OBJ-BROT"
+        "x": {
+          "FIG-JESUS": 30,
+          "FIG-GRUPPE-JUENGER": 92,
+          "FIG-GRUPPE-MENGE": 156
         }
-      }
-    },
-    {
-      "n": 4,
-      "reference": "MRK.6.43-MRK.6.44",
-      "figures": [
-        "FIG-GRUPPE-ZWOELF",
-        "FIG-GRUPPE-MENGE"
-      ],
-      "objects": [
-        "FIG-OBJ-KORB"
-      ],
-      "signs": [],
-      "speech": [],
-      "action_de": "Sie sammeln die übrigen Brocken: zwölf Körbe voll, dazu Reste der Fische. Es waren fünftausend Männer, die gegessen hatten.",
-      "stage": {
-        "count": {
-          "FIG-OBJ-KORB": 5
-        },
-        "mood": {
-          "FIG-GRUPPE-MENGE": "smile",
-          "FIG-GRUPPE-ZWOELF": "surprised"
-        },
-        "floor_side": "left"
       }
     }
   ],
   "actions_de": [
-    "Die Apostel kehren zurück; Jesus fährt mit ihnen an einen einsamen Ort, doch die Menge kommt ihnen zuvor. Er hat Erbarmen mit ihnen, denn sie sind wie Schafe ohne Hirten, und lehrt sie lange.",
-    "Am Abend sagen die Jünger: Schick die Leute weg, damit sie sich zu essen kaufen. Jesus antwortet: Gebt ihr ihnen zu essen! Sie haben nur fünf Brote und zwei Fische.",
-    "Die Menge lagert sich in Gruppen auf dem grünen Gras. Jesus blickt zum Himmel auf, spricht den Segen, bricht die Brote und gibt sie den Jüngern zum Austeilen; alle essen und werden satt.",
-    "Sie sammeln die übrigen Brocken: zwölf Körbe voll, dazu Reste der Fische. Es waren fünftausend Männer, die gegessen hatten."
+    "Die Apostel kehren zurück und berichten Jesus alles; sie wollen an einem einsamen Ort ausruhen, doch eine grosse Menge kommt ihnen zuvor. Jesus hat Erbarmen mit ihnen, denn sie sind wie Schafe, die keinen Hirten haben, und er lehrt sie vieles.",
+    "Die Jünger wollen die Leute wegschicken; Jesus sagt: «Gebt ihr ihnen zu essen!» – «Sollen wir für zweihundert Denare Brot kaufen?» – «Wie viele Brote habt ihr? Geht, seht nach!» – «Fünf, und zwei Fische.»",
+    "Jesus nimmt die fünf Brote und zwei Fische, blickt auf zum Himmel, spricht den Segen, bricht die Brote und gibt sie den Jüngern zum Austeilen; alle essen und werden satt, und zwölf Körbe voll Brocken bleiben übrig."
   ],
   "captions_de": [
-    "Erbarmen: Am Ufer erwartet die Menge Jesus; er hat Erbarmen mit ihnen (Herz mit Händen).",
-    "Zu wenig: Jesus sagt den besorgten Jüngern: Gebt ihr der Menge Brot (Menge, Brot). Am Boden fünf Brote und zwei Fische.",
-    "Segen → Austeilen → satt: Jesus hält das Brot und dankt Gott dafür (Strahlenkranz; Blase: betende Hände, Brot); er gibt es den Jüngern, die teilen aus (Pfeile), die Menge wird satt (volle Schale).",
-    "Übrig: Die Jünger sammeln Körbe voller Brocken (im Text zwölf Körbe); die Menge ist satt."
+    "Erbarmen: Jesus steigt aus dem Boot und sieht die grosse Menge; er hat Erbarmen (Erbarmen) und lehrt sie (lehren).",
+    "Gespräch über das Essen (Dialog): Jünger: «Schick sie weg …» – Jesus: «Gebt ihr ihnen zu essen!» – Jünger: «Sollen wir für zweihundert Denare Brot kaufen …?» – Jesus: «Wie viele Brote habt ihr?» – Jünger: «Fünf, und zwei Fische.»",
+    "Alle werden satt: Jesus hält Brote und Fische und spricht den Segen (segnen); die Jünger teilen der Menge aus; die Leute werden satt (satt); Körbe mit Resten."
   ],
-  "interpretation_note_de": "Das Bild zeigt gleiche Dinge höchstens siebenfach; die zwölf Körbe ([[MRK.6.43]]) sind deshalb nur angedeutet. Dass Jesus beim Segen zu Gott spricht, deutet «blickte auf zum Himmel, sprach den Segen» ([[MRK.6.41]]) als Gebet zu Gott. Die Schafe ohne Hirten ([[MRK.6.34]]) sind ein Bildwort und nicht gezeichnet.",
+  "interpretation_note_de": "Drei Felder nach «Erbarmen – Gespräch – Speisung – Sättigung» ([[MRK.6.30-MRK.6.44]]): das Erbarmen mit der Menge, das ganze Gespräch mit den Jüngern (ihr Unverständnis: wegschicken, kaufen) und die Speisung. Jesus blickt auf zum Himmel und spricht den Segen ([[MRK.6.41]]); das Zeichen «segnen» steht bei ihm. Die Körbe sind angedeutet, die Zahl zwölf nennt die Legende; «wie Schafe ohne Hirten» ist ein Vergleich und nicht als Herde gezeichnet.",
   "basis": [
     {
       "record": "TU-MRK-006-030-044",
       "field": "summary",
-      "fingerprint": "51cc032dc4029f16"
+      "fingerprint": "55e4b6bd370292cb"
     },
     {
       "record": "TRANS-MRK-006-001-056-DE-WORKING",
@@ -174,18 +216,12 @@
     {
       "record": "TRANS-MRK-006-001-056-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.6.39-MRK.6.42",
-      "fingerprint": "6e430e112412e540"
-    },
-    {
-      "record": "TRANS-MRK-006-001-056-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MRK.6.43-MRK.6.44",
-      "fingerprint": "4fbfdf1a3cea37db"
+      "reference": "MRK.6.39-MRK.6.44",
+      "fingerprint": "2f4193e45b617152"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -338,6 +374,418 @@
           "Zu wenig: Jesus sagt den besorgten Jüngern: Gebt ihr der Menge Brot (Menge, Brot). Am Boden fünf Brote und zwei Fische.",
           "Gesegnet und geteilt: Jesus hält das Brot und dankt Gott dafür (Strahlenkranz; Blase: betende Hände, Brot); die Jünger teilen aus (Pfeile), die Menge wird satt (volle Schale).",
           "Übrig: Die Jünger sammeln Körbe voller Brocken (im Text zwölf Körbe); die Menge ist satt."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MRK-006-030-044",
+            "field": "summary",
+            "fingerprint": "51cc032dc4029f16"
+          },
+          {
+            "record": "TRANS-MRK-006-001-056-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.6.30-MRK.6.34",
+            "fingerprint": "c9c7aeec1791305c"
+          },
+          {
+            "record": "TRANS-MRK-006-001-056-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.6.35-MRK.6.38",
+            "fingerprint": "413a88687dfaf95e"
+          },
+          {
+            "record": "TRANS-MRK-006-001-056-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.6.39-MRK.6.42",
+            "fingerprint": "6e430e112412e540"
+          },
+          {
+            "record": "TRANS-MRK-006-001-056-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.6.43-MRK.6.44",
+            "fingerprint": "4fbfdf1a3cea37db"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.6.30-MRK.6.34",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ERBARMEN"
+            ],
+            "speech": [],
+            "action_de": "Die Apostel kehren zurück; Jesus fährt mit ihnen an einen einsamen Ort, doch die Menge kommt ihnen zuvor. Er hat Erbarmen mit ihnen, denn sie sind wie Schafe ohne Hirten, und lehrt sie lange.",
+            "stage": {
+              "big_side": "left",
+              "at": {
+                "FIG-ZEICHEN-ERBARMEN": "FIG-JESUS"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.6.35-MRK.6.38",
+            "figures": [
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT",
+              "FIG-OBJ-FISCH"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-OBJ-BROT"
+                ]
+              }
+            ],
+            "action_de": "Am Abend sagen die Jünger: Schick die Leute weg, damit sie sich zu essen kaufen. Jesus antwortet: Gebt ihr ihnen zu essen! Sie haben nur fünf Brote und zwei Fische.",
+            "stage": {
+              "count": {
+                "FIG-OBJ-BROT": 5,
+                "FIG-OBJ-FISCH": 2
+              },
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "worried"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.6.39-MRK.6.42",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SATT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-BETEN",
+                  "FIG-OBJ-BROT"
+                ]
+              }
+            ],
+            "action_de": "Die Menge lagert sich in Gruppen auf dem grünen Gras. Jesus blickt zum Himmel auf, spricht den Segen, bricht die Brote und gibt sie den Jüngern zum Austeilen; alle essen und werden satt.",
+            "stage": {
+              "god_side": "right",
+              "at": {
+                "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-ZWOELF",
+                  "act"
+                ],
+                [
+                  "FIG-GRUPPE-ZWOELF",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-MENGE": "smile"
+              },
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROT"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.6.43-MRK.6.44",
+            "figures": [
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-KORB"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Sie sammeln die übrigen Brocken: zwölf Körbe voll, dazu Reste der Fische. Es waren fünftausend Männer, die gegessen hatten.",
+            "stage": {
+              "count": {
+                "FIG-OBJ-KORB": 5
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "smile",
+                "FIG-GRUPPE-ZWOELF": "surprised"
+              },
+              "floor_side": "left"
+            }
+          }
+        ],
+        "actions_de": [
+          "Die Apostel kehren zurück; Jesus fährt mit ihnen an einen einsamen Ort, doch die Menge kommt ihnen zuvor. Er hat Erbarmen mit ihnen, denn sie sind wie Schafe ohne Hirten, und lehrt sie lange.",
+          "Am Abend sagen die Jünger: Schick die Leute weg, damit sie sich zu essen kaufen. Jesus antwortet: Gebt ihr ihnen zu essen! Sie haben nur fünf Brote und zwei Fische.",
+          "Die Menge lagert sich in Gruppen auf dem grünen Gras. Jesus blickt zum Himmel auf, spricht den Segen, bricht die Brote und gibt sie den Jüngern zum Austeilen; alle essen und werden satt.",
+          "Sie sammeln die übrigen Brocken: zwölf Körbe voll, dazu Reste der Fische. Es waren fünftausend Männer, die gegessen hatten."
+        ],
+        "captions_de": [
+          "Erbarmen: Am Ufer erwartet die Menge Jesus; er hat Erbarmen mit ihnen (Herz mit Händen).",
+          "Zu wenig: Jesus sagt den besorgten Jüngern: Gebt ihr der Menge Brot (Menge, Brot). Am Boden fünf Brote und zwei Fische.",
+          "Segen → Austeilen → satt: Jesus hält das Brot und dankt Gott dafür (Strahlenkranz; Blase: betende Hände, Brot); er gibt es den Jüngern, die teilen aus (Pfeile), die Menge wird satt (volle Schale).",
+          "Übrig: Die Jünger sammeln Körbe voller Brocken (im Text zwölf Körbe); die Menge ist satt."
+        ],
+        "interpretation_note_de": "Das Bild zeigt gleiche Dinge höchstens siebenfach; die zwölf Körbe ([[MRK.6.43]]) sind deshalb nur angedeutet. Dass Jesus beim Segen zu Gott spricht, deutet «blickte auf zum Himmel, sprach den Segen» ([[MRK.6.41]]) als Gebet zu Gott. Die Schafe ohne Hirten ([[MRK.6.34]]) sind ein Bildwort und nicht gezeichnet.",
+        "basis": [
+          {
+            "record": "TU-MRK-006-030-044",
+            "field": "summary",
+            "fingerprint": "55e4b6bd370292cb"
+          },
+          {
+            "record": "TRANS-MRK-006-001-056-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.6.30-MRK.6.34",
+            "fingerprint": "c9c7aeec1791305c"
+          },
+          {
+            "record": "TRANS-MRK-006-001-056-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.6.35-MRK.6.38",
+            "fingerprint": "413a88687dfaf95e"
+          },
+          {
+            "record": "TRANS-MRK-006-001-056-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.6.39-MRK.6.42",
+            "fingerprint": "6e430e112412e540"
+          },
+          {
+            "record": "TRANS-MRK-006-001-056-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.6.43-MRK.6.44",
+            "fingerprint": "4fbfdf1a3cea37db"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.6.30-MRK.6.34",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ERBARMEN",
+              "FIG-ZEICHEN-LEHREN"
+            ],
+            "speech": [],
+            "action_de": "Die Apostel kehren zurück und berichten Jesus alles; sie wollen an einem einsamen Ort ausruhen, doch eine grosse Menge kommt ihnen zuvor. Jesus hat Erbarmen mit ihnen, denn sie sind wie Schafe, die keinen Hirten haben, und er lehrt sie vieles.",
+            "keywords": {
+              "de": "denn sie waren wie Schafe, die keinen Hirten haben",
+              "gsw": "wil si wie Schaf gsii sind, wo kein Hirt händ"
+            },
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-ERBARMEN": "FIG-JESUS",
+                "FIG-ZEICHEN-LEHREN": "FIG-GRUPPE-MENGE"
+              },
+              "big_side": "left",
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-MENGE": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 84,
+                "FIG-GRUPPE-MENGE": 152
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.6.35-MRK.6.38",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Die Jünger wollen die Leute wegschicken; Jesus sagt: «Gebt ihr ihnen zu essen!» – «Sollen wir für zweihundert Denare Brot kaufen?» – «Wie viele Brote habt ihr? Geht, seht nach!» – «Fünf, und zwei Fische.»",
+            "keywords": {
+              "de": "Gebt ihr ihnen zu essen!",
+              "gsw": "Gänd ihr ine z ässe!"
+            },
+            "diagram": {
+              "visual": "dialogue",
+              "span": 2,
+              "title": {
+                "de": "Der Ort ist einsam, und es ist schon spät.",
+                "gsw": "De Ort isch einsam, und es isch scho spaat."
+              },
+              "turns": [
+                {
+                  "who": "FIG-GRUPPE-JUENGER",
+                  "cell": {
+                    "a": {
+                      "de": "«Schick sie weg, damit sie in die umliegenden Gehöfte und Dörfer gehen und sich etwas zu essen kaufen.»",
+                      "gsw": "«Schick si furt, demit si i d Höf und Dörfer rundume gönd und sich öppis z ässe chaufed.»"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-FLIEHEN"
+                    ]
+                  }
+                },
+                {
+                  "who": "FIG-JESUS",
+                  "cell": {
+                    "a": {
+                      "de": "«Gebt ihr ihnen zu essen!»",
+                      "gsw": "«Gänd ihr ine z ässe!»"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-GEBEN",
+                      "FIG-OBJ-BROT"
+                    ]
+                  }
+                },
+                {
+                  "who": "FIG-GRUPPE-JUENGER",
+                  "cell": {
+                    "a": {
+                      "de": "«Sollen wir hingehen und für zweihundert Denare Brot kaufen und ihnen zu essen geben?»",
+                      "gsw": "«Söled mer go für zweihundert Denar Broot chaufe und ine z ässe gää?»"
+                    },
+                    "icons": [
+                      "FIG-OBJ-DENAR",
+                      "FIG-ZEICHEN-FRAGEN"
+                    ]
+                  }
+                },
+                {
+                  "who": "FIG-JESUS",
+                  "cell": {
+                    "a": {
+                      "de": "«Wie viele Brote habt ihr? Geht, seht nach!»",
+                      "gsw": "«Wie vil Broot händ er? Gönd, lueged!»"
+                    },
+                    "icons": [
+                      "FIG-OBJ-BROT",
+                      "FIG-ZEICHEN-FRAGEN"
+                    ]
+                  }
+                },
+                {
+                  "who": "FIG-GRUPPE-JUENGER",
+                  "cell": {
+                    "a": {
+                      "de": "«Fünf, und zwei Fische.»",
+                      "gsw": "«Föif, und zwee Fisch.»"
+                    },
+                    "icons": [
+                      "FIG-OBJ-BROTE-FISCHE"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.6.39-MRK.6.44",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROTE-FISCHE",
+              "FIG-OBJ-KORB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SEGNEN",
+              "FIG-ZEICHEN-SATT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [],
+                "word": {
+                  "de": "Gebt ihr ihnen zu essen!",
+                  "gsw": "Gänd ihr ine z ässe!"
+                }
+              }
+            ],
+            "action_de": "Jesus nimmt die fünf Brote und zwei Fische, blickt auf zum Himmel, spricht den Segen, bricht die Brote und gibt sie den Jüngern zum Austeilen; alle essen und werden satt, und zwölf Körbe voll Brocken bleiben übrig.",
+            "keywords": {
+              "de": "Und sie assen alle und wurden satt",
+              "gsw": "Und si händ alli ggässe und sind satt worde"
+            },
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROTE-FISCHE"
+              },
+              "count": {
+                "FIG-OBJ-KORB": 5
+              },
+              "at": {
+                "FIG-ZEICHEN-SEGNEN": "FIG-JESUS",
+                "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "surprised",
+                "FIG-GRUPPE-MENGE": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-JUENGER": 92,
+                "FIG-GRUPPE-MENGE": 156
+              }
+            }
+          }
         ]
       }
     }

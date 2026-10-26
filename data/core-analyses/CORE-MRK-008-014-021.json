@@ -1,0 +1,218 @@
+{
+ "id": "CORE-MRK-008-014-021",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MRK.8.14-MRK.8.21",
+ "target": "TU-MRK-008-014-021",
+ "core_de": "Im Boot haben die Jünger nur ein Brot dabei; Jesus warnt: «Hütet euch vor dem Sauerteig der Pharisäer und dem Sauerteig des Herodes!», doch sie überlegen, dass sie keine Brote haben; Jesus fragt: «Begreift ihr noch nicht …? Habt ihr euer Herz verhärtet? Augen habt ihr und seht nicht, und Ohren habt ihr und hört nicht?», erinnert sie an die zwölf Körbe bei den Fünftausend und die sieben bei den Viertausend und fragt: «Versteht ihr noch nicht?»",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "dialogue",
+    "subtype": "Warnung – Missverständnis – Fragereihe – Erinnerung – offene Frage",
+    "range": "MRK.8.14-MRK.8.21",
+    "elements": [
+     {
+      "label": "Sie haben vergessen, Brote mitzunehmen; nur ein Brot im Boot",
+      "ref": "MRK.8.14",
+      "role": "Lage"
+     },
+     {
+      "label": "Warnung ↔ Missverständnis",
+      "ref": "MRK.8.15-MRK.8.16",
+      "role": "Missverständnis",
+      "child": "s2"
+     },
+     {
+      "label": "Fragen Jesu",
+      "ref": "MRK.8.17-MRK.8.18",
+      "role": "Fragereihe",
+      "child": "s3"
+     },
+     {
+      "label": "Erinnerung an die Körbe",
+      "ref": "MRK.8.19-MRK.8.20",
+      "role": "Erinnerung",
+      "child": "s4"
+     },
+     {
+      "label": "«Versteht ihr noch nicht?»",
+      "ref": "MRK.8.21",
+      "role": "offene Frage"
+     }
+    ],
+    "features": {
+     "open_end": [
+      {
+       "ref": "MRK.8.21",
+       "note": "Die Frage bleibt ohne Antwort."
+      }
+     ],
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "MRK.8.15-MRK.8.21"
+      },
+      {
+       "who": "FIG-GRUPPE-JUENGER",
+       "to": "einander",
+       "ref": "MRK.8.16"
+      },
+      {
+       "who": "FIG-GRUPPE-JUENGER",
+       "to": "FIG-JESUS",
+       "ref": "MRK.8.19-MRK.8.20"
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "MRK.6.52",
+       "kind": "Bezug",
+       "note": "Herz verhärtet"
+      },
+      {
+       "ref": "MRK.4.12",
+       "kind": "Bezug",
+       "note": "sehen und nicht erkennen"
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "gemeint: Sauerteig ↔ verstanden: keine Brote",
+    "range": "MRK.8.15-MRK.8.16",
+    "elements": [
+     {
+      "label": "«Seht zu, hütet euch vor dem Sauerteig der Pharisäer und dem Sauerteig des Herodes!»",
+      "ref": "MRK.8.15",
+      "role": "Wort Jesu"
+     },
+     {
+      "label": "Sie überlegten miteinander, dass sie keine Brote hätten",
+      "ref": "MRK.8.16",
+      "role": "Missverständnis"
+     }
+    ],
+    "visual": "levels",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "series",
+    "subtype": "Fragen Jesu",
+    "range": "MRK.8.17-MRK.8.18",
+    "elements": [
+     {
+      "label": "Was überlegt ihr, dass ihr keine Brote habt?",
+      "ref": "MRK.8.17"
+     },
+     {
+      "label": "Begreift ihr noch nicht und versteht ihr nicht?",
+      "ref": "MRK.8.17"
+     },
+     {
+      "label": "Habt ihr euer Herz verhärtet?",
+      "ref": "MRK.8.17"
+     },
+     {
+      "label": "Augen habt ihr und seht nicht, und Ohren habt ihr und hört nicht?",
+      "ref": "MRK.8.18"
+     },
+     {
+      "label": "Und erinnert ihr euch nicht?",
+      "ref": "MRK.8.18"
+     }
+    ],
+    "visual": "grid",
+    "basis": "text"
+   },
+   {
+    "id": "s4",
+    "pattern": "numbered",
+    "subtype": "zwei Speisungen: Brote → Menschen → Körbe",
+    "range": "MRK.8.19-MRK.8.20",
+    "elements": [
+     {
+      "label": "fünf Brote für die Fünftausend → «Zwölf» Körbe",
+      "ref": "MRK.8.19"
+     },
+     {
+      "label": "sieben Brote für die Viertausend → «Sieben» Körbe",
+      "ref": "MRK.8.20"
+     }
+    ],
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MRK.8.14-MRK.8.16",
+   "text_de": "Nur ein Brot im Boot; Jesus: «Hütet euch vor dem Sauerteig der Pharisäer und dem Sauerteig des Herodes!» – sie überlegen, dass sie keine Brote haben.",
+   "reason_de": "Missverständnis (Kriterien 1 und 2).",
+   "recognition_de": "Jünger im Boot mit einem Brot; Jesus warnt.",
+   "keywords": [
+    "hütet euch vor dem Sauerteig der Pharisäer und dem Sauerteig des Herodes",
+    "dass sie keine Brote hätten"
+   ]
+  },
+  {
+   "reference": "MRK.8.17-MRK.8.18",
+   "text_de": "«Begreift ihr noch nicht und versteht ihr nicht? Habt ihr euer Herz verhärtet? Augen habt ihr und seht nicht, und Ohren habt ihr und hört nicht?»",
+   "reason_de": "Fragereihe zum Unverständnis (Kriterium 1).",
+   "recognition_de": "Jesus fragt eindringlich.",
+   "keywords": [
+    "Augen habt ihr und seht nicht, und Ohren habt ihr und hört nicht?"
+   ]
+  },
+  {
+   "reference": "MRK.8.19-MRK.8.21",
+   "text_de": "Wie viele Körbe bei den fünf Broten für die Fünftausend? «Zwölf.» Bei den sieben für die Viertausend? «Sieben.» – «Versteht ihr noch nicht?»",
+   "reason_de": "Erinnerung und offene Schlussfrage (Kriterien 2 und 3).",
+   "recognition_de": "Zwölf und sieben Körbe; fragende Jünger.",
+   "keywords": [
+    "Zwölf",
+    "Sieben",
+    "Versteht ihr noch nicht?"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Was der «Sauerteig» meint, erklärt der Text nicht – Deutungsfrage"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-GRUPPE-PHARISAEER",
+  "FIG-HERODES-ANTIPAS"
+ ],
+ "places": [
+  "FIG-ORT-SEE"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MRK.8.14-MRK.8.21",
+   "fingerprint": "5c14cf4c0df70798"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mk 1–4 und 6–8 nach dem Pilot Mk 5 und dem Ausrollen Matthäus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

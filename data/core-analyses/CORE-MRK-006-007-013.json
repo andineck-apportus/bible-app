@@ -1,0 +1,188 @@
+{
+ "id": "CORE-MRK-006-007-013",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MRK.6.7-MRK.6.13",
+ "target": "TU-MRK-006-007-013",
+ "core_de": "Jesus sendet die Zwölf zu zweit aus und gibt ihnen Vollmacht über die unreinen Geister; sie sollen nichts mitnehmen ausser einem Stab – kein Brot, keinen Beutel, kein Geld –, Sandalen tragen und nicht zwei Untergewänder; wo man sie aufnimmt, sollen sie bleiben, wo nicht, den Staub von den Füssen schütteln; sie ziehen aus, verkünden Umkehr, treiben viele Dämonen aus, salben viele Kranke mit Öl und heilen sie.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Sendung – Weisungen – Ausführung",
+    "range": "MRK.6.7-MRK.6.13",
+    "elements": [
+     {
+      "label": "Er ruft die Zwölf, sendet sie zu zweit aus und gibt ihnen Vollmacht über die unreinen Geister",
+      "ref": "MRK.6.7",
+      "role": "Sendung"
+     },
+     {
+      "label": "Ausrüstung",
+      "ref": "MRK.6.8-MRK.6.9",
+      "role": "Weisung",
+      "child": "s2"
+     },
+     {
+      "label": "Aufnahme oder Ablehnung",
+      "ref": "MRK.6.10-MRK.6.11",
+      "role": "Weisung",
+      "child": "s3"
+     },
+     {
+      "label": "Sie verkünden Umkehr, treiben viele Dämonen aus, salben viele Kranke mit Öl und heilen sie",
+      "ref": "MRK.6.12-MRK.6.13",
+      "role": "Ausführung"
+     }
+    ],
+    "features": {
+     "modality": [
+      {
+       "kind": "Auftrag (6,8–11) und Bericht der Ausführung (6,12–13)",
+       "ref": "MRK.6.12"
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "MRK.6.30",
+       "kind": "Rahmen",
+       "note": "Rückkehr der Apostel nach dem eingeschobenen Bericht vom Tod des Täufers"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "series",
+    "subtype": "Ausrüstung: nur ↔ nicht",
+    "range": "MRK.6.8-MRK.6.9",
+    "elements": [
+     {
+      "label": "nur einen Stab",
+      "ref": "MRK.6.8",
+      "role": "nur"
+     },
+     {
+      "label": "kein Brot",
+      "ref": "MRK.6.8",
+      "role": "nicht"
+     },
+     {
+      "label": "keinen Beutel",
+      "ref": "MRK.6.8",
+      "role": "nicht"
+     },
+     {
+      "label": "kein Geld im Gürtel",
+      "ref": "MRK.6.8",
+      "role": "nicht"
+     },
+     {
+      "label": "sondern Sandalen tragen",
+      "ref": "MRK.6.9",
+      "role": "nur"
+     },
+     {
+      "label": "und zieht nicht zwei Untergewänder an!",
+      "ref": "MRK.6.9",
+      "role": "nicht"
+     }
+    ],
+    "visual": "grid",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "condition",
+    "subtype": "aufgenommen ↔ nicht aufgenommen",
+    "range": "MRK.6.10-MRK.6.11",
+    "elements": [
+     {
+      "label": "Wo immer ihr in ein Haus eintretet",
+      "ref": "MRK.6.10",
+      "role": "Bedingung"
+     },
+     {
+      "label": "dort bleibt, bis ihr weiterzieht",
+      "ref": "MRK.6.10",
+      "role": "Folge"
+     },
+     {
+      "label": "Wenn ein Ort euch nicht aufnimmt und man euch nicht anhört",
+      "ref": "MRK.6.11",
+      "role": "Bedingung"
+     },
+     {
+      "label": "dann geht weg und schüttelt den Staub unter euren Füssen ab, ihnen zum Zeugnis",
+      "ref": "MRK.6.11",
+      "role": "Folge"
+     }
+    ],
+    "visual": "switch",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MRK.6.7",
+   "text_de": "Er ruft die Zwölf, sendet sie zu zweit aus und gibt ihnen Vollmacht über die unreinen Geister.",
+   "reason_de": "Sendung (Kriterien 1 und 4).",
+   "recognition_de": "Jesus sendet Paare von Jüngern aus.",
+   "keywords": [
+    "begann, sie zu zweit auszusenden, und gab ihnen Vollmacht über die unreinen Geister"
+   ]
+  },
+  {
+   "reference": "MRK.6.8-MRK.6.11",
+   "text_de": "Nichts mitnehmen ausser einem Stab – kein Brot, keinen Beutel, kein Geld; im aufnehmenden Haus bleiben; wo man sie nicht aufnimmt, den Staub von den Füssen schütteln, ihnen zum Zeugnis.",
+   "reason_de": "Weisungen als Reihe und Weiche (Kriterium 2).",
+   "recognition_de": "Stab und Sandalen; Staub abschütteln.",
+   "keywords": [
+    "nichts auf den Weg mitnehmen sollten ausser nur einen Stab",
+    "schüttelt den Staub, der unter euren Füssen ist, ab"
+   ]
+  },
+  {
+   "reference": "MRK.6.12-MRK.6.13",
+   "text_de": "Sie ziehen aus, verkünden, dass man umkehren soll, treiben viele Dämonen aus und salben viele Kranke mit Öl und heilen sie.",
+   "reason_de": "Ausführung (Kriterium 3).",
+   "recognition_de": "Jünger salben einen Kranken mit Öl.",
+   "keywords": [
+    "verkündeten, dass man umkehren solle",
+    "salbten viele Kranke mit Öl"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Der Abschnitt ist Rahmen um den Tod des Täufers; die Rückkehr der Apostel folgt in [[MRK.6.30]]"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-ZWOELF",
+  "FIG-GRUPPE-KRANKE"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MRK.6.7-MRK.6.13",
+   "fingerprint": "cf0e334c39736324"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mk 1–4 und 6–8 nach dem Pilot Mk 5 und dem Ausrollen Matthäus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

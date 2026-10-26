@@ -1,0 +1,137 @@
+{
+ "id": "CORE-MRK-004-021-025",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MRK.4.21-MRK.4.25",
+ "target": "TU-MRK-004-021-025",
+ "core_de": "Jesus sagt: Die Lampe kommt nicht, um unter den Scheffel oder unter das Bett gestellt zu werden, sondern auf den Leuchter; denn nichts ist verborgen, ausser um offenbar zu werden – «Wer Ohren hat, um zu hören, der höre!»; und: «Achtet darauf, was ihr hört! Mit welchem Mass ihr messt, wird euch gemessen werden», denn wer hat, dem wird gegeben, und wer nicht hat, dem wird auch das genommen, was er hat.",
+ "mode": "speech",
+ "voice": {
+  "speaker": "FIG-JESUS"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "series",
+    "subtype": "zwei Bildworte mit «denn» und Hörruf dazwischen",
+    "range": "MRK.4.21-MRK.4.25",
+    "elements": [
+     {
+      "label": "Lampe: nicht unter den Scheffel oder das Bett, sondern auf den Leuchter",
+      "ref": "MRK.4.21",
+      "role": "Bildwort 1"
+     },
+     {
+      "label": "Denn nichts ist verborgen, ausser um offenbar zu werden; nichts wurde geheim, ausser um ans Licht zu kommen",
+      "ref": "MRK.4.22",
+      "role": "Begründung 1"
+     },
+     {
+      "label": "Wenn jemand Ohren hat, um zu hören, der höre!",
+      "ref": "MRK.4.23",
+      "role": "Hörruf"
+     },
+     {
+      "label": "Mass: «Achtet darauf, was ihr hört! Mit welchem Mass ihr messt, wird euch gemessen werden, und euch wird noch hinzugefügt werden»",
+      "ref": "MRK.4.24",
+      "role": "Bildwort 2"
+     },
+     {
+      "label": "Gabe ↔ Wegnahme",
+      "ref": "MRK.4.25",
+      "role": "Begründung 2",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "leitwort": [
+      {
+       "word": "hören",
+       "refs": [
+        "MRK.4.23",
+        "MRK.4.24"
+       ],
+       "role": "verbindend"
+      }
+     ],
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "zu ihnen (nicht näher genannt)",
+       "ref": "MRK.4.21-MRK.4.25"
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "wer hat ↔ wer nicht hat",
+    "range": "MRK.4.25",
+    "elements": [
+     {
+      "label": "Denn wer hat, dem wird gegeben werden",
+      "ref": "MRK.4.25",
+      "role": "gegeben"
+     },
+     {
+      "label": "und wer nicht hat, von dem wird auch das, was er hat, weggenommen werden",
+      "ref": "MRK.4.25",
+      "role": "weggenommen"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MRK.4.21-MRK.4.22",
+   "text_de": "«Kommt etwa die Lampe, damit sie unter den Scheffel gestellt wird …? Nicht, damit sie auf den Leuchter gestellt wird? Denn nichts ist verborgen, ausser um offenbar zu werden.»",
+   "reason_de": "Erstes Bildwort mit Begründung (Kriterien 1 und 4).",
+   "recognition_de": "Lampe auf dem Leuchter, nicht unter dem Scheffel.",
+   "keywords": [
+    "Kommt etwa die Lampe, damit sie unter den Scheffel gestellt wird",
+    "nichts ist verborgen, ausser um offenbar zu werden"
+   ]
+  },
+  {
+   "reference": "MRK.4.24-MRK.4.25",
+   "text_de": "«Achtet darauf, was ihr hört! Mit welchem Mass ihr messt, wird euch gemessen werden … Denn wer hat, dem wird gegeben werden; und wer nicht hat, von dem wird auch das, was er hat, weggenommen werden.»",
+   "reason_de": "Zweites Bildwort mit Begründung (Kriterium 1).",
+   "recognition_de": "Messgefäss; geben ↔ wegnehmen.",
+   "keywords": [
+    "Achtet darauf, was ihr hört!",
+    "Mit welchem Mass ihr messt, wird euch gemessen werden",
+    "Denn wer hat, dem wird gegeben werden"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Zuhörer: Der Text sagt nur «zu ihnen» (im Anschluss an 4,10–20 wohl der engere Kreis) – im Bild als Jünger"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-JUENGER"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MRK.4.21-MRK.4.25",
+   "fingerprint": "bd69544d808773e1"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mk 1–4 und 6–8 nach dem Pilot Mk 5 und dem Ausrollen Matthäus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

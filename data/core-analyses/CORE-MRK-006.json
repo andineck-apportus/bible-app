@@ -1,0 +1,210 @@
+{
+ "id": "CORE-MRK-006",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "chapter",
+ "reference": "MRK.6.1-MRK.6.56",
+ "target": "SUM-CH-MRK-006",
+ "children": [
+  "CORE-MRK-006-001-006",
+  "CORE-MRK-006-007-013",
+  "CORE-MRK-006-014-029",
+  "CORE-MRK-006-030-044",
+  "CORE-MRK-006-045-052",
+  "CORE-MRK-006-053-056"
+ ],
+ "core_de": "In seiner Heimat nehmen sie Anstoss an Jesus – ein Prophet ist nicht ohne Ehre, ausser in seiner Heimat –, und er wundert sich über ihren Unglauben; er sendet die Zwölf zu zweit aus, und sie verkünden Umkehr und heilen; eingeschoben wird erzählt, wie Herodes Johannes den Täufer auf Wunsch der Herodias enthaupten liess; nach der Rückkehr der Apostel hat Jesus Erbarmen mit der Menge und sättigt fünftausend Männer mit fünf Broten und zwei Fischen; in der Nacht kommt er auf dem See zu den Jüngern: «Ich bin es; fürchtet euch nicht!», doch ihr Herz ist verhärtet; in Gennesaret werden alle gerettet, die ihn berühren.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Ablehnung – Sendung (mit Einschub) – Brot – See – Heilungen",
+    "range": "MRK.6.1-MRK.6.56",
+    "elements": [
+     {
+      "label": "Ablehnung in der Heimat; Unglaube",
+      "ref": "MRK.6.1-MRK.6.6",
+      "role": "Ablehnung"
+     },
+     {
+      "label": "Schachtelung: Sendung – Tod des Täufers – Rückkehr",
+      "ref": "MRK.6.7-MRK.6.30",
+      "role": "Sendung",
+      "child": "s2"
+     },
+     {
+      "label": "Speisung der Fünftausend",
+      "ref": "MRK.6.31-MRK.6.44",
+      "role": "Brot"
+     },
+     {
+      "label": "Jesus geht auf dem See; das Herz der Jünger ist verhärtet",
+      "ref": "MRK.6.45-MRK.6.52",
+      "role": "See"
+     },
+     {
+      "label": "In Gennesaret: alle, die ihn berührten, wurden gerettet",
+      "ref": "MRK.6.53-MRK.6.56",
+      "role": "Heilungen"
+     }
+    ],
+    "features": {
+     "leitwort": [
+      {
+       "word": "Brot",
+       "refs": [
+        "MRK.6.8",
+        "MRK.6.37",
+        "MRK.6.41",
+        "MRK.6.44",
+        "MRK.6.52"
+       ],
+       "role": "verklammernd (Markus 6–8)"
+      },
+      {
+       "word": "Unglaube / Unverständnis",
+       "refs": [
+        "MRK.6.6",
+        "MRK.6.52"
+       ],
+       "role": "deutend"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "frame",
+    "subtype": "Schachtelung (A – B – A')",
+    "range": "MRK.6.7-MRK.6.30",
+    "elements": [
+     {
+      "label": "A: Jesus sendet die Zwölf aus; sie verkünden Umkehr und heilen",
+      "ref": "MRK.6.7-MRK.6.13",
+      "role": "A",
+      "links": [
+       "MRK.6.30"
+      ]
+     },
+     {
+      "label": "B: Herodes lässt Johannes den Täufer enthaupten",
+      "ref": "MRK.6.14-MRK.6.29",
+      "role": "B (Mitte)"
+     },
+     {
+      "label": "A': Die Apostel kehren zurück und berichten alles",
+      "ref": "MRK.6.30",
+      "role": "A'"
+     }
+    ],
+    "features": {
+     "interpretation": [
+      {
+       "note": "Was der Einschub für die Sendung bedeutet (Schicksal des Boten), ist Auslegung."
+      }
+     ]
+    },
+    "visual": "outline",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MRK.6.2-MRK.6.6",
+   "text_de": "«Ist dieser nicht der Zimmermann?» – Sie nehmen Anstoss; er wundert sich über ihren Unglauben.",
+   "reason_de": "Ablehnung in der Heimat (Kriterium 2).",
+   "recognition_de": "Feld 1: Jesus in der Synagoge seiner Heimat.",
+   "keywords": [
+    "Und sie nahmen Anstoss an ihm"
+   ]
+  },
+  {
+   "reference": "MRK.6.7-MRK.6.29",
+   "text_de": "Sendung der Zwölf; eingeschoben der Tod Johannes des Täufers durch Herodes.",
+   "reason_de": "Schachtelung: Sendung umschliesst den Tod des Täufers (Kriterien 1 und 2).",
+   "recognition_de": "Feld 2: Aussendung und Herodes.",
+   "keywords": [
+    "begann, sie zu zweit auszusenden",
+    "Johannes, den ich enthauptet habe"
+   ]
+  },
+  {
+   "reference": "MRK.6.34-MRK.6.44",
+   "text_de": "Erbarmen mit der Menge; fünf Brote und zwei Fische; alle werden satt, zwölf Körbe bleiben übrig.",
+   "reason_de": "Höhepunkt des Kapitels (Kriterien 1 und 4).",
+   "recognition_de": "Feld 3: Speisung der Fünftausend.",
+   "keywords": [
+    "Und sie assen alle und wurden satt"
+   ]
+  },
+  {
+   "reference": "MRK.6.48-MRK.6.52",
+   "text_de": "Jesus geht auf dem See: «Ich bin es; fürchtet euch nicht!» – doch ihr Herz ist verhärtet.",
+   "reason_de": "Erzählung mit Unverständnis der Jünger (Kriterium 2).",
+   "recognition_de": "Feld 4: Jesus auf dem Wasser.",
+   "keywords": [
+    "ich bin es; fürchtet euch nicht!"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Die Heilungen in Gennesaret (6,53–56) – in der Struktur und im vierten Feld gebündelt"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-VOLK",
+  "FIG-GRUPPE-ZWOELF",
+  "FIG-HERODES-ANTIPAS",
+  "FIG-HERODIAS",
+  "FIG-TOCHTER-HERODIAS",
+  "FIG-JOHANNES-TAEUFER",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-GRUPPE-MENGE"
+ ],
+ "places": [
+  "FIG-ORT-SYNAGOGE",
+  "FIG-ORT-GEFAENGNIS",
+  "FIG-ORT-SEE"
+ ],
+ "basis": [
+  {
+   "record": "CORE-MRK-006-001-006",
+   "fingerprint": "c719eb15e3267c47"
+  },
+  {
+   "record": "CORE-MRK-006-007-013",
+   "fingerprint": "a313810ee72013a1"
+  },
+  {
+   "record": "CORE-MRK-006-014-029",
+   "fingerprint": "91c81abf709bf0e8"
+  },
+  {
+   "record": "CORE-MRK-006-030-044",
+   "fingerprint": "cc97fdeaf0a47214"
+  },
+  {
+   "record": "CORE-MRK-006-045-052",
+   "fingerprint": "b2e72708f910de79"
+  },
+  {
+   "record": "CORE-MRK-006-053-056",
+   "fingerprint": "96e47f0c581cd277"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mk 1–4 und 6–8 nach dem Pilot Mk 5 und dem Ausrollen Matthäus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

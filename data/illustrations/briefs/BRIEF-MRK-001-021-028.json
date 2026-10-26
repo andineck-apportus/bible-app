@@ -20,31 +20,34 @@
         "FIG-ORT-SYNAGOGE"
       ],
       "signs": [
-        "FIG-ZEICHEN-SABBAT"
+        "FIG-ZEICHEN-LEHREN",
+        "FIG-ZEICHEN-VOLLMACHT"
       ],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-OBJ-SCHRIFTROLLE",
-            "FIG-ZEICHEN-VOLLMACHT"
-          ]
-        }
-      ],
-      "action_de": "Am Sabbat lehrt Jesus in der Synagoge von Kafarnaum; die Leute sind überwältigt, denn er lehrt mit Vollmacht, nicht wie die Schriftgelehrten.",
+      "speech": [],
+      "action_de": "Am Sabbat lehrt Jesus in der Synagoge von Kafarnaum; die Leute sind überwältigt, denn er lehrt wie einer, der Vollmacht hat, und nicht wie die Schriftgelehrten.",
+      "keywords": {
+        "de": "wie einer, der Vollmacht hat, und nicht wie die Schriftgelehrten",
+        "gsw": "wie eine, wo Vollmacht hät, und nöd wie d Schriftgleerte"
+      },
       "stage": {
+        "at": {
+          "FIG-ZEICHEN-LEHREN": "FIG-JESUS",
+          "FIG-ZEICHEN-VOLLMACHT": "FIG-JESUS"
+        },
         "mood": {
-          "FIG-GRUPPE-MENGE": "surprised"
-        }
+          "FIG-GRUPPE-MENGE": "surprised",
+          "FIG-JESUS": "calm"
+        },
+        "back_side": "left",
+        "before": true
       }
     },
     {
       "n": 2,
-      "reference": "MRK.1.23-MRK.1.24",
+      "reference": "MRK.1.23-MRK.1.26",
       "figures": [
-        "FIG-ROLLE-BESESSENER",
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-ROLLE-BESESSENER"
       ],
       "objects": [
         "FIG-ORT-SYNAGOGE"
@@ -56,83 +59,52 @@
         {
           "from": "FIG-ROLLE-BESESSENER",
           "to": "FIG-JESUS",
+          "icons": [],
+          "word": {
+            "de": "Ich weiss, wer du bist: der Heilige Gottes!",
+            "gsw": "Ich weiss, wer du bisch: de Heilig vo Gott!"
+          }
+        },
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-ROLLE-BESESSENER",
           "icons": [
-            "FIG-JESUS",
-            "FIG-GOTT"
-          ]
+            "FIG-ZEICHEN-AUSTREIBEN"
+          ],
+          "word": {
+            "de": "Verstumme und geh aus ihm heraus!",
+            "gsw": "Bis still und gang us ihm use!"
+          }
         }
       ],
-      "action_de": "In der Synagoge ist ein Mensch mit einem unreinen Geist; er schreit: Was haben wir mit dir zu schaffen, Jesus von Nazaret? Ich weiss, wer du bist: der Heilige Gottes.",
+      "action_de": "In der Synagoge schreit ein Mensch mit einem unreinen Geist: «Ich weiss, wer du bist: der Heilige Gottes!» Jesus fährt ihn an: «Verstumme und geh aus ihm heraus!» – der Geist reisst ihn hin und her und fährt aus.",
+      "keywords": {
+        "de": "und fuhr aus ihm heraus",
+        "gsw": "und isch us ihm usegfahre"
+      },
       "stage": {
-        "back_side": "left",
-        "before": true,
-        "x": {
-          "FIG-ROLLE-BESESSENER": 50,
-          "FIG-JESUS": 150
-        },
         "at": {
           "FIG-ZEICHEN-DAEMON": "FIG-ROLLE-BESESSENER"
         },
         "mood": {
-          "FIG-ROLLE-BESESSENER": "worried",
-          "FIG-JESUS": "earnest"
+          "FIG-ROLLE-BESESSENER": "angry",
+          "FIG-JESUS": "determined"
+        },
+        "back_side": "left",
+        "before": true,
+        "x": {
+          "FIG-JESUS": 54,
+          "FIG-ROLLE-BESESSENER": 140
         }
       }
     },
     {
       "n": 3,
-      "reference": "MRK.1.25-MRK.1.26",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-ROLLE-BESESSENER"
-      ],
-      "objects": [
-        "FIG-ORT-SYNAGOGE"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-DAEMON",
-        "FIG-ZEICHEN-AUSTREIBEN"
-      ],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-BESESSENER",
-          "icons": [
-            "FIG-ZEICHEN-SCHWEIGEN",
-            "FIG-ZEICHEN-DAEMON"
-          ]
-        }
-      ],
-      "action_de": "Jesus fährt ihn an: Verstumme und geh aus ihm heraus! Der unreine Geist reisst den Menschen hin und her, schreit laut und fährt aus.",
-      "stage": {
-        "back_side": "left",
-        "at": {
-          "FIG-ZEICHEN-DAEMON": "FIG-ROLLE-BESESSENER"
-        },
-        "mood": {
-          "FIG-JESUS": "earnest",
-          "FIG-ROLLE-BESESSENER": "surprised"
-        },
-        "air_x": 150,
-        "air_y": 28,
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-FLIEHEN",
-            "act"
-          ]
-        ]
-      }
-    },
-    {
-      "n": 4,
       "reference": "MRK.1.27-MRK.1.28",
       "figures": [
         "FIG-GRUPPE-MENGE"
       ],
-      "objects": [
-        "FIG-ORT-SYNAGOGE"
-      ],
+      "objects": [],
       "signs": [
         "FIG-ZEICHEN-AUSBREITEN"
       ],
@@ -141,46 +113,42 @@
           "from": "FIG-GRUPPE-MENGE",
           "to": "FIG-GRUPPE-MENGE",
           "icons": [
-            "FIG-OBJ-SCHRIFTROLLE",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
+            "FIG-JESUS"
+          ],
+          "word": {
+            "de": "Eine neue Lehre mit Vollmacht!",
+            "gsw": "E nöii Lehr mit Vollmacht!"
+          }
         }
       ],
-      "action_de": "Alle erschrecken und fragen einander: Was ist das? Eine neue Lehre mit Vollmacht! Die Kunde von Jesus verbreitet sich sogleich in ganz Galiläa.",
+      "action_de": "Alle erschrecken und fragen einander: «Was ist das? Eine neue Lehre mit Vollmacht! Sogar den unreinen Geistern gebietet er, und sie gehorchen ihm!» Die Kunde von ihm verbreitet sich sogleich in ganz Galiläa.",
+      "keywords": {
+        "de": "Und die Kunde von ihm verbreitete sich sogleich überall",
+        "gsw": "Und de Ruef vo ihm hät sich grad überall verbreitet"
+      },
       "stage": {
         "mood": {
           "FIG-GRUPPE-MENGE": "surprised"
-        },
-        "arrows": [
-          [
-            "FIG-GRUPPE-MENGE",
-            "FIG-ZEICHEN-AUSBREITEN",
-            "act"
-          ]
-        ],
-        "air_x": 128,
-        "air_y": 34
+        }
       }
     }
   ],
   "actions_de": [
-    "Am Sabbat lehrt Jesus in der Synagoge von Kafarnaum; die Leute sind überwältigt, denn er lehrt mit Vollmacht, nicht wie die Schriftgelehrten.",
-    "In der Synagoge ist ein Mensch mit einem unreinen Geist; er schreit: Was haben wir mit dir zu schaffen, Jesus von Nazaret? Ich weiss, wer du bist: der Heilige Gottes.",
-    "Jesus fährt ihn an: Verstumme und geh aus ihm heraus! Der unreine Geist reisst den Menschen hin und her, schreit laut und fährt aus.",
-    "Alle erschrecken und fragen einander: Was ist das? Eine neue Lehre mit Vollmacht! Die Kunde von Jesus verbreitet sich sogleich in ganz Galiläa."
+    "Am Sabbat lehrt Jesus in der Synagoge von Kafarnaum; die Leute sind überwältigt, denn er lehrt wie einer, der Vollmacht hat, und nicht wie die Schriftgelehrten.",
+    "In der Synagoge schreit ein Mensch mit einem unreinen Geist: «Ich weiss, wer du bist: der Heilige Gottes!» Jesus fährt ihn an: «Verstumme und geh aus ihm heraus!» – der Geist reisst ihn hin und her und fährt aus.",
+    "Alle erschrecken und fragen einander: «Was ist das? Eine neue Lehre mit Vollmacht! Sogar den unreinen Geistern gebietet er, und sie gehorchen ihm!» Die Kunde von ihm verbreitet sich sogleich in ganz Galiläa."
   ],
   "captions_de": [
-    "Lehre mit Vollmacht → Staunen: Am Sabbat (Sabbat-Zeichen: sechs graue und ein goldener Kreis) lehrt Jesus in der Synagoge (Schriftrolle, Licht); darum staunt die Menge.",
-    "Der Geist schreit: Ein Mensch mit unreinem Geist (dunkler Schatten) ruft Jesus zu: Du bist der Heilige Gottes (Jesus, Strahlenkranz).",
-    "Befehl → Ausfahren: Jesus gebietet: Schweig, geh hinaus (Gesicht mit Finger vor dem Mund, Schatten); der Pfeil von Jesus führt zum Zeichen «fährt aus» (Pfeil weg): Der Geist fährt aus.",
-    "Staunen → Kunde: Die Menge fragt einander nach der neuen Lehre (Schriftrolle, Fragezeichen); von ihr aus (Pfeil) breitet sich die Nachricht aus (Erdkugel mit Fussspuren)."
+    "Lehre mit Vollmacht: Jesus lehrt in der Synagoge (lehren, Vollmacht); die Zuhörer staunen.",
+    "Austreibung in der Synagoge: Der Mann mit dem unreinen Geist (dunkler Schatten) schreit Jesus an; Jesus gebietet: «Verstumme und geh aus ihm heraus!» (austreiben).",
+    "Neue Lehre mit Vollmacht: Die Leute reden staunend miteinander; die Kunde breitet sich aus (ausbreiten)."
   ],
-  "interpretation_note_de": "Der unreine Geist ist als dunkler Schatten ohne Gesicht gezeichnet, nicht als Fratze. In [[MRK.1.24]] spricht der Mensch bzw. der Geist in ihm («wir»); das Bild lässt die Sprechblase vom Menschen ausgehen. Das Hin- und Herreissen ([[MRK.1.26]]) ist nicht ausgemalt.",
+  "interpretation_note_de": "Drei Felder nach dem Rahmen «Lehre mit Vollmacht – Austreibung – neue Lehre mit Vollmacht» ([[MRK.1.21-MRK.1.28]]). «Verstumme» ist das erste Schweigegebot bei Markus. Die Schriftgelehrten sind nur Vergleich und nicht gezeichnet; der unreine Geist erscheint als dunkler Schatten ohne Gesicht.",
   "basis": [
     {
       "record": "TU-MRK-001-021-028",
       "field": "summary",
-      "fingerprint": "03e98453ccc4a343"
+      "fingerprint": "794fc4baf411f505"
     },
     {
       "record": "TRANS-MRK-001-001-045-DE-WORKING",
@@ -191,14 +159,8 @@
     {
       "record": "TRANS-MRK-001-001-045-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.1.23-MRK.1.24",
-      "fingerprint": "cbfcea64eeed6ab0"
-    },
-    {
-      "record": "TRANS-MRK-001-001-045-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MRK.1.25-MRK.1.26",
-      "fingerprint": "9754672f89409a26"
+      "reference": "MRK.1.23-MRK.1.26",
+      "fingerprint": "d144b288ab829d97"
     },
     {
       "record": "TRANS-MRK-001-001-045-DE-WORKING",
@@ -208,7 +170,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -548,6 +510,212 @@
           "Befehl → Ausfahren: Jesus gebietet: Schweig, geh hinaus (durchgestrichene Sprechblase, Schatten); der Pfeil von Jesus führt zum Zeichen «fährt aus» (Pfeil weg): Der Geist fährt aus.",
           "Staunen → Kunde: Die Menge fragt einander nach der neuen Lehre (Schriftrolle, Fragezeichen); von ihr aus (Pfeil) breitet sich die Nachricht aus (Pfeile nach allen Seiten)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.1.21-MRK.1.22",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-SYNAGOGE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SABBAT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-OBJ-SCHRIFTROLLE",
+                  "FIG-ZEICHEN-VOLLMACHT"
+                ]
+              }
+            ],
+            "action_de": "Am Sabbat lehrt Jesus in der Synagoge von Kafarnaum; die Leute sind überwältigt, denn er lehrt mit Vollmacht, nicht wie die Schriftgelehrten.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "surprised"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.1.23-MRK.1.24",
+            "figures": [
+              "FIG-ROLLE-BESESSENER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-SYNAGOGE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-DAEMON"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-BESESSENER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-GOTT"
+                ]
+              }
+            ],
+            "action_de": "In der Synagoge ist ein Mensch mit einem unreinen Geist; er schreit: Was haben wir mit dir zu schaffen, Jesus von Nazaret? Ich weiss, wer du bist: der Heilige Gottes.",
+            "stage": {
+              "back_side": "left",
+              "before": true,
+              "x": {
+                "FIG-ROLLE-BESESSENER": 50,
+                "FIG-JESUS": 150
+              },
+              "at": {
+                "FIG-ZEICHEN-DAEMON": "FIG-ROLLE-BESESSENER"
+              },
+              "mood": {
+                "FIG-ROLLE-BESESSENER": "worried",
+                "FIG-JESUS": "earnest"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.1.25-MRK.1.26",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-BESESSENER"
+            ],
+            "objects": [
+              "FIG-ORT-SYNAGOGE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-DAEMON",
+              "FIG-ZEICHEN-AUSTREIBEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-BESESSENER",
+                "icons": [
+                  "FIG-ZEICHEN-SCHWEIGEN",
+                  "FIG-ZEICHEN-DAEMON"
+                ]
+              }
+            ],
+            "action_de": "Jesus fährt ihn an: Verstumme und geh aus ihm heraus! Der unreine Geist reisst den Menschen hin und her, schreit laut und fährt aus.",
+            "stage": {
+              "back_side": "left",
+              "at": {
+                "FIG-ZEICHEN-DAEMON": "FIG-ROLLE-BESESSENER"
+              },
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-ROLLE-BESESSENER": "surprised"
+              },
+              "air_x": 150,
+              "air_y": 28,
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FLIEHEN",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.1.27-MRK.1.28",
+            "figures": [
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-SYNAGOGE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-AUSBREITEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-OBJ-SCHRIFTROLLE",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Alle erschrecken und fragen einander: Was ist das? Eine neue Lehre mit Vollmacht! Die Kunde von Jesus verbreitet sich sogleich in ganz Galiläa.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "surprised"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-ZEICHEN-AUSBREITEN",
+                  "act"
+                ]
+              ],
+              "air_x": 128,
+              "air_y": 34
+            }
+          }
+        ],
+        "actions_de": [
+          "Am Sabbat lehrt Jesus in der Synagoge von Kafarnaum; die Leute sind überwältigt, denn er lehrt mit Vollmacht, nicht wie die Schriftgelehrten.",
+          "In der Synagoge ist ein Mensch mit einem unreinen Geist; er schreit: Was haben wir mit dir zu schaffen, Jesus von Nazaret? Ich weiss, wer du bist: der Heilige Gottes.",
+          "Jesus fährt ihn an: Verstumme und geh aus ihm heraus! Der unreine Geist reisst den Menschen hin und her, schreit laut und fährt aus.",
+          "Alle erschrecken und fragen einander: Was ist das? Eine neue Lehre mit Vollmacht! Die Kunde von Jesus verbreitet sich sogleich in ganz Galiläa."
+        ],
+        "captions_de": [
+          "Lehre mit Vollmacht → Staunen: Am Sabbat (Sabbat-Zeichen: sechs graue und ein goldener Kreis) lehrt Jesus in der Synagoge (Schriftrolle, Licht); darum staunt die Menge.",
+          "Der Geist schreit: Ein Mensch mit unreinem Geist (dunkler Schatten) ruft Jesus zu: Du bist der Heilige Gottes (Jesus, Strahlenkranz).",
+          "Befehl → Ausfahren: Jesus gebietet: Schweig, geh hinaus (Gesicht mit Finger vor dem Mund, Schatten); der Pfeil von Jesus führt zum Zeichen «fährt aus» (Pfeil weg): Der Geist fährt aus.",
+          "Staunen → Kunde: Die Menge fragt einander nach der neuen Lehre (Schriftrolle, Fragezeichen); von ihr aus (Pfeil) breitet sich die Nachricht aus (Erdkugel mit Fussspuren)."
+        ],
+        "interpretation_note_de": "Der unreine Geist ist als dunkler Schatten ohne Gesicht gezeichnet, nicht als Fratze. In [[MRK.1.24]] spricht der Mensch bzw. der Geist in ihm («wir»); das Bild lässt die Sprechblase vom Menschen ausgehen. Das Hin- und Herreissen ([[MRK.1.26]]) ist nicht ausgemalt.",
+        "basis": [
+          {
+            "record": "TU-MRK-001-021-028",
+            "field": "summary",
+            "fingerprint": "03e98453ccc4a343"
+          },
+          {
+            "record": "TRANS-MRK-001-001-045-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.1.21-MRK.1.22",
+            "fingerprint": "8160f15fd89d5105"
+          },
+          {
+            "record": "TRANS-MRK-001-001-045-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.1.23-MRK.1.24",
+            "fingerprint": "cbfcea64eeed6ab0"
+          },
+          {
+            "record": "TRANS-MRK-001-001-045-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.1.25-MRK.1.26",
+            "fingerprint": "9754672f89409a26"
+          },
+          {
+            "record": "TRANS-MRK-001-001-045-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.1.27-MRK.1.28",
+            "fingerprint": "5f447fc4aa872461"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

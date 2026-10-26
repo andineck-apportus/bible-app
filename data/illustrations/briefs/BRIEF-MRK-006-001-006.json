@@ -12,90 +12,133 @@
     {
       "n": 1,
       "reference": "MRK.6.1-MRK.6.3",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-MENGE"
-      ],
-      "objects": [
-        "FIG-ORT-SYNAGOGE"
-      ],
+      "figures": [],
+      "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-MENGE",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-MARIA-MUTTER-JESU",
-            "FIG-JESUS",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
-        }
-      ],
-      "action_de": "Am Sabbat lehrt Jesus in der Synagoge seiner Heimat. Die Zuhörer staunen, nehmen aber Anstoss: Ist das nicht der Zimmermann, der Sohn der Maria?",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-MENGE": "surprised"
-        }
+      "speech": [],
+      "action_de": "Am Sabbat lehrt Jesus in der Synagoge seiner Heimat; die vielen Zuhörer staunen: «Woher hat dieser das? … Ist dieser nicht der Zimmermann, der Sohn der Maria und Bruder des Jakobus und des Joses und des Judas und des Simon?» – und sie nehmen Anstoss an ihm.",
+      "keywords": {
+        "de": "Und sie nahmen Anstoss an ihm",
+        "gsw": "Und si händ a ihm Aastoss gnoo"
+      },
+      "diagram": {
+        "visual": "grid",
+        "span": 2,
+        "cols": 2,
+        "speaker": "FIG-GRUPPE-VOLK",
+        "title": {
+          "de": "Woher hat dieser das?",
+          "gsw": "Vo wo hät dä das?"
+        },
+        "cells": [
+          {
+            "a": {
+              "de": "Was ist das für eine Weisheit, die ihm gegeben ist?",
+              "gsw": "Was isch das für e Wiisheit, wo ihm ggää worde isch?"
+            },
+            "icons": [
+              "FIG-ZEICHEN-KLUG"
+            ]
+          },
+          {
+            "a": {
+              "de": "Was für Machttaten, die durch seine Hände geschehen!",
+              "gsw": "Was für Chrafttate, wo dur sini Händ passiered!"
+            },
+            "icons": [
+              "FIG-ZEICHEN-HEILEN"
+            ]
+          },
+          {
+            "a": {
+              "de": "Ist dieser nicht der Zimmermann, der Sohn der Maria und Bruder des Jakobus und des Joses und des Judas und des Simon?",
+              "gsw": "Isch dä nöd de Zimmermaa, de Sohn vo de Maria und de Brueder vom Jakobus und vom Joses und vom Judas und vom Simon?"
+            },
+            "icons": [
+              "FIG-MARIA-MUTTER-JESU",
+              "FIG-GRUPPE-BRUEDER-JESU"
+            ]
+          },
+          {
+            "a": {
+              "de": "Und sind nicht seine Schwestern hier bei uns?",
+              "gsw": "Und sind nöd sini Schwöschtere da bi üs?"
+            },
+            "icons": [
+              "FIG-GRUPPE-FRAUEN"
+            ]
+          }
+        ]
       }
     },
     {
       "n": 2,
       "reference": "MRK.6.4-MRK.6.6",
       "figures": [
+        "FIG-GRUPPE-VOLK",
         "FIG-JESUS",
-        "FIG-ROLLE-KRANKER",
-        "FIG-GRUPPE-MENGE"
+        "FIG-GRUPPE-KRANKE"
       ],
       "objects": [],
       "signs": [
+        "FIG-ZEICHEN-UNGLAUBE",
         "FIG-ZEICHEN-HEILEN"
       ],
       "speech": [
         {
           "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-ROLLE-PROPHET",
-            "FIG-ORT-HAUS",
-            "FIG-ZEICHEN-ABLEHNEN"
-          ]
+          "to": "FIG-GRUPPE-VOLK",
+          "icons": [],
+          "word": {
+            "de": "Ein Prophet ist nicht ohne Ehre, ausser in seiner Heimat und unter seinen Verwandten und in seinem Haus.",
+            "gsw": "En Prophet isch nöd ohni Ehr, usser i sinere Heimet und under sine Verwandte und i sim Huus."
+          }
         }
       ],
-      "action_de": "Jesus sagt: Ein Prophet ist nur in seiner Heimat ohne Ehre. Er kann dort keine Machttat tun, ausser dass er wenigen Kranken die Hände auflegt; er wundert sich über ihren Unglauben.",
+      "action_de": "Jesus sagt: «Ein Prophet ist nicht ohne Ehre, ausser in seiner Heimat und unter seinen Verwandten und in seinem Haus.» Er kann dort keine Machttat tun, ausser dass er wenigen Kranken die Hände auflegt und sie heilt, und er wundert sich über ihren Unglauben.",
+      "keywords": {
+        "de": "er wunderte sich über ihren Unglauben",
+        "gsw": "er hät sich über iren Unglaube gwunderet"
+      },
       "stage": {
-        "pose": {
-          "FIG-ROLLE-KRANKER": "sit"
+        "at": {
+          "FIG-ZEICHEN-UNGLAUBE": "FIG-GRUPPE-VOLK",
+          "FIG-ZEICHEN-HEILEN": "FIG-GRUPPE-KRANKE"
         },
-        "arrows": [],
+        "arrows": [
+          [
+            "FIG-JESUS",
+            "FIG-GRUPPE-KRANKE",
+            "act"
+          ]
+        ],
         "mood": {
-          "FIG-GRUPPE-MENGE": "earnest",
-          "FIG-JESUS": "pensive"
-        },
-        "beside": {
-          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
+          "FIG-GRUPPE-VOLK": "earnest",
+          "FIG-JESUS": "pensive",
+          "FIG-GRUPPE-KRANKE": "smile"
         },
         "x": {
-          "FIG-JESUS": 28,
-          "FIG-ROLLE-KRANKER": 76,
-          "FIG-GRUPPE-MENGE": 150
+          "FIG-GRUPPE-VOLK": 34,
+          "FIG-JESUS": 100,
+          "FIG-GRUPPE-KRANKE": 160
         }
       }
     }
   ],
   "actions_de": [
-    "Am Sabbat lehrt Jesus in der Synagoge seiner Heimat. Die Zuhörer staunen, nehmen aber Anstoss: Ist das nicht der Zimmermann, der Sohn der Maria?",
-    "Jesus sagt: Ein Prophet ist nur in seiner Heimat ohne Ehre. Er kann dort keine Machttat tun, ausser dass er wenigen Kranken die Hände auflegt; er wundert sich über ihren Unglauben."
+    "Am Sabbat lehrt Jesus in der Synagoge seiner Heimat; die vielen Zuhörer staunen: «Woher hat dieser das? … Ist dieser nicht der Zimmermann, der Sohn der Maria und Bruder des Jakobus und des Joses und des Judas und des Simon?» – und sie nehmen Anstoss an ihm.",
+    "Jesus sagt: «Ein Prophet ist nicht ohne Ehre, ausser in seiner Heimat und unter seinen Verwandten und in seinem Haus.» Er kann dort keine Machttat tun, ausser dass er wenigen Kranken die Hände auflegt und sie heilt, und er wundert sich über ihren Unglauben."
   ],
   "captions_de": [
-    "In der Synagoge: Die Leute staunen und fragen: Ist das nicht der Sohn der Maria (Maria, Jesus, Fragezeichen)?",
-    "Ohne Ehre: Jesus sagt, ein Prophet werde in seiner Heimat abgelehnt (Prophet, Haus, Person mit gekreuzten Armen); er heilt nur wenige Kranke."
+    "Fragen der Zuhörer (Raster, Bild Leute): Woher hat dieser das? – Was für eine Weisheit, was für Machttaten! (weise, heilen) – Ist dieser nicht der Zimmermann, der Sohn der Maria? (Maria) – Sind nicht seine Schwestern hier bei uns? (Frauen).",
+    "Ohne Ehre: Jesus spricht zu den Zuhörern (Prophet); einem Kranken legt er die Hände auf (heilen); die anderen bleiben im Unglauben (Zweifel)."
   ],
-  "interpretation_note_de": "Die Heimatstadt nennt Markus nicht; das Haus steht für Heimat, Verwandte und Haus ([[MRK.6.4]]). Den Unglauben ([[MRK.6.6]]) zeigt das Bild nur am ernsten Ausdruck der Leute.",
+  "interpretation_note_de": "Zwei Felder nach «Lehre – Staunen – Anstoss – Wort – Folge» ([[MRK.6.1-MRK.6.6]]): alle Fragen der Zuhörer als Raster, dann Jesu Wort vom Propheten ohne Ehre, die wenigen Heilungen und sein Staunen über ihren Unglauben. Mutter, Brüder und Schwestern sind nur genannt, nicht anwesend; sie erscheinen nur als Zeichen in den Fragen.",
   "basis": [
     {
       "record": "TU-MRK-006-001-006",
       "field": "summary",
-      "fingerprint": "06277b6d506b443a"
+      "fingerprint": "a40814edfdae53f0"
     },
     {
       "record": "TRANS-MRK-006-001-056-DE-WORKING",
@@ -111,7 +154,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -209,6 +252,121 @@
           "In der Synagoge: Die Leute staunen und fragen: Ist das nicht der Sohn der Maria (Maria, Jesus, Fragezeichen)?",
           "Ohne Ehre: Jesus sagt, ein Prophet werde in seiner Heimat abgelehnt (Prophet, Haus, abwehrende Hand); er heilt nur wenige Kranke."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MRK-006-001-006",
+            "field": "summary",
+            "fingerprint": "06277b6d506b443a"
+          },
+          {
+            "record": "TRANS-MRK-006-001-056-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.6.1-MRK.6.3",
+            "fingerprint": "827346bf89717b6e"
+          },
+          {
+            "record": "TRANS-MRK-006-001-056-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.6.4-MRK.6.6",
+            "fingerprint": "93818d4e7cc43552"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.6.1-MRK.6.3",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-SYNAGOGE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-MARIA-MUTTER-JESU",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Am Sabbat lehrt Jesus in der Synagoge seiner Heimat. Die Zuhörer staunen, nehmen aber Anstoss: Ist das nicht der Zimmermann, der Sohn der Maria?",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "surprised"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.6.4-MRK.6.6",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-KRANKER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ROLLE-PROPHET",
+                  "FIG-ORT-HAUS",
+                  "FIG-ZEICHEN-ABLEHNEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: Ein Prophet ist nur in seiner Heimat ohne Ehre. Er kann dort keine Machttat tun, ausser dass er wenigen Kranken die Hände auflegt; er wundert sich über ihren Unglauben.",
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-KRANKER": "sit"
+              },
+              "arrows": [],
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-JESUS": "pensive"
+              },
+              "beside": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
+              },
+              "x": {
+                "FIG-JESUS": 28,
+                "FIG-ROLLE-KRANKER": 76,
+                "FIG-GRUPPE-MENGE": 150
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Am Sabbat lehrt Jesus in der Synagoge seiner Heimat. Die Zuhörer staunen, nehmen aber Anstoss: Ist das nicht der Zimmermann, der Sohn der Maria?",
+          "Jesus sagt: Ein Prophet ist nur in seiner Heimat ohne Ehre. Er kann dort keine Machttat tun, ausser dass er wenigen Kranken die Hände auflegt; er wundert sich über ihren Unglauben."
+        ],
+        "captions_de": [
+          "In der Synagoge: Die Leute staunen und fragen: Ist das nicht der Sohn der Maria (Maria, Jesus, Fragezeichen)?",
+          "Ohne Ehre: Jesus sagt, ein Prophet werde in seiner Heimat abgelehnt (Prophet, Haus, Person mit gekreuzten Armen); er heilt nur wenige Kranke."
+        ],
+        "interpretation_note_de": "Die Heimatstadt nennt Markus nicht; das Haus steht für Heimat, Verwandte und Haus ([[MRK.6.4]]). Den Unglauben ([[MRK.6.6]]) zeigt das Bild nur am ernsten Ausdruck der Leute.",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

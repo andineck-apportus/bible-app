@@ -1,0 +1,158 @@
+{
+ "id": "CORE-MRK-004-030-034",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MRK.4.30-MRK.4.34",
+ "target": "TU-MRK-004-030-034",
+ "core_de": "Jesus vergleicht das Reich Gottes mit einem Senfkorn: gesät ist es kleiner als alle Samen auf der Erde, aufgegangen aber wird es grösser als alle Gartenkräuter und treibt grosse Zweige, sodass die Vögel in seinem Schatten nisten können; mit vielen solchen Gleichnissen redet er das Wort, wie sie es hören können, ohne Gleichnis redet er nicht zu ihnen, seinen eigenen Jüngern aber erklärt er für sich alles.",
+ "mode": "parable",
+ "voice": {
+  "speaker": "FIG-JESUS"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Gleichnis – Abschluss der Rede",
+    "range": "MRK.4.30-MRK.4.34",
+    "elements": [
+     {
+      "label": "«Wie sollen wir das Reich Gottes vergleichen …?»",
+      "ref": "MRK.4.30",
+      "role": "Frage"
+     },
+     {
+      "label": "Senfkorn: klein → gross",
+      "ref": "MRK.4.31-MRK.4.32",
+      "role": "Gleichnis",
+      "child": "s2"
+     },
+     {
+      "label": "Mit vielen solchen Gleichnissen redete er zu ihnen das Wort, so wie sie es hören konnten",
+      "ref": "MRK.4.33",
+      "role": "Rede"
+     },
+     {
+      "label": "öffentlich ↔ für sich",
+      "ref": "MRK.4.34",
+      "role": "Schluss",
+      "child": "s3"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "zu ihnen (nicht näher genannt)",
+       "ref": "MRK.4.30-MRK.4.32"
+      },
+      {
+       "who": "Erzähler",
+       "to": "Leser",
+       "ref": "MRK.4.33-MRK.4.34"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "gesät: kleiner als alle Samen ↔ aufgegangen: grösser als alle Gartenkräuter",
+    "range": "MRK.4.31-MRK.4.32",
+    "elements": [
+     {
+      "label": "wenn es auf die Erde gesät wird, kleiner als alle Samen, die auf der Erde sind",
+      "ref": "MRK.4.31",
+      "role": "klein"
+     },
+     {
+      "label": "wenn es gesät ist, geht es auf und wird grösser als alle Gartenkräuter und treibt grosse Zweige, sodass die Vögel des Himmels in seinem Schatten nisten können",
+      "ref": "MRK.4.32",
+      "role": "gross"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "contrast",
+    "subtype": "zu ihnen nur in Gleichnissen ↔ den Jüngern alles erklärt",
+    "range": "MRK.4.34",
+    "elements": [
+     {
+      "label": "Ohne Gleichnis redete er nicht zu ihnen",
+      "ref": "MRK.4.34",
+      "role": "öffentlich"
+     },
+     {
+      "label": "für sich aber erklärte er seinen eigenen Jüngern alles",
+      "ref": "MRK.4.34",
+      "role": "für sich"
+     }
+    ],
+    "features": {
+     "crossref": [
+      {
+       "ref": "MRK.4.11",
+       "kind": "Bezug",
+       "note": "euch – jenen draussen"
+      }
+     ]
+    },
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MRK.4.30-MRK.4.32",
+   "text_de": "Das Reich Gottes ist wie ein Senfkorn: gesät kleiner als alle Samen, aufgegangen grösser als alle Gartenkräuter, mit grossen Zweigen, sodass die Vögel des Himmels in seinem Schatten nisten können.",
+   "reason_de": "Gegensatz klein ↔ gross trägt das Gleichnis (Kriterien 1 und 4).",
+   "recognition_de": "Winziges Korn → grosse Staude mit Vögeln.",
+   "keywords": [
+    "Wie ein Senfkorn",
+    "kleiner ist als alle Samen",
+    "sodass die Vögel des Himmels in seinem Schatten nisten können"
+   ]
+  },
+  {
+   "reference": "MRK.4.33-MRK.4.34",
+   "text_de": "Mit vielen solchen Gleichnissen redet er das Wort, wie sie es hören können; ohne Gleichnis redet er nicht zu ihnen, seinen eigenen Jüngern aber erklärt er für sich alles.",
+   "reason_de": "Schluss der Gleichnisrede (Kriterien 2 und 3).",
+   "recognition_de": "Jesus erklärt den Jüngern abseits.",
+   "keywords": [
+    "Ohne Gleichnis aber redete er nicht zu ihnen",
+    "für sich aber erklärte er seinen eigenen Jüngern alles"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Eine Deutung der Vögel – der Text gibt keine (Anklang an Ez 17 und Dan 4 ist Auslegung)"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-GRUPPE-MENGE"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MRK.4.30-MRK.4.34",
+   "fingerprint": "e9adecb44b7a1480"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mk 1–4 und 6–8 nach dem Pilot Mk 5 und dem Ausrollen Matthäus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

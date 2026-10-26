@@ -13,7 +13,7 @@
       "n": 1,
       "reference": "MRK.7.1-MRK.7.5",
       "figures": [
-        "FIG-ROLLE-JUENGER",
+        "FIG-GRUPPE-JUENGER",
         "FIG-JESUS",
         "FIG-GRUPPE-PHARISAEER"
       ],
@@ -26,94 +26,287 @@
           "from": "FIG-GRUPPE-PHARISAEER",
           "to": "FIG-JESUS",
           "icons": [
-            "FIG-ZEICHEN-WASCHEN",
-            "FIG-ZEICHEN-FEHLT",
-            "FIG-OBJ-BROT",
+            "FIG-ZEICHEN-HAENDE-WASCHEN",
+            "FIG-ZEICHEN-NICHT",
             "FIG-ZEICHEN-FRAGEN"
           ]
         }
       ],
-      "action_de": "Pharisäer und Schriftgelehrte aus Jerusalem sehen, dass einige Jünger mit ungewaschenen Händen Brot essen, und fragen Jesus: Warum leben deine Jünger nicht nach der Überlieferung der Ältesten?",
+      "action_de": "Pharisäer und Schriftgelehrte aus Jerusalem sehen, dass Jünger mit ungewaschenen Händen essen, und fragen: «Warum leben deine Jünger nicht nach der Überlieferung der Ältesten …?»",
+      "keywords": {
+        "de": "Warum leben deine Jünger nicht nach der Überlieferung der Ältesten",
+        "gsw": "Werum läbed dini Jünger nöd nach de Überliferig vo de Ältischte"
+      },
       "stage": {
         "hold": {
-          "FIG-ROLLE-JUENGER": "FIG-OBJ-BROT"
+          "FIG-GRUPPE-JUENGER": "FIG-OBJ-BROT"
         },
         "mood": {
+          "FIG-GRUPPE-JUENGER": "calm",
+          "FIG-JESUS": "earnest",
           "FIG-GRUPPE-PHARISAEER": "earnest"
+        },
+        "x": {
+          "FIG-GRUPPE-JUENGER": 34,
+          "FIG-JESUS": 98,
+          "FIG-GRUPPE-PHARISAEER": 160
         }
       }
     },
     {
       "n": 2,
       "reference": "MRK.7.6-MRK.7.13",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-PHARISAEER"
-      ],
+      "figures": [],
       "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-PHARISAEER",
-          "icons": [
-            "FIG-OBJ-GESETZESTAFELN",
-            "FIG-ZEICHEN-ABLEHNEN"
+      "speech": [],
+      "action_de": "Jesus antwortet mit Jesaja: Dieses Volk ehrt mich mit den Lippen, ihr Herz aber ist fern von mir; das Gebot Gottes lasst ihr fahren und haltet die Überlieferung der Menschen fest – Mose sagt: Ehre Vater und Mutter; ihr aber sagt: Korban, und lasst ihn nichts mehr für Vater oder Mutter tun.",
+      "keywords": {
+        "de": "Das Gebot Gottes lasst ihr fahren",
+        "gsw": "S Gebot vo Gott lönd ir fahre"
+      },
+      "diagram": {
+        "visual": "columns",
+        "span": 2,
+        "speaker": "FIG-JESUS",
+        "title": {
+          "de": "Dieses Volk ehrt mich mit den Lippen, ihr Herz aber ist weit entfernt von mir.",
+          "gsw": "Das Volch ehrt mich mit de Lippe, ires Härz aber isch wiit ewägg vo mir."
+        },
+        "head": [
+          {
+            "de": "Überlieferung der Menschen",
+            "gsw": "Überliferig vo de Mänsche"
+          },
+          {
+            "de": "Gebot Gottes",
+            "gsw": "Gebot vo Gott"
+          }
+        ],
+        "rows": [
+          [
+            {
+              "a": {
+                "de": "Ihr haltet die Überlieferung der Menschen fest.",
+                "gsw": "Ir haltet a de Überliferig vo de Mänsche fescht."
+              },
+              "icons": [
+                "FIG-ZEICHEN-MENSCHEN"
+              ],
+              "tone": "old"
+            },
+            {
+              "a": {
+                "de": "Das Gebot Gottes lasst ihr fahren.",
+                "gsw": "S Gebot vo Gott lönd ir fahre."
+              },
+              "icons": [
+                "FIG-OBJ-GESETZESTAFELN"
+              ],
+              "tone": "new"
+            }
+          ],
+          [
+            {
+              "a": {
+                "de": "Ihr aber sagt: «Korban – Opfergabe – sei, was du von mir an Hilfe bekommen könntest», und lasst ihn nichts mehr für Vater oder Mutter tun.",
+                "gsw": "Ir aber säged: «Korban – Opfergab – sig, was du vo mir a Hilf chöntsch übercho», und lönd en nüüt meh für de Vatter oder d Mueter mache."
+              },
+              "icons": [
+                "FIG-ZEICHEN-OPFER",
+                "FIG-ZEICHEN-NICHT"
+              ],
+              "tone": "old"
+            },
+            {
+              "a": {
+                "de": "Mose hat gesagt: «Ehre deinen Vater und deine Mutter.»",
+                "gsw": "De Mose hät gseit: «Ehr din Vatter und dini Mueter.»"
+              },
+              "icons": [
+                "FIG-ROLLE-VATER",
+                "FIG-ROLLE-MUTTER"
+              ],
+              "tone": "new"
+            }
           ]
-        }
-      ],
-      "action_de": "Jesus hält ihnen mit Jesaja vor: Ihr lasst das Gebot Gottes fahren und haltet an der Überlieferung der Menschen fest – etwa wenn ihr mit dem Wort Korban den Eltern die Hilfe entzieht.",
-      "stage": {
-        "mood": {
-          "FIG-JESUS": "earnest",
-          "FIG-GRUPPE-PHARISAEER": "earnest"
-        }
+        ]
       }
     },
     {
       "n": 3,
       "reference": "MRK.7.14-MRK.7.23",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-MENGE"
-      ],
+      "figures": [],
       "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-ZEICHEN-HERZ",
-            "FIG-ZEICHEN-STAMMT-AUS",
-            "FIG-ZEICHEN-UNREIN"
-          ]
-        }
-      ],
-      "action_de": "Jesus ruft die Menge und erklärt danach im Haus den Jüngern: Nichts, was von aussen in den Menschen hineingeht, macht ihn unrein; was aus dem Herzen herauskommt, das macht den Menschen unrein.",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-MENGE": "pensive"
-        }
+      "speech": [],
+      "action_de": "Der Menge sagt Jesus: Nichts, was von aussen in den Menschen hineingeht, macht ihn unrein, sondern was aus ihm herauskommt; den Jüngern sagt er: «Seid auch ihr so unverständig?» Aus dem Herzen kommen die bösen Gedanken: Unzucht, Diebstähle, Morde, Ehebrüche, Habgier, Bosheiten, List, Ausschweifung, ein böses Auge, Lästerung, Hochmut, Unvernunft.",
+      "keywords": {
+        "de": "Seid auch ihr so unverständig?",
+        "gsw": "Sind au ir eso unverständig?"
+      },
+      "diagram": {
+        "visual": "grid",
+        "span": 2,
+        "cols": 4,
+        "speaker": "FIG-JESUS",
+        "title": {
+          "de": "Was aus dem Menschen herauskommt, das macht den Menschen unrein.",
+          "gsw": "Was us em Mänsch usechunnt, das macht de Mänsch unrein."
+        },
+        "cells": [
+          {
+            "a": {
+              "de": "Nichts, was von aussen in den Menschen hineingeht, kann ihn unrein machen.",
+              "gsw": "Nüüt, wo vo usse in Mänsch ine gaat, cha en unrein mache."
+            },
+            "icons": [
+              "FIG-OBJ-BROT",
+              "FIG-ZEICHEN-NICHT"
+            ],
+            "tone": "new"
+          },
+          {
+            "a": {
+              "de": "Von innen, aus dem Herzen der Menschen, kommen die bösen Gedanken heraus:",
+              "gsw": "Vo inne, us em Härz vo de Mänsche, chömed di bööse Gedanke use:"
+            },
+            "icons": [
+              "FIG-ZEICHEN-HERZ",
+              "FIG-ZEICHEN-BOESES"
+            ],
+            "tone": "old"
+          },
+          {
+            "a": {
+              "de": "Unzucht",
+              "gsw": "Unzucht"
+            },
+            "icons": [
+              "FIG-ZEICHEN-SUENDE"
+            ]
+          },
+          {
+            "a": {
+              "de": "Diebstähle",
+              "gsw": "Diebstähl"
+            },
+            "icons": [
+              "FIG-ROLLE-DIEB"
+            ]
+          },
+          {
+            "a": {
+              "de": "Morde",
+              "gsw": "Mord"
+            },
+            "icons": [
+              "FIG-ZEICHEN-TOETEN"
+            ]
+          },
+          {
+            "a": {
+              "de": "Ehebrüche",
+              "gsw": "Ehebrüch"
+            },
+            "icons": [
+              "FIG-ZEICHEN-EHE",
+              "FIG-ZEICHEN-TRENNEN"
+            ]
+          },
+          {
+            "a": {
+              "de": "Habgier",
+              "gsw": "Gier"
+            },
+            "icons": [
+              "FIG-ZEICHEN-MAMMON"
+            ]
+          },
+          {
+            "a": {
+              "de": "Bosheiten",
+              "gsw": "Bosheite"
+            },
+            "icons": [
+              "FIG-ZEICHEN-BOESES"
+            ]
+          },
+          {
+            "a": {
+              "de": "List",
+              "gsw": "List"
+            },
+            "icons": [
+              "FIG-ZEICHEN-FALLE"
+            ]
+          },
+          {
+            "a": {
+              "de": "Ausschweifung",
+              "gsw": "Usschweifig"
+            },
+            "icons": [
+              "FIG-OBJ-BECHER-VOLL"
+            ]
+          },
+          {
+            "a": {
+              "de": "ein böses Auge",
+              "gsw": "es bööses Aug"
+            },
+            "icons": [
+              "FIG-ZEICHEN-AUGE",
+              "FIG-ZEICHEN-BOESES"
+            ]
+          },
+          {
+            "a": {
+              "de": "Lästerung",
+              "gsw": "Läschterig"
+            },
+            "icons": [
+              "FIG-ZEICHEN-VERLEUMDEN"
+            ]
+          },
+          {
+            "a": {
+              "de": "Hochmut",
+              "gsw": "Hochmuet"
+            },
+            "icons": [
+              "FIG-ZEICHEN-RANG"
+            ]
+          },
+          {
+            "a": {
+              "de": "Unvernunft",
+              "gsw": "Unvernunft"
+            },
+            "icons": [
+              "FIG-ZEICHEN-TOERICHT"
+            ]
+          }
+        ]
       }
     }
   ],
   "actions_de": [
-    "Pharisäer und Schriftgelehrte aus Jerusalem sehen, dass einige Jünger mit ungewaschenen Händen Brot essen, und fragen Jesus: Warum leben deine Jünger nicht nach der Überlieferung der Ältesten?",
-    "Jesus hält ihnen mit Jesaja vor: Ihr lasst das Gebot Gottes fahren und haltet an der Überlieferung der Menschen fest – etwa wenn ihr mit dem Wort Korban den Eltern die Hilfe entzieht.",
-    "Jesus ruft die Menge und erklärt danach im Haus den Jüngern: Nichts, was von aussen in den Menschen hineingeht, macht ihn unrein; was aus dem Herzen herauskommt, das macht den Menschen unrein."
+    "Pharisäer und Schriftgelehrte aus Jerusalem sehen, dass Jünger mit ungewaschenen Händen essen, und fragen: «Warum leben deine Jünger nicht nach der Überlieferung der Ältesten …?»",
+    "Jesus antwortet mit Jesaja: Dieses Volk ehrt mich mit den Lippen, ihr Herz aber ist fern von mir; das Gebot Gottes lasst ihr fahren und haltet die Überlieferung der Menschen fest – Mose sagt: Ehre Vater und Mutter; ihr aber sagt: Korban, und lasst ihn nichts mehr für Vater oder Mutter tun.",
+    "Der Menge sagt Jesus: Nichts, was von aussen in den Menschen hineingeht, macht ihn unrein, sondern was aus ihm herauskommt; den Jüngern sagt er: «Seid auch ihr so unverständig?» Aus dem Herzen kommen die bösen Gedanken: Unzucht, Diebstähle, Morde, Ehebrüche, Habgier, Bosheiten, List, Ausschweifung, ein böses Auge, Lästerung, Hochmut, Unvernunft."
   ],
   "captions_de": [
-    "Die Frage: Ein Jünger isst Brot (Brot in der Hand); die Pharisäer fragen Jesus: Warum ohne Händewaschen (Wasser auf Händen, leerer Kreis mit Schrägstrich, Brot, Fragezeichen)?",
-    "Gottes Gebot: Jesus wirft ihnen vor, Gottes Gebot beiseitezuschieben (Tafeln, Person mit gekreuzten Armen).",
-    "Von innen: Jesus lehrt, dass das Unreine aus dem Herzen herauskommt (Herz, Pfeil, Fleck)."
+    "Unreine Hände: Ein Jünger isst Brot, ohne die Hände zu waschen (Brot); die Pharisäer fragen Jesus nach der Überlieferung (Hände waschen, nicht, Frage; die Frage steht im Band).",
+    "Gebot Gottes ↔ Überlieferung der Menschen (Bild Jesus, Blase mit dem Jesajawort): links die Überlieferung der Menschen und das Korban (Menschen, Opfer); rechts, hervorgehoben, das Gebot Gottes und Moses Gebot «Ehre deinen Vater und deine Mutter» (Gesetzestafeln, Vater, Mutter).",
+    "Was unrein macht (Raster, Bild Jesus): nicht was hineingeht (Brot, nicht) – sondern was aus dem Herzen kommt (Herz); dann alle zwölf Glieder der Liste mit je einem Zeichen."
   ],
-  "interpretation_note_de": "Pharisäer und Schriftgelehrte erscheinen gemeinsam als Gruppe der Pharisäer, neutral und ohne Wertung. Die Tafeln stehen für «das Gebot Gottes» ([[MRK.7.8]]), hier das Elterngebot ([[MRK.7.10]]). Die Erklärung an die Jünger im Haus ([[MRK.7.17-MRK.7.23]]) ist im dritten Feld mit der Rede an die Menge zusammengefasst; [[MRK.7.16]] fehlt im SBLGNT.",
+  "interpretation_note_de": "Drei Felder nach «Frage – Antwort an die Gegner – Grundsatz an die Menge – Erklärung an die Jünger» ([[MRK.7.1-MRK.7.23]]): die Frage nach den ungewaschenen Händen; das Jesajawort und der Gegensatz Gebot Gottes ↔ Überlieferung der Menschen mit dem Beispiel Korban (das Gebot Gottes hervorgehoben); der Grundsatz und alle zwölf Glieder der Liste. Für einige Glieder (Unzucht, Ausschweifung, Lästerung, Hochmut) gibt es kein eigenes Zeichen; die gewählten Zeichen sind Behelfe. Die Erklärung der Waschbräuche ([[MRK.7.3-MRK.7.4]]) ist Hintergrund. Pharisäer und Schriftgelehrte sind neutral gezeichnet.",
   "basis": [
     {
       "record": "TU-MRK-007-001-023",
       "field": "summary",
-      "fingerprint": "da3dbc67abe78b3e"
+      "fingerprint": "9360d07561089caf"
     },
     {
       "record": "TRANS-MRK-007-001-037-DE-WORKING",
@@ -135,7 +328,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -349,6 +542,442 @@
           "Die Frage: Ein Jünger isst Brot (Brot in der Hand); die Pharisäer fragen Jesus: Warum ohne Händewaschen (Wasser auf Händen, leerer Kreis mit Schrägstrich, Brot, Fragezeichen)?",
           "Gottes Gebot: Jesus wirft ihnen vor, Gottes Gebot beiseitezuschieben (Tafeln, abwehrende Hand).",
           "Von innen: Jesus lehrt, dass das Unreine aus dem Herzen herauskommt (Herz, Pfeil, Fleck)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MRK-007-001-023",
+            "field": "summary",
+            "fingerprint": "da3dbc67abe78b3e"
+          },
+          {
+            "record": "TRANS-MRK-007-001-037-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.7.1-MRK.7.5",
+            "fingerprint": "9aa599d591da9c03"
+          },
+          {
+            "record": "TRANS-MRK-007-001-037-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.7.6-MRK.7.13",
+            "fingerprint": "9e8d8ddbaea57bf7"
+          },
+          {
+            "record": "TRANS-MRK-007-001-037-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.7.14-MRK.7.23",
+            "fingerprint": "300f2e0c0522dcdb"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.7.1-MRK.7.5",
+            "figures": [
+              "FIG-ROLLE-JUENGER",
+              "FIG-JESUS",
+              "FIG-GRUPPE-PHARISAEER"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-PHARISAEER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-WASCHEN",
+                  "FIG-ZEICHEN-FEHLT",
+                  "FIG-OBJ-BROT",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Pharisäer und Schriftgelehrte aus Jerusalem sehen, dass einige Jünger mit ungewaschenen Händen Brot essen, und fragen Jesus: Warum leben deine Jünger nicht nach der Überlieferung der Ältesten?",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-JUENGER": "FIG-OBJ-BROT"
+              },
+              "mood": {
+                "FIG-GRUPPE-PHARISAEER": "earnest"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.7.6-MRK.7.13",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-PHARISAEER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-OBJ-GESETZESTAFELN",
+                  "FIG-ZEICHEN-ABLEHNEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus hält ihnen mit Jesaja vor: Ihr lasst das Gebot Gottes fahren und haltet an der Überlieferung der Menschen fest – etwa wenn ihr mit dem Wort Korban den Eltern die Hilfe entzieht.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-PHARISAEER": "earnest"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.7.14-MRK.7.23",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-HERZ",
+                  "FIG-ZEICHEN-STAMMT-AUS",
+                  "FIG-ZEICHEN-UNREIN"
+                ]
+              }
+            ],
+            "action_de": "Jesus ruft die Menge und erklärt danach im Haus den Jüngern: Nichts, was von aussen in den Menschen hineingeht, macht ihn unrein; was aus dem Herzen herauskommt, das macht den Menschen unrein.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "pensive"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Pharisäer und Schriftgelehrte aus Jerusalem sehen, dass einige Jünger mit ungewaschenen Händen Brot essen, und fragen Jesus: Warum leben deine Jünger nicht nach der Überlieferung der Ältesten?",
+          "Jesus hält ihnen mit Jesaja vor: Ihr lasst das Gebot Gottes fahren und haltet an der Überlieferung der Menschen fest – etwa wenn ihr mit dem Wort Korban den Eltern die Hilfe entzieht.",
+          "Jesus ruft die Menge und erklärt danach im Haus den Jüngern: Nichts, was von aussen in den Menschen hineingeht, macht ihn unrein; was aus dem Herzen herauskommt, das macht den Menschen unrein."
+        ],
+        "captions_de": [
+          "Die Frage: Ein Jünger isst Brot (Brot in der Hand); die Pharisäer fragen Jesus: Warum ohne Händewaschen (Wasser auf Händen, leerer Kreis mit Schrägstrich, Brot, Fragezeichen)?",
+          "Gottes Gebot: Jesus wirft ihnen vor, Gottes Gebot beiseitezuschieben (Tafeln, Person mit gekreuzten Armen).",
+          "Von innen: Jesus lehrt, dass das Unreine aus dem Herzen herauskommt (Herz, Pfeil, Fleck)."
+        ],
+        "interpretation_note_de": "Pharisäer und Schriftgelehrte erscheinen gemeinsam als Gruppe der Pharisäer, neutral und ohne Wertung. Die Tafeln stehen für «das Gebot Gottes» ([[MRK.7.8]]), hier das Elterngebot ([[MRK.7.10]]). Die Erklärung an die Jünger im Haus ([[MRK.7.17-MRK.7.23]]) ist im dritten Feld mit der Rede an die Menge zusammengefasst; [[MRK.7.16]] fehlt im SBLGNT.",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.7.1-MRK.7.5",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS",
+              "FIG-GRUPPE-PHARISAEER"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-PHARISAEER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-HAENDE-WASCHEN",
+                  "FIG-ZEICHEN-NICHT"
+                ],
+                "word": {
+                  "de": "Warum leben deine Jünger nicht nach der Überlieferung der Ältesten, sondern essen das Brot mit unreinen Händen?",
+                  "gsw": "Werum läbed dini Jünger nöd nach de Überliferig vo de Ältischte, sondern ässed s Broot mit unreine Händ?"
+                }
+              }
+            ],
+            "action_de": "Pharisäer und Schriftgelehrte aus Jerusalem sehen, dass Jünger mit ungewaschenen Händen essen, und fragen: «Warum leben deine Jünger nicht nach der Überlieferung der Ältesten …?»",
+            "keywords": {
+              "de": "mit unreinen Händen",
+              "gsw": "mit unreine Händ"
+            },
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BROT"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "calm",
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-PHARISAEER": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-JUENGER": 34,
+                "FIG-JESUS": 98,
+                "FIG-GRUPPE-PHARISAEER": 160
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.7.6-MRK.7.13",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Jesus antwortet mit Jesaja: Dieses Volk ehrt mich mit den Lippen, ihr Herz aber ist fern von mir; das Gebot Gottes lasst ihr fahren und haltet die Überlieferung der Menschen fest – Mose sagt: Ehre Vater und Mutter; ihr aber sagt: Korban, und lasst ihn nichts mehr für Vater oder Mutter tun.",
+            "keywords": {
+              "de": "Das Gebot Gottes lasst ihr fahren",
+              "gsw": "S Gebot vo Gott lönd ir fahre"
+            },
+            "diagram": {
+              "visual": "columns",
+              "span": 2,
+              "speaker": "FIG-JESUS",
+              "title": {
+                "de": "Dieses Volk ehrt mich mit den Lippen, ihr Herz aber ist weit entfernt von mir.",
+                "gsw": "Das Volch ehrt mich mit de Lippe, ires Härz aber isch wiit ewägg vo mir."
+              },
+              "head": [
+                {
+                  "de": "Überlieferung der Menschen",
+                  "gsw": "Überliferig vo de Mänsche"
+                },
+                {
+                  "de": "Gebot Gottes",
+                  "gsw": "Gebot vo Gott"
+                }
+              ],
+              "rows": [
+                [
+                  {
+                    "a": {
+                      "de": "Ihr haltet die Überlieferung der Menschen fest.",
+                      "gsw": "Ir haltet a de Überliferig vo de Mänsche fescht."
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-MENSCHEN"
+                    ],
+                    "tone": "old"
+                  },
+                  {
+                    "a": {
+                      "de": "Das Gebot Gottes lasst ihr fahren.",
+                      "gsw": "S Gebot vo Gott lönd ir fahre."
+                    },
+                    "icons": [
+                      "FIG-OBJ-GESETZESTAFELN"
+                    ],
+                    "tone": "new"
+                  }
+                ],
+                [
+                  {
+                    "a": {
+                      "de": "Ihr aber sagt: «Korban – Opfergabe – sei, was du von mir an Hilfe bekommen könntest», und lasst ihn nichts mehr für Vater oder Mutter tun.",
+                      "gsw": "Ir aber säged: «Korban – Opfergab – sig, was du vo mir a Hilf chöntsch übercho», und lönd en nüüt meh für de Vatter oder d Mueter mache."
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-OPFER",
+                      "FIG-ZEICHEN-NICHT"
+                    ],
+                    "tone": "old"
+                  },
+                  {
+                    "a": {
+                      "de": "Mose hat gesagt: «Ehre deinen Vater und deine Mutter.»",
+                      "gsw": "De Mose hät gseit: «Ehr din Vatter und dini Mueter.»"
+                    },
+                    "icons": [
+                      "FIG-ROLLE-VATER",
+                      "FIG-ROLLE-MUTTER"
+                    ],
+                    "tone": "new"
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.7.14-MRK.7.23",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Der Menge sagt Jesus: Nichts, was von aussen in den Menschen hineingeht, macht ihn unrein, sondern was aus ihm herauskommt; den Jüngern sagt er: «Seid auch ihr so unverständig?» Aus dem Herzen kommen die bösen Gedanken: Unzucht, Diebstähle, Morde, Ehebrüche, Habgier, Bosheiten, List, Ausschweifung, ein böses Auge, Lästerung, Hochmut, Unvernunft.",
+            "keywords": {
+              "de": "Seid auch ihr so unverständig?",
+              "gsw": "Sind au ir eso unverständig?"
+            },
+            "diagram": {
+              "visual": "grid",
+              "span": 2,
+              "cols": 4,
+              "speaker": "FIG-JESUS",
+              "title": {
+                "de": "Was aus dem Menschen herauskommt, das macht den Menschen unrein.",
+                "gsw": "Was us em Mänsch usechunnt, das macht de Mänsch unrein."
+              },
+              "cells": [
+                {
+                  "a": {
+                    "de": "Nichts, was von aussen in den Menschen hineingeht, kann ihn unrein machen.",
+                    "gsw": "Nüüt, wo vo usse in Mänsch ine gaat, cha en unrein mache."
+                  },
+                  "icons": [
+                    "FIG-OBJ-BROT",
+                    "FIG-ZEICHEN-NICHT"
+                  ],
+                  "tone": "new"
+                },
+                {
+                  "a": {
+                    "de": "Von innen, aus dem Herzen der Menschen, kommen die bösen Gedanken heraus:",
+                    "gsw": "Vo inne, us em Härz vo de Mänsche, chömed di bööse Gedanke use:"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-HERZ",
+                    "FIG-ZEICHEN-BOESES"
+                  ],
+                  "tone": "old"
+                },
+                {
+                  "a": {
+                    "de": "Unzucht",
+                    "gsw": "Unzucht"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-SUENDE"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Diebstähle",
+                    "gsw": "Diebstähl"
+                  },
+                  "icons": [
+                    "FIG-ROLLE-DIEB"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Morde",
+                    "gsw": "Mord"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-TOETEN"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Ehebrüche",
+                    "gsw": "Ehebrüch"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-EHE",
+                    "FIG-ZEICHEN-TRENNEN"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Habgier",
+                    "gsw": "Gier"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-MAMMON"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Bosheiten",
+                    "gsw": "Bosheite"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-BOESES"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "List",
+                    "gsw": "List"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-FALLE"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Ausschweifung",
+                    "gsw": "Usschweifig"
+                  },
+                  "icons": [
+                    "FIG-OBJ-BECHER-VOLL"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "ein böses Auge",
+                    "gsw": "es bööses Aug"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-AUGE",
+                    "FIG-ZEICHEN-BOESES"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Lästerung",
+                    "gsw": "Läschterig"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-VERLEUMDEN"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Hochmut",
+                    "gsw": "Hochmuet"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-RANG"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Unvernunft",
+                    "gsw": "Unvernunft"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-TOERICHT"
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "captions_de": [
+          "Unreine Hände: Ein Jünger isst Brot, ohne die Hände zu waschen (Brot); die Pharisäer fragen Jesus.",
+          "Gebot Gottes ↔ Überlieferung der Menschen (Bild Jesus, Blase mit dem Jesajawort): links die Überlieferung der Menschen und das Korban (Menschen, Opfer); rechts, hervorgehoben, das Gebot Gottes und Moses Gebot «Ehre deinen Vater und deine Mutter» (Gesetzestafeln, Vater, Mutter).",
+          "Was unrein macht (Raster, Bild Jesus): nicht was hineingeht (Brot, nicht) – sondern was aus dem Herzen kommt (Herz); dann alle zwölf Glieder der Liste mit je einem Zeichen."
         ]
       }
     }

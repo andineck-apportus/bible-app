@@ -23,14 +23,20 @@
         "FIG-ZEICHEN-FEHLT-BROT"
       ],
       "speech": [],
-      "action_de": "Jesus kommt in ein Haus, und wieder kommt so viel Volk zusammen, dass sie nicht einmal Brot essen können.",
+      "action_de": "Jesus kommt in ein Haus, und wieder kommt die Menge zusammen, sodass sie nicht einmal Brot essen können.",
+      "keywords": {
+        "de": "sodass sie nicht einmal Brot essen konnten",
+        "gsw": "so dass si nöd emal händ chöne Broot ässe"
+      },
       "stage": {
         "back_side": "left",
-        "at": {
-          "FIG-ZEICHEN-FEHLT-BROT": "FIG-GRUPPE-MENGE"
+        "before": true,
+        "beside": {
+          "FIG-ZEICHEN-FEHLT-BROT": "FIG-JESUS"
         },
         "mood": {
-          "FIG-GRUPPE-MENGE": "surprised"
+          "FIG-GRUPPE-MENGE": "surprised",
+          "FIG-JESUS": "calm"
         }
       }
     },
@@ -48,44 +54,53 @@
           "from": "FIG-GRUPPE-BRUEDER-JESU",
           "to": "FIG-GRUPPE-BRUEDER-JESU",
           "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-VON-SINNEN"
-          ]
+            "FIG-JESUS"
+          ],
+          "word": {
+            "de": "Er ist von Sinnen.",
+            "gsw": "Er isch nüme bi Troscht."
+          }
         }
       ],
-      "action_de": "Als die Seinen davon hören, gehen sie hinaus, um ihn festzuhalten, denn sie sagen: Er ist von Sinnen.",
+      "action_de": "Die Seinen gehen hinaus, um ihn festzuhalten, denn sie sagen: «Er ist von Sinnen.»",
+      "keywords": {
+        "de": "um ihn festzuhalten",
+        "gsw": "zum en feschthebe"
+      },
       "stage": {
-        "mood": {
-          "FIG-GRUPPE-BRUEDER-JESU": "worried"
-        },
-        "x": {
-          "FIG-GRUPPE-BRUEDER-JESU": 50,
-          "FIG-JESUS": 150
-        },
         "arrows": [
           [
             "FIG-GRUPPE-BRUEDER-JESU",
             "FIG-JESUS",
             "go"
           ]
-        ]
+        ],
+        "mood": {
+          "FIG-GRUPPE-BRUEDER-JESU": "worried",
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-SCHRIFTGELEHRTE": "earnest"
+        },
+        "x": {
+          "FIG-GRUPPE-BRUEDER-JESU": 50,
+          "FIG-JESUS": 150
+        }
       }
     }
   ],
   "actions_de": [
-    "Jesus kommt in ein Haus, und wieder kommt so viel Volk zusammen, dass sie nicht einmal Brot essen können.",
-    "Als die Seinen davon hören, gehen sie hinaus, um ihn festzuhalten, denn sie sagen: Er ist von Sinnen."
+    "Jesus kommt in ein Haus, und wieder kommt die Menge zusammen, sodass sie nicht einmal Brot essen können.",
+    "Die Seinen gehen hinaus, um ihn festzuhalten, denn sie sagen: «Er ist von Sinnen.»"
   ],
   "captions_de": [
-    "Gedränge: Beim vollen Haus kommen Jesus und die Seinen nicht einmal zum Essen (Fladenbrot mit rotem X).",
-    "Die Seinen: Seine Angehörigen machen sich zu Jesus auf (Pfeil) und sagen: Er ist von Sinnen (Jesus, Wirbel)."
+    "Volles Haus: Die Menge drängt sich bei Jesus im Haus; kein Brot (kein Brot).",
+    "Urteile über Jesus: Die Seinen (links) kommen, um ihn festzuhalten (gestrichelter Pfeil): «Er ist von Sinnen.»"
   ],
-  "interpretation_note_de": "«Die Seinen» ([[MRK.3.21]]) sind wohl seine Angehörigen; das Bild zeigt sie wie die Brüder Jesu in [[MRK.3.31]]. Der Wirbel zeigt ihr Urteil über Jesus, nicht seinen Zustand.",
+  "interpretation_note_de": "Zwei Felder für den Anfang der Schachtelung [[MRK.3.20-MRK.3.35]]: das volle Haus und das Urteil der Seinen. Wer «die Seinen» genau sind, sagt der Text nicht; das Bild zeichnet sie als Angehörige wie Mutter und Brüder in [[MRK.3.31]] (Deutung). Das Zeichen in der Blase gibt ihr Urteil über Jesus wieder, nicht seinen Zustand. Die Geschichte geht in [[MRK.3.31-MRK.3.35]] weiter.",
   "basis": [
     {
       "record": "TU-MRK-003-020-021",
       "field": "summary",
-      "fingerprint": "3c1edd13f92b5bff"
+      "fingerprint": "7dd4369337a44037"
     },
     {
       "record": "TRANS-MRK-003-020-021-DE-WORKING",
@@ -101,7 +116,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -190,6 +205,111 @@
           "Gedränge: Beim vollen Haus kommen Jesus und die Seinen nicht einmal zum Essen (gestrichelter Umriss eines Brotes).",
           "Die Seinen: Seine Angehörigen machen sich zu Jesus auf (Pfeil) und sagen: Er ist von Sinnen (Jesus, Wirbel)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MRK-003-020-021",
+            "field": "summary",
+            "fingerprint": "3c1edd13f92b5bff"
+          },
+          {
+            "record": "TRANS-MRK-003-020-021-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.3.20",
+            "fingerprint": "8d0420bf6ee3a29d"
+          },
+          {
+            "record": "TRANS-MRK-003-020-021-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.3.21",
+            "fingerprint": "aa47b93cb83ce2a9"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.3.20",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FEHLT-BROT"
+            ],
+            "speech": [],
+            "action_de": "Jesus kommt in ein Haus, und wieder kommt so viel Volk zusammen, dass sie nicht einmal Brot essen können.",
+            "stage": {
+              "back_side": "left",
+              "at": {
+                "FIG-ZEICHEN-FEHLT-BROT": "FIG-GRUPPE-MENGE"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "surprised"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.3.21",
+            "figures": [
+              "FIG-GRUPPE-BRUEDER-JESU",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-BRUEDER-JESU",
+                "to": "FIG-GRUPPE-BRUEDER-JESU",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-VON-SINNEN"
+                ]
+              }
+            ],
+            "action_de": "Als die Seinen davon hören, gehen sie hinaus, um ihn festzuhalten, denn sie sagen: Er ist von Sinnen.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-BRUEDER-JESU": "worried"
+              },
+              "x": {
+                "FIG-GRUPPE-BRUEDER-JESU": 50,
+                "FIG-JESUS": 150
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-BRUEDER-JESU",
+                  "FIG-JESUS",
+                  "go"
+                ]
+              ]
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus kommt in ein Haus, und wieder kommt so viel Volk zusammen, dass sie nicht einmal Brot essen können.",
+          "Als die Seinen davon hören, gehen sie hinaus, um ihn festzuhalten, denn sie sagen: Er ist von Sinnen."
+        ],
+        "captions_de": [
+          "Gedränge: Beim vollen Haus kommen Jesus und die Seinen nicht einmal zum Essen (Fladenbrot mit rotem X).",
+          "Die Seinen: Seine Angehörigen machen sich zu Jesus auf (Pfeil) und sagen: Er ist von Sinnen (Jesus, Wirbel)."
+        ],
+        "interpretation_note_de": "«Die Seinen» ([[MRK.3.21]]) sind wohl seine Angehörigen; das Bild zeigt sie wie die Brüder Jesu in [[MRK.3.31]]. Der Wirbel zeigt ihr Urteil über Jesus, nicht seinen Zustand.",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

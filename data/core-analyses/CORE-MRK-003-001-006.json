@@ -1,0 +1,170 @@
+{
+ "id": "CORE-MRK-003-001-006",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MRK.3.1-MRK.3.6",
+ "target": "TU-MRK-003-001-006",
+ "core_de": "In der Synagoge beobachten sie Jesus, ob er am Sabbat einen Menschen mit einer verdorrten Hand heilt, um ihn anklagen zu können; Jesus stellt den Mann in die Mitte und fragt: «Ist es erlaubt, am Sabbat Gutes zu tun oder Böses zu tun, ein Leben zu retten oder zu töten?» – sie schweigen; zornig und betrübt über ihre Herzensverhärtung sagt er: «Streck die Hand aus!», und die Hand wird wiederhergestellt; die Pharisäer aber beraten sogleich mit den Herodianern, wie sie ihn umbringen könnten.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Lauern – Frage – Schweigen – Heilung – Tötungsplan",
+    "range": "MRK.3.1-MRK.3.6",
+    "elements": [
+     {
+      "label": "In der Synagoge ein Mensch mit verdorrter Hand; sie beobachten, ob er am Sabbat heilt, damit sie ihn anklagen könnten",
+      "ref": "MRK.3.1-MRK.3.2",
+      "role": "Lauern"
+     },
+     {
+      "label": "«Steh auf und tritt in die Mitte!»",
+      "ref": "MRK.3.3",
+      "role": "Mitte"
+     },
+     {
+      "label": "Doppelfrage Gutes ↔ Böses, retten ↔ töten",
+      "ref": "MRK.3.4",
+      "role": "Frage",
+      "child": "s2"
+     },
+     {
+      "label": "Sie aber schwiegen",
+      "ref": "MRK.3.4",
+      "role": "Schweigen"
+     },
+     {
+      "label": "Mit Zorn, betrübt über die Verhärtung ihres Herzens: «Streck die Hand aus!» – die Hand wird wiederhergestellt",
+      "ref": "MRK.3.5",
+      "role": "Heilung"
+     },
+     {
+      "label": "Die Pharisäer beraten sogleich mit den Herodianern, wie sie ihn umbringen könnten",
+      "ref": "MRK.3.6",
+      "role": "Tötungsplan"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "den Mann",
+       "ref": "MRK.3.3"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "die Beobachter",
+       "ref": "MRK.3.4"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "den Mann",
+       "ref": "MRK.3.5"
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "Die Spannung zwischen «ein Leben zu retten oder zu töten» und dem Tötungsplan ist eine Beobachtung der Auslegung; beides steht im Text."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "Gutes ↔ Böses, retten ↔ töten",
+    "range": "MRK.3.4",
+    "elements": [
+     {
+      "label": "am Sabbat Gutes tun",
+      "ref": "MRK.3.4",
+      "role": "gut"
+     },
+     {
+      "label": "oder Böses tun",
+      "ref": "MRK.3.4",
+      "role": "böse"
+     },
+     {
+      "label": "ein Leben retten",
+      "ref": "MRK.3.4",
+      "role": "gut"
+     },
+     {
+      "label": "oder töten",
+      "ref": "MRK.3.4",
+      "role": "böse"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MRK.3.2-MRK.3.4",
+   "text_de": "Sie beobachten ihn, damit sie ihn anklagen könnten; Jesus stellt den Mann in die Mitte: «Ist es erlaubt, am Sabbat Gutes zu tun oder Böses zu tun, ein Leben zu retten oder zu töten?» Sie aber schweigen.",
+   "reason_de": "Frage als Kern des Streits (Kriterien 1 und 2).",
+   "recognition_de": "Der Mann mit der verdorrten Hand steht in der Mitte; Jesus fragt die Beobachter.",
+   "keywords": [
+    "damit sie ihn anklagen könnten",
+    "Ist es erlaubt, am Sabbat Gutes zu tun oder Böses zu tun, ein Leben zu retten oder zu töten?",
+    "Sie aber schwiegen"
+   ]
+  },
+  {
+   "reference": "MRK.3.5",
+   "text_de": "Jesus blickt sie mit Zorn an, betrübt über die Verhärtung ihres Herzens: «Streck die Hand aus!» – und die Hand wird wiederhergestellt.",
+   "reason_de": "Wendepunkt und Erkennungsmoment (Kriterien 2 und 4).",
+   "recognition_de": "Der Mann streckt die geheilte Hand aus.",
+   "keywords": [
+    "Streck die Hand aus!",
+    "seine Hand wurde wiederhergestellt"
+   ]
+  },
+  {
+   "reference": "MRK.3.6",
+   "text_de": "Die Pharisäer gehen hinaus und beraten sogleich mit den Herodianern, wie sie ihn umbringen könnten.",
+   "reason_de": "Ausgang und Schluss der Streitgespräche (Kriterien 2 und 3).",
+   "recognition_de": "Pharisäer und Herodianer flüstern miteinander.",
+   "keywords": [
+    "wie sie ihn umbringen könnten"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Wer ihn zuerst beobachtet, nennt der Text erst in 3,6 (die Pharisäer)"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-ROLLE-MANN-HAND",
+  "FIG-GRUPPE-PHARISAEER",
+  "FIG-GRUPPE-HERODIANER"
+ ],
+ "places": [
+  "FIG-ORT-SYNAGOGE"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MRK.3.1-MRK.3.6",
+   "fingerprint": "15d7d441f1ced959"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mk 1–4 und 6–8 nach dem Pilot Mk 5 und dem Ausrollen Matthäus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

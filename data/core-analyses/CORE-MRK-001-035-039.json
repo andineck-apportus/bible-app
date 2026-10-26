@@ -1,0 +1,144 @@
+{
+ "id": "CORE-MRK-001-035-039",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MRK.1.35-MRK.1.39",
+ "target": "TU-MRK-001-035-039",
+ "core_de": "Früh in der Nacht zieht sich Jesus an einen einsamen Ort zurück und betet; Simon und seine Begleiter finden ihn: «Alle suchen dich!», doch er sagt: «Lasst uns anderswohin gehen, in die nächsten Kleinstädte, damit ich auch dort verkündige; denn dazu bin ich hinausgegangen», und er verkündigt in den Synagogen ganz Galiläas und treibt die Dämonen aus.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Gebet – Suche – Aufbruch – Verkündigung",
+    "range": "MRK.1.35-MRK.1.39",
+    "elements": [
+     {
+      "label": "Früh in der Nacht an einem einsamen Ort: dort betete er",
+      "ref": "MRK.1.35",
+      "role": "Gebet"
+     },
+     {
+      "label": "Simon und seine Begleiter: «Alle suchen dich!»",
+      "ref": "MRK.1.36-MRK.1.37",
+      "role": "Suche"
+     },
+     {
+      "label": "Antwort mit Zweck und Begründung",
+      "ref": "MRK.1.38",
+      "role": "Aufbruch",
+      "child": "s2"
+     },
+     {
+      "label": "Er verkündigt in ihren Synagogen in ganz Galiläa und treibt die Dämonen aus",
+      "ref": "MRK.1.39",
+      "role": "Ausgang"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Simon und seine Begleiter",
+       "to": "FIG-JESUS",
+       "ref": "MRK.1.37"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "Simon und seine Begleiter",
+       "ref": "MRK.1.38"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "cause",
+    "subtype": "Aufbruch → Zweck → denn",
+    "range": "MRK.1.38",
+    "elements": [
+     {
+      "label": "Lasst uns anderswohin gehen, in die nächsten Kleinstädte",
+      "ref": "MRK.1.38",
+      "role": "Aufforderung"
+     },
+     {
+      "label": "damit ich auch dort verkündige",
+      "ref": "MRK.1.38",
+      "role": "Zweck"
+     },
+     {
+      "label": "denn dazu bin ich hinausgegangen",
+      "ref": "MRK.1.38",
+      "role": "Begründung"
+     }
+    ],
+    "visual": "arrows",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MRK.1.35",
+   "text_de": "Früh, tief in der Nacht, geht Jesus an einen einsamen Ort und betet dort.",
+   "reason_de": "Rückzug ins Gebet (Kriterium 4).",
+   "recognition_de": "Jesus betet allein in der Nacht.",
+   "keywords": [
+    "dort betete er"
+   ]
+  },
+  {
+   "reference": "MRK.1.36-MRK.1.38",
+   "text_de": "Simon und seine Begleiter: «Alle suchen dich!» – Jesus: «Lasst uns anderswohin gehen … damit ich auch dort verkündige; denn dazu bin ich hinausgegangen.»",
+   "reason_de": "Wendepunkt mit Begründung (Kriterien 1 und 2).",
+   "recognition_de": "Simon drängt; Jesus zeigt in die Ferne.",
+   "keywords": [
+    "Alle suchen dich!",
+    "damit ich auch dort verkündige; denn dazu bin ich hinausgegangen"
+   ]
+  },
+  {
+   "reference": "MRK.1.39",
+   "text_de": "Er verkündigt in den Synagogen in ganz Galiläa und treibt die Dämonen aus.",
+   "reason_de": "Ausgang (Kriterium 3).",
+   "recognition_de": "Jesus unterwegs von Synagoge zu Synagoge.",
+   "keywords": [
+    "verkündigte in ihren Synagogen in ganz Galiläa"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Wer die «Begleiter» des Simon sind, sagt der Text nicht – im Bild als Jünger",
+  "«Die nächsten Kleinstädte» – Ortsangabe ohne Namen"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-PETRUS",
+  "FIG-GRUPPE-JUENGER"
+ ],
+ "places": [
+  "FIG-ORT-WUESTE",
+  "FIG-ORT-SYNAGOGE"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MRK.1.35-MRK.1.39",
+   "fingerprint": "c30b16904bbc26e8"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mk 1–4 und 6–8 nach dem Pilot Mk 5 und dem Ausrollen Matthäus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

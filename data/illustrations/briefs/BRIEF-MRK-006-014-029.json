@@ -11,17 +11,17 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MRK.6.14-MRK.6.16",
+      "reference": "MRK.6.14-MRK.6.18",
       "figures": [
-        "FIG-GRUPPE-MENGE",
+        "FIG-GRUPPE-VOLK",
         "FIG-HERODES-ANTIPAS"
       ],
       "objects": [],
       "signs": [],
       "speech": [
         {
-          "from": "FIG-GRUPPE-MENGE",
-          "to": "FIG-HERODES-ANTIPAS",
+          "from": "FIG-GRUPPE-VOLK",
+          "to": "FIG-GRUPPE-VOLK",
           "icons": [
             "FIG-JOHANNES-TAEUFER",
             "FIG-ELIJA",
@@ -30,106 +30,107 @@
         },
         {
           "from": "FIG-HERODES-ANTIPAS",
-          "to": "FIG-GRUPPE-MENGE",
+          "to": "FIG-HERODES-ANTIPAS",
           "icons": [
-            "FIG-JOHANNES-TAEUFER",
-            "FIG-ZEICHEN-AUFERSTEHUNG"
-          ]
+            "FIG-ZEICHEN-AUFERWECKEN"
+          ],
+          "word": {
+            "de": "Johannes, den ich enthauptet habe, der ist auferweckt worden.",
+            "gsw": "De Johannes, won ich gchöpft ha, dä isch uferweckt worde."
+          }
         }
       ],
-      "action_de": "König Herodes hört von Jesus. Die einen halten ihn für den auferweckten Johannes, andere für Elija oder einen Propheten; Herodes sagt: Johannes, den ich enthauptet habe, ist auferweckt worden.",
+      "action_de": "König Herodes hört von Jesus; die einen sagen, Johannes der Täufer sei auferweckt, andere, es sei Elija oder ein Prophet; Herodes sagt: «Johannes, den ich enthauptet habe, der ist auferweckt worden.» Er hatte Johannes wegen Herodias gefesselt, weil Johannes ihm sagte: «Es ist dir nicht erlaubt, die Frau deines Bruders zu haben.»",
+      "keywords": {
+        "de": "denn sein Name war bekannt geworden",
+        "gsw": "dänn sin Name isch bekannt worde"
+      },
+      "names": {
+        "FIG-HERODES-ANTIPAS": {
+          "de": "Herodes",
+          "gsw": "Herodes"
+        }
+      },
       "stage": {
         "mood": {
-          "FIG-HERODES-ANTIPAS": "worried"
+          "FIG-GRUPPE-VOLK": "earnest",
+          "FIG-HERODES-ANTIPAS": "fear"
+        },
+        "x": {
+          "FIG-GRUPPE-VOLK": 46,
+          "FIG-HERODES-ANTIPAS": 140
         }
       }
     },
     {
       "n": 2,
-      "reference": "MRK.6.17-MRK.6.20",
+      "reference": "MRK.6.21-MRK.6.25",
       "figures": [
-        "FIG-JOHANNES-TAEUFER",
         "FIG-HERODES-ANTIPAS",
+        "FIG-TOCHTER-HERODIAS",
         "FIG-HERODIAS"
       ],
       "objects": [
-        "FIG-ORT-GEFAENGNIS"
+        "FIG-OBJ-BECHER-VOLL"
       ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JOHANNES-TAEUFER",
-          "to": "FIG-HERODES-ANTIPAS",
-          "icons": [
-            "FIG-HERODIAS",
-            "FIG-ZEICHEN-NEIN"
-          ]
-        }
+      "signs": [
+        "FIG-ZEICHEN-HOCHZEIT"
       ],
-      "action_de": "Rückblick: Johannes hatte Herodes gesagt, es sei ihm nicht erlaubt, die Frau seines Bruders zu haben; darum liess Herodes ihn gefangen setzen. Herodias wollte ihn töten, doch Herodes fürchtete und schützte ihn.",
-      "stage": {
-        "back_side": "left",
-        "mood": {
-          "FIG-HERODES-ANTIPAS": "pensive",
-          "FIG-HERODIAS": "earnest",
-          "FIG-JOHANNES-TAEUFER": "earnest"
-        },
-        "arrows": [
-          [
-            "FIG-JOHANNES-TAEUFER",
-            "FIG-ORT-GEFAENGNIS",
-            "go"
-          ]
-        ],
-        "x": {
-          "FIG-JOHANNES-TAEUFER": 96,
-          "FIG-HERODES-ANTIPAS": 134,
-          "FIG-HERODIAS": 166
-        }
-      }
-    },
-    {
-      "n": 3,
-      "reference": "MRK.6.21-MRK.6.25",
-      "figures": [
-        "FIG-HERODIAS",
-        "FIG-TOCHTER-HERODIAS",
-        "FIG-HERODES-ANTIPAS"
-      ],
-      "objects": [],
-      "signs": [],
       "speech": [
         {
           "from": "FIG-HERODES-ANTIPAS",
           "to": "FIG-TOCHTER-HERODIAS",
           "icons": [
-            "FIG-ZEICHEN-GEBEN"
-          ]
+            "FIG-ZEICHEN-SCHWUR"
+          ],
+          "word": {
+            "de": "Was immer du mich bittest, werde ich dir geben, bis zur Hälfte meines Königreichs.",
+            "gsw": "Was immer du vo mir heuschisch, gib ich dir, bis zur Hälfti vo mim Königriich."
+          }
         },
         {
           "from": "FIG-HERODIAS",
           "to": "FIG-TOCHTER-HERODIAS",
-          "icons": [
-            "FIG-JOHANNES-TAEUFER",
-            "FIG-ZEICHEN-TOD"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Den Kopf des Johannes des Täufers.",
+            "gsw": "De Chopf vom Johannes em Täufer."
+          }
         }
       ],
-      "action_de": "Beim Geburtstagsmahl tanzt die Tochter der Herodias; Herodes schwört, ihr zu geben, was sie will. Auf Rat ihrer Mutter verlangt sie den Kopf Johannes des Täufers.",
+      "action_de": "An seinem Geburtstagsmahl tanzt die Tochter der Herodias; der König schwört ihr: «Was immer du mich bittest, werde ich dir geben, bis zur Hälfte meines Königreichs»; ihre Mutter sagt: «Den Kopf des Johannes des Täufers», und das Mädchen verlangt ihn sofort auf einer Schale.",
+      "keywords": {
+        "de": "Bitte mich, um was immer du willst",
+        "gsw": "Heusch vo mir, was immer du wottsch"
+      },
+      "names": {
+        "FIG-HERODIAS": {
+          "de": "Herodias",
+          "gsw": "Herodias"
+        }
+      },
       "stage": {
         "mood": {
-          "FIG-HERODES-ANTIPAS": "smile",
-          "FIG-HERODIAS": "earnest",
-          "FIG-TOCHTER-HERODIAS": "calm"
+          "FIG-HERODES-ANTIPAS": "delight",
+          "FIG-TOCHTER-HERODIAS": "smile",
+          "FIG-HERODIAS": "angry"
+        },
+        "x": {
+          "FIG-HERODES-ANTIPAS": 34,
+          "FIG-TOCHTER-HERODIAS": 96,
+          "FIG-HERODIAS": 158
+        },
+        "floor_x": {
+          "FIG-OBJ-BECHER-VOLL": 60
         }
       }
     },
     {
-      "n": 4,
+      "n": 3,
       "reference": "MRK.6.26-MRK.6.29",
       "figures": [
-        "FIG-HERODES-ANTIPAS",
-        "FIG-GRUPPE-JUENGER"
+        "FIG-GRUPPE-JOHANNES-JUENGER",
+        "FIG-JOHANNES-TAEUFER"
       ],
       "objects": [
         "FIG-ORT-GRAB"
@@ -138,49 +139,57 @@
         "FIG-ZEICHEN-TRAUER"
       ],
       "speech": [],
-      "action_de": "Der König wird sehr betrübt, lässt Johannes aber wegen seiner Eide im Gefängnis enthaupten. Die Jünger des Johannes holen seinen Leichnam und legen ihn in ein Grab.",
+      "action_de": "Der König wird sehr betrübt, weist sie aber wegen seiner Eide und der Gäste nicht ab; er lässt Johannes im Gefängnis enthaupten. Als die Jünger des Johannes das hören, holen sie seinen Leichnam und legen ihn in ein Grab.",
+      "keywords": {
+        "de": "holten seinen Leichnam und legten ihn in ein Grab",
+        "gsw": "händ sini Liich gholt und si i es Grab gleit"
+      },
       "stage": {
-        "signs_who": {
-          "FIG-ZEICHEN-TRAUER": [
-            "FIG-GRUPPE-JUENGER"
-          ]
+        "pose": {
+          "FIG-JOHANNES-TAEUFER": "lie"
         },
         "mood": {
-          "FIG-HERODES-ANTIPAS": "worried"
+          "FIG-JOHANNES-TAEUFER": "dead",
+          "FIG-GRUPPE-JOHANNES-JUENGER": "pain"
+        },
+        "wear": {
+          "FIG-JOHANNES-TAEUFER": "binden"
+        },
+        "signs_who": {
+          "FIG-ZEICHEN-TRAUER": [
+            "FIG-GRUPPE-JOHANNES-JUENGER"
+          ]
+        },
+        "back_side": "right",
+        "x": {
+          "FIG-GRUPPE-JOHANNES-JUENGER": 44,
+          "FIG-JOHANNES-TAEUFER": 118
         }
       }
     }
   ],
   "actions_de": [
-    "König Herodes hört von Jesus. Die einen halten ihn für den auferweckten Johannes, andere für Elija oder einen Propheten; Herodes sagt: Johannes, den ich enthauptet habe, ist auferweckt worden.",
-    "Rückblick: Johannes hatte Herodes gesagt, es sei ihm nicht erlaubt, die Frau seines Bruders zu haben; darum liess Herodes ihn gefangen setzen. Herodias wollte ihn töten, doch Herodes fürchtete und schützte ihn.",
-    "Beim Geburtstagsmahl tanzt die Tochter der Herodias; Herodes schwört, ihr zu geben, was sie will. Auf Rat ihrer Mutter verlangt sie den Kopf Johannes des Täufers.",
-    "Der König wird sehr betrübt, lässt Johannes aber wegen seiner Eide im Gefängnis enthaupten. Die Jünger des Johannes holen seinen Leichnam und legen ihn in ein Grab."
+    "König Herodes hört von Jesus; die einen sagen, Johannes der Täufer sei auferweckt, andere, es sei Elija oder ein Prophet; Herodes sagt: «Johannes, den ich enthauptet habe, der ist auferweckt worden.» Er hatte Johannes wegen Herodias gefesselt, weil Johannes ihm sagte: «Es ist dir nicht erlaubt, die Frau deines Bruders zu haben.»",
+    "An seinem Geburtstagsmahl tanzt die Tochter der Herodias; der König schwört ihr: «Was immer du mich bittest, werde ich dir geben, bis zur Hälfte meines Königreichs»; ihre Mutter sagt: «Den Kopf des Johannes des Täufers», und das Mädchen verlangt ihn sofort auf einer Schale.",
+    "Der König wird sehr betrübt, weist sie aber wegen seiner Eide und der Gäste nicht ab; er lässt Johannes im Gefängnis enthaupten. Als die Jünger des Johannes das hören, holen sie seinen Leichnam und legen ihn in ein Grab."
   ],
   "captions_de": [
-    "Wer ist Jesus? Die Leute nennen Johannes, Elija, einen Propheten; Herodes meint: Johannes ist auferweckt (offenes Grab).",
-    "Mahnung → Gefängnis: Johannes sagt Herodes, Herodias zu haben sei nicht erlaubt (Herodias, abwehrende Hand); darum kommt er ins Gefängnis (gestrichelter Weg).",
-    "Das Fest: Nach ihrem Tanz verspricht Herodes der Tochter der Herodias (rosa Gewand), was sie will (offene Hände); Herodias rät ihr, den Tod des Johannes zu verlangen (Johannes, Totenkopf).",
-    "Begraben: Herodes ist betrübt; die Jünger des Johannes holen ihn und begraben ihn (Grab) unter Tränen."
+    "Herodes hört von Jesus: Leute nennen Johannes, Elija oder einen Propheten (Bilder); Herodes (Name) sagt erschrocken: «Johannes, den ich enthauptet habe, der ist auferweckt worden.» (auferwecken).",
+    "Das Festmahl: Herodes schwört der tanzenden Tochter der Herodias (Schwur): «Was immer du mich bittest, werde ich dir geben …»; Herodias (Name) sagt ihr: «Den Kopf des Johannes des Täufers.»",
+    "Tod des Täufers: Johannes liegt tot (fahl, Augen zu); seine Jünger trauern (Trauer) und legen ihn in ein Grab (Grab)."
   ],
-  "interpretation_note_de": "Die Enthauptung und die Schale mit dem Kopf ([[MRK.6.27-MRK.6.28]]) werden nicht gezeigt; das Grab-Zeichen steht für den Tod. Ein Jünger steht für die Jünger des Johannes ([[MRK.6.29]]); er gleicht dem Lexikonbild der Jünger Jesu.",
+  "interpretation_note_de": "Drei Felder nach dem Ablauf mit Rückblende ([[MRK.6.14-MRK.6.29]]): die Meinungen über Jesus und das Wort des Herodes, das Festmahl mit Schwur und Bitte, der Tod und das Begräbnis des Täufers. Der Grund der Gefangennahme ([[MRK.6.17-MRK.6.20]]) und der Henker sind nicht gezeichnet; die Enthauptung wird nicht ausgemalt, der Tod aber gezeigt (Johannes liegt tot, in Leinen gewickelt). Markus nennt den Namen der Tochter nicht; das Bild ergänzt keinen.",
   "basis": [
     {
       "record": "TU-MRK-006-014-029",
       "field": "summary",
-      "fingerprint": "403a7735dfde98e8"
+      "fingerprint": "1422dc34ff96ff06"
     },
     {
       "record": "TRANS-MRK-006-001-056-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.6.14-MRK.6.16",
-      "fingerprint": "67dcac4afb59ca1a"
-    },
-    {
-      "record": "TRANS-MRK-006-001-056-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MRK.6.17-MRK.6.20",
-      "fingerprint": "4765bf5dde8fb934"
+      "reference": "MRK.6.14-MRK.6.18",
+      "fingerprint": "af48f46c9379ed05"
     },
     {
       "record": "TRANS-MRK-006-001-056-DE-WORKING",
@@ -196,7 +205,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -516,6 +525,237 @@
           "Das Fest: Nach ihrem Tanz verspricht Herodes der Tochter der Herodias (rosa Gewand), was sie will (gebende Hand); Herodias rät ihr, den Tod des Johannes zu verlangen (Johannes, Grab).",
           "Begraben: Herodes ist betrübt; die Jünger des Johannes holen ihn und begraben ihn (Grab) unter Tränen."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MRK-006-014-029",
+            "field": "summary",
+            "fingerprint": "403a7735dfde98e8"
+          },
+          {
+            "record": "TRANS-MRK-006-001-056-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.6.14-MRK.6.16",
+            "fingerprint": "67dcac4afb59ca1a"
+          },
+          {
+            "record": "TRANS-MRK-006-001-056-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.6.17-MRK.6.20",
+            "fingerprint": "4765bf5dde8fb934"
+          },
+          {
+            "record": "TRANS-MRK-006-001-056-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.6.21-MRK.6.25",
+            "fingerprint": "90ef90fcf9eed8bf"
+          },
+          {
+            "record": "TRANS-MRK-006-001-056-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.6.26-MRK.6.29",
+            "fingerprint": "73514b5dca401c6f"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.6.14-MRK.6.16",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-HERODES-ANTIPAS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-HERODES-ANTIPAS",
+                "icons": [
+                  "FIG-JOHANNES-TAEUFER",
+                  "FIG-ELIJA",
+                  "FIG-ROLLE-PROPHET"
+                ]
+              },
+              {
+                "from": "FIG-HERODES-ANTIPAS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-JOHANNES-TAEUFER",
+                  "FIG-ZEICHEN-AUFERSTEHUNG"
+                ]
+              }
+            ],
+            "action_de": "König Herodes hört von Jesus. Die einen halten ihn für den auferweckten Johannes, andere für Elija oder einen Propheten; Herodes sagt: Johannes, den ich enthauptet habe, ist auferweckt worden.",
+            "stage": {
+              "mood": {
+                "FIG-HERODES-ANTIPAS": "worried"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.6.17-MRK.6.20",
+            "figures": [
+              "FIG-JOHANNES-TAEUFER",
+              "FIG-HERODES-ANTIPAS",
+              "FIG-HERODIAS"
+            ],
+            "objects": [
+              "FIG-ORT-GEFAENGNIS"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JOHANNES-TAEUFER",
+                "to": "FIG-HERODES-ANTIPAS",
+                "icons": [
+                  "FIG-HERODIAS",
+                  "FIG-ZEICHEN-NEIN"
+                ]
+              }
+            ],
+            "action_de": "Rückblick: Johannes hatte Herodes gesagt, es sei ihm nicht erlaubt, die Frau seines Bruders zu haben; darum liess Herodes ihn gefangen setzen. Herodias wollte ihn töten, doch Herodes fürchtete und schützte ihn.",
+            "stage": {
+              "back_side": "left",
+              "mood": {
+                "FIG-HERODES-ANTIPAS": "pensive",
+                "FIG-HERODIAS": "earnest",
+                "FIG-JOHANNES-TAEUFER": "earnest"
+              },
+              "arrows": [
+                [
+                  "FIG-JOHANNES-TAEUFER",
+                  "FIG-ORT-GEFAENGNIS",
+                  "go"
+                ]
+              ],
+              "x": {
+                "FIG-JOHANNES-TAEUFER": 96,
+                "FIG-HERODES-ANTIPAS": 134,
+                "FIG-HERODIAS": 166
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.6.21-MRK.6.25",
+            "figures": [
+              "FIG-HERODIAS",
+              "FIG-TOCHTER-HERODIAS",
+              "FIG-HERODES-ANTIPAS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-HERODES-ANTIPAS",
+                "to": "FIG-TOCHTER-HERODIAS",
+                "icons": [
+                  "FIG-ZEICHEN-GEBEN"
+                ]
+              },
+              {
+                "from": "FIG-HERODIAS",
+                "to": "FIG-TOCHTER-HERODIAS",
+                "icons": [
+                  "FIG-JOHANNES-TAEUFER",
+                  "FIG-ZEICHEN-TOD"
+                ]
+              }
+            ],
+            "action_de": "Beim Geburtstagsmahl tanzt die Tochter der Herodias; Herodes schwört, ihr zu geben, was sie will. Auf Rat ihrer Mutter verlangt sie den Kopf Johannes des Täufers.",
+            "stage": {
+              "mood": {
+                "FIG-HERODES-ANTIPAS": "smile",
+                "FIG-HERODIAS": "earnest",
+                "FIG-TOCHTER-HERODIAS": "calm"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.6.26-MRK.6.29",
+            "figures": [
+              "FIG-HERODES-ANTIPAS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER"
+            ],
+            "speech": [],
+            "action_de": "Der König wird sehr betrübt, lässt Johannes aber wegen seiner Eide im Gefängnis enthaupten. Die Jünger des Johannes holen seinen Leichnam und legen ihn in ein Grab.",
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-GRUPPE-JUENGER"
+                ]
+              },
+              "mood": {
+                "FIG-HERODES-ANTIPAS": "worried"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "König Herodes hört von Jesus. Die einen halten ihn für den auferweckten Johannes, andere für Elija oder einen Propheten; Herodes sagt: Johannes, den ich enthauptet habe, ist auferweckt worden.",
+          "Rückblick: Johannes hatte Herodes gesagt, es sei ihm nicht erlaubt, die Frau seines Bruders zu haben; darum liess Herodes ihn gefangen setzen. Herodias wollte ihn töten, doch Herodes fürchtete und schützte ihn.",
+          "Beim Geburtstagsmahl tanzt die Tochter der Herodias; Herodes schwört, ihr zu geben, was sie will. Auf Rat ihrer Mutter verlangt sie den Kopf Johannes des Täufers.",
+          "Der König wird sehr betrübt, lässt Johannes aber wegen seiner Eide im Gefängnis enthaupten. Die Jünger des Johannes holen seinen Leichnam und legen ihn in ein Grab."
+        ],
+        "captions_de": [
+          "Wer ist Jesus? Die Leute nennen Johannes, Elija, einen Propheten; Herodes meint: Johannes ist auferweckt (offenes Grab).",
+          "Mahnung → Gefängnis: Johannes sagt Herodes, Herodias zu haben sei nicht erlaubt (Herodias, abwehrende Hand); darum kommt er ins Gefängnis (gestrichelter Weg).",
+          "Das Fest: Nach ihrem Tanz verspricht Herodes der Tochter der Herodias (rosa Gewand), was sie will (offene Hände); Herodias rät ihr, den Tod des Johannes zu verlangen (Johannes, Totenkopf).",
+          "Begraben: Herodes ist betrübt; die Jünger des Johannes holen ihn und begraben ihn (Grab) unter Tränen."
+        ],
+        "interpretation_note_de": "Die Enthauptung und die Schale mit dem Kopf ([[MRK.6.27-MRK.6.28]]) werden nicht gezeigt; das Grab-Zeichen steht für den Tod. Ein Jünger steht für die Jünger des Johannes ([[MRK.6.29]]); er gleicht dem Lexikonbild der Jünger Jesu.",
+        "basis": [
+          {
+            "record": "TU-MRK-006-014-029",
+            "field": "summary",
+            "fingerprint": "1422dc34ff96ff06"
+          },
+          {
+            "record": "TRANS-MRK-006-001-056-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.6.14-MRK.6.16",
+            "fingerprint": "67dcac4afb59ca1a"
+          },
+          {
+            "record": "TRANS-MRK-006-001-056-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.6.17-MRK.6.20",
+            "fingerprint": "4765bf5dde8fb934"
+          },
+          {
+            "record": "TRANS-MRK-006-001-056-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.6.21-MRK.6.25",
+            "fingerprint": "90ef90fcf9eed8bf"
+          },
+          {
+            "record": "TRANS-MRK-006-001-056-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.6.26-MRK.6.29",
+            "fingerprint": "73514b5dca401c6f"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

@@ -1,0 +1,159 @@
+{
+ "id": "CORE-MRK-001-040-045",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MRK.1.40-MRK.1.45",
+ "target": "TU-MRK-001-040-045",
+ "core_de": "Ein Aussätziger fällt auf die Knie: «Wenn du willst, kannst du mich rein machen»; Jesus berührt ihn – «Ich will; werde rein!» –, und sogleich wird er rein; Jesus schickt ihn weg mit dem Gebot, niemandem etwas zu sagen, sondern sich dem Priester zu zeigen; doch der Geheilte verkündet die Sache überall, sodass Jesus nicht mehr öffentlich in eine Stadt gehen kann und die Leute von überall zu ihm an einsame Orte kommen.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Bitte – Heilung – Gebot – Übertretung – Folge",
+    "range": "MRK.1.40-MRK.1.45",
+    "elements": [
+     {
+      "label": "Bitte unter Bedingung und Antwort",
+      "ref": "MRK.1.40-MRK.1.41",
+      "role": "Bitte",
+      "child": "s2"
+     },
+     {
+      "label": "Sogleich wich der Aussatz von ihm, und er wurde rein",
+      "ref": "MRK.1.42",
+      "role": "Heilung"
+     },
+     {
+      "label": "«Sieh zu, dass du niemandem etwas sagst! Vielmehr: Geh, zeig dich dem Priester …»",
+      "ref": "MRK.1.43-MRK.1.44",
+      "role": "Gebot"
+     },
+     {
+      "label": "Der aber fing an, viel zu verkünden und die Sache bekannt zu machen",
+      "ref": "MRK.1.45",
+      "role": "Übertretung"
+     },
+     {
+      "label": "sodass er nicht mehr öffentlich in eine Stadt gehen konnte; sie kamen von überall her zu ihm",
+      "ref": "MRK.1.45",
+      "role": "Folge"
+     }
+    ],
+    "features": {
+     "text_forms": [
+      {
+       "ref": "MRK.1.41",
+       "note": "Die Arbeitsübersetzung liest «von Zorn ergriffen»; die meisten Handschriften lesen «von Erbarmen ergriffen»."
+      }
+     ],
+     "pattern_break": [
+      {
+       "ref": "MRK.1.45",
+       "note": "Das Schweigegebot wird gebrochen (Markus-Eigenheit)"
+      }
+     ],
+     "speakers": [
+      {
+       "who": "FIG-ROLLE-AUSSAETZIGER",
+       "to": "FIG-JESUS",
+       "ref": "MRK.1.40"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-ROLLE-AUSSAETZIGER",
+       "ref": "MRK.1.41-MRK.1.44"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "condition",
+    "subtype": "Wenn du willst → rein",
+    "range": "MRK.1.40-MRK.1.41",
+    "elements": [
+     {
+      "label": "«Wenn du willst …»",
+      "ref": "MRK.1.40",
+      "role": "Bedingung"
+     },
+     {
+      "label": "«… kannst du mich rein machen.»",
+      "ref": "MRK.1.40",
+      "role": "Folge"
+     },
+     {
+      "label": "«Ich will; werde rein!»",
+      "ref": "MRK.1.41",
+      "role": "Antwort"
+     }
+    ],
+    "visual": "switch",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MRK.1.40-MRK.1.42",
+   "text_de": "«Wenn du willst, kannst du mich rein machen.» Jesus streckt die Hand aus, berührt ihn: «Ich will; werde rein!» Sogleich weicht der Aussatz.",
+   "reason_de": "Bitte und Heilung (Kriterien 1 und 4).",
+   "recognition_de": "Der Aussätzige kniet, Jesus berührt ihn.",
+   "keywords": [
+    "Wenn du willst, kannst du mich rein machen",
+    "Ich will; werde rein!"
+   ]
+  },
+  {
+   "reference": "MRK.1.43-MRK.1.44",
+   "text_de": "Jesus schickt ihn weg: «Sieh zu, dass du niemandem etwas sagst! Vielmehr: Geh, zeig dich dem Priester …»",
+   "reason_de": "Schweigegebot und Auftrag (Kriterium 2).",
+   "recognition_de": "Jesus mit erhobenem Finger: Schweigen, zum Priester.",
+   "keywords": [
+    "Sieh zu, dass du niemandem etwas sagst!",
+    "zeig dich dem Priester"
+   ]
+  },
+  {
+   "reference": "MRK.1.45",
+   "text_de": "Der Geheilte verkündet viel und macht die Sache bekannt, sodass Jesus nicht mehr öffentlich in eine Stadt gehen kann; doch sie kommen von überall her zu ihm.",
+   "reason_de": "Musterbruch und Ausgang (Kriterien 2 und 3).",
+   "recognition_de": "Der Mann erzählt laut; Jesus draussen an einsamem Ort, Leute kommen.",
+   "keywords": [
+    "fing an, viel zu verkünden",
+    "sodass er nicht mehr öffentlich in eine Stadt gehen konnte"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Die Opfervorschrift des Mose im Einzelnen – Hintergrund damals"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-ROLLE-AUSSAETZIGER",
+  "FIG-GRUPPE-VOLK"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MRK.1.40-MRK.1.45",
+   "fingerprint": "c300b427dea2c379"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mk 1–4 und 6–8 nach dem Pilot Mk 5 und dem Ausrollen Matthäus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

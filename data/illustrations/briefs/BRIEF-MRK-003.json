@@ -11,15 +11,14 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MRK.3.1-MRK.3.12",
+      "reference": "MRK.3.1-MRK.3.6",
       "figures": [
-        "FIG-GRUPPE-PHARISAEER",
         "FIG-ROLLE-MANN-HAND",
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-GRUPPE-PHARISAEER",
+        "FIG-GRUPPE-HERODIANER"
       ],
-      "objects": [
-        "FIG-ORT-SYNAGOGE"
-      ],
+      "objects": [],
       "signs": [
         "FIG-ZEICHEN-HEILEN"
       ],
@@ -27,55 +26,102 @@
         {
           "from": "FIG-JESUS",
           "to": "FIG-ROLLE-MANN-HAND",
+          "icons": [],
+          "word": {
+            "de": "Streck die Hand aus!",
+            "gsw": "Streck d Hand us!"
+          }
+        },
+        {
+          "from": "FIG-GRUPPE-PHARISAEER",
+          "to": "FIG-GRUPPE-HERODIANER",
           "icons": [
-            "FIG-ZEICHEN-HEILEN"
+            "FIG-JESUS",
+            "FIG-ZEICHEN-TOETEN"
           ]
         }
       ],
-      "action_de": "Am Sabbat heilt Jesus in der Synagoge eine verdorrte Hand; die Pharisäer beraten, wie sie ihn umbringen können.",
+      "action_de": "Jesus sagt zum Mann mit der verdorrten Hand: «Streck die Hand aus!», und die Hand wird wiederhergestellt. Die Pharisäer gehen hinaus und beraten sogleich mit den Herodianern, wie sie ihn umbringen könnten.",
+      "keywords": {
+        "de": "wie sie ihn umbringen könnten",
+        "gsw": "wie si en chönted umbringe"
+      },
       "stage": {
-        "back_side": "left",
-        "mood": {
-          "FIG-GRUPPE-PHARISAEER": "earnest",
-          "FIG-ROLLE-MANN-HAND": "delight"
+        "split": 2,
+        "trenner": true,
+        "at": {
+          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-MANN-HAND"
         },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-ROLLE-KRANKER",
-            "act"
-          ]
-        ],
-        "beside": {
-          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
+        "mood": {
+          "FIG-ROLLE-MANN-HAND": "delight",
+          "FIG-JESUS": "earnest",
+          "FIG-GRUPPE-PHARISAEER": "angry",
+          "FIG-GRUPPE-HERODIANER": "angry"
+        },
+        "x": {
+          "FIG-ROLLE-MANN-HAND": 24,
+          "FIG-JESUS": 66,
+          "FIG-GRUPPE-PHARISAEER": 124,
+          "FIG-GRUPPE-HERODIANER": 166
         }
       }
     },
     {
       "n": 2,
-      "reference": "MRK.3.13-MRK.3.19",
+      "reference": "MRK.3.7-MRK.3.19",
       "figures": [
+        "FIG-ROLLE-BESESSENER",
         "FIG-JESUS",
         "FIG-GRUPPE-ZWOELF"
       ],
       "objects": [
         "FIG-ORT-BERG"
       ],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-DAEMON",
+        "FIG-ZEICHEN-EINSETZEN"
+      ],
       "speech": [
         {
+          "from": "FIG-ROLLE-BESESSENER",
+          "to": "FIG-JESUS",
+          "icons": [],
+          "word": {
+            "de": "Du bist der Sohn Gottes!",
+            "gsw": "Du bisch de Sohn vo Gott!"
+          }
+        },
+        {
           "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
+          "to": "FIG-ROLLE-BESESSENER",
           "icons": [
-            "FIG-ZEICHEN-VERKUENDIGEN"
+            "FIG-ZEICHEN-SCHWEIGEN"
           ]
         }
       ],
-      "action_de": "Auf dem Berg setzt Jesus die Zwölf ein, um sie zum Verkündigen auszusenden.",
+      "action_de": "Eine grosse Schar kommt zu ihm, die unreinen Geister schreien «Du bist der Sohn Gottes!», doch er gebietet Schweigen; auf dem Berg setzt er zwölf ein.",
+      "keywords": {
+        "de": "Und er setzte zwölf ein",
+        "gsw": "Und er hät zwölf iigsetzt"
+      },
       "stage": {
-        "back_side": "left",
+        "pose": {
+          "FIG-ROLLE-BESESSENER": "kneel"
+        },
+        "at": {
+          "FIG-ZEICHEN-DAEMON": "FIG-ROLLE-BESESSENER",
+          "FIG-ZEICHEN-EINSETZEN": "FIG-GRUPPE-ZWOELF"
+        },
+        "back_side": "right",
         "mood": {
-          "FIG-GRUPPE-ZWOELF": "determined"
+          "FIG-ROLLE-BESESSENER": "fear",
+          "FIG-JESUS": "earnest",
+          "FIG-GRUPPE-ZWOELF": "calm"
+        },
+        "x": {
+          "FIG-ROLLE-BESESSENER": 30,
+          "FIG-JESUS": 90,
+          "FIG-GRUPPE-ZWOELF": 156
         }
       }
     },
@@ -83,36 +129,58 @@
       "n": 3,
       "reference": "MRK.3.20-MRK.3.30",
       "figures": [
-        "FIG-GRUPPE-SCHRIFTGELEHRTE",
-        "FIG-JESUS"
+        "FIG-GRUPPE-BRUEDER-JESU",
+        "FIG-JESUS",
+        "FIG-GRUPPE-SCHRIFTGELEHRTE"
       ],
-      "objects": [
-        "FIG-ORT-JERUSALEM"
-      ],
+      "objects": [],
       "signs": [],
       "speech": [
         {
-          "from": "FIG-JESUS",
+          "from": "FIG-GRUPPE-BRUEDER-JESU",
+          "to": "FIG-GRUPPE-BRUEDER-JESU",
+          "icons": [
+            "FIG-JESUS"
+          ],
+          "word": {
+            "de": "Er ist von Sinnen.",
+            "gsw": "Er isch nüme bi Troscht."
+          }
+        },
+        {
+          "from": "FIG-GRUPPE-SCHRIFTGELEHRTE",
           "to": "FIG-GRUPPE-SCHRIFTGELEHRTE",
           "icons": [
-            "FIG-SATAN",
-            "FIG-ZEICHEN-STREIT",
-            "FIG-SATAN",
-            "FIG-ZEICHEN-UMSTURZ"
-          ]
+            "FIG-SATAN"
+          ],
+          "word": {
+            "de": "Er hat Beelzebul.",
+            "gsw": "Er hät de Beelzebul."
+          }
         }
       ],
-      "action_de": "Angehörige halten Jesus für von Sinnen; Schriftgelehrte sagen, er treibe Dämonen durch deren Herrscher aus; Jesus widerspricht: Wie kann Satan Satan austreiben?",
+      "action_de": "Die Seinen gehen hinaus, um ihn festzuhalten, denn sie sagen: «Er ist von Sinnen.» Die Schriftgelehrten aus Jerusalem sagen: «Er hat Beelzebul.»",
+      "keywords": {
+        "de": "Wie kann Satan Satan austreiben?",
+        "gsw": "Wie cha de Satan de Satan ustriibe?"
+      },
       "stage": {
-        "back_side": "left",
-        "before": true,
-        "x": {
-          "FIG-GRUPPE-SCHRIFTGELEHRTE": 40,
-          "FIG-JESUS": 150
-        },
+        "arrows": [
+          [
+            "FIG-GRUPPE-BRUEDER-JESU",
+            "FIG-JESUS",
+            "go"
+          ]
+        ],
         "mood": {
-          "FIG-GRUPPE-SCHRIFTGELEHRTE": "earnest",
-          "FIG-JESUS": "earnest"
+          "FIG-GRUPPE-BRUEDER-JESU": "worried",
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-SCHRIFTGELEHRTE": "earnest"
+        },
+        "x": {
+          "FIG-GRUPPE-BRUEDER-JESU": 30,
+          "FIG-JESUS": 96,
+          "FIG-GRUPPE-SCHRIFTGELEHRTE": 160
         }
       }
     },
@@ -120,59 +188,72 @@
       "n": 4,
       "reference": "MRK.3.31-MRK.3.35",
       "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-MENGE"
+        "FIG-MARIA-MUTTER-JESU",
+        "FIG-GRUPPE-BRUEDER-JESU",
+        "FIG-GRUPPE-MENGE",
+        "FIG-JESUS"
       ],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-LIEBE"
-      ],
+      "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-GOTT",
-            "FIG-ZEICHEN-HOEREN",
-            "FIG-ZEICHEN-DARAUS",
-            "FIG-MARIA-MUTTER-JESU",
-            "FIG-GRUPPE-BRUEDER-JESU"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Denn wer den Willen Gottes tut, der ist mein Bruder und meine Schwester und meine Mutter.",
+            "gsw": "Dänn wer de Wile vo Gott tuet, dä isch min Brueder und mini Schwöschter und mini Mueter."
+          }
         }
       ],
-      "action_de": "Wer den Willen Gottes tut, ist Jesus Bruder, Schwester und Mutter.",
+      "action_de": "Jesus blickt auf die, die im Kreis um ihn sitzen: «Siehe, meine Mutter und meine Brüder! Denn wer den Willen Gottes tut, der ist mein Bruder und meine Schwester und meine Mutter.»",
+      "keywords": {
+        "de": "Siehe, meine Mutter und meine Brüder!",
+        "gsw": "Lueg, mini Mueter und mini Brüeder!"
+      },
       "stage": {
-        "at": {
-          "FIG-ZEICHEN-LIEBE": "FIG-GRUPPE-MENGE"
+        "split": 2,
+        "trenner": true,
+        "pose": {
+          "FIG-GRUPPE-MENGE": "sit"
         },
         "mood": {
-          "FIG-GRUPPE-MENGE": "smile"
+          "FIG-MARIA-MUTTER-JESU": "worried",
+          "FIG-GRUPPE-BRUEDER-JESU": "worried",
+          "FIG-GRUPPE-MENGE": "calm",
+          "FIG-JESUS": "smile"
+        },
+        "x": {
+          "FIG-MARIA-MUTTER-JESU": 18,
+          "FIG-GRUPPE-BRUEDER-JESU": 52,
+          "FIG-GRUPPE-MENGE": 112,
+          "FIG-JESUS": 164
         }
       }
     }
   ],
   "actions_de": [
-    "Am Sabbat heilt Jesus in der Synagoge eine verdorrte Hand; die Pharisäer beraten, wie sie ihn umbringen können.",
-    "Auf dem Berg setzt Jesus die Zwölf ein, um sie zum Verkündigen auszusenden.",
-    "Angehörige halten Jesus für von Sinnen; Schriftgelehrte sagen, er treibe Dämonen durch deren Herrscher aus; Jesus widerspricht: Wie kann Satan Satan austreiben?",
-    "Wer den Willen Gottes tut, ist Jesus Bruder, Schwester und Mutter."
+    "Jesus sagt zum Mann mit der verdorrten Hand: «Streck die Hand aus!», und die Hand wird wiederhergestellt. Die Pharisäer gehen hinaus und beraten sogleich mit den Herodianern, wie sie ihn umbringen könnten.",
+    "Eine grosse Schar kommt zu ihm, die unreinen Geister schreien «Du bist der Sohn Gottes!», doch er gebietet Schweigen; auf dem Berg setzt er zwölf ein.",
+    "Die Seinen gehen hinaus, um ihn festzuhalten, denn sie sagen: «Er ist von Sinnen.» Die Schriftgelehrten aus Jerusalem sagen: «Er hat Beelzebul.»",
+    "Jesus blickt auf die, die im Kreis um ihn sitzen: «Siehe, meine Mutter und meine Brüder! Denn wer den Willen Gottes tut, der ist mein Bruder und meine Schwester und meine Mutter.»"
   ],
   "captions_de": [
-    "Am Sabbat: Jesus heilt die Hand (Hand mit Licht); die Pharisäer schauen ernst zu.",
-    "Die Zwölf: Auf dem Berg sendet Jesus die Zwölf zu verkünden (Rufer).",
-    "Streit: Den Schriftgelehrten aus Jerusalem antwortet Jesus: Satan gegen Satan? Was gespalten ist, stürzt ein (Schatten, Pfeil, Schatten, kippende Mauern).",
-    "Gottes Willen tun → Familie Jesu: Wer auf Gott hört (Strahlenkranz, Ohr), ist (Pfeil) ihm Mutter und Bruder (Maria, Brüder)."
+    "Die Hand wird gesund: Der Mann streckt die Hand aus, Jesus heilt sie (heilen); rechts, hinter der gestrichelten Linie, beraten Pharisäer und Herodianer, wie sie ihn umbringen könnten (Jesus, töten).",
+    "Andrang und die Zwölf: Ein Besessener kniet und schreit: «Du bist der Sohn Gottes!»; Jesus gebietet Schweigen (Schweigen); rechts auf dem Berg die Zwölf, die er einsetzt (einsetzen).",
+    "Urteile über Jesus: Die Seinen (links) kommen, um ihn festzuhalten (gestrichelter Pfeil): «Er ist von Sinnen.»; die Schriftgelehrten (rechts) sagen: «Er hat Beelzebul.» (Satan).",
+    "Meine Familie: Jesus wendet sich den Menschen im Kreis zu: «Denn wer den Willen Gottes tut, der ist mein Bruder und meine Schwester und meine Mutter.» (Wille Gottes); links draussen Mutter und Brüder."
   ],
-  "interpretation_note_de": "Sechs Abschnitte in vier Feldern: Heilung am Sabbat (mit dem Andrang am See), die Zwölf, der Streit mit den Angehörigen und Schriftgelehrten, die neue Familie.",
+  "interpretation_note_de": "Vier Comic-Szenen für sechs Abschnitte ([[MRK.3.1-MRK.3.35]]): Feld 1 die Heilung am Sabbat und der Tötungsplan, Feld 2 bündelt den Andrang am See (Bekenntnis der Geister, Schweigegebot) und die Einsetzung der Zwölf, Feld 3 bündelt die beiden Urteile der Schachtelung (die Seinen: «von Sinnen», die Schriftgelehrten: «Beelzebul») mit Jesu Gegenfrage im Band, Feld 4 die Antwort an die Menge im Kreis. Dass «die Seinen» Angehörige sind, ist Deutung. Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-MRK-003",
       "field": "summary",
-      "fingerprint": "d979e4d940540a34"
+      "fingerprint": "85cf6e7e85676c5c"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -623,6 +704,415 @@
               },
               "mood": {
                 "FIG-GRUPPE-MENGE": "smile"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-MRK-003",
+            "field": "summary",
+            "fingerprint": "d979e4d940540a34"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.3.1-MRK.3.12",
+            "figures": [
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-ROLLE-MANN-HAND",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-SYNAGOGE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-MANN-HAND",
+                "icons": [
+                  "FIG-ZEICHEN-HEILEN"
+                ]
+              }
+            ],
+            "action_de": "Am Sabbat heilt Jesus in der Synagoge eine verdorrte Hand; die Pharisäer beraten, wie sie ihn umbringen können.",
+            "stage": {
+              "back_side": "left",
+              "mood": {
+                "FIG-GRUPPE-PHARISAEER": "earnest",
+                "FIG-ROLLE-MANN-HAND": "delight"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-KRANKER",
+                  "act"
+                ]
+              ],
+              "beside": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.3.13-MRK.3.19",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-ORT-BERG"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-VERKUENDIGEN"
+                ]
+              }
+            ],
+            "action_de": "Auf dem Berg setzt Jesus die Zwölf ein, um sie zum Verkündigen auszusenden.",
+            "stage": {
+              "back_side": "left",
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "determined"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.3.20-MRK.3.30",
+            "figures": [
+              "FIG-GRUPPE-SCHRIFTGELEHRTE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-JERUSALEM"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-SCHRIFTGELEHRTE",
+                "icons": [
+                  "FIG-SATAN",
+                  "FIG-ZEICHEN-STREIT",
+                  "FIG-SATAN",
+                  "FIG-ZEICHEN-UMSTURZ"
+                ]
+              }
+            ],
+            "action_de": "Angehörige halten Jesus für von Sinnen; Schriftgelehrte sagen, er treibe Dämonen durch deren Herrscher aus; Jesus widerspricht: Wie kann Satan Satan austreiben?",
+            "stage": {
+              "back_side": "left",
+              "before": true,
+              "x": {
+                "FIG-GRUPPE-SCHRIFTGELEHRTE": 40,
+                "FIG-JESUS": 150
+              },
+              "mood": {
+                "FIG-GRUPPE-SCHRIFTGELEHRTE": "earnest",
+                "FIG-JESUS": "earnest"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.3.31-MRK.3.35",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-LIEBE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-HOEREN",
+                  "FIG-ZEICHEN-DARAUS",
+                  "FIG-MARIA-MUTTER-JESU",
+                  "FIG-GRUPPE-BRUEDER-JESU"
+                ]
+              }
+            ],
+            "action_de": "Wer den Willen Gottes tut, ist Jesus Bruder, Schwester und Mutter.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-LIEBE": "FIG-GRUPPE-MENGE"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "smile"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Am Sabbat heilt Jesus in der Synagoge eine verdorrte Hand; die Pharisäer beraten, wie sie ihn umbringen können.",
+          "Auf dem Berg setzt Jesus die Zwölf ein, um sie zum Verkündigen auszusenden.",
+          "Angehörige halten Jesus für von Sinnen; Schriftgelehrte sagen, er treibe Dämonen durch deren Herrscher aus; Jesus widerspricht: Wie kann Satan Satan austreiben?",
+          "Wer den Willen Gottes tut, ist Jesus Bruder, Schwester und Mutter."
+        ],
+        "captions_de": [
+          "Am Sabbat: Jesus heilt die Hand (Hand mit Licht); die Pharisäer schauen ernst zu.",
+          "Die Zwölf: Auf dem Berg sendet Jesus die Zwölf zu verkünden (Rufer).",
+          "Streit: Den Schriftgelehrten aus Jerusalem antwortet Jesus: Satan gegen Satan? Was gespalten ist, stürzt ein (Schatten, Pfeil, Schatten, kippende Mauern).",
+          "Gottes Willen tun → Familie Jesu: Wer auf Gott hört (Strahlenkranz, Ohr), ist (Pfeil) ihm Mutter und Bruder (Maria, Brüder)."
+        ],
+        "interpretation_note_de": "Sechs Abschnitte in vier Feldern: Heilung am Sabbat (mit dem Andrang am See), die Zwölf, der Streit mit den Angehörigen und Schriftgelehrten, die neue Familie.",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.3.1-MRK.3.6",
+            "figures": [
+              "FIG-ROLLE-MANN-HAND",
+              "FIG-JESUS",
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-GRUPPE-HERODIANER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-MANN-HAND",
+                "icons": [],
+                "word": {
+                  "de": "Streck die Hand aus!",
+                  "gsw": "Streck d Hand us!"
+                }
+              },
+              {
+                "from": "FIG-GRUPPE-PHARISAEER",
+                "to": "FIG-GRUPPE-HERODIANER",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-TOETEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt zum Mann mit der verdorrten Hand: «Streck die Hand aus!», und die Hand wird wiederhergestellt. Die Pharisäer gehen hinaus und beraten sogleich mit den Herodianern, wie sie ihn umbringen könnten.",
+            "keywords": {
+              "de": "wie sie ihn umbringen könnten",
+              "gsw": "wie si en chönted umbringe"
+            },
+            "stage": {
+              "split": 2,
+              "trenner": true,
+              "at": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-MANN-HAND"
+              },
+              "mood": {
+                "FIG-ROLLE-MANN-HAND": "delight",
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-PHARISAEER": "angry",
+                "FIG-GRUPPE-HERODIANER": "angry"
+              },
+              "x": {
+                "FIG-ROLLE-MANN-HAND": 24,
+                "FIG-JESUS": 66,
+                "FIG-GRUPPE-PHARISAEER": 124,
+                "FIG-GRUPPE-HERODIANER": 166
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.3.7-MRK.3.19",
+            "figures": [
+              "FIG-ROLLE-BESESSENER",
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-ORT-BERG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-DAEMON",
+              "FIG-ZEICHEN-EINSETZEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-BESESSENER",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Du bist der Sohn Gottes!",
+                  "gsw": "Du bisch de Sohn vo Gott!"
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-BESESSENER",
+                "icons": [
+                  "FIG-ZEICHEN-SCHWEIGEN"
+                ]
+              }
+            ],
+            "action_de": "Eine grosse Schar kommt zu ihm, die unreinen Geister schreien «Du bist der Sohn Gottes!», doch er gebietet Schweigen; auf dem Berg setzt er zwölf ein.",
+            "keywords": {
+              "de": "Und er setzte zwölf ein",
+              "gsw": "Und er hät zwölf iigsetzt"
+            },
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-BESESSENER": "kneel"
+              },
+              "at": {
+                "FIG-ZEICHEN-DAEMON": "FIG-ROLLE-BESESSENER",
+                "FIG-ZEICHEN-EINSETZEN": "FIG-GRUPPE-ZWOELF"
+              },
+              "back_side": "right",
+              "mood": {
+                "FIG-ROLLE-BESESSENER": "fear",
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-ZWOELF": "calm"
+              },
+              "x": {
+                "FIG-ROLLE-BESESSENER": 30,
+                "FIG-JESUS": 90,
+                "FIG-GRUPPE-ZWOELF": 156
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.3.20-MRK.3.30",
+            "figures": [
+              "FIG-GRUPPE-BRUEDER-JESU",
+              "FIG-JESUS",
+              "FIG-GRUPPE-SCHRIFTGELEHRTE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-BRUEDER-JESU",
+                "to": "FIG-GRUPPE-BRUEDER-JESU",
+                "icons": [
+                  "FIG-JESUS"
+                ],
+                "word": {
+                  "de": "Er ist von Sinnen.",
+                  "gsw": "Er isch nüme bi Troscht."
+                }
+              },
+              {
+                "from": "FIG-GRUPPE-SCHRIFTGELEHRTE",
+                "to": "FIG-GRUPPE-SCHRIFTGELEHRTE",
+                "icons": [
+                  "FIG-SATAN"
+                ],
+                "word": {
+                  "de": "Er hat Beelzebul.",
+                  "gsw": "Er hät de Beelzebul."
+                }
+              }
+            ],
+            "action_de": "Die Seinen gehen hinaus, um ihn festzuhalten, denn sie sagen: «Er ist von Sinnen.» Die Schriftgelehrten aus Jerusalem sagen: «Er hat Beelzebul.»",
+            "keywords": {
+              "de": "Wie kann Satan Satan austreiben?",
+              "gsw": "Wie cha de Satan de Satan ustriibe?"
+            },
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-GRUPPE-BRUEDER-JESU",
+                  "FIG-JESUS",
+                  "go"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-BRUEDER-JESU": "worried",
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-SCHRIFTGELEHRTE": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-BRUEDER-JESU": 30,
+                "FIG-JESUS": 96,
+                "FIG-GRUPPE-SCHRIFTGELEHRTE": 160
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.3.31-MRK.3.35",
+            "figures": [
+              "FIG-MARIA-MUTTER-JESU",
+              "FIG-GRUPPE-BRUEDER-JESU",
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [],
+                "word": {
+                  "de": "Denn wer den Willen Gottes tut, der ist mein Bruder und meine Schwester und meine Mutter.",
+                  "gsw": "Dänn wer de Wile vo Gott tuet, dä isch min Brueder und mini Schwöschter und mini Mueter."
+                }
+              }
+            ],
+            "action_de": "Jesus blickt auf die, die im Kreis um ihn sitzen: «Siehe, meine Mutter und meine Brüder! Denn wer den Willen Gottes tut, der ist mein Bruder und meine Schwester und meine Mutter.»",
+            "keywords": {
+              "de": "Siehe, meine Mutter und meine Brüder!",
+              "gsw": "Lueg, mini Mueter und mini Brüeder!"
+            },
+            "stage": {
+              "split": 2,
+              "trenner": true,
+              "pose": {
+                "FIG-GRUPPE-MENGE": "sit"
+              },
+              "back_side": "left",
+              "mood": {
+                "FIG-MARIA-MUTTER-JESU": "worried",
+                "FIG-GRUPPE-BRUEDER-JESU": "worried",
+                "FIG-GRUPPE-MENGE": "calm",
+                "FIG-JESUS": "smile"
+              },
+              "x": {
+                "FIG-MARIA-MUTTER-JESU": 18,
+                "FIG-GRUPPE-BRUEDER-JESU": 52,
+                "FIG-GRUPPE-MENGE": 112,
+                "FIG-JESUS": 164
               }
             }
           }

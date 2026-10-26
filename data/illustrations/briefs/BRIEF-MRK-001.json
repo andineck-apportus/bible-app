@@ -13,35 +13,49 @@
       "n": 1,
       "reference": "MRK.1.1-MRK.1.13",
       "figures": [
-        "FIG-HEILIGER-GEIST",
+        "FIG-GOTT",
         "FIG-JOHANNES-TAEUFER",
         "FIG-JESUS"
       ],
       "objects": [
         "FIG-ORT-JORDAN"
       ],
-      "signs": [
-        "FIG-ZEICHEN-TAUFE"
-      ],
-      "speech": [],
-      "action_de": "Johannes tauft Jesus im Jordan; der Geist kommt wie eine Taube herab, und Gott nennt ihn seinen geliebten Sohn.",
-      "stage": {
-        "at": {
-          "FIG-ZEICHEN-TAUFE": "FIG-JESUS"
-        },
-        "arrows": [
-          [
-            "FIG-JOHANNES-TAEUFER",
-            "FIG-JESUS",
-            "act"
+      "signs": [],
+      "speech": [
+        {
+          "from": "FIG-GOTT",
+          "to": "FIG-JESUS",
+          "icons": [
+            "FIG-ZEICHEN-LIEBE"
           ],
-          [
-            "FIG-HEILIGER-GEIST",
-            "FIG-JESUS",
-            "act"
-          ]
-        ],
-        "in_water": true
+          "word": {
+            "de": "Du bist mein geliebter Sohn.",
+            "gsw": "Du bisch min liebe Sohn."
+          }
+        }
+      ],
+      "action_de": "Eine Stimme aus den Himmeln sagt zu Jesus, der im Jordan getauft worden ist: «Du bist mein geliebter Sohn; an dir habe ich Gefallen gefunden.»",
+      "keywords": {
+        "de": "an dir habe ich Gefallen gefunden",
+        "gsw": "a dir han ich Gfalle gfunde"
+      },
+      "names": {
+        "FIG-JOHANNES-TAEUFER": {
+          "de": "Johannes",
+          "gsw": "Johannes"
+        }
+      },
+      "stage": {
+        "in_water": true,
+        "god_side": "left",
+        "mood": {
+          "FIG-JESUS": "smile",
+          "FIG-JOHANNES-TAEUFER": "surprised"
+        },
+        "x": {
+          "FIG-JOHANNES-TAEUFER": 96,
+          "FIG-JESUS": 150
+        }
       }
     },
     {
@@ -63,14 +77,41 @@
           "to": "FIG-PETRUS",
           "icons": [
             "FIG-ZEICHEN-NACHFOLGEN"
-          ]
+          ],
+          "word": {
+            "de": "Kommt mir nach, und ich werde euch zu Menschenfischern machen.",
+            "gsw": "Chömed mir nache, und ich mache eu zu Mänschefischer."
+          }
         }
       ],
-      "action_de": "Jesus verkündet in Galiläa das nahe Reich Gottes und ruft am See die ersten Jünger, die ihm folgen.",
+      "action_de": "Am See sieht Jesus Simon und Andreas beim Auswerfen der Netze und sagt: Kommt mir nach, und ich werde euch zu Menschenfischern machen; sogleich lassen sie die Netze liegen und folgen ihm.",
+      "keywords": {
+        "de": "das Reich Gottes ist nahe gekommen",
+        "gsw": "s Riich vo Gott isch nöch choo"
+      },
+      "names": {
+        "FIG-PETRUS": {
+          "de": "Simon",
+          "gsw": "Simon"
+        },
+        "FIG-ANDREAS": {
+          "de": "Andreas",
+          "gsw": "Andreas"
+        }
+      },
       "stage": {
         "mood": {
+          "FIG-JESUS": "smile",
           "FIG-PETRUS": "surprised",
           "FIG-ANDREAS": "surprised"
+        },
+        "x": {
+          "FIG-JESUS": 40,
+          "FIG-PETRUS": 112,
+          "FIG-ANDREAS": 158
+        },
+        "floor_x": {
+          "FIG-OBJ-NETZ": 136
         }
       }
     },
@@ -85,63 +126,74 @@
         "FIG-ORT-SYNAGOGE"
       ],
       "signs": [
-        "FIG-ZEICHEN-DAEMON",
-        "FIG-ZEICHEN-AUSTREIBEN"
+        "FIG-ZEICHEN-DAEMON"
       ],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-ROLLE-BESESSENER",
           "icons": [
-            "FIG-ZEICHEN-SCHWEIGEN",
-            "FIG-ZEICHEN-DAEMON"
-          ]
+            "FIG-ZEICHEN-AUSTREIBEN"
+          ],
+          "word": {
+            "de": "Verstumme und geh aus ihm heraus!",
+            "gsw": "Bis still und gang us ihm use!"
+          }
         }
       ],
-      "action_de": "In Kafarnaum lehrt Jesus mit Vollmacht, treibt unreine Geister aus und heilt viele.",
+      "action_de": "In der Synagoge schreit ein Mensch mit einem unreinen Geist: «Ich weiss, wer du bist: der Heilige Gottes!» Jesus fährt ihn an: «Verstumme und geh aus ihm heraus!» – der Geist reisst ihn hin und her und fährt aus.",
+      "keywords": {
+        "de": "Eine neue Lehre mit Vollmacht!",
+        "gsw": "E nöii Lehr mit Vollmacht!"
+      },
       "stage": {
-        "back_side": "left",
         "at": {
           "FIG-ZEICHEN-DAEMON": "FIG-ROLLE-BESESSENER"
         },
         "mood": {
-          "FIG-JESUS": "earnest",
-          "FIG-ROLLE-BESESSENER": "surprised"
+          "FIG-ROLLE-BESESSENER": "angry",
+          "FIG-JESUS": "determined"
         },
-        "air_x": 150,
-        "air_y": 28,
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-FLIEHEN",
-            "act"
-          ]
-        ]
+        "back_side": "left",
+        "before": true,
+        "x": {
+          "FIG-JESUS": 54,
+          "FIG-ROLLE-BESESSENER": 140
+        }
       }
     },
     {
       "n": 4,
       "reference": "MRK.1.40-MRK.1.45",
       "figures": [
-        "FIG-JESUS",
-        "FIG-ROLLE-AUSSAETZIGER"
+        "FIG-ROLLE-AUSSAETZIGER",
+        "FIG-JESUS"
       ],
       "objects": [],
       "signs": [
         "FIG-ZEICHEN-REIN"
       ],
-      "speech": [],
-      "action_de": "Jesus berührt einen Aussätzigen und macht ihn rein; der Mann erzählt es überall.",
+      "speech": [
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-ROLLE-AUSSAETZIGER",
+          "icons": [
+            "FIG-ZEICHEN-BERUEHREN"
+          ],
+          "word": {
+            "de": "Ich will; werde rein!",
+            "gsw": "Ich wott; wird rein!"
+          }
+        }
+      ],
+      "action_de": "Ein Aussätziger fällt auf die Knie und bittet: «Wenn du willst, kannst du mich rein machen.» Jesus streckt die Hand aus, berührt ihn und sagt: «Ich will; werde rein!» Sogleich weicht der Aussatz.",
+      "keywords": {
+        "de": "Sieh zu, dass du niemandem etwas sagst!",
+        "gsw": "Lueg, dass du niemertem öppis verzellsch!"
+      },
       "stage": {
         "pose": {
           "FIG-ROLLE-AUSSAETZIGER": "kneel"
-        },
-        "at": {
-          "FIG-ZEICHEN-REIN": "FIG-ROLLE-AUSSAETZIGER"
-        },
-        "mood": {
-          "FIG-ROLLE-AUSSAETZIGER": "delight",
-          "FIG-JESUS": "calm"
         },
         "arrows": [
           [
@@ -150,35 +202,42 @@
             "act"
           ]
         ],
+        "at": {
+          "FIG-ZEICHEN-REIN": "FIG-ROLLE-AUSSAETZIGER"
+        },
+        "mood": {
+          "FIG-ROLLE-AUSSAETZIGER": "worried",
+          "FIG-JESUS": "earnest"
+        },
         "x": {
-          "FIG-JESUS": 70,
-          "FIG-ROLLE-AUSSAETZIGER": 118
+          "FIG-ROLLE-AUSSAETZIGER": 60,
+          "FIG-JESUS": 136
         }
       }
     }
   ],
   "actions_de": [
-    "Johannes tauft Jesus im Jordan; der Geist kommt wie eine Taube herab, und Gott nennt ihn seinen geliebten Sohn.",
-    "Jesus verkündet in Galiläa das nahe Reich Gottes und ruft am See die ersten Jünger, die ihm folgen.",
-    "In Kafarnaum lehrt Jesus mit Vollmacht, treibt unreine Geister aus und heilt viele.",
-    "Jesus berührt einen Aussätzigen und macht ihn rein; der Mann erzählt es überall."
+    "Eine Stimme aus den Himmeln sagt zu Jesus, der im Jordan getauft worden ist: «Du bist mein geliebter Sohn; an dir habe ich Gefallen gefunden.»",
+    "Am See sieht Jesus Simon und Andreas beim Auswerfen der Netze und sagt: Kommt mir nach, und ich werde euch zu Menschenfischern machen; sogleich lassen sie die Netze liegen und folgen ihm.",
+    "In der Synagoge schreit ein Mensch mit einem unreinen Geist: «Ich weiss, wer du bist: der Heilige Gottes!» Jesus fährt ihn an: «Verstumme und geh aus ihm heraus!» – der Geist reisst ihn hin und her und fährt aus.",
+    "Ein Aussätziger fällt auf die Knie und bittet: «Wenn du willst, kannst du mich rein machen.» Jesus streckt die Hand aus, berührt ihn und sagt: «Ich will; werde rein!» Sogleich weicht der Aussatz."
   ],
   "captions_de": [
-    "Taufe → Geist: Johannes tauft Jesus im Jordan (Taufe, Bogen von Johannes zu Jesus); der Geist kommt wie eine Taube auf ihn herab (goldener Pfeil von der Taube).",
-    "Berufung: Jesus ruft die Fischer am See: Kommt mir nach (zwei gehende Personen).",
-    "Befehl → Ausfahren: In der Synagoge gebietet Jesus dem unreinen Geist zu schweigen und auszufahren (Schatten); der Pfeil von Jesus führt zum Zeichen «fährt aus» (Pfeil weg).",
-    "Berührung → rein: Jesus streckt die Hand nach dem knienden Aussätzigen aus (Bogen), und er wird rein (Seifenblasen mit Funkeln)."
+    "Die Stimme aus den Himmeln: Über Jesus im Jordan (links Johannes) spricht Gott (Strahlenkranz): «Du bist mein geliebter Sohn.» (Liebe).",
+    "Am See: Jesus ruft die Fischer Simon und Andreas (Namen): «Kommt mir nach, und ich werde euch zu Menschenfischern machen.» (nachfolgen); das Netz bleibt liegen.",
+    "Austreibung in der Synagoge: Der Mann mit dem unreinen Geist (dunkler Schatten) schreit Jesus an; Jesus gebietet: «Verstumme und geh aus ihm heraus!» (austreiben).",
+    "Rein: Der Aussätzige kniet vor Jesus; Jesus berührt ihn (Pfeil, berühren) und sagt: «Ich will; werde rein!» (rein)."
   ],
-  "interpretation_note_de": "Vier Stationen aus zehn Abschnitten: Taufe (mit Wüste), Berufung (mit der Verkündigung), Vollmacht in Kafarnaum (Synagoge, Heilungen, Gebet) und Reinigung des Aussätzigen.",
+  "interpretation_note_de": "Vier Comic-Szenen für neun Abschnitte ([[MRK.1.1-MRK.1.45]]): Feld 1 bündelt Johannes den Täufer, die Taufe und die Wüste (Johannes und Jesus im Jordan, die Stimme aus den Himmeln), Feld 2 das Programmwort und den Ruf der ersten Jünger, Feld 3 das Wirken in Kafarnaum und Galiläa (Austreibung in der Synagoge; Heilungen und Aufbruch nach dem Gebet stehen in den Abschnittsbildern), Feld 4 die Reinigung des Aussätzigen mit dem Schweigegebot. Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-MRK-001",
       "field": "summary",
-      "fingerprint": "e8fd08d4ae176d00"
+      "fingerprint": "08c003082a3410a1"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -641,6 +700,419 @@
           "Befehl → Ausfahren: In der Synagoge gebietet Jesus dem unreinen Geist zu schweigen und auszufahren (Schatten); der Pfeil von Jesus führt zum Zeichen «fährt aus» (Pfeil weg).",
           "Berührung → rein: Jesus streckt die Hand nach dem knienden Aussätzigen aus (Bogen), und er wird rein (Stern mit Tropfen)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.1.1-MRK.1.13",
+            "figures": [
+              "FIG-HEILIGER-GEIST",
+              "FIG-JOHANNES-TAEUFER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-JORDAN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TAUFE"
+            ],
+            "speech": [],
+            "action_de": "Johannes tauft Jesus im Jordan; der Geist kommt wie eine Taube herab, und Gott nennt ihn seinen geliebten Sohn.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-TAUFE": "FIG-JESUS"
+              },
+              "arrows": [
+                [
+                  "FIG-JOHANNES-TAEUFER",
+                  "FIG-JESUS",
+                  "act"
+                ],
+                [
+                  "FIG-HEILIGER-GEIST",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "in_water": true
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.1.14-MRK.1.20",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-PETRUS",
+              "FIG-ANDREAS"
+            ],
+            "objects": [
+              "FIG-ORT-SEE",
+              "FIG-OBJ-NETZ"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-ZEICHEN-NACHFOLGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus verkündet in Galiläa das nahe Reich Gottes und ruft am See die ersten Jünger, die ihm folgen.",
+            "stage": {
+              "mood": {
+                "FIG-PETRUS": "surprised",
+                "FIG-ANDREAS": "surprised"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.1.21-MRK.1.39",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-BESESSENER"
+            ],
+            "objects": [
+              "FIG-ORT-SYNAGOGE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-DAEMON",
+              "FIG-ZEICHEN-AUSTREIBEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-BESESSENER",
+                "icons": [
+                  "FIG-ZEICHEN-SCHWEIGEN",
+                  "FIG-ZEICHEN-DAEMON"
+                ]
+              }
+            ],
+            "action_de": "In Kafarnaum lehrt Jesus mit Vollmacht, treibt unreine Geister aus und heilt viele.",
+            "stage": {
+              "back_side": "left",
+              "at": {
+                "FIG-ZEICHEN-DAEMON": "FIG-ROLLE-BESESSENER"
+              },
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-ROLLE-BESESSENER": "surprised"
+              },
+              "air_x": 150,
+              "air_y": 28,
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FLIEHEN",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.1.40-MRK.1.45",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-AUSSAETZIGER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-REIN"
+            ],
+            "speech": [],
+            "action_de": "Jesus berührt einen Aussätzigen und macht ihn rein; der Mann erzählt es überall.",
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-AUSSAETZIGER": "kneel"
+              },
+              "at": {
+                "FIG-ZEICHEN-REIN": "FIG-ROLLE-AUSSAETZIGER"
+              },
+              "mood": {
+                "FIG-ROLLE-AUSSAETZIGER": "delight",
+                "FIG-JESUS": "calm"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-AUSSAETZIGER",
+                  "act"
+                ]
+              ],
+              "x": {
+                "FIG-JESUS": 70,
+                "FIG-ROLLE-AUSSAETZIGER": 118
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Johannes tauft Jesus im Jordan; der Geist kommt wie eine Taube herab, und Gott nennt ihn seinen geliebten Sohn.",
+          "Jesus verkündet in Galiläa das nahe Reich Gottes und ruft am See die ersten Jünger, die ihm folgen.",
+          "In Kafarnaum lehrt Jesus mit Vollmacht, treibt unreine Geister aus und heilt viele.",
+          "Jesus berührt einen Aussätzigen und macht ihn rein; der Mann erzählt es überall."
+        ],
+        "captions_de": [
+          "Taufe → Geist: Johannes tauft Jesus im Jordan (Taufe, Bogen von Johannes zu Jesus); der Geist kommt wie eine Taube auf ihn herab (goldener Pfeil von der Taube).",
+          "Berufung: Jesus ruft die Fischer am See: Kommt mir nach (zwei gehende Personen).",
+          "Befehl → Ausfahren: In der Synagoge gebietet Jesus dem unreinen Geist zu schweigen und auszufahren (Schatten); der Pfeil von Jesus führt zum Zeichen «fährt aus» (Pfeil weg).",
+          "Berührung → rein: Jesus streckt die Hand nach dem knienden Aussätzigen aus (Bogen), und er wird rein (Seifenblasen mit Funkeln)."
+        ],
+        "interpretation_note_de": "Vier Stationen aus zehn Abschnitten: Taufe (mit Wüste), Berufung (mit der Verkündigung), Vollmacht in Kafarnaum (Synagoge, Heilungen, Gebet) und Reinigung des Aussätzigen.",
+        "basis": [
+          {
+            "record": "SUM-CH-MRK-001",
+            "field": "summary",
+            "fingerprint": "e8fd08d4ae176d00"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.1.1-MRK.1.13",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-HEILIGER-GEIST",
+              "FIG-JOHANNES-TAEUFER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-JORDAN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-HIMMEL-OFFEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GOTT",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-LIEBE"
+                ],
+                "word": {
+                  "de": "Du bist mein geliebter Sohn; an dir habe ich Gefallen gefunden.",
+                  "gsw": "Du bisch min liebe Sohn; a dir han ich Gfalle gfunde."
+                }
+              }
+            ],
+            "action_de": "Jesus lässt sich von Johannes im Jordan taufen; als er aus dem Wasser steigt, sieht er die Himmel aufreissen und den Geist wie eine Taube auf sich herabkommen; eine Stimme aus den Himmeln sagt: «Du bist mein geliebter Sohn; an dir habe ich Gefallen gefunden.»",
+            "keywords": {
+              "de": "Du bist mein geliebter Sohn",
+              "gsw": "Du bisch min liebe Sohn"
+            },
+            "names": {
+              "FIG-JOHANNES-TAEUFER": {
+                "de": "Johannes",
+                "gsw": "Johannes"
+              }
+            },
+            "stage": {
+              "in_water": true,
+              "god_side": "right",
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-JOHANNES-TAEUFER": "surprised"
+              },
+              "arrows": [
+                [
+                  "FIG-HEILIGER-GEIST",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "x": {
+                "FIG-JOHANNES-TAEUFER": 56,
+                "FIG-JESUS": 120
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.1.14-MRK.1.20",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-PETRUS",
+              "FIG-ANDREAS"
+            ],
+            "objects": [
+              "FIG-ORT-SEE",
+              "FIG-OBJ-NETZ"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-ZEICHEN-NACHFOLGEN"
+                ],
+                "word": {
+                  "de": "Kommt mir nach, und ich werde euch zu Menschenfischern machen.",
+                  "gsw": "Chömed mir nache, und ich mache eu zu Mänschefischer."
+                }
+              }
+            ],
+            "action_de": "Am See sieht Jesus Simon und Andreas beim Auswerfen der Netze und sagt: Kommt mir nach, und ich werde euch zu Menschenfischern machen; sogleich lassen sie die Netze liegen und folgen ihm.",
+            "keywords": {
+              "de": "das Reich Gottes ist nahe gekommen",
+              "gsw": "s Riich vo Gott isch nöch choo"
+            },
+            "names": {
+              "FIG-PETRUS": {
+                "de": "Simon",
+                "gsw": "Simon"
+              },
+              "FIG-ANDREAS": {
+                "de": "Andreas",
+                "gsw": "Andreas"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "smile",
+                "FIG-PETRUS": "surprised",
+                "FIG-ANDREAS": "surprised"
+              },
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-PETRUS": 112,
+                "FIG-ANDREAS": 158
+              },
+              "floor_x": {
+                "FIG-OBJ-NETZ": 136
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.1.21-MRK.1.39",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-BESESSENER"
+            ],
+            "objects": [
+              "FIG-ORT-SYNAGOGE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-DAEMON"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-BESESSENER",
+                "icons": [
+                  "FIG-ZEICHEN-AUSTREIBEN"
+                ],
+                "word": {
+                  "de": "Verstumme und geh aus ihm heraus!",
+                  "gsw": "Bis still und gang us ihm use!"
+                }
+              }
+            ],
+            "action_de": "In der Synagoge schreit ein Mensch mit einem unreinen Geist: «Ich weiss, wer du bist: der Heilige Gottes!» Jesus fährt ihn an: «Verstumme und geh aus ihm heraus!» – der Geist reisst ihn hin und her und fährt aus.",
+            "keywords": {
+              "de": "Eine neue Lehre mit Vollmacht!",
+              "gsw": "E nöii Lehr mit Vollmacht!"
+            },
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-DAEMON": "FIG-ROLLE-BESESSENER"
+              },
+              "mood": {
+                "FIG-ROLLE-BESESSENER": "angry",
+                "FIG-JESUS": "determined"
+              },
+              "back_side": "left",
+              "before": true,
+              "x": {
+                "FIG-JESUS": 54,
+                "FIG-ROLLE-BESESSENER": 140
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.1.40-MRK.1.45",
+            "figures": [
+              "FIG-ROLLE-AUSSAETZIGER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-REIN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-AUSSAETZIGER",
+                "icons": [
+                  "FIG-ZEICHEN-BERUEHREN"
+                ],
+                "word": {
+                  "de": "Ich will; werde rein!",
+                  "gsw": "Ich wott; wird rein!"
+                }
+              }
+            ],
+            "action_de": "Ein Aussätziger fällt auf die Knie und bittet: «Wenn du willst, kannst du mich rein machen.» Jesus streckt die Hand aus, berührt ihn und sagt: «Ich will; werde rein!» Sogleich weicht der Aussatz.",
+            "keywords": {
+              "de": "Sieh zu, dass du niemandem etwas sagst!",
+              "gsw": "Lueg, dass du niemertem öppis verzellsch!"
+            },
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-AUSSAETZIGER": "kneel"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-AUSSAETZIGER",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-REIN": "FIG-ROLLE-AUSSAETZIGER"
+              },
+              "mood": {
+                "FIG-ROLLE-AUSSAETZIGER": "worried",
+                "FIG-JESUS": "earnest"
+              },
+              "x": {
+                "FIG-ROLLE-AUSSAETZIGER": 60,
+                "FIG-JESUS": 136
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus lässt sich von Johannes im Jordan taufen; als er aus dem Wasser steigt, sieht er die Himmel aufreissen und den Geist wie eine Taube auf sich herabkommen; eine Stimme aus den Himmeln sagt: «Du bist mein geliebter Sohn; an dir habe ich Gefallen gefunden.»",
+          "Am See sieht Jesus Simon und Andreas beim Auswerfen der Netze und sagt: Kommt mir nach, und ich werde euch zu Menschenfischern machen; sogleich lassen sie die Netze liegen und folgen ihm.",
+          "In der Synagoge schreit ein Mensch mit einem unreinen Geist: «Ich weiss, wer du bist: der Heilige Gottes!» Jesus fährt ihn an: «Verstumme und geh aus ihm heraus!» – der Geist reisst ihn hin und her und fährt aus.",
+          "Ein Aussätziger fällt auf die Knie und bittet: «Wenn du willst, kannst du mich rein machen.» Jesus streckt die Hand aus, berührt ihn und sagt: «Ich will; werde rein!» Sogleich weicht der Aussatz."
+        ],
+        "captions_de": [
+          "Taufe im Jordan: Johannes tauft Jesus im Fluss; aus dem offenen Himmel kommt der Geist wie eine Taube auf ihn herab; die Stimme aus den Himmeln (Strahlenkranz) spricht zu Jesus: «Du bist mein geliebter Sohn; an dir habe ich Gefallen gefunden.» (Liebe).",
+          "Am See: Jesus ruft die Fischer Simon und Andreas (Namen): «Kommt mir nach, und ich werde euch zu Menschenfischern machen.» (nachfolgen); das Netz bleibt liegen.",
+          "Austreibung in der Synagoge: Der Mann mit dem unreinen Geist (dunkler Schatten) schreit Jesus an; Jesus gebietet: «Verstumme und geh aus ihm heraus!» (austreiben).",
+          "Rein: Der Aussätzige kniet vor Jesus; Jesus berührt ihn (Pfeil, berühren) und sagt: «Ich will; werde rein!» (rein)."
+        ],
+        "interpretation_note_de": "Vier Comic-Szenen für neun Abschnitte ([[MRK.1.1-MRK.1.45]]): Feld 1 bündelt Johannes den Täufer, die Taufe und die Wüste (Taufe mit Taube und Stimme), Feld 2 das Programmwort und den Ruf der ersten Jünger, Feld 3 das Wirken in Kafarnaum und Galiläa (Austreibung in der Synagoge; Heilungen und Aufbruch nach dem Gebet stehen in den Abschnittsbildern), Feld 4 die Reinigung des Aussätzigen mit dem Schweigegebot. Comic-Szenen nach dem Entscheid vom 2026-10-25."
       }
     }
   ]
