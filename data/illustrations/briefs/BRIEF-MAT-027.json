@@ -13,124 +13,192 @@
       "n": 1,
       "reference": "MAT.27.1-MAT.27.26",
       "figures": [
+        "FIG-JESUS",
         "FIG-PILATUS",
         "FIG-GRUPPE-MENGE"
       ],
       "objects": [
+        "FIG-OBJ-FESSEL",
         "FIG-OBJ-WASCHSCHUESSEL"
       ],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-HAENDE-WASCHEN"
+      ],
       "speech": [
-        {
-          "from": "FIG-PILATUS",
-          "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-BARABBAS",
-            "FIG-JESUS",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
-        },
         {
           "from": "FIG-GRUPPE-MENGE",
           "to": "FIG-PILATUS",
           "icons": [
-            "FIG-JESUS",
             "FIG-OBJ-KREUZ"
-          ]
+          ],
+          "word": {
+            "de": "Er soll gekreuzigt werden!",
+            "gsw": "Er söll gchrüüziget wärde!"
+          }
+        },
+        {
+          "from": "FIG-PILATUS",
+          "to": "FIG-GRUPPE-MENGE",
+          "icons": [
+            "FIG-ZEICHEN-HAENDE-WASCHEN"
+          ],
+          "word": {
+            "de": "Ich bin unschuldig an dem Blut dieses Menschen. Seht ihr zu!",
+            "gsw": "Ich bi unschuldig am Bluet vo däm Mänsch. Lueged ir sälber!"
+          }
         }
       ],
-      "action_de": "Pilatus fragt, ob er Barabbas oder Jesus freilassen soll; die Menge verlangt die Kreuzigung Jesu, und Pilatus wäscht sich die Hände.",
+      "action_de": "Die Menge schreit: Er soll gekreuzigt werden!; Pilatus wäscht sich vor der Menge die Hände und sagt: Ich bin unschuldig an dem Blut dieses Menschen. Seht ihr zu! Er lässt Barabbas frei, Jesus aber lässt er geisseln und liefert ihn zur Kreuzigung aus.",
+      "keywords": {
+        "de": "Er soll gekreuzigt werden!",
+        "gsw": "Er söll gchrüüziget wärde!"
+      },
+      "names": {
+        "FIG-PILATUS": {
+          "de": "Pilatus",
+          "gsw": "Pilatus"
+        }
+      },
       "stage": {
-        "mood": {
-          "FIG-PILATUS": "worried",
-          "FIG-GRUPPE-MENGE": "earnest"
+        "hold": {
+          "FIG-JESUS": "FIG-OBJ-FESSEL"
         },
-        "floor_x": {
-          "FIG-OBJ-WASCHSCHUESSEL": 4
+        "at": {
+          "FIG-ZEICHEN-HAENDE-WASCHEN": "FIG-PILATUS"
+        },
+        "mood": {
+          "FIG-JESUS": "calm",
+          "FIG-PILATUS": "worried",
+          "FIG-GRUPPE-MENGE": "angry"
         },
         "x": {
-          "FIG-PILATUS": 58,
-          "FIG-GRUPPE-MENGE": 134
+          "FIG-JESUS": 26,
+          "FIG-PILATUS": 86,
+          "FIG-GRUPPE-MENGE": 152
+        },
+        "floor_x": {
+          "FIG-OBJ-WASCHSCHUESSEL": 112
         }
       }
     },
     {
       "n": 2,
-      "reference": "MAT.27.27-MAT.27.44",
+      "reference": "MAT.27.27-MAT.27.31",
       "figures": [
-        "FIG-GRUPPE-SOLDATEN"
+        "FIG-GRUPPE-SOLDATEN",
+        "FIG-JESUS"
       ],
       "objects": [
-        "FIG-ORT-GOLGOTA",
-        "FIG-OBJ-KLEIDER-VERLOST"
+        "FIG-ORT-PRAETORIUM",
+        "FIG-OBJ-DORNENKRONE",
+        "FIG-OBJ-ROHR"
       ],
       "signs": [],
-      "speech": [],
-      "action_de": "Soldaten verspotten Jesus; auf Golgota wird er gekreuzigt, und sie losen um seine Kleider.",
+      "speech": [
+        {
+          "from": "FIG-GRUPPE-SOLDATEN",
+          "to": "FIG-JESUS",
+          "icons": [
+            "FIG-ZEICHEN-KNIEN",
+            "FIG-OBJ-KRONE"
+          ],
+          "word": {
+            "de": "Sei gegrüsst, König der Juden!",
+            "gsw": "Grüess di, König vo de Jude!"
+          }
+        }
+      ],
+      "action_de": "Die Soldaten legen Jesus einen scharlachroten Mantel um, setzen ihm einen Kranz aus Dornen auf, geben ihm ein Rohr in die Hand, knien vor ihm und verspotten ihn: Sei gegrüsst, König der Juden!; sie spucken ihn an und schlagen ihn.",
+      "keywords": {
+        "de": "Sei gegrüsst, König der Juden!",
+        "gsw": "Grüess di, König vo de Jude!"
+      },
       "stage": {
+        "at": {
+          "FIG-OBJ-DORNENKRONE": "FIG-JESUS"
+        },
+        "hold": {
+          "FIG-JESUS": "FIG-OBJ-ROHR"
+        },
+        "pose": {
+          "FIG-GRUPPE-SOLDATEN": "kneel"
+        },
+        "wear": {
+          "FIG-JESUS": "#B3362F"
+        },
         "mood": {
-          "FIG-GRUPPE-SOLDATEN": "calm"
+          "FIG-GRUPPE-SOLDATEN": "smile",
+          "FIG-JESUS": "pain"
         },
         "back_side": "right",
+        "before": true,
         "x": {
-          "FIG-GRUPPE-SOLDATEN": 44
-        },
-        "floor_x": {
-          "FIG-OBJ-KLEIDER-VERLOST": 90
-        },
-        "arrows": [
-          [
-            "FIG-GRUPPE-SOLDATEN",
-            "FIG-OBJ-KLEIDER-VERLOST",
-            "throw"
-          ]
-        ]
+          "FIG-GRUPPE-SOLDATEN": 56,
+          "FIG-JESUS": 136
+        }
       }
     },
     {
       "n": 3,
-      "reference": "MAT.27.45-MAT.27.56",
+      "reference": "MAT.27.32-MAT.27.56",
       "figures": [
-        "FIG-GRUPPE-SOLDATEN"
+        "FIG-ROLLE-HAUPTMANN",
+        "FIG-JESUS",
+        "FIG-MARIA-MAGDALA"
       ],
       "objects": [
-        "FIG-OBJ-KREUZ",
+        "FIG-OBJ-TAFEL",
         "FIG-OBJ-TEMPELVORHANG"
       ],
       "signs": [
-        "FIG-ZEICHEN-ERDBEBEN"
+        "FIG-ZEICHEN-ERDBEBEN",
+        "FIG-ZEICHEN-FURCHT"
       ],
       "speech": [
         {
-          "from": "FIG-GRUPPE-SOLDATEN",
-          "to": "FIG-GRUPPE-SOLDATEN",
+          "from": "FIG-ROLLE-HAUPTMANN",
+          "to": "FIG-JESUS",
           "icons": [
             "FIG-JESUS",
+            "FIG-ZEICHEN-STAMMT-AUS",
             "FIG-GOTT"
-          ]
+          ],
+          "word": {
+            "de": "Wahrhaftig, dieser war Gottes Sohn!",
+            "gsw": "Würkli, dä isch Gottes Sohn gsii!"
+          }
         }
       ],
-      "action_de": "Jesus stirbt; der Vorhang des Tempels zerreisst, die Erde bebt, und der Hauptmann und die Wachen sagen: Wahrhaftig, dieser war Gottes Sohn!",
+      "action_de": "Nach Jesu Tod reisst der Vorhang des Tempels, die Erde bebt; der Hauptmann und die Wachen fürchten sich und sagen: Wahrhaftig, dieser war Gottes Sohn! Viele Frauen schauen von ferne zu.",
+      "keywords": {
+        "de": "Wahrhaftig, dieser war Gottes Sohn!",
+        "gsw": "Würkli, dä isch Gottes Sohn gsii!"
+      },
+      "names": {
+        "FIG-MARIA-MAGDALA": {
+          "de": "Maria aus Magdala",
+          "gsw": "Maria vo Magdala"
+        }
+      },
       "stage": {
+        "pose": {
+          "FIG-JESUS": "cross"
+        },
         "mood": {
-          "FIG-GRUPPE-SOLDATEN": "surprised"
+          "FIG-JESUS": "dead",
+          "FIG-ROLLE-HAUPTMANN": "fear",
+          "FIG-MARIA-MAGDALA": "earnest"
         },
-        "back_side": "left",
+        "at": {
+          "FIG-ZEICHEN-FURCHT": "FIG-ROLLE-HAUPTMANN"
+        },
         "x": {
-          "FIG-GRUPPE-SOLDATEN": 154
+          "FIG-ROLLE-HAUPTMANN": 30,
+          "FIG-JESUS": 96,
+          "FIG-MARIA-MAGDALA": 164
         },
-        "floor_x": {
-          "FIG-OBJ-KREUZ": 54
-        },
-        "air_x": 88,
-        "air_y": 104,
-        "arrows": [
-          [
-            "FIG-OBJ-KREUZ",
-            "FIG-GRUPPE-SOLDATEN",
-            "act"
-          ]
-        ]
+        "air_x": 20,
+        "air_y": 104
       }
     },
     {
@@ -144,18 +212,33 @@
         "FIG-ORT-GRAB-VERSCHLOSSEN",
         "FIG-OBJ-SIEGEL"
       ],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-WACHEN"
+      ],
       "speech": [],
-      "action_de": "Josef von Arimatäa legt den Leib in sein Grab; das Grab wird versiegelt und bewacht.",
+      "action_de": "Josef aus Arimatäa legt Jesus in sein Grab und wälzt einen grossen Stein davor; auf Bitte der Hohepriester und Pharisäer wird der Stein versiegelt und das Grab mit einer Wache gesichert.",
+      "keywords": {
+        "de": "er wälzte einen grossen Stein vor den Eingang des Grabes",
+        "gsw": "er hät en grosse Stei vor de Iigang vom Grab gwälzt"
+      },
+      "names": {
+        "FIG-JOSEF-ARIMATAEA": {
+          "de": "Josef aus Arimatäa",
+          "gsw": "Josef vo Arimatäa"
+        }
+      },
       "stage": {
+        "at": {
+          "FIG-ZEICHEN-WACHEN": "FIG-GRUPPE-SOLDATEN"
+        },
         "mood": {
-          "FIG-JOSEF-ARIMATAEA": "earnest",
+          "FIG-JOSEF-ARIMATAEA": "pain",
           "FIG-GRUPPE-SOLDATEN": "earnest"
         },
         "back_side": "right",
         "x": {
           "FIG-JOSEF-ARIMATAEA": 24,
-          "FIG-GRUPPE-SOLDATEN": 80
+          "FIG-GRUPPE-SOLDATEN": 76
         },
         "floor_x": {
           "FIG-OBJ-SIEGEL": 117
@@ -164,27 +247,27 @@
     }
   ],
   "actions_de": [
-    "Pilatus fragt, ob er Barabbas oder Jesus freilassen soll; die Menge verlangt die Kreuzigung Jesu, und Pilatus wäscht sich die Hände.",
-    "Soldaten verspotten Jesus; auf Golgota wird er gekreuzigt, und sie losen um seine Kleider.",
-    "Jesus stirbt; der Vorhang des Tempels zerreisst, die Erde bebt, und der Hauptmann und die Wachen sagen: Wahrhaftig, dieser war Gottes Sohn!",
-    "Josef von Arimatäa legt den Leib in sein Grab; das Grab wird versiegelt und bewacht."
+    "Die Menge schreit: Er soll gekreuzigt werden!; Pilatus wäscht sich vor der Menge die Hände und sagt: Ich bin unschuldig an dem Blut dieses Menschen. Seht ihr zu! Er lässt Barabbas frei, Jesus aber lässt er geisseln und liefert ihn zur Kreuzigung aus.",
+    "Die Soldaten legen Jesus einen scharlachroten Mantel um, setzen ihm einen Kranz aus Dornen auf, geben ihm ein Rohr in die Hand, knien vor ihm und verspotten ihn: Sei gegrüsst, König der Juden!; sie spucken ihn an und schlagen ihn.",
+    "Nach Jesu Tod reisst der Vorhang des Tempels, die Erde bebt; der Hauptmann und die Wachen fürchten sich und sagen: Wahrhaftig, dieser war Gottes Sohn! Viele Frauen schauen von ferne zu.",
+    "Josef aus Arimatäa legt Jesus in sein Grab und wälzt einen grossen Stein davor; auf Bitte der Hohepriester und Pharisäer wird der Stein versiegelt und das Grab mit einer Wache gesichert."
   ],
   "captions_de": [
-    "Pilatus: Barabbas oder Jesus? (Barabbas, Jesus, Fragezeichen); die Menge: Ans Kreuz (Jesus, Kreuz); Pilatus wäscht sich die Hände (Becken mit Wasser und Tuch neben ihm).",
-    "Kreuzigung: Golgota, der Hügel mit drei Kreuzen (ohne Körper); Soldaten losen um die Kleider (Gewand mit Losen).",
-    "Tod und Erdbeben → Bekenntnis: leeres Kreuz; Vorhang zerrissen, Erdbeben (Zickzackriss am Boden); die Wachen sehen es (Pfeil vom Kreuz zu ihnen): Gottes Sohn (Jesus, Strahlenkranz).",
-    "Grab: Josef (mit Leinentuch) hat Jesus begraben; Soldaten bewachen das Grab, der Stein ist versiegelt (rotes Siegel an einer Schnur über dem Stein)."
+    "Händewaschen: Jesus gefesselt (Fessel); Pilatus (Name) wäscht sich die Hände (Hände waschen): «Ich bin unschuldig an dem Blut dieses Menschen. Seht ihr zu!»; die Menge schreit: «Er soll gekreuzigt werden!» (Kreuz).",
+    "Verspottung: Jesus im roten Mantel mit Dornenkranz und Rohr (Dornenkranz, Rohr); die Soldaten knien zum Spott: «Sei gegrüsst, König der Juden!» (knien, Krone).",
+    "Am Kreuz: Jesus ist am Kreuz gestorben (Kopf geneigt, Augen zu), über ihm die Inschrift (Tafel); Erdbeben und zerrissener Vorhang (Erdbeben, Tempelvorhang); der Hauptmann: «Wahrhaftig, dieser war Gottes Sohn!» (Furcht); Maria aus Magdala schaut von ferne zu.",
+    "Grab und Wache: Josef aus Arimatäa (Name) am verschlossenen Grab (Grab); Soldaten bewachen den versiegelten Stein (Siegel, wachen)."
   ],
-  "interpretation_note_de": "Vier Hauptstationen: Urteil, Kreuzigung, Tod, Grab. Das Ende des Judas, der Spott und die Frauen sind in den Abschnittsbildern gezeigt. Gewalt wird nicht ausgemalt.",
+  "interpretation_note_de": "Vier Comic-Szenen für sieben Abschnitte ([[MAT.27.1-MAT.27.66]]): Feld 1 bündelt die Auslieferung an Pilatus und das Verfahren mit dem Händewaschen ([[MAT.27.1-MAT.27.26]]; das Ende des Judas steht im Abschnittsbild), Feld 2 die Verspottung, Feld 3 Kreuzigung und Tod mit dem Bekenntnis des Hauptmanns und den Frauen von ferne ([[MAT.27.32-MAT.27.56]]), Feld 4 Begräbnis und Wache ([[MAT.27.57-MAT.27.66]]). Kreuz und Grab sind würdig gezeichnet. Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-MAT-027",
       "field": "summary",
-      "fingerprint": "6d2907ed65036823"
+      "fingerprint": "902a1c2eb75d5197"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -504,6 +587,456 @@
           "Kreuzigung: Golgota, der Hügel mit drei Kreuzen (ohne Körper); Soldaten losen um die Kleider (Gewand mit Losen).",
           "Tod: leeres Kreuz; Vorhang zerrissen, Erdbeben (Zickzackriss am Boden); die Wachen: Gottes Sohn (Jesus, Strahlenkranz).",
           "Grab: Josef (mit Leinentuch) hat Jesus begraben; Soldaten bewachen das Grab, der Stein ist versiegelt (rotes Siegel an einer Schnur über dem Stein)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-MAT-027",
+            "field": "summary",
+            "fingerprint": "6d2907ed65036823"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.27.1-MAT.27.26",
+            "figures": [
+              "FIG-PILATUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-WASCHSCHUESSEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PILATUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-BARABBAS",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-OBJ-KREUZ"
+                ]
+              }
+            ],
+            "action_de": "Pilatus fragt, ob er Barabbas oder Jesus freilassen soll; die Menge verlangt die Kreuzigung Jesu, und Pilatus wäscht sich die Hände.",
+            "stage": {
+              "mood": {
+                "FIG-PILATUS": "worried",
+                "FIG-GRUPPE-MENGE": "earnest"
+              },
+              "floor_x": {
+                "FIG-OBJ-WASCHSCHUESSEL": 4
+              },
+              "x": {
+                "FIG-PILATUS": 58,
+                "FIG-GRUPPE-MENGE": 134
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.27.27-MAT.27.44",
+            "figures": [
+              "FIG-GRUPPE-SOLDATEN"
+            ],
+            "objects": [
+              "FIG-ORT-GOLGOTA",
+              "FIG-OBJ-KLEIDER-VERLOST"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Soldaten verspotten Jesus; auf Golgota wird er gekreuzigt, und sie losen um seine Kleider.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-SOLDATEN": "calm"
+              },
+              "back_side": "right",
+              "x": {
+                "FIG-GRUPPE-SOLDATEN": 44
+              },
+              "floor_x": {
+                "FIG-OBJ-KLEIDER-VERLOST": 90
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-SOLDATEN",
+                  "FIG-OBJ-KLEIDER-VERLOST",
+                  "throw"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.27.45-MAT.27.56",
+            "figures": [
+              "FIG-GRUPPE-SOLDATEN"
+            ],
+            "objects": [
+              "FIG-OBJ-KREUZ",
+              "FIG-OBJ-TEMPELVORHANG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ERDBEBEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-SOLDATEN",
+                "to": "FIG-GRUPPE-SOLDATEN",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-GOTT"
+                ]
+              }
+            ],
+            "action_de": "Jesus stirbt; der Vorhang des Tempels zerreisst, die Erde bebt, und der Hauptmann und die Wachen sagen: Wahrhaftig, dieser war Gottes Sohn!",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-SOLDATEN": "surprised"
+              },
+              "back_side": "left",
+              "x": {
+                "FIG-GRUPPE-SOLDATEN": 154
+              },
+              "floor_x": {
+                "FIG-OBJ-KREUZ": 54
+              },
+              "air_x": 88,
+              "air_y": 104,
+              "arrows": [
+                [
+                  "FIG-OBJ-KREUZ",
+                  "FIG-GRUPPE-SOLDATEN",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.27.57-MAT.27.66",
+            "figures": [
+              "FIG-JOSEF-ARIMATAEA",
+              "FIG-GRUPPE-SOLDATEN"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB-VERSCHLOSSEN",
+              "FIG-OBJ-SIEGEL"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Josef von Arimatäa legt den Leib in sein Grab; das Grab wird versiegelt und bewacht.",
+            "stage": {
+              "mood": {
+                "FIG-JOSEF-ARIMATAEA": "earnest",
+                "FIG-GRUPPE-SOLDATEN": "earnest"
+              },
+              "back_side": "right",
+              "x": {
+                "FIG-JOSEF-ARIMATAEA": 24,
+                "FIG-GRUPPE-SOLDATEN": 80
+              },
+              "floor_x": {
+                "FIG-OBJ-SIEGEL": 117
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Pilatus fragt, ob er Barabbas oder Jesus freilassen soll; die Menge verlangt die Kreuzigung Jesu, und Pilatus wäscht sich die Hände.",
+          "Soldaten verspotten Jesus; auf Golgota wird er gekreuzigt, und sie losen um seine Kleider.",
+          "Jesus stirbt; der Vorhang des Tempels zerreisst, die Erde bebt, und der Hauptmann und die Wachen sagen: Wahrhaftig, dieser war Gottes Sohn!",
+          "Josef von Arimatäa legt den Leib in sein Grab; das Grab wird versiegelt und bewacht."
+        ],
+        "captions_de": [
+          "Pilatus: Barabbas oder Jesus? (Barabbas, Jesus, Fragezeichen); die Menge: Ans Kreuz (Jesus, Kreuz); Pilatus wäscht sich die Hände (Becken mit Wasser und Tuch neben ihm).",
+          "Kreuzigung: Golgota, der Hügel mit drei Kreuzen (ohne Körper); Soldaten losen um die Kleider (Gewand mit Losen).",
+          "Tod und Erdbeben → Bekenntnis: leeres Kreuz; Vorhang zerrissen, Erdbeben (Zickzackriss am Boden); die Wachen sehen es (Pfeil vom Kreuz zu ihnen): Gottes Sohn (Jesus, Strahlenkranz).",
+          "Grab: Josef (mit Leinentuch) hat Jesus begraben; Soldaten bewachen das Grab, der Stein ist versiegelt (rotes Siegel an einer Schnur über dem Stein)."
+        ],
+        "interpretation_note_de": "Vier Hauptstationen: Urteil, Kreuzigung, Tod, Grab. Das Ende des Judas, der Spott und die Frauen sind in den Abschnittsbildern gezeigt. Gewalt wird nicht ausgemalt.",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Prüfung Struktur zuerst",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.27.1-MAT.27.26",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-PILATUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-FESSEL",
+              "FIG-OBJ-WASCHSCHUESSEL"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-HAENDE-WASCHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-OBJ-KREUZ"
+                ],
+                "word": {
+                  "de": "Er soll gekreuzigt werden!",
+                  "gsw": "Er söll gchrüüziget wärde!"
+                }
+              },
+              {
+                "from": "FIG-PILATUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-HAENDE-WASCHEN"
+                ],
+                "word": {
+                  "de": "Ich bin unschuldig an dem Blut dieses Menschen. Seht ihr zu!",
+                  "gsw": "Ich bi unschuldig am Bluet vo däm Mänsch. Lueged ir sälber!"
+                }
+              }
+            ],
+            "action_de": "Die Menge schreit: Er soll gekreuzigt werden!; Pilatus wäscht sich vor der Menge die Hände und sagt: Ich bin unschuldig an dem Blut dieses Menschen. Seht ihr zu! Er lässt Barabbas frei, Jesus aber lässt er geisseln und liefert ihn zur Kreuzigung aus.",
+            "keywords": {
+              "de": "Er soll gekreuzigt werden!",
+              "gsw": "Er söll gchrüüziget wärde!"
+            },
+            "names": {
+              "FIG-PILATUS": {
+                "de": "Pilatus",
+                "gsw": "Pilatus"
+              }
+            },
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-FESSEL"
+              },
+              "at": {
+                "FIG-ZEICHEN-HAENDE-WASCHEN": "FIG-PILATUS"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-PILATUS": "worried",
+                "FIG-GRUPPE-MENGE": "angry"
+              },
+              "x": {
+                "FIG-JESUS": 26,
+                "FIG-PILATUS": 86,
+                "FIG-GRUPPE-MENGE": 152
+              },
+              "floor_x": {
+                "FIG-OBJ-WASCHSCHUESSEL": 112
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.27.27-MAT.27.31",
+            "figures": [
+              "FIG-GRUPPE-SOLDATEN",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-PRAETORIUM",
+              "FIG-OBJ-DORNENKRONE",
+              "FIG-OBJ-ROHR"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-SOLDATEN",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-KNIEN",
+                  "FIG-OBJ-KRONE"
+                ],
+                "word": {
+                  "de": "Sei gegrüsst, König der Juden!",
+                  "gsw": "Grüess di, König vo de Jude!"
+                }
+              }
+            ],
+            "action_de": "Die Soldaten legen Jesus einen scharlachroten Mantel um, setzen ihm einen Kranz aus Dornen auf, geben ihm ein Rohr in die Hand, knien vor ihm und verspotten ihn: Sei gegrüsst, König der Juden!; sie spucken ihn an und schlagen ihn.",
+            "keywords": {
+              "de": "Sei gegrüsst, König der Juden!",
+              "gsw": "Grüess di, König vo de Jude!"
+            },
+            "stage": {
+              "at": {
+                "FIG-OBJ-DORNENKRONE": "FIG-JESUS"
+              },
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-ROHR"
+              },
+              "pose": {
+                "FIG-GRUPPE-SOLDATEN": "kneel"
+              },
+              "wear": {
+                "FIG-JESUS": "#B3362F"
+              },
+              "mood": {
+                "FIG-GRUPPE-SOLDATEN": "smile",
+                "FIG-JESUS": "pain"
+              },
+              "back_side": "right",
+              "before": true,
+              "x": {
+                "FIG-GRUPPE-SOLDATEN": 56,
+                "FIG-JESUS": 136
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.27.32-MAT.27.56",
+            "figures": [
+              "FIG-ROLLE-HAUPTMANN",
+              "FIG-JESUS",
+              "FIG-MARIA-MAGDALA"
+            ],
+            "objects": [
+              "FIG-OBJ-TAFEL",
+              "FIG-OBJ-TEMPELVORHANG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ERDBEBEN",
+              "FIG-ZEICHEN-FURCHT",
+              "FIG-ZEICHEN-TRAUER"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-HAUPTMANN",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-CHRISTUS"
+                ],
+                "word": {
+                  "de": "Wahrhaftig, dieser war Gottes Sohn!",
+                  "gsw": "Würkli, dä isch Gottes Sohn gsii!"
+                }
+              }
+            ],
+            "action_de": "Nach Jesu Tod reisst der Vorhang des Tempels, die Erde bebt; der Hauptmann und die Wachen fürchten sich und sagen: Wahrhaftig, dieser war Gottes Sohn! Viele Frauen schauen von ferne zu.",
+            "keywords": {
+              "de": "Wahrhaftig, dieser war Gottes Sohn!",
+              "gsw": "Würkli, dä isch Gottes Sohn gsii!"
+            },
+            "names": {
+              "FIG-MARIA-MAGDALA": {
+                "de": "Maria aus Magdala",
+                "gsw": "Maria vo Magdala"
+              }
+            },
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "cross"
+              },
+              "mood": {
+                "FIG-JESUS": "dead",
+                "FIG-ROLLE-HAUPTMANN": "fear",
+                "FIG-MARIA-MAGDALA": "pain"
+              },
+              "at": {
+                "FIG-ZEICHEN-FURCHT": "FIG-ROLLE-HAUPTMANN"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-MARIA-MAGDALA"
+                ]
+              },
+              "x": {
+                "FIG-ROLLE-HAUPTMANN": 30,
+                "FIG-JESUS": 96,
+                "FIG-MARIA-MAGDALA": 164
+              },
+              "air_x": 20,
+              "air_y": 104
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.27.57-MAT.27.66",
+            "figures": [
+              "FIG-JOSEF-ARIMATAEA",
+              "FIG-GRUPPE-SOLDATEN"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB-VERSCHLOSSEN",
+              "FIG-OBJ-SIEGEL"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-WACHEN"
+            ],
+            "speech": [],
+            "action_de": "Josef aus Arimatäa legt Jesus in sein Grab und wälzt einen grossen Stein davor; auf Bitte der Hohepriester und Pharisäer wird der Stein versiegelt und das Grab mit einer Wache gesichert.",
+            "keywords": {
+              "de": "er wälzte einen grossen Stein vor den Eingang des Grabes",
+              "gsw": "er hät en grosse Stei vor de Iigang vom Grab gwälzt"
+            },
+            "names": {
+              "FIG-JOSEF-ARIMATAEA": {
+                "de": "Josef aus Arimatäa",
+                "gsw": "Josef vo Arimatäa"
+              }
+            },
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-WACHEN": "FIG-GRUPPE-SOLDATEN"
+              },
+              "mood": {
+                "FIG-JOSEF-ARIMATAEA": "pain",
+                "FIG-GRUPPE-SOLDATEN": "earnest"
+              },
+              "back_side": "right",
+              "x": {
+                "FIG-JOSEF-ARIMATAEA": 24,
+                "FIG-GRUPPE-SOLDATEN": 76
+              },
+              "floor_x": {
+                "FIG-OBJ-SIEGEL": 117
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Händewaschen: Jesus gefesselt (Fessel); Pilatus (Name) wäscht sich die Hände (Hände waschen): «Ich bin unschuldig an dem Blut dieses Menschen. Seht ihr zu!»; die Menge schreit: «Er soll gekreuzigt werden!» (Kreuz).",
+          "Verspottung: Jesus im roten Mantel mit Dornenkranz und Rohr (Dornenkranz, Rohr); die Soldaten knien zum Spott: «Sei gegrüsst, König der Juden!» (knien, Krone).",
+          "Am Kreuz: Jesus ist am Kreuz gestorben (Kopf geneigt, Augen zu), über ihm die Inschrift (Tafel); Erdbeben und zerrissener Vorhang (Erdbeben, Tempelvorhang); der Hauptmann: «Wahrhaftig, dieser war Gottes Sohn!» (Furcht); Maria aus Magdala trauert von ferne (Trauer).",
+          "Grab und Wache: Josef aus Arimatäa (Name) am verschlossenen Grab (Grab); Soldaten bewachen den versiegelten Stein (Siegel, wachen)."
+        ],
+        "basis": [
+          {
+            "record": "SUM-CH-MAT-027",
+            "field": "summary",
+            "fingerprint": "e87d5f9b264729b9"
+          }
         ]
       }
     }

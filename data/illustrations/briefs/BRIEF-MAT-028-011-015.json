@@ -11,40 +11,9 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.28.11",
+      "reference": "MAT.28.11-MAT.28.15",
       "figures": [
-        "FIG-GRUPPE-SOLDATEN",
-        "FIG-GRUPPE-HOHER-RAT"
-      ],
-      "objects": [
-        "FIG-ORT-STADT"
-      ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-SOLDATEN",
-          "to": "FIG-GRUPPE-HOHER-RAT",
-          "icons": [
-            "FIG-ZEICHEN-ERDBEBEN",
-            "FIG-ROLLE-ENGEL",
-            "FIG-ORT-GRAB"
-          ]
-        }
-      ],
-      "action_de": "Während die Frauen unterwegs sind, kommen einige von der Wache in die Stadt und berichten den Hohepriestern alles, was geschehen ist.",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-SOLDATEN": "pensive",
-          "FIG-GRUPPE-HOHER-RAT": "surprised"
-        },
-        "back_side": "right"
-      }
-    },
-    {
-      "n": 2,
-      "reference": "MAT.28.12-MAT.28.14",
-      "figures": [
-        "FIG-GRUPPE-HOHER-RAT",
+        "FIG-GRUPPE-HOHEPRIESTER",
         "FIG-GRUPPE-SOLDATEN"
       ],
       "objects": [
@@ -53,108 +22,66 @@
       "signs": [],
       "speech": [
         {
-          "from": "FIG-GRUPPE-HOHER-RAT",
+          "from": "FIG-GRUPPE-HOHEPRIESTER",
           "to": "FIG-GRUPPE-SOLDATEN",
           "icons": [
-            "FIG-GRUPPE-JUENGER",
-            "FIG-ORT-GRAB"
-          ]
-        },
-        {
-          "from": "FIG-GRUPPE-HOHER-RAT",
-          "to": "FIG-GRUPPE-SOLDATEN",
-          "icons": [
-            "FIG-GRUPPE-SOLDATEN",
-            "FIG-ZEICHEN-SCHLAFEN"
-          ]
+            "FIG-ZEICHEN-LUEGE"
+          ],
+          "word": {
+            "de": "Sagt: «Seine Jünger sind in der Nacht gekommen und haben ihn gestohlen, während wir schliefen.»",
+            "gsw": "Säged: «Sini Jünger sind znacht choo und händ en gstole, während mir gschlafe händ.»"
+          }
         }
       ],
-      "action_de": "Die Hohepriester beraten mit den Ältesten und geben den Soldaten reichlich Silbergeld: Sagt, seine Jünger sind in der Nacht gekommen und haben ihn gestohlen, während wir schliefen; vor dem Statthalter werden wir für euch sorgen.",
+      "action_de": "Einige von der Wache berichten den Hohepriestern, was geschehen ist; die Hohepriester geben den Soldaten reichlich Silbergeld und sagen: Sagt: Seine Jünger sind in der Nacht gekommen und haben ihn gestohlen, während wir schliefen. Die Soldaten nehmen das Geld und tun es.",
+      "keywords": {
+        "de": "gaben den Soldaten reichlich Silbergeld",
+        "gsw": "händ de Soldate rächt vil Silbergält gää"
+      },
       "stage": {
-        "mood": {
-          "FIG-GRUPPE-HOHER-RAT": "earnest",
-          "FIG-GRUPPE-SOLDATEN": "pensive"
+        "hold": {
+          "FIG-GRUPPE-HOHEPRIESTER": "FIG-OBJ-MUENZEN"
         },
         "arrows": [
           [
-            "FIG-GRUPPE-HOHER-RAT",
+            "FIG-GRUPPE-HOHEPRIESTER",
             "FIG-GRUPPE-SOLDATEN",
             "act"
           ]
         ],
-        "hold": {
-          "FIG-GRUPPE-HOHER-RAT": "FIG-OBJ-MUENZEN"
-        }
-      }
-    },
-    {
-      "n": 3,
-      "reference": "MAT.28.15",
-      "figures": [
-        "FIG-GRUPPE-SOLDATEN"
-      ],
-      "objects": [
-        "FIG-OBJ-MUENZEN"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-LUEGE"
-      ],
-      "speech": [],
-      "action_de": "Die Soldaten nehmen das Silbergeld und tun, wie sie angewiesen wurden; diese Geschichte hat sich bei Juden verbreitet bis zum heutigen Tag.",
-      "stage": {
-        "hold": {
-          "FIG-GRUPPE-SOLDATEN": "FIG-OBJ-MUENZEN"
-        },
         "mood": {
-          "FIG-GRUPPE-SOLDATEN": "calm"
+          "FIG-GRUPPE-HOHEPRIESTER": "earnest",
+          "FIG-GRUPPE-SOLDATEN": "pensive"
         },
         "x": {
-          "FIG-GRUPPE-SOLDATEN": 93
-        },
-        "at": {
-          "FIG-ZEICHEN-LUEGE": "FIG-GRUPPE-SOLDATEN"
+          "FIG-GRUPPE-HOHEPRIESTER": 50,
+          "FIG-GRUPPE-SOLDATEN": 134
         }
       }
     }
   ],
   "actions_de": [
-    "Während die Frauen unterwegs sind, kommen einige von der Wache in die Stadt und berichten den Hohepriestern alles, was geschehen ist.",
-    "Die Hohepriester beraten mit den Ältesten und geben den Soldaten reichlich Silbergeld: Sagt, seine Jünger sind in der Nacht gekommen und haben ihn gestohlen, während wir schliefen; vor dem Statthalter werden wir für euch sorgen.",
-    "Die Soldaten nehmen das Silbergeld und tun, wie sie angewiesen wurden; diese Geschichte hat sich bei Juden verbreitet bis zum heutigen Tag."
+    "Einige von der Wache berichten den Hohepriestern, was geschehen ist; die Hohepriester geben den Soldaten reichlich Silbergeld und sagen: Sagt: Seine Jünger sind in der Nacht gekommen und haben ihn gestohlen, während wir schliefen. Die Soldaten nehmen das Geld und tun es."
   ],
   "captions_de": [
-    "Bericht: Soldaten der Wache erzählen den Hohepriestern in der Stadt: Erdbeben, ein Engel, das Grab offen (Zickzackriss, Engel, offenes Grab).",
-    "Bestechung: Der Hohe Rat gibt den Soldaten Geld (Münzen in der Hand, Bogen): Sagt, die Jünger kamen zum Grab (Jünger, offenes Grab), während ihr schlieft (Soldaten, Zzz).",
-    "Geld genommen → Geschichte verbreitet: Die Soldaten nehmen das Geld (Münzen); ihre Geschichte verbreitet sich (Pfeile nach allen Seiten über ihnen)."
+    "Silbergeld: Die Hohepriester geben den Soldaten Geld (Münzen) und sagen: «Sagt: ‹Seine Jünger sind in der Nacht gekommen und haben ihn gestohlen, während wir schliefen.›» (Lüge)."
   ],
-  "interpretation_note_de": "Der Bericht der Wache folgt der Sicht des Erzählers. Dass sich die Geschichte «bei Juden» verbreitet habe ([[MAT.28.15]]), beschreibt eine Lage zur Zeit des Matthäus; das Bild zeigt keine Gruppe von Juden und deutet den Satz nicht als Urteil über ein Volk.",
+  "interpretation_note_de": "Ein Feld ([[MAT.28.11-MAT.28.15]]): Bericht der Wache, Geld und Sprachregelung. Die Bemerkung, diese Geschichte habe sich bei Juden bis heute verbreitet, ist ein Erzählerkommentar aus der Zeit des Matthäus und kein Urteil über das jüdische Volk; sie steht nicht im Bild. Die Hohepriester sind neutral gezeichnet.",
   "basis": [
     {
       "record": "TU-MAT-028-011-015",
       "field": "summary",
-      "fingerprint": "0b932cc532ad2db1"
+      "fingerprint": "187d5010cf355949"
     },
     {
       "record": "TRANS-MAT-028-001-020-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.28.11",
-      "fingerprint": "bc61597a88c11d07"
-    },
-    {
-      "record": "TRANS-MAT-028-001-020-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.28.12-MAT.28.14",
-      "fingerprint": "ec55f0249ad6478f"
-    },
-    {
-      "record": "TRANS-MAT-028-001-020-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.28.15",
-      "fingerprint": "3c5ad4377fe2965d"
+      "reference": "MAT.28.11-MAT.28.15",
+      "fingerprint": "8ff6dc729c81bbd5"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -414,6 +341,189 @@
           "Bestechung: Der Hohe Rat gibt den Soldaten Geld (Münzen in der Hand, Bogen): Sagt, die Jünger kamen zum Grab (Jünger, offenes Grab), während ihr schlieft (Soldaten, Mondsichel mit Punkten).",
           "Geld genommen → Geschichte verbreitet: Die Soldaten nehmen das Geld (Münzen); ihre Geschichte verbreitet sich (Pfeile nach allen Seiten über ihnen)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-028-011-015",
+            "field": "summary",
+            "fingerprint": "0b932cc532ad2db1"
+          },
+          {
+            "record": "TRANS-MAT-028-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.28.11",
+            "fingerprint": "bc61597a88c11d07"
+          },
+          {
+            "record": "TRANS-MAT-028-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.28.12-MAT.28.14",
+            "fingerprint": "ec55f0249ad6478f"
+          },
+          {
+            "record": "TRANS-MAT-028-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.28.15",
+            "fingerprint": "3c5ad4377fe2965d"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.28.11",
+            "figures": [
+              "FIG-GRUPPE-SOLDATEN",
+              "FIG-GRUPPE-HOHER-RAT"
+            ],
+            "objects": [
+              "FIG-ORT-STADT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-SOLDATEN",
+                "to": "FIG-GRUPPE-HOHER-RAT",
+                "icons": [
+                  "FIG-ZEICHEN-ERDBEBEN",
+                  "FIG-ROLLE-ENGEL",
+                  "FIG-ORT-GRAB"
+                ]
+              }
+            ],
+            "action_de": "Während die Frauen unterwegs sind, kommen einige von der Wache in die Stadt und berichten den Hohepriestern alles, was geschehen ist.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-SOLDATEN": "pensive",
+                "FIG-GRUPPE-HOHER-RAT": "surprised"
+              },
+              "back_side": "right"
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.28.12-MAT.28.14",
+            "figures": [
+              "FIG-GRUPPE-HOHER-RAT",
+              "FIG-GRUPPE-SOLDATEN"
+            ],
+            "objects": [
+              "FIG-OBJ-MUENZEN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-HOHER-RAT",
+                "to": "FIG-GRUPPE-SOLDATEN",
+                "icons": [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-ORT-GRAB"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-HOHER-RAT",
+                "to": "FIG-GRUPPE-SOLDATEN",
+                "icons": [
+                  "FIG-GRUPPE-SOLDATEN",
+                  "FIG-ZEICHEN-SCHLAFEN"
+                ]
+              }
+            ],
+            "action_de": "Die Hohepriester beraten mit den Ältesten und geben den Soldaten reichlich Silbergeld: Sagt, seine Jünger sind in der Nacht gekommen und haben ihn gestohlen, während wir schliefen; vor dem Statthalter werden wir für euch sorgen.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-HOHER-RAT": "earnest",
+                "FIG-GRUPPE-SOLDATEN": "pensive"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-HOHER-RAT",
+                  "FIG-GRUPPE-SOLDATEN",
+                  "act"
+                ]
+              ],
+              "hold": {
+                "FIG-GRUPPE-HOHER-RAT": "FIG-OBJ-MUENZEN"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.28.15",
+            "figures": [
+              "FIG-GRUPPE-SOLDATEN"
+            ],
+            "objects": [
+              "FIG-OBJ-MUENZEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-LUEGE"
+            ],
+            "speech": [],
+            "action_de": "Die Soldaten nehmen das Silbergeld und tun, wie sie angewiesen wurden; diese Geschichte hat sich bei Juden verbreitet bis zum heutigen Tag.",
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-SOLDATEN": "FIG-OBJ-MUENZEN"
+              },
+              "mood": {
+                "FIG-GRUPPE-SOLDATEN": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-SOLDATEN": 93
+              },
+              "at": {
+                "FIG-ZEICHEN-LUEGE": "FIG-GRUPPE-SOLDATEN"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Während die Frauen unterwegs sind, kommen einige von der Wache in die Stadt und berichten den Hohepriestern alles, was geschehen ist.",
+          "Die Hohepriester beraten mit den Ältesten und geben den Soldaten reichlich Silbergeld: Sagt, seine Jünger sind in der Nacht gekommen und haben ihn gestohlen, während wir schliefen; vor dem Statthalter werden wir für euch sorgen.",
+          "Die Soldaten nehmen das Silbergeld und tun, wie sie angewiesen wurden; diese Geschichte hat sich bei Juden verbreitet bis zum heutigen Tag."
+        ],
+        "captions_de": [
+          "Bericht: Soldaten der Wache erzählen den Hohepriestern in der Stadt: Erdbeben, ein Engel, das Grab offen (Zickzackriss, Engel, offenes Grab).",
+          "Bestechung: Der Hohe Rat gibt den Soldaten Geld (Münzen in der Hand, Bogen): Sagt, die Jünger kamen zum Grab (Jünger, offenes Grab), während ihr schlieft (Soldaten, Zzz).",
+          "Geld genommen → Geschichte verbreitet: Die Soldaten nehmen das Geld (Münzen); ihre Geschichte verbreitet sich (Pfeile nach allen Seiten über ihnen)."
+        ],
+        "interpretation_note_de": "Der Bericht der Wache folgt der Sicht des Erzählers. Dass sich die Geschichte «bei Juden» verbreitet habe ([[MAT.28.15]]), beschreibt eine Lage zur Zeit des Matthäus; das Bild zeigt keine Gruppe von Juden und deutet den Satz nicht als Urteil über ein Volk.",
+        "basis": [
+          {
+            "record": "TU-MAT-028-011-015",
+            "field": "summary",
+            "fingerprint": "187d5010cf355949"
+          },
+          {
+            "record": "TRANS-MAT-028-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.28.11",
+            "fingerprint": "bc61597a88c11d07"
+          },
+          {
+            "record": "TRANS-MAT-028-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.28.12-MAT.28.14",
+            "fingerprint": "ec55f0249ad6478f"
+          },
+          {
+            "record": "TRANS-MAT-028-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.28.15",
+            "fingerprint": "3c5ad4377fe2965d"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

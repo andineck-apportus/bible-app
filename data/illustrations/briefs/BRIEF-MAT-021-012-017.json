@@ -11,7 +11,7 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.21.12",
+      "reference": "MAT.21.12-MAT.21.13",
       "figures": [
         "FIG-JESUS",
         "FIG-ROLLE-HAENDLER"
@@ -19,49 +19,7 @@
       "objects": [
         "FIG-ORT-TEMPEL",
         "FIG-OBJ-TISCH-UMGESTOSSEN",
-        "FIG-OBJ-TAUBE"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-AUSSCHLUSS"
-      ],
-      "speech": [],
-      "action_de": "Jesus geht in den Tempel und treibt alle hinaus, die dort verkaufen und kaufen; die Tische der Geldwechsler und die Sitze der Taubenverkäufer stösst er um.",
-      "stage": {
-        "mood": {
-          "FIG-ROLLE-HAENDLER": "surprised",
-          "FIG-JESUS": "earnest"
-        },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-ROLLE-HAENDLER",
-            "act"
-          ]
-        ],
-        "x": {
-          "FIG-JESUS": 30,
-          "FIG-ROLLE-HAENDLER": 96
-        },
-        "floor_x": {
-          "FIG-OBJ-TISCH-UMGESTOSSEN": 126,
-          "FIG-OBJ-TAUBE": 160
-        },
-        "beside": {
-          "FIG-ZEICHEN-AUSSCHLUSS": "FIG-ROLLE-HAENDLER"
-        },
-        "before": true,
-        "back_side": "left"
-      }
-    },
-    {
-      "n": 2,
-      "reference": "MAT.21.13",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-ROLLE-HAENDLER"
-      ],
-      "objects": [
-        "FIG-ORT-TEMPEL"
+        "FIG-OBJ-MUENZEN"
       ],
       "signs": [],
       "speech": [
@@ -69,87 +27,42 @@
           "from": "FIG-JESUS",
           "to": "FIG-ROLLE-HAENDLER",
           "icons": [
-            "FIG-ORT-TEMPEL",
-            "FIG-ZEICHEN-BETEN"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-HAENDLER",
-          "icons": [
+            "FIG-ZEICHEN-BETEN",
             "FIG-ORT-RAEUBERHOEHLE"
-          ]
+          ],
+          "word": {
+            "de": "Mein Haus soll ein Haus des Gebets heissen. Ihr aber macht es zu einer Räuberhöhle.",
+            "gsw": "Mis Huus söll es Huus zum Bätte heisse. Ir aber mached e Röiberhöli drus."
+          }
         }
       ],
-      "action_de": "Jesus sagt zu ihnen: «Es steht geschrieben: ‹Mein Haus soll ein Haus des Gebets heissen.› Ihr aber macht es zu einer Räuberhöhle.»",
+      "action_de": "Jesus treibt die Verkäufer und Käufer aus dem Tempel, stösst die Tische der Geldwechsler um und sagt: Mein Haus soll ein Haus des Gebets heissen; ihr aber macht es zu einer Räuberhöhle.",
+      "keywords": {
+        "de": "Mein Haus soll ein Haus des Gebets heissen",
+        "gsw": "Mis Huus söll es Huus zum Bätte heisse"
+      },
       "stage": {
-        "mood": {
-          "FIG-JESUS": "earnest",
-          "FIG-ROLLE-HAENDLER": "surprised"
-        },
+        "back_side": "left",
         "before": true,
+        "mood": {
+          "FIG-JESUS": "angry",
+          "FIG-ROLLE-HAENDLER": "fear"
+        },
         "x": {
-          "FIG-JESUS": 40,
-          "FIG-ROLLE-HAENDLER": 132
+          "FIG-JESUS": 60,
+          "FIG-ROLLE-HAENDLER": 140
+        },
+        "floor_x": {
+          "FIG-OBJ-TISCH-UMGESTOSSEN": 112,
+          "FIG-OBJ-MUENZEN": 96
         }
       }
     },
     {
-      "n": 3,
-      "reference": "MAT.21.14",
+      "n": 2,
+      "reference": "MAT.21.14-MAT.21.16",
       "figures": [
-        "FIG-JESUS",
-        "FIG-ROLLE-BLINDER",
-        "FIG-ROLLE-KRANKER"
-      ],
-      "objects": [
-        "FIG-ORT-TEMPEL",
-        "FIG-OBJ-MATTE"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-HEILEN",
-        "FIG-ZEICHEN-BLIND"
-      ],
-      "speech": [],
-      "action_de": "Im Tempel kommen Blinde und Lahme zu Jesus, und er heilt sie.",
-      "stage": {
-        "at": {
-          "FIG-ZEICHEN-HEILEN": [
-            "FIG-ROLLE-BLINDER",
-            "FIG-ROLLE-KRANKER"
-          ]
-        },
-        "beside": {
-          "FIG-ZEICHEN-BLIND": "FIG-ROLLE-BLINDER"
-        },
-        "hold": {
-          "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
-        },
-        "mood": {
-          "FIG-ROLLE-BLINDER": "calm",
-          "FIG-ROLLE-KRANKER": "calm",
-          "FIG-JESUS": "calm"
-        },
-        "x": {
-          "FIG-JESUS": 30,
-          "FIG-ROLLE-BLINDER": 92,
-          "FIG-ROLLE-KRANKER": 154
-        },
-        "before": true,
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-ROLLE-BLINDER",
-            "act"
-          ]
-        ]
-      }
-    },
-    {
-      "n": 4,
-      "reference": "MAT.21.15-MAT.21.16",
-      "figures": [
-        "FIG-ROLLE-HOHEPRIESTER",
+        "FIG-GRUPPE-HOHEPRIESTER",
         "FIG-JESUS",
         "FIG-GRUPPE-KINDER"
       ],
@@ -157,93 +70,88 @@
         "FIG-ORT-TEMPEL"
       ],
       "signs": [
-        "FIG-ZEICHEN-FREUDE"
+        "FIG-ZEICHEN-ZORN",
+        "FIG-ZEICHEN-HEILEN"
       ],
       "speech": [
         {
-          "from": "FIG-ROLLE-HOHEPRIESTER",
+          "from": "FIG-GRUPPE-KINDER",
           "to": "FIG-JESUS",
           "icons": [
-            "FIG-ZEICHEN-HOEREN",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
+            "FIG-ZEICHEN-PREISEN"
+          ],
+          "word": {
+            "de": "Hosanna dem Sohn Davids!",
+            "gsw": "Hosanna em Sohn vom David!"
+          }
         },
         {
           "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-HOHEPRIESTER",
+          "to": "FIG-GRUPPE-HOHEPRIESTER",
           "icons": [
-            "FIG-ZEICHEN-KIND",
-            "FIG-ZEICHEN-PREISEN",
-            "FIG-GOTT"
-          ]
+            "FIG-OBJ-SCHRIFTROLLE"
+          ],
+          "word": {
+            "de": "Aus dem Mund von kleinen Kindern und Säuglingen hast du dir Lob bereitet.",
+            "gsw": "Us em Muul vo chliine Chind und Söiglinge häsch du dir Lob parat gmacht."
+          }
         }
       ],
-      "action_de": "Die Hohepriester und Schriftgelehrten hören die Kinder im Tempel «Hosanna dem Sohn Davids!» rufen und empören sich: «Hörst du, was diese sagen?» Jesus antwortet: «Ja. Habt ihr nie gelesen: ‹Aus dem Mund von kleinen Kindern und Säuglingen hast du dir Lob bereitet›?»",
+      "action_de": "Blinde und Lahme kommen im Tempel zu Jesus, und er heilt sie; die Kinder rufen: Hosanna dem Sohn Davids! Den empörten Hohepriestern antwortet Jesus: Aus dem Mund von kleinen Kindern und Säuglingen hast du dir Lob bereitet.",
+      "keywords": {
+        "de": "er heilte sie",
+        "gsw": "er hät si gheilt"
+      },
       "stage": {
-        "signs_who": {
-          "FIG-ZEICHEN-FREUDE": [
-            "FIG-GRUPPE-KINDER"
-          ]
+        "back_side": "left",
+        "before": true,
+        "at": {
+          "FIG-ZEICHEN-ZORN": "FIG-GRUPPE-HOHEPRIESTER",
+          "FIG-ZEICHEN-HEILEN": "FIG-GRUPPE-KINDER"
         },
         "mood": {
-          "FIG-ROLLE-HOHEPRIESTER": "earnest",
+          "FIG-GRUPPE-HOHEPRIESTER": "angry",
+          "FIG-JESUS": "calm",
           "FIG-GRUPPE-KINDER": "delight"
         },
-        "before": true,
         "x": {
-          "FIG-ROLLE-HOHEPRIESTER": 22,
-          "FIG-JESUS": 110,
-          "FIG-GRUPPE-KINDER": 160
+          "FIG-GRUPPE-HOHEPRIESTER": 34,
+          "FIG-JESUS": 96,
+          "FIG-GRUPPE-KINDER": 158
         }
       }
     }
   ],
   "actions_de": [
-    "Jesus geht in den Tempel und treibt alle hinaus, die dort verkaufen und kaufen; die Tische der Geldwechsler und die Sitze der Taubenverkäufer stösst er um.",
-    "Jesus sagt zu ihnen: «Es steht geschrieben: ‹Mein Haus soll ein Haus des Gebets heissen.› Ihr aber macht es zu einer Räuberhöhle.»",
-    "Im Tempel kommen Blinde und Lahme zu Jesus, und er heilt sie.",
-    "Die Hohepriester und Schriftgelehrten hören die Kinder im Tempel «Hosanna dem Sohn Davids!» rufen und empören sich: «Hörst du, was diese sagen?» Jesus antwortet: «Ja. Habt ihr nie gelesen: ‹Aus dem Mund von kleinen Kindern und Säuglingen hast du dir Lob bereitet›?»"
+    "Jesus treibt die Verkäufer und Käufer aus dem Tempel, stösst die Tische der Geldwechsler um und sagt: Mein Haus soll ein Haus des Gebets heissen; ihr aber macht es zu einer Räuberhöhle.",
+    "Blinde und Lahme kommen im Tempel zu Jesus, und er heilt sie; die Kinder rufen: Hosanna dem Sohn Davids! Den empörten Hohepriestern antwortet Jesus: Aus dem Mund von kleinen Kindern und Säuglingen hast du dir Lob bereitet."
   ],
   "captions_de": [
-    "Hinausgetrieben: Jesus treibt die Händler hinaus (Bogen zum Händler, Pfeil mit Bewegungsstrichen); umgestossener Tisch, eine Taube der Taubenverkäufer.",
-    "Haus des Gebets: Jesus sagt, sein Haus soll ein Haus des Gebets heissen (Tempel, betende Hände); zweite Blase: ihr macht es zu einer Räuberhöhle (dunkle Felsöffnung mit Beutesack und Münzen).",
-    "Jesus → Geheilte: Blinde und Lahme kommen zu Jesus im Tempel (ein Blinder, Auge mit rotem X, ein Kranker mit Matte); er heilt sie (Pfeil von Jesus zu ihnen, grüner Lichtpunkt mit Spross bei ihnen).",
-    "Das Lob der Kinder: Die Kinder jubeln (strahlendes Gesicht); ein Hohepriester fragt Jesus: Hörst du das? (Ohr, Fragezeichen); Jesus: Aus dem Mund der Kinder kommt Lob für Gott (Kind, strahlendes Gesicht, Strahlenkranz)."
+    "Tempel: Jesus vor dem Tempel, ein Händler, umgestossener Tisch mit Münzen: «Mein Haus soll ein Haus des Gebets heissen. Ihr aber macht es zu einer Räuberhöhle.» (beten, Räuberhöhle).",
+    "Lob der Kinder: Kranke werden geheilt (heilen); die Kinder rufen «Hosanna dem Sohn Davids!» (preisen); die Hohepriester empören sich (Zorn); Jesus antwortet mit der Schrift (Schriftrolle)."
   ],
-  "interpretation_note_de": "Der Händler steht für alle, die im Tempel verkaufen und kaufen; dass Jesus jemanden schlägt, sagt der Text nicht. Das Schriftwort verbindet [[ISA.56.7]] und [[JER.7.11]]; die Räuberhöhle ist ein Bildwort. Der Hohepriester steht für die Hohepriester und Schriftgelehrten ([[MAT.21.15]]). Das Psalmwort ([[PSA.8.2]]) spricht Gott an; deshalb steht der Strahlenkranz in der Blase. Die Nacht in Betanien ([[MAT.21.17]]) ist nicht gezeichnet.",
+  "interpretation_note_de": "Zwei Felder ([[MAT.21.12-MAT.21.17]]): Austreibung mit dem Gegensatz «Haus des Gebets ↔ Räuberhöhle», dann Heilung, Lob der Kinder und Jesu Antwort an die empörten Hohepriester und Schriftgelehrten (neutral gezeichnet). Das Heilen der Blinden und Lahmen steht als Zeichen; die Kranken selbst sind nicht eigens gezeichnet.",
   "basis": [
     {
       "record": "TU-MAT-021-012-017",
       "field": "summary",
-      "fingerprint": "de49bb3cbb355a21"
+      "fingerprint": "8629bd73f81f547d"
     },
     {
       "record": "TRANS-MAT-021-001-046-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.21.12",
-      "fingerprint": "f24650be87d5bd5e"
+      "reference": "MAT.21.12-MAT.21.13",
+      "fingerprint": "4924a3ab38b4a4e7"
     },
     {
       "record": "TRANS-MAT-021-001-046-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.21.13",
-      "fingerprint": "c4b09e66b0fc6c68"
-    },
-    {
-      "record": "TRANS-MAT-021-001-046-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.21.14",
-      "fingerprint": "2ade9831a5acdbb5"
-    },
-    {
-      "record": "TRANS-MAT-021-001-046-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.21.15-MAT.21.16",
-      "fingerprint": "37fa0727617aaad3"
+      "reference": "MAT.21.14-MAT.21.16",
+      "fingerprint": "4fc68b900ffcccad"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -845,6 +753,247 @@
           "Jesus → Geheilte: Blinde und Lahme kommen zu Jesus im Tempel (ein Blinder mit durchgestrichenem Auge, ein Kranker mit Matte); er heilt sie (Pfeil von Jesus zu ihnen, grüner Lichtpunkt mit Spross bei ihnen).",
           "Das Lob der Kinder: Die Kinder jubeln (Funken); ein Hohepriester fragt Jesus: Hörst du das? (Ohr, Fragezeichen); Jesus: Aus dem Mund der Kinder kommt Lob für Gott (Kind, Funken, Strahlenkranz)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.21.12",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-HAENDLER"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL",
+              "FIG-OBJ-TISCH-UMGESTOSSEN",
+              "FIG-OBJ-TAUBE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-AUSSCHLUSS"
+            ],
+            "speech": [],
+            "action_de": "Jesus geht in den Tempel und treibt alle hinaus, die dort verkaufen und kaufen; die Tische der Geldwechsler und die Sitze der Taubenverkäufer stösst er um.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-HAENDLER": "surprised",
+                "FIG-JESUS": "earnest"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-HAENDLER",
+                  "act"
+                ]
+              ],
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-ROLLE-HAENDLER": 96
+              },
+              "floor_x": {
+                "FIG-OBJ-TISCH-UMGESTOSSEN": 126,
+                "FIG-OBJ-TAUBE": 160
+              },
+              "beside": {
+                "FIG-ZEICHEN-AUSSCHLUSS": "FIG-ROLLE-HAENDLER"
+              },
+              "before": true,
+              "back_side": "left"
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.21.13",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-HAENDLER"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-HAENDLER",
+                "icons": [
+                  "FIG-ORT-TEMPEL",
+                  "FIG-ZEICHEN-BETEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-HAENDLER",
+                "icons": [
+                  "FIG-ORT-RAEUBERHOEHLE"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt zu ihnen: «Es steht geschrieben: ‹Mein Haus soll ein Haus des Gebets heissen.› Ihr aber macht es zu einer Räuberhöhle.»",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-ROLLE-HAENDLER": "surprised"
+              },
+              "before": true,
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-ROLLE-HAENDLER": 132
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.21.14",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-BLINDER",
+              "FIG-ROLLE-KRANKER"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL",
+              "FIG-OBJ-MATTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-HEILEN",
+              "FIG-ZEICHEN-BLIND"
+            ],
+            "speech": [],
+            "action_de": "Im Tempel kommen Blinde und Lahme zu Jesus, und er heilt sie.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-HEILEN": [
+                  "FIG-ROLLE-BLINDER",
+                  "FIG-ROLLE-KRANKER"
+                ]
+              },
+              "beside": {
+                "FIG-ZEICHEN-BLIND": "FIG-ROLLE-BLINDER"
+              },
+              "hold": {
+                "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
+              },
+              "mood": {
+                "FIG-ROLLE-BLINDER": "calm",
+                "FIG-ROLLE-KRANKER": "calm",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-ROLLE-BLINDER": 92,
+                "FIG-ROLLE-KRANKER": 154
+              },
+              "before": true,
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-BLINDER",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.21.15-MAT.21.16",
+            "figures": [
+              "FIG-ROLLE-HOHEPRIESTER",
+              "FIG-JESUS",
+              "FIG-GRUPPE-KINDER"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-HOHEPRIESTER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-HOEREN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-HOHEPRIESTER",
+                "icons": [
+                  "FIG-ZEICHEN-KIND",
+                  "FIG-ZEICHEN-PREISEN",
+                  "FIG-GOTT"
+                ]
+              }
+            ],
+            "action_de": "Die Hohepriester und Schriftgelehrten hören die Kinder im Tempel «Hosanna dem Sohn Davids!» rufen und empören sich: «Hörst du, was diese sagen?» Jesus antwortet: «Ja. Habt ihr nie gelesen: ‹Aus dem Mund von kleinen Kindern und Säuglingen hast du dir Lob bereitet›?»",
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-GRUPPE-KINDER"
+                ]
+              },
+              "mood": {
+                "FIG-ROLLE-HOHEPRIESTER": "earnest",
+                "FIG-GRUPPE-KINDER": "delight"
+              },
+              "before": true,
+              "x": {
+                "FIG-ROLLE-HOHEPRIESTER": 22,
+                "FIG-JESUS": 110,
+                "FIG-GRUPPE-KINDER": 160
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus geht in den Tempel und treibt alle hinaus, die dort verkaufen und kaufen; die Tische der Geldwechsler und die Sitze der Taubenverkäufer stösst er um.",
+          "Jesus sagt zu ihnen: «Es steht geschrieben: ‹Mein Haus soll ein Haus des Gebets heissen.› Ihr aber macht es zu einer Räuberhöhle.»",
+          "Im Tempel kommen Blinde und Lahme zu Jesus, und er heilt sie.",
+          "Die Hohepriester und Schriftgelehrten hören die Kinder im Tempel «Hosanna dem Sohn Davids!» rufen und empören sich: «Hörst du, was diese sagen?» Jesus antwortet: «Ja. Habt ihr nie gelesen: ‹Aus dem Mund von kleinen Kindern und Säuglingen hast du dir Lob bereitet›?»"
+        ],
+        "captions_de": [
+          "Hinausgetrieben: Jesus treibt die Händler hinaus (Bogen zum Händler, Pfeil mit Bewegungsstrichen); umgestossener Tisch, eine Taube der Taubenverkäufer.",
+          "Haus des Gebets: Jesus sagt, sein Haus soll ein Haus des Gebets heissen (Tempel, betende Hände); zweite Blase: ihr macht es zu einer Räuberhöhle (dunkle Felsöffnung mit Beutesack und Münzen).",
+          "Jesus → Geheilte: Blinde und Lahme kommen zu Jesus im Tempel (ein Blinder, Auge mit rotem X, ein Kranker mit Matte); er heilt sie (Pfeil von Jesus zu ihnen, grüner Lichtpunkt mit Spross bei ihnen).",
+          "Das Lob der Kinder: Die Kinder jubeln (strahlendes Gesicht); ein Hohepriester fragt Jesus: Hörst du das? (Ohr, Fragezeichen); Jesus: Aus dem Mund der Kinder kommt Lob für Gott (Kind, strahlendes Gesicht, Strahlenkranz)."
+        ],
+        "interpretation_note_de": "Der Händler steht für alle, die im Tempel verkaufen und kaufen; dass Jesus jemanden schlägt, sagt der Text nicht. Das Schriftwort verbindet [[ISA.56.7]] und [[JER.7.11]]; die Räuberhöhle ist ein Bildwort. Der Hohepriester steht für die Hohepriester und Schriftgelehrten ([[MAT.21.15]]). Das Psalmwort ([[PSA.8.2]]) spricht Gott an; deshalb steht der Strahlenkranz in der Blase. Die Nacht in Betanien ([[MAT.21.17]]) ist nicht gezeichnet.",
+        "basis": [
+          {
+            "record": "TU-MAT-021-012-017",
+            "field": "summary",
+            "fingerprint": "de49bb3cbb355a21"
+          },
+          {
+            "record": "TRANS-MAT-021-001-046-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.21.12",
+            "fingerprint": "f24650be87d5bd5e"
+          },
+          {
+            "record": "TRANS-MAT-021-001-046-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.21.13",
+            "fingerprint": "c4b09e66b0fc6c68"
+          },
+          {
+            "record": "TRANS-MAT-021-001-046-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.21.14",
+            "fingerprint": "2ade9831a5acdbb5"
+          },
+          {
+            "record": "TRANS-MAT-021-001-046-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.21.15-MAT.21.16",
+            "fingerprint": "37fa0727617aaad3"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

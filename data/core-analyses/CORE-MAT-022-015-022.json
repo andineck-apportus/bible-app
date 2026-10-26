@@ -1,0 +1,135 @@
+{
+ "id": "CORE-MAT-022-015-022",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.22.15-MAT.22.22",
+ "target": "TU-MAT-022-015-022",
+ "core_de": "Um Jesus eine Falle zu stellen, schicken die Pharisäer ihre Jünger mit den Herodianern, die ihn fragen, ob es erlaubt ist, dem Kaiser Steuer zu zahlen; Jesus erkennt ihre Bosheit, lässt sich einen Denar zeigen, fragt, wessen Bild und Aufschrift er trägt, und auf ihre Antwort «Des Kaisers» sagt er: «Gebt also, was des Kaisers ist, dem Kaiser, und was Gottes ist, Gott!» – sie staunen und gehen weg.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "dialogue",
+    "subtype": "Falle – Frage – Gegenfrage – Antwort",
+    "range": "MAT.22.15-MAT.22.22",
+    "elements": [
+     {
+      "label": "Die Pharisäer beraten, wie sie ihn in eine Falle locken; senden ihre Jünger mit den Herodianern",
+      "ref": "MAT.22.15-MAT.22.16",
+      "role": "Falle"
+     },
+     {
+      "label": "«Ist es erlaubt, dem Kaiser Steuer zu zahlen, oder nicht?»",
+      "ref": "MAT.22.17",
+      "role": "Frage"
+     },
+     {
+      "label": "«Warum stellt ihr mich auf die Probe, ihr Heuchler? Zeigt mir die Münze!» – Denar – «Wessen Bild und Aufschrift ist das?» – «Des Kaisers.»",
+      "ref": "MAT.22.18-MAT.22.21",
+      "role": "Gegenfrage"
+     },
+     {
+      "label": "Antwort: Kaiser ↔ Gott",
+      "ref": "MAT.22.21",
+      "role": "Antwort",
+      "child": "s2"
+     },
+     {
+      "label": "Sie staunen, lassen ihn stehen und gehen weg",
+      "ref": "MAT.22.22",
+      "role": "Ausgang"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-GRUPPE-HERODIANER",
+       "to": "FIG-JESUS",
+       "ref": "MAT.22.16-MAT.22.17",
+       "note": "mit den Jüngern der Pharisäer"
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "dem Kaiser ↔ Gott",
+    "range": "MAT.22.21",
+    "elements": [
+     {
+      "label": "Gebt also, was des Kaisers ist, dem Kaiser",
+      "ref": "MAT.22.21",
+      "role": "Kaiser"
+     },
+     {
+      "label": "und was Gottes ist, Gott",
+      "ref": "MAT.22.21",
+      "role": "Gott"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.22.15-MAT.22.18",
+   "text_de": "Die Pharisäer beraten, wie sie ihn in eine Falle locken; ihre Jünger und die Herodianer: «Ist es erlaubt, dem Kaiser Steuer zu zahlen, oder nicht?» Jesus: «Warum stellt ihr mich auf die Probe, ihr Heuchler?»",
+   "reason_de": "Fangfrage (Kriterium 2).",
+   "recognition_de": "Die Fragenden mit der Fangfrage.",
+   "keywords": [
+    "wie sie ihn mit einer Aussage in eine Falle locken könnten",
+    "Ist es erlaubt, dem Kaiser Steuer zu zahlen, oder nicht?"
+   ]
+  },
+  {
+   "reference": "MAT.22.19-MAT.22.22",
+   "text_de": "«Zeigt mir die Münze für die Steuer!» Sie bringen einen Denar. «Wessen Bild und Aufschrift ist das?» – «Des Kaisers.» – «Gebt also, was des Kaisers ist, dem Kaiser, und was Gottes ist, Gott!» Sie staunen und gehen weg.",
+   "reason_de": "Erkennungsmoment und Pointe (Kriterien 1 und 4).",
+   "recognition_de": "Der Denar in der Hand; Kaiser ↔ Gott.",
+   "keywords": [
+    "Wessen Bild und Aufschrift ist das?",
+    "Gebt also, was des Kaisers ist, dem Kaiser, und was Gottes ist, Gott!"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Die Schmeichelrede der Fragenden (22,16) – Ausschmückung"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-PHARISAEER",
+  "FIG-GRUPPE-HERODIANER"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.22.15-MAT.22.22",
+   "fingerprint": "98d54013a20f5801"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mt 19–28 und Buch nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; keine fachliche Prüfung durch eine Person",
+  "result": "bestanden",
+  "summary_de": "Falle – Frage – Gegenfrage – Antwort Kaiser ↔ Gott – Ausgang.",
+  "changes_de": []
+ }
+}

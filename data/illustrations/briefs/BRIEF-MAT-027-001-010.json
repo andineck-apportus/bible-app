@@ -13,7 +13,7 @@
       "n": 1,
       "reference": "MAT.27.1-MAT.27.2",
       "figures": [
-        "FIG-GRUPPE-HOHER-RAT",
+        "FIG-GRUPPE-HOHEPRIESTER",
         "FIG-JESUS",
         "FIG-PILATUS"
       ],
@@ -21,27 +21,46 @@
         "FIG-OBJ-FESSEL"
       ],
       "signs": [
-        "FIG-ZEICHEN-MORGEN"
+        "FIG-ZEICHEN-MORGEN",
+        "FIG-ZEICHEN-AUSLIEFERN"
       ],
       "speech": [],
-      "action_de": "Am Morgen fassen die Hohepriester und Ältesten den Beschluss, Jesus zu töten; sie fesseln ihn, führen ihn ab und liefern ihn dem Statthalter Pilatus aus.",
+      "action_de": "Am Morgen beschliessen die Hohepriester und Ältesten, Jesus zu töten; sie fesseln ihn und liefern ihn dem Statthalter Pilatus aus.",
+      "keywords": {
+        "de": "lieferten ihn Pilatus, dem Statthalter, aus",
+        "gsw": "em Pilatus, em Statthalter, usgliferet"
+      },
+      "names": {
+        "FIG-PILATUS": {
+          "de": "Pilatus",
+          "gsw": "Pilatus"
+        }
+      },
       "stage": {
+        "hold": {
+          "FIG-JESUS": "FIG-OBJ-FESSEL"
+        },
+        "at": {
+          "FIG-ZEICHEN-AUSLIEFERN": "FIG-JESUS"
+        },
         "arrows": [
           [
-            "FIG-GRUPPE-HOHER-RAT",
+            "FIG-GRUPPE-HOHEPRIESTER",
             "FIG-PILATUS",
             "act"
           ]
         ],
         "mood": {
-          "FIG-GRUPPE-HOHER-RAT": "earnest",
+          "FIG-GRUPPE-HOHEPRIESTER": "earnest",
           "FIG-JESUS": "calm",
           "FIG-PILATUS": "pensive"
         },
         "air_x": 150,
         "air_y": 8,
-        "hold": {
-          "FIG-JESUS": "FIG-OBJ-FESSEL"
+        "x": {
+          "FIG-GRUPPE-HOHEPRIESTER": 30,
+          "FIG-JESUS": 92,
+          "FIG-PILATUS": 154
         }
       }
     },
@@ -50,7 +69,7 @@
       "reference": "MAT.27.3-MAT.27.4",
       "figures": [
         "FIG-JUDAS-ISKARIOT",
-        "FIG-GRUPPE-HOHER-RAT"
+        "FIG-GRUPPE-HOHEPRIESTER"
       ],
       "objects": [
         "FIG-OBJ-MUENZEN"
@@ -59,134 +78,128 @@
       "speech": [
         {
           "from": "FIG-JUDAS-ISKARIOT",
-          "to": "FIG-GRUPPE-HOHER-RAT",
+          "to": "FIG-GRUPPE-HOHEPRIESTER",
           "icons": [
             "FIG-ZEICHEN-SUENDE",
-            "FIG-JESUS",
             "FIG-ZEICHEN-BLUT"
-          ]
+          ],
+          "word": {
+            "de": "Ich habe gesündigt, indem ich unschuldiges Blut ausgeliefert habe.",
+            "gsw": "Ich han gsündiget, won ich unschuldigs Bluet usgliferet han."
+          }
         },
         {
-          "from": "FIG-GRUPPE-HOHER-RAT",
+          "from": "FIG-GRUPPE-HOHEPRIESTER",
           "to": "FIG-JUDAS-ISKARIOT",
           "icons": [
             "FIG-ZEICHEN-ABLEHNEN"
-          ]
+          ],
+          "word": {
+            "de": "Was geht uns das an? Sieh du zu!",
+            "gsw": "Was gaat üs das aa? Lueg du sälber!"
+          }
         }
       ],
-      "action_de": "Als Judas sieht, dass Jesus verurteilt ist, reut es ihn; er bringt die dreissig Silberstücke zurück und sagt: Ich habe gesündigt, indem ich unschuldiges Blut ausgeliefert habe. Sie antworten: Was geht uns das an?",
+      "action_de": "Als Judas sieht, dass Jesus verurteilt ist, reut es ihn; er bringt die dreissig Silberstücke zurück und sagt: Ich habe gesündigt, indem ich unschuldiges Blut ausgeliefert habe. Die Hohepriester: Was geht uns das an? Sieh du zu!",
+      "keywords": {
+        "de": "Ich habe gesündigt, indem ich unschuldiges Blut ausgeliefert habe",
+        "gsw": "Ich han gsündiget, won ich unschuldigs Bluet usgliferet han"
+      },
+      "names": {
+        "FIG-JUDAS-ISKARIOT": {
+          "de": "Judas",
+          "gsw": "Judas"
+        }
+      },
       "stage": {
         "hold": {
           "FIG-JUDAS-ISKARIOT": "FIG-OBJ-MUENZEN"
         },
         "mood": {
-          "FIG-JUDAS-ISKARIOT": "worried",
-          "FIG-GRUPPE-HOHER-RAT": "earnest"
+          "FIG-JUDAS-ISKARIOT": "pain",
+          "FIG-GRUPPE-HOHEPRIESTER": "earnest"
         },
-        "arrows": [
-          [
-            "FIG-JUDAS-ISKARIOT",
-            "FIG-GRUPPE-HOHER-RAT",
-            "act"
-          ]
-        ]
+        "x": {
+          "FIG-JUDAS-ISKARIOT": 54,
+          "FIG-GRUPPE-HOHEPRIESTER": 136
+        }
       }
     },
     {
       "n": 3,
-      "reference": "MAT.27.5",
-      "figures": [
-        "FIG-JUDAS-ISKARIOT"
-      ],
-      "objects": [
-        "FIG-ORT-TEMPEL",
-        "FIG-OBJ-MUENZEN"
-      ],
+      "reference": "MAT.27.5-MAT.27.10",
+      "figures": [],
+      "objects": [],
       "signs": [],
       "speech": [],
-      "action_de": "Judas wirft die Silberstücke in den Tempel, zieht sich zurück, geht weg und erhängt sich.",
-      "stage": {
-        "mood": {
-          "FIG-JUDAS-ISKARIOT": "worried"
+      "action_de": "Judas wirft die Silberstücke in den Tempel, geht weg und erhängt sich; die Hohepriester kaufen mit dem Blutgeld den Acker des Töpfers als Begräbnisplatz für die Fremden; so wird erfüllt, was durch den Propheten Jeremia gesagt ist.",
+      "keywords": {
+        "de": "Da wurde erfüllt, was durch Jeremia, den Propheten, gesagt ist",
+        "gsw": "Dänn isch erfüllt worde, was dur de Jeremia, de Prophet, gseit worden isch"
+      },
+      "diagram": {
+        "visual": "levels",
+        "span": 2,
+        "top_label": {
+          "de": "Der Prophet Jeremia hat gesagt:",
+          "gsw": "De Prophet Jeremia hät gseit:"
         },
-        "arrows": [
-          [
-            "FIG-JUDAS-ISKARIOT",
-            "FIG-OBJ-MUENZEN",
-            "throw"
-          ]
+        "bottom_label": {
+          "de": "Das ist geschehen:",
+          "gsw": "Das isch gscheh:"
+        },
+        "top": [
+          {
+            "a": {
+              "de": "«Und sie nahmen die dreissig Silberstücke … und sie gaben sie für den Acker des Töpfers.»",
+              "gsw": "«Und si händ di driissg Silberstück gnoo … und si händ si für de Acker vom Töpfer gää.»"
+            },
+            "icons": [
+              "FIG-OBJ-SCHRIFTROLLE",
+              "FIG-ORT-ACKER"
+            ]
+          }
         ],
-        "x": {
-          "FIG-JUDAS-ISKARIOT": 40
-        },
-        "back_side": "right",
-        "floor_x": {
-          "FIG-OBJ-MUENZEN": 104
-        }
-      }
-    },
-    {
-      "n": 4,
-      "reference": "MAT.27.6-MAT.27.10",
-      "figures": [
-        "FIG-GRUPPE-HOHER-RAT"
-      ],
-      "objects": [
-        "FIG-OBJ-MUENZEN",
-        "FIG-ORT-ACKER"
-      ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-HOHER-RAT",
-          "to": "FIG-GRUPPE-HOHER-RAT",
-          "icons": [
-            "FIG-OBJ-MUENZEN",
-            "FIG-ORT-ACKER",
-            "FIG-ZEICHEN-TOD"
-          ]
-        }
-      ],
-      "action_de": "Die Hohepriester dürfen das Geld nicht in den Tempelschatz legen, weil es Blutgeld ist; sie kaufen damit den Acker des Töpfers als Begräbnisplatz für Fremde. Darin sieht Matthäus erfüllt, was durch den Propheten Jeremia gesagt ist.",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-HOHER-RAT": "pensive"
-        },
-        "x": {
-          "FIG-GRUPPE-HOHER-RAT": 52
-        },
-        "back_side": "right",
-        "floor_x": {
-          "FIG-OBJ-MUENZEN": 92
-        },
-        "arrows": [
-          [
-            "FIG-OBJ-MUENZEN",
-            "FIG-ORT-ACKER",
-            "act"
-          ]
+        "bottom": [
+          {
+            "a": {
+              "de": "Judas warf die Silberstücke in den Tempel, ging weg und erhängte sich.",
+              "gsw": "De Judas hät d Silberstück in Tämpel gschmisse, isch wäggange und hät sich erhänkt."
+            },
+            "icons": [
+              "FIG-OBJ-MUENZEN",
+              "FIG-ZEICHEN-TOD"
+            ]
+          },
+          {
+            "a": {
+              "de": "Die Hohepriester kauften davon den Acker des Töpfers als Begräbnisplatz für die Fremden.",
+              "gsw": "D Hoheprieschter händ damit de Acker vom Töpfer gchauft als Grabplatz für d Frömde."
+            },
+            "icons": [
+              "FIG-ORT-ACKER"
+            ]
+          }
         ]
       }
     }
   ],
   "actions_de": [
-    "Am Morgen fassen die Hohepriester und Ältesten den Beschluss, Jesus zu töten; sie fesseln ihn, führen ihn ab und liefern ihn dem Statthalter Pilatus aus.",
-    "Als Judas sieht, dass Jesus verurteilt ist, reut es ihn; er bringt die dreissig Silberstücke zurück und sagt: Ich habe gesündigt, indem ich unschuldiges Blut ausgeliefert habe. Sie antworten: Was geht uns das an?",
-    "Judas wirft die Silberstücke in den Tempel, zieht sich zurück, geht weg und erhängt sich.",
-    "Die Hohepriester dürfen das Geld nicht in den Tempelschatz legen, weil es Blutgeld ist; sie kaufen damit den Acker des Töpfers als Begräbnisplatz für Fremde. Darin sieht Matthäus erfüllt, was durch den Propheten Jeremia gesagt ist."
+    "Am Morgen beschliessen die Hohepriester und Ältesten, Jesus zu töten; sie fesseln ihn und liefern ihn dem Statthalter Pilatus aus.",
+    "Als Judas sieht, dass Jesus verurteilt ist, reut es ihn; er bringt die dreissig Silberstücke zurück und sagt: Ich habe gesündigt, indem ich unschuldiges Blut ausgeliefert habe. Die Hohepriester: Was geht uns das an? Sieh du zu!",
+    "Judas wirft die Silberstücke in den Tempel, geht weg und erhängt sich; die Hohepriester kaufen mit dem Blutgeld den Acker des Töpfers als Begräbnisplatz für die Fremden; so wird erfüllt, was durch den Propheten Jeremia gesagt ist."
   ],
   "captions_de": [
-    "Am Morgen (Sonnenaufgang): Der Hohe Rat liefert den gefesselten Jesus (gefesselte Hände) an Pilatus aus (Toga mit Purpursaum; Bogen).",
-    "Reue → Geld zurück: Judas bringt den Hohepriestern das Geld zurück (Münzen in der Hand, Pfeil zu ihnen): Ich habe gesündigt – unschuldiges Blut (schwarzes Herz, Jesus, Blutstropfen); die Hohepriester wehren ab (Person mit gekreuzten Armen).",
-    "Ende des Judas: Judas wirft die Silberstücke in den Tempel (gepunkteter Bogen zu den Münzen auf den Stufen).",
-    "Blutgeld → Acker: Die Hohepriester beschliessen: Mit dem Geld einen Acker zum Begraben kaufen (Münzen, Acker, Totenkopf); der Pfeil führt von den Münzen zum Acker des Töpfers (Furchen, Tonkrug)."
+    "Ausgeliefert: Die Hohepriester bringen Jesus gefesselt (Fessel) zu Pilatus (Name) (ausliefern); es ist Morgen (Morgen).",
+    "Reue: Judas (Name) bringt die Silberstücke zurück (Münzen): «Ich habe gesündigt, indem ich unschuldiges Blut ausgeliefert habe.» (Sünde, Blut); die Hohepriester: «Was geht uns das an? Sieh du zu!» (ablehnen).",
+    "Zwei Ebenen: oben das Prophetenwort «Und sie nahmen die dreissig Silberstücke … und sie gaben sie für den Acker des Töpfers» (Schriftrolle, Acker); unten das Geschehen – Judas wirft die Silberstücke in den Tempel, geht weg und erhängt sich (Münzen, Tod); die Hohepriester kaufen davon den Acker des Töpfers (Acker)."
   ],
-  "interpretation_note_de": "Der Tod des Judas ([[MAT.27.5]]) ist nur mit dem Zeichen «Tod» angedeutet, nicht ausgemalt; [[ACT.1.18]] erzählt ihn anders. Das Schriftzitat ([[MAT.27.9-MAT.27.10]]) verbindet Worte aus [[ZEC.11.12-ZEC.11.13]] mit Jeremia (vgl. [[JER.32.6-JER.32.9]]); das Bild zeigt es nicht. Der Hohe Rat steht für «die Hohepriester und Ältesten».",
+  "interpretation_note_de": "Drei Felder ([[MAT.27.1-MAT.27.10]]): Auslieferung an Pilatus, Reue des Judas, dann das Erfüllungszitat, das der Text selbst setzt, als zwei Ebenen mit dem Ende des Judas und dem Kauf des Ackers. Der Tod des Judas ist genannt, nicht gezeigt (BILDSPRACHE.md: Tod nicht ausblenden, nicht ausmalen). Matthäus nennt Jeremia; der Wortlaut steht vor allem [[ZEC.11.12-ZEC.11.13]] nahe (Befund der Auslegung).",
   "basis": [
     {
       "record": "TU-MAT-027-001-010",
       "field": "summary",
-      "fingerprint": "850586d265d48e1b"
+      "fingerprint": "8b06f0488a0dfd4a"
     },
     {
       "record": "TRANS-MAT-027-001-066-DE-WORKING",
@@ -203,18 +216,12 @@
     {
       "record": "TRANS-MAT-027-001-066-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.27.5",
-      "fingerprint": "b82cbc04c2931048"
-    },
-    {
-      "record": "TRANS-MAT-027-001-066-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.27.6-MAT.27.10",
-      "fingerprint": "6c4b4afaf1d56528"
+      "reference": "MAT.27.5-MAT.27.10",
+      "fingerprint": "2c23c72df30c85c6"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -552,6 +559,262 @@
           "Ende des Judas: Judas wirft die Silberstücke in den Tempel (gepunkteter Bogen zu den Münzen auf den Stufen).",
           "Blutgeld → Acker: Die Hohepriester beschliessen: Mit dem Geld einen Acker zum Begraben kaufen (Münzen, Acker, verschlossenes Grab); der Pfeil führt von den Münzen zum Acker des Töpfers (Furchen, Tonkrug)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-027-001-010",
+            "field": "summary",
+            "fingerprint": "850586d265d48e1b"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.1-MAT.27.2",
+            "fingerprint": "1d5fab22fa911fbd"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.3-MAT.27.4",
+            "fingerprint": "16762c30ddf39e50"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.5",
+            "fingerprint": "b82cbc04c2931048"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.6-MAT.27.10",
+            "fingerprint": "6c4b4afaf1d56528"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.27.1-MAT.27.2",
+            "figures": [
+              "FIG-GRUPPE-HOHER-RAT",
+              "FIG-JESUS",
+              "FIG-PILATUS"
+            ],
+            "objects": [
+              "FIG-OBJ-FESSEL"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-MORGEN"
+            ],
+            "speech": [],
+            "action_de": "Am Morgen fassen die Hohepriester und Ältesten den Beschluss, Jesus zu töten; sie fesseln ihn, führen ihn ab und liefern ihn dem Statthalter Pilatus aus.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-GRUPPE-HOHER-RAT",
+                  "FIG-PILATUS",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-HOHER-RAT": "earnest",
+                "FIG-JESUS": "calm",
+                "FIG-PILATUS": "pensive"
+              },
+              "air_x": 150,
+              "air_y": 8,
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-FESSEL"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.27.3-MAT.27.4",
+            "figures": [
+              "FIG-JUDAS-ISKARIOT",
+              "FIG-GRUPPE-HOHER-RAT"
+            ],
+            "objects": [
+              "FIG-OBJ-MUENZEN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JUDAS-ISKARIOT",
+                "to": "FIG-GRUPPE-HOHER-RAT",
+                "icons": [
+                  "FIG-ZEICHEN-SUENDE",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-BLUT"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-HOHER-RAT",
+                "to": "FIG-JUDAS-ISKARIOT",
+                "icons": [
+                  "FIG-ZEICHEN-ABLEHNEN"
+                ]
+              }
+            ],
+            "action_de": "Als Judas sieht, dass Jesus verurteilt ist, reut es ihn; er bringt die dreissig Silberstücke zurück und sagt: Ich habe gesündigt, indem ich unschuldiges Blut ausgeliefert habe. Sie antworten: Was geht uns das an?",
+            "stage": {
+              "hold": {
+                "FIG-JUDAS-ISKARIOT": "FIG-OBJ-MUENZEN"
+              },
+              "mood": {
+                "FIG-JUDAS-ISKARIOT": "worried",
+                "FIG-GRUPPE-HOHER-RAT": "earnest"
+              },
+              "arrows": [
+                [
+                  "FIG-JUDAS-ISKARIOT",
+                  "FIG-GRUPPE-HOHER-RAT",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.27.5",
+            "figures": [
+              "FIG-JUDAS-ISKARIOT"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL",
+              "FIG-OBJ-MUENZEN"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Judas wirft die Silberstücke in den Tempel, zieht sich zurück, geht weg und erhängt sich.",
+            "stage": {
+              "mood": {
+                "FIG-JUDAS-ISKARIOT": "worried"
+              },
+              "arrows": [
+                [
+                  "FIG-JUDAS-ISKARIOT",
+                  "FIG-OBJ-MUENZEN",
+                  "throw"
+                ]
+              ],
+              "x": {
+                "FIG-JUDAS-ISKARIOT": 40
+              },
+              "back_side": "right",
+              "floor_x": {
+                "FIG-OBJ-MUENZEN": 104
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.27.6-MAT.27.10",
+            "figures": [
+              "FIG-GRUPPE-HOHER-RAT"
+            ],
+            "objects": [
+              "FIG-OBJ-MUENZEN",
+              "FIG-ORT-ACKER"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-HOHER-RAT",
+                "to": "FIG-GRUPPE-HOHER-RAT",
+                "icons": [
+                  "FIG-OBJ-MUENZEN",
+                  "FIG-ORT-ACKER",
+                  "FIG-ZEICHEN-TOD"
+                ]
+              }
+            ],
+            "action_de": "Die Hohepriester dürfen das Geld nicht in den Tempelschatz legen, weil es Blutgeld ist; sie kaufen damit den Acker des Töpfers als Begräbnisplatz für Fremde. Darin sieht Matthäus erfüllt, was durch den Propheten Jeremia gesagt ist.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-HOHER-RAT": "pensive"
+              },
+              "x": {
+                "FIG-GRUPPE-HOHER-RAT": 52
+              },
+              "back_side": "right",
+              "floor_x": {
+                "FIG-OBJ-MUENZEN": 92
+              },
+              "arrows": [
+                [
+                  "FIG-OBJ-MUENZEN",
+                  "FIG-ORT-ACKER",
+                  "act"
+                ]
+              ]
+            }
+          }
+        ],
+        "actions_de": [
+          "Am Morgen fassen die Hohepriester und Ältesten den Beschluss, Jesus zu töten; sie fesseln ihn, führen ihn ab und liefern ihn dem Statthalter Pilatus aus.",
+          "Als Judas sieht, dass Jesus verurteilt ist, reut es ihn; er bringt die dreissig Silberstücke zurück und sagt: Ich habe gesündigt, indem ich unschuldiges Blut ausgeliefert habe. Sie antworten: Was geht uns das an?",
+          "Judas wirft die Silberstücke in den Tempel, zieht sich zurück, geht weg und erhängt sich.",
+          "Die Hohepriester dürfen das Geld nicht in den Tempelschatz legen, weil es Blutgeld ist; sie kaufen damit den Acker des Töpfers als Begräbnisplatz für Fremde. Darin sieht Matthäus erfüllt, was durch den Propheten Jeremia gesagt ist."
+        ],
+        "captions_de": [
+          "Am Morgen (Sonnenaufgang): Der Hohe Rat liefert den gefesselten Jesus (gefesselte Hände) an Pilatus aus (Toga mit Purpursaum; Bogen).",
+          "Reue → Geld zurück: Judas bringt den Hohepriestern das Geld zurück (Münzen in der Hand, Pfeil zu ihnen): Ich habe gesündigt – unschuldiges Blut (schwarzes Herz, Jesus, Blutstropfen); die Hohepriester wehren ab (Person mit gekreuzten Armen).",
+          "Ende des Judas: Judas wirft die Silberstücke in den Tempel (gepunkteter Bogen zu den Münzen auf den Stufen).",
+          "Blutgeld → Acker: Die Hohepriester beschliessen: Mit dem Geld einen Acker zum Begraben kaufen (Münzen, Acker, Totenkopf); der Pfeil führt von den Münzen zum Acker des Töpfers (Furchen, Tonkrug)."
+        ],
+        "interpretation_note_de": "Der Tod des Judas ([[MAT.27.5]]) ist nur mit dem Zeichen «Tod» angedeutet, nicht ausgemalt; [[ACT.1.18]] erzählt ihn anders. Das Schriftzitat ([[MAT.27.9-MAT.27.10]]) verbindet Worte aus [[ZEC.11.12-ZEC.11.13]] mit Jeremia (vgl. [[JER.32.6-JER.32.9]]); das Bild zeigt es nicht. Der Hohe Rat steht für «die Hohepriester und Ältesten».",
+        "basis": [
+          {
+            "record": "TU-MAT-027-001-010",
+            "field": "summary",
+            "fingerprint": "8b06f0488a0dfd4a"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.1-MAT.27.2",
+            "fingerprint": "1d5fab22fa911fbd"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.3-MAT.27.4",
+            "fingerprint": "16762c30ddf39e50"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.5",
+            "fingerprint": "b82cbc04c2931048"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.6-MAT.27.10",
+            "fingerprint": "6c4b4afaf1d56528"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "interpretation_note_de": "Drei Felder ([[MAT.27.1-MAT.27.10]]): Auslieferung an Pilatus, Reue des Judas, dann das Erfüllungszitat, das der Text selbst setzt, als zwei Ebenen mit dem Ende des Judas und dem Kauf des Ackers. Der Tod des Judas ist genannt, nicht gezeigt (BILDSPRACHE.md: Tod nicht ausblenden, nicht ausmalen). Matthäus nennt Jeremia; der Wortlaut steht vor allem Sach 11,12–13 nahe (Befund der Auslegung)."
       }
     }
   ]

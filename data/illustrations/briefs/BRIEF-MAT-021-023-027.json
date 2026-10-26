@@ -11,10 +11,9 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.21.23",
+      "reference": "MAT.21.23-MAT.21.25",
       "figures": [
-        "FIG-ROLLE-AELTESTER",
-        "FIG-ROLLE-HOHEPRIESTER",
+        "FIG-GRUPPE-HOHEPRIESTER",
         "FIG-JESUS"
       ],
       "objects": [
@@ -23,192 +22,139 @@
       "signs": [],
       "speech": [
         {
-          "from": "FIG-ROLLE-HOHEPRIESTER",
+          "from": "FIG-GRUPPE-HOHEPRIESTER",
           "to": "FIG-JESUS",
           "icons": [
             "FIG-ZEICHEN-VOLLMACHT",
             "FIG-ZEICHEN-FRAGEN"
-          ]
+          ],
+          "word": {
+            "de": "In welcher Vollmacht tust du das?",
+            "gsw": "Mit was für ere Vollmacht machsch du das?"
+          }
+        },
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-GRUPPE-HOHEPRIESTER",
+          "icons": [
+            "FIG-JOHANNES-TAEUFER",
+            "FIG-ZEICHEN-TAUFE"
+          ],
+          "word": {
+            "de": "Die Taufe des Johannes – woher war sie? Vom Himmel oder von Menschen?",
+            "gsw": "D Taufi vom Johannes – vo wo isch si gsii? Vom Himel oder vo Mänsche?"
+          }
         }
       ],
-      "action_de": "Während Jesus im Tempel lehrt, treten die Hohepriester und die Ältesten des Volkes zu ihm und fragen: «In welcher Vollmacht tust du das? Und wer hat dir diese Vollmacht gegeben?»",
+      "action_de": "Die Hohepriester und Ältesten fragen Jesus im Tempel: In welcher Vollmacht tust du das? Jesus fragt zurück: Die Taufe des Johannes – woher war sie? Vom Himmel oder von Menschen?",
+      "keywords": {
+        "de": "In welcher Vollmacht tust du das?",
+        "gsw": "Mit was für ere Vollmacht machsch du das?"
+      },
       "stage": {
-        "mood": {
-          "FIG-ROLLE-HOHEPRIESTER": "earnest",
-          "FIG-ROLLE-AELTESTER": "earnest"
-        },
         "back_side": "left",
         "before": true,
+        "mood": {
+          "FIG-GRUPPE-HOHEPRIESTER": "earnest",
+          "FIG-JESUS": "calm"
+        },
         "x": {
-          "FIG-ROLLE-AELTESTER": 26,
-          "FIG-ROLLE-HOHEPRIESTER": 80,
-          "FIG-JESUS": 156
+          "FIG-GRUPPE-HOHEPRIESTER": 54,
+          "FIG-JESUS": 140
         }
       }
     },
     {
       "n": 2,
-      "reference": "MAT.21.24-MAT.21.25",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-ROLLE-HOHEPRIESTER",
-        "FIG-ROLLE-AELTESTER"
-      ],
+      "reference": "MAT.21.25-MAT.21.27",
+      "figures": [],
       "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-HOHEPRIESTER",
+      "speech": [],
+      "action_de": "Die Hohepriester überlegen: Sagen wir «vom Himmel», fragt er, warum wir ihm nicht geglaubt haben; sagen wir «von Menschen», fürchten wir die Menge. Sie antworten: Wir wissen es nicht. Jesus: Auch ich sage euch nicht, in welcher Vollmacht ich das tue.",
+      "keywords": {
+        "de": "Auch ich sage euch nicht, in welcher Vollmacht ich das tue",
+        "gsw": "Au ich säg eu nöd, mit was für ere Vollmacht ich das mache"
+      },
+      "diagram": {
+        "visual": "switch",
+        "span": 2,
+        "speaker": "FIG-GRUPPE-HOHEPRIESTER",
+        "title": {
+          "de": "Wir wissen es nicht.",
+          "gsw": "Mir wüssed s nöd."
+        },
+        "cond": {
+          "a": {
+            "de": "Die Taufe des Johannes – vom Himmel oder von Menschen?",
+            "gsw": "D Taufi vom Johannes – vom Himel oder vo Mänsche?"
+          },
           "icons": [
-            "FIG-ZEICHEN-TAUFE",
-            "FIG-GOTT",
-            "FIG-ZEICHEN-VIELE",
+            "FIG-JOHANNES-TAEUFER",
             "FIG-ZEICHEN-FRAGEN"
           ]
-        }
-      ],
-      "action_de": "Jesus antwortet mit einer Gegenfrage: «Die Taufe des Johannes – woher war sie? Vom Himmel oder von Menschen?»",
-      "stage": {
-        "mood": {
-          "FIG-ROLLE-HOHEPRIESTER": "pensive",
-          "FIG-ROLLE-AELTESTER": "pensive",
-          "FIG-JESUS": "calm"
         },
-        "x": {
-          "FIG-JESUS": 36,
-          "FIG-ROLLE-HOHEPRIESTER": 104,
-          "FIG-ROLLE-AELTESTER": 150
-        }
-      }
-    },
-    {
-      "n": 3,
-      "reference": "MAT.21.25-MAT.21.26",
-      "figures": [
-        "FIG-ROLLE-HOHEPRIESTER",
-        "FIG-ROLLE-AELTESTER",
-        "FIG-GRUPPE-MENGE"
-      ],
-      "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-ROLLE-HOHEPRIESTER",
-          "to": "FIG-ROLLE-HOHEPRIESTER",
+        "yes": {
+          "a": {
+            "de": "Wenn wir sagen: «Vom Himmel», wird er sagen: «Warum habt ihr ihm dann nicht geglaubt?»",
+            "gsw": "Wänn mer säged: «Vom Himel», seit er: «Werum händ ir em dänn nöd glaubt?»"
+          },
           "icons": [
-            "FIG-GOTT",
+            "FIG-ZEICHEN-HIMMEL-OFFEN",
             "FIG-ZEICHEN-NICHT-GLAUBEN"
-          ],
-          "think": true
+          ]
         },
-        {
-          "from": "FIG-ROLLE-AELTESTER",
-          "to": "FIG-ROLLE-AELTESTER",
+        "no": {
+          "a": {
+            "de": "Wenn wir sagen: «Von Menschen», fürchten wir die Menge.",
+            "gsw": "Wänn mer säged: «Vo Mänsche», händ mer Angscht vor de Mängi."
+          },
           "icons": [
-            "FIG-GRUPPE-MENGE",
+            "FIG-ZEICHEN-MENSCHEN",
             "FIG-ZEICHEN-FURCHT"
-          ],
-          "think": true
-        }
-      ],
-      "action_de": "Sie überlegen untereinander: Sagen sie «vom Himmel», wird er fragen, warum sie Johannes nicht geglaubt haben; sagen sie «von Menschen», fürchten sie die Menge, denn alle halten Johannes für einen Propheten.",
-      "stage": {
-        "mood": {
-          "FIG-ROLLE-HOHEPRIESTER": "pensive",
-          "FIG-ROLLE-AELTESTER": "worried",
-          "FIG-GRUPPE-MENGE": "calm"
-        }
-      }
-    },
-    {
-      "n": 4,
-      "reference": "MAT.21.27",
-      "figures": [
-        "FIG-ROLLE-AELTESTER",
-        "FIG-ROLLE-HOHEPRIESTER",
-        "FIG-JESUS"
-      ],
-      "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-ROLLE-HOHEPRIESTER",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-ZEICHEN-NICHT-VERSTEHEN"
           ]
         },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-HOHEPRIESTER",
-          "icons": [
-            "FIG-ZEICHEN-VOLLMACHT",
-            "FIG-ZEICHEN-SCHWEIGEN"
-          ]
-        }
-      ],
-      "action_de": "Sie antworten Jesus: «Wir wissen es nicht.» Und er sagt zu ihnen: «Auch ich sage euch nicht, in welcher Vollmacht ich das tue.»",
-      "stage": {
-        "mood": {
-          "FIG-ROLLE-HOHEPRIESTER": "pensive",
-          "FIG-ROLLE-AELTESTER": "pensive",
-          "FIG-JESUS": "calm"
+        "yes_label": {
+          "de": "Himmel",
+          "gsw": "Himel"
         },
-        "x": {
-          "FIG-ROLLE-AELTESTER": 26,
-          "FIG-ROLLE-HOHEPRIESTER": 80,
-          "FIG-JESUS": 156
+        "no_label": {
+          "de": "Menschen",
+          "gsw": "Mänsche"
         }
       }
     }
   ],
   "actions_de": [
-    "Während Jesus im Tempel lehrt, treten die Hohepriester und die Ältesten des Volkes zu ihm und fragen: «In welcher Vollmacht tust du das? Und wer hat dir diese Vollmacht gegeben?»",
-    "Jesus antwortet mit einer Gegenfrage: «Die Taufe des Johannes – woher war sie? Vom Himmel oder von Menschen?»",
-    "Sie überlegen untereinander: Sagen sie «vom Himmel», wird er fragen, warum sie Johannes nicht geglaubt haben; sagen sie «von Menschen», fürchten sie die Menge, denn alle halten Johannes für einen Propheten.",
-    "Sie antworten Jesus: «Wir wissen es nicht.» Und er sagt zu ihnen: «Auch ich sage euch nicht, in welcher Vollmacht ich das tue.»"
+    "Die Hohepriester und Ältesten fragen Jesus im Tempel: In welcher Vollmacht tust du das? Jesus fragt zurück: Die Taufe des Johannes – woher war sie? Vom Himmel oder von Menschen?",
+    "Die Hohepriester überlegen: Sagen wir «vom Himmel», fragt er, warum wir ihm nicht geglaubt haben; sagen wir «von Menschen», fürchten wir die Menge. Sie antworten: Wir wissen es nicht. Jesus: Auch ich sage euch nicht, in welcher Vollmacht ich das tue."
   ],
   "captions_de": [
-    "Die Frage nach der Vollmacht: Ein Ältester und ein Hohepriester fragen Jesus, in welcher Vollmacht er handelt (Schriftrolle mit Krone, Fragezeichen).",
-    "Die Gegenfrage: Die Taufe des Johannes (Muschelschale mit Wasser) – vom Himmel oder von Menschen? (Strahlenkranz, Brustbilder im Schattenriss, Fragezeichen)",
-    "Sie überlegen (Denkblasen): «Vom Himmel» (Strahlenkranz) – dann haben wir ihm nicht geglaubt (skeptisches Gesicht); «von Menschen» – dann fürchten wir die Menge (Menge, erschrockenes Gesicht).",
-    "Keine Antwort: Wir wissen es nicht (graue Nebelwolke mit Fragezeichen); Jesus: Dann sage ich euch meine Vollmacht auch nicht (Schriftrolle mit Krone, Gesicht mit Finger vor dem Mund)."
+    "Vollmacht: Die Hohepriester fragen: «In welcher Vollmacht tust du das?» (Vollmacht, fragen); Jesus fragt zurück nach der Taufe des Johannes: «Vom Himmel oder von Menschen?» (Johannes der Täufer, taufen).",
+    "Weiche im Kopf der Fragenden (Bild Hohepriester, Blase «Wir wissen es nicht.»): Wenn wir sagen «Vom Himmel» (offener Himmel) → «Warum habt ihr ihm dann nicht geglaubt?» (nicht glauben); wenn wir sagen «Von Menschen» (Menschen) → wir fürchten die Menge (Furcht)."
   ],
-  "interpretation_note_de": "Hohepriester und Älteste des Volkes ([[MAT.21.23]]) sind je durch eine Figur vertreten; sie stehen für mehrere. «Vom Himmel» meint von Gott; dafür steht der Strahlenkranz. Ihre Überlegung ([[MAT.21.25-MAT.21.26]]) zeigen Denkblasen; dass Johannes als Prophet gilt, ist nicht gezeichnet.",
+  "interpretation_note_de": "Zwei Felder ([[MAT.21.23-MAT.21.27]]): Frage und Gegenfrage, dann die Überlegung der Hohepriester mit beiden Zweigen und ihre Antwort «Wir wissen es nicht»; Jesu Schlusswort steht im Stichwortband. Die Weiche ist eine Überlegung der Gegner, keine Lehre Jesu. Hohepriester und Älteste sind neutral gezeichnet.",
   "basis": [
     {
       "record": "TU-MAT-021-023-027",
       "field": "summary",
-      "fingerprint": "d5665cadcd679384"
+      "fingerprint": "c0c168f2cdb6ac5b"
     },
     {
       "record": "TRANS-MAT-021-001-046-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.21.23",
-      "fingerprint": "6a73a9e6c7ba83af"
+      "reference": "MAT.21.23-MAT.21.25",
+      "fingerprint": "11f6342fff0b7bc0"
     },
     {
       "record": "TRANS-MAT-021-001-046-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.21.24-MAT.21.25",
-      "fingerprint": "2f125dae00c7e0ee"
-    },
-    {
-      "record": "TRANS-MAT-021-001-046-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.21.25-MAT.21.26",
-      "fingerprint": "86a27cfe049556d3"
-    },
-    {
-      "record": "TRANS-MAT-021-001-046-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.21.27",
-      "fingerprint": "7bdb6b90834a7c44"
+      "reference": "MAT.21.25-MAT.21.27",
+      "fingerprint": "fad690201b054519"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -542,6 +488,335 @@
           "Die Gegenfrage: Die Taufe des Johannes (Muschelschale mit Wasser) – vom Himmel oder von Menschen? (Strahlenkranz, drei kleine Figuren, Fragezeichen)",
           "Sie überlegen (Denkblasen): «Vom Himmel» (Strahlenkranz) – dann haben wir ihm nicht geglaubt (graues Herz, rot durchgestrichen); «von Menschen» – dann fürchten wir die Menge (Menge, blauer Schweisstropfen).",
           "Keine Antwort: Wir wissen es nicht (graue Nebelwolke mit Fragezeichen); Jesus: Dann sage ich euch meine Vollmacht auch nicht (Zepter, Sprechblase mit drei Punkten, rot durchgestrichen)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.21.23",
+            "figures": [
+              "FIG-ROLLE-AELTESTER",
+              "FIG-ROLLE-HOHEPRIESTER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-HOHEPRIESTER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-VOLLMACHT",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Während Jesus im Tempel lehrt, treten die Hohepriester und die Ältesten des Volkes zu ihm und fragen: «In welcher Vollmacht tust du das? Und wer hat dir diese Vollmacht gegeben?»",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-HOHEPRIESTER": "earnest",
+                "FIG-ROLLE-AELTESTER": "earnest"
+              },
+              "back_side": "left",
+              "before": true,
+              "x": {
+                "FIG-ROLLE-AELTESTER": 26,
+                "FIG-ROLLE-HOHEPRIESTER": 80,
+                "FIG-JESUS": 156
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.21.24-MAT.21.25",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-HOHEPRIESTER",
+              "FIG-ROLLE-AELTESTER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-HOHEPRIESTER",
+                "icons": [
+                  "FIG-ZEICHEN-TAUFE",
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-VIELE",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus antwortet mit einer Gegenfrage: «Die Taufe des Johannes – woher war sie? Vom Himmel oder von Menschen?»",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-HOHEPRIESTER": "pensive",
+                "FIG-ROLLE-AELTESTER": "pensive",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-JESUS": 36,
+                "FIG-ROLLE-HOHEPRIESTER": 104,
+                "FIG-ROLLE-AELTESTER": 150
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.21.25-MAT.21.26",
+            "figures": [
+              "FIG-ROLLE-HOHEPRIESTER",
+              "FIG-ROLLE-AELTESTER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-HOHEPRIESTER",
+                "to": "FIG-ROLLE-HOHEPRIESTER",
+                "icons": [
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-NICHT-GLAUBEN"
+                ],
+                "think": true
+              },
+              {
+                "from": "FIG-ROLLE-AELTESTER",
+                "to": "FIG-ROLLE-AELTESTER",
+                "icons": [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-ZEICHEN-FURCHT"
+                ],
+                "think": true
+              }
+            ],
+            "action_de": "Sie überlegen untereinander: Sagen sie «vom Himmel», wird er fragen, warum sie Johannes nicht geglaubt haben; sagen sie «von Menschen», fürchten sie die Menge, denn alle halten Johannes für einen Propheten.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-HOHEPRIESTER": "pensive",
+                "FIG-ROLLE-AELTESTER": "worried",
+                "FIG-GRUPPE-MENGE": "calm"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.21.27",
+            "figures": [
+              "FIG-ROLLE-AELTESTER",
+              "FIG-ROLLE-HOHEPRIESTER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-HOHEPRIESTER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-NICHT-VERSTEHEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-HOHEPRIESTER",
+                "icons": [
+                  "FIG-ZEICHEN-VOLLMACHT",
+                  "FIG-ZEICHEN-SCHWEIGEN"
+                ]
+              }
+            ],
+            "action_de": "Sie antworten Jesus: «Wir wissen es nicht.» Und er sagt zu ihnen: «Auch ich sage euch nicht, in welcher Vollmacht ich das tue.»",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-HOHEPRIESTER": "pensive",
+                "FIG-ROLLE-AELTESTER": "pensive",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-ROLLE-AELTESTER": 26,
+                "FIG-ROLLE-HOHEPRIESTER": 80,
+                "FIG-JESUS": 156
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Während Jesus im Tempel lehrt, treten die Hohepriester und die Ältesten des Volkes zu ihm und fragen: «In welcher Vollmacht tust du das? Und wer hat dir diese Vollmacht gegeben?»",
+          "Jesus antwortet mit einer Gegenfrage: «Die Taufe des Johannes – woher war sie? Vom Himmel oder von Menschen?»",
+          "Sie überlegen untereinander: Sagen sie «vom Himmel», wird er fragen, warum sie Johannes nicht geglaubt haben; sagen sie «von Menschen», fürchten sie die Menge, denn alle halten Johannes für einen Propheten.",
+          "Sie antworten Jesus: «Wir wissen es nicht.» Und er sagt zu ihnen: «Auch ich sage euch nicht, in welcher Vollmacht ich das tue.»"
+        ],
+        "captions_de": [
+          "Die Frage nach der Vollmacht: Ein Ältester und ein Hohepriester fragen Jesus, in welcher Vollmacht er handelt (Schriftrolle mit Krone, Fragezeichen).",
+          "Die Gegenfrage: Die Taufe des Johannes (Muschelschale mit Wasser) – vom Himmel oder von Menschen? (Strahlenkranz, Brustbilder im Schattenriss, Fragezeichen)",
+          "Sie überlegen (Denkblasen): «Vom Himmel» (Strahlenkranz) – dann haben wir ihm nicht geglaubt (skeptisches Gesicht); «von Menschen» – dann fürchten wir die Menge (Menge, erschrockenes Gesicht).",
+          "Keine Antwort: Wir wissen es nicht (graue Nebelwolke mit Fragezeichen); Jesus: Dann sage ich euch meine Vollmacht auch nicht (Schriftrolle mit Krone, Gesicht mit Finger vor dem Mund)."
+        ],
+        "interpretation_note_de": "Hohepriester und Älteste des Volkes ([[MAT.21.23]]) sind je durch eine Figur vertreten; sie stehen für mehrere. «Vom Himmel» meint von Gott; dafür steht der Strahlenkranz. Ihre Überlegung ([[MAT.21.25-MAT.21.26]]) zeigen Denkblasen; dass Johannes als Prophet gilt, ist nicht gezeichnet.",
+        "basis": [
+          {
+            "record": "TU-MAT-021-023-027",
+            "field": "summary",
+            "fingerprint": "d5665cadcd679384"
+          },
+          {
+            "record": "TRANS-MAT-021-001-046-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.21.23",
+            "fingerprint": "6a73a9e6c7ba83af"
+          },
+          {
+            "record": "TRANS-MAT-021-001-046-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.21.24-MAT.21.25",
+            "fingerprint": "2f125dae00c7e0ee"
+          },
+          {
+            "record": "TRANS-MAT-021-001-046-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.21.25-MAT.21.26",
+            "fingerprint": "86a27cfe049556d3"
+          },
+          {
+            "record": "TRANS-MAT-021-001-046-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.21.27",
+            "fingerprint": "7bdb6b90834a7c44"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.21.23-MAT.21.25",
+            "figures": [
+              "FIG-GRUPPE-HOHEPRIESTER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-HOHEPRIESTER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-VOLLMACHT",
+                  "FIG-ZEICHEN-FRAGEN"
+                ],
+                "word": {
+                  "de": "In welcher Vollmacht tust du das?",
+                  "gsw": "Mit was für ere Vollmacht machsch du das?"
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-HOHEPRIESTER",
+                "icons": [
+                  "FIG-JOHANNES-TAEUFER",
+                  "FIG-ZEICHEN-TAUFE"
+                ],
+                "word": {
+                  "de": "Die Taufe des Johannes – woher war sie? Vom Himmel oder von Menschen?",
+                  "gsw": "D Taufi vom Johannes – vo wo isch si gsii? Vom Himel oder vo Mänsche?"
+                }
+              }
+            ],
+            "action_de": "Die Hohepriester und Ältesten fragen Jesus im Tempel: In welcher Vollmacht tust du das? Jesus fragt zurück: Die Taufe des Johannes – woher war sie? Vom Himmel oder von Menschen?",
+            "keywords": {
+              "de": "In welcher Vollmacht tust du das?",
+              "gsw": "Mit was für ere Vollmacht machsch du das?"
+            },
+            "stage": {
+              "back_side": "left",
+              "before": true,
+              "mood": {
+                "FIG-GRUPPE-HOHEPRIESTER": "earnest",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-HOHEPRIESTER": 54,
+                "FIG-JESUS": 140
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.21.25-MAT.21.27",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Die Hohepriester überlegen: Sagen wir «vom Himmel», fragt er, warum wir ihm nicht geglaubt haben; sagen wir «von Menschen», fürchten wir die Menge. Sie antworten: Wir wissen es nicht. Jesus: Auch ich sage euch nicht, in welcher Vollmacht ich das tue.",
+            "keywords": {
+              "de": "Auch ich sage euch nicht, in welcher Vollmacht ich das tue",
+              "gsw": "Au ich säg eu nöd, mit was für ere Vollmacht ich das mache"
+            },
+            "diagram": {
+              "visual": "switch",
+              "span": 2,
+              "speaker": "FIG-GRUPPE-HOHEPRIESTER",
+              "title": {
+                "de": "Wir wissen es nicht.",
+                "gsw": "Mir wüssed s nöd."
+              },
+              "cond": {
+                "a": {
+                  "de": "Die Taufe des Johannes – vom Himmel oder von Menschen?",
+                  "gsw": "D Taufi vom Johannes – vom Himel oder vo Mänsche?"
+                },
+                "icons": [
+                  "FIG-JOHANNES-TAEUFER",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              "yes": {
+                "a": {
+                  "de": "Wenn wir sagen: «Vom Himmel», wird er sagen: «Warum habt ihr ihm dann nicht geglaubt?»",
+                  "gsw": "Wänn mer säged: «Vom Himel», seit er: «Werum händ ir em dänn nöd glaubt?»"
+                },
+                "icons": [
+                  "FIG-ZEICHEN-HIMMEL-OFFEN",
+                  "FIG-ZEICHEN-NICHT-GLAUBEN"
+                ]
+              },
+              "no": {
+                "a": {
+                  "de": "Wenn wir sagen: «Von Menschen», fürchten wir die Menge.",
+                  "gsw": "Wänn mer säged: «Vo Mänsche», händ mer Angscht vor de Mängi."
+                },
+                "icons": [
+                  "FIG-ZEICHEN-MENSCHEN",
+                  "FIG-ZEICHEN-FURCHT"
+                ]
+              },
+              "yes_label": {
+                "de": "vom Himmel",
+                "gsw": "vom Himel"
+              },
+              "no_label": {
+                "de": "von Menschen",
+                "gsw": "vo Mänsche"
+              }
+            }
+          }
         ]
       }
     }

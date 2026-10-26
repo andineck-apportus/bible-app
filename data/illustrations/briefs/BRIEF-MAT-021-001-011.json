@@ -11,35 +11,57 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.21.1-MAT.21.3",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-ROLLE-JUENGER",
-        "FIG-ROLLE-JUENGER"
-      ],
+      "reference": "MAT.21.1-MAT.21.7",
+      "figures": [],
       "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-JUENGER",
-          "icons": [
-            "FIG-OBJ-ESEL",
-            "FIG-OBJ-ESEL",
-            "FIG-ZEICHEN-BRINGEN"
-          ]
-        }
-      ],
-      "action_de": "Bei Betfage am Ölberg sendet Jesus zwei Jünger ins Dorf: Dort finden sie eine angebundene Eselin und ein Fohlen; sie sollen sie losbinden und zu ihm bringen.",
-      "stage": {
-        "mood": {
-          "FIG-ROLLE-JUENGER": "calm"
-        }
+      "speech": [],
+      "action_de": "Jesus schickt zwei Jünger, eine Eselin und ihr Fohlen zu holen; das geschieht, damit erfüllt wird, was durch den Propheten gesagt ist: Siehe, dein König kommt zu dir, sanftmütig und reitend auf einer Eselin. Sie bringen die Tiere, und er setzt sich darauf.",
+      "keywords": {
+        "de": "damit erfüllt würde, was durch den Propheten gesagt ist",
+        "gsw": "damit erfüllt wird, was dur de Prophet gseit worden isch"
+      },
+      "diagram": {
+        "visual": "levels",
+        "span": 2,
+        "top_label": {
+          "de": "Der Prophet hat gesagt:",
+          "gsw": "De Prophet hät gseit:"
+        },
+        "bottom_label": {
+          "de": "Das ist geschehen:",
+          "gsw": "Das isch gscheh:"
+        },
+        "top": [
+          {
+            "a": {
+              "de": "«Siehe, dein König kommt zu dir, sanftmütig und reitend auf einer Eselin und auf einem Fohlen.»",
+              "gsw": "«Lueg, din König chunnt zu dir, sanftmüetig und rittet uf ere Eselin und uf eme Füli.»"
+            },
+            "icons": [
+              "FIG-OBJ-SCHRIFTROLLE",
+              "FIG-OBJ-KRONE",
+              "FIG-ZEICHEN-SANFTMUT"
+            ]
+          }
+        ],
+        "bottom": [
+          {
+            "a": {
+              "de": "Sie brachten die Eselin und das Fohlen und legten die Mäntel auf sie, und er setzte sich darauf.",
+              "gsw": "Si händ d Eselin und s Füli brocht und händ d Mäntel uf si gleit, und er hät sich druf gsetzt."
+            },
+            "icons": [
+              "FIG-OBJ-ESEL",
+              "FIG-JESUS"
+            ]
+          }
+        ]
       }
     },
     {
       "n": 2,
-      "reference": "MAT.21.6-MAT.21.9",
+      "reference": "MAT.21.8-MAT.21.9",
       "figures": [
         "FIG-JESUS",
         "FIG-GRUPPE-MENGE"
@@ -56,14 +78,19 @@
           "from": "FIG-GRUPPE-MENGE",
           "to": "FIG-JESUS",
           "icons": [
-            "FIG-DAVID",
-            "FIG-ZEICHEN-STAMMT-AUS",
-            "FIG-JESUS",
-            "FIG-ZEICHEN-SEGNEN"
-          ]
+            "FIG-ZEICHEN-PREISEN"
+          ],
+          "word": {
+            "de": "Hosanna dem Sohn Davids! Gesegnet sei, der kommt im Namen des Herrn!",
+            "gsw": "Hosanna em Sohn vom David! Gsägnet sig dä, wo chunnt im Name vom Herr!"
+          }
         }
       ],
-      "action_de": "Die Jünger bringen die Eselin und das Fohlen, und Jesus setzt sich darauf; die Menschen breiten Mäntel und Zweige auf dem Weg aus, und die Menschenmengen rufen: «Hosanna dem Sohn Davids! Gesegnet sei, der kommt im Namen des Herrn!»",
+      "action_de": "Jesus sitzt auf der Eselin und dem Fohlen; die Menge breitet Mäntel und Zweige auf dem Weg aus und ruft: Hosanna dem Sohn Davids! Gesegnet sei, der kommt im Namen des Herrn!",
+      "keywords": {
+        "de": "Hosanna dem Sohn Davids!",
+        "gsw": "Hosanna em Sohn vom David!"
+      },
       "stage": {
         "in": {
           "FIG-JESUS": "FIG-OBJ-ESEL"
@@ -88,7 +115,10 @@
           "FIG-OBJ-ZWEIG"
         ],
         "floor_x": {
-          "FIG-OBJ-ZWEIG": 70
+          "FIG-OBJ-ZWEIG": 74
+        },
+        "count": {
+          "FIG-OBJ-ZWEIG": 2
         }
       }
     },
@@ -108,58 +138,73 @@
           "from": "FIG-GRUPPE-VOLK",
           "to": "FIG-GRUPPE-MENGE",
           "icons": [
-            "FIG-JESUS",
             "FIG-ZEICHEN-FRAGEN"
-          ]
+          ],
+          "word": {
+            "de": "Wer ist dieser?",
+            "gsw": "Wer isch dä?"
+          }
         },
         {
           "from": "FIG-GRUPPE-MENGE",
           "to": "FIG-GRUPPE-VOLK",
           "icons": [
-            "FIG-JESUS",
-            "FIG-ROLLE-PROPHET"
-          ]
+            "FIG-ROLLE-PROPHET",
+            "FIG-JESUS"
+          ],
+          "word": {
+            "de": "Das ist der Prophet Jesus aus Nazaret in Galiläa.",
+            "gsw": "Das isch de Prophet Jesus vo Nazaret in Galiläa."
+          }
         }
       ],
-      "action_de": "Als er in Jerusalem einzieht, gerät die ganze Stadt in Aufruhr und fragt: «Wer ist dieser?» Die Menschenmengen sagen: «Das ist der Prophet Jesus aus Nazaret in Galiläa.»",
+      "action_de": "Als Jesus in Jerusalem einzieht, gerät die ganze Stadt in Aufruhr und fragt: Wer ist dieser? Die Mengen antworten: Das ist der Prophet Jesus aus Nazaret in Galiläa.",
+      "keywords": {
+        "de": "geriet die ganze Stadt in Aufruhr",
+        "gsw": "isch di ganz Stadt in Ufruer graate"
+      },
       "stage": {
+        "before": true,
+        "back_side": "left",
         "mood": {
           "FIG-GRUPPE-VOLK": "surprised",
           "FIG-GRUPPE-MENGE": "smile"
         },
-        "before": true,
-        "back_side": "left"
+        "x": {
+          "FIG-GRUPPE-VOLK": 50,
+          "FIG-GRUPPE-MENGE": 136
+        }
       }
     }
   ],
   "actions_de": [
-    "Bei Betfage am Ölberg sendet Jesus zwei Jünger ins Dorf: Dort finden sie eine angebundene Eselin und ein Fohlen; sie sollen sie losbinden und zu ihm bringen.",
-    "Die Jünger bringen die Eselin und das Fohlen, und Jesus setzt sich darauf; die Menschen breiten Mäntel und Zweige auf dem Weg aus, und die Menschenmengen rufen: «Hosanna dem Sohn Davids! Gesegnet sei, der kommt im Namen des Herrn!»",
-    "Als er in Jerusalem einzieht, gerät die ganze Stadt in Aufruhr und fragt: «Wer ist dieser?» Die Menschenmengen sagen: «Das ist der Prophet Jesus aus Nazaret in Galiläa.»"
+    "Jesus schickt zwei Jünger, eine Eselin und ihr Fohlen zu holen; das geschieht, damit erfüllt wird, was durch den Propheten gesagt ist: Siehe, dein König kommt zu dir, sanftmütig und reitend auf einer Eselin. Sie bringen die Tiere, und er setzt sich darauf.",
+    "Jesus sitzt auf der Eselin und dem Fohlen; die Menge breitet Mäntel und Zweige auf dem Weg aus und ruft: Hosanna dem Sohn Davids! Gesegnet sei, der kommt im Namen des Herrn!",
+    "Als Jesus in Jerusalem einzieht, gerät die ganze Stadt in Aufruhr und fragt: Wer ist dieser? Die Mengen antworten: Das ist der Prophet Jesus aus Nazaret in Galiläa."
   ],
   "captions_de": [
-    "Der Auftrag: Jesus sendet zwei Jünger, die Eselin und das Fohlen loszubinden und zu bringen (zwei Esel, gesprengte Kette, Pfeil).",
-    "Einzug: Jesus reitet auf dem Esel, Zweige liegen auf dem Weg; die Menschenmengen rufen: Hosanna dem Sohn Davids (David, dicker Pfeil, Jesus) – gesegnet, der kommt (segnende Hand; strahlendes Gesicht = Freude).",
-    "Wer ist dieser? Die Leute der Stadt (Stadtmauer mit Tor und Tempel hinter ihnen) fragen nach Jesus (Jesus, Fragezeichen); die Menschenmengen antworten: Jesus, der Prophet (Jesus, Prophet im dunklen Mantel)."
+    "Zwei Ebenen: oben das Prophetenwort «Siehe, dein König kommt zu dir, sanftmütig und reitend auf einer Eselin» (Schriftrolle, Krone, Sanftmut); unten das Ereignis: Die Jünger bringen die Eselin und das Fohlen, Jesus setzt sich darauf (Esel, Jesus).",
+    "Einzug: Jesus reitet ein (Esel); die Menge mit Zweigen ruft: «Hosanna dem Sohn Davids!» (preisen; Freude).",
+    "Wer ist dieser? Vor Jerusalem fragen die Leute der Stadt (fragen); die Menge antwortet: «Das ist der Prophet Jesus aus Nazaret in Galiläa.» (Prophet, Jesus)."
   ],
-  "interpretation_note_de": "Matthäus nennt zwei Tiere, die Eselin und ihr Fohlen ([[MAT.21.2]], [[MAT.21.7]]), wie im Prophetenwort ([[ZEC.9.9]]); das Bild zeigt einen Esel. Die Mäntel auf den Tieren sind nicht gezeichnet, ein Mantel und Zweige liegen auf dem Weg ([[MAT.21.8]]); es sind keine Palmzweige. «Sohn Davids» ist mit David, dem Pfeil «stammt von» und Jesus gezeigt. Das Erfüllungszitat ([[MAT.21.4-MAT.21.5]]) und das Wort «Der Herr braucht sie» ([[MAT.21.3]]) sind nicht gezeichnet.",
+  "interpretation_note_de": "Drei Felder ([[MAT.21.1-MAT.21.11]]): das Erfüllungszitat, das der Text selbst setzt, als zwei Ebenen (Prophetenwort oben, Ereignis unten), der Einzug mit Hosanna, die Frage der Stadt. Matthäus nennt zwei Tiere, die Eselin und ihr Fohlen; die Szene zeigt einen Esel.",
   "basis": [
     {
       "record": "TU-MAT-021-001-011",
       "field": "summary",
-      "fingerprint": "dbd5468be222d27e"
+      "fingerprint": "159348828e09fb44"
     },
     {
       "record": "TRANS-MAT-021-001-046-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.21.1-MAT.21.3",
-      "fingerprint": "a3d1f243b3a91405"
+      "reference": "MAT.21.1-MAT.21.7",
+      "fingerprint": "83960804595189a1"
     },
     {
       "record": "TRANS-MAT-021-001-046-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.21.6-MAT.21.9",
-      "fingerprint": "944e0d1476a4c38c"
+      "reference": "MAT.21.8-MAT.21.9",
+      "fingerprint": "89683464e6ad617e"
     },
     {
       "record": "TRANS-MAT-021-001-046-DE-WORKING",
@@ -169,7 +214,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -452,6 +497,173 @@
           "Einzug: Jesus reitet auf dem Esel, Zweige liegen auf dem Weg; die Menschenmengen rufen: Hosanna dem Sohn Davids (David, dicker Pfeil, Jesus) – gesegnet, der kommt (segnende Hand; Funken = Freude).",
           "Wer ist dieser? Die Leute der Stadt (Stadtmauer mit Tor und Tempel hinter ihnen) fragen nach Jesus (Jesus, Fragezeichen); die Menschenmengen antworten: Jesus, der Prophet (Jesus, Prophet im dunklen Mantel)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.21.1-MAT.21.3",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-JUENGER",
+              "FIG-ROLLE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-ESEL",
+                  "FIG-OBJ-ESEL",
+                  "FIG-ZEICHEN-BRINGEN"
+                ]
+              }
+            ],
+            "action_de": "Bei Betfage am Ölberg sendet Jesus zwei Jünger ins Dorf: Dort finden sie eine angebundene Eselin und ein Fohlen; sie sollen sie losbinden und zu ihm bringen.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-JUENGER": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.21.6-MAT.21.9",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-ESEL",
+              "FIG-OBJ-ZWEIG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-DAVID",
+                  "FIG-ZEICHEN-STAMMT-AUS",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-SEGNEN"
+                ]
+              }
+            ],
+            "action_de": "Die Jünger bringen die Eselin und das Fohlen, und Jesus setzt sich darauf; die Menschen breiten Mäntel und Zweige auf dem Weg aus, und die Menschenmengen rufen: «Hosanna dem Sohn Davids! Gesegnet sei, der kommt im Namen des Herrn!»",
+            "stage": {
+              "in": {
+                "FIG-JESUS": "FIG-OBJ-ESEL"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.44,
+                  0.1
+                ]
+              },
+              "big_side": "left",
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-GRUPPE-MENGE"
+                ]
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "delight",
+                "FIG-JESUS": "smile"
+              },
+              "behind": [
+                "FIG-OBJ-ZWEIG"
+              ],
+              "floor_x": {
+                "FIG-OBJ-ZWEIG": 70
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.21.10-MAT.21.11",
+            "figures": [
+              "FIG-GRUPPE-VOLK",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-JERUSALEM"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-VOLK",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-GRUPPE-VOLK",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-PROPHET"
+                ]
+              }
+            ],
+            "action_de": "Als er in Jerusalem einzieht, gerät die ganze Stadt in Aufruhr und fragt: «Wer ist dieser?» Die Menschenmengen sagen: «Das ist der Prophet Jesus aus Nazaret in Galiläa.»",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-VOLK": "surprised",
+                "FIG-GRUPPE-MENGE": "smile"
+              },
+              "before": true,
+              "back_side": "left"
+            }
+          }
+        ],
+        "actions_de": [
+          "Bei Betfage am Ölberg sendet Jesus zwei Jünger ins Dorf: Dort finden sie eine angebundene Eselin und ein Fohlen; sie sollen sie losbinden und zu ihm bringen.",
+          "Die Jünger bringen die Eselin und das Fohlen, und Jesus setzt sich darauf; die Menschen breiten Mäntel und Zweige auf dem Weg aus, und die Menschenmengen rufen: «Hosanna dem Sohn Davids! Gesegnet sei, der kommt im Namen des Herrn!»",
+          "Als er in Jerusalem einzieht, gerät die ganze Stadt in Aufruhr und fragt: «Wer ist dieser?» Die Menschenmengen sagen: «Das ist der Prophet Jesus aus Nazaret in Galiläa.»"
+        ],
+        "captions_de": [
+          "Der Auftrag: Jesus sendet zwei Jünger, die Eselin und das Fohlen loszubinden und zu bringen (zwei Esel, gesprengte Kette, Pfeil).",
+          "Einzug: Jesus reitet auf dem Esel, Zweige liegen auf dem Weg; die Menschenmengen rufen: Hosanna dem Sohn Davids (David, dicker Pfeil, Jesus) – gesegnet, der kommt (segnende Hand; strahlendes Gesicht = Freude).",
+          "Wer ist dieser? Die Leute der Stadt (Stadtmauer mit Tor und Tempel hinter ihnen) fragen nach Jesus (Jesus, Fragezeichen); die Menschenmengen antworten: Jesus, der Prophet (Jesus, Prophet im dunklen Mantel)."
+        ],
+        "interpretation_note_de": "Matthäus nennt zwei Tiere, die Eselin und ihr Fohlen ([[MAT.21.2]], [[MAT.21.7]]), wie im Prophetenwort ([[ZEC.9.9]]); das Bild zeigt einen Esel. Die Mäntel auf den Tieren sind nicht gezeichnet, ein Mantel und Zweige liegen auf dem Weg ([[MAT.21.8]]); es sind keine Palmzweige. «Sohn Davids» ist mit David, dem Pfeil «stammt von» und Jesus gezeigt. Das Erfüllungszitat ([[MAT.21.4-MAT.21.5]]) und das Wort «Der Herr braucht sie» ([[MAT.21.3]]) sind nicht gezeichnet.",
+        "basis": [
+          {
+            "record": "TU-MAT-021-001-011",
+            "field": "summary",
+            "fingerprint": "dbd5468be222d27e"
+          },
+          {
+            "record": "TRANS-MAT-021-001-046-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.21.1-MAT.21.3",
+            "fingerprint": "a3d1f243b3a91405"
+          },
+          {
+            "record": "TRANS-MAT-021-001-046-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.21.6-MAT.21.9",
+            "fingerprint": "944e0d1476a4c38c"
+          },
+          {
+            "record": "TRANS-MAT-021-001-046-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.21.10-MAT.21.11",
+            "fingerprint": "1ce182d07904e79f"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

@@ -1,0 +1,152 @@
+{
+ "id": "CORE-MAT-021-012-017",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.21.12-MAT.21.17",
+ "target": "TU-MAT-021-012-017",
+ "core_de": "Im Tempel treibt Jesus die Verkäufer und Käufer hinaus, stösst die Tische der Geldwechsler um und sagt: «Mein Haus soll ein Haus des Gebets heissen. Ihr aber macht es zu einer Räuberhöhle»; er heilt Blinde und Lahme, die Kinder rufen «Hosanna dem Sohn Davids!», und den empörten Hohepriestern und Schriftgelehrten antwortet er mit dem Schriftwort: «Aus dem Mund von kleinen Kindern und Säuglingen hast du dir Lob bereitet.»",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Tempel: Austreibung – Wort – Heilung – Lob der Kinder – Empörung – Antwort",
+    "range": "MAT.21.12-MAT.21.17",
+    "elements": [
+     {
+      "label": "Austreibung; Tische und Sitze umgestossen",
+      "ref": "MAT.21.12",
+      "role": "Handlung"
+     },
+     {
+      "label": "Haus des Gebets ↔ Räuberhöhle",
+      "ref": "MAT.21.13",
+      "role": "Wort",
+      "child": "s2"
+     },
+     {
+      "label": "Blinde und Lahme kommen; er heilt sie",
+      "ref": "MAT.21.14",
+      "role": "Heilung"
+     },
+     {
+      "label": "Die Kinder rufen «Hosanna dem Sohn Davids!»; Hohepriester und Schriftgelehrte empören sich",
+      "ref": "MAT.21.15-MAT.21.16",
+      "role": "Widerspruch"
+     },
+     {
+      "label": "«Aus dem Mund von kleinen Kindern und Säuglingen hast du dir Lob bereitet»; er geht nach Betanien",
+      "ref": "MAT.21.16-MAT.21.17",
+      "role": "Antwort"
+     }
+    ],
+    "features": {
+     "crossref": [
+      {
+       "ref": "PSA.8.2",
+       "kind": "Zitat"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "Haus des Gebets ↔ Räuberhöhle",
+    "range": "MAT.21.13",
+    "elements": [
+     {
+      "label": "Es steht geschrieben: Mein Haus soll ein Haus des Gebets heissen",
+      "ref": "MAT.21.13",
+      "role": "geschrieben"
+     },
+     {
+      "label": "Ihr aber macht es zu einer Räuberhöhle",
+      "ref": "MAT.21.13",
+      "role": "ihr aber"
+     }
+    ],
+    "features": {
+     "crossref": [
+      {
+       "ref": "ISA.56.7",
+       "kind": "Zitat"
+      },
+      {
+       "ref": "JER.7.11",
+       "kind": "Bezug"
+      }
+     ]
+    },
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.21.12-MAT.21.13",
+   "text_de": "Jesus treibt alle hinaus, die im Tempel verkauften und kauften, stösst die Tische der Geldwechsler und die Sitze der Taubenverkäufer um: «Es steht geschrieben: ‹Mein Haus soll ein Haus des Gebets heissen.› Ihr aber macht es zu einer Räuberhöhle.»",
+   "reason_de": "Handlung und Wort im Gegensatz (Kriterien 1, 2 und 4).",
+   "recognition_de": "Umgestossene Tische; Haus des Gebets ↔ Räuberhöhle.",
+   "keywords": [
+    "die Tische der Geldwechsler",
+    "Mein Haus soll ein Haus des Gebets heissen",
+    "Ihr aber macht es zu einer Räuberhöhle"
+   ]
+  },
+  {
+   "reference": "MAT.21.14-MAT.21.16",
+   "text_de": "Blinde und Lahme kommen im Tempel zu ihm, und er heilt sie; die Kinder rufen «Hosanna dem Sohn Davids!»; die Hohepriester und Schriftgelehrten empören sich: «Hörst du, was diese sagen?» – «Ja. Habt ihr nie gelesen: ‹Aus dem Mund von kleinen Kindern und Säuglingen hast du dir Lob bereitet›?»",
+   "reason_de": "Heilung, Lob und Widerspruch (Kriterium 2).",
+   "recognition_de": "Kinder rufen Hosanna; Jesus antwortet den Hohepriestern.",
+   "keywords": [
+    "er heilte sie",
+    "Hosanna dem Sohn Davids!",
+    "Aus dem Mund von kleinen Kindern und Säuglingen hast du dir Lob bereitet"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Übernachtung in Betanien (21,17) – Übergang"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-ROLLE-HAENDLER",
+  "FIG-GRUPPE-KRANKE",
+  "FIG-GRUPPE-KINDER",
+  "FIG-GRUPPE-HOHEPRIESTER",
+  "FIG-GRUPPE-SCHRIFTGELEHRTE"
+ ],
+ "places": [
+  "FIG-ORT-TEMPEL"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.21.12-MAT.21.17",
+   "fingerprint": "f8b6465b6c31e977"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mt 19–28 und Buch nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; keine fachliche Prüfung durch eine Person",
+  "result": "bestanden",
+  "summary_de": "Austreibung, Haus des Gebets ↔ Räuberhöhle, Heilung, Lob der Kinder, Antwort mit Ps 8.",
+  "changes_de": []
+ }
+}

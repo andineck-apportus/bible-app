@@ -14,35 +14,67 @@
       "reference": "MAT.26.1-MAT.26.16",
       "figures": [
         "FIG-ROLLE-FRAU",
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-JUDAS-ISKARIOT",
+        "FIG-GRUPPE-HOHEPRIESTER"
       ],
       "objects": [
-        "FIG-ORT-HAUS",
-        "FIG-OBJ-SALBGEFAESS"
+        "FIG-OBJ-SALBGEFAESS",
+        "FIG-OBJ-MUENZEN"
       ],
       "signs": [
         "FIG-ZEICHEN-SALBUNG"
       ],
-      "speech": [],
-      "action_de": "In Betanien giesst eine Frau Jesus kostbares Salböl über den Kopf; er deutet es als Vorbereitung für sein Begräbnis.",
+      "speech": [
+        {
+          "from": "FIG-JUDAS-ISKARIOT",
+          "to": "FIG-GRUPPE-HOHEPRIESTER",
+          "icons": [
+            "FIG-OBJ-MUENZEN",
+            "FIG-ZEICHEN-AUSLIEFERN"
+          ],
+          "word": {
+            "de": "Was wollt ihr mir geben? Dann werde ich ihn euch ausliefern.",
+            "gsw": "Was wänd ir mir gää? Dänn lifere ich en eu us."
+          }
+        }
+      ],
+      "action_de": "In Betanien salbt eine Frau Jesus für sein Begräbnis; Judas geht zu den Hohepriestern, die ihm dreissig Silberstücke abwägen, damit er Jesus ausliefert.",
+      "keywords": {
+        "de": "dreissig Silberstücke",
+        "gsw": "driissg Silberstück"
+      },
+      "names": {
+        "FIG-JUDAS-ISKARIOT": {
+          "de": "Judas",
+          "gsw": "Judas"
+        }
+      },
       "stage": {
+        "split": 2,
         "hold": {
-          "FIG-ROLLE-FRAU": "FIG-OBJ-SALBGEFAESS"
+          "FIG-ROLLE-FRAU": "FIG-OBJ-SALBGEFAESS",
+          "FIG-GRUPPE-HOHEPRIESTER": "FIG-OBJ-MUENZEN"
         },
         "at": {
           "FIG-ZEICHEN-SALBUNG": "FIG-JESUS"
         },
-        "mood": {
-          "FIG-ROLLE-FRAU": "calm"
-        },
         "pose": {
           "FIG-JESUS": "sit"
         },
-        "x": {
-          "FIG-ROLLE-FRAU": 48,
-          "FIG-JESUS": 86
+        "mood": {
+          "FIG-ROLLE-FRAU": "calm",
+          "FIG-JESUS": "calm",
+          "FIG-JUDAS-ISKARIOT": "earnest",
+          "FIG-GRUPPE-HOHEPRIESTER": "earnest"
         },
-        "back_side": "right"
+        "x": {
+          "FIG-ROLLE-FRAU": 22,
+          "FIG-JESUS": 60,
+          "FIG-JUDAS-ISKARIOT": 118,
+          "FIG-GRUPPE-HOHEPRIESTER": 164
+        },
+        "trenner": true
       }
     },
     {
@@ -50,7 +82,8 @@
       "reference": "MAT.26.17-MAT.26.35",
       "figures": [
         "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF"
+        "FIG-PETRUS",
+        "FIG-GRUPPE-JUENGER"
       ],
       "objects": [
         "FIG-OBJ-BROT",
@@ -60,24 +93,61 @@
       "speech": [
         {
           "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
+          "to": "FIG-GRUPPE-JUENGER",
           "icons": [
-            "FIG-OBJ-BROT",
-            "FIG-OBJ-BECHER-VOLL",
-            "FIG-JESUS",
-            "FIG-ZEICHEN-VIELE"
-          ]
+            "FIG-OBJ-BROT"
+          ],
+          "word": {
+            "de": "Nehmt, esst! Das ist mein Leib.",
+            "gsw": "Nämed, ässed! Das isch min Liib."
+          }
+        },
+        {
+          "from": "FIG-PETRUS",
+          "to": "FIG-JESUS",
+          "icons": [
+            "FIG-ZEICHEN-VERLEUGNEN",
+            "FIG-ZEICHEN-NICHT"
+          ],
+          "word": {
+            "de": "Selbst wenn ich mit dir sterben müsste, werde ich dich gewiss nicht verleugnen!",
+            "gsw": "Au wänn ich mit dir sterbe müesst, ich wirde dich sicher nöd verleugne!"
+          }
         }
       ],
-      "action_de": "Beim Passamahl gibt Jesus den Jüngern Brot und Becher als seinen Leib und sein Blut des Bundes.",
+      "action_de": "Beim Passamahl kündigt Jesus an, dass einer ihn ausliefern wird; er gibt den Jüngern Brot und Becher: Nehmt, esst! Das ist mein Leib. Petrus beteuert, er werde ihn nicht verleugnen.",
+      "keywords": {
+        "de": "Nehmt, esst! Das ist mein Leib",
+        "gsw": "Nämed, ässed! Das isch min Liib"
+      },
+      "names": {
+        "FIG-PETRUS": {
+          "de": "Petrus",
+          "gsw": "Petrus"
+        }
+      },
       "stage": {
         "hold": {
           "FIG-JESUS": "FIG-OBJ-BROT"
         },
+        "arrows": [
+          [
+            "FIG-JESUS",
+            "FIG-GRUPPE-JUENGER",
+            "act"
+          ]
+        ],
+        "night": true,
         "mood": {
-          "FIG-GRUPPE-ZWOELF": "pensive"
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-JUENGER": "pensive",
+          "FIG-PETRUS": "determined"
         },
-        "night": true
+        "x": {
+          "FIG-JESUS": 34,
+          "FIG-PETRUS": 94,
+          "FIG-GRUPPE-JUENGER": 154
+        }
       }
     },
     {
@@ -90,31 +160,46 @@
       ],
       "objects": [
         "FIG-ORT-GARTEN",
-        "FIG-OBJ-FESSEL"
+        "FIG-OBJ-SCHWERT"
       ],
       "signs": [
-        "FIG-ZEICHEN-KUSS"
+        "FIG-ZEICHEN-KUSS",
+        "FIG-ZEICHEN-AUSLIEFERN"
       ],
-      "speech": [],
-      "action_de": "In Getsemani betet Jesus, während die Jünger schlafen; Judas liefert ihn mit einem Kuss aus.",
+      "speech": [
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-GOTT",
+          "icons": [
+            "FIG-ZEICHEN-WILLE-GOTTES"
+          ],
+          "think": true,
+          "word": {
+            "de": "Doch nicht, wie ich will, sondern wie du willst.",
+            "gsw": "Aber nöd, wie ich wott, sondern wie du wottsch."
+          }
+        }
+      ],
+      "action_de": "In Getsemani betet Jesus: Doch nicht, wie ich will, sondern wie du willst; dann kommt Judas mit einer bewaffneten Menge und küsst Jesus, und sie ergreifen ihn.",
+      "keywords": {
+        "de": "Doch nicht, wie ich will, sondern wie du willst",
+        "gsw": "Aber nöd, wie ich wott, sondern wie du wottsch"
+      },
+      "names": {
+        "FIG-JUDAS-ISKARIOT": {
+          "de": "Judas",
+          "gsw": "Judas"
+        }
+      },
       "stage": {
         "hold": {
-          "FIG-JESUS": "FIG-OBJ-FESSEL"
+          "FIG-GRUPPE-MENGE": "FIG-OBJ-SCHWERT"
         },
-        "mood": {
-          "FIG-GRUPPE-MENGE": "earnest",
-          "FIG-JUDAS-ISKARIOT": "earnest",
-          "FIG-JESUS": "calm"
-        },
-        "x": {
-          "FIG-GRUPPE-MENGE": 34,
-          "FIG-JESUS": 98,
-          "FIG-JUDAS-ISKARIOT": 150
-        },
-        "back_side": "left",
-        "before": true,
         "beside": {
           "FIG-ZEICHEN-KUSS": "FIG-JUDAS-ISKARIOT"
+        },
+        "at": {
+          "FIG-ZEICHEN-AUSLIEFERN": "FIG-JESUS"
         },
         "arrows": [
           [
@@ -123,79 +208,114 @@
             "act"
           ]
         ],
-        "night": true
+        "back_side": "left",
+        "before": true,
+        "night": true,
+        "mood": {
+          "FIG-GRUPPE-MENGE": "angry",
+          "FIG-JESUS": "calm",
+          "FIG-JUDAS-ISKARIOT": "earnest"
+        },
+        "x": {
+          "FIG-GRUPPE-MENGE": 34,
+          "FIG-JESUS": 98,
+          "FIG-JUDAS-ISKARIOT": 150
+        }
       }
     },
     {
       "n": 4,
       "reference": "MAT.26.57-MAT.26.75",
       "figures": [
+        "FIG-JESUS",
+        "FIG-KAJAFAS",
+        "FIG-GRUPPE-HOHER-RAT",
         "FIG-PETRUS"
       ],
       "objects": [
         "FIG-OBJ-HAHN"
       ],
       "signs": [
-        "FIG-ZEICHEN-TRAUER",
-        "FIG-ZEICHEN-VERLEUGNEN",
-        "FIG-ZEICHEN-SPRECHEN"
+        "FIG-ZEICHEN-TRAUER"
       ],
-      "speech": [],
-      "action_de": "Vor dem Hohen Rat wird Jesus verurteilt; Petrus verleugnet ihn dreimal, und als der Hahn kräht, weint er bitterlich.",
+      "speech": [
+        {
+          "from": "FIG-GRUPPE-HOHER-RAT",
+          "to": "FIG-KAJAFAS",
+          "icons": [
+            "FIG-ZEICHEN-GERICHT",
+            "FIG-ZEICHEN-TOD"
+          ],
+          "word": {
+            "de": "Er hat den Tod verdient!",
+            "gsw": "Er hät de Tod verdient!"
+          }
+        }
+      ],
+      "action_de": "Vor dem Hohen Rat sagt Jesus auf die Frage, ob er der Christus sei: Du hast es gesagt; der Rat urteilt: Er hat den Tod verdient! Im Hof verleugnet Petrus Jesus dreimal; ein Hahn kräht, und er weint bitterlich.",
+      "keywords": {
+        "de": "Er hat den Tod verdient!",
+        "gsw": "Er hät de Tod verdient!"
+      },
+      "names": {
+        "FIG-KAJAFAS": {
+          "de": "Kajafas",
+          "gsw": "Kajafas"
+        },
+        "FIG-PETRUS": {
+          "de": "Petrus",
+          "gsw": "Petrus"
+        }
+      },
       "stage": {
+        "split": 3,
         "signs_who": {
           "FIG-ZEICHEN-TRAUER": [
             "FIG-PETRUS"
           ]
         },
+        "night": true,
         "mood": {
-          "FIG-PETRUS": "worried"
+          "FIG-JESUS": "calm",
+          "FIG-KAJAFAS": "angry",
+          "FIG-GRUPPE-HOHER-RAT": "angry",
+          "FIG-PETRUS": "pain"
         },
         "x": {
-          "FIG-PETRUS": 124
+          "FIG-JESUS": 18,
+          "FIG-KAJAFAS": 56,
+          "FIG-GRUPPE-HOHER-RAT": 96,
+          "FIG-PETRUS": 162
         },
         "floor_x": {
-          "FIG-OBJ-HAHN": 40
+          "FIG-OBJ-HAHN": 134
         },
-        "count": {
-          "FIG-ZEICHEN-VERLEUGNEN": 3
-        },
-        "night": true,
-        "at": {
-          "FIG-ZEICHEN-SPRECHEN": "FIG-OBJ-HAHN"
-        },
-        "arrows": [
-          [
-            "FIG-OBJ-HAHN",
-            "FIG-PETRUS",
-            "act"
-          ]
-        ]
+        "trenner": true
       }
     }
   ],
   "actions_de": [
-    "In Betanien giesst eine Frau Jesus kostbares Salböl über den Kopf; er deutet es als Vorbereitung für sein Begräbnis.",
-    "Beim Passamahl gibt Jesus den Jüngern Brot und Becher als seinen Leib und sein Blut des Bundes.",
-    "In Getsemani betet Jesus, während die Jünger schlafen; Judas liefert ihn mit einem Kuss aus.",
-    "Vor dem Hohen Rat wird Jesus verurteilt; Petrus verleugnet ihn dreimal, und als der Hahn kräht, weint er bitterlich."
+    "In Betanien salbt eine Frau Jesus für sein Begräbnis; Judas geht zu den Hohepriestern, die ihm dreissig Silberstücke abwägen, damit er Jesus ausliefert.",
+    "Beim Passamahl kündigt Jesus an, dass einer ihn ausliefern wird; er gibt den Jüngern Brot und Becher: Nehmt, esst! Das ist mein Leib. Petrus beteuert, er werde ihn nicht verleugnen.",
+    "In Getsemani betet Jesus: Doch nicht, wie ich will, sondern wie du willst; dann kommt Judas mit einer bewaffneten Menge und küsst Jesus, und sie ergreifen ihn.",
+    "Vor dem Hohen Rat sagt Jesus auf die Frage, ob er der Christus sei: Du hast es gesagt; der Rat urteilt: Er hat den Tod verdient! Im Hof verleugnet Petrus Jesus dreimal; ein Hahn kräht, und er weint bitterlich."
   ],
   "captions_de": [
-    "Salbung: Eine Frau salbt Jesus in Betanien (Gefäss in ihrer Hand; Ölhorn mit goldenem Tropfen über Jesus).",
-    "Mahl: Brot und Becher – Jesus für viele (Brot, Becher, Jesus, Menge).",
-    "Kuss → Festnahme: In Getsemani küsst Judas Jesus (Lippen neben Judas); darauf ergreift ihn die Menge (Pfeil von der Menge zu Jesus; gefesselte Hände).",
-    "Hahnenschrei → Tränen: Petrus hat Jesus dreimal verleugnet; der Hahn kräht (links, Schallbögen beim Hahn), Petrus erinnert sich (Pfeil vom Hahn zu ihm) und weint (Träne)."
+    "Salbung und Verrat: links salbt die Frau Jesus (Salbgefäss, Salbung); rechts hinter der gestrichelten Linie fragt Judas (Name) die Hohepriester: «Was wollt ihr mir geben? Dann werde ich ihn euch ausliefern.» (Münzen, ausliefern).",
+    "Das Mahl: Jesus mit Brot und Becher bei den Jüngern: «Nehmt, esst! Das ist mein Leib.» (Brot); Petrus (Name): «Selbst wenn ich mit dir sterben müsste, werde ich dich gewiss nicht verleugnen!» (verleugnen, Verbotszeichen).",
+    "Gebet und Kuss: In der Nacht im Garten sagt Jesus: «Doch nicht, wie ich will, sondern wie du willst.» (Wille Gottes); Judas (Name) küsst ihn (Kuss), die Menge mit Schwert greift zu (ausliefern).",
+    "Urteil und Verleugnung: links Jesus vor Kajafas (Name), der Hohe Rat antwortet ihm: «Er hat den Tod verdient!» (Gericht, Tod); rechts hinter der gestrichelten Linie weint Petrus, ein Hahn kräht (Hahn, Trauer)."
   ],
-  "interpretation_note_de": "Vier Hauptstationen des Kapitels: Salbung, Mahl, Gefangennahme, Verleugnung. Der Plan der Hohepriester, der Handel des Judas und das Verhör vor dem Hohen Rat sind in den Abschnittsbildern gezeigt.",
+  "interpretation_note_de": "Vier Comic-Szenen für zehn Abschnitte ([[MAT.26.1-MAT.26.75]]): Feld 1 bündelt den Plan der Hohepriester, die Salbung und das Angebot des Judas (links Salbung, rechts Judas bei den Hohepriestern; [[MAT.26.1-MAT.26.16]]), Feld 2 das Mahl mit Ankündigung der Auslieferung, Brot und Becher und der Beteuerung des Petrus ([[MAT.26.17-MAT.26.35]]), Feld 3 Getsemani und die Gefangennahme ([[MAT.26.36-MAT.26.56]]; das Gebet steht als Gedankenwolke, weil der Kuss danach geschieht), Feld 4 das Urteil des Hohen Rates und die Verleugnung (links Kajafas vor Jesus, rechts der weinende Petrus; [[MAT.26.57-MAT.26.75]]). Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-MAT-026",
       "field": "summary",
-      "fingerprint": "8a7bde2c90f9b8bb"
+      "fingerprint": "cfd0dbdde2f67920"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -721,6 +841,790 @@
                   "act"
                 ]
               ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-MAT-026",
+            "field": "summary",
+            "fingerprint": "8a7bde2c90f9b8bb"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.26.1-MAT.26.16",
+            "figures": [
+              "FIG-ROLLE-FRAU",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS",
+              "FIG-OBJ-SALBGEFAESS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SALBUNG"
+            ],
+            "speech": [],
+            "action_de": "In Betanien giesst eine Frau Jesus kostbares Salböl über den Kopf; er deutet es als Vorbereitung für sein Begräbnis.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-FRAU": "FIG-OBJ-SALBGEFAESS"
+              },
+              "at": {
+                "FIG-ZEICHEN-SALBUNG": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-ROLLE-FRAU": "calm"
+              },
+              "pose": {
+                "FIG-JESUS": "sit"
+              },
+              "x": {
+                "FIG-ROLLE-FRAU": 48,
+                "FIG-JESUS": 86
+              },
+              "back_side": "right"
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.26.17-MAT.26.35",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT",
+              "FIG-OBJ-BECHER-VOLL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-OBJ-BROT",
+                  "FIG-OBJ-BECHER-VOLL",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-VIELE"
+                ]
+              }
+            ],
+            "action_de": "Beim Passamahl gibt Jesus den Jüngern Brot und Becher als seinen Leib und sein Blut des Bundes.",
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROT"
+              },
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "pensive"
+              },
+              "night": true
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.26.36-MAT.26.56",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS",
+              "FIG-JUDAS-ISKARIOT"
+            ],
+            "objects": [
+              "FIG-ORT-GARTEN",
+              "FIG-OBJ-FESSEL"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-KUSS"
+            ],
+            "speech": [],
+            "action_de": "In Getsemani betet Jesus, während die Jünger schlafen; Judas liefert ihn mit einem Kuss aus.",
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-FESSEL"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-JUDAS-ISKARIOT": "earnest",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 34,
+                "FIG-JESUS": 98,
+                "FIG-JUDAS-ISKARIOT": 150
+              },
+              "back_side": "left",
+              "before": true,
+              "beside": {
+                "FIG-ZEICHEN-KUSS": "FIG-JUDAS-ISKARIOT"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "night": true
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.26.57-MAT.26.75",
+            "figures": [
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-OBJ-HAHN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER",
+              "FIG-ZEICHEN-VERLEUGNEN",
+              "FIG-ZEICHEN-SPRECHEN"
+            ],
+            "speech": [],
+            "action_de": "Vor dem Hohen Rat wird Jesus verurteilt; Petrus verleugnet ihn dreimal, und als der Hahn kräht, weint er bitterlich.",
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-PETRUS"
+                ]
+              },
+              "mood": {
+                "FIG-PETRUS": "worried"
+              },
+              "x": {
+                "FIG-PETRUS": 124
+              },
+              "floor_x": {
+                "FIG-OBJ-HAHN": 40
+              },
+              "count": {
+                "FIG-ZEICHEN-VERLEUGNEN": 3
+              },
+              "night": true,
+              "at": {
+                "FIG-ZEICHEN-SPRECHEN": "FIG-OBJ-HAHN"
+              },
+              "arrows": [
+                [
+                  "FIG-OBJ-HAHN",
+                  "FIG-PETRUS",
+                  "act"
+                ]
+              ]
+            }
+          }
+        ],
+        "actions_de": [
+          "In Betanien giesst eine Frau Jesus kostbares Salböl über den Kopf; er deutet es als Vorbereitung für sein Begräbnis.",
+          "Beim Passamahl gibt Jesus den Jüngern Brot und Becher als seinen Leib und sein Blut des Bundes.",
+          "In Getsemani betet Jesus, während die Jünger schlafen; Judas liefert ihn mit einem Kuss aus.",
+          "Vor dem Hohen Rat wird Jesus verurteilt; Petrus verleugnet ihn dreimal, und als der Hahn kräht, weint er bitterlich."
+        ],
+        "captions_de": [
+          "Salbung: Eine Frau salbt Jesus in Betanien (Gefäss in ihrer Hand; Ölhorn mit goldenem Tropfen über Jesus).",
+          "Mahl: Brot und Becher – Jesus für viele (Brot, Becher, Jesus, Menge).",
+          "Kuss → Festnahme: In Getsemani küsst Judas Jesus (Lippen neben Judas); darauf ergreift ihn die Menge (Pfeil von der Menge zu Jesus; gefesselte Hände).",
+          "Hahnenschrei → Tränen: Petrus hat Jesus dreimal verleugnet; der Hahn kräht (links, Schallbögen beim Hahn), Petrus erinnert sich (Pfeil vom Hahn zu ihm) und weint (Träne)."
+        ],
+        "interpretation_note_de": "Vier Hauptstationen des Kapitels: Salbung, Mahl, Gefangennahme, Verleugnung. Der Plan der Hohepriester, der Handel des Judas und das Verhör vor dem Hohen Rat sind in den Abschnittsbildern gezeigt.",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.26.1-MAT.26.16",
+            "figures": [
+              "FIG-ROLLE-FRAU",
+              "FIG-JESUS",
+              "FIG-JUDAS-ISKARIOT",
+              "FIG-GRUPPE-HOHEPRIESTER"
+            ],
+            "objects": [
+              "FIG-OBJ-SALBGEFAESS",
+              "FIG-OBJ-MUENZEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SALBUNG"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JUDAS-ISKARIOT",
+                "to": "FIG-GRUPPE-HOHEPRIESTER",
+                "icons": [
+                  "FIG-OBJ-MUENZEN",
+                  "FIG-ZEICHEN-AUSLIEFERN"
+                ],
+                "word": {
+                  "de": "Was wollt ihr mir geben? Dann werde ich ihn euch ausliefern.",
+                  "gsw": "Was wänd ir mir gää? Dänn lifere ich en eu us."
+                }
+              }
+            ],
+            "action_de": "In Betanien salbt eine Frau Jesus für sein Begräbnis; Judas geht zu den Hohepriestern, die ihm dreissig Silberstücke abwägen, damit er Jesus ausliefert.",
+            "keywords": {
+              "de": "dreissig Silberstücke",
+              "gsw": "driissg Silberstück"
+            },
+            "names": {
+              "FIG-JUDAS-ISKARIOT": {
+                "de": "Judas",
+                "gsw": "Judas"
+              }
+            },
+            "stage": {
+              "split": 2,
+              "hold": {
+                "FIG-ROLLE-FRAU": "FIG-OBJ-SALBGEFAESS",
+                "FIG-GRUPPE-HOHEPRIESTER": "FIG-OBJ-MUENZEN"
+              },
+              "at": {
+                "FIG-ZEICHEN-SALBUNG": "FIG-JESUS"
+              },
+              "pose": {
+                "FIG-JESUS": "sit"
+              },
+              "mood": {
+                "FIG-ROLLE-FRAU": "calm",
+                "FIG-JESUS": "calm",
+                "FIG-JUDAS-ISKARIOT": "earnest",
+                "FIG-GRUPPE-HOHEPRIESTER": "earnest"
+              },
+              "x": {
+                "FIG-ROLLE-FRAU": 22,
+                "FIG-JESUS": 60,
+                "FIG-JUDAS-ISKARIOT": 118,
+                "FIG-GRUPPE-HOHEPRIESTER": 164
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.26.17-MAT.26.35",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-PETRUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT",
+              "FIG-OBJ-BECHER-VOLL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-BROT"
+                ],
+                "word": {
+                  "de": "Nehmt, esst! Das ist mein Leib.",
+                  "gsw": "Nämed, ässed! Das isch min Liib."
+                }
+              },
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-VERLEUGNEN",
+                  "FIG-ZEICHEN-NICHT"
+                ],
+                "word": {
+                  "de": "Selbst wenn ich mit dir sterben müsste, werde ich dich gewiss nicht verleugnen!",
+                  "gsw": "Au wänn ich mit dir sterbe müesst, ich wirde dich sicher nöd verleugne!"
+                }
+              }
+            ],
+            "action_de": "Beim Passamahl kündigt Jesus an, dass einer ihn ausliefern wird; er gibt den Jüngern Brot und Becher: Nehmt, esst! Das ist mein Leib. Petrus beteuert, er werde ihn nicht verleugnen.",
+            "keywords": {
+              "de": "Nehmt, esst! Das ist mein Leib",
+              "gsw": "Nämed, ässed! Das isch min Liib"
+            },
+            "names": {
+              "FIG-PETRUS": {
+                "de": "Petrus",
+                "gsw": "Petrus"
+              }
+            },
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROT"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-JUENGER",
+                  "act"
+                ]
+              ],
+              "night": true,
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "pensive",
+                "FIG-PETRUS": "determined"
+              },
+              "x": {
+                "FIG-JESUS": 34,
+                "FIG-PETRUS": 94,
+                "FIG-GRUPPE-JUENGER": 154
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.26.36-MAT.26.56",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS",
+              "FIG-JUDAS-ISKARIOT"
+            ],
+            "objects": [
+              "FIG-ORT-GARTEN",
+              "FIG-OBJ-SCHWERT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-KUSS",
+              "FIG-ZEICHEN-AUSLIEFERN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-WILLE-GOTTES"
+                ],
+                "think": true,
+                "word": {
+                  "de": "Doch nicht, wie ich will, sondern wie du willst.",
+                  "gsw": "Aber nöd, wie ich wott, sondern wie du wottsch."
+                }
+              }
+            ],
+            "action_de": "In Getsemani betet Jesus: Doch nicht, wie ich will, sondern wie du willst; dann kommt Judas mit einer bewaffneten Menge und küsst Jesus, und sie ergreifen ihn.",
+            "keywords": {
+              "de": "Doch nicht, wie ich will, sondern wie du willst",
+              "gsw": "Aber nöd, wie ich wott, sondern wie du wottsch"
+            },
+            "names": {
+              "FIG-JUDAS-ISKARIOT": {
+                "de": "Judas",
+                "gsw": "Judas"
+              }
+            },
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-MENGE": "FIG-OBJ-SCHWERT"
+              },
+              "beside": {
+                "FIG-ZEICHEN-KUSS": "FIG-JUDAS-ISKARIOT"
+              },
+              "at": {
+                "FIG-ZEICHEN-AUSLIEFERN": "FIG-JESUS"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "back_side": "left",
+              "before": true,
+              "night": true,
+              "mood": {
+                "FIG-GRUPPE-MENGE": "angry",
+                "FIG-JESUS": "calm",
+                "FIG-JUDAS-ISKARIOT": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 34,
+                "FIG-JESUS": 98,
+                "FIG-JUDAS-ISKARIOT": 150
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.26.57-MAT.26.75",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-KAJAFAS",
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-OBJ-HAHN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER"
+            ],
+            "speech": [
+              {
+                "from": "FIG-KAJAFAS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-GERICHT",
+                  "FIG-ZEICHEN-TOD"
+                ],
+                "word": {
+                  "de": "Er hat den Tod verdient!",
+                  "gsw": "Er hät de Tod verdient!"
+                }
+              }
+            ],
+            "action_de": "Vor dem Hohen Rat sagt Jesus auf die Frage, ob er der Christus sei: Du hast es gesagt; der Rat urteilt: Er hat den Tod verdient! Im Hof verleugnet Petrus Jesus dreimal; ein Hahn kräht, und er weint bitterlich.",
+            "keywords": {
+              "de": "Er hat den Tod verdient!",
+              "gsw": "Er hät de Tod verdient!"
+            },
+            "names": {
+              "FIG-KAJAFAS": {
+                "de": "Kajafas",
+                "gsw": "Kajafas"
+              },
+              "FIG-PETRUS": {
+                "de": "Petrus",
+                "gsw": "Petrus"
+              }
+            },
+            "stage": {
+              "split": 2,
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-PETRUS"
+                ]
+              },
+              "night": true,
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-KAJAFAS": "angry",
+                "FIG-PETRUS": "pain"
+              },
+              "x": {
+                "FIG-JESUS": 26,
+                "FIG-KAJAFAS": 76,
+                "FIG-PETRUS": 156
+              },
+              "floor_x": {
+                "FIG-OBJ-HAHN": 124
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Salbung und Verrat: links salbt die Frau Jesus (Salbgefäss, Salbung); rechts hinter der gestrichelten Linie fragt Judas (Name) die Hohepriester: «Was wollt ihr mir geben? Dann werde ich ihn euch ausliefern.» (Münzen, ausliefern).",
+          "Das Mahl: Jesus mit Brot und Becher bei den Jüngern: «Nehmt, esst! Das ist mein Leib.» (Brot); Petrus (Name): «Selbst wenn ich mit dir sterben müsste, werde ich dich gewiss nicht verleugnen!» (verleugnen, Verbotszeichen).",
+          "Gebet und Kuss: In der Nacht im Garten sagt Jesus: «Doch nicht, wie ich will, sondern wie du willst.» (Wille Gottes); Judas (Name) küsst ihn (Kuss), die Menge mit Schwert greift zu (ausliefern).",
+          "Urteil und Verleugnung: links Kajafas (Name) vor Jesus, der Hohe Rat ruft: «Er hat den Tod verdient!» (Gericht, Tod); rechts hinter der gestrichelten Linie weint Petrus, ein Hahn kräht (Hahn, Trauer)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Trennlinie ohne Bedeutung statt Zeichen Abstand",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.26.1-MAT.26.16",
+            "figures": [
+              "FIG-ROLLE-FRAU",
+              "FIG-JESUS",
+              "FIG-JUDAS-ISKARIOT",
+              "FIG-GRUPPE-HOHEPRIESTER"
+            ],
+            "objects": [
+              "FIG-OBJ-SALBGEFAESS",
+              "FIG-OBJ-MUENZEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SALBUNG",
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JUDAS-ISKARIOT",
+                "to": "FIG-GRUPPE-HOHEPRIESTER",
+                "icons": [
+                  "FIG-OBJ-MUENZEN",
+                  "FIG-ZEICHEN-AUSLIEFERN"
+                ],
+                "word": {
+                  "de": "Was wollt ihr mir geben? Dann werde ich ihn euch ausliefern.",
+                  "gsw": "Was wänd ir mir gää? Dänn lifere ich en eu us."
+                }
+              }
+            ],
+            "action_de": "In Betanien salbt eine Frau Jesus für sein Begräbnis; Judas geht zu den Hohepriestern, die ihm dreissig Silberstücke abwägen, damit er Jesus ausliefert.",
+            "keywords": {
+              "de": "dreissig Silberstücke",
+              "gsw": "driissg Silberstück"
+            },
+            "names": {
+              "FIG-JUDAS-ISKARIOT": {
+                "de": "Judas",
+                "gsw": "Judas"
+              }
+            },
+            "stage": {
+              "split": 2,
+              "hold": {
+                "FIG-ROLLE-FRAU": "FIG-OBJ-SALBGEFAESS",
+                "FIG-GRUPPE-HOHEPRIESTER": "FIG-OBJ-MUENZEN"
+              },
+              "at": {
+                "FIG-ZEICHEN-SALBUNG": "FIG-JESUS"
+              },
+              "pose": {
+                "FIG-JESUS": "sit"
+              },
+              "mood": {
+                "FIG-ROLLE-FRAU": "calm",
+                "FIG-JESUS": "calm",
+                "FIG-JUDAS-ISKARIOT": "earnest",
+                "FIG-GRUPPE-HOHEPRIESTER": "earnest"
+              },
+              "x": {
+                "FIG-ROLLE-FRAU": 22,
+                "FIG-JESUS": 60,
+                "FIG-JUDAS-ISKARIOT": 118,
+                "FIG-GRUPPE-HOHEPRIESTER": 164
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.26.17-MAT.26.35",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-PETRUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT",
+              "FIG-OBJ-BECHER-VOLL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-BROT"
+                ],
+                "word": {
+                  "de": "Nehmt, esst! Das ist mein Leib.",
+                  "gsw": "Nämed, ässed! Das isch min Liib."
+                }
+              },
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-VERLEUGNEN",
+                  "FIG-ZEICHEN-NICHT"
+                ],
+                "word": {
+                  "de": "Selbst wenn ich mit dir sterben müsste, werde ich dich gewiss nicht verleugnen!",
+                  "gsw": "Au wänn ich mit dir sterbe müesst, ich wirde dich sicher nöd verleugne!"
+                }
+              }
+            ],
+            "action_de": "Beim Passamahl kündigt Jesus an, dass einer ihn ausliefern wird; er gibt den Jüngern Brot und Becher: Nehmt, esst! Das ist mein Leib. Petrus beteuert, er werde ihn nicht verleugnen.",
+            "keywords": {
+              "de": "Nehmt, esst! Das ist mein Leib",
+              "gsw": "Nämed, ässed! Das isch min Liib"
+            },
+            "names": {
+              "FIG-PETRUS": {
+                "de": "Petrus",
+                "gsw": "Petrus"
+              }
+            },
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROT"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-JUENGER",
+                  "act"
+                ]
+              ],
+              "night": true,
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "pensive",
+                "FIG-PETRUS": "determined"
+              },
+              "x": {
+                "FIG-JESUS": 34,
+                "FIG-PETRUS": 94,
+                "FIG-GRUPPE-JUENGER": 154
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.26.36-MAT.26.56",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS",
+              "FIG-JUDAS-ISKARIOT"
+            ],
+            "objects": [
+              "FIG-ORT-GARTEN",
+              "FIG-OBJ-SCHWERT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-KUSS",
+              "FIG-ZEICHEN-AUSLIEFERN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-WILLE-GOTTES"
+                ],
+                "think": true,
+                "word": {
+                  "de": "Doch nicht, wie ich will, sondern wie du willst.",
+                  "gsw": "Aber nöd, wie ich wott, sondern wie du wottsch."
+                }
+              }
+            ],
+            "action_de": "In Getsemani betet Jesus: Doch nicht, wie ich will, sondern wie du willst; dann kommt Judas mit einer bewaffneten Menge und küsst Jesus, und sie ergreifen ihn.",
+            "keywords": {
+              "de": "Doch nicht, wie ich will, sondern wie du willst",
+              "gsw": "Aber nöd, wie ich wott, sondern wie du wottsch"
+            },
+            "names": {
+              "FIG-JUDAS-ISKARIOT": {
+                "de": "Judas",
+                "gsw": "Judas"
+              }
+            },
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-MENGE": "FIG-OBJ-SCHWERT"
+              },
+              "beside": {
+                "FIG-ZEICHEN-KUSS": "FIG-JUDAS-ISKARIOT"
+              },
+              "at": {
+                "FIG-ZEICHEN-AUSLIEFERN": "FIG-JESUS"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "back_side": "left",
+              "before": true,
+              "night": true,
+              "mood": {
+                "FIG-GRUPPE-MENGE": "angry",
+                "FIG-JESUS": "calm",
+                "FIG-JUDAS-ISKARIOT": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 34,
+                "FIG-JESUS": 98,
+                "FIG-JUDAS-ISKARIOT": 150
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.26.57-MAT.26.75",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-KAJAFAS",
+              "FIG-GRUPPE-HOHER-RAT",
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-OBJ-HAHN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER",
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-HOHER-RAT",
+                "to": "FIG-KAJAFAS",
+                "icons": [
+                  "FIG-ZEICHEN-GERICHT",
+                  "FIG-ZEICHEN-TOD"
+                ],
+                "word": {
+                  "de": "Er hat den Tod verdient!",
+                  "gsw": "Er hät de Tod verdient!"
+                }
+              }
+            ],
+            "action_de": "Vor dem Hohen Rat sagt Jesus auf die Frage, ob er der Christus sei: Du hast es gesagt; der Rat urteilt: Er hat den Tod verdient! Im Hof verleugnet Petrus Jesus dreimal; ein Hahn kräht, und er weint bitterlich.",
+            "keywords": {
+              "de": "Er hat den Tod verdient!",
+              "gsw": "Er hät de Tod verdient!"
+            },
+            "names": {
+              "FIG-KAJAFAS": {
+                "de": "Kajafas",
+                "gsw": "Kajafas"
+              },
+              "FIG-PETRUS": {
+                "de": "Petrus",
+                "gsw": "Petrus"
+              }
+            },
+            "stage": {
+              "split": 3,
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-PETRUS"
+                ]
+              },
+              "night": true,
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-KAJAFAS": "angry",
+                "FIG-GRUPPE-HOHER-RAT": "angry",
+                "FIG-PETRUS": "pain"
+              },
+              "x": {
+                "FIG-JESUS": 18,
+                "FIG-KAJAFAS": 56,
+                "FIG-GRUPPE-HOHER-RAT": 96,
+                "FIG-PETRUS": 162
+              },
+              "floor_x": {
+                "FIG-OBJ-HAHN": 134
+              }
             }
           }
         ]

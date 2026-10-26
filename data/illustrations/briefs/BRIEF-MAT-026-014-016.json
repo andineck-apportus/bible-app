@@ -11,10 +11,10 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.26.14-MAT.26.15",
+      "reference": "MAT.26.14-MAT.26.16",
       "figures": [
         "FIG-JUDAS-ISKARIOT",
-        "FIG-GRUPPE-HOHER-RAT"
+        "FIG-GRUPPE-HOHEPRIESTER"
       ],
       "objects": [
         "FIG-OBJ-MUENZEN"
@@ -23,105 +23,72 @@
       "speech": [
         {
           "from": "FIG-JUDAS-ISKARIOT",
-          "to": "FIG-GRUPPE-HOHER-RAT",
+          "to": "FIG-GRUPPE-HOHEPRIESTER",
           "icons": [
             "FIG-OBJ-MUENZEN",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
-        },
-        {
-          "from": "FIG-JUDAS-ISKARIOT",
-          "to": "FIG-GRUPPE-HOHER-RAT",
-          "icons": [
-            "FIG-JESUS",
             "FIG-ZEICHEN-AUSLIEFERN"
-          ]
+          ],
+          "word": {
+            "de": "Was wollt ihr mir geben? Dann werde ich ihn euch ausliefern.",
+            "gsw": "Was wänd ir mir gää? Dänn lifere ich en eu us."
+          }
         }
       ],
-      "action_de": "Judas Iskariot, einer der Zwölf, geht zu den Hohepriestern und fragt: Was wollt ihr mir geben? Dann werde ich ihn euch ausliefern. Sie wiegen ihm dreissig Silberstücke ab.",
+      "action_de": "Judas Iskariot, einer der Zwölf, geht zu den Hohepriestern und fragt: Was wollt ihr mir geben? Dann werde ich ihn euch ausliefern. Sie wägen ihm dreissig Silberstücke ab.",
+      "keywords": {
+        "de": "dreissig Silberstücke",
+        "gsw": "driissg Silberstück"
+      },
+      "names": {
+        "FIG-JUDAS-ISKARIOT": {
+          "de": "Judas",
+          "gsw": "Judas"
+        }
+      },
       "stage": {
-        "mood": {
-          "FIG-JUDAS-ISKARIOT": "pensive",
-          "FIG-GRUPPE-HOHER-RAT": "calm"
+        "hold": {
+          "FIG-GRUPPE-HOHEPRIESTER": "FIG-OBJ-MUENZEN"
         },
         "arrows": [
           [
-            "FIG-OBJ-MUENZEN",
+            "FIG-GRUPPE-HOHEPRIESTER",
             "FIG-JUDAS-ISKARIOT",
             "act"
           ]
         ],
-        "floor_x": {
-          "FIG-OBJ-MUENZEN": 96
-        }
-      }
-    },
-    {
-      "n": 2,
-      "reference": "MAT.26.16",
-      "figures": [
-        "FIG-JUDAS-ISKARIOT"
-      ],
-      "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-SEHEN"
-      ],
-      "speech": [
-        {
-          "from": "FIG-JUDAS-ISKARIOT",
-          "to": "FIG-JUDAS-ISKARIOT",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-AUSLIEFERN",
-            "FIG-ZEICHEN-STUNDE"
-          ],
-          "think": true
-        }
-      ],
-      "action_de": "Von da an sucht Judas eine günstige Gelegenheit, um Jesus auszuliefern.",
-      "stage": {
         "mood": {
-          "FIG-JUDAS-ISKARIOT": "pensive"
+          "FIG-JUDAS-ISKARIOT": "earnest",
+          "FIG-GRUPPE-HOHEPRIESTER": "earnest"
         },
         "x": {
-          "FIG-JUDAS-ISKARIOT": 76
-        },
-        "beside": {
-          "FIG-ZEICHEN-SEHEN": "FIG-JUDAS-ISKARIOT"
+          "FIG-JUDAS-ISKARIOT": 54,
+          "FIG-GRUPPE-HOHEPRIESTER": 136
         }
       }
     }
   ],
   "actions_de": [
-    "Judas Iskariot, einer der Zwölf, geht zu den Hohepriestern und fragt: Was wollt ihr mir geben? Dann werde ich ihn euch ausliefern. Sie wiegen ihm dreissig Silberstücke ab.",
-    "Von da an sucht Judas eine günstige Gelegenheit, um Jesus auszuliefern."
+    "Judas Iskariot, einer der Zwölf, geht zu den Hohepriestern und fragt: Was wollt ihr mir geben? Dann werde ich ihn euch ausliefern. Sie wägen ihm dreissig Silberstücke ab."
   ],
   "captions_de": [
-    "Auslieferung → Silberstücke: Judas (graublauer Mantel, Kästchen) fragt die Hohepriester: Was gebt ihr mir? (Münzen, Fragezeichen) – ich liefere Jesus aus (Jesus, Hand und Kette); darum geben sie ihm Silberstücke (Pfeil von den Münzen zu Judas).",
-    "Warten auf die Gelegenheit: Judas überlegt (Denkblase): Wann kann ich Jesus ausliefern? (Jesus, Hand und Kette, Sanduhr); er hält Ausschau (Augen)."
+    "Dreissig Silberstücke: Judas (Name) bei den Hohepriestern: «Was wollt ihr mir geben? Dann werde ich ihn euch ausliefern.» (Münzen, ausliefern); die Hohepriester geben ihm das Geld."
   ],
-  "interpretation_note_de": "Die dreissig Silberstücke ([[MAT.26.15]]) zeigt das Bild als Münzen ohne Zahl. Matthäus erzählt nicht, warum Judas Jesus ausliefert; das Bild lässt den Grund offen.",
+  "interpretation_note_de": "Ein Feld ([[MAT.26.14-MAT.26.16]]): Angebot und Preis. Die Gründe des Judas nennt der Text nicht; das Bild deutet sie nicht. Die Münzen stehen für die dreissig Silberstücke (nicht abgezählt).",
   "basis": [
     {
       "record": "TU-MAT-026-014-016",
       "field": "summary",
-      "fingerprint": "1e905a6aa7a381b1"
+      "fingerprint": "dbe76f5d1410e9a7"
     },
     {
       "record": "TRANS-MAT-026-001-075-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.26.14-MAT.26.15",
-      "fingerprint": "32a07cfc17c4bcd9"
-    },
-    {
-      "record": "TRANS-MAT-026-001-075-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.26.16",
-      "fingerprint": "b570658dd0010f7c"
+      "reference": "MAT.26.14-MAT.26.16",
+      "fingerprint": "9c6192293a7b8d0d"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -145,6 +112,150 @@
           "Auslieferung → Silberstücke: Judas (graublauer Mantel, Kästchen) fragt die Hohepriester: Was gebt ihr mir? (Münzen, Fragezeichen) – ich liefere Jesus aus (Jesus, gefesselte Hände); darum geben sie ihm Silberstücke (Pfeil von den Münzen zu Judas).",
           "Warten auf die Gelegenheit: Judas überlegt (Denkblase): Wann kann ich Jesus ausliefern? (Jesus, gefesselte Hände, Sanduhr); er hält Ausschau (Auge)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-026-014-016",
+            "field": "summary",
+            "fingerprint": "1e905a6aa7a381b1"
+          },
+          {
+            "record": "TRANS-MAT-026-001-075-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.26.14-MAT.26.15",
+            "fingerprint": "32a07cfc17c4bcd9"
+          },
+          {
+            "record": "TRANS-MAT-026-001-075-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.26.16",
+            "fingerprint": "b570658dd0010f7c"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.26.14-MAT.26.15",
+            "figures": [
+              "FIG-JUDAS-ISKARIOT",
+              "FIG-GRUPPE-HOHER-RAT"
+            ],
+            "objects": [
+              "FIG-OBJ-MUENZEN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JUDAS-ISKARIOT",
+                "to": "FIG-GRUPPE-HOHER-RAT",
+                "icons": [
+                  "FIG-OBJ-MUENZEN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-JUDAS-ISKARIOT",
+                "to": "FIG-GRUPPE-HOHER-RAT",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-AUSLIEFERN"
+                ]
+              }
+            ],
+            "action_de": "Judas Iskariot, einer der Zwölf, geht zu den Hohepriestern und fragt: Was wollt ihr mir geben? Dann werde ich ihn euch ausliefern. Sie wiegen ihm dreissig Silberstücke ab.",
+            "stage": {
+              "mood": {
+                "FIG-JUDAS-ISKARIOT": "pensive",
+                "FIG-GRUPPE-HOHER-RAT": "calm"
+              },
+              "arrows": [
+                [
+                  "FIG-OBJ-MUENZEN",
+                  "FIG-JUDAS-ISKARIOT",
+                  "act"
+                ]
+              ],
+              "floor_x": {
+                "FIG-OBJ-MUENZEN": 96
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.26.16",
+            "figures": [
+              "FIG-JUDAS-ISKARIOT"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-SEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JUDAS-ISKARIOT",
+                "to": "FIG-JUDAS-ISKARIOT",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-AUSLIEFERN",
+                  "FIG-ZEICHEN-STUNDE"
+                ],
+                "think": true
+              }
+            ],
+            "action_de": "Von da an sucht Judas eine günstige Gelegenheit, um Jesus auszuliefern.",
+            "stage": {
+              "mood": {
+                "FIG-JUDAS-ISKARIOT": "pensive"
+              },
+              "x": {
+                "FIG-JUDAS-ISKARIOT": 76
+              },
+              "beside": {
+                "FIG-ZEICHEN-SEHEN": "FIG-JUDAS-ISKARIOT"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Judas Iskariot, einer der Zwölf, geht zu den Hohepriestern und fragt: Was wollt ihr mir geben? Dann werde ich ihn euch ausliefern. Sie wiegen ihm dreissig Silberstücke ab.",
+          "Von da an sucht Judas eine günstige Gelegenheit, um Jesus auszuliefern."
+        ],
+        "captions_de": [
+          "Auslieferung → Silberstücke: Judas (graublauer Mantel, Kästchen) fragt die Hohepriester: Was gebt ihr mir? (Münzen, Fragezeichen) – ich liefere Jesus aus (Jesus, Hand und Kette); darum geben sie ihm Silberstücke (Pfeil von den Münzen zu Judas).",
+          "Warten auf die Gelegenheit: Judas überlegt (Denkblase): Wann kann ich Jesus ausliefern? (Jesus, Hand und Kette, Sanduhr); er hält Ausschau (Augen)."
+        ],
+        "interpretation_note_de": "Die dreissig Silberstücke ([[MAT.26.15]]) zeigt das Bild als Münzen ohne Zahl. Matthäus erzählt nicht, warum Judas Jesus ausliefert; das Bild lässt den Grund offen.",
+        "basis": [
+          {
+            "record": "TU-MAT-026-014-016",
+            "field": "summary",
+            "fingerprint": "dbe76f5d1410e9a7"
+          },
+          {
+            "record": "TRANS-MAT-026-001-075-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.26.14-MAT.26.15",
+            "fingerprint": "32a07cfc17c4bcd9"
+          },
+          {
+            "record": "TRANS-MAT-026-001-075-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.26.16",
+            "fingerprint": "b570658dd0010f7c"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

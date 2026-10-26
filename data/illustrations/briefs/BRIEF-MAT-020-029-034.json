@@ -11,121 +11,57 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.20.29-MAT.20.31",
+      "reference": "MAT.20.30-MAT.20.31",
       "figures": [
-        "FIG-ROLLE-BLINDER",
-        "FIG-ROLLE-ZWEITER-BLINDER",
         "FIG-GRUPPE-MENGE",
-        "FIG-JESUS"
+        "FIG-ROLLE-BLINDER",
+        "FIG-ROLLE-ZWEITER-BLINDER"
       ],
       "objects": [],
       "signs": [
-        "FIG-ZEICHEN-BLIND"
+        "FIG-ZEICHEN-SCHWEIGEN"
       ],
       "speech": [
         {
           "from": "FIG-ROLLE-BLINDER",
           "to": "FIG-JESUS",
           "icons": [
-            "FIG-JESUS",
-            "FIG-DAVID",
             "FIG-ZEICHEN-ERBARMEN"
-          ]
-        },
-        {
-          "from": "FIG-GRUPPE-MENGE",
-          "to": "FIG-ROLLE-BLINDER",
-          "icons": [
-            "FIG-ZEICHEN-SCHWEIGEN"
-          ]
+          ],
+          "word": {
+            "de": "Herr, hab Erbarmen mit uns, Sohn Davids!",
+            "gsw": "Herr, häb Erbarme mit üs, Sohn vom David!"
+          }
         }
       ],
-      "action_de": "Beim Auszug aus Jericho folgt Jesus eine grosse Menge. Zwei Blinde am Weg schreien: Herr, hab Erbarmen mit uns, Sohn Davids! Die Menge fährt sie an, sie sollen schweigen; doch sie schreien noch lauter.",
+      "action_de": "Zwei Blinde sitzen am Weg und schreien: Herr, hab Erbarmen mit uns, Sohn Davids! Die Menge fährt sie an, sie sollen schweigen; sie aber schreien noch lauter.",
+      "keywords": {
+        "de": "sie aber schrien noch lauter",
+        "gsw": "si aber händ no lüüter gschroue"
+      },
       "stage": {
+        "at": {
+          "FIG-ZEICHEN-SCHWEIGEN": "FIG-GRUPPE-MENGE"
+        },
         "pose": {
           "FIG-ROLLE-BLINDER": "sit",
           "FIG-ROLLE-ZWEITER-BLINDER": "sit"
         },
-        "at": {
-          "FIG-ZEICHEN-BLIND": [
-            "FIG-ROLLE-BLINDER",
-            "FIG-ROLLE-ZWEITER-BLINDER"
-          ]
-        },
         "mood": {
-          "FIG-ROLLE-BLINDER": "worried",
-          "FIG-ROLLE-ZWEITER-BLINDER": "worried",
-          "FIG-GRUPPE-MENGE": "earnest"
-        },
-        "x": {
-          "FIG-ROLLE-BLINDER": 24,
-          "FIG-ROLLE-ZWEITER-BLINDER": 72,
-          "FIG-GRUPPE-MENGE": 118,
-          "FIG-JESUS": 164
-        },
-        "arrows": [
-          [
-            "FIG-ROLLE-BLINDER",
-            "FIG-JESUS",
-            "act"
-          ]
-        ]
-      }
-    },
-    {
-      "n": 2,
-      "reference": "MAT.20.32-MAT.20.33",
-      "figures": [
-        "FIG-ROLLE-BLINDER",
-        "FIG-ROLLE-ZWEITER-BLINDER",
-        "FIG-JESUS"
-      ],
-      "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-BLIND"
-      ],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-BLINDER",
-          "icons": [
-            "FIG-ZEICHEN-FRAGEN"
-          ]
-        },
-        {
-          "from": "FIG-ROLLE-BLINDER",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-ZEICHEN-SEHEN"
-          ]
-        }
-      ],
-      "action_de": "Jesus bleibt stehen, ruft sie und fragt: Was wollt ihr, dass ich euch tue? Sie sagen: Herr, dass unsere Augen geöffnet werden!",
-      "stage": {
-        "at": {
-          "FIG-ZEICHEN-BLIND": [
-            "FIG-ROLLE-BLINDER",
-            "FIG-ROLLE-ZWEITER-BLINDER"
-          ]
-        },
-        "mood": {
+          "FIG-GRUPPE-MENGE": "angry",
           "FIG-ROLLE-BLINDER": "earnest",
           "FIG-ROLLE-ZWEITER-BLINDER": "earnest"
         },
         "x": {
-          "FIG-ROLLE-BLINDER": 28,
-          "FIG-ROLLE-ZWEITER-BLINDER": 86,
-          "FIG-JESUS": 150
-        },
-        "pose": {
-          "FIG-ROLLE-BLINDER": "sit",
-          "FIG-ROLLE-ZWEITER-BLINDER": "sit"
+          "FIG-GRUPPE-MENGE": 40,
+          "FIG-ROLLE-BLINDER": 116,
+          "FIG-ROLLE-ZWEITER-BLINDER": 160
         }
       }
     },
     {
-      "n": 3,
-      "reference": "MAT.20.34",
+      "n": 2,
+      "reference": "MAT.20.32-MAT.20.34",
       "figures": [
         "FIG-JESUS",
         "FIG-ROLLE-BLINDER",
@@ -133,30 +69,41 @@
       ],
       "objects": [],
       "signs": [
-        "FIG-ZEICHEN-SEHEN",
-        "FIG-ZEICHEN-HEILEN"
+        "FIG-ZEICHEN-BERUEHREN"
       ],
-      "speech": [],
-      "action_de": "Jesus hat Erbarmen und berührt ihre Augen; sogleich sehen sie wieder und folgen ihm nach.",
+      "speech": [
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-ROLLE-BLINDER",
+          "icons": [
+            "FIG-ZEICHEN-FRAGEN"
+          ],
+          "word": {
+            "de": "Was wollt ihr, dass ich euch tue?",
+            "gsw": "Was wänd ir, dass ich eu mache?"
+          }
+        },
+        {
+          "from": "FIG-ROLLE-BLINDER",
+          "to": "FIG-JESUS",
+          "icons": [
+            "FIG-ZEICHEN-AUGE",
+            "FIG-ZEICHEN-SEHEN"
+          ],
+          "word": {
+            "de": "Herr, dass unsere Augen geöffnet werden!",
+            "gsw": "Herr, dass öisi Auge ufgönd!"
+          }
+        }
+      ],
+      "action_de": "Jesus fragt: Was wollt ihr, dass ich euch tue? – Herr, dass unsere Augen geöffnet werden! Jesus hat Erbarmen, berührt ihre Augen, sogleich sehen sie wieder und folgen ihm nach.",
+      "keywords": {
+        "de": "berührte ihre Augen, und sogleich sahen sie wieder",
+        "gsw": "hät iri Auge aagrüert, und grad händ si wider gseh"
+      },
       "stage": {
-        "at": {
-          "FIG-ZEICHEN-SEHEN": [
-            "FIG-ROLLE-BLINDER",
-            "FIG-ROLLE-ZWEITER-BLINDER"
-          ]
-        },
         "beside": {
-          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-BLINDER"
-        },
-        "mood": {
-          "FIG-ROLLE-BLINDER": "delight",
-          "FIG-ROLLE-ZWEITER-BLINDER": "delight",
-          "FIG-JESUS": "smile"
-        },
-        "x": {
-          "FIG-JESUS": 40,
-          "FIG-ROLLE-BLINDER": 100,
-          "FIG-ROLLE-ZWEITER-BLINDER": 150
+          "FIG-ZEICHEN-BERUEHREN": "FIG-ROLLE-BLINDER"
         },
         "arrows": [
           [
@@ -164,48 +111,50 @@
             "FIG-ROLLE-BLINDER",
             "act"
           ]
-        ]
+        ],
+        "mood": {
+          "FIG-JESUS": "calm",
+          "FIG-ROLLE-BLINDER": "earnest",
+          "FIG-ROLLE-ZWEITER-BLINDER": "smile"
+        },
+        "x": {
+          "FIG-JESUS": 44,
+          "FIG-ROLLE-BLINDER": 112,
+          "FIG-ROLLE-ZWEITER-BLINDER": 160
+        }
       }
     }
   ],
   "actions_de": [
-    "Beim Auszug aus Jericho folgt Jesus eine grosse Menge. Zwei Blinde am Weg schreien: Herr, hab Erbarmen mit uns, Sohn Davids! Die Menge fährt sie an, sie sollen schweigen; doch sie schreien noch lauter.",
-    "Jesus bleibt stehen, ruft sie und fragt: Was wollt ihr, dass ich euch tue? Sie sagen: Herr, dass unsere Augen geöffnet werden!",
-    "Jesus hat Erbarmen und berührt ihre Augen; sogleich sehen sie wieder und folgen ihm nach."
+    "Zwei Blinde sitzen am Weg und schreien: Herr, hab Erbarmen mit uns, Sohn Davids! Die Menge fährt sie an, sie sollen schweigen; sie aber schreien noch lauter.",
+    "Jesus fragt: Was wollt ihr, dass ich euch tue? – Herr, dass unsere Augen geöffnet werden! Jesus hat Erbarmen, berührt ihre Augen, sogleich sehen sie wieder und folgen ihm nach."
   ],
   "captions_de": [
-    "Der Ruf: Zwei Blinde (Auge mit rotem X) sitzen am Weg und rufen Jesus, den Sohn Davids, um Erbarmen an (Pfeil zu Jesus, Jesus, David mit Königsreif, Herz in Händen); die Menge will sie zum Schweigen bringen (Gesicht mit Finger vor dem Mund).",
-    "Was wollt ihr? Jesus fragt (Fragezeichen); die Blinden bitten: dass wir sehen (offene Augen).",
-    "Berührung → sehen: Jesus hat Erbarmen und berührt ihre Augen (Pfeil von Jesus zu den Blinden, berührende Hand mit grünem Lichtpunkt); sie sehen (offene Augen über beiden) und freuen sich."
+    "Am Weg: Die Menge fährt die zwei Blinden an (Schweigegebot); sie schreien noch lauter: «Herr, hab Erbarmen mit uns, Sohn Davids!» (Erbarmen).",
+    "Die Augen geöffnet: Jesus fragt (fragen); der Blinde: «Herr, dass unsere Augen geöffnet werden!» (Auge, sehen); Jesus berührt ihre Augen (berühren)."
   ],
-  "interpretation_note_de": "Matthäus erzählt von zwei Blinden (vgl. [[MRK.10.46-MRK.10.52]] mit Bartimäus allein); das Bild zeigt zwei sitzende Männer mit dem Zeichen «blind». Den Ruf «Sohn Davids» ([[MAT.20.30-MAT.20.31]]) zeigt David mit Königsreif in der Sprechblase. Wie sie sehend werden, zeigt das Bild nicht als Vorgang, nur die Berührung und das Ergebnis. Dass sie ihm nachfolgen ([[MAT.20.34]]), steht nur in der Handlung.",
+  "interpretation_note_de": "Zwei Felder ([[MAT.20.29-MAT.20.34]]): Rufen gegen den Widerstand der Menge, dann Frage, Bitte und Heilung. Das Erbarmen steht am Anfang (Bitte) und am Ende (Jesus hat Erbarmen).",
   "basis": [
     {
       "record": "TU-MAT-020-029-034",
       "field": "summary",
-      "fingerprint": "34aae186f66ebf2c"
+      "fingerprint": "e6ac6859e8066e67"
     },
     {
       "record": "TRANS-MAT-020-001-034-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.20.29-MAT.20.31",
-      "fingerprint": "5a7ff8498f887ae1"
+      "reference": "MAT.20.30-MAT.20.31",
+      "fingerprint": "1473f5e52ae56dad"
     },
     {
       "record": "TRANS-MAT-020-001-034-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.20.32-MAT.20.33",
-      "fingerprint": "0c21bbffe8da02bb"
-    },
-    {
-      "record": "TRANS-MAT-020-001-034-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.20.34",
-      "fingerprint": "e64b24c9b3bc7c21"
+      "reference": "MAT.20.32-MAT.20.34",
+      "fingerprint": "99629f5658c844e3"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -701,6 +650,332 @@
           "Der Ruf: Zwei Blinde (durchgestrichenes Auge) sitzen am Weg und rufen Jesus, den Sohn Davids, um Erbarmen an (Pfeil zu Jesus, Jesus, David mit Königsreif, Herz in Händen); die Menge will sie zum Schweigen bringen (durchgestrichene Sprechblase).",
           "Was wollt ihr? Jesus fragt (Fragezeichen); die Blinden bitten: dass wir sehen (offenes Auge).",
           "Berührung → sehen: Jesus hat Erbarmen und berührt ihre Augen (Pfeil von Jesus zu den Blinden, berührende Hand mit grünem Lichtpunkt); sie sehen (offenes Auge über beiden) und freuen sich."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.20.29-MAT.20.31",
+            "figures": [
+              "FIG-ROLLE-BLINDER",
+              "FIG-ROLLE-ZWEITER-BLINDER",
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-BLIND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-BLINDER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-DAVID",
+                  "FIG-ZEICHEN-ERBARMEN"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-ROLLE-BLINDER",
+                "icons": [
+                  "FIG-ZEICHEN-SCHWEIGEN"
+                ]
+              }
+            ],
+            "action_de": "Beim Auszug aus Jericho folgt Jesus eine grosse Menge. Zwei Blinde am Weg schreien: Herr, hab Erbarmen mit uns, Sohn Davids! Die Menge fährt sie an, sie sollen schweigen; doch sie schreien noch lauter.",
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-BLINDER": "sit",
+                "FIG-ROLLE-ZWEITER-BLINDER": "sit"
+              },
+              "at": {
+                "FIG-ZEICHEN-BLIND": [
+                  "FIG-ROLLE-BLINDER",
+                  "FIG-ROLLE-ZWEITER-BLINDER"
+                ]
+              },
+              "mood": {
+                "FIG-ROLLE-BLINDER": "worried",
+                "FIG-ROLLE-ZWEITER-BLINDER": "worried",
+                "FIG-GRUPPE-MENGE": "earnest"
+              },
+              "x": {
+                "FIG-ROLLE-BLINDER": 24,
+                "FIG-ROLLE-ZWEITER-BLINDER": 72,
+                "FIG-GRUPPE-MENGE": 118,
+                "FIG-JESUS": 164
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-BLINDER",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.20.32-MAT.20.33",
+            "figures": [
+              "FIG-ROLLE-BLINDER",
+              "FIG-ROLLE-ZWEITER-BLINDER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-BLIND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-BLINDER",
+                "icons": [
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-ROLLE-BLINDER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-SEHEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus bleibt stehen, ruft sie und fragt: Was wollt ihr, dass ich euch tue? Sie sagen: Herr, dass unsere Augen geöffnet werden!",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-BLIND": [
+                  "FIG-ROLLE-BLINDER",
+                  "FIG-ROLLE-ZWEITER-BLINDER"
+                ]
+              },
+              "mood": {
+                "FIG-ROLLE-BLINDER": "earnest",
+                "FIG-ROLLE-ZWEITER-BLINDER": "earnest"
+              },
+              "x": {
+                "FIG-ROLLE-BLINDER": 28,
+                "FIG-ROLLE-ZWEITER-BLINDER": 86,
+                "FIG-JESUS": 150
+              },
+              "pose": {
+                "FIG-ROLLE-BLINDER": "sit",
+                "FIG-ROLLE-ZWEITER-BLINDER": "sit"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.20.34",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-BLINDER",
+              "FIG-ROLLE-ZWEITER-BLINDER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-SEHEN",
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [],
+            "action_de": "Jesus hat Erbarmen und berührt ihre Augen; sogleich sehen sie wieder und folgen ihm nach.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-SEHEN": [
+                  "FIG-ROLLE-BLINDER",
+                  "FIG-ROLLE-ZWEITER-BLINDER"
+                ]
+              },
+              "beside": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-BLINDER"
+              },
+              "mood": {
+                "FIG-ROLLE-BLINDER": "delight",
+                "FIG-ROLLE-ZWEITER-BLINDER": "delight",
+                "FIG-JESUS": "smile"
+              },
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-ROLLE-BLINDER": 100,
+                "FIG-ROLLE-ZWEITER-BLINDER": 150
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-BLINDER",
+                  "act"
+                ]
+              ]
+            }
+          }
+        ],
+        "actions_de": [
+          "Beim Auszug aus Jericho folgt Jesus eine grosse Menge. Zwei Blinde am Weg schreien: Herr, hab Erbarmen mit uns, Sohn Davids! Die Menge fährt sie an, sie sollen schweigen; doch sie schreien noch lauter.",
+          "Jesus bleibt stehen, ruft sie und fragt: Was wollt ihr, dass ich euch tue? Sie sagen: Herr, dass unsere Augen geöffnet werden!",
+          "Jesus hat Erbarmen und berührt ihre Augen; sogleich sehen sie wieder und folgen ihm nach."
+        ],
+        "captions_de": [
+          "Der Ruf: Zwei Blinde (Auge mit rotem X) sitzen am Weg und rufen Jesus, den Sohn Davids, um Erbarmen an (Pfeil zu Jesus, Jesus, David mit Königsreif, Herz in Händen); die Menge will sie zum Schweigen bringen (Gesicht mit Finger vor dem Mund).",
+          "Was wollt ihr? Jesus fragt (Fragezeichen); die Blinden bitten: dass wir sehen (offene Augen).",
+          "Berührung → sehen: Jesus hat Erbarmen und berührt ihre Augen (Pfeil von Jesus zu den Blinden, berührende Hand mit grünem Lichtpunkt); sie sehen (offene Augen über beiden) und freuen sich."
+        ],
+        "interpretation_note_de": "Matthäus erzählt von zwei Blinden (vgl. [[MRK.10.46-MRK.10.52]] mit Bartimäus allein); das Bild zeigt zwei sitzende Männer mit dem Zeichen «blind». Den Ruf «Sohn Davids» ([[MAT.20.30-MAT.20.31]]) zeigt David mit Königsreif in der Sprechblase. Wie sie sehend werden, zeigt das Bild nicht als Vorgang, nur die Berührung und das Ergebnis. Dass sie ihm nachfolgen ([[MAT.20.34]]), steht nur in der Handlung.",
+        "basis": [
+          {
+            "record": "TU-MAT-020-029-034",
+            "field": "summary",
+            "fingerprint": "34aae186f66ebf2c"
+          },
+          {
+            "record": "TRANS-MAT-020-001-034-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.20.29-MAT.20.31",
+            "fingerprint": "5a7ff8498f887ae1"
+          },
+          {
+            "record": "TRANS-MAT-020-001-034-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.20.32-MAT.20.33",
+            "fingerprint": "0c21bbffe8da02bb"
+          },
+          {
+            "record": "TRANS-MAT-020-001-034-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.20.34",
+            "fingerprint": "e64b24c9b3bc7c21"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Prüfung Struktur zuerst",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.20.30-MAT.20.31",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-ROLLE-BLINDER",
+              "FIG-ROLLE-ZWEITER-BLINDER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-SCHWEIGEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-BLINDER",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-ERBARMEN"
+                ],
+                "word": {
+                  "de": "Herr, hab Erbarmen mit uns, Sohn Davids!",
+                  "gsw": "Herr, häb Erbarme mit üs, Sohn vom David!"
+                }
+              }
+            ],
+            "action_de": "Zwei Blinde sitzen am Weg und schreien: Herr, hab Erbarmen mit uns, Sohn Davids! Die Menge fährt sie an, sie sollen schweigen; sie aber schreien noch lauter.",
+            "keywords": {
+              "de": "sie aber schrien noch lauter",
+              "gsw": "si aber händ no lüüter gschroue"
+            },
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-SCHWEIGEN": "FIG-GRUPPE-MENGE"
+              },
+              "pose": {
+                "FIG-ROLLE-BLINDER": "sit",
+                "FIG-ROLLE-ZWEITER-BLINDER": "sit"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "angry",
+                "FIG-ROLLE-BLINDER": "earnest",
+                "FIG-ROLLE-ZWEITER-BLINDER": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 40,
+                "FIG-ROLLE-BLINDER": 116,
+                "FIG-ROLLE-ZWEITER-BLINDER": 160
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.20.32-MAT.20.34",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-BLINDER",
+              "FIG-ROLLE-ZWEITER-BLINDER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-BERUEHREN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-BLINDER",
+                "icons": [
+                  "FIG-ZEICHEN-FRAGEN"
+                ],
+                "word": {
+                  "de": "Was wollt ihr, dass ich euch tue?",
+                  "gsw": "Was wänd ir, dass ich eu mache?"
+                }
+              },
+              {
+                "from": "FIG-ROLLE-BLINDER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-AUGE",
+                  "FIG-ZEICHEN-SEHEN"
+                ],
+                "word": {
+                  "de": "Herr, dass unsere Augen geöffnet werden!",
+                  "gsw": "Herr, dass öisi Auge ufgönd!"
+                }
+              }
+            ],
+            "action_de": "Jesus fragt: Was wollt ihr, dass ich euch tue? – Herr, dass unsere Augen geöffnet werden! Jesus hat Erbarmen, berührt ihre Augen, sogleich sehen sie wieder und folgen ihm nach.",
+            "keywords": {
+              "de": "berührte ihre Augen, und sogleich sahen sie wieder",
+              "gsw": "hät iri Auge aagrüert, und grad händ si wider gseh"
+            },
+            "stage": {
+              "beside": {
+                "FIG-ZEICHEN-BERUEHREN": "FIG-ROLLE-BLINDER"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-BLINDER",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-ROLLE-BLINDER": "earnest",
+                "FIG-ROLLE-ZWEITER-BLINDER": "smile"
+              },
+              "x": {
+                "FIG-JESUS": 44,
+                "FIG-ROLLE-BLINDER": 112,
+                "FIG-ROLLE-ZWEITER-BLINDER": 160
+              }
+            }
+          }
         ]
       }
     }

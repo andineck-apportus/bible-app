@@ -11,97 +11,59 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.27.62-MAT.27.63",
+      "reference": "MAT.27.62-MAT.27.65",
       "figures": [
-        "FIG-GRUPPE-HOHER-RAT",
+        "FIG-GRUPPE-HOHEPRIESTER",
         "FIG-GRUPPE-PHARISAEER",
         "FIG-PILATUS"
       ],
       "objects": [],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-ERINNERN"
+      ],
       "speech": [
         {
-          "from": "FIG-GRUPPE-HOHER-RAT",
-          "to": "FIG-PILATUS",
+          "from": "FIG-PILATUS",
+          "to": "FIG-GRUPPE-HOHEPRIESTER",
           "icons": [
-            "FIG-ZEICHEN-TAGE",
-            "FIG-ZEICHEN-TAGE",
-            "FIG-ZEICHEN-TAGE",
-            "FIG-ZEICHEN-AUFERSTEHUNG"
-          ]
+            "FIG-GRUPPE-SOLDATEN",
+            "FIG-ORT-GRAB-VERSCHLOSSEN"
+          ],
+          "word": {
+            "de": "Ihr habt eine Wache. Geht hin, sichert es, wie ihr es versteht!",
+            "gsw": "Ir händ e Wach. Gönd, sicheret s, wie ir s verstönd!"
+          }
         }
       ],
-      "action_de": "Am Tag nach dem Rüsttag kommen die Hohepriester und Pharisäer zu Pilatus: Herr, wir haben uns erinnert, dass jener Verführer zu Lebzeiten gesagt hat: Nach drei Tagen werde ich auferweckt.",
+      "action_de": "Die Hohepriester und Pharisäer erinnern Pilatus daran, dass jener Verführer gesagt hat, nach drei Tagen werde er auferweckt, und bitten, das Grab zu sichern; Pilatus antwortet: Ihr habt eine Wache. Geht hin, sichert es, wie ihr es versteht!",
+      "keywords": {
+        "de": "Nach drei Tagen werde ich auferweckt",
+        "gsw": "Nach drüü Täg wird ich uferweckt"
+      },
+      "names": {
+        "FIG-PILATUS": {
+          "de": "Pilatus",
+          "gsw": "Pilatus"
+        }
+      },
       "stage": {
+        "at": {
+          "FIG-ZEICHEN-ERINNERN": "FIG-GRUPPE-HOHEPRIESTER"
+        },
         "mood": {
-          "FIG-GRUPPE-HOHER-RAT": "earnest",
+          "FIG-GRUPPE-HOHEPRIESTER": "earnest",
           "FIG-GRUPPE-PHARISAEER": "earnest",
           "FIG-PILATUS": "pensive"
         },
         "x": {
-          "FIG-GRUPPE-HOHER-RAT": 36,
-          "FIG-GRUPPE-PHARISAEER": 82,
+          "FIG-GRUPPE-HOHEPRIESTER": 34,
+          "FIG-GRUPPE-PHARISAEER": 80,
           "FIG-PILATUS": 150
         }
       }
     },
     {
       "n": 2,
-      "reference": "MAT.27.64",
-      "figures": [
-        "FIG-GRUPPE-HOHER-RAT",
-        "FIG-PILATUS"
-      ],
-      "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-HOHER-RAT",
-          "to": "FIG-PILATUS",
-          "icons": [
-            "FIG-GRUPPE-JUENGER",
-            "FIG-ORT-GRAB",
-            "FIG-ZEICHEN-LUEGE"
-          ]
-        }
-      ],
-      "action_de": "Befiehl, das Grab bis zum dritten Tag zu sichern, damit nicht seine Jünger kommen, ihn stehlen und dem Volk sagen: Er ist von den Toten auferweckt worden; die letzte Verführung wäre schlimmer als die erste.",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-HOHER-RAT": "earnest",
-          "FIG-PILATUS": "pensive"
-        }
-      }
-    },
-    {
-      "n": 3,
-      "reference": "MAT.27.65",
-      "figures": [
-        "FIG-PILATUS",
-        "FIG-GRUPPE-HOHER-RAT"
-      ],
-      "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-PILATUS",
-          "to": "FIG-GRUPPE-HOHER-RAT",
-          "icons": [
-            "FIG-GRUPPE-SOLDATEN",
-            "FIG-ORT-GRAB-VERSCHLOSSEN"
-          ]
-        }
-      ],
-      "action_de": "Pilatus antwortet: Ihr habt eine Wache. Geht hin und sichert es, wie ihr es versteht!",
-      "stage": {
-        "mood": {
-          "FIG-PILATUS": "calm",
-          "FIG-GRUPPE-HOHER-RAT": "earnest"
-        }
-      }
-    },
-    {
-      "n": 4,
       "reference": "MAT.27.66",
       "figures": [
         "FIG-GRUPPE-SOLDATEN"
@@ -110,10 +72,19 @@
         "FIG-ORT-GRAB-VERSCHLOSSEN",
         "FIG-OBJ-SIEGEL"
       ],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-WACHEN"
+      ],
       "speech": [],
-      "action_de": "Sie sichern das Grab mit der Wache, indem sie den Stein versiegeln.",
+      "action_de": "Sie gehen hin und sichern das Grab mit der Wache, indem sie den Stein versiegeln.",
+      "keywords": {
+        "de": "indem sie den Stein versiegelten",
+        "gsw": "und de Stei versiglet"
+      },
       "stage": {
+        "at": {
+          "FIG-ZEICHEN-WACHEN": "FIG-GRUPPE-SOLDATEN"
+        },
         "mood": {
           "FIG-GRUPPE-SOLDATEN": "earnest"
         },
@@ -128,41 +99,25 @@
     }
   ],
   "actions_de": [
-    "Am Tag nach dem Rüsttag kommen die Hohepriester und Pharisäer zu Pilatus: Herr, wir haben uns erinnert, dass jener Verführer zu Lebzeiten gesagt hat: Nach drei Tagen werde ich auferweckt.",
-    "Befiehl, das Grab bis zum dritten Tag zu sichern, damit nicht seine Jünger kommen, ihn stehlen und dem Volk sagen: Er ist von den Toten auferweckt worden; die letzte Verführung wäre schlimmer als die erste.",
-    "Pilatus antwortet: Ihr habt eine Wache. Geht hin und sichert es, wie ihr es versteht!",
-    "Sie sichern das Grab mit der Wache, indem sie den Stein versiegeln."
+    "Die Hohepriester und Pharisäer erinnern Pilatus daran, dass jener Verführer gesagt hat, nach drei Tagen werde er auferweckt, und bitten, das Grab zu sichern; Pilatus antwortet: Ihr habt eine Wache. Geht hin, sichert es, wie ihr es versteht!",
+    "Sie gehen hin und sichern das Grab mit der Wache, indem sie den Stein versiegeln."
   ],
   "captions_de": [
-    "Erinnerung: Hohepriester und Pharisäer (Kopfüberwurf) sagen Pilatus: Er sprach von Auferweckung nach drei Tagen (drei Sonnen, offenes Grab mit Pfeil).",
-    "Bitte um Wache: Seine Jünger könnten den Toten wegholen und lügen (Jünger, offenes leeres Grab, rotes X im Kreis).",
-    "Antwort: Pilatus sagt: Ihr habt eine Wache – sichert das Grab (Soldaten, verschlossenes Grab).",
-    "Versiegelt: Soldaten bewachen das Grab; der Stein ist versiegelt (rotes Siegel an einer Schnur über dem Stein)."
+    "Die Bitte: Hohepriester und Pharisäer vor Pilatus (Name) (erinnern, drei Tage); Pilatus: «Ihr habt eine Wache. Geht hin, sichert es, wie ihr es versteht!» (Soldaten, Grab).",
+    "Versiegelt: Soldaten bewachen das verschlossene Grab (wachen); am Stein das Siegel (Siegel)."
   ],
-  "interpretation_note_de": "Ob «Ihr habt eine Wache» ([[MAT.27.65]]) eine Tempelwache meint oder römische Soldaten zur Verfügung stellt, ist offen; das Bild zeigt Soldaten wie in [[MAT.28.12]]. Das Wort «Verführer» gibt die Sicht der Bittsteller wieder; das Zeichen «Lüge» steht für den befürchteten Betrug der Jünger.",
+  "interpretation_note_de": "Zwei Felder ([[MAT.27.62-MAT.27.66]]): die Bitte der Hohepriester und Pharisäer an Pilatus, dann die Sicherung mit Wache und Siegel. «Jener Verführer» ist die Rede der Gegner, kein Urteil des Textes.",
   "basis": [
     {
       "record": "TU-MAT-027-062-066",
       "field": "summary",
-      "fingerprint": "133594dbbf54c0a0"
+      "fingerprint": "572f973f38610d25"
     },
     {
       "record": "TRANS-MAT-027-001-066-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.27.62-MAT.27.63",
-      "fingerprint": "e8688287b287b981"
-    },
-    {
-      "record": "TRANS-MAT-027-001-066-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.27.64",
-      "fingerprint": "d21dd4afb272a9b3"
-    },
-    {
-      "record": "TRANS-MAT-027-001-066-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.27.65",
-      "fingerprint": "5b9def3991ae8d29"
+      "reference": "MAT.27.62-MAT.27.65",
+      "fingerprint": "589cbe02f9270393"
     },
     {
       "record": "TRANS-MAT-027-001-066-DE-WORKING",
@@ -172,7 +127,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -307,6 +262,213 @@
           "Antwort: Pilatus sagt: Ihr habt eine Wache – sichert das Grab (Soldaten, verschlossenes Grab).",
           "Versiegelt: Soldaten bewachen das Grab; der Stein ist versiegelt (rotes Siegel an einer Schnur)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-027-062-066",
+            "field": "summary",
+            "fingerprint": "133594dbbf54c0a0"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.62-MAT.27.63",
+            "fingerprint": "e8688287b287b981"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.64",
+            "fingerprint": "d21dd4afb272a9b3"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.65",
+            "fingerprint": "5b9def3991ae8d29"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.66",
+            "fingerprint": "34f059e080f75a36"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.27.62-MAT.27.63",
+            "figures": [
+              "FIG-GRUPPE-HOHER-RAT",
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-PILATUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-HOHER-RAT",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-ZEICHEN-TAGE",
+                  "FIG-ZEICHEN-TAGE",
+                  "FIG-ZEICHEN-TAGE",
+                  "FIG-ZEICHEN-AUFERSTEHUNG"
+                ]
+              }
+            ],
+            "action_de": "Am Tag nach dem Rüsttag kommen die Hohepriester und Pharisäer zu Pilatus: Herr, wir haben uns erinnert, dass jener Verführer zu Lebzeiten gesagt hat: Nach drei Tagen werde ich auferweckt.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-HOHER-RAT": "earnest",
+                "FIG-GRUPPE-PHARISAEER": "earnest",
+                "FIG-PILATUS": "pensive"
+              },
+              "x": {
+                "FIG-GRUPPE-HOHER-RAT": 36,
+                "FIG-GRUPPE-PHARISAEER": 82,
+                "FIG-PILATUS": 150
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.27.64",
+            "figures": [
+              "FIG-GRUPPE-HOHER-RAT",
+              "FIG-PILATUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-HOHER-RAT",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-ORT-GRAB",
+                  "FIG-ZEICHEN-LUEGE"
+                ]
+              }
+            ],
+            "action_de": "Befiehl, das Grab bis zum dritten Tag zu sichern, damit nicht seine Jünger kommen, ihn stehlen und dem Volk sagen: Er ist von den Toten auferweckt worden; die letzte Verführung wäre schlimmer als die erste.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-HOHER-RAT": "earnest",
+                "FIG-PILATUS": "pensive"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.27.65",
+            "figures": [
+              "FIG-PILATUS",
+              "FIG-GRUPPE-HOHER-RAT"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PILATUS",
+                "to": "FIG-GRUPPE-HOHER-RAT",
+                "icons": [
+                  "FIG-GRUPPE-SOLDATEN",
+                  "FIG-ORT-GRAB-VERSCHLOSSEN"
+                ]
+              }
+            ],
+            "action_de": "Pilatus antwortet: Ihr habt eine Wache. Geht hin und sichert es, wie ihr es versteht!",
+            "stage": {
+              "mood": {
+                "FIG-PILATUS": "calm",
+                "FIG-GRUPPE-HOHER-RAT": "earnest"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.27.66",
+            "figures": [
+              "FIG-GRUPPE-SOLDATEN"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB-VERSCHLOSSEN",
+              "FIG-OBJ-SIEGEL"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Sie sichern das Grab mit der Wache, indem sie den Stein versiegeln.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-SOLDATEN": "earnest"
+              },
+              "back_side": "right",
+              "x": {
+                "FIG-GRUPPE-SOLDATEN": 54
+              },
+              "floor_x": {
+                "FIG-OBJ-SIEGEL": 117
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Am Tag nach dem Rüsttag kommen die Hohepriester und Pharisäer zu Pilatus: Herr, wir haben uns erinnert, dass jener Verführer zu Lebzeiten gesagt hat: Nach drei Tagen werde ich auferweckt.",
+          "Befiehl, das Grab bis zum dritten Tag zu sichern, damit nicht seine Jünger kommen, ihn stehlen und dem Volk sagen: Er ist von den Toten auferweckt worden; die letzte Verführung wäre schlimmer als die erste.",
+          "Pilatus antwortet: Ihr habt eine Wache. Geht hin und sichert es, wie ihr es versteht!",
+          "Sie sichern das Grab mit der Wache, indem sie den Stein versiegeln."
+        ],
+        "captions_de": [
+          "Erinnerung: Hohepriester und Pharisäer (Kopfüberwurf) sagen Pilatus: Er sprach von Auferweckung nach drei Tagen (drei Sonnen, offenes Grab mit Pfeil).",
+          "Bitte um Wache: Seine Jünger könnten den Toten wegholen und lügen (Jünger, offenes leeres Grab, rotes X im Kreis).",
+          "Antwort: Pilatus sagt: Ihr habt eine Wache – sichert das Grab (Soldaten, verschlossenes Grab).",
+          "Versiegelt: Soldaten bewachen das Grab; der Stein ist versiegelt (rotes Siegel an einer Schnur über dem Stein)."
+        ],
+        "interpretation_note_de": "Ob «Ihr habt eine Wache» ([[MAT.27.65]]) eine Tempelwache meint oder römische Soldaten zur Verfügung stellt, ist offen; das Bild zeigt Soldaten wie in [[MAT.28.12]]. Das Wort «Verführer» gibt die Sicht der Bittsteller wieder; das Zeichen «Lüge» steht für den befürchteten Betrug der Jünger.",
+        "basis": [
+          {
+            "record": "TU-MAT-027-062-066",
+            "field": "summary",
+            "fingerprint": "572f973f38610d25"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.62-MAT.27.63",
+            "fingerprint": "e8688287b287b981"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.64",
+            "fingerprint": "d21dd4afb272a9b3"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.65",
+            "fingerprint": "5b9def3991ae8d29"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.66",
+            "fingerprint": "34f059e080f75a36"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

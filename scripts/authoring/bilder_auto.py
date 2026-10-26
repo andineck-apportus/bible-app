@@ -787,6 +787,13 @@ class Composer:
                 w, h = self.m(t)[1]
                 hx, hy = heads[s["fid"]]
                 out.append(self.r_sym(t, s["x"] + 6, hy + 30, w, h))
+        # 6a. Trennlinie ohne Bedeutung (stage.trenner): trennt zwei Ebenen oder Orte im selben Feld, z. B. Erzähler und
+        # Gleichnis (Prüfung 2026-10-26: dafür stand sonst das Zeichen «Abstand», dessen Legende etwas anderes sagt)
+        if st.get("trenner"):
+            k = st.get("split", max(1, len(slots) - 1))
+            if 0 < k < len(slots):
+                x = (slots[k - 1]["x"] + slots[k]["x"]) / 2
+                out.append(f'<path class="trenner" d="M{x:.1f} 44V{FLOOR_Y + 6:.1f}" stroke="#8A7A5A" stroke-width="1.6" stroke-dasharray="5 4" stroke-linecap="round"/>')
         # 6. Linie (Abstand)
         for t in L["lines"]:
             k = st.get("split", max(1, len(slots) - 1))

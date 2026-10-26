@@ -11,7 +11,7 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.27.32-MAT.27.33",
+      "reference": "MAT.27.32-MAT.27.34",
       "figures": [
         "FIG-ROLLE-SOLDAT",
         "FIG-SIMON-KYRENE",
@@ -23,7 +23,17 @@
       ],
       "signs": [],
       "speech": [],
-      "action_de": "Unterwegs zwingen die Soldaten einen Mann aus Kyrene namens Simon, das Kreuz Jesu zu tragen; sie kommen an den Ort Golgota, die Schädelstätte.",
+      "action_de": "Auf dem Weg zwingen die Soldaten einen Mann aus Kyrene namens Simon, Jesu Kreuz zu tragen, bis zu dem Ort, der Golgota heisst.",
+      "keywords": {
+        "de": "diesen zwangen sie, sein Kreuz zu tragen",
+        "gsw": "dä händ si gzwunge, sis Chrüüz z träge"
+      },
+      "names": {
+        "FIG-SIMON-KYRENE": {
+          "de": "Simon von Kyrene",
+          "gsw": "Simon vo Kyrene"
+        }
+      },
       "stage": {
         "hold": {
           "FIG-SIMON-KYRENE": "FIG-OBJ-KREUZ"
@@ -33,181 +43,150 @@
             "FIG-ROLLE-SOLDAT",
             "FIG-SIMON-KYRENE",
             "act"
-          ],
-          [
-            "FIG-JESUS",
-            "FIG-ORT-BERG",
-            "go"
           ]
         ],
         "mood": {
           "FIG-SIMON-KYRENE": "worried",
           "FIG-ROLLE-SOLDAT": "earnest",
-          "FIG-JESUS": "calm"
+          "FIG-JESUS": "pain"
         },
         "back_side": "right",
         "x": {
           "FIG-ROLLE-SOLDAT": 18,
-          "FIG-SIMON-KYRENE": 58,
-          "FIG-JESUS": 98
-        },
-        "floor_x": {
-          "FIG-ORT-GOLGOTA": 158
+          "FIG-SIMON-KYRENE": 62,
+          "FIG-JESUS": 104
         }
       }
     },
     {
       "n": 2,
-      "reference": "MAT.27.34-MAT.27.38",
+      "reference": "MAT.27.35-MAT.27.38",
       "figures": [
+        "FIG-JESUS",
         "FIG-GRUPPE-SOLDATEN"
       ],
       "objects": [
-        "FIG-ORT-GOLGOTA",
+        "FIG-OBJ-TAFEL",
         "FIG-OBJ-KLEIDER-VERLOST"
       ],
       "signs": [],
       "speech": [],
-      "action_de": "Sie geben Jesus mit Galle vermischten Wein, den er nicht trinken will, kreuzigen ihn, verteilen seine Kleider durch das Los und bewachen ihn; über seinem Kopf steht die Anklage, und mit ihm werden zwei Räuber gekreuzigt.",
+      "action_de": "Sie kreuzigen Jesus, verteilen seine Kleider, indem sie das Los werfen, und bewachen ihn; über seinem Kopf bringen sie die Anklage an: Dies ist Jesus, der König der Juden. Mit ihm werden zwei Räuber gekreuzigt.",
+      "keywords": {
+        "de": "Dies ist Jesus, der König der Juden",
+        "gsw": "Das isch de Jesus, de König vo de Jude"
+      },
       "stage": {
+        "pose": {
+          "FIG-JESUS": "cross"
+        },
         "mood": {
+          "FIG-JESUS": "pain",
           "FIG-GRUPPE-SOLDATEN": "calm"
         },
-        "back_side": "right",
         "x": {
-          "FIG-GRUPPE-SOLDATEN": 44
+          "FIG-JESUS": 60,
+          "FIG-GRUPPE-SOLDATEN": 140
         },
         "floor_x": {
-          "FIG-OBJ-KLEIDER-VERLOST": 90
-        },
-        "arrows": [
-          [
-            "FIG-GRUPPE-SOLDATEN",
-            "FIG-OBJ-KLEIDER-VERLOST",
-            "throw"
-          ]
-        ]
+          "FIG-OBJ-KLEIDER-VERLOST": 110
+        }
       }
     },
     {
       "n": 3,
-      "reference": "MAT.27.39-MAT.27.40",
-      "figures": [
-        "FIG-GRUPPE-MENGE"
-      ],
-      "objects": [
-        "FIG-OBJ-KREUZ"
-      ],
+      "reference": "MAT.27.39-MAT.27.44",
+      "figures": [],
+      "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-MENGE",
-          "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-ZEICHEN-NIEDERREISSEN",
-            "FIG-ZEICHEN-TAGE",
-            "FIG-ZEICHEN-TAGE",
-            "FIG-ZEICHEN-TAGE"
-          ]
-        }
-      ],
-      "action_de": "Die Vorübergehenden lästern ihn und schütteln die Köpfe: Du, der du den Tempel niederreisst und in drei Tagen aufbaust, rette dich selbst! Wenn du Gottes Sohn bist, steig herab vom Kreuz!",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-MENGE": "earnest"
+      "speech": [],
+      "action_de": "Drei Gruppen verspotten den Gekreuzigten: die Vorübergehenden, die Hohepriester mit den Schriftgelehrten und Ältesten und die Räuber, die mit ihm gekreuzigt sind.",
+      "keywords": {
+        "de": "Andere hat er gerettet, sich selbst kann er nicht retten",
+        "gsw": "Anderi hät er grettet, sich sälber chan er nöd rette"
+      },
+      "diagram": {
+        "visual": "grid",
+        "span": 2,
+        "cols": 3,
+        "title": {
+          "de": "Wenn du Gottes Sohn bist, steig herab vom Kreuz!",
+          "gsw": "Wänn du Gottes Sohn bisch, chumm abe vom Chrüüz!"
         },
-        "x": {
-          "FIG-GRUPPE-MENGE": 60
-        }
-      }
-    },
-    {
-      "n": 4,
-      "reference": "MAT.27.41-MAT.27.44",
-      "figures": [
-        "FIG-GRUPPE-HOHER-RAT"
-      ],
-      "objects": [
-        "FIG-OBJ-KREUZ"
-      ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-HOHER-RAT",
-          "to": "FIG-GRUPPE-HOHER-RAT",
-          "icons": [
-            "FIG-OBJ-KREUZ",
-            "FIG-ZEICHEN-HINAB",
-            "FIG-ZEICHEN-GLAUBEN"
-          ]
-        },
-        {
-          "from": "FIG-GRUPPE-HOHER-RAT",
-          "to": "FIG-GRUPPE-HOHER-RAT",
-          "icons": [
-            "FIG-GOTT",
-            "FIG-ZEICHEN-RETTUNG",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
-        }
-      ],
-      "action_de": "Ebenso spotten die Hohepriester mit den Schriftgelehrten und Ältesten: Andere hat er gerettet, sich selbst kann er nicht retten; er steige jetzt vom Kreuz herab, dann glauben wir an ihn; er hat auf Gott vertraut, der soll ihn jetzt retten. Auch die Räuber beschimpfen ihn.",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-HOHER-RAT": "earnest"
-        },
-        "x": {
-          "FIG-GRUPPE-HOHER-RAT": 60
-        }
+        "speaker": "FIG-GRUPPE-MENGE",
+        "cells": [
+          {
+            "a": {
+              "de": "Die Vorübergehenden: «Wenn du Gottes Sohn bist, steig herab vom Kreuz!»",
+              "gsw": "Die, wo verbiigange sind: «Wänn du Gottes Sohn bisch, chumm abe vom Chrüüz!»"
+            },
+            "icons": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-OBJ-KREUZ"
+            ]
+          },
+          {
+            "a": {
+              "de": "Die Hohepriester mit den Schriftgelehrten und Ältesten: «Andere hat er gerettet, sich selbst kann er nicht retten.»",
+              "gsw": "D Hoheprieschter mit de Schriftgelehrte und Ältischte: «Anderi hät er grettet, sich sälber chan er nöd rette.»"
+            },
+            "icons": [
+              "FIG-GRUPPE-HOHEPRIESTER",
+              "FIG-ZEICHEN-RETTUNG"
+            ]
+          },
+          {
+            "a": {
+              "de": "Auf dieselbe Weise aber beschimpften ihn auch die Räuber, die mit ihm gekreuzigt worden waren.",
+              "gsw": "Gnau gliich aber händ en au d Röiber beschimpft, wo mit ihm gchrüüziget worde sind."
+            },
+            "icons": [
+              "FIG-OBJ-KREUZ",
+              "FIG-ZEICHEN-VERLEUMDEN"
+            ]
+          }
+        ]
       }
     }
   ],
   "actions_de": [
-    "Unterwegs zwingen die Soldaten einen Mann aus Kyrene namens Simon, das Kreuz Jesu zu tragen; sie kommen an den Ort Golgota, die Schädelstätte.",
-    "Sie geben Jesus mit Galle vermischten Wein, den er nicht trinken will, kreuzigen ihn, verteilen seine Kleider durch das Los und bewachen ihn; über seinem Kopf steht die Anklage, und mit ihm werden zwei Räuber gekreuzigt.",
-    "Die Vorübergehenden lästern ihn und schütteln die Köpfe: Du, der du den Tempel niederreisst und in drei Tagen aufbaust, rette dich selbst! Wenn du Gottes Sohn bist, steig herab vom Kreuz!",
-    "Ebenso spotten die Hohepriester mit den Schriftgelehrten und Ältesten: Andere hat er gerettet, sich selbst kann er nicht retten; er steige jetzt vom Kreuz herab, dann glauben wir an ihn; er hat auf Gott vertraut, der soll ihn jetzt retten. Auch die Räuber beschimpfen ihn."
+    "Auf dem Weg zwingen die Soldaten einen Mann aus Kyrene namens Simon, Jesu Kreuz zu tragen, bis zu dem Ort, der Golgota heisst.",
+    "Sie kreuzigen Jesus, verteilen seine Kleider, indem sie das Los werfen, und bewachen ihn; über seinem Kopf bringen sie die Anklage an: Dies ist Jesus, der König der Juden. Mit ihm werden zwei Räuber gekreuzigt.",
+    "Drei Gruppen verspotten den Gekreuzigten: die Vorübergehenden, die Hohepriester mit den Schriftgelehrten und Ältesten und die Räuber, die mit ihm gekreuzigt sind."
   ],
   "captions_de": [
-    "Soldat → Simon: Ein Soldat zwingt Simon von Kyrene (Mitte, Pfeil), das Kreuz zu tragen; mit Jesus geht es zum Hügel Golgota (gestrichelter Weg).",
-    "Kreuzigung: Golgota, der Hügel mit drei Kreuzen (ohne Körper; Tafel am mittleren); Soldaten werfen das Los um die Kleider (Gewand mit Losen, gepunkteter Bogen).",
-    "Spott: Vorübergehende beim Kreuz: Du, der den Tempel abreissen und in drei Tagen bauen will? (Gebäude mit Riss, drei Sonnen).",
-    "Spott: Der Hohe Rat: Steig vom Kreuz herab, dann glauben wir (Kreuz, Pfeil nach unten, Herz mit Lichtstrahl) – soll Gott ihn doch retten? (Strahlenkranz, Pfeil aus den Wellen, Fragezeichen)."
+    "Kreuzweg: Ein Soldat zwingt Simon von Kyrene (Name), das Kreuz zu tragen (Kreuz); Jesus geht voran zum Ort Golgota (Golgota).",
+    "Gekreuzigt: Jesus am Kreuz mit der Inschrift «Dies ist Jesus, der König der Juden» (Tafel); Soldaten werfen das Los um seine Kleider (Kleider, Lose).",
+    "Raster drei Spötter (Bild Jesus am Kreuz): die Vorübergehenden – «Wenn du Gottes Sohn bist, steig herab vom Kreuz!» (Menge, Kreuz); die Hohepriester – «Andere hat er gerettet, sich selbst kann er nicht retten.» (Hohepriester, retten); die Räuber beschimpfen ihn ebenso (Kreuz, verleumden)."
   ],
-  "interpretation_note_de": "Die Kreuzigung wird nicht ausgemalt: Golgota zeigt drei Kreuze ohne Körper. Wein mit Galle ([[MAT.27.34]]), die Tafel mit der Anklage ([[MAT.27.37]]) und die mitgekreuzigten Räuber ([[MAT.27.38]], [[MAT.27.44]]) sind nicht eigens gezeigt. Der Strahlenkranz in der Sprechblase gibt das Wort der Spötter über Gott wieder ([[MAT.27.43]]); Gott handelt hier nicht.",
+  "interpretation_note_de": "Drei Felder ([[MAT.27.32-MAT.27.44]]): Simon trägt das Kreuz, die Kreuzigung mit Inschrift und Losen, dann alle drei Gruppen von Spöttern als Raster. Die Kreuzigung ist würdig und ohne Wunden gezeichnet (BILDSPRACHE.md). Die zwei Räuber sind nicht als Figuren gezeichnet, weil das Bildlexikon kein passendes Zeichen hat (Rolle «Mitgekreuzigter» fehlt); sie stehen im Wort.",
   "basis": [
     {
       "record": "TU-MAT-027-032-044",
       "field": "summary",
-      "fingerprint": "f2ff823ece3302f9"
+      "fingerprint": "b93c04ef6b5c9bad"
     },
     {
       "record": "TRANS-MAT-027-001-066-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.27.32-MAT.27.33",
-      "fingerprint": "66a95520d582da58"
+      "reference": "MAT.27.32-MAT.27.34",
+      "fingerprint": "d66af1c8cef180c0"
     },
     {
       "record": "TRANS-MAT-027-001-066-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.27.34-MAT.27.38",
-      "fingerprint": "904e07b41edd8f1c"
+      "reference": "MAT.27.35-MAT.27.38",
+      "fingerprint": "53da19438748b6d2"
     },
     {
       "record": "TRANS-MAT-027-001-066-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.27.39-MAT.27.40",
-      "fingerprint": "5ba9c7d2336dd06d"
-    },
-    {
-      "record": "TRANS-MAT-027-001-066-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.27.41-MAT.27.44",
-      "fingerprint": "cde51a61bcfeebba"
+      "reference": "MAT.27.39-MAT.27.44",
+      "fingerprint": "27444eefa7f7bf3d"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -991,6 +970,248 @@
             }
           }
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-027-032-044",
+            "field": "summary",
+            "fingerprint": "f2ff823ece3302f9"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.32-MAT.27.33",
+            "fingerprint": "66a95520d582da58"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.34-MAT.27.38",
+            "fingerprint": "904e07b41edd8f1c"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.39-MAT.27.40",
+            "fingerprint": "5ba9c7d2336dd06d"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.41-MAT.27.44",
+            "fingerprint": "cde51a61bcfeebba"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.27.32-MAT.27.33",
+            "figures": [
+              "FIG-ROLLE-SOLDAT",
+              "FIG-SIMON-KYRENE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KREUZ",
+              "FIG-ORT-GOLGOTA"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Unterwegs zwingen die Soldaten einen Mann aus Kyrene namens Simon, das Kreuz Jesu zu tragen; sie kommen an den Ort Golgota, die Schädelstätte.",
+            "stage": {
+              "hold": {
+                "FIG-SIMON-KYRENE": "FIG-OBJ-KREUZ"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-SOLDAT",
+                  "FIG-SIMON-KYRENE",
+                  "act"
+                ],
+                [
+                  "FIG-JESUS",
+                  "FIG-ORT-BERG",
+                  "go"
+                ]
+              ],
+              "mood": {
+                "FIG-SIMON-KYRENE": "worried",
+                "FIG-ROLLE-SOLDAT": "earnest",
+                "FIG-JESUS": "calm"
+              },
+              "back_side": "right",
+              "x": {
+                "FIG-ROLLE-SOLDAT": 18,
+                "FIG-SIMON-KYRENE": 58,
+                "FIG-JESUS": 98
+              },
+              "floor_x": {
+                "FIG-ORT-GOLGOTA": 158
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.27.34-MAT.27.38",
+            "figures": [
+              "FIG-GRUPPE-SOLDATEN"
+            ],
+            "objects": [
+              "FIG-ORT-GOLGOTA",
+              "FIG-OBJ-KLEIDER-VERLOST"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Sie geben Jesus mit Galle vermischten Wein, den er nicht trinken will, kreuzigen ihn, verteilen seine Kleider durch das Los und bewachen ihn; über seinem Kopf steht die Anklage, und mit ihm werden zwei Räuber gekreuzigt.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-SOLDATEN": "calm"
+              },
+              "back_side": "right",
+              "x": {
+                "FIG-GRUPPE-SOLDATEN": 44
+              },
+              "floor_x": {
+                "FIG-OBJ-KLEIDER-VERLOST": 90
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-SOLDATEN",
+                  "FIG-OBJ-KLEIDER-VERLOST",
+                  "throw"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.27.39-MAT.27.40",
+            "figures": [
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-KREUZ"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-NIEDERREISSEN",
+                  "FIG-ZEICHEN-TAGE",
+                  "FIG-ZEICHEN-TAGE",
+                  "FIG-ZEICHEN-TAGE"
+                ]
+              }
+            ],
+            "action_de": "Die Vorübergehenden lästern ihn und schütteln die Köpfe: Du, der du den Tempel niederreisst und in drei Tagen aufbaust, rette dich selbst! Wenn du Gottes Sohn bist, steig herab vom Kreuz!",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 60
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.27.41-MAT.27.44",
+            "figures": [
+              "FIG-GRUPPE-HOHER-RAT"
+            ],
+            "objects": [
+              "FIG-OBJ-KREUZ"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-HOHER-RAT",
+                "to": "FIG-GRUPPE-HOHER-RAT",
+                "icons": [
+                  "FIG-OBJ-KREUZ",
+                  "FIG-ZEICHEN-HINAB",
+                  "FIG-ZEICHEN-GLAUBEN"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-HOHER-RAT",
+                "to": "FIG-GRUPPE-HOHER-RAT",
+                "icons": [
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-RETTUNG",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Ebenso spotten die Hohepriester mit den Schriftgelehrten und Ältesten: Andere hat er gerettet, sich selbst kann er nicht retten; er steige jetzt vom Kreuz herab, dann glauben wir an ihn; er hat auf Gott vertraut, der soll ihn jetzt retten. Auch die Räuber beschimpfen ihn.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-HOHER-RAT": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-HOHER-RAT": 60
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Unterwegs zwingen die Soldaten einen Mann aus Kyrene namens Simon, das Kreuz Jesu zu tragen; sie kommen an den Ort Golgota, die Schädelstätte.",
+          "Sie geben Jesus mit Galle vermischten Wein, den er nicht trinken will, kreuzigen ihn, verteilen seine Kleider durch das Los und bewachen ihn; über seinem Kopf steht die Anklage, und mit ihm werden zwei Räuber gekreuzigt.",
+          "Die Vorübergehenden lästern ihn und schütteln die Köpfe: Du, der du den Tempel niederreisst und in drei Tagen aufbaust, rette dich selbst! Wenn du Gottes Sohn bist, steig herab vom Kreuz!",
+          "Ebenso spotten die Hohepriester mit den Schriftgelehrten und Ältesten: Andere hat er gerettet, sich selbst kann er nicht retten; er steige jetzt vom Kreuz herab, dann glauben wir an ihn; er hat auf Gott vertraut, der soll ihn jetzt retten. Auch die Räuber beschimpfen ihn."
+        ],
+        "captions_de": [
+          "Soldat → Simon: Ein Soldat zwingt Simon von Kyrene (Mitte, Pfeil), das Kreuz zu tragen; mit Jesus geht es zum Hügel Golgota (gestrichelter Weg).",
+          "Kreuzigung: Golgota, der Hügel mit drei Kreuzen (ohne Körper; Tafel am mittleren); Soldaten werfen das Los um die Kleider (Gewand mit Losen, gepunkteter Bogen).",
+          "Spott: Vorübergehende beim Kreuz: Du, der den Tempel abreissen und in drei Tagen bauen will? (Gebäude mit Riss, drei Sonnen).",
+          "Spott: Der Hohe Rat: Steig vom Kreuz herab, dann glauben wir (Kreuz, Pfeil nach unten, Herz mit Lichtstrahl) – soll Gott ihn doch retten? (Strahlenkranz, Pfeil aus den Wellen, Fragezeichen)."
+        ],
+        "interpretation_note_de": "Die Kreuzigung wird nicht ausgemalt: Golgota zeigt drei Kreuze ohne Körper. Wein mit Galle ([[MAT.27.34]]), die Tafel mit der Anklage ([[MAT.27.37]]) und die mitgekreuzigten Räuber ([[MAT.27.38]], [[MAT.27.44]]) sind nicht eigens gezeigt. Der Strahlenkranz in der Sprechblase gibt das Wort der Spötter über Gott wieder ([[MAT.27.43]]); Gott handelt hier nicht.",
+        "basis": [
+          {
+            "record": "TU-MAT-027-032-044",
+            "field": "summary",
+            "fingerprint": "b93c04ef6b5c9bad"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.32-MAT.27.33",
+            "fingerprint": "66a95520d582da58"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.34-MAT.27.38",
+            "fingerprint": "904e07b41edd8f1c"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.39-MAT.27.40",
+            "fingerprint": "5ba9c7d2336dd06d"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.41-MAT.27.44",
+            "fingerprint": "cde51a61bcfeebba"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

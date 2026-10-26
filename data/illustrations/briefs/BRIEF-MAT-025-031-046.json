@@ -25,7 +25,11 @@
         "FIG-ZEICHEN-TRENNEN"
       ],
       "speech": [],
-      "action_de": "Wenn der Menschensohn in seiner Herrlichkeit mit allen Engeln kommt, wird er sich auf den Thron seiner Herrlichkeit setzen; alle Völker werden vor ihm versammelt, und er wird sie scheiden wie ein Hirt die Schafe von den Böcken.",
+      "action_de": "Wenn der Menschensohn in seiner Herrlichkeit kommt und sich auf seinen Thron setzt, werden alle Völker vor ihm versammelt, und er scheidet sie, wie der Hirt die Schafe von den Böcken scheidet: die Schafe zur Rechten, die Böcke zur Linken.",
+      "keywords": {
+        "de": "wie der Hirt die Schafe von den Böcken scheidet",
+        "gsw": "wie de Hirt d Schaf vo de Böck tränt"
+      },
       "stage": {
         "on": {
           "FIG-JESUS": "FIG-OBJ-THRON"
@@ -39,169 +43,217 @@
           "FIG-GRUPPE-VOELKER": 96
         },
         "floor_x": {
-          "FIG-OBJ-SCHAF": 120,
-          "FIG-OBJ-BOCK": 150
+          "FIG-OBJ-SCHAF": 130,
+          "FIG-OBJ-BOCK": 166
         },
         "mood": {
-          "FIG-GRUPPE-VOELKER": "pensive"
+          "FIG-GRUPPE-VOELKER": "pensive",
+          "FIG-JESUS": "calm"
         },
-        "air_x": 134,
-        "air_y": 70
+        "air_x": 148,
+        "air_y": 66
       }
     },
     {
       "n": 2,
       "reference": "MAT.25.34-MAT.25.40",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-VOELKER",
-        "FIG-ROLLE-ARMER"
-      ],
-      "objects": [
-        "FIG-OBJ-SCHAF"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-GUTE-WERKE"
-      ],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-VOELKER",
-          "icons": [
-            "FIG-ROLLE-ARMER",
-            "FIG-ZEICHEN-GUTE-WERKE",
-            "FIG-JESUS"
-          ]
+      "figures": [],
+      "objects": [],
+      "signs": [],
+      "speech": [],
+      "action_de": "Zu denen zur Rechten sagt der König: Kommt, ihr Gesegneten meines Vaters, erbt das Reich, denn ich war hungrig, durstig, fremd, nackt, krank und im Gefängnis, und ihr habt mir geholfen; was ihr einem dieser meiner geringsten Brüder getan habt, das habt ihr mir getan.",
+      "keywords": {
+        "de": "Kommt, ihr Gesegneten meines Vaters",
+        "gsw": "Chömed, ir Gsägnete vo mim Vatter"
+      },
+      "diagram": {
+        "visual": "grid",
+        "span": 2,
+        "cols": 3,
+        "speaker": "FIG-JESUS",
+        "title": {
+          "de": "Was ihr einem dieser meiner geringsten Brüder getan habt, das habt ihr mir getan.",
+          "gsw": "Was ir eim vo dene chliinschte Brüedere vo mir gmacht händ, das händ ir mir gmacht."
         },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-VOELKER",
-          "icons": [
-            "FIG-ZEICHEN-REICH-GOTTES"
-          ]
-        }
-      ],
-      "action_de": "Der König wird zu denen zu seiner Rechten sagen: Erbt das Reich, denn ich war hungrig, durstig, fremd, nackt, krank und im Gefängnis, und ihr habt mir geholfen; was ihr einem meiner geringsten Brüder getan habt, habt ihr mir getan.",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-VOELKER": "surprised",
-          "FIG-ROLLE-ARMER": "smile",
-          "FIG-JESUS": "calm"
-        },
-        "at": {
-          "FIG-ZEICHEN-GUTE-WERKE": "FIG-GRUPPE-VOELKER"
-        },
-        "arrows": [
-          [
-            "FIG-GRUPPE-VOELKER",
-            "FIG-ROLLE-ARMER",
-            "act"
-          ]
-        ],
-        "x": {
-          "FIG-JESUS": 30,
-          "FIG-GRUPPE-VOELKER": 96,
-          "FIG-ROLLE-ARMER": 160
-        },
-        "hold": {
-          "FIG-GRUPPE-VOELKER": "FIG-OBJ-SCHAF"
-        }
+        "cells": [
+          {
+            "a": {
+              "de": "Ich war hungrig, und ihr habt mir zu essen gegeben.",
+              "gsw": "Ich han Hunger gha, und ir händ mir z ässe gää."
+            },
+            "icons": [
+              "FIG-OBJ-BROT"
+            ]
+          },
+          {
+            "a": {
+              "de": "Ich war durstig, und ihr habt mir zu trinken gegeben.",
+              "gsw": "Ich han Durscht gha, und ir händ mir z trinke gää."
+            },
+            "icons": [
+              "FIG-OBJ-BECHER-WASSER"
+            ]
+          },
+          {
+            "a": {
+              "de": "Ich war fremd, und ihr habt mich aufgenommen.",
+              "gsw": "Ich bin fremd gsii, und ir händ mich ufgnoo."
+            },
+            "icons": [
+              "FIG-ZEICHEN-GASTFREUNDSCHAFT"
+            ]
+          },
+          {
+            "a": {
+              "de": "Ich war nackt, und ihr habt mich bekleidet.",
+              "gsw": "Ich bin blutt gsii, und ir händ mich aagleit."
+            },
+            "icons": [
+              "FIG-OBJ-GEWAND"
+            ]
+          },
+          {
+            "a": {
+              "de": "Ich war krank, und ihr habt mich besucht.",
+              "gsw": "Ich bin chrank gsii, und ir händ mich psuecht."
+            },
+            "icons": [
+              "FIG-ZEICHEN-KRANK"
+            ]
+          },
+          {
+            "a": {
+              "de": "Ich war im Gefängnis, und ihr seid zu mir gekommen.",
+              "gsw": "Ich bin im Gfängnis gsii, und ir sind zu mir choo."
+            },
+            "icons": [
+              "FIG-ORT-GEFAENGNIS"
+            ]
+          }
+        ]
       }
     },
     {
       "n": 3,
-      "reference": "MAT.25.41-MAT.25.45",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-VOELKER",
-        "FIG-ROLLE-ARMER"
-      ],
-      "objects": [
-        "FIG-OBJ-BOCK"
-      ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-VOELKER",
-          "icons": [
-            "FIG-ROLLE-ARMER",
-            "FIG-ZEICHEN-NEIN",
-            "FIG-JESUS"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-VOELKER",
-          "icons": [
-            "FIG-ZEICHEN-FEUER"
-          ]
-        }
-      ],
-      "action_de": "Zu denen zur Linken wird er sagen: Geht weg von mir in das ewige Feuer, denn ihr habt mir das alles nicht getan; was ihr einem dieser Geringsten nicht getan habt, habt ihr mir auch nicht getan.",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-VOELKER": "worried",
-          "FIG-ROLLE-ARMER": "worried",
-          "FIG-JESUS": "earnest"
-        },
-        "pose": {
-          "FIG-GRUPPE-VOELKER": "away"
-        },
-        "x": {
-          "FIG-JESUS": 30,
-          "FIG-GRUPPE-VOELKER": 96,
-          "FIG-ROLLE-ARMER": 160
-        },
-        "hold": {
-          "FIG-GRUPPE-VOELKER": "FIG-OBJ-BOCK"
-        }
-      }
-    },
-    {
-      "n": 4,
-      "reference": "MAT.25.46",
+      "reference": "MAT.25.41-MAT.25.46",
       "figures": [],
-      "objects": [
-        "FIG-OBJ-SCHAF",
-        "FIG-OBJ-BOCK"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-LEBEN",
-        "FIG-ZEICHEN-FEUER"
-      ],
+      "objects": [],
+      "signs": [],
       "speech": [],
-      "action_de": "Diese werden weggehen in ewige Strafe, die Gerechten aber in ewiges Leben.",
-      "stage": {
-        "floor_x": {
-          "FIG-OBJ-SCHAF": 36,
-          "FIG-OBJ-BOCK": 120
-        },
-        "at": {
-          "FIG-ZEICHEN-LEBEN": "FIG-OBJ-SCHAF",
-          "FIG-ZEICHEN-FEUER": "FIG-OBJ-BOCK"
-        }
+      "action_de": "Zu denen zur Linken sagt er: Geht weg von mir, ihr Verfluchten, denn ihr habt mir dies alles nicht getan; was ihr einem dieser Geringsten nicht getan habt, das habt ihr mir auch nicht getan. Diese gehen in ewige Strafe, die Gerechten aber in ewiges Leben.",
+      "keywords": {
+        "de": "die Gerechten aber in ewiges Leben",
+        "gsw": "di Grächte aber i ewigs Läbe"
+      },
+      "diagram": {
+        "visual": "columns",
+        "span": 2,
+        "speaker": "FIG-JESUS",
+        "head_tones": [
+          "new",
+          "old"
+        ],
+        "arrow": false,
+        "head": [
+          {
+            "de": "zur Rechten",
+            "gsw": "uf de rächte Siite"
+          },
+          {
+            "de": "zur Linken",
+            "gsw": "uf de lingge Siite"
+          }
+        ],
+        "rows": [
+          [
+            {
+              "a": {
+                "de": "«Kommt, ihr Gesegneten meines Vaters, erbt das Reich!»",
+                "gsw": "«Chömed, ir Gsägnete vo mim Vatter, erbed s Riich!»"
+              },
+              "icons": [
+                "FIG-OBJ-SCHAF",
+                "FIG-ZEICHEN-SEGNEN"
+              ],
+              "tone": "new"
+            },
+            {
+              "a": {
+                "de": "«Geht weg von mir, ihr Verfluchten, in das ewige Feuer!»",
+                "gsw": "«Gönd wäg vo mir, ir Verfluechte, is ewig Füür!»"
+              },
+              "icons": [
+                "FIG-OBJ-BOCK",
+                "FIG-ZEICHEN-NICHT"
+              ],
+              "tone": "old"
+            }
+          ],
+          [
+            {
+              "a": {
+                "de": "«Was ihr einem dieser meiner geringsten Brüder getan habt, das habt ihr mir getan.»",
+                "gsw": "«Was ir eim vo dene chliinschte Brüedere vo mir gmacht händ, das händ ir mir gmacht.»"
+              },
+              "icons": [
+                "FIG-ZEICHEN-GUTE-WERKE"
+              ],
+              "tone": "new"
+            },
+            {
+              "a": {
+                "de": "«Was ihr einem dieser Geringsten nicht getan habt, das habt ihr mir auch nicht getan.»",
+                "gsw": "«Was ir eim vo dene Chliinschte nöd gmacht händ, das händ ir mir au nöd gmacht.»"
+              },
+              "icons": [
+                "FIG-ZEICHEN-GUTE-WERKE",
+                "FIG-ZEICHEN-NICHT"
+              ],
+              "tone": "old"
+            }
+          ],
+          [
+            {
+              "a": {
+                "de": "Die Gerechten gehen in ewiges Leben.",
+                "gsw": "Di Grächte gönd i ewigs Läbe."
+              },
+              "icons": [
+                "FIG-ZEICHEN-LEBEN"
+              ],
+              "tone": "new"
+            },
+            {
+              "a": {
+                "de": "Diese gehen weg in ewige Strafe.",
+                "gsw": "Die gönd wäg i ewigi Straf."
+              },
+              "icons": [
+                "FIG-ZEICHEN-FEUER"
+              ],
+              "tone": "old"
+            }
+          ]
+        ]
       }
     }
   ],
   "actions_de": [
-    "Wenn der Menschensohn in seiner Herrlichkeit mit allen Engeln kommt, wird er sich auf den Thron seiner Herrlichkeit setzen; alle Völker werden vor ihm versammelt, und er wird sie scheiden wie ein Hirt die Schafe von den Böcken.",
-    "Der König wird zu denen zu seiner Rechten sagen: Erbt das Reich, denn ich war hungrig, durstig, fremd, nackt, krank und im Gefängnis, und ihr habt mir geholfen; was ihr einem meiner geringsten Brüder getan habt, habt ihr mir getan.",
-    "Zu denen zur Linken wird er sagen: Geht weg von mir in das ewige Feuer, denn ihr habt mir das alles nicht getan; was ihr einem dieser Geringsten nicht getan habt, habt ihr mir auch nicht getan.",
-    "Diese werden weggehen in ewige Strafe, die Gerechten aber in ewiges Leben."
+    "Wenn der Menschensohn in seiner Herrlichkeit kommt und sich auf seinen Thron setzt, werden alle Völker vor ihm versammelt, und er scheidet sie, wie der Hirt die Schafe von den Böcken scheidet: die Schafe zur Rechten, die Böcke zur Linken.",
+    "Zu denen zur Rechten sagt der König: Kommt, ihr Gesegneten meines Vaters, erbt das Reich, denn ich war hungrig, durstig, fremd, nackt, krank und im Gefängnis, und ihr habt mir geholfen; was ihr einem dieser meiner geringsten Brüder getan habt, das habt ihr mir getan.",
+    "Zu denen zur Linken sagt er: Geht weg von mir, ihr Verfluchten, denn ihr habt mir dies alles nicht getan; was ihr einem dieser Geringsten nicht getan habt, das habt ihr mir auch nicht getan. Diese gehen in ewige Strafe, die Gerechten aber in ewiges Leben."
   ],
   "captions_de": [
-    "Ankündigung: Der Menschensohn (Jesus) sitzt auf dem goldenen Thron; vor ihm die Völker; er scheidet sie, wie ein Hirt die Schafe von den Böcken scheidet (Schaf, Bock, Bruch mit zwei Pfeilen).",
-    "Geholfen → Reich: Zur Rechten (Schaf): Die Gesegneten haben dem Armen geholfen (Pfeil zum Armen in grauem Gewand; offene Hand und Brot); der König (Jesus) sagt: Was ihr ihm getan habt, habt ihr mir getan – erbt das Reich der Himmel (Krone mit Wolke).",
-    "Nicht geholfen → Feuer: Zur Linken (Bock): Der König (Jesus) sagt den anderen: Was ihr dem Armen nicht getan habt (Armer, rotes X), habt ihr mir nicht getan (Jesus) – darum ins Feuer (Flammen).",
-    "Gerechte → ewiges Leben, die anderen → Strafe: Die einen (Schaf) kommen ins ewige Leben (Keimling mit Unendlichzeichen über dem Schaf), die anderen (Bock) in die ewige Strafe (Flammen über dem Bock)."
+    "Gericht über die Völker (angekündigt): Jesus sitzt auf dem Thron der Herrlichkeit (Thron, Licht); vor ihm die Völker (Völker); er scheidet wie ein Hirt die Schafe von den Böcken (Schaf, Bock, trennen).",
+    "Sechs Werke (Bild Jesus, Blase «Was ihr einem dieser meiner geringsten Brüder getan habt, das habt ihr mir getan.»): hungrig – zu essen (Brot); durstig – zu trinken (Becher mit Wasser); fremd – aufgenommen (Gastfreundschaft); nackt – bekleidet (Gewand); krank – besucht (krank); im Gefängnis – gekommen (Gefängnis).",
+    "Zwei Spalten (Bild Jesus): links, hervorgehoben, zur Rechten – «Kommt, ihr Gesegneten meines Vaters» (Schaf, segnen) – die Gerechten gehen in ewiges Leben (Leben); rechts zur Linken – «Geht weg von mir, ihr Verfluchten» (Bock, Verbotszeichen) – sie gehen in ewige Strafe (Feuer)."
   ],
-  "interpretation_note_de": "Ankündigung im Futur ([[MAT.25.31]]): Das Gericht ist nicht erzählt, sondern von Jesus angekündigt. Jesus erscheint als der Menschensohn und König auf dem Thron, den Matthäus mit Jesus gleichsetzt. Die Völker sind eine Gruppe; ihre Scheidung zeigen Schaf und Bock. Die sechs Werke ([[MAT.25.35-MAT.25.36]]) fasst das Zeichen «gute Werke» (Brot und Herz) zusammen; der Arme steht für «einen dieser meiner geringsten Brüder» ([[MAT.25.40]]) – wer damit gemeint ist (alle Notleidenden oder die Jünger), ist umstritten. Das ewige Feuer ([[MAT.25.41]]) zeigt nur Flammen, keine Strafe an Menschen.",
+  "interpretation_note_de": "Drei Felder ([[MAT.25.31-MAT.25.46]]): der Menschensohn auf dem Thron scheidet die Völker wie Schafe und Böcke, alle sechs Werke als Raster mit dem Kernsatz, dann rechts ↔ links mit Anrede, Antwort und Ausgang (hervorgehoben die Rechte). Alles ist Ankündigung in Jesu Rede; der Menschensohn und König ist als Jesus gezeichnet (Deutung). Wer «die geringsten Brüder» sind, lässt das Bild offen.",
   "basis": [
     {
       "record": "TU-MAT-025-031-046",
       "field": "summary",
-      "fingerprint": "5b0d1ed6649cd2c3"
+      "fingerprint": "069dbda4f73ec875"
     },
     {
       "record": "TRANS-MAT-025-001-046-DE-WORKING",
@@ -218,18 +270,12 @@
     {
       "record": "TRANS-MAT-025-001-046-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.25.41-MAT.25.45",
-      "fingerprint": "9dd6539756c8cafa"
-    },
-    {
-      "record": "TRANS-MAT-025-001-046-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.25.46",
-      "fingerprint": "a081aa81a1f54198"
+      "reference": "MAT.25.41-MAT.25.46",
+      "fingerprint": "be5b03bb73c6c847"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -449,6 +495,505 @@
           "Geholfen → Reich: Zur Rechten (Schaf): Die Gesegneten haben dem Armen geholfen (Pfeil zum Armen in grauem Gewand; Hand mit Brot und Herz); der König (Jesus) sagt: Was ihr ihm getan habt, habt ihr mir getan – erbt das Reich der Himmel (Krone mit Strahlen).",
           "Nicht geholfen → Feuer: Zur Linken (Bock): Der König (Jesus) sagt den anderen: Was ihr dem Armen nicht getan habt (Armer, rotes X), habt ihr mir nicht getan (Jesus) – darum ins Feuer (Flammen).",
           "Gerechte → ewiges Leben, die anderen → Strafe: Die einen (Schaf) kommen ins ewige Leben (grüner Baum im goldenen Ring über dem Schaf), die anderen (Bock) in die ewige Strafe (Flammen über dem Bock)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-025-031-046",
+            "field": "summary",
+            "fingerprint": "5b0d1ed6649cd2c3"
+          },
+          {
+            "record": "TRANS-MAT-025-001-046-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.25.31-MAT.25.33",
+            "fingerprint": "b8e7449ce861eea0"
+          },
+          {
+            "record": "TRANS-MAT-025-001-046-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.25.34-MAT.25.40",
+            "fingerprint": "1f9fd947164a7e00"
+          },
+          {
+            "record": "TRANS-MAT-025-001-046-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.25.41-MAT.25.45",
+            "fingerprint": "9dd6539756c8cafa"
+          },
+          {
+            "record": "TRANS-MAT-025-001-046-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.25.46",
+            "fingerprint": "a081aa81a1f54198"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.25.31-MAT.25.33",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-VOELKER"
+            ],
+            "objects": [
+              "FIG-OBJ-THRON",
+              "FIG-OBJ-SCHAF",
+              "FIG-OBJ-BOCK"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TRENNEN"
+            ],
+            "speech": [],
+            "action_de": "Wenn der Menschensohn in seiner Herrlichkeit mit allen Engeln kommt, wird er sich auf den Thron seiner Herrlichkeit setzen; alle Völker werden vor ihm versammelt, und er wird sie scheiden wie ein Hirt die Schafe von den Böcken.",
+            "stage": {
+              "on": {
+                "FIG-JESUS": "FIG-OBJ-THRON"
+              },
+              "pose": {
+                "FIG-JESUS": "sit"
+              },
+              "back_side": "left",
+              "before": true,
+              "x": {
+                "FIG-GRUPPE-VOELKER": 96
+              },
+              "floor_x": {
+                "FIG-OBJ-SCHAF": 120,
+                "FIG-OBJ-BOCK": 150
+              },
+              "mood": {
+                "FIG-GRUPPE-VOELKER": "pensive"
+              },
+              "air_x": 134,
+              "air_y": 70
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.25.34-MAT.25.40",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-VOELKER",
+              "FIG-ROLLE-ARMER"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHAF"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-GUTE-WERKE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-VOELKER",
+                "icons": [
+                  "FIG-ROLLE-ARMER",
+                  "FIG-ZEICHEN-GUTE-WERKE",
+                  "FIG-JESUS"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-VOELKER",
+                "icons": [
+                  "FIG-ZEICHEN-REICH-GOTTES"
+                ]
+              }
+            ],
+            "action_de": "Der König wird zu denen zu seiner Rechten sagen: Erbt das Reich, denn ich war hungrig, durstig, fremd, nackt, krank und im Gefängnis, und ihr habt mir geholfen; was ihr einem meiner geringsten Brüder getan habt, habt ihr mir getan.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-VOELKER": "surprised",
+                "FIG-ROLLE-ARMER": "smile",
+                "FIG-JESUS": "calm"
+              },
+              "at": {
+                "FIG-ZEICHEN-GUTE-WERKE": "FIG-GRUPPE-VOELKER"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-VOELKER",
+                  "FIG-ROLLE-ARMER",
+                  "act"
+                ]
+              ],
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-VOELKER": 96,
+                "FIG-ROLLE-ARMER": 160
+              },
+              "hold": {
+                "FIG-GRUPPE-VOELKER": "FIG-OBJ-SCHAF"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.25.41-MAT.25.45",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-VOELKER",
+              "FIG-ROLLE-ARMER"
+            ],
+            "objects": [
+              "FIG-OBJ-BOCK"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-VOELKER",
+                "icons": [
+                  "FIG-ROLLE-ARMER",
+                  "FIG-ZEICHEN-NEIN",
+                  "FIG-JESUS"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-VOELKER",
+                "icons": [
+                  "FIG-ZEICHEN-FEUER"
+                ]
+              }
+            ],
+            "action_de": "Zu denen zur Linken wird er sagen: Geht weg von mir in das ewige Feuer, denn ihr habt mir das alles nicht getan; was ihr einem dieser Geringsten nicht getan habt, habt ihr mir auch nicht getan.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-VOELKER": "worried",
+                "FIG-ROLLE-ARMER": "worried",
+                "FIG-JESUS": "earnest"
+              },
+              "pose": {
+                "FIG-GRUPPE-VOELKER": "away"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-VOELKER": 96,
+                "FIG-ROLLE-ARMER": 160
+              },
+              "hold": {
+                "FIG-GRUPPE-VOELKER": "FIG-OBJ-BOCK"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.25.46",
+            "figures": [],
+            "objects": [
+              "FIG-OBJ-SCHAF",
+              "FIG-OBJ-BOCK"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-LEBEN",
+              "FIG-ZEICHEN-FEUER"
+            ],
+            "speech": [],
+            "action_de": "Diese werden weggehen in ewige Strafe, die Gerechten aber in ewiges Leben.",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-SCHAF": 36,
+                "FIG-OBJ-BOCK": 120
+              },
+              "at": {
+                "FIG-ZEICHEN-LEBEN": "FIG-OBJ-SCHAF",
+                "FIG-ZEICHEN-FEUER": "FIG-OBJ-BOCK"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Wenn der Menschensohn in seiner Herrlichkeit mit allen Engeln kommt, wird er sich auf den Thron seiner Herrlichkeit setzen; alle Völker werden vor ihm versammelt, und er wird sie scheiden wie ein Hirt die Schafe von den Böcken.",
+          "Der König wird zu denen zu seiner Rechten sagen: Erbt das Reich, denn ich war hungrig, durstig, fremd, nackt, krank und im Gefängnis, und ihr habt mir geholfen; was ihr einem meiner geringsten Brüder getan habt, habt ihr mir getan.",
+          "Zu denen zur Linken wird er sagen: Geht weg von mir in das ewige Feuer, denn ihr habt mir das alles nicht getan; was ihr einem dieser Geringsten nicht getan habt, habt ihr mir auch nicht getan.",
+          "Diese werden weggehen in ewige Strafe, die Gerechten aber in ewiges Leben."
+        ],
+        "captions_de": [
+          "Ankündigung: Der Menschensohn (Jesus) sitzt auf dem goldenen Thron; vor ihm die Völker; er scheidet sie, wie ein Hirt die Schafe von den Böcken scheidet (Schaf, Bock, Bruch mit zwei Pfeilen).",
+          "Geholfen → Reich: Zur Rechten (Schaf): Die Gesegneten haben dem Armen geholfen (Pfeil zum Armen in grauem Gewand; offene Hand und Brot); der König (Jesus) sagt: Was ihr ihm getan habt, habt ihr mir getan – erbt das Reich der Himmel (Krone mit Wolke).",
+          "Nicht geholfen → Feuer: Zur Linken (Bock): Der König (Jesus) sagt den anderen: Was ihr dem Armen nicht getan habt (Armer, rotes X), habt ihr mir nicht getan (Jesus) – darum ins Feuer (Flammen).",
+          "Gerechte → ewiges Leben, die anderen → Strafe: Die einen (Schaf) kommen ins ewige Leben (Keimling mit Unendlichzeichen über dem Schaf), die anderen (Bock) in die ewige Strafe (Flammen über dem Bock)."
+        ],
+        "interpretation_note_de": "Ankündigung im Futur ([[MAT.25.31]]): Das Gericht ist nicht erzählt, sondern von Jesus angekündigt. Jesus erscheint als der Menschensohn und König auf dem Thron, den Matthäus mit Jesus gleichsetzt. Die Völker sind eine Gruppe; ihre Scheidung zeigen Schaf und Bock. Die sechs Werke ([[MAT.25.35-MAT.25.36]]) fasst das Zeichen «gute Werke» (Brot und Herz) zusammen; der Arme steht für «einen dieser meiner geringsten Brüder» ([[MAT.25.40]]) – wer damit gemeint ist (alle Notleidenden oder die Jünger), ist umstritten. Das ewige Feuer ([[MAT.25.41]]) zeigt nur Flammen, keine Strafe an Menschen.",
+        "basis": [
+          {
+            "record": "TU-MAT-025-031-046",
+            "field": "summary",
+            "fingerprint": "069dbda4f73ec875"
+          },
+          {
+            "record": "TRANS-MAT-025-001-046-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.25.31-MAT.25.33",
+            "fingerprint": "b8e7449ce861eea0"
+          },
+          {
+            "record": "TRANS-MAT-025-001-046-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.25.34-MAT.25.40",
+            "fingerprint": "1f9fd947164a7e00"
+          },
+          {
+            "record": "TRANS-MAT-025-001-046-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.25.41-MAT.25.45",
+            "fingerprint": "9dd6539756c8cafa"
+          },
+          {
+            "record": "TRANS-MAT-025-001-046-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.25.46",
+            "fingerprint": "a081aa81a1f54198"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.25.31-MAT.25.33",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-VOELKER"
+            ],
+            "objects": [
+              "FIG-OBJ-THRON",
+              "FIG-OBJ-SCHAF",
+              "FIG-OBJ-BOCK"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TRENNEN"
+            ],
+            "speech": [],
+            "action_de": "Wenn der Menschensohn in seiner Herrlichkeit kommt und sich auf seinen Thron setzt, werden alle Völker vor ihm versammelt, und er scheidet sie, wie der Hirt die Schafe von den Böcken scheidet: die Schafe zur Rechten, die Böcke zur Linken.",
+            "keywords": {
+              "de": "wie der Hirt die Schafe von den Böcken scheidet",
+              "gsw": "wie de Hirt d Schaf vo de Böck tränt"
+            },
+            "stage": {
+              "on": {
+                "FIG-JESUS": "FIG-OBJ-THRON"
+              },
+              "pose": {
+                "FIG-JESUS": "sit"
+              },
+              "back_side": "left",
+              "before": true,
+              "x": {
+                "FIG-GRUPPE-VOELKER": 96
+              },
+              "floor_x": {
+                "FIG-OBJ-SCHAF": 130,
+                "FIG-OBJ-BOCK": 166
+              },
+              "mood": {
+                "FIG-GRUPPE-VOELKER": "pensive",
+                "FIG-JESUS": "calm"
+              },
+              "air_x": 148,
+              "air_y": 66
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.25.34-MAT.25.40",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Zu denen zur Rechten sagt der König: Kommt, ihr Gesegneten meines Vaters, erbt das Reich, denn ich war hungrig, durstig, fremd, nackt, krank und im Gefängnis, und ihr habt mir geholfen; was ihr einem dieser meiner geringsten Brüder getan habt, das habt ihr mir getan.",
+            "keywords": {
+              "de": "Kommt, ihr Gesegneten meines Vaters",
+              "gsw": "Chömed, ir Gsägnete vo mim Vatter"
+            },
+            "diagram": {
+              "visual": "grid",
+              "span": 2,
+              "cols": 3,
+              "speaker": "FIG-JESUS",
+              "title": {
+                "de": "Was ihr einem dieser meiner geringsten Brüder getan habt, das habt ihr mir getan.",
+                "gsw": "Was ir eim vo dene chliinschte Brüedere vo mir gmacht händ, das händ ir mir gmacht."
+              },
+              "cells": [
+                {
+                  "a": {
+                    "de": "Ich war hungrig, und ihr habt mir zu essen gegeben.",
+                    "gsw": "Ich han Hunger gha, und ir händ mir z ässe gää."
+                  },
+                  "icons": [
+                    "FIG-OBJ-BROT"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Ich war durstig, und ihr habt mir zu trinken gegeben.",
+                    "gsw": "Ich han Durscht gha, und ir händ mir z trinke gää."
+                  },
+                  "icons": [
+                    "FIG-OBJ-BECHER-WASSER"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Ich war fremd, und ihr habt mich aufgenommen.",
+                    "gsw": "Ich bin fremd gsii, und ir händ mich ufgnoo."
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-GASTFREUNDSCHAFT"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Ich war nackt, und ihr habt mich bekleidet.",
+                    "gsw": "Ich bin blutt gsii, und ir händ mich aagleit."
+                  },
+                  "icons": [
+                    "FIG-OBJ-GEWAND"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Ich war krank, und ihr habt mich besucht.",
+                    "gsw": "Ich bin chrank gsii, und ir händ mich psuecht."
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-KRANK"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Ich war im Gefängnis, und ihr seid zu mir gekommen.",
+                    "gsw": "Ich bin im Gfängnis gsii, und ir sind zu mir choo."
+                  },
+                  "icons": [
+                    "FIG-ORT-GEFAENGNIS"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.25.41-MAT.25.46",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Zu denen zur Linken sagt er: Geht weg von mir, ihr Verfluchten, denn ihr habt mir dies alles nicht getan; was ihr einem dieser Geringsten nicht getan habt, das habt ihr mir auch nicht getan. Diese gehen in ewige Strafe, die Gerechten aber in ewiges Leben.",
+            "keywords": {
+              "de": "die Gerechten aber in ewiges Leben",
+              "gsw": "di Grächte aber i ewigs Läbe"
+            },
+            "diagram": {
+              "visual": "columns",
+              "span": 2,
+              "speaker": "FIG-JESUS",
+              "head_tones": [
+                "new",
+                "old"
+              ],
+              "head": [
+                {
+                  "de": "zur Rechten",
+                  "gsw": "uf de rächte Siite"
+                },
+                {
+                  "de": "zur Linken",
+                  "gsw": "uf de lingge Siite"
+                }
+              ],
+              "rows": [
+                [
+                  {
+                    "a": {
+                      "de": "«Kommt, ihr Gesegneten meines Vaters, erbt das Reich!»",
+                      "gsw": "«Chömed, ir Gsägnete vo mim Vatter, erbed s Riich!»"
+                    },
+                    "icons": [
+                      "FIG-OBJ-SCHAF",
+                      "FIG-ZEICHEN-SEGNEN"
+                    ],
+                    "tone": "new"
+                  },
+                  {
+                    "a": {
+                      "de": "«Geht weg von mir, ihr Verfluchten, in das ewige Feuer!»",
+                      "gsw": "«Gönd wäg vo mir, ir Verfluechte, is ewig Füür!»"
+                    },
+                    "icons": [
+                      "FIG-OBJ-BOCK",
+                      "FIG-ZEICHEN-NICHT"
+                    ],
+                    "tone": "old"
+                  }
+                ],
+                [
+                  {
+                    "a": {
+                      "de": "«Was ihr einem dieser meiner geringsten Brüder getan habt, das habt ihr mir getan.»",
+                      "gsw": "«Was ir eim vo dene chliinschte Brüedere vo mir gmacht händ, das händ ir mir gmacht.»"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-GUTE-WERKE"
+                    ],
+                    "tone": "new"
+                  },
+                  {
+                    "a": {
+                      "de": "«Was ihr einem dieser Geringsten nicht getan habt, das habt ihr mir auch nicht getan.»",
+                      "gsw": "«Was ir eim vo dene Chliinschte nöd gmacht händ, das händ ir mir au nöd gmacht.»"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-GUTE-WERKE",
+                      "FIG-ZEICHEN-NICHT"
+                    ],
+                    "tone": "old"
+                  }
+                ],
+                [
+                  {
+                    "a": {
+                      "de": "Die Gerechten gehen in ewiges Leben.",
+                      "gsw": "Di Grächte gönd i ewigs Läbe."
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-LEBEN"
+                    ],
+                    "tone": "new"
+                  },
+                  {
+                    "a": {
+                      "de": "Diese gehen weg in ewige Strafe.",
+                      "gsw": "Die gönd wäg i ewigi Straf."
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-FEUER"
+                    ],
+                    "tone": "old"
+                  }
+                ]
+              ]
+            }
+          }
         ]
       }
     }

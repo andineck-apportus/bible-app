@@ -11,101 +11,45 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.19.13",
+      "reference": "MAT.19.13-MAT.19.15",
       "figures": [
-        "FIG-GRUPPE-MENGE",
-        "FIG-GRUPPE-KINDER",
-        "FIG-GRUPPE-ZWOELF"
-      ],
-      "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-ZWOELF",
-          "to": "FIG-GRUPPE-KINDER",
-          "icons": [
-            "FIG-ZEICHEN-ABLEHNEN"
-          ]
-        }
-      ],
-      "action_de": "Man bringt Kinder zu Jesus, damit er ihnen die Hände auflege und bete; die Jünger aber fahren sie an.",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-ZWOELF": "earnest",
-          "FIG-GRUPPE-MENGE": "worried",
-          "FIG-GRUPPE-KINDER": "worried"
-        },
-        "arrows": [
-          [
-            "FIG-GRUPPE-MENGE",
-            "FIG-GRUPPE-KINDER",
-            "go"
-          ]
-        ]
-      }
-    },
-    {
-      "n": 2,
-      "reference": "MAT.19.14",
-      "figures": [
-        "FIG-GRUPPE-KINDER",
-        "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF"
-      ],
-      "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-ZEICHEN-KIND",
-            "FIG-JESUS",
-            "FIG-ZEICHEN-NICHT-HINDERN"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-ZEICHEN-KIND",
-            "FIG-ZEICHEN-REICH-GOTTES"
-          ]
-        }
-      ],
-      "action_de": "Jesus sagt: Lasst die Kinder und hindert sie nicht, zu mir zu kommen! Denn solchen gehört das Reich der Himmel.",
-      "stage": {
-        "mood": {
-          "FIG-JESUS": "earnest",
-          "FIG-GRUPPE-ZWOELF": "pensive",
-          "FIG-GRUPPE-KINDER": "calm"
-        }
-      }
-    },
-    {
-      "n": 3,
-      "reference": "MAT.19.15",
-      "figures": [
+        "FIG-GRUPPE-JUENGER",
         "FIG-JESUS",
         "FIG-GRUPPE-KINDER"
       ],
       "objects": [],
       "signs": [
-        "FIG-ZEICHEN-SEGNEN"
+        "FIG-ZEICHEN-SEGNEN",
+        "FIG-ZEICHEN-NICHT-HINDERN"
       ],
-      "speech": [],
-      "action_de": "Jesus legt ihnen die Hände auf und zieht von dort weiter.",
+      "speech": [
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-GRUPPE-JUENGER",
+          "icons": [
+            "FIG-ZEICHEN-KIND",
+            "FIG-ZEICHEN-REICH-GOTTES"
+          ],
+          "word": {
+            "de": "Lasst die Kinder, und hindert sie nicht, zu mir zu kommen!",
+            "gsw": "Lönd d Chind, und hindered si nöd dra, zu mir z choo!"
+          }
+        }
+      ],
+      "action_de": "Kinder werden zu Jesus gebracht; die Jünger fahren sie an; Jesus sagt: Lasst die Kinder, und hindert sie nicht, zu mir zu kommen, denn solchen gehört das Reich der Himmel – und legt ihnen die Hände auf.",
+      "keywords": {
+        "de": "Denn solchen gehört das Reich der Himmel",
+        "gsw": "Settige ghört nämli s Riich vo de Himel"
+      },
       "stage": {
         "mood": {
+          "FIG-GRUPPE-JUENGER": "worried",
           "FIG-JESUS": "smile",
           "FIG-GRUPPE-KINDER": "delight"
         },
-        "x": {
-          "FIG-JESUS": 66,
-          "FIG-GRUPPE-KINDER": 128
-        },
         "at": {
-          "FIG-ZEICHEN-SEGNEN": "FIG-GRUPPE-KINDER"
+          "FIG-ZEICHEN-SEGNEN": "FIG-GRUPPE-KINDER",
+          "FIG-ZEICHEN-NICHT-HINDERN": "FIG-GRUPPE-JUENGER"
         },
         "arrows": [
           [
@@ -113,48 +57,37 @@
             "FIG-GRUPPE-KINDER",
             "act"
           ]
-        ]
+        ],
+        "x": {
+          "FIG-GRUPPE-JUENGER": 34,
+          "FIG-JESUS": 96,
+          "FIG-GRUPPE-KINDER": 156
+        }
       }
     }
   ],
   "actions_de": [
-    "Man bringt Kinder zu Jesus, damit er ihnen die Hände auflege und bete; die Jünger aber fahren sie an.",
-    "Jesus sagt: Lasst die Kinder und hindert sie nicht, zu mir zu kommen! Denn solchen gehört das Reich der Himmel.",
-    "Jesus legt ihnen die Hände auf und zieht von dort weiter."
+    "Kinder werden zu Jesus gebracht; die Jünger fahren sie an; Jesus sagt: Lasst die Kinder, und hindert sie nicht, zu mir zu kommen, denn solchen gehört das Reich der Himmel – und legt ihnen die Hände auf."
   ],
   "captions_de": [
-    "Abgewiesen: Leute bringen Kinder (Weg von den Leuten zu den Kindern); die Jünger weisen sie ab (Person mit gekreuzten Armen).",
-    "Lasst sie kommen: Jesus sagt: Lasst die Kinder zu mir, hindert sie nicht (Kind, Jesus, erhobene Hand im roten Verbotskreis); solchen gehört das Reich der Himmel (Kind, Krone mit Wolke).",
-    "Jesus → Kinder: Jesus legt den Kindern die Hände auf (Pfeil von Jesus zu den Kindern, erhobene Hand mit Funkeln über ihnen)."
+    "Lasst die Kinder: Die Jünger wehren ab (Zeichen nicht hindern); Jesus legt den Kindern die Hände auf und sagt: «Lasst die Kinder, und hindert sie nicht, zu mir zu kommen!» (Kind, Krone Himmelreich)."
   ],
-  "interpretation_note_de": "Wer die Kinder bringt, sagt der Text nicht («wurden gebracht», [[MAT.19.13]]); das Bild zeigt eine Menge. Das Auflegen der Hände ([[MAT.19.15]]) zeigt das Zeichen «segnen» (Hand über dem Kopf); vom Gebet, um das man bittet, erzählt der Text nichts weiter.",
+  "interpretation_note_de": "Ein Feld: Abwehr der Jünger, Jesu Wort mit Begründung und die Handauflegung ([[MAT.19.13-MAT.19.15]]). Wer die Kinder bringt, sagt der Text nicht; das Bild zeigt nur die Kinder.",
   "basis": [
     {
       "record": "TU-MAT-019-013-015",
       "field": "summary",
-      "fingerprint": "99aad6f840a9f18e"
+      "fingerprint": "dc348a158c53caa8"
     },
     {
       "record": "TRANS-MAT-019-001-030-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.19.13",
-      "fingerprint": "c0b3bc3f1aae4816"
-    },
-    {
-      "record": "TRANS-MAT-019-001-030-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.19.14",
-      "fingerprint": "114c6f012383c438"
-    },
-    {
-      "record": "TRANS-MAT-019-001-030-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.19.15",
-      "fingerprint": "1e7d9714c67ae34e"
+      "reference": "MAT.19.13-MAT.19.15",
+      "fingerprint": "d39c39d2da1b10a5"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -402,6 +335,158 @@
           "Lasst sie kommen: Jesus sagt: Lasst die Kinder zu mir, hindert sie nicht (Kind, Jesus, durchgestrichene abwehrende Hand); solchen gehört das Reich der Himmel (Kind, Krone mit Lichtstrahlen).",
           "Jesus → Kinder: Jesus legt den Kindern die Hände auf (Pfeil von Jesus zu den Kindern, Hand über ihnen mit Lichtpunkten)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.19.13",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-GRUPPE-KINDER",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-ZWOELF",
+                "to": "FIG-GRUPPE-KINDER",
+                "icons": [
+                  "FIG-ZEICHEN-ABLEHNEN"
+                ]
+              }
+            ],
+            "action_de": "Man bringt Kinder zu Jesus, damit er ihnen die Hände auflege und bete; die Jünger aber fahren sie an.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "earnest",
+                "FIG-GRUPPE-MENGE": "worried",
+                "FIG-GRUPPE-KINDER": "worried"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-GRUPPE-KINDER",
+                  "go"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.19.14",
+            "figures": [
+              "FIG-GRUPPE-KINDER",
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-KIND",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-NICHT-HINDERN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-KIND",
+                  "FIG-ZEICHEN-REICH-GOTTES"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: Lasst die Kinder und hindert sie nicht, zu mir zu kommen! Denn solchen gehört das Reich der Himmel.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-ZWOELF": "pensive",
+                "FIG-GRUPPE-KINDER": "calm"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.19.15",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-KINDER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-SEGNEN"
+            ],
+            "speech": [],
+            "action_de": "Jesus legt ihnen die Hände auf und zieht von dort weiter.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "smile",
+                "FIG-GRUPPE-KINDER": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 66,
+                "FIG-GRUPPE-KINDER": 128
+              },
+              "at": {
+                "FIG-ZEICHEN-SEGNEN": "FIG-GRUPPE-KINDER"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-KINDER",
+                  "act"
+                ]
+              ]
+            }
+          }
+        ],
+        "actions_de": [
+          "Man bringt Kinder zu Jesus, damit er ihnen die Hände auflege und bete; die Jünger aber fahren sie an.",
+          "Jesus sagt: Lasst die Kinder und hindert sie nicht, zu mir zu kommen! Denn solchen gehört das Reich der Himmel.",
+          "Jesus legt ihnen die Hände auf und zieht von dort weiter."
+        ],
+        "captions_de": [
+          "Abgewiesen: Leute bringen Kinder (Weg von den Leuten zu den Kindern); die Jünger weisen sie ab (Person mit gekreuzten Armen).",
+          "Lasst sie kommen: Jesus sagt: Lasst die Kinder zu mir, hindert sie nicht (Kind, Jesus, erhobene Hand im roten Verbotskreis); solchen gehört das Reich der Himmel (Kind, Krone mit Wolke).",
+          "Jesus → Kinder: Jesus legt den Kindern die Hände auf (Pfeil von Jesus zu den Kindern, erhobene Hand mit Funkeln über ihnen)."
+        ],
+        "interpretation_note_de": "Wer die Kinder bringt, sagt der Text nicht («wurden gebracht», [[MAT.19.13]]); das Bild zeigt eine Menge. Das Auflegen der Hände ([[MAT.19.15]]) zeigt das Zeichen «segnen» (Hand über dem Kopf); vom Gebet, um das man bittet, erzählt der Text nichts weiter.",
+        "basis": [
+          {
+            "record": "TU-MAT-019-013-015",
+            "field": "summary",
+            "fingerprint": "99aad6f840a9f18e"
+          },
+          {
+            "record": "TRANS-MAT-019-001-030-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.19.13",
+            "fingerprint": "c0b3bc3f1aae4816"
+          },
+          {
+            "record": "TRANS-MAT-019-001-030-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.19.14",
+            "fingerprint": "114c6f012383c438"
+          },
+          {
+            "record": "TRANS-MAT-019-001-030-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.19.15",
+            "fingerprint": "1e7d9714c67ae34e"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

@@ -1,0 +1,120 @@
+{
+ "id": "CORE-MAT-019-013-015",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.19.13-MAT.19.15",
+ "target": "TU-MAT-019-013-015",
+ "core_de": "Als Kinder zu Jesus gebracht werden, damit er ihnen die Hände auflege und bete, fahren die Jünger sie an; Jesus aber sagt: «Lasst die Kinder, und hindert sie nicht, zu mir zu kommen! Denn solchen gehört das Reich der Himmel», und legt ihnen die Hände auf.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Bringen – Abwehr – Wort – Handauflegen",
+    "range": "MAT.19.13-MAT.19.15",
+    "elements": [
+     {
+      "label": "Kinder werden zu ihm gebracht, damit er ihnen die Hände auflege und bete",
+      "ref": "MAT.19.13",
+      "role": "Anlass"
+     },
+     {
+      "label": "die Jünger aber fuhren sie an",
+      "ref": "MAT.19.13",
+      "role": "Abwehr"
+     },
+     {
+      "label": "Jesus: Lasst die Kinder … denn solchen gehört das Reich der Himmel",
+      "ref": "MAT.19.14",
+      "role": "Wort",
+      "child": "s2"
+     },
+     {
+      "label": "Er legte ihnen die Hände auf und zog von dort weiter",
+      "ref": "MAT.19.15",
+      "role": "Ausgang"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "MAT.19.14"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "cause",
+    "subtype": "Weisung → denn",
+    "range": "MAT.19.14",
+    "elements": [
+     {
+      "label": "Lasst die Kinder, und hindert sie nicht, zu mir zu kommen!",
+      "ref": "MAT.19.14",
+      "role": "Weisung"
+     },
+     {
+      "label": "Denn solchen gehört das Reich der Himmel",
+      "ref": "MAT.19.14",
+      "role": "Begründung"
+     }
+    ],
+    "visual": "arrows",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.19.13-MAT.19.15",
+   "text_de": "Kinder werden zu Jesus gebracht, damit er ihnen die Hände auflege und bete; die Jünger fahren sie an; Jesus: «Lasst die Kinder, und hindert sie nicht, zu mir zu kommen! Denn solchen gehört das Reich der Himmel»; er legt ihnen die Hände auf.",
+   "reason_de": "Wendung durch Jesu Wort mit Begründung (Kriterien 1, 2 und 4).",
+   "recognition_de": "Jesus legt den Kindern die Hände auf; die Jünger wehren ab.",
+   "keywords": [
+    "Lasst die Kinder, und hindert sie nicht, zu mir zu kommen!",
+    "Denn solchen gehört das Reich der Himmel",
+    "Und er legte ihnen die Hände auf"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Wer die Kinder bringt, sagt der Text nicht (Passiv)"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-GRUPPE-KINDER"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.19.13-MAT.19.15",
+   "fingerprint": "d39c39d2da1b10a5"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mt 19–28 und Buch nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; keine fachliche Prüfung durch eine Person",
+  "result": "bestanden",
+  "summary_de": "Abwehr – Wort mit Begründung «denn» – Handauflegen; wer die Kinder bringt, bleibt offen.",
+  "changes_de": []
+ }
+}
