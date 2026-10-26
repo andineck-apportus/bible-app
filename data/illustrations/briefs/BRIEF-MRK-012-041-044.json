@@ -11,48 +11,7 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MRK.12.41",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-ROLLE-REICHER"
-      ],
-      "objects": [
-        "FIG-OBJ-OPFERKASTEN"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-SEHEN"
-      ],
-      "speech": [],
-      "action_de": "Jesus sitzt gegenüber dem Opferkasten und sieht zu, wie die Menge Geld einwirft; viele Reiche werfen viel ein.",
-      "stage": {
-        "pose": {
-          "FIG-JESUS": "sit"
-        },
-        "at": {
-          "FIG-ZEICHEN-SEHEN": "FIG-JESUS"
-        },
-        "arrows": [
-          [
-            "FIG-ROLLE-REICHER",
-            "FIG-OBJ-OPFERKASTEN",
-            "act"
-          ]
-        ],
-        "mood": {
-          "FIG-ROLLE-REICHER": "smile"
-        },
-        "x": {
-          "FIG-JESUS": 30,
-          "FIG-ROLLE-REICHER": 88
-        },
-        "floor_x": {
-          "FIG-OBJ-OPFERKASTEN": 150
-        }
-      }
-    },
-    {
-      "n": 2,
-      "reference": "MRK.12.42",
+      "reference": "MRK.12.41-MRK.12.42",
       "figures": [
         "FIG-JESUS",
         "FIG-ROLLE-WITWE"
@@ -64,7 +23,11 @@
         "FIG-ZEICHEN-SEHEN"
       ],
       "speech": [],
-      "action_de": "Eine arme Witwe kommt und wirft zwei kleine Münzen ein, zusammen einen Quadrans.",
+      "action_de": "Jesus sitzt gegenüber dem Opferkasten; eine arme Witwe wirft zwei Lepta ein.",
+      "keywords": {
+        "de": "Und es kam eine arme Witwe und warf zwei Lepta ein",
+        "gsw": "Und es isch e armi Witwe choo und hät zwei Lepta iigworfe"
+      },
       "stage": {
         "pose": {
           "FIG-JESUS": "sit"
@@ -80,7 +43,9 @@
           ]
         ],
         "mood": {
-          "FIG-ROLLE-WITWE": "calm"
+          "FIG-ROLLE-WITWE": "calm",
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-JUENGER": "pensive"
         },
         "x": {
           "FIG-JESUS": 30,
@@ -92,61 +57,73 @@
       }
     },
     {
-      "n": 3,
+      "n": 2,
       "reference": "MRK.12.43-MRK.12.44",
-      "figures": [
-        "FIG-GRUPPE-ZWOELF",
-        "FIG-JESUS"
-      ],
+      "figures": [],
       "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-ROLLE-WITWE",
-            "FIG-ZEICHEN-RANG",
-            "FIG-ZEICHEN-GEBEN"
-          ]
-        }
-      ],
-      "action_de": "Jesus ruft die Jünger: Diese arme Witwe hat mehr eingeworfen als alle; denn alle gaben aus ihrem Überfluss, sie aber aus ihrem Mangel alles, was sie hatte, ihren ganzen Lebensunterhalt.",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-ZWOELF": "calm"
+      "speech": [],
+      "action_de": "Jesus ruft seine Jünger und sagt: «Diese arme Witwe hat mehr eingeworfen als alle»; denn alle haben von ihrem Überfluss eingeworfen, sie aber aus ihrem Mangel alles, was sie hatte, ihren ganzen Lebensunterhalt.",
+      "keywords": {
+        "de": "Und er rief seine Jünger herbei",
+        "gsw": "Und er hät sini Jünger zue sich grüeft"
+      },
+      "diagram": {
+        "visual": "balance",
+        "span": 2,
+        "speaker": "FIG-JESUS",
+        "left": [
+          {
+            "a": {
+              "de": "Alle haben von ihrem Überfluss eingeworfen;",
+              "gsw": "Alli händ vo irem Überfluss iigworfe;"
+            },
+            "icons": [
+              "FIG-ROLLE-REICHER",
+              "FIG-OBJ-MUENZEN"
+            ]
+          }
+        ],
+        "right": [
+          {
+            "a": {
+              "de": "sie aber hat aus ihrem Mangel alles eingeworfen, was sie hatte, ihren ganzen Lebensunterhalt.",
+              "gsw": "si aber hät us irem Mangel alles iigworfe, was si gha hät, ire ganz Läbesunderhalt."
+            },
+            "icons": [
+              "FIG-ROLLE-WITWE",
+              "FIG-ZEICHEN-FEHLT"
+            ],
+            "tone": "new"
+          }
+        ],
+        "verdict": {
+          "de": "Diese arme Witwe hat mehr eingeworfen als alle.",
+          "gsw": "Die armi Witwe hät meh iigworfe als alli."
         }
       }
     }
   ],
   "actions_de": [
-    "Jesus sitzt gegenüber dem Opferkasten und sieht zu, wie die Menge Geld einwirft; viele Reiche werfen viel ein.",
-    "Eine arme Witwe kommt und wirft zwei kleine Münzen ein, zusammen einen Quadrans.",
-    "Jesus ruft die Jünger: Diese arme Witwe hat mehr eingeworfen als alle; denn alle gaben aus ihrem Überfluss, sie aber aus ihrem Mangel alles, was sie hatte, ihren ganzen Lebensunterhalt."
+    "Jesus sitzt gegenüber dem Opferkasten; eine arme Witwe wirft zwei Lepta ein.",
+    "Jesus ruft seine Jünger und sagt: «Diese arme Witwe hat mehr eingeworfen als alle»; denn alle haben von ihrem Überfluss eingeworfen, sie aber aus ihrem Mangel alles, was sie hatte, ihren ganzen Lebensunterhalt."
   ],
   "captions_de": [
-    "Am Opferkasten: Jesus sitzt und schaut zu (Augen), wie Reiche viel einwerfen (ein Reicher mit Geldbeutel, Bogen zum Kasten).",
-    "Zwei kleine Münzen: Eine arme Witwe (dunkles Kopftuch, zwei Münzen) wirft zwei kleine Münzen ein (Bogen zum Kasten); Jesus sieht es (Augen).",
-    "Mehr als alle: Diese Witwe hat mehr gegeben als alle (Witwe, oberste Stufe), denn sie gab alles, was sie hatte (offene Hände, Gefäss bis zum Rand)."
+    "Die Witwe: Jesus sitzt und sieht zu (sehen); die arme Witwe wirft zwei kleine Münzen in den Opferkasten (Pfeil).",
+    "Mehr als alle (Waage, Bild Jesus): alle von ihrem Überfluss (Reicher, Münzen) ↔ sie aus ihrem Mangel alles, ihren ganzen Lebensunterhalt (Witwe, leer); Ausschlag: «Diese arme Witwe hat mehr eingeworfen als alle.» (Witwe, mehr)."
   ],
-  "interpretation_note_de": "Die Witwe trägt als Erkennungszeichen zwei kleine Münzen. Ob Jesus sie nur lobt oder zugleich beklagt, dass Witwen ausgenutzt werden (vgl. [[MRK.12.40]]), wird unterschiedlich gedeutet; das Bild zeigt nur, was er sagt. Die Stufen stehen hier für «mehr als alle».",
+  "interpretation_note_de": "Zwei Felder nach «Beobachtung – Witwe – Urteil» ([[MRK.12.41-MRK.12.44]]): die Witwe am Opferkasten, dann Jesu Urteil als Waage Überfluss ↔ Mangel. Die Reichen stehen in der Waage; der Wert der Münzen nennt die Legende nicht.",
   "basis": [
     {
       "record": "TU-MRK-012-041-044",
       "field": "summary",
-      "fingerprint": "c9d91732be9c8199"
+      "fingerprint": "1440d29082c99d54"
     },
     {
       "record": "TRANS-MRK-012-001-044-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.12.41",
-      "fingerprint": "4c34321d95a8f6db"
-    },
-    {
-      "record": "TRANS-MRK-012-001-044-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MRK.12.42",
-      "fingerprint": "9966c21a6960a17e"
+      "reference": "MRK.12.41-MRK.12.42",
+      "fingerprint": "c292aad3a9ceddf9"
     },
     {
       "record": "TRANS-MRK-012-001-044-DE-WORKING",
@@ -156,7 +133,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -398,6 +375,191 @@
           "Zwei kleine Münzen: Eine arme Witwe (dunkles Kopftuch, zwei Münzen) wirft zwei kleine Münzen ein (Bogen zum Kasten); Jesus sieht es (Auge).",
           "Mehr als alle: Diese Witwe hat mehr gegeben als alle (Witwe, oberste Stufe), denn sie gab alles, was sie hatte (gebende Hand, Gefäss bis zum Rand)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MRK-012-041-044",
+            "field": "summary",
+            "fingerprint": "c9d91732be9c8199"
+          },
+          {
+            "record": "TRANS-MRK-012-001-044-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.12.41",
+            "fingerprint": "4c34321d95a8f6db"
+          },
+          {
+            "record": "TRANS-MRK-012-001-044-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.12.42",
+            "fingerprint": "9966c21a6960a17e"
+          },
+          {
+            "record": "TRANS-MRK-012-001-044-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.12.43-MRK.12.44",
+            "fingerprint": "96ba04c3edd224a6"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.12.41",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-REICHER"
+            ],
+            "objects": [
+              "FIG-OBJ-OPFERKASTEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SEHEN"
+            ],
+            "speech": [],
+            "action_de": "Jesus sitzt gegenüber dem Opferkasten und sieht zu, wie die Menge Geld einwirft; viele Reiche werfen viel ein.",
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "sit"
+              },
+              "at": {
+                "FIG-ZEICHEN-SEHEN": "FIG-JESUS"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-REICHER",
+                  "FIG-OBJ-OPFERKASTEN",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-REICHER": "smile"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-ROLLE-REICHER": 88
+              },
+              "floor_x": {
+                "FIG-OBJ-OPFERKASTEN": 150
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.12.42",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-WITWE"
+            ],
+            "objects": [
+              "FIG-OBJ-OPFERKASTEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SEHEN"
+            ],
+            "speech": [],
+            "action_de": "Eine arme Witwe kommt und wirft zwei kleine Münzen ein, zusammen einen Quadrans.",
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "sit"
+              },
+              "at": {
+                "FIG-ZEICHEN-SEHEN": "FIG-JESUS"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-WITWE",
+                  "FIG-OBJ-OPFERKASTEN",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-WITWE": "calm"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-ROLLE-WITWE": 88
+              },
+              "floor_x": {
+                "FIG-OBJ-OPFERKASTEN": 150
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.12.43-MRK.12.44",
+            "figures": [
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ROLLE-WITWE",
+                  "FIG-ZEICHEN-RANG",
+                  "FIG-ZEICHEN-GEBEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus ruft die Jünger: Diese arme Witwe hat mehr eingeworfen als alle; denn alle gaben aus ihrem Überfluss, sie aber aus ihrem Mangel alles, was sie hatte, ihren ganzen Lebensunterhalt.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "calm"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus sitzt gegenüber dem Opferkasten und sieht zu, wie die Menge Geld einwirft; viele Reiche werfen viel ein.",
+          "Eine arme Witwe kommt und wirft zwei kleine Münzen ein, zusammen einen Quadrans.",
+          "Jesus ruft die Jünger: Diese arme Witwe hat mehr eingeworfen als alle; denn alle gaben aus ihrem Überfluss, sie aber aus ihrem Mangel alles, was sie hatte, ihren ganzen Lebensunterhalt."
+        ],
+        "captions_de": [
+          "Am Opferkasten: Jesus sitzt und schaut zu (Augen), wie Reiche viel einwerfen (ein Reicher mit Geldbeutel, Bogen zum Kasten).",
+          "Zwei kleine Münzen: Eine arme Witwe (dunkles Kopftuch, zwei Münzen) wirft zwei kleine Münzen ein (Bogen zum Kasten); Jesus sieht es (Augen).",
+          "Mehr als alle: Diese Witwe hat mehr gegeben als alle (Witwe, oberste Stufe), denn sie gab alles, was sie hatte (offene Hände, Gefäss bis zum Rand)."
+        ],
+        "interpretation_note_de": "Die Witwe trägt als Erkennungszeichen zwei kleine Münzen. Ob Jesus sie nur lobt oder zugleich beklagt, dass Witwen ausgenutzt werden (vgl. [[MRK.12.40]]), wird unterschiedlich gedeutet; das Bild zeigt nur, was er sagt. Die Stufen stehen hier für «mehr als alle».",
+        "basis": [
+          {
+            "record": "TU-MRK-012-041-044",
+            "field": "summary",
+            "fingerprint": "1440d29082c99d54"
+          },
+          {
+            "record": "TRANS-MRK-012-001-044-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.12.41",
+            "fingerprint": "4c34321d95a8f6db"
+          },
+          {
+            "record": "TRANS-MRK-012-001-044-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.12.42",
+            "fingerprint": "9966c21a6960a17e"
+          },
+          {
+            "record": "TRANS-MRK-012-001-044-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.12.43-MRK.12.44",
+            "fingerprint": "96ba04c3edd224a6"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

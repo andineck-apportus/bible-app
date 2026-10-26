@@ -13,34 +13,49 @@
       "n": 1,
       "reference": "MRK.15.1-MRK.15.15",
       "figures": [
+        "FIG-JESUS",
         "FIG-PILATUS",
         "FIG-GRUPPE-MENGE"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-OBJ-FESSEL"
+      ],
       "signs": [],
       "speech": [
         {
-          "from": "FIG-PILATUS",
-          "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
-        },
-        {
           "from": "FIG-GRUPPE-MENGE",
           "to": "FIG-PILATUS",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-OBJ-KREUZ"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Kreuzige ihn!",
+            "gsw": "Chrüüzig en!"
+          }
         }
       ],
-      "action_de": "Pilatus verhört Jesus; die Menge verlangt Barabbas und schreit: Kreuzige ihn!",
+      "action_de": "Die von den Hohepriestern aufgewiegelte Menge schreit: «Kreuzige ihn!», und Pilatus fragt: «Was hat er denn Böses getan?» Um die Menge zufriedenzustellen, lässt er Barabbas frei und liefert Jesus zur Kreuzigung aus.",
+      "keywords": {
+        "de": "Was hat er denn Böses getan?",
+        "gsw": "Was hät er dänn Böses gmacht?"
+      },
+      "names": {
+        "FIG-PILATUS": {
+          "de": "Pilatus",
+          "gsw": "Pilatus"
+        }
+      },
       "stage": {
+        "hold": {
+          "FIG-JESUS": "FIG-OBJ-FESSEL"
+        },
         "mood": {
+          "FIG-JESUS": "calm",
           "FIG-PILATUS": "worried",
-          "FIG-GRUPPE-MENGE": "earnest"
+          "FIG-GRUPPE-MENGE": "angry"
+        },
+        "x": {
+          "FIG-JESUS": 26,
+          "FIG-PILATUS": 86,
+          "FIG-GRUPPE-MENGE": 152
         }
       }
     },
@@ -48,79 +63,85 @@
       "n": 2,
       "reference": "MRK.15.16-MRK.15.32",
       "figures": [
-        "FIG-GRUPPE-SOLDATEN"
+        "FIG-GRUPPE-VOLK",
+        "FIG-JESUS"
       ],
-      "objects": [
-        "FIG-ORT-GOLGOTA",
-        "FIG-OBJ-KLEIDER-VERLOST"
-      ],
+      "objects": [],
       "signs": [],
-      "speech": [],
-      "action_de": "Die Soldaten verspotten Jesus und kreuzigen ihn auf Golgota zwischen zwei Räubern; sie losen um seine Kleider.",
+      "speech": [
+        {
+          "from": "FIG-GRUPPE-VOLK",
+          "to": "FIG-JESUS",
+          "icons": [],
+          "word": {
+            "de": "Rette dich selbst und steig herab vom Kreuz!",
+            "gsw": "Rett dich sälber und chumm abe vom Chrüüz!"
+          }
+        }
+      ],
+      "action_de": "Die Soldaten kreuzigen Jesus und verteilen seine Kleider durch das Los; die Aufschrift lautet: «Der König der Juden.» Die Vorübergehenden lästern: «Rette dich selbst und steig herab vom Kreuz!»",
+      "keywords": {
+        "de": "Der König der Juden",
+        "gsw": "De König vo de Jude"
+      },
       "stage": {
+        "pose": {
+          "FIG-JESUS": "cross"
+        },
         "mood": {
-          "FIG-GRUPPE-SOLDATEN": "calm"
+          "FIG-JESUS": "pain",
+          "FIG-GRUPPE-VOLK": "angry",
+          "FIG-GRUPPE-SOLDATEN": "earnest"
         },
-        "back_side": "right",
         "x": {
-          "FIG-GRUPPE-SOLDATEN": 44
+          "FIG-GRUPPE-VOLK": 40,
+          "FIG-JESUS": 124
         },
-        "floor_x": {
-          "FIG-OBJ-KLEIDER-VERLOST": 90
-        },
-        "arrows": [
-          [
-            "FIG-GRUPPE-SOLDATEN",
-            "FIG-OBJ-KLEIDER-VERLOST",
-            "throw"
-          ]
-        ]
+        "air_x": 20,
+        "air_y": 104
       }
     },
     {
       "n": 3,
       "reference": "MRK.15.33-MRK.15.41",
       "figures": [
-        "FIG-ROLLE-HAUPTMANN"
+        "FIG-ROLLE-HAUPTMANN",
+        "FIG-JESUS"
       ],
       "objects": [
-        "FIG-OBJ-KREUZ",
         "FIG-OBJ-TEMPELVORHANG"
       ],
-      "signs": [
-        "FIG-ZEICHEN-TOD"
-      ],
+      "signs": [],
       "speech": [
         {
           "from": "FIG-ROLLE-HAUPTMANN",
-          "to": "FIG-ROLLE-HAUPTMANN",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-GOTT"
-          ]
+          "to": "FIG-JESUS",
+          "icons": [],
+          "word": {
+            "de": "Wahrhaftig, dieser Mensch war Gottes Sohn!",
+            "gsw": "Würkli, dä Mänsch isch Gottes Sohn gsii!"
+          }
         }
       ],
-      "action_de": "Nach der Finsternis stirbt Jesus; der Tempelvorhang reisst, der Hauptmann nennt ihn Gottes Sohn.",
+      "action_de": "Jesus stösst einen lauten Schrei aus und stirbt; der Vorhang des Tempels reisst von oben bis unten; der Hauptmann, der ihm gegenübersteht, sagt: «Wahrhaftig, dieser Mensch war Gottes Sohn!»",
+      "keywords": {
+        "de": "Mein Gott, mein Gott, wozu hast du mich verlassen?",
+        "gsw": "Min Gott, min Gott, für was häsch du mich verlaa?"
+      },
       "stage": {
+        "pose": {
+          "FIG-JESUS": "cross"
+        },
         "mood": {
-          "FIG-ROLLE-HAUPTMANN": "surprised"
+          "FIG-JESUS": "dead",
+          "FIG-ROLLE-HAUPTMANN": "earnest"
         },
-        "back_side": "left",
         "x": {
-          "FIG-ROLLE-HAUPTMANN": 152
+          "FIG-ROLLE-HAUPTMANN": 40,
+          "FIG-JESUS": 124
         },
-        "floor_x": {
-          "FIG-OBJ-KREUZ": 80
-        },
-        "air_x": 54,
-        "air_y": 94,
-        "arrows": [
-          [
-            "FIG-OBJ-KREUZ",
-            "FIG-ROLLE-SOLDAT",
-            "act"
-          ]
-        ]
+        "air_x": 20,
+        "air_y": 104
       }
     },
     {
@@ -135,10 +156,20 @@
         "FIG-ORT-GRAB-VERSCHLOSSEN"
       ],
       "signs": [
-        "FIG-ZEICHEN-TRAUER"
+        "FIG-ZEICHEN-SEHEN"
       ],
       "speech": [],
-      "action_de": "Josef von Arimatäa legt den Leib Jesu in ein Felsengrab; zwei Frauen sehen, wo er liegt.",
+      "action_de": "Josef von Arimatäa wickelt den Leichnam in ein Leinentuch, legt ihn in ein Felsengrab und wälzt einen Stein vor den Eingang; Maria aus Magdala und Maria, die Mutter des Joses, sehen, wo er hingelegt worden ist.",
+      "keywords": {
+        "de": "wälzte einen Stein vor den Eingang des Grabes",
+        "gsw": "hät en Stei vor de Iigang vom Grab gwälzt"
+      },
+      "names": {
+        "FIG-JOSEF-ARIMATAEA": {
+          "de": "Josef von Arimatäa",
+          "gsw": "Josef vo Arimatäa"
+        }
+      },
       "stage": {
         "arrows": [
           [
@@ -147,43 +178,45 @@
             "act"
           ]
         ],
-        "signs_who": {
-          "FIG-ZEICHEN-TRAUER": [
-            "FIG-MARIA-MAGDALA",
-            "FIG-MARIA-MUTTER-JAKOBUS"
-          ]
+        "at": {
+          "FIG-ZEICHEN-SEHEN": "FIG-MARIA-MAGDALA"
         },
         "back_side": "left",
+        "mood": {
+          "FIG-JOSEF-ARIMATAEA": "pensive",
+          "FIG-MARIA-MAGDALA": "earnest",
+          "FIG-MARIA-MUTTER-JAKOBUS": "earnest"
+        },
         "x": {
           "FIG-JOSEF-ARIMATAEA": 96,
           "FIG-MARIA-MAGDALA": 136,
-          "FIG-MARIA-MUTTER-JAKOBUS": 166
+          "FIG-MARIA-MUTTER-JAKOBUS": 168
         }
       }
     }
   ],
   "actions_de": [
-    "Pilatus verhört Jesus; die Menge verlangt Barabbas und schreit: Kreuzige ihn!",
-    "Die Soldaten verspotten Jesus und kreuzigen ihn auf Golgota zwischen zwei Räubern; sie losen um seine Kleider.",
-    "Nach der Finsternis stirbt Jesus; der Tempelvorhang reisst, der Hauptmann nennt ihn Gottes Sohn.",
-    "Josef von Arimatäa legt den Leib Jesu in ein Felsengrab; zwei Frauen sehen, wo er liegt."
+    "Die von den Hohepriestern aufgewiegelte Menge schreit: «Kreuzige ihn!», und Pilatus fragt: «Was hat er denn Böses getan?» Um die Menge zufriedenzustellen, lässt er Barabbas frei und liefert Jesus zur Kreuzigung aus.",
+    "Die Soldaten kreuzigen Jesus und verteilen seine Kleider durch das Los; die Aufschrift lautet: «Der König der Juden.» Die Vorübergehenden lästern: «Rette dich selbst und steig herab vom Kreuz!»",
+    "Jesus stösst einen lauten Schrei aus und stirbt; der Vorhang des Tempels reisst von oben bis unten; der Hauptmann, der ihm gegenübersteht, sagt: «Wahrhaftig, dieser Mensch war Gottes Sohn!»",
+    "Josef von Arimatäa wickelt den Leichnam in ein Leinentuch, legt ihn in ein Felsengrab und wälzt einen Stein vor den Eingang; Maria aus Magdala und Maria, die Mutter des Joses, sehen, wo er hingelegt worden ist."
   ],
   "captions_de": [
-    "Pilatus: Was soll ich mit Jesus tun? (Jesus, Fragezeichen); die Menge: ans Kreuz (Jesus, Kreuz).",
-    "Kreuzigung: Golgota, der Hügel mit drei Kreuzen (ohne Körper); Soldaten losen um die Kleider (Gewand mit Losen).",
-    "Tod → Bekenntnis: leeres Kreuz, daneben das Grab-Zeichen; Vorhang zerrissen; der Hauptmann sieht es (Bogen vom Kreuz zu ihm) und sagt: Gottes Sohn (Jesus, Strahlenkranz).",
-    "Begräbnis: Josef hat das Grab mit dem Stein verschlossen; zwei Frauen schauen zu."
+    "Vor Pilatus: Jesus gefesselt (Fessel); Pilatus (Name) vor der Menge, die schreit: «Kreuzige ihn!» (Kreuz).",
+    "Am Kreuz: Jesus gekreuzigt unter der Aufschrift (Tafel); Vorübergehende spotten: «Rette dich selbst und steig herab vom Kreuz!» (retten, hinab).",
+    "Gottes Sohn: Jesus ist am Kreuz gestorben (Kopf geneigt, Augen zu), darüber die Aufschrift (Tafel); der zerrissene Tempelvorhang (Tempelvorhang); der Hauptmann: «Wahrhaftig, dieser Mensch war Gottes Sohn!» (stammt aus, Gott).",
+    "Das Grab: Josef von Arimatäa (Name) wälzt den Stein vor das Felsengrab (Grab); Maria aus Magdala und Maria, die Mutter des Joses, sehen zu (sehen)."
   ],
-  "interpretation_note_de": "Je ein Feld zu Pilatus, Kreuzigung, Tod und Begräbnis; die Verspottung ([[MRK.15.16-MRK.15.20]]) nur im Abschnittsbild. Keine Gewaltdarstellung: Kreuze ohne Körper.",
+  "interpretation_note_de": "Vier Comic-Szenen für fünf Abschnitte ([[MRK.15.1-MRK.15.47]]): Pilatus und der Ruf «Kreuzige ihn!»; Feld 2 bündelt die Verspottung durch die Soldaten (Legende) und die Kreuzigung mit dem Spott der Vorübergehenden; der Tod mit dem Bekenntnis des Hauptmanns (das Band nennt Jesu Schrei); das Begräbnis. Die Passion ist würdig gezeichnet: Leiden und Tod sind zu sehen, ohne Wunden oder Blut im Detail; Gott ist nie als Mensch dargestellt. Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-MRK-015",
       "field": "summary",
-      "fingerprint": "4696f6a72020a5d1"
+      "fingerprint": "8f496f6e8649f111"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -648,6 +681,393 @@
                 "FIG-JOSEF-ARIMATAEA": 96,
                 "FIG-MARIA-MAGDALA": 136,
                 "FIG-MARIA-MUTTER-JAKOBUS": 166
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-MRK-015",
+            "field": "summary",
+            "fingerprint": "4696f6a72020a5d1"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.15.1-MRK.15.15",
+            "figures": [
+              "FIG-PILATUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PILATUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-OBJ-KREUZ"
+                ]
+              }
+            ],
+            "action_de": "Pilatus verhört Jesus; die Menge verlangt Barabbas und schreit: Kreuzige ihn!",
+            "stage": {
+              "mood": {
+                "FIG-PILATUS": "worried",
+                "FIG-GRUPPE-MENGE": "earnest"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.15.16-MRK.15.32",
+            "figures": [
+              "FIG-GRUPPE-SOLDATEN"
+            ],
+            "objects": [
+              "FIG-ORT-GOLGOTA",
+              "FIG-OBJ-KLEIDER-VERLOST"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Die Soldaten verspotten Jesus und kreuzigen ihn auf Golgota zwischen zwei Räubern; sie losen um seine Kleider.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-SOLDATEN": "calm"
+              },
+              "back_side": "right",
+              "x": {
+                "FIG-GRUPPE-SOLDATEN": 44
+              },
+              "floor_x": {
+                "FIG-OBJ-KLEIDER-VERLOST": 90
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-SOLDATEN",
+                  "FIG-OBJ-KLEIDER-VERLOST",
+                  "throw"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.15.33-MRK.15.41",
+            "figures": [
+              "FIG-ROLLE-HAUPTMANN"
+            ],
+            "objects": [
+              "FIG-OBJ-KREUZ",
+              "FIG-OBJ-TEMPELVORHANG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TOD"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-HAUPTMANN",
+                "to": "FIG-ROLLE-HAUPTMANN",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-GOTT"
+                ]
+              }
+            ],
+            "action_de": "Nach der Finsternis stirbt Jesus; der Tempelvorhang reisst, der Hauptmann nennt ihn Gottes Sohn.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-HAUPTMANN": "surprised"
+              },
+              "back_side": "left",
+              "x": {
+                "FIG-ROLLE-HAUPTMANN": 152
+              },
+              "floor_x": {
+                "FIG-OBJ-KREUZ": 80
+              },
+              "air_x": 54,
+              "air_y": 94,
+              "arrows": [
+                [
+                  "FIG-OBJ-KREUZ",
+                  "FIG-ROLLE-SOLDAT",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.15.42-MRK.15.47",
+            "figures": [
+              "FIG-JOSEF-ARIMATAEA",
+              "FIG-MARIA-MAGDALA",
+              "FIG-MARIA-MUTTER-JAKOBUS"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB-VERSCHLOSSEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER"
+            ],
+            "speech": [],
+            "action_de": "Josef von Arimatäa legt den Leib Jesu in ein Felsengrab; zwei Frauen sehen, wo er liegt.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-JOSEF-ARIMATAEA",
+                  "FIG-ORT-GRAB-VERSCHLOSSEN",
+                  "act"
+                ]
+              ],
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-MARIA-MAGDALA",
+                  "FIG-MARIA-MUTTER-JAKOBUS"
+                ]
+              },
+              "back_side": "left",
+              "x": {
+                "FIG-JOSEF-ARIMATAEA": 96,
+                "FIG-MARIA-MAGDALA": 136,
+                "FIG-MARIA-MUTTER-JAKOBUS": 166
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Pilatus verhört Jesus; die Menge verlangt Barabbas und schreit: Kreuzige ihn!",
+          "Die Soldaten verspotten Jesus und kreuzigen ihn auf Golgota zwischen zwei Räubern; sie losen um seine Kleider.",
+          "Nach der Finsternis stirbt Jesus; der Tempelvorhang reisst, der Hauptmann nennt ihn Gottes Sohn.",
+          "Josef von Arimatäa legt den Leib Jesu in ein Felsengrab; zwei Frauen sehen, wo er liegt."
+        ],
+        "captions_de": [
+          "Pilatus: Was soll ich mit Jesus tun? (Jesus, Fragezeichen); die Menge: ans Kreuz (Jesus, Kreuz).",
+          "Kreuzigung: Golgota, der Hügel mit drei Kreuzen (ohne Körper); Soldaten losen um die Kleider (Gewand mit Losen).",
+          "Tod → Bekenntnis: leeres Kreuz, daneben das Grab-Zeichen; Vorhang zerrissen; der Hauptmann sieht es (Bogen vom Kreuz zu ihm) und sagt: Gottes Sohn (Jesus, Strahlenkranz).",
+          "Begräbnis: Josef hat das Grab mit dem Stein verschlossen; zwei Frauen schauen zu."
+        ],
+        "interpretation_note_de": "Je ein Feld zu Pilatus, Kreuzigung, Tod und Begräbnis; die Verspottung ([[MRK.15.16-MRK.15.20]]) nur im Abschnittsbild. Keine Gewaltdarstellung: Kreuze ohne Körper.",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.15.1-MRK.15.15",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-PILATUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-FESSEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-PILATUS",
+                "icons": [],
+                "word": {
+                  "de": "Kreuzige ihn!",
+                  "gsw": "Chrüüzig en!"
+                }
+              }
+            ],
+            "action_de": "Die von den Hohepriestern aufgewiegelte Menge schreit: «Kreuzige ihn!», und Pilatus fragt: «Was hat er denn Böses getan?» Um die Menge zufriedenzustellen, lässt er Barabbas frei und liefert Jesus zur Kreuzigung aus.",
+            "keywords": {
+              "de": "Was hat er denn Böses getan?",
+              "gsw": "Was hät er dänn Böses gmacht?"
+            },
+            "names": {
+              "FIG-PILATUS": {
+                "de": "Pilatus",
+                "gsw": "Pilatus"
+              }
+            },
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-FESSEL"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-PILATUS": "worried",
+                "FIG-GRUPPE-MENGE": "angry"
+              },
+              "x": {
+                "FIG-JESUS": 26,
+                "FIG-PILATUS": 86,
+                "FIG-GRUPPE-MENGE": 152
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.15.16-MRK.15.32",
+            "figures": [
+              "FIG-GRUPPE-VOLK",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-TAFEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-VOLK",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Rette dich selbst und steig herab vom Kreuz!",
+                  "gsw": "Rett dich sälber und chumm abe vom Chrüüz!"
+                }
+              }
+            ],
+            "action_de": "Die Soldaten kreuzigen Jesus und verteilen seine Kleider durch das Los; die Aufschrift lautet: «Der König der Juden.» Die Vorübergehenden lästern: «Rette dich selbst und steig herab vom Kreuz!»",
+            "keywords": {
+              "de": "Der König der Juden",
+              "gsw": "De König vo de Jude"
+            },
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "cross"
+              },
+              "mood": {
+                "FIG-JESUS": "pain",
+                "FIG-GRUPPE-VOLK": "angry",
+                "FIG-GRUPPE-SOLDATEN": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-VOLK": 40,
+                "FIG-JESUS": 124
+              },
+              "air_x": 20,
+              "air_y": 104
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.15.33-MRK.15.41",
+            "figures": [
+              "FIG-ROLLE-HAUPTMANN",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-TAFEL",
+              "FIG-OBJ-TEMPELVORHANG"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-HAUPTMANN",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Wahrhaftig, dieser Mensch war Gottes Sohn!",
+                  "gsw": "Würkli, dä Mänsch isch Gottes Sohn gsii!"
+                }
+              }
+            ],
+            "action_de": "Jesus stösst einen lauten Schrei aus und stirbt; der Vorhang des Tempels reisst von oben bis unten; der Hauptmann, der ihm gegenübersteht, sagt: «Wahrhaftig, dieser Mensch war Gottes Sohn!»",
+            "keywords": {
+              "de": "Mein Gott, mein Gott, wozu hast du mich verlassen?",
+              "gsw": "Min Gott, min Gott, für was häsch du mich verlaa?"
+            },
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "cross"
+              },
+              "mood": {
+                "FIG-JESUS": "dead",
+                "FIG-ROLLE-HAUPTMANN": "earnest"
+              },
+              "x": {
+                "FIG-ROLLE-HAUPTMANN": 40,
+                "FIG-JESUS": 124
+              },
+              "air_x": 20,
+              "air_y": 104
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.15.42-MRK.15.47",
+            "figures": [
+              "FIG-JOSEF-ARIMATAEA",
+              "FIG-MARIA-MAGDALA",
+              "FIG-MARIA-MUTTER-JAKOBUS"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB-VERSCHLOSSEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SEHEN"
+            ],
+            "speech": [],
+            "action_de": "Josef von Arimatäa wickelt den Leichnam in ein Leinentuch, legt ihn in ein Felsengrab und wälzt einen Stein vor den Eingang; Maria aus Magdala und Maria, die Mutter des Joses, sehen, wo er hingelegt worden ist.",
+            "keywords": {
+              "de": "wälzte einen Stein vor den Eingang des Grabes",
+              "gsw": "hät en Stei vor de Iigang vom Grab gwälzt"
+            },
+            "names": {
+              "FIG-JOSEF-ARIMATAEA": {
+                "de": "Josef von Arimatäa",
+                "gsw": "Josef vo Arimatäa"
+              },
+              "FIG-MARIA-MAGDALA": {
+                "de": "Maria aus Magdala",
+                "gsw": "Maria vo Magdala"
+              }
+            },
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-JOSEF-ARIMATAEA",
+                  "FIG-ORT-GRAB-VERSCHLOSSEN",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-SEHEN": "FIG-MARIA-MAGDALA"
+              },
+              "back_side": "left",
+              "mood": {
+                "FIG-JOSEF-ARIMATAEA": "pensive",
+                "FIG-MARIA-MAGDALA": "earnest",
+                "FIG-MARIA-MUTTER-JAKOBUS": "earnest"
+              },
+              "x": {
+                "FIG-JOSEF-ARIMATAEA": 96,
+                "FIG-MARIA-MAGDALA": 136,
+                "FIG-MARIA-MUTTER-JAKOBUS": 168
               }
             }
           }

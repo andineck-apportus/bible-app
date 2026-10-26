@@ -1,0 +1,143 @@
+{
+ "id": "CORE-MRK-011-015-019",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MRK.11.15-MRK.11.19",
+ "target": "TU-MRK-011-015-019",
+ "core_de": "Im Tempel treibt Jesus die Verkäufer und Käufer hinaus, stösst die Tische der Geldwechsler und die Sitze der Taubenverkäufer um und lehrt: «Steht nicht geschrieben: ‹Mein Haus soll ein Haus des Gebets heissen für alle Völker›? Ihr aber habt es zu einer Räuberhöhle gemacht!»; die Hohepriester und Schriftgelehrten hören es und suchen, wie sie ihn umbringen könnten, denn sie fürchten ihn, weil die ganze Menge von seiner Lehre überwältigt ist; am Abend gehen sie aus der Stadt hinaus.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Handlung – Lehre – Reaktion – Abend",
+    "range": "MRK.11.15-MRK.11.19",
+    "elements": [
+     {
+      "label": "Er treibt Verkäufer und Käufer hinaus, stösst Tische und Sitze um, lässt kein Gerät durch den Tempel tragen",
+      "ref": "MRK.11.15-MRK.11.16",
+      "role": "Handlung"
+     },
+     {
+      "label": "Lehre: Haus des Gebets ↔ Räuberhöhle",
+      "ref": "MRK.11.17",
+      "role": "Deutung",
+      "child": "s2"
+     },
+     {
+      "label": "Hohepriester und Schriftgelehrte suchen, wie sie ihn umbringen könnten; sie fürchten ihn; die Menge ist überwältigt",
+      "ref": "MRK.11.18",
+      "role": "Reaktion"
+     },
+     {
+      "label": "Am Abend gehen sie aus der Stadt hinaus",
+      "ref": "MRK.11.19",
+      "role": "Ausgang"
+     }
+    ],
+    "features": {
+     "modality": [
+      {
+       "kind": "Absicht, kein Beschluss («suchten, wie»)",
+       "ref": "MRK.11.18"
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "ISA.56.7",
+       "kind": "Zitat"
+      },
+      {
+       "ref": "JER.7.11",
+       "kind": "Anklang"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "Haus des Gebets für alle Völker ↔ Räuberhöhle",
+    "range": "MRK.11.17",
+    "elements": [
+     {
+      "label": "Steht nicht geschrieben: «Mein Haus soll ein Haus des Gebets heissen für alle Völker»?",
+      "ref": "MRK.11.17",
+      "role": "geschrieben"
+     },
+     {
+      "label": "Ihr aber habt es zu einer Räuberhöhle gemacht!",
+      "ref": "MRK.11.17",
+      "role": "ihr"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MRK.11.15-MRK.11.16",
+   "text_de": "Er treibt Verkäufer und Käufer hinaus, stösst die Tische der Geldwechsler und die Sitze der Taubenverkäufer um und lässt niemanden ein Gerät durch den Tempel tragen.",
+   "reason_de": "Erkennungsmoment (Kriterium 4).",
+   "recognition_de": "Umgestossene Tische im Tempel.",
+   "keywords": [
+    "die Tische der Geldwechsler und die Sitze der Taubenverkäufer stiess er um"
+   ]
+  },
+  {
+   "reference": "MRK.11.17",
+   "text_de": "«Mein Haus soll ein Haus des Gebets heissen für alle Völker»? «Ihr aber habt es zu einer Räuberhöhle gemacht!»",
+   "reason_de": "Deutung durch Jesus (Kriterium 1).",
+   "recognition_de": "Jesus lehrt im Tempel.",
+   "keywords": [
+    "Mein Haus soll ein Haus des Gebets heissen für alle Völker",
+    "Ihr aber habt es zu einer Räuberhöhle gemacht!"
+   ]
+  },
+  {
+   "reference": "MRK.11.18",
+   "text_de": "Die Hohepriester und Schriftgelehrten suchen, wie sie ihn umbringen könnten, denn sie fürchten ihn; die Menge ist überwältigt von seiner Lehre.",
+   "reason_de": "Folge: Widerstand (Kriterium 3).",
+   "recognition_de": "Die Führer stecken die Köpfe zusammen, die Menge staunt.",
+   "keywords": [
+    "suchten, wie sie ihn umbringen könnten"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Das Verbot, Geräte durch den Tempel zu tragen – im Moment genannt, nicht gezeichnet"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-ROLLE-HAENDLER",
+  "FIG-GRUPPE-HOHEPRIESTER",
+  "FIG-GRUPPE-SCHRIFTGELEHRTE",
+  "FIG-GRUPPE-MENGE"
+ ],
+ "places": [
+  "FIG-ORT-TEMPEL"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MRK.11.15-MRK.11.19",
+   "fingerprint": "9120f9b60603e111"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mk 1–4 und 6–8 nach dem Pilot Mk 5 und dem Ausrollen Matthäus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

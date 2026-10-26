@@ -13,38 +13,45 @@
       "n": 1,
       "reference": "MRK.14.12-MRK.14.16",
       "figures": [
-        "FIG-JESUS",
         "FIG-ROLLE-JUENGER",
-        "FIG-ROLLE-DIENER"
+        "FIG-ROLLE-MENSCH"
       ],
       "objects": [
+        "FIG-ORT-STADT",
         "FIG-OBJ-KRUG-WASSER"
       ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-JUENGER",
-          "icons": [
-            "FIG-OBJ-KRUG-WASSER",
-            "FIG-ORT-HAUS"
-          ]
-        }
+      "signs": [
+        "FIG-ZEICHEN-SUCHEN-FINDEN"
       ],
-      "action_de": "Jesus sendet zwei Jünger in die Stadt: Ein Mensch mit einem Wasserkrug wird ihnen begegnen; im Haus, in das er geht, finden sie den Obersaal. Sie finden alles, wie er gesagt hat, und bereiten das Passa vor.",
+      "speech": [],
+      "action_de": "Jesus sendet zwei Jünger in die Stadt: Ein Mensch mit einem Wasserkrug wird ihnen begegnen; dem sollen sie folgen, und der Hausherr wird ihnen einen grossen Obersaal zeigen. Sie finden es, wie er ihnen gesagt hat, und bereiten das Passa vor.",
+      "keywords": {
+        "de": "fanden es, wie er ihnen gesagt hatte",
+        "gsw": "händ s aatroffe, wie er ine gseit hät"
+      },
       "stage": {
         "hold": {
-          "FIG-ROLLE-DIENER": "FIG-OBJ-KRUG-WASSER"
+          "FIG-ROLLE-MENSCH": "FIG-OBJ-KRUG-WASSER"
         },
         "arrows": [
           [
             "FIG-ROLLE-JUENGER",
-            "FIG-ROLLE-DIENER",
+            "FIG-ROLLE-MENSCH",
             "go"
           ]
         ],
-        "pose": {
-          "FIG-ROLLE-DIENER": "away"
+        "at": {
+          "FIG-ZEICHEN-SUCHEN-FINDEN": "FIG-ROLLE-JUENGER"
+        },
+        "back_side": "right",
+        "before": true,
+        "mood": {
+          "FIG-ROLLE-JUENGER": "calm",
+          "FIG-ROLLE-MENSCH": "calm"
+        },
+        "x": {
+          "FIG-ROLLE-JUENGER": 40,
+          "FIG-ROLLE-MENSCH": 110
         }
       }
     },
@@ -53,57 +60,65 @@
       "reference": "MRK.14.17-MRK.14.21",
       "figures": [
         "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF",
-        "FIG-JUDAS-ISKARIOT"
+        "FIG-GRUPPE-ZWOELF"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-OBJ-BROT"
+      ],
       "signs": [
-        "FIG-ZEICHEN-TRAUER",
-        "FIG-ZEICHEN-FRAGEN"
+        "FIG-ZEICHEN-TRAUER"
       ],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-ROLLE-JUENGER",
-            "FIG-ZEICHEN-AUSLIEFERN",
-            "FIG-JESUS"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Einer von euch wird mich ausliefern, der mit mir isst.",
+            "gsw": "Eine vo eu wird mich uslifere, eine, wo mit mir isst."
+          }
         }
       ],
-      "action_de": "Beim Mahl am Abend sagt Jesus: Einer von euch, der mit mir isst, wird mich ausliefern. Die Jünger werden traurig und fragen einer nach dem anderen: Doch nicht ich?",
+      "action_de": "Am Abend, beim Mahl mit den Zwölf, sagt Jesus: «Amen, ich sage euch: Einer von euch wird mich ausliefern, der mit mir isst.» Sie werden traurig und fragen einer nach dem anderen: «Doch nicht ich?»",
+      "keywords": {
+        "de": "Doch nicht ich?",
+        "gsw": "Doch nöd ich?"
+      },
       "stage": {
         "signs_who": {
           "FIG-ZEICHEN-TRAUER": [
             "FIG-GRUPPE-ZWOELF"
           ]
         },
-        "at": {
-          "FIG-ZEICHEN-FRAGEN": "FIG-GRUPPE-ZWOELF"
-        },
+        "night": true,
         "mood": {
-          "FIG-GRUPPE-ZWOELF": "worried",
-          "FIG-JUDAS-ISKARIOT": "calm",
-          "FIG-JESUS": "earnest"
+          "FIG-JESUS": "earnest",
+          "FIG-GRUPPE-ZWOELF": "worried"
+        },
+        "x": {
+          "FIG-JESUS": 50,
+          "FIG-GRUPPE-ZWOELF": 136
+        },
+        "floor_x": {
+          "FIG-OBJ-BROT": 94
         }
       }
     }
   ],
   "actions_de": [
-    "Jesus sendet zwei Jünger in die Stadt: Ein Mensch mit einem Wasserkrug wird ihnen begegnen; im Haus, in das er geht, finden sie den Obersaal. Sie finden alles, wie er gesagt hat, und bereiten das Passa vor.",
-    "Beim Mahl am Abend sagt Jesus: Einer von euch, der mit mir isst, wird mich ausliefern. Die Jünger werden traurig und fragen einer nach dem anderen: Doch nicht ich?"
+    "Jesus sendet zwei Jünger in die Stadt: Ein Mensch mit einem Wasserkrug wird ihnen begegnen; dem sollen sie folgen, und der Hausherr wird ihnen einen grossen Obersaal zeigen. Sie finden es, wie er ihnen gesagt hat, und bereiten das Passa vor.",
+    "Am Abend, beim Mahl mit den Zwölf, sagt Jesus: «Amen, ich sage euch: Einer von euch wird mich ausliefern, der mit mir isst.» Sie werden traurig und fragen einer nach dem anderen: «Doch nicht ich?»"
   ],
   "captions_de": [
-    "Vorbereitung: Jesus schickt einen Jünger dem Mann mit dem Wasserkrug nach (Krug, Haus).",
-    "Ansage: Einer von euch wird Jesus ausliefern (ein Jünger, Hand und Kette, Jesus); die Jünger fragen traurig (Fragezeichen, Tränen)."
+    "Der Mann mit dem Krug: Ein Jünger folgt in der Stadt einem Menschen, der einen Wasserkrug trägt (gestrichelter Pfeil); sie finden es, wie Jesus gesagt hat (suchen und finden).",
+    "Einer von euch: Jesus beim Mahl: «Einer von euch wird mich ausliefern, der mit mir isst.» (ausliefern); die Zwölf werden traurig (Trauer) und fragen: «Doch nicht ich?» (Band)."
   ],
-  "interpretation_note_de": "Markus sagt «zwei Jünger» ([[MRK.14.13]]); das Bild zeigt einen. Dass der Mann mit dem Krug ein Diener ist, sagt der Text nicht (Deutung). Judas steht beim Mahl dabei, ohne dass Jesus ihn im Bild zeigt.",
+  "interpretation_note_de": "Zwei Felder nach «Auftrag und Erfüllung – Ankündigung beim Mahl» ([[MRK.14.12-MRK.14.21]]): Die Vorbereitung geschieht, wie Jesus gesagt hat; beim Mahl kündigt er die Auslieferung an. Der Text nennt Judas hier nicht; das Bild hebt niemanden hervor. Der Hausherr und der Obersaal sind nicht gezeichnet.",
   "basis": [
     {
       "record": "TU-MRK-014-012-021",
       "field": "summary",
-      "fingerprint": "19418765121bf30c"
+      "fingerprint": "6a3fa95722597878"
     },
     {
       "record": "TRANS-MRK-014-001-072-DE-WORKING",
@@ -119,7 +134,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -225,6 +240,129 @@
           "Vorbereitung: Jesus schickt einen Jünger dem Mann mit dem Wasserkrug nach (Krug, Haus).",
           "Ansage: Einer von euch wird Jesus ausliefern (ein Jünger, gefesselte Hände, Jesus); die Jünger fragen traurig (Fragezeichen, Tränen)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MRK-014-012-021",
+            "field": "summary",
+            "fingerprint": "19418765121bf30c"
+          },
+          {
+            "record": "TRANS-MRK-014-001-072-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.14.12-MRK.14.16",
+            "fingerprint": "9131144ac7a0edf1"
+          },
+          {
+            "record": "TRANS-MRK-014-001-072-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.14.17-MRK.14.21",
+            "fingerprint": "b461c7d526b0507e"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.14.12-MRK.14.16",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-JUENGER",
+              "FIG-ROLLE-DIENER"
+            ],
+            "objects": [
+              "FIG-OBJ-KRUG-WASSER"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-KRUG-WASSER",
+                  "FIG-ORT-HAUS"
+                ]
+              }
+            ],
+            "action_de": "Jesus sendet zwei Jünger in die Stadt: Ein Mensch mit einem Wasserkrug wird ihnen begegnen; im Haus, in das er geht, finden sie den Obersaal. Sie finden alles, wie er gesagt hat, und bereiten das Passa vor.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-DIENER": "FIG-OBJ-KRUG-WASSER"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-JUENGER",
+                  "FIG-ROLLE-DIENER",
+                  "go"
+                ]
+              ],
+              "pose": {
+                "FIG-ROLLE-DIENER": "away"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.14.17-MRK.14.21",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-JUDAS-ISKARIOT"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER",
+              "FIG-ZEICHEN-FRAGEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ROLLE-JUENGER",
+                  "FIG-ZEICHEN-AUSLIEFERN",
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Beim Mahl am Abend sagt Jesus: Einer von euch, der mit mir isst, wird mich ausliefern. Die Jünger werden traurig und fragen einer nach dem anderen: Doch nicht ich?",
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-GRUPPE-ZWOELF"
+                ]
+              },
+              "at": {
+                "FIG-ZEICHEN-FRAGEN": "FIG-GRUPPE-ZWOELF"
+              },
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "worried",
+                "FIG-JUDAS-ISKARIOT": "calm",
+                "FIG-JESUS": "earnest"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus sendet zwei Jünger in die Stadt: Ein Mensch mit einem Wasserkrug wird ihnen begegnen; im Haus, in das er geht, finden sie den Obersaal. Sie finden alles, wie er gesagt hat, und bereiten das Passa vor.",
+          "Beim Mahl am Abend sagt Jesus: Einer von euch, der mit mir isst, wird mich ausliefern. Die Jünger werden traurig und fragen einer nach dem anderen: Doch nicht ich?"
+        ],
+        "captions_de": [
+          "Vorbereitung: Jesus schickt einen Jünger dem Mann mit dem Wasserkrug nach (Krug, Haus).",
+          "Ansage: Einer von euch wird Jesus ausliefern (ein Jünger, Hand und Kette, Jesus); die Jünger fragen traurig (Fragezeichen, Tränen)."
+        ],
+        "interpretation_note_de": "Markus sagt «zwei Jünger» ([[MRK.14.13]]); das Bild zeigt einen. Dass der Mann mit dem Krug ein Diener ist, sagt der Text nicht (Deutung). Judas steht beim Mahl dabei, ohne dass Jesus ihn im Bild zeigt.",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

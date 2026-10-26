@@ -1,0 +1,233 @@
+{
+ "id": "CORE-MRK-016-009-020",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MRK.16.9-MRK.16.20",
+ "target": "TU-MRK-016-009-020",
+ "core_de": "Der längere, spätere Schluss erzählt: Der Auferstandene erscheint zuerst Maria aus Magdala, dann zwei Jüngern unterwegs, doch die anderen glauben beiden Berichten nicht; schliesslich erscheint er den Elf, tadelt ihren Unglauben und sendet sie: «Geht hin in die ganze Welt und verkündigt das Evangelium der ganzen Schöpfung»; wer glaubt und getauft wird, wird gerettet, wer nicht glaubt, wird verurteilt, und Zeichen werden den Glaubenden folgen; danach wird der Herr Jesus in den Himmel aufgenommen und setzt sich zur Rechten Gottes, und die Jünger verkündigen überall, und der Herr wirkt mit.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Erscheinungen mit Unglauben – Auftrag – Aufnahme – Ausführung",
+    "range": "MRK.16.9-MRK.16.20",
+    "elements": [
+     {
+      "label": "Drei Erscheinungen",
+      "ref": "MRK.16.9-MRK.16.14",
+      "role": "Erscheinungen",
+      "child": "s2"
+     },
+     {
+      "label": "Auftrag und Weiche",
+      "ref": "MRK.16.15-MRK.16.16",
+      "role": "Auftrag",
+      "child": "s3"
+     },
+     {
+      "label": "Zeichen für die Glaubenden",
+      "ref": "MRK.16.17-MRK.16.18",
+      "role": "Zusage",
+      "child": "s4"
+     },
+     {
+      "label": "Der Herr Jesus wird in den Himmel aufgenommen und setzt sich zur Rechten Gottes",
+      "ref": "MRK.16.19",
+      "role": "Aufnahme"
+     },
+     {
+      "label": "Sie ziehen aus und verkündigen überall; der Herr wirkt mit und bekräftigt das Wort durch die Zeichen",
+      "ref": "MRK.16.20",
+      "role": "Ausführung"
+     }
+    ],
+    "features": {
+     "text_forms": [
+      {
+       "ref": "MRK.16.9-MRK.16.20",
+       "note": "Längerer Markusschluss, im SBLGNT und in der Arbeitsübersetzung in Doppelklammern ⟦ ⟧ als spätere Ergänzung; in den Transkriptionen von 01 und 03 endet der Text mit [[MRK.16.8]], in 02, 04 und 032 steht er. In der App sind die Lesarten einsehbar."
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "Der Abschnitt nimmt Erscheinungen auf, die in anderen Evangelien erzählt werden (vgl. [[JHN.20.11-JHN.20.18]], [[LUK.24.13-LUK.24.35]]); das ist eine Beobachtung der Forschung."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "matrix",
+    "subtype": "Erscheinung → Bericht → Unglaube",
+    "range": "MRK.16.9-MRK.16.14",
+    "elements": [
+     {
+      "label": "1. Maria aus Magdala: er erscheint ihr zuerst – sie berichtet den Trauernden – sie glauben es nicht",
+      "ref": "MRK.16.9-MRK.16.11",
+      "role": "1"
+     },
+     {
+      "label": "2. Zwei unterwegs: er offenbart sich in anderer Gestalt – sie berichten den Übrigen – auch ihnen glauben sie nicht",
+      "ref": "MRK.16.12-MRK.16.13",
+      "role": "2"
+     },
+     {
+      "label": "3. Die Elf beim Mahl: er tadelt ihren Unglauben und ihre Herzenshärte",
+      "ref": "MRK.16.14",
+      "role": "3"
+     }
+    ],
+    "visual": "grid",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "condition",
+    "subtype": "glaubt und getauft → gerettet ↔ nicht glaubt → verurteilt",
+    "range": "MRK.16.15-MRK.16.16",
+    "elements": [
+     {
+      "label": "Geht hin in die ganze Welt und verkündigt das Evangelium der ganzen Schöpfung",
+      "ref": "MRK.16.15",
+      "role": "Auftrag"
+     },
+     {
+      "label": "Wer glaubt und getauft wird",
+      "ref": "MRK.16.16",
+      "role": "Bedingung"
+     },
+     {
+      "label": "wird gerettet werden",
+      "ref": "MRK.16.16",
+      "role": "Folge"
+     },
+     {
+      "label": "wer aber nicht glaubt",
+      "ref": "MRK.16.16",
+      "role": "Bedingung"
+     },
+     {
+      "label": "wird verurteilt werden",
+      "ref": "MRK.16.16",
+      "role": "Folge"
+     }
+    ],
+    "features": {
+     "modality": [
+      {
+       "kind": "Auftrag und Ankündigung",
+       "ref": "MRK.16.15-MRK.16.16"
+      }
+     ]
+    },
+    "visual": "switch",
+    "basis": "text"
+   },
+   {
+    "id": "s4",
+    "pattern": "series",
+    "subtype": "Zeichen, die den Glaubenden folgen",
+    "range": "MRK.16.17-MRK.16.18",
+    "elements": [
+     {
+      "label": "in meinem Namen Dämonen austreiben",
+      "ref": "MRK.16.17"
+     },
+     {
+      "label": "in neuen Sprachen reden",
+      "ref": "MRK.16.17"
+     },
+     {
+      "label": "Schlangen aufheben",
+      "ref": "MRK.16.18"
+     },
+     {
+      "label": "Tödliches trinken, ohne Schaden",
+      "ref": "MRK.16.18"
+     },
+     {
+      "label": "Kranken die Hände auflegen, und sie werden gesund",
+      "ref": "MRK.16.18"
+     }
+    ],
+    "features": {
+     "modality": [
+      {
+       "kind": "Zusage",
+       "ref": "MRK.16.17-MRK.16.18"
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MRK.16.9-MRK.16.14",
+   "text_de": "Er erscheint Maria aus Magdala – sie glauben ihr nicht; zweien unterwegs – auch ihnen glauben sie nicht; den Elf beim Mahl – er tadelt ihren Unglauben.",
+   "reason_de": "Reihe der Erscheinungen mit Unglauben (Kriterium 2).",
+   "recognition_de": "Drei Erscheinungen, jedes Mal Unglaube.",
+   "keywords": [
+    "erschien er zuerst Maria aus Magdala",
+    "glaubten sie es nicht",
+    "tadelte ihren Unglauben"
+   ]
+  },
+  {
+   "reference": "MRK.16.15-MRK.16.18",
+   "text_de": "«Geht hin in die ganze Welt und verkündigt das Evangelium der ganzen Schöpfung. Wer glaubt und getauft wird, wird gerettet werden; wer aber nicht glaubt, wird verurteilt werden»; Zeichen werden den Glaubenden folgen.",
+   "reason_de": "Auftrag mit Weiche (Kriterium 1).",
+   "recognition_de": "Jesus sendet die Elf.",
+   "keywords": [
+    "Geht hin in die ganze Welt und verkündigt das Evangelium der ganzen Schöpfung",
+    "Wer glaubt und getauft wird, wird gerettet werden"
+   ]
+  },
+  {
+   "reference": "MRK.16.19-MRK.16.20",
+   "text_de": "Der Herr Jesus wird in den Himmel aufgenommen und setzt sich zur Rechten Gottes; sie ziehen aus und verkündigen überall, und der Herr wirkt mit.",
+   "reason_de": "Ausgang (Kriterium 3).",
+   "recognition_de": "Aufnahme in den Himmel; Jünger ziehen aus.",
+   "keywords": [
+    "wurde in den Himmel aufgenommen und setzte sich zur Rechten Gottes",
+    "Jene aber zogen aus und verkündigten überall"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Die einzelnen Zeichen (Schlangen, Gift) – in der Struktur, nicht gezeichnet",
+  "Ob dieser Schluss zum ursprünglichen Markus gehört: Textgeschichte, als Hinweis"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-MARIA-MAGDALA",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-GRUPPE-ZWOELF",
+  "FIG-GOTT"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MRK.16.9-MRK.16.20",
+   "fingerprint": "1ac4e2f79ecf858e"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mk 1–4 und 6–8 nach dem Pilot Mk 5 und dem Ausrollen Matthäus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

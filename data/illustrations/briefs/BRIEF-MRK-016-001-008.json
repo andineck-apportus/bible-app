@@ -11,43 +11,68 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MRK.16.1-MRK.16.3",
+      "reference": "MRK.16.1-MRK.16.4",
       "figures": [
         "FIG-MARIA-MAGDALA",
         "FIG-MARIA-MUTTER-JAKOBUS",
         "FIG-SALOME"
       ],
       "objects": [
-        "FIG-ORT-GRAB-VERSCHLOSSEN"
+        "FIG-ORT-GRAB",
+        "FIG-OBJ-OELGEFAESS"
       ],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-MORGEN"
+      ],
       "speech": [
         {
           "from": "FIG-MARIA-MAGDALA",
-          "to": "FIG-MARIA-MUTTER-JAKOBUS",
-          "icons": [
-            "FIG-ORT-GRAB-VERSCHLOSSEN",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
+          "to": "FIG-SALOME",
+          "icons": [],
+          "word": {
+            "de": "Wer wird uns den Stein vom Eingang des Grabes wegwälzen?",
+            "gsw": "Wär wälzt üs de Stei vom Iigang vom Grab ewägg?"
+          }
         }
       ],
-      "action_de": "Nach dem Sabbat kaufen Maria aus Magdala, Maria, die Mutter des Jakobus, und Salome wohlriechende Öle und gehen früh am Morgen zum Grab. Sie fragen einander: Wer wälzt uns den Stein weg?",
+      "action_de": "Nach dem Sabbat kaufen Maria aus Magdala, Maria, die Mutter des Jakobus, und Salome wohlriechende Öle und kommen sehr früh am ersten Tag der Woche zum Grab; sie fragen einander: «Wer wird uns den Stein vom Eingang des Grabes wegwälzen?» und sehen, dass der Stein weggewälzt ist.",
+      "keywords": {
+        "de": "sehen sie, dass der Stein weggewälzt ist",
+        "gsw": "gsehnd si, dass de Stei wäggwälzt isch"
+      },
+      "names": {
+        "FIG-MARIA-MAGDALA": {
+          "de": "Maria aus Magdala",
+          "gsw": "Maria vo Magdala"
+        },
+        "FIG-SALOME": {
+          "de": "Salome",
+          "gsw": "Salome"
+        }
+      },
       "stage": {
+        "hold": {
+          "FIG-MARIA-MUTTER-JAKOBUS": "FIG-OBJ-OELGEFAESS"
+        },
+        "back_side": "right",
         "mood": {
           "FIG-MARIA-MAGDALA": "worried",
-          "FIG-MARIA-MUTTER-JAKOBUS": "pensive",
-          "FIG-SALOME": "pensive"
+          "FIG-MARIA-MUTTER-JAKOBUS": "calm",
+          "FIG-SALOME": "calm"
         },
-        "back_side": "right"
+        "x": {
+          "FIG-MARIA-MAGDALA": 30,
+          "FIG-MARIA-MUTTER-JAKOBUS": 74,
+          "FIG-SALOME": 118
+        }
       }
     },
     {
       "n": 2,
-      "reference": "MRK.16.4-MRK.16.6",
+      "reference": "MRK.16.5-MRK.16.7",
       "figures": [
-        "FIG-ROLLE-JUNGER-MANN-WEISS",
+        "FIG-ROLLE-JUENGLING",
         "FIG-MARIA-MAGDALA",
-        "FIG-MARIA-MUTTER-JAKOBUS",
         "FIG-SALOME"
       ],
       "objects": [
@@ -56,76 +81,46 @@
       "signs": [],
       "speech": [
         {
-          "from": "FIG-ROLLE-JUNGER-MANN-WEISS",
+          "from": "FIG-ROLLE-JUENGLING",
           "to": "FIG-MARIA-MAGDALA",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-AUFERSTEHUNG"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Er ist auferweckt worden, er ist nicht hier.",
+            "gsw": "Er isch uferweckt worde, er isch nöd da."
+          }
         }
       ],
-      "action_de": "Der Stein ist weggewälzt. Im Grab sitzt ein junger Mann in weissem Gewand; sie erschrecken. Er sagt: Ihr sucht Jesus, den Gekreuzigten. Er ist auferweckt worden, er ist nicht hier.",
+      "action_de": "Im offenen Grab sagt ein junger Mann in weissem Gewand zu den Frauen: «Er ist auferweckt worden, er ist nicht hier», und trägt ihnen auf, den Jüngern und Petrus zu sagen: «Er geht euch voraus nach Galiläa.»",
+      "keywords": {
+        "de": "Er geht euch voraus nach Galiläa",
+        "gsw": "Er gaat eu voruus nach Galiläa"
+      },
+      "names": {
+        "FIG-MARIA-MAGDALA": {
+          "de": "Maria aus Magdala",
+          "gsw": "Maria vo Magdala"
+        }
+      },
       "stage": {
-        "mood": {
-          "FIG-MARIA-MAGDALA": "surprised",
-          "FIG-MARIA-MUTTER-JAKOBUS": "surprised",
-          "FIG-SALOME": "surprised",
-          "FIG-ROLLE-JUNGER-MANN-WEISS": "calm"
+        "pose": {
+          "FIG-ROLLE-JUENGLING": "sit"
         },
         "back_side": "left",
         "before": true,
+        "mood": {
+          "FIG-ROLLE-JUENGLING": "calm",
+          "FIG-MARIA-MAGDALA": "fear",
+          "FIG-SALOME": "fear"
+        },
         "x": {
-          "FIG-ROLLE-JUNGER-MANN-WEISS": 92,
-          "FIG-MARIA-MAGDALA": 122,
-          "FIG-MARIA-MUTTER-JAKOBUS": 148,
-          "FIG-SALOME": 172
+          "FIG-ROLLE-JUENGLING": 40,
+          "FIG-MARIA-MAGDALA": 104,
+          "FIG-SALOME": 156
         }
       }
     },
     {
       "n": 3,
-      "reference": "MRK.16.7",
-      "figures": [
-        "FIG-ROLLE-JUNGER-MANN-WEISS",
-        "FIG-MARIA-MAGDALA",
-        "FIG-MARIA-MUTTER-JAKOBUS",
-        "FIG-SALOME"
-      ],
-      "objects": [
-        "FIG-ORT-GRAB"
-      ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-ROLLE-JUNGER-MANN-WEISS",
-          "to": "FIG-MARIA-MAGDALA",
-          "icons": [
-            "FIG-GRUPPE-ZWOELF",
-            "FIG-PETRUS",
-            "FIG-ORT-SEE"
-          ]
-        }
-      ],
-      "action_de": "Geht, sagt seinen Jüngern und Petrus: Er geht euch nach Galiläa voraus; dort werdet ihr ihn sehen.",
-      "stage": {
-        "mood": {
-          "FIG-MARIA-MAGDALA": "pensive",
-          "FIG-MARIA-MUTTER-JAKOBUS": "pensive",
-          "FIG-SALOME": "pensive",
-          "FIG-ROLLE-JUNGER-MANN-WEISS": "calm"
-        },
-        "back_side": "left",
-        "before": true,
-        "x": {
-          "FIG-ROLLE-JUNGER-MANN-WEISS": 92,
-          "FIG-MARIA-MAGDALA": 122,
-          "FIG-MARIA-MUTTER-JAKOBUS": 148,
-          "FIG-SALOME": 172
-        }
-      }
-    },
-    {
-      "n": 4,
       "reference": "MRK.16.8",
       "figures": [
         "FIG-MARIA-MAGDALA",
@@ -136,69 +131,67 @@
         "FIG-ORT-GRAB"
       ],
       "signs": [
+        "FIG-ZEICHEN-FURCHT",
         "FIG-ZEICHEN-FLIEHEN"
       ],
       "speech": [],
-      "action_de": "Sie gehen hinaus und fliehen vom Grab, voll Zittern und Entsetzen, und sagen niemandem etwas; sie fürchten sich nämlich.",
+      "action_de": "Die Frauen gehen hinaus und fliehen vom Grab, denn Zittern und Entsetzen hat sie ergriffen; und sie sagen niemandem etwas, denn sie fürchten sich.",
+      "keywords": {
+        "de": "Und sie sagten niemandem etwas; sie fürchteten sich nämlich",
+        "gsw": "Und si händ niemertem öppis gseit; si händ sich nämli gfürchtet"
+      },
       "stage": {
         "pose": {
           "FIG-MARIA-MAGDALA": "away",
           "FIG-MARIA-MUTTER-JAKOBUS": "away",
           "FIG-SALOME": "away"
         },
-        "mood": {
-          "FIG-MARIA-MAGDALA": "worried",
-          "FIG-MARIA-MUTTER-JAKOBUS": "worried",
-          "FIG-SALOME": "worried"
+        "at": {
+          "FIG-ZEICHEN-FURCHT": "FIG-MARIA-MAGDALA",
+          "FIG-ZEICHEN-FLIEHEN": "FIG-SALOME"
         },
         "back_side": "left",
-        "at": {
-          "FIG-ZEICHEN-FLIEHEN": "FIG-MARIA-MAGDALA"
+        "mood": {
+          "FIG-MARIA-MAGDALA": "fear",
+          "FIG-MARIA-MUTTER-JAKOBUS": "fear",
+          "FIG-SALOME": "fear"
         },
         "x": {
-          "FIG-MARIA-MAGDALA": 104,
-          "FIG-MARIA-MUTTER-JAKOBUS": 136,
-          "FIG-SALOME": 166
+          "FIG-MARIA-MAGDALA": 90,
+          "FIG-MARIA-MUTTER-JAKOBUS": 126,
+          "FIG-SALOME": 162
         }
       }
     }
   ],
   "actions_de": [
-    "Nach dem Sabbat kaufen Maria aus Magdala, Maria, die Mutter des Jakobus, und Salome wohlriechende Öle und gehen früh am Morgen zum Grab. Sie fragen einander: Wer wälzt uns den Stein weg?",
-    "Der Stein ist weggewälzt. Im Grab sitzt ein junger Mann in weissem Gewand; sie erschrecken. Er sagt: Ihr sucht Jesus, den Gekreuzigten. Er ist auferweckt worden, er ist nicht hier.",
-    "Geht, sagt seinen Jüngern und Petrus: Er geht euch nach Galiläa voraus; dort werdet ihr ihn sehen.",
-    "Sie gehen hinaus und fliehen vom Grab, voll Zittern und Entsetzen, und sagen niemandem etwas; sie fürchten sich nämlich."
+    "Nach dem Sabbat kaufen Maria aus Magdala, Maria, die Mutter des Jakobus, und Salome wohlriechende Öle und kommen sehr früh am ersten Tag der Woche zum Grab; sie fragen einander: «Wer wird uns den Stein vom Eingang des Grabes wegwälzen?» und sehen, dass der Stein weggewälzt ist.",
+    "Im offenen Grab sagt ein junger Mann in weissem Gewand zu den Frauen: «Er ist auferweckt worden, er ist nicht hier», und trägt ihnen auf, den Jüngern und Petrus zu sagen: «Er geht euch voraus nach Galiläa.»",
+    "Die Frauen gehen hinaus und fliehen vom Grab, denn Zittern und Entsetzen hat sie ergriffen; und sie sagen niemandem etwas, denn sie fürchten sich."
   ],
   "captions_de": [
-    "Weg zum Grab: Drei Frauen mit Salbgefässen fragen: Wer rollt den Stein weg? (verschlossenes Grab, Fragezeichen).",
-    "Botschaft: Am offenen Grab sagt der junge Mann in Weiss: Jesus ist auferweckt (Jesus, offenes Grab mit Pfeil).",
-    "Auftrag: Sagt es den Jüngern und Petrus: Galiläa (Jünger, Petrus, See).",
-    "Flucht: Die Frauen fliehen erschrocken vom offenen Grab weg (Pfeil vom Grab weg)."
+    "Am Morgen: Die drei Frauen mit Öl (Ölgefäss) kommen zum Grab (Morgen); Maria aus Magdala (Name): «Wer wird uns den Stein vom Eingang des Grabes wegwälzen?» (Stein, fragen); der Stein ist weggewälzt.",
+    "Er ist nicht hier: Der junge Mann im weissen Gewand sitzt im offenen Grab (Grab) und sagt zu den erschrockenen Frauen: «Er ist auferweckt worden, er ist nicht hier.» (auferstehen, Jesus).",
+    "Furcht: Die drei Frauen laufen vom offenen Grab weg (fliehen); sie fürchten sich (Furcht) und schweigen."
   ],
-  "interpretation_note_de": "Markus nennt einen «jungen Mann» ([[MRK.16.5]]); er wird oft als Engel verstanden; das Bild folgt dem Wortlaut und zeigt ihn ohne Flügel, stehend statt sitzend. Mit [[MRK.16.8]] enden die ältesten vollständigen Handschriften; den kürzeren Markusschluss in Doppelklammern zeigt das Bild nicht.",
+  "interpretation_note_de": "Drei Felder nach «Gang zum Grab – Botschaft und Auftrag – Flucht und Schweigen» ([[MRK.16.1-MRK.16.8]]): Markus nennt einen jungen Mann in weissem Gewand, keinen Engel; er ist ohne Flügel gezeichnet. Der Auftrag an die Frauen steht als Wort (Band), nicht als ausgeführt; Feld 3 zeigt das offene Ende mit Flucht und Furcht. Der kurze Schluss, der in der Arbeitsübersetzung am Ende von 16,8 in Doppelklammern folgt, ist eine spätere Ergänzung und nicht gezeichnet.",
   "basis": [
     {
       "record": "TU-MRK-016-001-008",
       "field": "summary",
-      "fingerprint": "475d0156cfca696b"
+      "fingerprint": "8fd4a2403e767d18"
     },
     {
       "record": "TRANS-MRK-016-001-020-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.16.1-MRK.16.3",
-      "fingerprint": "003cf9407613b6be"
+      "reference": "MRK.16.1-MRK.16.4",
+      "fingerprint": "407063f411330be8"
     },
     {
       "record": "TRANS-MRK-016-001-020-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.16.4-MRK.16.6",
-      "fingerprint": "1b3c15e2abe6d6da"
-    },
-    {
-      "record": "TRANS-MRK-016-001-020-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MRK.16.7",
-      "fingerprint": "ae2b4b6647d925bd"
+      "reference": "MRK.16.5-MRK.16.7",
+      "fingerprint": "f2491236b38b503b"
     },
     {
       "record": "TRANS-MRK-016-001-020-DE-WORKING",
@@ -208,7 +201,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -374,6 +367,249 @@
           "Auftrag: Sagt es den Jüngern und Petrus: Galiläa (Jünger, Petrus, See).",
           "Flucht: Die Frauen fliehen erschrocken vom offenen Grab (Pfeil)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MRK-016-001-008",
+            "field": "summary",
+            "fingerprint": "475d0156cfca696b"
+          },
+          {
+            "record": "TRANS-MRK-016-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.16.1-MRK.16.3",
+            "fingerprint": "003cf9407613b6be"
+          },
+          {
+            "record": "TRANS-MRK-016-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.16.4-MRK.16.6",
+            "fingerprint": "1b3c15e2abe6d6da"
+          },
+          {
+            "record": "TRANS-MRK-016-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.16.7",
+            "fingerprint": "ae2b4b6647d925bd"
+          },
+          {
+            "record": "TRANS-MRK-016-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.16.8",
+            "fingerprint": "736fe0da7e0ddddb"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.16.1-MRK.16.3",
+            "figures": [
+              "FIG-MARIA-MAGDALA",
+              "FIG-MARIA-MUTTER-JAKOBUS",
+              "FIG-SALOME"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB-VERSCHLOSSEN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-MARIA-MAGDALA",
+                "to": "FIG-MARIA-MUTTER-JAKOBUS",
+                "icons": [
+                  "FIG-ORT-GRAB-VERSCHLOSSEN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Nach dem Sabbat kaufen Maria aus Magdala, Maria, die Mutter des Jakobus, und Salome wohlriechende Öle und gehen früh am Morgen zum Grab. Sie fragen einander: Wer wälzt uns den Stein weg?",
+            "stage": {
+              "mood": {
+                "FIG-MARIA-MAGDALA": "worried",
+                "FIG-MARIA-MUTTER-JAKOBUS": "pensive",
+                "FIG-SALOME": "pensive"
+              },
+              "back_side": "right"
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.16.4-MRK.16.6",
+            "figures": [
+              "FIG-ROLLE-JUNGER-MANN-WEISS",
+              "FIG-MARIA-MAGDALA",
+              "FIG-MARIA-MUTTER-JAKOBUS",
+              "FIG-SALOME"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-JUNGER-MANN-WEISS",
+                "to": "FIG-MARIA-MAGDALA",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-AUFERSTEHUNG"
+                ]
+              }
+            ],
+            "action_de": "Der Stein ist weggewälzt. Im Grab sitzt ein junger Mann in weissem Gewand; sie erschrecken. Er sagt: Ihr sucht Jesus, den Gekreuzigten. Er ist auferweckt worden, er ist nicht hier.",
+            "stage": {
+              "mood": {
+                "FIG-MARIA-MAGDALA": "surprised",
+                "FIG-MARIA-MUTTER-JAKOBUS": "surprised",
+                "FIG-SALOME": "surprised",
+                "FIG-ROLLE-JUNGER-MANN-WEISS": "calm"
+              },
+              "back_side": "left",
+              "before": true,
+              "x": {
+                "FIG-ROLLE-JUNGER-MANN-WEISS": 92,
+                "FIG-MARIA-MAGDALA": 122,
+                "FIG-MARIA-MUTTER-JAKOBUS": 148,
+                "FIG-SALOME": 172
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.16.7",
+            "figures": [
+              "FIG-ROLLE-JUNGER-MANN-WEISS",
+              "FIG-MARIA-MAGDALA",
+              "FIG-MARIA-MUTTER-JAKOBUS",
+              "FIG-SALOME"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-JUNGER-MANN-WEISS",
+                "to": "FIG-MARIA-MAGDALA",
+                "icons": [
+                  "FIG-GRUPPE-ZWOELF",
+                  "FIG-PETRUS",
+                  "FIG-ORT-SEE"
+                ]
+              }
+            ],
+            "action_de": "Geht, sagt seinen Jüngern und Petrus: Er geht euch nach Galiläa voraus; dort werdet ihr ihn sehen.",
+            "stage": {
+              "mood": {
+                "FIG-MARIA-MAGDALA": "pensive",
+                "FIG-MARIA-MUTTER-JAKOBUS": "pensive",
+                "FIG-SALOME": "pensive",
+                "FIG-ROLLE-JUNGER-MANN-WEISS": "calm"
+              },
+              "back_side": "left",
+              "before": true,
+              "x": {
+                "FIG-ROLLE-JUNGER-MANN-WEISS": 92,
+                "FIG-MARIA-MAGDALA": 122,
+                "FIG-MARIA-MUTTER-JAKOBUS": 148,
+                "FIG-SALOME": 172
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.16.8",
+            "figures": [
+              "FIG-MARIA-MAGDALA",
+              "FIG-MARIA-MUTTER-JAKOBUS",
+              "FIG-SALOME"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FLIEHEN"
+            ],
+            "speech": [],
+            "action_de": "Sie gehen hinaus und fliehen vom Grab, voll Zittern und Entsetzen, und sagen niemandem etwas; sie fürchten sich nämlich.",
+            "stage": {
+              "pose": {
+                "FIG-MARIA-MAGDALA": "away",
+                "FIG-MARIA-MUTTER-JAKOBUS": "away",
+                "FIG-SALOME": "away"
+              },
+              "mood": {
+                "FIG-MARIA-MAGDALA": "worried",
+                "FIG-MARIA-MUTTER-JAKOBUS": "worried",
+                "FIG-SALOME": "worried"
+              },
+              "back_side": "left",
+              "at": {
+                "FIG-ZEICHEN-FLIEHEN": "FIG-MARIA-MAGDALA"
+              },
+              "x": {
+                "FIG-MARIA-MAGDALA": 104,
+                "FIG-MARIA-MUTTER-JAKOBUS": 136,
+                "FIG-SALOME": 166
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Nach dem Sabbat kaufen Maria aus Magdala, Maria, die Mutter des Jakobus, und Salome wohlriechende Öle und gehen früh am Morgen zum Grab. Sie fragen einander: Wer wälzt uns den Stein weg?",
+          "Der Stein ist weggewälzt. Im Grab sitzt ein junger Mann in weissem Gewand; sie erschrecken. Er sagt: Ihr sucht Jesus, den Gekreuzigten. Er ist auferweckt worden, er ist nicht hier.",
+          "Geht, sagt seinen Jüngern und Petrus: Er geht euch nach Galiläa voraus; dort werdet ihr ihn sehen.",
+          "Sie gehen hinaus und fliehen vom Grab, voll Zittern und Entsetzen, und sagen niemandem etwas; sie fürchten sich nämlich."
+        ],
+        "captions_de": [
+          "Weg zum Grab: Drei Frauen mit Salbgefässen fragen: Wer rollt den Stein weg? (verschlossenes Grab, Fragezeichen).",
+          "Botschaft: Am offenen Grab sagt der junge Mann in Weiss: Jesus ist auferweckt (Jesus, offenes Grab mit Pfeil).",
+          "Auftrag: Sagt es den Jüngern und Petrus: Galiläa (Jünger, Petrus, See).",
+          "Flucht: Die Frauen fliehen erschrocken vom offenen Grab weg (Pfeil vom Grab weg)."
+        ],
+        "interpretation_note_de": "Markus nennt einen «jungen Mann» ([[MRK.16.5]]); er wird oft als Engel verstanden; das Bild folgt dem Wortlaut und zeigt ihn ohne Flügel, stehend statt sitzend. Mit [[MRK.16.8]] enden die ältesten vollständigen Handschriften; den kürzeren Markusschluss in Doppelklammern zeigt das Bild nicht.",
+        "basis": [
+          {
+            "record": "TU-MRK-016-001-008",
+            "field": "summary",
+            "fingerprint": "8fd4a2403e767d18"
+          },
+          {
+            "record": "TRANS-MRK-016-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.16.1-MRK.16.3",
+            "fingerprint": "003cf9407613b6be"
+          },
+          {
+            "record": "TRANS-MRK-016-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.16.4-MRK.16.6",
+            "fingerprint": "1b3c15e2abe6d6da"
+          },
+          {
+            "record": "TRANS-MRK-016-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.16.7",
+            "fingerprint": "ae2b4b6647d925bd"
+          },
+          {
+            "record": "TRANS-MRK-016-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.16.8",
+            "fingerprint": "736fe0da7e0ddddb"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

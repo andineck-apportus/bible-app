@@ -25,12 +25,19 @@
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-ZWOELF",
           "icons": [
-            "FIG-OBJ-BROT",
-            "FIG-JESUS"
-          ]
+            "FIG-OBJ-BROT"
+          ],
+          "word": {
+            "de": "Nehmt! Das ist mein Leib.",
+            "gsw": "Nämed! Das isch min Liib."
+          }
         }
       ],
-      "action_de": "Während sie essen, nimmt Jesus Brot, spricht den Lobpreis, bricht es, gibt es ihnen und sagt: Nehmt! Das ist mein Leib.",
+      "action_de": "Während sie essen, nimmt Jesus Brot, spricht den Lobpreis, bricht es und gibt es ihnen: «Nehmt! Das ist mein Leib.»",
+      "keywords": {
+        "de": "nahm er Brot, sprach den Lobpreis, brach es",
+        "gsw": "hät er Broot gnoo, hät de Lobpriis gsproche, hät s broche"
+      },
       "stage": {
         "hold": {
           "FIG-JESUS": "FIG-OBJ-BROT"
@@ -42,8 +49,14 @@
             "act"
           ]
         ],
+        "night": true,
         "mood": {
+          "FIG-JESUS": "calm",
           "FIG-GRUPPE-ZWOELF": "pensive"
+        },
+        "x": {
+          "FIG-JESUS": 50,
+          "FIG-GRUPPE-ZWOELF": 136
         }
       }
     },
@@ -63,21 +76,19 @@
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-ZWOELF",
           "icons": [
-            "FIG-OBJ-BECHER-VOLL",
-            "FIG-JESUS",
-            "FIG-ZEICHEN-VIELE"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-OBJ-BECHER-VOLL",
-            "FIG-ZEICHEN-REICH-GOTTES"
-          ]
+            "FIG-OBJ-BECHER-VOLL"
+          ],
+          "word": {
+            "de": "Das ist mein Blut des Bundes, das für viele vergossen wird.",
+            "gsw": "Das isch mis Bluet vom Bund, wo für vili vergosse wird."
+          }
         }
       ],
-      "action_de": "Er nimmt den Becher, dankt und gibt ihn ihnen; alle trinken. Das ist mein Blut des Bundes, vergossen für viele. Ich werde erst wieder davon trinken, wenn ich es neu trinke im Reich Gottes.",
+      "action_de": "Jesus nimmt einen Becher, spricht das Dankgebet und gibt ihn ihnen, und sie trinken alle daraus: «Das ist mein Blut des Bundes, das für viele vergossen wird.»",
+      "keywords": {
+        "de": "an dem ich es neu trinke im Reich Gottes",
+        "gsw": "wo ich s nöi trinke im Riich vo Gott"
+      },
       "stage": {
         "hold": {
           "FIG-JESUS": "FIG-OBJ-BECHER-VOLL"
@@ -89,29 +100,32 @@
             "act"
           ]
         ],
+        "night": true,
         "mood": {
+          "FIG-JESUS": "calm",
           "FIG-GRUPPE-ZWOELF": "pensive"
         },
         "x": {
-          "FIG-JESUS": 50
+          "FIG-JESUS": 50,
+          "FIG-GRUPPE-ZWOELF": 136
         }
       }
     }
   ],
   "actions_de": [
-    "Während sie essen, nimmt Jesus Brot, spricht den Lobpreis, bricht es, gibt es ihnen und sagt: Nehmt! Das ist mein Leib.",
-    "Er nimmt den Becher, dankt und gibt ihn ihnen; alle trinken. Das ist mein Blut des Bundes, vergossen für viele. Ich werde erst wieder davon trinken, wenn ich es neu trinke im Reich Gottes."
+    "Während sie essen, nimmt Jesus Brot, spricht den Lobpreis, bricht es und gibt es ihnen: «Nehmt! Das ist mein Leib.»",
+    "Jesus nimmt einen Becher, spricht das Dankgebet und gibt ihn ihnen, und sie trinken alle daraus: «Das ist mein Blut des Bundes, das für viele vergossen wird.»"
   ],
   "captions_de": [
-    "Brot: Jesus gibt das Brot: Das ist mein Leib (Brot, Jesus).",
-    "Becher: Mein Blut für viele (Becher, Jesus, Menge); neu im Reich Gottes (Becher, leuchtende Stadt)."
+    "Das Brot: Jesus gibt den Zwölf das Brot (Brot, Pfeil): «Nehmt! Das ist mein Leib.» (Jesus, geben).",
+    "Der Becher: Jesus reicht den Zwölf den Becher (Becher): «Das ist mein Blut des Bundes, das für viele vergossen wird.» (Blut, viele)."
   ],
-  "interpretation_note_de": "Brot und Becher als Sprechblasen-Gleichung «Brot = Jesus» bzw. «Becher = Jesus, für viele»; die leuchtende Stadt steht für das Reich Gottes (Deutung). Kein Blut im Bild.",
+  "interpretation_note_de": "Zwei Felder nach den gleich gebauten Gliedern «Brot ↔ Becher» ([[MRK.14.22-MRK.14.25]]): Jesus gibt Brot und Becher mit seinen deutenden Worten; das Band in Feld 2 nennt den Ausblick auf das Reich Gottes. Lobpreis und Dankgebet richten sich an Gott; wie Brot und Becher zu verstehen sind, ist Gegenstand der Auslegung. Würdig gezeichnet, ohne Blut im Bild.",
   "basis": [
     {
       "record": "TU-MRK-014-022-025",
       "field": "summary",
-      "fingerprint": "27a5fb8c7d94c719"
+      "fingerprint": "2244523d0fb324fa"
     },
     {
       "record": "TRANS-MRK-014-001-072-DE-WORKING",
@@ -127,7 +141,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -227,6 +241,137 @@
             }
           }
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MRK-014-022-025",
+            "field": "summary",
+            "fingerprint": "27a5fb8c7d94c719"
+          },
+          {
+            "record": "TRANS-MRK-014-001-072-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.14.22",
+            "fingerprint": "0964fb101e618078"
+          },
+          {
+            "record": "TRANS-MRK-014-001-072-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.14.23-MRK.14.25",
+            "fingerprint": "1e549dbd25398e38"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.14.22",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-OBJ-BROT",
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Während sie essen, nimmt Jesus Brot, spricht den Lobpreis, bricht es, gibt es ihnen und sagt: Nehmt! Das ist mein Leib.",
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROT"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-ZWOELF",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "pensive"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.14.23-MRK.14.25",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-OBJ-BECHER-VOLL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-OBJ-BECHER-VOLL",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-VIELE"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-OBJ-BECHER-VOLL",
+                  "FIG-ZEICHEN-REICH-GOTTES"
+                ]
+              }
+            ],
+            "action_de": "Er nimmt den Becher, dankt und gibt ihn ihnen; alle trinken. Das ist mein Blut des Bundes, vergossen für viele. Ich werde erst wieder davon trinken, wenn ich es neu trinke im Reich Gottes.",
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BECHER-VOLL"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-ZWOELF",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "pensive"
+              },
+              "x": {
+                "FIG-JESUS": 50
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Während sie essen, nimmt Jesus Brot, spricht den Lobpreis, bricht es, gibt es ihnen und sagt: Nehmt! Das ist mein Leib.",
+          "Er nimmt den Becher, dankt und gibt ihn ihnen; alle trinken. Das ist mein Blut des Bundes, vergossen für viele. Ich werde erst wieder davon trinken, wenn ich es neu trinke im Reich Gottes."
+        ],
+        "captions_de": [
+          "Brot: Jesus gibt das Brot: Das ist mein Leib (Brot, Jesus).",
+          "Becher: Mein Blut für viele (Becher, Jesus, Menge); neu im Reich Gottes (Becher, leuchtende Stadt)."
+        ],
+        "interpretation_note_de": "Brot und Becher als Sprechblasen-Gleichung «Brot = Jesus» bzw. «Becher = Jesus, für viele»; die leuchtende Stadt steht für das Reich Gottes (Deutung). Kein Blut im Bild.",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

@@ -20,20 +20,23 @@
         "FIG-OBJ-ESEL",
         "FIG-OBJ-ZWEIG"
       ],
-      "signs": [
-        "FIG-ZEICHEN-FREUDE"
-      ],
+      "signs": [],
       "speech": [
         {
           "from": "FIG-GRUPPE-MENGE",
           "to": "FIG-JESUS",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-PREISEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Hosanna! Gesegnet sei der, der kommt im Namen des Herrn!",
+            "gsw": "Hosanna! Gsägnet sig dä, wo chunnt im Name vom Herr!"
+          }
         }
       ],
-      "action_de": "Jesus zieht auf einem Fohlen in Jerusalem ein; die Leute legen Zweige auf den Weg und rufen: Hosanna! Gesegnet sei, der kommt im Namen des Herrn!",
+      "action_de": "Jesus sitzt auf dem Fohlen; viele breiten ihre Mäntel und Zweige auf den Weg, und die vorausgehen und nachfolgen, rufen: «Hosanna! Gesegnet sei der, der kommt im Namen des Herrn!»",
+      "keywords": {
+        "de": "Gesegnet sei das kommende Reich unseres Vaters David!",
+        "gsw": "Gsägnet sig s Riich vo üsem Vatter David, wo chunnt!"
+      },
       "stage": {
         "in": {
           "FIG-JESUS": "FIG-OBJ-ESEL"
@@ -45,14 +48,9 @@
           ]
         },
         "big_side": "left",
-        "signs_who": {
-          "FIG-ZEICHEN-FREUDE": [
-            "FIG-GRUPPE-MENGE"
-          ]
-        },
         "mood": {
-          "FIG-GRUPPE-MENGE": "delight",
-          "FIG-JESUS": "smile"
+          "FIG-GRUPPE-MENGE": "smile",
+          "FIG-JESUS": "calm"
         },
         "behind": [
           "FIG-OBJ-ZWEIG"
@@ -67,7 +65,7 @@
     },
     {
       "n": 2,
-      "reference": "MRK.11.15-MRK.11.19",
+      "reference": "MRK.11.12-MRK.11.19",
       "figures": [
         "FIG-JESUS",
         "FIG-ROLLE-HAENDLER"
@@ -80,8 +78,22 @@
       "signs": [
         "FIG-ZEICHEN-FLIEHEN"
       ],
-      "speech": [],
-      "action_de": "Jesus treibt die Händler aus dem Tempel und stösst die Tische der Geldwechsler um: Mein Haus soll ein Haus des Gebets sein für alle Völker.",
+      "speech": [
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-ROLLE-HAENDLER",
+          "icons": [],
+          "word": {
+            "de": "Ihr aber habt es zu einer Räuberhöhle gemacht!",
+            "gsw": "Ir aber händ e Röiberhöli drus gmacht!"
+          }
+        }
+      ],
+      "action_de": "Im Tempel treibt Jesus die Verkäufer und Käufer hinaus und stösst die Tische der Geldwechsler und die Sitze der Taubenverkäufer um. Er lehrt: «Mein Haus soll ein Haus des Gebets heissen für alle Völker»? «Ihr aber habt es zu einer Räuberhöhle gemacht!»",
+      "keywords": {
+        "de": "Mein Haus soll ein Haus des Gebets heissen für alle Völker",
+        "gsw": "Mis Huus söll es Huus zum Bätte heisse für alli Völker"
+      },
       "stage": {
         "pose": {
           "FIG-ROLLE-HAENDLER": "away"
@@ -115,8 +127,8 @@
       "n": 3,
       "reference": "MRK.11.20-MRK.11.25",
       "figures": [
-        "FIG-PETRUS",
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-PETRUS"
       ],
       "objects": [
         "FIG-OBJ-FEIGENBAUM-VERDORRT"
@@ -126,17 +138,35 @@
         {
           "from": "FIG-JESUS",
           "to": "FIG-PETRUS",
-          "icons": [
-            "FIG-ZEICHEN-GLAUBEN",
-            "FIG-GOTT",
-            "FIG-ZEICHEN-VERGEBEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Habt Glauben an Gott!",
+            "gsw": "Händ Glaube a Gott!"
+          }
         }
       ],
-      "action_de": "Am verdorrten Feigenbaum, den Jesus verflucht hat, spricht er über Glauben an Gott, Gebet und Vergebung.",
+      "action_de": "Am Morgen sehen sie den Feigenbaum von den Wurzeln her verdorrt; Petrus sagt: «Rabbi, sieh, der Feigenbaum, den du verflucht hast, ist verdorrt!» Jesus antwortet: «Habt Glauben an Gott!»",
+      "keywords": {
+        "de": "der Feigenbaum, den du verflucht hast, ist verdorrt!",
+        "gsw": "de Fiigebaum, wo du verfluecht häsch, isch verdorret!"
+      },
+      "names": {
+        "FIG-PETRUS": {
+          "de": "Petrus",
+          "gsw": "Petrus"
+        }
+      },
       "stage": {
         "mood": {
-          "FIG-PETRUS": "surprised"
+          "FIG-PETRUS": "surprised",
+          "FIG-JESUS": "calm"
+        },
+        "x": {
+          "FIG-JESUS": 32,
+          "FIG-PETRUS": 150
+        },
+        "floor_x": {
+          "FIG-OBJ-FEIGENBAUM-VERDORRT": 90
         }
       }
     },
@@ -144,63 +174,65 @@
       "n": 4,
       "reference": "MRK.11.27-MRK.11.33",
       "figures": [
-        "FIG-ROLLE-HOHEPRIESTER",
-        "FIG-ROLLE-SCHRIFTGELEHRTER",
+        "FIG-GRUPPE-HOHER-RAT",
         "FIG-JESUS"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-ORT-TEMPEL"
+      ],
       "signs": [],
       "speech": [
         {
-          "from": "FIG-ROLLE-HOHEPRIESTER",
+          "from": "FIG-GRUPPE-HOHER-RAT",
           "to": "FIG-JESUS",
-          "icons": [
-            "FIG-ZEICHEN-VOLLMACHT",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-HOHEPRIESTER",
-          "icons": [
-            "FIG-ZEICHEN-TAUFE",
-            "FIG-GOTT",
-            "FIG-ZEICHEN-VIELE",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "In welcher Vollmacht tust du das?",
+            "gsw": "Mit was für ere Vollmacht machsch du das?"
+          }
         }
       ],
-      "action_de": "Nach seiner Vollmacht gefragt, stellt Jesus die Gegenfrage nach der Taufe des Johannes; weil sie nicht antworten, sagt auch er es ihnen nicht.",
+      "action_de": "Im Tempel fragen die Hohepriester, Schriftgelehrten und Ältesten: «In welcher Vollmacht tust du das?» Jesus fragt zurück: «Die Taufe des Johannes: War sie vom Himmel oder von Menschen? Antwortet mir!»",
+      "keywords": {
+        "de": "Wir wissen es nicht",
+        "gsw": "Mir wüssed s nöd"
+      },
       "stage": {
+        "back_side": "left",
+        "before": true,
         "mood": {
-          "FIG-ROLLE-HOHEPRIESTER": "earnest",
-          "FIG-ROLLE-SCHRIFTGELEHRTER": "earnest"
+          "FIG-GRUPPE-HOHER-RAT": "earnest",
+          "FIG-JESUS": "calm"
+        },
+        "x": {
+          "FIG-GRUPPE-HOHER-RAT": 56,
+          "FIG-JESUS": 146
         }
       }
     }
   ],
   "actions_de": [
-    "Jesus zieht auf einem Fohlen in Jerusalem ein; die Leute legen Zweige auf den Weg und rufen: Hosanna! Gesegnet sei, der kommt im Namen des Herrn!",
-    "Jesus treibt die Händler aus dem Tempel und stösst die Tische der Geldwechsler um: Mein Haus soll ein Haus des Gebets sein für alle Völker.",
-    "Am verdorrten Feigenbaum, den Jesus verflucht hat, spricht er über Glauben an Gott, Gebet und Vergebung.",
-    "Nach seiner Vollmacht gefragt, stellt Jesus die Gegenfrage nach der Taufe des Johannes; weil sie nicht antworten, sagt auch er es ihnen nicht."
+    "Jesus sitzt auf dem Fohlen; viele breiten ihre Mäntel und Zweige auf den Weg, und die vorausgehen und nachfolgen, rufen: «Hosanna! Gesegnet sei der, der kommt im Namen des Herrn!»",
+    "Im Tempel treibt Jesus die Verkäufer und Käufer hinaus und stösst die Tische der Geldwechsler und die Sitze der Taubenverkäufer um. Er lehrt: «Mein Haus soll ein Haus des Gebets heissen für alle Völker»? «Ihr aber habt es zu einer Räuberhöhle gemacht!»",
+    "Am Morgen sehen sie den Feigenbaum von den Wurzeln her verdorrt; Petrus sagt: «Rabbi, sieh, der Feigenbaum, den du verflucht hast, ist verdorrt!» Jesus antwortet: «Habt Glauben an Gott!»",
+    "Im Tempel fragen die Hohepriester, Schriftgelehrten und Ältesten: «In welcher Vollmacht tust du das?» Jesus fragt zurück: «Die Taufe des Johannes: War sie vom Himmel oder von Menschen? Antwortet mir!»"
   ],
   "captions_de": [
-    "Einzug: Jesus reitet auf dem Fohlen, Zweige auf dem Weg; die Leute rufen: Gesegnet, der kommt (Jesus, segnende Hand; Freude).",
-    "Tempel: Jesus treibt die Händler hinaus (Bogen zum Händler, Pfeil weg); umgestossener Tisch mit Münzen, eine Taube.",
-    "Der verdorrte Feigenbaum: Habt Glauben an Gott (Herz mit Licht, Strahlenkranz) und vergebt (zerrissener Schuldschein).",
-    "Vollmacht: Die Führenden fragen nach seiner Vollmacht (Schriftrolle mit Krone, Fragezeichen); Jesus fragt nach der Taufe des Johannes: vom Himmel oder von Menschen? (Taufe, Strahlenkranz, Menschen, Fragezeichen)."
+    "Einzug: Jesus reitet auf dem jungen Esel; Menschen mit Zweigen rufen: «Hosanna! Gesegnet sei der, der kommt im Namen des Herrn!» (preisen, segnen).",
+    "Im Tempel: Jesus treibt die Händler hinaus (Pfeil); umgestossener Tisch, Tauben; die Händler fliehen (fliehen): «Ihr aber habt es zu einer Räuberhöhle gemacht!» (Räuberhöhle).",
+    "Verdorrt: Petrus (Name) am verdorrten Feigenbaum; Jesus: «Habt Glauben an Gott!» (glauben, Gott).",
+    "Die Vollmachtsfrage: Die Führer (Hoher Rat: Hohepriester, Schriftgelehrte, Älteste) fragen Jesus: «In welcher Vollmacht tust du das?» (Vollmacht, fragen); das Band nennt ihre Antwort auf seine Gegenfrage."
   ],
-  "interpretation_note_de": "Je ein Feld zu Einzug, Tempel, Feigenbaum und Vollmachtsfrage; das Wort an den Feigenbaum ([[MRK.11.12-MRK.11.14]]) ist im dritten Feld mit dem verdorrten Baum zusammengefasst.",
+  "interpretation_note_de": "Vier Comic-Szenen für fünf Abschnitte ([[MRK.11.1-MRK.11.33]]): der Einzug mit dem Ruf «Hosanna», die Tempelaustreibung (Feld 2 bündelt den verfluchten Feigenbaum, im Bild nicht gezeigt, und die Tempelszene; das Planen der Hohepriester nennt die Legende), der verdorrte Feigenbaum mit «Habt Glauben an Gott!» und die Vollmachtsfrage. Feigenbaum – Tempel – Feigenbaum ist eine Schachtelung (Beobachtung der Auslegung). Markus sagt «Fohlen»; das Bild zeichnet einen jungen Esel (Deutung, vgl. [[MAT.21.2]]). Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-MRK-011",
       "field": "summary",
-      "fingerprint": "4278529c73f4160c"
+      "fingerprint": "f9dcdf5b7e72d5a5"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -555,6 +587,434 @@
           "Tempel: Jesus treibt die Händler hinaus (Bogen zum Händler, Pfeil weg); umgestossener Tisch mit Münzen, eine Taube.",
           "Der verdorrte Feigenbaum: Habt Glauben an Gott (Herz mit Licht, Strahlenkranz) und vergebt (zerrissener Schuldschein).",
           "Vollmacht: Die Führenden fragen nach seiner Vollmacht (Zepter, Fragezeichen); Jesus fragt nach der Taufe des Johannes: vom Himmel oder von Menschen? (Taufe, Strahlenkranz, Menschen, Fragezeichen)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-MRK-011",
+            "field": "summary",
+            "fingerprint": "4278529c73f4160c"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.11.1-MRK.11.11",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-ESEL",
+              "FIG-OBJ-ZWEIG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-PREISEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus zieht auf einem Fohlen in Jerusalem ein; die Leute legen Zweige auf den Weg und rufen: Hosanna! Gesegnet sei, der kommt im Namen des Herrn!",
+            "stage": {
+              "in": {
+                "FIG-JESUS": "FIG-OBJ-ESEL"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.44,
+                  0.1
+                ]
+              },
+              "big_side": "left",
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-GRUPPE-MENGE"
+                ]
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "delight",
+                "FIG-JESUS": "smile"
+              },
+              "behind": [
+                "FIG-OBJ-ZWEIG"
+              ],
+              "floor_x": {
+                "FIG-OBJ-ZWEIG": 74
+              },
+              "count": {
+                "FIG-OBJ-ZWEIG": 2
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.11.15-MRK.11.19",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-HAENDLER"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL",
+              "FIG-OBJ-TISCH-UMGESTOSSEN",
+              "FIG-OBJ-TAUBE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FLIEHEN"
+            ],
+            "speech": [],
+            "action_de": "Jesus treibt die Händler aus dem Tempel und stösst die Tische der Geldwechsler um: Mein Haus soll ein Haus des Gebets sein für alle Völker.",
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-HAENDLER": "away"
+              },
+              "mood": {
+                "FIG-ROLLE-HAENDLER": "surprised",
+                "FIG-JESUS": "earnest"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-HAENDLER",
+                  "act"
+                ]
+              ],
+              "x": {
+                "FIG-JESUS": 28,
+                "FIG-ROLLE-HAENDLER": 72
+              },
+              "floor_x": {
+                "FIG-OBJ-TISCH-UMGESTOSSEN": 104,
+                "FIG-OBJ-TAUBE": 146
+              },
+              "beside": {
+                "FIG-ZEICHEN-FLIEHEN": "FIG-ROLLE-HAENDLER"
+              },
+              "before": true
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.11.20-MRK.11.25",
+            "figures": [
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-FEIGENBAUM-VERDORRT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-ZEICHEN-GLAUBEN",
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-VERGEBEN"
+                ]
+              }
+            ],
+            "action_de": "Am verdorrten Feigenbaum, den Jesus verflucht hat, spricht er über Glauben an Gott, Gebet und Vergebung.",
+            "stage": {
+              "mood": {
+                "FIG-PETRUS": "surprised"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.11.27-MRK.11.33",
+            "figures": [
+              "FIG-ROLLE-HOHEPRIESTER",
+              "FIG-ROLLE-SCHRIFTGELEHRTER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-HOHEPRIESTER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-VOLLMACHT",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-HOHEPRIESTER",
+                "icons": [
+                  "FIG-ZEICHEN-TAUFE",
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-VIELE",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Nach seiner Vollmacht gefragt, stellt Jesus die Gegenfrage nach der Taufe des Johannes; weil sie nicht antworten, sagt auch er es ihnen nicht.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-HOHEPRIESTER": "earnest",
+                "FIG-ROLLE-SCHRIFTGELEHRTER": "earnest"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus zieht auf einem Fohlen in Jerusalem ein; die Leute legen Zweige auf den Weg und rufen: Hosanna! Gesegnet sei, der kommt im Namen des Herrn!",
+          "Jesus treibt die Händler aus dem Tempel und stösst die Tische der Geldwechsler um: Mein Haus soll ein Haus des Gebets sein für alle Völker.",
+          "Am verdorrten Feigenbaum, den Jesus verflucht hat, spricht er über Glauben an Gott, Gebet und Vergebung.",
+          "Nach seiner Vollmacht gefragt, stellt Jesus die Gegenfrage nach der Taufe des Johannes; weil sie nicht antworten, sagt auch er es ihnen nicht."
+        ],
+        "captions_de": [
+          "Einzug: Jesus reitet auf dem Fohlen, Zweige auf dem Weg; die Leute rufen: Gesegnet, der kommt (Jesus, segnende Hand; Freude).",
+          "Tempel: Jesus treibt die Händler hinaus (Bogen zum Händler, Pfeil weg); umgestossener Tisch mit Münzen, eine Taube.",
+          "Der verdorrte Feigenbaum: Habt Glauben an Gott (Herz mit Licht, Strahlenkranz) und vergebt (zerrissener Schuldschein).",
+          "Vollmacht: Die Führenden fragen nach seiner Vollmacht (Schriftrolle mit Krone, Fragezeichen); Jesus fragt nach der Taufe des Johannes: vom Himmel oder von Menschen? (Taufe, Strahlenkranz, Menschen, Fragezeichen)."
+        ],
+        "interpretation_note_de": "Je ein Feld zu Einzug, Tempel, Feigenbaum und Vollmachtsfrage; das Wort an den Feigenbaum ([[MRK.11.12-MRK.11.14]]) ist im dritten Feld mit dem verdorrten Baum zusammengefasst.",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.11.1-MRK.11.11",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-ESEL",
+              "FIG-OBJ-ZWEIG"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Hosanna! Gesegnet sei der, der kommt im Namen des Herrn!",
+                  "gsw": "Hosanna! Gsägnet sig dä, wo chunnt im Name vom Herr!"
+                }
+              }
+            ],
+            "action_de": "Jesus sitzt auf dem Fohlen; viele breiten ihre Mäntel und Zweige auf den Weg, und die vorausgehen und nachfolgen, rufen: «Hosanna! Gesegnet sei der, der kommt im Namen des Herrn!»",
+            "keywords": {
+              "de": "Gesegnet sei das kommende Reich unseres Vaters David!",
+              "gsw": "Gsägnet sig s Riich vo üsem Vatter David, wo chunnt!"
+            },
+            "stage": {
+              "in": {
+                "FIG-JESUS": "FIG-OBJ-ESEL"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.44,
+                  0.1
+                ]
+              },
+              "big_side": "left",
+              "mood": {
+                "FIG-GRUPPE-MENGE": "smile",
+                "FIG-JESUS": "calm"
+              },
+              "behind": [
+                "FIG-OBJ-ZWEIG"
+              ],
+              "floor_x": {
+                "FIG-OBJ-ZWEIG": 74
+              },
+              "count": {
+                "FIG-OBJ-ZWEIG": 2
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.11.12-MRK.11.19",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-HAENDLER"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL",
+              "FIG-OBJ-TISCH-UMGESTOSSEN",
+              "FIG-OBJ-TAUBE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FLIEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-HAENDLER",
+                "icons": [],
+                "word": {
+                  "de": "Ihr aber habt es zu einer Räuberhöhle gemacht!",
+                  "gsw": "Ir aber händ e Röiberhöli drus gmacht!"
+                }
+              }
+            ],
+            "action_de": "Im Tempel treibt Jesus die Verkäufer und Käufer hinaus und stösst die Tische der Geldwechsler und die Sitze der Taubenverkäufer um. Er lehrt: «Mein Haus soll ein Haus des Gebets heissen für alle Völker»? «Ihr aber habt es zu einer Räuberhöhle gemacht!»",
+            "keywords": {
+              "de": "Mein Haus soll ein Haus des Gebets heissen für alle Völker",
+              "gsw": "Mis Huus söll es Huus zum Bätte heisse für alli Völker"
+            },
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-HAENDLER": "away"
+              },
+              "mood": {
+                "FIG-ROLLE-HAENDLER": "surprised",
+                "FIG-JESUS": "earnest"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-HAENDLER",
+                  "act"
+                ]
+              ],
+              "x": {
+                "FIG-JESUS": 28,
+                "FIG-ROLLE-HAENDLER": 72
+              },
+              "floor_x": {
+                "FIG-OBJ-TISCH-UMGESTOSSEN": 104,
+                "FIG-OBJ-TAUBE": 146
+              },
+              "beside": {
+                "FIG-ZEICHEN-FLIEHEN": "FIG-ROLLE-HAENDLER"
+              },
+              "before": true
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.11.20-MRK.11.25",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-OBJ-FEIGENBAUM-VERDORRT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [],
+                "word": {
+                  "de": "Habt Glauben an Gott!",
+                  "gsw": "Händ Glaube a Gott!"
+                }
+              }
+            ],
+            "action_de": "Am Morgen sehen sie den Feigenbaum von den Wurzeln her verdorrt; Petrus sagt: «Rabbi, sieh, der Feigenbaum, den du verflucht hast, ist verdorrt!» Jesus antwortet: «Habt Glauben an Gott!»",
+            "keywords": {
+              "de": "der Feigenbaum, den du verflucht hast, ist verdorrt!",
+              "gsw": "de Fiigebaum, wo du verfluecht häsch, isch verdorret!"
+            },
+            "names": {
+              "FIG-PETRUS": {
+                "de": "Petrus",
+                "gsw": "Petrus"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-PETRUS": "surprised",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-JESUS": 32,
+                "FIG-PETRUS": 150
+              },
+              "floor_x": {
+                "FIG-OBJ-FEIGENBAUM-VERDORRT": 90
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.11.27-MRK.11.33",
+            "figures": [
+              "FIG-GRUPPE-HOHER-RAT",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-HOHER-RAT",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "In welcher Vollmacht tust du das?",
+                  "gsw": "Mit was für ere Vollmacht machsch du das?"
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-HOHER-RAT",
+                "icons": [],
+                "word": {
+                  "de": "Die Taufe des Johannes: War sie vom Himmel oder von Menschen? Antwortet mir!",
+                  "gsw": "D Taufi vom Johannes: Isch si vom Himmel gsii oder vo Mänsche? Gänd mir Antwort!"
+                }
+              }
+            ],
+            "action_de": "Im Tempel fragen die Hohepriester, Schriftgelehrten und Ältesten: «In welcher Vollmacht tust du das?» Jesus fragt zurück: «Die Taufe des Johannes: War sie vom Himmel oder von Menschen? Antwortet mir!»",
+            "keywords": {
+              "de": "Wir wissen es nicht",
+              "gsw": "Mir wüssed s nöd"
+            },
+            "stage": {
+              "back_side": "left",
+              "before": true,
+              "mood": {
+                "FIG-GRUPPE-HOHER-RAT": "earnest",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-HOHER-RAT": 56,
+                "FIG-JESUS": 146
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Einzug: Jesus reitet auf dem jungen Esel; Menschen mit Zweigen rufen: «Hosanna! Gesegnet sei der, der kommt im Namen des Herrn!» (preisen, segnen).",
+          "Im Tempel: Jesus treibt die Händler hinaus (Pfeil); umgestossener Tisch, Tauben; die Händler fliehen (fliehen): «Ihr aber habt es zu einer Räuberhöhle gemacht!» (Räuberhöhle).",
+          "Verdorrt: Petrus (Name) am verdorrten Feigenbaum; Jesus: «Habt Glauben an Gott!» (glauben, Gott).",
+          "Die Vollmachtsfrage: Die Führer (Hoher Rat: Hohepriester, Schriftgelehrte, Älteste) fragen: «In welcher Vollmacht tust du das?»; Jesus fragt zurück nach der Taufe des Johannes (Taufe, Johannes)."
         ]
       }
     }

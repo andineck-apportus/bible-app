@@ -17,23 +17,45 @@
         "FIG-JESUS",
         "FIG-JUDAS-ISKARIOT"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-ORT-GARTEN",
+        "FIG-OBJ-SCHWERT"
+      ],
       "signs": [
         "FIG-ZEICHEN-KUSS",
         "FIG-ZEICHEN-AUSLIEFERN"
       ],
-      "speech": [],
-      "action_de": "Judas kommt mit einer Menge mit Schwertern und Knüppeln, gesandt von den Hohepriestern. Er tritt zu Jesus, sagt «Rabbi!» und küsst ihn; sie ergreifen Jesus.",
+      "speech": [
+        {
+          "from": "FIG-JUDAS-ISKARIOT",
+          "to": "FIG-JESUS",
+          "icons": [],
+          "word": {
+            "de": "Rabbi!",
+            "gsw": "Rabbi!"
+          }
+        }
+      ],
+      "action_de": "Judas kommt mit einer Menge mit Schwertern und Knüppeln, sagt «Rabbi!» und küsst Jesus, und sie ergreifen ihn.",
+      "keywords": {
+        "de": "Wen immer ich küssen werde, der ist es",
+        "gsw": "Dä, wo ich küsse, dä isch es"
+      },
+      "names": {
+        "FIG-JUDAS-ISKARIOT": {
+          "de": "Judas",
+          "gsw": "Judas"
+        }
+      },
       "stage": {
-        "mood": {
-          "FIG-GRUPPE-MENGE": "earnest",
-          "FIG-JUDAS-ISKARIOT": "earnest",
-          "FIG-JESUS": "calm"
+        "hold": {
+          "FIG-GRUPPE-MENGE": "FIG-OBJ-SCHWERT"
         },
-        "x": {
-          "FIG-GRUPPE-MENGE": 40,
-          "FIG-JESUS": 104,
-          "FIG-JUDAS-ISKARIOT": 146
+        "beside": {
+          "FIG-ZEICHEN-KUSS": "FIG-JUDAS-ISKARIOT"
+        },
+        "at": {
+          "FIG-ZEICHEN-AUSLIEFERN": "FIG-JESUS"
         },
         "arrows": [
           [
@@ -42,88 +64,89 @@
             "act"
           ]
         ],
-        "beside": {
-          "FIG-ZEICHEN-KUSS": "FIG-JUDAS-ISKARIOT"
+        "back_side": "left",
+        "before": true,
+        "night": true,
+        "mood": {
+          "FIG-GRUPPE-MENGE": "angry",
+          "FIG-JESUS": "calm",
+          "FIG-JUDAS-ISKARIOT": "earnest"
         },
-        "at": {
-          "FIG-ZEICHEN-AUSLIEFERN": "FIG-JESUS"
+        "x": {
+          "FIG-GRUPPE-MENGE": 34,
+          "FIG-JESUS": 98,
+          "FIG-JUDAS-ISKARIOT": 150
         }
       }
     },
     {
       "n": 2,
-      "reference": "MRK.14.47-MRK.14.49",
+      "reference": "MRK.14.47-MRK.14.52",
       "figures": [
+        "FIG-GRUPPE-MENGE",
         "FIG-JESUS",
-        "FIG-GRUPPE-MENGE"
+        "FIG-GRUPPE-JUENGER"
       ],
-      "objects": [],
-      "signs": [],
+      "objects": [
+        "FIG-OBJ-SCHWERT"
+      ],
+      "signs": [
+        "FIG-ZEICHEN-FLIEHEN"
+      ],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-ORT-TEMPEL",
-            "FIG-OBJ-SCHRIFTROLLE"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Aber es geschieht, damit die Schriften erfüllt werden.",
+            "gsw": "Aber das gschiet, demit d Schrifte erfüllt wärded."
+          }
         }
       ],
-      "action_de": "Jesus sagt: Wie gegen einen Räuber seid ihr ausgezogen? Täglich war ich bei euch im Tempel und lehrte. Aber es geschieht, damit die Schriften erfüllt werden.",
+      "action_de": "Einer der Umstehenden schlägt mit dem Schwert dem Knecht des Hohepriesters das Ohr ab. Jesus sagt: «Wie gegen einen Räuber seid ihr ausgezogen …? … Aber es geschieht, damit die Schriften erfüllt werden.» Da verlassen ihn alle und fliehen; ein junger Mann flieht nackt.",
+      "keywords": {
+        "de": "Und sie verliessen ihn und flohen alle",
+        "gsw": "Und si händ en verlaa und sind alli gflüchtet"
+      },
       "stage": {
-        "mood": {
-          "FIG-GRUPPE-MENGE": "earnest",
-          "FIG-JESUS": "earnest"
-        }
-      }
-    },
-    {
-      "n": 3,
-      "reference": "MRK.14.50-MRK.14.52",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF"
-      ],
-      "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-FLIEHEN"
-      ],
-      "speech": [],
-      "action_de": "Da verlassen ihn alle und fliehen. Ein junger Mann, nur mit einem Leinentuch bekleidet, folgt ihm; als man ihn packt, flieht er nackt.",
-      "stage": {
-        "pose": {
-          "FIG-GRUPPE-ZWOELF": "away"
+        "hold": {
+          "FIG-GRUPPE-MENGE": "FIG-OBJ-SCHWERT"
         },
-        "mood": {
-          "FIG-GRUPPE-ZWOELF": "worried",
-          "FIG-JESUS": "calm"
+        "pose": {
+          "FIG-GRUPPE-JUENGER": "away"
         },
         "at": {
-          "FIG-ZEICHEN-FLIEHEN": "FIG-GRUPPE-ZWOELF"
+          "FIG-ZEICHEN-FLIEHEN": "FIG-GRUPPE-JUENGER"
+        },
+        "night": true,
+        "mood": {
+          "FIG-GRUPPE-MENGE": "angry",
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-JUENGER": "fear"
         },
         "x": {
-          "FIG-JESUS": 34,
-          "FIG-GRUPPE-ZWOELF": 150
+          "FIG-GRUPPE-MENGE": 34,
+          "FIG-JESUS": 96,
+          "FIG-GRUPPE-JUENGER": 156
         }
       }
     }
   ],
   "actions_de": [
-    "Judas kommt mit einer Menge mit Schwertern und Knüppeln, gesandt von den Hohepriestern. Er tritt zu Jesus, sagt «Rabbi!» und küsst ihn; sie ergreifen Jesus.",
-    "Jesus sagt: Wie gegen einen Räuber seid ihr ausgezogen? Täglich war ich bei euch im Tempel und lehrte. Aber es geschieht, damit die Schriften erfüllt werden.",
-    "Da verlassen ihn alle und fliehen. Ein junger Mann, nur mit einem Leinentuch bekleidet, folgt ihm; als man ihn packt, flieht er nackt."
+    "Judas kommt mit einer Menge mit Schwertern und Knüppeln, sagt «Rabbi!» und küsst Jesus, und sie ergreifen ihn.",
+    "Einer der Umstehenden schlägt mit dem Schwert dem Knecht des Hohepriesters das Ohr ab. Jesus sagt: «Wie gegen einen Räuber seid ihr ausgezogen …? … Aber es geschieht, damit die Schriften erfüllt werden.» Da verlassen ihn alle und fliehen; ein junger Mann flieht nackt."
   ],
   "captions_de": [
-    "Kuss → Festnahme: Judas küsst Jesus als Zeichen (Lippen bei Judas); darauf ergreift die Menge Jesus (Bogen von der Menge zu Jesus, Hand und Kette).",
-    "Antwort: Jesus: Ich war täglich im Tempel – so erfüllen sich die Schriften (Tempel, Schriftrolle).",
-    "Flucht: Die Jünger wenden sich ab und fliehen (Pfeil); Jesus bleibt allein zurück."
+    "Der Kuss: In der Nacht im Garten küsst Judas (Name) Jesus (Kuss) mit dem Wort «Rabbi!»; die Menge mit Schwertern greift zu (ausliefern).",
+    "Alle fliehen: Jesus steht gefangen vor der bewaffneten Menge (Schwert): «Aber es geschieht, damit die Schriften erfüllt werden.» (Schriftrolle, vollbracht); die Jünger laufen davon (fliehen)."
   ],
-  "interpretation_note_de": "Den Schwerthieb gegen den Knecht des Hohepriesters ([[MRK.14.47]]) und den nackt fliehenden jungen Mann ([[MRK.14.51-MRK.14.52]]) zeigt das Bild nicht (keine Gewalt, keine Nacktheit). Die Schriftrolle steht für «die Schriften».",
+  "interpretation_note_de": "Zwei Felder nach dem Ablauf ([[MRK.14.43-MRK.14.52]]): der Kuss als verabredetes Zeichen und die Festnahme, dann Jesu Wort und die Flucht aller (Erfüllung von [[MRK.14.27]]). Der Schwertschlag gegen den Knecht und der junge Mann, der nackt flieht, sind nicht gezeichnet (Nebenhandlung, nicht ausgemalt); Markus nennt keinen von beiden mit Namen.",
   "basis": [
     {
       "record": "TU-MRK-014-043-052",
       "field": "summary",
-      "fingerprint": "db522be50ce0866f"
+      "fingerprint": "9c41187f691d8239"
     },
     {
       "record": "TRANS-MRK-014-001-072-DE-WORKING",
@@ -134,18 +157,12 @@
     {
       "record": "TRANS-MRK-014-001-072-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.14.47-MRK.14.49",
-      "fingerprint": "4a2b5f0fd433132f"
-    },
-    {
-      "record": "TRANS-MRK-014-001-072-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MRK.14.50-MRK.14.52",
-      "fingerprint": "b7a533f28c85d5c4"
+      "reference": "MRK.14.47-MRK.14.52",
+      "fingerprint": "919aefbcadf9404a"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -275,6 +292,180 @@
           "Antwort: Jesus: Ich war täglich im Tempel – so erfüllen sich die Schriften (Tempel, Schriftrolle).",
           "Flucht: Die Jünger wenden sich ab und fliehen (Pfeil); Jesus bleibt allein zurück."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MRK-014-043-052",
+            "field": "summary",
+            "fingerprint": "db522be50ce0866f"
+          },
+          {
+            "record": "TRANS-MRK-014-001-072-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.14.43-MRK.14.46",
+            "fingerprint": "19eeacac158a58ec"
+          },
+          {
+            "record": "TRANS-MRK-014-001-072-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.14.47-MRK.14.49",
+            "fingerprint": "4a2b5f0fd433132f"
+          },
+          {
+            "record": "TRANS-MRK-014-001-072-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.14.50-MRK.14.52",
+            "fingerprint": "b7a533f28c85d5c4"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.14.43-MRK.14.46",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS",
+              "FIG-JUDAS-ISKARIOT"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-KUSS",
+              "FIG-ZEICHEN-AUSLIEFERN"
+            ],
+            "speech": [],
+            "action_de": "Judas kommt mit einer Menge mit Schwertern und Knüppeln, gesandt von den Hohepriestern. Er tritt zu Jesus, sagt «Rabbi!» und küsst ihn; sie ergreifen Jesus.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-JUDAS-ISKARIOT": "earnest",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 40,
+                "FIG-JESUS": 104,
+                "FIG-JUDAS-ISKARIOT": 146
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "beside": {
+                "FIG-ZEICHEN-KUSS": "FIG-JUDAS-ISKARIOT"
+              },
+              "at": {
+                "FIG-ZEICHEN-AUSLIEFERN": "FIG-JESUS"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.14.47-MRK.14.49",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ORT-TEMPEL",
+                  "FIG-OBJ-SCHRIFTROLLE"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: Wie gegen einen Räuber seid ihr ausgezogen? Täglich war ich bei euch im Tempel und lehrte. Aber es geschieht, damit die Schriften erfüllt werden.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-JESUS": "earnest"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.14.50-MRK.14.52",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-FLIEHEN"
+            ],
+            "speech": [],
+            "action_de": "Da verlassen ihn alle und fliehen. Ein junger Mann, nur mit einem Leinentuch bekleidet, folgt ihm; als man ihn packt, flieht er nackt.",
+            "stage": {
+              "pose": {
+                "FIG-GRUPPE-ZWOELF": "away"
+              },
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "worried",
+                "FIG-JESUS": "calm"
+              },
+              "at": {
+                "FIG-ZEICHEN-FLIEHEN": "FIG-GRUPPE-ZWOELF"
+              },
+              "x": {
+                "FIG-JESUS": 34,
+                "FIG-GRUPPE-ZWOELF": 150
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Judas kommt mit einer Menge mit Schwertern und Knüppeln, gesandt von den Hohepriestern. Er tritt zu Jesus, sagt «Rabbi!» und küsst ihn; sie ergreifen Jesus.",
+          "Jesus sagt: Wie gegen einen Räuber seid ihr ausgezogen? Täglich war ich bei euch im Tempel und lehrte. Aber es geschieht, damit die Schriften erfüllt werden.",
+          "Da verlassen ihn alle und fliehen. Ein junger Mann, nur mit einem Leinentuch bekleidet, folgt ihm; als man ihn packt, flieht er nackt."
+        ],
+        "captions_de": [
+          "Kuss → Festnahme: Judas küsst Jesus als Zeichen (Lippen bei Judas); darauf ergreift die Menge Jesus (Bogen von der Menge zu Jesus, Hand und Kette).",
+          "Antwort: Jesus: Ich war täglich im Tempel – so erfüllen sich die Schriften (Tempel, Schriftrolle).",
+          "Flucht: Die Jünger wenden sich ab und fliehen (Pfeil); Jesus bleibt allein zurück."
+        ],
+        "interpretation_note_de": "Den Schwerthieb gegen den Knecht des Hohepriesters ([[MRK.14.47]]) und den nackt fliehenden jungen Mann ([[MRK.14.51-MRK.14.52]]) zeigt das Bild nicht (keine Gewalt, keine Nacktheit). Die Schriftrolle steht für «die Schriften».",
+        "basis": [
+          {
+            "record": "TU-MRK-014-043-052",
+            "field": "summary",
+            "fingerprint": "9c41187f691d8239"
+          },
+          {
+            "record": "TRANS-MRK-014-001-072-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.14.43-MRK.14.46",
+            "fingerprint": "19eeacac158a58ec"
+          },
+          {
+            "record": "TRANS-MRK-014-001-072-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.14.47-MRK.14.49",
+            "fingerprint": "4a2b5f0fd433132f"
+          },
+          {
+            "record": "TRANS-MRK-014-001-072-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.14.50-MRK.14.52",
+            "fingerprint": "b7a533f28c85d5c4"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

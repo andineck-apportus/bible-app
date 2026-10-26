@@ -11,93 +11,136 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MRK.13.32-MRK.13.33",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF"
-      ],
+      "reference": "MRK.13.32-MRK.13.35",
+      "figures": [],
       "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-ZEICHEN-STUNDE",
-            "FIG-ZEICHEN-FRAGEN",
-            "FIG-GOTT"
-          ]
+      "speech": [],
+      "action_de": "«Von jenem Tag aber oder der Stunde weiss niemand, auch nicht die Engel im Himmel, auch nicht der Sohn, nur der Vater.» Darum: «Seht euch vor, bleibt wach!» – ihr wisst nicht, ob der Herr des Hauses am Abend, um Mitternacht, beim Hahnenschrei oder am frühen Morgen kommt.",
+      "keywords": {
+        "de": "Seht euch vor, bleibt wach!",
+        "gsw": "Passed uf, bliibed wach!"
+      },
+      "diagram": {
+        "visual": "grid",
+        "span": 2,
+        "cols": 4,
+        "speaker": "FIG-JESUS",
+        "title": {
+          "de": "Von jenem Tag aber oder der Stunde weiss niemand, auch nicht die Engel im Himmel, auch nicht der Sohn, nur der Vater.",
+          "gsw": "Vo dem Tag aber oder dere Stund weiss niemer öppis, au nöd d Ängel im Himmel, au nöd de Sohn, nu de Vatter."
         },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-ZEICHEN-WACHEN"
-          ]
-        }
-      ],
-      "action_de": "Tag und Stunde weiss niemand, nicht die Engel, nicht der Sohn, nur der Vater. Seht euch vor, bleibt wach!",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-ZWOELF": "pensive",
-          "FIG-JESUS": "earnest"
-        },
-        "x": {
-          "FIG-JESUS": 50
-        }
+        "cells": [
+          {
+            "a": {
+              "de": "am Abend",
+              "gsw": "am Aabig"
+            },
+            "icons": [
+              "FIG-ZEICHEN-ABEND"
+            ]
+          },
+          {
+            "a": {
+              "de": "oder um Mitternacht",
+              "gsw": "oder z Mitternacht"
+            },
+            "icons": [
+              "FIG-ZEICHEN-NACHT"
+            ]
+          },
+          {
+            "a": {
+              "de": "oder beim Hahnenschrei",
+              "gsw": "oder wänn de Güggel chräit"
+            },
+            "icons": [
+              "FIG-OBJ-HAHN"
+            ]
+          },
+          {
+            "a": {
+              "de": "oder am frühen Morgen",
+              "gsw": "oder am Morge früe"
+            },
+            "icons": [
+              "FIG-ZEICHEN-MORGEN"
+            ]
+          }
+        ]
       }
     },
     {
       "n": 2,
       "reference": "MRK.13.34-MRK.13.37",
       "figures": [
+        "FIG-ROLLE-MENSCH",
         "FIG-ROLLE-DIENER"
       ],
       "objects": [
-        "FIG-ORT-HAUS",
-        "FIG-OBJ-HAHN"
+        "FIG-ORT-HAUS"
       ],
       "signs": [
-        "FIG-ZEICHEN-NACHT",
+        "FIG-ZEICHEN-WEG",
         "FIG-ZEICHEN-WACHEN"
       ],
-      "speech": [],
-      "action_de": "Wie der Türhüter eines verreisten Hausherrn soll jeder wachen; der Herr kann am Abend, um Mitternacht, beim Hahnenschrei oder am Morgen kommen. Was ich euch sage, sage ich allen: Wacht!",
+      "speech": [
+        {
+          "from": "FIG-ROLLE-MENSCH",
+          "to": "FIG-ROLLE-DIENER",
+          "icons": [
+            "FIG-ZEICHEN-WACHEN",
+            "FIG-OBJ-TUER"
+          ]
+        }
+      ],
+      "action_de": "Es ist wie bei einem Menschen, der verreist: Er gibt seinen Knechten die Arbeit und befiehlt dem Türhüter zu wachen; wacht also, denn ihr wisst nicht, wann der Herr des Hauses kommt.",
+      "keywords": {
+        "de": "Was ich aber euch sage, das sage ich allen: Wacht!",
+        "gsw": "Was ich aber eu säg, das säg ich allne: Bliibed wach!"
+      },
       "stage": {
+        "pose": {
+          "FIG-ROLLE-MENSCH": "away"
+        },
         "at": {
+          "FIG-ZEICHEN-WEG": "FIG-ROLLE-MENSCH",
           "FIG-ZEICHEN-WACHEN": "FIG-ROLLE-DIENER"
         },
-        "back_side": "left",
-        "mood": {
-          "FIG-ROLLE-DIENER": "calm"
-        },
+        "back_side": "right",
         "before": true,
+        "night": true,
+        "mood": {
+          "FIG-ROLLE-MENSCH": "calm",
+          "FIG-ROLLE-DIENER": "earnest"
+        },
         "x": {
-          "FIG-ROLLE-DIENER": 58
+          "FIG-ROLLE-MENSCH": 34,
+          "FIG-ROLLE-DIENER": 104
         }
       }
     }
   ],
   "actions_de": [
-    "Tag und Stunde weiss niemand, nicht die Engel, nicht der Sohn, nur der Vater. Seht euch vor, bleibt wach!",
-    "Wie der Türhüter eines verreisten Hausherrn soll jeder wachen; der Herr kann am Abend, um Mitternacht, beim Hahnenschrei oder am Morgen kommen. Was ich euch sage, sage ich allen: Wacht!"
+    "«Von jenem Tag aber oder der Stunde weiss niemand, auch nicht die Engel im Himmel, auch nicht der Sohn, nur der Vater.» Darum: «Seht euch vor, bleibt wach!» – ihr wisst nicht, ob der Herr des Hauses am Abend, um Mitternacht, beim Hahnenschrei oder am frühen Morgen kommt.",
+    "Es ist wie bei einem Menschen, der verreist: Er gibt seinen Knechten die Arbeit und befiehlt dem Türhüter zu wachen; wacht also, denn ihr wisst nicht, wann der Herr des Hauses kommt."
   ],
   "captions_de": [
-    "Wann? Die Stunde kennt nur der Vater (Sanduhr, Fragezeichen, Strahlenkranz) – darum wach bleiben (Augen mit Mondsichel).",
-    "Gleichnis: Der Türhüter wacht nachts vor dem Haus (Mond, Augen mit Mondsichel, Hahn = Hahnenschrei)."
+    "Niemand weiss die Stunde (Raster, Bild Jesus, Blase «Von jenem Tag … nur der Vater.»): die vier Nachtwachen: am Abend (Abend) – um Mitternacht (Nacht) – beim Hahnenschrei (Hahn) – am frühen Morgen (Morgen).",
+    "Der Türhüter (Gleichnis): Der Herr des Hauses geht weg (Weg); der Türhüter steht in der Nacht wach an der Tür (wachen, Nacht)."
   ],
-  "interpretation_note_de": "Das zweite Feld zeigt das Gleichnis ([[MRK.13.34-MRK.13.36]]); der Diener steht für den Türhüter, der Hahn für die Nachtwache «Hahnenschrei».",
+  "interpretation_note_de": "Zwei Felder ([[MRK.13.32-MRK.13.37]]): der Grundsatz «niemand weiss … nur der Vater» mit den vier Nachtwachen, dann das Gleichnis vom Türhüter als eigene Szene. Die Knechte mit ihrer Arbeit sind nicht gezeichnet. «Der Sohn» und «der Vater» versteht das Bild als Jesus und Gott (Deutung; Gott als Strahlenkranz).",
   "basis": [
     {
       "record": "TU-MRK-013-032-037",
       "field": "summary",
-      "fingerprint": "6777906dd973a350"
+      "fingerprint": "8138ae31b3c9fcad"
     },
     {
       "record": "TRANS-MRK-013-001-037-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.13.32-MRK.13.33",
-      "fingerprint": "e04f8d88292b3103"
+      "reference": "MRK.13.32-MRK.13.35",
+      "fingerprint": "08066fd75f8a9fd2"
     },
     {
       "record": "TRANS-MRK-013-001-037-DE-WORKING",
@@ -107,7 +150,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -200,6 +243,255 @@
         "captions_de": [
           "Wann? Die Stunde kennt nur der Vater (Sanduhr, Fragezeichen, Strahlenkranz) – darum wach bleiben (Auge).",
           "Gleichnis: Der Türhüter wacht nachts vor dem Haus (Mond, Auge, Hahn = Hahnenschrei)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MRK-013-032-037",
+            "field": "summary",
+            "fingerprint": "6777906dd973a350"
+          },
+          {
+            "record": "TRANS-MRK-013-001-037-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.13.32-MRK.13.33",
+            "fingerprint": "e04f8d88292b3103"
+          },
+          {
+            "record": "TRANS-MRK-013-001-037-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.13.34-MRK.13.37",
+            "fingerprint": "f6f7b98ab867b24c"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.13.32-MRK.13.33",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-STUNDE",
+                  "FIG-ZEICHEN-FRAGEN",
+                  "FIG-GOTT"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-WACHEN"
+                ]
+              }
+            ],
+            "action_de": "Tag und Stunde weiss niemand, nicht die Engel, nicht der Sohn, nur der Vater. Seht euch vor, bleibt wach!",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "pensive",
+                "FIG-JESUS": "earnest"
+              },
+              "x": {
+                "FIG-JESUS": 50
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.13.34-MRK.13.37",
+            "figures": [
+              "FIG-ROLLE-DIENER"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS",
+              "FIG-OBJ-HAHN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NACHT",
+              "FIG-ZEICHEN-WACHEN"
+            ],
+            "speech": [],
+            "action_de": "Wie der Türhüter eines verreisten Hausherrn soll jeder wachen; der Herr kann am Abend, um Mitternacht, beim Hahnenschrei oder am Morgen kommen. Was ich euch sage, sage ich allen: Wacht!",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-WACHEN": "FIG-ROLLE-DIENER"
+              },
+              "back_side": "left",
+              "mood": {
+                "FIG-ROLLE-DIENER": "calm"
+              },
+              "before": true,
+              "x": {
+                "FIG-ROLLE-DIENER": 58
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Tag und Stunde weiss niemand, nicht die Engel, nicht der Sohn, nur der Vater. Seht euch vor, bleibt wach!",
+          "Wie der Türhüter eines verreisten Hausherrn soll jeder wachen; der Herr kann am Abend, um Mitternacht, beim Hahnenschrei oder am Morgen kommen. Was ich euch sage, sage ich allen: Wacht!"
+        ],
+        "captions_de": [
+          "Wann? Die Stunde kennt nur der Vater (Sanduhr, Fragezeichen, Strahlenkranz) – darum wach bleiben (Augen mit Mondsichel).",
+          "Gleichnis: Der Türhüter wacht nachts vor dem Haus (Mond, Augen mit Mondsichel, Hahn = Hahnenschrei)."
+        ],
+        "interpretation_note_de": "Das zweite Feld zeigt das Gleichnis ([[MRK.13.34-MRK.13.36]]); der Diener steht für den Türhüter, der Hahn für die Nachtwache «Hahnenschrei».",
+        "basis": [
+          {
+            "record": "TU-MRK-013-032-037",
+            "field": "summary",
+            "fingerprint": "8138ae31b3c9fcad"
+          },
+          {
+            "record": "TRANS-MRK-013-001-037-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.13.32-MRK.13.33",
+            "fingerprint": "e04f8d88292b3103"
+          },
+          {
+            "record": "TRANS-MRK-013-001-037-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.13.34-MRK.13.37",
+            "fingerprint": "f6f7b98ab867b24c"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.13.32-MRK.13.35",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "«Von jenem Tag aber oder der Stunde weiss niemand, auch nicht die Engel im Himmel, auch nicht der Sohn, nur der Vater.» Darum: «Seht euch vor, bleibt wach!» – ihr wisst nicht, ob der Herr des Hauses am Abend, um Mitternacht, beim Hahnenschrei oder am frühen Morgen kommt.",
+            "keywords": {
+              "de": "Seht euch vor, bleibt wach!",
+              "gsw": "Passed uf, bliibed wach!"
+            },
+            "diagram": {
+              "visual": "grid",
+              "span": 2,
+              "cols": 4,
+              "speaker": "FIG-JESUS",
+              "title": {
+                "de": "Von jenem Tag aber oder der Stunde weiss niemand, auch nicht die Engel im Himmel, auch nicht der Sohn, nur der Vater.",
+                "gsw": "Vo dem Tag aber oder dere Stund weiss niemer öppis, au nöd d Ängel im Himmel, au nöd de Sohn, nu de Vatter."
+              },
+              "cells": [
+                {
+                  "a": {
+                    "de": "am Abend",
+                    "gsw": "am Aabig"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-ABEND"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "oder um Mitternacht",
+                    "gsw": "oder z Mitternacht"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-NACHT"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "oder beim Hahnenschrei",
+                    "gsw": "oder wänn de Güggel chräit"
+                  },
+                  "icons": [
+                    "FIG-OBJ-HAHN"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "oder am frühen Morgen",
+                    "gsw": "oder am Morge früe"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-MORGEN"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.13.34-MRK.13.37",
+            "figures": [
+              "FIG-ROLLE-GUTSHERR",
+              "FIG-ROLLE-DIENER"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-WEG",
+              "FIG-ZEICHEN-WACHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-GUTSHERR",
+                "to": "FIG-ROLLE-DIENER",
+                "icons": [
+                  "FIG-ZEICHEN-WACHEN",
+                  "FIG-OBJ-TUER"
+                ]
+              }
+            ],
+            "action_de": "Es ist wie bei einem Menschen, der verreist: Er gibt seinen Knechten die Arbeit und befiehlt dem Türhüter zu wachen; wacht also, denn ihr wisst nicht, wann der Herr des Hauses kommt.",
+            "keywords": {
+              "de": "Was ich aber euch sage, das sage ich allen: Wacht!",
+              "gsw": "Was ich aber eu säg, das säg ich allne: Bliibed wach!"
+            },
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-GUTSHERR": "away"
+              },
+              "at": {
+                "FIG-ZEICHEN-WEG": "FIG-ROLLE-GUTSHERR",
+                "FIG-ZEICHEN-WACHEN": "FIG-ROLLE-DIENER"
+              },
+              "back_side": "right",
+              "before": true,
+              "night": true,
+              "mood": {
+                "FIG-ROLLE-GUTSHERR": "calm",
+                "FIG-ROLLE-DIENER": "earnest"
+              },
+              "x": {
+                "FIG-ROLLE-GUTSHERR": 34,
+                "FIG-ROLLE-DIENER": 104
+              }
+            }
+          }
         ]
       }
     }

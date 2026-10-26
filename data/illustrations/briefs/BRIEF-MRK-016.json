@@ -11,11 +11,10 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MRK.16.1-MRK.16.8",
+      "reference": "MRK.16.1-MRK.16.7",
       "figures": [
-        "FIG-ROLLE-JUNGER-MANN-WEISS",
+        "FIG-ROLLE-JUENGLING",
         "FIG-MARIA-MAGDALA",
-        "FIG-MARIA-MUTTER-JAKOBUS",
         "FIG-SALOME"
       ],
       "objects": [
@@ -24,39 +23,95 @@
       "signs": [],
       "speech": [
         {
-          "from": "FIG-ROLLE-JUNGER-MANN-WEISS",
+          "from": "FIG-ROLLE-JUENGLING",
           "to": "FIG-MARIA-MAGDALA",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-AUFERSTEHUNG"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Er ist auferweckt worden, er ist nicht hier.",
+            "gsw": "Er isch uferweckt worde, er isch nöd da."
+          }
         }
       ],
-      "action_de": "Am ersten Tag der Woche finden drei Frauen das Grab offen; ein junger Mann sagt ihnen, Jesus sei auferweckt. Sie fliehen und sagen aus Furcht niemandem etwas.",
+      "action_de": "Im offenen Grab sagt ein junger Mann in weissem Gewand zu den Frauen: «Er ist auferweckt worden, er ist nicht hier», und trägt ihnen auf, den Jüngern und Petrus zu sagen: «Er geht euch voraus nach Galiläa.»",
+      "keywords": {
+        "de": "Er geht euch voraus nach Galiläa",
+        "gsw": "Er gaat eu voruus nach Galiläa"
+      },
+      "names": {
+        "FIG-MARIA-MAGDALA": {
+          "de": "Maria aus Magdala",
+          "gsw": "Maria vo Magdala"
+        }
+      },
       "stage": {
-        "mood": {
-          "FIG-MARIA-MAGDALA": "surprised",
-          "FIG-MARIA-MUTTER-JAKOBUS": "surprised",
-          "FIG-SALOME": "surprised",
-          "FIG-ROLLE-JUNGER-MANN-WEISS": "calm"
+        "pose": {
+          "FIG-ROLLE-JUENGLING": "sit"
         },
         "back_side": "left",
         "before": true,
+        "mood": {
+          "FIG-ROLLE-JUENGLING": "calm",
+          "FIG-MARIA-MAGDALA": "fear",
+          "FIG-SALOME": "fear"
+        },
         "x": {
-          "FIG-ROLLE-JUNGER-MANN-WEISS": 92,
-          "FIG-MARIA-MAGDALA": 122,
-          "FIG-MARIA-MUTTER-JAKOBUS": 148,
-          "FIG-SALOME": 172
+          "FIG-ROLLE-JUENGLING": 40,
+          "FIG-MARIA-MAGDALA": 104,
+          "FIG-SALOME": 156
         }
       }
     },
     {
       "n": 2,
+      "reference": "MRK.16.8",
+      "figures": [
+        "FIG-MARIA-MAGDALA",
+        "FIG-MARIA-MUTTER-JAKOBUS",
+        "FIG-SALOME"
+      ],
+      "objects": [
+        "FIG-ORT-GRAB"
+      ],
+      "signs": [
+        "FIG-ZEICHEN-FURCHT",
+        "FIG-ZEICHEN-FLIEHEN"
+      ],
+      "speech": [],
+      "action_de": "Die Frauen gehen hinaus und fliehen vom Grab, denn Zittern und Entsetzen hat sie ergriffen; und sie sagen niemandem etwas, denn sie fürchten sich.",
+      "keywords": {
+        "de": "sie fürchteten sich nämlich",
+        "gsw": "si händ sich nämli gfürchtet"
+      },
+      "stage": {
+        "pose": {
+          "FIG-MARIA-MAGDALA": "away",
+          "FIG-MARIA-MUTTER-JAKOBUS": "away",
+          "FIG-SALOME": "away"
+        },
+        "at": {
+          "FIG-ZEICHEN-FURCHT": "FIG-MARIA-MAGDALA",
+          "FIG-ZEICHEN-FLIEHEN": "FIG-SALOME"
+        },
+        "back_side": "left",
+        "mood": {
+          "FIG-MARIA-MAGDALA": "fear",
+          "FIG-MARIA-MUTTER-JAKOBUS": "fear",
+          "FIG-SALOME": "fear"
+        },
+        "x": {
+          "FIG-MARIA-MAGDALA": 90,
+          "FIG-MARIA-MUTTER-JAKOBUS": 126,
+          "FIG-SALOME": 162
+        }
+      }
+    },
+    {
+      "n": 3,
       "reference": "MRK.16.9-MRK.16.20",
       "figures": [
         "FIG-GOTT",
         "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF"
+        "FIG-GRUPPE-JUENGER"
       ],
       "objects": [
         "FIG-ORT-WOLKE"
@@ -65,7 +120,11 @@
         "FIG-ZEICHEN-AUSBREITEN"
       ],
       "speech": [],
-      "action_de": "Im längeren Schluss erscheint der Auferstandene, sendet die Elf in alle Welt und wird in den Himmel aufgenommen.",
+      "action_de": "Der Auferstandene sagt zu den Elf: «Geht hin in die ganze Welt und verkündigt das Evangelium der ganzen Schöpfung.» Dann wird der Herr Jesus in den Himmel aufgenommen und setzt sich zur Rechten Gottes; die Jünger ziehen aus und verkündigen überall.",
+      "keywords": {
+        "de": "Jene aber zogen aus und verkündigten überall",
+        "gsw": "Die aber sind uszoge und händ überall verchündet"
+      },
       "stage": {
         "in": {
           "FIG-JESUS": "FIG-ORT-WOLKE"
@@ -80,39 +139,38 @@
         "big_side": "left",
         "god_side": "left",
         "at": {
-          "FIG-ZEICHEN-AUSBREITEN": "FIG-GRUPPE-ZWOELF"
+          "FIG-ZEICHEN-AUSBREITEN": "FIG-GRUPPE-JUENGER"
         },
         "mood": {
-          "FIG-GRUPPE-ZWOELF": "surprised"
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-JUENGER": "surprised"
         },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-AUSBREITEN",
-            "act"
-          ]
-        ]
+        "x": {
+          "FIG-GRUPPE-JUENGER": 140
+        }
       }
     }
   ],
   "actions_de": [
-    "Am ersten Tag der Woche finden drei Frauen das Grab offen; ein junger Mann sagt ihnen, Jesus sei auferweckt. Sie fliehen und sagen aus Furcht niemandem etwas.",
-    "Im längeren Schluss erscheint der Auferstandene, sendet die Elf in alle Welt und wird in den Himmel aufgenommen."
+    "Im offenen Grab sagt ein junger Mann in weissem Gewand zu den Frauen: «Er ist auferweckt worden, er ist nicht hier», und trägt ihnen auf, den Jüngern und Petrus zu sagen: «Er geht euch voraus nach Galiläa.»",
+    "Die Frauen gehen hinaus und fliehen vom Grab, denn Zittern und Entsetzen hat sie ergriffen; und sie sagen niemandem etwas, denn sie fürchten sich.",
+    "Der Auferstandene sagt zu den Elf: «Geht hin in die ganze Welt und verkündigt das Evangelium der ganzen Schöpfung.» Dann wird der Herr Jesus in den Himmel aufgenommen und setzt sich zur Rechten Gottes; die Jünger ziehen aus und verkündigen überall."
   ],
   "captions_de": [
-    "Leeres Grab: Der junge Mann in Weiss: Jesus ist auferweckt (Jesus, offenes Grab mit Pfeil); die Frauen erschrecken.",
-    "Aufnahme → Sendung: Jesus in der Wolke unter dem Strahlenkranz, bei Gott; die Jünger gehen in alle Richtungen (Pfeile), der Herr wirkt mit (Bogen von Jesus zu ihren Pfeilen)."
+    "Er ist nicht hier: Der junge Mann im weissen Gewand sitzt im offenen Grab (Grab) und sagt zu den erschrockenen Frauen: «Er ist auferweckt worden, er ist nicht hier.» (auferstehen, Jesus).",
+    "Furcht: Die drei Frauen laufen vom offenen Grab weg (fliehen); sie fürchten sich (Furcht) und schweigen.",
+    "Aufnahme und Aussendung (späterer Schluss): Jesus wird in den Himmel aufgenommen, zum Strahlenkranz (Gott); die Jünger ziehen aus in die Welt (ausbreiten); das Band nennt ihr Verkündigen (Jünger, verkündigen)."
   ],
-  "interpretation_note_de": "Feld 2 zeigt den längeren Markusschluss ([[MRK.16.9-MRK.16.20]]), der in der Textforschung weithin als spätere Ergänzung gilt; die ältesten vollständigen Handschriften enden mit [[MRK.16.8]].",
+  "interpretation_note_de": "Drei Comic-Szenen für zwei Abschnitte ([[MRK.16.1-MRK.16.20]]): Feld 1 die Botschaft im offenen Grab, Feld 2 das ursprüngliche, offene Ende mit Flucht und Furcht ([[MRK.16.8]]), Feld 3 der spätere Schluss mit Sendung und Aufnahme in den Himmel. [[MRK.16.9-MRK.16.20]] ist der längere, spätere Schluss: In den ältesten vollständig erhaltenen Handschriften endet das Evangelium mit [[MRK.16.8]]; die Arbeitsübersetzung setzt ihn in Doppelklammern ⟦ ⟧, die App zeigt die Lesarten. Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-MRK-016",
       "field": "summary",
-      "fingerprint": "0a0adfff7374401f"
+      "fingerprint": "047305627b5c3ead"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -288,6 +346,286 @@
         "captions_de": [
           "Leeres Grab: Der junge Mann in Weiss: Jesus ist auferweckt (Jesus, offenes Grab mit Pfeil); die Frauen erschrecken.",
           "Sendung und Aufnahme: Jesus in der Wolke unter dem Strahlenkranz, bei Gott; die Jünger gehen in alle Richtungen (Pfeile)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-MRK-016",
+            "field": "summary",
+            "fingerprint": "0a0adfff7374401f"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.16.1-MRK.16.8",
+            "figures": [
+              "FIG-ROLLE-JUNGER-MANN-WEISS",
+              "FIG-MARIA-MAGDALA",
+              "FIG-MARIA-MUTTER-JAKOBUS",
+              "FIG-SALOME"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-JUNGER-MANN-WEISS",
+                "to": "FIG-MARIA-MAGDALA",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-AUFERSTEHUNG"
+                ]
+              }
+            ],
+            "action_de": "Am ersten Tag der Woche finden drei Frauen das Grab offen; ein junger Mann sagt ihnen, Jesus sei auferweckt. Sie fliehen und sagen aus Furcht niemandem etwas.",
+            "stage": {
+              "mood": {
+                "FIG-MARIA-MAGDALA": "surprised",
+                "FIG-MARIA-MUTTER-JAKOBUS": "surprised",
+                "FIG-SALOME": "surprised",
+                "FIG-ROLLE-JUNGER-MANN-WEISS": "calm"
+              },
+              "back_side": "left",
+              "before": true,
+              "x": {
+                "FIG-ROLLE-JUNGER-MANN-WEISS": 92,
+                "FIG-MARIA-MAGDALA": 122,
+                "FIG-MARIA-MUTTER-JAKOBUS": 148,
+                "FIG-SALOME": 172
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.16.9-MRK.16.20",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-ORT-WOLKE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-AUSBREITEN"
+            ],
+            "speech": [],
+            "action_de": "Im längeren Schluss erscheint der Auferstandene, sendet die Elf in alle Welt und wird in den Himmel aufgenommen.",
+            "stage": {
+              "in": {
+                "FIG-JESUS": "FIG-ORT-WOLKE"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.5,
+                  0.3
+                ]
+              },
+              "big_y": 34,
+              "big_side": "left",
+              "god_side": "left",
+              "at": {
+                "FIG-ZEICHEN-AUSBREITEN": "FIG-GRUPPE-ZWOELF"
+              },
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "surprised"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-AUSBREITEN",
+                  "act"
+                ]
+              ]
+            }
+          }
+        ],
+        "actions_de": [
+          "Am ersten Tag der Woche finden drei Frauen das Grab offen; ein junger Mann sagt ihnen, Jesus sei auferweckt. Sie fliehen und sagen aus Furcht niemandem etwas.",
+          "Im längeren Schluss erscheint der Auferstandene, sendet die Elf in alle Welt und wird in den Himmel aufgenommen."
+        ],
+        "captions_de": [
+          "Leeres Grab: Der junge Mann in Weiss: Jesus ist auferweckt (Jesus, offenes Grab mit Pfeil); die Frauen erschrecken.",
+          "Aufnahme → Sendung: Jesus in der Wolke unter dem Strahlenkranz, bei Gott; die Jünger gehen in alle Richtungen (Pfeile), der Herr wirkt mit (Bogen von Jesus zu ihren Pfeilen)."
+        ],
+        "interpretation_note_de": "Feld 2 zeigt den längeren Markusschluss ([[MRK.16.9-MRK.16.20]]), der in der Textforschung weithin als spätere Ergänzung gilt; die ältesten vollständigen Handschriften enden mit [[MRK.16.8]].",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.16.1-MRK.16.7",
+            "figures": [
+              "FIG-ROLLE-JUENGLING",
+              "FIG-MARIA-MAGDALA",
+              "FIG-SALOME"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-JUENGLING",
+                "to": "FIG-MARIA-MAGDALA",
+                "icons": [],
+                "word": {
+                  "de": "Er ist auferweckt worden, er ist nicht hier.",
+                  "gsw": "Er isch uferweckt worde, er isch nöd da."
+                }
+              }
+            ],
+            "action_de": "Im offenen Grab sagt ein junger Mann in weissem Gewand zu den Frauen: «Er ist auferweckt worden, er ist nicht hier», und trägt ihnen auf, den Jüngern und Petrus zu sagen: «Er geht euch voraus nach Galiläa.»",
+            "keywords": {
+              "de": "Er geht euch voraus nach Galiläa",
+              "gsw": "Er gaat eu voruus nach Galiläa"
+            },
+            "names": {
+              "FIG-MARIA-MAGDALA": {
+                "de": "Maria aus Magdala",
+                "gsw": "Maria vo Magdala"
+              }
+            },
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-JUENGLING": "sit"
+              },
+              "back_side": "left",
+              "before": true,
+              "mood": {
+                "FIG-ROLLE-JUENGLING": "calm",
+                "FIG-MARIA-MAGDALA": "fear",
+                "FIG-SALOME": "fear"
+              },
+              "x": {
+                "FIG-ROLLE-JUENGLING": 40,
+                "FIG-MARIA-MAGDALA": 104,
+                "FIG-SALOME": 156
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.16.8",
+            "figures": [
+              "FIG-MARIA-MAGDALA",
+              "FIG-MARIA-MUTTER-JAKOBUS",
+              "FIG-SALOME"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FURCHT",
+              "FIG-ZEICHEN-FLIEHEN"
+            ],
+            "speech": [],
+            "action_de": "Die Frauen gehen hinaus und fliehen vom Grab, denn Zittern und Entsetzen hat sie ergriffen; und sie sagen niemandem etwas, denn sie fürchten sich.",
+            "keywords": {
+              "de": "sie fürchteten sich nämlich",
+              "gsw": "si händ sich nämli gfürchtet"
+            },
+            "stage": {
+              "pose": {
+                "FIG-MARIA-MAGDALA": "away",
+                "FIG-MARIA-MUTTER-JAKOBUS": "away",
+                "FIG-SALOME": "away"
+              },
+              "at": {
+                "FIG-ZEICHEN-FURCHT": "FIG-MARIA-MAGDALA",
+                "FIG-ZEICHEN-FLIEHEN": "FIG-SALOME"
+              },
+              "back_side": "left",
+              "mood": {
+                "FIG-MARIA-MAGDALA": "fear",
+                "FIG-MARIA-MUTTER-JAKOBUS": "fear",
+                "FIG-SALOME": "fear"
+              },
+              "x": {
+                "FIG-MARIA-MAGDALA": 90,
+                "FIG-MARIA-MUTTER-JAKOBUS": 126,
+                "FIG-SALOME": 162
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.16.9-MRK.16.20",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-ORT-WOLKE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-AUSBREITEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [],
+                "word": {
+                  "de": "Geht hin in die ganze Welt und verkündigt das Evangelium der ganzen Schöpfung.",
+                  "gsw": "Gönd i di ganz Wält und verchünded s Evangelium de ganze Schöpfig."
+                }
+              }
+            ],
+            "action_de": "Der Auferstandene sagt zu den Elf: «Geht hin in die ganze Welt und verkündigt das Evangelium der ganzen Schöpfung.» Dann wird der Herr Jesus in den Himmel aufgenommen und setzt sich zur Rechten Gottes; die Jünger ziehen aus und verkündigen überall.",
+            "keywords": {
+              "de": "Jene aber zogen aus und verkündigten überall",
+              "gsw": "Die aber sind uszoge und händ überall verchündet"
+            },
+            "stage": {
+              "in": {
+                "FIG-JESUS": "FIG-ORT-WOLKE"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.5,
+                  0.3
+                ]
+              },
+              "big_y": 34,
+              "big_side": "left",
+              "god_side": "left",
+              "at": {
+                "FIG-ZEICHEN-AUSBREITEN": "FIG-GRUPPE-JUENGER"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "surprised"
+              },
+              "x": {
+                "FIG-GRUPPE-JUENGER": 140
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Er ist nicht hier: Der junge Mann im weissen Gewand sitzt im offenen Grab (Grab) und sagt zu den erschrockenen Frauen: «Er ist auferweckt worden, er ist nicht hier.» (auferstehen, Jesus).",
+          "Furcht: Die drei Frauen laufen vom offenen Grab weg (fliehen); sie fürchten sich (Furcht) und schweigen.",
+          "Sendung und Aufnahme (späterer Schluss): Jesus wird in den Himmel aufgenommen, zum Strahlenkranz (Gott); er sagt den Jüngern: «Geht hin in die ganze Welt und verkündigt das Evangelium der ganzen Schöpfung.» (Welt, verkündigen); sie ziehen aus (ausbreiten)."
         ]
       }
     }

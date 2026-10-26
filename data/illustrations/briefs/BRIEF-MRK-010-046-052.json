@@ -19,42 +19,56 @@
       ],
       "objects": [],
       "signs": [
+        "FIG-ZEICHEN-BLIND",
         "FIG-ZEICHEN-SCHWEIGEN"
       ],
       "speech": [
         {
           "from": "FIG-BARTIMAEUS",
           "to": "FIG-JESUS",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-ERBARMEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Sohn Davids, Jesus, erbarme dich meiner!",
+            "gsw": "Sohn vom David, Jesus, häb Erbarme mit mir!"
+          }
         }
       ],
-      "action_de": "Beim Hinausgehen aus Jericho sitzt der blinde Bettler Bartimäus am Weg und ruft: Sohn Davids, Jesus, erbarme dich meiner! Viele fahren ihn an, er solle schweigen; er schreit noch lauter.",
+      "action_de": "Beim Hinausgehen aus Jericho sitzt der blinde Bettler Bartimäus am Weg und schreit: «Sohn Davids, Jesus, erbarme dich meiner!» Viele fahren ihn an, er solle schweigen; er aber schreit noch viel mehr.",
+      "keywords": {
+        "de": "Er aber schrie noch viel mehr",
+        "gsw": "Er aber hät no vil meh gschroue"
+      },
+      "names": {
+        "FIG-BARTIMAEUS": {
+          "de": "Bartimäus",
+          "gsw": "Bartimäus"
+        }
+      },
       "stage": {
         "pose": {
           "FIG-BARTIMAEUS": "sit"
         },
-        "mood": {
-          "FIG-BARTIMAEUS": "worried",
-          "FIG-GRUPPE-MENGE": "calm"
+        "at": {
+          "FIG-ZEICHEN-BLIND": "FIG-BARTIMAEUS"
         },
         "beside": {
           "FIG-ZEICHEN-SCHWEIGEN": "FIG-GRUPPE-MENGE"
         },
-        "arrows": [
-          [
-            "FIG-BARTIMAEUS",
-            "FIG-JESUS",
-            "act"
-          ]
-        ]
+        "mood": {
+          "FIG-GRUPPE-MENGE": "earnest",
+          "FIG-BARTIMAEUS": "worried",
+          "FIG-JESUS": "calm"
+        },
+        "x": {
+          "FIG-GRUPPE-MENGE": 30,
+          "FIG-BARTIMAEUS": 96,
+          "FIG-JESUS": 158
+        }
       }
     },
     {
       "n": 2,
-      "reference": "MRK.10.49-MRK.10.50",
+      "reference": "MRK.10.49-MRK.10.51",
       "figures": [
         "FIG-BARTIMAEUS",
         "FIG-JESUS"
@@ -63,12 +77,32 @@
         "FIG-OBJ-MANTEL"
       ],
       "signs": [],
-      "speech": [],
-      "action_de": "Jesus bleibt stehen und lässt ihn rufen. Bartimäus wirft seinen Mantel ab, springt auf und kommt zu Jesus.",
-      "stage": {
-        "mood": {
-          "FIG-BARTIMAEUS": "surprised"
+      "speech": [
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-BARTIMAEUS",
+          "icons": [],
+          "word": {
+            "de": "Was willst du, dass ich dir tue?",
+            "gsw": "Was wottsch, dass ich dir mache?"
+          }
         },
+        {
+          "from": "FIG-BARTIMAEUS",
+          "to": "FIG-JESUS",
+          "icons": [],
+          "word": {
+            "de": "Rabbuni, dass ich wieder sehen kann!",
+            "gsw": "Rabbuni, dass ich wider gseh!"
+          }
+        }
+      ],
+      "action_de": "Jesus bleibt stehen: «Ruft ihn!» – «Nur Mut, steh auf, er ruft dich!» Bartimäus wirft seinen Mantel ab, springt auf und kommt zu Jesus. «Was willst du, dass ich dir tue?» – «Rabbuni, dass ich wieder sehen kann!»",
+      "keywords": {
+        "de": "Er aber warf seinen Mantel ab",
+        "gsw": "Er aber hät sin Mantel abgworfe"
+      },
+      "stage": {
         "arrows": [
           [
             "FIG-BARTIMAEUS",
@@ -79,104 +113,86 @@
         "floor_x": {
           "FIG-OBJ-MANTEL": 18
         },
+        "mood": {
+          "FIG-BARTIMAEUS": "surprised",
+          "FIG-JESUS": "calm"
+        },
         "x": {
           "FIG-BARTIMAEUS": 66,
-          "FIG-JESUS": 145
-        },
-        "wear": {
-          "FIG-BARTIMAEUS": "#C9BFAA"
+          "FIG-JESUS": 146
         }
       }
     },
     {
       "n": 3,
-      "reference": "MRK.10.51",
-      "figures": [
-        "FIG-BARTIMAEUS",
-        "FIG-JESUS"
-      ],
-      "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-BARTIMAEUS",
-          "icons": [
-            "FIG-ZEICHEN-FRAGEN"
-          ]
-        },
-        {
-          "from": "FIG-BARTIMAEUS",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-ZEICHEN-SEHEN"
-          ]
-        }
-      ],
-      "action_de": "Jesus fragt: Was willst du, dass ich dir tue? Der Blinde sagt: Rabbuni, dass ich wieder sehen kann!",
-      "stage": {
-        "mood": {
-          "FIG-BARTIMAEUS": "earnest"
-        }
-      }
-    },
-    {
-      "n": 4,
       "reference": "MRK.10.52",
       "figures": [
-        "FIG-BARTIMAEUS",
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-BARTIMAEUS"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-ORT-WEG"
+      ],
       "signs": [
-        "FIG-ZEICHEN-FREUDE",
+        "FIG-ZEICHEN-SEHEN",
         "FIG-ZEICHEN-NACHFOLGEN"
       ],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-BARTIMAEUS",
-          "icons": [
-            "FIG-ZEICHEN-GLAUBEN",
-            "FIG-ZEICHEN-HEILEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Geh, dein Glaube hat dich gerettet!",
+            "gsw": "Gang, din Glaube hät dich grettet!"
+          }
         }
       ],
-      "action_de": "Jesus sagt: Geh, dein Glaube hat dich gerettet! Sogleich sieht er wieder und folgt ihm auf dem Weg.",
+      "action_de": "Jesus sagt zu Bartimäus: «Geh, dein Glaube hat dich gerettet!» Und sogleich sieht er wieder und folgt ihm nach auf dem Weg.",
+      "keywords": {
+        "de": "und er folgte ihm nach auf dem Weg",
+        "gsw": "und er isch ihm nachegfolget uf em Wäg"
+      },
+      "names": {
+        "FIG-BARTIMAEUS": {
+          "de": "Bartimäus",
+          "gsw": "Bartimäus"
+        }
+      },
       "stage": {
-        "signs_who": {
-          "FIG-ZEICHEN-FREUDE": [
-            "FIG-BARTIMAEUS"
-          ]
-        },
         "at": {
+          "FIG-ZEICHEN-SEHEN": "FIG-BARTIMAEUS"
+        },
+        "beside": {
           "FIG-ZEICHEN-NACHFOLGEN": "FIG-BARTIMAEUS"
         },
         "mood": {
-          "FIG-BARTIMAEUS": "delight",
-          "FIG-JESUS": "smile"
+          "FIG-JESUS": "smile",
+          "FIG-BARTIMAEUS": "calm"
+        },
+        "x": {
+          "FIG-JESUS": 60,
+          "FIG-BARTIMAEUS": 130
         }
       }
     }
   ],
   "actions_de": [
-    "Beim Hinausgehen aus Jericho sitzt der blinde Bettler Bartimäus am Weg und ruft: Sohn Davids, Jesus, erbarme dich meiner! Viele fahren ihn an, er solle schweigen; er schreit noch lauter.",
-    "Jesus bleibt stehen und lässt ihn rufen. Bartimäus wirft seinen Mantel ab, springt auf und kommt zu Jesus.",
-    "Jesus fragt: Was willst du, dass ich dir tue? Der Blinde sagt: Rabbuni, dass ich wieder sehen kann!",
-    "Jesus sagt: Geh, dein Glaube hat dich gerettet! Sogleich sieht er wieder und folgt ihm auf dem Weg."
+    "Beim Hinausgehen aus Jericho sitzt der blinde Bettler Bartimäus am Weg und schreit: «Sohn Davids, Jesus, erbarme dich meiner!» Viele fahren ihn an, er solle schweigen; er aber schreit noch viel mehr.",
+    "Jesus bleibt stehen: «Ruft ihn!» – «Nur Mut, steh auf, er ruft dich!» Bartimäus wirft seinen Mantel ab, springt auf und kommt zu Jesus. «Was willst du, dass ich dir tue?» – «Rabbuni, dass ich wieder sehen kann!»",
+    "Jesus sagt zu Bartimäus: «Geh, dein Glaube hat dich gerettet!» Und sogleich sieht er wieder und folgt ihm nach auf dem Weg."
   ],
   "captions_de": [
-    "Der Ruf: Der blinde Bartimäus sitzt am Weg und ruft Jesus um Erbarmen an (Pfeil zu Jesus, Jesus, Herz in Händen); viele sagen ihm, er solle schweigen (Gesicht mit Finger vor dem Mund bei der Menge).",
-    "Er springt auf: Gerufen wirft Bartimäus seinen Mantel ab (brauner Mantel liegt hinter ihm am Boden) und kommt zu Jesus (gestrichelter Weg).",
-    "Was willst du? Jesus fragt (Fragezeichen); Bartimäus: dass ich wieder sehen kann (Augen).",
-    "Glaube → Rettung: Jesus sagt: Dein Glaube hat dich gerettet (Herz mit Licht, Pfeil nach oben); Bartimäus sieht und folgt ihm (Freude, zwei gehende Personen)."
+    "Der Ruf: Bartimäus (Name), blind (blind), sitzt am Weg und ruft: «Sohn Davids, Jesus, erbarme dich meiner!»; die Menge will ihn zum Schweigen bringen (schweigen).",
+    "Der Mantel: Bartimäus wirft den Mantel ab (Mantel) und kommt zu Jesus (gestrichelter Pfeil); Jesus: «Was willst du, dass ich dir tue?» – «Rabbuni, dass ich wieder sehen kann!» (sehen).",
+    "Er sieht: Jesus zu Bartimäus (Name): «Geh, dein Glaube hat dich gerettet!»; der Geheilte sieht wieder (sehen) und folgt ihm nach auf dem Weg (nachfolgen)."
   ],
-  "interpretation_note_de": "Bartimäus nennt Jesus «Sohn Davids» ([[MRK.10.47-MRK.10.48]]); das Bild zeigt nur den Ruf um Erbarmen. Dass die Leute ihn rufen und ermutigen ([[MRK.10.49]]), ist nicht gezeichnet. Wie er sehend wird, zeigt das Bild nicht als Vorgang, nur das Ergebnis.",
+  "interpretation_note_de": "Drei Felder nach «Ruf – Abwehr – Ruf Jesu – Frage – Heilung – Nachfolge» ([[MRK.10.46-MRK.10.52]]): Dass die Menge ihn zum Schweigen bringen will, ist indirekte Rede und steht als Zeichen. Der Text nennt keine Gefühle des Geheilten; das Bild zeigt ihn ruhig.",
   "basis": [
     {
       "record": "TU-MRK-010-046-052",
       "field": "summary",
-      "fingerprint": "8727bb14d71b62ef"
+      "fingerprint": "c4abdfdb361b90ac"
     },
     {
       "record": "TRANS-MRK-010-001-052-DE-WORKING",
@@ -187,14 +203,8 @@
     {
       "record": "TRANS-MRK-010-001-052-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.10.49-MRK.10.50",
-      "fingerprint": "9dffaa7509f50268"
-    },
-    {
-      "record": "TRANS-MRK-010-001-052-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MRK.10.51",
-      "fingerprint": "f4163573cc2f7398"
+      "reference": "MRK.10.49-MRK.10.51",
+      "fingerprint": "d8341aeee9949b29"
     },
     {
       "record": "TRANS-MRK-010-001-052-DE-WORKING",
@@ -204,7 +214,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -868,6 +878,208 @@
           "Was willst du? Jesus fragt (Fragezeichen); Bartimäus: dass ich wieder sehen kann (Auge).",
           "Glaube → Rettung: Jesus sagt: Dein Glaube hat dich gerettet (Herz mit Licht, Pfeil nach oben); Bartimäus sieht und folgt ihm (Freude, Fussspuren)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.10.46-MRK.10.48",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-BARTIMAEUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-SCHWEIGEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-BARTIMAEUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-ERBARMEN"
+                ]
+              }
+            ],
+            "action_de": "Beim Hinausgehen aus Jericho sitzt der blinde Bettler Bartimäus am Weg und ruft: Sohn Davids, Jesus, erbarme dich meiner! Viele fahren ihn an, er solle schweigen; er schreit noch lauter.",
+            "stage": {
+              "pose": {
+                "FIG-BARTIMAEUS": "sit"
+              },
+              "mood": {
+                "FIG-BARTIMAEUS": "worried",
+                "FIG-GRUPPE-MENGE": "calm"
+              },
+              "beside": {
+                "FIG-ZEICHEN-SCHWEIGEN": "FIG-GRUPPE-MENGE"
+              },
+              "arrows": [
+                [
+                  "FIG-BARTIMAEUS",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.10.49-MRK.10.50",
+            "figures": [
+              "FIG-BARTIMAEUS",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-MANTEL"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Jesus bleibt stehen und lässt ihn rufen. Bartimäus wirft seinen Mantel ab, springt auf und kommt zu Jesus.",
+            "stage": {
+              "mood": {
+                "FIG-BARTIMAEUS": "surprised"
+              },
+              "arrows": [
+                [
+                  "FIG-BARTIMAEUS",
+                  "FIG-JESUS",
+                  "go"
+                ]
+              ],
+              "floor_x": {
+                "FIG-OBJ-MANTEL": 18
+              },
+              "x": {
+                "FIG-BARTIMAEUS": 66,
+                "FIG-JESUS": 145
+              },
+              "wear": {
+                "FIG-BARTIMAEUS": "#C9BFAA"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.10.51",
+            "figures": [
+              "FIG-BARTIMAEUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-BARTIMAEUS",
+                "icons": [
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-BARTIMAEUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-SEHEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus fragt: Was willst du, dass ich dir tue? Der Blinde sagt: Rabbuni, dass ich wieder sehen kann!",
+            "stage": {
+              "mood": {
+                "FIG-BARTIMAEUS": "earnest"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.10.52",
+            "figures": [
+              "FIG-BARTIMAEUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE",
+              "FIG-ZEICHEN-NACHFOLGEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-BARTIMAEUS",
+                "icons": [
+                  "FIG-ZEICHEN-GLAUBEN",
+                  "FIG-ZEICHEN-HEILEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: Geh, dein Glaube hat dich gerettet! Sogleich sieht er wieder und folgt ihm auf dem Weg.",
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-BARTIMAEUS"
+                ]
+              },
+              "at": {
+                "FIG-ZEICHEN-NACHFOLGEN": "FIG-BARTIMAEUS"
+              },
+              "mood": {
+                "FIG-BARTIMAEUS": "delight",
+                "FIG-JESUS": "smile"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Beim Hinausgehen aus Jericho sitzt der blinde Bettler Bartimäus am Weg und ruft: Sohn Davids, Jesus, erbarme dich meiner! Viele fahren ihn an, er solle schweigen; er schreit noch lauter.",
+          "Jesus bleibt stehen und lässt ihn rufen. Bartimäus wirft seinen Mantel ab, springt auf und kommt zu Jesus.",
+          "Jesus fragt: Was willst du, dass ich dir tue? Der Blinde sagt: Rabbuni, dass ich wieder sehen kann!",
+          "Jesus sagt: Geh, dein Glaube hat dich gerettet! Sogleich sieht er wieder und folgt ihm auf dem Weg."
+        ],
+        "captions_de": [
+          "Der Ruf: Der blinde Bartimäus sitzt am Weg und ruft Jesus um Erbarmen an (Pfeil zu Jesus, Jesus, Herz in Händen); viele sagen ihm, er solle schweigen (Gesicht mit Finger vor dem Mund bei der Menge).",
+          "Er springt auf: Gerufen wirft Bartimäus seinen Mantel ab (brauner Mantel liegt hinter ihm am Boden) und kommt zu Jesus (gestrichelter Weg).",
+          "Was willst du? Jesus fragt (Fragezeichen); Bartimäus: dass ich wieder sehen kann (Augen).",
+          "Glaube → Rettung: Jesus sagt: Dein Glaube hat dich gerettet (Herz mit Licht, Pfeil nach oben); Bartimäus sieht und folgt ihm (Freude, zwei gehende Personen)."
+        ],
+        "interpretation_note_de": "Bartimäus nennt Jesus «Sohn Davids» ([[MRK.10.47-MRK.10.48]]); das Bild zeigt nur den Ruf um Erbarmen. Dass die Leute ihn rufen und ermutigen ([[MRK.10.49]]), ist nicht gezeichnet. Wie er sehend wird, zeigt das Bild nicht als Vorgang, nur das Ergebnis.",
+        "basis": [
+          {
+            "record": "TU-MRK-010-046-052",
+            "field": "summary",
+            "fingerprint": "8727bb14d71b62ef"
+          },
+          {
+            "record": "TRANS-MRK-010-001-052-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.10.46-MRK.10.48",
+            "fingerprint": "569056d93eafa6bd"
+          },
+          {
+            "record": "TRANS-MRK-010-001-052-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.10.49-MRK.10.50",
+            "fingerprint": "9dffaa7509f50268"
+          },
+          {
+            "record": "TRANS-MRK-010-001-052-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.10.51",
+            "fingerprint": "f4163573cc2f7398"
+          },
+          {
+            "record": "TRANS-MRK-010-001-052-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.10.52",
+            "fingerprint": "fe62fabc0bba8ef6"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

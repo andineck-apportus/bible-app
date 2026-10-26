@@ -25,7 +25,11 @@
         "FIG-ZEICHEN-FLIEHEN"
       ],
       "speech": [],
-      "action_de": "Im Tempel treibt Jesus die Verkäufer und Käufer hinaus und stösst die Tische der Geldwechsler und die Sitze der Taubenverkäufer um; er lässt niemanden ein Gerät durch den Tempel tragen.",
+      "action_de": "Im Tempel treibt Jesus die Verkäufer und Käufer hinaus und stösst die Tische der Geldwechsler und die Sitze der Taubenverkäufer um.",
+      "keywords": {
+        "de": "Und er ging in den Tempel hinein",
+        "gsw": "Und er isch in Tämpel ine gange"
+      },
       "stage": {
         "pose": {
           "FIG-ROLLE-HAENDLER": "away"
@@ -58,97 +62,123 @@
     {
       "n": 2,
       "reference": "MRK.11.17",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-MENGE"
-      ],
-      "objects": [
-        "FIG-ORT-TEMPEL"
-      ],
+      "figures": [],
+      "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-ORT-TEMPEL",
-            "FIG-ZEICHEN-BETEN",
-            "FIG-GRUPPE-VOELKER"
-          ]
+      "speech": [],
+      "action_de": "Jesus lehrt: «Steht nicht geschrieben: ‹Mein Haus soll ein Haus des Gebets heissen für alle Völker›? Ihr aber habt es zu einer Räuberhöhle gemacht!»",
+      "keywords": {
+        "de": "Mein Haus soll ein Haus des Gebets heissen für alle Völker",
+        "gsw": "Mis Huus söll es Huus zum Bätte heisse für alli Völker"
+      },
+      "diagram": {
+        "visual": "columns",
+        "span": 2,
+        "speaker": "FIG-JESUS",
+        "title": {
+          "de": "Steht nicht geschrieben?",
+          "gsw": "Staat nöd gschribe?"
         },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-ORT-RAEUBERHOEHLE"
+        "head": [
+          {
+            "de": "geschrieben",
+            "gsw": "gschribe"
+          },
+          {
+            "de": "ihr",
+            "gsw": "ir"
+          }
+        ],
+        "rows": [
+          [
+            {
+              "a": {
+                "de": "Mein Haus soll ein Haus des Gebets heissen für alle Völker.",
+                "gsw": "Mis Huus söll es Huus zum Bätte heisse für alli Völker."
+              },
+              "icons": [
+                "FIG-ORT-TEMPEL",
+                "FIG-ZEICHEN-BETEN"
+              ],
+              "tone": "new"
+            },
+            {
+              "a": {
+                "de": "Ihr aber habt es zu einer Räuberhöhle gemacht!",
+                "gsw": "Ir aber händ e Röiberhöli drus gmacht!"
+              },
+              "icons": [
+                "FIG-ORT-RAEUBERHOEHLE"
+              ],
+              "tone": "old"
+            }
           ]
-        }
-      ],
-      "action_de": "Jesus lehrt: Steht nicht geschrieben: Mein Haus soll ein Haus des Gebets heissen für alle Völker? Ihr aber habt eine Räuberhöhle daraus gemacht!",
-      "stage": {
-        "mood": {
-          "FIG-JESUS": "earnest",
-          "FIG-GRUPPE-MENGE": "surprised"
-        },
-        "before": true,
-        "x": {
-          "FIG-JESUS": 40,
-          "FIG-GRUPPE-MENGE": 125
-        }
+        ]
       }
     },
     {
       "n": 3,
-      "reference": "MRK.11.18",
+      "reference": "MRK.11.18-MRK.11.19",
       "figures": [
-        "FIG-ROLLE-HOHEPRIESTER",
-        "FIG-ROLLE-SCHRIFTGELEHRTER",
+        "FIG-GRUPPE-HOHEPRIESTER",
+        "FIG-GRUPPE-SCHRIFTGELEHRTE",
         "FIG-GRUPPE-MENGE"
       ],
       "objects": [],
       "signs": [
-        "FIG-ZEICHEN-FURCHT"
+        "FIG-ZEICHEN-FURCHT",
+        "FIG-ZEICHEN-LEHREN"
       ],
       "speech": [
         {
-          "from": "FIG-ROLLE-HOHEPRIESTER",
-          "to": "FIG-ROLLE-SCHRIFTGELEHRTER",
+          "from": "FIG-GRUPPE-HOHEPRIESTER",
+          "to": "FIG-GRUPPE-SCHRIFTGELEHRTE",
           "icons": [
             "FIG-JESUS",
             "FIG-ZEICHEN-TOD"
-          ]
+          ],
+          "think": true
         }
       ],
-      "action_de": "Die Hohepriester und Schriftgelehrten hören es und suchen, wie sie ihn umbringen könnten; denn sie fürchten ihn, weil die ganze Menge von seiner Lehre überwältigt ist.",
+      "action_de": "Die Hohepriester und Schriftgelehrten hören es und suchen, wie sie ihn umbringen könnten; denn sie fürchten ihn, weil die ganze Menge von seiner Lehre überwältigt ist. Am Abend gehen sie aus der Stadt hinaus.",
+      "keywords": {
+        "de": "suchten, wie sie ihn umbringen könnten",
+        "gsw": "händ gsuecht, wie si en chönnted umbringe"
+      },
       "stage": {
-        "split": 2,
+        "at": {
+          "FIG-ZEICHEN-FURCHT": "FIG-GRUPPE-SCHRIFTGELEHRTE",
+          "FIG-ZEICHEN-LEHREN": "FIG-GRUPPE-MENGE"
+        },
         "mood": {
-          "FIG-ROLLE-HOHEPRIESTER": "worried",
-          "FIG-ROLLE-SCHRIFTGELEHRTER": "worried",
+          "FIG-GRUPPE-HOHEPRIESTER": "worried",
+          "FIG-GRUPPE-SCHRIFTGELEHRTE": "worried",
           "FIG-GRUPPE-MENGE": "surprised"
         },
-        "beside": {
-          "FIG-ZEICHEN-FURCHT": "FIG-ROLLE-SCHRIFTGELEHRTER"
+        "x": {
+          "FIG-GRUPPE-HOHEPRIESTER": 30,
+          "FIG-GRUPPE-SCHRIFTGELEHRTE": 80,
+          "FIG-GRUPPE-MENGE": 150
         }
       }
     }
   ],
   "actions_de": [
-    "Im Tempel treibt Jesus die Verkäufer und Käufer hinaus und stösst die Tische der Geldwechsler und die Sitze der Taubenverkäufer um; er lässt niemanden ein Gerät durch den Tempel tragen.",
-    "Jesus lehrt: Steht nicht geschrieben: Mein Haus soll ein Haus des Gebets heissen für alle Völker? Ihr aber habt eine Räuberhöhle daraus gemacht!",
-    "Die Hohepriester und Schriftgelehrten hören es und suchen, wie sie ihn umbringen könnten; denn sie fürchten ihn, weil die ganze Menge von seiner Lehre überwältigt ist."
+    "Im Tempel treibt Jesus die Verkäufer und Käufer hinaus und stösst die Tische der Geldwechsler und die Sitze der Taubenverkäufer um.",
+    "Jesus lehrt: «Steht nicht geschrieben: ‹Mein Haus soll ein Haus des Gebets heissen für alle Völker›? Ihr aber habt es zu einer Räuberhöhle gemacht!»",
+    "Die Hohepriester und Schriftgelehrten hören es und suchen, wie sie ihn umbringen könnten; denn sie fürchten ihn, weil die ganze Menge von seiner Lehre überwältigt ist. Am Abend gehen sie aus der Stadt hinaus."
   ],
   "captions_de": [
-    "Hinausgetrieben: Jesus treibt die Händler hinaus (Bogen zum Händler, Pfeil weg); umgestossener Wechslertisch mit Münzen, eine Taube der Taubenverkäufer.",
-    "Haus des Gebets: Mein Haus soll ein Haus des Gebets für alle Völker sein (Tempel, betende Hände, Menschen); zweite Blase: ihr habt eine Räuberhöhle daraus gemacht (Höhle mit Beute).",
-    "Der Beschluss: Hohepriester und Schriftgelehrte suchen, wie sie Jesus umbringen können (Jesus, Totenkopf); sie fürchten ihn (erschrockenes Gesicht), denn die Menge ist von seiner Lehre überwältigt (gestrichelte Linie)."
+    "Im Tempel: Jesus treibt die Händler hinaus (Pfeil); umgestossener Tisch, Tauben; die Händler fliehen (fliehen).",
+    "Geschrieben ↔ ihr (Spalten, Bild Jesus): «Mein Haus soll ein Haus des Gebets heissen für alle Völker» (Tempel, beten) ↔ «Ihr aber habt es zu einer Räuberhöhle gemacht!» (Räuberhöhle).",
+    "Sie suchen einen Weg: Hohepriester und Schriftgelehrte überlegen (Gedankenwolke: Jesus, Tod) und fürchten ihn (Furcht); rechts die Menge, überwältigt von seiner Lehre (lehren)."
   ],
-  "interpretation_note_de": "Der Händler steht für Verkäufer und Käufer; dass Jesus jemanden schlägt, sagt der Text nicht. Das Schriftwort verbindet [[ISA.56.7]] und [[JER.7.11]]; die Räuberhöhle ist ein Bildwort. Dass die Hohepriester Jesus «fürchten» ([[MRK.11.18]]), zeigt der besorgte Ausdruck; die gestrichelte Linie trennt sie von der Menge. Der Abend ([[MRK.11.19]]) ist nicht gezeichnet.",
+  "interpretation_note_de": "Drei Felder nach «Handlung – Lehre – Reaktion» ([[MRK.11.15-MRK.11.19]]): die Austreibung der Händler, der Gegensatz Haus des Gebets ↔ Räuberhöhle und die Reaktion. Die Hohepriester und Schriftgelehrten «suchen», wie sie ihn umbringen könnten – eine Absicht, kein Beschluss; darum eine Gedankenwolke. Der Text nennt keine Gewalt gegen Menschen.",
   "basis": [
     {
       "record": "TU-MRK-011-015-019",
       "field": "summary",
-      "fingerprint": "0592e0765e9cedca"
+      "fingerprint": "fa279ccbe3041c3a"
     },
     {
       "record": "TRANS-MRK-011-001-033-DE-WORKING",
@@ -165,12 +195,12 @@
     {
       "record": "TRANS-MRK-011-001-033-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.11.18",
-      "fingerprint": "0bb2fed4fac03085"
+      "reference": "MRK.11.18-MRK.11.19",
+      "fingerprint": "13c8511d473d5562"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -430,6 +460,205 @@
           "Haus des Gebets: Mein Haus soll ein Haus des Gebets für alle Völker sein (Tempel, betende Hände, Menschen); zweite Blase: ihr habt eine Räuberhöhle daraus gemacht (Höhle mit Beute).",
           "Der Beschluss: Hohepriester und Schriftgelehrte suchen, wie sie Jesus umbringen können (Jesus, Grab); sie fürchten ihn (Schweisstropfen), denn die Menge ist von seiner Lehre überwältigt (gestrichelte Linie)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MRK-011-015-019",
+            "field": "summary",
+            "fingerprint": "0592e0765e9cedca"
+          },
+          {
+            "record": "TRANS-MRK-011-001-033-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.11.15-MRK.11.16",
+            "fingerprint": "0585e6fddeffb656"
+          },
+          {
+            "record": "TRANS-MRK-011-001-033-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.11.17",
+            "fingerprint": "3c3b7d394a01c135"
+          },
+          {
+            "record": "TRANS-MRK-011-001-033-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.11.18",
+            "fingerprint": "0bb2fed4fac03085"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.11.15-MRK.11.16",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-HAENDLER"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL",
+              "FIG-OBJ-TISCH-UMGESTOSSEN",
+              "FIG-OBJ-TAUBE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FLIEHEN"
+            ],
+            "speech": [],
+            "action_de": "Im Tempel treibt Jesus die Verkäufer und Käufer hinaus und stösst die Tische der Geldwechsler und die Sitze der Taubenverkäufer um; er lässt niemanden ein Gerät durch den Tempel tragen.",
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-HAENDLER": "away"
+              },
+              "mood": {
+                "FIG-ROLLE-HAENDLER": "surprised",
+                "FIG-JESUS": "earnest"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-HAENDLER",
+                  "act"
+                ]
+              ],
+              "x": {
+                "FIG-JESUS": 28,
+                "FIG-ROLLE-HAENDLER": 72
+              },
+              "floor_x": {
+                "FIG-OBJ-TISCH-UMGESTOSSEN": 104,
+                "FIG-OBJ-TAUBE": 146
+              },
+              "beside": {
+                "FIG-ZEICHEN-FLIEHEN": "FIG-ROLLE-HAENDLER"
+              },
+              "before": true
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.11.17",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ORT-TEMPEL",
+                  "FIG-ZEICHEN-BETEN",
+                  "FIG-GRUPPE-VOELKER"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ORT-RAEUBERHOEHLE"
+                ]
+              }
+            ],
+            "action_de": "Jesus lehrt: Steht nicht geschrieben: Mein Haus soll ein Haus des Gebets heissen für alle Völker? Ihr aber habt eine Räuberhöhle daraus gemacht!",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-MENGE": "surprised"
+              },
+              "before": true,
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-GRUPPE-MENGE": 125
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.11.18",
+            "figures": [
+              "FIG-ROLLE-HOHEPRIESTER",
+              "FIG-ROLLE-SCHRIFTGELEHRTER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-FURCHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-HOHEPRIESTER",
+                "to": "FIG-ROLLE-SCHRIFTGELEHRTER",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-TOD"
+                ]
+              }
+            ],
+            "action_de": "Die Hohepriester und Schriftgelehrten hören es und suchen, wie sie ihn umbringen könnten; denn sie fürchten ihn, weil die ganze Menge von seiner Lehre überwältigt ist.",
+            "stage": {
+              "split": 2,
+              "mood": {
+                "FIG-ROLLE-HOHEPRIESTER": "worried",
+                "FIG-ROLLE-SCHRIFTGELEHRTER": "worried",
+                "FIG-GRUPPE-MENGE": "surprised"
+              },
+              "beside": {
+                "FIG-ZEICHEN-FURCHT": "FIG-ROLLE-SCHRIFTGELEHRTER"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Im Tempel treibt Jesus die Verkäufer und Käufer hinaus und stösst die Tische der Geldwechsler und die Sitze der Taubenverkäufer um; er lässt niemanden ein Gerät durch den Tempel tragen.",
+          "Jesus lehrt: Steht nicht geschrieben: Mein Haus soll ein Haus des Gebets heissen für alle Völker? Ihr aber habt eine Räuberhöhle daraus gemacht!",
+          "Die Hohepriester und Schriftgelehrten hören es und suchen, wie sie ihn umbringen könnten; denn sie fürchten ihn, weil die ganze Menge von seiner Lehre überwältigt ist."
+        ],
+        "captions_de": [
+          "Hinausgetrieben: Jesus treibt die Händler hinaus (Bogen zum Händler, Pfeil weg); umgestossener Wechslertisch mit Münzen, eine Taube der Taubenverkäufer.",
+          "Haus des Gebets: Mein Haus soll ein Haus des Gebets für alle Völker sein (Tempel, betende Hände, Menschen); zweite Blase: ihr habt eine Räuberhöhle daraus gemacht (Höhle mit Beute).",
+          "Der Beschluss: Hohepriester und Schriftgelehrte suchen, wie sie Jesus umbringen können (Jesus, Totenkopf); sie fürchten ihn (erschrockenes Gesicht), denn die Menge ist von seiner Lehre überwältigt (gestrichelte Linie)."
+        ],
+        "interpretation_note_de": "Der Händler steht für Verkäufer und Käufer; dass Jesus jemanden schlägt, sagt der Text nicht. Das Schriftwort verbindet [[ISA.56.7]] und [[JER.7.11]]; die Räuberhöhle ist ein Bildwort. Dass die Hohepriester Jesus «fürchten» ([[MRK.11.18]]), zeigt der besorgte Ausdruck; die gestrichelte Linie trennt sie von der Menge. Der Abend ([[MRK.11.19]]) ist nicht gezeichnet.",
+        "basis": [
+          {
+            "record": "TU-MRK-011-015-019",
+            "field": "summary",
+            "fingerprint": "fa279ccbe3041c3a"
+          },
+          {
+            "record": "TRANS-MRK-011-001-033-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.11.15-MRK.11.16",
+            "fingerprint": "0585e6fddeffb656"
+          },
+          {
+            "record": "TRANS-MRK-011-001-033-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.11.17",
+            "fingerprint": "3c3b7d394a01c135"
+          },
+          {
+            "record": "TRANS-MRK-011-001-033-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.11.18",
+            "fingerprint": "0bb2fed4fac03085"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

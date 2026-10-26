@@ -14,55 +14,77 @@
       "reference": "MRK.14.1-MRK.14.11",
       "figures": [
         "FIG-ROLLE-FRAU",
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-JUDAS-ISKARIOT",
+        "FIG-GRUPPE-HOHEPRIESTER"
       ],
       "objects": [
-        "FIG-ORT-HAUS",
-        "FIG-OBJ-SALBGEFAESS"
+        "FIG-OBJ-SALBGEFAESS",
+        "FIG-OBJ-MUENZEN"
       ],
       "signs": [
-        "FIG-ZEICHEN-SALBUNG"
+        "FIG-ZEICHEN-SALBUNG",
+        "FIG-ZEICHEN-AUSLIEFERN"
       ],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-ROLLE-FRAU",
-          "icons": [
-            "FIG-OBJ-SALBGEFAESS",
-            "FIG-ZEICHEN-TOD"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Sie hat meinen Leib im Voraus gesalbt für das Begräbnis.",
+            "gsw": "Si hät min Liib zum voruus gsalbet für d Beerdigung."
+          }
         }
       ],
-      "action_de": "In Betanien salbt eine Frau Jesus mit kostbarem Öl; er sagt, sie habe ihn für das Begräbnis gesalbt.",
+      "action_de": "In Betanien giesst eine Frau Jesus kostbares Salböl über den Kopf; einige empören sich über die Verschwendung, doch Jesus sagt: «Sie hat meinen Leib im Voraus gesalbt für das Begräbnis.» Judas Iskariot geht zu den Hohepriestern, um ihn auszuliefern; sie versprechen ihm Geld.",
+      "keywords": {
+        "de": "Ein gutes Werk hat sie an mir getan",
+        "gsw": "Si hät es guets Wärch a mir taa"
+      },
+      "names": {
+        "FIG-JUDAS-ISKARIOT": {
+          "de": "Judas",
+          "gsw": "Judas"
+        }
+      },
       "stage": {
+        "split": 2,
+        "trenner": true,
         "hold": {
-          "FIG-ROLLE-FRAU": "FIG-OBJ-SALBGEFAESS"
+          "FIG-ROLLE-FRAU": "FIG-OBJ-SALBGEFAESS",
+          "FIG-GRUPPE-HOHEPRIESTER": "FIG-OBJ-MUENZEN"
         },
-        "arrows": [
-          [
-            "FIG-ROLLE-FRAU",
-            "FIG-JESUS",
-            "act"
-          ]
-        ],
         "at": {
-          "FIG-ZEICHEN-SALBUNG": "FIG-JESUS"
+          "FIG-ZEICHEN-SALBUNG": "FIG-JESUS",
+          "FIG-ZEICHEN-AUSLIEFERN": "FIG-JUDAS-ISKARIOT"
+        },
+        "pose": {
+          "FIG-JESUS": "sit"
         },
         "mood": {
-          "FIG-ROLLE-FRAU": "calm"
+          "FIG-ROLLE-FRAU": "calm",
+          "FIG-JESUS": "calm",
+          "FIG-JUDAS-ISKARIOT": "earnest",
+          "FIG-GRUPPE-HOHEPRIESTER": "smile"
+        },
+        "x": {
+          "FIG-ROLLE-FRAU": 22,
+          "FIG-JESUS": 62,
+          "FIG-JUDAS-ISKARIOT": 118,
+          "FIG-GRUPPE-HOHEPRIESTER": 164
         }
       }
     },
     {
       "n": 2,
-      "reference": "MRK.14.12-MRK.14.31",
+      "reference": "MRK.14.12-MRK.14.25",
       "figures": [
         "FIG-JESUS",
         "FIG-GRUPPE-ZWOELF"
       ],
       "objects": [
-        "FIG-OBJ-BROT",
-        "FIG-OBJ-BECHER-VOLL"
+        "FIG-OBJ-BROT"
       ],
       "signs": [],
       "speech": [
@@ -70,120 +92,175 @@
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-ZWOELF",
           "icons": [
-            "FIG-OBJ-BROT",
-            "FIG-OBJ-BECHER-VOLL",
-            "FIG-JESUS",
-            "FIG-ZEICHEN-VIELE"
-          ]
+            "FIG-OBJ-BROT"
+          ],
+          "word": {
+            "de": "Nehmt! Das ist mein Leib.",
+            "gsw": "Nämed! Das isch min Liib."
+          }
         }
       ],
-      "action_de": "Beim Passamahl deutet Jesus Brot und Becher auf seinen Leib und sein Blut des Bundes für viele.",
+      "action_de": "Während sie essen, nimmt Jesus Brot, spricht den Lobpreis, bricht es und gibt es ihnen: «Nehmt! Das ist mein Leib.»",
+      "keywords": {
+        "de": "Das ist mein Blut des Bundes",
+        "gsw": "Das isch mis Bluet vom Bund"
+      },
       "stage": {
         "hold": {
           "FIG-JESUS": "FIG-OBJ-BROT"
         },
+        "arrows": [
+          [
+            "FIG-JESUS",
+            "FIG-GRUPPE-ZWOELF",
+            "act"
+          ]
+        ],
+        "night": true,
         "mood": {
+          "FIG-JESUS": "calm",
           "FIG-GRUPPE-ZWOELF": "pensive"
+        },
+        "x": {
+          "FIG-JESUS": 50,
+          "FIG-GRUPPE-ZWOELF": 136
         }
       }
     },
     {
       "n": 3,
-      "reference": "MRK.14.32-MRK.14.52",
+      "reference": "MRK.14.26-MRK.14.52",
       "figures": [
-        "FIG-GRUPPE-MENGE",
-        "FIG-JESUS",
-        "FIG-JUDAS-ISKARIOT"
+        "FIG-GOTT",
+        "FIG-GRUPPE-JUENGER",
+        "FIG-JESUS"
       ],
       "objects": [
         "FIG-ORT-GARTEN"
       ],
       "signs": [
-        "FIG-ZEICHEN-KUSS",
-        "FIG-ZEICHEN-AUSLIEFERN"
+        "FIG-ZEICHEN-SCHLAFEN"
       ],
-      "speech": [],
-      "action_de": "In Getsemani betet Jesus, die Jünger schlafen; Judas liefert ihn mit einem Kuss aus.",
+      "speech": [
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-GOTT",
+          "icons": [],
+          "word": {
+            "de": "Doch nicht, was ich will, sondern was du willst.",
+            "gsw": "Aber nöd, was ich wott, sondern was du wottsch."
+          }
+        }
+      ],
+      "action_de": "In Getsemani fällt Jesus auf die Erde und betet: «Abba, Vater, alles ist dir möglich. Nimm diesen Becher von mir weg! Doch nicht, was ich will, sondern was du willst.» Petrus, Jakobus und Johannes schlafen.",
+      "keywords": {
+        "de": "Siehe, der mich ausliefert, ist nahe gekommen",
+        "gsw": "Lueg, dä, wo mich usliferet, isch nöch"
+      },
       "stage": {
-        "mood": {
-          "FIG-GRUPPE-MENGE": "earnest",
-          "FIG-JUDAS-ISKARIOT": "earnest",
-          "FIG-JESUS": "calm"
-        },
-        "x": {
-          "FIG-GRUPPE-MENGE": 40,
-          "FIG-JESUS": 104,
-          "FIG-JUDAS-ISKARIOT": 146
-        },
-        "back_side": "left",
-        "before": true,
-        "beside": {
-          "FIG-ZEICHEN-KUSS": "FIG-JUDAS-ISKARIOT"
+        "pose": {
+          "FIG-JESUS": "kneel"
         },
         "at": {
-          "FIG-ZEICHEN-AUSLIEFERN": "FIG-JESUS"
+          "FIG-ZEICHEN-SCHLAFEN": "FIG-GRUPPE-JUENGER"
         },
-        "arrows": [
-          [
-            "FIG-GRUPPE-MENGE",
-            "FIG-JESUS",
-            "act"
-          ]
-        ]
+        "god_side": "right",
+        "back_side": "left",
+        "before": true,
+        "night": true,
+        "mood": {
+          "FIG-JESUS": "pain",
+          "FIG-GRUPPE-JUENGER": "sleep"
+        },
+        "x": {
+          "FIG-GRUPPE-JUENGER": 40,
+          "FIG-JESUS": 128
+        }
       }
     },
     {
       "n": 4,
       "reference": "MRK.14.53-MRK.14.72",
       "figures": [
-        "FIG-ROLLE-MAGD",
+        "FIG-JESUS",
+        "FIG-ROLLE-HOHEPRIESTER",
         "FIG-PETRUS"
       ],
       "objects": [
-        "FIG-OBJ-FEUER",
         "FIG-OBJ-HAHN"
       ],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-TRAUER"
+      ],
       "speech": [
         {
-          "from": "FIG-PETRUS",
-          "to": "FIG-ROLLE-MAGD",
-          "icons": [
-            "FIG-ZEICHEN-VERLEUGNEN"
-          ]
+          "from": "FIG-JESUS",
+          "to": "FIG-ROLLE-HOHEPRIESTER",
+          "icons": [],
+          "word": {
+            "de": "Ich bin es.",
+            "gsw": "Ich bi s."
+          }
         }
       ],
-      "action_de": "Vor dem Hohen Rat bekennt Jesus, der Christus zu sein; im Hof verleugnet ihn Petrus dreimal.",
+      "action_de": "Der Hohepriester fragt: «Bist du der Christus, der Sohn des Hochgelobten?» Jesus antwortet: «Ich bin es, und ihr werdet den Menschensohn zur Rechten der Macht sitzen und mit den Wolken des Himmels kommen sehen.» Im Hof verleugnet Petrus ihn dreimal; ein Hahn kräht zum zweiten Mal, und Petrus weint.",
+      "keywords": {
+        "de": "Und er dachte daran und weinte",
+        "gsw": "Und er hät dra dänkt und hät briegget"
+      },
+      "names": {
+        "FIG-PETRUS": {
+          "de": "Petrus",
+          "gsw": "Petrus"
+        }
+      },
       "stage": {
+        "split": 2,
+        "trenner": true,
+        "signs_who": {
+          "FIG-ZEICHEN-TRAUER": [
+            "FIG-PETRUS"
+          ]
+        },
+        "night": true,
         "mood": {
-          "FIG-ROLLE-MAGD": "earnest",
-          "FIG-PETRUS": "worried"
+          "FIG-JESUS": "calm",
+          "FIG-ROLLE-HOHEPRIESTER": "angry",
+          "FIG-PETRUS": "pain"
+        },
+        "x": {
+          "FIG-JESUS": 24,
+          "FIG-ROLLE-HOHEPRIESTER": 72,
+          "FIG-PETRUS": 156
+        },
+        "floor_x": {
+          "FIG-OBJ-HAHN": 124
         }
       }
     }
   ],
   "actions_de": [
-    "In Betanien salbt eine Frau Jesus mit kostbarem Öl; er sagt, sie habe ihn für das Begräbnis gesalbt.",
-    "Beim Passamahl deutet Jesus Brot und Becher auf seinen Leib und sein Blut des Bundes für viele.",
-    "In Getsemani betet Jesus, die Jünger schlafen; Judas liefert ihn mit einem Kuss aus.",
-    "Vor dem Hohen Rat bekennt Jesus, der Christus zu sein; im Hof verleugnet ihn Petrus dreimal."
+    "In Betanien giesst eine Frau Jesus kostbares Salböl über den Kopf; einige empören sich über die Verschwendung, doch Jesus sagt: «Sie hat meinen Leib im Voraus gesalbt für das Begräbnis.» Judas Iskariot geht zu den Hohepriestern, um ihn auszuliefern; sie versprechen ihm Geld.",
+    "Während sie essen, nimmt Jesus Brot, spricht den Lobpreis, bricht es und gibt es ihnen: «Nehmt! Das ist mein Leib.»",
+    "In Getsemani fällt Jesus auf die Erde und betet: «Abba, Vater, alles ist dir möglich. Nimm diesen Becher von mir weg! Doch nicht, was ich will, sondern was du willst.» Petrus, Jakobus und Johannes schlafen.",
+    "Der Hohepriester fragt: «Bist du der Christus, der Sohn des Hochgelobten?» Jesus antwortet: «Ich bin es, und ihr werdet den Menschensohn zur Rechten der Macht sitzen und mit den Wolken des Himmels kommen sehen.» Im Hof verleugnet Petrus ihn dreimal; ein Hahn kräht zum zweiten Mal, und Petrus weint."
   ],
   "captions_de": [
-    "Salbung: Eine Frau salbt Jesus (Gefäss, Bogen; Ölhorn mit goldenem Tropfen) – für sein Begräbnis (Gefäss, Totenkopf).",
-    "Mahl: Brot und Becher = Jesus, für viele (Brot, Becher, Jesus, Menge).",
-    "Kuss → Festnahme: Judas küsst Jesus (Lippen); darauf ergreift die Menge ihn (Bogen, Hand und Kette).",
-    "Verleugnung: Am Feuer streitet Petrus ab, Jesus zu kennen (sprechender Kopf und Nein-Geste); der Hahn."
+    "Salbung und Auslieferung: links salbt die Frau Jesus (Salbgefäss, Salbung): «Sie hat meinen Leib im Voraus gesalbt für das Begräbnis.» (Grab); rechts hinter der Trennlinie geht Judas (Name) zu den Hohepriestern (ausliefern, Münzen: versprochenes Geld).",
+    "Das Brot: Jesus gibt den Zwölf das Brot (Brot, Pfeil): «Nehmt! Das ist mein Leib.» (Jesus, geben).",
+    "Getsemani: In der Nacht kniet Jesus im Garten und betet zu Gott (Strahlenkranz): «Doch nicht, was ich will, sondern was du willst.» (Wille Gottes); die Jünger schlafen (schlafen).",
+    "Bekenntnis und Verleugnung: links Jesus vor dem Hohepriester: «Ich bin es.» (Christus); rechts hinter der Trennlinie weint Petrus (Name), ein Hahn kräht (Hahn, Trauer)."
   ],
-  "interpretation_note_de": "Je ein Feld zu Salbung, Mahl, Getsemani und Verleugnung; Einzelheiten in den Abschnitten. Das Verhör vor dem Hohen Rat ([[MRK.14.53-MRK.14.65]]) ist nur im Abschnittsbild gezeigt.",
+  "interpretation_note_de": "Vier Comic-Szenen für acht Abschnitte ([[MRK.14.1-MRK.14.72]]): Feld 1 bündelt den Plan der Gegner, die Salbung und den Gang des Judas (getrennt durch eine Linie); Feld 2 bündelt die Vorbereitung, die Ankündigung des Verrats (Legende) und das Mahl mit Brot und Becher (Band); Feld 3 bündelt die Ankündigung am Ölberg, Getsemani und die Gefangennahme (Band: «der mich ausliefert, ist nahe gekommen»); Feld 4 bündelt das Verhör mit «Ich bin es» und die Verleugnung des Petrus (getrennt durch eine Linie). Gott ist als Strahlenkranz gezeichnet; die Passion würdig, ohne Ausmalen. Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-MRK-014",
       "field": "summary",
-      "fingerprint": "3a3f7f35484162d9"
+      "fingerprint": "07017cdeae98fcbc"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -515,6 +592,438 @@
           "Mahl: Brot und Becher = Jesus, für viele (Brot, Becher, Jesus, Menge).",
           "Kuss → Festnahme: Judas küsst Jesus (Lippen); darauf ergreift die Menge ihn (Bogen, gefesselte Hände).",
           "Verleugnung: Am Feuer streitet Petrus ab, Jesus zu kennen (durchgekreuzte Verbindung); der Hahn."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-MRK-014",
+            "field": "summary",
+            "fingerprint": "3a3f7f35484162d9"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.14.1-MRK.14.11",
+            "figures": [
+              "FIG-ROLLE-FRAU",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS",
+              "FIG-OBJ-SALBGEFAESS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SALBUNG"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-FRAU",
+                "icons": [
+                  "FIG-OBJ-SALBGEFAESS",
+                  "FIG-ZEICHEN-TOD"
+                ]
+              }
+            ],
+            "action_de": "In Betanien salbt eine Frau Jesus mit kostbarem Öl; er sagt, sie habe ihn für das Begräbnis gesalbt.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-FRAU": "FIG-OBJ-SALBGEFAESS"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-FRAU",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-SALBUNG": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-ROLLE-FRAU": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.14.12-MRK.14.31",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT",
+              "FIG-OBJ-BECHER-VOLL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-OBJ-BROT",
+                  "FIG-OBJ-BECHER-VOLL",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-VIELE"
+                ]
+              }
+            ],
+            "action_de": "Beim Passamahl deutet Jesus Brot und Becher auf seinen Leib und sein Blut des Bundes für viele.",
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROT"
+              },
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "pensive"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.14.32-MRK.14.52",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS",
+              "FIG-JUDAS-ISKARIOT"
+            ],
+            "objects": [
+              "FIG-ORT-GARTEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-KUSS",
+              "FIG-ZEICHEN-AUSLIEFERN"
+            ],
+            "speech": [],
+            "action_de": "In Getsemani betet Jesus, die Jünger schlafen; Judas liefert ihn mit einem Kuss aus.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-JUDAS-ISKARIOT": "earnest",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 40,
+                "FIG-JESUS": 104,
+                "FIG-JUDAS-ISKARIOT": 146
+              },
+              "back_side": "left",
+              "before": true,
+              "beside": {
+                "FIG-ZEICHEN-KUSS": "FIG-JUDAS-ISKARIOT"
+              },
+              "at": {
+                "FIG-ZEICHEN-AUSLIEFERN": "FIG-JESUS"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.14.53-MRK.14.72",
+            "figures": [
+              "FIG-ROLLE-MAGD",
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-OBJ-FEUER",
+              "FIG-OBJ-HAHN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-ROLLE-MAGD",
+                "icons": [
+                  "FIG-ZEICHEN-VERLEUGNEN"
+                ]
+              }
+            ],
+            "action_de": "Vor dem Hohen Rat bekennt Jesus, der Christus zu sein; im Hof verleugnet ihn Petrus dreimal.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-MAGD": "earnest",
+                "FIG-PETRUS": "worried"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "In Betanien salbt eine Frau Jesus mit kostbarem Öl; er sagt, sie habe ihn für das Begräbnis gesalbt.",
+          "Beim Passamahl deutet Jesus Brot und Becher auf seinen Leib und sein Blut des Bundes für viele.",
+          "In Getsemani betet Jesus, die Jünger schlafen; Judas liefert ihn mit einem Kuss aus.",
+          "Vor dem Hohen Rat bekennt Jesus, der Christus zu sein; im Hof verleugnet ihn Petrus dreimal."
+        ],
+        "captions_de": [
+          "Salbung: Eine Frau salbt Jesus (Gefäss, Bogen; Ölhorn mit goldenem Tropfen) – für sein Begräbnis (Gefäss, Totenkopf).",
+          "Mahl: Brot und Becher = Jesus, für viele (Brot, Becher, Jesus, Menge).",
+          "Kuss → Festnahme: Judas küsst Jesus (Lippen); darauf ergreift die Menge ihn (Bogen, Hand und Kette).",
+          "Verleugnung: Am Feuer streitet Petrus ab, Jesus zu kennen (sprechender Kopf und Nein-Geste); der Hahn."
+        ],
+        "interpretation_note_de": "Je ein Feld zu Salbung, Mahl, Getsemani und Verleugnung; Einzelheiten in den Abschnitten. Das Verhör vor dem Hohen Rat ([[MRK.14.53-MRK.14.65]]) ist nur im Abschnittsbild gezeigt.",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.14.1-MRK.14.11",
+            "figures": [
+              "FIG-ROLLE-FRAU",
+              "FIG-JESUS",
+              "FIG-JUDAS-ISKARIOT",
+              "FIG-GRUPPE-HOHEPRIESTER"
+            ],
+            "objects": [
+              "FIG-OBJ-SALBGEFAESS",
+              "FIG-OBJ-MUENZEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SALBUNG",
+              "FIG-ZEICHEN-AUSLIEFERN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-FRAU",
+                "icons": [],
+                "word": {
+                  "de": "Sie hat meinen Leib im Voraus gesalbt für das Begräbnis.",
+                  "gsw": "Si hät min Liib zum voruus gsalbet für d Beerdigung."
+                }
+              }
+            ],
+            "action_de": "In Betanien giesst eine Frau Jesus kostbares Salböl über den Kopf; einige empören sich über die Verschwendung, doch Jesus sagt: «Sie hat meinen Leib im Voraus gesalbt für das Begräbnis.» Judas Iskariot geht zu den Hohepriestern, um ihn auszuliefern; sie versprechen ihm Geld.",
+            "keywords": {
+              "de": "Ein gutes Werk hat sie an mir getan",
+              "gsw": "Si hät es guets Wärch a mir taa"
+            },
+            "names": {
+              "FIG-JUDAS-ISKARIOT": {
+                "de": "Judas",
+                "gsw": "Judas"
+              }
+            },
+            "stage": {
+              "split": 2,
+              "trenner": true,
+              "hold": {
+                "FIG-ROLLE-FRAU": "FIG-OBJ-SALBGEFAESS",
+                "FIG-GRUPPE-HOHEPRIESTER": "FIG-OBJ-MUENZEN"
+              },
+              "at": {
+                "FIG-ZEICHEN-SALBUNG": "FIG-JESUS",
+                "FIG-ZEICHEN-AUSLIEFERN": "FIG-JUDAS-ISKARIOT"
+              },
+              "pose": {
+                "FIG-JESUS": "sit"
+              },
+              "mood": {
+                "FIG-ROLLE-FRAU": "calm",
+                "FIG-JESUS": "calm",
+                "FIG-JUDAS-ISKARIOT": "earnest",
+                "FIG-GRUPPE-HOHEPRIESTER": "smile"
+              },
+              "x": {
+                "FIG-ROLLE-FRAU": 22,
+                "FIG-JESUS": 62,
+                "FIG-JUDAS-ISKARIOT": 118,
+                "FIG-GRUPPE-HOHEPRIESTER": 164
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.14.12-MRK.14.25",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-OBJ-BROT"
+                ],
+                "word": {
+                  "de": "Nehmt! Das ist mein Leib.",
+                  "gsw": "Nämed! Das isch min Liib."
+                }
+              }
+            ],
+            "action_de": "Während sie essen, nimmt Jesus Brot, spricht den Lobpreis, bricht es und gibt es ihnen: «Nehmt! Das ist mein Leib.»",
+            "keywords": {
+              "de": "Das ist mein Blut des Bundes",
+              "gsw": "Das isch mis Bluet vom Bund"
+            },
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROT"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-ZWOELF",
+                  "act"
+                ]
+              ],
+              "night": true,
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-ZWOELF": "pensive"
+              },
+              "x": {
+                "FIG-JESUS": 50,
+                "FIG-GRUPPE-ZWOELF": 136
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.14.26-MRK.14.52",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-GARTEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SCHLAFEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GOTT",
+                "icons": [],
+                "word": {
+                  "de": "Doch nicht, was ich will, sondern was du willst.",
+                  "gsw": "Aber nöd, was ich wott, sondern was du wottsch."
+                }
+              }
+            ],
+            "action_de": "In Getsemani fällt Jesus auf die Erde und betet: «Abba, Vater, alles ist dir möglich. Nimm diesen Becher von mir weg! Doch nicht, was ich will, sondern was du willst.» Petrus, Jakobus und Johannes schlafen.",
+            "keywords": {
+              "de": "Siehe, der mich ausliefert, ist nahe gekommen",
+              "gsw": "Lueg, dä, wo mich usliferet, isch nöch"
+            },
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "kneel"
+              },
+              "at": {
+                "FIG-ZEICHEN-SCHLAFEN": "FIG-GRUPPE-JUENGER"
+              },
+              "god_side": "right",
+              "back_side": "left",
+              "before": true,
+              "night": true,
+              "mood": {
+                "FIG-JESUS": "pain",
+                "FIG-GRUPPE-JUENGER": "sleep"
+              },
+              "x": {
+                "FIG-GRUPPE-JUENGER": 40,
+                "FIG-JESUS": 128
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.14.53-MRK.14.72",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-HOHEPRIESTER",
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-OBJ-HAHN",
+              "FIG-OBJ-FEUER"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-HOHEPRIESTER",
+                "icons": [],
+                "word": {
+                  "de": "Ich bin es.",
+                  "gsw": "Ich bi s."
+                }
+              }
+            ],
+            "action_de": "Der Hohepriester fragt: «Bist du der Christus, der Sohn des Hochgelobten?» Jesus antwortet: «Ich bin es, und ihr werdet den Menschensohn zur Rechten der Macht sitzen und mit den Wolken des Himmels kommen sehen.» Im Hof verleugnet Petrus ihn dreimal; ein Hahn kräht zum zweiten Mal, und Petrus weint.",
+            "keywords": {
+              "de": "Und er dachte daran und weinte",
+              "gsw": "Und er hät dra dänkt und hät briegget"
+            },
+            "names": {
+              "FIG-PETRUS": {
+                "de": "Petrus",
+                "gsw": "Petrus"
+              }
+            },
+            "stage": {
+              "split": 2,
+              "trenner": true,
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-PETRUS"
+                ]
+              },
+              "night": true,
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-ROLLE-HOHEPRIESTER": "angry",
+                "FIG-PETRUS": "pain"
+              },
+              "x": {
+                "FIG-JESUS": 24,
+                "FIG-ROLLE-HOHEPRIESTER": 72,
+                "FIG-PETRUS": 156
+              },
+              "floor_x": {
+                "FIG-OBJ-HAHN": 124,
+                "FIG-OBJ-FEUER": 178
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Salbung und Auslieferung: links salbt die Frau Jesus (Salbgefäss, Salbung): «Sie hat meinen Leib im Voraus gesalbt für das Begräbnis.» (Grab); rechts hinter der Trennlinie geht Judas (Name) zu den Hohepriestern (ausliefern, Münzen: versprochenes Geld).",
+          "Das Brot: Jesus gibt den Zwölf das Brot (Brot, Pfeil): «Nehmt! Das ist mein Leib.» (Jesus, geben).",
+          "Getsemani: In der Nacht kniet Jesus im Garten und betet zu Gott (Strahlenkranz): «Doch nicht, was ich will, sondern was du willst.» (Wille Gottes); die Jünger schlafen (schlafen).",
+          "Bekenntnis und Verleugnung: links Jesus vor dem Hohepriester: «Ich bin es.» (Christus); rechts hinter der Trennlinie weint Petrus (Name) am Feuer, ein Hahn kräht (Hahn, Trauer)."
         ]
       }
     }
