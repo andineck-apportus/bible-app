@@ -1,0 +1,175 @@
+{
+ "id": "CORE-JON-001-001-003",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "JON.1.1-JON.1.3",
+ "target": "TU-JON-001-001-003",
+ "core_de": "JHWH sendet Jona nach Ninive, um gegen die Stadt auszurufen, weil ihre Bosheit vor ihn gekommen ist; doch Jona macht sich auf, um nach Tarschisch zu fliehen, weg vom Angesicht JHWHs.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Auftrag – Flucht",
+    "range": "JON.1.1-JON.1.3",
+    "elements": [
+     {
+      "label": "Das Wort JHWHs ergeht an Jona, den Sohn Amittais",
+      "ref": "JON.1.1",
+      "role": "Anlass"
+     },
+     {
+      "label": "Auftrag mit Begründung",
+      "ref": "JON.1.2",
+      "role": "Auftrag",
+      "child": "s2"
+     },
+     {
+      "label": "Gegenbewegung: Jona macht sich auf – nach Tarschisch, hinab nach Jafo, ins Schiff hinab, weg vom Angesicht JHWHs",
+      "ref": "JON.1.3",
+      "role": "Flucht",
+      "child": "s3"
+     }
+    ],
+    "features": {
+     "leitwort": [
+      {
+       "word": "hinab(steigen)",
+       "refs": [
+        "JON.1.3",
+        "JON.1.5",
+        "JON.2.6"
+       ],
+       "role": "Beginn des Abstiegs (Tarschisch – Jafo – Schiff – Schiffsraum – Meer – Tiefe)"
+      },
+      {
+       "word": "weg vom Angesicht JHWHs",
+       "refs": [
+        "JON.1.3",
+        "JON.1.10"
+       ],
+       "role": "rahmend in 1,3, aufgenommen in 1,10"
+      }
+     ],
+     "speakers": [
+      {
+       "who": "FIG-GOTT",
+       "to": "FIG-JONA",
+       "refs": [
+        "JON.1.2"
+       ]
+      },
+      {
+       "who": "Erzähler",
+       "to": "Leser",
+       "refs": [
+        "JON.1.1",
+        "JON.1.3"
+       ]
+      }
+     ],
+     "pattern_break": [
+      {
+       "ref": "JON.1.3",
+       "note": "Jona antwortet nicht mit Worten; sein Grund für die Flucht bleibt hier ungesagt und wird erst in [[JON.4.2]] genannt."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "cause",
+    "subtype": "Auftrag – Begründung «denn»",
+    "range": "JON.1.2",
+    "elements": [
+     {
+      "label": "Steh auf, geh nach Ninive, der grossen Stadt, und ruf gegen sie aus",
+      "ref": "JON.1.2",
+      "role": "Auftrag"
+     },
+     {
+      "label": "denn ihre Bosheit ist vor mein Angesicht heraufgestiegen",
+      "ref": "JON.1.2",
+      "role": "Begründung"
+     }
+    ],
+    "visual": "arrows",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "contrast",
+    "subtype": "Auftrag ↔ Ausführung (Gegenrichtung)",
+    "range": "JON.1.2-JON.1.3",
+    "elements": [
+     {
+      "label": "«Steh auf, geh nach Ninive» → «Da machte sich Jona auf, um nach Tarschisch zu fliehen»",
+      "ref": "JON.1.2-JON.1.3",
+      "role": "verlangt ↔ getan"
+     },
+     {
+      "label": "vor JHWHs Angesicht (die Bosheit Ninives) ↔ weg vom Angesicht JHWHs (Jona)",
+      "ref": "JON.1.2-JON.1.3",
+      "role": "Angesicht"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "JON.1.1-JON.1.2",
+   "text_de": "Das Wort JHWHs ergeht an Jona: Er soll aufstehen, nach Ninive, der grossen Stadt, gehen und gegen sie ausrufen, denn ihre Bosheit ist vor JHWH heraufgestiegen.",
+   "reason_de": "Anfang des Bogens und Auftrag, an dem das ganze Buch hängt (Kriterien 1 und 3); die Begründung «denn ihre Bosheit …» gehört zum Auftrag.",
+   "recognition_de": "Gott (Strahlenkranz) spricht zu Jona und weist ihn nach Ninive.",
+   "keywords": [
+    "Steh auf, geh nach Ninive",
+    "ihre Bosheit"
+   ]
+  },
+  {
+   "reference": "JON.1.3",
+   "text_de": "Jona macht sich auf, aber um nach Tarschisch zu fliehen, weg vom Angesicht JHWHs; er steigt hinab nach Jafo, bezahlt das Fahrgeld und steigt ins Schiff hinab.",
+   "reason_de": "Wendepunkt (Kriterium 2): Jona tut das Gegenteil des Auftrags; der Text betont es mit der doppelten Wendung «weg vom Angesicht JHWHs».",
+   "recognition_de": "Jona kehrt Ninive den Rücken und läuft zum Schiff nach Tarschisch.",
+   "keywords": [
+    "um nach Tarschisch zu fliehen",
+    "weg vom Angesicht JHWHs"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Herkunft «Sohn Amittais» (1,1) – Nebenangabe",
+  "Fahrgeld (1,3) – Ausschmückung; das «Hinabsteigen» bleibt als Leitwort in structure"
+ ],
+ "persons": [
+  "FIG-GOTT",
+  "FIG-JONA"
+ ],
+ "places": [
+  "FIG-ORT-NINIVE"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "JON.1.1-JON.1.3",
+   "fingerprint": "9c24248aaee3d365"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen nach dem Pilot; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

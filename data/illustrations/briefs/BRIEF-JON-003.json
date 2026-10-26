@@ -25,42 +25,80 @@
           "from": "FIG-JONA",
           "to": "FIG-GRUPPE-MENGE",
           "icons": [
-            "FIG-ZEICHEN-STUNDE",
-            "FIG-ORT-NINIVE",
             "FIG-ZEICHEN-UMSTURZ"
-          ]
+          ],
+          "word": {
+            "de": "Noch vierzig Tage!",
+            "gsw": "No vierzg Täg!"
+          }
         }
       ],
-      "action_de": "Jona geht nach Ninive und ruft: Noch vierzig Tage, und Ninive wird umgestürzt.",
+      "action_de": "Jona geht einen Tag weit in die Stadt hinein und ruft: «Noch vierzig Tage, und Ninive wird umgestürzt!»",
+      "keywords": {
+        "de": "Ninive wird umgestürzt!",
+        "gsw": "Ninive wird umgstürzt!"
+      },
+      "names": {
+        "FIG-JONA": {
+          "de": "Jona",
+          "gsw": "Jona"
+        }
+      },
       "stage": {
         "mood": {
           "FIG-JONA": "earnest",
           "FIG-GRUPPE-MENGE": "surprised"
-        }
+        },
+        "back_side": "right"
       }
     },
     {
       "n": 2,
       "reference": "JON.3.5-JON.3.9",
       "figures": [
-        "FIG-ROLLE-KOENIG",
-        "FIG-GRUPPE-MENGE"
+        "FIG-GRUPPE-MENGE",
+        "FIG-ROLLE-KOENIG"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-ORT-NINIVE"
+      ],
       "signs": [
-        "FIG-ZEICHEN-BUSSE",
-        "FIG-ZEICHEN-GLAUBEN"
+        "FIG-ZEICHEN-GLAUBEN",
+        "FIG-ZEICHEN-BUSSE"
       ],
-      "speech": [],
-      "action_de": "Die Leute von Ninive glauben Gott; vom König bis zum Kleinsten fasten sie und hüllen sich in Sacktuch.",
+      "speech": [
+        {
+          "from": "FIG-ROLLE-KOENIG",
+          "to": "FIG-GRUPPE-MENGE",
+          "icons": [
+            "FIG-ZEICHEN-BETEN"
+          ],
+          "word": {
+            "de": "Kehrt um von eurem bösen Weg!",
+            "gsw": "Chered um vo eurem böse Wäg!"
+          }
+        }
+      ],
+      "action_de": "Die Leute von Ninive glauben an Gott, rufen ein Fasten aus und ziehen Sacktuch an, vom Grössten bis zum Kleinsten; der König steht vom Thron auf, hüllt sich in Sacktuch und setzt sich in die Asche und ruft alle auf, umzukehren.",
+      "keywords": {
+        "de": "Da glaubten die Leute von Ninive an Gott",
+        "gsw": "Da händ d Lüüt vo Ninive a Gott glaubt"
+      },
       "stage": {
         "mood": {
-          "FIG-ROLLE-KOENIG": "calm",
-          "FIG-GRUPPE-MENGE": "calm"
+          "FIG-GRUPPE-MENGE": "pensive",
+          "FIG-ROLLE-KOENIG": "pensive"
         },
         "wear": {
-          "FIG-ROLLE-KOENIG": "sack",
-          "FIG-GRUPPE-MENGE": "sack"
+          "FIG-GRUPPE-MENGE": "sack",
+          "FIG-ROLLE-KOENIG": "sack"
+        },
+        "pose": {
+          "FIG-ROLLE-KOENIG": "sit"
+        },
+        "back_side": "right",
+        "at": {
+          "FIG-ZEICHEN-GLAUBEN": "FIG-GRUPPE-MENGE"
         }
       }
     },
@@ -75,16 +113,25 @@
         "FIG-ORT-NINIVE"
       ],
       "signs": [
+        "FIG-ZEICHEN-UMKEHR",
         "FIG-ZEICHEN-ERBARMEN"
       ],
       "speech": [],
-      "action_de": "Gott sieht ihre Umkehr und führt das Unheil nicht aus.",
+      "action_de": "Gott sieht, dass sie von ihrem bösen Weg umkehren; das angekündigte Unheil reut ihn, und er tut es nicht.",
+      "keywords": {
+        "de": "Und er tat es nicht",
+        "gsw": "Und er hät s nöd gmacht"
+      },
       "stage": {
         "at": {
-          "FIG-ZEICHEN-ERBARMEN": "FIG-GOTT"
+          "FIG-ZEICHEN-ERBARMEN": "FIG-GOTT",
+          "FIG-ZEICHEN-UMKEHR": "FIG-GRUPPE-MENGE"
+        },
+        "mood": {
+          "FIG-GRUPPE-MENGE": "smile"
         },
         "god_side": "right",
-        "back_side": "right",
+        "back_side": "left",
         "arrows": [
           [
             "FIG-GRUPPE-MENGE",
@@ -99,25 +146,25 @@
     }
   ],
   "actions_de": [
-    "Jona geht nach Ninive und ruft: Noch vierzig Tage, und Ninive wird umgestürzt.",
-    "Die Leute von Ninive glauben Gott; vom König bis zum Kleinsten fasten sie und hüllen sich in Sacktuch.",
-    "Gott sieht ihre Umkehr und führt das Unheil nicht aus."
+    "Jona geht einen Tag weit in die Stadt hinein und ruft: «Noch vierzig Tage, und Ninive wird umgestürzt!»",
+    "Die Leute von Ninive glauben an Gott, rufen ein Fasten aus und ziehen Sacktuch an, vom Grössten bis zum Kleinsten; der König steht vom Thron auf, hüllt sich in Sacktuch und setzt sich in die Asche und ruft alle auf, umzukehren.",
+    "Gott sieht, dass sie von ihrem bösen Weg umkehren; das angekündigte Unheil reut ihn, und er tut es nicht."
   ],
   "captions_de": [
-    "Botschaft: Jona ruft in Ninive: Noch eine Frist (Sanduhr), dann wird die Stadt umgestürzt (Stadt, kippende Mauern).",
-    "Busse: Vom König bis zum Kleinsten glauben sie (Herzen), fasten und tragen Sacktuch (dunkle Kleider).",
-    "Umkehr → Erbarmen: Gott (Strahlenkranz) sieht die Umkehr der Leute im Sacktuch (Pfeil zu ihm) und verschont die Stadt (Herz in Händen)."
+    "Botschaft: Jona ruft den Leuten von Ninive zu: «Noch vierzig Tage!» – dann wird die Stadt umgestürzt (kippende Mauern).",
+    "Die Stadt tut Busse: Die Leute von Ninive glauben an Gott (Herz mit Strahlen), tragen Sacktuch (dunkle Kleider) und fasten (Zeichen Busse); der König sitzt im Sacktuch auf dem Boden und ruft: «Kehrt um von eurem bösen Weg!» (betende Hände).",
+    "Umkehr → Erbarmen: Die Leute im Sacktuch kehren um (Pfeil über ihnen); Gott (Strahlenkranz) sieht es (Pfeil zu ihm) und hat Erbarmen (Zeichen Mitleid); Ninive bleibt stehen."
   ],
-  "interpretation_note_de": "Je ein Feld zu Botschaft, Busse und Gottes Erbarmen.",
+  "interpretation_note_de": "Drei Szenen nach «Ansage – Umkehr – Verschonung»: Jonas Ansage ([[JON.3.1-JON.3.4]]), die Busse von Volk und König mit dem Aufruf zur Umkehr ([[JON.3.5-JON.3.9]]) und Gottes Erbarmen ([[JON.3.10]]). Der zweite Auftrag ([[JON.3.1-JON.3.3]]) steht im Abschnittsbild. Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-JON-003",
       "field": "summary",
-      "fingerprint": "248d1f757ca4645f"
+      "fingerprint": "3aba5c60b46fed5e"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -407,6 +454,121 @@
           "Busse: Vom König bis zum Kleinsten glauben sie (Herzen), fasten und tragen Sacktuch (dunkle Kleider).",
           "Erbarmen: Gott sieht die Umkehr (Linie) und verschont die Stadt (Herz in Händen)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: Jona und Obadja neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JON.3.1-JON.3.4",
+            "figures": [
+              "FIG-JONA",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-NINIVE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JONA",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-STUNDE",
+                  "FIG-ORT-NINIVE",
+                  "FIG-ZEICHEN-UMSTURZ"
+                ]
+              }
+            ],
+            "action_de": "Jona geht nach Ninive und ruft: Noch vierzig Tage, und Ninive wird umgestürzt.",
+            "stage": {
+              "mood": {
+                "FIG-JONA": "earnest",
+                "FIG-GRUPPE-MENGE": "surprised"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JON.3.5-JON.3.9",
+            "figures": [
+              "FIG-ROLLE-KOENIG",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-BUSSE",
+              "FIG-ZEICHEN-GLAUBEN"
+            ],
+            "speech": [],
+            "action_de": "Die Leute von Ninive glauben Gott; vom König bis zum Kleinsten fasten sie und hüllen sich in Sacktuch.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-KOENIG": "calm",
+                "FIG-GRUPPE-MENGE": "calm"
+              },
+              "wear": {
+                "FIG-ROLLE-KOENIG": "sack",
+                "FIG-GRUPPE-MENGE": "sack"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JON.3.10",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-NINIVE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ERBARMEN"
+            ],
+            "speech": [],
+            "action_de": "Gott sieht ihre Umkehr und führt das Unheil nicht aus.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-ERBARMEN": "FIG-GOTT"
+              },
+              "god_side": "right",
+              "back_side": "right",
+              "arrows": [
+                [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-GOTT",
+                  "act"
+                ]
+              ],
+              "wear": {
+                "FIG-GRUPPE-MENGE": "sack"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jona geht nach Ninive und ruft: Noch vierzig Tage, und Ninive wird umgestürzt.",
+          "Die Leute von Ninive glauben Gott; vom König bis zum Kleinsten fasten sie und hüllen sich in Sacktuch.",
+          "Gott sieht ihre Umkehr und führt das Unheil nicht aus."
+        ],
+        "captions_de": [
+          "Botschaft: Jona ruft in Ninive: Noch eine Frist (Sanduhr), dann wird die Stadt umgestürzt (Stadt, kippende Mauern).",
+          "Busse: Vom König bis zum Kleinsten glauben sie (Herzen), fasten und tragen Sacktuch (dunkle Kleider).",
+          "Umkehr → Erbarmen: Gott (Strahlenkranz) sieht die Umkehr der Leute im Sacktuch (Pfeil zu ihm) und verschont die Stadt (Herz in Händen)."
+        ],
+        "interpretation_note_de": "Je ein Feld zu Botschaft, Busse und Gottes Erbarmen.",
+        "basis": [
+          {
+            "record": "SUM-CH-JON-003",
+            "field": "summary",
+            "fingerprint": "248d1f757ca4645f"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

@@ -14,32 +14,6 @@
       "reference": "OBA.1.1",
       "figures": [
         "FIG-GOTT",
-        "FIG-OBADJA"
-      ],
-      "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-GOTT",
-          "to": "FIG-OBADJA",
-          "icons": [
-            "FIG-ORT-EDOM-GEBIRGE",
-            "FIG-GRUPPE-EDOM"
-          ]
-        }
-      ],
-      "action_de": "Die Schauung Obadjas: So spricht der Herr JHWH über Edom.",
-      "stage": {
-        "god_side": "left",
-        "mood": {
-          "FIG-OBADJA": "calm"
-        }
-      }
-    },
-    {
-      "n": 2,
-      "reference": "OBA.1.1",
-      "figures": [
         "FIG-ROLLE-BOTE",
         "FIG-GRUPPE-VOELKER"
       ],
@@ -52,128 +26,151 @@
           "from": "FIG-ROLLE-BOTE",
           "to": "FIG-GRUPPE-VOELKER",
           "icons": [
-            "FIG-ORT-EDOM-GEBIRGE",
             "FIG-ZEICHEN-KAMPF"
-          ]
+          ],
+          "word": {
+            "de": "Steht auf!",
+            "gsw": "Stönd uf!"
+          }
         }
       ],
-      "action_de": "Eine Kunde ist von JHWH gekommen, und ein Bote ist unter die Völker gesandt: Steht auf, lasst uns gegen Edom aufstehen zum Kampf!",
+      "action_de": "Die Schauung Obadjas: Eine Kunde ist von JHWH gekommen, und ein Bote ist unter die Völker gesandt: Steht auf, lasst uns gegen Edom aufstehen zum Kampf!",
+      "keywords": {
+        "de": "Lasst uns gegen Edom aufstehen zum Kampf!",
+        "gsw": "Mir wänd gäge Edom ufstaa zum Chrieg!"
+      },
       "stage": {
+        "god_side": "left",
         "big_side": "right",
         "mood": {
           "FIG-ROLLE-BOTE": "earnest",
           "FIG-GRUPPE-VOELKER": "earnest"
         },
-        "bubble_y": 20,
         "x": {
-          "FIG-ROLLE-BOTE": 22,
-          "FIG-GRUPPE-VOELKER": 58
-        }
-      }
-    },
-    {
-      "n": 3,
-      "reference": "OBA.1.2-OBA.1.3",
-      "figures": [
-        "FIG-GRUPPE-EDOM"
-      ],
-      "objects": [
-        "FIG-ORT-EDOM-GEBIRGE"
-      ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-EDOM",
-          "to": "FIG-GRUPPE-EDOM",
-          "icons": [
-            "FIG-ZEICHEN-HINAB",
-            "FIG-ZEICHEN-FRAGEN"
-          ],
-          "think": true
-        }
-      ],
-      "action_de": "JHWH hat Edom klein gemacht unter den Völkern; doch der Übermut seines Herzens täuscht es. Es wohnt hoch in den Klüften des Felsens und denkt: Wer stürzt mich zu Boden?",
-      "stage": {
-        "in": {
-          "FIG-GRUPPE-EDOM": "FIG-ORT-EDOM-GEBIRGE"
-        },
-        "in_pos": {
-          "FIG-GRUPPE-EDOM": [
-            0.5,
-            0.46
-          ]
-        },
-        "big_y": 50,
-        "bubble_y": 40,
-        "mood": {
-          "FIG-GRUPPE-EDOM": "determined"
-        }
-      }
-    },
-    {
-      "n": 4,
-      "reference": "OBA.1.4",
-      "figures": [
-        "FIG-GOTT",
-        "FIG-GRUPPE-EDOM"
-      ],
-      "objects": [
-        "FIG-ORT-EDOM-GEBIRGE"
-      ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-GOTT",
-          "to": "FIG-GRUPPE-EDOM",
-          "icons": [
-            "FIG-ZEICHEN-HINAB"
-          ]
-        }
-      ],
-      "action_de": "JHWH spricht zu Edom: Auch wenn du hoch baust wie der Adler und dein Nest zwischen die Sterne setzt, von dort stürze ich dich hinab.",
-      "stage": {
-        "in": {
-          "FIG-GRUPPE-EDOM": "FIG-ORT-EDOM-GEBIRGE"
-        },
-        "in_pos": {
-          "FIG-GRUPPE-EDOM": [
-            0.5,
-            0.46
-          ]
-        },
-        "god_side": "left",
-        "big_y": 50,
-        "mood": {
-          "FIG-GRUPPE-EDOM": "surprised"
+          "FIG-ROLLE-BOTE": 30,
+          "FIG-GRUPPE-VOELKER": 76
         },
         "arrows": [
           [
             "FIG-GOTT",
-            "FIG-GRUPPE-EDOM",
+            "FIG-ROLLE-BOTE",
             "act"
+          ]
+        ]
+      }
+    },
+    {
+      "n": 2,
+      "reference": "OBA.1.2-OBA.1.4",
+      "figures": [],
+      "objects": [],
+      "signs": [],
+      "speech": [],
+      "action_de": "JHWH zu Edom: Klein habe ich dich gemacht unter den Völkern; der Übermut deines Herzens hat dich getäuscht. Hoch wohnst du im Felsen und denkst: Wer stürzt mich zu Boden? Auch wenn du hoch baust wie der Adler: Von dort stürze ich dich hinab.",
+      "keywords": {
+        "de": "Von dort stürze ich dich hinab",
+        "gsw": "Vo dört stürz ich dich abe"
+      },
+      "diagram": {
+        "visual": "mirror",
+        "speaker": "FIG-GOTT",
+        "span": 2,
+        "title": {
+          "de": "Der Übermut deines Herzens hat dich getäuscht",
+          "gsw": "De Übermuet vo dim Herz hät dich tüüscht"
+        },
+        "head": [
+          {
+            "de": "Edom denkt: hoch",
+            "gsw": "Edom dänkt: hööch"
+          },
+          {
+            "de": "JHWH sagt: hinab",
+            "gsw": "JHWH seit: abe"
+          }
+        ],
+        "rows": [
+          [
+            {
+              "a": {
+                "de": "Hoch wohnst du in den Klüften des Felsens.",
+                "gsw": "Hööch wonsch du i de Chlüft vom Fels."
+              },
+              "icons": [
+                "FIG-ORT-EDOM-GEBIRGE",
+                "FIG-ZEICHEN-HINAUF"
+              ]
+            },
+            {
+              "a": {
+                "de": "Klein habe ich dich gemacht unter den Völkern.",
+                "gsw": "Chlii han ich dich gmacht under de Völker."
+              },
+              "icons": [
+                "FIG-ZEICHEN-ABNEHMEN"
+              ]
+            }
+          ],
+          [
+            {
+              "a": {
+                "de": "«Wer stürzt mich zu Boden?»",
+                "gsw": "«Wär stürzt mich uf de Bode?»"
+              },
+              "icons": [
+                "FIG-GRUPPE-EDOM",
+                "FIG-ZEICHEN-FRAGEN"
+              ]
+            },
+            {
+              "a": {
+                "de": "«Von dort stürze ich dich hinab», Spruch JHWHs.",
+                "gsw": "«Vo dört stürz ich dich abe», Spruch vo JHWH."
+              },
+              "icons": [
+                "FIG-ZEICHEN-HINAB"
+              ]
+            }
+          ],
+          [
+            {
+              "a": {
+                "de": "Hoch wie der Adler, dein Nest zwischen den Sternen",
+                "gsw": "Hööch wie de Adler, dis Näscht zwüsche de Stärne"
+              },
+              "icons": [
+                "FIG-OBJ-NEST",
+                "FIG-OBJ-STERN"
+              ]
+            },
+            {
+              "a": {
+                "de": "Verachtet bist du sehr.",
+                "gsw": "Verachtet bisch du seer."
+              },
+              "icons": [
+                "FIG-ZEICHEN-ABLEHNEN"
+              ]
+            }
           ]
         ]
       }
     }
   ],
   "actions_de": [
-    "Die Schauung Obadjas: So spricht der Herr JHWH über Edom.",
-    "Eine Kunde ist von JHWH gekommen, und ein Bote ist unter die Völker gesandt: Steht auf, lasst uns gegen Edom aufstehen zum Kampf!",
-    "JHWH hat Edom klein gemacht unter den Völkern; doch der Übermut seines Herzens täuscht es. Es wohnt hoch in den Klüften des Felsens und denkt: Wer stürzt mich zu Boden?",
-    "JHWH spricht zu Edom: Auch wenn du hoch baust wie der Adler und dein Nest zwischen die Sterne setzt, von dort stürze ich dich hinab."
+    "Die Schauung Obadjas: Eine Kunde ist von JHWH gekommen, und ein Bote ist unter die Völker gesandt: Steht auf, lasst uns gegen Edom aufstehen zum Kampf!",
+    "JHWH zu Edom: Klein habe ich dich gemacht unter den Völkern; der Übermut deines Herzens hat dich getäuscht. Hoch wohnst du im Felsen und denkst: Wer stürzt mich zu Boden? Auch wenn du hoch baust wie der Adler: Von dort stürze ich dich hinab."
   ],
   "captions_de": [
-    "Die Schauung: Gott spricht zu Obadja über Edom (rötliches Felsgebirge, rötliche Gruppe).",
-    "Der Bote: Ein Bote mit Brief ruft die Völker gegen Edom auf (Gebirge, gekreuzte Schwerter).",
-    "Hochmut: Edom wohnt hoch oben im Felsen und sagt sich im Herzen: Wer stürzt mich hinab? (Pfeil nach unten, Fragezeichen)",
-    "Hochmut → Sturz: Edom wohnt hoch oben im Felsen; Gott (Strahlenkranz, goldener Pfeil) sagt: Von dort stürze ich dich hinab (Pfeil nach unten)."
+    "Der Bote: Gott (Strahlenkranz, goldener Pfeil) sendet einen Boten zu den Völkern; er ruft: «Steht auf!» – gegen Edom (rötliches Felsgebirge rechts).",
+    "Hoch ↔ hinab (Spiegel): links, was Edom von sich denkt – hoch in den Klüften des Felsens, «Wer stürzt mich zu Boden?», hoch wie der Adler, das Nest zwischen den Sternen; rechts Gottes Antwort – klein gemacht, «Von dort stürze ich dich hinab», verachtet."
   ],
-  "interpretation_note_de": "Gott erscheint als Strahlenkranz; der Text sagt «der Herr JHWH» ([[OBA.1.1]]). Ob Obadja oder das Volk die Kunde «gehört» hat, lässt der Text offen. Bildwörter wie Adler und Nest zwischen den Sternen ([[OBA.1.4]]) fasst das Bild in der Höhe des Felsens zusammen; Schild und Speer stehen für den Kampf, ohne Gewalt zu zeigen.",
+  "interpretation_note_de": "Zwei Felder: der Aufruf des Boten gegen Edom als Szene ([[OBA.1.1]]) und Gottes Wort «hoch ↔ hinab» als Spiegel ([[OBA.1.2-OBA.1.4]]). Gott erscheint als Strahlenkranz; der Text sagt «der Herr JHWH». Wer mit «wir» die Kunde gehört hat, lässt der Text offen; Obadja selbst ist nicht gezeichnet. Edom ist am Felsen und an der Farbe erkennbar, nicht am Gesicht; das Gericht gilt seinem Verhalten.",
   "basis": [
     {
       "record": "TU-OBA-001-001-004",
       "field": "summary",
-      "fingerprint": "bafb0c17308bd595"
+      "fingerprint": "55ecc4d8bc4d38ca"
     },
     {
       "record": "TRANS-OBA-001-001-021-DE-WORKING",
@@ -184,24 +181,12 @@
     {
       "record": "TRANS-OBA-001-001-021-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "OBA.1.1",
-      "fingerprint": "83f8a30b8eb1505b"
-    },
-    {
-      "record": "TRANS-OBA-001-001-021-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "OBA.1.2-OBA.1.3",
-      "fingerprint": "a6197286ad9828ba"
-    },
-    {
-      "record": "TRANS-OBA-001-001-021-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "OBA.1.4",
-      "fingerprint": "09043c47bb889552"
+      "reference": "OBA.1.2-OBA.1.4",
+      "fingerprint": "85f934a95a742e0f"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -662,6 +647,205 @@
           "Hochmut: Edom wohnt hoch oben im Felsen und sagt sich im Herzen: Wer stürzt mich hinab? (Pfeil nach unten, Fragezeichen)",
           "Hochmut → Sturz: Edom wohnt hoch oben im Felsen; Gott (Strahlenkranz, goldener Pfeil) sagt: Von dort stürze ich dich hinab (Pfeil nach unten)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: Jona und Obadja neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "OBA.1.1",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-OBADJA"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GOTT",
+                "to": "FIG-OBADJA",
+                "icons": [
+                  "FIG-ORT-EDOM-GEBIRGE",
+                  "FIG-GRUPPE-EDOM"
+                ]
+              }
+            ],
+            "action_de": "Die Schauung Obadjas: So spricht der Herr JHWH über Edom.",
+            "stage": {
+              "god_side": "left",
+              "mood": {
+                "FIG-OBADJA": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "OBA.1.1",
+            "figures": [
+              "FIG-ROLLE-BOTE",
+              "FIG-GRUPPE-VOELKER"
+            ],
+            "objects": [
+              "FIG-ORT-EDOM-GEBIRGE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-BOTE",
+                "to": "FIG-GRUPPE-VOELKER",
+                "icons": [
+                  "FIG-ORT-EDOM-GEBIRGE",
+                  "FIG-ZEICHEN-KAMPF"
+                ]
+              }
+            ],
+            "action_de": "Eine Kunde ist von JHWH gekommen, und ein Bote ist unter die Völker gesandt: Steht auf, lasst uns gegen Edom aufstehen zum Kampf!",
+            "stage": {
+              "big_side": "right",
+              "mood": {
+                "FIG-ROLLE-BOTE": "earnest",
+                "FIG-GRUPPE-VOELKER": "earnest"
+              },
+              "bubble_y": 20,
+              "x": {
+                "FIG-ROLLE-BOTE": 22,
+                "FIG-GRUPPE-VOELKER": 58
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "OBA.1.2-OBA.1.3",
+            "figures": [
+              "FIG-GRUPPE-EDOM"
+            ],
+            "objects": [
+              "FIG-ORT-EDOM-GEBIRGE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-EDOM",
+                "to": "FIG-GRUPPE-EDOM",
+                "icons": [
+                  "FIG-ZEICHEN-HINAB",
+                  "FIG-ZEICHEN-FRAGEN"
+                ],
+                "think": true
+              }
+            ],
+            "action_de": "JHWH hat Edom klein gemacht unter den Völkern; doch der Übermut seines Herzens täuscht es. Es wohnt hoch in den Klüften des Felsens und denkt: Wer stürzt mich zu Boden?",
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-EDOM": "FIG-ORT-EDOM-GEBIRGE"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-EDOM": [
+                  0.5,
+                  0.46
+                ]
+              },
+              "big_y": 50,
+              "bubble_y": 40,
+              "mood": {
+                "FIG-GRUPPE-EDOM": "determined"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "OBA.1.4",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-EDOM"
+            ],
+            "objects": [
+              "FIG-ORT-EDOM-GEBIRGE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GOTT",
+                "to": "FIG-GRUPPE-EDOM",
+                "icons": [
+                  "FIG-ZEICHEN-HINAB"
+                ]
+              }
+            ],
+            "action_de": "JHWH spricht zu Edom: Auch wenn du hoch baust wie der Adler und dein Nest zwischen die Sterne setzt, von dort stürze ich dich hinab.",
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-EDOM": "FIG-ORT-EDOM-GEBIRGE"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-EDOM": [
+                  0.5,
+                  0.46
+                ]
+              },
+              "god_side": "left",
+              "big_y": 50,
+              "mood": {
+                "FIG-GRUPPE-EDOM": "surprised"
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-EDOM",
+                  "act"
+                ]
+              ]
+            }
+          }
+        ],
+        "actions_de": [
+          "Die Schauung Obadjas: So spricht der Herr JHWH über Edom.",
+          "Eine Kunde ist von JHWH gekommen, und ein Bote ist unter die Völker gesandt: Steht auf, lasst uns gegen Edom aufstehen zum Kampf!",
+          "JHWH hat Edom klein gemacht unter den Völkern; doch der Übermut seines Herzens täuscht es. Es wohnt hoch in den Klüften des Felsens und denkt: Wer stürzt mich zu Boden?",
+          "JHWH spricht zu Edom: Auch wenn du hoch baust wie der Adler und dein Nest zwischen die Sterne setzt, von dort stürze ich dich hinab."
+        ],
+        "captions_de": [
+          "Die Schauung: Gott spricht zu Obadja über Edom (rötliches Felsgebirge, rötliche Gruppe).",
+          "Der Bote: Ein Bote mit Brief ruft die Völker gegen Edom auf (Gebirge, gekreuzte Schwerter).",
+          "Hochmut: Edom wohnt hoch oben im Felsen und sagt sich im Herzen: Wer stürzt mich hinab? (Pfeil nach unten, Fragezeichen)",
+          "Hochmut → Sturz: Edom wohnt hoch oben im Felsen; Gott (Strahlenkranz, goldener Pfeil) sagt: Von dort stürze ich dich hinab (Pfeil nach unten)."
+        ],
+        "interpretation_note_de": "Gott erscheint als Strahlenkranz; der Text sagt «der Herr JHWH» ([[OBA.1.1]]). Ob Obadja oder das Volk die Kunde «gehört» hat, lässt der Text offen. Bildwörter wie Adler und Nest zwischen den Sternen ([[OBA.1.4]]) fasst das Bild in der Höhe des Felsens zusammen; Schild und Speer stehen für den Kampf, ohne Gewalt zu zeigen.",
+        "basis": [
+          {
+            "record": "TU-OBA-001-001-004",
+            "field": "summary",
+            "fingerprint": "bafb0c17308bd595"
+          },
+          {
+            "record": "TRANS-OBA-001-001-021-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "OBA.1.1",
+            "fingerprint": "83f8a30b8eb1505b"
+          },
+          {
+            "record": "TRANS-OBA-001-001-021-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "OBA.1.1",
+            "fingerprint": "83f8a30b8eb1505b"
+          },
+          {
+            "record": "TRANS-OBA-001-001-021-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "OBA.1.2-OBA.1.3",
+            "fingerprint": "a6197286ad9828ba"
+          },
+          {
+            "record": "TRANS-OBA-001-001-021-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "OBA.1.4",
+            "fingerprint": "09043c47bb889552"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

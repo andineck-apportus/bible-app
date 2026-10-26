@@ -1,0 +1,165 @@
+{
+ "id": "CORE-JON-004",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "chapter",
+ "reference": "JON.4.1-JON.4.11",
+ "target": "SUM-CH-JON-004",
+ "children": [
+  "CORE-JON-004-001-004",
+  "CORE-JON-004-005-011"
+ ],
+ "core_de": "Jona zürnt, weil Gott gnädig ist und Ninive verschont, und wünscht sich den Tod; mit dem Rizinus, den Gott wachsen und verdorren lässt, fragt Gott ihn, ob er mit Ninive, der grossen Stadt, nicht Mitleid haben soll – und das Buch endet mit dieser Frage.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Zorn – Zeichen – Frage",
+    "range": "JON.4.1-JON.4.11",
+    "elements": [
+     {
+      "label": "Jonas Zorn über Gottes Gnade, Todeswunsch und Gottes Frage «Ist es recht, dass du zornig bist?»",
+      "ref": "JON.4.1-JON.4.4",
+      "role": "Abschnitt: Zorn"
+     },
+     {
+      "label": "Rizinus, Wurm und Ostwind; Jonas Zorn bis zum Tod; Gottes Schlussfrage",
+      "ref": "JON.4.5-JON.4.11",
+      "role": "Abschnitt: Rizinus",
+      "child": "s3"
+     },
+     {
+      "label": "Wiederholte Worte",
+      "ref": "JON.4.3-JON.4.9",
+      "role": "Parallele",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "open_end": [
+      {
+       "ref": "JON.4.11",
+       "note": "Das Buch endet mit Gottes Frage; Jonas Antwort fehlt."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "parallel",
+    "subtype": "zweimal dieselben Worte (4,1–4 ↔ 4,8–9)",
+    "range": "JON.4.3-JON.4.9",
+    "elements": [
+     {
+      "label": "«Besser ist mein Tod als mein Leben» (4,3) ↔ dasselbe nach der Hitze (4,8)",
+      "ref": "JON.4.3",
+      "role": "Todeswunsch",
+      "links": [
+       "JON.4.8"
+      ]
+     },
+     {
+      "label": "«Ist es recht, dass du zornig bist?» (4,4) ↔ «… wegen des Rizinus?» – «Mit Recht bin ich zornig, bis zum Tod!» (4,9)",
+      "ref": "JON.4.4",
+      "role": "Gottes Frage",
+      "links": [
+       "JON.4.9"
+      ]
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "balance",
+    "subtype": "Schluss vom Kleineren aufs Grössere",
+    "range": "JON.4.10-JON.4.11",
+    "elements": [
+     {
+      "label": "Du hast Mitleid mit dem Rizinus, der in einer Nacht entstand und zugrunde ging",
+      "ref": "JON.4.10",
+      "role": "kleiner"
+     },
+     {
+      "label": "Sollte ich nicht Mitleid haben mit Ninive, der grossen Stadt, mit Menschen und viel Vieh?",
+      "ref": "JON.4.11",
+      "role": "grösser"
+     }
+    ],
+    "visual": "balance",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "JON.4.1-JON.4.4",
+   "text_de": "Jona wird zornig und betet: Er sei geflohen, weil er wusste, dass JHWH ein gnädiger und barmherziger Gott ist; er bittet um den Tod, und JHWH fragt: «Ist es recht, dass du zornig bist?»",
+   "reason_de": "Trägt die Kernaussage (Kriterium 1); der Grund der Flucht wird erst hier genannt (Kriterium 2).",
+   "recognition_de": "Szene 1: Jona ist zornig und spricht zu Gott von dessen Gnade.",
+   "keywords": [
+    "wurde zornig",
+    "ein gnädiger und barmherziger Gott",
+    "Ist es recht, dass du zornig bist"
+   ]
+  },
+  {
+   "reference": "JON.4.5-JON.4.9",
+   "text_de": "Jona wartet vor der Stadt in einer Hütte; Gott lässt einen Rizinus wachsen, über den Jona sich sehr freut, dann einen Wurm ihn stechen und einen sengenden Ostwind wehen; Jona wünscht sich zu sterben und bleibt zornig, «bis zum Tod».",
+   "reason_de": "Wendepunkt (Kriterium 2) und Erkennungsmoment (Kriterium 4): die Staude.",
+   "recognition_de": "Szene 2: Jona unter der verdorrten Staude in der Sonne.",
+   "keywords": [
+    "einen Rizinus",
+    "einen Wurm",
+    "Mit Recht bin ich zornig, bis zum Tod"
+   ]
+  },
+  {
+   "reference": "JON.4.10-JON.4.11",
+   "text_de": "Gott fragt: Du hast Mitleid mit dem Rizinus – sollte ich nicht Mitleid haben mit Ninive, der grossen Stadt, mit ihren Menschen und dem vielen Vieh?",
+   "reason_de": "Höhepunkt und Schluss des Buches (Kriterien 1 und 2): Schluss vom Kleineren aufs Grössere, offenes Ende.",
+   "recognition_de": "Szene 3: Gott fragt Jona nach Ninive; Jona sitzt bei der verdorrten Staude.",
+   "keywords": [
+    "Du hast Mitleid mit dem Rizinus",
+    "sollte ich nicht Mitleid haben mit Ninive"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Ortsangabe und Zahl (4,5; 4,11) – Nebenangaben",
+  "Gnadenformel im Einzelnen (4,2) – vollständig im Abschnitt [[JON.4.1-JON.4.4]]"
+ ],
+ "persons": [
+  "FIG-GOTT",
+  "FIG-JONA"
+ ],
+ "places": [
+  "FIG-ORT-NINIVE",
+  "FIG-ORT-HUETTE"
+ ],
+ "basis": [
+  {
+   "record": "CORE-JON-004-001-004",
+   "fingerprint": "c04ef092b270d29b"
+  },
+  {
+   "record": "CORE-JON-004-005-011",
+   "fingerprint": "ab6cb576a6d3de7a"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen nach dem Pilot; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

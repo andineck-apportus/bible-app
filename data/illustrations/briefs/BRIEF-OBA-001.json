@@ -17,9 +17,12 @@
         "FIG-GRUPPE-EDOM"
       ],
       "objects": [
-        "FIG-ORT-EDOM-GEBIRGE"
+        "FIG-ORT-EDOM-GEBIRGE",
+        "FIG-OBJ-MUENZEN"
       ],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-FEHLT"
+      ],
       "speech": [
         {
           "from": "FIG-GOTT",
@@ -29,7 +32,11 @@
           ]
         }
       ],
-      "action_de": "JHWH spricht zu Edom: Auch wenn du hoch baust wie der Adler und dein Nest zwischen die Sterne setzt, von dort stürze ich dich hinab.",
+      "action_de": "JHWH spricht zu Edom: Auch wenn du hoch baust wie der Adler und dein Nest zwischen die Sterne setzt, von dort stürze ich dich hinab. Edoms verborgene Schätze werden aufgespürt.",
+      "keywords": {
+        "de": "Von dort stürze ich dich hinab",
+        "gsw": "Vo dört stürz ich dich abe"
+      },
       "stage": {
         "in": {
           "FIG-GRUPPE-EDOM": "FIG-ORT-EDOM-GEBIRGE"
@@ -51,7 +58,13 @@
             "FIG-GRUPPE-EDOM",
             "act"
           ]
-        ]
+        ],
+        "floor_x": {
+          "FIG-OBJ-MUENZEN": 150
+        },
+        "at": {
+          "FIG-ZEICHEN-FEHLT": "FIG-OBJ-MUENZEN"
+        }
       }
     },
     {
@@ -69,7 +82,11 @@
         "FIG-ZEICHEN-ABSTAND"
       ],
       "speech": [],
-      "action_de": "Als Fremde Jerusalems Vermögen wegführten und über die Stadt das Los warfen, stand Edom abseits und war wie einer von ihnen; darum wird Schande es bedecken.",
+      "action_de": "Als Fremde Jerusalems Vermögen wegführten und über die Stadt das Los warfen, stand Edom abseits und war wie einer von ihnen; wegen der Gewalttat an seinem Bruder Jakob wird Schande es bedecken.",
+      "keywords": {
+        "de": "Wegen der Gewalttat an deinem Bruder Jakob",
+        "gsw": "Wäge de Gwalt a dim Brueder Jakob"
+      },
       "stage": {
         "back_side": "right",
         "before": true,
@@ -110,14 +127,19 @@
       "speech": [
         {
           "from": "FIG-GOTT",
-          "to": "FIG-GRUPPE-VOELKER",
-          "icons": [
-            "FIG-ZEICHEN-STUNDE",
-            "FIG-ZEICHEN-GERICHT"
-          ]
+          "to": "FIG-GRUPPE-EDOM",
+          "icons": [],
+          "word": {
+            "de": "Wie du getan hast, wird dir getan.",
+            "gsw": "Wie du gmacht häsch, wird mit dir gmacht."
+          }
         }
       ],
       "action_de": "Nahe ist der Tag JHWHs über alle Völker. Wie Edom getan hat, wird ihm getan werden; sein Tun fällt auf seinen Kopf zurück.",
+      "keywords": {
+        "de": "Nahe ist der Tag JHWHs über alle Völker",
+        "gsw": "Nööch isch de Taag vo JHWH über alli Völker"
+      },
       "stage": {
         "god_side": "left",
         "mood": {
@@ -155,6 +177,10 @@
       ],
       "speech": [],
       "action_de": "Retter ziehen auf den Berg Zion hinauf, um das Gebirge Esau zu richten, und die Königsherrschaft wird JHWH gehören.",
+      "keywords": {
+        "de": "Die Königsherrschaft wird JHWH gehören",
+        "gsw": "D Königsherrschaft wird em JHWH ghöre"
+      },
       "stage": {
         "god_side": "left",
         "back_side": "left",
@@ -183,27 +209,27 @@
     }
   ],
   "actions_de": [
-    "JHWH spricht zu Edom: Auch wenn du hoch baust wie der Adler und dein Nest zwischen die Sterne setzt, von dort stürze ich dich hinab.",
-    "Als Fremde Jerusalems Vermögen wegführten und über die Stadt das Los warfen, stand Edom abseits und war wie einer von ihnen; darum wird Schande es bedecken.",
+    "JHWH spricht zu Edom: Auch wenn du hoch baust wie der Adler und dein Nest zwischen die Sterne setzt, von dort stürze ich dich hinab. Edoms verborgene Schätze werden aufgespürt.",
+    "Als Fremde Jerusalems Vermögen wegführten und über die Stadt das Los warfen, stand Edom abseits und war wie einer von ihnen; wegen der Gewalttat an seinem Bruder Jakob wird Schande es bedecken.",
     "Nahe ist der Tag JHWHs über alle Völker. Wie Edom getan hat, wird ihm getan werden; sein Tun fällt auf seinen Kopf zurück.",
     "Retter ziehen auf den Berg Zion hinauf, um das Gebirge Esau zu richten, und die Königsherrschaft wird JHWH gehören."
   ],
   "captions_de": [
-    "Hochmut → Sturz: Edom wohnt hoch oben im Felsen; Gott (Strahlenkranz, goldener Pfeil) sagt: Von dort stürze ich dich hinab (Pfeil nach unten).",
-    "Abseits: Fremde ziehen in Jerusalems Tor und werfen das Los über die Stadt (Steine in der Hand, gepunkteter Bogen); Edom steht abseits (gestrichelte Linie) und wendet sich ab.",
-    "Tag JHWHs → Gericht: Gott kündigt den nahen Tag des Gerichts an (Sanduhr, Waage); goldene Pfeile führen zu allen Völkern und zu Edom: Wie Edom getan hat, wird ihm getan.",
-    "Retter → Gebirge Esau: Retter stehen auf dem Zion (vor Jerusalem) und richten das Gebirge Esau (Waage neben ihnen, Linie zum Gebirge); die Königsherrschaft gehört JHWH (Krone beim Strahlenkranz)."
+    "Hochmut → Sturz: Edom (rötliche Gruppe) wohnt hoch oben im Felsen; Gott (Strahlenkranz, goldener Pfeil) sagt: Von dort stürze ich dich hinab (Pfeil nach unten). Unten: Edoms Schätze sind weg (Münzen, Zeichen leer).",
+    "Abseits: Fremde ziehen in Jerusalems Tor und werfen das Los über die Stadt (Steine in der Hand, Bogen); Edom (rötliche Gruppe) steht abseits (gestrichelte Linie) und wendet sich ab.",
+    "Tag JHWHs → Gericht: Gott (Strahlenkranz) kündigt den nahen Tag an; goldene Pfeile führen zu allen Völkern und zu Edom (rötliche Gruppe); Gott sagt zu Edom: «Wie du getan hast, wird dir getan.»",
+    "Retter → Gebirge Esau: Retter (blaue Gruppe) stehen auf dem Zion vor Jerusalem und richten das Gebirge Esau (Waage, Linie zum Gebirge); die Königsherrschaft gehört JHWH (Krone beim Strahlenkranz)."
   ],
-  "interpretation_note_de": "Vier Felder für fünf Abschnitte: Hochmut und Sturz (mit der Plünderung, [[OBA.1.5-OBA.1.9]]), Edom am Tag der Not seines Bruders, der Tag JHWHs und JHWHs Königtum. Einzelheiten in den Abschnittsbildern.",
+  "interpretation_note_de": "Vier Szenen für fünf Abschnitte: Hochmut und Sturz Edoms mit der Plünderung ([[OBA.1.1-OBA.1.9]]), Edom am Tag der Not seines Bruders ([[OBA.1.10-OBA.1.14]]), der Tag JHWHs mit der Spiegelstrafe ([[OBA.1.15-OBA.1.18]]) und die Königsherrschaft JHWHs ([[OBA.1.19-OBA.1.21]]). Rettung auf dem Zion, Feuer und Stroh ([[OBA.1.17-OBA.1.18]]) sowie die Landverteilung zeigen die Abschnittsbilder. Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-OBA-001",
       "field": "summary",
-      "fingerprint": "8dc29a5337570239"
+      "fingerprint": "2a63fd2c11d76897"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -518,6 +544,619 @@
           "Abseits: Fremde ziehen in Jerusalems Tor und werfen das Los über die Stadt (Steine in der Hand, gepunkteter Bogen); Edom steht abseits (gestrichelte Linie) und wendet sich ab.",
           "Der Tag JHWHs: Gott kündigt den nahen Tag des Gerichts über alle Völker an, auch über Edom (Sanduhr, Waage).",
           "Gottes Königtum: Retter stehen auf dem Zion (vor Jerusalem) und richten das Gebirge Esau (Waage neben ihnen, Linie zum Gebirge); die Königsherrschaft gehört JHWH (Krone beim Strahlenkranz)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: Jona und Obadja neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "OBA.1.1-OBA.1.9",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-EDOM"
+            ],
+            "objects": [
+              "FIG-ORT-EDOM-GEBIRGE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GOTT",
+                "to": "FIG-GRUPPE-EDOM",
+                "icons": [
+                  "FIG-ZEICHEN-HINAB"
+                ]
+              }
+            ],
+            "action_de": "JHWH spricht zu Edom: Auch wenn du hoch baust wie der Adler und dein Nest zwischen die Sterne setzt, von dort stürze ich dich hinab.",
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-EDOM": "FIG-ORT-EDOM-GEBIRGE"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-EDOM": [
+                  0.5,
+                  0.46
+                ]
+              },
+              "god_side": "left",
+              "big_y": 50,
+              "mood": {
+                "FIG-GRUPPE-EDOM": "surprised"
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-EDOM",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "OBA.1.10-OBA.1.14",
+            "figures": [
+              "FIG-GRUPPE-EDOM",
+              "FIG-GRUPPE-VOELKER"
+            ],
+            "objects": [
+              "FIG-ORT-JERUSALEM",
+              "FIG-OBJ-LOS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [],
+            "action_de": "Als Fremde Jerusalems Vermögen wegführten und über die Stadt das Los warfen, stand Edom abseits und war wie einer von ihnen; darum wird Schande es bedecken.",
+            "stage": {
+              "back_side": "right",
+              "before": true,
+              "split": 1,
+              "hold": {
+                "FIG-GRUPPE-VOELKER": "FIG-OBJ-LOS"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-VOELKER",
+                  "FIG-ORT-JERUSALEM",
+                  "throw"
+                ]
+              ],
+              "pose": {
+                "FIG-GRUPPE-EDOM": "away"
+              },
+              "mood": {
+                "FIG-GRUPPE-EDOM": "calm",
+                "FIG-GRUPPE-VOELKER": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-EDOM": 28,
+                "FIG-GRUPPE-VOELKER": 90
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "OBA.1.15-OBA.1.18",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-VOELKER",
+              "FIG-GRUPPE-EDOM"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GOTT",
+                "to": "FIG-GRUPPE-VOELKER",
+                "icons": [
+                  "FIG-ZEICHEN-STUNDE",
+                  "FIG-ZEICHEN-GERICHT"
+                ]
+              }
+            ],
+            "action_de": "Nahe ist der Tag JHWHs über alle Völker. Wie Edom getan hat, wird ihm getan werden; sein Tun fällt auf seinen Kopf zurück.",
+            "stage": {
+              "god_side": "left",
+              "mood": {
+                "FIG-GRUPPE-VOELKER": "surprised",
+                "FIG-GRUPPE-EDOM": "worried"
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-VOELKER",
+                  "act"
+                ],
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-EDOM",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 4,
+            "reference": "OBA.1.19-OBA.1.21",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-ISRAEL"
+            ],
+            "objects": [
+              "FIG-ORT-JERUSALEM",
+              "FIG-ORT-EDOM-GEBIRGE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-KOENIGSHERRSCHAFT",
+              "FIG-ZEICHEN-GERICHT"
+            ],
+            "speech": [],
+            "action_de": "Retter ziehen auf den Berg Zion hinauf, um das Gebirge Esau zu richten, und die Königsherrschaft wird JHWH gehören.",
+            "stage": {
+              "god_side": "left",
+              "back_side": "left",
+              "big_side": "right",
+              "before": true,
+              "at": {
+                "FIG-ZEICHEN-KOENIGSHERRSCHAFT": "FIG-GOTT"
+              },
+              "beside": {
+                "FIG-ZEICHEN-GERICHT": "FIG-GRUPPE-ISRAEL"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-ISRAEL",
+                  "FIG-ORT-EDOM-GEBIRGE",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-ISRAEL": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-ISRAEL": 46
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "JHWH spricht zu Edom: Auch wenn du hoch baust wie der Adler und dein Nest zwischen die Sterne setzt, von dort stürze ich dich hinab.",
+          "Als Fremde Jerusalems Vermögen wegführten und über die Stadt das Los warfen, stand Edom abseits und war wie einer von ihnen; darum wird Schande es bedecken.",
+          "Nahe ist der Tag JHWHs über alle Völker. Wie Edom getan hat, wird ihm getan werden; sein Tun fällt auf seinen Kopf zurück.",
+          "Retter ziehen auf den Berg Zion hinauf, um das Gebirge Esau zu richten, und die Königsherrschaft wird JHWH gehören."
+        ],
+        "captions_de": [
+          "Hochmut → Sturz: Edom wohnt hoch oben im Felsen; Gott (Strahlenkranz, goldener Pfeil) sagt: Von dort stürze ich dich hinab (Pfeil nach unten).",
+          "Abseits: Fremde ziehen in Jerusalems Tor und werfen das Los über die Stadt (Steine in der Hand, gepunkteter Bogen); Edom steht abseits (gestrichelte Linie) und wendet sich ab.",
+          "Tag JHWHs → Gericht: Gott kündigt den nahen Tag des Gerichts an (Sanduhr, Waage); goldene Pfeile führen zu allen Völkern und zu Edom: Wie Edom getan hat, wird ihm getan.",
+          "Retter → Gebirge Esau: Retter stehen auf dem Zion (vor Jerusalem) und richten das Gebirge Esau (Waage neben ihnen, Linie zum Gebirge); die Königsherrschaft gehört JHWH (Krone beim Strahlenkranz)."
+        ],
+        "interpretation_note_de": "Vier Felder für fünf Abschnitte: Hochmut und Sturz (mit der Plünderung, [[OBA.1.5-OBA.1.9]]), Edom am Tag der Not seines Bruders, der Tag JHWHs und JHWHs Königtum. Einzelheiten in den Abschnittsbildern.",
+        "basis": [
+          {
+            "record": "SUM-CH-OBA-001",
+            "field": "summary",
+            "fingerprint": "8dc29a5337570239"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "OBA.1.1-OBA.1.9",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-EDOM"
+            ],
+            "objects": [
+              "FIG-ORT-EDOM-GEBIRGE",
+              "FIG-OBJ-MUENZEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FEHLT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GOTT",
+                "to": "FIG-GRUPPE-EDOM",
+                "icons": [
+                  "FIG-ZEICHEN-HINAB"
+                ]
+              }
+            ],
+            "action_de": "JHWH spricht zu Edom: Auch wenn du hoch baust wie der Adler und dein Nest zwischen die Sterne setzt, von dort stürze ich dich hinab. Edoms verborgene Schätze werden aufgespürt.",
+            "keywords": {
+              "de": "Von dort stürze ich dich hinab",
+              "gsw": "Vo dört stürz ich dich abe"
+            },
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-EDOM": "FIG-ORT-EDOM-GEBIRGE"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-EDOM": [
+                  0.5,
+                  0.46
+                ]
+              },
+              "god_side": "left",
+              "big_y": 50,
+              "mood": {
+                "FIG-GRUPPE-EDOM": "surprised"
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-EDOM",
+                  "act"
+                ]
+              ],
+              "floor_x": {
+                "FIG-OBJ-MUENZEN": 150
+              },
+              "at": {
+                "FIG-ZEICHEN-FEHLT": "FIG-OBJ-MUENZEN"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "OBA.1.10-OBA.1.14",
+            "figures": [
+              "FIG-GRUPPE-EDOM",
+              "FIG-GRUPPE-VOELKER"
+            ],
+            "objects": [
+              "FIG-ORT-JERUSALEM",
+              "FIG-OBJ-LOS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [],
+            "action_de": "Als Fremde Jerusalems Vermögen wegführten und über die Stadt das Los warfen, stand Edom abseits und war wie einer von ihnen; wegen der Gewalttat an seinem Bruder Jakob wird Schande es bedecken.",
+            "keywords": {
+              "de": "Wegen der Gewalttat an deinem Bruder Jakob",
+              "gsw": "Wäge de Gwalt a dim Brueder Jakob"
+            },
+            "stage": {
+              "back_side": "right",
+              "before": true,
+              "split": 1,
+              "hold": {
+                "FIG-GRUPPE-VOELKER": "FIG-OBJ-LOS"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-VOELKER",
+                  "FIG-ORT-JERUSALEM",
+                  "throw"
+                ]
+              ],
+              "pose": {
+                "FIG-GRUPPE-EDOM": "away"
+              },
+              "mood": {
+                "FIG-GRUPPE-EDOM": "calm",
+                "FIG-GRUPPE-VOELKER": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-EDOM": 28,
+                "FIG-GRUPPE-VOELKER": 90
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "OBA.1.15-OBA.1.18",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-VOELKER",
+              "FIG-GRUPPE-EDOM"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GOTT",
+                "to": "FIG-GRUPPE-EDOM",
+                "icons": [],
+                "word": {
+                  "de": "Wie du getan hast, wird dir getan.",
+                  "gsw": "Wie du gmacht häsch, wird mit dir gmacht."
+                }
+              }
+            ],
+            "action_de": "Nahe ist der Tag JHWHs über alle Völker. Wie Edom getan hat, wird ihm getan werden; sein Tun fällt auf seinen Kopf zurück.",
+            "keywords": {
+              "de": "Nahe ist der Tag JHWHs über alle Völker",
+              "gsw": "Nööch isch de Taag vo JHWH über alli Völker"
+            },
+            "stage": {
+              "god_side": "left",
+              "mood": {
+                "FIG-GRUPPE-VOELKER": "surprised",
+                "FIG-GRUPPE-EDOM": "worried"
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-VOELKER",
+                  "act"
+                ],
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-EDOM",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 4,
+            "reference": "OBA.1.19-OBA.1.21",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-ISRAEL"
+            ],
+            "objects": [
+              "FIG-ORT-JERUSALEM",
+              "FIG-ORT-EDOM-GEBIRGE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-KOENIGSHERRSCHAFT",
+              "FIG-ZEICHEN-GERICHT"
+            ],
+            "speech": [],
+            "action_de": "Retter ziehen auf den Berg Zion hinauf, um das Gebirge Esau zu richten, und die Königsherrschaft wird JHWH gehören.",
+            "keywords": {
+              "de": "Die Königsherrschaft wird JHWH gehören",
+              "gsw": "D Königsherrschaft wird em JHWH ghöre"
+            },
+            "stage": {
+              "god_side": "left",
+              "back_side": "left",
+              "big_side": "right",
+              "before": true,
+              "at": {
+                "FIG-ZEICHEN-KOENIGSHERRSCHAFT": "FIG-GOTT"
+              },
+              "beside": {
+                "FIG-ZEICHEN-GERICHT": "FIG-GRUPPE-ISRAEL"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-ISRAEL",
+                  "FIG-ORT-EDOM-GEBIRGE",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-ISRAEL": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-ISRAEL": 46
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "OBA.1.1-OBA.1.9",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-EDOM"
+            ],
+            "objects": [
+              "FIG-ORT-EDOM-GEBIRGE",
+              "FIG-OBJ-MUENZEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FEHLT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GOTT",
+                "to": "FIG-GRUPPE-EDOM",
+                "icons": [
+                  "FIG-ZEICHEN-HINAB"
+                ]
+              }
+            ],
+            "action_de": "JHWH spricht zu Edom: Auch wenn du hoch baust wie der Adler und dein Nest zwischen die Sterne setzt, von dort stürze ich dich hinab. Edoms verborgene Schätze werden aufgespürt.",
+            "keywords": {
+              "de": "Von dort stürze ich dich hinab",
+              "gsw": "Vo dört stürz ich dich abe"
+            },
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-EDOM": "FIG-ORT-EDOM-GEBIRGE"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-EDOM": [
+                  0.5,
+                  0.46
+                ]
+              },
+              "god_side": "left",
+              "big_y": 50,
+              "mood": {
+                "FIG-GRUPPE-EDOM": "surprised"
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-EDOM",
+                  "act"
+                ]
+              ],
+              "floor_x": {
+                "FIG-OBJ-MUENZEN": 150
+              },
+              "at": {
+                "FIG-ZEICHEN-FEHLT": "FIG-OBJ-MUENZEN"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "OBA.1.10-OBA.1.14",
+            "figures": [
+              "FIG-GRUPPE-EDOM",
+              "FIG-GRUPPE-VOELKER"
+            ],
+            "objects": [
+              "FIG-ORT-JERUSALEM",
+              "FIG-OBJ-LOS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [],
+            "action_de": "Als Fremde Jerusalems Vermögen wegführten und über die Stadt das Los warfen, stand Edom abseits und war wie einer von ihnen; wegen der Gewalttat an seinem Bruder Jakob wird Schande es bedecken.",
+            "keywords": {
+              "de": "Wegen der Gewalttat an deinem Bruder Jakob",
+              "gsw": "Wäge de Gwalt a dim Brueder Jakob"
+            },
+            "stage": {
+              "back_side": "right",
+              "before": true,
+              "split": 1,
+              "hold": {
+                "FIG-GRUPPE-VOELKER": "FIG-OBJ-LOS"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-VOELKER",
+                  "FIG-ORT-JERUSALEM",
+                  "throw"
+                ]
+              ],
+              "pose": {
+                "FIG-GRUPPE-EDOM": "away"
+              },
+              "mood": {
+                "FIG-GRUPPE-EDOM": "calm",
+                "FIG-GRUPPE-VOELKER": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-EDOM": 30,
+                "FIG-GRUPPE-VOELKER": 124
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "OBA.1.15-OBA.1.18",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-VOELKER",
+              "FIG-GRUPPE-EDOM"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GOTT",
+                "to": "FIG-GRUPPE-EDOM",
+                "icons": [],
+                "word": {
+                  "de": "Wie du getan hast, wird dir getan.",
+                  "gsw": "Wie du gmacht häsch, wird mit dir gmacht."
+                }
+              }
+            ],
+            "action_de": "Nahe ist der Tag JHWHs über alle Völker. Wie Edom getan hat, wird ihm getan werden; sein Tun fällt auf seinen Kopf zurück.",
+            "keywords": {
+              "de": "Nahe ist der Tag JHWHs über alle Völker",
+              "gsw": "Nööch isch de Taag vo JHWH über alli Völker"
+            },
+            "stage": {
+              "god_side": "left",
+              "mood": {
+                "FIG-GRUPPE-VOELKER": "surprised",
+                "FIG-GRUPPE-EDOM": "worried"
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-VOELKER",
+                  "act"
+                ],
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-EDOM",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 4,
+            "reference": "OBA.1.19-OBA.1.21",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-ISRAEL"
+            ],
+            "objects": [
+              "FIG-ORT-JERUSALEM",
+              "FIG-ORT-EDOM-GEBIRGE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-KOENIGSHERRSCHAFT",
+              "FIG-ZEICHEN-GERICHT"
+            ],
+            "speech": [],
+            "action_de": "Retter ziehen auf den Berg Zion hinauf, um das Gebirge Esau zu richten, und die Königsherrschaft wird JHWH gehören.",
+            "keywords": {
+              "de": "Die Königsherrschaft wird JHWH gehören",
+              "gsw": "D Königsherrschaft wird em JHWH ghöre"
+            },
+            "stage": {
+              "god_side": "left",
+              "back_side": "left",
+              "big_side": "right",
+              "before": true,
+              "at": {
+                "FIG-ZEICHEN-KOENIGSHERRSCHAFT": "FIG-GOTT"
+              },
+              "beside": {
+                "FIG-ZEICHEN-GERICHT": "FIG-GRUPPE-ISRAEL"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-ISRAEL",
+                  "FIG-ORT-EDOM-GEBIRGE",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-ISRAEL": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-ISRAEL": 46
+              }
+            }
+          }
         ]
       }
     }

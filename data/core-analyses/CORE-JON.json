@@ -1,0 +1,347 @@
+{
+ "id": "CORE-JON",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "book",
+ "reference": "JON",
+ "target": "SUM-BOOK-JON",
+ "children": [
+  "CORE-JON-001",
+  "CORE-JON-002",
+  "CORE-JON-003",
+  "CORE-JON-004"
+ ],
+ "core_de": "JHWH sendet Jona gegen Ninive; Jona flieht, wird im Sturm ins Meer geworfen und vom Fisch gerettet, predigt dann doch, und als Ninive umkehrt und Gott es verschont, zürnt Jona über Gottes Gnade – das Buch endet mit Gottes Frage, ob er mit der grossen Stadt nicht Mitleid haben soll.",
+ "purpose_de": "Das Buch erzählt von einem Propheten, der vor JHWHs Auftrag gegen Ninive flieht, gerettet wird, dann doch predigt und mit Gottes Erbarmen für die fremde Stadt hadert; es endet mit Gottes offener Frage (4,11), die auch an die Leser geht. Deutung: Es stellt Gottes Mitleid mit allen Menschen, auch mit fremden Völkern, gegen den Zorn dessen, der es ihnen nicht gönnt; Verfasser, Abfassungszeit und Adressaten nennt der Text nicht.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "vier Akte: Flucht – Rettung – Predigt – Streit",
+    "range": "JON",
+    "elements": [
+     {
+      "label": "Auftrag, Flucht, Sturm; Jona im Meer und im Fisch",
+      "ref": "JON.1.1-JON.1.17",
+      "role": "Akt 1"
+     },
+     {
+      "label": "Danklied im Fisch; ans trockene Land",
+      "ref": "JON.2.1-JON.2.10",
+      "role": "Akt 2"
+     },
+     {
+      "label": "Zweiter Auftrag, Ansage, Umkehr Ninives, Gott verschont",
+      "ref": "JON.3.1-JON.3.10",
+      "role": "Akt 3"
+     },
+     {
+      "label": "Jonas Zorn, Rizinus, Gottes Schlussfrage",
+      "ref": "JON.4.1-JON.4.11",
+      "role": "Akt 4"
+     },
+     {
+      "label": "Querstruktur: zwei parallele Hälften",
+      "ref": "JON.1.1-JON.4.11",
+      "role": "Parallele",
+      "child": "s2"
+     },
+     {
+      "label": "Querstruktur: Abstieg und Aufstieg",
+      "ref": "JON.1.3-JON.2.10",
+      "role": "Weg",
+      "child": "s3"
+     },
+     {
+      "label": "Schluss: Gottes Frage vom Kleineren aufs Grössere",
+      "ref": "JON.4.10-JON.4.11",
+      "role": "offenes Ende",
+      "child": "s4"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Erzähler",
+       "to": "Leser",
+       "refs": [
+        "JON.1.1-JON.4.11"
+       ]
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "gross",
+       "refs": [
+        "JON.1.2",
+        "JON.1.4",
+        "JON.1.17",
+        "JON.3.2",
+        "JON.4.1",
+        "JON.4.6",
+        "JON.4.11"
+       ],
+       "role": "grosse Stadt, grosser Sturm, grosser Fisch, grosser Zorn, grosse Freude"
+      },
+      {
+       "word": "bestimmen",
+       "refs": [
+        "JON.1.17",
+        "JON.4.6",
+        "JON.4.7",
+        "JON.4.8"
+       ],
+       "role": "Gott lenkt Fisch, Pflanze, Wurm und Wind"
+      }
+     ],
+     "open_end": [
+      {
+       "ref": "JON.4.11",
+       "note": "Schlussfrage ohne Antwort."
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "JON.4.2",
+       "kind": "Formel",
+       "note": "Gnadenformel: [[EXO.34.6]], [[JOL.2.13]]."
+      },
+      {
+       "ref": "JON.1.1",
+       "kind": "Person",
+       "note": "Jona, Sohn Amittais, auch in [[2KI.14.25]]."
+      }
+     ],
+     "text_forms": [
+      {
+       "ref": "JON.1.17",
+       "note": "In der hebräischen und deutschen Zählung ist [[JON.1.17]] Kapitel 2, Vers 1; Kapitel 2 zählt dort 2,2–11. Die Marken folgen der Navigationszählung (KJV)."
+      }
+     ]
+    },
+    "visual": "timeline",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "parallel",
+    "subtype": "parallele Hälften (Kap. 1–2 ↔ 3–4)",
+    "range": "JON",
+    "elements": [
+     {
+      "label": "Das Wort JHWHs ergeht an Jona: «Steh auf, geh nach Ninive» – zweimal",
+      "ref": "JON.1.1-JON.1.2",
+      "role": "Auftrag",
+      "links": [
+       "JON.3.1-JON.3.2"
+      ]
+     },
+     {
+      "label": "Jona flieht nach Tarschisch ↔ Jona geht nach Ninive",
+      "ref": "JON.1.3",
+      "role": "Antwort",
+      "links": [
+       "JON.3.3"
+      ]
+     },
+     {
+      "label": "Fremde wenden sich JHWH zu: die Seeleute fürchten JHWH und opfern ↔ die Leute von Ninive glauben an Gott und tun Busse",
+      "ref": "JON.1.16",
+      "role": "Fremde",
+      "links": [
+       "JON.3.5-JON.3.9"
+      ]
+     },
+     {
+      "label": "Jona betet: Dank im Fisch ↔ Zorn über Gottes Gnade",
+      "ref": "JON.2.1-JON.2.9",
+      "role": "Gebet",
+      "links": [
+       "JON.4.2-JON.4.3"
+      ]
+     },
+     {
+      "label": "JHWH bestimmt den Fisch ↔ JHWH bestimmt Rizinus, Wurm und Ostwind",
+      "ref": "JON.1.17",
+      "role": "Gott bestimmt",
+      "links": [
+       "JON.4.6-JON.4.8"
+      ]
+     }
+    ],
+    "features": {
+     "interpretation": [
+      {
+       "note": "Die Parallelführung der Hälften ist eine Beobachtung der Auslegung (Strukturkatalog: [[JON.1-JON.2]] ↔ [[JON.3-JON.4]]); die Glieder sind im Text belegt, die Gegenüberstellung nennt der Text nicht."
+      }
+     ]
+    },
+    "visual": "columns",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "reversal",
+    "subtype": "Abstieg und Aufstieg",
+    "range": "JON.1.3-JON.2.10",
+    "elements": [
+     {
+      "label": "hinab nach Jafo, ins Schiff, in den innersten Raum",
+      "ref": "JON.1.3-JON.1.5",
+      "role": "Abstieg"
+     },
+     {
+      "label": "ins Meer, in den Fisch",
+      "ref": "JON.1.15-JON.1.17",
+      "role": "Abstieg"
+     },
+     {
+      "label": "zu den Wurzeln der Berge",
+      "ref": "JON.2.6",
+      "role": "Tiefpunkt"
+     },
+     {
+      "label": "Da holtest du mein Leben aus der Grube herauf",
+      "ref": "JON.2.6",
+      "role": "Scharnier"
+     },
+     {
+      "label": "ans trockene Land",
+      "ref": "JON.2.10",
+      "role": "Endlage"
+     }
+    ],
+    "features": {
+     "interpretation": [
+      {
+       "note": "Die Bewegung als Ganzes ist eine Beobachtung der Auslegung (Strukturkatalog: Abstieg [[JON.1.3-JON.2.6]])."
+      }
+     ]
+    },
+    "visual": "stairs",
+    "basis": "text"
+   },
+   {
+    "id": "s4",
+    "pattern": "balance",
+    "subtype": "Schluss vom Kleineren aufs Grössere",
+    "range": "JON.4.10-JON.4.11",
+    "elements": [
+     {
+      "label": "Jona hat Mitleid mit dem Rizinus",
+      "ref": "JON.4.10",
+      "role": "kleiner"
+     },
+     {
+      "label": "Sollte Gott nicht Mitleid haben mit Ninive, der grossen Stadt?",
+      "ref": "JON.4.11",
+      "role": "grösser"
+     }
+    ],
+    "visual": "balance",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "JON.1.1-JON.1.3",
+   "text_de": "JHWH sendet Jona nach Ninive, gegen die Stadt auszurufen; Jona aber flieht nach Tarschisch, weg vom Angesicht JHWHs.",
+   "reason_de": "Anfang des Bogens (Kriterium 3): Auftrag und Flucht.",
+   "recognition_de": "Station 1: Jona flieht vor Gottes Auftrag zum Schiff.",
+   "keywords": [
+    "Steh auf, geh nach Ninive",
+    "um nach Tarschisch zu fliehen"
+   ]
+  },
+  {
+   "reference": "JON.1.4-JON.1.17",
+   "text_de": "Im Sturm, den JHWH schickt, werfen die Seeleute Jona auf sein Wort ins Meer; das Meer wird still, die Seeleute fürchten JHWH, und ein grosser Fisch verschlingt Jona.",
+   "reason_de": "Wendepunkt (Kriterium 2) mit Erkennungsmoment (Kriterium 4): Sturm und Fisch.",
+   "recognition_de": "Station 2: Jona wird ins Meer geworfen; der grosse Fisch.",
+   "keywords": [
+    "werft mich ins Meer",
+    "einen grossen Fisch"
+   ]
+  },
+  {
+   "reference": "JON.2.1-JON.2.10",
+   "text_de": "Im Bauch des Fisches dankt Jona für die Rettung aus der Tiefe – «Die Rettung gehört JHWH» –, und auf JHWHs Wort speit der Fisch ihn ans trockene Land.",
+   "reason_de": "Scharnier zwischen den beiden Hälften (Kriterium 2): Rettung des Propheten.",
+   "recognition_de": "Station 3: Jona betet im Fisch und kommt ans Land.",
+   "keywords": [
+    "Die Rettung gehört JHWH",
+    "ans trockene Land"
+   ]
+  },
+  {
+   "reference": "JON.3.1-JON.3.10",
+   "text_de": "Beim zweiten Auftrag ruft Jona: «Noch vierzig Tage, und Ninive wird umgestürzt!»; die Stadt glaubt an Gott und kehrt um, und Gott reut das Unheil, und er tut es nicht.",
+   "reason_de": "Trägt die Kernaussage (Kriterium 1): Umkehr Ninives und Gottes Erbarmen.",
+   "recognition_de": "Station 4: Ninive in Sacktuch; Gott verschont die Stadt.",
+   "keywords": [
+    "Noch vierzig Tage",
+    "dass sie umkehrten von ihrem bösen Weg"
+   ]
+  },
+  {
+   "reference": "JON.4.1-JON.4.11",
+   "text_de": "Jona zürnt, weil er wusste, dass JHWH ein gnädiger und barmherziger Gott ist; am Rizinus zeigt Gott ihm: Du hast Mitleid mit dem Rizinus – sollte ich nicht Mitleid haben mit Ninive?",
+   "reason_de": "Höhepunkt und offenes Ende des Buches (Kriterien 1 und 2).",
+   "recognition_de": "Station 5: Gott fragt Jona bei der verdorrten Staude nach Ninive.",
+   "keywords": [
+    "ein gnädiger und barmherziger Gott",
+    "sollte ich nicht Mitleid haben mit Ninive"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Kapitän, Befragung und Gebet der Seeleute (1,6–14) – im Kapitel [[JON.1]]",
+  "Einzelheiten des Danklieds und des Erlasses (2,3–9; 3,7–8) – in den Abschnitten",
+  "Zahlen (drei Tage, vierzig Tage, hundertzwanzigtausend) – Nebenangaben"
+ ],
+ "persons": [
+  "FIG-GOTT",
+  "FIG-JONA",
+  "FIG-GRUPPE-SEELEUTE",
+  "FIG-ROLLE-KOENIG",
+  "FIG-GRUPPE-MENGE"
+ ],
+ "places": [
+  "FIG-ORT-NINIVE",
+  "FIG-ORT-MEER-OFFEN",
+  "FIG-ORT-TIEFE",
+  "FIG-ORT-UFER",
+  "FIG-ORT-HUETTE"
+ ],
+ "basis": [
+  {
+   "record": "CORE-JON-001",
+   "fingerprint": "116750e07c85ddcf"
+  },
+  {
+   "record": "CORE-JON-002",
+   "fingerprint": "26124425b3cf5a41"
+  },
+  {
+   "record": "CORE-JON-003",
+   "fingerprint": "eb12ab227dccbe09"
+  },
+  {
+   "record": "CORE-JON-004",
+   "fingerprint": "7be6927b61b71ae7"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen nach dem Pilot; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

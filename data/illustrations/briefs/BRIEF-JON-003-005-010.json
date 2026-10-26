@@ -11,10 +11,11 @@
   "panels": [
     {
       "n": 1,
-      "reference": "JON.3.5",
+      "reference": "JON.3.5-JON.3.6",
       "figures": [
         "FIG-GOTT",
-        "FIG-GRUPPE-MENGE"
+        "FIG-GRUPPE-MENGE",
+        "FIG-ROLLE-KOENIG"
       ],
       "objects": [
         "FIG-ORT-NINIVE"
@@ -24,119 +25,197 @@
         "FIG-ZEICHEN-BUSSE"
       ],
       "speech": [],
-      "action_de": "Die Leute von Ninive glauben Gott; sie rufen ein Fasten aus und ziehen Sacktuch an, vom Grössten bis zum Kleinsten.",
+      "action_de": "Die Leute von Ninive glauben an Gott, rufen ein Fasten aus und ziehen Sacktuch an, vom Grössten bis zum Kleinsten; der König steht vom Thron auf, hüllt sich in Sacktuch und setzt sich in die Asche.",
+      "keywords": {
+        "de": "Da glaubten die Leute von Ninive an Gott",
+        "gsw": "Da händ d Lüüt vo Ninive a Gott glaubt"
+      },
       "stage": {
         "mood": {
-          "FIG-GRUPPE-MENGE": "calm"
+          "FIG-GRUPPE-MENGE": "pensive",
+          "FIG-ROLLE-KOENIG": "pensive"
+        },
+        "wear": {
+          "FIG-GRUPPE-MENGE": "sack",
+          "FIG-ROLLE-KOENIG": "sack"
+        },
+        "pose": {
+          "FIG-ROLLE-KOENIG": "sit"
         },
         "back_side": "right",
-        "wear": {
-          "FIG-GRUPPE-MENGE": "sack"
+        "at": {
+          "FIG-ZEICHEN-GLAUBEN": "FIG-GRUPPE-MENGE"
         },
         "god_side": "left"
       }
     },
     {
       "n": 2,
-      "reference": "JON.3.6-JON.3.9",
-      "figures": [
-        "FIG-ROLLE-KOENIG",
-        "FIG-GRUPPE-MENGE"
-      ],
-      "objects": [
-        "FIG-OBJ-RIND",
-        "FIG-OBJ-SCHAF"
-      ],
+      "reference": "JON.3.7-JON.3.9",
+      "figures": [],
+      "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-ROLLE-KOENIG",
-          "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-ZEICHEN-BUSSE",
-            "FIG-ZEICHEN-BETEN",
-            "FIG-ZEICHEN-UMKEHR"
-          ]
-        }
-      ],
-      "action_de": "Der König steht vom Thron auf, hüllt sich in Sacktuch und lässt ausrufen: Mensch und Vieh sollen fasten, zu Gott rufen und von ihrem bösen Weg umkehren.",
-      "stage": {
-        "mood": {
-          "FIG-ROLLE-KOENIG": "calm",
-          "FIG-GRUPPE-MENGE": "calm"
+      "speech": [],
+      "action_de": "Der König lässt ausrufen: Mensch und Vieh sollen nichts kosten, sich in Sacktuch hüllen, mit aller Kraft zu Gott rufen und umkehren, jeder von seinem bösen Weg; wer weiss, ob Gott umkehrt.",
+      "keywords": {
+        "de": "Auf Befehl des Königs",
+        "gsw": "Uf Befeel vom König"
+      },
+      "diagram": {
+        "visual": "grid",
+        "span": 2,
+        "cols": 4,
+        "speaker": "FIG-ROLLE-KOENIG",
+        "title": {
+          "de": "Wer weiss, ob Gott umkehrt?",
+          "gsw": "Wär weiss, öb Gott umcheert?"
         },
-        "wear": {
-          "FIG-ROLLE-KOENIG": "sack",
-          "FIG-GRUPPE-MENGE": "sack"
-        }
+        "cells": [
+          {
+            "a": {
+              "de": "Nichts kosten, nicht weiden, kein Wasser trinken",
+              "gsw": "Nüüt verchoschte, nöd weide, kei Wasser trinke"
+            },
+            "b": {
+              "de": "Mensch und Vieh",
+              "gsw": "Mänsch und Vee"
+            },
+            "icons": [
+              "FIG-ZEICHEN-FASTEN"
+            ]
+          },
+          {
+            "a": {
+              "de": "Sich in Sacktuch hüllen",
+              "gsw": "Sich in Sacktuech hülle"
+            },
+            "b": {
+              "de": "Mensch und Vieh",
+              "gsw": "Mänsch und Vee"
+            },
+            "icons": [
+              "FIG-ZEICHEN-BUSSE"
+            ]
+          },
+          {
+            "a": {
+              "de": "Mit aller Kraft zu Gott rufen",
+              "gsw": "Mit aller Chraft zu Gott rüefe"
+            },
+            "icons": [
+              "FIG-ZEICHEN-BETEN"
+            ]
+          },
+          {
+            "a": {
+              "de": "Umkehren vom bösen Weg und von der Gewalttat",
+              "gsw": "Umchere vom böse Wäg und vo de Gwalt"
+            },
+            "icons": [
+              "FIG-ZEICHEN-UMKEHR"
+            ],
+            "tone": "new"
+          }
+        ]
       }
     },
     {
       "n": 3,
       "reference": "JON.3.10",
-      "figures": [
-        "FIG-GOTT",
-        "FIG-GRUPPE-MENGE"
-      ],
-      "objects": [
-        "FIG-ORT-NINIVE"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-UMKEHR",
-        "FIG-ZEICHEN-ERBARMEN"
-      ],
+      "figures": [],
+      "objects": [],
+      "signs": [],
       "speech": [],
-      "action_de": "Gott sieht, dass sie von ihrem bösen Weg umkehren; das angekündigte Unheil reut ihn, und er führt es nicht aus.",
-      "stage": {
-        "at": {
-          "FIG-ZEICHEN-ERBARMEN": "FIG-GOTT",
-          "FIG-ZEICHEN-UMKEHR": "FIG-GRUPPE-MENGE"
-        },
-        "mood": {
-          "FIG-GRUPPE-MENGE": "smile"
-        },
-        "god_side": "right",
-        "arrows": [
-          [
-            "FIG-GRUPPE-MENGE",
-            "FIG-GOTT",
-            "act"
-          ]
+      "action_de": "Gott sieht ihre Taten, dass sie von ihrem bösen Weg umkehren; da reut ihn das Unheil, das er angekündigt hatte, und er tut es nicht.",
+      "keywords": {
+        "de": "Und er tat es nicht",
+        "gsw": "Und er hät s nöd gmacht"
+      },
+      "diagram": {
+        "visual": "arrows",
+        "span": 2,
+        "cols": 4,
+        "cells": [
+          {
+            "a": {
+              "de": "Sie kehren um von ihrem bösen Weg.",
+              "gsw": "Si chered um vo irem böse Wäg."
+            },
+            "icons": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-ZEICHEN-UMKEHR"
+            ]
+          },
+          {
+            "a": {
+              "de": "Gott sieht ihre Taten.",
+              "gsw": "Gott gseht ires Tue."
+            },
+            "icons": [
+              "FIG-GOTT",
+              "FIG-ZEICHEN-SEHEN"
+            ]
+          },
+          {
+            "a": {
+              "de": "Das Unheil reut ihn.",
+              "gsw": "S Unheil reut en."
+            },
+            "icons": [
+              "FIG-ZEICHEN-ERBARMEN"
+            ]
+          },
+          {
+            "a": {
+              "de": "Er tut es nicht.",
+              "gsw": "Er macht s nöd."
+            },
+            "icons": [
+              "FIG-ZEICHEN-UMSTURZ",
+              "FIG-ZEICHEN-NICHT"
+            ],
+            "tone": "new"
+          }
         ],
-        "wear": {
-          "FIG-GRUPPE-MENGE": "sack"
-        }
+        "links": [
+          null,
+          {
+            "de": "da",
+            "gsw": "da"
+          },
+          null
+        ]
       }
     }
   ],
   "actions_de": [
-    "Die Leute von Ninive glauben Gott; sie rufen ein Fasten aus und ziehen Sacktuch an, vom Grössten bis zum Kleinsten.",
-    "Der König steht vom Thron auf, hüllt sich in Sacktuch und lässt ausrufen: Mensch und Vieh sollen fasten, zu Gott rufen und von ihrem bösen Weg umkehren.",
-    "Gott sieht, dass sie von ihrem bösen Weg umkehren; das angekündigte Unheil reut ihn, und er führt es nicht aus."
+    "Die Leute von Ninive glauben an Gott, rufen ein Fasten aus und ziehen Sacktuch an, vom Grössten bis zum Kleinsten; der König steht vom Thron auf, hüllt sich in Sacktuch und setzt sich in die Asche.",
+    "Der König lässt ausrufen: Mensch und Vieh sollen nichts kosten, sich in Sacktuch hüllen, mit aller Kraft zu Gott rufen und umkehren, jeder von seinem bösen Weg; wer weiss, ob Gott umkehrt.",
+    "Gott sieht ihre Taten, dass sie von ihrem bösen Weg umkehren; da reut ihn das Unheil, das er angekündigt hatte, und er tut es nicht."
   ],
   "captions_de": [
-    "Die Stadt glaubt: Die Leute von Ninive glauben Gott (Strahlenkranz; Herz über ihnen), fasten und tragen Sacktuch (dunkle Kleider; oben Sacktuch und durchgestrichene Schale).",
-    "Der König im Sacktuch ruft zur Busse: Fasten und Sacktuch für Mensch und Vieh, zu Gott rufen (betende Hände) und umkehren (Pfeil).",
-    "Umkehr → Erbarmen: Die Leute von Ninive kehren um (Pfeil über ihnen); Gott (Strahlenkranz) sieht es (Pfeil zu ihm) und lässt das Unheil nicht kommen (Herz in Händen); Ninive bleibt stehen."
+    "Die Stadt tut Busse: Die Leute von Ninive glauben an Gott (Herz mit Strahlen, Gott als Strahlenkranz), tragen Sacktuch (dunkle Kleider) und fasten (Zeichen Busse); der König sitzt im Sacktuch auf dem Boden.",
+    "Der Erlass des Königs (Bild oben, Blase: «Wer weiss, ob Gott umkehrt?») in vier Feldern: fasten, Sacktuch, zu Gott rufen, umkehren vom bösen Weg.",
+    "Pfeilkette: Sie kehren um von ihrem bösen Weg (Menge, Umkehr) → Gott sieht ihre Taten (Strahlenkranz, Auge) → das Unheil reut ihn (Mitleid) → er tut es nicht (umstürzende Mauern, durchgestrichen)."
   ],
-  "interpretation_note_de": "Der König von Ninive ist ohne Namen. Sacktuch und Asche ([[JON.3.6]]) zeigt das Zeichen Busse. Dass es Gott «reut» ([[JON.3.10]]), zeigt das Bild als Erbarmen, ohne es zu deuten.",
+  "interpretation_note_de": "Drei Felder nach dem Ablauf «Glaube – Busse – Erlass – Gottes Reue» ([[JON.3.5-JON.3.10]]): die Busse der Stadt und des Königs als Szene ([[JON.3.5-JON.3.6]]), der Erlass als Raster mit allen vier Gliedern ([[JON.3.7-JON.3.8]]) und die Antwort Gottes als Pfeilkette ([[JON.3.10]]). «Wer weiss» ([[JON.3.9]]) bleibt Frage, keine Zusage. Dass es Gott «reut», zeigt das Zeichen Mitleid, ohne es zu deuten. Gottes Zorn ([[JON.3.9]]) erscheint nicht als Zeichen (Lexikonregel: das Zornzeichen nur für Menschen).",
   "basis": [
     {
       "record": "TU-JON-003-005-010",
       "field": "summary",
-      "fingerprint": "d113dfc3eefa79d6"
+      "fingerprint": "2efdf041d5313404"
     },
     {
       "record": "TRANS-JON-003-001-010-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JON.3.5",
-      "fingerprint": "7f6098d8301346ba"
+      "reference": "JON.3.5-JON.3.6",
+      "fingerprint": "4b74dfb36216b6bf"
     },
     {
       "record": "TRANS-JON-003-001-010-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "JON.3.6-JON.3.9",
-      "fingerprint": "8bccf29008959938"
+      "reference": "JON.3.7-JON.3.9",
+      "fingerprint": "93f6af367c9dcb04"
     },
     {
       "record": "TRANS-JON-003-001-010-DE-WORKING",
@@ -146,7 +225,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -468,6 +547,150 @@
           "Der König im Sacktuch ruft zur Busse: Fasten und Sacktuch für Mensch und Vieh, zu Gott rufen (betende Hände) und umkehren (Pfeil).",
           "Gottes Erbarmen: Gott sieht (Linie), dass sie umkehren (Pfeil), und lässt das Unheil nicht kommen (Herz in Händen); Ninive bleibt stehen."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: Jona und Obadja neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "JON.3.5",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-NINIVE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-GLAUBEN",
+              "FIG-ZEICHEN-BUSSE"
+            ],
+            "speech": [],
+            "action_de": "Die Leute von Ninive glauben Gott; sie rufen ein Fasten aus und ziehen Sacktuch an, vom Grössten bis zum Kleinsten.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "calm"
+              },
+              "back_side": "right",
+              "wear": {
+                "FIG-GRUPPE-MENGE": "sack"
+              },
+              "god_side": "left"
+            }
+          },
+          {
+            "n": 2,
+            "reference": "JON.3.6-JON.3.9",
+            "figures": [
+              "FIG-ROLLE-KOENIG",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-RIND",
+              "FIG-OBJ-SCHAF"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-KOENIG",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-BUSSE",
+                  "FIG-ZEICHEN-BETEN",
+                  "FIG-ZEICHEN-UMKEHR"
+                ]
+              }
+            ],
+            "action_de": "Der König steht vom Thron auf, hüllt sich in Sacktuch und lässt ausrufen: Mensch und Vieh sollen fasten, zu Gott rufen und von ihrem bösen Weg umkehren.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-KOENIG": "calm",
+                "FIG-GRUPPE-MENGE": "calm"
+              },
+              "wear": {
+                "FIG-ROLLE-KOENIG": "sack",
+                "FIG-GRUPPE-MENGE": "sack"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "JON.3.10",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-NINIVE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-UMKEHR",
+              "FIG-ZEICHEN-ERBARMEN"
+            ],
+            "speech": [],
+            "action_de": "Gott sieht, dass sie von ihrem bösen Weg umkehren; das angekündigte Unheil reut ihn, und er führt es nicht aus.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-ERBARMEN": "FIG-GOTT",
+                "FIG-ZEICHEN-UMKEHR": "FIG-GRUPPE-MENGE"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "smile"
+              },
+              "god_side": "right",
+              "arrows": [
+                [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-GOTT",
+                  "act"
+                ]
+              ],
+              "wear": {
+                "FIG-GRUPPE-MENGE": "sack"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Die Leute von Ninive glauben Gott; sie rufen ein Fasten aus und ziehen Sacktuch an, vom Grössten bis zum Kleinsten.",
+          "Der König steht vom Thron auf, hüllt sich in Sacktuch und lässt ausrufen: Mensch und Vieh sollen fasten, zu Gott rufen und von ihrem bösen Weg umkehren.",
+          "Gott sieht, dass sie von ihrem bösen Weg umkehren; das angekündigte Unheil reut ihn, und er führt es nicht aus."
+        ],
+        "captions_de": [
+          "Die Stadt glaubt: Die Leute von Ninive glauben Gott (Strahlenkranz; Herz über ihnen), fasten und tragen Sacktuch (dunkle Kleider; oben Sacktuch und durchgestrichene Schale).",
+          "Der König im Sacktuch ruft zur Busse: Fasten und Sacktuch für Mensch und Vieh, zu Gott rufen (betende Hände) und umkehren (Pfeil).",
+          "Umkehr → Erbarmen: Die Leute von Ninive kehren um (Pfeil über ihnen); Gott (Strahlenkranz) sieht es (Pfeil zu ihm) und lässt das Unheil nicht kommen (Herz in Händen); Ninive bleibt stehen."
+        ],
+        "interpretation_note_de": "Der König von Ninive ist ohne Namen. Sacktuch und Asche ([[JON.3.6]]) zeigt das Zeichen Busse. Dass es Gott «reut» ([[JON.3.10]]), zeigt das Bild als Erbarmen, ohne es zu deuten.",
+        "basis": [
+          {
+            "record": "TU-JON-003-005-010",
+            "field": "summary",
+            "fingerprint": "d113dfc3eefa79d6"
+          },
+          {
+            "record": "TRANS-JON-003-001-010-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JON.3.5",
+            "fingerprint": "7f6098d8301346ba"
+          },
+          {
+            "record": "TRANS-JON-003-001-010-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JON.3.6-JON.3.9",
+            "fingerprint": "8bccf29008959938"
+          },
+          {
+            "record": "TRANS-JON-003-001-010-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "JON.3.10",
+            "fingerprint": "5366b6844fcabacd"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]
