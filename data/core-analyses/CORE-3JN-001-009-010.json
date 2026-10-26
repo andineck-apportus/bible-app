@@ -1,0 +1,142 @@
+{
+ "id": "CORE-3JN-001-009-010",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "3JN.1.9-3JN.1.10",
+ "target": "TU-3JN-001-009-010",
+ "core_de": "Der Älteste hat der Gemeinde geschrieben, doch Diotrephes, der der Erste sein will, nimmt ihn nicht an; darum wird er bei seinem Kommen dessen Taten zur Sprache bringen: Diotrephes zieht mit bösen Worten über ihn her, nimmt die Geschwister nicht auf, hindert die, die es wollen, und stösst sie aus der Gemeinde.",
+ "mode": "statement",
+ "voice": {
+  "speaker": "FIG-DER-AELTESTE",
+  "addressee": "FIG-GAIUS"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "cause",
+    "subtype": "Ablehnung → «darum» Ankündigung",
+    "range": "3JN.1.9-3JN.1.10",
+    "elements": [
+     {
+      "label": "Ich habe der Gemeinde etwas geschrieben; aber Diotrephes, der unter ihnen der Erste sein will, nimmt uns nicht an",
+      "ref": "3JN.1.9",
+      "role": "Anlass"
+     },
+     {
+      "label": "Darum werde ich, wenn ich komme, seine Taten zur Sprache bringen, die er tut",
+      "ref": "3JN.1.10",
+      "role": "Ankündigung"
+     },
+     {
+      "label": "seine Taten in Steigerung",
+      "ref": "3JN.1.10",
+      "role": "Taten",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-DER-AELTESTE",
+       "to": "FIG-GAIUS"
+      }
+     ],
+     "modality": [
+      {
+       "ref": "3JN.1.10",
+       "kind": "Ankündigung",
+       "note": "«werde ich zur Sprache bringen» – angekündigt, nicht berichtet."
+      }
+     ]
+    },
+    "visual": "arrows",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "climax",
+    "subtype": "Steigerung: «und damit nicht zufrieden»",
+    "range": "3JN.1.10",
+    "elements": [
+     {
+      "label": "Mit bösen Worten zieht er über uns her",
+      "ref": "3JN.1.10",
+      "role": "Stufe 1"
+     },
+     {
+      "label": "nimmt selbst die Geschwister nicht auf",
+      "ref": "3JN.1.10",
+      "role": "Stufe 2"
+     },
+     {
+      "label": "hindert die, die es wollen",
+      "ref": "3JN.1.10",
+      "role": "Stufe 3"
+     },
+     {
+      "label": "und stösst sie aus der Gemeinde hinaus",
+      "ref": "3JN.1.10",
+      "role": "Stufe 4"
+     }
+    ],
+    "features": {
+     "interpretation": [
+      {
+       "note": "Diotrephes' Stellung (Gemeindeleiter, Hausherr?) und seine Gründe nennt der Text nicht; er gibt nur die Sicht des Ältesten."
+      }
+     ]
+    },
+    "visual": "stairs",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "3JN.1.9",
+   "text_de": "Der Älteste hat der Gemeinde etwas geschrieben, aber Diotrephes, der unter ihnen der Erste sein will, nimmt «uns» nicht an.",
+   "reason_de": "Anlass des Konflikts (Kriterien 2 und 4): Diotrephes als Gegenbild zu Gaius.",
+   "recognition_de": "Diotrephes an der Tür weist ab.",
+   "keywords": [
+    "Diotrephes, der unter ihnen der Erste sein will",
+    "nimmt uns nicht an"
+   ]
+  },
+  {
+   "reference": "3JN.1.10",
+   "text_de": "Darum wird der Älteste, wenn er kommt, seine Taten zur Sprache bringen: Mit bösen Worten zieht Diotrephes über «uns» her; damit nicht zufrieden, nimmt er selbst die Geschwister nicht auf, hindert die, die es wollen, und stösst sie aus der Gemeinde hinaus.",
+   "reason_de": "Eine Steigerung zählt als ein Moment mit allen Stufen (structure s2).",
+   "recognition_de": "Treppe: böse Worte → Geschwister nicht aufnehmen → hindern → aus der Gemeinde stossen.",
+   "keywords": [
+    "Mit bösen Worten zieht er über uns her",
+    "stösst sie aus der Gemeinde hinaus"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Was der Älteste der Gemeinde geschrieben hat (1,9), sagt der Text nicht"
+ ],
+ "persons": [
+  "FIG-DER-AELTESTE",
+  "FIG-DIOTREPHES",
+  "FIG-GRUPPE-REISENDE",
+  "FIG-GRUPPE-GEMEINDE"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "3JN.1.9-3JN.1.10",
+   "fingerprint": "a3b9946c6eb6f78f"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen nach dem Pilot; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

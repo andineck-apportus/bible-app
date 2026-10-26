@@ -20,14 +20,27 @@
         "FIG-ORT-HAUS-OFFEN",
         "FIG-OBJ-BROT"
       ],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-GASTFREUNDSCHAFT"
+      ],
       "speech": [],
-      "action_de": "Gaius wird gelobt, weil er reisende Glaubensgeschwister aufnimmt und unterstützt.",
+      "action_de": "Gaius handelt treu an den reisenden Geschwistern, sogar an Fremden: Er nimmt sie auf und rüstet sie für die Weiterreise aus, wie es Gottes würdig ist.",
+      "keywords": {
+        "de": "Mitarbeiter für die Wahrheit",
+        "gsw": "Mitarbeiter für d Wahrheit"
+      },
+      "names": {
+        "FIG-GAIUS": {
+          "de": "Gaius",
+          "gsw": "Gaius"
+        }
+      },
       "stage": {
+        "back_side": "left",
+        "before": true,
         "hold": {
           "FIG-GAIUS": "FIG-OBJ-BROT"
         },
-        "back_side": "left",
         "arrows": [
           [
             "FIG-GAIUS",
@@ -35,13 +48,12 @@
             "act"
           ]
         ],
+        "beside": {
+          "FIG-ZEICHEN-GASTFREUNDSCHAFT": "FIG-GAIUS"
+        },
         "mood": {
           "FIG-GAIUS": "smile",
           "FIG-GRUPPE-REISENDE": "smile"
-        },
-        "x": {
-          "FIG-GAIUS": 78,
-          "FIG-GRUPPE-REISENDE": 140
         }
       }
     },
@@ -49,63 +61,117 @@
       "n": 2,
       "reference": "3JN.1.9-3JN.1.10",
       "figures": [
+        "FIG-DER-AELTESTE",
         "FIG-DIOTREPHES",
         "FIG-GRUPPE-REISENDE"
       ],
       "objects": [
-        "FIG-GRUPPE-GEMEINDE"
+        "FIG-OBJ-BRIEF"
       ],
       "signs": [
         "FIG-ZEICHEN-ABLEHNEN",
-        "FIG-ZEICHEN-AUSSCHLUSS"
+        "FIG-ZEICHEN-VERSCHLOSSEN"
       ],
       "speech": [],
-      "action_de": "Diotrephes weist die Reisenden ab: ein Konflikt um Leitung und Anerkennung.",
+      "action_de": "Der Älteste hat der Gemeinde geschrieben, aber Diotrephes, der der Erste sein will, nimmt weder ihn noch die reisenden Geschwister auf.",
+      "keywords": {
+        "de": "Diotrephes, der unter ihnen der Erste sein will",
+        "gsw": "De Diotrephes, wo under ine de Erscht sii wott"
+      },
+      "names": {
+        "FIG-DIOTREPHES": {
+          "de": "Diotrephes",
+          "gsw": "Diotrephes"
+        }
+      },
       "stage": {
-        "back_side": "left",
         "split": 1,
+        "hold": {
+          "FIG-DER-AELTESTE": "FIG-OBJ-BRIEF"
+        },
         "beside": {
           "FIG-ZEICHEN-ABLEHNEN": "FIG-DIOTREPHES"
         },
-        "pose": {
-          "FIG-GRUPPE-REISENDE": "away"
+        "at": {
+          "FIG-ZEICHEN-VERSCHLOSSEN": "FIG-DIOTREPHES"
         },
         "mood": {
-          "FIG-DIOTREPHES": "earnest",
+          "FIG-DER-AELTESTE": "worried",
+          "FIG-DIOTREPHES": "angry",
           "FIG-GRUPPE-REISENDE": "worried"
+        }
+      }
+    },
+    {
+      "n": 3,
+      "reference": "3JN.1.11-3JN.1.12",
+      "figures": [
+        "FIG-DER-AELTESTE",
+        "FIG-GAIUS",
+        "FIG-DEMETRIUS"
+      ],
+      "objects": [],
+      "signs": [
+        "FIG-ZEICHEN-WAHRHEIT"
+      ],
+      "speech": [
+        {
+          "from": "FIG-DER-AELTESTE",
+          "to": "FIG-GAIUS",
+          "icons": [
+            "FIG-ZEICHEN-GUTE-WERKE"
+          ],
+          "word": {
+            "de": "Ahme das Gute nach!",
+            "gsw": "Mach s Guet nache!"
+          }
+        }
+      ],
+      "action_de": "Gaius soll das Gute nachahmen, nicht das Böse; Demetrius hat von allen ein gutes Zeugnis, auch von der Wahrheit selbst und vom Ältesten.",
+      "keywords": {
+        "de": "Wer Gutes tut, ist aus Gott",
+        "gsw": "Wer Guets tuet, isch us Gott"
+      },
+      "names": {
+        "FIG-DEMETRIUS": {
+          "de": "Demetrius",
+          "gsw": "Demetrius"
+        }
+      },
+      "letter": true,
+      "stage": {
+        "split": 1,
+        "at": {
+          "FIG-ZEICHEN-WAHRHEIT": "FIG-DEMETRIUS"
         },
-        "x": {
-          "FIG-DIOTREPHES": 76,
-          "FIG-GRUPPE-REISENDE": 140
-        },
-        "arrows": [
-          [
-            "FIG-DIOTREPHES",
-            "FIG-GRUPPE-REISENDE",
-            "act"
-          ]
-        ]
+        "mood": {
+          "FIG-DER-AELTESTE": "earnest",
+          "FIG-GAIUS": "calm",
+          "FIG-DEMETRIUS": "smile"
+        }
       }
     }
   ],
   "actions_de": [
-    "Gaius wird gelobt, weil er reisende Glaubensgeschwister aufnimmt und unterstützt.",
-    "Diotrephes weist die Reisenden ab: ein Konflikt um Leitung und Anerkennung."
+    "Gaius handelt treu an den reisenden Geschwistern, sogar an Fremden: Er nimmt sie auf und rüstet sie für die Weiterreise aus, wie es Gottes würdig ist.",
+    "Der Älteste hat der Gemeinde geschrieben, aber Diotrephes, der der Erste sein will, nimmt weder ihn noch die reisenden Geschwister auf.",
+    "Gaius soll das Gute nachahmen, nicht das Böse; Demetrius hat von allen ein gutes Zeugnis, auch von der Wahrheit selbst und vom Ältesten."
   ],
   "captions_de": [
-    "Gastfreundschaft: Gaius nimmt reisende Geschwister in sein Haus auf (offene, helle Tür) und gibt ihnen Brot (Pfeil von Gaius zu den Reisenden).",
-    "Diotrephes → Reisende abgewiesen: Diotrephes (Tür am Gewand) steht vor der Gemeinde und weist die Reisenden ab (Pfeil zu ihnen, Person mit gekreuzten Armen, Trennlinie)."
+    "Gastfreundschaft: Gaius vor seinem offenen Haus (warmes Licht) reicht den reisenden Geschwistern (Wanderstab, Bündel) Brot (Pfeil; Hütte und offene Hände).",
+    "Abweisung: Der Älteste ist fern (gestrichelte Linie) mit seinem Brief; Diotrephes vor der verschlossenen Tür verschränkt die Arme; die reisenden Geschwister werden abgewiesen.",
+    "Das Gute nachahmen: Der Älteste schreibt Gaius: «Ahme das Gute nach!» (offene Hand und Brot); Demetrius mit dem Empfehlungsbrief ist gut bezeugt (grüner Haken)."
   ],
-  "interpretation_note_de": "Zwei Felder: Gastfreundschaft des Gaius und Ablehnung durch Diotrephes. Gaius ist an seiner Farbe und der offenen Tür am Gewand zu erkennen, Diotrephes an der geschlossenen Tür am Gewand.",
+  "interpretation_note_de": "Drei Comic-Szenen zu den Stationen der Kernanalyse: Gaius nimmt die reisenden Geschwister auf ([[3JN.1.1-3JN.1.8]]), Diotrephes weist sie ab ([[3JN.1.9-3JN.1.10]]), und Gaius soll das Gute nachahmen; Demetrius wird empfohlen ([[3JN.1.11-3JN.1.12]]). Das Buch hat nur ein Kapitel. Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-BOOK-3JN",
       "field": "summary",
-      "fingerprint": "389191a9e9a469e3"
+      "fingerprint": "0515fab0c6ec71c5"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -371,6 +437,109 @@
           "Gastfreundschaft: Gaius nimmt reisende Geschwister in sein Haus auf (offene, helle Tür) und gibt ihnen Brot (Pfeil von Gaius zu den Reisenden).",
           "Diotrephes → Reisende abgewiesen: Diotrephes (Tür am Gewand) steht vor der Gemeinde und weist die Reisenden ab (Pfeil zu ihnen, abwehrende Hand, Trennlinie)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "3JN.1.1-3JN.1.8",
+            "figures": [
+              "FIG-GAIUS",
+              "FIG-GRUPPE-REISENDE"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS-OFFEN",
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Gaius wird gelobt, weil er reisende Glaubensgeschwister aufnimmt und unterstützt.",
+            "stage": {
+              "hold": {
+                "FIG-GAIUS": "FIG-OBJ-BROT"
+              },
+              "back_side": "left",
+              "arrows": [
+                [
+                  "FIG-GAIUS",
+                  "FIG-GRUPPE-REISENDE",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GAIUS": "smile",
+                "FIG-GRUPPE-REISENDE": "smile"
+              },
+              "x": {
+                "FIG-GAIUS": 78,
+                "FIG-GRUPPE-REISENDE": 140
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "3JN.1.9-3JN.1.10",
+            "figures": [
+              "FIG-DIOTREPHES",
+              "FIG-GRUPPE-REISENDE"
+            ],
+            "objects": [
+              "FIG-GRUPPE-GEMEINDE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ABLEHNEN",
+              "FIG-ZEICHEN-AUSSCHLUSS"
+            ],
+            "speech": [],
+            "action_de": "Diotrephes weist die Reisenden ab: ein Konflikt um Leitung und Anerkennung.",
+            "stage": {
+              "back_side": "left",
+              "split": 1,
+              "beside": {
+                "FIG-ZEICHEN-ABLEHNEN": "FIG-DIOTREPHES"
+              },
+              "pose": {
+                "FIG-GRUPPE-REISENDE": "away"
+              },
+              "mood": {
+                "FIG-DIOTREPHES": "earnest",
+                "FIG-GRUPPE-REISENDE": "worried"
+              },
+              "x": {
+                "FIG-DIOTREPHES": 76,
+                "FIG-GRUPPE-REISENDE": 140
+              },
+              "arrows": [
+                [
+                  "FIG-DIOTREPHES",
+                  "FIG-GRUPPE-REISENDE",
+                  "act"
+                ]
+              ]
+            }
+          }
+        ],
+        "actions_de": [
+          "Gaius wird gelobt, weil er reisende Glaubensgeschwister aufnimmt und unterstützt.",
+          "Diotrephes weist die Reisenden ab: ein Konflikt um Leitung und Anerkennung."
+        ],
+        "captions_de": [
+          "Gastfreundschaft: Gaius nimmt reisende Geschwister in sein Haus auf (offene, helle Tür) und gibt ihnen Brot (Pfeil von Gaius zu den Reisenden).",
+          "Diotrephes → Reisende abgewiesen: Diotrephes (Tür am Gewand) steht vor der Gemeinde und weist die Reisenden ab (Pfeil zu ihnen, Person mit gekreuzten Armen, Trennlinie)."
+        ],
+        "interpretation_note_de": "Zwei Felder: Gastfreundschaft des Gaius und Ablehnung durch Diotrephes. Gaius ist an seiner Farbe und der offenen Tür am Gewand zu erkennen, Diotrephes an der geschlossenen Tür am Gewand.",
+        "basis": [
+          {
+            "record": "SUM-BOOK-3JN",
+            "field": "summary",
+            "fingerprint": "389191a9e9a469e3"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

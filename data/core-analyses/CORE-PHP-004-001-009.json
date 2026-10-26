@@ -1,0 +1,250 @@
+{
+ "id": "CORE-PHP-004-001-009",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "PHP.4.1-PHP.4.9",
+ "target": "TU-PHP-004-001-009",
+ "core_de": "Die Philipper sollen fest im Herrn stehen; Euodia und Syntyche bittet Paulus, eines Sinnes zu sein, und einen treuen Gefährten, ihnen zu helfen; die Gemeinde soll sich allezeit im Herrn freuen, ihre Güte zeigen, sich um nichts sorgen, sondern alles im Gebet vor Gott bringen – dann bewahrt der Friede Gottes ihre Herzen –, auf alles Wahre, Ehrbare, Gerechte, Reine, Liebenswerte und Gutklingende bedacht sein und tun, was sie an Paulus gesehen haben, und der Gott des Friedens wird mit ihnen sein.",
+ "mode": "instruction",
+ "voice": {
+  "speaker": "FIG-PAULUS",
+  "addressee": "FIG-GRUPPE-GLAUBENDE"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "series",
+    "subtype": "Reihe von Mahnungen mit zwei Friedenszusagen",
+    "range": "PHP.4.1-PHP.4.9",
+    "elements": [
+     {
+      "label": "Darum, meine geliebten Geschwister, meine Freude und mein Siegeskranz: So steht fest im Herrn!",
+      "ref": "PHP.4.1",
+      "role": "1"
+     },
+     {
+      "label": "Euodia und Syntyche: eines Sinnes sein im Herrn; du, treuer Gefährte: hilf ihnen – sie haben mit mir im Evangelium gekämpft, mit Klemens und meinen übrigen Mitarbeitern, deren Namen im Buch des Lebens stehen",
+      "ref": "PHP.4.2-PHP.4.3",
+      "role": "2"
+     },
+     {
+      "label": "Freut euch im Herrn allezeit! Noch einmal sage ich: Freut euch!",
+      "ref": "PHP.4.4",
+      "role": "3"
+     },
+     {
+      "label": "Eure Güte werde allen Menschen bekannt. Der Herr ist nahe.",
+      "ref": "PHP.4.5",
+      "role": "4"
+     },
+     {
+      "label": "Nicht sorgen, sondern beten → Friede Gottes",
+      "ref": "PHP.4.6-PHP.4.7",
+      "role": "5",
+      "child": "s2"
+     },
+     {
+      "label": "Darauf seid bedacht",
+      "ref": "PHP.4.8",
+      "role": "6",
+      "child": "s3"
+     },
+     {
+      "label": "Was ihr gelernt und empfangen und gehört und gesehen habt an mir, das tut! Und der Gott des Friedens wird mit euch sein",
+      "ref": "PHP.4.9",
+      "role": "7"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-PAULUS",
+       "to": "FIG-GRUPPE-GLAUBENDE"
+      },
+      {
+       "who": "FIG-PAULUS",
+       "to": "Euodia und Syntyche; ein treuer Gefährte",
+       "ref": "PHP.4.2-PHP.4.3"
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "Freude / sich freuen",
+       "refs": [
+        "PHP.1.4",
+        "PHP.1.18",
+        "PHP.1.25",
+        "PHP.2.2",
+        "PHP.2.17",
+        "PHP.2.18",
+        "PHP.2.28",
+        "PHP.2.29",
+        "PHP.3.1",
+        "PHP.4.1",
+        "PHP.4.4",
+        "PHP.4.10"
+       ],
+       "role": "Leitwort des Briefes"
+      },
+      {
+       "word": "Friede",
+       "refs": [
+        "PHP.4.7",
+        "PHP.4.9"
+       ],
+       "role": "Friede Gottes (4,7) – Gott des Friedens (4,9): zwei Zusagen am Schluss zweier Mahnungen"
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "cause",
+    "subtype": "«nicht … sondern» → «und» Zusage",
+    "range": "PHP.4.6-PHP.4.7",
+    "elements": [
+     {
+      "label": "Sorgt euch um nichts",
+      "ref": "PHP.4.6",
+      "role": "nicht"
+     },
+     {
+      "label": "sondern in allem lasst eure Anliegen durch Gebet und Flehen mit Danksagung vor Gott kund werden",
+      "ref": "PHP.4.6",
+      "role": "sondern"
+     },
+     {
+      "label": "Und der Friede Gottes, der allen Verstand übersteigt, wird eure Herzen und eure Gedanken bewahren in Christus Jesus",
+      "ref": "PHP.4.7",
+      "role": "Zusage"
+     }
+    ],
+    "features": {
+     "modality": [
+      {
+       "ref": "PHP.4.7",
+       "kind": "Zusage",
+       "note": "«wird bewahren» ist Zusage, keine Bedingung, die erfüllt sein müsste."
+      }
+     ]
+    },
+    "visual": "arrows",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "series",
+    "subtype": "sechs «was …» und zwei «wenn …» (Tugendreihe)",
+    "range": "PHP.4.8",
+    "elements": [
+     {
+      "label": "was wahr ist",
+      "ref": "PHP.4.8",
+      "role": "1"
+     },
+     {
+      "label": "was ehrbar",
+      "ref": "PHP.4.8",
+      "role": "2"
+     },
+     {
+      "label": "was gerecht",
+      "ref": "PHP.4.8",
+      "role": "3"
+     },
+     {
+      "label": "was rein",
+      "ref": "PHP.4.8",
+      "role": "4"
+     },
+     {
+      "label": "was liebenswert",
+      "ref": "PHP.4.8",
+      "role": "5"
+     },
+     {
+      "label": "was einen guten Ruf hat",
+      "ref": "PHP.4.8",
+      "role": "6"
+     },
+     {
+      "label": "wenn es irgendeine Tugend gibt",
+      "ref": "PHP.4.8",
+      "role": "7"
+     },
+     {
+      "label": "und wenn es irgendein Lob gibt: darauf seid bedacht!",
+      "ref": "PHP.4.8",
+      "role": "8"
+     }
+    ],
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "PHP.4.1-PHP.4.3",
+   "text_de": "Darum sollen die geliebten Geschwister, Paulus' Freude und Siegeskranz, fest im Herrn stehen; Euodia und Syntyche bittet er, eines Sinnes zu sein im Herrn, und einen treuen Gefährten, ihnen zu helfen, denn sie haben mit ihm im Evangelium gekämpft.",
+   "reason_de": "Einzige namentliche Mahnung des Briefes (Kriterien 2 und 4): zwei Frauen sollen eins werden.",
+   "recognition_de": "Paulus an Euodia und Syntyche: Seid eines Sinnes im Herrn!",
+   "keywords": [
+    "So steht fest im Herrn",
+    "Euodia bitte ich, und Syntyche bitte ich, eines Sinnes zu sein"
+   ]
+  },
+  {
+   "reference": "PHP.4.4-PHP.4.7",
+   "text_de": "Sie sollen sich im Herrn allezeit freuen – Paulus sagt es noch einmal –, ihre Güte allen Menschen zeigen, denn der Herr ist nahe; sie sollen sich um nichts sorgen, sondern in allem ihre Anliegen durch Gebet und Flehen mit Danksagung vor Gott bringen, und der Friede Gottes, der allen Verstand übersteigt, wird ihre Herzen und Gedanken in Christus Jesus bewahren.",
+   "reason_de": "Leitwort Freude in der Doppelform und die Kette «nicht sorgen – sondern beten → Friede» (Kriterium 2, structure s2).",
+   "recognition_de": "Pfeilkette: Sorgt euch um nichts → bringt alles im Gebet vor Gott → der Friede Gottes bewahrt eure Herzen.",
+   "keywords": [
+    "Freut euch im Herrn allezeit",
+    "Sorgt euch um nichts",
+    "der Friede Gottes, der allen Verstand übersteigt"
+   ]
+  },
+  {
+   "reference": "PHP.4.8-PHP.4.9",
+   "text_de": "Im Übrigen sollen sie auf alles bedacht sein, was wahr, ehrbar, gerecht, rein, liebenswert ist und einen guten Ruf hat, auf jede Tugend und jedes Lob; was sie an Paulus gelernt, empfangen, gehört und gesehen haben, sollen sie tun, und der Gott des Friedens wird mit ihnen sein.",
+   "reason_de": "Eine Reihe zählt als ein Moment mit allen Gliedern (structure s3); die Verheissung schliesst den Abschnitt.",
+   "recognition_de": "Raster: wahr, ehrbar, gerecht, rein, liebenswert, guter Ruf, Tugend, Lob.",
+   "keywords": [
+    "Was wahr ist",
+    "darauf seid bedacht",
+    "der Gott des Friedens wird mit euch sein"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Klemens und die übrigen Mitarbeiter, deren Namen im Buch des Lebens stehen (4,3) – Nebenfiguren; in structure",
+  "Wer der «treue Gefährte» ist (4,3), sagt der Text nicht"
+ ],
+ "persons": [
+  "FIG-PAULUS",
+  "FIG-GRUPPE-GLAUBENDE",
+  "FIG-EUODIA",
+  "FIG-SYNTYCHE",
+  "FIG-GOTT"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "PHP.4.1-PHP.4.9",
+   "fingerprint": "0b2b3a4e338194e9"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen nach dem Pilot; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

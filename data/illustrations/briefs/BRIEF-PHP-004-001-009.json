@@ -17,131 +17,239 @@
         "FIG-EUODIA",
         "FIG-SYNTYCHE"
       ],
-      "objects": [
-        "FIG-OBJ-KETTE"
-      ],
+      "objects": [],
       "signs": [],
       "speech": [
         {
           "from": "FIG-PAULUS",
           "to": "FIG-EUODIA",
           "icons": [
-            "FIG-EUODIA",
-            "FIG-SYNTYCHE",
             "FIG-ZEICHEN-EINHEIT"
-          ]
+          ],
+          "word": {
+            "de": "Seid eines Sinnes im Herrn!",
+            "gsw": "Sind einig im Herr!"
+          }
         }
       ],
-      "action_de": "Paulus bittet Euodia und Syntyche, eines Sinnes zu sein im Herrn; sie haben mit ihm für das Evangelium gekämpft.",
-      "stage": {
-        "floor_x": {
-          "FIG-OBJ-KETTE": 20
+      "action_de": "Paulus bittet Euodia und Syntyche, eines Sinnes zu sein im Herrn, denn sie haben mit ihm im Evangelium gekämpft.",
+      "keywords": {
+        "de": "So steht fest im Herrn",
+        "gsw": "So stönd fescht im Herr"
+      },
+      "names": {
+        "FIG-PAULUS": {
+          "de": "Paulus",
+          "gsw": "Paulus"
         },
+        "FIG-EUODIA": {
+          "de": "Euodia",
+          "gsw": "Euodia"
+        },
+        "FIG-SYNTYCHE": {
+          "de": "Syntyche",
+          "gsw": "Syntyche"
+        }
+      },
+      "letter": true,
+      "stage": {
+        "split": 1,
         "mood": {
-          "FIG-EUODIA": "calm",
-          "FIG-SYNTYCHE": "calm",
-          "FIG-PAULUS": "smile"
+          "FIG-PAULUS": "earnest",
+          "FIG-EUODIA": "pensive",
+          "FIG-SYNTYCHE": "pensive"
         }
       }
     },
     {
       "n": 2,
       "reference": "PHP.4.4-PHP.4.7",
-      "figures": [
-        "FIG-GOTT",
-        "FIG-GRUPPE-GLAUBENDE"
-      ],
+      "figures": [],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-FRIEDE",
-        "FIG-ZEICHEN-FREUDE"
-      ],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-GLAUBENDE",
-          "to": "FIG-GOTT",
-          "icons": [
-            "FIG-ZEICHEN-SORGE",
-            "FIG-ZEICHEN-NEIN",
-            "FIG-ZEICHEN-BETEN"
-          ]
-        }
-      ],
-      "action_de": "Die Gemeinde soll sich allezeit freuen und sich um nichts sorgen, sondern ihre Anliegen im Gebet mit Dank vor Gott bringen; der Friede Gottes wird ihre Herzen bewahren.",
-      "stage": {
-        "god_side": "right",
-        "arrows": [
-          [
-            "FIG-GRUPPE-GLAUBENDE",
-            "FIG-GOTT",
-            "act"
-          ],
-          [
-            "FIG-GOTT",
-            "FIG-ZEICHEN-FRIEDE",
-            "act"
-          ]
+      "signs": [],
+      "speech": [],
+      "action_de": "Die Gemeinde soll sich im Herrn allezeit freuen und sich um nichts sorgen, sondern ihre Anliegen durch Gebet und Flehen mit Danksagung vor Gott bringen; und der Friede Gottes, der allen Verstand übersteigt, wird ihre Herzen und Gedanken bewahren.",
+      "keywords": {
+        "de": "Freut euch im Herrn allezeit!",
+        "gsw": "Fröied eu immer im Herr!"
+      },
+      "letter": true,
+      "diagram": {
+        "visual": "arrows",
+        "span": 2,
+        "cols": 3,
+        "speaker": "FIG-PAULUS",
+        "title": {
+          "de": "Freut euch im Herrn allezeit! Der Herr ist nahe.",
+          "gsw": "Fröied eu immer im Herr! De Herr isch nooch."
+        },
+        "cells": [
+          {
+            "a": {
+              "de": "Sorgt euch um nichts",
+              "gsw": "Mached eu kei Sorge"
+            },
+            "icons": [
+              "FIG-ZEICHEN-SORGE",
+              "FIG-ZEICHEN-NICHT"
+            ]
+          },
+          {
+            "a": {
+              "de": "Bringt eure Anliegen vor Gott",
+              "gsw": "Bringed eui Aaliige vor Gott"
+            },
+            "b": {
+              "de": "durch Gebet und Flehen mit Danksagung",
+              "gsw": "dur Bätte und Flehe mit Dank"
+            },
+            "icons": [
+              "FIG-ZEICHEN-BETEN"
+            ]
+          },
+          {
+            "a": {
+              "de": "Der Friede Gottes bewahrt eure Herzen",
+              "gsw": "De Fride vo Gott bewacht eui Härze"
+            },
+            "b": {
+              "de": "er übersteigt allen Verstand",
+              "gsw": "er übersteigt jede Verstand"
+            },
+            "icons": [
+              "FIG-ZEICHEN-FRIEDE",
+              "FIG-ZEICHEN-BEWAHREN"
+            ],
+            "tone": "new"
+          }
         ],
-        "mood": {},
-        "air_x": 146,
-        "air_y": 62
+        "links": [
+          {
+            "de": "sondern",
+            "gsw": "sondern"
+          },
+          {
+            "de": "und",
+            "gsw": "und"
+          }
+        ]
       }
     },
     {
       "n": 3,
       "reference": "PHP.4.8-PHP.4.9",
-      "figures": [
-        "FIG-PAULUS",
-        "FIG-GRUPPE-GLAUBENDE"
-      ],
-      "objects": [
-        "FIG-OBJ-KETTE"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-FRIEDE"
-      ],
-      "speech": [
-        {
-          "from": "FIG-PAULUS",
-          "to": "FIG-GRUPPE-GLAUBENDE",
-          "icons": [
-            "FIG-PAULUS",
-            "FIG-ZEICHEN-HOEREN",
-            "FIG-ZEICHEN-DARAUS",
-            "FIG-ZEICHEN-GUTE-WERKE"
-          ]
-        }
-      ],
-      "action_de": "Die Gemeinde soll bedenken, was wahr, gerecht und liebenswert ist, und tun, was sie an Paulus gelernt und gesehen hat; der Gott des Friedens wird mit ihr sein.",
-      "stage": {
-        "floor_x": {
-          "FIG-OBJ-KETTE": 26
+      "figures": [],
+      "objects": [],
+      "signs": [],
+      "speech": [],
+      "action_de": "Die Gemeinde soll auf alles bedacht sein, was wahr, ehrbar, gerecht, rein, liebenswert ist und einen guten Ruf hat, auf jede Tugend und jedes Lob, und tun, was sie an Paulus gesehen hat; der Gott des Friedens wird mit ihr sein.",
+      "keywords": {
+        "de": "Der Gott des Friedens wird mit euch sein",
+        "gsw": "De Gott vom Fride wird mit eu sii"
+      },
+      "letter": true,
+      "diagram": {
+        "visual": "grid",
+        "span": 2,
+        "cols": 4,
+        "speaker": "FIG-PAULUS",
+        "title": {
+          "de": "Darauf seid bedacht!",
+          "gsw": "Das bedänked!"
         },
-        "at": {
-          "FIG-ZEICHEN-FRIEDE": "FIG-GRUPPE-GLAUBENDE"
-        },
-        "mood": {
-          "FIG-PAULUS": "smile"
-        }
+        "cells": [
+          {
+            "a": {
+              "de": "was wahr ist",
+              "gsw": "was wahr isch"
+            },
+            "icons": [
+              "FIG-ZEICHEN-WAHRHEIT"
+            ]
+          },
+          {
+            "a": {
+              "de": "was ehrbar ist",
+              "gsw": "was ehrbar isch"
+            },
+            "icons": [
+              "FIG-ZEICHEN-FROMM"
+            ]
+          },
+          {
+            "a": {
+              "de": "was gerecht ist",
+              "gsw": "was grächt isch"
+            },
+            "icons": [
+              "FIG-ZEICHEN-GERECHT"
+            ]
+          },
+          {
+            "a": {
+              "de": "was rein ist",
+              "gsw": "was rein isch"
+            },
+            "icons": [
+              "FIG-ZEICHEN-REIN"
+            ]
+          },
+          {
+            "a": {
+              "de": "was liebenswert ist",
+              "gsw": "was liebenswärt isch"
+            },
+            "icons": [
+              "FIG-ZEICHEN-LIEBE"
+            ]
+          },
+          {
+            "a": {
+              "de": "was einen guten Ruf hat",
+              "gsw": "was en guete Ruef hät"
+            },
+            "icons": [
+              "FIG-ZEICHEN-VERKUENDIGEN"
+            ]
+          },
+          {
+            "a": {
+              "de": "wenn es irgendeine Tugend gibt",
+              "gsw": "wänn s irgend e Tugend git"
+            },
+            "icons": [
+              "FIG-ZEICHEN-GUTE-WERKE"
+            ]
+          },
+          {
+            "a": {
+              "de": "wenn es irgendein Lob gibt",
+              "gsw": "wänn s irgend es Lob git"
+            },
+            "icons": [
+              "FIG-ZEICHEN-PREISEN"
+            ]
+          }
+        ]
       }
     }
   ],
   "actions_de": [
-    "Paulus bittet Euodia und Syntyche, eines Sinnes zu sein im Herrn; sie haben mit ihm für das Evangelium gekämpft.",
-    "Die Gemeinde soll sich allezeit freuen und sich um nichts sorgen, sondern ihre Anliegen im Gebet mit Dank vor Gott bringen; der Friede Gottes wird ihre Herzen bewahren.",
-    "Die Gemeinde soll bedenken, was wahr, gerecht und liebenswert ist, und tun, was sie an Paulus gelernt und gesehen hat; der Gott des Friedens wird mit ihr sein."
+    "Paulus bittet Euodia und Syntyche, eines Sinnes zu sein im Herrn, denn sie haben mit ihm im Evangelium gekämpft.",
+    "Die Gemeinde soll sich im Herrn allezeit freuen und sich um nichts sorgen, sondern ihre Anliegen durch Gebet und Flehen mit Danksagung vor Gott bringen; und der Friede Gottes, der allen Verstand übersteigt, wird ihre Herzen und Gedanken bewahren.",
+    "Die Gemeinde soll auf alles bedacht sein, was wahr, ehrbar, gerecht, rein, liebenswert ist und einen guten Ruf hat, auf jede Tugend und jedes Lob, und tun, was sie an Paulus gesehen hat; der Gott des Friedens wird mit ihr sein."
   ],
   "captions_de": [
-    "Eines Sinnes: Paulus (Kette) bittet Euodia (altrosa) und Syntyche (hellblau), sich zu einigen (zwei goldene Ringe).",
-    "Gebet → Friede: Die Glaubenden bringen ihre Sorgen (besorgtes Gesicht) im Gebet (Hände) zu Gott (Strahlenkranz, Pfeil); von Gott kommt der Friede (goldener Pfeil zum Ölzweig); sie freuen sich (strahlendes Gesicht).",
-    "Tun, was ihr gelernt habt: Paulus (Kette) sagt: Was ihr an mir gehört habt (Ohr), daraus folgt (Pfeil): das tut (Hand mit Brot); der Friede (Ölzweig) ist mit den Glaubenden."
+    "Auftrag an Euodia und Syntyche: Paulus ist fern (gestrichelte Linie) und schreibt: «Seid eines Sinnes im Herrn!» (goldene Ringe).",
+    "Auftrag an die Gemeinde, Pfeilkette (Bild Paulus, Blase «Freut euch im Herrn allezeit! Der Herr ist nahe.»): Sorgt euch um nichts (besorgtes Gesicht im Verbotskreis) → sondern bringt eure Anliegen mit Dank vor Gott (gefaltete Hände) → und der Friede Gottes bewahrt eure Herzen (Olivenzweig, blauer Schild).",
+    "Auftrag an die Gemeinde, Raster mit acht Feldern (Bild Paulus, Blase «Darauf seid bedacht!»): wahr (grüner Haken), ehrbar (Mensch im Gebetsmantel), gerecht (Person mit Waage), rein (Seifenblasen), liebenswert (Herz), guter Ruf (Rufer), Tugend (offene Hand und Brot), Lob (erhobene Hände)."
   ],
-  "interpretation_note_de": "Ob die Sorgen in [[PHP.4.6]] bestimmte Anliegen sind, sagt der Text nicht. Die Tugenden in [[PHP.4.8]] sind nicht einzeln gezeichnet. Paulus schreibt den Brief als Gefangener «in Fesseln» ([[PHP.1.7]], [[PHP.1.13]]); deshalb liegt bei ihm eine Kette. Ein Soldat steht für die Wache im Prätorium ([[PHP.1.13]]).",
+  "interpretation_note_de": "Struktur: Reihe von Mahnungen mit zwei Friedenszusagen (Friede Gottes, [[PHP.4.7]] – Gott des Friedens, [[PHP.4.9]]). Feld 1: die Bitte an Euodia und Syntyche, eines Sinnes zu sein, mit «Steht fest im Herrn» im Band; Feld 2: «nicht sorgen – sondern beten – und der Friede Gottes» als Pfeilkette unter der Doppelmahnung zur Freude; Feld 3: alle acht Glieder von [[PHP.4.8]] als Raster. Alle Felder sind Aufträge im Brief (Briefrand). Wer der «treue Gefährte» ist, sagt der Text nicht; er ist nicht gezeichnet.",
   "basis": [
     {
       "record": "TU-PHP-004-001-009",
       "field": "summary",
-      "fingerprint": "c7c74909cec2f935"
+      "fingerprint": "109ebab8405be3e4"
     },
     {
       "record": "TRANS-PHP-004-001-023-DE-WORKING",
@@ -163,7 +271,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -530,6 +638,167 @@
           "Gebet → Friede: Die Glaubenden bringen ihre Sorgen (Tropfen mit Wellenlinie) im Gebet (Hände) zu Gott (Strahlenkranz, Pfeil); von Gott kommt der Friede (goldener Pfeil zum Ölzweig); sie freuen sich (Funken).",
           "Tun, was ihr gelernt habt: Paulus (Kette) sagt: Was ihr an mir gehört habt (Ohr), daraus folgt (Pfeil): das tut (Hand mit Brot); der Friede (Ölzweig) ist mit den Glaubenden."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "PHP.4.1-PHP.4.3",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-EUODIA",
+              "FIG-SYNTYCHE"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-EUODIA",
+                "icons": [
+                  "FIG-EUODIA",
+                  "FIG-SYNTYCHE",
+                  "FIG-ZEICHEN-EINHEIT"
+                ]
+              }
+            ],
+            "action_de": "Paulus bittet Euodia und Syntyche, eines Sinnes zu sein im Herrn; sie haben mit ihm für das Evangelium gekämpft.",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KETTE": 20
+              },
+              "mood": {
+                "FIG-EUODIA": "calm",
+                "FIG-SYNTYCHE": "calm",
+                "FIG-PAULUS": "smile"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "PHP.4.4-PHP.4.7",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-FRIEDE",
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-GLAUBENDE",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-SORGE",
+                  "FIG-ZEICHEN-NEIN",
+                  "FIG-ZEICHEN-BETEN"
+                ]
+              }
+            ],
+            "action_de": "Die Gemeinde soll sich allezeit freuen und sich um nichts sorgen, sondern ihre Anliegen im Gebet mit Dank vor Gott bringen; der Friede Gottes wird ihre Herzen bewahren.",
+            "stage": {
+              "god_side": "right",
+              "arrows": [
+                [
+                  "FIG-GRUPPE-GLAUBENDE",
+                  "FIG-GOTT",
+                  "act"
+                ],
+                [
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-FRIEDE",
+                  "act"
+                ]
+              ],
+              "mood": {},
+              "air_x": 146,
+              "air_y": 62
+            }
+          },
+          {
+            "n": 3,
+            "reference": "PHP.4.8-PHP.4.9",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FRIEDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-GRUPPE-GLAUBENDE",
+                "icons": [
+                  "FIG-PAULUS",
+                  "FIG-ZEICHEN-HOEREN",
+                  "FIG-ZEICHEN-DARAUS",
+                  "FIG-ZEICHEN-GUTE-WERKE"
+                ]
+              }
+            ],
+            "action_de": "Die Gemeinde soll bedenken, was wahr, gerecht und liebenswert ist, und tun, was sie an Paulus gelernt und gesehen hat; der Gott des Friedens wird mit ihr sein.",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KETTE": 26
+              },
+              "at": {
+                "FIG-ZEICHEN-FRIEDE": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "mood": {
+                "FIG-PAULUS": "smile"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Paulus bittet Euodia und Syntyche, eines Sinnes zu sein im Herrn; sie haben mit ihm für das Evangelium gekämpft.",
+          "Die Gemeinde soll sich allezeit freuen und sich um nichts sorgen, sondern ihre Anliegen im Gebet mit Dank vor Gott bringen; der Friede Gottes wird ihre Herzen bewahren.",
+          "Die Gemeinde soll bedenken, was wahr, gerecht und liebenswert ist, und tun, was sie an Paulus gelernt und gesehen hat; der Gott des Friedens wird mit ihr sein."
+        ],
+        "captions_de": [
+          "Eines Sinnes: Paulus (Kette) bittet Euodia (altrosa) und Syntyche (hellblau), sich zu einigen (zwei goldene Ringe).",
+          "Gebet → Friede: Die Glaubenden bringen ihre Sorgen (besorgtes Gesicht) im Gebet (Hände) zu Gott (Strahlenkranz, Pfeil); von Gott kommt der Friede (goldener Pfeil zum Ölzweig); sie freuen sich (strahlendes Gesicht).",
+          "Tun, was ihr gelernt habt: Paulus (Kette) sagt: Was ihr an mir gehört habt (Ohr), daraus folgt (Pfeil): das tut (Hand mit Brot); der Friede (Ölzweig) ist mit den Glaubenden."
+        ],
+        "interpretation_note_de": "Ob die Sorgen in [[PHP.4.6]] bestimmte Anliegen sind, sagt der Text nicht. Die Tugenden in [[PHP.4.8]] sind nicht einzeln gezeichnet. Paulus schreibt den Brief als Gefangener «in Fesseln» ([[PHP.1.7]], [[PHP.1.13]]); deshalb liegt bei ihm eine Kette. Ein Soldat steht für die Wache im Prätorium ([[PHP.1.13]]).",
+        "basis": [
+          {
+            "record": "TU-PHP-004-001-009",
+            "field": "summary",
+            "fingerprint": "c7c74909cec2f935"
+          },
+          {
+            "record": "TRANS-PHP-004-001-023-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "PHP.4.1-PHP.4.3",
+            "fingerprint": "8af794803a6c94fe"
+          },
+          {
+            "record": "TRANS-PHP-004-001-023-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "PHP.4.4-PHP.4.7",
+            "fingerprint": "3e66303ade25148b"
+          },
+          {
+            "record": "TRANS-PHP-004-001-023-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "PHP.4.8-PHP.4.9",
+            "fingerprint": "79f16ae36f7ce54a"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

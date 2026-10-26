@@ -14,31 +14,34 @@
       "reference": "1JN.2.1-1JN.2.6",
       "figures": [
         "FIG-GOTT",
-        "FIG-GRUPPE-GESCHWISTER",
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-GRUPPE-GESCHWISTER"
       ],
       "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GOTT",
-          "icons": [
-            "FIG-ZEICHEN-SUENDE",
-            "FIG-ZEICHEN-VERGEBUNG",
-            "FIG-ZEICHEN-WELT"
-          ]
-        }
+      "signs": [
+        "FIG-ZEICHEN-WELT"
       ],
-      "action_de": "Jesus Christus ist Fürsprecher beim Vater und Sühne für die Sünden der ganzen Welt.",
+      "speech": [],
+      "action_de": "Wenn jemand sündigt, haben wir einen Fürsprecher beim Vater, Jesus Christus, den Gerechten; er ist die Sühne für unsere Sünden und für die ganze Welt.",
+      "keywords": {
+        "de": "Wir haben einen Fürsprecher beim Vater",
+        "gsw": "Mir händ en Fürspräch bim Vatter"
+      },
       "stage": {
-        "god_side": "right",
-        "mood": {
-          "FIG-GRUPPE-GESCHWISTER": "calm"
+        "god_side": "left",
+        "arrows": [
+          [
+            "FIG-JESUS",
+            "FIG-GOTT",
+            "act"
+          ]
+        ],
+        "at": {
+          "FIG-ZEICHEN-WELT": "FIG-GRUPPE-GESCHWISTER"
         },
-        "x": {
-          "FIG-GRUPPE-GESCHWISTER": 40,
-          "FIG-JESUS": 102
+        "mood": {
+          "FIG-JESUS": "earnest",
+          "FIG-GRUPPE-GESCHWISTER": "calm"
         }
       }
     },
@@ -46,27 +49,32 @@
       "n": 2,
       "reference": "1JN.2.7-1JN.2.11",
       "figures": [
-        "FIG-DER-AELTESTE",
-        "FIG-GRUPPE-GESCHWISTER"
+        "FIG-GRUPPE-GESCHWISTER",
+        "FIG-ROLLE-MENSCH"
       ],
       "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-DER-AELTESTE",
-          "to": "FIG-GRUPPE-GESCHWISTER",
-          "icons": [
-            "FIG-ZEICHEN-LIEBE",
-            "FIG-ZEICHEN-LICHT",
-            "FIG-ZEICHEN-HASS",
-            "FIG-ZEICHEN-FINSTERNIS"
-          ]
-        }
+      "signs": [
+        "FIG-ZEICHEN-LICHT",
+        "FIG-ZEICHEN-FINSTERNIS"
       ],
-      "action_de": "Wer seinen Bruder liebt, bleibt im Licht; wer ihn hasst, ist in der Finsternis.",
+      "speech": [],
+      "action_de": "Wer seinen Bruder liebt, bleibt im Licht; wer ihn hasst, ist in der Finsternis, geht umher und weiss nicht, wohin er geht.",
+      "keywords": {
+        "de": "Wer seinen Bruder liebt, bleibt im Licht",
+        "gsw": "Wer sin Brueder liebt, bliibt im Liecht"
+      },
       "stage": {
+        "split": 1,
+        "at": {
+          "FIG-ZEICHEN-LICHT": "FIG-GRUPPE-GESCHWISTER",
+          "FIG-ZEICHEN-FINSTERNIS": "FIG-ROLLE-MENSCH"
+        },
+        "pose": {
+          "FIG-ROLLE-MENSCH": "away"
+        },
         "mood": {
-          "FIG-GRUPPE-GESCHWISTER": "pensive"
+          "FIG-GRUPPE-GESCHWISTER": "smile",
+          "FIG-ROLLE-MENSCH": "angry"
         }
       }
     },
@@ -75,22 +83,41 @@
       "reference": "1JN.2.12-1JN.2.17",
       "figures": [
         "FIG-DER-AELTESTE",
-        "FIG-GRUPPE-GESCHWISTER"
+        "FIG-ROLLE-KIND",
+        "FIG-ROLLE-VATER",
+        "FIG-ROLLE-JUNGER-MANN"
       ],
       "objects": [],
       "signs": [],
       "speech": [
         {
           "from": "FIG-DER-AELTESTE",
-          "to": "FIG-GRUPPE-GESCHWISTER",
+          "to": "FIG-ROLLE-VATER",
           "icons": [
             "FIG-ZEICHEN-WELT",
-            "FIG-ZEICHEN-LIEBE",
-            "FIG-ZEICHEN-ABLEHNEN"
-          ]
+            "FIG-ZEICHEN-NICHT"
+          ],
+          "word": {
+            "de": "Liebt nicht die Welt!",
+            "gsw": "Liebed nöd d Wält!"
+          }
         }
       ],
-      "action_de": "Er schreibt Kindern, Vätern und jungen Männern und warnt davor, die Welt zu lieben, die vergeht."
+      "action_de": "Der Verfasser schreibt den Kindern, Vätern und jungen Männern: Ihre Sünden sind vergeben, sie haben den Vater erkannt und den Bösen besiegt; sie sollen die Welt nicht lieben, denn sie vergeht.",
+      "keywords": {
+        "de": "Liebt nicht die Welt",
+        "gsw": "Liebed nöd d Wält"
+      },
+      "letter": true,
+      "stage": {
+        "split": 1,
+        "mood": {
+          "FIG-DER-AELTESTE": "earnest",
+          "FIG-ROLLE-KIND": "smile",
+          "FIG-ROLLE-VATER": "calm",
+          "FIG-ROLLE-JUNGER-MANN": "determined"
+        }
+      }
     },
     {
       "n": 4,
@@ -99,58 +126,55 @@
         "FIG-GRUPPE-GESCHWISTER",
         "FIG-GRUPPE-VERFUEHRER"
       ],
-      "objects": [
-        "FIG-ORT-HAUS"
-      ],
+      "objects": [],
       "signs": [
-        "FIG-ZEICHEN-STUNDE",
-        "FIG-ZEICHEN-ABSTAND",
-        "FIG-ZEICHEN-FLIEHEN"
+        "FIG-ZEICHEN-SALBUNG",
+        "FIG-ZEICHEN-STUNDE"
       ],
       "speech": [],
-      "action_de": "Es ist letzte Stunde: Antichristen sind aus der Gemeinde hinausgegangen. Die Leser sollen bleiben in dem, was sie von Anfang an gehört haben.",
+      "action_de": "Es ist letzte Stunde: Antichristen sind von uns ausgegangen und leugnen, dass Jesus der Christus ist; die Geschwister haben die Salbung und bleiben in dem, was sie von Anfang an gehört haben.",
+      "keywords": {
+        "de": "Es ist letzte Stunde",
+        "gsw": "Es isch di letscht Stund"
+      },
       "stage": {
+        "split": 1,
         "pose": {
           "FIG-GRUPPE-VERFUEHRER": "away"
         },
-        "split": 1,
-        "back_side": "left",
         "at": {
-          "FIG-ZEICHEN-FLIEHEN": "FIG-GRUPPE-VERFUEHRER"
+          "FIG-ZEICHEN-SALBUNG": "FIG-GRUPPE-GESCHWISTER",
+          "FIG-ZEICHEN-STUNDE": "FIG-GRUPPE-VERFUEHRER"
         },
         "mood": {
           "FIG-GRUPPE-GESCHWISTER": "calm",
-          "FIG-GRUPPE-VERFUEHRER": "earnest"
-        },
-        "x": {
-          "FIG-GRUPPE-GESCHWISTER": 100,
-          "FIG-GRUPPE-VERFUEHRER": 158
+          "FIG-GRUPPE-VERFUEHRER": "calm"
         }
       }
     }
   ],
   "actions_de": [
-    "Jesus Christus ist Fürsprecher beim Vater und Sühne für die Sünden der ganzen Welt.",
-    "Wer seinen Bruder liebt, bleibt im Licht; wer ihn hasst, ist in der Finsternis.",
-    "Er schreibt Kindern, Vätern und jungen Männern und warnt davor, die Welt zu lieben, die vergeht.",
-    "Es ist letzte Stunde: Antichristen sind aus der Gemeinde hinausgegangen. Die Leser sollen bleiben in dem, was sie von Anfang an gehört haben."
+    "Wenn jemand sündigt, haben wir einen Fürsprecher beim Vater, Jesus Christus, den Gerechten; er ist die Sühne für unsere Sünden und für die ganze Welt.",
+    "Wer seinen Bruder liebt, bleibt im Licht; wer ihn hasst, ist in der Finsternis, geht umher und weiss nicht, wohin er geht.",
+    "Der Verfasser schreibt den Kindern, Vätern und jungen Männern: Ihre Sünden sind vergeben, sie haben den Vater erkannt und den Bösen besiegt; sie sollen die Welt nicht lieben, denn sie vergeht.",
+    "Es ist letzte Stunde: Antichristen sind von uns ausgegangen und leugnen, dass Jesus der Christus ist; die Geschwister haben die Salbung und bleiben in dem, was sie von Anfang an gehört haben."
   ],
   "captions_de": [
-    "Fürsprecher: Jesus tritt beim Vater für die Sünder ein (schwarzes Herz, sauberes Tuch, Erdkugel).",
-    "Liebe oder Hass: Liebe (rotes Herz) im Licht, Hass (Herz im roten Verbotskreis) in der Finsternis (dunkle Wolke).",
-    "Nicht die Welt lieben: die Welt (Erdkugel) nicht lieben (Herz, Person mit gekreuzten Armen).",
-    "Letzte Stunde (Sanduhr): Die Verführer (violettgrau) gehen aus der Gemeinde weg (Pfeil), die Geschwister bleiben."
+    "Fürsprecher: Jesus wendet sich zum Vater (Strahlenkranz, Pfeil) für die Geschwister; die Welt (Erdkugel) – er ist die Sühne für die ganze Welt.",
+    "Licht ↔ Finsternis: links die Geschwister im Licht (goldener Schein), die einander lieben (Herz); rechts, getrennt (gestrichelte Linie), ein Mensch in der Finsternis (dunkle Wolke), abgewandt.",
+    "Auftrag an Kinder, Väter und junge Männer: Der Verfasser schreibt ihnen (Briefrand): «Liebt nicht die Welt!» (Erdkugel im Verbotskreis).",
+    "Letzte Stunde: Die Verführer (violettgraue Gruppe) wenden sich ab und gehen (gestrichelte Linie); die Geschwister bleiben, mit der Salbung (Ölhorn mit goldenem Tropfen); die Sanduhr läuft."
   ],
-  "interpretation_note_de": "Fünf Abschnitte in vier Feldern; der letzte Abschnitt ([[1JN.2.28-1JN.2.29]]) ist mit dem vorletzten zusammengefasst. Der 1. Johannesbrief nennt seinen Verfasser nicht; das Bild zeigt ihn wie den «Ältesten» aus [[2JN.1.1]] und [[3JN.1.1]] (Deutung). Die angeredeten «Kinder» und «Lieben» sind als Gruppe von Geschwistern gezeichnet.",
+  "interpretation_note_de": "Vier Comic-Szenen für fünf Abschnitte: der Fürsprecher beim Vater ([[1JN.2.1-1JN.2.6]]), Licht und Finsternis am Bruder ([[1JN.2.7-1JN.2.11]]), Kinder, Väter und junge Männer und die Mahnung «Liebt nicht die Welt» ([[1JN.2.12-1JN.2.17]]) sowie die letzte Stunde mit dem Weggang der Verführer und dem Bleiben der Gesalbten ([[1JN.2.18-1JN.2.29]], zwei Abschnitte in einem Feld). Comic-Szenen nach dem Entscheid vom 2026-10-25. Der 1. Johannesbrief nennt seinen Verfasser nicht; Bild und Porträt zeigen ihn wie den «Ältesten» aus [[2JN.1.1]] und [[3JN.1.1]] (Deutung). Die angeredeten «Kinder» und «Lieben» sind als Gruppe von Geschwistern gezeichnet.",
   "basis": [
     {
       "record": "SUM-CH-1JN-002",
       "field": "summary",
-      "fingerprint": "9b8456b45231bf04"
+      "fingerprint": "32ec1df341c4426b"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -289,6 +313,154 @@
           "Nicht die Welt lieben: die Welt (Erdscheibe) nicht lieben (Herzen, abwehrende Hand).",
           "Letzte Stunde (Sanduhr): Die Verführer (violettgrau) gehen aus der Gemeinde weg (Pfeil), die Geschwister bleiben."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "1JN.2.1-1JN.2.6",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-GESCHWISTER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-SUENDE",
+                  "FIG-ZEICHEN-VERGEBUNG",
+                  "FIG-ZEICHEN-WELT"
+                ]
+              }
+            ],
+            "action_de": "Jesus Christus ist Fürsprecher beim Vater und Sühne für die Sünden der ganzen Welt.",
+            "stage": {
+              "god_side": "right",
+              "mood": {
+                "FIG-GRUPPE-GESCHWISTER": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-GESCHWISTER": 40,
+                "FIG-JESUS": 102
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "1JN.2.7-1JN.2.11",
+            "figures": [
+              "FIG-DER-AELTESTE",
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-DER-AELTESTE",
+                "to": "FIG-GRUPPE-GESCHWISTER",
+                "icons": [
+                  "FIG-ZEICHEN-LIEBE",
+                  "FIG-ZEICHEN-LICHT",
+                  "FIG-ZEICHEN-HASS",
+                  "FIG-ZEICHEN-FINSTERNIS"
+                ]
+              }
+            ],
+            "action_de": "Wer seinen Bruder liebt, bleibt im Licht; wer ihn hasst, ist in der Finsternis.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-GESCHWISTER": "pensive"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "1JN.2.12-1JN.2.17",
+            "figures": [
+              "FIG-DER-AELTESTE",
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-DER-AELTESTE",
+                "to": "FIG-GRUPPE-GESCHWISTER",
+                "icons": [
+                  "FIG-ZEICHEN-WELT",
+                  "FIG-ZEICHEN-LIEBE",
+                  "FIG-ZEICHEN-ABLEHNEN"
+                ]
+              }
+            ],
+            "action_de": "Er schreibt Kindern, Vätern und jungen Männern und warnt davor, die Welt zu lieben, die vergeht."
+          },
+          {
+            "n": 4,
+            "reference": "1JN.2.18-1JN.2.29",
+            "figures": [
+              "FIG-GRUPPE-GESCHWISTER",
+              "FIG-GRUPPE-VERFUEHRER"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-STUNDE",
+              "FIG-ZEICHEN-ABSTAND",
+              "FIG-ZEICHEN-FLIEHEN"
+            ],
+            "speech": [],
+            "action_de": "Es ist letzte Stunde: Antichristen sind aus der Gemeinde hinausgegangen. Die Leser sollen bleiben in dem, was sie von Anfang an gehört haben.",
+            "stage": {
+              "pose": {
+                "FIG-GRUPPE-VERFUEHRER": "away"
+              },
+              "split": 1,
+              "back_side": "left",
+              "at": {
+                "FIG-ZEICHEN-FLIEHEN": "FIG-GRUPPE-VERFUEHRER"
+              },
+              "mood": {
+                "FIG-GRUPPE-GESCHWISTER": "calm",
+                "FIG-GRUPPE-VERFUEHRER": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-GESCHWISTER": 100,
+                "FIG-GRUPPE-VERFUEHRER": 158
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus Christus ist Fürsprecher beim Vater und Sühne für die Sünden der ganzen Welt.",
+          "Wer seinen Bruder liebt, bleibt im Licht; wer ihn hasst, ist in der Finsternis.",
+          "Er schreibt Kindern, Vätern und jungen Männern und warnt davor, die Welt zu lieben, die vergeht.",
+          "Es ist letzte Stunde: Antichristen sind aus der Gemeinde hinausgegangen. Die Leser sollen bleiben in dem, was sie von Anfang an gehört haben."
+        ],
+        "captions_de": [
+          "Fürsprecher: Jesus tritt beim Vater für die Sünder ein (schwarzes Herz, sauberes Tuch, Erdkugel).",
+          "Liebe oder Hass: Liebe (rotes Herz) im Licht, Hass (Herz im roten Verbotskreis) in der Finsternis (dunkle Wolke).",
+          "Nicht die Welt lieben: die Welt (Erdkugel) nicht lieben (Herz, Person mit gekreuzten Armen).",
+          "Letzte Stunde (Sanduhr): Die Verführer (violettgrau) gehen aus der Gemeinde weg (Pfeil), die Geschwister bleiben."
+        ],
+        "interpretation_note_de": "Fünf Abschnitte in vier Feldern; der letzte Abschnitt ([[1JN.2.28-1JN.2.29]]) ist mit dem vorletzten zusammengefasst. Der 1. Johannesbrief nennt seinen Verfasser nicht; das Bild zeigt ihn wie den «Ältesten» aus [[2JN.1.1]] und [[3JN.1.1]] (Deutung). Die angeredeten «Kinder» und «Lieben» sind als Gruppe von Geschwistern gezeichnet.",
+        "basis": [
+          {
+            "record": "SUM-CH-1JN-002",
+            "field": "summary",
+            "fingerprint": "9b8456b45231bf04"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

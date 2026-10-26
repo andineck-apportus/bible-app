@@ -22,27 +22,18 @@
         "FIG-ZEICHEN-WELT"
       ],
       "speech": [],
-      "action_de": "Wer glaubt, dass Jesus der Christus ist, ist aus Gott geboren und besiegt die Welt.",
+      "action_de": "Wer glaubt, dass Jesus der Christus ist, ist aus Gott geboren; alles, was aus Gott geboren ist, besiegt die Welt, und der Sieg ist unser Glaube.",
+      "keywords": {
+        "de": "Unser Glaube besiegt die Welt",
+        "gsw": "Öise Glaube besiegt d Wält"
+      },
       "stage": {
-        "x": {
-          "FIG-GRUPPE-GESCHWISTER": 56
+        "at": {
+          "FIG-ZEICHEN-GLAUBEN": "FIG-GRUPPE-GESCHWISTER",
+          "FIG-ZEICHEN-SIEG": "FIG-GRUPPE-GESCHWISTER"
         },
-        "signs_who": {
-          "FIG-ZEICHEN-GLAUBEN": [
-            "FIG-GRUPPE-GESCHWISTER"
-          ]
-        },
-        "air_x": 118,
-        "air_y": 52,
-        "arrows": [
-          [
-            "FIG-GRUPPE-GESCHWISTER",
-            "FIG-ZEICHEN-SIEG",
-            "act"
-          ]
-        ],
         "mood": {
-          "FIG-GRUPPE-GESCHWISTER": "smile"
+          "FIG-GRUPPE-GESCHWISTER": "delight"
         }
       }
     },
@@ -59,13 +50,21 @@
         "FIG-ZEICHEN-BLUT"
       ],
       "speech": [],
-      "action_de": "Geist, Wasser und Blut bezeugen den Sohn; wer den Sohn hat, hat das Leben.",
+      "action_de": "Jesus Christus ist durch Wasser und Blut gekommen; drei geben Zeugnis, der Geist, das Wasser und das Blut; wer den Sohn hat, hat das Leben.",
+      "keywords": {
+        "de": "Drei sind es, die Zeugnis geben",
+        "gsw": "Drüü sind es, wo Zügnis gänd"
+      },
       "stage": {
-        "x": {
-          "FIG-JESUS": 93
+        "at": {
+          "FIG-ZEICHEN-WASSER": "FIG-JESUS"
         },
-        "air_x": 112,
-        "air_y": 14
+        "beside": {
+          "FIG-ZEICHEN-BLUT": "FIG-JESUS"
+        },
+        "mood": {
+          "FIG-JESUS": "calm"
+        }
       }
     },
     {
@@ -76,42 +75,61 @@
         "FIG-GRUPPE-GESCHWISTER"
       ],
       "objects": [],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-BETEN"
+      ],
       "speech": [
         {
           "from": "FIG-DER-AELTESTE",
           "to": "FIG-GRUPPE-GESCHWISTER",
           "icons": [
-            "FIG-ZEICHEN-GLAUBEN",
-            "FIG-ZEICHEN-LEBEN",
             "FIG-OBJ-GOETZENBILD",
-            "FIG-ZEICHEN-ABLEHNEN"
-          ]
+            "FIG-ZEICHEN-NICHT"
+          ],
+          "word": {
+            "de": "Hütet euch vor den Götzen!",
+            "gsw": "Hüeted eu vor de Götze!"
+          }
         }
       ],
-      "action_de": "Er schreibt, damit die Glaubenden wissen, dass sie ewiges Leben haben, und warnt zuletzt vor den Götzen."
+      "action_de": "Der Brief ist geschrieben, damit die Glaubenden wissen, dass sie ewiges Leben haben; sie dürfen bitten; zum Schluss: Kinder, hütet euch vor den Götzen!",
+      "keywords": {
+        "de": "Damit ihr wisst, dass ihr ewiges Leben habt",
+        "gsw": "Demit ir wüssed, dass ir ewigs Läbe händ"
+      },
+      "letter": true,
+      "stage": {
+        "split": 1,
+        "at": {
+          "FIG-ZEICHEN-BETEN": "FIG-GRUPPE-GESCHWISTER"
+        },
+        "mood": {
+          "FIG-DER-AELTESTE": "earnest",
+          "FIG-GRUPPE-GESCHWISTER": "calm"
+        }
+      }
     }
   ],
   "actions_de": [
-    "Wer glaubt, dass Jesus der Christus ist, ist aus Gott geboren und besiegt die Welt.",
-    "Geist, Wasser und Blut bezeugen den Sohn; wer den Sohn hat, hat das Leben.",
-    "Er schreibt, damit die Glaubenden wissen, dass sie ewiges Leben haben, und warnt zuletzt vor den Götzen."
+    "Wer glaubt, dass Jesus der Christus ist, ist aus Gott geboren; alles, was aus Gott geboren ist, besiegt die Welt, und der Sieg ist unser Glaube.",
+    "Jesus Christus ist durch Wasser und Blut gekommen; drei geben Zeugnis, der Geist, das Wasser und das Blut; wer den Sohn hat, hat das Leben.",
+    "Der Brief ist geschrieben, damit die Glaubenden wissen, dass sie ewiges Leben haben; sie dürfen bitten; zum Schluss: Kinder, hütet euch vor den Götzen!"
   ],
   "captions_de": [
-    "Glaube → Sieg über die Welt: Die Geschwister glauben (Herz mit Strahlen über ihnen); ihr Glaube ist der Sieg (Pfeil zum Kranz), der die Welt (Erdkugel daneben) überwunden hat.",
-    "Drei Zeugen: Oben in einer Reihe der Geist (Taube), das Wasser (blauer Tropfen) und das Blut (roter Tropfen); sie bezeugen Jesus.",
-    "Gewissheit: Wer glaubt (Herz mit Strahlen), hat ewiges Leben (Keimling mit Unendlichzeichen); hütet euch vor Götzen (Statue, Person mit gekreuzten Armen)."
+    "Glaube besiegt die Welt: Die Geschwister glauben (Herz mit Licht) und tragen den Siegeskranz (Lorbeer) über der Welt (Erdkugel).",
+    "Drei Zeugen: Jesus; daneben der Geist (Taube), das Wasser (blauer Tropfen) und das Blut (roter Tropfen).",
+    "Auftrag zum Schluss: Der Verfasser schreibt den Geschwistern (Briefrand), die beten (gefaltete Hände): «Hütet euch vor den Götzen!» (Götzenbild, Verbotskreis)."
   ],
-  "interpretation_note_de": "Je ein Feld aus den drei Abschnitten des Kapitels. Der 1. Johannesbrief nennt seinen Verfasser nicht; das Bild zeigt ihn wie den «Ältesten» aus [[2JN.1.1]] und [[3JN.1.1]] (Deutung). Die angeredeten «Kinder» und «Lieben» sind als Gruppe von Geschwistern gezeichnet.",
+  "interpretation_note_de": "Drei Comic-Szenen für drei Abschnitte: der Glaube, der die Welt besiegt ([[1JN.5.1-1JN.5.5]]), die drei Zeugen Geist, Wasser und Blut bei Jesus ([[1JN.5.6-1JN.5.12]]) und der Schluss mit Zweckangabe, Gebet und der Warnung vor den Götzen ([[1JN.5.13-1JN.5.21]]). Comic-Szenen nach dem Entscheid vom 2026-10-25. Der 1. Johannesbrief nennt seinen Verfasser nicht; Bild und Porträt zeigen ihn wie den «Ältesten» aus [[2JN.1.1]] und [[3JN.1.1]] (Deutung). Die angeredeten «Kinder» und «Lieben» sind als Gruppe von Geschwistern gezeichnet.",
   "basis": [
     {
       "record": "SUM-CH-1JN-005",
       "field": "summary",
-      "fingerprint": "8ecbd0e094eb39a3"
+      "fingerprint": "cd0482e993f9f2ad"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -289,6 +307,221 @@
           "Glaube → Sieg über die Welt: Die Geschwister glauben (Herz mit Strahlen über ihnen); ihr Glaube ist der Sieg (Pfeil zum Kranz), der die Welt (Erdscheibe daneben) überwunden hat.",
           "Drei Zeugen: Oben in einer Reihe der Geist (Taube), das Wasser (blauer Tropfen) und das Blut (roter Tropfen); sie bezeugen Jesus.",
           "Gewissheit: Wer glaubt (Herz mit Strahlen), hat ewiges Leben (Baum im Ring); hütet euch vor Götzen (Statue, abwehrende Hand)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "1JN.5.1-1JN.5.5",
+            "figures": [
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-GLAUBEN",
+              "FIG-ZEICHEN-SIEG",
+              "FIG-ZEICHEN-WELT"
+            ],
+            "speech": [],
+            "action_de": "Wer glaubt, dass Jesus der Christus ist, ist aus Gott geboren und besiegt die Welt.",
+            "stage": {
+              "x": {
+                "FIG-GRUPPE-GESCHWISTER": 56
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-GLAUBEN": [
+                  "FIG-GRUPPE-GESCHWISTER"
+                ]
+              },
+              "air_x": 118,
+              "air_y": 52,
+              "arrows": [
+                [
+                  "FIG-GRUPPE-GESCHWISTER",
+                  "FIG-ZEICHEN-SIEG",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-GESCHWISTER": "smile"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "1JN.5.6-1JN.5.12",
+            "figures": [
+              "FIG-HEILIGER-GEIST",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-WASSER",
+              "FIG-ZEICHEN-BLUT"
+            ],
+            "speech": [],
+            "action_de": "Geist, Wasser und Blut bezeugen den Sohn; wer den Sohn hat, hat das Leben.",
+            "stage": {
+              "x": {
+                "FIG-JESUS": 93
+              },
+              "air_x": 112,
+              "air_y": 14
+            }
+          },
+          {
+            "n": 3,
+            "reference": "1JN.5.13-1JN.5.21",
+            "figures": [
+              "FIG-DER-AELTESTE",
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-DER-AELTESTE",
+                "to": "FIG-GRUPPE-GESCHWISTER",
+                "icons": [
+                  "FIG-ZEICHEN-GLAUBEN",
+                  "FIG-ZEICHEN-LEBEN",
+                  "FIG-OBJ-GOETZENBILD",
+                  "FIG-ZEICHEN-ABLEHNEN"
+                ]
+              }
+            ],
+            "action_de": "Er schreibt, damit die Glaubenden wissen, dass sie ewiges Leben haben, und warnt zuletzt vor den Götzen."
+          }
+        ],
+        "actions_de": [
+          "Wer glaubt, dass Jesus der Christus ist, ist aus Gott geboren und besiegt die Welt.",
+          "Geist, Wasser und Blut bezeugen den Sohn; wer den Sohn hat, hat das Leben.",
+          "Er schreibt, damit die Glaubenden wissen, dass sie ewiges Leben haben, und warnt zuletzt vor den Götzen."
+        ],
+        "captions_de": [
+          "Glaube → Sieg über die Welt: Die Geschwister glauben (Herz mit Strahlen über ihnen); ihr Glaube ist der Sieg (Pfeil zum Kranz), der die Welt (Erdkugel daneben) überwunden hat.",
+          "Drei Zeugen: Oben in einer Reihe der Geist (Taube), das Wasser (blauer Tropfen) und das Blut (roter Tropfen); sie bezeugen Jesus.",
+          "Gewissheit: Wer glaubt (Herz mit Strahlen), hat ewiges Leben (Keimling mit Unendlichzeichen); hütet euch vor Götzen (Statue, Person mit gekreuzten Armen)."
+        ],
+        "interpretation_note_de": "Je ein Feld aus den drei Abschnitten des Kapitels. Der 1. Johannesbrief nennt seinen Verfasser nicht; das Bild zeigt ihn wie den «Ältesten» aus [[2JN.1.1]] und [[3JN.1.1]] (Deutung). Die angeredeten «Kinder» und «Lieben» sind als Gruppe von Geschwistern gezeichnet.",
+        "basis": [
+          {
+            "record": "SUM-CH-1JN-005",
+            "field": "summary",
+            "fingerprint": "8ecbd0e094eb39a3"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "1JN.5.1-1JN.5.5",
+            "figures": [
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-GLAUBEN",
+              "FIG-ZEICHEN-SIEG",
+              "FIG-ZEICHEN-WELT"
+            ],
+            "speech": [],
+            "action_de": "Wer glaubt, dass Jesus der Christus ist, ist aus Gott geboren; alles, was aus Gott geboren ist, besiegt die Welt, und der Sieg ist unser Glaube.",
+            "keywords": {
+              "de": "Unser Glaube besiegt die Welt",
+              "gsw": "Öise Glaube besiegt d Wält"
+            },
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-GLAUBEN": "FIG-GRUPPE-GESCHWISTER",
+                "FIG-ZEICHEN-SIEG": "FIG-GRUPPE-GESCHWISTER"
+              },
+              "mood": {
+                "FIG-GRUPPE-GESCHWISTER": "delight"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "1JN.5.6-1JN.5.12",
+            "figures": [
+              "FIG-HEILIGER-GEIST",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-WASSER",
+              "FIG-ZEICHEN-BLUT"
+            ],
+            "speech": [],
+            "action_de": "Jesus Christus ist durch Wasser und Blut gekommen; drei geben Zeugnis, der Geist, das Wasser und das Blut; wer den Sohn hat, hat das Leben.",
+            "keywords": {
+              "de": "Drei sind es, die Zeugnis geben",
+              "gsw": "Drüü sind es, wo Zügnis gänd"
+            },
+            "stage": {
+              "beside": {
+                "FIG-ZEICHEN-WASSER": "FIG-JESUS",
+                "FIG-ZEICHEN-BLUT": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-JESUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "1JN.5.13-1JN.5.21",
+            "figures": [
+              "FIG-DER-AELTESTE",
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-BETEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-DER-AELTESTE",
+                "to": "FIG-GRUPPE-GESCHWISTER",
+                "icons": [
+                  "FIG-OBJ-GOETZENBILD",
+                  "FIG-ZEICHEN-NICHT"
+                ],
+                "word": {
+                  "de": "Hütet euch vor den Götzen!",
+                  "gsw": "Hüeted eu vor de Götze!"
+                }
+              }
+            ],
+            "action_de": "Der Brief ist geschrieben, damit die Glaubenden wissen, dass sie ewiges Leben haben; sie dürfen bitten; zum Schluss: Kinder, hütet euch vor den Götzen!",
+            "keywords": {
+              "de": "Damit ihr wisst, dass ihr ewiges Leben habt",
+              "gsw": "Demit ir wüssed, dass ir ewigs Läbe händ"
+            },
+            "letter": true,
+            "stage": {
+              "split": 1,
+              "at": {
+                "FIG-ZEICHEN-BETEN": "FIG-GRUPPE-GESCHWISTER"
+              },
+              "mood": {
+                "FIG-DER-AELTESTE": "earnest",
+                "FIG-GRUPPE-GESCHWISTER": "calm"
+              }
+            }
+          }
         ]
       }
     }

@@ -15,190 +15,207 @@
       "figures": [
         "FIG-ROLLE-SOLDAT",
         "FIG-PAULUS",
-        "FIG-GRUPPE-GLAUBENDE"
+        "FIG-GRUPPE-GESCHWISTER"
       ],
       "objects": [
+        "FIG-ORT-PRAETORIUM",
         "FIG-OBJ-KETTE"
       ],
       "signs": [
         "FIG-ZEICHEN-VERKUENDIGEN"
       ],
-      "speech": [
-        {
-          "from": "FIG-PAULUS",
-          "to": "FIG-ROLLE-SOLDAT",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-OBJ-KETTE"
-          ]
+      "speech": [],
+      "action_de": "Paulus liegt um Christi willen in Fesseln; im ganzen Prätorium ist es bekannt geworden, und die Geschwister sagen das Wort umso furchtloser.",
+      "keywords": {
+        "de": "Zur Förderung des Evangeliums",
+        "gsw": "Zum Vorwärtscho vom Evangelium"
+      },
+      "names": {
+        "FIG-PAULUS": {
+          "de": "Paulus",
+          "gsw": "Paulus"
         }
-      ],
-      "action_de": "Die Fesseln des Paulus sind im ganzen Prätorium als Fesseln um Christi willen bekannt geworden, und die meisten Geschwister sagen das Wort nun umso furchtloser.",
+      },
       "stage": {
-        "floor_x": {
-          "FIG-OBJ-KETTE": 76
+        "hold": {
+          "FIG-PAULUS": "FIG-OBJ-KETTE"
         },
-        "at": {
-          "FIG-ZEICHEN-VERKUENDIGEN": "FIG-GRUPPE-GLAUBENDE"
+        "back_side": "left",
+        "before": true,
+        "split": 2,
+        "x": {
+          "FIG-ROLLE-SOLDAT": 34,
+          "FIG-PAULUS": 80,
+          "FIG-GRUPPE-GESCHWISTER": 150
+        },
+        "beside": {
+          "FIG-ZEICHEN-VERKUENDIGEN": "FIG-GRUPPE-GESCHWISTER"
         },
         "mood": {
-          "FIG-ROLLE-SOLDAT": "calm",
-          "FIG-GRUPPE-GLAUBENDE": "smile",
-          "FIG-PAULUS": "smile"
-        },
-        "arrows": [
-          [
-            "FIG-PAULUS",
-            "FIG-GRUPPE-GLAUBENDE",
-            "act"
-          ]
-        ]
+          "FIG-PAULUS": "calm",
+          "FIG-ROLLE-SOLDAT": "earnest",
+          "FIG-GRUPPE-GESCHWISTER": "determined"
+        }
       }
     },
     {
       "n": 2,
       "reference": "PHP.1.15-PHP.1.18",
-      "figures": [
-        "FIG-GRUPPE-GLAUBENDE",
-        "FIG-PAULUS",
-        "FIG-GRUPPE-GEGNER"
-      ],
-      "objects": [
-        "FIG-OBJ-KETTE"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-FREUDE"
-      ],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-GLAUBENDE",
-          "to": "FIG-PAULUS",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-LIEBE"
-          ]
+      "figures": [],
+      "objects": [],
+      "signs": [],
+      "speech": [],
+      "action_de": "Einige verkündigen Christus aus Neid, Streitsucht und Eigennutz, um Paulus Bedrängnis zu bereiten, andere aus gutem Willen und aus Liebe; wenn nur Christus verkündigt wird, darüber freut sich Paulus.",
+      "keywords": {
+        "de": "Darüber freue ich mich",
+        "gsw": "Drüber fröi ich mich"
+      },
+      "diagram": {
+        "visual": "columns",
+        "arrow": false,
+        "speaker": "FIG-PAULUS",
+        "span": 2,
+        "title": {
+          "de": "Was soll's? Christus wird verkündigt!",
+          "gsw": "Was solls? De Christus wird verchündet!"
         },
-        {
-          "from": "FIG-GRUPPE-GEGNER",
-          "to": "FIG-PAULUS",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-STREIT"
+        "head": [
+          {
+            "de": "aus Neid und Streitsucht",
+            "gsw": "us Niid und Striitsucht"
+          },
+          {
+            "de": "aus gutem Willen und Liebe",
+            "gsw": "us guetem Wille und Liebi"
+          }
+        ],
+        "rows": [
+          [
+            {
+              "a": {
+                "de": "Einige verkündigen Christus aus Eigennutz",
+                "gsw": "Es paar verchünded de Christus us Eigenutz"
+              },
+              "b": {
+                "de": "Sie wollen mir in den Fesseln Bedrängnis bereiten.",
+                "gsw": "Si wänd mir i de Fessle Not mache."
+              },
+              "icons": [
+                "FIG-ZEICHEN-STREIT"
+              ]
+            },
+            {
+              "a": {
+                "de": "Andere verkündigen ihn aus Liebe",
+                "gsw": "Anderi verchünded en us Liebi"
+              },
+              "b": {
+                "de": "Sie wissen: Ich bin zur Verteidigung des Evangeliums bestimmt.",
+                "gsw": "Si wüssed: Ich bi zur Verteidigung vom Evangelium bestimmt."
+              },
+              "icons": [
+                "FIG-ZEICHEN-LIEBE"
+              ]
+            }
           ]
-        }
-      ],
-      "action_de": "Manche verkündigen Christus aus Liebe, andere aus Neid und Streitsucht; Paulus freut sich, dass Christus auf jede Weise verkündigt wird.",
-      "stage": {
-        "floor_x": {
-          "FIG-OBJ-KETTE": 76
-        },
-        "signs_who": {
-          "FIG-ZEICHEN-FREUDE": [
-            "FIG-PAULUS"
-          ]
-        },
-        "mood": {
-          "FIG-GRUPPE-GEGNER": "calm",
-          "FIG-GRUPPE-GLAUBENDE": "smile",
-          "FIG-PAULUS": "smile"
-        }
+        ]
       }
     },
     {
       "n": 3,
-      "reference": "PHP.1.19-PHP.1.23",
-      "figures": [
-        "FIG-PAULUS"
-      ],
-      "objects": [
-        "FIG-OBJ-KETTE"
-      ],
+      "reference": "PHP.1.20-PHP.1.26",
+      "figures": [],
+      "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-PAULUS",
-          "to": "FIG-GRUPPE-GLAUBENDE",
-          "icons": [
-            "FIG-ZEICHEN-TOD",
-            "FIG-JESUS",
-            "FIG-ZEICHEN-GEWINN"
-          ]
-        }
-      ],
-      "action_de": "Für Paulus ist das Leben Christus und das Sterben Gewinn; er hat das Verlangen, aufzubrechen und bei Christus zu sein.",
-      "stage": {
-        "floor_x": {
-          "FIG-OBJ-KETTE": 60
+      "speech": [],
+      "action_de": "Christus soll an Paulus' Leib gross gemacht werden, durch Leben oder durch Tod: Für ihn ist das Leben Christus und das Sterben Gewinn; bei Christus zu sein wäre bei weitem das Bessere, das Bleiben ist um der Philipper willen nötiger, darum wird er bleiben.",
+      "keywords": {
+        "de": "Sei es durch Leben oder durch Tod",
+        "gsw": "Sig s dur s Läbe oder dur de Tod"
+      },
+      "diagram": {
+        "visual": "balance",
+        "span": 2,
+        "speaker": "FIG-PAULUS",
+        "heavier": "right",
+        "title": {
+          "de": "Für mich ist das Leben Christus und das Sterben Gewinn",
+          "gsw": "Für mich isch s Läbe Christus und s Sterbe Gwünn"
         },
-        "x": {
-          "FIG-PAULUS": 93
-        },
-        "mood": {
-          "FIG-PAULUS": "smile"
-        }
-      }
-    },
-    {
-      "n": 4,
-      "reference": "PHP.1.24-PHP.1.26",
-      "figures": [
-        "FIG-PAULUS"
-      ],
-      "objects": [
-        "FIG-OBJ-KETTE",
-        "FIG-GRUPPE-GEMEINDE"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-FREUDE"
-      ],
-      "speech": [
-        {
-          "from": "FIG-PAULUS",
-          "to": "FIG-GRUPPE-GEMEINDE",
-          "icons": [
-            "FIG-PAULUS",
-            "FIG-GRUPPE-GEMEINDE",
-            "FIG-ZEICHEN-FREUDE"
-          ]
-        }
-      ],
-      "action_de": "Das Bleiben ist um der Gemeinde willen nötiger; Paulus rechnet damit zu bleiben, zu ihrem Fortschritt und zu ihrer Freude im Glauben.",
-      "stage": {
-        "floor_x": {
-          "FIG-OBJ-KETTE": 30
-        },
-        "x": {
-          "FIG-PAULUS": 50
-        },
-        "mood": {
-          "FIG-PAULUS": "smile"
-        },
-        "signs_who": {
-          "FIG-ZEICHEN-FREUDE": [
-            "FIG-PAULUS"
-          ]
+        "left": [
+          {
+            "a": {
+              "de": "Sterben ist Gewinn",
+              "gsw": "Sterbe isch Gwünn"
+            },
+            "icons": [
+              "FIG-ZEICHEN-TOD"
+            ]
+          },
+          {
+            "a": {
+              "de": "Aufbrechen und bei Christus sein",
+              "gsw": "Ufbräche und bi Christus sii"
+            },
+            "b": {
+              "de": "das wäre bei weitem das Bessere",
+              "gsw": "das wär wiitus s Besser"
+            },
+            "who": "FIG-JESUS"
+          }
+        ],
+        "right": [
+          {
+            "a": {
+              "de": "Leben ist Christus",
+              "gsw": "Läbe isch Christus"
+            },
+            "icons": [
+              "FIG-ZEICHEN-LEBEN"
+            ]
+          },
+          {
+            "a": {
+              "de": "Leben im Fleisch: Frucht der Arbeit",
+              "gsw": "Läbe im Fleisch: Frucht vo de Arbet"
+            },
+            "icons": [
+              "FIG-OBJ-AEHREN"
+            ]
+          },
+          {
+            "a": {
+              "de": "Bleiben ist um euretwillen nötiger",
+              "gsw": "Bliibe isch wäge eu nötiger"
+            },
+            "icons": [
+              "FIG-GRUPPE-GLAUBENDE"
+            ]
+          }
+        ],
+        "verdict": {
+          "de": "Ich werde bleiben – zu eurem Fortschritt und zur Freude im Glauben.",
+          "gsw": "Ich bliibe – zu eurem Vorwärtscho und zur Fröid im Glaube."
         }
       }
     }
   ],
   "actions_de": [
-    "Die Fesseln des Paulus sind im ganzen Prätorium als Fesseln um Christi willen bekannt geworden, und die meisten Geschwister sagen das Wort nun umso furchtloser.",
-    "Manche verkündigen Christus aus Liebe, andere aus Neid und Streitsucht; Paulus freut sich, dass Christus auf jede Weise verkündigt wird.",
-    "Für Paulus ist das Leben Christus und das Sterben Gewinn; er hat das Verlangen, aufzubrechen und bei Christus zu sein.",
-    "Das Bleiben ist um der Gemeinde willen nötiger; Paulus rechnet damit zu bleiben, zu ihrem Fortschritt und zu ihrer Freude im Glauben."
+    "Paulus liegt um Christi willen in Fesseln; im ganzen Prätorium ist es bekannt geworden, und die Geschwister sagen das Wort umso furchtloser.",
+    "Einige verkündigen Christus aus Neid, Streitsucht und Eigennutz, um Paulus Bedrängnis zu bereiten, andere aus gutem Willen und aus Liebe; wenn nur Christus verkündigt wird, darüber freut sich Paulus.",
+    "Christus soll an Paulus' Leib gross gemacht werden, durch Leben oder durch Tod: Für ihn ist das Leben Christus und das Sterben Gewinn; bei Christus zu sein wäre bei weitem das Bessere, das Bleiben ist um der Philipper willen nötiger, darum wird er bleiben."
   ],
   "captions_de": [
-    "Fesseln → Mut: Paulus (Kette) erklärt dem Wachsoldaten, dass er um Christi willen (Kreuznimbus) gefesselt ist; dadurch fassen die Geschwister Mut (Pfeil) und verkündigen furchtlos (Rufhorn über ihnen).",
-    "Hauptsache Christus: Die einen verkündigen Christus (Kreuznimbus) aus Liebe (Herz), die anderen aus Streitsucht (dunkle Wolke); Paulus (Kette) in der Mitte freut sich (strahlendes Gesicht).",
-    "Sterben ist Gewinn: Paulus (Kette) sagt: sterben (Totenkopf) und bei Christus sein (Kreuznimbus) wäre Gewinn (Münzen, Pfeil hoch).",
-    "Bleiben für euch: Paulus (Kette) sagt der Gemeinde (Haus mit Menschen): Ich (Paulus) bleibe bei euch (Haus mit Menschen), für eure Freude (strahlendes Gesicht)."
+    "Fesseln fördern das Evangelium: Paulus mit Kette vor dem Prätorium (Säulenbau), daneben ein Soldat; die Geschwister (blaugraue Gruppe) verkündigen (goldener Rufer).",
+    "Zwei Spalten (Bild Paulus, Blase «Was soll's? Christus wird verkündigt!»): aus Neid und Streitsucht (Streitblasen) ↔ aus gutem Willen und Liebe (Herz); Band: Darüber freue ich mich.",
+    "Waage (Bild Paulus, Blase «Für mich ist das Leben Christus und das Sterben Gewinn»): links Sterben ist Gewinn (Totenkopf), bei Christus sein, das Bessere (Jesus); rechts Leben ist Christus (Keimling), Frucht der Arbeit (Ähren), Bleiben ist um euretwillen nötiger (Glaubende) – die rechte Schale wiegt schwerer; darunter: Ich werde bleiben."
   ],
-  "interpretation_note_de": "Paulus schreibt den Brief als Gefangener «in Fesseln» ([[PHP.1.7]], [[PHP.1.13]]); deshalb liegt bei ihm eine Kette. Ein Soldat steht für die Wache im Prätorium ([[PHP.1.13]]). Wer aus Neid verkündigt ([[PHP.1.15]]), nennt der Text nicht; die graue Gruppe steht dafür, ohne sie als böse zu zeigen. «Sterben» ist mit dem Grabzeichen angedeutet ([[PHP.1.21]]); die Münzen stehen für «Gewinn».",
+  "interpretation_note_de": "Drei Felder nach der Struktur «Gefangenschaft → Förderung des Evangeliums → Freude»: die Fesseln als Szene ([[PHP.1.12-PHP.1.14]]), die Verkündiger aus Neid und aus Liebe als Gegenüberstellung mit dem Schluss «darüber freue ich mich» ([[PHP.1.15-PHP.1.18]]) und die Abwägung Leben ↔ Sterben als Waage mit Entscheid ([[PHP.1.20-PHP.1.26]]). Der Tod wird als Zeichen gezeigt, nicht ausgemalt. Ort und Zeit der Gefangenschaft nennt der Brief nicht; der Säulenbau steht für das Prätorium ([[PHP.1.13]]).",
   "basis": [
     {
       "record": "TU-PHP-001-012-026",
       "field": "summary",
-      "fingerprint": "e6dfbfed327440d1"
+      "fingerprint": "040f88b0a32acf3b"
     },
     {
       "record": "TRANS-PHP-001-001-030-DE-WORKING",
@@ -215,18 +232,12 @@
     {
       "record": "TRANS-PHP-001-001-030-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "PHP.1.19-PHP.1.23",
-      "fingerprint": "8b1435a28aeba5ff"
-    },
-    {
-      "record": "TRANS-PHP-001-001-030-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "PHP.1.24-PHP.1.26",
-      "fingerprint": "b2c6aa53bf9d6d37"
+      "reference": "PHP.1.20-PHP.1.26",
+      "fingerprint": "3afc30c010efe40f"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -774,6 +785,421 @@
           "Hauptsache Christus: Die einen verkündigen Christus (Kreuznimbus) aus Liebe (Herz), die anderen aus Streitsucht (dunkle Wolke); Paulus (Kette) in der Mitte freut sich (Funken).",
           "Sterben ist Gewinn: Paulus (Kette) sagt: sterben (Grab) und bei Christus sein (Kreuznimbus) wäre Gewinn (Münzen, Pfeil hoch).",
           "Bleiben für euch: Paulus (Kette) sagt der Gemeinde (Haus mit Menschen): Ich (Paulus) bleibe bei euch (Haus mit Menschen), für eure Freude (goldene Funken)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "PHP.1.12-PHP.1.14",
+            "figures": [
+              "FIG-ROLLE-SOLDAT",
+              "FIG-PAULUS",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-VERKUENDIGEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-ROLLE-SOLDAT",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-OBJ-KETTE"
+                ]
+              }
+            ],
+            "action_de": "Die Fesseln des Paulus sind im ganzen Prätorium als Fesseln um Christi willen bekannt geworden, und die meisten Geschwister sagen das Wort nun umso furchtloser.",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KETTE": 76
+              },
+              "at": {
+                "FIG-ZEICHEN-VERKUENDIGEN": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "mood": {
+                "FIG-ROLLE-SOLDAT": "calm",
+                "FIG-GRUPPE-GLAUBENDE": "smile",
+                "FIG-PAULUS": "smile"
+              },
+              "arrows": [
+                [
+                  "FIG-PAULUS",
+                  "FIG-GRUPPE-GLAUBENDE",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "PHP.1.15-PHP.1.18",
+            "figures": [
+              "FIG-GRUPPE-GLAUBENDE",
+              "FIG-PAULUS",
+              "FIG-GRUPPE-GEGNER"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-GLAUBENDE",
+                "to": "FIG-PAULUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-LIEBE"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-GEGNER",
+                "to": "FIG-PAULUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-STREIT"
+                ]
+              }
+            ],
+            "action_de": "Manche verkündigen Christus aus Liebe, andere aus Neid und Streitsucht; Paulus freut sich, dass Christus auf jede Weise verkündigt wird.",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KETTE": 76
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-PAULUS"
+                ]
+              },
+              "mood": {
+                "FIG-GRUPPE-GEGNER": "calm",
+                "FIG-GRUPPE-GLAUBENDE": "smile",
+                "FIG-PAULUS": "smile"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "PHP.1.19-PHP.1.23",
+            "figures": [
+              "FIG-PAULUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-GRUPPE-GLAUBENDE",
+                "icons": [
+                  "FIG-ZEICHEN-TOD",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-GEWINN"
+                ]
+              }
+            ],
+            "action_de": "Für Paulus ist das Leben Christus und das Sterben Gewinn; er hat das Verlangen, aufzubrechen und bei Christus zu sein.",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KETTE": 60
+              },
+              "x": {
+                "FIG-PAULUS": 93
+              },
+              "mood": {
+                "FIG-PAULUS": "smile"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "PHP.1.24-PHP.1.26",
+            "figures": [
+              "FIG-PAULUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE",
+              "FIG-GRUPPE-GEMEINDE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-GRUPPE-GEMEINDE",
+                "icons": [
+                  "FIG-PAULUS",
+                  "FIG-GRUPPE-GEMEINDE",
+                  "FIG-ZEICHEN-FREUDE"
+                ]
+              }
+            ],
+            "action_de": "Das Bleiben ist um der Gemeinde willen nötiger; Paulus rechnet damit zu bleiben, zu ihrem Fortschritt und zu ihrer Freude im Glauben.",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KETTE": 30
+              },
+              "x": {
+                "FIG-PAULUS": 50
+              },
+              "mood": {
+                "FIG-PAULUS": "smile"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-PAULUS"
+                ]
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Die Fesseln des Paulus sind im ganzen Prätorium als Fesseln um Christi willen bekannt geworden, und die meisten Geschwister sagen das Wort nun umso furchtloser.",
+          "Manche verkündigen Christus aus Liebe, andere aus Neid und Streitsucht; Paulus freut sich, dass Christus auf jede Weise verkündigt wird.",
+          "Für Paulus ist das Leben Christus und das Sterben Gewinn; er hat das Verlangen, aufzubrechen und bei Christus zu sein.",
+          "Das Bleiben ist um der Gemeinde willen nötiger; Paulus rechnet damit zu bleiben, zu ihrem Fortschritt und zu ihrer Freude im Glauben."
+        ],
+        "captions_de": [
+          "Fesseln → Mut: Paulus (Kette) erklärt dem Wachsoldaten, dass er um Christi willen (Kreuznimbus) gefesselt ist; dadurch fassen die Geschwister Mut (Pfeil) und verkündigen furchtlos (Rufhorn über ihnen).",
+          "Hauptsache Christus: Die einen verkündigen Christus (Kreuznimbus) aus Liebe (Herz), die anderen aus Streitsucht (dunkle Wolke); Paulus (Kette) in der Mitte freut sich (strahlendes Gesicht).",
+          "Sterben ist Gewinn: Paulus (Kette) sagt: sterben (Totenkopf) und bei Christus sein (Kreuznimbus) wäre Gewinn (Münzen, Pfeil hoch).",
+          "Bleiben für euch: Paulus (Kette) sagt der Gemeinde (Haus mit Menschen): Ich (Paulus) bleibe bei euch (Haus mit Menschen), für eure Freude (strahlendes Gesicht)."
+        ],
+        "interpretation_note_de": "Paulus schreibt den Brief als Gefangener «in Fesseln» ([[PHP.1.7]], [[PHP.1.13]]); deshalb liegt bei ihm eine Kette. Ein Soldat steht für die Wache im Prätorium ([[PHP.1.13]]). Wer aus Neid verkündigt ([[PHP.1.15]]), nennt der Text nicht; die graue Gruppe steht dafür, ohne sie als böse zu zeigen. «Sterben» ist mit dem Grabzeichen angedeutet ([[PHP.1.21]]); die Münzen stehen für «Gewinn».",
+        "basis": [
+          {
+            "record": "TU-PHP-001-012-026",
+            "field": "summary",
+            "fingerprint": "e6dfbfed327440d1"
+          },
+          {
+            "record": "TRANS-PHP-001-001-030-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "PHP.1.12-PHP.1.14",
+            "fingerprint": "fa8a10ebe3b1a3a6"
+          },
+          {
+            "record": "TRANS-PHP-001-001-030-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "PHP.1.15-PHP.1.18",
+            "fingerprint": "398f6d075d3e4344"
+          },
+          {
+            "record": "TRANS-PHP-001-001-030-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "PHP.1.19-PHP.1.23",
+            "fingerprint": "8b1435a28aeba5ff"
+          },
+          {
+            "record": "TRANS-PHP-001-001-030-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "PHP.1.24-PHP.1.26",
+            "fingerprint": "b2c6aa53bf9d6d37"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "PHP.1.12-PHP.1.14",
+            "figures": [
+              "FIG-ROLLE-SOLDAT",
+              "FIG-PAULUS",
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [
+              "FIG-ORT-PRAETORIUM",
+              "FIG-OBJ-KETTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-VERKUENDIGEN"
+            ],
+            "speech": [],
+            "action_de": "Paulus liegt um Christi willen in Fesseln; im ganzen Prätorium ist es bekannt geworden, und die Geschwister sagen das Wort umso furchtloser.",
+            "keywords": {
+              "de": "Zur Förderung des Evangeliums",
+              "gsw": "Zum Vorwärtscho vom Evangelium"
+            },
+            "names": {
+              "FIG-PAULUS": {
+                "de": "Paulus",
+                "gsw": "Paulus"
+              }
+            },
+            "stage": {
+              "hold": {
+                "FIG-PAULUS": "FIG-OBJ-KETTE"
+              },
+              "back_side": "left",
+              "at": {
+                "FIG-ZEICHEN-VERKUENDIGEN": "FIG-GRUPPE-GESCHWISTER"
+              },
+              "mood": {
+                "FIG-PAULUS": "calm",
+                "FIG-ROLLE-SOLDAT": "earnest",
+                "FIG-GRUPPE-GESCHWISTER": "determined"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "PHP.1.15-PHP.1.18",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Einige verkündigen Christus aus Neid, Streitsucht und Eigennutz, um Paulus Bedrängnis zu bereiten, andere aus gutem Willen und aus Liebe; wenn nur Christus verkündigt wird, darüber freut sich Paulus.",
+            "keywords": {
+              "de": "Darüber freue ich mich",
+              "gsw": "Drüber fröi ich mich"
+            },
+            "diagram": {
+              "visual": "columns",
+              "arrow": false,
+              "speaker": "FIG-PAULUS",
+              "span": 2,
+              "title": {
+                "de": "Was soll's? Christus wird verkündigt!",
+                "gsw": "Was solls? De Christus wird verchündet!"
+              },
+              "head": [
+                {
+                  "de": "aus Neid und Streitsucht",
+                  "gsw": "us Niid und Striitsucht"
+                },
+                {
+                  "de": "aus gutem Willen und Liebe",
+                  "gsw": "us guetem Wille und Liebi"
+                }
+              ],
+              "rows": [
+                [
+                  {
+                    "a": {
+                      "de": "Einige verkündigen Christus aus Eigennutz",
+                      "gsw": "Es paar verchünded de Christus us Eigenutz"
+                    },
+                    "b": {
+                      "de": "Sie wollen mir in den Fesseln Bedrängnis bereiten.",
+                      "gsw": "Si wänd mir i de Fessle Not mache."
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-STREIT"
+                    ]
+                  },
+                  {
+                    "a": {
+                      "de": "Andere verkündigen ihn aus Liebe",
+                      "gsw": "Anderi verchünded en us Liebi"
+                    },
+                    "b": {
+                      "de": "Sie wissen: Ich bin zur Verteidigung des Evangeliums bestimmt.",
+                      "gsw": "Si wüssed: Ich bi zur Verteidigung vom Evangelium bestimmt."
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-LIEBE"
+                    ]
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "PHP.1.20-PHP.1.26",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Christus soll an Paulus' Leib gross gemacht werden, durch Leben oder durch Tod: Für ihn ist das Leben Christus und das Sterben Gewinn; bei Christus zu sein wäre bei weitem das Bessere, das Bleiben ist um der Philipper willen nötiger, darum wird er bleiben.",
+            "keywords": {
+              "de": "Sei es durch Leben oder durch Tod",
+              "gsw": "Sig s dur s Läbe oder dur de Tod"
+            },
+            "diagram": {
+              "visual": "balance",
+              "span": 2,
+              "speaker": "FIG-PAULUS",
+              "heavier": "right",
+              "title": {
+                "de": "Für mich ist das Leben Christus und das Sterben Gewinn",
+                "gsw": "Für mich isch s Läbe Christus und s Sterbe Gwünn"
+              },
+              "left": [
+                {
+                  "a": {
+                    "de": "Sterben ist Gewinn",
+                    "gsw": "Sterbe isch Gwünn"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-TOD"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Aufbrechen und bei Christus sein",
+                    "gsw": "Ufbräche und bi Christus sii"
+                  },
+                  "b": {
+                    "de": "das wäre bei weitem das Bessere",
+                    "gsw": "das wär wiitus s Besser"
+                  },
+                  "who": "FIG-JESUS"
+                }
+              ],
+              "right": [
+                {
+                  "a": {
+                    "de": "Leben ist Christus",
+                    "gsw": "Läbe isch Christus"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-LEBEN"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Leben im Fleisch: Frucht der Arbeit",
+                    "gsw": "Läbe im Fleisch: Frucht vo de Arbet"
+                  },
+                  "icons": [
+                    "FIG-OBJ-AEHREN"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Bleiben ist um euretwillen nötiger",
+                    "gsw": "Bliibe isch wäge eu nötiger"
+                  },
+                  "icons": [
+                    "FIG-GRUPPE-GLAUBENDE"
+                  ]
+                }
+              ],
+              "verdict": {
+                "de": "Ich werde bleiben – zu eurem Fortschritt und zur Freude im Glauben.",
+                "gsw": "Ich bliibe – zu eurem Vorwärtscho und zur Fröid im Glaube."
+              }
+            }
+          }
         ]
       }
     }

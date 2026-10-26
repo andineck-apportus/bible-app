@@ -17,34 +17,53 @@
         "FIG-AUSERWAEHLTE-HERRIN",
         "FIG-GRUPPE-KINDER"
       ],
-      "objects": [
-        "FIG-OBJ-BRIEF",
-        "FIG-ORT-HAUS"
+      "objects": [],
+      "signs": [
+        "FIG-ZEICHEN-FREUDE"
       ],
-      "signs": [],
       "speech": [
         {
           "from": "FIG-DER-AELTESTE",
           "to": "FIG-AUSERWAEHLTE-HERRIN",
           "icons": [
-            "FIG-ZEICHEN-WAHRHEIT",
             "FIG-ZEICHEN-LIEBE"
-          ]
+          ],
+          "word": {
+            "de": "Lasst uns einander lieben!",
+            "gsw": "Mir wänd enand liebe!"
+          }
         }
       ],
-      "action_de": "Der Älteste schreibt der auserwählten Herrin und ihren Kindern: Wahrheit und gegenseitige Liebe gehören zusammen.",
-      "stage": {
-        "hold": {
-          "FIG-DER-AELTESTE": "FIG-OBJ-BRIEF"
+      "action_de": "Der Älteste freut sich über die Kinder, die in der Wahrheit leben, und bittet die Herrin um das Gebot von Anfang an: dass wir einander lieben.",
+      "keywords": {
+        "de": "Dass wir einander lieben",
+        "gsw": "Dass mir enand liebed"
+      },
+      "names": {
+        "FIG-DER-AELTESTE": {
+          "de": "Der Älteste",
+          "gsw": "De Ältischt"
         },
-        "before": true,
+        "FIG-AUSERWAEHLTE-HERRIN": {
+          "de": "Die auserwählte Herrin",
+          "gsw": "Di uuserwählt Herrin"
+        }
+      },
+      "letter": true,
+      "stage": {
+        "split": 1,
         "x": {
-          "FIG-DER-AELTESTE": 32,
-          "FIG-AUSERWAEHLTE-HERRIN": 104,
-          "FIG-GRUPPE-KINDER": 150
+          "FIG-DER-AELTESTE": 36,
+          "FIG-AUSERWAEHLTE-HERRIN": 112,
+          "FIG-GRUPPE-KINDER": 188
+        },
+        "signs_who": {
+          "FIG-ZEICHEN-FREUDE": [
+            "FIG-DER-AELTESTE"
+          ]
         },
         "mood": {
-          "FIG-DER-AELTESTE": "smile",
+          "FIG-DER-AELTESTE": "delight",
           "FIG-AUSERWAEHLTE-HERRIN": "smile",
           "FIG-GRUPPE-KINDER": "smile"
         }
@@ -59,67 +78,97 @@
         "FIG-GRUPPE-VERFUEHRER"
       ],
       "objects": [
-        "FIG-OBJ-BRIEF"
+        "FIG-ORT-HAUS"
       ],
-      "signs": [
-        "FIG-ZEICHEN-ABSTAND"
-      ],
+      "signs": [],
       "speech": [
         {
           "from": "FIG-DER-AELTESTE",
           "to": "FIG-AUSERWAEHLTE-HERRIN",
           "icons": [
-            "FIG-ZEICHEN-WARNEN",
-            "FIG-ZEICHEN-LUEGE"
-          ]
-        },
-        {
-          "from": "FIG-GRUPPE-VERFUEHRER",
-          "to": "FIG-ZEICHEN-WELT",
-          "icons": [
-            "FIG-JESUS",
+            "FIG-ORT-HAUS",
             "FIG-ZEICHEN-NICHT"
-          ]
+          ],
+          "word": {
+            "de": "Nehmt ihn nicht ins Haus auf!",
+            "gsw": "Nämed en nöd is Huus uf!"
+          }
         }
       ],
-      "action_de": "Er warnt vor Verführern, die das Bekenntnis zu Christus untergraben, und weist an, sie nicht aufzunehmen.",
+      "action_de": "Wer zu ihnen kommt und die Lehre Christi nicht bringt, den sollen sie nicht ins Haus aufnehmen und nicht grüssen, denn wer ihn grüsst, hat Anteil an seinen bösen Werken.",
+      "keywords": {
+        "de": "Nehmt ihn nicht ins Haus auf!",
+        "gsw": "Nämed en nöd is Huus uf!"
+      },
+      "letter": true,
       "stage": {
-        "split": 2,
-        "hold": {
-          "FIG-DER-AELTESTE": "FIG-OBJ-BRIEF"
-        },
-        "pose": {
-          "FIG-GRUPPE-VERFUEHRER": "away"
+        "split": 1,
+        "back_side": "right",
+        "before": true,
+        "mood": {
+          "FIG-DER-AELTESTE": "earnest",
+          "FIG-AUSERWAEHLTE-HERRIN": "determined",
+          "FIG-GRUPPE-VERFUEHRER": "calm"
+        }
+      }
+    },
+    {
+      "n": 3,
+      "reference": "2JN.1.12-2JN.1.13",
+      "figures": [
+        "FIG-DER-AELTESTE",
+        "FIG-AUSERWAEHLTE-HERRIN",
+        "FIG-GRUPPE-KINDER-DER-SCHWESTER"
+      ],
+      "objects": [],
+      "signs": [
+        "FIG-ZEICHEN-GRUESSEN"
+      ],
+      "speech": [],
+      "action_de": "Der Älteste will nicht mit Papier und Tinte schreiben, sondern kommen und von Mund zu Mund reden; die Kinder der auserwählten Schwester grüssen.",
+      "keywords": {
+        "de": "Von Mund zu Mund reden",
+        "gsw": "Vo Muul zu Muul rede"
+      },
+      "stage": {
+        "arrows": [
+          [
+            "FIG-DER-AELTESTE",
+            "FIG-AUSERWAEHLTE-HERRIN",
+            "go"
+          ]
+        ],
+        "at": {
+          "FIG-ZEICHEN-GRUESSEN": "FIG-GRUPPE-KINDER-DER-SCHWESTER"
         },
         "mood": {
-          "FIG-DER-AELTESTE": "calm",
-          "FIG-AUSERWAEHLTE-HERRIN": "calm",
-          "FIG-GRUPPE-VERFUEHRER": "calm"
-        },
-        "x": {
-          "FIG-GRUPPE-VERFUEHRER": 150
+          "FIG-DER-AELTESTE": "smile",
+          "FIG-AUSERWAEHLTE-HERRIN": "smile",
+          "FIG-GRUPPE-KINDER-DER-SCHWESTER": "smile"
         }
       }
     }
   ],
   "actions_de": [
-    "Der Älteste schreibt der auserwählten Herrin und ihren Kindern: Wahrheit und gegenseitige Liebe gehören zusammen.",
-    "Er warnt vor Verführern, die das Bekenntnis zu Christus untergraben, und weist an, sie nicht aufzunehmen."
+    "Der Älteste freut sich über die Kinder, die in der Wahrheit leben, und bittet die Herrin um das Gebot von Anfang an: dass wir einander lieben.",
+    "Wer zu ihnen kommt und die Lehre Christi nicht bringt, den sollen sie nicht ins Haus aufnehmen und nicht grüssen, denn wer ihn grüsst, hat Anteil an seinen bösen Werken.",
+    "Der Älteste will nicht mit Papier und Tinte schreiben, sondern kommen und von Mund zu Mund reden; die Kinder der auserwählten Schwester grüssen."
   ],
   "captions_de": [
-    "Wahrheit und Liebe: Der Älteste (mit Brief) an die Herrin und ihre Kinder vor ihrem Haus: Wahrheit (grünes Häkchen) und Liebe (rotes Herz).",
-    "Warnung: Der Älteste (mit Brief) warnt (erhobener Zeigefinger) vor Lüge (rotes Kreuz): Die Verführer (rechts, abgewandt) bekennen Jesus nicht (Jesus, roter Kreis mit Schrägbalken = nicht)."
+    "Bitte an die Herrin: Der Älteste ist fern (gestrichelte Linie) und schreibt: «Lasst uns einander lieben!» (Herz); er freut sich über die Kinder (lachendes Gesicht).",
+    "Auftrag an die Herrin – nicht aufnehmen: Der Älteste ist fern (gestrichelte Linie) und schreibt: «Nehmt ihn nicht ins Haus auf!» (Haus, Verbotskreis); vor dem Haus steht ein Verführer (violettgraue Gruppe).",
+    "Besuch statt Brief: Der Älteste macht sich auf den Weg zur Herrin (gestrichelter Pfeil); die Kinder der Schwester (grünes Gewand) winken (winkende Hand)."
   ],
-  "interpretation_note_de": "Zwei Felder: Gruss in Wahrheit und Liebe, Warnung vor Verführern. Die auserwählte Herrin ist als Frau mit ihren Kindern gezeichnet; ob eine Frau oder eine Gemeinde gemeint ist, ist umstritten ([[2JN.1.1]]).",
+  "interpretation_note_de": "Drei Comic-Szenen zu den Stationen der Kernanalyse: Wahrheit und Liebe (Briefkopf und Bitte, [[2JN.1.1-2JN.1.6]]), die Warnung vor Verführern mit der Weisung, sie nicht aufzunehmen ([[2JN.1.7-2JN.1.11]]), und der angekündigte Besuch ([[2JN.1.12-2JN.1.13]]). Das Buch hat nur ein Kapitel. Comic-Szenen nach dem Entscheid vom 2026-10-25. Ob die «auserwählte Herrin» und ihre Kinder eine Frau mit ihren Kindern oder bildlich eine Gemeinde meinen, ist umstritten; das Bild zeigt sie als Frau mit Kindern (Deutung).",
   "basis": [
     {
       "record": "SUM-BOOK-2JN",
       "field": "summary",
-      "fingerprint": "06db174574227231"
+      "fingerprint": "0efe853e59fa1f66"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -215,6 +264,265 @@
         "captions_de": [
           "Wahrheit und Liebe: Der Älteste (mit Brief) an die Herrin und ihre Kinder vor ihrem Haus: Wahrheit (grünes Häkchen) und Liebe (zwei Herzen).",
           "Warnung: Der Älteste (mit Brief) warnt (erhobener Zeigefinger) vor Lüge (rotes Kreuz): Die Verführer (rechts, abgewandt) bekennen Jesus nicht (Jesus, roter Kreis mit Schrägbalken = nicht)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "2JN.1.1-2JN.1.6",
+            "figures": [
+              "FIG-DER-AELTESTE",
+              "FIG-AUSERWAEHLTE-HERRIN",
+              "FIG-GRUPPE-KINDER"
+            ],
+            "objects": [
+              "FIG-OBJ-BRIEF",
+              "FIG-ORT-HAUS"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-DER-AELTESTE",
+                "to": "FIG-AUSERWAEHLTE-HERRIN",
+                "icons": [
+                  "FIG-ZEICHEN-WAHRHEIT",
+                  "FIG-ZEICHEN-LIEBE"
+                ]
+              }
+            ],
+            "action_de": "Der Älteste schreibt der auserwählten Herrin und ihren Kindern: Wahrheit und gegenseitige Liebe gehören zusammen.",
+            "stage": {
+              "hold": {
+                "FIG-DER-AELTESTE": "FIG-OBJ-BRIEF"
+              },
+              "before": true,
+              "x": {
+                "FIG-DER-AELTESTE": 32,
+                "FIG-AUSERWAEHLTE-HERRIN": 104,
+                "FIG-GRUPPE-KINDER": 150
+              },
+              "mood": {
+                "FIG-DER-AELTESTE": "smile",
+                "FIG-AUSERWAEHLTE-HERRIN": "smile",
+                "FIG-GRUPPE-KINDER": "smile"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "2JN.1.7-2JN.1.11",
+            "figures": [
+              "FIG-DER-AELTESTE",
+              "FIG-AUSERWAEHLTE-HERRIN",
+              "FIG-GRUPPE-VERFUEHRER"
+            ],
+            "objects": [
+              "FIG-OBJ-BRIEF"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ABSTAND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-DER-AELTESTE",
+                "to": "FIG-AUSERWAEHLTE-HERRIN",
+                "icons": [
+                  "FIG-ZEICHEN-WARNEN",
+                  "FIG-ZEICHEN-LUEGE"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-VERFUEHRER",
+                "to": "FIG-ZEICHEN-WELT",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-NICHT"
+                ]
+              }
+            ],
+            "action_de": "Er warnt vor Verführern, die das Bekenntnis zu Christus untergraben, und weist an, sie nicht aufzunehmen.",
+            "stage": {
+              "split": 2,
+              "hold": {
+                "FIG-DER-AELTESTE": "FIG-OBJ-BRIEF"
+              },
+              "pose": {
+                "FIG-GRUPPE-VERFUEHRER": "away"
+              },
+              "mood": {
+                "FIG-DER-AELTESTE": "calm",
+                "FIG-AUSERWAEHLTE-HERRIN": "calm",
+                "FIG-GRUPPE-VERFUEHRER": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-VERFUEHRER": 150
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Der Älteste schreibt der auserwählten Herrin und ihren Kindern: Wahrheit und gegenseitige Liebe gehören zusammen.",
+          "Er warnt vor Verführern, die das Bekenntnis zu Christus untergraben, und weist an, sie nicht aufzunehmen."
+        ],
+        "captions_de": [
+          "Wahrheit und Liebe: Der Älteste (mit Brief) an die Herrin und ihre Kinder vor ihrem Haus: Wahrheit (grünes Häkchen) und Liebe (rotes Herz).",
+          "Warnung: Der Älteste (mit Brief) warnt (erhobener Zeigefinger) vor Lüge (rotes Kreuz): Die Verführer (rechts, abgewandt) bekennen Jesus nicht (Jesus, roter Kreis mit Schrägbalken = nicht)."
+        ],
+        "interpretation_note_de": "Zwei Felder: Gruss in Wahrheit und Liebe, Warnung vor Verführern. Die auserwählte Herrin ist als Frau mit ihren Kindern gezeichnet; ob eine Frau oder eine Gemeinde gemeint ist, ist umstritten ([[2JN.1.1]]).",
+        "basis": [
+          {
+            "record": "SUM-BOOK-2JN",
+            "field": "summary",
+            "fingerprint": "06db174574227231"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "2JN.1.1-2JN.1.6",
+            "figures": [
+              "FIG-DER-AELTESTE",
+              "FIG-AUSERWAEHLTE-HERRIN",
+              "FIG-GRUPPE-KINDER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-DER-AELTESTE",
+                "to": "FIG-AUSERWAEHLTE-HERRIN",
+                "icons": [
+                  "FIG-ZEICHEN-LIEBE"
+                ],
+                "word": {
+                  "de": "Lasst uns einander lieben!",
+                  "gsw": "Mir wänd enand liebe!"
+                }
+              }
+            ],
+            "action_de": "Der Älteste freut sich über die Kinder, die in der Wahrheit leben, und bittet die Herrin um das Gebot von Anfang an: dass wir einander lieben.",
+            "keywords": {
+              "de": "Dass wir einander lieben",
+              "gsw": "Dass mir enand liebed"
+            },
+            "names": {
+              "FIG-DER-AELTESTE": {
+                "de": "Der Älteste",
+                "gsw": "De Ältischt"
+              },
+              "FIG-AUSERWAEHLTE-HERRIN": {
+                "de": "Die auserwählte Herrin",
+                "gsw": "Di uuserwählt Herrin"
+              }
+            },
+            "letter": true,
+            "stage": {
+              "split": 1,
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-DER-AELTESTE"
+                ]
+              },
+              "mood": {
+                "FIG-DER-AELTESTE": "delight",
+                "FIG-AUSERWAEHLTE-HERRIN": "smile",
+                "FIG-GRUPPE-KINDER": "smile"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "2JN.1.7-2JN.1.11",
+            "figures": [
+              "FIG-DER-AELTESTE",
+              "FIG-AUSERWAEHLTE-HERRIN",
+              "FIG-GRUPPE-VERFUEHRER"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-DER-AELTESTE",
+                "to": "FIG-AUSERWAEHLTE-HERRIN",
+                "icons": [
+                  "FIG-ORT-HAUS",
+                  "FIG-ZEICHEN-NICHT"
+                ],
+                "word": {
+                  "de": "Nehmt ihn nicht ins Haus auf!",
+                  "gsw": "Nämed en nöd is Huus uf!"
+                }
+              }
+            ],
+            "action_de": "Wer zu ihnen kommt und die Lehre Christi nicht bringt, den sollen sie nicht ins Haus aufnehmen und nicht grüssen, denn wer ihn grüsst, hat Anteil an seinen bösen Werken.",
+            "keywords": {
+              "de": "Nehmt ihn nicht ins Haus auf!",
+              "gsw": "Nämed en nöd is Huus uf!"
+            },
+            "letter": true,
+            "stage": {
+              "split": 1,
+              "back_side": "right",
+              "before": true,
+              "mood": {
+                "FIG-DER-AELTESTE": "earnest",
+                "FIG-AUSERWAEHLTE-HERRIN": "determined",
+                "FIG-GRUPPE-VERFUEHRER": "calm"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "2JN.1.12-2JN.1.13",
+            "figures": [
+              "FIG-DER-AELTESTE",
+              "FIG-AUSERWAEHLTE-HERRIN",
+              "FIG-GRUPPE-KINDER-DER-SCHWESTER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-GRUESSEN"
+            ],
+            "speech": [],
+            "action_de": "Der Älteste will nicht mit Papier und Tinte schreiben, sondern kommen und von Mund zu Mund reden; die Kinder der auserwählten Schwester grüssen.",
+            "keywords": {
+              "de": "Von Mund zu Mund reden",
+              "gsw": "Vo Muul zu Muul rede"
+            },
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-DER-AELTESTE",
+                  "FIG-AUSERWAEHLTE-HERRIN",
+                  "go"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-GRUESSEN": "FIG-GRUPPE-KINDER-DER-SCHWESTER"
+              },
+              "mood": {
+                "FIG-DER-AELTESTE": "smile",
+                "FIG-AUSERWAEHLTE-HERRIN": "smile",
+                "FIG-GRUPPE-KINDER-DER-SCHWESTER": "smile"
+              }
+            }
+          }
         ]
       }
     }

@@ -17,30 +17,47 @@
         "FIG-EUODIA",
         "FIG-SYNTYCHE"
       ],
-      "objects": [
-        "FIG-OBJ-KETTE"
-      ],
+      "objects": [],
       "signs": [],
       "speech": [
         {
           "from": "FIG-PAULUS",
           "to": "FIG-EUODIA",
           "icons": [
-            "FIG-EUODIA",
-            "FIG-SYNTYCHE",
             "FIG-ZEICHEN-EINHEIT"
-          ]
+          ],
+          "word": {
+            "de": "Seid eines Sinnes im Herrn!",
+            "gsw": "Sind einig im Herr!"
+          }
         }
       ],
-      "action_de": "Paulus bittet Euodia und Syntyche, eines Sinnes zu sein im Herrn; sie haben mit ihm für das Evangelium gekämpft.",
-      "stage": {
-        "floor_x": {
-          "FIG-OBJ-KETTE": 20
+      "action_de": "Paulus bittet Euodia und Syntyche, eines Sinnes zu sein im Herrn, denn sie haben mit ihm im Evangelium gekämpft.",
+      "keywords": {
+        "de": "Eines Sinnes im Herrn",
+        "gsw": "Einig im Herr"
+      },
+      "names": {
+        "FIG-PAULUS": {
+          "de": "Paulus",
+          "gsw": "Paulus"
         },
+        "FIG-EUODIA": {
+          "de": "Euodia",
+          "gsw": "Euodia"
+        },
+        "FIG-SYNTYCHE": {
+          "de": "Syntyche",
+          "gsw": "Syntyche"
+        }
+      },
+      "letter": true,
+      "stage": {
+        "split": 1,
         "mood": {
-          "FIG-EUODIA": "calm",
-          "FIG-SYNTYCHE": "calm",
-          "FIG-PAULUS": "smile"
+          "FIG-PAULUS": "earnest",
+          "FIG-EUODIA": "pensive",
+          "FIG-SYNTYCHE": "pensive"
         }
       }
     },
@@ -53,38 +70,37 @@
       ],
       "objects": [],
       "signs": [
+        "FIG-ZEICHEN-BETEN",
         "FIG-ZEICHEN-FRIEDE",
         "FIG-ZEICHEN-FREUDE"
       ],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-GLAUBENDE",
-          "to": "FIG-GOTT",
-          "icons": [
-            "FIG-ZEICHEN-SORGE",
-            "FIG-ZEICHEN-NEIN",
-            "FIG-ZEICHEN-BETEN"
-          ]
-        }
-      ],
-      "action_de": "Die Gemeinde soll sich allezeit freuen und sich um nichts sorgen, sondern ihre Anliegen im Gebet mit Dank vor Gott bringen; der Friede Gottes wird ihre Herzen bewahren.",
+      "speech": [],
+      "action_de": "Die Gemeinde soll sich im Herrn allezeit freuen, sich um nichts sorgen, sondern ihre Anliegen mit Dank im Gebet vor Gott bringen; der Friede Gottes wird ihre Herzen bewahren.",
+      "keywords": {
+        "de": "Freut euch im Herrn allezeit!",
+        "gsw": "Fröied eu immer im Herr!"
+      },
       "stage": {
-        "god_side": "right",
+        "god_side": "left",
         "arrows": [
           [
+            "FIG-GOTT",
             "FIG-GRUPPE-GLAUBENDE",
-            "FIG-GOTT",
-            "act"
-          ],
-          [
-            "FIG-GOTT",
-            "FIG-ZEICHEN-FRIEDE",
             "act"
           ]
         ],
-        "mood": {},
-        "air_x": 146,
-        "air_y": 62
+        "at": {
+          "FIG-ZEICHEN-BETEN": "FIG-GRUPPE-GLAUBENDE",
+          "FIG-ZEICHEN-FRIEDE": "FIG-GRUPPE-GLAUBENDE"
+        },
+        "signs_who": {
+          "FIG-ZEICHEN-FREUDE": [
+            "FIG-GRUPPE-GLAUBENDE"
+          ]
+        },
+        "mood": {
+          "FIG-GRUPPE-GLAUBENDE": "smile"
+        }
       }
     },
     {
@@ -94,122 +110,102 @@
         "FIG-EPAPHRODITUS",
         "FIG-PAULUS"
       ],
-      "objects": [
-        "FIG-GRUPPE-GEMEINDE",
-        "FIG-OBJ-KETTE"
-      ],
+      "objects": [],
       "signs": [
-        "FIG-ZEICHEN-FREUDE"
+        "FIG-ZEICHEN-BRINGEN"
       ],
       "speech": [
         {
           "from": "FIG-PAULUS",
-          "to": "FIG-GOTT",
+          "to": "FIG-EPAPHRODITUS",
           "icons": [
-            "FIG-ZEICHEN-OPFER",
-            "FIG-GOTT"
-          ]
+            "FIG-ZEICHEN-SATT",
+            "FIG-ZEICHEN-FEHLT-BROT"
+          ],
+          "word": {
+            "de": "Alles vermag ich durch den, der mich stark macht.",
+            "gsw": "Alles chan ich dur dä, wo mich starch macht."
+          }
         }
       ],
-      "action_de": "Durch Epaphroditus hat Paulus die Gaben der Gemeinde erhalten; er nennt sie ein Opfer, das Gott gefällt.",
+      "action_de": "Epaphroditus hat Paulus die Gaben der Philipper gebracht; Paulus dankt: Alles vermag er durch den, der ihn stark macht, und sein Gott wird ihren Bedarf erfüllen.",
+      "keywords": {
+        "de": "Alles vermag ich durch den, der mich stark macht",
+        "gsw": "Alles chan ich dur dä, wo mich starch macht"
+      },
+      "names": {
+        "FIG-EPAPHRODITUS": {
+          "de": "Epaphroditus",
+          "gsw": "Epaphroditus"
+        }
+      },
       "stage": {
-        "back_side": "left",
-        "signs_who": {
-          "FIG-ZEICHEN-FREUDE": [
-            "FIG-PAULUS"
-          ]
-        },
-        "x": {
-          "FIG-EPAPHRODITUS": 100,
-          "FIG-PAULUS": 148
-        },
-        "floor_x": {
-          "FIG-OBJ-KETTE": 160
-        },
-        "mood": {
-          "FIG-EPAPHRODITUS": "smile"
-        },
         "arrows": [
           [
             "FIG-EPAPHRODITUS",
             "FIG-PAULUS",
             "act"
           ]
-        ]
+        ],
+        "beside": {
+          "FIG-ZEICHEN-BRINGEN": "FIG-EPAPHRODITUS"
+        },
+        "mood": {
+          "FIG-EPAPHRODITUS": "smile",
+          "FIG-PAULUS": "delight"
+        }
       }
     },
     {
       "n": 4,
       "reference": "PHP.4.21-PHP.4.23",
       "figures": [
-        "FIG-GRUPPE-GLAUBENDE",
-        "FIG-PAULUS"
+        "FIG-GRUPPE-GESCHWISTER"
       ],
       "objects": [
-        "FIG-OBJ-BRIEF",
-        "FIG-OBJ-KETTE",
-        "FIG-GRUPPE-GEMEINDE"
+        "FIG-ORT-PRAETORIUM"
       ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-PAULUS",
-          "to": "FIG-GRUPPE-GEMEINDE",
-          "icons": [
-            "FIG-ZEICHEN-GNADE",
-            "FIG-JESUS"
-          ]
-        }
+      "signs": [
+        "FIG-ZEICHEN-GRUESSEN",
+        "FIG-ZEICHEN-GNADE"
       ],
-      "action_de": "Paulus und die Geschwister bei ihm, auch aus dem Haus des Kaisers, grüssen die Gemeinde; die Gnade des Herrn Jesus Christus sei mit ihnen.",
+      "speech": [],
+      "action_de": "Zum Schluss grüssen die Geschwister bei Paulus und alle Heiligen, besonders die aus dem Haus des Kaisers; Paulus wünscht die Gnade des Herrn Jesus Christus.",
+      "keywords": {
+        "de": "Besonders aber die aus dem Haus des Kaisers",
+        "gsw": "Bsunders aber die us em Huus vom Kaiser"
+      },
       "stage": {
-        "hold": {
-          "FIG-PAULUS": "FIG-OBJ-BRIEF"
-        },
-        "arrows": [
-          [
-            "FIG-PAULUS",
-            "FIG-GRUPPE-GEMEINDE",
-            "act"
-          ]
-        ],
-        "floor_x": {
-          "FIG-OBJ-KETTE": 76
-        },
+        "back_side": "right",
+        "before": true,
         "mood": {
-          "FIG-GRUPPE-GLAUBENDE": "smile",
-          "FIG-PAULUS": "smile"
-        },
-        "x": {
-          "FIG-GRUPPE-GLAUBENDE": 26,
-          "FIG-PAULUS": 92
-        },
-        "back_side": "right"
+          "FIG-GRUPPE-GESCHWISTER": "smile"
+        }
       }
     }
   ],
   "actions_de": [
-    "Paulus bittet Euodia und Syntyche, eines Sinnes zu sein im Herrn; sie haben mit ihm für das Evangelium gekämpft.",
-    "Die Gemeinde soll sich allezeit freuen und sich um nichts sorgen, sondern ihre Anliegen im Gebet mit Dank vor Gott bringen; der Friede Gottes wird ihre Herzen bewahren.",
-    "Durch Epaphroditus hat Paulus die Gaben der Gemeinde erhalten; er nennt sie ein Opfer, das Gott gefällt.",
-    "Paulus und die Geschwister bei ihm, auch aus dem Haus des Kaisers, grüssen die Gemeinde; die Gnade des Herrn Jesus Christus sei mit ihnen."
+    "Paulus bittet Euodia und Syntyche, eines Sinnes zu sein im Herrn, denn sie haben mit ihm im Evangelium gekämpft.",
+    "Die Gemeinde soll sich im Herrn allezeit freuen, sich um nichts sorgen, sondern ihre Anliegen mit Dank im Gebet vor Gott bringen; der Friede Gottes wird ihre Herzen bewahren.",
+    "Epaphroditus hat Paulus die Gaben der Philipper gebracht; Paulus dankt: Alles vermag er durch den, der ihn stark macht, und sein Gott wird ihren Bedarf erfüllen.",
+    "Zum Schluss grüssen die Geschwister bei Paulus und alle Heiligen, besonders die aus dem Haus des Kaisers; Paulus wünscht die Gnade des Herrn Jesus Christus."
   ],
   "captions_de": [
-    "Eines Sinnes: Paulus (Kette) bittet Euodia (altrosa) und Syntyche (hellblau), sich zu einigen (zwei goldene Ringe).",
-    "Gebet → Friede: Die Glaubenden bringen ihre Sorgen (besorgtes Gesicht) im Gebet (Hände) zu Gott (Strahlenkranz, Pfeil); von Gott kommt der Friede (goldener Pfeil zum Ölzweig); sie freuen sich (strahlendes Gesicht).",
-    "Gemeinde → Epaphroditus → Paulus: Epaphroditus kommt von der Gemeinde (Haus mit Menschen hinter ihm) und bringt ihre Gabe (Beutel, Pfeil) zu Paulus (Kette), der sich freut (strahlendes Gesicht); Paulus nennt sie ein Opfer (Widder mit Flamme) für Gott (Strahlenkranz).",
-    "Grüsse und Segen: Paulus (Brief, Kette) und die Geschwister bei ihm (links) grüssen die Gemeinde (Pfeil); Gnade (Hände mit Licht) von Jesus (Kreuznimbus)."
+    "Auftrag an Euodia und Syntyche: Paulus ist fern (gestrichelte Linie) und schreibt: «Seid eines Sinnes im Herrn!» (goldene Ringe).",
+    "Gebet statt Sorge: Die Glaubenden beten zu Gott (Strahlenkranz, gefaltete Hände) und freuen sich; von Gott kommt der Friede (goldener Pfeil, Olivenzweig).",
+    "Dank für die Gabe: Epaphroditus bringt den Korb mit den Gaben zu Paulus (Pfeil); Paulus sagt: «Alles vermag ich durch den, der mich stark macht» – satt und hungrig (Schale mit Brot, Brot durchgestrichen).",
+    "Grüsse: Die Geschwister vor dem Säulenbau des Kaisers winken (winkende Hand); Gnade (offene Hände mit goldenem Licht)."
   ],
-  "interpretation_note_de": "Der erste Abschnitt ist mit zwei Feldern vertreten, die übrigen mit je einem; Einzelheiten dort. Paulus schreibt den Brief als Gefangener «in Fesseln» ([[PHP.1.7]], [[PHP.1.13]]); deshalb liegt bei ihm eine Kette. Ein Soldat steht für die Wache im Prätorium ([[PHP.1.13]]).",
+  "interpretation_note_de": "Vier Comic-Szenen für drei Abschnitte: Der erste Abschnitt hat zwei Felder, die Bitte an Euodia und Syntyche ([[PHP.4.1-PHP.4.3]]) und Freude und Gebet statt Sorge mit dem Frieden Gottes ([[PHP.4.4-PHP.4.9]]); dann der Dank für die Gabe, die Epaphroditus brachte ([[PHP.4.10-PHP.4.20]]), und die Grüsse aus dem Haus des Kaisers ([[PHP.4.21-PHP.4.23]]). Der Säulenbau steht für das Haus des Kaisers bzw. das Prätorium. Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-PHP-004",
       "field": "summary",
-      "fingerprint": "3a4897a409faebae"
+      "fingerprint": "b01d055726e331b2"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -752,6 +748,773 @@
           "Gebet → Friede: Die Glaubenden bringen ihre Sorgen (Tropfen mit Wellenlinie) im Gebet (Hände) zu Gott (Strahlenkranz, Pfeil); von Gott kommt der Friede (goldener Pfeil zum Ölzweig); sie freuen sich (Funken).",
           "Gemeinde → Epaphroditus → Paulus: Epaphroditus kommt von der Gemeinde (Haus mit Menschen hinter ihm) und bringt ihre Gabe (Beutel, Pfeil) zu Paulus (Kette), der sich freut (Funken); Paulus nennt sie ein Opfer (Altar) für Gott (Strahlenkranz).",
           "Grüsse und Segen: Paulus (Brief, Kette) und die Geschwister bei ihm (links) grüssen die Gemeinde (Pfeil); Gnade (Hände mit Licht) von Jesus (Kreuznimbus)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "PHP.4.1-PHP.4.3",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-EUODIA",
+              "FIG-SYNTYCHE"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-EUODIA",
+                "icons": [
+                  "FIG-EUODIA",
+                  "FIG-SYNTYCHE",
+                  "FIG-ZEICHEN-EINHEIT"
+                ]
+              }
+            ],
+            "action_de": "Paulus bittet Euodia und Syntyche, eines Sinnes zu sein im Herrn; sie haben mit ihm für das Evangelium gekämpft.",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KETTE": 20
+              },
+              "mood": {
+                "FIG-EUODIA": "calm",
+                "FIG-SYNTYCHE": "calm",
+                "FIG-PAULUS": "smile"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "PHP.4.4-PHP.4.9",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-FRIEDE",
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-GLAUBENDE",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-SORGE",
+                  "FIG-ZEICHEN-NEIN",
+                  "FIG-ZEICHEN-BETEN"
+                ]
+              }
+            ],
+            "action_de": "Die Gemeinde soll sich allezeit freuen und sich um nichts sorgen, sondern ihre Anliegen im Gebet mit Dank vor Gott bringen; der Friede Gottes wird ihre Herzen bewahren.",
+            "stage": {
+              "god_side": "right",
+              "arrows": [
+                [
+                  "FIG-GRUPPE-GLAUBENDE",
+                  "FIG-GOTT",
+                  "act"
+                ],
+                [
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-FRIEDE",
+                  "act"
+                ]
+              ],
+              "mood": {},
+              "air_x": 146,
+              "air_y": 62
+            }
+          },
+          {
+            "n": 3,
+            "reference": "PHP.4.10-PHP.4.20",
+            "figures": [
+              "FIG-EPAPHRODITUS",
+              "FIG-PAULUS"
+            ],
+            "objects": [
+              "FIG-GRUPPE-GEMEINDE",
+              "FIG-OBJ-KETTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-OPFER",
+                  "FIG-GOTT"
+                ]
+              }
+            ],
+            "action_de": "Durch Epaphroditus hat Paulus die Gaben der Gemeinde erhalten; er nennt sie ein Opfer, das Gott gefällt.",
+            "stage": {
+              "back_side": "left",
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-PAULUS"
+                ]
+              },
+              "x": {
+                "FIG-EPAPHRODITUS": 100,
+                "FIG-PAULUS": 148
+              },
+              "floor_x": {
+                "FIG-OBJ-KETTE": 160
+              },
+              "mood": {
+                "FIG-EPAPHRODITUS": "smile"
+              },
+              "arrows": [
+                [
+                  "FIG-EPAPHRODITUS",
+                  "FIG-PAULUS",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 4,
+            "reference": "PHP.4.21-PHP.4.23",
+            "figures": [
+              "FIG-GRUPPE-GLAUBENDE",
+              "FIG-PAULUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BRIEF",
+              "FIG-OBJ-KETTE",
+              "FIG-GRUPPE-GEMEINDE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-GRUPPE-GEMEINDE",
+                "icons": [
+                  "FIG-ZEICHEN-GNADE",
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Paulus und die Geschwister bei ihm, auch aus dem Haus des Kaisers, grüssen die Gemeinde; die Gnade des Herrn Jesus Christus sei mit ihnen.",
+            "stage": {
+              "hold": {
+                "FIG-PAULUS": "FIG-OBJ-BRIEF"
+              },
+              "arrows": [
+                [
+                  "FIG-PAULUS",
+                  "FIG-GRUPPE-GEMEINDE",
+                  "act"
+                ]
+              ],
+              "floor_x": {
+                "FIG-OBJ-KETTE": 76
+              },
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "smile",
+                "FIG-PAULUS": "smile"
+              },
+              "x": {
+                "FIG-GRUPPE-GLAUBENDE": 26,
+                "FIG-PAULUS": 92
+              },
+              "back_side": "right"
+            }
+          }
+        ],
+        "actions_de": [
+          "Paulus bittet Euodia und Syntyche, eines Sinnes zu sein im Herrn; sie haben mit ihm für das Evangelium gekämpft.",
+          "Die Gemeinde soll sich allezeit freuen und sich um nichts sorgen, sondern ihre Anliegen im Gebet mit Dank vor Gott bringen; der Friede Gottes wird ihre Herzen bewahren.",
+          "Durch Epaphroditus hat Paulus die Gaben der Gemeinde erhalten; er nennt sie ein Opfer, das Gott gefällt.",
+          "Paulus und die Geschwister bei ihm, auch aus dem Haus des Kaisers, grüssen die Gemeinde; die Gnade des Herrn Jesus Christus sei mit ihnen."
+        ],
+        "captions_de": [
+          "Eines Sinnes: Paulus (Kette) bittet Euodia (altrosa) und Syntyche (hellblau), sich zu einigen (zwei goldene Ringe).",
+          "Gebet → Friede: Die Glaubenden bringen ihre Sorgen (besorgtes Gesicht) im Gebet (Hände) zu Gott (Strahlenkranz, Pfeil); von Gott kommt der Friede (goldener Pfeil zum Ölzweig); sie freuen sich (strahlendes Gesicht).",
+          "Gemeinde → Epaphroditus → Paulus: Epaphroditus kommt von der Gemeinde (Haus mit Menschen hinter ihm) und bringt ihre Gabe (Beutel, Pfeil) zu Paulus (Kette), der sich freut (strahlendes Gesicht); Paulus nennt sie ein Opfer (Widder mit Flamme) für Gott (Strahlenkranz).",
+          "Grüsse und Segen: Paulus (Brief, Kette) und die Geschwister bei ihm (links) grüssen die Gemeinde (Pfeil); Gnade (Hände mit Licht) von Jesus (Kreuznimbus)."
+        ],
+        "interpretation_note_de": "Der erste Abschnitt ist mit zwei Feldern vertreten, die übrigen mit je einem; Einzelheiten dort. Paulus schreibt den Brief als Gefangener «in Fesseln» ([[PHP.1.7]], [[PHP.1.13]]); deshalb liegt bei ihm eine Kette. Ein Soldat steht für die Wache im Prätorium ([[PHP.1.13]]).",
+        "basis": [
+          {
+            "record": "SUM-CH-PHP-004",
+            "field": "summary",
+            "fingerprint": "3a4897a409faebae"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "PHP.4.1-PHP.4.3",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-EUODIA",
+              "FIG-SYNTYCHE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-EUODIA",
+                "icons": [
+                  "FIG-ZEICHEN-EINHEIT"
+                ],
+                "word": {
+                  "de": "Seid eines Sinnes im Herrn!",
+                  "gsw": "Sind einig im Herr!"
+                }
+              }
+            ],
+            "action_de": "Paulus bittet Euodia und Syntyche, eines Sinnes zu sein im Herrn, denn sie haben mit ihm im Evangelium gekämpft.",
+            "keywords": {
+              "de": "Eines Sinnes im Herrn",
+              "gsw": "Einig im Herr"
+            },
+            "names": {
+              "FIG-PAULUS": {
+                "de": "Paulus",
+                "gsw": "Paulus"
+              },
+              "FIG-EUODIA": {
+                "de": "Euodia",
+                "gsw": "Euodia"
+              },
+              "FIG-SYNTYCHE": {
+                "de": "Syntyche",
+                "gsw": "Syntyche"
+              }
+            },
+            "letter": true,
+            "stage": {
+              "split": 1,
+              "mood": {
+                "FIG-PAULUS": "earnest",
+                "FIG-EUODIA": "pensive",
+                "FIG-SYNTYCHE": "pensive"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "PHP.4.4-PHP.4.9",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-BETEN",
+              "FIG-ZEICHEN-FRIEDE",
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [],
+            "action_de": "Die Gemeinde soll sich im Herrn allezeit freuen, sich um nichts sorgen, sondern ihre Anliegen mit Dank im Gebet vor Gott bringen; der Friede Gottes wird ihre Herzen bewahren.",
+            "keywords": {
+              "de": "Freut euch im Herrn allezeit!",
+              "gsw": "Fröied eu immer im Herr!"
+            },
+            "stage": {
+              "god_side": "left",
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-GLAUBENDE",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-BETEN": "FIG-GRUPPE-GLAUBENDE",
+                "FIG-ZEICHEN-FRIEDE": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-GRUPPE-GLAUBENDE"
+                ]
+              },
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "smile"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "PHP.4.10-PHP.4.20",
+            "figures": [
+              "FIG-EPAPHRODITUS",
+              "FIG-PAULUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-BRINGEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-EPAPHRODITUS",
+                "icons": [
+                  "FIG-ZEICHEN-KRAFT"
+                ],
+                "word": {
+                  "de": "Alles vermag ich durch den, der mich stark macht.",
+                  "gsw": "Alles chan ich dur dä, wo mich starch macht."
+                }
+              }
+            ],
+            "action_de": "Epaphroditus hat Paulus die Gaben der Philipper gebracht; Paulus dankt: Alles vermag er durch den, der ihn stark macht, und sein Gott wird ihren Bedarf erfüllen.",
+            "keywords": {
+              "de": "Alles vermag ich durch den, der mich stark macht",
+              "gsw": "Alles chan ich dur dä, wo mich starch macht"
+            },
+            "names": {
+              "FIG-EPAPHRODITUS": {
+                "de": "Epaphroditus",
+                "gsw": "Epaphroditus"
+              }
+            },
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-EPAPHRODITUS",
+                  "FIG-PAULUS",
+                  "act"
+                ]
+              ],
+              "beside": {
+                "FIG-ZEICHEN-BRINGEN": "FIG-EPAPHRODITUS"
+              },
+              "mood": {
+                "FIG-EPAPHRODITUS": "smile",
+                "FIG-PAULUS": "delight"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "PHP.4.21-PHP.4.23",
+            "figures": [
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [
+              "FIG-ORT-PRAETORIUM"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-GRUESSEN",
+              "FIG-ZEICHEN-GNADE"
+            ],
+            "speech": [],
+            "action_de": "Zum Schluss grüssen die Geschwister bei Paulus und alle Heiligen, besonders die aus dem Haus des Kaisers; Paulus wünscht die Gnade des Herrn Jesus Christus.",
+            "keywords": {
+              "de": "Besonders aber die aus dem Haus des Kaisers",
+              "gsw": "Bsunders aber die us em Huus vom Kaiser"
+            },
+            "stage": {
+              "back_side": "right",
+              "before": true,
+              "at": {
+                "FIG-ZEICHEN-GRUESSEN": "FIG-GRUPPE-GESCHWISTER"
+              },
+              "mood": {
+                "FIG-GRUPPE-GESCHWISTER": "smile"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Auftrag an Euodia und Syntyche: Paulus ist fern (gestrichelte Linie) und schreibt: «Seid eines Sinnes im Herrn!» (goldene Ringe).",
+          "Gebet statt Sorge: Die Glaubenden beten zu Gott (Strahlenkranz, gefaltete Hände) und freuen sich; von Gott kommt der Friede (goldener Pfeil, Olivenzweig).",
+          "Dank für die Gabe: Epaphroditus bringt den Korb mit den Gaben zu Paulus (Pfeil); Paulus sagt: «Alles vermag ich» (Arm mit goldenen Strahlen).",
+          "Grüsse: Die Geschwister vor dem Säulenbau des Kaisers winken (winkende Hand); Gnade (offene Hände mit goldenem Licht)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "PHP.4.1-PHP.4.3",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-EUODIA",
+              "FIG-SYNTYCHE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-EUODIA",
+                "icons": [
+                  "FIG-ZEICHEN-EINHEIT"
+                ],
+                "word": {
+                  "de": "Seid eines Sinnes im Herrn!",
+                  "gsw": "Sind einig im Herr!"
+                }
+              }
+            ],
+            "action_de": "Paulus bittet Euodia und Syntyche, eines Sinnes zu sein im Herrn, denn sie haben mit ihm im Evangelium gekämpft.",
+            "keywords": {
+              "de": "Eines Sinnes im Herrn",
+              "gsw": "Einig im Herr"
+            },
+            "names": {
+              "FIG-PAULUS": {
+                "de": "Paulus",
+                "gsw": "Paulus"
+              },
+              "FIG-EUODIA": {
+                "de": "Euodia",
+                "gsw": "Euodia"
+              },
+              "FIG-SYNTYCHE": {
+                "de": "Syntyche",
+                "gsw": "Syntyche"
+              }
+            },
+            "letter": true,
+            "stage": {
+              "split": 1,
+              "mood": {
+                "FIG-PAULUS": "earnest",
+                "FIG-EUODIA": "pensive",
+                "FIG-SYNTYCHE": "pensive"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "PHP.4.4-PHP.4.9",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-BETEN",
+              "FIG-ZEICHEN-FRIEDE",
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [],
+            "action_de": "Die Gemeinde soll sich im Herrn allezeit freuen, sich um nichts sorgen, sondern ihre Anliegen mit Dank im Gebet vor Gott bringen; der Friede Gottes wird ihre Herzen bewahren.",
+            "keywords": {
+              "de": "Freut euch im Herrn allezeit!",
+              "gsw": "Fröied eu immer im Herr!"
+            },
+            "stage": {
+              "god_side": "left",
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-GLAUBENDE",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-BETEN": "FIG-GRUPPE-GLAUBENDE",
+                "FIG-ZEICHEN-FRIEDE": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-GRUPPE-GLAUBENDE"
+                ]
+              },
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "smile"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "PHP.4.10-PHP.4.20",
+            "figures": [
+              "FIG-EPAPHRODITUS",
+              "FIG-PAULUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-BRINGEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-EPAPHRODITUS",
+                "icons": [
+                  "FIG-ZEICHEN-SATT",
+                  "FIG-ZEICHEN-FEHLT-BROT"
+                ],
+                "word": {
+                  "de": "Alles vermag ich durch den, der mich stark macht.",
+                  "gsw": "Alles chan ich dur dä, wo mich starch macht."
+                }
+              }
+            ],
+            "action_de": "Epaphroditus hat Paulus die Gaben der Philipper gebracht; Paulus dankt: Alles vermag er durch den, der ihn stark macht, und sein Gott wird ihren Bedarf erfüllen.",
+            "keywords": {
+              "de": "Alles vermag ich durch den, der mich stark macht",
+              "gsw": "Alles chan ich dur dä, wo mich starch macht"
+            },
+            "names": {
+              "FIG-EPAPHRODITUS": {
+                "de": "Epaphroditus",
+                "gsw": "Epaphroditus"
+              }
+            },
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-EPAPHRODITUS",
+                  "FIG-PAULUS",
+                  "act"
+                ]
+              ],
+              "beside": {
+                "FIG-ZEICHEN-BRINGEN": "FIG-EPAPHRODITUS"
+              },
+              "mood": {
+                "FIG-EPAPHRODITUS": "smile",
+                "FIG-PAULUS": "delight"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "PHP.4.21-PHP.4.23",
+            "figures": [
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [
+              "FIG-ORT-PRAETORIUM"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-GRUESSEN",
+              "FIG-ZEICHEN-GNADE"
+            ],
+            "speech": [],
+            "action_de": "Zum Schluss grüssen die Geschwister bei Paulus und alle Heiligen, besonders die aus dem Haus des Kaisers; Paulus wünscht die Gnade des Herrn Jesus Christus.",
+            "keywords": {
+              "de": "Besonders aber die aus dem Haus des Kaisers",
+              "gsw": "Bsunders aber die us em Huus vom Kaiser"
+            },
+            "stage": {
+              "back_side": "right",
+              "before": true,
+              "at": {
+                "FIG-ZEICHEN-GRUESSEN": "FIG-GRUPPE-GESCHWISTER"
+              },
+              "mood": {
+                "FIG-GRUPPE-GESCHWISTER": "smile"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "PHP.4.1-PHP.4.3",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-EUODIA",
+              "FIG-SYNTYCHE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-EUODIA",
+                "icons": [
+                  "FIG-ZEICHEN-EINHEIT"
+                ],
+                "word": {
+                  "de": "Seid eines Sinnes im Herrn!",
+                  "gsw": "Sind einig im Herr!"
+                }
+              }
+            ],
+            "action_de": "Paulus bittet Euodia und Syntyche, eines Sinnes zu sein im Herrn, denn sie haben mit ihm im Evangelium gekämpft.",
+            "keywords": {
+              "de": "Eines Sinnes im Herrn",
+              "gsw": "Einig im Herr"
+            },
+            "names": {
+              "FIG-PAULUS": {
+                "de": "Paulus",
+                "gsw": "Paulus"
+              },
+              "FIG-EUODIA": {
+                "de": "Euodia",
+                "gsw": "Euodia"
+              },
+              "FIG-SYNTYCHE": {
+                "de": "Syntyche",
+                "gsw": "Syntyche"
+              }
+            },
+            "letter": true,
+            "stage": {
+              "split": 1,
+              "mood": {
+                "FIG-PAULUS": "earnest",
+                "FIG-EUODIA": "pensive",
+                "FIG-SYNTYCHE": "pensive"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "PHP.4.4-PHP.4.9",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-BETEN",
+              "FIG-ZEICHEN-FRIEDE",
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [],
+            "action_de": "Die Gemeinde soll sich im Herrn allezeit freuen, sich um nichts sorgen, sondern ihre Anliegen mit Dank im Gebet vor Gott bringen; der Friede Gottes wird ihre Herzen bewahren.",
+            "keywords": {
+              "de": "Freut euch im Herrn allezeit!",
+              "gsw": "Fröied eu immer im Herr!"
+            },
+            "stage": {
+              "god_side": "left",
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-GLAUBENDE",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-BETEN": "FIG-GRUPPE-GLAUBENDE",
+                "FIG-ZEICHEN-FRIEDE": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-GRUPPE-GLAUBENDE"
+                ]
+              },
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "smile"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "PHP.4.10-PHP.4.20",
+            "figures": [
+              "FIG-EPAPHRODITUS",
+              "FIG-PAULUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-BRINGEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-EPAPHRODITUS",
+                "icons": [
+                  "FIG-ZEICHEN-SATT",
+                  "FIG-ZEICHEN-FEHLT-BROT"
+                ],
+                "word": {
+                  "de": "Alles vermag ich durch den, der mich stark macht.",
+                  "gsw": "Alles chan ich dur dä, wo mich starch macht."
+                }
+              }
+            ],
+            "action_de": "Epaphroditus hat Paulus die Gaben der Philipper gebracht; Paulus dankt: Alles vermag er durch den, der ihn stark macht, und sein Gott wird ihren Bedarf erfüllen.",
+            "keywords": {
+              "de": "Alles vermag ich durch den, der mich stark macht",
+              "gsw": "Alles chan ich dur dä, wo mich starch macht"
+            },
+            "names": {
+              "FIG-EPAPHRODITUS": {
+                "de": "Epaphroditus",
+                "gsw": "Epaphroditus"
+              }
+            },
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-EPAPHRODITUS",
+                  "FIG-PAULUS",
+                  "act"
+                ]
+              ],
+              "beside": {
+                "FIG-ZEICHEN-BRINGEN": "FIG-EPAPHRODITUS"
+              },
+              "mood": {
+                "FIG-EPAPHRODITUS": "smile",
+                "FIG-PAULUS": "delight"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "PHP.4.21-PHP.4.23",
+            "figures": [
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [
+              "FIG-ORT-PRAETORIUM"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-GRUESSEN",
+              "FIG-ZEICHEN-GNADE"
+            ],
+            "speech": [],
+            "action_de": "Zum Schluss grüssen die Geschwister bei Paulus und alle Heiligen, besonders die aus dem Haus des Kaisers; Paulus wünscht die Gnade des Herrn Jesus Christus.",
+            "keywords": {
+              "de": "Besonders aber die aus dem Haus des Kaisers",
+              "gsw": "Bsunders aber die us em Huus vom Kaiser"
+            },
+            "stage": {
+              "back_side": "right",
+              "before": true,
+              "beside": {
+                "FIG-ZEICHEN-GRUESSEN": "FIG-GRUPPE-GESCHWISTER"
+              },
+              "mood": {
+                "FIG-GRUPPE-GESCHWISTER": "smile"
+              }
+            }
+          }
         ]
       }
     }
