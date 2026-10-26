@@ -44,6 +44,15 @@ for(const mode of ['','nw'])for(const lang of ['de','gsw']){
           c.querySelectorAll(mode?'.dg-nw text, .dg-nw use':'.dg-full text, :scope > text').forEach(t=>{if(!vis(t))return;const B=t.getBBox();
             if(B.x<R.x-tol||B.y<R.y-tol||B.x+B.width>R.x+R.width+tol||B.y+B.height>R.y+R.height+tol)
               res.push(`${id} ${nm} [${L}]: ${t.tagName==='use'?'Zeichen':'Text'} ragt über die Zelle: «${t.textContent.slice(0,50)}»${mode?` (${[B.x,B.y,B.width,B.height,R.x,R.y,R.width,R.height].map(v=>v.toFixed(1))})`:""}`);});});
+        // Sprechblasen überdecken keine Figur, kein Gotteszeichen und keinen Gegenstand der Szene (Hinweis Andi Neck 2026-10-26:
+        // Blase lag über dem Strahlenkranz). Blase = weisse Form mit Strich 1.6; verglichen mit Zeichen und Figuren ausserhalb der Blase.
+        if(!mode){const bubs=[...tile.querySelectorAll('path[data-box]')].map(b=>{const [x,y,w,h]=b.dataset.box.split(',').map(Number);return {b,g:b.parentNode,B:{left:x,top:y,right:x+w,bottom:y+h,width:w,height:h}};});
+          const ov=(a,b)=>Math.max(0,Math.min(a.right,b.right)-Math.max(a.left,b.left))*Math.max(0,Math.min(a.bottom,b.bottom)-Math.max(a.top,b.top));
+          const local=e=>{if(e.closest('g[transform]')!==bubs[0]?.b.closest('g[transform]'))return null;const x=+e.getAttribute('x'),y=+e.getAttribute('y'),w=+e.getAttribute('width'),h=+e.getAttribute('height');return w>0?{left:x,top:y,right:x+w,bottom:y+h,width:w,height:h}:null;};
+          const others=[...tile.querySelectorAll('use')].filter(e=>!e.closest('.ill-words,.dg-nw,.dg-vis,g.ill-name')&&!bubs.some(x=>x.g.contains(e)));
+          for(const {B} of bubs)for(const e of others){const E=local(e);if(!E||E.width*E.height>B.width*B.height)continue;  // grosse Hintergründe dürfen dahinter liegen
+            const o=ov(B,E);if(o>0.18*E.width*E.height)res.push(`${id} ${nm} [${lang}]: Sprechblase überdeckt ${e.getAttribute('href')} (${Math.round(100*o/(E.width*E.height))} %)`);}
+          for(let i=0;i<bubs.length;i++)for(let j=i+1;j<bubs.length;j++)if(ov(bubs[i].B,bubs[j].B)>4)res.push(`${id} ${nm} [${lang}]: Sprechblasen überlappen`);}
         // Kästen mit Rahmen (Stichwortband, Titelblase, Spaltenköpfe, Namensschild): Text und Zeichen bleiben im Rahmen und
         // überdecken sich nicht (Hinweis Andi Neck 2026-10-25: Text ragte über das Stichwortband)
         const sv=e=>{const B=e.getBoundingClientRect();return B.width>0&&B.height>0?B:null;};

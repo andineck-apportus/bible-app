@@ -762,7 +762,7 @@ def use(sym, x, y, w, h, extra=""):
 
 def bubble(x, y, w, h, tx, ty, inner):
     """Sprechblase als eine Form mit eingebauter Spitze zur sprechenden Figur (tx, ty), siehe _bubble.py."""
-    return f'<g><path d="{bubble_path(x, y, w, h, tx, ty, 12, 5)}" fill="{BUBBLE}" stroke="{INK}" stroke-width="1.6" stroke-linejoin="round"/>{inner}</g>'
+    return f'<g><path d="{bubble_path(x, y, w, h, tx, ty, 12, 5)}" data-box="{x:g},{y:g},{w:g},{h:g}" fill="{BUBBLE}" stroke="{INK}" stroke-width="1.6" stroke-linejoin="round"/>{inner}</g>'
 
 
 CUR = ["x"]  # Kennung des Bildes, das gerade gezeichnet wird (für eindeutige Clip-IDs, wenn mehrere Bilder auf einer Seite stehen)
@@ -985,7 +985,7 @@ def a_weisheit():
 
 def a_prophet(zwoelf=False):
     rolls = "".join(use("an-schriftrolle", 112 + (i % 6) * 12, 6 + (i // 6) * 10, 11, 8) for i in range(12)) if zwoelf else ""
-    b = bubble(40, 14, 72, 34, 34, 66, use("an-z-gericht", 46, 18, 30, 26) + use("an-z-umkehr", 82, 22, 24, 18))
+    b = bubble(58, 30, 72, 34, 40, 68, use("an-z-gericht", 64, 34, 30, 26) + use("an-z-umkehr", 100, 38, 24, 18))  # nicht über dem Strahlenkranz (Prüfung 2026-10-26)
     return (FLOOR + rolls + person("menge", 124, 98, 1.25, "worried", -.9) + person("menge2", 152, 102, 1.15, "worried", -.9)
             + person("menge3", 174, 106, 1.0, "surprised", -.9) + person("prophet", 30, 86, 1.5, "calm", 1.4) + use("an-schriftrolle", 42, 112, 24, 16) + god_to(26, 2, 26, 62) + b)
 
