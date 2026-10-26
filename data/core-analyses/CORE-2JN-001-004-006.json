@@ -1,0 +1,146 @@
+{
+ "id": "CORE-2JN-001-004-006",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "2JN.1.4-2JN.1.6",
+ "target": "TU-2JN-001-004-006",
+ "core_de": "Der Älteste freut sich, dass er unter den Kindern der Herrin solche gefunden hat, die in der Wahrheit leben, und bittet sie – nicht mit einem neuen Gebot, sondern mit dem von Anfang an –, dass wir einander lieben; Liebe heisst, nach seinen Geboten zu leben, und das Gebot heisst, in ihr (wohl: in der Liebe) zu leben.",
+ "mode": "instruction",
+ "voice": {
+  "speaker": "FIG-DER-AELTESTE",
+  "addressee": "FIG-AUSERWAEHLTE-HERRIN"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "cause",
+    "subtype": "Freude → Bitte → Erklärung",
+    "range": "2JN.1.4-2JN.1.6",
+    "elements": [
+     {
+      "label": "Ich habe mich sehr gefreut, dass ich unter deinen Kindern solche gefunden habe, die in der Wahrheit leben, wie wir es als Gebot vom Vater empfangen haben",
+      "ref": "2JN.1.4",
+      "role": "Anlass"
+     },
+     {
+      "label": "Und jetzt bitte ich dich, Herrin, nicht als ob ich dir ein neues Gebot schriebe, sondern eines, das wir von Anfang an hatten: dass wir einander lieben",
+      "ref": "2JN.1.5",
+      "role": "Bitte"
+     },
+     {
+      "label": "Liebe ↔ Gebot",
+      "ref": "2JN.1.6",
+      "role": "Erklärung",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-DER-AELTESTE",
+       "to": "die auserwählte Herrin und ihre Kinder",
+       "note": "«du» (die Herrin) und «ihr» wechseln; ob eine Frau oder eine Gemeinde gemeint ist, ist umstritten."
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "2JN.1.5",
+       "kind": "Parallele",
+       "note": "Nicht neues, sondern altes Gebot: vgl. [[1JN.2.7-1JN.2.8]]."
+      }
+     ],
+     "pattern_break": [
+      {
+       "ref": "2JN.1.4",
+       "note": "«solche … die in der Wahrheit leben» – nicht alle; der Text sagt nicht, was mit den anderen ist."
+      }
+     ]
+    },
+    "visual": "arrows",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "cycle",
+    "subtype": "Liebe und Gebot erklären einander",
+    "range": "2JN.1.6",
+    "elements": [
+     {
+      "label": "Und das ist die Liebe: dass wir nach seinen Geboten leben",
+      "ref": "2JN.1.6",
+      "role": "Liebe →"
+     },
+     {
+      "label": "Das ist das Gebot, wie ihr es von Anfang an gehört habt: dass ihr in ihr lebt",
+      "ref": "2JN.1.6",
+      "role": "→ Gebot"
+     }
+    ],
+    "features": {
+     "interpretation": [
+      {
+       "ref": "2JN.1.6",
+       "note": "«in ihr» bezieht sich wohl auf die Liebe (möglich auch: auf das Gebot); Deutung."
+      }
+     ]
+    },
+    "visual": "circle",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "2JN.1.4",
+   "text_de": "Der Älteste hat sich sehr gefreut, dass er unter den Kindern der Herrin solche gefunden hat, die in der Wahrheit leben, wie «wir» es als Gebot vom Vater empfangen haben.",
+   "reason_de": "Freude als Anlass der Bitte (Kriterium 2); Erkennungsmoment Freude über die Kinder (Kriterium 4).",
+   "recognition_de": "Der Älteste freut sich über die Kinder, die in der Wahrheit leben.",
+   "keywords": [
+    "dass ich unter deinen Kindern solche gefunden habe, die in der Wahrheit leben"
+   ]
+  },
+  {
+   "reference": "2JN.1.5-2JN.1.6",
+   "text_de": "Er bittet die Herrin, nicht als schriebe er ein neues Gebot, sondern das, das «wir» von Anfang an hatten: dass «wir» einander lieben; das ist die Liebe, dass «wir» nach seinen Geboten leben; das ist das Gebot, wie sie es von Anfang an gehört haben: dass sie in ihr leben.",
+   "reason_de": "Trägt die Kernaussage (Kriterium 1); Liebe und Gebot erklären einander im Kreis (structure s2).",
+   "recognition_de": "Kreis: Liebe = nach seinen Geboten leben ↔ Gebot = in der Liebe leben.",
+   "keywords": [
+    "dass wir einander lieben",
+    "dass wir nach seinen Geboten leben"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Keine wesentliche Auslassung"
+ ],
+ "persons": [
+  "FIG-DER-AELTESTE",
+  "FIG-AUSERWAEHLTE-HERRIN",
+  "FIG-GRUPPE-KINDER"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "2JN.1.4-2JN.1.6",
+   "fingerprint": "03bda23b9e9f824c"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen nach dem Pilot; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; keine fachliche Prüfung durch eine Person",
+  "summary_de": "Freude → Bitte → Erklärung richtig; Kreis Liebe ⇄ Gebot (1,6) mit offenem Bezug von «in ihr» vermerkt; «solche» (nicht alle) als Musterbruch erhalten.",
+  "changes_de": [
+   "core_de: «bittet sie, nicht mit einem neuen, sondern mit dem Gebot …» war grammatisch schief; Einschub gesetzt. «in der Liebe zu leben» gab die Deutung von «in ihr» als Text aus; jetzt «in ihr (wohl: in der Liebe)»."
+  ]
+ }
+}

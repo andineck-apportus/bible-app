@@ -11,192 +11,199 @@
   "panels": [
     {
       "n": 1,
-      "reference": "PHP.1",
+      "reference": "PHP.1.12-PHP.1.26",
       "figures": [
         "FIG-ROLLE-SOLDAT",
         "FIG-PAULUS",
-        "FIG-GRUPPE-GLAUBENDE"
+        "FIG-GRUPPE-GESCHWISTER"
       ],
       "objects": [
+        "FIG-ORT-PRAETORIUM",
         "FIG-OBJ-KETTE"
       ],
       "signs": [
-        "FIG-ZEICHEN-VERKUENDIGEN"
+        "FIG-ZEICHEN-VERKUENDIGEN",
+        "FIG-ZEICHEN-FREUDE"
       ],
-      "speech": [
-        {
-          "from": "FIG-PAULUS",
-          "to": "FIG-ROLLE-SOLDAT",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-OBJ-KETTE"
-          ]
+      "speech": [],
+      "action_de": "Paulus liegt um Christi willen in Fesseln; im ganzen Prätorium ist es bekannt geworden, und die Geschwister sagen das Wort umso furchtloser. Dass Christus verkündigt wird, darüber freut sich Paulus.",
+      "keywords": {
+        "de": "Zur Förderung des Evangeliums",
+        "gsw": "Zum Vorwärtscho vom Evangelium"
+      },
+      "names": {
+        "FIG-PAULUS": {
+          "de": "Paulus",
+          "gsw": "Paulus"
         }
-      ],
-      "action_de": "Die Fesseln des Paulus sind im ganzen Prätorium als Fesseln um Christi willen bekannt geworden, und die meisten Geschwister sagen das Wort nun umso furchtloser.",
+      },
       "stage": {
-        "floor_x": {
-          "FIG-OBJ-KETTE": 76
+        "hold": {
+          "FIG-PAULUS": "FIG-OBJ-KETTE"
         },
-        "at": {
-          "FIG-ZEICHEN-VERKUENDIGEN": "FIG-GRUPPE-GLAUBENDE"
+        "back_side": "left",
+        "before": true,
+        "split": 2,
+        "x": {
+          "FIG-ROLLE-SOLDAT": 34,
+          "FIG-PAULUS": 80,
+          "FIG-GRUPPE-GESCHWISTER": 150
+        },
+        "beside": {
+          "FIG-ZEICHEN-VERKUENDIGEN": "FIG-GRUPPE-GESCHWISTER"
+        },
+        "signs_who": {
+          "FIG-ZEICHEN-FREUDE": [
+            "FIG-PAULUS"
+          ]
         },
         "mood": {
-          "FIG-ROLLE-SOLDAT": "calm",
-          "FIG-GRUPPE-GLAUBENDE": "smile",
-          "FIG-PAULUS": "smile"
-        },
-        "arrows": [
-          [
-            "FIG-PAULUS",
-            "FIG-GRUPPE-GLAUBENDE",
-            "act"
-          ]
-        ]
+          "FIG-PAULUS": "delight",
+          "FIG-ROLLE-SOLDAT": "earnest",
+          "FIG-GRUPPE-GESCHWISTER": "determined"
+        }
       }
     },
     {
       "n": 2,
-      "reference": "PHP.2",
+      "reference": "PHP.2.5-PHP.2.11",
       "figures": [
         "FIG-GOTT",
-        "FIG-GRUPPE-GLAUBENDE",
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-GRUPPE-VOELKER"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-OBJ-KREUZ"
+      ],
       "signs": [
         "FIG-ZEICHEN-ERHOEHEN",
         "FIG-ZEICHEN-KNIEN"
       ],
       "speech": [],
-      "action_de": "Darum hat Gott ihn erhöht, damit sich im Namen Jesu jedes Knie beuge und jede Zunge bekenne, dass Jesus Christus der Herr ist.",
+      "action_de": "Christus Jesus erniedrigte sich und wurde gehorsam bis zum Tod am Kreuz; darum hat Gott ihn über alles erhöht, damit jedes Knie sich beuge und jede Zunge bekenne: Jesus Christus ist der Herr.",
+      "keywords": {
+        "de": "Darum hat Gott ihn über alles erhöht",
+        "gsw": "Drum hät Gott en über alles erhöht"
+      },
       "stage": {
-        "at": {
-          "FIG-ZEICHEN-KNIEN": "FIG-GRUPPE-GLAUBENDE"
-        },
-        "pose": {
-          "FIG-GRUPPE-GLAUBENDE": "kneel"
-        },
-        "god_side": "right",
-        "x": {
-          "FIG-GRUPPE-GLAUBENDE": 60,
-          "FIG-JESUS": 140
-        },
-        "mood": {
-          "FIG-GRUPPE-GLAUBENDE": "smile",
-          "FIG-JESUS": "calm"
-        },
-        "beside": {
-          "FIG-ZEICHEN-ERHOEHEN": "FIG-JESUS"
-        },
+        "god_side": "center",
         "arrows": [
           [
             "FIG-GOTT",
             "FIG-JESUS",
             "act"
           ]
-        ]
+        ],
+        "at": {
+          "FIG-ZEICHEN-ERHOEHEN": "FIG-JESUS",
+          "FIG-ZEICHEN-KNIEN": "FIG-GRUPPE-VOELKER"
+        },
+        "floor_x": {
+          "FIG-OBJ-KREUZ": 20
+        },
+        "mood": {
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-VOELKER": "earnest"
+        }
       }
     },
     {
       "n": 3,
-      "reference": "PHP.3",
+      "reference": "PHP.3.7-PHP.3.14",
       "figures": [
         "FIG-PAULUS"
       ],
-      "objects": [
-        "FIG-OBJ-KETTE",
+      "objects": [],
+      "signs": [
+        "FIG-ZEICHEN-WEG",
         "FIG-ZEICHEN-ZIEL"
       ],
-      "signs": [],
       "speech": [],
-      "action_de": "Paulus hat das Ziel noch nicht erreicht; er vergisst, was hinter ihm liegt, und jagt dem Siegespreis der himmlischen Berufung nach.",
+      "action_de": "Paulus hat das Ziel noch nicht erreicht; er vergisst, was hinter ihm liegt, und jagt dem Siegespreis der himmlischen Berufung Gottes nach.",
+      "keywords": {
+        "de": "Ich jage aber danach",
+        "gsw": "Ich jag aber dem nache"
+      },
       "stage": {
         "x": {
-          "FIG-PAULUS": 84
+          "FIG-PAULUS": 70
         },
-        "floor_x": {
-          "FIG-OBJ-KETTE": 16,
-          "FIG-ZEICHEN-ZIEL": 158
+        "beside": {
+          "FIG-ZEICHEN-ZIEL": "FIG-PAULUS"
         },
-        "arrows": [
-          [
-            "FIG-PAULUS",
-            "FIG-ZEICHEN-ZIEL",
-            "go"
-          ]
-        ],
+        "at": {
+          "FIG-ZEICHEN-WEG": "FIG-PAULUS"
+        },
         "mood": {
-          "FIG-PAULUS": "smile"
+          "FIG-PAULUS": "determined"
         }
       }
     },
     {
       "n": 4,
-      "reference": "PHP.4",
+      "reference": "PHP.4.4-PHP.4.13",
       "figures": [
         "FIG-GOTT",
         "FIG-GRUPPE-GLAUBENDE"
       ],
       "objects": [],
       "signs": [
+        "FIG-ZEICHEN-BETEN",
         "FIG-ZEICHEN-FRIEDE",
         "FIG-ZEICHEN-FREUDE"
       ],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-GLAUBENDE",
-          "to": "FIG-GOTT",
-          "icons": [
-            "FIG-ZEICHEN-SORGE",
-            "FIG-ZEICHEN-NEIN",
-            "FIG-ZEICHEN-BETEN"
-          ]
-        }
-      ],
-      "action_de": "Die Gemeinde soll sich allezeit freuen und sich um nichts sorgen, sondern ihre Anliegen im Gebet mit Dank vor Gott bringen; der Friede Gottes wird ihre Herzen bewahren.",
+      "speech": [],
+      "action_de": "Die Gemeinde soll sich im Herrn allezeit freuen, sich um nichts sorgen, sondern ihre Anliegen mit Dank im Gebet vor Gott bringen; der Friede Gottes wird ihre Herzen bewahren.",
+      "keywords": {
+        "de": "Freut euch im Herrn allezeit!",
+        "gsw": "Fröied eu immer im Herr!"
+      },
       "stage": {
-        "god_side": "right",
+        "god_side": "left",
         "arrows": [
           [
+            "FIG-GOTT",
             "FIG-GRUPPE-GLAUBENDE",
-            "FIG-GOTT",
-            "act"
-          ],
-          [
-            "FIG-GOTT",
-            "FIG-ZEICHEN-FRIEDE",
             "act"
           ]
         ],
-        "mood": {},
-        "air_x": 146,
-        "air_y": 62
+        "at": {
+          "FIG-ZEICHEN-BETEN": "FIG-GRUPPE-GLAUBENDE",
+          "FIG-ZEICHEN-FRIEDE": "FIG-GRUPPE-GLAUBENDE"
+        },
+        "signs_who": {
+          "FIG-ZEICHEN-FREUDE": [
+            "FIG-GRUPPE-GLAUBENDE"
+          ]
+        },
+        "mood": {
+          "FIG-GRUPPE-GLAUBENDE": "smile"
+        }
       }
     }
   ],
   "actions_de": [
-    "Die Fesseln des Paulus sind im ganzen Prätorium als Fesseln um Christi willen bekannt geworden, und die meisten Geschwister sagen das Wort nun umso furchtloser.",
-    "Darum hat Gott ihn erhöht, damit sich im Namen Jesu jedes Knie beuge und jede Zunge bekenne, dass Jesus Christus der Herr ist.",
-    "Paulus hat das Ziel noch nicht erreicht; er vergisst, was hinter ihm liegt, und jagt dem Siegespreis der himmlischen Berufung nach.",
-    "Die Gemeinde soll sich allezeit freuen und sich um nichts sorgen, sondern ihre Anliegen im Gebet mit Dank vor Gott bringen; der Friede Gottes wird ihre Herzen bewahren."
+    "Paulus liegt um Christi willen in Fesseln; im ganzen Prätorium ist es bekannt geworden, und die Geschwister sagen das Wort umso furchtloser. Dass Christus verkündigt wird, darüber freut sich Paulus.",
+    "Christus Jesus erniedrigte sich und wurde gehorsam bis zum Tod am Kreuz; darum hat Gott ihn über alles erhöht, damit jedes Knie sich beuge und jede Zunge bekenne: Jesus Christus ist der Herr.",
+    "Paulus hat das Ziel noch nicht erreicht; er vergisst, was hinter ihm liegt, und jagt dem Siegespreis der himmlischen Berufung Gottes nach.",
+    "Die Gemeinde soll sich im Herrn allezeit freuen, sich um nichts sorgen, sondern ihre Anliegen mit Dank im Gebet vor Gott bringen; der Friede Gottes wird ihre Herzen bewahren."
   ],
   "captions_de": [
-    "Fesseln → Mut: Paulus (Kette) erklärt dem Wachsoldaten, dass er um Christi willen (Kreuznimbus) gefesselt ist; dadurch fassen die Geschwister Mut (Pfeil) und verkündigen furchtlos (Rufhorn über ihnen).",
-    "Erniedrigung → Erhöhung: Darum erhöht Gott (Strahlenkranz, goldener Pfeil) Jesus (Pfeil nach oben neben ihm); Menschen beugen die Knie vor ihm (kniende Figur).",
-    "Lauf zum Ziel: Paulus strebt auf das Ziel mit dem Siegeskranz zu (gestrichelter Weg); die Kette liegt hinter ihm.",
-    "Gebet → Friede: Die Glaubenden bringen ihre Sorgen (besorgtes Gesicht) im Gebet (Hände) zu Gott (Strahlenkranz, Pfeil); von Gott kommt der Friede (goldener Pfeil zum Ölzweig); sie freuen sich (strahlendes Gesicht)."
+    "Fesseln fördern das Evangelium: Paulus mit Kette vor dem Prätorium (Säulenbau), daneben ein Soldat; die Geschwister (blaugraue Gruppe) verkündigen (goldener Rufer). Paulus freut sich (lachendes Gesicht).",
+    "Erniedrigt und erhöht: das Kreuz am Boden; Gott (Strahlenkranz) erhöht Jesus (goldener Pfeil nach oben); Menschen aus allen Völkern beugen die Knie (kniende Figur).",
+    "Wettlauf: Paulus läuft (Fussspuren hinter ihm) auf das Ziel zu (Pfosten mit grünem Kranz).",
+    "Gebet statt Sorge: Die Glaubenden beten zu Gott (Strahlenkranz, gefaltete Hände) und freuen sich; von Gott kommt der Friede (goldener Pfeil, Olivenzweig)."
   ],
-  "interpretation_note_de": "Ein Feld je Kapitel: Paulus gefangen für Christus, Erhöhung Christi, Lauf zum Ziel, Freude und Friede. Paulus schreibt den Brief als Gefangener «in Fesseln» ([[PHP.1.7]], [[PHP.1.13]]); deshalb liegt bei ihm eine Kette. Ein Soldat steht für die Wache im Prätorium ([[PHP.1.13]]).",
+  "interpretation_note_de": "Vier Comic-Szenen zu den Stationen der Kernanalyse: Paulus in Fesseln, die das Evangelium fördern ([[PHP.1.12-PHP.1.26]]), Kreuz und Erhöhung Christi als Vorbild ([[PHP.2.5-PHP.2.11]]), der Wettlauf zum Ziel nach der Bilanz «Gewinn → Verlust» ([[PHP.3.7-PHP.3.14]]) und Freude und Gebet mit dem Frieden Gottes ([[PHP.4.4-PHP.4.13]]). Timotheus und Epaphroditus ([[PHP.2.19-PHP.2.30]]) und der Dank für die Gabe stehen im Kapitelbild und in der Bildhilfe. Ort und Zeit der Gefangenschaft nennt der Brief nicht. Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-BOOK-PHP",
       "field": "summary",
-      "fingerprint": "9a3e00f38dd49e26"
+      "fingerprint": "5e3260cc9cf0c6f9"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -692,6 +699,386 @@
           "Erniedrigung → Erhöhung: Darum erhöht Gott (Strahlenkranz, goldener Pfeil) Jesus (Pfeil nach oben neben ihm); Menschen beugen die Knie vor ihm (kniende Figur).",
           "Lauf zum Ziel: Paulus strebt auf das Ziel mit dem Siegeskranz zu (gestrichelter Weg); die Kette liegt hinter ihm.",
           "Gebet → Friede: Die Glaubenden bringen ihre Sorgen (Tropfen mit Wellenlinie) im Gebet (Hände) zu Gott (Strahlenkranz, Pfeil); von Gott kommt der Friede (goldener Pfeil zum Ölzweig); sie freuen sich (Funken)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "PHP.1",
+            "figures": [
+              "FIG-ROLLE-SOLDAT",
+              "FIG-PAULUS",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-VERKUENDIGEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-ROLLE-SOLDAT",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-OBJ-KETTE"
+                ]
+              }
+            ],
+            "action_de": "Die Fesseln des Paulus sind im ganzen Prätorium als Fesseln um Christi willen bekannt geworden, und die meisten Geschwister sagen das Wort nun umso furchtloser.",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KETTE": 76
+              },
+              "at": {
+                "FIG-ZEICHEN-VERKUENDIGEN": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "mood": {
+                "FIG-ROLLE-SOLDAT": "calm",
+                "FIG-GRUPPE-GLAUBENDE": "smile",
+                "FIG-PAULUS": "smile"
+              },
+              "arrows": [
+                [
+                  "FIG-PAULUS",
+                  "FIG-GRUPPE-GLAUBENDE",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "PHP.2",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-GLAUBENDE",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-ERHOEHEN",
+              "FIG-ZEICHEN-KNIEN"
+            ],
+            "speech": [],
+            "action_de": "Darum hat Gott ihn erhöht, damit sich im Namen Jesu jedes Knie beuge und jede Zunge bekenne, dass Jesus Christus der Herr ist.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-KNIEN": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "pose": {
+                "FIG-GRUPPE-GLAUBENDE": "kneel"
+              },
+              "god_side": "right",
+              "x": {
+                "FIG-GRUPPE-GLAUBENDE": 60,
+                "FIG-JESUS": 140
+              },
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "smile",
+                "FIG-JESUS": "calm"
+              },
+              "beside": {
+                "FIG-ZEICHEN-ERHOEHEN": "FIG-JESUS"
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "PHP.3",
+            "figures": [
+              "FIG-PAULUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE",
+              "FIG-ZEICHEN-ZIEL"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Paulus hat das Ziel noch nicht erreicht; er vergisst, was hinter ihm liegt, und jagt dem Siegespreis der himmlischen Berufung nach.",
+            "stage": {
+              "x": {
+                "FIG-PAULUS": 84
+              },
+              "floor_x": {
+                "FIG-OBJ-KETTE": 16,
+                "FIG-ZEICHEN-ZIEL": 158
+              },
+              "arrows": [
+                [
+                  "FIG-PAULUS",
+                  "FIG-ZEICHEN-ZIEL",
+                  "go"
+                ]
+              ],
+              "mood": {
+                "FIG-PAULUS": "smile"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "PHP.4",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-FRIEDE",
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-GLAUBENDE",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-SORGE",
+                  "FIG-ZEICHEN-NEIN",
+                  "FIG-ZEICHEN-BETEN"
+                ]
+              }
+            ],
+            "action_de": "Die Gemeinde soll sich allezeit freuen und sich um nichts sorgen, sondern ihre Anliegen im Gebet mit Dank vor Gott bringen; der Friede Gottes wird ihre Herzen bewahren.",
+            "stage": {
+              "god_side": "right",
+              "arrows": [
+                [
+                  "FIG-GRUPPE-GLAUBENDE",
+                  "FIG-GOTT",
+                  "act"
+                ],
+                [
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-FRIEDE",
+                  "act"
+                ]
+              ],
+              "mood": {},
+              "air_x": 146,
+              "air_y": 62
+            }
+          }
+        ],
+        "actions_de": [
+          "Die Fesseln des Paulus sind im ganzen Prätorium als Fesseln um Christi willen bekannt geworden, und die meisten Geschwister sagen das Wort nun umso furchtloser.",
+          "Darum hat Gott ihn erhöht, damit sich im Namen Jesu jedes Knie beuge und jede Zunge bekenne, dass Jesus Christus der Herr ist.",
+          "Paulus hat das Ziel noch nicht erreicht; er vergisst, was hinter ihm liegt, und jagt dem Siegespreis der himmlischen Berufung nach.",
+          "Die Gemeinde soll sich allezeit freuen und sich um nichts sorgen, sondern ihre Anliegen im Gebet mit Dank vor Gott bringen; der Friede Gottes wird ihre Herzen bewahren."
+        ],
+        "captions_de": [
+          "Fesseln → Mut: Paulus (Kette) erklärt dem Wachsoldaten, dass er um Christi willen (Kreuznimbus) gefesselt ist; dadurch fassen die Geschwister Mut (Pfeil) und verkündigen furchtlos (Rufhorn über ihnen).",
+          "Erniedrigung → Erhöhung: Darum erhöht Gott (Strahlenkranz, goldener Pfeil) Jesus (Pfeil nach oben neben ihm); Menschen beugen die Knie vor ihm (kniende Figur).",
+          "Lauf zum Ziel: Paulus strebt auf das Ziel mit dem Siegeskranz zu (gestrichelter Weg); die Kette liegt hinter ihm.",
+          "Gebet → Friede: Die Glaubenden bringen ihre Sorgen (besorgtes Gesicht) im Gebet (Hände) zu Gott (Strahlenkranz, Pfeil); von Gott kommt der Friede (goldener Pfeil zum Ölzweig); sie freuen sich (strahlendes Gesicht)."
+        ],
+        "interpretation_note_de": "Ein Feld je Kapitel: Paulus gefangen für Christus, Erhöhung Christi, Lauf zum Ziel, Freude und Friede. Paulus schreibt den Brief als Gefangener «in Fesseln» ([[PHP.1.7]], [[PHP.1.13]]); deshalb liegt bei ihm eine Kette. Ein Soldat steht für die Wache im Prätorium ([[PHP.1.13]]).",
+        "basis": [
+          {
+            "record": "SUM-BOOK-PHP",
+            "field": "summary",
+            "fingerprint": "9a3e00f38dd49e26"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "PHP.1.12-PHP.1.26",
+            "figures": [
+              "FIG-ROLLE-SOLDAT",
+              "FIG-PAULUS",
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [
+              "FIG-ORT-PRAETORIUM",
+              "FIG-OBJ-KETTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-VERKUENDIGEN",
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [],
+            "action_de": "Paulus liegt um Christi willen in Fesseln; im ganzen Prätorium ist es bekannt geworden, und die Geschwister sagen das Wort umso furchtloser. Dass Christus verkündigt wird, darüber freut sich Paulus.",
+            "keywords": {
+              "de": "Zur Förderung des Evangeliums",
+              "gsw": "Zum Vorwärtscho vom Evangelium"
+            },
+            "names": {
+              "FIG-PAULUS": {
+                "de": "Paulus",
+                "gsw": "Paulus"
+              }
+            },
+            "stage": {
+              "hold": {
+                "FIG-PAULUS": "FIG-OBJ-KETTE"
+              },
+              "back_side": "left",
+              "at": {
+                "FIG-ZEICHEN-VERKUENDIGEN": "FIG-GRUPPE-GESCHWISTER"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-PAULUS"
+                ]
+              },
+              "mood": {
+                "FIG-PAULUS": "delight",
+                "FIG-ROLLE-SOLDAT": "earnest",
+                "FIG-GRUPPE-GESCHWISTER": "determined"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "PHP.2.5-PHP.2.11",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-VOELKER"
+            ],
+            "objects": [
+              "FIG-OBJ-KREUZ"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ERHOEHEN",
+              "FIG-ZEICHEN-KNIEN"
+            ],
+            "speech": [],
+            "action_de": "Christus Jesus erniedrigte sich und wurde gehorsam bis zum Tod am Kreuz; darum hat Gott ihn über alles erhöht, damit jedes Knie sich beuge und jede Zunge bekenne: Jesus Christus ist der Herr.",
+            "keywords": {
+              "de": "Darum hat Gott ihn über alles erhöht",
+              "gsw": "Drum hät Gott en über alles erhöht"
+            },
+            "stage": {
+              "god_side": "center",
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-ERHOEHEN": "FIG-JESUS",
+                "FIG-ZEICHEN-KNIEN": "FIG-GRUPPE-VOELKER"
+              },
+              "floor_x": {
+                "FIG-OBJ-KREUZ": 20
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-VOELKER": "earnest"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "PHP.3.7-PHP.3.14",
+            "figures": [
+              "FIG-PAULUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-WEG",
+              "FIG-ZEICHEN-ZIEL"
+            ],
+            "speech": [],
+            "action_de": "Paulus hat das Ziel noch nicht erreicht; er vergisst, was hinter ihm liegt, und jagt dem Siegespreis der himmlischen Berufung Gottes nach.",
+            "keywords": {
+              "de": "Ich jage aber danach",
+              "gsw": "Ich jag aber dem nache"
+            },
+            "stage": {
+              "x": {
+                "FIG-PAULUS": 70
+              },
+              "beside": {
+                "FIG-ZEICHEN-ZIEL": "FIG-PAULUS"
+              },
+              "at": {
+                "FIG-ZEICHEN-WEG": "FIG-PAULUS"
+              },
+              "mood": {
+                "FIG-PAULUS": "determined"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "PHP.4.4-PHP.4.13",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-BETEN",
+              "FIG-ZEICHEN-FRIEDE",
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [],
+            "action_de": "Die Gemeinde soll sich im Herrn allezeit freuen, sich um nichts sorgen, sondern ihre Anliegen mit Dank im Gebet vor Gott bringen; der Friede Gottes wird ihre Herzen bewahren.",
+            "keywords": {
+              "de": "Freut euch im Herrn allezeit!",
+              "gsw": "Fröied eu immer im Herr!"
+            },
+            "stage": {
+              "god_side": "left",
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-GLAUBENDE",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-BETEN": "FIG-GRUPPE-GLAUBENDE",
+                "FIG-ZEICHEN-FRIEDE": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-GRUPPE-GLAUBENDE"
+                ]
+              },
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "smile"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Prüfung Struktur zuerst",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-BOOK-PHP",
+            "field": "summary",
+            "fingerprint": "d4d6f45237f55f78"
+          }
         ]
       }
     }

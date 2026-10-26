@@ -11,174 +11,227 @@
   "panels": [
     {
       "n": 1,
-      "reference": "PHP.2.19-PHP.2.24",
-      "figures": [
-        "FIG-PAULUS",
-        "FIG-TIMOTHEUS"
-      ],
-      "objects": [
-        "FIG-OBJ-KETTE",
-        "FIG-GRUPPE-GEMEINDE"
-      ],
+      "reference": "PHP.2.19-PHP.2.30",
+      "figures": [],
+      "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-PAULUS",
-          "to": "FIG-TIMOTHEUS",
-          "icons": [
-            "FIG-TIMOTHEUS",
-            "FIG-ZEICHEN-BRINGEN",
-            "FIG-GRUPPE-GEMEINDE"
-          ]
-        }
-      ],
-      "action_de": "Paulus hofft, Timotheus bald zu der Gemeinde zu senden, der sich wie ein Sohn mit ihm für das Evangelium bewährt hat; er selbst hofft, bald nachzukommen.",
-      "stage": {
-        "floor_x": {
-          "FIG-OBJ-KETTE": 10
-        },
-        "mood": {
-          "FIG-TIMOTHEUS": "calm",
-          "FIG-PAULUS": "smile"
-        },
-        "x": {
-          "FIG-PAULUS": 26,
-          "FIG-TIMOTHEUS": 70
-        },
-        "wear": {
-          "FIG-TIMOTHEUS": "#9CC3E4"
-        }
-      }
-    },
-    {
-      "n": 2,
-      "reference": "PHP.2.25-PHP.2.27",
-      "figures": [
-        "FIG-GOTT",
-        "FIG-EPAPHRODITUS",
-        "FIG-PAULUS"
-      ],
-      "objects": [
-        "FIG-OBJ-KETTE"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-ERBARMEN"
-      ],
       "speech": [],
-      "action_de": "Epaphroditus, Gesandter der Gemeinde und Mitarbeiter des Paulus, war krank bis an den Tod; aber Gott hat sich über ihn erbarmt.",
-      "stage": {
-        "pose": {
-          "FIG-EPAPHRODITUS": "lie"
+      "action_de": "Paulus hofft, Timotheus bald zu senden, denn keiner sorgt sich so aufrichtig um die Gemeinde, und er hat wie ein Kind dem Vater gedient; Epaphroditus, der krank und dem Tod nahe war, schickt er gleich zurück, und die Gemeinde soll ihn mit Freude aufnehmen.",
+      "keywords": {
+        "de": "Nehmt ihn also auf im Herrn mit aller Freude",
+        "gsw": "Nämed en also uf im Herr mit voller Fröid"
+      },
+      "diagram": {
+        "visual": "columns",
+        "arrow": false,
+        "tones": false,
+        "span": 2,
+        "speaker": "FIG-PAULUS",
+        "title": {
+          "de": "Ich sende sie zu euch",
+          "gsw": "Ich schick si zu eu"
         },
-        "at": {
-          "FIG-ZEICHEN-ERBARMEN": "FIG-EPAPHRODITUS"
-        },
-        "god_side": "left",
-        "mood": {
-          "FIG-PAULUS": "worried"
-        },
-        "x": {
-          "FIG-EPAPHRODITUS": 70,
-          "FIG-PAULUS": 120
-        },
-        "floor_x": {
-          "FIG-OBJ-KETTE": 150
-        },
-        "arrows": [
+        "head": [
+          {
+            "de": "Timotheus",
+            "gsw": "Timotheus"
+          },
+          {
+            "de": "Epaphroditus",
+            "gsw": "Epaphroditus"
+          }
+        ],
+        "rows": [
           [
-            "FIG-GOTT",
-            "FIG-ZEICHEN-ERBARMEN",
-            "act"
+            {
+              "a": {
+                "de": "Ich hoffe, ihn bald zu senden",
+                "gsw": "Ich hoff, en bald z schicke"
+              },
+              "b": {
+                "de": "sobald ich absehe, wie es um mich steht",
+                "gsw": "sobald ich gseh, wie s um mich staat"
+              },
+              "who": "FIG-TIMOTHEUS"
+            },
+            {
+              "a": {
+                "de": "Ich schicke ihn umso eiliger zurück",
+                "gsw": "Ich schick en umso schnäller zrugg"
+              },
+              "b": {
+                "de": "damit ihr euch freut, wenn ihr ihn seht",
+                "gsw": "demit ir eu fröied, wänn ir en gsehnd"
+              },
+              "who": "FIG-EPAPHRODITUS"
+            }
+          ],
+          [
+            {
+              "a": {
+                "de": "Er sorgt sich aufrichtig um euch",
+                "gsw": "Er chümmeret sich ufrichtig um eu"
+              },
+              "b": {
+                "de": "alle anderen suchen das Ihre",
+                "gsw": "alli andere sueched s Eige"
+              },
+              "icons": [
+                "FIG-ZEICHEN-HERZ"
+              ]
+            },
+            {
+              "a": {
+                "de": "Er sehnte sich nach euch",
+                "gsw": "Er hät Sehnsucht gha nach eu"
+              },
+              "b": {
+                "de": "und war voller Unruhe",
+                "gsw": "und isch ganz unruehig gsii"
+              },
+              "icons": [
+                "FIG-ZEICHEN-SORGE"
+              ]
+            }
+          ],
+          [
+            {
+              "a": {
+                "de": "Er hat wie ein Kind dem Vater mit mir gedient",
+                "gsw": "Er hät wie es Chind em Vatter mit mir dienet"
+              },
+              "b": {
+                "de": "für das Evangelium",
+                "gsw": "für s Evangelium"
+              },
+              "icons": [
+                "FIG-ZEICHEN-KIND",
+                "FIG-ZEICHEN-VERKUENDIGEN"
+              ]
+            },
+            {
+              "a": {
+                "de": "Er war krank, dem Tod nahe",
+                "gsw": "Er isch chrank gsii, nooch am Tod"
+              },
+              "b": {
+                "de": "aber Gott hat sich über ihn erbarmt",
+                "gsw": "aber Gott hät sich über en erbarmet"
+              },
+              "icons": [
+                "FIG-ZEICHEN-KRANK",
+                "FIG-ZEICHEN-ERBARMEN"
+              ]
+            }
+          ],
+          [
+            {
+              "a": {
+                "de": "Ich selbst hoffe, bald zu kommen",
+                "gsw": "Ich sälber hoff, bald z cho"
+              },
+              "icons": [
+                "FIG-ZEICHEN-BESUCH"
+              ]
+            },
+            {
+              "a": {
+                "de": "Nehmt ihn mit aller Freude auf!",
+                "gsw": "Nämed en mit voller Fröid uf!"
+              },
+              "b": {
+                "de": "Er hat sein Leben für das Werk Christi aufs Spiel gesetzt.",
+                "gsw": "Er hät sis Läbe für s Wärch vo Christus ufs Spiel gsetzt."
+              },
+              "icons": [
+                "FIG-ZEICHEN-FREUDE",
+                "FIG-ZEICHEN-GASTFREUNDSCHAFT"
+              ],
+              "tone": "new"
+            }
           ]
         ]
       }
     },
     {
-      "n": 3,
-      "reference": "PHP.2.28-PHP.2.30",
+      "n": 2,
+      "reference": "PHP.2.25-PHP.2.30",
       "figures": [
-        "FIG-PAULUS",
-        "FIG-EPAPHRODITUS"
+        "FIG-GOTT",
+        "FIG-EPAPHRODITUS",
+        "FIG-GRUPPE-GLAUBENDE"
       ],
-      "objects": [
-        "FIG-OBJ-KETTE",
-        "FIG-GRUPPE-GEMEINDE"
-      ],
+      "objects": [],
       "signs": [
+        "FIG-ZEICHEN-ERBARMEN",
         "FIG-ZEICHEN-FREUDE"
       ],
       "speech": [],
-      "action_de": "Paulus schickt Epaphroditus eilig zurück, damit die Gemeinde sich freut; sie soll ihn mit Freude aufnehmen und solche Menschen ehren.",
+      "action_de": "Epaphroditus, der krank und dem Tod nahe war, über den Gott sich aber erbarmt hat, kehrt zur Gemeinde zurück; sie soll ihn mit aller Freude aufnehmen.",
+      "keywords": {
+        "de": "Er war ja auch krank, dem Tod nahe",
+        "gsw": "Er isch ja au chrank gsii, nooch am Tod"
+      },
+      "names": {
+        "FIG-EPAPHRODITUS": {
+          "de": "Epaphroditus",
+          "gsw": "Epaphroditus"
+        }
+      },
       "stage": {
+        "god_side": "left",
         "arrows": [
           [
-            "FIG-PAULUS",
             "FIG-EPAPHRODITUS",
-            "act"
-          ],
-          [
-            "FIG-EPAPHRODITUS",
-            "FIG-GRUPPE-GEMEINDE",
+            "FIG-GRUPPE-GLAUBENDE",
             "go"
           ]
         ],
-        "floor_x": {
-          "FIG-OBJ-KETTE": 14
+        "at": {
+          "FIG-ZEICHEN-ERBARMEN": "FIG-EPAPHRODITUS"
         },
         "signs_who": {
           "FIG-ZEICHEN-FREUDE": [
-            "FIG-EPAPHRODITUS"
+            "FIG-GRUPPE-GLAUBENDE"
           ]
         },
         "mood": {
           "FIG-EPAPHRODITUS": "smile",
-          "FIG-PAULUS": "smile"
-        },
-        "x": {
-          "FIG-PAULUS": 32,
-          "FIG-EPAPHRODITUS": 86
+          "FIG-GRUPPE-GLAUBENDE": "delight"
         }
       }
     }
   ],
   "actions_de": [
-    "Paulus hofft, Timotheus bald zu der Gemeinde zu senden, der sich wie ein Sohn mit ihm für das Evangelium bewährt hat; er selbst hofft, bald nachzukommen.",
-    "Epaphroditus, Gesandter der Gemeinde und Mitarbeiter des Paulus, war krank bis an den Tod; aber Gott hat sich über ihn erbarmt.",
-    "Paulus schickt Epaphroditus eilig zurück, damit die Gemeinde sich freut; sie soll ihn mit Freude aufnehmen und solche Menschen ehren."
+    "Paulus hofft, Timotheus bald zu senden, denn keiner sorgt sich so aufrichtig um die Gemeinde, und er hat wie ein Kind dem Vater gedient; Epaphroditus, der krank und dem Tod nahe war, schickt er gleich zurück, und die Gemeinde soll ihn mit Freude aufnehmen.",
+    "Epaphroditus, der krank und dem Tod nahe war, über den Gott sich aber erbarmt hat, kehrt zur Gemeinde zurück; sie soll ihn mit aller Freude aufnehmen."
   ],
   "captions_de": [
-    "Ankündigung: Paulus (Kette) will Timotheus bald zur Gemeinde senden (in der Sprechblase: Timotheus, Pfeil, Haus); Timotheus steht noch bei ihm.",
-    "Gottes Erbarmen → Rettung: Epaphroditus liegt todkrank; Gott (Strahlenkranz) erbarmt sich über ihn (goldener Pfeil zum Herz in Händen über ihm); Paulus (Kette) ist bei ihm.",
-    "Paulus → Epaphroditus → Gemeinde: Paulus (Kette) schickt Epaphroditus (Pfeil) zur Gemeinde (gestrichelter Weg zum Haus), damit sie sich freut; Epaphroditus freut sich (strahlendes Gesicht)."
+    "Zwei Spalten «Timotheus – Epaphroditus» (Bild Paulus, Blase «Ich sende sie zu euch»): bald senden ↔ jetzt eilig zurückschicken (Bilder); sorgt sich aufrichtig um euch (Herz) ↔ sehnte sich nach euch, voller Unruhe (besorgtes Gesicht); hat wie ein Kind dem Vater gedient (Kindergesicht, Rufer) ↔ war krank, dem Tod nahe, Gott hat sich erbarmt (Kranker, Herz in Händen); ich selbst komme bald (gehende Person) ↔ nehmt ihn mit Freude auf (lachendes Gesicht, Hütte mit offenen Händen).",
+    "Rückkehr: Gott (Strahlenkranz) hat sich über Epaphroditus erbarmt (Herz in Händen); Epaphroditus geht zur Gemeinde (gestrichelter Weg), die ihn mit Freude empfängt."
   ],
-  "interpretation_note_de": "Die Sendung des Timotheus ist angekündigt, nicht erzählt ([[PHP.2.19]], [[PHP.2.23]]). Wie Epaphroditus krank lag, sagt der Text nicht; das Liegen deutet die Krankheit an ([[PHP.2.27]]). Paulus schreibt den Brief als Gefangener «in Fesseln» ([[PHP.1.7]], [[PHP.1.13]]); deshalb liegt bei ihm eine Kette. Ein Soldat steht für die Wache im Prätorium ([[PHP.1.13]]).",
+  "interpretation_note_de": "Struktur: zwei Gesandte × Plan, Grund, Bewährung, Weisung (Raster als Spalten). Feld 1 stellt Timotheus und Epaphroditus Zeile für Zeile nebeneinander, mit allen Gliedern; Feld 2 zeigt den Ausgang für Epaphroditus als Szene: Gott hat sich über den Todkranken erbarmt, er kehrt zur Gemeinde zurück. Beide sind nach Christus ([[PHP.2.5-PHP.2.11]]) Vorbilder der Sorge um die anderen; das ist eine Beobachtung der Auslegung.",
   "basis": [
     {
       "record": "TU-PHP-002-019-030",
       "field": "summary",
-      "fingerprint": "6504c96d48cb178c"
+      "fingerprint": "42b37f03ea5a6083"
     },
     {
       "record": "TRANS-PHP-002-001-030-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "PHP.2.19-PHP.2.24",
-      "fingerprint": "f5d8ec613550ee10"
+      "reference": "PHP.2.19-PHP.2.30",
+      "fingerprint": "db43c05e5acfa5e2"
     },
     {
       "record": "TRANS-PHP-002-001-030-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "PHP.2.25-PHP.2.27",
-      "fingerprint": "bab4ed475e85ab29"
-    },
-    {
-      "record": "TRANS-PHP-002-001-030-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "PHP.2.28-PHP.2.30",
-      "fingerprint": "6f3e0a0985c6410d"
+      "reference": "PHP.2.25-PHP.2.30",
+      "fingerprint": "250881744c4d6398"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -455,6 +508,386 @@
           "Ankündigung: Paulus (Kette) will Timotheus bald zur Gemeinde senden (in der Sprechblase: Timotheus, Pfeil, Haus); Timotheus steht noch bei ihm.",
           "Gottes Erbarmen → Rettung: Epaphroditus liegt todkrank; Gott (Strahlenkranz) erbarmt sich über ihn (goldener Pfeil zum Herz in Händen über ihm); Paulus (Kette) ist bei ihm.",
           "Paulus → Epaphroditus → Gemeinde: Paulus (Kette) schickt Epaphroditus (Pfeil) zur Gemeinde (gestrichelter Weg zum Haus), damit sie sich freut; Epaphroditus freut sich (Funken)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "PHP.2.19-PHP.2.24",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TIMOTHEUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE",
+              "FIG-GRUPPE-GEMEINDE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-TIMOTHEUS",
+                "icons": [
+                  "FIG-TIMOTHEUS",
+                  "FIG-ZEICHEN-BRINGEN",
+                  "FIG-GRUPPE-GEMEINDE"
+                ]
+              }
+            ],
+            "action_de": "Paulus hofft, Timotheus bald zu der Gemeinde zu senden, der sich wie ein Sohn mit ihm für das Evangelium bewährt hat; er selbst hofft, bald nachzukommen.",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KETTE": 10
+              },
+              "mood": {
+                "FIG-TIMOTHEUS": "calm",
+                "FIG-PAULUS": "smile"
+              },
+              "x": {
+                "FIG-PAULUS": 26,
+                "FIG-TIMOTHEUS": 70
+              },
+              "wear": {
+                "FIG-TIMOTHEUS": "#9CC3E4"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "PHP.2.25-PHP.2.27",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-EPAPHRODITUS",
+              "FIG-PAULUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ERBARMEN"
+            ],
+            "speech": [],
+            "action_de": "Epaphroditus, Gesandter der Gemeinde und Mitarbeiter des Paulus, war krank bis an den Tod; aber Gott hat sich über ihn erbarmt.",
+            "stage": {
+              "pose": {
+                "FIG-EPAPHRODITUS": "lie"
+              },
+              "at": {
+                "FIG-ZEICHEN-ERBARMEN": "FIG-EPAPHRODITUS"
+              },
+              "god_side": "left",
+              "mood": {
+                "FIG-PAULUS": "worried"
+              },
+              "x": {
+                "FIG-EPAPHRODITUS": 70,
+                "FIG-PAULUS": 120
+              },
+              "floor_x": {
+                "FIG-OBJ-KETTE": 150
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-ERBARMEN",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "PHP.2.28-PHP.2.30",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-EPAPHRODITUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE",
+              "FIG-GRUPPE-GEMEINDE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [],
+            "action_de": "Paulus schickt Epaphroditus eilig zurück, damit die Gemeinde sich freut; sie soll ihn mit Freude aufnehmen und solche Menschen ehren.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-PAULUS",
+                  "FIG-EPAPHRODITUS",
+                  "act"
+                ],
+                [
+                  "FIG-EPAPHRODITUS",
+                  "FIG-GRUPPE-GEMEINDE",
+                  "go"
+                ]
+              ],
+              "floor_x": {
+                "FIG-OBJ-KETTE": 14
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-EPAPHRODITUS"
+                ]
+              },
+              "mood": {
+                "FIG-EPAPHRODITUS": "smile",
+                "FIG-PAULUS": "smile"
+              },
+              "x": {
+                "FIG-PAULUS": 32,
+                "FIG-EPAPHRODITUS": 86
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Paulus hofft, Timotheus bald zu der Gemeinde zu senden, der sich wie ein Sohn mit ihm für das Evangelium bewährt hat; er selbst hofft, bald nachzukommen.",
+          "Epaphroditus, Gesandter der Gemeinde und Mitarbeiter des Paulus, war krank bis an den Tod; aber Gott hat sich über ihn erbarmt.",
+          "Paulus schickt Epaphroditus eilig zurück, damit die Gemeinde sich freut; sie soll ihn mit Freude aufnehmen und solche Menschen ehren."
+        ],
+        "captions_de": [
+          "Ankündigung: Paulus (Kette) will Timotheus bald zur Gemeinde senden (in der Sprechblase: Timotheus, Pfeil, Haus); Timotheus steht noch bei ihm.",
+          "Gottes Erbarmen → Rettung: Epaphroditus liegt todkrank; Gott (Strahlenkranz) erbarmt sich über ihn (goldener Pfeil zum Herz in Händen über ihm); Paulus (Kette) ist bei ihm.",
+          "Paulus → Epaphroditus → Gemeinde: Paulus (Kette) schickt Epaphroditus (Pfeil) zur Gemeinde (gestrichelter Weg zum Haus), damit sie sich freut; Epaphroditus freut sich (strahlendes Gesicht)."
+        ],
+        "interpretation_note_de": "Die Sendung des Timotheus ist angekündigt, nicht erzählt ([[PHP.2.19]], [[PHP.2.23]]). Wie Epaphroditus krank lag, sagt der Text nicht; das Liegen deutet die Krankheit an ([[PHP.2.27]]). Paulus schreibt den Brief als Gefangener «in Fesseln» ([[PHP.1.7]], [[PHP.1.13]]); deshalb liegt bei ihm eine Kette. Ein Soldat steht für die Wache im Prätorium ([[PHP.1.13]]).",
+        "basis": [
+          {
+            "record": "TU-PHP-002-019-030",
+            "field": "summary",
+            "fingerprint": "6504c96d48cb178c"
+          },
+          {
+            "record": "TRANS-PHP-002-001-030-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "PHP.2.19-PHP.2.24",
+            "fingerprint": "f5d8ec613550ee10"
+          },
+          {
+            "record": "TRANS-PHP-002-001-030-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "PHP.2.25-PHP.2.27",
+            "fingerprint": "bab4ed475e85ab29"
+          },
+          {
+            "record": "TRANS-PHP-002-001-030-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "PHP.2.28-PHP.2.30",
+            "fingerprint": "6f3e0a0985c6410d"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Prüfung Struktur zuerst",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "PHP.2.19-PHP.2.30",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Paulus will Timotheus bald senden, denn keiner sorgt sich so aufrichtig um die Gemeinde, und er hat wie ein Kind dem Vater gedient; Epaphroditus, der krank und dem Tod nahe war, schickt er gleich zurück, und die Gemeinde soll ihn mit Freude aufnehmen.",
+            "keywords": {
+              "de": "Nehmt ihn also auf im Herrn mit aller Freude",
+              "gsw": "Nämed en also uf im Herr mit voller Fröid"
+            },
+            "diagram": {
+              "visual": "columns",
+              "arrow": false,
+              "tones": false,
+              "span": 2,
+              "speaker": "FIG-PAULUS",
+              "title": {
+                "de": "Ich sende sie zu euch",
+                "gsw": "Ich schick si zu eu"
+              },
+              "head": [
+                {
+                  "de": "Timotheus",
+                  "gsw": "Timotheus"
+                },
+                {
+                  "de": "Epaphroditus",
+                  "gsw": "Epaphroditus"
+                }
+              ],
+              "rows": [
+                [
+                  {
+                    "a": {
+                      "de": "Ich hoffe, ihn bald zu senden",
+                      "gsw": "Ich hoff, en bald z schicke"
+                    },
+                    "b": {
+                      "de": "sobald ich absehe, wie es um mich steht",
+                      "gsw": "sobald ich gseh, wie s um mich staat"
+                    },
+                    "who": "FIG-TIMOTHEUS"
+                  },
+                  {
+                    "a": {
+                      "de": "Ich schicke ihn umso eiliger zurück",
+                      "gsw": "Ich schick en umso schnäller zrugg"
+                    },
+                    "b": {
+                      "de": "damit ihr euch freut, wenn ihr ihn seht",
+                      "gsw": "demit ir eu fröied, wänn ir en gsehnd"
+                    },
+                    "who": "FIG-EPAPHRODITUS"
+                  }
+                ],
+                [
+                  {
+                    "a": {
+                      "de": "Er sorgt sich aufrichtig um euch",
+                      "gsw": "Er chümmeret sich ufrichtig um eu"
+                    },
+                    "b": {
+                      "de": "alle anderen suchen das Ihre",
+                      "gsw": "alli andere sueched s Eige"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-HERZ"
+                    ]
+                  },
+                  {
+                    "a": {
+                      "de": "Er sehnte sich nach euch",
+                      "gsw": "Er hät Sehnsucht gha nach eu"
+                    },
+                    "b": {
+                      "de": "und war voller Unruhe",
+                      "gsw": "und isch ganz unruehig gsii"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-SORGE"
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "a": {
+                      "de": "Er hat wie ein Kind dem Vater mit mir gedient",
+                      "gsw": "Er hät wie es Chind em Vatter mit mir dienet"
+                    },
+                    "b": {
+                      "de": "für das Evangelium",
+                      "gsw": "für s Evangelium"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-KIND",
+                      "FIG-ZEICHEN-VERKUENDIGEN"
+                    ]
+                  },
+                  {
+                    "a": {
+                      "de": "Er war krank, dem Tod nahe",
+                      "gsw": "Er isch chrank gsii, nooch am Tod"
+                    },
+                    "b": {
+                      "de": "aber Gott hat sich über ihn erbarmt",
+                      "gsw": "aber Gott hät sich über en erbarmet"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-KRANK",
+                      "FIG-ZEICHEN-ERBARMEN"
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "a": {
+                      "de": "Ich selbst hoffe, bald zu kommen",
+                      "gsw": "Ich sälber hoff, bald z cho"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-BESUCH"
+                    ]
+                  },
+                  {
+                    "a": {
+                      "de": "Nehmt ihn mit aller Freude auf!",
+                      "gsw": "Nämed en mit voller Fröid uf!"
+                    },
+                    "b": {
+                      "de": "Er hat sein Leben für das Werk Christi aufs Spiel gesetzt.",
+                      "gsw": "Er hät sis Läbe für s Wärch vo Christus ufs Spiel gsetzt."
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-FREUDE",
+                      "FIG-ZEICHEN-GASTFREUNDSCHAFT"
+                    ],
+                    "tone": "new"
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "PHP.2.25-PHP.2.30",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-EPAPHRODITUS",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-ERBARMEN",
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [],
+            "action_de": "Epaphroditus, der krank und dem Tod nahe war, über den Gott sich aber erbarmt hat, kehrt zur Gemeinde zurück; sie soll ihn mit aller Freude aufnehmen.",
+            "keywords": {
+              "de": "Er war ja auch krank, dem Tod nahe",
+              "gsw": "Er isch ja au chrank gsii, nooch am Tod"
+            },
+            "names": {
+              "FIG-EPAPHRODITUS": {
+                "de": "Epaphroditus",
+                "gsw": "Epaphroditus"
+              }
+            },
+            "stage": {
+              "god_side": "left",
+              "arrows": [
+                [
+                  "FIG-EPAPHRODITUS",
+                  "FIG-GRUPPE-GLAUBENDE",
+                  "go"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-ERBARMEN": "FIG-EPAPHRODITUS"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-GRUPPE-GLAUBENDE"
+                ]
+              },
+              "mood": {
+                "FIG-EPAPHRODITUS": "smile",
+                "FIG-GRUPPE-GLAUBENDE": "delight"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Paulus will Timotheus bald senden, denn keiner sorgt sich so aufrichtig um die Gemeinde, und er hat wie ein Kind dem Vater gedient; Epaphroditus, der krank und dem Tod nahe war, schickt er gleich zurück, und die Gemeinde soll ihn mit Freude aufnehmen.",
+          "Epaphroditus, der krank und dem Tod nahe war, über den Gott sich aber erbarmt hat, kehrt zur Gemeinde zurück; sie soll ihn mit aller Freude aufnehmen."
         ]
       }
     }

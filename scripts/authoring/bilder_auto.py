@@ -910,7 +910,7 @@ class Composer:
                 ty -= self.head_r()
             elif sp["from"] in sky:
                 x, y, w0, h0 = sky[sp["from"]]
-                tx, ty = (x + w0, y + h0 / 2) if x < W / 2 else (x, y + h0 / 2)
+                tx, ty = (x + w0 * .78, y + h0 / 2) if x < W / 2 else (x + w0 * .22, y + h0 / 2)  # Spitze reicht in den Strahlenkranz
             elif sp["from"] in pos:  # sprechendes Bauteil (z. B. Satan als Schatten): Spitze an den oberen Rand
                 tx, ty = pos[sp["from"]]
                 ty -= self.m(sp["from"])[1][1] * .4
@@ -929,7 +929,7 @@ class Composer:
             god = sp["from"] in sky
             if god:
                 gx, gy, gw, gh = sky[sp["from"]]
-                avail = max(W - (gx + gw + 8) - 4, gx - 12)
+                avail = max(W - (gx + gw + 14) - 4, gx - 14 - 28)  # links bleibt die Feldnummer frei (sonst rückte die Blase auf den Strahlenkranz)
             if bw > avail:
                 sc = (avail - 12 - 5 * (len(ws) - 1)) / sum(ws)
                 ws = [w * sc for w in ws]
@@ -939,7 +939,7 @@ class Composer:
             by = st.get("bubble_y", 8)  # Abstand zum Rahmen
             if god:
                 gx, gy, gw, gh = sky[sp["from"]]
-                bx = gx + gw + 8 if gx + gw + 8 + bw <= W - 4 else gx - bw - 8
+                bx = gx + gw + 14 if gx + gw + 14 + bw <= W - 4 else gx - bw - 14  # Abstand, damit die Spitze sichtbar ist
                 by = 8
             else:
                 bx = tx - bw / 2
@@ -996,6 +996,34 @@ class Composer:
                             ih *= sc
                             bw, bh = bw2, bh2
                         break
+            # Schlussprüfung (Hinweis Andi Neck 2026-10-26: Blase lag über dem Strahlenkranz bzw. über Zeichen): verdeckt die Blase
+            # ein Zeichen, einen Gegenstand, ein fremdes Gesicht, eine andere Blase oder den Strahlenkranz Gottes, wird auf einem
+            # feinen Raster nahe beim Sprecher weitergesucht, nötigenfalls etwas kleiner
+            own = [sky[sp["from"]]] if god else []
+            def _bad(x_, y_, w_, h_):
+                obs = own + [b for k2, b in sky.items() if k2 != sp["from"]] + [(px, pyb - ph, pw, ph) for px, pw, pyb, ph in placed]
+                return self.covers(x_, y_, w_, h_, sp["from"], heads) or any(
+                    x_ < ox + ow + 3 and x_ + w_ > ox - 3 and y_ < oy + oh + 2 and y_ + h_ > oy - 2 for ox, oy, ow, oh in obs)
+            if not any(sp0["from"] == sp["from"] for sp0, _, _ in bubbles[:len(placed)]) and _bad(bx, by, bw, bh):
+                best = None
+                for sc in (1, .9, .8, .7, .6):
+                    bw2, bh2 = (bw - 12) * sc + 12, (bh - 12) * sc + 12
+                    for cy in range(2, int(max(3, ty - 6 - bh2)) + 1, 3):
+                        for cx in range(4, int(W - 4 - bw2) + 1, 4):
+                            if cy < 24 and cx < 28:
+                                continue
+                            if not _bad(cx, cy, bw2, bh2):
+                                d = abs(cx + bw2 / 2 - tx) + abs(cy + bh2 - ty) * .5 + (1 - sc) * 60
+                                if best is None or d < best[0]:
+                                    best = (d, cx, cy, sc, bw2, bh2)
+                    if best and best[3] == sc:
+                        break
+                if best:
+                    _, bx, by, sc, bw2, bh2 = best
+                    if sc < 1:
+                        ws = [w * sc for w in ws]
+                        ih *= sc
+                        bw, bh = bw2, bh2
             same = [j for j, (sp0, _, _) in enumerate(bubbles[:len(placed)]) if sp0["from"] == sp["from"]]
             link = None
             if same:

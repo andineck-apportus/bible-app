@@ -11,67 +11,118 @@
   "panels": [
     {
       "n": 1,
-      "reference": "1JN.1.5-1JN.1.7",
+      "reference": "1JN.1.1-1JN.1.4",
       "figures": [
+        "FIG-JESUS",
         "FIG-DER-AELTESTE",
         "FIG-GRUPPE-GESCHWISTER"
       ],
       "objects": [],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-LEBEN"
+      ],
       "speech": [
         {
           "from": "FIG-DER-AELTESTE",
           "to": "FIG-GRUPPE-GESCHWISTER",
           "icons": [
-            "FIG-GOTT",
-            "FIG-ZEICHEN-LICHT",
-            "FIG-ZEICHEN-FINSTERNIS",
-            "FIG-ZEICHEN-LUEGE"
-          ]
+            "FIG-ZEICHEN-SEHEN",
+            "FIG-ZEICHEN-HOEREN"
+          ],
+          "word": {
+            "de": "Was wir gesehen und gehört haben, verkündigen wir euch",
+            "gsw": "Was mir gseh und ghört händ, verchünded mir eu"
+          }
         }
       ],
-      "action_de": "Die Botschaft des Briefs: Gott ist Licht; wer zu ihm gehört, lebt nicht in der Finsternis."
+      "action_de": "Was von Anfang an war, das Wort des Lebens, haben die Zeugen gehört und gesehen; sie verkündigen es den Lesern, damit auch sie Gemeinschaft mit ihnen und mit dem Vater und dem Sohn haben.",
+      "keywords": {
+        "de": "Vom Wort des Lebens",
+        "gsw": "Vom Wort vom Läbe"
+      },
+      "stage": {
+        "at": {
+          "FIG-ZEICHEN-LEBEN": "FIG-JESUS"
+        },
+        "mood": {
+          "FIG-JESUS": "calm",
+          "FIG-DER-AELTESTE": "earnest",
+          "FIG-GRUPPE-GESCHWISTER": "smile"
+        }
+      }
     },
     {
       "n": 2,
-      "reference": "1JN.4.1-1JN.4.3",
+      "reference": "1JN.1.5-1JN.1.10",
+      "figures": [
+        "FIG-GOTT",
+        "FIG-GRUPPE-GESCHWISTER"
+      ],
+      "objects": [],
+      "signs": [
+        "FIG-ZEICHEN-LICHT",
+        "FIG-ZEICHEN-VERGEBUNG"
+      ],
+      "speech": [],
+      "action_de": "Gott ist Licht, und in ihm ist keine Finsternis; wer im Licht lebt und seine Sünden bekennt, hat Gemeinschaft, und Gott vergibt ihm.",
+      "keywords": {
+        "de": "Gott ist Licht",
+        "gsw": "Gott isch Liecht"
+      },
+      "stage": {
+        "god_side": "left",
+        "arrows": [
+          [
+            "FIG-GOTT",
+            "FIG-GRUPPE-GESCHWISTER",
+            "act"
+          ]
+        ],
+        "at": {
+          "FIG-ZEICHEN-LICHT": "FIG-GOTT",
+          "FIG-ZEICHEN-VERGEBUNG": "FIG-GRUPPE-GESCHWISTER"
+        },
+        "mood": {
+          "FIG-GRUPPE-GESCHWISTER": "smile"
+        }
+      }
+    },
+    {
+      "n": 3,
+      "reference": "1JN.2.18-1JN.2.23",
       "figures": [
         "FIG-GRUPPE-GESCHWISTER",
         "FIG-GRUPPE-VERFUEHRER"
       ],
       "objects": [],
       "signs": [
-        "FIG-ZEICHEN-PRUEFEN"
+        "FIG-ZEICHEN-SALBUNG",
+        "FIG-ZEICHEN-STUNDE"
       ],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-GESCHWISTER",
-          "to": "FIG-GRUPPE-GESCHWISTER",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-WAHRHEIT"
-          ]
-        }
-      ],
-      "action_de": "Die Leser sollen die Geister prüfen: Aus Gott ist, wer Jesus Christus bekennt.",
+      "speech": [],
+      "action_de": "Es ist letzte Stunde: Antichristen sind von uns ausgegangen und leugnen, dass Jesus der Christus ist; wer den Sohn bekennt, hat auch den Vater.",
+      "keywords": {
+        "de": "Es ist letzte Stunde",
+        "gsw": "Es isch di letscht Stund"
+      },
       "stage": {
         "split": 1,
         "pose": {
           "FIG-GRUPPE-VERFUEHRER": "away"
         },
-        "mood": {
-          "FIG-GRUPPE-GESCHWISTER": "smile",
-          "FIG-GRUPPE-VERFUEHRER": "earnest"
+        "at": {
+          "FIG-ZEICHEN-SALBUNG": "FIG-GRUPPE-GESCHWISTER",
+          "FIG-ZEICHEN-STUNDE": "FIG-GRUPPE-VERFUEHRER"
         },
-        "x": {
-          "FIG-GRUPPE-GESCHWISTER": 62,
-          "FIG-GRUPPE-VERFUEHRER": 146
+        "mood": {
+          "FIG-GRUPPE-GESCHWISTER": "calm",
+          "FIG-GRUPPE-VERFUEHRER": "calm"
         }
       }
     },
     {
-      "n": 3,
-      "reference": "1JN.4.9-1JN.4.11",
+      "n": 4,
+      "reference": "1JN.4.7-1JN.4.12",
       "figures": [
         "FIG-GOTT",
         "FIG-JESUS",
@@ -79,11 +130,15 @@
       ],
       "objects": [],
       "signs": [
-        "FIG-ZEICHEN-LIEBE",
-        "FIG-ZEICHEN-GEMEINSCHAFT"
+        "FIG-ZEICHEN-WELT",
+        "FIG-ZEICHEN-LIEBE"
       ],
       "speech": [],
-      "action_de": "Gott ist Liebe: Er hat seinen Sohn gesandt; darum sollen die Glaubenden einander lieben.",
+      "action_de": "Gott ist Liebe: Er hat seinen einzigen Sohn in die Welt gesandt, damit wir durch ihn leben, als Sühne für unsere Sünden; darum sollen wir einander lieben.",
+      "keywords": {
+        "de": "Gott ist Liebe",
+        "gsw": "Gott isch Liebi"
+      },
       "stage": {
         "god_side": "left",
         "arrows": [
@@ -97,33 +152,37 @@
           "FIG-ZEICHEN-LIEBE": "FIG-GRUPPE-GESCHWISTER"
         },
         "mood": {
-          "FIG-GRUPPE-GESCHWISTER": "delight"
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-GESCHWISTER": "smile"
         },
-        "air_x": 146,
-        "air_y": 40
+        "beside": {
+          "FIG-ZEICHEN-WELT": "FIG-JESUS"
+        }
       }
     }
   ],
   "actions_de": [
-    "Die Botschaft des Briefs: Gott ist Licht; wer zu ihm gehört, lebt nicht in der Finsternis.",
-    "Die Leser sollen die Geister prüfen: Aus Gott ist, wer Jesus Christus bekennt.",
-    "Gott ist Liebe: Er hat seinen Sohn gesandt; darum sollen die Glaubenden einander lieben."
+    "Was von Anfang an war, das Wort des Lebens, haben die Zeugen gehört und gesehen; sie verkündigen es den Lesern, damit auch sie Gemeinschaft mit ihnen und mit dem Vater und dem Sohn haben.",
+    "Gott ist Licht, und in ihm ist keine Finsternis; wer im Licht lebt und seine Sünden bekennt, hat Gemeinschaft, und Gott vergibt ihm.",
+    "Es ist letzte Stunde: Antichristen sind von uns ausgegangen und leugnen, dass Jesus der Christus ist; wer den Sohn bekennt, hat auch den Vater.",
+    "Gott ist Liebe: Er hat seinen einzigen Sohn in die Welt gesandt, damit wir durch ihn leben, als Sühne für unsere Sünden; darum sollen wir einander lieben."
   ],
   "captions_de": [
-    "Gott ist Licht: Gott (Strahlenkranz) ist Licht (goldener Schein); nicht in der Finsternis leben (dunkle Wolke, abwehrende Hand).",
-    "Prüfen: Die Geschwister bekennen Jesus (Sprechblase mit Jesus, Häkchen); rechts, abgewandt, die Verführer.",
-    "Gott sendet Jesus → einander lieben: Gott (Strahlenkranz) sendet Jesus (goldener Pfeil); darum lieben die Geschwister einander (Herz) und sind verbunden (Figuren an der Hand)."
+    "Zeugnis: Jesus (das erschienene Leben, Keimling) links; der Verfasser verkündigt den Geschwistern: «Was wir gesehen und gehört haben, verkündigen wir euch» (Augen, Ohr).",
+    "Gott ist Licht: Gott (Strahlenkranz) im goldenen Licht; die Geschwister bekennen ihre Sünden (gefaltete Hände), von Gott kommt die Vergebung (goldener Pfeil, Tuch ohne Fleck).",
+    "Letzte Stunde: Die Verführer (violettgraue Gruppe) wenden sich ab und gehen (gestrichelte Linie); die Geschwister bleiben, mit der Salbung (Ölhorn mit goldenem Tropfen); die Sanduhr läuft.",
+    "Gott ist Liebe: Gott (Strahlenkranz) sendet seinen Sohn (goldener Pfeil zu Jesus) in die Welt (Erdkugel); die Geschwister lieben einander (Herz)."
   ],
-  "interpretation_note_de": "Drei Hauptgedanken des Briefs: Licht ([[1JN.1.5]]), Prüfen der Geister ([[1JN.4.1]]) und Liebe ([[1JN.4.8]]). Der 1. Johannesbrief nennt seinen Verfasser nicht; das Bild zeigt ihn wie den «Ältesten» aus [[2JN.1.1]] und [[3JN.1.1]] (Deutung). Die angeredeten «Kinder» und «Lieben» sind als Gruppe von Geschwistern gezeichnet.",
+  "interpretation_note_de": "Vier Comic-Szenen zu den Stationen der Kernanalyse: das Zeugnis vom Wort des Lebens ([[1JN.1.1-1JN.1.4]]), «Gott ist Licht» ([[1JN.1.5-1JN.1.10]]), die letzte Stunde mit dem Weggang der Antichristen, die den Sohn leugnen, während die Geschwister bleiben ([[1JN.2.18-1JN.2.23]]) und «Gott ist Liebe» mit der Sendung des Sohnes ([[1JN.4.7-1JN.4.12]]). Die Zweckangabe [[1JN.5.13]] steht in der Bildhilfe und im Kapitelbild. Die wiederkehrenden Themen (Themenspirale) sind ein Vorschlag der Auslegung und nicht als Gliederung gezeichnet. Comic-Szenen nach dem Entscheid vom 2026-10-25. Der 1. Johannesbrief nennt seinen Verfasser nicht; Bild und Porträt zeigen ihn wie den «Ältesten» aus [[2JN.1.1]] und [[3JN.1.1]] (Deutung). Die angeredeten «Kinder» und «Lieben» sind als Gruppe von Geschwistern gezeichnet.",
   "basis": [
     {
       "record": "SUM-BOOK-1JN",
       "field": "summary",
-      "fingerprint": "fbcffcdaf44fa11c"
+      "fingerprint": "3540be0f237020a5"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -352,6 +411,301 @@
           "Gott ist Licht: Gott (Strahlenkranz) ist Licht (goldener Schein); nicht in der Finsternis leben (dunkle Wolke, abwehrende Hand).",
           "Prüfen: Die Geschwister bekennen Jesus (Sprechblase mit Jesus, Häkchen); rechts, abgewandt, die Verführer.",
           "Gott sendet Jesus → einander lieben: Gott (Strahlenkranz) sendet Jesus (goldener Pfeil); darum lieben die Geschwister einander (Herzen) und sind verbunden (Figuren an der Hand)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "1JN.1.5-1JN.1.7",
+            "figures": [
+              "FIG-DER-AELTESTE",
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-DER-AELTESTE",
+                "to": "FIG-GRUPPE-GESCHWISTER",
+                "icons": [
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-LICHT",
+                  "FIG-ZEICHEN-FINSTERNIS",
+                  "FIG-ZEICHEN-LUEGE"
+                ]
+              }
+            ],
+            "action_de": "Die Botschaft des Briefs: Gott ist Licht; wer zu ihm gehört, lebt nicht in der Finsternis."
+          },
+          {
+            "n": 2,
+            "reference": "1JN.4.1-1JN.4.3",
+            "figures": [
+              "FIG-GRUPPE-GESCHWISTER",
+              "FIG-GRUPPE-VERFUEHRER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-PRUEFEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-GESCHWISTER",
+                "to": "FIG-GRUPPE-GESCHWISTER",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-WAHRHEIT"
+                ]
+              }
+            ],
+            "action_de": "Die Leser sollen die Geister prüfen: Aus Gott ist, wer Jesus Christus bekennt.",
+            "stage": {
+              "split": 1,
+              "pose": {
+                "FIG-GRUPPE-VERFUEHRER": "away"
+              },
+              "mood": {
+                "FIG-GRUPPE-GESCHWISTER": "smile",
+                "FIG-GRUPPE-VERFUEHRER": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-GESCHWISTER": 62,
+                "FIG-GRUPPE-VERFUEHRER": 146
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "1JN.4.9-1JN.4.11",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-LIEBE",
+              "FIG-ZEICHEN-GEMEINSCHAFT"
+            ],
+            "speech": [],
+            "action_de": "Gott ist Liebe: Er hat seinen Sohn gesandt; darum sollen die Glaubenden einander lieben.",
+            "stage": {
+              "god_side": "left",
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-LIEBE": "FIG-GRUPPE-GESCHWISTER"
+              },
+              "mood": {
+                "FIG-GRUPPE-GESCHWISTER": "delight"
+              },
+              "air_x": 146,
+              "air_y": 40
+            }
+          }
+        ],
+        "actions_de": [
+          "Die Botschaft des Briefs: Gott ist Licht; wer zu ihm gehört, lebt nicht in der Finsternis.",
+          "Die Leser sollen die Geister prüfen: Aus Gott ist, wer Jesus Christus bekennt.",
+          "Gott ist Liebe: Er hat seinen Sohn gesandt; darum sollen die Glaubenden einander lieben."
+        ],
+        "captions_de": [
+          "Gott ist Licht: Gott (Strahlenkranz) ist Licht (goldener Schein); nicht in der Finsternis leben (dunkle Wolke, abwehrende Hand).",
+          "Prüfen: Die Geschwister bekennen Jesus (Sprechblase mit Jesus, Häkchen); rechts, abgewandt, die Verführer.",
+          "Gott sendet Jesus → einander lieben: Gott (Strahlenkranz) sendet Jesus (goldener Pfeil); darum lieben die Geschwister einander (Herz) und sind verbunden (Figuren an der Hand)."
+        ],
+        "interpretation_note_de": "Drei Hauptgedanken des Briefs: Licht ([[1JN.1.5]]), Prüfen der Geister ([[1JN.4.1]]) und Liebe ([[1JN.4.8]]). Der 1. Johannesbrief nennt seinen Verfasser nicht; das Bild zeigt ihn wie den «Ältesten» aus [[2JN.1.1]] und [[3JN.1.1]] (Deutung). Die angeredeten «Kinder» und «Lieben» sind als Gruppe von Geschwistern gezeichnet.",
+        "basis": [
+          {
+            "record": "SUM-BOOK-1JN",
+            "field": "summary",
+            "fingerprint": "fbcffcdaf44fa11c"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Prüfung Struktur zuerst",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "1JN.1.1-1JN.1.4",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-DER-AELTESTE",
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-LEBEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-DER-AELTESTE",
+                "to": "FIG-GRUPPE-GESCHWISTER",
+                "icons": [
+                  "FIG-ZEICHEN-SEHEN",
+                  "FIG-ZEICHEN-HOEREN"
+                ],
+                "word": {
+                  "de": "Was wir gesehen und gehört haben, verkündigen wir euch",
+                  "gsw": "Was mir gseh und ghört händ, verchünded mir eu"
+                }
+              }
+            ],
+            "action_de": "Was von Anfang an war, das Wort des Lebens, haben die Zeugen gehört und gesehen; sie verkündigen es den Lesern, damit auch sie Gemeinschaft mit ihnen und mit dem Vater und dem Sohn haben.",
+            "keywords": {
+              "de": "Vom Wort des Lebens",
+              "gsw": "Vom Wort vom Läbe"
+            },
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-LEBEN": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-DER-AELTESTE": "earnest",
+                "FIG-GRUPPE-GESCHWISTER": "smile"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "1JN.1.5-1JN.1.10",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-LICHT",
+              "FIG-ZEICHEN-VERGEBUNG"
+            ],
+            "speech": [],
+            "action_de": "Gott ist Licht, und in ihm ist keine Finsternis; wer im Licht lebt und seine Sünden bekennt, hat Gemeinschaft, und Gott vergibt ihm.",
+            "keywords": {
+              "de": "Gott ist Licht",
+              "gsw": "Gott isch Liecht"
+            },
+            "stage": {
+              "god_side": "left",
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-GESCHWISTER",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-LICHT": "FIG-GOTT",
+                "FIG-ZEICHEN-VERGEBUNG": "FIG-GRUPPE-GESCHWISTER"
+              },
+              "mood": {
+                "FIG-GRUPPE-GESCHWISTER": "smile"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "1JN.2.18-1JN.4.6",
+            "figures": [
+              "FIG-GRUPPE-GESCHWISTER",
+              "FIG-GRUPPE-VERFUEHRER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-PRUEFEN",
+              "FIG-ZEICHEN-WELT"
+            ],
+            "speech": [],
+            "action_de": "Die Geschwister sollen die Geister prüfen: Wer Jesus Christus als im Fleisch gekommen bekennt, ist aus Gott; die falschen Propheten sind aus der Welt.",
+            "keywords": {
+              "de": "Prüft die Geister",
+              "gsw": "Prüefed d Geischter"
+            },
+            "stage": {
+              "split": 1,
+              "at": {
+                "FIG-ZEICHEN-PRUEFEN": "FIG-GRUPPE-GESCHWISTER",
+                "FIG-ZEICHEN-WELT": "FIG-GRUPPE-VERFUEHRER"
+              },
+              "mood": {
+                "FIG-GRUPPE-GESCHWISTER": "earnest",
+                "FIG-GRUPPE-VERFUEHRER": "calm"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "1JN.4.7-1JN.4.12",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-WELT",
+              "FIG-ZEICHEN-LIEBE"
+            ],
+            "speech": [],
+            "action_de": "Gott ist Liebe: Er hat seinen einzigen Sohn in die Welt gesandt, damit wir durch ihn leben, als Sühne für unsere Sünden; darum sollen wir einander lieben.",
+            "keywords": {
+              "de": "Gott ist Liebe",
+              "gsw": "Gott isch Liebi"
+            },
+            "stage": {
+              "god_side": "left",
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-WELT": "FIG-JESUS",
+                "FIG-ZEICHEN-LIEBE": "FIG-GRUPPE-GESCHWISTER"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-GESCHWISTER": "smile"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Was von Anfang an war, das Wort des Lebens, haben die Zeugen gehört und gesehen; sie verkündigen es den Lesern, damit auch sie Gemeinschaft mit ihnen und mit dem Vater und dem Sohn haben.",
+          "Gott ist Licht, und in ihm ist keine Finsternis; wer im Licht lebt und seine Sünden bekennt, hat Gemeinschaft, und Gott vergibt ihm.",
+          "Die Geschwister sollen die Geister prüfen: Wer Jesus Christus als im Fleisch gekommen bekennt, ist aus Gott; die falschen Propheten sind aus der Welt.",
+          "Gott ist Liebe: Er hat seinen einzigen Sohn in die Welt gesandt, damit wir durch ihn leben, als Sühne für unsere Sünden; darum sollen wir einander lieben."
+        ],
+        "captions_de": [
+          "Zeugnis: Jesus (das erschienene Leben, Keimling) links; der Verfasser verkündigt den Geschwistern: «Was wir gesehen und gehört haben, verkündigen wir euch» (Augen, Ohr).",
+          "Gott ist Licht: Gott (Strahlenkranz) im goldenen Licht; die Geschwister bekennen ihre Sünden (gefaltete Hände), von Gott kommt die Vergebung (goldener Pfeil, Tuch ohne Fleck).",
+          "Geister prüfen: Die Geschwister prüfen (zwei Rollen, Haken und durchgestrichen); getrennt (gestrichelte Linie) die Verführer (violettgraue Gruppe), der Welt zugewandt (Erdkugel).",
+          "Gott ist Liebe: Gott (Strahlenkranz) sendet seinen Sohn (goldener Pfeil zu Jesus) in die Welt (Erdkugel); die Geschwister lieben einander (Herz)."
+        ],
+        "interpretation_note_de": "Vier Comic-Szenen zu den Stationen der Kernanalyse: das Zeugnis vom Wort des Lebens ([[1JN.1.1-1JN.1.4]]), «Gott ist Licht» ([[1JN.1.5-1JN.1.10]]), das Prüfen der Geister angesichts der Antichristen ([[1JN.2.18-1JN.2.23]] und [[1JN.4.1-1JN.4.6]]) und «Gott ist Liebe» mit der Sendung des Sohnes ([[1JN.4.7-1JN.4.12]]). Die Zweckangabe [[1JN.5.13]] steht in der Bildhilfe und im Kapitelbild. Die wiederkehrenden Themen (Themenspirale) sind ein Vorschlag der Auslegung und nicht als Gliederung gezeichnet. Comic-Szenen nach dem Entscheid vom 2026-10-25. Der 1. Johannesbrief nennt seinen Verfasser nicht; Bild und Porträt zeigen ihn wie den «Ältesten» aus [[2JN.1.1]] und [[3JN.1.1]] (Deutung). Die angeredeten «Kinder» und «Lieben» sind als Gruppe von Geschwistern gezeichnet.",
+        "basis": [
+          {
+            "record": "SUM-BOOK-1JN",
+            "field": "summary",
+            "fingerprint": "8ee5dfcea537554f"
+          }
         ]
       }
     }

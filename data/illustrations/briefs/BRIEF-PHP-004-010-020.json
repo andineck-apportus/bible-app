@@ -12,38 +12,78 @@
     {
       "n": 1,
       "reference": "PHP.4.10-PHP.4.13",
-      "figures": [
-        "FIG-PAULUS"
-      ],
-      "objects": [
-        "FIG-OBJ-KETTE"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-FREUDE"
-      ],
-      "speech": [
-        {
-          "from": "FIG-PAULUS",
-          "to": "FIG-GRUPPE-GLAUBENDE",
-          "icons": [
-            "FIG-OBJ-BROT",
-            "FIG-ZEICHEN-FEHLT",
-            "FIG-JESUS",
-            "FIG-ZEICHEN-KRAFT"
-          ]
-        }
-      ],
-      "action_de": "Paulus freut sich über die Hilfe der Gemeinde; er hat gelernt, satt zu sein und zu hungern, und vermag alles durch den, der ihn stark macht.",
-      "stage": {
-        "floor_x": {
-          "FIG-OBJ-KETTE": 70
+      "figures": [],
+      "objects": [],
+      "signs": [],
+      "speech": [],
+      "action_de": "Paulus freut sich, dass die Philipper wieder für ihn sorgen, nicht aus Mangel: Er hat gelernt, sich selbst zu genügen, im Mangel und im Überfluss, satt und hungrig – alles vermag er durch den, der ihn stark macht.",
+      "keywords": {
+        "de": "Ich habe gelernt, mir selbst zu genügen",
+        "gsw": "Ich ha glernt, mir sälber z gnüege"
+      },
+      "diagram": {
+        "visual": "grid",
+        "span": 2,
+        "cols": 4,
+        "speaker": "FIG-PAULUS",
+        "title": {
+          "de": "Alles vermag ich durch den, der mich stark macht",
+          "gsw": "Alles chan ich dur dä, wo mich starch macht"
         },
-        "x": {
-          "FIG-PAULUS": 93
-        },
-        "mood": {
-          "FIG-PAULUS": "smile"
-        }
+        "cells": [
+          {
+            "a": {
+              "de": "Mich einschränken",
+              "gsw": "Mich iischränke"
+            },
+            "b": {
+              "de": "und im Überfluss leben",
+              "gsw": "und im Überfluss läbe"
+            },
+            "icons": [
+              "FIG-ZEICHEN-FEHLT",
+              "FIG-ZEICHEN-VOLL"
+            ]
+          },
+          {
+            "a": {
+              "de": "Satt sein",
+              "gsw": "Satt sii"
+            },
+            "b": {
+              "de": "und hungern",
+              "gsw": "und hungere"
+            },
+            "icons": [
+              "FIG-ZEICHEN-SATT",
+              "FIG-ZEICHEN-FEHLT-BROT"
+            ]
+          },
+          {
+            "a": {
+              "de": "Überfluss haben",
+              "gsw": "Überfluss ha"
+            },
+            "b": {
+              "de": "und Mangel leiden",
+              "gsw": "und Mangel liide"
+            },
+            "icons": [
+              "FIG-OBJ-MUENZEN",
+              "FIG-ZEICHEN-FEHLT"
+            ]
+          },
+          {
+            "a": {
+              "de": "Ich habe gelernt, mir selbst zu genügen",
+              "gsw": "Ich ha glernt, mir sälber z gnüege"
+            },
+            "icons": [
+              "FIG-ZEICHEN-KRAFT"
+            ],
+            "tone": "new"
+          }
+        ]
       }
     },
     {
@@ -53,99 +93,146 @@
         "FIG-EPAPHRODITUS",
         "FIG-PAULUS"
       ],
-      "objects": [
-        "FIG-GRUPPE-GEMEINDE",
-        "FIG-OBJ-KETTE"
-      ],
+      "objects": [],
       "signs": [
-        "FIG-ZEICHEN-FREUDE"
+        "FIG-ZEICHEN-BRINGEN"
       ],
       "speech": [
         {
           "from": "FIG-PAULUS",
-          "to": "FIG-GOTT",
+          "to": "FIG-EPAPHRODITUS",
           "icons": [
-            "FIG-ZEICHEN-OPFER",
-            "FIG-GOTT"
-          ]
+            "FIG-ZEICHEN-SATT",
+            "FIG-ZEICHEN-FEHLT-BROT"
+          ],
+          "word": {
+            "de": "Alles vermag ich durch den, der mich stark macht.",
+            "gsw": "Alles chan ich dur dä, wo mich starch macht."
+          }
         }
       ],
-      "action_de": "Durch Epaphroditus hat Paulus die Gaben der Gemeinde erhalten; er nennt sie ein Opfer, das Gott gefällt.",
+      "action_de": "Epaphroditus hat Paulus die Gaben der Philipper gebracht; Paulus dankt: Alles vermag er durch den, der ihn stark macht, und sein Gott wird ihren Bedarf erfüllen.",
+      "keywords": {
+        "de": "Ein Opfer, angenehm, Gott wohlgefällig",
+        "gsw": "Es Opfer, aagnää, wo Gott gfallt"
+      },
+      "names": {
+        "FIG-EPAPHRODITUS": {
+          "de": "Epaphroditus",
+          "gsw": "Epaphroditus"
+        },
+        "FIG-PAULUS": {
+          "de": "Paulus",
+          "gsw": "Paulus"
+        }
+      },
       "stage": {
-        "back_side": "left",
-        "signs_who": {
-          "FIG-ZEICHEN-FREUDE": [
-            "FIG-PAULUS"
-          ]
-        },
-        "x": {
-          "FIG-EPAPHRODITUS": 100,
-          "FIG-PAULUS": 148
-        },
-        "floor_x": {
-          "FIG-OBJ-KETTE": 160
-        },
-        "mood": {
-          "FIG-EPAPHRODITUS": "smile"
-        },
         "arrows": [
           [
             "FIG-EPAPHRODITUS",
             "FIG-PAULUS",
             "act"
           ]
-        ]
+        ],
+        "beside": {
+          "FIG-ZEICHEN-BRINGEN": "FIG-EPAPHRODITUS"
+        },
+        "mood": {
+          "FIG-EPAPHRODITUS": "smile",
+          "FIG-PAULUS": "delight"
+        }
       }
     },
     {
       "n": 3,
-      "reference": "PHP.4.19-PHP.4.20",
-      "figures": [
-        "FIG-PAULUS"
-      ],
-      "objects": [
-        "FIG-OBJ-KETTE",
-        "FIG-GRUPPE-GEMEINDE"
-      ],
+      "reference": "PHP.4.18-PHP.4.20",
+      "figures": [],
+      "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-PAULUS",
-          "to": "FIG-GRUPPE-GEMEINDE",
-          "icons": [
-            "FIG-GOTT",
-            "FIG-ZEICHEN-GEBEN",
-            "FIG-GRUPPE-GEMEINDE"
-          ]
-        }
-      ],
-      "action_de": "Paulus sagt der Gemeinde zu: Sein Gott wird all ihren Bedarf erfüllen nach seinem Reichtum in Christus Jesus; Gott sei die Ehre.",
-      "stage": {
-        "floor_x": {
-          "FIG-OBJ-KETTE": 30
+      "speech": [],
+      "action_de": "Die Gabe der Philipper ist ein Opfer, Gott wohlgefällig; Paulus' Gott wird all ihren Bedarf erfüllen nach seinem Reichtum in Herrlichkeit; ihm sei die Ehre in Ewigkeit.",
+      "keywords": {
+        "de": "Mein Gott aber wird all euren Bedarf erfüllen",
+        "gsw": "Min Gott aber wird jede Bedarf vo eu decke"
+      },
+      "diagram": {
+        "visual": "arrows",
+        "span": 2,
+        "cols": 4,
+        "speaker": "FIG-PAULUS",
+        "title": {
+          "de": "Ich habe alles erhalten und habe Überfluss",
+          "gsw": "Ich ha alles übercho und ha meh als gnueg"
         },
-        "mood": {
-          "FIG-PAULUS": "smile"
-        }
+        "cells": [
+          {
+            "a": {
+              "de": "Eure Gaben",
+              "gsw": "Eui Gabe"
+            },
+            "b": {
+              "de": "durch Epaphroditus empfangen",
+              "gsw": "dur de Epaphroditus übercho"
+            },
+            "who": "FIG-EPAPHRODITUS"
+          },
+          {
+            "a": {
+              "de": "Ein Opfer, Gott wohlgefällig",
+              "gsw": "Es Opfer, wo Gott gfallt"
+            },
+            "b": {
+              "de": "ein Duft des Wohlgeruchs",
+              "gsw": "en Duft, wo guet schmöckt"
+            },
+            "icons": [
+              "FIG-ZEICHEN-OPFER"
+            ]
+          },
+          {
+            "a": {
+              "de": "Mein Gott wird all euren Bedarf erfüllen",
+              "gsw": "Min Gott wird jede Bedarf vo eu decke"
+            },
+            "b": {
+              "de": "nach seinem Reichtum in Herrlichkeit",
+              "gsw": "nach sim Riichtum i Herrlichkeit"
+            },
+            "icons": [
+              "FIG-GOTT",
+              "FIG-ZEICHEN-GEBEN"
+            ]
+          },
+          {
+            "a": {
+              "de": "Ihm sei die Ehre in Ewigkeit",
+              "gsw": "Im ghört d Ehr i Ewigkeit"
+            },
+            "icons": [
+              "FIG-ZEICHEN-PREISEN"
+            ],
+            "tone": "new"
+          }
+        ]
       }
     }
   ],
   "actions_de": [
-    "Paulus freut sich über die Hilfe der Gemeinde; er hat gelernt, satt zu sein und zu hungern, und vermag alles durch den, der ihn stark macht.",
-    "Durch Epaphroditus hat Paulus die Gaben der Gemeinde erhalten; er nennt sie ein Opfer, das Gott gefällt.",
-    "Paulus sagt der Gemeinde zu: Sein Gott wird all ihren Bedarf erfüllen nach seinem Reichtum in Christus Jesus; Gott sei die Ehre."
+    "Paulus freut sich, dass die Philipper wieder für ihn sorgen, nicht aus Mangel: Er hat gelernt, sich selbst zu genügen, im Mangel und im Überfluss, satt und hungrig – alles vermag er durch den, der ihn stark macht.",
+    "Epaphroditus hat Paulus die Gaben der Philipper gebracht; Paulus dankt: Alles vermag er durch den, der ihn stark macht, und sein Gott wird ihren Bedarf erfüllen.",
+    "Die Gabe der Philipper ist ein Opfer, Gott wohlgefällig; Paulus' Gott wird all ihren Bedarf erfüllen nach seinem Reichtum in Herrlichkeit; ihm sei die Ehre in Ewigkeit."
   ],
   "captions_de": [
-    "Genug in jeder Lage: Paulus (Kette) kennt Brot und Mangel (Kreis mit Schrägstrich: fehlt) und sagt froh: Christus (Kreuznimbus) macht mich stark (Arm).",
-    "Gemeinde → Epaphroditus → Paulus: Epaphroditus kommt von der Gemeinde (Haus mit Menschen hinter ihm) und bringt ihre Gabe (Beutel, Pfeil) zu Paulus (Kette), der sich freut (strahlendes Gesicht); Paulus nennt sie ein Opfer (Widder mit Flamme) für Gott (Strahlenkranz).",
-    "Zusage: Paulus (Kette) sagt der Gemeinde (Haus mit Menschen): Gott (Strahlenkranz) gibt euch (offene Hände), was ihr braucht."
+    "Raster mit Gegensatzpaaren (Bild Paulus, Blase «Alles vermag ich durch den, der mich stark macht»): sich einschränken – im Überfluss leben; satt sein – hungern (Schale mit Brot, Brot durchgestrichen); Überfluss haben – Mangel leiden (Münzen, leerer Kreis); dazu: Ich habe gelernt, mir selbst zu genügen (Arm mit goldenen Strahlen).",
+    "Dank für die Gabe: Epaphroditus bringt den Korb mit den Gaben zu Paulus (Pfeil); Paulus sagt: «Alles vermag ich durch den, der mich stark macht» – satt und hungrig (Schale mit Brot, Brot durchgestrichen).",
+    "Pfeilkette: eure Gaben durch Epaphroditus (Bild) → ein Opfer, Gott wohlgefällig (Widder mit Flamme) → mein Gott wird all euren Bedarf erfüllen (Strahlenkranz, offene Hände) → ihm sei die Ehre (erhobene Hände)."
   ],
-  "interpretation_note_de": "Die Gabe ist als Beutel des Epaphroditus gezeigt; was sie enthielt, sagt der Text nicht ([[PHP.4.18]]). Paulus schreibt den Brief als Gefangener «in Fesseln» ([[PHP.1.7]], [[PHP.1.13]]); deshalb liegt bei ihm eine Kette. Ein Soldat steht für die Wache im Prätorium ([[PHP.1.13]]).",
+  "interpretation_note_de": "Struktur: zweimal «nicht … sondern» (nicht aus Mangel – denn gelernt, sich zu genügen; nicht das Geschenk – sondern die Frucht) mit der Reihe der Gegensatzpaare und der Kette Gabe → Opfer → Gott erfüllt → Ehre. Feld 1 zeigt alle Paare unter dem Satz «Alles vermag ich …», Feld 2 die Gabe, die Epaphroditus brachte, als Szene, Feld 3 die Kette bis zum Lob. Die Gemeinden von Makedonien und Thessalonich nennen Zusammenfassung und Bildhilfe nicht im Bild. «Opfer» ist Bildwort des Textes für die Gabe.",
   "basis": [
     {
       "record": "TU-PHP-004-010-020",
       "field": "summary",
-      "fingerprint": "23a042cfe338d025"
+      "fingerprint": "212c150df82f4285"
     },
     {
       "record": "TRANS-PHP-004-001-023-DE-WORKING",
@@ -162,12 +249,12 @@
     {
       "record": "TRANS-PHP-004-001-023-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "PHP.4.19-PHP.4.20",
-      "fingerprint": "e8ce7014eaaab546"
+      "reference": "PHP.4.18-PHP.4.20",
+      "fingerprint": "61e29536c23bb637"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -434,6 +521,390 @@
           "Genug in jeder Lage: Paulus (Kette) kennt Brot und Mangel (Kreis mit Schrägstrich: fehlt) und sagt froh: Christus (Kreuznimbus) macht mich stark (Arm).",
           "Gemeinde → Epaphroditus → Paulus: Epaphroditus kommt von der Gemeinde (Haus mit Menschen hinter ihm) und bringt ihre Gabe (Beutel, Pfeil) zu Paulus (Kette), der sich freut (Funken); Paulus nennt sie ein Opfer (Altar) für Gott (Strahlenkranz).",
           "Zusage: Paulus (Kette) sagt der Gemeinde (Haus mit Menschen): Gott (Strahlenkranz) gibt euch (Hand gibt), was ihr braucht."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "PHP.4.10-PHP.4.13",
+            "figures": [
+              "FIG-PAULUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-GRUPPE-GLAUBENDE",
+                "icons": [
+                  "FIG-OBJ-BROT",
+                  "FIG-ZEICHEN-FEHLT",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-KRAFT"
+                ]
+              }
+            ],
+            "action_de": "Paulus freut sich über die Hilfe der Gemeinde; er hat gelernt, satt zu sein und zu hungern, und vermag alles durch den, der ihn stark macht.",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KETTE": 70
+              },
+              "x": {
+                "FIG-PAULUS": 93
+              },
+              "mood": {
+                "FIG-PAULUS": "smile"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "PHP.4.14-PHP.4.18",
+            "figures": [
+              "FIG-EPAPHRODITUS",
+              "FIG-PAULUS"
+            ],
+            "objects": [
+              "FIG-GRUPPE-GEMEINDE",
+              "FIG-OBJ-KETTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-OPFER",
+                  "FIG-GOTT"
+                ]
+              }
+            ],
+            "action_de": "Durch Epaphroditus hat Paulus die Gaben der Gemeinde erhalten; er nennt sie ein Opfer, das Gott gefällt.",
+            "stage": {
+              "back_side": "left",
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-PAULUS"
+                ]
+              },
+              "x": {
+                "FIG-EPAPHRODITUS": 100,
+                "FIG-PAULUS": 148
+              },
+              "floor_x": {
+                "FIG-OBJ-KETTE": 160
+              },
+              "mood": {
+                "FIG-EPAPHRODITUS": "smile"
+              },
+              "arrows": [
+                [
+                  "FIG-EPAPHRODITUS",
+                  "FIG-PAULUS",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "PHP.4.19-PHP.4.20",
+            "figures": [
+              "FIG-PAULUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE",
+              "FIG-GRUPPE-GEMEINDE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-GRUPPE-GEMEINDE",
+                "icons": [
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-GEBEN",
+                  "FIG-GRUPPE-GEMEINDE"
+                ]
+              }
+            ],
+            "action_de": "Paulus sagt der Gemeinde zu: Sein Gott wird all ihren Bedarf erfüllen nach seinem Reichtum in Christus Jesus; Gott sei die Ehre.",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KETTE": 30
+              },
+              "mood": {
+                "FIG-PAULUS": "smile"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Paulus freut sich über die Hilfe der Gemeinde; er hat gelernt, satt zu sein und zu hungern, und vermag alles durch den, der ihn stark macht.",
+          "Durch Epaphroditus hat Paulus die Gaben der Gemeinde erhalten; er nennt sie ein Opfer, das Gott gefällt.",
+          "Paulus sagt der Gemeinde zu: Sein Gott wird all ihren Bedarf erfüllen nach seinem Reichtum in Christus Jesus; Gott sei die Ehre."
+        ],
+        "captions_de": [
+          "Genug in jeder Lage: Paulus (Kette) kennt Brot und Mangel (Kreis mit Schrägstrich: fehlt) und sagt froh: Christus (Kreuznimbus) macht mich stark (Arm).",
+          "Gemeinde → Epaphroditus → Paulus: Epaphroditus kommt von der Gemeinde (Haus mit Menschen hinter ihm) und bringt ihre Gabe (Beutel, Pfeil) zu Paulus (Kette), der sich freut (strahlendes Gesicht); Paulus nennt sie ein Opfer (Widder mit Flamme) für Gott (Strahlenkranz).",
+          "Zusage: Paulus (Kette) sagt der Gemeinde (Haus mit Menschen): Gott (Strahlenkranz) gibt euch (offene Hände), was ihr braucht."
+        ],
+        "interpretation_note_de": "Die Gabe ist als Beutel des Epaphroditus gezeigt; was sie enthielt, sagt der Text nicht ([[PHP.4.18]]). Paulus schreibt den Brief als Gefangener «in Fesseln» ([[PHP.1.7]], [[PHP.1.13]]); deshalb liegt bei ihm eine Kette. Ein Soldat steht für die Wache im Prätorium ([[PHP.1.13]]).",
+        "basis": [
+          {
+            "record": "TU-PHP-004-010-020",
+            "field": "summary",
+            "fingerprint": "23a042cfe338d025"
+          },
+          {
+            "record": "TRANS-PHP-004-001-023-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "PHP.4.10-PHP.4.13",
+            "fingerprint": "d13b71d22afaa7c4"
+          },
+          {
+            "record": "TRANS-PHP-004-001-023-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "PHP.4.14-PHP.4.18",
+            "fingerprint": "7a6379ceab35fdb4"
+          },
+          {
+            "record": "TRANS-PHP-004-001-023-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "PHP.4.19-PHP.4.20",
+            "fingerprint": "e8ce7014eaaab546"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "PHP.4.10-PHP.4.13",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Paulus freut sich, dass die Philipper wieder für ihn sorgen, nicht aus Mangel: Er hat gelernt, sich selbst zu genügen, im Mangel und im Überfluss, satt und hungrig – alles vermag er durch den, der ihn stark macht.",
+            "keywords": {
+              "de": "Ich habe gelernt, mir selbst zu genügen",
+              "gsw": "Ich ha glernt, mir sälber z gnüege"
+            },
+            "diagram": {
+              "visual": "grid",
+              "span": 2,
+              "cols": 4,
+              "speaker": "FIG-PAULUS",
+              "title": {
+                "de": "Alles vermag ich durch den, der mich stark macht",
+                "gsw": "Alles chan ich dur dä, wo mich starch macht"
+              },
+              "cells": [
+                {
+                  "a": {
+                    "de": "Mich einschränken",
+                    "gsw": "Mich iischränke"
+                  },
+                  "b": {
+                    "de": "und im Überfluss leben",
+                    "gsw": "und im Überfluss läbe"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-FEHLT",
+                    "FIG-ZEICHEN-VOLL"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Satt sein",
+                    "gsw": "Satt sii"
+                  },
+                  "b": {
+                    "de": "und hungern",
+                    "gsw": "und hungere"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-SATT",
+                    "FIG-ZEICHEN-FEHLT-BROT"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Überfluss haben",
+                    "gsw": "Überfluss ha"
+                  },
+                  "b": {
+                    "de": "und Mangel leiden",
+                    "gsw": "und Mangel liide"
+                  },
+                  "icons": [
+                    "FIG-OBJ-MUENZEN",
+                    "FIG-ZEICHEN-FEHLT"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Ich habe gelernt, mir selbst zu genügen",
+                    "gsw": "Ich ha glernt, mir sälber z gnüege"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-KRAFT"
+                  ],
+                  "tone": "new"
+                }
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "PHP.4.14-PHP.4.18",
+            "figures": [
+              "FIG-EPAPHRODITUS",
+              "FIG-PAULUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-BRINGEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-EPAPHRODITUS",
+                "icons": [
+                  "FIG-ZEICHEN-KRAFT"
+                ],
+                "word": {
+                  "de": "Alles vermag ich durch den, der mich stark macht.",
+                  "gsw": "Alles chan ich dur dä, wo mich starch macht."
+                }
+              }
+            ],
+            "action_de": "Epaphroditus hat Paulus die Gaben der Philipper gebracht; Paulus dankt: Alles vermag er durch den, der ihn stark macht, und sein Gott wird ihren Bedarf erfüllen.",
+            "keywords": {
+              "de": "Ein Opfer, angenehm, Gott wohlgefällig",
+              "gsw": "Es Opfer, aagnää, wo Gott gfallt"
+            },
+            "names": {
+              "FIG-EPAPHRODITUS": {
+                "de": "Epaphroditus",
+                "gsw": "Epaphroditus"
+              },
+              "FIG-PAULUS": {
+                "de": "Paulus",
+                "gsw": "Paulus"
+              }
+            },
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-EPAPHRODITUS",
+                  "FIG-PAULUS",
+                  "act"
+                ]
+              ],
+              "beside": {
+                "FIG-ZEICHEN-BRINGEN": "FIG-EPAPHRODITUS"
+              },
+              "mood": {
+                "FIG-EPAPHRODITUS": "smile",
+                "FIG-PAULUS": "delight"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "PHP.4.18-PHP.4.20",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Die Gabe der Philipper ist ein Opfer, Gott wohlgefällig; Paulus' Gott wird all ihren Bedarf erfüllen nach seinem Reichtum in Herrlichkeit; ihm sei die Ehre in Ewigkeit.",
+            "keywords": {
+              "de": "Mein Gott aber wird all euren Bedarf erfüllen",
+              "gsw": "Min Gott aber wird jede Bedarf vo eu decke"
+            },
+            "diagram": {
+              "visual": "arrows",
+              "span": 2,
+              "cols": 4,
+              "speaker": "FIG-PAULUS",
+              "title": {
+                "de": "Ich habe alles erhalten und habe Überfluss",
+                "gsw": "Ich ha alles übercho und ha meh als gnueg"
+              },
+              "cells": [
+                {
+                  "a": {
+                    "de": "Eure Gaben",
+                    "gsw": "Eui Gabe"
+                  },
+                  "b": {
+                    "de": "durch Epaphroditus empfangen",
+                    "gsw": "dur de Epaphroditus übercho"
+                  },
+                  "who": "FIG-EPAPHRODITUS"
+                },
+                {
+                  "a": {
+                    "de": "Ein Opfer, Gott wohlgefällig",
+                    "gsw": "Es Opfer, wo Gott gfallt"
+                  },
+                  "b": {
+                    "de": "ein Duft des Wohlgeruchs",
+                    "gsw": "en Duft, wo guet schmöckt"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-OPFER"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Mein Gott wird all euren Bedarf erfüllen",
+                    "gsw": "Min Gott wird jede Bedarf vo eu decke"
+                  },
+                  "b": {
+                    "de": "nach seinem Reichtum in Herrlichkeit",
+                    "gsw": "nach sim Riichtum i Herrlichkeit"
+                  },
+                  "icons": [
+                    "FIG-GOTT",
+                    "FIG-ZEICHEN-GEBEN"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Ihm sei die Ehre in Ewigkeit",
+                    "gsw": "Im ghört d Ehr i Ewigkeit"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-PREISEN"
+                  ],
+                  "tone": "new"
+                }
+              ]
+            }
+          }
+        ],
+        "captions_de": [
+          "Raster mit Gegensatzpaaren (Bild Paulus, Blase «Alles vermag ich durch den, der mich stark macht»): sich einschränken – im Überfluss leben; satt sein – hungern (Schale mit Brot, Brot durchgestrichen); Überfluss haben – Mangel leiden (Münzen, leerer Kreis); dazu: Ich habe gelernt, mir selbst zu genügen (Arm mit goldenen Strahlen).",
+          "Dank für die Gabe: Epaphroditus bringt den Korb mit den Gaben zu Paulus (Pfeil); Paulus sagt: «Alles vermag ich» (Arm mit goldenen Strahlen).",
+          "Pfeilkette: eure Gaben durch Epaphroditus (Bild) → ein Opfer, Gott wohlgefällig (Widder mit Flamme) → mein Gott wird all euren Bedarf erfüllen (Strahlenkranz, offene Hände) → ihm sei die Ehre (erhobene Hände)."
         ]
       }
     }

@@ -22,7 +22,11 @@
         "FIG-ZEICHEN-LIEBE"
       ],
       "speech": [],
-      "action_de": "Der Vater hat ihnen seine Liebe geschenkt: Sie sind Kinder Gottes.",
+      "action_de": "Der Vater hat uns seine Liebe geschenkt: Wir heissen Kinder Gottes und sind es; wenn er erscheint, werden wir ihm gleich sein.",
+      "keywords": {
+        "de": "Dass wir Kinder Gottes heissen",
+        "gsw": "Dass mir Chind vo Gott heissed"
+      },
       "stage": {
         "god_side": "left",
         "arrows": [
@@ -34,13 +38,10 @@
         ],
         "at": {
           "FIG-ZEICHEN-KINDER-GOTTES": "FIG-GRUPPE-GESCHWISTER",
-          "FIG-ZEICHEN-LIEBE": "FIG-GOTT"
+          "FIG-ZEICHEN-LIEBE": "FIG-GRUPPE-GESCHWISTER"
         },
         "mood": {
           "FIG-GRUPPE-GESCHWISTER": "delight"
-        },
-        "signs_who": {
-          "FIG-ZEICHEN-LIEBE": []
         }
       }
     },
@@ -48,38 +49,40 @@
       "n": 2,
       "reference": "1JN.3.11-1JN.3.18",
       "figures": [
-        "FIG-GRUPPE-GESCHWISTER"
+        "FIG-JESUS",
+        "FIG-GRUPPE-GESCHWISTER",
+        "FIG-ROLLE-ARMER"
       ],
       "objects": [
         "FIG-OBJ-KREUZ"
       ],
       "signs": [
-        "FIG-ZEICHEN-LIEBE"
+        "FIG-ZEICHEN-GUTE-WERKE"
       ],
       "speech": [],
-      "action_de": "Jesus hat sein Leben für sie hingegeben; so sollen sie einander lieben, in Tat und Wahrheit.",
+      "action_de": "Jesus hat sein Leben für uns hingegeben; darum sollen auch wir für die Geschwister einstehen und nicht mit Worten lieben, sondern in Tat und Wahrheit, und dem Bruder in Not das Herz nicht verschliessen.",
+      "keywords": {
+        "de": "In Tat und Wahrheit",
+        "gsw": "I Tat und Wahrheit"
+      },
       "stage": {
-        "floor_side": "left",
-        "mood": {
-          "FIG-GRUPPE-GESCHWISTER": "calm"
-        },
-        "x": {
-          "FIG-GRUPPE-GESCHWISTER": 132
-        },
         "floor_x": {
-          "FIG-OBJ-KREUZ": 34
+          "FIG-OBJ-KREUZ": 16
         },
         "arrows": [
           [
-            "FIG-OBJ-KREUZ",
             "FIG-GRUPPE-GESCHWISTER",
+            "FIG-ROLLE-ARMER",
             "act"
           ]
         ],
-        "signs_who": {
-          "FIG-ZEICHEN-LIEBE": [
-            "FIG-GRUPPE-GESCHWISTER"
-          ]
+        "beside": {
+          "FIG-ZEICHEN-GUTE-WERKE": "FIG-GRUPPE-GESCHWISTER"
+        },
+        "mood": {
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-GESCHWISTER": "earnest",
+          "FIG-ROLLE-ARMER": "smile"
         }
       }
     },
@@ -87,46 +90,51 @@
       "n": 3,
       "reference": "1JN.3.19-1JN.3.24",
       "figures": [
-        "FIG-DER-AELTESTE",
+        "FIG-GOTT",
+        "FIG-HEILIGER-GEIST",
         "FIG-GRUPPE-GESCHWISTER"
       ],
       "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-DER-AELTESTE",
-          "to": "FIG-GRUPPE-GESCHWISTER",
-          "icons": [
-            "FIG-ZEICHEN-GEBOT",
-            "FIG-ZEICHEN-GLAUBEN",
-            "FIG-JESUS",
-            "FIG-ZEICHEN-LIEBE"
-          ]
-        }
+      "signs": [
+        "FIG-ZEICHEN-BETEN"
       ],
-      "action_de": "Gott ist grösser als ihr Herz; sein Gebot heisst: an Jesus Christus glauben und einander lieben."
+      "speech": [],
+      "action_de": "Gott ist grösser als unser Herz; wir dürfen ihn zuversichtlich bitten; sein Gebot ist, an seinen Sohn zu glauben und einander zu lieben, und dass er in uns bleibt, erkennen wir an seinem Geist.",
+      "keywords": {
+        "de": "Gott ist grösser als unser Herz",
+        "gsw": "Gott isch grösser als öises Härz"
+      },
+      "stage": {
+        "god_side": "left",
+        "at": {
+          "FIG-ZEICHEN-BETEN": "FIG-GRUPPE-GESCHWISTER"
+        },
+        "mood": {
+          "FIG-GRUPPE-GESCHWISTER": "calm"
+        }
+      }
     }
   ],
   "actions_de": [
-    "Der Vater hat ihnen seine Liebe geschenkt: Sie sind Kinder Gottes.",
-    "Jesus hat sein Leben für sie hingegeben; so sollen sie einander lieben, in Tat und Wahrheit.",
-    "Gott ist grösser als ihr Herz; sein Gebot heisst: an Jesus Christus glauben und einander lieben."
+    "Der Vater hat uns seine Liebe geschenkt: Wir heissen Kinder Gottes und sind es; wenn er erscheint, werden wir ihm gleich sein.",
+    "Jesus hat sein Leben für uns hingegeben; darum sollen auch wir für die Geschwister einstehen und nicht mit Worten lieben, sondern in Tat und Wahrheit, und dem Bruder in Not das Herz nicht verschliessen.",
+    "Gott ist grösser als unser Herz; wir dürfen ihn zuversichtlich bitten; sein Gebot ist, an seinen Sohn zu glauben und einander zu lieben, und dass er in uns bleibt, erkennen wir an seinem Geist."
   ],
   "captions_de": [
-    "Gottes Liebe → Kinder Gottes: Gott (Strahlenkranz) schenkt Liebe (Herz, goldener Pfeil); die Geschwister sind Kinder Gottes (Kindergesicht mit Funkeln).",
-    "Hingabe → Liebe: Das Kreuz (links, ohne Körper) zeigt, dass Jesus sein Leben für sie gegeben hat; von dort führt der Pfeil zu den Geschwistern: daran erkennen sie die Liebe (Herz über ihnen).",
-    "Das Gebot (Schriftrolle mit Haken): an Jesus glauben (Herz mit Strahlen) und einander lieben (rotes Herz)."
+    "Kinder Gottes: Von Gott, dem Vater (Strahlenkranz), kommt die Liebe zu den Geschwistern (goldener Pfeil, Herz); sie sind Kinder Gottes (Kindergesicht mit Funkeln).",
+    "In Tat und Wahrheit: Jesus beim Kreuz hat sein Leben hingegeben; die Geschwister helfen einem Bruder in Not (Pfeil, offene Hand und Brot).",
+    "Zuversicht: Die Geschwister beten zu Gott (Strahlenkranz, gefaltete Hände); der Geist (Taube) ist bei ihnen."
   ],
-  "interpretation_note_de": "Je ein Feld aus den drei Abschnitten des Kapitels. Der 1. Johannesbrief nennt seinen Verfasser nicht; das Bild zeigt ihn wie den «Ältesten» aus [[2JN.1.1]] und [[3JN.1.1]] (Deutung). Die angeredeten «Kinder» und «Lieben» sind als Gruppe von Geschwistern gezeichnet.",
+  "interpretation_note_de": "Drei Comic-Szenen für drei Abschnitte: Gott, der Vater, und seine Kinder ([[1JN.3.1-1JN.3.10]]), die Liebe in Tat und Wahrheit nach dem Vorbild dessen, der sein Leben hingab ([[1JN.3.11-1JN.3.18]]), und das Gebet in Zuversicht mit dem Geist ([[1JN.3.19-1JN.3.24]]). Kain und die Kinder des Teufels zeigen die Abschnittsbilder. Comic-Szenen nach dem Entscheid vom 2026-10-25. Der 1. Johannesbrief nennt seinen Verfasser nicht; Bild und Porträt zeigen ihn wie den «Ältesten» aus [[2JN.1.1]] und [[3JN.1.1]] (Deutung). Die angeredeten «Kinder» und «Lieben» sind als Gruppe von Geschwistern gezeichnet.",
   "basis": [
     {
       "record": "SUM-CH-1JN-003",
       "field": "summary",
-      "fingerprint": "4a3b42e91fcdb901"
+      "fingerprint": "14b4024452cb3533"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -329,6 +337,130 @@
           "Hingabe → Liebe: Das Kreuz (links, ohne Körper) zeigt, dass Jesus sein Leben für sie gegeben hat; von dort führt der Pfeil zu den Geschwistern: daran erkennen sie die Liebe (Herzen über ihnen).",
           "Das Gebot (Tafel): an Jesus glauben (Herz mit Strahlen) und einander lieben (zwei Herzen)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "1JN.3.1-1JN.3.10",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-KINDER-GOTTES",
+              "FIG-ZEICHEN-LIEBE"
+            ],
+            "speech": [],
+            "action_de": "Der Vater hat ihnen seine Liebe geschenkt: Sie sind Kinder Gottes.",
+            "stage": {
+              "god_side": "left",
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-GESCHWISTER",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-KINDER-GOTTES": "FIG-GRUPPE-GESCHWISTER",
+                "FIG-ZEICHEN-LIEBE": "FIG-GOTT"
+              },
+              "mood": {
+                "FIG-GRUPPE-GESCHWISTER": "delight"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-LIEBE": []
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "1JN.3.11-1JN.3.18",
+            "figures": [
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [
+              "FIG-OBJ-KREUZ"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-LIEBE"
+            ],
+            "speech": [],
+            "action_de": "Jesus hat sein Leben für sie hingegeben; so sollen sie einander lieben, in Tat und Wahrheit.",
+            "stage": {
+              "floor_side": "left",
+              "mood": {
+                "FIG-GRUPPE-GESCHWISTER": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-GESCHWISTER": 132
+              },
+              "floor_x": {
+                "FIG-OBJ-KREUZ": 34
+              },
+              "arrows": [
+                [
+                  "FIG-OBJ-KREUZ",
+                  "FIG-GRUPPE-GESCHWISTER",
+                  "act"
+                ]
+              ],
+              "signs_who": {
+                "FIG-ZEICHEN-LIEBE": [
+                  "FIG-GRUPPE-GESCHWISTER"
+                ]
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "1JN.3.19-1JN.3.24",
+            "figures": [
+              "FIG-DER-AELTESTE",
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-DER-AELTESTE",
+                "to": "FIG-GRUPPE-GESCHWISTER",
+                "icons": [
+                  "FIG-ZEICHEN-GEBOT",
+                  "FIG-ZEICHEN-GLAUBEN",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-LIEBE"
+                ]
+              }
+            ],
+            "action_de": "Gott ist grösser als ihr Herz; sein Gebot heisst: an Jesus Christus glauben und einander lieben."
+          }
+        ],
+        "actions_de": [
+          "Der Vater hat ihnen seine Liebe geschenkt: Sie sind Kinder Gottes.",
+          "Jesus hat sein Leben für sie hingegeben; so sollen sie einander lieben, in Tat und Wahrheit.",
+          "Gott ist grösser als ihr Herz; sein Gebot heisst: an Jesus Christus glauben und einander lieben."
+        ],
+        "captions_de": [
+          "Gottes Liebe → Kinder Gottes: Gott (Strahlenkranz) schenkt Liebe (Herz, goldener Pfeil); die Geschwister sind Kinder Gottes (Kindergesicht mit Funkeln).",
+          "Hingabe → Liebe: Das Kreuz (links, ohne Körper) zeigt, dass Jesus sein Leben für sie gegeben hat; von dort führt der Pfeil zu den Geschwistern: daran erkennen sie die Liebe (Herz über ihnen).",
+          "Das Gebot (Schriftrolle mit Haken): an Jesus glauben (Herz mit Strahlen) und einander lieben (rotes Herz)."
+        ],
+        "interpretation_note_de": "Je ein Feld aus den drei Abschnitten des Kapitels. Der 1. Johannesbrief nennt seinen Verfasser nicht; das Bild zeigt ihn wie den «Ältesten» aus [[2JN.1.1]] und [[3JN.1.1]] (Deutung). Die angeredeten «Kinder» und «Lieben» sind als Gruppe von Geschwistern gezeichnet.",
+        "basis": [
+          {
+            "record": "SUM-CH-1JN-003",
+            "field": "summary",
+            "fingerprint": "4a3b42e91fcdb901"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

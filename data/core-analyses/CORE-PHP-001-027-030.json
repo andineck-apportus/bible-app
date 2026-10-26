@@ -1,0 +1,181 @@
+{
+ "id": "CORE-PHP-001-027-030",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "PHP.1.27-PHP.1.30",
+ "target": "TU-PHP-001-027-030",
+ "core_de": "Die Philipper sollen als Bürger leben, wie es dem Evangelium Christi entspricht: in einem Geist feststehen, einmütig für den Glauben kämpfen und sich von den Gegnern durch nichts einschüchtern lassen – für jene ein Anzeichen des Verderbens, für sie ein Anzeichen der Rettung von Gott; denn ihnen ist geschenkt, nicht nur an Christus zu glauben, sondern auch für ihn zu leiden, im selben Kampf wie Paulus.",
+ "mode": "instruction",
+ "voice": {
+  "speaker": "FIG-PAULUS",
+  "addressee": "FIG-GRUPPE-GLAUBENDE"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "cause",
+    "subtype": "Mahnung «damit» → Begründung «denn»",
+    "range": "PHP.1.27-PHP.1.30",
+    "elements": [
+     {
+      "label": "Nur: Lebt als Bürger, wie es dem Evangelium Christi entspricht",
+      "ref": "PHP.1.27",
+      "role": "Mahnung"
+     },
+     {
+      "label": "damit ich, ob ich komme oder abwesend bin, höre, wie es um euch steht",
+      "ref": "PHP.1.27",
+      "role": "Zweck",
+      "child": "s2"
+     },
+     {
+      "label": "Anzeichen: Verderben ↔ Rettung",
+      "ref": "PHP.1.28",
+      "role": "Deutung im Text",
+      "child": "s3"
+     },
+     {
+      "label": "Denn euch ist es geschenkt worden: nicht nur glauben, sondern auch leiden",
+      "ref": "PHP.1.29-PHP.1.30",
+      "role": "Begründung",
+      "child": "s4"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-PAULUS",
+       "to": "FIG-GRUPPE-GLAUBENDE"
+      }
+     ],
+     "modality": [
+      {
+       "note": "Weisung an die Gemeinde («lebt», «lasst euch nicht einschüchtern»), keine Beschreibung ihres Zustands."
+      }
+     ]
+    },
+    "visual": "arrows",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "series",
+    "subtype": "drei Glieder: wie es um euch stehen soll",
+    "range": "PHP.1.27-PHP.1.28",
+    "elements": [
+     {
+      "label": "dass ihr in einem Geist feststeht",
+      "ref": "PHP.1.27",
+      "role": "1"
+     },
+     {
+      "label": "und einmütig miteinander kämpft für den Glauben des Evangeliums",
+      "ref": "PHP.1.27",
+      "role": "2"
+     },
+     {
+      "label": "und euch durch nichts von den Gegnern einschüchtern lasst",
+      "ref": "PHP.1.28",
+      "role": "3"
+     }
+    ],
+    "visual": "grid",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "contrast",
+    "subtype": "für sie ↔ für euch",
+    "range": "PHP.1.28",
+    "elements": [
+     {
+      "label": "für sie (die Gegner) ein Anzeichen des Verderbens",
+      "ref": "PHP.1.28",
+      "role": "Gegner"
+     },
+     {
+      "label": "für euch ein Anzeichen der Rettung, und zwar von Gott",
+      "ref": "PHP.1.28",
+      "role": "Gemeinde"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   },
+   {
+    "id": "s4",
+    "pattern": "contrast",
+    "subtype": "«nicht nur … sondern auch»",
+    "range": "PHP.1.29-PHP.1.30",
+    "elements": [
+     {
+      "label": "nicht nur an ihn zu glauben",
+      "ref": "PHP.1.29",
+      "role": "nicht nur"
+     },
+     {
+      "label": "sondern auch für ihn zu leiden – derselbe Kampf, den ihr an mir gesehen habt und jetzt über mich hört",
+      "ref": "PHP.1.29-PHP.1.30",
+      "role": "sondern auch"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "PHP.1.27-PHP.1.28",
+   "text_de": "Nur: Sie sollen als Bürger leben, wie es dem Evangelium Christi entspricht, damit Paulus hört, dass sie in einem Geist feststehen, einmütig miteinander für den Glauben des Evangeliums kämpfen und sich durch nichts von den Gegnern einschüchtern lassen; das ist für jene ein Anzeichen des Verderbens, für sie aber der Rettung, und zwar von Gott.",
+   "reason_de": "Die Hauptmahnung mit allen drei Gliedern (structure s2) und dem Gegensatz Verderben ↔ Rettung (Kriterien 1 und 2).",
+   "recognition_de": "Paulus an die Gemeinde: Steht fest, kämpft einmütig, lasst euch nicht einschüchtern; die Gegner gegenüber.",
+   "keywords": [
+    "Lebt als Bürger, wie es dem Evangelium Christi entspricht",
+    "in einem Geist feststeht",
+    "euch durch nichts von den Gegnern einschüchtern lasst"
+   ]
+  },
+  {
+   "reference": "PHP.1.29-PHP.1.30",
+   "text_de": "Denn ihnen ist es geschenkt worden, für Christus nicht nur an ihn zu glauben, sondern auch für ihn zu leiden, da sie denselben Kampf führen, den sie an Paulus gesehen haben und jetzt über ihn hören.",
+   "reason_de": "Die Begründung «denn» mit «nicht nur … sondern auch» (Kriterium 2, structure s4); verbindet die Gemeinde mit dem gefangenen Paulus.",
+   "recognition_de": "Nicht nur glauben, sondern auch leiden – derselbe Kampf wie Paulus.",
+   "keywords": [
+    "nicht nur an ihn zu glauben, sondern auch für ihn zu leiden",
+    "denselben Kampf"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "«ob ich komme und euch sehe oder abwesend bin» (1,27) – Rahmen der Mahnung; in structure"
+ ],
+ "persons": [
+  "FIG-PAULUS",
+  "FIG-GRUPPE-GLAUBENDE",
+  "FIG-GRUPPE-GEGNER"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "PHP.1.27-PHP.1.30",
+   "fingerprint": "187e7be073527f6e"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen nach dem Pilot; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; keine fachliche Prüfung durch eine Person",
+  "summary_de": "Bestätigt: Mahnung mit drei Gliedern vollständig, Anzeichen Verderben ↔ Rettung richtig gerichtet, «nicht nur … sondern auch» erhalten; Weisung, nicht Zustandsbeschreibung.",
+  "changes_de": []
+ }
+}

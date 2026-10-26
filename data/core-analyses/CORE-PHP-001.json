@@ -1,0 +1,200 @@
+{
+ "id": "CORE-PHP-001",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "chapter",
+ "reference": "PHP.1.1-PHP.1.30",
+ "target": "SUM-CH-PHP-001",
+ "children": [
+  "CORE-PHP-001-001-002",
+  "CORE-PHP-001-003-011",
+  "CORE-PHP-001-012-026",
+  "CORE-PHP-001-027-030"
+ ],
+ "core_de": "Paulus grüsst die Gemeinde in Philippi, dankt mit Freude für ihre Gemeinschaft am Evangelium und betet, dass ihre Liebe wächst; er berichtet, dass seine Gefangenschaft das Evangelium fördert und dass für ihn das Leben Christus und das Sterben Gewinn ist, und er ruft die Gemeinde auf, einmütig und furchtlos zu leben, wie es dem Evangelium entspricht.",
+ "mode": "statement",
+ "voice": {
+  "speaker": "FIG-PAULUS",
+  "addressee": "FIG-GRUPPE-GLAUBENDE"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "form",
+    "form_type": "letter",
+    "subtype": "Briefanfang: Briefkopf – Dank und Fürbitte – Bericht – erste Mahnung",
+    "range": "PHP.1.1-PHP.1.30",
+    "elements": [
+     {
+      "label": "Briefkopf: Paulus und Timotheus an die Heiligen in Philippi; Gnade und Friede",
+      "ref": "PHP.1.1-PHP.1.2",
+      "role": "Abschnitt: Briefkopf"
+     },
+     {
+      "label": "Dank mit Freude für die Gemeinschaft am Evangelium; Fürbitte, dass die Liebe wächst",
+      "ref": "PHP.1.3-PHP.1.11",
+      "role": "Abschnitt: Dank und Fürbitte"
+     },
+     {
+      "label": "Bericht: Fesseln fördern das Evangelium; Abwägung Leben ↔ Sterben",
+      "ref": "PHP.1.12-PHP.1.26",
+      "role": "Abschnitt: Bericht",
+      "child": "s2"
+     },
+     {
+      "label": "Mahnung: als Bürger leben, wie es dem Evangelium entspricht; nicht nur glauben, auch leiden",
+      "ref": "PHP.1.27-PHP.1.30",
+      "role": "Abschnitt: Mahnung"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-PAULUS",
+       "to": "FIG-GRUPPE-GLAUBENDE"
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "Freude / sich freuen",
+       "refs": [
+        "PHP.1.4",
+        "PHP.1.18",
+        "PHP.1.25",
+        "PHP.2.2",
+        "PHP.2.17",
+        "PHP.2.18",
+        "PHP.2.28",
+        "PHP.2.29",
+        "PHP.3.1",
+        "PHP.4.1",
+        "PHP.4.4",
+        "PHP.4.10"
+       ],
+       "role": "Leitwort des Briefes"
+      }
+     ],
+     "pattern_break": [
+      {
+       "note": "Das Briefformular setzt sich über das Kapitel hinaus fort; der Briefschluss folgt in [[PHP.4.21-PHP.4.23]]."
+      }
+     ]
+    },
+    "visual": "outline",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "balance",
+    "subtype": "Leben ↔ Sterben",
+    "range": "PHP.1.21-PHP.1.25",
+    "elements": [
+     {
+      "label": "Das Leben ist Christus; Bleiben ist um euretwillen nötiger",
+      "ref": "PHP.1.21-PHP.1.24",
+      "role": "Leben"
+     },
+     {
+      "label": "Das Sterben ist Gewinn; bei Christus zu sein wäre bei weitem das Bessere",
+      "ref": "PHP.1.21-PHP.1.23",
+      "role": "Sterben"
+     },
+     {
+      "label": "Entscheid: Ich werde bleiben",
+      "ref": "PHP.1.25",
+      "role": "Entscheid"
+     }
+    ],
+    "visual": "balance",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "PHP.1.3-PHP.1.11",
+   "text_de": "Nach dem Briefkopf dankt Paulus mit Freude für die Gemeinschaft der Philipper am Evangelium vom ersten Tag an und betet, dass ihre Liebe an Erkenntnis zunimmt.",
+   "reason_de": "Anfang (Kriterium 3): Dank und Fürbitte; setzt das Leitwort Freude.",
+   "recognition_de": "Szene 1: Paulus schreibt und dankt Gott mit Freude für die Gemeinde.",
+   "keywords": [
+    "Ich danke meinem Gott",
+    "bete ich mit Freude"
+   ]
+  },
+  {
+   "reference": "PHP.1.12-PHP.1.18",
+   "text_de": "Seine Fesseln haben das Evangelium gefördert: Im ganzen Prätorium weiss man, dass er um Christi willen gefangen ist, die Geschwister reden furchtloser, und dass Christus verkündigt wird, freut ihn.",
+   "reason_de": "Trägt die Kernaussage (Kriterium 1); Erkennungsmoment Paulus in Ketten (Kriterium 4).",
+   "recognition_de": "Szene 2: Paulus in Ketten mit der Wache; Geschwister verkündigen.",
+   "keywords": [
+    "zur Förderung des Evangeliums",
+    "darüber freue ich mich"
+   ]
+  },
+  {
+   "reference": "PHP.1.21-PHP.1.25",
+   "text_de": "Für ihn ist das Leben Christus und das Sterben Gewinn; das Bleiben ist um der Philipper willen nötiger, darum wird er bleiben.",
+   "reason_de": "Höhepunkt (Kriterium 2) mit dem bekannten Satz [[PHP.1.21]].",
+   "recognition_de": "Szene 3: Paulus wägt ab – Leben oder Sterben.",
+   "keywords": [
+    "Denn für mich ist das Leben Christus und das Sterben Gewinn"
+   ]
+  },
+  {
+   "reference": "PHP.1.27-PHP.1.30",
+   "text_de": "Die Gemeinde soll leben, wie es dem Evangelium entspricht, einmütig feststehen und sich von den Gegnern nicht einschüchtern lassen.",
+   "reason_de": "Übergang zur Mahnung (Kriterium 3).",
+   "recognition_de": "Szene 4: Die Gemeinde steht einmütig fest, die Gegner gegenüber.",
+   "keywords": [
+    "Lebt als Bürger, wie es dem Evangelium Christi entspricht",
+    "in einem Geist feststeht"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Ämter im Briefkopf (1,1) – im Abschnitt",
+  "Gekreuzte Reihenfolge der Verkündiger (1,15–17) – im Abschnitt"
+ ],
+ "persons": [
+  "FIG-PAULUS",
+  "FIG-TIMOTHEUS",
+  "FIG-GRUPPE-GLAUBENDE",
+  "FIG-ROLLE-SOLDAT",
+  "FIG-GRUPPE-GEGNER"
+ ],
+ "places": [
+  "FIG-ORT-PRAETORIUM"
+ ],
+ "basis": [
+  {
+   "record": "CORE-PHP-001-001-002",
+   "fingerprint": "75bb43107d992970"
+  },
+  {
+   "record": "CORE-PHP-001-003-011",
+   "fingerprint": "aafca3430ddc985a"
+  },
+  {
+   "record": "CORE-PHP-001-012-026",
+   "fingerprint": "83251ce36b2dfa89"
+  },
+  {
+   "record": "CORE-PHP-001-027-030",
+   "fingerprint": "a6684343735c0612"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen nach dem Pilot; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; keine fachliche Prüfung durch eine Person",
+  "summary_de": "Jeder Abschnitt in Struktur und Momenten; Abwägung aus dem Abschnitt übernommen.",
+  "changes_de": []
+ }
+}

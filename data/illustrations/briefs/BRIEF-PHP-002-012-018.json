@@ -12,26 +12,61 @@
     {
       "n": 1,
       "reference": "PHP.2.12-PHP.2.13",
-      "figures": [
-        "FIG-GOTT",
-        "FIG-GRUPPE-GLAUBENDE"
-      ],
+      "figures": [],
       "objects": [],
       "signs": [],
       "speech": [],
-      "action_de": "Die Gemeinde soll mit Furcht und Zittern ihre Rettung auswirken; denn Gott wirkt in ihnen das Wollen und das Vollbringen.",
-      "stage": {
-        "arrows": [
-          [
-            "FIG-GOTT",
-            "FIG-GRUPPE-GLAUBENDE",
-            "act"
-          ]
-        ],
-        "mood": {
-          "FIG-GRUPPE-GLAUBENDE": "calm"
+      "action_de": "Mit Furcht und Zittern sollen die Philipper ihre Rettung auswirken, denn Gott ist es, der in ihnen das Wollen und das Vollbringen wirkt.",
+      "keywords": {
+        "de": "Denn Gott ist es, der in euch wirkt",
+        "gsw": "Dänn Gott isch es, wo i eu würkt"
+      },
+      "letter": true,
+      "diagram": {
+        "visual": "arrows",
+        "span": 2,
+        "cols": 2,
+        "speaker": "FIG-PAULUS",
+        "title": {
+          "de": "Mit Furcht und Zittern wirkt eure Rettung aus",
+          "gsw": "Mit Furcht und Zittere schaffed a eurer Rettig"
         },
-        "god_side": "left"
+        "cells": [
+          {
+            "a": {
+              "de": "Wirkt eure Rettung aus",
+              "gsw": "Schaffed a eurer Rettig"
+            },
+            "b": {
+              "de": "wie ihr immer gehorsam wart, jetzt erst recht in meiner Abwesenheit",
+              "gsw": "wie ir immer ghorsam gsii sind, jetzt erscht rächt, wo n ich nöd da bi"
+            },
+            "icons": [
+              "FIG-ZEICHEN-RETTUNG"
+            ]
+          },
+          {
+            "a": {
+              "de": "Gott wirkt in euch",
+              "gsw": "Gott würkt i eu"
+            },
+            "b": {
+              "de": "das Wollen und das Vollbringen, zu seinem Wohlgefallen",
+              "gsw": "s Wele und s Vollbringe, zu sim Wohlgfalle"
+            },
+            "icons": [
+              "FIG-GOTT",
+              "FIG-ZEICHEN-KRAFT"
+            ],
+            "tone": "new"
+          }
+        ],
+        "links": [
+          {
+            "de": "denn",
+            "gsw": "dänn"
+          }
+        ]
       }
     },
     {
@@ -41,26 +76,26 @@
         "FIG-GRUPPE-GLAUBENDE",
         "FIG-GRUPPE-MENGE"
       ],
-      "objects": [
-        "FIG-OBJ-LAMPE"
-      ],
+      "objects": [],
       "signs": [
         "FIG-ZEICHEN-LEUCHTEN"
       ],
       "speech": [],
-      "action_de": "Ohne Murren sollen sie als Kinder Gottes mitten in einer verdrehten Generation leuchten wie Lichter in der Welt und am Wort des Lebens festhalten.",
+      "action_de": "Die Philipper sollen alles ohne Murren tun, damit sie als makellose Kinder Gottes mitten in einer krummen und verdrehten Generation wie Lichter in der Welt leuchten und am Wort des Lebens festhalten.",
+      "keywords": {
+        "de": "Wie Lichter in der Welt",
+        "gsw": "Wie Liechter i de Wält"
+      },
       "stage": {
-        "hold": {
-          "FIG-GRUPPE-GLAUBENDE": "FIG-OBJ-LAMPE"
-        },
+        "night": true,
         "at": {
           "FIG-ZEICHEN-LEUCHTEN": "FIG-GRUPPE-GLAUBENDE"
         },
+        "split": 1,
         "mood": {
           "FIG-GRUPPE-GLAUBENDE": "smile",
           "FIG-GRUPPE-MENGE": "calm"
-        },
-        "split": 1
+        }
       }
     },
     {
@@ -74,7 +109,6 @@
         "FIG-OBJ-KETTE"
       ],
       "signs": [
-        "FIG-ZEICHEN-OPFER",
         "FIG-ZEICHEN-FREUDE"
       ],
       "speech": [
@@ -82,42 +116,54 @@
           "from": "FIG-PAULUS",
           "to": "FIG-GRUPPE-GLAUBENDE",
           "icons": [
-            "FIG-GRUPPE-GLAUBENDE",
             "FIG-ZEICHEN-FREUDE"
-          ]
+          ],
+          "word": {
+            "de": "Ich freue mich mit euch allen!",
+            "gsw": "Ich fröi mich mit eu allne!"
+          }
         }
       ],
-      "action_de": "Auch wenn sein Leben als Opfer ausgegossen wird, freut sich Paulus und freut sich mit allen; auch sie sollen sich mit ihm freuen.",
+      "action_de": "Selbst wenn Paulus als Trankopfer ausgegossen wird, freut er sich mit ihnen allen; ebenso sollen sie sich freuen und sich mit ihm freuen.",
+      "keywords": {
+        "de": "Freut euch mit mir!",
+        "gsw": "Fröied eu mit mir!"
+      },
+      "letter": true,
       "stage": {
-        "floor_x": {
-          "FIG-OBJ-KETTE": 26
+        "hold": {
+          "FIG-PAULUS": "FIG-OBJ-KETTE"
+        },
+        "split": 1,
+        "signs_who": {
+          "FIG-ZEICHEN-FREUDE": [
+            "FIG-PAULUS",
+            "FIG-GRUPPE-GLAUBENDE"
+          ]
         },
         "mood": {
-          "FIG-PAULUS": "smile",
-          "FIG-GRUPPE-GLAUBENDE": "smile"
-        },
-        "beside": {
-          "FIG-ZEICHEN-OPFER": "FIG-PAULUS"
+          "FIG-PAULUS": "delight",
+          "FIG-GRUPPE-GLAUBENDE": "delight"
         }
       }
     }
   ],
   "actions_de": [
-    "Die Gemeinde soll mit Furcht und Zittern ihre Rettung auswirken; denn Gott wirkt in ihnen das Wollen und das Vollbringen.",
-    "Ohne Murren sollen sie als Kinder Gottes mitten in einer verdrehten Generation leuchten wie Lichter in der Welt und am Wort des Lebens festhalten.",
-    "Auch wenn sein Leben als Opfer ausgegossen wird, freut sich Paulus und freut sich mit allen; auch sie sollen sich mit ihm freuen."
+    "Mit Furcht und Zittern sollen die Philipper ihre Rettung auswirken, denn Gott ist es, der in ihnen das Wollen und das Vollbringen wirkt.",
+    "Die Philipper sollen alles ohne Murren tun, damit sie als makellose Kinder Gottes mitten in einer krummen und verdrehten Generation wie Lichter in der Welt leuchten und am Wort des Lebens festhalten.",
+    "Selbst wenn Paulus als Trankopfer ausgegossen wird, freut er sich mit ihnen allen; ebenso sollen sie sich freuen und sich mit ihm freuen."
   ],
   "captions_de": [
-    "Gott → Glaubende: Gott (Strahlenkranz) wirkt in den Glaubenden (goldener Pfeil); sie hören zu.",
-    "Lichter in der Welt: Die Glaubenden halten eine Lampe und leuchten (Öllampe mit Funkeln über ihnen) mitten unter den vielen Menschen.",
-    "Freude trotz allem: Paulus (Kette) ist bereit, sein Leben zu geben (Widder mit Flamme neben ihm), und ruft die Glaubenden zur Freude (strahlendes Gesicht)."
+    "Auftrag an die Gemeinde, Pfeil mit «denn» (Bild Paulus, Blase «Mit Furcht und Zittern wirkt eure Rettung aus»): Wirkt eure Rettung aus (Pfeil aus den Wellen) – denn – Gott wirkt in euch das Wollen und das Vollbringen (Strahlenkranz, Arm mit goldenen Strahlen).",
+    "Lichter in der Welt: Die Glaubenden (taubenblaue Gruppe) leuchten (Lampe mit Funkeln) unter dem dunklen Himmel; daneben die Menge (gedeckte Farben).",
+    "Freude miteinander: Paulus mit Kette schreibt der Gemeinde: «Ich freue mich mit euch allen» – beide freuen sich (lachende Gesichter)."
   ],
-  "interpretation_note_de": "«Lichter in der Welt» ([[PHP.2.15]]) meint im Griechischen Himmelslichter; die Lampen sind eine Deutung. Das Trankopfer ([[PHP.2.17]]) ist mit dem Altarzeichen angedeutet. Paulus schreibt den Brief als Gefangener «in Fesseln» ([[PHP.1.7]], [[PHP.1.13]]); deshalb liegt bei ihm eine Kette. Ein Soldat steht für die Wache im Prätorium ([[PHP.1.13]]).",
+  "interpretation_note_de": "Struktur: Mahnung → «denn» → «damit». Feld 1 zeigt Mahnung und Begründung als Pfeil mit «denn» (die Richtung bleibt: Gottes Wirken begründet das Tun), Feld 2 das Bildwort «wie Lichter in der Welt» als Szene mit der verdrehten Generation daneben, Feld 3 die gegenseitige Freude. «Als Trankopfer ausgegossen» ist ein Bild aus dem Opferdienst, oft auf einen möglichen Tod des Paulus bezogen; das Bild zeigt es nicht als Szene. Der dunkle Himmel macht das Leuchten sichtbar und bezeichnet keine Tageszeit.",
   "basis": [
     {
       "record": "TU-PHP-002-012-018",
       "field": "summary",
-      "fingerprint": "53c61e05056497b8"
+      "fingerprint": "14b2f2cde44455dc"
     },
     {
       "record": "TRANS-PHP-002-001-030-DE-WORKING",
@@ -139,7 +185,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -265,6 +311,143 @@
           "Lichter in der Welt: Die Glaubenden halten eine Lampe und leuchten (Flamme über ihnen) mitten unter den vielen Menschen.",
           "Freude trotz allem: Paulus (Kette) ist bereit, sein Leben zu geben (Altar mit Flamme neben ihm), und ruft die Glaubenden zur Freude (Funken)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "PHP.2.12-PHP.2.13",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Die Gemeinde soll mit Furcht und Zittern ihre Rettung auswirken; denn Gott wirkt in ihnen das Wollen und das Vollbringen.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-GLAUBENDE",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "calm"
+              },
+              "god_side": "left"
+            }
+          },
+          {
+            "n": 2,
+            "reference": "PHP.2.14-PHP.2.16",
+            "figures": [
+              "FIG-GRUPPE-GLAUBENDE",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-LAMPE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-LEUCHTEN"
+            ],
+            "speech": [],
+            "action_de": "Ohne Murren sollen sie als Kinder Gottes mitten in einer verdrehten Generation leuchten wie Lichter in der Welt und am Wort des Lebens festhalten.",
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-GLAUBENDE": "FIG-OBJ-LAMPE"
+              },
+              "at": {
+                "FIG-ZEICHEN-LEUCHTEN": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "smile",
+                "FIG-GRUPPE-MENGE": "calm"
+              },
+              "split": 1
+            }
+          },
+          {
+            "n": 3,
+            "reference": "PHP.2.17-PHP.2.18",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-OPFER",
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-GRUPPE-GLAUBENDE",
+                "icons": [
+                  "FIG-GRUPPE-GLAUBENDE",
+                  "FIG-ZEICHEN-FREUDE"
+                ]
+              }
+            ],
+            "action_de": "Auch wenn sein Leben als Opfer ausgegossen wird, freut sich Paulus und freut sich mit allen; auch sie sollen sich mit ihm freuen.",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KETTE": 26
+              },
+              "mood": {
+                "FIG-PAULUS": "smile",
+                "FIG-GRUPPE-GLAUBENDE": "smile"
+              },
+              "beside": {
+                "FIG-ZEICHEN-OPFER": "FIG-PAULUS"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Die Gemeinde soll mit Furcht und Zittern ihre Rettung auswirken; denn Gott wirkt in ihnen das Wollen und das Vollbringen.",
+          "Ohne Murren sollen sie als Kinder Gottes mitten in einer verdrehten Generation leuchten wie Lichter in der Welt und am Wort des Lebens festhalten.",
+          "Auch wenn sein Leben als Opfer ausgegossen wird, freut sich Paulus und freut sich mit allen; auch sie sollen sich mit ihm freuen."
+        ],
+        "captions_de": [
+          "Gott → Glaubende: Gott (Strahlenkranz) wirkt in den Glaubenden (goldener Pfeil); sie hören zu.",
+          "Lichter in der Welt: Die Glaubenden halten eine Lampe und leuchten (Öllampe mit Funkeln über ihnen) mitten unter den vielen Menschen.",
+          "Freude trotz allem: Paulus (Kette) ist bereit, sein Leben zu geben (Widder mit Flamme neben ihm), und ruft die Glaubenden zur Freude (strahlendes Gesicht)."
+        ],
+        "interpretation_note_de": "«Lichter in der Welt» ([[PHP.2.15]]) meint im Griechischen Himmelslichter; die Lampen sind eine Deutung. Das Trankopfer ([[PHP.2.17]]) ist mit dem Altarzeichen angedeutet. Paulus schreibt den Brief als Gefangener «in Fesseln» ([[PHP.1.7]], [[PHP.1.13]]); deshalb liegt bei ihm eine Kette. Ein Soldat steht für die Wache im Prätorium ([[PHP.1.13]]).",
+        "basis": [
+          {
+            "record": "TU-PHP-002-012-018",
+            "field": "summary",
+            "fingerprint": "53c61e05056497b8"
+          },
+          {
+            "record": "TRANS-PHP-002-001-030-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "PHP.2.12-PHP.2.13",
+            "fingerprint": "0fc1cf6d118e85f6"
+          },
+          {
+            "record": "TRANS-PHP-002-001-030-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "PHP.2.14-PHP.2.16",
+            "fingerprint": "fb4c477183ec39b4"
+          },
+          {
+            "record": "TRANS-PHP-002-001-030-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "PHP.2.17-PHP.2.18",
+            "fingerprint": "88e319e11f8c6b87"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

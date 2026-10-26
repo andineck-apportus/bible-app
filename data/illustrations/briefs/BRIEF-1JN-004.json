@@ -18,31 +18,26 @@
       ],
       "objects": [],
       "signs": [
-        "FIG-ZEICHEN-PRUEFEN"
+        "FIG-ZEICHEN-PRUEFEN",
+        "FIG-ZEICHEN-WELT"
       ],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-GESCHWISTER",
-          "to": "FIG-GRUPPE-GESCHWISTER",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-WAHRHEIT"
-          ]
-        }
-      ],
-      "action_de": "Die Geister sind zu prüfen: Aus Gott ist, wer bekennt, dass Jesus Christus im Fleisch gekommen ist.",
+      "speech": [],
+      "action_de": "Die Geschwister sollen die Geister prüfen: Wer Jesus Christus als im Fleisch gekommen bekennt, ist aus Gott; die falschen Propheten sind aus der Welt.",
+      "keywords": {
+        "de": "Prüft die Geister",
+        "gsw": "Prüefed d Geischter"
+      },
       "stage": {
         "split": 1,
-        "pose": {
-          "FIG-GRUPPE-VERFUEHRER": "away"
+        "at": {
+          "FIG-ZEICHEN-PRUEFEN": "FIG-GRUPPE-GESCHWISTER"
         },
         "mood": {
-          "FIG-GRUPPE-GESCHWISTER": "smile",
-          "FIG-GRUPPE-VERFUEHRER": "earnest"
+          "FIG-GRUPPE-GESCHWISTER": "earnest",
+          "FIG-GRUPPE-VERFUEHRER": "calm"
         },
-        "x": {
-          "FIG-GRUPPE-GESCHWISTER": 62,
-          "FIG-GRUPPE-VERFUEHRER": 146
+        "beside": {
+          "FIG-ZEICHEN-WELT": "FIG-GRUPPE-VERFUEHRER"
         }
       }
     },
@@ -51,15 +46,20 @@
       "reference": "1JN.4.7-1JN.4.12",
       "figures": [
         "FIG-GOTT",
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-GRUPPE-GESCHWISTER"
       ],
       "objects": [],
       "signs": [
-        "FIG-ZEICHEN-LIEBE",
-        "FIG-ZEICHEN-WELT"
+        "FIG-ZEICHEN-WELT",
+        "FIG-ZEICHEN-LIEBE"
       ],
       "speech": [],
-      "action_de": "Gott ist Liebe; er hat seinen Sohn in die Welt gesandt.",
+      "action_de": "Gott ist Liebe: Er hat seinen einzigen Sohn in die Welt gesandt, damit wir durch ihn leben, als Sühne für unsere Sünden; darum sollen wir einander lieben.",
+      "keywords": {
+        "de": "Gott ist Liebe",
+        "gsw": "Gott isch Liebi"
+      },
       "stage": {
         "god_side": "left",
         "arrows": [
@@ -70,10 +70,11 @@
           ]
         ],
         "at": {
-          "FIG-ZEICHEN-LIEBE": "FIG-GOTT"
+          "FIG-ZEICHEN-LIEBE": "FIG-GRUPPE-GESCHWISTER"
         },
-        "x": {
-          "FIG-JESUS": 100
+        "mood": {
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-GESCHWISTER": "smile"
         },
         "beside": {
           "FIG-ZEICHEN-WELT": "FIG-JESUS"
@@ -85,61 +86,63 @@
       "reference": "1JN.4.13-1JN.4.21",
       "figures": [
         "FIG-GOTT",
-        "FIG-GRUPPE-GESCHWISTER"
+        "FIG-GRUPPE-GESCHWISTER",
+        "FIG-ROLLE-MENSCH"
       ],
       "objects": [],
       "signs": [
-        "FIG-ZEICHEN-LIEBE",
-        "FIG-ZEICHEN-GERICHT"
+        "FIG-ZEICHEN-LIEBE"
       ],
       "speech": [],
-      "action_de": "Wer in der Liebe bleibt, bleibt in Gott; die vollkommene Liebe treibt die Furcht aus. Wer Gott liebt, soll auch den Bruder lieben.",
+      "action_de": "Die vollkommene Liebe treibt die Furcht aus; wir lieben, weil er uns zuerst geliebt hat, und wer Gott liebt, soll auch seinen Bruder lieben.",
+      "keywords": {
+        "de": "Die vollkommene Liebe treibt die Furcht aus",
+        "gsw": "Di vollkomme Liebi tribt d Angscht uus"
+      },
       "stage": {
         "god_side": "left",
-        "x": {
-          "FIG-GRUPPE-GESCHWISTER": 96
-        },
-        "at": {
-          "FIG-ZEICHEN-LIEBE": "FIG-GRUPPE-GESCHWISTER"
-        },
-        "signs_who": {
-          "FIG-ZEICHEN-LIEBE": []
-        },
         "arrows": [
           [
             "FIG-GOTT",
             "FIG-GRUPPE-GESCHWISTER",
             "act"
+          ],
+          [
+            "FIG-GRUPPE-GESCHWISTER",
+            "FIG-ROLLE-MENSCH",
+            "act"
           ]
         ],
-        "mood": {
-          "FIG-GRUPPE-GESCHWISTER": "smile"
+        "at": {
+          "FIG-ZEICHEN-LIEBE": "FIG-ROLLE-MENSCH"
         },
-        "air_x": 140,
-        "air_y": 50
+        "mood": {
+          "FIG-GRUPPE-GESCHWISTER": "smile",
+          "FIG-ROLLE-MENSCH": "smile"
+        }
       }
     }
   ],
   "actions_de": [
-    "Die Geister sind zu prüfen: Aus Gott ist, wer bekennt, dass Jesus Christus im Fleisch gekommen ist.",
-    "Gott ist Liebe; er hat seinen Sohn in die Welt gesandt.",
-    "Wer in der Liebe bleibt, bleibt in Gott; die vollkommene Liebe treibt die Furcht aus. Wer Gott liebt, soll auch den Bruder lieben."
+    "Die Geschwister sollen die Geister prüfen: Wer Jesus Christus als im Fleisch gekommen bekennt, ist aus Gott; die falschen Propheten sind aus der Welt.",
+    "Gott ist Liebe: Er hat seinen einzigen Sohn in die Welt gesandt, damit wir durch ihn leben, als Sühne für unsere Sünden; darum sollen wir einander lieben.",
+    "Die vollkommene Liebe treibt die Furcht aus; wir lieben, weil er uns zuerst geliebt hat, und wer Gott liebt, soll auch seinen Bruder lieben."
   ],
   "captions_de": [
-    "Geister prüfen: Die Geschwister bekennen Jesus (Sprechblase mit Jesus, Häkchen); rechts, abgewandt, die falschen Propheten.",
-    "Gott ist Liebe: Gott (Strahlenkranz) sendet aus Liebe (Herz) Jesus (goldener Pfeil) in die Welt (Erdkugel neben ihm).",
-    "Gott liebt zuerst → in der Liebe bleiben: Gott (Strahlenkranz) liebt die Geschwister (goldener Pfeil); sie lieben (Herz über ihnen) und sehen dem Gericht (Waage) ohne Furcht entgegen."
+    "Geister prüfen: Die Geschwister prüfen (zwei Rollen, Haken und durchgestrichen); getrennt (gestrichelte Linie) die Verführer (violettgraue Gruppe), der Welt zugewandt (Erdkugel).",
+    "Gott ist Liebe: Gott (Strahlenkranz) sendet seinen Sohn (goldener Pfeil zu Jesus) in die Welt (Erdkugel); die Geschwister lieben einander (Herz).",
+    "Liebe ohne Furcht: Von Gott (Strahlenkranz) kommt die Liebe zu den Geschwistern (goldener Pfeil); sie wenden sich ihrem Bruder zu (Pfeil, Herz)."
   ],
-  "interpretation_note_de": "Je ein Feld aus den drei Abschnitten des Kapitels. Der 1. Johannesbrief nennt seinen Verfasser nicht; das Bild zeigt ihn wie den «Ältesten» aus [[2JN.1.1]] und [[3JN.1.1]] (Deutung). Die angeredeten «Kinder» und «Lieben» sind als Gruppe von Geschwistern gezeichnet.",
+  "interpretation_note_de": "Drei Comic-Szenen für drei Abschnitte: die Geister prüfen ([[1JN.4.1-1JN.4.6]]), Gott sendet seinen Sohn – Gott ist Liebe ([[1JN.4.7-1JN.4.12]]) – und die Liebe ohne Furcht, die sich dem Bruder zuwendet ([[1JN.4.13-1JN.4.21]]). Comic-Szenen nach dem Entscheid vom 2026-10-25. Der 1. Johannesbrief nennt seinen Verfasser nicht; Bild und Porträt zeigen ihn wie den «Ältesten» aus [[2JN.1.1]] und [[3JN.1.1]] (Deutung). Die angeredeten «Kinder» und «Lieben» sind als Gruppe von Geschwistern gezeichnet.",
   "basis": [
     {
       "record": "SUM-CH-1JN-004",
       "field": "summary",
-      "fingerprint": "78008ecc8cab8201"
+      "fingerprint": "53b3401efc66c8d6"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -482,6 +485,260 @@
           "Geister prüfen: Die Geschwister bekennen Jesus (Sprechblase mit Jesus, Häkchen); rechts, abgewandt, die falschen Propheten.",
           "Gott ist Liebe: Gott (Strahlenkranz) sendet aus Liebe (Herzen) Jesus (goldener Pfeil) in die Welt (Erdscheibe neben ihm).",
           "Gott liebt zuerst → in der Liebe bleiben: Gott (Strahlenkranz) liebt die Geschwister (goldener Pfeil); sie lieben (Herzen über ihnen) und sehen dem Gericht (Waage) ohne Furcht entgegen."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "1JN.4.1-1JN.4.6",
+            "figures": [
+              "FIG-GRUPPE-GESCHWISTER",
+              "FIG-GRUPPE-VERFUEHRER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-PRUEFEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-GESCHWISTER",
+                "to": "FIG-GRUPPE-GESCHWISTER",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-WAHRHEIT"
+                ]
+              }
+            ],
+            "action_de": "Die Geister sind zu prüfen: Aus Gott ist, wer bekennt, dass Jesus Christus im Fleisch gekommen ist.",
+            "stage": {
+              "split": 1,
+              "pose": {
+                "FIG-GRUPPE-VERFUEHRER": "away"
+              },
+              "mood": {
+                "FIG-GRUPPE-GESCHWISTER": "smile",
+                "FIG-GRUPPE-VERFUEHRER": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-GESCHWISTER": 62,
+                "FIG-GRUPPE-VERFUEHRER": 146
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "1JN.4.7-1JN.4.12",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-LIEBE",
+              "FIG-ZEICHEN-WELT"
+            ],
+            "speech": [],
+            "action_de": "Gott ist Liebe; er hat seinen Sohn in die Welt gesandt.",
+            "stage": {
+              "god_side": "left",
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-LIEBE": "FIG-GOTT"
+              },
+              "x": {
+                "FIG-JESUS": 100
+              },
+              "beside": {
+                "FIG-ZEICHEN-WELT": "FIG-JESUS"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "1JN.4.13-1JN.4.21",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-LIEBE",
+              "FIG-ZEICHEN-GERICHT"
+            ],
+            "speech": [],
+            "action_de": "Wer in der Liebe bleibt, bleibt in Gott; die vollkommene Liebe treibt die Furcht aus. Wer Gott liebt, soll auch den Bruder lieben.",
+            "stage": {
+              "god_side": "left",
+              "x": {
+                "FIG-GRUPPE-GESCHWISTER": 96
+              },
+              "at": {
+                "FIG-ZEICHEN-LIEBE": "FIG-GRUPPE-GESCHWISTER"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-LIEBE": []
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-GESCHWISTER",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-GESCHWISTER": "smile"
+              },
+              "air_x": 140,
+              "air_y": 50
+            }
+          }
+        ],
+        "actions_de": [
+          "Die Geister sind zu prüfen: Aus Gott ist, wer bekennt, dass Jesus Christus im Fleisch gekommen ist.",
+          "Gott ist Liebe; er hat seinen Sohn in die Welt gesandt.",
+          "Wer in der Liebe bleibt, bleibt in Gott; die vollkommene Liebe treibt die Furcht aus. Wer Gott liebt, soll auch den Bruder lieben."
+        ],
+        "captions_de": [
+          "Geister prüfen: Die Geschwister bekennen Jesus (Sprechblase mit Jesus, Häkchen); rechts, abgewandt, die falschen Propheten.",
+          "Gott ist Liebe: Gott (Strahlenkranz) sendet aus Liebe (Herz) Jesus (goldener Pfeil) in die Welt (Erdkugel neben ihm).",
+          "Gott liebt zuerst → in der Liebe bleiben: Gott (Strahlenkranz) liebt die Geschwister (goldener Pfeil); sie lieben (Herz über ihnen) und sehen dem Gericht (Waage) ohne Furcht entgegen."
+        ],
+        "interpretation_note_de": "Je ein Feld aus den drei Abschnitten des Kapitels. Der 1. Johannesbrief nennt seinen Verfasser nicht; das Bild zeigt ihn wie den «Ältesten» aus [[2JN.1.1]] und [[3JN.1.1]] (Deutung). Die angeredeten «Kinder» und «Lieben» sind als Gruppe von Geschwistern gezeichnet.",
+        "basis": [
+          {
+            "record": "SUM-CH-1JN-004",
+            "field": "summary",
+            "fingerprint": "78008ecc8cab8201"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Prüfung Struktur zuerst",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "1JN.4.1-1JN.4.6",
+            "figures": [
+              "FIG-GRUPPE-GESCHWISTER",
+              "FIG-GRUPPE-VERFUEHRER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-PRUEFEN",
+              "FIG-ZEICHEN-WELT"
+            ],
+            "speech": [],
+            "action_de": "Die Geschwister sollen die Geister prüfen: Wer Jesus Christus als im Fleisch gekommen bekennt, ist aus Gott; die falschen Propheten sind aus der Welt.",
+            "keywords": {
+              "de": "Prüft die Geister",
+              "gsw": "Prüefed d Geischter"
+            },
+            "stage": {
+              "split": 1,
+              "at": {
+                "FIG-ZEICHEN-PRUEFEN": "FIG-GRUPPE-GESCHWISTER",
+                "FIG-ZEICHEN-WELT": "FIG-GRUPPE-VERFUEHRER"
+              },
+              "mood": {
+                "FIG-GRUPPE-GESCHWISTER": "earnest",
+                "FIG-GRUPPE-VERFUEHRER": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "1JN.4.7-1JN.4.12",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-WELT",
+              "FIG-ZEICHEN-LIEBE"
+            ],
+            "speech": [],
+            "action_de": "Gott ist Liebe: Er hat seinen einzigen Sohn in die Welt gesandt, damit wir durch ihn leben, als Sühne für unsere Sünden; darum sollen wir einander lieben.",
+            "keywords": {
+              "de": "Gott ist Liebe",
+              "gsw": "Gott isch Liebi"
+            },
+            "stage": {
+              "god_side": "left",
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-WELT": "FIG-JESUS",
+                "FIG-ZEICHEN-LIEBE": "FIG-GRUPPE-GESCHWISTER"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-GESCHWISTER": "smile"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "1JN.4.13-1JN.4.21",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-GESCHWISTER",
+              "FIG-ROLLE-MENSCH"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-LIEBE"
+            ],
+            "speech": [],
+            "action_de": "Die vollkommene Liebe treibt die Furcht aus; wir lieben, weil er uns zuerst geliebt hat, und wer Gott liebt, soll auch seinen Bruder lieben.",
+            "keywords": {
+              "de": "Die vollkommene Liebe treibt die Furcht aus",
+              "gsw": "Di vollkomme Liebi tribt d Angscht uus"
+            },
+            "stage": {
+              "god_side": "left",
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-GRUPPE-GESCHWISTER",
+                  "act"
+                ],
+                [
+                  "FIG-GRUPPE-GESCHWISTER",
+                  "FIG-ROLLE-MENSCH",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-LIEBE": "FIG-ROLLE-MENSCH"
+              },
+              "mood": {
+                "FIG-GRUPPE-GESCHWISTER": "smile",
+                "FIG-ROLLE-MENSCH": "smile"
+              }
+            }
+          }
         ]
       }
     }

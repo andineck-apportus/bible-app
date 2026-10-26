@@ -1,0 +1,247 @@
+{
+ "id": "CORE-PHP-001-012-026",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "PHP.1.12-PHP.1.26",
+ "target": "TU-PHP-001-012-026",
+ "core_de": "Paulus' Gefangenschaft hat das Evangelium gefördert: Im ganzen Prätorium ist bekannt, dass er um Christi willen in Fesseln liegt, und die meisten Geschwister sagen das Wort umso furchtloser; ob Christus aus Neid oder aus Liebe verkündigt wird, darüber freut er sich, und er wägt ab: Für ihn ist das Leben Christus und das Sterben Gewinn, doch das Bleiben ist um der Philipper willen nötiger, darum weiss er, dass er bleiben wird.",
+ "mode": "statement",
+ "voice": {
+  "speaker": "FIG-PAULUS",
+  "addressee": "FIG-GRUPPE-GLAUBENDE"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "cause",
+    "subtype": "Gefangenschaft → Förderung des Evangeliums → Freude",
+    "range": "PHP.1.12-PHP.1.26",
+    "elements": [
+     {
+      "label": "Was mich betrifft, hat eher zur Förderung des Evangeliums geführt",
+      "ref": "PHP.1.12",
+      "role": "These"
+     },
+     {
+      "label": "→ im ganzen Prätorium und bei allen anderen bekannt: Ich liege um Christi willen in Fesseln",
+      "ref": "PHP.1.13",
+      "role": "Folge 1"
+     },
+     {
+      "label": "→ die meisten Geschwister, durch meine Fesseln ermutigt, wagen umso mehr, das Wort furchtlos zu sagen",
+      "ref": "PHP.1.14",
+      "role": "Folge 2"
+     },
+     {
+      "label": "Verkündigung aus Neid und aus Liebe: Christus wird verkündigt – darüber freue ich mich",
+      "ref": "PHP.1.15-PHP.1.18",
+      "role": "Freude",
+      "child": "s2"
+     },
+     {
+      "label": "Ich werde mich auch weiterhin freuen, denn ich weiss, dass dies mir zur Rettung ausschlagen wird durch euer Gebet und den Beistand des Geistes Jesu Christi",
+      "ref": "PHP.1.18-PHP.1.19",
+      "role": "Zuversicht"
+     },
+     {
+      "label": "Christus soll gross gemacht werden an meinem Leib, sei es durch Leben oder durch Tod: Abwägung",
+      "ref": "PHP.1.20-PHP.1.26",
+      "role": "Abwägung",
+      "child": "s3"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-PAULUS",
+       "to": "FIG-GRUPPE-GLAUBENDE"
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "Freude / sich freuen",
+       "refs": [
+        "PHP.1.4",
+        "PHP.1.18",
+        "PHP.1.25",
+        "PHP.2.2",
+        "PHP.2.17",
+        "PHP.2.18",
+        "PHP.2.28",
+        "PHP.2.29",
+        "PHP.3.1",
+        "PHP.4.1",
+        "PHP.4.4",
+        "PHP.4.10"
+       ],
+       "role": "Leitwort des Briefes"
+      }
+     ],
+     "chronology": [
+      {
+       "note": "Ort und Zeit der Gefangenschaft nennt der Brief nicht; Rom, Ephesus oder Cäsarea sind Vorschläge der Forschung (Deutung)."
+      }
+     ]
+    },
+    "visual": "arrows",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "Beweggründe der Verkündiger: Neid ↔ Liebe (gekreuzte Reihenfolge)",
+    "range": "PHP.1.15-PHP.1.18",
+    "elements": [
+     {
+      "label": "Einige verkündigen Christus aus Neid und Streitsucht ↔ andere aus gutem Willen",
+      "ref": "PHP.1.15",
+      "role": "Paar 1"
+     },
+     {
+      "label": "die anderen aus Eigennutz, nicht lauter, um mir in den Fesseln Bedrängnis zu bereiten ↔ die einen aus Liebe, weil sie wissen, dass ich zur Verteidigung des Evangeliums bestimmt bin",
+      "ref": "PHP.1.16-PHP.1.17",
+      "role": "Paar 2"
+     },
+     {
+      "label": "Was soll's? Wenn nur auf jede Weise, ob zum Vorwand oder in Wahrheit, Christus verkündigt wird! Darüber freue ich mich",
+      "ref": "PHP.1.18",
+      "role": "Schluss"
+     }
+    ],
+    "features": {
+     "pattern_break": [
+      {
+       "ref": "PHP.1.16-PHP.1.17",
+       "note": "In 1,16–17 steht die gute Gruppe zuerst («die einen aus Liebe»), in 1,15 die schlechte: gekreuzte Reihenfolge; die Paare sind so zugeordnet, wie der Text sie verbindet."
+      }
+     ]
+    },
+    "visual": "columns",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "balance",
+    "subtype": "Abwägung Leben ↔ Sterben mit Entscheid",
+    "range": "PHP.1.20-PHP.1.26",
+    "elements": [
+     {
+      "label": "Christus wird gross gemacht an meinem Leib, sei es durch Leben oder durch Tod",
+      "ref": "PHP.1.20",
+      "role": "Massstab"
+     },
+     {
+      "label": "Denn für mich ist das Leben Christus und das Sterben Gewinn",
+      "ref": "PHP.1.21",
+      "role": "Grundsatz"
+     },
+     {
+      "label": "Seite Leben: das Leben im Fleisch bedeutet für mich Frucht der Arbeit; ich weiss nicht, was ich wählen soll",
+      "ref": "PHP.1.22",
+      "role": "Seite Leben"
+     },
+     {
+      "label": "Seite Sterben: das Verlangen, aufzubrechen und bei Christus zu sein, denn das wäre bei weitem das Bessere",
+      "ref": "PHP.1.23",
+      "role": "Seite Sterben"
+     },
+     {
+      "label": "Ausschlag: Das Bleiben im Fleisch ist um euretwillen nötiger",
+      "ref": "PHP.1.24",
+      "role": "Ausschlag"
+     },
+     {
+      "label": "Entscheid: Ich weiss, dass ich bleiben und bei euch allen ausharren werde, zu eurem Fortschritt und zur Freude im Glauben, damit euer Rühmen in Christus überreich werde durch mein erneutes Kommen",
+      "ref": "PHP.1.25-PHP.1.26",
+      "role": "Entscheid"
+     }
+    ],
+    "features": {
+     "modality": [
+      {
+       "ref": "PHP.1.25",
+       "kind": "Gewissheit",
+       "note": "«im Vertrauen darauf weiss ich» – Paulus rechnet mit dem Bleiben; der Ausgang der Gefangenschaft wird nicht berichtet."
+      }
+     ],
+     "interpretation": [
+      {
+       "ref": "PHP.1.23",
+       "note": "«aufbrechen» ist Bildwort für Sterben."
+      }
+     ]
+    },
+    "visual": "balance",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "PHP.1.12-PHP.1.14",
+   "text_de": "Was Paulus betrifft, hat eher zur Förderung des Evangeliums geführt: Im ganzen Prätorium und bei allen anderen ist bekannt geworden, dass er um Christi willen in Fesseln liegt, und die meisten Geschwister wagen umso mehr, das Wort furchtlos zu sagen.",
+   "reason_de": "Trägt die Kernaussage (Kriterium 1): Die Fesseln hindern das Evangelium nicht, sondern fördern es; Erkennungsmoment Paulus in Ketten (Kriterium 4).",
+   "recognition_de": "Paulus in Fesseln; Wache im Prätorium; Geschwister reden furchtlos.",
+   "keywords": [
+    "zur Förderung des Evangeliums",
+    "dass ich um Christi willen in Fesseln liege"
+   ]
+  },
+  {
+   "reference": "PHP.1.15-PHP.1.18",
+   "text_de": "Einige verkündigen Christus aus Neid und Streitsucht und Eigennutz, um Paulus Bedrängnis zu bereiten, andere aus gutem Willen und aus Liebe; Paulus fragt: «Was soll's?» Wenn nur Christus verkündigt wird, ob zum Vorwand oder in Wahrheit – darüber freut er sich.",
+   "reason_de": "Gegensatz der Beweggründe mit überraschendem Schluss (Kriterium 2, structure s2).",
+   "recognition_de": "Zwei Spalten: aus Neid ↔ aus Liebe; darunter: Christus wird verkündigt – Freude.",
+   "keywords": [
+    "Wenn nur auf jede Weise",
+    "Christus verkündigt wird",
+    "darüber freue ich mich"
+   ]
+  },
+  {
+   "reference": "PHP.1.20-PHP.1.26",
+   "text_de": "Christus soll an seinem Leib gross gemacht werden, durch Leben oder durch Tod; denn für ihn ist das Leben Christus und das Sterben Gewinn; aufzubrechen und bei Christus zu sein wäre bei weitem das Bessere, das Bleiben im Fleisch aber ist um der Philipper willen nötiger, darum weiss er, dass er bleiben wird, zu ihrem Fortschritt und zur Freude im Glauben.",
+   "reason_de": "Höhepunkt des Abschnitts mit dem bekannten Satz [[PHP.1.21]] (Kriterien 2 und 4); Abwägung mit Entscheid (structure s3).",
+   "recognition_de": "Waage: Sterben – bei Christus sein ↔ Bleiben – um euretwillen; Entscheid: Ich werde bleiben.",
+   "keywords": [
+    "Denn für mich ist das Leben Christus und das Sterben Gewinn",
+    "das Bleiben im Fleisch aber ist um euretwillen nötiger"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "«durch euer Gebet und den Beistand des Geistes Jesu Christi» (1,19) – Grund der Zuversicht; in structure",
+  "«durch mein erneutes Kommen zu euch» (1,26) – Ausblick; in structure"
+ ],
+ "persons": [
+  "FIG-PAULUS",
+  "FIG-GRUPPE-GESCHWISTER",
+  "FIG-ROLLE-SOLDAT",
+  "FIG-JESUS"
+ ],
+ "places": [
+  "FIG-ORT-PRAETORIUM"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "PHP.1.12-PHP.1.26",
+   "fingerprint": "322fcab78e495455"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen nach dem Pilot; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; keine fachliche Prüfung durch eine Person",
+  "summary_de": "Bestätigt: Fesseln → Förderung des Evangeliums; Neid ↔ Liebe mit gekreuzter Reihenfolge richtig zugeordnet; Abwägung Leben ↔ Sterben mit beiden Seiten und Entscheid (als Gewissheit, nicht als Bericht); Ort der Gefangenschaft als Vorschlag der Forschung.",
+  "changes_de": []
+ }
+}

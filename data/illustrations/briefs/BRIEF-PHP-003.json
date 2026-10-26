@@ -13,34 +13,45 @@
       "n": 1,
       "reference": "PHP.3.1-PHP.3.11",
       "figures": [
-        "FIG-PAULUS"
+        "FIG-PAULUS",
+        "FIG-JESUS"
       ],
-      "objects": [
-        "FIG-OBJ-KETTE"
+      "objects": [],
+      "signs": [
+        "FIG-ZEICHEN-VERLUST"
       ],
-      "signs": [],
       "speech": [
         {
           "from": "FIG-PAULUS",
-          "to": "FIG-GRUPPE-GLAUBENDE",
+          "to": "FIG-PAULUS",
           "icons": [
-            "FIG-OBJ-GESETZESTAFELN",
-            "FIG-ZEICHEN-VERLUST",
-            "FIG-JESUS",
             "FIG-ZEICHEN-GEWINN"
-          ]
+          ],
+          "think": true,
+          "word": {
+            "de": "Christus gewinnen",
+            "gsw": "Christus gwünne"
+          }
         }
       ],
-      "action_de": "Herkunft und Gesetzestreue, die Paulus Gewinn waren, hält er um Christi willen für Verlust; Christus zu gewinnen ist ihm alles wert.",
+      "action_de": "Was Paulus Gewinn war, hält er um Christi willen für Verlust, damit er Christus gewinne.",
+      "keywords": {
+        "de": "Damit ich Christus gewinne",
+        "gsw": "Demit ich Christus gwünn"
+      },
+      "names": {
+        "FIG-PAULUS": {
+          "de": "Paulus",
+          "gsw": "Paulus"
+        }
+      },
       "stage": {
-        "floor_x": {
-          "FIG-OBJ-KETTE": 70
-        },
-        "x": {
-          "FIG-PAULUS": 93
+        "at": {
+          "FIG-ZEICHEN-VERLUST": "FIG-PAULUS"
         },
         "mood": {
-          "FIG-PAULUS": "smile"
+          "FIG-PAULUS": "delight",
+          "FIG-JESUS": "calm"
         }
       }
     },
@@ -50,30 +61,29 @@
       "figures": [
         "FIG-PAULUS"
       ],
-      "objects": [
-        "FIG-OBJ-KETTE",
+      "objects": [],
+      "signs": [
+        "FIG-ZEICHEN-WEG",
         "FIG-ZEICHEN-ZIEL"
       ],
-      "signs": [],
       "speech": [],
-      "action_de": "Paulus hat das Ziel noch nicht erreicht; er vergisst, was hinter ihm liegt, und jagt dem Siegespreis der himmlischen Berufung nach.",
+      "action_de": "Paulus hat das Ziel noch nicht erreicht; er vergisst, was hinter ihm liegt, und jagt dem Siegespreis der himmlischen Berufung Gottes nach.",
+      "keywords": {
+        "de": "Ich jage aber danach",
+        "gsw": "Ich jag aber dem nache"
+      },
       "stage": {
         "x": {
-          "FIG-PAULUS": 84
+          "FIG-PAULUS": 70
         },
-        "floor_x": {
-          "FIG-OBJ-KETTE": 16,
-          "FIG-ZEICHEN-ZIEL": 158
+        "beside": {
+          "FIG-ZEICHEN-ZIEL": "FIG-PAULUS"
         },
-        "arrows": [
-          [
-            "FIG-PAULUS",
-            "FIG-ZEICHEN-ZIEL",
-            "go"
-          ]
-        ],
+        "at": {
+          "FIG-ZEICHEN-WEG": "FIG-PAULUS"
+        },
         "mood": {
-          "FIG-PAULUS": "smile"
+          "FIG-PAULUS": "determined"
         }
       }
     },
@@ -81,56 +91,71 @@
       "n": 3,
       "reference": "PHP.3.17-PHP.3.21",
       "figures": [
-        "FIG-PAULUS",
+        "FIG-GRUPPE-GEGNER",
         "FIG-GRUPPE-GLAUBENDE"
       ],
-      "objects": [
-        "FIG-OBJ-KETTE"
+      "objects": [],
+      "signs": [
+        "FIG-ZEICHEN-WELT",
+        "FIG-ZEICHEN-HIMMEL-OFFEN"
       ],
-      "signs": [],
       "speech": [
         {
-          "from": "FIG-PAULUS",
+          "from": "FIG-GRUPPE-GLAUBENDE",
           "to": "FIG-GRUPPE-GLAUBENDE",
           "icons": [
-            "FIG-ZEICHEN-NEUE-SCHOEPFUNG",
-            "FIG-JESUS",
-            "FIG-ZEICHEN-HINAB"
-          ]
+            "FIG-JESUS"
+          ],
+          "think": true,
+          "word": {
+            "de": "Wir erwarten den Retter",
+            "gsw": "Mir erwarted de Retter"
+          }
         }
       ],
-      "action_de": "Das Bürgerrecht der Glaubenden ist im Himmel; von dort erwarten sie den Retter, den Herrn Jesus Christus, der ihren Leib verwandeln wird.",
+      "action_de": "Viele leben als Feinde des Kreuzes Christi; unser Bürgerrecht aber ist im Himmel, von wo wir den Retter erwarten, den Herrn Jesus Christus.",
+      "keywords": {
+        "de": "Denn unser Bürgerrecht ist im Himmel",
+        "gsw": "Dänn öises Bürgerrächt isch im Himmel"
+      },
       "stage": {
-        "floor_x": {
-          "FIG-OBJ-KETTE": 26
+        "split": 1,
+        "at": {
+          "FIG-ZEICHEN-HIMMEL-OFFEN": "FIG-GRUPPE-GLAUBENDE"
+        },
+        "pose": {
+          "FIG-GRUPPE-GEGNER": "away"
         },
         "mood": {
-          "FIG-GRUPPE-GLAUBENDE": "delight",
-          "FIG-PAULUS": "smile"
+          "FIG-GRUPPE-GLAUBENDE": "smile",
+          "FIG-GRUPPE-GEGNER": "calm"
+        },
+        "beside": {
+          "FIG-ZEICHEN-WELT": "FIG-GRUPPE-GEGNER"
         }
       }
     }
   ],
   "actions_de": [
-    "Herkunft und Gesetzestreue, die Paulus Gewinn waren, hält er um Christi willen für Verlust; Christus zu gewinnen ist ihm alles wert.",
-    "Paulus hat das Ziel noch nicht erreicht; er vergisst, was hinter ihm liegt, und jagt dem Siegespreis der himmlischen Berufung nach.",
-    "Das Bürgerrecht der Glaubenden ist im Himmel; von dort erwarten sie den Retter, den Herrn Jesus Christus, der ihren Leib verwandeln wird."
+    "Was Paulus Gewinn war, hält er um Christi willen für Verlust, damit er Christus gewinne.",
+    "Paulus hat das Ziel noch nicht erreicht; er vergisst, was hinter ihm liegt, und jagt dem Siegespreis der himmlischen Berufung Gottes nach.",
+    "Viele leben als Feinde des Kreuzes Christi; unser Bürgerrecht aber ist im Himmel, von wo wir den Retter erwarten, den Herrn Jesus Christus."
   ],
   "captions_de": [
-    "Gewinn und Verlust: Paulus (Kette) erklärt: seine Gesetzestreue (Tafeln) ist Verlust (Münzen fallen); Christus (Kreuznimbus) ist Gewinn (Münzen, Pfeil hoch).",
-    "Lauf zum Ziel: Paulus strebt auf das Ziel mit dem Siegeskranz zu (gestrichelter Weg); die Kette liegt hinter ihm.",
-    "Bürger des Himmels: Paulus (Kette) sagt den Glaubenden: Ihr gehört zur himmlischen Stadt; von dort wird Christus (Kreuznimbus) kommen (Pfeil nach unten)."
+    "Gewinn → Verlust: Paulus lässt die Münzen fallen (grauer Beutel) und wendet sich Jesus zu; er denkt: «Christus gewinnen» (Münzstapel mit grünem Pfeil).",
+    "Wettlauf: Paulus läuft (Fussspuren hinter ihm) auf das Ziel zu (Pfosten mit grünem Kranz).",
+    "Bürgerrecht im Himmel: Die Glaubenden blicken zum offenen Himmel und erwarten den Retter (Gedankenwolke mit Jesus); die Feinde des Kreuzes (graue Gruppe) abseits, der Erde zugewandt (Erdkugel)."
   ],
-  "interpretation_note_de": "Je ein Feld aus dem ersten Abschnitt, zwei aus dem zweiten; Einzelheiten dort.",
+  "interpretation_note_de": "Drei Comic-Szenen für zwei Abschnitte: Gewinn → Verlust um Christi willen ([[PHP.3.1-PHP.3.11]]), dann der Wettlauf zum Ziel ([[PHP.3.12-PHP.3.16]]) und das Bürgerrecht im Himmel ([[PHP.3.17-PHP.3.21]]). Der Retter wird erwartet; er erscheint darum in einer Gedankenwolke der Glaubenden, nicht als kommende Gestalt. Die sieben Vorzüge und die Gegenüberstellung mit den Feinden des Kreuzes zeigen die Abschnittsbilder. Comic-Szenen nach dem Entscheid vom 2026-10-25. Die Feinde des Kreuzes sind als graue Gruppe wie die Gegner von [[PHP.1.28]] gezeichnet; ob dieselben Menschen gemeint sind, sagt der Text nicht.",
   "basis": [
     {
       "record": "SUM-CH-PHP-003",
       "field": "summary",
-      "fingerprint": "0937b8ad8c546ac8"
+      "fingerprint": "d5ab8fa7b5d858b4"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -246,6 +271,279 @@
           "Gewinn und Verlust: Paulus (Kette) erklärt: seine Gesetzestreue (Tafeln) ist Verlust (Münzen fallen); Christus (Kreuznimbus) ist Gewinn (Münzen, Pfeil hoch).",
           "Lauf zum Ziel: Paulus läuft (Pfeil), die Kette hinter sich, auf das Ziel mit dem Siegeskranz zu.",
           "Bürger des Himmels: Paulus (Kette) sagt den Glaubenden: Ihr gehört zur himmlischen Stadt; von dort wird Christus (Kreuznimbus) kommen (Pfeil nach unten)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "PHP.3.1-PHP.3.11",
+            "figures": [
+              "FIG-PAULUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-GRUPPE-GLAUBENDE",
+                "icons": [
+                  "FIG-OBJ-GESETZESTAFELN",
+                  "FIG-ZEICHEN-VERLUST",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-GEWINN"
+                ]
+              }
+            ],
+            "action_de": "Herkunft und Gesetzestreue, die Paulus Gewinn waren, hält er um Christi willen für Verlust; Christus zu gewinnen ist ihm alles wert.",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KETTE": 70
+              },
+              "x": {
+                "FIG-PAULUS": 93
+              },
+              "mood": {
+                "FIG-PAULUS": "smile"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "PHP.3.12-PHP.3.16",
+            "figures": [
+              "FIG-PAULUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE",
+              "FIG-ZEICHEN-ZIEL"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Paulus hat das Ziel noch nicht erreicht; er vergisst, was hinter ihm liegt, und jagt dem Siegespreis der himmlischen Berufung nach.",
+            "stage": {
+              "x": {
+                "FIG-PAULUS": 84
+              },
+              "floor_x": {
+                "FIG-OBJ-KETTE": 16,
+                "FIG-ZEICHEN-ZIEL": 158
+              },
+              "arrows": [
+                [
+                  "FIG-PAULUS",
+                  "FIG-ZEICHEN-ZIEL",
+                  "go"
+                ]
+              ],
+              "mood": {
+                "FIG-PAULUS": "smile"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "PHP.3.17-PHP.3.21",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-GRUPPE-GLAUBENDE",
+                "icons": [
+                  "FIG-ZEICHEN-NEUE-SCHOEPFUNG",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-HINAB"
+                ]
+              }
+            ],
+            "action_de": "Das Bürgerrecht der Glaubenden ist im Himmel; von dort erwarten sie den Retter, den Herrn Jesus Christus, der ihren Leib verwandeln wird.",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KETTE": 26
+              },
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "delight",
+                "FIG-PAULUS": "smile"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Herkunft und Gesetzestreue, die Paulus Gewinn waren, hält er um Christi willen für Verlust; Christus zu gewinnen ist ihm alles wert.",
+          "Paulus hat das Ziel noch nicht erreicht; er vergisst, was hinter ihm liegt, und jagt dem Siegespreis der himmlischen Berufung nach.",
+          "Das Bürgerrecht der Glaubenden ist im Himmel; von dort erwarten sie den Retter, den Herrn Jesus Christus, der ihren Leib verwandeln wird."
+        ],
+        "captions_de": [
+          "Gewinn und Verlust: Paulus (Kette) erklärt: seine Gesetzestreue (Tafeln) ist Verlust (Münzen fallen); Christus (Kreuznimbus) ist Gewinn (Münzen, Pfeil hoch).",
+          "Lauf zum Ziel: Paulus strebt auf das Ziel mit dem Siegeskranz zu (gestrichelter Weg); die Kette liegt hinter ihm.",
+          "Bürger des Himmels: Paulus (Kette) sagt den Glaubenden: Ihr gehört zur himmlischen Stadt; von dort wird Christus (Kreuznimbus) kommen (Pfeil nach unten)."
+        ],
+        "interpretation_note_de": "Je ein Feld aus dem ersten Abschnitt, zwei aus dem zweiten; Einzelheiten dort.",
+        "basis": [
+          {
+            "record": "SUM-CH-PHP-003",
+            "field": "summary",
+            "fingerprint": "0937b8ad8c546ac8"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Prüfung Struktur zuerst",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "PHP.3.1-PHP.3.11",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-VERLUST"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-PAULUS",
+                "icons": [
+                  "FIG-ZEICHEN-GEWINN"
+                ],
+                "think": true,
+                "word": {
+                  "de": "Christus gewinnen",
+                  "gsw": "Christus gwünne"
+                }
+              }
+            ],
+            "action_de": "Was Paulus Gewinn war, hält er um Christi willen für Verlust, damit er Christus gewinne.",
+            "keywords": {
+              "de": "Damit ich Christus gewinne",
+              "gsw": "Demit ich Christus gwünn"
+            },
+            "names": {
+              "FIG-PAULUS": {
+                "de": "Paulus",
+                "gsw": "Paulus"
+              }
+            },
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-VERLUST": "FIG-PAULUS"
+              },
+              "mood": {
+                "FIG-PAULUS": "delight",
+                "FIG-JESUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "PHP.3.12-PHP.3.16",
+            "figures": [
+              "FIG-PAULUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-WEG",
+              "FIG-ZEICHEN-ZIEL"
+            ],
+            "speech": [],
+            "action_de": "Paulus hat das Ziel noch nicht erreicht; er vergisst, was hinter ihm liegt, und jagt dem Siegespreis der himmlischen Berufung Gottes nach.",
+            "keywords": {
+              "de": "Ich jage aber danach",
+              "gsw": "Ich jag aber dem nache"
+            },
+            "stage": {
+              "x": {
+                "FIG-PAULUS": 70
+              },
+              "beside": {
+                "FIG-ZEICHEN-ZIEL": "FIG-PAULUS"
+              },
+              "at": {
+                "FIG-ZEICHEN-WEG": "FIG-PAULUS"
+              },
+              "mood": {
+                "FIG-PAULUS": "determined"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "PHP.3.17-PHP.3.21",
+            "figures": [
+              "FIG-GRUPPE-GEGNER",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-WELT",
+              "FIG-ZEICHEN-HIMMEL-OFFEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-GLAUBENDE",
+                "to": "FIG-GRUPPE-GLAUBENDE",
+                "icons": [
+                  "FIG-JESUS"
+                ],
+                "think": true,
+                "word": {
+                  "de": "Wir erwarten den Retter",
+                  "gsw": "Mir erwarted de Retter"
+                }
+              }
+            ],
+            "action_de": "Viele leben als Feinde des Kreuzes Christi; unser Bürgerrecht aber ist im Himmel, von wo wir den Retter erwarten, den Herrn Jesus Christus.",
+            "keywords": {
+              "de": "Denn unser Bürgerrecht ist im Himmel",
+              "gsw": "Dänn öises Bürgerrächt isch im Himmel"
+            },
+            "stage": {
+              "split": 1,
+              "at": {
+                "FIG-ZEICHEN-WELT": "FIG-GRUPPE-GEGNER",
+                "FIG-ZEICHEN-HIMMEL-OFFEN": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "pose": {
+                "FIG-GRUPPE-GEGNER": "away"
+              },
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "smile",
+                "FIG-GRUPPE-GEGNER": "calm"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Gewinn → Verlust: Paulus lässt die Münzen fallen (grauer Beutel) und wendet sich Jesus zu; er denkt: «Christus gewinnen» (Münzstapel mit grünem Pfeil).",
+          "Wettlauf: Paulus läuft (Fussspuren hinter ihm) auf das Ziel zu (Pfosten mit grünem Kranz).",
+          "Bürgerrecht im Himmel: Die Glaubenden blicken zum offenen Himmel und erwarten den Retter (Gedankenwolke mit Jesus); die Gegner (graue Gruppe) abseits, der Erde zugewandt (Erdkugel)."
+        ],
+        "interpretation_note_de": "Drei Comic-Szenen für zwei Abschnitte: Gewinn → Verlust um Christi willen ([[PHP.3.1-PHP.3.11]]), dann der Wettlauf zum Ziel ([[PHP.3.12-PHP.3.16]]) und das Bürgerrecht im Himmel ([[PHP.3.17-PHP.3.21]]). Der Retter wird erwartet; er erscheint darum in einer Gedankenwolke der Glaubenden, nicht als kommende Gestalt. Die sieben Vorzüge und die Gegenüberstellung mit den Feinden des Kreuzes zeigen die Abschnittsbilder. Comic-Szenen nach dem Entscheid vom 2026-10-25.",
+        "basis": [
+          {
+            "record": "SUM-CH-PHP-003",
+            "field": "summary",
+            "fingerprint": "f4834470a00699e7"
+          }
         ]
       }
     }

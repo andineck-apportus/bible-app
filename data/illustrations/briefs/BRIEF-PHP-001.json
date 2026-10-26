@@ -11,65 +11,17 @@
   "panels": [
     {
       "n": 1,
-      "reference": "PHP.1.1-PHP.1.2",
+      "reference": "PHP.1.1-PHP.1.11",
       "figures": [
+        "FIG-GOTT",
         "FIG-PAULUS",
         "FIG-TIMOTHEUS"
       ],
       "objects": [
-        "FIG-OBJ-KETTE",
-        "FIG-GRUPPE-GEMEINDE"
-      ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-PAULUS",
-          "to": "FIG-GRUPPE-GEMEINDE",
-          "icons": [
-            "FIG-ZEICHEN-GNADE",
-            "FIG-ZEICHEN-FRIEDE",
-            "FIG-GOTT",
-            "FIG-JESUS"
-          ]
-        }
-      ],
-      "action_de": "Paulus und Timotheus, Knechte Christi Jesu, schreiben an alle Heiligen in Philippi samt Aufsehern und Diakonen und wünschen ihnen Gnade und Frieden von Gott und dem Herrn Jesus Christus.",
-      "stage": {
-        "arrows": [
-          [
-            "FIG-PAULUS",
-            "FIG-GRUPPE-GEMEINDE",
-            "act"
-          ]
-        ],
-        "floor_x": {
-          "FIG-OBJ-KETTE": 10
-        },
-        "mood": {
-          "FIG-PAULUS": "smile",
-          "FIG-TIMOTHEUS": "calm"
-        },
-        "x": {
-          "FIG-PAULUS": 26,
-          "FIG-TIMOTHEUS": 70
-        },
-        "wear": {
-          "FIG-TIMOTHEUS": "#9CC3E4"
-        }
-      }
-    },
-    {
-      "n": 2,
-      "reference": "PHP.1.3-PHP.1.11",
-      "figures": [
-        "FIG-GOTT",
-        "FIG-PAULUS"
-      ],
-      "objects": [
-        "FIG-OBJ-KETTE",
-        "FIG-GRUPPE-GEMEINDE"
+        "FIG-OBJ-BRIEF"
       ],
       "signs": [
+        "FIG-ZEICHEN-BETEN",
         "FIG-ZEICHEN-FREUDE"
       ],
       "speech": [
@@ -77,124 +29,199 @@
           "from": "FIG-PAULUS",
           "to": "FIG-GOTT",
           "icons": [
-            "FIG-GRUPPE-GEMEINDE",
-            "FIG-ZEICHEN-LIEBE",
-            "FIG-ZEICHEN-WACHSEN"
-          ]
+            "FIG-ZEICHEN-FREUDE"
+          ],
+          "word": {
+            "de": "Ich danke meinem Gott!",
+            "gsw": "Ich dank mim Gott!"
+          }
         }
       ],
-      "action_de": "Paulus dankt Gott mit Freude für die Gemeinde, die er im Herzen trägt, und bittet, dass ihre Liebe an Einsicht zunimmt.",
-      "stage": {
-        "floor_x": {
-          "FIG-OBJ-KETTE": 40
+      "action_de": "Paulus und Timotheus schreiben an die Heiligen in Philippi; Paulus dankt seinem Gott mit Freude für ihre Gemeinschaft am Evangelium und betet für sie.",
+      "keywords": {
+        "de": "Ich danke meinem Gott",
+        "gsw": "Ich dank mim Gott"
+      },
+      "names": {
+        "FIG-PAULUS": {
+          "de": "Paulus",
+          "gsw": "Paulus"
         },
-        "x": {
-          "FIG-PAULUS": 70
+        "FIG-TIMOTHEUS": {
+          "de": "Timotheus",
+          "gsw": "Timotheus"
+        }
+      },
+      "stage": {
+        "god_side": "left",
+        "hold": {
+          "FIG-PAULUS": "FIG-OBJ-BRIEF"
+        },
+        "at": {
+          "FIG-ZEICHEN-BETEN": "FIG-PAULUS"
+        },
+        "signs_who": {
+          "FIG-ZEICHEN-FREUDE": [
+            "FIG-PAULUS"
+          ]
         },
         "mood": {
-          "FIG-PAULUS": "smile"
+          "FIG-PAULUS": "delight",
+          "FIG-TIMOTHEUS": "smile"
+        }
+      }
+    },
+    {
+      "n": 2,
+      "reference": "PHP.1.12-PHP.1.18",
+      "figures": [
+        "FIG-ROLLE-SOLDAT",
+        "FIG-PAULUS",
+        "FIG-GRUPPE-GESCHWISTER"
+      ],
+      "objects": [
+        "FIG-ORT-PRAETORIUM",
+        "FIG-OBJ-KETTE"
+      ],
+      "signs": [
+        "FIG-ZEICHEN-VERKUENDIGEN",
+        "FIG-ZEICHEN-FREUDE"
+      ],
+      "speech": [],
+      "action_de": "Paulus liegt um Christi willen in Fesseln; im ganzen Prätorium ist es bekannt geworden, und die Geschwister sagen das Wort umso furchtloser. Dass Christus verkündigt wird, darüber freut sich Paulus.",
+      "keywords": {
+        "de": "Zur Förderung des Evangeliums",
+        "gsw": "Zum Vorwärtscho vom Evangelium"
+      },
+      "stage": {
+        "hold": {
+          "FIG-PAULUS": "FIG-OBJ-KETTE"
         },
-        "arrows": [
-          [
-            "FIG-PAULUS",
-            "FIG-GOTT",
-            "act"
+        "back_side": "left",
+        "before": true,
+        "split": 2,
+        "x": {
+          "FIG-ROLLE-SOLDAT": 34,
+          "FIG-PAULUS": 80,
+          "FIG-GRUPPE-GESCHWISTER": 150
+        },
+        "beside": {
+          "FIG-ZEICHEN-VERKUENDIGEN": "FIG-GRUPPE-GESCHWISTER"
+        },
+        "signs_who": {
+          "FIG-ZEICHEN-FREUDE": [
+            "FIG-PAULUS"
           ]
-        ]
+        },
+        "mood": {
+          "FIG-PAULUS": "delight",
+          "FIG-ROLLE-SOLDAT": "earnest",
+          "FIG-GRUPPE-GESCHWISTER": "determined"
+        }
       }
     },
     {
       "n": 3,
-      "reference": "PHP.1.12-PHP.1.26",
+      "reference": "PHP.1.19-PHP.1.26",
       "figures": [
-        "FIG-ROLLE-SOLDAT",
         "FIG-PAULUS",
         "FIG-GRUPPE-GLAUBENDE"
       ],
       "objects": [
         "FIG-OBJ-KETTE"
       ],
-      "signs": [
-        "FIG-ZEICHEN-VERKUENDIGEN"
-      ],
+      "signs": [],
       "speech": [
         {
           "from": "FIG-PAULUS",
-          "to": "FIG-ROLLE-SOLDAT",
+          "to": "FIG-PAULUS",
           "icons": [
-            "FIG-JESUS",
-            "FIG-OBJ-KETTE"
-          ]
+            "FIG-ZEICHEN-LEBEN",
+            "FIG-ZEICHEN-TOD"
+          ],
+          "think": true,
+          "word": {
+            "de": "Das Leben ist Christus, das Sterben Gewinn",
+            "gsw": "S Läbe isch Christus, s Sterbe Gwünn"
+          }
         }
       ],
-      "action_de": "Die Fesseln des Paulus sind im ganzen Prätorium als Fesseln um Christi willen bekannt geworden, und die meisten Geschwister sagen das Wort nun umso furchtloser.",
+      "action_de": "Paulus wägt ab: Für ihn ist das Leben Christus und das Sterben Gewinn; doch das Bleiben ist um der Gemeinde willen nötiger, darum wird er bleiben.",
+      "keywords": {
+        "de": "Sei es durch Leben oder durch Tod",
+        "gsw": "Sig s dur s Läbe oder dur de Tod"
+      },
       "stage": {
-        "floor_x": {
-          "FIG-OBJ-KETTE": 76
-        },
-        "at": {
-          "FIG-ZEICHEN-VERKUENDIGEN": "FIG-GRUPPE-GLAUBENDE"
+        "hold": {
+          "FIG-PAULUS": "FIG-OBJ-KETTE"
         },
         "mood": {
-          "FIG-ROLLE-SOLDAT": "calm",
-          "FIG-GRUPPE-GLAUBENDE": "smile",
-          "FIG-PAULUS": "smile"
-        },
-        "arrows": [
-          [
-            "FIG-PAULUS",
-            "FIG-GRUPPE-GLAUBENDE",
-            "act"
-          ]
-        ]
+          "FIG-PAULUS": "pensive",
+          "FIG-GRUPPE-GLAUBENDE": "calm"
+        }
       }
     },
     {
       "n": 4,
       "reference": "PHP.1.27-PHP.1.30",
       "figures": [
+        "FIG-PAULUS",
         "FIG-GRUPPE-GLAUBENDE",
         "FIG-GRUPPE-GEGNER"
       ],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-EINHEIT"
+      "signs": [],
+      "speech": [
+        {
+          "from": "FIG-PAULUS",
+          "to": "FIG-GRUPPE-GLAUBENDE",
+          "icons": [
+            "FIG-ZEICHEN-EINHEIT"
+          ],
+          "word": {
+            "de": "Steht fest in einem Geist!",
+            "gsw": "Stönd fescht i einem Geischt!"
+          }
+        }
       ],
-      "speech": [],
-      "action_de": "Die Gemeinde soll einmütig zusammenstehen und sich von den Gegnern durch nichts einschüchtern lassen.",
+      "action_de": "Die Philipper sollen leben, wie es dem Evangelium Christi entspricht: in einem Geist feststehen, einmütig für den Glauben kämpfen und sich von den Gegnern nicht einschüchtern lassen.",
+      "keywords": {
+        "de": "In einem Geist feststehen",
+        "gsw": "I einem Geischt fescht staa"
+      },
+      "letter": true,
       "stage": {
-        "at": {
-          "FIG-ZEICHEN-EINHEIT": "FIG-GRUPPE-GLAUBENDE"
-        },
+        "split": 1,
         "mood": {
-          "FIG-GRUPPE-GLAUBENDE": "smile",
-          "FIG-GRUPPE-GEGNER": "earnest"
+          "FIG-PAULUS": "earnest",
+          "FIG-GRUPPE-GLAUBENDE": "determined",
+          "FIG-GRUPPE-GEGNER": "angry"
         }
       }
     }
   ],
   "actions_de": [
-    "Paulus und Timotheus, Knechte Christi Jesu, schreiben an alle Heiligen in Philippi samt Aufsehern und Diakonen und wünschen ihnen Gnade und Frieden von Gott und dem Herrn Jesus Christus.",
-    "Paulus dankt Gott mit Freude für die Gemeinde, die er im Herzen trägt, und bittet, dass ihre Liebe an Einsicht zunimmt.",
-    "Die Fesseln des Paulus sind im ganzen Prätorium als Fesseln um Christi willen bekannt geworden, und die meisten Geschwister sagen das Wort nun umso furchtloser.",
-    "Die Gemeinde soll einmütig zusammenstehen und sich von den Gegnern durch nichts einschüchtern lassen."
+    "Paulus und Timotheus schreiben an die Heiligen in Philippi; Paulus dankt seinem Gott mit Freude für ihre Gemeinschaft am Evangelium und betet für sie.",
+    "Paulus liegt um Christi willen in Fesseln; im ganzen Prätorium ist es bekannt geworden, und die Geschwister sagen das Wort umso furchtloser. Dass Christus verkündigt wird, darüber freut sich Paulus.",
+    "Paulus wägt ab: Für ihn ist das Leben Christus und das Sterben Gewinn; doch das Bleiben ist um der Gemeinde willen nötiger, darum wird er bleiben.",
+    "Die Philipper sollen leben, wie es dem Evangelium Christi entspricht: in einem Geist feststehen, einmütig für den Glauben kämpfen und sich von den Gegnern nicht einschüchtern lassen."
   ],
   "captions_de": [
-    "Briefgruss: Paulus (Kette) und Timotheus (jung, mit Brief) schreiben der Gemeinde in Philippi (Haus mit Menschen, Pfeil); Paulus wünscht Gnade (Hände mit Licht) und Frieden (Ölzweig) von Gott (Strahlenkranz) und Jesus (Kreuznimbus).",
-    "Dank und Bitte: Paulus (Kette) betet froh zu Gott (Strahlenkranz, Linie nach oben) für die Gemeinde (Haus mit Menschen): ihre Liebe (Herz) soll wachsen (Sprosse).",
-    "Fesseln → Mut: Paulus (Kette) erklärt dem Wachsoldaten, dass er um Christi willen (Kreuznimbus) gefesselt ist; dadurch fassen die Geschwister Mut (Pfeil) und verkündigen furchtlos (Rufhorn über ihnen).",
-    "Standhalten: Die Glaubenden stehen einmütig zusammen (zwei goldene Ringe über ihnen), froh und furchtlos gegenüber den Gegnern (grau)."
+    "Dank mit Freude: Paulus mit dem Brief und Timotheus; Paulus betet zu Gott (Strahlenkranz, gefaltete Hände) und freut sich (lachendes Gesicht).",
+    "Fesseln fördern das Evangelium: Paulus mit Kette vor dem Prätorium (Säulenbau), daneben ein Soldat; die Geschwister (blaugraue Gruppe) verkündigen (goldener Rufer). Paulus freut sich (lachendes Gesicht).",
+    "Leben oder Sterben: Paulus mit Kette denkt nach (Gedankenwolke: Keimling für Leben, Totenkopf für Sterben); er blickt zur Gemeinde (taubenblaue Gruppe), um derentwillen er bleibt.",
+    "Auftrag an die Gemeinde – feststehen: Paulus ist fern (gestrichelte Linie) und schreibt: «Steht fest in einem Geist!» (goldene Ringe); die Glaubenden stehen zusammen, die Gegner (graue Gruppe) gegenüber."
   ],
-  "interpretation_note_de": "Je ein Feld aus den vier Abschnitten des Kapitels; Einzelheiten dort. Paulus schreibt den Brief als Gefangener «in Fesseln» ([[PHP.1.7]], [[PHP.1.13]]); deshalb liegt bei ihm eine Kette. Ein Soldat steht für die Wache im Prätorium ([[PHP.1.13]]).",
+  "interpretation_note_de": "Vier Comic-Szenen für vier Abschnitte: Briefkopf und Dank mit Freude ([[PHP.1.1-PHP.1.11]]; Timotheus als Mitabsender), Paulus in Fesseln vor dem Prätorium, während die Geschwister furchtlos verkündigen ([[PHP.1.12-PHP.1.18]]), die Abwägung zwischen Leben und Sterben ([[PHP.1.19-PHP.1.26]]) und der Auftrag an die Gemeinde, einmütig und furchtlos zu leben ([[PHP.1.27-PHP.1.30]]). Die Strukturbilder der Abschnitte zeigen die Glieder im Einzelnen. Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-PHP-001",
       "field": "summary",
-      "fingerprint": "014357a292a4ce15"
+      "fingerprint": "42942bd58140b11a"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -521,6 +548,389 @@
           "Dank und Bitte: Paulus (Kette) betet froh zu Gott (Strahlenkranz, Linie nach oben) für die Gemeinde (Haus mit Menschen): ihre Liebe (Herz) soll wachsen (Sprosse).",
           "Gefangen für Christus: Paulus (Kette) erklärt dem Wachsoldaten, dass er um Christi willen (Kreuznimbus) gefesselt ist; die Geschwister verkündigen mutig (Rufhorn über ihnen).",
           "Standhalten: Die Glaubenden stehen einmütig zusammen (zwei goldene Ringe über ihnen), froh und furchtlos gegenüber den Gegnern (grau)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "PHP.1.1-PHP.1.2",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TIMOTHEUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE",
+              "FIG-GRUPPE-GEMEINDE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-GRUPPE-GEMEINDE",
+                "icons": [
+                  "FIG-ZEICHEN-GNADE",
+                  "FIG-ZEICHEN-FRIEDE",
+                  "FIG-GOTT",
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Paulus und Timotheus, Knechte Christi Jesu, schreiben an alle Heiligen in Philippi samt Aufsehern und Diakonen und wünschen ihnen Gnade und Frieden von Gott und dem Herrn Jesus Christus.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-PAULUS",
+                  "FIG-GRUPPE-GEMEINDE",
+                  "act"
+                ]
+              ],
+              "floor_x": {
+                "FIG-OBJ-KETTE": 10
+              },
+              "mood": {
+                "FIG-PAULUS": "smile",
+                "FIG-TIMOTHEUS": "calm"
+              },
+              "x": {
+                "FIG-PAULUS": 26,
+                "FIG-TIMOTHEUS": 70
+              },
+              "wear": {
+                "FIG-TIMOTHEUS": "#9CC3E4"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "PHP.1.3-PHP.1.11",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-PAULUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE",
+              "FIG-GRUPPE-GEMEINDE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-GRUPPE-GEMEINDE",
+                  "FIG-ZEICHEN-LIEBE",
+                  "FIG-ZEICHEN-WACHSEN"
+                ]
+              }
+            ],
+            "action_de": "Paulus dankt Gott mit Freude für die Gemeinde, die er im Herzen trägt, und bittet, dass ihre Liebe an Einsicht zunimmt.",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KETTE": 40
+              },
+              "x": {
+                "FIG-PAULUS": 70
+              },
+              "mood": {
+                "FIG-PAULUS": "smile"
+              },
+              "arrows": [
+                [
+                  "FIG-PAULUS",
+                  "FIG-GOTT",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "PHP.1.12-PHP.1.26",
+            "figures": [
+              "FIG-ROLLE-SOLDAT",
+              "FIG-PAULUS",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-VERKUENDIGEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-ROLLE-SOLDAT",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-OBJ-KETTE"
+                ]
+              }
+            ],
+            "action_de": "Die Fesseln des Paulus sind im ganzen Prätorium als Fesseln um Christi willen bekannt geworden, und die meisten Geschwister sagen das Wort nun umso furchtloser.",
+            "stage": {
+              "floor_x": {
+                "FIG-OBJ-KETTE": 76
+              },
+              "at": {
+                "FIG-ZEICHEN-VERKUENDIGEN": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "mood": {
+                "FIG-ROLLE-SOLDAT": "calm",
+                "FIG-GRUPPE-GLAUBENDE": "smile",
+                "FIG-PAULUS": "smile"
+              },
+              "arrows": [
+                [
+                  "FIG-PAULUS",
+                  "FIG-GRUPPE-GLAUBENDE",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 4,
+            "reference": "PHP.1.27-PHP.1.30",
+            "figures": [
+              "FIG-GRUPPE-GLAUBENDE",
+              "FIG-GRUPPE-GEGNER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-EINHEIT"
+            ],
+            "speech": [],
+            "action_de": "Die Gemeinde soll einmütig zusammenstehen und sich von den Gegnern durch nichts einschüchtern lassen.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-EINHEIT": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "smile",
+                "FIG-GRUPPE-GEGNER": "earnest"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Paulus und Timotheus, Knechte Christi Jesu, schreiben an alle Heiligen in Philippi samt Aufsehern und Diakonen und wünschen ihnen Gnade und Frieden von Gott und dem Herrn Jesus Christus.",
+          "Paulus dankt Gott mit Freude für die Gemeinde, die er im Herzen trägt, und bittet, dass ihre Liebe an Einsicht zunimmt.",
+          "Die Fesseln des Paulus sind im ganzen Prätorium als Fesseln um Christi willen bekannt geworden, und die meisten Geschwister sagen das Wort nun umso furchtloser.",
+          "Die Gemeinde soll einmütig zusammenstehen und sich von den Gegnern durch nichts einschüchtern lassen."
+        ],
+        "captions_de": [
+          "Briefgruss: Paulus (Kette) und Timotheus (jung, mit Brief) schreiben der Gemeinde in Philippi (Haus mit Menschen, Pfeil); Paulus wünscht Gnade (Hände mit Licht) und Frieden (Ölzweig) von Gott (Strahlenkranz) und Jesus (Kreuznimbus).",
+          "Dank und Bitte: Paulus (Kette) betet froh zu Gott (Strahlenkranz, Linie nach oben) für die Gemeinde (Haus mit Menschen): ihre Liebe (Herz) soll wachsen (Sprosse).",
+          "Fesseln → Mut: Paulus (Kette) erklärt dem Wachsoldaten, dass er um Christi willen (Kreuznimbus) gefesselt ist; dadurch fassen die Geschwister Mut (Pfeil) und verkündigen furchtlos (Rufhorn über ihnen).",
+          "Standhalten: Die Glaubenden stehen einmütig zusammen (zwei goldene Ringe über ihnen), froh und furchtlos gegenüber den Gegnern (grau)."
+        ],
+        "interpretation_note_de": "Je ein Feld aus den vier Abschnitten des Kapitels; Einzelheiten dort. Paulus schreibt den Brief als Gefangener «in Fesseln» ([[PHP.1.7]], [[PHP.1.13]]); deshalb liegt bei ihm eine Kette. Ein Soldat steht für die Wache im Prätorium ([[PHP.1.13]]).",
+        "basis": [
+          {
+            "record": "SUM-CH-PHP-001",
+            "field": "summary",
+            "fingerprint": "014357a292a4ce15"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "PHP.1.1-PHP.1.11",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-PAULUS",
+              "FIG-TIMOTHEUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BRIEF"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-BETEN",
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-FREUDE"
+                ],
+                "word": {
+                  "de": "Ich danke meinem Gott!",
+                  "gsw": "Ich dank mim Gott!"
+                }
+              }
+            ],
+            "action_de": "Paulus und Timotheus schreiben an die Heiligen in Philippi; Paulus dankt seinem Gott mit Freude für ihre Gemeinschaft am Evangelium und betet für sie.",
+            "keywords": {
+              "de": "Ich danke meinem Gott",
+              "gsw": "Ich dank mim Gott"
+            },
+            "names": {
+              "FIG-PAULUS": {
+                "de": "Paulus",
+                "gsw": "Paulus"
+              },
+              "FIG-TIMOTHEUS": {
+                "de": "Timotheus",
+                "gsw": "Timotheus"
+              }
+            },
+            "stage": {
+              "god_side": "left",
+              "hold": {
+                "FIG-PAULUS": "FIG-OBJ-BRIEF"
+              },
+              "at": {
+                "FIG-ZEICHEN-BETEN": "FIG-PAULUS"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-PAULUS"
+                ]
+              },
+              "mood": {
+                "FIG-PAULUS": "delight",
+                "FIG-TIMOTHEUS": "smile"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "PHP.1.12-PHP.1.18",
+            "figures": [
+              "FIG-ROLLE-SOLDAT",
+              "FIG-PAULUS",
+              "FIG-GRUPPE-GESCHWISTER"
+            ],
+            "objects": [
+              "FIG-ORT-PRAETORIUM",
+              "FIG-OBJ-KETTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-VERKUENDIGEN",
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [],
+            "action_de": "Paulus liegt um Christi willen in Fesseln; im ganzen Prätorium ist es bekannt geworden, und die Geschwister sagen das Wort umso furchtloser. Dass Christus verkündigt wird, darüber freut sich Paulus.",
+            "keywords": {
+              "de": "Zur Förderung des Evangeliums",
+              "gsw": "Zum Vorwärtscho vom Evangelium"
+            },
+            "stage": {
+              "hold": {
+                "FIG-PAULUS": "FIG-OBJ-KETTE"
+              },
+              "back_side": "left",
+              "at": {
+                "FIG-ZEICHEN-VERKUENDIGEN": "FIG-GRUPPE-GESCHWISTER"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-PAULUS"
+                ]
+              },
+              "mood": {
+                "FIG-PAULUS": "delight",
+                "FIG-ROLLE-SOLDAT": "earnest",
+                "FIG-GRUPPE-GESCHWISTER": "determined"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "PHP.1.19-PHP.1.26",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [
+              "FIG-OBJ-KETTE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-PAULUS",
+                "icons": [
+                  "FIG-ZEICHEN-LEBEN",
+                  "FIG-ZEICHEN-TOD"
+                ],
+                "think": true,
+                "word": {
+                  "de": "Das Leben ist Christus, das Sterben Gewinn",
+                  "gsw": "S Läbe isch Christus, s Sterbe Gwünn"
+                }
+              }
+            ],
+            "action_de": "Paulus wägt ab: Für ihn ist das Leben Christus und das Sterben Gewinn; doch das Bleiben ist um der Gemeinde willen nötiger, darum wird er bleiben.",
+            "keywords": {
+              "de": "Sei es durch Leben oder durch Tod",
+              "gsw": "Sig s dur s Läbe oder dur de Tod"
+            },
+            "stage": {
+              "hold": {
+                "FIG-PAULUS": "FIG-OBJ-KETTE"
+              },
+              "mood": {
+                "FIG-PAULUS": "pensive",
+                "FIG-GRUPPE-GLAUBENDE": "calm"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "PHP.1.27-PHP.1.30",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-GRUPPE-GLAUBENDE",
+              "FIG-GRUPPE-GEGNER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-GRUPPE-GLAUBENDE",
+                "icons": [
+                  "FIG-ZEICHEN-EINHEIT"
+                ],
+                "word": {
+                  "de": "Steht fest in einem Geist!",
+                  "gsw": "Stönd fescht i einem Geischt!"
+                }
+              }
+            ],
+            "action_de": "Die Philipper sollen leben, wie es dem Evangelium Christi entspricht: in einem Geist feststehen, einmütig für den Glauben kämpfen und sich von den Gegnern nicht einschüchtern lassen.",
+            "keywords": {
+              "de": "In einem Geist feststehen",
+              "gsw": "I einem Geischt fescht staa"
+            },
+            "letter": true,
+            "stage": {
+              "split": 1,
+              "mood": {
+                "FIG-PAULUS": "earnest",
+                "FIG-GRUPPE-GLAUBENDE": "determined",
+                "FIG-GRUPPE-GEGNER": "angry"
+              }
+            }
+          }
         ]
       }
     }

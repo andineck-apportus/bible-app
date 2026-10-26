@@ -11,81 +11,88 @@
   "panels": [
     {
       "n": 1,
-      "reference": "PHP.2.1-PHP.2.8",
+      "reference": "PHP.2.1-PHP.2.4",
       "figures": [
-        "FIG-JESUS"
+        "FIG-PAULUS",
+        "FIG-GRUPPE-GLAUBENDE"
+      ],
+      "objects": [],
+      "signs": [],
+      "speech": [
+        {
+          "from": "FIG-PAULUS",
+          "to": "FIG-GRUPPE-GLAUBENDE",
+          "icons": [
+            "FIG-ZEICHEN-DEMUT",
+            "FIG-ZEICHEN-EINHEIT"
+          ],
+          "word": {
+            "de": "Achtet einander höher als euch selbst!",
+            "gsw": "Achted enand höcher als eu sälber!"
+          }
+        }
+      ],
+      "action_de": "Paulus mahnt die Philipper, einmütig zu sein und in Demut einander höher zu achten als sich selbst.",
+      "keywords": {
+        "de": "In Demut achtet einander höher als euch selbst",
+        "gsw": "I Demuet achted enand höcher als eu sälber"
+      },
+      "names": {
+        "FIG-PAULUS": {
+          "de": "Paulus",
+          "gsw": "Paulus"
+        }
+      },
+      "letter": true,
+      "stage": {
+        "split": 1,
+        "mood": {
+          "FIG-PAULUS": "earnest",
+          "FIG-GRUPPE-GLAUBENDE": "calm"
+        }
+      }
+    },
+    {
+      "n": 2,
+      "reference": "PHP.2.5-PHP.2.11",
+      "figures": [
+        "FIG-GOTT",
+        "FIG-JESUS",
+        "FIG-GRUPPE-VOELKER"
       ],
       "objects": [
         "FIG-OBJ-KREUZ"
       ],
       "signs": [
-        "FIG-ZEICHEN-DEMUT"
-      ],
-      "speech": [],
-      "action_de": "Christus Jesus, der in Gottes Gestalt war, entäusserte sich, nahm Sklavengestalt an und war gehorsam bis zum Tod am Kreuz.",
-      "stage": {
-        "x": {
-          "FIG-JESUS": 56
-        },
-        "floor_x": {
-          "FIG-OBJ-KREUZ": 140
-        },
-        "mood": {
-          "FIG-JESUS": "calm"
-        },
-        "beside": {
-          "FIG-ZEICHEN-DEMUT": "FIG-JESUS"
-        },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-OBJ-KREUZ",
-            "go"
-          ]
-        ]
-      }
-    },
-    {
-      "n": 2,
-      "reference": "PHP.2.9-PHP.2.11",
-      "figures": [
-        "FIG-GOTT",
-        "FIG-GRUPPE-GLAUBENDE",
-        "FIG-JESUS"
-      ],
-      "objects": [],
-      "signs": [
         "FIG-ZEICHEN-ERHOEHEN",
         "FIG-ZEICHEN-KNIEN"
       ],
       "speech": [],
-      "action_de": "Darum hat Gott ihn erhöht, damit sich im Namen Jesu jedes Knie beuge und jede Zunge bekenne, dass Jesus Christus der Herr ist.",
+      "action_de": "Christus Jesus erniedrigte sich und wurde gehorsam bis zum Tod am Kreuz; darum hat Gott ihn über alles erhöht, damit jedes Knie sich beuge und jede Zunge bekenne: Jesus Christus ist der Herr.",
+      "keywords": {
+        "de": "Darum hat Gott ihn über alles erhöht",
+        "gsw": "Drum hät Gott en über alles erhöht"
+      },
       "stage": {
-        "at": {
-          "FIG-ZEICHEN-KNIEN": "FIG-GRUPPE-GLAUBENDE"
-        },
-        "pose": {
-          "FIG-GRUPPE-GLAUBENDE": "kneel"
-        },
-        "god_side": "right",
-        "x": {
-          "FIG-GRUPPE-GLAUBENDE": 60,
-          "FIG-JESUS": 140
-        },
-        "mood": {
-          "FIG-GRUPPE-GLAUBENDE": "smile",
-          "FIG-JESUS": "calm"
-        },
-        "beside": {
-          "FIG-ZEICHEN-ERHOEHEN": "FIG-JESUS"
-        },
+        "god_side": "center",
         "arrows": [
           [
             "FIG-GOTT",
             "FIG-JESUS",
             "act"
           ]
-        ]
+        ],
+        "at": {
+          "FIG-ZEICHEN-ERHOEHEN": "FIG-JESUS",
+          "FIG-ZEICHEN-KNIEN": "FIG-GRUPPE-VOELKER"
+        },
+        "floor_x": {
+          "FIG-OBJ-KREUZ": 20
+        },
+        "mood": {
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-VOELKER": "earnest"
+        }
       }
     },
     {
@@ -95,100 +102,102 @@
         "FIG-GRUPPE-GLAUBENDE",
         "FIG-GRUPPE-MENGE"
       ],
-      "objects": [
-        "FIG-OBJ-LAMPE"
-      ],
+      "objects": [],
       "signs": [
         "FIG-ZEICHEN-LEUCHTEN"
       ],
       "speech": [],
-      "action_de": "Ohne Murren sollen sie als Kinder Gottes mitten in einer verdrehten Generation leuchten wie Lichter in der Welt und am Wort des Lebens festhalten.",
+      "action_de": "Die Philipper sollen alles ohne Murren tun, damit sie als makellose Kinder Gottes mitten in einer krummen und verdrehten Generation wie Lichter in der Welt leuchten und am Wort des Lebens festhalten.",
+      "keywords": {
+        "de": "Wie Lichter in der Welt",
+        "gsw": "Wie Liechter i de Wält"
+      },
       "stage": {
-        "hold": {
-          "FIG-GRUPPE-GLAUBENDE": "FIG-OBJ-LAMPE"
-        },
+        "night": true,
         "at": {
           "FIG-ZEICHEN-LEUCHTEN": "FIG-GRUPPE-GLAUBENDE"
         },
+        "split": 1,
         "mood": {
           "FIG-GRUPPE-GLAUBENDE": "smile",
           "FIG-GRUPPE-MENGE": "calm"
-        },
-        "split": 1
+        }
       }
     },
     {
       "n": 4,
       "reference": "PHP.2.19-PHP.2.30",
       "figures": [
-        "FIG-GOTT",
+        "FIG-PAULUS",
+        "FIG-TIMOTHEUS",
         "FIG-EPAPHRODITUS",
-        "FIG-PAULUS"
+        "FIG-GRUPPE-GLAUBENDE"
       ],
-      "objects": [
-        "FIG-GRUPPE-GEMEINDE"
-      ],
+      "objects": [],
       "signs": [
-        "FIG-ZEICHEN-ERBARMEN",
         "FIG-ZEICHEN-FREUDE"
       ],
       "speech": [],
-      "action_de": "Epaphroditus, der Gesandte der Gemeinde, war todkrank, aber Gott hat sich über ihn erbarmt; Paulus schickt ihn zurück, damit die Gemeinde sich freut.",
+      "action_de": "Paulus hofft, Timotheus bald nach Philippi zu senden, und schickt Epaphroditus, der dem Tod nahe war, gleich zur Gemeinde zurück.",
+      "keywords": {
+        "de": "Nehmt ihn also auf im Herrn mit aller Freude",
+        "gsw": "Nämed en also uf im Herr mit voller Fröid"
+      },
+      "names": {
+        "FIG-TIMOTHEUS": {
+          "de": "Timotheus",
+          "gsw": "Timotheus"
+        },
+        "FIG-EPAPHRODITUS": {
+          "de": "Epaphroditus",
+          "gsw": "Epaphroditus"
+        }
+      },
       "stage": {
+        "split": 3,
         "arrows": [
           [
-            "FIG-GOTT",
             "FIG-EPAPHRODITUS",
-            "act"
-          ],
-          [
-            "FIG-EPAPHRODITUS",
-            "FIG-GRUPPE-GEMEINDE",
+            "FIG-GRUPPE-GLAUBENDE",
             "go"
           ]
         ],
-        "at": {
-          "FIG-ZEICHEN-ERBARMEN": "FIG-EPAPHRODITUS"
-        },
         "signs_who": {
           "FIG-ZEICHEN-FREUDE": [
-            "FIG-EPAPHRODITUS"
+            "FIG-GRUPPE-GLAUBENDE"
           ]
         },
-        "god_side": "left",
-        "x": {
-          "FIG-PAULUS": 30,
-          "FIG-EPAPHRODITUS": 82
-        },
         "mood": {
+          "FIG-PAULUS": "smile",
+          "FIG-TIMOTHEUS": "determined",
           "FIG-EPAPHRODITUS": "smile",
-          "FIG-PAULUS": "smile"
+          "FIG-GRUPPE-GLAUBENDE": "delight"
         }
       }
     }
   ],
   "actions_de": [
-    "Christus Jesus, der in Gottes Gestalt war, entäusserte sich, nahm Sklavengestalt an und war gehorsam bis zum Tod am Kreuz.",
-    "Darum hat Gott ihn erhöht, damit sich im Namen Jesu jedes Knie beuge und jede Zunge bekenne, dass Jesus Christus der Herr ist.",
-    "Ohne Murren sollen sie als Kinder Gottes mitten in einer verdrehten Generation leuchten wie Lichter in der Welt und am Wort des Lebens festhalten.",
-    "Epaphroditus, der Gesandte der Gemeinde, war todkrank, aber Gott hat sich über ihn erbarmt; Paulus schickt ihn zurück, damit die Gemeinde sich freut."
+    "Paulus mahnt die Philipper, einmütig zu sein und in Demut einander höher zu achten als sich selbst.",
+    "Christus Jesus erniedrigte sich und wurde gehorsam bis zum Tod am Kreuz; darum hat Gott ihn über alles erhöht, damit jedes Knie sich beuge und jede Zunge bekenne: Jesus Christus ist der Herr.",
+    "Die Philipper sollen alles ohne Murren tun, damit sie als makellose Kinder Gottes mitten in einer krummen und verdrehten Generation wie Lichter in der Welt leuchten und am Wort des Lebens festhalten.",
+    "Paulus hofft, Timotheus bald nach Philippi zu senden, und schickt Epaphroditus, der dem Tod nahe war, gleich zur Gemeinde zurück."
   ],
   "captions_de": [
-    "Erniedrigung: Jesus (Kreuznimbus) erniedrigt sich (Zeichen neben ihm: tief verneigte Person) und geht den Weg bis zum Kreuz (gestrichelter Pfeil).",
-    "Erniedrigung → Erhöhung: Darum erhöht Gott (Strahlenkranz, goldener Pfeil) Jesus (Pfeil nach oben neben ihm); Menschen beugen die Knie vor ihm (kniende Figur).",
-    "Lichter in der Welt: Die Glaubenden halten eine Lampe und leuchten (Öllampe mit Funkeln über ihnen) mitten unter den vielen Menschen.",
-    "Zurück nach Philippi: Gott (Strahlenkranz) hat sich über Epaphroditus erbarmt (Herz in Händen, goldener Pfeil); Paulus schickt ihn zur Gemeinde zurück (gestrichelter Weg zum Haus); Epaphroditus freut sich (strahlendes Gesicht)."
+    "Auftrag an die Gemeinde – Demut: Paulus ist fern (gestrichelte Linie) und schreibt: «Achtet einander höher als euch selbst!» (verneigte Person, goldene Ringe).",
+    "Erniedrigt und erhöht: das Kreuz am Boden; Gott (Strahlenkranz) erhöht Jesus (goldener Pfeil nach oben); Menschen aus allen Völkern beugen die Knie (kniende Figur).",
+    "Lichter in der Welt: Die Glaubenden (taubenblaue Gruppe) leuchten (Lampe mit Funkeln) unter dem dunklen Himmel; daneben die Menge (gedeckte Farben).",
+    "Zwei Gesandte: Paulus mit Timotheus, den er bald senden will; Epaphroditus (Korb) geht schon zur Gemeinde zurück (gestrichelter Weg); die Glaubenden freuen sich."
   ],
-  "interpretation_note_de": "Der erste Abschnitt ([[PHP.2.1-PHP.2.11]]) ist mit zwei Feldern zum Christushymnus vertreten, die übrigen mit je einem; Einzelheiten dort.",
+  "interpretation_note_de": "Vier Comic-Szenen für drei Abschnitte: Der erste Abschnitt hat zwei Felder, die Mahnung zur Demut ([[PHP.2.1-PHP.2.4]]) und Kreuz und Erhöhung Christi ([[PHP.2.5-PHP.2.11]]); dann die Gemeinde als Lichter in der Welt ([[PHP.2.12-PHP.2.18]]) und die beiden Gesandten Timotheus und Epaphroditus ([[PHP.2.19-PHP.2.30]]). Gott erscheint als Strahlenkranz. Die Strukturbilder der Abschnitte zeigen alle Glieder. Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-PHP-002",
       "field": "summary",
-      "fingerprint": "615e0ce9353de94e"
+      "fingerprint": "2ce5752007c55c65"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -526,6 +535,385 @@
           "Erniedrigung → Erhöhung: Darum erhöht Gott (Strahlenkranz, goldener Pfeil) Jesus (Pfeil nach oben neben ihm); Menschen beugen die Knie vor ihm (kniende Figur).",
           "Lichter in der Welt: Die Glaubenden halten eine Lampe und leuchten (Flamme über ihnen) mitten unter den vielen Menschen.",
           "Zurück nach Philippi: Gott (Strahlenkranz) hat sich über Epaphroditus erbarmt (Herz in Händen, goldener Pfeil); Paulus schickt ihn zur Gemeinde zurück (gestrichelter Weg zum Haus); Epaphroditus freut sich (Funken)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "PHP.2.1-PHP.2.8",
+            "figures": [
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KREUZ"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-DEMUT"
+            ],
+            "speech": [],
+            "action_de": "Christus Jesus, der in Gottes Gestalt war, entäusserte sich, nahm Sklavengestalt an und war gehorsam bis zum Tod am Kreuz.",
+            "stage": {
+              "x": {
+                "FIG-JESUS": 56
+              },
+              "floor_x": {
+                "FIG-OBJ-KREUZ": 140
+              },
+              "mood": {
+                "FIG-JESUS": "calm"
+              },
+              "beside": {
+                "FIG-ZEICHEN-DEMUT": "FIG-JESUS"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-OBJ-KREUZ",
+                  "go"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "PHP.2.9-PHP.2.11",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-GLAUBENDE",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-ERHOEHEN",
+              "FIG-ZEICHEN-KNIEN"
+            ],
+            "speech": [],
+            "action_de": "Darum hat Gott ihn erhöht, damit sich im Namen Jesu jedes Knie beuge und jede Zunge bekenne, dass Jesus Christus der Herr ist.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-KNIEN": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "pose": {
+                "FIG-GRUPPE-GLAUBENDE": "kneel"
+              },
+              "god_side": "right",
+              "x": {
+                "FIG-GRUPPE-GLAUBENDE": 60,
+                "FIG-JESUS": 140
+              },
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "smile",
+                "FIG-JESUS": "calm"
+              },
+              "beside": {
+                "FIG-ZEICHEN-ERHOEHEN": "FIG-JESUS"
+              },
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "PHP.2.12-PHP.2.18",
+            "figures": [
+              "FIG-GRUPPE-GLAUBENDE",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-LAMPE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-LEUCHTEN"
+            ],
+            "speech": [],
+            "action_de": "Ohne Murren sollen sie als Kinder Gottes mitten in einer verdrehten Generation leuchten wie Lichter in der Welt und am Wort des Lebens festhalten.",
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-GLAUBENDE": "FIG-OBJ-LAMPE"
+              },
+              "at": {
+                "FIG-ZEICHEN-LEUCHTEN": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "smile",
+                "FIG-GRUPPE-MENGE": "calm"
+              },
+              "split": 1
+            }
+          },
+          {
+            "n": 4,
+            "reference": "PHP.2.19-PHP.2.30",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-EPAPHRODITUS",
+              "FIG-PAULUS"
+            ],
+            "objects": [
+              "FIG-GRUPPE-GEMEINDE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ERBARMEN",
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [],
+            "action_de": "Epaphroditus, der Gesandte der Gemeinde, war todkrank, aber Gott hat sich über ihn erbarmt; Paulus schickt ihn zurück, damit die Gemeinde sich freut.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-EPAPHRODITUS",
+                  "act"
+                ],
+                [
+                  "FIG-EPAPHRODITUS",
+                  "FIG-GRUPPE-GEMEINDE",
+                  "go"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-ERBARMEN": "FIG-EPAPHRODITUS"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-EPAPHRODITUS"
+                ]
+              },
+              "god_side": "left",
+              "x": {
+                "FIG-PAULUS": 30,
+                "FIG-EPAPHRODITUS": 82
+              },
+              "mood": {
+                "FIG-EPAPHRODITUS": "smile",
+                "FIG-PAULUS": "smile"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Christus Jesus, der in Gottes Gestalt war, entäusserte sich, nahm Sklavengestalt an und war gehorsam bis zum Tod am Kreuz.",
+          "Darum hat Gott ihn erhöht, damit sich im Namen Jesu jedes Knie beuge und jede Zunge bekenne, dass Jesus Christus der Herr ist.",
+          "Ohne Murren sollen sie als Kinder Gottes mitten in einer verdrehten Generation leuchten wie Lichter in der Welt und am Wort des Lebens festhalten.",
+          "Epaphroditus, der Gesandte der Gemeinde, war todkrank, aber Gott hat sich über ihn erbarmt; Paulus schickt ihn zurück, damit die Gemeinde sich freut."
+        ],
+        "captions_de": [
+          "Erniedrigung: Jesus (Kreuznimbus) erniedrigt sich (Zeichen neben ihm: tief verneigte Person) und geht den Weg bis zum Kreuz (gestrichelter Pfeil).",
+          "Erniedrigung → Erhöhung: Darum erhöht Gott (Strahlenkranz, goldener Pfeil) Jesus (Pfeil nach oben neben ihm); Menschen beugen die Knie vor ihm (kniende Figur).",
+          "Lichter in der Welt: Die Glaubenden halten eine Lampe und leuchten (Öllampe mit Funkeln über ihnen) mitten unter den vielen Menschen.",
+          "Zurück nach Philippi: Gott (Strahlenkranz) hat sich über Epaphroditus erbarmt (Herz in Händen, goldener Pfeil); Paulus schickt ihn zur Gemeinde zurück (gestrichelter Weg zum Haus); Epaphroditus freut sich (strahlendes Gesicht)."
+        ],
+        "interpretation_note_de": "Der erste Abschnitt ([[PHP.2.1-PHP.2.11]]) ist mit zwei Feldern zum Christushymnus vertreten, die übrigen mit je einem; Einzelheiten dort.",
+        "basis": [
+          {
+            "record": "SUM-CH-PHP-002",
+            "field": "summary",
+            "fingerprint": "615e0ce9353de94e"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Prüfung Struktur zuerst",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "PHP.2.1-PHP.2.4",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PAULUS",
+                "to": "FIG-GRUPPE-GLAUBENDE",
+                "icons": [
+                  "FIG-ZEICHEN-DEMUT",
+                  "FIG-ZEICHEN-EINHEIT"
+                ],
+                "word": {
+                  "de": "Achtet einander höher als euch selbst!",
+                  "gsw": "Achted enand höcher als eu sälber!"
+                }
+              }
+            ],
+            "action_de": "Paulus mahnt die Philipper, einmütig zu sein und in Demut einander höher zu achten als sich selbst.",
+            "keywords": {
+              "de": "In Demut achtet einander höher als euch selbst",
+              "gsw": "I Demuet achted enand höcher als eu sälber"
+            },
+            "names": {
+              "FIG-PAULUS": {
+                "de": "Paulus",
+                "gsw": "Paulus"
+              }
+            },
+            "letter": true,
+            "stage": {
+              "split": 1,
+              "mood": {
+                "FIG-PAULUS": "earnest",
+                "FIG-GRUPPE-GLAUBENDE": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "PHP.2.5-PHP.2.11",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-VOELKER"
+            ],
+            "objects": [
+              "FIG-OBJ-KREUZ"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ERHOEHEN",
+              "FIG-ZEICHEN-KNIEN"
+            ],
+            "speech": [],
+            "action_de": "Christus Jesus erniedrigte sich und wurde gehorsam bis zum Tod am Kreuz; darum hat Gott ihn über alles erhöht, damit jedes Knie sich beuge und jede Zunge bekenne: Jesus Christus ist der Herr.",
+            "keywords": {
+              "de": "Darum hat Gott ihn über alles erhöht",
+              "gsw": "Drum hät Gott en über alles erhöht"
+            },
+            "stage": {
+              "god_side": "center",
+              "arrows": [
+                [
+                  "FIG-GOTT",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-ERHOEHEN": "FIG-JESUS",
+                "FIG-ZEICHEN-KNIEN": "FIG-GRUPPE-VOELKER"
+              },
+              "floor_x": {
+                "FIG-OBJ-KREUZ": 20
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-VOELKER": "earnest"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "PHP.2.12-PHP.2.18",
+            "figures": [
+              "FIG-GRUPPE-GLAUBENDE",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-LEUCHTEN"
+            ],
+            "speech": [],
+            "action_de": "Die Philipper sollen alles ohne Murren tun, damit sie als makellose Kinder Gottes mitten in einer krummen und verdrehten Generation wie Lichter in der Welt leuchten und am Wort des Lebens festhalten.",
+            "keywords": {
+              "de": "Wie Lichter in der Welt",
+              "gsw": "Wie Liechter i de Wält"
+            },
+            "stage": {
+              "night": true,
+              "at": {
+                "FIG-ZEICHEN-LEUCHTEN": "FIG-GRUPPE-GLAUBENDE"
+              },
+              "split": 1,
+              "mood": {
+                "FIG-GRUPPE-GLAUBENDE": "smile",
+                "FIG-GRUPPE-MENGE": "calm"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "PHP.2.19-PHP.2.30",
+            "figures": [
+              "FIG-PAULUS",
+              "FIG-TIMOTHEUS",
+              "FIG-EPAPHRODITUS",
+              "FIG-GRUPPE-GLAUBENDE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [],
+            "action_de": "Paulus will Timotheus bald nach Philippi senden und schickt Epaphroditus, der dem Tod nahe war, gleich zur Gemeinde zurück.",
+            "keywords": {
+              "de": "Nehmt ihn also auf im Herrn mit aller Freude",
+              "gsw": "Nämed en also uf im Herr mit voller Fröid"
+            },
+            "names": {
+              "FIG-TIMOTHEUS": {
+                "de": "Timotheus",
+                "gsw": "Timotheus"
+              },
+              "FIG-EPAPHRODITUS": {
+                "de": "Epaphroditus",
+                "gsw": "Epaphroditus"
+              }
+            },
+            "stage": {
+              "split": 3,
+              "arrows": [
+                [
+                  "FIG-EPAPHRODITUS",
+                  "FIG-GRUPPE-GLAUBENDE",
+                  "go"
+                ]
+              ],
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-GRUPPE-GLAUBENDE"
+                ]
+              },
+              "mood": {
+                "FIG-PAULUS": "smile",
+                "FIG-TIMOTHEUS": "determined",
+                "FIG-EPAPHRODITUS": "smile",
+                "FIG-GRUPPE-GLAUBENDE": "delight"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Paulus mahnt die Philipper, einmütig zu sein und in Demut einander höher zu achten als sich selbst.",
+          "Christus Jesus erniedrigte sich und wurde gehorsam bis zum Tod am Kreuz; darum hat Gott ihn über alles erhöht, damit jedes Knie sich beuge und jede Zunge bekenne: Jesus Christus ist der Herr.",
+          "Die Philipper sollen alles ohne Murren tun, damit sie als makellose Kinder Gottes mitten in einer krummen und verdrehten Generation wie Lichter in der Welt leuchten und am Wort des Lebens festhalten.",
+          "Paulus will Timotheus bald nach Philippi senden und schickt Epaphroditus, der dem Tod nahe war, gleich zur Gemeinde zurück."
+        ],
+        "captions_de": [
+          "Auftrag an die Gemeinde – Demut: Paulus ist fern (gestrichelte Linie) und schreibt: «Achtet einander höher als euch selbst!» (verneigte Person, goldene Ringe).",
+          "Erniedrigt und erhöht: das Kreuz am Boden; Gott (Strahlenkranz) erhöht Jesus (goldener Pfeil nach oben); Menschen aus allen Völkern beugen die Knie (kniende Figur).",
+          "Lichter in der Welt: Die Glaubenden (taubenblaue Gruppe) leuchten (Lampe mit Funkeln) unter dem dunklen Himmel; daneben die Menge (gedeckte Farben).",
+          "Zwei Gesandte: Paulus schickt Timotheus und Epaphroditus (Korb) zur Gemeinde (gestrichelter Weg); die Glaubenden freuen sich."
+        ],
+        "basis": [
+          {
+            "record": "SUM-CH-PHP-002",
+            "field": "summary",
+            "fingerprint": "2b068fc5159f139f"
+          }
         ]
       }
     }
