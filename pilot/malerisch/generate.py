@@ -37,6 +37,18 @@ MODELLE = {
 }
 
 
+def melde(text):
+    """Fehlermeldung ausgeben; in GitHub Actions zusätzlich als Anmerkung am Lauf (sichtbar ohne Protokoll)."""
+    print(text, file=sys.stderr)
+    if os.environ.get("GITHUB_ACTIONS"):
+        print("::error::" + text.replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A"))
+
+
+def abbruch(text):
+    melde(text)
+    sys.exit(1)
+
+
 def lade(name):
     return json.loads((HIER / name).read_text(encoding="utf-8"))
 
@@ -127,7 +139,7 @@ def main():
     stilnamen = [s.strip() for s in a.stile.split(",") if s.strip()]
     unbekannt = [s for s in stilnamen if s not in stile["stile"]]
     if unbekannt or not szenen:
-        sys.exit(f"Unbekannte Stile {unbekannt} oder keine Szene gewählt ({a.szenen}).")
+        abbruch(f"Unbekannte Stile {unbekannt} oder keine Szene gewählt ({a.szenen}).")
 
     auftraege = [(sz, st, a.seed + v) for sz in szenen for st in stilnamen for v in range(a.varianten)]
     if a.trocken:
@@ -138,7 +150,7 @@ def main():
 
     token = os.environ.get("REPLICATE_API_TOKEN")
     if not token:
-        sys.exit("REPLICATE_API_TOKEN fehlt (als Umgebungsvariable bzw. GitHub-Secret hinterlegen).")
+        abbruch("REPLICATE_API_TOKEN fehlt (als Umgebungsvariable bzw. GitHub-Secret hinterlegen).")
     lauf = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%d-%H%M%S") + f"-{a.modell}"
     lauf_dir = HIER / "ausgabe" / lauf
     lauf_dir.mkdir(parents=True, exist_ok=True)
@@ -158,7 +170,7 @@ def main():
         except Exception as ex:  # ein fehlgeschlagenes Bild bricht den Lauf nicht ab
             e["fehler"] = str(ex)
             fehler += 1
-            print("FEHLER", sz["id"], st, seed, ex, file=sys.stderr)
+            melde(f"{sz['id']} · {st} · Seed {seed}: {ex}")
         eintraege.append(e)
     (lauf_dir / "lauf.json").write_text(json.dumps({
         "lauf": lauf, "erzeugt": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),
