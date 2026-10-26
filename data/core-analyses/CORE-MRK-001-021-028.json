@@ -1,0 +1,176 @@
+{
+ "id": "CORE-MRK-001-021-028",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MRK.1.21-MRK.1.28",
+ "target": "TU-MRK-001-021-028",
+ "core_de": "In der Synagoge von Kafarnaum lehrt Jesus am Sabbat wie einer, der Vollmacht hat, und nicht wie die Schriftgelehrten; ein Mensch mit einem unreinen Geist schreit: «Ich weiss, wer du bist: der Heilige Gottes!», Jesus gebietet: «Verstumme und geh aus ihm heraus!», und der Geist fährt aus; alle erschrecken – «Eine neue Lehre mit Vollmacht!» –, und die Kunde verbreitet sich sogleich in ganz Galiläa.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "frame",
+    "subtype": "Inklusio: Lehre mit Vollmacht – Austreibung – neue Lehre mit Vollmacht",
+    "range": "MRK.1.21-MRK.1.28",
+    "elements": [
+     {
+      "label": "A: Er lehrt in der Synagoge wie einer, der Vollmacht hat, und nicht wie die Schriftgelehrten",
+      "ref": "MRK.1.21-MRK.1.22",
+      "role": "A",
+      "links": [
+       "MRK.1.27"
+      ]
+     },
+     {
+      "label": "B: Austreibung des unreinen Geistes",
+      "ref": "MRK.1.23-MRK.1.26",
+      "role": "B (Mitte)",
+      "child": "s2"
+     },
+     {
+      "label": "A': «Eine neue Lehre mit Vollmacht! Sogar den unreinen Geistern gebietet er, und sie gehorchen ihm!»",
+      "ref": "MRK.1.27",
+      "role": "A'"
+     },
+     {
+      "label": "Die Kunde verbreitet sich sogleich in ganz Galiläa",
+      "ref": "MRK.1.28",
+      "role": "Ausgang"
+     }
+    ],
+    "features": {
+     "leitwort": [
+      {
+       "word": "Vollmacht",
+       "refs": [
+        "MRK.1.22",
+        "MRK.1.27"
+       ],
+       "role": "verklammernd"
+      }
+     ],
+     "speakers": [
+      {
+       "who": "unreiner Geist",
+       "to": "FIG-JESUS",
+       "ref": "MRK.1.24"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "unreiner Geist",
+       "ref": "MRK.1.25"
+      },
+      {
+       "who": "alle in der Synagoge",
+       "to": "einander",
+       "ref": "MRK.1.27"
+      }
+     ]
+    },
+    "visual": "rings",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "sequence",
+    "subtype": "Schrei – Gebot – Ausfahren",
+    "range": "MRK.1.23-MRK.1.26",
+    "elements": [
+     {
+      "label": "Der unreine Geist schreit: «Bist du gekommen, uns zu verderben? Ich weiss, wer du bist: der Heilige Gottes!»",
+      "ref": "MRK.1.23-MRK.1.24",
+      "role": "Schrei"
+     },
+     {
+      "label": "Jesus: «Verstumme und geh aus ihm heraus!»",
+      "ref": "MRK.1.25",
+      "role": "Gebot"
+     },
+     {
+      "label": "Der Geist reisst ihn hin und her, schreit laut und fährt aus ihm heraus",
+      "ref": "MRK.1.26",
+      "role": "Ausfahren"
+     }
+    ],
+    "features": {
+     "pattern_break": [
+      {
+       "ref": "MRK.1.25",
+       "note": "«Verstumme»: Schweigegebot an den Geist, der Jesus kennt (Markus-Eigenheit)"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MRK.1.21-MRK.1.22",
+   "text_de": "Am Sabbat lehrt Jesus in der Synagoge; die Leute sind überwältigt, denn er lehrt wie einer, der Vollmacht hat, und nicht wie die Schriftgelehrten.",
+   "reason_de": "Rahmen A: Lehre mit Vollmacht (Kriterium 2).",
+   "recognition_de": "Jesus lehrt in der Synagoge, die Leute staunen.",
+   "keywords": [
+    "wie einer, der Vollmacht hat, und nicht wie die Schriftgelehrten"
+   ]
+  },
+  {
+   "reference": "MRK.1.23-MRK.1.26",
+   "text_de": "Ein Mensch mit einem unreinen Geist schreit: «Ich weiss, wer du bist: der Heilige Gottes!» Jesus fährt ihn an: «Verstumme und geh aus ihm heraus!» – der Geist reisst ihn hin und her und fährt aus.",
+   "reason_de": "Mitte und Erkennungsmoment (Kriterien 1 und 4).",
+   "recognition_de": "Jesus gebietet dem schreienden Besessenen; der Geist fährt aus.",
+   "keywords": [
+    "Ich weiss, wer du bist: der Heilige Gottes!",
+    "Verstumme und geh aus ihm heraus!"
+   ]
+  },
+  {
+   "reference": "MRK.1.27-MRK.1.28",
+   "text_de": "Alle erschrecken: «Was ist das? Eine neue Lehre mit Vollmacht! Sogar den unreinen Geistern gebietet er, und sie gehorchen ihm!» Die Kunde verbreitet sich in ganz Galiläa.",
+   "reason_de": "Rahmen A' und Ausgang (Kriterien 2 und 3).",
+   "recognition_de": "Die Menge staunt und redet.",
+   "keywords": [
+    "Eine neue Lehre mit Vollmacht!",
+    "sie gehorchen ihm"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Die Schriftgelehrten sind nur Vergleich, nicht anwesend – nicht ins Bild"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-ROLLE-BESESSENER",
+  "FIG-GRUPPE-MENGE"
+ ],
+ "places": [
+  "FIG-ORT-SYNAGOGE"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MRK.1.21-MRK.1.28",
+   "fingerprint": "924e5cd40376d2c9"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mk 1–4 und 6–8 nach dem Pilot Mk 5 und dem Ausrollen Matthäus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; Zusammenfassungen und Bildaufträge mitgeprüft; keine fachliche Prüfung durch eine Person",
+  "result": "bestanden",
+  "summary_de": "Inklusio «Vollmacht» um die Austreibung, Schweigegebot als Markus-Eigenheit; Sprecher richtig.",
+  "changes_de": []
+ }
+}

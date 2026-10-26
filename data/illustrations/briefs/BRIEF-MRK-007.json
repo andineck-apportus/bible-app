@@ -13,27 +13,45 @@
       "n": 1,
       "reference": "MRK.7.1-MRK.7.23",
       "figures": [
+        "FIG-GRUPPE-JUENGER",
         "FIG-JESUS",
         "FIG-GRUPPE-PHARISAEER"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-OBJ-BROT"
+      ],
       "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-PHARISAEER",
           "icons": [
-            "FIG-ZEICHEN-HERZ",
-            "FIG-ZEICHEN-STAMMT-AUS",
-            "FIG-ZEICHEN-UNREIN"
-          ]
+            "FIG-ZEICHEN-HERZ"
+          ],
+          "word": {
+            "de": "Was aus dem Menschen herauskommt, das macht den Menschen unrein.",
+            "gsw": "Was us em Mänsch usechunnt, das macht de Mänsch unrein."
+          }
         }
       ],
-      "action_de": "Die Pharisäer fragen, warum die Jünger ungewaschen essen; Jesus lehrt: Unrein macht, was aus dem Herzen kommt.",
+      "action_de": "Pharisäer und Schriftgelehrte aus Jerusalem sehen, dass Jünger mit ungewaschenen Händen essen, und fragen: «Warum leben deine Jünger nicht nach der Überlieferung der Ältesten …?» Jesus lehrt: Was aus dem Menschen herauskommt, das macht den Menschen unrein.",
+      "keywords": {
+        "de": "Warum leben deine Jünger nicht nach der Überlieferung der Ältesten",
+        "gsw": "Werum läbed dini Jünger nöd nach de Überliferig vo de Ältischte"
+      },
       "stage": {
+        "hold": {
+          "FIG-GRUPPE-JUENGER": "FIG-OBJ-BROT"
+        },
         "mood": {
-          "FIG-GRUPPE-PHARISAEER": "earnest",
-          "FIG-JESUS": "earnest"
+          "FIG-GRUPPE-JUENGER": "calm",
+          "FIG-JESUS": "earnest",
+          "FIG-GRUPPE-PHARISAEER": "earnest"
+        },
+        "x": {
+          "FIG-GRUPPE-JUENGER": 34,
+          "FIG-JESUS": 98,
+          "FIG-GRUPPE-PHARISAEER": 160
         }
       }
     },
@@ -41,29 +59,51 @@
       "n": 2,
       "reference": "MRK.7.24-MRK.7.30",
       "figures": [
-        "FIG-JESUS",
-        "FIG-SYROPHOENIZIERIN"
+        "FIG-SYROPHOENIZIERIN",
+        "FIG-JESUS"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-OBJ-HUND",
+        "FIG-OBJ-BROT"
+      ],
       "signs": [],
       "speech": [
         {
           "from": "FIG-SYROPHOENIZIERIN",
           "to": "FIG-JESUS",
-          "icons": [
-            "FIG-ROLLE-KIND",
-            "FIG-ZEICHEN-DAEMON",
-            "FIG-ZEICHEN-AUSTREIBEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Herr, auch die Hündchen unter dem Tisch essen von den Brotkrumen der Kinder.",
+            "gsw": "Herr, au d Hündli under em Tisch ässed vo de Brösmeli vo de Chind."
+          }
         }
       ],
-      "action_de": "Im Gebiet von Tyros bittet eine Syrophönizierin für ihre Tochter; nach ihrer Antwort auf sein hartes Bildwort ist die Tochter frei.",
+      "action_de": "Jesus sagt zur Syrophönizierin: «Lass zuerst die Kinder satt werden; denn es ist nicht recht, das Brot der Kinder zu nehmen und den Hündchen hinzuwerfen.» Sie antwortet: «Herr, auch die Hündchen unter dem Tisch essen von den Brotkrumen der Kinder.»",
+      "keywords": {
+        "de": "Um dieses Wortes willen – geh!",
+        "gsw": "Wäge dem Wort – gang!"
+      },
+      "names": {
+        "FIG-SYROPHOENIZIERIN": {
+          "de": "Syrophönizierin",
+          "gsw": "Syrophönizierin"
+        }
+      },
       "stage": {
         "pose": {
           "FIG-SYROPHOENIZIERIN": "kneel"
         },
         "mood": {
-          "FIG-SYROPHOENIZIERIN": "worried"
+          "FIG-SYROPHOENIZIERIN": "earnest",
+          "FIG-JESUS": "calm"
+        },
+        "x": {
+          "FIG-SYROPHOENIZIERIN": 70,
+          "FIG-JESUS": 146
+        },
+        "floor_x": {
+          "FIG-OBJ-HUND": 22,
+          "FIG-OBJ-BROT": 40
         }
       }
     },
@@ -71,24 +111,29 @@
       "n": 3,
       "reference": "MRK.7.31-MRK.7.37",
       "figures": [
-        "FIG-JESUS",
-        "FIG-ROLLE-TAUBER"
+        "FIG-ROLLE-TAUBER",
+        "FIG-JESUS"
       ],
       "objects": [],
       "signs": [
-        "FIG-ZEICHEN-HEILEN"
+        "FIG-ZEICHEN-BERUEHREN"
       ],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-ROLLE-TAUBER",
-          "icons": [
-            "FIG-ZEICHEN-HOEREN",
-            "FIG-ZEICHEN-SPRECHEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Effata!",
+            "gsw": "Effata!"
+          }
         }
       ],
-      "action_de": "In der Dekapolis heilt Jesus einen Tauben mit dem Wort «Effata».",
+      "action_de": "Jesus nimmt den Tauben für sich allein beiseite, legt ihm die Finger in die Ohren, berührt seine Zunge, blickt zum Himmel auf, seufzt und sagt: «Effata!», das heisst: «Öffne dich!»",
+      "keywords": {
+        "de": "Gut hat er alles gemacht",
+        "gsw": "Guet hät er alles gmacht"
+      },
       "stage": {
         "arrows": [
           [
@@ -97,39 +142,40 @@
             "act"
           ]
         ],
-        "mood": {
-          "FIG-ROLLE-TAUBER": "pensive"
-        },
         "beside": {
-          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-TAUBER"
+          "FIG-ZEICHEN-BERUEHREN": "FIG-ROLLE-TAUBER"
+        },
+        "mood": {
+          "FIG-ROLLE-TAUBER": "surprised",
+          "FIG-JESUS": "earnest"
         },
         "x": {
-          "FIG-JESUS": 40,
-          "FIG-ROLLE-TAUBER": 150
+          "FIG-ROLLE-TAUBER": 60,
+          "FIG-JESUS": 136
         }
       }
     }
   ],
   "actions_de": [
-    "Die Pharisäer fragen, warum die Jünger ungewaschen essen; Jesus lehrt: Unrein macht, was aus dem Herzen kommt.",
-    "Im Gebiet von Tyros bittet eine Syrophönizierin für ihre Tochter; nach ihrer Antwort auf sein hartes Bildwort ist die Tochter frei.",
-    "In der Dekapolis heilt Jesus einen Tauben mit dem Wort «Effata»."
+    "Pharisäer und Schriftgelehrte aus Jerusalem sehen, dass Jünger mit ungewaschenen Händen essen, und fragen: «Warum leben deine Jünger nicht nach der Überlieferung der Ältesten …?» Jesus lehrt: Was aus dem Menschen herauskommt, das macht den Menschen unrein.",
+    "Jesus sagt zur Syrophönizierin: «Lass zuerst die Kinder satt werden; denn es ist nicht recht, das Brot der Kinder zu nehmen und den Hündchen hinzuwerfen.» Sie antwortet: «Herr, auch die Hündchen unter dem Tisch essen von den Brotkrumen der Kinder.»",
+    "Jesus nimmt den Tauben für sich allein beiseite, legt ihm die Finger in die Ohren, berührt seine Zunge, blickt zum Himmel auf, seufzt und sagt: «Effata!», das heisst: «Öffne dich!»"
   ],
   "captions_de": [
-    "Rein und unrein: Jesus antwortet den Pharisäern: Das Unreine kommt aus dem Herzen (Herz, Pfeil, Fleck).",
-    "Tyros: Die Frau bittet kniend um die Befreiung ihrer Tochter (Kind, Schatten, Pfeil weg).",
-    "Effata: Jesus berührt den Tauben (Pfeil, berührende Hand mit Licht) und sagt: Öffne dich (Ohr, Sprechblase)."
+    "Rein und unrein: Die Pharisäer zeigen auf die Jünger, die mit ungewaschenen Händen essen; Jesus antwortet: «Was aus dem Menschen herauskommt, das macht den Menschen unrein.» (Herz).",
+    "Kinder und Hündchen: Die Frau (Name) kniet vor Jesus; neben ihr ein Hündchen und Brot (Hund, Brot); sie antwortet: «Herr, auch die Hündchen unter dem Tisch essen von den Brotkrumen der Kinder.»",
+    "Effata: Jesus berührt den Tauben (Pfeil, berühren) und sagt: «Effata!»; das Band übersetzt: «Öffne dich!»"
   ],
-  "interpretation_note_de": "Kapitelbild aus den Abschnittsbildern. Pharisäer und Schriftgelehrte erscheinen gemeinsam als Gruppe der Pharisäer, neutral und ohne Wertung.",
+  "interpretation_note_de": "Drei Comic-Szenen, je eine aus den drei Abschnitten ([[MRK.7.1-MRK.7.37]]): der Streit um die ungewaschenen Hände mit Jesu Grundsatz, die Syrophönizierin mit ihrem Gegenwort, die Heilung des Tauben mit «Effata». Das Jesajawort, das Korban und die Liste aus dem Herzen stehen im Abschnittsbild. Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-MRK-007",
       "field": "summary",
-      "fingerprint": "8bb50b6b6166df4b"
+      "fingerprint": "bd99b8a4c0bcbd85"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -356,6 +402,139 @@
           "Tyros: Die Frau bittet kniend um die Befreiung ihrer Tochter (Kind, Schatten, Pfeil weg).",
           "Effata: Jesus berührt den Tauben (Pfeil, berührende Hand mit Licht) und sagt: Öffne dich (Ohr, Schallwellen)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-MRK-007",
+            "field": "summary",
+            "fingerprint": "8bb50b6b6166df4b"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.7.1-MRK.7.23",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-PHARISAEER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-ZEICHEN-HERZ",
+                  "FIG-ZEICHEN-STAMMT-AUS",
+                  "FIG-ZEICHEN-UNREIN"
+                ]
+              }
+            ],
+            "action_de": "Die Pharisäer fragen, warum die Jünger ungewaschen essen; Jesus lehrt: Unrein macht, was aus dem Herzen kommt.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-PHARISAEER": "earnest",
+                "FIG-JESUS": "earnest"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.7.24-MRK.7.30",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-SYROPHOENIZIERIN"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-SYROPHOENIZIERIN",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ROLLE-KIND",
+                  "FIG-ZEICHEN-DAEMON",
+                  "FIG-ZEICHEN-AUSTREIBEN"
+                ]
+              }
+            ],
+            "action_de": "Im Gebiet von Tyros bittet eine Syrophönizierin für ihre Tochter; nach ihrer Antwort auf sein hartes Bildwort ist die Tochter frei.",
+            "stage": {
+              "pose": {
+                "FIG-SYROPHOENIZIERIN": "kneel"
+              },
+              "mood": {
+                "FIG-SYROPHOENIZIERIN": "worried"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.7.31-MRK.7.37",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-TAUBER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-TAUBER",
+                "icons": [
+                  "FIG-ZEICHEN-HOEREN",
+                  "FIG-ZEICHEN-SPRECHEN"
+                ]
+              }
+            ],
+            "action_de": "In der Dekapolis heilt Jesus einen Tauben mit dem Wort «Effata».",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-TAUBER",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-TAUBER": "pensive"
+              },
+              "beside": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-TAUBER"
+              },
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-ROLLE-TAUBER": 150
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Die Pharisäer fragen, warum die Jünger ungewaschen essen; Jesus lehrt: Unrein macht, was aus dem Herzen kommt.",
+          "Im Gebiet von Tyros bittet eine Syrophönizierin für ihre Tochter; nach ihrer Antwort auf sein hartes Bildwort ist die Tochter frei.",
+          "In der Dekapolis heilt Jesus einen Tauben mit dem Wort «Effata»."
+        ],
+        "captions_de": [
+          "Rein und unrein: Jesus antwortet den Pharisäern: Das Unreine kommt aus dem Herzen (Herz, Pfeil, Fleck).",
+          "Tyros: Die Frau bittet kniend um die Befreiung ihrer Tochter (Kind, Schatten, Pfeil weg).",
+          "Effata: Jesus berührt den Tauben (Pfeil, berührende Hand mit Licht) und sagt: Öffne dich (Ohr, Sprechblase)."
+        ],
+        "interpretation_note_de": "Kapitelbild aus den Abschnittsbildern. Pharisäer und Schriftgelehrte erscheinen gemeinsam als Gruppe der Pharisäer, neutral und ohne Wertung.",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

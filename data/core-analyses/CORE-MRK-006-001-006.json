@@ -1,0 +1,163 @@
+{
+ "id": "CORE-MRK-006-001-006",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MRK.6.1-MRK.6.6",
+ "target": "TU-MRK-006-001-006",
+ "core_de": "In seiner Heimat lehrt Jesus am Sabbat in der Synagoge; die Zuhörer staunen – «Woher hat dieser das? … Ist dieser nicht der Zimmermann, der Sohn der Maria?» – und nehmen Anstoss an ihm; Jesus sagt: «Ein Prophet ist nicht ohne Ehre, ausser in seiner Heimat und unter seinen Verwandten und in seinem Haus»; er kann dort keine Machttat tun, ausser dass er wenige Kranke heilt, und wundert sich über ihren Unglauben.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Lehre – Staunen – Anstoss – Wort – Folge",
+    "range": "MRK.6.1-MRK.6.6",
+    "elements": [
+     {
+      "label": "Er kommt in seine Heimat; am Sabbat lehrt er in der Synagoge",
+      "ref": "MRK.6.1-MRK.6.2",
+      "role": "Lehre"
+     },
+     {
+      "label": "Fragen der Zuhörer",
+      "ref": "MRK.6.2-MRK.6.3",
+      "role": "Staunen",
+      "child": "s2"
+     },
+     {
+      "label": "Und sie nahmen Anstoss an ihm",
+      "ref": "MRK.6.3",
+      "role": "Anstoss"
+     },
+     {
+      "label": "«Ein Prophet ist nicht ohne Ehre, ausser in seiner Heimat und unter seinen Verwandten und in seinem Haus.»",
+      "ref": "MRK.6.4",
+      "role": "Wort"
+     },
+     {
+      "label": "Er konnte dort keine Machttat tun, ausser wenigen Kranken die Hände aufzulegen; er wunderte sich über ihren Unglauben",
+      "ref": "MRK.6.5-MRK.6.6",
+      "role": "Folge"
+     },
+     {
+      "label": "Er durchzog die Dörfer ringsum und lehrte",
+      "ref": "MRK.6.6",
+      "role": "Ausgang"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "die vielen Zuhörer",
+       "to": "einander",
+       "ref": "MRK.6.2-MRK.6.3"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "die Zuhörer",
+       "ref": "MRK.6.4"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "series",
+    "subtype": "Fragen der Zuhörer: Woher? – Ist dieser nicht …?",
+    "range": "MRK.6.2-MRK.6.3",
+    "elements": [
+     {
+      "label": "Woher hat dieser das?",
+      "ref": "MRK.6.2"
+     },
+     {
+      "label": "Was ist das für eine Weisheit, die ihm gegeben ist, und was für Machttaten, die durch seine Hände geschehen!",
+      "ref": "MRK.6.2"
+     },
+     {
+      "label": "Ist dieser nicht der Zimmermann, der Sohn der Maria und Bruder des Jakobus und des Joses und des Judas und des Simon?",
+      "ref": "MRK.6.3"
+     },
+     {
+      "label": "Und sind nicht seine Schwestern hier bei uns?",
+      "ref": "MRK.6.3"
+     }
+    ],
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MRK.6.2-MRK.6.3",
+   "text_de": "Die vielen Zuhörer staunen: «Woher hat dieser das? … Ist dieser nicht der Zimmermann, der Sohn der Maria …?» Und sie nehmen Anstoss an ihm.",
+   "reason_de": "Staunen schlägt in Ablehnung um (Kriterien 1 und 2).",
+   "recognition_de": "Leute in der Synagoge tuscheln und zeigen auf Jesus.",
+   "keywords": [
+    "Woher hat dieser das?",
+    "Ist dieser nicht der Zimmermann, der Sohn der Maria",
+    "Und sie nahmen Anstoss an ihm"
+   ]
+  },
+  {
+   "reference": "MRK.6.4",
+   "text_de": "«Ein Prophet ist nicht ohne Ehre, ausser in seiner Heimat und unter seinen Verwandten und in seinem Haus.»",
+   "reason_de": "Wort Jesu als Kernaussage (Kriterium 1).",
+   "recognition_de": "Jesus antwortet ruhig.",
+   "keywords": [
+    "Ein Prophet ist nicht ohne Ehre, ausser in seiner Heimat"
+   ]
+  },
+  {
+   "reference": "MRK.6.5-MRK.6.6",
+   "text_de": "Er kann dort keine Machttat tun, ausser dass er wenigen Kranken die Hände auflegt und sie heilt, und wundert sich über ihren Unglauben; dann lehrt er in den Dörfern ringsum.",
+   "reason_de": "Folge und Ausgang (Kriterium 3).",
+   "recognition_de": "Jesus legt einem Kranken die Hände auf; die anderen wenden sich ab.",
+   "keywords": [
+    "Und er konnte dort keine Machttat tun",
+    "er wunderte sich über ihren Unglauben"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Die Namen der Brüder (Jakobus, Joses, Judas, Simon) – in der Struktur; die Geschwister selbst sind nicht anwesend, nur genannt"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-VOLK",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-GRUPPE-KRANKE"
+ ],
+ "places": [
+  "FIG-ORT-SYNAGOGE"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MRK.6.1-MRK.6.6",
+   "fingerprint": "1af9b6e285128fc2"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mk 1–4 und 6–8 nach dem Pilot Mk 5 und dem Ausrollen Matthäus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; Zusammenfassungen und Bildaufträge mitgeprüft; keine fachliche Prüfung durch eine Person",
+  "result": "bestanden",
+  "summary_de": "Lehre – Fragen der Zuhörer (alle vier) – Anstoss – Wort – Folge – Ausgang.",
+  "changes_de": []
+ }
+}

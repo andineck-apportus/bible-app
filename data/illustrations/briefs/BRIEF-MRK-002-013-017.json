@@ -24,113 +24,186 @@
         {
           "from": "FIG-JESUS",
           "to": "FIG-LEVI",
-          "icons": [
-            "FIG-ZEICHEN-NACHFOLGEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Folge mir!",
+            "gsw": "Chumm mir nache!"
+          }
         }
       ],
-      "action_de": "Jesus sieht Levi, den Sohn des Alphäus, an der Zollstelle sitzen und sagt: Folge mir! Levi steht auf und folgt ihm.",
+      "action_de": "Im Vorbeigehen sieht Jesus Levi, den Sohn des Alphäus, an der Zollstelle sitzen und sagt zu ihm: «Folge mir!» Und er steht auf und folgt ihm.",
+      "keywords": {
+        "de": "Und er stand auf und folgte ihm",
+        "gsw": "Und er isch ufgstande und isch ihm nachegange"
+      },
+      "names": {
+        "FIG-LEVI": {
+          "de": "Levi",
+          "gsw": "Levi"
+        }
+      },
       "stage": {
-        "pose": {
-          "FIG-LEVI": "sit"
-        },
         "mood": {
+          "FIG-JESUS": "smile",
           "FIG-LEVI": "surprised"
+        },
+        "x": {
+          "FIG-JESUS": 54,
+          "FIG-LEVI": 140
+        },
+        "floor_x": {
+          "FIG-OBJ-MUENZEN": 166
         }
       }
     },
     {
       "n": 2,
-      "reference": "MRK.2.15",
+      "reference": "MRK.2.15-MRK.2.16",
       "figures": [
+        "FIG-GRUPPE-SCHRIFTGELEHRTE",
         "FIG-GRUPPE-JUENGER",
         "FIG-JESUS",
         "FIG-GRUPPE-ZOELLNER"
       ],
       "objects": [
-        "FIG-ORT-HAUS",
         "FIG-OBJ-BROT"
       ],
-      "signs": [
-        "FIG-ZEICHEN-FREUDE"
-      ],
-      "speech": [],
-      "action_de": "Im Haus des Levi liegt Jesus zu Tisch, und viele Zöllner und Sünder essen mit ihm und seinen Jüngern.",
-      "stage": {
-        "back_side": "left",
-        "before": true,
-        "pose": {
-          "FIG-GRUPPE-JUENGER": "sit",
-          "FIG-JESUS": "sit",
-          "FIG-GRUPPE-ZOELLNER": "sit"
-        },
-        "count": {
-          "FIG-OBJ-BROT": 2
-        },
-        "signs_who": {
-          "FIG-ZEICHEN-FREUDE": [
-            "FIG-GRUPPE-ZOELLNER"
-          ]
-        },
-        "floor_x": {
-          "FIG-OBJ-BROT": 112
-        }
-      }
-    },
-    {
-      "n": 3,
-      "reference": "MRK.2.16-MRK.2.17",
-      "figures": [
-        "FIG-GRUPPE-SCHRIFTGELEHRTE",
-        "FIG-GRUPPE-JUENGER",
-        "FIG-JESUS"
-      ],
-      "objects": [],
       "signs": [],
       "speech": [
         {
           "from": "FIG-GRUPPE-SCHRIFTGELEHRTE",
           "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-GRUPPE-ZOELLNER",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-SCHRIFTGELEHRTE",
-          "icons": [
-            "FIG-ROLLE-KRANKER",
-            "FIG-ZEICHEN-HEILEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Wieso isst er mit den Zöllnern und Sündern?",
+            "gsw": "Wieso isst er mit de Zöllner und Sünder?"
+          }
         }
       ],
-      "action_de": "Schriftgelehrte der Pharisäer fragen die Jünger: Wieso isst er mit Zöllnern und Sündern? Jesus antwortet: Nicht die Gesunden brauchen einen Arzt, sondern die Kranken; ich bin gekommen, Sünder zu rufen.",
+      "action_de": "Viele Zöllner und Sünder liegen mit Jesus und seinen Jüngern zu Tisch; die Schriftgelehrten der Pharisäer fragen seine Jünger: «Wieso isst er mit den Zöllnern und Sündern?»",
+      "keywords": {
+        "de": "viele Zöllner und Sünder lagen mit Jesus und seinen Jüngern zu Tisch",
+        "gsw": "vil Zöllner und Sünder sind mit em Jesus und sine Jünger am Tisch gläge"
+      },
       "stage": {
+        "split": 2,
+        "trenner": true,
+        "pose": {
+          "FIG-JESUS": "sit",
+          "FIG-GRUPPE-ZOELLNER": "sit"
+        },
         "mood": {
           "FIG-GRUPPE-SCHRIFTGELEHRTE": "earnest",
-          "FIG-GRUPPE-JUENGER": "worried"
+          "FIG-GRUPPE-JUENGER": "worried",
+          "FIG-JESUS": "smile",
+          "FIG-GRUPPE-ZOELLNER": "delight"
+        },
+        "x": {
+          "FIG-GRUPPE-SCHRIFTGELEHRTE": 26,
+          "FIG-GRUPPE-JUENGER": 70,
+          "FIG-JESUS": 120,
+          "FIG-GRUPPE-ZOELLNER": 166
+        },
+        "floor_x": {
+          "FIG-OBJ-BROT": 144
         }
+      }
+    },
+    {
+      "n": 3,
+      "reference": "MRK.2.17",
+      "figures": [],
+      "objects": [],
+      "signs": [],
+      "speech": [],
+      "action_de": "Jesus antwortet: «Nicht die Gesunden brauchen einen Arzt, sondern die Kranken. Ich bin nicht gekommen, Gerechte zu rufen, sondern Sünder.»",
+      "keywords": {
+        "de": "Ich bin nicht gekommen, Gerechte zu rufen, sondern Sünder",
+        "gsw": "Ich bi nöd choo, zum Grächti rüefe, sondern Sünder"
+      },
+      "diagram": {
+        "visual": "columns",
+        "span": 2,
+        "speaker": "FIG-JESUS",
+        "title": {
+          "de": "Nicht die Gesunden brauchen einen Arzt, sondern die Kranken.",
+          "gsw": "Nöd di Gsunde bruuched en Dokter, sondern di Chranke."
+        },
+        "head": [
+          {
+            "de": "nicht",
+            "gsw": "nöd"
+          },
+          {
+            "de": "sondern",
+            "gsw": "sondern"
+          }
+        ],
+        "rows": [
+          [
+            {
+              "a": {
+                "de": "die Gesunden",
+                "gsw": "di Gsunde"
+              },
+              "icons": [
+                "FIG-ZEICHEN-GESUND"
+              ],
+              "tone": "old"
+            },
+            {
+              "a": {
+                "de": "die Kranken",
+                "gsw": "di Chranke"
+              },
+              "icons": [
+                "FIG-ZEICHEN-KRANK"
+              ],
+              "tone": "new"
+            }
+          ],
+          [
+            {
+              "a": {
+                "de": "Ich bin nicht gekommen, Gerechte zu rufen,",
+                "gsw": "Ich bi nöd choo, zum Grächti rüefe,"
+              },
+              "icons": [
+                "FIG-ZEICHEN-GERECHT"
+              ],
+              "tone": "old"
+            },
+            {
+              "a": {
+                "de": "sondern Sünder.",
+                "gsw": "sondern Sünder."
+              },
+              "icons": [
+                "FIG-GRUPPE-ZOELLNER"
+              ],
+              "tone": "new"
+            }
+          ]
+        ]
       }
     }
   ],
   "actions_de": [
-    "Jesus sieht Levi, den Sohn des Alphäus, an der Zollstelle sitzen und sagt: Folge mir! Levi steht auf und folgt ihm.",
-    "Im Haus des Levi liegt Jesus zu Tisch, und viele Zöllner und Sünder essen mit ihm und seinen Jüngern.",
-    "Schriftgelehrte der Pharisäer fragen die Jünger: Wieso isst er mit Zöllnern und Sündern? Jesus antwortet: Nicht die Gesunden brauchen einen Arzt, sondern die Kranken; ich bin gekommen, Sünder zu rufen."
+    "Im Vorbeigehen sieht Jesus Levi, den Sohn des Alphäus, an der Zollstelle sitzen und sagt zu ihm: «Folge mir!» Und er steht auf und folgt ihm.",
+    "Viele Zöllner und Sünder liegen mit Jesus und seinen Jüngern zu Tisch; die Schriftgelehrten der Pharisäer fragen seine Jünger: «Wieso isst er mit den Zöllnern und Sündern?»",
+    "Jesus antwortet: «Nicht die Gesunden brauchen einen Arzt, sondern die Kranken. Ich bin nicht gekommen, Gerechte zu rufen, sondern Sünder.»"
   ],
   "captions_de": [
-    "Folge mir: Jesus ruft den Zöllner Levi an der Zollstelle (Münzen): Folge mir (zwei gehende Personen).",
-    "Mahl: Jesus isst mit Zöllnern und Sündern und seinen Jüngern (Brot zwischen ihnen); Freude bei den Zöllnern.",
-    "Die Frage: Die Schriftgelehrten fragen: Jesus mit den Zöllnern? (Fragezeichen); Jesus: Der Kranke braucht Heilung (Kranker, Hand mit Licht)."
+    "An der Zollstelle: Levi (Name) sitzt bei seinen Münzen; Jesus ruft ihn: «Folge mir!» (nachfolgen).",
+    "Mahl mit Sündern: Jesus mit Zöllnern und Sündern beim Brot; die Schriftgelehrten fragen die Jünger: «Wieso isst er mit den Zöllnern und Sündern?»",
+    "Nicht – sondern (Bild Jesus): links nicht die Gesunden (gesund), nicht Gerechte (gerecht); rechts, hervorgehoben, die Kranken (krank) und die Sünder (Zöllner und Sünder)."
   ],
-  "interpretation_note_de": "Die Zollstelle ist nur mit Münzen angedeutet. Zöllner und Sünder sind eine Gruppe ohne abwertende Merkmale. Den zweiten Satz Jesu («Sünder rufen», [[MRK.2.17]]) zeigt das Bild nicht eigens.",
+  "interpretation_note_de": "Drei Felder nach «Ruf – Mahl – Frage – Antwort» ([[MRK.2.13-MRK.2.17]]). Die Frage richten die Schriftgelehrten der Pharisäer an die Jünger, nicht an Jesus; im Mahlbild trennt die gestrichelte Linie die Fragenden vom Tisch. Die Antwort steht als «nicht – sondern» in zwei Spalten, die Seite der Kranken und Sünder hervorgehoben.",
   "basis": [
     {
       "record": "TU-MRK-002-013-017",
       "field": "summary",
-      "fingerprint": "4fbdbd1670425f2b"
+      "fingerprint": "468de359e1ae4ca5"
     },
     {
       "record": "TRANS-MRK-002-001-028-DE-WORKING",
@@ -141,18 +214,18 @@
     {
       "record": "TRANS-MRK-002-001-028-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.2.15",
-      "fingerprint": "c259a466669ba345"
+      "reference": "MRK.2.15-MRK.2.16",
+      "fingerprint": "d4567c71002569e3"
     },
     {
       "record": "TRANS-MRK-002-001-028-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.2.16-MRK.2.17",
-      "fingerprint": "b04c11d79f96d5d1"
+      "reference": "MRK.2.17",
+      "fingerprint": "912de59704f0f228"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -281,6 +354,347 @@
           "Folge mir: Jesus ruft den Zöllner Levi an der Zollstelle (Münzen): Folge mir (Fussspuren).",
           "Mahl: Jesus isst mit Zöllnern und Sündern und seinen Jüngern (Brot zwischen ihnen); Freude bei den Zöllnern.",
           "Die Frage: Die Schriftgelehrten fragen: Jesus mit den Zöllnern? (Fragezeichen); Jesus: Der Kranke braucht Heilung (Kranker, Hand mit Licht)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.2.13-MRK.2.14",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-LEVI"
+            ],
+            "objects": [
+              "FIG-OBJ-MUENZEN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-LEVI",
+                "icons": [
+                  "FIG-ZEICHEN-NACHFOLGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus sieht Levi, den Sohn des Alphäus, an der Zollstelle sitzen und sagt: Folge mir! Levi steht auf und folgt ihm.",
+            "stage": {
+              "pose": {
+                "FIG-LEVI": "sit"
+              },
+              "mood": {
+                "FIG-LEVI": "surprised"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.2.15",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZOELLNER"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS",
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [],
+            "action_de": "Im Haus des Levi liegt Jesus zu Tisch, und viele Zöllner und Sünder essen mit ihm und seinen Jüngern.",
+            "stage": {
+              "back_side": "left",
+              "before": true,
+              "pose": {
+                "FIG-GRUPPE-JUENGER": "sit",
+                "FIG-JESUS": "sit",
+                "FIG-GRUPPE-ZOELLNER": "sit"
+              },
+              "count": {
+                "FIG-OBJ-BROT": 2
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-GRUPPE-ZOELLNER"
+                ]
+              },
+              "floor_x": {
+                "FIG-OBJ-BROT": 112
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.2.16-MRK.2.17",
+            "figures": [
+              "FIG-GRUPPE-SCHRIFTGELEHRTE",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-SCHRIFTGELEHRTE",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-ZOELLNER",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-SCHRIFTGELEHRTE",
+                "icons": [
+                  "FIG-ROLLE-KRANKER",
+                  "FIG-ZEICHEN-HEILEN"
+                ]
+              }
+            ],
+            "action_de": "Schriftgelehrte der Pharisäer fragen die Jünger: Wieso isst er mit Zöllnern und Sündern? Jesus antwortet: Nicht die Gesunden brauchen einen Arzt, sondern die Kranken; ich bin gekommen, Sünder zu rufen.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-SCHRIFTGELEHRTE": "earnest",
+                "FIG-GRUPPE-JUENGER": "worried"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus sieht Levi, den Sohn des Alphäus, an der Zollstelle sitzen und sagt: Folge mir! Levi steht auf und folgt ihm.",
+          "Im Haus des Levi liegt Jesus zu Tisch, und viele Zöllner und Sünder essen mit ihm und seinen Jüngern.",
+          "Schriftgelehrte der Pharisäer fragen die Jünger: Wieso isst er mit Zöllnern und Sündern? Jesus antwortet: Nicht die Gesunden brauchen einen Arzt, sondern die Kranken; ich bin gekommen, Sünder zu rufen."
+        ],
+        "captions_de": [
+          "Folge mir: Jesus ruft den Zöllner Levi an der Zollstelle (Münzen): Folge mir (zwei gehende Personen).",
+          "Mahl: Jesus isst mit Zöllnern und Sündern und seinen Jüngern (Brot zwischen ihnen); Freude bei den Zöllnern.",
+          "Die Frage: Die Schriftgelehrten fragen: Jesus mit den Zöllnern? (Fragezeichen); Jesus: Der Kranke braucht Heilung (Kranker, Hand mit Licht)."
+        ],
+        "interpretation_note_de": "Die Zollstelle ist nur mit Münzen angedeutet. Zöllner und Sünder sind eine Gruppe ohne abwertende Merkmale. Den zweiten Satz Jesu («Sünder rufen», [[MRK.2.17]]) zeigt das Bild nicht eigens.",
+        "basis": [
+          {
+            "record": "TU-MRK-002-013-017",
+            "field": "summary",
+            "fingerprint": "4fbdbd1670425f2b"
+          },
+          {
+            "record": "TRANS-MRK-002-001-028-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.2.13-MRK.2.14",
+            "fingerprint": "b72de50b9c8f17f0"
+          },
+          {
+            "record": "TRANS-MRK-002-001-028-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.2.15",
+            "fingerprint": "c259a466669ba345"
+          },
+          {
+            "record": "TRANS-MRK-002-001-028-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.2.16-MRK.2.17",
+            "fingerprint": "b04c11d79f96d5d1"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Prüfung Struktur zuerst",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.2.13-MRK.2.14",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-LEVI"
+            ],
+            "objects": [
+              "FIG-OBJ-MUENZEN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-LEVI",
+                "icons": [],
+                "word": {
+                  "de": "Folge mir!",
+                  "gsw": "Chumm mir nache!"
+                }
+              }
+            ],
+            "action_de": "Im Vorbeigehen sieht Jesus Levi, den Sohn des Alphäus, an der Zollstelle sitzen und sagt zu ihm: «Folge mir!» Und er steht auf und folgt ihm.",
+            "keywords": {
+              "de": "Und er stand auf und folgte ihm",
+              "gsw": "Und er isch ufgstande und isch ihm nachegange"
+            },
+            "names": {
+              "FIG-LEVI": {
+                "de": "Levi",
+                "gsw": "Levi"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "smile",
+                "FIG-LEVI": "surprised"
+              },
+              "x": {
+                "FIG-JESUS": 54,
+                "FIG-LEVI": 140
+              },
+              "floor_x": {
+                "FIG-OBJ-MUENZEN": 166
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.2.15-MRK.2.16",
+            "figures": [
+              "FIG-GRUPPE-SCHRIFTGELEHRTE",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZOELLNER"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-SCHRIFTGELEHRTE",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [],
+                "word": {
+                  "de": "Wieso isst er mit den Zöllnern und Sündern?",
+                  "gsw": "Wieso isst er mit de Zöllner und Sünder?"
+                }
+              }
+            ],
+            "action_de": "Viele Zöllner und Sünder liegen mit Jesus und seinen Jüngern zu Tisch; die Schriftgelehrten der Pharisäer fragen seine Jünger: «Wieso isst er mit den Zöllnern und Sündern?» Jesus antwortet: «Ich bin nicht gekommen, Gerechte zu rufen, sondern Sünder.»",
+            "keywords": {
+              "de": "viele Zöllner und Sünder lagen mit Jesus und seinen Jüngern zu Tisch",
+              "gsw": "vil Zöllner und Sünder sind mit em Jesus und sine Jünger am Tisch gläge"
+            },
+            "stage": {
+              "split": 2,
+              "trenner": true,
+              "pose": {
+                "FIG-JESUS": "sit",
+                "FIG-GRUPPE-ZOELLNER": "sit"
+              },
+              "mood": {
+                "FIG-GRUPPE-SCHRIFTGELEHRTE": "earnest",
+                "FIG-GRUPPE-JUENGER": "worried",
+                "FIG-JESUS": "smile",
+                "FIG-GRUPPE-ZOELLNER": "delight"
+              },
+              "x": {
+                "FIG-GRUPPE-SCHRIFTGELEHRTE": 26,
+                "FIG-GRUPPE-JUENGER": 70,
+                "FIG-JESUS": 120,
+                "FIG-GRUPPE-ZOELLNER": 166
+              },
+              "floor_x": {
+                "FIG-OBJ-BROT": 144
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.2.17",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Jesus antwortet: «Nicht die Gesunden brauchen einen Arzt, sondern die Kranken. Ich bin nicht gekommen, Gerechte zu rufen, sondern Sünder.»",
+            "keywords": {
+              "de": "Ich bin nicht gekommen, Gerechte zu rufen, sondern Sünder",
+              "gsw": "Ich bi nöd choo, zum Grächti rüefe, sondern Sünder"
+            },
+            "diagram": {
+              "visual": "columns",
+              "span": 2,
+              "speaker": "FIG-JESUS",
+              "title": {
+                "de": "Nicht die Gesunden brauchen einen Arzt, sondern die Kranken.",
+                "gsw": "Nöd di Gsunde bruuched en Dokter, sondern di Chranke."
+              },
+              "head": [
+                {
+                  "de": "nicht",
+                  "gsw": "nöd"
+                },
+                {
+                  "de": "sondern",
+                  "gsw": "sondern"
+                }
+              ],
+              "rows": [
+                [
+                  {
+                    "a": {
+                      "de": "die Gesunden",
+                      "gsw": "di Gsunde"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-GESUND"
+                    ],
+                    "tone": "old"
+                  },
+                  {
+                    "a": {
+                      "de": "die Kranken",
+                      "gsw": "di Chranke"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-KRANK"
+                    ],
+                    "tone": "new"
+                  }
+                ],
+                [
+                  {
+                    "a": {
+                      "de": "Ich bin nicht gekommen, Gerechte zu rufen,",
+                      "gsw": "Ich bi nöd choo, zum Grächti rüefe,"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-GERECHT"
+                    ],
+                    "tone": "old"
+                  },
+                  {
+                    "a": {
+                      "de": "sondern Sünder.",
+                      "gsw": "sondern Sünder."
+                    },
+                    "icons": [
+                      "FIG-GRUPPE-ZOELLNER"
+                    ],
+                    "tone": "new"
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "actions_de": [
+          "Im Vorbeigehen sieht Jesus Levi, den Sohn des Alphäus, an der Zollstelle sitzen und sagt zu ihm: «Folge mir!» Und er steht auf und folgt ihm.",
+          "Viele Zöllner und Sünder liegen mit Jesus und seinen Jüngern zu Tisch; die Schriftgelehrten der Pharisäer fragen seine Jünger: «Wieso isst er mit den Zöllnern und Sündern?» Jesus antwortet: «Ich bin nicht gekommen, Gerechte zu rufen, sondern Sünder.»",
+          "Jesus antwortet: «Nicht die Gesunden brauchen einen Arzt, sondern die Kranken. Ich bin nicht gekommen, Gerechte zu rufen, sondern Sünder.»"
         ]
       }
     }

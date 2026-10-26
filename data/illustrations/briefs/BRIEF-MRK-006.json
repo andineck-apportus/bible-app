@@ -14,36 +14,57 @@
       "reference": "MRK.6.1-MRK.6.6",
       "figures": [
         "FIG-JESUS",
-        "FIG-GRUPPE-MENGE"
+        "FIG-GRUPPE-VOLK"
       ],
       "objects": [
         "FIG-ORT-SYNAGOGE"
       ],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-LEHREN",
+        "FIG-ZEICHEN-STOLPERN"
+      ],
       "speech": [
         {
-          "from": "FIG-GRUPPE-MENGE",
-          "to": "FIG-JESUS",
+          "from": "FIG-GRUPPE-VOLK",
+          "to": "FIG-GRUPPE-VOLK",
           "icons": [
-            "FIG-MARIA-MUTTER-JESU",
-            "FIG-JESUS",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
+            "FIG-ZEICHEN-LEHREN"
+          ],
+          "word": {
+            "de": "Woher hat dieser das?",
+            "gsw": "Vo wo hät dä das?"
+          }
         }
       ],
-      "action_de": "In seiner Heimat staunen die Leute über Jesus, nehmen aber Anstoss an ihm; er wundert sich über ihren Unglauben.",
+      "action_de": "Am Sabbat lehrt Jesus in der Synagoge seiner Heimat; die Zuhörer staunen und fragen: «Woher hat dieser das?» – «Ist dieser nicht der Zimmermann, der Sohn der Maria …?» – und sie nehmen Anstoss an ihm.",
+      "keywords": {
+        "de": "Ein Prophet ist nicht ohne Ehre, ausser in seiner Heimat",
+        "gsw": "En Prophet isch nöd ohni Ehr, usser i sinere Heimet"
+      },
       "stage": {
+        "at": {
+          "FIG-ZEICHEN-LEHREN": "FIG-JESUS",
+          "FIG-ZEICHEN-STOLPERN": "FIG-GRUPPE-VOLK"
+        },
+        "back_side": "left",
+        "before": true,
         "mood": {
-          "FIG-GRUPPE-MENGE": "earnest"
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-VOLK": "earnest"
+        },
+        "x": {
+          "FIG-JESUS": 54,
+          "FIG-GRUPPE-VOLK": 140
         }
       }
     },
     {
       "n": 2,
-      "reference": "MRK.6.7-MRK.6.13",
+      "reference": "MRK.6.7-MRK.6.29",
       "figures": [
         "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF"
+        "FIG-GRUPPE-ZWOELF",
+        "FIG-HERODES-ANTIPAS"
       ],
       "objects": [],
       "signs": [],
@@ -53,23 +74,45 @@
           "to": "FIG-GRUPPE-ZWOELF",
           "icons": [
             "FIG-ZEICHEN-VOLLMACHT",
-            "FIG-ZEICHEN-DAEMON",
             "FIG-ZEICHEN-AUSTREIBEN"
           ]
+        },
+        {
+          "from": "FIG-HERODES-ANTIPAS",
+          "to": "FIG-HERODES-ANTIPAS",
+          "icons": [
+            "FIG-JOHANNES-TAEUFER"
+          ],
+          "word": {
+            "de": "Johannes, den ich enthauptet habe, der ist auferweckt worden.",
+            "gsw": "De Johannes, won ich gchöpft ha, dä isch uferweckt worde."
+          }
         }
       ],
-      "action_de": "Jesus sendet die Zwölf aus und gibt ihnen Vollmacht über die unreinen Geister.",
+      "action_de": "Jesus sendet die Zwölf zu zweit aus und gibt ihnen Vollmacht über die unreinen Geister. König Herodes hört davon und sagt: «Johannes, den ich enthauptet habe, der ist auferweckt worden.»",
+      "keywords": {
+        "de": "begann, sie zu zweit auszusenden",
+        "gsw": "hät aagfange, si je zwei uszschicke"
+      },
+      "names": {
+        "FIG-HERODES-ANTIPAS": {
+          "de": "Herodes",
+          "gsw": "Herodes"
+        }
+      },
       "stage": {
+        "split": 2,
+        "trenner": true,
         "mood": {
-          "FIG-GRUPPE-ZWOELF": "earnest"
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-ZWOELF": "determined",
+          "FIG-HERODES-ANTIPAS": "pensive"
         },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-GRUPPE-ZWOELF",
-            "act"
-          ]
-        ]
+        "x": {
+          "FIG-JESUS": 26,
+          "FIG-GRUPPE-ZWOELF": 82,
+          "FIG-HERODES-ANTIPAS": 160
+        }
       }
     },
     {
@@ -77,97 +120,148 @@
       "reference": "MRK.6.30-MRK.6.44",
       "figures": [
         "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF",
+        "FIG-GRUPPE-JUENGER",
         "FIG-GRUPPE-MENGE"
       ],
       "objects": [
-        "FIG-OBJ-BROT",
-        "FIG-OBJ-FISCH"
+        "FIG-OBJ-BROTE-FISCHE",
+        "FIG-OBJ-KORB"
       ],
       "signs": [
+        "FIG-ZEICHEN-SEGNEN",
         "FIG-ZEICHEN-SATT"
       ],
-      "speech": [],
-      "action_de": "Mit fünf Broten und zwei Fischen speist Jesus fünftausend Männer; alle werden satt.",
+      "speech": [
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-GRUPPE-JUENGER",
+          "icons": [],
+          "word": {
+            "de": "Gebt ihr ihnen zu essen!",
+            "gsw": "Gänd ihr ine z ässe!"
+          }
+        }
+      ],
+      "action_de": "Jesus nimmt die fünf Brote und zwei Fische, blickt auf zum Himmel, spricht den Segen, bricht die Brote und gibt sie den Jüngern zum Austeilen; alle essen und werden satt, und zwölf Körbe voll Brocken bleiben übrig.",
+      "keywords": {
+        "de": "Und sie assen alle und wurden satt",
+        "gsw": "Und si händ alli ggässe und sind satt worde"
+      },
       "stage": {
+        "hold": {
+          "FIG-JESUS": "FIG-OBJ-BROTE-FISCHE"
+        },
         "count": {
-          "FIG-OBJ-BROT": 5,
-          "FIG-OBJ-FISCH": 2
+          "FIG-OBJ-KORB": 5
         },
         "at": {
+          "FIG-ZEICHEN-SEGNEN": "FIG-JESUS",
           "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
         },
+        "arrows": [
+          [
+            "FIG-GRUPPE-JUENGER",
+            "FIG-GRUPPE-MENGE",
+            "act"
+          ]
+        ],
         "mood": {
-          "FIG-GRUPPE-MENGE": "smile"
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-JUENGER": "surprised",
+          "FIG-GRUPPE-MENGE": "delight"
         },
-        "floor_side": "left"
+        "x": {
+          "FIG-JESUS": 30,
+          "FIG-GRUPPE-JUENGER": 92,
+          "FIG-GRUPPE-MENGE": 156
+        }
       }
     },
     {
       "n": 4,
-      "reference": "MRK.6.45-MRK.6.52",
+      "reference": "MRK.6.45-MRK.6.56",
       "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF"
+        "FIG-GRUPPE-JUENGER",
+        "FIG-JESUS"
       ],
       "objects": [
         "FIG-OBJ-BOOT",
         "FIG-ORT-SEE"
       ],
       "signs": [
+        "FIG-ZEICHEN-FURCHT",
+        "FIG-ZEICHEN-WIND",
         "FIG-ZEICHEN-NACHT"
       ],
       "speech": [
         {
           "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
+          "to": "FIG-GRUPPE-JUENGER",
           "icons": [
-            "FIG-JESUS"
-          ]
+            "FIG-ZEICHEN-FURCHT",
+            "FIG-ZEICHEN-NICHT"
+          ],
+          "word": {
+            "de": "Seid getrost, ich bin es; fürchtet euch nicht!",
+            "gsw": "Nu Muet, ich bins; händ kei Angscht!"
+          }
         }
       ],
-      "action_de": "Nachts kommt Jesus auf dem See zu den Jüngern und sagt: Ich bin es; fürchtet euch nicht!",
+      "action_de": "In der Nacht kommt Jesus auf dem See zu den Jüngern, die sich gegen den Wind abmühen; sie meinen, es sei ein Gespenst, und schreien auf; er sagt: «Seid getrost, ich bin es; fürchtet euch nicht!»",
+      "keywords": {
+        "de": "ihr Herz war verhärtet",
+        "gsw": "ires Härz isch verhärtet gsii"
+      },
       "stage": {
         "in": {
-          "FIG-GRUPPE-ZWOELF": "FIG-OBJ-BOOT"
+          "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT"
         },
         "in_pos": {
-          "FIG-GRUPPE-ZWOELF": [
-            0.3,
-            0.45
+          "FIG-GRUPPE-JUENGER": [
+            0.4,
+            0.42
           ]
         },
-        "big_side": "right",
-        "mood": {
-          "FIG-GRUPPE-ZWOELF": "surprised",
-          "FIG-JESUS": "smile"
+        "big_side": "left",
+        "on_water": [
+          "FIG-JESUS"
+        ],
+        "night": true,
+        "at": {
+          "FIG-ZEICHEN-FURCHT": "FIG-GRUPPE-JUENGER"
         },
-        "in_water": true
+        "mood": {
+          "FIG-GRUPPE-JUENGER": "fear",
+          "FIG-JESUS": "calm"
+        },
+        "x": {
+          "FIG-JESUS": 156
+        }
       }
     }
   ],
   "actions_de": [
-    "In seiner Heimat staunen die Leute über Jesus, nehmen aber Anstoss an ihm; er wundert sich über ihren Unglauben.",
-    "Jesus sendet die Zwölf aus und gibt ihnen Vollmacht über die unreinen Geister.",
-    "Mit fünf Broten und zwei Fischen speist Jesus fünftausend Männer; alle werden satt.",
-    "Nachts kommt Jesus auf dem See zu den Jüngern und sagt: Ich bin es; fürchtet euch nicht!"
+    "Am Sabbat lehrt Jesus in der Synagoge seiner Heimat; die Zuhörer staunen und fragen: «Woher hat dieser das?» – «Ist dieser nicht der Zimmermann, der Sohn der Maria …?» – und sie nehmen Anstoss an ihm.",
+    "Jesus sendet die Zwölf zu zweit aus und gibt ihnen Vollmacht über die unreinen Geister. König Herodes hört davon und sagt: «Johannes, den ich enthauptet habe, der ist auferweckt worden.»",
+    "Jesus nimmt die fünf Brote und zwei Fische, blickt auf zum Himmel, spricht den Segen, bricht die Brote und gibt sie den Jüngern zum Austeilen; alle essen und werden satt, und zwölf Körbe voll Brocken bleiben übrig.",
+    "In der Nacht kommt Jesus auf dem See zu den Jüngern, die sich gegen den Wind abmühen; sie meinen, es sei ein Gespenst, und schreien auf; er sagt: «Seid getrost, ich bin es; fürchtet euch nicht!»"
   ],
   "captions_de": [
-    "Heimat: In der Synagoge fragen die Leute: Ist das nicht der Sohn der Maria (Maria, Jesus, Fragezeichen)?",
-    "Aussendung: Jesus sendet die Zwölf aus (Pfeil) und gibt ihnen Vollmacht über die Geister (Schriftrolle mit Krone, Schatten, Pfeil weg).",
-    "Speisung: Fünf Brote und zwei Fische reichen für die Menge; alle werden satt (volle Schale).",
-    "Auf dem Wasser: Jesus geht auf dem See zum Boot und sagt: Ich bin es (Jesus); die Jünger erschrecken."
+    "In der Heimat: Jesus lehrt in der Synagoge (lehren); die Leute tuscheln: «Woher hat dieser das?» und nehmen Anstoss an ihm (Anstoss).",
+    "Sendung: Jesus sendet die Zwölf zu zweit (gestrichelter Pfeil) mit Vollmacht über die unreinen Geister (Vollmacht, austreiben); rechts, hinter der gestrichelten Linie, Herodes (Name): «Johannes, den ich enthauptet habe, der ist auferweckt worden.» (Johannes).",
+    "Alle werden satt: Jesus hält Brote und Fische und spricht den Segen (segnen); die Jünger teilen der Menge aus; die Leute werden satt (satt); Körbe mit Resten.",
+    "Auf dem See: Jesus geht in der Nacht auf dem Wasser zum Boot; die Jünger schreien in Angst (Furcht, Wind); Jesus: «Seid getrost, ich bin es; fürchtet euch nicht!»"
   ],
-  "interpretation_note_de": "Kapitelbild aus den Abschnittsbildern. Nicht im Bild sind der Tod Johannes des Täufers ([[MRK.6.14-MRK.6.29]]) und die Heilungen in Gennesaret ([[MRK.6.53-MRK.6.56]]).",
+  "interpretation_note_de": "Vier Comic-Szenen für sechs Abschnitte ([[MRK.6.1-MRK.6.56]]): Feld 1 die Ablehnung in der Heimat; Feld 2 bündelt die Sendung der Zwölf und den eingeschobenen Bericht vom Tod des Täufers (links die Sendung, rechts hinter der gestrichelten Linie Herodes mit seinem Wort über Johannes); Feld 3 die Speisung der Fünftausend; Feld 4 bündelt den Gang auf dem See und die Heilungen in Gennesaret (Jesus auf dem Wasser, das Band nennt das Unverständnis der Jünger). Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-MRK-006",
       "field": "summary",
-      "fingerprint": "de973d56b8b4f880"
+      "fingerprint": "f00c28efa13238d8"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -466,6 +560,415 @@
           "Aussendung: Jesus sendet die Zwölf aus (Pfeil) und gibt ihnen Vollmacht über die Geister (Zepter, Schatten, Pfeil weg).",
           "Speisung: Fünf Brote und zwei Fische reichen für die Menge; alle werden satt (volle Schale).",
           "Auf dem Wasser: Jesus geht auf dem See zum Boot und sagt: Ich bin es (Jesus); die Jünger erschrecken."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-MRK-006",
+            "field": "summary",
+            "fingerprint": "de973d56b8b4f880"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.6.1-MRK.6.6",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-SYNAGOGE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-MARIA-MUTTER-JESU",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "In seiner Heimat staunen die Leute über Jesus, nehmen aber Anstoss an ihm; er wundert sich über ihren Unglauben.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.6.7-MRK.6.13",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-VOLLMACHT",
+                  "FIG-ZEICHEN-DAEMON",
+                  "FIG-ZEICHEN-AUSTREIBEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus sendet die Zwölf aus und gibt ihnen Vollmacht über die unreinen Geister.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "earnest"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-ZWOELF",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.6.30-MRK.6.44",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT",
+              "FIG-OBJ-FISCH"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SATT"
+            ],
+            "speech": [],
+            "action_de": "Mit fünf Broten und zwei Fischen speist Jesus fünftausend Männer; alle werden satt.",
+            "stage": {
+              "count": {
+                "FIG-OBJ-BROT": 5,
+                "FIG-OBJ-FISCH": 2
+              },
+              "at": {
+                "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "smile"
+              },
+              "floor_side": "left"
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.6.45-MRK.6.52",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NACHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Nachts kommt Jesus auf dem See zu den Jüngern und sagt: Ich bin es; fürchtet euch nicht!",
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-ZWOELF": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-ZWOELF": [
+                  0.3,
+                  0.45
+                ]
+              },
+              "big_side": "right",
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "surprised",
+                "FIG-JESUS": "smile"
+              },
+              "in_water": true
+            }
+          }
+        ],
+        "actions_de": [
+          "In seiner Heimat staunen die Leute über Jesus, nehmen aber Anstoss an ihm; er wundert sich über ihren Unglauben.",
+          "Jesus sendet die Zwölf aus und gibt ihnen Vollmacht über die unreinen Geister.",
+          "Mit fünf Broten und zwei Fischen speist Jesus fünftausend Männer; alle werden satt.",
+          "Nachts kommt Jesus auf dem See zu den Jüngern und sagt: Ich bin es; fürchtet euch nicht!"
+        ],
+        "captions_de": [
+          "Heimat: In der Synagoge fragen die Leute: Ist das nicht der Sohn der Maria (Maria, Jesus, Fragezeichen)?",
+          "Aussendung: Jesus sendet die Zwölf aus (Pfeil) und gibt ihnen Vollmacht über die Geister (Schriftrolle mit Krone, Schatten, Pfeil weg).",
+          "Speisung: Fünf Brote und zwei Fische reichen für die Menge; alle werden satt (volle Schale).",
+          "Auf dem Wasser: Jesus geht auf dem See zum Boot und sagt: Ich bin es (Jesus); die Jünger erschrecken."
+        ],
+        "interpretation_note_de": "Kapitelbild aus den Abschnittsbildern. Nicht im Bild sind der Tod Johannes des Täufers ([[MRK.6.14-MRK.6.29]]) und die Heilungen in Gennesaret ([[MRK.6.53-MRK.6.56]]).",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Prüfung Struktur zuerst",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.6.1-MRK.6.6",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-VOLK"
+            ],
+            "objects": [
+              "FIG-ORT-SYNAGOGE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-LEHREN",
+              "FIG-ZEICHEN-STOLPERN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-VOLK",
+                "to": "FIG-GRUPPE-VOLK",
+                "icons": [
+                  "FIG-ZEICHEN-LEHREN"
+                ],
+                "word": {
+                  "de": "Woher hat dieser das?",
+                  "gsw": "Vo wo hät dä das?"
+                }
+              }
+            ],
+            "action_de": "Am Sabbat lehrt Jesus in der Synagoge seiner Heimat; die Zuhörer staunen und fragen: «Woher hat dieser das?» – «Ist dieser nicht der Zimmermann, der Sohn der Maria …?» – und sie nehmen Anstoss an ihm.",
+            "keywords": {
+              "de": "Ein Prophet ist nicht ohne Ehre, ausser in seiner Heimat",
+              "gsw": "En Prophet isch nöd ohni Ehr, usser i sinere Heimet"
+            },
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-LEHREN": "FIG-JESUS",
+                "FIG-ZEICHEN-STOLPERN": "FIG-GRUPPE-VOLK"
+              },
+              "back_side": "left",
+              "before": true,
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-VOLK": "earnest"
+              },
+              "x": {
+                "FIG-JESUS": 54,
+                "FIG-GRUPPE-VOLK": 140
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.6.7-MRK.6.29",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-HERODES-ANTIPAS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-VOLLMACHT",
+                  "FIG-ZEICHEN-AUSTREIBEN"
+                ]
+              },
+              {
+                "from": "FIG-HERODES-ANTIPAS",
+                "to": "FIG-HERODES-ANTIPAS",
+                "icons": [
+                  "FIG-JOHANNES-TAEUFER"
+                ],
+                "word": {
+                  "de": "Johannes, den ich enthauptet habe, der ist auferweckt worden.",
+                  "gsw": "De Johannes, won ich gchöpft ha, dä isch uferweckt worde."
+                }
+              }
+            ],
+            "action_de": "Jesus sendet die Zwölf zu zweit aus und gibt ihnen Vollmacht über die unreinen Geister. König Herodes hört davon und sagt: «Johannes, den ich enthauptet habe, der ist auferweckt worden.»",
+            "keywords": {
+              "de": "begann, sie zu zweit auszusenden",
+              "gsw": "hät aagfange, si je zwei uszschicke"
+            },
+            "names": {
+              "FIG-HERODES-ANTIPAS": {
+                "de": "Herodes",
+                "gsw": "Herodes"
+              }
+            },
+            "stage": {
+              "split": 2,
+              "trenner": true,
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-ZWOELF": "determined",
+                "FIG-HERODES-ANTIPAS": "fear"
+              },
+              "x": {
+                "FIG-JESUS": 26,
+                "FIG-GRUPPE-ZWOELF": 82,
+                "FIG-HERODES-ANTIPAS": 160
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.6.30-MRK.6.44",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROTE-FISCHE",
+              "FIG-OBJ-KORB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SEGNEN",
+              "FIG-ZEICHEN-SATT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [],
+                "word": {
+                  "de": "Gebt ihr ihnen zu essen!",
+                  "gsw": "Gänd ihr ine z ässe!"
+                }
+              }
+            ],
+            "action_de": "Jesus nimmt die fünf Brote und zwei Fische, blickt auf zum Himmel, spricht den Segen, bricht die Brote und gibt sie den Jüngern zum Austeilen; alle essen und werden satt, und zwölf Körbe voll Brocken bleiben übrig.",
+            "keywords": {
+              "de": "Und sie assen alle und wurden satt",
+              "gsw": "Und si händ alli ggässe und sind satt worde"
+            },
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROTE-FISCHE"
+              },
+              "count": {
+                "FIG-OBJ-KORB": 5
+              },
+              "at": {
+                "FIG-ZEICHEN-SEGNEN": "FIG-JESUS",
+                "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "surprised",
+                "FIG-GRUPPE-MENGE": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-JUENGER": 92,
+                "FIG-GRUPPE-MENGE": 156
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.6.45-MRK.6.56",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FURCHT",
+              "FIG-ZEICHEN-WIND",
+              "FIG-ZEICHEN-NACHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-FURCHT",
+                  "FIG-ZEICHEN-NICHT"
+                ],
+                "word": {
+                  "de": "Seid getrost, ich bin es; fürchtet euch nicht!",
+                  "gsw": "Nu Muet, ich bins; händ kei Angscht!"
+                }
+              }
+            ],
+            "action_de": "In der Nacht kommt Jesus auf dem See zu den Jüngern, die sich gegen den Wind abmühen; sie meinen, es sei ein Gespenst, und schreien auf; er sagt: «Seid getrost, ich bin es; fürchtet euch nicht!»",
+            "keywords": {
+              "de": "ihr Herz war verhärtet",
+              "gsw": "ires Härz isch verhärtet gsii"
+            },
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-JUENGER": [
+                  0.4,
+                  0.42
+                ]
+              },
+              "big_side": "left",
+              "on_water": [
+                "FIG-JESUS"
+              ],
+              "night": true,
+              "at": {
+                "FIG-ZEICHEN-FURCHT": "FIG-GRUPPE-JUENGER"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "fear",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-JESUS": 156
+              }
+            }
+          }
         ]
       }
     }

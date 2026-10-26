@@ -11,10 +11,10 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MRK.8.14-MRK.8.15",
+      "reference": "MRK.8.14-MRK.8.16",
       "figures": [
         "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF"
+        "FIG-GRUPPE-JUENGER"
       ],
       "objects": [
         "FIG-OBJ-BOOT",
@@ -24,160 +24,166 @@
       "speech": [
         {
           "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
+          "to": "FIG-GRUPPE-JUENGER",
           "icons": [
-            "FIG-ZEICHEN-WARNEN",
             "FIG-OBJ-SAUERTEIG",
-            "FIG-ROLLE-PHARISAEER",
-            "FIG-HERODES-ANTIPAS"
-          ]
+            "FIG-ZEICHEN-WARNEN"
+          ],
+          "word": {
+            "de": "Seht zu, hütet euch vor dem Sauerteig der Pharisäer und dem Sauerteig des Herodes!",
+            "gsw": "Lueged, hüeted eu vor em Suurteig vo de Pharisäer und vor em Suurteig vom Herodes!"
+          }
+        },
+        {
+          "from": "FIG-GRUPPE-JUENGER",
+          "to": "FIG-GRUPPE-JUENGER",
+          "icons": [
+            "FIG-ZEICHEN-FEHLT-BROT"
+          ],
+          "think": true
         }
       ],
-      "action_de": "Im Boot haben die Jünger nur ein Brot dabei. Jesus warnt: Hütet euch vor dem Sauerteig der Pharisäer und dem Sauerteig des Herodes!",
+      "action_de": "Im Boot haben die Jünger nur ein Brot dabei; Jesus warnt vor dem Sauerteig der Pharisäer und des Herodes, doch sie überlegen, dass sie keine Brote haben; er fragt: «Versteht ihr noch nicht?»",
+      "keywords": {
+        "de": "dass sie keine Brote hätten",
+        "gsw": "dass si kei Broot heigid"
+      },
       "stage": {
         "in": {
           "FIG-JESUS": "FIG-OBJ-BOOT",
-          "FIG-GRUPPE-ZWOELF": "FIG-OBJ-BOOT"
+          "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT"
         },
         "in_pos": {
           "FIG-JESUS": [
-            0.8,
-            0.45
+            0.3,
+            0.42
           ],
-          "FIG-GRUPPE-ZWOELF": [
-            0.26,
-            0.45
+          "FIG-GRUPPE-JUENGER": [
+            0.7,
+            0.42
           ]
         },
+        "sea": "calm",
         "mood": {
-          "FIG-GRUPPE-ZWOELF": "pensive",
-          "FIG-JESUS": "earnest"
+          "FIG-JESUS": "earnest",
+          "FIG-GRUPPE-JUENGER": "pensive"
         }
       }
     },
     {
       "n": 2,
-      "reference": "MRK.8.16",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF"
-      ],
-      "objects": [
-        "FIG-OBJ-BOOT",
-        "FIG-ORT-SEE"
-      ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-ZWOELF",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-OBJ-BROT",
-            "FIG-ZEICHEN-FEHLT"
-          ]
-        }
-      ],
-      "action_de": "Die Jünger aber überlegen miteinander, dass sie keine Brote haben.",
-      "stage": {
-        "in": {
-          "FIG-JESUS": "FIG-OBJ-BOOT",
-          "FIG-GRUPPE-ZWOELF": "FIG-OBJ-BOOT"
-        },
-        "in_pos": {
-          "FIG-JESUS": [
-            0.8,
-            0.45
-          ],
-          "FIG-GRUPPE-ZWOELF": [
-            0.26,
-            0.45
-          ]
-        },
-        "mood": {
-          "FIG-GRUPPE-ZWOELF": "worried"
-        }
-      }
-    },
-    {
-      "n": 3,
       "reference": "MRK.8.17-MRK.8.21",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF"
-      ],
-      "objects": [
-        "FIG-OBJ-BOOT",
-        "FIG-ORT-SEE"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-NICHT-VERSTEHEN"
-      ],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-OBJ-BROT",
-            "FIG-OBJ-KORB",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
-        }
-      ],
-      "action_de": "Jesus fragt: Versteht ihr noch nicht? Erinnert ihr euch nicht, wie viele Körbe voll Brocken ihr bei den Fünftausend und bei den Viertausend aufgehoben habt? Sie antworten: Zwölf – sieben.",
-      "stage": {
-        "in": {
-          "FIG-JESUS": "FIG-OBJ-BOOT",
-          "FIG-GRUPPE-ZWOELF": "FIG-OBJ-BOOT"
+      "figures": [],
+      "objects": [],
+      "signs": [],
+      "speech": [],
+      "action_de": "Jesus fragt: Was überlegt ihr, dass ihr keine Brote habt? Begreift ihr noch nicht? Habt ihr euer Herz verhärtet? Augen habt ihr und seht nicht, Ohren habt ihr und hört nicht? Erinnert ihr euch nicht? – Zwölf Körbe bei den Fünftausend, sieben bei den Viertausend. «Versteht ihr noch nicht?»",
+      "keywords": {
+        "de": "Augen habt ihr und seht nicht, und Ohren habt ihr und hört nicht?",
+        "gsw": "Ir händ Auge und gseend nöd, und ir händ Ohre und ghööred nöd?"
+      },
+      "diagram": {
+        "visual": "grid",
+        "span": 2,
+        "cols": 4,
+        "speaker": "FIG-JESUS",
+        "title": {
+          "de": "Versteht ihr noch nicht?",
+          "gsw": "Verstönd ir immer no nöd?"
         },
-        "in_pos": {
-          "FIG-JESUS": [
-            0.8,
-            0.45
-          ],
-          "FIG-GRUPPE-ZWOELF": [
-            0.26,
-            0.45
-          ]
-        },
-        "at": {
-          "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-GRUPPE-ZWOELF"
-        },
-        "mood": {
-          "FIG-GRUPPE-ZWOELF": "pensive",
-          "FIG-JESUS": "earnest"
-        },
-        "at_top": true
+        "cells": [
+          {
+            "a": {
+              "de": "Was überlegt ihr, dass ihr keine Brote habt?",
+              "gsw": "Was überleged ir, dass ir kei Broot händ?"
+            },
+            "icons": [
+              "FIG-ZEICHEN-FEHLT-BROT"
+            ]
+          },
+          {
+            "a": {
+              "de": "Begreift ihr noch nicht und versteht ihr nicht?",
+              "gsw": "Begriifed ir immer no nöd und verstönd ir nöd?"
+            },
+            "icons": [
+              "FIG-ZEICHEN-NICHT-VERSTEHEN"
+            ]
+          },
+          {
+            "a": {
+              "de": "Habt ihr euer Herz verhärtet?",
+              "gsw": "Händ ir eues Härz verhärtet?"
+            },
+            "icons": [
+              "FIG-ZEICHEN-HERZ"
+            ]
+          },
+          {
+            "a": {
+              "de": "Augen habt ihr und seht nicht, und Ohren habt ihr und hört nicht?",
+              "gsw": "Ir händ Auge und gseend nöd, und ir händ Ohre und ghööred nöd?"
+            },
+            "icons": [
+              "FIG-ZEICHEN-AUGE",
+              "FIG-ZEICHEN-HOEREN"
+            ]
+          },
+          {
+            "a": {
+              "de": "Und erinnert ihr euch nicht?",
+              "gsw": "Und erinnered ir eu nöd?"
+            },
+            "icons": [
+              "FIG-ZEICHEN-ERINNERN"
+            ]
+          },
+          {
+            "a": {
+              "de": "Fünf Brote für die Fünftausend: Wie viele Körbe? – «Zwölf.»",
+              "gsw": "Föif Broot für di Föiftuusig: Wie vil Chörb? – «Zwölf.»"
+            },
+            "icons": [
+              "FIG-OBJ-BROTE-FISCHE",
+              "FIG-OBJ-KORB"
+            ],
+            "tone": "new"
+          },
+          {
+            "a": {
+              "de": "Sieben Brote für die Viertausend: Wie viele Körbe? – «Sieben.»",
+              "gsw": "Sibe Broot für di Viertuusig: Wie vil Chörb? – «Sibe.»"
+            },
+            "icons": [
+              "FIG-OBJ-BROT",
+              "FIG-OBJ-KORB"
+            ],
+            "tone": "new"
+          }
+        ]
       }
     }
   ],
   "actions_de": [
-    "Im Boot haben die Jünger nur ein Brot dabei. Jesus warnt: Hütet euch vor dem Sauerteig der Pharisäer und dem Sauerteig des Herodes!",
-    "Die Jünger aber überlegen miteinander, dass sie keine Brote haben.",
-    "Jesus fragt: Versteht ihr noch nicht? Erinnert ihr euch nicht, wie viele Körbe voll Brocken ihr bei den Fünftausend und bei den Viertausend aufgehoben habt? Sie antworten: Zwölf – sieben."
+    "Im Boot haben die Jünger nur ein Brot dabei; Jesus warnt vor dem Sauerteig der Pharisäer und des Herodes, doch sie überlegen, dass sie keine Brote haben; er fragt: «Versteht ihr noch nicht?»",
+    "Jesus fragt: Was überlegt ihr, dass ihr keine Brote habt? Begreift ihr noch nicht? Habt ihr euer Herz verhärtet? Augen habt ihr und seht nicht, Ohren habt ihr und hört nicht? Erinnert ihr euch nicht? – Zwölf Körbe bei den Fünftausend, sieben bei den Viertausend. «Versteht ihr noch nicht?»"
   ],
   "captions_de": [
-    "Sauerteig: Jesus warnt (erhobener Zeigefinger) vor dem Sauerteig der Pharisäer und des Herodes (Teigtrog, Pharisäer, Herodes).",
-    "Missverstanden: Die Jünger denken an fehlendes Brot (Brot, leerer Kreis mit Schrägstrich).",
-    "Versteht ihr nicht? Jesus erinnert an die Brote und Körbe (Brot, Korb, Fragezeichen); die Jünger verstehen nicht (grauer Nebel mit Fragezeichen über ihnen)."
+    "Sauerteig: Jesus warnt im Boot (Sauerteig, warnen); die Jünger denken nur an das fehlende Brot (Gedankenwolke: kein Brot).",
+    "Fragen Jesu (Raster, Bild Jesus, Blase «Versteht ihr noch nicht?»): fünf Fragen (kein Brot, nicht verstehen, Herz, Augen und Ohren, erinnern) und die Erinnerung an die Körbe: zwölf bei den Fünftausend, sieben bei den Viertausend (Korb)."
   ],
-  "interpretation_note_de": "Der Sauerteig ist ein Bildwort ([[MRK.8.15]]); das Bild zeigt den Teigtrog in der Sprechblase. Die Zahlen der Körbe ([[MRK.8.19-MRK.8.20]]) stehen nicht im Bild (keine Ziffern).",
+  "interpretation_note_de": "Zwei Felder nach «Warnung – Missverständnis – Fragereihe – Erinnerung – offene Frage» ([[MRK.8.14-MRK.8.21]]): Jesus warnt vor dem Sauerteig, die Jünger denken nur an Brot (zwei Ebenen: gemeint ↔ verstanden); dann alle fünf Fragen und beide Speisungen mit den Körben. Die Schlussfrage «Versteht ihr noch nicht?» bleibt offen. Was der Sauerteig meint, erklärt der Text nicht.",
   "basis": [
     {
       "record": "TU-MRK-008-014-021",
       "field": "summary",
-      "fingerprint": "6dc0ea2a7459814f"
+      "fingerprint": "9e8baa1fc8c3bd49"
     },
     {
       "record": "TRANS-MRK-008-001-038-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.8.14-MRK.8.15",
-      "fingerprint": "8005315e5cdb3bf9"
-    },
-    {
-      "record": "TRANS-MRK-008-001-038-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MRK.8.16",
-      "fingerprint": "82e64d4c19f70dea"
+      "reference": "MRK.8.14-MRK.8.16",
+      "fingerprint": "b006e5e54b846acd"
     },
     {
       "record": "TRANS-MRK-008-001-038-DE-WORKING",
@@ -187,7 +193,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -341,6 +347,247 @@
           "Sauerteig: Jesus warnt vor dem Sauerteig der Pharisäer und des Herodes (Teigtrog, Pharisäer, Herodes).",
           "Missverstanden: Die Jünger denken an fehlendes Brot (Brot, fehlt).",
           "Versteht ihr nicht? Jesus erinnert an die Brote und Körbe (Brot, Korb, Fragezeichen); die Jünger verstehen nicht (Nebel)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MRK-008-014-021",
+            "field": "summary",
+            "fingerprint": "6dc0ea2a7459814f"
+          },
+          {
+            "record": "TRANS-MRK-008-001-038-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.8.14-MRK.8.15",
+            "fingerprint": "8005315e5cdb3bf9"
+          },
+          {
+            "record": "TRANS-MRK-008-001-038-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.8.16",
+            "fingerprint": "82e64d4c19f70dea"
+          },
+          {
+            "record": "TRANS-MRK-008-001-038-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.8.17-MRK.8.21",
+            "fingerprint": "00ed126cc8e93b64"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.8.14-MRK.8.15",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-WARNEN",
+                  "FIG-OBJ-SAUERTEIG",
+                  "FIG-ROLLE-PHARISAEER",
+                  "FIG-HERODES-ANTIPAS"
+                ]
+              }
+            ],
+            "action_de": "Im Boot haben die Jünger nur ein Brot dabei. Jesus warnt: Hütet euch vor dem Sauerteig der Pharisäer und dem Sauerteig des Herodes!",
+            "stage": {
+              "in": {
+                "FIG-JESUS": "FIG-OBJ-BOOT",
+                "FIG-GRUPPE-ZWOELF": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.8,
+                  0.45
+                ],
+                "FIG-GRUPPE-ZWOELF": [
+                  0.26,
+                  0.45
+                ]
+              },
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "pensive",
+                "FIG-JESUS": "earnest"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.8.16",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-ZWOELF",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-OBJ-BROT",
+                  "FIG-ZEICHEN-FEHLT"
+                ]
+              }
+            ],
+            "action_de": "Die Jünger aber überlegen miteinander, dass sie keine Brote haben.",
+            "stage": {
+              "in": {
+                "FIG-JESUS": "FIG-OBJ-BOOT",
+                "FIG-GRUPPE-ZWOELF": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.8,
+                  0.45
+                ],
+                "FIG-GRUPPE-ZWOELF": [
+                  0.26,
+                  0.45
+                ]
+              },
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "worried"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.8.17-MRK.8.21",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NICHT-VERSTEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-OBJ-BROT",
+                  "FIG-OBJ-KORB",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus fragt: Versteht ihr noch nicht? Erinnert ihr euch nicht, wie viele Körbe voll Brocken ihr bei den Fünftausend und bei den Viertausend aufgehoben habt? Sie antworten: Zwölf – sieben.",
+            "stage": {
+              "in": {
+                "FIG-JESUS": "FIG-OBJ-BOOT",
+                "FIG-GRUPPE-ZWOELF": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.8,
+                  0.45
+                ],
+                "FIG-GRUPPE-ZWOELF": [
+                  0.26,
+                  0.45
+                ]
+              },
+              "at": {
+                "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-GRUPPE-ZWOELF"
+              },
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "pensive",
+                "FIG-JESUS": "earnest"
+              },
+              "at_top": true
+            }
+          }
+        ],
+        "actions_de": [
+          "Im Boot haben die Jünger nur ein Brot dabei. Jesus warnt: Hütet euch vor dem Sauerteig der Pharisäer und dem Sauerteig des Herodes!",
+          "Die Jünger aber überlegen miteinander, dass sie keine Brote haben.",
+          "Jesus fragt: Versteht ihr noch nicht? Erinnert ihr euch nicht, wie viele Körbe voll Brocken ihr bei den Fünftausend und bei den Viertausend aufgehoben habt? Sie antworten: Zwölf – sieben."
+        ],
+        "captions_de": [
+          "Sauerteig: Jesus warnt (erhobener Zeigefinger) vor dem Sauerteig der Pharisäer und des Herodes (Teigtrog, Pharisäer, Herodes).",
+          "Missverstanden: Die Jünger denken an fehlendes Brot (Brot, leerer Kreis mit Schrägstrich).",
+          "Versteht ihr nicht? Jesus erinnert an die Brote und Körbe (Brot, Korb, Fragezeichen); die Jünger verstehen nicht (grauer Nebel mit Fragezeichen über ihnen)."
+        ],
+        "interpretation_note_de": "Der Sauerteig ist ein Bildwort ([[MRK.8.15]]); das Bild zeigt den Teigtrog in der Sprechblase. Die Zahlen der Körbe ([[MRK.8.19-MRK.8.20]]) stehen nicht im Bild (keine Ziffern).",
+        "basis": [
+          {
+            "record": "TU-MRK-008-014-021",
+            "field": "summary",
+            "fingerprint": "644d1f3c30a88f82"
+          },
+          {
+            "record": "TRANS-MRK-008-001-038-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.8.14-MRK.8.15",
+            "fingerprint": "8005315e5cdb3bf9"
+          },
+          {
+            "record": "TRANS-MRK-008-001-038-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.8.16",
+            "fingerprint": "82e64d4c19f70dea"
+          },
+          {
+            "record": "TRANS-MRK-008-001-038-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.8.17-MRK.8.21",
+            "fingerprint": "00ed126cc8e93b64"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Prüfung Struktur zuerst",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MRK-008-014-021",
+            "field": "summary",
+            "fingerprint": "644d1f3c30a88f82"
+          },
+          {
+            "record": "TRANS-MRK-008-001-038-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.8.14-MRK.8.16",
+            "fingerprint": "b006e5e54b846acd"
+          },
+          {
+            "record": "TRANS-MRK-008-001-038-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.8.17-MRK.8.21",
+            "fingerprint": "00ed126cc8e93b64"
+          }
         ]
       }
     }

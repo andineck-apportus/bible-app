@@ -1,0 +1,141 @@
+{
+ "id": "CORE-MRK-003-031-035",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MRK.3.31-MRK.3.35",
+ "target": "TU-MRK-003-031-035",
+ "core_de": "Seine Mutter und seine Brüder stehen draussen und lassen ihn rufen; die Menge, die um ihn sitzt, sagt: «Siehe, deine Mutter und deine Brüder sind draussen und suchen dich»; Jesus fragt: «Wer ist meine Mutter, und wer sind meine Brüder?», blickt auf die im Kreis um ihn und sagt: «Siehe, meine Mutter und meine Brüder! Denn wer den Willen Gottes tut, der ist mein Bruder und meine Schwester und meine Mutter.»",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "contrast",
+    "subtype": "draussen ↔ im Kreis um ihn",
+    "range": "MRK.3.31-MRK.3.35",
+    "elements": [
+     {
+      "label": "Seine Mutter und seine Brüder stehen draussen und lassen ihn rufen",
+      "ref": "MRK.3.31",
+      "role": "draussen"
+     },
+     {
+      "label": "Die Menge: «Siehe, deine Mutter und deine Brüder sind draussen und suchen dich.»",
+      "ref": "MRK.3.32",
+      "role": "Meldung"
+     },
+     {
+      "label": "«Wer ist meine Mutter, und wer sind meine Brüder?»",
+      "ref": "MRK.3.33",
+      "role": "Frage"
+     },
+     {
+      "label": "Blick auf die im Kreis: «Siehe, meine Mutter und meine Brüder!»",
+      "ref": "MRK.3.34",
+      "role": "im Kreis"
+     },
+     {
+      "label": "Begründung",
+      "ref": "MRK.3.35",
+      "role": "denn",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "die Menge",
+       "to": "FIG-JESUS",
+       "ref": "MRK.3.32"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "die Menge im Kreis",
+       "ref": "MRK.3.33-MRK.3.35"
+      }
+     ]
+    },
+    "visual": "columns",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "cause",
+    "subtype": "denn: Wille Gottes → Familie Jesu",
+    "range": "MRK.3.35",
+    "elements": [
+     {
+      "label": "wer den Willen Gottes tut",
+      "ref": "MRK.3.35",
+      "role": "Bedingung"
+     },
+     {
+      "label": "der ist mein Bruder und meine Schwester und meine Mutter",
+      "ref": "MRK.3.35",
+      "role": "Folge"
+     }
+    ],
+    "visual": "arrows",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MRK.3.31-MRK.3.32",
+   "text_de": "Mutter und Brüder stehen draussen und lassen ihn rufen; die Menge sagt: «Siehe, deine Mutter und deine Brüder sind draussen und suchen dich.»",
+   "reason_de": "Rahmen A' der Schachtelung (Kriterium 2).",
+   "recognition_de": "Draussen Mutter und Brüder, drinnen Jesus im Kreis.",
+   "keywords": [
+    "deine Mutter und deine Brüder sind draussen und suchen dich"
+   ]
+  },
+  {
+   "reference": "MRK.3.33-MRK.3.35",
+   "text_de": "«Wer ist meine Mutter, und wer sind meine Brüder?» Er blickt auf die im Kreis: «Siehe, meine Mutter und meine Brüder! Denn wer den Willen Gottes tut, der ist mein Bruder und meine Schwester und meine Mutter.»",
+   "reason_de": "Kernaussage (Kriterien 1 und 4).",
+   "recognition_de": "Jesus zeigt auf die Menschen im Kreis um ihn.",
+   "keywords": [
+    "Wer ist meine Mutter, und wer sind meine Brüder?",
+    "wer den Willen Gottes tut, der ist mein Bruder und meine Schwester und meine Mutter"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Wer der Bote ist, den sie schicken (3,31), sagt der Text nicht – Nebenhandlung"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-MARIA-MUTTER-JESU",
+  "FIG-GRUPPE-BRUEDER-JESU",
+  "FIG-GRUPPE-MENGE"
+ ],
+ "places": [
+  "FIG-ORT-HAUS"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MRK.3.31-MRK.3.35",
+   "fingerprint": "51c0d2a38a5211a8"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mk 1–4 und 6–8 nach dem Pilot Mk 5 und dem Ausrollen Matthäus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; Zusammenfassungen und Bildaufträge mitgeprüft; keine fachliche Prüfung durch eine Person",
+  "result": "bestanden",
+  "summary_de": "Draussen ↔ im Kreis, Begründung «denn wer den Willen Gottes tut».",
+  "changes_de": []
+ }
+}

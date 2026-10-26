@@ -13,29 +13,52 @@
       "n": 1,
       "reference": "MRK.2.1-MRK.2.12",
       "figures": [
-        "FIG-JESUS",
-        "FIG-ROLLE-KRANKER"
+        "FIG-GRUPPE-TRAEGER",
+        "FIG-ROLLE-KRANKER",
+        "FIG-JESUS"
       ],
       "objects": [
-        "FIG-OBJ-MATTE"
+        "FIG-ORT-HAUS"
       ],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-HINAB"
+      ],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-ROLLE-KRANKER",
           "icons": [
-            "FIG-ZEICHEN-VERGEBUNG"
-          ]
+            "FIG-ZEICHEN-VERGEBEN"
+          ],
+          "word": {
+            "de": "Kind, deine Sünden sind vergeben.",
+            "gsw": "Chind, dini Sünde sind vergää."
+          }
         }
       ],
-      "action_de": "Jesus spricht einem Gelähmten die Vergebung der Sünden zu und heilt ihn; er nimmt seine Matte und geht.",
+      "action_de": "Weil sie wegen der Menge nicht durchkommen, decken sie das Dach ab und lassen den Gelähmten auf seiner Matte hinunter; als Jesus ihren Glauben sieht, sagt er: «Kind, deine Sünden sind vergeben.»",
+      "keywords": {
+        "de": "Steh auf, nimm deine Matte und geh nach Hause!",
+        "gsw": "Stand uf, nimm dini Matte und gang hei!"
+      },
       "stage": {
-        "hold": {
-          "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
+        "pose": {
+          "FIG-ROLLE-KRANKER": "lie"
+        },
+        "at": {
+          "FIG-ZEICHEN-HINAB": "FIG-ROLLE-KRANKER"
         },
         "mood": {
-          "FIG-ROLLE-KRANKER": "delight"
+          "FIG-GRUPPE-TRAEGER": "determined",
+          "FIG-ROLLE-KRANKER": "worried",
+          "FIG-JESUS": "calm"
+        },
+        "back_side": "left",
+        "before": true,
+        "x": {
+          "FIG-GRUPPE-TRAEGER": 30,
+          "FIG-ROLLE-KRANKER": 92,
+          "FIG-JESUS": 160
         }
       }
     },
@@ -43,29 +66,52 @@
       "n": 2,
       "reference": "MRK.2.13-MRK.2.17",
       "figures": [
+        "FIG-GRUPPE-SCHRIFTGELEHRTE",
+        "FIG-GRUPPE-JUENGER",
         "FIG-JESUS",
         "FIG-GRUPPE-ZOELLNER"
       ],
       "objects": [
         "FIG-OBJ-BROT"
       ],
-      "signs": [
-        "FIG-ZEICHEN-FREUDE"
+      "signs": [],
+      "speech": [
+        {
+          "from": "FIG-GRUPPE-SCHRIFTGELEHRTE",
+          "to": "FIG-GRUPPE-JUENGER",
+          "icons": [],
+          "word": {
+            "de": "Wieso isst er mit den Zöllnern und Sündern?",
+            "gsw": "Wieso isst er mit de Zöllner und Sünder?"
+          }
+        }
       ],
-      "speech": [],
-      "action_de": "Jesus ruft den Zöllner Levi und isst mit Zöllnern und Sündern.",
+      "action_de": "Viele Zöllner und Sünder liegen mit Jesus und seinen Jüngern zu Tisch; die Schriftgelehrten der Pharisäer fragen seine Jünger: «Wieso isst er mit den Zöllnern und Sündern?» Jesus antwortet: «Ich bin nicht gekommen, Gerechte zu rufen, sondern Sünder.»",
+      "keywords": {
+        "de": "Ich bin nicht gekommen, Gerechte zu rufen, sondern Sünder",
+        "gsw": "Ich bi nöd choo, zum Grächti rüefe, sondern Sünder"
+      },
       "stage": {
+        "split": 2,
+        "trenner": true,
         "pose": {
           "FIG-JESUS": "sit",
           "FIG-GRUPPE-ZOELLNER": "sit"
         },
-        "count": {
-          "FIG-OBJ-BROT": 2
+        "mood": {
+          "FIG-GRUPPE-SCHRIFTGELEHRTE": "earnest",
+          "FIG-GRUPPE-JUENGER": "worried",
+          "FIG-JESUS": "smile",
+          "FIG-GRUPPE-ZOELLNER": "delight"
         },
-        "signs_who": {
-          "FIG-ZEICHEN-FREUDE": [
-            "FIG-GRUPPE-ZOELLNER"
-          ]
+        "x": {
+          "FIG-GRUPPE-SCHRIFTGELEHRTE": 26,
+          "FIG-GRUPPE-JUENGER": 70,
+          "FIG-JESUS": 120,
+          "FIG-GRUPPE-ZOELLNER": 166
+        },
+        "floor_x": {
+          "FIG-OBJ-BROT": 144
         }
       }
     },
@@ -73,26 +119,42 @@
       "n": 3,
       "reference": "MRK.2.18-MRK.2.22",
       "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-MENGE"
+        "FIG-GRUPPE-VOLK",
+        "FIG-JESUS"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-OBJ-WEINSCHLAUCH-RISS",
+        "FIG-OBJ-WEINSCHLAUCH"
+      ],
       "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-ROLLE-BRAEUTIGAM",
-            "FIG-ZEICHEN-FREUDE",
-            "FIG-OBJ-WEINSCHLAUCH"
-          ]
+          "to": "FIG-GRUPPE-VOLK",
+          "icons": [],
+          "word": {
+            "de": "Sondern: jungen Wein in neue Schläuche!",
+            "gsw": "Sondern: nöie Wii i nöii Schlüüch!"
+          }
         }
       ],
-      "action_de": "Auf die Frage nach dem Fasten antwortet Jesus mit dem Bräutigam und dem jungen Wein in neuen Schläuchen.",
+      "action_de": "Auf die Frage, warum seine Jünger nicht fasten, antwortet Jesus mit dem Bräutigam und den Hochzeitsgästen und sagt: «Sondern: jungen Wein in neue Schläuche!»",
+      "keywords": {
+        "de": "Können etwa die Hochzeitsgäste fasten, während der Bräutigam bei ihnen ist?",
+        "gsw": "Chönd d Hochziitsgäscht öppe faschte, solang de Brüütigam bi ine isch?"
+      },
       "stage": {
         "mood": {
-          "FIG-GRUPPE-MENGE": "pensive"
+          "FIG-GRUPPE-VOLK": "question",
+          "FIG-JESUS": "smile"
+        },
+        "x": {
+          "FIG-GRUPPE-VOLK": 36,
+          "FIG-JESUS": 92
+        },
+        "floor_x": {
+          "FIG-OBJ-WEINSCHLAUCH-RISS": 134,
+          "FIG-OBJ-WEINSCHLAUCH": 164
         }
       }
     },
@@ -113,46 +175,57 @@
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-PHARISAEER",
-          "icons": [
-            "FIG-ZEICHEN-SABBAT",
-            "FIG-ZEICHEN-BRINGEN",
-            "FIG-ZEICHEN-MENSCHEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Der Sabbat wurde für den Menschen geschaffen, und nicht der Mensch für den Sabbat.",
+            "gsw": "De Sabbat isch für de Mänsch gschaffe worde, und nöd de Mänsch für de Sabbat."
+          }
         }
       ],
-      "action_de": "Die Jünger rupfen am Sabbat Ähren; Jesus sagt: Der Sabbat ist für den Menschen da.",
+      "action_de": "Am Sabbat rupfen die Jünger unterwegs Ähren ab; die Pharisäer fragen: «Sieh, warum tun sie am Sabbat, was nicht erlaubt ist?» – Jesus antwortet mit David und dem Grundsatz: Der Sabbat wurde für den Menschen geschaffen.",
+      "keywords": {
+        "de": "Darum ist der Menschensohn Herr auch über den Sabbat",
+        "gsw": "Drum isch de Mänschesohn au Herr über de Sabbat"
+      },
       "stage": {
+        "hold": {
+          "FIG-GRUPPE-JUENGER": "FIG-OBJ-AEHREN"
+        },
         "mood": {
+          "FIG-GRUPPE-JUENGER": "calm",
+          "FIG-JESUS": "calm",
           "FIG-GRUPPE-PHARISAEER": "earnest"
         },
-        "at": {
-          "FIG-OBJ-AEHREN": "FIG-GRUPPE-JUENGER"
+        "x": {
+          "FIG-GRUPPE-JUENGER": 36,
+          "FIG-JESUS": 100,
+          "FIG-GRUPPE-PHARISAEER": 158
         }
       }
     }
   ],
   "actions_de": [
-    "Jesus spricht einem Gelähmten die Vergebung der Sünden zu und heilt ihn; er nimmt seine Matte und geht.",
-    "Jesus ruft den Zöllner Levi und isst mit Zöllnern und Sündern.",
-    "Auf die Frage nach dem Fasten antwortet Jesus mit dem Bräutigam und dem jungen Wein in neuen Schläuchen.",
-    "Die Jünger rupfen am Sabbat Ähren; Jesus sagt: Der Sabbat ist für den Menschen da."
+    "Weil sie wegen der Menge nicht durchkommen, decken sie das Dach ab und lassen den Gelähmten auf seiner Matte hinunter; als Jesus ihren Glauben sieht, sagt er: «Kind, deine Sünden sind vergeben.»",
+    "Viele Zöllner und Sünder liegen mit Jesus und seinen Jüngern zu Tisch; die Schriftgelehrten der Pharisäer fragen seine Jünger: «Wieso isst er mit den Zöllnern und Sündern?» Jesus antwortet: «Ich bin nicht gekommen, Gerechte zu rufen, sondern Sünder.»",
+    "Auf die Frage, warum seine Jünger nicht fasten, antwortet Jesus mit dem Bräutigam und den Hochzeitsgästen und sagt: «Sondern: jungen Wein in neue Schläuche!»",
+    "Am Sabbat rupfen die Jünger unterwegs Ähren ab; die Pharisäer fragen: «Sieh, warum tun sie am Sabbat, was nicht erlaubt ist?» – Jesus antwortet mit David und dem Grundsatz: Der Sabbat wurde für den Menschen geschaffen."
   ],
   "captions_de": [
-    "Vergebung: Jesus vergibt dem Gelähmten (Fleck mit Licht); er trägt seine Matte.",
-    "Mahl: Jesus isst mit Zöllnern und Sündern (Brot, Freude).",
-    "Fasten: Jesus spricht vom Bräutigam (Freude) und vom neuen Schlauch.",
-    "Sabbat: Die Jünger mit Ähren; Jesus: Der Sabbat ist für die Menschen (Sabbat-Zeichen: sechs graue und ein goldener Kreis, Pfeil, Menschen)."
+    "Durch das Dach: Die Träger lassen den Gelähmten auf der Matte zu Jesus hinunter (hinab); Jesus sieht ihren Glauben und sagt: «Kind, deine Sünden sind vergeben.» (vergeben).",
+    "Mahl mit Sündern: Jesus mit Zöllnern und Sündern beim Brot; die Schriftgelehrten fragen die Jünger: «Wieso isst er mit den Zöllnern und Sündern?»",
+    "Neuer Wein: Leute fragen nach dem Fasten; Jesus zeigt: «Sondern: jungen Wein in neue Schläuche!» – neben dem geplatzten alten Schlauch der neue (Schläuche).",
+    "Ähren am Sabbat: Im Kornfeld rupfen die Jünger Ähren ab (Ähren); Jesus sagt den Pharisäern: «Der Sabbat wurde für den Menschen geschaffen, und nicht der Mensch für den Sabbat.»"
   ],
-  "interpretation_note_de": "Je Abschnitt ein Feld: der Gelähmte, das Mahl bei Levi, die Frage nach dem Fasten, die Ähren am Sabbat.",
+  "interpretation_note_de": "Vier Comic-Szenen, je eine aus den vier Streitgesprächen ([[MRK.2.1-MRK.2.28]]): Vergebung und Heilung des Gelähmten, Mahl mit Zöllnern und Sündern, die Frage nach dem Fasten mit dem Bildwort vom neuen Wein, die Ähren am Sabbat. Das fünfte Streitgespräch folgt in [[MRK.3.1-MRK.3.6]]. «Menschensohn» versteht das Bild als Jesus (Deutung). Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-MRK-002",
       "field": "summary",
-      "fingerprint": "ecea6cb9fd16cf0d"
+      "fingerprint": "fd2bd60a9ea4e865"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -290,6 +363,382 @@
           "Mahl: Jesus isst mit Zöllnern und Sündern (Brot, Freude).",
           "Fasten: Jesus spricht vom Bräutigam (Freude) und vom neuen Schlauch.",
           "Sabbat: Die Jünger mit Ähren; Jesus: Der Sabbat ist für die Menschen (zwei Lampen, Pfeil, Menschen)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.2.1-MRK.2.12",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-KRANKER"
+            ],
+            "objects": [
+              "FIG-OBJ-MATTE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-KRANKER",
+                "icons": [
+                  "FIG-ZEICHEN-VERGEBUNG"
+                ]
+              }
+            ],
+            "action_de": "Jesus spricht einem Gelähmten die Vergebung der Sünden zu und heilt ihn; er nimmt seine Matte und geht.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
+              },
+              "mood": {
+                "FIG-ROLLE-KRANKER": "delight"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.2.13-MRK.2.17",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZOELLNER"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [],
+            "action_de": "Jesus ruft den Zöllner Levi und isst mit Zöllnern und Sündern.",
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "sit",
+                "FIG-GRUPPE-ZOELLNER": "sit"
+              },
+              "count": {
+                "FIG-OBJ-BROT": 2
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-GRUPPE-ZOELLNER"
+                ]
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.2.18-MRK.2.22",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ROLLE-BRAEUTIGAM",
+                  "FIG-ZEICHEN-FREUDE",
+                  "FIG-OBJ-WEINSCHLAUCH"
+                ]
+              }
+            ],
+            "action_de": "Auf die Frage nach dem Fasten antwortet Jesus mit dem Bräutigam und dem jungen Wein in neuen Schläuchen.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "pensive"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.2.23-MRK.2.28",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS",
+              "FIG-GRUPPE-PHARISAEER"
+            ],
+            "objects": [
+              "FIG-ORT-KORNFELD",
+              "FIG-OBJ-AEHREN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-ZEICHEN-SABBAT",
+                  "FIG-ZEICHEN-BRINGEN",
+                  "FIG-ZEICHEN-MENSCHEN"
+                ]
+              }
+            ],
+            "action_de": "Die Jünger rupfen am Sabbat Ähren; Jesus sagt: Der Sabbat ist für den Menschen da.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-PHARISAEER": "earnest"
+              },
+              "at": {
+                "FIG-OBJ-AEHREN": "FIG-GRUPPE-JUENGER"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus spricht einem Gelähmten die Vergebung der Sünden zu und heilt ihn; er nimmt seine Matte und geht.",
+          "Jesus ruft den Zöllner Levi und isst mit Zöllnern und Sündern.",
+          "Auf die Frage nach dem Fasten antwortet Jesus mit dem Bräutigam und dem jungen Wein in neuen Schläuchen.",
+          "Die Jünger rupfen am Sabbat Ähren; Jesus sagt: Der Sabbat ist für den Menschen da."
+        ],
+        "captions_de": [
+          "Vergebung: Jesus vergibt dem Gelähmten (Fleck mit Licht); er trägt seine Matte.",
+          "Mahl: Jesus isst mit Zöllnern und Sündern (Brot, Freude).",
+          "Fasten: Jesus spricht vom Bräutigam (Freude) und vom neuen Schlauch.",
+          "Sabbat: Die Jünger mit Ähren; Jesus: Der Sabbat ist für die Menschen (Sabbat-Zeichen: sechs graue und ein goldener Kreis, Pfeil, Menschen)."
+        ],
+        "interpretation_note_de": "Je Abschnitt ein Feld: der Gelähmte, das Mahl bei Levi, die Frage nach dem Fasten, die Ähren am Sabbat.",
+        "basis": [
+          {
+            "record": "SUM-CH-MRK-002",
+            "field": "summary",
+            "fingerprint": "ecea6cb9fd16cf0d"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.2.1-MRK.2.12",
+            "figures": [
+              "FIG-GRUPPE-TRAEGER",
+              "FIG-ROLLE-KRANKER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-HINAB"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-KRANKER",
+                "icons": [
+                  "FIG-ZEICHEN-VERGEBEN"
+                ],
+                "word": {
+                  "de": "Kind, deine Sünden sind vergeben.",
+                  "gsw": "Chind, dini Sünde sind vergää."
+                }
+              }
+            ],
+            "action_de": "Weil sie wegen der Menge nicht durchkommen, decken sie das Dach ab und lassen den Gelähmten auf seiner Matte hinunter; als Jesus ihren Glauben sieht, sagt er: «Kind, deine Sünden sind vergeben.»",
+            "keywords": {
+              "de": "Steh auf, nimm deine Matte und geh nach Hause!",
+              "gsw": "Stand uf, nimm dini Matte und gang hei!"
+            },
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-KRANKER": "lie"
+              },
+              "at": {
+                "FIG-ZEICHEN-HINAB": "FIG-ROLLE-KRANKER"
+              },
+              "mood": {
+                "FIG-GRUPPE-TRAEGER": "determined",
+                "FIG-ROLLE-KRANKER": "worried",
+                "FIG-JESUS": "calm"
+              },
+              "back_side": "left",
+              "before": true,
+              "x": {
+                "FIG-GRUPPE-TRAEGER": 30,
+                "FIG-ROLLE-KRANKER": 92,
+                "FIG-JESUS": 160
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.2.13-MRK.2.17",
+            "figures": [
+              "FIG-GRUPPE-SCHRIFTGELEHRTE",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZOELLNER"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-SCHRIFTGELEHRTE",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [],
+                "word": {
+                  "de": "Wieso isst er mit den Zöllnern und Sündern?",
+                  "gsw": "Wieso isst er mit de Zöllner und Sünder?"
+                }
+              }
+            ],
+            "action_de": "Viele Zöllner und Sünder liegen mit Jesus und seinen Jüngern zu Tisch; die Schriftgelehrten der Pharisäer fragen seine Jünger: «Wieso isst er mit den Zöllnern und Sündern?» Jesus antwortet: «Ich bin nicht gekommen, Gerechte zu rufen, sondern Sünder.»",
+            "keywords": {
+              "de": "Ich bin nicht gekommen, Gerechte zu rufen, sondern Sünder",
+              "gsw": "Ich bi nöd choo, zum Grächti rüefe, sondern Sünder"
+            },
+            "stage": {
+              "split": 2,
+              "trenner": true,
+              "pose": {
+                "FIG-JESUS": "sit",
+                "FIG-GRUPPE-ZOELLNER": "sit"
+              },
+              "mood": {
+                "FIG-GRUPPE-SCHRIFTGELEHRTE": "earnest",
+                "FIG-GRUPPE-JUENGER": "worried",
+                "FIG-JESUS": "smile",
+                "FIG-GRUPPE-ZOELLNER": "delight"
+              },
+              "x": {
+                "FIG-GRUPPE-SCHRIFTGELEHRTE": 26,
+                "FIG-GRUPPE-JUENGER": 70,
+                "FIG-JESUS": 120,
+                "FIG-GRUPPE-ZOELLNER": 166
+              },
+              "floor_x": {
+                "FIG-OBJ-BROT": 144
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.2.18-MRK.2.22",
+            "figures": [
+              "FIG-GRUPPE-VOLK",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-WEINSCHLAUCH-RISS",
+              "FIG-OBJ-WEINSCHLAUCH"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FASTEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-VOLK",
+                "icons": [],
+                "word": {
+                  "de": "Sondern: jungen Wein in neue Schläuche!",
+                  "gsw": "Sondern: nöie Wii i nöii Schlüüch!"
+                }
+              }
+            ],
+            "action_de": "Auf die Frage, warum seine Jünger nicht fasten, antwortet Jesus mit dem Bräutigam und den Hochzeitsgästen und sagt: «Sondern: jungen Wein in neue Schläuche!»",
+            "keywords": {
+              "de": "Können etwa die Hochzeitsgäste fasten, während der Bräutigam bei ihnen ist?",
+              "gsw": "Chönd d Hochziitsgäscht öppe faschte, solang de Brüütigam bi ine isch?"
+            },
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-FASTEN": "FIG-GRUPPE-VOLK"
+              },
+              "mood": {
+                "FIG-GRUPPE-VOLK": "question",
+                "FIG-JESUS": "smile"
+              },
+              "x": {
+                "FIG-GRUPPE-VOLK": 46,
+                "FIG-JESUS": 112
+              },
+              "floor_x": {
+                "FIG-OBJ-WEINSCHLAUCH-RISS": 146,
+                "FIG-OBJ-WEINSCHLAUCH": 170
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.2.23-MRK.2.28",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS",
+              "FIG-GRUPPE-PHARISAEER"
+            ],
+            "objects": [
+              "FIG-ORT-KORNFELD",
+              "FIG-OBJ-AEHREN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [],
+                "word": {
+                  "de": "Der Sabbat wurde für den Menschen geschaffen, und nicht der Mensch für den Sabbat.",
+                  "gsw": "De Sabbat isch für de Mänsch gschaffe worde, und nöd de Mänsch für de Sabbat."
+                }
+              }
+            ],
+            "action_de": "Am Sabbat rupfen die Jünger unterwegs Ähren ab; die Pharisäer fragen: «Sieh, warum tun sie am Sabbat, was nicht erlaubt ist?» – Jesus antwortet mit David und dem Grundsatz: Der Sabbat wurde für den Menschen geschaffen.",
+            "keywords": {
+              "de": "Darum ist der Menschensohn Herr auch über den Sabbat",
+              "gsw": "Drum isch de Mänschesohn au Herr über de Sabbat"
+            },
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-AEHREN"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "calm",
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-PHARISAEER": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-JUENGER": 36,
+                "FIG-JESUS": 100,
+                "FIG-GRUPPE-PHARISAEER": 158
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Durch das Dach: Die Träger lassen den Gelähmten auf der Matte zu Jesus hinunter (hinab); Jesus sieht ihren Glauben und sagt: «Kind, deine Sünden sind vergeben.» (vergeben).",
+          "Mahl mit Sündern: Jesus mit Zöllnern und Sündern beim Brot; die Schriftgelehrten fragen die Jünger: «Wieso isst er mit den Zöllnern und Sündern?»",
+          "Neuer Wein: Leute fragen nach dem Fasten (fasten); Jesus zeigt: «Sondern: jungen Wein in neue Schläuche!» – neben dem geplatzten alten Schlauch der neue (Schläuche).",
+          "Ähren am Sabbat: Im Kornfeld rupfen die Jünger Ähren ab (Ähren); Jesus sagt den Pharisäern: «Der Sabbat wurde für den Menschen geschaffen, und nicht der Mensch für den Sabbat.»"
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Prüfung Struktur zuerst",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-MRK-002",
+            "field": "summary",
+            "fingerprint": "0b3cb56fdb48814b"
+          }
         ]
       }
     }

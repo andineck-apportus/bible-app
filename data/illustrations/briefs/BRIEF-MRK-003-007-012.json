@@ -11,71 +11,106 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MRK.3.7-MRK.3.10",
-      "figures": [
-        "FIG-ROLLE-KRANKER",
-        "FIG-GRUPPE-MENGE",
-        "FIG-JESUS",
-        "FIG-GRUPPE-JUENGER"
-      ],
-      "objects": [
-        "FIG-ORT-SEE",
-        "FIG-OBJ-BOOT"
-      ],
+      "reference": "MRK.3.7-MRK.3.8",
+      "figures": [],
+      "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-OBJ-BOOT"
-          ]
-        }
-      ],
-      "action_de": "Jesus zieht sich mit seinen Jüngern an den See zurück; eine grosse Menge aus vielen Gegenden kommt zu ihm. Er lässt ein Boot bereithalten, damit sie ihn nicht erdrücken, denn alle Kranken drängen heran, um ihn zu berühren.",
-      "stage": {
-        "big_side": "right",
-        "mood": {
-          "FIG-GRUPPE-MENGE": "surprised",
-          "FIG-ROLLE-KRANKER": "worried"
+      "speech": [],
+      "action_de": "Jesus zieht sich mit seinen Jüngern an den See zurück; eine grosse Schar kommt zu ihm aus Galiläa, Judäa, Jerusalem, Idumäa, von jenseits des Jordan und aus der Gegend um Tyros und Sidon.",
+      "keywords": {
+        "de": "eine grosse Schar",
+        "gsw": "e grossi Schar"
+      },
+      "diagram": {
+        "visual": "grid",
+        "span": 2,
+        "cols": 3,
+        "title": {
+          "de": "Eine grosse Schar kam zu ihm, weil sie hörten, was er alles tat.",
+          "gsw": "E grossi Schar isch zu ihm choo, wil si ghört händ, was er alles gmacht hät."
         },
-        "arrows": [
-          [
-            "FIG-GRUPPE-MENGE",
-            "FIG-JESUS",
-            "go"
-          ]
-        ],
-        "x": {
-          "FIG-ROLLE-KRANKER": 14,
-          "FIG-GRUPPE-MENGE": 40,
-          "FIG-JESUS": 98,
-          "FIG-GRUPPE-JUENGER": 150
-        },
-        "floor_x": {
-          "FIG-OBJ-BOOT": 162
-        }
+        "cells": [
+          {
+            "a": {
+              "de": "Galiläa",
+              "gsw": "Galiläa"
+            },
+            "icons": [
+              "FIG-ORT-SEE"
+            ]
+          },
+          {
+            "a": {
+              "de": "Judäa",
+              "gsw": "Judäa"
+            },
+            "icons": [
+              "FIG-ORT-LAND"
+            ]
+          },
+          {
+            "a": {
+              "de": "Jerusalem",
+              "gsw": "Jerusalem"
+            },
+            "icons": [
+              "FIG-ORT-JERUSALEM"
+            ]
+          },
+          {
+            "a": {
+              "de": "Idumäa",
+              "gsw": "Idumäa"
+            },
+            "icons": [
+              "FIG-ORT-EDOM-GEBIRGE"
+            ]
+          },
+          {
+            "a": {
+              "de": "jenseits des Jordan",
+              "gsw": "änet em Jordan"
+            },
+            "icons": [
+              "FIG-ORT-JORDAN"
+            ]
+          },
+          {
+            "a": {
+              "de": "die Gegend um Tyros und Sidon",
+              "gsw": "d Gäged um Tyros und Sidon"
+            },
+            "icons": [
+              "FIG-OBJ-SCHIFF"
+            ]
+          }
+        ]
       }
     },
     {
       "n": 2,
-      "reference": "MRK.3.11-MRK.3.12",
+      "reference": "MRK.3.9-MRK.3.12",
       "figures": [
-        "FIG-ROLLE-BESESSENER",
-        "FIG-JESUS"
+        "FIG-GRUPPE-KRANKE",
+        "FIG-JESUS",
+        "FIG-ROLLE-BESESSENER"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-ORT-SEE"
+      ],
       "signs": [
+        "FIG-ZEICHEN-BERUEHREN",
         "FIG-ZEICHEN-DAEMON"
       ],
       "speech": [
         {
           "from": "FIG-ROLLE-BESESSENER",
           "to": "FIG-JESUS",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-GOTT"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Du bist der Sohn Gottes!",
+            "gsw": "Du bisch de Sohn vo Gott!"
+          }
         },
         {
           "from": "FIG-JESUS",
@@ -85,51 +120,62 @@
           ]
         }
       ],
-      "action_de": "Wenn die unreinen Geister ihn sehen, fallen sie vor ihm nieder und schreien: Du bist der Sohn Gottes! Er aber verbietet ihnen streng, ihn bekannt zu machen.",
+      "action_de": "Ein Boot liegt für ihn bereit, denn alle, die Plagen haben, stürzen sich auf ihn, um ihn zu berühren; die unreinen Geister fallen vor ihm nieder und schreien: «Du bist der Sohn Gottes!» Er fährt sie heftig an, damit sie ihn nicht bekannt machen.",
+      "keywords": {
+        "de": "damit sie ihn nicht bekannt machten",
+        "gsw": "demit si en nöd bekannt mached"
+      },
       "stage": {
         "pose": {
           "FIG-ROLLE-BESESSENER": "kneel"
         },
         "at": {
+          "FIG-ZEICHEN-BERUEHREN": "FIG-GRUPPE-KRANKE",
           "FIG-ZEICHEN-DAEMON": "FIG-ROLLE-BESESSENER"
         },
         "mood": {
-          "FIG-JESUS": "calm",
-          "FIG-ROLLE-BESESSENER": "worried"
+          "FIG-GRUPPE-KRANKE": "worried",
+          "FIG-ROLLE-BESESSENER": "fear",
+          "FIG-JESUS": "earnest"
+        },
+        "x": {
+          "FIG-GRUPPE-KRANKE": 34,
+          "FIG-JESUS": 98,
+          "FIG-ROLLE-BESESSENER": 158
         }
       }
     }
   ],
   "actions_de": [
-    "Jesus zieht sich mit seinen Jüngern an den See zurück; eine grosse Menge aus vielen Gegenden kommt zu ihm. Er lässt ein Boot bereithalten, damit sie ihn nicht erdrücken, denn alle Kranken drängen heran, um ihn zu berühren.",
-    "Wenn die unreinen Geister ihn sehen, fallen sie vor ihm nieder und schreien: Du bist der Sohn Gottes! Er aber verbietet ihnen streng, ihn bekannt zu machen."
+    "Jesus zieht sich mit seinen Jüngern an den See zurück; eine grosse Schar kommt zu ihm aus Galiläa, Judäa, Jerusalem, Idumäa, von jenseits des Jordan und aus der Gegend um Tyros und Sidon.",
+    "Ein Boot liegt für ihn bereit, denn alle, die Plagen haben, stürzen sich auf ihn, um ihn zu berühren; die unreinen Geister fallen vor ihm nieder und schreien: «Du bist der Sohn Gottes!» Er fährt sie heftig an, damit sie ihn nicht bekannt machen."
   ],
   "captions_de": [
-    "Heilungen → Andrang: Weil Jesus viele geheilt hat, drängen eine grosse Menge und Kranke zu ihm (gestrichelter Pfeil); er lässt ein Boot bereithalten (Boot).",
-    "Schweigegebot: Ein Besessener fällt nieder und ruft: Du, Sohn Gottes (Jesus, Strahlenkranz); Jesus gebietet zu schweigen."
+    "Woher die Schar kommt (Raster): Galiläa (See), Judäa (Land), Jerusalem (Stadt), Idumäa (Gebirge), jenseits des Jordan (Fluss), Tyros und Sidon (Schiff, Küstenstädte).",
+    "Am See: Kranke drängen heran, um ihn zu berühren (berühren); ein Besessener kniet und schreit: «Du bist der Sohn Gottes!»; Jesus gebietet Schweigen (Schweigen)."
   ],
-  "interpretation_note_de": "Die vielen Herkunftsorte ([[MRK.3.7-MRK.3.8]]) zeigt das Bild nur als grosse Menge. Das Niederfallen der Geister zeigt es am Menschen, in dem der Geist ist.",
+  "interpretation_note_de": "Zwei Felder nach «Rückzug – Andrang – Boot – Bekenntnis – Schweigegebot» ([[MRK.3.7-MRK.3.12]]): alle sechs Herkunftsgebiete als Raster, dann der Andrang am See mit dem Bekenntnis der Geister und dem Schweigegebot. Die Zeichen der Gebiete sind Hilfen (See für Galiläa, Schiff für die Küstenstädte), keine Karte. Jesu Gebot steht als Zeichen in der Blase, weil der Text es nicht wörtlich gibt.",
   "basis": [
     {
       "record": "TU-MRK-003-007-012",
       "field": "summary",
-      "fingerprint": "e238b7eff194ad4f"
+      "fingerprint": "6715424889694d3c"
     },
     {
       "record": "TRANS-MRK-003-001-019-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.3.7-MRK.3.10",
-      "fingerprint": "9b23c4de029424c2"
+      "reference": "MRK.3.7-MRK.3.8",
+      "fingerprint": "62c944fcccff0bd9"
     },
     {
       "record": "TRANS-MRK-003-001-019-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.3.11-MRK.3.12",
-      "fingerprint": "71d2f9a435e77596"
+      "reference": "MRK.3.9-MRK.3.12",
+      "fingerprint": "517aa8cd748dc349"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -497,6 +543,307 @@
               }
             }
           }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MRK-003-007-012",
+            "field": "summary",
+            "fingerprint": "e238b7eff194ad4f"
+          },
+          {
+            "record": "TRANS-MRK-003-001-019-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.3.7-MRK.3.10",
+            "fingerprint": "9b23c4de029424c2"
+          },
+          {
+            "record": "TRANS-MRK-003-001-019-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.3.11-MRK.3.12",
+            "fingerprint": "71d2f9a435e77596"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.3.7-MRK.3.10",
+            "figures": [
+              "FIG-ROLLE-KRANKER",
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-ORT-SEE",
+              "FIG-OBJ-BOOT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-BOOT"
+                ]
+              }
+            ],
+            "action_de": "Jesus zieht sich mit seinen Jüngern an den See zurück; eine grosse Menge aus vielen Gegenden kommt zu ihm. Er lässt ein Boot bereithalten, damit sie ihn nicht erdrücken, denn alle Kranken drängen heran, um ihn zu berühren.",
+            "stage": {
+              "big_side": "right",
+              "mood": {
+                "FIG-GRUPPE-MENGE": "surprised",
+                "FIG-ROLLE-KRANKER": "worried"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-JESUS",
+                  "go"
+                ]
+              ],
+              "x": {
+                "FIG-ROLLE-KRANKER": 14,
+                "FIG-GRUPPE-MENGE": 40,
+                "FIG-JESUS": 98,
+                "FIG-GRUPPE-JUENGER": 150
+              },
+              "floor_x": {
+                "FIG-OBJ-BOOT": 162
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.3.11-MRK.3.12",
+            "figures": [
+              "FIG-ROLLE-BESESSENER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-DAEMON"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-BESESSENER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-GOTT"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-BESESSENER",
+                "icons": [
+                  "FIG-ZEICHEN-SCHWEIGEN"
+                ]
+              }
+            ],
+            "action_de": "Wenn die unreinen Geister ihn sehen, fallen sie vor ihm nieder und schreien: Du bist der Sohn Gottes! Er aber verbietet ihnen streng, ihn bekannt zu machen.",
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-BESESSENER": "kneel"
+              },
+              "at": {
+                "FIG-ZEICHEN-DAEMON": "FIG-ROLLE-BESESSENER"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-ROLLE-BESESSENER": "worried"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus zieht sich mit seinen Jüngern an den See zurück; eine grosse Menge aus vielen Gegenden kommt zu ihm. Er lässt ein Boot bereithalten, damit sie ihn nicht erdrücken, denn alle Kranken drängen heran, um ihn zu berühren.",
+          "Wenn die unreinen Geister ihn sehen, fallen sie vor ihm nieder und schreien: Du bist der Sohn Gottes! Er aber verbietet ihnen streng, ihn bekannt zu machen."
+        ],
+        "captions_de": [
+          "Heilungen → Andrang: Weil Jesus viele geheilt hat, drängen eine grosse Menge und Kranke zu ihm (gestrichelter Pfeil); er lässt ein Boot bereithalten (Boot).",
+          "Schweigegebot: Ein Besessener fällt nieder und ruft: Du, Sohn Gottes (Jesus, Strahlenkranz); Jesus gebietet zu schweigen."
+        ],
+        "interpretation_note_de": "Die vielen Herkunftsorte ([[MRK.3.7-MRK.3.8]]) zeigt das Bild nur als grosse Menge. Das Niederfallen der Geister zeigt es am Menschen, in dem der Geist ist.",
+        "basis": [
+          {
+            "record": "TU-MRK-003-007-012",
+            "field": "summary",
+            "fingerprint": "6715424889694d3c"
+          },
+          {
+            "record": "TRANS-MRK-003-001-019-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.3.7-MRK.3.10",
+            "fingerprint": "9b23c4de029424c2"
+          },
+          {
+            "record": "TRANS-MRK-003-001-019-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.3.11-MRK.3.12",
+            "fingerprint": "71d2f9a435e77596"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.3.7-MRK.3.8",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Jesus zieht sich mit seinen Jüngern an den See zurück; eine grosse Schar kommt zu ihm aus Galiläa, Judäa, Jerusalem, Idumäa, von jenseits des Jordan und aus der Gegend um Tyros und Sidon.",
+            "keywords": {
+              "de": "eine grosse Schar",
+              "gsw": "e grossi Schar"
+            },
+            "diagram": {
+              "visual": "grid",
+              "span": 2,
+              "cols": 3,
+              "title": {
+                "de": "Eine grosse Schar kam zu ihm, weil sie hörten, was er alles tat.",
+                "gsw": "E grossi Schar isch zu ihm choo, wil si ghört händ, was er alles gmacht hät."
+              },
+              "cells": [
+                {
+                  "a": {
+                    "de": "Galiläa",
+                    "gsw": "Galiläa"
+                  },
+                  "icons": [
+                    "FIG-ORT-SEE"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Judäa",
+                    "gsw": "Judäa"
+                  },
+                  "icons": [
+                    "FIG-ORT-LAND"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Jerusalem",
+                    "gsw": "Jerusalem"
+                  },
+                  "icons": [
+                    "FIG-ORT-JERUSALEM"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Idumäa",
+                    "gsw": "Idumäa"
+                  },
+                  "icons": [
+                    "FIG-ORT-EDOM-GEBIRGE"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "jenseits des Jordan",
+                    "gsw": "änet em Jordan"
+                  },
+                  "icons": [
+                    "FIG-ORT-JORDAN"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "die Gegend um Tyros und Sidon",
+                    "gsw": "d Gäged um Tyros und Sidon"
+                  },
+                  "icons": [
+                    "FIG-OBJ-SCHIFF"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.3.9-MRK.3.12",
+            "figures": [
+              "FIG-GRUPPE-KRANKE",
+              "FIG-JESUS",
+              "FIG-ROLLE-BESESSENER"
+            ],
+            "objects": [
+              "FIG-ORT-SEE",
+              "FIG-OBJ-BOOT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-BERUEHREN",
+              "FIG-ZEICHEN-DAEMON"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-BESESSENER",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Du bist der Sohn Gottes!",
+                  "gsw": "Du bisch de Sohn vo Gott!"
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-BESESSENER",
+                "icons": [
+                  "FIG-ZEICHEN-SCHWEIGEN"
+                ]
+              }
+            ],
+            "action_de": "Ein Boot liegt für ihn bereit, denn alle, die Plagen haben, stürzen sich auf ihn, um ihn zu berühren; die unreinen Geister fallen vor ihm nieder und schreien: «Du bist der Sohn Gottes!» Er fährt sie heftig an, damit sie ihn nicht bekannt machen.",
+            "keywords": {
+              "de": "damit sie ihn nicht bekannt machten",
+              "gsw": "demit si en nöd bekannt mached"
+            },
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-BESESSENER": "kneel"
+              },
+              "at": {
+                "FIG-ZEICHEN-BERUEHREN": "FIG-GRUPPE-KRANKE",
+                "FIG-ZEICHEN-DAEMON": "FIG-ROLLE-BESESSENER"
+              },
+              "mood": {
+                "FIG-GRUPPE-KRANKE": "worried",
+                "FIG-ROLLE-BESESSENER": "fear",
+                "FIG-JESUS": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-KRANKE": 34,
+                "FIG-JESUS": 98,
+                "FIG-ROLLE-BESESSENER": 158
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Woher die Schar kommt (Raster): Galiläa (See), Judäa (Land), Jerusalem (Stadt), Idumäa (Gebirge), jenseits des Jordan (Fluss), Tyros und Sidon (Schiff, Küstenstädte).",
+          "Am See: Kranke drängen heran, um ihn zu berühren (berühren); ein Besessener kniet und schreit: «Du bist der Sohn Gottes!»; Jesus gebietet Schweigen (Schweigen); hinten das Boot."
         ]
       }
     }

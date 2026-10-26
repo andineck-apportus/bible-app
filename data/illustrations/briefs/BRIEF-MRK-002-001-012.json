@@ -11,11 +11,11 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MRK.2.1-MRK.2.4",
+      "reference": "MRK.2.1-MRK.2.5",
       "figures": [
-        "FIG-GRUPPE-MENGE",
         "FIG-GRUPPE-TRAEGER",
-        "FIG-ROLLE-KRANKER"
+        "FIG-ROLLE-KRANKER",
+        "FIG-JESUS"
       ],
       "objects": [
         "FIG-ORT-HAUS"
@@ -23,10 +23,25 @@
       "signs": [
         "FIG-ZEICHEN-HINAB"
       ],
-      "speech": [],
-      "action_de": "In Kafarnaum drängen sich so viele vor dem Haus, dass kein Platz mehr ist; vier Männer bringen einen Gelähmten, decken das Dach ab und lassen ihn auf seiner Matte hinunter.",
+      "speech": [
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-ROLLE-KRANKER",
+          "icons": [
+            "FIG-ZEICHEN-VERGEBEN"
+          ],
+          "word": {
+            "de": "Kind, deine Sünden sind vergeben.",
+            "gsw": "Chind, dini Sünde sind vergää."
+          }
+        }
+      ],
+      "action_de": "Weil sie wegen der Menge nicht durchkommen, decken sie das Dach ab und lassen den Gelähmten auf seiner Matte hinunter; als Jesus ihren Glauben sieht, sagt er: «Kind, deine Sünden sind vergeben.»",
+      "keywords": {
+        "de": "deckten sie das Dach ab",
+        "gsw": "händ si s Dach abteckt"
+      },
       "stage": {
-        "back_side": "right",
         "pose": {
           "FIG-ROLLE-KRANKER": "lie"
         },
@@ -34,98 +49,74 @@
           "FIG-ZEICHEN-HINAB": "FIG-ROLLE-KRANKER"
         },
         "mood": {
-          "FIG-GRUPPE-MENGE": "surprised"
+          "FIG-GRUPPE-TRAEGER": "determined",
+          "FIG-ROLLE-KRANKER": "worried",
+          "FIG-JESUS": "calm"
+        },
+        "back_side": "left",
+        "before": true,
+        "x": {
+          "FIG-GRUPPE-TRAEGER": 30,
+          "FIG-ROLLE-KRANKER": 92,
+          "FIG-JESUS": 160
         }
       }
     },
     {
       "n": 2,
-      "reference": "MRK.2.5",
-      "figures": [
-        "FIG-GRUPPE-TRAEGER",
-        "FIG-JESUS",
-        "FIG-ROLLE-KRANKER"
-      ],
-      "objects": [
-        "FIG-ORT-HAUS"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-GLAUBEN"
-      ],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-KRANKER",
-          "icons": [
-            "FIG-ZEICHEN-VERGEBUNG"
-          ]
-        }
-      ],
-      "action_de": "Als Jesus ihren Glauben sieht, sagt er zum Gelähmten: Kind, deine Sünden sind vergeben.",
-      "stage": {
-        "back_side": "left",
-        "before": true,
-        "x": {
-          "FIG-GRUPPE-TRAEGER": 36,
-          "FIG-JESUS": 96,
-          "FIG-ROLLE-KRANKER": 152
-        },
-        "pose": {
-          "FIG-ROLLE-KRANKER": "lie"
-        },
-        "signs_who": {
-          "FIG-ZEICHEN-GLAUBEN": [
-            "FIG-GRUPPE-TRAEGER"
-          ]
-        },
-        "arrows": [
-          [
-            "FIG-GRUPPE-TRAEGER",
-            "FIG-JESUS",
-            "act"
-          ]
-        ]
-      }
-    },
-    {
-      "n": 3,
       "reference": "MRK.2.6-MRK.2.10",
       "figures": [
         "FIG-GRUPPE-SCHRIFTGELEHRTE",
         "FIG-JESUS"
       ],
-      "objects": [
-        "FIG-ORT-HAUS"
-      ],
+      "objects": [],
       "signs": [],
       "speech": [
         {
           "from": "FIG-GRUPPE-SCHRIFTGELEHRTE",
-          "to": "FIG-JESUS",
+          "to": "FIG-GRUPPE-SCHRIFTGELEHRTE",
           "icons": [
-            "FIG-ZEICHEN-VERGEBUNG",
-            "FIG-GOTT",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
+            "FIG-GOTT"
+          ],
+          "think": true,
+          "word": {
+            "de": "Wer kann Sünden vergeben ausser Gott allein?",
+            "gsw": "Wer cha Sünde vergää ussert Gott elei?"
+          }
+        },
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-GRUPPE-SCHRIFTGELEHRTE",
+          "icons": [],
+          "word": {
+            "de": "Warum überlegt ihr das in euren Herzen?",
+            "gsw": "Wieso überleged er das i eune Härze?"
+          }
         }
       ],
-      "action_de": "Einige Schriftgelehrte denken bei sich: Er lästert! Wer kann Sünden vergeben ausser Gott allein? Jesus erkennt ihre Gedanken und fragt sie.",
+      "action_de": "Einige Schriftgelehrte denken: «Er lästert! Wer kann Sünden vergeben ausser Gott allein?» Jesus erkennt es und fragt: «Warum überlegt ihr das in euren Herzen?» Damit sie wissen, dass der Menschensohn Vollmacht hat, auf der Erde Sünden zu vergeben, wendet er sich dem Gelähmten zu.",
+      "keywords": {
+        "de": "dass der Menschensohn Vollmacht hat, auf der Erde Sünden zu vergeben",
+        "gsw": "dass de Mänschesohn Vollmacht hät, uf de Ärde Sünde z vergää"
+      },
       "stage": {
-        "back_side": "right",
+        "pose": {
+          "FIG-GRUPPE-SCHRIFTGELEHRTE": "sit"
+        },
         "mood": {
           "FIG-GRUPPE-SCHRIFTGELEHRTE": "earnest",
           "FIG-JESUS": "earnest"
         },
-        "pose": {
-          "FIG-GRUPPE-SCHRIFTGELEHRTE": "sit"
+        "x": {
+          "FIG-GRUPPE-SCHRIFTGELEHRTE": 54,
+          "FIG-JESUS": 140
         }
       }
     },
     {
-      "n": 4,
+      "n": 3,
       "reference": "MRK.2.11-MRK.2.12",
       "figures": [
-        "FIG-GOTT",
         "FIG-JESUS",
         "FIG-ROLLE-KRANKER",
         "FIG-GRUPPE-MENGE"
@@ -138,71 +129,66 @@
       ],
       "speech": [
         {
-          "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-KRANKER",
+          "from": "FIG-GRUPPE-MENGE",
+          "to": "FIG-GRUPPE-MENGE",
           "icons": [
-            "FIG-OBJ-MATTE",
-            "FIG-ZEICHEN-BRINGEN",
-            "FIG-ORT-HAUS"
-          ]
+            "FIG-ZEICHEN-PREISEN"
+          ],
+          "word": {
+            "de": "So etwas haben wir noch nie gesehen!",
+            "gsw": "Eso öppis händ mir no nie gseh!"
+          }
         }
       ],
-      "action_de": "Jesus sagt zum Gelähmten: Steh auf, nimm deine Matte und geh nach Hause! Er steht auf, nimmt die Matte und geht vor aller Augen hinaus; alle geraten ausser sich und preisen Gott.",
+      "action_de": "Jesus sagt zum Gelähmten: «Steh auf, nimm deine Matte und geh nach Hause!» Er steht auf, nimmt die Matte und geht vor aller Augen hinaus; alle geraten ausser sich, preisen Gott und sagen: «So etwas haben wir noch nie gesehen!»",
+      "keywords": {
+        "de": "Steh auf, nimm deine Matte und geh nach Hause!",
+        "gsw": "Stand uf, nimm dini Matte und gang hei!"
+      },
       "stage": {
         "hold": {
           "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
         },
-        "mood": {
-          "FIG-ROLLE-KRANKER": "delight",
-          "FIG-GRUPPE-MENGE": "surprised"
-        },
         "signs_who": {
           "FIG-ZEICHEN-PREISEN": [
-            "FIG-ROLLE-KRANKER",
             "FIG-GRUPPE-MENGE"
           ]
         },
-        "god_side": "right",
-        "arrows": [
-          [
-            "FIG-GRUPPE-MENGE",
-            "FIG-GOTT",
-            "act"
-          ]
-        ]
+        "mood": {
+          "FIG-ROLLE-KRANKER": "delight",
+          "FIG-GRUPPE-MENGE": "surprised",
+          "FIG-JESUS": "calm"
+        },
+        "x": {
+          "FIG-JESUS": 30,
+          "FIG-ROLLE-KRANKER": 90,
+          "FIG-GRUPPE-MENGE": 156
+        }
       }
     }
   ],
   "actions_de": [
-    "In Kafarnaum drängen sich so viele vor dem Haus, dass kein Platz mehr ist; vier Männer bringen einen Gelähmten, decken das Dach ab und lassen ihn auf seiner Matte hinunter.",
-    "Als Jesus ihren Glauben sieht, sagt er zum Gelähmten: Kind, deine Sünden sind vergeben.",
-    "Einige Schriftgelehrte denken bei sich: Er lästert! Wer kann Sünden vergeben ausser Gott allein? Jesus erkennt ihre Gedanken und fragt sie.",
-    "Jesus sagt zum Gelähmten: Steh auf, nimm deine Matte und geh nach Hause! Er steht auf, nimmt die Matte und geht vor aller Augen hinaus; alle geraten ausser sich und preisen Gott."
+    "Weil sie wegen der Menge nicht durchkommen, decken sie das Dach ab und lassen den Gelähmten auf seiner Matte hinunter; als Jesus ihren Glauben sieht, sagt er: «Kind, deine Sünden sind vergeben.»",
+    "Einige Schriftgelehrte denken: «Er lästert! Wer kann Sünden vergeben ausser Gott allein?» Jesus erkennt es und fragt: «Warum überlegt ihr das in euren Herzen?» Damit sie wissen, dass der Menschensohn Vollmacht hat, auf der Erde Sünden zu vergeben, wendet er sich dem Gelähmten zu.",
+    "Jesus sagt zum Gelähmten: «Steh auf, nimm deine Matte und geh nach Hause!» Er steht auf, nimmt die Matte und geht vor aller Augen hinaus; alle geraten ausser sich, preisen Gott und sagen: «So etwas haben wir noch nie gesehen!»"
   ],
   "captions_de": [
-    "Durch das Dach: Vor dem vollen Haus lassen die Träger den Gelähmten auf seiner Matte hinunter (Pfeil nach unten).",
-    "Glaube → Vergebung: Jesus sieht den Glauben der Träger (Herz mit Licht; Bogen von ihnen zu Jesus) und sagt zum Gelähmten: Deine Sünden sind vergeben (Fleck mit Lichtstreifen).",
-    "Gedanken: Die Schriftgelehrten fragen sich: Vergebung – nur Gott? (Fleck mit Licht, Strahlenkranz, Fragezeichen).",
-    "Steh auf → Gott preisen: Jesus sagt: Nimm die Matte, geh nach Hause (Matte, Pfeil, Haus); der Mann trägt seine Matte, alle freuen sich; von der Menge führt der Pfeil zu Gott (Strahlenkranz): Sie preisen Gott."
+    "Durch das Dach: Die Träger lassen den Gelähmten auf der Matte zu Jesus hinunter (hinab); Jesus sieht ihren Glauben und sagt: «Kind, deine Sünden sind vergeben.» (vergeben).",
+    "Gedanken der Schriftgelehrten: Sie sitzen da und denken (Gedankenwolke): «Wer kann Sünden vergeben ausser Gott allein?» (Gott); Jesus fragt sie: «Warum überlegt ihr das in euren Herzen?» (Herz).",
+    "Steh auf: Der Geheilte trägt seine Matte; die Leute preisen Gott (preisen): «So etwas haben wir noch nie gesehen!»"
   ],
-  "interpretation_note_de": "Die vier Träger sind als Gruppe von drei Figuren gezeichnet. Dass die Schriftgelehrten nur «in ihren Herzen» überlegen ([[MRK.2.6]]), zeigt das Bild mit einer Sprechblase; sie sprechen es nicht laut aus. Die Gegenfrage Jesu ([[MRK.2.8-MRK.2.10]]) steht nur in der Beschreibung.",
+  "interpretation_note_de": "Drei Felder nach der Schachtelung «Heilung – Streitgespräch – Heilung» ([[MRK.2.1-MRK.2.12]]): das Hinunterlassen und das Wort der Vergebung, der Gedanke der Schriftgelehrten mit Jesu Gegenfrage, dann das Aufstehen als Beweis. «Menschensohn» ist im Band genannt; das Bild versteht ihn als Jesus (Deutung). Die Gedanken stehen in einer Wolke, weil die Schriftgelehrten sie nicht aussprechen ([[MRK.2.6]]).",
   "basis": [
     {
       "record": "TU-MRK-002-001-012",
       "field": "summary",
-      "fingerprint": "68e31cda1fceaed8"
+      "fingerprint": "11223689e4148d5c"
     },
     {
       "record": "TRANS-MRK-002-001-028-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.2.1-MRK.2.4",
-      "fingerprint": "30a3fd9fdaf04678"
-    },
-    {
-      "record": "TRANS-MRK-002-001-028-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MRK.2.5",
-      "fingerprint": "4b1c671f3d63efd2"
+      "reference": "MRK.2.1-MRK.2.5",
+      "fingerprint": "57c6521838ec5167"
     },
     {
       "record": "TRANS-MRK-002-001-028-DE-WORKING",
@@ -218,7 +204,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -545,6 +531,222 @@
             }
           }
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.2.1-MRK.2.4",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-GRUPPE-TRAEGER",
+              "FIG-ROLLE-KRANKER"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-HINAB"
+            ],
+            "speech": [],
+            "action_de": "In Kafarnaum drängen sich so viele vor dem Haus, dass kein Platz mehr ist; vier Männer bringen einen Gelähmten, decken das Dach ab und lassen ihn auf seiner Matte hinunter.",
+            "stage": {
+              "back_side": "right",
+              "pose": {
+                "FIG-ROLLE-KRANKER": "lie"
+              },
+              "at": {
+                "FIG-ZEICHEN-HINAB": "FIG-ROLLE-KRANKER"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "surprised"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.2.5",
+            "figures": [
+              "FIG-GRUPPE-TRAEGER",
+              "FIG-JESUS",
+              "FIG-ROLLE-KRANKER"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-GLAUBEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-KRANKER",
+                "icons": [
+                  "FIG-ZEICHEN-VERGEBUNG"
+                ]
+              }
+            ],
+            "action_de": "Als Jesus ihren Glauben sieht, sagt er zum Gelähmten: Kind, deine Sünden sind vergeben.",
+            "stage": {
+              "back_side": "left",
+              "before": true,
+              "x": {
+                "FIG-GRUPPE-TRAEGER": 36,
+                "FIG-JESUS": 96,
+                "FIG-ROLLE-KRANKER": 152
+              },
+              "pose": {
+                "FIG-ROLLE-KRANKER": "lie"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-GLAUBEN": [
+                  "FIG-GRUPPE-TRAEGER"
+                ]
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-TRAEGER",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.2.6-MRK.2.10",
+            "figures": [
+              "FIG-GRUPPE-SCHRIFTGELEHRTE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-SCHRIFTGELEHRTE",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-VERGEBUNG",
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Einige Schriftgelehrte denken bei sich: Er lästert! Wer kann Sünden vergeben ausser Gott allein? Jesus erkennt ihre Gedanken und fragt sie.",
+            "stage": {
+              "back_side": "right",
+              "mood": {
+                "FIG-GRUPPE-SCHRIFTGELEHRTE": "earnest",
+                "FIG-JESUS": "earnest"
+              },
+              "pose": {
+                "FIG-GRUPPE-SCHRIFTGELEHRTE": "sit"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.2.11-MRK.2.12",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-ROLLE-KRANKER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-MATTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-PREISEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-KRANKER",
+                "icons": [
+                  "FIG-OBJ-MATTE",
+                  "FIG-ZEICHEN-BRINGEN",
+                  "FIG-ORT-HAUS"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt zum Gelähmten: Steh auf, nimm deine Matte und geh nach Hause! Er steht auf, nimmt die Matte und geht vor aller Augen hinaus; alle geraten ausser sich und preisen Gott.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-KRANKER": "FIG-OBJ-MATTE"
+              },
+              "mood": {
+                "FIG-ROLLE-KRANKER": "delight",
+                "FIG-GRUPPE-MENGE": "surprised"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-PREISEN": [
+                  "FIG-ROLLE-KRANKER",
+                  "FIG-GRUPPE-MENGE"
+                ]
+              },
+              "god_side": "right",
+              "arrows": [
+                [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-GOTT",
+                  "act"
+                ]
+              ]
+            }
+          }
+        ],
+        "actions_de": [
+          "In Kafarnaum drängen sich so viele vor dem Haus, dass kein Platz mehr ist; vier Männer bringen einen Gelähmten, decken das Dach ab und lassen ihn auf seiner Matte hinunter.",
+          "Als Jesus ihren Glauben sieht, sagt er zum Gelähmten: Kind, deine Sünden sind vergeben.",
+          "Einige Schriftgelehrte denken bei sich: Er lästert! Wer kann Sünden vergeben ausser Gott allein? Jesus erkennt ihre Gedanken und fragt sie.",
+          "Jesus sagt zum Gelähmten: Steh auf, nimm deine Matte und geh nach Hause! Er steht auf, nimmt die Matte und geht vor aller Augen hinaus; alle geraten ausser sich und preisen Gott."
+        ],
+        "captions_de": [
+          "Durch das Dach: Vor dem vollen Haus lassen die Träger den Gelähmten auf seiner Matte hinunter (Pfeil nach unten).",
+          "Glaube → Vergebung: Jesus sieht den Glauben der Träger (Herz mit Licht; Bogen von ihnen zu Jesus) und sagt zum Gelähmten: Deine Sünden sind vergeben (Fleck mit Lichtstreifen).",
+          "Gedanken: Die Schriftgelehrten fragen sich: Vergebung – nur Gott? (Fleck mit Licht, Strahlenkranz, Fragezeichen).",
+          "Steh auf → Gott preisen: Jesus sagt: Nimm die Matte, geh nach Hause (Matte, Pfeil, Haus); der Mann trägt seine Matte, alle freuen sich; von der Menge führt der Pfeil zu Gott (Strahlenkranz): Sie preisen Gott."
+        ],
+        "interpretation_note_de": "Die vier Träger sind als Gruppe von drei Figuren gezeichnet. Dass die Schriftgelehrten nur «in ihren Herzen» überlegen ([[MRK.2.6]]), zeigt das Bild mit einer Sprechblase; sie sprechen es nicht laut aus. Die Gegenfrage Jesu ([[MRK.2.8-MRK.2.10]]) steht nur in der Beschreibung.",
+        "basis": [
+          {
+            "record": "TU-MRK-002-001-012",
+            "field": "summary",
+            "fingerprint": "68e31cda1fceaed8"
+          },
+          {
+            "record": "TRANS-MRK-002-001-028-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.2.1-MRK.2.4",
+            "fingerprint": "30a3fd9fdaf04678"
+          },
+          {
+            "record": "TRANS-MRK-002-001-028-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.2.5",
+            "fingerprint": "4b1c671f3d63efd2"
+          },
+          {
+            "record": "TRANS-MRK-002-001-028-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.2.6-MRK.2.10",
+            "fingerprint": "e7e53ff28081548c"
+          },
+          {
+            "record": "TRANS-MRK-002-001-028-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.2.11-MRK.2.12",
+            "fingerprint": "cb16d2c101b3e5e1"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

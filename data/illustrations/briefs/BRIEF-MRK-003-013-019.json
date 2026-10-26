@@ -11,7 +11,7 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MRK.3.13",
+      "reference": "MRK.3.13-MRK.3.15",
       "figures": [
         "FIG-JESUS",
         "FIG-GRUPPE-ZWOELF"
@@ -19,122 +19,198 @@
       "objects": [
         "FIG-ORT-BERG"
       ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-ZEICHEN-NACHFOLGEN"
-          ]
-        }
+      "signs": [
+        "FIG-ZEICHEN-EINSETZEN"
       ],
-      "action_de": "Jesus steigt auf den Berg und ruft die zu sich, die er will; und sie kommen zu ihm.",
-      "stage": {
-        "back_side": "left",
-        "arrows": [
-          [
-            "FIG-GRUPPE-ZWOELF",
-            "FIG-JESUS",
-            "go"
-          ]
-        ],
-        "x": {
-          "FIG-JESUS": 84,
-          "FIG-GRUPPE-ZWOELF": 150
-        }
-      }
-    },
-    {
-      "n": 2,
-      "reference": "MRK.3.14-MRK.3.15",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF"
-      ],
-      "objects": [
-        "FIG-ORT-BERG"
-      ],
-      "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-ZWOELF",
           "icons": [
             "FIG-ZEICHEN-VERKUENDIGEN",
-            "FIG-ZEICHEN-DAEMON",
             "FIG-ZEICHEN-AUSTREIBEN"
           ]
         }
       ],
-      "action_de": "Er setzt zwölf ein, damit sie bei ihm sind und er sie aussendet zu verkündigen, mit Vollmacht, die Dämonen auszutreiben.",
+      "action_de": "Jesus steigt auf den Berg, ruft zu sich, die er selbst will, und setzt zwölf ein, damit sie bei ihm seien und damit er sie aussende, zu verkündigen und mit Vollmacht die Dämonen auszutreiben.",
+      "keywords": {
+        "de": "Und er setzte zwölf ein",
+        "gsw": "Und er hät zwölf iigsetzt"
+      },
       "stage": {
-        "back_side": "left",
-        "mood": {
-          "FIG-GRUPPE-ZWOELF": "determined"
+        "on": {
+          "FIG-JESUS": "FIG-ORT-BERG"
         },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-GRUPPE-ZWOELF",
-            "act"
-          ]
-        ],
+        "at": {
+          "FIG-ZEICHEN-EINSETZEN": "FIG-GRUPPE-ZWOELF"
+        },
+        "mood": {
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-ZWOELF": "earnest"
+        },
         "x": {
-          "FIG-JESUS": 84,
-          "FIG-GRUPPE-ZWOELF": 150
+          "FIG-JESUS": 54,
+          "FIG-GRUPPE-ZWOELF": 136
         }
       }
     },
     {
-      "n": 3,
+      "n": 2,
       "reference": "MRK.3.16-MRK.3.19",
-      "figures": [
-        "FIG-PETRUS",
-        "FIG-JAKOBUS-ZEBEDAEUS",
-        "FIG-JOHANNES-ZEBEDAEUS",
-        "FIG-ANDREAS",
-        "FIG-JUDAS-ISKARIOT"
-      ],
+      "figures": [],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-AUSLIEFERN"
-      ],
+      "signs": [],
       "speech": [],
-      "action_de": "Die Liste der Zwölf: Simon, dem er den Namen Petrus gibt, Jakobus und Johannes, die «Söhne des Donners», Andreas und die übrigen, zuletzt Judas Iskariot, der ihn auslieferte.",
-      "stage": {
-        "split": 4
+      "action_de": "Die Namen der Zwölf: Simon, dem er den Namen Petrus gibt; Jakobus und Johannes, die Söhne des Zebedäus, «Boanerges», Söhne des Donners; Andreas, Philippus, Bartholomäus, Matthäus, Thomas, Jakobus, der Sohn des Alphäus, Thaddäus, Simon der Kananäer und Judas Iskariot, der ihn auch auslieferte.",
+      "keywords": {
+        "de": "dem Simon gab er den Namen Petrus",
+        "gsw": "em Simon hät er de Name Petrus ggää"
+      },
+      "diagram": {
+        "visual": "grid",
+        "span": 2,
+        "cols": 4,
+        "title": {
+          "de": "Und er setzte die Zwölf ein.",
+          "gsw": "Und er hät di Zwölf iigsetzt."
+        },
+        "cells": [
+          {
+            "a": {
+              "de": "Simon",
+              "gsw": "Simon"
+            },
+            "b": {
+              "de": "dem er den Namen Petrus gab",
+              "gsw": "dem er de Name Petrus ggää hät"
+            },
+            "who": "FIG-PETRUS"
+          },
+          {
+            "a": {
+              "de": "Jakobus",
+              "gsw": "Jakobus"
+            },
+            "b": {
+              "de": "Sohn des Zebedäus – «Boanerges»",
+              "gsw": "Sohn vom Zebedäus – «Boanerges»"
+            },
+            "who": "FIG-JAKOBUS-ZEBEDAEUS"
+          },
+          {
+            "a": {
+              "de": "Johannes",
+              "gsw": "Johannes"
+            },
+            "b": {
+              "de": "Bruder des Jakobus – «Boanerges»",
+              "gsw": "Brueder vom Jakobus – «Boanerges»"
+            },
+            "who": "FIG-JOHANNES-ZEBEDAEUS"
+          },
+          {
+            "a": {
+              "de": "Andreas",
+              "gsw": "Andreas"
+            },
+            "who": "FIG-ANDREAS"
+          },
+          {
+            "a": {
+              "de": "Philippus",
+              "gsw": "Philippus"
+            },
+            "who": "FIG-PHILIPPUS"
+          },
+          {
+            "a": {
+              "de": "Bartholomäus",
+              "gsw": "Bartholomäus"
+            },
+            "who": "FIG-BARTHOLOMAEUS"
+          },
+          {
+            "a": {
+              "de": "Matthäus",
+              "gsw": "Matthäus"
+            },
+            "who": "FIG-MATTHAEUS"
+          },
+          {
+            "a": {
+              "de": "Thomas",
+              "gsw": "Thomas"
+            },
+            "who": "FIG-THOMAS"
+          },
+          {
+            "a": {
+              "de": "Jakobus",
+              "gsw": "Jakobus"
+            },
+            "b": {
+              "de": "Sohn des Alphäus",
+              "gsw": "Sohn vom Alphäus"
+            },
+            "who": "FIG-JAKOBUS-ALPHAEUS"
+          },
+          {
+            "a": {
+              "de": "Thaddäus",
+              "gsw": "Thaddäus"
+            },
+            "who": "FIG-THADDAEUS"
+          },
+          {
+            "a": {
+              "de": "Simon",
+              "gsw": "Simon"
+            },
+            "b": {
+              "de": "der Kananäer",
+              "gsw": "de Kananäer"
+            },
+            "who": "FIG-SIMON-KANANAEUS"
+          },
+          {
+            "a": {
+              "de": "Judas Iskariot",
+              "gsw": "Judas Iskariot"
+            },
+            "b": {
+              "de": "der ihn auch auslieferte",
+              "gsw": "wo en au usgliferet hät"
+            },
+            "icons": [
+              "FIG-ZEICHEN-AUSLIEFERN"
+            ],
+            "tone": "old",
+            "who": "FIG-JUDAS-ISKARIOT"
+          }
+        ]
       }
     }
   ],
   "actions_de": [
-    "Jesus steigt auf den Berg und ruft die zu sich, die er will; und sie kommen zu ihm.",
-    "Er setzt zwölf ein, damit sie bei ihm sind und er sie aussendet zu verkündigen, mit Vollmacht, die Dämonen auszutreiben.",
-    "Die Liste der Zwölf: Simon, dem er den Namen Petrus gibt, Jakobus und Johannes, die «Söhne des Donners», Andreas und die übrigen, zuletzt Judas Iskariot, der ihn auslieferte."
+    "Jesus steigt auf den Berg, ruft zu sich, die er selbst will, und setzt zwölf ein, damit sie bei ihm seien und damit er sie aussende, zu verkündigen und mit Vollmacht die Dämonen auszutreiben.",
+    "Die Namen der Zwölf: Simon, dem er den Namen Petrus gibt; Jakobus und Johannes, die Söhne des Zebedäus, «Boanerges», Söhne des Donners; Andreas, Philippus, Bartholomäus, Matthäus, Thomas, Jakobus, der Sohn des Alphäus, Thaddäus, Simon der Kananäer und Judas Iskariot, der ihn auch auslieferte."
   ],
   "captions_de": [
-    "Auf dem Berg: Jesus ruft die zu sich, die er will (zwei gehende Personen); sie kommen zu ihm (gestrichelter Weg).",
-    "Die Zwölf: Jesus sendet sie (Bogen zu ihnen) zu verkünden (Rufer) und Dämonen auszutreiben (Schatten, Pfeil weg).",
-    "Namen: Petrus (Schlüssel), Jakobus (Muschel), Johannes (Kelch), Andreas (Schrägkreuz) stehen für die Zwölf; Judas Iskariot (Kasse), der Jesus ausliefert, steht abseits (gestrichelte Linie)."
+    "Auf dem Berg: Jesus setzt die Zwölf ein (einsetzen); die Blase nennt den Auftrag: verkündigen und Dämonen austreiben (verkündigen, austreiben).",
+    "Die Zwölf (Raster): zwölf Bilder mit Namen und Beinamen, in der Reihenfolge des Textes; das letzte Feld Judas Iskariot, «der ihn auch auslieferte»."
   ],
-  "interpretation_note_de": "Die Zwölf erscheinen als Gruppe; im dritten Feld stehen fünf mit ihren überlieferten Zeichen (Schlüssel, Muschel, Kelch, Schrägkreuz, Kasse) für alle, die übrigen nennt [[MRK.3.18]]. Die gestrichelte Linie vor Judas weist auf seine spätere Auslieferung ([[MRK.3.19]]) voraus, ohne sie zu zeigen.",
+  "interpretation_note_de": "Zwei Felder nach «Ruf – Einsetzung – Zweck – Namen» ([[MRK.3.13-MRK.3.19]]): die Einsetzung auf dem Berg mit dem Auftrag als Zeichen (Zweck, kein Bericht einer Aussendung) und alle zwölf Namen in der Reihenfolge des Textes, mit Beinamen und dem Hinweis auf die Auslieferung durch Judas. Die Bedeutung des Namens Petrus erklärt Markus hier nicht.",
   "basis": [
     {
       "record": "TU-MRK-003-013-019",
       "field": "summary",
-      "fingerprint": "694e07fa3364649a"
+      "fingerprint": "8b76756b4b251846"
     },
     {
       "record": "TRANS-MRK-003-001-019-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.3.13",
-      "fingerprint": "10a1bd56c2f4a1ad"
-    },
-    {
-      "record": "TRANS-MRK-003-001-019-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MRK.3.14-MRK.3.15",
-      "fingerprint": "31f296cd54d71a03"
+      "reference": "MRK.3.13-MRK.3.15",
+      "fingerprint": "996e4e3c60cdaae1"
     },
     {
       "record": "TRANS-MRK-003-001-019-DE-WORKING",
@@ -144,7 +220,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -352,6 +428,179 @@
           "Die Zwölf: Jesus sendet sie (Bogen zu ihnen) zu verkünden (Rufer) und Dämonen auszutreiben (Schatten, Pfeil weg).",
           "Namen: Petrus (Schlüssel), Jakobus (Muschel), Johannes (Kelch), Andreas (Schrägkreuz) stehen für die Zwölf; Judas Iskariot (Kasse), der Jesus ausliefert, steht abseits (gestrichelte Linie)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MRK-003-013-019",
+            "field": "summary",
+            "fingerprint": "694e07fa3364649a"
+          },
+          {
+            "record": "TRANS-MRK-003-001-019-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.3.13",
+            "fingerprint": "10a1bd56c2f4a1ad"
+          },
+          {
+            "record": "TRANS-MRK-003-001-019-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.3.14-MRK.3.15",
+            "fingerprint": "31f296cd54d71a03"
+          },
+          {
+            "record": "TRANS-MRK-003-001-019-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.3.16-MRK.3.19",
+            "fingerprint": "7d62d5bb916d9894"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.3.13",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-ORT-BERG"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-NACHFOLGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus steigt auf den Berg und ruft die zu sich, die er will; und sie kommen zu ihm.",
+            "stage": {
+              "back_side": "left",
+              "arrows": [
+                [
+                  "FIG-GRUPPE-ZWOELF",
+                  "FIG-JESUS",
+                  "go"
+                ]
+              ],
+              "x": {
+                "FIG-JESUS": 84,
+                "FIG-GRUPPE-ZWOELF": 150
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.3.14-MRK.3.15",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-ORT-BERG"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-VERKUENDIGEN",
+                  "FIG-ZEICHEN-DAEMON",
+                  "FIG-ZEICHEN-AUSTREIBEN"
+                ]
+              }
+            ],
+            "action_de": "Er setzt zwölf ein, damit sie bei ihm sind und er sie aussendet zu verkündigen, mit Vollmacht, die Dämonen auszutreiben.",
+            "stage": {
+              "back_side": "left",
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "determined"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-ZWOELF",
+                  "act"
+                ]
+              ],
+              "x": {
+                "FIG-JESUS": 84,
+                "FIG-GRUPPE-ZWOELF": 150
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.3.16-MRK.3.19",
+            "figures": [
+              "FIG-PETRUS",
+              "FIG-JAKOBUS-ZEBEDAEUS",
+              "FIG-JOHANNES-ZEBEDAEUS",
+              "FIG-ANDREAS",
+              "FIG-JUDAS-ISKARIOT"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-AUSLIEFERN"
+            ],
+            "speech": [],
+            "action_de": "Die Liste der Zwölf: Simon, dem er den Namen Petrus gibt, Jakobus und Johannes, die «Söhne des Donners», Andreas und die übrigen, zuletzt Judas Iskariot, der ihn auslieferte.",
+            "stage": {
+              "split": 4
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus steigt auf den Berg und ruft die zu sich, die er will; und sie kommen zu ihm.",
+          "Er setzt zwölf ein, damit sie bei ihm sind und er sie aussendet zu verkündigen, mit Vollmacht, die Dämonen auszutreiben.",
+          "Die Liste der Zwölf: Simon, dem er den Namen Petrus gibt, Jakobus und Johannes, die «Söhne des Donners», Andreas und die übrigen, zuletzt Judas Iskariot, der ihn auslieferte."
+        ],
+        "captions_de": [
+          "Auf dem Berg: Jesus ruft die zu sich, die er will (zwei gehende Personen); sie kommen zu ihm (gestrichelter Weg).",
+          "Die Zwölf: Jesus sendet sie (Bogen zu ihnen) zu verkünden (Rufer) und Dämonen auszutreiben (Schatten, Pfeil weg).",
+          "Namen: Petrus (Schlüssel), Jakobus (Muschel), Johannes (Kelch), Andreas (Schrägkreuz) stehen für die Zwölf; Judas Iskariot (Kasse), der Jesus ausliefert, steht abseits (gestrichelte Linie)."
+        ],
+        "interpretation_note_de": "Die Zwölf erscheinen als Gruppe; im dritten Feld stehen fünf mit ihren überlieferten Zeichen (Schlüssel, Muschel, Kelch, Schrägkreuz, Kasse) für alle, die übrigen nennt [[MRK.3.18]]. Die gestrichelte Linie vor Judas weist auf seine spätere Auslieferung ([[MRK.3.19]]) voraus, ohne sie zu zeigen.",
+        "basis": [
+          {
+            "record": "TU-MRK-003-013-019",
+            "field": "summary",
+            "fingerprint": "8b76756b4b251846"
+          },
+          {
+            "record": "TRANS-MRK-003-001-019-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.3.13",
+            "fingerprint": "10a1bd56c2f4a1ad"
+          },
+          {
+            "record": "TRANS-MRK-003-001-019-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.3.14-MRK.3.15",
+            "fingerprint": "31f296cd54d71a03"
+          },
+          {
+            "record": "TRANS-MRK-003-001-019-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.3.16-MRK.3.19",
+            "fingerprint": "7d62d5bb916d9894"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

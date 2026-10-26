@@ -11,10 +11,10 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MRK.8.1-MRK.8.10",
+      "reference": "MRK.8.1-MRK.8.13",
       "figures": [
         "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF",
+        "FIG-GRUPPE-JUENGER",
         "FIG-GRUPPE-MENGE"
       ],
       "objects": [
@@ -22,98 +22,164 @@
         "FIG-OBJ-KORB"
       ],
       "signs": [
+        "FIG-ZEICHEN-BETEN",
         "FIG-ZEICHEN-SATT"
       ],
-      "speech": [],
-      "action_de": "Jesus speist viertausend Menschen mit sieben Broten; alle werden satt, sieben Körbe bleiben übrig.",
+      "speech": [
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-GRUPPE-JUENGER",
+          "icons": [],
+          "word": {
+            "de": "Wie viele Brote habt ihr?",
+            "gsw": "Wie vil Broot händ ir?"
+          }
+        }
+      ],
+      "action_de": "Jesus nimmt die sieben Brote, spricht das Dankgebet, bricht die Brote und gibt sie den Jüngern zum Austeilen; alle essen und werden satt, und sieben Körbe voll Brocken bleiben übrig.",
+      "keywords": {
+        "de": "Und sie assen und wurden satt",
+        "gsw": "Und si händ ggässe und sind satt worde"
+      },
       "stage": {
+        "hold": {
+          "FIG-JESUS": "FIG-OBJ-BROT"
+        },
         "count": {
           "FIG-OBJ-KORB": 7
         },
         "at": {
+          "FIG-ZEICHEN-BETEN": "FIG-JESUS",
           "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
         },
-        "mood": {
-          "FIG-GRUPPE-MENGE": "smile"
-        },
-        "floor_side": "left",
-        "floor_x": {
-          "FIG-OBJ-KORB": 4
-        },
-        "hold": {
-          "FIG-GRUPPE-ZWOELF": "FIG-OBJ-BROT"
-        },
-        "behind": [
-          "FIG-OBJ-KORB"
-        ],
         "arrows": [
           [
-            "FIG-JESUS",
-            "FIG-GRUPPE-ZWOELF",
-            "act"
-          ],
-          [
-            "FIG-GRUPPE-ZWOELF",
+            "FIG-GRUPPE-JUENGER",
             "FIG-GRUPPE-MENGE",
             "act"
           ]
-        ]
+        ],
+        "mood": {
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-JUENGER": "surprised",
+          "FIG-GRUPPE-MENGE": "delight"
+        },
+        "x": {
+          "FIG-JESUS": 30,
+          "FIG-GRUPPE-JUENGER": 92,
+          "FIG-GRUPPE-MENGE": 156
+        }
       }
     },
     {
       "n": 2,
-      "reference": "MRK.8.22-MRK.8.26",
+      "reference": "MRK.8.14-MRK.8.21",
       "figures": [
         "FIG-JESUS",
-        "FIG-ROLLE-BLINDER"
+        "FIG-GRUPPE-JUENGER"
       ],
-      "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-SEHEN"
+      "objects": [
+        "FIG-OBJ-BOOT",
+        "FIG-ORT-SEE"
       ],
-      "speech": [],
-      "action_de": "In Betsaida heilt Jesus einen Blinden in zwei Schritten.",
-      "stage": {
-        "at": {
-          "FIG-ZEICHEN-SEHEN": "FIG-ROLLE-BLINDER"
+      "signs": [],
+      "speech": [
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-GRUPPE-JUENGER",
+          "icons": [],
+          "word": {
+            "de": "Versteht ihr noch nicht?",
+            "gsw": "Verstönd ir immer no nöd?"
+          }
         },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-ROLLE-BLINDER",
-            "act"
+        {
+          "from": "FIG-GRUPPE-JUENGER",
+          "to": "FIG-GRUPPE-JUENGER",
+          "icons": [
+            "FIG-ZEICHEN-FEHLT-BROT"
+          ],
+          "think": true
+        }
+      ],
+      "action_de": "Im Boot haben die Jünger nur ein Brot dabei; Jesus warnt vor dem Sauerteig der Pharisäer und des Herodes, doch sie überlegen, dass sie keine Brote haben; er fragt: «Versteht ihr noch nicht?»",
+      "keywords": {
+        "de": "Augen habt ihr und seht nicht",
+        "gsw": "Ir händ Auge und gseend nöd"
+      },
+      "stage": {
+        "in": {
+          "FIG-JESUS": "FIG-OBJ-BOOT",
+          "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT"
+        },
+        "in_pos": {
+          "FIG-JESUS": [
+            0.3,
+            0.42
+          ],
+          "FIG-GRUPPE-JUENGER": [
+            0.7,
+            0.42
           ]
-        ],
+        },
+        "sea": "calm",
         "mood": {
-          "FIG-ROLLE-BLINDER": "delight"
+          "FIG-JESUS": "earnest",
+          "FIG-GRUPPE-JUENGER": "pensive"
         }
       }
     },
     {
       "n": 3,
-      "reference": "MRK.8.27-MRK.8.30",
+      "reference": "MRK.8.22-MRK.8.30",
       "figures": [
-        "FIG-GRUPPE-ZWOELF",
+        "FIG-GRUPPE-JUENGER",
         "FIG-PETRUS",
         "FIG-JESUS"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-ORT-WEG"
+      ],
       "signs": [],
       "speech": [
         {
           "from": "FIG-PETRUS",
           "to": "FIG-JESUS",
+          "icons": [],
+          "word": {
+            "de": "Du bist der Christus!",
+            "gsw": "Du bisch de Christus!"
+          }
+        },
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-GRUPPE-JUENGER",
           "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-CHRISTUS"
+            "FIG-ZEICHEN-SCHWEIGEN"
           ]
         }
       ],
-      "action_de": "Bei Cäsarea Philippi bekennt Petrus: Du bist der Christus!",
+      "action_de": "Jesus fragt die Jünger: «Ihr aber, wer, sagt ihr, sei ich?» Petrus antwortet: «Du bist der Christus!» Jesus schärft ihnen ein, niemandem von ihm zu erzählen.",
+      "keywords": {
+        "de": "Wer, sagen die Leute, sei ich?",
+        "gsw": "Wer, säged d Lüüt, sig ich?"
+      },
+      "names": {
+        "FIG-PETRUS": {
+          "de": "Petrus",
+          "gsw": "Petrus"
+        }
+      },
       "stage": {
         "mood": {
+          "FIG-GRUPPE-JUENGER": "surprised",
           "FIG-PETRUS": "determined",
-          "FIG-GRUPPE-ZWOELF": "surprised"
+          "FIG-JESUS": "earnest"
+        },
+        "x": {
+          "FIG-GRUPPE-JUENGER": 30,
+          "FIG-PETRUS": 90,
+          "FIG-JESUS": 156
         }
       }
     },
@@ -121,55 +187,70 @@
       "n": 4,
       "reference": "MRK.8.31-MRK.8.38",
       "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF",
-        "FIG-GRUPPE-MENGE"
+        "FIG-GRUPPE-JUENGER",
+        "FIG-PETRUS",
+        "FIG-JESUS"
       ],
       "objects": [],
       "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-ZEICHEN-TOD",
-            "FIG-ZEICHEN-AUFERSTEHUNG",
-            "FIG-OBJ-KREUZ",
-            "FIG-ZEICHEN-NACHFOLGEN"
-          ]
+          "to": "FIG-PETRUS",
+          "icons": [],
+          "word": {
+            "de": "Geh hinter mich, Satan! Denn du hast nicht im Sinn, was Gottes ist, sondern was der Menschen ist.",
+            "gsw": "Gang hinder mich, Satan! Dänn du häsch nöd im Sinn, was vo Gott isch, sondern was vo de Mänsche isch."
+          }
         }
       ],
-      "action_de": "Jesus kündigt zum ersten Mal sein Leiden, seinen Tod und seine Auferstehung an und ruft zur Nachfolge mit dem Kreuz.",
+      "action_de": "Als Petrus Jesus beiseite nimmt und ihn zurechtweist, wendet sich Jesus um, sieht seine Jünger und sagt: «Geh hinter mich, Satan! Denn du hast nicht im Sinn, was Gottes ist, sondern was der Menschen ist.»",
+      "keywords": {
+        "de": "der verleugne sich selbst und nehme sein Kreuz auf sich",
+        "gsw": "dä söll sich sälber verleugne und sis Chrüüz uf sich nää"
+      },
+      "names": {
+        "FIG-PETRUS": {
+          "de": "Petrus",
+          "gsw": "Petrus"
+        }
+      },
       "stage": {
         "mood": {
-          "FIG-GRUPPE-ZWOELF": "worried",
-          "FIG-GRUPPE-MENGE": "pensive"
+          "FIG-GRUPPE-JUENGER": "surprised",
+          "FIG-PETRUS": "worried",
+          "FIG-JESUS": "earnest"
+        },
+        "x": {
+          "FIG-GRUPPE-JUENGER": 30,
+          "FIG-PETRUS": 92,
+          "FIG-JESUS": 156
         }
       }
     }
   ],
   "actions_de": [
-    "Jesus speist viertausend Menschen mit sieben Broten; alle werden satt, sieben Körbe bleiben übrig.",
-    "In Betsaida heilt Jesus einen Blinden in zwei Schritten.",
-    "Bei Cäsarea Philippi bekennt Petrus: Du bist der Christus!",
-    "Jesus kündigt zum ersten Mal sein Leiden, seinen Tod und seine Auferstehung an und ruft zur Nachfolge mit dem Kreuz."
+    "Jesus nimmt die sieben Brote, spricht das Dankgebet, bricht die Brote und gibt sie den Jüngern zum Austeilen; alle essen und werden satt, und sieben Körbe voll Brocken bleiben übrig.",
+    "Im Boot haben die Jünger nur ein Brot dabei; Jesus warnt vor dem Sauerteig der Pharisäer und des Herodes, doch sie überlegen, dass sie keine Brote haben; er fragt: «Versteht ihr noch nicht?»",
+    "Jesus fragt die Jünger: «Ihr aber, wer, sagt ihr, sei ich?» Petrus antwortet: «Du bist der Christus!» Jesus schärft ihnen ein, niemandem von ihm zu erzählen.",
+    "Als Petrus Jesus beiseite nimmt und ihn zurechtweist, wendet sich Jesus um, sieht seine Jünger und sagt: «Geh hinter mich, Satan! Denn du hast nicht im Sinn, was Gottes ist, sondern was der Menschen ist.»"
   ],
   "captions_de": [
-    "Austeilen → satt: Jesus gibt das Brot den Jüngern, die teilen es aus (Brot in der Hand, Pfeile), alle werden satt (volle Schale); sieben Körbe bleiben übrig.",
-    "Berührung → sehen: In Betsaida legt Jesus dem Blinden die Hände auf (Pfeil); er sieht (Augen).",
-    "Bekenntnis: Petrus sagt: Du bist der Christus (Jesus, Ölhorn über Krone).",
-    "Leiden und Nachfolge: Jesus kündigt Tod und Auferstehung an (Totenkopf, offenes Grab) und ruft: Nehmt das Kreuz und folgt mir (Kreuz, zwei gehende Personen)."
+    "Alle werden satt: Jesus hält Brote und dankt Gott (beten); die Jünger teilen der Menge aus; die Leute werden satt (satt); Körbe mit Resten.",
+    "Versteht ihr noch nicht? Im Boot fragt Jesus die Jünger, die nur an das fehlende Brot denken (Gedankenwolke: kein Brot).",
+    "Das Bekenntnis: Unterwegs bekennt Petrus (Name): «Du bist der Christus!»; Jesus gebietet den Jüngern zu schweigen (Schweigen).",
+    "Zurechtgewiesen: Petrus (Name) hat Jesus widersprochen; Jesus wendet sich ihm zu, die Jünger schauen: «Geh hinter mich, Satan! …»"
   ],
-  "interpretation_note_de": "Kapitelbild aus den Abschnittsbildern. Nicht im Bild sind die Zeichenforderung der Pharisäer ([[MRK.8.11-MRK.8.13]]) und das Gespräch über den Sauerteig ([[MRK.8.14-MRK.8.21]]).",
+  "interpretation_note_de": "Vier Comic-Szenen für sechs Abschnitte ([[MRK.8.1-MRK.8.38]]): Feld 1 bündelt die Speisung der Viertausend und die Zeichenforderung der Pharisäer (im Bild die Speisung); Feld 2 das Unverständnis im Boot (im Bild die Frage «Versteht ihr noch nicht?», das Band nennt die Augen, die nicht sehen); Feld 3 bündelt wie die Kernanalyse den Blinden von Betsaida und das Bekenntnis des Petrus (im Bild das Bekenntnis mit dem Schweigegebot); Feld 4 die Zurechtweisung des Petrus und das Nachfolgewort im Band. Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-MRK-008",
       "field": "summary",
-      "fingerprint": "8b804eb1a69763c0"
+      "fingerprint": "7acfdcf1fe268fda"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -466,6 +547,634 @@
           "Bekenntnis: Petrus sagt: Du bist der Christus (Jesus, Ölhorn über Krone).",
           "Leiden und Nachfolge: Jesus kündigt Tod und Auferstehung an (Grab, offenes Grab) und ruft: Nehmt das Kreuz und folgt mir (Kreuz, Fussspuren)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-MRK-008",
+            "field": "summary",
+            "fingerprint": "8b804eb1a69763c0"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.8.1-MRK.8.10",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT",
+              "FIG-OBJ-KORB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SATT"
+            ],
+            "speech": [],
+            "action_de": "Jesus speist viertausend Menschen mit sieben Broten; alle werden satt, sieben Körbe bleiben übrig.",
+            "stage": {
+              "count": {
+                "FIG-OBJ-KORB": 7
+              },
+              "at": {
+                "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "smile"
+              },
+              "floor_side": "left",
+              "floor_x": {
+                "FIG-OBJ-KORB": 4
+              },
+              "hold": {
+                "FIG-GRUPPE-ZWOELF": "FIG-OBJ-BROT"
+              },
+              "behind": [
+                "FIG-OBJ-KORB"
+              ],
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-ZWOELF",
+                  "act"
+                ],
+                [
+                  "FIG-GRUPPE-ZWOELF",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.8.22-MRK.8.26",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-BLINDER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-SEHEN"
+            ],
+            "speech": [],
+            "action_de": "In Betsaida heilt Jesus einen Blinden in zwei Schritten.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-SEHEN": "FIG-ROLLE-BLINDER"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-BLINDER",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-BLINDER": "delight"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.8.27-MRK.8.30",
+            "figures": [
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-CHRISTUS"
+                ]
+              }
+            ],
+            "action_de": "Bei Cäsarea Philippi bekennt Petrus: Du bist der Christus!",
+            "stage": {
+              "mood": {
+                "FIG-PETRUS": "determined",
+                "FIG-GRUPPE-ZWOELF": "surprised"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.8.31-MRK.8.38",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-TOD",
+                  "FIG-ZEICHEN-AUFERSTEHUNG",
+                  "FIG-OBJ-KREUZ",
+                  "FIG-ZEICHEN-NACHFOLGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus kündigt zum ersten Mal sein Leiden, seinen Tod und seine Auferstehung an und ruft zur Nachfolge mit dem Kreuz.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "worried",
+                "FIG-GRUPPE-MENGE": "pensive"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus speist viertausend Menschen mit sieben Broten; alle werden satt, sieben Körbe bleiben übrig.",
+          "In Betsaida heilt Jesus einen Blinden in zwei Schritten.",
+          "Bei Cäsarea Philippi bekennt Petrus: Du bist der Christus!",
+          "Jesus kündigt zum ersten Mal sein Leiden, seinen Tod und seine Auferstehung an und ruft zur Nachfolge mit dem Kreuz."
+        ],
+        "captions_de": [
+          "Austeilen → satt: Jesus gibt das Brot den Jüngern, die teilen es aus (Brot in der Hand, Pfeile), alle werden satt (volle Schale); sieben Körbe bleiben übrig.",
+          "Berührung → sehen: In Betsaida legt Jesus dem Blinden die Hände auf (Pfeil); er sieht (Augen).",
+          "Bekenntnis: Petrus sagt: Du bist der Christus (Jesus, Ölhorn über Krone).",
+          "Leiden und Nachfolge: Jesus kündigt Tod und Auferstehung an (Totenkopf, offenes Grab) und ruft: Nehmt das Kreuz und folgt mir (Kreuz, zwei gehende Personen)."
+        ],
+        "interpretation_note_de": "Kapitelbild aus den Abschnittsbildern. Nicht im Bild sind die Zeichenforderung der Pharisäer ([[MRK.8.11-MRK.8.13]]) und das Gespräch über den Sauerteig ([[MRK.8.14-MRK.8.21]]).",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.8.1-MRK.8.13",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT",
+              "FIG-OBJ-KORB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-BETEN",
+              "FIG-ZEICHEN-SATT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [],
+                "word": {
+                  "de": "Gebt ihr ihnen zu essen!",
+                  "gsw": "Gänd ihr ine z ässe!"
+                }
+              }
+            ],
+            "action_de": "Jesus nimmt die sieben Brote, spricht das Dankgebet, bricht die Brote und gibt sie den Jüngern zum Austeilen; alle essen und werden satt, und sieben Körbe voll Brocken bleiben übrig.",
+            "keywords": {
+              "de": "Und sie assen und wurden satt",
+              "gsw": "Und si händ ggässe und sind satt worde"
+            },
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROT"
+              },
+              "count": {
+                "FIG-OBJ-KORB": 7
+              },
+              "at": {
+                "FIG-ZEICHEN-BETEN": "FIG-JESUS",
+                "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "surprised",
+                "FIG-GRUPPE-MENGE": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-JUENGER": 92,
+                "FIG-GRUPPE-MENGE": 156
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.8.14-MRK.8.26",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [],
+                "word": {
+                  "de": "Versteht ihr noch nicht?",
+                  "gsw": "Verstönd ir immer no nöd?"
+                }
+              },
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-FEHLT-BROT"
+                ],
+                "think": true
+              }
+            ],
+            "action_de": "Im Boot haben die Jünger nur ein Brot dabei; Jesus warnt vor dem Sauerteig der Pharisäer und des Herodes, doch sie überlegen, dass sie keine Brote haben; er fragt: «Versteht ihr noch nicht?»",
+            "keywords": {
+              "de": "Augen habt ihr und seht nicht",
+              "gsw": "Ir händ Auge und gseend nöd"
+            },
+            "stage": {
+              "in": {
+                "FIG-JESUS": "FIG-OBJ-BOOT",
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.3,
+                  0.42
+                ],
+                "FIG-GRUPPE-JUENGER": [
+                  0.7,
+                  0.42
+                ]
+              },
+              "sea": "calm",
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-JUENGER": "pensive"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.8.27-MRK.8.30",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-WEG"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Du bist der Christus!",
+                  "gsw": "Du bisch de Christus!"
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-SCHWEIGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus fragt die Jünger: «Ihr aber, wer, sagt ihr, sei ich?» Petrus antwortet: «Du bist der Christus!» Jesus schärft ihnen ein, niemandem von ihm zu erzählen.",
+            "keywords": {
+              "de": "Wer, sagen die Leute, sei ich?",
+              "gsw": "Wer, säged d Lüüt, sig ich?"
+            },
+            "names": {
+              "FIG-PETRUS": {
+                "de": "Petrus",
+                "gsw": "Petrus"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "surprised",
+                "FIG-PETRUS": "determined",
+                "FIG-JESUS": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-JUENGER": 30,
+                "FIG-PETRUS": 90,
+                "FIG-JESUS": 156
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.8.31-MRK.8.38",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [],
+                "word": {
+                  "de": "Geh hinter mich, Satan! Denn du hast nicht im Sinn, was Gottes ist, sondern was der Menschen ist.",
+                  "gsw": "Gang hinder mich, Satan! Dänn du häsch nöd im Sinn, was vo Gott isch, sondern was vo de Mänsche isch."
+                }
+              }
+            ],
+            "action_de": "Als Petrus Jesus beiseite nimmt und ihn zurechtweist, wendet sich Jesus um, sieht seine Jünger und sagt: «Geh hinter mich, Satan! Denn du hast nicht im Sinn, was Gottes ist, sondern was der Menschen ist.»",
+            "keywords": {
+              "de": "der verleugne sich selbst und nehme sein Kreuz auf sich",
+              "gsw": "dä söll sich sälber verleugne und sis Chrüüz uf sich nää"
+            },
+            "names": {
+              "FIG-PETRUS": {
+                "de": "Petrus",
+                "gsw": "Petrus"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "surprised",
+                "FIG-PETRUS": "worried",
+                "FIG-JESUS": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-JUENGER": 30,
+                "FIG-PETRUS": 92,
+                "FIG-JESUS": 156
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Prüfung Struktur zuerst",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.8.1-MRK.8.13",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT",
+              "FIG-OBJ-KORB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-BETEN",
+              "FIG-ZEICHEN-SATT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [],
+                "word": {
+                  "de": "Wie viele Brote habt ihr?",
+                  "gsw": "Wie vil Broot händ ir?"
+                }
+              }
+            ],
+            "action_de": "Jesus nimmt die sieben Brote, spricht das Dankgebet, bricht die Brote und gibt sie den Jüngern zum Austeilen; alle essen und werden satt, und sieben Körbe voll Brocken bleiben übrig.",
+            "keywords": {
+              "de": "Und sie assen und wurden satt",
+              "gsw": "Und si händ ggässe und sind satt worde"
+            },
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROT"
+              },
+              "count": {
+                "FIG-OBJ-KORB": 7
+              },
+              "at": {
+                "FIG-ZEICHEN-BETEN": "FIG-JESUS",
+                "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "surprised",
+                "FIG-GRUPPE-MENGE": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-JUENGER": 92,
+                "FIG-GRUPPE-MENGE": 156
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.8.14-MRK.8.26",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [],
+                "word": {
+                  "de": "Versteht ihr noch nicht?",
+                  "gsw": "Verstönd ir immer no nöd?"
+                }
+              },
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-FEHLT-BROT"
+                ],
+                "think": true
+              }
+            ],
+            "action_de": "Im Boot haben die Jünger nur ein Brot dabei; Jesus warnt vor dem Sauerteig der Pharisäer und des Herodes, doch sie überlegen, dass sie keine Brote haben; er fragt: «Versteht ihr noch nicht?»",
+            "keywords": {
+              "de": "Augen habt ihr und seht nicht",
+              "gsw": "Ir händ Auge und gseend nöd"
+            },
+            "stage": {
+              "in": {
+                "FIG-JESUS": "FIG-OBJ-BOOT",
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.3,
+                  0.42
+                ],
+                "FIG-GRUPPE-JUENGER": [
+                  0.7,
+                  0.42
+                ]
+              },
+              "sea": "calm",
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-JUENGER": "pensive"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.8.27-MRK.8.30",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-WEG"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Du bist der Christus!",
+                  "gsw": "Du bisch de Christus!"
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-SCHWEIGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus fragt die Jünger: «Ihr aber, wer, sagt ihr, sei ich?» Petrus antwortet: «Du bist der Christus!» Jesus schärft ihnen ein, niemandem von ihm zu erzählen.",
+            "keywords": {
+              "de": "Wer, sagen die Leute, sei ich?",
+              "gsw": "Wer, säged d Lüüt, sig ich?"
+            },
+            "names": {
+              "FIG-PETRUS": {
+                "de": "Petrus",
+                "gsw": "Petrus"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "surprised",
+                "FIG-PETRUS": "determined",
+                "FIG-JESUS": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-JUENGER": 30,
+                "FIG-PETRUS": 90,
+                "FIG-JESUS": 156
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.8.31-MRK.8.38",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [],
+                "word": {
+                  "de": "Geh hinter mich, Satan! Denn du hast nicht im Sinn, was Gottes ist, sondern was der Menschen ist.",
+                  "gsw": "Gang hinder mich, Satan! Dänn du häsch nöd im Sinn, was vo Gott isch, sondern was vo de Mänsche isch."
+                }
+              }
+            ],
+            "action_de": "Als Petrus Jesus beiseite nimmt und ihn zurechtweist, wendet sich Jesus um, sieht seine Jünger und sagt: «Geh hinter mich, Satan! Denn du hast nicht im Sinn, was Gottes ist, sondern was der Menschen ist.»",
+            "keywords": {
+              "de": "der verleugne sich selbst und nehme sein Kreuz auf sich",
+              "gsw": "dä söll sich sälber verleugne und sis Chrüüz uf sich nää"
+            },
+            "names": {
+              "FIG-PETRUS": {
+                "de": "Petrus",
+                "gsw": "Petrus"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "surprised",
+                "FIG-PETRUS": "worried",
+                "FIG-JESUS": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-JUENGER": 30,
+                "FIG-PETRUS": 92,
+                "FIG-JESUS": 156
+              }
+            }
+          }
+        ],
+        "interpretation_note_de": "Vier Comic-Szenen für sechs Abschnitte ([[MRK.8.1-MRK.8.38]]): Feld 1 bündelt die Speisung der Viertausend und die Zeichenforderung der Pharisäer (im Bild die Speisung); Feld 2 bündelt das Unverständnis im Boot und den Blinden von Betsaida (im Bild die Frage «Versteht ihr noch nicht?», das Band nennt die Augen, die nicht sehen); Feld 3 das Bekenntnis des Petrus mit dem Schweigegebot; Feld 4 die Zurechtweisung des Petrus und das Nachfolgewort im Band. Comic-Szenen nach dem Entscheid vom 2026-10-25."
       }
     }
   ]

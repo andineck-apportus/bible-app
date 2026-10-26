@@ -11,49 +11,7 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MRK.4.35-MRK.4.37",
-      "figures": [
-        "FIG-GRUPPE-JUENGER",
-        "FIG-JESUS"
-      ],
-      "objects": [
-        "FIG-OBJ-BOOT",
-        "FIG-ORT-SEE"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-STURM",
-        "FIG-ZEICHEN-WIND"
-      ],
-      "speech": [],
-      "action_de": "Am Abend fahren sie mit Jesus im Boot ans andere Ufer; ein grosser Sturmwind erhebt sich, und die Wellen schlagen ins Boot, sodass es volllief.",
-      "stage": {
-        "in": {
-          "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT",
-          "FIG-JESUS": "FIG-OBJ-BOOT"
-        },
-        "in_pos": {
-          "FIG-GRUPPE-JUENGER": [
-            0.3,
-            0.4
-          ],
-          "FIG-JESUS": [
-            0.78,
-            0.55
-          ]
-        },
-        "pose": {
-          "FIG-JESUS": "sleep"
-        },
-        "mood": {
-          "FIG-GRUPPE-JUENGER": "worried"
-        },
-        "air_x": 70,
-        "air_y": 6
-      }
-    },
-    {
-      "n": 2,
-      "reference": "MRK.4.38",
+      "reference": "MRK.4.35-MRK.4.38",
       "figures": [
         "FIG-GRUPPE-JUENGER",
         "FIG-JESUS"
@@ -70,16 +28,29 @@
           "from": "FIG-GRUPPE-JUENGER",
           "to": "FIG-JESUS",
           "icons": [
-            "FIG-ZEICHEN-TOD",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
+            "FIG-ZEICHEN-STURM"
+          ],
+          "word": {
+            "de": "Lehrer, kümmert es dich nicht, dass wir umkommen?",
+            "gsw": "Lehrer, isch es dir gliich, dass mir undergönd?"
+          }
         }
       ],
-      "action_de": "Jesus schläft im Heck auf einem Kissen; sie wecken ihn: Lehrer, kümmert es dich nicht, dass wir umkommen?",
+      "action_de": "Ein grosser Sturmwind, die Wellen schlagen ins Boot; Jesus schläft im Heck auf dem Kissen; die Jünger wecken ihn: «Lehrer, kümmert es dich nicht, dass wir umkommen?»",
+      "keywords": {
+        "de": "ein grosser Sturmwind",
+        "gsw": "en grosse Sturmwind"
+      },
       "stage": {
         "in": {
           "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT",
           "FIG-JESUS": "FIG-OBJ-BOOT"
+        },
+        "pose": {
+          "FIG-JESUS": "sleep"
+        },
+        "mood": {
+          "FIG-GRUPPE-JUENGER": "fear"
         },
         "in_pos": {
           "FIG-GRUPPE-JUENGER": [
@@ -87,33 +58,20 @@
             0.4
           ],
           "FIG-JESUS": [
-            0.75,
-            0.5
+            0.76,
+            0.52
           ]
         },
-        "pose": {
-          "FIG-JESUS": "sleep"
-        },
-        "mood": {
-          "FIG-GRUPPE-JUENGER": "worried"
-        },
-        "arrows": [
-          [
-            "FIG-GRUPPE-JUENGER",
-            "FIG-JESUS",
-            "act"
-          ]
-        ],
-        "air_x": 160,
-        "air_y": 30
+        "air_x": 40,
+        "air_y": 8
       }
     },
     {
-      "n": 3,
+      "n": 2,
       "reference": "MRK.4.39",
       "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-JUENGER"
+        "FIG-GRUPPE-JUENGER",
+        "FIG-JESUS"
       ],
       "objects": [
         "FIG-OBJ-BOOT",
@@ -125,36 +83,43 @@
           "from": "FIG-JESUS",
           "to": "FIG-ORT-SEE",
           "icons": [
-            "FIG-ZEICHEN-WIND",
-            "FIG-ZEICHEN-SCHWEIGEN"
-          ]
+            "FIG-ZEICHEN-WIND"
+          ],
+          "word": {
+            "de": "Schweig! Verstumme!",
+            "gsw": "Schwiig! Bis still!"
+          }
         }
       ],
-      "action_de": "Jesus steht auf, fährt den Wind an und sagt zum See: Schweig, verstumme! Der Wind legt sich, und es wird ganz still.",
+      "action_de": "Jesus fährt den Wind an und sagt zum See: «Schweig! Verstumme!» – der Wind legt sich, und es wird eine grosse Stille.",
+      "keywords": {
+        "de": "es wurde eine grosse Stille",
+        "gsw": "es isch ganz still worde"
+      },
       "stage": {
         "in": {
           "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT",
           "FIG-JESUS": "FIG-OBJ-BOOT"
         },
+        "sea": "calm",
+        "mood": {
+          "FIG-GRUPPE-JUENGER": "surprised",
+          "FIG-JESUS": "calm"
+        },
         "in_pos": {
-          "FIG-JESUS": [
-            0.6,
-            0.42
-          ],
           "FIG-GRUPPE-JUENGER": [
             0.3,
             0.42
+          ],
+          "FIG-JESUS": [
+            0.66,
+            0.42
           ]
-        },
-        "sea": "calm",
-        "mood": {
-          "FIG-JESUS": "calm",
-          "FIG-GRUPPE-JUENGER": "surprised"
         }
       }
     },
     {
-      "n": 4,
+      "n": 3,
       "reference": "MRK.4.40-MRK.4.41",
       "figures": [
         "FIG-JESUS",
@@ -170,20 +135,30 @@
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-JUENGER",
           "icons": [
-            "FIG-ZEICHEN-GLAUBEN",
             "FIG-ZEICHEN-FRAGEN"
-          ]
+          ],
+          "word": {
+            "de": "Warum seid ihr so furchtsam? Habt ihr noch keinen Glauben?",
+            "gsw": "Werum sind er so ängschtlich? Händ er no kein Glaube?"
+          }
         },
         {
           "from": "FIG-GRUPPE-JUENGER",
           "to": "FIG-GRUPPE-JUENGER",
           "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
+            "FIG-ZEICHEN-WIND"
+          ],
+          "word": {
+            "de": "Wer ist denn dieser, dass auch der Wind und der See ihm gehorchen?",
+            "gsw": "Wer isch dänn dä, dass sogar de Wind und de See ihm folged?"
+          }
         }
       ],
-      "action_de": "Jesus fragt: Warum seid ihr so furchtsam? Habt ihr noch keinen Glauben? Sie fürchten sich sehr und sagen zueinander: Wer ist dieser, dass ihm Wind und See gehorchen?",
+      "action_de": "Jesus fragt die Jünger: «Warum seid ihr so furchtsam? Habt ihr noch keinen Glauben?» Sie fürchten sich sehr und sagen zueinander: «Wer ist denn dieser, dass auch der Wind und der See ihm gehorchen?»",
+      "keywords": {
+        "de": "Und sie fürchteten sich sehr",
+        "gsw": "Und si händ grossi Angscht übercho"
+      },
       "stage": {
         "in": {
           "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT",
@@ -191,51 +166,44 @@
         },
         "in_pos": {
           "FIG-JESUS": [
-            0.7,
+            0.22,
             0.42
           ],
           "FIG-GRUPPE-JUENGER": [
-            0.3,
+            0.78,
             0.42
           ]
         },
         "sea": "calm",
         "mood": {
-          "FIG-GRUPPE-JUENGER": "surprised"
+          "FIG-JESUS": "earnest",
+          "FIG-GRUPPE-JUENGER": "fear"
         }
       }
     }
   ],
   "actions_de": [
-    "Am Abend fahren sie mit Jesus im Boot ans andere Ufer; ein grosser Sturmwind erhebt sich, und die Wellen schlagen ins Boot, sodass es volllief.",
-    "Jesus schläft im Heck auf einem Kissen; sie wecken ihn: Lehrer, kümmert es dich nicht, dass wir umkommen?",
-    "Jesus steht auf, fährt den Wind an und sagt zum See: Schweig, verstumme! Der Wind legt sich, und es wird ganz still.",
-    "Jesus fragt: Warum seid ihr so furchtsam? Habt ihr noch keinen Glauben? Sie fürchten sich sehr und sagen zueinander: Wer ist dieser, dass ihm Wind und See gehorchen?"
+    "Ein grosser Sturmwind, die Wellen schlagen ins Boot; Jesus schläft im Heck auf dem Kissen; die Jünger wecken ihn: «Lehrer, kümmert es dich nicht, dass wir umkommen?»",
+    "Jesus fährt den Wind an und sagt zum See: «Schweig! Verstumme!» – der Wind legt sich, und es wird eine grosse Stille.",
+    "Jesus fragt die Jünger: «Warum seid ihr so furchtsam? Habt ihr noch keinen Glauben?» Sie fürchten sich sehr und sagen zueinander: «Wer ist denn dieser, dass auch der Wind und der See ihm gehorchen?»"
   ],
   "captions_de": [
-    "Sturm: Auf der Überfahrt kommt ein grosser Sturm (dunkle Wolke mit Blitz, blasendes Wolkengesicht); die Jünger fürchten sich, Jesus schläft hinten im Boot.",
-    "Geweckt: Im Sturm (dunkle Wolke) wecken die Jünger Jesus (Bogen zu ihm): Wir kommen um! (Totenkopf, Fragezeichen).",
-    "Befehl → Stille: Jesus gebietet dem Wind und dem See: Schweig (blasendes Wolkengesicht, Gesicht mit Finger vor dem Mund); darauf wird der See still.",
-    "Wer ist dieser? Jesus fragt nach ihrem Glauben (Herz mit Licht, Fragezeichen); die Jünger fragen einander: Wer ist er? (Jesus, Fragezeichen)."
+    "Im Sturm: Das Boot in hohen Wellen (Sturm); Jesus schläft; die Jünger wecken ihn voller Angst: «Lehrer, kümmert es dich nicht, dass wir umkommen?»",
+    "Stille: Jesus gebietet dem Wind (Wind): «Schweig! Verstumme!»; der See ist ruhig, die Jünger staunen.",
+    "Wer ist dieser? Jesus fragt nach ihrem Glauben (glauben); die Jünger fragen einander voller Furcht: «Wer ist denn dieser, dass auch der Wind und der See ihm gehorchen?»"
   ],
-  "interpretation_note_de": "Die anderen Boote ([[MRK.4.36]]) und das Kissen ([[MRK.4.38]]) sind weggelassen. Das Grab in der Sprechblase steht für «umkommen». Im dritten Feld spricht Jesus zum See; die Sprechblase hat deshalb keine Person als Gegenüber.",
+  "interpretation_note_de": "Drei Felder nach «Sturm – Hilferuf – Stillung – Frage – Gegenfrage» ([[MRK.4.35-MRK.4.41]]). Das Kapitel endet mit der offenen Frage der Jünger «Wer ist denn dieser?»; das Bild beantwortet sie nicht. Die anderen Boote ([[MRK.4.36]]) sind nicht gezeichnet.",
   "basis": [
     {
       "record": "TU-MRK-004-035-041",
       "field": "summary",
-      "fingerprint": "c6209b98cf767ff5"
+      "fingerprint": "19c8bf0f14062132"
     },
     {
       "record": "TRANS-MRK-004-001-041-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.4.35-MRK.4.37",
-      "fingerprint": "765433143115ee55"
-    },
-    {
-      "record": "TRANS-MRK-004-001-041-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MRK.4.38",
-      "fingerprint": "631b36d18d14ae95"
+      "reference": "MRK.4.35-MRK.4.38",
+      "fingerprint": "20c15e4b07e0a5b6"
     },
     {
       "record": "TRANS-MRK-004-001-041-DE-WORKING",
@@ -251,7 +219,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -476,6 +444,515 @@
           "Geweckt: Im Sturm (dunkle Wolke) wecken die Jünger Jesus (Bogen zu ihm): Wir kommen um! (Grab, Fragezeichen).",
           "Befehl → Stille: Jesus gebietet dem Wind und dem See: Schweig (Windlinien, durchgestrichene Sprechblase); darauf wird der See still.",
           "Wer ist dieser? Jesus fragt nach ihrem Glauben (Herz mit Licht, Fragezeichen); die Jünger fragen einander: Wer ist er? (Jesus, Fragezeichen)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MRK-004-035-041",
+            "field": "summary",
+            "fingerprint": "c6209b98cf767ff5"
+          },
+          {
+            "record": "TRANS-MRK-004-001-041-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.4.35-MRK.4.37",
+            "fingerprint": "765433143115ee55"
+          },
+          {
+            "record": "TRANS-MRK-004-001-041-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.4.38",
+            "fingerprint": "631b36d18d14ae95"
+          },
+          {
+            "record": "TRANS-MRK-004-001-041-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.4.39",
+            "fingerprint": "51aa0f78e89a66ee"
+          },
+          {
+            "record": "TRANS-MRK-004-001-041-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.4.40-MRK.4.41",
+            "fingerprint": "4570121bf71fde61"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.4.35-MRK.4.37",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-STURM",
+              "FIG-ZEICHEN-WIND"
+            ],
+            "speech": [],
+            "action_de": "Am Abend fahren sie mit Jesus im Boot ans andere Ufer; ein grosser Sturmwind erhebt sich, und die Wellen schlagen ins Boot, sodass es volllief.",
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT",
+                "FIG-JESUS": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-JUENGER": [
+                  0.3,
+                  0.4
+                ],
+                "FIG-JESUS": [
+                  0.78,
+                  0.55
+                ]
+              },
+              "pose": {
+                "FIG-JESUS": "sleep"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "worried"
+              },
+              "air_x": 70,
+              "air_y": 6
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.4.38",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-STURM"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-TOD",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus schläft im Heck auf einem Kissen; sie wecken ihn: Lehrer, kümmert es dich nicht, dass wir umkommen?",
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT",
+                "FIG-JESUS": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-JUENGER": [
+                  0.3,
+                  0.4
+                ],
+                "FIG-JESUS": [
+                  0.75,
+                  0.5
+                ]
+              },
+              "pose": {
+                "FIG-JESUS": "sleep"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "worried"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "air_x": 160,
+              "air_y": 30
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.4.39",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ORT-SEE",
+                "icons": [
+                  "FIG-ZEICHEN-WIND",
+                  "FIG-ZEICHEN-SCHWEIGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus steht auf, fährt den Wind an und sagt zum See: Schweig, verstumme! Der Wind legt sich, und es wird ganz still.",
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT",
+                "FIG-JESUS": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.6,
+                  0.42
+                ],
+                "FIG-GRUPPE-JUENGER": [
+                  0.3,
+                  0.42
+                ]
+              },
+              "sea": "calm",
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "surprised"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.4.40-MRK.4.41",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-GLAUBEN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus fragt: Warum seid ihr so furchtsam? Habt ihr noch keinen Glauben? Sie fürchten sich sehr und sagen zueinander: Wer ist dieser, dass ihm Wind und See gehorchen?",
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT",
+                "FIG-JESUS": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.7,
+                  0.42
+                ],
+                "FIG-GRUPPE-JUENGER": [
+                  0.3,
+                  0.42
+                ]
+              },
+              "sea": "calm",
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "surprised"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Am Abend fahren sie mit Jesus im Boot ans andere Ufer; ein grosser Sturmwind erhebt sich, und die Wellen schlagen ins Boot, sodass es volllief.",
+          "Jesus schläft im Heck auf einem Kissen; sie wecken ihn: Lehrer, kümmert es dich nicht, dass wir umkommen?",
+          "Jesus steht auf, fährt den Wind an und sagt zum See: Schweig, verstumme! Der Wind legt sich, und es wird ganz still.",
+          "Jesus fragt: Warum seid ihr so furchtsam? Habt ihr noch keinen Glauben? Sie fürchten sich sehr und sagen zueinander: Wer ist dieser, dass ihm Wind und See gehorchen?"
+        ],
+        "captions_de": [
+          "Sturm: Auf der Überfahrt kommt ein grosser Sturm (dunkle Wolke mit Blitz, blasendes Wolkengesicht); die Jünger fürchten sich, Jesus schläft hinten im Boot.",
+          "Geweckt: Im Sturm (dunkle Wolke) wecken die Jünger Jesus (Bogen zu ihm): Wir kommen um! (Totenkopf, Fragezeichen).",
+          "Befehl → Stille: Jesus gebietet dem Wind und dem See: Schweig (blasendes Wolkengesicht, Gesicht mit Finger vor dem Mund); darauf wird der See still.",
+          "Wer ist dieser? Jesus fragt nach ihrem Glauben (Herz mit Licht, Fragezeichen); die Jünger fragen einander: Wer ist er? (Jesus, Fragezeichen)."
+        ],
+        "interpretation_note_de": "Die anderen Boote ([[MRK.4.36]]) und das Kissen ([[MRK.4.38]]) sind weggelassen. Das Grab in der Sprechblase steht für «umkommen». Im dritten Feld spricht Jesus zum See; die Sprechblase hat deshalb keine Person als Gegenüber.",
+        "basis": [
+          {
+            "record": "TU-MRK-004-035-041",
+            "field": "summary",
+            "fingerprint": "11c22199c29c331d"
+          },
+          {
+            "record": "TRANS-MRK-004-001-041-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.4.35-MRK.4.37",
+            "fingerprint": "765433143115ee55"
+          },
+          {
+            "record": "TRANS-MRK-004-001-041-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.4.38",
+            "fingerprint": "631b36d18d14ae95"
+          },
+          {
+            "record": "TRANS-MRK-004-001-041-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.4.39",
+            "fingerprint": "51aa0f78e89a66ee"
+          },
+          {
+            "record": "TRANS-MRK-004-001-041-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.4.40-MRK.4.41",
+            "fingerprint": "4570121bf71fde61"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.4.35-MRK.4.38",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-STURM",
+              "FIG-ZEICHEN-FURCHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-STURM"
+                ],
+                "word": {
+                  "de": "Lehrer, kümmert es dich nicht, dass wir umkommen?",
+                  "gsw": "Lehrer, isch es dir gliich, dass mir undergönd?"
+                }
+              }
+            ],
+            "action_de": "Ein grosser Sturmwind, die Wellen schlagen ins Boot; Jesus schläft im Heck auf dem Kissen; die Jünger wecken ihn: «Lehrer, kümmert es dich nicht, dass wir umkommen?»",
+            "keywords": {
+              "de": "ein grosser Sturmwind",
+              "gsw": "en grosse Sturmwind"
+            },
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT",
+                "FIG-JESUS": "FIG-OBJ-BOOT"
+              },
+              "pose": {
+                "FIG-JESUS": "sleep"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "fear"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-JUENGER": [
+                  0.3,
+                  0.4
+                ],
+                "FIG-JESUS": [
+                  0.76,
+                  0.52
+                ]
+              },
+              "at": {
+                "FIG-ZEICHEN-FURCHT": "FIG-GRUPPE-JUENGER"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.4.39",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ORT-SEE",
+                "icons": [
+                  "FIG-ZEICHEN-WIND"
+                ],
+                "word": {
+                  "de": "Schweig! Verstumme!",
+                  "gsw": "Schwiig! Bis still!"
+                }
+              }
+            ],
+            "action_de": "Jesus fährt den Wind an und sagt zum See: «Schweig! Verstumme!» – der Wind legt sich, und es wird eine grosse Stille.",
+            "keywords": {
+              "de": "es wurde eine grosse Stille",
+              "gsw": "es isch ganz still worde"
+            },
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT",
+                "FIG-JESUS": "FIG-OBJ-BOOT"
+              },
+              "sea": "calm",
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "surprised",
+                "FIG-JESUS": "calm"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-JUENGER": [
+                  0.3,
+                  0.42
+                ],
+                "FIG-JESUS": [
+                  0.66,
+                  0.42
+                ]
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.4.40-MRK.4.41",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FURCHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-FRAGEN"
+                ],
+                "word": {
+                  "de": "Warum seid ihr so furchtsam? Habt ihr noch keinen Glauben?",
+                  "gsw": "Werum sind er so ängschtlich? Händ er no kein Glaube?"
+                }
+              },
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-WIND"
+                ],
+                "word": {
+                  "de": "Wer ist denn dieser, dass auch der Wind und der See ihm gehorchen?",
+                  "gsw": "Wer isch dänn dä, dass sogar de Wind und de See ihm folged?"
+                }
+              }
+            ],
+            "action_de": "Jesus fragt die Jünger: «Warum seid ihr so furchtsam? Habt ihr noch keinen Glauben?» Sie fürchten sich sehr und sagen zueinander: «Wer ist denn dieser, dass auch der Wind und der See ihm gehorchen?»",
+            "keywords": {
+              "de": "Und sie fürchteten sich sehr",
+              "gsw": "Und si händ grossi Angscht übercho"
+            },
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT",
+                "FIG-JESUS": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.3,
+                  0.42
+                ],
+                "FIG-GRUPPE-JUENGER": [
+                  0.7,
+                  0.42
+                ]
+              },
+              "sea": "calm",
+              "at": {
+                "FIG-ZEICHEN-FURCHT": "FIG-GRUPPE-JUENGER"
+              },
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-JUENGER": "fear"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Im Sturm: Das Boot in hohen Wellen (Sturm); Jesus schläft; die Jünger in Angst (Furcht) wecken ihn: «Lehrer, kümmert es dich nicht, dass wir umkommen?»",
+          "Stille: Jesus gebietet dem Wind (Wind): «Schweig! Verstumme!»; der See ist ruhig, die Jünger staunen.",
+          "Wer ist dieser? Jesus fragt nach ihrem Glauben (glauben); die Jünger fragen einander in Furcht (Furcht): «Wer ist denn dieser, dass auch der Wind und der See ihm gehorchen?»"
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Prüfung Struktur zuerst",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MRK-004-035-041",
+            "field": "summary",
+            "fingerprint": "11c22199c29c331d"
+          },
+          {
+            "record": "TRANS-MRK-004-001-041-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.4.35-MRK.4.38",
+            "fingerprint": "20c15e4b07e0a5b6"
+          },
+          {
+            "record": "TRANS-MRK-004-001-041-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.4.39",
+            "fingerprint": "51aa0f78e89a66ee"
+          },
+          {
+            "record": "TRANS-MRK-004-001-041-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.4.40-MRK.4.41",
+            "fingerprint": "4570121bf71fde61"
+          }
         ]
       }
     }

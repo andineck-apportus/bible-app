@@ -1,0 +1,175 @@
+{
+ "id": "CORE-MRK-008-027-030",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MRK.8.27-MRK.8.30",
+ "target": "TU-MRK-008-027-030",
+ "core_de": "Auf dem Weg in die Dörfer von Cäsarea Philippi fragt Jesus seine Jünger: «Wer, sagen die Leute, sei ich?» – Johannes der Täufer, Elija oder einer der Propheten; «Ihr aber, wer, sagt ihr, sei ich?» – Petrus antwortet: «Du bist der Christus!»; Jesus schärft ihnen ein, niemandem von ihm zu erzählen.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "contrast",
+    "subtype": "die Leute ↔ ihr",
+    "range": "MRK.8.27-MRK.8.30",
+    "elements": [
+     {
+      "label": "«Wer, sagen die Leute, sei ich?»",
+      "ref": "MRK.8.27",
+      "role": "Frage 1"
+     },
+     {
+      "label": "Meinungen der Leute",
+      "ref": "MRK.8.28",
+      "role": "Antwort 1",
+      "child": "s2"
+     },
+     {
+      "label": "«Ihr aber, wer, sagt ihr, sei ich?»",
+      "ref": "MRK.8.29",
+      "role": "Frage 2"
+     },
+     {
+      "label": "Petrus: «Du bist der Christus!»",
+      "ref": "MRK.8.29",
+      "role": "Antwort 2"
+     },
+     {
+      "label": "Er schärfte ihnen ein, dass sie niemandem von ihm erzählen sollten",
+      "ref": "MRK.8.30",
+      "role": "Schweigegebot"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "MRK.8.27"
+      },
+      {
+       "who": "FIG-GRUPPE-JUENGER",
+       "to": "FIG-JESUS",
+       "ref": "MRK.8.28"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "MRK.8.29"
+      },
+      {
+       "who": "FIG-PETRUS",
+       "to": "FIG-JESUS",
+       "ref": "MRK.8.29"
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "MRK.6.14-MRK.6.15",
+       "kind": "Wiederaufnahme",
+       "note": "dieselben Meinungen"
+      },
+      {
+       "ref": "MAT.16.13-MAT.16.20",
+       "kind": "Parallelfassung (nicht angleichen)"
+      }
+     ]
+    },
+    "visual": "columns",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "series",
+    "subtype": "Meinungen der Leute",
+    "range": "MRK.8.28",
+    "elements": [
+     {
+      "label": "Johannes der Täufer",
+      "ref": "MRK.8.28"
+     },
+     {
+      "label": "andere: Elija",
+      "ref": "MRK.8.28"
+     },
+     {
+      "label": "andere aber: einer der Propheten",
+      "ref": "MRK.8.28"
+     }
+    ],
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MRK.8.27-MRK.8.28",
+   "text_de": "Auf dem Weg: «Wer, sagen die Leute, sei ich?» – «Johannes der Täufer, und andere: Elija, andere aber: einer der Propheten.»",
+   "reason_de": "Erste Frage mit den Meinungen der Leute (Kriterium 2).",
+   "recognition_de": "Jesus fragt unterwegs; Gedanken an Johannes, Elija, Propheten.",
+   "keywords": [
+    "Wer, sagen die Leute, sei ich?",
+    "Johannes der Täufer, und andere: Elija"
+   ]
+  },
+  {
+   "reference": "MRK.8.29",
+   "text_de": "«Ihr aber, wer, sagt ihr, sei ich?» Petrus: «Du bist der Christus!»",
+   "reason_de": "Wendepunkt des Evangeliums (Kriterien 1, 2 und 4).",
+   "recognition_de": "Petrus bekennt.",
+   "keywords": [
+    "Du bist der Christus!"
+   ]
+  },
+  {
+   "reference": "MRK.8.30",
+   "text_de": "Er schärft ihnen ein, niemandem von ihm zu erzählen.",
+   "reason_de": "Schweigegebot (Kriterium 2).",
+   "recognition_de": "Jesus gebietet Schweigen.",
+   "keywords": [
+    "dass sie niemandem von ihm erzählen sollten"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Ein Lob des Petrus und das Felsenwort stehen nur bei Matthäus ([[MAT.16.17-MAT.16.19]]) – nichts ergänzen"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-PETRUS",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-JOHANNES-TAEUFER",
+  "FIG-ELIJA",
+  "FIG-ROLLE-PROPHET"
+ ],
+ "places": [
+  "FIG-ORT-WEG"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MRK.8.27-MRK.8.30",
+   "fingerprint": "99c20f94593fa3db"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mk 1–4 und 6–8 nach dem Pilot Mk 5 und dem Ausrollen Matthäus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; Zusammenfassungen und Bildaufträge mitgeprüft; keine fachliche Prüfung durch eine Person",
+  "result": "bestanden",
+  "summary_de": "Die Leute (drei Meinungen) ↔ ihr – Bekenntnis – Schweigegebot; Felsenwort (Mt) nicht ergänzt.",
+  "changes_de": []
+ }
+}

@@ -13,56 +13,58 @@
       "n": 1,
       "reference": "MRK.8.1-MRK.8.5",
       "figures": [
-        "FIG-GRUPPE-ZWOELF",
-        "FIG-JESUS"
+        "FIG-GRUPPE-MENGE",
+        "FIG-JESUS",
+        "FIG-GRUPPE-JUENGER"
       ],
       "objects": [
-        "FIG-ORT-WUESTE",
-        "FIG-OBJ-BROT"
+        "FIG-ORT-WUESTE"
       ],
-      "signs": [
-        "FIG-ZEICHEN-ERBARMEN"
-      ],
+      "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-GRUPPE-MENGE",
-            "FIG-ZEICHEN-TAGE",
-            "FIG-ZEICHEN-TAGE",
-            "FIG-ZEICHEN-TAGE"
-          ]
+          "to": "FIG-GRUPPE-JUENGER",
+          "icons": [],
+          "word": {
+            "de": "Ich habe Mitleid mit der Menge, denn schon drei Tage bleiben sie bei mir und haben nichts zu essen.",
+            "gsw": "Ich ha Erbarme mit de Mängi, dänn si bliibed scho drüü Täg bi mir und händ nüüt z ässe."
+          }
+        },
+        {
+          "from": "FIG-GRUPPE-JUENGER",
+          "to": "FIG-JESUS",
+          "icons": [],
+          "word": {
+            "de": "Woher kann jemand diese hier in der Einöde mit Brot sättigen?",
+            "gsw": "Vo wo söll öpper die da i de Wüeschti mit Broot satt mache chöne?"
+          }
         }
       ],
-      "action_de": "Wieder ist eine grosse Menge seit drei Tagen bei Jesus und hat nichts zu essen. Er hat Mitleid und sagt es den Jüngern; sie fragen: Woher Brot hier in der Einöde? Sie haben sieben Brote.",
+      "action_de": "Jesus sagt zu den Jüngern: «Ich habe Mitleid mit der Menge, denn schon drei Tage bleiben sie bei mir und haben nichts zu essen.» Die Jünger antworten: «Woher kann jemand diese hier in der Einöde mit Brot sättigen?» – «Wie viele Brote habt ihr?» – «Sieben.»",
+      "keywords": {
+        "de": "Wie viele Brote habt ihr?",
+        "gsw": "Wie vil Broot händ ir?"
+      },
       "stage": {
-        "count": {
-          "FIG-OBJ-BROT": 7
-        },
-        "at": {
-          "FIG-ZEICHEN-ERBARMEN": "FIG-JESUS"
-        },
         "mood": {
-          "FIG-GRUPPE-ZWOELF": "worried"
+          "FIG-GRUPPE-MENGE": "worried",
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-JUENGER": "question"
         },
-        "floor_side": "right",
         "x": {
-          "FIG-GRUPPE-ZWOELF": 30,
-          "FIG-JESUS": 72
-        },
-        "floor_x": {
-          "FIG-OBJ-BROT": 96
+          "FIG-GRUPPE-MENGE": 30,
+          "FIG-JESUS": 96,
+          "FIG-GRUPPE-JUENGER": 158
         }
       }
     },
     {
       "n": 2,
-      "reference": "MRK.8.6-MRK.8.9",
+      "reference": "MRK.8.6-MRK.8.10",
       "figures": [
-        "FIG-GOTT",
         "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF",
+        "FIG-GRUPPE-JUENGER",
         "FIG-GRUPPE-MENGE"
       ],
       "objects": [
@@ -70,70 +72,60 @@
         "FIG-OBJ-KORB"
       ],
       "signs": [
+        "FIG-ZEICHEN-BETEN",
         "FIG-ZEICHEN-SATT"
       ],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GOTT",
-          "icons": [
-            "FIG-ZEICHEN-BETEN",
-            "FIG-OBJ-BROT"
-          ]
-        }
-      ],
-      "action_de": "Die Menge lagert sich; Jesus nimmt die sieben Brote, spricht das Dankgebet, bricht sie und lässt sie durch die Jünger austeilen, ebenso einige Fische. Alle werden satt; sieben Körbe mit Brocken bleiben übrig.",
+      "speech": [],
+      "action_de": "Jesus nimmt die sieben Brote, spricht das Dankgebet, bricht die Brote und gibt sie den Jüngern zum Austeilen; alle essen und werden satt, und sieben Körbe voll Brocken bleiben übrig.",
+      "keywords": {
+        "de": "Und sie assen und wurden satt",
+        "gsw": "Und si händ ggässe und sind satt worde"
+      },
       "stage": {
-        "god_side": "right",
-        "floor_side": "left",
+        "hold": {
+          "FIG-JESUS": "FIG-OBJ-BROT"
+        },
         "count": {
           "FIG-OBJ-KORB": 7
         },
         "at": {
+          "FIG-ZEICHEN-BETEN": "FIG-JESUS",
           "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
         },
-        "mood": {
-          "FIG-GRUPPE-MENGE": "smile"
-        },
-        "hold": {
-          "FIG-JESUS": "FIG-OBJ-BROT",
-          "FIG-GRUPPE-ZWOELF": "FIG-OBJ-BROT"
-        },
-        "floor_x": {
-          "FIG-OBJ-KORB": 4
-        },
-        "behind": [
-          "FIG-OBJ-KORB"
-        ],
         "arrows": [
           [
-            "FIG-JESUS",
-            "FIG-GRUPPE-ZWOELF",
-            "act"
-          ],
-          [
-            "FIG-GRUPPE-ZWOELF",
+            "FIG-GRUPPE-JUENGER",
             "FIG-GRUPPE-MENGE",
             "act"
           ]
-        ]
+        ],
+        "mood": {
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-JUENGER": "surprised",
+          "FIG-GRUPPE-MENGE": "delight"
+        },
+        "x": {
+          "FIG-JESUS": 30,
+          "FIG-GRUPPE-JUENGER": 92,
+          "FIG-GRUPPE-MENGE": 156
+        }
       }
     }
   ],
   "actions_de": [
-    "Wieder ist eine grosse Menge seit drei Tagen bei Jesus und hat nichts zu essen. Er hat Mitleid und sagt es den Jüngern; sie fragen: Woher Brot hier in der Einöde? Sie haben sieben Brote.",
-    "Die Menge lagert sich; Jesus nimmt die sieben Brote, spricht das Dankgebet, bricht sie und lässt sie durch die Jünger austeilen, ebenso einige Fische. Alle werden satt; sieben Körbe mit Brocken bleiben übrig."
+    "Jesus sagt zu den Jüngern: «Ich habe Mitleid mit der Menge, denn schon drei Tage bleiben sie bei mir und haben nichts zu essen.» Die Jünger antworten: «Woher kann jemand diese hier in der Einöde mit Brot sättigen?» – «Wie viele Brote habt ihr?» – «Sieben.»",
+    "Jesus nimmt die sieben Brote, spricht das Dankgebet, bricht die Brote und gibt sie den Jüngern zum Austeilen; alle essen und werden satt, und sieben Körbe voll Brocken bleiben übrig."
   ],
   "captions_de": [
-    "Mitleid: Jesus hat Erbarmen (Herz mit Händen) und sagt den Jüngern, die Menge sei seit drei Tagen da (Menge, drei Sonnen). Am Boden sieben Brote.",
-    "Dank → Austeilen → satt: Jesus hält das Brot und dankt Gott dafür (Strahlenkranz; Blase: betende Hände, Brot); er gibt es den Jüngern, die teilen aus (Brot in der Hand, Pfeile), alle werden satt (volle Schale); sieben Körbe bleiben übrig."
+    "Mitleid und Ratlosigkeit: Jesus spricht von seinem Mitleid mit der Menge (Erbarmen); die Jünger fragen ratlos: «Woher kann jemand diese hier in der Einöde mit Brot sättigen?» (Brot, Frage).",
+    "Alle werden satt: Jesus hält Brote und dankt Gott (beten); die Jünger teilen der Menge aus; die Leute werden satt (satt); Körbe mit Resten."
   ],
-  "interpretation_note_de": "Das Dankgebet ([[MRK.8.6]]) zeigt das Bild als Rede Jesu zu Gott (Strahlenkranz). Die Fische ([[MRK.8.7]]) und die Fahrt nach Dalmanuta ([[MRK.8.10]]) sind nicht im Bild.",
+  "interpretation_note_de": "Zwei Felder nach «Not – Mitleid – Frage – Brote – Dank – Sättigung» ([[MRK.8.1-MRK.8.10]]): Jesu Mitleid mit Begründung und die ratlose Frage der Jünger (Unverständnis trotz der ersten Speisung, [[MRK.6.30-MRK.6.44]]), dann die Speisung mit sieben Broten. Das Dankgebet ist Hinwendung zu Gott (Zeichen «beten»). Die Zahl der Körbe (sieben) zeigt das Bild; die Zahl der Menschen (etwa viertausend) nennt die Legende.",
   "basis": [
     {
       "record": "TU-MRK-008-001-010",
       "field": "summary",
-      "fingerprint": "96444fcbe3b30866"
+      "fingerprint": "f555dfa158f0c767"
     },
     {
       "record": "TRANS-MRK-008-001-038-DE-WORKING",
@@ -144,12 +136,12 @@
     {
       "record": "TRANS-MRK-008-001-038-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.8.6-MRK.8.9",
-      "fingerprint": "91d2c7fc2ff66274"
+      "reference": "MRK.8.6-MRK.8.10",
+      "fingerprint": "d46f248bacbba6bb"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -366,6 +358,298 @@
         "captions_de": [
           "Mitleid: Jesus hat Erbarmen (Herz mit Händen) und sagt den Jüngern, die Menge sei seit drei Tagen da (Menge, drei Sonnen). Am Boden sieben Brote.",
           "Satt: Jesus hält das Brot und dankt Gott dafür (Strahlenkranz; Blase: betende Hände, Brot); die Jünger teilen das Brot aus (Brot in der Hand), alle werden satt (volle Schale); sieben Körbe bleiben übrig."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MRK-008-001-010",
+            "field": "summary",
+            "fingerprint": "96444fcbe3b30866"
+          },
+          {
+            "record": "TRANS-MRK-008-001-038-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.8.1-MRK.8.5",
+            "fingerprint": "37659373772d42f7"
+          },
+          {
+            "record": "TRANS-MRK-008-001-038-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.8.6-MRK.8.9",
+            "fingerprint": "91d2c7fc2ff66274"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.8.1-MRK.8.5",
+            "figures": [
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-WUESTE",
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ERBARMEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-ZEICHEN-TAGE",
+                  "FIG-ZEICHEN-TAGE",
+                  "FIG-ZEICHEN-TAGE"
+                ]
+              }
+            ],
+            "action_de": "Wieder ist eine grosse Menge seit drei Tagen bei Jesus und hat nichts zu essen. Er hat Mitleid und sagt es den Jüngern; sie fragen: Woher Brot hier in der Einöde? Sie haben sieben Brote.",
+            "stage": {
+              "count": {
+                "FIG-OBJ-BROT": 7
+              },
+              "at": {
+                "FIG-ZEICHEN-ERBARMEN": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "worried"
+              },
+              "floor_side": "right",
+              "x": {
+                "FIG-GRUPPE-ZWOELF": 30,
+                "FIG-JESUS": 72
+              },
+              "floor_x": {
+                "FIG-OBJ-BROT": 96
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.8.6-MRK.8.9",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT",
+              "FIG-OBJ-KORB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SATT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-BETEN",
+                  "FIG-OBJ-BROT"
+                ]
+              }
+            ],
+            "action_de": "Die Menge lagert sich; Jesus nimmt die sieben Brote, spricht das Dankgebet, bricht sie und lässt sie durch die Jünger austeilen, ebenso einige Fische. Alle werden satt; sieben Körbe mit Brocken bleiben übrig.",
+            "stage": {
+              "god_side": "right",
+              "floor_side": "left",
+              "count": {
+                "FIG-OBJ-KORB": 7
+              },
+              "at": {
+                "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "smile"
+              },
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROT",
+                "FIG-GRUPPE-ZWOELF": "FIG-OBJ-BROT"
+              },
+              "floor_x": {
+                "FIG-OBJ-KORB": 4
+              },
+              "behind": [
+                "FIG-OBJ-KORB"
+              ],
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-ZWOELF",
+                  "act"
+                ],
+                [
+                  "FIG-GRUPPE-ZWOELF",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ]
+            }
+          }
+        ],
+        "actions_de": [
+          "Wieder ist eine grosse Menge seit drei Tagen bei Jesus und hat nichts zu essen. Er hat Mitleid und sagt es den Jüngern; sie fragen: Woher Brot hier in der Einöde? Sie haben sieben Brote.",
+          "Die Menge lagert sich; Jesus nimmt die sieben Brote, spricht das Dankgebet, bricht sie und lässt sie durch die Jünger austeilen, ebenso einige Fische. Alle werden satt; sieben Körbe mit Brocken bleiben übrig."
+        ],
+        "captions_de": [
+          "Mitleid: Jesus hat Erbarmen (Herz mit Händen) und sagt den Jüngern, die Menge sei seit drei Tagen da (Menge, drei Sonnen). Am Boden sieben Brote.",
+          "Dank → Austeilen → satt: Jesus hält das Brot und dankt Gott dafür (Strahlenkranz; Blase: betende Hände, Brot); er gibt es den Jüngern, die teilen aus (Brot in der Hand, Pfeile), alle werden satt (volle Schale); sieben Körbe bleiben übrig."
+        ],
+        "interpretation_note_de": "Das Dankgebet ([[MRK.8.6]]) zeigt das Bild als Rede Jesu zu Gott (Strahlenkranz). Die Fische ([[MRK.8.7]]) und die Fahrt nach Dalmanuta ([[MRK.8.10]]) sind nicht im Bild.",
+        "basis": [
+          {
+            "record": "TU-MRK-008-001-010",
+            "field": "summary",
+            "fingerprint": "f555dfa158f0c767"
+          },
+          {
+            "record": "TRANS-MRK-008-001-038-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.8.1-MRK.8.5",
+            "fingerprint": "37659373772d42f7"
+          },
+          {
+            "record": "TRANS-MRK-008-001-038-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.8.6-MRK.8.9",
+            "fingerprint": "91d2c7fc2ff66274"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.8.1-MRK.8.5",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-ORT-WUESTE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [],
+                "word": {
+                  "de": "Ich habe Mitleid mit der Menge, denn schon drei Tage bleiben sie bei mir und haben nichts zu essen.",
+                  "gsw": "Ich ha Erbarme mit de Mängi, dänn si bliibed scho drüü Täg bi mir und händ nüüt z ässe."
+                }
+              },
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "Woher kann jemand diese hier in der Einöde mit Brot sättigen?",
+                  "gsw": "Vo wo söll öpper die da i de Wüeschti mit Broot satt mache chöne?"
+                }
+              }
+            ],
+            "action_de": "Jesus sagt zu den Jüngern: «Ich habe Mitleid mit der Menge, denn schon drei Tage bleiben sie bei mir und haben nichts zu essen.» Die Jünger antworten: «Woher kann jemand diese hier in der Einöde mit Brot sättigen?» – «Wie viele Brote habt ihr?» – «Sieben.»",
+            "keywords": {
+              "de": "Wie viele Brote habt ihr?",
+              "gsw": "Wie vil Broot händ ir?"
+            },
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "worried",
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "question"
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 30,
+                "FIG-JESUS": 96,
+                "FIG-GRUPPE-JUENGER": 158
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.8.6-MRK.8.10",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT",
+              "FIG-OBJ-KORB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-BETEN",
+              "FIG-ZEICHEN-SATT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [],
+                "word": {
+                  "de": "Gebt ihr ihnen zu essen!",
+                  "gsw": "Gänd ihr ine z ässe!"
+                }
+              }
+            ],
+            "action_de": "Jesus nimmt die sieben Brote, spricht das Dankgebet, bricht die Brote und gibt sie den Jüngern zum Austeilen; alle essen und werden satt, und sieben Körbe voll Brocken bleiben übrig.",
+            "keywords": {
+              "de": "Und sie assen und wurden satt",
+              "gsw": "Und si händ ggässe und sind satt worde"
+            },
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROT"
+              },
+              "count": {
+                "FIG-OBJ-KORB": 7
+              },
+              "at": {
+                "FIG-ZEICHEN-BETEN": "FIG-JESUS",
+                "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "surprised",
+                "FIG-GRUPPE-MENGE": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-JUENGER": 92,
+                "FIG-GRUPPE-MENGE": 156
+              }
+            }
+          }
         ]
       }
     }

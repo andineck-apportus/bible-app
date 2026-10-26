@@ -11,44 +11,37 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MRK.6.45-MRK.6.48",
+      "reference": "MRK.6.45-MRK.6.47",
       "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF"
+        "FIG-GOTT",
+        "FIG-JESUS"
       ],
       "objects": [
-        "FIG-OBJ-BOOT",
         "FIG-ORT-BERG"
       ],
       "signs": [
-        "FIG-ZEICHEN-WIND",
-        "FIG-ZEICHEN-NACHT",
-        "FIG-ZEICHEN-BETEN"
+        "FIG-ZEICHEN-BETEN",
+        "FIG-ZEICHEN-ABEND"
       ],
       "speech": [],
-      "action_de": "Jesus schickt die Jünger im Boot voraus und geht auf den Berg, um zu beten. Am Abend ist das Boot mitten auf dem See, und die Jünger mühen sich beim Rudern ab, denn der Wind steht ihnen entgegen.",
+      "action_de": "Jesus schickt die Jünger im Boot voraus, entlässt die Menge und geht auf den Berg, um zu beten; am Abend ist das Boot mitten auf dem See und er allein an Land.",
+      "keywords": {
+        "de": "ging er auf den Berg, um zu beten",
+        "gsw": "isch er uf de Bärg gange, go bätte"
+      },
       "stage": {
-        "in": {
-          "FIG-GRUPPE-ZWOELF": "FIG-OBJ-BOOT"
+        "pose": {
+          "FIG-JESUS": "kneel"
         },
-        "in_pos": {
-          "FIG-GRUPPE-ZWOELF": [
-            0.3,
-            0.45
-          ]
-        },
-        "big_side": "right",
-        "back_side": "left",
-        "signs_who": {
-          "FIG-ZEICHEN-BETEN": [
-            "FIG-JESUS"
-          ]
+        "on": {
+          "FIG-JESUS": "FIG-ORT-BERG"
         },
         "at": {
-          "FIG-ZEICHEN-WIND": "FIG-OBJ-BOOT"
+          "FIG-ZEICHEN-BETEN": "FIG-JESUS"
         },
+        "god_side": "right",
         "mood": {
-          "FIG-GRUPPE-ZWOELF": "worried"
+          "FIG-JESUS": "calm"
         }
       }
     },
@@ -56,42 +49,62 @@
       "n": 2,
       "reference": "MRK.6.48-MRK.6.50",
       "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF"
+        "FIG-GRUPPE-JUENGER",
+        "FIG-JESUS"
       ],
       "objects": [
         "FIG-OBJ-BOOT",
         "FIG-ORT-SEE"
       ],
       "signs": [
+        "FIG-ZEICHEN-FURCHT",
+        "FIG-ZEICHEN-WIND",
         "FIG-ZEICHEN-NACHT"
       ],
       "speech": [
         {
           "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
+          "to": "FIG-GRUPPE-JUENGER",
           "icons": [
-            "FIG-JESUS"
-          ]
+            "FIG-ZEICHEN-FURCHT",
+            "FIG-ZEICHEN-NICHT"
+          ],
+          "word": {
+            "de": "Seid getrost, ich bin es; fürchtet euch nicht!",
+            "gsw": "Nu Muet, ich bins; händ kei Angscht!"
+          }
         }
       ],
-      "action_de": "In der vierten Nachtwache kommt Jesus auf dem See gehend zu ihnen. Sie halten ihn für ein Gespenst und schreien auf; er sagt: Seid getrost, ich bin es; fürchtet euch nicht!",
+      "action_de": "In der Nacht kommt Jesus auf dem See zu den Jüngern, die sich gegen den Wind abmühen; sie meinen, es sei ein Gespenst, und schreien auf; er sagt: «Seid getrost, ich bin es; fürchtet euch nicht!»",
+      "keywords": {
+        "de": "meinten, dass es ein Gespenst sei",
+        "gsw": "händ dänkt, dass das es Gspängscht seig"
+      },
       "stage": {
         "in": {
-          "FIG-GRUPPE-ZWOELF": "FIG-OBJ-BOOT"
+          "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT"
         },
         "in_pos": {
-          "FIG-GRUPPE-ZWOELF": [
-            0.3,
-            0.45
+          "FIG-GRUPPE-JUENGER": [
+            0.4,
+            0.42
           ]
         },
-        "big_side": "right",
-        "mood": {
-          "FIG-GRUPPE-ZWOELF": "surprised",
-          "FIG-JESUS": "smile"
+        "big_side": "left",
+        "on_water": [
+          "FIG-JESUS"
+        ],
+        "night": true,
+        "at": {
+          "FIG-ZEICHEN-FURCHT": "FIG-GRUPPE-JUENGER"
         },
-        "in_water": true
+        "mood": {
+          "FIG-GRUPPE-JUENGER": "fear",
+          "FIG-JESUS": "calm"
+        },
+        "x": {
+          "FIG-JESUS": 156
+        }
       }
     },
     {
@@ -99,65 +112,64 @@
       "reference": "MRK.6.51-MRK.6.52",
       "figures": [
         "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF"
+        "FIG-GRUPPE-JUENGER"
       ],
       "objects": [
         "FIG-OBJ-BOOT",
         "FIG-ORT-SEE"
       ],
-      "signs": [
-        "FIG-ZEICHEN-NICHT-VERSTEHEN"
-      ],
+      "signs": [],
       "speech": [],
-      "action_de": "Er steigt zu ihnen ins Boot, und der Wind legt sich. Die Jünger sind fassungslos, denn bei den Broten sind sie nicht zur Einsicht gekommen; ihr Herz ist verhärtet.",
+      "action_de": "Er steigt zu ihnen ins Boot, und der Wind legt sich; sie sind ganz fassungslos, denn sie waren bei den Broten nicht zur Einsicht gekommen, sondern ihr Herz war verhärtet.",
+      "keywords": {
+        "de": "sondern ihr Herz war verhärtet",
+        "gsw": "sondern ires Härz isch verhärtet gsii"
+      },
       "stage": {
         "in": {
           "FIG-JESUS": "FIG-OBJ-BOOT",
-          "FIG-GRUPPE-ZWOELF": "FIG-OBJ-BOOT"
+          "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT"
         },
         "in_pos": {
           "FIG-JESUS": [
-            0.72,
-            0.45
+            0.22,
+            0.42
           ],
-          "FIG-GRUPPE-ZWOELF": [
-            0.3,
-            0.45
+          "FIG-GRUPPE-JUENGER": [
+            0.78,
+            0.42
           ]
         },
         "sea": "calm",
-        "at": {
-          "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-GRUPPE-ZWOELF"
-        },
-        "at_top": true,
         "mood": {
-          "FIG-GRUPPE-ZWOELF": "surprised"
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-JUENGER": "surprised"
         }
       }
     }
   ],
   "actions_de": [
-    "Jesus schickt die Jünger im Boot voraus und geht auf den Berg, um zu beten. Am Abend ist das Boot mitten auf dem See, und die Jünger mühen sich beim Rudern ab, denn der Wind steht ihnen entgegen.",
-    "In der vierten Nachtwache kommt Jesus auf dem See gehend zu ihnen. Sie halten ihn für ein Gespenst und schreien auf; er sagt: Seid getrost, ich bin es; fürchtet euch nicht!",
-    "Er steigt zu ihnen ins Boot, und der Wind legt sich. Die Jünger sind fassungslos, denn bei den Broten sind sie nicht zur Einsicht gekommen; ihr Herz ist verhärtet."
+    "Jesus schickt die Jünger im Boot voraus, entlässt die Menge und geht auf den Berg, um zu beten; am Abend ist das Boot mitten auf dem See und er allein an Land.",
+    "In der Nacht kommt Jesus auf dem See zu den Jüngern, die sich gegen den Wind abmühen; sie meinen, es sei ein Gespenst, und schreien auf; er sagt: «Seid getrost, ich bin es; fürchtet euch nicht!»",
+    "Er steigt zu ihnen ins Boot, und der Wind legt sich; sie sind ganz fassungslos, denn sie waren bei den Broten nicht zur Einsicht gekommen, sondern ihr Herz war verhärtet."
   ],
   "captions_de": [
-    "Gegenwind: Jesus betet allein am Berg (betende Hände); die Jünger mühen sich im Boot gegen den Wind (blasendes Wolkengesicht), es ist Nacht (Mond).",
-    "Auf dem Wasser: Jesus geht auf dem See zum Boot; die Jünger erschrecken. Er sagt: Ich bin es (Jesus).",
-    "Still: Jesus im Boot, der See ist ruhig; die Jünger verstehen nicht (Nebel mit Fragezeichen)."
+    "Gebet auf dem Berg: Jesus kniet allein auf dem Berg und betet zu Gott (beten, Strahlenkranz); der Abend bricht an.",
+    "Auf dem See: Jesus geht in der Nacht auf dem Wasser zum Boot; die Jünger schreien in Angst (Furcht, Wind); Jesus: «Seid getrost, ich bin es; fürchtet euch nicht!»",
+    "Nicht verstanden: Jesus im Boot, der See ist ruhig; die Jünger sind fassungslos; das Band nennt den Grund."
   ],
-  "interpretation_note_de": "Die Zwölf erscheinen im Boot als Gruppe von drei Figuren. Dass sie Jesus für ein Gespenst halten ([[MRK.6.49]]), zeigt nur ihr Erschrecken; dass er «an ihnen vorübergehen wollte» ([[MRK.6.48]]), ist nicht dargestellt.",
+  "interpretation_note_de": "Drei Felder nach dem Ablauf ([[MRK.6.45-MRK.6.52]]): das Gebet auf dem Berg (Hinwendung zu Gott), das Kommen auf dem See mit Jesu Wort und die Stille mit dem Kommentar des Erzählers zum Unverständnis der Jünger (Markus-Eigenheit). Ein Gang des Petrus auf dem Wasser steht nur bei Matthäus und ist nicht gezeichnet; «er wollte an ihnen vorübergehen» ([[MRK.6.48]]) bleibt ungedeutet.",
   "basis": [
     {
       "record": "TU-MRK-006-045-052",
       "field": "summary",
-      "fingerprint": "55a2a8d8959cf347"
+      "fingerprint": "528867c2ed355838"
     },
     {
       "record": "TRANS-MRK-006-001-056-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.6.45-MRK.6.48",
-      "fingerprint": "7c82346b414d4cd4"
+      "reference": "MRK.6.45-MRK.6.47",
+      "fingerprint": "ab58f8790efa4dbc"
     },
     {
       "record": "TRANS-MRK-006-001-056-DE-WORKING",
@@ -173,7 +185,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -320,6 +332,364 @@
           "Gegenwind: Jesus betet allein am Berg (betende Hände); die Jünger mühen sich im Boot gegen den Wind (Windlinien), es ist Nacht (Mond).",
           "Auf dem Wasser: Jesus geht auf dem See zum Boot; die Jünger erschrecken. Er sagt: Ich bin es (Jesus).",
           "Still: Jesus im Boot, der See ist ruhig; die Jünger verstehen nicht (Nebel mit Fragezeichen)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MRK-006-045-052",
+            "field": "summary",
+            "fingerprint": "55a2a8d8959cf347"
+          },
+          {
+            "record": "TRANS-MRK-006-001-056-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.6.45-MRK.6.48",
+            "fingerprint": "7c82346b414d4cd4"
+          },
+          {
+            "record": "TRANS-MRK-006-001-056-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.6.48-MRK.6.50",
+            "fingerprint": "b169941372ac8fa0"
+          },
+          {
+            "record": "TRANS-MRK-006-001-056-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.6.51-MRK.6.52",
+            "fingerprint": "9b77b78d16539572"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.6.45-MRK.6.48",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-BERG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-WIND",
+              "FIG-ZEICHEN-NACHT",
+              "FIG-ZEICHEN-BETEN"
+            ],
+            "speech": [],
+            "action_de": "Jesus schickt die Jünger im Boot voraus und geht auf den Berg, um zu beten. Am Abend ist das Boot mitten auf dem See, und die Jünger mühen sich beim Rudern ab, denn der Wind steht ihnen entgegen.",
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-ZWOELF": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-ZWOELF": [
+                  0.3,
+                  0.45
+                ]
+              },
+              "big_side": "right",
+              "back_side": "left",
+              "signs_who": {
+                "FIG-ZEICHEN-BETEN": [
+                  "FIG-JESUS"
+                ]
+              },
+              "at": {
+                "FIG-ZEICHEN-WIND": "FIG-OBJ-BOOT"
+              },
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "worried"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.6.48-MRK.6.50",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NACHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "In der vierten Nachtwache kommt Jesus auf dem See gehend zu ihnen. Sie halten ihn für ein Gespenst und schreien auf; er sagt: Seid getrost, ich bin es; fürchtet euch nicht!",
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-ZWOELF": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-ZWOELF": [
+                  0.3,
+                  0.45
+                ]
+              },
+              "big_side": "right",
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "surprised",
+                "FIG-JESUS": "smile"
+              },
+              "in_water": true
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.6.51-MRK.6.52",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NICHT-VERSTEHEN"
+            ],
+            "speech": [],
+            "action_de": "Er steigt zu ihnen ins Boot, und der Wind legt sich. Die Jünger sind fassungslos, denn bei den Broten sind sie nicht zur Einsicht gekommen; ihr Herz ist verhärtet.",
+            "stage": {
+              "in": {
+                "FIG-JESUS": "FIG-OBJ-BOOT",
+                "FIG-GRUPPE-ZWOELF": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.72,
+                  0.45
+                ],
+                "FIG-GRUPPE-ZWOELF": [
+                  0.3,
+                  0.45
+                ]
+              },
+              "sea": "calm",
+              "at": {
+                "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-GRUPPE-ZWOELF"
+              },
+              "at_top": true,
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "surprised"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus schickt die Jünger im Boot voraus und geht auf den Berg, um zu beten. Am Abend ist das Boot mitten auf dem See, und die Jünger mühen sich beim Rudern ab, denn der Wind steht ihnen entgegen.",
+          "In der vierten Nachtwache kommt Jesus auf dem See gehend zu ihnen. Sie halten ihn für ein Gespenst und schreien auf; er sagt: Seid getrost, ich bin es; fürchtet euch nicht!",
+          "Er steigt zu ihnen ins Boot, und der Wind legt sich. Die Jünger sind fassungslos, denn bei den Broten sind sie nicht zur Einsicht gekommen; ihr Herz ist verhärtet."
+        ],
+        "captions_de": [
+          "Gegenwind: Jesus betet allein am Berg (betende Hände); die Jünger mühen sich im Boot gegen den Wind (blasendes Wolkengesicht), es ist Nacht (Mond).",
+          "Auf dem Wasser: Jesus geht auf dem See zum Boot; die Jünger erschrecken. Er sagt: Ich bin es (Jesus).",
+          "Still: Jesus im Boot, der See ist ruhig; die Jünger verstehen nicht (Nebel mit Fragezeichen)."
+        ],
+        "interpretation_note_de": "Die Zwölf erscheinen im Boot als Gruppe von drei Figuren. Dass sie Jesus für ein Gespenst halten ([[MRK.6.49]]), zeigt nur ihr Erschrecken; dass er «an ihnen vorübergehen wollte» ([[MRK.6.48]]), ist nicht dargestellt.",
+        "basis": [
+          {
+            "record": "TU-MRK-006-045-052",
+            "field": "summary",
+            "fingerprint": "528867c2ed355838"
+          },
+          {
+            "record": "TRANS-MRK-006-001-056-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.6.45-MRK.6.48",
+            "fingerprint": "7c82346b414d4cd4"
+          },
+          {
+            "record": "TRANS-MRK-006-001-056-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.6.48-MRK.6.50",
+            "fingerprint": "b169941372ac8fa0"
+          },
+          {
+            "record": "TRANS-MRK-006-001-056-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.6.51-MRK.6.52",
+            "fingerprint": "9b77b78d16539572"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.6.45-MRK.6.47",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-BERG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-BETEN",
+              "FIG-ZEICHEN-ABEND"
+            ],
+            "speech": [],
+            "action_de": "Jesus schickt die Jünger im Boot voraus, entlässt die Menge und geht auf den Berg, um zu beten; am Abend ist das Boot mitten auf dem See und er allein an Land.",
+            "keywords": {
+              "de": "ging er auf den Berg, um zu beten",
+              "gsw": "isch er uf de Bärg gange, go bätte"
+            },
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "kneel"
+              },
+              "on": {
+                "FIG-JESUS": "FIG-ORT-BERG"
+              },
+              "at": {
+                "FIG-ZEICHEN-BETEN": "FIG-JESUS"
+              },
+              "god_side": "right",
+              "mood": {
+                "FIG-JESUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.6.48-MRK.6.50",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FURCHT",
+              "FIG-ZEICHEN-WIND",
+              "FIG-ZEICHEN-NACHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-FURCHT",
+                  "FIG-ZEICHEN-NICHT"
+                ],
+                "word": {
+                  "de": "Seid getrost, ich bin es; fürchtet euch nicht!",
+                  "gsw": "Nu Muet, ich bins; händ kei Angscht!"
+                }
+              }
+            ],
+            "action_de": "In der Nacht kommt Jesus auf dem See zu den Jüngern, die sich gegen den Wind abmühen; sie meinen, es sei ein Gespenst, und schreien auf; er sagt: «Seid getrost, ich bin es; fürchtet euch nicht!»",
+            "keywords": {
+              "de": "meinten, dass es ein Gespenst sei",
+              "gsw": "händ dänkt, dass das es Gspängscht seig"
+            },
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-JUENGER": [
+                  0.4,
+                  0.42
+                ]
+              },
+              "big_side": "left",
+              "on_water": [
+                "FIG-JESUS"
+              ],
+              "night": true,
+              "at": {
+                "FIG-ZEICHEN-FURCHT": "FIG-GRUPPE-JUENGER"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "fear",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-JESUS": 156
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.6.51-MRK.6.52",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NICHT-VERSTEHEN"
+            ],
+            "speech": [],
+            "action_de": "Er steigt zu ihnen ins Boot, und der Wind legt sich; sie sind ganz fassungslos, denn sie waren bei den Broten nicht zur Einsicht gekommen, sondern ihr Herz war verhärtet.",
+            "keywords": {
+              "de": "sondern ihr Herz war verhärtet",
+              "gsw": "sondern ires Härz isch verhärtet gsii"
+            },
+            "stage": {
+              "in": {
+                "FIG-JESUS": "FIG-OBJ-BOOT",
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.3,
+                  0.42
+                ],
+                "FIG-GRUPPE-JUENGER": [
+                  0.68,
+                  0.42
+                ]
+              },
+              "sea": "calm",
+              "at": {
+                "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-GRUPPE-JUENGER"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "surprised"
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Gebet auf dem Berg: Jesus kniet allein auf dem Berg und betet zu Gott (beten, Strahlenkranz); der Abend bricht an.",
+          "Auf dem See: Jesus geht in der Nacht auf dem Wasser zum Boot; die Jünger schreien in Angst (Furcht, Wind); Jesus: «Seid getrost, ich bin es; fürchtet euch nicht!»",
+          "Nicht verstanden: Jesus im Boot, der See ist ruhig; die Jünger sind fassungslos und verstehen nicht (nicht verstehen); das Band nennt den Grund."
         ]
       }
     }

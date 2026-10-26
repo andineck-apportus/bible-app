@@ -17,10 +17,9 @@
         "FIG-ROLLE-MANN-HAND",
         "FIG-JESUS"
       ],
-      "objects": [
-        "FIG-ORT-SYNAGOGE"
-      ],
+      "objects": [],
       "signs": [
+        "FIG-ZEICHEN-HAND-VERDORRT",
         "FIG-ZEICHEN-SCHWEIGEN"
       ],
       "speech": [
@@ -28,120 +27,108 @@
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-PHARISAEER",
           "icons": [
-            "FIG-ZEICHEN-SABBAT",
-            "FIG-ZEICHEN-HEILEN",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
+            "FIG-ZEICHEN-SABBAT"
+          ],
+          "word": {
+            "de": "Ist es erlaubt, am Sabbat Gutes zu tun oder Böses zu tun, ein Leben zu retten oder zu töten?",
+            "gsw": "Isch es erlaubt, am Sabbat Guets z tue oder Bös z tue, es Läbe z rette oder z töte?"
+          }
         }
       ],
-      "action_de": "In der Synagoge ist ein Mensch mit einer verdorrten Hand; man beobachtet Jesus. Er ruft den Menschen in die Mitte und fragt: Ist es erlaubt, am Sabbat Gutes zu tun, Leben zu retten? Sie aber schweigen.",
+      "action_de": "In der Synagoge beobachten sie Jesus, ob er am Sabbat heilt, damit sie ihn anklagen könnten; er stellt den Mann mit der verdorrten Hand in die Mitte und fragt: «Ist es erlaubt, am Sabbat Gutes zu tun oder Böses zu tun, ein Leben zu retten oder zu töten?» Sie aber schweigen.",
+      "keywords": {
+        "de": "damit sie ihn anklagen könnten",
+        "gsw": "demit si en chönd aachlage"
+      },
       "stage": {
-        "back_side": "left",
         "at": {
+          "FIG-ZEICHEN-HAND-VERDORRT": "FIG-ROLLE-MANN-HAND",
           "FIG-ZEICHEN-SCHWEIGEN": "FIG-GRUPPE-PHARISAEER"
         },
         "mood": {
           "FIG-GRUPPE-PHARISAEER": "earnest",
-          "FIG-JESUS": "earnest",
-          "FIG-ROLLE-MANN-HAND": "worried"
+          "FIG-ROLLE-MANN-HAND": "worried",
+          "FIG-JESUS": "earnest"
+        },
+        "x": {
+          "FIG-GRUPPE-PHARISAEER": 34,
+          "FIG-ROLLE-MANN-HAND": 96,
+          "FIG-JESUS": 158
         }
       }
     },
     {
       "n": 2,
-      "reference": "MRK.3.5",
+      "reference": "MRK.3.5-MRK.3.6",
       "figures": [
         "FIG-ROLLE-MANN-HAND",
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-GRUPPE-PHARISAEER",
+        "FIG-GRUPPE-HERODIANER"
       ],
-      "objects": [
-        "FIG-ORT-SYNAGOGE"
-      ],
+      "objects": [],
       "signs": [
-        "FIG-ZEICHEN-HEILEN",
-        "FIG-ZEICHEN-TRAUER"
+        "FIG-ZEICHEN-HEILEN"
       ],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-ROLLE-MANN-HAND",
-          "icons": [
-            "FIG-ZEICHEN-HEILEN"
-          ]
-        }
-      ],
-      "action_de": "Jesus blickt sie ringsum an, zornig und betrübt über ihre verhärteten Herzen, und sagt zum Menschen: Streck die Hand aus! Er streckt sie aus, und sie ist wiederhergestellt.",
-      "stage": {
-        "back_side": "left",
-        "signs_who": {
-          "FIG-ZEICHEN-TRAUER": [
-            "FIG-JESUS"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Streck die Hand aus!",
+            "gsw": "Streck d Hand us!"
+          }
         },
-        "mood": {
-          "FIG-JESUS": "earnest",
-          "FIG-ROLLE-MANN-HAND": "delight"
-        },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-ROLLE-KRANKER",
-            "act"
-          ]
-        ],
-        "beside": {
-          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
-        }
-      }
-    },
-    {
-      "n": 3,
-      "reference": "MRK.3.6",
-      "figures": [
-        "FIG-GRUPPE-PHARISAEER",
-        "FIG-GRUPPE-HERODIANER"
-      ],
-      "objects": [],
-      "signs": [],
-      "speech": [
         {
           "from": "FIG-GRUPPE-PHARISAEER",
           "to": "FIG-GRUPPE-HERODIANER",
           "icons": [
             "FIG-JESUS",
-            "FIG-ZEICHEN-TOD"
+            "FIG-ZEICHEN-TOETEN"
           ]
         }
       ],
-      "action_de": "Die Pharisäer gehen hinaus und beraten sogleich mit den Herodianern, wie sie Jesus umbringen können.",
+      "action_de": "Jesus sagt zum Mann mit der verdorrten Hand: «Streck die Hand aus!», und die Hand wird wiederhergestellt. Die Pharisäer gehen hinaus und beraten sogleich mit den Herodianern, wie sie ihn umbringen könnten.",
+      "keywords": {
+        "de": "wie sie ihn umbringen könnten",
+        "gsw": "wie si en chönted umbringe"
+      },
       "stage": {
+        "split": 2,
+        "trenner": true,
+        "at": {
+          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-MANN-HAND"
+        },
         "mood": {
-          "FIG-GRUPPE-PHARISAEER": "earnest",
-          "FIG-GRUPPE-HERODIANER": "earnest"
+          "FIG-ROLLE-MANN-HAND": "delight",
+          "FIG-JESUS": "earnest",
+          "FIG-GRUPPE-PHARISAEER": "angry",
+          "FIG-GRUPPE-HERODIANER": "angry"
         },
         "x": {
-          "FIG-GRUPPE-PHARISAEER": 66,
-          "FIG-GRUPPE-HERODIANER": 122
+          "FIG-ROLLE-MANN-HAND": 24,
+          "FIG-JESUS": 66,
+          "FIG-GRUPPE-PHARISAEER": 124,
+          "FIG-GRUPPE-HERODIANER": 166
         }
       }
     }
   ],
   "actions_de": [
-    "In der Synagoge ist ein Mensch mit einer verdorrten Hand; man beobachtet Jesus. Er ruft den Menschen in die Mitte und fragt: Ist es erlaubt, am Sabbat Gutes zu tun, Leben zu retten? Sie aber schweigen.",
-    "Jesus blickt sie ringsum an, zornig und betrübt über ihre verhärteten Herzen, und sagt zum Menschen: Streck die Hand aus! Er streckt sie aus, und sie ist wiederhergestellt.",
-    "Die Pharisäer gehen hinaus und beraten sogleich mit den Herodianern, wie sie Jesus umbringen können."
+    "In der Synagoge beobachten sie Jesus, ob er am Sabbat heilt, damit sie ihn anklagen könnten; er stellt den Mann mit der verdorrten Hand in die Mitte und fragt: «Ist es erlaubt, am Sabbat Gutes zu tun oder Böses zu tun, ein Leben zu retten oder zu töten?» Sie aber schweigen.",
+    "Jesus sagt zum Mann mit der verdorrten Hand: «Streck die Hand aus!», und die Hand wird wiederhergestellt. Die Pharisäer gehen hinaus und beraten sogleich mit den Herodianern, wie sie ihn umbringen könnten."
   ],
   "captions_de": [
-    "Die Frage: Jesus fragt: Am Sabbat heilen? (Sabbat-Zeichen: sechs graue und ein goldener Kreis, Hand mit Licht, Fragezeichen); die Pharisäer schweigen (Gesicht mit Finger vor dem Mund).",
-    "Wort → Heilung: Jesus, betrübt (Tränen), sagt: Streck die Hand aus (Bogen zum Mann); die Hand wird heil (Hand mit Licht beim Mann).",
-    "Der Beschluss: Pharisäer und Herodianer beraten gegen Jesus (Jesus, Totenkopf)."
+    "Die Frage am Sabbat: Der Mann mit der verdorrten Hand (verdorrte Hand) steht in der Mitte; Jesus fragt die Beobachter: «Ist es erlaubt, am Sabbat Gutes zu tun oder Böses zu tun …?» (Sabbat); sie schweigen (Schweigen).",
+    "Die Hand wird gesund: Der Mann streckt die Hand aus, Jesus heilt sie (heilen); rechts, hinter der gestrichelten Linie, beraten Pharisäer und Herodianer, wie sie ihn umbringen könnten (Jesus, töten)."
   ],
-  "interpretation_note_de": "Den Zorn Jesu ([[MRK.3.5]]) zeigt das Bild nur mit einem ernsten Gesicht, die Betrübnis mit einer Träne. Das verschlossene Grab steht für den Plan, Jesus umzubringen; Gewalt wird nicht gezeigt. Pharisäer und Herodianer sind neutral gezeichnet.",
+  "interpretation_note_de": "Zwei Felder nach «Lauern – Frage – Schweigen – Heilung – Tötungsplan» ([[MRK.3.1-MRK.3.6]]). Die Doppelfrage Gutes ↔ Böses, retten ↔ töten steht ganz in der Blase; das Schweigen der Beobachter zeigt das Zeichen bei ihnen. Wer zuerst beobachtet, nennt der Text erst in [[MRK.3.6]] (die Pharisäer). Im zweiten Feld trennt die gestrichelte Linie die Heilung vom Beschluss draussen; die Blase der Pharisäer gibt den Plan nur als Zeichen wieder (indirekte Rede).",
   "basis": [
     {
       "record": "TU-MRK-003-001-006",
       "field": "summary",
-      "fingerprint": "62c6f23443e8a8aa"
+      "fingerprint": "41be5c8ff4313b95"
     },
     {
       "record": "TRANS-MRK-003-001-019-DE-WORKING",
@@ -152,18 +139,12 @@
     {
       "record": "TRANS-MRK-003-001-019-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.3.5",
-      "fingerprint": "c6f52bb97c5f3b21"
-    },
-    {
-      "record": "TRANS-MRK-003-001-019-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MRK.3.6",
-      "fingerprint": "69f05de3a9284d17"
+      "reference": "MRK.3.5-MRK.3.6",
+      "fingerprint": "72b81b5329ebade1"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -438,6 +419,198 @@
           "Wort → Heilung: Jesus, betrübt (Tränen), sagt: Streck die Hand aus (Bogen zum Mann); die Hand wird heil (Hand mit Licht beim Mann).",
           "Der Beschluss: Pharisäer und Herodianer beraten gegen Jesus (Jesus, verschlossenes Grab)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MRK-003-001-006",
+            "field": "summary",
+            "fingerprint": "62c6f23443e8a8aa"
+          },
+          {
+            "record": "TRANS-MRK-003-001-019-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.3.1-MRK.3.4",
+            "fingerprint": "8b4a8364ffb24abe"
+          },
+          {
+            "record": "TRANS-MRK-003-001-019-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.3.5",
+            "fingerprint": "c6f52bb97c5f3b21"
+          },
+          {
+            "record": "TRANS-MRK-003-001-019-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.3.6",
+            "fingerprint": "69f05de3a9284d17"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.3.1-MRK.3.4",
+            "figures": [
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-ROLLE-MANN-HAND",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-SYNAGOGE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SCHWEIGEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-ZEICHEN-SABBAT",
+                  "FIG-ZEICHEN-HEILEN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "In der Synagoge ist ein Mensch mit einer verdorrten Hand; man beobachtet Jesus. Er ruft den Menschen in die Mitte und fragt: Ist es erlaubt, am Sabbat Gutes zu tun, Leben zu retten? Sie aber schweigen.",
+            "stage": {
+              "back_side": "left",
+              "at": {
+                "FIG-ZEICHEN-SCHWEIGEN": "FIG-GRUPPE-PHARISAEER"
+              },
+              "mood": {
+                "FIG-GRUPPE-PHARISAEER": "earnest",
+                "FIG-JESUS": "earnest",
+                "FIG-ROLLE-MANN-HAND": "worried"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.3.5",
+            "figures": [
+              "FIG-ROLLE-MANN-HAND",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-SYNAGOGE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-HEILEN",
+              "FIG-ZEICHEN-TRAUER"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-MANN-HAND",
+                "icons": [
+                  "FIG-ZEICHEN-HEILEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus blickt sie ringsum an, zornig und betrübt über ihre verhärteten Herzen, und sagt zum Menschen: Streck die Hand aus! Er streckt sie aus, und sie ist wiederhergestellt.",
+            "stage": {
+              "back_side": "left",
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-JESUS"
+                ]
+              },
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-ROLLE-MANN-HAND": "delight"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-KRANKER",
+                  "act"
+                ]
+              ],
+              "beside": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.3.6",
+            "figures": [
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-GRUPPE-HERODIANER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-PHARISAEER",
+                "to": "FIG-GRUPPE-HERODIANER",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-TOD"
+                ]
+              }
+            ],
+            "action_de": "Die Pharisäer gehen hinaus und beraten sogleich mit den Herodianern, wie sie Jesus umbringen können.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-PHARISAEER": "earnest",
+                "FIG-GRUPPE-HERODIANER": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-PHARISAEER": 66,
+                "FIG-GRUPPE-HERODIANER": 122
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "In der Synagoge ist ein Mensch mit einer verdorrten Hand; man beobachtet Jesus. Er ruft den Menschen in die Mitte und fragt: Ist es erlaubt, am Sabbat Gutes zu tun, Leben zu retten? Sie aber schweigen.",
+          "Jesus blickt sie ringsum an, zornig und betrübt über ihre verhärteten Herzen, und sagt zum Menschen: Streck die Hand aus! Er streckt sie aus, und sie ist wiederhergestellt.",
+          "Die Pharisäer gehen hinaus und beraten sogleich mit den Herodianern, wie sie Jesus umbringen können."
+        ],
+        "captions_de": [
+          "Die Frage: Jesus fragt: Am Sabbat heilen? (Sabbat-Zeichen: sechs graue und ein goldener Kreis, Hand mit Licht, Fragezeichen); die Pharisäer schweigen (Gesicht mit Finger vor dem Mund).",
+          "Wort → Heilung: Jesus, betrübt (Tränen), sagt: Streck die Hand aus (Bogen zum Mann); die Hand wird heil (Hand mit Licht beim Mann).",
+          "Der Beschluss: Pharisäer und Herodianer beraten gegen Jesus (Jesus, Totenkopf)."
+        ],
+        "interpretation_note_de": "Den Zorn Jesu ([[MRK.3.5]]) zeigt das Bild nur mit einem ernsten Gesicht, die Betrübnis mit einer Träne. Das verschlossene Grab steht für den Plan, Jesus umzubringen; Gewalt wird nicht gezeigt. Pharisäer und Herodianer sind neutral gezeichnet.",
+        "basis": [
+          {
+            "record": "TU-MRK-003-001-006",
+            "field": "summary",
+            "fingerprint": "41be5c8ff4313b95"
+          },
+          {
+            "record": "TRANS-MRK-003-001-019-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.3.1-MRK.3.4",
+            "fingerprint": "8b4a8364ffb24abe"
+          },
+          {
+            "record": "TRANS-MRK-003-001-019-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.3.5",
+            "fingerprint": "c6f52bb97c5f3b21"
+          },
+          {
+            "record": "TRANS-MRK-003-001-019-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.3.6",
+            "fingerprint": "69f05de3a9284d17"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

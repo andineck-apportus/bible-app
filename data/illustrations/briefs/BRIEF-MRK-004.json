@@ -11,54 +11,14 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MRK.4.1-MRK.4.20",
-      "figures": [
-        "FIG-ROLLE-SAEMANN"
-      ],
-      "objects": [
-        "FIG-OBJ-SAMEN",
-        "FIG-OBJ-FELSBODEN",
-        "FIG-OBJ-DORNEN",
-        "FIG-OBJ-AEHREN"
-      ],
-      "signs": [
-        "FIG-OBJ-VOGEL"
-      ],
-      "speech": [],
-      "action_de": "Jesus erzählt das Gleichnis vom Sämann: Vieles geht verloren, was auf gute Erde fällt, bringt reiche Frucht; den Zwölf erklärt er es.",
-      "stage": {
-        "hold": {
-          "FIG-ROLLE-SAEMANN": "FIG-OBJ-SAMEN"
-        },
-        "x": {
-          "FIG-ROLLE-SAEMANN": 36
-        },
-        "count": {
-          "FIG-OBJ-VOGEL": 2
-        },
-        "floor_x": {
-          "FIG-OBJ-FELSBODEN": 76,
-          "FIG-OBJ-DORNEN": 116,
-          "FIG-OBJ-AEHREN": 160
-        },
-        "arrows": [
-          [
-            "FIG-ROLLE-SAEMANN",
-            "FIG-OBJ-FELSBODEN",
-            "throw"
-          ]
-        ]
-      }
-    },
-    {
-      "n": 2,
-      "reference": "MRK.4.21-MRK.4.29",
+      "reference": "MRK.4.1-MRK.4.9",
       "figures": [
         "FIG-JESUS",
         "FIG-GRUPPE-MENGE"
       ],
       "objects": [
-        "FIG-OBJ-LEUCHTER"
+        "FIG-OBJ-BOOT",
+        "FIG-ORT-SEE"
       ],
       "signs": [],
       "speech": [
@@ -66,55 +26,134 @@
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-MENGE",
           "icons": [
-            "FIG-OBJ-LEUCHTER",
-            "FIG-ZEICHEN-LICHT",
-            "FIG-OBJ-SAMEN",
-            "FIG-OBJ-AEHREN"
-          ]
+            "FIG-ROLLE-SAEMANN",
+            "FIG-OBJ-SAMEN"
+          ],
+          "word": {
+            "de": "Hört! Siehe, der Sämann ging hinaus, um zu säen.",
+            "gsw": "Losed! Lueged, de Sämaa isch usegange, go sääje."
+          }
         }
       ],
-      "action_de": "Jesus spricht von der Lampe auf dem Leuchter und von der Saat, die von selbst wächst.",
+      "action_de": "Die Menge ist so gross, dass Jesus in ein Boot steigt und vom See aus lehrt; er beginnt das Gleichnis: «Hört! Siehe, der Sämann ging hinaus, um zu säen.»",
+      "keywords": {
+        "de": "dreissigfach und sechzigfach und hundertfach",
+        "gsw": "drüssgfach und sächzgfach und hundertfach"
+      },
       "stage": {
-        "floor_side": "left"
+        "in": {
+          "FIG-JESUS": "FIG-OBJ-BOOT"
+        },
+        "in_pos": {
+          "FIG-JESUS": [
+            0.5,
+            0.42
+          ]
+        },
+        "big_side": "left",
+        "pose": {
+          "FIG-JESUS": "sit"
+        },
+        "mood": {
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-MENGE": "calm"
+        },
+        "x": {
+          "FIG-GRUPPE-MENGE": 150
+        }
+      }
+    },
+    {
+      "n": 2,
+      "reference": "MRK.4.10-MRK.4.25",
+      "figures": [
+        "FIG-GRUPPE-ZWOELF",
+        "FIG-JESUS"
+      ],
+      "objects": [],
+      "signs": [
+        "FIG-ZEICHEN-NICHT-VERSTEHEN"
+      ],
+      "speech": [
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-GRUPPE-ZWOELF",
+          "icons": [],
+          "word": {
+            "de": "Der Sämann sät das Wort.",
+            "gsw": "De Sämaa sääit s Wort."
+          }
+        }
+      ],
+      "action_de": "Jesus fragt die Jünger und die Zwölf: «Versteht ihr dieses Gleichnis nicht?» und deutet es: Der Sämann sät das Wort.",
+      "keywords": {
+        "de": "Versteht ihr dieses Gleichnis nicht?",
+        "gsw": "Verstönd er das Gliichnis nöd?"
+      },
+      "stage": {
+        "at": {
+          "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-GRUPPE-ZWOELF"
+        },
+        "mood": {
+          "FIG-GRUPPE-ZWOELF": "question",
+          "FIG-JESUS": "calm"
+        },
+        "x": {
+          "FIG-GRUPPE-ZWOELF": 56,
+          "FIG-JESUS": 140
+        }
       }
     },
     {
       "n": 3,
-      "reference": "MRK.4.30-MRK.4.34",
+      "reference": "MRK.4.26-MRK.4.34",
       "figures": [
+        "FIG-GRUPPE-MENGE",
         "FIG-JESUS"
       ],
       "objects": [
-        "FIG-OBJ-SENFSTAUDE"
+        "FIG-OBJ-SENFSTAUDE",
+        "FIG-OBJ-VOGEL"
       ],
       "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-OBJ-SAMEN",
-            "FIG-ZEICHEN-WACHSEN",
-            "FIG-OBJ-SENFSTAUDE"
-          ]
+          "to": "FIG-GRUPPE-MENGE",
+          "icons": [],
+          "word": {
+            "de": "Wie sollen wir das Reich Gottes vergleichen, oder in welchem Gleichnis sollen wir es darstellen?",
+            "gsw": "Wie söled mer s Riich vo Gott vergliiche, oder i welem Gliichnis söled mer s darstelle?"
+          }
         }
       ],
-      "action_de": "Das Reich Gottes ist wie ein Senfkorn, das zur grossen Staude wird.",
+      "action_de": "Jesus vergleicht das Reich Gottes mit einem Senfkorn: kleiner als alle Samen, wird es grösser als alle Gartenkräuter, und die Vögel des Himmels nisten in seinem Schatten.",
+      "keywords": {
+        "de": "Wie ein Senfkorn",
+        "gsw": "Wie es Sänfchorn"
+      },
       "stage": {
+        "mood": {
+          "FIG-GRUPPE-MENGE": "calm",
+          "FIG-JESUS": "smile"
+        },
         "x": {
-          "FIG-JESUS": 44
+          "FIG-GRUPPE-MENGE": 30,
+          "FIG-JESUS": 84
         },
         "floor_x": {
-          "FIG-OBJ-SENFSTAUDE": 112
-        }
+          "FIG-OBJ-SENFSTAUDE": 136
+        },
+        "air_x": 150,
+        "air_y": 40
       }
     },
     {
       "n": 4,
       "reference": "MRK.4.35-MRK.4.41",
       "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-JUENGER"
+        "FIG-GRUPPE-JUENGER",
+        "FIG-JESUS"
       ],
       "objects": [
         "FIG-OBJ-BOOT",
@@ -126,57 +165,64 @@
           "from": "FIG-JESUS",
           "to": "FIG-ORT-SEE",
           "icons": [
-            "FIG-ZEICHEN-WIND",
-            "FIG-ZEICHEN-SCHWEIGEN"
-          ]
+            "FIG-ZEICHEN-WIND"
+          ],
+          "word": {
+            "de": "Schweig! Verstumme!",
+            "gsw": "Schwiig! Bis still!"
+          }
         }
       ],
-      "action_de": "Auf der Überfahrt stillt Jesus den Sturm; die Jünger fragen: Wer ist dieser?",
+      "action_de": "Jesus fährt den Wind an und sagt zum See: «Schweig! Verstumme!» – der Wind legt sich, und es wird eine grosse Stille.",
+      "keywords": {
+        "de": "Wer ist denn dieser",
+        "gsw": "Wer isch dänn dä"
+      },
       "stage": {
         "in": {
           "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT",
           "FIG-JESUS": "FIG-OBJ-BOOT"
         },
+        "sea": "calm",
+        "mood": {
+          "FIG-GRUPPE-JUENGER": "surprised",
+          "FIG-JESUS": "calm"
+        },
         "in_pos": {
-          "FIG-JESUS": [
-            0.6,
-            0.42
-          ],
           "FIG-GRUPPE-JUENGER": [
             0.3,
             0.42
+          ],
+          "FIG-JESUS": [
+            0.66,
+            0.42
           ]
-        },
-        "sea": "calm",
-        "mood": {
-          "FIG-JESUS": "calm",
-          "FIG-GRUPPE-JUENGER": "surprised"
         }
       }
     }
   ],
   "actions_de": [
-    "Jesus erzählt das Gleichnis vom Sämann: Vieles geht verloren, was auf gute Erde fällt, bringt reiche Frucht; den Zwölf erklärt er es.",
-    "Jesus spricht von der Lampe auf dem Leuchter und von der Saat, die von selbst wächst.",
-    "Das Reich Gottes ist wie ein Senfkorn, das zur grossen Staude wird.",
-    "Auf der Überfahrt stillt Jesus den Sturm; die Jünger fragen: Wer ist dieser?"
+    "Die Menge ist so gross, dass Jesus in ein Boot steigt und vom See aus lehrt; er beginnt das Gleichnis: «Hört! Siehe, der Sämann ging hinaus, um zu säen.»",
+    "Jesus fragt die Jünger und die Zwölf: «Versteht ihr dieses Gleichnis nicht?» und deutet es: Der Sämann sät das Wort.",
+    "Jesus vergleicht das Reich Gottes mit einem Senfkorn: kleiner als alle Samen, wird es grösser als alle Gartenkräuter, und die Vögel des Himmels nisten in seinem Schatten.",
+    "Jesus fährt den Wind an und sagt zum See: «Schweig! Verstumme!» – der Wind legt sich, und es wird eine grosse Stille."
   ],
   "captions_de": [
-    "Sämann: Der Sämann wirft die Saat aus (Hand und Keimling, gepunkteter Bogen); Vögel, Fels und Dornen nehmen sie, auf guter Erde wachsen Ähren.",
-    "Lampe und Saat: Die Lampe auf dem Leuchter (Licht); die Saat wächst von selbst (Samen, Ähren).",
-    "Senfkorn: Aus dem kleinen Samen wird eine grosse Staude (Hand und Keimling, Pfeil, Staude); Vögel sitzen in ihren Zweigen.",
-    "Sturmstillung: Jesus gebietet Wind und See (blasendes Wolkengesicht, Gesicht mit Finger vor dem Mund); es wird still."
+    "Lehre vom Boot aus: Jesus sitzt im Boot auf dem See und spricht zur Menge am Ufer; die Blase beginnt das Gleichnis vom Sämann (Same).",
+    "Im kleinen Kreis: Jesus erklärt den fragenden Jüngern das Gleichnis (Frage; Schriftrolle für das Wort).",
+    "Senfkorn: Jesus spricht zur Menge; neben ihm die grosse Senfstaude mit Vögeln (Senfstaude, Vögel); die Blase fragt, womit das Reich Gottes zu vergleichen ist.",
+    "Stille: Jesus gebietet dem Wind (Wind): «Schweig! Verstumme!»; der See ist ruhig, die Jünger staunen."
   ],
-  "interpretation_note_de": "Acht Abschnitte in vier Feldern: Sämann (mit Geheimnis und Deutung), Lampe und Saat, Senfkorn (mit dem Schluss der Gleichnisrede), Sturmstillung.",
+  "interpretation_note_de": "Vier Comic-Szenen für sieben Abschnitte ([[MRK.4.1-MRK.4.41]]): Feld 1 das Gleichnis vom Sämann, gelehrt vom Boot aus; Feld 2 bündelt das Geheimnis des Reiches Gottes, die Deutung und die Bildworte von Lampe und Mass (Jesus erklärt den Zwölf, die nicht verstehen); Feld 3 bündelt die Saat, die von selbst wächst, und das Senfkorn; Feld 4 die Sturmstillung mit der offenen Frage im Band. Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-MRK-004",
       "field": "summary",
-      "fingerprint": "038fba033900204f"
+      "fingerprint": "2bd4ba897fc2e2a0"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -503,6 +549,398 @@
           "Lampe und Saat: Die Lampe auf dem Leuchter (Licht); die Saat wächst von selbst (Samen, Ähren).",
           "Senfkorn: Aus dem kleinen Samen wird eine grosse Staude (Hand mit Körnern, Pfeil, Staude); Vögel sitzen in ihren Zweigen.",
           "Sturmstillung: Jesus gebietet Wind und See (Windlinien, durchgestrichene Sprechblase); es wird still."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-MRK-004",
+            "field": "summary",
+            "fingerprint": "038fba033900204f"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.4.1-MRK.4.20",
+            "figures": [
+              "FIG-ROLLE-SAEMANN"
+            ],
+            "objects": [
+              "FIG-OBJ-SAMEN",
+              "FIG-OBJ-FELSBODEN",
+              "FIG-OBJ-DORNEN",
+              "FIG-OBJ-AEHREN"
+            ],
+            "signs": [
+              "FIG-OBJ-VOGEL"
+            ],
+            "speech": [],
+            "action_de": "Jesus erzählt das Gleichnis vom Sämann: Vieles geht verloren, was auf gute Erde fällt, bringt reiche Frucht; den Zwölf erklärt er es.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-SAEMANN": "FIG-OBJ-SAMEN"
+              },
+              "x": {
+                "FIG-ROLLE-SAEMANN": 36
+              },
+              "count": {
+                "FIG-OBJ-VOGEL": 2
+              },
+              "floor_x": {
+                "FIG-OBJ-FELSBODEN": 76,
+                "FIG-OBJ-DORNEN": 116,
+                "FIG-OBJ-AEHREN": 160
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-SAEMANN",
+                  "FIG-OBJ-FELSBODEN",
+                  "throw"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.4.21-MRK.4.29",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-LEUCHTER"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-OBJ-LEUCHTER",
+                  "FIG-ZEICHEN-LICHT",
+                  "FIG-OBJ-SAMEN",
+                  "FIG-OBJ-AEHREN"
+                ]
+              }
+            ],
+            "action_de": "Jesus spricht von der Lampe auf dem Leuchter und von der Saat, die von selbst wächst.",
+            "stage": {
+              "floor_side": "left"
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.4.30-MRK.4.34",
+            "figures": [
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-SENFSTAUDE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-OBJ-SAMEN",
+                  "FIG-ZEICHEN-WACHSEN",
+                  "FIG-OBJ-SENFSTAUDE"
+                ]
+              }
+            ],
+            "action_de": "Das Reich Gottes ist wie ein Senfkorn, das zur grossen Staude wird.",
+            "stage": {
+              "x": {
+                "FIG-JESUS": 44
+              },
+              "floor_x": {
+                "FIG-OBJ-SENFSTAUDE": 112
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.4.35-MRK.4.41",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ORT-SEE",
+                "icons": [
+                  "FIG-ZEICHEN-WIND",
+                  "FIG-ZEICHEN-SCHWEIGEN"
+                ]
+              }
+            ],
+            "action_de": "Auf der Überfahrt stillt Jesus den Sturm; die Jünger fragen: Wer ist dieser?",
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT",
+                "FIG-JESUS": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.6,
+                  0.42
+                ],
+                "FIG-GRUPPE-JUENGER": [
+                  0.3,
+                  0.42
+                ]
+              },
+              "sea": "calm",
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "surprised"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus erzählt das Gleichnis vom Sämann: Vieles geht verloren, was auf gute Erde fällt, bringt reiche Frucht; den Zwölf erklärt er es.",
+          "Jesus spricht von der Lampe auf dem Leuchter und von der Saat, die von selbst wächst.",
+          "Das Reich Gottes ist wie ein Senfkorn, das zur grossen Staude wird.",
+          "Auf der Überfahrt stillt Jesus den Sturm; die Jünger fragen: Wer ist dieser?"
+        ],
+        "captions_de": [
+          "Sämann: Der Sämann wirft die Saat aus (Hand und Keimling, gepunkteter Bogen); Vögel, Fels und Dornen nehmen sie, auf guter Erde wachsen Ähren.",
+          "Lampe und Saat: Die Lampe auf dem Leuchter (Licht); die Saat wächst von selbst (Samen, Ähren).",
+          "Senfkorn: Aus dem kleinen Samen wird eine grosse Staude (Hand und Keimling, Pfeil, Staude); Vögel sitzen in ihren Zweigen.",
+          "Sturmstillung: Jesus gebietet Wind und See (blasendes Wolkengesicht, Gesicht mit Finger vor dem Mund); es wird still."
+        ],
+        "interpretation_note_de": "Acht Abschnitte in vier Feldern: Sämann (mit Geheimnis und Deutung), Lampe und Saat, Senfkorn (mit dem Schluss der Gleichnisrede), Sturmstillung.",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.4.1-MRK.4.9",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ROLLE-SAEMANN",
+                  "FIG-OBJ-SAMEN"
+                ],
+                "word": {
+                  "de": "Hört! Siehe, der Sämann ging hinaus, um zu säen.",
+                  "gsw": "Losed! Lueged, de Sämaa isch usegange, go sääje."
+                }
+              }
+            ],
+            "action_de": "Die Menge ist so gross, dass Jesus in ein Boot steigt und vom See aus lehrt; er beginnt das Gleichnis: «Hört! Siehe, der Sämann ging hinaus, um zu säen.»",
+            "keywords": {
+              "de": "dreissigfach und sechzigfach und hundertfach",
+              "gsw": "drüssgfach und sächzgfach und hundertfach"
+            },
+            "stage": {
+              "in": {
+                "FIG-JESUS": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.5,
+                  0.42
+                ]
+              },
+              "big_side": "left",
+              "pose": {
+                "FIG-JESUS": "sit"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-MENGE": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 150
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.4.10-MRK.4.25",
+            "figures": [
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-NICHT-VERSTEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [],
+                "word": {
+                  "de": "Der Sämann sät das Wort.",
+                  "gsw": "De Sämaa sääit s Wort."
+                }
+              }
+            ],
+            "action_de": "Jesus fragt die Jünger und die Zwölf: «Versteht ihr dieses Gleichnis nicht?» und deutet es: Der Sämann sät das Wort.",
+            "keywords": {
+              "de": "Versteht ihr dieses Gleichnis nicht?",
+              "gsw": "Verstönd er das Gliichnis nöd?"
+            },
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-NICHT-VERSTEHEN": "FIG-GRUPPE-ZWOELF"
+              },
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "question",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-ZWOELF": 56,
+                "FIG-JESUS": 140
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.4.26-MRK.4.34",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-SENFSTAUDE",
+              "FIG-OBJ-VOGEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [],
+                "word": {
+                  "de": "Wie sollen wir das Reich Gottes vergleichen, oder in welchem Gleichnis sollen wir es darstellen?",
+                  "gsw": "Wie söled mer s Riich vo Gott vergliiche, oder i welem Gliichnis söled mer s darstelle?"
+                }
+              }
+            ],
+            "action_de": "Jesus vergleicht das Reich Gottes mit einem Senfkorn: kleiner als alle Samen, wird es grösser als alle Gartenkräuter, und die Vögel des Himmels nisten in seinem Schatten.",
+            "keywords": {
+              "de": "Wie ein Senfkorn",
+              "gsw": "Wie es Sänfchorn"
+            },
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "calm",
+                "FIG-JESUS": "smile"
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 34,
+                "FIG-JESUS": 92
+              },
+              "floor_x": {
+                "FIG-OBJ-SENFSTAUDE": 150
+              },
+              "air_x": 160,
+              "air_y": 40
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.4.35-MRK.4.41",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ORT-SEE",
+                "icons": [
+                  "FIG-ZEICHEN-WIND"
+                ],
+                "word": {
+                  "de": "Schweig! Verstumme!",
+                  "gsw": "Schwiig! Bis still!"
+                }
+              }
+            ],
+            "action_de": "Jesus fährt den Wind an und sagt zum See: «Schweig! Verstumme!» – der Wind legt sich, und es wird eine grosse Stille.",
+            "keywords": {
+              "de": "Wer ist denn dieser",
+              "gsw": "Wer isch dänn dä"
+            },
+            "stage": {
+              "in": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT",
+                "FIG-JESUS": "FIG-OBJ-BOOT"
+              },
+              "sea": "calm",
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "surprised",
+                "FIG-JESUS": "calm"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-JUENGER": [
+                  0.3,
+                  0.42
+                ],
+                "FIG-JESUS": [
+                  0.66,
+                  0.42
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Prüfung Struktur zuerst",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-MRK-004",
+            "field": "summary",
+            "fingerprint": "ea0dfdaa41f4f3d9"
+          }
         ]
       }
     }

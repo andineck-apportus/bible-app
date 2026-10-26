@@ -1,0 +1,168 @@
+{
+ "id": "CORE-MRK-002-013-017",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MRK.2.13-MRK.2.17",
+ "target": "TU-MRK-002-013-017",
+ "core_de": "Jesus ruft den Zöllner Levi von der Zollstelle: «Folge mir!», und Levi folgt ihm; in seinem Haus liegen viele Zöllner und Sünder mit Jesus zu Tisch; die Schriftgelehrten der Pharisäer fragen seine Jünger: «Wieso isst er mit den Zöllnern und Sündern?», und Jesus antwortet: «Nicht die Gesunden brauchen einen Arzt, sondern die Kranken. Ich bin nicht gekommen, Gerechte zu rufen, sondern Sünder.»",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Ruf – Mahl – Frage – Antwort",
+    "range": "MRK.2.13-MRK.2.17",
+    "elements": [
+     {
+      "label": "Lehre am See",
+      "ref": "MRK.2.13",
+      "role": "Rahmen"
+     },
+     {
+      "label": "«Folge mir!» – Levi steht auf und folgt ihm",
+      "ref": "MRK.2.14",
+      "role": "Ruf"
+     },
+     {
+      "label": "Viele Zöllner und Sünder liegen mit Jesus und seinen Jüngern zu Tisch",
+      "ref": "MRK.2.15",
+      "role": "Mahl"
+     },
+     {
+      "label": "Die Schriftgelehrten der Pharisäer zu seinen Jüngern: «Wieso isst er mit den Zöllnern und Sündern?»",
+      "ref": "MRK.2.16",
+      "role": "Frage"
+     },
+     {
+      "label": "Antwort in zwei Gegensätzen",
+      "ref": "MRK.2.17",
+      "role": "Antwort",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-LEVI",
+       "ref": "MRK.2.14"
+      },
+      {
+       "who": "Schriftgelehrte der Pharisäer",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "MRK.2.16"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "Schriftgelehrte der Pharisäer",
+       "ref": "MRK.2.17"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "nicht – sondern",
+    "range": "MRK.2.17",
+    "elements": [
+     {
+      "label": "Nicht die Gesunden brauchen einen Arzt",
+      "ref": "MRK.2.17",
+      "role": "nicht"
+     },
+     {
+      "label": "sondern die Kranken",
+      "ref": "MRK.2.17",
+      "role": "sondern"
+     },
+     {
+      "label": "Ich bin nicht gekommen, Gerechte zu rufen",
+      "ref": "MRK.2.17",
+      "role": "nicht"
+     },
+     {
+      "label": "sondern Sünder",
+      "ref": "MRK.2.17",
+      "role": "sondern"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MRK.2.14",
+   "text_de": "Jesus sieht Levi an der Zollstelle sitzen: «Folge mir!» Und er steht auf und folgt ihm.",
+   "reason_de": "Ruf in die Nachfolge (Kriterium 4).",
+   "recognition_de": "Jesus ruft den Zöllner am Zolltisch.",
+   "keywords": [
+    "Folge mir!",
+    "Und er stand auf und folgte ihm"
+   ]
+  },
+  {
+   "reference": "MRK.2.15-MRK.2.16",
+   "text_de": "Viele Zöllner und Sünder liegen mit Jesus zu Tisch; die Schriftgelehrten der Pharisäer fragen seine Jünger: «Wieso isst er mit den Zöllnern und Sündern?»",
+   "reason_de": "Anstoss (Kriterium 2).",
+   "recognition_de": "Tischgemeinschaft; Kritiker fragen die Jünger.",
+   "keywords": [
+    "Wieso isst er mit den Zöllnern und Sündern?"
+   ]
+  },
+  {
+   "reference": "MRK.2.17",
+   "text_de": "«Nicht die Gesunden brauchen einen Arzt, sondern die Kranken. Ich bin nicht gekommen, Gerechte zu rufen, sondern Sünder.»",
+   "reason_de": "Kernaussage als Doppelwort «nicht – sondern» (Kriterium 1).",
+   "recognition_de": "Jesus antwortet: Arzt für Kranke.",
+   "keywords": [
+    "Nicht die Gesunden brauchen einen Arzt, sondern die Kranken",
+    "Ich bin nicht gekommen, Gerechte zu rufen, sondern Sünder"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Lehre am See (2,13) – Übergang",
+  "Vater Alphäus – Name ohne Gewicht"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-LEVI",
+  "FIG-GRUPPE-ZOELLNER",
+  "FIG-GRUPPE-SCHRIFTGELEHRTE",
+  "FIG-GRUPPE-JUENGER"
+ ],
+ "places": [
+  "FIG-ORT-HAUS"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MRK.2.13-MRK.2.17",
+   "fingerprint": "2e9c7ed16878146a"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mk 1–4 und 6–8 nach dem Pilot Mk 5 und dem Ausrollen Matthäus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; Zusammenfassungen und Bildaufträge mitgeprüft; keine fachliche Prüfung durch eine Person",
+  "result": "bestanden",
+  "summary_de": "Ruf – Mahl – Frage an die Jünger – Antwort in zwei «nicht – sondern»; Adressat der Frage (Jünger) richtig.",
+  "changes_de": []
+ }
+}

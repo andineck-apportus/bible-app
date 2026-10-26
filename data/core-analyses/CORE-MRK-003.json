@@ -1,0 +1,212 @@
+{
+ "id": "CORE-MRK-003",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "chapter",
+ "reference": "MRK.3.1-MRK.3.35",
+ "target": "SUM-CH-MRK-003",
+ "children": [
+  "CORE-MRK-003-001-006",
+  "CORE-MRK-003-007-012",
+  "CORE-MRK-003-013-019",
+  "CORE-MRK-003-020-021",
+  "CORE-MRK-003-022-030",
+  "CORE-MRK-003-031-035"
+ ],
+ "core_de": "Nach der Heilung der verdorrten Hand am Sabbat beraten Pharisäer und Herodianer, wie sie Jesus umbringen könnten; eine grosse Schar aus allen Gegenden kommt zu ihm, die unreinen Geister rufen «Du bist der Sohn Gottes!», doch er gebietet Schweigen; auf dem Berg setzt er die Zwölf ein; die Seinen sagen «Er ist von Sinnen», Schriftgelehrte aus Jerusalem, er treibe die Dämonen durch Beelzebul aus – Jesus widerspricht: Satan kann Satan nicht austreiben, und wer gegen den Heiligen Geist lästert, hat keine Vergebung; seine Familie sind die, die den Willen Gottes tun.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Streit → Andrang → die Zwölf → Schachtelung",
+    "range": "MRK.3.1-MRK.3.35",
+    "elements": [
+     {
+      "label": "Heilung am Sabbat; Pharisäer und Herodianer beraten, wie sie ihn umbringen könnten",
+      "ref": "MRK.3.1-MRK.3.6",
+      "role": "Tötungsplan"
+     },
+     {
+      "label": "Andrang aus allen Gegenden; Geister: «Du bist der Sohn Gottes!» – Schweigegebot",
+      "ref": "MRK.3.7-MRK.3.12",
+      "role": "Andrang"
+     },
+     {
+      "label": "Einsetzung der Zwölf auf dem Berg",
+      "ref": "MRK.3.13-MRK.3.19",
+      "role": "die Zwölf"
+     },
+     {
+      "label": "Schachtelung: die Seinen – die Schriftgelehrten – Mutter und Brüder",
+      "ref": "MRK.3.20-MRK.3.35",
+      "role": "Urteile über Jesus",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "crossref": [
+      {
+       "ref": "MRK.2.1-MRK.2.28",
+       "kind": "Fortsetzung",
+       "note": "3,1–6 ist das fünfte Streitgespräch"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "frame",
+    "subtype": "Schachtelung (A – B – A')",
+    "range": "MRK.3.20-MRK.3.35",
+    "elements": [
+     {
+      "label": "A: Die Seinen wollen ihn festhalten: «Er ist von Sinnen.»",
+      "ref": "MRK.3.20-MRK.3.21",
+      "role": "A",
+      "links": [
+       "MRK.3.31-MRK.3.35"
+      ]
+     },
+     {
+      "label": "B: Schriftgelehrte: «Er hat Beelzebul» – Jesus: Satan kann Satan nicht austreiben; Lästerung gegen den Heiligen Geist",
+      "ref": "MRK.3.22-MRK.3.30",
+      "role": "B (Mitte)"
+     },
+     {
+      "label": "A': Mutter und Brüder draussen – «Wer den Willen Gottes tut, der ist mein Bruder und meine Schwester und meine Mutter»",
+      "ref": "MRK.3.31-MRK.3.35",
+      "role": "A'"
+     }
+    ],
+    "features": {
+     "leitwort": [
+      {
+       "word": "Haus",
+       "refs": [
+        "MRK.3.20",
+        "MRK.3.25",
+        "MRK.3.27"
+       ],
+       "role": "verklammernd"
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "Dass Mitte und Rahmen sich gegenseitig deuten (zwei Fehlurteile über Jesus) und «die Seinen» mit Mutter und Brüdern gleich sind, ist Auslegung."
+      }
+     ]
+    },
+    "visual": "outline",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MRK.3.4-MRK.3.6",
+   "text_de": "Gutes tun oder töten? – Die Hand wird wiederhergestellt; Pharisäer und Herodianer beraten, wie sie ihn umbringen könnten.",
+   "reason_de": "Abschluss der Streitgespräche (Kriterium 2).",
+   "recognition_de": "Feld 1: die geheilte Hand; die Gegner beraten.",
+   "keywords": [
+    "wie sie ihn umbringen könnten"
+   ]
+  },
+  {
+   "reference": "MRK.3.13-MRK.3.19",
+   "text_de": "Er setzt zwölf ein, damit sie bei ihm seien und damit er sie aussende.",
+   "reason_de": "Einsetzung der Zwölf (Kriterium 1).",
+   "recognition_de": "Feld 2: die Zwölf auf dem Berg.",
+   "keywords": [
+    "Und er setzte zwölf ein"
+   ]
+  },
+  {
+   "reference": "MRK.3.21-MRK.3.29",
+   "text_de": "Die Seinen: «Er ist von Sinnen»; die Schriftgelehrten: «Er hat Beelzebul» – «Wie kann Satan Satan austreiben?»",
+   "reason_de": "Zwei Urteile über Jesus in der Schachtelung (Kriterium 2).",
+   "recognition_de": "Feld 3: die Seinen und die Schriftgelehrten urteilen.",
+   "keywords": [
+    "Er ist von Sinnen",
+    "Wie kann Satan Satan austreiben?"
+   ]
+  },
+  {
+   "reference": "MRK.3.33-MRK.3.35",
+   "text_de": "«Wer den Willen Gottes tut, der ist mein Bruder und meine Schwester und meine Mutter.»",
+   "reason_de": "Rahmenschluss und Kernaussage (Kriterien 1 und 3).",
+   "recognition_de": "Feld 4: Jesus im Kreis der Zuhörer.",
+   "keywords": [
+    "wer den Willen Gottes tut"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Der Andrang am See (3,7–12) – in der Struktur und im ersten Feld (Bekenntnis der Geister, Schweigegebot) gebündelt",
+  "Die Namen der Zwölf – im Abschnitt"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-ROLLE-MANN-HAND",
+  "FIG-GRUPPE-PHARISAEER",
+  "FIG-GRUPPE-HERODIANER",
+  "FIG-GRUPPE-ZWOELF",
+  "FIG-GRUPPE-BRUEDER-JESU",
+  "FIG-GRUPPE-SCHRIFTGELEHRTE",
+  "FIG-MARIA-MUTTER-JESU",
+  "FIG-GRUPPE-MENGE"
+ ],
+ "places": [
+  "FIG-ORT-SYNAGOGE",
+  "FIG-ORT-BERG",
+  "FIG-ORT-HAUS"
+ ],
+ "basis": [
+  {
+   "record": "CORE-MRK-003-001-006",
+   "fingerprint": "bf8ac4dbd82d3c33"
+  },
+  {
+   "record": "CORE-MRK-003-007-012",
+   "fingerprint": "c17c55c9c0c4d33a"
+  },
+  {
+   "record": "CORE-MRK-003-013-019",
+   "fingerprint": "34279614cc2c5647"
+  },
+  {
+   "record": "CORE-MRK-003-020-021",
+   "fingerprint": "1f976c5720a52b0f"
+  },
+  {
+   "record": "CORE-MRK-003-022-030",
+   "fingerprint": "258998dd86727e57"
+  },
+  {
+   "record": "CORE-MRK-003-031-035",
+   "fingerprint": "a1d54ee29cb94680"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mk 1–4 und 6–8 nach dem Pilot Mk 5 und dem Ausrollen Matthäus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; Zusammenfassungen und Bildaufträge mitgeprüft; keine fachliche Prüfung durch eine Person",
+  "result": "bestanden nach Korrektur",
+  "summary_de": "Schachtelung 3,20–35 als Rahmen (A – B – A') erkannt; jeder Abschnitt in der Struktur.",
+  "changes_de": [
+   "Kernaussage: «beschliessen …, Jesus umzubringen» → «beraten …, wie sie Jesus umbringen könnten» (Wortlaut [[MRK.3.6]])."
+  ]
+ }
+}
