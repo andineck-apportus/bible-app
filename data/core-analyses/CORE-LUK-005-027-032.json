@@ -1,0 +1,141 @@
+{
+ "id": "CORE-LUK-005-027-032",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.5.27-LUK.5.32",
+ "target": "TU-LUK-005-027-032",
+ "core_de": "Jesus sagt zum Zöllner Levi an der Zollstelle: «Folge mir!», und Levi lässt alles zurück und folgt ihm; bei Levis grossem Festmahl mit vielen Zöllnern beschweren sich die Pharisäer und ihre Schriftgelehrten: «Warum esst und trinkt ihr mit den Zöllnern und Sündern?»; Jesus antwortet: «Nicht die Gesunden brauchen einen Arzt, sondern die Kranken. Ich bin nicht gekommen, Gerechte zu rufen, sondern Sünder zur Umkehr.»",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Berufung – Mahl – Einwand – Antwort",
+    "range": "LUK.5.27-LUK.5.32",
+    "elements": [
+     {
+      "label": "«Folge mir!» – Levi lässt alles zurück und folgt ihm",
+      "ref": "LUK.5.27-LUK.5.28",
+      "role": "Berufung"
+     },
+     {
+      "label": "Grosses Festmahl in Levis Haus mit vielen Zöllnern",
+      "ref": "LUK.5.29",
+      "role": "Mahl"
+     },
+     {
+      "label": "Die Pharisäer zu den Jüngern: «Warum esst und trinkt ihr mit den Zöllnern und Sündern?»",
+      "ref": "LUK.5.30",
+      "role": "Einwand"
+     },
+     {
+      "label": "Jesu Antwort",
+      "ref": "LUK.5.31-LUK.5.32",
+      "role": "Antwort",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-LEVI",
+       "ref": "LUK.5.27"
+      },
+      {
+       "who": "FIG-GRUPPE-PHARISAEER",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "LUK.5.30"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-PHARISAEER",
+       "ref": "LUK.5.31-LUK.5.32"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "nicht … sondern (zweimal)",
+    "range": "LUK.5.31-LUK.5.32",
+    "elements": [
+     {
+      "label": "Nicht die Gesunden brauchen einen Arzt ↔ sondern die Kranken",
+      "ref": "LUK.5.31",
+      "role": "Bildwort"
+     },
+     {
+      "label": "Nicht gekommen, Gerechte zu rufen ↔ sondern Sünder zur Umkehr",
+      "ref": "LUK.5.32",
+      "role": "Sache"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.5.27-LUK.5.28",
+   "text_de": "«Folge mir!» – Levi lässt alles zurück, steht auf und folgt ihm.",
+   "reason_de": "Berufung (Kriterien 2 und 4).",
+   "recognition_de": "Levi an der Zollstelle.",
+   "keywords": [
+    "Folge mir!",
+    "Und er liess alles zurück, stand auf und folgte ihm"
+   ]
+  },
+  {
+   "reference": "LUK.5.29-LUK.5.32",
+   "text_de": "Beim Festmahl: «Warum esst und trinkt ihr mit den Zöllnern und Sündern?» – «Nicht die Gesunden brauchen einen Arzt, sondern die Kranken … nicht … Gerechte zu rufen, sondern Sünder zur Umkehr.»",
+   "reason_de": "Kernwort als Gegensatz (Kriterien 1 und 2; Regel 1).",
+   "recognition_de": "Jesus am Tisch mit Zöllnern.",
+   "keywords": [
+    "Warum esst und trinkt ihr mit den Zöllnern und Sündern?",
+    "Nicht die Gesunden brauchen einen Arzt, sondern die Kranken",
+    "Ich bin nicht gekommen, Gerechte zu rufen, sondern Sünder zur Umkehr"
+   ],
+   "mode": "speech"
+  }
+ ],
+ "omitted_de": [
+  "Die Grösse des Festmahls ([[LUK.5.29]]) – Ausschmückung"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-LEVI",
+  "FIG-GRUPPE-ZOELLNER",
+  "FIG-GRUPPE-PHARISAEER",
+  "FIG-GRUPPE-SCHRIFTGELEHRTE",
+  "FIG-GRUPPE-JUENGER"
+ ],
+ "places": [
+  "FIG-ORT-HAUS"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.5.27-LUK.5.32",
+   "fingerprint": "bc6265f74a6b4af9"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 1–8; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

@@ -1,0 +1,220 @@
+{
+ "id": "CORE-LUK-003-001-020",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.3.1-LUK.3.20",
+ "target": "TU-LUK-003-001-020",
+ "core_de": "Im fünfzehnten Jahr des Kaisers Tiberius ergeht das Wort Gottes an Johannes in der Wüste; er verkündigt am Jordan eine Taufe der Umkehr zur Vergebung der Sünden, wie bei Jesaja geschrieben steht: «Bereitet den Weg des Herrn»; den Menschen ruft er zu, Früchte der Umkehr zu bringen, denn die Axt liegt schon an der Wurzel; auf die Frage «Was sollen wir denn tun?» antwortet er der Menge, den Zöllnern und den Soldaten je mit einer Weisung; er sagt, nach ihm komme der Stärkere, der mit heiligem Geist und Feuer taufen wird; Herodes sperrt Johannes ins Gefängnis.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Wort Gottes – Auftreten – Gerichtsrede – Weisungen – der Kommende – Gefängnis",
+    "range": "LUK.3.1-LUK.3.20",
+    "elements": [
+     {
+      "label": "Zeitangabe: 15. Jahr des Tiberius; das Wort Gottes ergeht an Johannes in der Wüste",
+      "ref": "LUK.3.1-LUK.3.2",
+      "role": "Anfang"
+     },
+     {
+      "label": "Taufe der Umkehr zur Vergebung der Sünden; Jesaja: «Bereitet den Weg des Herrn … alle Menschen werden das Heil Gottes sehen»",
+      "ref": "LUK.3.3-LUK.3.6",
+      "role": "Auftrag"
+     },
+     {
+      "label": "«Ihr Schlangenbrut! … Bringt Früchte, die der Umkehr entsprechen! … Die Axt liegt an der Wurzel»",
+      "ref": "LUK.3.7-LUK.3.9",
+      "role": "Gerichtsrede"
+     },
+     {
+      "label": "«Was sollen wir tun?» – drei Gruppen, drei Antworten",
+      "ref": "LUK.3.10-LUK.3.14",
+      "role": "Weisungen",
+      "child": "s2"
+     },
+     {
+      "label": "Ist er der Christus? – «Es kommt der Stärkere … mit heiligem Geist und Feuer»",
+      "ref": "LUK.3.15-LUK.3.18",
+      "role": "Hinweis",
+      "child": "s3"
+     },
+     {
+      "label": "Herodes, von Johannes zurechtgewiesen, sperrt ihn ins Gefängnis",
+      "ref": "LUK.3.19-LUK.3.20",
+      "role": "Ausgang"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JOHANNES-TAEUFER",
+       "to": "FIG-GRUPPE-MENGE",
+       "ref": "LUK.3.7-LUK.3.17"
+      }
+     ],
+     "chronology": [
+      {
+       "ref": "LUK.3.1-LUK.3.2",
+       "note": "Synchronismus: Tiberius, Pilatus, Herodes, Philippus, Lysanias, Hannas und Kajaphas"
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "ISA.40.3-ISA.40.5",
+       "kind": "Zitat"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "series",
+    "subtype": "Frage → Antwort, dreimal",
+    "range": "LUK.3.10-LUK.3.14",
+    "elements": [
+     {
+      "label": "Die Menge: «Was sollen wir denn tun?» → «Wer zwei Hemden hat, soll dem eines abgeben, der keines hat; und wer zu essen hat, soll es ebenso machen»",
+      "ref": "LUK.3.10-LUK.3.11",
+      "role": "Glied 1"
+     },
+     {
+      "label": "Die Zöllner: «Lehrer, was sollen wir tun?» → «Fordert nicht mehr, als euch festgesetzt ist!»",
+      "ref": "LUK.3.12-LUK.3.13",
+      "role": "Glied 2"
+     },
+     {
+      "label": "Die Soldaten: «Und wir, was sollen wir tun?» → «Nehmt niemandem mit Gewalt etwas weg …, und gebt euch zufrieden mit eurem Sold!»",
+      "ref": "LUK.3.14",
+      "role": "Glied 3"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-GRUPPE-MENGE",
+       "to": "FIG-JOHANNES-TAEUFER",
+       "ref": "LUK.3.10"
+      },
+      {
+       "who": "FIG-GRUPPE-ZOELLNER",
+       "to": "FIG-JOHANNES-TAEUFER",
+       "ref": "LUK.3.12"
+      },
+      {
+       "who": "FIG-GRUPPE-SOLDATEN",
+       "to": "FIG-JOHANNES-TAEUFER",
+       "ref": "LUK.3.14"
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "contrast",
+    "subtype": "Ich ↔ der Stärkere",
+    "range": "LUK.3.16-LUK.3.17",
+    "elements": [
+     {
+      "label": "«Ich taufe euch zwar mit Wasser»",
+      "ref": "LUK.3.16",
+      "role": "ich",
+      "links": [
+       "Gegenstück: der Stärkere"
+      ]
+     },
+     {
+      "label": "«es kommt aber der, der stärker ist als ich … Er wird euch mit heiligem Geist und Feuer taufen»",
+      "ref": "LUK.3.16-LUK.3.17",
+      "role": "er"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.3.3-LUK.3.9",
+   "text_de": "Johannes verkündigt eine Taufe der Umkehr – «Bereitet den Weg des Herrn» – und ruft: «Bringt also Früchte, die der Umkehr entsprechen! … Die Axt liegt aber auch schon an der Wurzel der Bäume.»",
+   "reason_de": "Auftreten und Gerichtsrede (Kriterien 1, 2 und 4).",
+   "recognition_de": "Johannes am Jordan vor der Menge.",
+   "keywords": [
+    "eine Taufe der Umkehr zur Vergebung der Sünden",
+    "Bereitet den Weg des Herrn",
+    "Bringt also Früchte, die der Umkehr entsprechen!",
+    "Die Axt liegt aber auch schon an der Wurzel der Bäume"
+   ],
+   "mode": "speech"
+  },
+  {
+   "reference": "LUK.3.10-LUK.3.14",
+   "text_de": "«Was sollen wir denn tun?» – die Menge: das zweite Hemd und das Essen teilen; die Zöllner: nicht mehr fordern als festgesetzt; die Soldaten: niemandem mit Gewalt etwas wegnehmen, mit dem Sold zufrieden sein.",
+   "reason_de": "Reihe mit allen drei Gliedern (Kriterium 1; Regel 1).",
+   "recognition_de": "Drei Fragen, drei Antworten.",
+   "keywords": [
+    "Was sollen wir denn tun?",
+    "Wer zwei Hemden hat, soll dem eines abgeben, der keines hat",
+    "Fordert nicht mehr, als euch festgesetzt ist!",
+    "gebt euch zufrieden mit eurem Sold!"
+   ],
+   "mode": "speech"
+  },
+  {
+   "reference": "LUK.3.15-LUK.3.20",
+   "text_de": "«Ich taufe euch zwar mit Wasser; es kommt aber der, der stärker ist als ich … Er wird euch mit heiligem Geist und Feuer taufen»; Herodes sperrt Johannes im Gefängnis ein.",
+   "reason_de": "Hinweis auf den Kommenden und Ausgang (Kriterien 1 und 3).",
+   "recognition_de": "Johannes und Herodes.",
+   "keywords": [
+    "es kommt aber der, der stärker ist als ich",
+    "Er wird euch mit heiligem Geist und Feuer taufen",
+    "sperrte Johannes im Gefängnis ein"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Die Herrscher und Hohepriester der Zeitangabe ([[LUK.3.1-LUK.3.2]]) – in der Zusammenfassung nur Tiberius; Zeitgerüst im Merkmal `chronology`",
+  "Die Bilder des Jesaja-Zitats (Täler, Berge, krumme Wege, [[LUK.3.5]]) und der Worfschaufel ([[LUK.3.17]]) – Ausschmückung der Kernaussage",
+  "«Gott kann aus diesen Steinen dem Abraham Kinder erwecken» ([[LUK.3.8]]) – in der Zusammenfassung nicht, Teil der Gerichtsrede"
+ ],
+ "persons": [
+  "FIG-JOHANNES-TAEUFER",
+  "FIG-GRUPPE-MENGE",
+  "FIG-GRUPPE-ZOELLNER",
+  "FIG-GRUPPE-SOLDATEN",
+  "FIG-HERODES-ANTIPAS",
+  "FIG-HEILIGER-GEIST"
+ ],
+ "places": [
+  "FIG-ORT-JORDAN",
+  "FIG-ORT-WUESTE",
+  "FIG-ORT-GEFAENGNIS"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.3.1-LUK.3.20",
+   "fingerprint": "089a9ebe558e929a"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 1–8; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

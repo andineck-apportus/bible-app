@@ -1,0 +1,189 @@
+{
+ "id": "CORE-LUK-001-039-056",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.1.39-LUK.1.56",
+ "target": "TU-LUK-001-039-056",
+ "core_de": "Maria besucht Elisabet; als Elisabet ihren Gruss hört, hüpft das Kind in ihrem Leib, und vom heiligen Geist erfüllt ruft sie: «Gesegnet bist du unter den Frauen» und preist Maria selig, weil sie geglaubt hat; Maria lobt Gott: Er hat auf die Niedrigkeit seiner Magd geschaut, Grosses an ihr getan, Mächtige von Thronen gestürzt und Niedrige erhöht, Hungrige gefüllt und Reiche leer weggeschickt, und er hat sich Israels angenommen, wie er es Abraham zugesagt hat.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Besuch – Seligpreisung – Lobgesang – Heimkehr",
+    "range": "LUK.1.39-LUK.1.56",
+    "elements": [
+     {
+      "label": "Maria geht eilig ins Bergland von Juda und begrüsst Elisabet",
+      "ref": "LUK.1.39-LUK.1.40",
+      "role": "Besuch"
+     },
+     {
+      "label": "Das Kind hüpft; Elisabet, vom Geist erfüllt: «Gesegnet bist du unter den Frauen … selig ist die, die geglaubt hat»",
+      "ref": "LUK.1.41-LUK.1.45",
+      "role": "Gruss"
+     },
+     {
+      "label": "Marias Lobgesang",
+      "ref": "LUK.1.46-LUK.1.55",
+      "role": "Lob",
+      "child": "s2"
+     },
+     {
+      "label": "Maria bleibt etwa drei Monate und kehrt nach Hause zurück",
+      "ref": "LUK.1.56",
+      "role": "Abschluss"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-ROLLE-ALTE-FRAU",
+       "to": "FIG-MARIA-MUTTER-JESU",
+       "ref": "LUK.1.42-LUK.1.45"
+      },
+      {
+       "who": "FIG-MARIA-MUTTER-JESU",
+       "to": "FIG-GOTT",
+       "ref": "LUK.1.46-LUK.1.55"
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "«Der Höchste» und «der Herr» meinen Gott; im Bild als Strahlenkranz, nie als Mensch."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "form",
+    "form_type": "hymn",
+    "subtype": "Lobgesang (Hymnus) mit Begründung «denn»",
+    "range": "LUK.1.46-LUK.1.55",
+    "elements": [
+     {
+      "label": "«Meine Seele preist den Herrn, und mein Geist jubelt über Gott, meinen Retter»",
+      "ref": "LUK.1.46-LUK.1.47",
+      "role": "Lob"
+     },
+     {
+      "label": "Denn er hat auf die Niedrigkeit seiner Magd geschaut; der Mächtige hat Grosses an mir getan; seine Barmherzigkeit gilt denen, die ihn fürchten",
+      "ref": "LUK.1.48-LUK.1.50",
+      "role": "Grund"
+     },
+     {
+      "label": "Gottes Taten als Umkehrung",
+      "ref": "LUK.1.51-LUK.1.53",
+      "role": "Umkehrung",
+      "child": "s3"
+     },
+     {
+      "label": "Er hat sich Israels angenommen – wie er zu unseren Vätern geredet hat, an Abraham und seinen Nachkommen",
+      "ref": "LUK.1.54-LUK.1.55",
+      "role": "Treue"
+     }
+    ],
+    "features": {
+     "genre": [
+      {
+       "note": "Lobgesang (Hymnus); traditionell «Magnificat» nach dem lateinischen Anfangswort – Bezeichnung der Überlieferung."
+      }
+     ]
+    },
+    "visual": "outline",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "reversal",
+    "subtype": "Umkehrung: hoch ↔ niedrig, satt ↔ hungrig",
+    "range": "LUK.1.51-LUK.1.53",
+    "elements": [
+     {
+      "label": "Die hochmütig sind im Denken ihres Herzens: zerstreut",
+      "ref": "LUK.1.51",
+      "role": "abwärts"
+     },
+     {
+      "label": "Mächtige: von Thronen gestürzt ↔ Niedrige: erhöht",
+      "ref": "LUK.1.52",
+      "role": "Paar 1",
+      "links": [
+       "abwärts ↔ aufwärts"
+      ]
+     },
+     {
+      "label": "Hungrige: mit Gutem gefüllt ↔ Reiche: leer weggeschickt",
+      "ref": "LUK.1.53",
+      "role": "Paar 2",
+      "links": [
+       "aufwärts ↔ abwärts"
+      ]
+     }
+    ],
+    "visual": "mirror",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.1.41-LUK.1.45",
+   "text_de": "Das Kind hüpft in Elisabets Leib; sie ruft: «Gesegnet bist du unter den Frauen … selig ist die, die geglaubt hat.»",
+   "reason_de": "Begegnung und Seligpreisung (Kriterien 2 und 4).",
+   "recognition_de": "Maria und Elisabet begegnen sich.",
+   "keywords": [
+    "Gesegnet bist du unter den Frauen",
+    "hüpfte das Kind vor Freude in meinem Leib",
+    "selig ist die, die geglaubt hat"
+   ]
+  },
+  {
+   "reference": "LUK.1.46-LUK.1.55",
+   "text_de": "Marias Lobgesang: Lob – Grund (Niedrigkeit angesehen, Grosses getan) – Umkehrung (Mächtige ↔ Niedrige, Hungrige ↔ Reiche) – Treue zu Israel und Abraham.",
+   "reason_de": "Gedicht mit allen Gliedern (Kriterium 1; Regel 1).",
+   "recognition_de": "Meine Seele preist den Herrn.",
+   "keywords": [
+    "Meine Seele preist den Herrn",
+    "Er hat Mächtige von Thronen gestürzt und Niedrige erhöht",
+    "Hungrige hat er mit Gutem gefüllt und Reiche leer weggeschickt"
+   ],
+   "mode": "prayer"
+  }
+ ],
+ "omitted_de": [
+  "Marias drei Monate bei Elisabet und die Heimkehr ([[LUK.1.56]]) – Übergang",
+  "Einzelheiten der Verwandtschaft – genannt in [[LUK.1.36]]"
+ ],
+ "persons": [
+  "FIG-MARIA-MUTTER-JESU",
+  "FIG-ROLLE-ALTE-FRAU",
+  "FIG-HEILIGER-GEIST",
+  "FIG-GOTT"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.1.39-LUK.1.56",
+   "fingerprint": "075a2d124fa548bd"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 1–8; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

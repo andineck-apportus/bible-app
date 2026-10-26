@@ -1,0 +1,147 @@
+{
+ "id": "CORE-LUK-006-006-011",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.6.6-LUK.6.11",
+ "target": "TU-LUK-006-006-011",
+ "core_de": "An einem anderen Sabbat ist in der Synagoge ein Mann mit einer verdorrten Hand, und die Schriftgelehrten und Pharisäer beobachten Jesus, um ihn anklagen zu können; er stellt den Mann in die Mitte und fragt: «Ist es am Sabbat erlaubt, Gutes zu tun oder Böses zu tun, ein Leben zu retten oder zu vernichten?»; auf «Streck deine Hand aus!» wird die Hand heil, sie aber geraten in blinde Wut und beraten, was sie mit Jesus tun könnten.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Ausgangslage – Lauern – Mitte – Frage – Heilung – Wut",
+    "range": "LUK.6.6-LUK.6.11",
+    "elements": [
+     {
+      "label": "Sabbat in der Synagoge; ein Mann mit verdorrter rechter Hand",
+      "ref": "LUK.6.6",
+      "role": "Ausgangslage"
+     },
+     {
+      "label": "Schriftgelehrte und Pharisäer lauern auf einen Grund zur Anklage",
+      "ref": "LUK.6.7",
+      "role": "Gegner"
+     },
+     {
+      "label": "«Steh auf und stell dich in die Mitte!»",
+      "ref": "LUK.6.8",
+      "role": "Handlung"
+     },
+     {
+      "label": "Frage",
+      "ref": "LUK.6.9",
+      "role": "Frage",
+      "child": "s2"
+     },
+     {
+      "label": "«Streck deine Hand aus!» – die Hand wird wieder heil",
+      "ref": "LUK.6.10",
+      "role": "Heilung"
+     },
+     {
+      "label": "Blinde Wut; sie beraten, was sie mit Jesus tun könnten",
+      "ref": "LUK.6.11",
+      "role": "Ausgang"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-ROLLE-MANN-HAND",
+       "ref": "LUK.6.8"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-PHARISAEER",
+       "ref": "LUK.6.9"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-ROLLE-MANN-HAND",
+       "ref": "LUK.6.10"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "Doppelfrage mit zwei Paaren",
+    "range": "LUK.6.9",
+    "elements": [
+     {
+      "label": "Gutes tun ↔ Böses tun",
+      "ref": "LUK.6.9",
+      "role": "Paar 1"
+     },
+     {
+      "label": "ein Leben retten ↔ vernichten",
+      "ref": "LUK.6.9",
+      "role": "Paar 2"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.6.8-LUK.6.10",
+   "text_de": "«Steh auf und stell dich in die Mitte!» – «Ist es am Sabbat erlaubt, Gutes zu tun oder Böses zu tun, ein Leben zu retten oder zu vernichten?» – «Streck deine Hand aus!» – die Hand wird heil.",
+   "reason_de": "Frage und Heilung (Kriterien 1, 2 und 4).",
+   "recognition_de": "Der Mann mit der Hand in der Mitte.",
+   "keywords": [
+    "Ist es am Sabbat erlaubt, Gutes zu tun oder Böses zu tun",
+    "ein Leben zu retten oder zu vernichten",
+    "Streck deine Hand aus!"
+   ]
+  },
+  {
+   "reference": "LUK.6.11",
+   "text_de": "Sie geraten in blinde Wut und beraten, was sie mit Jesus tun könnten.",
+   "reason_de": "Ausgang (Kriterium 3).",
+   "recognition_de": "Die zornigen Gegner.",
+   "keywords": [
+    "Sie aber gerieten in blinde Wut"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Dass Jesus ihre Überlegungen kennt ([[LUK.6.8]]) – in der Zusammenfassung nicht"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-ROLLE-MANN-HAND",
+  "FIG-GRUPPE-PHARISAEER",
+  "FIG-GRUPPE-SCHRIFTGELEHRTE"
+ ],
+ "places": [
+  "FIG-ORT-SYNAGOGE"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.6.6-LUK.6.11",
+   "fingerprint": "6a16a433a4530eea"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 1–8; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}
