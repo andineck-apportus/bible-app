@@ -1,0 +1,136 @@
+{
+ "id": "CORE-MRK-010-013-016",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MRK.10.13-MRK.10.16",
+ "target": "TU-MRK-010-013-016",
+ "core_de": "Man bringt Kinder zu Jesus, damit er sie anrühre, doch die Jünger fahren sie an; Jesus wird unwillig: «Lasst die Kinder zu mir kommen; hindert sie nicht! Denn solchen gehört das Reich Gottes»; wer das Reich Gottes nicht annimmt wie ein Kind, wird gewiss nicht hineinkommen; und er schliesst sie in die Arme und segnet sie, indem er ihnen die Hände auflegt.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Bringen – Abwehr – Unwille und Wort – Segen",
+    "range": "MRK.10.13-MRK.10.16",
+    "elements": [
+     {
+      "label": "Man bringt Kinder, damit er sie anrühre; die Jünger fahren sie an",
+      "ref": "MRK.10.13",
+      "role": "Abwehr"
+     },
+     {
+      "label": "Wort Jesu",
+      "ref": "MRK.10.14-MRK.10.15",
+      "role": "Wort",
+      "child": "s2"
+     },
+     {
+      "label": "Er schliesst sie in die Arme und segnet sie, indem er ihnen die Hände auflegt",
+      "ref": "MRK.10.16",
+      "role": "Segen"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "MRK.10.14-MRK.10.15"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "condition",
+    "subtype": "Lasst sie – denn … – wer nicht annimmt wie ein Kind …",
+    "range": "MRK.10.14-MRK.10.15",
+    "elements": [
+     {
+      "label": "Lasst die Kinder zu mir kommen; hindert sie nicht!",
+      "ref": "MRK.10.14",
+      "role": "Weisung"
+     },
+     {
+      "label": "Denn solchen gehört das Reich Gottes",
+      "ref": "MRK.10.14",
+      "role": "Begründung"
+     },
+     {
+      "label": "Wer das Reich Gottes nicht annimmt wie ein Kind",
+      "ref": "MRK.10.15",
+      "role": "Bedingung"
+     },
+     {
+      "label": "der wird gewiss nicht hineinkommen",
+      "ref": "MRK.10.15",
+      "role": "Folge"
+     }
+    ],
+    "visual": "switch",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MRK.10.13-MRK.10.14",
+   "text_de": "Die Jünger fahren die an, die Kinder bringen; Jesus wird unwillig: «Lasst die Kinder zu mir kommen; hindert sie nicht! Denn solchen gehört das Reich Gottes.»",
+   "reason_de": "Gegensatz Jünger ↔ Jesus (Kriterien 1 und 2).",
+   "recognition_de": "Jünger wehren ab, Jesus winkt die Kinder heran.",
+   "keywords": [
+    "Lasst die Kinder zu mir kommen; hindert sie nicht!",
+    "Denn solchen gehört das Reich Gottes"
+   ]
+  },
+  {
+   "reference": "MRK.10.15-MRK.10.16",
+   "text_de": "«Wer das Reich Gottes nicht annimmt wie ein Kind, der wird gewiss nicht hineinkommen.» Er schliesst sie in die Arme und segnet sie.",
+   "reason_de": "Lehre und Erkennungsmoment (Kriterien 1 und 4).",
+   "recognition_de": "Jesus segnet Kinder mit aufgelegten Händen.",
+   "keywords": [
+    "Wer das Reich Gottes nicht annimmt wie ein Kind",
+    "segnete sie"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Wer die Kinder bringt, sagt der Text nicht («man»)"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-GRUPPE-KINDER"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MRK.10.13-MRK.10.16",
+   "fingerprint": "0c45f4905daaf788"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mk 9–16 und Buch nach dem Pilot Mk 5 und dem Ausrollen Matthäus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; Zusammenfassungen und Bildaufträge mitgeprüft; keine fachliche Prüfung durch eine Person",
+  "result": "bestanden",
+  "summary_de": "Abwehr – Wort (Begründung, Bedingung → Folge) – Segen; «man» bringt die Kinder, nichts ergänzt.",
+  "changes_de": [
+   "Herkunftsangabe korrigiert: «Ausrollen Mk 1–4 und 6–8» → «Ausrollen Mk 9–16 und Buch»."
+  ]
+ }
+}

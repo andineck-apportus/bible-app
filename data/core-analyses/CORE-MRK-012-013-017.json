@@ -1,0 +1,147 @@
+{
+ "id": "CORE-MRK-012-013-017",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MRK.12.13-MRK.12.17",
+ "target": "TU-MRK-012-013-017",
+ "core_de": "Pharisäer und Herodianer wollen Jesus mit einer Aussage fangen und fragen nach schmeichelnden Worten: «Ist es erlaubt, dem Kaiser Steuer zu zahlen, oder nicht?»; er durchschaut ihre Heuchelei, lässt sich einen Denar bringen und fragt: «Wessen Bild und Aufschrift ist das?» – «Des Kaisers.» – «Was des Kaisers ist, gebt dem Kaiser, und was Gottes ist, Gott!»; und sie staunen sehr über ihn.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "dialogue",
+    "subtype": "Falle – Frage – Denar – Bild – Antwort",
+    "range": "MRK.12.13-MRK.12.17",
+    "elements": [
+     {
+      "label": "Sie werden gesandt, um ihn mit einer Aussage zu fangen",
+      "ref": "MRK.12.13",
+      "role": "Absicht"
+     },
+     {
+      "label": "«Lehrer, wir wissen, dass du wahrhaftig bist … Ist es erlaubt, dem Kaiser Steuer zu zahlen, oder nicht?»",
+      "ref": "MRK.12.14",
+      "role": "Frage"
+     },
+     {
+      "label": "Er durchschaut ihre Heuchelei: «Warum stellt ihr mich auf die Probe? Bringt mir einen Denar …»",
+      "ref": "MRK.12.15",
+      "role": "Jesus"
+     },
+     {
+      "label": "«Wessen Bild und Aufschrift ist das?» – «Des Kaisers.»",
+      "ref": "MRK.12.16",
+      "role": "Frage und Antwort"
+     },
+     {
+      "label": "Antwort",
+      "ref": "MRK.12.17",
+      "role": "Jesus",
+      "child": "s2"
+     },
+     {
+      "label": "Und sie staunten sehr über ihn",
+      "ref": "MRK.12.17",
+      "role": "Reaktion"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Pharisäer und Herodianer",
+       "to": "FIG-JESUS",
+       "ref": "MRK.12.14"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "sie",
+       "ref": "MRK.12.15-MRK.12.17"
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "dem Kaiser ↔ Gott",
+    "range": "MRK.12.17",
+    "elements": [
+     {
+      "label": "Was des Kaisers ist, gebt dem Kaiser",
+      "ref": "MRK.12.17",
+      "role": "Kaiser"
+     },
+     {
+      "label": "und was Gottes ist, Gott!",
+      "ref": "MRK.12.17",
+      "role": "Gott"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MRK.12.13-MRK.12.14",
+   "text_de": "Gesandt, um ihn zu fangen, fragen sie: «Ist es erlaubt, dem Kaiser Steuer zu zahlen, oder nicht?»",
+   "reason_de": "Falle (Kriterium 2).",
+   "recognition_de": "Pharisäer und Herodianer stellen die Frage.",
+   "keywords": [
+    "um ihn mit einer Aussage zu fangen",
+    "Ist es erlaubt, dem Kaiser Steuer zu zahlen, oder nicht?"
+   ]
+  },
+  {
+   "reference": "MRK.12.15-MRK.12.17",
+   "text_de": "«Bringt mir einen Denar» – «Wessen Bild und Aufschrift ist das?» – «Des Kaisers.» – «Was des Kaisers ist, gebt dem Kaiser, und was Gottes ist, Gott!» – sie staunen.",
+   "reason_de": "Kernwort und Erkennungsmoment (Kriterien 1 und 4).",
+   "recognition_de": "Jesus hält den Denar hoch.",
+   "keywords": [
+    "Wessen Bild und Aufschrift ist das?",
+    "Was des Kaisers ist, gebt dem Kaiser, und was Gottes ist, Gott!"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Die Schmeichelworte (12,14) – in der Struktur"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-PHARISAEER",
+  "FIG-GRUPPE-HERODIANER"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MRK.12.13-MRK.12.17",
+   "fingerprint": "a980363abecf6f50"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mk 9–16 und Buch nach dem Pilot Mk 5 und dem Ausrollen Matthäus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; Zusammenfassungen und Bildaufträge mitgeprüft; keine fachliche Prüfung durch eine Person",
+  "result": "bestanden nach Korrektur",
+  "summary_de": "Falle – Frage – Denar – Gegensatz Kaiser ↔ Gott – Staunen vollständig.",
+  "changes_de": [
+   "Zusammenfassung Züridüütsch: «si stuuned nu über ihn» («nur») → «si stuuned gwaltig über ihn» (sehr, [[MRK.12.17]]).",
+   "Herkunftsangabe korrigiert: «Ausrollen Mk 1–4 und 6–8» → «Ausrollen Mk 9–16 und Buch»."
+  ]
+ }
+}

@@ -1,0 +1,149 @@
+{
+ "id": "CORE-MRK-010-046-052",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MRK.10.46-MRK.10.52",
+ "target": "TU-MRK-010-046-052",
+ "core_de": "Beim Hinausgehen aus Jericho sitzt der blinde Bettler Bartimäus am Weg und schreit: «Sohn Davids, Jesus, erbarme dich meiner!»; viele fahren ihn an, er solle schweigen, doch er schreit noch mehr; Jesus lässt ihn rufen, er wirft seinen Mantel ab und kommt; auf die Frage «Was willst du, dass ich dir tue?» sagt er: «Rabbuni, dass ich wieder sehen kann!»; Jesus sagt: «Geh, dein Glaube hat dich gerettet!», und sogleich sieht er wieder und folgt ihm nach auf dem Weg.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Ruf – Abwehr – Ruf Jesu – Frage – Heilung – Nachfolge",
+    "range": "MRK.10.46-MRK.10.52",
+    "elements": [
+     {
+      "label": "Bartimäus, ein blinder Bettler, sitzt am Weg",
+      "ref": "MRK.10.46",
+      "role": "Ausgangslage"
+     },
+     {
+      "label": "«Sohn Davids, Jesus, erbarme dich meiner!» – viele fahren ihn an – er schreit noch mehr",
+      "ref": "MRK.10.47-MRK.10.48",
+      "role": "Ruf"
+     },
+     {
+      "label": "«Ruft ihn!» – «Nur Mut, steh auf, er ruft dich!» – er wirft seinen Mantel ab, springt auf, kommt",
+      "ref": "MRK.10.49-MRK.10.50",
+      "role": "Ruf Jesu"
+     },
+     {
+      "label": "«Was willst du, dass ich dir tue?» – «Rabbuni, dass ich wieder sehen kann!»",
+      "ref": "MRK.10.51",
+      "role": "Frage"
+     },
+     {
+      "label": "«Geh, dein Glaube hat dich gerettet!» – er sieht wieder und folgt ihm nach auf dem Weg",
+      "ref": "MRK.10.52",
+      "role": "Ausgang"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-BARTIMAEUS",
+       "to": "FIG-JESUS",
+       "ref": "MRK.10.47-MRK.10.48"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "die Umstehenden",
+       "ref": "MRK.10.49"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-BARTIMAEUS",
+       "ref": "MRK.10.51-MRK.10.52"
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "MRK.10.36",
+       "kind": "Wiederaufnahme",
+       "note": "dieselbe Frage «Was wollt ihr/willst du, dass ich … tue?» an Jakobus und Johannes"
+      },
+      {
+       "ref": "MRK.8.22-MRK.8.26",
+       "kind": "Rahmen",
+       "note": "zweite Blindenheilung, nach einem Vorschlag der Forschung Rahmen des Wegabschnitts"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MRK.10.46-MRK.10.48",
+   "text_de": "Der blinde Bettler Bartimäus sitzt am Weg und schreit: «Sohn Davids, Jesus, erbarme dich meiner!»; viele fahren ihn an, er aber schreit noch viel mehr.",
+   "reason_de": "Ruf des Blinden (Kriterien 2 und 4).",
+   "recognition_de": "Der Blinde am Weg ruft; Leute wollen ihn zum Schweigen bringen.",
+   "keywords": [
+    "Sohn Davids, Jesus, erbarme dich meiner!"
+   ]
+  },
+  {
+   "reference": "MRK.10.49-MRK.10.51",
+   "text_de": "«Ruft ihn!» – «Nur Mut, steh auf, er ruft dich!»; er wirft seinen Mantel ab und kommt; «Was willst du, dass ich dir tue?» – «Rabbuni, dass ich wieder sehen kann!»",
+   "reason_de": "Wendepunkt (Kriterium 2).",
+   "recognition_de": "Bartimäus wirft den Mantel ab und springt auf.",
+   "keywords": [
+    "Er aber warf seinen Mantel ab",
+    "Was willst du, dass ich dir tue?"
+   ]
+  },
+  {
+   "reference": "MRK.10.52",
+   "text_de": "«Geh, dein Glaube hat dich gerettet!» – sogleich sieht er wieder und folgt ihm nach auf dem Weg.",
+   "reason_de": "Ausgang (Kriterien 1 und 3).",
+   "recognition_de": "Der Geheilte folgt Jesus auf dem Weg.",
+   "keywords": [
+    "Geh, dein Glaube hat dich gerettet!",
+    "er folgte ihm nach auf dem Weg"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Jericho und die Menge – Rahmen"
+ ],
+ "persons": [
+  "FIG-BARTIMAEUS",
+  "FIG-JESUS",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-GRUPPE-MENGE"
+ ],
+ "places": [
+  "FIG-ORT-WEG"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MRK.10.46-MRK.10.52",
+   "fingerprint": "bdb1692c57927a1a"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mk 9–16 und Buch nach dem Pilot Mk 5 und dem Ausrollen Matthäus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; Zusammenfassungen und Bildaufträge mitgeprüft; keine fachliche Prüfung durch eine Person",
+  "result": "bestanden",
+  "summary_de": "Ruf – Abwehr – Ruf Jesu – Frage – Heilung – Nachfolge «auf dem Weg»; Rahmenfunktion als Vorschlag gekennzeichnet.",
+  "changes_de": [
+   "Herkunftsangabe korrigiert: «Ausrollen Mk 1–4 und 6–8» → «Ausrollen Mk 9–16 und Buch»."
+  ]
+ }
+}

@@ -1,0 +1,121 @@
+{
+ "id": "CORE-MRK-015-016-020",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MRK.15.16-MRK.15.20",
+ "target": "TU-MRK-015-016-020",
+ "core_de": "Die Soldaten führen Jesus in den Palast, rufen die ganze Kohorte zusammen, ziehen ihm einen Purpurmantel an, setzen ihm einen Dornenkranz auf und grüssen ihn zum Spott: «Sei gegrüsst, König der Juden!»; sie schlagen ihn mit einem Rohr auf den Kopf, spucken ihn an und beugen die Knie vor ihm; dann ziehen sie ihm seine Kleider wieder an und führen ihn hinaus, um ihn zu kreuzigen.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Palast – Verkleidung – Spottgruss – Schläge – Abführung",
+    "range": "MRK.15.16-MRK.15.20",
+    "elements": [
+     {
+      "label": "Die Soldaten führen ihn in den Palast (Prätorium) und rufen die ganze Kohorte zusammen",
+      "ref": "MRK.15.16",
+      "role": "Ort"
+     },
+     {
+      "label": "Purpurmantel; Dornenkranz aufgesetzt",
+      "ref": "MRK.15.17",
+      "role": "Verkleidung"
+     },
+     {
+      "label": "«Sei gegrüsst, König der Juden!»",
+      "ref": "MRK.15.18",
+      "role": "Spottgruss"
+     },
+     {
+      "label": "Mit einem Rohr auf den Kopf geschlagen, angespuckt; Knie gebeugt, niedergeworfen",
+      "ref": "MRK.15.19",
+      "role": "Spott"
+     },
+     {
+      "label": "Purpurmantel aus, eigene Kleider an; sie führen ihn hinaus, um ihn zu kreuzigen",
+      "ref": "MRK.15.20",
+      "role": "Abführung"
+     }
+    ],
+    "features": {
+     "stance": [
+      {
+       "note": "Spott: Königsgruss und Kniefall ironisch",
+       "ref": "MRK.15.18-MRK.15.19"
+      }
+     ],
+     "speakers": [
+      {
+       "who": "die Soldaten",
+       "to": "FIG-JESUS",
+       "ref": "MRK.15.18"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MRK.15.17-MRK.15.19",
+   "text_de": "Purpurmantel und Dornenkranz; «Sei gegrüsst, König der Juden!»; mit dem Rohr geschlagen, angespuckt, kniend verspottet.",
+   "reason_de": "Erkennungsmoment der Verspottung (Kriterien 1 und 4).",
+   "recognition_de": "Jesus mit Dornenkranz und Purpurmantel, Soldaten knien zum Spott.",
+   "keywords": [
+    "Sei gegrüsst, König der Juden!",
+    "flechten einen Dornenkranz"
+   ]
+  },
+  {
+   "reference": "MRK.15.20",
+   "text_de": "Nach dem Spott ziehen sie ihm den Purpurmantel aus und seine Kleider an und führen ihn hinaus, um ihn zu kreuzigen.",
+   "reason_de": "Übergang zur Kreuzigung (Kriterium 3).",
+   "recognition_de": "Soldaten führen Jesus hinaus.",
+   "keywords": [
+    "Und sie führen ihn hinaus, um ihn zu kreuzigen"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Die Kohorte als Zahl – nicht gezeichnet; Einzelheiten der Schläge nicht ausgemalt"
+ ],
+ "persons": [
+  "FIG-GRUPPE-SOLDATEN",
+  "FIG-JESUS"
+ ],
+ "places": [
+  "FIG-ORT-PRAETORIUM"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MRK.15.16-MRK.15.20",
+   "fingerprint": "48b86cf728ec648c"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mk 9–16 und Buch nach dem Pilot Mk 5 und dem Ausrollen Matthäus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; Zusammenfassungen und Bildaufträge mitgeprüft; keine fachliche Prüfung durch eine Person",
+  "result": "bestanden",
+  "summary_de": "Ablauf der Verspottung mit Spottgruss; Rohr zum Schlagen, nicht in die Hand gegeben (so [[MAT.27.29]]); Ironie als Sprecherhaltung.",
+  "changes_de": [
+   "Herkunftsangabe korrigiert: «Ausrollen Mk 1–4 und 6–8» → «Ausrollen Mk 9–16 und Buch»."
+  ]
+ }
+}

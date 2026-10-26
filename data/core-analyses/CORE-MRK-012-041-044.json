@@ -1,0 +1,140 @@
+{
+ "id": "CORE-MRK-012-041-044",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MRK.12.41-MRK.12.44",
+ "target": "TU-MRK-012-041-044",
+ "core_de": "Jesus sitzt gegenüber dem Opferkasten und sieht, wie viele Reiche viel einwerfen; eine arme Witwe wirft zwei Lepta ein; er ruft die Jünger und sagt: «Diese arme Witwe hat mehr eingeworfen als alle», denn alle haben von ihrem Überfluss gegeben, sie aber aus ihrem Mangel alles, was sie hatte, ihren ganzen Lebensunterhalt.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Beobachtung – Witwe – Urteil",
+    "range": "MRK.12.41-MRK.12.44",
+    "elements": [
+     {
+      "label": "Er sitzt gegenüber dem Opferkasten; viele Reiche werfen viel ein",
+      "ref": "MRK.12.41",
+      "role": "Beobachtung"
+     },
+     {
+      "label": "Eine arme Witwe wirft zwei Lepta ein, das ist ein Quadrans",
+      "ref": "MRK.12.42",
+      "role": "Witwe"
+     },
+     {
+      "label": "Urteil",
+      "ref": "MRK.12.43-MRK.12.44",
+      "role": "Lehre",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "MRK.12.43-MRK.12.44"
+      }
+     ],
+     "numbers": [
+      {
+       "ref": "MRK.12.42",
+       "note": "zwei Lepta = ein Quadrans"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "balance",
+    "subtype": "mehr als alle: Überfluss ↔ Mangel",
+    "range": "MRK.12.43-MRK.12.44",
+    "elements": [
+     {
+      "label": "Alle haben von ihrem Überfluss eingeworfen",
+      "ref": "MRK.12.44",
+      "role": "Seite 1"
+     },
+     {
+      "label": "Sie aber hat aus ihrem Mangel alles eingeworfen, was sie hatte, ihren ganzen Lebensunterhalt",
+      "ref": "MRK.12.44",
+      "role": "Seite 2"
+     },
+     {
+      "label": "Diese arme Witwe hat mehr eingeworfen als alle",
+      "ref": "MRK.12.43",
+      "role": "Ausschlag"
+     }
+    ],
+    "visual": "balance",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MRK.12.41-MRK.12.42",
+   "text_de": "Jesus sieht zu: viele Reiche werfen viel ein; eine arme Witwe wirft zwei Lepta ein.",
+   "reason_de": "Erkennungsmoment (Kriterium 4).",
+   "recognition_de": "Witwe am Opferkasten, Jesus sitzt gegenüber.",
+   "keywords": [
+    "viele Reiche warfen viel ein",
+    "Und es kam eine arme Witwe und warf zwei Lepta ein"
+   ]
+  },
+  {
+   "reference": "MRK.12.43-MRK.12.44",
+   "text_de": "«Diese arme Witwe hat mehr eingeworfen als alle …» – denn alle von ihrem Überfluss, sie aus ihrem Mangel alles, ihren ganzen Lebensunterhalt.",
+   "reason_de": "Urteil Jesu als Vergleich (Kriterium 1).",
+   "recognition_de": "Jesus erklärt den Jüngern.",
+   "keywords": [
+    "Diese arme Witwe hat mehr eingeworfen als alle",
+    "ihren ganzen Lebensunterhalt"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Der Wert «ein Quadrans» – Erklärung im Text, nicht im Bild"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-ROLLE-REICHER",
+  "FIG-ROLLE-WITWE",
+  "FIG-GRUPPE-JUENGER"
+ ],
+ "places": [
+  "FIG-ORT-TEMPEL"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MRK.12.41-MRK.12.44",
+   "fingerprint": "c412da9cf2cee298"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mk 9–16 und Buch nach dem Pilot Mk 5 und dem Ausrollen Matthäus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; Zusammenfassungen und Bildaufträge mitgeprüft; keine fachliche Prüfung durch eine Person",
+  "result": "bestanden",
+  "summary_de": "Beobachtung – Witwe – Waage Überfluss ↔ Mangel mit Ausschlag «mehr als alle».",
+  "changes_de": [
+   "Herkunftsangabe korrigiert: «Ausrollen Mk 1–4 und 6–8» → «Ausrollen Mk 9–16 und Buch»."
+  ]
+ }
+}

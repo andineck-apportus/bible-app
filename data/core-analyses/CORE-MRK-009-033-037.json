@@ -1,0 +1,176 @@
+{
+ "id": "CORE-MRK-009-033-037",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MRK.9.33-MRK.9.37",
+ "target": "TU-MRK-009-033-037",
+ "core_de": "In Kafarnaum fragt Jesus, worüber sie unterwegs gesprochen haben; sie schweigen, denn sie hatten darüber gesprochen, wer der Grösste sei; er ruft die Zwölf: «Wenn jemand der Erste sein will, der soll der Letzte von allen sein und der Diener aller»; dann stellt er ein Kind in ihre Mitte, schliesst es in die Arme und sagt: Wer ein solches Kind in seinem Namen aufnimmt, nimmt ihn auf, und wer ihn aufnimmt, nimmt den auf, der ihn gesandt hat.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Frage – Schweigen – Wort – Kind",
+    "range": "MRK.9.33-MRK.9.37",
+    "elements": [
+     {
+      "label": "«Worüber habt ihr unterwegs gesprochen?»",
+      "ref": "MRK.9.33",
+      "role": "Frage"
+     },
+     {
+      "label": "Sie schweigen; sie hatten besprochen, wer der Grösste sei",
+      "ref": "MRK.9.34",
+      "role": "Schweigen"
+     },
+     {
+      "label": "Wort an die Zwölf",
+      "ref": "MRK.9.35",
+      "role": "Wort",
+      "child": "s2"
+     },
+     {
+      "label": "Er stellt ein Kind in ihre Mitte und schliesst es in die Arme",
+      "ref": "MRK.9.36",
+      "role": "Zeichenhandlung"
+     },
+     {
+      "label": "Kette des Aufnehmens",
+      "ref": "MRK.9.37",
+      "role": "Deutung",
+      "child": "s3"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-ZWOELF",
+       "ref": "MRK.9.33-MRK.9.37"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "condition",
+    "subtype": "Wenn jemand der Erste sein will → Letzter und Diener aller",
+    "range": "MRK.9.35",
+    "elements": [
+     {
+      "label": "Wenn jemand der Erste sein will",
+      "ref": "MRK.9.35",
+      "role": "Bedingung"
+     },
+     {
+      "label": "der soll der Letzte von allen sein und der Diener aller",
+      "ref": "MRK.9.35",
+      "role": "Weisung"
+     }
+    ],
+    "visual": "switch",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "cause",
+    "subtype": "Kind aufnehmen → mich aufnehmen → den, der mich gesandt hat",
+    "range": "MRK.9.37",
+    "elements": [
+     {
+      "label": "Wer eines von solchen Kindern aufnimmt in meinem Namen",
+      "ref": "MRK.9.37"
+     },
+     {
+      "label": "nimmt mich auf",
+      "ref": "MRK.9.37"
+     },
+     {
+      "label": "und wer mich aufnimmt, nimmt nicht mich auf, sondern den, der mich gesandt hat",
+      "ref": "MRK.9.37"
+     }
+    ],
+    "features": {
+     "interpretation": [
+      {
+       "note": "«der mich gesandt hat» meint Gott; das Bild zeigt den Strahlenkranz (Deutung)."
+      }
+     ]
+    },
+    "visual": "arrows",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MRK.9.33-MRK.9.34",
+   "text_de": "«Worüber habt ihr unterwegs gesprochen?» – Sie schweigen, denn sie hatten darüber gesprochen, wer der Grösste sei.",
+   "reason_de": "Anlass (Kriterium 2).",
+   "recognition_de": "Verlegene Jünger schweigen vor Jesus.",
+   "keywords": [
+    "wer der Grösste sei"
+   ]
+  },
+  {
+   "reference": "MRK.9.35",
+   "text_de": "«Wenn jemand der Erste sein will, der soll der Letzte von allen sein und der Diener aller.»",
+   "reason_de": "Kernwort (Kriterium 1).",
+   "recognition_de": "Jesus sitzt und spricht zu den Zwölf.",
+   "keywords": [
+    "der soll der Letzte von allen sein und der Diener aller"
+   ]
+  },
+  {
+   "reference": "MRK.9.36-MRK.9.37",
+   "text_de": "Er stellt ein Kind in ihre Mitte, schliesst es in die Arme: «Wer eines von solchen Kindern aufnimmt in meinem Namen, nimmt mich auf; und wer mich aufnimmt, nimmt … den, der mich gesandt hat.»",
+   "reason_de": "Zeichenhandlung mit Deutung (Kriterien 1 und 4).",
+   "recognition_de": "Jesus umarmt ein Kind in der Mitte der Zwölf.",
+   "keywords": [
+    "Wer eines von solchen Kindern aufnimmt in meinem Namen, nimmt mich auf"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Ort Kafarnaum und Haus – Rahmen"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-ZWOELF",
+  "FIG-ROLLE-KIND",
+  "FIG-GOTT"
+ ],
+ "places": [
+  "FIG-ORT-HAUS"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MRK.9.33-MRK.9.37",
+   "fingerprint": "1ac8c8f3757b7fb0"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mk 9–16 und Buch nach dem Pilot Mk 5 und dem Ausrollen Matthäus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; Zusammenfassungen und Bildaufträge mitgeprüft; keine fachliche Prüfung durch eine Person",
+  "result": "bestanden",
+  "summary_de": "Anlass – Wort (Bedingung → Weisung) – Zeichenhandlung mit Kette des Aufnehmens; «der mich gesandt hat» als Deutung gekennzeichnet.",
+  "changes_de": [
+   "Herkunftsangabe korrigiert: «Ausrollen Mk 1–4 und 6–8» → «Ausrollen Mk 9–16 und Buch»."
+  ]
+ }
+}

@@ -14,48 +14,8 @@
       "reference": "MRK.14.32-MRK.14.36",
       "figures": [
         "FIG-GOTT",
+        "FIG-GRUPPE-JUENGER",
         "FIG-JESUS"
-      ],
-      "objects": [
-        "FIG-ORT-GARTEN"
-      ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GOTT",
-          "icons": [
-            "FIG-OBJ-BECHER-VOLL",
-            "FIG-ZEICHEN-ABLEHNEN",
-            "FIG-GOTT",
-            "FIG-ZEICHEN-HOEREN"
-          ]
-        }
-      ],
-      "action_de": "In Getsemani fällt Jesus voll Angst auf die Erde und betet: Abba, Vater, alles ist dir möglich. Nimm diesen Becher von mir weg! Doch nicht, was ich will, sondern was du willst.",
-      "stage": {
-        "pose": {
-          "FIG-JESUS": "kneel"
-        },
-        "mood": {
-          "FIG-JESUS": "worried"
-        },
-        "god_side": "left",
-        "back_side": "right",
-        "before": true,
-        "x": {
-          "FIG-JESUS": 104
-        }
-      }
-    },
-    {
-      "n": 2,
-      "reference": "MRK.14.37-MRK.14.40",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-PETRUS",
-        "FIG-JAKOBUS-ZEBEDAEUS",
-        "FIG-JOHANNES-ZEBEDAEUS"
       ],
       "objects": [
         "FIG-ORT-GARTEN"
@@ -66,86 +26,109 @@
       "speech": [
         {
           "from": "FIG-JESUS",
-          "to": "FIG-PETRUS",
-          "icons": [
-            "FIG-ZEICHEN-WACHEN",
-            "FIG-ZEICHEN-BETEN"
-          ]
+          "to": "FIG-GOTT",
+          "icons": [],
+          "word": {
+            "de": "Doch nicht, was ich will, sondern was du willst.",
+            "gsw": "Aber nöd, was ich wott, sondern was du wottsch."
+          }
         }
       ],
-      "action_de": "Er findet Petrus, Jakobus und Johannes schlafend: Simon, schläfst du? Wacht und betet, damit ihr nicht in Versuchung kommt! Auch beim zweiten Mal schlafen sie.",
+      "action_de": "In Getsemani fällt Jesus auf die Erde und betet: «Abba, Vater, alles ist dir möglich. Nimm diesen Becher von mir weg! Doch nicht, was ich will, sondern was du willst.» Petrus, Jakobus und Johannes schlafen.",
+      "keywords": {
+        "de": "Tief betrübt ist meine Seele bis zum Tod",
+        "gsw": "Ganz fescht truurig isch mini Seel, bis zum Tod"
+      },
       "stage": {
         "pose": {
-          "FIG-PETRUS": "sleep",
-          "FIG-JAKOBUS-ZEBEDAEUS": "sleep",
-          "FIG-JOHANNES-ZEBEDAEUS": "sleep"
+          "FIG-JESUS": "kneel"
         },
         "at": {
-          "FIG-ZEICHEN-SCHLAFEN": "FIG-JAKOBUS-ZEBEDAEUS"
+          "FIG-ZEICHEN-SCHLAFEN": "FIG-GRUPPE-JUENGER"
         },
-        "mood": {
-          "FIG-JESUS": "worried"
-        },
+        "god_side": "right",
         "back_side": "left",
-        "before": true
+        "before": true,
+        "night": true,
+        "mood": {
+          "FIG-JESUS": "pain",
+          "FIG-GRUPPE-JUENGER": "sleep"
+        },
+        "x": {
+          "FIG-GRUPPE-JUENGER": 40,
+          "FIG-JESUS": 128
+        }
       }
     },
     {
-      "n": 3,
-      "reference": "MRK.14.41-MRK.14.42",
-      "figures": [
-        "FIG-GRUPPE-ZWOELF",
-        "FIG-JESUS",
-        "FIG-JUDAS-ISKARIOT"
-      ],
+      "n": 2,
+      "reference": "MRK.14.37-MRK.14.42",
+      "figures": [],
       "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-ZEICHEN-STUNDE-GEKOMMEN",
-            "FIG-ZEICHEN-AUSLIEFERN"
-          ]
-        }
-      ],
-      "action_de": "Beim dritten Mal sagt er: Die Stunde ist gekommen; der Menschensohn wird in die Hände der Sünder ausgeliefert. Steht auf, der mich ausliefert, ist nahe!",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-ZWOELF": "surprised",
-          "FIG-JESUS": "determined",
-          "FIG-JUDAS-ISKARIOT": "earnest"
-        },
-        "arrows": [
-          [
-            "FIG-JUDAS-ISKARIOT",
-            "FIG-JESUS",
-            "go"
-          ]
-        ],
-        "pose": {
-          "FIG-JUDAS-ISKARIOT": "away"
-        }
+      "speech": [],
+      "action_de": "Dreimal kommt Jesus zurück und findet die Jünger schlafend: Das erste Mal sagt er zu Petrus: «Simon, schläfst du? … Wacht und betet …»; das zweite Mal hat er dieselben Worte gebetet, und sie wissen nicht, was sie antworten sollen; das dritte Mal sagt er: «Gekommen ist die Stunde … Steht auf, lasst uns gehen! Siehe, der mich ausliefert, ist nahe gekommen.»",
+      "keywords": {
+        "de": "Der Geist ist zwar willig, das Fleisch aber schwach",
+        "gsw": "De Geischt isch zwar willig, s Fleisch aber schwach"
+      },
+      "diagram": {
+        "visual": "grid",
+        "span": 2,
+        "cols": 3,
+        "speaker": "FIG-JESUS",
+        "cells": [
+          {
+            "a": {
+              "de": "1. Er kommt und findet sie schlafend: «Simon, schläfst du? Konntest du nicht eine Stunde wachen? Wacht und betet, damit ihr nicht in Versuchung kommt!»",
+              "gsw": "1. Er chunnt und findt si am Schlaafe: «Simon, schlaafsch? Häsch es nöd gschafft, ei Stund wach z bliibe? Wached und bätted, demit ir nöd i Versuechig chömed!»"
+            },
+            "icons": [
+              "FIG-ZEICHEN-SCHLAFEN",
+              "FIG-ZEICHEN-WACHEN"
+            ],
+            "tone": "plain"
+          },
+          {
+            "a": {
+              "de": "2. Er geht wieder weg, betet mit denselben Worten und findet sie wieder schlafend; ihre Augen sind ganz schwer.",
+              "gsw": "2. Er gaat wider wäg, bättet mit de gliiche Wort und findt si wider am Schlaafe; iri Auge sind ganz schwär."
+            },
+            "icons": [
+              "FIG-ZEICHEN-BETEN",
+              "FIG-ZEICHEN-SCHLAFEN"
+            ],
+            "tone": "plain"
+          },
+          {
+            "a": {
+              "de": "3. Er kommt zum dritten Mal: «Schlaft ihr noch und ruht euch aus? Es ist genug. Gekommen ist die Stunde … Steht auf, lasst uns gehen!»",
+              "gsw": "3. Er chunnt zum dritte Mal: «Schlaafed ir no und ruehed eu us? Es isch gnueg. D Stund isch choo … Stönd uf, mir gönd!»"
+            },
+            "icons": [
+              "FIG-ZEICHEN-STUNDE-GEKOMMEN",
+              "FIG-ZEICHEN-AUFSTEHEN"
+            ],
+            "tone": "new"
+          }
+        ]
       }
     }
   ],
   "actions_de": [
-    "In Getsemani fällt Jesus voll Angst auf die Erde und betet: Abba, Vater, alles ist dir möglich. Nimm diesen Becher von mir weg! Doch nicht, was ich will, sondern was du willst.",
-    "Er findet Petrus, Jakobus und Johannes schlafend: Simon, schläfst du? Wacht und betet, damit ihr nicht in Versuchung kommt! Auch beim zweiten Mal schlafen sie.",
-    "Beim dritten Mal sagt er: Die Stunde ist gekommen; der Menschensohn wird in die Hände der Sünder ausgeliefert. Steht auf, der mich ausliefert, ist nahe!"
+    "In Getsemani fällt Jesus auf die Erde und betet: «Abba, Vater, alles ist dir möglich. Nimm diesen Becher von mir weg! Doch nicht, was ich will, sondern was du willst.» Petrus, Jakobus und Johannes schlafen.",
+    "Dreimal kommt Jesus zurück und findet die Jünger schlafend: Das erste Mal sagt er zu Petrus: «Simon, schläfst du? … Wacht und betet …»; das zweite Mal hat er dieselben Worte gebetet, und sie wissen nicht, was sie antworten sollen; das dritte Mal sagt er: «Gekommen ist die Stunde … Steht auf, lasst uns gehen! Siehe, der mich ausliefert, ist nahe gekommen.»"
   ],
   "captions_de": [
-    "Gebet: Jesus kniet im Garten und bittet Gott: Nimm den Becher weg (Becher, Person mit gekreuzten Armen) – doch dein Wille (Strahlenkranz, Ohr).",
-    "Schlaf: Die drei Jünger schlafen; Jesus mahnt Petrus: Wacht und betet (Augen mit Mondsichel, betende Hände).",
-    "Die Stunde: Jesus weckt die Jünger: Es ist so weit, ich werde ausgeliefert (durchgelaufene Sanduhr, Hand und Kette); Judas kommt (Pfeil)."
+    "Getsemani: In der Nacht kniet Jesus im Garten und betet zu Gott (Strahlenkranz): «Doch nicht, was ich will, sondern was du willst.» (Wille Gottes); die Jünger schlafen (schlafen).",
+    "Dreimal schlafend (Raster, Bild Jesus): 1. «Simon, schläfst du? … Wacht und betet!» (schlafen, wachen) – 2. wieder gebetet, wieder schlafend (beten, schlafen) – hervorgehoben: 3. «Gekommen ist die Stunde … Steht auf, lasst uns gehen!» (Stunde, aufstehen)."
   ],
-  "interpretation_note_de": "Jesus redet Gott als «Abba, Vater» an; Gott erscheint als Strahlenkranz. Der Becher steht für das Leiden ([[MRK.14.36]], vgl. [[MRK.10.38]]); das Ohr für das Hören auf Gottes Willen (Deutung). Die drei Gebetsgänge fasst das Bild zusammen.",
+  "interpretation_note_de": "Zwei Felder ([[MRK.14.32-MRK.14.42]]): das Gebet in der Angst – Jesus betet zu Gott, der als Strahlenkranz gezeichnet ist –, dann alle drei Rückkehren als Raster (dreimal schlafend; beim dritten Mal wird kein Gebet berichtet). Die drei Jünger erscheinen als Gruppe. Jesu Angst ist im Gesicht gezeigt, würdig und ohne Ausmalen.",
   "basis": [
     {
       "record": "TU-MRK-014-032-042",
       "field": "summary",
-      "fingerprint": "d23a0619a7708ed4"
+      "fingerprint": "117e1e7a5a1e5944"
     },
     {
       "record": "TRANS-MRK-014-001-072-DE-WORKING",
@@ -156,18 +139,12 @@
     {
       "record": "TRANS-MRK-014-001-072-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.14.37-MRK.14.40",
-      "fingerprint": "d6e26f069df0c7ae"
-    },
-    {
-      "record": "TRANS-MRK-014-001-072-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MRK.14.41-MRK.14.42",
-      "fingerprint": "568127b48c70d61e"
+      "reference": "MRK.14.37-MRK.14.42",
+      "fingerprint": "0924c19a49175b69"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -315,6 +292,202 @@
           "Schlaf: Die drei Jünger schlafen; Jesus mahnt Petrus: Wacht und betet (Auge, betende Hände).",
           "Die Stunde: Jesus weckt die Jünger: Es ist so weit, ich werde ausgeliefert (durchgelaufene Sanduhr, gefesselte Hände); Judas kommt (Pfeil)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MRK-014-032-042",
+            "field": "summary",
+            "fingerprint": "d23a0619a7708ed4"
+          },
+          {
+            "record": "TRANS-MRK-014-001-072-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.14.32-MRK.14.36",
+            "fingerprint": "1225b87cb3a6c5e5"
+          },
+          {
+            "record": "TRANS-MRK-014-001-072-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.14.37-MRK.14.40",
+            "fingerprint": "d6e26f069df0c7ae"
+          },
+          {
+            "record": "TRANS-MRK-014-001-072-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.14.41-MRK.14.42",
+            "fingerprint": "568127b48c70d61e"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.14.32-MRK.14.36",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-GARTEN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-OBJ-BECHER-VOLL",
+                  "FIG-ZEICHEN-ABLEHNEN",
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-HOEREN"
+                ]
+              }
+            ],
+            "action_de": "In Getsemani fällt Jesus voll Angst auf die Erde und betet: Abba, Vater, alles ist dir möglich. Nimm diesen Becher von mir weg! Doch nicht, was ich will, sondern was du willst.",
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "kneel"
+              },
+              "mood": {
+                "FIG-JESUS": "worried"
+              },
+              "god_side": "left",
+              "back_side": "right",
+              "before": true,
+              "x": {
+                "FIG-JESUS": 104
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.14.37-MRK.14.40",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-PETRUS",
+              "FIG-JAKOBUS-ZEBEDAEUS",
+              "FIG-JOHANNES-ZEBEDAEUS"
+            ],
+            "objects": [
+              "FIG-ORT-GARTEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SCHLAFEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-ZEICHEN-WACHEN",
+                  "FIG-ZEICHEN-BETEN"
+                ]
+              }
+            ],
+            "action_de": "Er findet Petrus, Jakobus und Johannes schlafend: Simon, schläfst du? Wacht und betet, damit ihr nicht in Versuchung kommt! Auch beim zweiten Mal schlafen sie.",
+            "stage": {
+              "pose": {
+                "FIG-PETRUS": "sleep",
+                "FIG-JAKOBUS-ZEBEDAEUS": "sleep",
+                "FIG-JOHANNES-ZEBEDAEUS": "sleep"
+              },
+              "at": {
+                "FIG-ZEICHEN-SCHLAFEN": "FIG-JAKOBUS-ZEBEDAEUS"
+              },
+              "mood": {
+                "FIG-JESUS": "worried"
+              },
+              "back_side": "left",
+              "before": true
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.14.41-MRK.14.42",
+            "figures": [
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-JESUS",
+              "FIG-JUDAS-ISKARIOT"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-STUNDE-GEKOMMEN",
+                  "FIG-ZEICHEN-AUSLIEFERN"
+                ]
+              }
+            ],
+            "action_de": "Beim dritten Mal sagt er: Die Stunde ist gekommen; der Menschensohn wird in die Hände der Sünder ausgeliefert. Steht auf, der mich ausliefert, ist nahe!",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "surprised",
+                "FIG-JESUS": "determined",
+                "FIG-JUDAS-ISKARIOT": "earnest"
+              },
+              "arrows": [
+                [
+                  "FIG-JUDAS-ISKARIOT",
+                  "FIG-JESUS",
+                  "go"
+                ]
+              ],
+              "pose": {
+                "FIG-JUDAS-ISKARIOT": "away"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "In Getsemani fällt Jesus voll Angst auf die Erde und betet: Abba, Vater, alles ist dir möglich. Nimm diesen Becher von mir weg! Doch nicht, was ich will, sondern was du willst.",
+          "Er findet Petrus, Jakobus und Johannes schlafend: Simon, schläfst du? Wacht und betet, damit ihr nicht in Versuchung kommt! Auch beim zweiten Mal schlafen sie.",
+          "Beim dritten Mal sagt er: Die Stunde ist gekommen; der Menschensohn wird in die Hände der Sünder ausgeliefert. Steht auf, der mich ausliefert, ist nahe!"
+        ],
+        "captions_de": [
+          "Gebet: Jesus kniet im Garten und bittet Gott: Nimm den Becher weg (Becher, Person mit gekreuzten Armen) – doch dein Wille (Strahlenkranz, Ohr).",
+          "Schlaf: Die drei Jünger schlafen; Jesus mahnt Petrus: Wacht und betet (Augen mit Mondsichel, betende Hände).",
+          "Die Stunde: Jesus weckt die Jünger: Es ist so weit, ich werde ausgeliefert (durchgelaufene Sanduhr, Hand und Kette); Judas kommt (Pfeil)."
+        ],
+        "interpretation_note_de": "Jesus redet Gott als «Abba, Vater» an; Gott erscheint als Strahlenkranz. Der Becher steht für das Leiden ([[MRK.14.36]], vgl. [[MRK.10.38]]); das Ohr für das Hören auf Gottes Willen (Deutung). Die drei Gebetsgänge fasst das Bild zusammen.",
+        "basis": [
+          {
+            "record": "TU-MRK-014-032-042",
+            "field": "summary",
+            "fingerprint": "117e1e7a5a1e5944"
+          },
+          {
+            "record": "TRANS-MRK-014-001-072-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.14.32-MRK.14.36",
+            "fingerprint": "1225b87cb3a6c5e5"
+          },
+          {
+            "record": "TRANS-MRK-014-001-072-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.14.37-MRK.14.40",
+            "fingerprint": "d6e26f069df0c7ae"
+          },
+          {
+            "record": "TRANS-MRK-014-001-072-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.14.41-MRK.14.42",
+            "fingerprint": "568127b48c70d61e"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

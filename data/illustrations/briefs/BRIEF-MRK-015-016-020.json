@@ -11,99 +11,81 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MRK.15.16-MRK.15.19",
+      "reference": "MRK.15.16-MRK.15.20",
       "figures": [
         "FIG-GRUPPE-SOLDATEN",
         "FIG-JESUS"
       ],
       "objects": [
-        "FIG-OBJ-DORNENKRONE"
+        "FIG-ORT-PRAETORIUM",
+        "FIG-OBJ-DORNENKRONE",
+        "FIG-OBJ-ROHR"
       ],
       "signs": [],
       "speech": [
         {
           "from": "FIG-GRUPPE-SOLDATEN",
           "to": "FIG-JESUS",
-          "icons": [
-            "FIG-ZEICHEN-KNIEN",
-            "FIG-ROLLE-KOENIG"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Sei gegrüsst, König der Juden!",
+            "gsw": "Sig gegrüesst, König vo de Jude!"
+          }
         }
       ],
-      "action_de": "Die Soldaten rufen die Kohorte zusammen, ziehen Jesus einen Purpurmantel an, setzen ihm einen Dornenkranz auf und grüssen ihn zum Spott: Sei gegrüsst, König der Juden! Sie schlagen und bespucken ihn und knien vor ihm nieder.",
+      "action_de": "Die Soldaten ziehen Jesus im Palast einen Purpurmantel an, setzen ihm einen Dornenkranz auf und grüssen ihn zum Spott: «Sei gegrüsst, König der Juden!»; sie schlagen ihn mit einem Rohr, spucken ihn an und beugen die Knie vor ihm. Dann führen sie ihn hinaus, um ihn zu kreuzigen.",
+      "keywords": {
+        "de": "Und sie führen ihn hinaus, um ihn zu kreuzigen",
+        "gsw": "Und si füered en use, zum en chrüüzige"
+      },
       "stage": {
         "at": {
           "FIG-OBJ-DORNENKRONE": "FIG-JESUS"
         },
+        "hold": {
+          "FIG-GRUPPE-SOLDATEN": "FIG-OBJ-ROHR"
+        },
+        "pose": {
+          "FIG-GRUPPE-SOLDATEN": "kneel"
+        },
+        "wear": {
+          "FIG-JESUS": "#7A2E6E"
+        },
         "mood": {
-          "FIG-GRUPPE-SOLDATEN": "earnest",
-          "FIG-JESUS": "calm"
-        }
-      }
-    },
-    {
-      "n": 2,
-      "reference": "MRK.15.20",
-      "figures": [
-        "FIG-ROLLE-SOLDAT",
-        "FIG-JESUS"
-      ],
-      "objects": [
-        "FIG-OBJ-KREUZ"
-      ],
-      "signs": [],
-      "speech": [],
-      "action_de": "Nach dem Spott ziehen sie ihm seine eigenen Kleider an und führen ihn hinaus, um ihn zu kreuzigen.",
-      "stage": {
-        "arrows": [
-          [
-            "FIG-ROLLE-SOLDAT",
-            "FIG-JESUS",
-            "act"
-          ],
-          [
-            "FIG-JESUS",
-            "FIG-OBJ-KREUZ",
-            "go"
-          ]
-        ],
-        "mood": {
-          "FIG-ROLLE-SOLDAT": "earnest",
-          "FIG-JESUS": "calm"
+          "FIG-GRUPPE-SOLDATEN": "smile",
+          "FIG-JESUS": "pain"
+        },
+        "back_side": "right",
+        "before": true,
+        "x": {
+          "FIG-GRUPPE-SOLDATEN": 56,
+          "FIG-JESUS": 136
         }
       }
     }
   ],
   "actions_de": [
-    "Die Soldaten rufen die Kohorte zusammen, ziehen Jesus einen Purpurmantel an, setzen ihm einen Dornenkranz auf und grüssen ihn zum Spott: Sei gegrüsst, König der Juden! Sie schlagen und bespucken ihn und knien vor ihm nieder.",
-    "Nach dem Spott ziehen sie ihm seine eigenen Kleider an und führen ihn hinaus, um ihn zu kreuzigen."
+    "Die Soldaten ziehen Jesus im Palast einen Purpurmantel an, setzen ihm einen Dornenkranz auf und grüssen ihn zum Spott: «Sei gegrüsst, König der Juden!»; sie schlagen ihn mit einem Rohr, spucken ihn an und beugen die Knie vor ihm. Dann führen sie ihn hinaus, um ihn zu kreuzigen."
   ],
   "captions_de": [
-    "Spott: Soldaten knien zum Schein vor Jesus und grüssen ihn als König (kniende Figur, König); Dornenkranz über Jesus.",
-    "Abführung: Ein Soldat führt Jesus (Bogen vom Soldaten zu Jesus) hinaus zum Kreuz (gestrichelter Weg)."
+    "Verspottung: Jesus im Purpurmantel mit Dornenkranz (Dornenkranz); Soldaten grüssen zum Spott, einer hält das Rohr (Rohr): «Sei gegrüsst, König der Juden!» (Krone, knien)."
   ],
-  "interpretation_note_de": "Den Purpurmantel kann der Zeichner noch nicht zeigen; das Bild nennt ihn nur in der Handlung. Schläge und Spucken ([[MRK.15.19]]) werden nicht gezeigt; die Soldaten knien zum Spott, ohne verzerrte Gesichter.",
+  "interpretation_note_de": "Ein Feld nach dem Ablauf der Verspottung ([[MRK.15.16-MRK.15.20]]): Purpurmantel, Dornenkranz, Spottgruss und Rohr stehen im Text; bei Markus wird Jesus mit dem Rohr geschlagen, es wird ihm nicht in die Hand gegeben (so [[MAT.27.29]]). Die Schläge sind nicht ausgemalt. Die Passion ist würdig gezeichnet: Leiden und Tod sind zu sehen, ohne Wunden oder Blut im Detail; Gott ist nie als Mensch dargestellt.",
   "basis": [
     {
       "record": "TU-MRK-015-016-020",
       "field": "summary",
-      "fingerprint": "1e67bc47cfdf168c"
+      "fingerprint": "a8a12071e7fe54aa"
     },
     {
       "record": "TRANS-MRK-015-001-047-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.15.16-MRK.15.19",
-      "fingerprint": "5633a030c5939120"
-    },
-    {
-      "record": "TRANS-MRK-015-001-047-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MRK.15.20",
-      "fingerprint": "63fe01f1b55b3c44"
+      "reference": "MRK.15.16-MRK.15.20",
+      "fingerprint": "48b86cf728ec648c"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -179,6 +161,141 @@
         "captions_de": [
           "Spott: Soldaten knien zum Schein vor Jesus und grüssen ihn als König (König); Dornenkranz über Jesus.",
           "Abführung: Ein Soldat führt Jesus hinaus zum Kreuz (Pfeil)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MRK-015-016-020",
+            "field": "summary",
+            "fingerprint": "1e67bc47cfdf168c"
+          },
+          {
+            "record": "TRANS-MRK-015-001-047-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.15.16-MRK.15.19",
+            "fingerprint": "5633a030c5939120"
+          },
+          {
+            "record": "TRANS-MRK-015-001-047-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.15.20",
+            "fingerprint": "63fe01f1b55b3c44"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.15.16-MRK.15.19",
+            "figures": [
+              "FIG-GRUPPE-SOLDATEN",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-DORNENKRONE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-SOLDATEN",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-KNIEN",
+                  "FIG-ROLLE-KOENIG"
+                ]
+              }
+            ],
+            "action_de": "Die Soldaten rufen die Kohorte zusammen, ziehen Jesus einen Purpurmantel an, setzen ihm einen Dornenkranz auf und grüssen ihn zum Spott: Sei gegrüsst, König der Juden! Sie schlagen und bespucken ihn und knien vor ihm nieder.",
+            "stage": {
+              "at": {
+                "FIG-OBJ-DORNENKRONE": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-GRUPPE-SOLDATEN": "earnest",
+                "FIG-JESUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.15.20",
+            "figures": [
+              "FIG-ROLLE-SOLDAT",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-KREUZ"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Nach dem Spott ziehen sie ihm seine eigenen Kleider an und führen ihn hinaus, um ihn zu kreuzigen.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-ROLLE-SOLDAT",
+                  "FIG-JESUS",
+                  "act"
+                ],
+                [
+                  "FIG-JESUS",
+                  "FIG-OBJ-KREUZ",
+                  "go"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-SOLDAT": "earnest",
+                "FIG-JESUS": "calm"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Die Soldaten rufen die Kohorte zusammen, ziehen Jesus einen Purpurmantel an, setzen ihm einen Dornenkranz auf und grüssen ihn zum Spott: Sei gegrüsst, König der Juden! Sie schlagen und bespucken ihn und knien vor ihm nieder.",
+          "Nach dem Spott ziehen sie ihm seine eigenen Kleider an und führen ihn hinaus, um ihn zu kreuzigen."
+        ],
+        "captions_de": [
+          "Spott: Soldaten knien zum Schein vor Jesus und grüssen ihn als König (kniende Figur, König); Dornenkranz über Jesus.",
+          "Abführung: Ein Soldat führt Jesus (Bogen vom Soldaten zu Jesus) hinaus zum Kreuz (gestrichelter Weg)."
+        ],
+        "interpretation_note_de": "Den Purpurmantel kann der Zeichner noch nicht zeigen; das Bild nennt ihn nur in der Handlung. Schläge und Spucken ([[MRK.15.19]]) werden nicht gezeigt; die Soldaten knien zum Spott, ohne verzerrte Gesichter.",
+        "basis": [
+          {
+            "record": "TU-MRK-015-016-020",
+            "field": "summary",
+            "fingerprint": "a8a12071e7fe54aa"
+          },
+          {
+            "record": "TRANS-MRK-015-001-047-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.15.16-MRK.15.19",
+            "fingerprint": "5633a030c5939120"
+          },
+          {
+            "record": "TRANS-MRK-015-001-047-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.15.20",
+            "fingerprint": "63fe01f1b55b3c44"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "captions_de": [
+          "Verspottung: Jesus im Purpurmantel mit Dornenkranz (Dornenkranz); Soldaten knien zum Spott, einer hält das Rohr (Rohr): «Sei gegrüsst, König der Juden!» (Krone, knien)."
         ]
       }
     }

@@ -1,0 +1,238 @@
+{
+ "id": "CORE-MRK-010-001-012",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MRK.10.1-MRK.10.12",
+ "target": "TU-MRK-010-001-012",
+ "core_de": "Jenseits des Jordan fragen sie Jesus, um ihn auf die Probe zu stellen, ob ein Mann seine Frau entlassen darf; auf seine Gegenfrage sagen sie, Mose habe den Scheidebrief erlaubt; Jesus antwortet: wegen eurer Herzenshärte – vom Anfang der Schöpfung aber hat Gott sie männlich und weiblich geschaffen, und die zwei werden ein Fleisch sein: «Was nun Gott zusammengefügt hat, soll der Mensch nicht trennen»; im Haus sagt er den Jüngern: Wer seine Frau entlässt und eine andere heiratet, bricht die Ehe, und wenn sie ihren Mann entlässt und einen anderen heiratet, bricht sie die Ehe.",
+ "mode": "speech",
+ "voice": {
+  "speaker": "FIG-JESUS",
+  "addressee": "FIG-GRUPPE-VOLK"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Frage – Gegenfrage – Antwort – Erklärung im Haus",
+    "range": "MRK.10.1-MRK.10.12",
+    "elements": [
+     {
+      "label": "Er lehrt die Menschenmengen jenseits des Jordan",
+      "ref": "MRK.10.1",
+      "role": "Rahmen"
+     },
+     {
+      "label": "Gespräch über das Entlassen",
+      "ref": "MRK.10.2-MRK.10.9",
+      "role": "Streitgespräch",
+      "child": "s2"
+     },
+     {
+      "label": "Im Haus: zwei Fälle",
+      "ref": "MRK.10.10-MRK.10.12",
+      "role": "Erklärung",
+      "child": "s4"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "nicht genannte Fragende («sie»)",
+       "to": "FIG-JESUS",
+       "ref": "MRK.10.2"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "die Fragenden",
+       "ref": "MRK.10.3-MRK.10.9"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "MRK.10.11-MRK.10.12"
+      }
+     ],
+     "text_forms": [
+      {
+       "ref": "MRK.10.2",
+       "note": "Viele Handschriften nennen die Fragenden «Pharisäer»; die Arbeitsübersetzung folgt dem Text ohne diese Angabe («sie fragten ihn»)."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "dialogue",
+    "subtype": "Ist es erlaubt? – Was hat Mose geboten? – Scheidebrief – Herzenshärte und Schöpfung",
+    "range": "MRK.10.2-MRK.10.9",
+    "elements": [
+     {
+      "label": "Sie: Ist es einem Mann erlaubt, seine Frau zu entlassen? (um ihn auf die Probe zu stellen)",
+      "ref": "MRK.10.2",
+      "role": "Frage"
+     },
+     {
+      "label": "Jesus: «Was hat euch Mose geboten?»",
+      "ref": "MRK.10.3",
+      "role": "Gegenfrage"
+     },
+     {
+      "label": "Sie: «Mose hat erlaubt, einen Scheidebrief zu schreiben und sie zu entlassen.»",
+      "ref": "MRK.10.4",
+      "role": "Antwort"
+     },
+     {
+      "label": "Mose ↔ Anfang der Schöpfung",
+      "ref": "MRK.10.5-MRK.10.9",
+      "role": "Antwort Jesu",
+      "child": "s3"
+     }
+    ],
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "contrast",
+    "subtype": "wegen der Herzenshärte ↔ vom Anfang der Schöpfung",
+    "range": "MRK.10.5-MRK.10.9",
+    "elements": [
+     {
+      "label": "Wegen eurer Herzenshärte hat er euch dieses Gebot geschrieben",
+      "ref": "MRK.10.5",
+      "role": "Mose"
+     },
+     {
+      "label": "Vom Anfang der Schöpfung aber «hat er sie männlich und weiblich geschaffen» … «und die zwei werden ein Fleisch sein»",
+      "ref": "MRK.10.6-MRK.10.8",
+      "role": "Schöpfung"
+     },
+     {
+      "label": "Was nun Gott zusammengefügt hat, soll der Mensch nicht trennen",
+      "ref": "MRK.10.9",
+      "role": "Folgerung"
+     }
+    ],
+    "features": {
+     "crossref": [
+      {
+       "ref": "DEU.24.1",
+       "kind": "Scheidebrief"
+      },
+      {
+       "ref": "GEN.1.27",
+       "kind": "Zitat"
+      },
+      {
+       "ref": "GEN.2.24",
+       "kind": "Zitat"
+      }
+     ]
+    },
+    "visual": "columns",
+    "basis": "text"
+   },
+   {
+    "id": "s4",
+    "pattern": "condition",
+    "subtype": "zwei Fälle: Mann entlässt ↔ Frau entlässt",
+    "range": "MRK.10.11-MRK.10.12",
+    "elements": [
+     {
+      "label": "Wer seine Frau entlässt und eine andere heiratet",
+      "ref": "MRK.10.11",
+      "role": "Bedingung"
+     },
+     {
+      "label": "bricht ihr gegenüber die Ehe",
+      "ref": "MRK.10.11",
+      "role": "Folge"
+     },
+     {
+      "label": "Wenn sie ihren Mann entlässt und einen anderen heiratet",
+      "ref": "MRK.10.12",
+      "role": "Bedingung"
+     },
+     {
+      "label": "bricht sie die Ehe",
+      "ref": "MRK.10.12",
+      "role": "Folge"
+     }
+    ],
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MRK.10.2-MRK.10.5",
+   "text_de": "Frage: Darf ein Mann seine Frau entlassen? – «Was hat euch Mose geboten?» – «Mose hat erlaubt, einen Scheidebrief zu schreiben …» – «Wegen eurer Herzenshärte hat er euch dieses Gebot geschrieben.»",
+   "reason_de": "Streitgespräch als Anlass (Kriterium 2).",
+   "recognition_de": "Die Fragenden und Jesus im Gespräch.",
+   "keywords": [
+    "ob es einem Mann erlaubt sei, seine Frau zu entlassen",
+    "Wegen eurer Herzenshärte"
+   ]
+  },
+  {
+   "reference": "MRK.10.6-MRK.10.9",
+   "text_de": "Vom Anfang der Schöpfung: männlich und weiblich; die zwei werden ein Fleisch sein; «Was nun Gott zusammengefügt hat, soll der Mensch nicht trennen.»",
+   "reason_de": "Kernaussage (Kriterium 1).",
+   "recognition_de": "Mann und Frau, von Gott verbunden.",
+   "keywords": [
+    "Was nun Gott zusammengefügt hat, soll der Mensch nicht trennen"
+   ]
+  },
+  {
+   "reference": "MRK.10.10-MRK.10.12",
+   "text_de": "Im Haus: Wer seine Frau entlässt und eine andere heiratet, bricht die Ehe; wenn sie ihren Mann entlässt und einen anderen heiratet, bricht sie die Ehe.",
+   "reason_de": "Beide Fälle an die Jünger (Kriterium 2).",
+   "recognition_de": "Jesus erklärt den Jüngern im Haus.",
+   "keywords": [
+    "bricht ihr gegenüber die Ehe",
+    "bricht sie die Ehe"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Ortsangabe und Lehre der Mengen (10,1) – Rahmen"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-VOLK",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-MOSE"
+ ],
+ "places": [
+  "FIG-ORT-HAUS"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MRK.10.1-MRK.10.12",
+   "fingerprint": "e831224bde4be4b3"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mk 9–16 und Buch nach dem Pilot Mk 5 und dem Ausrollen Matthäus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; Zusammenfassungen und Bildaufträge mitgeprüft; keine fachliche Prüfung durch eine Person",
+  "result": "bestanden",
+  "summary_de": "Frage – Gegenfrage – Mose ↔ Schöpfung – zwei Fälle im Haus vollständig; Fragende ohne «Pharisäer» (Textfassung vermerkt).",
+  "changes_de": [
+   "Herkunftsangabe korrigiert: «Ausrollen Mk 1–4 und 6–8» → «Ausrollen Mk 9–16 und Buch»."
+  ]
+ }
+}

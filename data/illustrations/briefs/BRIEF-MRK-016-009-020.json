@@ -11,128 +11,179 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MRK.16.9-MRK.16.11",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-MARIA-MAGDALA",
-        "FIG-GRUPPE-ZWOELF"
-      ],
+      "reference": "MRK.16.9-MRK.16.14",
+      "figures": [],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-TRAUER",
-        "FIG-ZEICHEN-NICHT-GLAUBEN"
-      ],
-      "speech": [
-        {
-          "from": "FIG-MARIA-MAGDALA",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-AUFERSTEHUNG"
-          ]
-        }
-      ],
-      "action_de": "Der Auferstandene erscheint zuerst Maria aus Magdala. Sie berichtet es denen, die mit ihm gewesen waren und trauern; doch sie glauben ihr nicht.",
-      "stage": {
-        "signs_who": {
-          "FIG-ZEICHEN-TRAUER": [
-            "FIG-GRUPPE-ZWOELF"
-          ]
-        },
-        "at": {
-          "FIG-ZEICHEN-NICHT-GLAUBEN": "FIG-GRUPPE-ZWOELF"
-        },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-MARIA-MAGDALA",
-            "act"
-          ]
-        ],
-        "mood": {
-          "FIG-MARIA-MAGDALA": "delight",
-          "FIG-GRUPPE-ZWOELF": "worried"
-        },
-        "split": 1
+      "signs": [],
+      "speech": [],
+      "action_de": "Der längere, spätere Schluss erzählt drei Erscheinungen: Der Auferstandene erscheint zuerst Maria aus Magdala, dann zweien unterwegs – beide Male glauben die anderen es nicht – und schliesslich den Elf, deren Unglauben und Herzenshärte er tadelt.",
+      "keywords": {
+        "de": "erschien er zuerst Maria aus Magdala",
+        "gsw": "isch er zerscht de Maria vo Magdala erschine"
+      },
+      "diagram": {
+        "visual": "grid",
+        "span": 2,
+        "cols": 3,
+        "cells": [
+          {
+            "a": {
+              "de": "Er erschien zuerst Maria aus Magdala; sie berichtete es denen, die mit ihm gewesen waren – sie glaubten es nicht.",
+              "gsw": "Er isch zerscht de Maria vo Magdala erschine; si hät s dene verzellt, wo mit ihm gsii sind – si händ s nöd glaubt."
+            },
+            "icons": [
+              "FIG-MARIA-MAGDALA",
+              "FIG-ZEICHEN-NICHT-GLAUBEN"
+            ],
+            "tone": "plain"
+          },
+          {
+            "a": {
+              "de": "Er offenbarte sich zweien von ihnen in anderer Gestalt, als sie aufs Land gingen; auch ihnen glaubten die Übrigen nicht.",
+              "gsw": "Er hät sich zweine vo ine in ere andere Gstalt zeigt, wo si ufs Land gange sind; au dene händ di Andere nöd glaubt."
+            },
+            "icons": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-ZEICHEN-NICHT-GLAUBEN"
+            ],
+            "tone": "plain"
+          },
+          {
+            "a": {
+              "de": "Er offenbarte sich den Elf, als sie zu Tisch lagen, und tadelte ihren Unglauben und ihre Herzenshärte.",
+              "gsw": "Er hät sich de Elf zeigt, wo si am Tisch gläge sind, und hät iren Unglaube und iri Härzenshärti tadlet."
+            },
+            "icons": [
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-ZEICHEN-UNGLAUBE"
+            ],
+            "tone": "new"
+          }
+        ]
       }
     },
     {
       "n": 2,
-      "reference": "MRK.16.12-MRK.16.13",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-ROLLE-JUENGER",
-        "FIG-GRUPPE-ZWOELF"
-      ],
+      "reference": "MRK.16.15-MRK.16.16",
+      "figures": [],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-NICHT-GLAUBEN"
-      ],
-      "speech": [
-        {
-          "from": "FIG-ROLLE-JUENGER",
-          "to": "FIG-GRUPPE-ZWOELF",
+      "signs": [],
+      "speech": [],
+      "action_de": "Er sagt zu den Elf: «Geht hin in die ganze Welt und verkündigt das Evangelium der ganzen Schöpfung. Wer glaubt und getauft wird, wird gerettet werden; wer aber nicht glaubt, wird verurteilt werden.»",
+      "keywords": {
+        "de": "Wer glaubt und getauft wird, wird gerettet werden",
+        "gsw": "Wär glaubt und tauft wird, wird grettet"
+      },
+      "diagram": {
+        "visual": "switch",
+        "span": 2,
+        "speaker": "FIG-JESUS",
+        "cond": {
+          "a": {
+            "de": "Geht hin in die ganze Welt und verkündigt das Evangelium der ganzen Schöpfung.",
+            "gsw": "Gönd i di ganz Wält und verchünded s Evangelium de ganze Schöpfig."
+          },
           "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-AUFERSTEHUNG"
+            "FIG-ZEICHEN-WELT",
+            "FIG-ZEICHEN-VERKUENDIGEN"
+          ]
+        },
+        "yes_label": {
+          "de": "Glaube",
+          "gsw": "Glaube"
+        },
+        "yes": {
+          "a": {
+            "de": "Wer glaubt und getauft wird, wird gerettet werden.",
+            "gsw": "Wär glaubt und tauft wird, wird grettet."
+          },
+          "icons": [
+            "FIG-ZEICHEN-TAUFE",
+            "FIG-ZEICHEN-RETTUNG"
+          ]
+        },
+        "no_label": {
+          "de": "Unglaube",
+          "gsw": "Unglaube"
+        },
+        "no": {
+          "a": {
+            "de": "Wer aber nicht glaubt, wird verurteilt werden.",
+            "gsw": "Wär aber nöd glaubt, wird verurteilt."
+          },
+          "icons": [
+            "FIG-ZEICHEN-NICHT-GLAUBEN",
+            "FIG-ZEICHEN-GERICHT"
           ]
         }
-      ],
-      "action_de": "Danach zeigt er sich zweien von ihnen in anderer Gestalt, als sie aufs Land gehen. Sie berichten es den Übrigen; auch ihnen glauben sie nicht.",
-      "stage": {
-        "at": {
-          "FIG-ZEICHEN-NICHT-GLAUBEN": "FIG-GRUPPE-ZWOELF"
-        },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-ROLLE-JUENGER",
-            "act"
-          ]
-        ],
-        "mood": {
-          "FIG-ROLLE-JUENGER": "delight",
-          "FIG-GRUPPE-ZWOELF": "pensive"
-        },
-        "split": 1
       }
     },
     {
       "n": 3,
-      "reference": "MRK.16.14-MRK.16.18",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF"
-      ],
+      "reference": "MRK.16.17-MRK.16.18",
+      "figures": [],
       "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-ZEICHEN-AUSBREITEN",
-            "FIG-ZEICHEN-VERKUENDIGEN"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-ZEICHEN-GLAUBEN",
-            "FIG-ZEICHEN-RETTUNG"
-          ]
-        }
-      ],
-      "action_de": "Er erscheint den Elf beim Mahl, tadelt ihren Unglauben und sendet sie: Geht in die ganze Welt und verkündigt das Evangelium! Wer glaubt und getauft wird, wird gerettet; Zeichen werden die Glaubenden begleiten.",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-ZWOELF": "surprised",
-          "FIG-JESUS": "earnest"
-        },
-        "x": {
-          "FIG-JESUS": 50
-        }
+      "speech": [],
+      "action_de": "Diese Zeichen werden denen folgen, die glauben: in seinem Namen Dämonen austreiben, in neuen Sprachen reden, Schlangen aufheben, Tödliches trinken ohne Schaden, Kranken die Hände auflegen, und sie werden gesund.",
+      "keywords": {
+        "de": "Diese Zeichen aber werden denen folgen, die glauben",
+        "gsw": "Die Zeiche aber wärded dene folge, wo glaubed"
+      },
+      "diagram": {
+        "visual": "grid",
+        "span": 2,
+        "cols": 3,
+        "speaker": "FIG-JESUS",
+        "cells": [
+          {
+            "a": {
+              "de": "In meinem Namen werden sie Dämonen austreiben,",
+              "gsw": "I mim Name wärded si Dämone ustriibe,"
+            },
+            "icons": [
+              "FIG-ZEICHEN-AUSTREIBEN"
+            ]
+          },
+          {
+            "a": {
+              "de": "in neuen Sprachen reden,",
+              "gsw": "i nöie Spraache rede,"
+            },
+            "icons": [
+              "FIG-ZEICHEN-SPRECHEN"
+            ]
+          },
+          {
+            "a": {
+              "de": "Schlangen werden sie aufheben,",
+              "gsw": "Schlange wärded si ufnää,"
+            },
+            "icons": [
+              "FIG-OBJ-SCHLANGE"
+            ]
+          },
+          {
+            "a": {
+              "de": "und wenn sie etwas Tödliches trinken, wird es ihnen gewiss nicht schaden;",
+              "gsw": "und wänn si öppis Tödlichs trinked, wird s ine sicher nöd schade;"
+            },
+            "icons": [
+              "FIG-OBJ-BECHER-VOLL",
+              "FIG-ZEICHEN-NICHT"
+            ]
+          },
+          {
+            "a": {
+              "de": "Kranken werden sie die Hände auflegen, und sie werden gesund werden.",
+              "gsw": "Chranke wärded si d Händ uflege, und die wärded gsund."
+            },
+            "icons": [
+              "FIG-ZEICHEN-HEILEN",
+              "FIG-ZEICHEN-GESUND"
+            ]
+          }
+        ]
       }
     },
     {
@@ -141,7 +192,7 @@
       "figures": [
         "FIG-GOTT",
         "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF"
+        "FIG-GRUPPE-JUENGER"
       ],
       "objects": [
         "FIG-ORT-WOLKE"
@@ -150,7 +201,11 @@
         "FIG-ZEICHEN-AUSBREITEN"
       ],
       "speech": [],
-      "action_de": "Der Herr Jesus wird in den Himmel aufgenommen und setzt sich zur Rechten Gottes. Die Jünger ziehen aus und verkündigen überall; der Herr wirkt mit.",
+      "action_de": "Der Auferstandene sagt zu den Elf: «Geht hin in die ganze Welt und verkündigt das Evangelium der ganzen Schöpfung.» Dann wird der Herr Jesus in den Himmel aufgenommen und setzt sich zur Rechten Gottes; die Jünger ziehen aus und verkündigen überall.",
+      "keywords": {
+        "de": "Jene aber zogen aus und verkündigten überall",
+        "gsw": "Die aber sind uszoge und händ überall verchündet"
+      },
       "stage": {
         "in": {
           "FIG-JESUS": "FIG-ORT-WOLKE"
@@ -165,57 +220,54 @@
         "big_side": "left",
         "god_side": "left",
         "at": {
-          "FIG-ZEICHEN-AUSBREITEN": "FIG-GRUPPE-ZWOELF"
+          "FIG-ZEICHEN-AUSBREITEN": "FIG-GRUPPE-JUENGER"
         },
         "mood": {
-          "FIG-GRUPPE-ZWOELF": "surprised"
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-JUENGER": "surprised"
         },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-AUSBREITEN",
-            "act"
-          ]
-        ]
+        "x": {
+          "FIG-GRUPPE-JUENGER": 140
+        }
       }
     }
   ],
   "actions_de": [
-    "Der Auferstandene erscheint zuerst Maria aus Magdala. Sie berichtet es denen, die mit ihm gewesen waren und trauern; doch sie glauben ihr nicht.",
-    "Danach zeigt er sich zweien von ihnen in anderer Gestalt, als sie aufs Land gehen. Sie berichten es den Übrigen; auch ihnen glauben sie nicht.",
-    "Er erscheint den Elf beim Mahl, tadelt ihren Unglauben und sendet sie: Geht in die ganze Welt und verkündigt das Evangelium! Wer glaubt und getauft wird, wird gerettet; Zeichen werden die Glaubenden begleiten.",
-    "Der Herr Jesus wird in den Himmel aufgenommen und setzt sich zur Rechten Gottes. Die Jünger ziehen aus und verkündigen überall; der Herr wirkt mit."
+    "Der längere, spätere Schluss erzählt drei Erscheinungen: Der Auferstandene erscheint zuerst Maria aus Magdala, dann zweien unterwegs – beide Male glauben die anderen es nicht – und schliesslich den Elf, deren Unglauben und Herzenshärte er tadelt.",
+    "Er sagt zu den Elf: «Geht hin in die ganze Welt und verkündigt das Evangelium der ganzen Schöpfung. Wer glaubt und getauft wird, wird gerettet werden; wer aber nicht glaubt, wird verurteilt werden.»",
+    "Diese Zeichen werden denen folgen, die glauben: in seinem Namen Dämonen austreiben, in neuen Sprachen reden, Schlangen aufheben, Tödliches trinken ohne Schaden, Kranken die Hände auflegen, und sie werden gesund.",
+    "Der Auferstandene sagt zu den Elf: «Geht hin in die ganze Welt und verkündigt das Evangelium der ganzen Schöpfung.» Dann wird der Herr Jesus in den Himmel aufgenommen und setzt sich zur Rechten Gottes; die Jünger ziehen aus und verkündigen überall."
   ],
   "captions_de": [
-    "Jesus → Maria → Jünger: Jesus erscheint Maria (Bogen zu ihr); sie sagt den Trauernden: Er lebt (Jesus, offenes Grab mit Pfeil) – sie glauben nicht (skeptisches Gesicht).",
-    "Jesus → zwei Jünger → die Übrigen: Jesus zeigt sich Jüngern auf dem Weg (Bogen zu ihnen); ihr Bericht (Jesus, offenes Grab mit Pfeil) findet keinen Glauben (skeptisches Gesicht).",
-    "Sendung: Geht in alle Welt und verkündigt (Pfeile, Rufhorn); wer glaubt, wird gerettet (Herz mit Lichtstrahl, Pfeil aus den Wellen).",
-    "Aufnahme → Sendung: Jesus in der Wolke unter dem Strahlenkranz, bei Gott; die Jünger gehen in alle Richtungen (Pfeile), und der Herr wirkt mit (Bogen von Jesus zu den Pfeilen der Jünger)."
+    "Drei Erscheinungen (Raster): Maria aus Magdala – sie glauben es nicht (Maria, nicht glauben) – zwei unterwegs – auch ihnen nicht (Jünger, nicht glauben) – die Elf: Tadel ihres Unglaubens (die Zwölf, Zweifel).",
+    "Auftrag und Weiche (Bild Jesus): «Geht hin in die ganze Welt …» (Welt, verkündigen) – wer glaubt und getauft wird → gerettet (glauben, Taufe, retten) – wer nicht glaubt → verurteilt (nicht glauben, Gericht).",
+    "Fünf Zeichen (Raster, Bild Jesus): Dämonen austreiben (austreiben) – in neuen Sprachen reden (sprechen) – Schlangen aufheben (Schlange) – Tödliches ohne Schaden (Becher, Verbotszeichen) – Kranke heilen (heilen, gesund).",
+    "Aufnahme und Aussendung (späterer Schluss): Jesus wird in den Himmel aufgenommen, zum Strahlenkranz (Gott); die Jünger ziehen aus in die Welt (ausbreiten); das Band nennt ihr Verkündigen (Jünger, verkündigen)."
   ],
-  "interpretation_note_de": "Dieser Abschnitt ([[MRK.16.9-MRK.16.20]]) steht im SBLGNT in Doppelklammern und gilt in der Textforschung weithin als spätere Ergänzung; viele Kirchen anerkennen ihn als kanonisch. «In anderer Gestalt» ([[MRK.16.12]]) kann das Bild nicht zeigen. Die begleitenden Zeichen ([[MRK.16.17-MRK.16.18]]) zeigt das Bild nicht.",
+  "interpretation_note_de": "Vier Felder für den längeren Schluss ([[MRK.16.9-MRK.16.20]]), weil die Reihe der Zeichen vollständig bleibt: drei Erscheinungen mit dem Unglauben der Jünger, der Auftrag mit beiden Zweigen, die fünf Zeichen (Zusage, kein Bericht) und die Aufnahme in den Himmel mit der Aussendung. [[MRK.16.9-MRK.16.20]] ist der längere, spätere Schluss: In den ältesten vollständig erhaltenen Handschriften endet das Evangelium mit [[MRK.16.8]]; die Arbeitsübersetzung setzt ihn in Doppelklammern ⟦ ⟧, die App zeigt die Lesarten. Gott ist als Strahlenkranz gezeichnet. Die Wolke steht als Zeichen für den Himmel; [[MRK.16.19]] nennt keine Wolke (vgl. [[ACT.1.9]]).",
   "basis": [
     {
       "record": "TU-MRK-016-009-020",
       "field": "summary",
-      "fingerprint": "9c1065311a951833"
+      "fingerprint": "962bdafe15c53d57"
     },
     {
       "record": "TRANS-MRK-016-001-020-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.16.9-MRK.16.11",
-      "fingerprint": "d5c255399a9a023d"
+      "reference": "MRK.16.9-MRK.16.14",
+      "fingerprint": "9d07285375ecc219"
     },
     {
       "record": "TRANS-MRK-016-001-020-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.16.12-MRK.16.13",
-      "fingerprint": "b56a6a35dcb796fc"
+      "reference": "MRK.16.15-MRK.16.16",
+      "fingerprint": "fea51f9dc4d03836"
     },
     {
       "record": "TRANS-MRK-016-001-020-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.16.14-MRK.16.18",
-      "fingerprint": "b4ff4aa220262dc3"
+      "reference": "MRK.16.17-MRK.16.18",
+      "fingerprint": "dc1f33287f151e12"
     },
     {
       "record": "TRANS-MRK-016-001-020-DE-WORKING",
@@ -225,7 +277,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -594,6 +646,774 @@
           "Jesus → zwei Jünger → die Übrigen: Jesus zeigt sich Jüngern auf dem Weg (Bogen zu ihnen); ihr Bericht (Jesus, offenes Grab mit Pfeil) findet keinen Glauben (durchgestrichenes Herz).",
           "Sendung: Geht in alle Welt und verkündigt (Pfeile, Rufhorn); wer glaubt, wird gerettet (Herz mit Lichtstrahl, Pfeil aus den Wellen).",
           "Aufnahme → Sendung: Jesus in der Wolke unter dem Strahlenkranz, bei Gott; die Jünger gehen in alle Richtungen (Pfeile), und der Herr wirkt mit (Bogen von Jesus zu den Pfeilen der Jünger)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MRK-016-009-020",
+            "field": "summary",
+            "fingerprint": "9c1065311a951833"
+          },
+          {
+            "record": "TRANS-MRK-016-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.16.9-MRK.16.11",
+            "fingerprint": "d5c255399a9a023d"
+          },
+          {
+            "record": "TRANS-MRK-016-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.16.12-MRK.16.13",
+            "fingerprint": "b56a6a35dcb796fc"
+          },
+          {
+            "record": "TRANS-MRK-016-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.16.14-MRK.16.18",
+            "fingerprint": "b4ff4aa220262dc3"
+          },
+          {
+            "record": "TRANS-MRK-016-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.16.19-MRK.16.20",
+            "fingerprint": "e745fae74d940678"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.16.9-MRK.16.11",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-MARIA-MAGDALA",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER",
+              "FIG-ZEICHEN-NICHT-GLAUBEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-MARIA-MAGDALA",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-AUFERSTEHUNG"
+                ]
+              }
+            ],
+            "action_de": "Der Auferstandene erscheint zuerst Maria aus Magdala. Sie berichtet es denen, die mit ihm gewesen waren und trauern; doch sie glauben ihr nicht.",
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-GRUPPE-ZWOELF"
+                ]
+              },
+              "at": {
+                "FIG-ZEICHEN-NICHT-GLAUBEN": "FIG-GRUPPE-ZWOELF"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-MARIA-MAGDALA",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-MARIA-MAGDALA": "delight",
+                "FIG-GRUPPE-ZWOELF": "worried"
+              },
+              "split": 1
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.16.12-MRK.16.13",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-JUENGER",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-NICHT-GLAUBEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-JUENGER",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-AUFERSTEHUNG"
+                ]
+              }
+            ],
+            "action_de": "Danach zeigt er sich zweien von ihnen in anderer Gestalt, als sie aufs Land gehen. Sie berichten es den Übrigen; auch ihnen glauben sie nicht.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-NICHT-GLAUBEN": "FIG-GRUPPE-ZWOELF"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-JUENGER",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-JUENGER": "delight",
+                "FIG-GRUPPE-ZWOELF": "pensive"
+              },
+              "split": 1
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.16.14-MRK.16.18",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-AUSBREITEN",
+                  "FIG-ZEICHEN-VERKUENDIGEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-GLAUBEN",
+                  "FIG-ZEICHEN-RETTUNG"
+                ]
+              }
+            ],
+            "action_de": "Er erscheint den Elf beim Mahl, tadelt ihren Unglauben und sendet sie: Geht in die ganze Welt und verkündigt das Evangelium! Wer glaubt und getauft wird, wird gerettet; Zeichen werden die Glaubenden begleiten.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "surprised",
+                "FIG-JESUS": "earnest"
+              },
+              "x": {
+                "FIG-JESUS": 50
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.16.19-MRK.16.20",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-ORT-WOLKE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-AUSBREITEN"
+            ],
+            "speech": [],
+            "action_de": "Der Herr Jesus wird in den Himmel aufgenommen und setzt sich zur Rechten Gottes. Die Jünger ziehen aus und verkündigen überall; der Herr wirkt mit.",
+            "stage": {
+              "in": {
+                "FIG-JESUS": "FIG-ORT-WOLKE"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.5,
+                  0.3
+                ]
+              },
+              "big_y": 34,
+              "big_side": "left",
+              "god_side": "left",
+              "at": {
+                "FIG-ZEICHEN-AUSBREITEN": "FIG-GRUPPE-ZWOELF"
+              },
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "surprised"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-AUSBREITEN",
+                  "act"
+                ]
+              ]
+            }
+          }
+        ],
+        "actions_de": [
+          "Der Auferstandene erscheint zuerst Maria aus Magdala. Sie berichtet es denen, die mit ihm gewesen waren und trauern; doch sie glauben ihr nicht.",
+          "Danach zeigt er sich zweien von ihnen in anderer Gestalt, als sie aufs Land gehen. Sie berichten es den Übrigen; auch ihnen glauben sie nicht.",
+          "Er erscheint den Elf beim Mahl, tadelt ihren Unglauben und sendet sie: Geht in die ganze Welt und verkündigt das Evangelium! Wer glaubt und getauft wird, wird gerettet; Zeichen werden die Glaubenden begleiten.",
+          "Der Herr Jesus wird in den Himmel aufgenommen und setzt sich zur Rechten Gottes. Die Jünger ziehen aus und verkündigen überall; der Herr wirkt mit."
+        ],
+        "captions_de": [
+          "Jesus → Maria → Jünger: Jesus erscheint Maria (Bogen zu ihr); sie sagt den Trauernden: Er lebt (Jesus, offenes Grab mit Pfeil) – sie glauben nicht (skeptisches Gesicht).",
+          "Jesus → zwei Jünger → die Übrigen: Jesus zeigt sich Jüngern auf dem Weg (Bogen zu ihnen); ihr Bericht (Jesus, offenes Grab mit Pfeil) findet keinen Glauben (skeptisches Gesicht).",
+          "Sendung: Geht in alle Welt und verkündigt (Pfeile, Rufhorn); wer glaubt, wird gerettet (Herz mit Lichtstrahl, Pfeil aus den Wellen).",
+          "Aufnahme → Sendung: Jesus in der Wolke unter dem Strahlenkranz, bei Gott; die Jünger gehen in alle Richtungen (Pfeile), und der Herr wirkt mit (Bogen von Jesus zu den Pfeilen der Jünger)."
+        ],
+        "interpretation_note_de": "Dieser Abschnitt ([[MRK.16.9-MRK.16.20]]) steht im SBLGNT in Doppelklammern und gilt in der Textforschung weithin als spätere Ergänzung; viele Kirchen anerkennen ihn als kanonisch. «In anderer Gestalt» ([[MRK.16.12]]) kann das Bild nicht zeigen. Die begleitenden Zeichen ([[MRK.16.17-MRK.16.18]]) zeigt das Bild nicht.",
+        "basis": [
+          {
+            "record": "TU-MRK-016-009-020",
+            "field": "summary",
+            "fingerprint": "e5e39a9cd12c14c1"
+          },
+          {
+            "record": "TRANS-MRK-016-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.16.9-MRK.16.11",
+            "fingerprint": "d5c255399a9a023d"
+          },
+          {
+            "record": "TRANS-MRK-016-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.16.12-MRK.16.13",
+            "fingerprint": "b56a6a35dcb796fc"
+          },
+          {
+            "record": "TRANS-MRK-016-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.16.14-MRK.16.18",
+            "fingerprint": "b4ff4aa220262dc3"
+          },
+          {
+            "record": "TRANS-MRK-016-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.16.19-MRK.16.20",
+            "fingerprint": "e745fae74d940678"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.16.9-MRK.16.14",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Der längere, spätere Schluss erzählt drei Erscheinungen: Der Auferstandene erscheint zuerst Maria aus Magdala, dann zweien unterwegs – beide Male glauben die anderen es nicht – und schliesslich den Elf, deren Unglauben und Herzenshärte er tadelt.",
+            "keywords": {
+              "de": "erschien er zuerst Maria aus Magdala",
+              "gsw": "isch er zerscht de Maria vo Magdala erschine"
+            },
+            "diagram": {
+              "visual": "grid",
+              "span": 2,
+              "cols": 3,
+              "cells": [
+                {
+                  "a": {
+                    "de": "Er erschien zuerst Maria aus Magdala; sie berichtete es denen, die mit ihm gewesen waren – sie glaubten es nicht.",
+                    "gsw": "Er isch zerscht de Maria vo Magdala erschine; si hät s dene verzellt, wo mit ihm gsii sind – si händ s nöd glaubt."
+                  },
+                  "icons": [
+                    "FIG-MARIA-MAGDALA",
+                    "FIG-ZEICHEN-NICHT-GLAUBEN"
+                  ],
+                  "tone": "plain"
+                },
+                {
+                  "a": {
+                    "de": "Er offenbarte sich zweien von ihnen in anderer Gestalt, als sie aufs Land gingen; auch ihnen glaubten die Übrigen nicht.",
+                    "gsw": "Er hät sich zweine vo ine in ere andere Gstalt zeigt, wo si ufs Land gange sind; au dene händ di Andere nöd glaubt."
+                  },
+                  "icons": [
+                    "FIG-GRUPPE-JUENGER",
+                    "FIG-ZEICHEN-NICHT-GLAUBEN"
+                  ],
+                  "tone": "plain"
+                },
+                {
+                  "a": {
+                    "de": "Er offenbarte sich den Elf, als sie zu Tisch lagen, und tadelte ihren Unglauben und ihre Herzenshärte.",
+                    "gsw": "Er hät sich de Elf zeigt, wo si am Tisch gläge sind, und hät iren Unglaube und iri Härzenshärti tadlet."
+                  },
+                  "icons": [
+                    "FIG-GRUPPE-ZWOELF",
+                    "FIG-ZEICHEN-UNGLAUBE"
+                  ],
+                  "tone": "new"
+                }
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.16.15-MRK.16.16",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Er sagt zu den Elf: «Geht hin in die ganze Welt und verkündigt das Evangelium der ganzen Schöpfung. Wer glaubt und getauft wird, wird gerettet werden; wer aber nicht glaubt, wird verurteilt werden.»",
+            "keywords": {
+              "de": "Wer glaubt und getauft wird, wird gerettet werden",
+              "gsw": "Wär glaubt und tauft wird, wird grettet"
+            },
+            "diagram": {
+              "visual": "switch",
+              "span": 2,
+              "speaker": "FIG-JESUS",
+              "cond": {
+                "a": {
+                  "de": "Geht hin in die ganze Welt und verkündigt das Evangelium der ganzen Schöpfung.",
+                  "gsw": "Gönd i di ganz Wält und verchünded s Evangelium de ganze Schöpfig."
+                },
+                "icons": [
+                  "FIG-ZEICHEN-WELT",
+                  "FIG-ZEICHEN-VERKUENDIGEN"
+                ]
+              },
+              "yes_label": {
+                "de": "Wer glaubt und getauft wird",
+                "gsw": "Wär glaubt und tauft wird"
+              },
+              "yes": {
+                "a": {
+                  "de": "wird gerettet werden.",
+                  "gsw": "wird grettet."
+                },
+                "icons": [
+                  "FIG-ZEICHEN-RETTUNG"
+                ]
+              },
+              "no_label": {
+                "de": "wer aber nicht glaubt",
+                "gsw": "wär aber nöd glaubt"
+              },
+              "no": {
+                "a": {
+                  "de": "wird verurteilt werden.",
+                  "gsw": "wird verurteilt."
+                },
+                "icons": [
+                  "FIG-ZEICHEN-GERICHT"
+                ]
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.16.17-MRK.16.18",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Diese Zeichen werden denen folgen, die glauben: in seinem Namen Dämonen austreiben, in neuen Sprachen reden, Schlangen aufheben, Tödliches trinken ohne Schaden, Kranken die Hände auflegen, und sie werden gesund.",
+            "keywords": {
+              "de": "Diese Zeichen aber werden denen folgen, die glauben",
+              "gsw": "Die Zeiche aber wärded dene folge, wo glaubed"
+            },
+            "diagram": {
+              "visual": "grid",
+              "span": 2,
+              "cols": 3,
+              "speaker": "FIG-JESUS",
+              "cells": [
+                {
+                  "a": {
+                    "de": "In meinem Namen werden sie Dämonen austreiben,",
+                    "gsw": "I mim Name wärded si Dämone ustriibe,"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-AUSTREIBEN"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "in neuen Sprachen reden,",
+                    "gsw": "i nöie Spraache rede,"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-SPRECHEN"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Schlangen werden sie aufheben,",
+                    "gsw": "Schlange wärded si ufnää,"
+                  },
+                  "icons": [
+                    "FIG-OBJ-SCHLANGE"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "und wenn sie etwas Tödliches trinken, wird es ihnen gewiss nicht schaden;",
+                    "gsw": "und wänn si öppis Tödlichs trinked, wird s ine sicher nöd schade;"
+                  },
+                  "icons": [
+                    "FIG-OBJ-BECHER-VOLL",
+                    "FIG-ZEICHEN-NICHT"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Kranken werden sie die Hände auflegen, und sie werden gesund werden.",
+                    "gsw": "Chranke wärded si d Händ uflege, und die wärded gsund."
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-HEILEN",
+                    "FIG-ZEICHEN-GESUND"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.16.19-MRK.16.20",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-ORT-WOLKE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-AUSBREITEN"
+            ],
+            "speech": [],
+            "action_de": "Der Auferstandene sagt zu den Elf: «Geht hin in die ganze Welt und verkündigt das Evangelium der ganzen Schöpfung.» Dann wird der Herr Jesus in den Himmel aufgenommen und setzt sich zur Rechten Gottes; die Jünger ziehen aus und verkündigen überall.",
+            "keywords": {
+              "de": "Jene aber zogen aus und verkündigten überall",
+              "gsw": "Die aber sind uszoge und händ überall verchündet"
+            },
+            "stage": {
+              "in": {
+                "FIG-JESUS": "FIG-ORT-WOLKE"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.5,
+                  0.3
+                ]
+              },
+              "big_y": 34,
+              "big_side": "left",
+              "god_side": "left",
+              "at": {
+                "FIG-ZEICHEN-AUSBREITEN": "FIG-GRUPPE-JUENGER"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "surprised"
+              },
+              "x": {
+                "FIG-GRUPPE-JUENGER": 140
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.16.9-MRK.16.14",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Der längere, spätere Schluss erzählt drei Erscheinungen: Der Auferstandene erscheint zuerst Maria aus Magdala, dann zweien unterwegs – beide Male glauben die anderen es nicht – und schliesslich den Elf, deren Unglauben und Herzenshärte er tadelt.",
+            "keywords": {
+              "de": "erschien er zuerst Maria aus Magdala",
+              "gsw": "isch er zerscht de Maria vo Magdala erschine"
+            },
+            "diagram": {
+              "visual": "grid",
+              "span": 2,
+              "cols": 3,
+              "cells": [
+                {
+                  "a": {
+                    "de": "Er erschien zuerst Maria aus Magdala; sie berichtete es denen, die mit ihm gewesen waren – sie glaubten es nicht.",
+                    "gsw": "Er isch zerscht de Maria vo Magdala erschine; si hät s dene verzellt, wo mit ihm gsii sind – si händ s nöd glaubt."
+                  },
+                  "icons": [
+                    "FIG-MARIA-MAGDALA",
+                    "FIG-ZEICHEN-NICHT-GLAUBEN"
+                  ],
+                  "tone": "plain"
+                },
+                {
+                  "a": {
+                    "de": "Er offenbarte sich zweien von ihnen in anderer Gestalt, als sie aufs Land gingen; auch ihnen glaubten die Übrigen nicht.",
+                    "gsw": "Er hät sich zweine vo ine in ere andere Gstalt zeigt, wo si ufs Land gange sind; au dene händ di Andere nöd glaubt."
+                  },
+                  "icons": [
+                    "FIG-GRUPPE-JUENGER",
+                    "FIG-ZEICHEN-NICHT-GLAUBEN"
+                  ],
+                  "tone": "plain"
+                },
+                {
+                  "a": {
+                    "de": "Er offenbarte sich den Elf, als sie zu Tisch lagen, und tadelte ihren Unglauben und ihre Herzenshärte.",
+                    "gsw": "Er hät sich de Elf zeigt, wo si am Tisch gläge sind, und hät iren Unglaube und iri Härzenshärti tadlet."
+                  },
+                  "icons": [
+                    "FIG-GRUPPE-ZWOELF",
+                    "FIG-ZEICHEN-UNGLAUBE"
+                  ],
+                  "tone": "new"
+                }
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.16.15-MRK.16.16",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Er sagt zu den Elf: «Geht hin in die ganze Welt und verkündigt das Evangelium der ganzen Schöpfung. Wer glaubt und getauft wird, wird gerettet werden; wer aber nicht glaubt, wird verurteilt werden.»",
+            "keywords": {
+              "de": "Wer glaubt und getauft wird, wird gerettet werden",
+              "gsw": "Wär glaubt und tauft wird, wird grettet"
+            },
+            "diagram": {
+              "visual": "switch",
+              "span": 2,
+              "speaker": "FIG-JESUS",
+              "cond": {
+                "a": {
+                  "de": "Geht hin in die ganze Welt und verkündigt das Evangelium der ganzen Schöpfung.",
+                  "gsw": "Gönd i di ganz Wält und verchünded s Evangelium de ganze Schöpfig."
+                },
+                "icons": [
+                  "FIG-ZEICHEN-WELT",
+                  "FIG-ZEICHEN-VERKUENDIGEN"
+                ]
+              },
+              "yes_label": {
+                "de": "glauben",
+                "gsw": "glaube"
+              },
+              "yes": {
+                "a": {
+                  "de": "Wer glaubt und getauft wird, wird gerettet werden.",
+                  "gsw": "Wär glaubt und tauft wird, wird grettet."
+                },
+                "icons": [
+                  "FIG-ZEICHEN-TAUFE",
+                  "FIG-ZEICHEN-RETTUNG"
+                ]
+              },
+              "no_label": {
+                "de": "nicht glauben",
+                "gsw": "nöd glaube"
+              },
+              "no": {
+                "a": {
+                  "de": "Wer aber nicht glaubt, wird verurteilt werden.",
+                  "gsw": "Wär aber nöd glaubt, wird verurteilt."
+                },
+                "icons": [
+                  "FIG-ZEICHEN-NICHT-GLAUBEN",
+                  "FIG-ZEICHEN-GERICHT"
+                ]
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.16.17-MRK.16.18",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Diese Zeichen werden denen folgen, die glauben: in seinem Namen Dämonen austreiben, in neuen Sprachen reden, Schlangen aufheben, Tödliches trinken ohne Schaden, Kranken die Hände auflegen, und sie werden gesund.",
+            "keywords": {
+              "de": "Diese Zeichen aber werden denen folgen, die glauben",
+              "gsw": "Die Zeiche aber wärded dene folge, wo glaubed"
+            },
+            "diagram": {
+              "visual": "grid",
+              "span": 2,
+              "cols": 3,
+              "speaker": "FIG-JESUS",
+              "cells": [
+                {
+                  "a": {
+                    "de": "In meinem Namen werden sie Dämonen austreiben,",
+                    "gsw": "I mim Name wärded si Dämone ustriibe,"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-AUSTREIBEN"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "in neuen Sprachen reden,",
+                    "gsw": "i nöie Spraache rede,"
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-SPRECHEN"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Schlangen werden sie aufheben,",
+                    "gsw": "Schlange wärded si ufnää,"
+                  },
+                  "icons": [
+                    "FIG-OBJ-SCHLANGE"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "und wenn sie etwas Tödliches trinken, wird es ihnen gewiss nicht schaden;",
+                    "gsw": "und wänn si öppis Tödlichs trinked, wird s ine sicher nöd schade;"
+                  },
+                  "icons": [
+                    "FIG-OBJ-BECHER-VOLL",
+                    "FIG-ZEICHEN-NICHT"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Kranken werden sie die Hände auflegen, und sie werden gesund werden.",
+                    "gsw": "Chranke wärded si d Händ uflege, und die wärded gsund."
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-HEILEN",
+                    "FIG-ZEICHEN-GESUND"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.16.19-MRK.16.20",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-ORT-WOLKE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-AUSBREITEN"
+            ],
+            "speech": [],
+            "action_de": "Der Auferstandene sagt zu den Elf: «Geht hin in die ganze Welt und verkündigt das Evangelium der ganzen Schöpfung.» Dann wird der Herr Jesus in den Himmel aufgenommen und setzt sich zur Rechten Gottes; die Jünger ziehen aus und verkündigen überall.",
+            "keywords": {
+              "de": "Jene aber zogen aus und verkündigten überall",
+              "gsw": "Die aber sind uszoge und händ überall verchündet"
+            },
+            "stage": {
+              "in": {
+                "FIG-JESUS": "FIG-ORT-WOLKE"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.5,
+                  0.3
+                ]
+              },
+              "big_y": 34,
+              "big_side": "left",
+              "god_side": "left",
+              "at": {
+                "FIG-ZEICHEN-AUSBREITEN": "FIG-GRUPPE-JUENGER"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "surprised"
+              },
+              "x": {
+                "FIG-GRUPPE-JUENGER": 140
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "captions_de": [
+          "Drei Erscheinungen (Raster): Maria aus Magdala – sie glauben es nicht (Maria, nicht glauben) – zwei unterwegs – auch ihnen nicht (Jünger, nicht glauben) – die Elf: Tadel ihres Unglaubens (die Zwölf, Zweifel).",
+          "Auftrag und Weiche (Bild Jesus): «Geht hin in die ganze Welt …» (Welt, verkündigen) – wer glaubt und getauft wird → gerettet (glauben, Taufe, retten) – wer nicht glaubt → verurteilt (nicht glauben, Gericht).",
+          "Fünf Zeichen (Raster, Bild Jesus): Dämonen austreiben (austreiben) – in neuen Sprachen reden (sprechen) – Schlangen aufheben (Schlange) – Tödliches ohne Schaden (Becher, Verbotszeichen) – Kranke heilen (heilen, gesund).",
+          "Sendung und Aufnahme (späterer Schluss): Jesus wird in den Himmel aufgenommen, zum Strahlenkranz (Gott); er sagt den Jüngern: «Geht hin in die ganze Welt und verkündigt das Evangelium der ganzen Schöpfung.» (Welt, verkündigen); sie ziehen aus (ausbreiten)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Prüfung Struktur zuerst",
+      "previous": {
+        "interpretation_note_de": "Vier Felder für den längeren Schluss ([[MRK.16.9-MRK.16.20]]), weil die Reihe der Zeichen vollständig bleibt: drei Erscheinungen mit dem Unglauben der Jünger, der Auftrag mit beiden Zweigen, die fünf Zeichen (Zusage, kein Bericht) und die Aufnahme in den Himmel mit der Aussendung. [[MRK.16.9-MRK.16.20]] ist der längere, spätere Schluss: In den ältesten vollständig erhaltenen Handschriften endet das Evangelium mit [[MRK.16.8]]; die Arbeitsübersetzung setzt ihn in Doppelklammern ⟦ ⟧, die App zeigt die Lesarten. Gott ist als Strahlenkranz gezeichnet.",
+        "basis": [
+          {
+            "record": "TU-MRK-016-009-020",
+            "field": "summary",
+            "fingerprint": "e5e39a9cd12c14c1"
+          },
+          {
+            "record": "TRANS-MRK-016-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.16.9-MRK.16.14",
+            "fingerprint": "9d07285375ecc219"
+          },
+          {
+            "record": "TRANS-MRK-016-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.16.15-MRK.16.16",
+            "fingerprint": "fea51f9dc4d03836"
+          },
+          {
+            "record": "TRANS-MRK-016-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.16.17-MRK.16.18",
+            "fingerprint": "dc1f33287f151e12"
+          },
+          {
+            "record": "TRANS-MRK-016-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.16.19-MRK.16.20",
+            "fingerprint": "e745fae74d940678"
+          }
         ]
       }
     }

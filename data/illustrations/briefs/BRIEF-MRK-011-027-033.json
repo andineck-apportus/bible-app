@@ -11,11 +11,9 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MRK.11.27-MRK.11.28",
+      "reference": "MRK.11.27-MRK.11.30",
       "figures": [
-        "FIG-ROLLE-HOHEPRIESTER",
-        "FIG-ROLLE-SCHRIFTGELEHRTER",
-        "FIG-ROLLE-AELTESTER",
+        "FIG-GRUPPE-HOHER-RAT",
         "FIG-JESUS"
       ],
       "objects": [
@@ -24,132 +22,166 @@
       "signs": [],
       "speech": [
         {
-          "from": "FIG-ROLLE-HOHEPRIESTER",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-ZEICHEN-VOLLMACHT",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
+          "from": "FIG-JESUS",
+          "to": "FIG-GRUPPE-HOHER-RAT",
+          "icons": [],
+          "word": {
+            "de": "Die Taufe des Johannes: War sie vom Himmel oder von Menschen? Antwortet mir!",
+            "gsw": "D Taufi vom Johannes: Isch si vom Himmel gsii oder vo Mänsche? Gänd mir Antwort!"
+          }
         }
       ],
-      "action_de": "Im Tempel kommen die Hohepriester, Schriftgelehrten und Ältesten zu Jesus: In welcher Vollmacht tust du das? Wer hat sie dir gegeben?",
+      "action_de": "Im Tempel fragen die Hohepriester, Schriftgelehrten und Ältesten: «In welcher Vollmacht tust du das?» Jesus fragt zurück: «Die Taufe des Johannes: War sie vom Himmel oder von Menschen? Antwortet mir!»",
+      "keywords": {
+        "de": "In welcher Vollmacht tust du das?",
+        "gsw": "Mit was für ere Vollmacht machsch du das?"
+      },
       "stage": {
-        "mood": {
-          "FIG-ROLLE-HOHEPRIESTER": "earnest",
-          "FIG-ROLLE-SCHRIFTGELEHRTER": "earnest",
-          "FIG-ROLLE-AELTESTER": "earnest"
-        },
         "back_side": "left",
-        "before": true
+        "before": true,
+        "mood": {
+          "FIG-GRUPPE-HOHER-RAT": "earnest",
+          "FIG-JESUS": "calm"
+        },
+        "x": {
+          "FIG-GRUPPE-HOHER-RAT": 56,
+          "FIG-JESUS": 146
+        }
       }
     },
     {
       "n": 2,
-      "reference": "MRK.11.29-MRK.11.30",
-      "figures": [
-        "FIG-ROLLE-HOHEPRIESTER",
-        "FIG-ROLLE-SCHRIFTGELEHRTER",
-        "FIG-JESUS"
-      ],
+      "reference": "MRK.11.31-MRK.11.32",
+      "figures": [],
       "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-HOHEPRIESTER",
+      "speech": [],
+      "action_de": "Sie überlegen miteinander: Sagen wir «vom Himmel», wird er sagen: «Warum habt ihr ihm dann nicht geglaubt?» Sagen wir «von Menschen»? – sie fürchten die Menge, denn alle halten Johannes für einen Propheten.",
+      "keywords": {
+        "de": "Sie fürchteten die Menge",
+        "gsw": "Si händ Angscht gha vor de Mängi"
+      },
+      "diagram": {
+        "visual": "switch",
+        "span": 2,
+        "cond": {
+          "a": {
+            "de": "«Was sollen wir sagen?»",
+            "gsw": "«Was söled mer säge?»"
+          },
           "icons": [
-            "FIG-ZEICHEN-TAUFE",
-            "FIG-GOTT",
-            "FIG-ZEICHEN-VIELE",
+            "FIG-GRUPPE-HOHER-RAT",
             "FIG-ZEICHEN-FRAGEN"
           ]
-        }
-      ],
-      "action_de": "Jesus: Ich will euch eine Frage stellen: Die Taufe des Johannes – war sie vom Himmel oder von Menschen? Antwortet mir!",
-      "stage": {
-        "mood": {
-          "FIG-ROLLE-HOHEPRIESTER": "pensive",
-          "FIG-ROLLE-SCHRIFTGELEHRTER": "pensive"
+        },
+        "yes_label": {
+          "de": "Himmel",
+          "gsw": "Himmel"
+        },
+        "yes": {
+          "a": {
+            "de": "Dann wird er sagen: «Warum habt ihr ihm dann nicht geglaubt?»",
+            "gsw": "Dänn seit er: «Werum händ ir em dänn nöd glaubt?»"
+          },
+          "icons": [
+            "FIG-ZEICHEN-NICHT-GLAUBEN"
+          ]
+        },
+        "no_label": {
+          "de": "Menschen",
+          "gsw": "Mänsche"
+        },
+        "no": {
+          "a": {
+            "de": "Sie fürchteten die Menge; denn alle meinten von Johannes, dass er wirklich ein Prophet war.",
+            "gsw": "Si händ Angscht gha vor de Mängi; dänn alli händ vom Johannes gmeint, dass er würkli en Prophet gsii sig."
+          },
+          "icons": [
+            "FIG-GRUPPE-MENGE",
+            "FIG-ZEICHEN-FURCHT"
+          ]
         }
       }
     },
     {
       "n": 3,
-      "reference": "MRK.11.31-MRK.11.33",
+      "reference": "MRK.11.33",
       "figures": [
-        "FIG-GRUPPE-MENGE",
-        "FIG-ROLLE-HOHEPRIESTER",
-        "FIG-ROLLE-SCHRIFTGELEHRTER",
+        "FIG-GRUPPE-HOHER-RAT",
         "FIG-JESUS"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-ORT-TEMPEL"
+      ],
       "signs": [],
       "speech": [
         {
-          "from": "FIG-ROLLE-HOHEPRIESTER",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-ZEICHEN-NICHT-VERSTEHEN"
-          ]
-        },
-        {
           "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-HOHEPRIESTER",
-          "icons": [
-            "FIG-ZEICHEN-VOLLMACHT",
-            "FIG-ZEICHEN-SCHWEIGEN"
-          ]
+          "to": "FIG-GRUPPE-HOHER-RAT",
+          "icons": [],
+          "word": {
+            "de": "Auch ich sage euch nicht, in welcher Vollmacht ich das tue.",
+            "gsw": "Dänn säg au ich eu nöd, mit was für ere Vollmacht ich das mache."
+          }
         }
       ],
-      "action_de": "Sie überlegen und fürchten die Menge, denn alle halten Johannes für einen Propheten. So antworten sie: Wir wissen es nicht. Jesus: Dann sage auch ich euch nicht, in welcher Vollmacht ich das tue.",
+      "action_de": "Sie antworten Jesus: «Wir wissen es nicht.» Und Jesus sagt zu ihnen: «Auch ich sage euch nicht, in welcher Vollmacht ich das tue.»",
+      "keywords": {
+        "de": "Wir wissen es nicht",
+        "gsw": "Mir wüssed s nöd"
+      },
       "stage": {
-        "split": 1,
+        "back_side": "left",
+        "before": true,
         "mood": {
-          "FIG-ROLLE-HOHEPRIESTER": "pensive",
-          "FIG-ROLLE-SCHRIFTGELEHRTER": "pensive",
-          "FIG-GRUPPE-MENGE": "calm"
+          "FIG-GRUPPE-HOHER-RAT": "pensive",
+          "FIG-JESUS": "calm"
+        },
+        "x": {
+          "FIG-GRUPPE-HOHER-RAT": 56,
+          "FIG-JESUS": 146
         }
       }
     }
   ],
   "actions_de": [
-    "Im Tempel kommen die Hohepriester, Schriftgelehrten und Ältesten zu Jesus: In welcher Vollmacht tust du das? Wer hat sie dir gegeben?",
-    "Jesus: Ich will euch eine Frage stellen: Die Taufe des Johannes – war sie vom Himmel oder von Menschen? Antwortet mir!",
-    "Sie überlegen und fürchten die Menge, denn alle halten Johannes für einen Propheten. So antworten sie: Wir wissen es nicht. Jesus: Dann sage auch ich euch nicht, in welcher Vollmacht ich das tue."
+    "Im Tempel fragen die Hohepriester, Schriftgelehrten und Ältesten: «In welcher Vollmacht tust du das?» Jesus fragt zurück: «Die Taufe des Johannes: War sie vom Himmel oder von Menschen? Antwortet mir!»",
+    "Sie überlegen miteinander: Sagen wir «vom Himmel», wird er sagen: «Warum habt ihr ihm dann nicht geglaubt?» Sagen wir «von Menschen»? – sie fürchten die Menge, denn alle halten Johannes für einen Propheten.",
+    "Sie antworten Jesus: «Wir wissen es nicht.» Und Jesus sagt zu ihnen: «Auch ich sage euch nicht, in welcher Vollmacht ich das tue.»"
   ],
   "captions_de": [
-    "Die Frage nach der Vollmacht: Hohepriester, Schriftgelehrte und Älteste fragen Jesus, in welcher Vollmacht er handelt (Schriftrolle mit Krone, Fragezeichen).",
-    "Die Gegenfrage: Die Taufe des Johannes (Taufe) – vom Himmel oder von Menschen? (Strahlenkranz, Menschen, Fragezeichen)",
-    "Keine Antwort: Aus Furcht vor der Menge (gestrichelte Linie) sagen sie: Wir wissen es nicht (Nebel mit Fragezeichen); Jesus: Dann sage ich euch meine Vollmacht auch nicht (Schriftrolle mit Krone, Gesicht mit Finger vor dem Mund)."
+    "Die Vollmachtsfrage: Die Führer (Hoher Rat: Hohepriester, Schriftgelehrte, Älteste) fragen (Band); Jesus fragt zurück: «Die Taufe des Johannes: War sie vom Himmel oder von Menschen? Antwortet mir!» (Taufe, Johannes).",
+    "Ihre Überlegung (Weiche): «Was sollen wir sagen?» (Hoher Rat, fragen) – Himmel → «Warum habt ihr ihm dann nicht geglaubt?» (nicht glauben) – Menschen → sie fürchten die Menge (Menge, Furcht).",
+    "Keine Antwort: Die Führer sagen: «Wir wissen es nicht» (Band); Jesus: «Auch ich sage euch nicht, in welcher Vollmacht ich das tue.» (Vollmacht, schweigen)."
   ],
-  "interpretation_note_de": "Hohepriester, Schriftgelehrte und Älteste sind je durch eine Figur vertreten; sie stehen für mehrere. «Vom Himmel» meint von Gott; dafür steht der Strahlenkranz. Dass sie untereinander überlegen ([[MRK.11.31-MRK.11.32]]), ist nur mit der Menge, der Linie und dem besorgten Ausdruck angedeutet.",
+  "interpretation_note_de": "Drei Felder nach «Frage – Gegenfrage – Überlegung – Antwort – Verweigerung» ([[MRK.11.27-MRK.11.33]]): Hohepriester, Schriftgelehrte und Älteste als eine Gruppe (Hoher Rat). Ihre Überlegung ist als Weiche mit beiden Zweigen gezeigt; sie bleibt eine Überlegung, keine Antwort.",
   "basis": [
     {
       "record": "TU-MRK-011-027-033",
       "field": "summary",
-      "fingerprint": "ccb5ad351afb2cd6"
+      "fingerprint": "934ec4dd39c54c8f"
     },
     {
       "record": "TRANS-MRK-011-001-033-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.11.27-MRK.11.28",
-      "fingerprint": "40f9a12d8441d7dc"
+      "reference": "MRK.11.27-MRK.11.30",
+      "fingerprint": "0652755087c13357"
     },
     {
       "record": "TRANS-MRK-011-001-033-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.11.29-MRK.11.30",
-      "fingerprint": "b29c3c3b0467d2c3"
+      "reference": "MRK.11.31-MRK.11.32",
+      "fingerprint": "43a6e2d7276a60b2"
     },
     {
       "record": "TRANS-MRK-011-001-033-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MRK.11.31-MRK.11.33",
-      "fingerprint": "e39b3f9bc266a315"
+      "reference": "MRK.11.33",
+      "fingerprint": "a93cff2cc9868e47"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -391,6 +423,487 @@
           "Die Frage nach der Vollmacht: Hohepriester, Schriftgelehrte und Älteste fragen Jesus, in welcher Vollmacht er handelt (Zepter, Fragezeichen).",
           "Die Gegenfrage: Die Taufe des Johannes (Taufe) – vom Himmel oder von Menschen? (Strahlenkranz, Menschen, Fragezeichen)",
           "Keine Antwort: Aus Furcht vor der Menge (gestrichelte Linie) sagen sie: Wir wissen es nicht (Nebel mit Fragezeichen); Jesus: Dann sage ich euch meine Vollmacht auch nicht (Zepter, durchgestrichene Sprechblase)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MRK-011-027-033",
+            "field": "summary",
+            "fingerprint": "ccb5ad351afb2cd6"
+          },
+          {
+            "record": "TRANS-MRK-011-001-033-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.11.27-MRK.11.28",
+            "fingerprint": "40f9a12d8441d7dc"
+          },
+          {
+            "record": "TRANS-MRK-011-001-033-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.11.29-MRK.11.30",
+            "fingerprint": "b29c3c3b0467d2c3"
+          },
+          {
+            "record": "TRANS-MRK-011-001-033-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.11.31-MRK.11.33",
+            "fingerprint": "e39b3f9bc266a315"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.11.27-MRK.11.28",
+            "figures": [
+              "FIG-ROLLE-HOHEPRIESTER",
+              "FIG-ROLLE-SCHRIFTGELEHRTER",
+              "FIG-ROLLE-AELTESTER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-HOHEPRIESTER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-VOLLMACHT",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Im Tempel kommen die Hohepriester, Schriftgelehrten und Ältesten zu Jesus: In welcher Vollmacht tust du das? Wer hat sie dir gegeben?",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-HOHEPRIESTER": "earnest",
+                "FIG-ROLLE-SCHRIFTGELEHRTER": "earnest",
+                "FIG-ROLLE-AELTESTER": "earnest"
+              },
+              "back_side": "left",
+              "before": true
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.11.29-MRK.11.30",
+            "figures": [
+              "FIG-ROLLE-HOHEPRIESTER",
+              "FIG-ROLLE-SCHRIFTGELEHRTER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-HOHEPRIESTER",
+                "icons": [
+                  "FIG-ZEICHEN-TAUFE",
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-VIELE",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus: Ich will euch eine Frage stellen: Die Taufe des Johannes – war sie vom Himmel oder von Menschen? Antwortet mir!",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-HOHEPRIESTER": "pensive",
+                "FIG-ROLLE-SCHRIFTGELEHRTER": "pensive"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.11.31-MRK.11.33",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-ROLLE-HOHEPRIESTER",
+              "FIG-ROLLE-SCHRIFTGELEHRTER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-HOHEPRIESTER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-NICHT-VERSTEHEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-HOHEPRIESTER",
+                "icons": [
+                  "FIG-ZEICHEN-VOLLMACHT",
+                  "FIG-ZEICHEN-SCHWEIGEN"
+                ]
+              }
+            ],
+            "action_de": "Sie überlegen und fürchten die Menge, denn alle halten Johannes für einen Propheten. So antworten sie: Wir wissen es nicht. Jesus: Dann sage auch ich euch nicht, in welcher Vollmacht ich das tue.",
+            "stage": {
+              "split": 1,
+              "mood": {
+                "FIG-ROLLE-HOHEPRIESTER": "pensive",
+                "FIG-ROLLE-SCHRIFTGELEHRTER": "pensive",
+                "FIG-GRUPPE-MENGE": "calm"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Im Tempel kommen die Hohepriester, Schriftgelehrten und Ältesten zu Jesus: In welcher Vollmacht tust du das? Wer hat sie dir gegeben?",
+          "Jesus: Ich will euch eine Frage stellen: Die Taufe des Johannes – war sie vom Himmel oder von Menschen? Antwortet mir!",
+          "Sie überlegen und fürchten die Menge, denn alle halten Johannes für einen Propheten. So antworten sie: Wir wissen es nicht. Jesus: Dann sage auch ich euch nicht, in welcher Vollmacht ich das tue."
+        ],
+        "captions_de": [
+          "Die Frage nach der Vollmacht: Hohepriester, Schriftgelehrte und Älteste fragen Jesus, in welcher Vollmacht er handelt (Schriftrolle mit Krone, Fragezeichen).",
+          "Die Gegenfrage: Die Taufe des Johannes (Taufe) – vom Himmel oder von Menschen? (Strahlenkranz, Menschen, Fragezeichen)",
+          "Keine Antwort: Aus Furcht vor der Menge (gestrichelte Linie) sagen sie: Wir wissen es nicht (Nebel mit Fragezeichen); Jesus: Dann sage ich euch meine Vollmacht auch nicht (Schriftrolle mit Krone, Gesicht mit Finger vor dem Mund)."
+        ],
+        "interpretation_note_de": "Hohepriester, Schriftgelehrte und Älteste sind je durch eine Figur vertreten; sie stehen für mehrere. «Vom Himmel» meint von Gott; dafür steht der Strahlenkranz. Dass sie untereinander überlegen ([[MRK.11.31-MRK.11.32]]), ist nur mit der Menge, der Linie und dem besorgten Ausdruck angedeutet.",
+        "basis": [
+          {
+            "record": "TU-MRK-011-027-033",
+            "field": "summary",
+            "fingerprint": "934ec4dd39c54c8f"
+          },
+          {
+            "record": "TRANS-MRK-011-001-033-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.11.27-MRK.11.28",
+            "fingerprint": "40f9a12d8441d7dc"
+          },
+          {
+            "record": "TRANS-MRK-011-001-033-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.11.29-MRK.11.30",
+            "fingerprint": "b29c3c3b0467d2c3"
+          },
+          {
+            "record": "TRANS-MRK-011-001-033-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MRK.11.31-MRK.11.33",
+            "fingerprint": "e39b3f9bc266a315"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.11.27-MRK.11.30",
+            "figures": [
+              "FIG-GRUPPE-HOHER-RAT",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-HOHER-RAT",
+                "to": "FIG-JESUS",
+                "icons": [],
+                "word": {
+                  "de": "In welcher Vollmacht tust du das?",
+                  "gsw": "Mit was für ere Vollmacht machsch du das?"
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-HOHER-RAT",
+                "icons": [],
+                "word": {
+                  "de": "Die Taufe des Johannes: War sie vom Himmel oder von Menschen? Antwortet mir!",
+                  "gsw": "D Taufi vom Johannes: Isch si vom Himmel gsii oder vo Mänsche? Gänd mir Antwort!"
+                }
+              }
+            ],
+            "action_de": "Im Tempel fragen die Hohepriester, Schriftgelehrten und Ältesten: «In welcher Vollmacht tust du das?» Jesus fragt zurück: «Die Taufe des Johannes: War sie vom Himmel oder von Menschen? Antwortet mir!»",
+            "keywords": {
+              "de": "Oder wer hat dir diese Vollmacht gegeben",
+              "gsw": "Oder wär hät dir die Vollmacht gää"
+            },
+            "stage": {
+              "back_side": "left",
+              "before": true,
+              "mood": {
+                "FIG-GRUPPE-HOHER-RAT": "earnest",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-HOHER-RAT": 56,
+                "FIG-JESUS": 146
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.11.31-MRK.11.32",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Sie überlegen miteinander: Sagen wir «vom Himmel», wird er sagen: «Warum habt ihr ihm dann nicht geglaubt?» Sagen wir «von Menschen»? – sie fürchten die Menge, denn alle halten Johannes für einen Propheten.",
+            "keywords": {
+              "de": "Sie fürchteten die Menge",
+              "gsw": "Si händ Angscht gha vor de Mängi"
+            },
+            "diagram": {
+              "visual": "switch",
+              "span": 2,
+              "cond": {
+                "a": {
+                  "de": "«Was sollen wir sagen?»",
+                  "gsw": "«Was söled mer säge?»"
+                },
+                "icons": [
+                  "FIG-GRUPPE-HOHER-RAT",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              "yes_label": {
+                "de": "«Vom Himmel»",
+                "gsw": "«Vom Himmel»"
+              },
+              "yes": {
+                "a": {
+                  "de": "Dann wird er sagen: «Warum habt ihr ihm dann nicht geglaubt?»",
+                  "gsw": "Dänn seit er: «Werum händ ir em dänn nöd glaubt?»"
+                },
+                "icons": [
+                  "FIG-ZEICHEN-NICHT-GLAUBEN"
+                ]
+              },
+              "no_label": {
+                "de": "«Von Menschen»",
+                "gsw": "«Vo Mänsche»"
+              },
+              "no": {
+                "a": {
+                  "de": "Sie fürchteten die Menge; denn alle meinten von Johannes, dass er wirklich ein Prophet war.",
+                  "gsw": "Si händ Angscht gha vor de Mängi; dänn alli händ vom Johannes gmeint, dass er würkli en Prophet gsii sig."
+                },
+                "icons": [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-ZEICHEN-FURCHT"
+                ]
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.11.33",
+            "figures": [
+              "FIG-GRUPPE-HOHER-RAT",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-HOHER-RAT",
+                "icons": [],
+                "word": {
+                  "de": "Auch ich sage euch nicht, in welcher Vollmacht ich das tue.",
+                  "gsw": "Dänn säg au ich eu nöd, mit was für ere Vollmacht ich das mache."
+                }
+              }
+            ],
+            "action_de": "Sie antworten Jesus: «Wir wissen es nicht.» Und Jesus sagt zu ihnen: «Auch ich sage euch nicht, in welcher Vollmacht ich das tue.»",
+            "keywords": {
+              "de": "Wir wissen es nicht",
+              "gsw": "Mir wüssed s nöd"
+            },
+            "stage": {
+              "back_side": "left",
+              "before": true,
+              "mood": {
+                "FIG-GRUPPE-HOHER-RAT": "pensive",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-HOHER-RAT": 56,
+                "FIG-JESUS": 146
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Die Vollmachtsfrage: Die Führer (Hoher Rat: Hohepriester, Schriftgelehrte, Älteste) fragen: «In welcher Vollmacht tust du das?»; Jesus fragt zurück nach der Taufe des Johannes (Taufe, Johannes).",
+          "Ihre Überlegung (Weiche): «Was sollen wir sagen?» (Hoher Rat, fragen) – «Vom Himmel» → «Warum habt ihr ihm dann nicht geglaubt?» (nicht glauben) – «Von Menschen» → sie fürchten die Menge (Menge, Furcht).",
+          "Keine Antwort: Die Führer sagen: «Wir wissen es nicht» (Band); Jesus: «Auch ich sage euch nicht, in welcher Vollmacht ich das tue.» (Vollmacht, schweigen)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.11.27-MRK.11.30",
+            "figures": [
+              "FIG-GRUPPE-HOHER-RAT",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-HOHER-RAT",
+                "icons": [],
+                "word": {
+                  "de": "Die Taufe des Johannes: War sie vom Himmel oder von Menschen? Antwortet mir!",
+                  "gsw": "D Taufi vom Johannes: Isch si vom Himmel gsii oder vo Mänsche? Gänd mir Antwort!"
+                }
+              }
+            ],
+            "action_de": "Im Tempel fragen die Hohepriester, Schriftgelehrten und Ältesten: «In welcher Vollmacht tust du das?» Jesus fragt zurück: «Die Taufe des Johannes: War sie vom Himmel oder von Menschen? Antwortet mir!»",
+            "keywords": {
+              "de": "In welcher Vollmacht tust du das?",
+              "gsw": "Mit was für ere Vollmacht machsch du das?"
+            },
+            "stage": {
+              "back_side": "left",
+              "before": true,
+              "mood": {
+                "FIG-GRUPPE-HOHER-RAT": "earnest",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-HOHER-RAT": 56,
+                "FIG-JESUS": 146
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.11.31-MRK.11.32",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Sie überlegen miteinander: Sagen wir «vom Himmel», wird er sagen: «Warum habt ihr ihm dann nicht geglaubt?» Sagen wir «von Menschen»? – sie fürchten die Menge, denn alle halten Johannes für einen Propheten.",
+            "keywords": {
+              "de": "Sie fürchteten die Menge",
+              "gsw": "Si händ Angscht gha vor de Mängi"
+            },
+            "diagram": {
+              "visual": "switch",
+              "span": 2,
+              "cond": {
+                "a": {
+                  "de": "«Was sollen wir sagen?»",
+                  "gsw": "«Was söled mer säge?»"
+                },
+                "icons": [
+                  "FIG-GRUPPE-HOHER-RAT",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              "yes_label": {
+                "de": "«Vom Himmel»",
+                "gsw": "«Vom Himmel»"
+              },
+              "yes": {
+                "a": {
+                  "de": "Dann wird er sagen: «Warum habt ihr ihm dann nicht geglaubt?»",
+                  "gsw": "Dänn seit er: «Werum händ ir em dänn nöd glaubt?»"
+                },
+                "icons": [
+                  "FIG-ZEICHEN-NICHT-GLAUBEN"
+                ]
+              },
+              "no_label": {
+                "de": "«Von Menschen»",
+                "gsw": "«Vo Mänsche»"
+              },
+              "no": {
+                "a": {
+                  "de": "Sie fürchteten die Menge; denn alle meinten von Johannes, dass er wirklich ein Prophet war.",
+                  "gsw": "Si händ Angscht gha vor de Mängi; dänn alli händ vom Johannes gmeint, dass er würkli en Prophet gsii sig."
+                },
+                "icons": [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-ZEICHEN-FURCHT"
+                ]
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.11.33",
+            "figures": [
+              "FIG-GRUPPE-HOHER-RAT",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-HOHER-RAT",
+                "icons": [],
+                "word": {
+                  "de": "Auch ich sage euch nicht, in welcher Vollmacht ich das tue.",
+                  "gsw": "Dänn säg au ich eu nöd, mit was für ere Vollmacht ich das mache."
+                }
+              }
+            ],
+            "action_de": "Sie antworten Jesus: «Wir wissen es nicht.» Und Jesus sagt zu ihnen: «Auch ich sage euch nicht, in welcher Vollmacht ich das tue.»",
+            "keywords": {
+              "de": "Wir wissen es nicht",
+              "gsw": "Mir wüssed s nöd"
+            },
+            "stage": {
+              "back_side": "left",
+              "before": true,
+              "mood": {
+                "FIG-GRUPPE-HOHER-RAT": "pensive",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-HOHER-RAT": 56,
+                "FIG-JESUS": 146
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Die Vollmachtsfrage: Die Führer (Hoher Rat: Hohepriester, Schriftgelehrte, Älteste) fragen (Band); Jesus fragt zurück: «Die Taufe des Johannes: War sie vom Himmel oder von Menschen? Antwortet mir!» (Taufe, Johannes).",
+          "Ihre Überlegung (Weiche): «Was sollen wir sagen?» (Hoher Rat, fragen) – «Vom Himmel» → «Warum habt ihr ihm dann nicht geglaubt?» (nicht glauben) – «Von Menschen» → sie fürchten die Menge (Menge, Furcht).",
+          "Keine Antwort: Die Führer sagen: «Wir wissen es nicht» (Band); Jesus: «Auch ich sage euch nicht, in welcher Vollmacht ich das tue.» (Vollmacht, schweigen)."
         ]
       }
     }

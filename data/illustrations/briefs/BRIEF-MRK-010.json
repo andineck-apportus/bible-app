@@ -11,8 +11,9 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MRK.10.13-MRK.10.16",
+      "reference": "MRK.10.1-MRK.10.16",
       "figures": [
+        "FIG-GRUPPE-JUENGER",
         "FIG-JESUS",
         "FIG-GRUPPE-KINDER"
       ],
@@ -20,17 +21,23 @@
       "signs": [
         "FIG-ZEICHEN-SEGNEN"
       ],
-      "speech": [],
-      "action_de": "Jesus nimmt die Kinder in die Arme und segnet sie: Ihnen gehört das Reich Gottes.",
+      "speech": [
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-GRUPPE-JUENGER",
+          "icons": [],
+          "word": {
+            "de": "Lasst die Kinder zu mir kommen; hindert sie nicht!",
+            "gsw": "Lönd d Chind zu mir choo; hindered si nöd!"
+          }
+        }
+      ],
+      "action_de": "Jesus lehrt über die Ehe: «Was nun Gott zusammengefügt hat, soll der Mensch nicht trennen»; als die Jünger die Kinder abweisen, sagt er: «Lasst die Kinder zu mir kommen; hindert sie nicht!» und segnet sie.",
+      "keywords": {
+        "de": "Was nun Gott zusammengefügt hat, soll der Mensch nicht trennen",
+        "gsw": "Was also Gott zämegfüegt hät, söll de Mänsch nöd trenne"
+      },
       "stage": {
-        "mood": {
-          "FIG-JESUS": "smile",
-          "FIG-GRUPPE-KINDER": "delight"
-        },
-        "x": {
-          "FIG-JESUS": 70,
-          "FIG-GRUPPE-KINDER": 122
-        },
         "at": {
           "FIG-ZEICHEN-SEGNEN": "FIG-GRUPPE-KINDER"
         },
@@ -40,35 +47,64 @@
             "FIG-GRUPPE-KINDER",
             "act"
           ]
-        ]
+        ],
+        "mood": {
+          "FIG-GRUPPE-JUENGER": "surprised",
+          "FIG-JESUS": "earnest",
+          "FIG-GRUPPE-KINDER": "calm"
+        },
+        "x": {
+          "FIG-GRUPPE-JUENGER": 30,
+          "FIG-JESUS": 96,
+          "FIG-GRUPPE-KINDER": 156
+        }
       }
     },
     {
       "n": 2,
-      "reference": "MRK.10.17-MRK.10.22",
+      "reference": "MRK.10.17-MRK.10.31",
       "figures": [
-        "FIG-ROLLE-REICHER",
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-ROLLE-REICHER"
       ],
       "objects": [],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-TRAUER"
+      ],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-ROLLE-REICHER",
           "icons": [
-            "FIG-OBJ-MUENZEN",
-            "FIG-ZEICHEN-GEBEN",
-            "FIG-GRUPPE-ARME",
-            "FIG-ZEICHEN-SCHATZ",
-            "FIG-ZEICHEN-NACHFOLGEN"
-          ]
+            "FIG-GRUPPE-ARME"
+          ],
+          "word": {
+            "de": "Eines fehlt dir: Geh, verkaufe, was du hast, und gib es den Armen, und du wirst einen Schatz im Himmel haben; und komm, folge mir nach!",
+            "gsw": "Eis fehlt dir: Gang, verchauf, was du häsch, und gib s de Arme, und du wirsch en Schatz im Himmel ha; und chumm, folg mir nache!"
+          }
         }
       ],
-      "action_de": "Ein reicher Mann fragt nach dem ewigen Leben; Jesus lädt ihn ein, alles zu verkaufen, den Armen zu geben und ihm zu folgen. Er geht traurig weg.",
+      "action_de": "Jesus sagt zu dem Mann: «Eines fehlt dir: Geh, verkaufe, was du hast, und gib es den Armen, und du wirst einen Schatz im Himmel haben; und komm, folge mir nach!» Er aber geht traurig davon, denn er hat viele Güter.",
+      "keywords": {
+        "de": "denn alles ist möglich bei Gott",
+        "gsw": "alles isch nämli möglich bi Gott"
+      },
       "stage": {
+        "pose": {
+          "FIG-ROLLE-REICHER": "away"
+        },
+        "signs_who": {
+          "FIG-ZEICHEN-TRAUER": [
+            "FIG-ROLLE-REICHER"
+          ]
+        },
         "mood": {
-          "FIG-ROLLE-REICHER": "surprised"
+          "FIG-JESUS": "calm",
+          "FIG-ROLLE-REICHER": "worried"
+        },
+        "x": {
+          "FIG-JESUS": 56,
+          "FIG-ROLLE-REICHER": 140
         }
       }
     },
@@ -76,28 +112,38 @@
       "n": 3,
       "reference": "MRK.10.32-MRK.10.45",
       "figures": [
-        "FIG-GRUPPE-ZWOELF",
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-GRUPPE-ZWOELF"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-ORT-JERUSALEM"
+      ],
       "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ROLLE-DIENER",
-            "FIG-ZEICHEN-TOD",
-            "FIG-ZEICHEN-LOESEN",
-            "FIG-ZEICHEN-VIELE"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Denn auch der Menschensohn ist nicht gekommen, um sich dienen zu lassen, sondern um zu dienen und sein Leben zu geben als Lösegeld für viele.",
+            "gsw": "Dänn au de Mänschesohn isch nöd choo, zum sich la diene, sondern zum diene und zum sis Läbe gää als Lösgält für vili."
+          }
         }
       ],
-      "action_de": "Auf dem Weg nach Jerusalem kündigt Jesus sein Leiden an. Den Jüngern, die um Ehrenplätze streiten, sagt er: Wer gross sein will, soll dienen; der Menschensohn gibt sein Leben als Lösegeld für viele.",
+      "action_de": "Jesus ruft die Zwölf zu sich und sagt: «Denn auch der Menschensohn ist nicht gekommen, um sich dienen zu lassen, sondern um zu dienen und sein Leben zu geben als Lösegeld für viele.»",
+      "keywords": {
+        "de": "Siehe, wir ziehen hinauf nach Jerusalem",
+        "gsw": "Lueged, mir gönd ufe uf Jerusalem"
+      },
       "stage": {
+        "back_side": "right",
         "mood": {
+          "FIG-JESUS": "earnest",
           "FIG-GRUPPE-ZWOELF": "pensive"
+        },
+        "x": {
+          "FIG-JESUS": 40,
+          "FIG-GRUPPE-ZWOELF": 110
         }
       }
     },
@@ -105,63 +151,78 @@
       "n": 4,
       "reference": "MRK.10.46-MRK.10.52",
       "figures": [
-        "FIG-BARTIMAEUS",
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-BARTIMAEUS"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-ORT-WEG"
+      ],
       "signs": [
-        "FIG-ZEICHEN-FREUDE",
+        "FIG-ZEICHEN-SEHEN",
         "FIG-ZEICHEN-NACHFOLGEN"
       ],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-BARTIMAEUS",
-          "icons": [
-            "FIG-ZEICHEN-GLAUBEN",
-            "FIG-ZEICHEN-HEILEN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Geh, dein Glaube hat dich gerettet!",
+            "gsw": "Gang, din Glaube hät dich grettet!"
+          }
         }
       ],
-      "action_de": "In Jericho heilt Jesus den blinden Bartimäus: Dein Glaube hat dich gerettet. Er sieht und folgt Jesus auf dem Weg.",
+      "action_de": "Jesus sagt zu Bartimäus: «Geh, dein Glaube hat dich gerettet!» Und sogleich sieht er wieder und folgt ihm nach auf dem Weg.",
+      "keywords": {
+        "de": "und er folgte ihm nach auf dem Weg",
+        "gsw": "und er isch ihm nachegfolget uf em Wäg"
+      },
+      "names": {
+        "FIG-BARTIMAEUS": {
+          "de": "Bartimäus",
+          "gsw": "Bartimäus"
+        }
+      },
       "stage": {
-        "signs_who": {
-          "FIG-ZEICHEN-FREUDE": [
-            "FIG-BARTIMAEUS"
-          ]
-        },
         "at": {
+          "FIG-ZEICHEN-SEHEN": "FIG-BARTIMAEUS"
+        },
+        "beside": {
           "FIG-ZEICHEN-NACHFOLGEN": "FIG-BARTIMAEUS"
         },
         "mood": {
-          "FIG-BARTIMAEUS": "delight",
-          "FIG-JESUS": "smile"
+          "FIG-JESUS": "smile",
+          "FIG-BARTIMAEUS": "calm"
+        },
+        "x": {
+          "FIG-JESUS": 60,
+          "FIG-BARTIMAEUS": 130
         }
       }
     }
   ],
   "actions_de": [
-    "Jesus nimmt die Kinder in die Arme und segnet sie: Ihnen gehört das Reich Gottes.",
-    "Ein reicher Mann fragt nach dem ewigen Leben; Jesus lädt ihn ein, alles zu verkaufen, den Armen zu geben und ihm zu folgen. Er geht traurig weg.",
-    "Auf dem Weg nach Jerusalem kündigt Jesus sein Leiden an. Den Jüngern, die um Ehrenplätze streiten, sagt er: Wer gross sein will, soll dienen; der Menschensohn gibt sein Leben als Lösegeld für viele.",
-    "In Jericho heilt Jesus den blinden Bartimäus: Dein Glaube hat dich gerettet. Er sieht und folgt Jesus auf dem Weg."
+    "Jesus lehrt über die Ehe: «Was nun Gott zusammengefügt hat, soll der Mensch nicht trennen»; als die Jünger die Kinder abweisen, sagt er: «Lasst die Kinder zu mir kommen; hindert sie nicht!» und segnet sie.",
+    "Jesus sagt zu dem Mann: «Eines fehlt dir: Geh, verkaufe, was du hast, und gib es den Armen, und du wirst einen Schatz im Himmel haben; und komm, folge mir nach!» Er aber geht traurig davon, denn er hat viele Güter.",
+    "Jesus ruft die Zwölf zu sich und sagt: «Denn auch der Menschensohn ist nicht gekommen, um sich dienen zu lassen, sondern um zu dienen und sein Leben zu geben als Lösegeld für viele.»",
+    "Jesus sagt zu Bartimäus: «Geh, dein Glaube hat dich gerettet!» Und sogleich sieht er wieder und folgt ihm nach auf dem Weg."
   ],
   "captions_de": [
-    "Jesus → Kinder: Jesus segnet die Kinder (Bogen von Jesus zu den Kindern, segnende Hand über ihnen).",
-    "Der Reiche (edles Gewand, Geldbeutel): Verkaufe, gib den Armen (Münzen, offene Hände, Menschen), dann hast du einen Schatz im Himmel (Edelstein); folge mir (zwei gehende Personen).",
-    "Dienen: Jesus ist gekommen, um zu dienen und sein Leben als Lösegeld für viele zu geben (Jesus, Diener, Totenkopf, gesprengte Kette, Menschen).",
-    "Glaube → Rettung: Dein Glaube hat dich gerettet (Herz mit Licht, Pfeil nach oben); er sieht und folgt Jesus (Freude, zwei gehende Personen)."
+    "Ehe und Kinder: Jesus segnet die Kinder (segnen): «Lasst die Kinder zu mir kommen; hindert sie nicht!»; das Band nennt sein Wort über die Ehe.",
+    "Eines fehlt dir: Jesus ruft den Mann in die Nachfolge (Arme, Schatz); der Mann wendet sich traurig ab (Trauer).",
+    "Dienen: Jesus spricht zu den Zwölf: «Denn auch der Menschensohn ist nicht gekommen, um sich dienen zu lassen, sondern um zu dienen und sein Leben zu geben als Lösegeld für viele.» (Diener, Lösegeld).",
+    "Er sieht: Jesus zu Bartimäus (Name): «Geh, dein Glaube hat dich gerettet!»; der Geheilte sieht wieder (sehen) und folgt ihm nach auf dem Weg (nachfolgen)."
   ],
-  "interpretation_note_de": "Je ein Feld zu Kindersegnung, dem reichen Mann, dem Weg nach Jerusalem mit Leidensankündigung und Rangstreit sowie Bartimäus; das Gespräch über Ehe und Scheidung ([[MRK.10.1-MRK.10.12]]) ist nur im Abschnittsbild gezeichnet.",
+  "interpretation_note_de": "Vier Comic-Szenen für sechs Abschnitte ([[MRK.10.1-MRK.10.52]]): Feld 1 bündelt das Wort über die Ehe (im Band) und den Segen der Kinder; Feld 2 den Mann mit vielen Gütern; Feld 3 bündelt die dritte Leidensankündigung auf dem Weg nach Jerusalem (im Band) und das Wort vom Dienen; Feld 4 Bartimäus, der ihm auf dem Weg nachfolgt. «Menschensohn» versteht das Bild als Jesus (Deutung). Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-MRK-010",
       "field": "summary",
-      "fingerprint": "f7263f1875dff32d"
+      "fingerprint": "8a7023d9b557e67a"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -765,6 +826,165 @@
           "Dienen: Jesus ist gekommen, um zu dienen und sein Leben als Lösegeld für viele zu geben (Jesus, Diener, Grab, gesprengte Kette, Menschen).",
           "Glaube → Rettung: Dein Glaube hat dich gerettet (Herz mit Licht, Pfeil nach oben); er sieht und folgt Jesus (Freude, Fussspuren)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MRK.10.13-MRK.10.16",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-KINDER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-SEGNEN"
+            ],
+            "speech": [],
+            "action_de": "Jesus nimmt die Kinder in die Arme und segnet sie: Ihnen gehört das Reich Gottes.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "smile",
+                "FIG-GRUPPE-KINDER": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 70,
+                "FIG-GRUPPE-KINDER": 122
+              },
+              "at": {
+                "FIG-ZEICHEN-SEGNEN": "FIG-GRUPPE-KINDER"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-KINDER",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MRK.10.17-MRK.10.22",
+            "figures": [
+              "FIG-ROLLE-REICHER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-REICHER",
+                "icons": [
+                  "FIG-OBJ-MUENZEN",
+                  "FIG-ZEICHEN-GEBEN",
+                  "FIG-GRUPPE-ARME",
+                  "FIG-ZEICHEN-SCHATZ",
+                  "FIG-ZEICHEN-NACHFOLGEN"
+                ]
+              }
+            ],
+            "action_de": "Ein reicher Mann fragt nach dem ewigen Leben; Jesus lädt ihn ein, alles zu verkaufen, den Armen zu geben und ihm zu folgen. Er geht traurig weg.",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-REICHER": "surprised"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MRK.10.32-MRK.10.45",
+            "figures": [
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-DIENER",
+                  "FIG-ZEICHEN-TOD",
+                  "FIG-ZEICHEN-LOESEN",
+                  "FIG-ZEICHEN-VIELE"
+                ]
+              }
+            ],
+            "action_de": "Auf dem Weg nach Jerusalem kündigt Jesus sein Leiden an. Den Jüngern, die um Ehrenplätze streiten, sagt er: Wer gross sein will, soll dienen; der Menschensohn gibt sein Leben als Lösegeld für viele.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "pensive"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MRK.10.46-MRK.10.52",
+            "figures": [
+              "FIG-BARTIMAEUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE",
+              "FIG-ZEICHEN-NACHFOLGEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-BARTIMAEUS",
+                "icons": [
+                  "FIG-ZEICHEN-GLAUBEN",
+                  "FIG-ZEICHEN-HEILEN"
+                ]
+              }
+            ],
+            "action_de": "In Jericho heilt Jesus den blinden Bartimäus: Dein Glaube hat dich gerettet. Er sieht und folgt Jesus auf dem Weg.",
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-BARTIMAEUS"
+                ]
+              },
+              "at": {
+                "FIG-ZEICHEN-NACHFOLGEN": "FIG-BARTIMAEUS"
+              },
+              "mood": {
+                "FIG-BARTIMAEUS": "delight",
+                "FIG-JESUS": "smile"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus nimmt die Kinder in die Arme und segnet sie: Ihnen gehört das Reich Gottes.",
+          "Ein reicher Mann fragt nach dem ewigen Leben; Jesus lädt ihn ein, alles zu verkaufen, den Armen zu geben und ihm zu folgen. Er geht traurig weg.",
+          "Auf dem Weg nach Jerusalem kündigt Jesus sein Leiden an. Den Jüngern, die um Ehrenplätze streiten, sagt er: Wer gross sein will, soll dienen; der Menschensohn gibt sein Leben als Lösegeld für viele.",
+          "In Jericho heilt Jesus den blinden Bartimäus: Dein Glaube hat dich gerettet. Er sieht und folgt Jesus auf dem Weg."
+        ],
+        "captions_de": [
+          "Jesus → Kinder: Jesus segnet die Kinder (Bogen von Jesus zu den Kindern, segnende Hand über ihnen).",
+          "Der Reiche (edles Gewand, Geldbeutel): Verkaufe, gib den Armen (Münzen, offene Hände, Menschen), dann hast du einen Schatz im Himmel (Edelstein); folge mir (zwei gehende Personen).",
+          "Dienen: Jesus ist gekommen, um zu dienen und sein Leben als Lösegeld für viele zu geben (Jesus, Diener, Totenkopf, gesprengte Kette, Menschen).",
+          "Glaube → Rettung: Dein Glaube hat dich gerettet (Herz mit Licht, Pfeil nach oben); er sieht und folgt Jesus (Freude, zwei gehende Personen)."
+        ],
+        "interpretation_note_de": "Je ein Feld zu Kindersegnung, dem reichen Mann, dem Weg nach Jerusalem mit Leidensankündigung und Rangstreit sowie Bartimäus; das Gespräch über Ehe und Scheidung ([[MRK.10.1-MRK.10.12]]) ist nur im Abschnittsbild gezeichnet.",
+        "basis": [
+          {
+            "record": "SUM-CH-MRK-010",
+            "field": "summary",
+            "fingerprint": "f7263f1875dff32d"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

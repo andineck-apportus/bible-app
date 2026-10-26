@@ -1,0 +1,189 @@
+{
+ "id": "CORE-MRK-011-027-033",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MRK.11.27-MRK.11.33",
+ "target": "TU-MRK-011-027-033",
+ "core_de": "Im Tempel fragen die Hohepriester, Schriftgelehrten und Ältesten Jesus: «In welcher Vollmacht tust du das?»; er stellt eine Gegenfrage: «Die Taufe des Johannes: War sie vom Himmel oder von Menschen?»; sie überlegen: Sagen sie «vom Himmel», wird er fragen, warum sie Johannes nicht geglaubt haben, sagen sie «von Menschen», fürchten sie die Menge, die Johannes für einen Propheten hält; so antworten sie: «Wir wissen es nicht», und Jesus sagt: «Auch ich sage euch nicht, in welcher Vollmacht ich das tue.»",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "dialogue",
+    "subtype": "Frage – Gegenfrage – Überlegung – Antwort – Verweigerung",
+    "range": "MRK.11.27-MRK.11.33",
+    "elements": [
+     {
+      "label": "«In welcher Vollmacht tust du das? Oder wer hat dir diese Vollmacht gegeben …?»",
+      "ref": "MRK.11.27-MRK.11.28",
+      "role": "Gegner"
+     },
+     {
+      "label": "«Ich will euch eine Frage stellen … Die Taufe des Johannes: War sie vom Himmel oder von Menschen? Antwortet mir!»",
+      "ref": "MRK.11.29-MRK.11.30",
+      "role": "Jesus"
+     },
+     {
+      "label": "Überlegung",
+      "ref": "MRK.11.31-MRK.11.32",
+      "role": "Gegner unter sich",
+      "child": "s2"
+     },
+     {
+      "label": "«Wir wissen es nicht.»",
+      "ref": "MRK.11.33",
+      "role": "Gegner"
+     },
+     {
+      "label": "«Auch ich sage euch nicht, in welcher Vollmacht ich das tue.»",
+      "ref": "MRK.11.33",
+      "role": "Jesus"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "Hohepriester, Schriftgelehrte und Älteste",
+       "to": "FIG-JESUS",
+       "ref": "MRK.11.28"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "sie",
+       "ref": "MRK.11.29-MRK.11.30"
+      },
+      {
+       "who": "sie",
+       "to": "einander",
+       "ref": "MRK.11.31-MRK.11.32"
+      },
+      {
+       "who": "sie",
+       "to": "FIG-JESUS",
+       "ref": "MRK.11.33"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "sie",
+       "ref": "MRK.11.33"
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "condition",
+    "subtype": "Wenn «vom Himmel» … – wenn «von Menschen» …",
+    "range": "MRK.11.31-MRK.11.32",
+    "elements": [
+     {
+      "label": "Wenn wir sagen: «Vom Himmel»",
+      "ref": "MRK.11.31",
+      "role": "Bedingung"
+     },
+     {
+      "label": "wird er sagen: «Warum habt ihr ihm dann nicht geglaubt?»",
+      "ref": "MRK.11.31",
+      "role": "Folge"
+     },
+     {
+      "label": "Sollen wir aber sagen: «Von Menschen»?",
+      "ref": "MRK.11.32",
+      "role": "Bedingung"
+     },
+     {
+      "label": "Sie fürchteten die Menge; denn alle meinten von Johannes, dass er wirklich ein Prophet war",
+      "ref": "MRK.11.32",
+      "role": "Folge"
+     }
+    ],
+    "features": {
+     "modality": [
+      {
+       "kind": "Überlegung, keine Antwort",
+       "ref": "MRK.11.31-MRK.11.32"
+      }
+     ]
+    },
+    "visual": "switch",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MRK.11.27-MRK.11.30",
+   "text_de": "«In welcher Vollmacht tust du das?» – Gegenfrage: «Die Taufe des Johannes: War sie vom Himmel oder von Menschen? Antwortet mir!»",
+   "reason_de": "Frage und Gegenfrage (Kriterien 1 und 2).",
+   "recognition_de": "Die Führer fragen, Jesus fragt zurück.",
+   "keywords": [
+    "In welcher Vollmacht tust du das?",
+    "War sie vom Himmel oder von Menschen?"
+   ]
+  },
+  {
+   "reference": "MRK.11.31-MRK.11.32",
+   "text_de": "Sie überlegen: «Vom Himmel» → «Warum habt ihr ihm dann nicht geglaubt?»; «von Menschen» → sie fürchten die Menge.",
+   "reason_de": "Weiche ihrer Überlegung (Kriterium 2).",
+   "recognition_de": "Die Führer beraten flüsternd.",
+   "keywords": [
+    "Warum habt ihr ihm dann nicht geglaubt?",
+    "Sie fürchteten die Menge"
+   ]
+  },
+  {
+   "reference": "MRK.11.33",
+   "text_de": "«Wir wissen es nicht.» – «Auch ich sage euch nicht, in welcher Vollmacht ich das tue.»",
+   "reason_de": "Ausgang (Kriterium 3).",
+   "recognition_de": "Jesus verweigert die Antwort.",
+   "keywords": [
+    "Wir wissen es nicht",
+    "Auch ich sage euch nicht"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Der Umgang im Tempel (11,27) – Rahmen"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-HOHEPRIESTER",
+  "FIG-GRUPPE-SCHRIFTGELEHRTE",
+  "FIG-GRUPPE-AELTESTE",
+  "FIG-GRUPPE-MENGE",
+  "FIG-JOHANNES-TAEUFER"
+ ],
+ "places": [
+  "FIG-ORT-TEMPEL"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MRK.11.27-MRK.11.33",
+   "fingerprint": "04d6aeac124eeb83"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mk 9–16 und Buch nach dem Pilot Mk 5 und dem Ausrollen Matthäus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; Zusammenfassungen und Bildaufträge mitgeprüft; keine fachliche Prüfung durch eine Person",
+  "result": "bestanden",
+  "summary_de": "Dialog mit Überlegung als Weiche (beide Zweige), als Überlegung und nicht als Antwort gekennzeichnet; Verweigerung am Schluss.",
+  "changes_de": [
+   "Herkunftsangabe korrigiert: «Ausrollen Mk 1–4 und 6–8» → «Ausrollen Mk 9–16 und Buch»."
+  ]
+ }
+}

@@ -1,0 +1,163 @@
+{
+ "id": "CORE-MRK-011-020-025",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MRK.11.20-MRK.11.25",
+ "target": "TU-MRK-011-020-025",
+ "core_de": "Am Morgen sehen sie den Feigenbaum von den Wurzeln her verdorrt, und Petrus sagt: «Rabbi, sieh, der Feigenbaum, den du verflucht hast, ist verdorrt!»; Jesus antwortet: «Habt Glauben an Gott!»: Wer zu diesem Berg sagt, er solle sich ins Meer stürzen, und nicht zweifelt, dem wird es zuteil; alles, worum ihr betet und bittet – glaubt, dass ihr es empfangen habt, und es wird euch zuteil; und wenn ihr betet, vergebt, damit auch euer Vater im Himmel euch eure Verfehlungen vergibt.",
+ "mode": "speech",
+ "voice": {
+  "speaker": "FIG-JESUS",
+  "addressee": "FIG-GRUPPE-JUENGER"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Befund – Ruf des Petrus – Lehre",
+    "range": "MRK.11.20-MRK.11.25",
+    "elements": [
+     {
+      "label": "Am frühen Morgen sehen sie den Feigenbaum von den Wurzeln her verdorrt",
+      "ref": "MRK.11.20",
+      "role": "Befund"
+     },
+     {
+      "label": "Petrus: «Rabbi, sieh, der Feigenbaum, den du verflucht hast, ist verdorrt!»",
+      "ref": "MRK.11.21",
+      "role": "Ruf"
+     },
+     {
+      "label": "Lehre über Glauben, Gebet und Vergebung",
+      "ref": "MRK.11.22-MRK.11.25",
+      "role": "Lehre",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-PETRUS",
+       "to": "FIG-JESUS",
+       "ref": "MRK.11.21"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "die Jünger («ihr»)",
+       "ref": "MRK.11.22-MRK.11.25"
+      }
+     ],
+     "text_forms": [
+      {
+       "ref": "MRK.11.25",
+       "note": "Nach 11,25 folgt in einem Teil der Überlieferung 11,26 («Wenn ihr aber nicht vergebt …»); die Arbeitsübersetzung lässt ihn aus."
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "MRK.11.12-MRK.11.14",
+       "kind": "Rahmen (Schachtelung)"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "condition",
+    "subtype": "Glaube – Gebet – Vergebung",
+    "range": "MRK.11.22-MRK.11.25",
+    "elements": [
+     {
+      "label": "Habt Glauben an Gott!",
+      "ref": "MRK.11.22",
+      "role": "Grundsatz"
+     },
+     {
+      "label": "Wer zu diesem Berg sagt: «Heb dich hoch und stürz dich ins Meer!», und nicht zweifelt, sondern glaubt → dem wird es zuteil",
+      "ref": "MRK.11.23",
+      "role": "Bedingung → Folge"
+     },
+     {
+      "label": "Alles, worum ihr betet und bittet – glaubt, dass ihr es empfangen habt → es wird euch zuteil",
+      "ref": "MRK.11.24",
+      "role": "Bedingung → Folge"
+     },
+     {
+      "label": "Wenn ihr dasteht und betet, vergebt → damit auch euer Vater im Himmel euch eure Verfehlungen vergibt",
+      "ref": "MRK.11.25",
+      "role": "Weisung → Zweck"
+     }
+    ],
+    "features": {
+     "modality": [
+      {
+       "kind": "Zusage",
+       "ref": "MRK.11.23-MRK.11.24"
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MRK.11.20-MRK.11.21",
+   "text_de": "Der Feigenbaum ist von den Wurzeln her verdorrt; Petrus: «Rabbi, sieh, der Feigenbaum, den du verflucht hast, ist verdorrt!»",
+   "reason_de": "Anlass, Rahmen zu 11,12–14 (Kriterien 2 und 4).",
+   "recognition_de": "Petrus zeigt auf den verdorrten Baum.",
+   "keywords": [
+    "der Feigenbaum, den du verflucht hast, ist verdorrt!"
+   ]
+  },
+  {
+   "reference": "MRK.11.22-MRK.11.25",
+   "text_de": "«Habt Glauben an Gott!» – Berg ins Meer, wenn man nicht zweifelt; alles, worum ihr betet – glaubt, dass ihr es empfangen habt; wenn ihr betet, vergebt, damit auch euer Vater im Himmel euch vergibt.",
+   "reason_de": "Lehre in drei Gliedern (Kriterium 1).",
+   "recognition_de": "Jesus lehrt die Jünger über Glauben, Gebet und Vergebung.",
+   "keywords": [
+    "Habt Glauben an Gott!",
+    "glaubt, dass ihr es empfangen habt",
+    "dann vergebt"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "11,26 steht nur in einem Teil der Überlieferung (in der Arbeitsübersetzung ausgelassen)"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-PETRUS",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-GOTT"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MRK.11.20-MRK.11.25",
+   "fingerprint": "02c07fd874625c01"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mk 9–16 und Buch nach dem Pilot Mk 5 und dem Ausrollen Matthäus; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ },
+ "review": {
+  "date": "2026-10-26",
+  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung; Zusammenfassungen und Bildaufträge mitgeprüft; keine fachliche Prüfung durch eine Person",
+  "result": "bestanden",
+  "summary_de": "Befund und Ruf des Petrus, dann alle drei Glieder Glaube – Gebet – Vergebung; 11,26 als Textfassung vermerkt.",
+  "changes_de": [
+   "Herkunftsangabe korrigiert: «Ausrollen Mk 1–4 und 6–8» → «Ausrollen Mk 9–16 und Buch»."
+  ]
+ }
+}
