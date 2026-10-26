@@ -1,0 +1,134 @@
+{
+ "id": "CORE-LUK-011-029-032",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.11.29-LUK.11.32",
+ "target": "TU-LUK-011-029-032",
+ "core_de": "Jesus nennt die Menge ein böses Geschlecht, das ein Zeichen fordert; es bekommt keines ausser dem Zeichen des Jona, denn wie Jona den Leuten von Ninive zum Zeichen wurde, so wird es der Menschensohn für dieses Geschlecht sein; im Gericht werden die Königin des Südens, die kam, um Salomos Weisheit zu hören, und die Männer von Ninive, die auf Jonas Verkündigung hin umkehrten, dieses Geschlecht verurteilen – «und seht, hier ist mehr als Salomo … hier ist mehr als Jona».",
+ "mode": "speech",
+ "voice": {
+  "speaker": "FIG-JESUS",
+  "addressee": "FIG-GRUPPE-MENGE"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Zeichenforderung – Antwort – zwei Zeugen",
+    "range": "LUK.11.29-LUK.11.32",
+    "elements": [
+     {
+      "label": "Dieses böse Geschlecht fordert ein Zeichen – kein Zeichen ausser dem des Jona",
+      "ref": "LUK.11.29",
+      "role": "Antwort"
+     },
+     {
+      "label": "Wie Jona den Leuten von Ninive, so der Menschensohn diesem Geschlecht",
+      "ref": "LUK.11.30",
+      "role": "Vergleich"
+     },
+     {
+      "label": "Zwei Zeugen im Gericht",
+      "ref": "LUK.11.31-LUK.11.32",
+      "role": "Zeugen",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-MENGE",
+       "ref": "LUK.11.29-LUK.11.32"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "parallel",
+    "subtype": "zwei gleich gebaute Gerichtsworte, je mit «mehr als»",
+    "range": "LUK.11.31-LUK.11.32",
+    "elements": [
+     {
+      "label": "Königin des Südens: kam, um die Weisheit Salomos zu hören – hier ist mehr als Salomo",
+      "ref": "LUK.11.31",
+      "role": "1"
+     },
+     {
+      "label": "Männer von Ninive: kehrten auf die Verkündigung des Jona hin um – hier ist mehr als Jona",
+      "ref": "LUK.11.32",
+      "role": "2"
+     }
+    ],
+    "features": {
+     "interpretation": [
+      {
+       "note": "Wer der «Mehr als Salomo/Jona» ist, sagt der Text nicht ausdrücklich; der Zusammenhang legt Jesus nahe."
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.11.29-LUK.11.30",
+   "text_de": "Kein Zeichen ausser dem Zeichen des Jona: Wie Jona für Ninive, so der Menschensohn für dieses Geschlecht.",
+   "reason_de": "Antwort auf die Zeichenforderung (Kriterien 1 und 4).",
+   "recognition_de": "Das Zeichen des Jona.",
+   "keywords": [
+    "Dieses Geschlecht ist ein böses Geschlecht",
+    "ausser dem Zeichen des Jona",
+    "so wird es auch der Menschensohn für dieses Geschlecht sein"
+   ]
+  },
+  {
+   "reference": "LUK.11.31-LUK.11.32",
+   "text_de": "Königin des Südens und die Männer von Ninive werden im Gericht auftreten und verurteilen – «hier ist mehr als Salomo … mehr als Jona».",
+   "reason_de": "Zwei Zeugen mit Steigerung (Kriterium 1; Regel 1).",
+   "recognition_de": "Mehr als Salomo, mehr als Jona.",
+   "keywords": [
+    "Die Königin des Südens",
+    "hier ist mehr als Salomo",
+    "Die Männer von Ninive",
+    "hier ist mehr als Jona"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Wie Jona zum Zeichen wurde, führt Lukas nicht aus (anders als Mt mit den drei Tagen im Fisch) – nichts ergänzt"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-MENGE",
+  "FIG-JONA",
+  "FIG-KOENIGIN-SABA",
+  "FIG-SALOMO"
+ ],
+ "places": [
+  "FIG-ORT-NINIVE"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.11.29-LUK.11.32",
+   "fingerprint": "bcf6528228013167"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 9–16; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

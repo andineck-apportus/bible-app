@@ -1,0 +1,118 @@
+{
+ "id": "CORE-LUK-009-007-009",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.9.7-LUK.9.9",
+ "target": "TU-LUK-009-007-009",
+ "core_de": "Herodes, der Tetrarch, hört von allem, was geschieht, und ist ratlos, weil die einen sagen, Johannes sei von den Toten auferweckt worden, andere, Elija sei erschienen, wieder andere, einer der alten Propheten sei auferstanden; Herodes sagt: «Johannes habe ich enthauptet. Wer aber ist dieser, über den ich solche Dinge höre?», und er bemüht sich, ihn zu sehen.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Gerücht – drei Meinungen – Frage",
+    "range": "LUK.9.7-LUK.9.9",
+    "elements": [
+     {
+      "label": "Herodes hört von allem und ist ratlos",
+      "ref": "LUK.9.7",
+      "role": "Anlass"
+     },
+     {
+      "label": "Was die Leute sagen",
+      "ref": "LUK.9.7-LUK.9.8",
+      "role": "Meinungen",
+      "child": "s2"
+     },
+     {
+      "label": "«Johannes habe ich enthauptet. Wer aber ist dieser …?» – er bemüht sich, ihn zu sehen",
+      "ref": "LUK.9.9",
+      "role": "Frage"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-HERODES-ANTIPAS",
+       "to": "FIG-HERODES-ANTIPAS",
+       "ref": "LUK.9.9"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "series",
+    "subtype": "drei Meinungen über Jesus",
+    "range": "LUK.9.7-LUK.9.8",
+    "elements": [
+     {
+      "label": "Johannes sei von den Toten auferweckt worden",
+      "ref": "LUK.9.7",
+      "role": "einige"
+     },
+     {
+      "label": "Elija sei erschienen",
+      "ref": "LUK.9.8",
+      "role": "einige"
+     },
+     {
+      "label": "einer der alten Propheten sei auferstanden",
+      "ref": "LUK.9.8",
+      "role": "andere"
+     }
+    ],
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.9.7-LUK.9.9",
+   "text_de": "Drei Meinungen über Jesus – Johannes, Elija, ein alter Prophet –; Herodes: «Johannes habe ich enthauptet. Wer aber ist dieser?»",
+   "reason_de": "Reihe der Meinungen und die Frage, die das Kapitel trägt (Kriterien 1 und 2).",
+   "recognition_de": "Herodes fragt, wer Jesus ist.",
+   "keywords": [
+    "Johannes sei von den Toten auferweckt worden",
+    "Elija sei erschienen",
+    "einer der alten Propheten sei auferstanden",
+    "Johannes habe ich enthauptet",
+    "Wer aber ist dieser"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Dass Herodes Johannes gefangen nahm, erzählt [[LUK.3.19-LUK.3.20]]; wie er ihn enthaupten liess, erzählt Lukas nicht – nichts aus Mk 6 ergänzt"
+ ],
+ "persons": [
+  "FIG-HERODES-ANTIPAS",
+  "FIG-JOHANNES-TAEUFER",
+  "FIG-ELIJA",
+  "FIG-ROLLE-PROPHET"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.9.7-LUK.9.9",
+   "fingerprint": "5ab94d08298ae649"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 9–16; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

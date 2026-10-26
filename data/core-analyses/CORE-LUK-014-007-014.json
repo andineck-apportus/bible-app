@@ -1,0 +1,154 @@
+{
+ "id": "CORE-LUK-014-007-014",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.14.7-LUK.14.14",
+ "target": "TU-LUK-014-007-014",
+ "core_de": "Als Jesus sieht, wie die Eingeladenen sich die Ehrenplätze aussuchen, sagt er: Setz dich bei einer Hochzeit nicht auf den Ehrenplatz, sonst musst du beschämt den letzten Platz einnehmen, wenn ein Vornehmerer kommt; setz dich auf den letzten Platz, damit der Gastgeber sagt: «Freund, rück weiter hinauf!», denn wer sich selbst erhöht, wird erniedrigt, und wer sich selbst erniedrigt, wird erhöht werden; dem Gastgeber sagt er: Lade nicht Freunde, Brüder, Verwandte und reiche Nachbarn ein, die dich wieder einladen, sondern Arme, Versehrte, Lahme und Blinde – dann wirst du selig sein, denn es wird dir vergolten bei der Auferstehung der Gerechten.",
+ "mode": "speech",
+ "voice": {
+  "speaker": "FIG-JESUS",
+  "addressee": "FIG-GRUPPE-GAESTE"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Wort an die Gäste – Wort an den Gastgeber",
+    "range": "LUK.14.7-LUK.14.14",
+    "elements": [
+     {
+      "label": "Gleichnis an die Gäste",
+      "ref": "LUK.14.7-LUK.14.11",
+      "role": "Wort 1",
+      "child": "s2"
+     },
+     {
+      "label": "Wort an den Gastgeber",
+      "ref": "LUK.14.12-LUK.14.14",
+      "role": "Wort 2",
+      "child": "s3"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-GAESTE",
+       "ref": "LUK.14.7-LUK.14.11"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-PHARISAEER",
+       "ref": "LUK.14.12-LUK.14.14"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "reversal",
+    "subtype": "Umkehrung der Plätze",
+    "range": "LUK.14.8-LUK.14.11",
+    "elements": [
+     {
+      "label": "Ehrenplatz gewählt → «Mach diesem Platz!» → beschämt auf den letzten Platz",
+      "ref": "LUK.14.8-LUK.14.9",
+      "role": "erniedrigt"
+     },
+     {
+      "label": "letzten Platz gewählt → «Freund, rück weiter hinauf!» → Ehre vor allen",
+      "ref": "LUK.14.10",
+      "role": "erhöht"
+     },
+     {
+      "label": "Wer sich selbst erhöht, wird erniedrigt; wer sich selbst erniedrigt, wird erhöht",
+      "ref": "LUK.14.11",
+      "role": "Grundsatz"
+     }
+    ],
+    "visual": "mirror",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "contrast",
+    "subtype": "nicht … sondern … denn",
+    "range": "LUK.14.12-LUK.14.14",
+    "elements": [
+     {
+      "label": "nicht: Freunde, Brüder, Verwandte, reiche Nachbarn – sie laden wieder ein, es wird dir vergolten",
+      "ref": "LUK.14.12",
+      "role": "nicht"
+     },
+     {
+      "label": "sondern: Arme, Versehrte, Lahme, Blinde – selig, weil sie nicht vergelten können; vergolten bei der Auferstehung der Gerechten",
+      "ref": "LUK.14.13-LUK.14.14",
+      "role": "sondern"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.14.7-LUK.14.11",
+   "text_de": "Nicht den Ehrenplatz nehmen – den letzten Platz – «Freund, rück weiter hinauf!»; «jeder, der sich selbst erhöht, wird erniedrigt werden …»",
+   "reason_de": "Gleichnis mit Umkehrung (Kriterien 1 und 2; Regel 1).",
+   "recognition_de": "Ehrenplatz und letzter Platz.",
+   "keywords": [
+    "wie sie sich die Ehrenplätze aussuchten",
+    "setz dich nicht auf den Ehrenplatz",
+    "Freund, rück weiter hinauf!",
+    "jeder, der sich selbst erhöht, wird erniedrigt werden, und wer sich selbst erniedrigt, wird erhöht werden"
+   ],
+   "mode": "parable"
+  },
+  {
+   "reference": "LUK.14.12-LUK.14.14",
+   "text_de": "Nicht Freunde und reiche Nachbarn einladen, sondern Arme, Versehrte, Lahme und Blinde – «du wirst selig sein» – vergolten bei der Auferstehung der Gerechten.",
+   "reason_de": "Gegensatz mit Begründung (Kriterium 1; Regel 1).",
+   "recognition_de": "Wen einladen?",
+   "keywords": [
+    "lade nicht deine Freunde ein",
+    "lade Arme, Versehrte, Lahme und Blinde ein",
+    "bei der Auferstehung der Gerechten"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Nichts Wesentliches"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-GAESTE",
+  "FIG-GRUPPE-PHARISAEER",
+  "FIG-GRUPPE-ARME",
+  "FIG-ROLLE-BLINDER"
+ ],
+ "places": [
+  "FIG-ORT-HAUS"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.14.7-LUK.14.14",
+   "fingerprint": "0bad54b3d1154064"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 9–16; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

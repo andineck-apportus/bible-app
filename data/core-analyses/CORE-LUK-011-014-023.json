@@ -1,0 +1,143 @@
+{
+ "id": "CORE-LUK-011-014-023",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.11.14-LUK.11.23",
+ "target": "TU-LUK-011-014-023",
+ "core_de": "Jesus treibt einen stummen Dämon aus, der Stumme redet, und die Menschenmengen staunen; einige sagen, er treibe die Dämonen durch Beelzebul aus, andere fordern ein Zeichen vom Himmel; Jesus antwortet: Ein in sich gespaltenes Reich wird verwüstet – wie soll dann das Reich des Satans bestehen? – und: «Wenn ich aber durch den Finger Gottes die Dämonen austreibe, dann ist das Reich Gottes zu euch gekommen»; ein Stärkerer besiegt den Starken und nimmt ihm die Rüstung; «Wer nicht mit mir ist, ist gegen mich.»",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "objection",
+    "subtype": "Einwand – Antwort",
+    "range": "LUK.11.14-LUK.11.23",
+    "elements": [
+     {
+      "label": "Der stumme Dämon ausgetrieben, der Stumme redet, die Mengen staunen",
+      "ref": "LUK.11.14",
+      "role": "Anlass"
+     },
+     {
+      "label": "Einwand: «Durch Beelzebul … treibt er die Dämonen aus»; Zeichen vom Himmel gefordert",
+      "ref": "LUK.11.15-LUK.11.16",
+      "role": "Einwand"
+     },
+     {
+      "label": "Antwort",
+      "ref": "LUK.11.17-LUK.11.22",
+      "role": "Antwort",
+      "child": "s2"
+     },
+     {
+      "label": "«Wer nicht mit mir ist, ist gegen mich; und wer nicht mit mir sammelt, zerstreut»",
+      "ref": "LUK.11.23",
+      "role": "Schluss"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-GRUPPE-MENGE",
+       "to": "FIG-GRUPPE-MENGE",
+       "ref": "LUK.11.15"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-MENGE",
+       "ref": "LUK.11.17-LUK.11.23"
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "condition",
+    "subtype": "drei «wenn» und ein Bildwort",
+    "range": "LUK.11.17-LUK.11.22",
+    "elements": [
+     {
+      "label": "Ein in sich gespaltenes Reich wird verwüstet: Wenn auch der Satan gespalten ist – wie soll sein Reich bestehen?",
+      "ref": "LUK.11.17-LUK.11.18",
+      "role": "wenn 1"
+     },
+     {
+      "label": "Wenn ich durch Beelzebul austreibe – durch wen treiben eure Söhne aus? Sie werden eure Richter sein",
+      "ref": "LUK.11.19",
+      "role": "wenn 2"
+     },
+     {
+      "label": "Wenn ich durch den Finger Gottes austreibe → dann ist das Reich Gottes zu euch gekommen",
+      "ref": "LUK.11.20",
+      "role": "wenn 3 → dann"
+     },
+     {
+      "label": "Der Starke bewacht seinen Hof – ein Stärkerer besiegt ihn und nimmt ihm die Rüstung",
+      "ref": "LUK.11.21-LUK.11.22",
+      "role": "Bildwort"
+     }
+    ],
+    "visual": "switch",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.11.14-LUK.11.16",
+   "text_de": "Der Stumme redet; einige: «Durch Beelzebul … treibt er die Dämonen aus»; andere fordern ein Zeichen.",
+   "reason_de": "Anlass und Einwand (Kriterien 2 und 3).",
+   "recognition_de": "Der Stumme redet; der Vorwurf.",
+   "keywords": [
+    "Und er trieb einen stummen Dämon aus",
+    "Durch Beelzebul, den Herrscher der Dämonen, treibt er die Dämonen aus"
+   ]
+  },
+  {
+   "reference": "LUK.11.17-LUK.11.23",
+   "text_de": "Gespaltenes Reich; «Wenn ich aber durch den Finger Gottes die Dämonen austreibe, dann ist das Reich Gottes zu euch gekommen»; der Stärkere; «Wer nicht mit mir ist, ist gegen mich.»",
+   "reason_de": "Antwort, Kernaussage (Kriterium 1; Regel 2).",
+   "recognition_de": "Der Finger Gottes.",
+   "keywords": [
+    "Jedes Reich, das in sich gespalten ist, wird verwüstet",
+    "durch den Finger Gottes",
+    "dann ist das Reich Gottes zu euch gekommen",
+    "Wer nicht mit mir ist, ist gegen mich"
+   ],
+   "mode": "speech"
+  }
+ ],
+ "omitted_de": [
+  "Die Zeichenforderung ([[LUK.11.16]]) beantwortet Jesus erst in [[LUK.11.29-LUK.11.32]]; hier nur genannt"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-ROLLE-MENSCH",
+  "FIG-GRUPPE-MENGE",
+  "FIG-SATAN"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.11.14-LUK.11.23",
+   "fingerprint": "9036e4eb9c4a9eb1"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 9–16; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

@@ -1,0 +1,137 @@
+{
+ "id": "CORE-LUK-013-006-009",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.13.6-LUK.13.9",
+ "target": "TU-LUK-013-006-009",
+ "core_de": "Jesus erzählt: Jemand findet an seinem Feigenbaum im Weinberg seit drei Jahren keine Frucht und befiehlt dem Weingärtner: «Hau ihn um!»; der bittet: «Herr, lass ihn noch dieses Jahr stehen», er will umgraben und düngen – bringt er künftig Frucht, gut; wenn nicht, dann soll er ihn umhauen.",
+ "mode": "parable",
+ "voice": {
+  "speaker": "FIG-JESUS",
+  "addressee": "FIG-GRUPPE-VOLK"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "parable",
+    "subtype": "Gleichnis ohne Deutung",
+    "range": "LUK.13.6-LUK.13.9",
+    "elements": [
+     {
+      "label": "Drei Jahre keine Frucht am Feigenbaum im Weinberg",
+      "ref": "LUK.13.6-LUK.13.7",
+      "role": "Befund"
+     },
+     {
+      "label": "«Hau ihn um!»",
+      "ref": "LUK.13.7",
+      "role": "Urteil"
+     },
+     {
+      "label": "«lass ihn noch dieses Jahr stehen» – umgraben, düngen",
+      "ref": "LUK.13.8",
+      "role": "Aufschub"
+     },
+     {
+      "label": "Weiche",
+      "ref": "LUK.13.9",
+      "role": "Ausgang",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-ROLLE-GUTSHERR",
+       "to": "FIG-ROLLE-DIENER",
+       "ref": "LUK.13.7"
+      },
+      {
+       "who": "FIG-ROLLE-DIENER",
+       "to": "FIG-ROLLE-GUTSHERR",
+       "ref": "LUK.13.8-LUK.13.9"
+      }
+     ],
+     "open_end": [
+      {
+       "ref": "LUK.13.9",
+       "note": "Ob der Baum Frucht bringt, erzählt der Text nicht."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "condition",
+    "range": "LUK.13.9",
+    "elements": [
+     {
+      "label": "bringt er künftig Frucht – gut",
+      "ref": "LUK.13.9",
+      "role": "ja"
+     },
+     {
+      "label": "wenn nicht – dann wirst du ihn umhauen",
+      "ref": "LUK.13.9",
+      "role": "nein"
+     }
+    ],
+    "visual": "switch",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.13.6-LUK.13.7",
+   "text_de": "Seit drei Jahren keine Frucht – «Hau ihn um!»",
+   "reason_de": "Bildhälfte, Anlass (Kriterien 2 und 4).",
+   "recognition_de": "Der Feigenbaum ohne Frucht.",
+   "keywords": [
+    "suchte Frucht an ihm und fand keine",
+    "Hau ihn um!"
+   ]
+  },
+  {
+   "reference": "LUK.13.8-LUK.13.9",
+   "text_de": "«Herr, lass ihn noch dieses Jahr stehen» – wenn er Frucht bringt, gut; wenn nicht, umhauen.",
+   "reason_de": "Aufschub mit beiden Zweigen, offenes Ende (Kriterium 1; Regel 1).",
+   "recognition_de": "Noch ein Jahr.",
+   "keywords": [
+    "Herr, lass ihn noch dieses Jahr stehen",
+    "wenn aber nicht, dann wirst du ihn umhauen"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Eine Deutung gibt der Text nicht; Herr und Weingärtner werden nicht gedeutet"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-ROLLE-GUTSHERR",
+  "FIG-ROLLE-DIENER"
+ ],
+ "places": [
+  "FIG-ORT-WEINBERG"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.13.6-LUK.13.9",
+   "fingerprint": "8997855cff18880a"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 9–16; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

@@ -1,0 +1,146 @@
+{
+ "id": "CORE-LUK-010-001-012",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.10.1-LUK.10.12",
+ "target": "TU-LUK-010-001-012",
+ "core_de": "Der Herr bestimmt zweiundsiebzig andere und sendet sie zu zweit vor sich her; er sagt: Die Ernte ist gross, die Arbeiter sind wenige, bittet den Herrn der Ernte um Arbeiter; er sendet sie wie Lämmer mitten unter Wölfe, ohne Geldbeutel, Tasche und Sandalen; wo ein Haus oder eine Stadt sie aufnimmt, sollen sie Frieden wünschen, bleiben, essen, die Kranken heilen und sagen: «Das Reich Gottes ist euch nahe gekommen»; wo man sie nicht aufnimmt, sollen sie den Staub abwischen und doch sagen, dass das Reich Gottes nahe gekommen ist – Sodom wird es an jenem Tag erträglicher ergehen als jener Stadt.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Sendung – Rede",
+    "range": "LUK.10.1-LUK.10.12",
+    "elements": [
+     {
+      "label": "Zweiundsiebzig bestimmt und zu zweit vorausgesandt",
+      "ref": "LUK.10.1",
+      "role": "Sendung"
+     },
+     {
+      "label": "Ernte gross, Arbeiter wenige: bittet den Herrn der Ernte",
+      "ref": "LUK.10.2",
+      "role": "Bitte"
+     },
+     {
+      "label": "Wie Lämmer unter Wölfe; nichts mitnehmen, unterwegs niemanden grüssen",
+      "ref": "LUK.10.3-LUK.10.4",
+      "role": "Weisung"
+     },
+     {
+      "label": "Aufnahme oder Ablehnung",
+      "ref": "LUK.10.5-LUK.10.12",
+      "role": "Weiche",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "LUK.10.2-LUK.10.12"
+      }
+     ],
+     "text_forms": [
+      {
+       "ref": "LUK.10.1",
+       "note": "Die Handschriften lesen teils «siebzig», teils «zweiundsiebzig»; die Arbeitsübersetzung folgt «zweiundsiebzig»."
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "condition",
+    "subtype": "aufgenommen ↔ nicht aufgenommen",
+    "range": "LUK.10.5-LUK.10.12",
+    "elements": [
+     {
+      "label": "Haus: «Friede diesem Haus!» – ist dort ein Sohn des Friedens, ruht der Friede auf ihm, sonst kehrt er zurück",
+      "ref": "LUK.10.5-LUK.10.7",
+      "role": "Bedingung 1"
+     },
+     {
+      "label": "Stadt nimmt euch auf → esst, heilt die Kranken, sagt: «Das Reich Gottes ist euch nahe gekommen»",
+      "ref": "LUK.10.8-LUK.10.9",
+      "role": "ja"
+     },
+     {
+      "label": "Stadt nimmt euch nicht auf → Staub abwischen; «doch … das Reich Gottes ist nahe gekommen»",
+      "ref": "LUK.10.10-LUK.10.11",
+      "role": "nein"
+     },
+     {
+      "label": "Sodom wird es an jenem Tag erträglicher ergehen als jener Stadt",
+      "ref": "LUK.10.12",
+      "role": "Folge"
+     }
+    ],
+    "visual": "switch",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.10.1-LUK.10.3",
+   "text_de": "Zweiundsiebzig, zu zweit gesandt; «Die Ernte ist zwar gross, die Arbeiter aber sind wenige»; «wie Lämmer mitten unter Wölfe».",
+   "reason_de": "Anlass und Auftrag (Kriterien 2 und 3).",
+   "recognition_de": "Lämmer unter Wölfen.",
+   "keywords": [
+    "sandte sie zu zweit vor sich her",
+    "Die Ernte ist zwar gross, die Arbeiter aber sind wenige",
+    "ich sende euch wie Lämmer mitten unter Wölfe"
+   ]
+  },
+  {
+   "reference": "LUK.10.5-LUK.10.12",
+   "text_de": "Nimmt man euch auf: Friede, bleiben, essen, heilen, «Das Reich Gottes ist euch nahe gekommen»; nimmt man euch nicht auf: den Staub abwischen, «das Reich Gottes ist nahe gekommen»; Sodom erträglicher.",
+   "reason_de": "Beide Zweige der Weiche (Kriterium 1; Regel 1).",
+   "recognition_de": "Friede diesem Haus – Staub abwischen.",
+   "keywords": [
+    "Friede diesem Haus!",
+    "Das Reich Gottes ist euch nahe gekommen",
+    "Selbst den Staub aus eurer Stadt",
+    "Sodom wird es an jenem Tag erträglicher ergehen"
+   ],
+   "mode": "instruction"
+  }
+ ],
+ "omitted_de": [
+  "Einzelheiten (nicht grüssen, nicht von Haus zu Haus ziehen, der Arbeiter ist seines Lohnes wert) – in der Zusammenfassung knapp"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-JUENGER"
+ ],
+ "places": [
+  "FIG-ORT-HAUS",
+  "FIG-ORT-STADT"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.10.1-LUK.10.12",
+   "fingerprint": "996f89316377ce20"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 9–16; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

@@ -1,0 +1,146 @@
+{
+ "id": "CORE-LUK-015-001-007",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.15.1-LUK.15.7",
+ "target": "TU-LUK-015-001-007",
+ "core_de": "Alle Zöllner und Sünder kommen zu Jesus, um ihn zu hören, und die Pharisäer und Schriftgelehrten murren: «Der nimmt Sünder an und isst mit ihnen!»; da erzählt er: Wer hundert Schafe hat und eines verliert, lässt die neunundneunzig zurück und sucht das verlorene, bis er es findet, trägt es voller Freude heim und ruft Freunde und Nachbarn: «Freut euch mit mir!»; ebenso wird im Himmel mehr Freude sein über einen Sünder, der umkehrt, als über neunundneunzig Gerechte, die keine Umkehr nötig haben.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Einwand – Gleichnis – Deutung",
+    "range": "LUK.15.1-LUK.15.7",
+    "elements": [
+     {
+      "label": "Zöllner und Sünder kommen, ihn zu hören",
+      "ref": "LUK.15.1",
+      "role": "Anlass"
+     },
+     {
+      "label": "Murren: «Der nimmt Sünder an und isst mit ihnen!»",
+      "ref": "LUK.15.2",
+      "role": "Einwand"
+     },
+     {
+      "label": "Gleichnis vom verlorenen Schaf",
+      "ref": "LUK.15.3-LUK.15.6",
+      "role": "Antwort",
+      "child": "s2"
+     },
+     {
+      "label": "Deutung: mehr Freude im Himmel über einen Sünder, der umkehrt",
+      "ref": "LUK.15.7",
+      "role": "Deutung"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-GRUPPE-PHARISAEER",
+       "to": "FIG-GRUPPE-PHARISAEER",
+       "ref": "LUK.15.2"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-PHARISAEER",
+       "ref": "LUK.15.3-LUK.15.7"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "parable",
+    "subtype": "verloren – suchen – finden – Freude",
+    "range": "LUK.15.4-LUK.15.6",
+    "elements": [
+     {
+      "label": "hundert Schafe – eines verloren",
+      "ref": "LUK.15.4",
+      "role": "verloren"
+     },
+     {
+      "label": "die neunundneunzig zurücklassen, suchen, bis er es findet",
+      "ref": "LUK.15.4",
+      "role": "suchen"
+     },
+     {
+      "label": "gefunden – voller Freude auf die Schultern",
+      "ref": "LUK.15.5",
+      "role": "finden"
+     },
+     {
+      "label": "Freunde und Nachbarn: «Freut euch mit mir!»",
+      "ref": "LUK.15.6",
+      "role": "Freude"
+     }
+    ],
+    "visual": "scenes",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.15.1-LUK.15.2",
+   "text_de": "Zöllner und Sünder kommen, ihn zu hören; die Pharisäer und Schriftgelehrten murren: «Der nimmt Sünder an und isst mit ihnen!»",
+   "reason_de": "Anlass und Rahmen der drei Gleichnisse (Kriterien 2 und 3).",
+   "recognition_de": "Das Murren.",
+   "keywords": [
+    "Es kamen aber alle Zöllner und Sünder zu ihm",
+    "Der nimmt Sünder an und isst mit ihnen!"
+   ]
+  },
+  {
+   "reference": "LUK.15.4-LUK.15.7",
+   "text_de": "Hundert Schafe, eines verloren – suchen, bis er es findet – auf den Schultern – «Freut euch mit mir» – mehr Freude im Himmel über einen Sünder, der umkehrt.",
+   "reason_de": "Gleichnis mit Deutung, Kernaussage (Kriterien 1 und 4).",
+   "recognition_de": "Das Schaf auf den Schultern.",
+   "keywords": [
+    "geht dem verlorenen nach, bis er es findet",
+    "legt er es voller Freude auf seine Schultern",
+    "Freut euch mit mir, denn ich habe mein Schaf gefunden",
+    "mehr Freude sein über einen Sünder, der umkehrt"
+   ],
+   "mode": "parable"
+  }
+ ],
+ "omitted_de": [
+  "Nichts Wesentliches"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-ZOELLNER",
+  "FIG-GRUPPE-PHARISAEER",
+  "FIG-GRUPPE-SCHRIFTGELEHRTE",
+  "FIG-ROLLE-HIRTE"
+ ],
+ "places": [
+  "FIG-ORT-WUESTE"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.15.1-LUK.15.7",
+   "fingerprint": "47e4384587b6483e"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 9–16; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

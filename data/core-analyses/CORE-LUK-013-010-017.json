@@ -1,0 +1,145 @@
+{
+ "id": "CORE-LUK-013-010-017",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.13.10-LUK.13.17",
+ "target": "TU-LUK-013-010-017",
+ "core_de": "Am Sabbat heilt Jesus in einer Synagoge eine Frau, die seit achtzehn Jahren verkrümmt ist: «Frau, du bist von deiner Krankheit befreit!»; er legt ihr die Hände auf, sie richtet sich auf und preist Gott; der Synagogenvorsteher sagt empört zur Menge, man solle an den sechs Arbeitstagen kommen und sich heilen lassen; Jesus antwortet: Jeder bindet am Sabbat seinen Ochsen oder Esel los, um ihn zu tränken – musste nicht diese Tochter Abrahams, die der Satan achtzehn Jahre gebunden hat, am Sabbat gelöst werden?; seine Gegner schämen sich, und die Menge freut sich.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Heilung – Einspruch – Antwort – Ausgang",
+    "range": "LUK.13.10-LUK.13.17",
+    "elements": [
+     {
+      "label": "Sabbat, Synagoge: eine Frau, seit achtzehn Jahren verkrümmt",
+      "ref": "LUK.13.10-LUK.13.11",
+      "role": "Lage"
+     },
+     {
+      "label": "«Frau, du bist … befreit!» – Hände aufgelegt – sie richtet sich auf, preist Gott",
+      "ref": "LUK.13.12-LUK.13.13",
+      "role": "Heilung"
+     },
+     {
+      "label": "Streit über den Sabbat",
+      "ref": "LUK.13.14-LUK.13.16",
+      "role": "Streit",
+      "child": "s2"
+     },
+     {
+      "label": "Die Gegner schämen sich, die Menge freut sich",
+      "ref": "LUK.13.17",
+      "role": "Ausgang"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-ROLLE-FRAU",
+       "ref": "LUK.13.12"
+      },
+      {
+       "who": "FIG-ROLLE-AELTESTER",
+       "to": "FIG-GRUPPE-MENGE",
+       "ref": "LUK.13.14"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-ROLLE-AELTESTER",
+       "ref": "LUK.13.15-LUK.13.16"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "balance",
+    "subtype": "Einwand – Schluss vom Kleineren aufs Grössere",
+    "range": "LUK.13.14-LUK.13.16",
+    "elements": [
+     {
+      "label": "Vorsteher: Sechs Tage zum Arbeiten – an ihnen lasst euch heilen, nicht am Sabbat",
+      "ref": "LUK.13.14",
+      "role": "Einwand"
+     },
+     {
+      "label": "Jeder bindet am Sabbat Ochse oder Esel los und tränkt ihn",
+      "ref": "LUK.13.15",
+      "role": "kleiner"
+     },
+     {
+      "label": "Die Tochter Abrahams, achtzehn Jahre vom Satan gebunden – erst recht am Sabbat gelöst",
+      "ref": "LUK.13.16",
+      "role": "grösser"
+     }
+    ],
+    "visual": "dialogue",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.13.11-LUK.13.13",
+   "text_de": "Eine verkrümmte Frau – «Frau, du bist von deiner Krankheit befreit!» – sie richtet sich auf und preist Gott.",
+   "reason_de": "Erkennungsmoment (Kriterien 2 und 4).",
+   "recognition_de": "Die Frau richtet sich auf.",
+   "keywords": [
+    "sie war verkrümmt und konnte sich nicht ganz aufrichten",
+    "Frau, du bist von deiner Krankheit befreit!",
+    "und sofort richtete sie sich auf, und sie pries Gott"
+   ]
+  },
+  {
+   "reference": "LUK.13.14-LUK.13.17",
+   "text_de": "Vorsteher: «nicht am Sabbattag!» – Jesus: Ochse und Esel werden gelöst – «musste sie nicht am Sabbattag von dieser Fessel gelöst werden?» – die Gegner schämen sich, die Menge freut sich.",
+   "reason_de": "Streit, Kernaussage und Ausgang (Kriterien 1 und 3; Regel 2).",
+   "recognition_de": "Tochter Abrahams.",
+   "keywords": [
+    "Sechs Tage gibt es, an denen man arbeiten soll",
+    "Bindet nicht jeder von euch am Sabbat seinen Ochsen oder seinen Esel von der Krippe los",
+    "musste sie nicht am Sabbattag von dieser Fessel gelöst werden?",
+    "schämten sich alle seine Gegner"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Nichts Wesentliches"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-ROLLE-FRAU",
+  "FIG-ROLLE-AELTESTER",
+  "FIG-GRUPPE-MENGE"
+ ],
+ "places": [
+  "FIG-ORT-SYNAGOGE"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.13.10-LUK.13.17",
+   "fingerprint": "3cf3de3debc4a6cb"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 9–16; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

@@ -1,0 +1,138 @@
+{
+ "id": "CORE-LUK-010-013-016",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.10.13-LUK.10.16",
+ "target": "TU-LUK-010-013-016",
+ "core_de": "Jesus ruft Wehe über Chorazin und Betsaida, denn Tyrus und Sidon wären bei solchen Machttaten längst umgekehrt, und es wird ihnen im Gericht erträglicher ergehen; Kafarnaum wird nicht bis zum Himmel erhoben, sondern bis ins Totenreich hinabgestossen; und er sagt: Wer euch hört, hört mich, wer euch ablehnt, lehnt mich ab, wer mich ablehnt, lehnt den ab, der mich gesandt hat.",
+ "mode": "speech",
+ "voice": {
+  "speaker": "FIG-JESUS",
+  "addressee": "FIG-GRUPPE-JUENGER"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "form",
+    "subtype": "Weheruf über drei Städte",
+    "form_type": "woe",
+    "range": "LUK.10.13-LUK.10.16",
+    "elements": [
+     {
+      "label": "Weh dir, Chorazin! Weh dir, Betsaida! – denn Tyrus und Sidon wären längst umgekehrt",
+      "ref": "LUK.10.13",
+      "role": "Wehe – Grund"
+     },
+     {
+      "label": "Tyrus und Sidon wird es im Gericht erträglicher ergehen als euch",
+      "ref": "LUK.10.14",
+      "role": "Folge"
+     },
+     {
+      "label": "Kafarnaum: nicht bis zum Himmel erhoben – bis ins Totenreich hinabgestossen",
+      "ref": "LUK.10.15",
+      "role": "Wehe – Folge"
+     },
+     {
+      "label": "Kette des Hörens und Ablehnens",
+      "ref": "LUK.10.16",
+      "role": "Schluss",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "LUK.10.13-LUK.10.16"
+      }
+     ],
+     "genre": [
+      {
+       "note": "Weheruf (Forschungsbegriff)"
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "cause",
+    "subtype": "Kette: ihr → ich → der mich gesandt hat",
+    "range": "LUK.10.16",
+    "elements": [
+     {
+      "label": "Wer euch hört, hört mich",
+      "ref": "LUK.10.16",
+      "role": "1"
+     },
+     {
+      "label": "wer euch ablehnt, lehnt mich ab",
+      "ref": "LUK.10.16",
+      "role": "2"
+     },
+     {
+      "label": "wer mich ablehnt, lehnt den ab, der mich gesandt hat",
+      "ref": "LUK.10.16",
+      "role": "3"
+     }
+    ],
+    "visual": "arrows",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.10.13-LUK.10.15",
+   "text_de": "Weh Chorazin und Betsaida – Tyrus und Sidon wären umgekehrt, ihnen wird es erträglicher ergehen; Kafarnaum bis ins Totenreich.",
+   "reason_de": "Reihe der Wehe mit Begründung (Kriterium 1; Regel 1).",
+   "recognition_de": "Weh dir, Chorazin!",
+   "keywords": [
+    "Weh dir, Chorazin! Weh dir, Betsaida!",
+    "wären sie längst umgekehrt",
+    "Bis ins Totenreich wirst du hinabgestossen werden"
+   ]
+  },
+  {
+   "reference": "LUK.10.16",
+   "text_de": "Wer euch hört, hört mich; wer euch ablehnt, lehnt mich ab, und den, der mich gesandt hat.",
+   "reason_de": "Schlusswort, Kette (Kriterium 1).",
+   "recognition_de": "Hören und ablehnen.",
+   "keywords": [
+    "Wer euch hört, hört mich",
+    "lehnt den ab, der mich gesandt hat"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Nichts Wesentliches"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-JUENGER"
+ ],
+ "places": [
+  "FIG-ORT-STADT"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.10.13-LUK.10.16",
+   "fingerprint": "782016f4491d561d"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 9–16; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

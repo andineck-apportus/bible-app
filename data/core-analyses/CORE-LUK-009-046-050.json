@@ -1,0 +1,141 @@
+{
+ "id": "CORE-LUK-009-046-050",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.9.46-LUK.9.50",
+ "target": "TU-LUK-009-046-050",
+ "core_de": "Die Jünger überlegen, wer von ihnen der Grösste sei; Jesus kennt ihre Gedanken, stellt ein Kind neben sich und sagt: «Wer dieses Kind in meinem Namen aufnimmt, nimmt mich auf; und wer mich aufnimmt, nimmt den auf, der mich gesandt hat. Denn wer unter euch allen der Kleinste ist, der ist gross»; als Johannes berichtet, sie hätten einem, der in Jesu Namen Dämonen austrieb, das verwehren wollen, weil er nicht mit ihnen nachfolgt, sagt Jesus: «Verwehrt es ihm nicht! Denn wer nicht gegen euch ist, der ist für euch.»",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "zwei Worte gegen Rangdenken",
+    "range": "LUK.9.46-LUK.9.50",
+    "elements": [
+     {
+      "label": "Der Gedanke: Wer ist der Grösste?",
+      "ref": "LUK.9.46",
+      "role": "Frage"
+     },
+     {
+      "label": "Kind neben sich: aufnehmen → mich → den, der mich gesandt hat; der Kleinste ist gross",
+      "ref": "LUK.9.47-LUK.9.48",
+      "role": "Antwort 1",
+      "child": "s2"
+     },
+     {
+      "label": "Johannes: Wir wollten es ihm verwehren – «Verwehrt es ihm nicht! … wer nicht gegen euch ist, der ist für euch»",
+      "ref": "LUK.9.49-LUK.9.50",
+      "role": "Antwort 2"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "LUK.9.48"
+      },
+      {
+       "who": "FIG-JOHANNES-ZEBEDAEUS",
+       "to": "FIG-JESUS",
+       "ref": "LUK.9.49"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-JOHANNES-ZEBEDAEUS",
+       "ref": "LUK.9.50"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "cause",
+    "subtype": "Kette des Aufnehmens mit Begründung",
+    "range": "LUK.9.48",
+    "elements": [
+     {
+      "label": "Wer dieses Kind in meinem Namen aufnimmt",
+      "ref": "LUK.9.48",
+      "role": "1"
+     },
+     {
+      "label": "nimmt mich auf",
+      "ref": "LUK.9.48",
+      "role": "2"
+     },
+     {
+      "label": "nimmt den auf, der mich gesandt hat",
+      "ref": "LUK.9.48",
+      "role": "3"
+     },
+     {
+      "label": "denn: Wer unter euch allen der Kleinste ist, der ist gross",
+      "ref": "LUK.9.48",
+      "role": "Begründung"
+     }
+    ],
+    "visual": "arrows",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.9.46-LUK.9.48",
+   "text_de": "Wer ist der Grösste? – Jesus stellt ein Kind neben sich: «Wer dieses Kind in meinem Namen aufnimmt, nimmt mich auf … wer unter euch allen der Kleinste ist, der ist gross.»",
+   "reason_de": "Zeichenhandlung und Kernaussage (Kriterien 1 und 4).",
+   "recognition_de": "Jesus mit dem Kind.",
+   "keywords": [
+    "wer von ihnen wohl der Grösste sei",
+    "Wer dieses Kind in meinem Namen aufnimmt, nimmt mich auf",
+    "wer unter euch allen der Kleinste ist, der ist gross"
+   ]
+  },
+  {
+   "reference": "LUK.9.49-LUK.9.50",
+   "text_de": "Johannes: «wir wollten es ihm verwehren» – Jesus: «Verwehrt es ihm nicht! Denn wer nicht gegen euch ist, der ist für euch.»",
+   "reason_de": "Zweites Wort (Kriterium 1).",
+   "recognition_de": "Der fremde Dämonenaustreiber.",
+   "keywords": [
+    "Verwehrt es ihm nicht!",
+    "wer nicht gegen euch ist, der ist für euch"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Nichts Wesentliches"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-ROLLE-KIND",
+  "FIG-JOHANNES-ZEBEDAEUS"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.9.46-LUK.9.50",
+   "fingerprint": "4b8da95bbce8c6d3"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 9–16; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

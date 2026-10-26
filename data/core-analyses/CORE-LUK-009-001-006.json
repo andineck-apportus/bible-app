@@ -1,0 +1,142 @@
+{
+ "id": "CORE-LUK-009-001-006",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.9.1-LUK.9.6",
+ "target": "TU-LUK-009-001-006",
+ "core_de": "Jesus gibt den Zwölf Kraft und Vollmacht über alle Dämonen und zum Heilen und sendet sie aus, das Reich Gottes zu verkündigen und die Kranken zu heilen; sie sollen nichts mitnehmen, in dem Haus bleiben, in das sie kommen, und dort, wo man sie nicht aufnimmt, den Staub von den Füssen schütteln; sie ziehen von Dorf zu Dorf, verkündigen das Evangelium und heilen überall.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Gabe – Sendung – Weisung – Ausführung",
+    "range": "LUK.9.1-LUK.9.6",
+    "elements": [
+     {
+      "label": "Kraft und Vollmacht über alle Dämonen und zum Heilen",
+      "ref": "LUK.9.1",
+      "role": "Gabe"
+     },
+     {
+      "label": "Sendung: das Reich Gottes verkündigen und die Kranken heilen",
+      "ref": "LUK.9.2",
+      "role": "Auftrag"
+     },
+     {
+      "label": "Weisungen für den Weg",
+      "ref": "LUK.9.3-LUK.9.5",
+      "role": "Rede",
+      "child": "s2"
+     },
+     {
+      "label": "Sie ziehen von Dorf zu Dorf, verkündigen und heilen überall",
+      "ref": "LUK.9.6",
+      "role": "Ausführung"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-ZWOELF",
+       "ref": "LUK.9.3-LUK.9.5"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "series",
+    "subtype": "drei Weisungen",
+    "range": "LUK.9.3-LUK.9.5",
+    "elements": [
+     {
+      "label": "Nehmt nichts mit: weder Stab noch Tasche noch Brot noch Geld, nicht zwei Untergewänder",
+      "ref": "LUK.9.3",
+      "role": "1"
+     },
+     {
+      "label": "In welches Haus ihr hineingeht: dort bleibt, von dort zieht weiter",
+      "ref": "LUK.9.4",
+      "role": "2"
+     },
+     {
+      "label": "Wo man euch nicht aufnimmt: Staub von den Füssen schütteln, zum Zeugnis gegen sie",
+      "ref": "LUK.9.5",
+      "role": "3"
+     }
+    ],
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.9.1-LUK.9.2",
+   "text_de": "Jesus gibt den Zwölf Kraft und Vollmacht und sendet sie aus, das Reich Gottes zu verkündigen und die Kranken zu heilen.",
+   "reason_de": "Anlass und Auftrag (Kriterien 1 und 2).",
+   "recognition_de": "Jesus sendet die Zwölf.",
+   "keywords": [
+    "gab ihnen Kraft und Vollmacht über alle Dämonen",
+    "das Reich Gottes zu verkündigen und die Kranken zu heilen"
+   ]
+  },
+  {
+   "reference": "LUK.9.3-LUK.9.5",
+   "text_de": "Drei Weisungen: nichts mitnehmen; in einem Haus bleiben; wo man sie nicht aufnimmt, den Staub abschütteln.",
+   "reason_de": "Reihe mit allen Gliedern (Kriterium 1; Regel 1).",
+   "recognition_de": "Nichts mitnehmen, Staub abschütteln.",
+   "keywords": [
+    "Nehmt nichts mit auf den Weg",
+    "Dort bleibt",
+    "schüttelt den Staub von euren Füssen ab"
+   ],
+   "mode": "instruction"
+  },
+  {
+   "reference": "LUK.9.6",
+   "text_de": "Sie ziehen von Dorf zu Dorf, verkündigen das Evangelium und heilen überall.",
+   "reason_de": "Ausgang: Auftrag ausgeführt (Kriterium 3).",
+   "recognition_de": "Die Zwölf unterwegs.",
+   "keywords": [
+    "zogen von Dorf zu Dorf",
+    "sie verkündigten das Evangelium und heilten überall"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Einzelheiten der Ausrüstung (Stab, Tasche, Brot, Geld, zwei Untergewänder) – in der Reihe als «nichts mitnehmen» zusammengefasst, in der Zusammenfassung genannt"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-ZWOELF"
+ ],
+ "places": [
+  "FIG-ORT-STADT"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.9.1-LUK.9.6",
+   "fingerprint": "1e1a11a07b99110e"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 9–16; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

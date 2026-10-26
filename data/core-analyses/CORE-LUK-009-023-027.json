@@ -1,0 +1,142 @@
+{
+ "id": "CORE-LUK-009-023-027",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.9.23-LUK.9.27",
+ "target": "TU-LUK-009-023-027",
+ "core_de": "Jesus sagt zu allen: «Wenn jemand hinter mir hergehen will, der verleugne sich selbst und nehme sein Kreuz Tag für Tag auf sich und folge mir nach»; er begründet es dreimal mit «denn»: Wer sein Leben retten will, wird es verlieren, wer es um seinetwillen verliert, wird es retten; was nützt es, die ganze Welt zu gewinnen und sich selbst zu verlieren; wer sich seiner und seiner Worte schämt, dessen wird sich der Menschensohn schämen, wenn er in seiner Herrlichkeit kommt; und er sagt zu: Einige, die hier stehen, werden den Tod nicht schmecken, bis sie das Reich Gottes sehen.",
+ "mode": "speech",
+ "voice": {
+  "speaker": "FIG-JESUS",
+  "addressee": "FIG-GRUPPE-VOLK"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "series",
+    "subtype": "Aufruf – dreimal «denn» – Zusage",
+    "range": "LUK.9.23-LUK.9.27",
+    "elements": [
+     {
+      "label": "Wenn jemand hinter mir hergehen will → sich selbst verleugnen, das Kreuz Tag für Tag auf sich nehmen, nachfolgen",
+      "ref": "LUK.9.23",
+      "role": "Aufruf (Bedingung → Folge)"
+     },
+     {
+      "label": "denn: Leben retten wollen ↔ um meinetwillen verlieren",
+      "ref": "LUK.9.24",
+      "role": "Begründung 1",
+      "child": "s2"
+     },
+     {
+      "label": "denn: Was nützt es, die ganze Welt zu gewinnen und sich selbst zu verlieren?",
+      "ref": "LUK.9.25",
+      "role": "Begründung 2"
+     },
+     {
+      "label": "denn: Wer sich meiner schämt, dessen wird sich der Menschensohn schämen, wenn er in seiner Herrlichkeit kommt",
+      "ref": "LUK.9.26",
+      "role": "Begründung 3"
+     },
+     {
+      "label": "Zusage: Einige, die hier stehen, werden den Tod nicht schmecken, bis sie das Reich Gottes sehen",
+      "ref": "LUK.9.27",
+      "role": "Zusage"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-VOLK",
+       "ref": "LUK.9.23-LUK.9.27"
+      }
+     ],
+     "leitwort": [
+      {
+       "word": "denn",
+       "refs": [
+        "LUK.9.24",
+        "LUK.9.25",
+        "LUK.9.26"
+       ]
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "retten ↔ verlieren",
+    "range": "LUK.9.24",
+    "elements": [
+     {
+      "label": "Wer sein Leben retten will → wird es verlieren",
+      "ref": "LUK.9.24",
+      "role": "Seite 1"
+     },
+     {
+      "label": "Wer sein Leben um meinetwillen verliert → wird es retten",
+      "ref": "LUK.9.24",
+      "role": "Seite 2"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.9.23",
+   "text_de": "«Wenn jemand hinter mir hergehen will, der verleugne sich selbst und nehme sein Kreuz Tag für Tag auf sich und folge mir nach.»",
+   "reason_de": "Kernaussage als Bedingung mit Folge (Kriterien 1 und 4).",
+   "recognition_de": "Das Kreuz tragen.",
+   "keywords": [
+    "Wenn jemand hinter mir hergehen will",
+    "nehme sein Kreuz Tag für Tag auf sich und folge mir nach"
+   ]
+  },
+  {
+   "reference": "LUK.9.24-LUK.9.27",
+   "text_de": "Drei Begründungen («denn») – Leben retten ↔ verlieren; die ganze Welt gewinnen; sich schämen – und die Zusage, das Reich Gottes zu sehen.",
+   "reason_de": "Reihe mit allen Gliedern (Kriterium 1; Regel 1).",
+   "recognition_de": "Leben retten und verlieren.",
+   "keywords": [
+    "wer sein Leben retten will, wird es verlieren",
+    "wenn er die ganze Welt gewinnt",
+    "wer sich meiner und meiner Worte schämt",
+    "bis sie das Reich Gottes sehen"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Nichts weggelassen; die Begründungen sind knapp zusammengefasst"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-VOLK",
+  "FIG-ROLLE-JUENGER"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.9.23-LUK.9.27",
+   "fingerprint": "fe43649720d57c49"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 9–16; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

@@ -9,13 +9,19 @@
  "reference": "LUK.11.1-LUK.11.54",
  "target": "SUM-CH-LUK-011",
  "children": [
-  "CORE-LUK-011-001-004"
+  "CORE-LUK-011-001-004",
+  "CORE-LUK-011-005-013",
+  "CORE-LUK-011-014-023",
+  "CORE-LUK-011-024-026",
+  "CORE-LUK-011-027-028",
+  "CORE-LUK-011-029-032",
+  "CORE-LUK-011-033-036",
+  "CORE-LUK-011-037-054"
  ],
- "core_de": "Lukas 11 beginnt damit, dass ein Jünger Jesus bittet: «Herr, lehre uns beten», und Jesus lehrt das Gebet zum Vater mit fünf Bitten: Name, Reich, tägliches Brot, Vergebung und Bewahrung vor der Versuchung; die übrigen Abschnitte des Kapitels sind noch nicht übersetzt.",
- "mode": "prayer",
+ "core_de": "Jesus lehrt die Jünger beten – «Vater, dein Name werde geheiligt; dein Reich komme …» – und ermutigt sie mit dem bittenden Freund: «Bittet, und es wird euch gegeben werden», denn wie viel mehr wird der Vater den Heiligen Geist geben; gegen den Vorwurf, er treibe durch Beelzebul aus, sagt er: «Wenn ich aber durch den Finger Gottes die Dämonen austreibe, dann ist das Reich Gottes zu euch gekommen», warnt vor der Rückkehr des unreinen Geistes und nennt selig, die das Wort Gottes hören und bewahren; dem bösen Geschlecht gibt er nur das Zeichen des Jona, und das Auge soll klar sein; beim Mahl eines Pharisäers ruft er Wehe über Pharisäer und Gesetzeslehrer, die ihm darauf auflauern.",
+ "mode": "narrative",
  "voice": {
-  "speaker": "FIG-JESUS",
-  "addressee": "FIG-GRUPPE-JUENGER"
+  "speaker": "narrator"
  },
  "structure": {
   "root": "s1",
@@ -23,30 +29,37 @@
    {
     "id": "s1",
     "pattern": "sequence",
-    "subtype": "Bitte des Jüngers – Gebet (bisher übersetzt)",
-    "range": "LUK.11.1-LUK.11.4",
+    "subtype": "Gebet – Streit – Zeichen – Weherufe",
+    "range": "LUK.11.1-LUK.11.54",
     "elements": [
      {
-      "label": "Ein Jünger: «Herr, lehre uns beten»",
-      "ref": "LUK.11.1",
-      "role": "Bitte"
-     },
-     {
-      "label": "Das Gebet zum Vater mit fünf Bitten",
-      "ref": "LUK.11.2-LUK.11.4",
-      "role": "Gebet",
+      "label": "Vom Beten",
+      "ref": "LUK.11.1-LUK.11.13",
+      "role": "Teil 1",
       "child": "s2"
      },
      {
-      "label": "Weitere Abschnitte des Kapitels (noch nicht übersetzt)",
-      "role": "offen",
-      "empty": true
+      "label": "Streit um die Austreibungen und wer selig ist",
+      "ref": "LUK.11.14-LUK.11.28",
+      "role": "Teil 2",
+      "child": "s3"
+     },
+     {
+      "label": "Zeichen und Licht",
+      "ref": "LUK.11.29-LUK.11.36",
+      "role": "Teil 3",
+      "child": "s4"
+     },
+     {
+      "label": "Mahl beim Pharisäer: Weh über Pharisäer und Gesetzeslehrer; sie lauern ihm auf",
+      "ref": "LUK.11.37-LUK.11.54",
+      "role": "Teil 4"
      }
     ],
     "features": {
      "interpretation": [
       {
-       "note": "Das Kapitel ist erst in [[LUK.11.1-LUK.11.4]] übersetzt; die Struktur des ganzen Kapitels folgt mit der Übersetzung."
+       "note": "Die Gruppierung der Abschnitte in vier Teile ist eine Gliederung dieser Arbeitsübersetzung (Kapitelbild), nicht des Textes."
       }
      ]
     },
@@ -55,50 +68,63 @@
    },
    {
     "id": "s2",
-    "pattern": "series",
-    "subtype": "Anrede «Vater» und fünf Bitten",
-    "range": "LUK.11.2-LUK.11.4",
+    "pattern": "sequence",
+    "range": "LUK.11.1-LUK.11.13",
     "elements": [
      {
-      "label": "Vater, dein Name werde geheiligt",
-      "ref": "LUK.11.2",
-      "role": "Du-Bitte 1"
+      "label": "«Herr, lehre uns beten» – das Gebet zum Vater mit fünf Bitten",
+      "ref": "LUK.11.1-LUK.11.4",
+      "role": "1"
      },
      {
-      "label": "dein Reich komme",
-      "ref": "LUK.11.2",
-      "role": "Du-Bitte 2"
-     },
-     {
-      "label": "Unser tägliches Brot gib uns Tag für Tag",
-      "ref": "LUK.11.3",
-      "role": "Wir-Bitte 1"
-     },
-     {
-      "label": "Vergib uns unsere Sünden, denn auch wir selbst vergeben jedem, der uns etwas schuldet",
-      "ref": "LUK.11.4",
-      "role": "Wir-Bitte 2 mit Begründung"
-     },
-     {
-      "label": "Führe uns nicht in Versuchung",
-      "ref": "LUK.11.4",
-      "role": "Wir-Bitte 3"
+      "label": "Der bittende Freund; bittet, sucht, klopft an; wie viel mehr gibt der Vater den Heiligen Geist",
+      "ref": "LUK.11.5-LUK.11.13",
+      "role": "2"
      }
     ],
-    "features": {
-     "crossref": [
-      {
-       "ref": "MAT.6.9-MAT.6.13",
-       "note": "längere Fassung bei Matthäus"
-      }
-     ],
-     "text_forms": [
-      {
-       "ref": "LUK.11.2-LUK.11.4",
-       "note": "Viele spätere Handschriften gleichen die Bitten an die längere Fassung bei Matthäus an; die Arbeitsübersetzung folgt der kürzeren Fassung."
-      }
-     ]
-    },
+    "visual": "grid",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "sequence",
+    "range": "LUK.11.14-LUK.11.28",
+    "elements": [
+     {
+      "label": "Durch Beelzebul? – «durch den Finger Gottes … dann ist das Reich Gottes zu euch gekommen»",
+      "ref": "LUK.11.14-LUK.11.23",
+      "role": "3"
+     },
+     {
+      "label": "Der zurückkehrende unreine Geist: am Ende schlimmer",
+      "ref": "LUK.11.24-LUK.11.26",
+      "role": "4"
+     },
+     {
+      "label": "«Vielmehr selig, die das Wort Gottes hören und bewahren!»",
+      "ref": "LUK.11.27-LUK.11.28",
+      "role": "5"
+     }
+    ],
+    "visual": "grid",
+    "basis": "text"
+   },
+   {
+    "id": "s4",
+    "pattern": "sequence",
+    "range": "LUK.11.29-LUK.11.36",
+    "elements": [
+     {
+      "label": "Kein Zeichen ausser dem Zeichen des Jona; mehr als Salomo, mehr als Jona",
+      "ref": "LUK.11.29-LUK.11.32",
+      "role": "6"
+     },
+     {
+      "label": "Lampe auf den Leuchter; das Auge als Lampe des Leibes",
+      "ref": "LUK.11.33-LUK.11.36",
+      "role": "7"
+     }
+    ],
     "visual": "grid",
     "basis": "text"
    }
@@ -106,53 +132,103 @@
  },
  "moments": [
   {
-   "reference": "LUK.11.1",
-   "text_de": "«Herr, lehre uns beten.»",
-   "reason_de": "Anlass (Kriterium 3).",
-   "recognition_de": "Feld 1: Bitte.",
+   "reference": "LUK.11.1-LUK.11.13",
+   "text_de": "«Herr, lehre uns beten» – das Gebet zum Vater – «Bittet, und es wird euch gegeben werden» – wie viel mehr der Vater.",
+   "reason_de": "Erster und zweiter Abschnitt (Kriterium 1).",
+   "recognition_de": "Feld 1: Beten.",
    "keywords": [
-    "Herr, lehre uns beten"
-   ],
-   "mode": "narrative"
+    "Herr, lehre uns beten",
+    "Vater, dein Name werde geheiligt",
+    "Bittet, und es wird euch gegeben werden"
+   ]
   },
   {
-   "reference": "LUK.11.2-LUK.11.4",
-   "text_de": "«Vater, dein Name werde geheiligt; dein Reich komme …» – fünf Bitten.",
-   "reason_de": "Kern (Kriterien 1 und 4).",
-   "recognition_de": "Feld 2: Vaterunser.",
+   "reference": "LUK.11.14-LUK.11.28",
+   "text_de": "«durch den Finger Gottes» – der zurückkehrende Geist – «Vielmehr selig, die das Wort Gottes hören und bewahren!»",
+   "reason_de": "Dritter bis fünfter Abschnitt (Kriterium 1).",
+   "recognition_de": "Feld 2: Finger Gottes.",
    "keywords": [
-    "Vater, dein Name werde geheiligt"
+    "durch den Finger Gottes",
+    "schlimmer als am Anfang",
+    "Vielmehr selig, die das Wort Gottes hören und bewahren!"
+   ]
+  },
+  {
+   "reference": "LUK.11.29-LUK.11.36",
+   "text_de": "Kein Zeichen ausser dem des Jona; die Lampe des Leibes ist das Auge.",
+   "reason_de": "Sechster und siebter Abschnitt (Kriterium 1).",
+   "recognition_de": "Feld 3: Jona und Lampe.",
+   "keywords": [
+    "ausser dem Zeichen des Jona",
+    "Die Lampe des Leibes ist dein Auge"
+   ]
+  },
+  {
+   "reference": "LUK.11.39-LUK.11.54",
+   "text_de": "Becher aussen und innen; Weh über Pharisäer und Gesetzeslehrer; sie lauern ihm auf.",
+   "reason_de": "Achter Abschnitt (Kriterien 1 und 3).",
+   "recognition_de": "Feld 4: Weherufe.",
+   "keywords": [
+    "Aber weh euch Pharisäern!",
+    "Auch euch Gesetzeslehrern weh!",
+    "und lauerten ihm auf"
    ]
   }
  ],
  "omitted_de": [
-  "Der übrige Text des Lukasevangeliums ist in der Arbeitsübersetzung noch nicht übersetzt; die Verdichtung beruht nur auf [[LUK.11.1-LUK.11.4]] (oben nichts, was unten fehlt)"
+  "Einzelheiten – stehen in den Abschnitten"
  ],
  "persons": [
   "FIG-JESUS",
   "FIG-ROLLE-JUENGER",
   "FIG-GRUPPE-JUENGER",
-  "FIG-GOTT"
+  "FIG-GOTT",
+  "FIG-HEILIGER-GEIST",
+  "FIG-ROLLE-FREUND",
+  "FIG-GRUPPE-MENGE",
+  "FIG-ROLLE-FRAU",
+  "FIG-JONA",
+  "FIG-ROLLE-PHARISAEER",
+  "FIG-ROLLE-SCHRIFTGELEHRTER"
  ],
  "places": [],
  "basis": [
   {
    "record": "CORE-LUK-011-001-004",
    "fingerprint": "f66dcd54db8c721d"
+  },
+  {
+   "record": "CORE-LUK-011-005-013",
+   "fingerprint": "9f501874f6569fef"
+  },
+  {
+   "record": "CORE-LUK-011-014-023",
+   "fingerprint": "2bca00431a6ab0df"
+  },
+  {
+   "record": "CORE-LUK-011-024-026",
+   "fingerprint": "0cfe8b8e6f5d1710"
+  },
+  {
+   "record": "CORE-LUK-011-027-028",
+   "fingerprint": "716113dc5682967f"
+  },
+  {
+   "record": "CORE-LUK-011-029-032",
+   "fingerprint": "de4f95cef6da5290"
+  },
+  {
+   "record": "CORE-LUK-011-033-036",
+   "fingerprint": "1917c0f93834c1ba"
+  },
+  {
+   "record": "CORE-LUK-011-037-054",
+   "fingerprint": "0a1cef8690870642"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Joh 15–21, Buch Johannes und Lk 11 nach Joh 1–14; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 9–16; keine fachliche Prüfung.",
  "knowledge": {
   "asserted_at": "2026-10-26",
   "supersedes": null
- },
- "review": {
-  "date": "2026-10-26",
-  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung, Züridüütsch gegen die Mundart-Übersetzungsschicht; Zusammenfassungen und Bildaufträge mitgeprüft, Bilder gerendert und angesehen; nicht gegen den griechischen Text geprüft, kein Blindtest ohne Legende; keine fachliche und keine muttersprachliche Prüfung durch eine Person",
-  "result": "bestanden nach Korrektur",
-  "summary_de": "Ehrlich auf den übersetzten Abschnitt [[LUK.11.1-LUK.11.4]] beschränkt; die Zusammenfassung sagt, dass die weiteren Abschnitte noch nicht übersetzt sind.",
-  "changes_de": [
-   "Bild Feld 1: Zeichen «beten» bei Jesus wie im Abschnitt."
-  ]
  }
 }

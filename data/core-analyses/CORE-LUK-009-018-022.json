@@ -1,0 +1,166 @@
+{
+ "id": "CORE-LUK-009-018-022",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.9.18-LUK.9.22",
+ "target": "TU-LUK-009-018-022",
+ "core_de": "Als Jesus für sich betet, fragt er die Jünger: «Wer, sagen die Menschenmengen, bin ich?» – Johannes der Täufer, Elija oder einer der alten Propheten; «Ihr aber: Wer, sagt ihr, bin ich?» – Petrus: «Der Christus Gottes»; Jesus gebietet ihnen streng, das niemandem zu sagen, und kündigt an: Der Menschensohn muss vieles erleiden, verworfen, getötet und am dritten Tag auferweckt werden.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "dialogue",
+    "subtype": "zwei Fragen – zwei Antworten – Schweigegebot – Ankündigung",
+    "range": "LUK.9.18-LUK.9.22",
+    "elements": [
+     {
+      "label": "Jesus betet für sich; die Jünger sind bei ihm",
+      "ref": "LUK.9.18",
+      "role": "Rahmen"
+     },
+     {
+      "label": "Frage 1: «Wer, sagen die Menschenmengen, bin ich?» – Johannes der Täufer, Elija, einer der alten Propheten",
+      "ref": "LUK.9.18-LUK.9.19",
+      "role": "Frage und Antwort 1"
+     },
+     {
+      "label": "Frage 2: «Ihr aber: Wer, sagt ihr, bin ich?» – Petrus: «Der Christus Gottes»",
+      "ref": "LUK.9.20",
+      "role": "Frage und Antwort 2"
+     },
+     {
+      "label": "Er gebietet ihnen streng, das niemandem zu sagen",
+      "ref": "LUK.9.21",
+      "role": "Schweigegebot"
+     },
+     {
+      "label": "Ankündigung des Leidens",
+      "ref": "LUK.9.22",
+      "role": "Ankündigung",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "LUK.9.18"
+      },
+      {
+       "who": "FIG-GRUPPE-JUENGER",
+       "to": "FIG-JESUS",
+       "ref": "LUK.9.19"
+      },
+      {
+       "who": "FIG-PETRUS",
+       "to": "FIG-JESUS",
+       "ref": "LUK.9.20"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "LUK.9.21-LUK.9.22"
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "sequence",
+    "subtype": "Ankündigung in vier Gliedern",
+    "range": "LUK.9.22",
+    "elements": [
+     {
+      "label": "muss vieles erleiden",
+      "ref": "LUK.9.22",
+      "role": "1"
+     },
+     {
+      "label": "von den Ältesten, Hohepriestern und Schriftgelehrten verworfen werden",
+      "ref": "LUK.9.22",
+      "role": "2"
+     },
+     {
+      "label": "getötet werden",
+      "ref": "LUK.9.22",
+      "role": "3"
+     },
+     {
+      "label": "am dritten Tag auferweckt werden",
+      "ref": "LUK.9.22",
+      "role": "4"
+     }
+    ],
+    "features": {
+     "modality": [
+      {
+       "kind": "Ankündigung",
+       "ref": "LUK.9.22",
+       "note": "Jesus kündigt an; erzählt wird es erst in der Passion – im Bild als Ankündigung (Rede), nicht als Ereignis"
+      }
+     ]
+    },
+    "visual": "timeline",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.9.18-LUK.9.20",
+   "text_de": "«Wer, sagen die Menschenmengen, bin ich?» – Johannes, Elija, ein Prophet – «Ihr aber …?» – Petrus: «Der Christus Gottes.»",
+   "reason_de": "Höhepunkt in wörtlicher Rede (Kriterien 1, 2 und 4).",
+   "recognition_de": "Petrus bekennt.",
+   "keywords": [
+    "Wer, sagen die Menschenmengen, bin ich?",
+    "Ihr aber: Wer, sagt ihr, bin ich?",
+    "Der Christus Gottes"
+   ],
+   "mode": "speech"
+  },
+  {
+   "reference": "LUK.9.21-LUK.9.22",
+   "text_de": "Schweigegebot und Ankündigung: Der Menschensohn muss vieles erleiden, verworfen, getötet und am dritten Tag auferweckt werden.",
+   "reason_de": "Ankündigung, nicht Bericht (Kriterium 1; Regel 2).",
+   "recognition_de": "Erste Leidensansage.",
+   "keywords": [
+    "Der Menschensohn muss vieles erleiden",
+    "getötet werden und am dritten Tag auferweckt werden"
+   ],
+   "mode": "speech"
+  }
+ ],
+ "omitted_de": [
+  "Die Wiederholung der Meinungen aus [[LUK.9.7-LUK.9.8]] – im Dialog genannt, nicht eigens gezeigt"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-PETRUS"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.9.18-LUK.9.22",
+   "fingerprint": "bb80584d8902cdc7"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 9–16; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

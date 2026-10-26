@@ -1,0 +1,159 @@
+{
+ "id": "CORE-LUK-013-031-035",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.13.31-LUK.13.35",
+ "target": "TU-LUK-013-031-035",
+ "core_de": "Pharisäer warnen Jesus: «Herodes will dich töten!»; er lässt «diesem Fuchs» sagen, dass er heute und morgen Dämonen austreibt und heilt und am dritten Tag am Ziel ist, denn ein Prophet kommt nicht ausserhalb Jerusalems um; dann klagt er: «Jerusalem, Jerusalem, die du die Propheten tötest … wie oft habe ich deine Kinder sammeln wollen, wie eine Henne ihre Küken … und ihr habt nicht gewollt!»; ihr Haus wird ihnen überlassen, und sie werden ihn nicht mehr sehen, bis sie sagen: «Gesegnet sei, der kommt im Namen des Herrn!»",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Warnung – Antwort – Klage – Ankündigung",
+    "range": "LUK.13.31-LUK.13.35",
+    "elements": [
+     {
+      "label": "Pharisäer: «Brich auf …, denn Herodes will dich töten!»",
+      "ref": "LUK.13.31",
+      "role": "Warnung"
+     },
+     {
+      "label": "«Sagt diesem Fuchs: … heute und morgen, am dritten Tag am Ziel»; ein Prophet kommt nicht ausserhalb Jerusalems um",
+      "ref": "LUK.13.32-LUK.13.33",
+      "role": "Antwort"
+     },
+     {
+      "label": "Klage über Jerusalem: Propheten getötet – Henne und Küken – ihr habt nicht gewollt",
+      "ref": "LUK.13.34",
+      "role": "Klage",
+      "child": "s2"
+     },
+     {
+      "label": "Euer Haus wird euch überlassen; ihr werdet mich nicht sehen, bis ihr sagt: «Gesegnet sei, der kommt im Namen des Herrn!»",
+      "ref": "LUK.13.35",
+      "role": "Ankündigung"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-GRUPPE-PHARISAEER",
+       "to": "FIG-JESUS",
+       "ref": "LUK.13.31"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-PHARISAEER",
+       "ref": "LUK.13.32-LUK.13.33"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-VOLK",
+       "ref": "LUK.13.34-LUK.13.35"
+      }
+     ],
+     "modality": [
+      {
+       "kind": "Ankündigung",
+       "ref": "LUK.13.35",
+       "note": "angekündigt, nicht erzählt"
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "PSA.118.26",
+       "kind": "Zitat",
+       "note": "«Gesegnet sei, der kommt im Namen des Herrn» – Wortlaut des Psalms; der Text nennt die Quelle nicht"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "range": "LUK.13.34",
+    "elements": [
+     {
+      "label": "Jerusalem tötet die Propheten und steinigt die Gesandten",
+      "ref": "LUK.13.34",
+      "role": "Seite 1"
+     },
+     {
+      "label": "wie oft habe ich deine Kinder sammeln wollen wie eine Henne ihre Küken",
+      "ref": "LUK.13.34",
+      "role": "Seite 2"
+     },
+     {
+      "label": "und ihr habt nicht gewollt",
+      "ref": "LUK.13.34",
+      "role": "Schluss"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.13.31-LUK.13.33",
+   "text_de": "«Herodes will dich töten!» – «Sagt diesem Fuchs: … am dritten Tag bin ich am Ziel» – kein Prophet kommt ausserhalb Jerusalems um.",
+   "reason_de": "Anlass und Antwort (Kriterien 2 und 3).",
+   "recognition_de": "Sagt diesem Fuchs.",
+   "keywords": [
+    "Herodes will dich töten!",
+    "Geht und sagt diesem Fuchs",
+    "am dritten Tag bin ich am Ziel",
+    "ausserhalb von Jerusalem umkommt"
+   ]
+  },
+  {
+   "reference": "LUK.13.34-LUK.13.35",
+   "text_de": "«Jerusalem, Jerusalem, die du die Propheten tötest … wie eine Henne ihre Küken … und ihr habt nicht gewollt!» – «Gesegnet sei, der kommt im Namen des Herrn!»",
+   "reason_de": "Klage, Kernaussage (Kriterien 1 und 2).",
+   "recognition_de": "Henne und Küken.",
+   "keywords": [
+    "Jerusalem, Jerusalem, die du die Propheten tötest",
+    "wie eine Henne ihre Küken unter die Flügel nimmt",
+    "und ihr habt nicht gewollt!",
+    "Gesegnet sei, der kommt im Namen des Herrn!"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Nichts Wesentliches"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-PHARISAEER",
+  "FIG-HERODES-ANTIPAS",
+  "FIG-GRUPPE-VOLK"
+ ],
+ "places": [
+  "FIG-ORT-JERUSALEM"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.13.31-LUK.13.35",
+   "fingerprint": "e9ff63bf279ad5cc"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 9–16; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

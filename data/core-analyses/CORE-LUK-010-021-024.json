@@ -1,0 +1,149 @@
+{
+ "id": "CORE-LUK-010-021-024",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.10.21-LUK.10.24",
+ "target": "TU-LUK-010-021-024",
+ "core_de": "In dieser Stunde jubelt Jesus im Heiligen Geist und preist den Vater, dass er dies vor Weisen und Verständigen verborgen und Unmündigen offenbart hat; alles ist ihm vom Vater übergeben, und niemand kennt den Sohn ausser dem Vater und den Vater ausser dem Sohn und wem der Sohn es offenbaren will; zu den Jüngern sagt er: «Selig die Augen, die sehen, was ihr seht!», denn viele Propheten und Könige wollten sehen und hören, was sie sehen und hören, und haben es nicht.",
+ "mode": "prayer",
+ "voice": {
+  "speaker": "FIG-JESUS",
+  "addressee": "FIG-GOTT"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Gebet – Aussage – Seligpreisung",
+    "range": "LUK.10.21-LUK.10.24",
+    "elements": [
+     {
+      "label": "Lobpreis: verborgen vor Weisen ↔ offenbart den Unmündigen",
+      "ref": "LUK.10.21",
+      "role": "Gebet",
+      "child": "s2"
+     },
+     {
+      "label": "Alles ist mir übergeben; Vater und Sohn kennen einander",
+      "ref": "LUK.10.22",
+      "role": "Aussage"
+     },
+     {
+      "label": "Seligpreisung der Jünger",
+      "ref": "LUK.10.23-LUK.10.24",
+      "role": "Zuspruch",
+      "child": "s3"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GOTT",
+       "ref": "LUK.10.21-LUK.10.22"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "LUK.10.23-LUK.10.24"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "range": "LUK.10.21",
+    "elements": [
+     {
+      "label": "vor Weisen und Verständigen verborgen",
+      "ref": "LUK.10.21",
+      "role": "Seite 1"
+     },
+     {
+      "label": "Unmündigen offenbart",
+      "ref": "LUK.10.21",
+      "role": "Seite 2"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "contrast",
+    "subtype": "ihr ↔ Propheten und Könige",
+    "range": "LUK.10.23-LUK.10.24",
+    "elements": [
+     {
+      "label": "ihr seht und hört",
+      "ref": "LUK.10.23",
+      "role": "ihr"
+     },
+     {
+      "label": "viele Propheten und Könige wollten sehen und hören und haben es nicht",
+      "ref": "LUK.10.24",
+      "role": "sie"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.10.21-LUK.10.22",
+   "text_de": "«Ich preise dich, Vater … dass du dies vor Weisen … verborgen hast und es Unmündigen offenbart hast»; Vater und Sohn kennen einander.",
+   "reason_de": "Gebet, Kernaussage (Kriterien 1 und 2).",
+   "recognition_de": "Jesus jubelt und preist den Vater.",
+   "keywords": [
+    "jubelte er im Heiligen Geist",
+    "Ich preise dich, Vater",
+    "es Unmündigen offenbart hast",
+    "Ja, Vater, denn so hat es dir gefallen"
+   ]
+  },
+  {
+   "reference": "LUK.10.23-LUK.10.24",
+   "text_de": "«Selig die Augen, die sehen, was ihr seht!» – Propheten und Könige wollten es sehen und hören und haben es nicht.",
+   "reason_de": "Seligpreisung als Gegensatz (Kriterium 1).",
+   "recognition_de": "Selig die Augen.",
+   "keywords": [
+    "Selig die Augen, die sehen, was ihr seht!",
+    "Viele Propheten und Könige wollten sehen, was ihr seht"
+   ],
+   "mode": "speech"
+  }
+ ],
+ "omitted_de": [
+  "Nichts Wesentliches; das Wort über Vater und Sohn ([[LUK.10.22]]) steht in Zusammenfassung und Bildlegende, im Bild nicht eigens"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GOTT",
+  "FIG-HEILIGER-GEIST",
+  "FIG-GRUPPE-JUENGER"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.10.21-LUK.10.24",
+   "fingerprint": "d8382b95a79be7ae"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 9–16; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

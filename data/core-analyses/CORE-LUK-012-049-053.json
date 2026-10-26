@@ -1,0 +1,143 @@
+{
+ "id": "CORE-LUK-012-049-053",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.12.49-LUK.12.53",
+ "target": "TU-LUK-012-049-053",
+ "core_de": "Jesus sagt: Er ist gekommen, Feuer auf die Erde zu werfen, und wünscht, es wäre schon entfacht; er muss mit einer Taufe getauft werden und ist bedrängt, bis sie vollzogen ist; er ist nicht gekommen, Frieden zu bringen, sondern Spaltung: In einem Haus werden fünf entzweit sein, drei gegen zwei und zwei gegen drei – Vater gegen Sohn, Mutter gegen Tochter, Schwiegermutter gegen Schwiegertochter und umgekehrt.",
+ "mode": "speech",
+ "voice": {
+  "speaker": "FIG-JESUS",
+  "addressee": "FIG-GRUPPE-JUENGER"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "drei Worte über seine Sendung",
+    "range": "LUK.12.49-LUK.12.53",
+    "elements": [
+     {
+      "label": "Feuer auf die Erde werfen – wäre es schon entfacht!",
+      "ref": "LUK.12.49",
+      "role": "1"
+     },
+     {
+      "label": "Eine Taufe – bedrängt, bis sie vollzogen ist",
+      "ref": "LUK.12.50",
+      "role": "2"
+     },
+     {
+      "label": "Nicht Frieden, sondern Spaltung",
+      "ref": "LUK.12.51-LUK.12.53",
+      "role": "3",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "LUK.12.49-LUK.12.53"
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "Feuer und Taufe sind Bildworte; ihre Bedeutung (z. B. Gericht, Leiden) ist Auslegung."
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "series",
+    "subtype": "Paare, je in beide Richtungen",
+    "range": "LUK.12.52-LUK.12.53",
+    "elements": [
+     {
+      "label": "fünf in einem Haus: drei gegen zwei, zwei gegen drei",
+      "ref": "LUK.12.52",
+      "role": "Zahl"
+     },
+     {
+      "label": "Vater gegen Sohn und Sohn gegen Vater",
+      "ref": "LUK.12.53",
+      "role": "Paar 1"
+     },
+     {
+      "label": "Mutter gegen Tochter und Tochter gegen Mutter",
+      "ref": "LUK.12.53",
+      "role": "Paar 2"
+     },
+     {
+      "label": "Schwiegermutter gegen Schwiegertochter und Schwiegertochter gegen Schwiegermutter",
+      "ref": "LUK.12.53",
+      "role": "Paar 3"
+     }
+    ],
+    "visual": "mirror",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.12.49-LUK.12.50",
+   "text_de": "Feuer auf die Erde werfen – eine Taufe, mit der er getauft werden muss.",
+   "reason_de": "Sendungswort (Kriterien 1 und 2).",
+   "recognition_de": "Feuer und Taufe.",
+   "keywords": [
+    "Feuer auf die Erde zu werfen, bin ich gekommen",
+    "Eine Taufe aber habe ich"
+   ]
+  },
+  {
+   "reference": "LUK.12.51-LUK.12.53",
+   "text_de": "«nicht … Frieden …, sondern Spaltung»: drei gegen zwei – Vater gegen Sohn, Mutter gegen Tochter, Schwiegermutter gegen Schwiegertochter.",
+   "reason_de": "Gegensatz und Reihe aller Paare (Kriterium 1; Regel 1).",
+   "recognition_de": "Spaltung im Haus.",
+   "keywords": [
+    "sondern Spaltung",
+    "drei gegen zwei und zwei gegen drei",
+    "Vater gegen Sohn",
+    "Mutter gegen Tochter",
+    "Schwiegermutter gegen ihre Schwiegertochter"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Was mit Feuer und Taufe gemeint ist, sagt der Text nicht; nicht ausgedeutet"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-ROLLE-VATER",
+  "FIG-ROLLE-SOHN",
+  "FIG-ROLLE-MUTTER",
+  "FIG-ROLLE-JUNGE-FRAU",
+  "FIG-ROLLE-ALTE-FRAU",
+  "FIG-ROLLE-FRAU"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.12.49-LUK.12.53",
+   "fingerprint": "571b37c545522fa0"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 9–16; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

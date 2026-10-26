@@ -1,0 +1,155 @@
+{
+ "id": "CORE-LUK-014-015-024",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.14.15-LUK.14.24",
+ "target": "TU-LUK-014-015-024",
+ "core_de": "Auf den Ruf eines Tischgenossen «Selig, wer im Reich Gottes Brot essen wird!» erzählt Jesus: Ein Mensch lädt viele zu einem grossen Gastmahl und lässt sagen: «Kommt, denn es ist schon bereit!»; alle entschuldigen sich – einer hat einen Acker gekauft, einer fünf Ochsengespanne, einer hat geheiratet; zornig lässt der Hausherr die Armen, Versehrten, Blinden und Lahmen aus der Stadt holen und, weil noch Platz ist, Leute von Landstrassen und Zäunen, damit sein Haus voll wird; keiner der Eingeladenen wird von seinem Mahl kosten.",
+ "mode": "parable",
+ "voice": {
+  "speaker": "FIG-JESUS",
+  "addressee": "FIG-GRUPPE-GAESTE"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Gleichnis: Einladung – Absage – zweimal neue Gäste – Ausschluss",
+    "range": "LUK.14.15-LUK.14.24",
+    "elements": [
+     {
+      "label": "Anlass: «Selig, wer im Reich Gottes Brot essen wird!»",
+      "ref": "LUK.14.15",
+      "role": "Anlass"
+     },
+     {
+      "label": "Einladung: «Kommt, denn es ist schon bereit!»",
+      "ref": "LUK.14.16-LUK.14.17",
+      "role": "Einladung"
+     },
+     {
+      "label": "Drei Entschuldigungen",
+      "ref": "LUK.14.18-LUK.14.20",
+      "role": "Absage",
+      "child": "s2"
+     },
+     {
+      "label": "Zorn: die Armen, Versehrten, Blinden, Lahmen aus der Stadt",
+      "ref": "LUK.14.21-LUK.14.22",
+      "role": "Wende 1"
+     },
+     {
+      "label": "Noch Platz: Landstrassen und Zäune – «damit mein Haus voll wird»",
+      "ref": "LUK.14.23",
+      "role": "Wende 2"
+     },
+     {
+      "label": "Keiner der Eingeladenen wird kosten",
+      "ref": "LUK.14.24",
+      "role": "Ausgang"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-GRUPPE-GAESTE",
+       "to": "FIG-JESUS",
+       "ref": "LUK.14.15"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-GAESTE",
+       "ref": "LUK.14.16-LUK.14.24"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "series",
+    "subtype": "drei Entschuldigungen",
+    "range": "LUK.14.18-LUK.14.20",
+    "elements": [
+     {
+      "label": "Acker gekauft – muss ihn besichtigen",
+      "ref": "LUK.14.18",
+      "role": "1"
+     },
+     {
+      "label": "fünf Ochsengespanne gekauft – will sie prüfen",
+      "ref": "LUK.14.19",
+      "role": "2"
+     },
+     {
+      "label": "eine Frau geheiratet – kann nicht kommen",
+      "ref": "LUK.14.20",
+      "role": "3"
+     }
+    ],
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.14.16-LUK.14.20",
+   "text_de": "«Kommt, denn es ist schon bereit!» – drei Entschuldigungen: Acker, fünf Ochsengespanne, geheiratet.",
+   "reason_de": "Reihe mit allen drei Gliedern (Kriterium 1; Regel 1).",
+   "recognition_de": "Die Entschuldigungen.",
+   "keywords": [
+    "Kommt, denn es ist schon bereit!",
+    "fingen alle wie aus einem Mund an, sich zu entschuldigen",
+    "Ich habe einen Acker gekauft",
+    "Ich habe fünf Ochsengespanne gekauft",
+    "Ich habe eine Frau geheiratet"
+   ]
+  },
+  {
+   "reference": "LUK.14.21-LUK.14.24",
+   "text_de": "Zornig: «bring die Armen und Versehrten und Blinden und Lahmen hierher!» – dann von den Landstrassen, «damit mein Haus voll wird» – keiner der Eingeladenen wird kosten.",
+   "reason_de": "Wende und Ausgang (Kriterien 1 und 3).",
+   "recognition_de": "Das Haus wird voll.",
+   "keywords": [
+    "bring die Armen und Versehrten und Blinden und Lahmen hierher!",
+    "damit mein Haus voll wird",
+    "Keiner jener Männer, die eingeladen waren, wird von meinem Mahl kosten"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Eine Deutung gibt der Text nicht; der Bezug auf das Reich Gottes kommt aus dem Anlass ([[LUK.14.15]])"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-GAESTE",
+  "FIG-ROLLE-GUTSHERR",
+  "FIG-ROLLE-DIENER",
+  "FIG-GRUPPE-ARME",
+  "FIG-ROLLE-BLINDER"
+ ],
+ "places": [
+  "FIG-ORT-HAUS",
+  "FIG-ORT-STADT"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.14.15-LUK.14.24",
+   "fingerprint": "7f85a234e4637d4d"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 9–16; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}
